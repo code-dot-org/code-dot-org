@@ -1,154 +1,154 @@
-th:
+tk:
   data:
     script:
       name:
         20-hour:
-          desc: บทนำ K 8 หลักสูตรวิทยาศาสตร์คอมพิวเตอร์
-          Unplug1: ขั้นตอนที่ 1
-          Maze: ขั้นตอนที่ 2
-          Unplug2: ขั้นตอนที่ 3
-          Unplug3: ขั้นตอนที่ 4
-          Artist: ขั้นตอนที่ 5
-          Unplug4: ขั้นตอนที่ 6
-          Artist2: ขั้นตอนที่ 7
-          Unplug5: ขั้นตอนที่ 8
-          Farmer: ขั้นตอนที่ 9
-          Unplug6: ขั้นตอนที่ 10
-          Artist3: ขั้นตอนที่ 11
-          Unplug7: ขั้นตอนที่ 12
-          Farmer2: ขั้นตอนที่ 13
-          Unplug8: ขั้นตอนที่ 14
-          Artist4: ขั้นตอนที่ 15
-          Unplug9: ขั้นตอนที่ 16
-          Farmer3: ขั้นตอนที่ 17
-          Unplug10: ขั้นตอนที่ 18
-          Artist5: ขั้นตอนที่ 19
-          Unplug11: ขั้นตอนที่ 20
+          desc: K-8 Intro to Computer Science Course
+          Unplug1: Stage 1
+          Maze: Stage 2
+          Unplug2: Stage 3
+          Unplug3: Stage 4
+          Artist: Stage 5
+          Unplug4: Stage 6
+          Artist2: Stage 7
+          Unplug5: Stage 8
+          Farmer: Stage 9
+          Unplug6: Stage 10
+          Artist3: Stage 11
+          Unplug7: Stage 12
+          Farmer2: Stage 13
+          Unplug8: Stage 14
+          Artist4: Stage 15
+          Unplug9: Stage 16
+          Farmer3: Stage 17
+          Unplug10: Stage 18
+          Artist5: Stage 19
+          Unplug11: Stage 20
         Hour of Code:
-          desc: ช่วงเวลาของ Code
-          Maze: ขั้นตอนที่ 1
+          desc: Hour of Code
+          Maze: Stage 1
         Edit Code:
           desc: Edit Code (beta)
-          MazeEC: ขั้นตอนที่ 1
+          MazeEC: Stage 1
         2014 Levels:
           desc: Bounce (beta)
-          Bounce: ขั้นตอนที่ 1
+          Bounce: Stage 1
         Builder Levels:
           desc: User-Created Puzzles (beta)
-          Custom: ขั้นตอนที่ 1
+          Custom: Stage 1
         Flappy Levels:
           desc: Flappy Bird
-          Flappy: ขั้นตอนที่ 1
+          Flappy: Stage 1
         Jigsaw Levels:
           desc: Jigsaw (beta)
-          Jigsaw: ขั้นตอนที่ 1
+          Jigsaw: Stage 1
         Step Levels:
           desc: Maze (beta)
           MazeStep: Stage Step
         edit-code:
           desc: Edit Code (beta)
-          MazeEC: ขั้นตอนที่ 1
-          Webapp: ขั้นตอนที่ 2
+          MazeEC: Stage 1
+          Webapp: Stage 2
+          ArtistEC: Stage 3
         events:
           desc: Bounce (beta)
-          Bounce: ขั้นตอนที่ 1
-          Studio: ขั้นตอนที่ 2
+          Bounce: Stage 1
+          Studio: Stage 2
         builder:
           desc: User-Created Puzzles (beta)
-          Custom: ขั้นตอนที่ 1
+          Custom: Stage 1
         flappy:
           desc: Flappy Bird
-          Flappy: ขั้นตอนที่ 1
+          Flappy: Stage 1
         jigsaw:
           desc: Jigsaw (beta)
-          Jigsaw: ขั้นตอนที่ 1
+          Jigsaw: Stage 1
         step:
           desc: Maze (beta)
           MazeStep: Stage Step
         wordsearch:
           desc: Spelling Bee (beta)
-          WordSearch: ขั้นตอนที่ 1
+          WordSearch: Stage 1
     game:
       name:
-        Unplug1: แนะนำวิทยาการคอมพิวเตอร์เบื้องต้น
-        Maze: เขาวงกต
+        Unplug1: Introduction to Computer Science
+        Maze: The Maze
         Multi: Multiple Choice Stuffs
-        Unplug2: คิดคำนวณ
-        Unplug3: การเขียนกระดาษกราฟ
-        Artist: ศิลปิน
-        Unplug4: อัลกอริทึม
-        Artist2: ศิลปิน 2
-        Unplug5: ฟังก์ชัน
-        Farmer: ชาวนา
-        Unplug6: 'เงื่อนไข '
-        Artist3: ศิลปิน 3
-        Unplug7: การแต่งเพลง
-        Farmer2: ชาวนา 2
+        Unplug2: Computational Thinking
+        Unplug3: Graph Paper Programming
+        Artist: The Artist
+        Unplug4: Algorithms
+        Artist2: The Artist 2
+        Unplug5: Functions
+        Farmer: The Farmer
+        Unplug6: Conditionals
+        Artist3: The Artist 3
+        Unplug7: Song Writing
+        Farmer2: The Farmer 2
         Unplug8: Abstraction
-        Artist4: ศิลปิน 4
-        Unplug9: โปรแกรมการถ่ายทอดข้อมูล
-        Farmer3: ชาวนา 3
-        Unplug10: อินเทอร์เน็ต
-        Artist5: ศิลปิน 5
+        Artist4: The Artist 4
+        Unplug9: Relay Programming
+        Farmer3: The Farmer 3
+        Unplug10: The Internet
+        Artist5: The Artist 5
         Unplug11: Wrap-up
-        MazeEC: เขาวงกต
+        MazeEC: The Maze
         Bounce: Bounce
         Flappy: Flappy Bird
         Jigsaw: Jigsaw
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
         Webapp: Webapp
+        ArtistEC: The Artist
     trophy:
       name:
-        Bronze: ทองแดง
-        Silver: เงิน
-        Gold: ทอง
+        Bronze: Bronze
+        Silver: Silver
+        Gold: Gold
     concept:
       description:
-        sequence: ลำดับ
-        if: If บล็อก
-        if_else: If บล็อกในกรณีอื่น
-        loop_times: ทำซ้ำช่วงเวลา
-        loop_until: ทำซ้ำจนถึงบล็อก
-        loop_while: ขณะที่บล็อก
-        loop_for: บล็อกนับ
-        function: ฟังก์ชัน
-        parameters: ฟังก์ชันกับพารามิเตอร์
+        sequence: Sequence
+        if: If block
+        if_else: If-else block
+        loop_times: Repeat times block
+        loop_until: Repeat until block
+        loop_while: While block
+        loop_for: Counter block
+        function: Functions
+        parameters: Functions with parameters
     level:
       instructions:
         maze_2_2: 'Can you help me to catch the naughty pig? Stack a couple of "move forward" blocks together and press "Run" to help me get there. '
-        maze_2_1: หมูนี้ทำให้ขนของฉันยุ่ง. ช่วยฉันตามหาเขา!
-        maze_2_2_5: ติดตามเส้นทาง และนำฉันไปหาเจ้าหมูบ้า หลีกเลี่ยงระเบิด หรือขนนกจะปลิว!
-        maze_2_3: นำฉันไป green evilness! (ระวังระเบิด)
-        maze_2_4: รักษาความสงบ และช่วยฉันหาหมูนิสัยไม่ดี มิฉะนั้นฉันอาจถูกโกรธ!
-        maze_2_5: มีทางที่ฉันสามารถไปถึงหมูบ้าโดยใช้เพียง 2 บล็อก คุณคิดออกไหม?
-        maze_2_6: นำฉันไปที่พื้นที่สีเขียวโดยใช้โค้ดแค่สามบล็อก
-        maze_2_7: 'ช่วยฉันไล่หมูออกไป โดยใช้บล็อกโค้ดให้น้อยที่สุด. ลองใช้บล็อก "ทำซ้ำ (repeat times)" ให้มากกว่าหนึ่งบล็อก'
+        maze_2_1: This pig is ruffling my feathers. Help me to find him!
+        maze_2_2_5: Trace the path and lead me to the silly pig. Avoid TNT or the feathers will fly!
+        maze_2_3: Guide me to the green evilness! (Watch out for TNT)
+        maze_2_4: Keep calm and help me to find the bad pig. Otherwise I might get angry!
+        maze_2_5: "There's a way I can get to the silly pig using only 2 blocks. Can you figure it out?"
+        maze_2_6: Try to get me to the green intruder using only three blocks.
+        maze_2_7: 'Help me banish this bad piggy using the fewest number of blocks. Try using more than one "repeat times" block.'
         maze_2_8: |-
           When a block is grey, that means you can't delete it. Solve this puzzle using the "repeat" block that repeats 3 times. Try putting these 3 blocks inside the grey "repeat" block: move, move, turn.
-        maze_2_9: 'เอาหล่ะ ลองใช้บล็อกอันใหม่ "ทำซ้ำจนกระทั่ง" สิ- มันจะทำซ้ำจนกว่าฉันจะไปถึงตัวหมูหล่ะ'
-        maze_2_10: การทดสอบครั้งสุดท้ายแล้ว คุณสามารถแก้ไขปัญหานี้โดยใช้โค้ดแค่สี่บล็อกได้ไหมนะ
-        maze_2_11: ถึงคุณ, ฉัน ซอมบี้, ฉันหิว ฉันต้องการดอกทานตะวัน คุณพาฉันไปหาดอกทานตะวันโดยใช้โค้ดแค่ห้าบล็อกได้ไหม?
-        maze_2_12: เอาหล่ะ นี่แตกต่างจากด่านที่แล้วนิดหน่อย คุณใช้แค่ห้าบล็อกได้ไหม?
-        maze_2_13: |
-          ใช้บล็อก "ถ้า" เพื่อให้ฉันตัดสินใจเมื่อจะหัน
-          คำแนะนำ: ที่จริงคุณต้องการเพียงหนึ่งบล็อกเท่านั้น แต่เราให้คุณเรียนรู้ว่าเราจัดบล็อกอย่างไร  เพื่อที่คุณจะได้ทำเป็นด้วยตนเองในครั้งหน้า
-        maze_2_14: 'นี่เป็นด่านสุดท้ายแล้วนะ แต่คุณต้องไม่ลืมวิธีการใช้บล็อก "ถ้า" และบล็อก "ทำซ้ำ" เข้าด้วยกัน'
-        maze_2_15: 'ฉันต้องการดอกทานตะวัน! ใช้บล็อก "ถ้า" เพื่อนำฉันไปที่นั่น และใช้บล็อกให้น้อยที่สุด'
-        maze_2_16: เอาหล่ะ ลองทำการทดสอบนี่อีกครั้ง , ไม่ต่างจากครั้งที่แล้วมาก แต่ระวังตัวChompersไว้ให้ดีๆ!
-        maze_2_17: 'บล็อก "If-else" ตรวจสอบเงื่อนไข และจากนั้น ทำอย่างใดอย่างหนึ่ง ลองใช้บล็อกใหม่นี้พาฉันไปยังดอกทานตะวัน'
-        maze_2_18: 'อีกหนึ่งแบบฝึกหัดของบล็อก "if-else" สามารถทำสำเร็จตั้งแต่ครั้งแรกเลยไหม?'
+        maze_2_9: 'Ok, try the new "repeat until" block - it will repeat until I reach the annoying pig.'
+        maze_2_10: 'Ok, one last time for practice - can you solve this one using only 4 blocks?'
+        maze_2_11: 'Dear person.  Me zombie. Me hungry. Must... get... to sunflower... Can you get me there with only 5 blocks?'
+        maze_2_12: Ok, this is similar, but slightly different. Can you do it in only 5 blocks?
+        maze_2_13: 'Use the new "if" block to let me decide when to turn. Hint: you only need one more block, but learn how we set it up so you can do it on your own next time.'
+        maze_2_14: 'Ok, this is just like the last puzzle, but you need to remember how you used the "if" block and the "repeat" block together.'
+        maze_2_15: 'Me want sunflower! Use an "if" block to get me there with the fewest number of blocks.'
+        maze_2_16: "Ok, let's do that again for practice - this isn't very different, but watch out for the chompers!"
+        maze_2_17: 'The "If-else" blocks checks a condition, and then does one thing OR another. To get me to the sunflower try to use this new block.'
+        maze_2_18: 'One more practice of the "if-else" block, can you get it right on your first try?'
         maze_2_19: Can you add just 3 blocks to help me solve a more complex maze? If you do it right, I can walk any curvy path no matter the length.
         turtle_1_1: "Hi, I'm an artist. You can write code to make me draw almost anything. Use a few blocks to make me draw over the grey lines in the picture."
         turtle_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "set color" block.'
-        turtle_1_3: สร้างสี่เหลี่ยมจตุรัสโดยใช้เพียง 3 บล็อก
+        turtle_1_3: Make a square using only 3 blocks.
         turtle_1_4: |-
           Draw a triangle whose sides are all in different colors, using the "random color" option that picks a different color each time. Hint: you'll have to figure out how far to turn by clicking on the number in the turn block.
-        turtle_1_5: แบบฝึกหัด วาดรูปสามเหลี่ยม จากนั้นสี่เหลี่ยมเพื่อให้เป็นรูปซองจดหมาย
+        turtle_1_5: Now, for practice, draw a triangle and then a square to draw an envelope.
         turtle_1_6: 'Can you figure out how draw this triangle and square? Hint: Do the triangle first, then figure out how much to turn before drawing the square.'
         turtle_1_7: "Ok, let's make it a bit harder - see if you can draw these green glasses. The squares are 100 pixels on each side, and they're 50 pixels apart. Don't forget to draw in green!"
         turtle_1_8: 'Ok, try to figure out what happens if you run this code (or press "Run" to try it). Then, repeat it enough times to complete the drawing. The colors will be different every time.'
-        turtle_1_9: คิดออกไหมว่าต้องใส่เลขอะไรลงไปแทนเครื่องหมาย ? เพื่อที่จะวาดวงกลม?
+        turtle_1_9: Can you figure out what number to replace the question marks with to draw a circle?
         turtle_1_10: 'You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new "set width" block. Have fun!'
         turtle_4_1: 'Can you draw a triangle (with edges of 100 pixels) with only 3 blocks? Hint: use a "repeat" block.'
         turtle_4_2: 'Add a "turn right by 90 degrees" block somewhere in the middle of the program already out on the workspace to draw these triangles.'
@@ -164,7 +164,7 @@ th:
         turtle_4_11: 'Try changing the numbers in the "turn" and "repeat" blocks to make different patterns. Or, experiment changing the rest of the code to draw anything you want.'
         maze_karel_1_1: |-
           Hi, I'm a farmer. I need your help to flatten the field on my farm so it's ready for planting. Move me to the pile of dirt and use the "remove" block to remove it.
-        maze_karel_1_2: 'ขั้นตอนต่อไป, ย้ายฉันไปที่หลุมและเติมด้วย 2 shovelfuls of dirt, โดยใช้ "เติม" บล็อก.'
+        maze_karel_1_2: 'Next, move me to the hole and fill it with TWO shovelfuls of dirt, using the "fill" block.'
         maze_karel_1_3: Move me to the pile of dirt and tell me how many shovelfuls to remove using as few blocks as possible.
         maze_karel_1_4: 'Can you help me remove all four piles of dirt? Hint: use a repeat block if you can.'
         maze_karel_1_5: 'Help me fill in all these holes with 5 shovelfuls of dirt. Hint: you can put a "repeat" block inside the "while" block.'
@@ -340,28 +340,30 @@ th:
         maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
         maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
         maze_wordsearch_k_20: This is a test! Move me one way, then another to spell the word STORY
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColour" block.'
     video:
       name:
-        maze_intro: บทนำเขาวงกต
-        artist_intro: แนะนำศิลปิน
+        maze_intro: Maze Intro
+        artist_intro: Artist Intro
         farmer_intro: Farmer Intro
         flappy_intro: Flappy Intro
-        loop_times: ทำซ้ำช่วงเวลา
-        loop_until: ทำซ้ำจนถึงบล็อก
-        if: If บล็อก
-        if_else: If/else บล็อก
-        function: ฟังก์ชัน
-        loop_while: ขณะที่บล็อก
-        loop_for: บล็อกนับ
-        parameters: ฟังก์ชันกับพารามิเตอร์
-        hoc_wrapup: ชั่วโมงของรหัส Wrapup
-        20_wrapup: Wrapup 20 ชั่วโมง
+        loop_times: Repeat Times Block
+        loop_until: Repeat Until Block
+        if: If Block
+        if_else: If/else Block
+        function: Functions
+        loop_while: While Block
+        loop_for: Counter Block
+        parameters: Functions with Parameters
+        hoc_wrapup: Hour of Code Wrapup
+        20_wrapup: 20-Hour Wrapup
         Unplug1: What is CS?
-        Unplug2: คิดคำนวณ
-        Unplug3: การเขียนกระดาษกราฟ
-        Unplug4: อัลกอริทึม
-        Unplug5: ฟังก์ชัน
-        Unplug6: 'เงื่อนไข '
+        Unplug2: Computational Thinking
+        Unplug3: Graph Paper Programming
+        Unplug4: Algorithms
+        Unplug5: Functions
+        Unplug6: Conditionals
         Unplug7: Songwriting
         Unplug8: Abstraction
         Unplug9: Relay programming
@@ -375,7 +377,7 @@ th:
         C1_maze_intro_sequencing: Maze Sequencing Intro
         C1_maze_debugging: Maze Debugging
         C1_bee_level_intro: 'Bee Level - Intro'
-        C1_artist_intro: แนะนำศิลปิน
+        C1_artist_intro: Artist Intro
         C1_spelling_bee_intro: Spelling Bee Intro
         C1_zuck_repeat_loop: Maze Loops
         C1_bee_loops: Bee Loops
@@ -383,19 +385,19 @@ th:
         C1_playlab_storytelling: 'Play Lab - Create a Story'
         C1_planting_seed: Planting a Seed
         C1_building_foundating: Building a Foundation
-        C2_maze_intro: บทนำเขาวงกต
-        C2_artist_intro: แนะนำศิลปิน
+        C2_maze_intro: Maze Intro
+        C2_artist_intro: Artist Intro
         C2_zuck_repeat_loop: Maze Loops
         C2_artist_loops: Artist Loops
         C2_bee_conditionals: Bee Conditionals
         C2_playlab_createstory: 'Play Lab - Create a Story'
-        C2_graph_paper: การเขียนกระดาษกราฟ
-        C2_conditionals_with_cards: 'เงื่อนไข '
+        C2_graph_paper: Graph Paper Programming
+        C2_conditionals_with_cards: Conditionals
         C2_binary_bracelets: Binary Bracelets
-        C2_replay_programming: โปรแกรมการถ่ายทอดข้อมูล
+        C2_replay_programming: Relay Programming
         C2_paper_airplanes: Paper Airplanes
-        C3_maze_intro: บทนำเขาวงกต
-        C3_artist_intro: แนะนำศิลปิน
+        C3_maze_intro: Maze Intro
+        C3_artist_intro: Artist Intro
         C3_artist_functions: Artist Functions
         C3_bee_functions: Bee Functions
         C3_bee_conditionals: Bee Conditionals
@@ -406,7 +408,7 @@ th:
         C3_bee_debugging: Bee Debugging
         C3_bounce: Bounce
         C3_playlab_create_game: 'Play Lab - Create a Game'
-        C3_computational_thinking: คิดคำนวณ
+        C3_computational_thinking: Computational Thinking
         C3_dice_race: Dice Race
         C3_internet: Internet
         C3_crowdsourcing: Crowdsourcing

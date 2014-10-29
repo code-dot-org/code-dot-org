@@ -1435,16 +1435,57 @@ exports.workspaceCode = function(blockly) {
 };
 
 /**
+ * Generate a native function wrapper for use with the JS interpreter.
+ */
+exports.makeNativeMemberFunction = function (interpreter, nativeFunc, parentObj) {
+  return function() {
+    // Call the native function:
+    var retVal = nativeFunc.apply(parentObj, arguments);
+
+    // Now figure out what to do with the return value...
+
+    if (retVal instanceof Function) {
+      // Don't call createPrimitive() for functions
+      return retVal;
+    } else if (retVal instanceof Object) {
+      var newObj = interpreter.createObject(interpreter.OBJECT);
+      // Limited attempt to marshal back complex return values
+      // Special case: only one-level deep, only handling
+      // primitives and arrays of primitives
+      for (var prop in retVal) {
+        var isFuncOrObj = retVal[prop] instanceof Function ||
+                          retVal[prop] instanceof Object;
+        // replace properties with wrapped properties
+        if (retVal[prop] instanceof Array) {
+          var newArray = interpreter.createObject(interpreter.ARRAY);
+          for (var i = 0; i < retVal[prop].length; i++) {
+            newArray.properties[i] = interpreter.createPrimitive(retVal[prop][i]);
+          }
+          newArray.length = retVal[prop].length;
+          interpreter.setProperty(newObj, prop, newArray);
+        } else if (isFuncOrObj) {
+          // skipping over these - they could be objects that should
+          // be converted into interpreter objects. they could be native
+          // functions that should be converted. Or they could be objects
+          // that are already interpreter objects, which is what we assume
+          // for now:
+          interpreter.setProperty(newObj, prop, retVal[prop]);
+        } else {
+          // wrap as a primitive if it is not a function or object:
+          interpreter.setProperty(newObj, prop, interpreter.createPrimitive(retVal[prop]));
+        }
+      }
+      return newObj;
+    } else {
+      return interpreter.createPrimitive(retVal);
+    }
+  };
+};
+
+/**
  * Initialize a JS interpreter.
  */
 exports.initJSInterpreter = function (interpreter, scope, options) {
-  // helper function used below..
-  function makeNativeMemberFunction(nativeFunc, parentObj) {
-    return function() {
-      return interpreter.createPrimitive(
-                            nativeFunc.apply(parentObj, arguments));
-    };
-  }
   for (var optsObj in options) {
     var func, wrapper;
     // The options object contains objects that will be referenced
@@ -1460,13 +1501,96 @@ exports.initJSInterpreter = function (interpreter, scope, options) {
       if (func instanceof Function) {
         // Populate each of the global objects with native functions
         // NOTE: other properties are not currently passed to the interpreter
-        wrapper = makeNativeMemberFunction(func, options[optsObj]);
+        wrapper = exports.makeNativeMemberFunction(interpreter, func, options[optsObj]);
         interpreter.setProperty(obj,
                                 prop,
                                 interpreter.createNativeFunction(wrapper));
       }
     }
   }
+};
+
+// session is an instance of Ace editSession
+// Usage
+// var lengthArray = aceCalculateCumulativeLength(editor.getSession());
+// Need to call this only if the document is updated after the last call.
+exports.aceCalculateCumulativeLength = function (session) {
+  var cumulativeLength = [];
+  var cnt = session.getLength();
+  var cuml = 0, nlLength = session.getDocument().getNewLineCharacter().length;
+  cumulativeLength.push(cuml);
+  var text = session.getLines(0, cnt);
+  for (var i = 0; i < cnt; i++) {
+    cuml += text[i].length + nlLength;
+    cumulativeLength.push(cuml);
+  }
+  return cumulativeLength;
+};
+
+// Fast binary search implementation
+// Pass the cumulative length array here.
+// Usage
+// var row = aceFindRow(lengthArray, 0, lengthArray.length, 2512);
+// tries to find 2512th character lies in which row.
+function aceFindRow(cumulativeLength, rows, rowe, pos) {
+  if (rows > rowe) {
+    return null;
+  }
+  if (rows + 1 === rowe) {
+    return rows;
+  }
+
+  var mid = Math.floor((rows + rowe) / 2);
+  
+  if (pos < cumulativeLength[mid]) {
+    return aceFindRow(cumulativeLength, rows, mid, pos);
+  } else if(pos > cumulativeLength[mid]) {
+    return aceFindRow(cumulativeLength, mid, rowe, pos);
+  }
+  return mid;
+}
+
+/**
+ * Selects code in an ace editor.
+ */
+function createSelection (selection, cumulativeLength, start, end) {
+  var range = selection.getRange();
+
+  range.start.row = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
+  range.start.col = start - cumulativeLength[range.start.row];
+  range.end.row = aceFindRow(cumulativeLength, 0, cumulativeLength.length, end);
+  range.end.col = end - cumulativeLength[range.end.row];
+
+  selection.setSelectionRange(range);
+}
+
+exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
+                                      userCodeStartOffset, userCodeLength) {
+  var inUserCode = false;
+  if (interpreter.stateStack[0]) {
+    var node = interpreter.stateStack[0].node;
+    // Adjust start/end by Webapp.userCodeStartOffset since the code running
+    // has been expanded vs. what the user sees in the editor window:
+    var start = node.start - userCodeStartOffset;
+    var end = node.end - userCodeStartOffset;
+
+    inUserCode = (start > 0) && (start < userCodeLength);
+
+    // If we are showing Javascript code in the ace editor, highlight
+    // the code being executed in each step:
+    if (!editor.currentlyUsingBlocks) {
+      // Only show selection if the node being executed is inside the user's
+      // code (not inside code we inserted before or after their code that is
+      // not visible in the editor):
+      var selection = editor.aceEditor.getSelection();
+      if (inUserCode) {
+        createSelection(selection, cumulativeLength, start, end);
+      } else {
+        selection.clearSelection();
+      }
+    }
+  }
+  return inUserCode;
 };
 
 /**
@@ -9055,8 +9179,9 @@ exports.generateCodeAliases = function (codeFunctions, parentObjName) {
     for (var i = 0; i < codeFunctions.length; i++) {
       var cf = codeFunctions[i];
       code += "var " + cf.func +
-          " = function() { var newArgs = [''].concat(arguments); return " +
-          parentObjName + "." + cf.func +
+          " = function() { var newArgs = " +
+          (cf.idArgLast ? "arguments.concat(['']);" : "[''].concat(arguments);") +
+          " return " + parentObjName + "." + cf.func +
           ".apply(" + parentObjName + ", newArgs); };\n";
     }
   }
@@ -9258,9 +9383,9 @@ exports.directionWestLetter = function(d){return "Δ"};
 
 exports.end = function(d){return "τέλος"};
 
-exports.emptyBlocksErrorMsg = function(d){return "Το μπλοκ του \"Repeat\" ή του \"If\" πρέπει να περιέχει άλλα μπλοκ για να δουλέψει. Σιγουρέψου ότι το εσωτερικό μπλοκ ταιριάζει μέσα στο εξωτερικό."};
+exports.emptyBlocksErrorMsg = function(d){return "Το μπλοκ του \"Repeat\" ή του \"If\" πρέπει να περιέχει άλλα μπλοκ για να δουλέψει. Σιγουρέψου ότι το εσωτερικό μπλοκ χωράει σωστά μέσα στο μπλόκ που το περιέχει."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "Στο μπλόκ της συνάρτησης χρειάζεται να υπάρχουν άλλα μπλοκ για να μπορεί να δουλέψει."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Το μπλόκ της συνάρτησης χρειάζεται να έχει άλλα μπλοκ μέσα του για να δουλέψει."};
 
 exports.extraTopBlocks = function(d){return "Έχεις ασύνδετα μπλοκ. Θέλεις να τα συνδέσεις στο μπλοκ \"όταν εκτελείται\";"};
 
@@ -9272,7 +9397,7 @@ exports.finish = function(d){return "Τερματισμός"};
 
 exports.generatedCodeInfo = function(d){return "Ακόμη και τα κορυφαία πανεπιστήμια διδάσκουν κώδικα με βάση τα μπλοκ (π.χ. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Αλλά στο παρασκήνιο τα μπλοκ που συναρμολόγησες μπορούν να εμφανιστούν σε JavaScript, την πιο διαδεδομένη γλώσσα προγραμματισμού στον κόσμο:"};
 
-exports.hashError = function(d){return "Συγνώμη, το '%1' δεν αντιστοιχεί με αποθηκευμένο πρόγραμμα."};
+exports.hashError = function(d){return "Συγνώμη, το '%1' δεν αντιστοιχεί με κανένα αποθηκευμένο πρόγραμμα."};
 
 exports.help = function(d){return "Βοήθεια"};
 
@@ -9292,7 +9417,7 @@ exports.nextLevel = function(d){return "Συγχαρητήρια! Τελείωσ
 
 exports.nextLevelTrophies = function(d){return "Συγχαρητήρια! Τελείωσες το παζλ "+v(d,"puzzleNumber")+" και κέρδισες "+p(d,"numTrophies",0,"el",{"one":"τρόπαιο","other":n(d,"numTrophies")+" τρόπαια"})+"."};
 
-exports.nextStage = function(d){return "Συγχαρητήρια! Ολοκληρώσατε "+v(d,"stageName")+"."};
+exports.nextStage = function(d){return "Συγχαρητήρια! Ολοκληρώσατε το "+v(d,"stageName")+"."};
 
 exports.nextStageTrophies = function(d){return "Congratulations! You completed "+v(d,"stageName")+" and won "+p(d,"numTrophies",0,"el",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
@@ -9310,7 +9435,7 @@ exports.resetProgram = function(d){return "Επαναφορά"};
 
 exports.runProgram = function(d){return "Τρέξτε"};
 
-exports.runTooltip = function(d){return "Τρέξε το πρόγραμμα που ορίζεται από τα μπλοκ στο χώρο εργασίας."};
+exports.runTooltip = function(d){return "Τρέξτε το πρόγραμμα που ορίζεται από τα μπλοκ στο χώρο εργασίας."};
 
 exports.score = function(d){return "σκορ"};
 
@@ -9322,11 +9447,11 @@ exports.subtitle = function(d){return "ένα οπτικό περιβάλλον 
 
 exports.textVariable = function(d){return "κείμενο"};
 
-exports.tooFewBlocksMsg = function(d){return "Χρησιμοποιείς όλα τα αναγκαία είδη μπλοκ, αλλά δοκίμασε περισσότερα μπλοκ αυτών των ειδών για να ολοκληρώσεις το παζλ."};
+exports.tooFewBlocksMsg = function(d){return "Χρησιμοποιείς όλα τα αναγκαία είδη μπλοκ, αλλά δοκίμασε να χρησιμοποιήσεις περισσότερα απο τα μπλοκ αυτών των ειδών για να ολοκληρώσεις το παζλ."};
 
 exports.tooManyBlocksMsg = function(d){return "Αυτό το παζλ μπορεί να λυθεί με  <x id='START_SPAN'/><x id='END_SPAN'/> μπλοκ."};
 
-exports.tooMuchWork = function(d){return "Με ανάγκασες να κάνω πολλή δουλειά! Μπορείς με λιγότερες επαναλήψεις;"};
+exports.tooMuchWork = function(d){return "Με ανάγκασες να κάνω πολλή δουλειά! Μπορείς να επαναλάβεις λιγότερες φορές ;"};
 
 exports.toolboxHeader = function(d){return "μπλοκ"};
 
@@ -9340,25 +9465,25 @@ exports.hintRequest = function(d){return "Δείτε την υπόδειξη"};
 
 exports.backToPreviousLevel = function(d){return "Πίσω στο προηγούμενο επίπεδο"};
 
-exports.saveToGallery = function(d){return "Αποθήκευση στη συλλογή σου"};
+exports.saveToGallery = function(d){return "Αποθήκευσε το στη συλλογή σου"};
 
 exports.savedToGallery = function(d){return "Αποθηκεύτηκε στη συλλογή σου!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Συγγνώμη, δεν μπορούμε να μοιράσουμε αυτό το πρόγραμμα."};
 
 exports.typeCode = function(d){return "Γράψε το δικό σου κώδικα JavaScript κάτω από αυτές τις οδηγίες."};
 
 exports.typeFuncs = function(d){return "Διαθέσιμες συναρτήσεις: %1"};
 
-exports.typeHint = function(d){return "Σημείωσε ότι οι παρενθέσεις και ερωτηματικά είναι υποχρεωτικά."};
+exports.typeHint = function(d){return "Σημείωσε ότι απαιτούνται οι παρενθέσεις και τα ερωτηματικά ."};
 
 exports.workspaceHeader = function(d){return "Συναρμολόγησε τα μπλοκ σου εδώ: "};
 
-exports.infinity = function(d){return "άπειρο"};
+exports.infinity = function(d){return "Άπειρο"};
 
-exports.rotateText = function(d){return "Γυρίστε τη συσκευή σας."};
+exports.rotateText = function(d){return "Περιστρέψτε τη συσκευή σας."};
 
-exports.orientationLock = function(d){return "Απενεργοποιήστε το κλείδωμα περιστροφής στις ρυθμίσης της συσκευής."};
+exports.orientationLock = function(d){return "Απενεργοποιήστε το κλείδωμα περιστροφής στις ρυθμίσεις της συσκευής σας."};
 
 exports.wantToLearn = function(d){return "Θέλετε να μάθετε προγραμματισμό;"};
 
@@ -9368,11 +9493,11 @@ exports.when = function(d){return "όταν"};
 
 exports.whenRun = function(d){return "όταν εκτελείται"};
 
-exports.tryHOC = function(d){return "Δοκίμασε την Ώρα του Κώδικα"};
+exports.tryHOC = function(d){return "Δοκίμαστε την Ώρα του Κώδικα"};
 
-exports.signup = function(d){return "Κάνε εγγραφή στο εισαγωγικό μάθημα"};
+exports.signup = function(d){return "Κάντε εγγραφή για το εισαγωγικό μάθημα"};
 
-exports.hintHeader = function(d){return "Να μια βοήθεια:"};
+exports.hintHeader = function(d){return "Να μια συμβουλή:"};
 
 exports.genericFeedback = function(d){return "Δες πως κατέληξες και δοκίμασε να διορθώσεις το πρόγραμμά σου."};
 

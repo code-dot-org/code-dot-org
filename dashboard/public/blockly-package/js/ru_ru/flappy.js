@@ -1435,16 +1435,57 @@ exports.workspaceCode = function(blockly) {
 };
 
 /**
+ * Generate a native function wrapper for use with the JS interpreter.
+ */
+exports.makeNativeMemberFunction = function (interpreter, nativeFunc, parentObj) {
+  return function() {
+    // Call the native function:
+    var retVal = nativeFunc.apply(parentObj, arguments);
+
+    // Now figure out what to do with the return value...
+
+    if (retVal instanceof Function) {
+      // Don't call createPrimitive() for functions
+      return retVal;
+    } else if (retVal instanceof Object) {
+      var newObj = interpreter.createObject(interpreter.OBJECT);
+      // Limited attempt to marshal back complex return values
+      // Special case: only one-level deep, only handling
+      // primitives and arrays of primitives
+      for (var prop in retVal) {
+        var isFuncOrObj = retVal[prop] instanceof Function ||
+                          retVal[prop] instanceof Object;
+        // replace properties with wrapped properties
+        if (retVal[prop] instanceof Array) {
+          var newArray = interpreter.createObject(interpreter.ARRAY);
+          for (var i = 0; i < retVal[prop].length; i++) {
+            newArray.properties[i] = interpreter.createPrimitive(retVal[prop][i]);
+          }
+          newArray.length = retVal[prop].length;
+          interpreter.setProperty(newObj, prop, newArray);
+        } else if (isFuncOrObj) {
+          // skipping over these - they could be objects that should
+          // be converted into interpreter objects. they could be native
+          // functions that should be converted. Or they could be objects
+          // that are already interpreter objects, which is what we assume
+          // for now:
+          interpreter.setProperty(newObj, prop, retVal[prop]);
+        } else {
+          // wrap as a primitive if it is not a function or object:
+          interpreter.setProperty(newObj, prop, interpreter.createPrimitive(retVal[prop]));
+        }
+      }
+      return newObj;
+    } else {
+      return interpreter.createPrimitive(retVal);
+    }
+  };
+};
+
+/**
  * Initialize a JS interpreter.
  */
 exports.initJSInterpreter = function (interpreter, scope, options) {
-  // helper function used below..
-  function makeNativeMemberFunction(nativeFunc, parentObj) {
-    return function() {
-      return interpreter.createPrimitive(
-                            nativeFunc.apply(parentObj, arguments));
-    };
-  }
   for (var optsObj in options) {
     var func, wrapper;
     // The options object contains objects that will be referenced
@@ -1460,13 +1501,96 @@ exports.initJSInterpreter = function (interpreter, scope, options) {
       if (func instanceof Function) {
         // Populate each of the global objects with native functions
         // NOTE: other properties are not currently passed to the interpreter
-        wrapper = makeNativeMemberFunction(func, options[optsObj]);
+        wrapper = exports.makeNativeMemberFunction(interpreter, func, options[optsObj]);
         interpreter.setProperty(obj,
                                 prop,
                                 interpreter.createNativeFunction(wrapper));
       }
     }
   }
+};
+
+// session is an instance of Ace editSession
+// Usage
+// var lengthArray = aceCalculateCumulativeLength(editor.getSession());
+// Need to call this only if the document is updated after the last call.
+exports.aceCalculateCumulativeLength = function (session) {
+  var cumulativeLength = [];
+  var cnt = session.getLength();
+  var cuml = 0, nlLength = session.getDocument().getNewLineCharacter().length;
+  cumulativeLength.push(cuml);
+  var text = session.getLines(0, cnt);
+  for (var i = 0; i < cnt; i++) {
+    cuml += text[i].length + nlLength;
+    cumulativeLength.push(cuml);
+  }
+  return cumulativeLength;
+};
+
+// Fast binary search implementation
+// Pass the cumulative length array here.
+// Usage
+// var row = aceFindRow(lengthArray, 0, lengthArray.length, 2512);
+// tries to find 2512th character lies in which row.
+function aceFindRow(cumulativeLength, rows, rowe, pos) {
+  if (rows > rowe) {
+    return null;
+  }
+  if (rows + 1 === rowe) {
+    return rows;
+  }
+
+  var mid = Math.floor((rows + rowe) / 2);
+  
+  if (pos < cumulativeLength[mid]) {
+    return aceFindRow(cumulativeLength, rows, mid, pos);
+  } else if(pos > cumulativeLength[mid]) {
+    return aceFindRow(cumulativeLength, mid, rowe, pos);
+  }
+  return mid;
+}
+
+/**
+ * Selects code in an ace editor.
+ */
+function createSelection (selection, cumulativeLength, start, end) {
+  var range = selection.getRange();
+
+  range.start.row = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
+  range.start.col = start - cumulativeLength[range.start.row];
+  range.end.row = aceFindRow(cumulativeLength, 0, cumulativeLength.length, end);
+  range.end.col = end - cumulativeLength[range.end.row];
+
+  selection.setSelectionRange(range);
+}
+
+exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
+                                      userCodeStartOffset, userCodeLength) {
+  var inUserCode = false;
+  if (interpreter.stateStack[0]) {
+    var node = interpreter.stateStack[0].node;
+    // Adjust start/end by Webapp.userCodeStartOffset since the code running
+    // has been expanded vs. what the user sees in the editor window:
+    var start = node.start - userCodeStartOffset;
+    var end = node.end - userCodeStartOffset;
+
+    inUserCode = (start > 0) && (start < userCodeLength);
+
+    // If we are showing Javascript code in the ace editor, highlight
+    // the code being executed in each step:
+    if (!editor.currentlyUsingBlocks) {
+      // Only show selection if the node being executed is inside the user's
+      // code (not inside code we inserted before or after their code that is
+      // not visible in the editor):
+      var selection = editor.aceEditor.getSelection();
+      if (inUserCode) {
+        createSelection(selection, cumulativeLength, start, end);
+      } else {
+        selection.clearSelection();
+      }
+    }
+  }
+  return inUserCode;
 };
 
 /**
@@ -9055,8 +9179,9 @@ exports.generateCodeAliases = function (codeFunctions, parentObjName) {
     for (var i = 0; i < codeFunctions.length; i++) {
       var cf = codeFunctions[i];
       code += "var " + cf.func +
-          " = function() { var newArgs = [''].concat(arguments); return " +
-          parentObjName + "." + cf.func +
+          " = function() { var newArgs = " +
+          (cf.idArgLast ? "arguments.concat(['']);" : "[''].concat(arguments);") +
+          " return " + parentObjName + "." + cf.func +
           ".apply(" + parentObjName + ", newArgs); };\n";
     }
   }
@@ -9297,7 +9422,7 @@ exports.levelIncompleteError = function(d){return "Ты используешь �
 
 exports.listVariable = function(d){return "список"};
 
-exports.makeYourOwnFlappy = function(d){return "Создай свою Flappy Bird"};
+exports.makeYourOwnFlappy = function(d){return "Создай Свою Flappy Игру"};
 
 exports.missingBlocksErrorMsg = function(d){return "Для решения этой головоломки попробуй один или несколько из следующих блоков:"};
 
@@ -9305,7 +9430,7 @@ exports.nextLevel = function(d){return "Поздравляю! Головолом
 
 exports.nextLevelTrophies = function(d){return "Поздравляю! Ты завершил головоломку "+v(d,"puzzleNumber")+" и выиграл "+p(d,"numTrophies",0,"ru",{"one":"кубок","other":n(d,"numTrophies")+" кубков"})+"."};
 
-exports.nextStage = function(d){return "Поздравляю! Ты закончил "+v(d,"stageName")+"."};
+exports.nextStage = function(d){return "Поздравляю! Ты завершил "+v(d,"stageName")+"."};
 
 exports.nextStageTrophies = function(d){return "Поздравляю! Ты завершил этап "+v(d,"stageName")+" и выиграл "+p(d,"numTrophies",0,"ru",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
@@ -9325,7 +9450,7 @@ exports.runProgram = function(d){return "Выполнить"};
 
 exports.runTooltip = function(d){return "Запускает программу, заданную блоками в рабочей области."};
 
-exports.score = function(d){return "оценка"};
+exports.score = function(d){return "очки"};
 
 exports.showCodeHeader = function(d){return "Показать код"};
 
@@ -9349,7 +9474,7 @@ exports.totalNumLinesOfCodeWritten = function(d){return "Общее количе
 
 exports.tryAgain = function(d){return "Попытаться ещё раз"};
 
-exports.hintRequest = function(d){return "Показать подсказку"};
+exports.hintRequest = function(d){return "Посмотреть подсказку"};
 
 exports.backToPreviousLevel = function(d){return "Вернуться на предыдущий уровень"};
 
@@ -9387,7 +9512,7 @@ exports.signup = function(d){return "Зарегистрируйтесь на в�
 
 exports.hintHeader = function(d){return "Подсказка:"};
 
-exports.genericFeedback = function(d){return "Посмотреть как закончить и попытаться исправить свою программу."};
+exports.genericFeedback = function(d){return "Посмотреть, как вы выполнили, и попытаться исправить вашу программу."};
 
 
 },{"messageformat":50}],38:[function(require,module,exports){
@@ -9417,9 +9542,9 @@ exports.endGameTooltip = function(d){return "Завершает игру."};
 
 exports.finalLevel = function(d){return "Поздравляю! Последняя головоломка решена."};
 
-exports.flap = function(d){return "махать крыльями"};
+exports.flap = function(d){return "взмах крыльев"};
 
-exports.flapRandom = function(d){return "Подлететь со случайной силой"};
+exports.flapRandom = function(d){return "Взлететь со случайной силой"};
 
 exports.flapVerySmall = function(d){return "Подлететь с очень маленькой силой"};
 
@@ -9445,25 +9570,25 @@ exports.no = function(d){return "Нет"};
 
 exports.numBlocksNeeded = function(d){return "Эта головоломка может быть решена с помощью %1 блоков."};
 
-exports.playSoundRandom = function(d){return "Проиграть случайный звук"};
+exports.playSoundRandom = function(d){return "воспроизвести случайный звук"};
 
-exports.playSoundBounce = function(d){return "проиграть звук отскока"};
+exports.playSoundBounce = function(d){return "воспроизвести звук отскока"};
 
 exports.playSoundCrunch = function(d){return "проиграть звук хруста"};
 
-exports.playSoundDie = function(d){return "проиграть грустный звук"};
+exports.playSoundDie = function(d){return "воспроизвести грустный звук"};
 
-exports.playSoundHit = function(d){return "проиграть звук разбивания"};
+exports.playSoundHit = function(d){return "воспроизвести звук разрушения"};
 
 exports.playSoundPoint = function(d){return "проиграть звук преодоления препятствия"};
 
-exports.playSoundSwoosh = function(d){return "проиграть звук \"выполнено\""};
+exports.playSoundSwoosh = function(d){return "воспроизвести звук \"выполнено\""};
 
-exports.playSoundWing = function(d){return "воспроизвести звук крыльев"};
+exports.playSoundWing = function(d){return "воспроизвести звук размаха крыльев"};
 
 exports.playSoundJet = function(d){return "воспроизвести звук двигателя"};
 
-exports.playSoundCrash = function(d){return "воспроизвести звук падения"};
+exports.playSoundCrash = function(d){return "воспроизвести звук крушения"};
 
 exports.playSoundJingle = function(d){return "воспроизвести звук звонка"};
 
@@ -9477,19 +9602,19 @@ exports.reinfFeedbackMsg = function(d){return "Вы можете нажать к
 
 exports.scoreText = function(d){return "Оценка: "+v(d,"playerScore")};
 
-exports.setBackground = function(d){return "установить сцену"};
+exports.setBackground = function(d){return "задать сцену"};
 
 exports.setBackgroundRandom = function(d){return "установить  сцену Случайная"};
 
 exports.setBackgroundFlappy = function(d){return "установить сцену город (день)"};
 
-exports.setBackgroundNight = function(d){return "установить сцену Город (ночь)"};
+exports.setBackgroundNight = function(d){return "задать сцену Город (ночь)"};
 
 exports.setBackgroundSciFi = function(d){return "установить сцену Научно Фантастическая"};
 
-exports.setBackgroundUnderwater = function(d){return "установить сцену Под Водой"};
+exports.setBackgroundUnderwater = function(d){return "задать сцену Под Водой"};
 
-exports.setBackgroundCave = function(d){return "установить сцену Пещера"};
+exports.setBackgroundCave = function(d){return "задать сцену Пещера"};
 
 exports.setBackgroundSanta = function(d){return "установить сцену Новогодняя"};
 
@@ -9523,19 +9648,19 @@ exports.setGravityVeryHigh = function(d){return "Установить очень
 
 exports.setGravityTooltip = function(d){return "Задать уровень сложности"};
 
-exports.setGround = function(d){return "установить основание"};
+exports.setGround = function(d){return "задать основание"};
 
-exports.setGroundRandom = function(d){return "установить основание Случайное"};
+exports.setGroundRandom = function(d){return "задать случайное основане"};
 
-exports.setGroundFlappy = function(d){return "установить основание Земля"};
+exports.setGroundFlappy = function(d){return "задать основание Земля"};
 
-exports.setGroundSciFi = function(d){return "установить основание Научная Фантастика"};
+exports.setGroundSciFi = function(d){return "задать основание Научная Фантастика"};
 
-exports.setGroundUnderwater = function(d){return "установить основание Под Водой"};
+exports.setGroundUnderwater = function(d){return "задать основание Под Водой"};
 
-exports.setGroundCave = function(d){return "установить основание Пещера"};
+exports.setGroundCave = function(d){return "задать основание Пещера"};
 
-exports.setGroundSanta = function(d){return "установить основание Новогоднее"};
+exports.setGroundSanta = function(d){return "задать основание Санта"};
 
 exports.setGroundLava = function(d){return "установить основание Лава"};
 
@@ -9559,7 +9684,7 @@ exports.setObstacleLaser = function(d){return "установить препят
 
 exports.setObstacleTooltip = function(d){return "Установить изображение препятствия"};
 
-exports.setPlayer = function(d){return "установить игрока"};
+exports.setPlayer = function(d){return "выбрать игрока"};
 
 exports.setPlayerRandom = function(d){return "установить игрока Случайный"};
 
@@ -9597,7 +9722,7 @@ exports.setScore = function(d){return "задать счет"};
 
 exports.setScoreTooltip = function(d){return "Установить счет игрока"};
 
-exports.setSpeed = function(d){return "установить скорость"};
+exports.setSpeed = function(d){return "Задать скорость"};
 
 exports.setSpeedTooltip = function(d){return "Установить уровень скорости"};
 
@@ -9651,7 +9776,7 @@ exports.whenCollideGround = function(d){return "при ударе о землю"
 
 exports.whenCollideGroundTooltip = function(d){return "Выполните действия ниже когда Флэппи упадет на землю."};
 
-exports.whenCollideObstacle = function(d){return "При попадании в препятствие"};
+exports.whenCollideObstacle = function(d){return "при попадании в препятствие"};
 
 exports.whenCollideObstacleTooltip = function(d){return "Выполните действия ниже, когда Флэппи удариться о препятствие."};
 

@@ -41,14 +41,14 @@
         "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png"
         "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png"
       2-3 bee conditionals multi 1:
-        Bee Conditionals Multiple Choice One: Bee Conditionals Multiple Choice One
+        Bee Conditionals Multiple Choice One: Arı koşulları çoktan seçmeli Bir
         Which comparison below is true?: Aşağıdaki karşılaştırmalardan hangisi doğru?
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png"
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png"
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png"
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png"
       2-3 bee conditionals multi 2:
-        Bee Conditionals Multiple Choice Two: Bee Conditionals Multiple Choice Two
+        Bee Conditionals Multiple Choice Two: Arı koşulları çoktan seçmeli İki
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png, 500": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png,
           500"
         Choose the best blocks.: En iyi blokları seç.
@@ -57,7 +57,7 @@
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a3.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a3.png"
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a4.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a4.png"
       2-3 bee conditionals multi 3:
-        Bee Conditionals Multiple Choice Two: Bee Conditionals Multiple Choice Two
+        Bee Conditionals Multiple Choice Two: Arı koşulları çoktan seçmeli İki
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png,
           500"
         Choose the best blocks: En iyi blokları seçin
@@ -66,7 +66,7 @@
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png"
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png"
       2-3 bee loops multi 1:
-        Bee Loops Multiple Choice One: Bee Loops Multiple Choice One
+        Bee Loops Multiple Choice One: Arı döngüleri çoktan seçmeli Bir
         "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png,
           500"
         Which blocks collect all of the nectar?: Hangi blok tüm nektarı toplar?
@@ -75,7 +75,7 @@
         "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png"
         "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png"
       2-3 maze multi 1:
-        Maze Multiple Choice One: Maze Multiple Choice One
+        Maze Multiple Choice One: Labirent çoktan seçmeli Bir
         "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500": "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png,
           500"
         Choose the best answer.: En doğru yanıtı seç.
@@ -85,7 +85,7 @@
         "/script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png": "/script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png"
         "/script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png": "/script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png"
       2-3 Maze Multi 2:
-        Maze Multiple Choice: Maze Multiple Choice
+        Maze Multiple Choice: Labirent çoktan seçmeli
         "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500": "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png,
           500"
         Which blocks work?: Hangi bloklar çalışır?
@@ -96,27 +96,27 @@
       2-3 Algorithms Multi 1:
         Multiple Choice: "Çoktan Seçmeli"
         "/script_assets/2-3_images/unplugged/algorithms_1_q.png": "/script_assets/2-3_images/unplugged/algorithms_1_q.png"
-        Choose an algorithm for the image provided: Choose an algorithm for the image
-          provided
-        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Start
-          with a square<br/>Put a triangle above the square<br/>Put a triangle below
-          the square
-        Start with a square<br/>Put a triangle right of square<br/>Put a rhombus below square<br/>Put triangle right of rhombus: Start
-          with a square<br/>Put a triangle right of square<br/>Put a rhombus below
-          square<br/>Put triangle right of rhombus
-        Start with a square<br/>Put a rhombus above the square<br/>Put a triangle right of the rhombus: Start
-          with a square<br/>Put a rhombus above the square<br/>Put a triangle right
-          of the rhombus
-        Start with a square<br/>Put a triangle below the square<br/>Put a rhombus right of the triangle: Start
-          with a square<br/>Put a triangle below the square<br/>Put a rhombus right
-          of the triangle
+        Choose an algorithm for the image provided: Sağlanan görüntüye uygun bir algoritma
+          seçin
+        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Kare
+          ile başlayın<br/>Karenin üstünü üçgen yerleştirin<br/>Karenin altına üçgen
+          yerleştirin
+        Start with a square<br/>Put a triangle right of square<br/>Put a rhombus below square<br/>Put triangle right of rhombus: Kare
+          ile başlayın<br/>Karenin sağına üçgen yerleştirin<br/>Karenin altına eşkenar
+          dörtgen yerleştirin<br/>Eşkenar dörtgenin sağına üçgen yerleştirin
+        Start with a square<br/>Put a rhombus above the square<br/>Put a triangle right of the rhombus: Kare
+          ile başlayın<br/>Karenin üstüne eşkenar dörtgen yerleştirin<br/>Eşkenar
+          dörtgenin sağına üçgen yerleştirin
+        Start with a square<br/>Put a triangle below the square<br/>Put a rhombus right of the triangle: Kare
+          ile başlayın<br/>Karenin altına üçgen yerleştirin<br/>Üçgenin sağına eşkenar
+          dörtgen yerleştirin
       2-3 Algorithms Multi 2:
         Multiple Choice: "Çoktan Seçmeli"
-        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Start
-          with a triangle<br/>Put a square below the triangle<br/>Put another triangle
-          below the square
-        Which image does <em>not</em> follow this algorithm?: Which image does <em>not</em>
-          follow this algorithm?
+        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: "Üçgen
+          ile başlayın<br/>Üçgenin altına kare yerleştirin<br/>Karenin altına başka
+          bir üçgen daha yerleştirin"
+        Which image does <em>not</em> follow this algorithm?: Hangi resim bu algoritmayı
+          <em>takip etmez</em>?
         "/script_assets/2-3_images/unplugged/algorithms_2_a1.png": "/script_assets/2-3_images/unplugged/algorithms_2_a1.png"
         "/script_assets/2-3_images/unplugged/algorithms_2_a2.png": "/script_assets/2-3_images/unplugged/algorithms_2_a2.png"
         "/script_assets/2-3_images/unplugged/algorithms_2_a3.png": "/script_assets/2-3_images/unplugged/algorithms_2_a3.png"
@@ -131,8 +131,8 @@
       2-3 Conditionals Multi 1:
         Multiple Choice: "Çoktan Seçmeli"
         "/script_assets/2-3_images/unplugged/conditionals_1_q.png": "/script_assets/2-3_images/unplugged/conditionals_1_q.png"
-        According to the rules of the game, which set of cards is scored correctly?: According
-          to the rules of the game, which set of cards is scored correctly?
+        According to the rules of the game, which set of cards is scored correctly?: Oyun
+          kurallarına uygun olarak, hangi kağıt seti doğru olarak puan alır?
         "/script_assets/2-3_images/unplugged/conditionals_1_a1.png": "/script_assets/2-3_images/unplugged/conditionals_1_a1.png"
         "/script_assets/2-3_images/unplugged/conditionals_1_a2.png": "/script_assets/2-3_images/unplugged/conditionals_1_a2.png"
         "/script_assets/2-3_images/unplugged/conditionals_1_a3.png": "/script_assets/2-3_images/unplugged/conditionals_1_a3.png"
@@ -163,13 +163,13 @@
         "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png"
       2-3 Relay Programming Multi 2:
         Multiple Choice: "Çoktan Seçmeli"
-        Which image-program combo does not contain mistakes?: Which image-program
-          combo does not contain mistakes?
+        Which image-program combo does not contain mistakes?: Hangi resim-program
+          ikilisi hata içermez?
         "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png"
         "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png"
         "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png"
       4-5 artist multi 1:
-        Artist Multiple Choice: Artist Multiple Choice
+        Artist Multiple Choice: Sanatçı çoktan seçmeli
         Which blocks draw a rectangle with a perimeter of 100?: Hangi bloklar çapı
           100 olan bir dikdörtgen çizer?
         "/script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png": "/script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png"
@@ -177,14 +177,14 @@
         "/script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png": "/script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png"
         "/script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png": "/script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png"
       4-5 artist multi 2:
-        Artist Multiple Choice: Artist Multiple Choice
+        Artist Multiple Choice: Sanatçı çoktan seçmeli
         Which drawing is symmetric?: Hangi çizim simetriktir?
         "/script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png": "/script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png"
         "/script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png": "/script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png"
         "/script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png": "/script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png"
         "/script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png": "/script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png"
       4-5 artist functions multi 1:
-        Artist Functions Multiple Choice: Artist Functions Multiple Choice
+        Artist Functions Multiple Choice: Sanatçı Fonksiyonlar çoktan seçmeli
         "/script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png, 500": "/script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png,
           500"
         Which function creates a rectangle that can change its size?: Hangi fonksiyon
@@ -203,7 +203,7 @@
         "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png"
         "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png"
       4-5 artist loops multi 2:
-        Artist Functions Multiple Choice: Artist Functions Multiple Choice
+        Artist Functions Multiple Choice: Sanatçı Fonksiyonlar çoktan seçmeli
         'Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50': 5,
           10, 15, 20, 25, 30, 35, 40, 45, 50 dokusunu temsil eden for döngüsünü seç
         "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png"
@@ -211,7 +211,7 @@
         "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png"
         "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png"
       4-5 bee conditionals multi 1:
-        Bee Conditionals Multiple Choice: Bee Conditionals Multiple Choice
+        Bee Conditionals Multiple Choice: Arı Koşullar çoktan seçmeli
         "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png"
         0: "? Mor çiçek 3, 2 veya 1 arasında değişen nektar içerebilir, ancak sen
           kaç tane olduğunu bilmiyorsun. Hangi blok mor çiçeği doğru biçimde kontrol
@@ -225,7 +225,7 @@
         "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png"
         "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png"
       4-5 bee debug multi 1:
-        Bee Debug Multiple Choice: Bee Debug Multiple Choice
+        Bee Debug Multiple Choice: Arı Hata ayıklama çoktan seçmeli
         "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png"
         "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png"
         Which version of the function will work?: Fonksiyonun hangi versiyonu çalışır?
@@ -234,7 +234,7 @@
         "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png"
         "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png"
       4-5 bee loops multi 1:
-        Bee Loops Multiple Choice: Bee Loops Multiple Choice
+        Bee Loops Multiple Choice: Arı Döngüler çoktan seçmeli
         "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png"
         Which blocks will solve the puzzle?: Hangi bloklar yapbozu çözecek?
         "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png"
@@ -242,7 +242,7 @@
         "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png"
         "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png"
       4-5 farmer loops multi 1:
-        Famer Loops Multiple Choice: Famer Loops Multiple Choice
+        Famer Loops Multiple Choice: "Çiftçi Döngüler Çoktan Seçmeli"
         "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png, 500": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png,
           500"
         Which blocks solve the puzzle?: Hangi bloklar yapbozu çözer?
@@ -251,7 +251,7 @@
         "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a3.png": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a3.png"
         "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png"
       4-5 maze multi 1:
-        Maze Multiple Choice: Maze Multiple Choice
+        Maze Multiple Choice: Labirent çoktan seçmeli
         "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500": "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png,
           500"
         Which blocks solve the puzzle?: Hangi bloklar yapbozu çözer?
@@ -260,7 +260,7 @@
         "/script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png": "/script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png"
         "/script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png": "/script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png"
       4-5 maze conditionals multi 1:
-        Maze Conditionals Multiple Choice: Maze Conditionals Multiple Choice
+        Maze Conditionals Multiple Choice: Labirent Koşullar Çoktan Seçmeli
         "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png,
           500"
         Which blocks solve the puzzle?: Hangi bloklar yapbozu çözer?
@@ -272,14 +272,14 @@
         Multiple Choice: "Çoktan Seçmeli"
         Which one of these items is hardest to describe an algorithm for?: Which one
           of these items is hardest to describe an algorithm for?
-        "<h4>Brushing your teeth</h4>": "<h4>Brushing your teeth</h4>"
-        "<h4>Baking cookies</h4>": "<h4>Baking cookies</h4>"
-        "<h4>Shopping from a grocery list</h4>": "<h4>Shopping from a grocery list</h4>"
-        "<h4>Banana</h4>": "<h4>Banana</h4>"
+        "<h4>Brushing your teeth</h4>": "<h4>Dişlerini fırçalamak</h4>"
+        "<h4>Baking cookies</h4>": "<h4>Kurabiye pişirmek</h4>"
+        "<h4>Shopping from a grocery list</h4>": "<h4>Bakkal listedekileri almak</h4>"
+        "<h4>Banana</h4>": "<h4>Muz</h4>"
       4-5 Computational Thinking Multi 1:
         Multiple Choice: "Çoktan Seçmeli"
-        0: "? Here are three sentences. Which of the templates below correctly abstracts
-          so that all three match the same pattern as the template?"
+        0: "? Cümleler burada. Aşağıdaki şablonlardan hangisi kesin olarak diğer üç
+          parça şablona uyar?"
         1: ": Here are three sentences. Which of the templates below correctly abstracts
           so that all three match the same pattern as the template?"
         "<h4>Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.</h4>": "<h4>Seattle

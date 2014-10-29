@@ -49,6 +49,7 @@
           desc: Breyta kóða (beta)
           MazeEC: Stig 1
           Webapp: Stig 2
+          ArtistEC: Stig 3
         events:
           desc: Skopp (beta)
           Bounce: Stig 1
@@ -97,7 +98,8 @@
         Jigsaw: Púsl
         MazeStep: Völundarhús, þrep
         Wordsearch: Orðaleit
-        Webapp: Webapp
+        Webapp: Vefapp
+        ArtistEC: Listamaðurinn
     trophy:
       name:
         Bronze: Brons
@@ -537,6 +539,9 @@
         maze_wordsearch_k_16: Færðu mig í eina átt svo aðra til að stafa orðið BELOW
         maze_wordsearch_k_20: "Þetta er próf! Færðu mig í eina átt svo aðra til að
           stafa orðið STORY"
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
+          it in the new "penColour" block.'
     video:
       name:
         maze_intro: Kynning á Völundarhúsi

@@ -18,11 +18,11 @@ Code.org zal na het Uur Code (8-14 dec.) contact opnemen met organisatoren om to
 
 ## Video-chat met een gastspreker:
 
-Alleen voor scholen in het basis- en middelbaar onderwijs. Om aanspraak te maken moet je hele school zich aanmelden voor het Uur Code voor 14 november 2014. Code.org zal winnende scholen willekeurig selecteren, een timeslot kiezen voor de webchat, en samenwerken met de betreffende leraar om de technische details op te zetten.
+Prize limited to K-12 classrooms in the U.S. and Canada only. To qualify, sign up your classroom by November 14, 2014. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligbile to win.
 
 ## Laptops voor de hele klas (of $10.000 voor andere technologie):
 
-Alleen voor scholen in het basis- en middelbaar onderwijs. Waarom alleen publieke scholen? [Zie het antwoord hier](http://www.hourofcode.com/#faq). Om aanspraak te maken moet je hele school zich aanmelden voor het Uur Code voor 14 november 2014. Een school in iedere Amerikaanse staat krijgt computers voor een heel klaslokaal. Code.org selecteert winnaars en bericht ze via email voor 1 december 2014.
+Alleen voor scholen in het basis- en middelbaar onderwijs. To qualify, your entire school must register for the Hour of Code by November 14, 2014. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2014.
 
 To clarify, this is not a sweepstakes or a contest involving pure chance.
 

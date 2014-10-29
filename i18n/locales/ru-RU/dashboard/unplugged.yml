@@ -33,7 +33,7 @@ ru:
           - unplug5
         video: Unplug5
       Unplug6:
-        title: Conditions
+        title: Условия
         desc: Это игра для класса. После знакомства с идеей условных выражений, условных операторов и циклов, класс может попрактиковаться, используя готовую программу, колоду карт и удачу.
         pdfs:
           - unplug6
@@ -70,23 +70,23 @@ ru:
         video: Unplug11
       UnplugHappyMaps:
         title: Happy Maps
-        desc: Students create simple algorithms (sets of instructions) to move a character through a maze using a single command.
+        desc: Ученики создают простые алгоритмы (наборы инструкций) для перемещения персонажа через лабиринт с помощью одной команды.
         video: C1_happy_maps_unplugged
       MoveIt:
         title: Move it, Move it
-        desc: Students create simple algorithms (sets of instructions) to move a character through a maze using a single command.
+        desc: Ученики создают простые алгоритмы (наборы инструкций) для перемещения персонажа через лабиринт с помощью одной команды.
         video: C1_moveitmoveit_unplugged
       PlantASeed:
-        title: 'Real-life Algorithms: Plant a Seed'
+        title: 'Реальные алгоритмы: Посадить семя'
         desc: This lesson calls out ways we use algorithms in our daily lives, using the act of planting a seed as an example. It also focuses on the bigger picture of computer science and how algorithms play an essential part.
         video: C1_planting_seed
       BuildingAFoundation:
-        title: Building a Foundation
+        title: Создание основы
         desc: Students build a structure using only provided supplies. Structures must complete a task (reach a certain height or bear a certain weight), and students discuss the idea of being persistent when things get complicated.
         video: C1_building_foundation
       GettingLoopy:
         title: Зацикливание
-        desc: This lesson introduces the programming concept of loops (repeated instructions) through a dance activity. Students will learn simple choreography, then be instructed to repeat it.
+        desc: 'Этот урок знакомит с понятием программирования "циклы" (многократно повторяемые команды) с помощью танцев.  Ученики освоят простые  танцевальные движения, а затем будут их повторять.'
         video: C1_getting_loopy
       RelayProgramming:
         title: Эстафетное программирование
@@ -98,26 +98,26 @@ ru:
         desc: 'To learn about conditional statements, students play a card game and create rules like "If I draw a red card, I get a point" and "If I draw a black card, you get a point."'
         video: C2_conditionals_with_cards
       BigEvent:
-        title: The Big Event
-        desc: 'Students are introduced to the programming concept of "events," which are actions that a computer constantly monitors for. The teacher will press buttons on a paper remote and students will react depending on which button is pressed.'
+        title: Большое Событие
+        desc: 'Ученики знакомятся с понятием программирования «события»: действиями, которые компьютер постоянно отслеживает. Учитель будет нажимать кнопки на бумажном пульте, и ученики будут реагировать в зависимости от нажатой кнопки.'
         video: C1_bigevent_unplugged
       GoingPlacesSafely:
-        title: Going Places Safely
-        desc: The Internet is a powerful, but sometimes dangerous place. Teachers introduce how to stay safe while navigating the Internet.
+        title: Безопасное путешествие
+        desc: 'Интернет - мощное, но иногда опасное место. Учителя знакомят с безопасными способами навигации в интернете.'
       GraphPaperProgramming:
         title: Программирование на бумаге в клеточку
-        desc: Students write an algorithm (a set of instructions) using a set of predefined commands to direct their classmates to reproduce a drawing.
+        desc: Ученики пишут алгоритм (набор инструкций), используя набор определённых заранее команд, чтобы управлять одноклассниками для воспроизведения рисунка.
         video: C2_graph_paper
       PaperPlanes:
-        title: 'Real-life Algorithms: Paper Planes'
-        desc: This lesson calls out ways we use algorithms in our daily lives, specifically making paper airplanes. This lesson also focuses on the bigger picture of computer science and how algorithms play an essential part.
+        title: 'Реальные алгоритмы: Бумажные самолетики'
+        desc: Этот урок заявляет способы, которыми мы используем алгоритмы в повседневной жизни, в частности, для изготовления бумажных самолётиков. Урок также фокусируется на более широкой картине информатики и существенной роли алгоритмов.
         video: C2_paper_airplanes
       BinaryBracelets:
         title: Двоичные браслеты
         desc: Students create bracelets as a binary representations of the first letter of their name. Students learn that data can be represented and stored in more than one way.
         video: C2_binary_bracelets
       DigitalFootprint:
-        title: Your Digital Footprint
+        title: Твой цифровой отпечаток
         desc: 'Преподаватели знакомят учеников с идеей, что ввод информации о себе в Сети создает цифровой "отпечаток" или «след», который имеет последствия.'
       ComputationalThinking:
         title: Вычислительное мышление
@@ -128,7 +128,7 @@ ru:
         desc: Students create an algorithm with variables and functions (pieces of code that you want to use over and over again) to create suncatchers using string and beads.
         video: C3_functional_suncatchers
       SongwritingParameters:
-        title: Songwriting with Parameters
+        title: Написание песен с параметрами
         desc: Students use the concept of the chorus in a song to learn about passing parameters (which customize a function without having to rewrite the entire function).
         video: C3_songwriting_with_parameters
       DiceRace:
@@ -141,7 +141,7 @@ ru:
         video: C3_internet
       Crowdsourcing:
         title: Crowdsourcing
-        desc: Student use crowdsourcing, a problem-solving technique common in computer science, to complete a task together as a classroom more efficiently than if a student attempted it alone.
+        desc: Students use crowdsourcing, a problem-solving technique common in computer science, to complete a task together as a classroom more efficiently than if a student attempted it alone.
         video: C3_crowdsourcing
       DigitalCitizenship:
         title: Цифровое гражданство

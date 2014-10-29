@@ -67,14 +67,7 @@
     overview_teacher: |
       在教室里教计算机科学,注册一个账户。<p/> 你可以跟踪你的学生进步并获得奖励。
     no_signup_message: 您可以 <a target="_blank"href="http://learn.code.org"> 浏览各个阶段和谜题</a>，但您将需要注册以保存您的进度。
-    prizes_message: "成功获得所有 %{num_trophies} 概念奖杯的美国学生可以任选下列奖品之一作为奖励，奖品包括：免费Dropbox空间、Skype积分、美国艺电(EA)
-      的数字版游戏。"
     teacher_educator_guide: "请参阅教师指南"
-    teacher_prize_header: 赢取 $1,000 在 <a target="_blank"href="http://DonorsChoose.org">
-      DonorsChoose.org</a> 奖励 （通过 2014 年 6 月 15 日，直到最后用品)
-    teacher_prize_message: 与 <a target="_blank"href="http://DonorsChoose.org"> DonorsChoose.org</a>
-      合作，Code.org 将提供向美国公立学校有至少15名学生的教提供 1000 美元的课程基金。<a href="http://code.org/educate/20hr">
-      的详细信息请参阅教师指南。</a>
     teacher_pitch: Code.org 老师注册
     teacher_title: "老师登记"
     student_pitch: Code.org 学生注册
@@ -85,6 +78,7 @@
     gender: "性别 （可选）"
     birthday: "生日 （可选）"
     age: Age (optional)
+    user_type: Are you a student or teacher?
     submit: "登陆"
     teacher: "你是老师吗？"
     valid_username: "可用 ！"
@@ -351,7 +345,6 @@
     student_progress: "你的学习进度"
     student_stats: "你已经获得了%{trophy_count}/%{trophy_max}个“概念掌握”奖杯。"
     student_left_off: "你上次离开的地方："
-    student_finished_prize: "你已经完成了所有的教程，领取你的%{prize_link}并选择另一个班%{online_link}或者学校%{local_school_link}"
     student_finished: "您已经完成了所有教程，选择另一个 %{online_link} 或 {local_school_link} %"
     local_school: "本地学校"
     online: "在线"
@@ -374,6 +367,9 @@
     male: "男性"
     female: "女性"
     none: "不愿回答"
+  user_type:
+    student: "学生"
+    teacher: Teacher
   footer:
     help_from_html: "从谷歌、 微软、 Facebook 和 Twitter 工程师帮助创建本教程。"
     art_from_html: "愤怒的小鸟 ™ & © 2009年-2013 Rovio 娱乐有限公司版权所有。 <br/>植物与僵尸 ™ & © 2013年电子艺术公司保留所有的权利。"
@@ -384,13 +380,6 @@
     tos: "条目"
     privacy: "隐私政策"
     secure: "安全版本"
-  prize_mail:
-    prize_earned:
-      subject: "领取你在 Code.org 的奖品！"
-    teacher_prize_earned:
-      subject: Code.org 的祝贺 ！
-    teacher_bonus_prize_earned:
-      subject: "领取你在 Code.org 的额外奖品！"
   reference_area:
     title: "需要帮助吗？"
     subtitle: "看看这些视频和提示"

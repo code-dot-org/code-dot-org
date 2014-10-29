@@ -72,18 +72,7 @@
     no_signup_message: Þú getur <a target="_blank" href="http://learn.code.org">skoðað
       hina ýmsu áfanga og þrautir</a>, en þú verður að skrá þig til að geta vistað
       árangur þinn.
-    prizes_message: Bandarískir nemendur sem safna öllum %{num_trophies} hugtakabikurunum
-      geta valið ýmiss verðlaun þar á meðal ókeypis pláss á Dropbox, inneign hjá Skype
-      og leikjaniðurhal hjá Electronic Arts.
     teacher_educator_guide: Sjá leiðarvísi kennara
-    teacher_prize_header: Fáðu $1.000 í <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
-      verðlaun (til og með 15. júní 2014 eða á meðan fjármunir endast)
-    teacher_prize_message: 'Í samstarfi við <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>,
-      mun Code.org bjóða allt að $1.000 styrki til bandarískra kennara við opinbera
-      skóla sem leiða a.m.k. 15 nemendur í gegnum námskeiðið K-8 Kynning á tölvunarfræði
-      (til og með 15. júní eða á meðan fjármunir endast).  <a href="http://code.org/educate/20hr">Sjá
-      leiðarvísi kennara</a>.  (Hámark: $1.000 á kennara.  <a target="_blank" href="http://help.donorschoose.org/appcode/answers/detail/a_id/454/kw/appcode.org">Nánar
-      um takmarkanir í spurningalista</a>.)'
     teacher_pitch: Skráning kennara fyrir Code.org
     teacher_title: Nýskráning kennara
     student_pitch: Skráning nemenda fyrir Code.org
@@ -94,6 +83,7 @@
     gender: Kyn (valfrjálst)
     birthday: afmælisdagur (valfrjálst)
     age: Aldur
+    user_type: Are you a student or teacher?
     submit: Skráning
     teacher: Ertu kennari?
     valid_username: Laust!
@@ -393,8 +383,6 @@
     student_stats: Þú hefur unnið til %{trophy_count} af %{trophy_max} mögulegum "Concept
       Mastery" bikurum.
     student_left_off: "Þú varst hér síðast:"
-    student_finished_prize: "Þú hefur lokið öllu kennsluefninu, innleystu verðlaunin
-      þín %{prize_link} og veldu annað nám á netinu: %{online_link} eða í skóla: %{local_school_link}"
     student_finished: "Þú hefur lokið öllu kennsluefninu. Veldu annað nám á netinu:
       %{online_link} eða í skóla: %{local_school_link}"
     local_school: nálægur skóli
@@ -422,6 +410,9 @@
     male: Karlkyns
     female: Kvenkyns
     none: Kýs að svara ekki
+  user_type:
+    student: nemandi
+    teacher: Kennari
   footer:
     help_from_html: Tæknifólk hjá Google, Microsoft, Facebook og Twitter aðstoðuðu
       við gerð þessa kennsluefnis.
@@ -435,20 +426,13 @@
     tos: Skilmálar
     privacy: Persónuvernd
     secure: "Örugg útgáfa"
-  prize_mail:
-    prize_earned:
-      subject: Leystu út verðlaunin þín á Code.org!
-    teacher_prize_earned:
-      subject: Haminguóskir frá Code.org!
-    teacher_bonus_prize_earned:
-      subject: Leystu út bónusinn þinn á Code.org!
   reference_area:
     title: Vantar þig aðstoð?
     subtitle: Skoðaðu þessi myndbönd og vísbendingar
     teacher: Sjá lausnina
     auth_error: "Þú hefur ekki heimild til að sjá lausnina."
     submit: Uppfæra stað listamanns
-    direction: Stefna í upphafi
+    direction: Upphafsstefna (í gráðum)
   video:
     tab: Myndbönd.
     notes: Ekkert myndband? Sýna útskýringar.

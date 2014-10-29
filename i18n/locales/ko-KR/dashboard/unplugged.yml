@@ -139,7 +139,7 @@ ko:
         video: C3_internet
       Crowdsourcing:
         title: 클라우드소싱
-        desc: 학생들을 컴퓨터과학(정보과학)에서 일반적으로 사용되는 클라우드소싱과 문제 해결 방법을 사용하게 된다. 학생들 개인으로 활동하는 것보다 학급단위로 활동하는 것이 더 효과적이다.
+        desc: Students use crowdsourcing, a problem-solving technique common in computer science, to complete a task together as a classroom more efficiently than if a student attempted it alone.
         video: C3_crowdsourcing
       DigitalCitizenship:
         title: 디지털 시민의식

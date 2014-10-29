@@ -5526,16 +5526,57 @@ exports.workspaceCode = function(blockly) {
 };
 
 /**
+ * Generate a native function wrapper for use with the JS interpreter.
+ */
+exports.makeNativeMemberFunction = function (interpreter, nativeFunc, parentObj) {
+  return function() {
+    // Call the native function:
+    var retVal = nativeFunc.apply(parentObj, arguments);
+
+    // Now figure out what to do with the return value...
+
+    if (retVal instanceof Function) {
+      // Don't call createPrimitive() for functions
+      return retVal;
+    } else if (retVal instanceof Object) {
+      var newObj = interpreter.createObject(interpreter.OBJECT);
+      // Limited attempt to marshal back complex return values
+      // Special case: only one-level deep, only handling
+      // primitives and arrays of primitives
+      for (var prop in retVal) {
+        var isFuncOrObj = retVal[prop] instanceof Function ||
+                          retVal[prop] instanceof Object;
+        // replace properties with wrapped properties
+        if (retVal[prop] instanceof Array) {
+          var newArray = interpreter.createObject(interpreter.ARRAY);
+          for (var i = 0; i < retVal[prop].length; i++) {
+            newArray.properties[i] = interpreter.createPrimitive(retVal[prop][i]);
+          }
+          newArray.length = retVal[prop].length;
+          interpreter.setProperty(newObj, prop, newArray);
+        } else if (isFuncOrObj) {
+          // skipping over these - they could be objects that should
+          // be converted into interpreter objects. they could be native
+          // functions that should be converted. Or they could be objects
+          // that are already interpreter objects, which is what we assume
+          // for now:
+          interpreter.setProperty(newObj, prop, retVal[prop]);
+        } else {
+          // wrap as a primitive if it is not a function or object:
+          interpreter.setProperty(newObj, prop, interpreter.createPrimitive(retVal[prop]));
+        }
+      }
+      return newObj;
+    } else {
+      return interpreter.createPrimitive(retVal);
+    }
+  };
+};
+
+/**
  * Initialize a JS interpreter.
  */
 exports.initJSInterpreter = function (interpreter, scope, options) {
-  // helper function used below..
-  function makeNativeMemberFunction(nativeFunc, parentObj) {
-    return function() {
-      return interpreter.createPrimitive(
-                            nativeFunc.apply(parentObj, arguments));
-    };
-  }
   for (var optsObj in options) {
     var func, wrapper;
     // The options object contains objects that will be referenced
@@ -5551,13 +5592,96 @@ exports.initJSInterpreter = function (interpreter, scope, options) {
       if (func instanceof Function) {
         // Populate each of the global objects with native functions
         // NOTE: other properties are not currently passed to the interpreter
-        wrapper = makeNativeMemberFunction(func, options[optsObj]);
+        wrapper = exports.makeNativeMemberFunction(interpreter, func, options[optsObj]);
         interpreter.setProperty(obj,
                                 prop,
                                 interpreter.createNativeFunction(wrapper));
       }
     }
   }
+};
+
+// session is an instance of Ace editSession
+// Usage
+// var lengthArray = aceCalculateCumulativeLength(editor.getSession());
+// Need to call this only if the document is updated after the last call.
+exports.aceCalculateCumulativeLength = function (session) {
+  var cumulativeLength = [];
+  var cnt = session.getLength();
+  var cuml = 0, nlLength = session.getDocument().getNewLineCharacter().length;
+  cumulativeLength.push(cuml);
+  var text = session.getLines(0, cnt);
+  for (var i = 0; i < cnt; i++) {
+    cuml += text[i].length + nlLength;
+    cumulativeLength.push(cuml);
+  }
+  return cumulativeLength;
+};
+
+// Fast binary search implementation
+// Pass the cumulative length array here.
+// Usage
+// var row = aceFindRow(lengthArray, 0, lengthArray.length, 2512);
+// tries to find 2512th character lies in which row.
+function aceFindRow(cumulativeLength, rows, rowe, pos) {
+  if (rows > rowe) {
+    return null;
+  }
+  if (rows + 1 === rowe) {
+    return rows;
+  }
+
+  var mid = Math.floor((rows + rowe) / 2);
+  
+  if (pos < cumulativeLength[mid]) {
+    return aceFindRow(cumulativeLength, rows, mid, pos);
+  } else if(pos > cumulativeLength[mid]) {
+    return aceFindRow(cumulativeLength, mid, rowe, pos);
+  }
+  return mid;
+}
+
+/**
+ * Selects code in an ace editor.
+ */
+function createSelection (selection, cumulativeLength, start, end) {
+  var range = selection.getRange();
+
+  range.start.row = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
+  range.start.col = start - cumulativeLength[range.start.row];
+  range.end.row = aceFindRow(cumulativeLength, 0, cumulativeLength.length, end);
+  range.end.col = end - cumulativeLength[range.end.row];
+
+  selection.setSelectionRange(range);
+}
+
+exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
+                                      userCodeStartOffset, userCodeLength) {
+  var inUserCode = false;
+  if (interpreter.stateStack[0]) {
+    var node = interpreter.stateStack[0].node;
+    // Adjust start/end by Webapp.userCodeStartOffset since the code running
+    // has been expanded vs. what the user sees in the editor window:
+    var start = node.start - userCodeStartOffset;
+    var end = node.end - userCodeStartOffset;
+
+    inUserCode = (start > 0) && (start < userCodeLength);
+
+    // If we are showing Javascript code in the ace editor, highlight
+    // the code being executed in each step:
+    if (!editor.currentlyUsingBlocks) {
+      // Only show selection if the node being executed is inside the user's
+      // code (not inside code we inserted before or after their code that is
+      // not visible in the editor):
+      var selection = editor.aceEditor.getSelection();
+      if (inUserCode) {
+        createSelection(selection, cumulativeLength, start, end);
+      } else {
+        selection.clearSelection();
+      }
+    }
+  }
+  return inUserCode;
 };
 
 /**
@@ -18550,8 +18674,9 @@ exports.generateCodeAliases = function (codeFunctions, parentObjName) {
     for (var i = 0; i < codeFunctions.length; i++) {
       var cf = codeFunctions[i];
       code += "var " + cf.func +
-          " = function() { var newArgs = [''].concat(arguments); return " +
-          parentObjName + "." + cf.func +
+          " = function() { var newArgs = " +
+          (cf.idArgLast ? "arguments.concat(['']);" : "[''].concat(arguments);") +
+          " return " + parentObjName + "." + cf.func +
           ".apply(" + parentObjName + ", newArgs); };\n";
     }
   }
@@ -18731,7 +18856,7 @@ exports.catMath = function(d){return "Calculs"};
 
 exports.catProcedures = function(d){return "Fonctions"};
 
-exports.catText = function(d){return "Texte"};
+exports.catText = function(d){return "texte"};
 
 exports.catVariables = function(d){return "Variables"};
 
@@ -18773,7 +18898,7 @@ exports.help = function(d){return "Aide"};
 
 exports.hintTitle = function(d){return "Indice :"};
 
-exports.jump = function(d){return "saut"};
+exports.jump = function(d){return "sauter"};
 
 exports.levelIncompleteError = function(d){return "Vous utilisez tous les types nécessaires de blocs, mais pas de la bonne manière."};
 
@@ -18809,7 +18934,7 @@ exports.runTooltip = function(d){return "Exécuter le programme défini par les 
 
 exports.score = function(d){return "score"};
 
-exports.showCodeHeader = function(d){return "Afficher le Code"};
+exports.showCodeHeader = function(d){return "Afficher le code"};
 
 exports.showGeneratedCode = function(d){return "Afficher le code"};
 
@@ -18823,7 +18948,7 @@ exports.tooManyBlocksMsg = function(d){return "Ce puzzle peut être résolu avec
 
 exports.tooMuchWork = function(d){return "Vous m'avez fait faire beaucoup de travail !  Pourriez-vous essayer en répétant moins de fois ?"};
 
-exports.toolboxHeader = function(d){return "Blocs"};
+exports.toolboxHeader = function(d){return "blocs"};
 
 exports.openWorkspace = function(d){return "Comment ça marche"};
 
@@ -18839,7 +18964,7 @@ exports.saveToGallery = function(d){return "Enregistrer dans votre galerie"};
 
 exports.savedToGallery = function(d){return "Enregistré dans votre galerie !"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Désolé, nous ne pouvons pas partager ce programme."};
 
 exports.typeCode = function(d){return "Tapez votre code JavaScript en dessous de ces instructions."};
 
@@ -18878,7 +19003,7 @@ exports.actor = function(d){return "acteur"};
 
 exports.catActions = function(d){return "Actions"};
 
-exports.catControl = function(d){return "Boucles"};
+exports.catControl = function(d){return "boucles"};
 
 exports.catEvents = function(d){return "Événements"};
 
@@ -18886,11 +19011,11 @@ exports.catLogic = function(d){return "Logique"};
 
 exports.catMath = function(d){return "Math"};
 
-exports.catProcedures = function(d){return "Fonctions"};
+exports.catProcedures = function(d){return "fonctions"};
 
 exports.catText = function(d){return "Texte"};
 
-exports.catVariables = function(d){return "Variables"};
+exports.catVariables = function(d){return "variables"};
 
 exports.changeScoreTooltip = function(d){return "Ajouter ou enlever un point au score."};
 
@@ -18904,7 +19029,7 @@ exports.defaultSayText = function(d){return "Tapez ici"};
 
 exports.emotion = function(d){return "humeur"};
 
-exports.finalLevel = function(d){return "Félicitations ! Vous avez résolu la dernière énigme."};
+exports.finalLevel = function(d){return "Félicitations ! Vous avez résolu l'énigme finale."};
 
 exports.hello = function(d){return "salut"};
 
@@ -18912,9 +19037,9 @@ exports.helloWorld = function(d){return "Bonjour tout le monde!"};
 
 exports.incrementPlayerScore = function(d){return "marquer un point"};
 
-exports.makeProjectileDisappear = function(d){return "disparaître"};
+exports.makeProjectileDisappear = function(d){return "qui disparaît"};
 
-exports.makeProjectileBounce = function(d){return "rebondir"};
+exports.makeProjectileBounce = function(d){return "rebond"};
 
 exports.makeProjectileBlueFireball = function(d){return "fabriquer une boule de feu bleue"};
 
@@ -18934,9 +19059,9 @@ exports.makeYourOwn = function(d){return "Faites votre propre application Play A
 
 exports.moveDirectionDown = function(d){return "vers le bas"};
 
-exports.moveDirectionLeft = function(d){return "gauche"};
+exports.moveDirectionLeft = function(d){return "vers la gauche"};
 
-exports.moveDirectionRight = function(d){return "droite"};
+exports.moveDirectionRight = function(d){return "vers la droite"};
 
 exports.moveDirectionUp = function(d){return "vers le haut"};
 
@@ -18954,7 +19079,7 @@ exports.moveDistance400 = function(d){return "400 pixels"};
 
 exports.moveDistancePixels = function(d){return "pixels"};
 
-exports.moveDistanceRandom = function(d){return "pixels aléatoires"};
+exports.moveDistanceRandom = function(d){return "d'un nombre de pixels aléatoire"};
 
 exports.moveDistanceTooltip = function(d){return "Déplacer un acteur sur une certaine distance dans la direction spécifiée."};
 
@@ -18984,7 +19109,7 @@ exports.nextLevel = function(d){return "Félicitations ! Vous avez terminé cett
 
 exports.no = function(d){return "Non"};
 
-exports.numBlocksNeeded = function(d){return "Cette énigme peut être résolue avec %1 blocs."};
+exports.numBlocksNeeded = function(d){return "Cette enigme peut être résolue avec %1 blocs."};
 
 exports.ouchExclamation = function(d){return "Aïe !"};
 
@@ -19014,7 +19139,7 @@ exports.playSoundWinPoint2 = function(d){return "jouer le son gagner un point 2"
 
 exports.playSoundWood = function(d){return "jouer un son de bois"};
 
-exports.positionOutTopLeft = function(d){return "à la position en haut à gauche"};
+exports.positionOutTopLeft = function(d){return "la position en haut à gauche"};
 
 exports.positionOutTopRight = function(d){return "à la position en haut à droite"};
 
@@ -19022,33 +19147,33 @@ exports.positionTopOutLeft = function(d){return "vers le haut extérieur gauche"
 
 exports.positionTopLeft = function(d){return "à la position en haut à gauche"};
 
-exports.positionTopCenter = function(d){return "à la position en haut au centre"};
+exports.positionTopCenter = function(d){return "la position en haut et au centre"};
 
-exports.positionTopRight = function(d){return "à la position en haut à droite"};
+exports.positionTopRight = function(d){return "la position en haut à droite"};
 
 exports.positionTopOutRight = function(d){return "vers le haut extérieur droit"};
 
-exports.positionMiddleLeft = function(d){return "à la position au milieu gauche"};
+exports.positionMiddleLeft = function(d){return "la position au milieu gauche"};
 
-exports.positionMiddleCenter = function(d){return "à la position au centre au milieu "};
+exports.positionMiddleCenter = function(d){return "la position au centre au milieu"};
 
-exports.positionMiddleRight = function(d){return "à la position au milieu à droite"};
+exports.positionMiddleRight = function(d){return "la position au milieu à droite"};
 
 exports.positionBottomOutLeft = function(d){return "vers le bas extérieur gauche"};
 
-exports.positionBottomLeft = function(d){return "en bas à gauche"};
+exports.positionBottomLeft = function(d){return "la position en bas à gauche"};
 
-exports.positionBottomCenter = function(d){return "en bas au centre"};
+exports.positionBottomCenter = function(d){return "la position en bas au centre"};
 
-exports.positionBottomRight = function(d){return "en bas à droite"};
+exports.positionBottomRight = function(d){return "la position en bas à droite"};
 
-exports.positionBottomOutRight = function(d){return "en bas à droite ver l'extérieur"};
+exports.positionBottomOutRight = function(d){return "en bas à droite vers l'extérieur"};
 
 exports.positionOutBottomLeft = function(d){return "en bas à gauche ci-dessous"};
 
 exports.positionOutBottomRight = function(d){return "en bas à droite ci dessous"};
 
-exports.positionRandom = function(d){return "à une position aléatoire"};
+exports.positionRandom = function(d){return "une position aléatoire"};
 
 exports.projectileBlueFireball = function(d){return "une boule de feu bleue"};
 
@@ -19210,17 +19335,17 @@ exports.setSpriteSizeVeryLarge = function(d){return "une très grande taille"};
 
 exports.setSpriteSizeTooltip = function(d){return "Définit la taille d'un acteur"};
 
-exports.setSpriteSpeedRandom = function(d){return "à une vitesse aléatoire"};
+exports.setSpriteSpeedRandom = function(d){return "une vitesse aléatoire"};
 
-exports.setSpriteSpeedVerySlow = function(d){return "à une vitesse très lente"};
+exports.setSpriteSpeedVerySlow = function(d){return "une vitesse très lente"};
 
-exports.setSpriteSpeedSlow = function(d){return "à une vitesse lente"};
+exports.setSpriteSpeedSlow = function(d){return "une vitesse lente"};
 
-exports.setSpriteSpeedNormal = function(d){return "à une vitesse normale"};
+exports.setSpriteSpeedNormal = function(d){return "une vitesse normale"};
 
-exports.setSpriteSpeedFast = function(d){return "à une vitesse rapide"};
+exports.setSpriteSpeedFast = function(d){return "une vitesse rapide"};
 
-exports.setSpriteSpeedVeryFast = function(d){return "à une vitesse très rapide"};
+exports.setSpriteSpeedVeryFast = function(d){return "une vitesse très rapide"};
 
 exports.setSpriteSpeedTooltip = function(d){return "Définit la vitesse d'un acteur"};
 
@@ -19242,7 +19367,7 @@ exports.showTSDefText = function(d){return "taper le texte ici"};
 
 exports.showTitleScreenTooltip = function(d){return "Afficher un écran titre avec le titre et le texte correspondants."};
 
-exports.setSprite = function(d){return "mettre"};
+exports.setSprite = function(d){return "définir"};
 
 exports.setSpriteN = function(d){return "définir pour l'acteur "+v(d,"spriteIndex")};
 
@@ -19298,7 +19423,7 @@ exports.waitForClick = function(d){return "attendre le clic"};
 
 exports.waitForRandom = function(d){return "attendre un événement aléatoire"};
 
-exports.waitForHalfSecond = function(d){return "Attendre une demi-seconde"};
+exports.waitForHalfSecond = function(d){return "attendre une demi-seconde"};
 
 exports.waitFor1Second = function(d){return "attendre 1 seconde"};
 

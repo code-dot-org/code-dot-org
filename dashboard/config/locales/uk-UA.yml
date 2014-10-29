@@ -70,18 +70,7 @@
       зможете додавати учнів у групи та слідкувати за їхньою успішністю."
     no_signup_message: Ви можете <a target="_blank" href="http://learn.code.org">переглянути
       різні рівні та завдання</a>, але для збереження результатів потрібно реєструватись.
-    prizes_message: "Учні зі США, котрі вибороли всі %{num_trophies} трофеїв, можуть
-      вибрати низку призів, таких як: безкоштовний файловий простір Dropbox, кредити
-      Skype та ігри від Electronic Arts."
     teacher_educator_guide: "Переглянути посібник для вчителя"
-    teacher_prize_header: Виграйте $1000 в <a target="_blank" href="http://DonorsChoose.org">
-      DonorsChoose.org</a> нагороди (до 15 червня 2014, до вичерпання запасів)
-    teacher_prize_message: 'У партнерстві з  <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>,
-      Code.org  пропонує фінансування до $1000 на клас для США державних шкіл вчителів,
-      які проведуть принаймні для 15 студентів вступний курс інформатики (до 15 червня
-      2014 року, до вичерпання запасів). <a href="http://code.org/educate/20hr"> Перегляньте
-      посібник вчителя</a>.  (Обмеження: $1000 на вчителя.  <a target="_blank" href="http://help.donorschoose.org/app/answers/detail/a_id/454/kw/code.org">
-      Переглянути FAQ щодо інших обмежень</a>.)'
     teacher_pitch: "Реєстрація для вчителя на Code.org"
     teacher_title: "Реєстрація вчителя"
     student_pitch: "Реєстрація для учня на Code.org"
@@ -92,6 +81,7 @@
     gender: "Стать (необов'язково)"
     birthday: "День народження (необов'язково)"
     age: "Вік"
+    user_type: Are you a student or teacher?
     submit: "Зареєструватися"
     teacher: "Ви вчитель?"
     valid_username: "Доступно!"
@@ -387,8 +377,6 @@
     student_stats: Ви здобули %{trophy_count} із %{trophy_max} трофеїв "Опанування
       понять".
     student_left_off: "Де ви зупинилися:"
-    student_finished_prize: "Ви вже завершили усі підручники, вимагайте свій %{prize_link}
-      та виберіть інший клас %{online_link} або %{local_school_link}"
     student_finished: "Ви завершили всі уроки, виберіть інший клас %{online_link}
       або %{local_school_link}"
     local_school: "місцева школа"
@@ -415,6 +403,9 @@
     male: "Чоловік"
     female: "Жінка"
     none: "Не волію відповідати"
+  user_type:
+    student: "учень"
+    teacher: "Вчитель"
   footer:
     help_from_html: "Інженери Google, Microsoft, Facebook і Twitter допомогли створити
       цей підручник."
@@ -428,20 +419,13 @@
     tos: "Умови"
     privacy: "Політика конфіденційності"
     secure: "Безпечна версія"
-  prize_mail:
-    prize_earned:
-      subject: "Здобудьте свій приз на Code.org!"
-    teacher_prize_earned:
-      subject: "Вітання від Code.org!"
-    teacher_bonus_prize_earned:
-      subject: "Здобудьте свій бонусний приз на Code.org!"
   reference_area:
     title: "Потрібна допомога?"
     subtitle: "Переглянути ці відео та підказки"
     teacher: "Вирішення"
     auth_error: "У вас немає прав на перегляд вирішення."
     submit: "Оновлення розташування Художника"
-    direction: "Початковий напрямок"
+    direction: "Початковий напрямок (у градусах)"
   video:
     tab: "Відео."
     notes: "Немає відео? Показати примітки."

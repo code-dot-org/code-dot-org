@@ -1,58 +1,55 @@
----
-title: Resources 
-layout: wide
----
 
-## Useful stats on computer science
 
-*For all press and media inquiries, contact <press@code.org>*
+## Statistika të dobishme për shkencën kompjuterike
 
-### Key Tips
+*Për të gjitha kërkesat për shtyp dhe media, kontaktoni te <press@code.org>*
 
-  * Reach out to media two weeks before your event via email. Follow up by email and phone if you don't receive an initial response.
-  * Ask a school staff member or volunteer to take photos to share online or send to press.
-  * Write about the Hour of Code on your website’s homepage and in your school newspaper. Post your event details, and pictures of student activities.
-  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 8-14. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
+### Udhëzimet kryesore
 
-### Step-by-step guide:
+  * Kontaktoni mediat dy javë para ngjarjes suaj përmes emailit. Përcilleni me email apo telefon nëse nuk merrni përgjigje fillestare.
+  * Kërko nga një anëtar i stafit të shkollës apo vullnetar të marrë foto për t'i ndarë online apo për t'i dërguar në shtyp.
+  * Shkruani për Orën e Kodimit në faqen kryesore të websajtit tuaj dhe në gazetën e shkollës suaj. Postoni detalet e ngjarjes suaj, dhe fotot e aktiviteteve të studentëve.
+  * Në Facebook dhe Twitter, ndani lajmet dhe ndryshimet për planet tuaja, shpallni ngjarjet tuaja dhe postoni foto gjatë 8-14 dhjetorit. Përdoreni hashtag-un **#HourOfCode** ashtu që Code.org të mund t'i shohë dhe t'i promovojë ngjarjet tuaja.
 
-**1. Plan your event**
+### Udhëzues hap-pas-hapi:
 
-  * Plan an assembly to kick off the Hour of Code.
-  * Send [a letter](<%= hoc_uri('/resources/#sample-emails') %>) to parents. Ask them to spread the word.
-  * Send [a letter](<%= hoc_uri('/resources/#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
-  * Organize group activities (like a demonstration of an ‘unplugged’ programming activity), or show off student-created and led activities.
-  * Show Code.org’s [Hour of Code video](<%= hoc_uri('/') %>) or one of [these](<%= hoc_uri('/resources#videos') %>) to inspire.
+**1. Planifikojeni ngjarjen tuaj**
 
-**2. Identify specific local reporters that cover education or local events.**
+  * Planifikojeni një takim për ta nisur mbarë Orën e Kodimit.
+  * Dërgoje [një letër](<%= hoc_uri('/resources/#sample-emails') %>) te prindërit. Kërkoni nga ta ta shpërndajnë fjalën.
+  * Dërgoje [një letër](<%= hoc_uri('/resources/#sample-emails') %>) për ta ftuar kryetarin lokal të komunës, kongresistin, guvernatorin, apo personin biznesor me ndikim për të marrë pjesë dhe t'iu flasë studentëve tuaj.
+  * Organizoni aktivitete grupore (si një demonstrim i një programimi të shkëputur 'unplugged'), apo tregoni aktivitetet e krijuara apo të udhëhequra nga studentët.
+  * Tregoje [Videon Ora e Kodimit](<%= hoc_uri('/') %>) të Code.org apo njërën nga [këto](<%= hoc_uri('/resources#videos') %>) për të inspiruar.
 
-Think a local newspaper, TV station, radio station or blog.
+**2. Identifikoni reporterët specifikë lokalë që e mbulojnë edukimin apo ngjarjet lokale.**
 
-Look online to find reporter contact information. If you can't find it, call the publication to ask, or email a general tips@PUBLICATIONNAME.com email address and ask for your message to be directed to the correct reporter.
+Mendoje një gazetë lokale, stacion televiziv, radio-stacion apo blog lokal.
 
-**3. Contact local media**
+Kërko online për ta gjetur informacionin e kontaktit për një reporter. Nëse nuk mund ta gjesh, thirre publikuesin për të pyetur, apo shkruaj email në një email adresë të përgjithshme tips@PUBLICATIONNAME.com dhe kërko që mesazhi yt të drejtohet te reporteri përkatës.
 
-The best way to reach out is by email. It should be short and communicate: why should other people care about this event? Include contact information (including a cellphone number) for who will be on site at the event. **See a [sample pitch to media](<%= hoc_uri('/resources#sample-emails') %>):**
+**3. Kontakto me mediat lokale**
 
-**4. Prepare to field questions about your school event. Here are some examples:**
+Mënyra më e mirë për të kontaktuar është me email. Duhet të jetë shkurt dhe të komunikojë: pse duhet njerëzit tjerë të interesohen për këtë ngjarje? Përfshiji informatat kontaktuese (përfshirë edhe një numër telefoni mobil) për atë që do të jetë prezent në ngjarje. **Shihe një [mostër të prezentimit bindës në media](<%= hoc_uri('/resources#sample-emails') %>):**
 
-*Why is your school doing an Hour of Code?*
+**4. Përgatitu për pyetjet për ngjarjen tënde të shkollës. Ja disa shembuj:**
 
-While all of us know that it’s important for students to learn how to navigate today’s tech-saturated world, many teachers aren’t experienced in computer science and don’t know where to start. This event is a chance for all of us to see what computer science is about.
+*Pse shkolla juaj po e bën Një Orë Kodim?*
 
-We hope it’ll spark interest in students to keep learning. Research also shows that kids pick up programming concepts before they know how to read and write. In fact, their brains are more receptive to computer languages at a young age, just like foreign languages.
+Ndërsa të gjithë ne e dimë se është e rëndësishme që studentët të mësojnë se si të navigojnë në botën e sotme të përshkuar nga teknologjia, shumë mësimdhënës nuk kanë përvojë në shkencë kompjuterike dhe nuk e dinë se ku të fillojnë. Kjo ngjarje është shans për të gjithë ne ta shohim se çka është shkenca kompjuterike.
 
-*Why is this important?*
+Shpresojmë se do të nxisë interes te studentët që të vazhdojnë të mësojnë. Hulumtimet po ashtu tregojnë se fëmijët i mësojnë konceptet e programimit para se të dinë të lexojnë dhe shkruajnë. Në fakt, trurët e tyre janë më pranues ndaj gjuhëve kompjuterike në moshë të re, sikur për gjuhë të huaja.
 
-In China, every students takes computer science to graduate high school. In the U.S., 90 percent of schools don’t even teach it. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them the confidence and know-how to succeed.
+*Pse është kjo e rëndësishme?*
 
-**More details and a quote you can use in materials**
+Në Kinë, secili nxënës mëson shkencë kompjuterike deri në shkollë të mesme. Në SHBA, 90 përqind e shkollave as që e ligjërojnë bile. Është koha që ta zëmë hapin me shekullin 21. E dimë se pavarësisht se çka bëjnë studentët tanë kur të rriten, a shkojnë në mjekësi, biznes, politikë, apo arte, të dish si të ndërtosh teknologji do t'iu japë vetëbesim dhe dije praktike se si të kenë sukses.
 
-"The Hour of Code is designed to demystify code and show that computer science is not rocket-science, anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "In one week last year, 15 million students tried an Hour of Code. Now we're aiming for 100 million worldwide to prove that the demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
+**Më shumë detale dhe citatet që mund t'i përdorni në materiale**
 
-**About Code.org**
+"Ora e Kodimit është projektuar ta demistifikojë kodin dhe të tregojë se shkenca kompjuterike nuk është shkencë e raketës, kushdo mund t'i mësojë bazat," ka thënë Hadi Partovi, themelues dhe drejtor ekzekutiv i Code.org. "Për një javë, vitin e kaluar, 15 milionë studentë e provuan Një Orë Kodim. Tash po i synojmë 100 milionë anembanë botës për ta vërtetuar se kërkesa për edukimin relevant të shkencës kompjuterike në shekullin 21 i kalon të gjithë kufijtë dhe nuk njeh kufizime."
 
-Code.org® is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign — which has introduced millions of students to computer science — partnered with more than 30 public school districts nationwide, and launched Code Studio, an open-source, online learning platform for all ages. For more information, please visit: <% if @country == 'uk' %> [www.uk.code.org](http://uk.code.org). <% else %> [www.code.org](http://code.org). <% end %>
+**Për Code.org**
+
+Code.org® është organizatë publike jo-fitimprurëse 501c3 e dedikuar në zgjerimin e pjesëmarrjes në shkencë kompjuterike dhe rritjen e pjesëmarrjes nga femrat dhe studentët e nënpërfaqësuar me ngjyrë. Vizioni i saj është që secili student në secilën shkollë duhet të ketë mundësi ta mësojë programimin e kompjuterëve. Pas nisjes në 2013, Code.org e organizoji kampanjën Ora e Kodimit — që i ka njoftuar miliona studentë me shkencën kompjuterike — është bërë partner me mbi 30 distrikte të shkollave publike në nivel kombëtar, dhe e ka nisur Code Studio-n, një platformë me kod të hapur, online për mësim për të gjitha moshat. For more information, please visit: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
-Find more resources and sample emails [here](<%= hoc_uri('/resources') %>).
+Gjeni më shumë resurse dhe mostra të emailave [këtu](<%= hoc_uri('/resources') %>).

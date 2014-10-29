@@ -20,17 +20,19 @@ title: Prizes layout: wide
 
 <% if @country == 'us' %>
 
-## 행운의 학급들은 유명 초청 인사와 비디오 채팅을 할 수 있는 기회를 얻게 됩니다.
+## 96 lucky classrooms win a video chat with a guest speaker!
 
-행운의 50개 학급은 2014.12.08~14일까지 Hour of Code 행사의 비디오 채팅에 초대될 것입니다. 학생들은 세계적으로 유명한 IT 기업의 리더들에게 질문하거나 채팅하게 될 것입니다. 빌게이츠, 트위터 창시자 잭 돌시,구글의 수잔 보이치키, 벨브의 게이브 뉴웰과 이루어졌던 [작년 비디오 채팅](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a)을 살펴보세요.
+96 lucky classrooms will be invited to join a video chat to celebrate the Hour of Code during December 8-14. 학생들은 세계적으로 유명한 IT 기업의 리더들에게 질문하거나 채팅하게 될 것입니다. 빌게이츠, 트위터 창시자 잭 돌시,구글의 수잔 보이치키, 벨브의 게이브 뉴웰과 이루어졌던 [작년 비디오 채팅](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a)을 살펴보세요.
 
-## 몇 개의 학교들은 한 학급 정도의 노트북(또는 $10,000 상당의 다른 기기들..)을 받게 됩니다.
+Any classroom (public or private) within the U.S. or Canada is eligible to win this prize. Your whole school does not need to apply.
 
-미국의 ***모든*** 학교들 중 행운의 1개 학교는 $10,000 상당의 IT기기를 지원받게 됩니다. 여러분의 학교 전체 학생들을 위한 Hour of Code 이벤트 행사를 조직하고, 학교를 등록하세요. 신청하기 위해 아래의 양식을 채우세요.
+## 51 Lucky schools win a class-set of laptops (or $10,000 for other technology)
+
+One lucky school in ***every*** U.S. state (+ Washington D.C.) will win $10,000 worth of technology. Organize the Hour of Code for every student in your school to qualify. Fill out the form below to apply.
 
 ## 하드웨어 상품 지원 양식:
 
-Hour of Code 행사에 학교 전체 행사로 등록하고, 1개 학급 분량의 노트북(또는 $10,000 상당의 다른 IT기기)을 학교에 기증 받을 수 있는 기회를 얻으세요! 학교 선생님들 중에 한 분만 신청하면 됩니다.
+If you’ve signed up your entire school to participate in the Hour of Code, enter to win a class-set of laptops (or $10,000 for other technology) for your school! Only one teacher needs to apply for your entire school.
 
 <%= view :hardware_prizes_form %>
 
@@ -42,4 +44,50 @@ Hour of Code 행사에 학교 전체 행사로 등록하고, 1개 학급 분량�
 
 ## 상품관련 설명
 
-[약관 및 조건](/prizes-terms)을 확인하거나 포럼에 방문해 [FAQs](http://support.code.org)를 살펴보고 질문하세요.
+Check out [Terms and Conditions](<%= hoc_uri('/prizes-terms') %>) or visit our forum to see [FAQs](http://support.code.org) and ask your questions.
+
+<% if @country == 'us' %>
+
+# Frequently Asked Questions
+
+## Does your whole school have to enter to win the $10,000 in hardware?
+
+Yes. Your whole school has to participate to be eligible for the prize but only one person needs to register and submit the Hardware Prize application form [here](<%= hoc_uri('/prizes') %>).
+
+## Does your whole school have to enter to win a the tech chat?
+
+Any classroom (public or private school) is eligible to win this prize. Your whole school need not apply.
+
+## Can non-public schools win the video chat prize?
+
+Yes! Private and independent schools are eligible along with public schools to win the video chat prizes.
+
+## Can non-US schools win the video chat prize?
+
+No, unfortunately, because of logistics we are unable to offer the video chat prize to schools outside of the U.S. and Canada. All international organizers **are** eligible to receive Dropbox space or Skype credit.
+
+## Why is the $10,000 hardware prize only available to public schools?
+
+We would love to help teachers in public and private schools alike, but at this time, it comes down to logistics. We have partnered with [DonorsChoose.org](http://donorschoose.org) to administer classroom funding prizes, which only works with public, US K-12 schools. According to DonorsChoose.org, the organization is better able to access consistent and accurate data that's available for public schools.
+
+## I’m outside the United States. Can I qualify for prizes?
+
+Due to a small full-time staff, Code.org is unable to handle the logistics of administering international prizes. Because of this people outside the US are unable to qualify for prizes.
+
+## When is the deadline to apply for the hardware prize?
+
+To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 14, 2014. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2014.
+
+## When is the deadline to be eligible to win a tech chat?
+
+To qualify, you must register your classroom for the Hour of Code by November 14, 2014. Classrooms will win a video chat with a celebrity. Code.org will select and notify winners via email by December 1, 2014.
+
+## When will I be notified if my school or classroom wins a prize?
+
+To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 14, 2014. Code.org will select and notify winners via email by December 1, 2014.
+
+## If my whole school can’t do the Hour of Code during Computer Science Education Week (Dec. 8-14), can I still qualify for prizes?
+
+Yes, just be sure to submit a logistics plan that outlines how your whole school is participating over a reasonable length of time and register for the Hour of Code by November 14th.
+
+<% end %>

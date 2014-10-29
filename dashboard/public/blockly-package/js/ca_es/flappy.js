@@ -1435,16 +1435,57 @@ exports.workspaceCode = function(blockly) {
 };
 
 /**
+ * Generate a native function wrapper for use with the JS interpreter.
+ */
+exports.makeNativeMemberFunction = function (interpreter, nativeFunc, parentObj) {
+  return function() {
+    // Call the native function:
+    var retVal = nativeFunc.apply(parentObj, arguments);
+
+    // Now figure out what to do with the return value...
+
+    if (retVal instanceof Function) {
+      // Don't call createPrimitive() for functions
+      return retVal;
+    } else if (retVal instanceof Object) {
+      var newObj = interpreter.createObject(interpreter.OBJECT);
+      // Limited attempt to marshal back complex return values
+      // Special case: only one-level deep, only handling
+      // primitives and arrays of primitives
+      for (var prop in retVal) {
+        var isFuncOrObj = retVal[prop] instanceof Function ||
+                          retVal[prop] instanceof Object;
+        // replace properties with wrapped properties
+        if (retVal[prop] instanceof Array) {
+          var newArray = interpreter.createObject(interpreter.ARRAY);
+          for (var i = 0; i < retVal[prop].length; i++) {
+            newArray.properties[i] = interpreter.createPrimitive(retVal[prop][i]);
+          }
+          newArray.length = retVal[prop].length;
+          interpreter.setProperty(newObj, prop, newArray);
+        } else if (isFuncOrObj) {
+          // skipping over these - they could be objects that should
+          // be converted into interpreter objects. they could be native
+          // functions that should be converted. Or they could be objects
+          // that are already interpreter objects, which is what we assume
+          // for now:
+          interpreter.setProperty(newObj, prop, retVal[prop]);
+        } else {
+          // wrap as a primitive if it is not a function or object:
+          interpreter.setProperty(newObj, prop, interpreter.createPrimitive(retVal[prop]));
+        }
+      }
+      return newObj;
+    } else {
+      return interpreter.createPrimitive(retVal);
+    }
+  };
+};
+
+/**
  * Initialize a JS interpreter.
  */
 exports.initJSInterpreter = function (interpreter, scope, options) {
-  // helper function used below..
-  function makeNativeMemberFunction(nativeFunc, parentObj) {
-    return function() {
-      return interpreter.createPrimitive(
-                            nativeFunc.apply(parentObj, arguments));
-    };
-  }
   for (var optsObj in options) {
     var func, wrapper;
     // The options object contains objects that will be referenced
@@ -1460,13 +1501,96 @@ exports.initJSInterpreter = function (interpreter, scope, options) {
       if (func instanceof Function) {
         // Populate each of the global objects with native functions
         // NOTE: other properties are not currently passed to the interpreter
-        wrapper = makeNativeMemberFunction(func, options[optsObj]);
+        wrapper = exports.makeNativeMemberFunction(interpreter, func, options[optsObj]);
         interpreter.setProperty(obj,
                                 prop,
                                 interpreter.createNativeFunction(wrapper));
       }
     }
   }
+};
+
+// session is an instance of Ace editSession
+// Usage
+// var lengthArray = aceCalculateCumulativeLength(editor.getSession());
+// Need to call this only if the document is updated after the last call.
+exports.aceCalculateCumulativeLength = function (session) {
+  var cumulativeLength = [];
+  var cnt = session.getLength();
+  var cuml = 0, nlLength = session.getDocument().getNewLineCharacter().length;
+  cumulativeLength.push(cuml);
+  var text = session.getLines(0, cnt);
+  for (var i = 0; i < cnt; i++) {
+    cuml += text[i].length + nlLength;
+    cumulativeLength.push(cuml);
+  }
+  return cumulativeLength;
+};
+
+// Fast binary search implementation
+// Pass the cumulative length array here.
+// Usage
+// var row = aceFindRow(lengthArray, 0, lengthArray.length, 2512);
+// tries to find 2512th character lies in which row.
+function aceFindRow(cumulativeLength, rows, rowe, pos) {
+  if (rows > rowe) {
+    return null;
+  }
+  if (rows + 1 === rowe) {
+    return rows;
+  }
+
+  var mid = Math.floor((rows + rowe) / 2);
+  
+  if (pos < cumulativeLength[mid]) {
+    return aceFindRow(cumulativeLength, rows, mid, pos);
+  } else if(pos > cumulativeLength[mid]) {
+    return aceFindRow(cumulativeLength, mid, rowe, pos);
+  }
+  return mid;
+}
+
+/**
+ * Selects code in an ace editor.
+ */
+function createSelection (selection, cumulativeLength, start, end) {
+  var range = selection.getRange();
+
+  range.start.row = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
+  range.start.col = start - cumulativeLength[range.start.row];
+  range.end.row = aceFindRow(cumulativeLength, 0, cumulativeLength.length, end);
+  range.end.col = end - cumulativeLength[range.end.row];
+
+  selection.setSelectionRange(range);
+}
+
+exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
+                                      userCodeStartOffset, userCodeLength) {
+  var inUserCode = false;
+  if (interpreter.stateStack[0]) {
+    var node = interpreter.stateStack[0].node;
+    // Adjust start/end by Webapp.userCodeStartOffset since the code running
+    // has been expanded vs. what the user sees in the editor window:
+    var start = node.start - userCodeStartOffset;
+    var end = node.end - userCodeStartOffset;
+
+    inUserCode = (start > 0) && (start < userCodeLength);
+
+    // If we are showing Javascript code in the ace editor, highlight
+    // the code being executed in each step:
+    if (!editor.currentlyUsingBlocks) {
+      // Only show selection if the node being executed is inside the user's
+      // code (not inside code we inserted before or after their code that is
+      // not visible in the editor):
+      var selection = editor.aceEditor.getSelection();
+      if (inUserCode) {
+        createSelection(selection, cumulativeLength, start, end);
+      } else {
+        selection.clearSelection();
+      }
+    }
+  }
+  return inUserCode;
 };
 
 /**
@@ -9055,8 +9179,9 @@ exports.generateCodeAliases = function (codeFunctions, parentObjName) {
     for (var i = 0; i < codeFunctions.length; i++) {
       var cf = codeFunctions[i];
       code += "var " + cf.func +
-          " = function() { var newArgs = [''].concat(arguments); return " +
-          parentObjName + "." + cf.func +
+          " = function() { var newArgs = " +
+          (cf.idArgLast ? "arguments.concat(['']);" : "[''].concat(arguments);") +
+          " return " + parentObjName + "." + cf.func +
           ".apply(" + parentObjName + ", newArgs); };\n";
     }
   }
@@ -9256,21 +9381,21 @@ exports.directionEastLetter = function(d){return "E"};
 
 exports.directionWestLetter = function(d){return "W"};
 
-exports.end = function(d){return "end"};
+exports.end = function(d){return "final"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Els blocs \"Repetir\" o el \"Si\" necessiten tenir altres blocs dins per a treballar. Assegureu-vos que el bloc interior encaixa bé dins del bloc que conté."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "The function block needs to have other blocks inside it to work."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "La funció bloc ha de tenir altres blocs a dins perquè funcioni."};
 
-exports.extraTopBlocks = function(d){return "You have extra blocks that aren't attached to an event block."};
+exports.extraTopBlocks = function(d){return "Tens blocs sense lligams. Volies lligar-los al bloc \"quan s'executa\"?"};
 
 exports.finalStage = function(d){return "Enhorabona! Has completat l'etapa final."};
 
 exports.finalStageTrophies = function(d){return "Enhorabona! Has completat l'etapa final i guanyat "+p(d,"numTrophies",0,"ca",{"un":"trofeu","other":n(d,"numTrophies")+" trophies"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Finalitza"};
 
-exports.generatedCodeInfo = function(d){return "Els blocs del teu programa poden ser també representats en Javascript, el llenguatge de programació més extés al món:"};
+exports.generatedCodeInfo = function(d){return "Fins i tot les millors universitats ensenyen programació basada en blocs (per exemple, "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Però sota el capó, els blocs que tu has reunit també es poden mostrar en JavaScript, la llengua de programació més utilitzada al món:"};
 
 exports.hashError = function(d){return "Ho sentim, '%1' no correspon amb ningun programa guardat."};
 
@@ -9278,13 +9403,13 @@ exports.help = function(d){return "Ajuda"};
 
 exports.hintTitle = function(d){return "Consell:"};
 
-exports.jump = function(d){return "jump"};
+exports.jump = function(d){return "salt"};
 
 exports.levelIncompleteError = function(d){return "Estàs utilitzant tots els tipus de blocs necessaris, però no de la manera correcta."};
 
 exports.listVariable = function(d){return "llista"};
 
-exports.makeYourOwnFlappy = function(d){return "Make Your Own Flappy Game"};
+exports.makeYourOwnFlappy = function(d){return "Fes el teu propi \"Flappy Game\""};
 
 exports.missingBlocksErrorMsg = function(d){return "Prova un o més dels blocs de sota per a resoldre aquest puzzle."};
 
@@ -9292,15 +9417,15 @@ exports.nextLevel = function(d){return "Enhorabona! Has acabat el Puzzle! "+v(d,
 
 exports.nextLevelTrophies = function(d){return "Felicitats! Has acabat el Puzzle "+v(d,"puzzleNumber")+" i has guanyat "+p(d,"numTrophies",0,"ca",{"one":"un trofeu","other":n(d,"numTrophies")+" trofeus"})+"."};
 
-exports.nextStage = function(d){return "Enhorabona! Has acabat l'etapa "+v(d,"stageNumber")+"."};
+exports.nextStage = function(d){return "Enhorabona! Heu completat "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "Enhorabona! Has acabat l'etapa "+v(d,"stageNumber")+" i has guanyat "+p(d,"numTrophies",0,"ca",{"one":"trofeu","other":n(d,"numTrophies")+" trofeus"})+"."};
+exports.nextStageTrophies = function(d){return "Enhorabona! Has acabat "+v(d,"stageName")+" i has guanyat "+p(d,"numTrophies",0,"ca",{"un":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
 exports.numBlocksNeeded = function(d){return "Enhorabona! Has acabat el Puzzle "+v(d,"puzzleNumber")+". (Tot i que podries haver utilitzat un "+p(d,"numBlocks",0,"ca",{"one":"1 bloc","other":n(d,"numBlocks")+" blocs"})+".)"};
 
 exports.numLinesOfCodeWritten = function(d){return "Has escrit "+p(d,"numLines",0,"ca",{"one":"1 línia","other":n(d,"numLines")+" línies"})+" de codi!"};
 
-exports.play = function(d){return "play"};
+exports.play = function(d){return "reprodueix"};
 
 exports.puzzleTitle = function(d){return "Puzzle "+v(d,"puzzle_number")+" de "+v(d,"stage_total")};
 
@@ -9308,11 +9433,11 @@ exports.repeat = function(d){return "repeteix"};
 
 exports.resetProgram = function(d){return "Reiniciar"};
 
-exports.runProgram = function(d){return "Executar Programa"};
+exports.runProgram = function(d){return "executa"};
 
 exports.runTooltip = function(d){return "Executa el programa definit per els blocs en l'àrea de treball."};
 
-exports.score = function(d){return "score"};
+exports.score = function(d){return "puntuació"};
 
 exports.showCodeHeader = function(d){return "Mostra el Codi"};
 
@@ -9330,21 +9455,21 @@ exports.tooMuchWork = function(d){return "Em fas fer molta feina! Podries intent
 
 exports.toolboxHeader = function(d){return "blocs"};
 
-exports.openWorkspace = function(d){return "How It Works"};
+exports.openWorkspace = function(d){return "Com funciona"};
 
 exports.totalNumLinesOfCodeWritten = function(d){return "Total de tots els temps: "+p(d,"numLines",0,"ca",{"one":"1 línia","other":n(d,"numLines")+" línies"})+" de codi."};
 
 exports.tryAgain = function(d){return "Torna a intentar-ho"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "Veure pista"};
 
 exports.backToPreviousLevel = function(d){return "Torna al nivell anterior"};
 
-exports.saveToGallery = function(d){return "Save to your gallery"};
+exports.saveToGallery = function(d){return "Guarda-ho a la teva galeria"};
 
-exports.savedToGallery = function(d){return "Saved to your gallery!"};
+exports.savedToGallery = function(d){return "Guardat a la teva galeria!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Ho sentim, no podem compartir aquest programa."};
 
 exports.typeCode = function(d){return "Escriu el teu codi JavaScript sota aquestes instruccions."};
 
@@ -9360,21 +9485,21 @@ exports.rotateText = function(d){return "Gira el teu dispositiu."};
 
 exports.orientationLock = function(d){return "Desactiva el bloqueig d'orientació en els ajustos del teu dispositiu."};
 
-exports.wantToLearn = function(d){return "Want to learn to code?"};
+exports.wantToLearn = function(d){return "Vols aprendre a programar?"};
 
-exports.watchVideo = function(d){return "Watch the Video"};
+exports.watchVideo = function(d){return "Mira el vídeo"};
 
-exports.when = function(d){return "when"};
+exports.when = function(d){return "quan"};
 
-exports.whenRun = function(d){return "when run"};
+exports.whenRun = function(d){return "quan s'executa"};
 
-exports.tryHOC = function(d){return "Try the Hour of Code"};
+exports.tryHOC = function(d){return "Proveu l'Hora de programació"};
 
-exports.signup = function(d){return "Sign up for the intro course"};
+exports.signup = function(d){return "Inscriu-te al curs d'introducció"};
 
-exports.hintHeader = function(d){return "Here's a tip:"};
+exports.hintHeader = function(d){return "Aquí tens una pista:"};
 
-exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+exports.genericFeedback = function(d){return "Observa com has acabat i prova d'arreglar el teu programa."};
 
 
 },{"messageformat":50}],38:[function(require,module,exports){
@@ -9385,33 +9510,33 @@ exports.doCode = function(d){return "fer"};
 
 exports.elseCode = function(d){return "en cas contrari"};
 
-exports.endGame = function(d){return "end game"};
+exports.endGame = function(d){return "finalitza la partida"};
 
-exports.endGameTooltip = function(d){return "Ends the game."};
+exports.endGameTooltip = function(d){return "Acaba el joc."};
 
 exports.finalLevel = function(d){return "Felicitats! Has resolt el puzzle final."};
 
-exports.flap = function(d){return "flap"};
+exports.flap = function(d){return "aleteig"};
 
-exports.flapRandom = function(d){return "flap a random amount"};
+exports.flapRandom = function(d){return "aleteja una quantitat aleatòria"};
 
-exports.flapVerySmall = function(d){return "flap a very small amount"};
+exports.flapVerySmall = function(d){return "aleteja una quantitat molt petita"};
 
-exports.flapSmall = function(d){return "flap a small amount"};
+exports.flapSmall = function(d){return "aleteja una quantitat petita"};
 
-exports.flapNormal = function(d){return "flap a normal amount"};
+exports.flapNormal = function(d){return "aleteja una quantitat normal"};
 
-exports.flapLarge = function(d){return "flap a large amount"};
+exports.flapLarge = function(d){return "aleteja una quantitat gran"};
 
-exports.flapVeryLarge = function(d){return "flap a very large amount"};
+exports.flapVeryLarge = function(d){return "aleteja una quantitat molt gran"};
 
-exports.flapTooltip = function(d){return "Fly Flappy upwards."};
+exports.flapTooltip = function(d){return "Fes volar al Flappy cap amunt."};
 
-exports.flappySpecificFail = function(d){return "Your code looks good - it will flap with each click. But you need to click many times to flap to the target."};
+exports.flappySpecificFail = function(d){return "El teu codi sembla correcte - aletejarà amb cada clic. Però necessites fer molts clics per aletejar a la meta."};
 
-exports.incrementPlayerScore = function(d){return "increment player score"};
+exports.incrementPlayerScore = function(d){return "aconsegueix un punt"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "Add one to the current player score."};
+exports.incrementPlayerScoreTooltip = function(d){return "Incrementar en u la puntuació del jugador actual."};
 
 exports.nextLevel = function(d){return "Felicitats! Has complert aquest puzzle."};
 
@@ -9419,223 +9544,223 @@ exports.no = function(d){return "No"};
 
 exports.numBlocksNeeded = function(d){return "Aquest puzzle pot res resolt amb blocs de %1."};
 
-exports.playSoundRandom = function(d){return "play random sound"};
+exports.playSoundRandom = function(d){return "reprodueix un so aleatori"};
 
-exports.playSoundBounce = function(d){return "play bounce sound"};
+exports.playSoundBounce = function(d){return "reprodueix un so de rebot"};
 
-exports.playSoundCrunch = function(d){return "play crunch sound"};
+exports.playSoundCrunch = function(d){return "reprodueix so de cruixit"};
 
-exports.playSoundDie = function(d){return "play sad sound"};
+exports.playSoundDie = function(d){return "reprodueix un so trist"};
 
-exports.playSoundHit = function(d){return "play smash sound"};
+exports.playSoundHit = function(d){return "reprodueix un so d'aixafar"};
 
-exports.playSoundPoint = function(d){return "play point sound"};
+exports.playSoundPoint = function(d){return "reprodueix un so de puntuació"};
 
-exports.playSoundSwoosh = function(d){return "play swoosh sound"};
+exports.playSoundSwoosh = function(d){return "reprodueix un so de xiulet"};
 
-exports.playSoundWing = function(d){return "play wing sound"};
+exports.playSoundWing = function(d){return "reprodueix un so d'ala"};
 
-exports.playSoundJet = function(d){return "play jet sound"};
+exports.playSoundJet = function(d){return "reprodueix un so de jet"};
 
-exports.playSoundCrash = function(d){return "play crash sound"};
+exports.playSoundCrash = function(d){return "reprodueix un so de xoc"};
 
-exports.playSoundJingle = function(d){return "play jingle sound"};
+exports.playSoundJingle = function(d){return "reprodueix un so de tintineig"};
 
-exports.playSoundSplash = function(d){return "play splash sound"};
+exports.playSoundSplash = function(d){return "reprodueix un so d'esquitxada"};
 
-exports.playSoundLaser = function(d){return "play laser sound"};
+exports.playSoundLaser = function(d){return "reprodueix un so de laser"};
 
-exports.playSoundTooltip = function(d){return "Play a sound."};
+exports.playSoundTooltip = function(d){return "reprodueix so de l'elegit."};
 
 exports.reinfFeedbackMsg = function(d){return "Pots clicar el botó de \"Try again\" per tornar a començar"};
 
-exports.scoreText = function(d){return "Score: "+v(d,"playerScore")+" : "+v(d,"opponentScore")};
+exports.scoreText = function(d){return "Puntuació: "+v(d,"playerScore")};
 
-exports.setBackground = function(d){return "set scene"};
+exports.setBackground = function(d){return "estableix el fons"};
 
-exports.setBackgroundRandom = function(d){return "set scene Random"};
+exports.setBackgroundRandom = function(d){return "estableix un fons aleatori"};
 
-exports.setBackgroundFlappy = function(d){return "set scene City (day)"};
+exports.setBackgroundFlappy = function(d){return "estableix l'escena de Ciutat (dia)"};
 
-exports.setBackgroundNight = function(d){return "set scene City (night)"};
+exports.setBackgroundNight = function(d){return "estableix l'escena de Ciutat (nit)"};
 
-exports.setBackgroundSciFi = function(d){return "set scene Sci-Fi"};
+exports.setBackgroundSciFi = function(d){return "estableix l'escena de Ciència ficció"};
 
-exports.setBackgroundUnderwater = function(d){return "set scene Underwater"};
+exports.setBackgroundUnderwater = function(d){return "estableix l'escena de Fons marí"};
 
-exports.setBackgroundCave = function(d){return "set scene Cave"};
+exports.setBackgroundCave = function(d){return "estableix l'escena de Cova"};
 
-exports.setBackgroundSanta = function(d){return "set scene Santa"};
+exports.setBackgroundSanta = function(d){return "estableix l'escena de Pare Noel"};
 
-exports.setBackgroundTooltip = function(d){return "Sets the background image"};
+exports.setBackgroundTooltip = function(d){return "Estableix l'imatge de l'escena"};
 
-exports.setGapRandom = function(d){return "set a random gap"};
+exports.setGapRandom = function(d){return "estableix un buit a l'atzar"};
 
-exports.setGapVerySmall = function(d){return "set a very small gap"};
+exports.setGapVerySmall = function(d){return "estableix un buit molt petit"};
 
-exports.setGapSmall = function(d){return "set a small gap"};
+exports.setGapSmall = function(d){return "estableix un buit petit"};
 
-exports.setGapNormal = function(d){return "set a normal gap"};
+exports.setGapNormal = function(d){return "estableix un buit normal"};
 
-exports.setGapLarge = function(d){return "set a large gap"};
+exports.setGapLarge = function(d){return "estableix un buit gran"};
 
-exports.setGapVeryLarge = function(d){return "set a very large gap"};
+exports.setGapVeryLarge = function(d){return "estableix un buit molt gran"};
 
-exports.setGapHeightTooltip = function(d){return "Sets the vertical gap in an obstacle"};
+exports.setGapHeightTooltip = function(d){return "Estableix un buit vertical en un obstacle"};
 
-exports.setGravityRandom = function(d){return "set gravity random"};
+exports.setGravityRandom = function(d){return "estableix la gravetat en aleatori"};
 
-exports.setGravityVeryLow = function(d){return "set gravity very low"};
+exports.setGravityVeryLow = function(d){return "estableix la gravetat a molt baixa"};
 
-exports.setGravityLow = function(d){return "set gravity low"};
+exports.setGravityLow = function(d){return "estableix la gravetat a baixa"};
 
-exports.setGravityNormal = function(d){return "set gravity normal"};
+exports.setGravityNormal = function(d){return "estableix la gravetat a normal"};
 
-exports.setGravityHigh = function(d){return "set gravity high"};
+exports.setGravityHigh = function(d){return "estableix la gravetat a alta"};
 
-exports.setGravityVeryHigh = function(d){return "set gravity very high"};
+exports.setGravityVeryHigh = function(d){return "estableix la gravetat a molt alta"};
 
-exports.setGravityTooltip = function(d){return "Sets the level's gravity"};
+exports.setGravityTooltip = function(d){return "Estableix la gravetat del nivell"};
 
-exports.setGround = function(d){return "set ground"};
+exports.setGround = function(d){return "posa un terra"};
 
-exports.setGroundRandom = function(d){return "set ground Random"};
+exports.setGroundRandom = function(d){return "posa un terra aletori"};
 
-exports.setGroundFlappy = function(d){return "set ground Ground"};
+exports.setGroundFlappy = function(d){return "posa el terra Terra"};
 
-exports.setGroundSciFi = function(d){return "set ground Sci-Fi"};
+exports.setGroundSciFi = function(d){return "posa el terra Ciència ficció"};
 
-exports.setGroundUnderwater = function(d){return "set ground Underwater"};
+exports.setGroundUnderwater = function(d){return "posa el terra Fons del mar"};
 
-exports.setGroundCave = function(d){return "set ground Cave"};
+exports.setGroundCave = function(d){return "posa el terra Cova"};
 
-exports.setGroundSanta = function(d){return "set ground Santa"};
+exports.setGroundSanta = function(d){return "posa el terra Pare Noel"};
 
-exports.setGroundLava = function(d){return "set ground Lava"};
+exports.setGroundLava = function(d){return "posa el terra Lava"};
 
-exports.setGroundTooltip = function(d){return "Sets the ground image"};
+exports.setGroundTooltip = function(d){return "posa l'imatge del terra"};
 
-exports.setObstacle = function(d){return "set obstacle"};
+exports.setObstacle = function(d){return "estableix obstacle"};
 
-exports.setObstacleRandom = function(d){return "set obstacle Random"};
+exports.setObstacleRandom = function(d){return "estableix un obstacle en aleatori"};
 
-exports.setObstacleFlappy = function(d){return "set obstacle Pipe"};
+exports.setObstacleFlappy = function(d){return "estableix obstacle en Canonada"};
 
-exports.setObstacleSciFi = function(d){return "set obstacle Sci-Fi"};
+exports.setObstacleSciFi = function(d){return "estableix obstacle en Ciència ficció"};
 
-exports.setObstacleUnderwater = function(d){return "set obstacle Plant"};
+exports.setObstacleUnderwater = function(d){return "estableix obstacle en Planta"};
 
-exports.setObstacleCave = function(d){return "set obstacle Cave"};
+exports.setObstacleCave = function(d){return "estableix obstacle en Cova"};
 
-exports.setObstacleSanta = function(d){return "set obstacle Chimney"};
+exports.setObstacleSanta = function(d){return "estableix obstacle en Xemeneia"};
 
-exports.setObstacleLaser = function(d){return "set obstacle Laser"};
+exports.setObstacleLaser = function(d){return "estableix obstacle en Laser"};
 
-exports.setObstacleTooltip = function(d){return "Sets the obstacle image"};
+exports.setObstacleTooltip = function(d){return "Estableix l'imatge de l'obstacle"};
 
-exports.setPlayer = function(d){return "set player"};
+exports.setPlayer = function(d){return "estableix el jugador"};
 
-exports.setPlayerRandom = function(d){return "set player Random"};
+exports.setPlayerRandom = function(d){return "estableix un jugador aleatori"};
 
-exports.setPlayerFlappy = function(d){return "set player Yellow Bird"};
+exports.setPlayerFlappy = function(d){return "estableix el jugador Ocell groc"};
 
-exports.setPlayerRedBird = function(d){return "set player Red Bird"};
+exports.setPlayerRedBird = function(d){return "estableix el jugador Ocell vermell"};
 
-exports.setPlayerSciFi = function(d){return "set player Spaceship"};
+exports.setPlayerSciFi = function(d){return "estableix el jugador Nau espacial"};
 
-exports.setPlayerUnderwater = function(d){return "set player Fish"};
+exports.setPlayerUnderwater = function(d){return "estableix el jugador Peix"};
 
-exports.setPlayerCave = function(d){return "set player Bat"};
+exports.setPlayerCave = function(d){return "estableix el jugador Ratpenat"};
 
-exports.setPlayerSanta = function(d){return "set player Santa"};
+exports.setPlayerSanta = function(d){return "estableix el jugador Pare Noel"};
 
-exports.setPlayerShark = function(d){return "set player Shark"};
+exports.setPlayerShark = function(d){return "estableix el jugador Tauró"};
 
-exports.setPlayerEaster = function(d){return "set player Easter Bunny"};
+exports.setPlayerEaster = function(d){return "estableix el jugador Conill de Pascua"};
 
-exports.setPlayerBatman = function(d){return "set player Bat guy"};
+exports.setPlayerBatman = function(d){return "estableix el jugador Home ratpenat"};
 
-exports.setPlayerSubmarine = function(d){return "set player Submarine"};
+exports.setPlayerSubmarine = function(d){return "estableix el jugador Submarí"};
 
-exports.setPlayerUnicorn = function(d){return "set player Unicorn"};
+exports.setPlayerUnicorn = function(d){return "estableix el jugador Unicorn"};
 
-exports.setPlayerFairy = function(d){return "set player Fairy"};
+exports.setPlayerFairy = function(d){return "estableix el jugador Fada"};
 
-exports.setPlayerSuperman = function(d){return "set player Flappyman"};
+exports.setPlayerSuperman = function(d){return "estableix el jugador Flappyman"};
 
-exports.setPlayerTurkey = function(d){return "set player Turkey"};
+exports.setPlayerTurkey = function(d){return "estableix el jugador Gall d'indi"};
 
-exports.setPlayerTooltip = function(d){return "Sets the player image"};
+exports.setPlayerTooltip = function(d){return "estableix l'imatge del jugador"};
 
-exports.setScore = function(d){return "set score"};
+exports.setScore = function(d){return "assigna la puntuació"};
 
-exports.setScoreTooltip = function(d){return "Sets the player's score"};
+exports.setScoreTooltip = function(d){return "Estableix la puntuació del jugador"};
 
-exports.setSpeed = function(d){return "set speed"};
+exports.setSpeed = function(d){return "estableix la velocitat"};
 
-exports.setSpeedTooltip = function(d){return "Sets the levels speed"};
+exports.setSpeedTooltip = function(d){return "Estableix la velocitat del nivell"};
 
-exports.shareFlappyTwitter = function(d){return "Check out the Flappy game I made. I wrote it myself with @codeorg"};
+exports.shareFlappyTwitter = function(d){return "Mira el \"Flappy game\" que he fet. L'he escrit jo mateix amb @codeorg"};
 
-exports.shareGame = function(d){return "Share your game:"};
+exports.shareGame = function(d){return "Comparteix el teu joc:"};
 
 exports.soundRandom = function(d){return "atzar"};
 
-exports.soundBounce = function(d){return "bounce"};
+exports.soundBounce = function(d){return "rebot"};
 
-exports.soundCrunch = function(d){return "crunch"};
+exports.soundCrunch = function(d){return "cruixit"};
 
-exports.soundDie = function(d){return "sad"};
+exports.soundDie = function(d){return "trist"};
 
-exports.soundHit = function(d){return "smash"};
+exports.soundHit = function(d){return "aixafar"};
 
-exports.soundPoint = function(d){return "point"};
+exports.soundPoint = function(d){return "punt"};
 
-exports.soundSwoosh = function(d){return "swoosh"};
+exports.soundSwoosh = function(d){return "xiulet"};
 
-exports.soundWing = function(d){return "wing"};
+exports.soundWing = function(d){return "ala"};
 
 exports.soundJet = function(d){return "jet"};
 
-exports.soundCrash = function(d){return "crash"};
+exports.soundCrash = function(d){return "xoc"};
 
-exports.soundJingle = function(d){return "jingle"};
+exports.soundJingle = function(d){return "tintineig"};
 
-exports.soundSplash = function(d){return "splash"};
+exports.soundSplash = function(d){return "esquitxada"};
 
 exports.soundLaser = function(d){return "laser"};
 
-exports.speedRandom = function(d){return "set speed random"};
+exports.speedRandom = function(d){return "estableix una velocitat aletòria"};
 
-exports.speedVerySlow = function(d){return "set speed very slow"};
+exports.speedVerySlow = function(d){return "estableix velocitat a molt lenta"};
 
-exports.speedSlow = function(d){return "set speed slow"};
+exports.speedSlow = function(d){return "estableix velocitat a lenta"};
 
-exports.speedNormal = function(d){return "set speed normal"};
+exports.speedNormal = function(d){return "estableix velocitat a normal"};
 
-exports.speedFast = function(d){return "set speed fast"};
+exports.speedFast = function(d){return "estableix velocitat a ràpida"};
 
-exports.speedVeryFast = function(d){return "set speed very fast"};
+exports.speedVeryFast = function(d){return "estableix velocitat a molt ràpida"};
 
-exports.whenClick = function(d){return "when click"};
+exports.whenClick = function(d){return "quan cliques"};
 
-exports.whenClickTooltip = function(d){return "Execute the actions below when a click event occurs."};
+exports.whenClickTooltip = function(d){return "Executar les accions de sota quan es produeix un esdeveniment de clic."};
 
-exports.whenCollideGround = function(d){return "when hit the ground"};
+exports.whenCollideGround = function(d){return "quan arribi a terra"};
 
-exports.whenCollideGroundTooltip = function(d){return "Execute the actions below when Flappy hits the ground."};
+exports.whenCollideGroundTooltip = function(d){return "Executar les accions de sota quan Flappy arribi a terra."};
 
-exports.whenCollideObstacle = function(d){return "when hit an obstacle"};
+exports.whenCollideObstacle = function(d){return "quan xoca amb un obstacle"};
 
-exports.whenCollideObstacleTooltip = function(d){return "Execute the actions below when Flappy hits an obstacle."};
+exports.whenCollideObstacleTooltip = function(d){return "Executar les accions de sota quan Flappy xoca amb un obstacle."};
 
-exports.whenEnterObstacle = function(d){return "when pass obstacle"};
+exports.whenEnterObstacle = function(d){return "quan passa un obstacle"};
 
-exports.whenEnterObstacleTooltip = function(d){return "Execute the actions below when Flappy enters an obstacle."};
+exports.whenEnterObstacleTooltip = function(d){return "Executar les accions de sota quan Flappy entra en un obstacle."};
 
-exports.whenRunButtonClick = function(d){return "when Run is clicked"};
+exports.whenRunButtonClick = function(d){return "quan s'inicia el joc"};
 
-exports.whenRunButtonClickTooltip = function(d){return "Execute the actions below when the run button is pressed."};
+exports.whenRunButtonClickTooltip = function(d){return "Executar les accions de sota quan s'inicia el joc."};
 
 exports.yes = function(d){return "Sí"};
 

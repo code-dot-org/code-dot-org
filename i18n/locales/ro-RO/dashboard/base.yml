@@ -65,10 +65,7 @@ ro:
     overview_student: 'Sign up for an account to track your progress. Your email is primarily used to allow you to log in and for password recovery. For more information, see our <a href="http://code.org/privacy">Privacy Policy</a>.'
     overview_teacher: "Teach computer science in your classroom by signing up for an account.<p/> You'll be able to add your students and track their progress."
     no_signup_message: 'Poţi <a target="_blank" href="http://learn.code.org"> parcurge diverse stadii şi puzzle-uri</a>, dar va trebui să te înregistrezi pentru a-ți salva progresul.'
-    prizes_message: 'Studenții din S.U.A. care câștigă toate %{num_trophies} trofeele de concept pot selecta o varietate de premii precum spațiu gratuit de Dropbox, credite Skype, și jocuri descărcabile de la Electronic Arts.'
     teacher_educator_guide: Consultă ghidul educatorului
-    teacher_prize_header: 'Câştigă 1000 dolari în <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> recompense (până la 15 iunie 2014, în limita stocului disponibil)'
-    teacher_prize_message: 'In parteneriat cu <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>, Code.org va oferi până la 1000$ pentru fondul clasei către profesori americani din sistemul public de învăţământ care conduc cel puţin 15 studenţi prin cursurile de la K-8 Intro până la Ştiinţa Calculatoarelor (până la 15 iunie 2014, în limita stocului disponibil).  <a href="http://code.org/educate/20hr">Consultă ghidul educatorului</a>.  (Limita: 1000$ per profesor.  <a target="_blank" href="http://help.donorschoose.org/app/answers/detail/a_id/454/kw/code.org">Consultă FAQ pentru mai multe detalii despre limite</a>.)'
     teacher_pitch: Profesor înscriere Code.org
     teacher_title: Înregistrare Profesor
     student_pitch: Student înscriere Code.org
@@ -79,6 +76,7 @@ ro:
     gender: Sex (opţional)
     birthday: Ziua de naştere (opţional)
     age: Vârsta
+    user_type: Are you a student or teacher?
     submit: Inregistrează-te
     teacher: Ești profesor?
     valid_username: Disponibil!
@@ -329,7 +327,6 @@ ro:
     student_progress: Progresul tău de învățare
     student_stats: 'Ai câştigat %{trophy_count} din cele %{trophy_max} trofee de "Concept de Măestrie"'
     student_left_off: 'Unde ai rămas:'
-    student_finished_prize: 'Ai completat toate tutorialele, revendică %{prize_link} și alege altă clasă % {online_link} sau la o %{local_school_link}'
     student_finished: 'Ai completat toate tutoriale, alege o altă clasă %{online_link} sau la o altă școală %{local_school_link}'
     local_school: şcoală locală
     online: online
@@ -352,6 +349,9 @@ ro:
     male: De sex masculin
     female: De sex feminin
     none: Prefer să nu răspund
+  user_type:
+    student: elev
+    teacher: Teacher
   footer:
     help_from_html: Ingineri de la Google, Microsoft, Facebook şi Twitter au ajutat la creearea acestui tutorial.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. Toate Drepturile Rezervate.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. Toate Drepturile Rezervate.'
@@ -362,13 +362,6 @@ ro:
     tos: Termeni
     privacy: Politică de confidențialitate
     secure: Versiunea Securizată
-  prize_mail:
-    prize_earned:
-      subject: Revendică-ți premiul la Code.org!
-    teacher_prize_earned:
-      subject: Felicitări din partea Code.org!
-    teacher_bonus_prize_earned:
-      subject: Revendică-ți premiul bonus la Code.org!
   reference_area:
     title: Ai nevoie de ajutor?
     subtitle: Vezi aceste clipuri video şi sugestii

@@ -2256,16 +2256,57 @@ exports.workspaceCode = function(blockly) {
 };
 
 /**
+ * Generate a native function wrapper for use with the JS interpreter.
+ */
+exports.makeNativeMemberFunction = function (interpreter, nativeFunc, parentObj) {
+  return function() {
+    // Call the native function:
+    var retVal = nativeFunc.apply(parentObj, arguments);
+
+    // Now figure out what to do with the return value...
+
+    if (retVal instanceof Function) {
+      // Don't call createPrimitive() for functions
+      return retVal;
+    } else if (retVal instanceof Object) {
+      var newObj = interpreter.createObject(interpreter.OBJECT);
+      // Limited attempt to marshal back complex return values
+      // Special case: only one-level deep, only handling
+      // primitives and arrays of primitives
+      for (var prop in retVal) {
+        var isFuncOrObj = retVal[prop] instanceof Function ||
+                          retVal[prop] instanceof Object;
+        // replace properties with wrapped properties
+        if (retVal[prop] instanceof Array) {
+          var newArray = interpreter.createObject(interpreter.ARRAY);
+          for (var i = 0; i < retVal[prop].length; i++) {
+            newArray.properties[i] = interpreter.createPrimitive(retVal[prop][i]);
+          }
+          newArray.length = retVal[prop].length;
+          interpreter.setProperty(newObj, prop, newArray);
+        } else if (isFuncOrObj) {
+          // skipping over these - they could be objects that should
+          // be converted into interpreter objects. they could be native
+          // functions that should be converted. Or they could be objects
+          // that are already interpreter objects, which is what we assume
+          // for now:
+          interpreter.setProperty(newObj, prop, retVal[prop]);
+        } else {
+          // wrap as a primitive if it is not a function or object:
+          interpreter.setProperty(newObj, prop, interpreter.createPrimitive(retVal[prop]));
+        }
+      }
+      return newObj;
+    } else {
+      return interpreter.createPrimitive(retVal);
+    }
+  };
+};
+
+/**
  * Initialize a JS interpreter.
  */
 exports.initJSInterpreter = function (interpreter, scope, options) {
-  // helper function used below..
-  function makeNativeMemberFunction(nativeFunc, parentObj) {
-    return function() {
-      return interpreter.createPrimitive(
-                            nativeFunc.apply(parentObj, arguments));
-    };
-  }
   for (var optsObj in options) {
     var func, wrapper;
     // The options object contains objects that will be referenced
@@ -2281,13 +2322,96 @@ exports.initJSInterpreter = function (interpreter, scope, options) {
       if (func instanceof Function) {
         // Populate each of the global objects with native functions
         // NOTE: other properties are not currently passed to the interpreter
-        wrapper = makeNativeMemberFunction(func, options[optsObj]);
+        wrapper = exports.makeNativeMemberFunction(interpreter, func, options[optsObj]);
         interpreter.setProperty(obj,
                                 prop,
                                 interpreter.createNativeFunction(wrapper));
       }
     }
   }
+};
+
+// session is an instance of Ace editSession
+// Usage
+// var lengthArray = aceCalculateCumulativeLength(editor.getSession());
+// Need to call this only if the document is updated after the last call.
+exports.aceCalculateCumulativeLength = function (session) {
+  var cumulativeLength = [];
+  var cnt = session.getLength();
+  var cuml = 0, nlLength = session.getDocument().getNewLineCharacter().length;
+  cumulativeLength.push(cuml);
+  var text = session.getLines(0, cnt);
+  for (var i = 0; i < cnt; i++) {
+    cuml += text[i].length + nlLength;
+    cumulativeLength.push(cuml);
+  }
+  return cumulativeLength;
+};
+
+// Fast binary search implementation
+// Pass the cumulative length array here.
+// Usage
+// var row = aceFindRow(lengthArray, 0, lengthArray.length, 2512);
+// tries to find 2512th character lies in which row.
+function aceFindRow(cumulativeLength, rows, rowe, pos) {
+  if (rows > rowe) {
+    return null;
+  }
+  if (rows + 1 === rowe) {
+    return rows;
+  }
+
+  var mid = Math.floor((rows + rowe) / 2);
+  
+  if (pos < cumulativeLength[mid]) {
+    return aceFindRow(cumulativeLength, rows, mid, pos);
+  } else if(pos > cumulativeLength[mid]) {
+    return aceFindRow(cumulativeLength, mid, rowe, pos);
+  }
+  return mid;
+}
+
+/**
+ * Selects code in an ace editor.
+ */
+function createSelection (selection, cumulativeLength, start, end) {
+  var range = selection.getRange();
+
+  range.start.row = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
+  range.start.col = start - cumulativeLength[range.start.row];
+  range.end.row = aceFindRow(cumulativeLength, 0, cumulativeLength.length, end);
+  range.end.col = end - cumulativeLength[range.end.row];
+
+  selection.setSelectionRange(range);
+}
+
+exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
+                                      userCodeStartOffset, userCodeLength) {
+  var inUserCode = false;
+  if (interpreter.stateStack[0]) {
+    var node = interpreter.stateStack[0].node;
+    // Adjust start/end by Webapp.userCodeStartOffset since the code running
+    // has been expanded vs. what the user sees in the editor window:
+    var start = node.start - userCodeStartOffset;
+    var end = node.end - userCodeStartOffset;
+
+    inUserCode = (start > 0) && (start < userCodeLength);
+
+    // If we are showing Javascript code in the ace editor, highlight
+    // the code being executed in each step:
+    if (!editor.currentlyUsingBlocks) {
+      // Only show selection if the node being executed is inside the user's
+      // code (not inside code we inserted before or after their code that is
+      // not visible in the editor):
+      var selection = editor.aceEditor.getSelection();
+      if (inUserCode) {
+        createSelection(selection, cumulativeLength, start, end);
+      } else {
+        selection.clearSelection();
+      }
+    }
+  }
+  return inUserCode;
 };
 
 /**
@@ -7477,8 +7601,9 @@ exports.generateCodeAliases = function (codeFunctions, parentObjName) {
     for (var i = 0; i < codeFunctions.length; i++) {
       var cf = codeFunctions[i];
       code += "var " + cf.func +
-          " = function() { var newArgs = [''].concat(arguments); return " +
-          parentObjName + "." + cf.func +
+          " = function() { var newArgs = " +
+          (cf.idArgLast ? "arguments.concat(['']);" : "[''].concat(arguments);") +
+          " return " + parentObjName + "." + cf.func +
           ".apply(" + parentObjName + ", newArgs); };\n";
     }
   }
@@ -7642,7 +7767,7 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.ca=function(n){return n===1?"one":"other"}
 exports.blocksUsed = function(d){return "Blocs utilitzats: %1"};
 
-exports.branches = function(d){return "branches"};
+exports.branches = function(d){return "branques"};
 
 exports.catColour = function(d){return "Color"};
 
@@ -7662,63 +7787,63 @@ exports.colourTooltip = function(d){return "Canvia el color del llapis."};
 
 exports.degrees = function(d){return "graus"};
 
-exports.depth = function(d){return "depth"};
+exports.depth = function(d){return "profunditat"};
 
 exports.dots = function(d){return "píxels"};
 
 exports.drawASquare = function(d){return "dibuixa un quadrat"};
 
-exports.drawATriangle = function(d){return "Dibuixa un triangle"};
+exports.drawATriangle = function(d){return "dibuixa un triangle"};
 
-exports.drawACircle = function(d){return "Dibuixa un cercle"};
+exports.drawACircle = function(d){return "dibuixa un cercle"};
 
-exports.drawAFlower = function(d){return "draw a flower"};
+exports.drawAFlower = function(d){return "dibuixa una flor"};
 
-exports.drawAHexagon = function(d){return "draw a hexagon"};
+exports.drawAHexagon = function(d){return "dibuixa un hexàgon"};
 
-exports.drawAHouse = function(d){return "Dibuixa una casa"};
+exports.drawAHouse = function(d){return "dibuixa una casa"};
 
-exports.drawAPlanet = function(d){return "draw a planet"};
+exports.drawAPlanet = function(d){return "dibuixa un planeta"};
 
-exports.drawARhombus = function(d){return "draw a rhombus"};
+exports.drawARhombus = function(d){return "dibuixa un rombe"};
 
-exports.drawARobot = function(d){return "draw a robot"};
+exports.drawARobot = function(d){return "dibuixa un robot"};
 
-exports.drawARocket = function(d){return "draw a rocket"};
+exports.drawARocket = function(d){return "dibuixa un coet"};
 
-exports.drawASnowflake = function(d){return "draw a snowflake"};
+exports.drawASnowflake = function(d){return "dibuixa un floc de neu"};
 
 exports.drawASnowman = function(d){return "dibuixa un ninot de neu"};
 
-exports.drawAStar = function(d){return "draw a star"};
+exports.drawAStar = function(d){return "dibuixa un estel"};
 
 exports.drawATree = function(d){return "Dibuixa un arbre"};
 
-exports.drawUpperWave = function(d){return "draw upper wave"};
+exports.drawUpperWave = function(d){return "dibuixa ona superior"};
 
-exports.drawLowerWave = function(d){return "draw lower wave"};
+exports.drawLowerWave = function(d){return "dibuixa ona inferior"};
 
 exports.heightParameter = function(d){return "alçcada"};
 
 exports.hideTurtle = function(d){return "amaga l'artista"};
 
-exports.jump = function(d){return "jump"};
+exports.jump = function(d){return "salt"};
 
 exports.jumpBackward = function(d){return "salta cap enrere"};
 
-exports.jumpForward = function(d){return "salta cap endevant"};
+exports.jumpForward = function(d){return "salta cap endavant"};
 
-exports.jumpTooltip = function(d){return "Mou l'artista sense deixar ninguna marca."};
+exports.jumpTooltip = function(d){return "Desplaça l'artista sense deixar cap marca."};
 
-exports.jumpEastTooltip = function(d){return "Moves the artist east without leaving any marks."};
+exports.jumpEastTooltip = function(d){return "Desplaça l'artista a l'est sense deixar cap marca."};
 
-exports.jumpNorthTooltip = function(d){return "Moves the artist north without leaving any marks."};
+exports.jumpNorthTooltip = function(d){return "Desplaça l'artista al nord sense deixar cap marca."};
 
-exports.jumpSouthTooltip = function(d){return "Moves the artist south without leaving any marks."};
+exports.jumpSouthTooltip = function(d){return "Desplaça l'artista al sud sense deixar cap marca."};
 
-exports.jumpWestTooltip = function(d){return "Moves the artist west without leaving any marks."};
+exports.jumpWestTooltip = function(d){return "Desplaça l'artista a l'oest sense deixar cap marca."};
 
-exports.lengthFeedback = function(d){return "You got it right except for the lengths to move."};
+exports.lengthFeedback = function(d){return "És correcte excepte les longituds a moure's."};
 
 exports.lengthParameter = function(d){return "longitud"};
 
@@ -7726,17 +7851,17 @@ exports.loopVariable = function(d){return "comptador"};
 
 exports.moveBackward = function(d){return "retrocedeix"};
 
-exports.moveEastTooltip = function(d){return "Moves the artist east."};
+exports.moveEastTooltip = function(d){return "Desplaça l'artista cap a l'est."};
 
 exports.moveForward = function(d){return "avança"};
 
-exports.moveForwardTooltip = function(d){return "Avança l'artista."};
+exports.moveForwardTooltip = function(d){return "Desplaça l'artista endavant."};
 
-exports.moveNorthTooltip = function(d){return "Moves the artist north."};
+exports.moveNorthTooltip = function(d){return "Desplaça l'artista cap al nord."};
 
-exports.moveSouthTooltip = function(d){return "Moves the artist south."};
+exports.moveSouthTooltip = function(d){return "Desplaça l'artista cap al sud."};
 
-exports.moveWestTooltip = function(d){return "Moves the artist west."};
+exports.moveWestTooltip = function(d){return "Desplaça l'artista cap a l'oest."};
 
 exports.moveTooltip = function(d){return "Avança o retrocedeix l'artista segons la quanitat especificada."};
 
@@ -7756,13 +7881,13 @@ exports.setColour = function(d){return "defineix color"};
 
 exports.setWidth = function(d){return "estableix l'amplada"};
 
-exports.shareDrawing = function(d){return "Share your drawing:"};
+exports.shareDrawing = function(d){return "Comparteix el teu dibuix:"};
 
 exports.showMe = function(d){return "Mostra'm"};
 
 exports.showTurtle = function(d){return "mostra l'artista"};
 
-exports.step = function(d){return "step"};
+exports.step = function(d){return "pas"};
 
 exports.tooFewColours = function(d){return "Necessites utilitzar al menys %1 diferents colors per a aquest puzzle. Tu has utilitzat només %2."};
 
@@ -7821,21 +7946,21 @@ exports.directionEastLetter = function(d){return "E"};
 
 exports.directionWestLetter = function(d){return "W"};
 
-exports.end = function(d){return "end"};
+exports.end = function(d){return "final"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Els blocs \"Repetir\" o el \"Si\" necessiten tenir altres blocs dins per a treballar. Assegureu-vos que el bloc interior encaixa bé dins del bloc que conté."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "The function block needs to have other blocks inside it to work."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "La funció bloc ha de tenir altres blocs a dins perquè funcioni."};
 
-exports.extraTopBlocks = function(d){return "You have extra blocks that aren't attached to an event block."};
+exports.extraTopBlocks = function(d){return "Tens blocs sense lligams. Volies lligar-los al bloc \"quan s'executa\"?"};
 
 exports.finalStage = function(d){return "Enhorabona! Has completat l'etapa final."};
 
 exports.finalStageTrophies = function(d){return "Enhorabona! Has completat l'etapa final i guanyat "+p(d,"numTrophies",0,"ca",{"un":"trofeu","other":n(d,"numTrophies")+" trophies"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Finalitza"};
 
-exports.generatedCodeInfo = function(d){return "Els blocs del teu programa poden ser també representats en Javascript, el llenguatge de programació més extés al món:"};
+exports.generatedCodeInfo = function(d){return "Fins i tot les millors universitats ensenyen programació basada en blocs (per exemple, "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Però sota el capó, els blocs que tu has reunit també es poden mostrar en JavaScript, la llengua de programació més utilitzada al món:"};
 
 exports.hashError = function(d){return "Ho sentim, '%1' no correspon amb ningun programa guardat."};
 
@@ -7843,13 +7968,13 @@ exports.help = function(d){return "Ajuda"};
 
 exports.hintTitle = function(d){return "Consell:"};
 
-exports.jump = function(d){return "jump"};
+exports.jump = function(d){return "salt"};
 
 exports.levelIncompleteError = function(d){return "Estàs utilitzant tots els tipus de blocs necessaris, però no de la manera correcta."};
 
 exports.listVariable = function(d){return "llista"};
 
-exports.makeYourOwnFlappy = function(d){return "Make Your Own Flappy Game"};
+exports.makeYourOwnFlappy = function(d){return "Fes el teu propi \"Flappy Game\""};
 
 exports.missingBlocksErrorMsg = function(d){return "Prova un o més dels blocs de sota per a resoldre aquest puzzle."};
 
@@ -7857,15 +7982,15 @@ exports.nextLevel = function(d){return "Enhorabona! Has acabat el Puzzle! "+v(d,
 
 exports.nextLevelTrophies = function(d){return "Felicitats! Has acabat el Puzzle "+v(d,"puzzleNumber")+" i has guanyat "+p(d,"numTrophies",0,"ca",{"one":"un trofeu","other":n(d,"numTrophies")+" trofeus"})+"."};
 
-exports.nextStage = function(d){return "Enhorabona! Has acabat l'etapa "+v(d,"stageNumber")+"."};
+exports.nextStage = function(d){return "Enhorabona! Heu completat "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "Enhorabona! Has acabat l'etapa "+v(d,"stageNumber")+" i has guanyat "+p(d,"numTrophies",0,"ca",{"one":"trofeu","other":n(d,"numTrophies")+" trofeus"})+"."};
+exports.nextStageTrophies = function(d){return "Enhorabona! Has acabat "+v(d,"stageName")+" i has guanyat "+p(d,"numTrophies",0,"ca",{"un":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
 exports.numBlocksNeeded = function(d){return "Enhorabona! Has acabat el Puzzle "+v(d,"puzzleNumber")+". (Tot i que podries haver utilitzat un "+p(d,"numBlocks",0,"ca",{"one":"1 bloc","other":n(d,"numBlocks")+" blocs"})+".)"};
 
 exports.numLinesOfCodeWritten = function(d){return "Has escrit "+p(d,"numLines",0,"ca",{"one":"1 línia","other":n(d,"numLines")+" línies"})+" de codi!"};
 
-exports.play = function(d){return "play"};
+exports.play = function(d){return "reprodueix"};
 
 exports.puzzleTitle = function(d){return "Puzzle "+v(d,"puzzle_number")+" de "+v(d,"stage_total")};
 
@@ -7873,11 +7998,11 @@ exports.repeat = function(d){return "repeteix"};
 
 exports.resetProgram = function(d){return "Reiniciar"};
 
-exports.runProgram = function(d){return "Executar Programa"};
+exports.runProgram = function(d){return "executa"};
 
 exports.runTooltip = function(d){return "Executa el programa definit per els blocs en l'àrea de treball."};
 
-exports.score = function(d){return "score"};
+exports.score = function(d){return "puntuació"};
 
 exports.showCodeHeader = function(d){return "Mostra el Codi"};
 
@@ -7895,21 +8020,21 @@ exports.tooMuchWork = function(d){return "Em fas fer molta feina! Podries intent
 
 exports.toolboxHeader = function(d){return "blocs"};
 
-exports.openWorkspace = function(d){return "How It Works"};
+exports.openWorkspace = function(d){return "Com funciona"};
 
 exports.totalNumLinesOfCodeWritten = function(d){return "Total de tots els temps: "+p(d,"numLines",0,"ca",{"one":"1 línia","other":n(d,"numLines")+" línies"})+" de codi."};
 
 exports.tryAgain = function(d){return "Torna a intentar-ho"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "Veure pista"};
 
 exports.backToPreviousLevel = function(d){return "Torna al nivell anterior"};
 
-exports.saveToGallery = function(d){return "Save to your gallery"};
+exports.saveToGallery = function(d){return "Guarda-ho a la teva galeria"};
 
-exports.savedToGallery = function(d){return "Saved to your gallery!"};
+exports.savedToGallery = function(d){return "Guardat a la teva galeria!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Ho sentim, no podem compartir aquest programa."};
 
 exports.typeCode = function(d){return "Escriu el teu codi JavaScript sota aquestes instruccions."};
 
@@ -7925,21 +8050,21 @@ exports.rotateText = function(d){return "Gira el teu dispositiu."};
 
 exports.orientationLock = function(d){return "Desactiva el bloqueig d'orientació en els ajustos del teu dispositiu."};
 
-exports.wantToLearn = function(d){return "Want to learn to code?"};
+exports.wantToLearn = function(d){return "Vols aprendre a programar?"};
 
-exports.watchVideo = function(d){return "Watch the Video"};
+exports.watchVideo = function(d){return "Mira el vídeo"};
 
-exports.when = function(d){return "when"};
+exports.when = function(d){return "quan"};
 
-exports.whenRun = function(d){return "when run"};
+exports.whenRun = function(d){return "quan s'executa"};
 
-exports.tryHOC = function(d){return "Try the Hour of Code"};
+exports.tryHOC = function(d){return "Proveu l'Hora de programació"};
 
-exports.signup = function(d){return "Sign up for the intro course"};
+exports.signup = function(d){return "Inscriu-te al curs d'introducció"};
 
-exports.hintHeader = function(d){return "Here's a tip:"};
+exports.hintHeader = function(d){return "Aquí tens una pista:"};
 
-exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+exports.genericFeedback = function(d){return "Observa com has acabat i prova d'arreglar el teu programa."};
 
 
 },{"messageformat":51}],40:[function(require,module,exports){

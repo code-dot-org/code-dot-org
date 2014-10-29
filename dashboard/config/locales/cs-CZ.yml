@@ -69,15 +69,7 @@
     no_signup_message: Můžeš si <a target="_blank" href="http://learn.code.org">prohlédnout
       různé úrovně a hádanky</a>, ale budeš se muset zaregistrovat, aby se uložil
       tvůj pokrok.
-    prizes_message: Studenti z USA, kteří získají všech %{num_trophies} trofejí v
-      pojmech mohou vybírat z nabídky cen obsahující např. volné místo na Dropbox,
-      Skype kredity a stáhnutelné hry od Electronic Arts.
     teacher_educator_guide: Podívat se na průvodce učitele
-    teacher_prize_header: Vyhraj 1,000$ v odměnách na <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
-    teacher_prize_message: Ve spolupráci s <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>,
-      Code.org nabízí dotaci až 1,000$ učitelům veřejných škol v USA, kteří provedou
-      tímto kurzem alespoň 15 studentů. <a href="http://code.org/educate/20hr">Shlédnout
-      pedagogický průvodce pro více informací.</a> 
     teacher_pitch: Vyučuj K-8 Úvod do Počítačových Věd ve své třídě
     teacher_title: Registrace učitele
     student_pitch: 'Po 1 hodině: vyzkoušej náš K-8 Úvod do Počítačových Věd'
@@ -88,6 +80,7 @@
     gender: Pohlaví (volitelné)
     birthday: Narozeniny (volitelné)
     age: Věk
+    user_type: Are you a student or teacher?
     submit: Registrace
     teacher: Jsi učitel?
     valid_username: K dispozici!
@@ -377,8 +370,6 @@
     student_stats: Získal jsi %{trophy_count} z možných %{trophy_max} trofejí "Mistrovství
       Pojetí".
     student_left_off: 'Kde jsi přestal:'
-    student_finished_prize: Zvládl jsi všechny tutoriály. Vyzvedni si %{prize_link}
-      a vyber další třídu %{online_link} nebo %{local_school_link}
     student_finished: Dokončil jsi všechna cvičení, vyber si další třídu %{online_link}
       nebo v %{local_school_link}
     local_school: místní škola
@@ -405,6 +396,9 @@
     male: Muž
     female: "Žena"
     none: Raději bych neodpovídal/a
+  user_type:
+    student: student
+    teacher: Teacher
   footer:
     help_from_html: Inženýři z <a href="http://www.google.com">Googlu</a>, <a href="http://www.microsoft.com">Microsoftu</a>,
       <a href="http://www.facebook.com">Facebooku</a> a <a href="http://www.twitter.com">Twitteru</a>
@@ -420,13 +414,6 @@
     tos: Podmínky služby
     privacy: Zásady ochrany osobních údajů
     secure: Secure Version
-  prize_mail:
-    prize_earned:
-      subject: Získej tvou cenu na Code.org!
-    teacher_prize_earned:
-      subject: Získej tvou cenu na Code.org!
-    teacher_bonus_prize_earned:
-      subject: Získej tvou bonusovou cenu na Code.org!
   reference_area:
     title: Potřebuješ pomoc?
     subtitle: Podívej se na tyto videa a tipy

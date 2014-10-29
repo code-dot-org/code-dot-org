@@ -49,6 +49,7 @@ it:
           desc: Modifica il codice (versione provvisoria)
           MazeEC: Lezione 1
           Webapp: Lezione 2
+          ArtistEC: Lezione 3
         events:
           desc: Rimbalzo (versione provvisoria)
           Bounce: Lezione 1
@@ -98,6 +99,7 @@ it:
         MazeStep: 'Modalità "a passi" del Labirinto'
         Wordsearch: Ricerca di parole
         Webapp: Webapp
+        ArtistEC: "L'artista"
     trophy:
       name:
         Bronze: Bronzo
@@ -342,6 +344,8 @@ it:
         maze_wordsearch_k_15: "Spostami in una direzione e poi in un'altra per scrivere le lettere della parola ABOVE"
         maze_wordsearch_k_16: "Spostami in una direzione e poi in un'altra per scrivere le lettere della parola BELOW"
         maze_wordsearch_k_20: "Questa è una verifica! Spostami in una direzione e poi in un'altra per scrivere le lettere della parola STORY"
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColour" block.'
     video:
       name:
         maze_intro: 'Labirinto: Introduzione'

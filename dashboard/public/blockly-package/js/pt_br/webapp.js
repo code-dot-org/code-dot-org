@@ -1435,16 +1435,57 @@ exports.workspaceCode = function(blockly) {
 };
 
 /**
+ * Generate a native function wrapper for use with the JS interpreter.
+ */
+exports.makeNativeMemberFunction = function (interpreter, nativeFunc, parentObj) {
+  return function() {
+    // Call the native function:
+    var retVal = nativeFunc.apply(parentObj, arguments);
+
+    // Now figure out what to do with the return value...
+
+    if (retVal instanceof Function) {
+      // Don't call createPrimitive() for functions
+      return retVal;
+    } else if (retVal instanceof Object) {
+      var newObj = interpreter.createObject(interpreter.OBJECT);
+      // Limited attempt to marshal back complex return values
+      // Special case: only one-level deep, only handling
+      // primitives and arrays of primitives
+      for (var prop in retVal) {
+        var isFuncOrObj = retVal[prop] instanceof Function ||
+                          retVal[prop] instanceof Object;
+        // replace properties with wrapped properties
+        if (retVal[prop] instanceof Array) {
+          var newArray = interpreter.createObject(interpreter.ARRAY);
+          for (var i = 0; i < retVal[prop].length; i++) {
+            newArray.properties[i] = interpreter.createPrimitive(retVal[prop][i]);
+          }
+          newArray.length = retVal[prop].length;
+          interpreter.setProperty(newObj, prop, newArray);
+        } else if (isFuncOrObj) {
+          // skipping over these - they could be objects that should
+          // be converted into interpreter objects. they could be native
+          // functions that should be converted. Or they could be objects
+          // that are already interpreter objects, which is what we assume
+          // for now:
+          interpreter.setProperty(newObj, prop, retVal[prop]);
+        } else {
+          // wrap as a primitive if it is not a function or object:
+          interpreter.setProperty(newObj, prop, interpreter.createPrimitive(retVal[prop]));
+        }
+      }
+      return newObj;
+    } else {
+      return interpreter.createPrimitive(retVal);
+    }
+  };
+};
+
+/**
  * Initialize a JS interpreter.
  */
 exports.initJSInterpreter = function (interpreter, scope, options) {
-  // helper function used below..
-  function makeNativeMemberFunction(nativeFunc, parentObj) {
-    return function() {
-      return interpreter.createPrimitive(
-                            nativeFunc.apply(parentObj, arguments));
-    };
-  }
   for (var optsObj in options) {
     var func, wrapper;
     // The options object contains objects that will be referenced
@@ -1460,13 +1501,96 @@ exports.initJSInterpreter = function (interpreter, scope, options) {
       if (func instanceof Function) {
         // Populate each of the global objects with native functions
         // NOTE: other properties are not currently passed to the interpreter
-        wrapper = makeNativeMemberFunction(func, options[optsObj]);
+        wrapper = exports.makeNativeMemberFunction(interpreter, func, options[optsObj]);
         interpreter.setProperty(obj,
                                 prop,
                                 interpreter.createNativeFunction(wrapper));
       }
     }
   }
+};
+
+// session is an instance of Ace editSession
+// Usage
+// var lengthArray = aceCalculateCumulativeLength(editor.getSession());
+// Need to call this only if the document is updated after the last call.
+exports.aceCalculateCumulativeLength = function (session) {
+  var cumulativeLength = [];
+  var cnt = session.getLength();
+  var cuml = 0, nlLength = session.getDocument().getNewLineCharacter().length;
+  cumulativeLength.push(cuml);
+  var text = session.getLines(0, cnt);
+  for (var i = 0; i < cnt; i++) {
+    cuml += text[i].length + nlLength;
+    cumulativeLength.push(cuml);
+  }
+  return cumulativeLength;
+};
+
+// Fast binary search implementation
+// Pass the cumulative length array here.
+// Usage
+// var row = aceFindRow(lengthArray, 0, lengthArray.length, 2512);
+// tries to find 2512th character lies in which row.
+function aceFindRow(cumulativeLength, rows, rowe, pos) {
+  if (rows > rowe) {
+    return null;
+  }
+  if (rows + 1 === rowe) {
+    return rows;
+  }
+
+  var mid = Math.floor((rows + rowe) / 2);
+  
+  if (pos < cumulativeLength[mid]) {
+    return aceFindRow(cumulativeLength, rows, mid, pos);
+  } else if(pos > cumulativeLength[mid]) {
+    return aceFindRow(cumulativeLength, mid, rowe, pos);
+  }
+  return mid;
+}
+
+/**
+ * Selects code in an ace editor.
+ */
+function createSelection (selection, cumulativeLength, start, end) {
+  var range = selection.getRange();
+
+  range.start.row = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
+  range.start.col = start - cumulativeLength[range.start.row];
+  range.end.row = aceFindRow(cumulativeLength, 0, cumulativeLength.length, end);
+  range.end.col = end - cumulativeLength[range.end.row];
+
+  selection.setSelectionRange(range);
+}
+
+exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
+                                      userCodeStartOffset, userCodeLength) {
+  var inUserCode = false;
+  if (interpreter.stateStack[0]) {
+    var node = interpreter.stateStack[0].node;
+    // Adjust start/end by Webapp.userCodeStartOffset since the code running
+    // has been expanded vs. what the user sees in the editor window:
+    var start = node.start - userCodeStartOffset;
+    var end = node.end - userCodeStartOffset;
+
+    inUserCode = (start > 0) && (start < userCodeLength);
+
+    // If we are showing Javascript code in the ace editor, highlight
+    // the code being executed in each step:
+    if (!editor.currentlyUsingBlocks) {
+      // Only show selection if the node being executed is inside the user's
+      // code (not inside code we inserted before or after their code that is
+      // not visible in the editor):
+      var selection = editor.aceEditor.getSelection();
+      if (inUserCode) {
+        createSelection(selection, cumulativeLength, start, end);
+      } else {
+        selection.clearSelection();
+      }
+    }
+  }
+  return inUserCode;
 };
 
 /**
@@ -6501,8 +6625,9 @@ exports.generateCodeAliases = function (codeFunctions, parentObjName) {
     for (var i = 0; i < codeFunctions.length; i++) {
       var cf = codeFunctions[i];
       code += "var " + cf.func +
-          " = function() { var newArgs = [''].concat(arguments); return " +
-          parentObjName + "." + cf.func +
+          " = function() { var newArgs = " +
+          (cf.idArgLast ? "arguments.concat(['']);" : "[''].concat(arguments);") +
+          " return " + parentObjName + "." + cf.func +
           ".apply(" + parentObjName + ", newArgs); };\n";
     }
   }
@@ -7051,58 +7176,6 @@ var drawDiv = function () {
   visualizationColumn.style.width = divWidth + 'px';
 };
 
-// session is an instance of Ace editSession
-// Usage
-// var lengthArray = aceCalculateCumulativeLength(editor.getSession());
-// Need to call this only if the document is updated after the last call.
-function aceCalculateCumulativeLength(session) {
-  var cumulativeLength = [];
-  var cnt = session.getLength();
-  var cuml = 0, nlLength = session.getDocument().getNewLineCharacter().length;
-  cumulativeLength.push(cuml);
-  var text = session.getLines(0, cnt);
-  for (var i = 0; i < cnt; i++) {
-    cuml += text[i].length + nlLength;
-    cumulativeLength.push(cuml);
-  }
-  return cumulativeLength;
-}
-
-// Fast binary search implementation
-// Pass the cumulative length array here.
-// Usage
-// var row = aceFindRow(lengthArray, 0, lengthArray.length, 2512);
-// tries to find 2512th character lies in which row.
-function aceFindRow(cumulativeLength, rows, rowe, pos) {
-  if (rows > rowe) {
-    return null;
-  }
-  if (rows + 1 === rowe) {
-    return rows;
-  }
-
-  var mid = Math.floor((rows + rowe) / 2);
-  
-  if (pos < cumulativeLength[mid]) {
-    return aceFindRow(cumulativeLength, rows, mid, pos);
-  } else if(pos > cumulativeLength[mid]) {
-    return aceFindRow(cumulativeLength, mid, rowe, pos);
-  }
-  return mid;
-}
-
-function createSelection(start, end) {
-  var selection = BlocklyApps.editor.aceEditor.getSelection();
-  var range = selection.getRange();
-
-  range.start.row = aceFindRow(Webapp.cumulativeLength, 0, Webapp.cumulativeLength.length, start);
-  range.start.col = start - Webapp.cumulativeLength[range.start.row];
-  range.end.row = aceFindRow(Webapp.cumulativeLength, 0, Webapp.cumulativeLength.length, end);
-  range.end.col = end - Webapp.cumulativeLength[range.end.row];
-
-  selection.setSelectionRange(range);
-}
-
 function queueOnTick() {
   var stepSpeed = Webapp.scale.stepSpeed;
   if (Webapp.speedSlider) {
@@ -7133,30 +7206,11 @@ Webapp.onTick = function() {
     for (var stepsThisTick = 0;
          stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK && !inUserCode;
          stepsThisTick++) {
-      if (Webapp.interpreter.stateStack[0]) {
-        var node = Webapp.interpreter.stateStack[0].node;
-        // Adjust start/end by Webapp.userCodeStartOffset since the code running
-        // has been expanded vs. what the user sees in the editor window:
-        var start = node.start - Webapp.userCodeStartOffset;
-        var end = node.end - Webapp.userCodeStartOffset;
-
-        inUserCode = (start > 0) && (start < Webapp.userCodeLength);
-
-        // If we are showing Javascript code in the ace editor, highlight
-        // the code being executed in each step:
-        if (!BlocklyApps.editor.currentlyUsingBlocks) {
-          // Only show selection if the node being executed is inside the user's
-          // code (not inside code we inserted before or after their code that is
-          // not visible in the editor):
-          if (inUserCode) {
-            createSelection(start, end);
-          } else {
-            BlocklyApps.editor.aceEditor.getSelection().clearSelection();
-          }
-        }
-      } else {
-        inUserCode = false;
-      }
+      inUserCode = codegen.selectCurrentCode(Webapp.interpreter,
+                                             BlocklyApps.editor,
+                                             Webapp.cumulativeLength,
+                                             Webapp.userCodeStartOffset,
+                                             Webapp.userCodeLength);
       Webapp.interpreter.step();
     }
   } else {
@@ -7451,7 +7505,7 @@ Webapp.execute = function() {
     codeWhenRun += '\nwhile (true) { var obj = getCallback(); ' +
       'if (obj) { obj.fn.apply(null, obj.arguments ? obj.arguments : null); }}';
     var session = BlocklyApps.editor.aceEditor.getSession();
-    Webapp.cumulativeLength = aceCalculateCumulativeLength(session);
+    Webapp.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
   } else {
     // Define any top-level procedures the user may have created
     // (must be after reset(), which resets the Webapp.Globals namespace)
@@ -7476,53 +7530,11 @@ Webapp.execute = function() {
                                           Webapp: api,
                                           Globals: Webapp.Globals } );
 
-        function makeNativeMemberFunction(nativeFunc, parentObj) {
-          return function() {
-            // Call the native function:
-            var retVal = nativeFunc.apply(parentObj, arguments);
-
-            // Now figure out what to do with the return value...
-
-            if (retVal instanceof Function) {
-              // Don't call createPrimitive() for functions
-              return retVal;
-            } else if (retVal instanceof Object) {
-              var newObj = interpreter.createObject(interpreter.OBJECT);
-              // Limited attempt to marshal back complex return values
-              // Special case: only one-level deep, only handling
-              // primitives and arrays of primitives
-              for (var prop in retVal) {
-                var isFuncOrObj = retVal[prop] instanceof Function ||
-                                  retVal[prop] instanceof Object;
-                // replace properties with wrapped properties
-                if (retVal[prop] instanceof Array) {
-                  var newArray = interpreter.createObject(interpreter.ARRAY);
-                  for (var i = 0; i < retVal[prop].length; i++) {
-                    newArray.properties[i] = interpreter.createPrimitive(retVal[prop][i]);
-                  }
-                  newArray.length = retVal[prop].length;
-                  interpreter.setProperty(newObj, prop, newArray);
-                } else if (isFuncOrObj) {
-                  // skipping over these - they could be objects that should
-                  // be converted into interpreter objects. they could be native
-                  // functions that should be converted. Or they could be objects
-                  // that are already interpreter objects, which is what we assume
-                  // for now:
-                  interpreter.setProperty(newObj, prop, retVal[prop]);
-                } else {
-                  // wrap as a primitive if it is not a function or object:
-                  interpreter.setProperty(newObj, prop, interpreter.createPrimitive(retVal[prop]));
-                }
-              }
-              return newObj;
-            } else {
-              return interpreter.createPrimitive(retVal);
-            }
-          };
-        }
 
         var getCallbackObj = interpreter.createObject(interpreter.FUNCTION);
-        var wrapper = makeNativeMemberFunction(nativeGetCallback, null);
+        var wrapper = codegen.makeNativeMemberFunction(interpreter,
+                                                       nativeGetCallback,
+                                                       null);
         interpreter.setProperty(scope,
                                 'getCallback',
                                 interpreter.createNativeFunction(wrapper));
@@ -7976,13 +7988,13 @@ exports.catVariables = function(d){return "Variáveis"};
 
 exports.continue = function(d){return "Continue"};
 
-exports.createHtmlBlock = function(d){return "create html block"};
+exports.createHtmlBlock = function(d){return "criar bloco html"};
 
-exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
+exports.createHtmlBlockTooltip = function(d){return "Cria um bloco HTML no aplicativo."};
 
 exports.finalLevel = function(d){return "Parabéns! Você resolveu o último desafio."};
 
-exports.makeYourOwn = function(d){return "Make Your Own App"};
+exports.makeYourOwn = function(d){return "Crie seu próprio App"};
 
 exports.nextLevel = function(d){return "Parabéns! Você completou o desafio."};
 
@@ -7992,21 +8004,21 @@ exports.numBlocksNeeded = function(d){return "Este desafio pode ser resolvido co
 
 exports.pause = function(d){return "Pause"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
+exports.reinfFeedbackMsg = function(d){return "Você pode pressionar o botão \"Tentar novamente\" para voltar a executar seu aplicativo."};
 
 exports.repeatForever = function(d){return "repita infinitamente"};
 
 exports.repeatDo = function(d){return "faça"};
 
-exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
+exports.repeatForeverTooltip = function(d){return "Executar as ações deste bloco repetidamente enquanto o aplicativo estiver sendo executado."};
 
-exports.shareWebappTwitter = function(d){return "Check out the app I made. I wrote it myself with @codeorg"};
+exports.shareWebappTwitter = function(d){return "Veja o aplicativo que eu fiz. Eu o escrevi sozinho com a @codeorg"};
 
-exports.shareGame = function(d){return "Share your app:"};
+exports.shareGame = function(d){return "Compartilhe seu aplicativo:"};
 
-exports.turnBlack = function(d){return "turn black"};
+exports.turnBlack = function(d){return "ficar preto"};
 
-exports.turnBlackTooltip = function(d){return "Turns the screen black."};
+exports.turnBlackTooltip = function(d){return "Deixa a tela preta."};
 
 exports.yes = function(d){return "Sim"};
 

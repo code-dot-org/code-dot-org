@@ -1,58 +1,55 @@
----
-title: Resources 
-layout: wide
----
 
-## Useful stats on computer science
 
-*For all press and media inquiries, contact <press@code.org>*
+## Nyttige fakta om programmering
 
-### Key Tips
+*Spørsmål fra presse og andre medier kan sendes til <press@code.org>*
 
-  * Reach out to media two weeks before your event via email. Follow up by email and phone if you don't receive an initial response.
-  * Ask a school staff member or volunteer to take photos to share online or send to press.
-  * Write about the Hour of Code on your website’s homepage and in your school newspaper. Post your event details, and pictures of student activities.
-  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 8-14. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
+### Gode råd
 
-### Step-by-step guide:
+  * Ta kontakt med media på epost to uker før arrangementet. Følg opp med epost og telefon om du ikke får svar.
+  * Spør en ansatt ved skolen eller en frivillig om å ta bilder som kan deles på nett og sendes til pressen.
+  * Skriv om Kodetimen på nettsiden din og i skoleavisen. Legg ut detaljer om arrangementet og bilder av elevene i aksjon.
+  * Legg ut oppdateringer om din planer og annonser planlagte arrangement og legg ut bilder 8. Desember. Bruk hashtag **#Kodetimen** så Code.org kan se og promotere dine arrangement.
 
-**1. Plan your event**
+### Steg-for-steg guide:
 
-  * Plan an assembly to kick off the Hour of Code.
-  * Send [a letter](<%= hoc_uri('/resources/#sample-emails') %>) to parents. Ask them to spread the word.
-  * Send [a letter](<%= hoc_uri('/resources/#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
-  * Organize group activities (like a demonstration of an ‘unplugged’ programming activity), or show off student-created and led activities.
-  * Show Code.org’s [Hour of Code video](<%= hoc_uri('/') %>) or one of [these](<%= hoc_uri('/resources#videos') %>) to inspire.
+**1. Planlegg din Kodetime**
 
-**2. Identify specific local reporters that cover education or local events.**
+  * Planlegg en samling for å sparke i gang Kodetimen.
+  * Send [ett brev](<%= hoc_uri('/resources/#sample-emails') %>) til foreldre. Be dem om spre ordet videre.
+  * Send [ett brev](<%= hoc_uri('/resources/#sample-emails') %>) til en lokal ordfører, fylkesordfører, rådmann eller en annen betydningsfull forrestningsperson for å spørre om de kan tale til studentene.
+  * Organiser gruppeaktiviteter som for eksempel en en kode demo eller vis fram noe en student har gjort. 
+  * Vis et [kodetime klipp](<%= hoc_uri('/') %>) fra Code.org eller ett av [disse](<%= hoc_uri('/resources#videos') %>) klippene som inspirasjon.
 
-Think a local newspaper, TV station, radio station or blog.
+**2. Finn journalister i nærområdet som skriver om skole og lokale aktiviteter.**
 
-Look online to find reporter contact information. If you can't find it, call the publication to ask, or email a general tips@PUBLICATIONNAME.com email address and ask for your message to be directed to the correct reporter.
+Tenk på lokalavisen, lokal TV, radio eller blogger.
 
-**3. Contact local media**
+Søk etter kontaktinformasjon til journalister på nett. Hvis du ikke finner det kan du ringe direkte eller sende en mail til tips@NAVNETPÅAVISEN.no og be om at din mail blir videresendt til riktig avdeling\person.
 
-The best way to reach out is by email. It should be short and communicate: why should other people care about this event? Include contact information (including a cellphone number) for who will be on site at the event. **See a [sample pitch to media](<%= hoc_uri('/resources#sample-emails') %>):**
+**3. Ta kontakt med lokale medier**
 
-**4. Prepare to field questions about your school event. Here are some examples:**
+Den beste måten å nå ut på et gjennom epost. Hold deg kortfattet og prøv å formidle hvorfor folk skulle bry seg om akkurat dette arrangementet. Få med kontaktinformasjon (inkludert mobilnummer) til den som vil være ansvarlig på arrangementet. **Her er et [eksempel](<%= hoc_uri('/resources#sample-emails') %>):**
 
-*Why is your school doing an Hour of Code?*
+**4. Vær forberedt på å svare på spørsmål om arrangementet på skolen din. Her er noen eksempler:**
 
-While all of us know that it’s important for students to learn how to navigate today’s tech-saturated world, many teachers aren’t experienced in computer science and don’t know where to start. This event is a chance for all of us to see what computer science is about.
+*Hvorfor er skolen din med på Kodetimen?*
 
-We hope it’ll spark interest in students to keep learning. Research also shows that kids pick up programming concepts before they know how to read and write. In fact, their brains are more receptive to computer languages at a young age, just like foreign languages.
+Alle vet at det er viktig for elevene å lære hvordan de skal orientere seg i en verden som er full av teknologi, men mange lærere mangler erfaring med den samme teknologien og vet ikke helt hvor de skal begynne. Denne arrangementet er en mulighet for oss alle til å lære hva datavitenskap er.
 
-*Why is this important?*
+Vi håper det vil vekke en interesse hos elevene som motiverer til mer læring. Forskning viser også at barn kan plukke opp konsepter fra programmering før de har lært å lese og skrive. Faktis er hjernen mer mottakelig for programmeringsspråk i en ung alder, akkurat som fremmedspråk.
 
-In China, every students takes computer science to graduate high school. In the U.S., 90 percent of schools don’t even teach it. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will allow give them the confidence and know-how to succeed.
+*Hvorfor er dette viktig?*
 
-**More details and a quote you can use in materials**
+I Kina tar alle elevene datavitenskap som fag før de går ut av videregående skole. 90 prosent av skolene i USA underviser ikke i det engang. Det er tide å nå igjen det 21. århundret. Vi vet at uansett hva studentene velger å gjøre når de vokser opp, om de går inn i medisin, forretning, politikk eller kunst, det å vite hvordan man bygger teknologi vil gi dem selvtilliten og kunnskapen til å lykkes.
 
-"The Hour of Code is designed to demystify code and show that computer science is not rocket-science, anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "In one week last year, 15 million students tried an Hour of Code. Now we're aiming for 100 million worldwide to prove that the demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
+**Flere detaljer og et sitat som du kan bruke i materiellet**
 
-**About Code.org**
+"Kodetimen er beregnet til å avmystifisere og vise at datavitenskap ikke er rakettvitenskap. Alle kan lære grunnleggende programmering," sier Hadi Partovi, grunnlegger og adm. dir i Code.org. "På én uke i fjor prøvde 15 millioner elever en Kodetime. I år har 100 millioner på verdensbasis som mål for å bevise at etterspørselen etter relevante IT-kompetanse for det 21. århundre krysser alle landegrenser og er uten begrensninger."
 
-Code.org® is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign — which has introduced millions of students to computer science — partnered with more than 30 public school districts nationwide, and launched Code Studio, an open-source, online learning platform for all ages. For more information, please visit: <% if @country == 'uk' %> [www.uk.code.org](http://uk.code.org). <% else %> [www.code.org](http://code.org). <% end %>
+**Om Code.org**
+
+Code.org® er en almennyttig stiftelse med formål om å utvide deltakelsen i datavitenskap og øke deltakelse av kvinner og andre underrepresenterte grupper. Visjonen er at alle elever i alle skoler skal få muligheten til å lære programmering. Etter lanseringen i 2013 organisert Code.org kampanjen Kodetimen, som introduserte millioner av elever for datavitenskap. Vi gikk i partnerskap med mer enn 30 offentlige skoledistrikter over hele USA og lanserte Kode Studio, som er en åpen kildekode læringsplattform på web for alle aldre. For more information, please visit: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
-Find more resources and sample emails [here](<%= hoc_uri('/resources') %>).
+Du finner flere ressurser og eksempler på meldinger [ her](<%= hoc_uri('/resources') %>).

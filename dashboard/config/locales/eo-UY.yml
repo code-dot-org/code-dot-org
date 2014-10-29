@@ -69,16 +69,7 @@
     no_signup_message: You can <a target="_blank" href="http://learn.code.org">browse
       the various stages and puzzles</a>, but you will need to sign up to save your
       progress.
-    prizes_message: U.S. students who earn all %{num_trophies} concept trophies can
-      select a variety of prizes including free Dropbox space, Skype credits, and
-      downloadable games from Electronic Arts.
     teacher_educator_guide: See educator guide
-    teacher_prize_header: Win $1,000 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
-      rewards
-    teacher_prize_message: 'In partnership with <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>,
-      Code.org will offer up to $1,000 in classroom funding to U.S. public school
-      teachers who lead at least 15 students through this course. <a href="http://code.org/educate/20hr">See
-      educator guide for more info.</a> '
     teacher_pitch: Teach the K-8 Intro to Computer Science in your classroom
     teacher_title: Teacher sign up
     student_pitch: 'Beyond 1 hour: try our K-8 Intro to Computer Science'
@@ -89,6 +80,7 @@
     gender: Gender (optional)
     birthday: Birthday (optional)
     age: Age (optional)
+    user_type: Are you a student or teacher?
     submit: Sign up
     teacher: Are you a teacher?
     valid_username: Available!
@@ -380,8 +372,6 @@
     student_stats: You've earned %{trophy_count} out of %{trophy_max} "Concept Mastery"
       trophies.
     student_left_off: 'Where you left off:'
-    student_finished_prize: You've completed all tutorials, claim your %{prize_link}
-      and pick another class %{online_link} or at a %{local_school_link}
     student_finished: You've completed all tutorials, pick another class %{online_link}
       or at a %{local_school_link}
     local_school: local school
@@ -408,6 +398,9 @@
     male: Male
     female: Female
     none: Prefer not to answer
+  user_type:
+    student: Studento
+    teacher: Teacher
   footer:
     help_from_html: Engineers from <a href="http://www.google.com">Google</a>, <a
       href="http://www.microsoft.com">Microsoft</a>, <a href="http://www.facebook.com">Facebook</a>,
@@ -423,13 +416,6 @@
     tos: Terms of service
     privacy: Privacy Policy
     secure: Secure Version
-  prize_mail:
-    prize_earned:
-      subject: Redeem your prize at Code.org!
-    teacher_prize_earned:
-      subject: Redeem your prize at Code.org!
-    teacher_bonus_prize_earned:
-      subject: Redeem your bonus prize at Code.org!
   reference_area:
     title: Need help?
     subtitle: See these videos and hints

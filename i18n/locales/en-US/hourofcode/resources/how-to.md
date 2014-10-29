@@ -15,7 +15,7 @@ crwdns20732:0crwdne20732:0
   * crwdns19913:0crwdne19913:0
   * crwdns19914:0crwdne19914:0
 
-[![crwdns19915:0crwdne19915:0](http://code.org/images/tutorials.png)](http://code.org/learn)
+[![](http://<%= codeorg_url() %>/images/tutorials.png)](http://<%=codeorg_url() %>/learn)
 
 ## crwdns19916:0crwdne19916:0
 
@@ -32,39 +32,43 @@ crwdns19917:0crwdne19917:0
 
 ## crwdns19926:0crwdne19926:0
 
-crwdns20238:0crwdne20238:0 crwdns19928:0crwdne19928:0 crwdns19929:0crwdne19929:0
+crwdns21424:0crwdne21424:0
+
+  * crwdns21425:0crwdne21425:0
+  * crwdns21426:0crwdne21426:0 <% end %>
+  * [crwdns21427:0crwdne21427:0](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
 **crwdns19930:0crwdne19930:0**
 
 crwdns19931:0crwdne19931:0
 
-  * crwdns19932:0crwdne19932:0
-  * crwdns19933:0crwdne19933:0
-  * crwdns19934:0crwdne19934:0 crwdns19935:0crwdne19935:0
-  * crwdns20239:0crwdne20239:0. 
+  * crwdns21428:0crwdne21428:0
+  * crwdns21429:0crwdne21429:0
+  * crwdns21430:0crwdne21430:0 crwdns21431:0crwdne21431:0
+  * crwdns21432:0crwdne21432:0. 
 
 ## crwdns19937:0crwdne19937:0
 
 **crwdns19938:0crwdne19938:0**
 
-  * crwdns19939:0crwdne19939:0 crwdns20240:0crwdne20240:0 crwdns19941:0crwdne19941:0) 
-  * crwdns19942:0crwdne19942:0
+  * crwdns21433:0crwdne21433:0 crwdns21434:0crwdne21434:0 crwdns21435:0crwdne21435:0
+  * crwdns21436:0crwdne21436:0
 
 **crwdns19943:0crwdne19943:0**
 
-  * crwdns19944:0crwdne19944:0
-  * crwdns19945:0crwdne19945:0
-  * crwdns19946:0crwdne19946:0 crwdns19947:0crwdne19947:0 crwdns19948:0crwdne19948:0
+  * crwdns21437:0crwdne21437:0
+  * crwdns21438:0crwdne21438:0
+  * crwdns21439:0crwdne21439:0 crwdns21440:0crwdne21440:0 crwdns21441:0crwdne21441:0
 
 **crwdns19949:0crwdne19949:0**
 
-  * crwdns20241:0crwdne20241:0 crwdns20242:0crwdne20242:0 <% end %> 
-  * crwdns19951:0crwdne19951:0
+  * crwdns21442:0crwdne21442:0
+  * crwdns21443:0crwdne21443:0
 
 **crwdns19952:0crwdne19952:0**
 
-crwdns19953:0crwdne19953:0 crwdns19954:0crwdne19954:0 crwdns20243:0crwdne20243:0
+crwdns19953:0crwdne19953:0 crwdns19954:0crwdne19954:0 crwdns21444:0crwdne21444:0
 
 **crwdns19956:0crwdne19956:0**
 
-crwdns19957:0crwdne19957:0 crwdns20244:0crwdne20244:0 crwdns20245:0crwdne20245:0 crwdns20246:0crwdne20246:0 crwdns20247:0crwdne20247:0 <% end %>
+crwdns19957:0crwdne19957:0 crwdns20244:0crwdne20244:0 crwdns20245:0crwdne20245:0 crwdns21445:0crwdne21445:0 crwdns21446:0crwdne21446:0 <% end %>

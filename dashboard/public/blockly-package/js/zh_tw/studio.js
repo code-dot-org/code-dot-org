@@ -5526,16 +5526,57 @@ exports.workspaceCode = function(blockly) {
 };
 
 /**
+ * Generate a native function wrapper for use with the JS interpreter.
+ */
+exports.makeNativeMemberFunction = function (interpreter, nativeFunc, parentObj) {
+  return function() {
+    // Call the native function:
+    var retVal = nativeFunc.apply(parentObj, arguments);
+
+    // Now figure out what to do with the return value...
+
+    if (retVal instanceof Function) {
+      // Don't call createPrimitive() for functions
+      return retVal;
+    } else if (retVal instanceof Object) {
+      var newObj = interpreter.createObject(interpreter.OBJECT);
+      // Limited attempt to marshal back complex return values
+      // Special case: only one-level deep, only handling
+      // primitives and arrays of primitives
+      for (var prop in retVal) {
+        var isFuncOrObj = retVal[prop] instanceof Function ||
+                          retVal[prop] instanceof Object;
+        // replace properties with wrapped properties
+        if (retVal[prop] instanceof Array) {
+          var newArray = interpreter.createObject(interpreter.ARRAY);
+          for (var i = 0; i < retVal[prop].length; i++) {
+            newArray.properties[i] = interpreter.createPrimitive(retVal[prop][i]);
+          }
+          newArray.length = retVal[prop].length;
+          interpreter.setProperty(newObj, prop, newArray);
+        } else if (isFuncOrObj) {
+          // skipping over these - they could be objects that should
+          // be converted into interpreter objects. they could be native
+          // functions that should be converted. Or they could be objects
+          // that are already interpreter objects, which is what we assume
+          // for now:
+          interpreter.setProperty(newObj, prop, retVal[prop]);
+        } else {
+          // wrap as a primitive if it is not a function or object:
+          interpreter.setProperty(newObj, prop, interpreter.createPrimitive(retVal[prop]));
+        }
+      }
+      return newObj;
+    } else {
+      return interpreter.createPrimitive(retVal);
+    }
+  };
+};
+
+/**
  * Initialize a JS interpreter.
  */
 exports.initJSInterpreter = function (interpreter, scope, options) {
-  // helper function used below..
-  function makeNativeMemberFunction(nativeFunc, parentObj) {
-    return function() {
-      return interpreter.createPrimitive(
-                            nativeFunc.apply(parentObj, arguments));
-    };
-  }
   for (var optsObj in options) {
     var func, wrapper;
     // The options object contains objects that will be referenced
@@ -5551,13 +5592,96 @@ exports.initJSInterpreter = function (interpreter, scope, options) {
       if (func instanceof Function) {
         // Populate each of the global objects with native functions
         // NOTE: other properties are not currently passed to the interpreter
-        wrapper = makeNativeMemberFunction(func, options[optsObj]);
+        wrapper = exports.makeNativeMemberFunction(interpreter, func, options[optsObj]);
         interpreter.setProperty(obj,
                                 prop,
                                 interpreter.createNativeFunction(wrapper));
       }
     }
   }
+};
+
+// session is an instance of Ace editSession
+// Usage
+// var lengthArray = aceCalculateCumulativeLength(editor.getSession());
+// Need to call this only if the document is updated after the last call.
+exports.aceCalculateCumulativeLength = function (session) {
+  var cumulativeLength = [];
+  var cnt = session.getLength();
+  var cuml = 0, nlLength = session.getDocument().getNewLineCharacter().length;
+  cumulativeLength.push(cuml);
+  var text = session.getLines(0, cnt);
+  for (var i = 0; i < cnt; i++) {
+    cuml += text[i].length + nlLength;
+    cumulativeLength.push(cuml);
+  }
+  return cumulativeLength;
+};
+
+// Fast binary search implementation
+// Pass the cumulative length array here.
+// Usage
+// var row = aceFindRow(lengthArray, 0, lengthArray.length, 2512);
+// tries to find 2512th character lies in which row.
+function aceFindRow(cumulativeLength, rows, rowe, pos) {
+  if (rows > rowe) {
+    return null;
+  }
+  if (rows + 1 === rowe) {
+    return rows;
+  }
+
+  var mid = Math.floor((rows + rowe) / 2);
+  
+  if (pos < cumulativeLength[mid]) {
+    return aceFindRow(cumulativeLength, rows, mid, pos);
+  } else if(pos > cumulativeLength[mid]) {
+    return aceFindRow(cumulativeLength, mid, rowe, pos);
+  }
+  return mid;
+}
+
+/**
+ * Selects code in an ace editor.
+ */
+function createSelection (selection, cumulativeLength, start, end) {
+  var range = selection.getRange();
+
+  range.start.row = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
+  range.start.col = start - cumulativeLength[range.start.row];
+  range.end.row = aceFindRow(cumulativeLength, 0, cumulativeLength.length, end);
+  range.end.col = end - cumulativeLength[range.end.row];
+
+  selection.setSelectionRange(range);
+}
+
+exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
+                                      userCodeStartOffset, userCodeLength) {
+  var inUserCode = false;
+  if (interpreter.stateStack[0]) {
+    var node = interpreter.stateStack[0].node;
+    // Adjust start/end by Webapp.userCodeStartOffset since the code running
+    // has been expanded vs. what the user sees in the editor window:
+    var start = node.start - userCodeStartOffset;
+    var end = node.end - userCodeStartOffset;
+
+    inUserCode = (start > 0) && (start < userCodeLength);
+
+    // If we are showing Javascript code in the ace editor, highlight
+    // the code being executed in each step:
+    if (!editor.currentlyUsingBlocks) {
+      // Only show selection if the node being executed is inside the user's
+      // code (not inside code we inserted before or after their code that is
+      // not visible in the editor):
+      var selection = editor.aceEditor.getSelection();
+      if (inUserCode) {
+        createSelection(selection, cumulativeLength, start, end);
+      } else {
+        selection.clearSelection();
+      }
+    }
+  }
+  return inUserCode;
 };
 
 /**
@@ -18550,8 +18674,9 @@ exports.generateCodeAliases = function (codeFunctions, parentObjName) {
     for (var i = 0; i < codeFunctions.length; i++) {
       var cf = codeFunctions[i];
       code += "var " + cf.func +
-          " = function() { var newArgs = [''].concat(arguments); return " +
-          parentObjName + "." + cf.func +
+          " = function() { var newArgs = " +
+          (cf.idArgLast ? "arguments.concat(['']);" : "[''].concat(arguments);") +
+          " return " + parentObjName + "." + cf.func +
           ".apply(" + parentObjName + ", newArgs); };\n";
     }
   }
@@ -18755,9 +18880,9 @@ exports.end = function(d){return "結束"};
 
 exports.emptyBlocksErrorMsg = function(d){return "\"重複\"和\"如果\"程式積木需要包含其它積木在裏面才能正常運作, 請檢查裏面是否有安排適當的程式積木."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "The function block needs to have other blocks inside it to work."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "\"函式\"積木裡面需要放其他程式積木才能運作"};
 
-exports.extraTopBlocks = function(d){return "你有一些程式積木還沒有加到事件積木中。"};
+exports.extraTopBlocks = function(d){return "你有一些程式積木沒連接上. 你是要把它們接在\"當按下執行時\"的積木後面嗎?"};
 
 exports.finalStage = function(d){return "恭喜你 ！你已完成最後關卡的挑戰。"};
 
@@ -18765,7 +18890,7 @@ exports.finalStageTrophies = function(d){return "恭喜! 你已完成最後關�
 
 exports.finish = function(d){return "完成 "};
 
-exports.generatedCodeInfo = function(d){return "甚至頂尖大學也同樣以\"程式積木\"來進行程式教學。(例如 :  "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+")。在程式積木的底層，所有組裝完成的程式積木功能，也可以用JavaScript 語法來顯示。"};
+exports.generatedCodeInfo = function(d){return "就連頂尖大學也使用\"程式積木\"來進行程式教學。(例如 :  "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+")。但是藏在底下的是，你所組裝的每個程式積木都可以用JavaScript 語法（世界上使用最廣的程式語言之一）來表示。"};
 
 exports.hashError = function(d){return "對不起，'%1' 無法對應任何已儲存的程式。"};
 
@@ -18789,7 +18914,7 @@ exports.nextLevelTrophies = function(d){return "恭喜!你已經完成第"+v(d,"
 
 exports.nextStage = function(d){return " 恭喜你！你已經完成 "+v(d,"stageName")+"。"};
 
-exports.nextStageTrophies = function(d){return "恭喜您!你已經完成第"+v(d,"stageNumber")+"階段，並贏得"+p(d,"numTrophies",0,"zh",{"one":"1個獎盃","other":n(d,"numTrophies")+" 獎盃"})+"."};
+exports.nextStageTrophies = function(d){return "恭喜您!你已經完成\""+v(d,"stageName")+"\"階段，並贏得"+p(d,"numTrophies",0,"zh",{"one":"1個獎盃","other":n(d,"numTrophies")+"個獎盃"})+"."};
 
 exports.numBlocksNeeded = function(d){return "恭喜！你已經完成第 "+v(d,"puzzleNumber")+" 關。 (但是，你可以只使用 "+p(d,"numBlocks",0,"zh",{"one":"一個程式積木","other":n(d,"numBlocks")+" 程式積木"})+".來完成挑戰哦！)"};
 
@@ -18827,11 +18952,11 @@ exports.toolboxHeader = function(d){return "程式積木"};
 
 exports.openWorkspace = function(d){return "它如何運作的"};
 
-exports.totalNumLinesOfCodeWritten = function(d){return "到目前為止共撰寫了："+p(d,"numLines",0,"zh",{"one":"1 line","other":n(d,"numLines")+" lines"})+" 行的程式碼。"};
+exports.totalNumLinesOfCodeWritten = function(d){return "到目前為止共撰寫了："+p(d,"numLines",0,"zh",{"one":"1 行","other":n(d,"numLines")+" 行"})+" 的程式碼。"};
 
 exports.tryAgain = function(d){return "再試一次"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "查看提示"};
 
 exports.backToPreviousLevel = function(d){return "返回上一階段"};
 
@@ -18839,7 +18964,7 @@ exports.saveToGallery = function(d){return "保存到您的收藏簿。"};
 
 exports.savedToGallery = function(d){return "已經存放到您的收藏簿了！"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "抱歉, 我們無法分享這個程式"};
 
 exports.typeCode = function(d){return "在說明下方輸入您的 JavaScript 程式碼"};
 
@@ -18861,15 +18986,15 @@ exports.watchVideo = function(d){return "觀看影片"};
 
 exports.when = function(d){return "當"};
 
-exports.whenRun = function(d){return "when run"};
+exports.whenRun = function(d){return "當按下\"執行\"時"};
 
-exports.tryHOC = function(d){return "試試 Hour of Code (一時編程網)"};
+exports.tryHOC = function(d){return "試試一小時的程式設計課程"};
 
 exports.signup = function(d){return "報名參加簡介課程"};
 
 exports.hintHeader = function(d){return "提示："};
 
-exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+exports.genericFeedback = function(d){return "看看你的成果如何, 並試著修正你的程式"};
 
 
 },{"messageformat":58}],46:[function(require,module,exports){
@@ -19096,19 +19221,19 @@ exports.setBackgroundNight = function(d){return "設置夜晚背景"};
 
 exports.setBackgroundUnderwater = function(d){return "設置水下背景"};
 
-exports.setBackgroundCity = function(d){return "set city background"};
+exports.setBackgroundCity = function(d){return "設置都市背景"};
 
-exports.setBackgroundDesert = function(d){return "set desert background"};
+exports.setBackgroundDesert = function(d){return "設置沙漠背景"};
 
-exports.setBackgroundRainbow = function(d){return "set rainbow background"};
+exports.setBackgroundRainbow = function(d){return "設置彩虹背景"};
 
-exports.setBackgroundSoccer = function(d){return "set soccer background"};
+exports.setBackgroundSoccer = function(d){return "設置足球背景"};
 
-exports.setBackgroundSpace = function(d){return "set space background"};
+exports.setBackgroundSpace = function(d){return "設置太空背景"};
 
-exports.setBackgroundTennis = function(d){return "set tennis background"};
+exports.setBackgroundTennis = function(d){return "設置網球背景"};
 
-exports.setBackgroundWinter = function(d){return "set winter background"};
+exports.setBackgroundWinter = function(d){return "設置冬季背景"};
 
 exports.setBackgroundTooltip = function(d){return "設置背景圖像"};
 
@@ -19252,7 +19377,7 @@ exports.soundGoal1 = function(d){return "goal 1"};
 
 exports.soundGoal2 = function(d){return "goal 2"};
 
-exports.soundHit = function(d){return "hit"};
+exports.soundHit = function(d){return "敲擊聲"};
 
 exports.soundLosePoint = function(d){return "lose point"};
 
@@ -19260,7 +19385,7 @@ exports.soundLosePoint2 = function(d){return "lose point 2"};
 
 exports.soundRetro = function(d){return "retro"};
 
-exports.soundRubber = function(d){return "rubber"};
+exports.soundRubber = function(d){return "橡皮聲"};
 
 exports.soundSlap = function(d){return "slap"};
 

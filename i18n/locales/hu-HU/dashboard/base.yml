@@ -65,10 +65,7 @@ hu:
     overview_student: 'Sign up for an account to track your progress. Your email is primarily used to allow you to log in and for password recovery. For more information, see our <a href="http://code.org/privacy">Privacy Policy</a>.'
     overview_teacher: "Teach computer science in your classroom by signing up for an account.<p/> You'll be able to add your students and track their progress."
     no_signup_message: '<a target="_blank" href="http://learn.code.org">Böngészhetsz a különböző szintek és feladatok között</a>, de regisztrálnod kell, hogy elmenthesd, hogy hol tartassz.'
-    prizes_message: 'Azok az U.S. diákok, akik megszereztek minden %{num_trophies} trófeát választhatnak számos jutalom közül, mint pl.  Dropbox tárhely, Skype használat és letölthető Electronic Arts and Valve játékok.'
     teacher_educator_guide: Lásd a tanító segítségét
-    teacher_prize_header: 'Nyerj 1000 $-os díjat a <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> (2014 június 15-től, amíg a készlet tart)'
-    teacher_prize_message: 'In partnership with <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>, Code.org will offer up to $1,000 in classroom funding to U.S. public school teachers who lead at least 15 students through the K-8 Intro to Computer Science course (through June 15, 2014, while supplies last).  <a href="http://code.org/educate/20hr">See educator guide</a>.  (Limit: $1,000 per teacher.  <a target="_blank" href="http://help.donorschoose.org/app/answers/detail/a_id/454/kw/code.org">See FAQ for more limits</a>.)'
     teacher_pitch: Tanároknak. Feliratkozás a code.org-ra
     teacher_title: Tanár regisztrálás
     student_pitch: Diákoknak. Feliratkozás a code.org.ra
@@ -79,6 +76,7 @@ hu:
     gender: Nem (nem kötelező)
     birthday: Születésnap (nem kötelező)
     age: Kor
+    user_type: Are you a student or teacher?
     submit: Regisztrálás
     teacher: Ön tanár?
     valid_username: Elérhető!
@@ -185,7 +183,7 @@ hu:
       not_earned_title: Finish the tutorial, earn rewards (U.S. students only)
       not_earned: 'Ismerd meg a számítógép tudomány fogalmait, gyűjtsd össze a trófeákat % {num_trophies}, és nyerj értékes díjakat. Választhatsz 10GB szabad Dropbox tárhely, 10 $ Skype kredit, és szabad játék letöltés között. Megjegyzés: az ajánlat csak amerikai diákoknak szól , és csak a szolgáltató működéséig él.'
       teacher:
-        earned: '15 vagy több tanuló is összegyűjtötte mind a(z) %{num_trophies} trófeát. Nyertél egy tanár díjat! (csak amerikai tanárok)'
+        earned: '15 vagy több diák is összegyűjtötte mind a(z) %{num_trophies} trófeát. Nyertél egy tanár díjat! (csak amerikai tanárok)'
         not_earned_title: 'Teach the class, earn up to $1,000 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers only)'
         not_earned: 'Mint az első alkalommal jutalmazott tanára a számítógép tudományoknak, Ön kaphat akár $1,000 -t is a <a href="http://DonorsChoose.org"> DonorsChoose.org</a>, amiért vezeti az általános iskolás bevezető kurzust egy osztályban. Ahhoz, hogy, ezt elérd, sikeresen végig kell vezetned egy legalább 15 fős osztályt a teljes bevezető kurzuson, ahol mind a 15 (vagy több) diák végigkövette a teljes kurzust és elnyert  minden %{num_trophies}-trófeát. Ha 7 vagy több diák, aki elnyerte az összes trófeát lány, akkor jutalmad $1,000 <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a>. Ellenkező esetben a jutalom $750 <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> .  <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> A díjakra csak állami iskolákban tanító,  U.S. tanárok Jogosultak.'
         bonus:
@@ -207,7 +205,7 @@ hu:
     access_denied: 'Nincs jogosultsága a %{model}-hez.'
   nav:
     header:
-      finished_hoc: Befejeztem a Kód Óráját
+      finished_hoc: Befejeztem a Kódolás Óráját
       sign_in_to_save: Jelentkezzen be a mentéshez
       free_play:
         playlab: Make an App
@@ -260,7 +258,7 @@ hu:
       dashboard: Go to Teacher Dashboard
       add: Diákok hozzáadása
       remove: diák eltávolítása
-      confirm_remove: Biztos el akarod távolítani ezt a tanulót?
+      confirm_remove: Biztos el akarod távolítani ezt a diákot?
       help_reassign: To divide your class into multiple sections, select students to assign to a new section.
       help_register: Instead of making you spend a lot of time individually importing student data, you can set up your class quickly by asking them to signup. Your students will need to choose usernames and passwords, but they WILL NOT be required to provide an email address. If a student forgets their password, you will be able to reset it for them.
       register: Ask your students to register themselves
@@ -273,7 +271,7 @@ hu:
       add: Add section
       manage: Vezetési szakasz
       section: Section
-      students: Tanuló
+      students: Diák
       section_code: Section Code
       add_section_code: Add Students Section-Code
       secret: Secret type
@@ -287,7 +285,7 @@ hu:
     rollup: Fejlődés tájékoztató
     activity: Mostanában osztály aktivitás
     user_not_found: A tanár, vagy a diák nem ismert
-    cant_remove_student_no_email: '%{student_name} nem törölhető a tanulói sorából, mert, mert %{student_name}-nek nincs regisztrált e-mail címe'
+    cant_remove_student_no_email: '%{student_name} nem törölhető a listáról, mert, mert %{student_name} nem regisztrált e-mail címet'
     cant_remove_teacher_no_email: '%{teacher_name} nem törolhető, mint az Ön tanára, mert Ön még nem regisztrált  e-mail címet'
     student_teacher_disassociated: '%{teacher_name}, mint a %{student_name} tanáraként el lett bocsátva'
   user:
@@ -324,7 +322,6 @@ hu:
     student_progress: Fejlődésed
     student_stats: 'Már megszereztél %{trophy_count} trófeát a %{trophy_max} "Concept Mastery" trófeákból.'
     student_left_off: 'Ahol abbahagyta:'
-    student_finished_prize: 'Befejezted az összes oktatóanyagot, azt állítják, a {prize_link} %, és válasszon egy másik osztály % {online_link} vagy a {local_school_link} %'
     student_finished: 'Miután befejezte az összes oktatóanyag, válasszon egy másik osztály % {online_link} vagy a {local_school_link} %'
     local_school: helyi iskola
     online: online
@@ -347,6 +344,9 @@ hu:
     male: Férfi
     female: Nő
     none: Inkább nem válaszolok
+  user_type:
+    student: Diák
+    teacher: Teacher
   footer:
     help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped create this tutorial.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. All Rights Reserved.'
@@ -357,15 +357,8 @@ hu:
     tos: Terms
     privacy: Adatvédelmi Elvek
     secure: Secure Version
-  prize_mail:
-    prize_earned:
-      subject: Redeem your prize at Code.org!
-    teacher_prize_earned:
-      subject: Congratulations from Code.org!
-    teacher_bonus_prize_earned:
-      subject: Redeem your bonus prize at Code.org!
   reference_area:
-    title: Szüksége van segítségre?
+    title: Segítségre van szükséged?
     subtitle: Nézd meg ezeket a videókat és tanácsokat
     teacher: Megoldás megtekintése
     auth_error: Nem vagy jogosult a megoldás megtekintésére.

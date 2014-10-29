@@ -70,16 +70,7 @@
     no_signup_message: <a target="_blank" href="http://learn.code.org">en eszenatoki
       eta puzleak bilatu ditzakezu</a>, baina izen eman beharko duzu zure aurrerapenak
       gordetzeko.
-    prizes_message: "%{num_trophies} kontzeptu garaikur guztiak irabazten dituzten
-      ikasle estatubatuarrek sari ezberdinak aukeratu ditzakete, hala nola, Dropbox
-      tokia, Skype kredituak, eta Electronic Artsen deskargatzeko jokoak."
     teacher_educator_guide: Ikusi hezitzailearen gida
-    teacher_prize_header: Irabazi 1000$  <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>en
-      (2014ko Ekainaren 15ean zehar, sariak agortu arte)
-    teacher_prize_message: 'In partnership with <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>,
-      Code.org will offer up to $1,000 in classroom funding to U.S. public school
-      teachers who lead at least 15 students through this course. <a href="http://code.org/educate/20hr">See
-      educator guide for more info.</a> '
     teacher_pitch: Teach the K-8 Intro to Computer Science in your classroom
     teacher_title: Teacher sign up
     student_pitch: 'Beyond 1 hour: try our K-8 Intro to Computer Science'
@@ -90,6 +81,7 @@
     gender: Gender (optional)
     birthday: Birthday (optional)
     age: Age (optional)
+    user_type: Are you a student or teacher?
     submit: Sign up
     teacher: Are you a teacher?
     valid_username: Available!
@@ -381,8 +373,6 @@
     student_stats: You've earned %{trophy_count} out of %{trophy_max} "Concept Mastery"
       trophies.
     student_left_off: 'Where you left off:'
-    student_finished_prize: You've completed all tutorials, claim your %{prize_link}
-      and pick another class %{online_link} or at a %{local_school_link}
     student_finished: You've completed all tutorials, pick another class %{online_link}
       or at a %{local_school_link}
     local_school: local school
@@ -409,6 +399,9 @@
     male: Male
     female: Female
     none: Prefer not to answer
+  user_type:
+    student: Ikaslea
+    teacher: Teacher
   footer:
     help_from_html: Engineers from <a href="http://www.google.com">Google</a>, <a
       href="http://www.microsoft.com">Microsoft</a>, <a href="http://www.facebook.com">Facebook</a>,
@@ -424,13 +417,6 @@
     tos: Terms of service
     privacy: Privacy Policy
     secure: Secure Version
-  prize_mail:
-    prize_earned:
-      subject: Redeem your prize at Code.org!
-    teacher_prize_earned:
-      subject: Redeem your prize at Code.org!
-    teacher_bonus_prize_earned:
-      subject: Redeem your bonus prize at Code.org!
   reference_area:
     title: Need help?
     subtitle: See these videos and hints

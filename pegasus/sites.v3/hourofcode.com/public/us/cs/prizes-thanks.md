@@ -1,8 +1,5 @@
----
-title: Děkuji
-layout: wide
----
+
 
 # Děkuji
 
-Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology).
+Celá škola je nyní zapsaná na výhru sady notebooků pro třídu (nebo 10 000 dolarů pro jinou technologii).
