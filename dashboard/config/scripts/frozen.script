@@ -1,9 +1,24 @@
 title 'Frozen'
-description_short "Frozen short description."
-description "Frozen long description"
+description_short "Join the Royal Sisters of Arendelle, Anna and Elsa, as they explore the magic and beauty of ice. You will write code to create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
+description "Join the Royal Sisters of Arendelle, Anna and Elsa, as they explore the magic and beauty of ice. You will write code to create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
 hidden 'false'
 
-stage 'Artist: Sequence'
-skin 'frozen'
-level 'K-1 Artist1 1'
-level 'K-1 Artist1 2'
+stage 'Artist'
+level 'frozen line'
+level 'frozen perpendicular'
+level 'frozen square iterative'
+level 'frozen square loop'
+level 'frozen square snowflake'
+level 'frozen cross'
+level 'frozen cross rotate'
+level 'frozen snowflake base'
+level 'frozen snowflake branch'
+level 'frozen snowflake full'
+level 'frozen diamond'
+level 'frozen diamond snowflake'
+level 'frozen circle'
+level 'frozen circle function'
+level 'frozen circle function with parameter'
+level 'frozen snowflower'
+level 'frozen snowflower pattern'
+level 'frozen freeplay'
