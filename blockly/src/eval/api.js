@@ -1,7 +1,8 @@
 var EvalString = require('./evalString');
 var EvalCircle = require('./evalCircle');
+var EvalMulti = require('./evalMulti');
 
-// todo (brent) - make use of blockId
+// todo (brent) - make use of blockId?
 
 exports.register = function (object) {
 
@@ -25,4 +26,8 @@ exports.placeImage = function (image, x, y, blockId) {
   image.x_ = x;
   image.y_ = y;
   return exports.register(image);
+};
+
+exports.overlay = function (image1, image2) {
+  return exports.register(new EvalMulti(image1, image2));
 };

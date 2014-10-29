@@ -101,13 +101,16 @@ Blockly.BlockSvgFunctional.prototype.renderDrawRightInlineFunctional_ =
   renderInfo.inline.push('H', inputTopLeft.x);
   renderInfo.inline.push('z');
 
-
-  // var colour = goog.color.hexToRgb();
   this.inputMarkers_[input.name].setAttribute('x', inputTopLeft.x + 5);
   this.inputMarkers_[input.name].setAttribute('y', inputTopLeft.y + 15);
   this.inputMarkers_[input.name].setAttribute('width', input.renderWidth - 10);
   this.inputMarkers_[input.name].setAttribute('height', 5);
   this.inputMarkers_[input.name].setAttribute('fill', input.getHexColour());
+
+  // hide inputs that have targets, so that the rectangle doesn't show up when
+  // dragging
+  this.inputMarkers_[input.name].setAttribute('visibility',
+    input.connection.targetConnection ? 'hidden' : 'visible');
 
   renderInfo.curX += input.renderWidth + BS.SEP_SPACE_X;
 
