@@ -973,6 +973,7 @@ Studio.init = function(config) {
       extraControlRows: extraControlsRow,
       blockUsed: undefined,
       idealBlockNumber: undefined,
+      editCode: level.editCode,
       blockCounterClass: 'block-counter-default'
     }
   });
@@ -1021,11 +1022,6 @@ Studio.init = function(config) {
     Blockly.SNAP_RADIUS *= Studio.scale.snapRadius;
 
     drawMap();
-  };
-
-  config.getDisplayWidth = function() {
-    var el = document.getElementById('visualizationColumn');
-    return el.getBoundingClientRect().width;
   };
 
   if (config.level.edit_blocks != 'toolbox_blocks') {

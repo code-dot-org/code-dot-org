@@ -158,6 +158,7 @@ Webapp.init = function(config) {
       extraControlRows: extraControlsRow,
       blockUsed: undefined,
       idealBlockNumber: undefined,
+      editCode: level.editCode,
       blockCounterClass: 'block-counter-default'
     }
   });
@@ -180,11 +181,6 @@ Webapp.init = function(config) {
     Blockly.SNAP_RADIUS *= Webapp.scale.snapRadius;
 
     drawDiv();
-  };
-
-  config.getDisplayWidth = function() {
-    var el = document.getElementById('visualizationColumn');
-    return el.getBoundingClientRect().width;
   };
 
   // arrangeStartBlocks(config);
