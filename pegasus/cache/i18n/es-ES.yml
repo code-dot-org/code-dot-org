@@ -771,11 +771,11 @@
     programar en Java. Nuestros tutoriales te van a ayudar a desarrollar y crear aplicaciones 
     móviles, trabajar con PHP, base de datos MySQL y empezar con procesamiento estadístico 
     usando R. Nota: los cursos son pagos 
-  edx_beyond_longdescription: CS50x es la introducción que brinda Harvard sobre Ciencias de la 
+  edx_beyond_longdescription: 'CS50x es la introducción que brinda Harvard sobre Ciencias de la 
     Computación y el arte de la programación, abierto a todo el mundo, con o sin experiencia en 
-  programación. El temario incluye: abstracción, algoritmos, estructuras de datos, 
+    programación. El temario incluye: abstracción, algoritmos, estructuras de datos, 
     encapsulamiento, manejo de recursos, seguridad, ingeniería del software y desarrollo web. Los 
-    lenguajes utilizados incluyen C, PHP y JavaScript además de SQL, CSS y HTML. 
+    lenguajes utilizados incluyen C, PHP y JavaScript además de SQL, CSS y HTML.' 
   coursera_beyond_longdescription: 'El curso Standford CS 101, cuyo profesor es Nick Parlante, 
     enseña las ideas fundamentales de ciencias de la computación para un público sin expriencia. 
     Jugá y experimentá con pequeños códigos, el poderío y las limitaciones de las computadoras. 
