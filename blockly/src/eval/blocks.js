@@ -25,16 +25,11 @@
 
 var msg = require('../../locale/current/eval');
 var commonMsg = require('../../locale/current/common');
-var EvalString = require('./evalString');
 
-var functionalBlocks = require('./functionalBlocks');
-
-var colors = {
-  number: { hue: 184, saturation: 1.00, value: 0.74 },
-  string: { hue: 258, saturation: 0.35, value: 0.62 },
-  image: { hue: 39, saturation: 1.00, value: 0.99},
-  boolean: {}
-};
+var evalUtils = require('./evalUtils');
+var mathBlocks = require('../mathBlocks');
+var colors = require('../functionalBlockUtils').colors;
+var initTitledFunctionalBlock = require('../functionalBlockUtils').initTitledFunctionalBlock;
 
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function(blockly, blockInstallOptions) {
@@ -50,13 +45,18 @@ exports.install = function(blockly, blockInstallOptions) {
 
   // todo (brent) - rationalize what's in functionalBlocks vs. here and if we
   // can share code between calc and evals functionalBlocks
-  functionalBlocks.install(blockly, generator, gensym);
+  mathBlocks.install(blockly, generator, gensym);
 
   installString(blockly, generator, gensym);
   installCircle(blockly, generator, gensym);
   installPlaceImage(blockly, generator, gensym);
+  installOverlay(blockly, generator, gensym);
+  installStyle(blockly, generator, gensym);
 };
 
+/**
+ * functional_string
+ */
 function installString(blockly, generator, gensym) {
   blockly.Blocks.functional_string = {
     // Numeric value.
@@ -65,9 +65,11 @@ function installString(blockly, generator, gensym) {
         headerHeight: 0,
         rowBuffer: 3
       });
-      this.setHSV(258, 0.35, 0.62);
+      this.setHSV.apply(this, colors.string);
       this.appendDummyInput()
+          .appendTitle(new Blockly.FieldLabel('"'))
           .appendTitle(new Blockly.FieldTextInput('string'), 'VAL')
+          .appendTitle(new Blockly.FieldLabel('"'))
           .setAlign(Blockly.ALIGN_CENTRE);
       this.setFunctionalOutput(true, 'string');
     }
@@ -78,36 +80,18 @@ function installString(blockly, generator, gensym) {
   };
 }
 
+/**
+ * functional_circle
+ */
 function installCircle(blockly, generator, gensym) {
   blockly.Blocks.functional_circle = {
     init: function () {
-      this.setHSV(39, 1.00, 0.99);
-      this.setFunctional(true, {
-        headerHeight: 30,
-      });
-
-      var options = {
-        fixedSize: { height: 35 }
-      };
-
-      this.appendDummyInput()
-          .appendTitle(new Blockly.FieldLabel('circle', options))
-          .setAlign(Blockly.ALIGN_CENTRE);
-
-      this.appendFunctionalInput('SIZE')
-          .setColour(colors.number)
-          .setCheck('Number');
-      this.appendFunctionalInput('STYLE')
-          .setInline(true)
-          .setColour(colors.string)
-          .setCheck('string');
-      this.appendFunctionalInput('COLOR')
-          .setInline(true)
-          .setColour(colors.string)
-          .setCheck('string');
-
-
-      this.setFunctionalOutput(true, 'image');
+      // todo - i18n
+      initTitledFunctionalBlock(this, 'circle (radius, style, color)', 'image', [
+        { name: 'SIZE', type: 'Number' },
+        { name: 'STYLE', type: 'string' },
+        { name: 'COLOR', type: 'string' }
+      ]);
     }
   };
 
@@ -122,37 +106,17 @@ function installCircle(blockly, generator, gensym) {
   };
 }
 
+/**
+ * place_image
+ */
 function installPlaceImage(blockly, generator, gensym) {
   blockly.Blocks.place_image = {
     init: function () {
-      this.setHSV(39, 1.00, 0.99);
-      this.setFunctional(true, {
-        headerHeight: 30,
-      });
-
-      var options = {
-        fixedSize: { height: 35 }
-      };
-
-      this.appendDummyInput()
-          .appendTitle(new Blockly.FieldLabel('place-image', options))
-          .setAlign(Blockly.ALIGN_CENTRE);
-
-      // todo (brent) - more strictly link colour and check so that we can't accidentally
-      // have them mismatched?
-      this.appendFunctionalInput('IMAGE')
-          .setColour(colors.image)
-          .setCheck('image');
-      this.appendFunctionalInput('X')
-          .setInline(true)
-          .setColour(colors.number)
-          .setCheck('Number');
-      this.appendFunctionalInput('Y')
-          .setInline(true)
-          .setColour(colors.number)
-          .setCheck('Number');
-
-      this.setFunctionalOutput(true, 'image');
+      initTitledFunctionalBlock(this, 'place-image (image, x, y)', 'image', [
+        { name: 'IMAGE', type: 'image' },
+        { name: 'X', type: 'Number' },
+        { name: 'Y', type: 'Number' }
+      ]);
     }
   };
 
@@ -161,6 +125,64 @@ function installPlaceImage(blockly, generator, gensym) {
     var x = Blockly.JavaScript.statementToCode(this, 'X', false) || '0';
     var y = Blockly.JavaScript.statementToCode(this, 'Y', false) || '0';
 
-    return "Eval.placeImage(" + [image, x, y].join(", ") + ");";
+    y = evalUtils.cartesianToPixel(y);
+
+    return "Eval.placeImage(" + [image, x, y].join(", ") + ")";
+  };
+}
+
+
+/**
+ * overlay
+ */
+function installOverlay(blockly, generator, gensym) {
+  blockly.Blocks.overlay = {
+    init: function () {
+      initTitledFunctionalBlock(this, 'overlay (top, bottom)', 'image', [
+        { name: 'TOP', type: 'image' },
+        { name: 'BOTTOM', type: 'image' },
+      ]);
+    }
+  };
+
+  generator.overlay = function() {
+    var top = Blockly.JavaScript.statementToCode(this, 'TOP', false);
+    var bottom = Blockly.JavaScript.statementToCode(this, 'BOTTOM', false);
+
+    return "Eval.overlay(" + [top, bottom].join(", ") + ")";
+  };
+}
+
+/**
+ * functional_style
+ */
+function installStyle(blockly, generator, gensym) {
+  blockly.Blocks.functional_style = {
+    init: function () {
+      var VALUES = [
+        ['solid', 'solid'],
+        ['75%', '75%'],
+        ['50%', '50%'],
+        ['25%', '25%'],
+        ['outline', 'outline']
+      ];
+
+      this.setFunctional(true, {
+        headerHeight: 0,
+        rowBuffer: 3
+      });
+      this.setHSV.apply(this, colors.string);
+      this.appendDummyInput()
+          .appendTitle(new Blockly.FieldLabel('"'))
+          .appendTitle(new blockly.FieldDropdown(VALUES), 'VAL')
+          .appendTitle(new Blockly.FieldLabel('"'))
+          .setAlign(Blockly.ALIGN_CENTRE);
+      this.setFunctionalOutput(true, 'string');
+
+    }
+  };
+
+  generator.functional_style = function() {
+    return "Eval.string('" + this.getTitleValue('VAL') + "')";
   };
 }
