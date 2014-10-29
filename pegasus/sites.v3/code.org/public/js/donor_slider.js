@@ -2,7 +2,7 @@ $(document).ready(function() {
   var platinum = $(".platinum");
   var gold = $(".gold");
 
-  var masterIndex = 2; // The number of badges that have been shown this cycle
+  var masterIndex = 3; // The number of badges that have been shown this cycle
   var combinedLength = platinum.length + gold.length;
   var interval = 8000;
   var timer = setInterval(setManager, interval);
@@ -26,14 +26,16 @@ $(document).ready(function() {
     if (items === platinum) {
       // Old items are faded out. New items are faded in on the completion of the fade out.
       items.eq(index - 1).fadeOut("slow");
-      items.eq(index - 2).fadeOut("slow", function () {
+      items.eq(index - 2).fadeOut("slow");
+      items.eq(index - 3).fadeOut("slow", function () {
         items.eq(index).fadeIn("slow");
         items.eq(index + 1).fadeIn("slow");
+        items.eq(index + 2).fadeIn("slow");
         // If you've only shown a single donor this call (odd number of platinum donors) then only increment masterIndex by one.
-        if (masterIndex + 2 > platinum.length) {
+        if (masterIndex + 3 > platinum.length) {
           masterIndex++;
         } else {
-          masterIndex += 2;
+          masterIndex += 3;
         }
       });
     } else {
@@ -55,6 +57,7 @@ $(document).ready(function() {
   // Reveal the initial two platinum donors before cycle starts.
   platinum.first().css("display", "inline-block");
   platinum.eq(1).css("display", "inline-block");
+  platinum.eq(2).css("display", "inline-block");
 
   // Pause the timer and cycling when a badge is hovered over.
   $('.badge').hover(function () { clearInterval(timer); }, function () { timer = setInterval(setManager, interval); });

@@ -7,16 +7,18 @@
   %h2{:id=>'level_indicator'} Platinum Supporters ($3,000,000+ contribution)
 
   - supporters.each do |supporter, name_s|
-    - avatar_url = avatar_image_thumbnail(supporter[:name_s])
+    - avatar_url = avatar_image(supporter[:name_s])
     %a{:href=>supporter[:url_s]}
-      %div{:class=>"badge "  + supporter[:level_s], :style=>"display: none;"}
+      %div{:class=>"badge "  + supporter[:level_s], :style=>"display: none; height: 90px"}
         - if avatar_url != nil
-          %img{:src=> avatar_url}
-        - if supporter[:name_s] != "Google" && supporter[:name_s] != "Microsoft" && supporter[:name_s] != "Omidyar Network"
-          %p{:class=>"label", :style=>'text-align: center; vertical-align: middle; line-height: 90px; display: block; margin: 0; padding: 0;'}
-            =supporter[:name_s]
-        - elsif supporter[:name_s] == "Google" || supporter[:name_s] == "Microsoft" || supporter[:name_s] == "Omidyar Network"
-          %p{:class=>"label", :style=>'text-align: center; vertical-align: middle; line-height: 90px; display: block; visibility: hidden; margin: 0; padding: 0;'}
+          - if supporter[:kind_s] != "corporate" && supporter[:name_s] != "Omidyar Network"
+            %img{:src=> avatar_url, :style=>"float: left"}
+          - elsif supporter[:kind_s] == "corporate" && supporter[:name_s] == "Microsoft"
+            %img{:src=> avatar_url, :style=>"width: 100%; height: auto"}
+          - else
+            %img{:src=> avatar_url}
+        - if supporter[:kind_s] != "corporate" &&  supporter[:name_s] != "Omidyar Network"
+          %p{:class=>"label"}
             =supporter[:name_s]
 
   %br
