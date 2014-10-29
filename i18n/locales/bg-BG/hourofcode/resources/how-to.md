@@ -15,7 +15,7 @@
   * Изискват минимална подготовка на учителите
   * Предвиждат смостоятелна работа, което позволява на учениците да работят по собствените си темпове и ниво на умения
 
-[![изображение](http://code.org/images/tutorials.png)](http://code.org/learn)
+[![](http://<%= codeorg_url() %>/images/tutorials.png)](http://<%=codeorg_url() %>/learn)
 
 ## 2) Планирайте нужният ви хардуер - компютрите са задължителни
 
@@ -32,39 +32,43 @@
 
 ## 4) Вдъхновете учениците - Покажете им видео
 
-Покажете на учениците < % if @country == 'uk' %> [ това видео](https://www.youtube.com/watch?v=96B5-JGA9EQ) < % или%> [ това видео](http://www.youtube.com/watch?v=FC5FbmsH4fw) < % end%> за откриването на Часът на кодирането. Също погледнете [ тези клипове](http://youtube.com/codeorg), с участието на Бил Гейтс, Марк Зукърбърг, основателят на Black Eyed Peas will.i.am и НБА звездата Крис Бош, които говорят за важността на уменията за програмиране. (Има версии [ 9 минути](https://www.youtube.com/watch?v=dU1xS07N-FA), [ 5 минути](https://www.youtube.com/watch?v=nKIu9yen5nc) и [ 1 минута](https://www.youtube.com/watch?v=qYZF6oIZtfc))
+Show students an inspirational video to kick off the Hour of Code. Examples:
+
+  * The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
+  * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [Hour of Code 2014 video](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
+  * [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
 **Ентусиазирайте учениците си - представете им това интро**
 
 Повечето деца не знаят какво е компютърни науки. Ето няколко идеи:
 
-  * Обяснете им това по прост начин, който включва примери за приложения, които са полезни за момчета и момичета(спасяването на човешки живот, в помощ на хората, за свързване на хора, и т.н.).
-  * Опитайте: "Помислете за нещата във всекидневния си живот, които използват компютърни науки: мобилен телефон, микровълнова печка, компютър, светофар... всички тези неща се нуждаят от компютърен учен, който да разработи програми за тях."
-  * Или: "Компютърните науки са изкуството на смесване на човешки идеи и дигитални инструменти за увеличаване на нашата сила. Компютърни учени работят в толкова много различни области: писане приложения за телефони, лечение на болести, създаване на анимационни филми, работа в създаване и поддръжка на социални медии, изграждане на роботи, които изследват други планети и т.н."
-  * Вижте съвети за ангажиране на момичетата с компютърни науки [ тук](http://code.org/girls). 
+  * Explain it in a simple way that includes examples of applications that both boys and girls will care about (saving lives, helping people, connecting people, etc.).
+  * Try: "Think about things in your everyday life that use computer science: a cell phone, a microwave, a computer, a traffic light… all of these things needed a computer scientist to help build them.”
+  * Or: “Computer science is the art of blending human ideas and digital tools to increase our power. Computer scientists work in so many different areas: writing apps for phones, curing diseases, creating animated movies, working on social media, building robots that explore other planets and so much more."
+  * See tips for getting girls interested in computer science [here](http://<%= codeorg_url() %>/girls). 
 
 ## 5) Стартирайте своя Час на кодирането
 
 **Въвеждане на учениците в дейността**
 
-  * Напишете линка към уроците на бяла дъска. Намерете връзката, както е показано в <% if @country == 'uk' %> [ информация за избрания урок](http://uk.code.org/learn) <%или %> [ информация за избрания урок](http://code.org/learn) <% накрая %>под броя на участниците. (Пример: [ hourofcode.com/co](http://code.org/learn)) 
-  * Кажете на учениците да заредят URL адреса и да започнат да гледат видеото.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](http://<%= codeorg_url() %>/learn) under the number of participants. [hourofcode.com/co](http://hourofcode.com/co)
+  * Tell students to visit the URL and start the tutorial.
 
 **Когато учениците се натъкнат на трудности**
 
-  * Кажете им да попитат 3-ма съученика преди вас. Ако тези съученици нямат отговор, вие ще им помогнете.
-  * Насърчете учениците използвайки изрази като " Вие се справяте страхотно, не спирайте да опитвате."
-  * Не е грешно да се отговори: "Аз не знам. Нека да разберем това заедно." Ако не можете да решите проблем, който е в урока, обсъдете го заедно в класа: "технологията не винаги работи по начина, по който ние искаме. Заедно ние сме общност на обучаемите." И: "Обучението в използване на програма е като изучаването на нов език; няма да овладее веднага."
+  * Tell students, “Ask 3 then me.” Ask 3 classmates, and if they don’t have the answer, then ask the teacher.
+  * Encourage students and offer positive reinforcement: “You’re doing great, so keep trying.”
+  * It’s okay to respond: “I don’t know. Let’s figure this out together.” If you can’t figure out a problem, use it as a good learning lesson for the class: “Technology doesn’t always work out the way we want. Together, we’re a community of learners.” And: “Learning to program is like learning a new language; you won’t be fluent right away.“
 
 **Какво да направя ако ученик завърши по-рано?**
 
-  * Учениците могат да видят всички уроци и да пробват и други дейности в <% if @country == 'uk' %> [uk.code.org/learn](http://uk.code.org/learn). < % или %> [ code.org/learn](http://code.org/learn). <% end %> 
-  * Или помолете учениците, които са завършили по-рано, да помогнат на съучениците си, които имат проблеми с дейностите.
+  * Students can see all tutorials and try another Hour of Code activity at [<%= codeorg_url() %>/learn](http://<%= codeorg_url() %>/learn)
+  * Or, ask students who finish early to help classmates who are having trouble with the activity.
 
 **Как да отпечатам сертификати за моите ученици?**
 
-Всеки ученик получава шанс да получи сертификат по електронна поща, когато завърши дейностите по [ Code.org уроците](http://studio.code.org). Можете да щракнете върху сертификата, за да го отпечатате. Ако искате да направите нови сертификати за учениците си, посетете нашата страница <% if @country == 'uk' %> [Certificates](http://uk.code.org/certificates) <% или %> [Certificates](http://code.org/certificates) <% end %> за да изпринтите колкото се ви необходими наведнъж!
+Всеки ученик получава шанс да получи сертификат по електронна поща, когато завърши дейностите по [ Code.org уроците](http://studio.code.org). Можете да щракнете върху сертификата, за да го отпечатате. However, if you want to make new certificates for your students, visit our [Certificates](http://<%= codeorg_url() %>/certificates) page to print as many certificates as you like, in one fell swoop!
 
 **Какво идва след Часът на кодирането?**
 
-Часът на кодирането е само първата стъпка в пътуването, посветено на знанието за технологиите и как работят те. Трябват още много стъпки за да създадете свои софтуерни приложения. < % if @country == 'uk' %> Часът на кодирането е само първата стъпка в образователното пътуване за това как технологията работи и как да създадете свои софтуерни приложения. За да продължат това пътуване, [ насърчете децата си да учат онлайн](http://uk.code.org/learn/beyond). За да продължите това пътуване, намерете допълнителни ресурси за преподаватели [ тук](http://code.org/educate). Или насърчете децата си да учат [ онлайн](http://code.org/learn/beyond). <% end %>
+Часът на кодирането е само първата стъпка в пътуването, посветено на знанието за технологиите и как работят те. Трябват още много стъпки за да създадете свои софтуерни приложения. < % if @country == 'uk' %> Часът на кодирането е само първата стъпка в образователното пътуване за това как технологията работи и как да създадете свои софтуерни приложения. За да продължат това пътуване, [ насърчете децата си да учат онлайн](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %>

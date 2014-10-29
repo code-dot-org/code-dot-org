@@ -102,11 +102,27 @@ title: Recursos layout: wide nav: resources_nav
     </p>
     
     <p>
+      <a id="social"></a>
+    </p>
+    
+    <h2>
+      Post these on social media
+    </h2>
+    
+    <p>
+      <a href="/images/social-1.jpg"><img src="/images/fit-200/social-1.jpg" alt="imagen" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-2.jpg"><img src="/images/fit-200/social-2.jpg" alt="imagen" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-3.jpg"><img src="/images/fit-200/social-3.jpg" alt="imagen" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    
+    <p>
+      <a href="/images/mark.jpg"><img src="/images/fit-200/mark.jpg" alt="imagen" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-200/susan.jpg" alt="imagen" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-200/ashton.jpg" alt="imagen" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-200/marissa.jpg" alt="imagen" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-200/chris.jpg" alt="imagen" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    
+    <p>
       <a id="sample-emails"></a>
     </p>
     
     <h2>
-      Envía estos correos electrónicos para promocionar la Hora de Programación
+      Send these emails to help promote the Hour of Code
     </h2>
     
     <p>
@@ -114,27 +130,27 @@ title: Recursos layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Pide a tu escuela, empleador o amigos que se registren:
+      Ask your school, employer or friends to sign up:
     </h2>
     
     <p>
-      Las computadoras están en todas partes, pero hoy, menos escuelas enseñan ciencia de la computación que hace 10 años. Las buenas noticias son que estamos trabajando para cambiar esto. Si te enteraste sobre la Hora de Programación del año pasado, tal vez supiste que hizo historia. En una semana, 15 millones de estudiantes experimentaron ciencia de la computación!
+      Las computadoras están en todas partes, pero hoy, menos escuelas enseñan ciencia de la computación que hace 10 años. Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. In one week, 15 million students tried computer science!
     </p>
     
     <p>
-      ¡Las Ciencias de la Computación estuvieron en las portadas de Google, MSN, Yahoo! y Disney. El Presidente Obama, Shakira y Ashton Kutcher dieron inicio a la Hora de Programación con videos. Más de 100 socios se unieron para apoyar este movimiento.
+      Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
     </p>
     
     <p>
-      Este año, hagámoslo aún más grande. Te pido que te unas a la Hora de Programación 2014. Por favor, involúcrate con el evento de la Hora de Programación en La Semana de Educación de la Ciencia de Computación, del 8 al 14 de diciembre de 2014.
+      This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2014. Please get involved with an Hour of Code event during Computer Science Education Week, December 8-14, 2014.
     </p>
     
     <p>
-      Corre la voz. Sé anfitrión de un evento. Pídele a una escuela local que se inscriba. O intenta La Hora de Programación tú mismo --todos pueden beneficiarse de aprender los fundamentos.
+      Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself -- everyone can benefit from learning the basics.
     </p>
     
     <p>
-      Ayúdanos a alcanzar los 100 millones de estudiantes para el fin de año! Empieza en http://hourofcode.com
+      Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com
     </p>
     
     <p>
@@ -142,51 +158,51 @@ title: Recursos layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Invita a los medios a asistir a tu evento:
+      Invite media to attend your event:
     </h2>
     
     <p>
-      <strong>Asunto:</strong> Escuela de la localidad se une a la misión de introducir a 100m de estudiantes a la ciencia de la computación
+      <strong>Subject line:</strong> Local school joins mission to introduce 100m students to computer science
     </p>
     
     <p>
-      Las computadoras están en todas partes, pero hoy, menos escuelas enseñan ciencia de la computación que hace 10 años. Las chicas y las minorías cuentan con muy baja representación. La buena noticia es, estamos en camino ha cambiar esto.
+      Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and minorities are severely underrepresented. Good news is, we’re on our way to change this.
     </p>
     
     <p>
-      En una semana el pasado año, 15 millones de estudiantes experimentaron ciencia de la computación! ¡Las Ciencias de la Computación estuvieron en las portadas de Google, MSN, Yahoo! y Disney. El Presidente Obama, Shakira y Ashton Kutcher dieron inicio a la Hora de Programación con videos. Más de 100 socios se unieron para apoyar este movimiento.
+      In one week last year, 15 million students tried computer science! Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
     </p>
     
     <p>
-      Ahora el movimiento Hora de Código está apuntando a los 100 millones de estudiantes.
+      Now the Hour of Code movement is aiming for 100 million students.
     </p>
     
     <p>
-      Por eso cada uno de los [X cantidad] de estudiantes en [NOMBRE DE LA ESCUELA] se están uniendo al mayor evento de aprendizaje de la historia: La Hora de Código, durante Dic. 8-14.
+      That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Dec. 8-14.
     </p>
     
     <p>
-      Estoy escribiendo para invitarte a participar en nuestra reunión de inicio, y para ver a los niños comenzar la actividad el [DATE].
+      I'm writing to invite you to attend our kickoff assembly, and to see kids start the activity on [DATE].
     </p>
     
     <p>
-      La Hora de Código, organizada por la entidad sin ánimo de lucro Code.org y más de 100 otros, es una declaración de que la generación de estudiantes de hoy está lista para aprender las habilidades cruciales para el éxito en el siglo 21. Por favor, únetenos.
+      The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a statement that today’s generation of students are ready to learn critical skills for 21st century success. Please join us.
     </p>
     
     <p>
-      <strong>Contacto:</strong> [TU NOMBRE], [TITLE], cell: (212) 555-5555
+      <strong>Contact:</strong> [YOUR NAME], [TITLE], cell: (212) 555-5555
     </p>
     
     <p>
-      <strong>Cuándo:</strong> [FECHA y HORA de tú evento]
+      <strong>When:</strong> [DATE and TIME of your event]
     </p>
     
     <p>
-      <strong>Dónde:</strong> [DIRECCIÓN y ORIENTACIONES]
+      <strong>Where:</strong> [ADDRESS and DIRECTIONS]
     </p>
     
     <p>
-      Ansío estar en contacto.
+      I look forward to being in touch.
     </p>
     
     <p>
@@ -194,39 +210,39 @@ title: Recursos layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Cuéntale a los padres sobre el evento en tu escuela:
+      Tell parents about your school's event:
     </h2>
     
     <p>
-      Queridos Padres,
+      Dear Parents,
     </p>
     
     <p>
-      Vivimos en un mundo rodeado por tecnología. Y sabemos que sea cual sea el campo al que nuestros estudianes escojan ir hacia la adultez, su habilidad de triunfar dependerá en gran parte en entender como funciona la tecnología. Pero sólo una pequeña fracción de nosotros está aprendiendo ciencia de la computación, y menos estudiantes la estudian hoy que hace una década.
+      We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly hinge on understanding how technology works. But only a tiny fraction of us are learning computer science, and less students are studying it than a decade ago.
     </p>
     
     <p>
-      Es por esto que nuestra escuela se une al mayor evento de aprendizaje de la historia: La Hora de Código, durante la Semana de la Educación de Ciencia de la Computación (Dic. 8-14). El pasado año, 15 millones de estudiantes experimentaron ciencia de la computación en una semana. Este año, estamos uniendo estudiantes de todo el mundo para alcanzar los 100 millones de estudiantes!
+      That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 8-14). Last year, 15 million students tried computer science in one week. This year, we're joining students worldwide to reach 100 million students!
     </p>
     
     <p>
-      Nuestra Hora de Código es una declaración de que [NOMBRE DE ESCUELA] está lista para enseñar estas habilidades cruciales del siglo 21. Para continuar llevando las actividades de programación a tus estudiantes, queremos hacer de nuestra Hora de Código un evento enorme. Te aliento a participar como voluntario, contacta los medios locales, comparte la noticia en tus canales sociales y considera ser anfitrión de eventos Hora de Código adicionales en la comunidad.
+      Our Hour of Code is a statement that [SCHOOL NAME] is ready to teach these foundational 21st century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on your social media channels and consider hosting additional Hour of Code events in the community.
     </p>
     
     <p>
-      Esta es una oportunidad para cambiar el futuro de la educación en [NOMBRE PUEBLO/CIUDAD].
+      This is a chance to change the future of education in [TOWN/CITY NAME].
     </p>
     
     <p>
-      Visita http://hourofcode.com para consultar detalles, y ayudar a difundir la noticia.
+      See http://hourofcode.com for details, and help spread the word.
     </p>
     
     <p>
-      Sinceramente,
+      Sincerely,
     </p>
     
     <p>
-      Su director
+      Your principal
     </p>
     
     <p>
@@ -234,29 +250,29 @@ title: Recursos layout: wide nav: resources_nav
     </p>
     
     <h2>
-      invita a un político local al evento en tu escuela:
+      Invite a local politician to your school's event:
     </h2>
     
     <p>
-      Estimado [Alcalde/Gobernador/Representante/Senador APELLIDO]:
+      Dear [Mayor/Governor/Representative/Senator LAST NAME]:
     </p>
     
     <p>
-      ¿Sabía usted que en la economía de hoy, los trabajos de computación exceden en número a los estudiantes graduándose en el campo, por 3 a 1? Y, la ciencia de la computación es crucial para <em>cualquier</em> industria hoy en día. Sin embargo el 90% de las escuelas no la enseñan. En [NOMBRE DE ESCUELA], estamos intentando cambiar eso.
+      Did you know that in today’s economy, computing jobs outnumber students graduating into the field by 3-to-1? And, computer science is foundational for <em>every</em> industry today. Yet 90% of schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
     </p>
     
     <p>
-      Es por esto que nuestra escuela se une al mayor evento de aprendizaje de la historia: La Hora de Código, durante la Semana de la Educación de Ciencia de la Computación (Dic. 8-14). El pasado año, 15 millones de estudiantes experimentaron ciencia de la computación en una semana. Este año, estamos uniendo estudiantes de todo el mundo para alcanzar los 100 millones de estudiantes!
+      That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 8-14). Last year, 15 million students tried computer science in one week. This year, we're joining students worldwide to reach 100 million students!
     </p>
     
     <p>
-      Le escribo para invitarlo a tomar parte en nuestro evento Hora de Código y hablar en nuestra asamblea de inicio. Tendrá lugar el [FECHA, HORA, LUGAR], y será una fuerte declaración de que [nombre del Estado o Ciudad] está listo para enseñar a nuestros estudiantes las habilidades críticas del sitio 21. Queremos asegurarnos de que nuestros estudiantes estén a la vanguardia de la creación de tecnología del futuro--no sólo consumirla.
+      I'm writing to invite you to take part in our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st century skills. We want to ensure that our students are on the forefront of creating technology of the future--not just consuming it.
     </p>
     
     <p>
-      Por favor contácteme en [NÚMERO DE TELÉFONO O DIRECCIÓN DE CORREO]. Espero con ansias su respuesta.
+      Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
     </p>
     
     <p>
-      Sinceramente, [NAME], [TITLE]
+      Sincerely, [NAME], [TITLE]
     </p>

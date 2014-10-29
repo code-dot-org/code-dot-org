@@ -1,8 +1,4 @@
-* * *
 
-başlık: Kaynaklar düzen: geniş
-
-* * *
 
 # Kod Saati etkinliğinize basının ilgisini nasıl çekersiniz
 

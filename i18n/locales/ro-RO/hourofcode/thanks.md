@@ -14,11 +14,11 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Vă mulţumim ca v-ați înscris pentru organizarea Hour of Code!
 
-**FIECARE** Organizator al Hour of Code va primi 10 GB spaţiu Dropbox sau 10 dolari credit Skype în semn de mulțumire. [Detalii](/prizes)
+**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](<%= hoc_uri('/prizes') %>)
 
 <% if @country == 'us' %>
 
-Invită [toată scoala să participe ](/us/prizes) pentru șansa de câștiga premii mari pentru întreaga școală.
+Get your [whole school to participate](<%= hoc_uri('/prizes') %>) for a chance for big prizes for your entire school.
 
 <% end %>
 
@@ -32,23 +32,23 @@ Spune prietenilor tai despre #HourOfCode.
 
 ## 2. Solicită întregii şcoli sa susțină o Oră de Programare
 
-[Trimite acest e-mail](/resources#email) sau [oferă această broșură](/files/schools-handout.pdf). Odată ce şcoala ta s-a înscris, [participă pentru a câştiga tehnologie în valoare de 10.000 dolari pentru şcoala ta](/prizes) şi provoacă alte şcoli din orașul tău să participe.
+[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](<%= hoc_uri('/files/schools-handout.pdf') %>). Odată ce şcoala ta s-a înscris, [participă pentru a câştiga tehnologie în valoare de 10.000 dolari pentru şcoala ta](/prizes) şi provoacă alte şcoli din orașul tău să participe.
 
 <% else %>
 
 ## 2. Solicită întregii şcoli sa susțină o Oră de Programare
 
-[Trimite acest e-mail](/resources#email) sau [oferă această broșură](/files/schools-handout.pdf).
+[Send this email](<%= hoc_uri('/resources#email') %>) or give [this handout](<%= hoc_uri('/files/schools-handout.pdf') %>) to your principal.
 
 <% end %>
 
 ## 3. Oferă o donaţie generoasă
 
-[Doneaza în cadrul campaniei noastre de crowdfunding](http://code.org/donate). Pentru a invata 100 de milioane de copii, avem nevoie de sprijinul tău. Am lansat ceea ce ar putea fi [cea mai mare campanie de crowdfunding pentru educaţie](http://code.org/donate) din istorie. Fiecare dolar va fi echivalat de [donatori](http://code.org/about/donors) majori Code.org, dublând impactul.
+[Donate to our crowdfunding campaign.](http://<%= codeorg_url() %>/donate) To teach 100 million children, we need your support. We just launched what could be the [largest education crowdfunding campaign](http://<%= codeorg_url() %>/donate) in history. Every dollar will be matched by major Code.org [donors](http://<%= codeorg_url() %>/about/donors), doubling your impact.
 
 ## 3. Solicită angajatorului să se implice
 
-[Trimite acest e-mail](/resources#email) la administrator sau CEO. Sau [da-le acest poster](/resources/hoc-one-pager.pdf).
+[Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](<%= hoc_uri('/resources/hoc-one-pager.pdf') %>).
 
 ## 4. Promovează Hour of Code în jurul tău
 
@@ -56,6 +56,6 @@ Recrutează o comunitate sau grup local — club de copii, scoala, biserică. Sa
 
 ## 5. Solicită unui oficial, ales local, sprijinul pentru organizarea Hour of Code
 
-[Trimite acest e-mail](/resources#politicians) Primarului, Pimariei sau conducerii scolii. Sau [da-le acest poster](/resources/hoc-one-pager.pdf) şi invită-i să-ți viziteze şcoala.
+[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board. Or [give them this handout](<%= hoc_uri('/resources/hoc-one-pager.pdf') %>) and invite them to visit your school.
 
 <%= view 'popup_window.js' %>

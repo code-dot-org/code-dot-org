@@ -102,11 +102,27 @@
     </p>
     
     <p>
+      <a id="social"></a>
+    </p>
+    
+    <h2>
+      Post these on social media
+    </h2>
+    
+    <p>
+      <a href="/images/social-1.jpg"><img src="/images/fit-200/social-1.jpg" alt="छवि" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-2.jpg"><img src="/images/fit-200/social-2.jpg" alt="छवि" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-3.jpg"><img src="/images/fit-200/social-3.jpg" alt="छवि" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    
+    <p>
+      <a href="/images/mark.jpg"><img src="/images/fit-200/mark.jpg" alt="छवि" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-200/susan.jpg" alt="छवि" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-200/ashton.jpg" alt="छवि" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-200/marissa.jpg" alt="छवि" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-200/chris.jpg" alt="छवि" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    
+    <p>
       <a id="sample-emails"></a>
     </p>
     
     <h2>
-      Hour of Code को प्रवर्द्धनमा मदत गर्न यी इमेलहरू पठाउनुहोस्
+      Send these emails to help promote the Hour of Code
     </h2>
     
     <p>
@@ -114,27 +130,27 @@
     </p>
     
     <h2>
-      तपाइँको विद्यालय, कर्मचारी वा साथीहरूलाई साइन अप गर्न सोध्नुहोस्:
+      Ask your school, employer or friends to sign up:
     </h2>
     
     <p>
-      कम्प्युटरहरू जहाँ तहिँ हुन्छन्, तर केहि विद्यालयहरूले मात्र 10 वर्ष अघि देखि कम्प्युटर विज्ञान पढाई राखेका छन्। राम्रो खबर हो, हामीले हाम्रो बाटोबाट यसलाई परिवर्तन गरि राखेका छौँ। यदि तपाइँले पछिल्लो वर्ष Hour of Code को बारेमा सुन्नुभएको छ भने, यसले इतिहास बनायो भनि तपाइँलाई थाहा छ। एक हप्तामा, 15 लाख विद्यार्थिहरूले कम्प्युटर विज्ञानमा प्रयास गरे!
+      कम्प्युटरहरू जहाँ तहिँ हुन्छन्, तर केहि विद्यालयहरूले मात्र 10 वर्ष अघि देखि कम्प्युटर विज्ञान पढाई राखेका छन्। Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. In one week, 15 million students tried computer science!
     </p>
     
     <p>
-      कम्प्युटर विज्ञान Google, MSN, Yahoo! र डिजनीको गृहपृष्ठ थियो। राष्ट्रपती ओबामा, सकिरा र अस्थन कुटचेयर सबैले भिडियोहरूबाट Hour of Code को सुरु गर्छन्। यो गतिलाई समर्थन गर्न 100 साझेदारहरू भन्दा बढी सँगै आउने छन्।
+      Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
     </p>
     
     <p>
-      यस वर्ष, यसलाई अझ ठूलो बनाऔँ। म तपाइँलाई Hour of Code 2014 मा आबद्ध हुन सोध्दैछु। कम्प्युटर विज्ञान शिक्षा सप्ताह, कृपया डिसेम्बर 8-14, 2014 को अवधिमा Hour of Code 2014 को घटनालाई समावेश गर्नुहोस्।
+      This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2014. Please get involved with an Hour of Code event during Computer Science Education Week, December 8-14, 2014.
     </p>
     
     <p>
-      शब्दलाई बाहिर निकाल्न। घटनालाई होस्ट गर्नुहोस्। साइन अप गर्न स्थानीय विद्यालयलाई सोध्नुहोस्। वा आफैँके Hour of Code मा प्रयास गर्नुहोस् -- जो कोहिले पनि मुख्य कुरा सिकि फाइदा लिन सक्छन्।
+      Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself -- everyone can benefit from learning the basics.
     </p>
     
     <p>
-      वर्षको अन्तमा 100 मिलियन विदर्यार्थीहरू पुर्याउन हामीलाई मदत गर्नुहोस्! http://hourofcode.com मा सुरु गर्न
+      Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com
     </p>
     
     <p>
@@ -142,51 +158,51 @@
     </p>
     
     <h2>
-      तपाइँको घटनामा सामेल हुन मिडियालाई बोलाउनुहोस्:
+      Invite media to attend your event:
     </h2>
     
     <p>
-      <strong>विषय रेखा:</strong> स्थानीय विद्यालयले 100 केटा विद्यार्थीहरूलाई कम्प्युटर विज्ञानको परिचय गराउने मिशनमा सामेल हुन्छ
+      <strong>Subject line:</strong> Local school joins mission to introduce 100m students to computer science
     </p>
     
     <p>
-      कम्प्युटरहरू जुनसुकै ठाउँमा छन्, तर केहि विद्या;यहरूले मात्र 10 वर्ष भन्दा पहिले देखि कम्प्युटर विज्ञान सिकाइ राखेका छन्। केटीहरू र अल्पसंख्या नराम्रोसँग प्रतिनिधित्व गर्ने भन्दा मुनिका छन्। राम्रो समाचार हो, हामी यसलाई परिवर्तन गर्ने हाम्रो बाटोमा छौँ।
+      Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and minorities are severely underrepresented. Good news is, we’re on our way to change this.
     </p>
     
     <p>
-      गत वर्षको एक हप्तामा, 15 मिलियन विद्यार्थीहरूले कम्प्युटर विज्ञानमा प्रयास गरे! कम्प्युटर विज्ञान Google, MSN, Yahoo! र डिजनीको गृहपृष्ठ थियो। राष्ट्रपती ओबामा, सकिरा र अस्थन कुटचेयर सबैले भिडियोहरूबाट Hour of Code को सुरु गर्छन्। यो गतिलाई समर्थन गर्न 100 साझेदारहरू भन्दा बढी सँगै आउने छन्।
+      In one week last year, 15 million students tried computer science! Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
     </p>
     
     <p>
-      अहिले Hour of Code को गतिको उद्देश्य 100 मिलियन विद्यार्थीहरूको लागि छ।
+      Now the Hour of Code movement is aiming for 100 million students.
     </p>
     
     <p>
-      यही कारण हो कि हरेक एक को [X संख्या] [विद्यालयको नाम] मा विद्यार्थीको इतिहासमा सबै भन्दा बढी सिक्ने घटनामा सामेल हुँदैछन्: डिसेम्बर 8-14 को अवधिमा Hour of Code।
+      That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Dec. 8-14.
     </p>
     
     <p>
-      मैले तपाइँलाई हाम्रो सुरु गर्ने विधानसभामा भाग लिन निमन्त्रणा लेख्दै छु, र [DATE]मा बच्चाहरूको गतिविधि सुरु गर्न हेर्नुहोस्।
+      I'm writing to invite you to attend our kickoff assembly, and to see kids start the activity on [DATE].
     </p>
     
     <p>
-      Hour of Code लाई, नाफा नखाने Code.org र 100 भन्दा बढी अन्यद्वारा आयोजित गरिएको हुन्छ, बयान हैं कि आजको पीढीका विद्यार्थिहरूले 21औँ सताब्दीमा सफलता हुनको लागि महत्वपूर्ण क्षमताहरू सिक्न तयार छन्। कृपया हामीसँग आवद्ध हुनुहोस्।
+      The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a statement that today’s generation of students are ready to learn critical skills for 21st century success. Please join us.
     </p>
     
     <p>
-      <strong>सम्पर्क:</strong> [YOUR NAME], [TITLE], सेल नं: (212) 555-5555
+      <strong>Contact:</strong> [YOUR NAME], [TITLE], cell: (212) 555-5555
     </p>
     
     <p>
-      <strong>कहिले:</strong> [तपाइँको घटनाको DATE र TIME]
+      <strong>When:</strong> [DATE and TIME of your event]
     </p>
     
     <p>
-      <strong>कहाँ:</strong> [ADDRESS र DIRECTIONS]
+      <strong>Where:</strong> [ADDRESS and DIRECTIONS]
     </p>
     
     <p>
-      म सम्पर्कमा रहन तत्पर छु।
+      I look forward to being in touch.
     </p>
     
     <p>
@@ -194,39 +210,39 @@
     </p>
     
     <h2>
-      तपाइँको विद्यालयको घटनाको बारेमा अभीभावकहरूलाई भन्नुहोस्:
+      Tell parents about your school's event:
     </h2>
     
     <p>
-      आदरणीय अभीभावकहरू,
+      Dear Parents,
     </p>
     
     <p>
-      हामी प्रविधिद्वारा घेरिएको संसारमा बस्छौँ। र हाम्रो विद्यार्थीहरूले वयस्कहरूको रूपमा जान हाम्रो विर्यार्थीहरूले कस्ता क्षेत्रको छनोट गर्छन् भनि हामीलाई थाहा छ, तिनिहरूको सफल हुने क्षमताले बढ्दो मात्रामा प्रविधिहरूले कसरी काम गर्छ भनि बुझ्न हुन्छ। तर हामीले एक छोटो अंश कम्प्युटर विज्ञान मात्र सिक्दै छौँ, र कम विद्यार्थीहरूले एक दशक भन्दा पहिले देखि यसको अध्ययन गर्दैछन्।
+      We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly hinge on understanding how technology works. But only a tiny fraction of us are learning computer science, and less students are studying it than a decade ago.
     </p>
     
     <p>
-      त्यहि कारणले हाम्रो सम्पूर्ण विद्यालयको इतिहासमा सबै भन्दा बढी सिक्ने घटनामा सामेल हुन्छन्: Hour of Code, कम्प्युटर विज्ञान शिक्षा सप्ताह (डिसेम्बर 8-14) को अवधिमा। गत वर्ष, एक हप्ताहमा15 मिलियन विद्यार्थीहरूले कम्प्युटर विज्ञानमा प्रयास गरे। यस वर्ष, हामीले 100 मिलियन विद्यार्थिहरूमा पुग्न विश्वव्यापी रूपले विद्यार्थीहरूलाई सामिल गर्दैछौँ!
+      That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 8-14). Last year, 15 million students tried computer science in one week. This year, we're joining students worldwide to reach 100 million students!
     </p>
     
     <p>
-      21 औँ सताब्दीको क्षमताहरूको मुख्य आधारहरू सिकाउन [SCHOOL NAME] तयार छ भनि हाम्रो Hour of Code को बयान छ। कार्यक्रमको गतिविधिहरूलाई तपाइँको विद्यार्थीहरूमा लैजान, हामी हाम्रो Hour of Code को घटनालाई एकदमै ठूलो बनाउन चाहन्छौँ। म तपाइँलाई स्यंसेवक हुन, स्थानीय मीडियामा पुग्न, तपाइँको सामाजिक मीडियाको च्यानलहरूमा समाचर साझा गर्न र अतिरिक्त Hour of Code को घटनाहरूलाई समुदायमा होस्ट गर्न ध्यान दिन प्रोत्साहित गर्छौँ।
+      Our Hour of Code is a statement that [SCHOOL NAME] is ready to teach these foundational 21st century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on your social media channels and consider hosting additional Hour of Code events in the community.
     </p>
     
     <p>
-      शिक्षालाई अझ [TOWN/CITY NAME] मा परिवर्तन गर्ने मौका यो हो।
+      This is a chance to change the future of education in [TOWN/CITY NAME].
     </p>
     
     <p>
-      विवरणहरूको लागि http://hourofcode.com हेर्नुहोस्, र शब्दलाई अलग गर्न मदत गर्नुहोस्।
+      See http://hourofcode.com for details, and help spread the word.
     </p>
     
     <p>
-      होसियारि साथ,
+      Sincerely,
     </p>
     
     <p>
-      तपाइँको प्रधानाध्यापक
+      Your principal
     </p>
     
     <p>
@@ -234,29 +250,29 @@
     </p>
     
     <h2>
-      तपाइँको विद्यालयको घटनामा स्थानीय राजनीतिलाई बोलाउनुहोस्:
+      Invite a local politician to your school's event:
     </h2>
     
     <p>
-      प्रिय [मेयर/गभर्नर/प्रतिनिधित्व गर्ने/सेनाटर LAST NAME]:
+      Dear [Mayor/Governor/Representative/Senator LAST NAME]:
     </p>
     
     <p>
-      तपाइँलाई आजको अर्थव्यवस्थामा, 3-देखि-1 क्षेत्रमा स्नातक विद्यार्थिहरूको साथ कम्प्युटिङ्को कामको संख्यालाई बढाउनुहुन्छ? र, कम्प्युटर विज्ञान आज <em>हरेक</em> उद्योगको लागि मुख्य छ। अहिले 90% विद्यालयहरूले यसलाई पढाउँदैनन्। [SCHOOL NAME] मा, हामीले त्यसलाई परिवर्तन गर्ने प्रयास गरिरहेका छौँ।
+      Did you know that in today’s economy, computing jobs outnumber students graduating into the field by 3-to-1? And, computer science is foundational for <em>every</em> industry today. Yet 90% of schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
     </p>
     
     <p>
-      त्यहि कारणले हाम्रो सम्पूर्ण विद्यालयको इतिहासमा सबै भन्दा बढी सिक्ने घटनामा सामेल हुन्छन्: Hour of Code, कम्प्युटर विज्ञान शिक्षा सप्ताह (डिसेम्बर 8-14) को अवधिमा। गत वर्ष, एक हप्ताहमा15 मिलियन विद्यार्थीहरूले कम्प्युटर विज्ञानमा प्रयास गरे। यस वर्ष, हामीले 100 मिलियन विद्यार्थिहरूमा पुग्न विश्वव्यापी रूपले विद्यार्थीहरूलाई सामिल गर्दैछौँ!
+      That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 8-14). Last year, 15 million students tried computer science in one week. This year, we're joining students worldwide to reach 100 million students!
     </p>
     
     <p>
-      म तपाइँलाई हाम्रो Hour of Code को घटनामा भाग लिन र हाम्रो सुरु गर्ने विधानसभामा बोल्न निमन्त्रणा लेख्दै छु। यसले [DATE, TIME, PLACE] को स्थान लिन्छ, र हाम्रो विद्यार्थीहरूलाई 21 औँ सताब्दिको आलोचनात्मक क्षमताहरू सिकाउन [राज्य वा सहरको नाम] तयार सुदृढ बयान बनाउने छ। हामी हाम्रो विद्यार्थीहरूको भविष्य - यसलाई उपभोग गर्ने मात्र नभई प्रविधिको सिर्जना गर्न सबै भन्दा अगि छन् भनि पक्का गर्न चाहन्छौँ।
+      I'm writing to invite you to take part in our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st century skills. We want to ensure that our students are on the forefront of creating technology of the future--not just consuming it.
     </p>
     
     <p>
-      कृपया मलाई [PHONE NUMBER OR EMAIL ADDRESS] मा सम्पर्क गर्नुहोस्। म तपाइँको जवाफको प्रतिक्षा गर्छु।
+      Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
     </p>
     
     <p>
-      हितयसि, [NAME], [TITLE]
+      Sincerely, [NAME], [TITLE]
     </p>

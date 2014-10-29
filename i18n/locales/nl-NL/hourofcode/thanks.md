@@ -14,11 +14,11 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Bedankt dat je je hebt opgegeven om een Uur Code te organiseren!
 
-**IEDERE** Uur Code-organisator krijgt 10GB Dropbox-ruimte of $10 aan Skype-credit als bedankje. [Details](/prizes)
+**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](<%= hoc_uri('/prizes') %>)
 
 <% if @country == 'us' %>
 
-Zorg dat je [hele school meedoet](/us/prizes) om kans te maken op grote prijzen voor je hele school.
+Get your [whole school to participate](<%= hoc_uri('/prizes') %>) for a chance for big prizes for your entire school.
 
 <% end %>
 
@@ -32,23 +32,23 @@ Vertel je vrienden over het Uur Code, #HourOfCode.
 
 ## 2. Vraag je hele school een Uur Code aan te bieden
 
-[Stuur deze mail](/resources#email) of [geef deze documenten aan je rector](/files/schools-handout.pdf). Is je school aan boord, [ding dan mee naar $10.000 aan technologie voor je school](/prizes) en daag andere scholen in je district uit ook mee te doen.
+[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](<%= hoc_uri('/files/schools-handout.pdf') %>). Is je school aan boord, [ding dan mee naar $10.000 aan technologie voor je school](/prizes) en daag andere scholen in je district uit ook mee te doen.
 
 <% else %>
 
 ## 2. Vraag je hele school een Uur Code aan te bieden
 
-[Stuur deze mail](/resources#email) of geef [deze documenten](/files/schools-handout.pdf) aan je rector.
+[Send this email](<%= hoc_uri('/resources#email') %>) or give [this handout](<%= hoc_uri('/files/schools-handout.pdf') %>) to your principal.
 
 <% end %>
 
 ## 3. Maak een donatie
 
-[Doneer aan onze crowdfunding campagne](http://code.org/donate). Om te leren aan 100 miljoen kinderen, hebben wij uw steun nodig. We hebben zonet, wat hèt [grootste crowdfunding voorlichtingscampagne](http://code.org/donate) in de geschiedenis kan worden, gelanceerd. Elke dollar zal door grote Code.org [donoren](http://code.org/about/donors) verdubbeld worden.
+[Donate to our crowdfunding campaign.](http://<%= codeorg_url() %>/donate) To teach 100 million children, we need your support. We just launched what could be the [largest education crowdfunding campaign](http://<%= codeorg_url() %>/donate) in history. Every dollar will be matched by major Code.org [donors](http://<%= codeorg_url() %>/about/donors), doubling your impact.
 
 ## 4. Vraag uw werkgever om betrokken te raken
 
-[Stuur deze e-mail](/resources#email) naar uw manager of de CEO. Of [Geef ze deze documenten](/resources/hoc-one-pager.pdf).
+[Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](<%= hoc_uri('/resources/hoc-one-pager.pdf') %>).
 
 ## 5. Promoot het Uur Code in je gemeenschap
 
@@ -56,6 +56,6 @@ Werk samen met een vereniging — scouting, kerk, universiteit of vakbond. Of or
 
 ## 6. Vraag een politicus het Uur Code te ondersteunen
 
-[Stuur deze mail](/resources#politicians) aan je burgemeester, raad of schoolbestuur. Of [Geef ze deze documenten ](/resources/hoc-one-pager.pdf)en nodig hen uit voor een bezoek aan je school.
+[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board. Or [give them this handout](<%= hoc_uri('/resources/hoc-one-pager.pdf') %>) and invite them to visit your school.
 
 <%= view 'popup_window.js' %>

@@ -45,7 +45,7 @@ Nadamo se da će nadahnuti učenika da nastave učiti. Istraživanja također po
 
 *Zašto je to važno?*
 
-U Kini, svi učenici uče informatiku kako bi završili srednju školu. U SAD-u 90% škola uopće ne poučava učenike informatici. Vrijeme je da se uhvatimo u koštac sa 21-im stoljećem. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them the confidence and know-how to succeed.
+U Kini, svi učenici uče informatiku kako bi završili srednju školu. U SAD-u 90% škola uopće ne poučava učenike informatici. Vrijeme je da se uhvatimo u koštac sa 21-im stoljećem. Poznato nam je da bez obzira na to što učenici žele biti kada odrastu, bez obzira na to da li ih zanima medicina, poduzetništvo, politika ili umjetnost, znanje o tehnologiji prućit će im samopouzdanje i vještine potrebne za uspijeh.
 
 **Više detalja i citat koji možete koristiti u materijalima**
 
@@ -53,7 +53,7 @@ U Kini, svi učenici uče informatiku kako bi završili srednju školu. U SAD-u 
 
 **Više o Code.org**
 
-Code.org® je 501c3 javna neprofitna organizacija posvećena povećanju broja sudionika u informatici i povećanju sudjelovanja žena i manjina. Naša je vizija da svaki ućenik u svakoj školi ima priliku učiti informatiku. Nakon svog početka 2013-te godine, Code.org organizirao je kampanju Sat Kodiranja — koja je milijunima predstavila informatiku — u suradnji sa više od 30 školskih okruga u SAD-u, te pokrenuo Studio Kodiranja, open-source, online platformu učenja za sve uzraste. Za više informacija, molimo posjetite: <% if @country == 'uk' %> [www.uk.code.org](http://uk.code.org). <% else %> [www.code.org](http://code.org). <% end %>
+Code.org® je 501c3 javna neprofitna organizacija posvećena povećanju broja sudionika u informatici i povećanju sudjelovanja žena i manjina. Naša je vizija da svaki ućenik u svakoj školi ima priliku učiti informatiku. Nakon svog početka 2013-te godine, Code.org organizirao je kampanju Sat Kodiranja — koja je milijunima predstavila informatiku — u suradnji sa više od 30 školskih okruga u SAD-u, te pokrenuo Studio Kodiranja, open-source, online platformu učenja za sve uzraste. For more information, please visit: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
 Više resursa i primjeraka e-pošte možete naći [ovdje](<%= hoc_uri('/resources') %>).

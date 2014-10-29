@@ -45,7 +45,7 @@ Esperamos que despierta una inquietud en nuestros estudiantes para seguir aprend
 
 *¿Por qué es importante?*
 
-En China, todos los estudiantes toman clases de computación para graduarse de la preparatoria. En Estados Unidos, el 90% de la escuelas ni siquiera enseñan computación. Es tiempo de avanzar al siglo XXI. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them the confidence and know-how to succeed.
+En China, todos los estudiantes toman clases de computación para graduarse de la preparatoria. En Estados Unidos, el 90% de la escuelas ni siquiera enseñan computación. Es tiempo de avanzar al siglo XXI. Sabemos que sin importar la carrera que sigan nuestros estudiantes al crecer, ya sea medicina, negocios, política o las artes, saber como construir tecnología les dará confianza y conocimientos para triunfar.
 
 **Otros detalles y una cita que puedes usar para tus materiales promocionales**
 
@@ -53,7 +53,7 @@ En China, todos los estudiantes toman clases de computación para graduarse de l
 
 **Acerca de Code.org**
 
-Code.org® es un 501c3-público sin fines de lucro dedicado a ampliar la participación en informática y aumentar la participación de las mujeres y los estudiantes sub-representados de color. Su visión es que cada estudiante en cada escuela debería tener la oportunidad de aprender programación. Ddespués de su inició en 2013, Code.org organizó la campaña de la Hora de Programación - que ha sido introducida a millones de estudiantes de computación - en asociación con más de 30 distritos de escuelas públicas en toda la nación, y lanzó Code Studio, una plataforma gratuita de aprendizaje para todas las edades. Para más información, visite: <% if @country == 'uk' %> [www.uk.code.org](http://uk.code.org). <% else %> [www.code.org](http://code.org). <% end %>
+Code.org® es un 501c3-público sin fines de lucro dedicado a ampliar la participación en informática y aumentar la participación de las mujeres y los estudiantes sub-representados de color. Su visión es que cada estudiante en cada escuela debería tener la oportunidad de aprender programación. Ddespués de su inició en 2013, Code.org organizó la campaña de la Hora de Programación - que ha sido introducida a millones de estudiantes de computación - en asociación con más de 30 distritos de escuelas públicas en toda la nación, y lanzó Code Studio, una plataforma gratuita de aprendizaje para todas las edades. For more information, please visit: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
-Encuentre [aquí](<%= hoc_uri('/resources') %>) más recursos y correos electrónicos de muestra.
+Encontrá [aquí](<%= hoc_uri('/resources') %>) más recursos y correos electrónicos de ejemplo.

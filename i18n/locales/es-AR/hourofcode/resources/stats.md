@@ -4,16 +4,16 @@ title: Resources layout: wide
 
 * * *
 
-# Cómo atraer los medios a tú evento "Hora de Código"
+# Cómo atraer a los medios de comunicación a tu evento de la Hora del Código
 
-## Algunas estadísticas impactantes (EUA):
+## Estadísticas impactantes (EEUU):
 
-  * Habrá 1 millón más de empleos de computación que estudiantes en los próximos 10 años (sumando un total de $500 billones en salarios).
-  * Más del 50 por ciento de las ocupaciones proyectadas en Matemáticas y Ciencias están en el campo de la computación. 
-  * Los empleos en el campo de la computación están entre los mejor pagados para recién graduados. Sin embargo, menos del 3% de los estudiantes universitarios se gradúan de una licenciatura en Ciencias de la Computación.
-  * En 26 estados, las clases de Ciencias de la Computación no cuentan en los requerimientos de Matemáticas o Ciencias para la graduación secundaria. 
-  * Menos del 20% de los estudiantes de Ciencias de la Computación en niveles avanzados son mujeres. Menos del 10% son negros o Latinos.
+  * Habrá 1 millón más de empleos vinculados a computación que alumnos de esta área en los próximos 10 años.
+  * Más del 50 por ciento de las ocupaciones proyectadas para el área de Matemáticas y Ciencias están en el campo de la Computación. 
+  * Los empleos en el campo de la computación están entre los mejor pagos para gente que recién se gradúa. Sin embargo, menos del 3% de los estudiantes universitarios se gradúan de en carreras vinculadas a la Computación.
+  * 
+  * Menos del 20% de los estudiantes de Ciencias de la Computación en niveles avanzados son mujeres.
 
-## Versión infográfica:
+## Infografía:
 
 ![imagen](http://code.org/images/fit-8000/Code.org_infographic.png)
