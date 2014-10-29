@@ -23,22 +23,23 @@ EvalTriangle.prototype.draw = function (parent) {
     parent.appendChild(this.element_);
   }
 
-  // x/y refer to center of triangle
+  // center at 0, 0 (allowing transforms to move it around)
+  // the center is halfway between width, and a third of the way up the height
   var height = Math.sqrt(3) / 2 * this.edge_;
 
   var bottomLeft = {
-    x: this.x_ - this.edge_ / 2,
-    y: this.y_ + height / 2
+    x: -this.edge_ / 2,
+    y: height / 3
   };
 
   var bottomRight = {
-    x: this.x_ + this.edge_ / 2,
-    y: this.y_ + height / 2
+    x: this.edge_ / 2,
+    y: height / 3
   };
 
   var top = {
-    x: this.x_,
-    y: this.y_ - height / 2
+    x: 0,
+    y: -height * 2 / 3
   };
 
 

@@ -24,9 +24,9 @@ EvalRect.prototype.draw = function (parent) {
     parent.appendChild(this.element_);
   }
 
-  // x/y refer to center of rect
-  this.element_.setAttribute('x', this.x_ - this.width_ / 2);
-  this.element_.setAttribute('y', this.y_ - this.height_ / 2);
+  // center rect at 0, 0. we'll use transforms to move it.
+  this.element_.setAttribute('x', -this.width_ / 2);
+  this.element_.setAttribute('y', -this.height_ / 2);
   this.element_.setAttribute('width', this.width_);
   this.element_.setAttribute('height', this.height_);
 

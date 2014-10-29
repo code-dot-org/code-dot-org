@@ -23,8 +23,8 @@ EvalCircle.prototype.draw = function (parent) {
     this.element_ = document.createElementNS(Blockly.SVG_NS, 'ellipse');
     parent.appendChild(this.element_);
   }
-  this.element_.setAttribute('cx', this.x_);
-  this.element_.setAttribute('cy', this.y_);
+  this.element_.setAttribute('cx', 0);
+  this.element_.setAttribute('cy', 0);
   this.element_.setAttribute('rx', this.width_ / 2);
   this.element_.setAttribute('ry', this.height_ / 2);
 
