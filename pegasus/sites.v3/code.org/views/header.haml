@@ -16,7 +16,7 @@
         %img{:src=>"/images/zazzle_purple.png"}
       %a{:href=>"/donate", :title=>'Donate', :style=>"text-decoration:none"}
         %img{:src=>"/images/donate_normal.png"}
-      #sign_in_or_user{:style=>'display: inline-block; float: right; background-color: #b9bf15; height: 35px; padding: 5px 5px 5px 0px; border-radius: 5px'}
+      #sign_in_or_user{:style=>'display: none; float: right; background-color: #b9bf15; height: 35px; padding: 6px 5px 5px 0px; border-radius: 5px'}
       %br
       %br
       %br
@@ -42,7 +42,9 @@
       //data: "id=" + id, // appears as $_GET['id'] @ ur backend side
       success: function(data) {
         // data is ur summary
-        $('#sign_in_or_user').html(data);
+        var signInButton = $('#sign_in_or_user');
+        signInButton.html(data);
+        signInButton.css({"display":"inline-block"});
       }
     });
   });
