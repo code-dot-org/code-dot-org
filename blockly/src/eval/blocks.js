@@ -128,9 +128,28 @@ exports.install = function(blockly, blockInstallOptions) {
     ]
   });
 
-  installPlaceImage(blockly, generator, gensym);
-  installStyle(blockly, generator, gensym);
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'place_image',
+    blockTitle: msg.placeImageBlockTitle(),
+    apiName: 'placeImage',
+    args: [
+      { name: 'IMAGE', type: 'image' },
+      { name: 'X', type: 'Number' },
+      { name: 'Y', type: 'Number' }
+    ]
+  });
 
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'rotate',
+    blockTitle: msg.rotateImageBlockTitle(),
+    apiName: 'rotateImage',
+    args: [
+      { name: 'IMAGE', type: 'image' },
+      { name: 'DEGREES', type: 'Number' }
+    ]
+  });
+
+  installStyle(blockly, generator, gensym);
 };
 
 
@@ -193,53 +212,6 @@ function installString(blockly, generator, gensym) {
     return "Eval.string('" + this.getTitleValue('VAL') + "')";
   };
 }
-
-/**
- * place_image
- */
-function installPlaceImage(blockly, generator, gensym) {
-  blockly.Blocks.place_image = {
-    init: function () {
-      initTitledFunctionalBlock(this, msg.placeImageBlockTitle(), 'image', [
-        { name: 'IMAGE', type: 'image' },
-        { name: 'X', type: 'Number' },
-        { name: 'Y', type: 'Number' }
-      ]);
-    }
-  };
-
-  generator.place_image = function() {
-    var image = Blockly.JavaScript.statementToCode(this, 'IMAGE', false);
-    var x = Blockly.JavaScript.statementToCode(this, 'X', false) || '0';
-    var y = Blockly.JavaScript.statementToCode(this, 'Y', false) || '0';
-
-    y = evalUtils.cartesianToPixel(y);
-
-    return "Eval.placeImage(" + [image, x, y].join(", ") + ")";
-  };
-}
-
-
-// /**
-//  * overlay
-//  */
-// function installOverlay(blockly, generator, gensym) {
-//   blockly.Blocks.overlay = {
-//     init: function () {
-//       initTitledFunctionalBlock(this, msg.overlayBlockTitle(), 'image', [
-//         { name: 'TOP', type: 'image' },
-//         { name: 'BOTTOM', type: 'image' },
-//       ]);
-//     }
-//   };
-//
-//   generator.overlay = function() {
-//     var top = Blockly.JavaScript.statementToCode(this, 'TOP', false);
-//     var bottom = Blockly.JavaScript.statementToCode(this, 'BOTTOM', false);
-//
-//     return "Eval.overlay(" + [top, bottom].join(", ") + ")";
-//   };
-// }
 
 /**
  * functional_style
