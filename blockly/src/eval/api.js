@@ -64,3 +64,8 @@ exports.rotateImage = function (image, degrees) {
   image.rotate(degrees);
   return exports.register(image);
 };
+
+exports.scaleImage = function (image, factor) {
+  image.scale(factor, factor);
+  return exports.register(image);
+};

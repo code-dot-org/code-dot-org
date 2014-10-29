@@ -6,7 +6,13 @@ var blockUtils = require('../block_utils');
  */
 module.exports = {
   'eval1': {
-    solutionBlocks: '<block type="functional_circle" inline="false"><functional_input name="COLOR"><block type="functional_string"><title name="VAL">red</title></block></functional_input><functional_input name="SIZE"><block type="functional_math_number"><title name="NUM">50</title></block></functional_input></block>',
+    // solutionBlocks: '<block type="functional_circle" inline="false"><functional_input name="COLOR"><block type="functional_string"><title name="VAL">red</title></block></functional_input><functional_input name="SIZE"><block type="functional_math_number"><title name="NUM">50</title></block></functional_input></block>',
+
+    solutionBlocks: blockUtils.mathBlockXml('functional_square', {
+      'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'black' } ),
+      'STYLE': blockUtils.mathBlockXml('functional_string', null, { VAL: 'solid' }),
+      'SIZE': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 4 } )
+    }),
     ideal: Infinity,
     toolbox: blockUtils.createToolbox(
       blockUtils.blockOfType('functional_plus') +
