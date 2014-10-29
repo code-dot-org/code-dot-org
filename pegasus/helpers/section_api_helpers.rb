@@ -1,3 +1,4 @@
+require 'cdo/user_helpers'
 # TODO -- remove this and change the APIs below to check logged in user instead of passing in a user id
 class Dashboard
   def self.admin?(user_id)
@@ -31,6 +32,7 @@ class DashboardStudent
       birthday:params[:birthday],
       created_at:created_at,
       updated_at:created_at,
+      username:UserHelpers.generate_username(DASHBOARD_DB[:users], name)
     }.merge(random_secrets))
     return nil unless row
 
@@ -88,7 +90,9 @@ class DashboardStudent
 
   def self.birthday_to_age(birthday)
     return if birthday.nil?
-    ((Date.today - birthday) / 365).to_i # TODO should this be 365.25
+    age = ((Date.today - birthday) / 365).to_i # TODO should this be 365.25
+    age = "21+" if age >= 21
+    age
   end
 
   def self.fields()

@@ -1,4 +1,4 @@
-We received dozens of tutorial submissions very recently so we haven’t sorted through them all yet. If yours was submitted but is not listed yet, please don’t contact us. Our tutorial guidelines and submission form are listed [here](https://docs.google.com/document/d/15ZgcTxGPGciHJUTzuSVEd1fUEuoCHRbSUDzQe60INRI/pub).  In that document you can also see the guidelines we've used for which tutorials to highlight.
+We received dozens of tutorial submissions very recently so we haven’t sorted through them all yet. If yours was submitted but is not listed yet, please don’t contact us. Our tutorial guidelines and submission form are listed [here](http://hourofcode.com/us/tutorial-guidelines).  In that document you can also see the guidelines we've used for which tutorials to highlight.
 
 # Quick Tips for Educators
 
@@ -7,7 +7,7 @@ We received dozens of tutorial submissions very recently so we haven’t sorted 
 
 **Choose a tutorial for your students**
 
-- Check out the [tutorials](http://csedweek.org/learn) and pick one for your class. Note: more international/multilingual support is on its way.
+- Check out the [tutorials](http://code.org/learn) and pick one for your class. Note: more international/multilingual support is on its way.
 - Go through the tutorial yourself so you can help students during the Hour of Code.
 - Test tutorials on student computers or devices. Make sure they work properly (with sound and video).
 - Preview the congrats page to see what students will see when they finish. 
@@ -15,15 +15,17 @@ We received dozens of tutorial submissions very recently so we haven’t sorted 
 
 **Plan ahead based on your technology available**
 
-- Don't have enough devices? Use [pair programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
+- Don't have enough devices? Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q&feature=youtu.be). When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
 - Have low bandwidth? Plan to show videos at the front of the class, so each student isn't downloading their own videos.
 
 ## During your Hour of Code
 
 **Inspire your students - show them a video**
 
-We'll have an Hour of Code video by CSEdWeek. For now, check out [these videos](http://youtube.com/codeorg), featuring Bill Gates, Mark Zuckerberg, Black Eyed Peas founder will.i.am and NBA star Chris Bosh talking about the importance of programming.
+Check out [these inspirational videos](https://www.youtube.com/watch?v=FC5FbmsH4fw), featuring Bill Gates, Mark Zuckerberg, Black Eyed Peas founder will.i.am and NBA star Chris Bosh talking about the importance of programming.
 (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
+
+You can find more videos [here](http://hourofcode.com/us/resources#videos).
 
 **Get your students excited - give them a short intro**
 
@@ -38,7 +40,7 @@ Most kids don’t know what computer science is. Here are some ideas:
 
 **Direct students to the activity**
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](http://code.org/learn) under the number of participants. (Example: [hourofcode.com/co](http://code.org/learn)) 
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](http://code.org/learn) under the number of participants. (Example: [hourofcode.com/com](http://code.org/learn)) 
 - Tell students to visit the URL and start the tutorial.
 
 **When your students come across difficulties**

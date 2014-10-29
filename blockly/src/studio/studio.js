@@ -973,6 +973,7 @@ Studio.init = function(config) {
       extraControlRows: extraControlsRow,
       blockUsed: undefined,
       idealBlockNumber: undefined,
+      editCode: level.editCode,
       blockCounterClass: 'block-counter-default'
     }
   });
@@ -1023,12 +1024,9 @@ Studio.init = function(config) {
     drawMap();
   };
 
-  config.getDisplayWidth = function() {
-    var el = document.getElementById('visualizationColumn');
-    return el.getBoundingClientRect().width;
-  };
-
-  arrangeStartBlocks(config);
+  if (config.level.edit_blocks != 'toolbox_blocks') {
+    arrangeStartBlocks(config);
+  }
 
   config.twitter = twitterOptions;
 

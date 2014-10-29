@@ -1,9 +1,9 @@
 {
   "continue": "Continuar",
-  "nextLevel": "Parabéns! Você completou este desafio.",
+  "nextLevel": "Parabéns! Você completou o desafio.",
   "no": "Não",
-  "numBlocksNeeded": "Esse desafio pode ser resolvido com %1 blocos.",
-  "reinfFeedbackMsg": "Você pode clicar em \"Tente novamente\" para voltar a jogar o jogo.",
+  "numBlocksNeeded": "Esse desafio pode ser resolvido com blocos de %1.",
+  "reinfFeedbackMsg": "Você pode pressionar o botão de \"Tentar novamente\" para voltar a jogar o seu jogo.",
   "share": "Compartilhar",
   "shareGame": "Compartilhe seu jogo:",
   "yes": "Sim"

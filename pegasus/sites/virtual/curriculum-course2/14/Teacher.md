@@ -100,7 +100,7 @@ This lesson has one new and important word:<br/>
 [/centerIt]
 
 **Binary** - Say it with me: Bi-nare-ee <br/>
-A way of representing information using only two options.
+A way of representing information using only two options
 
 ### <a name="GetStarted"></a> 3) Off and On
 - If you've written a short message on the board in binary, call the students' attention to it and ask if anyone knows what it is or what it means.

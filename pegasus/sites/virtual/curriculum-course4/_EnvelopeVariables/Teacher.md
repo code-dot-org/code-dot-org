@@ -58,12 +58,14 @@ Students will:
 
 - Blank Paper
 - 6 envelopes per group, labeled with the names (name1, name2, Name1, eyes1, sisters1, sisters2)
+- 1 [Envelope Variables Worksheet](Activity4-Variables.pdf) per group
 - Pens/Pencils/Markers
 - [Variables Assessment Worksheet](Assessment4-Variables.pdf)
 
 ### For the Teacher
 
 - Prepare your variable presentation by writing variable names on the back of envelopes and stuffing them with appropriate values
+- Print one [Envelope Variables Worksheet](Activity4-Variables.pdf) per student
 - Print one [Variables Assessment Worksheet](Assessment4-Variables.pdf)
 - Provide students with envelopes (details above), paper, pens & pencils
 
