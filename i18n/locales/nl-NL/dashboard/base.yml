@@ -65,10 +65,7 @@ nl:
     overview_student: 'Meld je aan voor een account om je voortgang bij te houden. Je e-mail wordt in eerste instantie gebruikt om je te laten inloggen en om je wachtwoord aan te passen. Zie voor meer informatie onze <a href="http://code.org/privacy">Privacy Policy</a>.'
     overview_teacher: 'Leer computer techniek in uw klaslokaal, maak een gebruikersnaam aan. <p/> U kan uw leerlingen toevoegen en hun vooruitgang zien.'
     no_signup_message: 'Je kunt <a target="_blank" href="http://learn.code.org">de verschillende niveaus en levels bekijken</a>, maar om je voortgang te bewaren moet je je aanmelden.'
-    prizes_message: 'Leerlingen uit de Verenigde Staten die elk %{num_trophies} concept-bekers hebben verdient, kunnen kiezen uit een aantal prijzen zoals gratis ruimte in hun Dropbox, Skype credits, en te downloaded spellen van Electronic Arts.'
     teacher_educator_guide: Kijk in de lerarengids
-    teacher_prize_header: 'Win USD 1000.00 aan <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> prijzengeld voor een Amerikaans goed doel (geldig tot en met 15 juni 2014, zolang de voorraad strekt)'
-    teacher_prize_message: 'In samenwerking met <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>, zal Code.org maximaal $1,000 schenken aan leerkrachten van Amerikaanse openbare scholen die tenminste 15 leerlingen begeleiden in de cursus "K-8 Intro to Computer Science course"  (tot 15 juni 2014, zolang er budget is).  <a href="http://code.org/educate/20hr">Meer info in the docenten gids </a>.  (maximaal $1,000 per leerkracht.  <a target="_blank" href="http://help.donorschoose.org/app/answers/detail/a_id/454/kw/code.org">Meer maxima in de FAQ</a>.)'
     teacher_pitch: Registreer als leraar voor Code.org
     teacher_title: Inschrijven voor leraren
     student_pitch: Registreren als leerling voor Code.org
@@ -79,6 +76,7 @@ nl:
     gender: Geslacht (optioneel)
     birthday: Verjaardag (optioneel)
     age: Leeftijd
+    user_type: Are you a student or teacher?
     submit: Meld je aan
     teacher: Bent u een leraar?
     valid_username: Beschikbaar!
@@ -329,7 +327,6 @@ nl:
     student_progress: Je voortgang
     student_stats: 'Je hebt %{trophy_count} van de %{trophy_max} "Concept Mastery" trofeeën.'
     student_left_off: 'Waar je geëindigd bent:'
-    student_finished_prize: 'Je hebt alle tutorials voltooid, claim je prijs %{prize_link} en zoek een andere klas %{online_link} of bij een %{local_school_link}'
     student_finished: 'Je hebt alle opdrachten gedaan, kies een andere les %{online_link} of kijk bij %{local_school_link}'
     local_school: lokale school
     online: online
@@ -352,6 +349,9 @@ nl:
     male: Man
     female: Vrouw
     none: Wil ik liever niet zeggen
+  user_type:
+    student: Leerling
+    teacher: Teacher
   footer:
     help_from_html: Werknemers van Google, Microsoft, Facebook en Twitter hebben geholpen bij het samenstellen van deze opdracht.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. All Rights Reserved.'
@@ -362,13 +362,6 @@ nl:
     tos: Voorwaarden
     privacy: Privacy Policy
     secure: Beveiligde versie
-  prize_mail:
-    prize_earned:
-      subject: Geef je prijs vrij op Code.org!
-    teacher_prize_earned:
-      subject: Gefelicteerd van Code.org!
-    teacher_bonus_prize_earned:
-      subject: Geef je bonusprijs vrij op Code.org!
   reference_area:
     title: Hulp nodig?
     subtitle: "Bekijk deze video's en hints"

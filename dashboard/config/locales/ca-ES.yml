@@ -70,15 +70,7 @@
     no_signup_message: Pots <a target="_blank" href="http://learn.code.org">navegar
       pels diversos puzzles i nivells</a>, però necessitaràs registrar-te per a desar
       el teu progrés.
-    prizes_message: U.S. students who earn all %{num_trophies} concept trophies can
-      select a variety of prizes including free Dropbox space, Skype credits, and
-      downloadable games from Electronic Arts.
     teacher_educator_guide: Mira la guia de l'educador
-    teacher_prize_header: Guanya 1,000$ en premis <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
-    teacher_prize_message: 'In partnership with <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>,
-      Code.org will offer up to $1,000 in classroom funding to U.S. public school
-      teachers who lead at least 15 students through this course. <a href="http://code.org/educate/20hr">See
-      educator guide for more info.</a> '
     teacher_pitch: Alta a Code.org per professors
     teacher_title: Professor registrat
     student_pitch: Alta a Code.org per estudiants
@@ -89,6 +81,7 @@
     gender: Sexe (opcional)
     birthday: Aniversari (opcional)
     age: Age (optional)
+    user_type: Are you a student or teacher?
     submit: Inscriure's
     teacher: "És vostè un professor?"
     valid_username: Disponible!
@@ -384,8 +377,6 @@
     student_stats: Has guanyat %{trophy_count} fora del %{trophy_max} "Concepte de
       Domini" de trofeus.
     student_left_off: 'On ho vas deixar:'
-    student_finished_prize: Has completat tots els tutorials, reclama el teu %{prize_link}
-      i escull una altra classe %{online_link} o una %{local_school_link}
     student_finished: You've completed all tutorials, pick another class %{online_link}
       or at a %{local_school_link}
     local_school: escola local
@@ -412,6 +403,9 @@
     male: Home
     female: Dona
     none: Prefereixo no respondre
+  user_type:
+    student: estudiant
+    teacher: Teacher
   footer:
     help_from_html: Enginyers de <a href="http://www.google.com">Google</a>, <a href="http://www.microsoft.com">Microsoft</a>,
       <a href="http://www.facebook.com">Facebook</a>, and <a href="http://www.twitter.com">Twitter</a>
@@ -427,13 +421,6 @@
     tos: Condicions del servei
     privacy: Política de Privacitat
     secure: Secure Version
-  prize_mail:
-    prize_earned:
-      subject: Reclama el teu premi a Code.org!
-    teacher_prize_earned:
-      subject: Reclama el teu premi a Code.org!
-    teacher_bonus_prize_earned:
-      subject: Reclama el teu premi de bonificació a Code.org!
   reference_area:
     title: Necessites ajuda?
     subtitle: Mira aquests vídeos i consells

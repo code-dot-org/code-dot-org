@@ -1,6 +1,6 @@
 * * *
 
-title: Resources layout: wide
+title: Recursos layout: wide
 
 * * *
 
@@ -32,18 +32,18 @@ La mejor experiencia de la Hora de Programación se logrará con computadoras co
 
 ## 4) Motive a los estudiantes - muestre un video
 
-Show students an inspirational video to kick off the Hour of Code. Examples:
+Muestra a los estudiantes un video inspirador para dar inicio a la Hora de Programación. Por ejemplo:
 
-  * The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
-  * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [Hour of Code 2014 video](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
-  * [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+  * El vídeo original de lanzamiento de Code.org, con Bill Gates, Mark Zuckerberg y la estrella de la NBA Chris Bosh (Hay versiones de [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutos](https://www.youtube.com/watch?v=nKIu9yen5nc) y [9 minutos](https://www.youtube.com/watch?v=dU1xS07N-FA))
+  * El vídeo de lanzamiento de [la Hora de Programación 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), o de <% if @country == 'uk' %> [la Hora de Programación 2014](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [la Hora de Programación 2014](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
+  * [El llamado del presidente Obama a que todos los estudiantes aprendan Ciencias de la Computación](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
 **Emocione a los estudiantes - Empiece con una introducción breve**
 
 La mayoría de los chicos no saben que es ciencias computacionales. Aquí tienes algunas ideas:
 
-  * Explain it in a simple way that includes examples of applications that both boys and girls will care about (saving lives, helping people, connecting people, etc.).
-  * Try: "Think about things in your everyday life that use computer science: a cell phone, a microwave, a computer, a traffic light… all of these things needed a computer scientist to help build them.”
+  * Explica en una forma sencilla que incluya ejemplos de aplicaciones que les interesen tanto a niños como a niñas (salvar vidas, ayudar a la gente, conectar personas, etc).
+  * Prueba decir: "Piensen acerca de cosas en la vida diaria que usan Ciencias de la Computación: un teléfono celular, un microondas, una computadora, un semáforo... Todas esas cosas necesitan un profesinal en Ciencias de la Computación para ayudar a construirlas."
   * Or: “Computer science is the art of blending human ideas and digital tools to increase our power. Computer scientists work in so many different areas: writing apps for phones, curing diseases, creating animated movies, working on social media, building robots that explore other planets and so much more."
   * See tips for getting girls interested in computer science [here](http://<%= codeorg_url() %>/girls). 
 

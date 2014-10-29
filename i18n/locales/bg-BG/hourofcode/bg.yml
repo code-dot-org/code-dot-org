@@ -12,7 +12,7 @@ bg:
   header_menu_prizes: Награди
   header_menu_uk_code_org: uk.code.org
   choose_country_header: Участници от целия свят!
-  country_al: Albania
+  country_al: Албания
   country_ar: Аржентина
   country_au: Австралия 
   country_br: Бразилия
@@ -26,7 +26,7 @@ bg:
   country_it: Италия 
   country_jp: Япония
   country_me: Близкия изток и Северна Африка
-  country_my: Malaysia
+  country_my: Малайзия
   country_nz: Нова Зеландия 
   country_ro: Румъния
   country_ru: Русия
@@ -35,19 +35,19 @@ bg:
   country_us: САЩ
   country_vn: Виетнам 
   company_4-H: 4-H Youth Development
-  company_bgca: Boys and Girls Club of America
-  company_cgcs: Council of the Great City Schools
-  company_gsusa: Girl Scouts of America
-  company_bsusa: Boy Scouts of America
-  company_napcs: National Alliance of Public Charter Schools
-  company_tfa: Teachers for America
+  company_bgca: Момчета и момичета от клуб Америка
+  company_cgcs: Съвет на големите градски училища
+  company_gsusa: Момичета скаути на Америка
+  company_bsusa: Момчета скаути на Америка
+  company_napcs: Национален алианс на обществените чартърни училища
+  company_tfa: Учители за Америка
   company_tntp: TNTP
-  company_asa: Afterschool Alliance
+  company_asa: Afterschool алианс
   company_ngcp: National Girls Collaborative Project
   prizes_all: Награди за всеки организатор
   prizes_every_organizer: Всеки организатор на събитие ще получи Dropbox или Skype кредит в знак на благодарност
   prizes_technology: По едно държавно училище от всеки американски щат( включително и Вашингтон) ще спечели $10,000 за технологии
-  prizes_tech_chats: 96 classrooms will win video chats with very special guests
+  prizes_tech_chats: 96 класни стаи ще спечелят видео чат с много специални гости
   prizes_details: Детайли
   n_have_learned_an_hoc: '<h1>#</h1><h3>опитаха</h3><h2>ЧАСЪТ НА КОДИРАНЕТО</h2>'
   anybody_can_learn: Всеки може да се научи.
@@ -100,7 +100,7 @@ bg:
   signup_thank_you_header: Благодаря ви, че се регистрирахте събитие за Часа на кодирането.
   signup_thank_you_message: Ние ще ви изпратим имейл за потвърждение с информация, която да ви помогне да започнете.
   map_header: Часът на кодирането събития по света
-  map_header_company: '# Hour of Code events organized by company'
+  map_header_company: '# Hour of Code събития, организирани от фирма'
   meta_tag_og_title: Часът на кодирането наближава
   meta_tag_og_description: Часът на кодирането е глобално движение, достигащо до десетки милиони ученици от 180+ страни на над 30 езика. Допустима възраст от 4 до 104.
   meta_tag_twitter_title: Часът на кодирането наближава
@@ -173,7 +173,7 @@ bg:
   resources_handouts: Изложения за популяризиране на събитието
   resources_videos: Видео
   resources_posters: Плакати
-  resources_social: Social
+  resources_social: Социални
   resources_banners: Банери
   resources_emails: Примерни имейли
   resources_stats: Полезна статистика

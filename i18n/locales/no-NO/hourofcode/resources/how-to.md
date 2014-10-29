@@ -32,19 +32,19 @@ Den beste opplevelsen av Kodetimen vil være med datamaskiner med internett. Men
 
 ## 4) For å inspirere elevene - Vis dem en video!
 
-Show students an inspirational video to kick off the Hour of Code. Examples:
+Vis elevene en inspirerende video for å sparke i gang Kodetimen. Eksempelvis:
 
-  * The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
-  * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [Hour of Code 2014 video](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
-  * [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+  * Bill Gates, Mark Zuckerberg og NBA stjernen Chris Bosh var med i den opprinnelige lanseringsvideoen for Code.org (Det finnes versjoner på [ett minutt](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutters](https://www.youtube.com/watch?v=nKIu9yen5nc) og [9 minutters](https://www.youtube.com/watch?v=dU1xS07N-FA))
+  * [Lanseringsvideoen for Kodetimen 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), eller < % if @country == 'uk' %> [Videoen for Kodetimen 2014](https://www.youtube.com/watch?v=96B5-JGA9EQ) < % else %> [Videoen for Kodetimen 2014](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
+  * [President Obama oppfordrer alle elever til å lære datavitenskap](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
 **Få elevene på hugget - Gi dem en kort introduksjon!**
 
-De fleste barn vet hva programmering er. Her er noen ideer:
+De fleste barn vet ikke hva programmering er. Her er noen ideer:
 
-  * Explain it in a simple way that includes examples of applications that both boys and girls will care about (saving lives, helping people, connecting people, etc.).
-  * Try: "Think about things in your everyday life that use computer science: a cell phone, a microwave, a computer, a traffic light… all of these things needed a computer scientist to help build them.”
-  * Or: “Computer science is the art of blending human ideas and digital tools to increase our power. Computer scientists work in so many different areas: writing apps for phones, curing diseases, creating animated movies, working on social media, building robots that explore other planets and so much more."
+  * Forklar det på en enkel måte med eksempler på bruksområder som både gutter og jenter vil bryr seg om (redde liv, hjelpe folk, knytter mennesker sammen, osv.).
+  * Prøv f.eks: "Tenk på tingene som du bruker hver dag: mobiltelefon, mikrobølgeovn, datamaskin, trafikklys... alle disse tingene måtte programmeres av datakyndige."
+  * Eller: "datavitenskap er kunsten å smelte sammen mennesklige ideer med digitale verktøy for å øke evnene våre. IT-folk jobber innenfor så mange forskjellige områder: apputvikling, helbreding av sykdommer, skaping av tegnefilmer, arbeid med sosiale medier, bygging av roboter, utforsking av andre planeter og mye mye mer. "
   * See tips for getting girls interested in computer science [here](http://<%= codeorg_url() %>/girls). 
 
 ## 5) Start Kodetimen din!

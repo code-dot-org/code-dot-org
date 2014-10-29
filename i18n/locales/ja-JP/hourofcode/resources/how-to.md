@@ -8,35 +8,35 @@ title: Resources layout: wide
 
 ## 1） チュートリアルを試す。
 
-We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
+私たちは、様々なパートナー達によって作られた、バラエティに富んだ楽しい、全年齢の生徒のための一時間のチュートリアルを主催します。新しいチュートリアルは12月8-14のHour of Codeの前にキックオフでお披露目されます。
 
-**All Hour of Code tutorials:**
+**すべてのHour of Codeのチュートリアル：**
 
-  * Require minimal prep-time for teachers
-  * Are self-guided - allowing students to work at their own pace and skill-level
+  * 教員の皆さんは最小限の準備時間を必要とします。
+  * 自己管理学習は自分のペースで、そして、自分のスキルレベルに見合った取り組み方を可能にします。
 
 [![](http://<%= codeorg_url() %>/images/tutorials.png)](http://<%=codeorg_url() %>/learn)
 
-## 2) Plan your hardware needs - computers are optional
+## 2）必要なハードウェア（コンピューター機器）のプラン - コンピューターはなくても大丈夫でです。
 
-The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every child, and can even do the Hour of Code without a computer at all.
+Hour of Codeの最適に経験していただくために、お使いのPCがインターネット環境にあることをお勧めします。しかし、各自にPCが与えられる必要ありません、またPCがなくてもHour of Codeには参加できます。
 
-  * **Test tutorials on student computers or devices.** Make sure they work properly (with sound and video).
-  * **Preview the congrats page** to see what students will see when they finish. 
-  * **Provide headphones for your class**, or ask students to bring their own, if the tutorial you choose works best with sound.
+  * **生徒のPCもしくは他のデバイス上でチュートリアルをテストしてみてください。** 正しく機能する(音響や、ビデオを含めて)ことをご確認ください。
+  * **お祝いのページをプレビューしてください** どの生徒がどこまで完了しているかを確認するときに 
+  * 選択したチュートリアルの音響が正しく機能させるため**ヘッドフォンを支給することをお勧めします。**もしくは生徒に自分用のを持ってくるように指示してください。 
 
-## 3) Plan ahead based on your technology available
+## IT環境がきちんと整うよう事前に計画してください。
 
-  * **Don't have enough devices?** Use [pair programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
-  * **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+  * **PCと周辺機器は十分ありますか?** 使う [ペアプログラミング](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). 生徒がパートナー同士になることで、お互いを助け合い、教員への依存度が低くなります。 またコンピューター科学にも共存する社会があるということを知る機会ができます。
+  * **ネット通信速度が遅い？**教室の前で生徒全員でビデオを鑑賞するようにしてください。そうすれば各自が個別にビデオをダウンロードする必要はありません。もしくは 電源なし/オフラインでのチュートリアルを試してください。
 
-## 4) Inspire students - show them a video
+## 生徒達を刺激してください-彼らにビデオを見せてください。
 
-Show students an inspirational video to kick off the Hour of Code. Examples:
+生徒達にHour of Codeのキックオフ用の感動的なビデオを見せましょう。例:
 
-  * The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
-  * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [Hour of Code 2014 video](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
-  * [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+  * オリジナルのCode.orgはビル・ゲイツ、マーク・ザッカーバーグ、NBAスターのクリス・ボッシュが出演されているビデオをリリースしています。 (それらは [1 分](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 分](https://www.youtube.com/watch?v=nKIu9yen5nc), そして[9分](https://www.youtube.com/watch?v=dU1xS07N-FA) バージョンがあります。)
+  * [Hour of Codeは2013リリース済みビデオ](https://www.youtube.com/watch?v=FC5FbmsH4fw), もしくは <% if @country == 'uk' %> [Hour of Code 2014 ビデオ](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [Hour of Code 2014 ビデオ](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
+  * [オバマ大統領が生徒たちにコンピューター科学を学ぶよう呼びかけてる。](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
 **Get your students excited - give them a short intro**
 

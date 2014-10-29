@@ -34,7 +34,7 @@
   country_uk: Storbritannia
   country_us: USA
   country_vn: Vietnam
-  company_4-H: 4-H Youth Development
+  company_4-H: 4-H ungdoms utvikling
   company_bgca: Boys and Girls Club of America
   company_cgcs: Council of the Great City Schools
   company_gsusa: Girl Scouts of America
@@ -47,7 +47,7 @@
   prizes_all: Premier for hver eneste arrangør
   prizes_every_organizer: Hver kodetimeorganisator får Dropbox eller Skype-kreditt som takk
   prizes_technology: 'En offentlig skole i hver stat i USA (& Washington DC) vil vinne teknologi verdt 10 000 dollar'
-  prizes_tech_chats: 96 classrooms will win video chats with very special guests
+  prizes_tech_chats: 96 klasserom vil vinne videosamtaler med veldig spesielle gjester
   prizes_details: Detaljer
   n_have_learned_an_hoc: '<h1>#</h1><h3>har prøvd en</h3><h2>KODETIME</h2>'
   anybody_can_learn: Alle kan lære.
@@ -100,7 +100,7 @@
   signup_thank_you_header: Takk for at du registrerte deg som arrangør av en kodetime.
   signup_thank_you_message: Vi har sendt deg bekreftelse på e-post med informasjon for å hjelpe deg i gang.
   map_header: Antall Kodetime-arrangementer over hele verden
-  map_header_company: '# Hour of Code events organized by company'
+  map_header_company: '# Kodetimearrangementer som er organisert av selskaper'
   meta_tag_og_title: Kodetimen kommer
   meta_tag_og_description: 'Kodetimen er en verdensomspennende bevegelse som når ut til et titalls millioner elever i mer enn 180 land og finnes på over 30 språk. Alder: 4 til 104.'
   meta_tag_twitter_title: Kodetimen kommer
@@ -173,7 +173,7 @@
   resources_handouts: Flyere du kan bruke til å spre ordet
   resources_videos: Videoer
   resources_posters: Plakater
-  resources_social: Social
+  resources_social: Sosialt
   resources_banners: Bannere
   resources_emails: Eksempelepost
   resources_stats: Nyttig statistikk om programmering

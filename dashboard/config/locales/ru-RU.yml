@@ -71,20 +71,7 @@
     no_signup_message: Вы можете <a target="_blank" href="http://learn.code.org">
       просматривать различные этапы и головоломки</a>, но Вам нужно зарегистрироваться,
       чтобы сохранять свои  результаты.
-    prizes_message: "Американские ученики, которые получили все %{num_trophies} кубков,
-      могут выбрать различные призы, включая дисковое пространство на Dropbox.com,
-      кредит в Skype и игры,  скачиваемые с Electronic Arts."
     teacher_educator_guide: "Смотри руководство учителя"
-    teacher_prize_header: Выиграй $1000 в <a target="_blank" href="http://DonorsChoose.org">
-      DonorsChoose.org</a> награду (через 15 июня 2014, до тех пор, пока последние
-      поставки)
-    teacher_prize_message: 'В партнерстве с <a target="_blank" href="http://DonorsChoose.org">
-      DonorsChoose.org</a> Code.org будет предлагать до $1000 в классе средства для
-      учителей государственных школ США, которые ведут по меньшей мере 15 студентов
-      через K-8 Введение в курс информатики (через 15 июня 2014, в то время как последние
-      поставки).  <a href="http://code.org/educate/20hr"> педагог в руководстве</a>.  (Ограничение:
-      $1000 за учителем.  <a target="_blank" href="http://help.donorschoose.org/app/answers/detail/a_id/454/kw/code.org">
-      Подробнее об ограничений в разделе FAQ</a>.)'
     teacher_pitch: "Регистрация на code.org  для учителей"
     teacher_title: "Регистрация учителя"
     student_pitch: "Регистрация на code.org  для учеников"
@@ -95,6 +82,7 @@
     gender: "Пол (не обязательно)"
     birthday: "Дата рождения (не обязательно)"
     age: "Возраст"
+    user_type: Are you a student or teacher?
     submit: "Зарегистрироваться"
     teacher: "Вы учитель?"
     valid_username: "Доступно!"
@@ -228,9 +216,9 @@
           Для поддержки начинаюших преподавателей информатики, вы можете заработать до $1000 кредита в <a href="http://DonorsChoose.org"> Dono
           rsChoose.org</a>  за проведение вступительного курса для класса учеников. Чтобы получить кредит, вам нужно иметь не менее 15 учеников, успешно закончивших вступительный курс, в течение которого все 15 учеников (или более) завершат все занятия и заработают все %{num_trophies} кубков. Если 7 или более из них - девочки, ваша награда составляет $1,000. В противном случае ваша награда составляет $750. Кредиты могут использоваться только преподавателями в государственных школах США.
         bonus:
-          not_earned_title: You can still earn an additional $250 in <a target="_blank"
-            href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers
-            only)
+          not_earned_title: Вы все равно можете заработать дополнительные $250 кредита
+            от <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
+            (только для учителей США)
           earned: 7 или более учеников, которые собрали все %{num_trophies} трофеев
             — девочки. Вы получаете специальный приз! (Только для учителей в США)
           not_earned: Если по крайней мере 7 Ваших учеников, которые заработали все  %{num_trophies}  кубков
@@ -289,10 +277,10 @@
     followers:
       section: 'Section:'
       stages: 'Stage(s) to display:'
-      show_past: 'Show student activity (%{bullet_html}) in the past:'
+      show_past: "Показать деятельность ученика (%{bullet_html}) в прошлом:"
       levels_key: Levels key
       perfect: Completed, perfect
-      completed: Completed, but using too many blocks
+      completed: "Завершено, но использовано слишком много блоков"
       tried: Tried, but not completed
       not_tried: Not tried yet
       activity: Indicates student activity in the last %{hours} %{plural}
@@ -306,7 +294,7 @@
       dashboard: "Перейти к панели учитель"
       add: "Пригласить учеников"
       remove: "удалить ученика"
-      confirm_remove: "Вы уверены, что хотите удалить этого студента?"
+      confirm_remove: "Вы уверены, что хотите удалить этого ученика?"
       help_reassign: To divide your class into multiple sections, select students
         to assign to a new section.
       help_register: Instead of making you spend a lot of time individually importing
@@ -383,8 +371,6 @@
     student_stats: Вы заработали %{trophy_count} из %{trophy_max} возможных кубков
       "Знаток  основ".
     student_left_off: "Вы остановились:"
-    student_finished_prize: "Вы прошли весь материал, Востребуйте свой %{prize_link}
-      и выберите другой курс %{online_link} или в %{local_school_link}"
     student_finished: "Вы завершили весь материал, выберите другой курс %{online_link}
       или в %{local_school_link}"
     local_school: "местная школа"
@@ -413,6 +399,9 @@
     male: "Мужской"
     female: "Женский"
     none: "Предпочитаю не отвечать"
+  user_type:
+    student: "Ученик"
+    teacher: "Учитель"
   footer:
     help_from_html: "Инженеры от Google, Microsoft, Facebook и Twitter помогли создать
       этот учебник."
@@ -427,13 +416,6 @@
     tos: "Условия использования"
     privacy: "Правила конфиденциальности"
     secure: "Защищенная версия"
-  prize_mail:
-    prize_earned:
-      subject: Redeem your prize at Code.org!
-    teacher_prize_earned:
-      subject: "Поздравления от Code.org!"
-    teacher_bonus_prize_earned:
-      subject: Redeem your bonus prize at Code.org!
   reference_area:
     title: "Нужна помощь?"
     subtitle: "Смотрите эти видео и подсказки"
@@ -508,8 +490,8 @@
   gallery:
     students_drew_these_with_code: "Ученики нарисовали это с помощью кода!"
     students_made_these_with_code: "Сделано учениками с помощью кода!"
-    picture_count: "В прошлом <b>% {дней}</b> дней, студенты нарисовали <b>%{count}</b>
-      фотографии, написав свои собственные компьютерные программы. Нажмите на картинку,
+    picture_count: "За прошедшие <b>%{days}</b> дней, ученики нарисовали <b>%{count}</b>
+      рисунков, написав свои собственные компьютерные программы. Нажмите на картинку,
       чтобы увидеть каждую программу в действии."
     activity_count: In the past <b>%{days}</b> days, students have made <b>%{count}</b>
       apps and pictures by writing their own computer programs. Click on the pictures
@@ -525,7 +507,7 @@
     feedback: "Оставить отзыв"
     report_bug: "Сообщить об ошибке"
     support: "Получить помощь"
-    support_url: support.Code.org
+    support_url: support.code.org
   multi:
     wrong_title: "Неправильный ответ"
     wrong_body: "Ответ, который вы ввели неправильный.  Пожалуйста, попробуйте еще

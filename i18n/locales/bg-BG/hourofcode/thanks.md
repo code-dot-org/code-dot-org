@@ -14,11 +14,11 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Благодаря за регистрирането ви като домакин на Часът на кодирането събитие!
 
-**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](<%= hoc_uri('/prizes') %>)
+**Всеки** организатор на Часът на кодирането ще получи 10 GB Dropbox пространство или $10 на Skype кредит като благодарност. [подробности](<%= hoc_uri('/prizes') %>)
 
 <% if @country == 'us' %>
 
-Get your [whole school to participate](<%= hoc_uri('/prizes') %>) for a chance for big prizes for your entire school.
+Запишете [цялото си училище за участие](<%= hoc_uri('/prizes') %>) за да получите шанс за спечелване на големи награди за цялото училище.
 
 <% end %>
 
@@ -32,7 +32,7 @@ Get your [whole school to participate](<%= hoc_uri('/prizes') %>) for a chance f
 
 ## 2. Попитайте във вашето училище, дали предлага участие в Часът на кодирането
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](<%= hoc_uri('/files/schools-handout.pdf') %>). След като вашето училище е на борда, [ ще може да спечели $10,000 за закупуване на технологии ](/prizes) и да предизвика и други училища във вашия район да се качат на борда.
+[Изпратете този имейл](<%= hoc_uri('/resources#email') %>) или [ това изложение](<%= hoc_uri('/files/schools-handout.pdf') %>). След като вашето училище е на борда, [ ще може да спечели $10,000 за закупуване на технологии ](/prizes) и да предизвика и други училища във вашия район да се присъединят.
 
 <% else %>
 

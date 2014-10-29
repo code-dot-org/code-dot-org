@@ -53,7 +53,7 @@ I Kina tar alle elevene datavitenskap som fag før de går ut av videregående s
 
 **Om Code.org**
 
-Code.org® er en almennyttig stiftelse med formål om å utvide deltakelsen i datavitenskap og øke deltakelse av kvinner og andre underrepresenterte grupper. Visjonen er at alle elever i alle skoler skal få muligheten til å lære programmering. Etter lanseringen i 2013 organisert Code.org kampanjen Kodetimen, som introduserte millioner av elever for datavitenskap. Vi gikk i partnerskap med mer enn 30 offentlige skoledistrikter over hele USA og lanserte Kode Studio, som er en åpen kildekode læringsplattform på web for alle aldre. For more information, please visit: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
+Code.org® er en almennyttig stiftelse med formål om å utvide deltakelsen i datavitenskap og øke deltakelse av kvinner og andre underrepresenterte grupper. Visjonen er at alle elever i alle skoler skal få muligheten til å lære programmering. Etter lanseringen i 2013 organisert Code.org kampanjen Kodetimen, som introduserte millioner av elever for datavitenskap. Vi gikk i partnerskap med mer enn 30 offentlige skoledistrikter over hele USA og lanserte Kode Studio, som er en åpen kildekode læringsplattform på web for alle aldre. For mere informasjon, besøk: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
 Du finner flere ressurser og eksempler på meldinger [ her](<%= hoc_uri('/resources') %>).

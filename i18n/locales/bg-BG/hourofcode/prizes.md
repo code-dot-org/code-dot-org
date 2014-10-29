@@ -20,19 +20,19 @@
 
 <% if @country == 'us' %>
 
-## 96 lucky classrooms win a video chat with a guest speaker!
+## 96 Щастливи класни стаи ще спечелят видео чат с гост-лектор!
 
-96 lucky classrooms will be invited to join a video chat to celebrate the Hour of Code during December 8-14. Учениците ще могат да задават въпроси и чатят с технологични и индустриялни лидери. [ Вижте миналогодишните чатове](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) с Бил Гейтс, Twitter основателят Джак Дорси, Сюзън Войсички от Google и Гейб Нюъл от Valve.
+96 щастливи класни стаи ще бъдат поканени да се присъединят към видео чат, за да празнуват Часът на кодирането през декември 8-14. Учениците ще могат да задават въпроси и чатят с технологични и индустриялни лидери. [ Вижте миналогодишните чатове](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) с Бил Гейтс, Twitter основателят Джак Дорси, Сюзън Войсички от Google и Гейб Нюъл от Valve.
 
-Any classroom (public or private) within the U.S. or Canada is eligible to win this prize. Your whole school does not need to apply.
+Всяка класна стая (публични или частни) в рамките на САЩ или Канада има право да спечели тази награда. Вашето училище не е необходимо да бъде регистрирано.
 
-## 51 Lucky schools win a class-set of laptops (or $10,000 for other technology)
+## 51 Щастливи училища, ще спечелят набор от преносими компютри (или $10,000 за други технологии)
 
-One lucky school in ***every*** U.S. state (+ Washington D.C.) will win $10,000 worth of technology. Organize the Hour of Code for every student in your school to qualify. Fill out the form below to apply.
+Едно щастливо училище във ***всеки*** щат на САЩ (+ Вашингтон) ще спечели $10,000 за технологии. Организирайте Часът на кодирането за всеки ученик във вашето училище за да се класираме. Попълнете формата по-долу за да се регистрирате.
 
 ## Формуляр за хардуерна награда:
 
-If you’ve signed up your entire school to participate in the Hour of Code, enter to win a class-set of laptops (or $10,000 for other technology) for your school! Only one teacher needs to apply for your entire school.
+Ако сте регистрирали цялото училище да участва в Часът на кодирането, можете да спечелите набор от преносими компютри (или $10,000 за други технологии) за вашето училище! Само един учител трябва да се регистрира за цялото училище.
 
 <%= view :hardware_prizes_form %>
 
@@ -44,11 +44,11 @@ If you’ve signed up your entire school to participate in the Hour of Code, ent
 
 ## Повече въпроси за наградите?
 
-Check out [Terms and Conditions](<%= hoc_uri('/prizes-terms') %>) or visit our forum to see [FAQs](http://support.code.org) and ask your questions.
+Вижте <a href = "< % = hoc_uri('/prizes-terms') % >" > условията</a> или посетете нашия форум, за да видите [ ЧЗВ](http://support.code.org) и Задайте вашите въпроси.
 
 <% if @country == 'us' %>
 
-# Frequently Asked Questions
+# Често задавани въпроси
 
 ## Does your whole school have to enter to win the $10,000 in hardware?
 
@@ -76,15 +76,15 @@ Due to a small full-time staff, Code.org is unable to handle the logistics of ad
 
 ## When is the deadline to apply for the hardware prize?
 
-To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 14, 2014. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2014.
+To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 14, 2014. Едно училище във всеки щат на САЩ ще получи набор от компютри за един клас. Code.org ще избере и уведоми спечелилите по електронната поща до 1 декември 2014.
 
 ## When is the deadline to be eligible to win a tech chat?
 
-To qualify, you must register your classroom for the Hour of Code by November 14, 2014. Classrooms will win a video chat with a celebrity. Code.org will select and notify winners via email by December 1, 2014.
+To qualify, you must register your classroom for the Hour of Code by November 14, 2014. Classrooms will win a video chat with a celebrity. Code.org ще избере и уведоми спечелилите по електронната поща до 1 декември 2014.
 
 ## When will I be notified if my school or classroom wins a prize?
 
-To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 14, 2014. Code.org will select and notify winners via email by December 1, 2014.
+To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 14, 2014. Code.org ще избере и уведоми спечелилите по електронната поща до 1 декември 2014.
 
 ## If my whole school can’t do the Hour of Code during Computer Science Education Week (Dec. 8-14), can I still qualify for prizes?
 

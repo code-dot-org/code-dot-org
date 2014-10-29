@@ -49,6 +49,7 @@
           desc: Edit Code (beta)
           MazeEC: "ধাপ ১"
           Webapp: "ধাপ ২"
+          ArtistEC: "ধাপ ৩"
         events:
           desc: Bounce (beta)
           Bounce: "ধাপ ১"
@@ -98,6 +99,7 @@
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
         Webapp: Webapp
+        ArtistEC: "শিল্পী"
     trophy:
       name:
         Bronze: "ব্রোঞ্জ"
@@ -522,6 +524,9 @@
         maze_wordsearch_k_15: Find the word ABOVE
         maze_wordsearch_k_16: Find the word BELOW
         maze_wordsearch_k_20: Find the word DEBUG
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
+          it in the new "penColour" block.'
     video:
       name:
         maze_intro: Maze Intro

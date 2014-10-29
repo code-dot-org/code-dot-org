@@ -32,17 +32,17 @@
 
 ## 4) شجع الطلاب ! إعرض لهم فيديو
 
-Show students an inspirational video to kick off the Hour of Code. Examples:
+إعرض لطلاب فيديو مثير لتشويقهم لساعة البرمجة، مثلا:
 
   * The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
   * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [Hour of Code 2014 video](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
-  * [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+  * [الرئيس الأمريكي أوباما يدعو جميع الطلاب لتعلم علوم الحاسب الآلي](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
 **اجعل الطلاب متحمسين بإعطاءهم مقدمة قصيرة**
 
 معظم الأطفال لا يعرفون ما هي علوم الحاسوب. وإليك بعض الأفكار:
 
-  * Explain it in a simple way that includes examples of applications that both boys and girls will care about (saving lives, helping people, connecting people, etc.).
+  * إشرحها بطريقة سهلة تتخلها أمثلة برامج يهتم بها كل من الصبيان والصبيات مثل ( إنقاذ حياة، مساعدة آخرين، تواصل مع الآخرين، إلخ...).
   * Try: "Think about things in your everyday life that use computer science: a cell phone, a microwave, a computer, a traffic light… all of these things needed a computer scientist to help build them.”
   * Or: “Computer science is the art of blending human ideas and digital tools to increase our power. Computer scientists work in so many different areas: writing apps for phones, curing diseases, creating animated movies, working on social media, building robots that explore other planets and so much more."
   * See tips for getting girls interested in computer science [here](http://<%= codeorg_url() %>/girls). 

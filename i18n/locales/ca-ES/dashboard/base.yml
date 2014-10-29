@@ -65,10 +65,7 @@ ca:
     overview_student: 'Sign up for an account to track your progress. Your email is primarily used to allow you to log in and for password recovery. For more information, see our <a href="http://code.org/privacy">Privacy Policy</a>.'
     overview_teacher: "Teach computer science in your classroom by signing up for an account.<p/> You'll be able to add your students and track their progress."
     no_signup_message: 'Pots <a target="_blank" href="http://learn.code.org">navegar pels diversos puzzles i nivells</a>, però necessitaràs registrar-te per a desar el teu progrés.'
-    prizes_message: 'U.S. students who earn all %{num_trophies} concept trophies can select a variety of prizes including free Dropbox space, Skype credits, and downloadable games from Electronic Arts.'
     teacher_educator_guide: "Mira la guia de l'educador"
-    teacher_prize_header: 'Win $1,000 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> rewards (through June 15, 2014, until supplies last)'
-    teacher_prize_message: 'In partnership with <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>, Code.org will offer up to $1,000 in classroom funding to U.S. public school teachers who lead at least 15 students through the K-8 Intro to Computer Science course (through June 15, 2014, while supplies last).  <a href="http://code.org/educate/20hr">See educator guide</a>.  (Limit: $1,000 per teacher.  <a target="_blank" href="http://help.donorschoose.org/app/answers/detail/a_id/454/kw/code.org">See FAQ for more limits</a>.)'
     teacher_pitch: Alta a Code.org per professors
     teacher_title: Professor registrat
     student_pitch: Alta a Code.org per estudiants
@@ -79,6 +76,7 @@ ca:
     gender: Sexe (opcional)
     birthday: Aniversari (opcional)
     age: Age
+    user_type: Are you a student or teacher?
     submit: "Inscriure's"
     teacher: És vostè un professor?
     valid_username: Disponible!
@@ -332,7 +330,6 @@ ca:
     student_progress: "El teu progrés d'aprenentatge"
     student_stats: 'Has guanyat %{trophy_count} fora del %{trophy_max} "Concepte de Domini" de trofeus.'
     student_left_off: 'On ho vas deixar:'
-    student_finished_prize: 'Has completat tots els tutorials, reclama el teu %{prize_link} i escull una altra classe %{online_link} o una %{local_school_link}'
     student_finished: "You've completed all tutorials, pick another class %{online_link} or at a %{local_school_link}"
     local_school: escola local
     online: en línia
@@ -355,6 +352,9 @@ ca:
     male: Home
     female: Dona
     none: Prefereixo no respondre
+  user_type:
+    student: estudiant
+    teacher: Teacher
   footer:
     help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped create this tutorial.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. All Rights Reserved.'
@@ -365,13 +365,6 @@ ca:
     tos: Terms
     privacy: Política de Privacitat
     secure: Secure Version
-  prize_mail:
-    prize_earned:
-      subject: Reclama el teu premi a Code.org!
-    teacher_prize_earned:
-      subject: Congratulations from Code.org!
-    teacher_bonus_prize_earned:
-      subject: Reclama el teu premi de bonificació a Code.org!
   reference_area:
     title: Necessites ajuda?
     subtitle: Mira aquests vídeos i consells
