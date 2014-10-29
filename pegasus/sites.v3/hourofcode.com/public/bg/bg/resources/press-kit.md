@@ -1,58 +1,55 @@
----
-title: ресурси
-layout: wide
----
 
-## Полезна статистика за компютърните науки
 
-*За всички запитвания от медиите свържете се с <press@code.org>*
+## Estadístiques útils en informàtica
 
-### Ключови съвети
+*Per a totes les consultes de premsa i mitjans de comunicació, contacte <press@code.org>*
 
-  * Информирайте медиите две седмици преди вашето събитие по електронната поща. Следете по имейл и телефон, ако не получите първоначален отговор.
-  * Попитайте дали е възможно в училището да се правят снимки и дали може да се споделят онлайн.
-  * Пишете за инициативата на началната страница на вашия сайт и в училищния вестник. Публикувате информация за събитието и снимки на учебната дейност.
-  * На Facebook и Twitter споделете актуализации на вашите планове, обявете вашите събития и публикувайте снимки по време на седмицата 8-14 декември. Използвайте hashtag **#HourOfCode** за да може Code.org да види и да популяризира събитията ви.
+### Consells clau
 
-### Стъпка по стъпка ръководство:
+  * Contacta amb els mitjans de comunicació dues setmanes abans del teu esdeveniment mitjançant e-mail. Fes seguiment per correu electrònic i telèfon si no rebeu una resposta inicial.
+  * Demana a un membre del personal de l'escola o un voluntari per fer fotos per compartir en línia o enviar a la premsa.
+  * Escriu sobre l'Hora de Codi a la pàgina principal de la teva web i en el diari de l'escola. Publica els detalls del teu esdeveniment i fotos de les activitats dels estudiants.
+  * A Facebook i Twitter, comparteix actualitzacions sobre els teus plans, anuncia els teus esdeveniments i publica imatges durant el dies 8-14 de desembre. Utilitza el hashtag **#HourOfCode**, aixi Code.org podrà veure i promocionar els teus esdeveniments.
 
-**1. Планирайте вашето събитие**
+### Guia pas a pas:
 
-  * План за откриване и програма на събитието.
-  * Изпратете [ писмо](/resources#sample-emails) на родителите. Помолете ги да разпространят изявлението.
-  * Изпратете [ писмо](/resources#sample-emails) с покана до вашия кмет, конгресмен, управител или влиятелен бизнесмен да присъства и да говори на учениците ви.
-  * Организирайте групови дейности (като демонстриране на "unplugged" уроците без компютър), или покажете създадени от учениците дейности и ги оставете сами да ги представят.
-  * Покажете [ официалното Code.org Часът на кодирането видео](http://hourofcode.com) или едно от [ тези](/resources#videos) за вдъхновение.
+**1. Planifica el teu esdeveniment**
 
-**2. Свържете се с местни репортери, които проявяват интерес към събития свързани с образованието.**
+  * Planifica una reunió per donar inici a l'Hora de Codi.
+  * Envia [una carta](<%= hoc_uri('/resources/#sample-emails') %>) als pares. Demana'ls que corrin la veu.
+  * Envia [una carta](<%= hoc_uri('/resources/#sample-emails') %>) per convidar el teu alcalde local, congressista, governador o empresari influent a assistir-hi i parlar amb els teus alumnes.
+  * Organitza activitats en grup (com una demostració d'una activitat de programació "fora de línia"), o llueix activitats creades i dirigides pels estudiants.
+  * Mostra Code.org’s [Hora de Codi vídeo](<%= hoc_uri('/') %>) o un d'[aquestos](<%= hoc_uri('/resources#videos') %>) per animar.
 
-Помислете за статия в местен вестник, ТВ предаване, радиостанция или блог.
+**2. identifica periodistes locals que cobreixen l'educació o esdeveniments locals.**
 
-Дайте онлайн връзка за информация на репортерите. Ако не можете да се свържете с конкретен репортер потърсете съвет и информация в редакцията за да ви насочат.
+Pensa en un diari local, TV, emissora de ràdio o web bloc.
 
-**3. свържете се с местните медии**
+Mirar en línia per trobar informació de contacte de periodistes. Si no la pots trobar, truca a la publicació per preguntar, o envia un correu a l'adreça general tips@PUBLICATIONNAME.com i demana redirigir el teu missatge al periodista correcte.
 
-Най-добрият начин да се свържите е по електронната поща. Писмото трябва да бъде кратка и съдържаща най-важното: Защо трябва хората трябва да са заинтересувани от това събитие? Включете информация за контакт (включително телефонен номер) за желаещите да бъдат на мястото на събитието. **Вижте [ примерно изявление за медиите](/resources#sample-emails):**
+**3. Contacta amb els mitjans de comunicació locals**
 
-**4. Подгответе въпроси за вашето училищно събитие. Ето някои примери:**
+La millor manera d'arribar és per correu electrònic. Ha de ser curt i comunicatiu: per què s'haurien altres persones d'interessar per aquest esdeveniment? Inclou informació de contacte (incloent-hi un nombre de mòbil) de qui estarà en el lloc del esdeveniment. **Veure un [exemple per els mitjans de comunicació](<%= hoc_uri('/resources#sample-emails') %>):**
 
-*Защо училището ви провежда Часът на кодирането?*
+**4. Preparat per respondre preguntes sobre el teu esdeveniment de l'escola. Aquests són alguns exemples:**
 
-Макар че всички знаем, че е важно за учениците да се научат как да навигират в днешния технологичен свят, много учители не са опитвали да използват компютърните науки и не знаят откъде да започнат. Това събитие е шанс за всички нас да се срещнем лице в лице с копютърните науки.
+*Per què la vostra escola està fent una Hora de Codi?*
 
-Надяваме се, че ще предизвикаме интерес в учениците да продължават да учат. Изследванията показват, че децата могат да научават концепциите и понятията на програмирането още преди те знаят как да четат и пишат. В действителност мозъците им са по-възприемчиви към компютърните езици в ранна възраст, точно както към чуждите езици.
+Mentre tots nosaltres sabem que és important per als estudiants aprendre a navegar al món actual saturat de tecnologia, molts mestres no són experimentats en informàtica i no saben per on començar. Aquest esdeveniment és una oportunitat per a tots nosaltres per saber de què tracta la informàtica.
 
-*Защо това е така?*
+Esperem despertar l'interès en els estudiants per a seguir aprenent. La investigació també mostra que els nens recullen conceptes de programació abans de saber llegir i escriure. De fet, els seus cervells són més receptius als llenguatges informàtics a una edat jove, el mateix que amb les llengües estrangeres.
 
-В Китай всеки ученик, който иска да завърши гимназия, трябва да изучава компютърни науки. В САЩ 90 процента от училищата дори не се изучават. Време е да навлезнем в 21 век. Ние знаем, че независимо от това, какво ще изберат нашите ученици да следват -медицина, бизнес, политика, или изкуства, те трябва да знаят как е изградена технологията, и това ще им даде увереност и ноу-хау, за да успеят.
+*Per què és això important?*
 
-**За повече информация и предложения, можете да използвате нашите материали**
+A la Xina, cada estudiant aprèn informàtica per graduar-se l'escola secundària. Als EUA, el 90 per cent de les escoles ni tan sols ho ensenyen. És el moment per aconseguir arribar al segle XXI. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them the confidence and know-how to succeed.
 
-"Часът на кодирането има за цел да демитологизира програмирането и да покаже, че компютърните науки не са ракетостроене, и всеки може да научи основите," казва Хади Партови, основател и главен изпълнителен директор на Code.org. "В една седмица, миналата година, 15 милиона ученици пробваха Часът на кодирането. Сега нашата цел е да достигнем до 100 милиона по целия свят за да докажем, че търсенето и предлагането на обучение по компютърни науки в 21 век не познава граници."
+**Més detalls i una cita que pot utilitzar com idea**
 
-**За Code.org**
+"L'Hora de Codi està dissenyada per desmitificar el codi i mostrar que la informàtica no és una ciència espacial, qualsevol pot aprendre els conceptes bàsics," va dir Hadi Partovi, fundador i director executiu de Code.org. "En una setmana l'any passat, 15 milions d'estudiants van provar una Hora de Codi. Ara volem arribar a 100 milions arreu del món per demostrar que la demanda d'educació informàtica rellevant al segle XXI creua totes les fronteres i no té límits."
 
-Code.org® е обществено движение с нестопанска цел, посветено на разширяване на изучаването на компютърните науки и увеличаване броят на заетите жени и социално слабите ученици в програмирането. Визията на движението е, че всеки ученик във всяко училище трябва да има възможност да учи компютърно програмиране. След стартирането през 2013 г., Code.org организира кампанията Часът на кодирането и въвлече милиони ученици в компютърните науки- в партньорство с повече от 30 публични училища от райони в цялата страна, както и стартира Код студио, онлайн обучителна платформа с отворен код за всички възрасти. За повече информация, моля посетете: [ www.code.org](http://code.org).
+**Sobre Code.org**
+
+Code.org® és un estament públic 501c3 sense ànim de lucre dedicat a ampliar la participació en informàtica i augmentar la participació de les dones i de les minories de estudiants de color. La seva visió és que cada alumne de cada escola ha de tenir l'oportunitat d'aprendre programació informàtica. Després del llançament al 2013, Code.org organitzà la campanya d'Hora de Codi — que ha introduït milions d'estudiants a la informàtica — associat amb més de 30 districtes de l'escola pública a nivell nacional, va llançar el Code Studio, una plataforma de codi obert en línia d'aprenentatge per a totes les edats. For more information, please visit: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
-Намери повече ресурси ипримерни имейли [ тук](/resources).
+Troba més recursos i correus de exemple [aquí](<%= hoc_uri('/resources') %>).
