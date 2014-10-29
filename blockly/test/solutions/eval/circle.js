@@ -36,8 +36,9 @@ module.exports = {
         var stroke = circle.getAttribute('stroke');
         assert(fill === 'none', 'fill: ' + fill);
         assert(stroke === 'red', 'stroke: ' + stroke);
-        assert(circle.getAttribute('cx') === '200');
-        assert(circle.getAttribute('cy') === '200');
+        assert(circle.getAttribute('cx') === '0');
+        assert(circle.getAttribute('cy') === '0');
+        assert(circle.getAttribute('transform', ' translate(200, 200)'));
         return true;
       },
       xml: '<xml>' +

@@ -14,11 +14,11 @@ var EvalMulti = function (image1, image2) {
   // to accomplish this, we need to adjust the children's x/y's to be relative
   // to us
   var deltaX, deltaY;
-  deltaX = this.x_ - this.image1_.x_;
-  deltaY = this.y_ - this.image1_.y_;
+  deltaX = this.image1_.x_ - this.x_;
+  deltaY = this.image1_.y_ - this.y_;
   this.image1_.updatePosition(deltaX, deltaY);
-  deltaX = this.x_ - this.image2_.x_;
-  deltaY = this.y_ - this.image2_.y_;
+  deltaX = this.image2_.x_ - this.x_;
+  deltaY = this.image2_.y_ - this.y_;
   this.image2_.updatePosition(deltaX, deltaY);
 
   this.element_ = null;

@@ -207,9 +207,9 @@ function installFunctionalBlock (blockly, generator, gensym, options) {
         if (arg.type === 'Number') {
           apiArg = '0';
         } else if (arg.name === 'STYLE') {
-          apiArg = "Eval.string('solid')"
+          apiArg = "Eval.string('solid')";
         } else if (arg.name === 'COLOR') {
-          apiArg = "Eval.string('black')"
+          apiArg = "Eval.string('black')";
         }
       }
       apiArgs.push(apiArg);
