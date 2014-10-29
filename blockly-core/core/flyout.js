@@ -39,6 +39,7 @@ Blockly.Flyout = function(blockSpaceEditor) {
    * @private
    */
   var flyout = this;
+  this.blockSpaceEditor_ = blockSpaceEditor;
   this.blockSpace_ = new Blockly.BlockSpace(blockSpaceEditor,
       function() {return flyout.getMetrics_();},
       function(ratio) {return flyout.setMetrics_(ratio);});
@@ -271,13 +272,13 @@ Blockly.Flyout.prototype.position_ = function() {
   path.push('z');
   this.svgBackground_.setAttribute('d', path.join(' '));
 
-  var x = metrics.absoluteLeft;
+  var x = this.blockSpaceEditor_.toolbox ? this.blockSpaceEditor_.toolbox.width : 0;
   if (Blockly.RTL) {
     x += metrics.viewWidth;
     x -= this.width_;
   }
   this.svgGroup_.setAttribute('transform',
-      'translate(' + x + ',' + metrics.absoluteTop + ')');
+      'translate(' + x + ',0)');
 
   // Record the height for Blockly.Flyout.getMetrics_.
   this.height_ = metrics.viewHeight;

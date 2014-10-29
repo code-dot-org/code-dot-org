@@ -31,13 +31,13 @@ goog.require('Blockly.BlockSpace');
  * and certain focus/mouse handling operations for itself
  * @constructor
  */
-Blockly.BlockSpaceEditor = function(container) {
+Blockly.BlockSpaceEditor = function(container, opt_getMetrics, opt_setMetrics) {
   /**
    * @type {Blockly.BlockSpace}
    */
   this.blockSpace = new Blockly.BlockSpace(this,
-    goog.bind(this.getBlockSpaceMetrics_, this),
-    goog.bind(this.setBlockSpaceMetrics_, this)
+    goog.bind(opt_getMetrics || this.getBlockSpaceMetrics_, this),
+    goog.bind(opt_setMetrics || this.setBlockSpaceMetrics_, this)
   );
   this.createDom_(container);
   this.init_();
@@ -370,8 +370,6 @@ Blockly.BlockSpaceEditor.prototype.svgResize = function() {
   // Update the scrollbars (if they exist).
   if (this.blockSpace.scrollbar) {
     this.blockSpace.scrollbar.resize();
-  } else if (Blockly.hasCategories) {
-    this.setBlockSpaceMetricsNoScroll_();
   }
 };
 
@@ -743,22 +741,6 @@ Blockly.BlockSpaceEditor.prototype.setBlockSpaceMetrics_ = function(xyRatio) {
     (this.blockSpace.pageYOffset + metrics.absoluteTop) + ')';
   this.blockSpace.getCanvas().setAttribute('transform', translation);
   this.blockSpace.getBubbleCanvas().setAttribute('transform', translation);
-};
-
-/**
- * Sets the X/Y translations of the main blockSpace when scrollbars are
- * disabled.
- * @private
- */
-Blockly.BlockSpaceEditor.prototype.setBlockSpaceMetricsNoScroll_ = function() {
-  var metrics = this.getBlockSpaceMetrics_();
-  if (metrics) {
-    var translation = 'translate(' + (metrics.absoluteLeft) + ',' +
-      (metrics.absoluteTop) + ')';
-    this.blockSpace.getCanvas().setAttribute('transform', translation);
-    this.blockSpace.getBubbleCanvas().setAttribute('transform',
-      translation);
-  }
 };
 
 /**
