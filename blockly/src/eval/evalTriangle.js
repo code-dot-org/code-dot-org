@@ -19,7 +19,7 @@ module.exports = EvalTriangle;
 
 EvalTriangle.prototype.draw = function (parent) {
   if (!this.element_) {
-    this.element_ = document.createElementNS(Blockly.SVG_NS, 'path');
+    this.element_ = document.createElementNS(Blockly.SVG_NS, 'polygon');
     parent.appendChild(this.element_);
   }
 
@@ -42,12 +42,10 @@ EvalTriangle.prototype.draw = function (parent) {
     y: -height * 2 / 3
   };
 
-
-  var path = "M " + bottomLeft.x + " " + bottomLeft.y +
-    " L " + bottomRight.x + " " + bottomRight.y +
-    " L " + top.x + " " + top.y + " z";
-
-  this.element_.setAttribute("d", path)
+  this.element_.setAttribute('points',
+    bottomLeft.x +',' + bottomLeft.y + ' ' +
+    bottomRight.x + ',' + bottomRight.y + ' ' +
+    top.x + ',' + top.y);
 
   EvalObject.prototype.draw.apply(this, arguments);
 };

@@ -6,6 +6,7 @@ var EvalMulti = require('./evalMulti');
 var EvalRect = require('./evalRect');
 var EvalEllipse = require('./evalEllipse');
 var EvalText = require('./evalText');
+var EvalStar = require('./evalStar');
 
 // todo (brent) - make use of blockId?
 
@@ -49,6 +50,14 @@ exports.ellipse = function (width, height, style, color) {
   return exports.register(new EvalEllipse(width, height, style, color));
 };
 
+exports.text = function (text, fontSize, color) {
+  return exports.register(new EvalText(text, fontSize, color));
+};
+
+exports.star = function (radius, fontSize, color) {
+  return exports.register(new EvalStar(radius, fontSize, color));
+};
+
 exports.placeImage = function (image, x, y, blockId) {
   // todo - validate we have an image, use public setter
   // todo - where does argument validation happen?
@@ -69,8 +78,4 @@ exports.rotateImage = function (image, degrees) {
 exports.scaleImage = function (image, factor) {
   image.scale(factor, factor);
   return exports.register(image);
-};
-
-exports.text = function (text, fontSize, color) {
-  return exports.register(new EvalText(text, fontSize, color));
 };
