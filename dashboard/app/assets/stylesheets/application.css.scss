@@ -336,6 +336,12 @@ th {
   }
 }
 
+.header.hide_on_mobile {
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
+}
+
 .header_status_bar {
   background-color: $dark_color;
   border-radius: 5px;
