@@ -1,7 +1,4 @@
----
-title: Terima kasih
-layout: wide
----
+
 
 # Terima kasih
 

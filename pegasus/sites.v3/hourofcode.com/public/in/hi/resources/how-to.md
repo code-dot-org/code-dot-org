@@ -1,8 +1,4 @@
-* * *
 
-title: Resources layout: wide
-
-* * *
 
 # एक घंटा कोड का कैसे पढ़ानेकी तकनीक
 
