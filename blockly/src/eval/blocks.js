@@ -149,6 +149,16 @@ exports.install = function(blockly, blockInstallOptions) {
     ]
   });
 
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'scale',
+    blockTitle: msg.scaleImageBlockTitle(),
+    apiName: 'scaleImage',
+    args: [
+      { name: 'IMAGE', type: 'image' },
+      { name: 'FACTOR', type: 'Number' }
+    ]
+  });
+
   installStyle(blockly, generator, gensym);
 };
 

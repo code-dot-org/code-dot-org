@@ -5,6 +5,7 @@
   "placeImageBlockTitle": "place-image (image, x, y)",
   "rectangleBlockTitle": "rectangle (width, height, style, color)",
   "rotateImageBlockTitle": "rotate (image, degrees)",
+  "scaleImageBlockTitle": "scale (factor)",
   "squareBlockTitle": "square (size, style, color)",
   "triangleBlockTitle": "triangle (size, style, color)",
   "underlayBlockTitle": "underlay (bottom, top)",
