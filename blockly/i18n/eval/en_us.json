@@ -7,6 +7,7 @@
   "rotateImageBlockTitle": "rotate (image, degrees)",
   "scaleImageBlockTitle": "scale (factor)",
   "squareBlockTitle": "square (size, style, color)",
+  "textBlockTitle": "text (string, size, color)",
   "triangleBlockTitle": "triangle (size, style, color)",
   "underlayBlockTitle": "underlay (bottom, top)",
   "outline": "outline",

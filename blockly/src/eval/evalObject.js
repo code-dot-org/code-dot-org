@@ -18,6 +18,7 @@ EvalObject.prototype.updatePosition = function (x, y) {
 
 // todo (brent) arguably some of these things should be on an EvalImage instead of EvalObject
 EvalObject.prototype.draw = function (parentElement) {
+  // todo (brent) - should style/color be init'ed in this ctor, and taken as inputs?
   if (this.style_ && this.color_) {
     this.element_.setAttribute('fill', evalUtils.getFill(this.style_, this.color_));
     this.element_.setAttribute('stroke', evalUtils.getStroke(this.style_, this.color_));
