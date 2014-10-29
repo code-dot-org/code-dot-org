@@ -224,7 +224,7 @@ Calc.execute = function() {
   if (Calc.result === true) {
     Calc.testResult = TestResults.ALL_PASS;
   } else {
-    Calc.testResult = TestResults.LEVEL_INCOMPLETE_FAIL
+    Calc.testResult = TestResults.LEVEL_INCOMPLETE_FAIL;
     // equivalence means the expressions are the same if we ignore the ordering
     // of inputs
     if (Calc.expressions.user.isEquivalent(Calc.expressions.target)) {
