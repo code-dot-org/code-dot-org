@@ -725,7 +725,7 @@ Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_ = function() {
  */
 Blockly.BlockSpaceEditor.prototype.setBlockSpaceMetrics_ = function(xyRatio) {
   if (!this.blockSpace.scrollbar) {
-    throw 'Attempt to set editor this scroll without scrollbars.'; // TODO(bjordan): figure out
+    throw 'Attempt to set editor this scroll without scrollbars.';
   }
   var metrics = this.getBlockSpaceMetrics_();
   if (goog.isNumber(xyRatio.x)) {
