@@ -1,15 +1,16 @@
 ---
-title: リソース
 layout: wide
 nav: resources_nav
 ---
 
 # リソース
 
+## Hosting an Hour of Code? [See the how-to guide](<%= hoc_uri('/resources/how-to') %>)
+
 <a id="handouts"></p> 
 
 <h2>
-  この資料を使って周りに広めてください。
+  Use this handout to spread the word
 </h2>
 
 <p>
@@ -32,14 +33,14 @@ nav: resources_nav
   </h2>
   
   <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>ほとんどの学校は教えない。 (5 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>Hour of Code はここです - 誰でも学べます</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
     </p>
@@ -49,14 +50,14 @@ nav: resources_nav
   </div>
   
   <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>オバマ大統領もコンピューター科学を</strong></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>誰でも学べる (1 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
@@ -68,7 +69,7 @@ nav: resources_nav
   <div style='clear:both'>
   </div>
   
-  <p>
+<p>
 <a id="posters"></p> 
 
 <h2>
@@ -80,7 +81,7 @@ nav: resources_nav
 </p>
 
 <h4>
-  <a href="http://hourofcode.com/#signup">サインアップしましょう</a> あなたの Hour of Code イベント用に無料でポスターをお送り致します。
+  <a href="http://hourofcode.com/#signup">Sign up</a> your Hour of Code event and we'll mail you posters for free.
 </h4>
 
 <p>
@@ -97,6 +98,22 @@ nav: resources_nav
 
 <p>
   <a href="/images/banner1.jpg"><img src="/images/fit-250/banner1.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner3.jpg"><img src="/images/fit-250/banner3.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner5.jpg"><img src="/images/fit-500/banner5.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+
+<p>
+  <a id="social"></a>
+</p>
+
+<h2>
+  Post these on social media
+</h2>
+
+<p>
+  <a href="/images/social-1.jpg"><img src="/images/fit-200/social-1.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-2.jpg"><img src="/images/fit-200/social-2.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-3.jpg"><img src="/images/fit-200/social-3.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+
+<p>
+  <a href="/images/mark.jpg"><img src="/images/fit-200/mark.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-200/susan.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-200/ashton.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-200/marissa.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-200/chris.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
 </p>
 
 <p>
