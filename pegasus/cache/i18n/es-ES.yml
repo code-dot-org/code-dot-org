@@ -434,12 +434,14 @@
   khan_shortdescription: Aprendé a dibujar en JavaScript
   khanes_shortdescription: Aprendé a dibujar en JavaScript
   tynker_shortdescription: Creá una tarjeta interactiva de felicitación
-  scratch_shortdescription: Aprendés los conceptos fundamentales de la programación en un entorno visual y divertido
+  scratch_shortdescription: Aprendés los conceptos fundamentales de la programación en 
+    un entorno visual y divertido
   thinkersmith_shortdescription: Aprendé a programar sin computadora!
   lightbot_shortdescription: Un juego para aprender conceptos de programación
   lightbotintl_shortdescription: Un juego para aprender conceptos de programación
   codecademy_shortdescription: Aprendé programación JavaScript, directo en tu browser!
-  kodable_shortdescription: Un juego divertido para aprender los conceptos básicos de la programación en un iPad
+  kodable_shortdescription: Un juego divertido para aprender los conceptos básicos de la 
+    programación en un iPad
   hopscotch_shortdescription: Aprendé programación visual en un iPad
   groklearning_shortdescription: Introducción a la programación en Python
   processing_shortdescription: Un tutorial de una hora en el lenguaje Processing
@@ -447,9 +449,11 @@
   robomindnl_shortdescription: Escribí código para un robot virtual
   makegameswithus_shortdescription: Aprendé a hacer un juego para iPhone en una hora
   appinventor_shortdescription: Creá tu propia app para tu Android
-  touchdevelop_shortdescription: Programá aplicaciones móviles directamente desde tu celular, tablet o laptop
+  touchdevelop_shortdescription: Programá aplicaciones móviles directamente desde tu 
+    celular, tablet o laptop
   blockly_shortdescription: Descargá un archivo ZIP para aprender sin conexión
-  thinkersmith2_shortdescription: Aprendé como las computadoras usan 1s y 0s para representar la información
+  thinkersmith2_shortdescription: Aprendé como las computadoras usan 1s y 0s para 
+    representar la información
   codehs_shortdescription: Aprendé programación JavaScript con un ambiente visual y divertido
   codeavengers_shortdescription: Aprendé programación JavaScript en un navegador.
   codecombat_shortdescription: Jugá y aprendé JavaScript para ganar
@@ -458,35 +462,112 @@
   livecode_shortdescription: Aprendé a programar con LiveCode
   lookingglass_shortdescription: Programá tu historia animada
   kodableunplugged_shortdescription: Un divertido ejercicio "desenchufado"
-  codeorg_longdescription: Aprendé los conceptos básicos de la programación mediante acciones tan simples como un par de clicks en este tutorial protagonizado por Bill Gates, Mark Zuckerberg, Angry Birds y Plants vs Zombies. Aprendé qué es un ciclo, un condicional y nociones básicas de algoritmia.
-  thinkersmithspanish_longdescription: Mediante el uso de un “Vocabulario Robot” predefinido, los estudiantes descubrirán como guiarse de modo tal de llevar a cabo tareas específicas sin ser estas discutidas previamente. Este segmento enseña a los estudiantes la conexión entre símbolos y acciones así como la valiosa habilidad de depuración.
-  khan_longdescription: Aprendé los conceptos fundamentales de la programación en JavaScript mientras creás unos dibujos muy divertidos. Hacelo solo o con tus amigos!
-  khanes_longdescription: Aprendé los conceptos fundamentales de la programación en JavaScript mientras creás unos dibujos muy divertidos. Hacelo solo o con tus amigos!
-  tynker_longdescription: Con Scratch podés crear tus propios juegos interactivos, historias, animaciones, y mucho más. En esta actividad vas a crear una tarjeta de felicitación interactiva que luego podés compartir con tus amigos.
-  scratch_longdescription: Una colección de 8 actividades divertidas para que chicas y chicos de todas las edades se acerquen a la programación. Ayudá a que Pixel -un cachorro- y Biff -un astronauta- lleguen a la base lunar. Creá el juego "Zombies del Espacio" o "Arte Matemático" usando nuestro enfoque visual, simple y divertido para programar. Estas actividades las podés hacer sólo o con la ayuda de tus profes.
-  thinkersmith_longdescription: Mediante el uso de un “Vocabulario Robot” predefinido, los estudiantes descubrirán como guiarse de modo tal de llevar a cabo tareas específicas sin ser estas discutidas previamente. Este segmento enseña a los estudiantes la conexión entre símbolos y acciones así como la valiosa habilidad de depuración.
-  lightbot_longdescription: Aprendé conceptos lógicos centrales para programar, de a poco y comenzando por lo más básico. Para chicas y chicos a partir de los 4 años, disponible en tu navegador, Android o iOS. Aprendé cómo secuenciar instrucciones, identificar patrones y utilizar repeticiones!
-  lightbotintl_longdescription: Aprendé conceptos lógicos centrales para programar, de a poco y comenzando por lo más básico. Para chicas y chicos a partir de los 4 años, disponible en tu navegador, Android o iOS. Aprendé cómo secuenciar instrucciones, identificar patrones y utilizar repeticiones!
-  codecademy_longdescription: Codeacademy es una introducción interactiva a los conceptos básicos de las Ciencias de la Computación a través de JavaScript usado por decenas de millones de alumnos en todo el mundo. Hemos preparado una experiencia para la Hora de Program.AR que no tiene dificultades y viene acompañada por preguntas, diapositivas y un proyecto completo para los alumnos.
-  kodable_longdescription: Kodable es un juego autogioado para iPad que introduce a los niños de más de 5 años las bases de la programación. Es mejor si se realiza con un adulto, pero lo niños también pueden hacerlo solos.
-  hopscotch_longdescription: Tutorial para iPad usando el lengujaje de programación Hopscotch. Los alumnos construyen sus propios juegos y aplicaciones para iPad en el propio iPad. Pueden trabajar de manera individual o con amigos (hasta 3 por dispositivo).
-  groklearning_longdescription: Elegí entre 3 actividades diseñadas para que tengas tu primera experiencia de programación. Por ejemplo, utilizá el lenguaje de programación Python para construir un chatbot llamado "Eliza". ¿Podrá engañar a tus amigos haciéndoles pensar que es una persona real? Esta actividad la pueden hacer los alumnos directamente o con la ayuda de un docente. Viene con todas las notas para docentes y soluciones.
-  processing_longdescription: Una introducción a la programación en el contexto de las artes visuales usando el lenguaje de programación Processing. Se realizan ejercicios cortos de programación (que son presentados en video) y que gradualmente conducen a diseñar un programa de dibujo interactivo.
-  robomind_longdescription: Los alumnos aprenden las bases de la programación controlando su propio robot virtual. El curso online es completamente autocontenido con presentaciones cortas, videos, trivias y consejos que ayudan a completar los ejercicios de programación
-  robomindnl_longdescription: Los alumnos aprenden las bases de la programación controlando su propio robot virtual. El curso online es completamente autocontenido con presentaciones cortas, videos, trivias y consejos que ayudan a completar los ejercicios de programación
-  makegameswithus_longdescription: ¿Ya sabés algo de programación? ¡Aprendé a hacer un juego para iPhone en una hora! Te vamos a guiar durante el proceso para programar, testear y jugar tu juego en el navegador. Luego vas a poder compartirlo en Facebook para que todos puedan jugarlo. No se necesita experiencia previa en desarrollo para iPhone, pero debés entender que son variables, métodos y objetos.
-  appinventor_longdescription: Tutoriales rápidos y entretenidos te guían para construir tres aplicaciones sencillas para tu teléfono o tableta Android. Tanto para principiantes como para expertos esta hora de programación te va a preparar para comenzar a hacer tus propias aplicaciones más rápido de lo que te imaginás y vas a poder compartirlas con tus amigos. Estas actividades son aptas tanto para hacer sólo como para hacer en clase con los profes.
-  touchdevelop_longdescription: Dibujos locos, monstruos voladores... creá tus propias aplicaciones en tu dispositivo utilizando TouchDevelop, un entorno amigable de desarrollo de aplicaciones móviles. Funciona en iPhone, iPad, Android, Windows, Windows Phone, Linux y Mac
-  blockly_longdescription: ¿Tenés PCs con conexión lenta o inexistente? Descargá el tutorial de Blockly, que fue el precursor de los tutoriales de Code.org. Es un simple archivo de 3MB que puede desgarse en cualquier computadora o usarlo desde un Pen Drive
-  thinkersmith2_longdescription: Los alumnos aprenden cómo se representan y almacenan letras en binario y funciones de prendido y apagado. Al final, la clase aprende a codificar sus propias iniciales para llevarse a casa.
-  codehs_longdescription: Aprendé las bases de la programación con Karel el perro. Una divertida y visual introducción a la programación donde darle comandos a una computadora es como darle comandos a un perro. El tutorial es genial si es guiado por un docente, pero se puede hacer de manera independiente.
-  codeavengers_longdescription: Construí un juego de 2 jugadores con JavaScript en 10 tareas cortas. Luego continuá aprendiendo las bases de la programación (variables y condicionales) mientras creás una trivia para compartirla con tus amigos. En el camino ganá puntos e insignias mientras competís para alcanzar la sima en el marcador de la clase.
-  codecombat_longdescription: Jugá como un mago usando código (hechizos) para controlar a tus héroes, navegar escenarios, ganarle a los ogros y rescatar aliados. Aprendé JavaScript en este juego para completos principiantes.
-  agentcubes_longdescription: Imagináte una herramienta que te permitiese transformar imágenes 2D en formas 3D. Usá AgentCubes online, la primera herramienta web de programación y modelado 3D, y aprendé a programar muy divertidos juegos en 3D.
-  alice_longdescription: Los estudiantes van a preaparar una escena y van a crear una animación simple con apoyo mínimo del docente usando objetos 3D y una interfaz intuitiva. Nota: Se requiere instalar la aplicación en la PC, descarga completamente gratuita
-  livecode_longdescription: Todos pueden programar con LiveCode contiene seis clases incluyendo una introducción al ambiente de desarrollo. Mirá cada video corto y continúa leyendo la documentación que te explica paso a paso. Todo el código está disponible para copiar y pegar con explicaciones claras de por qué y cómo funciona. También se incluyen las imágenes y ejemplos necesarios para descargar. Nota: se requiere descargar la aplicación
-  lookingglass_longdescription: En esta actividad, los alumnos tendrán una introducción a la programación construyendo una historia animada. La actividad intrudce el pensamiento computacional y resalta la creatividad inherente a la computación. Además, incorpora acciones 
-  kodableunplugged_longdescription: Pensada para ser realizada con papel, fuzzFamily Frenzy es una introducción a la lógica de la programación para niños de 5 años en adelante. Un docente debe explicar el juego, y los estudiantes programan a sus compañeros para que completen un circuito con obstáculos
+  codeorg_longdescription: Aprendé los conceptos básicos de la programación mediante 
+    acciones tan simples como un par de clicks en este tutorial protagonizado por Bill Gates, 
+    Mark Zuckerberg, Angry Birds y Plants vs Zombies. Aprendé qué es un ciclo, un 
+    condicional y nociones básicas de algoritmia.
+  thinkersmithspanish_longdescription: Mediante el uso de un “Vocabulario Robot” predefinido, 
+    los estudiantes descubrirán como guiarse de modo tal de llevar a cabo tareas específicas 
+    sin ser estas discutidas previamente. Este segmento enseña a los estudiantes la conexión 
+    entre símbolos y acciones así como la valiosa habilidad de depuración.
+  khan_longdescription: Aprendé los conceptos fundamentales de la programación en JavaScript 
+    mientras creás unos dibujos muy divertidos. Hacelo solo o con tus amigos!
+  khanes_longdescription: Aprendé los conceptos fundamentales de la programación en JavaScript 
+    mientras creás unos dibujos muy divertidos. Hacelo solo o con tus amigos!
+  tynker_longdescription: Con Scratch podés crear tus propios juegos interactivos, historias, 
+    animaciones, y mucho más. En esta actividad vas a crear una tarjeta de felicitación 
+    interactiva que luego podés compartir con tus amigos.
+  scratch_longdescription: Una colección de 8 actividades divertidas para que chicas y chicos 
+    de todas las edades se acerquen a la programación. Ayudá a que Pixel -un cachorro- y Biff 
+    -un astronauta- lleguen a la base lunar. Creá el juego "Zombies del Espacio" o "Arte 
+    Matemático" usando nuestro enfoque visual, simple y divertido para programar. Estas 
+    actividades las podés hacer sólo o con la ayuda de tus profes.
+  thinkersmith_longdescription: Mediante el uso de un “Vocabulario Robot” predefinido, los 
+    estudiantes descubrirán como guiarse de modo tal de llevar a cabo tareas específicas sin 
+    ser estas discutidas previamente. Este segmento enseña a los estudiantes la conexión entre 
+    símbolos y acciones así como la valiosa habilidad de depuración.
+  lightbot_longdescription: Aprendé conceptos lógicos centrales para programar, de a poco y 
+    comenzando por lo más básico. Para chicas y chicos a partir de los 4 años, disponible en 
+    tu navegador, Android o iOS. Aprendé cómo secuenciar instrucciones, identificar patrones y 
+    utilizar repeticiones!
+  lightbotintl_longdescription: Aprendé conceptos lógicos centrales para programar, de a poco y 
+    comenzando por lo más básico. Para chicas y chicos a partir de los 4 años, disponible en tu 
+    navegador, Android o iOS. Aprendé cómo secuenciar instrucciones, identificar patrones y 
+    utilizar repeticiones!
+  codecademy_longdescription: Codeacademy es una introducción interactiva a los conceptos 
+    básicos de las Ciencias de la Computación a través de JavaScript usado por decenas de 
+    millones de alumnos en todo el mundo. Hemos preparado una experiencia para la Hora de 
+    Codigo que no tiene dificultades y viene acompañada por preguntas, diapositivas y un 
+    proyecto completo para los alumnos.
+  kodable_longdescription: Kodable es un juego autogioado para iPad que introduce a los niños 
+    de más de 5 años las bases de la programación. Es mejor si se realiza con un adulto, pero 
+    lo niños también pueden hacerlo solos.
+  hopscotch_longdescription: Tutorial para iPad usando el lengujaje de programación Hopscotch. 
+    Los alumnos construyen sus propios juegos y aplicaciones para iPad en el propio iPad. Pueden 
+    trabajar de manera individual o con amigos (hasta 3 por dispositivo).
+  groklearning_longdescription: Elegí entre 3 actividades diseñadas para que tengas tu primera 
+    experiencia de programación. Por ejemplo, utilizá el lenguaje de programación Python para 
+    construir un chatbot llamado "Eliza". ¿Podrá engañar a tus amigos haciéndoles pensar que 
+    es una persona real? Esta actividad la pueden hacer los alumnos directamente o con la ayuda 
+    de un docente. Viene con todas las notas para docentes y soluciones.
+  processing_longdescription: Una introducción a la programación en el contexto de las artes 
+    visuales usando el lenguaje de programación Processing. Se realizan ejercicios cortos de 
+    programación (que son presentados en video) y que gradualmente conducen a diseñar un 
+    programa de dibujo interactivo.
+  robomind_longdescription: Los alumnos aprenden las bases de la programación controlando 
+    su propio robot virtual. El curso online es completamente autocontenido con presentaciones 
+    cortas, videos, trivias y consejos que ayudan a completar los ejercicios de programación
+  robomindnl_longdescription: Los alumnos aprenden las bases de la programación controlando su 
+    propio robot virtual. El curso online es completamente autocontenido con presentaciones 
+    cortas, videos, trivias y consejos que ayudan a completar los ejercicios de programación
+  makegameswithus_longdescription: ¿Ya sabés algo de programación? ¡Aprendé a hacer un juego 
+    para iPhone en una hora! Te vamos a guiar durante el proceso para programar, testear y 
+    jugar tu juego en el navegador. Luego vas a poder compartirlo en Facebook para que todos 
+    puedan jugarlo. No se necesita experiencia previa en desarrollo para iPhone, pero debés 
+    entender que son variables, métodos y objetos.
+  appinventor_longdescription: Tutoriales rápidos y entretenidos te guían para construir tres 
+    aplicaciones sencillas para tu teléfono o tableta Android. Tanto para principiantes como 
+    para expertos esta hora de programación te va a preparar para comenzar a hacer tus propias 
+    aplicaciones más rápido de lo que te imaginás y vas a poder compartirlas con tus amigos. 
+    Estas actividades son aptas tanto para hacer sólo como para hacer en clase con los profes.
+  touchdevelop_longdescription: Dibujos locos, monstruos voladores... creá tus propias 
+    aplicaciones en tu dispositivo utilizando TouchDevelop, un entorno amigable de desarrollo 
+    de aplicaciones móviles. Funciona en iPhone, iPad, Android, Windows, Windows Phone, Linux y Mac
+  blockly_longdescription: ¿Tenés PCs con conexión lenta o inexistente? Descargá el tutorial 
+    de Blockly, que fue el precursor de los tutoriales de Code.org. Es un simple archivo de 
+    3MB que puede desgarse en cualquier computadora o usarlo desde un Pen Drive
+  thinkersmith2_longdescription: Los alumnos aprenden cómo se representan y almacenan letras 
+    en binario y funciones de prendido y apagado. Al final, la clase aprende a codificar sus 
+    propias iniciales para llevarse a casa.
+  codehs_longdescription: Aprendé las bases de la programación con Karel el perro. Una divertida 
+    y visual introducción a la programación donde darle comandos a una computadora es como darle 
+    comandos a un perro. El tutorial es genial si es guiado por un docente, pero se puede hacer 
+    de manera independiente.
+  codeavengers_longdescription: Construí un juego de 2 jugadores con JavaScript en 10 tareas 
+    cortas. Luego continuá aprendiendo las bases de la programación (variables y condicionales) 
+    mientras creás una trivia para compartirla con tus amigos. En el camino ganá puntos e 
+    insignias mientras competís para alcanzar la sima en el marcador de la clase.
+  codecombat_longdescription: Jugá como un mago usando código (hechizos) para controlar a tus 
+    héroes, navegar escenarios, ganarle a los ogros y rescatar aliados. Aprendé JavaScript en 
+    este juego para completos principiantes.
+  agentcubes_longdescription: Imagináte una herramienta que te permitiese transformar imágenes 
+    2D en formas 3D. Usá AgentCubes online, la primera herramienta web de programación y modelado 
+    3D, y aprendé a programar muy divertidos juegos en 3D.
+  alice_longdescription: 'Los estudiantes van a preaparar una escena y van a crear una animación 
+      simple con apoyo mínimo del docente usando objetos 3D y una interfaz intuitiva. Nota: Se 
+      requiere instalar la aplicación en la PC, descarga completamente gratuita'
+  livecode_longdescription: 'Todos pueden programar con LiveCode contiene seis clases 
+    incluyendo una introducción al ambiente de desarrollo. Mirá cada video corto y continúa 
+    leyendo la documentación que te explica paso a paso. Todo el código está disponible para 
+    copiar y pegar con explicaciones claras de por qué y cómo funciona. También se incluyen las 
+    imágenes y ejemplos necesarios para descargar. Nota: se requiere descargar la aplicación'
+  lookingglass_longdescription: En esta actividad, los alumnos tendrán una introducción a la 
+    programación construyendo una historia animada. La actividad intrudce el pensamiento computacional 
+    y resalta la creatividad inherente a la computación. Además, incorpora acciones 
+  kodableunplugged_longdescription: Pensada para ser realizada con papel, fuzzFamily Frenzy es 
+    una introducción a la lógica de la programación para niños de 5 años en adelante. Un docente 
+    debe explicar el juego, y los estudiantes programan a sus compañeros para que completen un 
+    circuito con obstáculos
   codeorg_beyond_name: Introducción a ciencias de la computación para niños de 8 años.
   khan_beyond_name: Aprendé programación
   tynker_beyond_name: Aprendé programación en casa
@@ -623,37 +704,136 @@
   arduino_beyond_shortdescription: Prototipá tu propio hardware
   processing_beyond_shortdescription: Aprendé el lenguaje de programación Processing
   alice_beyond_shortdescription: Enseñá a programar en un entorno 3D
-  codeorg_beyond_longdescription: Aprendé los conceptos básicos de ciencias de la computación con programación haciendo clicks. De 12 a 25 horas de actividades "desenchufadas" para la clase, mezcladas con tutoriales autodirigidos y con clases en video por Bill Gates, Mark Zuckerberg, Angry Birds y Plants vs Zombies. Aprendé ciclos de repetición, condicionales, algoritmos básicos, funciones y variables. 
-  khan_beyond_longdescription: Aprendé las bases de programación con JavaScript mientras creás tus propios dibujos con código. ¡Dejá fluir tu creatividad y la de tus compañeros!
-  tynker_beyond_longdescription: Tynker hace fácil y divertido aprender a programar. Lo hace visual. Los niños construyen juegos y aplicaciones para celular apilando bloques de código. Elimina la necesidad de aprender sintaxis de programación Los niños transforman las ideas en historias animadas y arte matemática. Promueve el aprendizaje progresivo y mientras los alumnos aprenden los fundamentos, se los va introduciendo a conceptos más avanzados como programación guiada por la sintaxis
-  scratch_beyond_longdescription: Con Scratch podés programar tus propias historias interactivas, juegos y animaciones. También podés compartir tus creaciones con otros en la comunidad online. Scracth ayuda a los jóvenes a pensar cretivamente, razonar sistemáticamente y trabajar de manera colaborativa. Todas estas aptitudes son esenciales para la vida en el siglo 21. Scratch es un proyecto del Grupo Lifelong Kindergarten del MIT Media Lab. No tiene costo alguno.
-  lightbot_beyond_longdescription: Aprendé conceptos centrales de la lógica de la programación, empezando desde lo más básico para niños de 4 años en adelante, en iOS, Android o un navegador. Aprendé a ordenar comandos, identificar patrones, usar procedimientos y ciclos.
-  codecademy_beyond_longdescription: Codeacademy es una introducción a los conceptos fundamentales de ciencias de la computación mediante JavaScript que es usada por decenas de millones de estudiantes alrededor del mundo. La experiencia se complementa con trivias, presentaciones y un proyecto integrador al final.
-  kodable_beyond_longdescription: Kodable es un juego para iPad que presenta a niños de más de 5 años una introducción a conceptos de programación. Tener un padre o docente alreder es óptimo, pero no necesario. 
-  hopscotch_beyond_longdescription: Los estudiantes construyen juegos y aplicaciones para iPad a través del mismo. Se puede trabajar de manera individual o grupal (hasta 3 niños por iPad)
-  groklearning_beyond_longdescription: Un curso introductorio a la programación con Python para personas sin experiencia en programación. Nuestra mezcla única de contenido introductorio con desafíos te va a llevar a un sólido entendimiento de Python y programación en general. Hemos enseñando estos contenidos alumnos de edad diversas y con distintos conocimientos previos y estamos seguros de que también te va a servir a vos.
-  hacketyhack_beyond_longdescription: Hackety Hack te va a enseñar las bases de la programación desde cero. ¡No se necesita experiencia previa! Con Hackety Hack vas a aprender el lenguaje de programación Ruby, que se utiliza para una gran variedad de cosas, incluyendo páginas web y aplicaciones de escritorio. Nota: se requiere instalar la aplicación.
-  robomind_beyond_longdescription: Los alumnos aprenden las bases de la programación controlando su propio robot virtual. El curso online es completamente autocontenido con presentaciones cortas, videos, trivias y consejos que ayudan a completar los ejercicios de programación 
-  makegameswithus_beyond_longdescription: ¿Ya sabés algo de programación? ¡Aprendé a hacer un juego para iPhone en una hora! Te vamos a guiar durante el proceso para programar, testear y jugar tu juego en el navegador. Luego vas a poder compartirlo en Facebook para que todos puedan jugarlo. No se necesita experiencia previa en desarrollo para iPhone, pero debés entender que son variables, métodos y objetos. 
-  appinventor_beyond_longdescription: Tutoriales rápidos y entretenidos te guían para construir tres aplicaciones sencillas para tu teléfono o tableta Android. Tanto para principiantes como para expertos esta hora de programación te va a preparar para comenzar a hacer tus propias aplicaciones más rápido de lo que te imaginás y vas a poder compartirlas con tus amigos. Estas actividades son aptas tanto para hacer sólo como para hacer en clase con los profes.
-  touchdevelop_beyond_longdescription: Dibujos locos, monstruos voladores... creá tus propias aplicaciones en tu dispositivo utilizando TouchDevelop, un entorno amigable de desarrollo de aplicaciones móviles. Funciona en iPhone, iPad, Android, Windows, Windows Phone, Linux y Mac 
-  codehs_beyond_longdescription: Aprendé las bases de la programación con Karel el perro. Una divertida y visual introducción a la programación donde darle comandos a una computadora es como darle comandos a un perro. El tutorial es genial si es guiado por un docente, pero se puede hacer de manera independiente. 
-  udemy_beyond_longdescription: Si nunca viste una línea de código en tu vida o trabajás programando, Udemy tiene un curso para vos, enseñado por instructores profesionales. Nota: los cursos son pagos 
-  lynda_beyond_longdescription: Aprendé a programar, crear y construir tus propias aplicaciones web, desde los fundamentos de la programación orientada a objetos en C y C++, hasta cómo programar en Java. Nuestros tutoriales te van a ayudar a desarrollar y crear aplicaciones móviles, trabajar con PHP, base de datos MySQL y empezar con procesamiento estadístico usando R. Nota: los cursos son pagos 
-  edx_beyond_longdescription: CS50x es la introducción que brinda Harvard sobre Ciencias de la Computación y el arte de la programación, abierto a todo el mundo, con o sin experiencia en programación. El temario incluye: abstracción, algoritmos, estructuras de datos, encapsulamiento, manejo de recursos, seguridad, ingeniería del software y desarrollo web. Los lenguajes utilizados incluyen C, PHP y JavaScript además de SQL, CSS y HTML. 
-  coursera_beyond_longdescription: El curso Standford CS 101, cuyo profesor es Nick Parlante, enseña las ideas fundamentales de ciencias de la computación para un público sin expriencia. Jugá y experimentá con pequeños códigos, el poderío y las limitaciones de las computadoras. También se da un panorama general de lo que son las computadoras hoy en día: qué es una computadora, qué es el hardware, software, Internet. No se requiere experiencia previa pero si la habilidad para usar un navegador. 
-  udacity_beyond_longdescription: En este curso vas a aprender los conceptos fundamentales de ciencias de la computación y a programar tus propias aplicaciones en el contexto de construir un Web Crawler. No se necesitan conocimientos previos de programación. Al final, vas a estar preparado para resolver problemas por tu cuenta usando Python y avanzar a cursos de nivel intermedio. 
-  teachingtree_beyond_longdescription: TeachingTree es una plataforma abiera que permite a cualquiera organizar contenido educativo. Nuestro objetivo es darle a los alumnos la oportunidad de acceder rápidamente a los videos que necesitan para aprender conceptos individuales. Cualquiera puede ayudarnos agregando videos o etiquetando conceptos. 
-  kodu_beyond_longdescription: Kodu le permite a los niños crear juegos en la PC con un lenguaje simple de programación visual. Kodu puede ser usado para enseñar creatividad, resolución de problemas, contar historias y programar. Cualquiera puede usar Kodu para construir un juego, adulto o niño sin conocimientos previos. Para PC se puede descargar de manera gratuita. 
-  cargobot_beyond_longdescription: Cargobot es un puzzle donde le podés enseñar a un robot como mover piezas. Contiene 36 puzzles con excelentes gráficos. Podés grabar tus soluciones y compartirlas en YouTube con tus amigos. 
-  kidsruby_beyond_longdescription: Divertite creando juegos usando Ruby. Gratis y funciona en cualquier computadora. Nota: se requiere instalación de una aplicación de Escritorio 
-  w3schools_beyond_longdescription: Aprendé a crear sitios web en tu propia computadora. Aprendé los conceptos de los servidores en un día y a agregar bases de datos a tu página.
-  codeavengers_beyond_longdescription: Aprendé a programar juegos, aplicaciones y sitios web. Diseñado por expertos con niveles de dificultad apropiados para principiantes, con instrucciones fáciles de entender y ayuda cuando la necesites. Nuestros cursos de HTML, CSS y JavaScript incluyen desafíos de código y revisión de juegos que hacen que aprender sea divertido y efectivo para todas las edades.
-  mozilla_beyond_longdescription: Thimble te facilita crear y compartir tus propias páginas web. Escribí y editá HTML y CSS desde tu navegador y previsualizá tu trabajo en el momento. Compartí tu trabajo con un solo click. Sirve tanto para expertos como para principiantes. 
-  codecombat_beyond_longdescription: Jugá como un mago usando código (hechizos) para controlar a tus héroes, navegar escenarios, ganarle a los ogros y rescatar aliados. Aprendé JavaScript en este juego para completos principiantes. 
-  codea_beyond_longdescription: Codea para iPad te permite crear juegos, simulaciones o cualquier idea visual que tengas. Convertí tus pensamientos en creaciones interactivas que usan características del iPad como el acelerómetro o el Multi-Touch. Codea es fácil de usar y te permite tocar tu código.
+  codeorg_beyond_longdescription: Aprendé los conceptos básicos de ciencias de la 
+    computación con programación haciendo clicks. De 12 a 25 horas de actividades "desenchufadas" 
+    para la clase, mezcladas con tutoriales autodirigidos y con clases en video por Bill Gates, 
+    Mark Zuckerberg, Angry Birds y Plants vs Zombies. Aprendé ciclos de repetición, condicionales, 
+    algoritmos básicos, funciones y variables. 
+  khan_beyond_longdescription: Aprendé las bases de programación con JavaScript mientras 
+    creás tus propios dibujos con código. ¡Dejá fluir tu creatividad y la de tus compañeros!
+  tynker_beyond_longdescription: Tynker hace fácil y divertido aprender a programar. Lo hace 
+    visual. Los niños construyen juegos y aplicaciones para celular apilando bloques de código. 
+    Elimina la necesidad de aprender sintaxis de programación Los niños transforman las ideas en 
+    historias animadas y arte matemática. Promueve el aprendizaje progresivo y mientras los 
+    alumnos aprenden los fundamentos, se los va introduciendo a conceptos más avanzados como 
+    programación guiada por la sintaxis
+  scratch_beyond_longdescription: Con Scratch podés programar tus propias historias interactivas, 
+    juegos y animaciones. También podés compartir tus creaciones con otros en la comunidad online. 
+    Scracth ayuda a los jóvenes a pensar cretivamente, razonar sistemáticamente y trabajar de manera 
+    colaborativa. Todas estas aptitudes son esenciales para la vida en el siglo 21. Scratch es un 
+    proyecto del Grupo Lifelong Kindergarten del MIT Media Lab. No tiene costo alguno.
+  lightbot_beyond_longdescription: Aprendé conceptos centrales de la lógica de la programación, 
+    empezando desde lo más básico para niños de 4 años en adelante, en iOS, Android o un navegador. 
+    Aprendé a ordenar comandos, identificar patrones, usar procedimientos y ciclos.
+  codecademy_beyond_longdescription: Codeacademy es una introducción a los conceptos fundamentales 
+    de ciencias de la computación mediante JavaScript que es usada por decenas de millones de 
+    estudiantes alrededor del mundo. La experiencia se complementa con trivias, presentaciones 
+    y un proyecto integrador al final.
+  kodable_beyond_longdescription: Kodable es un juego para iPad que presenta a niños de más de 5 
+    años una introducción a conceptos de programación. Tener un padre o docente alreder es óptimo, 
+    pero no necesario. 
+  hopscotch_beyond_longdescription: Los estudiantes construyen juegos y aplicaciones para iPad a 
+    través del mismo. Se puede trabajar de manera individual o grupal (hasta 3 niños por iPad)
+  groklearning_beyond_longdescription: Un curso introductorio a la programación con Python para 
+    personas sin experiencia en programación. Nuestra mezcla única de contenido introductorio con 
+    desafíos te va a llevar a un sólido entendimiento de Python y programación en general. Hemos 
+    enseñando estos contenidos alumnos de edad diversas y con distintos conocimientos previos y 
+    estamos seguros de que también te va a servir a vos.
+  hacketyhack_beyond_longdescription: 'Hackety Hack te va a enseñar las bases de la programación 
+      desde cero. ¡No se necesita experiencia previa! Con Hackety Hack vas a aprender el lenguaje 
+      de programación Ruby, que se utiliza para una gran variedad de cosas, incluyendo páginas web 
+      y aplicaciones de escritorio. Nota: se requiere instalar la aplicación.'
+  robomind_beyond_longdescription: Los alumnos aprenden las bases de la programación controlando 
+    su propio robot virtual. El curso online es completamente autocontenido con presentaciones 
+    cortas, videos, trivias y consejos que ayudan a completar los ejercicios de programación 
+  makegameswithus_beyond_longdescription: ¿Ya sabés algo de programación? ¡Aprendé a hacer un 
+    juego para iPhone en una hora! Te vamos a guiar durante el proceso para programar, testear 
+    y jugar tu juego en el navegador. Luego vas a poder compartirlo en Facebook para que todos 
+    puedan jugarlo. No se necesita experiencia previa en desarrollo para iPhone, pero debés 
+    entender que son variables, métodos y objetos. 
+  appinventor_beyond_longdescription: Tutoriales rápidos y entretenidos te guían para construir 
+    tres aplicaciones sencillas para tu teléfono o tableta Android. Tanto para principiantes como 
+    para expertos esta hora de programación te va a preparar para comenzar a hacer tus propias 
+    aplicaciones más rápido de lo que te imaginás y vas a poder compartirlas con tus amigos. 
+    Estas actividades son aptas tanto para hacer sólo como para hacer en clase con los profes.
+  touchdevelop_beyond_longdescription: Dibujos locos, monstruos voladores... creá tus propias 
+    aplicaciones en tu dispositivo utilizando TouchDevelop, un entorno amigable de desarrollo de 
+    aplicaciones móviles. Funciona en iPhone, iPad, Android, Windows, Windows Phone, Linux y Mac 
+  codehs_beyond_longdescription: Aprendé las bases de la programación con Karel el perro. Una 
+    divertida y visual introducción a la programación donde darle comandos a una computadora es 
+    como darle comandos a un perro. El tutorial es genial si es guiado por un docente, pero se 
+    puede hacer de manera independiente. 
+  udemy_beyond_longdescription: 'Si nunca viste una línea de código en tu vida o trabajás 
+    programando, Udemy tiene un curso para vos, enseñado por instructores profesionales. Nota: 
+    los cursos son pagos '
+  lynda_beyond_longdescription: Aprendé a programar, crear y construir tus propias aplicaciones 
+    web, desde los fundamentos de la programación orientada a objetos en C y C++, hasta cómo 
+    programar en Java. Nuestros tutoriales te van a ayudar a desarrollar y crear aplicaciones 
+    móviles, trabajar con PHP, base de datos MySQL y empezar con procesamiento estadístico 
+    usando R. Nota: los cursos son pagos 
+  edx_beyond_longdescription: CS50x es la introducción que brinda Harvard sobre Ciencias de la 
+    Computación y el arte de la programación, abierto a todo el mundo, con o sin experiencia en 
+  programación. El temario incluye: abstracción, algoritmos, estructuras de datos, 
+    encapsulamiento, manejo de recursos, seguridad, ingeniería del software y desarrollo web. Los 
+    lenguajes utilizados incluyen C, PHP y JavaScript además de SQL, CSS y HTML. 
+  coursera_beyond_longdescription: El curso Standford CS 101, cuyo profesor es Nick Parlante, 
+    enseña las ideas fundamentales de ciencias de la computación para un público sin expriencia. 
+    Jugá y experimentá con pequeños códigos, el poderío y las limitaciones de las computadoras. 
+  También se da un panorama general de lo que son las computadoras hoy en día: qué es una 
+    computadora, qué es el hardware, software, Internet. No se requiere experiencia previa pero 
+    si la habilidad para usar un navegador. 
+  udacity_beyond_longdescription: En este curso vas a aprender los conceptos fundamentales de 
+    ciencias de la computación y a programar tus propias aplicaciones en el contexto de construir 
+    un Web Crawler. No se necesitan conocimientos previos de programación. Al final, vas a estar 
+    preparado para resolver problemas por tu cuenta usando Python y avanzar a cursos de nivel intermedio. 
+  teachingtree_beyond_longdescription: TeachingTree es una plataforma abiera que permite a 
+    cualquiera organizar contenido educativo. Nuestro objetivo es darle a los alumnos la 
+    oportunidad de acceder rápidamente a los videos que necesitan para aprender conceptos 
+    individuales. Cualquiera puede ayudarnos agregando videos o etiquetando conceptos. 
+  kodu_beyond_longdescription: Kodu le permite a los niños crear juegos en la PC con un lenguaje 
+    simple de programación visual. Kodu puede ser usado para enseñar creatividad, resolución de 
+    problemas, contar historias y programar. Cualquiera puede usar Kodu para construir un juego, 
+    adulto o niño sin conocimientos previos. Para PC se puede descargar de manera gratuita. 
+  cargobot_beyond_longdescription: Cargobot es un puzzle donde le podés enseñar a un robot como 
+    mover piezas. Contiene 36 puzzles con excelentes gráficos. Podés grabar tus soluciones y 
+    compartirlas en YouTube con tus amigos. 
+  kidsruby_beyond_longdescription: 'Divertite creando juegos usando Ruby. Gratis y funciona en 
+      cualquier computadora. Nota: se requiere instalación de una aplicación de Escritorio '
+  w3schools_beyond_longdescription: Aprendé a crear sitios web en tu propia computadora. Aprendé 
+    los conceptos de los servidores en un día y a agregar bases de datos a tu página.
+  codeavengers_beyond_longdescription: Aprendé a programar juegos, aplicaciones y sitios web. 
+    Diseñado por expertos con niveles de dificultad apropiados para principiantes, con instrucciones 
+    fáciles de entender y ayuda cuando la necesites. Nuestros cursos de HTML, CSS y JavaScript 
+    incluyen desafíos de código y revisión de juegos que hacen que aprender sea divertido y 
+    efectivo para todas las edades.
+  mozilla_beyond_longdescription: Thimble te facilita crear y compartir tus propias páginas web. 
+    Escribí y editá HTML y CSS desde tu navegador y previsualizá tu trabajo en el momento. Compartí 
+    tu trabajo con un solo click. Sirve tanto para expertos como para principiantes. 
+  codecombat_beyond_longdescription: Jugá como un mago usando código (hechizos) para controlar a 
+    tus héroes, navegar escenarios, ganarle a los ogros y rescatar aliados. Aprendé JavaScript en 
+    este juego para completos principiantes. 
+  codea_beyond_longdescription: Codea para iPad te permite crear juegos, simulaciones o cualquier 
+    idea visual que tengas. Convertí tus pensamientos en creaciones interactivas que usan 
+    características del iPad como el acelerómetro o el Multi-Touch. Codea es fácil de usar y te 
+    permite tocar tu código.
   lego_beyond_longdescription: Creá robots pequeños, adaptables y programables usando piezas de LEGO.  
-  finch_beyond_longdescription: Finch es un robot para enseñar Ciencias de la Computación. Fue diseñado como resultado de un estudio de cuatro años realizado en el laboratorio CREATE de la Universidad de Carnegie Mellon. Soporta más de una docena de lenguajes y entornos de programación, incluyendo varios entornos apropiados para niños desde los 8 años. Finch fue diseñado para permitir que los estudiantes escriban programas interactivos.
-  arduino_beyond_longdescription: Arduino es una plataforma de prototipado electrónico open-source, basado en hardware y software flexible y fácil de usar. Está pensado para artistas, diseñadores, entusiastas y cualquiera interesado en crear objetos y entornos interactivos. 
-  processing_beyond_longdescription: Processing es un lenguaje de programación, entorno de desarrollo y comunidad online. Desde 2001 Processing ha promovido el aprendizaje de programación dentro de las artes visuales y las artes visuales dentro de la tecnología. Creado inicialmente para servir como medio de prototipado rápido de software y para enseñar conceptos fundamentales de programación en un entorno visual, Processing se transformó en una herramienta de desarrollo para profesionales. Hoy hay miles de estudiantes, artistas, diseñadores, investigadores y entusiastas que utilizan Processing para aprender, para prototipar y para producir.
-  alice_beyond_longdescription: Usando un innovador entorno de programación que permite la creación de animaciones 3D, el proyecto Alice provee herramientas y materiales para aprender y enseñar pensamiento computacional, solución de problemas y programación de computadoras a un amplio espectro de edades y niveles escolares.
+  finch_beyond_longdescription: Finch es un robot para enseñar Ciencias de la Computación. Fue 
+    diseñado como resultado de un estudio de cuatro años realizado en el laboratorio CREATE de 
+    la Universidad de Carnegie Mellon. Soporta más de una docena de lenguajes y entornos de 
+    programación, incluyendo varios entornos apropiados para niños desde los 8 años. Finch fue 
+    diseñado para permitir que los estudiantes escriban programas interactivos.
+  arduino_beyond_longdescription: Arduino es una plataforma de prototipado electrónico open-source, 
+    basado en hardware y software flexible y fácil de usar. Está pensado para artistas, diseñadores, 
+    entusiastas y cualquiera interesado en crear objetos y entornos interactivos. 
+  processing_beyond_longdescription: Processing es un lenguaje de programación, entorno de 
+    desarrollo y comunidad online. Desde 2001 Processing ha promovido el aprendizaje de 
+    programación dentro de las artes visuales y las artes visuales dentro de la tecnología. 
+    Creado inicialmente para servir como medio de prototipado rápido de software y para enseñar 
+    conceptos fundamentales de programación en un entorno visual, Processing se transformó en 
+    una herramienta de desarrollo para profesionales. Hoy hay miles de estudiantes, artistas, 
+    diseñadores, investigadores y entusiastas que utilizan Processing para aprender, para 
+    prototipar y para producir.
+  alice_beyond_longdescription: Usando un innovador entorno de programación que permite 
+    la creación de animaciones 3D, el proyecto Alice provee herramientas y materiales para 
+    aprender y enseñar pensamiento computacional, solución de problemas y programación de 
+    computadoras a un amplio espectro de edades y niveles escolares.
