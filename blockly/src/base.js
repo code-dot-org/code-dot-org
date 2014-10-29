@@ -725,7 +725,9 @@ BlocklyApps.resizeHeaders = function (fullWorkspaceWidth) {
   var showCodeHeader = document.getElementById('show-code-header');
 
   var showCodeWidth;
-  if (BlocklyApps.enableShowCode && (workspaceWidth - toolboxWidth > 450)) {
+  var minWorkspaceWidthForShowCode = BlocklyApps.editCode ? 250 : 450;
+  if (BlocklyApps.enableShowCode &&
+      (workspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
     showCodeWidth = parseInt(window.getComputedStyle(showCodeHeader).width, 10);
     showCodeHeader.style.display = "";
   }
