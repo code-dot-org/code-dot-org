@@ -76,6 +76,19 @@ Blockly.FunctionEditor.prototype.show = function() {
   // Set up contract definition HTML section
   this.createContractDom_();
 
+  // The function editor block space passes clicks through via
+  // pointer-events:none, so register the unselect handler on lower elements
+  Blockly.bindEvent_(goog.dom.getElement('modalContainer'), 'mousedown', null, function(e) {
+    if (Blockly.selected && e.target === e.currentTarget) {
+      Blockly.selected.unselect();
+    }
+  });
+  Blockly.bindEvent_(this.contractDiv_, 'mousedown', null, function() {
+    if (Blockly.selected) {
+      Blockly.selected.unselect();
+    }
+  });
+
   // Set up parameters toolbox
   this.paramToolboxBlocks = [];
   this.flyout_ = new Blockly.HorizontalFlyout(Blockly.modalBlockSpaceEditor);
