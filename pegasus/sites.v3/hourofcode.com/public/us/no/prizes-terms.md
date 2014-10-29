@@ -1,8 +1,4 @@
-* * *
 
-oppsett: bredt
-
-* * *
 
 # Premier - vilkår og betingelser
 

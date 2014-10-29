@@ -1,8 +1,4 @@
-* * *
 
-title: Prizes layout: wide
-
-* * *
 
 # Hodina kódu – ceny pro každého pořadatele
 

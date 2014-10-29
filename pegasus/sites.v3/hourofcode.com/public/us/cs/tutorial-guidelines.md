@@ -1,8 +1,4 @@
-* * *
 
-rozvržení: široké
-
-* * *
 
 # Pokyny k výuce akcím Hodina kódu a Týden informatiky
 

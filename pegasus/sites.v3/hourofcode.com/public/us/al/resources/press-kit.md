@@ -1,8 +1,4 @@
-* * *
 
-title: Resources layout: wide
-
-* * *
 
 ## Statistika të dobishme për shkencën kompjuterike
 

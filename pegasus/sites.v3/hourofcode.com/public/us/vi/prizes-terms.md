@@ -1,8 +1,4 @@
-* * *
 
-bố cục: rộng
-
-* * *
 
 # Giải thưởng - Các điều khoản và điều kiện khi nhận giải
 

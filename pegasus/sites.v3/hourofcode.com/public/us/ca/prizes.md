@@ -1,8 +1,4 @@
-* * *
 
-títol: premis maquetació: àmplia
-
-* * *
 
 # L'Hora de Codi — premis per a cada organitzador
 

@@ -1,8 +1,4 @@
-* * *
 
-title: Resources layout: wide
-
-* * *
 
 # Hogyan tanítsd a Kód Óráját
 

@@ -1,8 +1,4 @@
-* * *
 
-title: Prizes layout: wide
-
-* * *
 
 # Hour of Code — 主催者様全員への賞品
 

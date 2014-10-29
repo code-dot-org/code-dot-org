@@ -1,8 +1,4 @@
-* * *
 
-títol: Recursos disseny: ampli
-
-* * *
 
 ## Estadístiques útils en informàtica
 

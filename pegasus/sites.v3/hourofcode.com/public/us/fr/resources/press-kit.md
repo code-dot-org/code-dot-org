@@ -1,8 +1,4 @@
-* * *
 
-titre: Ressources affichage: large
-
-* * *
 
 ## Statistiques utiles sur l'informatique
 

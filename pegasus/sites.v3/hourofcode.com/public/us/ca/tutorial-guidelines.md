@@ -1,8 +1,4 @@
-* * *
 
-maquetació: àmplia
-
-* * *
 
 # Directrius per fer guies per l'Hora del Codi i la Setmana per la Educació en Informàtica
 

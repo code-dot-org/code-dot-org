@@ -1,8 +1,4 @@
-* * *
 
-název: Zdroje rozvržení: široké
-
-* * *
 
 # Jak vyučovat Hodinu kódu
 

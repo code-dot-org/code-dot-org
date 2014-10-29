@@ -1,8 +1,7 @@
-* * *
-
-title: Resources layout: wide nav: resources_nav
-
-* * *
+---
+layout: wide
+nav: resources_nav
+---
 
 # Sumber daya
 

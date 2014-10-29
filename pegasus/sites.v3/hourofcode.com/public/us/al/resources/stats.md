@@ -1,8 +1,4 @@
-* * *
 
-title: Resources layout: wide
-
-* * *
 
 # Si t'i tërhiqni mediat në eventin tuaj të Orës së Kodimit
 

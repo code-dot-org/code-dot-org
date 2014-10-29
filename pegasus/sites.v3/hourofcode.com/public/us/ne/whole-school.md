@@ -1,8 +1,4 @@
-* * *
 
-सजावट: फराकिलो
-
-* * *
 
 # Get your whole school to participate
 

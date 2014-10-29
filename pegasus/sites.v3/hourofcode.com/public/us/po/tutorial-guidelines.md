@@ -1,8 +1,4 @@
-* * *
 
-layout: wide
-
-* * *
 
 # Linhas orientadoras para a Semana da Hora de Código e Ciências da Computação
 

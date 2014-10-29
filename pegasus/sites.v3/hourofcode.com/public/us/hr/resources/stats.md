@@ -1,8 +1,4 @@
-* * *
 
-naslov: Resursi postav: širok
-
-* * *
 
 # Privucite medije kako bi prisustvovali vašem Satu Kodiranja
 

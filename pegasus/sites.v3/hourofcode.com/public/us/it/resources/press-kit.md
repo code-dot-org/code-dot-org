@@ -1,8 +1,4 @@
-* * *
 
-title: Risorse layout: wide
-
-* * *
 
 ## Informazioni utili sull'informatica
 

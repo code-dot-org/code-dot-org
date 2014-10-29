@@ -1,8 +1,4 @@
-* * *
 
-tiêu đề: Giải thưởng bố cục: rộng
-
-* * *
 
 # The Hour of Code - giải thưởng cho tất cả tổ chức tham gia
 

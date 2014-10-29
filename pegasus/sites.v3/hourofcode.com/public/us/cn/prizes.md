@@ -1,8 +1,4 @@
-* * *
 
-title: Prizes layout: wide
-
-* * *
 
 # Hour of Code — — 给每个组织者的奖品
 

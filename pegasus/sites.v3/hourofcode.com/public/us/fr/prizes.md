@@ -1,8 +1,4 @@
-* * *
 
-titre: Prix affichage: large
-
-* * *
 
 # Une Heure de Code — prix pour chaque organisateur
 

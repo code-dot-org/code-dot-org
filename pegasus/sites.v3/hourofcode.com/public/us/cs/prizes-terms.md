@@ -1,8 +1,4 @@
-* * *
 
-rozvržení: široké
-
-* * *
 
 # Ceny - podmínky
 

@@ -1,4 +1,6 @@
-# ¡Gracias por inscribirte para ser anfitrión de una Hora de Programación!
+<% facebook = {:u=>"http://#{request.host}/us"}
+                      twitter = {:url=>"http://hourofcode.com", :related=>"codeorg", :hashtags=>"", :text=>hoc_s(:twitter_default_text)}
+                      twitter[:hashtags] = "HourOfCode" unless hoc_s(:twitter_default_text).include? "#HourOfCode" %># ¡Gracias por inscribirte para ser anfitrión de una Hora de Programación!
 
 **EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](<%= hoc_uri('/prizes') %>)
 

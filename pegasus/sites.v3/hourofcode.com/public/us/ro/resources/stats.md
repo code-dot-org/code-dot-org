@@ -1,8 +1,4 @@
-* * *
 
-title: Resources layout: wide
-
-* * *
 
 # Cum să atragi mass-media la evenimentul Hour of Code organizat de tine
 

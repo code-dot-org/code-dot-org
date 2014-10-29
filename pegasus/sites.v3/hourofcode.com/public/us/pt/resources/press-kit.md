@@ -1,8 +1,4 @@
-* * *
 
-título: Recursos layout: amplo
-
-* * *
 
 ## Estatísticas úteis sobre a ciência da computação
 

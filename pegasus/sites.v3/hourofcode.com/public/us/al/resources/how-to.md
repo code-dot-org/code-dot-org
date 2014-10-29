@@ -1,8 +1,4 @@
-* * *
 
-title: Resources layout: wide
-
-* * *
 
 # Si ta shpjegosh Një Orë Kodim
 

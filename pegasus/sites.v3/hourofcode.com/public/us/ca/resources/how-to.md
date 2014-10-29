@@ -1,8 +1,4 @@
-* * *
 
-títol: Recursos disseny: ampli
-
-* * *
 
 # Com ensenyar una Hora de Codi
 

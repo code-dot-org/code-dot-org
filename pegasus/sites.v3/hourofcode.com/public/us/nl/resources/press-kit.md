@@ -1,8 +1,4 @@
-* * *
 
-title: Materialen layout: wide
-
-* * *
 
 ## Nuttige statistieken over informatica
 

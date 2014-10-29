@@ -1,8 +1,4 @@
-* * *
 
-affichage: large
-
-* * *
 
 # Prix - conditions générales
 

@@ -1,8 +1,4 @@
-* * *
 
-title: Risorse layout: wide
-
-* * *
 
 # Come attirare l'attenzione dei media sul tuo evento dell'Ora del Codice
 

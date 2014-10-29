@@ -1,8 +1,4 @@
-* * *
 
-title: Resources layout: wide
-
-* * *
 
 ## 컴퓨터과학(정보과학)과 관련한 통계자료들
 

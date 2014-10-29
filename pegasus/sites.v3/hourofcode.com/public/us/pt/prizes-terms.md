@@ -1,8 +1,4 @@
-* * *
 
-layout: wide
-
-* * *
 
 # Prêmios - termos e condições
 

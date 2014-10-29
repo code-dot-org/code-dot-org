@@ -1,8 +1,4 @@
-* * *
 
-title: 感谢您 layout: wide
-
-* * *
 
 # 感谢
 

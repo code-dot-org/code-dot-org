@@ -1,8 +1,4 @@
-* * *
 
-title: Prizes layout: wide
-
-* * *
 
 # The Hour of Code — Gewinne für jeden Veranstalter
 

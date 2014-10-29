@@ -1,8 +1,4 @@
-* * *
 
-affichage: large
-
-* * *
 
 # Lignes directrices pour les tutoriels pour l'Heure de Code et la semaine de l'éducation en informatique
 

@@ -1,8 +1,4 @@
-* * *
 
-title: Prijzen layout: wide
-
-* * *
 
 # Het Uur Code - prijzen voor iedere organisator
 

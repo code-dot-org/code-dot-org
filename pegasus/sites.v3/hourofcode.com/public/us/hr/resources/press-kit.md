@@ -1,8 +1,4 @@
-* * *
 
-naslov: Resursi postav: širok
-
-* * *
 
 ## Korisne statistike o informatici
 
