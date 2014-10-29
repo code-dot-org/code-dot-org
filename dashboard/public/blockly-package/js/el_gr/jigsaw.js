@@ -7878,9 +7878,9 @@ exports.directionWestLetter = function(d){return "Δ"};
 
 exports.end = function(d){return "τέλος"};
 
-exports.emptyBlocksErrorMsg = function(d){return "Το μπλοκ του \"Repeat\" ή του \"If\" πρέπει να περιέχει άλλα μπλοκ για να δουλέψει. Σιγουρέψου ότι το εσωτερικό μπλοκ ταιριάζει μέσα στο εξωτερικό."};
+exports.emptyBlocksErrorMsg = function(d){return "Το μπλοκ του \"Repeat\" ή του \"If\" πρέπει να περιέχει άλλα μπλοκ για να δουλέψει. Σιγουρέψου ότι το εσωτερικό μπλοκ χωράει σωστά μέσα στο μπλόκ που το περιέχει."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "Στο μπλόκ της συνάρτησης χρειάζεται να υπάρχουν άλλα μπλοκ για να μπορεί να δουλέψει."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Το μπλόκ της συνάρτησης χρειάζεται να έχει άλλα μπλοκ μέσα του για να δουλέψει."};
 
 exports.extraTopBlocks = function(d){return "Έχεις ασύνδετα μπλοκ. Θέλεις να τα συνδέσεις στο μπλοκ \"όταν εκτελείται\";"};
 
@@ -7892,7 +7892,7 @@ exports.finish = function(d){return "Τερματισμός"};
 
 exports.generatedCodeInfo = function(d){return "Ακόμη και τα κορυφαία πανεπιστήμια διδάσκουν κώδικα με βάση τα μπλοκ (π.χ. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Αλλά στο παρασκήνιο τα μπλοκ που συναρμολόγησες μπορούν να εμφανιστούν σε JavaScript, την πιο διαδεδομένη γλώσσα προγραμματισμού στον κόσμο:"};
 
-exports.hashError = function(d){return "Συγνώμη, το '%1' δεν αντιστοιχεί με αποθηκευμένο πρόγραμμα."};
+exports.hashError = function(d){return "Συγνώμη, το '%1' δεν αντιστοιχεί με κανένα αποθηκευμένο πρόγραμμα."};
 
 exports.help = function(d){return "Βοήθεια"};
 
@@ -7912,7 +7912,7 @@ exports.nextLevel = function(d){return "Συγχαρητήρια! Τελείωσ
 
 exports.nextLevelTrophies = function(d){return "Συγχαρητήρια! Τελείωσες το παζλ "+v(d,"puzzleNumber")+" και κέρδισες "+p(d,"numTrophies",0,"el",{"one":"τρόπαιο","other":n(d,"numTrophies")+" τρόπαια"})+"."};
 
-exports.nextStage = function(d){return "Συγχαρητήρια! Ολοκληρώσατε "+v(d,"stageName")+"."};
+exports.nextStage = function(d){return "Συγχαρητήρια! Ολοκληρώσατε το "+v(d,"stageName")+"."};
 
 exports.nextStageTrophies = function(d){return "Congratulations! You completed "+v(d,"stageName")+" and won "+p(d,"numTrophies",0,"el",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
@@ -7930,7 +7930,7 @@ exports.resetProgram = function(d){return "Επαναφορά"};
 
 exports.runProgram = function(d){return "Τρέξτε"};
 
-exports.runTooltip = function(d){return "Τρέξε το πρόγραμμα που ορίζεται από τα μπλοκ στο χώρο εργασίας."};
+exports.runTooltip = function(d){return "Τρέξτε το πρόγραμμα που ορίζεται από τα μπλοκ στο χώρο εργασίας."};
 
 exports.score = function(d){return "σκορ"};
 
@@ -7942,11 +7942,11 @@ exports.subtitle = function(d){return "ένα οπτικό περιβάλλον 
 
 exports.textVariable = function(d){return "κείμενο"};
 
-exports.tooFewBlocksMsg = function(d){return "Χρησιμοποιείς όλα τα αναγκαία είδη μπλοκ, αλλά δοκίμασε περισσότερα μπλοκ αυτών των ειδών για να ολοκληρώσεις το παζλ."};
+exports.tooFewBlocksMsg = function(d){return "Χρησιμοποιείς όλα τα αναγκαία είδη μπλοκ, αλλά δοκίμασε να χρησιμοποιήσεις περισσότερα απο τα μπλοκ αυτών των ειδών για να ολοκληρώσεις το παζλ."};
 
 exports.tooManyBlocksMsg = function(d){return "Αυτό το παζλ μπορεί να λυθεί με  <x id='START_SPAN'/><x id='END_SPAN'/> μπλοκ."};
 
-exports.tooMuchWork = function(d){return "Με ανάγκασες να κάνω πολλή δουλειά! Μπορείς με λιγότερες επαναλήψεις;"};
+exports.tooMuchWork = function(d){return "Με ανάγκασες να κάνω πολλή δουλειά! Μπορείς να επαναλάβεις λιγότερες φορές ;"};
 
 exports.toolboxHeader = function(d){return "μπλοκ"};
 
@@ -7960,25 +7960,25 @@ exports.hintRequest = function(d){return "Δείτε την υπόδειξη"};
 
 exports.backToPreviousLevel = function(d){return "Πίσω στο προηγούμενο επίπεδο"};
 
-exports.saveToGallery = function(d){return "Αποθήκευση στη συλλογή σου"};
+exports.saveToGallery = function(d){return "Αποθήκευσε το στη συλλογή σου"};
 
 exports.savedToGallery = function(d){return "Αποθηκεύτηκε στη συλλογή σου!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Συγγνώμη, δεν μπορούμε να μοιράσουμε αυτό το πρόγραμμα."};
 
 exports.typeCode = function(d){return "Γράψε το δικό σου κώδικα JavaScript κάτω από αυτές τις οδηγίες."};
 
 exports.typeFuncs = function(d){return "Διαθέσιμες συναρτήσεις: %1"};
 
-exports.typeHint = function(d){return "Σημείωσε ότι οι παρενθέσεις και ερωτηματικά είναι υποχρεωτικά."};
+exports.typeHint = function(d){return "Σημείωσε ότι απαιτούνται οι παρενθέσεις και τα ερωτηματικά ."};
 
 exports.workspaceHeader = function(d){return "Συναρμολόγησε τα μπλοκ σου εδώ: "};
 
-exports.infinity = function(d){return "άπειρο"};
+exports.infinity = function(d){return "Άπειρο"};
 
-exports.rotateText = function(d){return "Γυρίστε τη συσκευή σας."};
+exports.rotateText = function(d){return "Περιστρέψτε τη συσκευή σας."};
 
-exports.orientationLock = function(d){return "Απενεργοποιήστε το κλείδωμα περιστροφής στις ρυθμίσης της συσκευής."};
+exports.orientationLock = function(d){return "Απενεργοποιήστε το κλείδωμα περιστροφής στις ρυθμίσεις της συσκευής σας."};
 
 exports.wantToLearn = function(d){return "Θέλετε να μάθετε προγραμματισμό;"};
 
@@ -7988,11 +7988,11 @@ exports.when = function(d){return "όταν"};
 
 exports.whenRun = function(d){return "όταν εκτελείται"};
 
-exports.tryHOC = function(d){return "Δοκίμασε την Ώρα του Κώδικα"};
+exports.tryHOC = function(d){return "Δοκίμαστε την Ώρα του Κώδικα"};
 
-exports.signup = function(d){return "Κάνε εγγραφή στο εισαγωγικό μάθημα"};
+exports.signup = function(d){return "Κάντε εγγραφή για το εισαγωγικό μάθημα"};
 
-exports.hintHeader = function(d){return "Να μια βοήθεια:"};
+exports.hintHeader = function(d){return "Να μια συμβουλή:"};
 
 exports.genericFeedback = function(d){return "Δες πως κατέληξες και δοκίμασε να διορθώσεις το πρόγραμμά σου."};
 

@@ -8014,13 +8014,13 @@ exports.catVariables = function(d){return "Змінні"};
 
 exports.continue = function(d){return "Далі"};
 
-exports.createHtmlBlock = function(d){return "create html block"};
+exports.createHtmlBlock = function(d){return "створити блок html"};
 
-exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
+exports.createHtmlBlockTooltip = function(d){return "Створює у програмі блок HTML."};
 
 exports.finalLevel = function(d){return "Вітання! Ви розв'язали останнє завдання."};
 
-exports.makeYourOwn = function(d){return "Make Your Own App"};
+exports.makeYourOwn = function(d){return "Створіть власну програму"};
 
 exports.nextLevel = function(d){return "Вітання! Ви розв'язали останнє завдання."};
 
@@ -8030,21 +8030,21 @@ exports.numBlocksNeeded = function(d){return "Це завдання можна �
 
 exports.pause = function(d){return "Pause"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
+exports.reinfFeedbackMsg = function(d){return "Можна натиснути кнопку \"Повторити спробу\", щоб повернутися до запуску застосунку."};
 
 exports.repeatForever = function(d){return "повторювати завжди"};
 
 exports.repeatDo = function(d){return "робити"};
 
-exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
+exports.repeatForeverTooltip = function(d){return "Виконати дії з цього блоку кілька разів поки запущена програма."};
 
-exports.shareWebappTwitter = function(d){return "Check out the app I made. I wrote it myself with @codeorg"};
+exports.shareWebappTwitter = function(d){return "Подивіться на програму, створену власноруч! Це моя робота разом з @codeorg"};
 
-exports.shareGame = function(d){return "Share your app:"};
+exports.shareGame = function(d){return "Поділитись програмою:"};
 
-exports.turnBlack = function(d){return "turn black"};
+exports.turnBlack = function(d){return "затемнити"};
 
-exports.turnBlackTooltip = function(d){return "Turns the screen black."};
+exports.turnBlackTooltip = function(d){return "Затемнює екран."};
 
 exports.yes = function(d){return "Так"};
 

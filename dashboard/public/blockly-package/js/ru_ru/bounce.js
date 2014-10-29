@@ -11736,13 +11736,13 @@ exports.incrementPlayerScoreTooltip = function(d){return "Добавить иг�
 
 exports.isWall = function(d){return "Это стена?"};
 
-exports.isWallTooltip = function(d){return "Верните значение true, если здесь есть стена"};
+exports.isWallTooltip = function(d){return "Возвращает значение true, если здесь есть стена"};
 
 exports.launchBall = function(d){return "запустить новый шарик"};
 
 exports.launchBallTooltip = function(d){return "Запустить шарик в игру."};
 
-exports.makeYourOwn = function(d){return "Создай Свою Игру Шарики"};
+exports.makeYourOwn = function(d){return "Создай Свою Игру Про Шарики"};
 
 exports.moveDown = function(d){return "Переместить вниз"};
 
@@ -11832,13 +11832,13 @@ exports.setBackgroundRetro = function(d){return "задать ретро сце�
 
 exports.setBackgroundTooltip = function(d){return "Задать изображение фона"};
 
-exports.setBallRandom = function(d){return "задать случайный шарик"};
+exports.setBallRandom = function(d){return "добавить случайный шарик"};
 
-exports.setBallHardcourt = function(d){return "задать шарик для твердого покрытия"};
+exports.setBallHardcourt = function(d){return "добавить шарик для твердого покрытия"};
 
-exports.setBallRetro = function(d){return "задать ретро шарик"};
+exports.setBallRetro = function(d){return "добавить ретро шарик"};
 
-exports.setBallTooltip = function(d){return "Задать изображение шарика"};
+exports.setBallTooltip = function(d){return "Добавление изображение шарика"};
 
 exports.setBallSpeedRandom = function(d){return "задать случайную скорость шарика"};
 
@@ -11852,7 +11852,7 @@ exports.setBallSpeedFast = function(d){return "задать быструю ск�
 
 exports.setBallSpeedVeryFast = function(d){return "задать очень быструю скорость шарика"};
 
-exports.setBallSpeedTooltip = function(d){return "Задаёт скорость шарика"};
+exports.setBallSpeedTooltip = function(d){return "Присвоение скорости шарика"};
 
 exports.setPaddleRandom = function(d){return "задать случайную ракетку"};
 
@@ -11876,7 +11876,7 @@ exports.setPaddleSpeedVeryFast = function(d){return "задать очень б�
 
 exports.setPaddleSpeedTooltip = function(d){return "Задаёт скорость ракетки"};
 
-exports.shareBounceTwitter = function(d){return "Поиграйте в игру Шарики, которую сделал я сам. Я ее написал с помощью @codeorg"};
+exports.shareBounceTwitter = function(d){return "Зацените  созданную мной игру Шарики. Я ее написал с помощью @codeorg"};
 
 exports.shareGame = function(d){return "Поделитесь вашей игрой:"};
 
@@ -12010,7 +12010,7 @@ exports.levelIncompleteError = function(d){return "Ты используешь �
 
 exports.listVariable = function(d){return "список"};
 
-exports.makeYourOwnFlappy = function(d){return "Создай свою Flappy Bird"};
+exports.makeYourOwnFlappy = function(d){return "Создай Свою Flappy Игру"};
 
 exports.missingBlocksErrorMsg = function(d){return "Для решения этой головоломки попробуй один или несколько из следующих блоков:"};
 
@@ -12018,7 +12018,7 @@ exports.nextLevel = function(d){return "Поздравляю! Головолом
 
 exports.nextLevelTrophies = function(d){return "Поздравляю! Ты завершил головоломку "+v(d,"puzzleNumber")+" и выиграл "+p(d,"numTrophies",0,"ru",{"one":"кубок","other":n(d,"numTrophies")+" кубков"})+"."};
 
-exports.nextStage = function(d){return "Поздравляю! Ты закончил "+v(d,"stageName")+"."};
+exports.nextStage = function(d){return "Поздравляю! Ты завершил "+v(d,"stageName")+"."};
 
 exports.nextStageTrophies = function(d){return "Поздравляю! Ты завершил этап "+v(d,"stageName")+" и выиграл "+p(d,"numTrophies",0,"ru",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
@@ -12038,7 +12038,7 @@ exports.runProgram = function(d){return "Выполнить"};
 
 exports.runTooltip = function(d){return "Запускает программу, заданную блоками в рабочей области."};
 
-exports.score = function(d){return "оценка"};
+exports.score = function(d){return "очки"};
 
 exports.showCodeHeader = function(d){return "Показать код"};
 
@@ -12062,7 +12062,7 @@ exports.totalNumLinesOfCodeWritten = function(d){return "Общее количе
 
 exports.tryAgain = function(d){return "Попытаться ещё раз"};
 
-exports.hintRequest = function(d){return "Показать подсказку"};
+exports.hintRequest = function(d){return "Посмотреть подсказку"};
 
 exports.backToPreviousLevel = function(d){return "Вернуться на предыдущий уровень"};
 
@@ -12100,7 +12100,7 @@ exports.signup = function(d){return "Зарегистрируйтесь на в�
 
 exports.hintHeader = function(d){return "Подсказка:"};
 
-exports.genericFeedback = function(d){return "Посмотреть как закончить и попытаться исправить свою программу."};
+exports.genericFeedback = function(d){return "Посмотреть, как вы выполнили, и попытаться исправить вашу программу."};
 
 
 },{"messageformat":52}],41:[function(require,module,exports){

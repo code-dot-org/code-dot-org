@@ -11741,15 +11741,15 @@ exports.moveForwardTooltip = function(d){return "Flytta mig framåt en ruta."};
 
 exports.moveLeft = function(d){return "flytta vänster"};
 
-exports.moveLeftTooltip = function(d){return "Move the paddle to the left."};
+exports.moveLeftTooltip = function(d){return "Flytta paddeln till vänster."};
 
 exports.moveRight = function(d){return "flytta höger"};
 
-exports.moveRightTooltip = function(d){return "Move the paddle to the right."};
+exports.moveRightTooltip = function(d){return "Flytta paddeln till höger."};
 
 exports.moveUp = function(d){return "flytta uppåt"};
 
-exports.moveUpTooltip = function(d){return "Move the paddle up."};
+exports.moveUpTooltip = function(d){return "Flytta UPP paddeln."};
 
 exports.nextLevel = function(d){return "Grattis! Du har slutfört detta pusslet."};
 
@@ -11875,15 +11875,15 @@ exports.turnTooltip = function(d){return "Vänder mig åt vänster eller höger 
 
 exports.whenBallInGoal = function(d){return "when ball in goal"};
 
-exports.whenBallInGoalTooltip = function(d){return "Execute the actions below when a ball enters the goal."};
+exports.whenBallInGoalTooltip = function(d){return "Utföra åtgärderna nedan när en boll går in i målet."};
 
-exports.whenBallMissesPaddle = function(d){return "when ball misses paddle"};
+exports.whenBallMissesPaddle = function(d){return "När bollen missar paddel"};
 
-exports.whenBallMissesPaddleTooltip = function(d){return "Execute the actions below when a ball misses the paddle."};
+exports.whenBallMissesPaddleTooltip = function(d){return "Utföra åtgärderna nedan när en boll missar paddeln."};
 
 exports.whenDown = function(d){return "when Down arrow"};
 
-exports.whenDownTooltip = function(d){return "Execute the actions below when the Down arrow button is pressed."};
+exports.whenDownTooltip = function(d){return "Utföra åtgärderna nedan när NEDPIL trycks."};
 
 exports.whenGameStarts = function(d){return "när spelet börjar"};
 
@@ -11891,23 +11891,23 @@ exports.whenGameStartsTooltip = function(d){return "Utför kommandona nedan när
 
 exports.whenLeft = function(d){return "when Left arrow"};
 
-exports.whenLeftTooltip = function(d){return "Execute the actions below when the Left arrow button is pressed."};
+exports.whenLeftTooltip = function(d){return "Utföra åtgärderna nedan när du trycker på VÄNSTERPIL."};
 
-exports.whenPaddleCollided = function(d){return "when ball hits paddle"};
+exports.whenPaddleCollided = function(d){return "När bollen träffar paddel"};
 
-exports.whenPaddleCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a paddle."};
+exports.whenPaddleCollidedTooltip = function(d){return "Utför åtgärderna nedan när en boll krockar med en vägg."};
 
 exports.whenRight = function(d){return "when Right arrow"};
 
-exports.whenRightTooltip = function(d){return "Execute the actions below when the Right arrow button is pressed."};
+exports.whenRightTooltip = function(d){return "Utföra åtgärderna nedan när du trycker på HÖGERPIL."};
 
 exports.whenUp = function(d){return "när pil upp"};
 
 exports.whenUpTooltip = function(d){return "Utför handlingarna nedan när pil-upptangenten trycks ner."};
 
-exports.whenWallCollided = function(d){return "when ball hits wall"};
+exports.whenWallCollided = function(d){return "När bollen träffar väggen"};
 
-exports.whenWallCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a wall."};
+exports.whenWallCollidedTooltip = function(d){return "Utför åtgärderna nedan när en boll krockar med en vägg."};
 
 exports.whileMsg = function(d){return "medan"};
 

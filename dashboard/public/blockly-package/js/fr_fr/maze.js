@@ -13347,7 +13347,7 @@ exports.catMath = function(d){return "Calculs"};
 
 exports.catProcedures = function(d){return "Fonctions"};
 
-exports.catText = function(d){return "Texte"};
+exports.catText = function(d){return "texte"};
 
 exports.catVariables = function(d){return "Variables"};
 
@@ -13389,7 +13389,7 @@ exports.help = function(d){return "Aide"};
 
 exports.hintTitle = function(d){return "Indice :"};
 
-exports.jump = function(d){return "saut"};
+exports.jump = function(d){return "sauter"};
 
 exports.levelIncompleteError = function(d){return "Vous utilisez tous les types nécessaires de blocs, mais pas de la bonne manière."};
 
@@ -13425,7 +13425,7 @@ exports.runTooltip = function(d){return "Exécuter le programme défini par les 
 
 exports.score = function(d){return "score"};
 
-exports.showCodeHeader = function(d){return "Afficher le Code"};
+exports.showCodeHeader = function(d){return "Afficher le code"};
 
 exports.showGeneratedCode = function(d){return "Afficher le code"};
 
@@ -13439,7 +13439,7 @@ exports.tooManyBlocksMsg = function(d){return "Ce puzzle peut être résolu avec
 
 exports.tooMuchWork = function(d){return "Vous m'avez fait faire beaucoup de travail !  Pourriez-vous essayer en répétant moins de fois ?"};
 
-exports.toolboxHeader = function(d){return "Blocs"};
+exports.toolboxHeader = function(d){return "blocs"};
 
 exports.openWorkspace = function(d){return "Comment ça marche"};
 
@@ -13455,7 +13455,7 @@ exports.saveToGallery = function(d){return "Enregistrer dans votre galerie"};
 
 exports.savedToGallery = function(d){return "Enregistré dans votre galerie !"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Désolé, nous ne pouvons pas partager ce programme."};
 
 exports.typeCode = function(d){return "Tapez votre code JavaScript en dessous de ces instructions."};
 
@@ -13544,7 +13544,7 @@ exports.honeycombFullError = function(d){return "Il n'y a plus de place pour met
 
 exports.ifCode = function(d){return "si"};
 
-exports.ifInRepeatError = function(d){return "Vous devez insérer un bloc « si » dans un bloc « répéter ». Si vous rencontrez des difficultés, essayez à nouveau le niveau précédent pour vous imprégner de son fonctionnement."};
+exports.ifInRepeatError = function(d){return "Vous avez besoin d'un bloc \"si\" à l'intérieur d'un bloc \"répéter\". Si vous rencontrez des difficultés, essayez à nouveau le niveau précédent pour voir comment cela fonctionnait."};
 
 exports.ifPathAhead = function(d){return "si chemin devant"};
 
@@ -13566,7 +13566,7 @@ exports.moveBackward = function(d){return "reculer"};
 
 exports.moveEastTooltip = function(d){return "Déplace-moi d'un espace vers l'Est."};
 
-exports.moveForward = function(d){return "avancer"};
+exports.moveForward = function(d){return "avancer plus"};
 
 exports.moveForwardTooltip = function(d){return "Me fait avancer d'un espace."};
 
@@ -13590,15 +13590,15 @@ exports.no = function(d){return "Non"};
 
 exports.noPathAhead = function(d){return "le chemin est bloqué"};
 
-exports.noPathLeft = function(d){return "pas de chemin vers la gauche"};
+exports.noPathLeft = function(d){return "pas de chemin à gauche"};
 
-exports.noPathRight = function(d){return "pas de chemin vers la droite"};
+exports.noPathRight = function(d){return "pas de chemin à droite"};
 
 exports.notAtFlowerError = function(d){return "Vous ne pouvez récupérer du nectar que depuis une fleur."};
 
 exports.notAtHoneycombError = function(d){return "Vous ne pouvez faire du miel que lorsque vous êtes à une ruche."};
 
-exports.numBlocksNeeded = function(d){return "Cette énigme peut être résolue avec %1 blocs."};
+exports.numBlocksNeeded = function(d){return "Cette enigme peut être résolue avec %1 blocs."};
 
 exports.pathAhead = function(d){return "chemin devant"};
 
@@ -13606,7 +13606,7 @@ exports.pathLeft = function(d){return "si chemin à gauche"};
 
 exports.pathRight = function(d){return "si chemin à droite"};
 
-exports.pilePresent = function(d){return "motte présente"};
+exports.pilePresent = function(d){return "Il y a une pile"};
 
 exports.putdownTower = function(d){return "poser la tour"};
 
@@ -13622,9 +13622,9 @@ exports.removeSquare = function(d){return "retirer le carré"};
 
 exports.repeatCarefullyError = function(d){return "Pour résoudre cette énigme, songez à la suite d'instructions contenant deux déplacements et une rotation, que vous pourriez insérer dans le bloc « répéter ». Cela ne pose pas de problème de se tourner une fois de trop à la fin."};
 
-exports.repeatUntil = function(d){return "répéter jusqu'à"};
+exports.repeatUntil = function(d){return "répéter jusqu’à"};
 
-exports.repeatUntilBlocked = function(d){return "tant que chemin devant"};
+exports.repeatUntilBlocked = function(d){return "Tant que chemin devant"};
 
 exports.repeatUntilFinish = function(d){return "répéter jusqu'à la fin"};
 
@@ -13638,7 +13638,7 @@ exports.turnLeft = function(d){return "tourner à gauche"};
 
 exports.turnRight = function(d){return "tourner à droite"};
 
-exports.turnTooltip = function(d){return "Me tourne de 90 degrés vers la gauche ou vers la droite."};
+exports.turnTooltip = function(d){return "Me tourne 90 degrés à gauche ou à droite."};
 
 exports.uncheckedCloudError = function(d){return "Vérifiez bien tous les nuages pour voir s'ils cachent des fleurs ou des ruches."};
 

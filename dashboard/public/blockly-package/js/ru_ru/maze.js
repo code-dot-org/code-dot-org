@@ -13408,7 +13408,7 @@ exports.levelIncompleteError = function(d){return "Ты используешь �
 
 exports.listVariable = function(d){return "список"};
 
-exports.makeYourOwnFlappy = function(d){return "Создай свою Flappy Bird"};
+exports.makeYourOwnFlappy = function(d){return "Создай Свою Flappy Игру"};
 
 exports.missingBlocksErrorMsg = function(d){return "Для решения этой головоломки попробуй один или несколько из следующих блоков:"};
 
@@ -13416,7 +13416,7 @@ exports.nextLevel = function(d){return "Поздравляю! Головолом
 
 exports.nextLevelTrophies = function(d){return "Поздравляю! Ты завершил головоломку "+v(d,"puzzleNumber")+" и выиграл "+p(d,"numTrophies",0,"ru",{"one":"кубок","other":n(d,"numTrophies")+" кубков"})+"."};
 
-exports.nextStage = function(d){return "Поздравляю! Ты закончил "+v(d,"stageName")+"."};
+exports.nextStage = function(d){return "Поздравляю! Ты завершил "+v(d,"stageName")+"."};
 
 exports.nextStageTrophies = function(d){return "Поздравляю! Ты завершил этап "+v(d,"stageName")+" и выиграл "+p(d,"numTrophies",0,"ru",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
@@ -13436,7 +13436,7 @@ exports.runProgram = function(d){return "Выполнить"};
 
 exports.runTooltip = function(d){return "Запускает программу, заданную блоками в рабочей области."};
 
-exports.score = function(d){return "оценка"};
+exports.score = function(d){return "очки"};
 
 exports.showCodeHeader = function(d){return "Показать код"};
 
@@ -13460,7 +13460,7 @@ exports.totalNumLinesOfCodeWritten = function(d){return "Общее количе
 
 exports.tryAgain = function(d){return "Попытаться ещё раз"};
 
-exports.hintRequest = function(d){return "Показать подсказку"};
+exports.hintRequest = function(d){return "Посмотреть подсказку"};
 
 exports.backToPreviousLevel = function(d){return "Вернуться на предыдущий уровень"};
 
@@ -13498,7 +13498,7 @@ exports.signup = function(d){return "Зарегистрируйтесь на в�
 
 exports.hintHeader = function(d){return "Подсказка:"};
 
-exports.genericFeedback = function(d){return "Посмотреть как закончить и попытаться исправить свою программу."};
+exports.genericFeedback = function(d){return "Посмотреть, как вы выполнили, и попытаться исправить вашу программу."};
 
 
 },{"messageformat":69}],57:[function(require,module,exports){

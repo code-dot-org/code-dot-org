@@ -7856,7 +7856,7 @@ exports.catMath = function(d){return "Calculs"};
 
 exports.catProcedures = function(d){return "Fonctions"};
 
-exports.catText = function(d){return "Texte"};
+exports.catText = function(d){return "texte"};
 
 exports.catVariables = function(d){return "Variables"};
 
@@ -7898,7 +7898,7 @@ exports.help = function(d){return "Aide"};
 
 exports.hintTitle = function(d){return "Indice :"};
 
-exports.jump = function(d){return "saut"};
+exports.jump = function(d){return "sauter"};
 
 exports.levelIncompleteError = function(d){return "Vous utilisez tous les types nécessaires de blocs, mais pas de la bonne manière."};
 
@@ -7934,7 +7934,7 @@ exports.runTooltip = function(d){return "Exécuter le programme défini par les 
 
 exports.score = function(d){return "score"};
 
-exports.showCodeHeader = function(d){return "Afficher le Code"};
+exports.showCodeHeader = function(d){return "Afficher le code"};
 
 exports.showGeneratedCode = function(d){return "Afficher le code"};
 
@@ -7948,7 +7948,7 @@ exports.tooManyBlocksMsg = function(d){return "Ce puzzle peut être résolu avec
 
 exports.tooMuchWork = function(d){return "Vous m'avez fait faire beaucoup de travail !  Pourriez-vous essayer en répétant moins de fois ?"};
 
-exports.toolboxHeader = function(d){return "Blocs"};
+exports.toolboxHeader = function(d){return "blocs"};
 
 exports.openWorkspace = function(d){return "Comment ça marche"};
 
@@ -7964,7 +7964,7 @@ exports.saveToGallery = function(d){return "Enregistrer dans votre galerie"};
 
 exports.savedToGallery = function(d){return "Enregistré dans votre galerie !"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Désolé, nous ne pouvons pas partager ce programme."};
 
 exports.typeCode = function(d){return "Tapez votre code JavaScript en dessous de ces instructions."};
 
@@ -8001,7 +8001,7 @@ exports.genericFeedback = function(d){return "Observez le résultat et essayez d
 var MessageFormat = require("messageformat");MessageFormat.locale.fr=function(n){return n===0||n==1?"one":"other"}
 exports.continue = function(d){return "Continuer"};
 
-exports.nextLevel = function(d){return "Félicitations ! Tu as terminé cette énigme."};
+exports.nextLevel = function(d){return "Félicitations ! Vous avez terminé cette énigme."};
 
 exports.no = function(d){return "Non"};
 

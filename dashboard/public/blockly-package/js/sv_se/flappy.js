@@ -9706,7 +9706,7 @@ exports.shareGame = function(d){return "Dela ditt spel:"};
 
 exports.soundRandom = function(d){return "slumpad"};
 
-exports.soundBounce = function(d){return "bounce"};
+exports.soundBounce = function(d){return "studsa"};
 
 exports.soundCrunch = function(d){return "crunch"};
 

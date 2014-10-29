@@ -9395,7 +9395,7 @@ exports.finalStageTrophies = function(d){return "Gratulálok! Teljesítetted az 
 
 exports.finish = function(d){return "Kész"};
 
-exports.generatedCodeInfo = function(d){return "Még a legjobb egyetemei is tanítják a blokk alapú kódolást (például "+v(d,"berkeleyLink")+" "+v(d,"harvardLink")+"). De a motorháztető alatt, a blokkok amiket összeraksz, JavaScript kódok, a világ legszélesebb körben használt kódolási nyelvén:"};
+exports.generatedCodeInfo = function(d){return "A blokk alapú programozást még a legjobb egyetemeken (pl. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+") is tanítják. De a felszín alatt az általad összeállított blokkok JavaScriptben, a világ legszélesebb körben használt nyelvén is megjeleníthetők:"};
 
 exports.hashError = function(d){return "Sajnálom, de \"%1\" nem felel meg egyetlen mentett programnak sem."};
 
@@ -9433,7 +9433,7 @@ exports.repeat = function(d){return "ismételd"};
 
 exports.resetProgram = function(d){return "Visszaállítás"};
 
-exports.runProgram = function(d){return "Fut"};
+exports.runProgram = function(d){return "Futtatás"};
 
 exports.runTooltip = function(d){return "A munkalapon összeépített program futtatása."};
 
@@ -9524,7 +9524,7 @@ exports.flapVerySmall = function(d){return "Nagyon keveset csap"};
 
 exports.flapSmall = function(d){return "keveset csap"};
 
-exports.flapNormal = function(d){return "normál számut csap"};
+exports.flapNormal = function(d){return "normál számút csap"};
 
 exports.flapLarge = function(d){return "sokat csap"};
 

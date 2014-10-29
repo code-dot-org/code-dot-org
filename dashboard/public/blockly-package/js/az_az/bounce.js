@@ -11978,7 +11978,7 @@ exports.help = function(d){return "Kömək"};
 
 exports.hintTitle = function(d){return "Məsləhət:"};
 
-exports.jump = function(d){return "jump"};
+exports.jump = function(d){return "atıl"};
 
 exports.levelIncompleteError = function(d){return "Siz bütün lazım olan bloklardan istifadə edirsiniz amma səhv formada."};
 

@@ -7988,13 +7988,13 @@ exports.catVariables = function(d){return "변수"};
 
 exports.continue = function(d){return "계속하기"};
 
-exports.createHtmlBlock = function(d){return "create html block"};
+exports.createHtmlBlock = function(d){return "html 블럭 만들기"};
 
-exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
+exports.createHtmlBlockTooltip = function(d){return "응용 프로그램에서 HTML 블럭을 만듭니다."};
 
 exports.finalLevel = function(d){return "짝짝짝 축하합니다! 마지막 퍼즐을 해결했습니다."};
 
-exports.makeYourOwn = function(d){return "Make Your Own App"};
+exports.makeYourOwn = function(d){return "자신의 앱을 만드세요."};
 
 exports.nextLevel = function(d){return "축하합니다! 퍼즐을 해결했습니다."};
 
@@ -8004,21 +8004,21 @@ exports.numBlocksNeeded = function(d){return "%1 개의 블럭으로 퍼즐을 �
 
 exports.pause = function(d){return "Pause"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
+exports.reinfFeedbackMsg = function(d){return "\"다시 시도하기\" 버튼을 눌러 앱으로 돌아갈 수 있습니다."};
 
 exports.repeatForever = function(d){return "무한반복"};
 
 exports.repeatDo = function(d){return "실행"};
 
-exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
+exports.repeatForeverTooltip = function(d){return "앱이 실행되면 이 블럭 안의 동작들을 반복 실행합니다."};
 
-exports.shareWebappTwitter = function(d){return "Check out the app I made. I wrote it myself with @codeorg"};
+exports.shareWebappTwitter = function(d){return "내가 만든 앱을 살펴보세요. @codeorg 에서 만들었습니다."};
 
-exports.shareGame = function(d){return "Share your app:"};
+exports.shareGame = function(d){return "앱 공유하기:"};
 
-exports.turnBlack = function(d){return "turn black"};
+exports.turnBlack = function(d){return "검정화면으로 변환"};
 
-exports.turnBlackTooltip = function(d){return "Turns the screen black."};
+exports.turnBlackTooltip = function(d){return "화면을 검게 바꿉니다."};
 
 exports.yes = function(d){return "예"};
 

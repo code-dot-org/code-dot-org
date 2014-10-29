@@ -13389,7 +13389,7 @@ exports.help = function(d){return "Kömək"};
 
 exports.hintTitle = function(d){return "Məsləhət:"};
 
-exports.jump = function(d){return "jump"};
+exports.jump = function(d){return "atıl"};
 
 exports.levelIncompleteError = function(d){return "Siz bütün lazım olan bloklardan istifadə edirsiniz amma səhv formada."};
 
@@ -13628,7 +13628,7 @@ exports.repeatUntilBlocked = function(d){return "hələ ki, qabaqda yol var"};
 
 exports.repeatUntilFinish = function(d){return "bitənə qədər təkrar et"};
 
-exports.step = function(d){return "Step"};
+exports.step = function(d){return "addım"};
 
 exports.totalHoney = function(d){return "total honey"};
 

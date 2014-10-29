@@ -7765,7 +7765,7 @@ exports.parseElement = function(text) {
 
 },{}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.hu=function(n){return "other"}
-exports.blocksUsed = function(d){return "Használt blokkok: %1"};
+exports.blocksUsed = function(d){return "Felhasznált blokkok: %1"};
 
 exports.branches = function(d){return "branches"};
 
@@ -7960,7 +7960,7 @@ exports.finalStageTrophies = function(d){return "Gratulálok! Teljesítetted az 
 
 exports.finish = function(d){return "Kész"};
 
-exports.generatedCodeInfo = function(d){return "Még a legjobb egyetemei is tanítják a blokk alapú kódolást (például "+v(d,"berkeleyLink")+" "+v(d,"harvardLink")+"). De a motorháztető alatt, a blokkok amiket összeraksz, JavaScript kódok, a világ legszélesebb körben használt kódolási nyelvén:"};
+exports.generatedCodeInfo = function(d){return "A blokk alapú programozást még a legjobb egyetemeken (pl. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+") is tanítják. De a felszín alatt az általad összeállított blokkok JavaScriptben, a világ legszélesebb körben használt nyelvén is megjeleníthetők:"};
 
 exports.hashError = function(d){return "Sajnálom, de \"%1\" nem felel meg egyetlen mentett programnak sem."};
 
@@ -7998,7 +7998,7 @@ exports.repeat = function(d){return "ismételd"};
 
 exports.resetProgram = function(d){return "Visszaállítás"};
 
-exports.runProgram = function(d){return "Fut"};
+exports.runProgram = function(d){return "Futtatás"};
 
 exports.runTooltip = function(d){return "A munkalapon összeépített program futtatása."};
 

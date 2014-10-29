@@ -7988,13 +7988,13 @@ exports.catVariables = function(d){return "Breytur"};
 
 exports.continue = function(d){return "Halda áfram"};
 
-exports.createHtmlBlock = function(d){return "create html block"};
+exports.createHtmlBlock = function(d){return "búa til html bálk"};
 
-exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
+exports.createHtmlBlockTooltip = function(d){return "Býr til bálk af HTML kóða í appinu."};
 
 exports.finalLevel = function(d){return "Til hamingju! Þú hefur leyst síðustu þrautina."};
 
-exports.makeYourOwn = function(d){return "Make Your Own App"};
+exports.makeYourOwn = function(d){return "Búðu til eigið app"};
 
 exports.nextLevel = function(d){return "Til hamingju! Þú hefur lokið við þessa þraut."};
 
@@ -8004,21 +8004,21 @@ exports.numBlocksNeeded = function(d){return "Þessa þraut er hægt að leysa m
 
 exports.pause = function(d){return "Pause"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
+exports.reinfFeedbackMsg = function(d){return "Þú getur smellt á \"Reyna aftur\" hnappinn til að fara aftur í að keyra appið þitt."};
 
 exports.repeatForever = function(d){return "endurtaka endalaust"};
 
 exports.repeatDo = function(d){return "gera"};
 
-exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
+exports.repeatForeverTooltip = function(d){return "Gera aðgerðirnar í þessari stæðu aftur og aftur á meðan appið keyrir."};
 
-exports.shareWebappTwitter = function(d){return "Check out the app I made. I wrote it myself with @codeorg"};
+exports.shareWebappTwitter = function(d){return "Kíktu á appið sem ég bjó til. Ég skrifaði það sjálf/ur með @codeorg"};
 
-exports.shareGame = function(d){return "Share your app:"};
+exports.shareGame = function(d){return "Deila appinu þínu:"};
 
-exports.turnBlack = function(d){return "turn black"};
+exports.turnBlack = function(d){return "lita svart"};
 
-exports.turnBlackTooltip = function(d){return "Turns the screen black."};
+exports.turnBlackTooltip = function(d){return "Gerir skjáinn svartan."};
 
 exports.yes = function(d){return "Já"};
 
