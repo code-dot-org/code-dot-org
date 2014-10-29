@@ -1,8 +1,4 @@
-* * *
 
-título: Recursos layout: amplo
-
-* * *
 
 # Como ensinar a Hora do Código
 

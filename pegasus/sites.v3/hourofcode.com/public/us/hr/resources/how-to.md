@@ -1,8 +1,4 @@
-* * *
 
-naslov: Resursi postav: širok
-
-* * *
 
 # Kako poučavati Sat Kodiranja
 

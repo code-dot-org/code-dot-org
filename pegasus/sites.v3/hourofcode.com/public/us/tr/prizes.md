@@ -1,8 +1,4 @@
-* * *
 
-başlık: Ödüller düzen: geniş
-
-* * *
 
 # Kodlama Saati - her organizatör için ödüller
 

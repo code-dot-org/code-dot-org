@@ -1,8 +1,4 @@
-* * *
 
-عنوان: منابع نما: بزرگ
-
-* * *
 
 ## Useful stats on computer science
 

@@ -1,8 +1,4 @@
-* * *
 
-title: Resources layout: wide
-
-* * *
 
 # 1시간짜리 Hour of Code 교육 방법
 

@@ -1,8 +1,4 @@
-* * *
 
-název: Zdroje rozvržení: široké
-
-* * *
 
 # Jak přilákat média na Vaší Hodinu Kódu
 

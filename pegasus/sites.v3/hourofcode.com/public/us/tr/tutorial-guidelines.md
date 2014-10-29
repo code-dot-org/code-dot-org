@@ -1,8 +1,4 @@
-* * *
 
-düzen: geniş
-
-* * *
 
 # Kodlama Zamanı ve Bilgisayar Bilimi Eğitimi Haftası rehberi
 

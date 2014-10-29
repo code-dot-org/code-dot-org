@@ -1,8 +1,4 @@
-* * *
 
-layout: wide
-
-* * *
 
 # Panduan tutorial untuk Hour of Code dan Computer Science Education Week
 

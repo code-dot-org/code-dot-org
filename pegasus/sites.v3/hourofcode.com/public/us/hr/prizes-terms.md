@@ -1,8 +1,4 @@
-* * *
 
-prikaz: širok
-
-* * *
 
 # Nagrade - pravila i uvjeti
 

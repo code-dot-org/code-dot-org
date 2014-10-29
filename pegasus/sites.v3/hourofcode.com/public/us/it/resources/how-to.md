@@ -1,8 +1,4 @@
-* * *
 
-title: Risorse layout: wide
-
-* * *
 
 # Come insegnare un'Ora del Codice
 

@@ -1,8 +1,4 @@
-* * *
 
-aspect: wide
-
-* * *
 
 # Recomandări si explicații pentru Hour of Code și săptămâna Computer Science Education
 

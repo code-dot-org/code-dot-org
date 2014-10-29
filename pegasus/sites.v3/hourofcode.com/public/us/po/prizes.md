@@ -1,8 +1,4 @@
-* * *
 
-título: Prémios formato: amplo
-
-* * *
 
 # A Hora de Código - prémios para todos os organizadores
 

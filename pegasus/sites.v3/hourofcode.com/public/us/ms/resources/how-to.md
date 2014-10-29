@@ -1,8 +1,4 @@
-* * *
 
-title: Resources layout: wide
-
-* * *
 
 # Bagaimana mengajar menggunakan Hour of Code
 

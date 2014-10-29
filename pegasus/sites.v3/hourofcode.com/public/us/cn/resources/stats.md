@@ -1,8 +1,4 @@
-* * *
 
-来源
-
-* * *
 
 # How to attract media to your Hour of Code event
 

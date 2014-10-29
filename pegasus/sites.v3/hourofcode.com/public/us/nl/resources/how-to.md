@@ -1,8 +1,4 @@
-* * *
 
-title: Materialen layout: wide
-
-* * *
 
 # Hoe begeleid je een Uur Code
 

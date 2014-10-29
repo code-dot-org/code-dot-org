@@ -1,8 +1,4 @@
-* * *
 
-title: Prêmios layout: wide
-
-* * *
 
 # A Hora do Código — prêmios para os organizadores
 

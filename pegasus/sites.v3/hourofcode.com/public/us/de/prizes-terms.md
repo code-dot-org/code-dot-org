@@ -1,8 +1,4 @@
-* * *
 
-layout: wide
-
-* * *
 
 # Gewinne - Allgemeine Geschäftsbedingungen
 

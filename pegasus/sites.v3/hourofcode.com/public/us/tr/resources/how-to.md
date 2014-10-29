@@ -1,8 +1,4 @@
-* * *
 
-başlık: Kaynaklar düzen: geniş
-
-* * *
 
 # Kodlama Zamanını nasıl öğretirsiniz
 

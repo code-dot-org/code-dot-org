@@ -1,8 +1,4 @@
-* * *
 
-naslov: Nagrade prikaz: širok
-
-* * *
 
 # Sat Kodiranja - nagrade za svakog organizatora
 

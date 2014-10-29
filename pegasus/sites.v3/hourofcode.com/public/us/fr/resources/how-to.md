@@ -1,8 +1,4 @@
-* * *
 
-titre: Ressources affichage: large
-
-* * *
 
 # Comment enseigner une Heure de Code
 

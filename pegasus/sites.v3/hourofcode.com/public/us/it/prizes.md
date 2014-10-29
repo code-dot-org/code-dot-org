@@ -1,8 +1,4 @@
-* * *
 
-title: Premi layout: wide
-
-* * *
 
 # L'ora del Codice — premi per tutti gli organizzatori
 

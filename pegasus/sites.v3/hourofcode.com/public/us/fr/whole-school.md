@@ -1,8 +1,4 @@
-* * *
 
-affichage: large
-
-* * *
 
 # Incite toute ton école à participer
 

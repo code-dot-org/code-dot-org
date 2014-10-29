@@ -1,8 +1,4 @@
-* * *
 
-tiêu đề : Tài liệu Khung nhìn : rộng
-
-* * *
 
 # Làm thế nào để dạy một Hour of Code
 

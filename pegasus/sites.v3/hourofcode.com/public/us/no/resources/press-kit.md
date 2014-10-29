@@ -1,8 +1,4 @@
-* * *
 
-title: Ressurser layout: wide
-
-* * *
 
 ## Nyttige fakta om programmering
 

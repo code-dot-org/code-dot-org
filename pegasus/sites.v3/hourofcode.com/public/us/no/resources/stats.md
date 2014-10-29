@@ -1,8 +1,4 @@
-* * *
 
-title: Ressurser layout: wide
-
-* * *
 
 # Hvordan få oppmerksomhet i media om Kodetimen
 

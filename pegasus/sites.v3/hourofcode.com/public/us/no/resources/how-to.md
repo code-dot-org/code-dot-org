@@ -1,8 +1,4 @@
-* * *
 
-title: Ressurser layout: wide
-
-* * *
 
 # Hvordan undervise Kodetimen
 

@@ -1,8 +1,4 @@
-* * *
 
-layout: wide
-
-* * *
 
 # Linee guida per la creazione di un tutorial dell'Ora del Codice e della Settimana dell'Insegnamento dell'Informatica
 

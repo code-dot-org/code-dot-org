@@ -1,8 +1,4 @@
-* * *
 
-layout: wide
-
-* * *
 
 # Diretrizes para os tutoriais da Hora do Código e Semana da Educação em Ciência da Computação
 

@@ -1,8 +1,4 @@
-* * *
 
-सजावट: फराकिलो
-
-* * *
 
 # Hour of Code र Computer Science Education Week लागि ट्यूटोरियल दिशानिर्देश
 

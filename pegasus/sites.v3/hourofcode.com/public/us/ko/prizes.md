@@ -1,8 +1,4 @@
-* * *
 
-title: Prizes layout: wide
-
-* * *
 
 # Hour of Code - 이벤트 행사 조직자를 위한 상품들
 

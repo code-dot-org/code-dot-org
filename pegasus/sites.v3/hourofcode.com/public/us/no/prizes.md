@@ -1,8 +1,4 @@
-* * *
 
-title: Premier layout: wide
-
-* * *
 
 # Kodetimen - premier for hver arrangør
 

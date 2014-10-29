@@ -1,8 +1,4 @@
-* * *
 
-bố trí: rộng
-
-* * *
 
 # Hướng dẫn cho Giờ Lập Trình và Tuần Giáo Dục Tin Học
 

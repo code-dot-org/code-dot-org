@@ -1,8 +1,4 @@
-* * *
 
-layout: wide
-
-* * *
 
 # Premi - Termini e condizioni di partecipazione
 

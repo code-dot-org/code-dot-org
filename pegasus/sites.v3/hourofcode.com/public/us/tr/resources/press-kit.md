@@ -1,8 +1,4 @@
-* * *
 
-başlık: Kaynaklar düzen: geniş
-
-* * *
 
 ## Bilgisayar bilimi üzerine yararlı istatistikler
 

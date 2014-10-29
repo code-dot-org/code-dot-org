@@ -1,8 +1,4 @@
-* * *
 
-layout: wide
-
-* * *
 
 # Richtlijnen voor opdrachten voor het Uur Code en de Computer Science Education Week
 

@@ -1,8 +1,4 @@
-* * *
 
-bố trí: rộng
-
-* * *
 
 # Kêu gọi cả trường bạn tham gia
 

@@ -1,8 +1,4 @@
-* * *
 
-título: Recursos layout: amplo
-
-* * *
 
 # Como atrair a mídia para seu evento da Hora do código
 

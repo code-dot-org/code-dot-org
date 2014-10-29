@@ -1,8 +1,4 @@
-* * *
 
-title: Premii layout: wide
-
-* * *
 
 # Hour of Code - premii pentru fiecare organizator
 

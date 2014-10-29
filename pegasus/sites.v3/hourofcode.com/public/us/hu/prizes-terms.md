@@ -1,8 +1,4 @@
-* * *
 
-layout: wide
-
-* * *
 
 # Díjak - általános szerződési feltételek
 

@@ -1,8 +1,4 @@
-* * *
 
-název: Zdroje rozvržení: široké
-
-* * *
 
 ## Useful stats on computer science
 

@@ -1,8 +1,4 @@
-* * *
 
-tiêu đề : Tài liệu Khung nhìn : rộng
-
-* * *
 
 ## Số liệu thống kê hữu ích về khoa học máy tính
 

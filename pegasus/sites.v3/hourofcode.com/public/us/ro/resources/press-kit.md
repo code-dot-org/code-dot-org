@@ -1,8 +1,4 @@
-* * *
 
-title: Resurse layout: wide
-
-* * *
 
 ## Statistici utile despre tehnologia computerelor
 

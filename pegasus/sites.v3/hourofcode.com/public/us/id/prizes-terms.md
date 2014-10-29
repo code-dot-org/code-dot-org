@@ -1,8 +1,4 @@
-* * *
 
-layout: wide
-
-* * *
 
 # Hadiah - syarat dan ketentuan
 

@@ -1,8 +1,4 @@
-* * *
 
-maquetació: àmplia
-
-* * *
 
 # Aconsegueix tota l'escola per participar
 

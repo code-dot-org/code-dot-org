@@ -1,8 +1,4 @@
-* * *
 
-来源
-
-* * *
 
 ## Useful stats on computer science
 

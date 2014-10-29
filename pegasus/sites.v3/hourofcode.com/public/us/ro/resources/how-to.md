@@ -1,8 +1,4 @@
-* * *
 
-title: Resurse layout: wide
-
-* * *
 
 # Cum să organizezi Hour of Code
 

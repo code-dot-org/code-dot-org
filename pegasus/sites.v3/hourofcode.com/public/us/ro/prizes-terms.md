@@ -1,8 +1,4 @@
-* * *
 
-layout: wide
-
-* * *
 
 # Premii - termeni și condiții
 

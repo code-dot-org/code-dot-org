@@ -1,8 +1,4 @@
-* * *
 
-oppsett: bredt
-
-* * *
 
 # Retningslinjer for opplæringsprogrammer til Kodetimen
 

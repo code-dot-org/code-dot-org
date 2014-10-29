@@ -1,8 +1,4 @@
-* * *
 
-düzen: geniş
-
-* * *
 
 # Bütün okulunuzu dahil edin
 

@@ -1,8 +1,4 @@
-* * *
 
-レイアウト:ワイド
-
-* * *
 
 # Hour of Codeと、Computer Science Education Weekのためのガイドライン指導書
 
