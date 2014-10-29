@@ -13,8 +13,6 @@
         - if avatar_url != nil
           - if supporter[:kind_s] != "corporate" && supporter[:name_s] != "Omidyar Network"
             %img{:src=> avatar_url, :style=>"float: left"}
-          - elsif supporter[:kind_s] == "corporate" && supporter[:name_s] == "Microsoft"
-            %img{:src=> avatar_url, :style=>"width: 100%; height: auto"}
           - else
             %img{:src=> avatar_url}
         - if supporter[:kind_s] != "corporate" &&  supporter[:name_s] != "Omidyar Network"
