@@ -12,6 +12,9 @@
  */
 function Sounds() {
   window.AudioContext = window.AudioContext || window.webkitAudioContext;
+
+  this.audioContext = null;
+
   if (window.AudioContext) {
     try {
       this.audioContext = new AudioContext();
@@ -45,6 +48,12 @@ Sounds.prototype.get = function (soundId) {
   return this.soundsById[soundId];
 };
 
+/**
+ * Initialize an individual sound
+ * @param config available sound files for this audio
+ * @param audioContext context this sound can be played on, or null if none
+ * @constructor
+ */
 function Sound(config, audioContext) {
   this.config = config;
   this.audioContext = audioContext;
