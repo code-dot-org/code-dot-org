@@ -575,7 +575,7 @@
   lightbot_beyond_name: LightBot
   codecademy_beyond_name: Codeacademy
   kodable_beyond_name: Kodable
-  hopscotch_beyond_name: Hopscrotch: programando en tu iPad
+  hopscotch_beyond_name: 'Hopscotch: programando en tu iPad'
   groklearning_beyond_name: Aprendé programación con Python
   hacketyhack_beyond_name: Aprendé Ruby
   robomind_beyond_name: Programá tu robot virtual
@@ -690,7 +690,7 @@
   edx_beyond_shortdescription: El curso más popular de Harvard
   coursera_beyond_shortdescription: Empezá con CS101
   udacity_beyond_shortdescription: Empezá con CS101
-  teachingtree_beyond_shortdescription: Conocimiento online: rápido e inagotable
+  teachingtree_beyond_shortdescription: 'Conocimiento online: rápido e inagotable'
   kodu_beyond_shortdescription: Diseña un juego en un mundo 3D
   cargobot_beyond_shortdescription: Programá un brazo robótico en tu iPad
   kidsruby_beyond_shortdescription: Aprendé a programar usando Ruby
@@ -776,12 +776,12 @@
   programación. El temario incluye: abstracción, algoritmos, estructuras de datos, 
     encapsulamiento, manejo de recursos, seguridad, ingeniería del software y desarrollo web. Los 
     lenguajes utilizados incluyen C, PHP y JavaScript además de SQL, CSS y HTML. 
-  coursera_beyond_longdescription: El curso Standford CS 101, cuyo profesor es Nick Parlante, 
+  coursera_beyond_longdescription: 'El curso Standford CS 101, cuyo profesor es Nick Parlante, 
     enseña las ideas fundamentales de ciencias de la computación para un público sin expriencia. 
     Jugá y experimentá con pequeños códigos, el poderío y las limitaciones de las computadoras. 
-  También se da un panorama general de lo que son las computadoras hoy en día: qué es una 
+    También se da un panorama general de lo que son las computadoras hoy en día: qué es una 
     computadora, qué es el hardware, software, Internet. No se requiere experiencia previa pero 
-    si la habilidad para usar un navegador. 
+    si la habilidad para usar un navegador. '
   udacity_beyond_longdescription: En este curso vas a aprender los conceptos fundamentales de 
     ciencias de la computación y a programar tus propias aplicaciones en el contexto de construir 
     un Web Crawler. No se necesitan conocimientos previos de programación. Al final, vas a estar 
