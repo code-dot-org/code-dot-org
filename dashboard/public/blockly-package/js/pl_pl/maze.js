@@ -13433,7 +13433,7 @@ exports.repeat = function(d){return "powtórz"};
 
 exports.resetProgram = function(d){return "Zresetuj"};
 
-exports.runProgram = function(d){return "Biegnij"};
+exports.runProgram = function(d){return "Uruchom"};
 
 exports.runTooltip = function(d){return "Uruchom program zdefiniowany poprzez bloki w miejscu roboczym."};
 

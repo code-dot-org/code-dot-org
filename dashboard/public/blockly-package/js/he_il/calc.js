@@ -7767,7 +7767,7 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.he=function(n){return n===1?"one":"other"}
 exports.blocksUsed = function(d){return "בלוקים בשימוש: %1"};
 
-exports.branches = function(d){return "branches"};
+exports.branches = function(d){return "ענפים"};
 
 exports.catColour = function(d){return "צבע"};
 
@@ -7787,7 +7787,7 @@ exports.colourTooltip = function(d){return "משנה את הצבע של העיפ
 
 exports.degrees = function(d){return "מעלות"};
 
-exports.depth = function(d){return "depth"};
+exports.depth = function(d){return "עומק"};
 
 exports.dots = function(d){return "פיקסלים"};
 
@@ -7797,31 +7797,31 @@ exports.drawATriangle = function(d){return "צייר משולש"};
 
 exports.drawACircle = function(d){return "צייר מעגל"};
 
-exports.drawAFlower = function(d){return "draw a flower"};
+exports.drawAFlower = function(d){return "צייר פרח"};
 
-exports.drawAHexagon = function(d){return "draw a hexagon"};
+exports.drawAHexagon = function(d){return "צייר משושה"};
 
 exports.drawAHouse = function(d){return "צייר בית"};
 
-exports.drawAPlanet = function(d){return "draw a planet"};
+exports.drawAPlanet = function(d){return "צייר כוכב לכת"};
 
-exports.drawARhombus = function(d){return "draw a rhombus"};
+exports.drawARhombus = function(d){return "צייר מעויין"};
 
-exports.drawARobot = function(d){return "draw a robot"};
+exports.drawARobot = function(d){return "צייר רובוט"};
 
-exports.drawARocket = function(d){return "draw a rocket"};
+exports.drawARocket = function(d){return "צייר טיל"};
 
-exports.drawASnowflake = function(d){return "draw a snowflake"};
+exports.drawASnowflake = function(d){return "צייר פתית שלג"};
 
 exports.drawASnowman = function(d){return "צייר איש שלג"};
 
-exports.drawAStar = function(d){return "draw a star"};
+exports.drawAStar = function(d){return "צייר כוכב"};
 
 exports.drawATree = function(d){return "צייר עץ"};
 
-exports.drawUpperWave = function(d){return "draw upper wave"};
+exports.drawUpperWave = function(d){return "צייר גל עליון"};
 
-exports.drawLowerWave = function(d){return "draw lower wave"};
+exports.drawLowerWave = function(d){return "צייר גל תחתון"};
 
 exports.heightParameter = function(d){return "גובה"};
 
@@ -7843,7 +7843,7 @@ exports.jumpSouthTooltip = function(d){return "Moves the artist south without le
 
 exports.jumpWestTooltip = function(d){return "Moves the artist west without leaving any marks."};
 
-exports.lengthFeedback = function(d){return "You got it right except for the lengths to move."};
+exports.lengthFeedback = function(d){return "תשובה נכונה, למעט אורכי התזוזה."};
 
 exports.lengthParameter = function(d){return "אורך"};
 

@@ -9422,7 +9422,7 @@ exports.levelIncompleteError = function(d){return "Ты используешь �
 
 exports.listVariable = function(d){return "список"};
 
-exports.makeYourOwnFlappy = function(d){return "Создай свою Flappy Bird"};
+exports.makeYourOwnFlappy = function(d){return "Создай Свою Flappy Игру"};
 
 exports.missingBlocksErrorMsg = function(d){return "Для решения этой головоломки попробуй один или несколько из следующих блоков:"};
 
@@ -9430,7 +9430,7 @@ exports.nextLevel = function(d){return "Поздравляю! Головолом
 
 exports.nextLevelTrophies = function(d){return "Поздравляю! Ты завершил головоломку "+v(d,"puzzleNumber")+" и выиграл "+p(d,"numTrophies",0,"ru",{"one":"кубок","other":n(d,"numTrophies")+" кубков"})+"."};
 
-exports.nextStage = function(d){return "Поздравляю! Ты закончил "+v(d,"stageName")+"."};
+exports.nextStage = function(d){return "Поздравляю! Ты завершил "+v(d,"stageName")+"."};
 
 exports.nextStageTrophies = function(d){return "Поздравляю! Ты завершил этап "+v(d,"stageName")+" и выиграл "+p(d,"numTrophies",0,"ru",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
@@ -9450,7 +9450,7 @@ exports.runProgram = function(d){return "Выполнить"};
 
 exports.runTooltip = function(d){return "Запускает программу, заданную блоками в рабочей области."};
 
-exports.score = function(d){return "оценка"};
+exports.score = function(d){return "очки"};
 
 exports.showCodeHeader = function(d){return "Показать код"};
 
@@ -9474,7 +9474,7 @@ exports.totalNumLinesOfCodeWritten = function(d){return "Общее количе
 
 exports.tryAgain = function(d){return "Попытаться ещё раз"};
 
-exports.hintRequest = function(d){return "Показать подсказку"};
+exports.hintRequest = function(d){return "Посмотреть подсказку"};
 
 exports.backToPreviousLevel = function(d){return "Вернуться на предыдущий уровень"};
 
@@ -9512,7 +9512,7 @@ exports.signup = function(d){return "Зарегистрируйтесь на в�
 
 exports.hintHeader = function(d){return "Подсказка:"};
 
-exports.genericFeedback = function(d){return "Посмотреть как закончить и попытаться исправить свою программу."};
+exports.genericFeedback = function(d){return "Посмотреть, как вы выполнили, и попытаться исправить вашу программу."};
 
 
 },{"messageformat":50}],38:[function(require,module,exports){
@@ -9542,9 +9542,9 @@ exports.endGameTooltip = function(d){return "Завершает игру."};
 
 exports.finalLevel = function(d){return "Поздравляю! Последняя головоломка решена."};
 
-exports.flap = function(d){return "махать крыльями"};
+exports.flap = function(d){return "взмах крыльев"};
 
-exports.flapRandom = function(d){return "Подлететь со случайной силой"};
+exports.flapRandom = function(d){return "Взлететь со случайной силой"};
 
 exports.flapVerySmall = function(d){return "Подлететь с очень маленькой силой"};
 
@@ -9570,25 +9570,25 @@ exports.no = function(d){return "Нет"};
 
 exports.numBlocksNeeded = function(d){return "Эта головоломка может быть решена с помощью %1 блоков."};
 
-exports.playSoundRandom = function(d){return "Проиграть случайный звук"};
+exports.playSoundRandom = function(d){return "воспроизвести случайный звук"};
 
-exports.playSoundBounce = function(d){return "проиграть звук отскока"};
+exports.playSoundBounce = function(d){return "воспроизвести звук отскока"};
 
 exports.playSoundCrunch = function(d){return "проиграть звук хруста"};
 
-exports.playSoundDie = function(d){return "проиграть грустный звук"};
+exports.playSoundDie = function(d){return "воспроизвести грустный звук"};
 
-exports.playSoundHit = function(d){return "проиграть звук разбивания"};
+exports.playSoundHit = function(d){return "воспроизвести звук разрушения"};
 
 exports.playSoundPoint = function(d){return "проиграть звук преодоления препятствия"};
 
-exports.playSoundSwoosh = function(d){return "проиграть звук \"выполнено\""};
+exports.playSoundSwoosh = function(d){return "воспроизвести звук \"выполнено\""};
 
-exports.playSoundWing = function(d){return "воспроизвести звук крыльев"};
+exports.playSoundWing = function(d){return "воспроизвести звук размаха крыльев"};
 
 exports.playSoundJet = function(d){return "воспроизвести звук двигателя"};
 
-exports.playSoundCrash = function(d){return "воспроизвести звук падения"};
+exports.playSoundCrash = function(d){return "воспроизвести звук крушения"};
 
 exports.playSoundJingle = function(d){return "воспроизвести звук звонка"};
 
@@ -9602,19 +9602,19 @@ exports.reinfFeedbackMsg = function(d){return "Вы можете нажать к
 
 exports.scoreText = function(d){return "Оценка: "+v(d,"playerScore")};
 
-exports.setBackground = function(d){return "установить сцену"};
+exports.setBackground = function(d){return "задать сцену"};
 
 exports.setBackgroundRandom = function(d){return "установить  сцену Случайная"};
 
 exports.setBackgroundFlappy = function(d){return "установить сцену город (день)"};
 
-exports.setBackgroundNight = function(d){return "установить сцену Город (ночь)"};
+exports.setBackgroundNight = function(d){return "задать сцену Город (ночь)"};
 
 exports.setBackgroundSciFi = function(d){return "установить сцену Научно Фантастическая"};
 
-exports.setBackgroundUnderwater = function(d){return "установить сцену Под Водой"};
+exports.setBackgroundUnderwater = function(d){return "задать сцену Под Водой"};
 
-exports.setBackgroundCave = function(d){return "установить сцену Пещера"};
+exports.setBackgroundCave = function(d){return "задать сцену Пещера"};
 
 exports.setBackgroundSanta = function(d){return "установить сцену Новогодняя"};
 
@@ -9648,19 +9648,19 @@ exports.setGravityVeryHigh = function(d){return "Установить очень
 
 exports.setGravityTooltip = function(d){return "Задать уровень сложности"};
 
-exports.setGround = function(d){return "установить основание"};
+exports.setGround = function(d){return "задать основание"};
 
-exports.setGroundRandom = function(d){return "установить основание Случайное"};
+exports.setGroundRandom = function(d){return "задать случайное основане"};
 
-exports.setGroundFlappy = function(d){return "установить основание Земля"};
+exports.setGroundFlappy = function(d){return "задать основание Земля"};
 
-exports.setGroundSciFi = function(d){return "установить основание Научная Фантастика"};
+exports.setGroundSciFi = function(d){return "задать основание Научная Фантастика"};
 
-exports.setGroundUnderwater = function(d){return "установить основание Под Водой"};
+exports.setGroundUnderwater = function(d){return "задать основание Под Водой"};
 
-exports.setGroundCave = function(d){return "установить основание Пещера"};
+exports.setGroundCave = function(d){return "задать основание Пещера"};
 
-exports.setGroundSanta = function(d){return "установить основание Новогоднее"};
+exports.setGroundSanta = function(d){return "задать основание Санта"};
 
 exports.setGroundLava = function(d){return "установить основание Лава"};
 
@@ -9684,7 +9684,7 @@ exports.setObstacleLaser = function(d){return "установить препят
 
 exports.setObstacleTooltip = function(d){return "Установить изображение препятствия"};
 
-exports.setPlayer = function(d){return "установить игрока"};
+exports.setPlayer = function(d){return "выбрать игрока"};
 
 exports.setPlayerRandom = function(d){return "установить игрока Случайный"};
 
@@ -9722,7 +9722,7 @@ exports.setScore = function(d){return "задать счет"};
 
 exports.setScoreTooltip = function(d){return "Установить счет игрока"};
 
-exports.setSpeed = function(d){return "установить скорость"};
+exports.setSpeed = function(d){return "Задать скорость"};
 
 exports.setSpeedTooltip = function(d){return "Установить уровень скорости"};
 
@@ -9776,7 +9776,7 @@ exports.whenCollideGround = function(d){return "при ударе о землю"
 
 exports.whenCollideGroundTooltip = function(d){return "Выполните действия ниже когда Флэппи упадет на землю."};
 
-exports.whenCollideObstacle = function(d){return "При попадании в препятствие"};
+exports.whenCollideObstacle = function(d){return "при попадании в препятствие"};
 
 exports.whenCollideObstacleTooltip = function(d){return "Выполните действия ниже, когда Флэппи удариться о препятствие."};
 

@@ -7988,13 +7988,13 @@ exports.catVariables = function(d){return "Variáveis"};
 
 exports.continue = function(d){return "Continue"};
 
-exports.createHtmlBlock = function(d){return "create html block"};
+exports.createHtmlBlock = function(d){return "criar bloco html"};
 
-exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
+exports.createHtmlBlockTooltip = function(d){return "Cria um bloco HTML no aplicativo."};
 
 exports.finalLevel = function(d){return "Parabéns! Você resolveu o último desafio."};
 
-exports.makeYourOwn = function(d){return "Make Your Own App"};
+exports.makeYourOwn = function(d){return "Crie seu próprio App"};
 
 exports.nextLevel = function(d){return "Parabéns! Você completou o desafio."};
 
@@ -8004,21 +8004,21 @@ exports.numBlocksNeeded = function(d){return "Este desafio pode ser resolvido co
 
 exports.pause = function(d){return "Pause"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
+exports.reinfFeedbackMsg = function(d){return "Você pode pressionar o botão \"Tentar novamente\" para voltar a executar seu aplicativo."};
 
 exports.repeatForever = function(d){return "repita infinitamente"};
 
 exports.repeatDo = function(d){return "faça"};
 
-exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
+exports.repeatForeverTooltip = function(d){return "Executar as ações deste bloco repetidamente enquanto o aplicativo estiver sendo executado."};
 
-exports.shareWebappTwitter = function(d){return "Check out the app I made. I wrote it myself with @codeorg"};
+exports.shareWebappTwitter = function(d){return "Veja o aplicativo que eu fiz. Eu o escrevi sozinho com a @codeorg"};
 
-exports.shareGame = function(d){return "Share your app:"};
+exports.shareGame = function(d){return "Compartilhe seu aplicativo:"};
 
-exports.turnBlack = function(d){return "turn black"};
+exports.turnBlack = function(d){return "ficar preto"};
 
-exports.turnBlackTooltip = function(d){return "Turns the screen black."};
+exports.turnBlackTooltip = function(d){return "Deixa a tela preta."};
 
 exports.yes = function(d){return "Sim"};
 

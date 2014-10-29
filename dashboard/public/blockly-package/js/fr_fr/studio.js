@@ -18856,7 +18856,7 @@ exports.catMath = function(d){return "Calculs"};
 
 exports.catProcedures = function(d){return "Fonctions"};
 
-exports.catText = function(d){return "Texte"};
+exports.catText = function(d){return "texte"};
 
 exports.catVariables = function(d){return "Variables"};
 
@@ -18898,7 +18898,7 @@ exports.help = function(d){return "Aide"};
 
 exports.hintTitle = function(d){return "Indice :"};
 
-exports.jump = function(d){return "saut"};
+exports.jump = function(d){return "sauter"};
 
 exports.levelIncompleteError = function(d){return "Vous utilisez tous les types nécessaires de blocs, mais pas de la bonne manière."};
 
@@ -18934,7 +18934,7 @@ exports.runTooltip = function(d){return "Exécuter le programme défini par les 
 
 exports.score = function(d){return "score"};
 
-exports.showCodeHeader = function(d){return "Afficher le Code"};
+exports.showCodeHeader = function(d){return "Afficher le code"};
 
 exports.showGeneratedCode = function(d){return "Afficher le code"};
 
@@ -18948,7 +18948,7 @@ exports.tooManyBlocksMsg = function(d){return "Ce puzzle peut être résolu avec
 
 exports.tooMuchWork = function(d){return "Vous m'avez fait faire beaucoup de travail !  Pourriez-vous essayer en répétant moins de fois ?"};
 
-exports.toolboxHeader = function(d){return "Blocs"};
+exports.toolboxHeader = function(d){return "blocs"};
 
 exports.openWorkspace = function(d){return "Comment ça marche"};
 
@@ -18964,7 +18964,7 @@ exports.saveToGallery = function(d){return "Enregistrer dans votre galerie"};
 
 exports.savedToGallery = function(d){return "Enregistré dans votre galerie !"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Désolé, nous ne pouvons pas partager ce programme."};
 
 exports.typeCode = function(d){return "Tapez votre code JavaScript en dessous de ces instructions."};
 
@@ -19003,7 +19003,7 @@ exports.actor = function(d){return "acteur"};
 
 exports.catActions = function(d){return "Actions"};
 
-exports.catControl = function(d){return "Boucles"};
+exports.catControl = function(d){return "boucles"};
 
 exports.catEvents = function(d){return "Événements"};
 
@@ -19011,11 +19011,11 @@ exports.catLogic = function(d){return "Logique"};
 
 exports.catMath = function(d){return "Math"};
 
-exports.catProcedures = function(d){return "Fonctions"};
+exports.catProcedures = function(d){return "fonctions"};
 
 exports.catText = function(d){return "Texte"};
 
-exports.catVariables = function(d){return "Variables"};
+exports.catVariables = function(d){return "variables"};
 
 exports.changeScoreTooltip = function(d){return "Ajouter ou enlever un point au score."};
 
@@ -19029,7 +19029,7 @@ exports.defaultSayText = function(d){return "Tapez ici"};
 
 exports.emotion = function(d){return "humeur"};
 
-exports.finalLevel = function(d){return "Félicitations ! Vous avez résolu la dernière énigme."};
+exports.finalLevel = function(d){return "Félicitations ! Vous avez résolu l'énigme finale."};
 
 exports.hello = function(d){return "salut"};
 
@@ -19037,9 +19037,9 @@ exports.helloWorld = function(d){return "Bonjour tout le monde!"};
 
 exports.incrementPlayerScore = function(d){return "marquer un point"};
 
-exports.makeProjectileDisappear = function(d){return "disparaître"};
+exports.makeProjectileDisappear = function(d){return "qui disparaît"};
 
-exports.makeProjectileBounce = function(d){return "rebondir"};
+exports.makeProjectileBounce = function(d){return "rebond"};
 
 exports.makeProjectileBlueFireball = function(d){return "fabriquer une boule de feu bleue"};
 
@@ -19059,9 +19059,9 @@ exports.makeYourOwn = function(d){return "Faites votre propre application Play A
 
 exports.moveDirectionDown = function(d){return "vers le bas"};
 
-exports.moveDirectionLeft = function(d){return "gauche"};
+exports.moveDirectionLeft = function(d){return "vers la gauche"};
 
-exports.moveDirectionRight = function(d){return "droite"};
+exports.moveDirectionRight = function(d){return "vers la droite"};
 
 exports.moveDirectionUp = function(d){return "vers le haut"};
 
@@ -19079,7 +19079,7 @@ exports.moveDistance400 = function(d){return "400 pixels"};
 
 exports.moveDistancePixels = function(d){return "pixels"};
 
-exports.moveDistanceRandom = function(d){return "pixels aléatoires"};
+exports.moveDistanceRandom = function(d){return "d'un nombre de pixels aléatoire"};
 
 exports.moveDistanceTooltip = function(d){return "Déplacer un acteur sur une certaine distance dans la direction spécifiée."};
 
@@ -19109,7 +19109,7 @@ exports.nextLevel = function(d){return "Félicitations ! Vous avez terminé cett
 
 exports.no = function(d){return "Non"};
 
-exports.numBlocksNeeded = function(d){return "Cette énigme peut être résolue avec %1 blocs."};
+exports.numBlocksNeeded = function(d){return "Cette enigme peut être résolue avec %1 blocs."};
 
 exports.ouchExclamation = function(d){return "Aïe !"};
 
@@ -19139,7 +19139,7 @@ exports.playSoundWinPoint2 = function(d){return "jouer le son gagner un point 2"
 
 exports.playSoundWood = function(d){return "jouer un son de bois"};
 
-exports.positionOutTopLeft = function(d){return "à la position en haut à gauche"};
+exports.positionOutTopLeft = function(d){return "la position en haut à gauche"};
 
 exports.positionOutTopRight = function(d){return "à la position en haut à droite"};
 
@@ -19147,33 +19147,33 @@ exports.positionTopOutLeft = function(d){return "vers le haut extérieur gauche"
 
 exports.positionTopLeft = function(d){return "à la position en haut à gauche"};
 
-exports.positionTopCenter = function(d){return "à la position en haut au centre"};
+exports.positionTopCenter = function(d){return "la position en haut et au centre"};
 
-exports.positionTopRight = function(d){return "à la position en haut à droite"};
+exports.positionTopRight = function(d){return "la position en haut à droite"};
 
 exports.positionTopOutRight = function(d){return "vers le haut extérieur droit"};
 
-exports.positionMiddleLeft = function(d){return "à la position au milieu gauche"};
+exports.positionMiddleLeft = function(d){return "la position au milieu gauche"};
 
-exports.positionMiddleCenter = function(d){return "à la position au centre au milieu "};
+exports.positionMiddleCenter = function(d){return "la position au centre au milieu"};
 
-exports.positionMiddleRight = function(d){return "à la position au milieu à droite"};
+exports.positionMiddleRight = function(d){return "la position au milieu à droite"};
 
 exports.positionBottomOutLeft = function(d){return "vers le bas extérieur gauche"};
 
-exports.positionBottomLeft = function(d){return "en bas à gauche"};
+exports.positionBottomLeft = function(d){return "la position en bas à gauche"};
 
-exports.positionBottomCenter = function(d){return "en bas au centre"};
+exports.positionBottomCenter = function(d){return "la position en bas au centre"};
 
-exports.positionBottomRight = function(d){return "en bas à droite"};
+exports.positionBottomRight = function(d){return "la position en bas à droite"};
 
-exports.positionBottomOutRight = function(d){return "en bas à droite ver l'extérieur"};
+exports.positionBottomOutRight = function(d){return "en bas à droite vers l'extérieur"};
 
 exports.positionOutBottomLeft = function(d){return "en bas à gauche ci-dessous"};
 
 exports.positionOutBottomRight = function(d){return "en bas à droite ci dessous"};
 
-exports.positionRandom = function(d){return "à une position aléatoire"};
+exports.positionRandom = function(d){return "une position aléatoire"};
 
 exports.projectileBlueFireball = function(d){return "une boule de feu bleue"};
 
@@ -19335,17 +19335,17 @@ exports.setSpriteSizeVeryLarge = function(d){return "une très grande taille"};
 
 exports.setSpriteSizeTooltip = function(d){return "Définit la taille d'un acteur"};
 
-exports.setSpriteSpeedRandom = function(d){return "à une vitesse aléatoire"};
+exports.setSpriteSpeedRandom = function(d){return "une vitesse aléatoire"};
 
-exports.setSpriteSpeedVerySlow = function(d){return "à une vitesse très lente"};
+exports.setSpriteSpeedVerySlow = function(d){return "une vitesse très lente"};
 
-exports.setSpriteSpeedSlow = function(d){return "à une vitesse lente"};
+exports.setSpriteSpeedSlow = function(d){return "une vitesse lente"};
 
-exports.setSpriteSpeedNormal = function(d){return "à une vitesse normale"};
+exports.setSpriteSpeedNormal = function(d){return "une vitesse normale"};
 
-exports.setSpriteSpeedFast = function(d){return "à une vitesse rapide"};
+exports.setSpriteSpeedFast = function(d){return "une vitesse rapide"};
 
-exports.setSpriteSpeedVeryFast = function(d){return "à une vitesse très rapide"};
+exports.setSpriteSpeedVeryFast = function(d){return "une vitesse très rapide"};
 
 exports.setSpriteSpeedTooltip = function(d){return "Définit la vitesse d'un acteur"};
 
@@ -19367,7 +19367,7 @@ exports.showTSDefText = function(d){return "taper le texte ici"};
 
 exports.showTitleScreenTooltip = function(d){return "Afficher un écran titre avec le titre et le texte correspondants."};
 
-exports.setSprite = function(d){return "mettre"};
+exports.setSprite = function(d){return "définir"};
 
 exports.setSpriteN = function(d){return "définir pour l'acteur "+v(d,"spriteIndex")};
 
@@ -19423,7 +19423,7 @@ exports.waitForClick = function(d){return "attendre le clic"};
 
 exports.waitForRandom = function(d){return "attendre un événement aléatoire"};
 
-exports.waitForHalfSecond = function(d){return "Attendre une demi-seconde"};
+exports.waitForHalfSecond = function(d){return "attendre une demi-seconde"};
 
 exports.waitFor1Second = function(d){return "attendre 1 seconde"};
 

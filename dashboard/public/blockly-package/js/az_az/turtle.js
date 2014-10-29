@@ -11075,7 +11075,7 @@ exports.help = function(d){return "Kömək"};
 
 exports.hintTitle = function(d){return "Məsləhət:"};
 
-exports.jump = function(d){return "jump"};
+exports.jump = function(d){return "atıl"};
 
 exports.levelIncompleteError = function(d){return "Siz bütün lazım olan bloklardan istifadə edirsiniz amma səhv formada."};
 
@@ -11238,7 +11238,7 @@ exports.heightParameter = function(d){return "hündürlük"};
 
 exports.hideTurtle = function(d){return "rəssamı gizlət"};
 
-exports.jump = function(d){return "jump"};
+exports.jump = function(d){return "atıl"};
 
 exports.jumpBackward = function(d){return "geriyə atıl"};
 
@@ -11294,13 +11294,13 @@ exports.setPattern = function(d){return "set pattern"};
 
 exports.setWidth = function(d){return "eni təyin et"};
 
-exports.shareDrawing = function(d){return "Çizimini paylaş:"};
+exports.shareDrawing = function(d){return "Çəkdiyiniz şəkli bölüşün:"};
 
 exports.showMe = function(d){return "Mənə göstər"};
 
 exports.showTurtle = function(d){return "rəssamı göstər"};
 
-exports.step = function(d){return "step"};
+exports.step = function(d){return "addım"};
 
 exports.tooFewColours = function(d){return "Bu tapmaca üçün ən azı %1 fərqli rəngdən istifadə etməlisiniz. Sizdə isə ancaq %2 rəngdir."};
 

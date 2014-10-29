@@ -11716,7 +11716,7 @@ exports.heightParameter = function(d){return "aukštis"};
 
 exports.ifCode = function(d){return "jei"};
 
-exports.ifPathAhead = function(d){return "jei priešaky yra kelias"};
+exports.ifPathAhead = function(d){return "jei yra kelias į priekį"};
 
 exports.ifTooltip = function(d){return "Jei kelias yra nurodytoje kryptyje, atlik kokius nors veiksmus."};
 
@@ -11772,7 +11772,7 @@ exports.noPathRight = function(d){return "nėra kelio į dešinę"};
 
 exports.numBlocksNeeded = function(d){return "Ši užduotis gali būti išspręsta su %1 blokų(-ais)."};
 
-exports.pathAhead = function(d){return "kelias priešaky"};
+exports.pathAhead = function(d){return "kelias į priekį"};
 
 exports.pathLeft = function(d){return "jei kelias yra į kairę"};
 

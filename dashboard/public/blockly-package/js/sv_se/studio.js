@@ -19017,13 +19017,13 @@ exports.catText = function(d){return "text"};
 
 exports.catVariables = function(d){return "variabler"};
 
-exports.changeScoreTooltip = function(d){return "Add or remove a point to the score."};
+exports.changeScoreTooltip = function(d){return "Öka eller minska poängantalet med ett poäng."};
 
-exports.changeScoreTooltipK1 = function(d){return "Add a point to the score."};
+exports.changeScoreTooltipK1 = function(d){return "Öka poängantalet med ett poäng."};
 
 exports.continue = function(d){return "Fortsätt"};
 
-exports.decrementPlayerScore = function(d){return "remove point"};
+exports.decrementPlayerScore = function(d){return "ta bort ett poäng"};
 
 exports.defaultSayText = function(d){return "skriv här"};
 
@@ -19031,15 +19031,15 @@ exports.emotion = function(d){return "mood"};
 
 exports.finalLevel = function(d){return "Grattis! Du har löst det sista pusslet."};
 
-exports.hello = function(d){return "hello"};
+exports.hello = function(d){return "hej"};
 
 exports.helloWorld = function(d){return "Hello World!"};
 
 exports.incrementPlayerScore = function(d){return "spelarens poäng"};
 
-exports.makeProjectileDisappear = function(d){return "disappear"};
+exports.makeProjectileDisappear = function(d){return "försvinna"};
 
-exports.makeProjectileBounce = function(d){return "bounce"};
+exports.makeProjectileBounce = function(d){return "studsa"};
 
 exports.makeProjectileBlueFireball = function(d){return "skapa ett blått eldklot"};
 
@@ -19085,25 +19085,25 @@ exports.moveDistanceTooltip = function(d){return "Move a character a specific di
 
 exports.moveSprite = function(d){return "flytta"};
 
-exports.moveSpriteN = function(d){return "move actor "+v(d,"spriteIndex")};
+exports.moveSpriteN = function(d){return "flytta spelkaraktären "+v(d,"spriteIndex")};
 
 exports.moveDown = function(d){return "flytta neråt"};
 
-exports.moveDownTooltip = function(d){return "Move the paddle down."};
+exports.moveDownTooltip = function(d){return "Flytta en spelkaraktär nedåt."};
 
 exports.moveLeft = function(d){return "flytta vänster"};
 
-exports.moveLeftTooltip = function(d){return "Move the paddle to the left."};
+exports.moveLeftTooltip = function(d){return "Flytta en spelkaraktär till vänster."};
 
 exports.moveRight = function(d){return "flytta höger"};
 
-exports.moveRightTooltip = function(d){return "Move the paddle to the right."};
+exports.moveRightTooltip = function(d){return "Flytta en spelkaraktär till höger."};
 
 exports.moveUp = function(d){return "flytta uppåt"};
 
-exports.moveUpTooltip = function(d){return "Move the paddle up."};
+exports.moveUpTooltip = function(d){return "Flytta en spelkaraktär uppåt."};
 
-exports.moveTooltip = function(d){return "Move a character."};
+exports.moveTooltip = function(d){return "Flytta en spelkaraktär."};
 
 exports.nextLevel = function(d){return "Grattis! Du har slutfört detta pusslet."};
 
@@ -19449,7 +19449,7 @@ exports.whenArrowTooltip = function(d){return "Execute the actions below when th
 
 exports.whenDown = function(d){return "when Down arrow"};
 
-exports.whenDownTooltip = function(d){return "Execute the actions below when the Down arrow button is pressed."};
+exports.whenDownTooltip = function(d){return "Utföra åtgärderna nedan när NEDPIL trycks."};
 
 exports.whenGameStarts = function(d){return "when game starts"};
 
@@ -19457,11 +19457,11 @@ exports.whenGameStartsTooltip = function(d){return "Execute the actions below wh
 
 exports.whenLeft = function(d){return "when Left arrow"};
 
-exports.whenLeftTooltip = function(d){return "Execute the actions below when the Left arrow button is pressed."};
+exports.whenLeftTooltip = function(d){return "Utföra åtgärderna nedan när du trycker på VÄNSTERPIL."};
 
 exports.whenRight = function(d){return "when Right arrow"};
 
-exports.whenRightTooltip = function(d){return "Execute the actions below when the Right arrow button is pressed."};
+exports.whenRightTooltip = function(d){return "Utföra åtgärderna nedan när du trycker på HÖGERPIL."};
 
 exports.whenSpriteClicked = function(d){return "when actor clicked"};
 

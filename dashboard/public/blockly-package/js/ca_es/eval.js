@@ -7719,21 +7719,21 @@ exports.directionEastLetter = function(d){return "E"};
 
 exports.directionWestLetter = function(d){return "W"};
 
-exports.end = function(d){return "end"};
+exports.end = function(d){return "final"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Els blocs \"Repetir\" o el \"Si\" necessiten tenir altres blocs dins per a treballar. Assegureu-vos que el bloc interior encaixa bé dins del bloc que conté."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "The function block needs to have other blocks inside it to work."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "La funció bloc ha de tenir altres blocs a dins perquè funcioni."};
 
-exports.extraTopBlocks = function(d){return "You have extra blocks that aren't attached to an event block."};
+exports.extraTopBlocks = function(d){return "Tens blocs sense lligams. Volies lligar-los al bloc \"quan s'executa\"?"};
 
 exports.finalStage = function(d){return "Enhorabona! Has completat l'etapa final."};
 
 exports.finalStageTrophies = function(d){return "Enhorabona! Has completat l'etapa final i guanyat "+p(d,"numTrophies",0,"ca",{"un":"trofeu","other":n(d,"numTrophies")+" trophies"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Finalitza"};
 
-exports.generatedCodeInfo = function(d){return "Els blocs del teu programa poden ser també representats en Javascript, el llenguatge de programació més extés al món:"};
+exports.generatedCodeInfo = function(d){return "Fins i tot les millors universitats ensenyen programació basada en blocs (per exemple, "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Però sota el capó, els blocs que tu has reunit també es poden mostrar en JavaScript, la llengua de programació més utilitzada al món:"};
 
 exports.hashError = function(d){return "Ho sentim, '%1' no correspon amb ningun programa guardat."};
 
@@ -7741,13 +7741,13 @@ exports.help = function(d){return "Ajuda"};
 
 exports.hintTitle = function(d){return "Consell:"};
 
-exports.jump = function(d){return "jump"};
+exports.jump = function(d){return "salt"};
 
 exports.levelIncompleteError = function(d){return "Estàs utilitzant tots els tipus de blocs necessaris, però no de la manera correcta."};
 
 exports.listVariable = function(d){return "llista"};
 
-exports.makeYourOwnFlappy = function(d){return "Make Your Own Flappy Game"};
+exports.makeYourOwnFlappy = function(d){return "Fes el teu propi \"Flappy Game\""};
 
 exports.missingBlocksErrorMsg = function(d){return "Prova un o més dels blocs de sota per a resoldre aquest puzzle."};
 
@@ -7755,15 +7755,15 @@ exports.nextLevel = function(d){return "Enhorabona! Has acabat el Puzzle! "+v(d,
 
 exports.nextLevelTrophies = function(d){return "Felicitats! Has acabat el Puzzle "+v(d,"puzzleNumber")+" i has guanyat "+p(d,"numTrophies",0,"ca",{"one":"un trofeu","other":n(d,"numTrophies")+" trofeus"})+"."};
 
-exports.nextStage = function(d){return "Enhorabona! Has acabat l'etapa "+v(d,"stageNumber")+"."};
+exports.nextStage = function(d){return "Enhorabona! Heu completat "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "Enhorabona! Has acabat l'etapa "+v(d,"stageNumber")+" i has guanyat "+p(d,"numTrophies",0,"ca",{"one":"trofeu","other":n(d,"numTrophies")+" trofeus"})+"."};
+exports.nextStageTrophies = function(d){return "Enhorabona! Has acabat "+v(d,"stageName")+" i has guanyat "+p(d,"numTrophies",0,"ca",{"un":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
 exports.numBlocksNeeded = function(d){return "Enhorabona! Has acabat el Puzzle "+v(d,"puzzleNumber")+". (Tot i que podries haver utilitzat un "+p(d,"numBlocks",0,"ca",{"one":"1 bloc","other":n(d,"numBlocks")+" blocs"})+".)"};
 
 exports.numLinesOfCodeWritten = function(d){return "Has escrit "+p(d,"numLines",0,"ca",{"one":"1 línia","other":n(d,"numLines")+" línies"})+" de codi!"};
 
-exports.play = function(d){return "play"};
+exports.play = function(d){return "reprodueix"};
 
 exports.puzzleTitle = function(d){return "Puzzle "+v(d,"puzzle_number")+" de "+v(d,"stage_total")};
 
@@ -7771,11 +7771,11 @@ exports.repeat = function(d){return "repeteix"};
 
 exports.resetProgram = function(d){return "Reiniciar"};
 
-exports.runProgram = function(d){return "Executar Programa"};
+exports.runProgram = function(d){return "executa"};
 
 exports.runTooltip = function(d){return "Executa el programa definit per els blocs en l'àrea de treball."};
 
-exports.score = function(d){return "score"};
+exports.score = function(d){return "puntuació"};
 
 exports.showCodeHeader = function(d){return "Mostra el Codi"};
 
@@ -7793,21 +7793,21 @@ exports.tooMuchWork = function(d){return "Em fas fer molta feina! Podries intent
 
 exports.toolboxHeader = function(d){return "blocs"};
 
-exports.openWorkspace = function(d){return "How It Works"};
+exports.openWorkspace = function(d){return "Com funciona"};
 
 exports.totalNumLinesOfCodeWritten = function(d){return "Total de tots els temps: "+p(d,"numLines",0,"ca",{"one":"1 línia","other":n(d,"numLines")+" línies"})+" de codi."};
 
 exports.tryAgain = function(d){return "Torna a intentar-ho"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "Veure pista"};
 
 exports.backToPreviousLevel = function(d){return "Torna al nivell anterior"};
 
-exports.saveToGallery = function(d){return "Save to your gallery"};
+exports.saveToGallery = function(d){return "Guarda-ho a la teva galeria"};
 
-exports.savedToGallery = function(d){return "Saved to your gallery!"};
+exports.savedToGallery = function(d){return "Guardat a la teva galeria!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Ho sentim, no podem compartir aquest programa."};
 
 exports.typeCode = function(d){return "Escriu el teu codi JavaScript sota aquestes instruccions."};
 
@@ -7823,21 +7823,21 @@ exports.rotateText = function(d){return "Gira el teu dispositiu."};
 
 exports.orientationLock = function(d){return "Desactiva el bloqueig d'orientació en els ajustos del teu dispositiu."};
 
-exports.wantToLearn = function(d){return "Want to learn to code?"};
+exports.wantToLearn = function(d){return "Vols aprendre a programar?"};
 
-exports.watchVideo = function(d){return "Watch the Video"};
+exports.watchVideo = function(d){return "Mira el vídeo"};
 
-exports.when = function(d){return "when"};
+exports.when = function(d){return "quan"};
 
-exports.whenRun = function(d){return "when run"};
+exports.whenRun = function(d){return "quan s'executa"};
 
-exports.tryHOC = function(d){return "Try the Hour of Code"};
+exports.tryHOC = function(d){return "Proveu l'Hora de programació"};
 
-exports.signup = function(d){return "Sign up for the intro course"};
+exports.signup = function(d){return "Inscriu-te al curs d'introducció"};
 
-exports.hintHeader = function(d){return "Here's a tip:"};
+exports.hintHeader = function(d){return "Aquí tens una pista:"};
 
-exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+exports.genericFeedback = function(d){return "Observa com has acabat i prova d'arreglar el teu programa."};
 
 
 },{"messageformat":55}],43:[function(require,module,exports){

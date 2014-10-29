@@ -11683,9 +11683,9 @@ exports.parseElement = function(text) {
 
 },{}],39:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.ca=function(n){return n===1?"one":"other"}
-exports.bounceBall = function(d){return "bounce ball"};
+exports.bounceBall = function(d){return "rebot de la pilota"};
 
-exports.bounceBallTooltip = function(d){return "Bounce a ball off of an object."};
+exports.bounceBallTooltip = function(d){return "Botar una pilota fora d'un objecte."};
 
 exports.continue = function(d){return "Continuar"};
 
@@ -11713,17 +11713,17 @@ exports.ifTooltip = function(d){return "Si hi ha un camí en la direcció especi
 
 exports.ifelseTooltip = function(d){return "Si hi ha un camí en la direcció específicada, fer el primer bloc d'accions. En cas contrari, fer el segon bloc d'accions."};
 
-exports.incrementOpponentScore = function(d){return "increment opponent score"};
+exports.incrementOpponentScore = function(d){return "punt de puntuació per l'oponent"};
 
-exports.incrementOpponentScoreTooltip = function(d){return "Add one to the current opponent score."};
+exports.incrementOpponentScoreTooltip = function(d){return "Incrementar en u la puntuació de l'oponent actual."};
 
-exports.incrementPlayerScore = function(d){return "increment player score"};
+exports.incrementPlayerScore = function(d){return "punt de puntuació"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "Add one to the current player score."};
+exports.incrementPlayerScoreTooltip = function(d){return "Incrementar en u la puntuació del jugador actual."};
 
-exports.isWall = function(d){return "is this a wall"};
+exports.isWall = function(d){return "és una paret"};
 
-exports.isWallTooltip = function(d){return "Returns true if there is a wall here"};
+exports.isWallTooltip = function(d){return "Retorna veritat si hi ha una paret"};
 
 exports.launchBall = function(d){return "llença una nova pilota"};
 
@@ -11731,25 +11731,25 @@ exports.launchBallTooltip = function(d){return "llença la pilota al joc"};
 
 exports.makeYourOwn = function(d){return "Crea el teu propi joc de rebot"};
 
-exports.moveDown = function(d){return "move down"};
+exports.moveDown = function(d){return "Desplaça avall"};
 
-exports.moveDownTooltip = function(d){return "Move the paddle down."};
+exports.moveDownTooltip = function(d){return "Desplaça la pala cap avall."};
 
 exports.moveForward = function(d){return "avança"};
 
 exports.moveForwardTooltip = function(d){return "Mou-me un espai cap endevant."};
 
-exports.moveLeft = function(d){return "move left"};
+exports.moveLeft = function(d){return "desplaça a l'esquerra"};
 
-exports.moveLeftTooltip = function(d){return "Move the paddle to the left."};
+exports.moveLeftTooltip = function(d){return "desplaça la pala a l'esquerra."};
 
-exports.moveRight = function(d){return "move right"};
+exports.moveRight = function(d){return "Desplaça a la dreta"};
 
-exports.moveRightTooltip = function(d){return "Move the paddle to the right."};
+exports.moveRightTooltip = function(d){return "Desplaça la pala a la dreta."};
 
-exports.moveUp = function(d){return "move up"};
+exports.moveUp = function(d){return "Desplaça amunt"};
 
-exports.moveUpTooltip = function(d){return "Move the paddle up."};
+exports.moveUpTooltip = function(d){return "Desplaça la pala cap amunt."};
 
 exports.nextLevel = function(d){return "Felicitats! Has complert aquest puzzle."};
 
@@ -11771,31 +11771,31 @@ exports.pathRight = function(d){return "si camí cap a la dreta"};
 
 exports.pilePresent = function(d){return "hi ha un munt"};
 
-exports.playSoundCrunch = function(d){return "play crunch sound"};
+exports.playSoundCrunch = function(d){return "reprodueix so de cruixit"};
 
-exports.playSoundGoal1 = function(d){return "play goal 1 sound"};
+exports.playSoundGoal1 = function(d){return "Reprodueix so d'objectiu 1"};
 
-exports.playSoundGoal2 = function(d){return "play goal 2 sound"};
+exports.playSoundGoal2 = function(d){return "Reprodueix so d'objectiu 2"};
 
-exports.playSoundHit = function(d){return "play hit sound"};
+exports.playSoundHit = function(d){return "Reprodueix so de xoc"};
 
-exports.playSoundLosePoint = function(d){return "play lose point sound"};
+exports.playSoundLosePoint = function(d){return "reprodueix so de pèrdua de punt"};
 
-exports.playSoundLosePoint2 = function(d){return "play lose point 2 sound"};
+exports.playSoundLosePoint2 = function(d){return "reprodueix so de pèrdua de punt 2"};
 
-exports.playSoundRetro = function(d){return "play retro sound"};
+exports.playSoundRetro = function(d){return "reprodueix so retro"};
 
-exports.playSoundRubber = function(d){return "play rubber sound"};
+exports.playSoundRubber = function(d){return "reprodueix el so de goma"};
 
-exports.playSoundSlap = function(d){return "play slap sound"};
+exports.playSoundSlap = function(d){return "reprodueix so de bufetada"};
 
-exports.playSoundTooltip = function(d){return "Play a sound."};
+exports.playSoundTooltip = function(d){return "reprodueix so de l'elegit."};
 
-exports.playSoundWinPoint = function(d){return "play win point sound"};
+exports.playSoundWinPoint = function(d){return "reprodueix so de punt de victòria"};
 
-exports.playSoundWinPoint2 = function(d){return "play win point 2 sound"};
+exports.playSoundWinPoint2 = function(d){return "reprodueix so de punt de victòria 2"};
 
-exports.playSoundWood = function(d){return "play wood sound"};
+exports.playSoundWood = function(d){return "reprodueix so de fusta"};
 
 exports.putdownTower = function(d){return "Posa la torre"};
 
@@ -11809,63 +11809,63 @@ exports.repeatUntilBlocked = function(d){return "de mentres, camí cap endevant"
 
 exports.repeatUntilFinish = function(d){return "repeteix fins a acabar"};
 
-exports.scoreText = function(d){return "Score: "+v(d,"playerScore")+" : "+v(d,"opponentScore")};
+exports.scoreText = function(d){return "Puntuació: "+v(d,"playerScore")+" : "+v(d,"opponentScore")};
 
 exports.setBackgroundRandom = function(d){return "estableix l'escenaria l'atzar"};
 
-exports.setBackgroundHardcourt = function(d){return "set hardcourt scene"};
+exports.setBackgroundHardcourt = function(d){return "estableix l'escena de pista dura"};
 
-exports.setBackgroundRetro = function(d){return "set retro scene"};
+exports.setBackgroundRetro = function(d){return "estableix l'escena retro"};
 
-exports.setBackgroundTooltip = function(d){return "Sets the background image"};
+exports.setBackgroundTooltip = function(d){return "Estableix l'imatge de l'escena"};
 
-exports.setBallRandom = function(d){return "set random ball"};
+exports.setBallRandom = function(d){return "estableix pilota a l'atzar"};
 
-exports.setBallHardcourt = function(d){return "set hardcourt ball"};
+exports.setBallHardcourt = function(d){return "estableix pilota de pista dura"};
 
-exports.setBallRetro = function(d){return "set retro ball"};
+exports.setBallRetro = function(d){return "estableix pilota retro"};
 
-exports.setBallTooltip = function(d){return "Sets the ball image"};
+exports.setBallTooltip = function(d){return "Estableix l'imatge de la pilota"};
 
-exports.setBallSpeedRandom = function(d){return "set random ball speed"};
+exports.setBallSpeedRandom = function(d){return "fixeu la velocitat de pilota a aleatori"};
 
-exports.setBallSpeedVerySlow = function(d){return "set very slow ball speed"};
+exports.setBallSpeedVerySlow = function(d){return "estableix la velocitat de pilota a molt lent"};
 
-exports.setBallSpeedSlow = function(d){return "set slow ball speed"};
+exports.setBallSpeedSlow = function(d){return "estableix la velocitat de la pilota a lenta"};
 
-exports.setBallSpeedNormal = function(d){return "set normal ball speed"};
+exports.setBallSpeedNormal = function(d){return "estableix la velocitat de la pilota a normal"};
 
-exports.setBallSpeedFast = function(d){return "set fast ball speed"};
+exports.setBallSpeedFast = function(d){return "estableix la velocitat de la pilota a ràpida"};
 
-exports.setBallSpeedVeryFast = function(d){return "set very fast ball speed"};
+exports.setBallSpeedVeryFast = function(d){return "estableix la velocitat de la pilota a molt ràpida"};
 
-exports.setBallSpeedTooltip = function(d){return "Sets the speed of the ball"};
+exports.setBallSpeedTooltip = function(d){return "Estableix la velocitat de la bola"};
 
-exports.setPaddleRandom = function(d){return "set random paddle"};
+exports.setPaddleRandom = function(d){return "estableix pala aleatòria"};
 
-exports.setPaddleHardcourt = function(d){return "set hardcourt paddle"};
+exports.setPaddleHardcourt = function(d){return "estableix pala de pista dura"};
 
-exports.setPaddleRetro = function(d){return "set retro paddle"};
+exports.setPaddleRetro = function(d){return "estableix pala retro"};
 
-exports.setPaddleTooltip = function(d){return "Sets the ball paddle"};
+exports.setPaddleTooltip = function(d){return "Estableix l'imatge de la pala"};
 
-exports.setPaddleSpeedRandom = function(d){return "set random paddle speed"};
+exports.setPaddleSpeedRandom = function(d){return "estableix la velocitat de la pala a aleatòria"};
 
-exports.setPaddleSpeedVerySlow = function(d){return "set very slow paddle speed"};
+exports.setPaddleSpeedVerySlow = function(d){return "estableix la velocitat de la pala a molt lenta"};
 
-exports.setPaddleSpeedSlow = function(d){return "set slow paddle speed"};
+exports.setPaddleSpeedSlow = function(d){return "estableix la velocitat de la pala a lenta"};
 
-exports.setPaddleSpeedNormal = function(d){return "set normal paddle speed"};
+exports.setPaddleSpeedNormal = function(d){return "estableix la velocitat de la pala a normal"};
 
-exports.setPaddleSpeedFast = function(d){return "set fast paddle speed"};
+exports.setPaddleSpeedFast = function(d){return "estableix la velocitat de la pala a ràpida"};
 
-exports.setPaddleSpeedVeryFast = function(d){return "set very fast paddle speed"};
+exports.setPaddleSpeedVeryFast = function(d){return "estableix la velocitat de la pala a molt ràpida"};
 
-exports.setPaddleSpeedTooltip = function(d){return "Sets the speed of the paddle"};
+exports.setPaddleSpeedTooltip = function(d){return "Estableix la velocitat de la pala"};
 
-exports.shareBounceTwitter = function(d){return "Check out the Bounce game I made. I wrote it myself with @codeorg"};
+exports.shareBounceTwitter = function(d){return "Mira el Joc de rebot que he fet. L'he escrit jo mateix amb @codeorg"};
 
-exports.shareGame = function(d){return "Share your game:"};
+exports.shareGame = function(d){return "Comparteix el teu joc:"};
 
 exports.turnLeft = function(d){return "gira a l'esquerra"};
 
@@ -11873,41 +11873,41 @@ exports.turnRight = function(d){return "gira a la dreta"};
 
 exports.turnTooltip = function(d){return "Gira'm 90 graus cap a l'esquerra o cap a la dreta."};
 
-exports.whenBallInGoal = function(d){return "when ball in goal"};
+exports.whenBallInGoal = function(d){return "quan una pilota està a la meta"};
 
-exports.whenBallInGoalTooltip = function(d){return "Execute the actions below when a ball enters the goal."};
+exports.whenBallInGoalTooltip = function(d){return "Executa les accions de sota quan una pilota entra a la meta."};
 
-exports.whenBallMissesPaddle = function(d){return "when ball misses paddle"};
+exports.whenBallMissesPaddle = function(d){return "quan la pilota erra la pala"};
 
-exports.whenBallMissesPaddleTooltip = function(d){return "Execute the actions below when a ball misses the paddle."};
+exports.whenBallMissesPaddleTooltip = function(d){return "Executar les accions de sota quan una pilota erra la pala."};
 
-exports.whenDown = function(d){return "when Down arrow"};
+exports.whenDown = function(d){return "quan tecla cap avall"};
 
-exports.whenDownTooltip = function(d){return "Execute the actions below when the Down arrow button is pressed."};
+exports.whenDownTooltip = function(d){return "Executar les accions de sota quan es premi la tecla cap avall."};
 
-exports.whenGameStarts = function(d){return "when game starts"};
+exports.whenGameStarts = function(d){return "quan s'inicia el joc"};
 
-exports.whenGameStartsTooltip = function(d){return "Execute the actions below when the game starts."};
+exports.whenGameStartsTooltip = function(d){return "Executar les accions de sota quan s'inicia el joc."};
 
-exports.whenLeft = function(d){return "when Left arrow"};
+exports.whenLeft = function(d){return "Quan tecla a l'esquerra"};
 
-exports.whenLeftTooltip = function(d){return "Execute the actions below when the Left arrow button is pressed."};
+exports.whenLeftTooltip = function(d){return "Executar les accions  de sota quan es premi la tecla a l'esquerra."};
 
-exports.whenPaddleCollided = function(d){return "when ball hits paddle"};
+exports.whenPaddleCollided = function(d){return "Quan la bola toca la pala"};
 
-exports.whenPaddleCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a paddle."};
+exports.whenPaddleCollidedTooltip = function(d){return "Executar les accions de sota quan una pilota toca una pala."};
 
-exports.whenRight = function(d){return "when Right arrow"};
+exports.whenRight = function(d){return "quan tecla a la dreta"};
 
-exports.whenRightTooltip = function(d){return "Execute the actions below when the Right arrow button is pressed."};
+exports.whenRightTooltip = function(d){return "Executar les accions de sota quan es premi la tecla a la dreta."};
 
-exports.whenUp = function(d){return "when Up arrow"};
+exports.whenUp = function(d){return "Quan tecla cap amunt"};
 
-exports.whenUpTooltip = function(d){return "Execute the actions below when the Up arrow button is pressed."};
+exports.whenUpTooltip = function(d){return "Executar les accions de sota quan es premi la tecla cap amunt."};
 
-exports.whenWallCollided = function(d){return "when ball hits wall"};
+exports.whenWallCollided = function(d){return "Quan la bola colpeja la paret"};
 
-exports.whenWallCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a wall."};
+exports.whenWallCollidedTooltip = function(d){return "Executar les accions de sota quan una pilota colpeja una paret."};
 
 exports.whileMsg = function(d){return "mentres"};
 
@@ -11956,21 +11956,21 @@ exports.directionEastLetter = function(d){return "E"};
 
 exports.directionWestLetter = function(d){return "W"};
 
-exports.end = function(d){return "end"};
+exports.end = function(d){return "final"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Els blocs \"Repetir\" o el \"Si\" necessiten tenir altres blocs dins per a treballar. Assegureu-vos que el bloc interior encaixa bé dins del bloc que conté."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "The function block needs to have other blocks inside it to work."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "La funció bloc ha de tenir altres blocs a dins perquè funcioni."};
 
-exports.extraTopBlocks = function(d){return "You have extra blocks that aren't attached to an event block."};
+exports.extraTopBlocks = function(d){return "Tens blocs sense lligams. Volies lligar-los al bloc \"quan s'executa\"?"};
 
 exports.finalStage = function(d){return "Enhorabona! Has completat l'etapa final."};
 
 exports.finalStageTrophies = function(d){return "Enhorabona! Has completat l'etapa final i guanyat "+p(d,"numTrophies",0,"ca",{"un":"trofeu","other":n(d,"numTrophies")+" trophies"})+"."};
 
-exports.finish = function(d){return "Finish"};
+exports.finish = function(d){return "Finalitza"};
 
-exports.generatedCodeInfo = function(d){return "Els blocs del teu programa poden ser també representats en Javascript, el llenguatge de programació més extés al món:"};
+exports.generatedCodeInfo = function(d){return "Fins i tot les millors universitats ensenyen programació basada en blocs (per exemple, "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Però sota el capó, els blocs que tu has reunit també es poden mostrar en JavaScript, la llengua de programació més utilitzada al món:"};
 
 exports.hashError = function(d){return "Ho sentim, '%1' no correspon amb ningun programa guardat."};
 
@@ -11978,13 +11978,13 @@ exports.help = function(d){return "Ajuda"};
 
 exports.hintTitle = function(d){return "Consell:"};
 
-exports.jump = function(d){return "jump"};
+exports.jump = function(d){return "salt"};
 
 exports.levelIncompleteError = function(d){return "Estàs utilitzant tots els tipus de blocs necessaris, però no de la manera correcta."};
 
 exports.listVariable = function(d){return "llista"};
 
-exports.makeYourOwnFlappy = function(d){return "Make Your Own Flappy Game"};
+exports.makeYourOwnFlappy = function(d){return "Fes el teu propi \"Flappy Game\""};
 
 exports.missingBlocksErrorMsg = function(d){return "Prova un o més dels blocs de sota per a resoldre aquest puzzle."};
 
@@ -11992,15 +11992,15 @@ exports.nextLevel = function(d){return "Enhorabona! Has acabat el Puzzle! "+v(d,
 
 exports.nextLevelTrophies = function(d){return "Felicitats! Has acabat el Puzzle "+v(d,"puzzleNumber")+" i has guanyat "+p(d,"numTrophies",0,"ca",{"one":"un trofeu","other":n(d,"numTrophies")+" trofeus"})+"."};
 
-exports.nextStage = function(d){return "Enhorabona! Has acabat l'etapa "+v(d,"stageNumber")+"."};
+exports.nextStage = function(d){return "Enhorabona! Heu completat "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "Enhorabona! Has acabat l'etapa "+v(d,"stageNumber")+" i has guanyat "+p(d,"numTrophies",0,"ca",{"one":"trofeu","other":n(d,"numTrophies")+" trofeus"})+"."};
+exports.nextStageTrophies = function(d){return "Enhorabona! Has acabat "+v(d,"stageName")+" i has guanyat "+p(d,"numTrophies",0,"ca",{"un":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
 exports.numBlocksNeeded = function(d){return "Enhorabona! Has acabat el Puzzle "+v(d,"puzzleNumber")+". (Tot i que podries haver utilitzat un "+p(d,"numBlocks",0,"ca",{"one":"1 bloc","other":n(d,"numBlocks")+" blocs"})+".)"};
 
 exports.numLinesOfCodeWritten = function(d){return "Has escrit "+p(d,"numLines",0,"ca",{"one":"1 línia","other":n(d,"numLines")+" línies"})+" de codi!"};
 
-exports.play = function(d){return "play"};
+exports.play = function(d){return "reprodueix"};
 
 exports.puzzleTitle = function(d){return "Puzzle "+v(d,"puzzle_number")+" de "+v(d,"stage_total")};
 
@@ -12008,11 +12008,11 @@ exports.repeat = function(d){return "repeteix"};
 
 exports.resetProgram = function(d){return "Reiniciar"};
 
-exports.runProgram = function(d){return "Executar Programa"};
+exports.runProgram = function(d){return "executa"};
 
 exports.runTooltip = function(d){return "Executa el programa definit per els blocs en l'àrea de treball."};
 
-exports.score = function(d){return "score"};
+exports.score = function(d){return "puntuació"};
 
 exports.showCodeHeader = function(d){return "Mostra el Codi"};
 
@@ -12030,21 +12030,21 @@ exports.tooMuchWork = function(d){return "Em fas fer molta feina! Podries intent
 
 exports.toolboxHeader = function(d){return "blocs"};
 
-exports.openWorkspace = function(d){return "How It Works"};
+exports.openWorkspace = function(d){return "Com funciona"};
 
 exports.totalNumLinesOfCodeWritten = function(d){return "Total de tots els temps: "+p(d,"numLines",0,"ca",{"one":"1 línia","other":n(d,"numLines")+" línies"})+" de codi."};
 
 exports.tryAgain = function(d){return "Torna a intentar-ho"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "Veure pista"};
 
 exports.backToPreviousLevel = function(d){return "Torna al nivell anterior"};
 
-exports.saveToGallery = function(d){return "Save to your gallery"};
+exports.saveToGallery = function(d){return "Guarda-ho a la teva galeria"};
 
-exports.savedToGallery = function(d){return "Saved to your gallery!"};
+exports.savedToGallery = function(d){return "Guardat a la teva galeria!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Ho sentim, no podem compartir aquest programa."};
 
 exports.typeCode = function(d){return "Escriu el teu codi JavaScript sota aquestes instruccions."};
 
@@ -12060,21 +12060,21 @@ exports.rotateText = function(d){return "Gira el teu dispositiu."};
 
 exports.orientationLock = function(d){return "Desactiva el bloqueig d'orientació en els ajustos del teu dispositiu."};
 
-exports.wantToLearn = function(d){return "Want to learn to code?"};
+exports.wantToLearn = function(d){return "Vols aprendre a programar?"};
 
-exports.watchVideo = function(d){return "Watch the Video"};
+exports.watchVideo = function(d){return "Mira el vídeo"};
 
-exports.when = function(d){return "when"};
+exports.when = function(d){return "quan"};
 
-exports.whenRun = function(d){return "when run"};
+exports.whenRun = function(d){return "quan s'executa"};
 
-exports.tryHOC = function(d){return "Try the Hour of Code"};
+exports.tryHOC = function(d){return "Proveu l'Hora de programació"};
 
-exports.signup = function(d){return "Sign up for the intro course"};
+exports.signup = function(d){return "Inscriu-te al curs d'introducció"};
 
-exports.hintHeader = function(d){return "Here's a tip:"};
+exports.hintHeader = function(d){return "Aquí tens una pista:"};
 
-exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+exports.genericFeedback = function(d){return "Observa com has acabat i prova d'arreglar el teu programa."};
 
 
 },{"messageformat":52}],41:[function(require,module,exports){

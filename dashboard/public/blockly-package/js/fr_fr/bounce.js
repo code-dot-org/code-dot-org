@@ -11701,7 +11701,7 @@ exports.doCode = function(d){return "faire"};
 
 exports.elseCode = function(d){return "sinon"};
 
-exports.finalLevel = function(d){return "Félicitations ! Vous avez résolu l'énigme finale."};
+exports.finalLevel = function(d){return "Félicitations ! Vous avez résolu la dernière énigme."};
 
 exports.heightParameter = function(d){return "hauteur"};
 
@@ -11719,7 +11719,7 @@ exports.incrementOpponentScoreTooltip = function(d){return "Ajouter un au score 
 
 exports.incrementPlayerScore = function(d){return "marquer un point"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "Ajouter un au score du joueur actuel."};
+exports.incrementPlayerScoreTooltip = function(d){return "Ajouter un point au score actuel du joueur."};
 
 exports.isWall = function(d){return "est-ce un mur"};
 
@@ -11735,7 +11735,7 @@ exports.moveDown = function(d){return "déplacer vers le bas"};
 
 exports.moveDownTooltip = function(d){return "Déplace la raquette vers le bas."};
 
-exports.moveForward = function(d){return "déplacer vers l'avant"};
+exports.moveForward = function(d){return "avancer plus"};
 
 exports.moveForwardTooltip = function(d){return "Me fait avancer d'un espace."};
 
@@ -11751,17 +11751,17 @@ exports.moveUp = function(d){return "déplacer vers le haut"};
 
 exports.moveUpTooltip = function(d){return "Déplace la raquette vers le haut."};
 
-exports.nextLevel = function(d){return "Félicitations ! Vous avez terminé cette énigme."};
+exports.nextLevel = function(d){return "Félicitations ! Vous avez terminé cette énigme."};
 
 exports.no = function(d){return "Non"};
 
 exports.noPathAhead = function(d){return "le chemin est bloqué"};
 
-exports.noPathLeft = function(d){return "pas de chemin à gauche"};
+exports.noPathLeft = function(d){return "pas de chemin vers la gauche"};
 
-exports.noPathRight = function(d){return "pas de chemin à droite"};
+exports.noPathRight = function(d){return "pas de chemin vers la droite"};
 
-exports.numBlocksNeeded = function(d){return "Cette enigme peut être résolue avec %1 blocs."};
+exports.numBlocksNeeded = function(d){return "Cette énigme peut être résolue avec %1 blocs."};
 
 exports.pathAhead = function(d){return "chemin devant"};
 
@@ -11771,7 +11771,7 @@ exports.pathRight = function(d){return "si chemin à droite"};
 
 exports.pilePresent = function(d){return "Il y a une pile"};
 
-exports.playSoundCrunch = function(d){return "jouer un son de craquement"};
+exports.playSoundCrunch = function(d){return "jouer le son accroupir"};
 
 exports.playSoundGoal1 = function(d){return "jouer le son but 1"};
 
@@ -11817,7 +11817,7 @@ exports.setBackgroundHardcourt = function(d){return "choisir l'arrière-plan Ten
 
 exports.setBackgroundRetro = function(d){return "choisir l'arrière-plan Rétro"};
 
-exports.setBackgroundTooltip = function(d){return "Définit l'image d'arrière-plan."};
+exports.setBackgroundTooltip = function(d){return "Définit l'image d'arrière-plan"};
 
 exports.setBallRandom = function(d){return "choisir l'apparence de la balle au hasard"};
 
@@ -11885,9 +11885,9 @@ exports.whenDown = function(d){return "quand flèche en bas"};
 
 exports.whenDownTooltip = function(d){return "Exécute les actions ci-dessous quand on presse la touche 'flèche en bas'."};
 
-exports.whenGameStarts = function(d){return "au démarrage du jeu"};
+exports.whenGameStarts = function(d){return "lors du lancement du jeu"};
 
-exports.whenGameStartsTooltip = function(d){return "Exécuter les actions ci-dessous lorsque le jeu démarre."};
+exports.whenGameStartsTooltip = function(d){return "Exécute les actions insérées au lancement du jeu."};
 
 exports.whenLeft = function(d){return "quand flèche à gauche"};
 
@@ -11936,7 +11936,7 @@ exports.catMath = function(d){return "Calculs"};
 
 exports.catProcedures = function(d){return "Fonctions"};
 
-exports.catText = function(d){return "Texte"};
+exports.catText = function(d){return "texte"};
 
 exports.catVariables = function(d){return "Variables"};
 
@@ -11978,7 +11978,7 @@ exports.help = function(d){return "Aide"};
 
 exports.hintTitle = function(d){return "Indice :"};
 
-exports.jump = function(d){return "saut"};
+exports.jump = function(d){return "sauter"};
 
 exports.levelIncompleteError = function(d){return "Vous utilisez tous les types nécessaires de blocs, mais pas de la bonne manière."};
 
@@ -12014,7 +12014,7 @@ exports.runTooltip = function(d){return "Exécuter le programme défini par les 
 
 exports.score = function(d){return "score"};
 
-exports.showCodeHeader = function(d){return "Afficher le Code"};
+exports.showCodeHeader = function(d){return "Afficher le code"};
 
 exports.showGeneratedCode = function(d){return "Afficher le code"};
 
@@ -12028,7 +12028,7 @@ exports.tooManyBlocksMsg = function(d){return "Ce puzzle peut être résolu avec
 
 exports.tooMuchWork = function(d){return "Vous m'avez fait faire beaucoup de travail !  Pourriez-vous essayer en répétant moins de fois ?"};
 
-exports.toolboxHeader = function(d){return "Blocs"};
+exports.toolboxHeader = function(d){return "blocs"};
 
 exports.openWorkspace = function(d){return "Comment ça marche"};
 
@@ -12044,7 +12044,7 @@ exports.saveToGallery = function(d){return "Enregistrer dans votre galerie"};
 
 exports.savedToGallery = function(d){return "Enregistré dans votre galerie !"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Désolé, nous ne pouvons pas partager ce programme."};
 
 exports.typeCode = function(d){return "Tapez votre code JavaScript en dessous de ces instructions."};
 

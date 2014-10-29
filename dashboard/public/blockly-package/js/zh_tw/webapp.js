@@ -7851,9 +7851,9 @@ exports.end = function(d){return "結束"};
 
 exports.emptyBlocksErrorMsg = function(d){return "\"重複\"和\"如果\"程式積木需要包含其它積木在裏面才能正常運作, 請檢查裏面是否有安排適當的程式積木."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "The function block needs to have other blocks inside it to work."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "\"函式\"積木裡面需要放其他程式積木才能運作"};
 
-exports.extraTopBlocks = function(d){return "你有一些程式積木還沒有加到事件積木中。"};
+exports.extraTopBlocks = function(d){return "你有一些程式積木沒連接上. 你是要把它們接在\"當按下執行時\"的積木後面嗎?"};
 
 exports.finalStage = function(d){return "恭喜你 ！你已完成最後關卡的挑戰。"};
 
@@ -7861,7 +7861,7 @@ exports.finalStageTrophies = function(d){return "恭喜! 你已完成最後關�
 
 exports.finish = function(d){return "完成 "};
 
-exports.generatedCodeInfo = function(d){return "甚至頂尖大學也同樣以\"程式積木\"來進行程式教學。(例如 :  "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+")。在程式積木的底層，所有組裝完成的程式積木功能，也可以用JavaScript 語法來顯示。"};
+exports.generatedCodeInfo = function(d){return "就連頂尖大學也使用\"程式積木\"來進行程式教學。(例如 :  "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+")。但是藏在底下的是，你所組裝的每個程式積木都可以用JavaScript 語法（世界上使用最廣的程式語言之一）來表示。"};
 
 exports.hashError = function(d){return "對不起，'%1' 無法對應任何已儲存的程式。"};
 
@@ -7885,7 +7885,7 @@ exports.nextLevelTrophies = function(d){return "恭喜!你已經完成第"+v(d,"
 
 exports.nextStage = function(d){return " 恭喜你！你已經完成 "+v(d,"stageName")+"。"};
 
-exports.nextStageTrophies = function(d){return "恭喜您!你已經完成第"+v(d,"stageNumber")+"階段，並贏得"+p(d,"numTrophies",0,"zh",{"one":"1個獎盃","other":n(d,"numTrophies")+" 獎盃"})+"."};
+exports.nextStageTrophies = function(d){return "恭喜您!你已經完成\""+v(d,"stageName")+"\"階段，並贏得"+p(d,"numTrophies",0,"zh",{"one":"1個獎盃","other":n(d,"numTrophies")+"個獎盃"})+"."};
 
 exports.numBlocksNeeded = function(d){return "恭喜！你已經完成第 "+v(d,"puzzleNumber")+" 關。 (但是，你可以只使用 "+p(d,"numBlocks",0,"zh",{"one":"一個程式積木","other":n(d,"numBlocks")+" 程式積木"})+".來完成挑戰哦！)"};
 
@@ -7923,11 +7923,11 @@ exports.toolboxHeader = function(d){return "程式積木"};
 
 exports.openWorkspace = function(d){return "它如何運作的"};
 
-exports.totalNumLinesOfCodeWritten = function(d){return "到目前為止共撰寫了："+p(d,"numLines",0,"zh",{"one":"1 line","other":n(d,"numLines")+" lines"})+" 行的程式碼。"};
+exports.totalNumLinesOfCodeWritten = function(d){return "到目前為止共撰寫了："+p(d,"numLines",0,"zh",{"one":"1 行","other":n(d,"numLines")+" 行"})+" 的程式碼。"};
 
 exports.tryAgain = function(d){return "再試一次"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "查看提示"};
 
 exports.backToPreviousLevel = function(d){return "返回上一階段"};
 
@@ -7935,7 +7935,7 @@ exports.saveToGallery = function(d){return "保存到您的收藏簿。"};
 
 exports.savedToGallery = function(d){return "已經存放到您的收藏簿了！"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "抱歉, 我們無法分享這個程式"};
 
 exports.typeCode = function(d){return "在說明下方輸入您的 JavaScript 程式碼"};
 
@@ -7957,15 +7957,15 @@ exports.watchVideo = function(d){return "觀看影片"};
 
 exports.when = function(d){return "當"};
 
-exports.whenRun = function(d){return "when run"};
+exports.whenRun = function(d){return "當按下\"執行\"時"};
 
-exports.tryHOC = function(d){return "試試 Hour of Code (一時編程網)"};
+exports.tryHOC = function(d){return "試試一小時的程式設計課程"};
 
 exports.signup = function(d){return "報名參加簡介課程"};
 
 exports.hintHeader = function(d){return "提示："};
 
-exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+exports.genericFeedback = function(d){return "看看你的成果如何, 並試著修正你的程式"};
 
 
 },{"messageformat":50}],38:[function(require,module,exports){
@@ -7988,13 +7988,13 @@ exports.catVariables = function(d){return "變數類別"};
 
 exports.continue = function(d){return "繼續 "};
 
-exports.createHtmlBlock = function(d){return "create html block"};
+exports.createHtmlBlock = function(d){return "建立HTML區塊"};
 
-exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
+exports.createHtmlBlockTooltip = function(d){return "在app中建立一個HTML區塊"};
 
 exports.finalLevel = function(d){return "恭喜！你已經完成最後的關卡。"};
 
-exports.makeYourOwn = function(d){return "Make Your Own App"};
+exports.makeYourOwn = function(d){return "製作你自己的App"};
 
 exports.nextLevel = function(d){return "恭喜！你已經完成這個關卡。"};
 
@@ -8004,21 +8004,21 @@ exports.numBlocksNeeded = function(d){return "這個關卡可以使用 %1 個程
 
 exports.pause = function(d){return "Pause"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
+exports.reinfFeedbackMsg = function(d){return "你可以按\"重試\"按鈕回去重新執行你的app"};
 
 exports.repeatForever = function(d){return "永遠重複"};
 
 exports.repeatDo = function(d){return "執行"};
 
-exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
+exports.repeatForeverTooltip = function(d){return "當app執行時不斷的重複執行這個積木裡的動作"};
 
-exports.shareWebappTwitter = function(d){return "Check out the app I made. I wrote it myself with @codeorg"};
+exports.shareWebappTwitter = function(d){return "快來看我自己用@codeorg寫出來的app!"};
 
-exports.shareGame = function(d){return "Share your app:"};
+exports.shareGame = function(d){return "分享你的app:"};
 
-exports.turnBlack = function(d){return "turn black"};
+exports.turnBlack = function(d){return "變黑"};
 
-exports.turnBlackTooltip = function(d){return "Turns the screen black."};
+exports.turnBlackTooltip = function(d){return "把螢幕轉成黑色"};
 
 exports.yes = function(d){return "是"};
 

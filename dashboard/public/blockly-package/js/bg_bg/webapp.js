@@ -7988,13 +7988,13 @@ exports.catVariables = function(d){return "Променливи"};
 
 exports.continue = function(d){return "Продължи"};
 
-exports.createHtmlBlock = function(d){return "create html block"};
+exports.createHtmlBlock = function(d){return "създаване на  html блок"};
 
-exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
+exports.createHtmlBlockTooltip = function(d){return "Създава HTML блок в приложение."};
 
 exports.finalLevel = function(d){return "Поздравления! Вие решихте последния пъзел."};
 
-exports.makeYourOwn = function(d){return "Make Your Own App"};
+exports.makeYourOwn = function(d){return "Създайте свое приложение"};
 
 exports.nextLevel = function(d){return "Поздравления! Вие завършихте този пъзел."};
 
@@ -8004,21 +8004,21 @@ exports.numBlocksNeeded = function(d){return "Този пъзел може да 
 
 exports.pause = function(d){return "Pause"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
+exports.reinfFeedbackMsg = function(d){return "Можете да натиснете бутона \"Опитайте отново\", за да се върнете да работите над приложението ви."};
 
 exports.repeatForever = function(d){return "Повтаря завинаги"};
 
 exports.repeatDo = function(d){return "правя"};
 
-exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
+exports.repeatForeverTooltip = function(d){return "Изпълнява действията в този блок многократно, докато приложението се изпълнява."};
 
-exports.shareWebappTwitter = function(d){return "Check out the app I made. I wrote it myself with @codeorg"};
+exports.shareWebappTwitter = function(d){return "Вижте приложението, което направих. Аз сам го написал с @codeorg"};
 
-exports.shareGame = function(d){return "Share your app:"};
+exports.shareGame = function(d){return "Споделете вашето приложение:"};
 
-exports.turnBlack = function(d){return "turn black"};
+exports.turnBlack = function(d){return "включва черно"};
 
-exports.turnBlackTooltip = function(d){return "Turns the screen black."};
+exports.turnBlackTooltip = function(d){return "Включва черен екран."};
 
 exports.yes = function(d){return "Да"};
 
