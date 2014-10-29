@@ -3,12 +3,25 @@ require_relative '../pegasus/src/env.rb'
 require src_dir 'database'
 require 'csv'
 
+# Add affiliate name, date of workshop
+
+def fetch_workshop_info(workshop_id)
+  workshop = DB[:forms].where(id:workshop_id.to_i).first
+  return {} unless workshop
+  JSON.parse(workshop[:data]).merge(JSON.parse(workshop[:processed_data]))    
+end
+
 def main()
   keys = nil
   
-  DB[:forms].where(kind:'K5ProfessionalDevelopmentSurvey').each do |row|
+  DB[:forms].where(kind:'K5ProfessionalDevelopmentSurvey').each do |row|    
     data = JSON.parse(row[:data]).merge(JSON.parse(row[:processed_data]))    
 
+    workshop = fetch_workshop_info data['workshop_id_i']
+    data['workshop_stopped_dt'] = workshop['stopped_dt']
+    data['workshop_facilitator_email'] = workshop['email_s']
+    data['workshop_facilitator_name'] = workshop['name_s']
+    
     unless keys
       keys = data.keys
       puts CSV.generate_line keys
