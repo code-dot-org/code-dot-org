@@ -766,11 +766,11 @@
   udemy_beyond_longdescription: 'Si nunca viste una línea de código en tu vida o trabajás 
     programando, Udemy tiene un curso para vos, enseñado por instructores profesionales. Nota: 
     los cursos son pagos '
-  lynda_beyond_longdescription: Aprendé a programar, crear y construir tus propias aplicaciones 
-    web, desde los fundamentos de la programación orientada a objetos en C y C++, hasta cómo 
-    programar en Java. Nuestros tutoriales te van a ayudar a desarrollar y crear aplicaciones 
-    móviles, trabajar con PHP, base de datos MySQL y empezar con procesamiento estadístico 
-    usando R. Nota: los cursos son pagos 
+  lynda_beyond_longdescription: 'Aprendé a programar, crear y construir tus propias aplicaciones 
+      web, desde los fundamentos de la programación orientada a objetos en C y C++, hasta cómo 
+      programar en Java. Nuestros tutoriales te van a ayudar a desarrollar y crear aplicaciones 
+      móviles, trabajar con PHP, base de datos MySQL y empezar con procesamiento estadístico 
+      usando R. Nota: los cursos son pagos'
   edx_beyond_longdescription: 'CS50x es la introducción que brinda Harvard sobre Ciencias de la 
     Computación y el arte de la programación, abierto a todo el mundo, con o sin experiencia en 
     programación. El temario incluye: abstracción, algoritmos, estructuras de datos, 
