@@ -6,6 +6,7 @@
   "rectangleBlockTitle": "rectangle (width, height, style, color)",
   "squareBlockTitle": "square (size, style, color)",
   "triangleBlockTitle": "triangle (size, style, color)",
+  "underlayBlockTitle": "underlay (bottom, top)",
   "outline": "outline",
   "solid": "solid",
   "string": "string"

@@ -64,7 +64,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installFunctionalBlock(blockly, generator, gensym, {
     blockName: 'functional_triangle',
     blockTitle: msg.triangleBlockTitle(),
-    apiName: 'circle',
+    apiName: 'triangle',
     args: [
       { name: 'SIZE', type: 'Number' },
       { name: 'STYLE', type: 'string' },
@@ -115,6 +115,16 @@ exports.install = function(blockly, blockInstallOptions) {
     args: [
       { name: 'TOP', type: 'image' },
       { name: 'BOTTOM', type: 'image' },
+    ]
+  });
+
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'underlay',
+    blockTitle: msg.underlayBlockTitle(),
+    apiName: 'underlay',
+    args: [
+      { name: 'BOTTOM', type: 'image' },
+      { name: 'TOP', type: 'image' }
     ]
   });
 

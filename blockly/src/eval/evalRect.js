@@ -30,8 +30,5 @@ EvalRect.prototype.draw = function (parent) {
   this.element_.setAttribute('width', this.width_);
   this.element_.setAttribute('height', this.height_);
 
-  // todo (brent) - move this into parent?
-  this.element_.setAttribute('fill', evalUtils.getFill(this.style_, this.color_));
-  this.element_.setAttribute('stroke', evalUtils.getStroke(this.style_, this.color_));
-  this.element_.setAttribute('opacity', evalUtils.getOpacity(this.style_, this.color_));
+  EvalObject.prototype.draw.apply(this, arguments);
 };
