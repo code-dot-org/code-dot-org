@@ -194,7 +194,6 @@ Webapp.init = function(config) {
   config.makeUrl = "http://code.org/webapp";
   config.makeImage = BlocklyApps.assetUrl('media/promo.png');
 
-  config.enableShowCode = false;
   config.varsInGlobals = true;
 
   // Webapp.initMinimal();
