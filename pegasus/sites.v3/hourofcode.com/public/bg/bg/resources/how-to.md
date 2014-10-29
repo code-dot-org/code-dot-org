@@ -1,69 +1,70 @@
----
-title: ресурси
-layout: wide
----
 
-# Как да преподаватe един Час на кодирането
 
-## 1) Опитайте тези уроци:
+# Com ensenyar una Hora de Codi
 
-Ние ще качим разнообразие от забавни, не по-дълги от час уроци за ученици от всички възрасти, създадени от различни партньори. Новите уроци ще бъдат готови преди началния час на събитието през декември 8-14.
+## 1) Prova els tutorials:
 
-**Всички уроци на Часът на кодирането:**
+Posarem una varietat de tutorials divertits, d'una hora de durada per a estudiants de totes les edats, creats per una varietat de col·laboradors. Noves classes arribaran abans de desembre 8-14 per donar inici a l'Hora de Codi .
 
-  * Изискват минимална подготовка на учителите
-  * Предвиждат смостоятелна работа, което позволява на учениците да работят по собствените си темпове и ниво на умения
+**Tots els tutorials d'Hora de Codi:**
 
-[![изображение](http://code.org/images/tutorials.png)](http://code.org/learn)
+  * Requereixen un mínim temps de preparació per als professors
+  * Són autoguiades - permetent que els alumnes treballin al seu propi ritme i nivell d'habilitat
 
-## 2) Планирайте нужният ви хардуер - компютрите са задължителни
+[![](http://<%= codeorg_url() %>/images/tutorials.png)](http://<%=codeorg_url() %>/learn)
 
-Най-добре проведеният Час на кодирането ще бъде със свързани към Интернет компютри. Но вие не се нуждаете от компютър за всяко дете и дори можете да проведете Часът на кодиането и без компютър.
+## 2) Planifica les teves necessitats de maquinari - els ordinadors són opcionals
 
-  * **Пробвайте уроците на ученическите компютри или устройства.** Уверете се, че те работят правилно (със звук и видео).
-  * **Пуснете поздравителната страница за** да видите какво ще виждат учениците, когато приключат уроците. 
-  * **Осигурете слушалки за класа си**, или помолете учениците да си донесат собствени, ако изберете уроци за начинаещи- работете най-добре със звук.
+La millor experiència d'Hora de Codi seria amb ordinadors connectats a Internet. Però no necessites un ordinador per cada nen, i fins i tot, pots fer l'Hora de Codi sense cap ordinador.
 
-## 3) План как да се използва наличната техника
+  * **Prova els tutorials als ordinadors o dispositius dels estudiants.** Assegurats que funcionin correctament (amb so i vídeo).
+  * **Revisa la pàgina de felicitació** per comprovar que veuran els alumnes quan finalitzin. 
+  * **Proporciona auriculars per a la classe**, o demana als estudiants que portin els seus, si el tutorial que has escollit funciona millor amb so.
 
-  * **Имам ли достатъчно устройства?** Използвайте [ програмиране по двойки](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). Когато учениците си партнират, те си помагат един на друг и разчитат по-малко на учителя. Те също така ще се убедят, че компютърни науки се нуждаят от социално сътрудничество.
-  * **Имате слаби машини?** Планирайте показване на видео в пред целия клас, така че да няма нужда учениците да ги стартират на техните компютри. Или опитайте дейностите без компютър.
+## 3) Planifica per avançat en base a la tecnologia disponible
 
-## 4) Вдъхновете учениците - Покажете им видео
+  * **No tens dispositius suficients?** Utilitza [parelles de programació](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). Quan els estudiants s'associen, s'ajuden mútuament i consulten menys al professor. Ells veuen també que la informàtica és social i col·laborativa.
+  * **Tens poc ampla de banda?** Plantejat mostrar els vídeos a la pantalla de classe, evitaràs que cada estudiant se'ls descarregui. O prova els tutorials sense connexió / offline.
 
-Show students <% if @country == 'uk' %> [this video](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [this video](http://www.youtube.com/watch?v=FC5FbmsH4fw) <% end %> to kick off the Hour of Code. Също погледнете [ тези клипове](http://youtube.com/codeorg), с участието на Бил Гейтс, Марк Зукърбърг, основателят на Black Eyed Peas will.i.am и НБА звездата Крис Бош, които говорят за важността на уменията за програмиране. (Има версии [ 9 минути](https://www.youtube.com/watch?v=dU1xS07N-FA), [ 5 минути](https://www.youtube.com/watch?v=nKIu9yen5nc) и [ 1 минута](https://www.youtube.com/watch?v=qYZF6oIZtfc))
+## 4) Anima els estudiants - mostra'ls un vídeo
 
-**Ентусиазирайте учениците си - като им представите това интро**
+Show students an inspirational video to kick off the Hour of Code. Examples:
 
-Повечето деца не знаят какво е компютърни науки. Ето няколко идеи:
+  * The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
+  * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [Hour of Code 2014 video](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
+  * [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-  * Обяснете им това по прост начин, който включва примери за приложения, които са полезни и момчета и момичета(спасяването на човешки живот, в помощ на хората, за свързване на хора, и т.н.).
-  * Опитайте: "Помислете за нещата във всекидневния си живот, които използват компютърни науки: мобилен телефон, микровълнова печка, компютър, светофар... всички тези неща се нуждаят от компютърен учен, който да разработи програми за тях."
-  * Или: "Компютърните науки са изкуството на смесване на човешки идеи и дигитални инструменти за увеличаване на нашата сила. Компютърни учени работят в толкова много различни области: писане приложения за телефони, лечение на болести, създаване на анимационни филми, работа в създаване и поддръжка на социални медии, изграждане на роботи, които изследват други планети и т.н."
-  * See tips for getting girls interested in computer science [here](http://code.org/girls). 
+**Entusiasma els teus estudiants - dóna'ls una breu introducció**
 
-## 5) Стартирайте своя Час на кодирането
+La majoria dels nens no sap què és la informàtica. Aquí hi ha algunes idees:
 
-**Въвеждане на учениците в дейността**
+  * Explain it in a simple way that includes examples of applications that both boys and girls will care about (saving lives, helping people, connecting people, etc.).
+  * Try: "Think about things in your everyday life that use computer science: a cell phone, a microwave, a computer, a traffic light… all of these things needed a computer scientist to help build them.”
+  * Or: “Computer science is the art of blending human ideas and digital tools to increase our power. Computer scientists work in so many different areas: writing apps for phones, curing diseases, creating animated movies, working on social media, building robots that explore other planets and so much more."
+  * See tips for getting girls interested in computer science [here](http://<%= codeorg_url() %>/girls). 
 
-  * Напишете линка към уроците на бяла дъска. Find the link listed on the <% if @country == 'uk' %> [information for your selected tutorial](http://uk.code.org/learn) <% else %> [information for your selected tutorial](http://code.org/learn) <% end %>under the number of participants. (Пример: [ hourofcode.com/co](http://code.org/learn)) 
-  * Кажете на учениците да заредят URL адреса и да започнат да гледат видеото.
+## 5) Comença la teva Hora de Codi
 
-**Когато учениците се натъкнат на трудности**
+**Dirigeix els estudiants cap a l'activitat**
 
-  * Кажете им да попитат 3-ма съученика преди вас. Ако тези съученици нямат отговор, вие ще им помогнете.
-  * Насърчете учениците използвайки изрази като " Вие се справяте страхотно, не спирайте да опитвате."
-  * Не е грешно да се отговори: "Аз не знам. Нека да разберем това заедно." Ако не можете да решите проблем, който е в урока да го обсъдим заедно в класа: "технологията не винаги работи по начина, по който ние искаме. Заедно ние сме общност на обучаемите." И: "Обучението в използване на програма е като изучаването на нов език; няма да овладее веднага."
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](http://<%= codeorg_url() %>/learn) under the number of participants. [hourofcode.com/co](http://hourofcode.com/co)
+  * Tell students to visit the URL and start the tutorial.
 
-**Какво да направя ако ученик завърши по-рано?**
+**Quan els estudiants trobin dificultats**
 
-  * Students can see all tutorials and try another Hour of Code activity at <% if @country == 'uk' %> [uk.code.org/learn](http://uk.code.org/learn). <% else %> [code.org/learn](http://code.org/learn). <% end %> 
-  * Или помолете учениците които завършили по-рано да помогнат на съучениците си, които имат проблеми с дейностите.
+  * Tell students, “Ask 3 then me.” Ask 3 classmates, and if they don’t have the answer, then ask the teacher.
+  * Encourage students and offer positive reinforcement: “You’re doing great, so keep trying.”
+  * It’s okay to respond: “I don’t know. Let’s figure this out together.” If you can’t figure out a problem, use it as a good learning lesson for the class: “Technology doesn’t always work out the way we want. Together, we’re a community of learners.” And: “Learning to program is like learning a new language; you won’t be fluent right away.“
 
-**Как да отпечатам сертификати за моите ученици?**
+**Què fer si un estudiant acaba d'hora?**
 
-Всеки ученик получава шанс да получи сертификат по електронна поща, когато завърши дейностите по [ Code.org уроците](http://studio.code.org). Можете да щракнете върху сертификата, за да го отпечатате. However, if you want to make new certificates for your students, visit our <% if @country == 'uk' %> [Certificates](http://uk.code.org/certificates) <% else %> [Certificates](http://code.org/certificates) <% end %> page to print as many certificates as you like, in one fell swoop!
+  * Students can see all tutorials and try another Hour of Code activity at [<%= codeorg_url() %>/learn](http://<%= codeorg_url() %>/learn)
+  * Or, ask students who finish early to help classmates who are having trouble with the activity.
 
-**Какво идва след Часът на кодирането?**
+**Com imprimeixo els certificats per als meus alumnes?**
 
-Часът на кодирането е само първата стъпка в пътуването, посветено на знанието за технологиите и как работят те. Трябват още много стъпки за да създадете свои софтуерни приложения. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://code.org/educate). Or encourage your children to learn [online](http://code.org/learn/beyond). <% end %>
+Cada estudiant té l'oportunitat d'obtenir un certificat a través de correu electrònic quan acaba els [Code.org tutorials](http://studio.code.org). Pots fer clic sobre el certificat per imprimir-lo. However, if you want to make new certificates for your students, visit our [Certificates](http://<%= codeorg_url() %>/certificates) page to print as many certificates as you like, in one fell swoop!
+
+**Què ve després de l'Hora de Codi?**
+
+L'Hora de Codi és només el primer pas en un viatge per aprendre més sobre com funciona la tecnologia i com crear aplicacions i programari. <% if @country == 'uk' %> L'Hora de Codi és només el primer pas en un viatge per aprendre més sobre com funciona la tecnologia i com crear aplicacions i programari. Per continuar aquest viatge, [anima els teus fills a aprendre en línia](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %>

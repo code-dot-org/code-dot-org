@@ -1,15 +1,16 @@
 ---
-title: Ресурси
 layout: wide
 nav: resources_nav
 ---
 
 # Ресурси
 
+## Проводите Годину коду? [Скористайтесь інструкціями](<%= hoc_uri('/resources/how-to') %>)
+
 <a id="handouts"></p> 
 
 <h2>
-  Поширюйте інформацію у цьому буклеті
+  Поширюйте інформацію у буклеті
 </h2>
 
 <p>
@@ -17,7 +18,7 @@ nav: resources_nav
 </p>
 
 <h2>
-  Передайте цю роздруківку вчителям та школам
+  Передайте роздруківку вчителям та школам
 </h2>
 
 <p>
@@ -28,18 +29,18 @@ nav: resources_nav
   <a id="videos"></p> 
   
   <h2>
-    Покажіть ці відео, щоб надихнути учнів
+    Покажіть відео, щоб надихнути учнів
   </h2>
   
   <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>Те, чому не вчать у більшості шкіл (5 хв)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>Настала Година коду - навчитись може кожен</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
     </p>
@@ -49,14 +50,14 @@ nav: resources_nav
   </div>
   
   <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>Президент Обама про інформатику</strong></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>Навчитись може кожен (1 хв)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
@@ -68,7 +69,7 @@ nav: resources_nav
   <div style='clear:both'>
   </div>
   
-  <p>
+<p>
 <a id="posters"></p> 
 
 <h2>
@@ -80,7 +81,7 @@ nav: resources_nav
 </p>
 
 <h4>
-  <a href="http://hourofcode.com/#signup">Зареєструйте</a> свої заходи Години коду і ми надішлемо безкоштовні плакати.
+  <a href="http://hourofcode.com/#signup">Зареєструйте</a> свої заходи Години коду і ми безкоштовно надішлемо плакати.
 </h4>
 
 <p>
@@ -100,11 +101,27 @@ nav: resources_nav
 </p>
 
 <p>
+  <a id="social"></a>
+</p>
+
+<h2>
+  Post these on social media
+</h2>
+
+<p>
+  <a href="/images/social-1.jpg"><img src="/images/fit-200/social-1.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-2.jpg"><img src="/images/fit-200/social-2.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-3.jpg"><img src="/images/fit-200/social-3.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+
+<p>
+  <a href="/images/mark.jpg"><img src="/images/fit-200/mark.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-200/susan.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-200/ashton.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-200/marissa.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-200/chris.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+
+<p>
   <a id="sample-emails"></a>
 </p>
 
 <h2>
-  Розішліть ці листи, щоб поширити інформацію про Годину коду
+  Send these emails to help promote the Hour of Code
 </h2>
 
 <p>
@@ -112,11 +129,11 @@ nav: resources_nav
 </p>
 
 <h2>
-  Запросіть підписатись свою школу, працедавця чи друзів:
+  Ask your school, employer or friends to sign up:
 </h2>
 
 <p>
-  Computers are everywhere, but fewer schools teach computer science than 10 years ago. Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. In one week, 15 million students tried computer science!
+  Комп'ютери поширені повсюдно, але все менше шкіл викладають інформатику, аніж 10 років тому. Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. In one week, 15 million students tried computer science!
 </p>
 
 <p>
@@ -140,7 +157,7 @@ nav: resources_nav
 </p>
 
 <h2>
-  Запросіть ЗМІ на свій захід:
+  Invite media to attend your event:
 </h2>
 
 <p>
@@ -192,7 +209,7 @@ nav: resources_nav
 </p>
 
 <h2>
-  Повідомте батьків про заходи у вашій школі:
+  Tell parents about your school's event:
 </h2>
 
 <p>
@@ -232,7 +249,7 @@ nav: resources_nav
 </p>
 
 <h2>
-  Запросіть місцевих політиків на захід у Вашій школі:
+  Invite a local politician to your school's event:
 </h2>
 
 <p>

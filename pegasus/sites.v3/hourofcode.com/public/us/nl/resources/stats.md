@@ -1,8 +1,4 @@
-* * *
 
-title: Materialen layout: wide
-
-* * *
 
 # Hoe je de aandacht van de media trekt voor je Uur Code-evenement
 
