@@ -1,6 +1,6 @@
 $(document).ready(function() {
-  var platinum = $(".platinum");
-  var gold = $(".gold");
+  var platinum = randomizeOrder($(".platinum"));
+  var gold = randomizeOrder($(".gold"));
 
   var masterIndex = 3; // The number of badges that have been shown this cycle
   var combinedLength = platinum.length + gold.length;
@@ -62,3 +62,30 @@ $(document).ready(function() {
   // Pause the timer and cycling when a badge is hovered over.
   $('.badge').hover(function () { clearInterval(timer); }, function () { timer = setInterval(setManager, interval); });
 });
+
+//Takes a jQuery list. Two items are randomly selected and swapped. Repeat 50 times. Items are switched in DOM and an equivalently restructured list is returned.
+function randomizeOrder(items) {
+  var length = items.length;
+  for (var i = 0; i < 50; i++) {
+    var index1 = Math.floor(Math.random() * length);
+    var index2 = Math.floor(Math.random() * length);
+    swapElements(items.eq(index1)[0], items.eq(index2)[0]);
+    var temp = items[index1];
+    items[index1] = items[index2];
+    items[index2] = temp;
+  }
+  return items;
+}
+
+// Take two jQuery DOM elements and swaps their position in the DOM.
+function swapElements(elm1, elm2) {
+  var parent1, next1, parent2, next2;
+
+  parent1 = elm1.parentNode;
+  next1   = elm1.nextSibling;
+  parent2 = elm2.parentNode;
+  next2   = elm2.nextSibling;
+
+  parent1.insertBefore(elm2, next1);
+  parent2.insertBefore(elm1, next2);
+}

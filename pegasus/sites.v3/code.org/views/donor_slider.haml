@@ -5,19 +5,19 @@
 
 %div{:class=>'donor-slider'}
   %h2{:id=>'level_indicator'} Platinum Supporters ($3,000,000+ contribution)
-
-  - supporters.each do |supporter, name_s|
-    - avatar_url = avatar_image(supporter[:name_s])
-    %a{:href=>supporter[:url_s]}
-      %div{:class=>"badge "  + supporter[:level_s], :style=>"display: none; height: 90px"}
-        - if avatar_url != nil
-          - if supporter[:kind_s] != "corporate" && supporter[:name_s] != "Omidyar Network"
-            %img{:src=> avatar_url, :style=>"float: left"}
-          - else
-            %img{:src=> avatar_url}
-        - if supporter[:kind_s] != "corporate" &&  supporter[:name_s] != "Omidyar Network"
-          %p{:class=>"label"}
-            =supporter[:name_s]
+  %div.badge-container
+    - supporters.each do |supporter, name_s|
+      - avatar_url = avatar_image(supporter[:name_s])
+      %a{:href=>supporter[:url_s]}
+        %div{:class=>"badge "  + supporter[:level_s], :style=>"display: none; height: 90px"}
+          - if avatar_url != nil
+            - if supporter[:kind_s] != "corporate" && supporter[:name_s] != "Omidyar Network"
+              %img{:src=> avatar_url, :style=>"float: left"}
+            - else
+              %img{:src=> avatar_url}
+          - if supporter[:kind_s] != "corporate" &&  supporter[:name_s] != "Omidyar Network"
+            %p{:class=>"label"}
+              =supporter[:name_s]
 
   %br
   %a{:href=>'../about/donors'} See all donors
