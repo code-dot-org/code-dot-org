@@ -35,8 +35,12 @@ exports.placeImage = function (image, x, y, blockId) {
   return exports.register(image);
 };
 
-exports.overlay = function (image1, image2) {
-  return exports.register(new EvalMulti(image1, image2));
+exports.overlay = function (top, bottom) {
+  return exports.register(new EvalMulti(top, bottom));
+};
+
+exports.underlay = function (bottom, top) {
+  return exports.register(new EvalMulti(top, bottom));
 };
 
 exports.square = function (size, style, color) {

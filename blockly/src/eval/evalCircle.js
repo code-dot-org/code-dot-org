@@ -26,7 +26,5 @@ EvalCircle.prototype.draw = function (parent) {
   this.element_.setAttribute('cy', this.y_);
   this.element_.setAttribute('r', this.radius_);
 
-  this.element_.setAttribute('fill', evalUtils.getFill(this.style_, this.color_));
-  this.element_.setAttribute('stroke', evalUtils.getStroke(this.style_, this.color_));
-  this.element_.setAttribute('opacity', evalUtils.getOpacity(this.style_, this.color_));
+  EvalObject.prototype.draw.apply(this, arguments);
 };

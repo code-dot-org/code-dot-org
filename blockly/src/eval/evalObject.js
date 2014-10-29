@@ -1,3 +1,5 @@
+var evalUtils = require('./evalUtils');
+
 var EvalObject = function () {
   // x/y location in pixel space
   this.x_ = 200;
@@ -6,5 +8,9 @@ var EvalObject = function () {
 module.exports = EvalObject;
 
 EvalObject.prototype.draw = function (parent) {
-  throw "Overriden by descendants";
+  if (this.style_ && this.color_) {
+    this.element_.setAttribute('fill', evalUtils.getFill(this.style_, this.color_));
+    this.element_.setAttribute('stroke', evalUtils.getStroke(this.style_, this.color_));
+    this.element_.setAttribute('opacity', evalUtils.getOpacity(this.style_, this.color_));
+  }
 };
