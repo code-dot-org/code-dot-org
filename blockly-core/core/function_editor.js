@@ -54,7 +54,10 @@ Blockly.FunctionEditor.prototype.renameParameter = function(oldName, newName) {
 };
 
 Blockly.FunctionEditor.prototype.show = function() {
-  Blockly.modalWorkspace = new Blockly.BlockSpace(Blockly.mainBlockSpaceEditor, function() {
+  this.container_ = document.createElement('div');
+  this.container_.setAttribute('id', 'modalContainer');
+  goog.dom.getElement('blockly').appendChild(this.container_);
+  Blockly.modalBlockSpaceEditor = new Blockly.BlockSpaceEditor(this.container_, function() {
     var metrics = Blockly.mainBlockSpace.getMetrics();
     var contractDivHeight = Blockly.functionEditor.contractDiv_ ? Blockly.functionEditor.contractDiv_.getBoundingClientRect().height : 0;
     var topOffset = FRAME_MARGIN_TOP + Blockly.Bubble.BORDER_WIDTH + FRAME_HEADER_HEIGHT;
@@ -64,19 +67,20 @@ Blockly.FunctionEditor.prototype.show = function() {
     metrics.viewHeight -= FRAME_MARGIN_TOP + Blockly.Bubble.BORDER_WIDTH + topOffset;
     return metrics;
   });
+  Blockly.modalWorkspace = Blockly.modalBlockSpaceEditor.blockSpace;
 
-  var g = Blockly.modalWorkspace.createDom();
   this.modalBackground_ = Blockly.createSvgElement('g', {'class': 'modalBackground'});
-  Blockly.mainBlockSpaceEditor.svg_.insertBefore(g, Blockly.mainBlockSpace.svgGroup_.nextSibling);
-  Blockly.mainBlockSpaceEditor.svg_.insertBefore(this.modalBackground_, g);
+  Blockly.mainBlockSpaceEditor.svg_.appendChild(this.modalBackground_);
   Blockly.modalWorkspace.addTrashcan();
 
   // Set up contract definition HTML section
   this.createContractDom_();
 
+  // Set up parameters toolbox
   this.paramToolboxBlocks = [];
-  this.flyout_ = new Blockly.HorizontalFlyout();
-  g.insertBefore(this.flyout_.createDom(), Blockly.modalWorkspace.svgBlockCanvas_);
+  this.flyout_ = new Blockly.HorizontalFlyout(Blockly.modalBlockSpaceEditor);
+  var flyoutDom = this.flyout_.createDom();
+  Blockly.modalWorkspace.svgGroup_.insertBefore(flyoutDom, Blockly.modalWorkspace.svgBlockCanvas_);
   this.flyout_.init(Blockly.modalWorkspace, false);
   this.refreshToolbox_();
 
@@ -151,25 +155,20 @@ Blockly.FunctionEditor.prototype.position_ = function() {
 };
 
 Blockly.FunctionEditor.prototype.resizeContractDiv_ = function() {
-  var metrics = Blockly.modalWorkspace.getMetrics();
-  var topLeft = Blockly.convertCoordinates(metrics.absoluteLeft, metrics.absoluteTop, Blockly.mainBlockSpaceEditor.svg_);
-  var width = Blockly.convertCoordinates(metrics.absoluteLeft + metrics.viewWidth, 0, Blockly.mainBlockSpaceEditor.svg_).x - topLeft.x;
-  this.contractDiv_.style.width = width + 'px';
+  this.contractDiv_.style.width = Blockly.modalWorkspace.getMetrics().viewWidth + 'px';
 };
 
 Blockly.FunctionEditor.prototype.createContractDom_ = function() {
   this.contractDiv_ = goog.dom.createDom('div', 'blocklyToolboxDiv paramToolbox blocklyText');
-  document.body.appendChild(this.contractDiv_);
+  this.container_.insertBefore(this.contractDiv_, this.container_.firstChild);
   this.contractDiv_.innerHTML = '<div>Name your function:</div><div><input type="text""></div>'
       + '<div>What is your function supposed to do?</div>'
       + '<div><textarea rows="2"></textarea></div>'
       + '<div>What parameters does your function take?</div>'
-      + '<div><input id="paramAddText" type="text" style="width: 200px;"> <button id="paramAddButton" class="btn">Add</button>';
+      + '<div><input id="paramAddText" type="text" style="width: 200px;"> <button id="paramAddButton" class="btn">Add Parameter</button>';
   var metrics = Blockly.modalWorkspace.getMetrics();
-  var topLeft = Blockly.convertCoordinates(metrics.absoluteLeft, metrics.absoluteTop, Blockly.mainBlockSpaceEditor.svg_);
-  var width = Blockly.convertCoordinates(metrics.absoluteLeft + metrics.viewWidth, 0, Blockly.mainBlockSpaceEditor.svg_).x - topLeft.x;
-  this.contractDiv_.style.left = topLeft.x + 'px';
-  this.contractDiv_.style.top = topLeft.y + 'px';
+  this.contractDiv_.style.left = metrics.absoluteLeft + 'px';
+  this.contractDiv_.style.top = metrics.absoluteTop + 'px';
   this.resizeContractDiv_();
   this.contractDiv_.style.display = 'block';
 };

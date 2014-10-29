@@ -12,8 +12,8 @@ goog.require('Blockly.Block');
  * Class for a horizontal flyout.
  * @constructor
  */
-Blockly.HorizontalFlyout = function() {
-  Blockly.Flyout.call(this);
+Blockly.HorizontalFlyout = function(blockSpaceEditor) {
+  Blockly.Flyout.apply(this, arguments);
   this.autoClose = false;
   this.height_ = 10;
   this.flyoutRows = 0;
