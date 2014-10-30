@@ -10,6 +10,7 @@ goog.provide('Blockly.FunctionEditor');
 goog.require('Blockly.BlockSpace');
 goog.require('Blockly.HorizontalFlyout');
 goog.require('goog.style');
+goog.require('goog.dom');
 
 /**
  * Class for a modal function editor.
@@ -34,6 +35,8 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
   this.functionDefinitionBlock.setRenderBlockSpace(Blockly.modalBlockSpaceEditor.blockSpace);
   this.functionDefinitionBlock.moveTo(FRAME_MARGIN_SIDE, FRAME_MARGIN_TOP);
   this.functionDefinitionBlock.movable_ = false;
+
+  goog.dom.getElement('functionNameText').value = functionName;
 
   this.show();
 };
@@ -100,7 +103,9 @@ Blockly.FunctionEditor.prototype.ensureCreated_ = function() {
 
 Blockly.FunctionEditor.prototype.hide = function() {
   Blockly.activeWorkspace = Blockly.mainBlockSpace;
-  this.functionDefinition.setRenderBlockSpace(Blockly.mainBlockSpace);
+  this.functionDefinitionBlock.setRenderBlockSpace(Blockly.mainBlockSpace);
+  Blockly.modalBlockSpaceEditor.blockSpace.removeTopBlock(this.functionDefinitionBlock);
+
   goog.style.showElement(this.container_, false);
   goog.style.showElement(this.modalBackground_, false);
 };
@@ -140,12 +145,6 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   this.closeButton_.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', '/blockly/media/common_images/x-button.png');
   Blockly.modalBlockSpaceEditor.svg_.appendChild(this.closeButton_);
 
-  // Add the function definition block TODO(bjordan): remove
-  this.functionDefinition = Blockly.Xml.domToBlock_(Blockly.modalWorkspace,
-      Blockly.createSvgElement('block', {type: 'procedures_defnoreturn'}));
-  this.functionDefinition.moveTo(FRAME_MARGIN_SIDE, FRAME_MARGIN_TOP);
-  this.functionDefinition.movable_ = false;
-
   // Set up contract definition HTML section
   this.createContractDom_();
 
@@ -167,7 +166,7 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   });
 
   function functionNameChange(e) {
-    this.functionDefinition.setTitleValue(e.target.value, 'NAME');
+    this.functionDefinitionBlock.setTitleValue(e.target.value, 'NAME');
   }
 
   // Set up parameters toolbox
@@ -251,7 +250,7 @@ Blockly.FunctionEditor.prototype.createContractDom_ = function() {
   this.contractDiv_ = goog.dom.createDom('div', 'blocklyToolboxDiv paramToolbox blocklyText');
   this.container_.insertBefore(this.contractDiv_, this.container_.firstChild);
   this.contractDiv_.innerHTML = '<div>Name your function:</div>'
-      + '<div><input id="functionNameText" type="text" value="' + this.functionDefinition.getTitleValue('NAME') + '"></div>'
+      + '<div><input id="functionNameText" type="text"></div>'
       + '<div>What is your function supposed to do?</div>'
       + '<div><textarea rows="2"></textarea></div>'
       + '<div>What parameters does your function take?</div>'
