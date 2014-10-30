@@ -1,6 +1,6 @@
 $(document).ready(function() {
-  var platinum = randomizeOrder($(".platinum"));
-  var gold = randomizeOrder($(".gold"));
+  var platinum = randomizeOrderBetter($(".platinum"));
+  var gold = randomizeOrderBetter($(".gold"));
 
   var masterIndex = 3; // The number of badges that have been shown this cycle
   var combinedLength = platinum.length + gold.length;
@@ -63,29 +63,13 @@ $(document).ready(function() {
   $('.badge').hover(function () { clearInterval(timer); }, function () { timer = setInterval(setManager, interval); });
 });
 
-//Takes a jQuery list. Two items are randomly selected and swapped. Repeat 50 times. Items are switched in DOM and an equivalently restructured list is returned.
-function randomizeOrder(items) {
-  var length = items.length;
-  for (var i = 0; i < 50; i++) {
-    var index1 = Math.floor(Math.random() * length);
-    var index2 = Math.floor(Math.random() * length);
-    swapElements(items.eq(index1)[0], items.eq(index2)[0]);
-    var temp = items[index1];
-    items[index1] = items[index2];
-    items[index2] = temp;
+// Takes a list of badges, randomizes (based on Fisher–Yates shuffle) their order in the DOM, and returns a list of badges in the new order.
+function randomizeOrderBetter (items) {
+  for (var i = items.children().length; i >= 0; i--) {
+    var randomIndex = Math.random() * i | 0;
+    var temp = items.eq(randomIndex).parent().detach(); // Remove the badge (and the containing anchor) from the DOM
+    items.append(temp.children()[0]); // Add the badge to the end of the list of badges
+    temp.appendTo(".badge-container"); // Re-add the badge (and the containing anchor) to thd DOM.
   }
   return items;
-}
-
-// Take two jQuery DOM elements and swaps their position in the DOM.
-function swapElements(elm1, elm2) {
-  var parent1, next1, parent2, next2;
-
-  parent1 = elm1.parentNode;
-  next1   = elm1.nextSibling;
-  parent2 = elm2.parentNode;
-  next2   = elm2.nextSibling;
-
-  parent1.insertBefore(elm2, next1);
-  parent2.insertBefore(elm1, next2);
 }
