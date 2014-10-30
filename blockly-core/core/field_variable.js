@@ -129,17 +129,9 @@ Blockly.FieldVariable.dropdownCreate = function() {
  * @this {!Blockly.FieldVariable}
  */
 Blockly.FieldVariable.prototype.dropdownChange = function(text) {
-  var self = this;
-  // TODO(bjordan): use this same promptname for usage below
-  function promptName(promptText, defaultText) {
-    self.sourceBlock_.blockSpace.blockSpaceEditor.hideChaff();
-    var newVar = window.prompt(promptText, defaultText);
-    // Merge runs of whitespace.  Strip leading and trailing whitespace.
-    // Beyond this, all names are legal.
-    return newVar && newVar.replace(/[\s\xa0]+/g, ' ').replace(/^ | $/g, '');
-  }
   if (text == Blockly.Msg.RENAME_VARIABLE) {
     var oldVar = this.getText();
+    this.sourceBlock_.blockSpace.blockSpaceEditor.hideChaff();
     text = promptName(Blockly.Msg.RENAME_VARIABLE_TITLE.replace('%1', oldVar),
                       oldVar);
     if (text) {
@@ -147,6 +139,7 @@ Blockly.FieldVariable.prototype.dropdownChange = function(text) {
     }
     return null;
   } else if (text == Blockly.Msg.NEW_VARIABLE) {
+    this.sourceBlock_.blockSpace.blockSpaceEditor.hideChaff();
     text = promptName(Blockly.Msg.NEW_VARIABLE_TITLE, '');
     // Since variables are case-insensitive, ensure that if the new variable
     // matches with an existing variable, the new case prevails throughout.
@@ -182,13 +175,6 @@ goog.inherits(Blockly.FieldParameter, Blockly.FieldVariable);
  * @this {!Blockly.FieldParameter}
  */
 Blockly.FieldParameter.dropdownCreate = function() {
-  /*var variableList = Blockly.Variables.allVariables();
-  // Ensure that the currently selected variable is an option.
-  var name = this.getText();
-  if (name && variableList.indexOf(name) == -1) {
-    variableList.push(name);
-  }
-  variableList.sort(goog.string.caseInsensitiveCompare);*/
   var variableList = [
     Blockly.Msg.RENAME_PARAMETER,
     Blockly.Msg.DELETE_PARAMETER
@@ -205,6 +191,7 @@ Blockly.FieldParameter.dropdownCreate = function() {
 Blockly.FieldParameter.dropdownChange = function(text) {
   var oldVar = this.getText();
   if (text == Blockly.Msg.RENAME_PARAMETER) {
+    this.sourceBlock_.blockSpace.blockSpaceEditor.hideChaff();
     text = promptName(Blockly.Msg.RENAME_PARAMETER_TITLE.replace('%1', oldVar),
         oldVar);
     if (text) {
@@ -222,7 +209,6 @@ Blockly.FieldParameter.dropdownChange = function(text) {
 };
 
 function promptName(promptText, defaultText) {
-  Blockly.hideChaff();
   var newVar = window.prompt(promptText, defaultText);
   // Merge runs of whitespace.  Strip leading and trailing whitespace.
   // Beyond this, all names are legal.
