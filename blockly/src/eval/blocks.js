@@ -155,9 +155,9 @@ exports.install = function(blockly, blockInstallOptions) {
     blockTitle: msg.placeImageBlockTitle(),
     apiName: 'placeImage',
     args: [
-      { name: 'IMAGE', type: 'image' },
       { name: 'X', type: 'Number' },
-      { name: 'Y', type: 'Number' }
+      { name: 'Y', type: 'Number' },
+      { name: 'IMAGE', type: 'image' }
     ]
   });
 
@@ -166,8 +166,8 @@ exports.install = function(blockly, blockInstallOptions) {
     blockTitle: msg.rotateImageBlockTitle(),
     apiName: 'rotateImage',
     args: [
-      { name: 'IMAGE', type: 'image' },
-      { name: 'DEGREES', type: 'Number' }
+      { name: 'DEGREES', type: 'Number' },
+      { name: 'IMAGE', type: 'image' }
     ]
   });
 
@@ -176,8 +176,8 @@ exports.install = function(blockly, blockInstallOptions) {
     blockTitle: msg.scaleImageBlockTitle(),
     apiName: 'scaleImage',
     args: [
-      { name: 'IMAGE', type: 'image' },
-      { name: 'FACTOR', type: 'Number' }
+      { name: 'FACTOR', type: 'Number' },
+      { name: 'IMAGE', type: 'image' }
     ]
   });
 
