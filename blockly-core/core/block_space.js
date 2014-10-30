@@ -104,6 +104,17 @@ Blockly.BlockSpace.prototype.fireChangeEventPid_ = null;
  */
 Blockly.BlockSpace.prototype.scrollbar = null;
 
+Blockly.BlockSpace.prototype.findFunction = function(functionName) {
+  var blocks = this.topBlocks_;
+  for (var x = 0, block; block = blocks[x]; x++) {
+    if ((block.type === 'procedures_defnoreturn' || block.type === 'procedures_defreturn')
+      && Blockly.Names.equals(functionName, block.getTitleValue('NAME'))) {
+      return block;
+    }
+  }
+  return null;
+};
+
 /**
  * Create the trash can elements.
  * @return {!Element} The blockSpace's SVG group.
