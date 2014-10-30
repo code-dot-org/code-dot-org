@@ -1,0 +1,125 @@
+#!/usr/bin/env ruby
+require_relative '../pegasus/src/env'
+require src_dir 'database'
+require 'cdo/poste'
+
+def load_contacts()
+  {}.tap do |contacts|
+    DB[:contacts].all.each do |contact|
+      contacts[contact[:email]] = contact[:id]
+    end
+  end
+end
+
+def load_recipients(path, params={})
+  start = params[:start] || 0
+  limit = params[:limit] || -1
+  
+  Queue.new.tap do |queue|
+    CSV.foreach(path, headers:true) do |row|
+      row = params[:filter][row] if params[:filter]
+      next unless row
+
+      if start > 0
+        start -= 1
+        next
+      end
+
+      queue << row
+    
+      break if queue.length == limit
+    end
+  end
+end
+
+def process_command_line(argv=ARGV)
+  {
+    csv:nil,
+    limit:10,
+    start:0,
+    template:nil,
+    threads:4,
+  }.tap do |params|
+    i = 0
+    c = argv.count
+  
+    flag = nil
+
+    while(i < c)
+      if argv[i] == '--threads'
+        raise ArgumentError, 'no value for --threads flag provided.' unless (i += 1) < c
+        params[:threads] = argv[i].to_i
+      elsif argv[i] == '--start'
+        raise ArgumentError, 'no value for --start flag provided.' unless (i += 1) < c
+        params[:start] = argv[i].to_i        
+      elsif argv[i] == '--limit'
+        raise ArgumentError, 'no value for --limit flag provided.' unless (i += 1) < c
+        params[:limit] = argv[i].to_i
+      else
+        if params[:csv]
+          raise ArgumentError, "Unexpected argument '#{argv[i]}'"
+        elsif params[:template]
+          params[:csv] = argv[i]
+        else
+          params[:template] = argv[i]
+        end
+      end
+      i += 1
+    end
+  end
+end
+
+@contacts_cache = nil
+def send_message(template, item)
+  unless @contacts_cache
+    puts "Loading contacts..."
+    @contacts_cache = load_contacts
+    puts "#{@contacts_cache.length} contact(s) loaded."
+  end
+  
+  begin
+    ip_address = '127.0.0.1'
+
+    recipient_id = @contacts_cache[item['email']]
+    if recipient_id
+      recipient = {id:recipient_id, email:item['email'], name:item['name'].to_s, ip_address:ip_address}
+    else
+      recipient = Poste2.ensure_recipient(item['email'], name:item['name'].to_s, ip_address:ip_address)
+      @contacts_cache[item['email']] = recipient[:id]
+    end
+    
+    Poste2.send_message template, recipient, item.to_hash.except('email', 'name')
+  rescue => e
+    puts "Couldn't send to '#{item['email']}': #{e.message}"
+  end
+end
+
+def main()
+  params = process_command_line
+  raise ArgumentError, 'Must provide a template and csv.' unless params[:template] && params[:csv]
+
+  queue = load_recipients params[:csv], start:params[:start], limit:params[:limit]
+  puts "#{queue.length} messages to send."
+  
+  workers = []
+  
+  workers << Thread.new do
+    until queue.empty?
+      puts "#{queue.length} messages left to send."
+      sleep 1.0
+    end
+  end
+
+  for i in 1..params[:threads]
+    workers << Thread.new do
+      until queue.empty?
+        item = queue.pop(true) rescue nil
+        send_message params[:template], item if item
+      end
+    end
+  end
+
+  workers.each(&:join)
+end
+
+main
