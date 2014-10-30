@@ -62,6 +62,11 @@ Blockly.inject = function(container, opt_options) {
    * @type {Blockly.BlockSpace}
    */
   Blockly.mainBlockSpace = Blockly.mainBlockSpaceEditor.blockSpace;
+
+  /**
+   * @type {Blockly.BlockSpace}
+   */
+  Blockly.activeWorkspace = Blockly.mainBlockSpace;
 };
 
 /**
