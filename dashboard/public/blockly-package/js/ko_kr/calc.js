@@ -1687,6 +1687,7 @@ Calc.resetButtonClick = function () {
   Calc.expressions.user = null;
   Calc.expressions.current = null;
   Calc.shownFeedback_ = false;
+  Calc.message = null;
 
   Calc.drawExpressions();
 };
@@ -1746,6 +1747,10 @@ function generateExpressionFromBlockXml(blockXml) {
  * Execute the user's code.  Heaven help us...
  */
 Calc.execute = function() {
+  Calc.result = BlocklyApps.ResultType.UNSET;
+  Calc.testResults = BlocklyApps.TestResults.NO_TESTS_RUN;
+  Calc.message = undefined;
+
   // todo (brent) perhaps try to share user vs. expected generation better
   var code = Blockly.Generator.workspaceToCode('JavaScript');
   evalCode(code);
@@ -1759,28 +1764,31 @@ Calc.execute = function() {
 
   Calc.expressions.user.applyExpectation(Calc.expressions.target);
 
-  var result = !Calc.expressions.user.failedExpectation(true);
+  Calc.result = !Calc.expressions.user.failedExpectation(true);
 
-  var equivalent = Calc.expressions.user.isEquivalent(Calc.expressions.target);
+  if (Calc.result === true) {
+    Calc.testResult = TestResults.ALL_PASS;
+  } else {
+    Calc.testResult = TestResults.LEVEL_INCOMPLETE_FAIL;
+    // equivalence means the expressions are the same if we ignore the ordering
+    // of inputs
+    if (Calc.expressions.user.isEquivalent(Calc.expressions.target)) {
+      Calc.testResult = TestResults.APP_SPECIFIC_FAIL;
+      Calc.message = calcMsg.equivalentExpression();
+    }
+  }
 
   Calc.drawExpressions();
 
   var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
   var textBlocks = Blockly.Xml.domToText(xml);
 
-  // todo (brent) - better way of doing this
-  if (equivalent) {
-    Calc.message = result ? "correct" : "expression equivalent";
-  } else {
-    Calc.message = null;
-  }
-
   var reportData = {
     app: 'calc',
     level: level.id,
     builder: level.builder,
-    result: result,
-    testResult: result ? TestResults.ALL_PASS : TestResults.APP_SPECIFIC_FAIL,
+    result: Calc.result,
+    testResult: Calc.testResult,
     program: encodeURIComponent(textBlocks),
     onComplete: onReportComplete
   };
@@ -1908,14 +1916,18 @@ function drawSvgExpression(elementId, expr, styleMarks) {
 var displayFeedback = function(response) {
   if (!Calc.expressions.user.isOperation() && !Calc.shownFeedback_) {
     Calc.shownFeedback_ = true;
-    BlocklyApps.displayFeedback({
+    var options = {
       app: 'Calc',
       skin: skin.id,
-      // feedbackType: Calc.testResults,
-      message: Calc.message ? Calc.message : "todo (brent): wrong",
       response: response,
-      level: level
-    });
+      level: level,
+      feedbackType: Calc.testResult,
+    };
+    if (Calc.message) {
+      options.message = Calc.message;
+    }
+
+    BlocklyApps.displayFeedback(options);
   }
 };
 
@@ -1943,9 +1955,10 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/ko_kr/calc') ; buf.push('\n\n<button id="continueButton" class="launch hide float-right">\n  ');4; // splitting these lines causes an extra space to show up in front of the word, breaking centering
-  // todo (brent) : continue should be a msg
-  ; buf.push('\n  <img src="', escape((7,  assetUrl('media/1x1.gif') )), '">Continue\n</button>\n'); })();
+ buf.push('');1;
+  var msg = require('../../locale/ko_kr/calc');
+  var commonMsg = require('../../locale/ko_kr/common');
+; buf.push('\n\n<button id="continueButton" class="launch hide float-right">\n  <img src="', escape((7,  assetUrl('media/1x1.gif') )), '">', escape((7,  commonMsg.continue() )), '\n</button>\n'); })();
 } 
 return buf.join('');
 };
@@ -1953,7 +1966,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/ko_kr/calc":38,"ejs":40}],10:[function(require,module,exports){
+},{"../../locale/ko_kr/calc":38,"../../locale/ko_kr/common":39,"ejs":40}],10:[function(require,module,exports){
 /**
  * A node consisting of a value, and if that value is an operator, two operands.
  * Operands will always be stored internally as ExpressionNodes.
@@ -2230,7 +2243,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgCalc">\n  <rect x="0" y="0" width="400" height="300" fill="#33ccff"/>\n  <rect x="0" y="300" width="400" height="100" fill="#996633"/>\n  <text x="0" y="30" class="calcHeader">Your expression:</text> <!-- todo - i18n -->\n  <g id="userExpression" class="expr" transform="translate(0, 250)">\n  </g>\n  <text x="0" y="330" class="calcHeader">Goal:</text> <!-- todo - i18n -->\n  <g id="answerExpression" class="expr" transform="translate(0, 350)">\n  </g>\n</svg>\n'); })();
+ buf.push('');1; var msg = require('../../locale/ko_kr/calc'); ; buf.push('\n\n<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgCalc">\n  <rect x="0" y="0" width="400" height="300" fill="#33ccff"/>\n  <rect x="0" y="300" width="400" height="100" fill="#996633"/>\n  <text x="0" y="30" class="calcHeader">', escape((6,  msg.yourExpression() )), '</text>\n  <g id="userExpression" class="expr" transform="translate(0, 250)">\n  </g>\n  <text x="0" y="330" class="calcHeader">', escape((9,  msg.goal() )), '</text>\n  <g id="answerExpression" class="expr" transform="translate(0, 350)">\n  </g>\n</svg>\n'); })();
 } 
 return buf.join('');
 };
@@ -2238,7 +2251,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":40}],14:[function(require,module,exports){
+},{"../../locale/ko_kr/calc":38,"ejs":40}],14:[function(require,module,exports){
 var INFINITE_LOOP_TRAP = '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 
 var LOOP_HIGHLIGHT = 'loopHighlight();\n';
@@ -7802,145 +7815,11 @@ exports.parseElement = function(text) {
 
 },{}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.ko=function(n){return "other"}
-exports.blocksUsed = function(d){return "블럭 사용: %1"};
+exports.equivalentExpression = function(d){return "Try reordering your arguments to get exactly the same expression."};
 
-exports.branches = function(d){return "가지 수"};
+exports.goal = function(d){return "Goal:"};
 
-exports.catColour = function(d){return "색"};
-
-exports.catControl = function(d){return "반복"};
-
-exports.catMath = function(d){return "계산"};
-
-exports.catProcedures = function(d){return "함수"};
-
-exports.catTurtle = function(d){return "동작"};
-
-exports.catVariables = function(d){return "변수"};
-
-exports.catLogic = function(d){return "논리"};
-
-exports.colourTooltip = function(d){return "펜의 색을 바꿉니다."};
-
-exports.degrees = function(d){return "도"};
-
-exports.depth = function(d){return "깊이"};
-
-exports.dots = function(d){return "픽셀"};
-
-exports.drawASquare = function(d){return "사각형 그리기"};
-
-exports.drawATriangle = function(d){return "삼각형 그리기"};
-
-exports.drawACircle = function(d){return "원 그리기"};
-
-exports.drawAFlower = function(d){return "꽃 그리기"};
-
-exports.drawAHexagon = function(d){return "6각형 그리기"};
-
-exports.drawAHouse = function(d){return "집 그리기"};
-
-exports.drawAPlanet = function(d){return "식물 그리기"};
-
-exports.drawARhombus = function(d){return "마름모 그리기"};
-
-exports.drawARobot = function(d){return "로봇 그리기"};
-
-exports.drawARocket = function(d){return "로켓 그리기"};
-
-exports.drawASnowflake = function(d){return "해바라기 그리기"};
-
-exports.drawASnowman = function(d){return "눈사람 그리기"};
-
-exports.drawAStar = function(d){return "별 그리기"};
-
-exports.drawATree = function(d){return "나무 그리기"};
-
-exports.drawUpperWave = function(d){return "위로 올라가는 물결 그리기"};
-
-exports.drawLowerWave = function(d){return "아래로 내려가는 물결 그리기"};
-
-exports.heightParameter = function(d){return "높이"};
-
-exports.hideTurtle = function(d){return "예술가 숨기기"};
-
-exports.jump = function(d){return "점프"};
-
-exports.jumpBackward = function(d){return "뒤로 점프:"};
-
-exports.jumpForward = function(d){return "앞으로 점프:"};
-
-exports.jumpTooltip = function(d){return "아무것도 그리지 않고, 원하는 위치로 바로 이동시킵니다."};
-
-exports.jumpEastTooltip = function(d){return "예술가를 오른쪽으로 점프시킵니다."};
-
-exports.jumpNorthTooltip = function(d){return "예술가를 위쪽으로 점프시킵니다."};
-
-exports.jumpSouthTooltip = function(d){return "예술가를 아래쪽으로 점프시킵니다."};
-
-exports.jumpWestTooltip = function(d){return "예술가를 왼쪽으로 점프시킵니다."};
-
-exports.lengthFeedback = function(d){return "이동 거리를 벗어났습니다."};
-
-exports.lengthParameter = function(d){return "길이"};
-
-exports.loopVariable = function(d){return "카운터"};
-
-exports.moveBackward = function(d){return "뒤로 이동:"};
-
-exports.moveEastTooltip = function(d){return "예술가를 오른쪽으로 이동시킵니다."};
-
-exports.moveForward = function(d){return "앞으로 이동:"};
-
-exports.moveForwardTooltip = function(d){return "예술가를 전진시킵니다."};
-
-exports.moveNorthTooltip = function(d){return "예술가를 위쪽으로 이동시킵니다."};
-
-exports.moveSouthTooltip = function(d){return "예술가를 아래쪽으로 이동시킵니다."};
-
-exports.moveWestTooltip = function(d){return "예술가를 왼쪽으로 이동시킵니다."};
-
-exports.moveTooltip = function(d){return "예술가를 원하는 만큼 전진(앞으로 이동) 또는 후진(뒤로 이동) 시킵니다."};
-
-exports.notBlackColour = function(d){return "이 퍼즐에서는 검정색이 아닌, 다른 선 색을 사용해야합니다."};
-
-exports.numBlocksNeeded = function(d){return "블럭 %1 개로 해결할 수 있습니다. 현재 %2 개의 블럭을 사용했습니다."};
-
-exports.penDown = function(d){return "펜 내리기"};
-
-exports.penTooltip = function(d){return "펜을 올려 선을 그리지 않거나, 펜을 내려 선을 그립니다."};
-
-exports.penUp = function(d){return "펜 올리기"};
-
-exports.reinfFeedbackMsg = function(d){return "원하는 그림이 만들어지나요? \"다시 시도\" 를 눌러 그림을 확인해 보세요."};
-
-exports.setColour = function(d){return "색 설정:"};
-
-exports.setWidth = function(d){return "두께 설정:"};
-
-exports.shareDrawing = function(d){return "그림 공개하기:"};
-
-exports.showMe = function(d){return "보이기"};
-
-exports.showTurtle = function(d){return "예술가 보이기"};
-
-exports.step = function(d){return "단계"};
-
-exports.tooFewColours = function(d){return "이 퍼즐에서는 적어도 %1 개 이상의 색을 사용해야 합니다. 현재 %2 개의 색을 사용했습니다."};
-
-exports.turnLeft = function(d){return "왼쪽으로 돌기:"};
-
-exports.turnRight = function(d){return "오른쪽으로 돌기:"};
-
-exports.turnRightTooltip = function(d){return "예술가를 원하는 각도 만큼 회전시킵니다."};
-
-exports.turnTooltip = function(d){return "예술가를 원하는 각도 만큼, 왼쪽이나 오른쪽으로 회전시킵니다."};
-
-exports.turtleVisibilityTooltip = function(d){return "예술가를 보이거나 보이지 않도록 합니다."};
-
-exports.widthTooltip = function(d){return "펜의 두께를 바꿉니다."};
-
-exports.wrongColour = function(d){return "색이 다릅니다. %1 색 이어야 합니다."};
+exports.yourExpression = function(d){return "Your expression:"};
 
 
 },{"messageformat":51}],39:[function(require,module,exports){

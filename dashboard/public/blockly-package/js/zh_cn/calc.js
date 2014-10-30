@@ -1687,6 +1687,7 @@ Calc.resetButtonClick = function () {
   Calc.expressions.user = null;
   Calc.expressions.current = null;
   Calc.shownFeedback_ = false;
+  Calc.message = null;
 
   Calc.drawExpressions();
 };
@@ -1746,6 +1747,10 @@ function generateExpressionFromBlockXml(blockXml) {
  * Execute the user's code.  Heaven help us...
  */
 Calc.execute = function() {
+  Calc.result = BlocklyApps.ResultType.UNSET;
+  Calc.testResults = BlocklyApps.TestResults.NO_TESTS_RUN;
+  Calc.message = undefined;
+
   // todo (brent) perhaps try to share user vs. expected generation better
   var code = Blockly.Generator.workspaceToCode('JavaScript');
   evalCode(code);
@@ -1759,28 +1764,31 @@ Calc.execute = function() {
 
   Calc.expressions.user.applyExpectation(Calc.expressions.target);
 
-  var result = !Calc.expressions.user.failedExpectation(true);
+  Calc.result = !Calc.expressions.user.failedExpectation(true);
 
-  var equivalent = Calc.expressions.user.isEquivalent(Calc.expressions.target);
+  if (Calc.result === true) {
+    Calc.testResult = TestResults.ALL_PASS;
+  } else {
+    Calc.testResult = TestResults.LEVEL_INCOMPLETE_FAIL;
+    // equivalence means the expressions are the same if we ignore the ordering
+    // of inputs
+    if (Calc.expressions.user.isEquivalent(Calc.expressions.target)) {
+      Calc.testResult = TestResults.APP_SPECIFIC_FAIL;
+      Calc.message = calcMsg.equivalentExpression();
+    }
+  }
 
   Calc.drawExpressions();
 
   var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
   var textBlocks = Blockly.Xml.domToText(xml);
 
-  // todo (brent) - better way of doing this
-  if (equivalent) {
-    Calc.message = result ? "correct" : "expression equivalent";
-  } else {
-    Calc.message = null;
-  }
-
   var reportData = {
     app: 'calc',
     level: level.id,
     builder: level.builder,
-    result: result,
-    testResult: result ? TestResults.ALL_PASS : TestResults.APP_SPECIFIC_FAIL,
+    result: Calc.result,
+    testResult: Calc.testResult,
     program: encodeURIComponent(textBlocks),
     onComplete: onReportComplete
   };
@@ -1908,14 +1916,18 @@ function drawSvgExpression(elementId, expr, styleMarks) {
 var displayFeedback = function(response) {
   if (!Calc.expressions.user.isOperation() && !Calc.shownFeedback_) {
     Calc.shownFeedback_ = true;
-    BlocklyApps.displayFeedback({
+    var options = {
       app: 'Calc',
       skin: skin.id,
-      // feedbackType: Calc.testResults,
-      message: Calc.message ? Calc.message : "todo (brent): wrong",
       response: response,
-      level: level
-    });
+      level: level,
+      feedbackType: Calc.testResult,
+    };
+    if (Calc.message) {
+      options.message = Calc.message;
+    }
+
+    BlocklyApps.displayFeedback(options);
   }
 };
 
@@ -1943,9 +1955,10 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/zh_cn/calc') ; buf.push('\n\n<button id="continueButton" class="launch hide float-right">\n  ');4; // splitting these lines causes an extra space to show up in front of the word, breaking centering
-  // todo (brent) : continue should be a msg
-  ; buf.push('\n  <img src="', escape((7,  assetUrl('media/1x1.gif') )), '">Continue\n</button>\n'); })();
+ buf.push('');1;
+  var msg = require('../../locale/zh_cn/calc');
+  var commonMsg = require('../../locale/zh_cn/common');
+; buf.push('\n\n<button id="continueButton" class="launch hide float-right">\n  <img src="', escape((7,  assetUrl('media/1x1.gif') )), '">', escape((7,  commonMsg.continue() )), '\n</button>\n'); })();
 } 
 return buf.join('');
 };
@@ -1953,7 +1966,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/zh_cn/calc":38,"ejs":40}],10:[function(require,module,exports){
+},{"../../locale/zh_cn/calc":38,"../../locale/zh_cn/common":39,"ejs":40}],10:[function(require,module,exports){
 /**
  * A node consisting of a value, and if that value is an operator, two operands.
  * Operands will always be stored internally as ExpressionNodes.
@@ -2230,7 +2243,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgCalc">\n  <rect x="0" y="0" width="400" height="300" fill="#33ccff"/>\n  <rect x="0" y="300" width="400" height="100" fill="#996633"/>\n  <text x="0" y="30" class="calcHeader">Your expression:</text> <!-- todo - i18n -->\n  <g id="userExpression" class="expr" transform="translate(0, 250)">\n  </g>\n  <text x="0" y="330" class="calcHeader">Goal:</text> <!-- todo - i18n -->\n  <g id="answerExpression" class="expr" transform="translate(0, 350)">\n  </g>\n</svg>\n'); })();
+ buf.push('');1; var msg = require('../../locale/zh_cn/calc'); ; buf.push('\n\n<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgCalc">\n  <rect x="0" y="0" width="400" height="300" fill="#33ccff"/>\n  <rect x="0" y="300" width="400" height="100" fill="#996633"/>\n  <text x="0" y="30" class="calcHeader">', escape((6,  msg.yourExpression() )), '</text>\n  <g id="userExpression" class="expr" transform="translate(0, 250)">\n  </g>\n  <text x="0" y="330" class="calcHeader">', escape((9,  msg.goal() )), '</text>\n  <g id="answerExpression" class="expr" transform="translate(0, 350)">\n  </g>\n</svg>\n'); })();
 } 
 return buf.join('');
 };
@@ -2238,7 +2251,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":40}],14:[function(require,module,exports){
+},{"../../locale/zh_cn/calc":38,"ejs":40}],14:[function(require,module,exports){
 var INFINITE_LOOP_TRAP = '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 
 var LOOP_HIGHLIGHT = 'loopHighlight();\n';
@@ -7802,145 +7815,11 @@ exports.parseElement = function(text) {
 
 },{}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.zh=function(n){return "other"}
-exports.blocksUsed = function(d){return "使用模块： %1"};
+exports.equivalentExpression = function(d){return "Try reordering your arguments to get exactly the same expression."};
 
-exports.branches = function(d){return "分支"};
+exports.goal = function(d){return "Goal:"};
 
-exports.catColour = function(d){return "颜色"};
-
-exports.catControl = function(d){return "循环"};
-
-exports.catMath = function(d){return "数学"};
-
-exports.catProcedures = function(d){return "函数"};
-
-exports.catTurtle = function(d){return "操作"};
-
-exports.catVariables = function(d){return "变量"};
-
-exports.catLogic = function(d){return "逻辑"};
-
-exports.colourTooltip = function(d){return "更改铅笔的颜色。"};
-
-exports.degrees = function(d){return "度"};
-
-exports.depth = function(d){return "深度"};
-
-exports.dots = function(d){return "像素"};
-
-exports.drawASquare = function(d){return "绘制一个正方形"};
-
-exports.drawATriangle = function(d){return "绘制一个三角形"};
-
-exports.drawACircle = function(d){return "画一个圆圈"};
-
-exports.drawAFlower = function(d){return "画一朵花"};
-
-exports.drawAHexagon = function(d){return "绘制一个六边形"};
-
-exports.drawAHouse = function(d){return "画一个房子"};
-
-exports.drawAPlanet = function(d){return "画一颗行星"};
-
-exports.drawARhombus = function(d){return "绘制菱形"};
-
-exports.drawARobot = function(d){return "画一个机器人"};
-
-exports.drawARocket = function(d){return "画一枚火箭"};
-
-exports.drawASnowflake = function(d){return "画一朵雪花"};
-
-exports.drawASnowman = function(d){return "绘制一个雪人"};
-
-exports.drawAStar = function(d){return "画一个星星"};
-
-exports.drawATree = function(d){return "画一棵树"};
-
-exports.drawUpperWave = function(d){return "绘制上波浪"};
-
-exports.drawLowerWave = function(d){return "绘制下波浪"};
-
-exports.heightParameter = function(d){return "高度"};
-
-exports.hideTurtle = function(d){return "隐藏艺术家"};
-
-exports.jump = function(d){return "跳转"};
-
-exports.jumpBackward = function(d){return "向后跳"};
-
-exports.jumpForward = function(d){return "向前跳"};
-
-exports.jumpTooltip = function(d){return "不着痕迹地移动艺术家。"};
-
-exports.jumpEastTooltip = function(d){return "将艺术家向东移动，不留下任何痕迹。"};
-
-exports.jumpNorthTooltip = function(d){return "将艺术家向北移动，不留下任何痕迹。"};
-
-exports.jumpSouthTooltip = function(d){return "将艺术家向男移动，不留下任何痕迹。"};
-
-exports.jumpWestTooltip = function(d){return "将艺术家向西移动，不留下任何痕迹。"};
-
-exports.lengthFeedback = function(d){return "你答对了正确移动的长度。"};
-
-exports.lengthParameter = function(d){return "长度"};
-
-exports.loopVariable = function(d){return "计数器"};
-
-exports.moveBackward = function(d){return "向后移动"};
-
-exports.moveEastTooltip = function(d){return "把艺术家向东移动"};
-
-exports.moveForward = function(d){return "向前移动"};
-
-exports.moveForwardTooltip = function(d){return "向前移动艺术家。"};
-
-exports.moveNorthTooltip = function(d){return "把艺术家向北移动"};
-
-exports.moveSouthTooltip = function(d){return "把艺术家向南移动"};
-
-exports.moveWestTooltip = function(d){return "把艺术家向西移动"};
-
-exports.moveTooltip = function(d){return "将艺术家向前或向后移动指定的量。"};
-
-exports.notBlackColour = function(d){return "您需要为这个谜题设置除黑色以外的一个颜色。"};
-
-exports.numBlocksNeeded = function(d){return "使用 %1 模块可以解决这个谜题。你使用了 %2。"};
-
-exports.penDown = function(d){return "下移铅笔"};
-
-exports.penTooltip = function(d){return "上下移动铅笔来启动或停止绘图。"};
-
-exports.penUp = function(d){return "上移铅笔"};
-
-exports.reinfFeedbackMsg = function(d){return "这看起来像你想要的吗？您可以点击\"重试\"按钮查看您的绘图。"};
-
-exports.setColour = function(d){return "设置颜色"};
-
-exports.setWidth = function(d){return "设置宽度"};
-
-exports.shareDrawing = function(d){return "分享您的图画："};
-
-exports.showMe = function(d){return "显示"};
-
-exports.showTurtle = function(d){return "显示艺术家"};
-
-exports.step = function(d){return "步进："};
-
-exports.tooFewColours = function(d){return "该谜题你需要至少使用 %1个不同颜色。你只是用了%2个。"};
-
-exports.turnLeft = function(d){return "向左转"};
-
-exports.turnRight = function(d){return "向右转"};
-
-exports.turnRightTooltip = function(d){return "把艺术家向右转指定的角度。"};
-
-exports.turnTooltip = function(d){return "把艺术家向左或向右转指定的角度。"};
-
-exports.turtleVisibilityTooltip = function(d){return "使艺术家可见或不可见。"};
-
-exports.widthTooltip = function(d){return "更改铅笔的宽度。"};
-
-exports.wrongColour = function(d){return "您的图片显示颜色是错误的。该谜题需要颜色是 %1。"};
+exports.yourExpression = function(d){return "Your expression:"};
 
 
 },{"messageformat":51}],39:[function(require,module,exports){

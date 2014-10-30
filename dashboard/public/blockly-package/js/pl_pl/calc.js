@@ -1687,6 +1687,7 @@ Calc.resetButtonClick = function () {
   Calc.expressions.user = null;
   Calc.expressions.current = null;
   Calc.shownFeedback_ = false;
+  Calc.message = null;
 
   Calc.drawExpressions();
 };
@@ -1746,6 +1747,10 @@ function generateExpressionFromBlockXml(blockXml) {
  * Execute the user's code.  Heaven help us...
  */
 Calc.execute = function() {
+  Calc.result = BlocklyApps.ResultType.UNSET;
+  Calc.testResults = BlocklyApps.TestResults.NO_TESTS_RUN;
+  Calc.message = undefined;
+
   // todo (brent) perhaps try to share user vs. expected generation better
   var code = Blockly.Generator.workspaceToCode('JavaScript');
   evalCode(code);
@@ -1759,28 +1764,31 @@ Calc.execute = function() {
 
   Calc.expressions.user.applyExpectation(Calc.expressions.target);
 
-  var result = !Calc.expressions.user.failedExpectation(true);
+  Calc.result = !Calc.expressions.user.failedExpectation(true);
 
-  var equivalent = Calc.expressions.user.isEquivalent(Calc.expressions.target);
+  if (Calc.result === true) {
+    Calc.testResult = TestResults.ALL_PASS;
+  } else {
+    Calc.testResult = TestResults.LEVEL_INCOMPLETE_FAIL;
+    // equivalence means the expressions are the same if we ignore the ordering
+    // of inputs
+    if (Calc.expressions.user.isEquivalent(Calc.expressions.target)) {
+      Calc.testResult = TestResults.APP_SPECIFIC_FAIL;
+      Calc.message = calcMsg.equivalentExpression();
+    }
+  }
 
   Calc.drawExpressions();
 
   var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
   var textBlocks = Blockly.Xml.domToText(xml);
 
-  // todo (brent) - better way of doing this
-  if (equivalent) {
-    Calc.message = result ? "correct" : "expression equivalent";
-  } else {
-    Calc.message = null;
-  }
-
   var reportData = {
     app: 'calc',
     level: level.id,
     builder: level.builder,
-    result: result,
-    testResult: result ? TestResults.ALL_PASS : TestResults.APP_SPECIFIC_FAIL,
+    result: Calc.result,
+    testResult: Calc.testResult,
     program: encodeURIComponent(textBlocks),
     onComplete: onReportComplete
   };
@@ -1908,14 +1916,18 @@ function drawSvgExpression(elementId, expr, styleMarks) {
 var displayFeedback = function(response) {
   if (!Calc.expressions.user.isOperation() && !Calc.shownFeedback_) {
     Calc.shownFeedback_ = true;
-    BlocklyApps.displayFeedback({
+    var options = {
       app: 'Calc',
       skin: skin.id,
-      // feedbackType: Calc.testResults,
-      message: Calc.message ? Calc.message : "todo (brent): wrong",
       response: response,
-      level: level
-    });
+      level: level,
+      feedbackType: Calc.testResult,
+    };
+    if (Calc.message) {
+      options.message = Calc.message;
+    }
+
+    BlocklyApps.displayFeedback(options);
   }
 };
 
@@ -1943,9 +1955,10 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/pl_pl/calc') ; buf.push('\n\n<button id="continueButton" class="launch hide float-right">\n  ');4; // splitting these lines causes an extra space to show up in front of the word, breaking centering
-  // todo (brent) : continue should be a msg
-  ; buf.push('\n  <img src="', escape((7,  assetUrl('media/1x1.gif') )), '">Continue\n</button>\n'); })();
+ buf.push('');1;
+  var msg = require('../../locale/pl_pl/calc');
+  var commonMsg = require('../../locale/pl_pl/common');
+; buf.push('\n\n<button id="continueButton" class="launch hide float-right">\n  <img src="', escape((7,  assetUrl('media/1x1.gif') )), '">', escape((7,  commonMsg.continue() )), '\n</button>\n'); })();
 } 
 return buf.join('');
 };
@@ -1953,7 +1966,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/pl_pl/calc":38,"ejs":40}],10:[function(require,module,exports){
+},{"../../locale/pl_pl/calc":38,"../../locale/pl_pl/common":39,"ejs":40}],10:[function(require,module,exports){
 /**
  * A node consisting of a value, and if that value is an operator, two operands.
  * Operands will always be stored internally as ExpressionNodes.
@@ -2230,7 +2243,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgCalc">\n  <rect x="0" y="0" width="400" height="300" fill="#33ccff"/>\n  <rect x="0" y="300" width="400" height="100" fill="#996633"/>\n  <text x="0" y="30" class="calcHeader">Your expression:</text> <!-- todo - i18n -->\n  <g id="userExpression" class="expr" transform="translate(0, 250)">\n  </g>\n  <text x="0" y="330" class="calcHeader">Goal:</text> <!-- todo - i18n -->\n  <g id="answerExpression" class="expr" transform="translate(0, 350)">\n  </g>\n</svg>\n'); })();
+ buf.push('');1; var msg = require('../../locale/pl_pl/calc'); ; buf.push('\n\n<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgCalc">\n  <rect x="0" y="0" width="400" height="300" fill="#33ccff"/>\n  <rect x="0" y="300" width="400" height="100" fill="#996633"/>\n  <text x="0" y="30" class="calcHeader">', escape((6,  msg.yourExpression() )), '</text>\n  <g id="userExpression" class="expr" transform="translate(0, 250)">\n  </g>\n  <text x="0" y="330" class="calcHeader">', escape((9,  msg.goal() )), '</text>\n  <g id="answerExpression" class="expr" transform="translate(0, 350)">\n  </g>\n</svg>\n'); })();
 } 
 return buf.join('');
 };
@@ -2238,7 +2251,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":40}],14:[function(require,module,exports){
+},{"../../locale/pl_pl/calc":38,"ejs":40}],14:[function(require,module,exports){
 var INFINITE_LOOP_TRAP = '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 
 var LOOP_HIGHLIGHT = 'loopHighlight();\n';
@@ -7816,145 +7829,11 @@ var MessageFormat = require("messageformat");MessageFormat.locale.pl = function 
   }
   return 'other';
 };
-exports.blocksUsed = function(d){return "Użyte bloki: %1"};
+exports.equivalentExpression = function(d){return "Try reordering your arguments to get exactly the same expression."};
 
-exports.branches = function(d){return "branches"};
+exports.goal = function(d){return "Goal:"};
 
-exports.catColour = function(d){return "Kolor"};
-
-exports.catControl = function(d){return "Pętle"};
-
-exports.catMath = function(d){return "Matematyka"};
-
-exports.catProcedures = function(d){return "Funkcje"};
-
-exports.catTurtle = function(d){return "Działania"};
-
-exports.catVariables = function(d){return "Zmienne"};
-
-exports.catLogic = function(d){return "Logika"};
-
-exports.colourTooltip = function(d){return "Zmienia kolor ołówka."};
-
-exports.degrees = function(d){return "stopnie"};
-
-exports.depth = function(d){return "głębokość"};
-
-exports.dots = function(d){return "piksele"};
-
-exports.drawASquare = function(d){return "narysuj kwadrat"};
-
-exports.drawATriangle = function(d){return "narysuj trójkąt"};
-
-exports.drawACircle = function(d){return "narysuj okrąg"};
-
-exports.drawAFlower = function(d){return "narysuj kwiatka"};
-
-exports.drawAHexagon = function(d){return "narysuj sześciokąt"};
-
-exports.drawAHouse = function(d){return "narysuj dom"};
-
-exports.drawAPlanet = function(d){return "narysuj planetę"};
-
-exports.drawARhombus = function(d){return "narysuj romb"};
-
-exports.drawARobot = function(d){return "narysuj robota"};
-
-exports.drawARocket = function(d){return "narysuj rakietę"};
-
-exports.drawASnowflake = function(d){return "narysuj płatek śniegu"};
-
-exports.drawASnowman = function(d){return "narysuj bałwana"};
-
-exports.drawAStar = function(d){return "narysuj gwiazdę"};
-
-exports.drawATree = function(d){return "narysuj drzewo"};
-
-exports.drawUpperWave = function(d){return "draw upper wave"};
-
-exports.drawLowerWave = function(d){return "draw lower wave"};
-
-exports.heightParameter = function(d){return "wysokość"};
-
-exports.hideTurtle = function(d){return "ukryj artystę"};
-
-exports.jump = function(d){return "skacz"};
-
-exports.jumpBackward = function(d){return "skocz do tyłu o"};
-
-exports.jumpForward = function(d){return "skocz do przodu o"};
-
-exports.jumpTooltip = function(d){return "Przesuwa artystę nie zostawiając żadnych śladów."};
-
-exports.jumpEastTooltip = function(d){return "Przenosi artystę na wschód bez zostawiania śladów."};
-
-exports.jumpNorthTooltip = function(d){return "Przenosi artystę na północ bez zostawiania śladów."};
-
-exports.jumpSouthTooltip = function(d){return "Przenosi artystę na południe bez zostawiania śladów."};
-
-exports.jumpWestTooltip = function(d){return "Przenosi artystę na zachód bez zostawiania śladów."};
-
-exports.lengthFeedback = function(d){return "You got it right except for the lengths to move."};
-
-exports.lengthParameter = function(d){return "długość"};
-
-exports.loopVariable = function(d){return "licznik"};
-
-exports.moveBackward = function(d){return "przesuń do tyłu o"};
-
-exports.moveEastTooltip = function(d){return "Przenosi artystę na wschód."};
-
-exports.moveForward = function(d){return "przesuń do przodu o"};
-
-exports.moveForwardTooltip = function(d){return "Przesuwa artystę do przodu."};
-
-exports.moveNorthTooltip = function(d){return "Przenosi artystę na północ."};
-
-exports.moveSouthTooltip = function(d){return "Przenosi artystę na południe."};
-
-exports.moveWestTooltip = function(d){return "Przenosi artystę na zachód."};
-
-exports.moveTooltip = function(d){return "Przesuwa artystę do przodu lub do tyłu o określoną wielkość."};
-
-exports.notBlackColour = function(d){return "Musisz ustalić kolor dla tej układanki inny niż czarny."};
-
-exports.numBlocksNeeded = function(d){return "Ta łamigłówka może być rozwiązana przy użyciu %1 bloków. Ty użyłeś %2."};
-
-exports.penDown = function(d){return "opuść ołówek"};
-
-exports.penTooltip = function(d){return "Podnosi lub opuszcza ołówek, by zakończyć lub rozpocząć rysowanie."};
-
-exports.penUp = function(d){return "podnieś ołówek"};
-
-exports.reinfFeedbackMsg = function(d){return "Czy to wygląda tak, jak chciałeś? Możesz nacisnąć przycisk Spróbuj ponownie, aby zobaczyć swój rysunek."};
-
-exports.setColour = function(d){return "ustaw kolor"};
-
-exports.setWidth = function(d){return "ustaw szerokość"};
-
-exports.shareDrawing = function(d){return "Udostępnij swój rysunek:"};
-
-exports.showMe = function(d){return "Pokaż mi"};
-
-exports.showTurtle = function(d){return "pokaż artystę"};
-
-exports.step = function(d){return "krok"};
-
-exports.tooFewColours = function(d){return "Musisz użyć co najmniej %1 różnych kolorów w tej łamigłówce. Ty użyłeś jedynie %2."};
-
-exports.turnLeft = function(d){return "obróć w lewo o"};
-
-exports.turnRight = function(d){return "obróć w prawo o"};
-
-exports.turnRightTooltip = function(d){return "Obraca artystę w prawo o określony kąt."};
-
-exports.turnTooltip = function(d){return "Obraca artystę w lewo lub prawo o określoną liczbę stopni."};
-
-exports.turtleVisibilityTooltip = function(d){return "Artysta staje się widoczny lub niewidoczny."};
-
-exports.widthTooltip = function(d){return "Zmienia grubość ołówka."};
-
-exports.wrongColour = function(d){return "Twój obrazek ma nieodpowiedni kolor. W tej łamigłówce musi to być %1."};
+exports.yourExpression = function(d){return "Your expression:"};
 
 
 },{"messageformat":51}],39:[function(require,module,exports){

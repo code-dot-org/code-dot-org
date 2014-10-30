@@ -1687,6 +1687,7 @@ Calc.resetButtonClick = function () {
   Calc.expressions.user = null;
   Calc.expressions.current = null;
   Calc.shownFeedback_ = false;
+  Calc.message = null;
 
   Calc.drawExpressions();
 };
@@ -1746,6 +1747,10 @@ function generateExpressionFromBlockXml(blockXml) {
  * Execute the user's code.  Heaven help us...
  */
 Calc.execute = function() {
+  Calc.result = BlocklyApps.ResultType.UNSET;
+  Calc.testResults = BlocklyApps.TestResults.NO_TESTS_RUN;
+  Calc.message = undefined;
+
   // todo (brent) perhaps try to share user vs. expected generation better
   var code = Blockly.Generator.workspaceToCode('JavaScript');
   evalCode(code);
@@ -1759,28 +1764,31 @@ Calc.execute = function() {
 
   Calc.expressions.user.applyExpectation(Calc.expressions.target);
 
-  var result = !Calc.expressions.user.failedExpectation(true);
+  Calc.result = !Calc.expressions.user.failedExpectation(true);
 
-  var equivalent = Calc.expressions.user.isEquivalent(Calc.expressions.target);
+  if (Calc.result === true) {
+    Calc.testResult = TestResults.ALL_PASS;
+  } else {
+    Calc.testResult = TestResults.LEVEL_INCOMPLETE_FAIL;
+    // equivalence means the expressions are the same if we ignore the ordering
+    // of inputs
+    if (Calc.expressions.user.isEquivalent(Calc.expressions.target)) {
+      Calc.testResult = TestResults.APP_SPECIFIC_FAIL;
+      Calc.message = calcMsg.equivalentExpression();
+    }
+  }
 
   Calc.drawExpressions();
 
   var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
   var textBlocks = Blockly.Xml.domToText(xml);
 
-  // todo (brent) - better way of doing this
-  if (equivalent) {
-    Calc.message = result ? "correct" : "expression equivalent";
-  } else {
-    Calc.message = null;
-  }
-
   var reportData = {
     app: 'calc',
     level: level.id,
     builder: level.builder,
-    result: result,
-    testResult: result ? TestResults.ALL_PASS : TestResults.APP_SPECIFIC_FAIL,
+    result: Calc.result,
+    testResult: Calc.testResult,
     program: encodeURIComponent(textBlocks),
     onComplete: onReportComplete
   };
@@ -1908,14 +1916,18 @@ function drawSvgExpression(elementId, expr, styleMarks) {
 var displayFeedback = function(response) {
   if (!Calc.expressions.user.isOperation() && !Calc.shownFeedback_) {
     Calc.shownFeedback_ = true;
-    BlocklyApps.displayFeedback({
+    var options = {
       app: 'Calc',
       skin: skin.id,
-      // feedbackType: Calc.testResults,
-      message: Calc.message ? Calc.message : "todo (brent): wrong",
       response: response,
-      level: level
-    });
+      level: level,
+      feedbackType: Calc.testResult,
+    };
+    if (Calc.message) {
+      options.message = Calc.message;
+    }
+
+    BlocklyApps.displayFeedback(options);
   }
 };
 
@@ -1943,9 +1955,10 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/ar_sa/calc') ; buf.push('\n\n<button id="continueButton" class="launch hide float-right">\n  ');4; // splitting these lines causes an extra space to show up in front of the word, breaking centering
-  // todo (brent) : continue should be a msg
-  ; buf.push('\n  <img src="', escape((7,  assetUrl('media/1x1.gif') )), '">Continue\n</button>\n'); })();
+ buf.push('');1;
+  var msg = require('../../locale/ar_sa/calc');
+  var commonMsg = require('../../locale/ar_sa/common');
+; buf.push('\n\n<button id="continueButton" class="launch hide float-right">\n  <img src="', escape((7,  assetUrl('media/1x1.gif') )), '">', escape((7,  commonMsg.continue() )), '\n</button>\n'); })();
 } 
 return buf.join('');
 };
@@ -1953,7 +1966,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/ar_sa/calc":38,"ejs":40}],10:[function(require,module,exports){
+},{"../../locale/ar_sa/calc":38,"../../locale/ar_sa/common":39,"ejs":40}],10:[function(require,module,exports){
 /**
  * A node consisting of a value, and if that value is an operator, two operands.
  * Operands will always be stored internally as ExpressionNodes.
@@ -2230,7 +2243,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgCalc">\n  <rect x="0" y="0" width="400" height="300" fill="#33ccff"/>\n  <rect x="0" y="300" width="400" height="100" fill="#996633"/>\n  <text x="0" y="30" class="calcHeader">Your expression:</text> <!-- todo - i18n -->\n  <g id="userExpression" class="expr" transform="translate(0, 250)">\n  </g>\n  <text x="0" y="330" class="calcHeader">Goal:</text> <!-- todo - i18n -->\n  <g id="answerExpression" class="expr" transform="translate(0, 350)">\n  </g>\n</svg>\n'); })();
+ buf.push('');1; var msg = require('../../locale/ar_sa/calc'); ; buf.push('\n\n<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgCalc">\n  <rect x="0" y="0" width="400" height="300" fill="#33ccff"/>\n  <rect x="0" y="300" width="400" height="100" fill="#996633"/>\n  <text x="0" y="30" class="calcHeader">', escape((6,  msg.yourExpression() )), '</text>\n  <g id="userExpression" class="expr" transform="translate(0, 250)">\n  </g>\n  <text x="0" y="330" class="calcHeader">', escape((9,  msg.goal() )), '</text>\n  <g id="answerExpression" class="expr" transform="translate(0, 350)">\n  </g>\n</svg>\n'); })();
 } 
 return buf.join('');
 };
@@ -2238,7 +2251,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":40}],14:[function(require,module,exports){
+},{"../../locale/ar_sa/calc":38,"ejs":40}],14:[function(require,module,exports){
 var INFINITE_LOOP_TRAP = '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 
 var LOOP_HIGHLIGHT = 'loopHighlight();\n';
@@ -7819,145 +7832,11 @@ var MessageFormat = require("messageformat");MessageFormat.locale.ar = function(
   }
   return 'other';
 };
-exports.blocksUsed = function(d){return "القطع المستخدمة : %1"};
+exports.equivalentExpression = function(d){return "Try reordering your arguments to get exactly the same expression."};
 
-exports.branches = function(d){return "فروع"};
+exports.goal = function(d){return "Goal:"};
 
-exports.catColour = function(d){return "لون"};
-
-exports.catControl = function(d){return "الجمل التكرارية"};
-
-exports.catMath = function(d){return "العمليات الحسابية"};
-
-exports.catProcedures = function(d){return "الدوال"};
-
-exports.catTurtle = function(d){return "الاجراءات"};
-
-exports.catVariables = function(d){return "المتغيرات"};
-
-exports.catLogic = function(d){return "منطق"};
-
-exports.colourTooltip = function(d){return "تغيير لون القلم."};
-
-exports.degrees = function(d){return "درجات"};
-
-exports.depth = function(d){return "عمق"};
-
-exports.dots = function(d){return "بكسلات"};
-
-exports.drawASquare = function(d){return "رسم مربع"};
-
-exports.drawATriangle = function(d){return "رسم مثلث"};
-
-exports.drawACircle = function(d){return "رسم دائرة"};
-
-exports.drawAFlower = function(d){return "إرسم زهرة"};
-
-exports.drawAHexagon = function(d){return "إرسم مسدس"};
-
-exports.drawAHouse = function(d){return "ارسم بيت"};
-
-exports.drawAPlanet = function(d){return "إرسم كوكب"};
-
-exports.drawARhombus = function(d){return "إرسم المعين"};
-
-exports.drawARobot = function(d){return "إرسم إنسان آلي"};
-
-exports.drawARocket = function(d){return "إرسم صاروخ"};
-
-exports.drawASnowflake = function(d){return "إرسم ندفة الثلج"};
-
-exports.drawASnowman = function(d){return "ارسم رجل الثلج"};
-
-exports.drawAStar = function(d){return "إرسم نجمة"};
-
-exports.drawATree = function(d){return "ارسم شجرة"};
-
-exports.drawUpperWave = function(d){return "إرسم الموجة العليا"};
-
-exports.drawLowerWave = function(d){return "إرسم الموجة السفلى"};
-
-exports.heightParameter = function(d){return "الأرتفاع"};
-
-exports.hideTurtle = function(d){return "اخفاء الاعب"};
-
-exports.jump = function(d){return "إقفز"};
-
-exports.jumpBackward = function(d){return "القفز الى الخلف بعدد"};
-
-exports.jumpForward = function(d){return "القفز الى الامام بعدد"};
-
-exports.jumpTooltip = function(d){return "تحريك الاعب بدون ترك اي علامات."};
-
-exports.jumpEastTooltip = function(d){return "حرك الفنان للشرق دون ترك أي علامات."};
-
-exports.jumpNorthTooltip = function(d){return "حرك الفنان للشمال دون ترك أي علامات."};
-
-exports.jumpSouthTooltip = function(d){return "حرك الفنان للجنوب دون ترك أي علامات."};
-
-exports.jumpWestTooltip = function(d){return "حرك الفنان للشمال دون ترك أي علامات."};
-
-exports.lengthFeedback = function(d){return "لقد عملتها بشكل صحيح عدا ضبط طول التحرك."};
-
-exports.lengthParameter = function(d){return "الطول"};
-
-exports.loopVariable = function(d){return "عداد"};
-
-exports.moveBackward = function(d){return "تقدم  الى الخلف بعدد"};
-
-exports.moveEastTooltip = function(d){return "أنقل الفنان للشرق."};
-
-exports.moveForward = function(d){return "تقدم الى الامام بعدد"};
-
-exports.moveForwardTooltip = function(d){return "تقدم الاعب الى الامام."};
-
-exports.moveNorthTooltip = function(d){return "حرك الفنان للشمال."};
-
-exports.moveSouthTooltip = function(d){return "حرك الفنان للجنوب."};
-
-exports.moveWestTooltip = function(d){return "حرك الفنان للغرب."};
-
-exports.moveTooltip = function(d){return "تقدم الاعب الى الامام او الى الخلف بمقدار معين."};
-
-exports.notBlackColour = function(d){return "أنت تحتاج الى تعيين لون غير اللون الاسود لهذا اللغز."};
-
-exports.numBlocksNeeded = function(d){return "يمكنك حل هذا اللغز بواسطة %1 من القطع . انت استخدمت %2 ."};
-
-exports.penDown = function(d){return "أخفض القلم"};
-
-exports.penTooltip = function(d){return "أرفع أو أخفض القلم , لبدء أو ايقاف الرسم."};
-
-exports.penUp = function(d){return "رفع القلم"};
-
-exports.reinfFeedbackMsg = function(d){return "هل هذا يشبه ماتريده؟ يمكنك الضغط على زر \"حاول مرة اخرى\" لمشاهدة الرسم الخاص بك."};
-
-exports.setColour = function(d){return "تعيين اللون"};
-
-exports.setWidth = function(d){return "تعيين العرض"};
-
-exports.shareDrawing = function(d){return "أنشر رسمك :"};
-
-exports.showMe = function(d){return "أرني"};
-
-exports.showTurtle = function(d){return "اظهار الاعب"};
-
-exports.step = function(d){return "خطوة"};
-
-exports.tooFewColours = function(d){return "يجب عليك على الاقل استخدام %1 من مختلف الالوان لهذا اللغز . أنت استخدمت فقط %2 ."};
-
-exports.turnLeft = function(d){return "أتجه الى اليسار بدرجة"};
-
-exports.turnRight = function(d){return "أتجه إلى اليمين بدرجة"};
-
-exports.turnRightTooltip = function(d){return "تحويل اتجاه الاعب الى اليمين بزاوية معينة."};
-
-exports.turnTooltip = function(d){return "تحويل اتجاه الاعب الى اليسار او الى اليمين بالمقدار المحدد من الدرجات."};
-
-exports.turtleVisibilityTooltip = function(d){return "جعل الاعب مرئي او مخفي ."};
-
-exports.widthTooltip = function(d){return "تغيير عرض القلم."};
-
-exports.wrongColour = function(d){return "لون صورتك خاطئ. لهذا اللغز، يجب أن يكون %1."};
+exports.yourExpression = function(d){return "Your expression:"};
 
 
 },{"messageformat":51}],39:[function(require,module,exports){

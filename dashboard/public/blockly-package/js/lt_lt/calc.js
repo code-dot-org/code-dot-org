@@ -1687,6 +1687,7 @@ Calc.resetButtonClick = function () {
   Calc.expressions.user = null;
   Calc.expressions.current = null;
   Calc.shownFeedback_ = false;
+  Calc.message = null;
 
   Calc.drawExpressions();
 };
@@ -1746,6 +1747,10 @@ function generateExpressionFromBlockXml(blockXml) {
  * Execute the user's code.  Heaven help us...
  */
 Calc.execute = function() {
+  Calc.result = BlocklyApps.ResultType.UNSET;
+  Calc.testResults = BlocklyApps.TestResults.NO_TESTS_RUN;
+  Calc.message = undefined;
+
   // todo (brent) perhaps try to share user vs. expected generation better
   var code = Blockly.Generator.workspaceToCode('JavaScript');
   evalCode(code);
@@ -1759,28 +1764,31 @@ Calc.execute = function() {
 
   Calc.expressions.user.applyExpectation(Calc.expressions.target);
 
-  var result = !Calc.expressions.user.failedExpectation(true);
+  Calc.result = !Calc.expressions.user.failedExpectation(true);
 
-  var equivalent = Calc.expressions.user.isEquivalent(Calc.expressions.target);
+  if (Calc.result === true) {
+    Calc.testResult = TestResults.ALL_PASS;
+  } else {
+    Calc.testResult = TestResults.LEVEL_INCOMPLETE_FAIL;
+    // equivalence means the expressions are the same if we ignore the ordering
+    // of inputs
+    if (Calc.expressions.user.isEquivalent(Calc.expressions.target)) {
+      Calc.testResult = TestResults.APP_SPECIFIC_FAIL;
+      Calc.message = calcMsg.equivalentExpression();
+    }
+  }
 
   Calc.drawExpressions();
 
   var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
   var textBlocks = Blockly.Xml.domToText(xml);
 
-  // todo (brent) - better way of doing this
-  if (equivalent) {
-    Calc.message = result ? "correct" : "expression equivalent";
-  } else {
-    Calc.message = null;
-  }
-
   var reportData = {
     app: 'calc',
     level: level.id,
     builder: level.builder,
-    result: result,
-    testResult: result ? TestResults.ALL_PASS : TestResults.APP_SPECIFIC_FAIL,
+    result: Calc.result,
+    testResult: Calc.testResult,
     program: encodeURIComponent(textBlocks),
     onComplete: onReportComplete
   };
@@ -1908,14 +1916,18 @@ function drawSvgExpression(elementId, expr, styleMarks) {
 var displayFeedback = function(response) {
   if (!Calc.expressions.user.isOperation() && !Calc.shownFeedback_) {
     Calc.shownFeedback_ = true;
-    BlocklyApps.displayFeedback({
+    var options = {
       app: 'Calc',
       skin: skin.id,
-      // feedbackType: Calc.testResults,
-      message: Calc.message ? Calc.message : "todo (brent): wrong",
       response: response,
-      level: level
-    });
+      level: level,
+      feedbackType: Calc.testResult,
+    };
+    if (Calc.message) {
+      options.message = Calc.message;
+    }
+
+    BlocklyApps.displayFeedback(options);
   }
 };
 
@@ -1943,9 +1955,10 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/lt_lt/calc') ; buf.push('\n\n<button id="continueButton" class="launch hide float-right">\n  ');4; // splitting these lines causes an extra space to show up in front of the word, breaking centering
-  // todo (brent) : continue should be a msg
-  ; buf.push('\n  <img src="', escape((7,  assetUrl('media/1x1.gif') )), '">Continue\n</button>\n'); })();
+ buf.push('');1;
+  var msg = require('../../locale/lt_lt/calc');
+  var commonMsg = require('../../locale/lt_lt/common');
+; buf.push('\n\n<button id="continueButton" class="launch hide float-right">\n  <img src="', escape((7,  assetUrl('media/1x1.gif') )), '">', escape((7,  commonMsg.continue() )), '\n</button>\n'); })();
 } 
 return buf.join('');
 };
@@ -1953,7 +1966,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/lt_lt/calc":38,"ejs":40}],10:[function(require,module,exports){
+},{"../../locale/lt_lt/calc":38,"../../locale/lt_lt/common":39,"ejs":40}],10:[function(require,module,exports){
 /**
  * A node consisting of a value, and if that value is an operator, two operands.
  * Operands will always be stored internally as ExpressionNodes.
@@ -2230,7 +2243,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgCalc">\n  <rect x="0" y="0" width="400" height="300" fill="#33ccff"/>\n  <rect x="0" y="300" width="400" height="100" fill="#996633"/>\n  <text x="0" y="30" class="calcHeader">Your expression:</text> <!-- todo - i18n -->\n  <g id="userExpression" class="expr" transform="translate(0, 250)">\n  </g>\n  <text x="0" y="330" class="calcHeader">Goal:</text> <!-- todo - i18n -->\n  <g id="answerExpression" class="expr" transform="translate(0, 350)">\n  </g>\n</svg>\n'); })();
+ buf.push('');1; var msg = require('../../locale/lt_lt/calc'); ; buf.push('\n\n<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgCalc">\n  <rect x="0" y="0" width="400" height="300" fill="#33ccff"/>\n  <rect x="0" y="300" width="400" height="100" fill="#996633"/>\n  <text x="0" y="30" class="calcHeader">', escape((6,  msg.yourExpression() )), '</text>\n  <g id="userExpression" class="expr" transform="translate(0, 250)">\n  </g>\n  <text x="0" y="330" class="calcHeader">', escape((9,  msg.goal() )), '</text>\n  <g id="answerExpression" class="expr" transform="translate(0, 350)">\n  </g>\n</svg>\n'); })();
 } 
 return buf.join('');
 };
@@ -2238,7 +2251,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":40}],14:[function(require,module,exports){
+},{"../../locale/lt_lt/calc":38,"ejs":40}],14:[function(require,module,exports){
 var INFINITE_LOOP_TRAP = '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 
 var LOOP_HIGHLIGHT = 'loopHighlight();\n';
@@ -7811,145 +7824,11 @@ var MessageFormat = require("messageformat");MessageFormat.locale.lt = function 
   }
   return 'other';
 };
-exports.blocksUsed = function(d){return "Panaudota blokelių: %1"};
+exports.equivalentExpression = function(d){return "Try reordering your arguments to get exactly the same expression."};
 
-exports.branches = function(d){return "šakos"};
+exports.goal = function(d){return "Goal:"};
 
-exports.catColour = function(d){return "Spalva"};
-
-exports.catControl = function(d){return "Kartojimas"};
-
-exports.catMath = function(d){return "Matematika"};
-
-exports.catProcedures = function(d){return "Sudėtinės komandos"};
-
-exports.catTurtle = function(d){return "Komandos"};
-
-exports.catVariables = function(d){return "Kintamieji"};
-
-exports.catLogic = function(d){return "Logika"};
-
-exports.colourTooltip = function(d){return "Pakeičia pieštuko spalvą."};
-
-exports.degrees = function(d){return "laipsnių"};
-
-exports.depth = function(d){return "gylis"};
-
-exports.dots = function(d){return "pikseliai"};
-
-exports.drawASquare = function(d){return "nubrėžk kvadratą"};
-
-exports.drawATriangle = function(d){return "nubrėžk trikampį"};
-
-exports.drawACircle = function(d){return "nubrėžk apskritimą"};
-
-exports.drawAFlower = function(d){return "nupiešk gėlę"};
-
-exports.drawAHexagon = function(d){return "nupiešk šešiakampį"};
-
-exports.drawAHouse = function(d){return "nupiešk namą"};
-
-exports.drawAPlanet = function(d){return "nupiešk planetą"};
-
-exports.drawARhombus = function(d){return "nupiešk rombą"};
-
-exports.drawARobot = function(d){return "nupiešk robotą"};
-
-exports.drawARocket = function(d){return "nupiešk raketą"};
-
-exports.drawASnowflake = function(d){return "nupiešk snaigę"};
-
-exports.drawASnowman = function(d){return "nupiešk sniego senį"};
-
-exports.drawAStar = function(d){return "nupiešk žvaigždę"};
-
-exports.drawATree = function(d){return "nupiešk medį"};
-
-exports.drawUpperWave = function(d){return "nupiešk viršutinę bangą"};
-
-exports.drawLowerWave = function(d){return "nupiešk apatinę bangą"};
-
-exports.heightParameter = function(d){return "aukštis"};
-
-exports.hideTurtle = function(d){return "slėpti menininką"};
-
-exports.jump = function(d){return "šok"};
-
-exports.jumpBackward = function(d){return "peršok atgal per"};
-
-exports.jumpForward = function(d){return "peršok į priekį per"};
-
-exports.jumpTooltip = function(d){return "Pajudina menininką jam nieko nepiešiant."};
-
-exports.jumpEastTooltip = function(d){return "Pajudina menininką į rytus nepaliekant jokių piešimo žymių."};
-
-exports.jumpNorthTooltip = function(d){return "Pajudina menininką į šiaurę nepaliekant jokių piešimo žymių."};
-
-exports.jumpSouthTooltip = function(d){return "Pajudina menininką į pietus nepaliekant jokių piešimo žymių."};
-
-exports.jumpWestTooltip = function(d){return "Pajudina menininką į vakarus nepaliekant jokių piešimo žymių."};
-
-exports.lengthFeedback = function(d){return "Tu teisingai supratai, bet judėjimo atstumai yra netikslūs."};
-
-exports.lengthParameter = function(d){return "n"};
-
-exports.loopVariable = function(d){return "skaitiklis"};
-
-exports.moveBackward = function(d){return "judėk atgal"};
-
-exports.moveEastTooltip = function(d){return "Pajudina menininką į rytus."};
-
-exports.moveForward = function(d){return "eik į priekį"};
-
-exports.moveForwardTooltip = function(d){return "Pajudina menininką į priekį."};
-
-exports.moveNorthTooltip = function(d){return "Pajudina menininką į šiaurę."};
-
-exports.moveSouthTooltip = function(d){return "Pajudina menininką į pietus."};
-
-exports.moveWestTooltip = function(d){return "Pajudina menininką į vakarus."};
-
-exports.moveTooltip = function(d){return "Pajudina menininką į priekį arba atgal per nustatytą atstumą."};
-
-exports.notBlackColour = function(d){return "Šios užduoties atlikimui reikia pasirinkti bet kurią spalvą, išskyrus juodą."};
-
-exports.numBlocksNeeded = function(d){return "Ši užduotis yra išsprendžiama su %1 blokais. Tu panaudojai %2."};
-
-exports.penDown = function(d){return "nuleisk pieštuką"};
-
-exports.penTooltip = function(d){return "Pakelia arba nuleidžia pieštuką, kad pradėtų arba sustotų piešti."};
-
-exports.penUp = function(d){return "pakelk pieštuką"};
-
-exports.reinfFeedbackMsg = function(d){return "Ar tai atrodo taip, kaip norėjai? Gali nuspausti mygtuką „Pabandyk dar kartą“, kad pamatytum savo piešinį."};
-
-exports.setColour = function(d){return "nustatyk spalvą"};
-
-exports.setWidth = function(d){return "nustatyk plotį"};
-
-exports.shareDrawing = function(d){return "Pasidalink savo piešiniu:"};
-
-exports.showMe = function(d){return "Parodyk man"};
-
-exports.showTurtle = function(d){return "rodyti menininką"};
-
-exports.step = function(d){return "žingsnis"};
-
-exports.tooFewColours = function(d){return "Reikia panaudoti bent %1 skirtingas spalvas šiai užduočiai atlikti. Tu panaudojai tik %2."};
-
-exports.turnLeft = function(d){return "pasisuk į kairę"};
-
-exports.turnRight = function(d){return "pasisuk į dešinę"};
-
-exports.turnRightTooltip = function(d){return "Pasuka menininką į dešinę pasirinktu kampu."};
-
-exports.turnTooltip = function(d){return "Pasuka menininką į kairę pasirinktu kampu laipsniais."};
-
-exports.turtleVisibilityTooltip = function(d){return "Padaro menininką matomą arba nematomą."};
-
-exports.widthTooltip = function(d){return "Pakeičia pieštuko plotį."};
-
-exports.wrongColour = function(d){return "Tavo piešinys yra ne tokios spalvos. Šiai užduočiai atlikti, ji turi būti %1."};
+exports.yourExpression = function(d){return "Your expression:"};
 
 
 },{"messageformat":51}],39:[function(require,module,exports){

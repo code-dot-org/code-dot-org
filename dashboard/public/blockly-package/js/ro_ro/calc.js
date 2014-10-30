@@ -1687,6 +1687,7 @@ Calc.resetButtonClick = function () {
   Calc.expressions.user = null;
   Calc.expressions.current = null;
   Calc.shownFeedback_ = false;
+  Calc.message = null;
 
   Calc.drawExpressions();
 };
@@ -1746,6 +1747,10 @@ function generateExpressionFromBlockXml(blockXml) {
  * Execute the user's code.  Heaven help us...
  */
 Calc.execute = function() {
+  Calc.result = BlocklyApps.ResultType.UNSET;
+  Calc.testResults = BlocklyApps.TestResults.NO_TESTS_RUN;
+  Calc.message = undefined;
+
   // todo (brent) perhaps try to share user vs. expected generation better
   var code = Blockly.Generator.workspaceToCode('JavaScript');
   evalCode(code);
@@ -1759,28 +1764,31 @@ Calc.execute = function() {
 
   Calc.expressions.user.applyExpectation(Calc.expressions.target);
 
-  var result = !Calc.expressions.user.failedExpectation(true);
+  Calc.result = !Calc.expressions.user.failedExpectation(true);
 
-  var equivalent = Calc.expressions.user.isEquivalent(Calc.expressions.target);
+  if (Calc.result === true) {
+    Calc.testResult = TestResults.ALL_PASS;
+  } else {
+    Calc.testResult = TestResults.LEVEL_INCOMPLETE_FAIL;
+    // equivalence means the expressions are the same if we ignore the ordering
+    // of inputs
+    if (Calc.expressions.user.isEquivalent(Calc.expressions.target)) {
+      Calc.testResult = TestResults.APP_SPECIFIC_FAIL;
+      Calc.message = calcMsg.equivalentExpression();
+    }
+  }
 
   Calc.drawExpressions();
 
   var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
   var textBlocks = Blockly.Xml.domToText(xml);
 
-  // todo (brent) - better way of doing this
-  if (equivalent) {
-    Calc.message = result ? "correct" : "expression equivalent";
-  } else {
-    Calc.message = null;
-  }
-
   var reportData = {
     app: 'calc',
     level: level.id,
     builder: level.builder,
-    result: result,
-    testResult: result ? TestResults.ALL_PASS : TestResults.APP_SPECIFIC_FAIL,
+    result: Calc.result,
+    testResult: Calc.testResult,
     program: encodeURIComponent(textBlocks),
     onComplete: onReportComplete
   };
@@ -1908,14 +1916,18 @@ function drawSvgExpression(elementId, expr, styleMarks) {
 var displayFeedback = function(response) {
   if (!Calc.expressions.user.isOperation() && !Calc.shownFeedback_) {
     Calc.shownFeedback_ = true;
-    BlocklyApps.displayFeedback({
+    var options = {
       app: 'Calc',
       skin: skin.id,
-      // feedbackType: Calc.testResults,
-      message: Calc.message ? Calc.message : "todo (brent): wrong",
       response: response,
-      level: level
-    });
+      level: level,
+      feedbackType: Calc.testResult,
+    };
+    if (Calc.message) {
+      options.message = Calc.message;
+    }
+
+    BlocklyApps.displayFeedback(options);
   }
 };
 
@@ -1943,9 +1955,10 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/ro_ro/calc') ; buf.push('\n\n<button id="continueButton" class="launch hide float-right">\n  ');4; // splitting these lines causes an extra space to show up in front of the word, breaking centering
-  // todo (brent) : continue should be a msg
-  ; buf.push('\n  <img src="', escape((7,  assetUrl('media/1x1.gif') )), '">Continue\n</button>\n'); })();
+ buf.push('');1;
+  var msg = require('../../locale/ro_ro/calc');
+  var commonMsg = require('../../locale/ro_ro/common');
+; buf.push('\n\n<button id="continueButton" class="launch hide float-right">\n  <img src="', escape((7,  assetUrl('media/1x1.gif') )), '">', escape((7,  commonMsg.continue() )), '\n</button>\n'); })();
 } 
 return buf.join('');
 };
@@ -1953,7 +1966,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/ro_ro/calc":38,"ejs":40}],10:[function(require,module,exports){
+},{"../../locale/ro_ro/calc":38,"../../locale/ro_ro/common":39,"ejs":40}],10:[function(require,module,exports){
 /**
  * A node consisting of a value, and if that value is an operator, two operands.
  * Operands will always be stored internally as ExpressionNodes.
@@ -2230,7 +2243,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgCalc">\n  <rect x="0" y="0" width="400" height="300" fill="#33ccff"/>\n  <rect x="0" y="300" width="400" height="100" fill="#996633"/>\n  <text x="0" y="30" class="calcHeader">Your expression:</text> <!-- todo - i18n -->\n  <g id="userExpression" class="expr" transform="translate(0, 250)">\n  </g>\n  <text x="0" y="330" class="calcHeader">Goal:</text> <!-- todo - i18n -->\n  <g id="answerExpression" class="expr" transform="translate(0, 350)">\n  </g>\n</svg>\n'); })();
+ buf.push('');1; var msg = require('../../locale/ro_ro/calc'); ; buf.push('\n\n<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgCalc">\n  <rect x="0" y="0" width="400" height="300" fill="#33ccff"/>\n  <rect x="0" y="300" width="400" height="100" fill="#996633"/>\n  <text x="0" y="30" class="calcHeader">', escape((6,  msg.yourExpression() )), '</text>\n  <g id="userExpression" class="expr" transform="translate(0, 250)">\n  </g>\n  <text x="0" y="330" class="calcHeader">', escape((9,  msg.goal() )), '</text>\n  <g id="answerExpression" class="expr" transform="translate(0, 350)">\n  </g>\n</svg>\n'); })();
 } 
 return buf.join('');
 };
@@ -2238,7 +2251,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":40}],14:[function(require,module,exports){
+},{"../../locale/ro_ro/calc":38,"ejs":40}],14:[function(require,module,exports){
 var INFINITE_LOOP_TRAP = '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 
 var LOOP_HIGHLIGHT = 'loopHighlight();\n';
@@ -7811,145 +7824,11 @@ var MessageFormat = require("messageformat");MessageFormat.locale.ro = function 
   }
   return 'other';
 };
-exports.blocksUsed = function(d){return "Blocuri folosite: %1"};
+exports.equivalentExpression = function(d){return "Try reordering your arguments to get exactly the same expression."};
 
-exports.branches = function(d){return "ramuri"};
+exports.goal = function(d){return "Goal:"};
 
-exports.catColour = function(d){return "Culoare"};
-
-exports.catControl = function(d){return "Bucle"};
-
-exports.catMath = function(d){return "Matematică"};
-
-exports.catProcedures = function(d){return "Funcţii"};
-
-exports.catTurtle = function(d){return "Acţiuni"};
-
-exports.catVariables = function(d){return "Variabile"};
-
-exports.catLogic = function(d){return "Logică"};
-
-exports.colourTooltip = function(d){return "Schimbă culoarea creionului."};
-
-exports.degrees = function(d){return "grade"};
-
-exports.depth = function(d){return "adâncime"};
-
-exports.dots = function(d){return "pixeli"};
-
-exports.drawASquare = function(d){return "desenează un pătrat"};
-
-exports.drawATriangle = function(d){return "desenează un triunghi"};
-
-exports.drawACircle = function(d){return "desenează un cerc"};
-
-exports.drawAFlower = function(d){return "desenează o floare"};
-
-exports.drawAHexagon = function(d){return "desenează un hexagon"};
-
-exports.drawAHouse = function(d){return "desenează o casă"};
-
-exports.drawAPlanet = function(d){return "desenează o planetă"};
-
-exports.drawARhombus = function(d){return "desenează un romb"};
-
-exports.drawARobot = function(d){return "desenează un robot"};
-
-exports.drawARocket = function(d){return "desenează o rachetă"};
-
-exports.drawASnowflake = function(d){return "desenează un fulg de zăpadă"};
-
-exports.drawASnowman = function(d){return "desenează un om de zăpadă"};
-
-exports.drawAStar = function(d){return "desenează o stea"};
-
-exports.drawATree = function(d){return "desenează un copac"};
-
-exports.drawUpperWave = function(d){return "desenează un val superior"};
-
-exports.drawLowerWave = function(d){return "desenează un val inferior"};
-
-exports.heightParameter = function(d){return "înălțime"};
-
-exports.hideTurtle = function(d){return "ascunde artistul"};
-
-exports.jump = function(d){return "sari"};
-
-exports.jumpBackward = function(d){return "sari înapoi cu"};
-
-exports.jumpForward = function(d){return "Sari înainte cu"};
-
-exports.jumpTooltip = function(d){return "Mută artistul fără a lăsa urme."};
-
-exports.jumpEastTooltip = function(d){return "Mută artistul la est fără a lăsa urme."};
-
-exports.jumpNorthTooltip = function(d){return "Mută artistul la nord fără a lăsa urme."};
-
-exports.jumpSouthTooltip = function(d){return "Mută artistul la sud fără a lăsa urme."};
-
-exports.jumpWestTooltip = function(d){return "Mută artistul la vest fără a lăsa urme."};
-
-exports.lengthFeedback = function(d){return "Totul este corect cu excepţia distanţelor care trebuie parcurse."};
-
-exports.lengthParameter = function(d){return "lungime"};
-
-exports.loopVariable = function(d){return "numărător"};
-
-exports.moveBackward = function(d){return "mută înapoi cu"};
-
-exports.moveEastTooltip = function(d){return "Mută artistul la est."};
-
-exports.moveForward = function(d){return "mută înainte cu"};
-
-exports.moveForwardTooltip = function(d){return "Mută artistul înainte."};
-
-exports.moveNorthTooltip = function(d){return "Mută artistul la nord."};
-
-exports.moveSouthTooltip = function(d){return "Mută artistul la sud."};
-
-exports.moveWestTooltip = function(d){return "Mută artistul la vest."};
-
-exports.moveTooltip = function(d){return "Mută artistul înainte sau înapoi cu valoarea specificată."};
-
-exports.notBlackColour = function(d){return "Trebuie să setezi o culoare diferită de negru pentru acest puzzle."};
-
-exports.numBlocksNeeded = function(d){return "Acest puzzle poate fi rezolvat cu %1 blocuri. Tu ai folosit %2."};
-
-exports.penDown = function(d){return "creionul jos"};
-
-exports.penTooltip = function(d){return "Ridică sau coboară creionul, pentru a porni sau a înceta desenul."};
-
-exports.penUp = function(d){return "creionul sus"};
-
-exports.reinfFeedbackMsg = function(d){return "Arată acesta așa cum ți-ai dorit? Poți apăsa butonul \"Încearcă din nou\" pentru a-ți vedea desenul."};
-
-exports.setColour = function(d){return "setează culoarea"};
-
-exports.setWidth = function(d){return "setează lăţimea"};
-
-exports.shareDrawing = function(d){return "Imparte desenul tau:"};
-
-exports.showMe = function(d){return "Arată-mi"};
-
-exports.showTurtle = function(d){return "arată artistul"};
-
-exports.step = function(d){return "pas"};
-
-exports.tooFewColours = function(d){return "Trebuie să folosești cel puțin %1 culori diferite pentru acest puzzle.  Ai folosit doar %2."};
-
-exports.turnLeft = function(d){return "întoarce la stânga cu"};
-
-exports.turnRight = function(d){return "întoarce la dreapta cu"};
-
-exports.turnRightTooltip = function(d){return "Întoarce artistul la dreapta în funcție de unghiul specificat."};
-
-exports.turnTooltip = function(d){return "Întoarce artistul la stânga în funcție de unghiul specificat."};
-
-exports.turtleVisibilityTooltip = function(d){return "Face artistul vizibil sau invizibil."};
-
-exports.widthTooltip = function(d){return "Modifică lăţimea creionului."};
-
-exports.wrongColour = function(d){return "Imaginea ta are culoarea greşită.  Pentru acest puzzle, aceasta trebuie să fie de %1."};
+exports.yourExpression = function(d){return "Your expression:"};
 
 
 },{"messageformat":51}],39:[function(require,module,exports){
