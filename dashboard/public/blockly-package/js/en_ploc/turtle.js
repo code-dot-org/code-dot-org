@@ -7893,6 +7893,7 @@ function installCreateASnowflakeBranch(blockly, generator, gensym) {
     var loopVar2 = gensym('count');
     return [
       '// create_a_snowflake_branch',
+      'Turtle.jumpForward(90);',
       'Turtle.turnLeft(45);',
       'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 3; ' + loopVar + '++) {',
       '  for (var ' + loopVar2 + ' = 0; ' + loopVar2 + ' < 3; ' + loopVar2 + '++) {',
