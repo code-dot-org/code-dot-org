@@ -159,6 +159,8 @@ th a:link, th a:visited, th a:hover, th a:active {
     font-weight: bold;
 }
 
+#number { line-height: 90px !important; }
+
 @page  
 { 
     size: auto;    
