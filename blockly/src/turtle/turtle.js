@@ -183,10 +183,10 @@ Turtle.init = function(config) {
 
     // pre-load image for line pattern block. Creating the image object and setting source doesn't seem to be
     // enough in this case, so we're actually creating and reusing the object within the document body.
-  
+
     if (config.level.edit_blocks)
     {
-      var imageContainer = document.createElement('div'); 
+      var imageContainer = document.createElement('div');
       imageContainer.style.display='none';
       document.body.appendChild(imageContainer);
 
@@ -624,7 +624,7 @@ Turtle.doSmoothAnimate = function(options, distance)
     distance /= jumpDistance;
     jumpDistanceCovered += distance;
     if (jumpDistanceCovered < fullDistance)
-      tupleDone = false; 
+      tupleDone = false;
   }
 
   return { tupleDone: tupleDone, distance: distance };
@@ -703,7 +703,7 @@ Turtle.step = function(command, values, options) {
       if (!values[0] || values[0] == 'DEFAULT') {
           Turtle.setPattern(null);
       } else {
-        Turtle.setPattern(document.getElementById(values[0])); 
+        Turtle.setPattern(document.getElementById(values[0]));
       }
       break;
     case 'HT':  // Hide Turtle
@@ -711,6 +711,14 @@ Turtle.step = function(command, values, options) {
       break;
     case 'ST':  // Show Turtle
       Turtle.visible = true;
+      break;
+    case 'stamp':
+      var img = Turtle.stamps[values[0]];
+      var width = img.width / 2;
+      var height = img.height / 2;
+      var x = Turtle.x - width / 2;
+      var y = Turtle.y - height / 2;
+      Turtle.ctxScratch.drawImage(img, x, y, width, height);
       break;
   }
 
@@ -782,7 +790,7 @@ Turtle.moveForward_ = function (distance) {
     Turtle.drawForwardWithPattern_(distance);
     return;
   }
-  
+
   Turtle.drawForward_(distance);
 };
 
@@ -839,18 +847,18 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
   var startY = Turtle.y;
 
   Turtle.jumpForward_(distance);
-  Turtle.ctxScratch.save(); 
-  Turtle.ctxScratch.translate(startX, startY); 
-  Turtle.ctxScratch.rotate(Math.PI * (Turtle.heading - 90) / 180); // increment the angle and rotate the image. 
-                                                                 // Need to subtract 90 to accomodate difference in canvas 
+  Turtle.ctxScratch.save();
+  Turtle.ctxScratch.translate(startX, startY);
+  Turtle.ctxScratch.rotate(Math.PI * (Turtle.heading - 90) / 180); // increment the angle and rotate the image.
+                                                                 // Need to subtract 90 to accomodate difference in canvas
                                                                  // vs. Turtle direction
   Turtle.ctxScratch.drawImage(img,
     0, 0,                                 // Start point for clipping image
     distance+img.height / 2, img.height,  // clip region size
     -img.height / 4, -img.height / 2,      // draw location relative to the ctx.translate point pre-rotation
-    distance+img.height / 2, img.height); 
-                                                                     
-  Turtle.ctxScratch.restore();  
+    distance+img.height / 2, img.height);
+
+  Turtle.ctxScratch.restore();
 };
 
 Turtle.shouldDrawJoints_ = function () {
