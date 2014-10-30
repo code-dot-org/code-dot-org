@@ -10364,7 +10364,7 @@ BlocklyApps.reset = function(ignore) {
   // Stop the looping sound.
   BlocklyApps.stopLoopingAudio('start');
 
-  jumpSubstepUpto = 0;
+  jumpDistanceCovered = 0;
 };
 
 /**
@@ -10492,21 +10492,37 @@ Turtle.execute = function() {
 };
 
 // Divide each jump into substeps so that we can animate every movement.
-var jumpSubstepUpto = 0;
-var jumpSubsteps = 10;
+var jumpDistance = 10;
+var jumpDistanceCovered = 0;
 
 /**
  * Attempt to execute one command from the log of API commands.
  */
 function executeTuple () {
-  var tuple = api.log.shift();
-  if (tuple) {
-    var command = tuple.shift();
-    BlocklyApps.highlight(String(tuple.pop()));
-    Turtle.step(command, tuple);
+
+  if (api.log.length > 0)
+  {
+    var tuple = api.log[0];
+    var command = tuple[0];
+    var id = tuple[tuple.length-1];
+
+    BlocklyApps.highlight(String(id));
+    var smoothAnimate = skin.id == "anna" || skin.id == "elsa";
+    var tupleDone = Turtle.step(command, tuple.slice(1), {smoothAnimate: smoothAnimate});
     Turtle.display();
+
+    if (tupleDone)
+    {
+      api.log.shift();
+      jumpDistanceCovered = 0;
+    }
+
+    return true;
   }
-  return Boolean(tuple);
+  else
+  {
+    return false;
+  }
 }
 
 /**
@@ -10551,8 +10567,32 @@ Turtle.animate = function() {
       return;
     }
   }
+
+  // Scale the speed non-linearly, to give better precision at the fast end.
+  var stepSpeed = 1000 * Math.pow(1 - Turtle.speedSlider.getValue(), 2);
+  if (skin.id == "anna" || skin.id == "elsa")
+  {
+    stepSpeed /= 10;
+  }
+  Turtle.pid = window.setTimeout(Turtle.animate, stepSpeed);
 };
 
+
+Turtle.doSmoothAnimate = function(options, distance)
+{
+  var tupleDone = true;
+
+  if (options && options.smoothAnimate)
+  {
+    var fullDistance = distance;
+    distance /= jumpDistance;
+    jumpDistanceCovered += distance;
+    if (jumpDistanceCovered < fullDistance)
+      tupleDone = false; 
+  }
+
+  return { tupleDone: tupleDone, distance: distance };
+};
 
 /**
  * Execute one step.
@@ -10562,58 +10602,42 @@ Turtle.animate = function() {
  * @param {object} single option for now: smoothAnimate (true/false)
  */
 Turtle.step = function(command, values, options) {
-  var shouldRepeat = false;
+  var tupleDone = true;
+  var result;
 
   switch (command) {
     case 'FD':  // Forward
       distance = values[0];
-      if (options && options.smoothAnimate)
-      {
-        distance /= jumpSubsteps;
-        console.log('fd', distance);
-        shouldRepeat = true;
-      }
-      Turtle.moveForward_(distance);
+      result = Turtle.doSmoothAnimate(options, distance);
+      tupleDone = result.tupleDone;
+      Turtle.moveForward_(result.distance);
       break;
     case 'JF':  // Jump forward
       distance = values[0];
-      if (options && options.smoothAnimate)
-      {
-        distance /= jumpSubsteps;
-        shouldRepeat = true;
-      }
-      Turtle.jumpForward_(distance);
+      result = Turtle.doSmoothAnimate(options, distance);
+      tupleDone = result.tupleDone;
+      Turtle.jumpForward_(result.distance);
       break;
     case 'MV':  // Move (direction)
       var distance = values[0];
-      if (options && options.smoothAnimate)
-      {
-        distance /= jumpSubsteps;
-        shouldRepeat = true;
-      }
       var heading = values[1];
+      result = Turtle.doSmoothAnimate(options, distance);
+      tupleDone = result.tupleDone;
       Turtle.setHeading_(heading);
-      Turtle.moveForward_(distance);
+      Turtle.moveForward_(result.distance);
       break;
     case 'JD':  // Jump (direction)
       distance = values[0];
-      if (options && options.smoothAnimate)
-      {
-        distance /= jumpSubsteps;
-        shouldRepeat = true;
-      }
-      heading = values[1];
+      result = Turtle.doSmoothAnimate(options, distance);
+      tupleDone = result.tupleDone;
       Turtle.setHeading_(heading);
-      Turtle.jumpForward_(distance);
+      Turtle.jumpForward_(result.distance);
       break;
     case 'RT':  // Right Turn
-      var angle = values[0];
-      if (options && options.smoothAnimate)
-      {
-        angle /= jumpSubsteps;
-        shouldRepeat = true;
-      }
-      Turtle.turnByDegrees_(angle);
+      distance = values[0];
+      result = Turtle.doSmoothAnimate(options, distance);
+      tupleDone = result.tupleDone;
+      Turtle.turnByDegrees_(result.distance);
       break;
     case 'DP':  // Draw Print
       Turtle.ctxScratch.save();
@@ -10654,7 +10678,7 @@ Turtle.step = function(command, values, options) {
       break;
   }
 
-  return shouldRepeat;
+  return tupleDone;
 };
 
 Turtle.setPattern = function (pattern) {
