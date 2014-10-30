@@ -65,6 +65,9 @@ Blockly.FunctionEditor.prototype.show = function() {
     metrics.absoluteTop += topOffset + contractDivHeight;
     metrics.viewWidth -= (FRAME_MARGIN_SIDE + Blockly.Bubble.BORDER_WIDTH) * 2;
     metrics.viewHeight -= FRAME_MARGIN_TOP + Blockly.Bubble.BORDER_WIDTH + topOffset;
+    if (Blockly.functionEditor.flyout_) {
+      metrics.absoluteTop += Blockly.functionEditor.flyout_.height_;
+    }
     return metrics;
   });
   Blockly.modalWorkspace = Blockly.modalBlockSpaceEditor.blockSpace;
@@ -125,11 +128,13 @@ Blockly.FunctionEditor.prototype.show = function() {
   // Add the function definition block
   this.functionDefinition = Blockly.Xml.domToBlock_(Blockly.modalWorkspace,
       Blockly.createSvgElement('block', {type: 'procedures_defnoreturn'}));
-  this.functionDefinition.moveTo(Blockly.mainBlockSpaceEditor.toolbox.width + 2 * FRAME_MARGIN_SIDE, FRAME_MARGIN_TOP);
+  this.functionDefinition.moveTo(FRAME_MARGIN_SIDE, FRAME_MARGIN_TOP);
   this.functionDefinition.movable_ = false;
 
   this.onResizeWrapper_ = Blockly.bindEvent_(window,
       goog.events.EventType.RESIZE, this, this.position_);
+
+  Blockly.modalBlockSpaceEditor.svgResize();
 };
 
 Blockly.FunctionEditor.prototype.hide = function() {
@@ -163,8 +168,7 @@ Blockly.FunctionEditor.prototype.position_ = function() {
   this.resizeContractDiv_();
 
   // Move workspace to account for horizontal flyout height
-  var top = metrics.absoluteTop + this.flyout_.height_;
-  Blockly.modalWorkspace.svgBlockCanvas_.setAttribute('transform', 'translate(0,' + top + ')');
+  Blockly.modalBlockSpaceEditor.svgResize();
 };
 
 Blockly.FunctionEditor.prototype.resizeContractDiv_ = function() {

@@ -190,8 +190,7 @@ Blockly.Trashcan.prototype.position_ = function() {
   if (Blockly.RTL) {
     this.left_ = this.MARGIN_SIDE_;
   } else {
-    this.left_ = metrics.viewWidth + metrics.absoluteLeft -
-        this.WIDTH_ - this.MARGIN_SIDE_;
+    this.left_ = metrics.viewWidth - this.WIDTH_ - this.MARGIN_SIDE_;
   }
   this.top_ = this.MARGIN_TOP_;
   this.svgGroup_.setAttribute('transform',
