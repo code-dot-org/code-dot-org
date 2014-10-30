@@ -625,8 +625,15 @@ Turtle.doSmoothAnimate = function(options, distance)
     var fullDistance = distance;
     distance /= jumpDistance;
     jumpDistanceCovered += distance;
-    if (jumpDistanceCovered < fullDistance)
-      tupleDone = false;
+    if (fullDistance < 0) {
+      // Going backward.
+      if (jumpDistanceCovered > fullDistance)
+        tupleDone = false;
+    } else {
+      // Going foward.
+      if (jumpDistanceCovered < fullDistance)
+        tupleDone = false;
+    }
   }
 
   return { tupleDone: tupleDone, distance: distance };
