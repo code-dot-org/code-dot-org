@@ -51,7 +51,7 @@ Blockly.FunctionEditor.prototype.openWithNewFunction = function () {
   this.openAndEditFunction(this.functionDefinitionBlock.getTitleValue('NAME'));
 };
 
-Blockly.FunctionEditor.prototype.refreshToolbox_ = function() {
+Blockly.FunctionEditor.prototype.bindToolboxHandlers_ = function() {
   var paramAddText = goog.dom.getElement('paramAddText');
   var paramAddButton = goog.dom.getElement('paramAddButton');
   Blockly.bindEvent_(paramAddButton, 'mousedown', this, handleParamAdd);
@@ -74,8 +74,6 @@ Blockly.FunctionEditor.prototype.refreshToolbox_ = function() {
     this.functionDefinitionBlock.arguments_.push(varName);
     this.functionDefinitionBlock.updateParams_();
   }
-  this.flyout_.hide();
-  this.flyout_.show(this.paramToolboxBlocks);
 };
 
 Blockly.FunctionEditor.prototype.renameParameter = function(oldName, newName) {
@@ -84,7 +82,8 @@ Blockly.FunctionEditor.prototype.renameParameter = function(oldName, newName) {
       block.firstElementChild.innerHTML = newName;
     }
   });
-  this.refreshToolbox_();
+  this.flyout_.hide();
+  this.flyout_.show(this.paramToolboxBlocks);
 };
 
 Blockly.FunctionEditor.prototype.show = function() {
@@ -179,7 +178,7 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   var flyoutDom = this.flyout_.createDom();
   Blockly.modalWorkspace.svgGroup_.insertBefore(flyoutDom, Blockly.modalWorkspace.svgBlockCanvas_);
   this.flyout_.init(Blockly.modalWorkspace, false);
-  this.refreshToolbox_();
+  this.bindToolboxHandlers_();
 
   var left = goog.dom.getElementByClass(Blockly.hasCategories ? 'blocklyToolboxDiv' : 'blocklyFlyoutBackground').getBoundingClientRect().width;
   var top = 0;
