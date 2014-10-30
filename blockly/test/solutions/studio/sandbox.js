@@ -443,6 +443,7 @@ module.exports = {
     },
     {
       description: 'collision with any actor',
+      timeout: 12000,
       xml: '<xml>' +
         '  <block type="when_run" deletable="false">' +
         '    <next>' +
