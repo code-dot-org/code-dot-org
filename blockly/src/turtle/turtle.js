@@ -886,7 +886,7 @@ var displayFeedback = function() {
     message: Turtle.message,
     response: Turtle.response,
     level: level,
-    feedbackImage: Turtle.ctxScratch.canvas.toDataURL("image/png"),
+    feedbackImage: Turtle.ctxDisplay.canvas.toDataURL("image/png"),
     // add 'impressive':true to non-freeplay levels that we deem are relatively impressive (see #66990480)
     showingSharing: level.freePlay || level.impressive,
     // impressive levels are already saved
