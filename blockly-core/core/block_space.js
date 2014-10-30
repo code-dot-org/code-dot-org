@@ -231,6 +231,18 @@ Blockly.BlockSpace.prototype.getTopBlocks = function(ordered) {
 };
 
 /**
+ * Find all visible blocks in this blockSpace.  No particular order.
+ * Filters out blocks rendering in other workspaces and currently invisible
+ * @return {!Array.<!Blockly.Block>} Array of blocks.
+ */
+Blockly.BlockSpace.prototype.getAllVisibleBlocks = function() {
+  var self = this;
+  return goog.iter.filter(this.getAllBlocks(), function(block) {
+    return block.blockSpace === self; // && block.isVisible();
+  });
+};
+
+/**
  * Find all blocks in this blockSpace.  No particular order.
  * @return {!Array.<!Blockly.Block>} Array of blocks.
  */
@@ -240,8 +252,6 @@ Blockly.BlockSpace.prototype.getAllBlocks = function() {
     blocks = blocks.concat(blocks[x].getChildren());
   }
   return blocks;
-  // TODO(bjordan): re-implement this technique for function showing/hiding:
-  //  return (this === Blockly.mainBlockSpace) ? blocks : blocks.concat(Blockly.mainBlockSpace.getAllBlocks());
 };
 
 /**
