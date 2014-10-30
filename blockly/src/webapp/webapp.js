@@ -158,6 +158,7 @@ Webapp.init = function(config) {
       extraControlRows: extraControlsRow,
       blockUsed: undefined,
       idealBlockNumber: undefined,
+      editCode: level.editCode,
       blockCounterClass: 'block-counter-default'
     }
   });
@@ -182,11 +183,6 @@ Webapp.init = function(config) {
     drawDiv();
   };
 
-  config.getDisplayWidth = function() {
-    var el = document.getElementById('visualizationColumn');
-    return el.getBoundingClientRect().width;
-  };
-
   // arrangeStartBlocks(config);
 
   config.twitter = twitterOptions;
@@ -198,7 +194,6 @@ Webapp.init = function(config) {
   config.makeUrl = "http://code.org/webapp";
   config.makeImage = BlocklyApps.assetUrl('media/promo.png');
 
-  config.enableShowCode = false;
   config.varsInGlobals = true;
 
   // Webapp.initMinimal();
