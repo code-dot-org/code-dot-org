@@ -44,7 +44,7 @@ Breakfast and lunch will be served.
 
 North Point High School
 <br />
-Classroom 343
+Classroom 253
 <br />
 2500 Davis Road
 <br />

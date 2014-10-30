@@ -1174,10 +1174,11 @@ Blockly.Blocks.text_prompt = {init:function() {
 }};
 Blockly.Blocks.variables = {};
 Blockly.Blocks.variables_get = {init:function() {
-  var a = !Blockly.disableVariableEditing;
+  var a = new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);
+  a.EDITABLE = !0;
   this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
   this.setHSV(312, 0.32, 0.62);
-  this.appendDummyInput().appendTitle(Blockly.Msg.VARIABLES_GET_TITLE).appendTitle(a ? new Blockly.FieldVariable(Blockly.Msg.VARIABLES_GET_ITEM) : Blockly.Msg.VARIABLES_DEFAULT_NAME, "VAR").appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);
+  this.appendDummyInput().appendTitle(Blockly.Msg.VARIABLES_GET_TITLE).appendTitle(Blockly.disableVariableEditing ? a : new Blockly.FieldVariable(Blockly.Msg.VARIABLES_GET_ITEM), "VAR").appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);
   this.setOutput(!0);
   this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP)
 }, getVars:function() {
@@ -1195,10 +1196,11 @@ Blockly.Blocks.variables_get = {init:function() {
   a.push(b)
 }};
 Blockly.Blocks.variables_set = {init:function() {
-  var a = !Blockly.disableVariableEditing;
+  var a = new Blockly.FieldLabel(Blockly.Msg.VARIABLES_SET_ITEM);
+  a.EDITABLE = !0;
   this.setHelpUrl(Blockly.Msg.VARIABLES_SET_HELPURL);
   this.setHSV(312, 0.32, 0.62);
-  this.appendValueInput("VALUE").appendTitle(Blockly.Msg.VARIABLES_SET_TITLE).appendTitle(a ? new Blockly.FieldVariable(Blockly.Msg.VARIABLES_SET_ITEM) : Blockly.Msg.VARIABLES_DEFAULT_NAME, "VAR").appendTitle(Blockly.Msg.VARIABLES_SET_TAIL);
+  this.appendValueInput("VALUE").appendTitle(Blockly.Msg.VARIABLES_SET_TITLE).appendTitle(Blockly.disableVariableEditing ? a : new Blockly.FieldVariable(Blockly.Msg.VARIABLES_SET_ITEM), "VAR").appendTitle(Blockly.Msg.VARIABLES_SET_TAIL);
   this.setPreviousStatement(!0);
   this.setNextStatement(!0);
   this.setTooltip(Blockly.Msg.VARIABLES_SET_TOOLTIP)

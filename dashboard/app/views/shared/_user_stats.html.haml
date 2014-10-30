@@ -15,12 +15,12 @@
       .stage
         %span
           = stage_title + (custom_script ? '' : ': ')
+          - unless custom_script # Custom script stages don't map to specific games
+            %span.game-title<
+              =game_title
         - if should_show_lesson_plan
           .stage-lesson-plan-link
             = link_to t('view_lesson_plan'), lesson_plan_html_url(stage_or_game)
-        - unless custom_script # Custom script stages don't map to specific games
-          %span.game-title<
-            =game_title
 
       .games
         - sl_group = sl_group.sort_by {|sl| sl.stage_or_game_position}

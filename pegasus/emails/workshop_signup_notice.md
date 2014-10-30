@@ -1,21 +1,14 @@
 ---
 <%
-def format_email_address(email, display_name='')
-  begin
-    address = Mail::Address.new(email)
-    address.display_name = display_name unless display_name.empty?
-    return address.to_s
-  rescue
-    display_name = display_name.to_s.gsub('"', '\"')
-    display_name = "\"#{display_name}\"" if display_name.include?('"')
-    "#{display_name.strip} <#{email.strip}>".strip
-  end
+def format_email_address(email, name='')
+  name = "\"#{name.gsub('"', '\"').gsub("'","\\'")}\"" if name =~ /[;,\"\'\(\)]/
+  "#{name} <#{email}>".strip
 end
 
   workshop_row = DB[:forms].first(id:form.parent_id)
   workshop = JSON.parse(workshop_row[:data]).merge(JSON.parse(workshop_row[:processed_data]))
 %>
-to: <%= format_email_address(workshop['email_s'], workshop['name_s']) %>
+to: '<%= format_email_address(workshop['email_s'], workshop['name_s']) %>'
 from: '"Code.org" <info@code.org>'
 subject: "[Code.org] Workshop registration - <%= workshop['dates'].map{|i| i['date_s']}.join(', ') %>"
 ---

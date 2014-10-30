@@ -1,12 +1,12 @@
----
-layout: wide
----
 
-# Handleiding voor Een Uur Code en Leren Programmeren Week
 
-Code.org organiseert activiteiten tijdens Een Uur Code die op de websites van Code.org, Hour of Code en CSEdWeek te vinden zijn. De hele lijst is te vinden op [code.org/learn](http://code.org/learn).
+# Richtlijnen voor opdrachten voor het Uur Code en de Computer Science Education Week
 
-We bieden een verscheidenheid aan boeiende mogelijkheden, maar we willen vooral leerlingen en leraren zonder ervaring met informatica enthousiasmeren. Je kunt dit document gebruiken om een programma van activiteiten samen te stellen. Dit document houdt rekening met gebruikers die geen achtergrond in programmeren en informatica hebben.
+**The deadline to submit a tutorial for Hour of Code 2014 has passed. You may still submit an entry and we will try to review it if time allows.**
+
+Code.org will host a variety of Hour of Code activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= codeorg_url() %>](http://<%= codeorg_url() %>/learn).
+
+We’d like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science. Please use this document to guide the creation of your activity, targeted to the user who has no background in coding, computer programming, and computer science.
 
 <a id="top"></a>
 
@@ -25,9 +25,9 @@ We bieden een verscheidenheid aan boeiende mogelijkheden, maar we willen vooral 
 
 ## Evaluatieproces voor het opnemen van opdrachten
 
-Een commissie van informatica docenten zal inzendingen beoordelen op basis van kwalitatieve en kwantitatieve criteria, waarbij de resultaten van een enquête onder docenten meegenomen zullen worden.
+A committee of computer science educators will rank submissions based on qualitative and quantitative metrics, including survey results from a broader set of educators.
 
-**Opdrachten zullen hoger op de lijst komen als zij:**
+**Tutorials will be listed higher if they are:**
 
   * van hoge kwaliteit zijn
   * zelf-sturend zijn en geen instructies vereisen
@@ -38,7 +38,7 @@ Een commissie van informatica docenten zal inzendingen beoordelen op basis van k
   * het leren door alle demografische groepen (specifiek ondervertegenwoordigde groepen) bevorderen
   * zich niet enkel focussen op zuiver HTML + CSS web ontwerp (ons doel is informatica, niet alleen HTML-code)
 
-**Opdrachten zullen lager op de lijst komen als zij:**
+**Tutorials will be listed lower if they are:**
 
   * van lagere kwaliteit zijn
   * voor gevorderden zijn bedoeld (niet voor beginners)
@@ -47,7 +47,7 @@ Een commissie van informatica docenten zal inzendingen beoordelen op basis van k
   * een gender-specifieke vorm hebben (bijvoorbeeld thema's vooral gericht op jongens)
   * dienen als promotie voor een betaald leerplatform
 
-**Opdrachten zullen niet worden opgenomen als zij:**
+**Tutorials will NOT be listed if they:**
 
   * veel betrokkenheid en voorbereiding door de leerkracht vereisen (dwz niet zelf-sturend voor leerlingen)
   * niet ontworpen zijn voor een activiteit van (ongeveer) één uur
@@ -57,13 +57,13 @@ Een commissie van informatica docenten zal inzendingen beoordelen op basis van k
   * zich alleen focussen op HTML + CSS webdesign
   * ingediend worden na de termijn van indiening, of met onvolledige informatie (zie hieronder)
 
-Het uiteindelijke doel van de Een Uur Code campagne is om betrokkenheid van leerlingen en docenten bij informatica te vergroten, en te laten zien dat informatica toegankelijk is voor iedereen, en "makkelijker dan je denkt." Dit doel is het best te bereiken door leerlingen en docenten een beperkt aantal eenvoudige opties te bieden, die tegelijkertijd van hoge kwaliteit zijn.
+Ultimately, the goal of the Hour of Code campaign is to broaden participation in computer science by students and teachers, and to help show that computer science is accessible to all, and “easier than you think.” In many ways, this goal is better achieved by giving students and teachers fewer and simpler choices, with a focus on the highest quality options for a first-time user.
 
-De 2013 CSEdWeek werd een fantastische succes zoals de reacties van docenten en leerlingen weergeven - 20Miljoen deelnemers van Dec 9-23, en 97% zei dat ze er van genoten hebben en willen nogmaals meedoen met de campagne!
+Note also, that the 2013 CSEdWeek was a fantastic success as measured by the responses from teachers and students - 20M participants from Dec 9 - 23, and 97% said they enjoyed it and want to repeat the campaign!!
 
-De bestaande lijsten met opdrachten zijn zeker "good enough", en de belangrijkste reden om handleidingen aan de Uur Code voorbeelden toe te voegen is niet het uitbreiden van de keuzes, maar om de kwaliteit voor leerlingen te verhogen, of om de opties voor niet-Engels leerlingen uit te breiden gezien het wereldwijde karakter van de campagne van 2014.
+As a result, the existing listings are certainly “good enough,” and the driving reason to add tutorials to the Hour of Code listings isn’t to broaden the choices, but to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2014 campaign.
 
-[**Terug naar de top**](#top)
+[**Back to the top**](#top)
 
 <a id="guidelines"></a>
 
@@ -80,15 +80,15 @@ De bestaande lijsten met opdrachten zijn zeker "good enough", en de belangrijkst
       * **Oke, maar geen voorkeur:** ontwerpen voor app-install, desktop-app of game-console.
   * **Formaat:** Zelf-gestuurde opdrachten of lessen, eventueel begeleid door de leraar. Er moeten aanwijzingen voor studenten zijn, in tegenstelling tot een urenlange open uitdaging. In het ideale geval zijn de instructies en tutorials rechtstreeks geïntegreerd in het programmeringsplatform, om te voorkomen er geschakeld moet worden tussen tabs of windows van de tutorial en het programmeringsplatform.
 
-[**Terug naar de top**](#top)
+[**Back to the top**](#top)
 
 <a id="submit"></a>
 
 ## Aanmelden (voor 1/10/2014)
 
-Bezoek de [pagina Uur Code evenement opgeven](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform) en volg de stappen voor het opgeven van je opdracht.
+Visit the [Hour of Code Activity Submission page](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform) and follow the steps to submit your tutorial.
 
-**Wat u nodig heeft:**
+**What you’ll need:**
 
   * Uw naam, logo (jpg, png, etc.)
   * URL voor de afbeelding van een screenshot of marketing van de HoC activiteit. Beelden/screenshots moeten precies een resoltutie 446 x 335 hebben. Als er geen geschikte afbeelding wordt aangeleverd , kunnen wij onze eigen screenshot van je tutorial maken, of we kunnen er voor kiezen deze niet aan de lijst toe te voegen.
@@ -136,56 +136,56 @@ Bezoek de [pagina Uur Code evenement opgeven](https://docs.google.com/a/code.org
       * Voor offline activiteiten 
           * Aantal downloads van papieren versie van de activiteit (indien van toepassing)
 
-[**Terug naar de top**](#top)
+[**Back to the top**](#top)
 
 <a id="design"></a>
 
 ## Tips voor het ontwerpen van een activiteit
 
-**Het CSEdWeek-logo opnemen op uw site.** U kunt het CSEdWeek logo ([klein](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) of [groot](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) opnemen in uw opdracht, maar dit is niet vereist. U kan ook contact met ons te overleggen over specifieke toestemming voor het gebruik van het logo "In partnerschap met Code.org". ***Dit logo kan alleen worden gebruikt als specifieke toestemming schriftelijk is verleend door Code.org.*** We uiteindelijk een Uur Code-logo creëren, maar op dit moment hebben we er niet een. Onder geen enkele omstandigheid mogen het Code.org logo en de naam worden gebruikt. Beide zijn handelsmerk, en beide kunnen niet gezamelijk met een 3de partij merknaam gebruikt worden.
+**Include the CSEdWeek logo in your tutorial.** You can include the CSEdWeek logo ([small](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) or [big](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) in your tutorial, but this is not required. You may also contact us to request specific permission to use the “In Partnership with Code.org” logo. ***This logo can only be used if specific permission is granted in writing by Code.org.*** We may end up creating an Hour of Code logo, but at this time we do not have one. Under no circumstances can the Code.org logo and name be used. Both are trademarked, and can’t be co-mingled with a 3rd party brand name.
 
-**Zorg er voor dat de gemiddelde student comfortabel in een uurtje kan eindigen.** Overweeg het toevoegen van een open activiteit aan het einde voor studenten die sneller door de les gaan. Vergeet niet dat de meeste jongens en meisjes absolute beginners in de informatica en programmeren zullen zijn.
+**Make sure that the average student can finish comfortably in an hour.** Consider adding an open-ended activity at the end for students who move more quickly through the lesson. Remember that most kids will be absolute beginners to computer science and coding.
 
-**Leraar aanbevelingen opnemen.** De meeste activiteiten zouden student-gestuurd moeten zijn, maar als een activiteit wordt ondersteund door een leerkracht, geef dan duidelijke en eenvoudige aanwijzingen voor de leraar in de vorm van leraar-opmerkingen, biedt deze aan via een afzonderlijke URL bij uw activiteit. Niet alleen zijn de studenten beginners, sommige van de leraren zijn dat net zo goed. Omvat info zoals:
+**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Not only are the students novices, some of the teachers are as well. Include info such as:
 
   * Onze tutorial werkt het beste op de volgende platforms en browsers
   * Werkt het op smartphones? tablets?
   * Raadt u het programmeren in groepjes van twee leerlingen aan? 
   * Zijn er nog adviezen voor in de klas? (b.v.: is er een video, raad docenten dan aan de video op een projectiescherm te laten zien, zodat hij klassikaal bekeken kan worden.)
 
-**Geef aan het eind van de activiteit feedback **(b.v.: Je hebt 10 levels goed doorlopen en je weet nu veel over loops! Goed gedaan!)
+**Incorporate feedback at the end of the activity.** (E.g.: “You finished 10 levels and learned about loops! Great job!”)
 
-**Nemen van sociale media.** Moedig leerlingen aan om te posten op sociale media wanneer ze klaar zijn, bijvoorbeeld: "Ik heb net Een Uur Code gedaan met ___ en jij?" #HourOfCode" of "Ik heb gedaan een #HourofCode als een onderdeel van #CSEdWeek. En jij? @Scratch." Gebruik de hashtag **#HourOfCode** (met hoofdletters H, O, C)
+**Incorporate social media.** Encourage students to post to social media (where appropriate) when they’ve finished, for example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourofCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
 
-**Biedt de activiteit ook in andere talen dan Engels aan.** We willen dit jaar de campagne internationaal uitvoeren en willen daarom een aantal activiteiten hebben die aan niet-Engelssprekenden kunnen worden aangeboden.
+**Create your activity in languages besides English.** We're focusing this campaign internationally this year and would like to have a number of activities to offer non-English speaking participants.
 
-**Verbind de activiteit aan een maatschappelijk relevante context.** Studenten zullen computerprogrammeren als een machtig middel ervaren als ze zien dat het problemen in de wereld kan helpen oplossen!
+**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
 
-**Zorg dat studenten zich niet hoeven in te schrijven of dat ze moeten betalen om de tutorial te kunnen volgen.** Tutorials die inschrijving of betaling vereisen, zullen niet opgenomen worden in de lijst.
+**Do not require signup or payment before students can try your tutorial.** Tutorials that require signup or payment will not be listed
 
-**Zorg ervoor dat je tutorial kan worden gebruikt in een [Pair Programming paradigma](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning).**
+**Make sure your tutorial can be used in a [Pair Programming paradigm](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning).**
 
-De drie regels voor het programmeren in paren voor op school:
+The three rules of pair programming in a school setting:
 
   * De chauffeur is de baas over de muis en het toetsenbord.
   * De navigator geeft suggesties, merkt fouten op en stelt vragen. 
   * Studenten moeten minstens twee keer per sessie van rol wisselen.
 
-Voordelen van het programmeren in paren:
+Benefits of Pair Programming:
 
   * Leerlingen kunnen elkaar helpen en zijn niet afhankelijk van de docent.
   * Het laat zien dat "coding" geen solo-activiteit is, maar dat sociale interactie nodig is.
   * Niet alle klaslokalen of labs hebben genoeg computers voor een 1op1 ervaring.
 
-[**Terug naar de top**](#top)
+[**Back to the top**](#top)
 
 <a id="tm"></a>
 
 ## Richtlijnen voor gebruik van het handelsmerk
 
-Met ~40 miljoen studenten die het Uur Code hebben geprobeerd, en meer dan 97% van de deelnemende leraren welke ons vragen om deze gebeurtenis jaarlijks te herhalen, nemen we maatregelen om ervoor te zorgen dat we het Uur Code organiseren als een organisatie die dit jaarlijks met meer vertrouwen en zonder verwarring kan herhalen.
+With ~40 million students having tried the Hour of Code, and over 97% of participating teachers asking us to repeat the event annually, we are taking steps to make sure we set up the Hour of Code as a movement that can repeat annually with greater fidelity and without confusion.
 
-Één onderdeel om verwarring te voorkomen is het beschermen van het handelsmerk "Uur Code" . Veel van onze opdracht partners heb "Uur Code" op hun websites gebruikt. We willen dit gebruik niet stoppen, maar we willen wel een paar grenzen stellen:
+One piece of this is to protect the trademark "Hour of Code" to prevent confusion. Many of our tutorial partners have used "Hour of Code" on your web sites. We don't want to prevent this usage, but we want to make sure it fits within a few limits:
 
   1. Elke verwijzing naar "Uur Code" moet worden gebruikt op een zodanige manier deze niet suggereert dat het uw eigen merknaam is, maar dient te verwijzen naar het Uur Code als een organisatie. Goed voorbeeld: "Neem deel aan het Uur Code in ACMECorp.com". Slecht voorbeeld: "Probeer Uur Code door ACME Corp"
   2. Een "TM" superscript gebruiken in de meest prominente plaatsen waar u "Uur Code" gebruikt, zowel op uw website als in app omschrijvingen
@@ -195,33 +195,33 @@ Met ~40 miljoen studenten die het Uur Code hebben geprobeerd, en meer dan 97% va
 
   4. Geen gebruik van "Uur Code" in app namen
 
-[**Terug naar de top**](#top)
+[**Back to the top**](#top)
 
 <a id="pixel"></a>
 
 ## Bijhouden van Pixel
 
-Om nauwkeuriger deelname te kunnen bijhouden, verzoeken wij dat elke derde partij opdracht partners, zoals u,1-pixel afbeeldingen wil plaatsen op de eerste en de laatste pagina van hun uur van Code tutorials (een begin pixel-afbeelding op de startpagina. en een laatste pixel-afbeelding op de pagina einde En niet op tussentijdse pagina's).
+In order to more accurately track participation we ask every third party tutorial partners to include 1-pixel tracking images on the first and last page of their Hour of Code tutorials (A starting pixel-image on the start page and a final pixel-image on the end page. And not on interim pages).
 
-Dit maakt het ons mogelijk om gebruikers te volgen die u rechtstreeks trekt voor een bezoek aan uw website om mee te doen hun Uur Code, of gebruikers die u bezoeken wanneer een leraar uw URL rechtstreeks op hun whiteboard typt. Het zal leiden tot meer nauwkeurige deelname overzicht voor uw opdracht, wat u verder helpt nieuwe gebruikers aan te trekken. Als u de 1-pixel afbeelding op het einde toevoegt, zal deze ook meten hoeveel studenten de opdracht voltooiien.
+This will allow us to count users who you directly recruit to visit your website to do their Hour of Code, or users who visit when a teacher types your URL directly on their whiteboard. It will lead to more accurate participation counts for your tutorial, which will help you attract users. If you integrate the pixel at the end it will also allow us to measure tutorial completion rates.
 
-Als je opdracht is goedgekeurd en op de definitieve pagina van de opdrachtenpagina wordt opgenomen, zal Code.org u voorzien van een unieke tracking pixel. Zie het voorbeeld hieronder.
+If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
 
-***Opmerking: dit is niet belangrijk voor installeerbare apps (iOS/Android apps of desktop-install apps)***
+***NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)***
 
-**In het volgende voorbeeld tracking pixels voor AppInventor:**
+**Example tracking pixels for AppInventor:**
 
-IMG SRC = "http://code.org/api/hour/begin_appinventor.png/"
+IMG SRC="http://code.org/api/hour/begin_appinventor.png/"
 
-IMG SRC = "http://code.org/api/hour/finish_appinventor.png/"
+IMG SRC="http://code.org/api/hour/finish_appinventor.png/"
 
-[**Terug naar de top**](#top)
+[**Back to the top**](#top)
 
 <a id="promote"></a>
 
 ## Het bevorderen van uw opdrachten, CSEdWeek en Hour of Code
 
-Wij vragen iedereen om hun eigen 1-uur-tutorial te promoten bij uw gebruikers. Verwijs hen door naar uw eigen Uur Code pagina. Uw gebruikers zullen veel sneller reageren op een mailing van u over uw opdracht. Gebruik de internationale Uur Code campagne voor de onderwijs Week van de informatia als een excuus om hen aan te moedigen anderen te vragen mee te doen en ons te helpen 100 miljoen totale deelnemers te bereiken.
+We are asking everyone to promote their own 1-hour tutorial to your users. Please direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your tutorial. Use the international Hour of Code campaign for Computer Science Education Week as an excuse to encourage users to invite others to join in, help us reach 100 million total participants.
 
   * Laat het Uur Code en CSEdWeek op uw website zien.   
     Ex: <http://www.tynker.com/hour-of-code>
@@ -229,12 +229,12 @@ Wij vragen iedereen om hun eigen 1-uur-tutorial te promoten bij uw gebruikers. V
   * Organiseer een lokaal evenement of vraag uw werknemers voor het hosten van een evenement op lokale scholen.
   * Zie onze resourcekit voor meer informatie (volgt binnenkort).
 
-[**Terug naar de top**](#top)
+[**Back to the top**](#top)
 
 <a id="disabilities"></a>
 
 ## Een speciale opmerking voor studenten met een handicap
 
-Als u een opdracht ontwerpt voor blinden of slechtzienden, willen we dit graag weten om deze te markeren voor mensen met braille lezers. We hebben een dergelijke opdracht nog niet hebben ontvangen, en zouden dit graag een als een optie voor deze studenten geven.
+If you create a tutorial that is designed for the vision-impaired, we’d love to highlight it for viewers with screen-readers. We have not yet received such a tutorial, and would be eager to include one as an option for these students.
 
-[**Terug naar de top**](#top)
+[**Back to the top**](#top)

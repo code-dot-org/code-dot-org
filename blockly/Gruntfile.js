@@ -11,7 +11,8 @@ var APPS = process.env.MOOC_APP ? [process.env.MOOC_APP] : [
   'studio',
   'jigsaw',
   'calc',
-  'webapp'
+  'webapp',
+  'eval'
 ];
 
 // Parse options from environment.
@@ -183,7 +184,7 @@ config.sass = {
     }
   }
 };
-APPS.forEach(function(app) {
+APPS.filter(function (app) { return app != 'none'; }).forEach(function(app) {
   var src = 'style/' + app + '/style.scss';
   var dest = 'build/package/css/' + app + '.css';
   config.sass.all.files[dest] = src;

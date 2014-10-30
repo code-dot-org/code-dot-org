@@ -1,8 +1,4 @@
-* * *
 
-titre: Ressources affichage: large
-
-* * *
 
 # Comment attirer les médias à votre événement une Heure de Code
 

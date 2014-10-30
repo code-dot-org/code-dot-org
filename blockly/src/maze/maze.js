@@ -538,6 +538,7 @@ Maze.init = function(config) {
       extraControlRows: extraControlRows,
       blockUsed: undefined,
       idealBlockNumber: undefined,
+      editCode: level.editCode,
       blockCounterClass: 'block-counter-default'
     },
     hideRunButton: level.stepOnly && !level.edit_blocks
@@ -621,11 +622,6 @@ Maze.init = function(config) {
     if (skin.hideInstructions) {
       document.getElementById("bubble").style.display = "none";
     }
-  };
-
-  config.getDisplayWidth = function() {
-    var el = document.getElementById('visualizationColumn');
-    return el.getBoundingClientRect().width;
   };
 
   BlocklyApps.init(config);

@@ -1,6 +1,4 @@
----
-layout: wide
----
+
 
 # Bütün okulunuzu dahil edin
 

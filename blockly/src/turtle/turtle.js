@@ -39,6 +39,7 @@ var codegen = require('../codegen');
 var api = require('./api');
 var page = require('../templates/page.html');
 var feedback = require('../feedback.js');
+var utils = require('../utils');
 
 var level;
 var skin;
@@ -71,6 +72,13 @@ Turtle.visible = true;
  */
 Turtle.avatarImage = new Image();
 Turtle.numberAvatarHeadings = undefined;
+
+/**
+ * Drawing with a pattern
+ */
+
+Turtle.patternForPaths = new Image();
+Turtle.isDrawingWithPattern = false;
 
 /**
  * Initialize Blockly and the turtle.  Called on page load.
@@ -124,6 +132,7 @@ Turtle.init = function(config) {
       controls: require('./controls.html')({assetUrl: BlocklyApps.assetUrl}),
       blockUsed : undefined,
       idealBlockNumber : undefined,
+      editCode: level.editCode,
       blockCounterClass : 'block-counter-default'
     }
   });
@@ -172,14 +181,27 @@ Turtle.init = function(config) {
       Turtle.isPredrawing_ = false;
     }
 
+    // pre-load image for line pattern block. Creating the image object and setting source doesn't seem to be
+    // enough in this case, so we're actually creating and reusing the object within the document body.
+  
+    if (config.level.edit_blocks)
+    {
+      var imageContainer = document.createElement('div'); 
+      imageContainer.style.display='none';
+      document.body.appendChild(imageContainer);
+
+      for( var i = 0; i <  Blockly.Blocks.draw_line_style_pattern.Options.length; i++) {
+        var pattern = Blockly.Blocks.draw_line_style_pattern.Options[i][1];
+        var img = new Image();
+        img.src = skin[pattern];
+        img.id = pattern;
+        imageContainer.appendChild(img);
+      }
+    }
+
     // Adjust visualizationColumn width.
     var visualizationColumn = document.getElementById('visualizationColumn');
     visualizationColumn.style.width = '400px';
-  };
-
-  config.getDisplayWidth = function() {
-    var el = document.getElementById('visualizationColumn');
-    return el.getBoundingClientRect().width;
   };
 
   BlocklyApps.init(config);
@@ -363,16 +385,22 @@ BlocklyApps.reset = function(ignore) {
   Turtle.ctxFeedback.clearRect(
       0, 0, Turtle.ctxFeedback.canvas.width, Turtle.ctxFeedback.canvas.height);
 
+  // Reset to empty pattern
+  Turtle.setPattern(null);
+
   // Kill any task.
   if (Turtle.pid) {
     window.clearTimeout(Turtle.pid);
   }
   Turtle.pid = 0;
 
+  // Discard the interpreter.
+  Turtle.interpreter = null;
+
   // Stop the looping sound.
   BlocklyApps.stopLoopingAudio('start');
 
-  jumpSubstepUpto = 0;
+  jumpDistanceCovered = 0;
 };
 
 /**
@@ -449,10 +477,33 @@ Turtle.evalCode = function(code) {
 };
 
 /**
+ * Set up Turtle.code, Turtle.interpreter, etc. to run code for editCode levels
+ */
+function generateTurtleCodeFromJS () {
+  Turtle.code = utils.generateCodeAliases(level.codeFunctions, 'Turtle');
+  Turtle.userCodeStartOffset = Turtle.code.length;
+  Turtle.code += BlocklyApps.editor.getValue();
+  Turtle.userCodeLength = Turtle.code.length - Turtle.userCodeStartOffset;
+
+  var session = BlocklyApps.editor.aceEditor.getSession();
+  Turtle.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
+
+  var initFunc = function(interpreter, scope) {
+    codegen.initJSInterpreter(interpreter, scope, {
+                                      BlocklyApps: BlocklyApps,
+                                      Turtle: api } );
+  };
+  Turtle.interpreter = new window.Interpreter(Turtle.code, initFunc);
+}
+
+/**
  * Execute the user's code.  Heaven help us...
  */
 Turtle.execute = function() {
   api.log = [];
+
+  // Reset the graphic.
+  BlocklyApps.reset();
 
   if (feedback.hasExtraTopBlocks()) {
     // immediately check answer, which will fail and report top level blocks
@@ -460,13 +511,16 @@ Turtle.execute = function() {
     return;
   }
 
-  Turtle.code = Blockly.Generator.workspaceToCode('JavaScript');
-  Turtle.evalCode(Turtle.code);
+  if (level.editCode) {
+    generateTurtleCodeFromJS();
+  } else {
+    Turtle.code = Blockly.Generator.workspaceToCode('JavaScript');
+    Turtle.evalCode(Turtle.code);
+  }
 
   // api.log now contains a transcript of all the user's actions.
-  // Reset the graphic and animate the transcript.
-  BlocklyApps.reset();
   BlocklyApps.playAudio('start', {loop : true});
+  // animate the transcript.
   Turtle.pid = window.setTimeout(Turtle.animate, 100);
 
   // Disable toolbox while running
@@ -474,8 +528,47 @@ Turtle.execute = function() {
 };
 
 // Divide each jump into substeps so that we can animate every movement.
-var jumpSubstepUpto = 0;
-var jumpSubsteps = 10;
+var jumpDistance = 10;
+var jumpDistanceCovered = 0;
+
+/**
+ * Attempt to execute one command from the log of API commands.
+ */
+function executeTuple () {
+
+  if (api.log.length > 0)
+  {
+    var tuple = api.log[0];
+    var command = tuple[0];
+    var id = tuple[tuple.length-1];
+
+    BlocklyApps.highlight(String(id));
+    var smoothAnimate = skin.id == "anna" || skin.id == "elsa";
+    var tupleDone = Turtle.step(command, tuple.slice(1), {smoothAnimate: smoothAnimate});
+    Turtle.display();
+
+    if (tupleDone)
+    {
+      api.log.shift();
+      jumpDistanceCovered = 0;
+    }
+
+    return true;
+  }
+  else
+  {
+    return false;
+  }
+}
+
+/**
+ * Handle the tasks to be done after the user program is finished.
+ */
+function finishExecution () {
+  document.getElementById('spinner').style.visibility = 'hidden';
+  Blockly.mainWorkspace.highlightBlock(null);
+  Turtle.checkAnswer();
+}
 
 /**
  * Iterate through the recorded path and animate the turtle's actions.
@@ -484,65 +577,58 @@ Turtle.animate = function() {
   // All tasks should be complete now.  Clean up the PID list.
   Turtle.pid = 0;
 
-  var command;
-  var tuple;
+  if (level.editCode) {
+    var stepped = true;
+    while (stepped) {
+      codegen.selectCurrentCode(Turtle.interpreter,
+                                BlocklyApps.editor,
+                                Turtle.cumulativeLength,
+                                Turtle.userCodeStartOffset,
+                                Turtle.userCodeLength);
+      stepped = Turtle.interpreter.step();
 
-  if (skin.id == "anna" || skin.id == "elsa") {
-  
-    if (api.log.length === 0) {
-      document.getElementById('spinner').style.visibility = 'hidden';
-      Blockly.mainWorkspace.highlightBlock(null);
-      Turtle.checkAnswer();
+      if (executeTuple()) {
+        // We stepped far enough that we executed a commmand, break out:
+        break;
+      }
+    }
+    if (!stepped) {
+      // We dropped out of the step loop because we ran out of code, all done:
+      finishExecution();
       return;
     }
-
-    tuple = api.log[0];
-
-    // grab the command and id
-    command = tuple[0];
-    var id = tuple[tuple.length-1];
-
-    // highlight the correct block
-    BlocklyApps.highlight(id);
-
-    // execute and display the command
-    var shouldRepeat = Turtle.step(command, tuple.slice(1), {smoothAnimate: true});
-    Turtle.display();
-
-    // remove the tuple if we've done it enough times
-    console.log(jumpSubstepUpto);
-    if (! shouldRepeat || (shouldRepeat && ++jumpSubstepUpto >= jumpSubsteps))
-    {
-      api.log.shift();
-
-      jumpSubstepUpto = 0;
-    }
-
   } else {
-
-    tuple = api.log.shift();
-    if (!tuple) {
-      document.getElementById('spinner').style.visibility = 'hidden';
-      Blockly.mainWorkspace.highlightBlock(null);
-      Turtle.checkAnswer();
+    if (!executeTuple()) {
+      finishExecution();
       return;
     }
-
-    command = tuple.shift();
-    BlocklyApps.highlight(tuple.pop());
-
-    Turtle.step(command, tuple, {smoothAnimate: false});
-    Turtle.display();
   }
+
   // Scale the speed non-linearly, to give better precision at the fast end.
   var stepSpeed = 1000 * Math.pow(1 - Turtle.speedSlider.getValue(), 2);
   if (skin.id == "anna" || skin.id == "elsa")
   {
-    stepSpeed /= jumpSubsteps;
+    stepSpeed /= 10;
   }
   Turtle.pid = window.setTimeout(Turtle.animate, stepSpeed);
 };
 
+
+Turtle.doSmoothAnimate = function(options, distance)
+{
+  var tupleDone = true;
+
+  if (options && options.smoothAnimate)
+  {
+    var fullDistance = distance;
+    distance /= jumpDistance;
+    jumpDistanceCovered += distance;
+    if (jumpDistanceCovered < fullDistance)
+      tupleDone = false; 
+  }
+
+  return { tupleDone: tupleDone, distance: distance };
+}
 
 /**
  * Execute one step.
@@ -552,58 +638,40 @@ Turtle.animate = function() {
  * @param {object} single option for now: smoothAnimate (true/false)
  */
 Turtle.step = function(command, values, options) {
-  var shouldRepeat = false;
+  var tupleDone = true;
 
   switch (command) {
     case 'FD':  // Forward
       distance = values[0];
-      if (options && options.smoothAnimate)
-      {
-        distance /= jumpSubsteps;
-        console.log('fd', distance);
-        shouldRepeat = true;
-      }
-      Turtle.moveForward_(distance);
+      var result = Turtle.doSmoothAnimate(options, distance);
+      tupleDone = result.tupleDone;
+      Turtle.moveForward_(result.distance);
       break;
     case 'JF':  // Jump forward
       distance = values[0];
-      if (options && options.smoothAnimate)
-      {
-        distance /= jumpSubsteps;
-        shouldRepeat = true;
-      }
-      Turtle.jumpForward_(distance);
+      var result = Turtle.doSmoothAnimate(options, distance);
+      tupleDone = result.tupleDone;
+      Turtle.jumpForward_(result.distance);
       break;
     case 'MV':  // Move (direction)
       var distance = values[0];
-      if (options && options.smoothAnimate)
-      {
-        distance /= jumpSubsteps;
-        shouldRepeat = true;
-      }
-      var heading = values[1];
+      var result = Turtle.doSmoothAnimate(options, distance);
+      tupleDone = result.tupleDone;
       Turtle.setHeading_(heading);
-      Turtle.moveForward_(distance);
+      Turtle.moveForward_(result.distance);
       break;
     case 'JD':  // Jump (direction)
       distance = values[0];
-      if (options && options.smoothAnimate)
-      {
-        distance /= jumpSubsteps;
-        shouldRepeat = true;
-      }
-      heading = values[1];
+      var result = Turtle.doSmoothAnimate(options, distance);
+      tupleDone = result.tupleDone;
       Turtle.setHeading_(heading);
-      Turtle.jumpForward_(distance);
+      Turtle.jumpForward_(result.distance);
       break;
     case 'RT':  // Right Turn
-      var angle = values[0];
-      if (options && options.smoothAnimate)
-      {
-        angle /= jumpSubsteps;
-        shouldRepeat = true;
-      }
-      Turtle.turnByDegrees_(angle);
+      var distance = values[0];
+      var result = Turtle.doSmoothAnimate(options, distance);
+      tupleDone = result.tupleDone;
+      Turtle.turnByDegrees_(result.distance);
       break;
     case 'DP':  // Draw Print
       Turtle.ctxScratch.save();
@@ -627,6 +695,14 @@ Turtle.step = function(command, values, options) {
     case 'PC':  // Pen Colour
       Turtle.ctxScratch.strokeStyle = values[0];
       Turtle.ctxScratch.fillStyle = values[0];
+      Turtle.isDrawingWithPattern = false;
+      break;
+    case 'PS':  // Pen style with image
+      if (!values[0] || values[0] == 'DEFAULT') {
+          Turtle.setPattern(null);
+      } else {
+        Turtle.setPattern(document.getElementById(values[0])); 
+      }
       break;
     case 'HT':  // Hide Turtle
       Turtle.visible = false;
@@ -636,7 +712,17 @@ Turtle.step = function(command, values, options) {
       break;
   }
 
-  return shouldRepeat;
+  return tupleDone;
+};
+
+Turtle.setPattern = function (pattern) {
+  if ( pattern === null ) {
+    Turtle.patternForPaths = new Image();
+    Turtle.isDrawingWithPattern = false;
+  } else {
+    Turtle.patternForPaths = pattern;
+    Turtle.isDrawingWithPattern = true;
+  }
 };
 
 Turtle.jumpForward_ = function (distance) {
@@ -690,6 +776,11 @@ Turtle.moveForward_ = function (distance) {
     Turtle.jumpForward_(distance);
     return;
   }
+  if (Turtle.isDrawingWithPattern) {
+    Turtle.drawForwardWithPattern_(distance);
+    return;
+  }
+  
   Turtle.drawForward_(distance);
 };
 
@@ -699,6 +790,11 @@ Turtle.drawForward_ = function (distance) {
   } else {
     Turtle.drawForwardLine_(distance);
   }
+};
+
+Turtle.drawForwardWithPattern_ = function (distance) {
+  //TODO: deal with drawing joints, if appropriate
+  Turtle.drawForwardLineWithPattern_(distance);
 };
 
 /**
@@ -732,6 +828,27 @@ Turtle.drawForwardLine_ = function (distance) {
   Turtle.jumpForward_(distance);
   Turtle.drawToTurtle_(distance);
   Turtle.ctxScratch.stroke();
+};
+
+Turtle.drawForwardLineWithPattern_ = function (distance) {
+  Turtle.ctxScratch.moveTo(Turtle.x, Turtle.y);
+  var img = Turtle.patternForPaths;
+  var startX = Turtle.x;
+  var startY = Turtle.y;
+
+  Turtle.jumpForward_(distance);
+  Turtle.ctxScratch.save(); 
+  Turtle.ctxScratch.translate(startX, startY); 
+  Turtle.ctxScratch.rotate(Math.PI * (Turtle.heading - 90) / 180); // increment the angle and rotate the image. 
+                                                                 // Need to subtract 90 to accomodate difference in canvas 
+                                                                 // vs. Turtle direction
+  Turtle.ctxScratch.drawImage(img,
+    0, 0,                                 // Start point for clipping image
+    distance+img.height / 2, img.height,  // clip region size
+    -img.height / 4, -img.height / 2,      // draw location relative to the ctx.translate point pre-rotation
+    distance+img.height / 2, img.height); 
+                                                                     
+  Turtle.ctxScratch.restore();  
 };
 
 Turtle.shouldDrawJoints_ = function () {
@@ -871,6 +988,12 @@ Turtle.checkAnswer = function() {
         Turtle.message = commonMsg.tooMuchWork();
       }
     }
+  }
+
+  if (level.editCode) {
+    Turtle.testResults = levelComplete ?
+      BlocklyApps.TestResults.ALL_PASS :
+      BlocklyApps.TestResults.TOO_FEW_BLOCKS_FAIL;
   }
 
   // If the current level is a free play, always return the free play

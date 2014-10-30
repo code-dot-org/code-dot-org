@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+require_relative '../deployment'
+
+def main()
+  Dir.chdir(pegasus_dir) do
+    system "irb -r ./router"
+  end
+end
+
+main
