@@ -14,7 +14,7 @@ class LevelSourcesController < ApplicationController
   end
 
   def generate_image
-    if @game.app == Game::ARTIST
+    if @game.app == Game::ARTIST && ! ['anna', 'elsa'].include?(@level.skin) then
       framed_image
     else
       original_image

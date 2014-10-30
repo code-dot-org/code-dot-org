@@ -261,7 +261,7 @@ Turtle.placeImage = function(filename, position, scale) {
   };
   if (skin.id == "anna" || skin.id == "elsa")
   {
-    img.src = BlocklyApps.assetUrl('media/skins/' + skin.id + '/' + filename);
+    img.src = skin.assetUrl(filename);
   }
   else
   {
@@ -879,6 +879,13 @@ var isCorrect = function(pixelErrors, permittedErrors) {
  * BlocklyApps.displayFeedback when appropriate
  */
 var displayFeedback = function() {
+  var feedbackImageCanvas;
+  if (skin.id == "anna" || skin.id == "elsa") {
+    feedbackImageCanvas = Turtle.ctxDisplay;
+  } else {
+    feedbackImageCanvas = Turtle.ctxScratch;
+  }
+
   BlocklyApps.displayFeedback({
     app: 'turtle', //XXX
     skin: skin.id,
@@ -886,7 +893,7 @@ var displayFeedback = function() {
     message: Turtle.message,
     response: Turtle.response,
     level: level,
-    feedbackImage: Turtle.ctxDisplay.canvas.toDataURL("image/png"),
+    feedbackImage: feedbackImageCanvas.canvas.toDataURL("image/png"),
     // add 'impressive':true to non-freeplay levels that we deem are relatively impressive (see #66990480)
     showingSharing: level.freePlay || level.impressive,
     // impressive levels are already saved
@@ -1038,9 +1045,16 @@ Turtle.checkAnswer = function() {
 };
 
 var getFeedbackImage = function() {
+  var feedbackImageCanvas;
+  if (skin.id == "anna" || skin.id == "elsa") {
+    feedbackImageCanvas = Turtle.ctxDisplay;
+  } else {
+    feedbackImageCanvas = Turtle.ctxScratch;
+  }
+
   // Copy the user layer
   Turtle.ctxFeedback.globalCompositeOperation = 'copy';
-  Turtle.ctxFeedback.drawImage(Turtle.ctxScratch.canvas, 0, 0, 154, 154);
+  Turtle.ctxFeedback.drawImage(feedbackImageCanvas.canvas, 0, 0, 154, 154);
   var feedbackCanvas = Turtle.ctxFeedback.canvas;
   return encodeURIComponent(
       feedbackCanvas.toDataURL("image/png").split(',')[1]);
