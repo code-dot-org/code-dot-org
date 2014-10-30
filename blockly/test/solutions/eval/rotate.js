@@ -8,7 +8,7 @@ var solutionXml = blockUtils.mathBlockXml('rotate', {
     'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'red' } ),
     'STYLE': blockUtils.mathBlockXml('functional_string', null, { VAL: 'outline' })
   }),
-  'DEGREES': 45
+  'DEGREES': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 45 } )
 });
 
 module.exports = {
@@ -43,7 +43,8 @@ module.exports = {
         var stroke = rect.getAttribute('stroke');
         assert(fill === 'none', 'fill: ' + fill);
         assert(stroke === 'red', 'stroke: ' + stroke);
-        assert(rect.getAttribute('transform') === ' rotate(45) translate(200 200)');
+        assert(rect.getAttribute('transform') === ' translate(200 200) rotate(45)',
+          'actual: ' + rect.getAttribute('transform'));
         assert(rect.getAttribute('width', 50));
         assert(rect.getAttribute('height', 100));
         return true;
