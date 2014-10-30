@@ -245,6 +245,13 @@ Blockly.mainBlockSpace = null;
 Blockly.mainBlockSpaceEditor = null;
 
 /**
+ * The currently active workspace (defined by inject.js).
+ * TODO(bjordan/jlory): remove static toggle, grab from caller contexts or use a global block store
+ * @type {Blockly.BlockSpaceEditor}
+ */
+Blockly.activeWorkspace = null;
+
+/**
  * Contents of the local clipboard.
  * @type {Element}
  * @private
@@ -421,11 +428,4 @@ Blockly.removeAllRanges = function() {
       }, 0);
     }
   }
-};
-
-/**
- * @returns {*|Blockly.mainWorkspace}
- */
-Blockly.getActiveWorkspace = function() {
-  return Blockly.modalWorkspace || Blockly.mainBlockSpace;
 };

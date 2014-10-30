@@ -9,6 +9,7 @@ goog.provide('Blockly.FunctionEditor');
 
 goog.require('Blockly.BlockSpace');
 goog.require('Blockly.HorizontalFlyout');
+goog.require('goog.style');
 
 /**
  * Class for a modal function editor.
@@ -17,7 +18,40 @@ goog.require('Blockly.HorizontalFlyout');
 Blockly.FunctionEditor = function() {
 };
 
-Blockly.FunctionEditor.prototype.refreshToolbox_ = function() {
+/**
+ * Whether this editor has been initialized
+ * @type {boolean}
+ * @private
+ */
+Blockly.FunctionEditor.prototype.created_ = false;
+
+Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
+  var definitionBlock = Blockly.mainBlockSpace.findFunction(functionName, definitionBlock);
+  if (!definitionBlock) {
+    throw new Error("Can't find definition block to edit");
+  }
+
+  this.functionDefinitionBlock = definitionBlock;
+  // TODO(bjordan/dbailey) set definition block to this block space
+  // this.functionDefinitionBlock.setBlockSpace(Blockly.modalBlockSpaceEditor.blockSpace);
+  this.functionDefinitionBlock.moveTo(FRAME_MARGIN_SIDE, FRAME_MARGIN_TOP);
+  this.functionDefinitionBlock.movable_ = false;
+
+  this.show();
+};
+
+Blockly.FunctionEditor.prototype.openWithNewFunction = function () {
+  this.ensureCreated_();
+
+  // TODO(bjordan/dbailey) set definition block to no block space (gets set in OpenAndEdit)
+  var newBlock = Blockly.Xml.domToBlock_(Blockly.modalWorkspace,
+    Blockly.createSvgElement('block', {type: 'procedures_defnoreturn'}));
+  Blockly.mainBlockSpace.addTopBlock(newBlock);
+  this.functionDefinitionBlock = newBlock;
+  this.openAndEditFunction(this.functionDefinitionBlock.getTitleValue('NAME'));
+};
+
+Blockly.FunctionEditor.prototype.bindToolboxHandlers_ = function() {
   var paramAddText = goog.dom.getElement('paramAddText');
   var paramAddButton = goog.dom.getElement('paramAddButton');
   Blockly.bindEvent_(paramAddButton, 'mousedown', this, handleParamAdd);
@@ -37,11 +71,9 @@ Blockly.FunctionEditor.prototype.refreshToolbox_ = function() {
     this.flyout_.hide();
     this.flyout_.show(this.paramToolboxBlocks);
     // Update the function definition
-    this.functionDefinition.arguments_.push(varName);
-    this.functionDefinition.updateParams_();
+    this.functionDefinitionBlock.arguments_.push(varName);
+    this.functionDefinitionBlock.updateParams_();
   }
-  this.flyout_.hide();
-  this.flyout_.show(this.paramToolboxBlocks);
 };
 
 Blockly.FunctionEditor.prototype.renameParameter = function(oldName, newName) {
@@ -50,10 +82,36 @@ Blockly.FunctionEditor.prototype.renameParameter = function(oldName, newName) {
       block.firstElementChild.innerHTML = newName;
     }
   });
-  this.refreshToolbox_();
+  this.flyout_.hide();
+  this.flyout_.show(this.paramToolboxBlocks);
 };
 
 Blockly.FunctionEditor.prototype.show = function() {
+  this.ensureCreated_();
+
+  Blockly.activeWorkspace = Blockly.modalBlockSpaceEditor.blockSpace;
+  goog.style.showElement(this.container_, true);
+  goog.style.showElement(this.modalBackground_, true);
+};
+
+Blockly.FunctionEditor.prototype.ensureCreated_ = function() {
+  if (!this.created_) {
+    this.create_();
+    this.created_ = true;
+  }
+};
+
+Blockly.FunctionEditor.prototype.hide = function() {
+  Blockly.activeWorkspace = Blockly.mainBlockSpace;
+  goog.style.showElement(this.container_, false);
+  goog.style.showElement(this.modalBackground_, false);
+};
+
+Blockly.FunctionEditor.prototype.create_ = function() {
+  if (this.created_) {
+    throw "Attempting to re-create already created Function Editor";
+  }
+
   this.container_ = document.createElement('div');
   this.container_.setAttribute('id', 'modalContainer');
   goog.dom.getElement('blockly').appendChild(this.container_);
@@ -72,9 +130,23 @@ Blockly.FunctionEditor.prototype.show = function() {
   });
   Blockly.modalWorkspace = Blockly.modalBlockSpaceEditor.blockSpace;
 
+  // Add modal background and close button
   this.modalBackground_ = Blockly.createSvgElement('g', {'class': 'modalBackground'});
   Blockly.mainBlockSpaceEditor.svg_.appendChild(this.modalBackground_);
-  Blockly.modalWorkspace.addTrashcan();
+  this.closeButton_ = Blockly.createSvgElement('image', {
+    'id': 'modalEditorClose',
+    'width': 50,
+    'height': 50,
+    'y': -2
+  });
+  this.closeButton_.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', '/blockly/media/common_images/x-button.png');
+  Blockly.modalBlockSpaceEditor.svg_.appendChild(this.closeButton_);
+
+  // Add the function definition block
+  this.functionDefinition = Blockly.Xml.domToBlock_(Blockly.modalWorkspace,
+      Blockly.createSvgElement('block', {type: 'procedures_defnoreturn'}));
+  this.functionDefinition.moveTo(FRAME_MARGIN_SIDE, FRAME_MARGIN_TOP);
+  this.functionDefinition.movable_ = false;
 
   // Set up contract definition HTML section
   this.createContractDom_();
@@ -86,11 +158,19 @@ Blockly.FunctionEditor.prototype.show = function() {
       Blockly.selected.unselect();
     }
   });
+
+  Blockly.bindEvent_(goog.dom.getElement('modalEditorClose'), 'mousedown', this, this.hide);
+  Blockly.bindEvent_(goog.dom.getElement('functionNameText'), 'input', this, functionNameChange);
+  Blockly.bindEvent_(goog.dom.getElement('functionNameText'), 'keydown', this, functionNameChange); // IE9 doesn't fire oninput when delete key is pressed
   Blockly.bindEvent_(this.contractDiv_, 'mousedown', null, function() {
     if (Blockly.selected) {
       Blockly.selected.unselect();
     }
   });
+
+  function functionNameChange(e) {
+    this.functionDefinition.setTitleValue(e.target.value, 'NAME');
+  }
 
   // Set up parameters toolbox
   this.paramToolboxBlocks = [];
@@ -98,7 +178,7 @@ Blockly.FunctionEditor.prototype.show = function() {
   var flyoutDom = this.flyout_.createDom();
   Blockly.modalWorkspace.svgGroup_.insertBefore(flyoutDom, Blockly.modalWorkspace.svgBlockCanvas_);
   this.flyout_.init(Blockly.modalWorkspace, false);
-  this.refreshToolbox_();
+  this.bindToolboxHandlers_();
 
   var left = goog.dom.getElementByClass(Blockly.hasCategories ? 'blocklyToolboxDiv' : 'blocklyFlyoutBackground').getBoundingClientRect().width;
   var top = 0;
@@ -125,19 +205,14 @@ Blockly.FunctionEditor.prototype.show = function() {
   this.frameText_.appendChild(document.createTextNode(Blockly.Msg.FUNCTION_HEADER));
   this.position_();
 
-  // Add the function definition block
-  this.functionDefinition = Blockly.Xml.domToBlock_(Blockly.modalWorkspace,
-      Blockly.createSvgElement('block', {type: 'procedures_defnoreturn'}));
-  this.functionDefinition.moveTo(FRAME_MARGIN_SIDE, FRAME_MARGIN_TOP);
-  this.functionDefinition.movable_ = false;
-
   this.onResizeWrapper_ = Blockly.bindEvent_(window,
       goog.events.EventType.RESIZE, this, this.position_);
 
   Blockly.modalBlockSpaceEditor.svgResize();
 };
 
-Blockly.FunctionEditor.prototype.hide = function() {
+Blockly.FunctionEditor.prototype.destroy_ = function() {
+  // TODO(bjordan/jlory): needed? when to call?
   delete Blockly.modalWorkspace;
   this.modalBackground_ = null;
   if (this.onResizeWrapper_) {
@@ -165,20 +240,20 @@ Blockly.FunctionEditor.prototype.position_ = function() {
   }
 
   // Resize contract div width
-  this.resizeContractDiv_();
+  this.contractDiv_.style.width = metrics.viewWidth + 'px';
+
+  // Move the close button
+  this.closeButton_.setAttribute('x', metrics.absoluteLeft + metrics.viewWidth - 30 + 'px');
 
   // Move workspace to account for horizontal flyout height
   Blockly.modalBlockSpaceEditor.svgResize();
 };
 
-Blockly.FunctionEditor.prototype.resizeContractDiv_ = function() {
-  this.contractDiv_.style.width = Blockly.modalWorkspace.getMetrics().viewWidth + 'px';
-};
-
 Blockly.FunctionEditor.prototype.createContractDom_ = function() {
   this.contractDiv_ = goog.dom.createDom('div', 'blocklyToolboxDiv paramToolbox blocklyText');
   this.container_.insertBefore(this.contractDiv_, this.container_.firstChild);
-  this.contractDiv_.innerHTML = '<div>Name your function:</div><div><input type="text""></div>'
+  this.contractDiv_.innerHTML = '<div>Name your function:</div>'
+      + '<div><input id="functionNameText" type="text" value="' + this.functionDefinition.getTitleValue('NAME') + '"></div>'
       + '<div>What is your function supposed to do?</div>'
       + '<div><textarea rows="2"></textarea></div>'
       + '<div>What parameters does your function take?</div>'
@@ -186,7 +261,7 @@ Blockly.FunctionEditor.prototype.createContractDom_ = function() {
   var metrics = Blockly.modalWorkspace.getMetrics();
   this.contractDiv_.style.left = metrics.absoluteLeft + 'px';
   this.contractDiv_.style.top = metrics.absoluteTop + 'px';
-  this.resizeContractDiv_();
+  this.contractDiv_.style.width = metrics.viewWidth + 'px';
   this.contractDiv_.style.display = 'block';
 };
 
