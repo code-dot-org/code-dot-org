@@ -34,7 +34,9 @@ module.exports = {
         assert(fill === 'none', 'fill: ' + fill);
         assert(stroke === 'red', 'stroke: ' + stroke);
         assert(circle.getAttribute('cx') === '0');
-        assert(circle.getAttribute('cy') === '400'); // 0 in cartesian space maps to 400 in pixel space
+        assert(circle.getAttribute('cy') === '0');
+        // 0 in cartesian space maps to 400 in pixel space
+        assert(circle.getAttribute('transform', ' translate(0, 400)'));
         return true;
       },
       xml: '<xml>' + solutionXml + '</xml>'
