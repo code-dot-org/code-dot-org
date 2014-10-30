@@ -26,30 +26,29 @@ Blockly.FunctionEditor = function() {
 Blockly.FunctionEditor.prototype.created_ = false;
 
 Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
-  var definitionBlock;
-
-  // Get hidden function definition from blockSpace
-  var blocks = Blockly.mainBlockSpace.getAllBlocks();
-  for (var x = 0, block; block = blocks[x]; x++) {
-    if (block.type === 'procedures_defnoreturn' && Blockly.Names.equals(functionName, block.getTitleValue('NAME'))) {
-      definitionBlock = block;
-    }
-  }
-
+  var definitionBlock = Blockly.mainBlockSpace.findFunction(functionName, definitionBlock);
   if (!definitionBlock) {
     throw new Error("Can't find definition block to edit");
   }
 
-  /**
-   * TODO(bjordan):
-   *    Below, load block into workspace with:
-   *   '<xml>' + goog.dom.getOuterHtml(Blockly.Xml.blockToDom_(definitionBlock)) + '</xml>'
-   * Temporarily may need to:
-   *    Blockly.mainBlockSpace.removeTopBlock(definitionBlock);
-   *      until we have block hiding / it lives in invisible block store
-   */
+  this.functionDefinitionBlock = definitionBlock;
+  // TODO(bjordan/dbailey) set definition block to this block space
+  // this.functionDefinitionBlock.setBlockSpace(Blockly.modalBlockSpaceEditor.blockSpace);
+  this.functionDefinitionBlock.moveTo(FRAME_MARGIN_SIDE, FRAME_MARGIN_TOP);
+  this.functionDefinitionBlock.movable_ = false;
 
   this.show();
+};
+
+Blockly.FunctionEditor.prototype.openWithNewFunction = function () {
+  this.ensureCreated_();
+
+  // TODO(bjordan/dbailey) set definition block to no block space (gets set in OpenAndEdit)
+  var newBlock = Blockly.Xml.domToBlock_(Blockly.modalWorkspace,
+    Blockly.createSvgElement('block', {type: 'procedures_defnoreturn'}));
+  Blockly.mainBlockSpace.addTopBlock(newBlock);
+  this.functionDefinitionBlock = newBlock;
+  this.openAndEditFunction(this.functionDefinitionBlock.getTitleValue('NAME'));
 };
 
 Blockly.FunctionEditor.prototype.refreshToolbox_ = function() {
@@ -72,8 +71,8 @@ Blockly.FunctionEditor.prototype.refreshToolbox_ = function() {
     this.flyout_.hide();
     this.flyout_.show(this.paramToolboxBlocks);
     // Update the function definition
-    this.functionDefinition.arguments_.push(varName);
-    this.functionDefinition.updateParams_();
+    this.functionDefinitionBlock.arguments_.push(varName);
+    this.functionDefinitionBlock.updateParams_();
   }
   this.flyout_.hide();
   this.flyout_.show(this.paramToolboxBlocks);
@@ -91,6 +90,7 @@ Blockly.FunctionEditor.prototype.renameParameter = function(oldName, newName) {
 Blockly.FunctionEditor.prototype.show = function() {
   this.ensureCreated_();
 
+  Blockly.activeWorkspace = Blockly.modalBlockSpaceEditor.blockSpace;
   goog.style.showElement(this.container_, true);
   goog.style.showElement(this.modalBackground_, true);
 };
@@ -103,6 +103,7 @@ Blockly.FunctionEditor.prototype.ensureCreated_ = function() {
 };
 
 Blockly.FunctionEditor.prototype.hide = function() {
+  Blockly.activeWorkspace = Blockly.mainBlockSpace;
   goog.style.showElement(this.container_, false);
   goog.style.showElement(this.modalBackground_, false);
 };
@@ -192,12 +193,6 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   }, this.modalBackground_);
   this.frameText_.appendChild(document.createTextNode(Blockly.Msg.FUNCTION_HEADER));
   this.position_();
-
-  // Add the function definition block
-  this.functionDefinition = Blockly.Xml.domToBlock_(Blockly.modalWorkspace,
-      Blockly.createSvgElement('block', {type: 'procedures_defnoreturn'}));
-  this.functionDefinition.moveTo(FRAME_MARGIN_SIDE, FRAME_MARGIN_TOP);
-  this.functionDefinition.movable_ = false;
 
   this.onResizeWrapper_ = Blockly.bindEvent_(window,
       goog.events.EventType.RESIZE, this, this.position_);

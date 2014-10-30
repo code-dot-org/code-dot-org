@@ -424,8 +424,7 @@ Blockly.removeAllRanges = function() {
 };
 
 /**
- * @returns {*|Blockly.mainWorkspace}
+ * TODO(bjordan/jlory): remove static toggle, grab from caller contexts or use a global block store
+ * @type {Blockly.BlockSpace}
  */
-Blockly.getActiveWorkspace = function() {
-  return Blockly.modalWorkspace || Blockly.mainBlockSpace;
-};
+Blockly.activeWorkspace = Blockly.mainBlockSpace;

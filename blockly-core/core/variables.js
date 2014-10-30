@@ -50,8 +50,8 @@ Blockly.Variables.allVariables = function(opt_block) {
     blocks = opt_block.getDescendants();
   } else {
     blocks = Blockly.mainBlockSpace.getAllBlocks();
-    if (Blockly.getActiveWorkspace() !== Blockly.mainBlockSpace) {
-      blocks.concat(Blockly.getActiveWorkspace().getAllBlocks());
+    if (Blockly.activeWorkspace !== Blockly.mainBlockSpace) {
+      blocks.concat(Blockly.activeWorkspace.getAllBlocks());
     }
   }
   var variableHash = {};
@@ -85,7 +85,7 @@ Blockly.Variables.allVariables = function(opt_block) {
  * @param {string} newName New variable name.
  */
 Blockly.Variables.renameVariable = function(oldName, newName) {
-  var blocks = Blockly.getActiveWorkspace().getAllBlocks();
+  var blocks = Blockly.activeWorkspace.getAllBlocks();
   if (Blockly.modalWorkspace) {
     blocks = blocks.concat(Blockly.functionEditor.flyout_.workspace_.getTopBlocks());
   }
@@ -105,7 +105,7 @@ Blockly.Variables.renameVariable = function(oldName, newName) {
  * @param {string} newName New variable name.
  */
 Blockly.Variables.deleteVariable = function(oldName, newName) {
-  var blocks = Blockly.getActiveWorkspace().getAllBlocks();
+  var blocks = Blockly.activeWorkspace.getAllBlocks();
   // Iterate through every block.
   for (var x = 0; x < blocks.length; x++) {
     var func = blocks[x].getVars;
