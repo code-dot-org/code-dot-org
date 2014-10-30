@@ -7988,6 +7988,7 @@ exports.install = function(blockly, generator, gensym) {
  installDrawASquare(blockly, generator, gensym);
  installCreateACircle(blockly, generator, gensym);
  installCreateASnowflower(blockly, generator, gensym);
+ installCreateASnowflakeBranch(blockly, generator, gensym);
  installDrawATriangle(blockly, generator, gensym);
  installDrawAHouse(blockly, generator, gensym);
  installDrawAFlower(blockly, generator, gensym);
@@ -8096,7 +8097,7 @@ function installCreateACircle(blockly, generator, gensym) {
 }
 
 /**
- * create_a_
+ * create_a_snowflower
  */
 function installCreateASnowflower(blockly, generator, gensym) {
   blockly.Blocks.create_a_snowflower = {
@@ -8114,12 +8115,49 @@ function installCreateASnowflower(blockly, generator, gensym) {
   generator.create_a_snowflower = function() {
     var loopVar = gensym('count');
     return [
-      '// draw_a_snowflower',
+      '// create_a_snowflower',
       'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 5; ' + loopVar + '++) {',
       createACircleCode(2, gensym, '  '),
       createACircleCode(4, gensym, '  '),
       '  Turtle.turnRight(72);',
       '}\n'].join('\n');
+  };
+}
+
+/**
+ * create_a_snowflower
+ */
+function installCreateASnowflakeBranch(blockly, generator, gensym) {
+  blockly.Blocks.create_a_snowflake_branch = {
+    // Draw a square.
+    init: function() {
+      this.setHSV(94, 0.84, 0.60);
+      this.appendDummyInput()
+          .appendTitle(msg.createASnowflakeBranch());
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip('');
+    }
+  };
+
+  generator.create_a_snowflake_branch = function() {
+    var loopVar = gensym('count');
+    var loopVar2 = gensym('count');
+    return [
+      '// create_a_snowflake_branch',
+      'Turtle.jumpForward(90);',
+      'Turtle.turnLeft(45);',
+      'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 3; ' + loopVar + '++) {',
+      '  for (var ' + loopVar2 + ' = 0; ' + loopVar2 + ' < 3; ' + loopVar2 + '++) {',
+      '    Turtle.moveForward(30);',
+      '    Turtle.moveBackward(30);',
+      '    Turtle.turnRight(45);',
+      '  }',
+      '  Turtle.turnLeft(90);',
+      '  Turtle.moveBackward(30);',
+      '  Turtle.turnLeft(45);',
+      '}',
+      'Turtle.turnRight(45);\n'].join('\n');
   };
 }
 
@@ -10487,32 +10525,6 @@ Turtle.animate = function() {
   // All tasks should be complete now.  Clean up the PID list.
   Turtle.pid = 0;
 
-<<<<<<< HEAD
-  var command;
-  var tuple;
-
-  if (skin.id == "anna" || skin.id == "elsa") {
-  
-    if (api.log.length === 0) {
-      document.getElementById('spinner').style.visibility = 'hidden';
-      Blockly.mainWorkspace.highlightBlock(null);
-      Turtle.checkAnswer();
-      return;
-    }
-
-    tuple = api.log[0];
-
-    // grab the command and id
-    command = tuple[0];
-    var id = tuple[tuple.length-1];
-
-    // highlight the correct block
-    BlocklyApps.highlight(id);
-
-    // execute and display the command
-    var shouldRepeat = Turtle.step(command, tuple.slice(1), {smoothAnimate: true});
-    Turtle.display();
-=======
   if (level.editCode) {
     var stepped = true;
     while (stepped) {
@@ -10539,40 +10551,6 @@ Turtle.animate = function() {
       return;
     }
   }
->>>>>>> staging
-
-    // remove the tuple if we've done it enough times
-    console.log(jumpSubstepUpto);
-    if (! shouldRepeat || (shouldRepeat && ++jumpSubstepUpto >= jumpSubsteps))
-    {
-      api.log.shift();
-
-      jumpSubstepUpto = 0;
-    }
-
-  } else {
-
-    tuple = api.log.shift();
-    if (!tuple) {
-      document.getElementById('spinner').style.visibility = 'hidden';
-      Blockly.mainWorkspace.highlightBlock(null);
-      Turtle.checkAnswer();
-      return;
-    }
-
-    command = tuple.shift();
-    BlocklyApps.highlight(tuple.pop());
-
-    Turtle.step(command, tuple, {smoothAnimate: false});
-    Turtle.display();
-  }
-  // Scale the speed non-linearly, to give better precision at the fast end.
-  var stepSpeed = 1000 * Math.pow(1 - Turtle.speedSlider.getValue(), 2);
-  if (skin.id == "anna" || skin.id == "elsa")
-  {
-    stepSpeed /= jumpSubsteps;
-  }
-  Turtle.pid = window.setTimeout(Turtle.animate, stepSpeed);
 };
 
 
@@ -11502,6 +11480,8 @@ exports.colourTooltip = function(d){return "Changes the color of the pencil."};
 exports.createACircle = function(d){return "create a circle"};
 
 exports.createASnowflower = function(d){return "create a snowflower"};
+
+exports.createASnowflakeBranch = function(d){return "create a snowflake branch"};
 
 exports.degrees = function(d){return "degrees"};
 
