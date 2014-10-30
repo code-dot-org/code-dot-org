@@ -835,7 +835,6 @@ exports.install = function(blockly, blockInstallOptions) {
         this.id + '\');\n';
   };
 
-
   blockly.Blocks.draw_line_style_pattern = {
     // Block to handle event when an arrow button is pressed.
     helpUrl: '',
@@ -907,6 +906,45 @@ exports.install = function(blockly, blockInstallOptions) {
     // Generate JavaScript for changing turtle visibility.
     return 'Turtle.' + this.getTitleValue('VISIBILITY') +
         '(\'block_id_' + this.id + '\');\n';
+  };
+
+  blockly.Blocks.turtle_stamp = {
+    helpUrl: '',
+    init: function() {
+      this.setHSV(312, 0.32, 0.62);
+      var dropdown;
+      var input = this.appendDummyInput();
+      input.appendTitle(msg.drawStamp());
+      dropdown = new blockly.FieldImageDropdown(this.VALUES, 50, 30);
+
+      input.appendTitle(dropdown, 'VALUE');
+
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.drawStamp());
+    }
+  };
+
+  blockly.Blocks.turtle_stamp.VALUES = [
+    [skin.assetUrl('snowflake.png'), 'snowflake1'],
+    [skin.assetUrl('snowflake.png'), 'snowflake2'],
+    [skin.assetUrl('snowflake.png'), 'snowflake3'],
+  ];
+
+  // Preload stamp images
+  Turtle.stamps = [];
+  for (var i = 0; i < blockly.Blocks.turtle_stamp.VALUES.length; i++) {
+    var url = blockly.Blocks.turtle_stamp.VALUES[i][0];
+    var key = blockly.Blocks.turtle_stamp.VALUES[i][1];
+    var img = new Image();
+    img.src = url;
+    Turtle.stamps[key] = img;
+  }
+
+  generator.turtle_stamp = function () {
+    return 'Turtle.drawStamp("' + this.getTitleValue('VALUE') +
+        '", \'block_id_' + this.id + '\');\n';
   };
 
   customLevelBlocks.install(blockly, generator, gensym);
