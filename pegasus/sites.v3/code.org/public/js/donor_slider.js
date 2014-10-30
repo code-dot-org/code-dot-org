@@ -1,6 +1,8 @@
 $(document).ready(function() {
-  var platinum = randomizeOrderBetter($(".platinum"));
-  var gold = randomizeOrderBetter($(".gold"));
+  randomizeOrder($(".platinum"));
+  randomizeOrder($(".gold"));
+  var platinum = $(".platinum");
+  var gold = $(".gold");
 
   var masterIndex = 3; // The number of badges that have been shown this cycle
   var combinedLength = platinum.length + gold.length;
@@ -63,12 +65,9 @@ $(document).ready(function() {
 });
 
 // Takes a list of badges, randomizes (based on Fisher–Yates shuffle) their order in the DOM, and returns a list of badges in the new order.
-function randomizeOrderBetter (items) {
+function randomizeOrder (items) {
   for (var i = items.children().length; i >= 0; i--) {
-    var randomIndex = Math.random() * i | 0;
-    var temp = items.eq(randomIndex).parent().detach(); // Remove the badge (and the containing anchor) from the DOM
-    items.append(temp.children()[0]); // Add the badge to the end of the list of badges
+    var temp = items.eq(Math.random() * i | 0).parent().detach(); // Remove the badge (and the containing anchor) from the DOM
     temp.appendTo(".badge-container"); // Re-add the badge (and the containing anchor) to thd DOM.
   }
-  return items;
 }
