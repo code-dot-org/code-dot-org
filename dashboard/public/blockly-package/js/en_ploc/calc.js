@@ -7001,6 +7001,7 @@ exports.load = function(assetUrl, id) {
     squigglyLine: assetUrl('media/common_images/squiggly.png'),
     swirlyLine: assetUrl('media/common_images/swirlyline.png'),
     randomPurpleIcon: assetUrl('media/common_images/random-purple.png'),
+
     // Sounds
     startSound: [skinUrl('start.mp3'), skinUrl('start.ogg')],
     winSound: [skinUrl('win.mp3'), skinUrl('win.ogg')],
