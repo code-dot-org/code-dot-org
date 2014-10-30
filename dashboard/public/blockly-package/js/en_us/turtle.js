@@ -6088,6 +6088,7 @@ exports.load = function(assetUrl, id) {
     squigglyLine: assetUrl('media/common_images/squiggly.png'),
     swirlyLine: assetUrl('media/common_images/swirlyline.png'),
     randomPurpleIcon: assetUrl('media/common_images/random-purple.png'),
+
     // Sounds
     startSound: [skinUrl('start.mp3'), skinUrl('start.ogg')],
     winSound: [skinUrl('win.mp3'), skinUrl('win.ogg')],
@@ -7020,6 +7021,10 @@ exports.showTurtle = function(id) {
   this.log.push(['ST', id]);
 };
 
+exports.drawStamp = function(stamp, id) {
+  this.log.push(['stamp', stamp, id]);
+};
+
 },{"../base":2}],29:[function(require,module,exports){
 /**
  * Blockly Demo: Turtle Graphics
@@ -7858,7 +7863,6 @@ exports.install = function(blockly, blockInstallOptions) {
         this.id + '\');\n';
   };
 
-
   blockly.Blocks.draw_line_style_pattern = {
     // Block to handle event when an arrow button is pressed.
     helpUrl: '',
@@ -7930,6 +7934,45 @@ exports.install = function(blockly, blockInstallOptions) {
     // Generate JavaScript for changing turtle visibility.
     return 'Turtle.' + this.getTitleValue('VISIBILITY') +
         '(\'block_id_' + this.id + '\');\n';
+  };
+
+  blockly.Blocks.turtle_stamp = {
+    helpUrl: '',
+    init: function() {
+      this.setHSV(312, 0.32, 0.62);
+      var dropdown;
+      var input = this.appendDummyInput();
+      input.appendTitle(msg.drawStamp());
+      dropdown = new blockly.FieldImageDropdown(this.VALUES, 50, 30);
+
+      input.appendTitle(dropdown, 'VALUE');
+
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.drawStamp());
+    }
+  };
+
+  blockly.Blocks.turtle_stamp.VALUES = [
+    [skin.assetUrl('snowflake.png'), 'snowflake1'],
+    [skin.assetUrl('snowflake.png'), 'snowflake2'],
+    [skin.assetUrl('snowflake.png'), 'snowflake3'],
+  ];
+
+  // Preload stamp images
+  Turtle.stamps = [];
+  for (var i = 0; i < blockly.Blocks.turtle_stamp.VALUES.length; i++) {
+    var url = blockly.Blocks.turtle_stamp.VALUES[i][0];
+    var key = blockly.Blocks.turtle_stamp.VALUES[i][1];
+    var img = new Image();
+    img.src = url;
+    Turtle.stamps[key] = img;
+  }
+
+  generator.turtle_stamp = function () {
+    return 'Turtle.drawStamp("' + this.getTitleValue('VALUE') +
+        '", \'block_id_' + this.id + '\');\n';
   };
 
   customLevelBlocks.install(blockly, generator, gensym);
@@ -10056,7 +10099,7 @@ Turtle.init = function(config) {
   {
     if (skin.id == "elsa")
     {
-      turtleNumFrames = 10;
+      turtleNumFrames = 20;
     }
     else if (skin.id == "anna")
     {
@@ -10147,10 +10190,10 @@ Turtle.init = function(config) {
 
     // pre-load image for line pattern block. Creating the image object and setting source doesn't seem to be
     // enough in this case, so we're actually creating and reusing the object within the document body.
-  
+
     if (config.level.edit_blocks)
     {
-      var imageContainer = document.createElement('div'); 
+      var imageContainer = document.createElement('div');
       imageContainer.style.display='none';
       document.body.appendChild(imageContainer);
 
@@ -10257,8 +10300,10 @@ Turtle.loadTurtle = function() {
     Turtle.display();
   };
   Turtle.avatarImage.src = skin.avatar;
-  if (skin.id == "anna" || skin.id == "elsa")
+  if (skin.id == "anna")
     Turtle.numberAvatarHeadings = 36;
+  else if (skin.id == "elsa")
+    Turtle.numberAvatarHeadings = 18;
   else
     Turtle.numberAvatarHeadings = 180;
   Turtle.avatarImage.height = Turtle.AVATAR_HEIGHT;
@@ -10588,7 +10633,7 @@ Turtle.doSmoothAnimate = function(options, distance)
     distance /= jumpDistance;
     jumpDistanceCovered += distance;
     if (jumpDistanceCovered < fullDistance)
-      tupleDone = false; 
+      tupleDone = false;
   }
 
   return { tupleDone: tupleDone, distance: distance };
@@ -10667,7 +10712,7 @@ Turtle.step = function(command, values, options) {
       if (!values[0] || values[0] == 'DEFAULT') {
           Turtle.setPattern(null);
       } else {
-        Turtle.setPattern(document.getElementById(values[0])); 
+        Turtle.setPattern(document.getElementById(values[0]));
       }
       break;
     case 'HT':  // Hide Turtle
@@ -10675,6 +10720,14 @@ Turtle.step = function(command, values, options) {
       break;
     case 'ST':  // Show Turtle
       Turtle.visible = true;
+      break;
+    case 'stamp':
+      var img = Turtle.stamps[values[0]];
+      var width = img.width / 2;
+      var height = img.height / 2;
+      var x = Turtle.x - width / 2;
+      var y = Turtle.y - height / 2;
+      Turtle.ctxScratch.drawImage(img, x, y, width, height);
       break;
   }
 
@@ -10746,7 +10799,7 @@ Turtle.moveForward_ = function (distance) {
     Turtle.drawForwardWithPattern_(distance);
     return;
   }
-  
+
   Turtle.drawForward_(distance);
 };
 
@@ -10803,18 +10856,18 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
   var startY = Turtle.y;
 
   Turtle.jumpForward_(distance);
-  Turtle.ctxScratch.save(); 
-  Turtle.ctxScratch.translate(startX, startY); 
-  Turtle.ctxScratch.rotate(Math.PI * (Turtle.heading - 90) / 180); // increment the angle and rotate the image. 
-                                                                 // Need to subtract 90 to accomodate difference in canvas 
+  Turtle.ctxScratch.save();
+  Turtle.ctxScratch.translate(startX, startY);
+  Turtle.ctxScratch.rotate(Math.PI * (Turtle.heading - 90) / 180); // increment the angle and rotate the image.
+                                                                 // Need to subtract 90 to accomodate difference in canvas
                                                                  // vs. Turtle direction
   Turtle.ctxScratch.drawImage(img,
     0, 0,                                 // Start point for clipping image
     distance+img.height / 2, img.height,  // clip region size
     -img.height / 4, -img.height / 2,      // draw location relative to the ctx.translate point pre-rotation
-    distance+img.height / 2, img.height); 
-                                                                     
-  Turtle.ctxScratch.restore();  
+    distance+img.height / 2, img.height);
+
+  Turtle.ctxScratch.restore();
 };
 
 Turtle.shouldDrawJoints_ = function () {
@@ -11558,6 +11611,8 @@ exports.drawATree = function(d){return "draw a tree"};
 exports.drawUpperWave = function(d){return "draw upper wave"};
 
 exports.drawLowerWave = function(d){return "draw lower wave"};
+
+exports.drawStamp = function(d){return "draw stamp"};
 
 exports.heightParameter = function(d){return "height"};
 
