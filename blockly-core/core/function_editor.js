@@ -44,7 +44,7 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
 Blockly.FunctionEditor.prototype.openWithNewFunction = function () {
   this.ensureCreated_();
 
-  // TODO(bjordan): override (add|remove)TopBlock to mirror mainBlockSpace one
+  // TODO(bjordan): override (add|remove)TopBlock to mirror mainBlockSpace one (for blocks instantiated in function editor)
   var newBlock = Blockly.Xml.domToBlock_(Blockly.modalWorkspace,
     Blockly.createSvgElement('block', {type: 'procedures_defnoreturn'}));
   Blockly.mainBlockSpace.addTopBlock(newBlock);
