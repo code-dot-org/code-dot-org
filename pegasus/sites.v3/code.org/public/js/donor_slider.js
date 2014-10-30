@@ -21,7 +21,6 @@ $(document).ready(function() {
   }
 
   // Takes a jQuery array of badges and an index. Hides the current badges and shows the next ones.
-  // Only two platinum sponsors are shown at once, while up to three gold sponsors are shown.
   function scrollBadges (items, index) {
     if (items === platinum) {
       // Old items are faded out. New items are faded in on the completion of the fade out.
