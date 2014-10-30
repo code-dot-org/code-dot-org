@@ -528,7 +528,7 @@ levels.dino_up_and_down =  {
       <next><block type="studio_move"> \
               <title name="DIR">8</title></block> \
       </next></block> \
-    <block type="studio_whenRight" deletable="false" x="20" y="150"> \
+    <block type="studio_whenRight" uservisible="false" x="20" y="150"> \
       <next><block type="studio_move"> \
               <title name="DIR">2</title></block> \
       </next></block> \

@@ -137,6 +137,9 @@ Blockly.Xml.blockToDom_ = function(block, ignoreChildBlocks) {
   if (!block.isEditable()) {
     element.setAttribute('editable', false);
   }
+  if (!block.isUserVisible()) {
+    element.setAttribute('uservisible', false);
+  }
 
   // Don't follow connections if we're ignoring child blocks
   if (block.nextConnection && !ignoreChildBlocks) {
@@ -269,6 +272,10 @@ Blockly.Xml.domToBlock_ = function(blockSpace, xmlBlock) {
   var editable = xmlBlock.getAttribute('editable');
   if (editable) {
     block.setEditable(editable == 'true');
+  }
+  var userVisible = xmlBlock.getAttribute('uservisible');
+  if (userVisible) {
+    block.setUserVisible(userVisible == 'true');
   }
 
   var blockChild = null;

@@ -75,6 +75,7 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
   this.deletable_ = true;
   this.movable_ = true;
   this.editable_ = true;
+  this.userVisible_ = true;
   this.collapsed_ = false;
   this.dragging_ = false;
 
@@ -1196,6 +1197,24 @@ Blockly.Block.prototype.setEditable = function(editable) {
   for (var x = 0; x < icons.length; x++) {
     icons[x].updateEditable();
   }
+};
+
+/**
+ * Get whether this block is visible to the user.
+ * @return {boolean} True if visible to the user.
+ */
+Blockly.Block.prototype.isUserVisible = function() {
+  return this.userVisible_;
+};
+
+/**
+ * Set whether this block is visible to the user.
+ * @param {boolean} userVisible True if visible to user.
+ */
+Blockly.Block.prototype.setUserVisible = function(userVisible) {
+  this.userVisible_ = userVisible;
+  // TODO(dave): make these still be visible in level builder.
+  this.svg_ && this.svg_.setVisible(userVisible);
 };
 
 /**
