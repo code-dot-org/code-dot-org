@@ -45,7 +45,7 @@ en:
           'Artist: Shapes': 'Artist: Shapes'
           'Maze: Loops': 'Maze: Loops'
           'Bee: Loops': 'Bee: Loops'
-          'Studio: Create a Story': 'Studio: Create a Story'
+          'Studio: Create a Story': 'Play Lab: Create a Story'
           description_short: Course 1 is designed for early readers. Recommended for
             grades K-1.
           'Artist: Loops': 'Artist: Loops'
@@ -55,7 +55,7 @@ en:
           The Artist: The Artist
           Artist Debugging: Artist Debugging
           Bounce: Bounce
-          'Studio: Create a Story': 'Studio: Create a Story'
+          'Studio: Create a Story': 'Play Lab: Create a Story'
           Artist Loops: Artist Loops
           Bee Conditionals: Bee Conditionals
           Flappy: Flappy
@@ -93,7 +93,7 @@ en:
           'Artist: Nested Loops': 'Artist: Nested Loops'
         course3:
           The Maze: The Maze
-          'Studio: Create a Story': 'Studio: Create a Story'
+          'Studio: Create a Story': 'Play Lab: Create a Story'
           The Artist: The Artist
           title: Course 3
           Artist Functions: Artist Functions
@@ -121,7 +121,7 @@ en:
             courses to flexible solutions to more complex problems. By the end of
             this course, students create interactive stories and games they can share
             with anyone. Recommended for grades 4-5.
-          'Studio: Create a Game': 'Studio: Create a Game'
+          'Studio: Create a Game': 'Play Lab: Create a Game'
           Maze: Maze
           Artist: Artist
           'Artist: Functions': 'Artist: Functions'
