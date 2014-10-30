@@ -105,6 +105,7 @@ Blockly.FunctionEditor.prototype.hide = function() {
   Blockly.activeWorkspace = Blockly.mainBlockSpace;
   this.functionDefinitionBlock.setRenderBlockSpace(Blockly.mainBlockSpace);
   Blockly.modalBlockSpaceEditor.blockSpace.removeTopBlock(this.functionDefinitionBlock);
+  this.functionDefinitionBlock.setUserVisible(false);
 
   goog.style.showElement(this.container_, false);
   goog.style.showElement(this.modalBackground_, false);
