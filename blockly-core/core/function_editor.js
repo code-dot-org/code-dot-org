@@ -26,14 +26,12 @@ Blockly.FunctionEditor = function() {
 Blockly.FunctionEditor.prototype.created_ = false;
 
 Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
-  var definitionBlock = Blockly.mainBlockSpace.findFunction(functionName, definitionBlock);
-  if (!definitionBlock) {
+  this.functionDefinitionBlock = Blockly.mainBlockSpace.findFunction(functionName);
+  if (!this.functionDefinitionBlock) {
     throw new Error("Can't find definition block to edit");
   }
 
-  this.functionDefinitionBlock = definitionBlock;
-  // TODO(bjordan/dbailey) set definition block to this block space
-  // this.functionDefinitionBlock.setBlockSpace(Blockly.modalBlockSpaceEditor.blockSpace);
+  this.functionDefinitionBlock.setRenderBlockSpace(Blockly.modalBlockSpaceEditor.blockSpace);
   this.functionDefinitionBlock.moveTo(FRAME_MARGIN_SIDE, FRAME_MARGIN_TOP);
   this.functionDefinitionBlock.movable_ = false;
 
@@ -43,7 +41,7 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
 Blockly.FunctionEditor.prototype.openWithNewFunction = function () {
   this.ensureCreated_();
 
-  // TODO(bjordan/dbailey) set definition block to no block space (gets set in OpenAndEdit)
+  // TODO(bjordan): override (add|remove)TopBlock to mirror mainBlockSpace one
   var newBlock = Blockly.Xml.domToBlock_(Blockly.modalWorkspace,
     Blockly.createSvgElement('block', {type: 'procedures_defnoreturn'}));
   Blockly.mainBlockSpace.addTopBlock(newBlock);
@@ -88,7 +86,6 @@ Blockly.FunctionEditor.prototype.renameParameter = function(oldName, newName) {
 
 Blockly.FunctionEditor.prototype.show = function() {
   this.ensureCreated_();
-
   Blockly.activeWorkspace = Blockly.modalBlockSpaceEditor.blockSpace;
   goog.style.showElement(this.container_, true);
   goog.style.showElement(this.modalBackground_, true);
@@ -103,6 +100,7 @@ Blockly.FunctionEditor.prototype.ensureCreated_ = function() {
 
 Blockly.FunctionEditor.prototype.hide = function() {
   Blockly.activeWorkspace = Blockly.mainBlockSpace;
+  this.functionDefinition.setRenderBlockSpace(Blockly.mainBlockSpace);
   goog.style.showElement(this.container_, false);
   goog.style.showElement(this.modalBackground_, false);
 };
@@ -142,7 +140,7 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   this.closeButton_.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', '/blockly/media/common_images/x-button.png');
   Blockly.modalBlockSpaceEditor.svg_.appendChild(this.closeButton_);
 
-  // Add the function definition block
+  // Add the function definition block TODO(bjordan): remove
   this.functionDefinition = Blockly.Xml.domToBlock_(Blockly.modalWorkspace,
       Blockly.createSvgElement('block', {type: 'procedures_defnoreturn'}));
   this.functionDefinition.moveTo(FRAME_MARGIN_SIDE, FRAME_MARGIN_TOP);

@@ -88,7 +88,7 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
   this.blockSvgClass_ = Blockly.BlockSvg;
   this.customOptions_ = {};
 
-  blockSpace.addTopBlock(this);
+  this.setRenderBlockSpace(blockSpace);
 
   // Copy the type-specific functions and data from the prototype.
   if (prototypeName) {
@@ -102,11 +102,6 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
   // Call an initialization function, if it exists.
   if (goog.isFunction(this.init)) {
     this.init();
-  }
-  // Bind an onchange function, if it exists.
-  if (goog.isFunction(this.onchange)) {
-    Blockly.bindEvent_(blockSpace.getCanvas(), 'blocklyBlockSpaceChange', this,
-                       this.onchange);
   }
 };
 
@@ -136,6 +131,52 @@ Blockly.Block.prototype.comment = null;
 Blockly.Block.prototype.warning = null;
 
 /**
+ * onchange event handle from Blockly.bindEvent_ call
+ * Suitable for unbinding with Blockly.unbindEvent_
+ * @type {!Array.<!Array>}
+ */
+Blockly.Block.prototype.onChangeHandle = null;
+
+/**
+ * @param {Blockly.BlockSpace} blockSpace target blockspace to begin rendering on
+ */
+Blockly.Block.prototype.setRenderBlockSpace = function(blockSpace) {
+  if (this.blockSpace) {
+    this.stopRenderingInBlockSpace(this.blockSpace);
+  }
+  this.blockSpace = blockSpace;
+  this.blockSpace.addTopBlock(this);
+
+  // Bind an onchange function, if it exists.
+  if (goog.isFunction(this.onchange)) {
+    Blockly.bindEvent_(this.blockSpace.getCanvas(), 'blocklyBlockSpaceChange', this,
+      this.onchange);
+  }
+
+  if (this.svg_) {
+    this.moveToCurrentBlockSpace();
+  }
+};
+
+/**
+ * Moves block SVG root element to the current blockSpace
+ */
+Blockly.Block.prototype.moveToCurrentBlockSpace = function() {
+  this.blockSpace.getCanvas().appendChild(this.svg_.getRootElement());
+};
+
+/**
+ * @param {Blockly.BlockSpace} blockSpace blockspace to stop rendering on (note: does not remove from top blocks)
+ */
+Blockly.Block.prototype.stopRenderingInBlockSpace = function(blockSpace) {
+  // Unbind onchange function, if it exists.
+  if (this.onChangeHandle) {
+    Blockly.unbindEvent_(this.onChangeHandle);
+    this.onChangeHandle = null;
+  }
+};
+
+/**
  * Returns a list of mutator, comment, and warning icons.
  * @return {!Array} List of icons.
  */
@@ -163,7 +204,7 @@ Blockly.Block.prototype.initSvg = function() {
     Blockly.bindEvent_(this.svg_.getRootElement(), 'mousedown', this,
                        this.onMouseDown_);
   }
-  this.blockSpace.getCanvas().appendChild(this.svg_.getRootElement());
+  this.moveToCurrentBlockSpace();
 };
 
 /**
