@@ -85,3 +85,7 @@ exports.hideTurtle = function(id) {
 exports.showTurtle = function(id) {
   this.log.push(['ST', id]);
 };
+
+exports.drawStamp = function(stamp, id) {
+  this.log.push(['stamp', stamp, id]);
+};
