@@ -238,18 +238,6 @@ Calc.execute = function() {
   var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
   var textBlocks = Blockly.Xml.domToText(xml);
 
-  // todo (brent) - better way of doing this
-  // if (Calc.result === false && equivalent) {
-  //   Calc.message = calcMsg.equivalentExpression();
-  //   Calc.testResult = TestResults.APP_SPECIFIC_FAIL;
-  // } else {
-  //   Calc.message = null;
-  // }
-
-  // todo - (brent) - we have a lot of things seeming to track the same thing
-  // (result, testResult, feedbackType). can we clean up at all?
-  // Calc.testResult = Calc.result ? TestResults.ALL_PASS : TestResults.LEVEL_INCOMPLETE_FAIL;
-
   var reportData = {
     app: 'calc',
     level: level.id,
