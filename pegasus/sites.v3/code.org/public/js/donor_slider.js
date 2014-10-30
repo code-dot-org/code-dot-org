@@ -22,7 +22,7 @@ $(document).ready(function() {
     }
   }
 
-  // Takes a jQuery array of badges and an index. Hides the current badges and shows the next ones.
+  // Takes a jQuery object of badges and an index. Hides the current badges and shows the next ones.
   function scrollBadges (items, index) {
     if (items === platinum) {
       // Old items are faded out. New items are faded in on the completion of the fade out.
@@ -64,7 +64,7 @@ $(document).ready(function() {
   $('.badge').hover(function () { clearInterval(timer); }, function () { timer = setInterval(setManager, interval); });
 });
 
-// Takes a list of badges, randomizes (based on Fisher–Yates shuffle) their order in the DOM, and returns a list of badges in the new order.
+// Takes a jQuery object of badges, randomizes (based on Fisher–Yates shuffle) their order in the DOM, and returns a list of badges in the new order.
 function randomizeOrder (items) {
   for (var i = items.children().length; i >= 0; i--) {
     var temp = items.eq(Math.random() * i | 0).parent().detach(); // Remove the badge (and the containing anchor) from the DOM
