@@ -287,7 +287,7 @@ Blockly.Blocks.procedures_callnoreturn = {
 
     if (Blockly.useModalFunctionEditor) {
       var editLabel = new Blockly.FieldLabel('edit' /**TODO(bjordan): Localize*/);
-      Blockly.bindEvent_(editLabel.textElement_, 'mousedown', this, this.openEditor_);
+      Blockly.bindEvent_(editLabel.textElement_, 'mousedown', this, this.openEditor);
       mainTitle.appendTitle(editLabel);
     }
 
@@ -298,24 +298,8 @@ Blockly.Blocks.procedures_callnoreturn = {
     this.quarkConnections_ = null;
     this.quarkArguments_ = null;
   },
-  openEditor_: function() {
-    var functionName = this.getTitleValue('NAME');
-    var definitionBlock;
-
-    // Get hidden function definition from blockSpace
-    var blocks = this.blockSpace.getAllBlocks();
-    for (var x = 0, block; block = blocks[x]; x++) {
-      if (block.type === 'procedures_defnoreturn' && Blockly.Names.equals(functionName, block.getTitleValue('NAME'))) {
-        definitionBlock = block;
-      }
-    }
-
-    if (!definitionBlock) {
-      throw new Error("Can't find definition block to edit");
-    }
-
-    Blockly.mainBlockSpace.removeTopBlock(definitionBlock);
-    Blockly.FunctionEditor.getSharedEditor().openFunctionEditor('<xml>' + goog.dom.getOuterHtml(Blockly.Xml.blockToDom_(definitionBlock)) + '</xml>');
+  openEditor: function() {
+    Blockly.functionEditor.openAndEditFunction(this.getTitleValue('NAME'));
   },
   getProcedureCall: function() {
     return this.getTitleValue('NAME');
@@ -466,15 +450,21 @@ Blockly.Blocks.procedures_callreturn = {
   init: function() {
     this.setHelpUrl(Blockly.Msg.PROCEDURES_CALLRETURN_HELPURL);
     this.setHSV(94, 0.84, 0.60);
-    this.appendDummyInput()
+    var mainTitle = this.appendDummyInput()
         .appendTitle(Blockly.Msg.PROCEDURES_CALLRETURN_CALL)
         .appendTitle('', 'NAME');
+    if (Blockly.useModalFunctionEditor) {
+      var editLabel = new Blockly.FieldLabel('edit' /**TODO(bjordan): Localize*/);
+      Blockly.bindEvent_(editLabel.textElement_, 'mousedown', this, this.openEditor);
+      mainTitle.appendTitle(editLabel);
+    }
     this.setOutput(true);
     this.setTooltip(Blockly.Msg.PROCEDURES_CALLRETURN_TOOLTIP);
     this.arguments_ = [];
     this.quarkConnections_ = null;
     this.quarkArguments_ = null;
   },
+  openEditor: Blockly.Blocks.procedures_callnoreturn.openEditor,
   getProcedureCall: Blockly.Blocks.procedures_callnoreturn.getProcedureCall,
   renameProcedure: Blockly.Blocks.procedures_callnoreturn.renameProcedure,
   setProcedureParameters:
