@@ -90,7 +90,7 @@ module.exports = function(app, levels, options) {
 };
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./base":2,"./blocksCommon":4,"./dom":8,"./required_block_utils":25,"./utils":40}],2:[function(require,module,exports){
+},{"./base":2,"./blocksCommon":4,"./dom":8,"./required_block_utils":30,"./utils":45}],2:[function(require,module,exports){
 /**
  * Blockly Apps: Common code
  *
@@ -1045,7 +1045,7 @@ var getIdealBlockNumberMsg = function() {
       msg.infinity() : BlocklyApps.IDEAL_BLOCK_NUM;
 };
 
-},{"../locale/da_dk/common":42,"./block_utils":3,"./builder":5,"./constants.js":7,"./dom":8,"./feedback.js":21,"./slider":27,"./templates/buttons.html":29,"./templates/instructions.html":31,"./templates/learn.html":32,"./templates/makeYourOwn.html":33,"./utils":40,"./xml":41}],3:[function(require,module,exports){
+},{"../locale/da_dk/common":47,"./block_utils":3,"./builder":5,"./constants.js":7,"./dom":8,"./feedback.js":26,"./slider":32,"./templates/buttons.html":34,"./templates/instructions.html":36,"./templates/learn.html":37,"./templates/makeYourOwn.html":38,"./utils":45,"./xml":46}],3:[function(require,module,exports){
 var xml = require('./xml');
 
 exports.createToolbox = function(blocks) {
@@ -1226,7 +1226,7 @@ exports.mathBlockXml = function (type, inputs, titles) {
   return str;
 };
 
-},{"./xml":41}],4:[function(require,module,exports){
+},{"./xml":46}],4:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -1391,7 +1391,7 @@ function installWhenRun(blockly, skin, isK1) {
   };
 }
 
-},{"../locale/da_dk/common":42}],5:[function(require,module,exports){
+},{"../locale/da_dk/common":47}],5:[function(require,module,exports){
 var feedback = require('./feedback.js');
 var dom = require('./dom.js');
 var utils = require('./utils.js');
@@ -1421,7 +1421,7 @@ exports.builderForm = function(onAttemptCallback) {
   dialog.show({ backdrop: 'static' });
 };
 
-},{"./dom.js":8,"./feedback.js":21,"./templates/builder.html":28,"./utils.js":40,"url":54}],6:[function(require,module,exports){
+},{"./dom.js":8,"./feedback.js":26,"./templates/builder.html":33,"./utils.js":45,"url":59}],6:[function(require,module,exports){
 var INFINITE_LOOP_TRAP = '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 
 var LOOP_HIGHLIGHT = 'loopHighlight();\n';
@@ -1857,9 +1857,15 @@ exports.isIOS = function() {
 };
 
 },{}],9:[function(require,module,exports){
+var evalUtils = require('./evalUtils');
 var EvalString = require('./evalString');
 var EvalCircle = require('./evalCircle');
+var EvalTriangle = require('./evalTriangle');
 var EvalMulti = require('./evalMulti');
+var EvalRect = require('./evalRect');
+var EvalEllipse = require('./evalEllipse');
+var EvalText = require('./evalText');
+var EvalStar = require('./evalStar');
 
 // todo (brent) - make use of blockId?
 
@@ -1879,19 +1885,61 @@ exports.circle = function (size, style, color) {
   return exports.register(new EvalCircle(size, style, color));
 };
 
+exports.triangle = function (size, style, color) {
+  return exports.register(new EvalTriangle(size, style, color));
+};
+
+exports.overlay = function (top, bottom) {
+  return exports.register(new EvalMulti(top, bottom));
+};
+
+exports.underlay = function (bottom, top) {
+  return exports.register(new EvalMulti(top, bottom));
+};
+
+exports.square = function (size, style, color) {
+  return exports.register(new EvalRect(size, size, style, color));
+};
+
+exports.rectangle = function (width, height, style, color) {
+  return exports.register(new EvalRect(width, height, style, color));
+};
+
+exports.ellipse = function (width, height, style, color) {
+  return exports.register(new EvalEllipse(width, height, style, color));
+};
+
+exports.text = function (text, fontSize, color) {
+  return exports.register(new EvalText(text, fontSize, color));
+};
+
+exports.star = function (radius, fontSize, color) {
+  return exports.register(new EvalStar(radius, fontSize, color));
+};
+
 exports.placeImage = function (image, x, y, blockId) {
   // todo - validate we have an image, use public setter
   // todo - where does argument validation happen?
-  image.x_ = x;
-  image.y_ = y;
+
+  // User inputs why in cartesian space. Convert to pixel space before sending
+  // to our EvalObject.
+  y = evalUtils.cartesianToPixel(y);
+
+  image.place(x, y);
   return exports.register(image);
 };
 
-exports.overlay = function (image1, image2) {
-  return exports.register(new EvalMulti(image1, image2));
+exports.rotateImage = function (image, degrees) {
+  image.rotate(degrees);
+  return exports.register(image);
 };
 
-},{"./evalCircle":13,"./evalMulti":14,"./evalString":16}],10:[function(require,module,exports){
+exports.scaleImage = function (image, factor) {
+  image.scale(factor, factor);
+  return exports.register(image);
+};
+
+},{"./evalCircle":13,"./evalEllipse":14,"./evalMulti":15,"./evalRect":17,"./evalStar":18,"./evalString":19,"./evalText":20,"./evalTriangle":21,"./evalUtils":22}],10:[function(require,module,exports){
 /**
  * Blockly Demo: Eval Graphics
  *
@@ -1942,11 +1990,176 @@ exports.install = function(blockly, blockInstallOptions) {
   mathBlocks.install(blockly, generator, gensym);
 
   installString(blockly, generator, gensym);
-  installCircle(blockly, generator, gensym);
-  installPlaceImage(blockly, generator, gensym);
-  installOverlay(blockly, generator, gensym);
+
+  // shapes
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'functional_circle',
+    blockTitle: msg.circleBlockTitle(),
+    apiName: 'circle',
+    args: [
+      { name: 'SIZE', type: 'Number' },
+      { name: 'STYLE', type: 'string' },
+      { name: 'COLOR', type: 'string' }
+    ]
+  });
+
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'functional_triangle',
+    blockTitle: msg.triangleBlockTitle(),
+    apiName: 'triangle',
+    args: [
+      { name: 'SIZE', type: 'Number' },
+      { name: 'STYLE', type: 'string' },
+      { name: 'COLOR', type: 'string' }
+    ]
+  });
+
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'functional_square',
+    blockTitle: msg.squareBlockTitle(),
+    apiName: 'square',
+    args: [
+      { name: 'SIZE', type: 'Number' },
+      { name: 'STYLE', type: 'string' },
+      { name: 'COLOR', type: 'string' }
+    ]
+  });
+
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'functional_rectangle',
+    blockTitle: msg.rectangleBlockTitle(),
+    apiName: 'rectangle',
+    args: [
+      { name: 'WIDTH', type: 'Number' },
+      { name: 'HEIGHT', type: 'Number' },
+      { name: 'STYLE', type: 'string' },
+      { name: 'COLOR', type: 'string' }
+    ]
+  });
+
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'functional_ellipse',
+    blockTitle: msg.ellipseBlockTitle(),
+    apiName: 'ellipse',
+    args: [
+      { name: 'WIDTH', type: 'Number' },
+      { name: 'HEIGHT', type: 'Number' },
+      { name: 'STYLE', type: 'string' },
+      { name: 'COLOR', type: 'string' }
+    ]
+  });
+
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'functional_star',
+    blockTitle: msg.starBlockTitle(),
+    apiName: 'star',
+    args: [
+      { name: 'SIZE', type: 'Number' },
+      { name: 'STYLE', type: 'string' },
+      { name: 'COLOR', type: 'string' }
+    ]
+  });
+
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'functional_text',
+    blockTitle: msg.textBlockTitle(),
+    apiName: 'text',
+    args: [
+      { name: 'TEXT', type: 'string' },
+      { name: 'SIZE', type: 'Number' },
+      { name: 'COLOR', type: 'string' }
+    ]
+  });
+
+  // image manipulation
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'overlay',
+    blockTitle: msg.overlayBlockTitle(),
+    apiName: 'overlay',
+    args: [
+      { name: 'TOP', type: 'image' },
+      { name: 'BOTTOM', type: 'image' },
+    ]
+  });
+
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'underlay',
+    blockTitle: msg.underlayBlockTitle(),
+    apiName: 'underlay',
+    args: [
+      { name: 'BOTTOM', type: 'image' },
+      { name: 'TOP', type: 'image' }
+    ]
+  });
+
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'place_image',
+    blockTitle: msg.placeImageBlockTitle(),
+    apiName: 'placeImage',
+    args: [
+      { name: 'IMAGE', type: 'image' },
+      { name: 'X', type: 'Number' },
+      { name: 'Y', type: 'Number' }
+    ]
+  });
+
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'rotate',
+    blockTitle: msg.rotateImageBlockTitle(),
+    apiName: 'rotateImage',
+    args: [
+      { name: 'IMAGE', type: 'image' },
+      { name: 'DEGREES', type: 'Number' }
+    ]
+  });
+
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'scale',
+    blockTitle: msg.scaleImageBlockTitle(),
+    apiName: 'scaleImage',
+    args: [
+      { name: 'IMAGE', type: 'image' },
+      { name: 'FACTOR', type: 'Number' }
+    ]
+  });
+
   installStyle(blockly, generator, gensym);
 };
+
+
+function installFunctionalBlock (blockly, generator, gensym, options) {
+  var blockName = options.blockName;
+  var blockTitle = options.blockTitle;
+  var apiName = options.apiName;
+  var args = options.args;
+
+  blockly.Blocks[blockName] = {
+    init: function () {
+      initTitledFunctionalBlock(this, blockTitle, 'image', args);
+    }
+  };
+
+  generator[blockName] = function() {
+    var apiArgs = [];
+    for (var i = 0; i < args.length; i++) {
+      var arg = args[i];
+      var apiArg = Blockly.JavaScript.statementToCode(this, arg.name, false);
+      // Provide defaults
+      if (!apiArg) {
+        if (arg.type === 'Number') {
+          apiArg = '0';
+        } else if (arg.name === 'STYLE') {
+          apiArg = "Eval.string('solid')";
+        } else if (arg.name === 'COLOR') {
+          apiArg = "Eval.string('black')";
+        }
+      }
+      apiArgs.push(apiArg);
+    }
+
+    return "Eval." + apiName + "(" + apiArgs.join(", ") + ")";
+  };
+}
 
 /**
  * functional_string
@@ -1962,7 +2175,7 @@ function installString(blockly, generator, gensym) {
       this.setHSV.apply(this, colors.string);
       this.appendDummyInput()
           .appendTitle(new Blockly.FieldLabel('"'))
-          .appendTitle(new Blockly.FieldTextInput('string'), 'VAL')
+          .appendTitle(new Blockly.FieldTextInput(msg.string()), 'VAL')
           .appendTitle(new Blockly.FieldLabel('"'))
           .setAlign(Blockly.ALIGN_CENTRE);
       this.setFunctionalOutput(true, 'string');
@@ -1975,90 +2188,17 @@ function installString(blockly, generator, gensym) {
 }
 
 /**
- * functional_circle
- */
-function installCircle(blockly, generator, gensym) {
-  blockly.Blocks.functional_circle = {
-    init: function () {
-      // todo - i18n
-      initTitledFunctionalBlock(this, 'circle (radius, style, color)', 'image', [
-        { name: 'SIZE', type: 'Number' },
-        { name: 'STYLE', type: 'string' },
-        { name: 'COLOR', type: 'string' }
-      ]);
-    }
-  };
-
-  generator.functional_circle = function() {
-    var color = Blockly.JavaScript.statementToCode(this, 'COLOR', false) ||
-      "Eval.string('black')";
-    var style = Blockly.JavaScript.statementToCode(this, 'STYLE', false) ||
-      "Eval.string('solid')";
-    var size = Blockly.JavaScript.statementToCode(this, 'SIZE', false) || '0';
-
-    return "Eval.circle(" + [size, style, color].join(", ") + ")";
-  };
-}
-
-/**
- * place_image
- */
-function installPlaceImage(blockly, generator, gensym) {
-  blockly.Blocks.place_image = {
-    init: function () {
-      initTitledFunctionalBlock(this, 'place-image (image, x, y)', 'image', [
-        { name: 'IMAGE', type: 'image' },
-        { name: 'X', type: 'Number' },
-        { name: 'Y', type: 'Number' }
-      ]);
-    }
-  };
-
-  generator.place_image = function() {
-    var image = Blockly.JavaScript.statementToCode(this, 'IMAGE', false);
-    var x = Blockly.JavaScript.statementToCode(this, 'X', false) || '0';
-    var y = Blockly.JavaScript.statementToCode(this, 'Y', false) || '0';
-
-    y = evalUtils.cartesianToPixel(y);
-
-    return "Eval.placeImage(" + [image, x, y].join(", ") + ")";
-  };
-}
-
-
-/**
- * overlay
- */
-function installOverlay(blockly, generator, gensym) {
-  blockly.Blocks.overlay = {
-    init: function () {
-      initTitledFunctionalBlock(this, 'overlay (top, bottom)', 'image', [
-        { name: 'TOP', type: 'image' },
-        { name: 'BOTTOM', type: 'image' },
-      ]);
-    }
-  };
-
-  generator.overlay = function() {
-    var top = Blockly.JavaScript.statementToCode(this, 'TOP', false);
-    var bottom = Blockly.JavaScript.statementToCode(this, 'BOTTOM', false);
-
-    return "Eval.overlay(" + [top, bottom].join(", ") + ")";
-  };
-}
-
-/**
  * functional_style
  */
 function installStyle(blockly, generator, gensym) {
   blockly.Blocks.functional_style = {
     init: function () {
       var VALUES = [
-        ['solid', 'solid'],
+        [msg.solid(), 'solid'],
         ['75%', '75%'],
         ['50%', '50%'],
         ['25%', '25%'],
-        ['outline', 'outline']
+        [msg.outline(), 'outline']
       ];
 
       this.setFunctional(true, {
@@ -2081,7 +2221,7 @@ function installStyle(blockly, generator, gensym) {
   };
 }
 
-},{"../../locale/da_dk/common":42,"../../locale/da_dk/eval":43,"../functionalBlockUtils":22,"../mathBlocks":24,"./evalUtils":17}],11:[function(require,module,exports){
+},{"../../locale/da_dk/common":47,"../../locale/da_dk/eval":48,"../functionalBlockUtils":27,"../mathBlocks":29,"./evalUtils":22}],11:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -2094,9 +2234,10 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/da_dk/eval') ; buf.push('\n\n<button id="continueButton" class="launch hide float-right">\n  ');4; // splitting these lines causes an extra space to show up in front of the word, breaking centering
-  // todo (brent) : continue should be a msg
-  ; buf.push('\n  <img src="', escape((7,  assetUrl('media/1x1.gif') )), '">Continue\n</button>\n'); })();
+ buf.push('');1;
+  var msg = require('../../locale/da_dk/eval');
+  var commonMsg = require('../../locale/da_dk/common');
+; buf.push('\n\n<button id="continueButton" class="launch hide float-right">\n  <img src="', escape((7,  assetUrl('media/1x1.gif') )), '">', escape((7,  commonMsg.continue() )), '\n</button>\n'); })();
 } 
 return buf.join('');
 };
@@ -2104,7 +2245,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/da_dk/eval":43,"ejs":44}],12:[function(require,module,exports){
+},{"../../locale/da_dk/common":47,"../../locale/da_dk/eval":48,"ejs":49}],12:[function(require,module,exports){
 /**
  * Blockly Demo: Eval Graphics
  *
@@ -2296,6 +2437,10 @@ function generateEvalObjectFromBlockXml(blockXml) {
  * Execute the user's code.  Heaven help us...
  */
 Eval.execute = function() {
+  Eval.result = BlocklyApps.ResultType.UNSET;
+  Eval.testResults = BlocklyApps.TestResults.NO_TESTS_RUN;
+  Eval.message = undefined;
+
   // todo (brent) perhaps try to share user vs. expected generation better
   var code = Blockly.Generator.workspaceToCode('JavaScript');
   evalCode(code);
@@ -2305,8 +2450,8 @@ Eval.execute = function() {
     Eval.userObject.draw(document.getElementById("user"));
   }
 
-  var result = evaluateAnswer();
-  Eval.message = result ?  "Good jorb!" : '';
+  Eval.result = evaluateAnswer();
+  Eval.testResults = Eval.result ? TestResults.ALL_PASS : TestResults.LEVEL_INCOMPLETE_FAIL;
 
   var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
   var textBlocks = Blockly.Xml.domToText(xml);
@@ -2315,8 +2460,8 @@ Eval.execute = function() {
     app: 'eval',
     level: level.id,
     builder: level.builder,
-    result: result,
-    testResult: result ? TestResults.ALL_PASS : TestResults.APP_SPECIFIC_FAIL,
+    result: Eval.result,
+    testResult: Eval.testResults,
     program: encodeURIComponent(textBlocks),
     onComplete: onReportComplete
   };
@@ -2346,8 +2491,7 @@ var displayFeedback = function(response) {
   BlocklyApps.displayFeedback({
     app: 'Eval',
     skin: skin.id,
-    // feedbackType: Eval.testResults,
-    message: Eval.message ? Eval.message : "todo (brent): wrong",
+    feedbackType: Eval.testResults,
     response: response,
     level: level
   });
@@ -2364,7 +2508,7 @@ function onReportComplete(response) {
   displayFeedback(response);
 }
 
-},{"../../locale/da_dk/common":42,"../../locale/da_dk/eval":43,"../base":2,"../codegen":6,"../constants":7,"../dom":8,"../feedback.js":21,"../skins":26,"../templates/page.html":34,"./api":9,"./controls.html":11,"./levels":18,"./visualization.html":20}],13:[function(require,module,exports){
+},{"../../locale/da_dk/common":47,"../../locale/da_dk/eval":48,"../base":2,"../codegen":6,"../constants":7,"../dom":8,"../feedback.js":26,"../skins":31,"../templates/page.html":39,"./api":9,"./controls.html":11,"./levels":23,"./visualization.html":25}],13:[function(require,module,exports){
 var EvalObject = require('./evalObject');
 var EvalString = require('./evalString');
 var evalUtils = require('./evalUtils');
@@ -2389,17 +2533,48 @@ EvalCircle.prototype.draw = function (parent) {
     this.element_ = document.createElementNS(Blockly.SVG_NS, 'circle');
     parent.appendChild(this.element_);
   }
-  this.element_.setAttribute('cx', this.x_);
-  this.element_.setAttribute('cy', this.y_);
+  this.element_.setAttribute('cx', 0);
+  this.element_.setAttribute('cy', 0);
   this.element_.setAttribute('r', this.radius_);
 
-  // todo - alpha
-  this.element_.setAttribute('fill', evalUtils.getFill(this.style_, this.color_));
-  this.element_.setAttribute('stroke', evalUtils.getStroke(this.style_, this.color_));
-  this.element_.setAttribute('opacity', evalUtils.getOpacity(this.style_, this.color_));
+  EvalObject.prototype.draw.apply(this, arguments);
 };
 
-},{"./evalObject":15,"./evalString":16,"./evalUtils":17}],14:[function(require,module,exports){
+},{"./evalObject":16,"./evalString":19,"./evalUtils":22}],14:[function(require,module,exports){
+var EvalObject = require('./evalObject');
+var EvalString = require('./evalString');
+var evalUtils = require('./evalUtils');
+
+var EvalCircle = function (width, height, style, color) {
+  evalUtils.ensureType(style, EvalString);
+  evalUtils.ensureType(color, EvalString);
+
+  EvalObject.apply(this);
+
+  this.width_ = width;
+  this.height_ = height;
+  this.color_ = color.getValue();
+  this.style_ = style.getValue();
+
+  this.element_ = null;
+};
+EvalCircle.inherits(EvalObject);
+module.exports = EvalCircle;
+
+EvalCircle.prototype.draw = function (parent) {
+  if (!this.element_) {
+    this.element_ = document.createElementNS(Blockly.SVG_NS, 'ellipse');
+    parent.appendChild(this.element_);
+  }
+  this.element_.setAttribute('cx', 0);
+  this.element_.setAttribute('cy', 0);
+  this.element_.setAttribute('rx', this.width_ / 2);
+  this.element_.setAttribute('ry', this.height_ / 2);
+
+  EvalObject.prototype.draw.apply(this, arguments);
+};
+
+},{"./evalObject":16,"./evalString":19,"./evalUtils":22}],15:[function(require,module,exports){
 var EvalObject = require('./evalObject');
 var evalUtils = require('./evalUtils');
 
@@ -2412,6 +2587,17 @@ var EvalMulti = function (image1, image2) {
   this.image1_ = image1;
   this.image2_ = image2;
 
+  // we want an object centered at 0, 0 that we can then apply transforms to.
+  // to accomplish this, we need to adjust the children's x/y's to be relative
+  // to us
+  var deltaX, deltaY;
+  deltaX = this.image1_.x_ - this.x_;
+  deltaY = this.image1_.y_ - this.y_;
+  this.image1_.updatePosition(deltaX, deltaY);
+  deltaX = this.image2_.x_ - this.x_;
+  deltaY = this.image2_.y_ - this.y_;
+  this.image2_.updatePosition(deltaX, deltaY);
+
   this.element_ = null;
 };
 EvalMulti.inherits(EvalObject);
@@ -2419,27 +2605,157 @@ module.exports = EvalMulti;
 
 EvalMulti.prototype.draw = function (parent) {
   if (!this.element_) {
+    var deltaX, deltaY;
+
     this.element_ = document.createElementNS(Blockly.SVG_NS, 'g');
     parent.appendChild(this.element_);
   }
-  this.element_.setAttribute('transform', "translate(" + this.x_ + ", " + this.y_ + ")");
+
   this.image2_.draw(this.element_);
   this.image1_.draw(this.element_);
+
+  EvalObject.prototype.draw.apply(this, arguments);
 };
 
-},{"./evalObject":15,"./evalUtils":17}],15:[function(require,module,exports){
+},{"./evalObject":16,"./evalUtils":22}],16:[function(require,module,exports){
+var evalUtils = require('./evalUtils');
+
 var EvalObject = function () {
-  // x/y location in pixel space
+  // x/y location in pixel space of object's center
   this.x_ = 200;
   this.y_ = 200;
+
+  this.rotation_ = 0;
+  this.scaleX_ = 1.0;
+  this.scaleY = 1.0;
 };
 module.exports = EvalObject;
 
-EvalObject.prototype.draw = function (parent) {
-  throw "Overriden by descendants";
+EvalObject.prototype.updatePosition = function (x, y) {
+  this.x_ = x;
+  this.y_ = y;
 };
 
-},{}],16:[function(require,module,exports){
+// todo (brent) arguably some of these things should be on an EvalImage instead of EvalObject
+EvalObject.prototype.draw = function (parentElement) {
+  // todo (brent) - should style/color be init'ed in this ctor, and taken as inputs?
+  if (this.style_ && this.color_) {
+    this.element_.setAttribute('fill', evalUtils.getFill(this.style_, this.color_));
+    this.element_.setAttribute('stroke', evalUtils.getStroke(this.style_, this.color_));
+    this.element_.setAttribute('opacity', evalUtils.getOpacity(this.style_, this.color_));
+  }
+
+  var transform = "";
+  transform += " translate(" + this.x_ + " " + this.y_ + ")";
+
+  if (this.scaleX_ !== 1.0 || this.scaleY !== 1.0) {
+    transform += " scale(" + this.scaleX_ + " " + this.scaleY_ + ")";
+  }
+
+  if (this.rotation_ !== 0) {
+    transform += " rotate(" + this.rotation_ + ")";
+  }
+
+  if (transform === "") {
+    this.element_.removeAttribute("transform");
+  } else {
+    this.element_.setAttribute("transform", transform);
+  }
+};
+
+EvalObject.prototype.place = function (x, y) {
+  this.x_ = x;
+  this.y_ = y;
+};
+
+EvalObject.prototype.rotate = function (degrees) {
+  this.rotation_ = degrees;
+};
+
+EvalObject.prototype.scale = function (scaleX, scaleY) {
+  this.scaleX_ = scaleX;
+  this.scaleY_ = scaleY;
+};
+
+},{"./evalUtils":22}],17:[function(require,module,exports){
+var EvalObject = require('./evalObject');
+var EvalString = require('./evalString');
+var evalUtils = require('./evalUtils');
+
+var EvalRect = function (width, height, style, color) {
+  evalUtils.ensureType(style, EvalString);
+  evalUtils.ensureType(color, EvalString);
+
+  EvalObject.apply(this);
+
+  this.width_ = width;
+  this.height_ = height;
+  this.color_ = color.getValue();
+  this.style_ = style.getValue();
+
+  this.element_ = null;
+};
+EvalRect.inherits(EvalObject);
+module.exports = EvalRect;
+
+EvalRect.prototype.draw = function (parent) {
+  if (!this.element_) {
+    this.element_ = document.createElementNS(Blockly.SVG_NS, 'rect');
+    parent.appendChild(this.element_);
+  }
+
+  // center rect at 0, 0. we'll use transforms to move it.
+  this.element_.setAttribute('x', -this.width_ / 2);
+  this.element_.setAttribute('y', -this.height_ / 2);
+  this.element_.setAttribute('width', this.width_);
+  this.element_.setAttribute('height', this.height_);
+
+  EvalObject.prototype.draw.apply(this, arguments);
+};
+
+},{"./evalObject":16,"./evalString":19,"./evalUtils":22}],18:[function(require,module,exports){
+var EvalObject = require('./evalObject');
+var EvalString = require('./evalString');
+var evalUtils = require('./evalUtils');
+
+var EvalStar = function (radius, style, color) {
+  evalUtils.ensureType(style, EvalString);
+  evalUtils.ensureType(color, EvalString);
+
+  EvalObject.apply(this);
+
+  this.radius_ = radius;
+  this.color_ = color.getValue();
+  this.style_ = style.getValue();
+
+  this.element_ = null;
+};
+EvalStar.inherits(EvalObject);
+module.exports = EvalStar;
+
+EvalStar.prototype.draw = function (parent) {
+  if (!this.element_) {
+    this.element_ = document.createElementNS(Blockly.SVG_NS, 'polygon');
+    parent.appendChild(this.element_);
+  }
+
+  var points = [];
+  var outerRadius = this.radius_;
+  var innerRadius = (3 - Math.sqrt(5)) / 2 * outerRadius;
+
+  var angleDelta = 2 * Math.PI / 5;
+  for (var angle = 0; angle < 2 * Math.PI; angle += angleDelta) {
+    points.push(outerRadius * Math.cos(angle) + "," + outerRadius * Math.sin(angle));
+    points.push(innerRadius * Math.cos(angle + angleDelta / 2) + "," +
+      innerRadius * Math.sin(angle + angleDelta / 2));
+  }
+
+  this.element_.setAttribute('points', points.join(' '));
+
+  EvalObject.prototype.draw.apply(this, arguments);
+};
+
+},{"./evalObject":16,"./evalString":19,"./evalUtils":22}],19:[function(require,module,exports){
 var EvalObject = require('./evalObject');
 
 var EvalString = function (val) {
@@ -2469,7 +2785,92 @@ EvalString.prototype.getValue = function () {
   return this.val_;
 };
 
-},{"./evalObject":15}],17:[function(require,module,exports){
+},{"./evalObject":16}],20:[function(require,module,exports){
+var EvalObject = require('./evalObject');
+var EvalString = require('./evalString');
+var evalUtils = require('./evalUtils');
+
+var EvalStringImage = function (text, fontSize, color) {
+  evalUtils.ensureType(text, EvalString);
+  evalUtils.ensureType(color, EvalString);
+
+  EvalObject.apply(this);
+
+  this.text_ = text.getValue();
+  this.fontSize_ = fontSize;
+
+  this.color_ = color.getValue();
+
+  this.element_ = null;
+};
+EvalStringImage.inherits(EvalObject);
+module.exports = EvalStringImage;
+
+EvalStringImage.prototype.draw = function (parent) {
+  if (!this.element_) {
+    this.element_ = document.createElementNS(Blockly.SVG_NS, 'text');
+    parent.appendChild(this.element_);
+  }
+  this.element_.textContent = this.text_;
+  this.element_.setAttribute('style', 'font-size: ' + this.fontSize_ + 'pt');
+
+  EvalObject.prototype.draw.apply(this, arguments);
+};
+
+},{"./evalObject":16,"./evalString":19,"./evalUtils":22}],21:[function(require,module,exports){
+var EvalObject = require('./evalObject');
+var EvalString = require('./evalString');
+var evalUtils = require('./evalUtils');
+
+var EvalTriangle = function (edge, style, color) {
+  evalUtils.ensureType(style, EvalString);
+  evalUtils.ensureType(color, EvalString);
+
+  EvalObject.apply(this);
+
+  this.edge_ = edge;
+  this.color_ = color.getValue();
+  this.style_ = style.getValue();
+
+  this.element_ = null;
+};
+EvalTriangle.inherits(EvalObject);
+module.exports = EvalTriangle;
+
+EvalTriangle.prototype.draw = function (parent) {
+  if (!this.element_) {
+    this.element_ = document.createElementNS(Blockly.SVG_NS, 'polygon');
+    parent.appendChild(this.element_);
+  }
+
+  // center at 0, 0 (allowing transforms to move it around)
+  // the center is halfway between width, and a third of the way up the height
+  var height = Math.sqrt(3) / 2 * this.edge_;
+
+  var bottomLeft = {
+    x: -this.edge_ / 2,
+    y: height / 3
+  };
+
+  var bottomRight = {
+    x: this.edge_ / 2,
+    y: height / 3
+  };
+
+  var top = {
+    x: 0,
+    y: -height * 2 / 3
+  };
+
+  this.element_.setAttribute('points',
+    bottomLeft.x +',' + bottomLeft.y + ' ' +
+    bottomRight.x + ',' + bottomRight.y + ' ' +
+    top.x + ',' + top.y);
+
+  EvalObject.prototype.draw.apply(this, arguments);
+};
+
+},{"./evalObject":16,"./evalString":19,"./evalUtils":22}],22:[function(require,module,exports){
 module.exports.ensureType = function (val, type) {
   if (!(val instanceof type)) {
     // todo - better strategy than throwing?
@@ -2478,8 +2879,7 @@ module.exports.ensureType = function (val, type) {
 };
 
 module.exports.getFill = function (style, color) {
-  // todo - i18n
-  // todo - 1asdf becomes 1 with parseInt
+  // todo - 1asdf becomes 1 with parseInt. do we care?
   // for now, we treat anything we don't recognize as solid.
   var alpha = parseInt(style, 10);
   if (style !== "outline") {
@@ -2518,7 +2918,7 @@ module.exports.cartesianToPixel = function (cartesianY) {
   return 400 - cartesianY;
 };
 
-},{}],18:[function(require,module,exports){
+},{}],23:[function(require,module,exports){
 var msg = require('../../locale/da_dk/eval');
 var blockUtils = require('../block_utils');
 
@@ -2527,7 +2927,11 @@ var blockUtils = require('../block_utils');
  */
 module.exports = {
   'eval1': {
-    solutionBlocks: '<block type="functional_circle" inline="false"><functional_input name="COLOR"><block type="functional_string"><title name="VAL">red</title></block></functional_input><functional_input name="SIZE"><block type="functional_math_number"><title name="NUM">50</title></block></functional_input></block>',
+    solutionBlocks: blockUtils.mathBlockXml('functional_square', {
+      'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'black' } ),
+      'STYLE': blockUtils.mathBlockXml('functional_string', null, { VAL: 'solid' }),
+      'SIZE': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 4 } )
+    }),
     ideal: Infinity,
     toolbox: blockUtils.createToolbox(
       blockUtils.blockOfType('functional_plus') +
@@ -2538,9 +2942,22 @@ module.exports = {
       blockUtils.blockOfType('functional_string') +
       blockUtils.blockOfType('functional_style') +
       blockUtils.blockOfType('functional_circle') +
+      blockUtils.blockOfType('functional_triangle') +
+      blockUtils.blockOfType('functional_square') +
+      blockUtils.blockOfType('functional_rectangle') +
+      blockUtils.blockOfType('functional_ellipse') +
+      blockUtils.blockOfType('functional_star') +
       blockUtils.blockOfType('place_image') +
-      blockUtils.blockOfType('overlay')),
-    startBlocks: '<block type="functional_circle" inline="false"><functional_input name="COLOR"><block type="functional_string"><title name="VAL">red</title></block></functional_input><functional_input name="SIZE"><block type="functional_math_number"><title name="NUM">50</title></block></functional_input></block>',
+      blockUtils.blockOfType('overlay') +
+      blockUtils.blockOfType('underlay') +
+      blockUtils.blockOfType('rotate') +
+      blockUtils.blockOfType('scale') +
+      blockUtils.blockOfType('functional_text')),
+    startBlocks: blockUtils.mathBlockXml('functional_star', {
+      'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'black' } ),
+      'STYLE': blockUtils.mathBlockXml('functional_string', null, { VAL: 'solid' }),
+      'SIZE': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 20 } )
+    }),
     requiredBlocks: '',
     freePlay: false
   },
@@ -2555,7 +2972,7 @@ module.exports = {
   }
 };
 
-},{"../../locale/da_dk/eval":43,"../block_utils":3}],19:[function(require,module,exports){
+},{"../../locale/da_dk/eval":48,"../block_utils":3}],24:[function(require,module,exports){
 var appMain = require('../appMain');
 window.Eval = require('./eval');
 var blocks = require('./blocks');
@@ -2568,7 +2985,7 @@ window.evalMain = function(options) {
   appMain(window.Eval, levels, options);
 };
 
-},{"../appMain":1,"../skins":26,"./blocks":10,"./eval":12,"./levels":18}],20:[function(require,module,exports){
+},{"../appMain":1,"../skins":31,"./blocks":10,"./eval":12,"./levels":23}],25:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -2589,7 +3006,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":44}],21:[function(require,module,exports){
+},{"ejs":49}],26:[function(require,module,exports){
 var trophy = require('./templates/trophy.html');
 var utils = require('./utils');
 var readonly = require('./templates/readonly.html');
@@ -3536,7 +3953,7 @@ var generateXMLForBlocks = function(blocks) {
 };
 
 
-},{"../locale/da_dk/common":42,"./codegen":6,"./constants":7,"./dom":8,"./templates/buttons.html":29,"./templates/code.html":30,"./templates/readonly.html":35,"./templates/shareFailure.html":36,"./templates/sharing.html":37,"./templates/showCode.html":38,"./templates/trophy.html":39,"./utils":40}],22:[function(require,module,exports){
+},{"../locale/da_dk/common":47,"./codegen":6,"./constants":7,"./dom":8,"./templates/buttons.html":34,"./templates/code.html":35,"./templates/readonly.html":40,"./templates/shareFailure.html":41,"./templates/sharing.html":42,"./templates/showCode.html":43,"./templates/trophy.html":44,"./utils":45}],27:[function(require,module,exports){
 var colors = {
   Number: [192, 1.00, 0.99], // 00ccff
   string: [180, 1.00, 0.60], // 0099999
@@ -3580,7 +3997,7 @@ module.exports.initTitledFunctionalBlock = function (block, title, type, args) {
   }
 };
 
-},{}],23:[function(require,module,exports){
+},{}],28:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -6507,7 +6924,7 @@ module.exports.initTitledFunctionalBlock = function (block, title, type, args) {
 }.call(this));
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],24:[function(require,module,exports){
+},{}],29:[function(require,module,exports){
 /**
  * A set of functional blocks
  */
@@ -6618,7 +7035,7 @@ function installMathNumber(blockly, generator, gensym) {
   };
 }
 
-},{"./functionalBlockUtils":22}],25:[function(require,module,exports){
+},{"./functionalBlockUtils":27}],30:[function(require,module,exports){
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
@@ -6856,7 +7273,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"./block_utils":3,"./utils":40,"./xml":41}],26:[function(require,module,exports){
+},{"./block_utils":3,"./utils":45,"./xml":46}],31:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -6925,7 +7342,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{}],27:[function(require,module,exports){
+},{}],32:[function(require,module,exports){
 /**
  * Blockly Apps: SVG Slider
  *
@@ -7151,7 +7568,7 @@ Slider.bindEvent_ = function(element, name, func) {
 
 module.exports = Slider;
 
-},{"./dom":8}],28:[function(require,module,exports){
+},{"./dom":8}],33:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7172,7 +7589,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":44}],29:[function(require,module,exports){
+},{"ejs":49}],34:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7193,7 +7610,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/da_dk/common":42,"ejs":44}],30:[function(require,module,exports){
+},{"../../locale/da_dk/common":47,"ejs":49}],35:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7214,7 +7631,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":44}],31:[function(require,module,exports){
+},{"ejs":49}],36:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7235,7 +7652,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/da_dk/common":42,"ejs":44}],32:[function(require,module,exports){
+},{"../../locale/da_dk/common":47,"ejs":49}],37:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7258,7 +7675,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/da_dk/common":42,"ejs":44}],33:[function(require,module,exports){
+},{"../../locale/da_dk/common":47,"ejs":49}],38:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7279,7 +7696,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/da_dk/common":42,"ejs":44}],34:[function(require,module,exports){
+},{"../../locale/da_dk/common":47,"ejs":49}],39:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7304,7 +7721,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/da_dk/common":42,"ejs":44}],35:[function(require,module,exports){
+},{"../../locale/da_dk/common":47,"ejs":49}],40:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7326,7 +7743,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":44}],36:[function(require,module,exports){
+},{"ejs":49}],41:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7347,7 +7764,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":44}],37:[function(require,module,exports){
+},{"ejs":49}],42:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7368,7 +7785,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/da_dk/common":42,"ejs":44}],38:[function(require,module,exports){
+},{"../../locale/da_dk/common":47,"ejs":49}],43:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7389,7 +7806,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/da_dk/common":42,"ejs":44}],39:[function(require,module,exports){
+},{"../../locale/da_dk/common":47,"ejs":49}],44:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7410,7 +7827,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":44}],40:[function(require,module,exports){
+},{"ejs":49}],45:[function(require,module,exports){
 var xml = require('./xml');
 var savedAmd;
 
@@ -7688,7 +8105,7 @@ exports.generateDropletPalette = function (codeFunctions) {
   return palette;
 };
 
-},{"./lodash":23,"./xml":41}],41:[function(require,module,exports){
+},{"./lodash":28,"./xml":46}],46:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
@@ -7716,7 +8133,7 @@ exports.parseElement = function(text) {
   return element;
 };
 
-},{}],42:[function(require,module,exports){
+},{}],47:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.da=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "og"};
 
@@ -7879,150 +8296,40 @@ exports.hintHeader = function(d){return "Her er et tip:"};
 exports.genericFeedback = function(d){return "Se hvordan du endte, og prøve at rette dit program."};
 
 
-},{"messageformat":55}],43:[function(require,module,exports){
+},{"messageformat":60}],48:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.da=function(n){return n===1?"one":"other"}
-exports.blocksUsed = function(d){return "Brugte blokke: %1"};
+exports.circleBlockTitle = function(d){return "circle (radius, style, color)"};
 
-exports.branches = function(d){return "grene"};
+exports.ellipseBlockTitle = function(d){return "ellipse (width, height, style, color)"};
 
-exports.catColour = function(d){return "Farve"};
+exports.overlayBlockTitle = function(d){return "overlay (top, bottom)"};
 
-exports.catControl = function(d){return "Sløjfer"};
+exports.placeImageBlockTitle = function(d){return "place-image (image, x, y)"};
 
-exports.catMath = function(d){return "Matematik"};
+exports.rectangleBlockTitle = function(d){return "rectangle (width, height, style, color)"};
 
-exports.catProcedures = function(d){return "Funktioner"};
+exports.rotateImageBlockTitle = function(d){return "rotate (image, degrees)"};
 
-exports.catTurtle = function(d){return "Handlinger"};
+exports.scaleImageBlockTitle = function(d){return "scale (factor)"};
 
-exports.catVariables = function(d){return "Variabler"};
+exports.squareBlockTitle = function(d){return "square (size, style, color)"};
 
-exports.catLogic = function(d){return "Logik"};
+exports.starBlockTitle = function(d){return "star (radius, style, color)"};
 
-exports.colourTooltip = function(d){return "Ændrer farven på blyanten."};
+exports.textBlockTitle = function(d){return "text (string, size, color)"};
 
-exports.degrees = function(d){return "grader"};
+exports.triangleBlockTitle = function(d){return "triangle (size, style, color)"};
 
-exports.depth = function(d){return "dybde"};
+exports.underlayBlockTitle = function(d){return "underlay (bottom, top)"};
 
-exports.dots = function(d){return "pixels"};
+exports.outline = function(d){return "outline"};
 
-exports.drawASquare = function(d){return "tegn en firkant"};
+exports.solid = function(d){return "solid"};
 
-exports.drawATriangle = function(d){return "tegn en trekant"};
+exports.string = function(d){return "string"};
 
-exports.drawACircle = function(d){return "tegn en cirkel"};
 
-exports.drawAFlower = function(d){return "tegn en blomst"};
-
-exports.drawAHexagon = function(d){return "tegn en sekskant"};
-
-exports.drawAHouse = function(d){return "tegn et hus"};
-
-exports.drawAPlanet = function(d){return "tegn en planet"};
-
-exports.drawARhombus = function(d){return "tegn et rhombe"};
-
-exports.drawARobot = function(d){return "tegn en robot"};
-
-exports.drawARocket = function(d){return "tegn en raket"};
-
-exports.drawASnowflake = function(d){return "tegn et snefnug"};
-
-exports.drawASnowman = function(d){return "tegn en snemand"};
-
-exports.drawAStar = function(d){return "tegn en stjerne"};
-
-exports.drawATree = function(d){return "tegn et træ"};
-
-exports.drawUpperWave = function(d){return "tegn øvre bølge"};
-
-exports.drawLowerWave = function(d){return "tegn lavere bølge"};
-
-exports.heightParameter = function(d){return "højde"};
-
-exports.hideTurtle = function(d){return "skjul kunstner"};
-
-exports.jump = function(d){return "hop"};
-
-exports.jumpBackward = function(d){return "hop baglæns ved"};
-
-exports.jumpForward = function(d){return "hop fremad ved"};
-
-exports.jumpTooltip = function(d){return "Flytter kunstneren uden at efterlade nogen mærker."};
-
-exports.jumpEastTooltip = function(d){return "Flytter markør øst uden at efterlade spor."};
-
-exports.jumpNorthTooltip = function(d){return "Flytter markør nord uden at efterlade spor."};
-
-exports.jumpSouthTooltip = function(d){return "Flytter markør syd uden at efterlade spor."};
-
-exports.jumpWestTooltip = function(d){return "Flytter markør vest uden at efterlade spor."};
-
-exports.lengthFeedback = function(d){return "Du har lavet det rigtige, undtagen længden du flytter."};
-
-exports.lengthParameter = function(d){return "længde"};
-
-exports.loopVariable = function(d){return "tæller"};
-
-exports.moveBackward = function(d){return "Flyt bagud ved"};
-
-exports.moveEastTooltip = function(d){return "Flytter markøren øst."};
-
-exports.moveForward = function(d){return "bevæg fremad ved"};
-
-exports.moveForwardTooltip = function(d){return "Flytter kunstneren fremad."};
-
-exports.moveNorthTooltip = function(d){return "Flytter markøren nord."};
-
-exports.moveSouthTooltip = function(d){return "Flytter markøren syd."};
-
-exports.moveWestTooltip = function(d){return "Flytter markøren vest."};
-
-exports.moveTooltip = function(d){return "Bevæger kunstneren fremad eller bagud med et specifikt beløb."};
-
-exports.notBlackColour = function(d){return "Du skal angive en anden farve end sort til dette puslespil."};
-
-exports.numBlocksNeeded = function(d){return "Dette puslespil kan løses ved brug af %1 af blokkene. Du brugte %2."};
-
-exports.penDown = function(d){return "blyant ned"};
-
-exports.penTooltip = function(d){return "Lyfter eller sænker blyanten for at starte eller stoppe tegning."};
-
-exports.penUp = function(d){return "blyant op"};
-
-exports.reinfFeedbackMsg = function(d){return "Ser dette se ud, som det du ønsker? Du kan trykke på \"Prøv igen\" knappen for at se din tegning."};
-
-exports.setColour = function(d){return "sæt farve"};
-
-exports.setWidth = function(d){return "indstil bredde"};
-
-exports.shareDrawing = function(d){return "Del dine tegninger:"};
-
-exports.showMe = function(d){return "Vis mig"};
-
-exports.showTurtle = function(d){return "Vis kunstner"};
-
-exports.step = function(d){return "trin"};
-
-exports.tooFewColours = function(d){return "Du skal bruge mindst %1 forskellige farver til dette puslespil. Du brugte kun %2."};
-
-exports.turnLeft = function(d){return "Drej til venstre ved"};
-
-exports.turnRight = function(d){return "Drej til højre ved"};
-
-exports.turnRightTooltip = function(d){return "Drejer kunstneren til højre ved en angivet vinkel."};
-
-exports.turnTooltip = function(d){return "Drejer kunstneren til venstre eller højre ved den angivne vinkels grader."};
-
-exports.turtleVisibilityTooltip = function(d){return "Gør kunstneren synlige eller usynlige."};
-
-exports.widthTooltip = function(d){return "Ændrer bredden på blyanten."};
-
-exports.wrongColour = function(d){return "Dit billede er den forkerte farve.  Til dette puslespil skal det være %1."};
-
-
-},{"messageformat":55}],44:[function(require,module,exports){
+},{"messageformat":60}],49:[function(require,module,exports){
 
 /*!
  * EJS
@@ -8381,7 +8688,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":45,"./utils":46,"fs":47,"path":48}],45:[function(require,module,exports){
+},{"./filters":50,"./utils":51,"fs":52,"path":53}],50:[function(require,module,exports){
 /*!
  * EJS - Filters
  * Copyright(c) 2010 TJ Holowaychuk <tj@vision-media.ca>
@@ -8584,7 +8891,7 @@ exports.json = function(obj){
   return JSON.stringify(obj);
 };
 
-},{}],46:[function(require,module,exports){
+},{}],51:[function(require,module,exports){
 
 /*!
  * EJS
@@ -8610,9 +8917,9 @@ exports.escape = function(html){
 };
  
 
-},{}],47:[function(require,module,exports){
+},{}],52:[function(require,module,exports){
 
-},{}],48:[function(require,module,exports){
+},{}],53:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -8840,7 +9147,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require("JkpR2F"))
-},{"JkpR2F":49}],49:[function(require,module,exports){
+},{"JkpR2F":54}],54:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -8905,7 +9212,7 @@ process.chdir = function (dir) {
     throw new Error('process.chdir is not supported');
 };
 
-},{}],50:[function(require,module,exports){
+},{}],55:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -9416,7 +9723,7 @@ process.chdir = function (dir) {
 }(this));
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],51:[function(require,module,exports){
+},{}],56:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -9502,7 +9809,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],52:[function(require,module,exports){
+},{}],57:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -9589,13 +9896,13 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],53:[function(require,module,exports){
+},{}],58:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":51,"./encode":52}],54:[function(require,module,exports){
+},{"./decode":56,"./encode":57}],59:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -10304,7 +10611,7 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":50,"querystring":53}],55:[function(require,module,exports){
+},{"punycode":55,"querystring":58}],60:[function(require,module,exports){
 /**
  * messageformat.js
  *
@@ -11887,4 +12194,4 @@ function isNullOrUndefined(arg) {
 
 })( this );
 
-},{}]},{},[19])
+},{}]},{},[24])

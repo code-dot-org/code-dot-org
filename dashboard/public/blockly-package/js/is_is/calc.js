@@ -1687,6 +1687,7 @@ Calc.resetButtonClick = function () {
   Calc.expressions.user = null;
   Calc.expressions.current = null;
   Calc.shownFeedback_ = false;
+  Calc.message = null;
 
   Calc.drawExpressions();
 };
@@ -1746,6 +1747,10 @@ function generateExpressionFromBlockXml(blockXml) {
  * Execute the user's code.  Heaven help us...
  */
 Calc.execute = function() {
+  Calc.result = BlocklyApps.ResultType.UNSET;
+  Calc.testResults = BlocklyApps.TestResults.NO_TESTS_RUN;
+  Calc.message = undefined;
+
   // todo (brent) perhaps try to share user vs. expected generation better
   var code = Blockly.Generator.workspaceToCode('JavaScript');
   evalCode(code);
@@ -1759,28 +1764,31 @@ Calc.execute = function() {
 
   Calc.expressions.user.applyExpectation(Calc.expressions.target);
 
-  var result = !Calc.expressions.user.failedExpectation(true);
+  Calc.result = !Calc.expressions.user.failedExpectation(true);
 
-  var equivalent = Calc.expressions.user.isEquivalent(Calc.expressions.target);
+  if (Calc.result === true) {
+    Calc.testResult = TestResults.ALL_PASS;
+  } else {
+    Calc.testResult = TestResults.LEVEL_INCOMPLETE_FAIL;
+    // equivalence means the expressions are the same if we ignore the ordering
+    // of inputs
+    if (Calc.expressions.user.isEquivalent(Calc.expressions.target)) {
+      Calc.testResult = TestResults.APP_SPECIFIC_FAIL;
+      Calc.message = calcMsg.equivalentExpression();
+    }
+  }
 
   Calc.drawExpressions();
 
   var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
   var textBlocks = Blockly.Xml.domToText(xml);
 
-  // todo (brent) - better way of doing this
-  if (equivalent) {
-    Calc.message = result ? "correct" : "expression equivalent";
-  } else {
-    Calc.message = null;
-  }
-
   var reportData = {
     app: 'calc',
     level: level.id,
     builder: level.builder,
-    result: result,
-    testResult: result ? TestResults.ALL_PASS : TestResults.APP_SPECIFIC_FAIL,
+    result: Calc.result,
+    testResult: Calc.testResult,
     program: encodeURIComponent(textBlocks),
     onComplete: onReportComplete
   };
@@ -1908,14 +1916,18 @@ function drawSvgExpression(elementId, expr, styleMarks) {
 var displayFeedback = function(response) {
   if (!Calc.expressions.user.isOperation() && !Calc.shownFeedback_) {
     Calc.shownFeedback_ = true;
-    BlocklyApps.displayFeedback({
+    var options = {
       app: 'Calc',
       skin: skin.id,
-      // feedbackType: Calc.testResults,
-      message: Calc.message ? Calc.message : "todo (brent): wrong",
       response: response,
-      level: level
-    });
+      level: level,
+      feedbackType: Calc.testResult,
+    };
+    if (Calc.message) {
+      options.message = Calc.message;
+    }
+
+    BlocklyApps.displayFeedback(options);
   }
 };
 
@@ -1943,9 +1955,10 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/is_is/calc') ; buf.push('\n\n<button id="continueButton" class="launch hide float-right">\n  ');4; // splitting these lines causes an extra space to show up in front of the word, breaking centering
-  // todo (brent) : continue should be a msg
-  ; buf.push('\n  <img src="', escape((7,  assetUrl('media/1x1.gif') )), '">Continue\n</button>\n'); })();
+ buf.push('');1;
+  var msg = require('../../locale/is_is/calc');
+  var commonMsg = require('../../locale/is_is/common');
+; buf.push('\n\n<button id="continueButton" class="launch hide float-right">\n  <img src="', escape((7,  assetUrl('media/1x1.gif') )), '">', escape((7,  commonMsg.continue() )), '\n</button>\n'); })();
 } 
 return buf.join('');
 };
@@ -1953,7 +1966,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/is_is/calc":38,"ejs":40}],10:[function(require,module,exports){
+},{"../../locale/is_is/calc":38,"../../locale/is_is/common":39,"ejs":40}],10:[function(require,module,exports){
 /**
  * A node consisting of a value, and if that value is an operator, two operands.
  * Operands will always be stored internally as ExpressionNodes.
@@ -2230,7 +2243,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgCalc">\n  <rect x="0" y="0" width="400" height="300" fill="#33ccff"/>\n  <rect x="0" y="300" width="400" height="100" fill="#996633"/>\n  <text x="0" y="30" class="calcHeader">Your expression:</text> <!-- todo - i18n -->\n  <g id="userExpression" class="expr" transform="translate(0, 250)">\n  </g>\n  <text x="0" y="330" class="calcHeader">Goal:</text> <!-- todo - i18n -->\n  <g id="answerExpression" class="expr" transform="translate(0, 350)">\n  </g>\n</svg>\n'); })();
+ buf.push('');1; var msg = require('../../locale/is_is/calc'); ; buf.push('\n\n<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgCalc">\n  <rect x="0" y="0" width="400" height="300" fill="#33ccff"/>\n  <rect x="0" y="300" width="400" height="100" fill="#996633"/>\n  <text x="0" y="30" class="calcHeader">', escape((6,  msg.yourExpression() )), '</text>\n  <g id="userExpression" class="expr" transform="translate(0, 250)">\n  </g>\n  <text x="0" y="330" class="calcHeader">', escape((9,  msg.goal() )), '</text>\n  <g id="answerExpression" class="expr" transform="translate(0, 350)">\n  </g>\n</svg>\n'); })();
 } 
 return buf.join('');
 };
@@ -2238,7 +2251,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":40}],14:[function(require,module,exports){
+},{"../../locale/is_is/calc":38,"ejs":40}],14:[function(require,module,exports){
 var INFINITE_LOOP_TRAP = '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 
 var LOOP_HIGHLIGHT = 'loopHighlight();\n';
@@ -7802,145 +7815,11 @@ exports.parseElement = function(text) {
 
 },{}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.is=function(n){return n===1?"one":"other"}
-exports.blocksUsed = function(d){return "Notaðir kubbar: %1"};
+exports.equivalentExpression = function(d){return "Try reordering your arguments to get exactly the same expression."};
 
-exports.branches = function(d){return "greinar"};
+exports.goal = function(d){return "Goal:"};
 
-exports.catColour = function(d){return "Litir"};
-
-exports.catControl = function(d){return "Lykkjur"};
-
-exports.catMath = function(d){return "Reikningur"};
-
-exports.catProcedures = function(d){return "Föll"};
-
-exports.catTurtle = function(d){return "Aðgerðir"};
-
-exports.catVariables = function(d){return "Breytur"};
-
-exports.catLogic = function(d){return "Rökvísi"};
-
-exports.colourTooltip = function(d){return "Breytir litnum á penslinum."};
-
-exports.degrees = function(d){return "gráður"};
-
-exports.depth = function(d){return "dýpt"};
-
-exports.dots = function(d){return "díla"};
-
-exports.drawASquare = function(d){return "teikna ferning"};
-
-exports.drawATriangle = function(d){return "teikna þríhyrning"};
-
-exports.drawACircle = function(d){return "teikna hring"};
-
-exports.drawAFlower = function(d){return "teikna blóm"};
-
-exports.drawAHexagon = function(d){return "teikna sexkant"};
-
-exports.drawAHouse = function(d){return "teikna hús"};
-
-exports.drawAPlanet = function(d){return "teikna plánetu"};
-
-exports.drawARhombus = function(d){return "teikna tígul"};
-
-exports.drawARobot = function(d){return "teikna vélmenni"};
-
-exports.drawARocket = function(d){return "teikna eldflaug"};
-
-exports.drawASnowflake = function(d){return "teikna snjókorn"};
-
-exports.drawASnowman = function(d){return "teikna snjókarl"};
-
-exports.drawAStar = function(d){return "teikna stjörnu"};
-
-exports.drawATree = function(d){return "teikna tré"};
-
-exports.drawUpperWave = function(d){return "teikna efri bylgju"};
-
-exports.drawLowerWave = function(d){return "teikna neðri bylgju"};
-
-exports.heightParameter = function(d){return "hæð"};
-
-exports.hideTurtle = function(d){return "fela listamann"};
-
-exports.jump = function(d){return "stökkva"};
-
-exports.jumpBackward = function(d){return "hoppa afturábak um"};
-
-exports.jumpForward = function(d){return "hoppa fram um"};
-
-exports.jumpTooltip = function(d){return "Færir listamanninn án þess að skilja eftir spor."};
-
-exports.jumpEastTooltip = function(d){return "Færir listamanninn austur án þess að skilja eftir slóð."};
-
-exports.jumpNorthTooltip = function(d){return "Færir listamanninn norður án þess að skilja eftir slóð."};
-
-exports.jumpSouthTooltip = function(d){return "Færir listamanninn suður án þess að skilja eftir slóð."};
-
-exports.jumpWestTooltip = function(d){return "Færir listamanninn vestur án þess að skilja eftir slóð."};
-
-exports.lengthFeedback = function(d){return "Þetta er rétt hjá þér nema vegalengdin sem á að færa."};
-
-exports.lengthParameter = function(d){return "lengd"};
-
-exports.loopVariable = function(d){return "teljari"};
-
-exports.moveBackward = function(d){return "færa aftur um"};
-
-exports.moveEastTooltip = function(d){return "Færir listamanninn í austurátt."};
-
-exports.moveForward = function(d){return "færa áfram um"};
-
-exports.moveForwardTooltip = function(d){return "Færir listamanninn áfram."};
-
-exports.moveNorthTooltip = function(d){return "Færir listamanninn í norðurátt."};
-
-exports.moveSouthTooltip = function(d){return "Færir listamanninn í suðurátt."};
-
-exports.moveWestTooltip = function(d){return "Færir listamanninn í vesturátt."};
-
-exports.moveTooltip = function(d){return "Færir listamanninn áfram eða aftur á bak um tiltekna vegalengd."};
-
-exports.notBlackColour = function(d){return "Þú verður að velja annan lit en svartan fyrir þessa þraut."};
-
-exports.numBlocksNeeded = function(d){return "Þessa þraut er hægt að leysa með %1 kubbum. Þú notaðir %2."};
-
-exports.penDown = function(d){return "pensill niður"};
-
-exports.penTooltip = function(d){return "Lyftir eða lækkar pensilinn til að byrja eða hætta að teikna."};
-
-exports.penUp = function(d){return "pensill upp"};
-
-exports.reinfFeedbackMsg = function(d){return "Lítur þetta út eins og þú vilt? Þú getur valið takkann „Reyna aftur“ til að sjá teikninguna þína."};
-
-exports.setColour = function(d){return "stilla lit"};
-
-exports.setWidth = function(d){return "stilla breidd"};
-
-exports.shareDrawing = function(d){return "Deildu teikningunni:"};
-
-exports.showMe = function(d){return "Sýna mig"};
-
-exports.showTurtle = function(d){return "sýna listamanninn"};
-
-exports.step = function(d){return "þrep"};
-
-exports.tooFewColours = function(d){return "Þú verður að nota a.m.k. %1 mismunandi liti í þessari þraut. Þú notaðir aðeins %2."};
-
-exports.turnLeft = function(d){return "snúa til vinstri um"};
-
-exports.turnRight = function(d){return "snúa til hægri um"};
-
-exports.turnRightTooltip = function(d){return "Snýr listamanninum til hægri um tiltekið horn."};
-
-exports.turnTooltip = function(d){return "Snýr listamanninum til vinstri eða hægri um tiltekinn fjölda gráða."};
-
-exports.turtleVisibilityTooltip = function(d){return "Gerir listamanninn sýnilegan eða ósýnilegan."};
-
-exports.widthTooltip = function(d){return "Breytir breidd pensilsins."};
-
-exports.wrongColour = function(d){return "Myndin þín er í röngum lit. Í þessari þraut þarf að nota %1."};
+exports.yourExpression = function(d){return "Your expression:"};
 
 
 },{"messageformat":51}],39:[function(require,module,exports){

@@ -1687,6 +1687,7 @@ Calc.resetButtonClick = function () {
   Calc.expressions.user = null;
   Calc.expressions.current = null;
   Calc.shownFeedback_ = false;
+  Calc.message = null;
 
   Calc.drawExpressions();
 };
@@ -1746,6 +1747,10 @@ function generateExpressionFromBlockXml(blockXml) {
  * Execute the user's code.  Heaven help us...
  */
 Calc.execute = function() {
+  Calc.result = BlocklyApps.ResultType.UNSET;
+  Calc.testResults = BlocklyApps.TestResults.NO_TESTS_RUN;
+  Calc.message = undefined;
+
   // todo (brent) perhaps try to share user vs. expected generation better
   var code = Blockly.Generator.workspaceToCode('JavaScript');
   evalCode(code);
@@ -1759,28 +1764,31 @@ Calc.execute = function() {
 
   Calc.expressions.user.applyExpectation(Calc.expressions.target);
 
-  var result = !Calc.expressions.user.failedExpectation(true);
+  Calc.result = !Calc.expressions.user.failedExpectation(true);
 
-  var equivalent = Calc.expressions.user.isEquivalent(Calc.expressions.target);
+  if (Calc.result === true) {
+    Calc.testResult = TestResults.ALL_PASS;
+  } else {
+    Calc.testResult = TestResults.LEVEL_INCOMPLETE_FAIL;
+    // equivalence means the expressions are the same if we ignore the ordering
+    // of inputs
+    if (Calc.expressions.user.isEquivalent(Calc.expressions.target)) {
+      Calc.testResult = TestResults.APP_SPECIFIC_FAIL;
+      Calc.message = calcMsg.equivalentExpression();
+    }
+  }
 
   Calc.drawExpressions();
 
   var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
   var textBlocks = Blockly.Xml.domToText(xml);
 
-  // todo (brent) - better way of doing this
-  if (equivalent) {
-    Calc.message = result ? "correct" : "expression equivalent";
-  } else {
-    Calc.message = null;
-  }
-
   var reportData = {
     app: 'calc',
     level: level.id,
     builder: level.builder,
-    result: result,
-    testResult: result ? TestResults.ALL_PASS : TestResults.APP_SPECIFIC_FAIL,
+    result: Calc.result,
+    testResult: Calc.testResult,
     program: encodeURIComponent(textBlocks),
     onComplete: onReportComplete
   };
@@ -1908,14 +1916,18 @@ function drawSvgExpression(elementId, expr, styleMarks) {
 var displayFeedback = function(response) {
   if (!Calc.expressions.user.isOperation() && !Calc.shownFeedback_) {
     Calc.shownFeedback_ = true;
-    BlocklyApps.displayFeedback({
+    var options = {
       app: 'Calc',
       skin: skin.id,
-      // feedbackType: Calc.testResults,
-      message: Calc.message ? Calc.message : "todo (brent): wrong",
       response: response,
-      level: level
-    });
+      level: level,
+      feedbackType: Calc.testResult,
+    };
+    if (Calc.message) {
+      options.message = Calc.message;
+    }
+
+    BlocklyApps.displayFeedback(options);
   }
 };
 
@@ -1943,9 +1955,10 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/zh_tw/calc') ; buf.push('\n\n<button id="continueButton" class="launch hide float-right">\n  ');4; // splitting these lines causes an extra space to show up in front of the word, breaking centering
-  // todo (brent) : continue should be a msg
-  ; buf.push('\n  <img src="', escape((7,  assetUrl('media/1x1.gif') )), '">Continue\n</button>\n'); })();
+ buf.push('');1;
+  var msg = require('../../locale/zh_tw/calc');
+  var commonMsg = require('../../locale/zh_tw/common');
+; buf.push('\n\n<button id="continueButton" class="launch hide float-right">\n  <img src="', escape((7,  assetUrl('media/1x1.gif') )), '">', escape((7,  commonMsg.continue() )), '\n</button>\n'); })();
 } 
 return buf.join('');
 };
@@ -1953,7 +1966,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/zh_tw/calc":38,"ejs":40}],10:[function(require,module,exports){
+},{"../../locale/zh_tw/calc":38,"../../locale/zh_tw/common":39,"ejs":40}],10:[function(require,module,exports){
 /**
  * A node consisting of a value, and if that value is an operator, two operands.
  * Operands will always be stored internally as ExpressionNodes.
@@ -2230,7 +2243,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgCalc">\n  <rect x="0" y="0" width="400" height="300" fill="#33ccff"/>\n  <rect x="0" y="300" width="400" height="100" fill="#996633"/>\n  <text x="0" y="30" class="calcHeader">Your expression:</text> <!-- todo - i18n -->\n  <g id="userExpression" class="expr" transform="translate(0, 250)">\n  </g>\n  <text x="0" y="330" class="calcHeader">Goal:</text> <!-- todo - i18n -->\n  <g id="answerExpression" class="expr" transform="translate(0, 350)">\n  </g>\n</svg>\n'); })();
+ buf.push('');1; var msg = require('../../locale/zh_tw/calc'); ; buf.push('\n\n<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgCalc">\n  <rect x="0" y="0" width="400" height="300" fill="#33ccff"/>\n  <rect x="0" y="300" width="400" height="100" fill="#996633"/>\n  <text x="0" y="30" class="calcHeader">', escape((6,  msg.yourExpression() )), '</text>\n  <g id="userExpression" class="expr" transform="translate(0, 250)">\n  </g>\n  <text x="0" y="330" class="calcHeader">', escape((9,  msg.goal() )), '</text>\n  <g id="answerExpression" class="expr" transform="translate(0, 350)">\n  </g>\n</svg>\n'); })();
 } 
 return buf.join('');
 };
@@ -2238,7 +2251,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":40}],14:[function(require,module,exports){
+},{"../../locale/zh_tw/calc":38,"ejs":40}],14:[function(require,module,exports){
 var INFINITE_LOOP_TRAP = '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 
 var LOOP_HIGHLIGHT = 'loopHighlight();\n';
@@ -7802,145 +7815,11 @@ exports.parseElement = function(text) {
 
 },{}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.zh=function(n){return "other"}
-exports.blocksUsed = function(d){return "已使用 %1 個程式積木。"};
+exports.equivalentExpression = function(d){return "Try reordering your arguments to get exactly the same expression."};
 
-exports.branches = function(d){return "分歧"};
+exports.goal = function(d){return "Goal:"};
 
-exports.catColour = function(d){return "顏色"};
-
-exports.catControl = function(d){return "迴圈類別"};
-
-exports.catMath = function(d){return "運算類別"};
-
-exports.catProcedures = function(d){return "函數類別"};
-
-exports.catTurtle = function(d){return "動作類別"};
-
-exports.catVariables = function(d){return "變數類別"};
-
-exports.catLogic = function(d){return "邏輯類別"};
-
-exports.colourTooltip = function(d){return "變更畫筆顏色。"};
-
-exports.degrees = function(d){return "度"};
-
-exports.depth = function(d){return "深度"};
-
-exports.dots = function(d){return "像素 "};
-
-exports.drawASquare = function(d){return "畫一個正方形"};
-
-exports.drawATriangle = function(d){return "畫一個三角形"};
-
-exports.drawACircle = function(d){return "畫一個圓形"};
-
-exports.drawAFlower = function(d){return "畫一朵花"};
-
-exports.drawAHexagon = function(d){return "畫個六邊形"};
-
-exports.drawAHouse = function(d){return "畫一間房子"};
-
-exports.drawAPlanet = function(d){return "畫一顆行星"};
-
-exports.drawARhombus = function(d){return "畫個菱形"};
-
-exports.drawARobot = function(d){return "畫一個機器人"};
-
-exports.drawARocket = function(d){return "畫一個火箭"};
-
-exports.drawASnowflake = function(d){return "畫一片雪花"};
-
-exports.drawASnowman = function(d){return "畫一個雪人"};
-
-exports.drawAStar = function(d){return "畫一顆星星"};
-
-exports.drawATree = function(d){return "畫一棵樹"};
-
-exports.drawUpperWave = function(d){return "draw upper wave"};
-
-exports.drawLowerWave = function(d){return "draw lower wave"};
-
-exports.heightParameter = function(d){return "高度"};
-
-exports.hideTurtle = function(d){return "將藝術家隱藏"};
-
-exports.jump = function(d){return "跳"};
-
-exports.jumpBackward = function(d){return "向後跳"};
-
-exports.jumpForward = function(d){return "向前跳"};
-
-exports.jumpTooltip = function(d){return "移動藝術家而不留下任何記號"};
-
-exports.jumpEastTooltip = function(d){return "不留下任何痕跡下把演出者向東移動"};
-
-exports.jumpNorthTooltip = function(d){return "不留下任何痕跡下把演出者向北移動"};
-
-exports.jumpSouthTooltip = function(d){return "不留下任何痕跡下把演出者向南移動"};
-
-exports.jumpWestTooltip = function(d){return "不留下任何痕跡下把演出者向西移動"};
-
-exports.lengthFeedback = function(d){return "你幾乎做對了, 除了移動的長度不對"};
-
-exports.lengthParameter = function(d){return "長度"};
-
-exports.loopVariable = function(d){return "計數器"};
-
-exports.moveBackward = function(d){return "向後移動"};
-
-exports.moveEastTooltip = function(d){return "把演出者向東移動"};
-
-exports.moveForward = function(d){return "向前移動"};
-
-exports.moveForwardTooltip = function(d){return "將藝術家向前移動"};
-
-exports.moveNorthTooltip = function(d){return "把演出者向北移動"};
-
-exports.moveSouthTooltip = function(d){return "把演出者向南移動"};
-
-exports.moveWestTooltip = function(d){return "把演出者向西移動"};
-
-exports.moveTooltip = function(d){return "將藝術家向前或向後移動特定的步數。"};
-
-exports.notBlackColour = function(d){return "你必需設定黑色以外的顏色來完成這個關卡。"};
-
-exports.numBlocksNeeded = function(d){return "這個關卡可以使用 %1 程式積木來完成。  你使用了 %2 個程式積木。"};
-
-exports.penDown = function(d){return "下筆"};
-
-exports.penTooltip = function(d){return "使用\"下筆\"或\"停筆\"來開始或停止繪畫動作。"};
-
-exports.penUp = function(d){return "停筆"};
-
-exports.reinfFeedbackMsg = function(d){return "這看起來像你想要的嗎？你可以按\"再試一次\"按鈕來看看你畫出來的圖形。"};
-
-exports.setColour = function(d){return "設定顏色"};
-
-exports.setWidth = function(d){return "設定寬度"};
-
-exports.shareDrawing = function(d){return "分享您的畫作"};
-
-exports.showMe = function(d){return "顯示"};
-
-exports.showTurtle = function(d){return "顯示藝術家"};
-
-exports.step = function(d){return "step"};
-
-exports.tooFewColours = function(d){return "你必需使用至少 %1 種不同的顏色來完成這個關卡。你只使用了 %2 種顏色。"};
-
-exports.turnLeft = function(d){return "向左轉"};
-
-exports.turnRight = function(d){return "向右轉"};
-
-exports.turnRightTooltip = function(d){return "將藝術家向右轉動指定的角度"};
-
-exports.turnTooltip = function(d){return "將藝術家向左轉動指定的角度"};
-
-exports.turtleVisibilityTooltip = function(d){return "將藝術家隱藏或顯示。"};
-
-exports.widthTooltip = function(d){return "更改畫筆的粗細。"};
-
-exports.wrongColour = function(d){return "你圖形顏色是錯誤的。在這個關卡中，它必須是 %1。"};
+exports.yourExpression = function(d){return "Your expression:"};
 
 
 },{"messageformat":51}],39:[function(require,module,exports){

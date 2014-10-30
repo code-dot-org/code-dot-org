@@ -1687,6 +1687,7 @@ Calc.resetButtonClick = function () {
   Calc.expressions.user = null;
   Calc.expressions.current = null;
   Calc.shownFeedback_ = false;
+  Calc.message = null;
 
   Calc.drawExpressions();
 };
@@ -1746,6 +1747,10 @@ function generateExpressionFromBlockXml(blockXml) {
  * Execute the user's code.  Heaven help us...
  */
 Calc.execute = function() {
+  Calc.result = BlocklyApps.ResultType.UNSET;
+  Calc.testResults = BlocklyApps.TestResults.NO_TESTS_RUN;
+  Calc.message = undefined;
+
   // todo (brent) perhaps try to share user vs. expected generation better
   var code = Blockly.Generator.workspaceToCode('JavaScript');
   evalCode(code);
@@ -1759,28 +1764,31 @@ Calc.execute = function() {
 
   Calc.expressions.user.applyExpectation(Calc.expressions.target);
 
-  var result = !Calc.expressions.user.failedExpectation(true);
+  Calc.result = !Calc.expressions.user.failedExpectation(true);
 
-  var equivalent = Calc.expressions.user.isEquivalent(Calc.expressions.target);
+  if (Calc.result === true) {
+    Calc.testResult = TestResults.ALL_PASS;
+  } else {
+    Calc.testResult = TestResults.LEVEL_INCOMPLETE_FAIL;
+    // equivalence means the expressions are the same if we ignore the ordering
+    // of inputs
+    if (Calc.expressions.user.isEquivalent(Calc.expressions.target)) {
+      Calc.testResult = TestResults.APP_SPECIFIC_FAIL;
+      Calc.message = calcMsg.equivalentExpression();
+    }
+  }
 
   Calc.drawExpressions();
 
   var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
   var textBlocks = Blockly.Xml.domToText(xml);
 
-  // todo (brent) - better way of doing this
-  if (equivalent) {
-    Calc.message = result ? "correct" : "expression equivalent";
-  } else {
-    Calc.message = null;
-  }
-
   var reportData = {
     app: 'calc',
     level: level.id,
     builder: level.builder,
-    result: result,
-    testResult: result ? TestResults.ALL_PASS : TestResults.APP_SPECIFIC_FAIL,
+    result: Calc.result,
+    testResult: Calc.testResult,
     program: encodeURIComponent(textBlocks),
     onComplete: onReportComplete
   };
@@ -1908,14 +1916,18 @@ function drawSvgExpression(elementId, expr, styleMarks) {
 var displayFeedback = function(response) {
   if (!Calc.expressions.user.isOperation() && !Calc.shownFeedback_) {
     Calc.shownFeedback_ = true;
-    BlocklyApps.displayFeedback({
+    var options = {
       app: 'Calc',
       skin: skin.id,
-      // feedbackType: Calc.testResults,
-      message: Calc.message ? Calc.message : "todo (brent): wrong",
       response: response,
-      level: level
-    });
+      level: level,
+      feedbackType: Calc.testResult,
+    };
+    if (Calc.message) {
+      options.message = Calc.message;
+    }
+
+    BlocklyApps.displayFeedback(options);
   }
 };
 
@@ -1943,9 +1955,10 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/az_az/calc') ; buf.push('\n\n<button id="continueButton" class="launch hide float-right">\n  ');4; // splitting these lines causes an extra space to show up in front of the word, breaking centering
-  // todo (brent) : continue should be a msg
-  ; buf.push('\n  <img src="', escape((7,  assetUrl('media/1x1.gif') )), '">Continue\n</button>\n'); })();
+ buf.push('');1;
+  var msg = require('../../locale/az_az/calc');
+  var commonMsg = require('../../locale/az_az/common');
+; buf.push('\n\n<button id="continueButton" class="launch hide float-right">\n  <img src="', escape((7,  assetUrl('media/1x1.gif') )), '">', escape((7,  commonMsg.continue() )), '\n</button>\n'); })();
 } 
 return buf.join('');
 };
@@ -1953,7 +1966,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/az_az/calc":38,"ejs":40}],10:[function(require,module,exports){
+},{"../../locale/az_az/calc":38,"../../locale/az_az/common":39,"ejs":40}],10:[function(require,module,exports){
 /**
  * A node consisting of a value, and if that value is an operator, two operands.
  * Operands will always be stored internally as ExpressionNodes.
@@ -2230,7 +2243,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgCalc">\n  <rect x="0" y="0" width="400" height="300" fill="#33ccff"/>\n  <rect x="0" y="300" width="400" height="100" fill="#996633"/>\n  <text x="0" y="30" class="calcHeader">Your expression:</text> <!-- todo - i18n -->\n  <g id="userExpression" class="expr" transform="translate(0, 250)">\n  </g>\n  <text x="0" y="330" class="calcHeader">Goal:</text> <!-- todo - i18n -->\n  <g id="answerExpression" class="expr" transform="translate(0, 350)">\n  </g>\n</svg>\n'); })();
+ buf.push('');1; var msg = require('../../locale/az_az/calc'); ; buf.push('\n\n<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgCalc">\n  <rect x="0" y="0" width="400" height="300" fill="#33ccff"/>\n  <rect x="0" y="300" width="400" height="100" fill="#996633"/>\n  <text x="0" y="30" class="calcHeader">', escape((6,  msg.yourExpression() )), '</text>\n  <g id="userExpression" class="expr" transform="translate(0, 250)">\n  </g>\n  <text x="0" y="330" class="calcHeader">', escape((9,  msg.goal() )), '</text>\n  <g id="answerExpression" class="expr" transform="translate(0, 350)">\n  </g>\n</svg>\n'); })();
 } 
 return buf.join('');
 };
@@ -2238,7 +2251,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":40}],14:[function(require,module,exports){
+},{"../../locale/az_az/calc":38,"ejs":40}],14:[function(require,module,exports){
 var INFINITE_LOOP_TRAP = '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 
 var LOOP_HIGHLIGHT = 'loopHighlight();\n';
@@ -7802,145 +7815,11 @@ exports.parseElement = function(text) {
 
 },{}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.en=function(n){return n===1?"one":"other"}
-exports.blocksUsed = function(d){return "İstifadə olunmuş bloklar: %1"};
+exports.equivalentExpression = function(d){return "Try reordering your arguments to get exactly the same expression."};
 
-exports.branches = function(d){return "branches"};
+exports.goal = function(d){return "Goal:"};
 
-exports.catColour = function(d){return "Rəng"};
-
-exports.catControl = function(d){return "Dövlər"};
-
-exports.catMath = function(d){return "Riyaziyyat"};
-
-exports.catProcedures = function(d){return "Funksiyalar"};
-
-exports.catTurtle = function(d){return "Əmrlər"};
-
-exports.catVariables = function(d){return "Dəyişənlər"};
-
-exports.catLogic = function(d){return "Məntiq"};
-
-exports.colourTooltip = function(d){return "Karandaşın rəngini dəyişir."};
-
-exports.degrees = function(d){return "dərəcə"};
-
-exports.depth = function(d){return "dərinlik"};
-
-exports.dots = function(d){return "piksellər"};
-
-exports.drawASquare = function(d){return "kvadrat çək"};
-
-exports.drawATriangle = function(d){return "üçbucaq çək"};
-
-exports.drawACircle = function(d){return "çevrə çək"};
-
-exports.drawAFlower = function(d){return "gül çək"};
-
-exports.drawAHexagon = function(d){return "altıbucaqlı çək"};
-
-exports.drawAHouse = function(d){return "ev çək"};
-
-exports.drawAPlanet = function(d){return "draw a planet"};
-
-exports.drawARhombus = function(d){return "romb çək"};
-
-exports.drawARobot = function(d){return "draw a robot"};
-
-exports.drawARocket = function(d){return "draw a rocket"};
-
-exports.drawASnowflake = function(d){return "qar dənəsi çək"};
-
-exports.drawASnowman = function(d){return "qar adamı çək"};
-
-exports.drawAStar = function(d){return "draw a star"};
-
-exports.drawATree = function(d){return "bir ağac çək"};
-
-exports.drawUpperWave = function(d){return "draw upper wave"};
-
-exports.drawLowerWave = function(d){return "draw lower wave"};
-
-exports.heightParameter = function(d){return "hündürlük"};
-
-exports.hideTurtle = function(d){return "rəssamı gizlət"};
-
-exports.jump = function(d){return "atıl"};
-
-exports.jumpBackward = function(d){return "geriyə atıl"};
-
-exports.jumpForward = function(d){return "irəli atıl"};
-
-exports.jumpTooltip = function(d){return "Heç bir iz qoymadan rəssamın yerini dəyişir."};
-
-exports.jumpEastTooltip = function(d){return "Moves the artist east without leaving any marks."};
-
-exports.jumpNorthTooltip = function(d){return "Moves the artist north without leaving any marks."};
-
-exports.jumpSouthTooltip = function(d){return "Moves the artist south without leaving any marks."};
-
-exports.jumpWestTooltip = function(d){return "Moves the artist west without leaving any marks."};
-
-exports.lengthFeedback = function(d){return "You got it right except for the lengths to move."};
-
-exports.lengthParameter = function(d){return "uzunluq"};
-
-exports.loopVariable = function(d){return "sayğac"};
-
-exports.moveBackward = function(d){return "geriyə get"};
-
-exports.moveEastTooltip = function(d){return "Moves the artist east."};
-
-exports.moveForward = function(d){return "irəli get"};
-
-exports.moveForwardTooltip = function(d){return "Rəssamı irəli aparır."};
-
-exports.moveNorthTooltip = function(d){return "Moves the artist north."};
-
-exports.moveSouthTooltip = function(d){return "Moves the artist south."};
-
-exports.moveWestTooltip = function(d){return "Moves the artist west."};
-
-exports.moveTooltip = function(d){return "Rəssamı göstərilən qədər irəliyə və ya geriyə hərəkət etdirir."};
-
-exports.notBlackColour = function(d){return "Bu tapmaca üçün qaradan başqa bir rəng seçməlisiniz."};
-
-exports.numBlocksNeeded = function(d){return "Bu tapmaca %1 blokla həll oluna bilər. Siz isə %2 blokdan istifadə etdiniz."};
-
-exports.penDown = function(d){return "karandaşı endir"};
-
-exports.penTooltip = function(d){return "Şəkil çəkməyi başlamaq və ya dayandırmaq üçün karandaşı endirir və ya qaldırır."};
-
-exports.penUp = function(d){return "karandaşı qaldır"};
-
-exports.reinfFeedbackMsg = function(d){return "Bu siz istəyən kimi görünürmü? Öz çəkdiyiniz rəsmi görmək üçün \"Bir daha cəhd edin\" düyməsini basın."};
-
-exports.setColour = function(d){return "rəngi təyin et"};
-
-exports.setWidth = function(d){return "eni təyin et"};
-
-exports.shareDrawing = function(d){return "Çəkdiyiniz şəkli bölüşün:"};
-
-exports.showMe = function(d){return "Mənə göstər"};
-
-exports.showTurtle = function(d){return "rəssamı göstər"};
-
-exports.step = function(d){return "addım"};
-
-exports.tooFewColours = function(d){return "Bu tapmaca üçün ən azı %1 fərqli rəngdən istifadə etməlisiniz. Sizdə isə ancaq %2 rəngdir."};
-
-exports.turnLeft = function(d){return "sola dön"};
-
-exports.turnRight = function(d){return "sağa dön"};
-
-exports.turnRightTooltip = function(d){return "Rəssamı göstərilən bucaq qədər sağa döndərir."};
-
-exports.turnTooltip = function(d){return "Rəssamı qeyd olunmuş dərəcə qədər sola və ya sağa döndərir."};
-
-exports.turtleVisibilityTooltip = function(d){return "Rəssamı görünən və ya görünməz edir."};
-
-exports.widthTooltip = function(d){return "Karandaşın qalınlığını dəyişir."};
-
-exports.wrongColour = function(d){return "Sizin şəkliniz səhv rəngdədir. Bu tapmaca üçün bu %1 olmalıdır."};
+exports.yourExpression = function(d){return "Your expression:"};
 
 
 },{"messageformat":51}],39:[function(require,module,exports){
