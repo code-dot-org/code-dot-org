@@ -1,0 +1,32 @@
+---
+title: Review Special Hour of Code Signups
+---
+-dont_cache
+
+%h1 Review Special Hour of Code Signups
+
+-signups = []
+-DB[:forms].where(kind:'HocSignup2014', review:nil).limit(50).each do |i|
+  -signups << JSON.parse(i[:data]).merge(secret: i[:secret])
+
+-if signups.nil_or_empty?
+  %p There are no special Hour of Code signups available for review
+
+-else
+  %table
+    %tr
+      %th Name
+      %th Organization
+      %th Location
+      %th Details
+      %th &nbsp;
+
+    -signups.each do |signup|
+      %tr
+        %td= signups['name_s']
+        %td= signups['organization_name_s']
+        %td= signups['event_location_s']
+        %td= signups['special_event_details_s']
+        %td
+          %a.btn.btn-default{href: "/private/review-class/#{signups[:secret]}", style: 'color: #fff;'} Approve
+          %a.btn.btn-danger{href: "/private/review-class/#{signups[:secret]}", style: 'color: #fff;'} Reject
