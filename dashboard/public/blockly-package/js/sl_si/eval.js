@@ -2346,7 +2346,9 @@ Eval.init = function(config) {
     Blockly.JavaScript.addReservedWords('Eval,code');
 
     Eval.answerObject = generateEvalObjectFromBlockXml(level.solutionBlocks);
-    Eval.answerObject.draw(document.getElementById('answer'));
+    if (Eval.answerObject) {
+      Eval.answerObject.draw(document.getElementById('answer'));
+    }
 
     // Adjust visualizationColumn width.
     var visualizationColumn = document.getElementById('visualizationColumn');
