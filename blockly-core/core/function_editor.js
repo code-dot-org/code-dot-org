@@ -132,7 +132,14 @@ Blockly.FunctionEditor.prototype.create_ = function() {
 
   this.modalBackground_ = Blockly.createSvgElement('g', {'class': 'modalBackground'});
   Blockly.mainBlockSpaceEditor.svg_.appendChild(this.modalBackground_);
-  Blockly.modalWorkspace.addTrashcan();
+  this.closeButton_ = Blockly.createSvgElement('image', {
+    'id': 'modalEditorClose',
+    'width': 50,
+    'height': 50,
+    'y': -2
+  });
+  this.closeButton_.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', '/blockly/media/common_images/x-button.png');
+  Blockly.modalBlockSpaceEditor.svg_.appendChild(this.closeButton_);
 
   // Set up contract definition HTML section
   this.createContractDom_();
@@ -145,7 +152,7 @@ Blockly.FunctionEditor.prototype.create_ = function() {
     }
   });
 
-  Blockly.bindEvent_(goog.dom.getElement('editorBackButton'), 'mousedown', this, this.hide);
+  Blockly.bindEvent_(goog.dom.getElement('modalEditorClose'), 'mousedown', this, this.hide);
 
   Blockly.bindEvent_(this.contractDiv_, 'mousedown', null, function() {
     if (Blockly.selected) {
@@ -227,20 +234,19 @@ Blockly.FunctionEditor.prototype.position_ = function() {
   }
 
   // Resize contract div width
-  this.resizeContractDiv_();
+  this.contractDiv_.style.width = metrics.viewWidth + 'px';
+
+  // Move the close button
+  this.closeButton_.setAttribute('x', metrics.absoluteLeft + metrics.viewWidth - 30 + 'px');
 
   // Move workspace to account for horizontal flyout height
   Blockly.modalBlockSpaceEditor.svgResize();
 };
 
-Blockly.FunctionEditor.prototype.resizeContractDiv_ = function() {
-  this.contractDiv_.style.width = Blockly.modalWorkspace.getMetrics().viewWidth + 'px';
-};
-
 Blockly.FunctionEditor.prototype.createContractDom_ = function() {
   this.contractDiv_ = goog.dom.createDom('div', 'blocklyToolboxDiv paramToolbox blocklyText');
   this.container_.insertBefore(this.contractDiv_, this.container_.firstChild);
-  this.contractDiv_.innerHTML = '<div id="editorBackButton">Back</div><div>Name your function:</div><div><input type="text""></div>'
+  this.contractDiv_.innerHTML = '<div>Name your function:</div><div><input type="text""></div>'
       + '<div>What is your function supposed to do?</div>'
       + '<div><textarea rows="2"></textarea></div>'
       + '<div>What parameters does your function take?</div>'
@@ -248,7 +254,7 @@ Blockly.FunctionEditor.prototype.createContractDom_ = function() {
   var metrics = Blockly.modalWorkspace.getMetrics();
   this.contractDiv_.style.left = metrics.absoluteLeft + 'px';
   this.contractDiv_.style.top = metrics.absoluteTop + 'px';
-  this.resizeContractDiv_();
+  this.contractDiv_.style.width = metrics.viewWidth + 'px';
   this.contractDiv_.style.display = 'block';
 };
 
