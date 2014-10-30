@@ -131,6 +131,7 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   });
   Blockly.modalWorkspace = Blockly.modalBlockSpaceEditor.blockSpace;
 
+  // Add modal background and close button
   this.modalBackground_ = Blockly.createSvgElement('g', {'class': 'modalBackground'});
   Blockly.mainBlockSpaceEditor.svg_.appendChild(this.modalBackground_);
   this.closeButton_ = Blockly.createSvgElement('image', {
@@ -141,6 +142,12 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   });
   this.closeButton_.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', '/blockly/media/common_images/x-button.png');
   Blockly.modalBlockSpaceEditor.svg_.appendChild(this.closeButton_);
+
+  // Add the function definition block
+  this.functionDefinition = Blockly.Xml.domToBlock_(Blockly.modalWorkspace,
+      Blockly.createSvgElement('block', {type: 'procedures_defnoreturn'}));
+  this.functionDefinition.moveTo(FRAME_MARGIN_SIDE, FRAME_MARGIN_TOP);
+  this.functionDefinition.movable_ = false;
 
   // Set up contract definition HTML section
   this.createContractDom_();
@@ -154,12 +161,17 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   });
 
   Blockly.bindEvent_(goog.dom.getElement('modalEditorClose'), 'mousedown', this, this.hide);
-
+  Blockly.bindEvent_(goog.dom.getElement('functionNameText'), 'input', this, functionNameChange);
+  Blockly.bindEvent_(goog.dom.getElement('functionNameText'), 'keydown', this, functionNameChange); // IE9 doesn't fire oninput when delete key is pressed
   Blockly.bindEvent_(this.contractDiv_, 'mousedown', null, function() {
     if (Blockly.selected) {
       Blockly.selected.unselect();
     }
   });
+
+  function functionNameChange(e) {
+    this.functionDefinition.setTitleValue(e.target.value, 'NAME');
+  }
 
   // Set up parameters toolbox
   this.paramToolboxBlocks = [];
@@ -241,7 +253,8 @@ Blockly.FunctionEditor.prototype.position_ = function() {
 Blockly.FunctionEditor.prototype.createContractDom_ = function() {
   this.contractDiv_ = goog.dom.createDom('div', 'blocklyToolboxDiv paramToolbox blocklyText');
   this.container_.insertBefore(this.contractDiv_, this.container_.firstChild);
-  this.contractDiv_.innerHTML = '<div>Name your function:</div><div><input type="text""></div>'
+  this.contractDiv_.innerHTML = '<div>Name your function:</div>'
+      + '<div><input id="functionNameText" type="text" value="' + this.functionDefinition.getTitleValue('NAME') + '"></div>'
       + '<div>What is your function supposed to do?</div>'
       + '<div><textarea rows="2"></textarea></div>'
       + '<div>What parameters does your function take?</div>'
