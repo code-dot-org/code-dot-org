@@ -194,6 +194,7 @@ function test_initializeBlockSpace() {
   Blockly.Css.inject();
   Blockly.mainBlockSpaceEditor = new Blockly.BlockSpaceEditor(container);
   Blockly.mainBlockSpace = Blockly.mainBlockSpaceEditor.blockSpace;
+  Blockly.activeWorkspace = Blockly.mainBlockSpace;
   goog.dom.removeNode(container);
 }
 
@@ -204,5 +205,6 @@ function test_initializeBlockSpace() {
   Blockly.Css.inject();
   Blockly.mainBlockSpaceEditor = new Blockly.BlockSpaceEditor(container);
   Blockly.mainBlockSpace = Blockly.mainBlockSpaceEditor.blockSpace;
+  Blockly.activeWorkspace = Blockly.mainBlockSpace;
   goog.dom.removeNode(container);
 }
