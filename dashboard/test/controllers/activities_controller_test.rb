@@ -646,6 +646,21 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test 'sharing program with json parse error slogs' do
+    # allow sharing when there's a JSON error, slog so it's possible to look up and review later
+
+    @controller.stubs(:find_share_failure).raises(MultiJson::ParseError.new)
+    @controller.expects(:slog).with(:tag, :error, :level_source_id) do |params|
+      params[:tag] == 'share_checking_error' && params[:level_source_id] != nil
+    end
+
+    assert_creates(LevelSource) do
+      post :milestone, user_id: @user.id, script_level_id: @script_level, :program => studio_program_with_text('shit')
+    end
+
+    assert_response :success
+  end
+
   test 'sharing program with swear word in Spanish rejects word' do
     return unless CDO.webpurify_key
     with_default_locale(:es) do

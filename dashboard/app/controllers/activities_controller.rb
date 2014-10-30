@@ -30,6 +30,7 @@ class ActivitiesController < ApplicationController
       begin
         share_failure = find_share_failure(params[:program])
       rescue OpenURI::HTTPError => share_checking_error
+      rescue MultiJson::ParseError => share_checking_error
       end
 
       unless share_failure
