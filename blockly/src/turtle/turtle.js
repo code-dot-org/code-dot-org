@@ -92,7 +92,7 @@ Turtle.init = function(config) {
   {
     if (skin.id == "elsa")
     {
-      turtleNumFrames = 10;
+      turtleNumFrames = 20;
     }
     else if (skin.id == "anna")
     {
@@ -293,8 +293,10 @@ Turtle.loadTurtle = function() {
     Turtle.display();
   };
   Turtle.avatarImage.src = skin.avatar;
-  if (skin.id == "anna" || skin.id == "elsa")
+  if (skin.id == "anna")
     Turtle.numberAvatarHeadings = 36;
+  else if (skin.id == "elsa")
+    Turtle.numberAvatarHeadings = 18;
   else
     Turtle.numberAvatarHeadings = 180;
   Turtle.avatarImage.height = Turtle.AVATAR_HEIGHT;
