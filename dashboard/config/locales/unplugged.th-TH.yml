@@ -1,4 +1,4 @@
-"th":
+"tk":
   data:
     unplugged:
       Unplug1:
@@ -155,7 +155,7 @@
           erase everything back to that point.
         video: C2_relay_programming
       Conditionals:
-        title: "เงื่อนไข"
+        title: "เงื่อนไข "
         desc: To learn about conditional statements, students play a card game and
           create rules like "If I draw a red card, I get a point" and "If I draw a
           black card, you get a point."

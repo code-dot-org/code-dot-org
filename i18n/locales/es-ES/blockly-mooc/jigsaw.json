@@ -1,9 +1,9 @@
 {
   "continue":"Continuar",
-  "nextLevel":"¡Felicidades! Has completado este rompecabezas.",
+  "nextLevel":"¡Felicidades! Has completado este puzzle.",
   "no":"No",
-  "numBlocksNeeded":"Este rompecabezas puede resolverse con %1 bloques.",
-  "reinfFeedbackMsg":"Puedes pulsar el botón \"Inténtalo de nuevo\" para volver a jugarlo.",
+  "numBlocksNeeded":"Este puzzle puede resolverse con %1 bloques.",
+  "reinfFeedbackMsg":"Puede pulsar el botón \"Inténtalo de nuevo\" para volver a jugar su juego.",
   "share":"Compartir",
   "shareGame":"Comparte tu juego:",
   "yes":"Sí"

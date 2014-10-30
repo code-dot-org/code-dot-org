@@ -11,7 +11,7 @@
 <a id="handouts"></p> 
 
 <h2>
-  Use this handout to spread the word
+  Используйте этот материал, чтобы распространить новость
 </h2>
 
 <p>
@@ -19,7 +19,7 @@
 </p>
 
 <h2>
-  Give this handout to teachers and schools
+  Раздайте эти листовки учителям и школам
 </h2>
 
 <p>
@@ -30,20 +30,20 @@
   <a id="videos"></p> 
   
   <h2>
-    Show these videos to inspire students
+    Показывайте эти видео, чтобы вдохновлять учеников
   </h2>
   
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>То, чему большинство школ не учат (5 мин)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
+      <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>То, Чему Не Учат В Большинстве Школ (5 мин)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>"Час программирования" здесь - Каждый Может Научиться</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
+      <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>"Час программирования" Здесь - Каждый Может Научиться</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
@@ -53,7 +53,7 @@
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>Президент Obama на информатике</strong></a>
+      <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>Президент Обама на информатике</strong></a>
     </p>
   </div>
   
@@ -74,7 +74,7 @@
     <a id="posters"></p> 
     
     <h2>
-      Hang these posters in your school
+      Повесьте эти плакаты у себя в школе
     </h2>
     
     <p>
@@ -94,11 +94,27 @@
     </p>
     
     <h2>
-      Feature these banners on your website
+      Разместите эти баннеры на вашем сайте
     </h2>
     
     <p>
       <a href="/images/banner1.jpg"><img src="/images/fit-250/banner1.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner3.jpg"><img src="/images/fit-250/banner3.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner5.jpg"><img src="/images/fit-500/banner5.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    
+    <p>
+      <a id="social"></a>
+    </p>
+    
+    <h2>
+      Post these on social media
+    </h2>
+    
+    <p>
+      <a href="/images/social-1.jpg"><img src="/images/fit-200/social-1.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-2.jpg"><img src="/images/fit-200/social-2.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-3.jpg"><img src="/images/fit-200/social-3.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    
+    <p>
+      <a href="/images/mark.jpg"><img src="/images/fit-200/mark.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-200/susan.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-200/ashton.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-200/marissa.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-200/chris.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
     </p>
     
     <p>
@@ -118,23 +134,23 @@
     </h2>
     
     <p>
-      Компьютеры везде, но сейчас меньше школ учат информатике чем 10 лет назад. Хорошая новость заключается в том, мы на пути того, чтобы изменить это. Если вы слышали о "Часе программирования" в прошлом году, то вы наверно знаете, что он вошел в историю. За одну неделю 15 миллионов учеников попробовали себя в информатике!
+      Компьютеры везде, но сейчас меньше школ учат информатике, чем 10 лет назад. Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. In one week, 15 million students tried computer science!
     </p>
     
     <p>
-      Информатика была на домашних страницах Google, MSN, Yahoo! и Disney. Президент Obama, Шакира и Эштон Катчер начали "Час программирования" с видео. Более 100 партнеров, собрались вместе, чтобы поддержать это движение.
+      Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
     </p>
     
     <p>
-      В этом году давайте сделаем его еще больше. Я прошу вас присоединиться к "Часу программирования" 2014. Пожалуйста, примите участие в событии "Час программирования" в рамках недели информатики, 8-14 декабря 2014 года.
+      This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2014. Please get involved with an Hour of Code event during Computer Science Education Week, December 8-14, 2014.
     </p>
     
     <p>
-      Распространите новость. Проведите мероприятие. Попросите местную школу зарегистрироваться. Или попробуйте "Час программирования" сами -- каждый может извлечь пользу из обучения основам.
+      Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself -- everyone can benefit from learning the basics.
     </p>
     
     <p>
-      Помогите нам достичь 100 миллионов учеников в конце года! Начать работу на http://hourofcode.com
+      Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com
     </p>
     
     <p>
@@ -146,27 +162,27 @@
     </h2>
     
     <p>
-      <strong>Тема:</strong> Местная школа присоединяется к миссии представить 100 ученикам информатику
+      <strong>Subject line:</strong> Local school joins mission to introduce 100m students to computer science
     </p>
     
     <p>
-      Компьютеры везде, но сейчас школы учат информатике меньше чем 10 лет назад. Девушки и меньшинства крайне незначительном количестве. Хорошая новость в том, что мы находимся на пути, чтобы изменить это.
+      Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and minorities are severely underrepresented. Good news is, we’re on our way to change this.
     </p>
     
     <p>
-      В течение одной недели в прошлом году 15 миллионов учеников попробовали себя в информатике! Информатика была на домашних страницах Google, MSN, Yahoo! и Disney. Президент Obama, Шакира и Эштон Катчер начали "Час программирования" с видео. Более 100 партнеров, собрались вместе, чтобы поддержать это движение.
+      In one week last year, 15 million students tried computer science! Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
     </p>
     
     <p>
-      Теперь движение "Час программирования" стремится к 100 миллионам учеников.
+      Now the Hour of Code movement is aiming for 100 million students.
     </p>
     
     <p>
-      Вот почему каждый из [number X] ученики в [SCHOOL NAME] объединяются в крупнейшем в истории обучения: "Часе программирования", 8-14 декабря.
+      That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Dec. 8-14.
     </p>
     
     <p>
-      Я пишу, чтобы пригласить вас принять участие в нашей стартовой сборке, и, чтобы увидеть как дети начинают узнавать информатику [DATE].
+      I'm writing to invite you to attend our kickoff assembly, and to see kids start the activity on [DATE].
     </p>
     
     <p>

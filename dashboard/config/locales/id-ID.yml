@@ -5,14 +5,14 @@
         blank: diperlukan
     attributes:
       user:
-        name: Tampilan Nama
-        email: Email
-        username: Nama Pengguna
-        password: Kata sandi
+        name: Nama Tampilan
+        email: email
+        username: nama pengguna
+        password: kata sandi
         password_confirmation: Konfirmasi sandi
         current_password: Sandi saat ini
         locale: Bahasa
-        age: Usia
+        age: Umur
         gender: Jenis kelamin
         edit_header: Edit rincian akun
         error:
@@ -31,10 +31,10 @@
     placeholder: Masukkan pentunjuk anda disini
     submit: tambah petunjuk
   appname: Code.org
-  stage: Tahap
-  stage_number: tahapan%{number}
+  stage: tahapan
+  stage_number: Tahapan %{number}
   puzzle: Teka-teki
-  trophies: Piala-piala
+  trophies: Piala
   courses: Kursus
   of: dari
   more: lebih
@@ -42,10 +42,10 @@
   try_hoc: 'Cobalah Jam Kode, klik di sini >> '
   try_k8intro: Cobalah pendahuluan K-8 kami tentang pelajaran ilmu komputer (15-25
     jam)
-  k8intro: Kursus pengenalan ilmu komputer (15-25 jam)
+  k8intro: K-8 Kursus pengenalan Ilmu komputer (15-25 jam)
   already_started: 'Sudah mulai? Lanjutkan di sini >> '
   demos: 'Admin: Semua demo'
-  continue: Lanjutkan
+  continue: Ayo lanjutkan!
   prize: hadiah
   more_info: Info lebih lanjut
   auth:
@@ -73,18 +73,7 @@
     no_signup_message: Anda dapat <a target="_blank" href="http://learn.code.org">
       mencoba berbagai tahap dan berbagai teka-teki</a>, tetapi Anda akan perlu untuk
       masuk supaya kemajuan belajar Anda dapat dicatat.
-    prizes_message: Siswa Amerika Serikat yang memperoleh semua %{num_trophies} piala
-      konsep dapat memilih berbagai hadiah seperti ruang simpan Dropbox gratis, kredit
-      Skype, dan mengunduh permainan dari Electronic Arts.
     teacher_educator_guide: Lihat panduan guru
-    teacher_prize_header: Win $1.000 di <a target="_blank" href="http://DonorsChoose.org">
-      DonorsChoose.org</a> imbalan (melalui 15 Juni 2014, persediaan terbatas)
-    teacher_prize_message: 'dalam kerjasama dengan <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>,
-      Code.org akan menawarkan bantuan dana sebanyak  $1,000  untuk guru-guru sekolah
-      di Amerika yang telah mengajar paling tidak 15 siswa  dari  K-8 Intro sampai  Kursus
-      Ilmu Komputer  (hingga 15 Juni,  saat persediaan masih ada). <a href="http://code.org/educate/20hr">See
-      educator guide</a>. (Batasan: $1,000 tiap guru. <a target="_blank" href="http://help.donorschoose.org/app/answers/detail/a_id/454/kw/code.org">See
-      FAQ for more limits</a>.)'
     teacher_pitch: Guru daftar untuk Code.org
     teacher_title: Guru mendaftar
     student_pitch: Siswa daftar untuk Code.org
@@ -95,6 +84,7 @@
     gender: Jenis kelamin (opsional)
     birthday: Tanggal ulang tahun (opsional)
     age: Umur
+    user_type: Are you a student or teacher?
     submit: Daftar
     teacher: Apakah anda seorang guru?
     valid_username: Tersedia!
@@ -270,8 +260,8 @@
       finished_hoc: Saya telah menyelesaikan jam kode!
       sign_in_to_save: Masuk untuk mencatat kemajuan belajar
       free_play:
-        playlab: Make an App
-        artist: Draw Something
+        playlab: Buat App
+        artist: Gambarlah Sesuatu
     user:
       classroom: Murid-murid saya
       label: Halo %{username}
@@ -314,8 +304,8 @@
       trophies: Piala
     students:
       name: Nama
-      username: Nama Pengguna
-      password: Kata sandi
+      username: nama pengguna
+      password: kata sandi
       manage: Mengelola siswa
       dashboard: Pergi ke Dashboard Guru
       add: Cantumkan nama siswa
@@ -344,7 +334,7 @@
       secret: Tulisan rahasia
       grade: Kelas
       course: Kursus
-      rename: Ganti nama
+      rename: ubah nama
       edit: edit
       delete: hapus
       confirm_delete: Anda yakin untuk menghapus sesi ini ?
@@ -377,8 +367,8 @@
     classroom_activity: Kegiatan tanpa komputer
   home:
     title: Kode Studio
-    all_courses: Overview of Courses 1, 2, and 3
-    lesson_plans: Lesson plans
+    all_courses: Tinjauan Kursus 1, 2, dan 3
+    lesson_plans: Rencana pelajaran
     signin_message: Sudah terdaftar? %{link}
     student_reg_link: Daftar sebagai siswa
     teacher_reg_link: Daftar sebagai guru
@@ -398,8 +388,6 @@
     student_stats: Anda telah menerima  %{trophy_count} dari total %{trophy_max} piala
       "Penguasaan Konsep".
     student_left_off: 'Anda berada terakhir kali pada:'
-    student_finished_prize: Anda telah menyelesaikan semua tutorial, klaim piala anda  %{prize_link}
-      dan pilih kelas lain di  %{online_link} atau di sini %{local_school_link}
     student_finished: Anda telah menyelesaikan semua tutorial, pilihlah kelas lain
       %{online_link} atau %{local_school_link}
     local_school: sekolah lokal
@@ -421,10 +409,16 @@
     heading_elementary: "<h2>20 jam kursus untuk</h2><h1>Pelajar Sekolah Dasar</h1>"
     heading_apps: "<h2>Menyenagkan bagi</h2><h1>Semua orang</h1>"
     heading_legacy: "<h2>Kursus umum kami untuk</h2><h1>Semua Umur</h1>"
+    gallery:
+      your_turtle: Karya Saya
+      your_studio: App Saya
   gender:
     male: Laki-laki
     female: Wanita
     none: Memilih untuk tidak menjawab
+  user_type:
+    student: siswa
+    teacher: Teacher
   footer:
     help_from_html: Tim teknis dari  Google, Microsoft, Facebook, dan Twitter yang
       membantu membuat tutorial ini.
@@ -438,20 +432,13 @@
     tos: Syarat
     privacy: Kebijakan privasi
     secure: Versi yang aman
-  prize_mail:
-    prize_earned:
-      subject: Ambil hadiah Anda di Code.org!
-    teacher_prize_earned:
-      subject: Selamat dari Code.org!
-    teacher_bonus_prize_earned:
-      subject: Ambil hadiah bonus Anda di Code.org!
   reference_area:
     title: Perlu bantuan?
     subtitle: Lihat video ini dan tips lainnya
     teacher: Lihat solusi
     auth_error: Anda tidak diizinkan untuk melihat solusi.
     submit: Memperbarui lokasi artis
-    direction: Mulai arah
+    direction: Arah Mulai (dalam derajat)
   video:
     tab: Video.
     notes: Tidak ada video? Tunjukkan catatan kaki.
@@ -460,8 +447,7 @@
     download: Ungah Video
   compatability:
     working:
-      header: Kami dalam tahap pengerjaan untuk menyediakan layanan didalam browser
-        Anda.
+      header: Kami dalam tahap bekerja untuk menyediakan layanan didalam browser Anda.
       message: Code.org menggunakan teknologi modern web. Hal ini membuat situs lebih
         cepat untuk digunakan. Browser Anda tidak mendukung semua fitur yang diperlukan,
         dan Anda mungkin mengalami masalah ketika menggunakan ini bagian dari situs.
@@ -470,7 +456,7 @@
         meng-upgrade browser Anda ke versi yang didukung </a>.
       hide_this_warning: Sembunyikan peringatan
     upgrade:
-      header: Silahkan upgrade browser Anda.
+      header: Silakan upgrade browser Anda.
       message: Code.org menggunakan teknologi web modern. Hal ini membuat situs lebih
         cepat untuk menggunakan. Sayangnya browser Anda tidak mendukung semua fitur
         yang diperlukan untuk menjalankan bagian ini situs. <br/> <br/>Instal browser
@@ -487,15 +473,12 @@
     title: klik 'Jalankan' untuk melihat program saya berjalan
     bounce_og_title: Check out permainan Bouncing ku
     flappy_og_title: Cobalah permainan Flappyku
-    studio_og_title: Periksa cerita saya
+    studio_og_title: Lihat Play Lab App Saya
     og_description: Saya menulis kode ini sendiri dengan Code.org
-    phone_number_not_allowed: It looks like there is a phone number in it. Try changing
-      the text.
-    address_not_allowed: It looks like there is an address in it. Try changing the
-      text.
-    email_not_allowed: It looks like there is an email in it. Try changing the text.
-    profanity_not_allowed: It looks like there is profanity in it. Try changing the
-      text.
+    phone_number_not_allowed: Tampaknya ada nomor telepon di sini. Harap perbaiki.
+    address_not_allowed: Tampaknya ada alamat di sini. Harap perbaiki.
+    email_not_allowed: Tampaknya ada alamat surel di sini. Harap perbaiki.
+    profanity_not_allowed: Tampaknya ada kata tak senonoh di sini. Harap perbaiki.
   builder:
     created: Kamu membuat skript baru.
     destroyed: Anda menghapus satu script.
@@ -513,18 +496,24 @@
       body: Coba dasar-dasar ilmu komputer. Jutaan orang telah mencobanya.
     flappy:
       title: Kode Flappy
-      body: Anda ingin menulis permainan anda sendiri dalam waktu kurang dari 10 menit?
-        Mencoba tutorial Flappy kode dari kami!
+      body: Ingin membuat game anda sendiri dalam waktu kurang dari 10 menit? Coba
+        Tutorial Flappy code kami!
     20hour:
       title: Kursus perkenalan
       body: Mencoba kami Introduksi Kursus ilmu komputer dalam 20 jam.
   gallery:
     students_drew_these_with_code: Siswa-siswa telah menggambar ini dengan kode!
+    students_made_these_with_code: Siswa membuat ini dengan kode program!
     picture_count: Masa lalu <b>%{days}</b> hari, siswa-siswa telah membuat <b>%{count}</b>
       gambar dengan pemrograman komputer. Klik gambar untuk melihat jalannya setiap
       program.
+    activity_count: Dalam <b>%{days}</b> hari terakhir, para siswa telah membuat <b>%{count}</b>
+      app dan gambar dengan menulis sendiri program komputer mereka. Klik pada gambar
+      dan tangkapan layar untuk melihat jalannya tiap program.
     want_to_make_your_own: Mau membuat sendiri ?
     more: lebih &rarr;
+    caption_by_name_age: oleh %{name}, usia %{age}
+    caption_time_ago: "%{time_ago} yang lalu"
   landing:
     prerelease: Kursus ini dalam <span class='betatext'>beta</span>.  Ini bukan berarti
       sebuah kursus final dan ditujukan untuk revisi saat usulan diterima dan pengembangan
@@ -537,14 +526,14 @@
     wrong_title: Jawaban Salah
     wrong_body: Jawaban yang anda masukkan salah. Silakan coba lagi!
     correct_title: Benar
-    correct_body: Itu jawabn yang benar.
+    correct_body: Itu jawaban yang benar.
   match:
     wrong_title: Solusi yang salah
     wrong_body: Solusi yang anda masukkan salah, Coba Lagi!
     correct_title: Benar
     correct_body: Itu jawaban yang benar.
   dialog:
-    ok: OK
+    ok: Oke!
   time:
     hour: 1 jam
     day: hari
@@ -553,31 +542,32 @@
     script:
       name:
         20-hour:
-          title: K-8 Kursus pengenalan Ilmu komputer (15-25 jam)
-          description: Kursus 20 jam ini mengenalkan inti ilmu komputer dan konsep
-            pemrograman. Kursus ini dirancang untuk kelas k-8, tapi pasti akan menyenangkan
-            untuk semua umur.
+          title: Kursus pengenalan ilmu komputer (15-25 jam)
+          description: Kursus selama 20 jam ini memperkenalkan ilmu komputer tingkat
+            dasar dan konsep-konsep pemrograman. Kursus ini dirancang untuk digunakan
+            di ruang kelas untuk sekolah dasar dan menengah, tapi tetap menyenangkan
+            dipelajari untuk semua usia.
         Hour of Code:
-          title: Hour of Code
+          title: Jam kode
           description: ''
         edit-code:
-          title: merubah kode
+          title: Mengedit kode
           description: ''
         events:
-          title: Kegiatan-kegiatan
+          title: kegiatan
           description: ''
         builder:
           title: Pembangun
           description: ''
         flappy:
-          title: Flappy Code
-          description: Ingin membuat game anda sendiri dalam waktu kurang dari 10
-            menit? Coba Tutorial Flappy code kami!
+          title: Kode Flappy
+          description: Anda ingin menulis permainan anda sendiri dalam waktu kurang
+            dari 10 menit? Mencoba tutorial Flappy kode dari kami!
         jigsaw:
-          title: Teka teki
+          title: Teka-teki
           description: ''
         step:
-          title: langkah
+          title: Langkah
           description: ''
         sample_level_builder:
           title: Contoh Pembangun level

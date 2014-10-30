@@ -3,7 +3,7 @@ az:
     script:
       name:
         20-hour:
-          desc: K-8 İnformatikaya Giriş kursu
+          desc: K-8 İnformatika Kursuna Giriş
           Unplug1: Mərhələ 1
           Maze: Mərhələ 2
           Unplug2: Mərhələ 3
@@ -43,11 +43,13 @@ az:
           desc: Jigsaw (beta)
           Jigsaw: Mərhələ 1
         Step Levels:
-          desc: Maze (beta)
+          desc: Labirint (beta versiya)
           MazeStep: Stage Step
         edit-code:
           desc: Edit Code (beta)
           MazeEC: Mərhələ 1
+          Webapp: Mərhələ 2
+          ArtistEC: Mərhələ 3
         events:
           desc: Bounce (beta)
           Bounce: Mərhələ 1
@@ -62,7 +64,7 @@ az:
           desc: Jigsaw (beta)
           Jigsaw: Mərhələ 1
         step:
-          desc: Maze (beta)
+          desc: Labirint (beta versiya)
           MazeStep: Stage Step
         wordsearch:
           desc: Spelling Bee (beta)
@@ -96,6 +98,8 @@ az:
         Jigsaw: Jigsaw
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
+        Webapp: Webapp
+        ArtistEC: Rəssam
     trophy:
       name:
         Bronze: Bürünc
@@ -323,6 +327,8 @@ az:
         maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
         maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
         maze_wordsearch_k_20: This is a test! Move me one way, then another to spell the word STORY
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColour" block.'
     video:
       name:
         maze_intro: Labirint oyununa giriş

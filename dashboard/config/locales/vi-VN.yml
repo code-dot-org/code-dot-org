@@ -6,9 +6,9 @@
     attributes:
       user:
         name: Tên
-        email: Email
-        username: Tên đăng nhập
-        password: Mật khẩu
+        email: "Địa chỉ email"
+        username: tài khoản
+        password: mật khẩu
         password_confirmation: Xác nhận mật khẩu
         current_password: Mật khẩu hiện tại
         locale: Ngôn ngữ
@@ -31,10 +31,10 @@
     placeholder: Hãy nhập gợi ý của bạn ở đây
     submit: Thêm gợi ý
   appname: Code.org
-  stage: Màn
+  stage: giai đoạn
   stage_number: Stage %{number}
   puzzle: Câu đố
-  trophies: danh hiệu
+  trophies: những danh hiệu
   courses: Các khóa học
   of: của
   more: Thêm nữa
@@ -69,17 +69,7 @@
     no_signup_message: Bạn có thể dùng mã <a target="_blank" href="http://learn.code.org">
       để duyệt các màn và các câu đố khác nhau</a>,nhưng bạn cần đăng ký để lưu lại
       tiến trình của bạn.
-    prizes_message: Những học viên Hoa Kỳ đạt được tất cả %{num_trophies} những danh
-      hiệu có thể chọn một loạt những phần thưởng khác nhau bao gồm dung lượng miễn
-      phí trên Dropbox, tín dụng của Skype và có thể tải về nhiều trò chơi của Electronic
-      Arts.
     teacher_educator_guide: Hãy xem chỉ dẫn
-    teacher_prize_header: Nhận $1000 tại <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
-    teacher_prize_message: 'Với liên kết đối tác cùng <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>,
-      Code.org sẽ tài trợ số tiền trang bị lớp học lên tới 1,000$ cho những giáo viên
-      trong hệ thống trường công lập của Hoa Kì đã dẫn dắt ít nhất  15 học sinh qua
-      khóa học này. <a href="http://code.org/educate/20hr">Xem Hướng dẫn dành cho
-      người đào tạo để có thêm thông tin.</a> '
     teacher_pitch: 'Dạy "Giới thiệu về Khoa học Máy tính" trong lớp học của bạn (K-8
       : từ Lớp Mẫu giáo tới lớp 8)'
     teacher_title: Giáo viên đăng ký
@@ -92,6 +82,7 @@
     gender: Giới tính (tùy chọn)
     birthday: Ngày sinh (tùy chọn)
     age: Age (optional)
+    user_type: Are you a student or teacher?
     submit: "Đăng ký"
     teacher: Bạn có phải là giáo viên?
     valid_username: "Đã tồn tại!"
@@ -274,9 +265,9 @@
     popup:
       progress: Qua trình của bạn
       lines: 'Tổng số dòng mã: %{lines}'
-      close: "Đóng lại"
+      close: "ĐÓNG"
       mastery: Khái niệm
-      puzzle_map: Các bước
+      puzzle_map: Màn
       prizes: Thu thập tất cả  %{total_trophies} cúp và giành giải thưởng!
       prize_earned: All %{total_trophies} trophies collected. Prize won!
       prize_us_only: "(Chỉ sinh viên Hoa Kỳ)"
@@ -300,11 +291,11 @@
       not_tried: Not tried yet
       activity: Indicates student activity in the last %{hours} %{plural}
       no_section: No assigned section
-      trophies: danh hiệu
+      trophies: những danh hiệu
     students:
       name: Tên
-      username: Tên đăng nhập
-      password: Mật khẩu
+      username: tài khoản
+      password: mật khẩu
       manage: Quản lý học sinh
       dashboard: Go to Teacher Dashboard
       add: Thêm học sinh
@@ -333,7 +324,7 @@
       secret: Secret type
       grade: Grade
       course: Course
-      rename: rename
+      rename: "đổi tên"
       edit: edit
       delete: delete
       confirm_delete: Are you sure you want to delete this section?
@@ -355,7 +346,7 @@
     cancel:
       title: Hủy bỏ tài khoản của tôi
       hint: Bạn không hài lòng?
-      button: Hãy hủy bỏ tài khoản của tôi
+      button: Hủy bỏ tài khoản của tôi
   user_level:
     completed: "Đã hoàn thành"
     tried: Cố gắng
@@ -386,8 +377,6 @@
     student_stats: You've earned %{trophy_count} out of %{trophy_max} "Concept Mastery"
       trophies.
     student_left_off: 'Nơi bạn rời đi:'
-    student_finished_prize: You've completed all tutorials, claim your %{prize_link}
-      and pick another class %{online_link} or at a %{local_school_link}
     student_finished: You've completed all tutorials, pick another class %{online_link}
       or at a %{local_school_link}
     local_school: trường học ở địa phương
@@ -399,19 +388,25 @@
     tryfirst: 'Hoặc, bạn có thể thử nó trước, và đăng ký sau:'
     trynow: Thử ngay bây giờ
     add_hint_help: Please help us to add smart hints to Code.org tutorials
-    20hour_overview: This 20-hour course introduces core computer science and programming
-      concepts. The course is designed for use in classrooms for grades K-8, but it
-      is fun to learn at all ages.
+    20hour_overview: Khóa học 20-giờ sẽ giới thiệu mục đích ngành khoa học máy tính
+      và các khái niệm lập trình. Khóa học được soạn cho các lớp K-8, tuy nhiên nó
+      khá thú vị để tìm hiểu ở tất cả các lứa tuổi.
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
     heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
     heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
     heading_legacy: "<h2>Our previous course for</h2><h1>Existing Students</h1>"
+    gallery:
+      your_turtle: My Art
+      your_studio: My Apps
   gender:
     male: Nam
     female: Nữ
     none: Tùy chọn không muốn trả lời
+  user_type:
+    student: học sinh
+    teacher: Teacher
   footer:
     help_from_html: Engineers from <a href="http://www.google.com">Google</a>, <a
       href="http://www.microsoft.com">Microsoft</a>, <a href="http://www.facebook.com">Facebook</a>,
@@ -427,13 +422,6 @@
     tos: "Điều khoản Dịch vụ"
     privacy: Chính sách riêng tư
     secure: Secure Version
-  prize_mail:
-    prize_earned:
-      subject: Redeem your prize at Code.org!
-    teacher_prize_earned:
-      subject: Redeem your prize at Code.org!
-    teacher_bonus_prize_earned:
-      subject: Redeem your bonus prize at Code.org!
   reference_area:
     title: Cần trợ giúp?
     subtitle: Xem các video và gợi ý
@@ -496,7 +484,7 @@
       unused: Không sử dụng cấp độ
   upsell:
     hoc:
-      title: Một tiếng lập trình
+      title: Giờ của mã
       body: Try the basics of computer science. Millions have given it a shot.
     flappy:
       title: Flappy Code
@@ -507,11 +495,17 @@
       body: Try our 20-hour Intro to Computer Science course.
   gallery:
     students_drew_these_with_code: Students drew these with code!
+    students_made_these_with_code: Students made these with code!
     picture_count: In the past <b>%{days}</b> days, students have drawn <b>%{count}</b>
       pictures by writing their own computer programs. Click on the pictures to see
       each program in action.
+    activity_count: In the past <b>%{days}</b> days, students have made <b>%{count}</b>
+      apps and pictures by writing their own computer programs. Click on the pictures
+      and screenshots to see each program in action.
     want_to_make_your_own: Want to make your own?
     more: More &rarr;
+    caption_by_name_age: by %{name}, age %{age}
+    caption_time_ago: "%{time_ago} ago"
   landing:
     prerelease: This page is still under development.
     feedback: Give Feedback
@@ -540,14 +534,14 @@
         20-hour:
           title: Khóa giới thiệu về khoa học máy tính cho học sinh K-8 (15 đến 25
             giờ)
-          description: This 20-hour course introduces core computer science and programming
-            concepts. The course is designed for use in classrooms for grades K-8,
-            but it is fun to learn at all ages.
+          description: Khóa học 20-giờ sẽ giới thiệu mục đích ngành khoa học máy tính
+            và các khái niệm lập trình. Khóa học được soạn cho các lớp K-8, tuy nhiên
+            nó khá thú vị để tìm hiểu ở tất cả các lứa tuổi.
         Hour of Code:
-          title: Một tiếng lập trình
+          title: Giờ của mã
           description: ''
         edit-code:
-          title: Edit Code
+          title: Hiệu chỉnh mã
           description: ''
         events:
           title: Các sự kiện

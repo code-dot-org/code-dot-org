@@ -11,16 +11,16 @@ nl:
           title: Test Cursus
           description: Een interne test cursus.
         course1:
-          "Jigsaw: Learn to drag and drop": 'Puzzel: Leer om te slepen en neerzetten'
-          "Maze: Sequence": 'Doolhof: Volgorde'
-          "Maze: Debugging": 'Doolhof: Foutoplossing'
+          "Jigsaw: Learn to drag and drop": 'Puzzel: Leer hoe je kan knippen en plakken'
+          "Maze: Sequence": 'Doolhof: Nummering'
+          "Maze: Debugging": 'Doolhof: foutopsporing'
           "Artist 1: Intro": 'Kunstenaar 1: Intro'
           Artists 2: Kunstenaars 2
           Spelling Bee: Spellingswedstrijd
-          Spelling Bee not blockly: Spellingswedstrijd niet blockly
+          Spelling Bee not blockly: Spelwedstrijd niet blockly
           "Bee 1: Intro": 'Bij 1: Intro'
-          "Maze 2: Loops": 'Doolhof 2: Lussen'
-          "Bee 2: Loops": 'Bij 2: Lussen'
+          "Maze 2: Loops": 'Doolhof 2: Loops'
+          "Bee 2: Loops": 'Bij 2: Loops'
           Multi & Match: 'Multi & Match'
           K-1 Flappy: K-1 Flappy
           Flappy non blockly: Flappy niet blockly
@@ -43,13 +43,13 @@ nl:
           description_short: Course 1 is designed for early readers in the lower elementary grades.
           "Artist: Loops": 'Artist: Loops'
         course2:
-          The Maze: Het doolhof
+          The Maze: Het Doolhof
           Suzi: Suzi
-          The Artist: De kunstenaar
+          The Artist: De Artiest
           Artist Debugging: Kunstenaar foutopsporing
           Bounce: Stuiter
           "Studio: Create a Story": 'Play Lab: Create a Story'
-          Artist Loops: Kunstenaar lussen
+          Artist Loops: Kustenaar lussen
           Bee Conditionals: Bij voorwaardelijke instructies
           Flappy: Flappy
           title: Cursus 2
@@ -63,12 +63,12 @@ nl:
           "Real-life Algorithms: Paper Planes": 'Real-life Algorithms: Paper Planes'
           Getting Loopy: Getting Loopy
           Relay programming: Relay programming
-          Conditionals: Voorwaardelijk
+          Conditionals: Voorwaardelijke instructies
           Binary Bracelets: Binary Bracelets
           The Big Event: The Big Event
           Your Digital Footprint: Your Digital Footprint
           description: Course 2 is designed for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.
-          "Maze: Sequence": 'Doolhof: Volgorde'
+          "Maze: Sequence": 'Doolhof: Nummering'
           "Artist: Sequence": 'Artist: Sequence'
           "Maze: Loops": 'Maze: Loops'
           "Artist: Loops": 'Artist: Loops'
@@ -81,9 +81,9 @@ nl:
           "Maze: Sequence2": 'Maze: Sequence2'
           "Artist: Nested Loops": 'Artist: Nested Loops'
         course3:
-          The Maze: Het doolhof
+          The Maze: Het Doolhof
           "Studio: Create a Story": 'Play Lab: Create a Story'
-          The Artist: De kunstenaar
+          The Artist: De Artiest
           title: Cursus 3
           Artist Functions: Kunstenaar functies
           Artist For Loops: Kunstenaar wanneer lussen
@@ -129,6 +129,7 @@ nl:
           "Bee: Nested Loops2": 'Bee: Nested Loops2'
           "Bee: Debugging2": 'Bee: Debugging2'
           "Artist: Patterns": 'Artist: Patterns'
+          Songwriting: Songwriting
         msm:
           title: Middle School Math
           description: Private work in progress for Middle School Math.

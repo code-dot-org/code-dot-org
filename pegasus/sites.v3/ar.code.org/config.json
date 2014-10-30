@@ -4,19 +4,19 @@
   "hoc_country_id": "Argentina",
   "us_site": "Code.org (US Site)",
   "nav_links": {
-    "Resources": "/about/resources",
-    "About Us": "/about",
+    "Recursos": "/about/resources",
+    "Sobre nosotros": "/about",
     "Partners": "/about/partners"
   },
   "header_links": {
-    "HOME": "/",
-    "TUTORIALS": "/learn",
-    "RESOURCES": "/about/resources"
+    "INICIO": "/",
+    "TUTORIALES": "/learn",
+    "RECURSOS": "/about/resources"
   },
   "footer_links": {
-    "Tutorials": "/learn",
-    "About": "/about",
-    "Resources": "/about/resources",
+    "Tutoriales": "/learn",
+    "Sobre nosotros": "/about",
+    "Recursos": "/about/resources",
     "Partners": "/about/partners"
   }
 }

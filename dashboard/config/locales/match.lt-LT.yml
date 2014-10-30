@@ -60,7 +60,7 @@
         "/script_assets/2-3_images/maze/2-3_maze_match_1_a3.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_a3.png"
       2-3 Maze Match 2:
         Maze Match: 'Sujungimas: labirintas'
-        Match the puzzles to the blocks: Priderink dėliones prie blokų
+        Match the puzzles to the blocks: Priderink galvosūkį prie blokų
         Instructions: Instrukcijos
         Drag the blocks to match.: Nuvilkite blokelius, kad atitiktų.
         "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
@@ -115,9 +115,9 @@
         "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
       4-5 maze match 1:
         Maze Match: 'Sujungimas: labirintas'
-        Match the puzzles to the blocks: Priderink galvosūkį prie blokų
+        Match the puzzles to the blocks: Priderink dėliones prie blokų
         Instructions: Instrukcijos
-        Drag the blocks to match.: Pertempk blokus, kad tiktų.
+        Drag the blocks to match.: Nuvilkite blokelius, kad atitiktų.
         "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
         "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png"
         "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png"
@@ -236,7 +236,7 @@
         Matching: Sujungimas
         Match the puzzles and blocks: Sujunkite dėliones ir blokelius
         Instructions: Instrukcijos
-        Drag the blocks to match.: Nuvilkite blokelius, kad atitiktų.
+        Drag the blocks to match.: Pertempk blokus, kad tiktų.
         "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
         "/script_assets/k_1_images/maze_images/maze_EN.png": "/script_assets/k_1_images/maze_images/maze_EN.png"
         "/script_assets/k_1_images/maze_images/maze_ENE.png": "/script_assets/k_1_images/maze_images/maze_ENE.png"

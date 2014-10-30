@@ -1,6 +1,4 @@
----
-layout: wide
----
+
 
 # Získejte celou vaší školu k účasti
 

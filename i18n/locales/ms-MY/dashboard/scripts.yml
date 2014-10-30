@@ -19,11 +19,11 @@ ms:
           Spelling Bee: Lebah Ejaan
           Spelling Bee not blockly: Lebah Ujian bukan blockly
           "Bee 1: Intro": 'Lebah 1: Pengenalan'
-          "Maze 2: Loops": 'Simpang Siur: Pusingan'
+          "Maze 2: Loops": 'Simpang Siur 2: Pusingan'
           "Bee 2: Loops": 'Lebah 2: Pusingan'
           Multi & Match: Pelbagai dan Suaikan
-          K-1 Flappy: K-1 Flappy
-          Flappy non blockly: Flappy bukan blockly
+          K-1 Flappy: Flappy K-1
+          Flappy non blockly: Flappy bebas blockly
           title: 'Course 1 - For early readers'
           Artist 2: Artist 2
           Happy Maps: Happy Maps
@@ -45,7 +45,7 @@ ms:
         course2:
           The Maze: Simpang Siur
           Suzi: Suzi
-          The Artist: Pelukis
+          The Artist: Artis
           Artist Debugging: Pelukis Debugging
           Bounce: Lantunan
           "Studio: Create a Story": 'Play Lab: Create a Story'
@@ -83,7 +83,7 @@ ms:
         course3:
           The Maze: Simpang Siur
           "Studio: Create a Story": 'Play Lab: Create a Story'
-          The Artist: Artis
+          The Artist: Pelukis
           title: Kursus 3
           Artist Functions: Artist Functions
           Artist For Loops: Artist For Loops
@@ -94,7 +94,7 @@ ms:
           Bee Debugging: Bee Debugging
           Bee Functions: Bee Functions
           Artist Functions with Params: Artist Functions with Params
-          Bounce: Bounce
+          Bounce: Lantunan
           Maze Conditionals: Maze Conditionals
           Artist Functions with Parameters: Artist Functions with Parameters
           Computational Thinking: Pengiraan pemikiran
@@ -129,6 +129,7 @@ ms:
           "Bee: Nested Loops2": 'Bee: Nested Loops2'
           "Bee: Debugging2": 'Bee: Debugging2'
           "Artist: Patterns": 'Artist: Patterns'
+          Songwriting: Songwriting
         msm:
           title: Middle School Math
           description: Private work in progress for Middle School Math.

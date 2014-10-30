@@ -1,58 +1,55 @@
----
-title: Resources 
-layout: wide
----
 
-## Useful stats on computer science
 
-*For all press and media inquiries, contact <press@code.org>*
+## Korisne statistike o informatici
 
-### Key Tips
+*Za sva medijska pitanja, možete se obratiti na <press@code.org>*
 
-  * Reach out to media two weeks before your event via email. Follow up by email and phone if you don't receive an initial response.
-  * Ask a school staff member or volunteer to take photos to share online or send to press.
-  * Write about the Hour of Code on your website’s homepage and in your school newspaper. Post your event details, and pictures of student activities.
-  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 8-14. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
+### Ključni Savjeti
 
-### Step-by-step guide:
+  * Obratite se medijima dva tjedna prije vašega događaja putem e-pošte. Ukoliko ne dobijete odgovor, propratite daljnjom e-poštom ili pak telefonskim razgovorom.
+  * Zamolite nekoga od školskog osoblja ili volontera da uslika događaj i podijeli slike na mreži ili ih pošalje novinama.
+  * Pišite o Satu Kodiranja na svojoj web stranici i u školskim novinama. Objavite detalje svog događaja i slike aktivnosti učenika.
+  * Tijekom tjedna od 8-og do 14-og prosinca, podijelite ažurirane detalje svog događaja na Facebook-u i Twitter-u i objavite slike. Upotrijebite hashtag **#HourOfCode** kako bi svi sa Code.org mogli vidjeti i promovirati vaš događaj.
 
-**1. Plan your event**
+### Vodič korak po korak:
 
-  * Plan an assembly to kick off the Hour of Code.
-  * Send [a letter](/resources#sample-emails) to parents. Ask them to spread the word.
-  * Send [a letter](/resources#sample-emails) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
-  * Organize group activities (like a demonstration of an ‘unplugged’ programming activity), or show off student-created and led activities.
-  * Show Code.org’s [Hour of Code video](http://hourofcode.com) or one of [these](/resources#videos) to inspire.
+**1. Planirajte svoj događaj**
 
-**2. Identify specific local reporters that cover education or local events.**
+  * Planirajte sastanak kako bi označili početak Sata Kodiranja.
+  * Počaljite [pismo](<%= hoc_uri('/resources/#sample-emails') %>) roditeljima. Zamolite ih da prošire vijest.
+  * Pošaljite [pismo](<%= hoc_uri('/resources/#sample-emails') %>) kojim ćete pozvati svog gradonačelnika, zastupnika, nekakvog uglednog političara ili utjecajnog poslovnog čovjeka da prisustvuje i održi govor za vaše učenike.
+  * Organizirajte grupne aktivnosti (kao na primjer prikazivanje aktivnosti programiranja bez elektronskih uređaja) ili pokažite aktivnosti koje su izvršili i vodili učenici.
+  * Pokažite [video zapis Sat Kodiranja](<%= hoc_uri('/') %>) ili jedan od [ovih](<%= hoc_uri('/resources#videos') %>) za inspiraciju.
 
-Think a local newspaper, TV station, radio station or blog.
+**2. Identificirajte pojedine novinare koji pišu o edukacji ili mjesnim događanjima.**
 
-Look online to find reporter contact information. If you can't find it, call the publication to ask, or email a general tips@PUBLICATIONNAME.com email address and ask for your message to be directed to the correct reporter.
+Razmišljajte o mjesnim novinama, televiziji, radio postaji ili blogu.
 
-**3. Contact local media**
+Pretražite internet da biste našli kontakt informacije. Ukoliko ih ne možete pronaći, pozovite publikaciju ili im pošaljite elektroničku poštu i zamolite ih da vašu poruku proslijede zaduženoj osobi.
 
-The best way to reach out is by email. It should be short and communicate: why should other people care about this event? Include contact information (including a cellphone number) for who will be on site at the event. **See a [sample pitch to media](/resources#sample-emails):**
+**3. Kontaktirajte mjesne medije**
 
-**4. Prepare to field questions about your school event. Here are some examples:**
+Najbolji način kontakta je putem elektroničke pošte. Poruka treba biti kratka i prenijeti razlog zašto ih se ovaj događaj tiče. Poruka treba sadržati kontakt informacije (uključujući i broj mobitela) onih koji će biti prisutni tokom događaja. **Pogledajte [primjer obraćanja medijima](<%= hoc_uri('/resources#sample-emails') %>):**
 
-*Why is your school doing an Hour of Code?*
+**4. Pripremite se odgovoriti na pitanja o vašim školskim aktivnostima u vezi događaja. Na primjer:**
 
-While all of us know that it’s important for students to learn how to navigate today’s tech-saturated world, many teachers aren’t experienced in computer science and don’t know where to start. This event is a chance for all of us to see what computer science is about.
+*Zašto vaša škola sudjeluje u satu Kodiranja?*
 
-We hope it’ll spark interest in students to keep learning. Research also shows that kids pick up programming concepts before they know how to read and write. In fact, their brains are more receptive to computer languages at a young age, just like foreign languages.
+Dok većina nas shvaća koliko je za učenike važno naučiti se snalaziti u današnjem tehnološki orjentiranom svijetu, mnogi učitelji nemaju iskustva sa informatikom i ne znaju gdje započeti. Ovaj je događaj prilika za sve nas vidjeti što je zapravo informatika.
 
-*Why is this important?*
+Nadamo se da će nadahnuti učenika da nastave učiti. Istraživanja također pokazuju da djeca nauče osnovice programiranja prije nego li nauče čitati i pisati. U stvari, njihov mozak je otvoreniji učenju računalnih jezika u tom ranom dobu, baš kao i učenju stranih jezika.
 
-In China, every students takes computer science to graduate high school. In the U.S., 90 percent of schools don’t even teach it. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will allow give them the confidence and know-how to succeed.
+*Zašto je to važno?*
 
-**More details and a quote you can use in materials**
+U Kini, svi učenici uče informatiku kako bi završili srednju školu. U SAD-u 90% škola uopće ne poučava učenike informatici. Vrijeme je da se uhvatimo u koštac sa 21-im stoljećem. Poznato nam je da bez obzira na to što učenici žele biti kada odrastu, bez obzira na to da li ih zanima medicina, poduzetništvo, politika ili umjetnost, znanje o tehnologiji prućit će im samopouzdanje i vještine potrebne za uspijeh.
 
-"The Hour of Code is designed to demystify code and show that computer science is not rocket-science, anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "In one week last year, 15 million students tried an Hour of Code. Now we're aiming for 100 million worldwide to prove that the demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
+**Više detalja i citat koji možete koristiti u materijalima**
 
-**About Code.org**
+"Sat Kodiranja osmišljen je kako bi demistificirao programiranje i pokazao kako informatika nije komplicirana, svatko može naučiti osnove," kaže Hadi Partovi, osnivač i glavni izvršni direktor Code.org-a. "Samo u toku jednog tjedna pročle godine, 15 milijuna učenika isprobalo je Sat Kodiranja. Sada nam je cilj dosegnuti 100 milijuna učenika širom svijeta kako bismo dokazali da potražnja za relevantnim informatičkim znanjem prelazi sve barijere i ne poznaje granice."
 
-Code.org® is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign — which has introduced millions of students to computer science — partnered with more than 30 public school districts nationwide, and launched Code Studio, an open-source, online learning platform for all ages. For more information, please visit: [www.code.org](http://code.org).
+**Više o Code.org**
+
+Code.org® je 501c3 javna neprofitna organizacija posvećena povećanju broja sudionika u informatici i povećanju sudjelovanja žena i manjina. Naša je vizija da svaki ućenik u svakoj školi ima priliku učiti informatiku. Nakon svog početka 2013-te godine, Code.org organizirao je kampanju Sat Kodiranja — koja je milijunima predstavila informatiku — u suradnji sa više od 30 školskih okruga u SAD-u, te pokrenuo Studio Kodiranja, open-source, online platformu učenja za sve uzraste. For more information, please visit: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
-Find more resources and sample emails [here](/resources).
+Više resursa i primjeraka e-pošte možete naći [ovdje](<%= hoc_uri('/resources') %>).

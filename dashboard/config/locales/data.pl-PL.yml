@@ -3,8 +3,8 @@
     script:
       name:
         20-hour:
-          desc: Wprowadzający kurs informatyki dla k-8, uczniów szkoły podstawowej
-            i gimnazjum
+          desc: Wprowadzający kurs z informatyki dla uczniów szkoły podstawowej i
+            gimnazjum
           Unplug1: Etap 1
           Maze: Etap 2
           Unplug2: Etap 3
@@ -26,7 +26,7 @@
           Artist5: Etap 19
           Unplug11: Etap 20
         Hour of Code:
-          desc: Godzina kodowania (Hour of Code)
+          desc: Godzina kodowania
           Maze: Etap 1
         Edit Code:
           desc: Edytuj kod (beta)
@@ -49,6 +49,8 @@
         edit-code:
           desc: Edytuj kod (beta)
           MazeEC: Etap 1
+          Webapp: Etap 2
+          ArtistEC: Etap 3
         events:
           desc: Bounce (beta)
           Bounce: Etap 1
@@ -80,7 +82,7 @@
         Artist2: Artysta 2
         Unplug5: Funkcje
         Farmer: Rolnik
-        Unplug6: Zdania warunkowe
+        Unplug6: Warunkowe
         Artist3: Artysta 3
         Unplug7: Pisanie piosenek
         Farmer2: Rolnik 2
@@ -97,6 +99,8 @@
         Jigsaw: Układanka
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
+        Webapp: Webapp
+        ArtistEC: Artysta
     trophy:
       name:
         Bronze: Brąz
@@ -105,7 +109,7 @@
     concept:
       description:
         sequence: Sekwencja (ciąg)
-        if: blok jeśli
+        if: Blok jeśli
         if_else: blok jeśli-w przeciwnym razie
         loop_times: Blok powtórz razy
         loop_until: Blok powtórz aż
@@ -530,6 +534,9 @@
         maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
         maze_wordsearch_k_20: This is a test! Move me one way, then another to spell
           the word STORY
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
+          it in the new "penColour" block.'
     video:
       name:
         maze_intro: Labirynt - wprowadzenie
@@ -551,7 +558,7 @@
         Unplug3: Programowanie na papierze milimetrowym
         Unplug4: Algorytmy
         Unplug5: Funkcje
-        Unplug6: Zdania warunkowe
+        Unplug6: Warunkowe
         Unplug7: Songwriting
         Unplug8: Abstrakcja
         Unplug9: Relay programming
@@ -580,7 +587,7 @@
         C2_bee_conditionals: Bee Conditionals
         C2_playlab_createstory: Play Lab - Create a Story
         C2_graph_paper: Programowanie na papierze milimetrowym
-        C2_conditionals_with_cards: Zdania warunkowe
+        C2_conditionals_with_cards: Warunkowe
         C2_binary_bracelets: Binary Bracelets
         C2_replay_programming: Programowanie przekaźnika
         C2_paper_airplanes: Paper Airplanes

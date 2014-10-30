@@ -5,10 +5,10 @@ pl:
         blank: is required
     attributes:
       user:
-        name: Display Name
+        name: Wyświetlana nazwa
         email: Email
-        username: Nazwa użytkownika
-        password: Hasło
+        username: nazwa użytkownika
+        password: hasło
         password_confirmation: Potwierdzenie hasła
         current_password: Aktualne hasło
         locale: Język
@@ -31,11 +31,11 @@ pl:
     placeholder: Wprowadź tutaj swoją wskazówkę
     submit: Dodaj wskazówkę
   appname: Code.org
-  stage: Etap
+  stage: etap
   stage_number: 'Stage %{number}'
   puzzle: Łamigłówka
-  trophies: Trofea
-  courses: Kursy
+  trophies: trofea
+  courses: kursy
   of: z
   more: WIĘCEJ
   less: MNIEJ
@@ -44,7 +44,7 @@ pl:
   k8intro: Kurs K-8 Wprowadzenie do Informatyki (15-25 godzin)
   already_started: 'Już rozpocząłeś ? Wznów tutaj >> '
   demos: 'Admin: Wszystkie dema'
-  continue: Kontynuuj
+  continue: Dalej
   prize: nagroda
   more_info: Więcej informacji
   auth:
@@ -58,17 +58,14 @@ pl:
     twitter: Twitter
     facebook: Facebook
     windowslive: Konto Microsoft
-    forgot_password: Nie pamiętasz hasła?
+    forgot_password: Nie pamiętasz swojego hasła?
     need_confirmation: Czy nie otrzymałeś instrukcji potwierdzającej?
     need_unlock: Czy nie otrzymałeś instrukcji, jak odblokować?
   signup_form:
     overview_student: 'Sign up for an account to track your progress. Your email is primarily used to allow you to log in and for password recovery. For more information, see our <a href="http://code.org/privacy">Privacy Policy</a>.'
     overview_teacher: "Teach computer science in your classroom by signing up for an account.<p/> You'll be able to add your students and track their progress."
     no_signup_message: 'Możesz <a target="_blank" href="http://learn.code.org"> przeglądać różne etapy i łamigłówki </a>, ale musisz się zarejestrować, aby zapisać swoje wyniki.'
-    prizes_message: 'Uczniowie z USA, którzy zdobyli wszystkie %{num_trophies} trofea dotyczące pojęć mogą wybrać wiele nagród, w tym wolne miejsce na Dropbox, kredyty Skype i gry do pobrania z Electronic Arts and Valve.'
     teacher_educator_guide: Patrz podręcznik nauczyciela
-    teacher_prize_header: 'Wygraj 1000 $ w <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> (od 15 czerwca 2014, do wyczerpania zapasów)'
-    teacher_prize_message: 'We współpracy z <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> Code.org będzie oferować aż do 1.000 $ dla nauczycieli amerykańskich szkół publicznych, którzy wprowadzą dla co najmniej 15 uczniów  K-8 do kursu informatyki (od 15 czerwca 2014 r. do wyczerpania zapasów).  <a href="http://code.org/educate/20hr"> Szczegóły w podręczniku</a>.  (Limit: 1.000 dolarów dla nauczyciela.  <a target="_blank" href="http://help.donorschoose.org/app/answers/detail/a_id/454/kw/code.org"> Zobacz często zadawane pytania</a>.)'
     teacher_pitch: Rejestracja do Code.org dla nauczycieli
     teacher_title: Rejestracja nauczyciela
     student_pitch: Rejestracja w Code.org dla uczniów
@@ -79,6 +76,7 @@ pl:
     gender: Płeć (opcjonalnie)
     birthday: Data urodzenia (opcjonalnie)
     age: Wiek
+    user_type: Are you a student or teacher?
     submit: Zarejestruj się
     teacher: Czy jesteś nauczycielem?
     valid_username: Dostępny!
@@ -108,7 +106,7 @@ pl:
     login: Zaloguj się
   password:
     reset_form:
-      title: Nie pamiętasz swojego hasła?
+      title: Nie pamiętasz hasła?
       email: Adres e-mail
       submit: Wyślij mi instrukcje resetowania hasła
     change_form:
@@ -236,7 +234,7 @@ pl:
       prizes: 'Zbierz wszystkie %{total_trophies} trofeów i wygraj nagrody!'
       prize_earned: 'Zebrane zostały wszystkie %{total_trophies} trofeów. Wygrałeś nagrodę!'
       prize_us_only: (Tylko dla uczniów w USA)
-      prizes_link: więcej informacji
+      prizes_link: Więcej informacji
   teacher:
     title:
       one: 'Twój nauczyciel:'
@@ -256,11 +254,11 @@ pl:
       not_tried: Not tried yet
       activity: 'Indicates student activity in the last %{hours} %{plural}'
       no_section: No assigned section
-      trophies: Trofea
+      trophies: trofea
     students:
       name: Imię/Nazwisko
-      username: Nazwa użytkownika
-      password: Hasło
+      username: nazwa użytkownika
+      password: hasło
       manage: Zarządzaj uczniami
       dashboard: Go to Teacher Dashboard
       add: Dodaj uczniów
@@ -284,7 +282,7 @@ pl:
       secret: Secret type
       grade: Grade
       course: Course
-      rename: rename
+      rename: zmień nazwę
       edit: edit
       delete: delete
       confirm_delete: Are you sure you want to delete this section?
@@ -329,7 +327,6 @@ pl:
     student_progress: Twoje postępy w nauce
     student_stats: 'Zdobyłeś %{trophy_count} z %{trophy_max} trofeów "Concept Mastery".'
     student_left_off: 'Gdzie przerwałeś:'
-    student_finished_prize: 'Ukończyłeś wszystkie samouczki, zgłoś się po swoją %{prize_link} i wybierz inną klasę %{online_link} lub %{local_school_link}'
     student_finished: 'Ukończyłeś wszystkie samouczki, wybierz inną klasę %{online_link} lub %{local_school_link}'
     local_school: miejscowa szkoła
     online: online
@@ -338,17 +335,23 @@ pl:
     tryfirst: 'Możesz wpierw spróbować, a zarejestrować się później:'
     trynow: Spróbuj teraz
     add_hint_help: Pomóż nam dodać podpowiedzi do samouczków Code.org
-    20hour_overview: 'Ten 20-godzinny godzinny kurs wprowadza podstawowe pojęcia z zakresu informatyki i programowania. Kurs jest przeznaczony do użytku w  klasach od 1 do 8, może być również przyjemną nauką we wszystkich grupach wiekowych.'
+    20hour_overview: Ten 20-godzinny godzinny kurs wprowadza podstawowe pojęcia z zakresu informatyki i programowania. Kurs jest przeznaczony do użytku klasach od 1 do 8, może być również przyjemną nauką we wszystkich grupach wiekowych.
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
     heading_elementary: '<h2>20 hour courses for</h2><h1>Elementary Students</h1>'
     heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
     heading_legacy: '<h2>Our general course for</h2><h1>All Ages</h1>'
+    gallery:
+      your_turtle: My Art
+      your_studio: My Apps
   gender:
     male: Mężczyzna
     female: Kobieta
     none: Wolę nie odpowiadać
+  user_type:
+    student: uczeń
+    teacher: Teacher
   footer:
     help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped create this tutorial.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. All Rights Reserved.'
@@ -359,20 +362,13 @@ pl:
     tos: Terms
     privacy: Polityka prywatności
     secure: Secure Version
-  prize_mail:
-    prize_earned:
-      subject: Odbierz swoją nagrodę w Code.org!
-    teacher_prize_earned:
-      subject: Congratulations from Code.org!
-    teacher_bonus_prize_earned:
-      subject: Odbierz swoją dodatkowa nagrodę w Code.org!
   reference_area:
     title: Czy potrzebujesz pomocy?
     subtitle: Zobacz te filmiki i wskazówki
     teacher: Zobacz rozwiązanie
     auth_error: Nie masz uprawnienia, by zobaczyć rozwiązanie.
     submit: Zaktualizuj lokalizację artysty
-    direction: Rozpocznij w wybranym kierunku
+    direction: Start Direction (in degrees)
   video:
     tab: Filmiki.
     notes: Brak filmu? Pokaż uwagi.
@@ -381,11 +377,11 @@ pl:
     download: Pobierz wideo
   compatability:
     working:
-      header: We are working on support for your browser.
+      header: Pracujemy nad wsparciem dla Twojej przeglądarki.
       message: "Code.org uses modern web technology. This makes the site faster to use. Your browser doesn't support all the features required, and you may experience issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade your browser to a supported version</a>."
       hide_this_warning: Hide this warning
     upgrade:
-      header: Please upgrade your browser.
+      header: Uaktualnij swoją przeglądarkę.
       message: "Code.org uses modern web technology. This makes the site faster to use. Unfortunately your browser doesn't support all the features required to run this part of the site.<br/><br/>Install a browser on our supported browsers list to continue. You can <a href='#'>try viewing the page</a>, but expect functionality to be broken."
       button: Take me to the list of supported browsers
   slow_loading: To trwa dłużej niż zwykle...
@@ -417,7 +413,7 @@ pl:
       unused: Niewykorzystane poziomy
   upsell:
     hoc:
-      title: Godzina kodowania (Hour of Code)
+      title: Godzina kodowania
       body: Spróbuj podstaw informatyki. Miliony dały im już szansę.
     flappy:
       title: Flappy Code
@@ -427,9 +423,13 @@ pl:
       body: Wypróbuj nasze 20-sto godzinne wprowadzenie do kursu informatyki.
   gallery:
     students_drew_these_with_code: Ten kod stworzyli uczniowie!
+    students_made_these_with_code: Students made these with code!
     picture_count: 'Przez ostatnie <b>%{days}</b> dni, studenci wyciągnęli <b>%{count}</b> zdjęć pisząc własne programy komputerowe. Kliknij na zdjęcia aby zobaczyć każdy program w akcji.'
+    activity_count: 'In the past <b>%{days}</b> days, students have made <b>%{count}</b> apps and pictures by writing their own computer programs. Click on the pictures and screenshots to see each program in action.'
     want_to_make_your_own: Chcesz zrobić własną?
     more: 'Więcej &rarr;'
+    caption_by_name_age: 'by %{name}, age %{age}'
+    caption_time_ago: '%{time_ago} ago'
   landing:
     prerelease: "This course is in <span class='betatext'>beta</span>.  This means it is not the final version of the course, and is subject to revision as feedback is received and improvements are made."
     feedback: Give Feedback
@@ -447,7 +447,7 @@ pl:
     correct_title: Correct
     correct_body: That is the correct answer.
   dialog:
-    ok: Ok
+    ok: OK
   time:
     hour: 1 hour
     day: day
@@ -457,12 +457,12 @@ pl:
       name:
         20-hour:
           title: Kurs K-8 Wprowadzenie do Informatyki (15-25 godzin)
-          description: 'Ten 20-godzinny godzinny kurs wprowadza podstawowe pojęcia z zakresu informatyki i programowania. Kurs jest przeznaczony do użytku w  klasach od 1 do 8, może być również przyjemną nauką we wszystkich grupach wiekowych.'
+          description: Ten 20-godzinny godzinny kurs wprowadza podstawowe pojęcia z zakresu informatyki i programowania. Kurs jest przeznaczony do użytku klasach od 1 do 8, może być również przyjemną nauką we wszystkich grupach wiekowych.
         Hour of Code:
-          title: Godzina kodowania (Hour of Code)
+          title: Godzina kodowania
           description: ""
         edit-code:
-          title: Edit Code
+          title: Edytuj kod
           description: ""
         events:
           title: Zdarzenia

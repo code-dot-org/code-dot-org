@@ -1,8 +1,4 @@
-* * *
 
-title: Resources layout: wide
-
-* * *
 
 # Hour of Code 이벤트에 언론의 관심을 이끄는 방법
 

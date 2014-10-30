@@ -4,15 +4,15 @@
       name:
         20-hour:
           desc: K-8 inngangur að tölvunarfræði
-          Unplug1: "Áfangi 1"
-          Maze: "Áfangi 2"
-          Unplug2: "Áfangi 3"
-          Unplug3: "Áfangi 4"
-          Artist: "Áfangi 5"
-          Unplug4: "Áfangi 6"
-          Artist2: "Áfangi 7"
-          Unplug5: "Áfangi 8"
-          Farmer: "Áfangi 9"
+          Unplug1: Stig 1
+          Maze: Stig 2
+          Unplug2: Stig 3
+          Unplug3: Stig 4
+          Artist: Stig 5
+          Unplug4: Stig 6
+          Artist2: Stig 7
+          Unplug5: Stig 8
+          Farmer: Stig 9
           Unplug6: "Áfangi 10"
           Artist3: "Áfangi 11"
           Unplug7: "Áfangi 12"
@@ -25,48 +25,50 @@
           Artist5: "Áfangi 19"
           Unplug11: "Áfangi 20"
         Hour of Code:
-          desc: Kóðun í klukkustund
-          Maze: "Áfangi 1"
+          desc: Klukkustund kóðunar
+          Maze: Stig 1
         Edit Code:
           desc: Breyta kóða (beta)
-          MazeEC: "Áfangi 1"
+          MazeEC: Stig 1
         2014 Levels:
           desc: Skopp (beta)
-          Bounce: "Áfangi 1"
+          Bounce: Stig 1
         Builder Levels:
           desc: "Þrautir gerðar af notendum (beta)"
-          Custom: "Áfangi 1"
+          Custom: Stig 1
         Flappy Levels:
           desc: Fuglinn Flappy
-          Flappy: "Áfangi 1"
+          Flappy: Stig 1
         Jigsaw Levels:
           desc: Púsl (beta)
-          Jigsaw: "Áfangi 1"
+          Jigsaw: Stig 1
         Step Levels:
           desc: Völundarhús (beta)
           MazeStep: "Þrep í áfanga"
         edit-code:
           desc: Breyta kóða (beta)
-          MazeEC: "Áfangi 1"
+          MazeEC: Stig 1
+          Webapp: Stig 2
+          ArtistEC: Stig 3
         events:
           desc: Skopp (beta)
-          Bounce: "Áfangi 1"
-          Studio: "Áfangi 2"
+          Bounce: Stig 1
+          Studio: Stig 2
         builder:
           desc: "Þrautir gerðar af notendum (beta)"
-          Custom: "Áfangi 1"
+          Custom: Stig 1
         flappy:
           desc: Fuglinn Flappy
-          Flappy: "Áfangi 1"
+          Flappy: Stig 1
         jigsaw:
           desc: Púsl (beta)
-          Jigsaw: "Áfangi 1"
+          Jigsaw: Stig 1
         step:
           desc: Völundarhús (beta)
           MazeStep: "Þrep í áfanga"
         wordsearch:
           desc: Stafsetning (beta)
-          WordSearch: "Áfangi 1"
+          WordSearch: Stig 1
     game:
       name:
         Unplug1: Kynning á tölvunarfræði
@@ -83,7 +85,7 @@
         Artist3: Listamaðurinn 3
         Unplug7: Lagasmíð
         Farmer2: Bóndinn 2
-        Unplug8: Kjarni
+        Unplug8: Greining kjarna
         Artist4: Listamaðurinn 4
         Unplug9: Boðhlaupsforritun
         Farmer3: Bóndinn 3
@@ -96,6 +98,8 @@
         Jigsaw: Púsl
         MazeStep: Völundarhús, þrep
         Wordsearch: Orðaleit
+        Webapp: Vefapp
+        ArtistEC: Listamaðurinn
     trophy:
       name:
         Bronze: Brons
@@ -106,7 +110,7 @@
         sequence: Runa
         if: Ef kubbur
         if_else: Ef-annars kubbur
-        loop_times: Endurtaka kubbur
+        loop_times: Endurtaka X kubbur
         loop_until: Endurtaka þar til kubbur
         loop_while: Meðan kubbur
         loop_for: Teljarakubbur
@@ -343,12 +347,12 @@
         turtle_5_4: Prófaðu að keyra þetta forrit. Gerðu breytingar til að sjá hvaða
           áhrif þær hafa. Getur þú fundið út hvernig það virkar? (Eða eytt því og
           sett eitthvað allt annað í staðinn)
-        turtle_5_5: Prófaðu að keyra þetta forrit. Gerðu breytingar til að sjá hvaða
-          áhrif þær hafa. Getur þú fundið út hvernig það virkar? (Eða eytt því og
-          sett eitthvað allt annað í staðinn)
-        turtle_5_6: Prófaðu að keyra þetta forrit og gerðu breytingar til að sjá hvaða
+        turtle_5_5: Prófaðu að keyra þetta forrit og gerðu breytingar til að sjá hvaða
           áhrif það hefur. Geturðu fundið út hvernig það virkar? (Eða eytt því og
           búið til eitthvað gjörólíkt)
+        turtle_5_6: Prófaðu að keyra þetta forrit. Gerðu breytingar til að sjá hvaða
+          áhrif þær hafa. Getur þú fundið út hvernig það virkar? (Eða eytt því og
+          sett eitthvað allt annað í staðinn)
         maze_3_1: "Ég verð að ná þessu svíni! Skrifaðu kóða sem kallar tvisvar á move();
           svo ég geti fengið eggin mín til baka."
         maze_3_2: Skrifaðu forrit fyrir mig svo ég nái alla leið til svínsins.
@@ -386,8 +390,8 @@
           teikna áfangann sem þú vilt búa til. Ýttu svo á Keyra forrit.
         flappy_1: Tengdu kubb við "þegar smellt" kubbinn og ýttu svo á "Keyra forrit".
           Smelltu eða sláðu á skjáinn til að færa Flappy að markinu.
-        flappy_2: Nú höfum bætt við jörð. Tengdu kubb við kubbinn "þegar rekst á jörð".
-          Kóðinn þinn verður að "LJÚKA LEIK" þegar Flappy hrapar til jarðar.
+        flappy_2: Nú höfum við  bætt við jörð. Tengdu kubb við kubbinn "þegar rekst
+          á jörð". Kóðinn þinn verður að "LJÚKA LEIK" þegar Flappy hrapar til jarðar.
         flappy_3: Með kubbnum "þegar keyrt" getur þú keyrt kóða þegar leikurinn byrjar.
           Prófaðu að stilla hraðann og fljúga að markinu.
         flappy_4: Flappy mun fljúga í gegnum hindranir nema þú skrifir kóða til að
@@ -411,7 +415,7 @@
         flappy_k1_1: Spila Flappy
         flappy_k1_2: Tengdu kubb við "þegar smellt" kubbinn og ýttu svo á "Keyra forrit".
           Smelltu eða sláðu á skjáinn til að færa Flappy að markinu.
-        flappy_k1_3: Nú höfum við  bætt við jörð. Tengdu kubb við kubbinn "þegar rekst
+        flappy_k1_3: Nú höfum bætt við jörð. Tengdu kubb við kubbinn "þegar rekst
           á jörð". Kóðinn þinn verður að "LJÚKA LEIK" þegar Flappy hrapar til jarðar.
         flappy_k1_4: Með kubbnum "þegar keyrt" getur þú keyrt kóða þegar leikurinn
           byrjar. Prófaðu að stilla hraðann og fljúga að markinu.
@@ -465,7 +469,7 @@
           á kolkrabbann og síðan fært hana með örvarlyklunum þar til þú skorar?
         studio_c2_10: Getur þú bætt við kubbum til að breyta bakgrunni og hraða mörgæsarinnar
           og síðan fært hana með örvarlyklunum þar til þú skorar?
-        studio_c2_11: Búðu til leik eftir eigin höfði. Smelltu svo á Ljúka til að
+        studio_c2_11: Búðu til sögu eftir eigin höfði. Smelltu svo á Ljúka til að
           leyfa vinum að prófa söguna í símum sínum.
         studio_c3_story_1: Getur þú látið hundinn segja "Halló heimur"?
         studio_c3_story_2: Getur þú látið hundinn segja eitthvað og síðan látið köttinn
@@ -474,7 +478,7 @@
         studio_c3_story_4: Getur þú skrifað forrit sem lætur hundinn færa sig að kettinum
           og látið köttinn segja "Hæ" þegar hundurinn kemur til hans?
         studio_c3_story_5: Getur þú bætt við kubbi sem kemur kolkrabbanum í gott skap?
-        studio_c3_story_6: Búðu til sögu eftir eigin höfði. Smelltu svo á Ljúka til
+        studio_c3_story_6: Búðu til leik eftir eigin höfði. Smelltu svo á Ljúka til
           að leyfa vinum að prófa söguna í símum sínum.
         studio_c3_game_1: Getur þú skrifað forrit sem lætur kolkrabbann segja "Hæ"
           þegar smellt er á hann?
@@ -535,6 +539,9 @@
         maze_wordsearch_k_16: Færðu mig í eina átt svo aðra til að stafa orðið BELOW
         maze_wordsearch_k_20: "Þetta er próf! Færðu mig í eina átt svo aðra til að
           stafa orðið STORY"
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
+          it in the new "penColour" block.'
     video:
       name:
         maze_intro: Kynning á Völundarhúsi
@@ -558,7 +565,7 @@
         Unplug5: Föll
         Unplug6: Skilyrði
         Unplug7: Lagasmíð
-        Unplug8: Greining kjarna
+        Unplug8: Greining aðalatriða
         Unplug9: Boðhlaupsforritun
         Unplug10: Internet
         Unplug11: Samantekt
@@ -572,18 +579,18 @@
         C1_bee_level_intro: Býflugnaborð - kynning
         C1_artist_intro: Kynning á listamanni
         C1_spelling_bee_intro: Stafsetning - kynning
-        C1_zuck_repeat_loop: Lykkjur völundarhúss
-        C1_bee_loops: Lykkjur býflugu
+        C1_zuck_repeat_loop: Völundarhús - lykkjur
+        C1_bee_loops: Býfluga - lykkjur
         C1_maze_loops: Lykkjur völundarhúss
-        C1_playlab_storytelling: Leikjasmiðja - búa til sögu
+        C1_playlab_storytelling: Leikjasmiðja - Búa til sögu
         C1_planting_seed: Fræsáning
         C1_building_foundating: Að byggja grunn
         C2_maze_intro: Kynning á Völundarhúsi
         C2_artist_intro: Kynning á listamanni
         C2_zuck_repeat_loop: Lykkjur völundarhúss
-        C2_artist_loops: Lykkjur listamanns
+        C2_artist_loops: Listamaður - lykkjur
         C2_bee_conditionals: Skilyrði býflugu
-        C2_playlab_createstory: Leikjasmiðja - Búa til sögu
+        C2_playlab_createstory: Leikjasmiðja - búa til sögu
         C2_graph_paper: Forritun rúðublaða
         C2_conditionals_with_cards: Skilyrði
         C2_binary_bracelets: Stafræn armbönd
@@ -591,14 +598,14 @@
         C2_paper_airplanes: Pappírsflaugar
         C3_maze_intro: Kynning á Völundarhúsi
         C3_artist_intro: Kynning á listamanni
-        C3_artist_functions: Föll listamanns
-        C3_bee_functions: Föll býflugu
-        C3_bee_conditionals: Skilyrði býflugu
-        C3_maze_conditionals: Skilyrði völundarhúss
+        C3_artist_functions: Listamaður - föll
+        C3_bee_functions: Býfluga - föll
+        C3_bee_conditionals: Býfluga - skilyrði
+        C3_maze_conditionals: Völundarhús - skilyrði
         C3_artist_nested_loops: Innri lykkjur
         C3_farmer_while: "Á meðan lykkjur"
         C3_bee_nested_loops: Innri lykkjur
-        C3_bee_debugging: Villuleit býflugu
+        C3_bee_debugging: Býfluga - villuleit
         C3_bounce: Skopp
         C3_playlab_create_game: Leikjasmiðja - Búa til leik
         C3_computational_thinking: Tölvunarmiðuð hugsun

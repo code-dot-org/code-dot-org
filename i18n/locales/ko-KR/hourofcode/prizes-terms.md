@@ -18,10 +18,16 @@ Code.org 는 Hour of Code(12월8일~14일) 행사 이후에 Dropbox 저장공간
 
 ## 초청 연사와 비디오 채팅:
 
-미국 K-12 학교로만 한정됩니다. 인증을 받기 위해서, 2014.11.14일 이전까지 Hour of Code 행사에 학교 전체 행사로 등록해야 합니다. Code.org 는 인증받은 학교들 중에서 무작위로 선택하여, 웹 채팅 시간을 할당할 것이며, 그것을 위해 적당한 교사와 함께 기술적인 사항을 준비할 것입니다.
+Prize limited to K-12 classrooms in the U.S. and Canada only. To qualify, sign up your classroom by November 14, 2014. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligbile to win.
 
 ## 1학급 정도의 노트북(또는 $10,000 상당의 다른 기기):
 
-미국 K-12 학교만 대상으로 합니다. 왜 하필이면 공립학교만 대상으로 하는가? [See the answer here](http://www.hourofcode.com/#faq). 인증을 받기 위해서, 2014.11.14일 이전까지 Hour of Code 행사에 학교 전체 행사로 등록해야 합니다. 미국의 학교들 중 한 학교가 1학급 분량의 노트북을 받게 될 것입니다. Code.org 는 2014.12.01일 이전에 해당 학교에 이메일로 알릴 것입니다.
+미국 K-12 학교만 대상으로 합니다. To qualify, your entire school must register for the Hour of Code by November 14, 2014. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2014.
+
+이것은 사기성 도박이나 사행성 대회가 아님을 명확히 하고자 합니다.
+
+1) 참가하기 위한 베팅 금액이 없고 위험성도 없습니다. - 어떤 학교/학급이라도 Code.org 또는 다른 조직 마져도 어떠한 참가비 없이 참여할 수 있습니다.
+
+2) Hour of Code 행사에 참여한 한 학급/학교 중에서 누구라도 상품을 탈 수 있습니다. 학생들과 선생님들의 협동심과 관련이 있습니다.
 
 <% end %>

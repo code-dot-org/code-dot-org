@@ -44,7 +44,7 @@ Reúna um grupo local — clube de escoteiros, igreja, universidade, grupo de ve
 
 ## 5. Peça a um oficial eleito para apoiar a Hora do Código
 
-[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
+[Envie este e-mail](http://<%= hostname %>/resources#politicians) para seu prefeito, Câmara Municipal ou conselho escolar. Ou [entregue este folheto](http://<%= hostname %>/resources/hoc-one-pager.pdf) e convide-os a visitar sua escola.
 
 <% if @country == 'ro' %>
 
@@ -56,6 +56,6 @@ Echipa Hour of Code Romania hoc@adfaber.org
 
 * * *
 
-Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't like these emails? [Unsubscribe](%= unsubscribe_link %).
+A Code.org é uma instituição pública sem fins lucrativos. Endereço: 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Não quer receber esse tipo de e-mail? [Cancele sua assinatura](%= unsubscribe_link %).
 
 ![](<%= tracking_pixel %>)

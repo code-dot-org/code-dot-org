@@ -17,7 +17,7 @@
         edit_header: Uredi podrobnosti računa
         error:
           future: can't be in the future
-  hello: "Živjo svet"
+  hello: Pozdravljen svet
   welcome_back: Dobrodošel/a nazaj, %{name}
   add_teacher_form:
     code_or_email:
@@ -69,16 +69,7 @@
     no_signup_message: Lahko  <a target="_blank" href="http://learn.code.org"> brskaš
       po različnih stopnjah in ugankah</a>, a se boš moral vpisati, da shraniš svoj
       napredek.
-    prizes_message: Ameriški študenti, ki bojo osvojili vse  %{num_trophies} konceptualne
-      trofeje, lahko izbirajo med raznimi nagradami, med drugim zastonj Dropbox prostor,
-      Skype krediti in Electronic Arts, ki si jih lahko prenesejo na računalnik.
     teacher_educator_guide: Poglej učiteljev vodič
-    teacher_prize_header: Osvoji za 1000 dolarjev <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
-      nagrad
-    teacher_prize_message: 'V sodelovanju z  <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
-      bo Code.org učiteljem ameriških javnih šol, ki bojo izvedli ta tečaj z vsaj
-      15 učenci, ponudil do 1000 dolarjev za opremo učilnic. <a href="http://code.org/educate/20hr">Poglej
-      vodič za učitelje za več informacij.</a> '
     teacher_pitch: Poučuj K-8 Uvod v računalništvo v tvoji učilnici
     teacher_title: Učitelji - prijava
     student_pitch: 'Nad 1 uro: preizkusi naš K-8 Uvod v računalništvo'
@@ -89,6 +80,7 @@
     gender: Spol (po izbiri)
     birthday: Rojstni datum (po izbiri)
     age: Starost (neobvezno)
+    user_type: Are you a student or teacher?
     submit: Prijava
     teacher: Si učitelj/ica?
     valid_username: Dosegljivo!
@@ -118,7 +110,7 @@
     name: Choose your name
     picture: Now find your secret picture
     words: Now enter your secret words
-    login: Vpis
+    login: Prijava
   password:
     reset_form:
       title: Si pozabil/a svoje geslo?
@@ -262,7 +254,7 @@
       settings: Moj račun
       prizes: Nagrade
       logout: Izpis
-      signin: Vpis
+      signin: Prijava
       signup: Prijava
       already_registered: Already registered?
     popup:
@@ -349,7 +341,7 @@
     cancel:
       title: Prekliči moj račun
       hint: Nezadovoljen?
-      button: Ukini moj račun
+      button: Prekliči moj račun
   user_level:
     completed: Zaključeno
     tried: Poskus
@@ -379,8 +371,6 @@
     student_stats: Dosegel si %{trophy_count} od %{trophy_max} "Koncept obvladanja"
       trofej.
     student_left_off: 'Kjer ste končali:'
-    student_finished_prize: Končal si vse vaje. Zahtevaj svojo %{prize_link} in izberi
-      drug razred %{online_link} ali na %{local_school_link}
     student_finished: Dokončali ste vse vaje, izberite drug razred na %{online_link}
       ali %{local_school_link}
     local_school: lokalna šola
@@ -391,19 +381,25 @@
     tryfirst: 'Or, you can try it first, and sign up later:'
     trynow: Poskusite zdaj
     add_hint_help: Please help us to add smart hints to Code.org tutorials
-    20hour_overview: This 20-hour course introduces core computer science and programming
-      concepts. The course is designed for use in classrooms for grades K-8, but it
-      is fun to learn at all ages.
+    20hour_overview: Ta 20-urni tečaj predstavlja bistvo računalništva in konceptov
+      programiranja. Tečaj je namenjen za uporabo v razredih K-8, vendar je zabaven
+      za učenje v vseh starostih.
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
     heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
     heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
     heading_legacy: "<h2>Our previous course for</h2><h1>Existing Students</h1>"
+    gallery:
+      your_turtle: My Art
+      your_studio: My Apps
   gender:
     male: Moški
     female: "Ženska"
     none: Raje ne bi odgovoril
+  user_type:
+    student: Učenec
+    teacher: Teacher
   footer:
     help_from_html: Inženirji iz <a href="http://www.google.com"> Google</a>, <a href="http://www.microsoft.com">
       Microsoft</a>, <a href="http://www.facebook.com"> Facebook</a> in <a href="http://www.twitter.com">
@@ -419,13 +415,6 @@
     tos: Pogoji
     privacy: Izjava o zasebnosti
     secure: Varna različica
-  prize_mail:
-    prize_earned:
-      subject: Redeem your prize at Code.org!
-    teacher_prize_earned:
-      subject: Redeem your prize at Code.org!
-    teacher_bonus_prize_earned:
-      subject: Redeem your bonus prize at Code.org!
   reference_area:
     title: Potrebujete pomoč?
     subtitle: Poglejte si naslednje videe in namige
@@ -499,11 +488,17 @@
       body: Try our 20-hour Intro to Computer Science course.
   gallery:
     students_drew_these_with_code: Students drew these with code!
+    students_made_these_with_code: Students made these with code!
     picture_count: In the past <b>%{days}</b> days, students have drawn <b>%{count}</b>
       pictures by writing their own computer programs. Click on the pictures to see
       each program in action.
+    activity_count: In the past <b>%{days}</b> days, students have made <b>%{count}</b>
+      apps and pictures by writing their own computer programs. Click on the pictures
+      and screenshots to see each program in action.
     want_to_make_your_own: Want to make your own?
     more: More &rarr;
+    caption_by_name_age: by %{name}, age %{age}
+    caption_time_ago: "%{time_ago} ago"
   landing:
     prerelease: This page is still under development.
     feedback: Give Feedback
@@ -521,7 +516,7 @@
     correct_title: Pravilno
     correct_body: To je pravilen odgovor.
   dialog:
-    ok: V redu
+    ok: Vredu
   time:
     hour: 1 hour
     day: day
@@ -531,14 +526,14 @@
       name:
         20-hour:
           title: K-8 Intro to Computer Science Course (15-25 hours)
-          description: This 20-hour course introduces core computer science and programming
-            concepts. The course is designed for use in classrooms for grades K-8,
-            but it is fun to learn at all ages.
+          description: Ta 20-urni tečaj predstavlja bistvo računalništva in konceptov
+            programiranja. Tečaj je namenjen za uporabo v razredih K-8, vendar je
+            zabaven za učenje v vseh starostih.
         Hour of Code:
           title: Ura kode
           description: ''
         edit-code:
-          title: Edit Code
+          title: Uredi kodo
           description: ''
         events:
           title: Events

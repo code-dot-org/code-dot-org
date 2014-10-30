@@ -4,7 +4,7 @@ fr:
       name:
         test:
           "Jigsaw: Learn to drag and drop": 'Puzzle : Apprendre à faire un glisser-déposer'
-          The Maze: Le Labyrinthe
+          The Maze: Le labyrinthe
           Multi: Multi
           Match: Match
           Math Image: Math Image
@@ -14,17 +14,17 @@ fr:
           "Jigsaw: Learn to drag and drop": 'Puzzle : Apprendre à faire un glisser-déposer'
           "Maze: Sequence": 'Maze: Sequence'
           "Maze: Debugging": 'Le Labyrinthe : débogage'
-          "Artist 1: Intro": "L'Artiste 1 : Intro"
+          "Artist 1: Intro": 'Artiste 1: Intro'
           Artists 2: Artistes 2
           Spelling Bee: Spelling Bee
           Spelling Bee not blockly: Spelling Bee not blockly
-          "Bee 1: Intro": "L'Abeille 1 : Intro"
-          "Maze 2: Loops": 'Le Labyrinthe 2 : les Boucles'
-          "Bee 2: Loops": "L'Abeille 2 : les Boucles"
+          "Bee 1: Intro": 'Abeille 1: Intro'
+          "Maze 2: Loops": 'Labyrinthe 2 : boucles'
+          "Bee 2: Loops": 'Abeille 2: boucles'
           Multi & Match: 'Multi & Match'
           K-1 Flappy: K-1 Flappy
           Flappy non blockly: Flappy non blockly
-          title: 'Course 1 - For early readers'
+          title: Cours 1
           Artist 2: "L'Artiste 2"
           Happy Maps: Happy Maps
           Move it, Move it: Move it, Move it
@@ -43,7 +43,7 @@ fr:
           description_short: Course 1 is designed for early readers in the lower elementary grades.
           "Artist: Loops": 'Artist: Loops'
         course2:
-          The Maze: Le Labyrinthe
+          The Maze: Le labyrinthe
           Suzi: Suzi
           The Artist: "L'Artiste"
           Artist Debugging: Artist Debugging
@@ -54,12 +54,12 @@ fr:
           Flappy: Flappy
           title: Cours 2
           Bee Loops: Abeilles et boucles
-          Artist Functions: Artist Functions
+          Artist Functions: 'Artiste : les fonctions'
           The Artist Debugging: The Artist Debugging
           Bee Debugging: Abeilles et debugging
           Bee Functions: Abeilles et fonctions
           Maze Loops: Labyrinthe et boucles
-          Graph Paper Programming: Programmation dans un repère quadrillé
+          Graph Paper Programming: Programmation sur papier quadrillé
           "Real-life Algorithms: Paper Planes": 'Real-life Algorithms: Paper Planes'
           Getting Loopy: Getting Loopy
           Relay programming: Relay programming
@@ -67,21 +67,21 @@ fr:
           Binary Bracelets: Binary Bracelets
           The Big Event: The Big Event
           Your Digital Footprint: Your Digital Footprint
-          description: Course 2 is designed for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.
+          description: "Le cours 2 s'adresse aux élèves qui savent lire et n'ont aucune expérience en programmation. Dans ce cours les élèves créeront des programmes pour résoudre des problèmes et de développer des jeux interactifs qu'ils pourront partager. Recommandé pour les CE1-CM2."
           "Maze: Sequence": 'Maze: Sequence'
           "Artist: Sequence": 'Artist: Sequence'
           "Maze: Loops": 'Maze: Loops'
           "Artist: Loops": 'Artist: Loops'
           "Bee: Loops": 'Bee: Loops'
-          "Bee: Debugging": 'Bee: Debugging'
+          "Bee: Debugging": 'Abeilles : le debugging'
           "Artist: Debugging": 'Artist: Debugging'
-          "Bee: Conditionals": 'Abeille : instructions conditionnelles'
+          "Bee: Conditionals": 'Abeille : les instructions conditionnelles'
           description_short: "Le cours 2 s'adresse aux élèves qui savent lire dans les cours élémentaires et moyens."
           "Artist: Sequence2": 'Artiste : Séquence2'
           "Maze: Sequence2": 'Labyrinthe : Séquence2'
           "Artist: Nested Loops": 'Artiste : les boucles imbriquées'
         course3:
-          The Maze: Le Labyrinthe
+          The Maze: Le labyrinthe
           "Studio: Create a Story": 'Labo: Créer une histoire'
           The Artist: "L'Artiste"
           title: Cours 3
@@ -117,7 +117,7 @@ fr:
           "Farmer: While Loops": 'Fermier : les boucles "tant que"'
           "Bee: Nested Loops": 'Abeille : les boucles imbriquées'
           "Bee: Debugging": 'Abeilles : le debugging'
-          description_short: Students taking Course 3 should have already taken Course 2.
+          description_short: Pour les élèves qui ont terminé le cours 2.
           Maze2: Labyrinthe2
           Artist2: Artiste2
           "Artist: Functions2": 'Artiste : les fonctions 2'
@@ -129,20 +129,21 @@ fr:
           "Bee: Nested Loops2": 'Abeille : les boucles imbriquées 2'
           "Bee: Debugging2": 'Bee: Debugging2'
           "Artist: Patterns": 'Artist: Patterns'
+          Songwriting: Songwriting
         msm:
           title: Middle School Math
           description: Private work in progress for Middle School Math.
-          Graph Paper Programming: Programmation dans un repère quadrillé
+          Graph Paper Programming: Programmation sur papier quadrillé
           Assessments: Assessments
           Unit 1: Unit 1
           Unit 2: Unit 2
         playlab:
-          title: Play Lab
-          description: Create a story or make a game with Play Lab!
-          Play Lab: Play Lab
-          description_short: Create a story or make a game with Play Lab!
+          title: Labo
+          description: Programmer une histoire ou un jeu avec le Labo !
+          Play Lab: Labo
+          description_short: Programmer une histoire ou un jeu avec le Labo !
         artist:
           title: Artiste
-          description: Draw cool pictures and designs with the Artist!
+          description: "Dessinez des super images et schémas avec l'Artiste!"
           Artist: Artiste
-          description_short: Draw cool pictures and designs with the Artist!
+          description_short: "Dessinez des super images et schémas avec l'Artiste!"

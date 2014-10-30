@@ -2,13 +2,13 @@ fr:
   data:
     unplugged:
       Unplug1:
-        title: "Introduction à l'Informatique"
+        title: "Introduction à l'informatique"
         desc: "Ici, vous allez apprendre en quoi consiste l'informatique et nous allons vous expliquer se que fait un ingénieur en informatique. Cette leçon va également donner l'opportunité aux étudiants, de se mettre à la place d'un informaticien. A la fin de cette activité, chaque étudiant devra savoir réutiliser ce qu'il ou elle a appris dans ce cours. Etant difficile, vous serez sûrement tenté de passer l'apprentissage du vocabulaire ci-contre aux enfants, mais en leurs présentant celui-ci de manière ludique et amusante, ce sera beaucoup plus productif que d'attendre des possibilités plus avancées."
         pdfs:
           - unplug1
         video: Unplug1
       Unplug2:
-        title: "L'algorithmique"
+        title: Algorithmique
         desc: With nothing but paper and markers, students will learn the four steps of computational thinking. After a brief introduction, students should be split into groups where they will have to create directions for other students to draw a specific monster (from a catalog of pre-selected monsters). The entire task must be decomposed, then teams will analyze all monsters in the catalog for patterns, abstract different details from the monsters, then use that information to create an algorithm (directions) for another team to draw a certain monster. Teams will then switch algorithms with another group and draw the monster based on what that algorithm indicates. Is the drawing what the original team intended?
         pdfs:
           - unplug2
@@ -26,7 +26,7 @@ fr:
           - unplug4
         video: Unplug4
       Unplug5:
-        title: Les fonctions
+        title: fonctions
         desc: |-
           In this lesson, students will make a suncatcher out of string, beads, and a special charm. The students will follow a series of repetitive steps, then be asked to identify certain sets of "skills" that are duplicated several times. Once those skills are defined, they will be called from a main program and the whole beautiful process of creation will be recorded on a single sheet of paper. The final program will be geared toward the entire class, whatever their type of string, beads, and charms. To effectively allow for this, students will need to "abstract out" the details of their specific materials and create vague terms for an individual's supplies.  This use of generic placeholders is a wonderful introduction to variables.
         pdfs:
@@ -105,7 +105,7 @@ fr:
         title: Going Places Safely
         desc: The Internet is a powerful, but sometimes dangerous place. Teachers introduce how to stay safe while navigating the Internet.
       GraphPaperProgramming:
-        title: Programmation dans un repère quadrillé
+        title: Programmation sur papier quadrillé
         desc: Students write an algorithm (a set of instructions) using a set of predefined commands to direct their classmates to reproduce a drawing.
         video: C2_graph_paper
       PaperPlanes:
@@ -141,7 +141,7 @@ fr:
         video: C3_internet
       Crowdsourcing:
         title: Financement participatif
-        desc: Student use crowdsourcing, a problem-solving technique common in computer science, to complete a task together as a classroom more efficiently than if a student attempted it alone.
+        desc: Students use crowdsourcing, a problem-solving technique common in computer science, to complete a task together as a classroom more efficiently than if a student attempted it alone.
         video: C3_crowdsourcing
       DigitalCitizenship:
         title: Digital Citizenship

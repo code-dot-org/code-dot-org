@@ -15,7 +15,7 @@
         - unplug1
         video: Unplug1
       Unplug2:
-        title: Pensamento Computacional
+        title: Pensamento computacional
         desc: Com nada além de papel e caneta, os alunos vão aprender os quatro passos
           do pensamento computacional. Após uma breve introdução, eles devem se dividir
           em grupos e criar instruções para que os outros alunos desenhem um monstro
@@ -30,7 +30,7 @@
         - unplug2
         video: Unplug2
       Unplug3:
-        title: Programação em Papel Quadriculado
+        title: Programação em papel quadriculado
         desc: Através da programação para desenhar as figuras, os alunos vão começar
           a entender o que de fato é programar. A aula vai começar com alunos dando
           instruções uns aos outros para colorir os quadrados em um papel quadriculado
@@ -51,7 +51,7 @@
         - unplug4
         video: Unplug4
       Unplug5:
-        title: Funções
+        title: funções
         desc: Nessa lição, os alunos vão fazer um suncatcher com cordas, miçangas,
           e um amuleto. Os alunos vão seguir uma série de passos repetitivos, e então
           devem identificar certos conjuntos de "habilidades" que são duplicadas várias
@@ -92,7 +92,7 @@
         - unplug8
         video: Unplug8
       Unplug9:
-        title: Programação Relay
+        title: Programação por revezamento
         desc: Essa lição vai usar uma ideia de uma atividade anterior (4. Programação
           em Papel Quadriculado) e usar as habilidades nela presentes para enfatizar
           a importância de completar programas que operam em sequência e de frequentemente
@@ -155,7 +155,7 @@
           daquele ponto.
         video: C2_relay_programming
       Conditionals:
-        title: Condicionais
+        title: Condições
         desc: Para aprender sobre estruturas condicionais, o aluno joga um jogo de
           cartas e cria regras como "se eu comprar uma carta vermelha, eu ganho um
           ponto", e "se eu comprar uma carta preta, você ganha um ponto".
@@ -190,9 +190,9 @@
           armazenados de mais de uma forma.
         video: C2_binary_bracelets
       DigitalFootprint:
-        title: Sua impressão digital
+        title: Seu rastro digital
         desc: Os professores informam aos alunos que colocar informações pessoais
-          online cria uma impressão digital, ou um "rastro" que tem consequências.
+          online cria um rastro digital, ou uma "trilha" que tem consequências.
       ComputationalThinking:
         title: Pensamento computacional
         desc: Os alunos usam as etapas do pensamento computacional (decomposição,

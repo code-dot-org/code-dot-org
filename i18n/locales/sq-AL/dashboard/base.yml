@@ -6,18 +6,18 @@ sq:
     attributes:
       user:
         name: Display Name
-        email: E-mail
-        username: Emri i perdoruesit
-        password: Fjalekalimi
+        email: email adresa
+        username: pseudonimi
+        password: fjalekalim
         password_confirmation: Konfirmim i fjalekalimit
         current_password: Fjalekalimi aktual
         locale: Gjuha
         age: Age
-        gender: Gjinia
+        gender: Gjini
         edit_header: Ndrysho detaje te llogarise
         error:
           future: "can't be in the future"
-  hello: Pershendetje bote
+  hello: Pershendetje Botë
   welcome_back: 'Pershendetje %{name}'
   add_teacher_form:
     code_or_email:
@@ -31,11 +31,11 @@ sq:
     placeholder: Please enter your hint here
     submit: Add hint
   appname: Code.org
-  stage: Faza
+  stage: fazë
   stage_number: 'Stage %{number}'
-  puzzle: Enigme
-  trophies: Trofe
-  courses: Kurse
+  puzzle: Pjesë
+  trophies: trofetë
+  courses: kurse
   of: i
   more: ME SHUME
   less: ME PAK
@@ -65,10 +65,7 @@ sq:
     overview_student: 'Sign up for an account to track your progress. Your email is primarily used to allow you to log in and for password recovery. For more information, see our <a href="http://code.org/privacy">Privacy Policy</a>.'
     overview_teacher: "Teach computer science in your classroom by signing up for an account.<p/> You'll be able to add your students and track their progress."
     no_signup_message: Ti mund te shfletosh faza te ndryshme dhe enigma ne Code.org, por te duhet te regjistrohesh qe te ruash progresin tend.
-    prizes_message: 'U.S. students who earn all %{num_trophies} concept trophies can select a variety of prizes including free Dropbox space, Skype credits, and downloadable games from Electronic Arts.'
     teacher_educator_guide: Shiko guiden e edukimit
-    teacher_prize_header: 'Win $1,000 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> rewards (through June 15, 2014, until supplies last)'
-    teacher_prize_message: 'In partnership with <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>, Code.org will offer up to $1,000 in classroom funding to U.S. public school teachers who lead at least 15 students through the K-8 Intro to Computer Science course (through June 15, 2014, while supplies last).  <a href="http://code.org/educate/20hr">See educator guide</a>.  (Limit: $1,000 per teacher.  <a target="_blank" href="http://help.donorschoose.org/app/answers/detail/a_id/454/kw/code.org">See FAQ for more limits</a>.)'
     teacher_pitch: Teacher sign up for Code.org
     teacher_title: Regjistrimi per mesuesit
     student_pitch: Student sign up for Code.org
@@ -79,6 +76,7 @@ sq:
     gender: Gjinia (fakultative)
     birthday: Datelindje (fakultative)
     age: Age
+    user_type: Are you a student or teacher?
     submit: Regjistrohu
     teacher: Jeni nje mesues?
     valid_username: I disponueshem!
@@ -93,9 +91,9 @@ sq:
   signin_form:
     title: Have an account already? Sign in
     login: Email ose emri i perdoruesit
-    password: Fjalekalimi
+    password: fjalekalim
     remember: Me mbaj mend
-    submit: Logohu
+    submit: logohu
   signin:
     try_heading: Want to try coding without signing up?
     try_hoc: Try one Hour of Code first
@@ -105,7 +103,7 @@ sq:
     name: Choose your name
     picture: Now find your secret picture
     words: Now enter your secret words
-    login: Sign in
+    login: logohu
   password:
     reset_form:
       title: Keni harruar fjalekalimin?
@@ -224,19 +222,19 @@ sq:
       settings: My account
       prizes: Prizes
       logout: Sign out
-      signin: Sign in
-      signup: Sign up
+      signin: logohu
+      signup: Regjistrohu
       already_registered: Already registered?
     popup:
       progress: Your progress
       lines: 'Total lines of code: %{lines}'
-      close: CLOSE
+      close: MBYLL
       mastery: Concepts
-      puzzle_map: Stages
+      puzzle_map: Fazat
       prizes: 'Collect all %{total_trophies} trophies and win prizes!'
       prize_earned: 'All %{total_trophies} trophies collected. Prize won!'
       prize_us_only: (U.S. students only)
-      prizes_link: more info
+      prizes_link: Me shume informacion
   teacher:
     title:
       one: 'Your teacher:'
@@ -256,11 +254,11 @@ sq:
       not_tried: Not tried yet
       activity: 'Indicates student activity in the last %{hours} %{plural}'
       no_section: No assigned section
-      trophies: Trofe
+      trophies: trofetë
     students:
       name: Emri
-      username: Emri i perdoruesit
-      password: Fjalekalimi
+      username: pseudonimi
+      password: fjalekalim
       manage: Manage students
       dashboard: Go to Teacher Dashboard
       add: Add students
@@ -284,7 +282,7 @@ sq:
       secret: Secret type
       grade: Grade
       course: Course
-      rename: rename
+      rename: riemëro
       edit: edit
       delete: delete
       confirm_delete: Are you sure you want to delete this section?
@@ -330,7 +328,6 @@ sq:
     student_stats: |-
       You've earned %{trophy_count} out of %{trophy_max} "Concept Mastery" trophies.
     student_left_off: 'Where you left off:'
-    student_finished_prize: "You've completed all tutorials, claim your %{prize_link} and pick another class %{online_link} or at a %{local_school_link}"
     student_finished: "You've completed all tutorials, pick another class %{online_link} or at a %{local_school_link}"
     local_school: local school
     online: online
@@ -339,17 +336,23 @@ sq:
     tryfirst: 'Or, you can try it first, and sign up later:'
     trynow: Provo tani
     add_hint_help: Please help us to add smart hints to Code.org tutorials
-    20hour_overview: This 20-hour course introduces core computer science and programming concepts. The course is designed for use in classrooms for grades K-8, but it is fun to learn at all ages.
+    20hour_overview: Ky kurs qe zgjat 20 ore na njeh me bazen e shkences kompjuterike dhe konceptet e programimit. Kursi eshte dizenjuar te perdoret nga klasat e nivelit K-8, por eshte argetuese te mesohet nga te gjitha moshat.
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
     heading_elementary: '<h2>20 hour courses for</h2><h1>Elementary Students</h1>'
     heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
     heading_legacy: '<h2>Our general course for</h2><h1>All Ages</h1>'
+    gallery:
+      your_turtle: My Art
+      your_studio: My Apps
   gender:
     male: Male
     female: Female
     none: Prefer not to answer
+  user_type:
+    student: student
+    teacher: Teacher
   footer:
     help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped create this tutorial.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. All Rights Reserved.'
@@ -360,20 +363,13 @@ sq:
     tos: Terms
     privacy: Privacy Policy
     secure: Secure Version
-  prize_mail:
-    prize_earned:
-      subject: Redeem your prize at Code.org!
-    teacher_prize_earned:
-      subject: Congratulations from Code.org!
-    teacher_bonus_prize_earned:
-      subject: Redeem your bonus prize at Code.org!
   reference_area:
     title: Need help?
     subtitle: See these videos and hints
     teacher: See the solution
     auth_error: You are not authorized to see the solution.
     submit: Update Artist Location
-    direction: Start Direction
+    direction: Start Direction (in degrees)
   video:
     tab: Video.
     notes: No video? Show notes.
@@ -428,9 +424,13 @@ sq:
       body: Try our 20-hour Intro to Computer Science course.
   gallery:
     students_drew_these_with_code: Students drew these with code!
+    students_made_these_with_code: Students made these with code!
     picture_count: 'In the past <b>%{days}</b> days, students have drawn <b>%{count}</b> pictures by writing their own computer programs. Click on the pictures to see each program in action.'
+    activity_count: 'In the past <b>%{days}</b> days, students have made <b>%{count}</b> apps and pictures by writing their own computer programs. Click on the pictures and screenshots to see each program in action.'
     want_to_make_your_own: Want to make your own?
     more: 'More &rarr;'
+    caption_by_name_age: 'by %{name}, age %{age}'
+    caption_time_ago: '%{time_ago} ago'
   landing:
     prerelease: "This course is in <span class='betatext'>beta</span>.  This means it is not the final version of the course, and is subject to revision as feedback is received and improvements are made."
     feedback: Give Feedback
@@ -458,12 +458,12 @@ sq:
       name:
         20-hour:
           title: K-8 Intro to Computer Science Course (15-25 hours)
-          description: This 20-hour course introduces core computer science and programming concepts. The course is designed for use in classrooms for grades K-8, but it is fun to learn at all ages.
+          description: Ky kurs qe zgjat 20 ore na njeh me bazen e shkences kompjuterike dhe konceptet e programimit. Kursi eshte dizenjuar te perdoret nga klasat e nivelit K-8, por eshte argetuese te mesohet nga te gjitha moshat.
         Hour of Code:
           title: Ora e Kodit
           description: ""
         edit-code:
-          title: Edit Code
+          title: Ndrysho kodin
           description: ""
         events:
           title: Events

@@ -118,6 +118,7 @@ Blockly.Msg.LISTS_INLIST = "लिस्टमा";
 Blockly.Msg.LISTS_IS_EMPTY_HELPURL = "https://code.google.com/p/blockly/wiki/Lists#is_empty";
 Blockly.Msg.LISTS_IS_EMPTY_TITLE = "%1 is empty";
 Blockly.Msg.LISTS_LENGTH_HELPURL = "https://code.google.com/p/blockly/wiki/Lists#length_of";
+Blockly.Msg.LISTS_LENGTH_INPUT_LENGTH = "length of";
 Blockly.Msg.LISTS_LENGTH_TITLE = "length of %1";
 Blockly.Msg.LISTS_LENGTH_TOOLTIP = "Returns the length of a list.";
 Blockly.Msg.LISTS_REPEAT_HELPURL = "https://code.google.com/p/blockly/wiki/Lists#create_list_with";

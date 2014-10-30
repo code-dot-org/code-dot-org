@@ -6,10 +6,9 @@
     attributes:
       user:
         name: "שם"
-        email: "אימייל"
-        username: |
-          שם משתמש
-        password: "סיסמא"
+        email: "דואר אלקטרוני"
+        username: "שם משתמש"
+        password: "סיסמה"
         password_confirmation: "וידוא סיסמא"
         current_password: "הסיסמה הנוכחית"
         locale: "שפה"
@@ -18,7 +17,7 @@
         edit_header: "שינוי פרטי החשבון"
         error:
           future: "לא יכול להיות בעתיד"
-  hello: "הי עולם"
+  hello: "שלום עולם"
   welcome_back: "ברוך שובך, %{name}"
   add_teacher_form:
     code_or_email:
@@ -35,8 +34,8 @@
   stage: "שלב"
   stage_number: Stage %{number}
   puzzle: "חידה"
-  trophies: "גביעים"
-  courses: "קורסים"
+  trophies: "גביעי ניצחון"
+  courses: "מסלולים"
   of: "של"
   more: "יותר"
   less: "פחות"
@@ -69,18 +68,7 @@
       אחרי התקדמות התלמידים שלך ולזכות בפרסים."
     no_signup_message: אתה יכול <a target="_blank" href="http://learn.code.org">לדפדף
       בחידות והשלבים השונים</a>, אבל אתה צריך להירשם על-מנת לשמור את התקדמותך.
-    prizes_message: תלמידים מארה"ב שזוכים בכל %{num_trophies} גביעי המושגים יכולים
-      לבחור מסוגי פרסים רבים כגון מקום דרופבוקס בחינם, אשראי Skype, ומשחקים להורדה
-      מבית Electronic Arts.
     teacher_educator_guide: "ראה מדריך למחנך"
-    teacher_prize_header: זכה ב 1000$ ב <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
-      פרסים(מ 15 ביוני 2014 עד סוף האספקה)
-    teacher_prize_message: 'בשיתוף עם <a target="_blank" href="http://DonorsChoose.org">
-      DonorsChoose.org</a>, Code.org יציע עד 1,000 דולר במימון בכיתה כדי מורות בבית
-      ספר ציבורי אמריקאי להוביל תלמידים לפחות 15 דרך ההקדמה K-8 קורס מדעי המחשב (דרך
-      יוני 15, 2014, גמר המלאי).  <a href="http://code.org/educate/20hr"> עיין במדריך
-      למחנך</a>.  (מגבלה: 1,000 דולר לכל מורה.  <a target="_blank" href="http://help.donorschoose.org/app/answers/detail/a_id/454/kw/code.org">
-      ראה שאלות נפוצות לגבי גבולות יותר</a>.)'
     teacher_pitch: "הירשמות מורה ל code.org"
     teacher_title: "הרשמת מורה"
     student_pitch: "הירשמות תלמיד ל code.org"
@@ -91,6 +79,7 @@
     gender: "מין (אופציונלי)"
     birthday: "יום הולדת (אופציונלי)"
     age: "גיל (לא חובה)"
+    user_type: Are you a student or teacher?
     submit: "הירשם"
     teacher: "האם אתה מורה?"
     valid_username: "זמין!"
@@ -108,7 +97,7 @@
   signin_form:
     title: "כבר יצרת משתמש? היכנס למערכת"
     login: "דוא ל או שם משתמש"
-    password: "סיסמא"
+    password: "סיסמה"
     remember: "זכור אותי"
     submit: "התחבר"
   signin:
@@ -268,7 +257,7 @@
     popup:
       progress: "ההתקדמות שלך"
       lines: "סה כ שורות קוד: %{lines}"
-      close: "סגור"
+      close: "קרוב"
       mastery: "עקרונות"
       puzzle_map: "שלבים"
       prizes: "אסוף את כל ה-%{total_trophies} פרסים כדי לזכות בפרס אמיתי!"
@@ -294,12 +283,11 @@
       not_tried: Not tried yet
       activity: Indicates student activity in the last %{hours} %{plural}
       no_section: No assigned section
-      trophies: "גביעים"
+      trophies: "גביעי ניצחון"
     students:
       name: "שם"
-      username: |
-        שם משתמש
-      password: "סיסמא"
+      username: "שם משתמש"
+      password: "סיסמה"
       manage: "נהל תלמידים"
       dashboard: Go to Teacher Dashboard
       add: "הוסף תלמיד"
@@ -328,7 +316,7 @@
       secret: Secret type
       grade: Grade
       course: Course
-      rename: rename
+      rename: "שינוי שם"
       edit: edit
       delete: delete
       confirm_delete: Are you sure you want to delete this section?
@@ -378,8 +366,6 @@
     student_progress: "התקדמות הלמידה שלך"
     student_stats: "הרווחת %{trophy_count} פרסים מתוך %{trophy_max} אפשריים."
     student_left_off: "היכן שהפסקתם:"
-    student_finished_prize: "השלמת את כל המדריכים הרווחת את %{prize_link} ותוכל לקחת
-      שיעור אחר %{online_link} או %{local_school_link}"
     student_finished: "את/ה גמרת את כל שיעורי ההדרכה. בחר כיתה אחרת %{online_link}
       או ב%{local_school_link}"
     local_school: בה"ס מקומי
@@ -389,18 +375,24 @@
     tryfirst: "או, שתוכל לנסות זאת קודם כל, ולהירשם לאחר מכן:"
     trynow: "נסה עכשיו"
     add_hint_help: "אנא עזור לנו להוסים רמזים חכמים למדריכים code.org"
-    20hour_overview: "בקורס בן ה20 שעות הזה נפגוש את ליבת מדעי המחשב ורעיונות התכנות.
-      הקורס תוכנן לשימוש בכיתוב k-8, אבל זה כף ללמידה בכל הגילאים."
+    20hour_overview: "קורס בן 20 שעות זה, מציג בפניך בסיס במדעי המחשב וברעיונות בתכנות.
+      הקורס מתוכנן לשימוש בכיתות גן עד ח׳, אבל זה כיף ללמוד בכל הגילאים."
     test_videos_help: "נסה את נגן הוידאו החדש שלנו בבית ספרך"
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
     heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
     heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
     heading_legacy: "<h2>Our previous course for</h2><h1>Existing Students</h1>"
+    gallery:
+      your_turtle: My Art
+      your_studio: My Apps
   gender:
     male: "גבר"
     female: "אישה"
     none: "מעדיף לא לענות"
+  user_type:
+    student: "תלמיד"
+    teacher: Teacher
   footer:
     help_from_html: המהנדסים של <a href="http://www.google.com"> גוגל</a>, <a href="http://www.microsoft.com">
       מיקרוסופט</a>, <a href="http://www.facebook.com"> פייסבוק</a>, <a href="http://www.twitter.com">
@@ -415,13 +407,6 @@
     tos: "תנאים"
     privacy: "הצהרת פרטיות"
     secure: "גרסה מאובטחת"
-  prize_mail:
-    prize_earned:
-      subject: Redeem your prize at Code.org!
-    teacher_prize_earned:
-      subject: Redeem your prize at Code.org!
-    teacher_bonus_prize_earned:
-      subject: Redeem your bonus prize at Code.org!
   reference_area:
     title: "צריך עזרה?"
     subtitle: "לראות את קטעי וידאו ורמזים"
@@ -494,10 +479,16 @@
       body: "נסה את קורס מדעי המחשב בן 20 השעות שלנו."
   gallery:
     students_drew_these_with_code: "תלמידים ציירו את אלה בעזרת קוד!"
+    students_made_these_with_code: Students made these with code!
     picture_count: "בימים<b>%{days}</b> האחרונים, תלמידים ציירו  <b>%{count}</b> תמונות
       בעזרת כתיבת תוכנות במחשב שלהם. לחץ על כל תמונה כדי לראות את ההתקדמות של כל אחד."
+    activity_count: In the past <b>%{days}</b> days, students have made <b>%{count}</b>
+      apps and pictures by writing their own computer programs. Click on the pictures
+      and screenshots to see each program in action.
     want_to_make_your_own: "רוצה להכין אחד משלך?"
     more: "עוד &rarr;"
+    caption_by_name_age: by %{name}, age %{age}
+    caption_time_ago: "%{time_ago} ago"
   landing:
     prerelease: This page is still under development.
     feedback: Give Feedback
@@ -515,7 +506,7 @@
     correct_title: "נכון"
     correct_body: "זאת התשובה הנכונה."
   dialog:
-    ok: "או-קיי"
+    ok: "אישור"
   time:
     hour: 1 hour
     day: day
@@ -525,13 +516,13 @@
       name:
         20-hour:
           title: "ק-8 מבוא לקורס במדעי המחשב (15-25 שעות)"
-          description: "בקורס בן ה20 שעות הזה נפגוש את ליבת מדעי המחשב ורעיונות התכנות.
-            הקורס תוכנן לשימוש בכיתוב k-8, אבל זה כף ללמידה בכל הגילאים."
+          description: "קורס בן 20 שעות זה, מציג בפניך בסיס במדעי המחשב וברעיונות
+            בתכנות. הקורס מתוכנן לשימוש בכיתות גן עד ח׳, אבל זה כיף ללמוד בכל הגילאים."
         Hour of Code:
           title: "שעה של קוד"
           description: ''
         edit-code:
-          title: Edit Code
+          title: "עריכת קוד"
           description: ''
         events:
           title: Events

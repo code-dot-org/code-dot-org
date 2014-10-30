@@ -6,13 +6,13 @@ en-US:
   front_header_banner: crwdns19406:0crwdne19406:0
   front_intro_default: crwdns20248:0crwdne20248:0
   front_intro_default_uk: crwdns20249:0crwdne20249:0
-  front_intro_default_ar: crwdns19409:0crwdne19409:0
   front_watch_video: crwdns19410:0crwdne19410:0
   header_menu_resources: crwdns19411:0crwdne19411:0
   header_menu_faq: crwdns19412:0crwdne19412:0
   header_menu_prizes: crwdns19413:0crwdne19413:0
   header_menu_uk_code_org: crwdns19414:0crwdne19414:0
   choose_country_header: crwdns19415:0crwdne19415:0
+  country_al: crwdns21281:0crwdne21281:0
   country_ar: crwdns19416:0crwdne19416:0
   country_au: crwdns19417:0crwdne19417:0
   country_br: crwdns19418:0crwdne19418:0
@@ -26,6 +26,7 @@ en-US:
   country_it: crwdns19420:0crwdne19420:0
   country_jp: crwdns20674:0crwdne20674:0
   country_me: crwdns20675:0crwdne20675:0
+  country_my: crwdns21282:0crwdne21282:0
   country_nz: crwdns19421:0crwdne19421:0
   country_ro: crwdns19422:0crwdne19422:0
   country_ru: crwdns20676:0crwdne20676:0
@@ -33,10 +34,20 @@ en-US:
   country_uk: crwdns19423:0crwdne19423:0
   country_us: crwdns19424:0crwdne19424:0
   country_vn: crwdns20678:0crwdne20678:0
+  company_4-H: crwdns21283:0crwdne21283:0
+  company_bgca: crwdns21284:0crwdne21284:0
+  company_cgcs: crwdns21285:0crwdne21285:0
+  company_gsusa: crwdns21286:0crwdne21286:0
+  company_bsusa: crwdns21287:0crwdne21287:0
+  company_napcs: crwdns21288:0crwdne21288:0
+  company_tfa: crwdns21289:0crwdne21289:0
+  company_tntp: crwdns21290:0crwdne21290:0
+  company_asa: crwdns21291:0crwdne21291:0
+  company_ngcp: crwdns21292:0crwdne21292:0
   prizes_all: crwdns19425:0crwdne19425:0
   prizes_every_organizer: crwdns19426:0crwdne19426:0
   prizes_technology: crwdns19427:0crwdne19427:0
-  prizes_tech_chats: crwdns19428:0crwdne19428:0
+  prizes_tech_chats: crwdns21293:0crwdne21293:0
   prizes_details: crwdns19429:0crwdne19429:0
   n_have_learned_an_hoc: crwdns19430:0crwdne19430:0
   anybody_can_learn: crwdns19431:0crwdne19431:0
@@ -65,7 +76,6 @@ en-US:
   front_join_us_host: crwdns20062:0crwdne20062:0
   front_join_us_support: crwdns20063:0crwdne20063:0
   signup_header: crwdns19446:0crwdne19446:0
-  signup_header_ar: crwdns19447:0crwdne19447:0
   signup_name_label: crwdns19448:0crwdne19448:0
   signup_email_label: crwdns19449:0crwdne19449:0
   signup_organization_name_label: crwdns19450:0crwdne19450:0
@@ -90,7 +100,7 @@ en-US:
   signup_thank_you_header: crwdns19469:0crwdne19469:0
   signup_thank_you_message: crwdns19470:0crwdne19470:0
   map_header: crwdns20679:0crwdne20679:0
-  map_header_ar: crwdns19472:0crwdne19472:0
+  map_header_company: crwdns21294:0crwdne21294:0
   meta_tag_og_title: crwdns19473:0crwdne19473:0
   meta_tag_og_description: crwdns20250:0crwdne20250:0
   meta_tag_twitter_title: crwdns19475:0crwdne19475:0
@@ -134,26 +144,16 @@ en-US:
   hoc_faq_international_a: crwdns19513:0crwdne19513:0
   hoc_faq_tutorial_q: crwdns19514:0crwdne19514:0
   hoc_faq_tutorial_a: crwdns20682:0crwdne20682:0
+  hoc_faq_more_questions_q: crwdns20977:0crwdne20977:0
+  hoc_faq_more_questions_a: crwdns20978:0crwdne20978:0
+  hoc_faq_more_questions_br_q: crwdns20979:0crwdne20979:0
+  hoc_faq_more_questions_br_a: crwdns20980:0crwdne20980:0
   hoc_faq_what_is_hoc_uk_a: crwdns20066:0crwdne20066:0
   hoc_faq_when_is_hoc_uk_a: crwdns19517:0crwdne19517:0
   hoc_faq_why_cs_uk_a: crwdns20067:0crwdne20067:0
   hoc_faq_how_participate_uk_a: crwdns20068:0crwdne20068:0
   hoc_faq_behind_hoc_uk_a: crwdns19519:0crwdne19519:0
   hoc_faq_host_uk_a: crwdns19521:0crwdne19521:0
-  hoc_faq_what_is_hoc_ar_q: crwdns19522:0crwdne19522:0
-  hoc_faq_what_is_hoc_ar_a: crwdns19523:0crwdne19523:0
-  hoc_faq_when_is_hoc_ar_q: crwdns19524:0crwdne19524:0
-  hoc_faq_when_is_hoc_ar_a: crwdns19525:0crwdne19525:0
-  hoc_faq_how_participate_ar_q: crwdns19526:0crwdne19526:0
-  hoc_faq_how_participate_ar_a: crwdns19527:0crwdne19527:0
-  hoc_faq_behind_hoc_ar_q: crwdns19528:0crwdne19528:0
-  hoc_faq_behind_hoc_ar_a: crwdns19529:0crwdne19529:0
-  hoc_faq_host_ar_q: crwdns19530:0crwdne19530:0
-  hoc_faq_host_ar_a: crwdns19531:0crwdne19531:0
-  hoc_faq_need_computers_ar_q: crwdns19532:0crwdne19532:0
-  hoc_faq_need_computers_ar_a: crwdns19533:0crwdne19533:0
-  hoc_faq_tutorial_ar_q: crwdns19534:0crwdne19534:0
-  hoc_faq_tutorial_ar_a: crwdns19535:0crwdne19535:0
   stats_hoc_2013_heading: crwdns19536:0crwdne19536:0
   stats_hoc_2013_image_alt: crwdns19537:0crwdne19537:0
   stats_growth: crwdns19538:0crwdne19538:0
@@ -173,6 +173,7 @@ en-US:
   resources_handouts: crwdns20684:0crwdne20684:0
   resources_videos: crwdns20685:0crwdne20685:0
   resources_posters: crwdns20686:0crwdne20686:0
+  resources_social: crwdns21295:0crwdne21295:0
   resources_banners: crwdns20687:0crwdne20687:0
   resources_emails: crwdns20688:0crwdne20688:0
   resources_stats: crwdns20689:0crwdne20689:0

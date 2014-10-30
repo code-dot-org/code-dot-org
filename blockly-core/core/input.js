@@ -49,6 +49,11 @@ Blockly.Input = function(type, name, block, connection) {
   this.align = Blockly.ALIGN_LEFT;
   this.inline_ = false;
   this.visible_ = true;
+  this.colour_ = {
+    hue: null,
+    saturation: null,
+    value: null
+  };
 };
 
 /**
@@ -210,4 +215,31 @@ Blockly.Input.prototype.isInline = function () {
     return false;
   }
   return this.inline_ || this.sourceBlock_.inputsInline;
+};
+
+Blockly.Input.prototype.setHSV = function (hue, saturation, value) {
+  if (this.type !== Blockly.FUNCTIONAL_INPUT) {
+    throw "setColor only for functional inputs";
+  }
+  this.colour_ = { hue: hue, saturation: saturation, value: value };
+
+  return this;
+};
+
+Blockly.Input.prototype.getHexColour = function() {
+  return Blockly.makeColour(this.colour_.hue, this.colour_.saturation,
+    this.colour_.value);
+};
+
+Blockly.Input.prototype.matchesBlock = function (block) {
+  if (block.getColour() !== this.colour_.hue) {
+    return false;
+  }
+  if (block.getSaturation() !== this.colour_.saturation) {
+    return false;
+  }
+  if (block.getValue() !== this.colour_.value) {
+    return false;
+  }
+  return true;
 };

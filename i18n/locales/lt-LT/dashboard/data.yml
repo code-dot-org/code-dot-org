@@ -48,6 +48,8 @@ lt:
         edit-code:
           desc: Redaguoti kodą (beta)
           MazeEC: 1 Etapas
+          Webapp: 2 Etapas
+          ArtistEC: 3 Etapas
         events:
           desc: Bounce (beta versija)
           Bounce: 1 Etapas
@@ -69,7 +71,7 @@ lt:
           WordSearch: 1 Etapas
     game:
       name:
-        Unplug1: Informatikos įvadas
+        Unplug1: Programavimo įvadas
         Maze: Labirintas
         Multi: Pasirinkti iš kelių variantų
         Unplug2: Skaičiuojamasis mąstymas
@@ -91,11 +93,13 @@ lt:
         Artist5: Menininkas 5
         Unplug11: Apibendrinimas
         MazeEC: Labirintas
-        Bounce: Šokinėjimas
+        Bounce: Bounce
         Flappy: Flappy Bird
         Jigsaw: Dėlionės
         MazeStep: Labirintas Žingsnio režimu
         Wordsearch: Žodžių paieška
+        Webapp: Webapp
+        ArtistEC: Menininkas
     trophy:
       name:
         Bronze: Bronza
@@ -273,20 +277,20 @@ lt:
         studio_c2_3: Ar gali parašyti programą, kad šis šuo nueitų iki katės?
         studio_c2_4: Ar gali parašyti programą, kuri priverčia šunį pajudėti iki katino, o katiną priverčia pasakyti „Labas“, kai šuo prie jo prieina?
         studio_c2_5: Ar gali sukurti programą, kad aštuonkojis pasakytų „Labas“, kai ant jo nuspaudi su pele?
-        studio_c2_6: Ar gali parašyti programą, kad šis pingvinas judėtų spaudinėjant klaviatūros rodykles ir kad paliestų visas vėliavas?
-        studio_c2_7: 'Blokelis "kartok visada" leis pastoviai vykdyti nurodytus veiksmus. Ar mokėtum nurodyti dinozaurui pastoviai vaikščioti aukštyn-žemyn?'
+        studio_c2_6: Ar gali parašyti programą, kad šis pingvinas judėtų spaudinėjant klaviatūros rodykles ir pataikytų į visus taikinius?
+        studio_c2_7: Blokelis „kartok amžinai“ leidžia kodui veikti nesustojant. Ar sugebėsi sudėti blokus taip, kad šis dinozauras judėtų aukštyn ir žemyn nesustodamas?
         studio_c2_8: Padaryk, kad pingvinas sakytų „Oi!“ ir sugrotų garsas „atsimušimas“, jeigu jis atsitrenkia į dinozaurą. Pingvinas turi būti valdomas klaviatūros rodyklėmis.
         studio_c2_9: Pridėk bloką, kad būtų gaunamas taškas, kai pingvinas pasiekia aštuonkojį. Pingvinas turi būti judinamas tol, kol bus gaunamas taškas.
         studio_c2_10: Pridėk blokelius, kurie, paleidus žaidimą, pakeistų foną ir pingvino greitį. Po to pajudink pingviną, kol gausi tašką.
-        studio_c2_11: 'Sukurk savo istoriją. Kai baigsi, spustelk "Finišas", ir galėsi leisti draugams savo telefonuose peržiūrėti istoriją.'
+        studio_c2_11: Sukurk savo istoriją. Kai ją užbaigsi, pasidalink ja su draugais, kad jie galėtų ją peržiūrėti savo telefonuose.
         studio_c3_story_1: Ar galėtum padaryti, kad šis šuo pasakytų „Sveikas, pasauli“?
         studio_c3_story_2: Ar gali padaryti taip, kad šuo ką nors pasakytų, o po to ką nors pasakytų katinas?
         studio_c3_story_3: Ar gali parašyti programą, kad šis šuo nueitų iki katės?
         studio_c3_story_4: Ar gali parašyti programą, kuri priverčia šunį pajudėti iki katino, o katiną priverčia pasakyti „Labas“, kai šuo prie jo prieina?
         studio_c3_story_5: Ar gali pridėti bloką, kad aštuonkojis taptų laimingas?
-        studio_c3_story_6: Sukurk savo istoriją. Kai ją užbaigsi, pasidalink ja su draugais, kad jie galėtų ją peržiūrėti savo telefonuose.
+        studio_c3_story_6: 'Sukurk savo istoriją. Kai baigsi, spustelk "Finišas", ir galėsi leisti draugams savo telefonuose peržiūrėti istoriją.'
         studio_c3_game_1: Ar gali sukurti programą, kad aštuonkojis pasakytų „Labas“, kai ant jo nuspaudi su pele?
-        studio_c3_game_2: Ar gali parašyti programą, kad šis pingvinas judėtų spaudinėjant klaviatūros rodykles ir kad paliestų visas vėliavas?
+        studio_c3_game_2: Ar gali parašyti programą, kad šis pingvinas judėtų spaudinėjant klaviatūros rodykles ir pataikytų į visus taikinius?
         studio_c3_game_3: Blokelis „kartok amžinai“ leidžia kodui veikti nesustojant. Ar sugebėsi sudėti blokus taip, kad šis dinozauras judėtų aukštyn ir žemyn nesustodamas?
         studio_c3_game_4: Padaryk, kad pingvinas sakytų „Oi!“ ir sugrotų garsas „atsimušimas“, jeigu jis atsitrenkia į dinozaurą. Pingvinas turi būti valdomas klaviatūros rodyklėmis.
         studio_c3_game_5: Pridėk bloką, kad būtų gaunamas taškas, kai pingvinas pasiekia aštuonkojį. Pingvinas turi būti judinamas tol, kol bus gaunamas taškas.
@@ -297,7 +301,7 @@ lt:
         studio_playlab_3: Ar gali parašyti programą, kad šis šuo nueitų iki katės?
         studio_playlab_4: Ar gali parašyti programą, kuri priverčia šunį pajudėti iki katino, o katiną priverčia pasakyti „Labas“, kai šuo prie jo prieina?
         studio_playlab_5: Ar gali sukurti programą, kad aštuonkojis pasakytų „Labas“, kai ant jo nuspaudi su pele?
-        studio_playlab_6: Ar gali parašyti programą, kad šis pingvinas judėtų spaudinėjant klaviatūros rodykles ir kad paliestų visas vėliavas?
+        studio_playlab_6: Ar gali parašyti programą, kad šis pingvinas judėtų spaudinėjant klaviatūros rodykles ir pataikytų į visus taikinius?
         studio_playlab_7: Blokelis „kartok amžinai“ leidžia kodui veikti nesustojant. Ar sugebėsi sudėti blokus taip, kad šis dinozauras judėtų aukštyn ir žemyn nesustodamas?
         studio_playlab_8: Pridėk bloką, kad būtų gaunamas taškas, kai pingvinas pasiekia aštuonkojį. Pingvinas turi būti judinamas tol, kol bus gaunamas taškas.
         studio_playlab_9: Pridėk blokelius, kurie, paleidus žaidimą, pakeistų foną ir pingvino greitį. Po to pajudink pingviną, kol gausi tašką.
@@ -319,10 +323,12 @@ lt:
         maze_wordsearch_k_15: 'Pajudink mane į vieną pusę, paskui - kitą, kad parašyčiau žodį "ABOVE"'
         maze_wordsearch_k_16: 'Pajudink mane į vieną pusę, paskui - kitą, kad parašyčiau žodį "BELOW"'
         maze_wordsearch_k_20: 'Pajudink mane į vieną pusę, paskui - kitą, kad parašyčiau žodį "STORY"'
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColour" block.'
     video:
       name:
-        maze_intro: Įvadas į Labirintą
-        artist_intro: Įvadas į Menininką
+        maze_intro: Labirinto užduoties įvadas
+        artist_intro: Menininko užduoties įvadas
         farmer_intro: Įvadas į Ūkininką
         flappy_intro: Įvadas į Flappy
         loop_times: „Kartojimo“ blokelis
@@ -359,23 +365,23 @@ lt:
         C1_zuck_repeat_loop: 'Labirintas: kartojimas'
         C1_bee_loops: 'Bitė: kartojimas'
         C1_maze_loops: 'Labirintas: kartojimas'
-        C1_playlab_storytelling: 'Laboratorija: sukurk istoriją'
+        C1_playlab_storytelling: 'Žaidimų laboratorija: sukurk istoriją'
         C1_planting_seed: Sėklos sodinimas
         C1_building_foundating: Pamatų kūrimas
-        C2_maze_intro: Įvadas į Labirintą
-        C2_artist_intro: Įvadas į Menininką
+        C2_maze_intro: Labirinto užduoties įvadas
+        C2_artist_intro: Menininko užduoties įvadas
         C2_zuck_repeat_loop: 'Labirintas: kartojimas'
         C2_artist_loops: 'Menininkas: kartojimas'
         C2_bee_conditionals: 'Bitė: sąlyginiai sakiniai'
-        C2_playlab_createstory: 'Laboratorija: sukurk istoriją'
+        C2_playlab_createstory: 'Žaidimų laboratorija: sukurk istoriją'
         C2_graph_paper: Programavimas ant languoto popieriaus
         C2_conditionals_with_cards: Sąlyginiai sakiniai
         C2_binary_bracelets: Dvejetainės apyrankės
         C2_replay_programming: Programavimas komandoje
         C2_paper_airplanes: Popieriniai lėktuvėliai
-        C3_maze_intro: Labirinto užduoties įvadas
-        C3_artist_intro: Menininko užduoties įvadas
-        C3_artist_functions: 'Menininkas: sudėtinės komandos'
+        C3_maze_intro: Įvadas į Labirintą
+        C3_artist_intro: Įvadas į Menininką
+        C3_artist_functions: 'Menininkas: funkcijos'
         C3_bee_functions: 'Bitė: sudėtinės komandos'
         C3_bee_conditionals: 'Bitė: sąlyginiai sakiniai'
         C3_maze_conditionals: 'Labirintas: sąlyginiai sakiniai'
@@ -383,7 +389,7 @@ lt:
         C3_farmer_while: „Kol“ kartojimas
         C3_bee_nested_loops: Kartojimas kartojime
         C3_bee_debugging: 'Bitė: klaidų ieškojimas'
-        C3_bounce: Šokinėjimas
+        C3_bounce: Bounce
         C3_playlab_create_game: 'Laboratorija: sukurk žaidimą'
         C3_computational_thinking: Skaičiuojamasis mąstymas
         C3_dice_race: Kauliukų lenktynės

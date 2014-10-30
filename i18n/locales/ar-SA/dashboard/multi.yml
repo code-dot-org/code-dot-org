@@ -10,7 +10,7 @@ ar:
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png
       2-3 artist loops multi 1:
-        Artist Loops Multiple Choice: 'حلقات الرسام - اختيار من متعدد'
+        Artist Loops Multiple Choice: حلقات الرسام اختيار من متعدد
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500
         Which shape is made by this loop?: أي شكل تم إنشاءه بهذه الحلقة؟
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png
@@ -42,7 +42,7 @@ ar:
       2-3 bee conditionals multi 2:
         Bee Conditionals Multiple Choice Two: 'النحلة الشرطية - اختيار من متعدد - اثنان'
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png, 500: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png, 500
-        Choose the best blocks.: اختر المجموعات الأفضل.
+        Choose the best blocks.: اختر القطعة الأفضل.
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a2.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a3.png
@@ -67,21 +67,21 @@ ar:
         Maze Multiple Choice One: 'المتاهة - اختيار من متعدد - واحد'
         /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500
         Choose the best answer.: اختار الإجابة الأفضل.
-        Which blocks work?: أي من الكتل صحيح؟
+        Which blocks work?: أي القطع صحيحة؟
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png
       2-3 Maze Multi 2:
-        Maze Multiple Choice: 'متاهة - الاختيار المتعدد'
+        Maze Multiple Choice: 'متاهة - اختيار من متعدد'
         /script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500
-        Which blocks work?: أي الكتل يعمل ؟
+        Which blocks work?: أي القطع صحيحة؟
         /script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png
         /script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png
         /script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png
         /script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png
       2-3 Algorithms Multi 1:
-        Multiple Choice: اختيار من متعدد
+        Multiple Choice: إختيارات متعددة
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
         Choose an algorithm for the image provided: اختر خوارزمية للصورة المقدمة
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 'إبدأ مع المربع<br/>ضع مثلثاً فوق المربع<br/>ضع مثلثاً أسفل المربع'
@@ -89,7 +89,7 @@ ar:
         Start with a square<br/>Put a rhombus above the square<br/>Put a triangle right of the rhombus: 'إبدأ مع المربع<br/>ضع معيناً فوق المربع<br/>ضع مثلثاً على يمين المعين'
         Start with a square<br/>Put a triangle below the square<br/>Put a rhombus right of the triangle: 'إبدأ مع المربع<br/>ضع مثلثاً تحت المربع<br/>ضع معيناً على يمين المثلث'
       2-3 Algorithms Multi 2:
-        Multiple Choice: اختيار من متعدد
+        Multiple Choice: إختيارات متعددة
         Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: 'إبدأ مع المثلث<br/>ضع مربعاً تحت المثلث<br/>ضع مثلث آخر تحت المربع'
         Which image does <em>not</em> follow this algorithm?: 'أي صورة <em>لا</em> تتبع هذه الخوارزمية?'
         /script_assets/2-3_images/unplugged/algorithms_2_a1.png: /script_assets/2-3_images/unplugged/algorithms_2_a1.png
@@ -97,22 +97,22 @@ ar:
         /script_assets/2-3_images/unplugged/algorithms_2_a3.png: /script_assets/2-3_images/unplugged/algorithms_2_a3.png
         /script_assets/2-3_images/unplugged/algorithms_2_a4.png: /script_assets/2-3_images/unplugged/algorithms_2_a4.png
       2-3 Binary Multi 1:
-        Multiple Choice: اختيار من متعدد
+        Multiple Choice: إختيارات متعددة
         /script_assets/2-3_images/unplugged/graph_paper_1_q.png: /script_assets/2-3_images/unplugged/graph_paper_1_q.png
         Which program makes this image?: أي برنامج يصنع هذه الصورة ؟
         /script_assets/2-3_images/unplugged/graph_paper_1_a1.png: /script_assets/2-3_images/unplugged/graph_paper_1_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a2.png: /script_assets/2-3_images/unplugged/graph_paper_1_a2.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a3.png: /script_assets/2-3_images/unplugged/graph_paper_1_a3.png
       2-3 Conditionals Multi 1:
-        Multiple Choice: اختيار من متعدد
+        Multiple Choice: إختيارات متعددة
         /script_assets/2-3_images/unplugged/conditionals_1_q.png: /script_assets/2-3_images/unplugged/conditionals_1_q.png
-        These are your team's cards - according to the rules of the game, which set is scored correctly?: "These are your team's cards - according to the rules of the game, which set is scored correctly?"
+        According to the rules of the game, which set of cards is scored correctly?: According to the rules of the game, which set of cards is scored correctly?
+        /script_assets/2-3_images/unplugged/conditionals_1_a1.png: /script_assets/2-3_images/unplugged/conditionals_1_a1.png
         /script_assets/2-3_images/unplugged/conditionals_1_a2.png: /script_assets/2-3_images/unplugged/conditionals_1_a2.png
         /script_assets/2-3_images/unplugged/conditionals_1_a3.png: /script_assets/2-3_images/unplugged/conditionals_1_a3.png
-        /script_assets/2-3_images/unplugged/conditionals_1_a1.png: /script_assets/2-3_images/unplugged/conditionals_1_a1.png
         /script_assets/2-3_images/unplugged/conditionals_1_a4.png: /script_assets/2-3_images/unplugged/conditionals_1_a4.png
       2-3 Getting Loopy Multi 1:
-        Multiple Choice: اختيار من متعدد
+        Multiple Choice: إختيارات متعددة
         /script_assets/2-3_images/unplugged/getting_loopy_1_q.png: /script_assets/2-3_images/unplugged/getting_loopy_1_q.png
         How would you simplify this sequence with loops?: كيف يمكنك تبسيط هذا التسلسل مع الحلقات ؟
         /script_assets/2-3_images/unplugged/getting_loopy_1_a1.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a1.png
@@ -120,21 +120,21 @@ ar:
         /script_assets/2-3_images/unplugged/getting_loopy_1_a3.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a3.png
         /script_assets/2-3_images/unplugged/getting_loopy_1_a4.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a4.png
       2-3 Graph Paper Multi 1:
-        Multiple Choice: اختيار من متعدد
+        Multiple Choice: إختيارات متعددة
         /script_assets/2-3_images/unplugged/graph_paper_1_q.png: /script_assets/2-3_images/unplugged/graph_paper_1_q.png
         Which program makes this image?: أي برنامج يصنع هذه الصورة ؟
         /script_assets/2-3_images/unplugged/graph_paper_1_a1.png: /script_assets/2-3_images/unplugged/graph_paper_1_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a2.png: /script_assets/2-3_images/unplugged/graph_paper_1_a2.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a3.png: /script_assets/2-3_images/unplugged/graph_paper_1_a3.png
       2-3 Relay Programming Multi 1:
-        Multiple Choice: اختيار من متعدد
+        Multiple Choice: إختيارات متعددة
         /script_assets/2-3_images/unplugged/relay_programming_1_q.png: /script_assets/2-3_images/unplugged/relay_programming_1_q.png
         Which program does not create this image?: ما هو البرنامج الذي لا ينشئ هذه الصورة ؟
         /script_assets/2-3_images/unplugged/relay_programming_1_a1.png: /script_assets/2-3_images/unplugged/relay_programming_1_a1.png
         /script_assets/2-3_images/unplugged/relay_programming_1_a2.png: /script_assets/2-3_images/unplugged/relay_programming_1_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_1_a3.png: /script_assets/2-3_images/unplugged/relay_programming_1_a3.png
       2-3 Relay Programming Multi 2:
-        Multiple Choice: اختيار من متعدد
+        Multiple Choice: إختيارات متعددة
         Which image-program combo does not contain mistakes?: Which image-program combo does not contain mistakes?
         /script_assets/2-3_images/unplugged/relay_programming_2_a1.png: /script_assets/2-3_images/unplugged/relay_programming_2_a1.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
@@ -214,7 +214,7 @@ ar:
       4-5 maze multi 1:
         Maze Multiple Choice: 'متاهة - اختيار من متعدد'
         /script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500
-        Which blocks solve the puzzle?: أي القطع سوف تحل هذا اللغز ؟?
+        Which blocks solve the puzzle?: أي القطع سوف تحل هذا اللغز ؟
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png
@@ -222,7 +222,7 @@ ar:
       4-5 maze conditionals multi 1:
         Maze Conditionals Multiple Choice: 'المتاهة الشرطية - اختيار من متعدد'
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500
-        Which blocks solve the puzzle?: أي القطع سوف تحل هذا اللغز ؟?
+        Which blocks solve the puzzle?: أي القطع سوف تحل هذا اللغز ؟
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png
@@ -296,7 +296,6 @@ ar:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
-        /script_assets/4-5_images/unplugged/suncatchers_2_a4.png: /script_assets/4-5_images/unplugged/suncatchers_2_a4.png
       K-1 Artist 1 Multi 1:
         Multiple Choice: إختيارات متعددة
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png, 500
@@ -384,7 +383,7 @@ ar:
       K-1 Getting Loopy Multi 1:
         Multiple Choice: إختيارات متعددة
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png
-        How would you simplify this sequence with loops?: How would you simplify this sequence with loops?
+        How would you simplify this sequence with loops?: كيف يمكنك تبسيط هذا التسلسل مع الحلقات ؟
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png
@@ -442,9 +441,9 @@ ar:
         Multiple Choice: إختيارات متعددة
         /script_assets/k_1_images/search_images/square.png, 700: /script_assets/k_1_images/search_images/square.png, 700
         Which word is spelled?: Which word is spelled?
-        SET: SET
-        SQUARE: SQUARE
-        SOUTH: SOUTH
+        SET: تعيين
+        SQUARE: مربع
+        SOUTH: الجنوب
       K-1 multi 4:
         Driver and Helper: Driver and Helper
         /script_assets/multis/driver_helper.jpg: /script_assets/multis/driver_helper.jpg
@@ -513,19 +512,21 @@ ar:
         Maze Multiple Choice Two: Maze Multiple Choice Two
         /script_assets/matches/images/head.jpg,400: /script_assets/matches/images/head.jpg,400
         This puzzle is all about selecting the correct flowers.: This puzzle is all about selecting the correct flowers.
-        Instructions: تعليمات
+        Instructions: التعليمات
         Click the right answer, then submit. And here are some longer instructions just to test things more.  How's that word wrapping?: "Click the right answer, then submit. And here are some longer instructions just to test things more.  How's that word wrapping?"
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
-        Which flowers are yellow?: Which flowers are yellow?
+        Which flowers are yellow?: |
+          أي الزهور صفراء اللون؟
+          
         /script_assets/matches/images/a1.jpg: /script_assets/matches/images/a1.jpg
         /script_assets/matches/images/a2.jpg: /script_assets/matches/images/a2.jpg
         /script_assets/matches/images/a3.jpg: /script_assets/matches/images/a3.jpg
         /script_assets/matches/images/a4.jpg: /script_assets/matches/images/a4.jpg
       test multi text:
-        Presidents: Presidents
-        This multiple choice is all about the presidents of the United States.: This multiple choice is all about the presidents of the United States.
-        Who was the first president of the USA?: Who was the first president of the USA?
-        Fred Flintstone: Fred Flintstone
-        Martha Washington: Martha Washington
-        George Washington: George Washington
-        George Jetson: George Jetson
+        Presidents: الرؤساء
+        This multiple choice is all about the presidents of the United States.: هذا الاختيار من متعدد كل شيء عن رؤساء الولايات المتحدة.
+        Who was the first president of the USA?: من هو أول رئيس للولايات المتحدة الأمريكية؟
+        Fred Flintstone: فريد فلينتستون
+        Martha Washington: مارثا واشنطن
+        George Washington: جورج واشنطن
+        George Jetson: جورج جيتسون

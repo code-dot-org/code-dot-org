@@ -32,7 +32,7 @@
           MazeEC: "階段 1"
         2014 Levels:
           desc: 2014 關卡 （測試版）
-          Bounce: "第一階段"
+          Bounce: "階段 1"
         Builder Levels:
           desc: "使用者創建的謎題(測試版)"
           Custom: "階段 1"
@@ -48,6 +48,8 @@
         edit-code:
           desc: Edit Code (beta)
           MazeEC: "階段 1"
+          Webapp: "階段 2"
+          ArtistEC: "階段 3"
         events:
           desc: Bounce (beta)
           Bounce: "階段 1"
@@ -77,9 +79,9 @@
         Artist: "藝術家"
         Unplug4: "演算法"
         Artist2: "藝術家 2 "
-        Unplug5: "函數"
+        Unplug5: "函數類別"
         Farmer: "農夫"
-        Unplug6: "條件式陳述"
+        Unplug6: "流程類別"
         Artist3: "藝術家 3 "
         Unplug7: "歌曲創作"
         Farmer2: "農夫 2 "
@@ -96,6 +98,8 @@
         Jigsaw: Jigsaw
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
+        Webapp: Webapp
+        ArtistEC: "藝術家"
     trophy:
       name:
         Bronze: "銅牌"
@@ -110,7 +114,7 @@
         loop_until: '"重覆...直到" 程式積木'
         loop_while: '"當..." 程式積木'
         loop_for: '"計數器" 程式積木'
-        function: "函數"
+        function: "函數類別"
         parameters: "具有參數的函數"
     level:
       instructions:
@@ -128,13 +132,13 @@
         maze_2_11: "親愛的人類。我~僵屍。我~餓了。必須...吃到...向日葵...你有辦法只用 5 個程式積木就讓我到那兒嗎？"
         maze_2_12: "好，這個也差不多，但還是有一些不同。你可以只用 5 個程式積木完成它嗎？"
         maze_2_13: 使用新的"如果"程式積木讓我來決定何時要轉彎。提示： 只要在新增一個程式積木就可以了。但記得看看我們是如何安排其他程式積木，這樣下次你就可以自己完成整個程式設計囉。
-        maze_2_14: 好，這就像是最後一個關卡，但你需要記住的是如何同時使用"如果"及"重複"程式積木的方式。
+        maze_2_14: 好，這個關卡跟前一關很像，但你需要記住的是如何同時使用"如果"及"重複"程式積木的方式。
         maze_2_15: 我想要吃向日葵！試著使用"如果"程式積木，讓我用最少的程式積木吃到向日葵。
         maze_2_16: "好，讓我們再練習一次--這次跟之前差不多，但記得注意食殭花喔 ！"
-        maze_2_17: 這個"如果--其他"程式積木會檢查當前的條件，決定做那些事情。使用這個新的程式積木把我送到向日葵那吧！
-        maze_2_18: 再練習一次"假如-其它"程式積木，你可以在第一次嘗試就成功嗎?
+        maze_2_17: 這個"如果--否則"程式積木會檢查指定的條件，來決定做哪件事情。用這個新的程式積木把我送到向日葵那吧！
+        maze_2_18: 再練習一次"如果--否則"程式積木，你能在第一次嘗試就成功嗎?
         maze_2_19: "你可以只靠新增3個程式積木，來幫我完成一個更複雜的關卡嗎？只要你成功了，往後不管任何長度的彎曲路徑我都可以行動自如啦！"
-        turtle_1_1: "你好，我是一個藝術家。您可以透過撰寫程式碼，讓我畫任何東西。試著使用幾個程式積木，讓我畫出跟圖片中的灰色線條相同的圖形。"
+        turtle_1_1: "嗨！我是個藝術家。你可以寫程式碼來讓我畫出任何東西（幾乎啦）。用一些程式積木來讓我沿著圖上的灰線作畫。"
         turtle_1_2: 現在，畫一個正方形。提醒：你可以從新的"設置顏色"程式積木中，挑選您最喜愛的顏色。
         turtle_1_3: "使用 3 個程式積木來畫出一個正方形。"
         turtle_1_4: 使用"隨機顏色"選項來選取不同的顏色，讓三角形的三邊有不同顏色。提示： 你得先想清楚應該要轉多少角度，然後在經由點選"轉彎"程式積木中的角度數值來進行設定。
@@ -283,8 +287,7 @@
         studio_c2_3: Can you write a program to make this dog move to the cat?
         studio_c2_4: Can you write a program that makes the dog move to the cat, and
           have the cat say "hello" when the dog reaches him?
-        studio_c2_5: Can you write a program to make the octopus say "hello" when
-          it is clicked?
+        studio_c2_5: 你能寫程式讓章魚被按下的時候會說"哈囉"嗎？
         studio_c2_6: Can you write a program to make this penguin move around using
           the up / down / left /right keys to hit all of the targets?
         studio_c2_7: The "repeat forever" block allows you to run code continuously.
@@ -307,8 +310,7 @@
         studio_c3_story_5: Can you add a block to make the octopus happy?
         studio_c3_story_6: Create your own story. When you're done, click Finish to
           let friends try your story on their phones.
-        studio_c3_game_1: Can you write a program to make the octopus say "hello"
-          when it is clicked?
+        studio_c3_game_1: 你能寫程式讓章魚被按下的時候會說"哈囉"嗎？
         studio_c3_game_2: Can you write a program to make this penguin move around
           using the up / down / left /right keys to hit all of the targets?
         studio_c3_game_3: The "repeat forever" block allows you to run code continuously.
@@ -328,8 +330,7 @@
         studio_playlab_3: Can you write a program to make this dog move to the cat?
         studio_playlab_4: Can you write a program that makes the dog move to the cat,
           and have the cat say "hello" when the dog reaches him?
-        studio_playlab_5: Can you write a program to make the octopus say "hello"
-          when it is clicked?
+        studio_playlab_5: 你能寫程式讓章魚被按下的時候會說"哈囉"嗎？
         studio_playlab_6: Can you write a program to make this penguin move around
           using the up / down / left /right keys to hit all of the targets?
         studio_playlab_7: The "repeat forever" block allows you to run code continuously.
@@ -362,6 +363,9 @@
         maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
         maze_wordsearch_k_20: This is a test! Move me one way, then another to spell
           the word STORY
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
+          it in the new "penColour" block.'
     video:
       name:
         maze_intro: "迷宮簡介"
@@ -372,18 +376,18 @@
         loop_until: '"重覆...直到"程式積木'
         if: '"如果"程式積木'
         if_else: '"如果..否則"程式積木'
-        function: "函數"
+        function: "函數類別"
         loop_while: '"當...時"程式積木'
         loop_for: '"計數" 程式積木'
         parameters: "具有參數的函數"
         hoc_wrapup: "一小時程式碼總結"
         20_wrapup: 20小時課程總結
-        Unplug1: What is CS?
+        Unplug1: "資訊科學是什麼？"
         Unplug2: "電腦計算式思維"
         Unplug3: "圖畫紙程式設計"
         Unplug4: "演算法"
-        Unplug5: "函數"
-        Unplug6: "條件式陳述"
+        Unplug5: "函數類別"
+        Unplug6: "流程類別"
         Unplug7: Songwriting
         Unplug8: "抽象"
         Unplug9: Relay programming
@@ -412,7 +416,7 @@
         C2_bee_conditionals: Bee Conditionals
         C2_playlab_createstory: Play Lab - Create a Story
         C2_graph_paper: "圖畫紙程式設計"
-        C2_conditionals_with_cards: "條件式陳述"
+        C2_conditionals_with_cards: "流程類別"
         C2_binary_bracelets: Binary Bracelets
         C2_replay_programming: "接力式程式設計"
         C2_paper_airplanes: Paper Airplanes
@@ -436,14 +440,12 @@
         C3_songwriting_with_parameters: Songwriting With Parameters
     callout:
       text:
-        drag_blocks: Drag a "move" block and snap it below the other block
-        run: Hit "Run" to try your program
-        watch_again: Click here to watch the video again
-        gray_block_explanation: Blocks that are grey can't be moved or deleted. Can
-          you solve the puzzle anyway?
-        show_code_explanation: Click here to see the code for the program you're making
-        instructions_repeat_explanation: The instructions for each puzzle are repeated
-          here
+        drag_blocks: 拖住一個"移動"積木，把它黏到其他積木下面
+        run: 按下"執行"按鈕來測試你的程式
+        watch_again: "按這裡可以再看一次影片"
+        gray_block_explanation: "你不能刪掉灰色的程式積木。這樣你還能解開這道難題嗎？"
+        show_code_explanation: "按這裡查看你正在寫的這支程式的原始碼"
+        instructions_repeat_explanation: "每道謎題的指示都會在這裡再寫一次"
         category_explanation: You have all the same blocks but they've now been arranged
           in categories
         set_sprite_image: Attach a "set actor to image" block to the "when story starts"

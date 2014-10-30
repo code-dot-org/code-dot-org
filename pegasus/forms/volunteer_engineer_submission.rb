@@ -29,7 +29,7 @@ class VolunteerEngineerSubmission
     'volunteer_engineer_submission_receipt'
   end
 
-  def self.process(data, last_processed_data)
+  def self.process(data)
     {'location_p' => geocode_address(data['location_s'])}
   end
 

@@ -2,7 +2,7 @@
   data:
     unplugged:
       Unplug1:
-        title: Bevezetés a számítástechnikába
+        title: Bevezetés a számítógép tudományába
         desc: This lesson will introduce the concept of Computer Science and explain
           what a Computer Scientist does.  It will also give students an opportunity
           to assume the role of a computer scientist.  By the end of the activity,
@@ -50,7 +50,7 @@
         - unplug4
         video: Unplug4
       Unplug5:
-        title: Függvények
+        title: funkciók
         desc: In this lesson, students will make a suncatcher out of string, beads,
           and a special charm. The students will follow a series of repetitive steps,
           then be asked to identify certain sets of "skills" that are duplicated several

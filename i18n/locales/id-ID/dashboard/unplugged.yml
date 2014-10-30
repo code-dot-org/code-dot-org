@@ -2,7 +2,7 @@ id:
   data:
     unplugged:
       Unplug1:
-        title: Pengantar Ilmu Komputer
+        title: Perkenalan ilmu komputer
         desc: Pelajaran ini akan memperkenalkan konsep Ilmu Komputer dan menjelaskan pekerjaan seorang Ilmuwan Komputer. Pelajaran ini juga akan memberikan kesempatan kepada pelajar untuk berperan sebagai Ilmuwan Komputer. Di akhir kegiatan ini, setiap murid akan mendapatkan pekerjaan rumah untuk mengingat apa yang mereka telah pelajari. Mungkin Anda akan berusaha untuk melewatkan pengajaran kata-kata yang terkait dengan pelajaran ini kepada anak-anak kecil, tetapi menampilkannya dengan cara yang ringan dan mengasyikkan jauh lebih berguna daripada menunggu kesempatan yang lebih lanjut.
         pdfs:
           - unplug1
@@ -26,7 +26,7 @@ id:
           - unplug4
         video: Unplug4
       Unplug5:
-        title: Fungsi
+        title: fungsi
         desc: |-
           In this lesson, students will make a suncatcher out of string, beads, and a special charm. The students will follow a series of repetitive steps, then be asked to identify certain sets of "skills" that are duplicated several times. Once those skills are defined, they will be called from a main program and the whole beautiful process of creation will be recorded on a single sheet of paper. The final program will be geared toward the entire class, whatever their type of string, beads, and charms. To effectively allow for this, students will need to "abstract out" the details of their specific materials and create vague terms for an individual's supplies.  This use of generic placeholders is a wonderful introduction to variables.
         pdfs:
@@ -81,7 +81,7 @@ id:
         desc: This lesson calls out ways we use algorithms in our daily lives, using the act of planting a seed as an example. It also focuses on the bigger picture of computer science and how algorithms play an essential part.
         video: C1_planting_seed
       BuildingAFoundation:
-        title: Building a Foundation
+        title: Membangun dasar
         desc: Students build a structure using only provided supplies. Structures must complete a task (reach a certain height or bear a certain weight), and students discuss the idea of being persistent when things get complicated.
         video: C1_building_foundation
       GettingLoopy:
@@ -98,7 +98,7 @@ id:
         desc: 'To learn about conditional statements, students play a card game and create rules like "If I draw a red card, I get a point" and "If I draw a black card, you get a point."'
         video: C2_conditionals_with_cards
       BigEvent:
-        title: The Big Event
+        title: Acara besar
         desc: 'Students are introduced to the programming concept of "events," which are actions that a computer constantly monitors for. The teacher will press buttons on a paper remote and students will react depending on which button is pressed.'
         video: C1_bigevent_unplugged
       GoingPlacesSafely:
@@ -113,7 +113,7 @@ id:
         desc: This lesson calls out ways we use algorithms in our daily lives, specifically making paper airplanes. This lesson also focuses on the bigger picture of computer science and how algorithms play an essential part.
         video: C2_paper_airplanes
       BinaryBracelets:
-        title: Binary Bracelets
+        title: Gelang biner
         desc: Students create bracelets as a binary representations of the first letter of their name. Students learn that data can be represented and stored in more than one way.
         video: C2_binary_bracelets
       DigitalFootprint:
@@ -141,7 +141,7 @@ id:
         video: C3_internet
       Crowdsourcing:
         title: Crowdsourcing
-        desc: Student use crowdsourcing, a problem-solving technique common in computer science, to complete a task together as a classroom more efficiently than if a student attempted it alone.
+        desc: Students use crowdsourcing, a problem-solving technique common in computer science, to complete a task together as a classroom more efficiently than if a student attempted it alone.
         video: C3_crowdsourcing
       DigitalCitizenship:
         title: Digital Citizenship

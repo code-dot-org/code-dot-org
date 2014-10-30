@@ -6,9 +6,9 @@
     attributes:
       user:
         name: "Прикажи назив"
-        email: E-mail адреса
-        username: "Корисничко име"
-        password: "Лозинка"
+        email: "Електронска пошта"
+        username: "корисничко име"
+        password: "Шифра"
         password_confirmation: "Потврдите лозинку"
         current_password: "Тренутна лозинка"
         locale: "Језик"
@@ -31,11 +31,11 @@
     placeholder: "Молимо унесите ваш савет овде"
     submit: "Додај савет"
   appname: Code.org
-  stage: "Ниво"
+  stage: "фаза"
   stage_number: Stage %{number}
-  puzzle: "Пузле"
-  trophies: "Трофеји"
-  courses: "Курсеви"
+  puzzle: "Пузла"
+  trophies: "трофеји"
+  courses: "курсеви"
   of: "од"
   more: "ВИШЕ"
   less: "МАЊЕ"
@@ -44,7 +44,7 @@
   k8intro: "К-8 курс Увод у рачунарство (15-25 часова)"
   already_started: "Већ почели? Наставите овде >>"
   demos: 'Admin: All Demos'
-  continue: "Наставите"
+  continue: "Настави"
   prize: "награда"
   more_info: "Више информација"
   auth:
@@ -73,12 +73,14 @@
       могу бирати мноштво награда укључујући бесплатан Дропбокс простор, Скајп кредит,
       и игре спремне за преузимање од Електроник Артс-а."
     teacher_educator_guide: "Погледај водич за едукатора"
-    teacher_prize_header: Освоји $1,000 у <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
-      Награде
-    teacher_prize_message: 'У партнерству са <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>,
-      Code.org понудиће до $1000 за финансирање учионица, учитељима државних школа
-      у С.А.Д. који спроведу барем 15 ученика кроз овај курс.<a href="http://code.org/educate/20hr">Погледај
-      упутство за употребу за више информација.</a> '
+    teacher_prize_header: Win $1,000 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
+      rewards (through June 15, 2014, until supplies last)
+    teacher_prize_message: 'In partnership with <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>,
+      Code.org will offer up to $1,000 in classroom funding to U.S. public school
+      teachers who lead at least 15 students through the K-8 Intro to Computer Science
+      course (through June 15, 2014, while supplies last).  <a href="http://code.org/educate/20hr">See
+      educator guide</a>.  (Limit: $1,000 per teacher.  <a target="_blank" href="http://help.donorschoose.org/app/answers/detail/a_id/454/kw/code.org">See
+      FAQ for more limits</a>.)'
     teacher_pitch: "Регистрација за Code.org - nastavnici"
     teacher_title: "Учитељ пријављивање"
     student_pitch: "Регистрација за Code.org - студенти"
@@ -182,7 +184,7 @@
     teacher_email_required: "Награде за учитеље захтевају потврђену имејл адресу:"
     confirm:
       title: "Молимо потврдите"
-      'no': "Не"
+      'no': "не"
       'yes': "Да"
       msg: "Јесте ли сигурни да желите узети %{prize_name} награду?"
       msg_student: "Запамтите: Можете узети само један тип награде."
@@ -275,7 +277,7 @@
       prizes: "Сакупи све %{total_trophies} трофеје и освоји награде!"
       prize_earned: "Сви %{total_trophies} трофеји сакуплјени. Награда освојена!"
       prize_us_only: "(Само за ученике из САД-а)"
-      prizes_link: "више информација"
+      prizes_link: "Више информација"
   teacher:
     title:
       one: "Твој учитељ:"
@@ -295,11 +297,11 @@
       not_tried: Not tried yet
       activity: Indicates student activity in the last %{hours} %{plural}
       no_section: No assigned section
-      trophies: "Трофеји"
+      trophies: "трофеји"
     students:
       name: "Име"
-      username: "Корисничко име"
-      password: "Лозинка"
+      username: "корисничко име"
+      password: "Шифра"
       manage: "Рспоредити студенте"
       dashboard: Go to Teacher Dashboard
       add: "Сви студенти"
@@ -328,7 +330,7 @@
       secret: Secret type
       grade: Grade
       course: Course
-      rename: rename
+      rename: "преименуј"
       edit: edit
       delete: delete
       confirm_delete: Are you sure you want to delete this section?
@@ -381,8 +383,8 @@
     student_stats: Ви сте зарадили %{trophy_count} од %{trophy_max} "Concept Mastery"
       трофеја.
     student_left_off: "Гдје сте оставили заднји пут:"
-    student_finished_prize: You've completed all tutorials, claim your %{prize_link}
-      and pick another class %{online_link} or at a %{local_school_link}
+    student_finished_prize: "Завршили сте све туторијале, узмите своју %{prize_link}
+      и изаберите неки други разред %{online_link} или у %{local_school_link} "
     student_finished: You've completed all tutorials, pick another class %{online_link}
       or at a %{local_school_link}
     local_school: "локална школа"
@@ -393,15 +395,18 @@
     tryfirst: "Или, можеш прво да пробаш, а да се региструјеш касније:"
     trynow: "Испробај сада"
     add_hint_help: Please help us to add smart hints to Code.org tutorials
-    20hour_overview: This 20-hour course introduces core computer science and programming
-      concepts. The course is designed for use in classrooms for grades K-8, but it
-      is fun to learn at all ages.
+    20hour_overview: "Овај 20-часовни  курс представља срж компјутерских наука и програмерских
+      основа. Курс је дизајниран за употребу у учионицама за разреде К-8, али је забавно
+      учити у било којем животном периоду."
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
     heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
     heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
     heading_legacy: "<h2>Our previous course for</h2><h1>Existing Students</h1>"
+    gallery:
+      your_turtle: My Art
+      your_studio: My Apps
   gender:
     male: "Мушко"
     female: "Женско"
@@ -425,7 +430,7 @@
     prize_earned:
       subject: "Откупи своји награду на Code.org!"
     teacher_prize_earned:
-      subject: "Откупи своји награду на Code.org!"
+      subject: Congratulations from Code.org!
     teacher_bonus_prize_earned:
       subject: "Откупи своју бонус награду на Code.org!"
   reference_area:
@@ -490,7 +495,7 @@
       unused: "Неупотребљени Нивои"
   upsell:
     hoc:
-      title: "Час Кодирања"
+      title: "Час кода"
       body: Try the basics of computer science. Millions have given it a shot.
     flappy:
       title: Flappy Code
@@ -501,11 +506,17 @@
       body: Try our 20-hour Intro to Computer Science course.
   gallery:
     students_drew_these_with_code: Students drew these with code!
+    students_made_these_with_code: Students made these with code!
     picture_count: In the past <b>%{days}</b> days, students have drawn <b>%{count}</b>
       pictures by writing their own computer programs. Click on the pictures to see
       each program in action.
+    activity_count: In the past <b>%{days}</b> days, students have made <b>%{count}</b>
+      apps and pictures by writing their own computer programs. Click on the pictures
+      and screenshots to see each program in action.
     want_to_make_your_own: Want to make your own?
     more: More &rarr;
+    caption_by_name_age: by %{name}, age %{age}
+    caption_time_ago: "%{time_ago} ago"
   landing:
     prerelease: This page is still under development.
     feedback: Give Feedback
@@ -533,14 +544,14 @@
       name:
         20-hour:
           title: "К-8 курс Увод у рачунарство (15-25 часова)"
-          description: This 20-hour course introduces core computer science and programming
-            concepts. The course is designed for use in classrooms for grades K-8,
-            but it is fun to learn at all ages.
+          description: "Овај 20-часовни  курс представља срж компјутерских наука и
+            програмерских основа. Курс је дизајниран за употребу у учионицама за разреде
+            К-8, али је забавно учити у било којем животном периоду."
         Hour of Code:
-          title: "Час Кодирања"
+          title: "Час кода"
           description: ''
         edit-code:
-          title: Edit Code
+          title: "Уреди код"
           description: ''
         events:
           title: "Догађаји"

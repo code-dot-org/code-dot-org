@@ -3,8 +3,8 @@
   "nextLevel":"Felicitats! Has complert aquest puzzle.",
   "no":"No",
   "numBlocksNeeded":"Aquest puzzle pot res resolt amb blocs de %1.",
-  "reinfFeedbackMsg":"You can press the \"Try again\" button to go back to playing your game.",
-  "share":"Share",
-  "shareGame":"Share your game:",
+  "reinfFeedbackMsg":"Pots clicar el botó de \"Try again\" per tornar a començar",
+  "share":"Comparteix",
+  "shareGame":"Comparteix el teu joc:",
   "yes":"Sí"
 }

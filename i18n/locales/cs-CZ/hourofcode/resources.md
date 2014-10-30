@@ -6,12 +6,12 @@ title: Resources layout: wide nav: resources_nav
 
 # Zdroje
 
-## Hosting an Hour of Code? [See the how-to guide](<%= hoc_uri('/resources/how-to') %>)
+## Hostujete Hodinu kódování? [Projděte si návod jak na to](<%= hoc_uri('/resources/how-to') %>)
 
 <a id="handouts"></p> 
 
 <h2>
-  Use this handout to spread the word
+  Pro šíření informací použijte tento leták
 </h2>
 
 <p>
@@ -19,7 +19,7 @@ title: Resources layout: wide nav: resources_nav
 </p>
 
 <h2>
-  Give this handout to teachers and schools
+  Tento leták dejte učitelům a školám
 </h2>
 
 <p>
@@ -30,7 +30,7 @@ title: Resources layout: wide nav: resources_nav
   <a id="videos"></p> 
   
   <h2>
-    Show these videos to inspire students
+    Tímto videem inspirujte studenty
   </h2>
   
   <div style="float:left; padding:10px">
@@ -74,7 +74,7 @@ title: Resources layout: wide nav: resources_nav
     <a id="posters"></p> 
     
     <h2>
-      Hang these posters in your school
+      Tyto plakáty vyvěste ve své škole
     </h2>
     
     <p>
@@ -102,6 +102,22 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <p>
+      <a id="social"></a>
+    </p>
+    
+    <h2>
+      Post these on social media
+    </h2>
+    
+    <p>
+      <a href="/images/social-1.jpg"><img src="/images/fit-200/social-1.jpg" alt="obrázek" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-2.jpg"><img src="/images/fit-200/social-2.jpg" alt="obrázek" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-3.jpg"><img src="/images/fit-200/social-3.jpg" alt="obrázek" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    
+    <p>
+      <a href="/images/mark.jpg"><img src="/images/fit-200/mark.jpg" alt="obrázek" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-200/susan.jpg" alt="obrázek" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-200/ashton.jpg" alt="obrázek" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-200/marissa.jpg" alt="obrázek" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-200/chris.jpg" alt="obrázek" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    
+    <p>
       <a id="sample-emails"></a>
     </p>
     
@@ -118,19 +134,19 @@ title: Resources layout: wide nav: resources_nav
     </h2>
     
     <p>
-      Computers are everywhere, but fewer schools teach computer science than 10 years ago. Dobrou zprávou je, že jsme na cestě jak to změnit. Pokud v loňském roce jste slyšeli o Hodině kódu , možná víte, že vstoupila do dějin. In one week, 15 million students tried computer science!
+      Počítače jsou všude, ale dnes vyučuje informatiku méně škol než tomu bylo před 10 lety. Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. In one week, 15 million students tried computer science!
     </p>
     
     <p>
-      Informatika byla na domovských stránkách Google, MSN, Yahoo! a Disney. Prezident Obama, Shakira a Ashton Kutcher odstartovali Hodinu kódu z videí. Přes 100 partnerů se dalo dohromady na podporu tohoto hnutí.
+      Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
     </p>
     
     <p>
-      V letošním roce to bude ještě větší. Přidejte se, prosím, na Hodinu kódu 2014. Zapojte se k události Hodina kódu během vzdělávacího týdne informatiky od 8. až 14. prosinci 2014.
+      This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2014. Please get involved with an Hour of Code event during Computer Science Education Week, December 8-14, 2014.
     </p>
     
     <p>
-      Dostanete slovo. Hostit akci. Požádejte místní školu, aby se přihlásila. Nebo zkuste Hodinu kódu sami – každý může využívat výhody se naučit základům.
+      Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself -- everyone can benefit from learning the basics.
     </p>
     
     <p>
@@ -154,7 +170,7 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <p>
-      In one week last year, 15 million students tried computer science! Informatika byla na domovských stránkách Google, MSN, Yahoo! a Disney. Prezident Obama, Shakira a Ashton Kutcher odstartovali Hodinu kódu z videí. Přes 100 partnerů se dalo dohromady na podporu tohoto hnutí.
+      In one week last year, 15 million students tried computer science! Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
     </p>
     
     <p>

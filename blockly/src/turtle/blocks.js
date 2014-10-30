@@ -835,6 +835,37 @@ exports.install = function(blockly, blockInstallOptions) {
         this.id + '\');\n';
   };
 
+
+  blockly.Blocks.draw_line_style_pattern = {
+    // Block to handle event when an arrow button is pressed.
+    helpUrl: '',
+    init: function() {
+      this.setHSV(184, 1.00, 0.74);
+      this.setPreviousStatement(true, null);
+      this.setNextStatement(true, null);
+      this.appendDummyInput()
+           .appendTitle(msg.setPattern())
+           .appendTitle( new blockly.FieldImageDropdown(
+              blockly.Blocks.draw_line_style_pattern.Options, 150, 20 ), 'VALUE' );
+      this.setTooltip(msg.setPattern());
+    }
+  };
+
+  // image icons and image paths for the 'set pattern block'
+  blockly.Blocks.draw_line_style_pattern.Options =
+    [[skin.patternDefault, 'DEFAULT'], //  signals return to default path drawing
+     [skin.rainbowMenu, 'rainbowLine'],  // set to property name for image within skin
+     [skin.ropeMenu, 'ropeLine'],  // referenced as skin[pattern];
+     [skin.squigglyMenu, 'squigglyLine'],
+     [skin.swirlyMenu, 'swirlyLine']];
+
+  generator.draw_line_style_pattern = function() {
+    // Generate JavaScript for setting the image for a patterned line.
+    var pattern = this.getTitleValue('VALUE') || '\'DEFAULT\'';
+    return 'Turtle.penPattern("' + pattern + '", \'block_id_' +
+        this.id + '\');\n';
+  };
+
   blockly.Blocks.up_big = {
     helpUrl: '',
     init: function() {
