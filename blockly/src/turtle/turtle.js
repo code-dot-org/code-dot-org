@@ -111,13 +111,13 @@ Turtle.init = function(config) {
 
   if (skin.id == "anna")
   {
-    Turtle.AVATAR_WIDTH = 57;
-    Turtle.AVATAR_HEIGHT = 78;
+    Turtle.AVATAR_WIDTH = 73;
+    Turtle.AVATAR_HEIGHT = 100;
   }
   else if (skin.id == "elsa")
   {
-    Turtle.AVATAR_WIDTH = 57;
-    Turtle.AVATAR_HEIGHT = 67;
+    Turtle.AVATAR_WIDTH = 85;
+    Turtle.AVATAR_HEIGHT = 100;
   }
   else
   {
