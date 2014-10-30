@@ -17,7 +17,7 @@ fi
   if [ -d "../blockly" ] ; then
     cd ../blockly
     npm install
-    MOOC_APP=studio grunt build
+    grunt build
   else
     echo "Skipping blockly. No ../blockly"
   fi
