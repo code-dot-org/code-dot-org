@@ -628,7 +628,7 @@ Turtle.doSmoothAnimate = function(options, distance)
   }
 
   return { tupleDone: tupleDone, distance: distance };
-}
+};
 
 /**
  * Execute one step.
@@ -639,37 +639,39 @@ Turtle.doSmoothAnimate = function(options, distance)
  */
 Turtle.step = function(command, values, options) {
   var tupleDone = true;
+  var result;
 
   switch (command) {
     case 'FD':  // Forward
       distance = values[0];
-      var result = Turtle.doSmoothAnimate(options, distance);
+      result = Turtle.doSmoothAnimate(options, distance);
       tupleDone = result.tupleDone;
       Turtle.moveForward_(result.distance);
       break;
     case 'JF':  // Jump forward
       distance = values[0];
-      var result = Turtle.doSmoothAnimate(options, distance);
+      result = Turtle.doSmoothAnimate(options, distance);
       tupleDone = result.tupleDone;
       Turtle.jumpForward_(result.distance);
       break;
     case 'MV':  // Move (direction)
       var distance = values[0];
-      var result = Turtle.doSmoothAnimate(options, distance);
+      var heading = values[1];
+      result = Turtle.doSmoothAnimate(options, distance);
       tupleDone = result.tupleDone;
       Turtle.setHeading_(heading);
       Turtle.moveForward_(result.distance);
       break;
     case 'JD':  // Jump (direction)
       distance = values[0];
-      var result = Turtle.doSmoothAnimate(options, distance);
+      result = Turtle.doSmoothAnimate(options, distance);
       tupleDone = result.tupleDone;
       Turtle.setHeading_(heading);
       Turtle.jumpForward_(result.distance);
       break;
     case 'RT':  // Right Turn
-      var distance = values[0];
-      var result = Turtle.doSmoothAnimate(options, distance);
+      distance = values[0];
+      result = Turtle.doSmoothAnimate(options, distance);
       tupleDone = result.tupleDone;
       Turtle.turnByDegrees_(result.distance);
       break;
