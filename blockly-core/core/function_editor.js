@@ -9,12 +9,47 @@ goog.provide('Blockly.FunctionEditor');
 
 goog.require('Blockly.BlockSpace');
 goog.require('Blockly.HorizontalFlyout');
+goog.require('goog.style');
 
 /**
  * Class for a modal function editor.
  * @constructor
  */
 Blockly.FunctionEditor = function() {
+};
+
+/**
+ * Whether this editor has been initialized
+ * @type {boolean}
+ * @private
+ */
+Blockly.FunctionEditor.prototype.created_ = false;
+
+Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
+  var definitionBlock;
+
+  // Get hidden function definition from blockSpace
+  var blocks = Blockly.mainBlockSpace.getAllBlocks();
+  for (var x = 0, block; block = blocks[x]; x++) {
+    if (block.type === 'procedures_defnoreturn' && Blockly.Names.equals(functionName, block.getTitleValue('NAME'))) {
+      definitionBlock = block;
+    }
+  }
+
+  if (!definitionBlock) {
+    throw new Error("Can't find definition block to edit");
+  }
+
+  /**
+   * TODO(bjordan):
+   *    Below, load block into workspace with:
+   *   '<xml>' + goog.dom.getOuterHtml(Blockly.Xml.blockToDom_(definitionBlock)) + '</xml>'
+   * Temporarily may need to:
+   *    Blockly.mainBlockSpace.removeTopBlock(definitionBlock);
+   *      until we have block hiding / it lives in invisible block store
+   */
+
+  this.show();
 };
 
 Blockly.FunctionEditor.prototype.refreshToolbox_ = function() {
@@ -54,6 +89,29 @@ Blockly.FunctionEditor.prototype.renameParameter = function(oldName, newName) {
 };
 
 Blockly.FunctionEditor.prototype.show = function() {
+  this.ensureCreated_();
+
+  goog.style.showElement(this.container_, true);
+  goog.style.showElement(this.modalBackground_, true);
+};
+
+Blockly.FunctionEditor.prototype.ensureCreated_ = function() {
+  if (!this.created_) {
+    this.create_();
+    this.created_ = true;
+  }
+};
+
+Blockly.FunctionEditor.prototype.hide = function() {
+  goog.style.showElement(this.container_, false);
+  goog.style.showElement(this.modalBackground_, false);
+};
+
+Blockly.FunctionEditor.prototype.create_ = function() {
+  if (this.created_) {
+    throw "Attempting to re-create already created Function Editor";
+  }
+
   this.container_ = document.createElement('div');
   this.container_.setAttribute('id', 'modalContainer');
   goog.dom.getElement('blockly').appendChild(this.container_);
@@ -86,6 +144,9 @@ Blockly.FunctionEditor.prototype.show = function() {
       Blockly.selected.unselect();
     }
   });
+
+  Blockly.bindEvent_(goog.dom.getElement('editorBackButton'), 'mousedown', this, this.hide);
+
   Blockly.bindEvent_(this.contractDiv_, 'mousedown', null, function() {
     if (Blockly.selected) {
       Blockly.selected.unselect();
@@ -137,7 +198,8 @@ Blockly.FunctionEditor.prototype.show = function() {
   Blockly.modalBlockSpaceEditor.svgResize();
 };
 
-Blockly.FunctionEditor.prototype.hide = function() {
+Blockly.FunctionEditor.prototype.destroy_ = function() {
+  // TODO(bjordan/jlory): needed? when to call?
   delete Blockly.modalWorkspace;
   this.modalBackground_ = null;
   if (this.onResizeWrapper_) {
@@ -178,7 +240,7 @@ Blockly.FunctionEditor.prototype.resizeContractDiv_ = function() {
 Blockly.FunctionEditor.prototype.createContractDom_ = function() {
   this.contractDiv_ = goog.dom.createDom('div', 'blocklyToolboxDiv paramToolbox blocklyText');
   this.container_.insertBefore(this.contractDiv_, this.container_.firstChild);
-  this.contractDiv_.innerHTML = '<div>Name your function:</div><div><input type="text""></div>'
+  this.contractDiv_.innerHTML = '<div id="editorBackButton">Back</div><div>Name your function:</div><div><input type="text""></div>'
       + '<div>What is your function supposed to do?</div>'
       + '<div><textarea rows="2"></textarea></div>'
       + '<div>What parameters does your function take?</div>'
