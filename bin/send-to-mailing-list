@@ -35,7 +35,7 @@ end
 def process_command_line(argv=ARGV)
   {
     csv:nil,
-    limit:10,
+    limit:20000,
     start:0,
     template:nil,
     threads:4,
@@ -69,12 +69,15 @@ def process_command_line(argv=ARGV)
   end
 end
 
+@contacts_lock = Mutex.new
 @contacts_cache = nil
 def send_message(template, item)
-  unless @contacts_cache
-    puts "Loading contacts..."
-    @contacts_cache = load_contacts
-    puts "#{@contacts_cache.length} contact(s) loaded."
+  @contacts_lock.synchronize do
+    unless @contacts_cache
+      puts "Loading contacts..."
+      @contacts_cache = load_contacts
+      puts "#{@contacts_cache.length} contact(s) loaded."
+    end
   end
   
   begin
