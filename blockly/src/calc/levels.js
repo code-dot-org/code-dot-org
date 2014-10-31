@@ -12,7 +12,6 @@ module.exports = {
     ]),
     ideal: Infinity,
     toolbox: blockUtils.createToolbox(
-      blockUtils.blockOfType('functional_compute') +
       blockUtils.blockOfType('functional_plus') +
       blockUtils.blockOfType('functional_minus') +
       blockUtils.blockOfType('functional_times') +
