@@ -1917,7 +1917,7 @@ exports.star = function (radius, fontSize, color) {
   return exports.register(new EvalStar(radius, fontSize, color));
 };
 
-exports.placeImage = function (image, x, y, blockId) {
+exports.placeImage = function (x, y, image, blockId) {
   // todo - validate we have an image, use public setter
   // todo - where does argument validation happen?
 
@@ -1929,12 +1929,12 @@ exports.placeImage = function (image, x, y, blockId) {
   return exports.register(image);
 };
 
-exports.rotateImage = function (image, degrees) {
+exports.rotateImage = function (degrees, image) {
   image.rotate(degrees);
   return exports.register(image);
 };
 
-exports.scaleImage = function (image, factor) {
+exports.scaleImage = function (factor, image) {
   image.scale(factor, factor);
   return exports.register(image);
 };
@@ -2097,9 +2097,9 @@ exports.install = function(blockly, blockInstallOptions) {
     blockTitle: msg.placeImageBlockTitle(),
     apiName: 'placeImage',
     args: [
-      { name: 'IMAGE', type: 'image' },
       { name: 'X', type: 'Number' },
-      { name: 'Y', type: 'Number' }
+      { name: 'Y', type: 'Number' },
+      { name: 'IMAGE', type: 'image' }
     ]
   });
 
@@ -2108,8 +2108,8 @@ exports.install = function(blockly, blockInstallOptions) {
     blockTitle: msg.rotateImageBlockTitle(),
     apiName: 'rotateImage',
     args: [
-      { name: 'IMAGE', type: 'image' },
-      { name: 'DEGREES', type: 'Number' }
+      { name: 'DEGREES', type: 'Number' },
+      { name: 'IMAGE', type: 'image' }
     ]
   });
 
@@ -2118,8 +2118,8 @@ exports.install = function(blockly, blockInstallOptions) {
     blockTitle: msg.scaleImageBlockTitle(),
     apiName: 'scaleImage',
     args: [
-      { name: 'IMAGE', type: 'image' },
-      { name: 'FACTOR', type: 'Number' }
+      { name: 'FACTOR', type: 'Number' },
+      { name: 'IMAGE', type: 'image' }
     ]
   });
 
@@ -2346,7 +2346,9 @@ Eval.init = function(config) {
     Blockly.JavaScript.addReservedWords('Eval,code');
 
     Eval.answerObject = generateEvalObjectFromBlockXml(level.solutionBlocks);
-    Eval.answerObject.draw(document.getElementById('answer'));
+    if (Eval.answerObject) {
+      Eval.answerObject.draw(document.getElementById('answer'));
+    }
 
     // Adjust visualizationColumn width.
     var visualizationColumn = document.getElementById('visualizationColumn');
@@ -8320,11 +8322,11 @@ exports.ellipseBlockTitle = function(d){return "ellipse (width, height, style, c
 
 exports.overlayBlockTitle = function(d){return "overlay (top, bottom)"};
 
-exports.placeImageBlockTitle = function(d){return "place-image (image, x, y)"};
+exports.placeImageBlockTitle = function(d){return "place-image (x, y, image)"};
 
 exports.rectangleBlockTitle = function(d){return "rectangle (width, height, style, color)"};
 
-exports.rotateImageBlockTitle = function(d){return "rotate (image, degrees)"};
+exports.rotateImageBlockTitle = function(d){return "rotate (degrees, image)"};
 
 exports.scaleImageBlockTitle = function(d){return "scale (factor)"};
 
