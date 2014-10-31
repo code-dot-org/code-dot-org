@@ -523,7 +523,7 @@ BlocklyApps.init = function(config) {
     if (config.level.edit_blocks === 'required_blocks' ||
       config.level.edit_blocks === 'toolbox_blocks') {
       // Don't show when run block for toolbox/required block editing
-      config.insertWhenRun = false;
+      config.forceInsertTopBlock = null;
     }
   }
 
@@ -562,8 +562,8 @@ BlocklyApps.init = function(config) {
 
   // Add the starting block(s).
   var startBlocks = config.level.startBlocks || '';
-  if (config.insertWhenRun) {
-    startBlocks = blockUtils.insertWhenRunBlock(startBlocks);
+  if (config.forceInsertTopBlock) {
+    startBlocks = blockUtils.forceInsertTopBlock(startBlocks, config.forceInsertTopBlock);
   }
   startBlocks = BlocklyApps.arrangeBlockPosition(startBlocks, config.blockArrangement);
   BlocklyApps.loadBlocks(startBlocks);
@@ -1139,12 +1139,12 @@ exports.domStringToBlock = function(blockDOMString) {
 };
 
 /**
- * Takes a set of start blocks, and returns them with a when run button inserted
- * in front of the first non-function block.  If we already have a when_run block,
- * does nothing.
+ * Takes a set of start blocks, and returns them with a particular top level
+ * block inserted in front of the first non-function block.  If we already have
+ * this block, does nothing.
  */
-exports.insertWhenRunBlock = function (input) {
-  if (input.indexOf('when_run') !== -1) {
+exports.forceInsertTopBlock = function (input, blockType) {
+  if (input.indexOf(blockType) !== -1) {
     return input;
   }
 
@@ -1154,10 +1154,10 @@ exports.insertWhenRunBlock = function (input) {
   // using document.createElement elsewhere is
   var doc = root.parentNode;
 
-  var whenRun = doc.createElement('block');
-  whenRun.setAttribute('type', 'when_run');
-  whenRun.setAttribute('movable', 'false');
-  whenRun.setAttribute('deletable', 'false');
+  var topBlock = doc.createElement('block');
+  topBlock.setAttribute('type', blockType);
+  topBlock.setAttribute('movable', 'false');
+  topBlock.setAttribute('deletable', 'false');
 
   var numChildren = root.childNodes ? root.childNodes.length : 0;
 
@@ -1178,15 +1178,21 @@ exports.insertWhenRunBlock = function (input) {
 
   if (firstBlock !== null) {
     // when run -> next -> firstBlock
-    var next = doc.createElement('next');
+    var next;
+    if (/^functional/.test(blockType)) {
+      next = doc.createElement('functional_input');
+      next.setAttribute('name', 'ARG1');
+    } else {
+      next = doc.createElement('next');
+    }
     next.appendChild(firstBlock);
-    whenRun.appendChild(next);
+    topBlock.appendChild(next);
   }
 
   if (numChildren > 0) {
-    root.insertBefore(whenRun, root.childNodes[0]);
+    root.insertBefore(topBlock, root.childNodes[0]);
   } else {
-    root.appendChild(whenRun);
+    root.appendChild(topBlock);
   }
   return xml.serialize(root);
 };
@@ -1939,6 +1945,24 @@ exports.scaleImage = function (factor, image) {
   return exports.register(image);
 };
 
+exports.stringAppend = function (first, second) {
+  evalUtils.ensureType(first, EvalString);
+  evalUtils.ensureType(second, EvalString);
+
+  var str = new EvalString(first.getValue() + second.getValue());
+  return exports.register(str);
+};
+
+// polling for values
+exports.stringLength = function (str) {
+  evalUtils.ensureType(str, EvalString);
+  // kind of hacky. register  a string version of the number, so that if this
+  // is our top level block, it will be drawn, but return the number itself
+  var len = str.getValue().length;
+  exports.register(new EvalString(len.toString()));
+  return len;
+};
+
 },{"./evalCircle":13,"./evalEllipse":14,"./evalMulti":15,"./evalRect":17,"./evalStar":18,"./evalString":19,"./evalText":20,"./evalTriangle":21,"./evalUtils":22}],10:[function(require,module,exports){
 /**
  * Blockly Demo: Eval Graphics
@@ -2123,6 +2147,29 @@ exports.install = function(blockly, blockInstallOptions) {
     ]
   });
 
+  // string manipulation
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'string_append',
+    blockTitle: msg.stringAppendBlockTitle(),
+    apiName: 'stringAppend',
+    returnType: 'string',
+    args: [
+      { name: 'FIRST', type: 'string' },
+      { name: 'SECOND', type: 'string' }
+    ]
+  });
+
+  // polling for values
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'string_length',
+    blockTitle: msg.stringLengthBlockTitle(),
+    apiName: 'stringLength',
+    returnType: 'Number',
+    args: [
+      { name: 'STR', type: 'string' }
+    ]
+  });
+
   installStyle(blockly, generator, gensym);
 };
 
@@ -2132,10 +2179,11 @@ function installFunctionalBlock (blockly, generator, gensym, options) {
   var blockTitle = options.blockTitle;
   var apiName = options.apiName;
   var args = options.args;
+  var returnType = options.returnType || 'image';
 
   blockly.Blocks[blockName] = {
     init: function () {
-      initTitledFunctionalBlock(this, blockTitle, 'image', args);
+      initTitledFunctionalBlock(this, blockTitle, returnType, args);
     }
   };
 
@@ -2304,7 +2352,7 @@ Eval.init = function(config) {
   Eval.shownFeedback_ = false;
 
   config.grayOutUndeletableBlocks = true;
-  config.insertWhenRun = false;
+  config.forceInsertTopBlock = null;
 
   config.html = page({
     assetUrl: BlocklyApps.assetUrl,
@@ -2954,7 +3002,10 @@ module.exports = {
       blockUtils.blockOfType('underlay') +
       blockUtils.blockOfType('rotate') +
       blockUtils.blockOfType('scale') +
-      blockUtils.blockOfType('functional_text')),
+      blockUtils.blockOfType('functional_text') +
+      blockUtils.blockOfType('string_append') +
+      blockUtils.blockOfType('string_length')
+    ),
     startBlocks: blockUtils.mathBlockXml('functional_star', {
       'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'black' } ),
       'STYLE': blockUtils.mathBlockXml('functional_string', null, { VAL: 'solid' }),
@@ -8343,6 +8394,10 @@ exports.scaleImageBlockTitle = function(d){return "scale (factor)"};
 exports.squareBlockTitle = function(d){return "square (size, style, color)"};
 
 exports.starBlockTitle = function(d){return "star (radius, style, color)"};
+
+exports.stringAppendBlockTitle = function(d){return "string-append (first, second)"};
+
+exports.stringLengthBlockTitle = function(d){return "string-length (string)"};
 
 exports.textBlockTitle = function(d){return "text (string, size, color)"};
 

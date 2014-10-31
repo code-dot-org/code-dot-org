@@ -79,3 +79,21 @@ exports.scaleImage = function (factor, image) {
   image.scale(factor, factor);
   return exports.register(image);
 };
+
+exports.stringAppend = function (first, second) {
+  evalUtils.ensureType(first, EvalString);
+  evalUtils.ensureType(second, EvalString);
+
+  var str = new EvalString(first.getValue() + second.getValue());
+  return exports.register(str);
+};
+
+// polling for values
+exports.stringLength = function (str) {
+  evalUtils.ensureType(str, EvalString);
+  // kind of hacky. register  a string version of the number, so that if this
+  // is our top level block, it will be drawn, but return the number itself
+  var len = str.getValue().length;
+  exports.register(new EvalString(len.toString()));
+  return len;
+};
