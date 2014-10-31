@@ -128,10 +128,12 @@ Blockly.Blocks.procedures_defnoreturn = {
     Blockly.Procedures.mutateCallers(this.getTitleValue('NAME'),
         this.blockSpace, this.arguments_, this.paramIds_);
   },
-  dispose: function() {
-    // Dispose of any callers.
-    var name = this.getTitleValue('NAME');
-    Blockly.Procedures.disposeCallers(name, this.blockSpace);
+  dispose: function(healStack, animate, opt_keepCallers) {
+    if (!opt_keepCallers) {
+      // Dispose of any callers.
+      var name = this.getTitleValue('NAME');
+      Blockly.Procedures.disposeCallers(name, this.blockSpace);
+    }
     // Call parent's destructor.
     Blockly.Block.prototype.dispose.apply(this, arguments);
   },
