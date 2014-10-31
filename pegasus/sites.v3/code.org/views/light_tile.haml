@@ -1,8 +1,17 @@
-%a{:href=>"#{url}"}
+%a{:href=>"#{url}", :target=>"#{target}"}
   %div.outerblock{:style=>"float: left;"}
-    %div.innerblock{:style=>"float: left; background-color: lightgrey"}
-      %img{:src=>"#{img_src}", :style=>"style=width:100%; height:120px"}
+    %div.innerblock{:style=>"float: left; background-color: rgba(88, 103, 113, 0.1)"}
+      %img{:src=>"#{img_src}", :style=>"width: 100%; height: 150px"}
       %div.title
         #{title}
       %div.body
         #{text}
+
+:css
+  .title {
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    color: rgb(88, 103, 113);
+  }
