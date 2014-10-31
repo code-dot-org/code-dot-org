@@ -1,6 +1,7 @@
 get '/:short_code' do |short_code|
   only_for ['code.org', 'csedweek.org', 'hourofcode.com', 'uk.code.org']
-  pass unless tutorial = DB[:tutorials].where(short_code:short_code).first
+  pass if request.site == 'hourofcode.com' && ['ca'].include?(short_code)
+  pass unless tutorial = DB[:tutorials].where(short_code:short_code).first 
   launch_tutorial(tutorial)
 end
 
