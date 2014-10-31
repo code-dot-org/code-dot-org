@@ -181,6 +181,29 @@ exports.install = function(blockly, blockInstallOptions) {
     ]
   });
 
+  // string manipulation
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'string_append',
+    blockTitle: msg.stringAppendBlockTitle(),
+    apiName: 'stringAppend',
+    returnType: 'string',
+    args: [
+      { name: 'FIRST', type: 'string' },
+      { name: 'SECOND', type: 'string' }
+    ]
+  });
+
+  // polling for values
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'string_length',
+    blockTitle: msg.stringLengthBlockTitle(),
+    apiName: 'stringLength',
+    returnType: 'Number',
+    args: [
+      { name: 'STR', type: 'string' }
+    ]
+  });
+
   installStyle(blockly, generator, gensym);
 };
 
@@ -190,10 +213,11 @@ function installFunctionalBlock (blockly, generator, gensym, options) {
   var blockTitle = options.blockTitle;
   var apiName = options.apiName;
   var args = options.args;
+  var returnType = options.returnType || 'image';
 
   blockly.Blocks[blockName] = {
     init: function () {
-      initTitledFunctionalBlock(this, blockTitle, 'image', args);
+      initTitledFunctionalBlock(this, blockTitle, returnType, args);
     }
   };
 

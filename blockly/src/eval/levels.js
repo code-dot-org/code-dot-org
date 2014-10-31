@@ -31,7 +31,10 @@ module.exports = {
       blockUtils.blockOfType('underlay') +
       blockUtils.blockOfType('rotate') +
       blockUtils.blockOfType('scale') +
-      blockUtils.blockOfType('functional_text')),
+      blockUtils.blockOfType('functional_text') +
+      blockUtils.blockOfType('string_append') +
+      blockUtils.blockOfType('string_length')
+    ),
     startBlocks: blockUtils.mathBlockXml('functional_star', {
       'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'black' } ),
       'STYLE': blockUtils.mathBlockXml('functional_string', null, { VAL: 'solid' }),
