@@ -1289,6 +1289,7 @@ a.download-video {
   float: left;
   width: 25%;
 }
+
 #blockly-frame {
   width: 70%;
   height: 800px;
@@ -1305,6 +1306,12 @@ a.download-video {
   }
 }
 .edit_level {
+  .field {
+    margin-bottom: 10px;
+    border-top: 2px solid #eee;
+    padding-top: 10px;
+  }
+
   #toolbox_name {
     display: block;
   }
