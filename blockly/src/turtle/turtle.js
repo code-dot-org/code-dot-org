@@ -74,6 +74,11 @@ Turtle.avatarImage = new Image();
 Turtle.numberAvatarHeadings = undefined;
 
 /**
+ * The avatar animation decoration image
+ */
+Turtle.decorationAnimationImage = new Image();
+
+/**
  * Drawing with a pattern
  */
 
@@ -118,6 +123,8 @@ Turtle.init = function(config) {
   {
     Turtle.AVATAR_WIDTH = 85;
     Turtle.AVATAR_HEIGHT = 100;
+    Turtle.DECORATIONANIMATION_WIDTH = 85;
+    Turtle.DECORATIONANIMATION_HEIGHT = 85;
   }
   else
   {
@@ -180,6 +187,8 @@ Turtle.init = function(config) {
       Turtle.drawBlocksOnCanvas(level.predraw_blocks, Turtle.ctxPredraw);
       Turtle.isPredrawing_ = false;
     }
+
+    Turtle.loadDecorationAnimation();
 
     // pre-load image for line pattern block. Creating the image object and setting source doesn't seem to be
     // enough in this case, so we're actually creating and reusing the object within the document body.
@@ -303,9 +312,20 @@ Turtle.loadTurtle = function() {
   Turtle.avatarImage.width = Turtle.AVATAR_WIDTH;
 };
 
+/**
+ * Initial the turtle animation deocration on load.
+ */
+Turtle.loadDecorationAnimation = function() {
+  if (skin.id == "elsa")
+  {
+    Turtle.decorationAnimationImage.src = skin.decorationAnimation;
+    Turtle.decorationAnimationImage.height = Turtle.DECORATIONANIMATION_HEIGHT;
+    Turtle.decorationAnimationImage.width = Turtle.DECORATIONANIMATION_WIDTH;
+  }
+};
+
 var turtleNumFrames;
 var turtleFrame = 0;
-var turtleFrameSlowdown = 5;
 
 
 /**
@@ -337,9 +357,34 @@ Turtle.drawTurtle = function() {
   var destY = Turtle.y - destHeight + 7;
 
   Turtle.ctxDisplay.drawImage(Turtle.avatarImage, sourceX, sourceY,
-                              sourceWidth, sourceHeight, destX, destY,
+                              sourceWidth, sourceHeight, Math.round(destX), Math.round(destY),
                               destWidth, destHeight);
 };
+
+var turtleNumFrames = 19;
+var turtleFrame = 0;
+
+Turtle.drawDecorationAnimation = function() {
+  if (skin.id == "elsa") {
+    var index = (turtleFrame + 10) % turtleNumFrames;
+    var sourceX = Turtle.decorationAnimationImage.width * index;
+    var sourceY = 0;
+    var sourceWidth = Turtle.decorationAnimationImage.width;
+    var sourceHeight = Turtle.decorationAnimationImage.height;
+    var destWidth = sourceWidth;
+    var destHeight = sourceHeight;
+    var destX = Turtle.x - destWidth / 2 - 20;
+    var destY = Turtle.y - destHeight / 2 - 90;
+
+    Turtle.ctxDisplay.drawImage(Turtle.decorationAnimationImage, sourceX, sourceY,
+                                sourceWidth, sourceHeight, destX, destY,
+                                destWidth, destHeight);
+
+    //turtleFrame = (turtleFrame + 1) % turtleNumFrames;
+  }
+
+};
+
 
 /**
  * Reset the turtle to the start position, clear the display, and kill any
@@ -442,6 +487,7 @@ Turtle.display = function() {
   // Draw the turtle.
   if (Turtle.visible) {
     Turtle.drawTurtle();
+    Turtle.drawDecorationAnimation();
   }
 };
 
@@ -530,7 +576,7 @@ Turtle.execute = function() {
 };
 
 // Divide each jump into substeps so that we can animate every movement.
-var jumpDistance = 10;
+var jumpDistance = 5;
 var jumpDistanceCovered = 0;
 
 /**
@@ -623,14 +669,18 @@ Turtle.doSmoothAnimate = function(options, distance)
   if (options && options.smoothAnimate)
   {
     var fullDistance = distance;
-    distance /= jumpDistance;
-    jumpDistanceCovered += distance;
+    //distance /= jumpDistance;
+
     if (fullDistance < 0) {
       // Going backward.
+      distance = -jumpDistance;
+      jumpDistanceCovered -= jumpDistance;
       if (jumpDistanceCovered > fullDistance)
         tupleDone = false;
     } else {
       // Going foward.
+      distance = jumpDistance;
+      jumpDistanceCovered += jumpDistance;
       if (jumpDistanceCovered < fullDistance)
         tupleDone = false;
     }
