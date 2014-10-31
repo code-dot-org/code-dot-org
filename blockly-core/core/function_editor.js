@@ -34,12 +34,13 @@ Blockly.FunctionEditor.prototype.created_ = false;
 Blockly.FunctionEditor.prototype.paramToolboxBlocks = [];
 
 Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
-  this.functionDefinitionBlock = Blockly.mainBlockSpace.findFunction(functionName);
-  if (!this.functionDefinitionBlock) {
+  var targetFunctionDefinitionBlock = Blockly.mainBlockSpace.findFunction(functionName);
+  if (!targetFunctionDefinitionBlock) {
     throw new Error("Can't find definition block to edit");
   }
 
-  this.functionDefinitionBlock.setRenderBlockSpace(Blockly.modalBlockSpaceEditor.blockSpace);
+  this.functionDefinitionBlock = Blockly.Xml.domToBlock_(Blockly.modalWorkspace, Blockly.Xml.blockToDom_(this.functionDefinitionBlock));
+  targetFunctionDefinitionBlock.dispose(false, false);
   this.functionDefinitionBlock.moveTo(FRAME_MARGIN_SIDE, FRAME_MARGIN_TOP);
   this.functionDefinitionBlock.movable_ = false;
 
@@ -137,9 +138,9 @@ Blockly.FunctionEditor.prototype.ensureCreated_ = function() {
 
 Blockly.FunctionEditor.prototype.hide = function() {
   Blockly.activeWorkspace = Blockly.mainBlockSpace;
-  this.functionDefinitionBlock.setRenderBlockSpace(Blockly.mainBlockSpace);
-  Blockly.modalBlockSpaceEditor.blockSpace.removeTopBlock(this.functionDefinitionBlock);
   this.functionDefinitionBlock.setUserVisible(false);
+  Blockly.Xml.domToBlock_(Blockly.mainBlockSpace, Blockly.Xml.blockToDom_(this.functionDefinitionBlock));
+  this.functionDefinitionBlock.dispose(false, false);
 
   goog.style.showElement(this.container_, false);
   goog.style.showElement(this.modalBackground_, false);
