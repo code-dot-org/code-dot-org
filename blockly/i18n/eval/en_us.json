@@ -8,6 +8,8 @@
   "scaleImageBlockTitle": "scale (factor)",
   "squareBlockTitle": "square (size, style, color)",
   "starBlockTitle": "star (radius, style, color)",
+  "stringAppendBlockTitle": "string-append (first, second)",
+  "stringLengthBlockTitle": "string-length (string)",
   "textBlockTitle": "text (string, size, color)",
   "triangleBlockTitle": "triangle (size, style, color)",
   "underlayBlockTitle": "underlay (bottom, top)",
