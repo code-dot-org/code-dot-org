@@ -15,10 +15,10 @@ nav: events_nav
 
 %script{src:'/js/event-list.js'}
 
-%h1 Classroom Hour of Code events
+%h1= hoc_s(:events_classroom_title)
 
 %ul
   -by_state.each_pair do |state, events|
     -unless state.nil_or_empty?
       %li{class: "hoc-event-state"}
-        %a{href: "#"}= events.count > 1 ? "#{state} (#{events.count} events)" : "#{state} (#{events.count} event)"
+        %a{href: "#"}= events.count > 1 ? "#{state} (#{events.count} #{hoc_s(:events)})" : "#{state} (#{events.count} #{hoc_s(:event)})"
