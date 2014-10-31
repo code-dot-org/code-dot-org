@@ -13,8 +13,7 @@
     "is_k1": "true",
     "skip_instructions_popup": "false",
     "ideal": "3",
-    "video_key": "C1_maze_intro_sequencing",
-    "maze_data": null
+    "video_key": "C1_maze_intro_sequencing"
   }
 }]]></config>
   <blocks>

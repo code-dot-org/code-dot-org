@@ -1,0 +1,11 @@
+title 'Hour of Code'
+description "Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!"
+description_short "Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!"
+hidden 'false'
+
+stage 'Maze'
+level 'scrat 16'
+level 'scrat 17'
+level 'scrat 18'
+level 'scrat 19'
+level 'scrat 20'

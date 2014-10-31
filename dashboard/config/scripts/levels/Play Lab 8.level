@@ -23,7 +23,6 @@
       "downButton",
       "upButton"
     ],
-    "maze_data": null,
     "first_sprite_index": "2",
     "timeout_failure_tick": "600",
     "ideal": "16",

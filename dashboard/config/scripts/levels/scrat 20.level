@@ -1,0 +1,70 @@
+<Maze>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2014-10-31T18:21:15.000Z",
+  "level_num": "custom",
+  "user_id": 3,
+  "properties": {
+    "skin": "scrat",
+    "maze": "[[0,0,0,0,0,0,0,0],[1,1,1,1,1,1,1,1],[1,0,0,0,0,0,0,1],[1,0,1,1,1,1,1,1],[1,0,1,0,0,0,0,0],[1,0,1,0,3,1,1,1],[1,0,1,0,0,0,0,1],[2,0,1,1,1,1,1,1]]",
+    "instructions": "Can you add just 3 blocks to help me solve a more complex maze? If you do it right, I can walk any curvy path no matter the length. Hurry! The ice is melting!",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "ideal": "7",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "start_direction": "0",
+    "step_mode": "0",
+    "step_speed": "2",
+    "maze_data": null
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_forever" deletable="false" editable="false">
+              <statement name="DO">
+                <block type="maze_ifElse" deletable="false" editable="false">
+                  <title name="DIR">isPathForward</title>
+                  <statement name="ELSE">
+                    <block type="maze_ifElse" deletable="false" editable="false">
+                      <title name="DIR">isPathRight</title>
+                    </block>
+                  </statement>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward"/>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="maze_forever"/>
+        <block type="maze_ifElse">
+          <title name="DIR">isPathForward</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="maze_moveForward"/>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+      </xml>
+    </required_blocks>
+  </blocks>
+</Maze>
