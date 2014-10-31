@@ -4,7 +4,12 @@
   = f.number_field :slider_speed, :step => 0.1
 .field
   = f.label :free_play, "Free Play"
+  %p Free Play levels are not checked for correctness (any solution is accepted), can be shared, and can be saved to the public and private gallery
   = boolean_check_box f, :free_play
+.field
+  = f.label :impressive, "Impressive"
+  %p Impressive levels can be shared and are automatically saved to the private gallery
+  = boolean_check_box f, :impressive
 .field
   = f.label :start_direction, 'Start Direction (in degrees)'
   = f.number_field :start_direction, :in => 0...360, :value => @level.start_direction
