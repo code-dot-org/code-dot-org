@@ -1939,6 +1939,24 @@ exports.scaleImage = function (factor, image) {
   return exports.register(image);
 };
 
+exports.stringAppend = function (first, second) {
+  evalUtils.ensureType(first, EvalString);
+  evalUtils.ensureType(second, EvalString);
+
+  var str = new EvalString(first.getValue() + second.getValue());
+  return exports.register(str);
+};
+
+// polling for values
+exports.stringLength = function (str) {
+  evalUtils.ensureType(str, EvalString);
+  // kind of hacky. register  a string version of the number, so that if this
+  // is our top level block, it will be drawn, but return the number itself
+  var len = str.getValue().length;
+  exports.register(new EvalString(len.toString()));
+  return len;
+};
+
 },{"./evalCircle":13,"./evalEllipse":14,"./evalMulti":15,"./evalRect":17,"./evalStar":18,"./evalString":19,"./evalText":20,"./evalTriangle":21,"./evalUtils":22}],10:[function(require,module,exports){
 /**
  * Blockly Demo: Eval Graphics
@@ -2123,6 +2141,29 @@ exports.install = function(blockly, blockInstallOptions) {
     ]
   });
 
+  // string manipulation
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'string_append',
+    blockTitle: msg.stringAppendBlockTitle(),
+    apiName: 'stringAppend',
+    returnType: 'string',
+    args: [
+      { name: 'FIRST', type: 'string' },
+      { name: 'SECOND', type: 'string' }
+    ]
+  });
+
+  // polling for values
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'string_length',
+    blockTitle: msg.stringLengthBlockTitle(),
+    apiName: 'stringLength',
+    returnType: 'Number',
+    args: [
+      { name: 'STR', type: 'string' }
+    ]
+  });
+
   installStyle(blockly, generator, gensym);
 };
 
@@ -2132,10 +2173,11 @@ function installFunctionalBlock (blockly, generator, gensym, options) {
   var blockTitle = options.blockTitle;
   var apiName = options.apiName;
   var args = options.args;
+  var returnType = options.returnType || 'image';
 
   blockly.Blocks[blockName] = {
     init: function () {
-      initTitledFunctionalBlock(this, blockTitle, 'image', args);
+      initTitledFunctionalBlock(this, blockTitle, returnType, args);
     }
   };
 
@@ -2954,7 +2996,10 @@ module.exports = {
       blockUtils.blockOfType('underlay') +
       blockUtils.blockOfType('rotate') +
       blockUtils.blockOfType('scale') +
-      blockUtils.blockOfType('functional_text')),
+      blockUtils.blockOfType('functional_text') +
+      blockUtils.blockOfType('string_append') +
+      blockUtils.blockOfType('string_length')
+    ),
     startBlocks: blockUtils.mathBlockXml('functional_star', {
       'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'black' } ),
       'STYLE': blockUtils.mathBlockXml('functional_string', null, { VAL: 'solid' }),
@@ -8335,6 +8380,10 @@ exports.scaleImageBlockTitle = function(d){return "scale (factor)"};
 exports.squareBlockTitle = function(d){return "square (size, style, color)"};
 
 exports.starBlockTitle = function(d){return "star (radius, style, color)"};
+
+exports.stringAppendBlockTitle = function(d){return "string-append (first, second)"};
+
+exports.stringLengthBlockTitle = function(d){return "string-length (string)"};
 
 exports.textBlockTitle = function(d){return "text (string, size, color)"};
 
