@@ -1,0 +1,38 @@
+---
+title: All Hour of Code events
+layout: wide
+nav: events_nav
+---
+-SOLR = Solr::Server.new(host:CDO.solr_server)
+
+-by_country = {}
+-by_state = {}
+
+-events = SOLR.query(q:"*:*", fq:["kind_s:HocSignup2014", "location_country_s:[* TO *]", "organization_name_s:[* TO *]"], sort:'location_country_s asc, location_state_s asc', rows:1000)
+-events.each do |event|
+  -country = event['location_country_s'].to_s
+  -by_country[country] = [] unless by_country.has_key?(country)
+  -by_country[country] << event
+
+  -if country == 'United States'
+    -state = event['location_state_s'].to_s
+    -by_state[state] = [] unless by_state.has_key?(state)
+    -by_state[state] << event
+
+%script{src:'/js/event-list.js'}
+
+%h1 All Hour of Code events
+
+%ul
+  %li{class: "hoc-event-country"}
+    %a{href: "#"}= "United States (#{by_country['United States'].count} events)"
+    %ul{style: "margin-top: 0; margin-bottom: 0;"}
+      -by_state.each_pair do |state, events|
+        -unless state.nil_or_empty?
+          %li{class: "hoc-event-state"}
+            %a{href: "#"}= events.count > 1 ? "#{state} (#{events.count} events)" : "#{state} (#{events.count} event)"
+%ul
+  -by_country.each_pair do |country, events|
+    -if country != 'United States'
+      %li{class: "hoc-event-country"}
+        %a{href: "#"}= events.count > 1 ? "#{country} (#{events.count} events)" : "#{country} (#{events.count} event)"

@@ -1,55 +1,49 @@
----
-title: Σας ευχαριστούμε για την εγγραφή σας! 
-layout: wide
----
+<% facebook = {:u=>"http://#{request.host}/us"}
+                      twitter = {:url=>"http://hourofcode.com", :related=>"codeorg", :hashtags=>"", :text=>hoc_s(:twitter_default_text)}
+                      twitter[:hashtags] = "HourOfCode" unless hoc_s(:twitter_default_text).include? "#HourOfCode" %># Ευχαριστούμε που γράφτηκες για να πραγματοποιήσεις μια Ώρα του Κώδικα!
 
-<%
-  facebook = {:u=>"http://#{request.host}/us"}
-
-  twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
-  twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
-%>
-
-# Ευχαριστούμε που γράφτηκες για να πραγματοποιήσεις μια Ώρα του Κώδικα!
-
-**ΚΑΘΕ** διοργανωτής μιας Ώρας του Κώδικα θα λάβει 10 GB χώρο στο Dropbox ή 10$ μονάδες Skype σαν ευχαριστήριο δώρο. [Λεπτομέρειες](/prizes)
+**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](<%= hoc_uri('/prizes') %>)
 
 <% if @country == 'us' %>
 
-Βοηθείστε [όλο το σχολείο σας](/us/prizes) να συμμετάσχει και να έχει την ευκαρία να διεκδικήσει μεγάλα βραβεία.
+Get your [whole school to participate](<%= hoc_uri('/prizes') %>) for a chance for big prizes for your entire school.
 
 <% end %>
 
 ## 1. Διάδωσέ το
 
-Πες στους φίλους σου για την Ώρα του Κώδικα #HourOfCode.
+Πες στους φίλους σου για την Ώρα του Κώδικα (#HourOfCode).
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
 <% if @country == 'us' %>
 
-## 2. Ζήτησε από το σχολείο σου να προσφέρει Μια Ώρα Κώδικα
+## 2. Ask your whole school to offer an Hour of Code
 
-[Στείλτε αυτό το Ηλεκτρονικό Μήνυμα](/resources#email) ή [δώστε αυτό το φυλλάδιο στο Διευθυντή σας](/files/schools-handout.pdf). Από τη στιγμή που θα εγγραφείτε, το σχολείο σας [μπορεί να διεκδικήσει τεχνολογικό εξοπλισμό αξίας 10000$ ](/prizes) και να προκαλέσει και άλλα σχολεία της περιοχής να συμμετάσχουν και να διεκδικήσουν.
+[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](<%= hoc_uri('/files/schools-handout.pdf') %>). Once your school is on board, [enter to win $10,000 worth of technology for your school](/prizes) and challenge other schools in your area to get on board.
 
 <% else %>
 
-## 2. Ζήτησε από το σχολείο σου να προσφέρει Μια Ώρα Κώδικα
+## 2. Ask your whole school to offer an Hour of Code
 
-[Στείλετε αυτό το μήνυμα](/resources#email) ή δώστε [αυτό το φυλλάδιο](/files/schools-handout.pdf) στο διευθυντή σας.
+[Send this email](<%= hoc_uri('/resources#email') %>) or give [this handout](<%= hoc_uri('/files/schools-handout.pdf') %>) to your principal.
 
 <% end %>
 
-## 3. Ζήτα το από τον εργοδότη σου
+## 3.Κάντε μια γενναιόδωρη δωρεά 
 
-[Στείλε αυτό το email](/resources#email) στον προιστάμενό σου. ή [δώστου αυτό το φυλλάδιο](/resources/hoc-one-pager.pdf).
+[Donate to our crowdfunding campaign.](http://<%= codeorg_url() %>/donate) To teach 100 million children, we need your support. We just launched what could be the [largest education crowdfunding campaign](http://<%= codeorg_url() %>/donate) in history. Every dollar will be matched by major Code.org [donors](http://<%= codeorg_url() %>/about/donors), doubling your impact.
 
-## 4. Προώθησε την Ώρα του Κώδικα στην περιοχή σου
+## Ζήτα από τον εργοδότη σου να εμπλακεί 
 
-Φτιάξε ένα τμήμα για — ένα σώμα προσκόπων, μια ενορία, ένα πανεπιστήμιο, μια ενώση εργαζομένων. Ή κάνε μια Ώρα του Κώδικα για τη γειτονιά σου.
+[Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](<%= hoc_uri('/resources/hoc-one-pager.pdf') %>).
 
-## 5. Ζήτα από ένα τοπικό άρχοντα να υποστηρίξει μια Ώρα του Κώδικα
+## Προωθήστε την ώρα του κώδικα μέσα στην κοινωνία σας
 
-[Στείλετε αυτό το μήνυμα](/resources#politicians) στο δήμαρχο, το Δημοτικό Συμβούλιο, ή τη Σχολική Επιτροπή. Ή [ δώστους αυτό το φυλλάδιο](/resources/hoc-one-pager.pdf) και να καλέσέ τους να επισκεφτούν το σχολείο σου.
+Φτιάξε ένα τμήμα για — ένα σώμα προσκόπων, μια ενορία, ένα πανεπιστήμιο, μια ενώση εργαζομένων. Ή κάνε μια Ώρα του Κώδικα για το τετράγωνο της γειτονιάς σου.
+
+## 5. Ζήτα από ένα τοπικό άρχοντα να υποστηρίξει την Ώρα του Κώδικα
+
+[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board. Or [give them this handout](<%= hoc_uri('/resources/hoc-one-pager.pdf') %>) and invite them to visit your school.
 
 <%= view 'popup_window.js' %>

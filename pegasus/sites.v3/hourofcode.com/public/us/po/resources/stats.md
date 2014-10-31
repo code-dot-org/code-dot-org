@@ -1,8 +1,4 @@
-* * *
 
-title: Resources layout: wide
-
-* * *
 
 # Como atrair os media para o teu evento da Hora de Código
 

@@ -152,6 +152,7 @@ th a:link, th a:visited, th a:hover, th a:active {
     text-align: center;
 }
 
+#number { line-height: 90px !important; }
 
 @page  
 { 

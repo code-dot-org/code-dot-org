@@ -1,7 +1,4 @@
----
-title: 感谢
-layout: wide
----
+
 
 # 感谢
 

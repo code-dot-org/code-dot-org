@@ -88,7 +88,7 @@ class Documents < Sinatra::Base
 
     Poste::Message.import_templates
 
-    vary_uris = ['/', '/learn', '/congrats', '/language_test', 
+    vary_uris = ['/', '/learn', '/learn/beyond', '/congrats', '/language_test', 
                  '/teacher-dashboard', 
                  '/teacher-dashboard/landing',
                  '/teacher-dashboard/nav',
@@ -178,9 +178,10 @@ class Documents < Sinatra::Base
   # Map /dashboardapi/ to the local dashboard instance.
   if rack_env?(:development)
     get_head_or_post %r{^\/dashboardapi\/?} do
-      env = request.env.merge('PATH_INFO'=>request.path_info.gsub('/dashboardapi/', '/api/'))
+      env = request.env.merge('PATH_INFO'=>request.path_info.sub(/^\/dashboardapi/, '/api'))
+
       document = Pegasus::Proxy.new(server:canonical_hostname('learn.code.org') + ":#{CDO.dashboard_port}", host:'learn.code.org').call(env)
-      pass if document.nil?
+      pass unless document
 
       status(document.status)
       headers(document.headers)
