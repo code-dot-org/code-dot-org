@@ -63,7 +63,7 @@ Calc.init = function(config) {
   Calc.shownFeedback_ = false;
 
   config.grayOutUndeletableBlocks = true;
-  config.insertWhenRun = false;
+  config.forceInsertTopBlock = 'functional_compute';
 
   config.html = page({
     assetUrl: BlocklyApps.assetUrl,
@@ -207,7 +207,7 @@ Calc.execute = function() {
   Calc.message = undefined;
 
   // todo (brent) perhaps try to share user vs. expected generation better
-  var code = Blockly.Generator.workspaceToCode('JavaScript');
+  var code = Blockly.Generator.workspaceToCode('JavaScript', 'functional_compute');
   evalCode(code);
 
   if (!Calc.lastExpression) {
@@ -220,17 +220,15 @@ Calc.execute = function() {
   Calc.expressions.user.applyExpectation(Calc.expressions.target);
 
   Calc.result = !Calc.expressions.user.failedExpectation(true);
+  Calc.testResults = BlocklyApps.getTestResults(Calc.result);
 
-  if (Calc.result === true) {
-    Calc.testResult = TestResults.ALL_PASS;
-  } else {
-    Calc.testResult = TestResults.LEVEL_INCOMPLETE_FAIL;
-    // equivalence means the expressions are the same if we ignore the ordering
-    // of inputs
-    if (Calc.expressions.user.isEquivalent(Calc.expressions.target)) {
-      Calc.testResult = TestResults.APP_SPECIFIC_FAIL;
-      Calc.message = calcMsg.equivalentExpression();
-    }
+
+  // equivalence means the expressions are the same if we ignore the ordering
+  // of inputs
+  // todo - check for particular testResult instead of result
+  if (!Calc.result && Calc.expressions.user.isEquivalent(Calc.expressions.target)) {
+    Calc.testResults = TestResults.APP_SPECIFIC_FAIL;
+    Calc.message = calcMsg.equivalentExpression();
   }
 
   Calc.drawExpressions();
@@ -243,7 +241,7 @@ Calc.execute = function() {
     level: level.id,
     builder: level.builder,
     result: Calc.result,
-    testResult: Calc.testResult,
+    testResult: Calc.testResults,
     program: encodeURIComponent(textBlocks),
     onComplete: onReportComplete
   };
@@ -266,6 +264,7 @@ Calc.step = function (ignoreFailures) {
     return;
   }
 
+  // If we've fully collapsed our expression, display feedback
   if (!Calc.expressions.user.isOperation()) {
     displayFeedback();
     return;
@@ -371,12 +370,14 @@ function drawSvgExpression(elementId, expr, styleMarks) {
 var displayFeedback = function(response) {
   if (!Calc.expressions.user.isOperation() && !Calc.shownFeedback_) {
     Calc.shownFeedback_ = true;
+    // override extra top blocks message
+    level.extraTopBlocks = calcMsg.extraTopBlocks();
     var options = {
       app: 'Calc',
       skin: skin.id,
       response: response,
       level: level,
-      feedbackType: Calc.testResult,
+      feedbackType: Calc.testResults,
     };
     if (Calc.message) {
       options.message = Calc.message;

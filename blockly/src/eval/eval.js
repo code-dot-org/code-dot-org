@@ -56,7 +56,7 @@ Eval.init = function(config) {
   Eval.shownFeedback_ = false;
 
   config.grayOutUndeletableBlocks = true;
-  config.insertWhenRun = false;
+  config.forceInsertTopBlock = null;
 
   config.html = page({
     assetUrl: BlocklyApps.assetUrl,
