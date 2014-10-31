@@ -12,20 +12,27 @@ angular: teacherDashboard
 
 %h1
   Teacher Workspace
-%div{:style=>"margin-right: 26px; display: inline-block"}
-  = view :light_tile, url:"http://studio.code.org", img_src:"http://code.org/images/logo_tall_hoc.jpg", title:"Your Course Progress", text:""
-%div{:style=>"margin-right: 26px; display: inline-block"}
-  = view :light_tile, url:"www.google.com", img_src:"http://code.org/images/logo_tall_elementary.jpg", title:"Lesson Plans and Resources", text:""
-%div{:style=>"margin-right: 26px; display: inline-block"}
-  = view :light_tile, url:"/teacher-dashboard#/sections", img_src:"/images/dashboard_teacher_section.png", title:"Student Accounts and Progress", text:""
-%div{:style=>"display: inline-block"}
-  = view :light_tile, url:"www.google.com", img_src:"http://code.org/images/logo_tall_elementary.jpg", title:"Teaching Tips", text:""
-%div{:style=>"margin-right: 26px; margin-top: 26px; display: inline-block"}
-  = view :light_tile, url:"/professional-development-workshops", img_src:"http://code.org/images/logo_tall_elementary.jpg", title:"PD Workshops", text:""
-%div{:style=>"margin-right: 26px; margin-top: 26px; display: inline-block"}
-  = view :light_tile, url:"http://support.code.org/hc/communities/public/topics", img_src:"http://code.org/images/logo_tall_elementary.jpg", title:"Community", text:""
+%div.tile
+  = view :light_tile, url:"http://studio.code.org", target:"", img_src:"/images/logo_tall_hoc.jpg", title:"Your Course Progress", text:""
+%div.tile
+  = view :light_tile, url:"www.google.com", img_src:"/images/logo_graph_paper.png", target:"", title:"Lesson Plans and Resources", text:""
+%div.tile{:style=>"margin-right: 0px"}
+  = view :light_tile, url:"/teacher-dashboard#/sections", target:"", img_src:"/images/dashboard_teacher_progress.png", title:"Student Accounts and Progress", text:""
+%div.tile{:style=>"margin-top: 26px;"}
+  = view :light_tile, url:"www.google.com", target:"", img_src:"/images/logo_tall_elementary.jpg", title:"Teaching Tips", text:""
+%div.tile{:style=>"margin-top: 26px"}
+  = view :light_tile, url:"/professional-development-workshops", target:"_blank", img_src:"/images/logo_us_map.png", title:"PD Workshops", text:""
+%div.tile{:style=>"margin-top: 26px; margin-right: 0px"}
+  = view :light_tile, url:"http://support.code.org/hc/communities/public/topics", target:"_blank", img_src:"/images/logo_community.jpg", title:"Community", text:""
 
 %div{'ng-view' => ''}
+
+:css
+  .tile {
+    margin-right: 26px;
+    display: inline-block;
+    width: 31.2%
+  }
 
 :javascript
   'use strict';
