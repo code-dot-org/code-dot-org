@@ -1,0 +1,52 @@
+<Maze>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2014-10-31T18:14:56.000Z",
+  "level_num": "custom",
+  "user_id": 3,
+  "properties": {
+    "skin": "scrat",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,1,4,1,1,1,0,0],[0,0,1,0,0,0,0,0],[3,1,1,1,1,1,1,0],[0,1,0,1,0,0,1,0],[1,1,1,4,1,0,1,0],[0,1,0,1,0,2,1,0],[0,0,0,0,0,0,0,0]]",
+    "instructions": "The \"If-else\" blocks checks a condition, and then does one thing OR another. To get me to the acorn try to use this new block.",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "ideal": "5",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "start_direction": "1",
+    "step_mode": "0",
+    "video_key": "if_else",
+    "step_speed": "2",
+    "maze_data": null
+  }
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward"/>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="maze_forever"/>
+        <block type="maze_ifElse">
+          <title name="DIR">isPathForward</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="maze_forever"/>
+        <block type="maze_ifElse">
+          <title name="DIR">isPathForward</title>
+        </block>
+        <block type="maze_moveForward"/>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+      </xml>
+    </required_blocks>
+  </blocks>
+</Maze>
