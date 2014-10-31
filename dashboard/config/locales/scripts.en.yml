@@ -179,3 +179,10 @@ en:
             and patterns as you ice-skate and make a winter wonderland that you can
             then share with your friends!
           Artist: Artist
+        hourofcode:
+          Maze: Maze
+          title: Hour of Code
+          description_short: Try the basics of computer science with characters from
+            Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
+          description: Try the basics of computer science with characters from Angry
+            Birds, Plants vs. Zombies, and Scrat from Ice Age!
