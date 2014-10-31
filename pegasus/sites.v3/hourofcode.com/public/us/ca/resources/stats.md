@@ -1,19 +1,15 @@
-* * *
 
-title: Resources layout: wide
 
-* * *
+# Com atraure els mitjans de comunicació al teu esdeveniment d'Hora de Codi
 
-# How to attract media to your Hour of Code event
+## Algunes estadístiques impactants (EUA):
 
-## Some shocking statistics (USA):
+  * Hi haurà un milió més de llocs de treball de computació que estudiants en els propers 10 anys (afegint fins a 500 bilions de dòlars en sous).
+  * Més del 50 per cent de totes les ocupacions de matemàtiques i ciències creades són ocupacions de computació. 
+  * Les ocupacions informàtiques es troben entre els llocs de treball millor pagats per a nous titulats. No obstant això, menys del 3% dels estudiants universitaris es graduen amb una llicenciatura en ciències de la computació.
+  * En 26 estats, les classes de ciències informàtiques no compten com requisit per graduar-se en matemàtiques o ciències de secundària. 
+  * Menys del 20% d'estudiants de Ciències Avançades de la Computació són dones. Menys del 10% són negres o llatins.
 
-  * There will be one million more computing jobs than students over the next 10 years (adding up to $500 billion in salaries).
-  * More than 50 percent of all projected math and science occupations are in computing occupations. 
-  * Computing occupations are among the highest-paying jobs for new graduates. Yet fewer than 3% of college students graduate with a degree in computer science.
-  * In 26 states, computer science classes don’t count toward math or science high school graduation requirements. 
-  * Less than 20% of AP Computer Science students are women. Less than 10% are black or Latino.
+## Informació en versió gràfica:
 
-## Infrographic version:
-
-![image](http://code.org/images/fit-8000/Code.org_infographic.png)
+![imatge](http://code.org/images/fit-8000/Code.org_infographic.png)

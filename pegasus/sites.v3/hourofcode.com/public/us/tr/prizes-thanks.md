@@ -1,7 +1,4 @@
----
-title: Teşekkür ederiz
-layout: wide
----
+
 
 # Teşekkür ederiz
 

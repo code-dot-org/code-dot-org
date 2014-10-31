@@ -80,3 +80,17 @@ def hoc_uri(uri)
   File.join(['/', (@company or @country), @user_language, uri].select{|i| !i.nil_or_empty?})
 end
 
+def codeorg_url() 
+  if @country == 'ar'
+    return 'ar.code.org'
+  elsif @country == 'br'
+    return 'br.code.org'
+  elsif @country == 'ro' 
+    return 'ro.code.org'
+  elsif @country == 'uk' 
+    return 'uk.code.org'
+  else
+    return 'code.org'
+  end
+end
+

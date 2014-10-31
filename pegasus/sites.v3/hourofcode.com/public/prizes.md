@@ -2,16 +2,16 @@
 title: Prizes
 layout: wide
 ---
-
+<a href="/#join"><button style="float: right; margin-top: 50px">Sign up your event</button></a>
 # The Hour of Code — prizes for every organizer
 
 ## Every organizer wins a thank you gift-code
-Every educator who hosts an Hour of Code for students will receive 10 GB of Dropbox space or $10 Skype credit as a thank you gift! 
+Every educator who hosts an Hour of Code for students will receive 10 GB of Dropbox space or $10 Skype credit as a thank you gift!
 
 <% if @country == 'uk' %>
 
 ## Lucky classrooms win a video chat with a guest speaker!
-20 lucky classrooms will be invited to join a video chat to celebrate the Hour of Code during December 8-14. Your students will be able to ask questions and chat with technology-industry leaders. [Check out last year’s chats](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) with Bill Gates, Twitter founder Jack Dorsey, Susan Wojcicki of Google and Gabe Newell of Valve. 
+20 lucky classrooms will be invited to join a video chat to celebrate the Hour of Code during December 8-14. Your students will be able to ask questions and chat with technology-industry leaders. [Check out last year’s chats](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) with Bill Gates, Twitter founder Jack Dorsey, Susan Wojcicki of Google and Gabe Newell of Valve.
 
 <% end %>
 
@@ -38,7 +38,7 @@ If you’ve signed up your entire school to participate in the Hour of Code, ent
 
 ## More questions about prizes?
 
-Check out [Terms and Conditions](/prizes-terms) or visit our forum to see [FAQs](http://support.code.org) and ask your questions.
+Check out <a href="<%= hoc_uri('/prizes-terms') %>">Terms and Conditions</a> or visit our forum to see [FAQs](http://support.code.org) and ask your questions.
 
 <% if @country == 'us' %>
 
@@ -47,11 +47,11 @@ Check out [Terms and Conditions](/prizes-terms) or visit our forum to see [FAQs]
 
 ## Does your whole school have to enter to win the $10,000 in hardware?
 
-Yes. Your whole school has to participate to be eligible for the prize but only one person needs to register and submit the Hardware Prize application form [here](http://hourofcode.com/us/prizes).
+Yes. Your whole school has to participate to be eligible for the prize but only one person needs to register and submit the Hardware Prize application form <a href="<%= hoc_uri('/prizes') %>">here</a>.
 
 
 ## Does your whole school have to enter to win a the tech chat?
-Any classroom (public or private school) is eligible to win this prize. Your whole school need not apply. 
+Any classroom (public or private school) is eligible to win this prize. Your whole school need not apply.
 
 
 ## Can non-public schools win the video chat prize?
@@ -72,7 +72,7 @@ Due to a small full-time staff, Code.org is unable to handle the logistics of ad
 
 ## When is the deadline to apply for the hardware prize?
 
-To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](http://hourofcode.com/us/prizes) by November 14, 2014. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2014.
+To qualify, your entire school must register for the Hour of Code as well as complete the <a href="<%= hoc_uri('/prizes') %>">Hardware Application form</a> by November 14, 2014. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2014.
 
 
 ## When is the deadline to be eligible to win a tech chat?
@@ -81,11 +81,11 @@ To qualify, you must register your classroom for the Hour of Code by November 14
 
 ## When will I be notified if my school or classroom wins a prize?
 
-To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](http://hourofcode.com/us/prizes) by November 14, 2014. Code.org will select and notify winners via email by December 1, 2014.
+To qualify, your entire school must register for the Hour of Code as well as complete the <a href="<%= hoc_uri('/prizes') %>">Hardware Application form</a> by November 14, 2014. Code.org will select and notify winners via email by December 1, 2014.
 
 ## If my whole school can’t do the Hour of Code during Computer Science Education Week (Dec. 8-14), can I still qualify for prizes?
 Yes, just be sure to submit a logistics plan that outlines how your whole school is participating over a reasonable length of time and register for the Hour of Code by November 14th.
-
+<a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>
 <% end %>
 
 
