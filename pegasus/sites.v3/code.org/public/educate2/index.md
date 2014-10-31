@@ -7,7 +7,7 @@ nav: educate2_nav
 
 [col-33]
 
-### Start Teaching
+### Curriculum
 
 [Code Studio](http://studio.code.org/): 20 hour courses for Elementary Students
 
