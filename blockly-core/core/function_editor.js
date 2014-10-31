@@ -141,8 +141,9 @@ Blockly.FunctionEditor.prototype.ensureCreated_ = function() {
 Blockly.FunctionEditor.prototype.hide = function() {
   Blockly.activeWorkspace = Blockly.mainBlockSpace;
   this.functionDefinitionBlock.setUserVisible(false);
-  Blockly.Xml.domToBlock_(Blockly.mainBlockSpace, Blockly.Xml.blockToDom_(this.functionDefinitionBlock));
+  var dom = Blockly.Xml.blockToDom_(this.functionDefinitionBlock);
   this.functionDefinitionBlock.dispose(false, false, true);
+  Blockly.Xml.domToBlock_(Blockly.mainBlockSpace, dom);
 
   goog.style.showElement(this.container_, false);
   goog.style.showElement(this.modalBackground_, false);
