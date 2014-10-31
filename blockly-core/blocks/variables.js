@@ -117,7 +117,6 @@ Blockly.Blocks.parameters_get = {
     this.setOutput(true);
     this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
   },
-  getVars: Blockly.Blocks.variables_get.getVars,
   renameVar: function(oldName, newName) {
     // Params should only be used in the FunctionEditor but better to be safe
     if (Blockly.functionEditor) {
