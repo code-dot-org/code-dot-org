@@ -5,9 +5,8 @@
 .user-stats-block
   - levels = script_levels.group_by(&:stage_or_game)
   - levels.each_pair do |stage_or_game, sl_group|
-    - color = '#eee' # cycle '#ddd', '#d5d5d5'
     - should_show_lesson_plan = script.has_lesson_plan? && current_user && current_user.teacher?
-    .game-group{style:"background-color: #{color}"}
+    .game-group
       .stage
         %span
           = stage_title(script, stage_or_game)
@@ -39,15 +38,51 @@
                 - else 
                   %span.puzzle-number
                     =sl.level_display_text
-
-            - if false && current_user.try(:admin?)
-              - if can? :edit, sl.level
-                = link_to(t('crud.edit'), edit_level_path(sl.level), style: 'display: block; width: 30px;', title: sl.level.name)
-              - else
-                %span{style: 'display: block; width: 30px;'} &nbsp;
-
+  :scss
+    .key {
+      margin: 10px 0;
+      float: left;
+      padding: 10px;
+      background-color: #eee;
+      dl {
+        margin: 0;
+        float: left;
+      }
+      dd, dt {
+        float: left;
+        height: 36px;
+      }
+      dt { margin-right: 5px; }
+      dd {
+        line-height: 36px;
+        margin-right: 30px;
+      }
+    }
+  .key
+    %dl
+      %dt
+        %span.puzzle_outer_level
+          %a.level_link{ href: "", class: "not_tried", onclick: 'return false;'}
+            %span.puzzle-number
+              1
+      %dd
+        not done
+      %dt
+        %span.puzzle_outer_level
+          %a.level_link{ href: "", class: "passed", onclick: 'return false;'}
+            = check_mark_html
+      %dd
+        done
+      %dt
+        %span.puzzle_outer_level
+          %a.level_link{ href: "", class: "perfect", onclick: 'return false'}
+            = check_mark_html
+      %dd
+        done, perfect
 -if script.trophies?
   %div{style:"clear:both"}
   #trophies
     =render partial: 'shared/concept_trophy_block', locals: { concept_progress: concept_progress, user: user, added_style: 'padding:10px;' }
+
+
 
