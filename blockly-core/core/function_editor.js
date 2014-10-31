@@ -41,6 +41,7 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
 
   this.functionDefinitionBlock = Blockly.Xml.domToBlock_(Blockly.modalWorkspace, Blockly.Xml.blockToDom_(this.functionDefinitionBlock));
   targetFunctionDefinitionBlock.dispose(false, false);
+  this.functionDefinitionBlock.setUserVisible(true);
   this.functionDefinitionBlock.moveTo(FRAME_MARGIN_SIDE, FRAME_MARGIN_TOP);
   this.functionDefinitionBlock.movable_ = false;
 
