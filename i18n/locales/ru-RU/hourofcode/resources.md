@@ -102,11 +102,27 @@
     </p>
     
     <p>
+      <a id="social"></a>
+    </p>
+    
+    <h2>
+      Post these on social media
+    </h2>
+    
+    <p>
+      <a href="/images/social-1.jpg"><img src="/images/fit-200/social-1.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-2.jpg"><img src="/images/fit-200/social-2.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-3.jpg"><img src="/images/fit-200/social-3.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    
+    <p>
+      <a href="/images/mark.jpg"><img src="/images/fit-200/mark.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-200/susan.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-200/ashton.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-200/marissa.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-200/chris.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    
+    <p>
       <a id="sample-emails"></a>
     </p>
     
     <h2>
-      Отправляйте эти сообщения, чтобы содействовать распространению Часа Программирования
+      Send these emails to help promote the Hour of Code
     </h2>
     
     <p>
@@ -114,27 +130,27 @@
     </p>
     
     <h2>
-      Попросите вашу школу, работодателя или друзей зарегистрироваться:
+      Ask your school, employer or friends to sign up:
     </h2>
     
     <p>
-      Компьютеры везде, но сейчас меньше школ учат информатике, чем 10 лет назад. Хорошая новость: мы на пути изменений. Если вы слышали о "Часе программирования" в прошлом году, то вы, наверное, знаете, что он вошел в историю. За одну неделю 15 миллионов учеников попробовали себя в информатике!
+      Компьютеры везде, но сейчас меньше школ учат информатике, чем 10 лет назад. Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. In one week, 15 million students tried computer science!
     </p>
     
     <p>
-      Информатика была на домашних страницах Google, MSN, Yahoo! и Disney. Президент Обама, Шакира и Эштон Катчер начали "Час программирования" с видео. Более 100 партнеров собрались вместе, чтобы поддержать это движение.
+      Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
     </p>
     
     <p>
-      Давайте сделаем его ещё больше в этом году. Я прошу вас присоединиться к "Часу программирования" 2014. Пожалуйста, примите участие в событии "Час программирования" в рамках недели информатики, 8-14 декабря 2014 года.
+      This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2014. Please get involved with an Hour of Code event during Computer Science Education Week, December 8-14, 2014.
     </p>
     
     <p>
-      Распространите новость. Проведите мероприятие. Попросите местную школу зарегистрироваться. Или попробуйте "Час программирования" сами -- каждый может извлечь пользу из обучения основам.
+      Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself -- everyone can benefit from learning the basics.
     </p>
     
     <p>
-      Помогите нам достичь 100 миллионов учеников в конце года! Начать работу на http://hourofcode.com
+      Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com
     </p>
     
     <p>
@@ -142,35 +158,35 @@
     </p>
     
     <h2>
-      Пригласите СМИ посетить ваше мероприятие:
+      Invite media to attend your event:
     </h2>
     
     <p>
-      <strong>Тема:</strong> Местная школа присоединяется к миссии представить 100 ученикам информатику
+      <strong>Subject line:</strong> Local school joins mission to introduce 100m students to computer science
     </p>
     
     <p>
-      Компьютеры везде, но сейчас школы учат информатике меньше чем 10 лет назад. Девушек и меньшинств крайне мало. Хорошая новость в том, что мы собираемся изменить это.
+      Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and minorities are severely underrepresented. Good news is, we’re on our way to change this.
     </p>
     
     <p>
-      В течение одной недели в прошлом году 15 миллионов учеников попробовали себя в информатике! Информатика была на домашних страницах Google, MSN, Yahoo! и Disney. Президент Обама, Шакира и Эштон Катчер начали "Час программирования" с видео. Более 100 партнеров собрались вместе, чтобы поддержать это движение.
+      In one week last year, 15 million students tried computer science! Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
     </p>
     
     <p>
-      Теперь движение "Час программирования" стремится к 100 миллионам учеников.
+      Now the Hour of Code movement is aiming for 100 million students.
     </p>
     
     <p>
-      Вот почему каждый из [number X] ученики в [SCHOOL NAME] объединяются в крупнейшем в истории обучения: "Часе программирования", 8-14 декабря.
+      That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Dec. 8-14.
     </p>
     
     <p>
-      Я пишу, чтобы пригласить вас принять участие в нашей стартовой сборке, и чтобы увидеть, как дети начинают изучать информатику [DATE].
+      I'm writing to invite you to attend our kickoff assembly, and to see kids start the activity on [DATE].
     </p>
     
     <p>
-      Час Программирования, разработанный некоммерческой организацией Code.org (и более сотней других организаций), это утверждение того, что сегодняшнее поколение учеников готово учиться навыкам критики, чтобы добиться успеха в XXI веке. Пожалуйста, присоединяйтесь к нам.
+      The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a statement that today’s generation of students are ready to learn critical skills for 21st century success. Please join us.
     </p>
     
     <p>
@@ -186,7 +202,7 @@
     </p>
     
     <p>
-      С нетерпением жду связи.
+      I look forward to being in touch.
     </p>
     
     <p>
@@ -194,39 +210,39 @@
     </p>
     
     <h2>
-      Расскажите родителям о мероприятии в школе:
+      Tell parents about your school's event:
     </h2>
     
     <p>
-      Уважаемые родители,
+      Dear Parents,
     </p>
     
     <p>
-      Мы живём в мире, окружённом технологиями. И мы знаем, что, какую бы область обучения ни выбрали наши ученики, их способность добиваться успеха будет всё больше зависеть от понимания того, как работает технология. Но только крошечная часть учеников обучается компьютерным технологиям, даже меньше, чем десять лет назад.
+      We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly hinge on understanding how technology works. But only a tiny fraction of us are learning computer science, and less students are studying it than a decade ago.
     </p>
     
     <p>
-      Вот почему вся наша школа присоединяется к крупнейшему в истории обучения событию: Часу Программирования, в рамках Недели Образования в Информатике (с 8 по 14 декабря). В прошлом году 15 миллионов учеников попробовали свои силы в информатике за одну неделю. В этом году мы объединяем студентов со всего мира, чтобы достичь цифры в 100 миллионов студентов!
+      That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 8-14). Last year, 15 million students tried computer science in one week. This year, we're joining students worldwide to reach 100 million students!
     </p>
     
     <p>
-      Час Программирования - это утверждение, что [ИМЯ ШКОЛЫ] готова к обучению основным навыкам XXI века. Чтобы продолжить привлекать учеников к программированию, мы хотим сделать наше мероприятие "Час Программирования" огромным. Я призываю вас помочь нам: выйти на местные СМИ, делиться новостями в социальных сетях и подумать о том, чтобы принять дополнительное мероприятие в рамках Часа Программирования.
+      Our Hour of Code is a statement that [SCHOOL NAME] is ready to teach these foundational 21st century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on your social media channels and consider hosting additional Hour of Code events in the community.
     </p>
     
     <p>
-      Это шанс изменить будущее образования в [НАЗВАНИЕ ГОРОДА].
+      This is a chance to change the future of education in [TOWN/CITY NAME].
     </p>
     
     <p>
-      Заходите на http://hourofcode.com и помогите нам распространить эту новость.
+      See http://hourofcode.com for details, and help spread the word.
     </p>
     
     <p>
-      С уважением,
+      Sincerely,
     </p>
     
     <p>
-      Ваш организатор
+      Your principal
     </p>
     
     <p>
@@ -234,29 +250,29 @@
     </p>
     
     <h2>
-      Пригласите местного политика на мероприятие в вашей школе:
+      Invite a local politician to your school's event:
     </h2>
     
     <p>
-      Уважаемый [ФАМИЛИЯ МЭРА/ГУБЕРНАТОРА/ПРЕДСТАВИТЕЛЯ]:
+      Dear [Mayor/Governor/Representative/Senator LAST NAME]:
     </p>
     
     <p>
-      Знаете ли Вы, что в сегодняшней экономике количество вакансий в сфере компьютерных технологий превышает число выпускников в отношении 3 к 1? А также, что компьютерные технологии являются основой для <em>каждой</em> сферы. Тем не менее, этому не учат в 90% школ. Мы пытаемся изменить это в [НАЗВАНИЕ ШКОЛЫ].
+      Did you know that in today’s economy, computing jobs outnumber students graduating into the field by 3-to-1? And, computer science is foundational for <em>every</em> industry today. Yet 90% of schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
     </p>
     
     <p>
-      Вот почему вся наша школа присоединяется к крупнейшему в истории обучения событию: Часу Программирования, в рамках Недели Образования в Информатике (с 8 по 14 декабря). В прошлом году 15 миллионов учеников попробовали свои силы в информатике за одну неделю. В этом году мы объединяем студентов со всего мира, чтобы достичь цифры в 100 миллионов студентов!
+      That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 8-14). Last year, 15 million students tried computer science in one week. This year, we're joining students worldwide to reach 100 million students!
     </p>
     
     <p>
-      Мы приглашаем Вас принять участие в нашем мероприятии под названием "Час Программирования" и выступить на нашем стартовом собрании. Оно будет проходить [ЧИСЛО, ВРЕМЯ, МЕСТО] и даст понять, что в [Название области или города] готовы обучать навыкам критики XXI века. Мы хотим быть уверенными в том, что наши ученики находятся в передних рядах создания технологии будущего, а не потребления.
+      I'm writing to invite you to take part in our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st century skills. We want to ensure that our students are on the forefront of creating technology of the future--not just consuming it.
     </p>
     
     <p>
-      Пожалуйста, свяжитесь со мной по [НОМЕР ТЕЛЕФОНА ИЛИ АДРЕС ЭЛ. ПОЧТЫ]. С нетерпением жду Вашего ответа.
+      Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
     </p>
     
     <p>
-      С уважением, [Имя]
+      Sincerely, [NAME], [TITLE]
     </p>

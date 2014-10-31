@@ -1,73 +1,73 @@
-es:
+"es":
   data:
     script:
       name:
         test:
           "Jigsaw: Learn to drag and drop": 'Rompecabezas: Aprende a arrastrar y soltar'
-          The Maze: El Laberinto
-          Multi: Multi
-          Match: Combinar
-          Math Image: Imagen Matemática
-          title: Curso de prueba
-          description: Sólo un curso de prueba interno.
+          The Maze: "El Laberinto"
+          Multi: "Multi"
+          Match: "Combinar"
+          Math Image: "Imagen Matemática"
+          title: "Curso de prueba"
+          description: "Sólo un curso de prueba interno."
         course1:
           "Jigsaw: Learn to drag and drop": 'Rompecabezas: Aprende a arrastrar y soltar'
           "Maze: Sequence": 'Laberinto: Secuencia'
           "Maze: Debugging": 'Laberinto: Debugging'
           "Artist 1: Intro": 'Artista 1: Introducción'
-          Artists 2: Artistas 2
-          Spelling Bee: Ortografía
-          Spelling Bee not blockly: Ortografía no blocky
+          Artists 2: "Artistas 2"
+          Spelling Bee: "Ortografía"
+          Spelling Bee not blockly: "Ortografía no blocky"
           "Bee 1: Intro": 'Abeja 1: Introducción'
           "Maze 2: Loops": 'Laberinto 2: Ciclos'
           "Bee 2: Loops": 'Abeja 2: Ciclos'
           Multi & Match: 'Multi & Match'
           K-1 Flappy: K-1 Flappy
-          Flappy non blockly: Flappy no blockly
+          Flappy non blockly: "Flappy no blockly"
           title: 'Curso 1 - Para lectores tempranos'
-          Artist 2: Artista 2
-          Happy Maps: Mapas Felices
+          Artist 2: "Artista 2"
+          Happy Maps: "Mapas Felices"
           Move it, Move it: Muévelo, muévelo
           "Real-life Algorithms: Plant a Seed": 'Algoritmos de la Vida Real: Planta una Semilla'
-          Building a Foundation: Construyendo una base
-          Getting Loopy: Bucleandose
-          The Big Event: El Gran Evento
-          Going Places Safely: Ir a Sitios Seguro
-          description: El Curso 1 esta diseñado para permitir a los lectores tempranos crear programas de computadora que les ayuden a aprender a colaborar con otros, desarrollar habilidades de solución de problemas, y persistir en tareas difíciles. Para el final de este curso, los estudiantes crean su propio juego personalizado o historia que pueden compartir. Recomendado para primer grado de primaria.
+          Building a Foundation: "Construyendo una base"
+          Getting Loopy: "Bucleandose"
+          The Big Event: "El Gran Evento"
+          Going Places Safely: "Ir a Sitios Seguro"
+          description: "El Curso 1 esta diseñado para permitir a los lectores tempranos crear programas de computadora que les ayuden a aprender a colaborar con otros, desarrollar habilidades de solución de problemas, y persistir en tareas difíciles. Para el final de este curso, los estudiantes crean su propio juego personalizado o historia que pueden compartir. Recomendado para primer grado de primaria."
           "Bee: Sequence": 'Abeja: Secuencia'
           "Artist: Sequence": 'Secuencia '
           "Artist: Shapes": 'Artista: Formas'
           "Maze: Loops": Bucle
           "Bee: Loops": 'Abeja: Bucle'
           "Studio: Create a Story": 'Laboratorio de Juego: Crea un Historia'
-          description_short: El Curso 1 esta diseñado para lectores tempranos en los primeros grados de escuela primaria.
+          description_short: "El Curso 1 esta diseñado para lectores tempranos en los primeros grados de escuela primaria."
           "Artist: Loops": Bucles
         course2:
-          The Maze: El Laberinto
-          Suzi: Suzi
-          The Artist: El artista
-          Artist Debugging: Debugging del Artista
-          Bounce: Rebotar
+          The Maze: "El Laberinto"
+          Suzi: "Suzi"
+          The Artist: "El artista"
+          Artist Debugging: "Debugging del Artista"
+          Bounce: "Rebotar"
           "Studio: Create a Story": 'Laboratorio de Juego: Crea un Historia'
-          Artist Loops: Ciclos del Artista
-          Bee Conditionals: Condiciones de la Abeja
-          Flappy: Flappy
-          title: Curso 2
-          Bee Loops: Bucles de Abeja
-          Artist Functions: Funciones de artista
-          The Artist Debugging: La Depuración del Artista
-          Bee Debugging: Depuración Abeja
-          Bee Functions: Funciones Abeja
-          Maze Loops: Bucles de Laberinto
-          Graph Paper Programming: Programación en hoja milimétrica
+          Artist Loops: "Ciclos del Artista"
+          Bee Conditionals: "Condiciones de la Abeja"
+          Flappy: "Flappy"
+          title: "Curso 2"
+          Bee Loops: "Bucles de Abeja"
+          Artist Functions: "Funciones de artista"
+          The Artist Debugging: "La Depuración del Artista"
+          Bee Debugging: "Depuración Abeja"
+          Bee Functions: "Funciones Abeja"
+          Maze Loops: "Bucles de Laberinto"
+          Graph Paper Programming: "Programación en hoja milimétrica"
           "Real-life Algorithms: Paper Planes": 'Algoritmos de la vida real : Aviones de papel'
-          Getting Loopy: Bucleandose
-          Relay programming: Programación de relevos
-          Conditionals: Condicionales
-          Binary Bracelets: Pulseras Binarias
-          The Big Event: El Gran Evento
-          Your Digital Footprint: Tu huella Digital
-          description: El Curso 2 está diseñado para estudiantes que pueden leer y no tienen experiencia previa en programación. En este curso los estudiantes crearán programas para resolver problemas y desarrollar juegos interactivos o historias que pueden compartir. Se recomienda para los grados 2-5.
+          Getting Loopy: "Bucleandose"
+          Relay programming: "Programación de relevos"
+          Conditionals: "Condicionales"
+          Binary Bracelets: "Pulseras Binarias"
+          The Big Event: "El Gran Evento"
+          Your Digital Footprint: "Tu huella Digital"
+          description: "El Curso 2 está diseñado para estudiantes que pueden leer y no tienen experiencia previa en programación. En este curso los estudiantes crearán programas para resolver problemas y desarrollar juegos interactivos o historias que pueden compartir. Se recomienda para los grados 2-5."
           "Maze: Sequence": 'Laberinto: Secuencia'
           "Artist: Sequence": 'Secuencia '
           "Maze: Loops": Bucle
@@ -76,39 +76,39 @@ es:
           "Bee: Debugging": 'Abeja: Depuración'
           "Artist: Debugging": 'Artista: Depuración'
           "Bee: Conditionals": 'Abeja: Condicionales'
-          description_short: El Curso 2 esta diseñado para estudiantes que puedan leer y asistan a los grados iniciales y medios de la escuela primaria.
+          description_short: "El Curso 2 esta diseñado para estudiantes que puedan leer y asistan a los grados iniciales y medios de la escuela primaria."
           "Artist: Sequence2": 'Artista: Secuencia2'
           "Maze: Sequence2": 'Laberinto: Secuencia2'
           "Artist: Nested Loops": 'Artista: Bucles Anidados'
         course3:
-          The Maze: El Laberinto
+          The Maze: "El Laberinto"
           "Studio: Create a Story": 'Laboratorio de Juego: Crea un Historia'
-          The Artist: El artista
-          title: Curso 3
-          Artist Functions: Funciones de artista
-          Artist For Loops: Artista Para Bucles
-          Artist Nested Loops: Bucles Anidados del Artista
-          Bee Conditionals: Condiciones de la Abeja
-          Bee Nested Loops: Bucles Anidados de la Abeja
-          Bee Debuggin: Depuración de la Abeja
-          Bee Debugging: Depuración Abeja
-          Bee Functions: Funciones Abeja
-          Artist Functions with Params: Funciones con parámetros del Artista
-          Bounce: Rebotar
-          Maze Conditionals: Condicionales de Laberinto
-          Artist Functions with Parameters: Funciones con parámetros del Artista
-          Computational Thinking: Pensamiento computacional
-          Functional Suncatchers: Tragaluces Funcionales
-          Songwriting Parameters: Parámetros de Composición Musical
-          Dice Race: Carrera de Dados
-          Internet: Internet
-          Crowdsourcing: Colaboración Abierta
-          Digital Citizenship: Ciudadanía Digital
+          The Artist: "El artista"
+          title: "Curso 3"
+          Artist Functions: "Funciones de artista"
+          Artist For Loops: "Artista Para Bucles"
+          Artist Nested Loops: "Bucles Anidados del Artista"
+          Bee Conditionals: "Condiciones de la Abeja"
+          Bee Nested Loops: "Bucles Anidados de la Abeja"
+          Bee Debuggin: "Depuración de la Abeja"
+          Bee Debugging: "Depuración Abeja"
+          Bee Functions: "Funciones Abeja"
+          Artist Functions with Params: "Funciones con parámetros del Artista"
+          Bounce: "Rebotar"
+          Maze Conditionals: "Condicionales de Laberinto"
+          Artist Functions with Parameters: "Funciones con parámetros del Artista"
+          Computational Thinking: "Pensamiento computacional"
+          Functional Suncatchers: "Tragaluces Funcionales"
+          Songwriting Parameters: "Parámetros de Composición Musical"
+          Dice Race: "Carrera de Dados"
+          Internet: "Internet"
+          Crowdsourcing: "Colaboración Abierta"
+          Digital Citizenship: "Ciudadanía Digital"
           Farmer - While Loops: 'Granjera - Bucles Mientras'
-          description: El Curso 3 está diseñado para estudiantes que hayan tomado el Curso 2. Los estudiantes profundizarán más en temas de programación introducidos en los cursos anteriores que dan soluciones flexibles a problemas más complejos. Para el final del curso, los estudiantes crean historias y juegos interactivosyque pueden compartir con cualquiera. Recomendado para los grados 4-5.
+          description: "El Curso 3 está diseñado para estudiantes que hayan tomado el Curso 2. Los estudiantes profundizarán más en temas de programación introducidos en los cursos anteriores que dan soluciones flexibles a problemas más complejos. Para el final del curso, los estudiantes crean historias y juegos interactivosyque pueden compartir con cualquiera. Recomendado para los grados 4-5."
           "Studio: Create a Game": 'Laboratorio de Juegos: Crear un Juego'
-          Maze: Laberinto
-          Artist: Artista
+          Maze: "Laberinto"
+          Artist: "Artista"
           "Artist: Functions": 'Artista: Funciones'
           "Bee: Functions": 'Abeja: Funciones'
           "Bee: Conditionals": 'Abeja: Condicionales'
@@ -117,9 +117,9 @@ es:
           "Farmer: While Loops": 'Granjera: Bucles Mientras'
           "Bee: Nested Loops": 'Abeja: Bucles Anidados'
           "Bee: Debugging": 'Abeja: Depuración'
-          description_short: Los estudiantes que tomen el Curso 3 deben haber tomado el Curso 2.
-          Maze2: Laberinto2
-          Artist2: Artista2
+          description_short: "Los estudiantes que tomen el Curso 3 deben haber tomado el Curso 2."
+          Maze2: "Laberinto2"
+          Artist2: "Artista2"
           "Artist: Functions2": 'Artista: Funciones2'
           "Bee: Functions2": 'Abeja: Funciones2'
           "Bee: Conditionals2": 'Abeja: Condicionales2'
@@ -129,21 +129,21 @@ es:
           "Bee: Nested Loops2": 'Abeja: Bucles Anidados2'
           "Bee: Debugging2": 'Abeja: Depuración2'
           "Artist: Patterns": 'Artista: Patrones'
-          Songwriting: Composición Musical
+          Songwriting: "Composición Musical"
         msm:
-          title: Matemáticas de Secundaria
-          description: Trabajo privado en progreso para Matemáticas de Secundaria.
-          Graph Paper Programming: Programación en papel cuadriculado
-          Assessments: Evaluaciones
-          Unit 1: Unidad 1
-          Unit 2: Unidad 2
+          title: "Matemáticas de Secundaria"
+          description: "Trabajo privado en progreso para Matemáticas de Secundaria."
+          Graph Paper Programming: "Programación en papel cuadriculado"
+          Assessments: "Evaluaciones"
+          Unit 1: "Unidad 1"
+          Unit 2: "Unidad 2"
         playlab:
-          title: Laboratorio de Juegos
-          description: ¡Crea una historia o haz un juego con Laboratorio de Juegos!
-          Play Lab: Laboratorio de Juegos
-          description_short: ¡Crea una historia o haz un juego con Laboratorio de Juegos!
+          title: "Laboratorio de Juegos"
+          description: "¡Crea una historia o haz un juego con Laboratorio de Juegos!"
+          Play Lab: "Laboratorio de Juegos"
+          description_short: "¡Crea una historia o haz un juego con Laboratorio de Juegos!"
         artist:
-          title: Artista
-          description: ¡Dibuja imagenes estupendas y diseños con el Artista!
-          Artist: Artista
-          description_short: ¡Dibuja imagenes estupendas y diseños con el Artista!
+          title: "Artista"
+          description: "¡Dibuja imagenes estupendas y diseños con el Artista!"
+          Artist: "Artista"
+          description_short: "¡Dibuja imagenes estupendas y diseños con el Artista!"

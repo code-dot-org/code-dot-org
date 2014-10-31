@@ -15,18 +15,19 @@ h2 {
   border-radius: 0;
   background-color: white;
 }
+
 .badge img {
-    display: inline-block;
-    overflow: hidden;
-    height: 90px;
-    float: left;
+  display: inline-block;
+  overflow: hidden;
+  height: 100%;
 }
+
 .gold {
   width: 32.7%;
 }
 
 .platinum {
-  width: 49.5%;
+  width: 32.7%;
 }
 
 .badge:hover {
@@ -42,11 +43,14 @@ a:hover, a:active {
 }
 
 .label {
-  display: inline-block;
+  display: block;
   font-family: sans-serif;
   color: #7665a0;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: normal;
   padding: 0px;
   margin: 0px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 80px;
 }

@@ -69,16 +69,7 @@
     no_signup_message: Siz <a target="_blank" href="http://learn.code.org">müxtəlif
       mərhələ və tapmacalar</a>ı nəzərdən keçirə bilərsiniz, lakin nəticələrinizi
       yadda saxlamaq üçün qeydiyyatdan keçməyiniz lazım olacaq.
-    prizes_message: U.S. students who earn all %{num_trophies} concept trophies can
-      select a variety of prizes including free Dropbox space, Skype credits, and
-      downloadable games from Electronic Arts.
     teacher_educator_guide: Təhsil işçisi üçün göstərişlərə baxın
-    teacher_prize_header: <a target="_blank" href="http://DonorsChoose.org">"DonorsChoose.org"</a>
-      mükafatları şəklində 1000 dollar qazanın
-    teacher_prize_message: '<a target="_blank" href="http://DonorsChoose.org">"DonorsChoose.org"</a>la
-      tərəfdaşlıq edərək "Code.org" bu kursu ən azı 15 şagirdə keçən ABŞ-dakı müəllimlərə
-      dərs fondu şəklində 1000 dollara qədər maliyyə dəstəyi təklif edəcək. <a href="http://code.org/educate/20hr">Təlimçi
-      üçün göstərişlərdə daha geniş məlumat alın.</a> '
     teacher_pitch: "Öz sinfinizdə K-8 İnformatikaya Giriş kursunu tədris edin"
     teacher_title: Müəllim kimi qeydiyyatdan keçin
     student_pitch: '1 saat bitəndən sonra: K-8 İnformatikaya Giriş kursumuzu sınaqdan
@@ -90,6 +81,7 @@
     gender: Cins (vacib deyil)
     birthday: Ad günü (vacib deyil)
     age: Yaşınız
+    user_type: Are you a student or teacher?
     submit: Qeydiyyatdan keç
     teacher: Müəllimsiniz?
     valid_username: Olar!
@@ -387,8 +379,6 @@
     student_stats: Siz %{trophy_max} "Anlayışların mənimsənilməsi" kubokundan %{trophy_count}
       dənəsini qazandınız.
     student_left_off: 'Sonuncu qaldığınız yer:'
-    student_finished_prize: Bütün dərslikləri başa vurdunuz, %{prize_link}ınızı əldə
-      edərək %{online_link} və ya %{local_school_link}də başqa bir dərs seçin
     student_finished: Bütün dərslikləri başa vurdunuz, %{online_link} və ya %{local_school_link}də
       başqa bir dərs seçin
     local_school: yerli məktəb
@@ -415,6 +405,9 @@
     male: Kişi
     female: Qadın
     none: Cavab verməməyə üstünlük verirəm
+  user_type:
+    student: "şagird"
+    teacher: Teacher
   footer:
     help_from_html: <a href="http://www.google.com">"Google"</a>, <a href="http://www.microsoft.com">"Microsoft"</a>,
       <a href="http://www.facebook.com">"Facebook"</a> və <a href="http://www.twitter.com">"Twitter"</a>dən
@@ -430,13 +423,6 @@
     tos: Xidmətin şərtləri
     privacy: Məxfilik siyasəti
     secure: Secure Version
-  prize_mail:
-    prize_earned:
-      subject: Mükafatınızı "Code.org"da xərcləyin!
-    teacher_prize_earned:
-      subject: Mükafatınızı "Code.org"da xərcləyin!
-    teacher_bonus_prize_earned:
-      subject: Bonus mükafatınızı "Code.org"da xərcləyin!
   reference_area:
     title: Kömək lazımdır?
     subtitle: Bu videolara və məsləhətlərə baxın
@@ -573,7 +559,7 @@
           title: Jigsaw
           description: ''
         step:
-          title: Step
+          title: Addım
           description: ''
         sample_level_builder:
           title: Sample Level Builder

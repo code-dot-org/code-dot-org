@@ -49,6 +49,7 @@ sl:
           desc: Edit Code (beta)
           MazeEC: Stopnja 1
           Webapp: Stopnja 2
+          ArtistEC: Stopnja 3
         events:
           desc: Bounce (beta)
           Bounce: Stopnja 1
@@ -98,6 +99,7 @@ sl:
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
         Webapp: Webapp
+        ArtistEC: Umetnik
     trophy:
       name:
         Bronze: Bronze
@@ -338,6 +340,8 @@ sl:
         maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
         maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
         maze_wordsearch_k_20: This is a test! Move me one way, then another to spell the word STORY
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColour" block.'
     video:
       name:
         maze_intro: Maze Intro

@@ -1,5 +1,5 @@
 {
-  "blocksUsed": "Használt blokkok: %1",
+  "blocksUsed": "Felhasznált blokkok: %1",
   "branches": "branches",
   "catColour": "Szín",
   "catControl": "hurkok",
@@ -56,6 +56,7 @@
   "penUp": "ceruza fel",
   "reinfFeedbackMsg": "Ez úgy néz ki amit akartál? Nyomd meg a \"Próbáld újra\" gombot ,hogy lásd a rajzod.",
   "setColour": "színbeállítások megadása",
+  "setPattern": "set pattern",
   "setWidth": "szélesség beállítása",
   "shareDrawing": "Oszd meg a rajzodat:",
   "showMe": "mutasd",

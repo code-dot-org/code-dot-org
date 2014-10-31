@@ -1,7 +1,4 @@
----
-title: Resources 
-layout: wide
----
+
 
 # How to attract media to your Hour of Code event
 
@@ -15,4 +12,4 @@ layout: wide
 
 ## Infrographic version:
 
-![image](http://code.org/images/fit-8000/Code.org_infographic.png)
+![gambar](http://code.org/images/fit-8000/Code.org_infographic.png)

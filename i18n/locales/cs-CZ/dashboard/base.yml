@@ -65,10 +65,7 @@ cs:
     overview_student: 'Sign up for an account to track your progress. Your email is primarily used to allow you to log in and for password recovery. For more information, see our <a href="http://code.org/privacy">Privacy Policy</a>.'
     overview_teacher: "Teach computer science in your classroom by signing up for an account.<p/> You'll be able to add your students and track their progress."
     no_signup_message: 'Můžeš si <a target="_blank" href="http://learn.code.org">prohlédnout různé úrovně a hádanky</a>, ale budeš se muset zaregistrovat, aby se uložil tvůj pokrok.'
-    prizes_message: 'Studenti z USA, kteří získají všech %{num_trophies} trofejí v pojmech mohou vybírat z nabídky cen obsahující např. volné místo na Dropbox, Skype kredity a stáhnutelné hry od Electronic Arts.'
     teacher_educator_guide: Podívat se na průvodce učitele
-    teacher_prize_header: 'Win $1,000 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> rewards (through June 15, 2014, until supplies last)'
-    teacher_prize_message: 'In partnership with <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>, Code.org will offer up to $1,000 in classroom funding to U.S. public school teachers who lead at least 15 students through the K-8 Intro to Computer Science course (through June 15, 2014, while supplies last).  <a href="http://code.org/educate/20hr">See educator guide</a>.  (Limit: $1,000 per teacher.  <a target="_blank" href="http://help.donorschoose.org/app/answers/detail/a_id/454/kw/code.org">See FAQ for more limits</a>.)'
     teacher_pitch: Teacher sign up for Code.org
     teacher_title: Registrace učitele
     student_pitch: Student sign up for Code.org
@@ -79,6 +76,7 @@ cs:
     gender: Pohlaví (volitelné)
     birthday: Narozeniny (volitelné)
     age: Věk
+    user_type: Are you a student or teacher?
     submit: Registrace
     teacher: Jsi učitel?
     valid_username: K dispozici!
@@ -329,7 +327,6 @@ cs:
     student_progress: Tvůj pokrok v učení
     student_stats: 'Získal jsi %{trophy_count} z možných %{trophy_max} trofejí "Mistrovství Pojetí".'
     student_left_off: 'Kde jsi přestal:'
-    student_finished_prize: 'Zvládl jsi všechny tutoriály. Vyzvedni si %{prize_link} a vyber další třídu %{online_link} nebo %{local_school_link}'
     student_finished: 'Dokončil jsi všechna cvičení, vyber si další třídu %{online_link} nebo v %{local_school_link}'
     local_school: místní škola
     online: online
@@ -352,6 +349,9 @@ cs:
     male: Muž
     female: Žena
     none: Raději bych neodpovídal/a
+  user_type:
+    student: student
+    teacher: Teacher
   footer:
     help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped create this tutorial.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. All Rights Reserved.'
@@ -362,13 +362,6 @@ cs:
     tos: Terms
     privacy: Zásady ochrany osobních údajů
     secure: Secure Version
-  prize_mail:
-    prize_earned:
-      subject: Získej tvou cenu na Code.org!
-    teacher_prize_earned:
-      subject: Congratulations from Code.org!
-    teacher_bonus_prize_earned:
-      subject: Získej tvou bonusovou cenu na Code.org!
   reference_area:
     title: Potřebuješ pomoc?
     subtitle: Podívej se na tyto videa a tipy

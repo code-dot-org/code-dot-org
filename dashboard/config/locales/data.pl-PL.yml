@@ -50,6 +50,7 @@
           desc: Edytuj kod (beta)
           MazeEC: Etap 1
           Webapp: Etap 2
+          ArtistEC: Etap 3
         events:
           desc: Bounce (beta)
           Bounce: Etap 1
@@ -99,6 +100,7 @@
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
         Webapp: Webapp
+        ArtistEC: Artysta
     trophy:
       name:
         Bronze: Brąz
@@ -532,6 +534,9 @@
         maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
         maze_wordsearch_k_20: This is a test! Move me one way, then another to spell
           the word STORY
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
+          it in the new "penColour" block.'
     video:
       name:
         maze_intro: Labirynt - wprowadzenie

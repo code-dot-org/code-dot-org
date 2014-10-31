@@ -71,17 +71,7 @@
     no_signup_message: Du kan <a target="_blank" href="http://learn.code.org"> Bläddra
       bland de olika stadierna och pusslen</a>, men du måste registrera dig för att
       spara dina framsteg.
-    prizes_message: U.S. students who earn all %{num_trophies} concept trophies can
-      select a variety of prizes including free Dropbox space, Skype credits, and
-      downloadable games from Electronic Arts.
     teacher_educator_guide: Se pedagogguiden
-    teacher_prize_header: Vinn $1&nbsp;000 i <a target="_blank" href="http://DonorsChoose.org">
-      DonorsChoose.org</a>-belöningar
-    teacher_prize_message: 'I samarbete med <a target="_blank" href="http://DonorsChoose.org">
-      DonorsChoose.org</a>, kommer Code.org att erbjuda upp till $1.000 i klassrummets
-      finansiering till amerikanska offentliga skolors lärare som leder minst 15 studenter
-      genom kursen. <a href="http://code.org/educate/20hr"> se pedagog guide för mer
-      info.</a> '
     teacher_pitch: Skapa konto på Code.org som lärare
     teacher_title: Läraranmälnming
     student_pitch: Skapa konto på Code.org som elev
@@ -92,6 +82,7 @@
     gender: Kön (valfritt)
     birthday: Födelsedag (valfritt)
     age: "Ålder (frivilligt)"
+    user_type: Are you a student or teacher?
     submit: Registrera dig
     teacher: "Är du en lärare?"
     valid_username: Tillgänglig!
@@ -383,8 +374,6 @@
     student_stats: Du har samlat %{trophy_count} av %{trophy_max} "Koncept-bemästring"
       troféer.
     student_left_off: 'Där du slutade senast:'
-    student_finished_prize: Du har slutfört alla övningar, få ditt %{prize_link} och
-      välj en annan klass %{online_link} eller på en %{local_school_link}
     student_finished: Du har slutfört alla genomgångarna, välj en annan lektion %
       {online_link} eller på en % {local_school_link}
     local_school: närliggande skola
@@ -411,6 +400,9 @@
     male: Man
     female: Kvinna
     none: Föredrar att inte svara
+  user_type:
+    student: Student
+    teacher: Teacher
   footer:
     help_from_html: Ingenjörer från <a href="http://www.google.com"> Google</a>, <a
       href="http://www.microsoft.com"> Microsoft</a>, <a href="http://www.facebook.com">
@@ -427,13 +419,6 @@
     tos: Användarvillkor
     privacy: Sekretesspolicy
     secure: Skyddad version
-  prize_mail:
-    prize_earned:
-      subject: Lös in ditt pris hos Code.org!
-    teacher_prize_earned:
-      subject: Lös in ditt pris hos Code.org!
-    teacher_bonus_prize_earned:
-      subject: Lös in ditt bonus pris hos Code.org!
   reference_area:
     title: Behöver du hjälp?
     subtitle: Se dessa filmer och tips

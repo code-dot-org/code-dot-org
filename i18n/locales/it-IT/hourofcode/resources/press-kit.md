@@ -53,7 +53,7 @@ In Cina, ogni studenti delle superiori per potersi diplomare deve studiare infor
 
 **Chi siamo**
 
-Code.org® è un'associazione 501c3 senza scopi di lucro dedicata alla diffusione dell'interesse nell'informatica e per l'aumento della partecipazione di donne e studenti di colore. La visione di Code.org è che ogni studente di ogni scuola dovrebbe avere l'opportunità di imparare la programmazione dei computer. Dopo il lancio nel 2013, Code.org ha organizzato la campagna dell'Ora del Codice — che ha introdotto milioni di studenti all'informatica — in associazione con più di 30 distretti scolastici pubblici a livello nazionale e ha lanciato Code Studio, una piattaforma open source di apprendimento online per tutte le età. For more information, please visit: <% if @country == 'uk' %> [www.uk.code.org](http://uk.code.org). <% else %> [www.code.org](http://code.org). <% end %>
+Code.org® è un'associazione 501c3 senza scopi di lucro dedicata alla diffusione dell'interesse nell'informatica e per l'aumento della partecipazione di donne e studenti di colore. La visione di Code.org è che ogni studente di ogni scuola dovrebbe avere l'opportunità di imparare la programmazione dei computer. Dopo il lancio nel 2013, Code.org ha organizzato la campagna dell'Ora del Codice — che ha introdotto milioni di studenti all'informatica — in associazione con più di 30 distretti scolastici pubblici a livello nazionale e ha lanciato Code Studio, una piattaforma open source di apprendimento online per tutte le età. For more information, please visit: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
 Find more resources and sample emails [here](<%= hoc_uri('/resources') %>).

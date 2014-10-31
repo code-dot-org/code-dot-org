@@ -14,11 +14,11 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Gràcies per registrar-se per acollir una Hora de Codi!
 
-**CADA** organitzador de l'Hora de Codi rebrà 10 GB d'espai Dropbox o 10 dòlars de crèdit Skype com agraïment. [Detalls](/prizes)
+**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](<%= hoc_uri('/prizes') %>)
 
 <% if @country == 'us' %>
 
-Aconsegueix que tota la teva [escola participi](/us/prizes) d'una oportunitat de grans premis per a tota l'escola.
+Get your [whole school to participate](<%= hoc_uri('/prizes') %>) for a chance for big prizes for your entire school.
 
 <% end %>
 
@@ -32,23 +32,23 @@ Informa als teus amics sobre #HoraDeCodi.
 
 ## 2. Demana a tothom de la teva escola que ofereixin una Hora de Codi
 
-[Envia aquest correu](/resources#email) o [dona aquest fulletó al teu director](/files/schools-handout.pdf). Un cop la vostra escola sigui a bord, [entra per guanyar 10,000 dòlars de valor en tecnologia per a la teva escola](/prizes) i intenta que altres escoles de la teva àrea puguin a bord.
+[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](<%= hoc_uri('/files/schools-handout.pdf') %>). Un cop la vostra escola sigui a bord, [entra per guanyar 10,000 dòlars de valor en tecnologia per a la teva escola](/prizes) i intenta que altres escoles de la teva àrea puguin a bord.
 
 <% else %>
 
 ## 2. Demana a tothom de la teva escola que ofereixin una Hora de Codi
 
-[Envia aquest correu](/resources#email) o dona [aquest fulletó](/files/schools-handout.pdf) al teu director.
+[Send this email](<%= hoc_uri('/resources#email') %>) or give [this handout](<%= hoc_uri('/files/schools-handout.pdf') %>) to your principal.
 
 <% end %>
 
 ## 3. Fes una donació generosa
 
-[Doneu a la nostra campanya de crowdfunding](http://code.org/donate). Per ensenyar a 100 milions de nens, necessitem el teu suport. Acabem de llançar el que podria ser la [major campanya de crowdfunding per l'educació](http://code.org/donate) en la història. Cada dòlar serà igualat pel majors [donants](http://code.org/about/donors) de Code.org , doblant el seu impacte.
+[Donate to our crowdfunding campaign.](http://<%= codeorg_url() %>/donate) To teach 100 million children, we need your support. We just launched what could be the [largest education crowdfunding campaign](http://<%= codeorg_url() %>/donate) in history. Every dollar will be matched by major Code.org [donors](http://<%= codeorg_url() %>/about/donors), doubling your impact.
 
 ## 4. Demana a la teva empresa que s'impliqui
 
-[Envia aquest correu](/resources#email) al teu superior, o director executiu. O [dóna'ls aquest fulletó](/resources/hoc-one-pager.pdf).
+[Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](<%= hoc_uri('/resources/hoc-one-pager.pdf') %>).
 
 ## 5. Promou l'Hora de Codi a la teva comunitat
 
@@ -56,6 +56,6 @@ Recluta un grup local — escoltes, església, universitat, grup de veterans o s
 
 ## 6. Demana a un funcionari electe local que doni suport a l'Hora de Codi
 
-[Envia aquest correu](/resources#politicians) al seu alcalde, Ajuntament o Consell Escolar. O [dóna'ls aquest fulletó](/resources/hoc-one-pager.pdf) i convida'ls a visitar la teva escola.
+[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board. Or [give them this handout](<%= hoc_uri('/resources/hoc-one-pager.pdf') %>) and invite them to visit your school.
 
 <%= view 'popup_window.js' %>

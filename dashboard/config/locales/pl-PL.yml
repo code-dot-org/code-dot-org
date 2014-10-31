@@ -5,7 +5,7 @@
         blank: is required
     attributes:
       user:
-        name: Imię/Nazwisko
+        name: Wyświetlana nazwa
         email: Email
         username: nazwa użytkownika
         password: hasło
@@ -69,19 +69,7 @@
     no_signup_message: Możesz <a target="_blank" href="http://learn.code.org"> przeglądać
       różne etapy i łamigłówki </a>, ale musisz się zarejestrować, aby zapisać swoje
       wyniki.
-    prizes_message: Uczniowie z USA, którzy zdobyli wszystkie %{num_trophies} trofea
-      dotyczące pojęć mogą wybrać wiele nagród, w tym wolne miejsce na Dropbox, kredyty
-      Skype i gry do pobrania z Electronic Arts and Valve.
     teacher_educator_guide: Patrz podręcznik nauczyciela
-    teacher_prize_header: Wygraj 1000 $ w <a target="_blank" href="http://DonorsChoose.org">
-      DonorsChoose.org</a> (od 15 czerwca 2014, do wyczerpania zapasów)
-    teacher_prize_message: 'We współpracy z <a target="_blank" href="http://DonorsChoose.org">
-      DonorsChoose.org</a> Code.org będzie oferować aż do 1.000 $ dla nauczycieli
-      amerykańskich szkół publicznych, którzy wprowadzą dla co najmniej 15 uczniów  K-8
-      do kursu informatyki (od 15 czerwca 2014 r. do wyczerpania zapasów).  <a href="http://code.org/educate/20hr">
-      Szczegóły w podręczniku</a>.  (Limit: 1.000 dolarów dla nauczyciela.  <a target="_blank"
-      href="http://help.donorschoose.org/app/answers/detail/a_id/454/kw/code.org">
-      Zobacz często zadawane pytania</a>.)'
     teacher_pitch: Rejestracja do Code.org dla nauczycieli
     teacher_title: Rejestracja nauczyciela
     student_pitch: Rejestracja w Code.org dla uczniów
@@ -92,6 +80,7 @@
     gender: Płeć (opcjonalnie)
     birthday: Data urodzenia (opcjonalnie)
     age: Wiek
+    user_type: Are you a student or teacher?
     submit: Zarejestruj się
     teacher: Czy jesteś nauczycielem?
     valid_username: Dostępny!
@@ -390,8 +379,6 @@
     student_progress: Twoje postępy w nauce
     student_stats: Zdobyłeś %{trophy_count} z %{trophy_max} trofeów "Concept Mastery".
     student_left_off: 'Gdzie przerwałeś:'
-    student_finished_prize: Ukończyłeś wszystkie samouczki, zgłoś się po swoją %{prize_link}
-      i wybierz inną klasę %{online_link} lub %{local_school_link}
     student_finished: Ukończyłeś wszystkie samouczki, wybierz inną klasę %{online_link}
       lub %{local_school_link}
     local_school: miejscowa szkoła
@@ -418,6 +405,9 @@
     male: Mężczyzna
     female: Kobieta
     none: Wolę nie odpowiadać
+  user_type:
+    student: uczeń
+    teacher: Teacher
   footer:
     help_from_html: Ten samouczek pomogli utworzyć inżynierowie z <a href="http://www.google.com">Google</a>,
       <a href="http://www.microsoft.com">Microsoft</a>, <a href="http://www.facebook.com">Facebook</a>,
@@ -433,13 +423,6 @@
     tos: Warunki korzystania z usług
     privacy: Polityka prywatności
     secure: Secure Version
-  prize_mail:
-    prize_earned:
-      subject: Odbierz swoją nagrodę w Code.org!
-    teacher_prize_earned:
-      subject: Odbierz swoją nagrodę w Code.org!
-    teacher_bonus_prize_earned:
-      subject: Odbierz swoją dodatkowa nagrodę w Code.org!
   reference_area:
     title: Czy potrzebujesz pomocy?
     subtitle: Zobacz te filmiki i wskazówki

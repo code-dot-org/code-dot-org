@@ -49,6 +49,7 @@
           desc: Edit Code (beta)
           MazeEC: Nivo 1
           Webapp: Nivo 2
+          ArtistEC: Nivo 3
         events:
           desc: Bounce (beta)
           Bounce: Nivo 1
@@ -98,6 +99,7 @@
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
         Webapp: Webapp
+        ArtistEC: Umjetnik
     trophy:
       name:
         Bronze: Bronca
@@ -524,6 +526,9 @@
         maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
         maze_wordsearch_k_20: This is a test! Move me one way, then another to spell
           the word STORY
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
+          it in the new "penColour" block.'
     video:
       name:
         maze_intro: Maze Intro

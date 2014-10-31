@@ -117,7 +117,7 @@
   "LISTS_IS_EMPTY_HELPURL": "https://code.google.com/p/blockly/wiki/Lists#is_empty",
   "LISTS_IS_EMPTY_TITLE": "%1 er tom",
   "LISTS_LENGTH_HELPURL": "https://code.google.com/p/blockly/wiki/Lists#length_of",
-  "LISTS_LENGTH_INPUT_LENGTH": "length of",
+  "LISTS_LENGTH_INPUT_LENGTH": "lengden av",
   "LISTS_LENGTH_TITLE": "lengden av %1",
   "LISTS_LENGTH_TOOLTIP": "Returnerer lengden til en liste.",
   "LISTS_REPEAT_HELPURL": "https://code.google.com/p/blockly/wiki/Lists#create_list_with",

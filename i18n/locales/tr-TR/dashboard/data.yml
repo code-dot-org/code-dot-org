@@ -49,6 +49,7 @@ tr:
           desc: Kodu Düzenle (beta)
           MazeEC: 1. Aşama
           Webapp: Bölüm 2
+          ArtistEC: 3. Aşama
         events:
           desc: Sıçrama (beta)
           Bounce: 1. Aşama
@@ -98,6 +99,7 @@ tr:
         MazeStep: Labirent Adım Modu
         Wordsearch: Kelime arama
         Webapp: Webapp
+        ArtistEC: Sanatçı
     trophy:
       name:
         Bronze: Bronz
@@ -318,6 +320,8 @@ tr:
         maze_wordsearch_k_15: Beni ABOVE kelimesini oluşturacak şekilde bir yöne, sonra diğer yöne hareket ettir
         maze_wordsearch_k_16: Beni BELOW kelimesini oluşturacak şekilde bir yöne, sonra diğer yöne hareket ettir
         maze_wordsearch_k_20: Bu bir test! Beni STORY kelimesini oluşturacak şekilde bir yöne, sonra diğer yöne hareket ettir
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColour" block.'
     video:
       name:
         maze_intro: 'Labirent: Tanıtım'
