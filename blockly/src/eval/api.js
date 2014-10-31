@@ -58,7 +58,7 @@ exports.star = function (radius, fontSize, color) {
   return exports.register(new EvalStar(radius, fontSize, color));
 };
 
-exports.placeImage = function (image, x, y, blockId) {
+exports.placeImage = function (x, y, image, blockId) {
   // todo - validate we have an image, use public setter
   // todo - where does argument validation happen?
 
@@ -70,12 +70,12 @@ exports.placeImage = function (image, x, y, blockId) {
   return exports.register(image);
 };
 
-exports.rotateImage = function (image, degrees) {
+exports.rotateImage = function (degrees, image) {
   image.rotate(degrees);
   return exports.register(image);
 };
 
-exports.scaleImage = function (image, factor) {
+exports.scaleImage = function (factor, image) {
   image.scale(factor, factor);
   return exports.register(image);
 };
