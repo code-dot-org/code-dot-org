@@ -193,7 +193,9 @@ social:
     .col-xs-12
       =view :faq
 
-= view 'popup_window.js'
+  %button{:style=>"float: right; margin-top: 25px", :onclick=>"return adjustScroll('join')"}
+    Sign up your event
+  = view 'popup_window.js'
 
 :javascript
 
