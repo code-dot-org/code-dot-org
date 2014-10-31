@@ -117,7 +117,7 @@
   "LISTS_IS_EMPTY_HELPURL": "https://code.google.com/p/blockly/wiki/Lists#is_empty",
   "LISTS_IS_EMPTY_TITLE": "%1 є порожнім",
   "LISTS_LENGTH_HELPURL": "https://code.google.com/p/blockly/wiki/Lists#length_of",
-  "LISTS_LENGTH_INPUT_LENGTH": "length of",
+  "LISTS_LENGTH_INPUT_LENGTH": "довжина",
   "LISTS_LENGTH_TITLE": "довжина %1",
   "LISTS_LENGTH_TOOLTIP": "Повертає довжину списку.",
   "LISTS_REPEAT_HELPURL": "https://code.google.com/p/blockly/wiki/Lists#create_list_with",

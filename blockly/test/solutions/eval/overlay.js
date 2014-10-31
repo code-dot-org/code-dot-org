@@ -8,8 +8,8 @@ var solutionXml = blockUtils.mathBlockXml('overlay', {
       'STYLE': blockUtils.mathBlockXml('functional_string', null, { VAL: 'outline' }),
       'SIZE': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 50 } )
     }),
-    'X': 0,
-    'Y': 0
+    'X': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 0 } ),
+    'Y': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 0 } )
   }),
   'BOTTOM': blockUtils.mathBlockXml('functional_circle', {
     'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'blue' } ),
@@ -35,10 +35,17 @@ module.exports = {
       },
       customValidator: function (assert) {
         var user = document.getElementById('user');
+        var g = user.querySelector('g');
         var circles = user.querySelectorAll('circle');
+        // todo (brent) - somewhere i need more complex tests that overlay images that
+        // have been rotated/scaled/translated
         assert(circles.length === 2);
         assert(circles[0].getAttribute('stroke') === 'blue', "blue circle on the bottom");
         assert(circles[1].getAttribute('stroke') === 'red', "red circle on the bottom");
+        assert(circles[0].getAttribute('transform') === ' translate(0 0)');
+        assert(circles[1].getAttribute('transform') === ' translate(-200 200)',
+          'actual: ' + circles[1].getAttribute('transform'));
+        assert(g.getAttribute('transform') === ' translate(200 200)');
         return true;
       },
       xml: '<xml>' + solutionXml +  '</xml>'

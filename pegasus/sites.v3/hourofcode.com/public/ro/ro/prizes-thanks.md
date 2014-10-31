@@ -1,7 +1,4 @@
----
-title: Vă mulţumesc 
-layout: wide
----
+
 
 # Vă mulţumesc
 

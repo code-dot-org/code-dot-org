@@ -6,6 +6,7 @@ module Rack; class Request
     [
       '/',
       '/learn',
+      '/learn/beyond',
       '/congrats',
       '/language_test',
       '/teacher-dashboard',
