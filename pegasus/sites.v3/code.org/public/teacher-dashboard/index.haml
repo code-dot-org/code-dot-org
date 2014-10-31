@@ -10,21 +10,6 @@ angular: teacherDashboard
 %link(rel="stylesheet" type="text/css" href="/style.css")
 %link(rel='stylesheet' type='text/css' href='/css/page.css')
 
-%h1
-  Teacher Workspace
-%div.tile
-  = view :light_tile, url:"http://studio.code.org", target:"", img_src:"/images/logo_tall_hoc.jpg", title:"Your Course Progress", text:""
-%div.tile
-  = view :light_tile, url:"www.google.com", img_src:"/images/logo_graph_paper.png", target:"", title:"Lesson Plans and Resources", text:""
-%div.tile{:style=>"margin-right: 0px"}
-  = view :light_tile, url:"/teacher-dashboard#/sections", target:"", img_src:"/images/dashboard_teacher_progress.png", title:"Student Accounts and Progress", text:""
-%div.tile{:style=>"margin-top: 26px;"}
-  = view :light_tile, url:"www.google.com", target:"", img_src:"/images/logo_tall_elementary.jpg", title:"Teaching Tips", text:""
-%div.tile{:style=>"margin-top: 26px"}
-  = view :light_tile, url:"/professional-development-workshops", target:"_blank", img_src:"/images/logo_us_map.png", title:"PD Workshops", text:""
-%div.tile{:style=>"margin-top: 26px; margin-right: 0px"}
-  = view :light_tile, url:"http://support.code.org/hc/communities/public/topics", target:"_blank", img_src:"/images/logo_community.jpg", title:"Community", text:""
-
 %div{'ng-view' => ''}
 
 :css
@@ -50,12 +35,13 @@ angular: teacherDashboard
 
   config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/',                  {templateUrl: '/teacher-dashboard/landing'});
+    $routeProvider.when('/plan',                  {templateUrl: '/teacher-dashboard/plan'});
     $routeProvider.when('/sections',          {templateUrl: '/teacher-dashboard/sections',
                                                controller: 'SectionsController'});
     $routeProvider.when('/sections/:id',      {templateUrl: '/teacher-dashboard/section',
                                                controller: 'SectionDetailController'});
-    $routeProvider.when('/sections/:sectionid/student/:studentid', 
-                                              {templateUrl: '/teacher-dashboard/student', 
+    $routeProvider.when('/sections/:sectionid/student/:studentid',
+                                              {templateUrl: '/teacher-dashboard/student',
                                                controller: 'StudentDetailController'});
     $routeProvider.when('/sections/:id/print_signin_cards', {templateUrl: '/teacher-dashboard/signin_cards',
                                                controller: 'SectionDetailController'});
@@ -84,7 +70,7 @@ angular: teacherDashboard
       }
     };
   }]);
-    
+
 
   // SERVICES
 
@@ -100,7 +86,7 @@ angular: teacherDashboard
       //  'save':   {method:'POST'},
       //  'query':  {method:'GET', isArray:true},
       //  'remove': {method:'DELETE'},
-      //  'delete': {method:'DELETE'} 
+      //  'delete': {method:'DELETE'}
          update: {method:'POST', url: 'v2/sections/:id/update'},
          addStudents: {method:'POST', url:'/v2/sections/:id/students', isArray: true},
          removeStudent: {method:'DELETE', url:'/v2/sections/:id/students/:studentId'},
@@ -115,7 +101,7 @@ angular: teacherDashboard
       //  'save':   {method:'POST'},
       //  'query':  {method:'GET', isArray:true},
       //  'remove': {method:'DELETE'},
-      //  'delete': {method:'DELETE'} 
+      //  'delete': {method:'DELETE'}
          update: {method:'POST', url: 'v2/students/:id/update'},
       });
     }]);
@@ -131,7 +117,7 @@ angular: teacherDashboard
     $scope.course_list = #{DashboardSection::VALID_COURSES.to_json};
 
     $scope.sections = sectionsService.query();
-    
+
     $scope.sections.$promise.then(function( sections ){
       $scope.sectionsLoaded = true;
     });
@@ -179,7 +165,7 @@ angular: teacherDashboard
     $scope.cancel = function(section) {
       if (section.id) {
         section.editing = false;
-      } else { 
+      } else {
         $scope.sections.splice($scope.sections.indexOf(section), 1); // remove from array
       }
     };
@@ -315,7 +301,7 @@ angular: teacherDashboard
       var modifiedStudents = [];
 
       $.each(students, function(index, student) {
-        console.log(index); 
+        console.log(index);
         if (student.editing || student.editing_password) {
           if (student.id) {
             modifiedStudents.push(student);
