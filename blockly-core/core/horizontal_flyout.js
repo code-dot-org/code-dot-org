@@ -33,6 +33,7 @@ Blockly.HorizontalFlyout.prototype.show = function(xmlList) {
  * Hide and empty the flyout.
  */
 Blockly.HorizontalFlyout.prototype.hide = function() {
+  this.height_ = 10;
   this.flyoutRows = 0;
   Blockly.HorizontalFlyout.superClass_.hide.apply(this, arguments);
 };

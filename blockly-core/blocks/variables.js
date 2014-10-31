@@ -52,6 +52,11 @@ Blockly.Blocks.variables_get = {
       this.setTitleValue(newName, 'VAR');
     }
   },
+  removeVar: function(oldName) {
+    if (Blockly.Names.equals(oldName, this.getTitleValue('VAR'))) {
+      this.dispose(true, true);
+    }
+  },
   contextMenuType_: 'variables_set',
   customContextMenu: function(options) {
     var option = {enabled: true};
@@ -118,5 +123,6 @@ Blockly.Blocks.parameters_get = {
     if (Blockly.functionEditor) {
       Blockly.functionEditor.renameParameter(oldName, newName);
     }
-  }
+  },
+  removeVar: Blockly.Blocks.variables_get.removeVar
 };

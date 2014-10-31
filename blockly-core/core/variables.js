@@ -104,14 +104,21 @@ Blockly.Variables.renameVariable = function(oldName, newName) {
  * @param {string} oldName Variable to rename.
  * @param {string} newName New variable name.
  */
-Blockly.Variables.deleteVariable = function(oldName, newName) {
+Blockly.Variables.deleteVariable = function(oldName) {
   var blocks = Blockly.activeWorkspace.getAllBlocks();
   // Iterate through every block.
   for (var x = 0; x < blocks.length; x++) {
-    var func = blocks[x].getVars;
+    var func = blocks[x].removeVar;
     if (func) {
-      func.call(blocks[x], oldName, newName);
+      func.call(blocks[x], oldName);
     }
+  }
+  // Notify the modal workspace to remove the parameter from its flyout
+  if (Blockly.functionEditor) {
+    // Yield until after the current event callback finishes
+    setTimeout(function() {
+      Blockly.functionEditor.removeParameter(oldName);
+    }, 0);
   }
 };
 
