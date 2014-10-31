@@ -111,6 +111,16 @@ Blockly.FunctionEditor.prototype.renameParameter = function(oldName, newName) {
   this.refreshFlyoutParams_();
 };
 
+Blockly.FunctionEditor.prototype.removeParameter = function(oldName) {
+  this.paramToolboxBlocks.forEach(function (block, n, arr) {
+    if (block.firstElementChild && block.firstElementChild.innerHTML === oldName) {
+      arr.splice(n, 1);
+    }
+  });
+  this.flyout_.hide();
+  this.flyout_.show(this.paramToolboxBlocks);
+};
+
 Blockly.FunctionEditor.prototype.show = function() {
   this.ensureCreated_();
   Blockly.activeWorkspace = Blockly.modalBlockSpaceEditor.blockSpace;

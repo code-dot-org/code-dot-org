@@ -200,8 +200,6 @@ Blockly.FieldParameter.dropdownChange = function(text) {
     return null;
   } else if (text == Blockly.Msg.DELETE_PARAMETER) {
     var result = window.confirm(Blockly.Msg.DELETE_PARAMETER_TITLE.replace('%1', oldVar));
-    // Since variables are case-insensitive, ensure that if the new variable
-    // matches with an existing variable, the new case prevails throughout.
     if (result) {
       Blockly.Variables.deleteVariable(oldVar);
     }
