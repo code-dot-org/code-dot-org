@@ -53,7 +53,7 @@ Code.org'un kurucusu ve CEO'su Hadi Partovi, "Kodlama Saati, kodlamanın sırrı
 
 **Code.org hakkında**
 
-Code.org® bir 501c3 halka açık, kar amacı gütmeyen, bilgisayar bilimine katılımı arttırmayı; özellikle kadınlar ve azınlık ırklardan öğrencilerin katılımını çoğaltmayı amaçlayan bir organizasyondur. Vizyonu, her okuldaki her öğrencinin bilgisayar programlamasını öğrenme fırsatına sahip olması gerektiğidir. 2013'te başladığından itibaren, Code.org Kodlama Saati kampanyasını organize etti - bu organizasyon milyonlarca öğrenciye bilgisayar bilimini tanıştırdı. Ülke çapında 30 devlet okulu bölgesinde ortaklık sağlandı ve bir açık-kaynak, her yaş için çevrimiçi bir öğrenme platformu olan Kod Stüdyosu açıldı. Daha fazla bilgi için lütfen ziyaret edin: <% if @country == 'uk' %>[www.uk.code.org](http://uk.code.org). <% else %> [www.code.org](http://code.org). <% end %>
+Code.org® bir 501c3 halka açık, kar amacı gütmeyen, bilgisayar bilimine katılımı arttırmayı; özellikle kadınlar ve azınlık ırklardan öğrencilerin katılımını çoğaltmayı amaçlayan bir organizasyondur. Vizyonu, her okuldaki her öğrencinin bilgisayar programlamasını öğrenme fırsatına sahip olması gerektiğidir. 2013'te başladığından itibaren, Code.org Kodlama Saati kampanyasını organize etti - bu organizasyon milyonlarca öğrenciye bilgisayar bilimini tanıştırdı. Ülke çapında 30 devlet okulu bölgesinde ortaklık sağlandı ve bir açık-kaynak, her yaş için çevrimiçi bir öğrenme platformu olan Kod Stüdyosu açıldı. For more information, please visit: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
 Daha fazla kaynak ve örnek e-postalar için <a

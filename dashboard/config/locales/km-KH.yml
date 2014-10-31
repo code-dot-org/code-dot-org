@@ -69,18 +69,7 @@
       ហើយ​ទទួល​បាន​រង្វាន់​នានា។"
     no_signup_message: អ្នក​អាច​<a target="_blank" href="http://learn.code.org">រក​មើល​ដំណាក់កាល​និង​ល្បែង​ប្រាជ្ញា​ជា​ច្រើន​បាន</a>,
       ប៉ុន្តែ​អ្នក​ត្រូវ​ចុះឈ្មោះ ដើម្បី​រក្សាទុក​ដំណើរការ​របស់​អ្នក។
-    prizes_message: U.S. students who earn all %{num_trophies} concept trophies can
-      select a variety of prizes including free Dropbox space, Skype credits, and
-      downloadable games from Electronic Arts.
     teacher_educator_guide: "មើល​ការណែនាំ​សម្រាប់​អ្នក​បង្រៀន"
-    teacher_prize_header: Win $1,000 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
-      rewards (through June 15, 2014, until supplies last)
-    teacher_prize_message: 'In partnership with <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>,
-      Code.org will offer up to $1,000 in classroom funding to U.S. public school
-      teachers who lead at least 15 students through the K-8 Intro to Computer Science
-      course (through June 15, 2014, while supplies last).  <a href="http://code.org/educate/20hr">See
-      educator guide</a>.  (Limit: $1,000 per teacher.  <a target="_blank" href="http://help.donorschoose.org/app/answers/detail/a_id/454/kw/code.org">See
-      FAQ for more limits</a>.)'
     teacher_pitch: "ការ​ចុះ​ឈ្មោះ​ជា​គ្រូ​បង្រៀន​សម្រាប់ Code.org"
     teacher_title: "ការ​ចុះឈ្មោះ​ជា​គ្រូ​បង្រៀន"
     student_pitch: "ការ​ចុះឈ្មោះ​ជា​សិស្ស​សម្រាប់ Code.org"
@@ -91,6 +80,7 @@
     gender: "ភេទ (ស្រេច​ចិត្ត)"
     birthday: "ថ្ងៃ​ខែ​ឆ្នាំ​កំណើត (ស្រេច​ចិត្ត)"
     age: "អាយុ (ស្រេច​ចិត្ត)"
+    user_type: Are you a student or teacher?
     submit: "ចុះឈ្មោះ"
     teacher: "តើ​អ្នក​ជា​គ្រូ​បង្រៀន​មែនទេ?"
     valid_username: "អាច​ប្រើ​បាន!"
@@ -382,8 +372,6 @@
     student_stats: You've earned %{trophy_count} out of %{trophy_max} "Concept Mastery"
       trophies.
     student_left_off: 'Where you left off:'
-    student_finished_prize: You've completed all tutorials, claim your %{prize_link}
-      and pick another class %{online_link} or at a %{local_school_link}
     student_finished: You've completed all tutorials, pick another class %{online_link}
       or at a %{local_school_link}
     local_school: local school
@@ -410,6 +398,9 @@
     male: Male
     female: Female
     none: "សម្រេច​ចិត្ត​មិន​ឆ្លើយ"
+  user_type:
+    student: Student
+    teacher: Teacher
   footer:
     help_from_html: វិស្វករ​ទាំង​ឡាយ​មក​ពី <a href="http://www.google.com">Google</a>,
       <a href="http://www.microsoft.com">Microsoft</a>, <a href="http://www.facebook.com">Facebook</a>,
@@ -425,13 +416,6 @@
     tos: "លក្ខខណ្ឌ"
     privacy: Privacy Policy
     secure: "កំណែ​សុវត្ថិភាព"
-  prize_mail:
-    prize_earned:
-      subject: Redeem your prize at Code.org!
-    teacher_prize_earned:
-      subject: Congratulations from Code.org!
-    teacher_bonus_prize_earned:
-      subject: Redeem your bonus prize at Code.org!
   reference_area:
     title: "ត្រូវការ​ជំនួយ?"
     subtitle: "មើល​វីដេអូ​និង​គន្លឹះ​ទាំង​នេះ"

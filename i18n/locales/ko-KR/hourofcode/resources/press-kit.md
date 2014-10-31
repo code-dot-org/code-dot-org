@@ -45,7 +45,7 @@ title: Resources layout: wide
 
 *왜 이런 이벤트 행사가 중요한가요?*
 
-중국에서는, 고등학교를 졸업하기 위해 모든 학생들이 컴퓨터과학(정보과학)을 이수해야 합니다. 미국에서 90%의 학교에서는 교육하지도 못하고 있습니다. 이제 우리가 21세기를 준비하며 따라잡을 시간입니다. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them the confidence and know-how to succeed.
+중국에서는, 고등학교를 졸업하기 위해 모든 학생들이 컴퓨터과학(정보과학)을 이수해야 합니다. 미국에서 90%의 학교에서는 교육하지도 못하고 있습니다. 이제 우리가 21세기를 준비하며 따라잡을 시간입니다. 우리는 우리의 학생들이 자라나면서 무엇을 배우고, 제약, 사업, 정치, 예술 등 어떤 분야로 나아가던 간에 지금의 IT 기술을 이해하고 직접 만들 수 있는 것이 학생들의 자신감을 키워주면서 성공하도록 하기 위한 방법이라는 것을 알고있습니다.
 
 **활용할 수 있는 더 많은 정보 및 전달사항**
 
@@ -53,7 +53,7 @@ title: Resources layout: wide
 
 **Code.org에 대하여**
 
-Code.org® 는 미국의 501c3 조항에 의한 비영리 조직으로, 인종, 성별과 관계없이 컴퓨터과학(정보과학) 교육을 확산하고 함께 나아가기 위해 조직되었습니다. Code.org 의 비전은 모든 학교의 모든 학생들이 컴퓨터 프로그래밍을 배울수 있는 기회를 가져야 한다는 것입니다. 2013년 처음 시작한 이후로, Code.org는 Hour of Code 캠페인을 조직했습니다. - 수백만 명의 학생들에게 컴퓨터과학(정보과학)을 소개해왔습니다. - 전국가적으로 30개 이상의 공립 교육청과 협력하였으며, 모든 나이의 학습자를 위한 오픈소스 온라인 플랫폼인 Code Studio를 만들어 운영하고 있습니다. 더 자세한 정보는 : <% if @country == 'uk' %> [www.uk.code.org](http://uk.code.org). <% else %> [www.code.org](http://code.org)를 방문하세요. <% end %>
+Code.org® 는 미국의 501c3 조항에 의한 비영리 조직으로, 인종, 성별과 관계없이 컴퓨터과학(정보과학) 교육을 확산하고 함께 나아가기 위해 조직되었습니다. Code.org 의 비전은 모든 학교의 모든 학생들이 컴퓨터 프로그래밍을 배울수 있는 기회를 가져야 한다는 것입니다. 2013년 처음 시작한 이후로, Code.org는 Hour of Code 캠페인을 조직했습니다. - 수백만 명의 학생들에게 컴퓨터과학(정보과학)을 소개해왔습니다. - 전국가적으로 30개 이상의 공립 교육청과 협력하였으며, 모든 나이의 학습자를 위한 오픈소스 온라인 플랫폼인 Code Studio를 만들어 운영하고 있습니다. For more information, please visit: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
 더 많은 자료와 샘플 이메일을 [여기서](<%= hoc_uri('/resources') %>)찾아보세요..

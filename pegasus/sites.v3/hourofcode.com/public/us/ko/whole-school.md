@@ -1,7 +1,5 @@
----
-layout: wide
----
 
-# Get your whole school to participate
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+# 여러분의 전체 학교가 참여하도록 해보세요.
+
+전체 학교가 Hour of Code 이벤트 행사에 참여하는 방법은 여기에

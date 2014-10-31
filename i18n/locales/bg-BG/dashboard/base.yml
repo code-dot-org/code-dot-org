@@ -51,7 +51,7 @@ bg:
     sign_in_with: 'Влезте чрез %{provider}'
     signed_in: Влезнали сте!
     signed_out: 'Вие сте излязнали от <a href="%{url}"> Code.org</a>.'
-    sign_out_of: 'Вие сте използвали  %{provider} да се впишете. <a href="%{url}"> Щракнете тук, за</a> да излезете от%{provider}.'
+    sign_out_of: 'Вие сте използвали  %{provider} да се впишете. <a href="%{url}"> Щракнете тук, за</a> да излезете от %{provider}.'
     already_signedup: Вече сте се регистрирали?
     notyet_signedup: Не сте се присъединили още?
     google_oauth2: Профил в Google
@@ -65,10 +65,7 @@ bg:
     overview_student: 'Регистрирайте се, за да следите напредъка си. Вашият имейл се използва само при влизане в сайта и за възстановяване на парола. За повече информация вижте нашата <a href="http://code.org/privacy"> Политика за поверителност</a>.'
     overview_teacher: 'Преподавайте компютърни науки в класната ви стая като се регистрирате. <p/> Вие ще можете да добавите вашите ученици и да проследявате тяхното развитие.'
     no_signup_message: 'Можете да <a target="_blank" href="http://learn.code.org"> преминете в различните етапи и пъзели</a>, но ще трябва да се регистрирате, за да запишете вашия прогрес.'
-    prizes_message: 'Учениците от САЩ, които спечелят всички  %{num_trophies} трофеи, може да си изберат различни награди, включително свободно хостинг пространство, предоставено от Dropbox, Skype кредити и да си свалят игри от Electronic Arts.'
     teacher_educator_guide: Виж ръководството за обучители
-    teacher_prize_header: 'Спечели $1000 в <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> награди (до 15 юни 2014, до изчерпване на количествата)'
-    teacher_prize_message: 'В партньорство с <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> Code.org ще предлага до $1000 финансиране на учители от американски държавни училища, които обучат най-малко 15 ученици чрез K-8 въвеждащия курс в компютърните науки (до 15 юни 2014, до изчерпване на доставките).  <a href="http://code.org/educate/20hr"> вижте ръководството за учители</a>.  (Граница: $1000 на учител.  <a target="_blank" href="http://help.donorschoose.org/app/answers/detail/a_id/454/kw/code.org"> Вижте FAQ за още условия</a>.)'
     teacher_pitch: регистрация като Учител в Code.org
     teacher_title: Регистрация за учители
     student_pitch: регистрация като ученик в Code.org
@@ -79,6 +76,7 @@ bg:
     gender: Пол (по избор)
     birthday: Рожденна дата (по избор)
     age: Възраст
+    user_type: Are you a student or teacher?
     submit: Регистрирайте се
     teacher: Учител ли сте?
     valid_username: Достъпно!
@@ -308,7 +306,7 @@ bg:
   user_stats:
     recent_activity: Скорошна активност
     show_more: Покажи още
-    classroom_activity: Ънплъгт дейност
+    classroom_activity: Ънплъгд дейност
   home:
     title: Студио по кодиране
     all_courses: Преглед на курсове 1, 2 и 3
@@ -320,14 +318,13 @@ bg:
     teacher_dashboard: Виж прогресът на таблото
     teacher_student_count_one: 'Вие имате %{count} ученик.'
     teacher_student_count: 'Вие имате %{count} ученици.'
-    teacher_averages: 'Средно вашите ученици са спечелили %{trophy_average} от %{trophy_max} купите за "Основни знания".'
+    teacher_averages: 'Средно, вашите ученици са спечелили %{trophy_average} от %{trophy_max} купите за "Основни знания".'
     teacher_print_certificates: Печат на сертификати за ученици, които завършват този курс
     teacher_read_blog: Прочетете за новини и актуализации на нашите материали в нашия учителски блог
     classroom: Вашата класна стая
     student_progress: Вашият учебен прогрес
     student_stats: 'Вие сте спечелил %{trophy_count} от %{trophy_max}  трофеи.'
     student_left_off: 'Където сте спрели:'
-    student_finished_prize: 'Ако вие сте завършили всички уроци, вземете %{prize_link} и изберете друг клас %{online_link} или %{local_school_link}'
     student_finished: 'Като приключите всички уроци, изберете друг клас %{online_link} или %{local_school_link}'
     local_school: местно училище
     online: онлайн
@@ -350,6 +347,9 @@ bg:
     male: Мъж
     female: Жена
     none: Предпочитам да не отговоря
+  user_type:
+    student: Ученик
+    teacher: Учител
   footer:
     help_from_html: Инженери от Google, Microsoft, Facebook и Twitter помогнаха за създаването на този урок.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. Всички права запазени. <br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. Всички права запазени.'
@@ -360,20 +360,13 @@ bg:
     tos: Понятия
     privacy: Защита на личните данни
     secure: Защитената версия
-  prize_mail:
-    prize_earned:
-      subject: Осребряване на награда в Code.org!
-    teacher_prize_earned:
-      subject: Поздравления от Code.org!
-    teacher_bonus_prize_earned:
-      subject: Получи своята бонус награда в Code.org!
   reference_area:
     title: Нужда от помощ?
     subtitle: Вижте тези клипове и съвети
     teacher: Вижте решението
     auth_error: Не сте упълномощени да видите решението.
     submit: Актуализиране местоположението на художника
-    direction: Start Direction (in degrees)
+    direction: Стартова посока (в градуси)
   video:
     tab: Видео.
     notes: Няма видео? Показване на бележките.

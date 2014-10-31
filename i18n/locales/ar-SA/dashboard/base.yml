@@ -65,10 +65,7 @@ ar:
     overview_student: 'قم بالتسجيل للحصول على حساب لتتابع تقدمك. يستخدم البريد الالكتروني الخاص بك بشكل أساسي للسماح لك بتسجيل الدخول وإستعادة كلمة المرور. للمزيد من المعلومات, شاهد <a href="http://code.org/privacy">سياسة الخصوصية</a>.'
     overview_teacher: 'قم بتدريس علوم الكمبيوتر في صفك بالتسجيل للحصول على حساب.<p/> سوف يصبح بإمكانك إضافة طلابك و متابعة تقدمهم .'
     no_signup_message: 'يمكنك<a target="_blank" href="http://learn.code.org"> تصفح مختلف المراحل والالغاز</a>, ولكن سوف تحتاج إلى التسجيل لحفظ تقدمك.'
-    prizes_message: 'طلاب الولايات المتحدة الذين يكسبون كل مفهوم الجوائز %{num_trophies} يمكنك تحديد مجموعة متنوعة من الجوائز والتي تتضمن مساحة حرة من دروب بوكس , رصيد سكايب ، والألعاب القابلة للتحميل من الفنون الإلكترونية.'
     teacher_educator_guide: راجع دليل المعلم
-    teacher_prize_header: 'اربح 1,000 دولار في <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> يكافئ (عن طريق 15 يونيو 2014، حتى آخر الكمية)'
-    teacher_prize_message: 'في شراكة مع <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a>، وسوف تقدم Code.org يصل إلى 1,000 دولار في التمويل الفصول الدراسية للمدرسين في المدارس العامة الأمريكية الذي يؤدي على الأقل 15 طالبا من خلال "مقدمة" ك-8 لدورة "علوم الحاسب الآلي" (من خلال 15 يونيو 2014، في حين أن الإمدادات الماضي).  <a href="http://code.org/educate/20hr"> راجع دليل المعلم</a>.  (الحد الأقصى: 1,000 دولار كل مدرس.  <a target="_blank" href="http://help.donorschoose.org/app/answers/detail/a_id/454/kw/code.org"> راجع الأسئلة المتداولة لحدود أكثر</a>.)'
     teacher_pitch: تسجيل المعلمين ل Code.org
     teacher_title: تسجيل حساب المعلم
     student_pitch: تسجيل الطالب ل Code.org
@@ -79,6 +76,7 @@ ar:
     gender: الجنس (اختياري)
     birthday: تاريخ الميلاد (اختياري)
     age: العمر
+    user_type: Are you a student or teacher?
     submit: تسجيل
     teacher: هل أنت معلم؟
     valid_username: متاح!
@@ -330,7 +328,6 @@ ar:
     student_progress: تقدم تعلمك
     student_stats: 'لقد حصلت %{trophy_count} من %{trophy_max}  جائزة "اتقان المفهوم".'
     student_left_off: 'اين كنت آخر مرة:'
-    student_finished_prize: 'لقد أتممت جميع الدروس, اطلب %{prize_link} وقم باختيار صف آخر %{online_link} أو في %{local_school_link}'
     student_finished: 'لقد أتممت جميع الدروس, قم باختيار صف آخر %{online_link} أو في %{local_school_link}'
     local_school: مدرسة محلية
     online: متصل
@@ -353,6 +350,9 @@ ar:
     male: ذكر
     female: أنثى
     none: أفضل عدم الإجابة
+  user_type:
+    student: طالب
+    teacher: Teacher
   footer:
     help_from_html: ساعد مهندسين من جوجل ومايكروسوفت والفيس بوك وتويتر في إنشاء هذه البرنامج التعليمية.
     art_from_html: 'لعبة الطيور الغاضبة &trade;&copy;Angry Birds عام  2009 - 2013 جميع الحقوق محفوظة ريفو الترفيهية المحدودة. <br/>لعبة النباتات والزومبيس &trade;&copy;Plants vs. Zombie  عام 2013 جميع الحقوق محفوظة لشركة الفنون الإلكترونية.'
@@ -363,13 +363,6 @@ ar:
     tos: الشروط
     privacy: سياسة الخصوصية
     secure: نسخة آمنة
-  prize_mail:
-    prize_earned:
-      subject: استبدال الجائزة الخاصة بك في Code.org!
-    teacher_prize_earned:
-      subject: تهاني من Code.org!
-    teacher_bonus_prize_earned:
-      subject: استبدال جائزة المكافأة الخاصة بك في Code.org!
   reference_area:
     title: بحاجة إلى مساعدة؟
     subtitle: مشاهدة اشرطة الفيديو والتلميحات

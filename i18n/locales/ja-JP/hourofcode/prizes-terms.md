@@ -18,11 +18,11 @@ Code.org は Dropbox の容量や Skypeのクレジットの使用の仕方に�
 
 ## ゲストで演説される方とのビデオ会話:
 
-この賞は K-12 アメリカの公立学校のみ対象です。 対象になるには、あなたの学校全体が 2014 年 11 月 14 日までにHour of Codeに登録する必要があります。 Code.org は独自で学校を選考し、web会話の時間帯を提供し、コンピューターに詳しい先生と共に詳細の設定を行います。
+Prize limited to K-12 classrooms in the U.S. and Canada only. To qualify, sign up your classroom by November 14, 2014. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligbile to win.
 
 ## クラス全員分のノートパソコン (またはその他技術のために使用できる $10,000) :
 
-この賞は K-12 アメリカの公立学校のみ対象です。 なぜ公立学校だけ対象なのですか？ [See the answer here](http://www.hourofcode.com/#faq). 対象になるには、あなたの学校全体が 2014 年 11 月 14 日までにHour of Codeに登録する必要があります。 アメリカ国内で、各州それぞれ１つ学校が選ばれ、クラス全員にコンピューターが与えられるでしょう。 Code.org は2014 年 12 月 1 日までに選考し、受賞者にメールで通知致します。
+この賞は K-12 アメリカの公立学校のみ対象です。 To qualify, your entire school must register for the Hour of Code by November 14, 2014. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2014.
 
 To clarify, this is not a sweepstakes or a contest involving pure chance.
 

@@ -15,6 +15,7 @@
   "nextLevel": "恭喜你！你解决了这个谜题。",
   "no": "不",
   "numBlocksNeeded": "这个谜题可以用%1个语句块解决。",
+  "pause": "Pause",
   "reinfFeedbackMsg": "You can press the \"Try again\" button to go back to running your app.",
   "repeatForever": "一直重复下去",
   "repeatDo": "做",

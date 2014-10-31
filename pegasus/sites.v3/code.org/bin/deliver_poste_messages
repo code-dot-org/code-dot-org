@@ -246,11 +246,15 @@ def main()
     until queue.empty?
       next unless delivery = queue.pop(true) rescue nil
 
-      #begin
+      begin
         deliverer.send delivery
+      rescue Net::SMTPSyntaxError => e
+        puts "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
+      rescue Net::SMTPFatalError => e
+        puts "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
       #rescue => e
         #puts "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
-      #end
+      end
 
       POSTE_DB[:poste_deliveries].where(id:delivery[:id]).update(sent_at:DateTime.now)
     end

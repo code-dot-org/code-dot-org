@@ -1,6 +1,6 @@
 ---
 title: District partnerships
-nav: educate_nav
+nav: educate2_nav
 social:
   "og:description": "Partner with Code.org to bring K-12 computer science to your district."
   "og:image": "http://code.org/images/code-logo-640x640.png"

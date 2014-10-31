@@ -18,11 +18,11 @@ Code.org contactarà amb els organitzadors després de l'Hora de Codi (8-14 dese
 
 ## Vídeo xat amb un orador convidat:
 
-Premi limitat a escoles de secundària dels Estats Units. Per qualificar-se, la teva escola sencera s'ha d'inscriure per a l'Hora de Codi abans del 14 novembre de 2014. Code.org seleccionara les escoles guanyadores aleatòriament, proporcionant un interval de temps de xat, i treballant amb el professor corresponent per establir els detalls de la tecnologia.
+Prize limited to K-12 classrooms in the U.S. and Canada only. To qualify, sign up your classroom by November 14, 2014. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligbile to win.
 
 ## Conjunt d'ordinadors portàtils per a l'aula (o 10,000 dòlars per altres tecnologies):
 
-Premi limitat a escoles públiques de secundària dels Estats Units. Per què només les escoles públiques? [Veure la resposta aquí](http://www.hourofcode.com/#faq). Per qualificar-se, la teva escola sencera s'ha d'inscriure per a l'Hora de Codi abans del 14 novembre de 2014. Una escola a cada estat dels EUA rebrà un conjunt d'ordinadors per a l'aula. Code.org seleccionarà i notificarà als guanyadors per correu electrònic abans de l'1 de desembre de 2014.
+Premi limitat a escoles públiques de secundària dels Estats Units. To qualify, your entire school must register for the Hour of Code by November 14, 2014. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2014.
 
 To clarify, this is not a sweepstakes or a contest involving pure chance.
 

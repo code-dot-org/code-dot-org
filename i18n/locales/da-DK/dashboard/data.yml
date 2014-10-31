@@ -49,6 +49,7 @@ da:
           desc: Rediger program (beta)
           MazeEC: Trin 1
           Webapp: Fase 2
+          ArtistEC: Trin 3
         events:
           desc: Hoppe (beta)
           Bounce: Trin 1
@@ -98,6 +99,7 @@ da:
         MazeStep: Labyrint trin Mode
         Wordsearch: Ordsøgning
         Webapp: Webapp
+        ArtistEC: Kunstneren
     trophy:
       name:
         Bronze: Bronze
@@ -321,6 +323,8 @@ da:
         maze_wordsearch_k_15: Flytte mig en vej, så en anden til at stave ordet ABOVE
         maze_wordsearch_k_16: Flytte mig en vej, så en anden til at stave ordet BELOW
         maze_wordsearch_k_20: Dette er en test! Flytte mig en måde, så en anden til at stave ordet STORY
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColour" block.'
     video:
       name:
         maze_intro: Labyrint Intro

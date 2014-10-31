@@ -74,17 +74,7 @@
     no_signup_message: Tu podes <a target="_blank" href="http://learn.code.org"> consultar
       as várias fases e quebra-cabeças</a>, mas precisarás de te inscrever para guardar
       o teu progresso.
-    prizes_message: U.S. students who earn all %{num_trophies} concept trophies can
-      select a variety of prizes including free Dropbox space, Skype credits, and
-      downloadable games from Electronic Arts.
     teacher_educator_guide: Consulta o guia do educador
-    teacher_prize_header: Ganha $1000 US em recompensas em <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
-      prémios
-    teacher_prize_message: 'Em parceria com <a target="_blank" href="http://DonorsChoose.org">
-      DonorsChoose.org</a>, a Code.org vai oferecer até $1.000 US em recursos escolares
-      para professores de escolas públicas dos EUA que incentivem pelo menos 15 alunos
-      a completar o curso. <a href="http://code.org/educate/20hr"> Ver guia do educador
-      para obter mais informações.</a> '
     teacher_pitch: Ensine o K-8 Introdução à Informática na sua sala de aula
     teacher_title: Registo de professor
     student_pitch: 'Para além de 1 hora: Tente a nossa K-8 Introdução à informática'
@@ -95,6 +85,7 @@
     gender: Género (opcional)
     birthday: Aniversário (opcional)
     age: Idade
+    user_type: Are you a student or teacher?
     submit: Registar
     teacher: "És um professor?"
     valid_username: Disponível!
@@ -389,8 +380,6 @@
     student_stats: Ganhaste %{trophy_count} de %{trophy_max}  troféus "Mestria de
       Conceitos".
     student_left_off: 'Onde paraste:'
-    student_finished_prize: Completaste todos os tutoriais, reclama o teu %{prize_link}
-      e escolhe outra aula %{online_link} ou em %{local_school_link}
     student_finished: Você completou todos os tutoriais, escolha outra aula %{online_link}
       ou %{local_school_link}.
     local_school: escola local
@@ -417,6 +406,9 @@
     male: Masculino
     female: Feminino
     none: Prefiro não responder
+  user_type:
+    student: estudante
+    teacher: Teacher
   footer:
     help_from_html: Engenheiros da <a href="http://www.google.com">Google</a>, <a
       href="http://www.microsoft.com">Microsoft</a>, <a href="http://www.facebook.com">
@@ -433,13 +425,6 @@
     tos: Termos de serviço
     privacy: Política de privacidade
     secure: Secure Version
-  prize_mail:
-    prize_earned:
-      subject: Reclame o teu prémio em Code.org!
-    teacher_prize_earned:
-      subject: Reclame o teu prémio em Code.org!
-    teacher_bonus_prize_earned:
-      subject: Reclame o teu prémio bónus em Code.org!
   reference_area:
     title: Precisas de ajuda?
     subtitle: Vê estes vídeos e dicas

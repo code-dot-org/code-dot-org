@@ -53,7 +53,7 @@ A la Xina, cada estudiant aprèn informàtica per graduar-se l'escola secundàri
 
 **Sobre Code.org**
 
-Code.org® és un estament públic 501c3 sense ànim de lucre dedicat a ampliar la participació en informàtica i augmentar la participació de les dones i de les minories de estudiants de color. La seva visió és que cada alumne de cada escola ha de tenir l'oportunitat d'aprendre programació informàtica. Després del llançament al 2013, Code.org organitzà la campanya d'Hora de Codi — que ha introduït milions d'estudiants a la informàtica — associat amb més de 30 districtes de l'escola pública a nivell nacional, va llançar el Code Studio, una plataforma de codi obert en línia d'aprenentatge per a totes les edats. Per obtenir més informació, si us plau visiteu: <% if @country == 'uk' %> [www.uk.code.org](http://uk.code.org). <% else %> [www.code.org](http://code.org). <% end %>
+Code.org® és un estament públic 501c3 sense ànim de lucre dedicat a ampliar la participació en informàtica i augmentar la participació de les dones i de les minories de estudiants de color. La seva visió és que cada alumne de cada escola ha de tenir l'oportunitat d'aprendre programació informàtica. Després del llançament al 2013, Code.org organitzà la campanya d'Hora de Codi — que ha introduït milions d'estudiants a la informàtica — associat amb més de 30 districtes de l'escola pública a nivell nacional, va llançar el Code Studio, una plataforma de codi obert en línia d'aprenentatge per a totes les edats. For more information, please visit: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
 Troba més recursos i correus de exemple [aquí](<%= hoc_uri('/resources') %>).

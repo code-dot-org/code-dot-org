@@ -45,7 +45,7 @@ Esperamos que isso desperte o interesse dos alunos para continuar aprendendo. Al
 
 *Por que isso é importante?*
 
-Na China, todos os alunos estudam a ciência da computação para concluir o ensino médio. Nos EUA, 90% das escolas sequer a ensinam. Chegou a hora de agirmos de acordo com o século XXI. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them the confidence and know-how to succeed.
+Na China, todos os alunos estudam a ciência da computação para concluir o ensino médio. Nos EUA, 90% das escolas sequer a ensinam. Chegou a hora de agirmos de acordo com o século XXI. Sabemos que, independentemente do que nossos alunos venham a fazer quando chegarem à idade adulta, quer optem pela medicina, quer optem pela administração, política ou artes, saber como construir a tecnologia permitirá que eles tenham a confiança e o conhecimento necessários para alcançar o sucesso.
 
 **Mais detalhes e uma citação que podem ser usados nos materiais**
 
@@ -53,7 +53,7 @@ Na China, todos os alunos estudam a ciência da computação para concluir o ens
 
 **Sobre a Code.org**
 
-A Code.org® é uma instituição pública sem fins lucrativos dedicada a promover o estudo da ciência da computação e garantir que ela chegue também à minorias sociais, empoderando, por exemplo, mulheres e negros à participação nesta área. Sua visão é de que todos os alunos, de todas as escolas, devem ter a oportunidade de aprender programação de computadores. Depois de seu lançamento, em 2013, a Code.org organizou a campanha Hora do Código — que apresentou a ciência da computação a milhões de alunos — em parceria com mais de 30 distritos escolares de todo o território nacional, e lançou o Code Studio, uma plataforma de ensino on-line de código aberto para todas as idades. Para obter mais informações, visite: <% if @country == 'uk' %> [www.uk.code.org](http://uk.code.org). <% else %> [www.code.org](http://code.org). <% end %>
+A Code.org® é uma instituição pública sem fins lucrativos dedicada a promover o estudo da ciência da computação e garantir que ela chegue também à minorias sociais, empoderando, por exemplo, mulheres e negros à participação nesta área. Sua visão é de que todos os alunos, de todas as escolas, devem ter a oportunidade de aprender programação de computadores. Depois de seu lançamento, em 2013, a Code.org organizou a campanha Hora do Código — que apresentou a ciência da computação a milhões de alunos — em parceria com mais de 30 distritos escolares de todo o território nacional, e lançou o Code Studio, uma plataforma de ensino on-line de código aberto para todas as idades. For more information, please visit: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
 Encontre mais recursos e exemplos de e-mails [aqui](<%= hoc_uri('/resources') %>).

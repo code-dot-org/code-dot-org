@@ -72,19 +72,7 @@
     no_signup_message: <a target="_blank" href="http://learn.code.org">Çeşitli aşamalara
       ve bulmacalara gözatabilirsin</a> ama ilerlemeni kaydetmek için kayıt olman
       gerekmektedir.
-    prizes_message: Bütün %{num_trophies} kavram kupalarını kazanan ABD öğrencileri
-      Dropbox disk alanı, Skype kredisi ve Electronic Arts'dan indirilebilir oyunlar
-      da dahil çeşitli ödüller seçebilir.
     teacher_educator_guide: Eğitim rehberine bakın
-    teacher_prize_header: <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
-      ödüllerinden 1,000$ kazanın (15 Haziran 2014'e kadar geçerlidir, stokla sınırlıdır)
-    teacher_prize_message: '<a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
-      ile işbirliği neticesinde Code.org en az 15 öğrencisini K-8 Bilgisayar Bilimlerine
-      Giriş kursuna yönlendiren ABD devlet okullarında görevli öğretmenlere 1,000$
-      ''a kadar yardımda bulunmayı teklif etmektedir (15 Haziran 2014''e kadar geçerlidir,
-      stokla sınırlıdır). <a href="http://code.org/educate/20hr">Eğitimci kılavuzunu</a>
-      inceleyin. (Limit: Her öğretmen için 1,000$. <a target="_blank" href="http://help.donorschoose.org/app/answers/detail/a_id/454/kw/code.org">Daha
-      yüksek limitler için Sıkça Sorulan Sorular bölümünü inceleyin</a>.)'
     teacher_pitch: Code.org'a öğretmen olarak kaydolun
     teacher_title: "Öğretmen Kayıt"
     student_pitch: Code.org'a öğrenci olarak kaydolun
@@ -95,6 +83,7 @@
     gender: Cinsiyet (isteğe bağlı)
     birthday: Doğum Günü (isteğe bağlı)
     age: Yaş
+    user_type: Are you a student or teacher?
     submit: Kaydol
     teacher: "Öğretmen misiniz?"
     valid_username: Mevcut!
@@ -384,8 +373,6 @@
     student_stats: '"Kavram Ustalığı" kupalarından %{trophy_max} kupadan %{trophy_count}
       kupayı kazandınız.'
     student_left_off: 'Kaldığınız yer:'
-    student_finished_prize: Bütün eğitimleri tamamladınız, %{prize_link} talep ediniz
-      ve başka bir sınıf seçin %{online_link} ya da %{local_school_link}
     student_finished: Bütün örnek dersleri tamamladınız, şimdi başka bir  %{online_link}
       ders veya %{local_school_link} yerel ders seçebilirsiniz
     local_school: Yerel okul
@@ -412,6 +399,9 @@
     male: Erkek
     female: Kadın
     none: Cevap vermemeyi tercih ederim
+  user_type:
+    student: "öğrenci"
+    teacher: Teacher
   footer:
     help_from_html: Bu eğitici Google, Microsoft, Facebook, ve Twitter 'dan mühendislerin
       yardımıyla oluşturuldu.
@@ -425,13 +415,6 @@
     tos: "Şartlar"
     privacy: Gizlilik Politikası
     secure: Güvenli sürüm
-  prize_mail:
-    prize_earned:
-      subject: "Ödülünüzü Code.org'ta bozdurun!"
-    teacher_prize_earned:
-      subject: Code.org'dan tebrikler!
-    teacher_bonus_prize_earned:
-      subject: Bonus ödülünüzü Code.org'ta bozdurun!
   reference_area:
     title: Yardım ister misiniz?
     subtitle: Bu videolara ve ipuçlarına bakın

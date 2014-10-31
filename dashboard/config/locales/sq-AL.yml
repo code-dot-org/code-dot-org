@@ -69,15 +69,7 @@
       account.<p/> You'll be able to track your students' progress and get rewards.
     no_signup_message: Ti mund te shfletosh faza te ndryshme dhe enigma ne Code.org,
       por te duhet te regjistrohesh qe te ruash progresin tend.
-    prizes_message: U.S. students who earn all %{num_trophies} concept trophies can
-      select a variety of prizes including free Dropbox space, Skype credits, and
-      downloadable games from Electronic Arts.
     teacher_educator_guide: Shiko guiden e edukimit
-    teacher_prize_header: Fito 1000 dollare shperblim ngaDonorsChoose.org
-    teacher_prize_message: 'In partnership with <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>,
-      Code.org will offer up to $1,000 in classroom funding to U.S. public school
-      teachers who lead at least 15 students through this course. <a href="http://code.org/educate/20hr">See
-      educator guide for more info.</a> '
     teacher_pitch: Meso hyrjen e shkencave kompjuterike K-8 ne klasen tuaj
     teacher_title: Regjistrimi per mesuesit
     student_pitch: 'Me shume se nje ore: provo hyrjen K-8 ne shkencat kompjuterike'
@@ -88,6 +80,7 @@
     gender: Gjinia (fakultative)
     birthday: Datelindje (fakultative)
     age: Age (optional)
+    user_type: Are you a student or teacher?
     submit: Regjistrohu
     teacher: Jeni nje mesues?
     valid_username: I disponueshem!
@@ -379,8 +372,6 @@
     student_stats: You've earned %{trophy_count} out of %{trophy_max} "Concept Mastery"
       trophies.
     student_left_off: 'Where you left off:'
-    student_finished_prize: You've completed all tutorials, claim your %{prize_link}
-      and pick another class %{online_link} or at a %{local_school_link}
     student_finished: You've completed all tutorials, pick another class %{online_link}
       or at a %{local_school_link}
     local_school: local school
@@ -407,6 +398,9 @@
     male: Male
     female: Female
     none: Prefer not to answer
+  user_type:
+    student: student
+    teacher: Teacher
   footer:
     help_from_html: Engineers from <a href="http://www.google.com">Google</a>, <a
       href="http://www.microsoft.com">Microsoft</a>, <a href="http://www.facebook.com">Facebook</a>,
@@ -422,13 +416,6 @@
     tos: Terms of service
     privacy: Privacy Policy
     secure: Secure Version
-  prize_mail:
-    prize_earned:
-      subject: Redeem your prize at Code.org!
-    teacher_prize_earned:
-      subject: Redeem your prize at Code.org!
-    teacher_bonus_prize_earned:
-      subject: Redeem your bonus prize at Code.org!
   reference_area:
     title: Need help?
     subtitle: See these videos and hints

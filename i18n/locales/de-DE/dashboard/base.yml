@@ -65,10 +65,7 @@ de:
     overview_student: 'Registriere dich, um deine Erfolge festzuhalten. Deine E-Mail Adresse wird nur zum Einloggen und Passwort-Wiederherstellung benutzt. Für mehr Informationen kannst du unsere <a href="http://code.org/privacy">Datenschutzerklärung</a> anschauen.'
     overview_teacher: 'Für Lehrer: Registrieren Sie sich, um ihre Schüler hinzuzufügen und ihren Lernfortschritt zu verfolgen.'
     no_signup_message: 'Du kannst <a target="_blank" href="http://learn.code.org">die verschiedenen Level und Puzzle</a> durchsuchen, aber um Deinen Fortschritt zu speichern musst Du dich anmelden.'
-    prizes_message: 'US-Studenten, die alle %{num_trophies} Konzept-Trophäen gesammelt haben, können eine Vielzahl von Preisen einschließlich Dropbox-Speicherplatz, Skype-Guthaben und herunterladbare Spiele von Electronic Arts und Valve gewinnen.'
     teacher_educator_guide: Lehrer-Handbuch
-    teacher_prize_header: 'Gewinne $1000 in Belohnungen für <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> (bis zum 15 Juni 2014, solange Vorrat)'
-    teacher_prize_message: 'In Zusammenarbeit mit <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>, vergibt Code.org bis zu 1.000 $ für die Klassenkasse an Lehrer, die mindestens 15 Schüler durch den K-8 Einführungskurs Informatik führen (am 15. Juni 2014, solange der Vorrat reicht).  <a href="http://code.org/educate/20hr">Sieh dir die Anleitung für Lehrer an</a>.  (Höchstwert 1.000 $ pro Lehrer.  <a target="_blank" href="http://help.donorschoose.org/app/answers/detail/a_id/454/kw/code.org">Lies die FAQ um mehr über die Regeln zu erfahren</a>.)'
     teacher_pitch: Registrierung für LehrerInnen
     teacher_title: Anmelden (Lehrer)
     student_pitch: Anmeldung für SchülerInnen
@@ -79,6 +76,7 @@ de:
     gender: Geschlecht (optional)
     birthday: Geburtstag (optional)
     age: Alter
+    user_type: Are you a student or teacher?
     submit: Registrieren
     teacher: Sind Sie ein Lehrer?
     valid_username: Verfügbar!
@@ -332,7 +330,6 @@ de:
     student_progress: Ihr Lernfortschritt
     student_stats: 'Sie haben %{trophy_count} von %{trophy_max} "Concept Mastery" Trophäen.'
     student_left_off: 'Wo Sie aufgehört haben:'
-    student_finished_prize: 'Sie haben alle Tutorials abgeschlossen, holen Sie sich Ihren %{prize_link} und wählen Sie eine andere Klasse über den %{online_link} oder in Ihrer %{local_school_link}'
     student_finished: 'Du hast alle Tutorials abgeschlossen. Wähle eine andere Klasse %{online_link} oder in deiner %{local_school_link}'
     local_school: örtliche Schule
     online: online
@@ -355,6 +352,9 @@ de:
     male: Männlich
     female: Weiblich
     none: Möchte ich nicht beantworten
+  user_type:
+    student: Schüler
+    teacher: Teacher
   footer:
     help_from_html: Ingenieure von Google, Microsoft, Facebook und Twitter haben dazu beigetragen, dieses Tutorial zu erstellen.
     art_from_html: 'Angry Birds&trade; & &copy; 2009-2013 Rovio Entertainment Ltd. Alle Rechte vorbehalten. <br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. Alle Rechte vorbehalten.'
@@ -365,13 +365,6 @@ de:
     tos: Bedingungen
     privacy: Datenschutzerklärung
     secure: Sichere Version
-  prize_mail:
-    prize_earned:
-      subject: Löse deinen Preis auf Code.org ein!
-    teacher_prize_earned:
-      subject: Glückwünsche von Code.org!
-    teacher_bonus_prize_earned:
-      subject: Löse deinen Bonus-Preis auf Code.org ein!
   reference_area:
     title: Brauchen Sie Hilfe?
     subtitle: Sehen Sie sich diese Videos und Hinweise an

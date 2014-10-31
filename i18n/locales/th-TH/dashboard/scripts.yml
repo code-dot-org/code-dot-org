@@ -1,13 +1,13 @@
-th:
+tk:
   data:
     script:
       name:
         test:
           "Jigsaw: Learn to drag and drop": 'Jigsaw: Learn to drag and drop'
-          The Maze: เขาวงกต
+          The Maze: The Maze
           Multi: Multi
-          Match: จับคู่
-          Math Image: ภาพคณิตศาสตร์
+          Match: Match
+          Math Image: Math Image
           title: Test Course
           description: Just an internal test course.
         course1:
@@ -43,9 +43,9 @@ th:
           description_short: Course 1 is designed for early readers in the lower elementary grades.
           "Artist: Loops": 'Artist: Loops'
         course2:
-          The Maze: เขาวงกต
+          The Maze: The Maze
           Suzi: Suzi
-          The Artist: ศิลปิน
+          The Artist: The Artist
           Artist Debugging: Artist Debugging
           Bounce: Bounce
           "Studio: Create a Story": 'Play Lab: Create a Story'
@@ -59,11 +59,11 @@ th:
           Bee Debugging: Bee Debugging
           Bee Functions: Bee Functions
           Maze Loops: Maze Loops
-          Graph Paper Programming: การเขียนกระดาษกราฟ
+          Graph Paper Programming: Graph Paper Programming
           "Real-life Algorithms: Paper Planes": 'Real-life Algorithms: Paper Planes'
           Getting Loopy: Getting Loopy
           Relay programming: Relay programming
-          Conditionals: 'เงื่อนไข '
+          Conditionals: Conditionals
           Binary Bracelets: Binary Bracelets
           The Big Event: The Big Event
           Your Digital Footprint: Your Digital Footprint
@@ -81,9 +81,9 @@ th:
           "Maze: Sequence2": 'Maze: Sequence2'
           "Artist: Nested Loops": 'Artist: Nested Loops'
         course3:
-          The Maze: เขาวงกต
+          The Maze: The Maze
           "Studio: Create a Story": 'Play Lab: Create a Story'
-          The Artist: ศิลปิน
+          The Artist: The Artist
           title: Course 3
           Artist Functions: Artist Functions
           Artist For Loops: Artist For Loops
@@ -97,7 +97,7 @@ th:
           Bounce: Bounce
           Maze Conditionals: Maze Conditionals
           Artist Functions with Parameters: Artist Functions with Parameters
-          Computational Thinking: คิดคำนวณ
+          Computational Thinking: Computational Thinking
           Functional Suncatchers: Functional Suncatchers
           Songwriting Parameters: Songwriting Parameters
           Dice Race: Dice Race
@@ -133,7 +133,7 @@ th:
         msm:
           title: Middle School Math
           description: Private work in progress for Middle School Math.
-          Graph Paper Programming: การเขียนกระดาษกราฟ
+          Graph Paper Programming: Graph Paper Programming
           Assessments: Assessments
           Unit 1: Unit 1
           Unit 2: Unit 2

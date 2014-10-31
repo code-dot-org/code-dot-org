@@ -53,7 +53,7 @@ Sperăm că va trezi interesul elevilor pentru a continua învăţarea. Cercetar
 
 **Despre Code.org**
 
-Code.org® este o organizație non-profit dedicată extinderii educației cu privire la tehnologia computerelor și programare, prin promovarea acesteia în școli și prin creșterea participării femeilor dar și a elevilor minorități. Viziunea organizației este că fiecare elev din fiecare şcoală ar trebui să aibă posibilitatea să învețe programare. După lansarea în 2013, Code.org a organizat campania Hour of Code — care a introdus tehnologia computerelor la milioane de elevi — stabilind un parteneriat cu mai mult de 30 de districte şcolare la nivel naţional şi lansând Code Studio, o platformă de învațare open-source online, pentru toate vârstele. Pentru mai multe informaţii, vă rugăm să vizitaţi: < % dacă @country == 'ro' %> [www.ro.code.org](http://uk.code.org). <% else %> [www.code.org](http://code.org). <% end %>
+Code.org® este o organizație non-profit dedicată extinderii educației cu privire la tehnologia computerelor și programare, prin promovarea acesteia în școli și prin creșterea participării femeilor dar și a elevilor minorități. Viziunea organizației este că fiecare elev din fiecare şcoală ar trebui să aibă posibilitatea să învețe programare. După lansarea în 2013, Code.org a organizat campania Hour of Code — care a introdus tehnologia computerelor la milioane de elevi — stabilind un parteneriat cu mai mult de 30 de districte şcolare la nivel naţional şi lansând Code Studio, o platformă de învațare open-source online, pentru toate vârstele. For more information, please visit: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
 Găsiţi mai multe resurse şi exemple de e-mailuri [ aici](<%= hoc_uri('/resources') %>).

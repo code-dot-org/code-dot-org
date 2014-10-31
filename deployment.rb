@@ -125,7 +125,7 @@ class CDOImpl < OpenStruct
 
   def canonical_hostname(domain)
     return "localhost.#{domain}" if rack_env?(:development)
-    return "#{self.name}.#{domain}" if ['daemon', 'console', 'hoc-levels'].include?(self.name)
+    return "#{self.name}.#{domain}" if ['console', 'hoc-levels'].include?(self.name)
     return domain if rack_env?(:production)
     "#{rack_env}.#{domain}"
   end
@@ -209,3 +209,4 @@ end
 def secrets_dir(*dirs)
   aws_dir('secrets', *dirs)
 end
+

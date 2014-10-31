@@ -28,42 +28,43 @@ fi:
           desc: Kooditunti
           Maze: Vaihe 1
         Edit Code:
-          desc: Edit Code (beta)
+          desc: Muokkaa koodia (beta)
           MazeEC: Vaihe 1
         2014 Levels:
-          desc: Bounce (beta)
+          desc: Pompi (beta)
           Bounce: Vaihe 1
         Builder Levels:
-          desc: User-Created Puzzles (beta)
+          desc: Käyttäjän tekemät palapelit (beta)
           Custom: Vaihe 1
         Flappy Levels:
           desc: Flappy Bird
           Flappy: Vaihe 1
         Jigsaw Levels:
-          desc: Jigsaw (beta)
+          desc: Palapeli (beta)
           Jigsaw: Vaihe 1
         Step Levels:
-          desc: Maze (beta)
+          desc: Sokkelo (beta)
           MazeStep: Stage Step
         edit-code:
-          desc: Edit Code (beta)
+          desc: Muokkaa koodia (beta)
           MazeEC: Vaihe 1
           Webapp: Vaihe 2
+          ArtistEC: Vaihe 3
         events:
-          desc: Bounce (beta)
+          desc: Pompi (beta)
           Bounce: Vaihe 1
           Studio: Vaihe 2
         builder:
-          desc: User-Created Puzzles (beta)
+          desc: Käyttäjän tekemät palapelit (beta)
           Custom: Vaihe 1
         flappy:
           desc: Flappy Bird
           Flappy: Vaihe 1
         jigsaw:
-          desc: Jigsaw (beta)
+          desc: Palapeli (beta)
           Jigsaw: Vaihe 1
         step:
-          desc: Maze (beta)
+          desc: Sokkelo (beta)
           MazeStep: Stage Step
         wordsearch:
           desc: Spelling Bee (beta)
@@ -98,6 +99,7 @@ fi:
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
         Webapp: Webapp
+        ArtistEC: Taiteilija
     trophy:
       name:
         Bronze: Pronssi
@@ -327,6 +329,8 @@ fi:
         maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
         maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
         maze_wordsearch_k_20: This is a test! Move me one way, then another to spell the word STORY
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColour" block.'
     video:
       name:
         maze_intro: Sokkelon johdanto

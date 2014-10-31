@@ -31,6 +31,10 @@ class Game < ActiveRecord::Base
     @@game_calc ||= find_by_name("Calc")
   end
 
+  def self.eval
+    @@game_eval ||= find_by_name("Eval")
+  end
+
   def unplugged?
     app == UNPLUG
   end
