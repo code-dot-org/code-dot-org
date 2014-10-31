@@ -39,7 +39,7 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
     throw new Error("Can't find definition block to edit");
   }
 
-  var dom = Blockly.Xml.blockToDom_(this.functionDefinitionBlock);
+  var dom = Blockly.Xml.blockToDom_(targetFunctionDefinitionBlock);
   targetFunctionDefinitionBlock.dispose(false, false, true);
   this.functionDefinitionBlock = Blockly.Xml.domToBlock_(Blockly.modalWorkspace, dom);
   this.functionDefinitionBlock.moveTo(FRAME_MARGIN_SIDE, FRAME_MARGIN_TOP);
