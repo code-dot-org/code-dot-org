@@ -216,6 +216,9 @@ Blockly.BlockSpace.prototype.removeTopBlock = function(block) {
 Blockly.BlockSpace.prototype.getTopBlocks = function(ordered) {
   // Copy the topBlocks_ list.
   var blocks = [].concat(this.topBlocks_);
+  if (this === Blockly.mainBlockSpace && Blockly.modalWorkspace) {
+    blocks = blocks.concat(Blockly.modalWorkspace.getTopBlocks());
+  }
   if (ordered && blocks.length > 1) {
     var offset = Math.sin(Blockly.BlockSpace.SCAN_ANGLE / 180 * Math.PI);
     if (Blockly.RTL) {

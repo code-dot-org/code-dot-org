@@ -39,11 +39,12 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
     throw new Error("Can't find definition block to edit");
   }
 
-  this.functionDefinitionBlock = Blockly.Xml.domToBlock_(Blockly.modalWorkspace, Blockly.Xml.blockToDom_(this.functionDefinitionBlock));
-  targetFunctionDefinitionBlock.dispose(false, false);
-  this.functionDefinitionBlock.setUserVisible(true);
+  var dom = Blockly.Xml.blockToDom_(this.functionDefinitionBlock);
+  targetFunctionDefinitionBlock.dispose(false, false, true);
+  this.functionDefinitionBlock = Blockly.Xml.domToBlock_(Blockly.modalWorkspace, dom);
   this.functionDefinitionBlock.moveTo(FRAME_MARGIN_SIDE, FRAME_MARGIN_TOP);
   this.functionDefinitionBlock.movable_ = false;
+  this.functionDefinitionBlock.setUserVisible(true);
 
   goog.dom.getElement('functionNameText').value = functionName;
 
@@ -141,7 +142,7 @@ Blockly.FunctionEditor.prototype.hide = function() {
   Blockly.activeWorkspace = Blockly.mainBlockSpace;
   this.functionDefinitionBlock.setUserVisible(false);
   Blockly.Xml.domToBlock_(Blockly.mainBlockSpace, Blockly.Xml.blockToDom_(this.functionDefinitionBlock));
-  this.functionDefinitionBlock.dispose(false, false);
+  this.functionDefinitionBlock.dispose(false, false, true);
 
   goog.style.showElement(this.container_, false);
   goog.style.showElement(this.modalBackground_, false);
@@ -169,6 +170,10 @@ Blockly.FunctionEditor.prototype.create_ = function() {
     return metrics;
   });
   Blockly.modalWorkspace = Blockly.modalBlockSpaceEditor.blockSpace;
+
+  Blockly.modalBlockSpaceEditor.addChangeListener(function() {
+    Blockly.mainBlockSpace.fireChangeEvent();
+  });
 
   // Add modal background and close button
   this.modalBackground_ = Blockly.createSvgElement('g', {'class': 'modalBackground'});
