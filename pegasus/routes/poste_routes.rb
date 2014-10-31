@@ -25,7 +25,8 @@ get '/o/:id' do |id|
   only_for 'code.org'
   dont_cache
   delivery = Poste::Delivery.get_by_encrypted_id(id)
-  Poste::Open.create(delivery: delivery, created_ip: request.ip) unless delivery.nil?
+  id = DB[:poste_opens].insert(delivery_id:delivery.id, created_ip:request.ip, created_at:DateTime.now) if delivery
+  response.headers['X-Poste-Open-Id'] = id.to_s
   send_file pegasus_dir('sites.v3/code.org/public/images/1x1.png'), type: 'image/png'
 end
 
