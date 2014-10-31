@@ -2,16 +2,16 @@
 title: Prizes
 layout: wide
 ---
-
+<a href="/#join"><button style="float: right; margin-top: 50px">Sign up your event</button></a>
 # The Hour of Code — prizes for every organizer
 
 ## Every organizer wins a thank you gift-code
-Every educator who hosts an Hour of Code for students will receive 10 GB of Dropbox space or $10 Skype credit as a thank you gift! 
+Every educator who hosts an Hour of Code for students will receive 10 GB of Dropbox space or $10 Skype credit as a thank you gift!
 
 <% if @country == 'uk' %>
 
 ## Lucky classrooms win a video chat with a guest speaker!
-20 lucky classrooms will be invited to join a video chat to celebrate the Hour of Code during December 8-14. Your students will be able to ask questions and chat with technology-industry leaders. [Check out last year’s chats](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) with Bill Gates, Twitter founder Jack Dorsey, Susan Wojcicki of Google and Gabe Newell of Valve. 
+20 lucky classrooms will be invited to join a video chat to celebrate the Hour of Code during December 8-14. Your students will be able to ask questions and chat with technology-industry leaders. [Check out last year’s chats](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) with Bill Gates, Twitter founder Jack Dorsey, Susan Wojcicki of Google and Gabe Newell of Valve.
 
 <% end %>
 
@@ -51,7 +51,7 @@ Yes. Your whole school has to participate to be eligible for the prize but only 
 
 
 ## Does your whole school have to enter to win a the tech chat?
-Any classroom (public or private school) is eligible to win this prize. Your whole school need not apply. 
+Any classroom (public or private school) is eligible to win this prize. Your whole school need not apply.
 
 
 ## Can non-public schools win the video chat prize?
@@ -85,7 +85,7 @@ To qualify, your entire school must register for the Hour of Code as well as com
 
 ## If my whole school can’t do the Hour of Code during Computer Science Education Week (Dec. 8-14), can I still qualify for prizes?
 Yes, just be sure to submit a logistics plan that outlines how your whole school is participating over a reasonable length of time and register for the Hour of Code by November 14th.
-
+<a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>
 <% end %>
 
 
