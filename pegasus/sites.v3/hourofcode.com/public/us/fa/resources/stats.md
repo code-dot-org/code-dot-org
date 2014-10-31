@@ -1,19 +1,15 @@
-* * *
 
-عنوان: منابع نما: بزرگ
 
-* * *
+# چگونه توجه رسانه‌ها را به رويداد ساعت كدنويسي خود جلب كنيد
 
-# How to attract media to your Hour of Code event
+## چند آمار تکان‌دهنده آمار (آمریکا):
 
-## Some shocking statistics (USA):
+  * تعداد شغل‌هاي مرتبط با كامپيوتر در 10 سال آينده، يك ميليون بيش‌ از تعداد دانش‌اموزان خواهد بود (با مجموع درآمد‌هاي سالانه 500 ميليارد دلار).
+  * بيش از 50 درصد از تمامي شغل‌هاي مربوط به رياضي و علوم، مربوط به محاسبات كامپيوتري است. 
+  * شغل‌هاي مربوط به محاسبات و كامپيوتر در بين پر درآمد‌ترين شغل‌ها براي تازه فارغ‌التحصيلان است. با اين حال كم‌تر از 3 درصد دانشجويان كالج‌ها در علوم كامپيوتر فارغ‌التحصيل مي‌شوند.
+  * در 26 ايالت، علوم كامپيوتر جزو واحدهاي فارغ‌التحصيلي دبيرستان محسوب نمي‌شوند. 
+  * كم‌تر از 20 درصد از دانش‌جويان علوم كامپيوتر AP دختر هستند. كم‌تر از 10 درصد آن‌ها سياه‌پوست و يا از آمريكاي لاتين هستند.
 
-  * There will be one million more computing jobs than students over the next 10 years (adding up to $500 billion in salaries).
-  * More than 50 percent of all projected math and science occupations are in computing occupations. 
-  * Computing occupations are among the highest-paying jobs for new graduates. Yet fewer than 3% of college students graduate with a degree in computer science.
-  * In 26 states, computer science classes don’t count toward math or science high school graduation requirements. 
-  * Less than 20% of AP Computer Science students are women. Less than 10% are black or Latino.
-
-## Infrographic version:
+## نسخه اينفوگرافيك:
 
 ![image](http://code.org/images/fit-8000/Code.org_infographic.png)

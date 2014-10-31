@@ -336,6 +336,12 @@ th {
   }
 }
 
+.header.hide_on_mobile {
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
+}
+
 .header_status_bar {
   background-color: $dark_color;
   border-radius: 5px;
@@ -1390,7 +1396,7 @@ $information-desktop: "only screen and (min-width: 1024px)";
     float: left;
   }
   input {
-    margin-top: 0px;
+    margin-top: 12px;
   }
   .item-radio {
     display: inline-block;
@@ -1415,7 +1421,10 @@ $information-desktop: "only screen and (min-width: 1024px)";
   .answerbutton {
     margin-top: 15px;
     margin-right: 15px;
-    padding: 10px;
+    padding-left: 10px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 

@@ -1,0 +1,6 @@
+id,word
+<%=
+  require 'csv'
+  i = 0
+  node['cdo-secrets']['words'].map{|word| CSV.generate_line [i += 1, word]}.join('')
+%>

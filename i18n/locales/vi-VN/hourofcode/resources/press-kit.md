@@ -53,7 +53,7 @@ Hadi Partovi, người sáng lập và CEO của Code.org nói rằng "Hour of C
 
 **Thông tin về Code.org**
 
-Code.org® là một tổ chức phi lợi nhuận được chỉ định để mở rộng sự tham gia trong khoa học máy tính và gia tăng sự tham gia của phụ nữ trong lĩnh vực nghiên cứu khoa học máy tính. Tầm nhìn của nó là mỗi học sinh trong tất cả các trường nên có cơ hội để học lập trình máy tính. Sau khi phát động vào năm 2013, Code.org tổ chức chiến dịch Hour of Code cũng giới thiệu hàng triệu sinh viên cho khoa học máy tính-hợp tác với hơn 30 khu vực trên toàn quốc, thành lập Codr Studio, một nền tảng mã nguồn mở, trực tuyến học cho mọi lứa tuổi. For more information, please visit: <% if @country == 'uk' %> [www.uk.code.org](http://uk.code.org). <% else %> [www.code.org](http://code.org). <% end %>
+Code.org® là một tổ chức phi lợi nhuận được chỉ định để mở rộng sự tham gia trong khoa học máy tính và gia tăng sự tham gia của phụ nữ trong lĩnh vực nghiên cứu khoa học máy tính. Tầm nhìn của nó là mỗi học sinh trong tất cả các trường nên có cơ hội để học lập trình máy tính. Sau khi phát động vào năm 2013, Code.org tổ chức chiến dịch Hour of Code cũng giới thiệu hàng triệu sinh viên cho khoa học máy tính-hợp tác với hơn 30 khu vực trên toàn quốc, thành lập Codr Studio, một nền tảng mã nguồn mở, trực tuyến học cho mọi lứa tuổi. For more information, please visit: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
 Find more resources and sample emails [here](<%= hoc_uri('/resources') %>).

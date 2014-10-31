@@ -18,11 +18,11 @@ Code.org, Kodlama Saatinden (8-14 Aralık) sonra organizatörlerle iletişim kur
 
 ## Bir konuk konuşmacıyla video sohbeti:
 
-Sadece Amerikan okulları ile sınırlı olan ödüldür. Hak kazanmak için, tüm okul Kodlama Saatine 14 Kasım 2014'ten önce kaydolmalıdır. Code.org kazanan okulları rastgele seçecek, web görüşmesi için bir zaman aralığı belirleyecek ve uygun öğretmenle işbirliği içinde teknoloji detaylarını kuracaktır.
+Prize limited to K-12 classrooms in the U.S. and Canada only. To qualify, sign up your classroom by November 14, 2014. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligbile to win.
 
 ## Tüm sınıfa dizüstü bilgisayar (veya 10.000$ değerinde başka bir teknoloji):
 
-Ödül sadece Amerikan devlet okulları ile sınırlı. Neden sadece devlet okulları? [Cevabını burada bulabilirsiniz](http://www.hourofcode.com/#faq). Hak kazanmak için, tüm okul Kodlama Saatine 14 Kasım 2014'ten önce kaydolmalıdır. ABD'de her bir eyalette birer okula bir sınıfa yetecek kadar dizüstü bilgisayar verilecektir. Code.org, kazananları 1 Aralık 2014 tarihinde e-posta yolu ile bilgilendirecektir.
+Ödül sadece Amerikan devlet okulları ile sınırlı. To qualify, your entire school must register for the Hour of Code by November 14, 2014. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2014.
 
 To clarify, this is not a sweepstakes or a contest involving pure chance.
 

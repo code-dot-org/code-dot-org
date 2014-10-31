@@ -1,6 +1,6 @@
 * * *
 
-layout: wide
+oppsett: bredt
 
 * * *
 

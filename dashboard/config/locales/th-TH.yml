@@ -1,4 +1,4 @@
-"th":
+"tk":
   activerecord:
     errors:
       messages:
@@ -68,16 +68,7 @@
       และได้รับรางวัล"
     no_signup_message: คุณสามารถ<a target="_blank" href="http://learn.code.org">เรียกดูระยะและปริศนาต่าง
       ๆ</a> แต่คุณจะต้องลงทะเบียนเพื่อบันทึกความคืบหน้าของคุณ
-    prizes_message: "นักศึกษาจากสหรัฐอเมริกาที่ได้รับถ้วยรางวัลแนวความคิดทั้งหมด%{num_trophies}
-      สามารถเลือกของรางวัลรวมถึงเนื้อที่ Dropbox เครดิต Skype และเกมที่ดาวน์โหลดได้จาก
-      Electronic Arts"
     teacher_educator_guide: "ดูคำแนะนำสำหรับผู้ฝึกสอน"
-    teacher_prize_header: Win $1,000 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
-      rewards
-    teacher_prize_message: 'In partnership with <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>,
-      Code.org will offer up to $1,000 in classroom funding to U.S. public school
-      teachers who lead at least 15 students through this course. <a href="http://code.org/educate/20hr">See
-      educator guide for more info.</a> '
     teacher_pitch: Teach the K-8 Intro to Computer Science in your classroom
     teacher_title: "สมัครเป็นครู"
     student_pitch: "สมัครเป็นนักเรียนสำหรับ code.org"
@@ -88,6 +79,7 @@
     gender: Gender (optional)
     birthday: Birthday (optional)
     age: Age (optional)
+    user_type: Are you a student or teacher?
     submit: "สมัครสมาชิก"
     teacher: "คุณเป็นครูหรือ"
     valid_username: "อนุญาต"
@@ -379,8 +371,6 @@
     student_stats: You've earned %{trophy_count} out of %{trophy_max} "Concept Mastery"
       trophies.
     student_left_off: 'Where you left off:'
-    student_finished_prize: You've completed all tutorials, claim your %{prize_link}
-      and pick another class %{online_link} or at a %{local_school_link}
     student_finished: You've completed all tutorials, pick another class %{online_link}
       or at a %{local_school_link}
     local_school: local school
@@ -407,6 +397,9 @@
     male: Male
     female: Female
     none: Prefer not to answer
+  user_type:
+    student: Student
+    teacher: Teacher
   footer:
     help_from_html: Engineers from <a href="http://www.google.com">Google</a>, <a
       href="http://www.microsoft.com">Microsoft</a>, <a href="http://www.facebook.com">Facebook</a>,
@@ -422,13 +415,6 @@
     tos: Terms of service
     privacy: Privacy Policy
     secure: Secure Version
-  prize_mail:
-    prize_earned:
-      subject: Redeem your prize at Code.org!
-    teacher_prize_earned:
-      subject: Redeem your prize at Code.org!
-    teacher_bonus_prize_earned:
-      subject: Redeem your bonus prize at Code.org!
   reference_area:
     title: Need help?
     subtitle: See these videos and hints

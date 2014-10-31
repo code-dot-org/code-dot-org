@@ -4,74 +4,74 @@ bố trí: rộng
 
 * * *
 
-# Bảng chỉ dẫn cho Hour of Code và Tuần giáo dục khoa học máy tính
+# Hướng dẫn cho Giờ Lập Trình và Tuần Giáo Dục Tin Học
 
-**The deadline to submit a tutorial for Hour of Code 2014 has passed. You may still submit an entry and we will try to review it if time allows.**
+**Hạn chót để đăng ký một bản hướng dẫn cho Giờ Lập Trình 2014 đã qua. Bạn vẫn có thể gửi một mục và chúng tôi sẽ xem xét nếu thời gian cho phép.**
 
-Code.org will host a variety of Hour of Code activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [code.org/learn](http://code.org/learn).
+Code.org will host a variety of Hour of Code activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= codeorg_url() %>](http://<%= codeorg_url() %>/learn).
 
-We’d like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science. Please use this document to guide the creation of your activity, targeted to the user who has no background in coding, computer programming, and computer science.
+Chúng tôi muốn đưa ra một loạt các lựa chọn hấp dẫn, nhưng mục tiêu chính là để tối ưu hóa trải nghiệm cho sinh học sinh và giáo viên - những người mới với tin học. Xin vui lòng sử dụng tài liệu này để chỉ dẫn cho sự sáng tạo của bạn, nhắm mục tiêu đến người dùng chưa tiếp xúc với việc mã nguồn, lập trình máy tính và tin học.
 
 <a id="top"></a>
 
-## Chỉ mục:
+## Mục lục:
 
   * [Làm thế nào hướng dẫn sẽ được đánh giá để đưa vào](#inclusion)
-  * [Hướng dẫn chung để tạo ra một hoạt động giờ mã](#guidelines)
-  * [Làm thế nào để gửi (do 10/1/2014)](#submit)
+  * [Các hướng dẫn chung khi tạo một hoạt động Giờ Lập Trình](#guidelines)
+  * [Làm thế nào để gửi (từ 10/1/2014)](#submit)
   * [Gợi ý cho việc thiết kế các hoạt động của bạn](#design)
   * [Nguyên tắc thương hiệu](#tm)
   * [Theo dõi Pixel](#pixel)
-  * [Thúc đẩy của bạn hướng dẫn, CSEdWeek, và giờ mã](#promote)
+  * [Tăng hiệu quả của các hướng dẫn, CSEdWeek, và Giờ Lập Trình của bạn](#promote)
   * [Một lưu ý cho các sinh viên Khuyết tật](#disabilities)
 
 <a id="inclusion"></a>
 
 ## Làm thế nào hướng dẫn sẽ được đánh giá để đưa vào
 
-A committee of computer science educators will rank submissions based on qualitative and quantitative metrics, including survey results from a broader set of educators.
+Một hội đồng giáo dục tin học máy tính sẽ xếp hạng cấc bài gửi dựa trên số lượng và định lượng, bao gồm cả kết quả khảo sát từ một hội đồng giáo dục lớn hơn.
 
-**Tutorials will be listed higher if they are:**
+**Hướng dẫn sẽ được xét cao hơn nếu :**
 
   * chất lượng cao
-  * tự định hướng, không yêu cầu bất kỳ hướng dẫn
+  * tự định hướng, không yêu cầu bất kỳ hướng dẫn nào
   * được thiết kế cho người mới bắt đầu
-  * thiết kế như một ~ 1 giờ hoạt động
+  * hoạt động được thiết kế trong khoảng 1 giờ
   * làm việc trên nhiều nền tảng hệ điều hành/thiết bị, bao gồm cả điện thoại di động và máy tính bảng
   * hoạt động trên nhiều ngôn ngữ
-  * thúc đẩy học tập của tất cả các nhóm nhân khẩu học (esp dưới đại diện nhóm)
-  * không tinh khiết HTML + CSS web thiết kế tập trung - (mục tiêu của chúng tôi là khoa học máy tính, mã HTML không chỉ)
+  * tất cả các nhóm đều thúc đẩy việc học tập (đặc biệt là các nhóm có đại diện)
+  * không hoàn toàn tập trung vào HTML + thiết kế web CSS - (mục tiêu của chúng tôi là tin học, không chỉ có mã HTML)
 
-**Tutorials will be listed lower if they are:**
+**Hướng dẫn sẽ được xét thấp hơn nếu:**
 
   * chất lượng thấp hơn
-  * Thêm nâng cao trình độ của giảng dạy (không phải cho người mới bắt đầu)
-  * có một số giới hạn của nền tảng hệ điều hành/thiết bị được hỗ trợ - cho các trang Web dựa trên nền tảng bạn nên nhằm mục đích để hỗ trợ tất cả những điều sau đây: IE9 +, và các đặt Chrome, Firefox và Safari
+  * Trình độ giảng dạy cao hơn (không phải cho người mới bắt đầu)
+  * có một lượng giới hạn các thiết bị trên nền tảng hệ điều hành được hỗ trợ - để cho các trang nền tảng dựa trên Web - bạn nên có thể hỗ trợ tất cả những thứ sau: IE9 +, phiên bản Chrome mới nhất, Firefox và Safari
   * làm việc chỉ bằng tiếng Anh
-  * có một cong giới tính cụ thể (ví dụ như thematically nhằm mục đích chủ yếu bé trai)
-  * phục vụ như là một upsell một nền tảng học tập rằng chi phí học phí
+  * có định hướng giới tính cụ thể (ví dụ như giao diện hướng đến chủ yếu các bạn nam)
+  * phục vụ như là một cơ sở học tập có thu phí
 
-**Tutorials will NOT be listed if they:**
+**Hướng dẫn sẽ không được liệt kê nếu:**
 
-  * yêu cầu một mức độ cao của sự tham gia của một giáo viên với rất nhiều chuẩn bị (tức là không tự hướng dẫn cho sinh viên)
-  * không được thiết kế để là một hoạt động (khoảng) một giờ
+  * yêu cầu sự tham gia của một giáo viên trình độ cao có chuẩn bị tốt (tức là không tự hướng dẫn cho sinh viên)
+  * không được thiết kế như là một hoạt động trong khoảng một giờ
   * yêu cầu đăng ký 
   * yêu cầu thanh toán
   * yêu cầu cài đặt
-  * tập trung chỉ trên HTML + CSS thiết kế web
-  * được gửi sau khi thời hạn nộp hồ sơ, hoặc thông tin không đầy đủ (xem bên dưới)
+  * chỉ tập trung trên HTML + thiết kế CSS
+  * hướng dẫn được gửi sau hạn chót nộp hồ sơ, hoặc thông tin không đầy đủ (xem bên dưới)
 
-Ultimately, the goal of the Hour of Code campaign is to broaden participation in computer science by students and teachers, and to help show that computer science is accessible to all, and “easier than you think.” In many ways, this goal is better achieved by giving students and teachers fewer and simpler choices, with a focus on the highest quality options for a first-time user.
+Cuối cùng, mục tiêu của chiến dịch Giờ Lập Trình là để mở rộng sự tham gia vào máy tính của học sinh và giáo viên, và để thể hiện rằng tất cả mọi người có thể sử dụng tin học lập trình, và còn "dễ dàng hơn bạn nghĩ." Bằng nhiều cách, mục tiêu này sẽ đạt được tốt hơn bằng cách đưa cho học sinh và giáo viên các lựa chọn ít hơn và đơn giản hơn, với sự tập trung vào các lựa chọn có chất lượng cao nhất cho một người lần đầu sử dụng.
 
-Note also, that the 2013 CSEdWeek was a fantastic success as measured by the responses from teachers and students - 20M participants from Dec 9 - 23, and 97% said they enjoyed it and want to repeat the campaign!!
+Ngoài ra, lưu ý rằng CSEdWeek 2013 là một thành công tuyệt vời theo phản ứng từ giáo viên và sinh viên - 20 triệu người tham gia từ 9-23 tháng 12, và 97% nói rằng họ rất thích nó và muốn chiến dịch này được lặp lại!!
 
-As a result, the existing listings are certainly “good enough,” and the driving reason to add tutorials to the Hour of Code listings isn’t to broaden the choices, but to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2014 campaign.
+Nhờ vậy, danh sách hiện tại được chắc chắn là "đủ tốt", và lý do để thêm hướng dẫn vào danh sách hướng dẫn của Giờ Lập Trình không phải là để mở rộng sự lựa chọn, mà để nâng cao chất lượng (hoặc sự mới mẻ) cho sinh viên, hoặc để mở rộng các tùy chọn cho người không nói tiếng Anh cũng được tham gia vào tư tưởng toàn cầu của chiến dịch năm 2014.
 
-[**Back to the top**](#top)
+[**Quay lại đầu trang**](#top)
 
 <a id="guidelines"></a>
 
-## Hướng dẫn chung để tạo ra một hoạt động giờ mã
+## Hướng dẫn chung để tạo ra một hoạt động Giờ Lập Trình
 
   * **Chủ đề:** Giới thiệu máy tính khoa học hoặc lập trình (không HTML).
   * **Mục tiêu:** Cung cấp cho người mới bắt đầu một hương vị đầu tiên có thể truy cập của chương trình.
@@ -84,7 +84,7 @@ As a result, the existing listings are certainly “good enough,” and the driv
       * **Okay, nhưng không ưa thích:** cài đặt ứng dụng, ứng dụng máy tính để bàn, hoặc giao diện điều khiển trò chơi kinh nghiệm.
   * **Định dạng:** Tự hướng dẫn hướng dẫn hoặc bài học, tùy chọn tạo điều kiện của các giáo viên. Có phải là hướng dẫn cho sinh viên như trái ngược với một thách thức mở giờ dài. Lý tưởng nhất, các hướng dẫn và hướng dẫn được tích hợp trực tiếp vào nền tảng lập trình, để tránh chuyển tab hoặc cửa sổ giữa các hướng dẫn và lập trình nền tảng.
 
-[**Back to the top**](#top)
+[**Quay lại đầu trang**](#top)
 
 <a id="submit"></a>
 
@@ -140,7 +140,7 @@ Visit the [Hour of Code Activity Submission page](https://docs.google.com/a/code
       * Cho diễn đàn hoạt động 
           * Số lượng tải phiên bản giấy của hoạt động (nếu có)
 
-[**Back to the top**](#top)
+[**Quay lại đầu trang**](#top)
 
 <a id="design"></a>
 
@@ -181,7 +181,7 @@ Benefits of Pair Programming:
   * Hiển thị rằng mã hóa không phải là một hoạt động solo, nhưng một liên quan đến tương tác xã hội
   * Không phải tất cả các lớp học hoặc phòng thí nghiệm có đủ máy vi tính cho một kinh nghiệm 1:1
 
-[**Back to the top**](#top)
+[**Quay lại đầu trang**](#top)
 
 <a id="tm"></a>
 
@@ -199,7 +199,7 @@ One piece of this is to protect the trademark "Hour of Code" to prevent confusio
 
   4. Không sử dụng "Giờ của mã" trong tên ứng dụng
 
-[**Back to the top**](#top)
+[**Quay lại đầu trang**](#top)
 
 <a id="pixel"></a>
 
@@ -219,7 +219,7 @@ IMG SRC="http://code.org/api/hour/begin_appinventor.png/"
 
 IMG SRC="http://code.org/api/hour/finish_appinventor.png/"
 
-[**Back to the top**](#top)
+[**Quay lại đầu trang**](#top)
 
 <a id="promote"></a>
 
@@ -233,7 +233,7 @@ We are asking everyone to promote their own 1-hour tutorial to your users. Pleas
   * Lưu trữ một sự kiện địa phương hoặc yêu cầu nhân viên của bạn để lưu trữ một sự kiện tại trường học địa phương hoặc các nhóm cộng đồng.
   * Xem kit tài nguyên của chúng tôi để biết thêm thông tin (đến sớm).
 
-[**Back to the top**](#top)
+[**Quay lại đầu trang**](#top)
 
 <a id="disabilities"></a>
 
@@ -241,4 +241,4 @@ We are asking everyone to promote their own 1-hour tutorial to your users. Pleas
 
 If you create a tutorial that is designed for the vision-impaired, we’d love to highlight it for viewers with screen-readers. We have not yet received such a tutorial, and would be eager to include one as an option for these students.
 
-[**Back to the top**](#top)
+[**Quay lại đầu trang**](#top)

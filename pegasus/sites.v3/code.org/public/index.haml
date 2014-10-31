@@ -143,6 +143,12 @@ social:
           - other_style = "margin-right: 26px"
         - else
           - other_style = ""
+
+        -# Ensure we properly wrap to a new line when in 2 column mobile mode.  Some translations
+        -# with a longer first item caused layout problems otherwise.
+        - if index % 2 == 0
+          %div.mobile-feature{style: "clear:both"}
+
         %a{href: item[:url]}
           .col-25.outerblock{style: "float:left; #{other_style}"}
             .innerblock

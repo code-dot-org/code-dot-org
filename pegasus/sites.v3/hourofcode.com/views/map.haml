@@ -7,7 +7,8 @@
 .row
   .col-xs-1.hidden-sm
   .col-xs-10.col-sm-12
-    #gmap{style: 'height: 500px; padding: 3px; border: 3px solid #ddd;'}
+    #gmap{style: 'height: 500px; border: 3px solid #ddd;'}
+      %img{src: "/images/hour-of-code-events-map.jpg", alt: "Hour of Code events map", style: "width: 100%; max-width: 100%;"}
 
 :javascript
   var gmap;
@@ -17,8 +18,11 @@
   var infowindow = new google.maps.InfoWindow();
 
   $(document).ready(function() {
-    gmap = initializeMap();
-    getSignups();
+    $('#gmap img').click(function() {
+      $('#gmap img').hide();
+      gmap = initializeMap();
+      getSignups();
+    });
   });
 
   function initializeMap() {
@@ -92,12 +96,12 @@
     */
     // ...end of commented-out sample dots.
 
-    google.maps.event.addListener(gmap, 'click', function(event){
-      this.setOptions({
-        scrollwheel: true,
-        draggable: true,
-      });
-    });
+    //google.maps.event.addListener(gmap, 'click', function(event){
+    //  this.setOptions({
+    //    scrollwheel: true,
+    //    draggable: true,
+    //  });
+    //});
 
     $.post('/forms/HocSignup2014/query', $.param(params), function(response) {
       var results = JSON.parse(response);

@@ -562,9 +562,9 @@
         0: "? Escoja el código Racket que corresponde a la expresión matemática dada.
           \nDibuje un círculo de evaluación para ayudarle a encontrar la respuesta
           correcta!\n"
-        1: ": Escoja el código Racket que corresponde a la expresión matemática dada.
-          \nDibuje un círculo de evaluación para ayudarle a encontrar la respuesta
-          correcta!\n"
+        1: |
+          : "Escoja el código Racket que corresponde a la expresión matemática dada. "
+          Dibuje un círculo de evaluación para ayudarle a encontrar la respuesta correcta!
         "(5 + 6) * 8 / 2": "(5 + 6) * 8 / 2"
         "(/ (* 8 2) (+ 5 6))": "(/ (* 8 2) (+ 5 6))"
         "(* (+ 5 6) (/ 8 2))": "(* (+ 5 6) (/ 8 2))"
@@ -575,9 +575,9 @@
         0: "? Escoja el código Racket que corresponde a la expresión matemática dada.
           \nDibuje un círculo de evaluación para ayudarle a encontrar la respuesta
           correcta!\n"
-        1: ": Escoja el código Racket que corresponde a la expresión matemática dada.
-          \nDibuje un círculo de evaluación para ayudarle a encontrar la respuesta
-          correcta!\n"
+        1: |
+          : "Escoja el código Racket que corresponde a la expresión matemática dada. "
+          Dibuje un círculo de evaluación para ayudarle a encontrar la respuesta correcta!
         4 + 6 + 20 / 2 x 3 x 7 + 2: 4 + 6 + 20 / 2 x 3 x 7 + 2
         "(+ (+ (+ 4 6) (* (* (/ 20 2) 3) 7)) 2)": "(+ (+ (+ 4 6) (* (* (/ 20 2) 3)
           7)) 2)"

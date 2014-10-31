@@ -6,11 +6,11 @@
 
 # Насочващи уроци за Часът на кодирането и компютърните науки през образователната седмица
 
-**The deadline to submit a tutorial for Hour of Code 2014 has passed. You may still submit an entry and we will try to review it if time allows.**
+**Дори и да е преминал крайният срок за представяне на урок за Часът на кодирането 2014, Вие все още може да ни го предоставите, а ние ще се опитаме да го прегледаме, ако времето позволява.**
 
-Code.org will host a variety of Hour of Code activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [code.org/learn](http://code.org/learn).
+Code.org ще подготви разнообразие от дейности за часа на кодирането на Code.org и на CSEdWeek уебсайта (ове). Настоящият списък е в [<%= codeorg_url() %>](http://<%= codeorg_url() %>/learn).
 
-We’d like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science. Please use this document to guide the creation of your activity, targeted to the user who has no background in coding, computer programming, and computer science.
+Бихме искали да има разнообразие от възможности за ангажиране, но основната цел е да се оптимизира опитът на учениците и учителите, за които компютърните науки са новост. Моля, използвайте това ръководство, което ще ви насочи по създаването на вашата дейност, предназначено е за потребителя, който е без знания в програмирането и компютърните науки.
 
 <a id="top"></a>
 
@@ -29,9 +29,9 @@ We’d like to host a variety of engaging options, but the primary goal is to op
 
 ## Как и кои от уроците ще бъдат включени
 
-A committee of computer science educators will rank submissions based on qualitative and quantitative metrics, including survey results from a broader set of educators.
+Създаденият комитет на учители по компютърни науки ще класира заявките въз основа на качествени и количествени показатели, включително и резултатите от проучването в по-широк кръг от учители.
 
-**Tutorials will be listed higher if they are:**
+**Уроците ще заемат по-високо място, ако са:**
 
   * с високо качество
   * самостоятелни, не изискват никакви инструкции
@@ -42,7 +42,7 @@ A committee of computer science educators will rank submissions based on qualita
   * насърчават обучението за всички демографски групи (особено социално слабите групи)
   * не са изцяло HTML + CSS фокусирани - (нашата цел е компютърни науки, а не само HTML кодиране)
 
-**Tutorials will be listed lower if they are:**
+**Уроците ще заемат по-ниско място, ако са:**
 
   * с ниско качество
   * на по-високо ниво (не за начинаещи)
@@ -51,7 +51,7 @@ A committee of computer science educators will rank submissions based on qualita
   * са полово ориентирани (примерно са предназначени главно за момчета)
   * включени са в обучителна платформа, за която се заплаща
 
-**Tutorials will NOT be listed if they:**
+**Уроци няма да бъдат класирани, ако:**
 
   * изискват много подготовка и висока степен на участие от учител (т.е. не се използват самостоятелно от учениците)
   * не са създадени да бъдат (приблизително) изпълнени за един час
@@ -61,13 +61,13 @@ A committee of computer science educators will rank submissions based on qualita
   * съсредоточени са само върху HTML + CSS уеб дизайн
   * са подадени след срока за представяне, или с непълна информация (виж по-долу)
 
-Ultimately, the goal of the Hour of Code campaign is to broaden participation in computer science by students and teachers, and to help show that computer science is accessible to all, and “easier than you think.” In many ways, this goal is better achieved by giving students and teachers fewer and simpler choices, with a focus on the highest quality options for a first-time user.
+В крайна сметка, целта на кампанията Часът на кодирането е да насърчи запознаването с компютърните науки на ученици и учители и да покаже, че компютърните науки са достъпни за всички и "по-лесни, отколкото си мислите." В много отношения тази цел по-добре се постига чрез даване на ученици и учители по-малко и по-прости решения, с акцент върху висококачествени уроци за начинаещи потребители.
 
-Note also, that the 2013 CSEdWeek was a fantastic success as measured by the responses from teachers and students - 20M participants from Dec 9 - 23, and 97% said they enjoyed it and want to repeat the campaign!!
+Искаме да отбележим, че кампанията от 2013 CSEdWeek имаше фантастичен успех, измерен с броя на включелите се учители и ученици - 20 милиона участници, регистрирали се през декември 9-23, а 97 % от тях казват, че продължават да ползват ресурсите и искат да се повтори събитието!!
 
-As a result, the existing listings are certainly “good enough,” and the driving reason to add tutorials to the Hour of Code listings isn’t to broaden the choices, but to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2014 campaign.
+Като резултат, съществуващият списък от уроци е "достатъчно добър", но движещата причина да добавяме нови уроци към Часът на кодирането е не само да се разширят възможностите за избор, но за повишаване на качеството (или актуалността) им за учениците, а също и за разширяване на възможностите за участие на неанглоговорящите предвид глобалния характер на кампанията през 2014 г.
 
-[**Back to the top**](#top)
+[**Обратно към началото**](#top)
 
 <a id="guidelines"></a>
 
@@ -84,15 +84,15 @@ As a result, the existing listings are certainly “good enough,” and the driv
       * **Стават, но не се препоръчват:** изискващи инсталиране на програми и приложения, умения, свързани с игрови конзоли. 
   * **Формат:** Самонасочващи уроци или уроци, подпомогнати от учителя. Трябва да има указания за учениците, а не час, представляващ дълго предизвикателство. В идеалния случай инструкциите и ръководствата трябва да са интегрирани директно в платформата за програмиране, за да се избегне смяната на прозорците между урока и платформата.
 
-[**Back to the top**](#top)
+[**Обратно към началото**](#top)
 
 <a id="submit"></a>
 
 ## Как да се включите (до 10/1/2014)
 
-Visit the [Hour of Code Activity Submission page](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform) and follow the steps to submit your tutorial.
+Посетете [ страницата на Часът на кодирането за подаване на дейност ](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform) и следвайте стъпките, за да подадете вашият урок.
 
-**What you’ll need:**
+**Какво ще ви трябва:**
 
   * Вашето име, лого (jpg, png и др.)
   * URL адрес на скрийншот или маркетингово изображение на HoC дейността. Снимките/скрийншотовете трябва да са с точно 446 x 335 резолюция. Ако нямате подходящо изображение, ние може използваме скийншот на вашия урок или ние може да не го изберем за списъка.
@@ -140,56 +140,56 @@ Visit the [Hour of Code Activity Submission page](https://docs.google.com/a/code
       * За офлайн дейности 
           * Брой изтегляния на дейността (ако е приложимо)
 
-[**Back to the top**](#top)
+[**Обратно към началото**](#top)
 
 <a id="design"></a>
 
 ## Предложения за проектиране на вашата дейност
 
-**Include the CSEdWeek logo in your tutorial.** You can include the CSEdWeek logo ([small](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) or [big](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) in your tutorial, but this is not required. You may also contact us to request specific permission to use the “In Partnership with Code.org” logo. ***This logo can only be used if specific permission is granted in writing by Code.org.*** We may end up creating an Hour of Code logo, but at this time we do not have one. Under no circumstances can the Code.org logo and name be used. Both are trademarked, and can’t be co-mingled with a 3rd party brand name.
+**Включете логото на CSEdWeek във вашата дейност.** Можете да включите логото на CSEdWeek ([ малък размер](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) или [ голям размер](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) във вашата дейност, но това не задължително. Можете да се свържете с нас и да поискате специално разрешение да използват логото "В партньорство с Code.org". ***Това лого може да се използва само ако получите разрешение в писмена форма от Code.org.*** Ние бихме могли да създадем лого за Часът на кодирането, но на този етап - не разполагаме с такова. При никакви обстоятелства не можете да използвате Code.org логото и името. И двете са запазена марка и не могат да бъдат използвани от 3-та страна.
 
-**Make sure that the average student can finish comfortably in an hour.** Consider adding an open-ended activity at the end for students who move more quickly through the lesson. Remember that most kids will be absolute beginners to computer science and coding.
+**Уверете се, че и средно статистическият ученик може да завърши дейността в рамките на един час.** Помислете за добавяне на допълнителна дейност в края за ученици, които действат по-бързо. Не забравяйте, че повечето деца ще бъдат абсолютно начинаещи в компютърните науки и кодирането.
 
-**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Not only are the students novices, some of the teachers are as well. Include info such as:
+**Включете бележки за учителите.** Повечето дейности трябва да бъдат насочени към учениците, но ако дейността се нуждае от учителски насоки, моля включете ясни и прости упътвания за учителя във формата на учителски бележки в един отделен URL, предоставен с вашата дейност. Не само учениците може да са начинаещи, някои от учителите също са такива. Включете информация като:
 
   * Нашият урок работи най-добре на следните платформи и браузъри
   * Работи ли на смартфони? таблетки?
   * Препоръчвате ли програмиране по двойки? 
   * Препоръчвате ли използване в класната стая? Например ако има видео, съветвате ли учителите да покажат видеоклиповете на целия клас, за да ги видят учениците заедно
 
-**Incorporate feedback at the end of the activity.** (E.g.: “You finished 10 levels and learned about loops! Great job!”)
+**Включете обратна връзка в края на дейността.** (Например: "ти завърши 10 нива и научи за повторенията! Страхотна работа!")
 
-**Incorporate social media.** Encourage students to post to social media (where appropriate) when they’ve finished, for example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourofCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
+**Включете и социалните медии.** Насърчавайте учениците да публикуват в социалните медии (при необходимост), когато са завършили, например "Аз завърших Часът на кодирането с________ А ти? #HourOfCode"или"Аз завърших #HourofCode като част от #CSEdWeek. А ти? @Scratch." Използвайте hashtag **#HourOfCode** (с главни букви, H, O, C)
 
-**Create your activity in languages besides English.** We're focusing this campaign internationally this year and would like to have a number of activities to offer non-English speaking participants.
+**Създайте вашата дейност на езици, различни от английски.** Нашата кампания тази година е международно насочена и бихме искали да присъстват редица дейности за неговорещи английски участници.
 
-**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
+**Обяснeте или свържете дейността с обществено значим контекст.** Компютърното програмиране става суперсила, когато учениците виждат как то може да промени света към по-добро!
 
-**Do not require signup or payment before students can try your tutorial.** Tutorials that require signup or payment will not be listed
+**Не изисквайте регистрация или плащане преди учениците да пробват вашата дейност/урок.** Уроци, които изискват регистрация или заплащане няма да бъдат приемани
 
-**Make sure your tutorial can be used in a [Pair Programming paradigm](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning).**
+**Уверете се, че вашата дейност може да се използва при [ програмиране по двойки](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning).**
 
-The three rules of pair programming in a school setting:
+Трите основни правила за програмиране по двойки са:
 
   * Водачът управлява с мишката и клавиатурата.
   * Навигаторът прави предложения, посочва грешки и задава въпроси. 
   * Учениците трябва да си сменят ролите поне два пъти в една сесия.
 
-Benefits of Pair Programming:
+Предимства на програмирането по двойки:
 
   * Учениците могат да си помагат един на друг без да се налага да разчитат на учителя
   * Показва, че програмирането не е соло дейност, а е необходимо и социално взаимодействие
   * Не всички класни стаи и лаборатории имат достатъчно компютри за 1:1 обучение
 
-[**Back to the top**](#top)
+[**Обратно към началото**](#top)
 
 <a id="tm"></a>
 
 ## Относно запазените марки
 
-With ~40 million students having tried the Hour of Code, and over 97% of participating teachers asking us to repeat the event annually, we are taking steps to make sure we set up the Hour of Code as a movement that can repeat annually with greater fidelity and without confusion.
+Приблизително 40 милиона ученици, които се опитали Часът на кодирането и над 97 % от участващите учители искат от нас това събитие да се повтори отново, за да няма объркване, ние приехме Часът на кодирането да се превърне в ежегодно събитие с точна дата и време.
 
-One piece of this is to protect the trademark "Hour of Code" to prevent confusion. Many of our tutorial partners have used "Hour of Code" on your web sites. We don't want to prevent this usage, but we want to make sure it fits within a few limits:
+За това е необходимо да се защити търговската марка "Часът на кодирането", за да предотврати объркване. Много от партньорите ни използват "Часът на кодирането" на своите сайтове. Ние не искаме да се спре използването на марката, но искаме да се уверим, че се спазват няколко ограничения:
 
   1. Всяко позоваване на "Часът на кодирането" трябва да се използва по начин, който не предполага, че това е ваша собствена търговска марка, но по-скоро да се разбира, че Часът на кодирането е вид масово движение. Добър пример: "Участвайте в Часът на кодирането на ACMECorp.com". Лош пример: "Опитайте Часът на кодирането от ACME Corp"
   2. Използвайте "ТМ" горен индекс на най-видимите места, на които споменавате "Часът на кодирането", както на вашия уеб сайт така и в описанието на дейността си
@@ -199,33 +199,33 @@ One piece of this is to protect the trademark "Hour of Code" to prevent confusio
 
   4. Не се разрешава използването на "Hour of Code" в имена на приложения
 
-[**Back to the top**](#top)
+[**Обратно към началото**](#top)
 
 <a id="pixel"></a>
 
 ## Tracking Pixel (проследяване на броя посетители)
 
-In order to more accurately track participation we ask every third party tutorial partners to include 1-pixel tracking images on the first and last page of their Hour of Code tutorials (A starting pixel-image on the start page and a final pixel-image on the end page. And not on interim pages).
+За да следим участниците, молим създателите на уроци да включат 1-pixel tracking изображение на първата и последната страница от техните Часът на кодирането уроци (стартово пиксел-изображение на началната страница и финално пиксел-изображение на последната страница. Не поставяйте на междинните страници).
 
-This will allow us to count users who you directly recruit to visit your website to do their Hour of Code, or users who visit when a teacher types your URL directly on their whiteboard. It will lead to more accurate participation counts for your tutorial, which will help you attract users. If you integrate the pixel at the end it will also allow us to measure tutorial completion rates.
+Това ще ни позволи да преброим потребителите, които набират и директно посещават вашия сайт, за да направят Часът на кодирането, или потребителите, които посещават сайта ви, след когато е бил препоръчан от учител. Това ще позволи по-точно отброяване на участниците за вашият урок, което ще ви помогне да привличете потребители. Ако интегрирате пиксел в края, той ще ни позволи да измерим броя на успешно завършилите урока ви.
 
-If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
+Ако вашият урок е одобрен и включен, за последната страница Code.org ще ви предостави уникален проследяващ пиксел, който трябва да се интегрира във вашия урок. Вижте примера по-долу.
 
-***NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)***
+***Забележка: това не е важно да се прави за инсталиращи се приложения (iOS/Android приложения, или инсталиране на десктоп приложения)***
 
-**Example tracking pixels for AppInventor:**
+**Примерни проследяващи пиксели за AppInventor:**
 
 IMG SRC="http://code.org/api/hour/begin_appinventor.png/"
 
 IMG SRC="http://code.org/api/hour/finish_appinventor.png/"
 
-[**Back to the top**](#top)
+[**Обратно към началото**](#top)
 
 <a id="promote"></a>
 
 ## Представяне на вашите уроци, CSEdWeek и Часът на кодирането
 
-We are asking everyone to promote their own 1-hour tutorial to your users. Please direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your tutorial. Use the international Hour of Code campaign for Computer Science Education Week as an excuse to encourage users to invite others to join in, help us reach 100 million total participants.
+Ние искаме всеки да промотира собствен 1 час за начинаещи на своите потребители. Моля, насочвайте ги към своята Часът на кодирането страница. Потребителите вероятно ще реагират положително на ваши имейли, в които има линкове към вашият урок. Използвайте международната кампания на Часът на кодирането през седмицата на програмирането за да насърчавате потребителите да канят и други да се присъединят, помогнете ни да достигнем 100 милиона общо участници.
 
   * Рекламирайте Часът на кодирането и CSEdWeek на вашия сайт.  
     Пример: [ http://www.tynker.com/hour-of-code](http://www.tynker.com/hour-of-code)
@@ -233,12 +233,12 @@ We are asking everyone to promote their own 1-hour tutorial to your users. Pleas
   * Станете организатор на местно събитие или промотирайте събитието в местните училища или обществени групи.
   * Вижте нашите подбрани ресурси за допълнителна информация (очаквайте скоро).
 
-[**Back to the top**](#top)
+[**Обратно към началото**](#top)
 
 <a id="disabilities"></a>
 
 ## Специална забележка за ученици с увреждания
 
-If you create a tutorial that is designed for the vision-impaired, we’d love to highlight it for viewers with screen-readers. We have not yet received such a tutorial, and would be eager to include one as an option for these students.
+Ако създавате уроци, предназначени за незрящи, ще се радваме да го маркирате за участници с екранни четци. Ние все още не са получавали такива уроци и ще бъдем нетърпеливи да се включим един като опция за тези ученици.
 
-[**Back to the top**](#top)
+[**Обратно към началото**](#top)

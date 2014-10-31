@@ -1,58 +1,55 @@
----
-title: Resources 
-layout: wide
----
 
-## Useful stats on computer science
 
-*For all press and media inquiries, contact <press@code.org>*
+## Estadístiques útils en informàtica
 
-### Key Tips
+*Per a totes les consultes de premsa i mitjans de comunicació, contacte <press@code.org>*
 
-  * Reach out to media two weeks before your event via email. Follow up by email and phone if you don't receive an initial response.
-  * Ask a school staff member or volunteer to take photos to share online or send to press.
-  * Write about the Hour of Code on your website’s homepage and in your school newspaper. Post your event details, and pictures of student activities.
-  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 8-14. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
+### Consells clau
 
-### Step-by-step guide:
+  * Contacta amb els mitjans de comunicació dues setmanes abans del teu esdeveniment mitjançant e-mail. Fes seguiment per correu electrònic i telèfon si no rebeu una resposta inicial.
+  * Demana a un membre del personal de l'escola o un voluntari per fer fotos per compartir en línia o enviar a la premsa.
+  * Escriu sobre l'Hora de Codi a la pàgina principal de la teva web i en el diari de l'escola. Publica els detalls del teu esdeveniment i fotos de les activitats dels estudiants.
+  * A Facebook i Twitter, comparteix actualitzacions sobre els teus plans, anuncia els teus esdeveniments i publica imatges durant el dies 8-14 de desembre. Utilitza el hashtag **#HourOfCode**, aixi Code.org podrà veure i promocionar els teus esdeveniments.
 
-**1. Plan your event**
+### Guia pas a pas:
 
-  * Plan an assembly to kick off the Hour of Code.
-  * Send [a letter](<%= hoc_uri('/resources/#sample-emails') %>) to parents. Ask them to spread the word.
-  * Send [a letter](<%= hoc_uri('/resources/#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
-  * Organize group activities (like a demonstration of an ‘unplugged’ programming activity), or show off student-created and led activities.
-  * Show Code.org’s [Hour of Code video](<%= hoc_uri('/') %>) or one of [these](<%= hoc_uri('/resources#videos') %>) to inspire.
+**1. Planifica el teu esdeveniment**
 
-**2. Identify specific local reporters that cover education or local events.**
+  * Planifica una reunió per donar inici a l'Hora de Codi.
+  * Envia [una carta](<%= hoc_uri('/resources/#sample-emails') %>) als pares. Demana'ls que corrin la veu.
+  * Envia [una carta](<%= hoc_uri('/resources/#sample-emails') %>) per convidar el teu alcalde local, congressista, governador o empresari influent a assistir-hi i parlar amb els teus alumnes.
+  * Organitza activitats en grup (com una demostració d'una activitat de programació "fora de línia"), o llueix activitats creades i dirigides pels estudiants.
+  * Mostra Code.org’s [Hora de Codi vídeo](<%= hoc_uri('/') %>) o un d'[aquestos](<%= hoc_uri('/resources#videos') %>) per animar.
 
-Think a local newspaper, TV station, radio station or blog.
+**2. identifica periodistes locals que cobreixen l'educació o esdeveniments locals.**
 
-Look online to find reporter contact information. If you can't find it, call the publication to ask, or email a general tips@PUBLICATIONNAME.com email address and ask for your message to be directed to the correct reporter.
+Pensa en un diari local, TV, emissora de ràdio o web bloc.
 
-**3. Contact local media**
+Mirar en línia per trobar informació de contacte de periodistes. Si no la pots trobar, truca a la publicació per preguntar, o envia un correu a l'adreça general tips@PUBLICATIONNAME.com i demana redirigir el teu missatge al periodista correcte.
 
-The best way to reach out is by email. It should be short and communicate: why should other people care about this event? Include contact information (including a cellphone number) for who will be on site at the event. **See a [sample pitch to media](<%= hoc_uri('/resources#sample-emails') %>):**
+**3. Contacta amb els mitjans de comunicació locals**
 
-**4. Prepare to field questions about your school event. Here are some examples:**
+La millor manera d'arribar és per correu electrònic. Ha de ser curt i comunicatiu: per què s'haurien altres persones d'interessar per aquest esdeveniment? Inclou informació de contacte (incloent-hi un nombre de mòbil) de qui estarà en el lloc del esdeveniment. **Veure un [exemple per els mitjans de comunicació](<%= hoc_uri('/resources#sample-emails') %>):**
 
-*Why is your school doing an Hour of Code?*
+**4. Preparat per respondre preguntes sobre el teu esdeveniment de l'escola. Aquests són alguns exemples:**
 
-While all of us know that it’s important for students to learn how to navigate today’s tech-saturated world, many teachers aren’t experienced in computer science and don’t know where to start. This event is a chance for all of us to see what computer science is about.
+*Per què la vostra escola està fent una Hora de Codi?*
 
-We hope it’ll spark interest in students to keep learning. Research also shows that kids pick up programming concepts before they know how to read and write. In fact, their brains are more receptive to computer languages at a young age, just like foreign languages.
+Mentre tots nosaltres sabem que és important per als estudiants aprendre a navegar al món actual saturat de tecnologia, molts mestres no són experimentats en informàtica i no saben per on començar. Aquest esdeveniment és una oportunitat per a tots nosaltres per saber de què tracta la informàtica.
 
-*Why is this important?*
+Esperem despertar l'interès en els estudiants per a seguir aprenent. La investigació també mostra que els nens recullen conceptes de programació abans de saber llegir i escriure. De fet, els seus cervells són més receptius als llenguatges informàtics a una edat jove, el mateix que amb les llengües estrangeres.
 
-In China, every students takes computer science to graduate high school. In the U.S., 90 percent of schools don’t even teach it. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will allow give them the confidence and know-how to succeed.
+*Per què és això important?*
 
-**More details and a quote you can use in materials**
+A la Xina, cada estudiant aprèn informàtica per graduar-se l'escola secundària. Als EUA, el 90 per cent de les escoles ni tan sols ho ensenyen. És el moment per aconseguir arribar al segle XXI. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them the confidence and know-how to succeed.
 
-"The Hour of Code is designed to demystify code and show that computer science is not rocket-science, anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "In one week last year, 15 million students tried an Hour of Code. Now we're aiming for 100 million worldwide to prove that the demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
+**Més detalls i una cita que pot utilitzar com idea**
 
-**About Code.org**
+"L'Hora de Codi està dissenyada per desmitificar el codi i mostrar que la informàtica no és una ciència espacial, qualsevol pot aprendre els conceptes bàsics," va dir Hadi Partovi, fundador i director executiu de Code.org. "En una setmana l'any passat, 15 milions d'estudiants van provar una Hora de Codi. Ara volem arribar a 100 milions arreu del món per demostrar que la demanda d'educació informàtica rellevant al segle XXI creua totes les fronteres i no té límits."
 
-Code.org® is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign — which has introduced millions of students to computer science — partnered with more than 30 public school districts nationwide, and launched Code Studio, an open-source, online learning platform for all ages. For more information, please visit: <% if @country == 'uk' %> [www.uk.code.org](http://uk.code.org). <% else %> [www.code.org](http://code.org). <% end %>
+**Sobre Code.org**
+
+Code.org® és un estament públic 501c3 sense ànim de lucre dedicat a ampliar la participació en informàtica i augmentar la participació de les dones i de les minories de estudiants de color. La seva visió és que cada alumne de cada escola ha de tenir l'oportunitat d'aprendre programació informàtica. Després del llançament al 2013, Code.org organitzà la campanya d'Hora de Codi — que ha introduït milions d'estudiants a la informàtica — associat amb més de 30 districtes de l'escola pública a nivell nacional, va llançar el Code Studio, una plataforma de codi obert en línia d'aprenentatge per a totes les edats. For more information, please visit: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
-Find more resources and sample emails [here](<%= hoc_uri('/resources') %>).
+Troba més recursos i correus de exemple [aquí](<%= hoc_uri('/resources') %>).

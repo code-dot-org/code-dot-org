@@ -43,6 +43,8 @@ Code.org&reg; is a registered public 501c3 nonprofit, with support from the gene
 
 [<button>Make a donation</button>](/donate)&nbsp;&nbsp;or [see our list of donors](/about/donors)
 
+[Code.org's 2013 IRS Form 990](/files/irs-form.pdf)
+
 <hr/>
 
 

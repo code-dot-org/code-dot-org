@@ -18,11 +18,11 @@
 
 ## Βίνετο συνομιλία με διακεκριμένο ομιλητή:
 
-Το βραβείο αυτό αφορά μόνο τα σχολεία κατηγορίας K-12 των Η.Π.Α. . Όλο το σχολείο σας πρέπει να έχει εγγραφεί στην Ώρα του Κώδικα μέχρι τις 14 Νοεμβρίου 2014. Το Code.org θα επιλέξει με τυχαίο τρόπο τα νικητήρια σχολεία, θα παρέχει τον χρόνο για τη βιντεοσυνομιλία, και θα συνεργαχτεί με τον κατάλληλο εκπαιδευτικό για τις τεχνικές λεπτομέρειες.
+Prize limited to K-12 classrooms in the U.S. and Canada only. To qualify, sign up your classroom by November 14, 2014. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligbile to win.
 
 ## Φορητοί υπολογιστές (ή 10.000$ για άλλο τεχνολογικό εξοπλισμό):
 
-Το βραβείο αυτό αφορά μόνο τα δημόσια σχολεία κατηγορίας K-12 των Η.Π.Α. . Γιατί μόνο δημόσια σχολεία; [See the answer here](http://www.hourofcode.com/#faq). Όλο το σχολείο σας πρέπει να έχει εγγραφεί στην Ώρα του Κώδικα μέχρι τις 14 Νοεμβρίου 2014. Ένα σχολείο σε κάθε πολιτεία των Η.Π.Α. θα λάβει ένα σετ υπολογιστών. Το Code.org θα επιλέξει και θα ενημερώσει τους νικητές μέσω email μέχρι τη 1 Δεκεμβρίου 2014.
+Το βραβείο αυτό αφορά μόνο τα δημόσια σχολεία κατηγορίας K-12 των Η.Π.Α. . To qualify, your entire school must register for the Hour of Code by November 14, 2014. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2014.
 
 To clarify, this is not a sweepstakes or a contest involving pure chance.
 

@@ -49,6 +49,7 @@
           desc: Rediger kode (beta)
           MazeEC: Trinn 1
           Webapp: Trinn 2
+          ArtistEC: Trinn 3
         events:
           desc: Sprett (beta)
           Bounce: Trinn 1
@@ -72,7 +73,7 @@
       name:
         Unplug1: Introduksjon til informatikk
         Maze: Labyrinten
-        Multi: Multiple Choice Stuffs
+        Multi: Ting med flere valg
         Unplug2: Programmeringstenkning
         Unplug3: Millimeterpapirprogrammering
         Artist: Kunstneren
@@ -97,7 +98,8 @@
         Jigsaw: Puslespill
         MazeStep: Labyrint trinn modus
         Wordsearch: Tekstsøk
-        Webapp: Webapp
+        Webapp: Nettapp
+        ArtistEC: Kunstneren
     trophy:
       name:
         Bronze: Bronse
@@ -361,22 +363,28 @@
           kommer borti boksen med TNT!
         maze_3_4: Argh! Skriv meg et program for å komme meg rundt sprengstoffet og
           helt frem til grisen.
-        bounce_1: Attach a block to the "when left arrow" block, then run and move
-          the paddle with the left arrow key to the finish target.
-        bounce_2: Attach a block to the "when right arrow" and "when left arrow" blocks,
-          then run and move the paddle with the both arrow key to both finish targets.
-        bounce_3: TBD
-        bounce_4: TBD
-        bounce_5: Attach a blocks to the "when right arrow", "when left arrow", "when
-          ball hits wall", and "when ball hits paddle" blocks.
-        bounce_6: Try again with more balls.
-        bounce_7: Now it is getting crazy!
-        bounce_10: There is a now a goal at the top. Attach "increment score" blocks
-          to the the "when ball in goal" and "when ball misses paddle" blocks to make
-          a game.
-        bounce_11: You can now attach blocks to the "when run" block. Try changing
-          the speed of the paddle and the ball and see how many points you can score
-          before your opponent scores twice.
+        bounce_1: Fest en blokk til «Når venstre pil» blokken og trykk «Kjør». Flytt
+          åren ved å bruke venstre pil for å nå målet.
+        bounce_2: Fest en blokk til «når høyre pil» og «når venstre pil» blokkene.
+          Flytt åren for å nå begge målene.
+        bounce_3: Prøv noe lignende med «når opp pil» blokken. Flytt åren til målet
+          på toppen.
+        bounce_4: Denne gangen trenger du å legge til fire blokker. Flytt åren til
+          alle fire mål for å fullføre denne oppgaven.
+        bounce_5: Vi skal sende en ball flygende ned mot åren. Fest en blokk til «når
+          en ball treffer åren» blokken for å være sikker på at ballen når mål.
+        bounce_6: Nå er sluttmålet på toppen. Du trenger å feste blokker til begge
+          «når en ball treffer» blokkene for å løse denne oppgaven.
+        bounce_7: Fest blokker til alle «når» blokkene. Sprett ballen helt til den
+          treffer sluttmålet.
+        bounce_10: Det er nå et mål på toppen. Fest «skår et poeng» og «skår motstanderen
+          et poeng» blokkene til «når en ball i mål» og «når en ball bommer på åren»
+          blokkene for å lage et spill. Se hvor mange poeng du greier å skåre før
+          motstanderen din skårer to ganger.
+        bounce_11: Du kan nå feste blokker til «når kjørt» blokken. Du må feste den
+          nye «fyr ny ball» blokken på mer enn en plass. Også, prøv å skifte scenen
+          eller farten på kontrolleren og ballen og se hvor mange poeng du kan skåre
+          før motstanderen din har skåret to ganger.
         bounce_12: Opprett ditt eget Sprett spill. Du kan endre alle bilder og reglene.
           Når du er ferdig, klikk Fullfør for å la venner prøve spillet på sine telefoner.
         Custom_builder: Dra blokker fra verktøykassen til arbeidsområdet for å tegne
@@ -488,11 +496,11 @@
           kommer borti blekkspruten, og deretter flytte ham med pilene til du skårer?
         studio_c3_game_6: Kan du legge til blokker for å forandre bakgrunnen og hastigheten
           til pingvinen, og deretter bevege den med pil-tastene til du score?
-        studio_c3_game_7: Create your own game. When you're done, click Finish to
-          let friends try your story on their phones.
-        studio_playlab_1: Can you make this dog say "hello world"?
-        studio_playlab_2: Can you make the dog say something and then have the cat
-          say something afterwards?
+        studio_c3_game_7: Skap dit eget spill. Når du er ferdig, trykk Ferdig for
+          å la vennene dine prøve din histore på deres telefoner.
+        studio_playlab_1: Kan du få hunden til å si «hallo verden»?
+        studio_playlab_2: Kan du få hunden til å si noe og så få katten til å si noe
+          etterpå?
         studio_playlab_3: Kan du skrive et program for å få denne hunden flytte seg
           til katten?
         studio_playlab_4: Kan du skrive et program som gjør at hunden flytter til
@@ -508,37 +516,39 @@
           kommer borti blekkspruten, og deretter flytte ham med pilene til du skårer?
         studio_playlab_9: Kan du legge til blokker for å forandre bakgrunnen og hastigheten
           til pingvinen, og deretter bevege den med pil-tastene til du score?
-        studio_playlab_10: Create your own game. When you're done, click Finish to
-          let friends try your story on their phones.
-        studio_full_sandbox: Create your own game. When you're done, click Finish
-          to let friends try your story on their phones.
-        studio_k1_1: Can you make this dog say "hello world"?
-        studio_k1_2: Can you make the dog say something and then have the cat say
-          something afterwards?
+        studio_playlab_10: Skap dit eget spill. Når du er ferdig, trykk Ferdig for
+          å la vennene dine prøve din histore på deres telefoner.
+        studio_full_sandbox: Skap dit eget spill. Når du er ferdig, trykk Ferdig for
+          å la vennene dine prøve din histore på deres telefoner.
+        studio_k1_1: Kan du få denne hunden til å si «hallo verden»?
+        studio_k1_2: Kan du få hunden til å si noe og etterpå få katten til å si noe?
         studio_k1_3: Kan du skrive et program for å få denne hunden flytte seg til
           katten?
-        studio_k1_4: Make the dog move to the cat and the cat say "hello" when he
-          gets there.
-        studio_k1_5: Can you add a block to make the octopus happy?
-        studio_k1_6: Can you write a program to make this penguin move around using
-          the up / down / left /right keys to hit all of the targets?
-        maze_wordsearch_k_1: Move me to spell the word EAST
-        maze_wordsearch_k_2: Move me to spell the word SOUTH
-        maze_wordsearch_k_3: Move me to spell the word WEST
-        maze_wordsearch_k_4: Move me to spell the word NORTH
-        maze_wordsearch_k_6: Move me East and then South to spell the word JUMP
-        maze_wordsearch_k_9: Move me one way, then another to spell the word CODE
-        maze_wordsearch_k_13: Move me one way, then another to spell the word DEBUG
-        maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
-        maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
-        maze_wordsearch_k_20: This is a test! Move me one way, then another to spell
-          the word STORY
+        studio_k1_4: Få hunden til å flytte seg bort til katten og katten til å si
+          «hallo» når han kommer fram.
+        studio_k1_5: Kan du legge til en blokk for å gjøre blekkspruten glad?
+        studio_k1_6: Lag din egen historie! Flytt katten og hunden rundt, og få dem
+          til å si ting.
+        maze_wordsearch_k_1: Flytt meg for å stave ordet ØST
+        maze_wordsearch_k_2: Flytt meg for å stave ordet SØR
+        maze_wordsearch_k_3: Flytt meg for å stave ordet VEST
+        maze_wordsearch_k_4: Flytt meg for å stave ordet NORD
+        maze_wordsearch_k_6: Flytt meg øst og så sør for å stave ordet HOPP
+        maze_wordsearch_k_9: Flytt meg en vei, så en annen vei for å stave ordet KODE
+        maze_wordsearch_k_13: Flytt meg en vei, så en annen for å stave ordet FEILSØKING
+        maze_wordsearch_k_15: Flytt meg en vei, så en annen for å stave ordet OVER
+        maze_wordsearch_k_16: Flytt meg en vei, så en annen for å stave ordet UNDER
+        maze_wordsearch_k_20: Dette er en test! Flytt meg en vei, så en annen for
+          å stave ordet HISTORIE
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
+          it in the new "penColour" block.'
     video:
       name:
         maze_intro: Labyrint intro
         artist_intro: Kunstner intro
         farmer_intro: Bonde intro
-        flappy_intro: Flappy Intro
+        flappy_intro: Flakse Intro
         loop_times: En blokk for å gjenta noe et antall ganger
         loop_until: Gjenta inntil blokk
         if: Hvis-blokk
@@ -560,16 +570,16 @@
         Unplug9: Relé programmering
         Unplug10: Internett
         Unplug11: Oppsummering
-        C1_happy_maps_unplugged: Happy Maps
+        C1_happy_maps_unplugged: Glad Kart
         C1_moveitmoveit_unplugged: Flytt den, flytt den
         C1_bigevent_unplugged: Den store begivenheten
-        C1_getting_loop: Getting Loopy
-        C1_pair_programming: Pair Programming
+        C1_getting_loop: Bli Løkkete
+        C1_pair_programming: Par Programmering
         C1_maze_intro_sequencing: Labyrint sekvensering Intro
         C1_maze_debugging: Labyrint feilsøking
         C1_bee_level_intro: Bie nivå - Intro
         C1_artist_intro: Kunstner intro
-        C1_spelling_bee_intro: Spelling Bee Intro
+        C1_spelling_bee_intro: Stavekonkurranse Intro
         C1_zuck_repeat_loop: Labyrint løkker
         C1_bee_loops: Bie løkker
         C1_maze_loops: Labyrint løkker
@@ -580,7 +590,7 @@
         C2_artist_intro: Kunstner intro
         C2_zuck_repeat_loop: Labyrint løkker
         C2_artist_loops: Kunstner løkker
-        C2_bee_conditionals: Bee Conditionals
+        C2_bee_conditionals: Bie Betingelser
         C2_playlab_createstory: Spill Lab - lage en historie
         C2_graph_paper: Millimeterpapirprogrammering
         C2_conditionals_with_cards: Betingelser
@@ -591,16 +601,16 @@
         C3_artist_intro: Kunstner intro
         C3_artist_functions: Kunstner funksjoner
         C3_bee_functions: Bie funksjoner
-        C3_bee_conditionals: Bee Conditionals
-        C3_maze_conditionals: Maze Conditionals
-        C3_artist_nested_loops: Nested Loops
-        C3_farmer_while: While Loops
-        C3_bee_nested_loops: Nested Loops
+        C3_bee_conditionals: Bie Betingelser
+        C3_maze_conditionals: Labyrint Betingelser
+        C3_artist_nested_loops: Nøstede Løkker
+        C3_farmer_while: Mens Løkker
+        C3_bee_nested_loops: Nøstede Løkker
         C3_bee_debugging: Bie feilsøking
         C3_bounce: sprett
         C3_playlab_create_game: Spill Lab - lage et spill
         C3_computational_thinking: Programmeringstenkning
-        C3_dice_race: Dice Race
+        C3_dice_race: Terningskappløp
         C3_internet: Internett
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Fungerende solfangere

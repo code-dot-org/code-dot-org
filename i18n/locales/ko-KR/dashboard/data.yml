@@ -49,6 +49,7 @@ ko:
           desc: 코드 수정(beta)
           MazeEC: 1 단계
           Webapp: 2 단계
+          ArtistEC: 3 단계
         events:
           desc: Bounce (beta)
           Bounce: 1 단계
@@ -97,7 +98,8 @@ ko:
         Jigsaw: 퍼즐 맞추기
         MazeStep: 미로 단계별 모드
         Wordsearch: 단어 탐색
-        Webapp: Webapp
+        Webapp: 웹 앱
+        ArtistEC: The Artist
     trophy:
       name:
         Bronze: 동
@@ -317,6 +319,8 @@ ko:
         maze_wordsearch_k_15: '어떤 방향으로 움직인 후에 "위"로 이동시켜주세요.'
         maze_wordsearch_k_16: '어떤 방향으로 움직인 후에 "아래"로 이동시켜주세요.'
         maze_wordsearch_k_20: '테스트입니다! 어떤 방향으로 움직인 후에 "스토리"로 이동시켜주세요.'
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColour" block.'
     video:
       name:
         maze_intro: 미로 퍼즐 소개

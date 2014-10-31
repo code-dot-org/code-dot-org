@@ -1,6 +1,6 @@
 * * *
 
-fra: '"Hadi Partovi(Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)' tittel: Takk for at du melder deg som vertskap for Kodetimen! view: none theme: none
+frå: '"Hadi Partovi(Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)' tittel: Takk for at du melder deg som vertskap for Kodetimen! view: none theme: none
 
 * * *
 
@@ -24,7 +24,7 @@ Fortell vennene dine om #Kodetimen.
 
 ## 2. Spør hele skolen din om å tilby en Kodetime
 
-[Send denne e-posten](http://<%= hostname %>/ressurser#email) eller [gje dette flygebladet til rektoren din](http://<%= hostname %>/filer/skole-flyer.pdf). Når skolen din har meldt seg på, [ gå inn her for å kunne vinne datautstyr til en verdi av $10000 til din skole](http://<%= hostname %>/premier) og utfordre andre skoler i ditt område til å bli med.
+[Send denne e-posten](http://<%= hostname %>/ressurser#email) eller [gje dette flygebladet til rektoren din](http://<%= hostname %>/filer/skole-flyer.pdf). Når skulen din er påmeld,[gå inn her for ein sjanse til å vinne datautstyr til ein verdi av $10000 for skulen din](http://<%= hostname %>/premier) og utfordre andre skular i nærleiken til å bli med.
 
 <% else %>
 

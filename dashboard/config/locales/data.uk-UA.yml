@@ -49,6 +49,7 @@
           desc: "Редагування коду (бета-версія)"
           MazeEC: "Етап 1"
           Webapp: "Етап 2"
+          ArtistEC: "Етап 3"
         events:
           desc: "Арканоід (бета-версія)"
           Bounce: "Етап 1"
@@ -98,6 +99,7 @@
         MazeStep: "Покроковий режим лабіринту"
         Wordsearch: "Пошук слів"
         Webapp: Webapp
+        ArtistEC: "Художник"
     trophy:
       name:
         Bronze: "Бронза"
@@ -551,6 +553,9 @@
           BELOW (НИЖЧЕ)"
         maze_wordsearch_k_20: "Це перевірка! Переміщуйте мене в різні сторони, щоб
           написати слово STORY (ІСТОРІЯ)"
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
+          it in the new "penColour" block.'
     video:
       name:
         maze_intro: "Вступ до лабіринту"

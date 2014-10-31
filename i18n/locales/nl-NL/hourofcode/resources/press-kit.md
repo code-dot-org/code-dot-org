@@ -53,7 +53,7 @@ In China krijgen alle leerlingen informatica om te slagen voor hun middelbare sc
 
 **Over Code.org**
 
-Code.org® is een 501c3 publieke non-profit die zich richt op het uitbreiden van deelname aan informatica en het vergroten van de deelname door vrouwen en studenten uit ondergerepresenteerde ethnische groepen. Het is haar visie dat iedere leerling in iedere school de kans zou moeten hebben informatica te leren. Na de start in 2013 organiseerde Code.org de 'Uur Code'-campagne — welke miljoenen leerlingen in aanraking heeft gebracht met informatica — ging partnerschappen aan met meer dan 30 schooldistricten in Amerika, en lanceerde Code Studio, een open-source online leerplatform voor alle leeftijden. Voor meer informatie, bezoek: < % als @country == 'sr' %> [www.uk.code.org](http://uk.code.org). <% else %> [www.code.org](http://code.org). <% end %>
+Code.org® is een 501c3 publieke non-profit die zich richt op het uitbreiden van deelname aan informatica en het vergroten van de deelname door vrouwen en studenten uit ondergerepresenteerde ethnische groepen. Het is haar visie dat iedere leerling in iedere school de kans zou moeten hebben informatica te leren. Na de start in 2013 organiseerde Code.org de 'Uur Code'-campagne — welke miljoenen leerlingen in aanraking heeft gebracht met informatica — ging partnerschappen aan met meer dan 30 schooldistricten in Amerika, en lanceerde Code Studio, een open-source online leerplatform voor alle leeftijden. For more information, please visit: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
 Voor meer matriaal en voorbeeld e-mails klik[ hier](<%= hoc_uri('/resources') %>).

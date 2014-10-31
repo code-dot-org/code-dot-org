@@ -14,11 +14,11 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Hour of Code होस्ट गर्नुकोलागी sign up गर्नु भएकोमा धन्यवाद!
 
-**सबै** Hour of Code संचालकले धन्यवाद स्वरुप पाउनु हुनेछ १० GB Dropbox space अथवा $१० Skype credit. [बिस्तृत जानकारी](/prizes)
+**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](<%= hoc_uri('/prizes') %>)
 
 <% if @country == 'us' %>
 
-तपाइँको सम्पूर्ण विद्यालयमा ठूला उपहारहरू लिने अवसरको लागि तपाइँको [सबै विद्यालयलाई सहभागि](/us/prizes) गराउन।
+Get your [whole school to participate](<%= hoc_uri('/prizes') %>) for a chance for big prizes for your entire school.
 
 <% end %>
 
@@ -32,23 +32,23 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 ## २. तपाईको स्कूललाई Hour of Code को प्रस्ताब राखन भन्नुहोश
 
-[यो इमेल पठाउनुहोस्](/resources#email) वा [यो हातेपुस्तिका तपाइँको प्रधानाध्यापकलाई दिनुहोस्](/files/schools-handout.pdf)। तपाइको स्कूल सहभागी भएपछि, [$१०००० बराबर को टेक्नोलोजी समान पाउन भाग लिनुहोश](/prizes), र अरु स्कूललाई सहभागी हुन आमन्त्रण गर्नुहोश.
+[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](<%= hoc_uri('/files/schools-handout.pdf') %>). तपाइको स्कूल सहभागी भएपछि, [$१०००० बराबर को टेक्नोलोजी समान पाउन भाग लिनुहोश](/prizes), र अरु स्कूललाई सहभागी हुन आमन्त्रण गर्नुहोश.
 
 <% else %>
 
 ## २. तपाईको स्कूललाई Hour of Code को प्रस्ताब राखन भन्नुहोश
 
-[यो इमेल पठाउनुहोस्](/resources#email) वा [यो हातेपुस्तिका तपाइँको प्रधानाध्यापकलाई दिनुहोस्](/files/schools-handout.pdf)।
+[Send this email](<%= hoc_uri('/resources#email') %>) or give [this handout](<%= hoc_uri('/files/schools-handout.pdf') %>) to your principal.
 
 <% end %>
 
 ## 3. उदार दान गर्नुहोस्
 
-[हाम्रो क्राउडफन्डिङ् अभियानमा दान गर्नुहोस्](http://code.org/donate)। 100 मिलियन बच्चाहरूलाई पढाउन, हामीलाई तपाइँको समर्थनको आवश्यकता पर्दछ। हामीले इतिहासमा [क्राउडफन्डिङ् अभियानको सबै भन्दा ठूलो शिक्षा](http://code.org/donate) के हुन्छ भनि केबल सुरु गर्यौँ। हरेक डलरलाई आफ्नो प्रभाव दुईगुणा प्रमुख Code.org [दाताहरू](http://code.org/about/donors) द्वारा, मिलान गरिने छ।
+[Donate to our crowdfunding campaign.](http://<%= codeorg_url() %>/donate) To teach 100 million children, we need your support. We just launched what could be the [largest education crowdfunding campaign](http://<%= codeorg_url() %>/donate) in history. Every dollar will be matched by major Code.org [donors](http://<%= codeorg_url() %>/about/donors), doubling your impact.
 
 ## 4. आफ्नो मालिकलाई आवद्ध हुन सोध्नुहोस्
 
-[यो इमेललाई](/resources#email) तपाइँको व्यवस्थापक, वा CEO लाई पठाउनुहोस्। वा [तिनिहरूलाई यो हातेपुस्तिका दिनुहोस्](/resources/hoc-one-pager.pdf).
+[Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](<%= hoc_uri('/resources/hoc-one-pager.pdf') %>).
 
 ## तपाइँको समुदाय भित्र Hour of Code लाई प्रबर्द्धन गर्नुहोस्
 
@@ -56,6 +56,6 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 ## 6. Hour of Code लाई समर्थन गर्न स्थानीय चुनियका अधिकारीलाई सोध्नुहोस्
 
-[यो इमेललाई](/resources#politicians) तपाइँको मेयर, सहरको सभा, वा विद्यालयको समितिमा पठाउनुहोस्। वा [तिनिहरूलाई यो हातेपुस्तिका दिनुहोस्](/resources/hoc-one-pager.pdf) र तिनिहरूलाई तपाइँको विद्यालयमा जान निमन्त्रणा दिनुहोस्।
+[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board. Or [give them this handout](<%= hoc_uri('/resources/hoc-one-pager.pdf') %>) and invite them to visit your school.
 
 <%= view 'popup_window.js' %>

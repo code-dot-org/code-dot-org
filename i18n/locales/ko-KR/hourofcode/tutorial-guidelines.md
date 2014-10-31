@@ -6,11 +6,11 @@ layout: wide
 
 # Hour of Code 행사와, 컴퓨터과학(정보과학) 교육 주간을 위한 튜토리얼 가이드라인
 
-**The deadline to submit a tutorial for Hour of Code 2014 has passed. You may still submit an entry and we will try to review it if time allows.**
+**2014 Hour of Code 행사를 위한 튜토리얼 제안 기한이 이미 지났습니다만, 제출해 주시면 시간이 되는대로 살펴볼 것입니다.**
 
-Code.org will host a variety of Hour of Code activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [code.org/learn](http://code.org/learn).
+Code.org will host a variety of Hour of Code activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= codeorg_url() %>](http://<%= codeorg_url() %>/learn).
 
-We’d like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science. Please use this document to guide the creation of your activity, targeted to the user who has no background in coding, computer programming, and computer science.
+우리는 다양하면서도 매력적인 활동들을 제공하고 싶습니다만, 가장 중요한 목표는 컴퓨터과학(정보과학)을 처음 배우게 되는 학생들과 선생님들의 학습경험과 효과를 최대화 하는 것입니다. 이 문서를 활용하세요. 코딩, 컴퓨터프로그래밍, 컴퓨터과학(정보과학)에 대해 전혀 알지 못하는 사람들을 대상으로하는 여러가지 활동들을 만들어내는 가이드로서 활용하면 됩니다.
 
 <a id="top"></a>
 
@@ -29,9 +29,9 @@ We’d like to host a variety of engaging options, but the primary goal is to op
 
 ## 최종적으로 완성되어 포함될 튜토리얼은 어떻게 평가 되는가?
 
-A committee of computer science educators will rank submissions based on qualitative and quantitative metrics, including survey results from a broader set of educators.
+컴퓨터과학(정보과학) 교사 위원회는 더 많은 교사들로 부터 얻어진 통계를 포함한 결과들을 포함하는 질적/양적 평가 척도에 기준을 두고 제출된 내용들에 대해 순위를 메길 것입니다.
 
-**Tutorials will be listed higher if they are:**
+**다음과 같은 사항들을 포함하고 있는 튜토리얼들은 더 높은 평가를 받을 것입니다.:**
 
   * 질적으로 수준이 높은 것
   * 추가적인 설명이 필요없으며 자기 스스로 할 수 있는 것
@@ -42,7 +42,7 @@ A committee of computer science educators will rank submissions based on qualita
   * 모든 인종/성별/소수자(특히, 소외 계층/집단)와 관계없이 배울 수 있는 것
   * 순수하게 HTML+CSS와 같은 웹 디자인에만 포커스를 맞추지 않을 것 - (우리의 목표는 컴퓨터과학(정보과학)이며, 단순한 HTML 코딩을 의미하는 것이 아닙니다.)
 
-**Tutorials will be listed lower if they are:**
+**다음과 같은 사항들을 포함하고 있는 튜토리얼들은 더 낮은 평가를 받을 것입니다.:**
 
   * 질적으로 수준이 낮은 것
   * 높은 수준의 학습자를 대상으로 하는 것(초보자를 위한 것이 아닌)
@@ -51,7 +51,7 @@ A committee of computer science educators will rank submissions based on qualita
   * 특정 성별에 치우친 것(예를 들어, 남자 아이들을 주로 목표에 두는 경우 등)
   * 사용하는데 비용이 드는 학습 플랫폼의 구입을 강요하는 경우
 
-**Tutorials will NOT be listed if they:**
+**다음과 같은 튜토리얼들은 게시되지 않을 것입니다.:**
 
   * 선생님에 의한 많은 지도와 설명에 의해서만 (즉, 학생들의 자기주도적 학습을 이끌어내지 못하는 경우) 활동하거나 배울 수 있는 수준을 필요로 하는 경우.
   * (대략적으로) 1시간 이내의 활동으로 설계되지 않은 경우
@@ -61,13 +61,13 @@ A committee of computer science educators will rank submissions based on qualita
   * 오로지 HTML+CSS 웹 디자인에만 포커스를 맞추는 경우
   * 제출 기한을 넘겨서 제출하거나, 미완성(다음 참조)으로 제출하는 경우
 
-Ultimately, the goal of the Hour of Code campaign is to broaden participation in computer science by students and teachers, and to help show that computer science is accessible to all, and “easier than you think.” In many ways, this goal is better achieved by giving students and teachers fewer and simpler choices, with a focus on the highest quality options for a first-time user.
+궁극적으로, Hour of Code 행사와 캠페인의 목표는 학생들과 선생님들에 의해, 더 많이 컴퓨터과학(정보과학) 교육을 할 수 있도록 하는데 있으며, 컴퓨터과학(정보과학)은 누구나 쉽게 배울 수 있다는 것을 보여주기 위한 것이고, 많은 사람들이 생각하는 것보다 "더 쉽습니다." 이러한 목표는 처음 접하는 초보자를 위해 준비한 질 높은 선택사항들과 함께, 여러 가지 방법으로 학생들과 선생님들에게 보다 적은 시간으로 단순한 방법과 선택으로 쉽게 달성될 수 있습니다.
 
-Note also, that the 2013 CSEdWeek was a fantastic success as measured by the responses from teachers and students - 20M participants from Dec 9 - 23, and 97% said they enjoyed it and want to repeat the campaign!!
+추가 참고 사항. 2013 CSEdWeek (컴퓨터과학 교육 주간) 행사는 학생들과 선생님들의 응답 결과가 매우 놀라웠습니다. - 2013.12.09~23 까지의 기간동안 2000만명이 참여했고, 참여한 사람들 중 97%는 재미있었고 다시 같은 캠페인을 하면 좋겠다고 하였습니다.
 
-As a result, the existing listings are certainly “good enough,” and the driving reason to add tutorials to the Hour of Code listings isn’t to broaden the choices, but to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2014 campaign.
+결과적으로, 지금까지 Hour of Code 에 수록된 내용들은 확실히 "충분히 성공적"이었다라고 할 수 있었습니다. 그리고 Hour of Code 에 수록된 내용들은 다양하게 선택할 수는 없었지만, 2014 캠페인을 위해서는 학생들을 위한 내용의 질(또는 개선)을 높이거나 보다 전세계적으로 영어가 주 언어가 아닌 사람들을 위한 다양한 옵션들을 만들 필요와 요구가 있었습니다.
 
-[**Back to the top**](#top)
+[**맨 위로**](#top)
 
 <a id="guidelines"></a>
 
@@ -84,15 +84,15 @@ As a result, the existing listings are certainly “good enough,” and the driv
       * **가능하지만 별로 추천하지는 않는 유형:** 앱 설치, 데스크탑 응용프로그램이나 콘솔 게임 기반의 체험들.
   * **형식:** 자기 혼자 힘으로 스스로 따라할 수 있는 튜토리얼이나 레슨으로서 필요하다면 선생님의 지도로 더 잘 할 수 있도록. 학생들이 더 배우고 싶을 때, 계속해서 노력하면서 배울 수 있는 방향을 제시하는 형태이어야 함. 이상적으로는, 교재나 튜토리얼들이 프로그래밍 플랫폼/도구에 집약/모두 포함 되도록 함으로서, 튜토리얼과 프로그래밍 플랫폼/도구 창을 반복적으로 왔다갔다 하지 않도록 해야함.
 
-[**Back to the top**](#top)
+[**맨 위로**](#top)
 
 <a id="submit"></a>
 
 ## 제출방법(2014.10.01 까지)
 
-Visit the [Hour of Code Activity Submission page](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform) and follow the steps to submit your tutorial.
+[Hour of Code 활동 제출 페이지](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform)를 방문해서 만든 튜토리얼을 제출하는 절차들을 따라가세요.
 
-**What you’ll need:**
+**필요한 사항:**
 
   * 이름, 로고(jpt, png, etc.)
   * 특별한 활동에 관련된 화면캡쳐 또는 설명이미지의 URL 주소 설명이미지/화면캡쳐는 정확히 446x335 해상도이어야 함. 적합한 이미지가 제출되지 않으면, 튜토리얼 화면이 캡쳐되어 사용되던가 등록되지 않을 수 있음.
@@ -140,56 +140,56 @@ Visit the [Hour of Code Activity Submission page](https://docs.google.com/a/code
       * 오프라인활동과 관련하여 
           * 인쇄 버전(가능한 경우)의 활동 자료 다운로드 횟수
 
-[**Back to the top**](#top)
+[**맨 위로**](#top)
 
 <a id="design"></a>
 
 ## 활동을 설계하는데 도움이되는 제안사항들
 
-**Include the CSEdWeek logo in your tutorial.** You can include the CSEdWeek logo ([small](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) or [big](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) in your tutorial, but this is not required. You may also contact us to request specific permission to use the “In Partnership with Code.org” logo. ***This logo can only be used if specific permission is granted in writing by Code.org.*** We may end up creating an Hour of Code logo, but at this time we do not have one. Under no circumstances can the Code.org logo and name be used. Both are trademarked, and can’t be co-mingled with a 3rd party brand name.
+**여러분의 튜토리얼에 CSEdWeek 로고를 삽입하세요.** CSEdWeek 로고([small](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) 또는 [big](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) 를 삽입시켜도 됩니다만 필수사항은 아닙니다. "In Partnership with Code.org" 로고를 사용하기 위해 특별한 허가를 원하는 경우 연락을 해주실 수 있습니다. ***이 로고는 Code.org로 부터 특별한 허락을 얻은 경우에만 사용될 수 있습니다.*** Hour of Code 로고를 만들고 있지만, 아직 완료되지 않았습니다. Code.org 로고와 이름은 어떤 제약도 없이 사용될 수 있습니다. 두 가지 모두 등록된 트레이드마크(상표)이며, 다른 서드파티(제3의) 상표와 결합되어 사용될 수 없습니다.
 
-**Make sure that the average student can finish comfortably in an hour.** Consider adding an open-ended activity at the end for students who move more quickly through the lesson. Remember that most kids will be absolute beginners to computer science and coding.
+**대부분의 학생들이 1시간 이내에 충분히 해결할 수 있도록 해주세요.** 준비한 과정을 빠른 시간에 완료하는 학생들을 위해 창의적으로 활동할 수 있는 오픈형 활동을 마지막에 배치하는 것도 고려해 주세요. 대부분의 아이들은 컴퓨터과학(정보과학)과 코딩을 전혀 모른다는 것을 생각해주세요.
 
-**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Not only are the students novices, some of the teachers are as well. Include info such as:
+**선생님용 설명을 포함해서** 대부분의 활동들은 학생들 스스로 자기주도적으로 가능해야합니다. 하지만 선생님의 도움이나 지도를 통해서 이루어지는 활동들에는, 반드시 선생님들을 위해 여러분의 활동에 대한 명확하고 간단한 지도사항/방법/내용을 별도의 URL 주소 형태로 함께 제공해 주세요. 대부분의 학생들이 초보자인것과 같이, 많은 선생님들도 별로 다르지 않습니다. 다음과 같은 정보를 포함시켜주세요:
 
   * 우리의 튜토리얼은 다음과 같은 플랫폼과 브라우져에서 가장 잘 동작합니다.
   * 스마트폰이나 태블릿에서도 동작하나요?
   * 짝지어 활동하는 페어프로그래밍 방법을 권장하나요? 
   * 학급단위로 운영했을 때의 고려사항은? 예를 들어, 동영상들이 있고, 전체 학급이 함께 볼 수 있도록 보조 선생님들이 프로젝터나 스크린으로 보여줄 수 있다 등
 
-**Incorporate feedback at the end of the activity.** (E.g.: “You finished 10 levels and learned about loops! Great job!”)
+**각 활동의 마지막에는 피드백 활동을 넣어주세요.**(예시: "10 레벨을 끝내고 반복실행을 배웠구나! 멋진데?")
 
-**Incorporate social media.** Encourage students to post to social media (where appropriate) when they’ve finished, for example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourofCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
+**소셜 미디어를 넣어주세요.** 학생들을 격려해서 (가능한 경우) 자신들이 해낸 것들을 게시할 수 있도록 해주세요. 예를 들어, "나는 Hour of Code 를 ________ 게 완료했습니다. 여러분은?" #HourOfCode" 또는 "나는 #CSEdWeek 의 행사활동으로 #HourofCode를 해보고 모두 성공했다. 여러분들도 해보셨나요? @Scratch?" **#HourOfCode** 해쉬 태그를 사용하세요.(대문자 H, O, C)
 
-**Create your activity in languages besides English.** We're focusing this campaign internationally this year and would like to have a number of activities to offer non-English speaking participants.
+**영어 이외의 다른 언어로도 활동을 만들어 주세요.** 올해 우리는 이 캠페인을 전세계적으로 확산시키고 비영어권 사람들에게도 많은 활동들을 제공하는데 중점을 두고 있습니다.
 
-**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
+**사회적으로 중요한 맥락으로 활동들을 설명하고 연관시켜주세요.** 세상을 좀더 좋게 변화시킬 수 있다는 것을 학생들이 인식하게 될 때 컴퓨터 프로그래밍은 매우 강력한 힘과 능력이 됩니다.
 
-**Do not require signup or payment before students can try your tutorial.** Tutorials that require signup or payment will not be listed
+**학생들이 여러분이 만든 튜토리얼을 해보기 전에 별도의 회원가입이나 비용을 요구하지 마세요.** 별도의 회원 가입이나 비용을 필요로하는 활동들은 게시되지 않을 것입니다.
 
-**Make sure your tutorial can be used in a [Pair Programming paradigm](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning).**
+**여러분의 튜토리얼이 [페어프로그래밍 활동](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning)에서도 가능하도록 해주세요..**
 
-The three rules of pair programming in a school setting:
+학교와 같은 학습환경에서 페어프로그래밍 활동의 3가지 규칙:
 
   * 드라이버(driver)는 마우스와 키보드 입력을 맏습니다.
   * 네비게이터(navigator)는 제안하고, 오류를 찾아내고, 질문을 합니다. 
   * 학생들은 하나의 세션 활동중에 적어도 2번 이상 역할을 바꾸어 활동해야 합니다.
 
-Benefits of Pair Programming:
+페어프로그래밍의 장점:
 
   * 학생들이 선생님에게 의지하는 대신 서로 도울 수 있습니다.
   * 코딩은 혼자만의 활동이 아니라, 다른 사람들과의 사회적 교류 활동이라는 것을 보여줄 수 있습니다.
   * 교실이나 실험실에 학생 수에 맞는 컴퓨터를 갖추고 있지 않아도 활동이 가능합니다.
 
-[**Back to the top**](#top)
+[**맨 위로**](#top)
 
 <a id="tm"></a>
 
 ## 트레이드마크(상표) 가이드라인
 
-With ~40 million students having tried the Hour of Code, and over 97% of participating teachers asking us to repeat the event annually, we are taking steps to make sure we set up the Hour of Code as a movement that can repeat annually with greater fidelity and without confusion.
+이미 약 4000만 명의 학생들이 Hour of Code를 경험하였으며, 함께 참여했던 교사들의 97% 이상이 행사를 매년 개최해달라고 적극적으로 요청하였기 때문에, 우리는 Hour of Code 행사를 보다 충실하면서도 혼란스럽지 않게 매년 개최할 수 있도록 단계적인 작업을 진행해 나가고 있습니다.
 
-One piece of this is to protect the trademark "Hour of Code" to prevent confusion. Many of our tutorial partners have used "Hour of Code" on your web sites. We don't want to prevent this usage, but we want to make sure it fits within a few limits:
+이러한 내용의 목적은 "Hour of Code" 이름이 혼란스럽게 사용되는 것을 막고자 하는 것입니다. 우리와 함께하는 많은 튜토리얼 파트너들은 "Hour of Code"를 여러분의 웹 사이트에 사용해 왔습니다. 이러한 이름 사용을 제한하고 싶지는 않지만, 다음과 같은 몇가지 제한 사항은 지켜주길 바랍니다.
 
   1. 의류 등 각종 패션 제품에 사용되는 "Hour of Code"는 브랜드 이름으로서 사용되서는 안되며, Hour of Code 운동에 대한 참조를 달아야 합니다. 좋은 예시: "ACMECorp.com 에서 Hour of Code 에 함께 참여하세요" 나쁜 예시: "ACME 회사의 Hour of Code를 사용해 보세요"
   2. "Hour of Code"를 언급하는 경우, 웹사이트에 게제하거나, 앱/프로그램에 설명하는 경우에는 윗 첨자 "TM"를 눈에 띄게 표시해 주세요.
@@ -199,33 +199,33 @@ One piece of this is to protect the trademark "Hour of Code" to prevent confusio
 
   4. "Hour of Code"를 앱/프로그램 이름으로 사용하지 말아주세요.
 
-[**Back to the top**](#top)
+[**맨 위로**](#top)
 
 <a id="pixel"></a>
 
 ## 트랙킹 픽셀(Tracking Pixel)
 
-In order to more accurately track participation we ask every third party tutorial partners to include 1-pixel tracking images on the first and last page of their Hour of Code tutorials (A starting pixel-image on the start page and a final pixel-image on the end page. And not on interim pages).
+참여 인원을 보다 정확하게 추적하기 위해 모든 서드파티 튜토리얼 파트너들은 1픽셀 크기의 트랙킹 이미지를 Hour of Code 튜토리얼의 가장 첫 페이지와 마지막 페이지에 삽입해 주시기 바랍니다.(첫 페이지와 마지막 페이지에 삽입되는 픽셀 이미지. 마지막 트랙킹 픽셀 이미지는 중간페이지에는 삽입하지 말아주세요).
 
-This will allow us to count users who you directly recruit to visit your website to do their Hour of Code, or users who visit when a teacher types your URL directly on their whiteboard. It will lead to more accurate participation counts for your tutorial, which will help you attract users. If you integrate the pixel at the end it will also allow us to measure tutorial completion rates.
+이렇게 하면 Hour of Code 활동을 위해 여러분의 웹사이트로 직접 안내한 사람들이나, 선생님들이 적어준 URL 주소를 입력한 사람들의 인원수를 카운트할 수 있게 됩니다. 그렇게 하면 여러분의 튜토리얼이 얼마나 많은 사람들에게 도움이 되는지를 보다 정확한 참여 인원을 카운팅 할 수 있게 됩니다. 마지막 페이지에 두 개의 트랙킹 픽셀을 함께 삽입해도 튜토리얼을 완료한 비율을 카운팅 할 수 있습니다.
 
-If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
+여러분의 튜토리얼이 승인되고 최종 튜토리얼 페이지에 포함이 된다면, Code.org 에서 유일한 트랙킹 픽셀 이미지를 여러분의 튜토리얼에 제공할 것입니다. 아래 내용을 살펴보세요.
 
-***NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)***
+***참고: 설치 가능형 앱/응용프로그램(iOS/Android, PC)에는 별로 중요하지 않습니다.***
 
-**Example tracking pixels for AppInventor:**
+**앱 인벤터에 대한 예시 트랙킹 픽셀:**
 
 IMG SRC="http://code.org/api/hour/begin_appinventor.png/"
 
 IMG SRC="http://code.org/api/hour/finish_appinventor.png/"
 
-[**Back to the top**](#top)
+[**맨 위로**](#top)
 
 <a id="promote"></a>
 
 ## 자신이 만든 튜토리얼, CSEdWeek, Hour of Code 활성화하기
 
-We are asking everyone to promote their own 1-hour tutorial to your users. Please direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your tutorial. Use the international Hour of Code campaign for Computer Science Education Week as an excuse to encourage users to invite others to join in, help us reach 100 million total participants.
+우리는 여러분의 1시간 튜토리얼을 많은 사람들이 해볼 수 있도록 안내할 것입니다. 여러분의 Hour of Code 페이지로 안내해 주세요. 그 사람들을 위해 여러분의 튜토리얼에 대한 내용으로 메일을 보내주면 더욱 더 좋아할 것입니다. 컴퓨터과학교육주간(Computer Science Education Week)에 이루어지는 전세계적인 Hour of Code 캠페인을 통해, 많은 사람들을 초대하고 참여할 수 있도록 하여 1억명의 목표를 달성할 수 있도록 도와주세요.
 
   * Hour of Code 와 CSEdWeek 를 여러분의 웹사이트에 포함/소개해주세요.  
     예시: <http://www.tynker.com/hour-of-code>
@@ -233,12 +233,12 @@ We are asking everyone to promote their own 1-hour tutorial to your users. Pleas
   * 지역 이벤트를 운영하거나, 여러분의 직장 상사나 대표에게 지역 학교 또는 커뮤니티에서 이멘트를 운영해 달라고 요청해 주세요. 
   * 더 많은 정보는 리소스 킷(예정)을 살펴보세요.
 
-[**Back to the top**](#top)
+[**맨 위로**](#top)
 
 <a id="disabilities"></a>
 
 ## 장애를 가진 학생들을 위한 추가 참고사항
 
-If you create a tutorial that is designed for the vision-impaired, we’d love to highlight it for viewers with screen-readers. We have not yet received such a tutorial, and would be eager to include one as an option for these students.
+시각 장애인을 위한 튜토리얼을 만들어주신다면, 잘 보이는 위치에 강조하여 배치하여 안내할 것입니다. 아직 그러한 튜토리얼을 받지는 못했지만, 그렇게 몸이 불편한 학생들을 위한 튜토리얼이 있으면 매우 좋을 것 같습니다.
 
-[**Back to the top**](#top)
+[**맨 위로**](#top)
