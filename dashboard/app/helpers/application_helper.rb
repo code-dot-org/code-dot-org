@@ -28,14 +28,6 @@ module ApplicationHelper
     doc.to_xhtml
   end
 
-  def level_box_class(best_result)
-    if !best_result then 'level_untried'
-    elsif best_result == Activity::BEST_PASS_RESULT || best_result == Activity::FREE_PLAY_RESULT then 'level_aced'
-    elsif best_result < Activity::MINIMUM_PASS_RESULT then 'level_undone'
-    else 'level_done'
-    end
-  end
-
   def gender_options
     User::GENDER_OPTIONS.map do |key, value|
       [(key ? t(key) : ''), value]

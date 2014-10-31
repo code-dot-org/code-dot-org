@@ -4,8 +4,8 @@ module StagesHelper
     return title unless stage_or_game.instance_of? Game
     if stage_or_game.instance_of? Game
       title += ": "
-      title += "<span class='game-title'>" + (data_t('game.name', stage_or_game.name) || stage_or_game.name) + "</span>"
     end
+    title += "<span class='game-title'>" + (data_t('game.name', stage_or_game.name) || stage_or_game.name) + "</span>"
     title.html_safe
   end
 

@@ -83,37 +83,6 @@ th {
   background-color: lightgray;
 }
 
-
-.header .progress_container {
-  background-color: #eee;
-  border: 1px solid #ccc;
-  display: inline-block;
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-
-.level_untried, a.level_untried:visited, .header a.level_untried:visited{
-  background-color: $level_not_tried;
-//  background-color: white;
-  color: #666;
-}
-
-.level_undone, a.level_undone, a.level_undone:visited, .header a.level_undone:visited{
-  background-color: $level_attempted;
-//  background-color: $dark_color;
-  color: #666 !important;
-}
-
-.level_done, a.level_done:visited {
-  background-color: $level_passed;
-//  background-color: #e7e9ad;
-}
-
-.level_aced, a.level_aced:visited {
-  background-color: $level_perfect;
-//  background-color: darkgreen;
-}
-
 .trophy_gold {
   background-color: gold;
 }
@@ -174,36 +143,55 @@ th {
 
 .level_link.not_tried, .level_link.not_tried:link, .level_link.not_tried:visited {
   background-color: $level_not_tried;
-  color: $purple;
-  color: #666;
+  color: #666 !important;
+  &:hover {
+    background-color: $level_current;
+    color: white;
+    text-decoration: none;
+  }
 }
 
 .level_link.attempted, .level_link.attempted:link, .level_link.attempted:visited {
   background-color: $level_attempted;
-//  color: $purple;
-  padding: 4px;
-  color: #666;
+  color: #666 !important;
+  &:hover {
+    background-color: $level_current;
+    color: white;
+    text-decoration: none;
+  }
 }
 
 .level_link.perfect, .level_link.perfect:link, .level_link.perfect:visited {
   background-color: $level_perfect;
-  color: white;
-  padding: 4px;
+  color: white !important;
+  &:hover {
+    background-color: $level_current;
+    color: white;
+    text-decoration: none;
+  }
 }
 
 
 .level_link.passed, .level_link.passed:link, .level_link.passed:visited {
   background-color: $level_passed;
-  color: white;
-  padding: 4px;
+  color: white !important;
+  &:hover {
+    background-color: $level_current;
+    color: white;
+    text-decoration: none;
+  }
 }
 
-
-.puzzle_outer_level {
-  background-color: #ccc;
+.puzzle_outer_level,
+.puzzle_outer_assessment,
+.puzzle_outer_current {
   padding: 1px;
   display: inline-block;
   border-radius: 20px;
+}
+
+.puzzle_outer_level {
+  background-color: #ccc;
 }
 
 .puzzle_outer_current {
@@ -218,6 +206,11 @@ th {
   padding: 1px;
   display: inline-block;
   border-radius: 20px;
+  background-color: $level_current;
+}
+
+.puzzle_outer_assessment {
+  background-color: yellow;
 }
 
 .user-stats-block
@@ -237,6 +230,7 @@ th {
 }
 
 .game-group {
+  border-bottom: 2px solid #ccc;
   background-color: #eee;
   display: table;
   table-layout: fixed;
@@ -257,6 +251,7 @@ th {
     box-sizing: border-box;
     padding-right: 10px;
     .level {
+      margin: 1px;
       display: inline-block;
       .puzzle-number {
         position: relative;
@@ -266,29 +261,10 @@ th {
   }
 }
 
-.game-group + .game-group {
-  border-top: 2px solid #ccc;
-}
-
 .puzzle-named {
   font-size: 13px;
   padding-left: 6px;
   padding-right: 6px;
-}
-
-.progress-outer {
-  background: #d1d567;
-  -webkit-border-radius: 13px;
-  height: 20px;
-  width: 300px;
-  padding: 3px;
-}
-
-.progress-inner {
-  background: #ffc459;
-  width: 50%;
-  height: 100%;
-  -webkit-border-radius: 9px;
 }
 
 .header {
@@ -336,10 +312,6 @@ a.header_status_bar:hover {
   a:hover {font-weight: bold; color:$dark_color; background-color: transparent;   text-decoration: underline; }  /* mouse over link */
   a:active {font-weight: bold; color:$dark_color; background-color: transparent;}  /* selected link */
 }
-
-//a.level_link:link,a.level_link:visited { color: white; font-weight: 400; }
-//a.level_link:hover { color: white; font-weight: 400; background-color: black; text-decoration: underline; }
-//a.level_link:active { color: white; font-weight: 400; background-color: black; }
 
 /* This styling helps to push the footer to the bottom of a page. */
 $footer_height: 110px;
@@ -530,7 +502,6 @@ html, body {
 }
 
 .header_level {
-  position: relative;
   padding-top: 28px;
   padding-bottom: 10px;
   text-align: center;
@@ -541,6 +512,13 @@ html, body {
     padding-top: 15px;
   }
 
+  .progress_container {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
   /* current and last are large dots */
   .puzzle_outer_current,
   .puzzle_outer_level.last,
@@ -553,23 +531,19 @@ html, body {
       height: 18px;
       min-width: 18px;
       width: 18px;
-      font-size: 16px;
-      padding: 2px;
-      color: white;
+      font-size: 14px;
+      padding: 0 2px 4px 2px;
       text-align: center;
       display: inline-block;
     }
   }
 
-  .puzzle_outer_level.last .level_link {
-    color: #333;
-  }
-
   /* all others are small dot */
   .puzzle_outer_level,
   .puzzle_outer_assessment {
+    margin: 0;
     position: relative;
-    top: 3px;
+    top: 5px;
     border-radius: 11px;
     line-height: 1px;
     .level_link {
@@ -591,7 +565,7 @@ html, body {
   .puzzle_outer_current,
   .puzzle_outer_current .level_link {
     background-color: $level_current;
-    color: white;
+    color: white !important;
   }
 
   .level_link.unplugged_level {
@@ -722,29 +696,6 @@ html, body {
 
 .medium-height-button {
   height: 50px;
-}
-
-th.manage-th {
-  background-color: rgb(0, 178, 192);
-  color: white;
-  padding: 10px 15px;
-  border-color: white;
-  border-width: 1px;
-  border-style: solid;
-
-  border-top-color: rgb(0, 178, 192);
-  border-left-color: rgb(0, 178, 192);
-  border-right-color: rgb(0, 178, 192);
-}
-
-td.manage-td {
-  padding: 10px 15px;
-}
-
-tr.manage-tr {
-  border-width: 1px;
-  border-color: rgb(141, 138, 138);
-  border-style: solid;
 }
 
 #alert {
