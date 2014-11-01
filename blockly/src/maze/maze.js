@@ -508,7 +508,7 @@ Maze.init = function(config) {
   level = config.level;
 
   config.grayOutUndeletableBlocks = true;
-  config.insertWhenRun = true;
+  config.forceInsertTopBlock = 'when_run';
 
   if (mazeUtils.isBeeSkin(config.skinId)) {
     Maze.bee = new Bee(Maze, config);

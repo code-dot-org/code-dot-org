@@ -30,6 +30,8 @@ cd blockly
 # Machine setup (OSX with Homebrew)
 brew install node
 npm install -g grunt-cli
+export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/opt/X11/lib/pkgconfig"
+npm install -g canvas
 
 # Perform first full build
 npm install
