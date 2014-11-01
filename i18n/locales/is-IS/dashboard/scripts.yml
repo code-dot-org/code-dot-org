@@ -49,16 +49,16 @@ is:
           Artist Debugging: 'Listamaður - Villuleit'
           Bounce: Skopp
           "Studio: Create a Story": 'Leikjasmiðja: Búa til sögu'
-          Artist Loops: 'Listamaður - lykkjur'
-          Bee Conditionals: 'Býfluga - skilyrði'
+          Artist Loops: Lykkjur listamanns
+          Bee Conditionals: Skilyrði býflugu
           Flappy: Flappy
           title: Námskeið 2
-          Bee Loops: 'Býfluga - lykkjur'
-          Artist Functions: 'Listamaður - föll'
+          Bee Loops: Lykkjur býflugu
+          Artist Functions: Föll listamanns
           The Artist Debugging: 'Listamaðurinn - villuleit'
           Bee Debugging: 'Býfluga - villuleit'
           Bee Functions: 'Býfluga - föll'
-          Maze Loops: 'Völundarhús - lykkjur'
+          Maze Loops: Lykkjur völundarhúss
           Graph Paper Programming: Forritun rúðublaða
           "Real-life Algorithms: Paper Planes": 'Algrím úr raunheimi: Pappírsskutlur'
           Getting Loopy: Lykkjulæti
@@ -85,17 +85,17 @@ is:
           "Studio: Create a Story": 'Leikjasmiðja: Búa til sögu'
           The Artist: Listamaðurinn
           title: Námskeið 3
-          Artist Functions: 'Listamaður - föll'
+          Artist Functions: Föll listamanns
           Artist For Loops: 'Listamaður - frá/til lykkjur'
           Artist Nested Loops: 'Listamaður - innri lykkjur'
           Bee Conditionals: 'Býfluga - skilyrði'
           Bee Nested Loops: 'Býfluga - innri lykkjur'
           Bee Debuggin: 'Býfluga - villuleit'
           Bee Debugging: 'Býfluga - villuleit'
-          Bee Functions: 'Býfluga - föll'
+          Bee Functions: Föll býflugu
           Artist Functions with Params: 'Listamaður - föll með stikum'
           Bounce: Skopp
-          Maze Conditionals: 'Völundarhús - skilyrði'
+          Maze Conditionals: Skilyrði völundarhúss
           Artist Functions with Parameters: 'Listamaður - föll með stikum'
           Computational Thinking: Tölvunarmiðuð hugsun
           Functional Suncatchers: Sólarskraut með föllum
@@ -129,6 +129,7 @@ is:
           "Bee: Nested Loops2": 'Býfluga: Innri lykkjur'
           "Bee: Debugging2": 'Býfluga: Villuleit2'
           "Artist: Patterns": 'Listamaður: Mynstur'
+          Songwriting: Lagasmíð
         msm:
           title: Miðskólastærðfræði
           description: Verið er að vinna í miðskólastærðfræði.

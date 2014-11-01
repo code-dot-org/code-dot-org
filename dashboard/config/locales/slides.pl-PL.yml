@@ -6,65 +6,65 @@
         text: Witaj podczas swojej pierwszej Godziny Kodowania! Zanurkuj w swoją pierwszą
           przygodę z programowaniem.
       2:
-        image: notes/hoc1_2.jpg
+        image: uwagi/hoc1_2.jpg
         text: Będziemy używać Blockly, wizualnego języka programowania, który umożliwia
           pisanie kodu za pomocą przeciągania i upuszczania bloków.
       3:
-        image: notes/hoc1_3.jpg
+        image: uwagi/hoc1_3.jpg
         text: Większość kodów jest pisana, ale Blockly jest wizualny. Każdy blok odpowiada
           rzeczywistej linii kodu.
       4:
-        image: notes/hoc1_4.jpg
+        image: uwagi/hoc1_4.jpg
         text: Nauczysz się podstaw informatyki, pojęć, które są używane w wielu sytuacjach,
           od tworzenia aplikacji komputerowych po kierowanie pojazdem na Marsie.
       5:
-        image: notes/hoc1_5.jpg
+        image: uwagi/hoc1_5.jpg
         text: Program jest zestawem poleceń, które ma wykonać komputer.
       6:
-        image: notes/hoc1_6.jpg
+        image: uwagi/hoc1_6.jpg
         text: Twój pierwszy program ma spowodować, że Angry Bird trafi w labiryncie
           na Zieloną Świnkę.
       7:
-        image: notes/hoc1_7.jpg
+        image: uwagi/hoc1_7.jpg
         text: Po lewej stronie znajduje się labirynt, w którym ma być uruchomiony
           Twój program. Polecenia dla każdej łamigłówki znajdują obok labiryntu.
       8:
-        image: notes/hoc1_8.jpg
+        image: uwagi/hoc1_8.jpg
         text: Przybornik pośrodku ekranu zawiera polecenia dla Angry Bird. Możesz
           ich użyć do zbudowania swojego programu.
       9:
-        image: notes/hoc1_9.jpg
+        image: uwagi/hoc1_9.jpg
         text: Po prawej stronie znajduje się Twój obszar roboczy, do którego możesz
           przeciągać bloki z przybornika, by budować swój program. Aby usunąć blok
           z programu, przeciągnij go do kosza w rogu po prawej stronie.
       10:
-        image: notes/hoc1_10.jpg
+        image: uwagi/hoc1_10.jpg
         text: Każdy blok jest instrukcją. Jeśli przeciągniesz blok idź do przodu do
           obszaru roboczego i naciśniesz przycisk Uruchom program, to ptak przesunie
           się o jedno pole w labiryncie.
       11:
-        image: notes/hoc1_11.jpg
+        image: uwagi/hoc1_11.jpg
         text: Aby wykonać więcej niż jeden ruch, możesz przeciągnąć wiele bloków do
           swojego obszaru roboczego i połączyć je ze sobą. Angry Bird wykona wszystkie
           polecenia od góry do dołu.
       12:
-        image: notes/hoc1_12.jpg
+        image: uwagi/hoc1_12.jpg
         text: Jeśli uruchomiłeś program i chcesz go później poprawić i uruchomić ponownie,
           to naciśnij przycisk Reset.
       13:
-        image: notes/hoc1_13.jpg
+        image: uwagi/hoc1_13.jpg
         text: Dopadnijmy te świnie!
     artist_intro:
       1:
-        image: notes/stage5_1.jpg
+        image: uwagi/stage5_1.jpg
         text: Cześć, jestem JR! Każdy zespół wyścigów samochodowych potrzebuje informatyków,
           aby wygrać. Analizują oni dane z samochodu i sprawiają, że jedzie szybciej.
       2:
-        image: notes/stage5_2.jpg
+        image: uwagi/stage5_2.jpg
         text: W tych łamigłówkach będziesz artystą, który rysuje za sobą linię, wszędzie
           tam, gdzie idzie.
       3:
-        image: notes/stage5_3.jpg
+        image: uwagi/stage5_3.jpg
         text: Ten blok mówi idź do przodu przez 100 pikseli. Piksele to tak naprawdę
           małe kropki na Twoim ekranie.
       4:
@@ -82,15 +82,15 @@
         text: Witam, jestem Paola! W tych łamigłówkach Ty jesteś rolnikiem, który
           ma otrzymać pole całkowicie płaskie, aby rozpocząć sadzenie roślin.
       2:
-        image: notes/stage9_2.jpg
+        image: uwagi/stage9_2.jpg
         text: Musisz pomóc jej usunąć wszystkie sterty śmieci i wypełnić wszystkie
           otwory.
       3:
-        image: notes/stage9_3.jpg
+        image: uwagi/stage9_3.jpg
         text: 'Nowe bloki: usuń 1 szuflę śmieci ze sterty i wypełnij otwór 1 szuflą
           śmieci.'
       4:
-        image: notes/stage9_4.jpg
+        image: uwagi/stage9_4.jpg
         text: Sterty i otwory są różnych rozmiarów, musisz więc powiedzieć rolnikowi,
           ile szufli ma użyć.
     flappy_intro:
@@ -140,214 +140,214 @@
           się nią ze swoimi przyjaciółmi. Baw się dobrze!
     loop_times:
       1:
-        image: notes/hoc2_1.jpg
+        image: uwagi/hoc2_1.jpg
         text: Cześć, jestem Mark! Zaczynamy naukę o pętlach. Za pomocą pętli można
           powiedzieć komputerowi powtarzaj jakikolwiek zestaw działań w kółko, tysiące
           lub nawet miliardy razy.
       2:
-        image: notes/hoc2_2.jpg
+        image: uwagi/hoc2_2.jpg
         text: W tej łamigłówce chcemy, aby ptak przesunął się 5 pól do przodu, by
           dosięgnąć świnkę.
       3:
-        image: notes/hoc2_3.jpg
+        image: uwagi/hoc2_3.jpg
         text: Możemy użyć nowego bloku powtórz, by sobie pomóc.
       4:
-        image: notes/hoc2_4.jpg
+        image: uwagi/hoc2_4.jpg
         text: Zamiast 5 razy przeciągać blok idź do przodu...
       5:
-        image: notes/hoc2_5.jpg
+        image: uwagi/hoc2_5.jpg
         text: Możemy umieścić blok idź do przodu wewnątrz bloku powtórz i wpisać w
           nim liczbę powtórzeń, aby określić, ile razy ma powtórzyć.
       6:
-        image: notes/hoc2_6.jpg
+        image: uwagi/hoc2_6.jpg
         text: 'Ważna uwaga: Możesz umieścić więcej niż jedno polecenie w bloku powtórz.'
       7:
-        image: notes/hoc2_7.jpg
+        image: uwagi/hoc2_7.jpg
         text: Miłego korzystania z Twojego nowego bloku powtórz!
     loop_until:
       1:
-        image: notes/hoc3_1.jpg
+        image: uwagi/hoc3_1.jpg
         text: Hi, jestem Chris. Przed dołączeniem do Miami Heat, wstąpiłem na Georgia
           Tech, by studiować informatykę. Spróbujmy użyć naszego nowego bloku powtórz
           aż do.
       2:
-        image: notes/hoc3_2.jpg
+        image: uwagi/hoc3_2.jpg
         text: Co zrobić, jeśli nie wiedzieliśmy, jak daleko ten ptak miał przenieść
           się, by dosięgnąć świnkę?
       3:
-        image: notes/hoc3_3.jpg
+        image: uwagi/hoc3_3.jpg
         text: Jeśli umieścimy blok idź do przodu wewnątrz bloku powtórz aż do, to
           wtedy ptak będzie poruszał się naprzód, AŻ (UNTIL) dotrze do świni (lub
           zderzy się ze ścianą).
       4:
-        image: notes/hoc3_4.jpg
+        image: uwagi/hoc3_4.jpg
         text: 'I to jest ważne: tak jak wcześniej, możemy umieścić wiele bloków wewnątrz
           bloku powtórz aż do, i wszystkie będą powtarzane.'
     if:
       1:
-        image: notes/hoc4_1.jpg
+        image: uwagi/hoc4_1.jpg
         text: 'Witam, jestem Bill! Nauczmy się nowego podstawowego pojęcia: instrukcji
           jeśli. To dzięki nim komputery podejmują decyzje.'
       2:
-        image: notes/hoc4_2.jpg
+        image: uwagi/hoc4_2.jpg
         text: Bloku jeśli używasz codziennie. Przed wyjściem z domu każdego poranka,
           mówisz jeśli pada na zewnątrz, to muszę założyć kurtkę.
       3:
-        image: notes/hoc4_3.jpg
+        image: uwagi/hoc4_3.jpg
         text: Możemy powiedzieć, zombie, by sprawdził, czy istnieje droga w lewo,
           i jeśli znajdzie drogę w lewo, możemy pozwolić mu skręcić w tę stronę.
       4:
-        image: notes/hoc4_4.jpg
+        image: uwagi/hoc4_4.jpg
         text: Aby napisać kod dla tego, przeciągnijmy nasz blok jeśli i umieśćmy w
           nim blok obróć się w lewo.
       5:
-        image: notes/hoc4_5.jpg
+        image: uwagi/hoc4_5.jpg
         text: Teraz, jeśli umieścimy blok idź do przodu nad nim i blokiem powtórz
           obejmiemy wszystko, wtedy za każdym razem, gdy zombie poruszy się, będzie
           sprawdzał, czy istnieje droga w lewo i ewentualnie skręcał. Polecenie powtórz
           jest ważne, by sprawdzać za każdym razem, czy można skręcić.
       6:
-        image: notes/hoc4_6.jpg
+        image: uwagi/hoc4_6.jpg
         text: 'Instrukcje jeśli są bardzo ważne w informatyce. Jednym z pierwszych
           programów, jakie napisałem, była gra w kółko i krzyżyk, i była w nim instrukcja
           jeśli, której zadaniem było: jeśli przeciwnik ma zaraz wygrać, to zablokuj
           pole, które dałoby mu wygraną.'
       7:
-        image: notes/hoc4_7.jpg
+        image: uwagi/hoc4_7.jpg
         text: Miłej zabawy przy korzystaniu z bloku jeśli!
     if_else:
       1:
-        image: notes/hoc5_1.jpg
+        image: uwagi/hoc5_1.jpg
         text: Cześć, mam na imię Saloni. Informatyka służy mi do rozwiązywania problemów
           w dziedzinie zdrowia i medycyny. Nauczymy się o bloku jeśli-w przeciwnym
           razie. Ten blok wygląda jak blok jeśli, ale ma dodatkową część w przeciwnym
           razie na końcu.
       2:
-        image: notes/hoc5_2.jpg
+        image: uwagi/hoc5_2.jpg
         text: Jeśli umieszczę blok idź do przodu w miejscu, które mówi wykonaj, i
           blok skręć w lewo w miejscu, które mówi w przeciwnym razie, to oznacza,
           że zombie będzie miał do wyboru 2 opcje. Jeśli jest droga do przodu, zombie
           ruszy do przodu, a jeśli nie ma takiej drogi, to zombie skręci w lewo.
       3:
-        image: notes/hoc5_3.jpg
+        image: uwagi/hoc5_3.jpg
         text: Podobnie jak blok jeśli, możemy umieścić bloki jeśli-w przeciwnym razie
           wewnątrz bloków powtórz tak, że zombie będzie się poruszał i blok Jeśli-w
           przeciwnym razie będzie sprawdzał, czy jest możliwość skręcenia.
       4:
-        image: notes/hoc5_4.jpg
+        image: uwagi/hoc5_4.jpg
         text: Zabierz teraz te potwory (zombies), gdzie ich miejsce!
     function:
       1:
-        image: notes/stage13_1.jpg
+        image: uwagi/stage13_1.jpg
         text: Witam, jestem Brina, inżynier w Instagram. Funkcja składa się z pewnych
           linii kodu, które chcesz używać wiele razy, zamiast więc pisać ten kod za
           każdym razem, możesz użyć jednego bloku.
       2:
-        image: notes/stage13_2.jpg
+        image: uwagi/stage13_2.jpg
         text: Dowiemy się, jak definiować funkcję. Definicja funkcji ma gwiazdkę w
           rogu. Nazwa funkcji jest zapisana w pierwszej linijce.
       3:
-        image: notes/stage13_3.jpg
+        image: uwagi/stage13_3.jpg
         text: Bloki, które znajdują się wewnątrz definicji określają, co robi funkcja.
           Na przykład, to jest definicja funkcji o nazwie wypełnij 5 i zawiera bloki
           powtórz i wypełnij.
       4:
-        image: notes/stage13_4.jpg
+        image: uwagi/stage13_4.jpg
         text: Definicja funkcji znajduje się na obszarze roboczym, ale nasz rolnik
           nie może jej uruchomić, aż nie wyciągnie bloku wypełnij 5 z kategorii Funkcje.
       5:
-        image: notes/stage13_5.jpg
+        image: uwagi/stage13_5.jpg
         text: 'Umieśćmy zabawy (ang. fun) z powrotem w kategorii FUNkcje!" '
     loop_while:
       1:
-        image: notes/stage9_5.jpg
+        image: uwagi/stage9_5.jpg
         text: 'Witam, jestem Makinde! Poznajmy blok dopóki '
       2:
-        image: notes/stage9_6.jpg
+        image: uwagi/stage9_6.jpg
         text: Blok dopóki będzie wykonywał to, co w nim umieścisz, TAK DŁUGO, JAK
           DŁUGO warunek znajdujący się na górze ma wartość PRAWDA (TRUE).
       3:
-        image: notes/stage9_7.jpg
+        image: uwagi/stage9_7.jpg
         text: Na przykład, jeśli rolnik stoi na stercie, to tak długo będzie usuwał
           1 szufelkę śmieci, DOPÓKI pod nim znajduje się sterta śmieci.
     loop_for:
       1:
-        image: notes/stage11_1.jpg
+        image: uwagi/stage11_1.jpg
         text: Witam, jestem Trina, i pracuję dla Pixar. Pracowałam przy kilku filmach,
           w tym przy Shreku.
       2:
-        image: notes/stage11_2.jpg
+        image: uwagi/stage11_2.jpg
         text: To jest nasza nowa pętla licznik. Wykonuje wielokrotnie działania i
           możesz za każdym razem nieco zmienić działania.
       3:
-        image: notes/stage11_3.jpg
+        image: uwagi/stage11_3.jpg
         text: W tym przykładzie, pętla licznik oznacza "liczy z licznikiem od 50 do
           90 co 10" a w jej wnętrzu mamy blok narysuj kwadrat. Przeciągnij blok licznik
           z kategorii Zmienne na miejsce długość.
       4:
-        image: notes/stage11_4.jpg
+        image: uwagi/stage11_4.jpg
         text: Oznacza to, że nasz artysta narysuje kwadrat, który ma bok długości
           50 pikseli, następnie doda 10 i narysuje kwadrat o boku 60 pikseli. Następnie
           będzie dodawał 10 i rysował kwadraty, aż osiągnie 90. Otrzymamy w ten sposób
           kwadraty o bokach 50, 60, 70, 80 i 90.
     parameters:
       1:
-        image: notes/stage15_1.jpg
+        image: uwagi/stage15_1.jpg
         text: Witam, jestem Janete i jestem inżynierem w Zynga.
       2:
-        image: notes/stage15_2.jpg
+        image: uwagi/stage15_2.jpg
         text: Co zrobić, jeśli chcemy narysować kilka trójkąty o różnych długościach
           boków?
       3:
-        image: notes/stage15_3.jpg
+        image: uwagi/stage15_3.jpg
         text: Moglibyśmy napisać poszczególne kody lub możemy użyć funkcji z parametrami.
       4:
-        image: notes/stage15_4.jpg
+        image: uwagi/stage15_4.jpg
         text: Aby to zrobić, kliknij przycisk blue star (niebieska gwiazda) w definicji
           funkcji rysuj trójkąt. Następnie przeciągnij nazwa wejścia do bloku wejście.
       5:
-        image: notes/stage15_5.jpg
+        image: uwagi/stage15_5.jpg
         text: Następnie, jeśli wpiszesz długość w miejscu, gdzie stoi x i naciśniesz
           klawisz Enter, to utworzysz wejście długość w Twojej funkcji.
       6:
-        image: notes/stage15_6.jpg
+        image: uwagi/stage15_6.jpg
         text: Następnie kliknij na gwiazdce. Teraz kliknij na kategorii Zmienne i
           przeciągnij blok długość do bloku idź do przodu w definicji Twojej funkcji.
           I usuń przez przeciągnięcie stary blok liczba.
       7:
-        image: notes/stage15_7.jpg
+        image: uwagi/stage15_7.jpg
         text: Aby użyć funkcji z parametrami, kliknij na kategorię Funkcje i wyciągnij
           funkcję narysuj trójkąt o długości.
       8:
-        image: notes/stage15_8.jpg
+        image: uwagi/stage15_8.jpg
         text: Teraz można użyć bloku matematyki do wprowadzenia różnych liczb, by
           rysować trójkąty o różnych rozmiarach.
     hoc_wrapup:
       1:
-        image: notes/hoc6_1.jpg
+        image: uwagi/hoc6_1.jpg
         text: Gratulacje! Z ostatnimi łamigłówkami, które rozwiązałeś, napisałeś kod,
           który może pomóc jakiemukolwiek robotowi, jak znaleźć drogę przez labirynt
           bez rozgałęzień lub przez tunel o dowolnej długości, bez względu na to,
           czy jest to zombie, ptak, pojazd na marsie lub nawet samojezdny samochód.
       2:
-        image: notes/hoc6_2.jpg
+        image: uwagi/hoc6_2.jpg
         text: Podstawowe pojęcia, które wykorzystałeś, są sednem każdego programu
           lub aplikacji, które kiedykolwiek będziesz używał. Dowiedzieliśmy się o
           powtarzaniu w pętli, instrukcji powtórz aż do, instrukcji jeśli i instrukcji
           jeśli-w przeciwnym razie.
       3:
-        image: notes/hoc6_3.jpg
+        image: uwagi/hoc6_3.jpg
         text: Jeśli podoba Ci się Twoja pierwsza godzina kodowania, odwiedź code.org,
           aby kontynuować swoją edukację informatyczną! Po zakończeniu naszego 20-godzinnego
           kursu będziesz mieć opanowane podstawy programowania i będziesz mógł rozpocząć
           naukę, jak pisać aplikacje dla telefonów komórkowych, instrukcje dla robotów,
           czy nawet gry.
       4:
-        image: notes/hoc6_4.jpg
+        image: uwagi/hoc6_4.jpg
         text: 'Technologia zmienia wszystko, co robimy, i nie ma znaczenia czy jesteś
           młody czy starszy: programowanie to zabawa, jest kreatywne i każdy może
           się nauczyć !'
     20_wrapup:
       1:
-        image: notes/bird.png
+        image: Notes/Bird.png
         text: Pokaż uwagi - wkrótce dostępne!

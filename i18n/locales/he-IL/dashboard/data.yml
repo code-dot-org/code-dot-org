@@ -48,6 +48,8 @@ he:
         edit-code:
           desc: ערוך קוד (בטא)
           MazeEC: שלב 1
+          Webapp: שלב 2
+          ArtistEC: שלב 3
         events:
           desc: קפיצה (בטא)
           Bounce: שלב 1
@@ -69,7 +71,7 @@ he:
           WordSearch: שלב 1
     game:
       name:
-        Unplug1: מבוא למדעי המחשב
+        Unplug1: היכרות למדעי המחשב
         Maze: המבוך
         Multi: דברי בחירות מרובות
         Unplug2: חשיבה חישובית
@@ -96,6 +98,8 @@ he:
         Jigsaw: פאזל
         MazeStep: מצב שלב מבוך
         Wordsearch: תפזורת
+        Webapp: Webapp
+        ArtistEC: האמן
     trophy:
       name:
         Bronze: ארד
@@ -104,14 +108,14 @@ he:
     concept:
       description:
         sequence: רצף
-        if: בלוק ״אם״
+        if: 'בלוק "אם"'
         if_else: בלוק ״אם-אחרת״
         loop_times: בלוק ״חזור פעמים״
         loop_until: בלוק ״חזור עד״
-        loop_while: בלוק ״כל עוד״
+        loop_while: בלוק בעת
         loop_for: בלוק ״מונה״
         function: פונקציות
-        parameters: פונקציות עם פרמטרים
+        parameters: פונקציות ופרמטרים
     level:
       instructions:
         maze_2_2: 'תוכל לעזור לי לתפוס את החזיר השובב? חבר כמה בלוקים של "לך קדימה" יחד ותלחץ על "הפעל תוכנית" כדי לעזור לי להגיע אליו. '
@@ -323,6 +327,8 @@ he:
         maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
         maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
         maze_wordsearch_k_20: This is a test! Move me one way, then another to spell the word STORY
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColour" block.'
     video:
       name:
         maze_intro: מבוא למבוך

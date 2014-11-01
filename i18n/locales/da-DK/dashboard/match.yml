@@ -26,7 +26,7 @@ da:
         /script_assets/2-3_images/artist/2-3_artist_match_1_a4.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a4.png
       2-3 bounce match 1:
         Bounce Matching: Hop matchende
-        Matching: Matchende
+        Matching: Matching
         Match the events with the actions: Match hændelserne med handlingerne
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q2.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q2.png
@@ -40,7 +40,7 @@ da:
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_a5.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a5.png
       2-3 flappy match 1:
         Flappy Matching One: Flappy matchende 1
-        Matching: Matchende
+        Matching: Matching
         Match the events with the actions: Match hændelserne med handlingerne
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png
@@ -50,7 +50,7 @@ da:
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png
       2-3 maze match 1:
         Maze Match One: Labyrint Match 1
-        Match the puzzles to the blocks: Match opgaverne med blokkene
+        Match the puzzles to the blocks: Par opgaverne med blokkene
         /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png
@@ -61,7 +61,7 @@ da:
         Maze Match: Match Match
         Match the puzzles to the blocks: Par opgaverne med blokkene
         Instructions: Instruktioner
-        Drag the blocks to match.: Træk i blokkene for at parre dem.
+        Drag the blocks to match.: Træk i blokkene for at matche dem.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/2-3_images/maze/2-3_maze_match_2_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q1.png
         /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png
@@ -70,7 +70,7 @@ da:
         /script_assets/2-3_images/maze/2-3_maze_match_2_a2.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a2.png
         /script_assets/2-3_images/maze/2-3_maze_match_2_a3.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a3.png
       2-3 Big Event Match 1:
-        Matching: Matchende
+        Matching: Matching
         /script_assets/k_1_images/unplugged_images/big_event_1_desc.png: /script_assets/k_1_images/unplugged_images/big_event_1_desc.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
@@ -81,7 +81,7 @@ da:
         /script_assets/k_1_images/unplugged_images/big_event_1_a3.png: /script_assets/k_1_images/unplugged_images/big_event_1_a3.png
         /script_assets/k_1_images/unplugged_images/big_event_1_a4.png: /script_assets/k_1_images/unplugged_images/big_event_1_a4.png
       2-3 Binary Match 1:
-        Matching: Matchende
+        Matching: Matching
         /script_assets/2-3_images/unplugged/binary_1_q.png, 250: /script_assets/2-3_images/unplugged/binary_1_q.png, 250
         Use the key to mach each code to its letter: Brug nøglen til at match hver kode med dets bogstav
         <strong>N</strong>: '<strong>N</strong>'
@@ -112,9 +112,9 @@ da:
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
       4-5 maze match 1:
         Maze Match: Match Match
-        Match the puzzles to the blocks: Match opgaverne med blokkene
+        Match the puzzles to the blocks: Par opgaverne med blokkene
         Instructions: Instruktioner
-        Drag the blocks to match.: Træk i blokkene for at match dem.
+        Drag the blocks to match.: Træk i blokkene for at matche dem.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/4-5_images/maze/4-5_maze_match_1_q1.png: /script_assets/4-5_images/maze/4-5_maze_match_1_q1.png
         /script_assets/4-5_images/maze/4-5_maze_match_1_q2.png: /script_assets/4-5_images/maze/4-5_maze_match_1_q2.png
@@ -327,11 +327,11 @@ da:
         "bigger-string: string string -> string": 'bigger-string: string string -> string'
         "find-price: string -> number": 'find-price: string -> number'
       test matching image:
-        Matching Images Two: Matche billeder 2
+        Matching Images Two: Match billeder, to
         Match up all the flowers by colour!: Match alle blomsterne efter farve!
         /script_assets/matches/images/head.jpg,300: /script_assets/matches/images/head.jpg,300
         Instructions: Instruktioner
-        Drag the images from right to center.: Træk billederne fra højre mod midten.
+        Drag the images from right to center.: Træk billederne fra højre til midten.
         /script_assets/matches/images/a1.jpg: /script_assets/matches/images/a1.jpg
         /script_assets/matches/images/q1.jpg: /script_assets/matches/images/q1.jpg
         /script_assets/matches/images/q2.jpg: /script_assets/matches/images/q2.jpg

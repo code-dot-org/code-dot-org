@@ -74,6 +74,10 @@ exports.penColour = function(colour, id) {
   this.log.push(['PC', colour, id]);
 };
 
+exports.penPattern = function(pattern, id) {
+  this.log.push(['PS', pattern, id]);
+};
+
 exports.hideTurtle = function(id) {
   this.log.push(['HT', id]);
 };

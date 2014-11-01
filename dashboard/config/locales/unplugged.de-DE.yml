@@ -14,7 +14,7 @@
         - unplug1
         video: Unplug1
       Unplug2:
-        title: Computerbezogenes Denken
+        title: Computerorientiertes Denken
         desc: Mit nichts als Papier und Stift, lernen die Schüler/-innen die vier
           Schritte des Computerbezogenen Denkens. Nach einer kurzen Einführung sollten
           die Schüler/-innen in Teams aufgeteilt werden, wo sie Anweisungen für andere
@@ -30,7 +30,7 @@
         - unplug2
         video: Unplug2
       Unplug3:
-        title: Programmieren auf Millimeterpapier
+        title: Millimeterpapier Programmierung
         desc: Die Schüler/-innen "programmieren" sich gegenseitig Bilder zu zeichnen,
           wodurch sie schnell verstehen um was es beim programmieren eigentlich geht.
           Die Lektion beginnt mit Schüler/-innen, welche sich gegenseitig anweisen
@@ -173,20 +173,20 @@
         desc: Das Internet ist ein machtvolles Werkzeug, bietet aber einige gefährliche
           Orte. Die Lehrperson zeigt, wie man sicher ist während dem Surfen.
       GraphPaperProgramming:
-        title: Millimeterpapier Programmierung
+        title: Programmieren auf Millimeterpapier
         desc: Die Schüler/-innen notieren einen Algorithmus(ein Satz von Anweisungen),
           mittels eines vordefinierten Satz von Anweisungen, mit dem sie ihre Klassenkameraden
           anweisen ein Bild zu reproduzieren.
         video: C2_graph_paper
       PaperPlanes:
-        title: 'Algorithmen aus dem wirklichen Leben: Papierflieger'
+        title: 'Alltagsalgorithmen: Papierflieger'
         desc: Diese Lektion macht deutlich, wie wir in unserem täglichen Leben Algorithmen
           anwenden, beispielsweise beim Basteln eines Papierfliegers. Diese Lektion
           richtet ihr Augenmerk auf das Gesamtbild der Informatik und die wichtige
           Rolle, die Algorithmen dort spielen.
         video: C2_paper_airplanes
       BinaryBracelets:
-        title: Binärcode- Armbänder
+        title: Binäre Armbänder
         desc: Schüler entwerfen Armbänder zur Binärdarstellung des ersten Buchstabens
           ihres Namens. Schüler lernen, dass Daten auf mehr als eine Art dargestellt
           und gespeichert werden können.

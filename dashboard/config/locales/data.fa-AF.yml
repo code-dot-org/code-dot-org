@@ -3,16 +3,16 @@
     script:
       name:
         20-hour:
-          desc: "معرفی دوره علوم کامپیوتر در مقاطع ابتدایی و راهنمایی"
+          desc: "معرفی K-8 دوره علوم کامپیوتر"
           Unplug1: "مرحله 1"
-          Maze: "مرحله ۲"
-          Unplug2: "مرحله ۳"
-          Unplug3: "مرحله ۴"
-          Artist: "مرحله ۵"
-          Unplug4: "مرحله ۶"
-          Artist2: "مرحله ۷"
-          Unplug5: "مرحله ۸"
-          Farmer: "مرحله ۹"
+          Maze: "مرحله 2"
+          Unplug2: "مرحله 3"
+          Unplug3: "مرحله 4"
+          Artist: "مرحله 5"
+          Unplug4: "مرحله 6"
+          Artist2: "مرحله 7"
+          Unplug5: "مرحله 8"
+          Farmer: "مرحله 9"
           Unplug6: "مرحله ۱۰"
           Artist3: "مرحله ۱۱"
           Unplug7: "مرحله ۱۲"
@@ -48,10 +48,12 @@
         edit-code:
           desc: "ویرایش کد (آزمایشی)"
           MazeEC: "مرحله 1"
+          Webapp: "مرحله 2"
+          ArtistEC: "مرحله 3"
         events:
           desc: Bounce (beta)
           Bounce: "مرحله 1"
-          Studio: "مرحله ۲"
+          Studio: "مرحله 2"
         builder:
           desc: "پازل‌های ایجاد شده توسط کاربر (آزمایشی)"
           Custom: "مرحله 1"
@@ -70,7 +72,7 @@
     game:
       name:
         Unplug1: "آشنایی با علوم کامپیوتر"
-        Maze: "مارپیچ"
+        Maze: "پیچ و خم"
         Multi: Multiple Choice Stuffs
         Unplug2: "تفکر محاسباتی"
         Unplug3: "برنامه نویسی روی کاغذ شطرنجی "
@@ -79,7 +81,7 @@
         Artist2: "هنرمند 2"
         Unplug5: "توابع"
         Farmer: "کشاورز"
-        Unplug6: "شرطی ها"
+        Unplug6: "مشروط"
         Artist3: "هنرمند 3"
         Unplug7: "آهنگ سازی"
         Farmer2: "کشاورز 2"
@@ -90,12 +92,14 @@
         Unplug10: "اینترنت"
         Artist5: "هنرمند 5"
         Unplug11: "خلاصه"
-        MazeEC: "مارپیچ"
+        MazeEC: "پیچ و خم"
         Bounce: Bounce
         Flappy: "پرنده شل و  ول"
         Jigsaw: "جورچین"
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
+        Webapp: Webapp
+        ArtistEC: "هنرمند"
     trophy:
       name:
         Bronze: "برنز"
@@ -104,14 +108,14 @@
     concept:
       description:
         sequence: "دنباله"
-        if: "بلوک if"
+        if: بلوک "if"
         if_else: "بلوک if-else"
-        loop_times: "بلوک repeat times"
-        loop_until: "بلوک  repeat until"
+        loop_times: "بلوک تکرار زمان"
+        loop_until: بلوک "Repeat Until"
         loop_while: "بلوک while"
-        loop_for: "بلوک شمارنده"
+        loop_for: "بلوک شمارشگر"
         function: "توابع"
-        parameters: "توابع با پارامترها"
+        parameters: "معادله با پارامترها"
     level:
       instructions:
         maze_2_2: می‌تونی توی گرفتن این خوک شیطون به من کمک کنی؟ چند بلوک "حرکت به
@@ -440,12 +444,12 @@
         mazestep_3: "اینجا محل توضیح مرحله مارپیچ است"
         mazestep_4: "اینجا محل توضیح مرحله مارپیچ است"
         mazestep_5: "اینجا محل توضیح مرحله مارپیچ است"
-        studio_c2_1: Can you make this dog say "hello world"?
+        studio_c2_1: می‌تونی کاری کنی که این سگ بگه "سلام بر جهان"؟
         studio_c2_2: Can you make the dog say something and then have the cat say
           something afterwards?
         studio_c2_3: Can you write a program to make this dog move to the cat?
-        studio_c2_4: Can you write a program that makes the dog move to the cat, and
-          have the cat say "hello" when the dog reaches him?
+        studio_c2_4: می‌تونی برنامه‌ای بنویسی که باعث حرکت این سگ به سمت گربه بشه،
+          و وقتی به گربه رسید، کاری کنی که گربه بگه "سلام"؟
         studio_c2_5: Can you write a program to make the octopus say "hello" when
           it is clicked?
         studio_c2_6: Can you write a program to make this penguin move around using
@@ -461,12 +465,12 @@
           the penguin, and then move him with the arrows until you score?
         studio_c2_11: Create your own story. When you're done, click Finish to let
           friends try your story on their phones.
-        studio_c3_story_1: Can you make this dog say "hello world"?
+        studio_c3_story_1: می‌تونی کاری کنی که این سگ بگه "سلام بر جهان"؟
         studio_c3_story_2: Can you make the dog say something and then have the cat
           say something afterwards?
         studio_c3_story_3: Can you write a program to make this dog move to the cat?
-        studio_c3_story_4: Can you write a program that makes the dog move to the
-          cat, and have the cat say "hello" when the dog reaches him?
+        studio_c3_story_4: می‌تونی برنامه‌ای بنویسی که باعث حرکت این سگ به سمت گربه
+          بشه، و وقتی به گربه رسید، کاری کنی که گربه بگه "سلام"؟
         studio_c3_story_5: Can you add a block to make the octopus happy?
         studio_c3_story_6: Create your own story. When you're done, click Finish to
           let friends try your story on their phones.
@@ -485,12 +489,12 @@
           of the penguin, and then move him with the arrows until you score?
         studio_c3_game_7: Create your own game. When you're done, click Finish to
           let friends try your story on their phones.
-        studio_playlab_1: Can you make this dog say "hello world"?
+        studio_playlab_1: می‌تونی کاری کنی که این سگ بگه "سلام بر جهان"؟
         studio_playlab_2: Can you make the dog say something and then have the cat
           say something afterwards?
         studio_playlab_3: Can you write a program to make this dog move to the cat?
-        studio_playlab_4: Can you write a program that makes the dog move to the cat,
-          and have the cat say "hello" when the dog reaches him?
+        studio_playlab_4: می‌تونی برنامه‌ای بنویسی که باعث حرکت این سگ به سمت گربه
+          بشه، و وقتی به گربه رسید، کاری کنی که گربه بگه "سلام"؟
         studio_playlab_5: Can you write a program to make the octopus say "hello"
           when it is clicked?
         studio_playlab_6: Can you write a program to make this penguin move around
@@ -505,7 +509,7 @@
           let friends try your story on their phones.
         studio_full_sandbox: Create your own game. When you're done, click Finish
           to let friends try your story on their phones.
-        studio_k1_1: Can you make this dog say "hello world"?
+        studio_k1_1: می‌تونی کاری کنی که این سگ بگه "سلام بر جهان"؟
         studio_k1_2: Can you make the dog say something and then have the cat say
           something afterwards?
         studio_k1_3: Can you write a program to make this dog move to the target?
@@ -525,6 +529,9 @@
         maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
         maze_wordsearch_k_20: This is a test! Move me one way, then another to spell
           the word STORY
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
+          it in the new "penColour" block.'
     video:
       name:
         maze_intro: "معرفی پیچ و خم"
@@ -546,7 +553,7 @@
         Unplug3: "برنامه نویسی روی کاغذ شطرنجی "
         Unplug4: "الگوریتم"
         Unplug5: "توابع"
-        Unplug6: "شرطی ها"
+        Unplug6: "مشروط"
         Unplug7: Songwriting
         Unplug8: "انتزاع"
         Unplug9: Relay programming
@@ -575,7 +582,7 @@
         C2_bee_conditionals: Bee Conditionals
         C2_playlab_createstory: Play Lab - Create a Story
         C2_graph_paper: "برنامه نویسی روی کاغذ شطرنجی "
-        C2_conditionals_with_cards: "شرطی ها"
+        C2_conditionals_with_cards: "مشروط"
         C2_binary_bracelets: Binary Bracelets
         C2_replay_programming: "برنامه نویسی رله"
         C2_paper_airplanes: Paper Airplanes

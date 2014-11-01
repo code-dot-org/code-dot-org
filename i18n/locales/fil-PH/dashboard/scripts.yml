@@ -32,7 +32,7 @@ fil:
           Building a Foundation: Building a Foundation
           Getting Loopy: Getting Loopy
           The Big Event: The Big Event
-          Going Places Safely: Going Places Safely
+          Going Places Safely: Matiwasay na pagpunta sa mga lugar
           description: Course 1 is designed to allow early readers to create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.
           "Bee: Sequence": 'Bee: Sequence'
           "Artist: Sequence": 'Artist: Sequence'
@@ -129,6 +129,7 @@ fil:
           "Bee: Nested Loops2": 'Bee: Nested Loops2'
           "Bee: Debugging2": 'Bee: Debugging2'
           "Artist: Patterns": 'Artist: Patterns'
+          Songwriting: Songwriting
         msm:
           title: Middle School Math
           description: Private work in progress for Middle School Math.

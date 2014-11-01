@@ -42,7 +42,7 @@
   "numLinesOfCodeWritten": "Du hast soeben {numLines, plural, one {eine Zeile} other {# Zeilen}} Code geschrieben!",
   "play": "spielen",
   "puzzleTitle": "Puzzle {puzzle_number} von {stage_total}",
-  "repeat": "wiederholen",
+  "repeat": "wiederhole",
   "resetProgram": "Zurücksetzen",
   "runProgram": "Ausführen",
   "runTooltip": "Starte das Programm, das durch die Bausteine in deinem Arbeitsbereich festgelegt ist.",

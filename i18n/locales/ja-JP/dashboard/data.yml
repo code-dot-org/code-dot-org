@@ -4,15 +4,15 @@ ja:
       name:
         20-hour:
           desc: K-8(アメリカでの中学校）ではコンピューターサイエンスコースが紹介されている。
-          Unplug1: ステージ1
-          Maze: ステージ2
-          Unplug2: ステージ3
-          Unplug3: ステージ4
-          Artist: ステージ5
-          Unplug4: ステージ6
-          Artist2: ステージ7
-          Unplug5: ステージ8
-          Farmer: ステージ9
+          Unplug1: ステージ 1
+          Maze: ステージ 2
+          Unplug2: ステージ 3
+          Unplug3: ステージ 4
+          Artist: ステージ 5
+          Unplug4: ステージ 6
+          Artist2: ステージ７
+          Unplug5: ステージ８
+          Farmer: ステージ 9
           Unplug6: ステージ10
           Artist3: ステージ11
           Unplug7: |
@@ -35,48 +35,50 @@ ja:
           Artist5: ステージ19
           Unplug11: ステージ20
         Hour of Code:
-          desc: コードの時間（Hour of code）
-          Maze: ステージ1
+          desc: コードの時間(Hour of code)
+          Maze: ステージ 1
         Edit Code:
           desc: Edit Code (beta)
-          MazeEC: ステージ1
+          MazeEC: ステージ 1
         2014 Levels:
           desc: Bounce (beta)
-          Bounce: ステージ1
+          Bounce: ステージ 1
         Builder Levels:
           desc: User-Created Puzzles (beta)
-          Custom: ステージ1
+          Custom: ステージ 1
         Flappy Levels:
           desc: フラッピーバード
-          Flappy: ステージ1
+          Flappy: ステージ 1
         Jigsaw Levels:
           desc: Jigsaw (beta)
-          Jigsaw: ステージ1
+          Jigsaw: ステージ 1
         Step Levels:
           desc: Maze (beta)
           MazeStep: Stage Step
         edit-code:
           desc: Edit Code (beta)
-          MazeEC: ステージ1
+          MazeEC: ステージ 1
+          Webapp: ステージ 2
+          ArtistEC: ステージ 3
         events:
           desc: Bounce (beta)
-          Bounce: ステージ1
-          Studio: ステージ2
+          Bounce: ステージ 1
+          Studio: ステージ 2
         builder:
           desc: User-Created Puzzles (beta)
-          Custom: ステージ1
+          Custom: ステージ 1
         flappy:
           desc: フラッピーバード
-          Flappy: ステージ1
+          Flappy: ステージ 1
         jigsaw:
           desc: Jigsaw (beta)
-          Jigsaw: ステージ1
+          Jigsaw: ステージ 1
         step:
           desc: Maze (beta)
           MazeStep: Stage Step
         wordsearch:
           desc: Spelling Bee (beta)
-          WordSearch: ステージ1
+          WordSearch: ステージ 1
     game:
       name:
         Unplug1: コンピューター・サイエンス入門
@@ -87,7 +89,7 @@ ja:
         Artist: アーティスト
         Unplug4: アルゴリズム
         Artist2: アーティスト 2
-        Unplug5: '機能:'
+        Unplug5: 関数
         Farmer: 農民
         Unplug6: 条件
         Artist3: アーティスト 3
@@ -106,6 +108,8 @@ ja:
         Jigsaw: Jigsaw
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
+        Webapp: Webapp
+        ArtistEC: アーティスト
     trophy:
       name:
         Bronze: 銅
@@ -114,14 +118,14 @@ ja:
     concept:
       description:
         sequence: 連続
-        if: if ブロック
+        if: もしもブロック
         if_else: If else ブロック
-        loop_times: 回数くり返しブロック
-        loop_until: 条件くり返しブロック
-        loop_while: Whileブロック
-        loop_for: Counterブロック
+        loop_times: 回ブロックを繰り返す
+        loop_until: までブロックを繰り返します
+        loop_while: の間にブロック
+        loop_for: 数える ブロック
         function: 関数
-        parameters: パラメーターを持つ関数
+        parameters: パラメーター付き関数
     level:
       instructions:
         maze_2_2: 'Can you help me to catch the naughty pig? Stack a couple of "move forward" blocks together and press "Run" to help me get there. '
@@ -352,6 +356,8 @@ ja:
         maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
         maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
         maze_wordsearch_k_20: This is a test! Move me one way, then another to spell the word STORY
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColour" block.'
     video:
       name:
         maze_intro: 迷路入門

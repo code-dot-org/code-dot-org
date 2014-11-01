@@ -1,82 +1,150 @@
 {
-  "au": {
-    "full_date": "December 8-14, 2014",
-    "default_language": "en"
+  "ad": {
+    "full_name": "Andorra",
+    "default_language": "ca"
+  },
+  "al": {
+    "full_name": "Albania",
+    "default_language": "al"
   },
   "ar": {
-    "full_date": "October 11-17, 2014",
+    "full_name": "Argentina",
     "default_language": "es"
   },
+  "au": {
+    "full_name": "Australia",
+    "default_language": "en"
+  },
   "bg": {
-    "full_date": "December 8-14, 2014",
+    "full_name": "Bulgaria",
     "default_language": "bg"
   },
   "br": {
-    "full_date": "December 8-14, 2014",
+    "full_name": "Brazil",
     "default_language": "pt"
   },
+  "ca": {
+    "full_name": "Canada",
+    "default_language": "en"
+  },
+  "cn": {
+    "full_name": "China",
+    "default_language": "cn"
+  },
+  "cz": {
+    "full_name": "Czech Republic",
+    "default_language": "cs"
+  },
   "de": {
-    "full_date": "December 8-14, 2014",
+    "full_name": "Germany",
     "default_language": "de"
   },
   "es": {
-    "full_date": "December 8-14, 2014",
+    "full_name": "Latin America",
     "default_language": "es"
   },
   "eu": {
-    "full_date": "October 11-17, 2014",
+    "full_name": "European Union",
     "default_language": "en"
   },
+  "fr": {
+    "full_name": "France",
+    "default_language": "fr"
+  },
   "gr": {
-    "full_date": "December 8-14, 2014",
+    "full_name": "Greece",
     "default_language": "el"
   },
   "hr": {
-    "full_date": "December 8-14, 2014",
+    "full_name": "Croatia",
     "default_language": "hr"
   },
+  "hu": {
+    "full_name": "Hungary",
+    "default_language": "hu"
+  },
   "id": {
-    "full_date": "December 8-14, 2014",
+    "full_name": "Indonesia",
     "default_language": "id"
   },
+  "ie": {
+    "full_name": "Ireland",
+    "default_language": "en"
+  },
+  "in": {
+    "full_name": "India",
+    "default_language": "hi"
+  },
+  "ir": {
+    "full_name": "Iran",
+    "default_language": "fa"
+  },
   "it": {
-    "full_date": "December 8-14, 2014",
+    "full_name": "Itally",
     "default_language": "it"
   },
   "jp": {
-    "full_date": "December 8-14, 2014",
+    "full_name": "Japan",
     "default_language": "ja"
   },
+  "kr": {
+    "full_name": "Korea",
+    "default_language": "ko"
+  },
   "me": {
-    "full_date": "December 8-14, 2014",
+    "full_name": "Middle East and North Africa",
     "default_language": "ar"
   },
+  "my": {
+    "full_name": "Malaysia",
+    "default_language": "ms"
+  },
+  "nl": {
+    "full_name": "Netherlands",
+    "default_language": "nl"
+  },
+  "no": {
+    "full_name": "Norway",
+    "default_language": "no"
+  },
+  "np": {
+    "full_name": "Nepal",
+    "default_language": "ne"
+  },
   "nz": {
-    "full_date": "December 8-14, 2014",
+    "full_name": "New Zealand",
     "default_language": "en"
   },
+  "pt": {
+    "full_name": "Portugal",
+    "default_language": "po"
+  },
   "ro": {
-    "full_date": "December 8-14, 2014",
+    "full_name": "Romania",
     "default_language": "ro"
   },
   "ru": {
-    "full_date": "December 8-14, 2014",
+    "full_name": "Russia",
     "default_language": "ru"
   },
+  "tr": {
+    "full_name": "Turkey",
+    "default_language": "tr"
+  },
   "ua": {
-    "full_date": "December 8-14, 2014",
+    "full_name": "Ukraine",
     "default_language": "uk"
   },
   "uk": {
-    "full_date": "December 8-14, 2014",
+    "full_name": "United Kingdom",
     "default_language": "en"
   },
   "us": {
-    "full_date": "December 8-14, 2014",
+    "full_name": "United States",
     "default_language": "en"
   },
   "vn": {
-    "full_date": "December 8-14, 2014",
+    "full_name": "Vietnam",
     "default_language": "vi"
   }
 }

@@ -8,7 +8,7 @@ ro:
           - unplug1
         video: Unplug1
       Unplug2:
-        title: Gândire de Calcul
+        title: Gândire Computațională
         desc: With nothing but paper and markers, students will learn the four steps of computational thinking. After a brief introduction, students should be split into groups where they will have to create directions for other students to draw a specific monster (from a catalog of pre-selected monsters). The entire task must be decomposed, then teams will analyze all monsters in the catalog for patterns, abstract different details from the monsters, then use that information to create an algorithm (directions) for another team to draw a certain monster. Teams will then switch algorithms with another group and draw the monster based on what that algorithm indicates. Is the drawing what the original team intended?
         pdfs:
           - unplug2
@@ -39,7 +39,7 @@ ro:
           - unplug6
         video: Unplug6
       Unplug7:
-        title: Compunerea muzicală
+        title: Compunere muzicală
         desc: "Reading lyrics is a pretty intuitive venture for most students.  We'll take an activity that's already common knowledge and shift it into a solid education on defining and calling functions. Once students are familiar with the define/call process, we will add the extra capabilities that come along with passing parameters within those function calls."
         pdfs:
           - unplug7
@@ -141,7 +141,7 @@ ro:
         video: C3_internet
       Crowdsourcing:
         title: Obţinând Informaţii/Critici
-        desc: Student use crowdsourcing, a problem-solving technique common in computer science, to complete a task together as a classroom more efficiently than if a student attempted it alone.
+        desc: Students use crowdsourcing, a problem-solving technique common in computer science, to complete a task together as a classroom more efficiently than if a student attempted it alone.
         video: C3_crowdsourcing
       DigitalCitizenship:
         title: Cetățenia Digitală

@@ -32,22 +32,24 @@ eu:
           MazeEC: 1. etapa
         2014 Levels:
           desc: Errebotea (beta)
-          Bounce: 1. eszenatokia
+          Bounce: 1. etapa
         Builder Levels:
           desc: Erabiltzaileak sortutako puzleak (beta)
-          Custom: 1. eszenatokia
+          Custom: 1. etapa
         Flappy Levels:
           desc: Flappy Bird
-          Flappy: 1. eszenatokia
+          Flappy: 1. etapa
         Jigsaw Levels:
           desc: Buruhaustea (beta)
-          Jigsaw: 1. eszenatokia
+          Jigsaw: 1. etapa
         Step Levels:
           desc: Labirintoa (beta)
           MazeStep: Eszenatoki pausua
         edit-code:
           desc: Aldatu Kodea (beta)
           MazeEC: 1. etapa
+          Webapp: 2. etapa
+          ArtistEC: 3. etapa
         events:
           desc: Errebotea (beta)
           Bounce: 1. etapa
@@ -69,7 +71,7 @@ eu:
           WordSearch: 1. etapa
     game:
       name:
-        Unplug1: Konputazio zientzietarako sarrera
+        Unplug1: Konputazio zientzetarako sarrera
         Maze: labirintoa
         Multi: Aukera anitzeko gaiak
         Unplug2: Pentsamendu konputazionala
@@ -96,6 +98,8 @@ eu:
         Jigsaw: Buruhaustea
         MazeStep: Labirinto pausu modua
         Wordsearch: Wordsearch
+        Webapp: Webapp
+        ArtistEC: Artista
     trophy:
       name:
         Bronze: Brontzea
@@ -268,8 +272,8 @@ eu:
         flappy_k1_9: 'Try changing the player by attaching a "set player" block to the "when run" block.'
         jigsaw_1: Klikatu blokea
         jigsaw_2: Arrastatu blokea helburura
-        jigsaw_3: Arrange the blocks to form the image
-        jigsaw_4: Arrange the blocks to form the image
+        jigsaw_3: Antolatu blokeak irudia osatzeko
+        jigsaw_4: Antolatu blokeak irudia osatzeko
         jigsaw_5: Antolatu blokeak irudia osatzeko
         jigsaw_6: Antolatu blokeak irudia osatzeko
         jigsaw_7: Antolatu blokeak irudia osatzeko
@@ -284,7 +288,7 @@ eu:
         mazestep_3: Labirinto pausuaren deskribapena hemen
         mazestep_4: Labirinto pausuaren deskribapena hemen
         mazestep_5: Labirinto pausuaren deskribapena hemen
-        studio_c2_1: 'Can you make this dog say "hello world"?'
+        studio_c2_1: 'Esanarazi diezaiokezu txakurrari "Kaixo mundua"?'
         studio_c2_2: Can you make the dog say something and then have the cat say something afterwards?
         studio_c2_3: Can you write a program to make this dog move to the cat?
         studio_c2_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
@@ -295,7 +299,7 @@ eu:
         studio_c2_9: Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?
         studio_c2_10: Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?
         studio_c2_11: "Create your own story. When you're done, click Finish to let friends try your story on their phones."
-        studio_c3_story_1: 'Can you make this dog say "hello world"?'
+        studio_c3_story_1: 'Esanarazi diezaiokezu txakurrari "Kaixo mundua"?'
         studio_c3_story_2: Can you make the dog say something and then have the cat say something afterwards?
         studio_c3_story_3: Can you write a program to make this dog move to the cat?
         studio_c3_story_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
@@ -308,7 +312,7 @@ eu:
         studio_c3_game_5: Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?
         studio_c3_game_6: Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?
         studio_c3_game_7: "Create your own game. When you're done, click Finish to let friends try your story on their phones."
-        studio_playlab_1: 'Can you make this dog say "hello world"?'
+        studio_playlab_1: 'Esanarazi diezaiokezu txakurrari "Kaixo mundua"?'
         studio_playlab_2: Can you make the dog say something and then have the cat say something afterwards?
         studio_playlab_3: Can you write a program to make this dog move to the cat?
         studio_playlab_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
@@ -319,7 +323,7 @@ eu:
         studio_playlab_9: Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?
         studio_playlab_10: "Create your own game. When you're done, click Finish to let friends try your story on their phones."
         studio_full_sandbox: "Create your own game. When you're done, click Finish to let friends try your story on their phones."
-        studio_k1_1: 'Can you make this dog say "hello world"?'
+        studio_k1_1: 'Esanarazi diezaiokezu txakurrari "Kaixo mundua"?'
         studio_k1_2: Can you make the dog say something and then have the cat say something afterwards?
         studio_k1_3: Can you write a program to make this dog move to the cat?
         studio_k1_4: 'Make the dog move to the cat and the cat say "hello" when he gets there.'
@@ -335,6 +339,8 @@ eu:
         maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
         maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
         maze_wordsearch_k_20: This is a test! Move me one way, then another to spell the word STORY
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColour" block.'
     video:
       name:
         maze_intro: Labirintora sarrera

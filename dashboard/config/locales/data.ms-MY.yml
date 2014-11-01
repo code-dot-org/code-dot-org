@@ -3,7 +3,7 @@
     script:
       name:
         20-hour:
-          desc: K-8 Intro untuk kursus sains komputer
+          desc: K-8 Intro untuk kursus Sains Komputer
           Unplug1: Peringkat 1
           Maze: Peringkat 2
           Unplug2: Peringkat 3
@@ -48,6 +48,8 @@
         edit-code:
           desc: Edit Code (beta)
           MazeEC: Peringkat 1
+          Webapp: Peringkat 2
+          ArtistEC: Peringkat 3
         events:
           desc: Bounce (beta)
           Bounce: Peringkat 1
@@ -70,14 +72,14 @@
     game:
       name:
         Unplug1: Pengenalan kepada Sains komputer
-        Maze: Maze
+        Maze: Simpang Siur
         Multi: Multiple Choice Stuffs
         Unplug2: Pengiraan pemikiran
         Unplug3: Pengaturcaraan kertas graf
-        Artist: Artis
+        Artist: Pelukis
         Unplug4: Algoritma
         Artist2: Artis 2
-        Unplug5: Fungsi-fungsi
+        Unplug5: Fungsi
         Farmer: Petani
         Unplug6: Bersyarat
         Artist3: Artis 3
@@ -90,12 +92,14 @@
         Unplug10: Internet
         Artist5: Artis 5
         Unplug11: Wrap-up
-        MazeEC: Maze
-        Bounce: Bounce
+        MazeEC: Simpang Siur
+        Bounce: Lantunan
         Flappy: Flappy Bird
         Jigsaw: Jigsaw
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
+        Webapp: Webapp
+        ArtistEC: Pelukis
     trophy:
       name:
         Bronze: Gangsa
@@ -110,7 +114,7 @@
         loop_until: Ulangi sehingga blok
         loop_while: While block
         loop_for: Kaunter blok
-        function: Fungsi-fungsi
+        function: Fungsi
         parameters: Fungsi-fungsi dengan parameter
     level:
       instructions:
@@ -530,6 +534,9 @@
         maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
         maze_wordsearch_k_20: This is a test! Move me one way, then another to spell
           the word STORY
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
+          it in the new "penColour" block.'
     video:
       name:
         maze_intro: Maze Intro
@@ -540,7 +547,7 @@
         loop_until: Repeat Until Block
         if: Jika blok
         if_else: Jika/lain blok
-        function: Fungsi-fungsi
+        function: Fungsi
         loop_while: While Block
         loop_for: Counter Block
         parameters: Functions with Parameters
@@ -550,7 +557,7 @@
         Unplug2: Pengiraan pemikiran
         Unplug3: Pengaturcaraan kertas graf
         Unplug4: Algoritma
-        Unplug5: Fungsi-fungsi
+        Unplug5: Fungsi
         Unplug6: Bersyarat
         Unplug7: Songwriting
         Unplug8: Abstraksi
@@ -594,7 +601,7 @@
         C3_farmer_while: While Loops
         C3_bee_nested_loops: Nested Loops
         C3_bee_debugging: Bee Debugging
-        C3_bounce: Bounce
+        C3_bounce: Lantunan
         C3_playlab_create_game: Play Lab - Create a Game
         C3_computational_thinking: Pengiraan pemikiran
         C3_dice_race: Dice Race

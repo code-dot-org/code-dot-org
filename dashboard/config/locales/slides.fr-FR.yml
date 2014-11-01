@@ -357,8 +357,8 @@
         text: Si tu as aimé ta première heure de code, visite code.org pour continuer
           ton éducation en informatique! Une fois que tu auras complété 20 heures
           de cours, tu auras maîtrisé les bases de la programmation, et tu pourras
-          commencer à apprendre comment écrire des applications de téléphones intelligents,
-          des instructions de robot, des jeux...  C'est toi qui choisis.
+          commencer à apprendre comment écrire des applications pour téléphones, des
+          instructions de robot, des jeux...  C'est toi qui choisis.
       4:
         image: notes/hoc6_4.jpg
         text: 'La technologie change tout ce que nous faisons et peu importe qu''on
@@ -367,4 +367,4 @@
     20_wrapup:
       1:
         image: notes/bird.png
-        text: Les notes d'indications vont bientôt arriver!
+        text: Montrer les notes à venir bientôt !

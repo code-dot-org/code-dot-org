@@ -4,9 +4,11 @@ affichage: large
 
 * * *
 
-# Tutorial guidelines for the Hour of Code and Computer Science Education Week
+# Lignes directrices pour les tutoriels pour l'Heure de Code et la semaine de l'éducation en informatique
 
-Code.org will host a variety of Hour of Code activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [code.org/learn](http://code.org/learn).
+**The deadline to submit a tutorial for Hour of Code 2014 has passed. You may still submit an entry and we will try to review it if time allows.**
+
+Code.org will host a variety of Hour of Code activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= codeorg_url() %>](http://<%= codeorg_url() %>/learn).
 
 We’d like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science. Please use this document to guide the creation of your activity, targeted to the user who has no background in coding, computer programming, and computer science.
 
@@ -14,9 +16,9 @@ We’d like to host a variety of engaging options, but the primary goal is to op
 
 ## Index:
 
-  * [How tutorials will be evaluated for inclusion](#inclusion)
-  * [General guidelines for creating an Hour of Code activity](#guidelines)
-  * [How to submit (Due 10/1/2014)](#submit)
+  * [Comment les tutoriels seront évalué avant d'être inclus](#inclusion)
+  * [Direction à suivre pour la création d'un atelier Heure de Code](#guidelines)
+  * [Comment soumettre (Dû le 01/10/2014)](#submit)
   * [Suggestions for designing your activity](#design)
   * [Trademark Guidelines](#tm)
   * [Tracking Pixel](#pixel)
@@ -25,7 +27,7 @@ We’d like to host a variety of engaging options, but the primary goal is to op
 
 <a id="inclusion"></a>
 
-## How tutorials will be evaluated for inclusion
+## Comment les tutoriels seront évalué avant d'être inclus
 
 A committee of computer science educators will rank submissions based on qualitative and quantitative metrics, including survey results from a broader set of educators.
 
@@ -69,7 +71,7 @@ As a result, the existing listings are certainly “good enough,” and the driv
 
 <a id="guidelines"></a>
 
-## General guidelines for creating an Hour of Code activity
+## Direction à suivre pour la création d'un atelier Heure de Code
 
   * **Subject:** Introductory computer science or programming (not HTML).
   * **Goal:** Give beginners an accessible first taste of programming.
@@ -86,7 +88,7 @@ As a result, the existing listings are certainly “good enough,” and the driv
 
 <a id="submit"></a>
 
-## How to submit (Due 10/1/2014)
+## Comment soumettre (Dû le 01/10/2014)
 
 Visit the [Hour of Code Activity Submission page](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform) and follow the steps to submit your tutorial.
 

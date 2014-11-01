@@ -1,6 +1,6 @@
 * * *
 
-title: Thank you layout: wide
+title: Gracias layout: wide
 
 * * *
 

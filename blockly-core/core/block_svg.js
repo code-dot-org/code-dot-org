@@ -27,11 +27,6 @@ goog.provide('Blockly.BlockSvg');
 
 goog.require('goog.userAgent');
 
-var FRAME_MARGIN_SIDE = 15;
-var FRAME_MARGIN_TOP = 10;
-var FRAME_MARGIN_BOTTOM = 5;
-
-var FRAME_HEADER_HEIGHT = 25;
 
 /**
  * Class for a block's SVG representation.
@@ -623,7 +618,7 @@ Blockly.BlockSvg.prototype.renderTitles_ = function(titleList, x, y) {
     }
 
     title.getRootElement().setAttribute('transform', 'translate(' + translateX +
-      ', ' + y + ')');
+      ', ' + (y + title.getBufferY()) + ')');
     if (titleSize.width) {
       x += titleSize.width + BS.SEP_SPACE_X;
     }
@@ -672,6 +667,10 @@ Blockly.BlockSvg.prototype.renderCompute_ = function(iconWidth) {
     if (currentRow.length > 0 || input.isInline()) {
       currentRow.type = BS.INLINE;
     }
+    // rows with a single FUNCTIONAL_INPUT should be treated as inlined
+    if (currentRow.length === 0 && input.type === Blockly.FUNCTIONAL_INPUT) {
+      currentRow.type = BS.INLINE;
+    }
     currentRow.push(input);
 
     var renderSize = inputRenderSize(input);
@@ -689,7 +688,8 @@ Blockly.BlockSvg.prototype.renderCompute_ = function(iconWidth) {
         hasStatement = true;
         titleStatementWidth = Math.max(titleStatementWidth, input.titleWidth);
       } else {
-        if (currentRow.type === Blockly.INPUT_VALUE || currentRow.type === Blockly.FUNCTIONAL_INPUT) {
+        if (currentRow.type === Blockly.INPUT_VALUE ||
+            currentRow.type === Blockly.FUNCTIONAL_INPUT) {
           hasValue = true;
         } else if (currentRow.type === Blockly.DUMMY_INPUT) {
           hasDummy = true;
@@ -745,7 +745,7 @@ function thickenInlineRows (inputRows) {
   var row;
   for (var y = 0; row = inputRows[y]; y++) {
     row.thicker = false;
-    if (row.type == BS.INLINE) {
+    if (row.type === BS.INLINE) {
       for (var z = 0, input; input = row[z]; z++) {
         if (input.type === Blockly.INPUT_VALUE ||
           input.type === Blockly.FUNCTIONAL_INPUT) {
@@ -850,6 +850,20 @@ Blockly.BlockSvg.prototype.renderDraw_ = function(iconWidth, inputRows) {
           this.block_.nextConnection) {
         this.squareBottomLeftCorner_ = true;
       }
+    }
+  }
+
+  if (this.block_.previousConnection &&
+      this.block_.previousConnection.type === Blockly.FUNCTIONAL_OUTPUT) {
+    this.squareTopLeftCorner_ = true;
+    this.squareBottomLeftCorner_ = true;
+  }
+
+  for (var i = 0; i < this.block_.inputList.length; i++) {
+    if (this.block_.inputList[i].type === Blockly.FUNCTIONAL_INPUT) {
+      // todo (brent) - do we actually want these to be square
+      this.squareTopLeftCorner_ = true;
+      this.squareBottomLeftCorner_ = true;
     }
   }
 
@@ -958,7 +972,7 @@ Blockly.BlockSvg.prototype.renderDrawRight_ = function(renderInfo, connectionsXY
       this.renderDrawRightCollapsed_(renderInfo ,row);
     } else if (row.type === BS.INLINE) {
       this.renderDrawRightInline_(renderInfo, inputRows, i, connectionsXY);
-    } else if (row.type === Blockly.INPUT_VALUE || row.type === Blockly.FUNCTIONAL_INPUT) {
+    } else if (row.type === Blockly.INPUT_VALUE) {
       this.renderDrawRightInputValue_(renderInfo, inputRows, i, connectionsXY);
     } else if (row.type === Blockly.DUMMY_INPUT) {
       this.renderDrawRightDummyInput_(renderInfo, inputRows, i);
@@ -1040,18 +1054,19 @@ Blockly.BlockSvg.prototype.renderDrawRightDummyInput_ = function (renderInfo,
   var input = row[0];
   var titleX = renderInfo.curX;
   var titleY = renderInfo.curY + BS.TITLE_HEIGHT;
-  if (input.align != Blockly.ALIGN_LEFT) {
+  if (input.align === Blockly.ALIGN_RIGHT) {
     var titleRightX = inputRows.rightEdge - input.titleWidth -
       2 * BS.SEP_SPACE_X;
     if (inputRows.hasValue) {
       titleRightX -= BS.TAB_WIDTH;
     }
-    if (input.align == Blockly.ALIGN_RIGHT) {
-      titleX += titleRightX;
-    } else if (input.align == Blockly.ALIGN_CENTRE) {
-      titleX += (titleRightX + titleX) / 2;
-    }
+    titleX += titleRightX;
   }
+
+  if (input.align === Blockly.ALIGN_CENTRE) {
+    titleX = (inputRows.rightEdge - input.titleWidth) / 2;
+  }
+
   this.renderTitles_(input.titleRow, titleX, titleY);
   renderInfo.core.push('v', row.height);
   if (Blockly.RTL) {
@@ -1128,6 +1143,18 @@ Blockly.BlockSvg.prototype.renderDrawRightInline_ = function (renderInfo, inputR
   rowIndex, connectionsXY) {
   // Inline inputs.
   var row = inputRows[rowIndex];
+  var hasFunctionalInput = false;
+
+  // If the first input is functional, assume all inputs are functional. Figure
+  // out how much space they will take up, so that we can center the set of them.
+  if (row[0].type === Blockly.FUNCTIONAL_INPUT) {
+    var widths = BS.SEP_SPACE_X * (row.length - 1);
+    row.forEach(function (input) { widths += input.renderWidth; } );
+    if (inputRows.rightEdge > widths) {
+      renderInfo.curX = (inputRows.rightEdge - widths) / 2;
+    }
+  }
+
   for (var x = 0, input; input = row[x]; x++) {
     var titleX = renderInfo.curX;
     var titleY = renderInfo.curY + BS.TITLE_HEIGHT;
@@ -1137,7 +1164,6 @@ Blockly.BlockSvg.prototype.renderDrawRightInline_ = function (renderInfo, inputR
     }
     // TODO: Align inline title rows (left/right/centre).
     renderInfo.curX += this.renderTitles_(input.titleRow, titleX, titleY);
-
 
     if (input.type === Blockly.INPUT_VALUE) {
       renderInfo.curX += input.renderWidth + BS.SEP_SPACE_X;
@@ -1181,35 +1207,9 @@ Blockly.BlockSvg.prototype.renderDrawRightInline_ = function (renderInfo, inputR
         input.connection.tighten_();
       }
     } else if (input.type === Blockly.FUNCTIONAL_INPUT) {
-      // todo (brent) - RTL
-      var inputTopLeft = {
-        x: renderInfo.curX,
-        y: renderInfo.curY + BS.INLINE_PADDING_Y
-      };
+      hasFunctionalInput = true;
 
-      var notchStart = BS.NOTCH_WIDTH - BS.NOTCH_PATH_WIDTH;
-
-      renderInfo.inline.push('M', inputTopLeft.x + ',' + inputTopLeft.y);
-      renderInfo.inline.push('h', notchStart);
-      renderInfo.inline.push(BS.NOTCH_PATH_LEFT);
-      renderInfo.inline.push('H', inputTopLeft.x + input.renderWidth);
-      renderInfo.inline.push('v', input.renderHeight);
-      renderInfo.inline.push('H', inputTopLeft.x);
-      renderInfo.inline.push('z');
-
-      // todo (brent)- highlighting
-
-      renderInfo.curX += input.renderWidth + BS.SEP_SPACE_X;
-
-      // Create inline input connection.
-      connectionX = connectionsXY.x + inputTopLeft.x + BS.NOTCH_WIDTH;
-      connectionY = connectionsXY.y + inputTopLeft.y;
-
-      input.connection.moveTo(connectionX, connectionY);
-      if (input.connection.targetConnection) {
-        input.connection.tighten_();
-      }
-
+      this.renderDrawRightInlineFunctional_(renderInfo, input, connectionsXY);
     } else if (input.type != Blockly.DUMMY_INPUT) {
       renderInfo.curX += input.renderWidth + BS.SEP_SPACE_X;
     }
@@ -1217,11 +1217,28 @@ Blockly.BlockSvg.prototype.renderDrawRightInline_ = function (renderInfo, inputR
 
   renderInfo.curX = Math.max(renderInfo.curX, inputRows.rightEdge);
   renderInfo.core.push('H', renderInfo.curX);
-  renderInfo.highlight.push('H', renderInfo.curX + (Blockly.RTL ? -1 : 0));
+  if (!hasFunctionalInput) {
+    // this ends up just showing a little divot if we do this with our inline
+    // functional inputs
+    renderInfo.highlight.push('H', renderInfo.curX + (Blockly.RTL ? -1 : 0));
+  }
   renderInfo.core.push('v', row.height);
   if (Blockly.RTL) {
     renderInfo.highlight.push('v', row.height - 2);
   }
+};
+
+/**
+ * Render a function input that is inlined
+ * @param {!Object} renderInfo Current state of our paths
+ * @param {!Object} input The input to render
+ * @param {!Object} connectionsXY Location of block.
+ * @private
+ */
+Blockly.BlockSvg.prototype.renderDrawRightInlineFunctional_ = function(renderInfo,
+    input, connectionsXY) {
+  // Overriden by BlockSvgFunctional
+  throw "Only supported for functional blocks";
 };
 
 /**

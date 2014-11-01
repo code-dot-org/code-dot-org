@@ -50,7 +50,7 @@
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png"
       2-3 bee conditionals multi 2:
         Bee Conditionals Multiple Choice Two: Condicionais da abelha - Múltipla escolha
-          2
+          dois
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png, 500": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png,
           500"
         Choose the best blocks.: Escolha os melhores blocos.
@@ -60,7 +60,7 @@
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a4.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a4.png"
       2-3 bee conditionals multi 3:
         Bee Conditionals Multiple Choice Two: Condicionais da abelha - Múltipla escolha
-          dois
+          2
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png,
           500"
         Choose the best blocks: Escolha os melhores blocos
@@ -78,7 +78,7 @@
         "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png"
         "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png"
       2-3 maze multi 1:
-        Maze Multiple Choice One: Labirinto - Múltipla escolha 1
+        Maze Multiple Choice One: Labirinto de Múltipla Escolha Um
         "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500": "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png,
           500"
         Choose the best answer.: Escolha a melhor resposta.
@@ -91,7 +91,7 @@
         Maze Multiple Choice: Labirinto - Múltipla escolha
         "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500": "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png,
           500"
-        Which blocks work?: Quais blocos funcionam?
+        Which blocks work?: Que blocos funcionam?
         "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png"
         "/script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png"
         "/script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png"
@@ -133,12 +133,11 @@
       2-3 Conditionals Multi 1:
         Multiple Choice: Múltipla Escolha
         "/script_assets/2-3_images/unplugged/conditionals_1_q.png": "/script_assets/2-3_images/unplugged/conditionals_1_q.png"
-        These are your team's cards - according to the rules of the game, which set is scored correctly?: These
-          are your team's cards - according to the rules of the game, which set is
-          scored correctly?
+        According to the rules of the game, which set of cards is scored correctly?: De
+          acordo com as regras do jogo, qual conjunto de cartas foi marcado corretamente?
+        "/script_assets/2-3_images/unplugged/conditionals_1_a1.png": "/script_assets/2-3_images/unplugged/conditionals_1_a1.png"
         "/script_assets/2-3_images/unplugged/conditionals_1_a2.png": "/script_assets/2-3_images/unplugged/conditionals_1_a2.png"
         "/script_assets/2-3_images/unplugged/conditionals_1_a3.png": "/script_assets/2-3_images/unplugged/conditionals_1_a3.png"
-        "/script_assets/2-3_images/unplugged/conditionals_1_a1.png": "/script_assets/2-3_images/unplugged/conditionals_1_a1.png"
         "/script_assets/2-3_images/unplugged/conditionals_1_a4.png": "/script_assets/2-3_images/unplugged/conditionals_1_a4.png"
       2-3 Getting Loopy Multi 1:
         Multiple Choice: Múltipla Escolha
@@ -272,16 +271,16 @@
         "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png"
         "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png"
       4-5 Algorithms Multi 1:
-        Multiple Choice: Múltipla escolha
+        Multiple Choice: Múltipla Escolha
         Which one of these items is hardest to describe an algorithm for?: Qual desses
           itens é o mais difícil para ser descrito com um algoritmo?
         "<h4>Brushing your teeth</h4>": "<h4>Escovar os dentes</h4>"
-        "<h4>Baking cookies</h4>": "<h4>Cozinhar cookies</h4>"
+        "<h4>Baking cookies</h4>": "<h4>Assar biscoitos</h4>"
         "<h4>Shopping from a grocery list</h4>": "<h4>Fazer compras a partir de uma
           lista</h4>"
         "<h4>Banana</h4>": "<h4>Banana</h4>"
       4-5 Computational Thinking Multi 1:
-        Multiple Choice: Múltipla escolha
+        Multiple Choice: Múltipla Escolha
         0: "? Apresentamos aqui três frases. Qual dos modelos abaixo é a abstração
           correta para que as três aceitem o mesmo padrão do modelo?"
         1: "? Apresentamos aqui três frases. Qual dos modelos abaixo é a abstração
@@ -294,13 +293,13 @@
         "<h4>_____ is _____ a _____.</h4>": "<h4>_____ é _____ uma _____.</h4>"
         "<h4>Eugene is a _____ city.</h4>": "<h4>Eugene é uma cidade _____.</h4>"
       4-5 Crowdsourcing Multi 1:
-        Multiple Choice: Múltipla escolha
+        Multiple Choice: Múltipla Escolha
         Which of these pictures best represents crowdsourcing?: Qual dessas figuras
           representa melhor o crowdsourcing?
         "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png": "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png"
         "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png": "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png"
       4-5 Crowdsourcing Multi 2:
-        Multiple Choice: Múltipla escolha
+        Multiple Choice: Múltipla Escolha
         Which one of these activities would be best for practicing crowdsourcing?: Qual
           dessas atividades seria melhor para praticar crowdsourcing?
         "<h4>Cleaning your room</h4>": "<h4>Limpar seu quarto</h4>"
@@ -308,7 +307,7 @@
         "<h4>Brushing your hair</h4>": "<h4>Pentear seu cabelo</h4>"
         "<h4>Washing your face</h4>": "<h4>Lavar o rosto</h4>"
       4-5 Digital Footprint Multi 1:
-        Multiple Choice: Múltipla escolha
+        Multiple Choice: Múltipla Escolha
         Which piece of information listed below is okay to share on the internet?: Qual
           informação listada abaixo pode ser compartilhada na internet?
         "<h4>Your birthday</h4>": "<h4>Seu aniversário</h4>"
@@ -317,60 +316,59 @@
         "<h4>Your parent's credit card number</h4>": "<h4>O número do cartão de crédito
           do seu pai</h4>"
       4-5 Internet Multi 1:
-        Multiple Choice: Múltipla escolha
+        Multiple Choice: Múltipla Escolha
         "/script_assets/4-5_images/unplugged/internet_1_q.png": "/script_assets/4-5_images/unplugged/internet_1_q.png"
         When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Quando
           você tenta se conectar à code.org, para qual endereço IP o DNS provavelmente
-          vai te direcionar?
+          vai direcioná-lo?
         "<h4>23.23.224.106</h4>": "<h4>23.23.224.106</h4>"
         "<h4>54.209.61.132</h4>": "<h4>54.209.61.132</h4>"
         "<h4>64.14.68.10</h4>": "<h4>64.14.68.10</h4>"
         "<h4>54.243.71.82</h4>": "<h4>54.243.71.82</h4>"
       4-5 Internet Multi 2:
-        Multiple Choice: Múltipla escolha
+        Multiple Choice: Múltipla Escolha
         "/script_assets/4-5_images/unplugged/internet_1_q.png": "/script_assets/4-5_images/unplugged/internet_1_q.png"
         If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Se
-          o DNS te mandou para a página com endereço IP 100.42.50.110, em qual site
+          o DNS o mandou para a página com endereço IP 100.42.50.110, em qual site
           você está?
         "<h4>code.org</h4>": "<h4>code.org</h4>"
         "<h4>csisfun.com</h4>": "<h4>csisfun.com</h4>"
         "<h4>thinkersmith.org</h4>": "<h4>thinkersmith.org</h4>"
         "<h4>khanacademy.org</h4>": "<h4>khanacademy.org</h4>"
       4-5 Songwriting Multi 1:
-        Multiple Choice: Múltipla escolha
+        Multiple Choice: Múltipla Escolha
         "/script_assets/4-5_images/unplugged/songwriting_1_q.png": "/script_assets/4-5_images/unplugged/songwriting_1_q.png"
-        0: "? Qual é a maior parte dessa canção que você pode definir como o refrão,
+        0: "? Qual é a maior parte dessa música que você pode definir como refrão,
           de forma que o refrão se repita a cada vez que ela for chamada?"
-        1: ": Qual é a maior parte dessa canção que você pode definir como o refrão,
+        1: ": Qual é a maior parte dessa música que você pode definir como o refrão,
           de forma que o refrão se repita a cada vez que ela for chamada?"
         Lou, Lou, skip to my Lou,: Lou, Lou, pule para o Lou,
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Lou,
           Lou, pule para o Lou, <br/>Lou, Lou, pule para o Lou, <br/>Lou, Lou, pule
           para o Lou, <br/>Pule para o Lou, minha querida.
-        2: "? Lou, Lou, pule para o Lou, <br/>Lou, Lou, pule para o Lou, <br/>Lou,
-          Lou, pule para o Lou, <br/>Pule para o Lou, minha querida.<br/><br/><p>A
-          mosca está na manteiga, <br/>Shoo, mosca, shoo,"
-        3: ": Lou, Lou, pule para o Lou, <br/>Lou, Lou, pule para o Lou, <br/>Lou,
-          Lou, pule para o Lou, <br/>Pule para o Lou, minha querida.<br/><br/><p>A
-          mosca está na manteiga, <br/>Shoo, mosca, shoo,"
-        4: "? A mosca está na manteiga, <br/>Shoo, mosca, shoo, <br/>A mosca está
-          na manteiga, <br/>Shoo, mosca, shoo, <br/>A mosca está na manteiga, <br/>Shoo,
-          mosca, shoo, <br/>Pule para o Lou, minha querida."
-        5: ": A mosca está na manteiga, <br/>Shoo, mosca, shoo, <br/>A mosca está
-          na manteiga, <br/>Shoo, mosca, shoo, <br/>A mosca está na manteiga, <br/>Shoo,
-          mosca, shoo, <br/>Pule para o Lou, minha querida."
+        2: "? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
+          buttermilk, <br/>Shoo, fly, shoo,"
+        3: ": Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
+          buttermilk, <br/>Shoo, fly, shoo,"
+        4: "? Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin."
+        5: ": Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin."
       4-5 Suncatchers Multi 1:
-        Multiple Choice: Múltipla escolha
+        Multiple Choice: Múltipla Escolha
         "/script_assets/4-5_images/unplugged/suncatchers_2_q.png": "/script_assets/4-5_images/unplugged/suncatchers_2_q.png"
         Which of the programs below <em>does not</em> make the exact same sequence as Program 1: Qual
-          dos programas abaixo<em>não</em> faz exatamente a mesma sequência que o
+          dos programas abaixo <em>não</em> faz exatamente a mesma sequência que o
           Programa 1
         "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png"
         "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png"
         "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png"
-        "/script_assets/4-5_images/unplugged/suncatchers_2_a4.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a4.png"
       K-1 Artist 1 Multi 1:
-        Multiple Choice: Múltipla escolha
+        Multiple Choice: Múltipla Escolha
         "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500": "/script_assets/k_1_images/artist_images/rshort_dlong.png,
           500"
         Which blocks solve this puzzle?: Quais blocos resolvem o desafio?
@@ -379,7 +377,7 @@
         "/script_assets/k_1_images/artist_images/S|E|E.png": "/script_assets/k_1_images/artist_images/S|E|E.png"
         "/script_assets/k_1_images/artist_images/E|S.png": "/script_assets/k_1_images/artist_images/E|S.png"
       K-1 Artist 1 Multi 2:
-        Multiple Choice: Múltipla escolha
+        Multiple Choice: Múltipla Escolha
         "/script_assets/k_1_images/artist_images/square.png, 500": "/script_assets/k_1_images/artist_images/square.png,
           500"
         Which blocks draw the square?: Quais blocos formam o quadrado?
@@ -387,7 +385,7 @@
         "/script_assets/k_1_images/artist_images/E|S|W|N.png": "/script_assets/k_1_images/artist_images/E|S|W|N.png"
         "/script_assets/k_1_images/artist_images/N|W|S|E.png": "/script_assets/k_1_images/artist_images/N|W|S|E.png"
       K-1 Artist 2 Multi 1:
-        Multiple Choice: Múltipla escolha
+        Multiple Choice: Múltipla Escolha
         "/script_assets/k_1_images/artist_images/sq+sq.png, 500": "/script_assets/k_1_images/artist_images/sq+sq.png,
           500"
         Which shape do these squares combine to make?: Qual forma é feita a partir
@@ -406,7 +404,7 @@
         "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a3.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a3.png"
         "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a4.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a4.png"
       K-1 Bee 1 Multi 1:
-        Multiple Choice: Múltipla escolha
+        Multiple Choice: Múltipla Escolha
         "/script_assets/k_1_images/bee_images/1nectar+2nectar.png": "/script_assets/k_1_images/bee_images/1nectar+2nectar.png"
         How many nectars is this?: Quanto néctar isso representa?
         "/script_assets/k_1_images/bee_images/nectar.png": "/script_assets/k_1_images/bee_images/nectar.png"
@@ -414,7 +412,7 @@
         "/script_assets/k_1_images/bee_images/3nectar.png": "/script_assets/k_1_images/bee_images/3nectar.png"
         "/script_assets/k_1_images/bee_images/4nectar.png": "/script_assets/k_1_images/bee_images/4nectar.png"
       K-1 Bee 1 Multi 2:
-        Multiple Choice: Múltipla escolha
+        Multiple Choice: Múltipla Escolha
         "/script_assets/k_1_images/bee_images/2nectar+2nectar.png": "/script_assets/k_1_images/bee_images/2nectar+2nectar.png"
         How many nectars is this?: Quanto néctar isso representa?
         "/script_assets/k_1_images/bee_images/nectar.png": "/script_assets/k_1_images/bee_images/nectar.png"
@@ -422,7 +420,7 @@
         "/script_assets/k_1_images/bee_images/3nectar.png": "/script_assets/k_1_images/bee_images/3nectar.png"
         "/script_assets/k_1_images/bee_images/4nectar.png": "/script_assets/k_1_images/bee_images/4nectar.png"
       K-1 Maze Debugging Multi 1:
-        Multiple Choice: Múltipla escolha
+        Multiple Choice: Múltipla Escolha
         "/script_assets/k_1_images/maze_images/EESq.png, 700": "/script_assets/k_1_images/maze_images/EESq.png,
           700"
         Which choice should be the final block?: Qual opção deve ser o bloco final?
@@ -440,7 +438,7 @@
         "/script_assets/k_1_images/move_blocks/WS.png": "/script_assets/k_1_images/move_blocks/WS.png"
         "/script_assets/k_1_images/move_blocks/WN.png": "/script_assets/k_1_images/move_blocks/WN.png"
       K-1 Maze Loops Multi 1:
-        Multiple Choice: Múltipla escolha
+        Multiple Choice: Múltipla Escolha
         "/script_assets/k_1_images/move_blocks/NNNequals.png, 300": "/script_assets/k_1_images/move_blocks/NNNequals.png,
           300"
         Which repeat block is the same?: Qual bloco repetir é o mesmo?
@@ -448,7 +446,7 @@
         "/script_assets/k_1_images/move_blocks/r3_NN.png": "/script_assets/k_1_images/move_blocks/r3_NN.png"
         "/script_assets/k_1_images/move_blocks/r4_N.png": "/script_assets/k_1_images/move_blocks/r4_N.png"
       K-1 Maze Loops Multi 2:
-        Multiple Choice: Múltipla escolha
+        Multiple Choice: Múltipla Escolha
         "/script_assets/k_1_images/move_blocks/SESESEequals.png, 240": "/script_assets/k_1_images/move_blocks/SESESEequals.png,
           240"
         Pick the correct repeat block.: Escolha o bloco de repetição correto.
@@ -459,7 +457,7 @@
         Multiple Choice: Múltipla Escolha
         "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png"
         Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: Qual
-          animal tem a impressão digital que o coloca <strong>mais em risco</strong>?
+          animal tem o rastro digital que o coloca <strong>mais em risco</strong>?
         "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png"
         "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png"
         "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png"
@@ -512,7 +510,7 @@
         "/script_assets/k_1_images/unplugged_images/cover-seed.png": "/script_assets/k_1_images/unplugged_images/cover-seed.png"
         "/script_assets/k_1_images/unplugged_images/water-pot.png": "/script_assets/k_1_images/unplugged_images/water-pot.png"
       K-1 Word Search Multi 1:
-        Multiple Choice: Múltipla escolha
+        Multiple Choice: Múltipla Escolha
         "/script_assets/k_1_images/search_images/move.png, 450": "/script_assets/k_1_images/search_images/move.png,
           450"
         Which blocks spell "MOVE"?: Quais blocos formam a palavra "MOVE"?
@@ -520,7 +518,7 @@
         "/script_assets/k_1_images/move_blocks/EESS.png": "/script_assets/k_1_images/move_blocks/EESS.png"
         "/script_assets/k_1_images/move_blocks/ESSS.png": "/script_assets/k_1_images/move_blocks/ESSS.png"
       K-1 Word Search Multi 2:
-        Multiple Choice: Múltipla escolha
+        Multiple Choice: Múltipla Escolha
         "/script_assets/k_1_images/search_images/jump.png, 450": "/script_assets/k_1_images/search_images/jump.png,
           450"
         Which blocks spell "JUMP"?: Quais blocos formam a palavra "JUMP"?
@@ -528,7 +526,7 @@
         "/script_assets/k_1_images/move_blocks/NENE.png": "/script_assets/k_1_images/move_blocks/NENE.png"
         "/script_assets/k_1_images/move_blocks/EENN.png": "/script_assets/k_1_images/move_blocks/EENN.png"
       K-1 Word Search Multi 3:
-        Multiple Choice: Múltipla escolha
+        Multiple Choice: Múltipla Escolha
         "/script_assets/k_1_images/search_images/square.png, 700": "/script_assets/k_1_images/search_images/square.png,
           700"
         Which word is spelled?: Qual palavra é formada?
@@ -539,7 +537,7 @@
         Driver and Helper: Piloto e Copiloto
         "/script_assets/multis/driver_helper.jpg": "/script_assets/multis/driver_helper.jpg"
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: Um
-          desses meninos é o <b>piloto</b>. E um é o <b>copiloto</b>.
+          desses meninos é o melhor <b>piloto</b>. E um é o melhor <b>copiloto</b>.
         Which boy is the <large>helper</large>?: Qual menino é o <large>copiloto</large>?
         "/script_assets/multis/helper.jpg": "/script_assets/multis/helper.jpg"
         "/script_assets/multis/driver.jpg": "/script_assets/multis/driver.jpg"
@@ -547,7 +545,7 @@
         Driver and Helper: Piloto e Copiloto
         "/script_assets/multis/driver_helper.jpg": "/script_assets/multis/driver_helper.jpg"
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: Um
-          desses meninos é o <b>piloto</b>. E um é o <b>copiloto</b>.
+          desses meninos é o melhor <b>piloto</b>. E um é o melhor <b>copiloto</b>.
         This time, which boy is the <large>driver</large>?: Dessa vez, qual menino
           é o <large>piloto</large>?
         "/script_assets/multis/helper.jpg": "/script_assets/multis/helper.jpg"
@@ -620,7 +618,7 @@
         "(rectangle (+ 8 2) (- 7 5) solid red)": "(rectangle (+ 8 2) (- 7 5) solid
           red)"
       test multi image:
-        Maze Multiple Choice Two: Labirinto - Múltipla escolha 2
+        Maze Multiple Choice Two: Labirinto de Múltipla Escolha Dois
         "/script_assets/matches/images/head.jpg,400": "/script_assets/matches/images/head.jpg,400"
         This puzzle is all about selecting the correct flowers.: Esse desafio consiste
           em selecionar as flores corretas.
@@ -643,4 +641,4 @@
         Fred Flintstone: Visconde de Sabugosa
         Martha Washington: Pedro Álvares Cabral
         George Washington: Marechal Deodoro da Fonseca
-        George Jetson: George Jetson
+        George Jetson: Marechal Rondon

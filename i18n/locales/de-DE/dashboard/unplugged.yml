@@ -8,13 +8,13 @@ de:
           - unplug1
         video: Unplug1
       Unplug2:
-        title: Computerbezogenes Denken
+        title: Computerorientiertes Denken
         desc: Mit nichts als Papier und Stift, lernen die Schüler/-innen die vier Schritte des Computerbezogenen Denkens. Nach einer kurzen Einführung sollten die Schüler/-innen in Teams aufgeteilt werden, wo sie Anweisungen für andere Teams erstellen, um ein bestimmtes Monster (aus einem Katalog von vorausgewählten Monster) zu zeichnen. Der gesamte Vorgang soll zersetzt werden, danach werden die Teams die Monter auf Muster überprüfen, verschiedene Details abstrahieren und diese Informationen zu einem Algorithmus(Anweisungen) zusammenstellen, welcher beschreibt wie das Monster zu zeichnen ist. Die Teams tauschen dann ihre Algorithmen untereinander aus und zeichnen das Monster basierend auf dem erhaltenen Algorithmus. Ist das Monster so wie vom ursprünglichen Team gedacht?
         pdfs:
           - unplug2
         video: Unplug2
       Unplug3:
-        title: Programmieren auf Millimeterpapier
+        title: Millimeterpapier Programmierung
         desc: 'Die Schüler/-innen "programmieren" sich gegenseitig Bilder zu zeichnen, wodurch sie schnell verstehen um was es beim programmieren eigentlich geht. Die Lektion beginnt mit Schüler/-innen, welche sich gegenseitig anweisen farbige Quadrate auf Millimeterpapier zu zeichnen, um das ursprüngliche Bild zu rekonstruieren. Ist noch Zeit vorhanden, so können die Schüler/-innen eigene Bilder entwerfen.'
         pdfs:
           - unplug3
@@ -103,15 +103,15 @@ de:
         title: Sicher unterwegs
         desc: Das Internet ist ein machtvolles Werkzeug, bietet aber einige gefährliche Orte. Die Lehrperson zeigt, wie man sicher ist während dem Surfen.
       GraphPaperProgramming:
-        title: Millimeterpapier Programmierung
+        title: Programmieren auf Millimeterpapier
         desc: Die Schüler/-innen notieren einen Algorithmus(ein Satz von Anweisungen), mittels eines vordefinierten Satz von Anweisungen, mit dem sie ihre Klassenkameraden anweisen ein Bild zu reproduzieren.
         video: C2_graph_paper
       PaperPlanes:
-        title: 'Algorithmen aus dem wirklichen Leben: Papierflieger'
+        title: 'Alltagsalgorithmen: Papierflieger'
         desc: Diese Lektion macht deutlich, wie wir in unserem täglichen Leben Algorithmen anwenden, beispielsweise beim Basteln eines Papierfliegers. Diese Lektion richtet ihr Augenmerk auf das Gesamtbild der Informatik und die wichtige Rolle, die Algorithmen dort spielen.
         video: C2_paper_airplanes
       BinaryBracelets:
-        title: 'Binärcode- Armbänder'
+        title: Binäre Armbänder
         desc: Schüler entwerfen Armbänder zur Binärdarstellung des ersten Buchstabens ihres Namens. Schüler lernen, dass Daten auf mehr als eine Art dargestellt und gespeichert werden können.
         video: C2_binary_bracelets
       DigitalFootprint:
@@ -139,7 +139,7 @@ de:
         video: C3_internet
       Crowdsourcing:
         title: Crowdsourcing
-        desc: Wir lernen Crowdsourcing kennen, eine Problemlösungstechnik oft gebraucht in der Informatik, um eine Aufgabe als Klasse effizienter zu lösen als alleine.
+        desc: Students use crowdsourcing, a problem-solving technique common in computer science, to complete a task together as a classroom more efficiently than if a student attempted it alone.
         video: C3_crowdsourcing
       DigitalCitizenship:
         title: Digitalen Staatsbürgerschaft

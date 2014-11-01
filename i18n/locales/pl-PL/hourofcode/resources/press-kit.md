@@ -1,18 +1,18 @@
 * * *
 
-title: Resources layout: wide
+title: Materiały layout: wide
 
 * * *
 
-## Useful stats on computer science
+## Przydatne statystyki informatyczne
 
-*For all press and media inquiries, contact <press@code.org>*
+*Wszelkie zapytania odnośnie prasy i mediów kieruj na <press@code.org>*
 
-### Key Tips
+### Najważniejsze wskazówki
 
-  * Reach out to media two weeks before your event via email. Follow up by email and phone if you don't receive an initial response.
-  * Ask a school staff member or volunteer to take photos to share online or send to press.
-  * Write about the Hour of Code on your website’s homepage and in your school newspaper. Post your event details, and pictures of student activities.
+  * Skontaktuj się z mediami na dwa tygodnie przed wydarzeniem za pośrednictwem poczty elektronicznej. Ponów kontakt e-mailowy oraz telefoniczny, jeśli nie otrzymałeś(aś) wstępnej odpowiedzi.
+  * Poproś pracownika szkoły lub wolontariusza by robił zdjęcia, które będzie można opublikować online lub wysłać do prasy.
+  * Napisz o Godzinie Kodowania na swojej stronie internetowej i w gazetce szkolnej. Opublikuj szczegóły wydarzenia i zdjęcia.
   * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 8-14. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
 ### Step-by-step guide:
@@ -45,7 +45,7 @@ We hope it’ll spark interest in students to keep learning. Research also shows
 
 *Why is this important?*
 
-In China, every students takes computer science to graduate high school. In the U.S., 90 percent of schools don’t even teach it. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will allow give them the confidence and know-how to succeed.
+In China, every students takes computer science to graduate high school. In the U.S., 90 percent of schools don’t even teach it. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them the confidence and know-how to succeed.
 
 **More details and a quote you can use in materials**
 
@@ -53,7 +53,7 @@ In China, every students takes computer science to graduate high school. In the 
 
 **About Code.org**
 
-Code.org® is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign — which has introduced millions of students to computer science — partnered with more than 30 public school districts nationwide, and launched Code Studio, an open-source, online learning platform for all ages. For more information, please visit: <% if @country == 'uk' %> [www.uk.code.org](http://uk.code.org). <% else %> [www.code.org](http://code.org). <% end %>
+Code.org® is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign — which has introduced millions of students to computer science — partnered with more than 30 public school districts nationwide, and launched Code Studio, an open-source, online learning platform for all ages. For more information, please visit: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
 Find more resources and sample emails [here](<%= hoc_uri('/resources') %>).

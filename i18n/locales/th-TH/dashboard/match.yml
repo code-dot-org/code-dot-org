@@ -1,4 +1,4 @@
-th:
+tk:
   data:
     match:
       2-3 artist loops match 1:
@@ -347,7 +347,7 @@ th:
         What's in the ocean?: "What's in the ocean?"
         What's Brent's last name?: "What's Brent's last name?"
         Where is Brendan from?: Where is Brendan from?
-        blue: น้ำเงิน
+        blue: blue
         salt: salt
         Van Minnen: Van Minnen
         Sydney: Sydney

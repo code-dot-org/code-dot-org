@@ -6,37 +6,48 @@ pt-BR:
   front_header_banner: Junte-se ao maior evento de aprendizagem da história, do dia 8 ao dia 14 de dezembro de 2014
   front_intro_default: 'A Hora do Código é um movimento global que atinge dezenas de milhões de estudantes em mais de 180 países. Qualquer um, em qualquer lugar, pode organizar um evento da Hora do Código. Tutoriais de uma hora estão disponíveis em mais de 30 idiomas. Não é necessário experiência. <strong>Podem participar pessoas com idades entre 4 e 104 anos.</strong>'
   front_intro_default_uk: "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone can organize an Hour of Code event. Over 3M students did the first Hour of Code in the UK. Let's double that in December! <strong>No experience needed. Ages 4 to 104.</strong>"
-  front_intro_default_ar: 'La Hora del Program.AR es un movimiento mundial, llegando a decenas de millones de estudiantes en más de 170 países. Cualquier persona, en cualquier lugar puede organizar un evento Hora de Program.AR. Tutoriales de una hora están disponibles en más de 30 idiomas. <strong>No se necesita experiencia. Para edades entre 4 y 104 años.</strong>'
   front_watch_video: Assista ao novo vídeo
   header_menu_resources: Recursos
   header_menu_faq: Perguntas Frequentes
   header_menu_prizes: Prêmios
   header_menu_uk_code_org: UK.Code.org
   choose_country_header: Participe no mundo todo!
+  country_al: Albania
   country_ar: Argentina
   country_au: Austrália
   country_br: Brasil
-  country_bg: Bulgaria
-  country_de: Germany
-  country_es: Latin America
+  country_bg: Bulgária
+  country_de: Alemanha
+  country_es: América Latina
   country_eu: União Europeia
-  country_gr: Greece
-  country_hr: Croatia
-  country_id: Indonesia
+  country_gr: Grécia
+  country_hr: Croácia
+  country_id: Indonésia
   country_it: Itália
-  country_jp: Japan
-  country_me: Middle East and North Africa
+  country_jp: Japão
+  country_me: Oriente Médio e norte da África
+  country_my: Malaysia
   country_nz: Nova Zelândia
   country_ro: Romênia
-  country_ru: Russia
-  country_ua: Ukraine
+  country_ru: Rússia
+  country_ua: Ucrânia
   country_uk: Reino Unido
   country_us: Estados Unidos
-  country_vn: Vietnam
+  country_vn: Vietnã
+  company_4-H: 4-H Youth Development
+  company_bgca: Boys and Girls Club of America
+  company_cgcs: Council of the Great City Schools
+  company_gsusa: Girl Scouts of America
+  company_bsusa: Boy Scouts of America
+  company_napcs: National Alliance of Public Charter Schools
+  company_tfa: Teachers for America
+  company_tntp: TNTP
+  company_asa: Afterschool Alliance
+  company_ngcp: National Girls Collaborative Project
   prizes_all: Prêmios para os organizadores
   prizes_every_organizer: Todo organizador da Hora do Código ganhará espaço no Dropbox ou crédito no Skype como forma de agradecimento
   prizes_technology: Uma escola pública de cada Estado dos EUA (e Washington DC) ganhará US$10 mil em tecnologia
-  prizes_tech_chats: 50 salas de aula ganharão chats de vídeo com convidados muito especiais
+  prizes_tech_chats: 96 classrooms will win video chats with very special guests
   prizes_details: Detalhes
   n_have_learned_an_hoc: '<h1>#</h1><h3>tentaram uma</h3><h2>HORA de CÓDIGO</h2>'
   anybody_can_learn: Qualquer um pode aprender.
@@ -65,7 +76,6 @@ pt-BR:
   front_join_us_host: Promova
   front_join_us_support: Apoie
   signup_header: Deixe-nos saber se você está hospedando um Hora de Código
-  signup_header_ar: Déjanos saber si estas organizando una Hora de Programación
   signup_name_label: O seu nome
   signup_email_label: Seu e-mail
   signup_organization_name_label: Nome de escola ou organização
@@ -89,8 +99,8 @@ pt-BR:
   signup_submit_error_message: Ocorreu um erro. Por favor verifique se todos os campos obrigatórios foram preenchidos corretamente.
   signup_thank_you_header: Obrigado por registrar-se para sediar um evento da Hora do Código.
   signup_thank_you_message: Enviamos um e-mail de confirmação com informações para ajudar você a começar.
-  map_header: '# Hour of Code events around the world'
-  map_header_ar: Eventos de Hora de Program.AR alrededor del mundo
+  map_header: '# Eventos da Hora do Código ao redor do mundo'
+  map_header_company: '# Hour of Code events organized by company'
   meta_tag_og_title: A Hora do Código está chegando
   meta_tag_og_description: A Hora do Código é um movimento global que atinge dezenas de milhões de estudantes em mais de 180 países e mais de 30 idiomas. Podem participar pessoas com idades entre 4 e 104 anos.
   meta_tag_twitter_title: A Hora do Código está chegando
@@ -123,37 +133,27 @@ pt-BR:
   hoc_faq_why_cs_q: Por que ciência da computação?
   hoc_faq_why_cs_a: "<i>Todo</i> aluno deveria ter a oportunidade de aprender ciência da computação, pois ela ajuda a desenvolver habilidades de resolução de problemas, lógica e criatividade. Começando cedo, os alunos terão uma base importante para serem bem-sucedidos em qualquer carreira do século 21. Veja os dados estatísticos em <a href='http://code.org'>Code.org</a>."
   hoc_faq_how_participate_q: Como participar da Hora do Código?
-  hoc_faq_how_participate_a: "Sign up to host an Hour of Code event <a href='http://hourofcode.org'>here</a> and <a href='target-resources-how-to'>start planning</a>. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when Dec. 8 arrives."
+  hoc_faq_how_participate_a: "Inscreva-se para sediar um evento da Hora do Código <a href='http://hourofcode.org'>aqui</a> e <a href='target-resources-how-to'>comece a planejar desde já</a>. Você pode organizar a Hora do Código em sua escola ou em sua comunidade &mdash; por exemplo, em um clube de atividades extracurriculares, uma instituição sem fins lucrativos ou no trabalho. Ou, apenas experimente você mesmo quando 8 de dezembro chegar."
   hoc_faq_behind_hoc_q: De quem é a ideia da Hora do Código?
   hoc_faq_behind_hoc_a: "A Hora do Código é organizada pela <a href='http://code.org'>Code.org</a>, uma instituição pública sem fins lucrativos dedicada a promover e a tornar a ciência da computação disponível ao maior número de escolas possível e garantindo que chegue também à minorias sociais, empoderando, por exemplo, mulheres e negros à participação nesta área. Hoje, a Code.org já conta com o apoio e incentivo de um <a href='http://code.org/about/partners'>grupo de parceiros sem precedentes</a> na realização da Hora do Código — dentre eles Microsoft, Apple, Amazon, Boys and Girls Clubs of America e College Board."
   hoc_faq_host_q: Não sei nada sobre programação. Ainda assim posso sediar um evento?
-  hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='http://code.org/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='target-resources-how-to'>how to guide</a>."
+  hoc_faq_host_a: "Pode, sim! As atividades da Hora do Código são autoexplicativas. Tudo o que você precisa fazer é <a href='http://code.org/learn'>experimentar nossos tutoriais</a>, escolher um tutorial e uma hora &mdash; nós tomamos conta do resto. Também temos opções para diferentes idades e níveis de experiência - a partir do jardim de infância. Comece a planejar seu evento, leia nosso <a href='target-resources-how-to'>Guia prático</a>."
   hoc_faq_need_computers_q: É necessário um computador para cada participante?
   hoc_faq_need_computers_a: "Não. Temos tutoriais da Hora do Código que funcionam em computadores, smartphones, tablets e alguns que não exigem computador! Você pode participar independentemente de onde esteja e do que tenha. <p><i>Estas são algumas opções:</i> <br> <ul> <li><b>Trabalho em duplas.</b> Pesquisas mostram que alunos aprendem mais <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>programando em duplas</a>, compartilhando um computador e trabalhando juntos. Incentive seus alunos a trabalharem em duplas. <li><b>Use uma tela projetada.</b> Se você tem um projetor e uma tela para um computador conectado à internet, o grupo inteiro pode fazer a Hora do Código junto. Assista a vídeos juntos e se revezem para resolver desafios ou para responder a perguntas. <li><b>Desconectado.</b> Oferecemos tutoriais que não exigem computador.</ul>"
   hoc_faq_international_q: Não estou nos Estados Unidos. Como posso participar internacionalmente?
   hoc_faq_international_a: Qualquer pessoa pode organizar a Hora do Código em qualquer lugar do mundo. No ano passado, estudantes do mundo todo participaram da Hora do Código.
   hoc_faq_tutorial_q: Como posso fazer um tutorial da Hora do Código?
-  hoc_faq_tutorial_a: "If you're interested in becoming a tutorial partner, <a href='target-tutorial-guidelines'>see our guidelines and instructions</a>. We'd like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science."
+  hoc_faq_tutorial_a: "Se estiver interessado em se tornar um parceiro de tutorial, <a href='target-tutorial-guidelines'>confira nossas diretrizes e instruções</a>. Gostaríamos de disponibilizar uma variedade de opções atrativas, mas nosso objetivo principal é melhorar a experiência de alunos e professores que são novos no campo da ciência da computação."
+  hoc_faq_more_questions_q: Ainda tem mais perguntas?
+  hoc_faq_more_questions_a: "Tente encontrar uma resposta em nosso <a href='http://support.code.org'>fórum de suporte</a>."
+  hoc_faq_more_questions_br_q: Outras dúvidas?
+  hoc_faq_more_questions_br_a: "Visite nosso <a href='http://support.code.org'>fórum de suporte</a> disponível apenas em inglês."
   hoc_faq_what_is_hoc_uk_a: "A Hora do Código é uma introdução de uma hora à ciência da computação, criada para desmistificar a programação e mostrar que qualquer pessoa pode aprender os fundamentos básicos desta ciência. <a href='http://uk.code.org/learn'>Confira os tutoriais</a>, e fique atento às novidades da Hora do Código de 2014."
   hoc_faq_when_is_hoc_uk_a: "A Hora do Código acontecerá de 8 a 14 de dezembro de 2014. Em um <i>horário</i> específico? Não. Você pode participar da Hora do Código a qualquer momento durante essa semana. A Hora do Código está programada para celebrar a <a href='http://csedweek.org'>Semana da Educação em Ciência da Computação</a> que acontece anualmente."
   hoc_faq_why_cs_uk_a: '<i>Todo</i> aluno deveria ter a oportunidade de aprender ciência da computação, pois ela ajuda a desenvolver habilidades de resolução de problemas, lógica e criatividade. Começando cedo, os alunos terão uma base importante para serem bem-sucedidos em qualquer carreira do século 21.'
   hoc_faq_how_participate_uk_a: "Inscreva-se para sediar um evento da Hora do Código <a href='http://hourofcode.com/uk'>aqui</a> e comece a planejar desde já. Você pode organizar a Hora do Código em sua escola ou em sua comunidade &mdash; por exemplo, em um clube de atividades extracurriculares, uma instituição sem fins lucrativos ou no trabalho. Ou, apenas experimente você mesmo quando 8 de dezembro chegar."
   hoc_faq_behind_hoc_uk_a: "A Hora do Código é organizada pela <a href='http://uk.code.org'>Code.org</a>, uma instituição pública sem fins lucrativos dedicada a promover e a tornar a ciência da computação disponível ao maior número de escolas possível e garantindo que chegue também à minorias sociais, empoderando, por exemplo, mulheres e negros à participação nesta área. Hoje, a Code.org já conta com o apoio e incentivo de um <a href='http://uk.code.org/about/partners'>grupo de parceiros sem precedentes</a> na realização da Hora do Código &mdash; dentre eles Microsoft, Google, Cambridge University Press, Tech City e o Departamento de Educação."
   hoc_faq_host_uk_a: "Pode, sim! As atividades da Hora do Código são autoexplicativas. Tudo o que você precisa fazer é escolher um tutorial e uma hora &mdash; nós tomamos conta do resto. Também temos opções para diferentes idades e níveis de experiência - a partir do jardim de infância. <a href='http://uk.code.org/learn'>Experimente nossos tutoriais atuais</a>."
-  hoc_faq_what_is_hoc_ar_q: Qué es la Hora de Program.AR?
-  hoc_faq_what_is_hoc_ar_a: "La Hora de Program.AR es una introducción de una hora a la ciencia computacional, diseñada para desmitificar la programación y demostrar que cualquiera puede aprender los conceptos básicos. <a href='http://code.org/learn'>Revisa los tutoriales</a> y busca otros nuevos para la Hora de Program.AR del 2014."
-  hoc_faq_when_is_hoc_ar_q: ¿Cuándo es la Hora de Program.AR?
-  hoc_faq_when_is_hoc_ar_a: "La Hora de Program.AR se llevará a cabo del 8 al 14 de diciembre del 2014. ¿Es una hora <i>específica</i>? No. Puedes hacer la Hora de Program.AR en cualquier momento durante esta semana. La Hora de Program.AR está programada para celebrarse anualmente - <a href='http://csedweek.org'>la Semana de Ciencias de Computación</a>."
-  hoc_faq_how_participate_ar_q: ¿Cómo puedo participar en la Hora de Program.AR?
-  hoc_faq_how_participate_ar_a: "Regístrese para organizar un evento de la hora de Program.AR <a href='http://hourofcode.org'>aquí</a> e inicie la planificación. Tú puedes organizar un evento de la Hora de ProProgram.ARgramación en tú escuela o en tú comunidad &mdash; como en un club extracurricular, en una organización sin fines de lucro o en el trabajo. O, simplemente probarlo cuando Diciembre 8 llegue."
-  hoc_faq_behind_hoc_ar_q: ¿Quién está detrás de la Hora de Program.AR?
-  hoc_faq_behind_hoc_ar_a: "La Hora de Program.AR es organizada por <a href='http://code.org'>Code.org</a>, una organización pública sin fines de lucro (501c3) dedicada a ampliar la participación en Ciencias Computacionales poniendose a disposición de más escuelas y aumentando la participación de las mujeres y los estudiantes subrepresentados de color. Una <a href='http://code.org/about/partners'>coalición sin precedentes de socios</a> se ha reunido para apoyar la Hora de Program.AR, también &mdash; incluyendo Microsoft, Apple, Amazon, Boys y Girls Clubs of America y el College Board."
-  hoc_faq_host_ar_q: No sé nada acerca de Program.AR. ¿Aún así puedo organizar un evento?
-  hoc_faq_host_ar_a: "Claro. Las actividades de La Hora de Program.AR son autodirigidas. Todo lo que tienes que hacer es elegir el tutorial que quieras y escoge una hora &mdash; nosotros nos encargamos del resto. También tenemos opciones para cada edad y nivel de experiencia, desde el kindergarten y para arriba. <a href='http://code.org/learn'>Pruebe nuestros tutoriales actuales</a>."
-  hoc_faq_need_computers_ar_q: ¿Necesito computadoras para cada participante?
-  hoc_faq_need_computers_ar_a: "No. Tenemos tutorales de la Hora de Program.AR que funcionan en PCs, teléfonos inteligentes, tabletas y algunos que no requieren ¡ninguna computadora en absoluto! Tú puedes unirte desde donde quiera que estés, con lo que tengas. <p><i>Aquí están algunas opciones:</i> <br> <ul><li><b>Trabaja en parejas.</b> Las investigaciones muestran que los estudiantes aprenden mejor con <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>pares de programación</a>, compartiendo una computadora y trabajando juntos. Anima a tus estudiantes a trabajar en pares. <li><b>Una pantalla proyectada.</b> Si tú tienes un proyector y una computadora conectada a Internet, el grupo entero puede hacer una hora de Program.AR juntos. Mira porciones de videos juntos y toma turnos para resolver acertijos o responder preguntas. <li><b>Desconéctate.</b> Ofrecemos tutoriales que no requieren ninguna computadora en absoluto. </ul>"
-  hoc_faq_tutorial_ar_q: ¿Cómo puedo hacer un tutoría de la Hora de Program.AR?
-  hoc_faq_tutorial_ar_a: "Si usted está interesado en convertirse en un socio para tutoriales, <a href='/tutorial-guidelines'>vea nuestras directrices e instrucciones</a>. Nos gustaría presentar varias opciones atractivas, pero la meta principal es optimizar la experiencia de los estudiantes y maestros que son nuevos a las ciencias computacionales."
   stats_hoc_2013_heading: 'Estatísticas incríveis da Hora de Código do ano passado. Em apenas uma semana:'
   stats_hoc_2013_image_alt: Estatísticas da Hora do Código de 2013
   stats_growth: Foi o mais rápido a chegar a 15 milhões de usuários.
@@ -169,14 +169,15 @@ pt-BR:
   stats_nina: '"Todos os dias produziram os mesmos resultados&mdash; 100% comprometidos." - Nina Nichols Peery, professora'
   stats_student: '"Eu sabia que esta era uma chance <b>única</b>." - Mariana Alzate, aluna do 5º ano'
   stats_michael: '"Eu <b>nunca, nunca</b> vi meus alunos tão animados para aprender." - Michael Clark, professor'
-  resources_how_to: How-to guide for teachers
-  resources_handouts: Handouts to spread the word
-  resources_videos: Videos
-  resources_posters: Posters
+  resources_how_to: Guia para professores
+  resources_handouts: Materiais para divulgação
+  resources_videos: Vídeos
+  resources_posters: Cartazes
+  resources_social: Social
   resources_banners: Banners
-  resources_emails: Sample emails
-  resources_stats: Useful computer science stats
-  resources_press_kit: Press Kit
+  resources_emails: Modelos de e-mail
+  resources_stats: Estatísticas úteis de ciência da computação
+  resources_press_kit: Kit para a imprensa
   footer_copyright_message: Copyright 2014 Code.org. Todos os direitos reservados.
   footer_trademark_message: Hora do Código™ é uma marca comercial de Code.org.
   footer_menu_partners: Parceiros

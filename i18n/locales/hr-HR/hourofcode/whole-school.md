@@ -1,6 +1,6 @@
 * * *
 
-layout: wide
+prikaz: širok
 
 * * *
 

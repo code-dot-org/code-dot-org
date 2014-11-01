@@ -7,12 +7,12 @@ az:
       user:
         name: Display Name
         email: E-poçt
-        username: İstifadəçi adı
-        password: Parol
+        username: istifadəçi adı
+        password: parol
         password_confirmation: Parolun təsdiqi
         current_password: Cari parol
         locale: Dil
-        age: Age
+        age: Yaşınız
         gender: Cins
         edit_header: Hesab Detallarına düzəliş edin
         error:
@@ -31,11 +31,11 @@ az:
     placeholder: Please enter your hint here
     submit: Add hint
   appname: Code.org
-  stage: Mərhələ
-  stage_number: 'Stage %{number}'
+  stage: mərhələ
+  stage_number: 'Mərhələ %{number}'
   puzzle: Tapmaca
-  trophies: Kuboklar
-  courses: Kurslar
+  trophies: kuboklar
+  courses: marşrutlar
   of: /
   more: DAHA ÇOX
   less: DAHA AZ
@@ -65,10 +65,7 @@ az:
     overview_student: 'Sign up for an account to track your progress. Your email is primarily used to allow you to log in and for password recovery. For more information, see our <a href="http://code.org/privacy">Privacy Policy</a>.'
     overview_teacher: "Teach computer science in your classroom by signing up for an account.<p/> You'll be able to add your students and track their progress."
     no_signup_message: 'Siz <a target="_blank" href="http://learn.code.org">müxtəlif mərhələ və tapmacalar</a>ı nəzərdən keçirə bilərsiniz, lakin nəticələrinizi yadda saxlamaq üçün qeydiyyatdan keçməyiniz lazım olacaq.'
-    prizes_message: 'U.S. students who earn all %{num_trophies} concept trophies can select a variety of prizes including free Dropbox space, Skype credits, and downloadable games from Electronic Arts.'
     teacher_educator_guide: Təhsil işçisi üçün göstərişlərə baxın
-    teacher_prize_header: 'Win $1,000 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> rewards (through June 15, 2014, until supplies last)'
-    teacher_prize_message: 'In partnership with <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>, Code.org will offer up to $1,000 in classroom funding to U.S. public school teachers who lead at least 15 students through the K-8 Intro to Computer Science course (through June 15, 2014, while supplies last).  <a href="http://code.org/educate/20hr">See educator guide</a>.  (Limit: $1,000 per teacher.  <a target="_blank" href="http://help.donorschoose.org/app/answers/detail/a_id/454/kw/code.org">See FAQ for more limits</a>.)'
     teacher_pitch: Teacher sign up for Code.org
     teacher_title: Müəllim kimi qeydiyyatdan keçin
     student_pitch: Student sign up for Code.org
@@ -78,8 +75,9 @@ az:
     address_placeholder: ünvan, şəhər, vilayət, poçt indeksi
     gender: Cins (vacib deyil)
     birthday: Ad günü (vacib deyil)
-    age: Age
-    submit: Qeydiyyatdan keçin
+    age: Yaşınız
+    user_type: Are you a student or teacher?
+    submit: Qeydiyyatdan keç
     teacher: Müəllimsiniz?
     valid_username: Olar!
     invalid_username: İstifadəçi adı ən azı 5 simvoldan ibarət olmalıdır
@@ -218,14 +216,14 @@ az:
         playlab: Make an App
         artist: Draw Something
     user:
-      classroom: Mənim tələbələrim
+      classroom: Mənim şagirdlərim
       label: 'Salam %{username}'
       stats: Mənim nəticələrim
       settings: Mənim hesabım
       prizes: Mükafatlar
       logout: Çıxın
       signin: Daxil olun
-      signup: Qeydiyyatdan keçin
+      signup: Qeydiyyatdan keç
       already_registered: Already registered?
     popup:
       progress: Sizin nəticələriniz
@@ -236,7 +234,7 @@ az:
       prizes: '%{total_trophies} kubokun hamısını yığ və hədiyyələr qazan!'
       prize_earned: 'Siz %{total_trophies} kubokun hamısımı topladınız. Mükafatı qazandınız!'
       prize_us_only: (Yalnız ABŞ-dan olan şagirdlər)
-      prizes_link: daha ətraflı
+      prizes_link: Daha geniş məlumat
   teacher:
     title:
       one: 'Your teacher:'
@@ -256,14 +254,14 @@ az:
       not_tried: Not tried yet
       activity: 'Indicates student activity in the last %{hours} %{plural}'
       no_section: No assigned section
-      trophies: Kuboklar
+      trophies: kuboklar
     students:
       name: Ad
-      username: İstifadəçi adı
-      password: Parol
-      manage: Tələbələri idarə edin
+      username: istifadəçi adı
+      password: parol
+      manage: Şagirdlərə nəzarət edin
       dashboard: Go to Teacher Dashboard
-      add: Tələbələri əlavə edin
+      add: Şagirdləri əlavə edin
       remove: remove student
       confirm_remove: Are you sure you want to remove this student?
       help_reassign: To divide your class into multiple sections, select students to assign to a new section.
@@ -278,13 +276,13 @@ az:
       add: Add section
       manage: Manage sections
       section: Section
-      students: Students
+      students: Şagirdlər
       section_code: Section Code
       add_section_code: Add Students Section-Code
       secret: Secret type
       grade: Grade
       course: Course
-      rename: rename
+      rename: adını dəyiş
       edit: edit
       delete: delete
       confirm_delete: Are you sure you want to delete this section?
@@ -320,16 +318,15 @@ az:
     teacher_reg_link: Teacher Sign Up
     signin_directions: 'Use an account to track progress.<br/> Teachers, track your entire class.'
     teacher_dashboard: Gedişat panelinə baxın
-    teacher_student_count_one: 'Sizin %{count} tələbəniz var.'
-    teacher_student_count: 'Sizin %{count} tələbəniz var.'
-    teacher_averages: 'Tələbələriniz %{trophy_max} "Anlayışların mənimsənilməsi" kubokundan orta hesabla %{trophy_average} dənəsini qazandılar.'
+    teacher_student_count_one: 'Sizin %{count} şagirdiniz var.'
+    teacher_student_count: 'Sizin %{count} şagirdiniz var.'
+    teacher_averages: 'Şagirdləriniz %{trophy_max} "Anlayışların mənimsənilməsi" kubokundan orta hesabla %{trophy_average} dənəsini qazandılar.'
     teacher_print_certificates: Print certificates for students who finish this course
     teacher_read_blog: Read about news and updates to our materials at our Educator Blog
     classroom: Sizin sinfiniz
     student_progress: Sizin təlim nəticələriniz
     student_stats: 'Siz %{trophy_max} "Anlayışların mənimsənilməsi" kubokundan %{trophy_count} dənəsini qazandınız.'
     student_left_off: 'Sonuncu qaldığınız yer:'
-    student_finished_prize: 'Bütün dərslikləri başa vurdunuz, %{prize_link}ınızı əldə edərək %{online_link} və ya %{local_school_link}də başqa bir dərs seçin'
     student_finished: 'Bütün dərslikləri başa vurdunuz, %{online_link} və ya %{local_school_link}də başqa bir dərs seçin'
     local_school: yerli məktəb
     online: onlayn
@@ -338,17 +335,23 @@ az:
     tryfirst: 'Or, you can try it first, and sign up later:'
     trynow: Try now
     add_hint_help: Please help us to add smart hints to Code.org tutorials
-    20hour_overview: This 20-hour course introduces core computer science and programming concepts. The course is designed for use in classrooms for grades K-8, but it is fun to learn at all ages.
+    20hour_overview: Bu 20 saatlıq kurs informatikanın əsasları və proqramlaşdırmanın əsas anlayışlarını təqdim edir. Kurs K-8 yaş qrupunda (12-13 yaşlılar) olan siniflərdə istifadə olunmaq üçün hazırlanıb, lakin öyrənmək hər yaşda əyləncəlidir.
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
     heading_elementary: '<h2>20 hour courses for</h2><h1>Elementary Students</h1>'
     heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
     heading_legacy: '<h2>Our general course for</h2><h1>All Ages</h1>'
+    gallery:
+      your_turtle: My Art
+      your_studio: My Apps
   gender:
     male: Kişi
     female: Qadın
     none: Cavab verməməyə üstünlük verirəm
+  user_type:
+    student: şagird
+    teacher: Teacher
   footer:
     help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped create this tutorial.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. All Rights Reserved.'
@@ -359,20 +362,13 @@ az:
     tos: Terms
     privacy: Məxfilik siyasəti
     secure: Secure Version
-  prize_mail:
-    prize_earned:
-      subject: 'Mükafatınızı "Code.org"da xərcləyin!'
-    teacher_prize_earned:
-      subject: Congratulations from Code.org!
-    teacher_bonus_prize_earned:
-      subject: 'Bonus mükafatınızı "Code.org"da xərcləyin!'
   reference_area:
     title: Kömək lazımdır?
     subtitle: Bu videolara və məsləhətlərə baxın
     teacher: Həlli gör
     auth_error: Həlli görməyə səlahiyyətiniz yoxdur.
     submit: Update Artist Location
-    direction: Start Direction
+    direction: Start Direction (in degrees)
   video:
     tab: Video.
     notes: Video yoxdur? Qeydləri göstər.
@@ -381,11 +377,11 @@ az:
     download: Videonu endir
   compatability:
     working:
-      header: We are working on support for your browser.
+      header: Veb səyyahınızın dəstəklənməsi üzərində işləyirik.
       message: "Code.org uses modern web technology. This makes the site faster to use. Your browser doesn't support all the features required, and you may experience issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade your browser to a supported version</a>."
       hide_this_warning: Hide this warning
     upgrade:
-      header: Please upgrade your browser.
+      header: Zəhmət olmasa, naviqatorunuzu yeniləyin.
       message: "Code.org uses modern web technology. This makes the site faster to use. Unfortunately your browser doesn't support all the features required to run this part of the site.<br/><br/>Install a browser on our supported browsers list to continue. You can <a href='#'>try viewing the page</a>, but expect functionality to be broken."
       button: Take me to the list of supported browsers
   slow_loading: Bu, adi halda olduğundan daha çox vaxt aparır...
@@ -393,7 +389,7 @@ az:
   next_stage: Qurtardı! Növbəti mərhələyə keçin
   download_pdf: Dərs planını aç
   view_lesson_plan: View Lesson Plan
-  pdf_download: Download PDF
+  pdf_download: PDF faylını endir
   share_code:
     title: "Click 'Run' to see my program in action"
     bounce_og_title: Check out my Bounce Game
@@ -427,9 +423,13 @@ az:
       body: Try our 20-hour Intro to Computer Science course.
   gallery:
     students_drew_these_with_code: Students drew these with code!
+    students_made_these_with_code: Students made these with code!
     picture_count: 'In the past <b>%{days}</b> days, students have drawn <b>%{count}</b> pictures by writing their own computer programs. Click on the pictures to see each program in action.'
+    activity_count: 'In the past <b>%{days}</b> days, students have made <b>%{count}</b> apps and pictures by writing their own computer programs. Click on the pictures and screenshots to see each program in action.'
     want_to_make_your_own: Want to make your own?
     more: 'More &rarr;'
+    caption_by_name_age: 'by %{name}, age %{age}'
+    caption_time_ago: '%{time_ago} ago'
   landing:
     prerelease: "This course is in <span class='betatext'>beta</span>.  This means it is not the final version of the course, and is subject to revision as feedback is received and improvements are made."
     feedback: Give Feedback
@@ -457,12 +457,12 @@ az:
       name:
         20-hour:
           title: K-8 yaş qrupu (12-13 yaşlılar) üçün İnformatikaya giriş kursu (15-25 saat)
-          description: This 20-hour course introduces core computer science and programming concepts. The course is designed for use in classrooms for grades K-8, but it is fun to learn at all ages.
+          description: Bu 20 saatlıq kurs informatikanın əsasları və proqramlaşdırmanın əsas anlayışlarını təqdim edir. Kurs K-8 yaş qrupunda (12-13 yaşlılar) olan siniflərdə istifadə olunmaq üçün hazırlanıb, lakin öyrənmək hər yaşda əyləncəlidir.
         Hour of Code:
           title: Kod Saatı
           description: ""
         edit-code:
-          title: Edit Code
+          title: Koda düzəliş et
           description: ""
         events:
           title: Events
@@ -477,7 +477,7 @@ az:
           title: Jigsaw
           description: ""
         step:
-          title: Step
+          title: Addım
           description: ""
         sample_level_builder:
           title: Sample Level Builder

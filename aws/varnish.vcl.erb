@@ -238,12 +238,23 @@ backend levelbuilder {
 <% end %>
 
 # api.change.org
-backend api_change_org {
-  .host = "api.change.org";
+backend api_change_org_4 {
+  .host = "104.16.4.13";
   .port = "80";
   .connect_timeout = 600s;
   .first_byte_timeout = 600s;
   .between_bytes_timeout = 600s;
+}
+backend api_change_org_5 {
+  .host = "104.16.5.13";
+  .port = "80";
+  .connect_timeout = 600s;
+  .first_byte_timeout = 600s;
+  .between_bytes_timeout = 600s;
+}
+director api_change_org round-robin {
+  { .backend = api_change_org_4; }
+  { .backend = api_change_org_5; }
 }
 
 # Respond to incoming requests.
@@ -442,7 +453,7 @@ end
       set req.http.Cookie = regsuball(req.http.Cookie, ";(cdo-private|hour_of_code|NO_CACHE)=", "; \1=");
     } else if (req.http.host == "<%= CDO.canonical_hostname('learn.code.org') %>" || req.http.host == "<%= CDO.canonical_hostname('studio.code.org') %>") {
       set req.http.Cookie = regsuball(req.http.Cookie, ";(language_|<%= session_cookie %>|hour_of_code|NO_CACHE)=", "; \1=");
-    } else if (req.url ~ "^/dashboardapi/" || req.url ~ "^/v2/" || req.url ~ "^/api/" || req.url == "/private" || req.url ~ "^/private/" || req.url ~ "^/create-company-profile"  || req.url ~ "^/edit-company-profile" || req.url ~ "^/teacher-dashboard" || req.url ~ "^/manage-professional-development-workshops") {
+    } else if (req.url ~ "^/dashboardapi/" || req.url ~ "^/v2/" || req.url ~ "^/api/" || req.url == "/private" || req.url ~ "^/private/" || req.url ~ "^/create-company-profile"  || req.url ~ "^/edit-company-profile" || req.url ~ "^/teacher-dashboard" || req.url ~ "^/manage-professional-development-workshops" || req.url ~ "^/professional-development-workshop-surveys/") {
       set req.http.Cookie = regsuball(req.http.Cookie, ";(<%= session_cookie %>|hour_of_code|NO_CACHE)=", "; \1=");
     } else {
       set req.http.Cookie = regsuball(req.http.Cookie, ";(NO_CACHE)=", "; \1=");

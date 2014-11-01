@@ -3,7 +3,7 @@ title: Prizes
 layout: wide
 ---
 
-# La Hora de Programación — premios para cada organizador
+# La Hora del Código — premios para cada organizador
 
 ## Cada organizar gana un código de regalo en agradecimiento
 

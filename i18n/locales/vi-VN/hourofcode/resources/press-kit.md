@@ -45,7 +45,7 @@ Chúng tôi hy vọng nó sẽ tia lửa thắp nên sự ham mê học tập ch
 
 *Tại sao điều này quan trọng?*
 
-Tại Trung Quốc, mỗi sinh viên tham khóa khóa học khoa học máy tính để tốt nghiệp cấp 3. Ở Mỹ, 90 phần trăm các trường thậm chí không dạy cho về nó. Đây là lúc để chúgn tôi bắt kịp với thể kỷ 21. Chúng ta biết rằng bất kể những gì học sinh của chúng tôi làm khi họ lớn lên, cho dù họ tham gia vào y học, kinh doanh, chính trị, hoặc nghệ thuật, biết cách làm thế nào để xây dựng nên các phần mềm sẽ cung cấp cho họ sự tự tin và biết làm thế nào để thành công.
+Tại Trung Quốc, mỗi sinh viên tham khóa khóa học khoa học máy tính để tốt nghiệp cấp 3. Ở Mỹ, 90 phần trăm các trường thậm chí không dạy cho về nó. Đây là lúc để chúgn tôi bắt kịp với thể kỷ 21. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them the confidence and know-how to succeed.
 
 **Chi tiết bạn có thể xem thêm trong các tài liệu**
 
@@ -53,7 +53,7 @@ Hadi Partovi, người sáng lập và CEO của Code.org nói rằng "Hour of C
 
 **Thông tin về Code.org**
 
-Code.org® là một tổ chức phi lợi nhuận được chỉ định để mở rộng sự tham gia trong khoa học máy tính và gia tăng sự tham gia của phụ nữ trong lĩnh vực nghiên cứu khoa học máy tính. Tầm nhìn của nó là mỗi học sinh trong tất cả các trường nên có cơ hội để học lập trình máy tính. Sau khi phát động vào năm 2013, Code.org tổ chức chiến dịch Hour of Code cũng giới thiệu hàng triệu sinh viên cho khoa học máy tính-hợp tác với hơn 30 khu vực trên toàn quốc, thành lập Codr Studio, một nền tảng mã nguồn mở, trực tuyến học cho mọi lứa tuổi. For more information, please visit: <% if @country == 'uk' %> [www.uk.code.org](http://uk.code.org). <% else %> [www.code.org](http://code.org). <% end %>
+Code.org® là một tổ chức phi lợi nhuận được chỉ định để mở rộng sự tham gia trong khoa học máy tính và gia tăng sự tham gia của phụ nữ trong lĩnh vực nghiên cứu khoa học máy tính. Tầm nhìn của nó là mỗi học sinh trong tất cả các trường nên có cơ hội để học lập trình máy tính. Sau khi phát động vào năm 2013, Code.org tổ chức chiến dịch Hour of Code cũng giới thiệu hàng triệu sinh viên cho khoa học máy tính-hợp tác với hơn 30 khu vực trên toàn quốc, thành lập Codr Studio, một nền tảng mã nguồn mở, trực tuyến học cho mọi lứa tuổi. For more information, please visit: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
 Find more resources and sample emails [here](<%= hoc_uri('/resources') %>).

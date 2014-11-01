@@ -1,0 +1,9 @@
+#about_nav
+  %span.about_list
+    -current_url = request.path_info
+    -{'Educator Overview'=>'/educate2','Hour of Code'=>'/educate2/hoc','Curriculum'=>'/educate2/curriculum','Professional Development'=>'/educate2/professional-development','District Partnerships'=>'/educate2/districts','Inspiration'=>'/educate2/inspiration','Philosophy'=>'/educate2/philosophy'}.each_pair do |label,url|
+      - if current_url == url
+        %span.about_list_item_selected= label
+      -else
+        %a.about_list_item{:href=>url}= label
+      %hr.narrow_hr

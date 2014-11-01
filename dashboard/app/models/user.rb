@@ -1,4 +1,5 @@
 require 'digest/md5'
+require 'cdo/user_helpers'
 
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
@@ -14,7 +15,8 @@ class User < ActiveRecord::Base
   
   TYPE_STUDENT = 'student'
   TYPE_TEACHER = 'teacher'
-  validates_inclusion_of :user_type, in: [TYPE_STUDENT, TYPE_TEACHER], on: :create
+  USER_TYPE_OPTIONS = [TYPE_STUDENT, TYPE_TEACHER]
+  validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS, on: :create
 
   GENDER_OPTIONS = [[nil, ''], ['gender.male', 'm'], ['gender.female', 'f'], ['gender.none', '-']]
 
@@ -57,13 +59,12 @@ class User < ActiveRecord::Base
   validates :name, length: {within: 1..70}, allow_blank: true
 
   validates :age, presence: true, on: :create # only do this on create to avoid problems with existing users
-  validates :age, presence: false, numericality: { only_integer: true, greater_than: -1, less_than: 110}, allow_blank: true
-  AGE_DROPDOWN_OPTIONS = 4..100
+  AGE_DROPDOWN_OPTIONS = (4..20).to_a << "21+"
+  validates :age, presence: false, inclusion: {in: AGE_DROPDOWN_OPTIONS}, allow_blank: true
 
   validates_length_of :parent_email, maximum: 255
 
-  USERNAME_ALLOWED_CHARACTERS = /[a-z0-9\-\_\.]/
-  USERNAME_REGEX = /\A#{USERNAME_ALLOWED_CHARACTERS.source}+\z/i
+  USERNAME_REGEX = /\A#{UserHelpers::USERNAME_ALLOWED_CHARACTERS.source}+\z/i
   validates_length_of :username, within: 5..20, allow_blank: true
   validates_format_of :username, with: USERNAME_REGEX, on: :create, allow_blank: true
   validates_uniqueness_of :username, allow_blank: true, case_sensitive: false
@@ -310,28 +311,6 @@ from (
 SQL
   end
 
-  # determines and returns teacher_prize, teacher_bonus_prize
-  # ** Does not change values on this User object **
-  def check_teacher_prize_eligibility
-    completed_students = 0
-    completed_female_students = 0
-    total_students = self.students.length
-    if total_students >= STUDENTS_COMPLETED_FOR_PRIZE
-      self.students.each do |student|
-        if student.prize_earned && student.valid_prize_teacher.try(:id) == self.id
-          completed_students += 1
-          if student.gender == "f"
-            completed_female_students += 1
-          end
-        end
-      end
-    end
-
-    teacher_prize = completed_students >= STUDENTS_COMPLETED_FOR_PRIZE
-    teacher_bonus_prize = teacher_prize && (completed_female_students >= STUDENTS_FEMALE_FOR_BONUS)
-    return teacher_prize, teacher_bonus_prize
-  end
-
   def trophy_count
     User.connection.select_value(<<SQL)
 select coalesce(sum(trophy_id), 0) as num
@@ -348,15 +327,6 @@ SQL
     self.user_type == TYPE_TEACHER
   end
 
-  # this method will eventually return a per-user value based on an async process of
-  # marking each user in the db after checking their first sign-in IP
-
-  # this method should not be used for displaying or claiming prizes - only used as a quick
-  # check to decide whether or not to hide UI elements from the pages
-  def show_prize_ui?
-    false
-  end
-
   def locale
     read_attribute(:locale).try(:to_sym)
   end
@@ -370,12 +340,6 @@ SQL
 
   def confirmation_required?
     (self.teacher? || self.students.length > 0) && !self.confirmed?
-  end
-
-  # return first teacher unless the first_teacher_id doesn't match (meaning that teacher was later removed)
-  def valid_prize_teacher
-    return self.teachers.first if self.prize_teacher_id.blank? || self.teachers.first.try(:id) == self.prize_teacher_id
-    nil
   end
 
   # There are some shenanigans going on with this age stuff. The
@@ -399,35 +363,18 @@ SQL
 
   def age
     return @age unless birthday
-    ((Date.today - birthday) / 365).to_i
+    age = ((Date.today - birthday) / 365).to_i
+    age = "21+" if age >= 21
+    age
   end
 
   def under_13?
-    age.nil? || age < 13
-  end
-
-  def self.generate_username(name)
-    prefix = name.downcase.gsub(/[^#{USERNAME_ALLOWED_CHARACTERS.source}]+/, ' ')[0..16].squish.gsub(' ', '_')
-
-    prefix = 'coder' if prefix.empty? || prefix == '_'
-
-    prefix = "coder_#{prefix}" if prefix.length < 5
-
-    return prefix unless User.where(username: prefix).exists?
-    
-    similar_users = User.where(["username like ?", prefix + '%'])
-
-    # find the current maximum integer suffix and add 1. Not guaranteed to be the "next" as in not leave holes,
-    # but is guaranteed to be (currently) unique
-    # (there's a unique constraint in the db -- callers should retry to handle race conditions)
-    suffix = similar_users.map(&:username).map{|n| n.gsub(/^#{prefix}/, '')}.map(&:to_i).max + 1
-    return "#{prefix}#{suffix}"
+    age.nil? || age.to_i < 13
   end
 
   def generate_username
-    return unless username.blank?
     return if name.blank?
-    self.username = User.generate_username(name)
+    self.username = UserHelpers.generate_username(User, name)
   end
 
   def short_name

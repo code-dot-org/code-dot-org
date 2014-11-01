@@ -34,7 +34,7 @@ km:
           desc: Bounce (beta)
           Bounce: ដំណាក់កាល 1
         Builder Levels:
-          desc: User-Created Puzzles (beta)
+          desc: ល្បែង​ប្រាជ្ញា​ដែល​បង្កើត​ដោយ​អ្នក​ប្រើ (បេតា)
           Custom: ដំណាក់កាល 1
         Flappy Levels:
           desc: Flappy Bird
@@ -48,6 +48,8 @@ km:
         edit-code:
           desc: កែសម្រួល​កូដ (បេតា)
           MazeEC: ដំណាក់កាល 1
+          Webapp: ដំណាក់កាល 2
+          ArtistEC: ដំណាក់កាល 3
         events:
           desc: Bounce (beta)
           Bounce: ដំណាក់កាល 1
@@ -96,6 +98,8 @@ km:
         Jigsaw: Jigsaw
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
+        Webapp: Webapp
+        ArtistEC: វិចិត្រករ
     trophy:
       name:
         Bronze: សំរឹទ្ធ
@@ -110,7 +114,7 @@ km:
         loop_until: Repeat until block
         loop_while: While block
         loop_for: Counter block
-        function: Functions
+        function: អនុគមន៍
         parameters: Functions with parameters
     level:
       instructions:
@@ -336,6 +340,8 @@ km:
         maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
         maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
         maze_wordsearch_k_20: This is a test! Move me one way, then another to spell the word STORY
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColour" block.'
     video:
       name:
         maze_intro: Maze Intro
@@ -346,7 +352,7 @@ km:
         loop_until: Repeat Until Block
         if: If Block
         if_else: If/else Block
-        function: Functions
+        function: អនុគមន៍
         loop_while: While Block
         loop_for: Counter Block
         parameters: Functions with Parameters
@@ -356,7 +362,7 @@ km:
         Unplug2: ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ
         Unplug3: Graph Paper Programming
         Unplug4: Algorithms
-        Unplug5: Functions
+        Unplug5: អនុគមន៍
         Unplug6: លក្ខខណ្ឌ
         Unplug7: Songwriting
         Unplug8: Abstraction

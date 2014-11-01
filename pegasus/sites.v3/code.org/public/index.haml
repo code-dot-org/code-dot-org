@@ -76,9 +76,9 @@ social:
             =I18n.t :hoc2014_students
             &nbsp;
           .optionright
-            -#%a{:href=>'/learn'}
-            %button.optionbutton#trybutton{onclick: "ga('send','event','button','click',{eventLabel:'code_try', hitCallback: function() { window.location.href = '/learn'; }});"}
-              =I18n.t :hoc2014_try
+            %a#trybutton{:href=>'/learn'}
+              %button.optionbutton
+                =I18n.t :hoc2014_try
             %br/
 
         .option{style: "clear:both"}
@@ -86,9 +86,9 @@ social:
             =I18n.t :hoc2014_teachers
             &nbsp;
           .optionright
-            -#%a{:href=>"http://#{canonical_hostname('hourofcode.com')}/#join", target: "_blank"}
-            %button.optionbutton#hostbutton{onclick: "ga('send','event','button','click',{eventLabel:'code_host', hitCallback: function() { window.location.href = 'http://#{canonical_hostname('hourofcode.com')}/#join'; }});"}
-              =I18n.t :hoc2014_host
+            %a#hostbutton{:href=>"http://#{canonical_hostname('hourofcode.com')}/#join", target: "_blank"}
+              %button.optionbutton
+                =I18n.t :hoc2014_host
             %br/
 
         .option{style: "clear:both"}
@@ -96,9 +96,9 @@ social:
             =I18n.t :hoc2014_everyone
             &nbsp;
           .optionright
-            -#%a{:href=>'/donate'}
-            %button.optionbutton#supportbutton{onclick: "ga('send','event','button','click',{eventLabel:'code_support', hitCallback: function() { window.location.href = '/donate'; }});"}
-              =I18n.t :hoc2014_support
+            %a#supportbutton{:href=>'/donate'}
+              %button.optionbutton
+                =I18n.t :hoc2014_support
             %br/
 
         .whatishoc{style: "clear:both"}
@@ -108,26 +108,6 @@ social:
     -download_filename = (request.site == 'code.org') ? 'Code-5-minute.mov' : 'HoC-video-15mb.mp4'
     #below.mobile-center{:style=>'clear:both; overflow:hidden; padding-top: 0px'}
       = view :share_buttons, facebook:facebook, twitter:twitter, download_url:"http://s3.amazonaws.com/cdo-videos/#{download_filename}"
-
-  #studiobar.feature-codeorg.tablet-feature
-    %h1.mobile-center
-      =I18n.t :studiobar_title
-    #body.mobile-pad-left64
-      - studiobar_items = [ {id: "elementary", url: "http://#{canonical_hostname('studio.code.org')}"}, {id: "hoc", url: "/api/hour/begin/codeorg"}, {id: "flappy", url: "http://#{canonical_hostname('studio.code.org')}/flappy/1"}, {id: "teacher", url: "/educate/k5"}]
-      - studiobar_items.each_with_index do |item, index|
-        - if index < studiobar_items.length-1
-          - other_style = "margin-right: 26px"
-        - else
-          - other_style = ""
-        %a{href: item[:url]}
-          .col-25.outerblock{style: "float:left; #{other_style}"}
-            .innerblock
-              %img{:src=>"/images/logo_tall_#{item[:id]}.jpg", style: "width:100%; height:120px"}
-              .title=I18n.t "studiobar_#{item[:id]}_title"
-              .body=I18n.t "studiobar_#{item[:id]}_body"
-
-  %div{:style=>'clear:both;'}
-  = view :petition
 
   -if locale_ro?
     %br
@@ -152,6 +132,32 @@ social:
       Sei in Italia? Visita per favore 
       %a{:href=>'http://italia.code.org'}
         italia.code.org
+
+  #studiobar.feature-codeorg.tablet-feature
+    %h1.mobile-center
+      =I18n.t :studiobar_title
+    #body.mobile-pad-left64
+      - studiobar_items = [ {id: "elementary", url: "http://#{canonical_hostname('studio.code.org')}"}, {id: "hoc", url: "/api/hour/begin/codeorg"}, {id: "flappy", url: "http://#{canonical_hostname('studio.code.org')}/flappy/1"}, {id: "teacher", url: "/educate/k5"}]
+      - studiobar_items.each_with_index do |item, index|
+        - if index < studiobar_items.length-1
+          - other_style = "margin-right: 26px"
+        - else
+          - other_style = ""
+
+        -# Ensure we properly wrap to a new line when in 2 column mobile mode.  Some translations
+        -# with a longer first item caused layout problems otherwise.
+        - if index % 2 == 0
+          %div.mobile-feature{style: "clear:both"}
+
+        %a{href: item[:url]}
+          .col-25.outerblock{style: "float:left; #{other_style}"}
+            .innerblock
+              %img{:src=>"/images/logo_tall_#{item[:id]}.jpg", style: "width:100%; height:120px"}
+              .title=I18n.t "studiobar_#{item[:id]}_title"
+              .body=I18n.t "studiobar_#{item[:id]}_body"
+
+  %div{:style=>'clear:both;'}
+  = view :petition
 
   #columns.desktop-feature{:style=>'clear:both; overflow:hidden'}
     #column1{:style=>'float:left; width: 33.33%'}
@@ -206,8 +212,9 @@ social:
       /= view :index_twitter
   #gap
 
-  #donor_slider.desktop-feature{:style=>'width: 100%'}
-    = view :donor_slider
+  -if request.site != 'csedweek.org'
+    #donor_slider.desktop-feature{:style=>'width: 100%'}
+      = view :donor_slider
 
 = view 'popup_window.js'
 

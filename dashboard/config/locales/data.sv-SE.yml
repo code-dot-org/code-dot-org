@@ -3,7 +3,7 @@
     script:
       name:
         20-hour:
-          desc: Introduktion till datakunskap för 6-15 åringar
+          desc: 'grundskolekurs: Introduktion till Datavetenskap'
           Unplug1: Steg 1
           Maze: Steg 2
           Unplug2: Steg 3
@@ -25,7 +25,7 @@
           Artist5: Steg 19
           Unplug11: Steg 20
         Hour of Code:
-          desc: Timme med Kod
+          desc: Timmen med Kod
           Maze: Steg 1
         Edit Code:
           desc: Redigera Kod (beta)
@@ -48,6 +48,8 @@
         edit-code:
           desc: Redigera Kod (beta)
           MazeEC: Steg 1
+          Webapp: Steg 2
+          ArtistEC: Steg 3
         events:
           desc: Studsa (beta)
           Bounce: Steg 1
@@ -69,7 +71,7 @@
           WordSearch: Steg 1
     game:
       name:
-        Unplug1: Introduktion till datavetenskap
+        Unplug1: Introduktion till Datavetenskap
         Maze: Labyrinten
         Multi: Multiple Choice Stuffs
         Unplug2: Uträkningstänkande
@@ -79,9 +81,9 @@
         Artist2: Konstnären 2
         Unplug5: Funktioner
         Farmer: Bonden
-        Unplug6: Villkorssatser
+        Unplug6: Villkor
         Artist3: Konstnären 3
-        Unplug7: Sångtextskrivande
+        Unplug7: Sångskrivande
         Farmer2: Bonden 2
         Unplug8: Abstraktion
         Artist4: Konstnären 4
@@ -96,6 +98,8 @@
         Jigsaw: Pussel
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
+        Webapp: Webapp
+        ArtistEC: Konstnären
     trophy:
       name:
         Bronze: Brons
@@ -106,8 +110,8 @@
         sequence: Sekvens
         if: '"Om"-block'
         if_else: '"Om/annars"-block'
-        loop_times: '"Upprepa"-block'
-        loop_until: '"Upprepa tills"-block'
+        loop_times: '"Upprepa"-Block'
+        loop_until: '"Upprepa tills"-Block'
         loop_while: '"Medan"-block'
         loop_for: '"Räknar"-block'
         function: Funktioner
@@ -531,6 +535,9 @@
         maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
         maze_wordsearch_k_20: This is a test! Move me one way, then another to spell
           the word STORY
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
+          it in the new "penColour" block.'
     video:
       name:
         maze_intro: Labyrint Introduktion
@@ -552,7 +559,7 @@
         Unplug3: Kalkyleringsprogrammering
         Unplug4: Algoritmer
         Unplug5: Funktioner
-        Unplug6: Villkorssatser
+        Unplug6: Villkor
         Unplug7: Songwriting
         Unplug8: Abstraktion
         Unplug9: Relay programming
@@ -581,7 +588,7 @@
         C2_bee_conditionals: Bee Conditionals
         C2_playlab_createstory: Play Lab - Create a Story
         C2_graph_paper: Kalkyleringsprogrammering
-        C2_conditionals_with_cards: Villkorssatser
+        C2_conditionals_with_cards: Villkor
         C2_binary_bracelets: Binary Bracelets
         C2_replay_programming: Relä programmering
         C2_paper_airplanes: Paper Airplanes

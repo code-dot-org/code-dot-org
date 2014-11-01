@@ -26,7 +26,7 @@ hi:
           - unplug4
         video: Unplug4
       Unplug5:
-        title: Functions
+        title: कार्य
         desc: |-
           In this lesson, students will make a suncatcher out of string, beads, and a special charm. The students will follow a series of repetitive steps, then be asked to identify certain sets of "skills" that are duplicated several times. Once those skills are defined, they will be called from a main program and the whole beautiful process of creation will be recorded on a single sheet of paper. The final program will be geared toward the entire class, whatever their type of string, beads, and charms. To effectively allow for this, students will need to "abstract out" the details of their specific materials and create vague terms for an individual's supplies.  This use of generic placeholders is a wonderful introduction to variables.
         pdfs:
@@ -94,7 +94,7 @@ hi:
           Students run a relay race, where they dash across the yard to write an algorithm based on a "Graph Paper Programming" image. They can only write one instruction at a time and if there's an error somewhere, they have to erase everything back to that point.
         video: C2_relay_programming
       Conditionals:
-        title: Conditionals
+        title: शर्तें
         desc: 'To learn about conditional statements, students play a card game and create rules like "If I draw a red card, I get a point" and "If I draw a black card, you get a point."'
         video: C2_conditionals_with_cards
       BigEvent:
@@ -141,7 +141,7 @@ hi:
         video: C3_internet
       Crowdsourcing:
         title: Crowdsourcing
-        desc: Student use crowdsourcing, a problem-solving technique common in computer science, to complete a task together as a classroom more efficiently than if a student attempted it alone.
+        desc: Students use crowdsourcing, a problem-solving technique common in computer science, to complete a task together as a classroom more efficiently than if a student attempted it alone.
         video: C3_crowdsourcing
       DigitalCitizenship:
         title: Digital Citizenship

@@ -39,11 +39,6 @@ var helpArea = function(html) { -%>
   <% } -%>
 <% }; -%>
 
-<% var codeArea = function() { -%>
-  <div id="codeTextbox" contenteditable spellcheck=false>
-  </div>
-<% }; %>
-
 <div id="visualizationColumn">
   <div id="visualization">
     <%- data.visualization %>
@@ -74,11 +69,16 @@ var helpArea = function(html) { -%>
   </div>
 </div>
 
-<div id="blockly">
+<% if (data.editCode) { %>
+  <div id="blockly" style="display:none"></div>
+  <div id="codeWorkspace">
+<% } else { %>
+  <div id="blockly">
+<% } %>
   <div id="headers" dir="<%= data.localeDirection %>">
     <div id="toolbox-header" class="blockly-header"><span><%= msg.toolboxHeader() %></span></div>
     <div id="workspace-header" class="blockly-header">
-      <span><%= msg.workspaceHeader()%> </span>
+      <span id="workspace-header-span"><%= msg.workspaceHeader()%> </span>
       <div id="blockCounter">
         <div id="blockUsed" class=<%= data.blockCounterClass %>>
           <%= data.blockUsed %>
@@ -89,8 +89,9 @@ var helpArea = function(html) { -%>
     </div>
     <div id="show-code-header" class="blockly-header"><span><%= msg.showCodeHeader() %></span></div>
   </div>
+  <% if (data.editCode) { %>
+    <div id="codeTextbox" contenteditable spellcheck=false></div>
+  <% } %>
 </div>
 
 <div class="clear"></div>
-
-<% codeArea() %>

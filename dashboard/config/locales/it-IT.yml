@@ -7,7 +7,7 @@
       user:
         name: Nome da visualizzare
         email: Indirizzo di posta elettronica
-        username: Nome utente
+        username: nome utente
         password: password
         password_confirmation: Conferma della password
         current_password: Password attuale
@@ -33,11 +33,11 @@
     placeholder: Scrivi qui il tuo suggerimento
     submit: Aggiungi un suggerimento
   appname: Code.org
-  stage: Lezione
+  stage: fase
   stage_number: Lezione %{number}
   puzzle: Esercizio
-  trophies: Trofei
-  courses: Corsi
+  trophies: trofei
+  courses: corsi
   of: di
   more: DI PIÙ
   less: DI MENO
@@ -80,20 +80,7 @@
       le varie lezioni e gli esercizi</a>, ma devi iscriverti per salvare i tuoi progressi.
       <1/>ATTENZIONE: Se sei italiano iscriviti attraverso <a href="http://programmailfuturo.it">il
       sito italiano di supporto</a>.'
-    prizes_message: 'Gli studenti degli Stati Uniti che guadagnano tutti i %{num_trophies}
-      trofei possono selezionare una varietà di premi tra cui: spazio gratuito su
-      Dropbox, crediti Skype e giochi scaricabili da Electronic Arts.'
     teacher_educator_guide: Vedi la guida per l'insegnante
-    teacher_prize_header: Vinci $1,000 in buoni di <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
-      (entro il 15 Giugno 2014, fino a esaurimento scorte)
-    teacher_prize_message: 'In collaborazione con <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>,
-      Code.org offrirà fino a $1.000 in finanziamenti per la classe ad insegnanti
-      di scuola pubblica degli Stati Uniti che portano almeno 15 studenti a terminare
-      il Corso Introduttivo di informatica per scuole elementari e medie inferiori
-      (entro il 15 giugno 2014, fino ad esaurimento scorte).  <a href="http://code.org/educate/20hr">
-      Vedi la guida per gli insegnanti</a>.  (Limite: 1.000 $ per ogni insegnante.  <a
-      target="_blank" href="http://help.donorschoose.org/app/answers/detail/a_id/454/kw/code.org">
-      Vedi le FAQ per ulteriori condizioni</a>).'
     teacher_pitch: Iscrizione dell'insegnante a Code.org
     teacher_title: Iscrizione dell'insegnante
     student_pitch: Iscrizione dello studente a Code.org
@@ -104,7 +91,8 @@
     gender: Sesso (facoltativo)
     birthday: Data di nascita (facoltativo)
     age: Età
-    submit: Iscriviti
+    user_type: Are you a student or teacher?
+    submit: Registrati
     teacher: Sei un insegnante?
     valid_username: Disponibile!
     invalid_username: Il Nome utente deve essere di almeno 5 caratteri
@@ -125,7 +113,7 @@
   signin_form:
     title: Sei già iscritto con un account? Accedi
     login: Indirizzo di posta elettronica o nome utente
-    password: Password
+    password: password
     remember: Ricorda le mie credenziali di accesso
     submit: Accedi
   signin:
@@ -194,7 +182,8 @@
     error_us_only: L'offerta del premio vale solo per gli utenti degli Stati Uniti.
     error_not_earned: Non hai ancora ottenuto questo premio.
     error_already_redeemed: Il tuo premio è stato già richiesto.
-    no_prizes_available: Siamo spiacenti, ma attualmente non abbiamo premi disponibili.
+    no_prizes_available: Siamo spiacenti, ma non abbiamo attualmente nessun premi
+      disponibili.
     teacher_info_required: 'I premi per l''insegnante richiedono nome ed indirizzo
       della scuola:'
     teacher_email_required: 'I premi per l''insegnante richiedono un indirizzo di
@@ -291,18 +280,18 @@
       prizes: Premi
       logout: Esci
       signin: Accedi
-      signup: Iscriviti
+      signup: Registrati
       already_registered: Sei già iscritto?
     popup:
       progress: I tuoi progressi
       lines: 'Totale delle linee di codice:  %{lines}'
-      close: CHIUDI
+      close: CHIUDERE
       mastery: Concetti
-      puzzle_map: Lezioni
+      puzzle_map: Fasi
       prizes: Ottieni tutti i %{total_trophies} trofei e vinci premi!
       prize_earned: Hai ottenuto tutti i %{total_trophies} trofei. Hai vinto il premio!
       prize_us_only: "(Solo per gli studenti degli Stati Uniti)"
-      prizes_link: più informazioni
+      prizes_link: Più informazioni
   teacher:
     title:
       one: 'Il tuo insegnante:'
@@ -322,11 +311,11 @@
       not_tried: Non ancora provato
       activity: Indica le attività degli studenti nelle ultime %{hours} %{plural}
       no_section: Non hai creato alcuna classe
-      trophies: Trofei
+      trophies: trofei
     students:
       name: Nome
-      username: Nome utente
-      password: Password
+      username: nome utente
+      password: password
       manage: Gestisci i tuoi studenti
       dashboard: Vai al Cruscotto di controllo dell'insegnante
       add: Aggiungi i tuoi studenti
@@ -351,7 +340,7 @@
       manage: Gestisci le classi
       section: Classe
       students: Studenti
-      section_code: codice-classe
+      section_code: Codice Classe
       add_section_code: Aggiungere il codice-classe degli studenti
       secret: Tipo di password
       grade: Livello
@@ -401,17 +390,15 @@
     teacher_student_count: Hai %{count} studenti.
     teacher_averages: In media i tuoi studenti hanno guadagnato %{trophy_average}
       trofei su %{trophy_max} in "Padronanza dei concetti".
-    teacher_print_certificates: Stampa il certificato per gli studenti che completano
+    teacher_print_certificates: Stampa i certificati per gli studenti che completano
       questo corso
     teacher_read_blog: Leggi notizie e aggiornamenti relativi al nostro materiale
-      didattico su <a href="http://programmailfuturo.it">programmailfuturo.it</a>
+      didattico sul nostro Blog dell'Insegnante
     classroom: La tua classe
     student_progress: I tuoi progressi di apprendimento
     student_stats: Hai guadagnato %{trophy_count} trofei su %{trophy_max} in "Padronanza
       dei concetti".
     student_left_off: 'Eri arrivato qua:'
-    student_finished_prize: Hai completato tutti i corsi, richiedi il tuo %{prize_link}
-      e scegli un'altra classe %{online_link} o una %{local_school_link}
     student_finished: Hai completato tutti i corsi, scegli un'altra classe %{online_link}
       o una %{local_school_link}
     local_school: scuola locale
@@ -422,12 +409,12 @@
     tryfirst: 'Oppure, puoi prima provarlo e successivamente iscriverti:'
     trynow: Prova adesso
     add_hint_help: Per favore aiutaci ad aggiungere suggerimenti intelligenti ai corsi
-      di Code.org
-    20hour_overview: Questo corso in 20 lezioni introduce i concetti fondamentali
-      dell'informatica e della programmazione. Il corso è progettato per l'uso nelle
-      scuole elementari e medie inferiori, ma è divertente per imparare a qualunque
+      di Code.org (per il momento possibile solo in inglese)
+    20hour_overview: Questo corso in 20 lezioni introduce l'informatica di base e
+      i concetti della programmazione. Il corso è progettato per l'uso nella scuola
+      elementare e media inferiore, ma è divertente per imparare l'informatica a qualunque
       età.
-    test_videos_help: Prova il nostro nuovo videoregistratore nella tua scuola
+    test_videos_help: Prova il nostro nuovo visualizzatore di video nella tua scuola
     try_beta_courses: Novità! Prova i nostri corsi specifici per studenti delle scuole
       elementari (in versione provvisoria)
     use_as_teacher: Guarda questo sito come insegnante
@@ -435,10 +422,16 @@
     heading_apps: "<h2>Divertimento per</h2><h1>tutti</h1>"
     heading_legacy: "<h2>Il nostro Corso Introduttivo per </h2><h1>utenti di tutte
       le età</h1>"
+    gallery:
+      your_turtle: I miei lavori artistici
+      your_studio: Le mie applicazioni
   gender:
     male: Maschile
     female: Femminile
     none: Preferisco non rispondere
+  user_type:
+    student: studente
+    teacher: Teacher
   footer:
     help_from_html: Gli ingegneri di Google, Microsoft, Facebook e Twitter hanno contribuito
       a creare questo corso.
@@ -452,13 +445,6 @@
     tos: Termini di servizio
     privacy: Informativa sulla privacy
     secure: Versione sicura
-  prize_mail:
-    prize_earned:
-      subject: Richiedi il tuo premio a Code.org!
-    teacher_prize_earned:
-      subject: Congratulazioni da Code.org!
-    teacher_bonus_prize_earned:
-      subject: Richiedi il tuo buono-premio a Code.org!
   reference_area:
     title: Hai bisogno di aiuto?
     subtitle: Guarda questi video e suggerimenti
@@ -524,23 +510,29 @@
       unused: LIvelli non usati
   upsell:
     hoc:
-      title: L'Ora del Codice
+      title: Ora di programmazione
       body: Impara i concetti base dell'informatica. Milioni di persone l'hanno già
         fatto.
     flappy:
-      title: Codice di "Flappy"
-      body: Vuoi creare il tuo gioco in meno di 10 minuti? Prova il corso sul Codice
-        di "Flappy"!
+      title: Codice di Flappy
+      body: Vuoi creare il tuo gioco in meno di 10 minuti? Prova il nostro corso sul
+        Codice di "Flappy"!
     20hour:
       title: Corso Introduttivo
       body: Prova il nostro corso introduttivo di informatica in 20 lezioni.
   gallery:
     students_drew_these_with_code: Gli studenti li hanno disegnati con dei programmi!
+    students_made_these_with_code: Gli studenti l'hanno creato scrivendo del codice!
     picture_count: Nei <b>%{days}</b> giorni passati, gli studenti hanno realizzato
       <b>%{count}</b> disegni scrivendo da soli i programmi per disegnarli. Clicca
       sulle immagini per vedere ogni programma in azione.
+    activity_count: Negli ultimi <b>%{days}</b> giorni,  gli studenti hanno realizzato
+      <b>%{count}</b> applicazioni e immagini scrivendo i loro programmi. Clicca sulle
+      immagini per vedere ogni programma in azione.
     want_to_make_your_own: Vuoi farne uno tuo?
     more: Di più &rarr;
+    caption_by_name_age: da %{name}, età %{age}
+    caption_time_ago: "%{time_ago} fa"
   landing:
     prerelease: Questo corso è in <span class='betatext'>versione provvisoria</span>.  Significa
       che non è la versione finale ed è soggetto a revisioni man mano che arriveranno
@@ -571,15 +563,15 @@
         20-hour:
           title: Corso introduttivo di informatica per scuole elementari e medie inferiori
             (in 20 lezioni)
-          description: Questo corso in 20 lezioni introduce i concetti fondamentali
-            dell'informatica e della programmazione. Il corso è progettato per l'uso
-            nelle scuole elementari e medie inferiori, ma è divertente per imparare
+          description: Questo corso in 20 lezioni introduce l'informatica di base
+            e i concetti della programmazione. Il corso è progettato per l'uso nella
+            scuola elementare e media inferiore, ma è divertente per imparare l'informatica
             a qualunque età.
         Hour of Code:
-          title: L'Ora del Codice
+          title: Ora di programmazione
           description: ''
         edit-code:
-          title: Modifica il Codice
+          title: Modifica il codice
           description: ''
         events:
           title: Eventi
@@ -588,9 +580,9 @@
           title: Costruttore
           description: ''
         flappy:
-          title: Codice di Flappy
-          description: Vuoi creare il tuo gioco in meno di 10 minuti? Prova il nostro
-            corso sul Codice di "Flappy"!
+          title: Codice "Flappy"
+          description: Vuoi creare il tuo gioco in meno di 10 minuti? Prova il corso
+            sul Codice di "Flappy"!
         jigsaw:
           title: Puzzle
           description: ''

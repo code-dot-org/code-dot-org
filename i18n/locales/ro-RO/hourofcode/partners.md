@@ -1,10 +1,10 @@
 * * *
 
-Titlu: parteneri
+Titlu: Parteneri
 
 * * *
 
-# Sponsori princpali si susținători
+# Sponsori majori si susținători Corporate
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 

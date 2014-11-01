@@ -3,7 +3,7 @@
     script:
       name:
         20-hour:
-          desc: "유치원-중2(K-8) 학생들을 위한, 컴퓨터과학(Computer Science, 정보과학)"
+          desc: K-8 학생들에 대한 컴퓨터과학 기초 코스
           Unplug1: 1 단계
           Maze: 2 단계
           Unplug2: 3 단계
@@ -48,6 +48,8 @@
         edit-code:
           desc: "코드 수정(beta)"
           MazeEC: 1 단계
+          Webapp: 2 단계
+          ArtistEC: 3 단계
         events:
           desc: Bounce (beta)
           Bounce: 1 단계
@@ -69,17 +71,17 @@
           WordSearch: 1 단계
     game:
       name:
-        Unplug1: "컴퓨터과학(정보과학) 소개"
+        Unplug1: "컴퓨터과학(Computer Science, 정보과학) 소개"
         Maze: "미로 퍼즐"
         Multi: "객관식 선택 문제"
-        Unplug2: "컴퓨터과학(정보과학)적 사고"
-        Unplug3: "모눈 종이 프로그래밍"
+        Unplug2: "컴퓨터과학적(정보과학적)사고"
+        Unplug3: "모눈종이 프로그래밍"
         Artist: "예술가 퍼즐"
         Unplug4: "알고리즘"
         Artist2: "예술가 퍼즐 2"
         Unplug5: "함수"
         Farmer: "농부 퍼즐"
-        Unplug6: "조건/선택"
+        Unplug6: "조건"
         Artist3: "예술가 퍼즐 3"
         Unplug7: "노래 만들기"
         Farmer2: "농부 퍼즐 2"
@@ -93,9 +95,11 @@
         MazeEC: "미로 퍼즐"
         Bounce: "바운스"
         Flappy: "플래피 버드"
-        Jigsaw: "직소퍼즐"
+        Jigsaw: "퍼즐 맞추기"
         MazeStep: "미로 단계별 모드"
         Wordsearch: "단어 탐색"
+        Webapp: "웹 앱"
+        ArtistEC: The Artist
     trophy:
       name:
         Bronze: "동"
@@ -103,8 +107,8 @@
         Gold: "금"
     concept:
       description:
-        sequence: "순차"
-        if: "조건"
+        sequence: "순서"
+        if: "조건 실행"
         if_else: "선택"
         loop_times: "반복(횟수)"
         loop_until: "반복(~할 때까지)"
@@ -336,49 +340,49 @@
         mazestep_3: "미로 퍼즐의 단계별 설명입력"
         mazestep_4: "미로 퍼즐의 단계별 설명입력"
         mazestep_5: "미로 퍼즐의 단계별 설명입력"
-        studio_c2_1: 강아지가 "hello world"라고 말하도록 할 수 있을까요?
-        studio_c2_2: "강아지가 어떤 말을 한 후에 고양이가 어떤 말을 하도로 할 수 있을까요?"
-        studio_c2_3: "강아지가 고양이에게 움지이도록 할 수 있을까요?"
+        studio_c2_1: 강아지가 "hello world"라고 말하도록 만들어 보세요.
+        studio_c2_2: "강아지가 어떤 말을 하고 난 후에 고양이가 어떤 말을 하게 해보세요."
+        studio_c2_3: "강아지가 고양이에게 움직이도록 할 수 있을까요?"
         studio_c2_4: 강아지가 고양이에게 닿으면 고양이가 "hello"라고 말하도록 할 수 있을까요?
         studio_c2_5: 문어를 클릭하면 "hello"라고 말하도록 할 수 있을까요?
         studio_c2_6: "위/아래/왼쪽/오른쪽 방향키를 사용해 펭귄이 이리저리 목표지점들로 움직이도록 할 수 있을까요?"
         studio_c2_7: '"계속 반복하기" 블럭을 사용하면 코드를 무한히 반복하도록 할 수 있습니다. 공룡이 위 아래로 왔다 갔다를
           반복하도록 할 수 있을까요?'
         studio_c2_8: 펭귄이 "Ouch!"라고 말하고, 공룡에 닿으면 "충돌 소리"를 출력하도록 한 후 방향키들을 움직여보세요.
-        studio_c2_9: "펭귄이 문어에 닿으면 점수를 얻을 수 있게 만든 후 방향키를 움직여 보세요."
-        studio_c2_10: "화면 배경과 펭귄의 속도를 바꾼 후 방향키를 움직여 확인해 보세요."
-        studio_c2_11: "자신만의 스토리를 만들어 친구들이 스마트폰에서 살펴볼 수 있도록 해보세요."
-        studio_c3_story_1: 강아지가 "hello world"를 말하도록 해보세요.
-        studio_c3_story_2: "강아지가 어떤 말을 한 후 고양이가 어떤 말을 하도록 해보세요."
+        studio_c2_9: "펭귄이 문어에 닿았을 때 점수가 올라가도록 만든 후 방향키를 움직여 점수가 올라가는지 살펴보세요."
+        studio_c2_10: "화면의 배경과 펭귄의 스피드를 바꿀 수 있을까요? 점수를 득점할 때까지 방향키들을 움직여 보세요."
+        studio_c2_11: "자신만의 이야기를 구들이 스마트폰에서 살펴볼 수 있도록 만들어보세요."
+        studio_c3_story_1: 강아지가 "hello world"라고 말하도록 만들어 보세요.
+        studio_c3_story_2: "강아지가 어떤 말을 하고 난 후에 고양이가 어떤 말을 하게 해보세요."
         studio_c3_story_3: "강아지가 고양이에게 움직이도록 할 수 있을까요?"
         studio_c3_story_4: 강아지가 고양이에게 닿으면 고양이가 "hello"라고 말하도록 할 수 있을까요?
-        studio_c3_story_5: "문어가 행복한 표정이 되도록 해보세요."
-        studio_c3_story_6: "자신만의 이야기를 구들이 스마트폰에서 살펴볼 수 있도록 만들어보세요."
+        studio_c3_story_5: "문어를 행복한 표정으로 만들어보세요."
+        studio_c3_story_6: "자신만의 스토리를 만들어 친구들이 스마트폰에서 살펴볼 수 있도록 해보세요."
         studio_c3_game_1: 문어를 클릭하면 "hello"라고 말하도록 할 수 있을까요?
         studio_c3_game_2: "위/아래/왼쪽/오른쪽 방향키를 사용해 펭귄이 이리저리 목표지점들로 움직이도록 할 수 있을까요?"
         studio_c3_game_3: '"계속 반복하기" 블럭을 사용하면 코드를 무한히 반복하도록 할 수 있습니다. 공룡이 위 아래로 왔다
           갔다를 반복하도록 할 수 있을까요?'
         studio_c3_game_4: 펭귄이 "Ouch!"라고 말하고, 공룡에 닿으면 "충돌 소리"를 출력하도록 한 후 방향키들을 움직여보세요.
-        studio_c3_game_5: "펭귄이 문어에 닿았을 때 점수가 올라가도록 만든 후 방향키를 움직여 점수가 올라가는지 살펴보세요."
-        studio_c3_game_6: "화면의 배경과 펭귄의 스피드를 바꿀 수 있을까요? 점수를 득점할 때까지 방향키들을 움직여 보세요."
+        studio_c3_game_5: "펭귄이 문어에 닿으면 점수가 올라가게 만든 후 방향키를 눌러 움직여 보세요."
+        studio_c3_game_6: "화면의 배경과 펭귄의 이동 스피드를 바꾼 후 방향키를 눌러 움직여 보세요."
         studio_c3_game_7: "자신만의 게임을 만든 후 친구들이 스마트폰에 해 볼 수 있도록 공유해 보세요."
-        studio_playlab_1: 강아지가 "hello world"라고 말하도록 만들어 보세요.
-        studio_playlab_2: "강아지가 어떤 말을 하고 난 후에 고양이가 어떤 말을 하게 해보세요."
+        studio_playlab_1: 강아지가 "hello world"라고 말하도록 할 수 있을까요?
+        studio_playlab_2: "강아지가 어떤 말을 한 후에 고양이가 어떤 말을 하도로 할 수 있을까요?"
         studio_playlab_3: "강아지가 고양이에게 움직이도록 할 수 있을까요?"
         studio_playlab_4: 강아지가 고양이에게 닿으면 고양이가 "hello"라고 말하도록 할 수 있을까요?
         studio_playlab_5: 문어를 클릭하면 "hello"라고 말하도록 할 수 있을까요?
         studio_playlab_6: "위/아래/왼쪽/오른쪽 방향키를 사용해 펭귄이 이리저리 목표지점들로 움직이도록 할 수 있을까요?"
         studio_playlab_7: '"계속 반복하기" 블럭을 사용하면 코드를 무한히 반복하도록 할 수 있습니다. 공룡이 위 아래로 왔다
           갔다를 반복하도록 할 수 있을까요?'
-        studio_playlab_8: "펭귄이 문어에 닿으면 점수가 올라가게 만든 후 방향키를 눌러 움직여 보세요."
-        studio_playlab_9: "화면의 배경과 펭귄의 이동 스피드를 바꾼 후 방향키를 눌러 움직여 보세요."
+        studio_playlab_8: "펭귄이 문어에 닿았을 때 점수가 올라가도록 만든 후 방향키를 움직여 점수가 올라가는지 살펴보세요."
+        studio_playlab_9: "화면의 배경과 펭귄의 스피드를 바꿀 수 있을까요? 점수를 득점할 때까지 방향키들을 움직여 보세요."
         studio_playlab_10: "자신만의 게임을 만든 후 친구들이 스마트폰에 해 볼 수 있도록 공유해 보세요."
         studio_full_sandbox: "자신만의 게임을 만든 후 친구들이 스마트폰에 해 볼 수 있도록 공유해 보세요."
-        studio_k1_1: 강아지가 "hello world"를 말하도록 해보세요.
-        studio_k1_2: "강아지가 어떤 말을 한 후 고양이가 어떤 말을 하도록 해보세요."
-        studio_k1_3: "강아지가 고양이에게 움직이도록 할 수 있을까요?"
+        studio_k1_1: 강아지가 "hello world"라고 말하도록 할 수 있을까요?
+        studio_k1_2: "강아지가 어떤 말을 한 후에 고양이가 어떤 말을 하도로 할 수 있을까요?"
+        studio_k1_3: "강아지가 고양이에게 움지이도록 할 수 있을까요?"
         studio_k1_4: 강아지를 고양이에게 움직여 닿았을 때, 고양이가 "hello"라고 말하도록 해보세요.
-        studio_k1_5: "문어를 행복한 표정으로 만들어보세요."
+        studio_k1_5: "문어가 행복한 표정이 되도록 해보세요."
         studio_k1_6: "자신만의 이야기를 만들어보세요! 고양이와 강아지가 이리저리 돌아다니면서 말을 하게 해보세요."
         maze_wordsearch_k_1: '"오른쪽" 으로 이동시켜주세요.'
         maze_wordsearch_k_2: '"아래쪽"으로 이동시켜주세요.'
@@ -390,6 +394,9 @@
         maze_wordsearch_k_15: 어떤 방향으로 움직인 후에 "위"로 이동시켜주세요.
         maze_wordsearch_k_16: 어떤 방향으로 움직인 후에 "아래"로 이동시켜주세요.
         maze_wordsearch_k_20: 테스트입니다! 어떤 방향으로 움직인 후에 "스토리"로 이동시켜주세요.
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
+          it in the new "penColour" block.'
     video:
       name:
         maze_intro: "미로 퍼즐 소개"
@@ -407,11 +414,11 @@
         hoc_wrapup: Hour of Code 마무리
         20_wrapup: 20-Hour 마무리
         Unplug1: "컴퓨터과학(CS, 정보과학)이란?"
-        Unplug2: "컴퓨터과학(정보과학)적 사고"
-        Unplug3: "모눈 종이 프로그래밍"
+        Unplug2: "컴퓨터과학적(정보과학적)사고"
+        Unplug3: "모눈종이 프로그래밍"
         Unplug4: "알고리즘"
         Unplug5: "함수"
-        Unplug6: "조건/선택"
+        Unplug6: "조건"
         Unplug7: "노래 만들기"
         Unplug8: "추상화"
         Unplug9: "릴레이 프로그래밍"
@@ -419,15 +426,15 @@
         Unplug11: "마무리"
         C1_happy_maps_unplugged: "즐거운 맵"
         C1_moveitmoveit_unplugged: "빨리 빨리 움직이자!"
-        C1_bigevent_unplugged: "빅 이벤트"
-        C1_getting_loop: "반복적으로 하기"
+        C1_bigevent_unplugged: "큰 이벤트"
+        C1_getting_loop: "반복시키기"
         C1_pair_programming: "페어 프로그래밍"
         C1_maze_intro_sequencing: "미로 탐색 소개"
         C1_maze_debugging: "미로 퍼즐 디버깅"
         C1_bee_level_intro: "꿀벌 퍼즐 소개"
         C1_artist_intro: "예술가 퍼즐 소개"
         C1_spelling_bee_intro: "말하는 꿀벌 소개"
-        C1_zuck_repeat_loop: "미로 퍼즐 반복"
+        C1_zuck_repeat_loop: "미로 반복"
         C1_bee_loops: "꿀벌 반복"
         C1_maze_loops: "미로 퍼즐 반복"
         C1_playlab_storytelling: Play Lab - 스토리 만들기
@@ -436,11 +443,11 @@
         C2_maze_intro: "미로 퍼즐 소개"
         C2_artist_intro: "예술가 퍼즐 소개"
         C2_zuck_repeat_loop: "미로 퍼즐 반복"
-        C2_artist_loops: "예술가 반복"
+        C2_artist_loops: "아티스트 반복"
         C2_bee_conditionals: "꿀벌 조건선택"
         C2_playlab_createstory: Play Lab - 스토리 만들기
-        C2_graph_paper: "모눈 종이 프로그래밍"
-        C2_conditionals_with_cards: "조건/선택"
+        C2_graph_paper: "모눈종이 프로그래밍"
+        C2_conditionals_with_cards: "조건"
         C2_binary_bracelets: 2진 팔찌
         C2_replay_programming: "릴레이 프로그래밍"
         C2_paper_airplanes: "종이 비행기"
@@ -449,15 +456,15 @@
         C3_artist_functions: "예술가 함수"
         C3_bee_functions: "꿀벌 함수"
         C3_bee_conditionals: "꿀벌 조건선택"
-        C3_maze_conditionals: "미로 퍼즐 조건 선택"
+        C3_maze_conditionals: "미로 퍼즐 조건선택"
         C3_artist_nested_loops: "중첩 반복"
         C3_farmer_while: "~인 동안 반복"
         C3_bee_nested_loops: "중첩 반복"
         C3_bee_debugging: "꿀벌 디버깅"
         C3_bounce: "바운스"
         C3_playlab_create_game: "플래이 랩 - 게임 만들기"
-        C3_computational_thinking: "컴퓨터과학(정보과학)적 사고"
-        C3_dice_race: "주사위 경주"
+        C3_computational_thinking: "컴퓨터과학적(정보과학적)사고"
+        C3_dice_race: "주사위 레이스"
         C3_internet: "인터넷"
         C3_crowdsourcing: "클라우드소싱"
         C3_functional_suncatchers: "기능성 색유리"

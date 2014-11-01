@@ -48,6 +48,8 @@ ca:
         edit-code:
           desc: Edit Code (beta)
           MazeEC: Etapa 1
+          Webapp: Etapa 2
+          ArtistEC: Etapa 3
         events:
           desc: Bounce (beta)
           Bounce: Etapa 1
@@ -90,12 +92,14 @@ ca:
         Unplug10: Internet
         Artist5: "L'artista 5"
         Unplug11: Recapitulació
-        MazeEC: El laberint
+        MazeEC: El Laberint
         Bounce: Bounce
         Flappy: Flappy Bird
         Jigsaw: Jigsaw
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
+        Webapp: Webapp
+        ArtistEC: "L'artista"
     trophy:
       name:
         Bronze: Bronze
@@ -106,12 +110,12 @@ ca:
         sequence: Seqüència
         if: Bloc Si
         if_else: Bloc Si-Sino
-        loop_times: Bloc repiteix vegades
-        loop_until: Bloc repeteix fins
-        loop_while: Bloc mentres
-        loop_for: Bloc for
+        loop_times: Bloc Repetir Vegades
+        loop_until: Repetir Bloc Fins
+        loop_while: Bloc Mentre
+        loop_for: Bloc Comptador
         function: Funcions
-        parameters: Funcions amb paràmetres
+        parameters: Funcions amb Paràmetres
     level:
       instructions:
         maze_2_2: 'Can you help me to catch the naughty pig? Stack a couple of "move forward" blocks together and press "Run" to help me get there. '
@@ -226,7 +230,7 @@ ca:
         maze_karel_debug_function_1: "Que tindries que canviar d'aquest programa per ajudar-me a llevar totes les piles?"
         maze_karel_debug_function_2: Pots depurar el programa per mi per a que pugui deixar el meu camp plà?
         maze_karel_debug_function_3: 'Edita aquest programa per a que pugui llevar totes les piles del meu camp. '
-        turtle_5_1: "Intenta executar aquest programa, i fer canvis per veure què passa. Pots averiguar com funciona? (O elimina'l i reemplaça'l amb algo totalment diferent)"
+        turtle_5_1: "Intenta executar aquest programa, i fer canvis per veure què passa. Pots averiguar com funciona? (O borra'l i reemplaça'l amb algo totalment diferent)"
         turtle_5_2: "Intenta executar aquest programa, i fer canvis per veure què passa. Pots averiguar com funciona? (O borra'l i reemplaça'l amb algo totalment diferent)"
         turtle_5_3: "Intenta executar aquest programa, i fer canvis per veure què passa. Pots averiguar com funciona? (O borra'l i reemplaça'l amb algo totalment diferent)"
         turtle_5_4: "Intenta executar aquest programa, i fer canvis per veure què passa. Pots averiguar com funciona? (O borra'l i reemplaça'l amb algo totalment diferent)"
@@ -342,6 +346,8 @@ ca:
         maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
         maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
         maze_wordsearch_k_20: This is a test! Move me one way, then another to spell the word STORY
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColour" block.'
     video:
       name:
         maze_intro: Introducció al Laberint

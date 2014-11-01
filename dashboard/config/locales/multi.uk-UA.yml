@@ -74,10 +74,10 @@
         "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png"
         "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png"
       2-3 maze multi 1:
-        Maze Multiple Choice One: "Лабіринт - вибір 1"
+        Maze Multiple Choice One: "Лабіринт множинного вибору 1"
         "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500": "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png,
           500"
-        Choose the best answer.: "Оберіть найкращу відповідь."
+        Choose the best answer.: "Виберіть найкращу відповідь."
         Which blocks work?: "Які блоки працюють?"
         "/script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png": "/script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png"
         "/script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png": "/script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png"
@@ -130,12 +130,11 @@
       2-3 Conditionals Multi 1:
         Multiple Choice: "Множинний вибір"
         "/script_assets/2-3_images/unplugged/conditionals_1_q.png": "/script_assets/2-3_images/unplugged/conditionals_1_q.png"
-        These are your team's cards - according to the rules of the game, which set is scored correctly?: These
-          are your team's cards - according to the rules of the game, which set is
-          scored correctly?
+        According to the rules of the game, which set of cards is scored correctly?: "Відповідно
+          до правил гри, для якого набору карт правильно розраховано очки?"
+        "/script_assets/2-3_images/unplugged/conditionals_1_a1.png": "/script_assets/2-3_images/unplugged/conditionals_1_a1.png"
         "/script_assets/2-3_images/unplugged/conditionals_1_a2.png": "/script_assets/2-3_images/unplugged/conditionals_1_a2.png"
         "/script_assets/2-3_images/unplugged/conditionals_1_a3.png": "/script_assets/2-3_images/unplugged/conditionals_1_a3.png"
-        "/script_assets/2-3_images/unplugged/conditionals_1_a1.png": "/script_assets/2-3_images/unplugged/conditionals_1_a1.png"
         "/script_assets/2-3_images/unplugged/conditionals_1_a4.png": "/script_assets/2-3_images/unplugged/conditionals_1_a4.png"
       2-3 Getting Loopy Multi 1:
         Multiple Choice: "Множинний вибір"
@@ -219,7 +218,7 @@
         1: ": Фіолетова квітка може мати 3, 2 або 1 нектар, але ми не знаємо скільки
           саме. Які блоки правильно перевірять та зберуть весь нектар з фіолетової
           квітки?"
-        Choose the best blocks.: "Оберіть найкращі блоки."
+        Choose the best blocks.: "Виберіть найкращі блоки."
         "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png"
         "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png"
         "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png"
@@ -360,7 +359,6 @@
         "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png"
         "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png"
         "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png"
-        "/script_assets/4-5_images/unplugged/suncatchers_2_a4.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a4.png"
       K-1 Artist 1 Multi 1:
         Multiple Choice: "Множинний вибір"
         "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500": "/script_assets/k_1_images/artist_images/rshort_dlong.png,
@@ -528,20 +526,20 @@
         SQUARE: SQUARE (КВАДРАТ)
         SOUTH: SOUTH (ПІВДЕНЬ)
       K-1 multi 4:
-        Driver and Helper: "Виконавець та помічник"
+        Driver and Helper: "Водій та помічник"
         "/script_assets/multis/driver_helper.jpg": "/script_assets/multis/driver_helper.jpg"
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: "Один
-          із цих хлопчиків <b>виконавець</b>. Інший - <b>помічник</b>."
-        Which boy is the <large>helper</large>?: "Який хлопчик є <large>помічником</large>?"
+          із цих хлопчиків <b>водій</b>. Інший - <b>помічник</b>."
+        Which boy is the <large>helper</large>?: "Який хлопчик <large>помічник</large>?"
         "/script_assets/multis/helper.jpg": "/script_assets/multis/helper.jpg"
         "/script_assets/multis/driver.jpg": "/script_assets/multis/driver.jpg"
       K-1 multi 5:
-        Driver and Helper: "Виконавець та помічник"
+        Driver and Helper: "Водій та помічник"
         "/script_assets/multis/driver_helper.jpg": "/script_assets/multis/driver_helper.jpg"
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: "Один
-          із цих хлопчиків <b>виконавець</b>. І один - <b>помічник</b>."
+          із цих хлопчиків <b>водій</b>. Інший - <b>помічник</b>."
         This time, which boy is the <large>driver</large>?: "На цей раз, який хлопчик
-          є <large>виконавцем</large>?"
+          <large>водій</large>?"
         "/script_assets/multis/helper.jpg": "/script_assets/multis/helper.jpg"
         "/script_assets/multis/driver.jpg": "/script_assets/multis/driver.jpg"
       Math to Code 1:
@@ -609,7 +607,7 @@
         "(rectangle (+ 8 2) (- 7 5) solid red)": "(прямокутник (+ 8 2) (- 7 5) суцільний
           червоний)"
       test multi image:
-        Maze Multiple Choice Two: "Лабіринт - вибір 2"
+        Maze Multiple Choice Two: "Лабіринт множинного вибору 2"
         "/script_assets/matches/images/head.jpg,400": "/script_assets/matches/images/head.jpg,400"
         This puzzle is all about selecting the correct flowers.: "Це завдання полягає
           у виборі правильних квітів."
@@ -625,8 +623,8 @@
         "/script_assets/matches/images/a4.jpg": "/script_assets/matches/images/a4.jpg"
       test multi text:
         Presidents: "Президенти"
-        This multiple choice is all about the presidents of the United States.: "Це
-          питання з множинними відповідями про президентів Сполучених Штатів."
+        This multiple choice is all about the presidents of the United States.: "Цей
+          тест з множинними відповідями про президентів Сполучених Штатів."
         Who was the first president of the USA?: "Хто був першим президентом США?"
         Fred Flintstone: "Фред Флінстоун"
         Martha Washington: "Марта Вашингтон"

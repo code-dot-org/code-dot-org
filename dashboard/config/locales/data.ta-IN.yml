@@ -48,6 +48,8 @@
         edit-code:
           desc: Edit Code (beta)
           MazeEC: "நிலை 1"
+          Webapp: "நிலை 2"
+          ArtistEC: "நிலை 3"
         events:
           desc: Bounce (beta)
           Bounce: "நிலை 1"
@@ -96,6 +98,8 @@
         Jigsaw: Jigsaw
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
+        Webapp: Webapp
+        ArtistEC: "கலைஞர்"
     trophy:
       name:
         Bronze: Bronze
@@ -522,6 +526,9 @@
         maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
         maze_wordsearch_k_20: This is a test! Move me one way, then another to spell
           the word STORY
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
+          it in the new "penColour" block.'
     video:
       name:
         maze_intro: Maze Intro

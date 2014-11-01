@@ -50,7 +50,7 @@
           Suzi: Suzi
           The Artist: "Уметник"
           Artist Debugging: Artist Debugging
-          Bounce: Bounce
+          Bounce: "одбиј се"
           'Studio: Create a Story': 'Studio: Create a Story'
           Artist Loops: Artist Loops
           Bee Conditionals: Bee Conditionals
@@ -66,7 +66,7 @@
           'Real-life Algorithms: Paper Planes': 'Real-life Algorithms: Paper Planes'
           Getting Loopy: Getting Loopy
           Relay programming: Relay programming
-          Conditionals: "Условни"
+          Conditionals: "Кондиционали"
           Binary Bracelets: Binary Bracelets
           The Big Event: The Big Event
           Your Digital Footprint: Your Digital Footprint
@@ -101,7 +101,7 @@
           Bee Debugging: Bee Debugging
           Bee Functions: Bee Functions
           Artist Functions with Params: Artist Functions with Params
-          Bounce: Bounce
+          Bounce: "одбиј се"
           Maze Conditionals: Maze Conditionals
           Artist Functions with Parameters: Artist Functions with Parameters
           Computational Thinking: "Компјутерско Размишљање"
@@ -117,7 +117,7 @@
             conditions.  By the end of the course, create your very own interactive
             game or story that you can share with anyone.
           'Studio: Create a Game': 'Studio: Create a Game'
-          Maze: Maze
+          Maze: "Лавиринт"
           Artist: Artist
           'Artist: Functions': 'Artist: Functions'
           'Bee: Functions': 'Bee: Functions'
@@ -140,6 +140,7 @@
           'Bee: Nested Loops2': 'Bee: Nested Loops2'
           'Bee: Debugging2': 'Bee: Debugging2'
           'Artist: Patterns': 'Artist: Patterns'
+          Songwriting: Songwriting
         msm:
           title: Middle School Math
           description: Private work in progress for Middle School Math.

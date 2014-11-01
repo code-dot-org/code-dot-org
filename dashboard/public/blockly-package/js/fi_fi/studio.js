@@ -154,6 +154,7 @@ BlocklyApps.LOCALE = 'en_us';
 BlocklyApps.MIN_WIDTH = 900;
 BlocklyApps.MIN_MOBILE_SHARE_WIDTH = 450;
 BlocklyApps.MIN_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
+var WORKSPACE_PLAYSPACE_GAP = 15;
 
 /**
  * If the user presses backspace, stop propagation - this prevents blockly
@@ -179,6 +180,31 @@ BlocklyApps.toggleRunReset = function(button) {
   reset.style.display = !showRun ? 'inline-block' : 'none';
   reset.disabled = showRun;
 };
+
+/**
+ * Modify the workspace header after a droplet blocks/code toggle
+ */
+function updateHeadersAfterDropletToggle(usingBlocks) {
+  // Update header titles:
+  var showCodeHeader = document.getElementById('show-code-header');
+  var newButtonTitle = usingBlocks ? msg.showCodeHeader() :
+                                     msg.showBlocksHeader();
+  showCodeHeader.firstChild.innerText = newButtonTitle;
+
+  var workspaceHeaderSpan = document.getElementById('workspace-header-span');
+  newButtonTitle = usingBlocks ? msg.workspaceHeader() :
+                                 msg.workspaceHeaderJavaScript();
+  workspaceHeaderSpan.innerText = newButtonTitle;
+
+  var blockCount = document.getElementById('blockCounter');
+  if (blockCount) {
+    blockCount.style.visibility =
+      (usingBlocks && BlocklyApps.enableShowBlockCount) ? 'visible' : 'hidden';
+  }
+
+  // Resize (including headers), so the category header will appear/disappear:
+  BlocklyApps.onResize();
+}
 
 /**
  * Common startup tasks for all apps.
@@ -241,7 +267,12 @@ BlocklyApps.init = function(config) {
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
     // If in level builder editing blocks, make workspace extra tall
-    visualizationColumn.style.height = "2000px";
+    visualizationColumn.style.height = "3000px";
+    // Modify the arrangement of toolbox blocks so categories align left
+    if (config.level.edit_blocks == "toolbox_blocks") {
+      BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 80;
+      config.blockArrangement = { category : { x: 20 } };
+    }
     // Enable param & var editing in levelbuilder, regardless of level setting
     config.level.disableParamEditing = false;
     config.level.disableVariableEditing = false;
@@ -392,12 +423,8 @@ BlocklyApps.init = function(config) {
         mode: 'javascript',
         palette: palette
       });
-      // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon').addEventListener('click', function() {
-        BlocklyApps.editor.toggleBlocks();
-      });
 
-      var startText = '// ' + msg.typeCode() +'\n// ' + msg.typeHint() + '\n';
+      var startText = '// ' + msg.typeHint() + '\n';
       var codeFunctions = config.level.codeFunctions;
       // Insert hint text from level codeFunctions into editCode area
       if (codeFunctions) {
@@ -416,7 +443,12 @@ BlocklyApps.init = function(config) {
   var showCode = document.getElementById('show-code-header');
   if (showCode && BlocklyApps.enableShowCode) {
     dom.addClickTouchEvent(showCode, function() {
-      feedback.showGeneratedCode(BlocklyApps.Dialog);
+      if (BlocklyApps.editCode) {
+        BlocklyApps.editor.toggleBlocks();
+        updateHeadersAfterDropletToggle(BlocklyApps.editor.currentlyUsingBlocks);
+      } else {
+        feedback.showGeneratedCode(BlocklyApps.Dialog);
+      }
     });
   }
 
@@ -491,7 +523,7 @@ BlocklyApps.init = function(config) {
     if (config.level.edit_blocks === 'required_blocks' ||
       config.level.edit_blocks === 'toolbox_blocks') {
       // Don't show when run block for toolbox/required block editing
-      config.insertWhenRun = false;
+      config.forceInsertTopBlock = null;
     }
   }
 
@@ -528,36 +560,26 @@ BlocklyApps.init = function(config) {
     }
   }
 
-  if (config.level.editCode) {
-    // Swap the visibility of the codeText element and the blocklyDiv
-    document.getElementById('codeTextbox').style.display = 'block';
-    div.style.display = 'none';
-  }
-
   // Add the starting block(s).
   var startBlocks = config.level.startBlocks || '';
-  if (config.insertWhenRun) {
-    startBlocks = blockUtils.insertWhenRunBlock(startBlocks);
+  if (config.forceInsertTopBlock) {
+    startBlocks = blockUtils.forceInsertTopBlock(startBlocks, config.forceInsertTopBlock);
   }
   startBlocks = BlocklyApps.arrangeBlockPosition(startBlocks, config.blockArrangement);
   BlocklyApps.loadBlocks(startBlocks);
 
-  var onResize = function() {
-    BlocklyApps.onResize(config.getDisplayWidth());
-  };
-
   // listen for scroll and resize to ensure onResize() is called
   window.addEventListener('scroll', function() {
-    onResize();
+    BlocklyApps.onResize();
     Blockly.fireUiEvent(window, 'resize');
   });
-  window.addEventListener('resize', onResize);
+  window.addEventListener('resize', BlocklyApps.onResize);
 
   // call initial onResize() asynchronously - need 100ms delay to work
   // around relayout which changes height on the left side to the proper
   // value
   window.setTimeout(function() {
-      onResize();
+      BlocklyApps.onResize();
       Blockly.fireUiEvent(window, 'resize');
     },
     100);
@@ -717,56 +739,78 @@ var showInstructions = function(level, autoClose) {
 /**
  *  Resizes the blockly workspace.
  */
-BlocklyApps.onResize = function(gameWidth) {
-  gameWidth = gameWidth || 0;
+BlocklyApps.onResize = function() {
+  var visualizationColumn = document.getElementById('visualizationColumn');
+  var gameWidth = visualizationColumn.getBoundingClientRect().width;
+
   var blocklyDiv = document.getElementById('blockly');
-  var codeTextbox = document.getElementById('codeTextbox');
+  var codeWorkspace = document.getElementById('codeWorkspace');
 
-  // resize either blockly or codetextbox
-  var div = BlocklyApps.editCode ? codeTextbox : blocklyDiv;
+  // resize either blockly or codeWorkspace
+  var div = BlocklyApps.editCode ? codeWorkspace : blocklyDiv;
 
-  var blocklyDivParent = blocklyDiv.parentNode;
-  var parentStyle = window.getComputedStyle ?
-                    window.getComputedStyle(blocklyDivParent) :
-                    blocklyDivParent.currentStyle;  // IE
+  var divParent = div.parentNode;
+  var parentStyle = window.getComputedStyle(divParent);
 
   var parentWidth = parseInt(parentStyle.width, 10);
   var parentHeight = parseInt(parentStyle.height, 10);
 
   var headers = document.getElementById('headers');
-  var headersStyle = window.getComputedStyle ?
-                       window.getComputedStyle(headers) :
-                       headers.currentStyle;  // IE
-  var headersHeight = parseInt(headersStyle.height, 10);
+  var headersHeight = parseInt(window.getComputedStyle(headers).height, 10);
 
-  div.style.top = blocklyDivParent.offsetTop + 'px';
-  div.style.width = (parentWidth - (gameWidth + 15)) + 'px';
+  div.style.top = divParent.offsetTop + 'px';
+  var fullWorkspaceWidth = parentWidth - (gameWidth + WORKSPACE_PLAYSPACE_GAP);
+  div.style.width = fullWorkspaceWidth + 'px';
+
   if (BlocklyApps.isRtl()) {
-    div.style.marginRight = (gameWidth + 15) + 'px';
+    div.style.marginRight = (gameWidth + WORKSPACE_PLAYSPACE_GAP) + 'px';
   }
   else {
-    div.style.marginLeft = (gameWidth + 15) + 'px';
+    div.style.marginLeft = (gameWidth + WORKSPACE_PLAYSPACE_GAP) + 'px';
   }
-  // reduce height by headers height because blockly isn't aware of headers
-  // and will size its svg element to be too tall
-  div.style.height = (parentHeight - headersHeight) + 'px';
+  if (BlocklyApps.editCode) {
+    // Position the inner codeTextbox element below the headers
+    var codeTextbox = document.getElementById('codeTextbox');
+    codeTextbox.style.height = (parentHeight - headersHeight) + 'px';
+    codeTextbox.style.width = fullWorkspaceWidth + 'px';
+    codeTextbox.style.top = headersHeight + 'px';
 
-  BlocklyApps.resizeHeaders();
+    // The outer codeWorkspace element height should match its parent:
+    div.style.height = parentHeight + 'px';
+  } else {
+    // reduce height by headers height because blockly isn't aware of headers
+    // and will size its svg element to be too tall
+    div.style.height = (parentHeight - headersHeight) + 'px';
+  }
+
+  BlocklyApps.resizeHeaders(fullWorkspaceWidth);
 };
 
 // |         toolbox-header           | workspace-header  | show-code-header |
 // |
 // | categoriesWidth |  toolboxWidth  |
 // |                 |         <--------- workspaceWidth ---------->         |
-BlocklyApps.resizeHeaders = function() {
+// |         <---------------- fullWorkspaceWidth ----------------->         |
+BlocklyApps.resizeHeaders = function (fullWorkspaceWidth) {
   var categoriesWidth = 0;
-  var categories = Blockly.Toolbox.HtmlDiv;
+  var categories = BlocklyApps.editCode ?
+                    document.querySelector('.droplet-palette-wrapper') :
+                    Blockly.Toolbox.HtmlDiv;
   if (categories) {
-    categoriesWidth = parseInt(window.getComputedStyle(categories).width, 10);
+    // If in the droplet editor, but not using blocks, keep categoryWidth at 0
+    if (!BlocklyApps.editCode || BlocklyApps.editor.currentlyUsingBlocks) {
+      // set CategoryWidth based on the block toolbox/palette width:
+      categoriesWidth = parseInt(window.getComputedStyle(categories).width, 10);
+    }
   }
 
   var workspaceWidth = Blockly.getWorkspaceWidth();
   var toolboxWidth = Blockly.getToolboxWidth();
+
+  if (BlocklyApps.editCode) {
+    workspaceWidth = fullWorkspaceWidth - categoriesWidth;
+    toolboxWidth = 0;
+  }
 
   var headers = document.getElementById('headers');
   var workspaceHeader = document.getElementById('workspace-header');
@@ -774,7 +818,9 @@ BlocklyApps.resizeHeaders = function() {
   var showCodeHeader = document.getElementById('show-code-header');
 
   var showCodeWidth;
-  if (BlocklyApps.enableShowCode && (workspaceWidth - toolboxWidth > 450)) {
+  var minWorkspaceWidthForShowCode = BlocklyApps.editCode ? 250 : 450;
+  if (BlocklyApps.enableShowCode &&
+      (workspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
     showCodeWidth = parseInt(window.getComputedStyle(showCodeHeader).width, 10);
     showCodeHeader.style.display = "";
   }
@@ -1093,12 +1139,12 @@ exports.domStringToBlock = function(blockDOMString) {
 };
 
 /**
- * Takes a set of start blocks, and returns them with a when run button inserted
- * in front of the first non-function block.  If we already have a when_run block,
- * does nothing.
+ * Takes a set of start blocks, and returns them with a particular top level
+ * block inserted in front of the first non-function block.  If we already have
+ * this block, does nothing.
  */
-exports.insertWhenRunBlock = function (input) {
-  if (input.indexOf('when_run') !== -1) {
+exports.forceInsertTopBlock = function (input, blockType) {
+  if (input.indexOf(blockType) !== -1) {
     return input;
   }
 
@@ -1108,10 +1154,10 @@ exports.insertWhenRunBlock = function (input) {
   // using document.createElement elsewhere is
   var doc = root.parentNode;
 
-  var whenRun = doc.createElement('block');
-  whenRun.setAttribute('type', 'when_run');
-  whenRun.setAttribute('movable', 'false');
-  whenRun.setAttribute('deletable', 'false');
+  var topBlock = doc.createElement('block');
+  topBlock.setAttribute('type', blockType);
+  topBlock.setAttribute('movable', 'false');
+  topBlock.setAttribute('deletable', 'false');
 
   var numChildren = root.childNodes ? root.childNodes.length : 0;
 
@@ -1132,15 +1178,21 @@ exports.insertWhenRunBlock = function (input) {
 
   if (firstBlock !== null) {
     // when run -> next -> firstBlock
-    var next = doc.createElement('next');
+    var next;
+    if (/^functional/.test(blockType)) {
+      next = doc.createElement('functional_input');
+      next.setAttribute('name', 'ARG1');
+    } else {
+      next = doc.createElement('next');
+    }
     next.appendChild(firstBlock);
-    whenRun.appendChild(next);
+    topBlock.appendChild(next);
   }
 
   if (numChildren > 0) {
-    root.insertBefore(whenRun, root.childNodes[0]);
+    root.insertBefore(topBlock, root.childNodes[0]);
   } else {
-    root.appendChild(whenRun);
+    root.appendChild(topBlock);
   }
   return xml.serialize(root);
 };
@@ -1160,7 +1212,22 @@ exports.calcBlockXml = function (type, args) {
     str += arg;
     str += '</functional_input>';
   }
-  str+= '</block>';
+  str += '</block>';
+
+  return str;
+};
+
+exports.mathBlockXml = function (type, inputs, titles) {
+  var str = '<block type="' + type + '" inline="false">';
+  for (var title in titles) {
+    str += '<title name="' + title + '">' + titles[title] + '</title>';
+  }
+
+  for (var input in inputs) {
+    str += '<functional_input name="' + input + '">' + inputs[input] + '</functional_input>';
+  }
+
+  str += '</block>';
 
   return str;
 };
@@ -1185,6 +1252,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installControlsRepeatDropdown(blockly);
   installNumberDropdown(blockly);
   installPickOne(blockly);
+  installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
 };
 
@@ -1279,6 +1347,28 @@ function installPickOne(blockly) {
   };
 
   blockly.JavaScript.pick_one = function () {
+    return '\n';
+  };
+}
+
+// A "Category" block for level editing, for delineating category groups.
+function installCategory(blockly) {
+  blockly.Blocks.category = {
+    // Repeat n times (internal number).
+    init: function() {
+      this.setHSV(322, 0.90, 0.95);
+      this.setInputsInline(true);
+
+      // Not localized as this is only used by level builders
+      this.appendDummyInput()
+        .appendTitle('Category')
+        .appendTitle(new blockly.FieldTextInput('Name'), 'CATEGORY');
+      this.setPreviousStatement(false);
+      this.setNextStatement(false);
+    }
+  };
+
+  blockly.JavaScript.category = function () {
     return '\n';
   };
 }
@@ -5483,16 +5573,57 @@ exports.workspaceCode = function(blockly) {
 };
 
 /**
+ * Generate a native function wrapper for use with the JS interpreter.
+ */
+exports.makeNativeMemberFunction = function (interpreter, nativeFunc, parentObj) {
+  return function() {
+    // Call the native function:
+    var retVal = nativeFunc.apply(parentObj, arguments);
+
+    // Now figure out what to do with the return value...
+
+    if (retVal instanceof Function) {
+      // Don't call createPrimitive() for functions
+      return retVal;
+    } else if (retVal instanceof Object) {
+      var newObj = interpreter.createObject(interpreter.OBJECT);
+      // Limited attempt to marshal back complex return values
+      // Special case: only one-level deep, only handling
+      // primitives and arrays of primitives
+      for (var prop in retVal) {
+        var isFuncOrObj = retVal[prop] instanceof Function ||
+                          retVal[prop] instanceof Object;
+        // replace properties with wrapped properties
+        if (retVal[prop] instanceof Array) {
+          var newArray = interpreter.createObject(interpreter.ARRAY);
+          for (var i = 0; i < retVal[prop].length; i++) {
+            newArray.properties[i] = interpreter.createPrimitive(retVal[prop][i]);
+          }
+          newArray.length = retVal[prop].length;
+          interpreter.setProperty(newObj, prop, newArray);
+        } else if (isFuncOrObj) {
+          // skipping over these - they could be objects that should
+          // be converted into interpreter objects. they could be native
+          // functions that should be converted. Or they could be objects
+          // that are already interpreter objects, which is what we assume
+          // for now:
+          interpreter.setProperty(newObj, prop, retVal[prop]);
+        } else {
+          // wrap as a primitive if it is not a function or object:
+          interpreter.setProperty(newObj, prop, interpreter.createPrimitive(retVal[prop]));
+        }
+      }
+      return newObj;
+    } else {
+      return interpreter.createPrimitive(retVal);
+    }
+  };
+};
+
+/**
  * Initialize a JS interpreter.
  */
 exports.initJSInterpreter = function (interpreter, scope, options) {
-  // helper function used below..
-  function makeNativeMemberFunction(nativeFunc, parentObj) {
-    return function() {
-      return interpreter.createPrimitive(
-                            nativeFunc.apply(parentObj, arguments));
-    };
-  }
   for (var optsObj in options) {
     var func, wrapper;
     // The options object contains objects that will be referenced
@@ -5508,13 +5639,96 @@ exports.initJSInterpreter = function (interpreter, scope, options) {
       if (func instanceof Function) {
         // Populate each of the global objects with native functions
         // NOTE: other properties are not currently passed to the interpreter
-        wrapper = makeNativeMemberFunction(func, options[optsObj]);
+        wrapper = exports.makeNativeMemberFunction(interpreter, func, options[optsObj]);
         interpreter.setProperty(obj,
                                 prop,
                                 interpreter.createNativeFunction(wrapper));
       }
     }
   }
+};
+
+// session is an instance of Ace editSession
+// Usage
+// var lengthArray = aceCalculateCumulativeLength(editor.getSession());
+// Need to call this only if the document is updated after the last call.
+exports.aceCalculateCumulativeLength = function (session) {
+  var cumulativeLength = [];
+  var cnt = session.getLength();
+  var cuml = 0, nlLength = session.getDocument().getNewLineCharacter().length;
+  cumulativeLength.push(cuml);
+  var text = session.getLines(0, cnt);
+  for (var i = 0; i < cnt; i++) {
+    cuml += text[i].length + nlLength;
+    cumulativeLength.push(cuml);
+  }
+  return cumulativeLength;
+};
+
+// Fast binary search implementation
+// Pass the cumulative length array here.
+// Usage
+// var row = aceFindRow(lengthArray, 0, lengthArray.length, 2512);
+// tries to find 2512th character lies in which row.
+function aceFindRow(cumulativeLength, rows, rowe, pos) {
+  if (rows > rowe) {
+    return null;
+  }
+  if (rows + 1 === rowe) {
+    return rows;
+  }
+
+  var mid = Math.floor((rows + rowe) / 2);
+  
+  if (pos < cumulativeLength[mid]) {
+    return aceFindRow(cumulativeLength, rows, mid, pos);
+  } else if(pos > cumulativeLength[mid]) {
+    return aceFindRow(cumulativeLength, mid, rowe, pos);
+  }
+  return mid;
+}
+
+/**
+ * Selects code in an ace editor.
+ */
+function createSelection (selection, cumulativeLength, start, end) {
+  var range = selection.getRange();
+
+  range.start.row = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
+  range.start.col = start - cumulativeLength[range.start.row];
+  range.end.row = aceFindRow(cumulativeLength, 0, cumulativeLength.length, end);
+  range.end.col = end - cumulativeLength[range.end.row];
+
+  selection.setSelectionRange(range);
+}
+
+exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
+                                      userCodeStartOffset, userCodeLength) {
+  var inUserCode = false;
+  if (interpreter.stateStack[0]) {
+    var node = interpreter.stateStack[0].node;
+    // Adjust start/end by Webapp.userCodeStartOffset since the code running
+    // has been expanded vs. what the user sees in the editor window:
+    var start = node.start - userCodeStartOffset;
+    var end = node.end - userCodeStartOffset;
+
+    inUserCode = (start > 0) && (start < userCodeLength);
+
+    // If we are showing Javascript code in the ace editor, highlight
+    // the code being executed in each step:
+    if (!editor.currentlyUsingBlocks) {
+      // Only show selection if the node being executed is inside the user's
+      // code (not inside code we inserted before or after their code that is
+      // not visible in the editor):
+      var selection = editor.aceEditor.getSelection();
+      if (inUserCode) {
+        createSelection(selection, cumulativeLength, start, end);
+      } else {
+        selection.clearSelection();
+      }
+    }
+  }
+  return inUserCode;
 };
 
 /**
@@ -12066,6 +12280,15 @@ exports.load = function(assetUrl, id) {
     speedMedium: assetUrl('media/common_images/speed-medium.png'),
     speedSlow: assetUrl('media/common_images/speed-slow.png'),
     scoreCard: assetUrl('media/common_images/increment-score-75percent.png'),
+    rainbowMenu: assetUrl('media/common_images/rainbow-menuicon.png'),
+    ropeMenu: assetUrl('media/common_images/rope-menuicon.png'),
+    squigglyMenu: assetUrl('media/common_images/squiggly-menuicon.png'),
+    swirlyMenu: assetUrl('media/common_images/swirlyline-menuicon.png'),
+    patternDefault: assetUrl('media/common_images/defaultline-menuicon.png'),
+    rainbowLine: assetUrl('media/common_images/rainbow.png'),
+    ropeLine: assetUrl('media/common_images/rope.png'),
+    squigglyLine: assetUrl('media/common_images/squiggly.png'),
+    swirlyLine: assetUrl('media/common_images/swirlyline.png'),
     randomPurpleIcon: assetUrl('media/common_images/random-purple.png'),
     // Sounds
     startSound: [skinUrl('start.mp3'), skinUrl('start.ogg')],
@@ -14000,7 +14223,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/fi_fi/common') ; buf.push('\n\n<div id="soft-buttons" class="soft-buttons-none">\n  <button id="leftButton" class="arrow">\n    <img src="', escape((5,  assetUrl('media/1x1.gif') )), '" class="left-btn icon21">\n  <button id="rightButton" class="arrow">\n    <img src="', escape((7,  assetUrl('media/1x1.gif') )), '" class="right-btn icon21">\n  <button id="upButton" class="arrow">\n    <img src="', escape((9,  assetUrl('media/1x1.gif') )), '" class="up-btn icon21">\n  <button id="downButton" class="arrow">\n    <img src="', escape((11,  assetUrl('media/1x1.gif') )), '" class="down-btn icon21">\n</div>\n\n');14; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((17,  assetUrl('media/1x1.gif') )), '">', escape((17,  msg.finish() )), '\n    </button>\n  </div>\n');20; } ; buf.push('\n'); })();
+ buf.push('');1; var msg = require('../../locale/fi_fi/common') ; buf.push('\n\n<div id="soft-buttons" class="soft-buttons-none">\n  <button id="leftButton" class="arrow">\n    <img src="', escape((5,  assetUrl('media/1x1.gif') )), '" class="left-btn icon21">\n  </button>\n  <button id="rightButton" class="arrow">\n    <img src="', escape((8,  assetUrl('media/1x1.gif') )), '" class="right-btn icon21">\n  </button>\n  <button id="upButton" class="arrow">\n    <img src="', escape((11,  assetUrl('media/1x1.gif') )), '" class="up-btn icon21">\n  </button>\n  <button id="downButton" class="arrow">\n    <img src="', escape((14,  assetUrl('media/1x1.gif') )), '" class="down-btn icon21">\n  </button>\n</div>\n\n');18; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((21,  assetUrl('media/1x1.gif') )), '">', escape((21,  msg.finish() )), '\n    </button>\n  </div>\n');24; } ; buf.push('\n'); })();
 } 
 return buf.join('');
 };
@@ -16386,6 +16609,7 @@ Studio.init = function(config) {
       extraControlRows: extraControlsRow,
       blockUsed: undefined,
       idealBlockNumber: undefined,
+      editCode: level.editCode,
       blockCounterClass: 'block-counter-default'
     }
   });
@@ -16436,12 +16660,9 @@ Studio.init = function(config) {
     drawMap();
   };
 
-  config.getDisplayWidth = function() {
-    var el = document.getElementById('visualizationColumn');
-    return el.getBoundingClientRect().width;
-  };
-
-  arrangeStartBlocks(config);
+  if (config.level.edit_blocks != 'toolbox_blocks') {
+    arrangeStartBlocks(config);
+  }
 
   config.twitter = twitterOptions;
 
@@ -18238,7 +18459,7 @@ with (locals || {}) { (function(){
   var msg = require('../../locale/fi_fi/common');
   var hideRunButton = locals.hideRunButton || false;
 ; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var instructions = function() {; buf.push('  <div id="bubble" class="clearfix">\n    <table id="prompt-table">\n      <tr>\n        <td id="prompt-icon-cell">\n          <img id="prompt-icon"/>\n        </td>\n        <td id="prompt-cell">\n          <p id="prompt">\n          </p>\n        </td>\n      </tr>\n    </table>\n    <div id="ani-gif-preview-wrapper">\n      <div id="ani-gif-preview">\n        <img id="play-button" src="', escape((26,  assetUrl('media/play-circle.png') )), '"/>\n      </div>\n    </div>\n  </div>\n');30; };; buf.push('\n');31; // A spot for the server to inject some HTML for help content.
-var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n');36; var codeArea = function() {; buf.push('  <div id="codeTextbox" contenteditable spellcheck=false>\n  </div>\n');38; }; ; buf.push('\n\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (42,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((48,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((49,  msg.runProgram() )), '</div>\n        <img src="', escape((50,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((53,  msg.resetProgram() )), '</div>\n        <img src="', escape((54,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');56; if (data.controls) { ; buf.push('\n      ', (57,  data.controls ), '\n      ');58; } ; buf.push('\n      ');59; if (data.extraControlRows) { ; buf.push('\n      ', (60,  data.extraControlRows ), '\n      ');61; } ; buf.push('\n    </div>\n\n    ');64; instructions() ; buf.push('\n    ');65; helpArea(data.helpHtml) ; buf.push('\n\n  </div>\n</div>\n\n<div id="blockly">\n  <div id="headers" dir="', escape((71,  data.localeDirection )), '">\n    <div id="toolbox-header" class="blockly-header"><span>', escape((72,  msg.toolboxHeader() )), '</span></div>\n    <div id="workspace-header" class="blockly-header">\n      <span>', escape((74,  msg.workspaceHeader())), ' </span>\n      <div id="blockCounter">\n        <div id="blockUsed" class=', escape((76,  data.blockCounterClass )), '>\n          ', escape((77,  data.blockUsed )), '\n        </div>\n        <span>&nbsp;/</span>\n        <span id="idealBlockNumber">', escape((80,  data.idealBlockNumber )), '</span>\n      </div>\n    </div>\n    <div id="show-code-header" class="blockly-header"><span>', escape((83,  msg.showCodeHeader() )), '</span></div>\n  </div>\n</div>\n\n<div class="clear"></div>\n\n');89; codeArea() ; buf.push('\n'); })();
+var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (38,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((44,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((45,  msg.runProgram() )), '</div>\n        <img src="', escape((46,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((49,  msg.resetProgram() )), '</div>\n        <img src="', escape((50,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');52; if (data.controls) { ; buf.push('\n      ', (53,  data.controls ), '\n      ');54; } ; buf.push('\n      ');55; if (data.extraControlRows) { ; buf.push('\n      ', (56,  data.extraControlRows ), '\n      ');57; } ; buf.push('\n    </div>\n\n    ');60; instructions() ; buf.push('\n    ');61; helpArea(data.helpHtml) ; buf.push('\n\n  </div>\n</div>\n\n');66; if (data.editCode) { ; buf.push('\n  <div id="blockly" style="display:none"></div>\n  <div id="codeWorkspace">\n');69; } else { ; buf.push('\n  <div id="blockly">\n');71; } ; buf.push('\n  <div id="headers" dir="', escape((72,  data.localeDirection )), '">\n    <div id="toolbox-header" class="blockly-header"><span>', escape((73,  msg.toolboxHeader() )), '</span></div>\n    <div id="workspace-header" class="blockly-header">\n      <span id="workspace-header-span">', escape((75,  msg.workspaceHeader())), ' </span>\n      <div id="blockCounter">\n        <div id="blockUsed" class=', escape((77,  data.blockCounterClass )), '>\n          ', escape((78,  data.blockUsed )), '\n        </div>\n        <span>&nbsp;/</span>\n        <span id="idealBlockNumber">', escape((81,  data.idealBlockNumber )), '</span>\n      </div>\n    </div>\n    <div id="show-code-header" class="blockly-header"><span>', escape((84,  msg.showCodeHeader() )), '</span></div>\n  </div>\n  ');86; if (data.editCode) { ; buf.push('\n    <div id="codeTextbox" contenteditable spellcheck=false></div>\n  ');88; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
 } 
 return buf.join('');
 };
@@ -18496,8 +18717,9 @@ exports.generateCodeAliases = function (codeFunctions, parentObjName) {
     for (var i = 0; i < codeFunctions.length; i++) {
       var cf = codeFunctions[i];
       code += "var " + cf.func +
-          " = function() { var newArgs = [''].concat(arguments); return " +
-          parentObjName + "." + cf.func +
+          " = function() { var newArgs = " +
+          (cf.idArgLast ? "arguments.concat(['']);" : "[''].concat(arguments);") +
+          " return " + parentObjName + "." + cf.func +
           ".apply(" + parentObjName + ", newArgs); };\n";
     }
   }
@@ -18661,7 +18883,7 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.fi=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "ja"};
 
-exports.blocklyMessage = function(d){return "Blockly"};
+exports.blocklyMessage = function(d){return "Blocky"};
 
 exports.catActions = function(d){return "Toiminnot"};
 
@@ -18677,7 +18899,7 @@ exports.catMath = function(d){return "Matematiikka"};
 
 exports.catProcedures = function(d){return "Funktiot"};
 
-exports.catText = function(d){return "Teksti"};
+exports.catText = function(d){return "teksti"};
 
 exports.catVariables = function(d){return "Muuttujat"};
 
@@ -18721,7 +18943,7 @@ exports.hintTitle = function(d){return "Vihje:"};
 
 exports.jump = function(d){return "hyppää"};
 
-exports.levelIncompleteError = function(d){return "Käytät kaikkia oikeanlaisia lohkoja, mutta et oikella tavalla."};
+exports.levelIncompleteError = function(d){return "Käytät kaikkia oikeanlaisia lohkoja, mutta et oikealla tavalla."};
 
 exports.listVariable = function(d){return "lista"};
 
@@ -18741,7 +18963,7 @@ exports.numBlocksNeeded = function(d){return "Onneksi olkoon! Olet suorittanut "
 
 exports.numLinesOfCodeWritten = function(d){return "Kirjoitit juuri "+p(d,"numLines",0,"fi",{"one":"yhden rivin","other":n(d,"numLines")+" riviä"})+" koodia!"};
 
-exports.play = function(d){return "play"};
+exports.play = function(d){return "pelaa"};
 
 exports.puzzleTitle = function(d){return "Pulma "+v(d,"puzzle_number")+" / "+v(d,"stage_total")};
 
@@ -18753,9 +18975,11 @@ exports.runProgram = function(d){return "Suorita"};
 
 exports.runTooltip = function(d){return "Suorittaa työtilassa olevien lohkojen määrittämän ohjelman."};
 
-exports.score = function(d){return "score"};
+exports.score = function(d){return "pisteet"};
 
 exports.showCodeHeader = function(d){return "Näytä koodi"};
+
+exports.showBlocksHeader = function(d){return "Show Blocks"};
 
 exports.showGeneratedCode = function(d){return "Näytä koodi"};
 
@@ -18769,7 +18993,7 @@ exports.tooManyBlocksMsg = function(d){return "Tämän pulman voi ratkaista <x i
 
 exports.tooMuchWork = function(d){return "Sait minut tekemään paljon töitä! Voisitko kokeilla samaa vähemmillä toistoilla?"};
 
-exports.toolboxHeader = function(d){return "Lohkot"};
+exports.toolboxHeader = function(d){return "lohkot"};
 
 exports.openWorkspace = function(d){return "Miten se toimii"};
 
@@ -18785,15 +19009,15 @@ exports.saveToGallery = function(d){return "Tallenna galleriaasi"};
 
 exports.savedToGallery = function(d){return "Tallennettu galleriaasi!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
-
-exports.typeCode = function(d){return "Kirjoita JavaScript-koodisi näiden ohjeiden alle."};
+exports.shareFailure = function(d){return "Emme valitettavasti toi jakaa tätä ohjelmaa."};
 
 exports.typeFuncs = function(d){return "Käytettävissä olevat funktiot: %1"};
 
 exports.typeHint = function(d){return "Sulkeet ja puolipisteet ovat pakollisia."};
 
 exports.workspaceHeader = function(d){return "Kokoa lohkosi täällä: "};
+
+exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
 
 exports.infinity = function(d){return "Ääretön"};
 
@@ -18803,28 +19027,28 @@ exports.orientationLock = function(d){return "Poista laitteesi asentolukko."};
 
 exports.wantToLearn = function(d){return "Haluatko oppia koodaamaan?"};
 
-exports.watchVideo = function(d){return "Katso Video"};
+exports.watchVideo = function(d){return "Katso video"};
 
 exports.when = function(d){return "kun"};
 
-exports.whenRun = function(d){return "suoritettaessa"};
+exports.whenRun = function(d){return "ajettaessa"};
 
-exports.tryHOC = function(d){return "Kokeile koodaustuntia"};
+exports.tryHOC = function(d){return "Kokeile koodituntia"};
 
 exports.signup = function(d){return "Rekisteröidy johdantokurssille"};
 
 exports.hintHeader = function(d){return "Tässä on Vihje:"};
 
-exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+exports.genericFeedback = function(d){return "Katso miten päädyit tähän, ja koita korjata ohjelmasi."};
 
 
 },{"messageformat":58}],46:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.fi=function(n){return n===1?"one":"other"}
-exports.actor = function(d){return "actor"};
+exports.actor = function(d){return "toimija"};
 
 exports.catActions = function(d){return "Toiminnot"};
 
-exports.catControl = function(d){return "Silmukat"};
+exports.catControl = function(d){return "silmukat"};
 
 exports.catEvents = function(d){return "Tapahtumat"};
 
@@ -18832,51 +19056,51 @@ exports.catLogic = function(d){return "Logiikka"};
 
 exports.catMath = function(d){return "Matematiikka"};
 
-exports.catProcedures = function(d){return "Funktiot"};
+exports.catProcedures = function(d){return "funktiot"};
 
-exports.catText = function(d){return "Teksti"};
+exports.catText = function(d){return "teksti"};
 
-exports.catVariables = function(d){return "Muuttujat"};
+exports.catVariables = function(d){return "muuttujat"};
 
-exports.changeScoreTooltip = function(d){return "Add or remove a point to the score."};
+exports.changeScoreTooltip = function(d){return "LIsää tai poista piste pistemäärästä."};
 
-exports.changeScoreTooltipK1 = function(d){return "Add a point to the score."};
+exports.changeScoreTooltipK1 = function(d){return "Lisää piste pistemäärään."};
 
 exports.continue = function(d){return "Jatka"};
 
-exports.decrementPlayerScore = function(d){return "remove point"};
+exports.decrementPlayerScore = function(d){return "poista piste"};
 
 exports.defaultSayText = function(d){return "kirjoita tähän"};
 
-exports.emotion = function(d){return "mood"};
+exports.emotion = function(d){return "mieliala"};
 
 exports.finalLevel = function(d){return "Onneksi olkoon! Olet suorittanut viimeisen pulman."};
 
-exports.hello = function(d){return "hello"};
+exports.hello = function(d){return "hei"};
 
-exports.helloWorld = function(d){return "Hello World!"};
+exports.helloWorld = function(d){return "Hei maailma!"};
 
 exports.incrementPlayerScore = function(d){return "lisää piste"};
 
 exports.makeProjectileDisappear = function(d){return "kadota"};
 
-exports.makeProjectileBounce = function(d){return "bounce"};
+exports.makeProjectileBounce = function(d){return "hyppää"};
 
-exports.makeProjectileBlueFireball = function(d){return "make blue fireball"};
+exports.makeProjectileBlueFireball = function(d){return "tee sininen tulipallo"};
 
-exports.makeProjectilePurpleFireball = function(d){return "make purple fireball"};
+exports.makeProjectilePurpleFireball = function(d){return "tee violetti tulipallo"};
 
-exports.makeProjectileRedFireball = function(d){return "make red fireball"};
+exports.makeProjectileRedFireball = function(d){return "tee punainen tulipallo"};
 
-exports.makeProjectileYellowHearts = function(d){return "make yellow hearts"};
+exports.makeProjectileYellowHearts = function(d){return "tee keltaisia sydämiä"};
 
-exports.makeProjectilePurpleHearts = function(d){return "make purple hearts"};
+exports.makeProjectilePurpleHearts = function(d){return "tee violetteja sydämiä"};
 
-exports.makeProjectileRedHearts = function(d){return "make red hearts"};
+exports.makeProjectileRedHearts = function(d){return "tee punaisia sydämiä"};
 
-exports.makeProjectileTooltip = function(d){return "Make the projectile that just collided disappear or bounce."};
+exports.makeProjectileTooltip = function(d){return "Laita juuri törmännyt ammus katoamaan tai kimpoamaan."};
 
-exports.makeYourOwn = function(d){return "Tee oma tarinasi"};
+exports.makeYourOwn = function(d){return "Tee oma Play Lab -sovelluksesi"};
 
 exports.moveDirectionDown = function(d){return "alas"};
 
@@ -18898,33 +19122,33 @@ exports.moveDistance200 = function(d){return "200 pikseliä"};
 
 exports.moveDistance400 = function(d){return "400 pikseliä"};
 
-exports.moveDistancePixels = function(d){return "pikseliä"};
+exports.moveDistancePixels = function(d){return "kuvapisteet"};
 
-exports.moveDistanceRandom = function(d){return "random pixels"};
+exports.moveDistanceRandom = function(d){return "satunnaisia pikseleitä"};
 
-exports.moveDistanceTooltip = function(d){return "Move a character a specific distance in the specified direction."};
+exports.moveDistanceTooltip = function(d){return "Siirrä hahmoa määrättyyn määrä suuntaansa."};
 
 exports.moveSprite = function(d){return "siirrä"};
 
-exports.moveSpriteN = function(d){return "move actor "+v(d,"spriteIndex")};
+exports.moveSpriteN = function(d){return "siirrä hahmoa "+v(d,"spriteIndex")};
 
 exports.moveDown = function(d){return "siirrä alas"};
 
-exports.moveDownTooltip = function(d){return "Move the paddle down."};
+exports.moveDownTooltip = function(d){return "Siirrä hahmoa alas."};
 
 exports.moveLeft = function(d){return "siirrä vasemmalle"};
 
-exports.moveLeftTooltip = function(d){return "Move the paddle to the left."};
+exports.moveLeftTooltip = function(d){return "Siirrä hahmoa vasemmalle."};
 
 exports.moveRight = function(d){return "siirrä oikealle"};
 
-exports.moveRightTooltip = function(d){return "Move the paddle to the right."};
+exports.moveRightTooltip = function(d){return "Siirrä hahmoa oikealle."};
 
 exports.moveUp = function(d){return "siirrä ylös"};
 
-exports.moveUpTooltip = function(d){return "Move the paddle up."};
+exports.moveUpTooltip = function(d){return "Siirrä hahmoa ylös."};
 
-exports.moveTooltip = function(d){return "Move a character."};
+exports.moveTooltip = function(d){return "Siirrä hahmoa."};
 
 exports.nextLevel = function(d){return "Onneksi olkoon! Olet suorittanut tämän pulman."};
 
@@ -18932,7 +19156,7 @@ exports.no = function(d){return "Ei"};
 
 exports.numBlocksNeeded = function(d){return "Pulman voi ratkaista %1 lohkolla."};
 
-exports.ouchExclamation = function(d){return "Ouch!"};
+exports.ouchExclamation = function(d){return "Auts!"};
 
 exports.playSoundCrunch = function(d){return "soita räsähdyksen ääni"};
 
@@ -18960,19 +19184,19 @@ exports.playSoundWinPoint2 = function(d){return "soita pisteen voittamisen toine
 
 exports.playSoundWood = function(d){return "soita puinen ääni"};
 
-exports.positionOutTopLeft = function(d){return "to the above top left position"};
+exports.positionOutTopLeft = function(d){return "yläpuolelle vasempaan yläreunaan"};
 
-exports.positionOutTopRight = function(d){return "to the above top right position"};
+exports.positionOutTopRight = function(d){return "yläpuolelle oikeaan yläreunaan"};
 
-exports.positionTopOutLeft = function(d){return "to the top outside left position"};
+exports.positionTopOutLeft = function(d){return "vasemmalle yläreunan ulkopuolelle"};
 
-exports.positionTopLeft = function(d){return "to the top left position"};
+exports.positionTopLeft = function(d){return "vasempaan yläreunaan"};
 
-exports.positionTopCenter = function(d){return "to the top center position"};
+exports.positionTopCenter = function(d){return "yläreunan keskelle"};
 
-exports.positionTopRight = function(d){return "to the top right position"};
+exports.positionTopRight = function(d){return "oikeaan yläreunaan"};
 
-exports.positionTopOutRight = function(d){return "to the top outside right position"};
+exports.positionTopOutRight = function(d){return "oikealle yläreunan ulkopuolelle"};
 
 exports.positionMiddleLeft = function(d){return "to the middle left position"};
 
@@ -18994,287 +19218,287 @@ exports.positionOutBottomLeft = function(d){return "to the below bottom left pos
 
 exports.positionOutBottomRight = function(d){return "to the below bottom right position"};
 
-exports.positionRandom = function(d){return "to the random position"};
+exports.positionRandom = function(d){return "satunnaiseen sijaintiin"};
 
-exports.projectileBlueFireball = function(d){return "blue fireball"};
+exports.projectileBlueFireball = function(d){return "sininen tulipallo"};
 
-exports.projectilePurpleFireball = function(d){return "purple fireball"};
+exports.projectilePurpleFireball = function(d){return "violetti tulipallo"};
 
-exports.projectileRedFireball = function(d){return "red fireball"};
+exports.projectileRedFireball = function(d){return "punainen tulipallo"};
 
-exports.projectileYellowHearts = function(d){return "yellow hearts"};
+exports.projectileYellowHearts = function(d){return "keltaiset sydämet"};
 
-exports.projectilePurpleHearts = function(d){return "purple hearts"};
+exports.projectilePurpleHearts = function(d){return "violetit sydämet"};
 
-exports.projectileRedHearts = function(d){return "red hearts"};
+exports.projectileRedHearts = function(d){return "punaiset sydämet"};
 
 exports.projectileRandom = function(d){return "satunnainen"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to playing your story."};
+exports.reinfFeedbackMsg = function(d){return "Voit painaa \"Yritä uudelleen\" -painiketta palatakseksi toistamaan tarinaasi."};
 
-exports.repeatForever = function(d){return "repeat forever"};
+exports.repeatForever = function(d){return "toista jatkuvasti"};
 
 exports.repeatDo = function(d){return "tee"};
 
-exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the story is running."};
+exports.repeatForeverTooltip = function(d){return "Toista lohkon toiminnot toistuvastu niin kauan kuin tarina on käynnissä."};
 
-exports.saySprite = function(d){return "say"};
+exports.saySprite = function(d){return "sano"};
 
-exports.saySpriteN = function(d){return "actor "+v(d,"spriteIndex")+" say"};
+exports.saySpriteN = function(d){return "hahmo "+v(d,"spriteIndex")+" sanoo"};
 
-exports.saySpriteTooltip = function(d){return "Pop up a speech bubble with the associated text from the specified character."};
+exports.saySpriteTooltip = function(d){return "Näytä puhekupla liitetyllä tekstillä määritellylle hahmolle."};
 
 exports.scoreText = function(d){return "Pisteet: "+v(d,"playerScore")};
 
-exports.setBackground = function(d){return "set background"};
+exports.setBackground = function(d){return "aseta tausta"};
 
-exports.setBackgroundRandom = function(d){return "set random scene"};
+exports.setBackgroundRandom = function(d){return "aseta satunnainen tausta"};
 
-exports.setBackgroundBlack = function(d){return "set black background"};
+exports.setBackgroundBlack = function(d){return "aseta musta tausta"};
 
-exports.setBackgroundCave = function(d){return "set cave background"};
+exports.setBackgroundCave = function(d){return "aseta luolatausta"};
 
-exports.setBackgroundCloudy = function(d){return "set cloudy background"};
+exports.setBackgroundCloudy = function(d){return "aseta pilvinen tausta"};
 
-exports.setBackgroundHardcourt = function(d){return "set hardcourt scene"};
+exports.setBackgroundHardcourt = function(d){return "aseta tenniskenttätausta"};
 
-exports.setBackgroundNight = function(d){return "set night background"};
+exports.setBackgroundNight = function(d){return "aseta yötausta"};
 
-exports.setBackgroundUnderwater = function(d){return "set underwater background"};
+exports.setBackgroundUnderwater = function(d){return "aseta vedenalainen tausta"};
 
-exports.setBackgroundCity = function(d){return "set city background"};
+exports.setBackgroundCity = function(d){return "aseta kaupunkitausta"};
 
-exports.setBackgroundDesert = function(d){return "set desert background"};
+exports.setBackgroundDesert = function(d){return "aseta autiomaatausta"};
 
-exports.setBackgroundRainbow = function(d){return "set rainbow background"};
+exports.setBackgroundRainbow = function(d){return "aseta sateenkaaritausta"};
 
-exports.setBackgroundSoccer = function(d){return "set soccer background"};
+exports.setBackgroundSoccer = function(d){return "aseta jalkapallotausta"};
 
-exports.setBackgroundSpace = function(d){return "set space background"};
+exports.setBackgroundSpace = function(d){return "aseta avaruustausta"};
 
-exports.setBackgroundTennis = function(d){return "set tennis background"};
+exports.setBackgroundTennis = function(d){return "aseta tennistausta"};
 
-exports.setBackgroundWinter = function(d){return "set winter background"};
+exports.setBackgroundWinter = function(d){return "aseta talvitausta"};
 
 exports.setBackgroundTooltip = function(d){return "Aseta taustakuva"};
 
 exports.setScoreText = function(d){return "aseta pisteet"};
 
-exports.setScoreTextTooltip = function(d){return "Sets the text to be displayed in the score area."};
+exports.setScoreTextTooltip = function(d){return "Asettaa tekstin näytettäväksi pistealueella."};
 
-exports.setSpriteEmotionAngry = function(d){return "to a angry emotion"};
+exports.setSpriteEmotionAngry = function(d){return "vihaiseen mielialaan"};
 
-exports.setSpriteEmotionHappy = function(d){return "to a happy emotion"};
+exports.setSpriteEmotionHappy = function(d){return "iloiseen mielialaan"};
 
-exports.setSpriteEmotionNormal = function(d){return "to a normal emotion"};
+exports.setSpriteEmotionNormal = function(d){return "normaaliin mielialaan"};
 
-exports.setSpriteEmotionRandom = function(d){return "to a random emotion"};
+exports.setSpriteEmotionRandom = function(d){return "satunnaiseen mielialaan"};
 
-exports.setSpriteEmotionSad = function(d){return "to a sad emotion"};
+exports.setSpriteEmotionSad = function(d){return "surulliseen mielialaan"};
 
-exports.setSpriteEmotionTooltip = function(d){return "Sets the actor emotion"};
+exports.setSpriteEmotionTooltip = function(d){return "Asettaa hahmon mielialan"};
 
-exports.setSpriteAlien = function(d){return "to an alien image"};
+exports.setSpriteAlien = function(d){return "avaruusolion kuvaan"};
 
-exports.setSpriteBat = function(d){return "to a bat image"};
+exports.setSpriteBat = function(d){return "lepakon kuvaan"};
 
-exports.setSpriteBird = function(d){return "to a bird image"};
+exports.setSpriteBird = function(d){return "linnun kuvaan"};
 
-exports.setSpriteCat = function(d){return "to a cat image"};
+exports.setSpriteCat = function(d){return "kissan kuvaan"};
 
-exports.setSpriteCaveBoy = function(d){return "to a cave boy image"};
+exports.setSpriteCaveBoy = function(d){return "luolapojan kuvaan"};
 
-exports.setSpriteCaveGirl = function(d){return "to a cave girl image"};
+exports.setSpriteCaveGirl = function(d){return "luolatytön kuvaan"};
 
-exports.setSpriteDinosaur = function(d){return "to a dinosaur image"};
+exports.setSpriteDinosaur = function(d){return "dinosauruksen kuvaan"};
 
-exports.setSpriteDog = function(d){return "to a dog image"};
+exports.setSpriteDog = function(d){return "koiran kuvaan"};
 
-exports.setSpriteDragon = function(d){return "to a dragon image"};
+exports.setSpriteDragon = function(d){return "lohikäärmeen kuvaan"};
 
-exports.setSpriteGhost = function(d){return "to a ghost image"};
+exports.setSpriteGhost = function(d){return "haamun kuvaan"};
 
-exports.setSpriteHidden = function(d){return "to a hidden image"};
+exports.setSpriteHidden = function(d){return "piilotettuun kuvaan"};
 
-exports.setSpriteHideK1 = function(d){return "hide"};
+exports.setSpriteHideK1 = function(d){return "piilota"};
 
-exports.setSpriteKnight = function(d){return "to a knight image"};
+exports.setSpriteKnight = function(d){return "ritarin kuvaan"};
 
-exports.setSpriteMonster = function(d){return "to a monster image"};
+exports.setSpriteMonster = function(d){return "hirviön kuvaan"};
 
-exports.setSpriteNinja = function(d){return "to a masked ninja image"};
+exports.setSpriteNinja = function(d){return "naamioidun ninjan kuvaan"};
 
-exports.setSpriteOctopus = function(d){return "to an octopus image"};
+exports.setSpriteOctopus = function(d){return "mustekalan kuvaan"};
 
-exports.setSpritePenguin = function(d){return "to a penguin image"};
+exports.setSpritePenguin = function(d){return "pingviinin kuvaan"};
 
-exports.setSpritePirate = function(d){return "to a pirate image"};
+exports.setSpritePirate = function(d){return "merirosvon kuvaan"};
 
-exports.setSpritePrincess = function(d){return "to a princess image"};
+exports.setSpritePrincess = function(d){return "prinsessan kuvaan"};
 
-exports.setSpriteRandom = function(d){return "to a random image"};
+exports.setSpriteRandom = function(d){return "satunnaiseen kuvaan"};
 
-exports.setSpriteRobot = function(d){return "to a robot image"};
+exports.setSpriteRobot = function(d){return "robotin kuvaan"};
 
-exports.setSpriteShowK1 = function(d){return "show"};
+exports.setSpriteShowK1 = function(d){return "näytä"};
 
-exports.setSpriteSpacebot = function(d){return "to a spacebot image"};
+exports.setSpriteSpacebot = function(d){return "avaruusrobotin kuvaan"};
 
-exports.setSpriteSoccerGirl = function(d){return "to a soccer girl image"};
+exports.setSpriteSoccerGirl = function(d){return "jalkapallotytön kuvaan"};
 
-exports.setSpriteSoccerBoy = function(d){return "to a soccer boy image"};
+exports.setSpriteSoccerBoy = function(d){return "jalkapallopojan kuvaan"};
 
-exports.setSpriteSquirrel = function(d){return "to a squirrel image"};
+exports.setSpriteSquirrel = function(d){return "oravan kuvaan"};
 
-exports.setSpriteTennisGirl = function(d){return "to a tennis girl image"};
+exports.setSpriteTennisGirl = function(d){return "tennistytön kuvaan"};
 
-exports.setSpriteTennisBoy = function(d){return "to a tennis boy image"};
+exports.setSpriteTennisBoy = function(d){return "tennispojan kuvaan"};
 
-exports.setSpriteUnicorn = function(d){return "to a unicorn image"};
+exports.setSpriteUnicorn = function(d){return "yksisarvisen kuvaan"};
 
-exports.setSpriteWitch = function(d){return "to a witch image"};
+exports.setSpriteWitch = function(d){return "noidan kuvaan"};
 
-exports.setSpriteWizard = function(d){return "to a wizard image"};
+exports.setSpriteWizard = function(d){return "velhon kuvaan"};
 
-exports.setSpritePositionTooltip = function(d){return "Instantly moves an actor to the specified location."};
+exports.setSpritePositionTooltip = function(d){return "Siirtää hahmon heti määriteltyyn kohtaan."};
 
-exports.setSpriteK1Tooltip = function(d){return "Shows or hides the specified actor."};
+exports.setSpriteK1Tooltip = function(d){return "Näyttää tai piilottaa määritellyn hahmon."};
 
-exports.setSpriteTooltip = function(d){return "Sets the character image"};
+exports.setSpriteTooltip = function(d){return "Asettaa hahmon kuvan"};
 
-exports.setSpriteSizeRandom = function(d){return "to a random size"};
+exports.setSpriteSizeRandom = function(d){return "satunnaiseen kokoon"};
 
-exports.setSpriteSizeVerySmall = function(d){return "to a very small size"};
+exports.setSpriteSizeVerySmall = function(d){return "hyvin pieneen kokoon"};
 
-exports.setSpriteSizeSmall = function(d){return "to a small size"};
+exports.setSpriteSizeSmall = function(d){return "pieneen kokoon"};
 
-exports.setSpriteSizeNormal = function(d){return "to a normal size"};
+exports.setSpriteSizeNormal = function(d){return "normaaliin kokoon"};
 
-exports.setSpriteSizeLarge = function(d){return "to a large size"};
+exports.setSpriteSizeLarge = function(d){return "suureen kokoon"};
 
-exports.setSpriteSizeVeryLarge = function(d){return "to a very large size"};
+exports.setSpriteSizeVeryLarge = function(d){return "erittäin suureen kokoon"};
 
-exports.setSpriteSizeTooltip = function(d){return "Sets the size of an actor"};
+exports.setSpriteSizeTooltip = function(d){return "Asettaa hahmon koon"};
 
-exports.setSpriteSpeedRandom = function(d){return "to a random speed"};
+exports.setSpriteSpeedRandom = function(d){return "satunnaiseen nopeuteen"};
 
-exports.setSpriteSpeedVerySlow = function(d){return "to a very slow speed"};
+exports.setSpriteSpeedVerySlow = function(d){return "erittäin hitaaseen nopeuteen"};
 
-exports.setSpriteSpeedSlow = function(d){return "to a slow speed"};
+exports.setSpriteSpeedSlow = function(d){return "hitaaseen nopeuteen"};
 
-exports.setSpriteSpeedNormal = function(d){return "to a normal speed"};
+exports.setSpriteSpeedNormal = function(d){return "normaaliin nopeuteen"};
 
-exports.setSpriteSpeedFast = function(d){return "to a fast speed"};
+exports.setSpriteSpeedFast = function(d){return "nopeaan nopeuteen"};
 
-exports.setSpriteSpeedVeryFast = function(d){return "to a very fast speed"};
+exports.setSpriteSpeedVeryFast = function(d){return "erittäin nopeaan nopeuteen"};
 
-exports.setSpriteSpeedTooltip = function(d){return "Sets the speed of a character"};
+exports.setSpriteSpeedTooltip = function(d){return "Asettaa hahmon nopeuden"};
 
-exports.setSpriteZombie = function(d){return "to a zombie image"};
+exports.setSpriteZombie = function(d){return "zombin kuvaan"};
 
-exports.shareStudioTwitter = function(d){return "Check out the story I made. I wrote it myself with @codeorg"};
+exports.shareStudioTwitter = function(d){return "Katso tekemääni tarinaa. Kirjoitin sen itse @codeorg:ssa"};
 
-exports.shareGame = function(d){return "Share your story:"};
+exports.shareGame = function(d){return "Jaa tarinasi:"};
 
-exports.showTitleScreen = function(d){return "show title screen"};
+exports.showTitleScreen = function(d){return "näytä otsikkonäyttö"};
 
-exports.showTitleScreenTitle = function(d){return "title"};
+exports.showTitleScreenTitle = function(d){return "otsikko"};
 
 exports.showTitleScreenText = function(d){return "teksti"};
 
-exports.showTSDefTitle = function(d){return "type title here"};
+exports.showTSDefTitle = function(d){return "Kirjoita otsikko tähän"};
 
-exports.showTSDefText = function(d){return "type text here"};
+exports.showTSDefText = function(d){return "Kirjoita tekstiä tähän"};
 
-exports.showTitleScreenTooltip = function(d){return "Show a title screen with the associated title and text."};
+exports.showTitleScreenTooltip = function(d){return "Näytä otsikkosivu liitetyllä otsikolla ja tekstillä."};
 
 exports.setSprite = function(d){return "aseta"};
 
-exports.setSpriteN = function(d){return "set actor "+v(d,"spriteIndex")};
+exports.setSpriteN = function(d){return "aseta hahmo "+v(d,"spriteIndex")};
 
-exports.soundCrunch = function(d){return "crunch"};
+exports.soundCrunch = function(d){return "murskaa"};
 
-exports.soundGoal1 = function(d){return "goal 1"};
+exports.soundGoal1 = function(d){return "tavoite 1"};
 
-exports.soundGoal2 = function(d){return "goal 2"};
+exports.soundGoal2 = function(d){return "tavoite 2"};
 
-exports.soundHit = function(d){return "hit"};
+exports.soundHit = function(d){return "osuam"};
 
-exports.soundLosePoint = function(d){return "lose point"};
+exports.soundLosePoint = function(d){return "menetä piste"};
 
-exports.soundLosePoint2 = function(d){return "lose point 2"};
+exports.soundLosePoint2 = function(d){return "menetä piste 2"};
 
 exports.soundRetro = function(d){return "retro"};
 
-exports.soundRubber = function(d){return "rubber"};
+exports.soundRubber = function(d){return "kumi"};
 
-exports.soundSlap = function(d){return "slap"};
+exports.soundSlap = function(d){return "läpsäytä"};
 
-exports.soundWinPoint = function(d){return "win point"};
+exports.soundWinPoint = function(d){return "voittopiste"};
 
-exports.soundWinPoint2 = function(d){return "win point 2"};
+exports.soundWinPoint2 = function(d){return "voittopiste 2"};
 
-exports.soundWood = function(d){return "wood"};
+exports.soundWood = function(d){return "puu"};
 
-exports.speed = function(d){return "speed"};
+exports.speed = function(d){return "nopeus"};
 
-exports.stopSprite = function(d){return "stop"};
+exports.stopSprite = function(d){return "pysähdy"};
 
-exports.stopSpriteN = function(d){return "stop actor "+v(d,"spriteIndex")};
+exports.stopSpriteN = function(d){return "pysäytä hahmo "+v(d,"spriteIndex")};
 
-exports.stopTooltip = function(d){return "Stops an actor's movement."};
+exports.stopTooltip = function(d){return "Pysäyttää hahmon liikkeen."};
 
-exports.throwSprite = function(d){return "throw"};
+exports.throwSprite = function(d){return "heitä"};
 
-exports.throwSpriteN = function(d){return "actor "+v(d,"spriteIndex")+" throw"};
+exports.throwSpriteN = function(d){return "hahmo "+v(d,"spriteIndex")+" heitä"};
 
-exports.throwTooltip = function(d){return "Throws a projectile from the specified actor."};
+exports.throwTooltip = function(d){return "Heittää ammuksen kohti määriteltyä hahmoa."};
 
-exports.vanish = function(d){return "vanish"};
+exports.vanish = function(d){return "katoa"};
 
-exports.vanishActorN = function(d){return "vanish actor "+v(d,"spriteIndex")};
+exports.vanishActorN = function(d){return "kadota hahmo "+v(d,"spriteIndex")};
 
-exports.vanishTooltip = function(d){return "Vanishes the actor."};
+exports.vanishTooltip = function(d){return "Kadottaa hahmon."};
 
-exports.waitFor = function(d){return "wait for"};
+exports.waitFor = function(d){return "odota kunnes"};
 
-exports.waitSeconds = function(d){return "seconds"};
+exports.waitSeconds = function(d){return "sekuntia"};
 
-exports.waitForClick = function(d){return "wait for click"};
+exports.waitForClick = function(d){return "odota kunnes napsautetaan"};
 
-exports.waitForRandom = function(d){return "wait for random"};
+exports.waitForRandom = function(d){return "odota kunnes satunnainen"};
 
-exports.waitForHalfSecond = function(d){return "wait for a half second"};
+exports.waitForHalfSecond = function(d){return "odota kunnes puoli sekuntia on kulunut"};
 
-exports.waitFor1Second = function(d){return "wait for 1 second"};
+exports.waitFor1Second = function(d){return "odota kunnes 1 sekunti on kulunut"};
 
-exports.waitFor2Seconds = function(d){return "wait for 2 seconds"};
+exports.waitFor2Seconds = function(d){return "odota kunnes kaksi sekuntia on kulunut"};
 
-exports.waitFor5Seconds = function(d){return "wait for 5 seconds"};
+exports.waitFor5Seconds = function(d){return "odota kunnes 5 sekuntia on kulunut"};
 
-exports.waitFor10Seconds = function(d){return "wait for 10 seconds"};
+exports.waitFor10Seconds = function(d){return "odota kunnes 10 sekuntia on kulunut"};
 
-exports.waitParamsTooltip = function(d){return "Waits for a specified number of seconds or use zero to wait until a click occurs."};
+exports.waitParamsTooltip = function(d){return "Odota määritelty aika sekunteina tai käytä nollaa odottamaan kunnes napsautus tapahtuu."};
 
-exports.waitTooltip = function(d){return "Waits for a specified amount of time or until a click occurs."};
+exports.waitTooltip = function(d){return "Odota määritelty aika tai kunnes napsautus tapahtuu."};
 
-exports.whenArrowDown = function(d){return "down arrow"};
+exports.whenArrowDown = function(d){return "nuoli alas"};
 
-exports.whenArrowLeft = function(d){return "left arrow"};
+exports.whenArrowLeft = function(d){return "nuoli vasemmalle"};
 
-exports.whenArrowRight = function(d){return "right arrow"};
+exports.whenArrowRight = function(d){return "nuoli oikealle"};
 
-exports.whenArrowUp = function(d){return "up arrow"};
+exports.whenArrowUp = function(d){return "nuoli ylös"};
 
-exports.whenArrowTooltip = function(d){return "Execute the actions below when the specified arrow key is pressed."};
+exports.whenArrowTooltip = function(d){return "Tee seuraavat toimet kun määriteltyä nuolinäppäintä painetaan."};
 
 exports.whenDown = function(d){return "kun alas nuoli"};
 
 exports.whenDownTooltip = function(d){return "Suorita alla olevat toiminnot, kun alas-nuolinäppäintä painetaan."};
 
-exports.whenGameStarts = function(d){return "when game starts"};
+exports.whenGameStarts = function(d){return "kun tarina alkaa"};
 
-exports.whenGameStartsTooltip = function(d){return "Execute the actions below when the game starts."};
+exports.whenGameStartsTooltip = function(d){return "Tee seuraavat toimet kun tarina alkaa."};
 
 exports.whenLeft = function(d){return "kun vasen nuoli"};
 
@@ -19284,47 +19508,47 @@ exports.whenRight = function(d){return "kun oikea nuoli"};
 
 exports.whenRightTooltip = function(d){return "Suorita alla olevat toiminnot, kun oikeaa nuolinäppäintä painetaan."};
 
-exports.whenSpriteClicked = function(d){return "when actor clicked"};
+exports.whenSpriteClicked = function(d){return "Kun hahmoa napsautetaan"};
 
-exports.whenSpriteClickedN = function(d){return "when actor "+v(d,"spriteIndex")+" clicked"};
+exports.whenSpriteClickedN = function(d){return "kun hahmoa "+v(d,"spriteIndex")+" napsautetaan"};
 
-exports.whenSpriteClickedTooltip = function(d){return "Execute the actions below when a character is clicked."};
+exports.whenSpriteClickedTooltip = function(d){return "Tee seuraavat toimet kun hahmoa napsautetaan."};
 
-exports.whenSpriteCollidedN = function(d){return "when actor "+v(d,"spriteIndex")};
+exports.whenSpriteCollidedN = function(d){return "kun hahmo "+v(d,"spriteIndex")};
 
-exports.whenSpriteCollidedTooltip = function(d){return "Execute the actions below when a character touches another character."};
+exports.whenSpriteCollidedTooltip = function(d){return "Tee seuraavat toimet kun hahmo koskee toista hahmoa."};
 
-exports.whenSpriteCollidedWith = function(d){return "touches"};
+exports.whenSpriteCollidedWith = function(d){return "koskee"};
 
-exports.whenSpriteCollidedWithAnyActor = function(d){return "touches any actor"};
+exports.whenSpriteCollidedWithAnyActor = function(d){return "koskee mitä tahansa hahmoa"};
 
-exports.whenSpriteCollidedWithAnyEdge = function(d){return "touches any edge"};
+exports.whenSpriteCollidedWithAnyEdge = function(d){return "koskee mitä tahansa seuraa"};
 
-exports.whenSpriteCollidedWithAnyProjectile = function(d){return "touches any projectile"};
+exports.whenSpriteCollidedWithAnyProjectile = function(d){return "koskee mitä tahansa ammusta"};
 
-exports.whenSpriteCollidedWithAnything = function(d){return "touches anything"};
+exports.whenSpriteCollidedWithAnything = function(d){return "koskee mitä tahansa"};
 
-exports.whenSpriteCollidedWithN = function(d){return "touches actor "+v(d,"spriteIndex")};
+exports.whenSpriteCollidedWithN = function(d){return "koskee hahmoa "+v(d,"spriteIndex")};
 
-exports.whenSpriteCollidedWithBlueFireball = function(d){return "touches blue fireball"};
+exports.whenSpriteCollidedWithBlueFireball = function(d){return "koskee siniseen tulipalloon"};
 
-exports.whenSpriteCollidedWithPurpleFireball = function(d){return "touches purple fireball"};
+exports.whenSpriteCollidedWithPurpleFireball = function(d){return "koskee violettiin tulipalloon"};
 
-exports.whenSpriteCollidedWithRedFireball = function(d){return "touches red fireball"};
+exports.whenSpriteCollidedWithRedFireball = function(d){return "koskee punaiseen tulipalloon"};
 
-exports.whenSpriteCollidedWithYellowHearts = function(d){return "touches yellow hearts"};
+exports.whenSpriteCollidedWithYellowHearts = function(d){return "koskee keltaisia sydämiä"};
 
-exports.whenSpriteCollidedWithPurpleHearts = function(d){return "touches purple hearts"};
+exports.whenSpriteCollidedWithPurpleHearts = function(d){return "koskee violetteja sydämiä"};
 
-exports.whenSpriteCollidedWithRedHearts = function(d){return "touches red hearts"};
+exports.whenSpriteCollidedWithRedHearts = function(d){return "koskee punaisia sydämiä"};
 
-exports.whenSpriteCollidedWithBottomEdge = function(d){return "touches bottom edge"};
+exports.whenSpriteCollidedWithBottomEdge = function(d){return "koskee alareunaa"};
 
-exports.whenSpriteCollidedWithLeftEdge = function(d){return "touches left edge"};
+exports.whenSpriteCollidedWithLeftEdge = function(d){return "koskee vasenta reunaa"};
 
-exports.whenSpriteCollidedWithRightEdge = function(d){return "touches right edge"};
+exports.whenSpriteCollidedWithRightEdge = function(d){return "koskee oikeaa reunaa"};
 
-exports.whenSpriteCollidedWithTopEdge = function(d){return "touches top edge"};
+exports.whenSpriteCollidedWithTopEdge = function(d){return "koskee yläreunaa"};
 
 exports.whenUp = function(d){return "kun ylös nuoli"};
 

@@ -6,7 +6,7 @@ từ: '"Hadi Partovi (Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x7
 
 <% hostname = CDO.canonical_hostname('hourofcode.com') %>
 
-# Cảm ơn bạn đã đăng ký để làm chủ Hour of Code!
+# Cảm ơn bạn đã đăng ký để tổ chức Hour of Code!
 
 **MỖI** người tổ chức Hour of Code sẽ nhận được 10 GB dung lượng Dropbox hoặc 10 $ tín dụng Skype như một lời cảm ơn. [ Chi tiết](http://<%= hostname %>/giải thưởng)
 
