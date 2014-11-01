@@ -168,6 +168,13 @@ en:
           description_short: Scrat short description.
           description: Scrat long description
           'Maze: Sequence': 'Maze: Sequence'
+        hourofcode:
+          Maze: Maze
+          title: Hour of Code
+          description_short: Try the basics of computer science with characters from
+            Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
+          description: Try the basics of computer science with characters from Angry
+            Birds, Plants vs. Zombies, and Scrat from Ice Age!
         frozen:
           title: Frozen
           description_short: Join the Royal Sisters of Arendelle, Anna and Elsa, as

@@ -3,6 +3,7 @@
   "game_id": 23,
   "created_at": "2014-10-28T19:54:27.000Z",
   "level_num": "custom",
+  "ideal_level_source_id": 416,
   "user_id": 1,
   "properties": {
     "skin": "elsa",
@@ -21,29 +22,29 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false"/>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="draw_move_by_constant_dropdown" deletable="false" editable="false">
+              <title name="DIR">moveForward</title>
+              <title name="VALUE" config="50,100,150,200,300">100</title>
+              <next>
+                <block type="draw_move_by_constant_dropdown" deletable="false" editable="false">
+                  <title name="DIR">moveBackward</title>
+                  <title name="VALUE" config="50,100,150,200,300">100</title>
+                  <next>
+                    <block type="draw_turn_by_constant" deletable="false">
+                      <title name="DIR">turnRight</title>
+                      <title name="VALUE">???</title>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
       </xml>
     </start_blocks>
     <toolbox_blocks>
-      <xml>
-        <block type="draw_move_by_constant_dropdown">
-          <title name="DIR">moveForward</title>
-          <title name="VALUE" config="50,100,150,200,300">100</title>
-        </block>
-        <block type="draw_turn_by_constant">
-          <title name="DIR">turnRight</title>
-          <title name="VALUE">90</title>
-        </block>
-        <block type="draw_turn_by_constant">
-          <title name="DIR">turnLeft</title>
-          <title name="VALUE">90</title>
-        </block>
-        <block type="controls_repeat">
-          <title name="TIMES">10</title>
-        </block>
-      </xml>
-    </toolbox_blocks>
-    <required_blocks>
       <xml>
         <block type="draw_move_by_constant_dropdown">
           <title name="DIR">moveForward</title>
@@ -53,6 +54,21 @@
           <title name="DIR">moveBackward</title>
           <title name="VALUE" config="50,100,150,200,300">100</title>
         </block>
+        <block type="draw_turn_by_constant">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE">36</title>
+        </block>
+        <block type="draw_turn_by_constant">
+          <title name="DIR">turnLeft</title>
+          <title name="VALUE">36</title>
+        </block>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">10</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml>
         <block type="pick_one">
           <statement name="PICK">
             <block type="draw_turn_by_constant">
@@ -67,8 +83,8 @@
             </block>
           </statement>
         </block>
-        <block type="controls_repeat">
-          <title name="TIMES">10</title>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">10</title>
         </block>
       </xml>
     </required_blocks>
@@ -76,8 +92,8 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_repeat">
-              <title name="TIMES">10</title>
+            <block type="controls_repeat_dropdown">
+              <title name="TIMES" config="3-10">10</title>
               <statement name="DO">
                 <block type="draw_move_by_constant_dropdown">
                   <title name="DIR">moveForward</title>

@@ -1,0 +1,221 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2014-10-28T00:39:27.214Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "elsa",
+    "instructions": "Intricate patterns can be created in the snow with just simple shapes like small and large circles. Can you create a pattern with a 10 pixel and 50 pixel circle, repeating them 36 times? ",
+    "x": "200",
+    "y": "200",
+    "start_direction": "90",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "free_play": "false"
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="procedures_callnoreturn" inline="false">
+              <mutation name="Create Circle">
+                <arg name="size"/>
+              </mutation>
+              <value name="ARG0">
+                <block type="math_number">
+                  <title name="NUM">100</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation>
+            <arg name="size"/>
+          </mutation>
+          <title name="NAME">Create Circle</title>
+          <statement name="STACK">
+            <block type="controls_repeat">
+              <title name="TIMES">360</title>
+              <statement name="DO">
+                <block type="draw_move" inline="true">
+                  <title name="DIR">moveForward</title>
+                  <value name="VALUE">
+                    <block type="variables_get">
+                      <title name="VAR">size</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="draw_turn_by_constant">
+                      <title name="DIR">turnRight</title>
+                      <title name="VALUE">1</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+            <block type="math_number">
+              <title name="NUM">100</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_turn_by_constant">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE">90</title>
+        </block>
+        <block type="draw_turn_by_constant">
+          <title name="DIR">turnLeft</title>
+          <title name="VALUE">90</title>
+        </block>
+        <block type="controls_repeat">
+          <title name="TIMES">4</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="procedures_defnoreturn">
+          <mutation>
+            <arg name="size"/>
+          </mutation>
+          <title name="NAME">Create Circle</title>
+        </block>
+        <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+            <block type="math_number">
+              <title name="NUM">100</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_turn_by_constant">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE">1</title>
+        </block>
+        <block type="pick_one">
+          <statement name="PICK">
+            <block type="draw_turn_by_constant">
+              <title name="DIR">turnRight</title>
+              <title name="VALUE">1</title>
+              <next>
+                <block type="draw_turn_by_constant">
+                  <title name="DIR">turnLeft</title>
+                  <title name="VALUE">1</title>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="controls_repeat">
+          <title name="TIMES">360</title>
+        </block>
+        <block type="procedures_callnoreturn" inline="false">
+          <mutation name="Create Circle">
+            <arg name="size"/>
+          </mutation>
+          <value name="ARG0">
+            <block type="math_number">
+              <title name="NUM">50</title>
+            </block>
+          </value>
+        </block>
+        <block type="procedures_callnoreturn" inline="false">
+          <mutation name="Create Circle">
+            <arg name="size"/>
+          </mutation>
+          <value name="ARG0">
+            <block type="math_number">
+              <title name="NUM">100</title>
+            </block>
+          </value>
+        </block>
+        <block type="jump_by_constant_dropdown">
+          <title name="DIR">jumpForward</title>
+          <title name="VALUE" config="50,100,150,200,300">50</title>
+        </block>
+      </xml>
+    </required_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">36</title>
+              <statement name="DO">
+                <block type="procedures_callnoreturn" inline="false">
+                  <mutation name="Create Circle">
+                    <arg name="size"/>
+                  </mutation>
+                  <value name="ARG0">
+                    <block type="math_number">
+                      <title name="NUM">10</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="procedures_callnoreturn" inline="false">
+                      <mutation name="Create Circle">
+                        <arg name="size"/>
+                      </mutation>
+                      <value name="ARG0">
+                        <block type="math_number">
+                          <title name="NUM">50</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="draw_turn_by_constant">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE">10</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation>
+            <arg name="size"/>
+          </mutation>
+          <title name="NAME">Create Circle</title>
+          <statement name="STACK">
+            <block type="controls_repeat">
+              <title name="TIMES">36</title>
+              <statement name="DO">
+                <block type="draw_move" inline="true">
+                  <title name="DIR">moveForward</title>
+                  <value name="VALUE">
+                    <block type="variables_get">
+                      <title name="VAR">size</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="draw_turn_by_constant">
+                      <title name="DIR">turnRight</title>
+                      <title name="VALUE">10</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Artist>

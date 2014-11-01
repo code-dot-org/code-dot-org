@@ -18,8 +18,7 @@
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "honey_goal": "2",
     "ideal": "20",
-    "disable_param_editing": "true",
-    "maze_data": null
+    "disable_param_editing": "true"
   }
 }]]></config>
   <blocks>

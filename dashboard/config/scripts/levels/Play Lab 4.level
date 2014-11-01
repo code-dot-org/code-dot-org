@@ -18,7 +18,6 @@
     "sprites_hidden_to_start": "false",
     "free_play": "false",
     "ideal": "4",
-    "maze_data": null,
     "timeout_failure_tick": "200",
     "instructions": "Can you write a program that makes the dog move to the cat, and have the cat say \"hello\" when the dog reaches him?"
   }

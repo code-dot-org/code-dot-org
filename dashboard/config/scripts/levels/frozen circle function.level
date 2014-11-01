@@ -3,11 +3,12 @@
   "game_id": 23,
   "created_at": "2014-10-28T22:38:08.000Z",
   "level_num": "custom",
+  "ideal_level_source_id": 129,
   "user_id": 1,
   "properties": {
     "skin": "elsa",
-    "instructions": "Use the new 'create a circle' block to create two circles",
-    "x": "150",
+    "instructions": "Use the new 'create a circle' block to create 10 overlapping circles. Don't forget to jump forward between circles",
+    "x": "80",
     "y": "150",
     "start_direction": "90",
     "is_k1": "false",
@@ -25,6 +26,10 @@
           <title name="DIR">moveForward</title>
           <title name="VALUE" config="50,100,150,200,300">100</title>
         </block>
+        <block type="jump_by_constant">
+          <title name="DIR">jumpForward</title>
+          <title name="VALUE">25</title>
+        </block>
         <block type="draw_turn_by_constant_dropdown">
           <title name="DIR">turnRight</title>
           <title name="VALUE" config="45,60,90,120,180">90</title>
@@ -33,9 +38,8 @@
           <title name="DIR">turnLeft</title>
           <title name="VALUE" config="45,60,90,120,180">90</title>
         </block>
-        <block type="jump_by_constant_dropdown">
-          <title name="DIR">jumpForward</title>
-          <title name="VALUE" config="50,100,150,200,300">100</title>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">10</title>
         </block>
         <block type="create_a_circle"/>
       </xml>
@@ -43,9 +47,12 @@
     <required_blocks>
       <xml>
         <block type="create_a_circle"/>
-        <block type="jump_by_constant_dropdown">
+        <block type="jump_by_constant">
           <title name="DIR">jumpForward</title>
-          <title name="VALUE" config="50,100,150,200,300">100</title>
+          <title name="VALUE">25</title>
+        </block>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">10</title>
         </block>
       </xml>
     </required_blocks>
@@ -53,16 +60,18 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="create_a_circle">
-              <next>
-                <block type="jump_by_constant_dropdown">
-                  <title name="DIR">jumpForward</title>
-                  <title name="VALUE" config="50,100,150,200,300">100</title>
+            <block type="controls_repeat_dropdown">
+              <title name="TIMES" config="3-10">10</title>
+              <statement name="DO">
+                <block type="create_a_circle">
                   <next>
-                    <block type="create_a_circle"/>
+                    <block type="jump_by_constant">
+                      <title name="DIR">jumpForward</title>
+                      <title name="VALUE">25</title>
+                    </block>
                   </next>
                 </block>
-              </next>
+              </statement>
             </block>
           </next>
         </block>
