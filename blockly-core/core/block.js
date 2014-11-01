@@ -1254,8 +1254,15 @@ Blockly.Block.prototype.isUserVisible = function() {
  */
 Blockly.Block.prototype.setUserVisible = function(userVisible) {
   this.userVisible_ = userVisible;
-  // TODO(dave): make these still be visible in level builder.
-  this.svg_ && this.svg_.setVisible(userVisible);
+  if (userVisible) {
+    this.svg_ && Blockly.removeClass_(this.svg_.svgGroup_, 'userHidden');
+  } else {
+    this.svg_ && Blockly.addClass_(this.svg_.svgGroup_, 'userHidden');
+  }
+  // Apply to all children recursively
+  this.childBlocks_.forEach(function (child) {
+    child.setUserVisible(userVisible);
+  });
 };
 
 /**

@@ -403,6 +403,7 @@ Blockly.BlockSpace.prototype.paste = function(xmlBlock) {
     } while (collide);
     block.moveBy(blockX, blockY);
   }
+  block.setUserVisible(true);
   block.select();
 };
 
