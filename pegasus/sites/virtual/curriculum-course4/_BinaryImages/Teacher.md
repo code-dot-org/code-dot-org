@@ -56,11 +56,18 @@ Students will:
 
 ### For the Student
 
-- Blank Paper
+- One [Binary Images Worksheet](Activity9-BinaryImages.pdf) per pair
+- One [Binary Image Assessment Worksheet](Assessment9-BinaryImages.pdf) per student
+- Blank Paper, pens, pencils
+- Other trinkets that can display opposites, such as: Playing Cards, checkers, coin, etc.  (Optional)
+
 
 ### For the Teacher
 
-- Prepare 
+- Teacher guide
+- Print one [Binary Images Worksheet](Activity9-BinaryImages.pdf) per pair
+- Print one [Binary Image Assessment Worksheet](Assessment9-BinaryImages.pdf) per student 
+- Gather groupings of items that can show opposites for students to use when coming up with their own binary encodings (Optional)
 
 
 ## Getting Started (10 min) 

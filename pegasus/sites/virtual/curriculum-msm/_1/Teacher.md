@@ -24,11 +24,11 @@ Students discuss the components of their favorite videogames, and discover that 
 
 ### **Activity: Videogames and the Coordinate Plane** - 25  minutes  
 
-3) [Videogames and the Coordinate Plane](#Activity1)  
+3) [Dissecting a Demo](#Activity1)  
+4) [Coordinate Planes](#Activity2)  
 
 ### **Wrap-up** - 10  minutes 
-4) [Flash Chat](#WrapUp) - What did we learn?  
-5) [Vocab Shmocab](#Shmocab)
+5) [Flash Chat](#WrapUp) - What did we learn?  
 
 ### **Assessment** - 5  minutes 
 6) [Computational Thinking Assessment](#Assessment)
@@ -62,175 +62,97 @@ Students discuss the components of their favorite videogames, and discover that 
 
 
 ### <a name="Vocab"></a> 1) Vocabulary
-This lesson has four new and important words:<br/>
+This lesson has two new and important words:<br/>
 
-**Apply** - use a given function on some inputs
-**Arguments** - the inputs to a function; expressions for arguments follow the name of a function
-**Circle of Evaluation** - a diagram of the structure of an expression (arithmetic or code)
+- **Apply** - use a given function on some inputs
+- **Arguments** - the inputs to a function; expressions for arguments follow the name of a function
 
 ### <a name="GetStarted"></a> 2) Figuring it Out
-- Tell your students that you want them to sum up all of the numbers between 1 & 200. 
-  - Use your body language to indicate that this is not a "serious" or graded exercise.
-     - Now, let them know that they must do it all in their heads.
-     - Add the time constraint of thirty seconds.
-     - They may feel overwhelmed. This is intentional. You can indicate with your tone and demeanor that you might be crazy asking this of them, but begin timing with a resounding: "Starting NOW".
-- Watch the class as you keep time. How many are lost in thought?
-- When time is up, ask if anyone was able to get the total.
-- Ask if there is anyone who thought the problem was so hard that they didn't even attempt it.
-- Did anyone attempt it and just not finish?
-  - What did they try?
-- Guide students toward thinking a little smaller.
-     - If we break the problem up into smaller pieces, it becomes easier to manage.
-     - Let's start at the two ends.  What is 200 + 1?
-     - What is 199 + 2?
-     - What is 198 + 3?
-     - See a pattern?
-     - How many of these pairs will we have?
-         - What is the last pair we will find?  100 + 101
-         - That means that we have 100 total pairs.
-         - If we have 100 total pairs of sums of 201, how do we find the final total?
-         - What is 100 * 201?
-   - Now, what if we wanted to find the trick to do this with other numbers?  
-     - Can we do it easily with 2,000?
-     - How about 20,000?
-     - What stays the same? What is different?
-     - If we use abstractions to make our end goal something that can change (say we name it "blank") then we can make an algorithm that will work for any number
-- Work through the problem until you ultimately get ? = ("blank"/2) * ("blank"+1)
-- Do a few simple examples to show that the algorithm is correct for blanks= 2, 3, 4, & 5.
+Welcome to CS in Middle School Math! In this course, you’ll be learning a new programming language - a way to tell computers exactly what you want them to do. Just like English, Spanish or French, a programming language has its own vocabulary and grammar that you’ll have to learn. Fortunately, the language you’ll be using here has a lot in common with simple math that you already know!
 
-"This is all to show that if you use the tools of Computational Thinking (decomposition, pattern matching, abstraction, and algorithms), then you can figure out how to solve problems that no one has already taught you how to solve...just like we did here!  This will be an extremely powerful skill for the rest of your life!"
+Connect the material that’s to come with things students already know:
+
+- Talk to them about what makes a language - especially if you have students who speak a second or third language
+- Programming is very much a language, with its own syntax, semantics, etc
+- Ask students about their favorite videogames. Be open about the scale of a modern game: they cost millions of dollars, are built by huge teams of programmers and artists, and are developed over years.
+- Set expectations about what can be accomplished in a single, introductory programming class.
+
 
 [/together]
 
 [together]
 
 ## Activities: (25 min)
-### <a name="Activity1"></a> 3) [Computational Thinking](Activity1-ComputationalThinking.pdf)
+### <a name="Activity1"></a> 3) Dissecting a Demo
 
-This lesson is all about a "Game with No Instructions." Students will be charged with figuring out how to play the game as a small group.  The small details of their final algorithm are unimportant.  What *is* important is that they were able to take a huge task like "figuring out how to play a game on their own" and take small steps toward achieving the goal. 
+Let’s begin by exploring a simple videogame, and then figuring out how it works. Open this link to play the game, and spend a minute or two exploring it. You can use the arrow keys to move the cat left, right and jump - try to catch the ruby and avoid the dog!
 
-Students will be guided toward discovering the rules using the steps of computational thinking.  Resist the temptation to point the students toward "doing it right" and allow them just to do it on their own.  If they feel stumped or confused, encourage the students to look at the information that has been given to them, or if they must, ask a classmate.
-
+This game is made up of characters, each of which has its own behavior. The Ruby moves from the right to the left, as does the Dog. NinjaCat only moves when you hit the arrow keys, and she can move left, right, up and down. We can figure out how the game works by first understanding how each character works.
 
 **Directions:**
 
 > 1) Divide students into groups of 2-4.
 
-> 2) Have the groups read over user experiences to get an idea of how other students have played the “Game with No Instructions.”
+> 2) Provide each student with a copy of the reverse-engineering table.
 
-> 3)  Encourage them to pattern match between each experience by circling the sections of words that are identical from player to player. 
+> 3) As students demo the game, ask them to fill in the "Thing in the game..." column with every object they see in the game.
 
-> 4)  Next, have them abstract away differences from each experience by underlining words that change from player to player.
+> 4)  Discuss whith the whole group which things they came up with. All for characters? Background? Score?
 
-> 5)  Using pattern matching and abstraction, have them make a script template for game play by writing up the circled parts of the other students’ experiences, and leaving the underlined sections as blanks.  For example:
-![](ex1.png)
+> 5)  Next, for each of the things in the game, fill in the column describing what changes. Size? Movement? Value?
 
-> 6)  Give students a blank sheet of paper to write a list of instructions for how they think this game should be played based on the user experiences that they just read. This will be their algorithm.
-
-> 7) Have students play the game using the algorithm that they just made. Each player should get at least two turns.
+> 6)  Ask students to share back with the whole group. Note how students described changes - how detailed were they? What words did they use to describe movement?
 
 
+### <a name="Activity2"></a> 4) Coordinate Planes
+
+Computers use numbers to represent a character’s position onscreen, using number lines as rulers to measure the distance from the bottom-left corner of the screen. For our videogame, we will place the numberline so that the screen runs from 0 (on the left) to 640 (on the right). We can take the image of the Dog, stick it anywhere on the line, and measure the distance back to the lefthand edge. Anyone else who knows about our number line will be able to duplicate the exact position of the Dog, knowing only the number. What is the coordinate of the Dog on the righthand side of the screen? The center? What coordinate would place the Dog beyond the lefthand edge of the screen?
+
+The key point for students here is precision and objectivity. There are many possible correct answers, but students should understand why any solution should be accurate and unambiguous. This requires students to propose solutions that share a common "zero" (the starting point of their number line) and direction (literally, the direction from which a character’s position is measured).
+
+By adding a second number line, we can locate a character anywhere on the screen in either dimension. The first line is called the x-axis, which runs from left to right. The second line, which runs up and down, is called the y-axis. A 2-dimensional coordinate consists of both the x- and y-locations on the axes. Suppose we wanted to locate NinjaCat’s position on the screen. We can find the x-coordinate by dropping a line down from NinjaCat and read the position on the number line. The y-coordinate is found by running a line to the y-axis.
+
+A coordinate represents a single point, and an image is (by definition) many points. Some students will ask whether a character’s coordinate refers to the center of the image, or one of the corners. In this particular program, the center serves as the coordinate - but other programs may use another location. The important point in discussion with students is that there is flexibility here, as long as the convention is used consistently.
+
+When we write down these coordinates, we always put the x before the y (just like in the alphabet!). Most of the time, you’ll see coordinates written like this: (200, 50) meaning that the x-coordinate is 200 and the y-coordinate is 50.
+
+Depending on how a character moves, their position might change only along the x-axis, only along the y-axis, or both. Look back to the table you wrote in the workbook (Page 2). Can NinjaCat move up and down in the game? Can she move left and right? So what’s changing: her x-coordinate, her y-coordinate, or both? What about the clouds? Do they move up and down? Left and right? Both?
+ 
+Fill in the rest of the table, identifying what is changing for each of your characters.
 [/together]
 
 [together]
 
 ## Wrap-up (5 min)
-### <a name="WrapUp"></a> 4) Flash Chat: What did we learn?
-- What should you try to do when you're asked to do something and you don't know how?
-- If a problem is too hard, what should you try to do?
-- If you find similarities in lots of solutions to different problems, what does that probably tell you? 
-- If you have a problem that is just a little different from a problem that you have a solution for, what would you do? 
+### <a name="WrapUp"></a> 5) Brainstorming for a Game
+
 
 [tip]
 
 # Lesson Tip  
-Flash Chat questions are intended to spark big-picture thinking about how the lesson relates to the greater world and the students' greater future.  Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow partner.
+The structure of your students' games will very closely resemble the demo they've just played. Many students will want to reach for the stars and design the next Halo. Remind them that major games like that take massive teams many years to build. Some of the most fun and enduring games are built on very simple mechanics (think Pacman, Tetris, or even Flappy Bird).
 
 [/tip]
-
-
-### <a name="Shmocab"></a> 5) Vocab Shmocab
-- Which one of these definitions did we learn a word for today?
-
-> "Bringing two pieces together" <br/>
-> "Breaking a problem down into smaller pieces" <br/>
-> "An educated guess"<br/>
->> ...and what is the word that we learned?
 
 [/together]
 
 [together]
 
 ## Assessment (5 min)
-### <a name="Assessment"></a>6) [Computational Thinking Assessment](Assessment1-CompThinking.pdf)
-- Hand out the assessment worksheet and allow students to complete the activity independently after the instructions have been well explained. 
-- This should feel familiar, thanks to the previous activities.
+### <a name="Assessment"></a>6) Videogames and Coordinate Planes Assessment
+
+Link to Online Assessment
 
 [/together]
-
-<!--(this is left in here as an example of how to include an image in Markdown)
-![](binaryphoto.png) -->
-
-
 
 [standards]
 
 ## Connections and Background Information
 
-### ISTE Standards (formerly NETS) 
 
-- 1.a - Apply existing knowledge to generate new ideas, products, or processes.
-- 1.c - Use models and simulation to explore complex systems and issues.   
-- 2.d - Contribute to project teams to solve problems.  
-- 4.b - Plan and manage activities to develop a solution or complete a project.
-- 4.d - Use multiple processes and diverse perspectives to explore alternative solutions.
-
-### CSTA K-12 Computer Science Standards
-
-- CPP.L1:6-05. Construct a program as a set of step-by-step instructions to be acted out.
-- CT.L1:6-02. Develop a simple understanding of an algorithm using computer-free exercises.
-- CT.L2-01. Use the basic steps in algorithmic problem solving to design solutions. 
-- CT.L2-06. Describe and analyze a sequence of instructions being followed.
-- CT.L2-08. Use visual representations of problem states, structures, and data.
-- CT.L2-12. Use abstraction to decompose a problem into sub problems.
-- CT.L2-14. Examine connections between elements of mathematics and computer science including binary numbers, logic, sets, and functions.
-
-### NGSS Science and Engineering Practices
- 
-- 3-5-ETS1-2. Generate and compare multiple possible solutions to a problem based on how well each is likely to meet the criteria and constraints of the problem. 
-
-### Common Core Mathematical Practices
- 
-- 1. Make sense of problems and persevere in solving them.
-- 2. Reason abstractly and quantitatively.
-- 3. Construct viable arguments and critique the reasoning of others.
-- 6. Attend to precision.
-- 7. Look for and make use of structure.
-- 8. Look for and express regularity in repeated reasoning. 
-
-### Common Core Math Standards
-- 3.OA.3 - Use multiplication and division within 100 to solve word problems in situations involving equal groups, arrays, and measurement quantities.
-- 4.NBT.B.4 - Fluently add and subtract multi-digit whole numbers using the standard algorithm.
-- 5.NBT.B.5 - Fluently multiply multi-digit whole numbers using the standard algorithm.
-
-
-
-### Common Core Language Arts Standards
-
-- SL.3.1 - Engage effectively in a range of collaborative discussions (one-on-one, in groups, and teacher-led) with diverse partners on grade 3 topics and texts, building on others' ideas and expressing their own clearly.
-- SL.3.3 - Ask and answer questions about information from a speaker, offering appropriate elaboration and detail.
-- L.3.6 - Acquire and use accurately grade-appropriate conversational, general academic, and domain-specific words and phrases, including those that signal spatial and temporal relationships.
-- SL.4.1 - Engage effectively in a range of collaborative discussions (one-on-one, in groups, and teacher-led) with diverse partners on grade 4 topics and texts, building on others' ideas and expressing their own clearly.
-- L.4.6 - Acquire and use accurately grade-appropriate general academic and domain-specific words and phrases, including those that signal precise actions, emotions, or states of being and that are basic to a particular topic.
-- SL.5.1 - Engage effectively in a range of collaborative discussions (one-on-one, in groups, and teacher-led) with diverse partners on grade 5 topics and texts, building on others' ideas and expressing their own clearly.
-- L.5.6 - Acquire and use accurately grade-appropriate general academic and domain-specific words and phrases, including those that signal contrast, addition, and other logical relationships
 
 
 [/standards]
-
-<a href="http://creativecommons.org/"><img src="http://www.thinkersmith.org/images/creativeCommons.png" border="0"></a>  
-
-<a href="http://thinkersmith.org/"><img src="http://www.thinkersmith.org/images/thinker.png" border="0"></a><br/>
 
 [/content]
 
