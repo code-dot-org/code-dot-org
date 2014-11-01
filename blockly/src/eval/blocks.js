@@ -265,7 +265,8 @@ function installString(blockly, generator, gensym) {
   };
 
   generator.functional_string = function() {
-    return "Eval.string('" + this.getTitleValue('VAL') + "')";
+    return "Eval.string(" + 
+        blockly.JavaScript.quote_(this.getTitleValue('VAL')) + ")";
   };
 }
 
