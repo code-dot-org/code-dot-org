@@ -56,7 +56,7 @@ Eval.init = function(config) {
   Eval.shownFeedback_ = false;
 
   config.grayOutUndeletableBlocks = true;
-  config.insertWhenRun = false;
+  config.forceInsertTopBlock = null;
 
   config.html = page({
     assetUrl: BlocklyApps.assetUrl,
@@ -98,7 +98,9 @@ Eval.init = function(config) {
     Blockly.JavaScript.addReservedWords('Eval,code');
 
     Eval.answerObject = generateEvalObjectFromBlockXml(level.solutionBlocks);
-    Eval.answerObject.draw(document.getElementById('answer'));
+    if (Eval.answerObject) {
+      Eval.answerObject.draw(document.getElementById('answer'));
+    }
 
     // Adjust visualizationColumn width.
     var visualizationColumn = document.getElementById('visualizationColumn');
@@ -189,6 +191,10 @@ function generateEvalObjectFromBlockXml(blockXml) {
  * Execute the user's code.  Heaven help us...
  */
 Eval.execute = function() {
+  Eval.result = BlocklyApps.ResultType.UNSET;
+  Eval.testResults = BlocklyApps.TestResults.NO_TESTS_RUN;
+  Eval.message = undefined;
+
   // todo (brent) perhaps try to share user vs. expected generation better
   var code = Blockly.Generator.workspaceToCode('JavaScript');
   evalCode(code);
@@ -198,8 +204,8 @@ Eval.execute = function() {
     Eval.userObject.draw(document.getElementById("user"));
   }
 
-  var result = evaluateAnswer();
-  Eval.message = result ?  "Good jorb!" : '';
+  Eval.result = evaluateAnswer();
+  Eval.testResults = Eval.result ? TestResults.ALL_PASS : TestResults.LEVEL_INCOMPLETE_FAIL;
 
   var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
   var textBlocks = Blockly.Xml.domToText(xml);
@@ -208,8 +214,8 @@ Eval.execute = function() {
     app: 'eval',
     level: level.id,
     builder: level.builder,
-    result: result,
-    testResult: result ? TestResults.ALL_PASS : TestResults.APP_SPECIFIC_FAIL,
+    result: Eval.result,
+    testResult: Eval.testResults,
     program: encodeURIComponent(textBlocks),
     onComplete: onReportComplete
   };
@@ -239,8 +245,7 @@ var displayFeedback = function(response) {
   BlocklyApps.displayFeedback({
     app: 'Eval',
     skin: skin.id,
-    // feedbackType: Eval.testResults,
-    message: Eval.message ? Eval.message : "todo (brent): wrong",
+    feedbackType: Eval.testResults,
     response: response,
     level: level
   });
