@@ -14,7 +14,7 @@
   %link{href: "#{blockly_path}css/#{app}.css", rel: 'stylesheet', type: 'text/css'}
 
   %script{src: "#{blockly_path}js/#{js_locale}/vendor.js"}
-  - if @game.name == "MazeEC" || @game.name == "Webapp"
+  - if @game.name == "MazeEC" || @game.name == "ArtistEC" || @game.name == "Webapp"
     %script{src: "#{blockly_path}js/jsinterpreter/acorn_interpreter.js"}
     %script{src: "#{blockly_path}js/requirejs/require.js"}
     %script{src: "#{blockly_path}js/ace/ace.js"}
@@ -60,7 +60,7 @@
       #{ "level_source_id: #{@level_source_id}," if @level_source_id }
       #{ "send_to_phone_url: '#{@phone_share_url}'," if @phone_share_url }
       #{ "sendToPhone: true," if send_to_phone}
-      #{ "disableSocialShare: true," if @current_user && (@current_user.age.nil? || @current_user.age < 13) }
+      #{ "disableSocialShare: true," if @current_user && @current_user.under_13? }
       #{ "scriptId: '#{@script.id}'," if @script }
       #{ "levelGameName: '#{@level.game.name}'," if @level.game }
       level: level,

@@ -3,6 +3,8 @@ class Calc < Blockly
     solution_blocks
   )
 
+  before_save :update_ideal_level_source
+
   def xml_blocks
     super + %w(solution_blocks)
   end
@@ -30,7 +32,7 @@ class Calc < Blockly
 
   def self.toolbox
     <<-XML.strip_heredoc.chomp
-      <block type="functional_draw"></block>
+      <block type="functional_compute"></block>
       <block type="functional_plus"></block>
       <block type="functional_minus"></block>
       <block type="functional_times"></block>

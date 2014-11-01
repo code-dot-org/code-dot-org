@@ -3,7 +3,7 @@
   .field
     = f.label :name
     = f.text_field :name, placeholder: 'Level Name'
-  - unless @level.new_record? && (@level.is_a?(Grid) || @level.is_a?(Calc))
+  - unless @level.new_record? && (@level.is_a?(Grid) || @level.is_a?(Calc) || @level.is_a?(Eval))
     .field
       = f.label 'concepts'
       %p

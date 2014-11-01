@@ -16,9 +16,9 @@
   "flappySpecificFail": "Vaša koda izgleda super - z vsakim klikom boste poleteli za en zamah. Ampak da dosežete tarčo morate klikniti večkrat zaporedoma.",
   "incrementPlayerScore": "Doseči točko",
   "incrementPlayerScoreTooltip": "Dodaj ena k trenutnemu dosežku.",
-  "nextLevel": "Čestitam! Rešili ste to uganko.",
+  "nextLevel": "Čestitke! Zaključil/a si to uganko.",
   "no": "Ne",
-  "numBlocksNeeded": "Ta uganka je lahko rešena z %1 blokom.",
+  "numBlocksNeeded": "Ta uganka je lahko rešena z %1 bloki.",
   "playSoundRandom": "Zaigraj naključni zvok",
   "playSoundBounce": "Predvajaj zvok poskoka",
   "playSoundCrunch": "predvajaj zvok drobljenja",
@@ -126,7 +126,7 @@
   "whenCollideObstacleTooltip": "Execute the actions below when Flappy hits an obstacle.",
   "whenEnterObstacle": "when pass obstacle",
   "whenEnterObstacleTooltip": "Execute the actions below when Flappy enters an obstacle.",
-  "whenRunButtonClick": "when Run is clicked",
-  "whenRunButtonClickTooltip": "Execute the actions below when the run button is pressed.",
-  "yes": "Ja"
+  "whenRunButtonClick": "ko se igra začne",
+  "whenRunButtonClickTooltip": "Izvedite spodnja dejanja, ko se igra začne.",
+  "yes": "Da"
 }

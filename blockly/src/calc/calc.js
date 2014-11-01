@@ -46,7 +46,6 @@ BlocklyApps.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
 
-
 /**
  * Initialize Blockly and the Calc.  Called on page load.
  */
@@ -64,17 +63,19 @@ Calc.init = function(config) {
   Calc.shownFeedback_ = false;
 
   config.grayOutUndeletableBlocks = true;
-  config.insertWhenRun = false;
+  config.forceInsertTopBlock = 'functional_compute';
 
   config.html = page({
     assetUrl: BlocklyApps.assetUrl,
     data: {
       localeDirection: BlocklyApps.localeDirection(),
+      visualization: require('./visualization.html')(),
       controls: require('./controls.html')({
         assetUrl: BlocklyApps.assetUrl
       }),
       blockUsed : undefined,
       idealBlockNumber : undefined,
+      editCode: level.editCode,
       blockCounterClass : 'block-counter-default'
     }
   });
@@ -86,30 +87,22 @@ Calc.init = function(config) {
   };
 
   config.afterInject = function() {
+    var svg = document.getElementById('svgCalc');
+    svg.setAttribute('width', CANVAS_WIDTH);
+    svg.setAttribute('height', CANVAS_HEIGHT);
+
+    // This is hack that I haven't been able to fully understand. Furthermore,
+    // it seems to break the functional blocks in some browsers. As such, I'm
+    // just going to disable the hack for this app.
+    Blockly.BROKEN_CONTROL_POINTS = false;
+
     // Add to reserved word list: API, local variables in execution evironment
     // (execute) and the infinite loop detection function.
     //XXX Not sure if this is still right.
     Blockly.JavaScript.addReservedWords('Calc,code');
 
-    // Helper for creating canvas elements.
-    var createCanvas = function(id, width, height) {
-      var el = document.createElement('canvas');
-      el.id = id;
-      el.width = width;
-      el.height = height;
-      return el;
-    };
-
-    // Create display canvas.
-    var display = createCanvas('display', 400, 400);
-    var visualization = document.getElementById('visualization');
-    visualization.appendChild(display);
-    Calc.ctxDisplay = display.getContext('2d');
-
     Calc.expressions.target = generateExpressionFromBlockXml(level.solutionBlocks);
     Calc.drawExpressions();
-
-    // todo - figure out LB story
 
     // Adjust visualizationColumn width.
     var visualizationColumn = document.getElementById('visualizationColumn');
@@ -122,11 +115,6 @@ Calc.init = function(config) {
     // base's BlocklyApps.resetButtonClick will be called first
     var resetButton = document.getElementById('resetButton');
     dom.addClickTouchEvent(resetButton, Calc.resetButtonClick);
-  };
-
-  config.getDisplayWidth = function() {
-    var el = document.getElementById('visualizationColumn');
-    return el.getBoundingClientRect().width;
   };
 
   BlocklyApps.init(config);
@@ -154,6 +142,7 @@ Calc.resetButtonClick = function () {
   Calc.expressions.user = null;
   Calc.expressions.current = null;
   Calc.shownFeedback_ = false;
+  Calc.message = null;
 
   Calc.drawExpressions();
 };
@@ -213,8 +202,12 @@ function generateExpressionFromBlockXml(blockXml) {
  * Execute the user's code.  Heaven help us...
  */
 Calc.execute = function() {
+  Calc.result = BlocklyApps.ResultType.UNSET;
+  Calc.testResults = BlocklyApps.TestResults.NO_TESTS_RUN;
+  Calc.message = undefined;
+
   // todo (brent) perhaps try to share user vs. expected generation better
-  var code = Blockly.Generator.workspaceToCode('JavaScript');
+  var code = Blockly.Generator.workspaceToCode('JavaScript', 'functional_compute');
   evalCode(code);
 
   if (!Calc.lastExpression) {
@@ -226,28 +219,29 @@ Calc.execute = function() {
 
   Calc.expressions.user.applyExpectation(Calc.expressions.target);
 
-  var result = !Calc.expressions.user.failedExpectation(true);
+  Calc.result = !Calc.expressions.user.failedExpectation(true);
+  Calc.testResults = BlocklyApps.getTestResults(Calc.result);
 
-  var equivalent = Calc.expressions.user.isEquivalent(Calc.expressions.target);
+
+  // equivalence means the expressions are the same if we ignore the ordering
+  // of inputs
+  // todo - check for particular testResult instead of result
+  if (!Calc.result && Calc.expressions.user.isEquivalent(Calc.expressions.target)) {
+    Calc.testResults = TestResults.APP_SPECIFIC_FAIL;
+    Calc.message = calcMsg.equivalentExpression();
+  }
 
   Calc.drawExpressions();
 
   var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
   var textBlocks = Blockly.Xml.domToText(xml);
 
-  // todo (brent) - better way of doing this
-  if (equivalent) {
-    Calc.message = result ? "correct" : "expression equivalent";
-  } else {
-    Calc.message = null;
-  }
-
   var reportData = {
     app: 'calc',
     level: level.id,
     builder: level.builder,
-    result: result,
-    testResult: result ? TestResults.ALL_PASS : TestResults.APP_SPECIFIC_FAIL,
+    result: Calc.result,
+    testResult: Calc.testResults,
     program: encodeURIComponent(textBlocks),
     onComplete: onReportComplete
   };
@@ -270,6 +264,7 @@ Calc.step = function (ignoreFailures) {
     return;
   }
 
+  // If we've fully collapsed our expression, display feedback
   if (!Calc.expressions.user.isOperation()) {
     displayFeedback();
     return;
@@ -296,62 +291,76 @@ Calc.step = function (ignoreFailures) {
  * Draw the current state of our two expressions.
  */
 Calc.drawExpressions = function () {
-  var ctx = Calc.ctxDisplay;
-
   var expected = Calc.expressions.current || Calc.expressions.target;
   var user = Calc.expressions.user;
 
-  resetCanvas();
+  // todo - in cases where we have the wrong answer, marking the "next" operation
+  // for both doesn't necessarily make sense, i.e.
+  // goal: ((1 + 2) * (3 + 4))
+  // user: (0 * (3 + 4))
+  // right now, we'll highlight the 1 + 2 for goal, and the 3 + 4 for user
 
-  ctx.font="30px Verdana";
   expected.applyExpectation(expected);
-  drawExpression(ctx, expected, 365, user !== null);
+  drawSvgExpression('answerExpression', expected, user !== null);
 
   if (user) {
     user.applyExpectation(expected);
-    drawExpression(ctx, user, 165, true);
+    drawSvgExpression('userExpression', user, true);
+  } else {
+    clearSvgExpression('userExpression');
   }
 };
 
-function resetCanvas() {
-  var ctx = Calc.ctxDisplay;
-
-  var divider = 300;
-
-  ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-  ctx.fillStyle = '#33ccff';
-  ctx.fillRect(0, 0, 400, divider);
-  ctx.fillStyle = '#996633';
-  ctx.fillRect(0, divider, CANVAS_WIDTH, CANVAS_HEIGHT);
-
-
-  var height = 20;
-  ctx.font= height + "px Verdana";
-  ctx.fillStyle = 'black';
-
-  var goalText = "Goal:"; // todo - i18n
-  var yourExpression = "Your expression:"; // todo -i18n
-  ctx.fillText(yourExpression, 0, height);
-  ctx.fillText(goalText, 0, divider + height);
+function clearSvgExpression(elementId) {
+  var g = document.getElementById(elementId);
+  // remove all existing children, in reverse order so that we don't have to
+  // worry about indexes changing
+  for (var i = g.childNodes.length - 1; i >= 0; i--) {
+    g.removeChild(g.childNodes[i]);
+  }
 }
 
-function drawExpression(ctx, expr, ypos, styleMarks) {
-  var list = expr.getTokenList(true);
+function drawSvgExpression(elementId, expr, styleMarks) {
+  var i, text, textLength, char;
+  var g = document.getElementById(elementId);
+  clearSvgExpression(elementId);
 
-  var strSize = ctx.measureText(expr.toString());
+  var tokenList = expr.getTokenList(styleMarks);
+  var xPos = 0;
+  for (i = 0; i < tokenList.length; i++) {
+    text = document.createElementNS(Blockly.SVG_NS, 'text');
 
-  // todo - handle long strings
-  var xpos = (CANVAS_WIDTH - strSize.width) / 2;
-  for (var i = 0; i < list.length; i++) {
-    var char = list[i].char;
-    ctx.fillStyle = 'black';
-    if (styleMarks && list[i].marked) {
-      // marked parens are green, other marks ar ered
-      ctx.fillStyle = /^[\(|\)]$/.test(char) ? 'white' : 'red';
+    // getComputedTextLength doesn't respect trailing spaces, so we replace them
+    // with _, calculate our size, then return to the version with spaces.
+    char = tokenList[i].char;
+    text.textContent = char.replace(/ /g, '_');
+    g.appendChild(text);
+    // getComputedTextLength isn't available to us in our mochaTests
+    textLength = text.getComputedTextLength ? text.getComputedTextLength() : 0;
+    text.textContent = char;
+
+    text.setAttribute('x', xPos + textLength / 2);
+    text.setAttribute('text-anchor', 'middle');
+    xPos += textLength;
+
+    if (styleMarks && tokenList[i].marked) {
+      if (char === '(' || char === ')') {
+        text.setAttribute('class', 'highlightedParen');
+      } else {
+        text.setAttribute('class', 'exprMistake');
+      }
     }
-    ctx.fillText(char, xpos, ypos);
-    xpos += ctx.measureText(char).width;
   }
+
+  // center entire expression
+  // todo (brent): handle case where expression is longer than width
+  var width = g.getBoundingClientRect().width;
+  var xPadding = (CANVAS_WIDTH - width) / 2;
+  var currentTransform = g.getAttribute('transform');
+  // IE has space separated args, others use comma to separate
+  var newTransform = currentTransform.replace(/translate\(.*[,|\s]/,
+    "translate(" + xPadding + ",");
+  g.setAttribute('transform', newTransform);
 }
 
 /**
@@ -361,14 +370,20 @@ function drawExpression(ctx, expr, ypos, styleMarks) {
 var displayFeedback = function(response) {
   if (!Calc.expressions.user.isOperation() && !Calc.shownFeedback_) {
     Calc.shownFeedback_ = true;
-    BlocklyApps.displayFeedback({
+    // override extra top blocks message
+    level.extraTopBlocks = calcMsg.extraTopBlocks();
+    var options = {
       app: 'Calc',
       skin: skin.id,
-      // feedbackType: Calc.testResults,
-      message: Calc.message ? Calc.message : "todo (brent): wrong",
       response: response,
-      level: level
-    });
+      level: level,
+      feedbackType: Calc.testResults,
+    };
+    if (Calc.message) {
+      options.message = Calc.message;
+    }
+
+    BlocklyApps.displayFeedback(options);
   }
 };
 

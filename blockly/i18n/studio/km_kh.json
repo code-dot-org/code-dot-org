@@ -14,7 +14,7 @@
   "decrementPlayerScore": "remove point",
   "defaultSayText": "វាយ​នៅ​ទី​នេះ",
   "emotion": "mood",
-  "finalLevel": "Congratulations! You have solved the final puzzle.",
+  "finalLevel": "សូម​អបអរសាទរ! អ្នក​បាន​បញ្ចប់​ល្បែង​ប្រាជ្ញា​ចុង​ក្រោយ​ហើយ។",
   "hello": "hello",
   "helloWorld": "Hello World!",
   "incrementPlayerScore": "ពិន្ទុ",
@@ -52,9 +52,9 @@
   "moveUp": "ផ្លាស់​ទី​ឡើង​លើ",
   "moveUpTooltip": "Move an actor up.",
   "moveTooltip": "Move an actor.",
-  "nextLevel": "Congratulations! You have completed this puzzle.",
-  "no": "No",
-  "numBlocksNeeded": "This puzzle can be solved with %1 blocks.",
+  "nextLevel": "សូម​អបអរ​សាទរ! អ្នក​បាន​បញ្ចប់​ល្បែង​ប្រាជ្ញា​នេះ​ហើយ។",
+  "no": "ទេ",
+  "numBlocksNeeded": "ល្បែង​ប្រាជ្ញា​នេះ​អាច​ត្រូវ​បាន​ដោះស្រាយ​ជាមួយ​ប្លុក​ចំនួន %1 ។",
   "ouchExclamation": "Ouch!",
   "playSoundCrunch": "play crunch sound",
   "playSoundGoal1": "play goal 1 sound",
@@ -179,7 +179,7 @@
   "shareGame": "ចែក​រំ​លែក​រឿង​របស់​អ្នក៖",
   "showTitleScreen": "show title screen",
   "showTitleScreenTitle": "ចំ​ណង​ជើង",
-  "showTitleScreenText": "អត្ថ​បទ",
+  "showTitleScreenText": "អត្ថបទ",
   "showTSDefTitle": "វាយ​បញ្ចូល​ចំ​ណង​ជើង​នៅ​ទី​នេះ",
   "showTSDefText": "វាយ​អត្ថ​បទ​នៅ​ទី​នេះ",
   "showTitleScreenTooltip": "Show a title screen with the associated title and text.",
@@ -254,5 +254,5 @@
   "whenSpriteCollidedWithTopEdge": "touches top edge",
   "whenUp": "when up arrow",
   "whenUpTooltip": "Execute the actions below when the up arrow key is pressed.",
-  "yes": "Yes"
+  "yes": "យល់ព្រម"
 }

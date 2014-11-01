@@ -14,7 +14,7 @@
 -class_languages_other_ss ||= nil
 -school_name_s ||= nil
 -school_address_s ||= nil
--school_website_s ||= nil
+-school_website_s ||= ''
 -school_level_ss ||= nil
 -school_gender_s ||= nil
 -school_tuition_s ||= nil
@@ -28,9 +28,11 @@
 
 %h1=(mode == 'review') ? 'Review Class Submission' : 'Submit Your Class'
 %form#submit-school-form{role: "form", onsubmit: "return submitSchoolFormSubmit()"}
-  %p.form-intro-text The info you submit will be shared publicly via the Code.org database, EXCEPT your private email (which will not be shared with anybody).
-  %p.form-intro-text If there are multiple completely different programs at the same location, please submit each separately with a unique name.
-  %p.form-intro-text If you're a university or college, submit your entire undergrad CS program as one entry, and any summer camp or other offerings as a separate submission.
+  -unless mode == 'review'
+    %p.form-intro-text The info you submit will be shared publicly via the Code.org database, EXCEPT your private email (which will not be shared with anybody).
+    %p.form-intro-text If there are multiple completely different programs at the same location, please submit each separately with a unique name.
+    %p.form-intro-text If you're a university or college, submit your entire undergrad CS program as one entry, and any summer camp or other offerings as a separate submission.
+
   #error-message{style: 'display: none'}
 
   .main-section
@@ -89,6 +91,7 @@
     .form-group
       %label.control-label{for: "school-website"} Website
       %span.form-required-field *
+      %a{href: school_website_s[/\Ahttp:\/\//] || school_website_s[/\Ahttps:\/\//] ? school_website_s : "http://#{school_website_s}", target: "_blank", style: "float: right;"} (Open in new window)
       %div
         %input#school-website.form-control{name: "school_website_s", placeholder: "School or program website", type: "text", required: "", value: school_website_s}/
     .form-group

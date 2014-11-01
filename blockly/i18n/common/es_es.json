@@ -8,7 +8,7 @@
   "catLoops": "Iteraciones",
   "catMath": "Matemáticas",
   "catProcedures": "Funciones",
-  "catText": "Texto",
+  "catText": "texto",
   "catVariables": "Variables",
   "codeTooltip": "Ver el código JavaScript generado.",
   "continue": "Continuar",
@@ -21,11 +21,11 @@
   "end": "fin",
   "emptyBlocksErrorMsg": "Los bloques \"repetir\" o \"si\" deben tener otros bloques dentro de ellos para funcionar. Asegúrate que el bloque interno quede correctamente dentro del bloque que lo contiene.",
   "emptyFunctionBlocksErrorMsg": "El bloque de función necesita tener otros bloques en su interior para funcionar.",
-  "extraTopBlocks": "Tiene bloques separados. ¿Quieres decir que quieres fijarlos al bloque \"cuando se ejecuta\"?",
+  "extraTopBlocks": "Tienes bloques sueltos. ¿Quisiste adjuntarlos al bloque \"Cuando se ejecuta\"?",
   "finalStage": "¡Felicidades! Has completado la etapa final.",
   "finalStageTrophies": "¡Felicidades! Has completado la etapa final y ganaste  {numTrophies, plural, one {un trofeo} other {# trofeos}}.",
   "finish": "Terminar",
-  "generatedCodeInfo": "Incluso las mejores universidades enseñan codificación basada en bloques (por ejemplo, {berkeleyLink}, {harvardLink}). Aun así los bloques que has codificado se pueden mostrar en JavaScript, el lenguaje de programación más utilizado en el mundo:",
+  "generatedCodeInfo": "Incluso las mejores universidades enseñan programación basada en bloques (por ejemplo, {berkeleyLink}, {harvardLink}). Pero, por debajo, los bloques que has programado también se pueden mostrar en JavaScript, el lenguaje de programación más utilizado en el mundo:",
   "hashError": "Lo sentimos, '%1' no se corresponde con ningún programa guardado.",
   "help": "Ayuda",
   "hintTitle": "Sugerencia:",
@@ -54,7 +54,7 @@
   "tooFewBlocksMsg": "Estás utilizando todos los tipos necesarios de bloques, pero trata de usar más de estos tipos de bloques para completar este puzzle.",
   "tooManyBlocksMsg": "Puedes resolver este puzzle con <x id='START_SPAN'/><x id='END_SPAN'/> bloques.",
   "tooMuchWork": "¡Me has hecho trabajar mucho!  ¿Podrías tratar de repetir menos veces?",
-  "toolboxHeader": "Bloques",
+  "toolboxHeader": "bloques",
   "openWorkspace": "Cómo funciona",
   "totalNumLinesOfCodeWritten": "Total: {numLines, plural, one {1 línea} other {# lineas}} de código.",
   "tryAgain": "Vuelve a intentarlo",
@@ -77,5 +77,5 @@
   "tryHOC": "Prueba la Hora del Código",
   "signup": "Únete al curso de introducción",
   "hintHeader": "Aquí hay un consejo:",
-  "genericFeedback": "Ver como terminaste, y tratar de reparar tu programa."
+  "genericFeedback": "Mira como terminaste, y trata de reparar tu programa."
 }

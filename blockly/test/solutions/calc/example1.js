@@ -21,8 +21,6 @@ module.exports = {
       '</xml>'
     },
     {
-      // todo (brent) - validate error messages. this should fail, but
-      // differently having completely the wrong answer
       description: "mirrored answer",
       expected: {
         result: false,
@@ -39,7 +37,7 @@ module.exports = {
       description: "wrong answer",
       expected: {
         result: false,
-        testResult: TestResults.APP_SPECIFIC_FAIL
+        testResult: TestResults.LEVEL_INCOMPLETE_FAIL
       },
       xml: '<xml>' +
         blockUtils.calcBlockXml('functional_times', [

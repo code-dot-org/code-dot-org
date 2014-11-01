@@ -3,6 +3,7 @@ title: Resources
 layout: wide
 nav: resources_nav
 ---
+<a href="/#join"><button style="float: right; margin-top: 50px">Sign up your event</button></a>
 # Resources
 
 ## Hosting an Hour of Code? <a href="<%= hoc_uri('/resources/how-to') %>">See the how-to guide</a>
@@ -62,6 +63,19 @@ nav: resources_nav
 [![image](/images/fit-250/banner1.jpg)](/images/banner1.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 [![image](/images/fit-250/banner3.jpg)](/images/banner3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 [![image](/images/fit-500/banner5.jpg)](/images/banner5.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a id="social"></a>
+## Post these on social media
+[![image](/images/fit-250/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/fit-250/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/fit-250/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+
+[![image](/images/fit-250/mark.jpg)](/images/mark.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/fit-250/susan.jpg)](/images/susan.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/fit-250/ashton.jpg)](/images/ashton.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/fit-250/marissa.jpg)](/images/marissa.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/fit-250/chris.jpg)](/images/chris.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+
 
 <a id="sample-emails"></a>
 ## Send these emails to help promote the Hour of Code
@@ -141,3 +155,4 @@ Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your res
 Sincerely,
 [NAME], [TITLE]
 
+<a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>

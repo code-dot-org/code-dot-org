@@ -3,6 +3,7 @@ var Colours = require('./core').Colours;
 var answer = require('./answers').answer;
 var msg = require('../../locale/current/turtle');
 var blockUtils = require('../block_utils');
+var utils = require('../utils');
 
 // An early hack introduced some levelbuilder levels as page 5, level 7. Long
 // term we can probably do something much cleaner, but for now I'm calling
@@ -83,7 +84,7 @@ var blocks = {
 /**
  * Information about level-specific requirements.
  */
-module.exports = {
+var levels = module.exports = {
   // Level 1: El.
   '1_1': {
     answer: answer(1, 1),
@@ -848,3 +849,36 @@ module.exports = {
     sliderSpeed: 1.0
   }
 };
+
+levels.ec_1_1 = utils.extend(levels['1_1'], {
+  'editCode': true,
+  'codeFunctions': [
+    {'func': 'moveForward', 'params': ["100"], 'idArgLast': true },
+    {'func': 'turnRight', 'params': ["90"], 'idArgLast': true },
+  ],
+});
+levels.ec_1_2 = utils.extend(levels['1_2'], {
+  'editCode': true,
+  'codeFunctions': [
+    {'func': 'moveForward', 'params': ["100"], 'idArgLast': true },
+    {'func': 'turnRight', 'params': ["90"], 'idArgLast': true },
+    {'func': 'penColour', 'params': ["'#ff0000'"], 'idArgLast': true },
+  ],
+});
+levels.ec_1_3 = utils.extend(levels['1_3'], {
+  'editCode': true,
+  'codeFunctions': [
+    {'func': 'moveForward', 'params': ["100"], 'idArgLast': true },
+    {'func': 'turnRight', 'params': ["90"], 'idArgLast': true },
+    {'func': 'penColour', 'params': ["'#ff0000'"], 'idArgLast': true },
+  ],
+});
+levels.ec_1_4 = utils.extend(levels['1_4'], {
+  'editCode': true,
+  'codeFunctions': [
+    {'func': 'moveForward', 'params': ["100"], 'idArgLast': true },
+    {'func': 'turnRight', 'params': ["90"], 'idArgLast': true },
+    {'func': 'penColour', 'params': ["'#ff0000'"], 'idArgLast': true },
+  ],
+});
+
