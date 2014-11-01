@@ -3,6 +3,7 @@
   "game_id": 33,
   "created_at": "2014-09-29T21:18:43.000Z",
   "level_num": "custom",
+  "ideal_level_source_id": 374,
   "user_id": 2,
   "properties": {
     "skin": "calc",

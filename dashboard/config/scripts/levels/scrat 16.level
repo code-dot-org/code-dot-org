@@ -1,0 +1,51 @@
+<Maze>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2014-10-31T18:01:22.000Z",
+  "level_num": "custom",
+  "user_id": 3,
+  "properties": {
+    "skin": "scrat",
+    "maze": "[[0,0,0,4,0,0,0,0],[0,0,0,1,0,0,0,0],[0,1,1,1,1,1,0,0],[0,1,0,0,0,1,0,0],[0,1,0,0,0,1,0,0],[0,1,0,3,0,1,1,4],[0,1,1,1,0,2,0,0],[0,0,0,0,0,0,0,0]]",
+    "instructions": "Acorn! Acorn! Acorn! Use an \"if\" block to get me there with the fewest number of blocks.",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "ideal": "5",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "start_direction": "0",
+    "step_mode": "0",
+    "maze_data": null,
+    "step_speed": "2"
+  }
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward"/>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="maze_forever"/>
+        <block type="maze_if">
+          <title name="DIR">isPathLeft</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="maze_forever"/>
+        <block type="maze_if">
+          <title name="DIR">isPathLeft</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+        <block type="maze_moveForward"/>
+      </xml>
+    </required_blocks>
+  </blocks>
+</Maze>
