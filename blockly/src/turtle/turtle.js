@@ -112,7 +112,7 @@ Turtle.init = function(config) {
   }
 
   config.grayOutUndeletableBlocks = true;
-  config.insertWhenRun = true;
+  config.forceInsertTopBlock = 'when_run';
 
   if (skin.id == "anna")
   {

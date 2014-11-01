@@ -18,7 +18,7 @@ module.exports = {
       description: "Nothing",
       expected: {
         result: false,
-        testResult: TestResults.APP_SPECIFIC_FAIL
+        testResult: TestResults.LEVEL_INCOMPLETE_FAIL
       },
       xml: '<xml>' +
       '</xml>'
@@ -36,8 +36,9 @@ module.exports = {
         var stroke = circle.getAttribute('stroke');
         assert(fill === 'none', 'fill: ' + fill);
         assert(stroke === 'red', 'stroke: ' + stroke);
-        assert(circle.getAttribute('cx') === '200');
-        assert(circle.getAttribute('cy') === '200');
+        assert(circle.getAttribute('cx') === '0');
+        assert(circle.getAttribute('cy') === '0');
+        assert(circle.getAttribute('transform', ' translate(200, 200)'));
         return true;
       },
       xml: '<xml>' +
@@ -66,7 +67,7 @@ module.exports = {
       description: "wrong color",
       expected: {
         result: false,
-        testResult: TestResults.APP_SPECIFIC_FAIL
+        testResult: TestResults.LEVEL_INCOMPLETE_FAIL
       },
       xml: '<xml>' +
         blockUtils.mathBlockXml('functional_circle', {

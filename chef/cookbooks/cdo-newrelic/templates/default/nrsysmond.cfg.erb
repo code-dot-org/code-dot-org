@@ -1,0 +1,129 @@
+#
+# New Relic Server Monitor configuration file.
+#
+# Lines that begin with a # are comment lines and are ignored by the server
+# monitor. For those options that have command line equivalents, if the
+# option is specified on the command line it will over-ride any value set
+# in this file.
+#
+
+#
+# Option : license_key
+# Value  : 40-character hexadecimal string provided by New Relic. This is
+#          required in order for the server monitor to start.
+# Default: none
+#
+license_key=<%= node['cdo-newrelic']['license-key'] %>
+
+#
+# Option : loglevel
+# Value  : Level of detail you want in the log file (as defined by the logfile
+#          setting below. Valid values are (in increasing levels of verbosity):
+#          error        - show errors only
+#          warning      - show errors and warnings
+#          info         - show minimal additional information messages
+#          verbose      - show more detailed information messages
+#          debug        - show debug messages
+#          verbosedebug - show very detailed debug messages
+# Default: error
+# Note   : Can also be set with the -d command line option.
+#
+loglevel=info
+
+#
+# Option : logfile
+# Value  : Name of the file where the server monitor will store it's log
+#          messages. The amount of detail stored in this file is controlled
+#          by the loglevel option (above).
+# Default: none. However it is highly recommended you set a value for this.
+# Note   : Can also be set with the -l command line option.
+#
+logfile=/var/log/newrelic/nrsysmond.log
+
+#
+# Option : proxy
+# Value  : The name and optional login credentials of the proxy server to use
+#          for all communication with the New Relic collector. In its simplest
+#          form this setting is just a hostname[:port] setting. The default
+#          port if none is specified is 1080. If your proxy requires a user
+#          name, use the syntax user@host[:port]. If it also requires a
+#          password use the format user:password@host[:port]. For example:
+#            fred:secret@proxy.mydomain.com:8181
+# Default: none (use a direct connection)
+#
+#proxy=
+
+#
+# Setting: ssl
+# Type   : boolean
+# Purpose: If you prefer the daemon to use the secure HTTP (https) protocol
+#          when communicating with the New Relic collector servers, set this
+#          to true.
+# Default: true (as of version 1.4)
+#
+#ssl=true
+
+#
+# Setting: ssl_ca_bundle
+# Type   : string
+# Purpose: Sets the location of a file containing CA certificates in PEM
+#          format. When set, the certificates in this file will be used
+#          to authenticate the New Relic collector servers. If ssl_ca_path
+#          is also set (see below), the certificates in this file will be
+#          searched first, followed by the certificates contained in the
+#          ssl_ca_path directory. This setting has no effect when ssl
+#          is set to false.
+# Default: none
+# Note   : Can also be set with the -b command line option.
+#
+#ssl_ca_bundle=
+
+#
+# Setting: ssl_ca_path
+# Type   : string
+# Purpose: Sets the location of a directory containing trusted CA certificates
+#          in PEM format. When set, the certificates in this directory will be
+#          used to authenticate the New Relic collector servers. If
+#          ssl_ca_bundle is also set (see above), it will be searched first
+#          followed by the certificates contained in ssl_ca_path. This
+#          setting has no effect when ssl is set to false.
+# Default: none
+# Note   : Can also be set with the -S command line option.
+#
+#ssl_ca_path=
+
+#
+# Option : pidfile
+# Value  : Name of a file where the server monitoring daemon will store it's
+#          process ID (PID). This is used by the startup and shutdown script
+#          to determine if the monitor is already running, and to start it up
+#          or shut it down.
+# Default: /tmp/nrsysmond.pid
+# Note   : Can also be set with the -p command line option.
+#
+#pidfile=/var/run/newrelic/nrsysmond.pid
+
+#
+# Option : collector_host
+# Value  : The name of the New Relic collector to connect to. This should only
+#          ever be changed on advise from a New Relic support staff member.
+#          The format is host[:port]. Using a port number of 0 means the default
+#          port, which is 80 (if not using the ssl option - see below) or 443
+#          if SSL is enabled. If the port is omitted the default value is used.
+# Default: collector.newrelic.com
+#
+#collector_host=collector.newrelic.com
+
+#
+# Option : timeout
+# Value  : How long the monitor should wait to contact the collector host. If
+#          the connection cannot be established in this period of time, the
+#          monitor will progressively back off in 15-second increments, up to
+#          a maximum of 300 seconds. Once the initial connection has been
+#          established, this value is reset back to the value specified here
+#          (or the default). This then sets the maximum time to wait for
+#          a connection to the collector to report data. There is no back-off
+#          once the original connection has been made. The value is in seconds.
+# Default: 30
+#
+#timeout=30

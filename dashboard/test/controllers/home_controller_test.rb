@@ -125,7 +125,7 @@ class HomeControllerTest < ActionController::TestCase
 
     assert_select '#left_off'
     assert_select 'form[action=http://test.host/s/course1/stage/3/puzzle/1]' # continue link
-    assert_select 'h3', 'Course 1 - For early readers' # progress block
+    assert_select 'h3', 'Course 1' # progress block
     assert_select 'a.level_link[href=http://test.host/s/course1/stage/3/puzzle/1]' # link to level in progress
   end
 

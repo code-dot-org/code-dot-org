@@ -91,7 +91,7 @@ function installCompute(blockly, generator, gensym) {
   blockly.Blocks.functional_compute = {
     helpUrl: '',
     init: function() {
-      initTitledFunctionalBlock(this, ' ', 'none', [
+      initTitledFunctionalBlock(this, msg.compute(), 'none', [
         { name: 'ARG1', type: 'Number' }
       ]);
     }

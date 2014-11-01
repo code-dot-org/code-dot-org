@@ -523,7 +523,7 @@ BlocklyApps.init = function(config) {
     if (config.level.edit_blocks === 'required_blocks' ||
       config.level.edit_blocks === 'toolbox_blocks') {
       // Don't show when run block for toolbox/required block editing
-      config.insertWhenRun = false;
+      config.forceInsertTopBlock = null;
     }
   }
 
@@ -562,8 +562,8 @@ BlocklyApps.init = function(config) {
 
   // Add the starting block(s).
   var startBlocks = config.level.startBlocks || '';
-  if (config.insertWhenRun) {
-    startBlocks = blockUtils.insertWhenRunBlock(startBlocks);
+  if (config.forceInsertTopBlock) {
+    startBlocks = blockUtils.forceInsertTopBlock(startBlocks, config.forceInsertTopBlock);
   }
   startBlocks = BlocklyApps.arrangeBlockPosition(startBlocks, config.blockArrangement);
   BlocklyApps.loadBlocks(startBlocks);
@@ -1139,12 +1139,12 @@ exports.domStringToBlock = function(blockDOMString) {
 };
 
 /**
- * Takes a set of start blocks, and returns them with a when run button inserted
- * in front of the first non-function block.  If we already have a when_run block,
- * does nothing.
+ * Takes a set of start blocks, and returns them with a particular top level
+ * block inserted in front of the first non-function block.  If we already have
+ * this block, does nothing.
  */
-exports.insertWhenRunBlock = function (input) {
-  if (input.indexOf('when_run') !== -1) {
+exports.forceInsertTopBlock = function (input, blockType) {
+  if (input.indexOf(blockType) !== -1) {
     return input;
   }
 
@@ -1154,10 +1154,10 @@ exports.insertWhenRunBlock = function (input) {
   // using document.createElement elsewhere is
   var doc = root.parentNode;
 
-  var whenRun = doc.createElement('block');
-  whenRun.setAttribute('type', 'when_run');
-  whenRun.setAttribute('movable', 'false');
-  whenRun.setAttribute('deletable', 'false');
+  var topBlock = doc.createElement('block');
+  topBlock.setAttribute('type', blockType);
+  topBlock.setAttribute('movable', 'false');
+  topBlock.setAttribute('deletable', 'false');
 
   var numChildren = root.childNodes ? root.childNodes.length : 0;
 
@@ -1178,15 +1178,21 @@ exports.insertWhenRunBlock = function (input) {
 
   if (firstBlock !== null) {
     // when run -> next -> firstBlock
-    var next = doc.createElement('next');
+    var next;
+    if (/^functional/.test(blockType)) {
+      next = doc.createElement('functional_input');
+      next.setAttribute('name', 'ARG1');
+    } else {
+      next = doc.createElement('next');
+    }
     next.appendChild(firstBlock);
-    whenRun.appendChild(next);
+    topBlock.appendChild(next);
   }
 
   if (numChildren > 0) {
-    root.insertBefore(whenRun, root.childNodes[0]);
+    root.insertBefore(topBlock, root.childNodes[0]);
   } else {
-    root.appendChild(whenRun);
+    root.appendChild(topBlock);
   }
   return xml.serialize(root);
 };
@@ -14219,7 +14225,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/en_ploc/common') ; buf.push('\n\n<div id="soft-buttons" class="soft-buttons-none">\n  <button id="leftButton" class="arrow">\n    <img src="', escape((5,  assetUrl('media/1x1.gif') )), '" class="left-btn icon21">\n  <button id="rightButton" class="arrow">\n    <img src="', escape((7,  assetUrl('media/1x1.gif') )), '" class="right-btn icon21">\n  <button id="upButton" class="arrow">\n    <img src="', escape((9,  assetUrl('media/1x1.gif') )), '" class="up-btn icon21">\n  <button id="downButton" class="arrow">\n    <img src="', escape((11,  assetUrl('media/1x1.gif') )), '" class="down-btn icon21">\n</div>\n\n');14; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((17,  assetUrl('media/1x1.gif') )), '">', escape((17,  msg.finish() )), '\n    </button>\n  </div>\n');20; } ; buf.push('\n'); })();
+ buf.push('');1; var msg = require('../../locale/en_ploc/common') ; buf.push('\n\n<div id="soft-buttons" class="soft-buttons-none">\n  <button id="leftButton" class="arrow">\n    <img src="', escape((5,  assetUrl('media/1x1.gif') )), '" class="left-btn icon21">\n  </button>\n  <button id="rightButton" class="arrow">\n    <img src="', escape((8,  assetUrl('media/1x1.gif') )), '" class="right-btn icon21">\n  </button>\n  <button id="upButton" class="arrow">\n    <img src="', escape((11,  assetUrl('media/1x1.gif') )), '" class="up-btn icon21">\n  </button>\n  <button id="downButton" class="arrow">\n    <img src="', escape((14,  assetUrl('media/1x1.gif') )), '" class="down-btn icon21">\n  </button>\n</div>\n\n');18; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((21,  assetUrl('media/1x1.gif') )), '">', escape((21,  msg.finish() )), '\n    </button>\n  </div>\n');24; } ; buf.push('\n'); })();
 } 
 return buf.join('');
 };

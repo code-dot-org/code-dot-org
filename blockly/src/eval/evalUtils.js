@@ -6,8 +6,7 @@ module.exports.ensureType = function (val, type) {
 };
 
 module.exports.getFill = function (style, color) {
-  // todo - i18n
-  // todo - 1asdf becomes 1 with parseInt
+  // todo - 1asdf becomes 1 with parseInt. do we care?
   // for now, we treat anything we don't recognize as solid.
   var alpha = parseInt(style, 10);
   if (style !== "outline") {
