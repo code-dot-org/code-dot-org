@@ -1400,6 +1400,10 @@ Studio.execute = function() {
 
   var handlers = [];
   registerHandlers(handlers, 'when_run', 'whenGameStarts');
+  registerHandlers(handlers, 'functional_setBackground', 'whenGameStarts');
+  registerHandlers(handlers, 'functional_setPlayerSpeed', 'whenGameStarts');
+  registerHandlers(handlers, 'functional_setEnemySpeed', 'whenGameStarts');
+  registerHandlers(handlers, 'functional_showTitleScreen', 'whenGameStarts');
   registerHandlers(handlers, 'studio_whenLeft', 'when-left');
   registerHandlers(handlers, 'studio_whenRight', 'when-right');
   registerHandlers(handlers, 'studio_whenUp', 'when-up');
@@ -1815,7 +1819,10 @@ Studio.setSpriteEmotion = function (opts) {
 };
 
 Studio.setSpriteSpeed = function (opts) {
-  Studio.sprite[opts.spriteIndex].speed = opts.value;
+  var speed = opts.value;
+  speed = (speed < 2 ? 2 : speed);
+  speed = (speed > 12 ? 12 : speed);
+  Studio.sprite[opts.spriteIndex].speed = speed;
 };
 
 Studio.setSpriteSize = function (opts) {
