@@ -141,6 +141,14 @@ Blockly.Connection.prototype.connect = function(connectTo) {
       parentBlock.render();
     }
   }
+
+  // Check if an ancestor block is marked userHidden
+  for (var block = this.sourceBlock_; block = block.parentBlock_; block) {
+    if (!block.isUserVisible()) {
+      this.sourceBlock_.setUserVisible(false);
+      break;
+    }
+  }
 };
 
 /**
@@ -151,6 +159,7 @@ Blockly.Connection.prototype.connect = function(connectTo) {
 Blockly.Connection.prototype.handleOrphan_ = function (existingConnection) {
   var orphanBlock = existingConnection.targetBlock();
   orphanBlock.setParent(null);
+  orphanBlock.setUserVisible(true);
 
   if (this.type === Blockly.INPUT_VALUE || this.type === Blockly.OUTPUT_VALUE) {
     if (!orphanBlock.outputConnection) {
@@ -254,6 +263,7 @@ Blockly.Connection.prototype.disconnect = function() {
   }
   otherConnection.targetConnection = null;
   this.targetConnection = null;
+  this.sourceBlock_.setUserVisible(true);
 
   // Rerender the parent so that it may reflow.
   var parentBlock, childBlock;
@@ -473,6 +483,14 @@ Blockly.Connection.prototype.closest = function(maxLimit, dx, dy) {
    */
   function checkConnection_(yIndex) {
     var connection = db[yIndex];
+    var targetSourceBlock = connection.sourceBlock_;
+
+    // Don't offer to connect to hidden blocks, unless we're in edit mode
+    // TODO(Josh or Dave): don't return true in edit mode
+    if (!targetSourceBlock.isUserVisible()) {
+      return true;
+    }
+
     if (connection.type === Blockly.OUTPUT_VALUE ||
         connection.type === Blockly.FUNCTIONAL_OUTPUT ||
         connection.type === Blockly.PREVIOUS_STATEMENT) {
@@ -494,7 +512,6 @@ Blockly.Connection.prototype.closest = function(maxLimit, dx, dy) {
     }
 
     // Don't let blocks try to connect to themselves or ones they nest.
-    var targetSourceBlock = connection.sourceBlock_;
     do {
       if (sourceBlock == targetSourceBlock) {
         return true;
@@ -625,8 +642,17 @@ Blockly.Connection.prototype.neighbours_ = function(maxLimit) {
    *     the other connection is less than the allowed radius.
    */
   function checkConnection_(yIndex) {
-    var dx = currentX - db[yIndex].x_;
-    var dy = currentY - db[yIndex].y_;
+    var connection = db[yIndex];
+    var targetSourceBlock = connection.sourceBlock_;
+
+    // Don't include invisible blocks unless we're in edit mode
+    // TODO(Josh or Dave): don't return true in edit mode
+    if (!targetSourceBlock.isUserVisible()) {
+      return true;
+    }
+
+    var dx = currentX - connection.x_;
+    var dy = currentY - connection.y_;
     var r = Math.sqrt(dx * dx + dy * dy);
     if (r <= maxLimit) {
       neighbours.push(db[yIndex]);

@@ -141,6 +141,7 @@ Blockly.FunctionEditor.prototype.ensureCreated_ = function() {
 Blockly.FunctionEditor.prototype.hide = function() {
   Blockly.activeWorkspace = Blockly.mainBlockSpace;
   this.functionDefinitionBlock.setUserVisible(false);
+  this.functionDefinitionBlock.movable_ = true;
   var dom = Blockly.Xml.blockToDom_(this.functionDefinitionBlock);
   this.functionDefinitionBlock.dispose(false, false, true);
   Blockly.Xml.domToBlock_(Blockly.mainBlockSpace, dom);
