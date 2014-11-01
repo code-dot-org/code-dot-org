@@ -158,7 +158,22 @@ var TILE_SHAPES = {
   'null1': [3, 0],
   'null2': [3, 1],
   'null3': [0, 3],
-  'null4': [1, 3]
+  'null4': [1, 3],
+
+  '0,0':   [0, 0],
+  '1,0':   [1, 0],
+  '2,0':   [2, 0],
+  '0,1':   [0, 1],
+  '1,1':   [1, 1],
+  '0,2':   [0, 2],
+  '1,2':   [1, 2],
+
+  '2,1':   [2, 1],
+  '3,1':   [3, 1],
+  '2,2':   [2, 2],
+  '3,2':   [3, 2],
+
+  'empty': [4, 0]
 };
 
 function drawMap () {
@@ -355,6 +370,9 @@ function drawMapTiles(svg) {
             (Maze.map[y][x] == SquareType.WALL)) ? '0' : '1';
   };
 
+  var islandX = undefined;
+  var islandY = undefined;
+
   // Compute and draw the tile for each square.
   var tileId = 0;
   var tile, origTile;
@@ -366,7 +384,19 @@ function drawMapTiles(svg) {
         normalize(x + 1, y) +  // West.
         normalize(x, y + 1) +  // South.
         normalize(x - 1, y);   // East.
-      var adjacentToPath = (tile !== '00000');
+
+      var adjacentToPath = false;
+
+      if (mazeUtils.isScratSkin(skin.id)) {
+        var diagonalTiles = 
+          normalize(x - 1, y - 1) +  // NW.
+          normalize(x + 1, y - 1) +  // NE.
+          normalize(x - 1, y + 1) +  // SW.
+          normalize(x + 1, y + 1);   // SE.
+        adjacentToPath = (tile !== '00000') || (diagonalTiles !== '0000');;
+      } else {
+        adjacentToPath = (tile !== '00000');
+      }
 
       // Draw the tile.
       if (!TILE_SHAPES[tile]) {
@@ -391,7 +421,21 @@ function drawMapTiles(svg) {
           // a chance of one of our other tiles
           tile = '10010';
           if (!adjacentToPath) {
-            tile = _.sample( ['10010', '10010', '10010', '10010',  'null3', 'null4']);
+            tile = _.sample(['empty', 'empty', 'empty', '2,1', '3,1', '2,2', '3,2', '1,0', '0,0', '1,0', '2,0']);
+
+            if (islandX == x - 1 && islandY == y)
+              tile = '1,1';
+            if (islandX == x && islandY == y - 1)
+              tile = '0,2';
+            if (islandX == x - 1 && islandY == y - 1)
+              tile = '1,2';
+
+            if (islandX == undefined && islandY == undefined && Math.random() < 1/20 && y != Maze.ROWS-1 && x != Maze.COLS-1)
+            {
+              islandX = x;
+              islandY = y;
+              tile = '0,1';
+            }
           }
         }
 
@@ -424,6 +468,7 @@ function drawMapTiles(svg) {
     }
   }
 }
+
 
 /**
  * Draw the given tile at row, col
