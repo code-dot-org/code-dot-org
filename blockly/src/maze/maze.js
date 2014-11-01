@@ -370,9 +370,9 @@ function drawMapTiles(svg) {
             (Maze.map[y][x] == SquareType.WALL)) ? '0' : '1';
   };
 
-  var islandX = undefined;
-  var islandY = undefined;
-
+  var islandX;
+  var islandY;
+  
   // Compute and draw the tile for each square.
   var tileId = 0;
   var tile, origTile;
@@ -393,7 +393,7 @@ function drawMapTiles(svg) {
           normalize(x + 1, y - 1) +  // NE.
           normalize(x - 1, y + 1) +  // SW.
           normalize(x + 1, y + 1);   // SE.
-        adjacentToPath = (tile !== '00000') || (diagonalTiles !== '0000');;
+        adjacentToPath = (tile !== '00000') || (diagonalTiles !== '0000');
       } else {
         adjacentToPath = (tile !== '00000');
       }
@@ -430,7 +430,7 @@ function drawMapTiles(svg) {
             if (islandX == x - 1 && islandY == y - 1)
               tile = '1,2';
 
-            if (islandX == undefined && islandY == undefined && Math.random() < 1/20 && y != Maze.ROWS-1 && x != Maze.COLS-1)
+            if (islandX === undefined && islandY === undefined && Math.random() < 1/20 && y != Maze.ROWS-1 && x != Maze.COLS-1)
             {
               islandX = x;
               islandY = y;
