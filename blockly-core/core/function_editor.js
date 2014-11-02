@@ -39,6 +39,9 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
     throw new Error("Can't find definition block to edit");
   }
 
+  this.show();
+  this.refreshParamsToolbox();
+
   var dom = Blockly.Xml.blockToDom_(targetFunctionDefinitionBlock);
   targetFunctionDefinitionBlock.dispose(false, false, true);
   this.functionDefinitionBlock = Blockly.Xml.domToBlock_(Blockly.modalWorkspace, dom);
@@ -47,16 +50,13 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
   this.functionDefinitionBlock.setUserVisible(true);
 
   goog.dom.getElement('functionNameText').value = functionName;
-
-  this.show();
-  this.refreshParamsToolbox();
 };
 
 Blockly.FunctionEditor.prototype.refreshParamsToolbox = function () {
   goog.array.clear(this.paramToolboxBlocks);
   var self = this;
   this.functionDefinitionBlock.getVars().forEach(function(varName){
-    self.addParameter(varName);
+    self.addParameter(varName, true);
   });
   this.refreshFlyoutParams_();
 };
@@ -92,7 +92,7 @@ Blockly.FunctionEditor.prototype.bindToolboxHandlers_ = function() {
   }
 };
 
-Blockly.FunctionEditor.prototype.addParameter = function(newParameterName) {
+Blockly.FunctionEditor.prototype.addParameter = function(newParameterName, opt_toolboxOnly) {
   // Add the new param block to the local toolbox
   var param = Blockly.createSvgElement('block', {type: 'parameters_get'});
   var v = Blockly.createSvgElement('title', {name: 'VAR'}, param);
@@ -101,8 +101,10 @@ Blockly.FunctionEditor.prototype.addParameter = function(newParameterName) {
   this.flyout_.hide();
   this.flyout_.show(this.paramToolboxBlocks);
   // Update the function definition
-  this.functionDefinitionBlock.arguments_.push(newParameterName);
-  this.functionDefinitionBlock.updateParams_();
+  if (!opt_toolboxOnly) {
+    this.functionDefinitionBlock.arguments_.push(newParameterName);
+    this.functionDefinitionBlock.updateParams_();
+  }
 };
 
 Blockly.FunctionEditor.prototype.renameParameter = function(oldName, newName) {
