@@ -168,6 +168,13 @@ Blockly.Blocks.procedures_defnoreturn = {
       }
     }
   },
+  removeVar: function(oldName) {
+    var index = this.arguments_.indexOf(oldName);
+    if (index > -1) {
+      this.arguments_.splice(index, 1);
+      this.updateParams_();
+    }
+  },
   customContextMenu: function(options) {
     // Add option to create caller.
     var option = {enabled: true};
