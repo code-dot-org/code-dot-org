@@ -31,19 +31,33 @@ goog.require('Blockly.Comment');
 
 /**
  * Class for a flyout.
+ * @param {!Blockly.BlockSpaceEditor} blockSpaceEditor Parent editor.
+ * @param {boolean} opt_insideBubble Is the flyout rendered inside a bubble?
  * @constructor
  */
-Blockly.Flyout = function(blockSpaceEditor) {
+Blockly.Flyout = function(blockSpaceEditor, opt_insideBubble) {
+  var flyout = this;
+
+  /**
+   * @type {!Blockly.BlockSpaceEditor}
+   * @private
+   */
+  this.blockSpaceEditor_ = blockSpaceEditor;
+
   /**
    * @type {!Blockly.BlockSpace}
    * @private
    */
-  var flyout = this;
-  this.blockSpaceEditor_ = blockSpaceEditor;
   this.blockSpace_ = new Blockly.BlockSpace(blockSpaceEditor,
       function() {return flyout.getMetrics_();},
       function(ratio) {return flyout.setMetrics_(ratio);});
   this.blockSpace_.isFlyout = true;
+
+  /**
+   * @type {boolean}
+   * @private
+   */
+  this.insideBubble_ = opt_insideBubble;
 
   /**
    * Opaque data that can be passed to removeChangeListener.
@@ -272,13 +286,15 @@ Blockly.Flyout.prototype.position_ = function() {
   path.push('z');
   this.svgBackground_.setAttribute('d', path.join(' '));
 
-  var x = this.blockSpaceEditor_.toolbox ? this.blockSpaceEditor_.toolbox.width : 0;
+  var leftAnchor = this.blockSpaceEditor_.toolbox ? this.blockSpaceEditor_.toolbox.width : 0;
+  var x = this.insideBubble_ ? metrics.absoluteLeft : leftAnchor;
+  var y = this.insideBubble_ ? metrics.absoluteTop : 0;
   if (Blockly.RTL) {
     x += metrics.viewWidth;
     x -= this.width_;
   }
   this.svgGroup_.setAttribute('transform',
-      'translate(' + x + ',0)');
+      'translate(' + x + ',' + y + ')');
 
   // Record the height for Blockly.Flyout.getMetrics_.
   this.height_ = metrics.viewHeight;

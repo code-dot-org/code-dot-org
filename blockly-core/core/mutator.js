@@ -106,7 +106,7 @@ Blockly.Mutator.prototype.createEditor_ = function() {
   var blockSpaceEditor = this.block_.blockSpace.blockSpaceEditor;
   this.blockSpace_ = new Blockly.BlockSpace(blockSpaceEditor,
       function() {return mutator.getFlyoutMetrics_();}, null);
-  this.flyout_ = new Blockly.Flyout(blockSpaceEditor);
+  this.flyout_ = new Blockly.Flyout(blockSpaceEditor, true);
   this.flyout_.autoClose = false;
   this.svgDialog_.appendChild(this.flyout_.createDom());
   this.svgDialog_.appendChild(this.blockSpace_.createDom());
