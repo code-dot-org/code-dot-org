@@ -31,7 +31,7 @@ Blockly.FunctionEditor.prototype.created_ = false;
  * Current blocks in the editor's toolbox
  * @type {!Array.<!Blockly.Block>}
  */
-Blockly.FunctionEditor.prototype.paramToolboxBlocks = [];
+Blockly.FunctionEditor.prototype.paramToolboxBlocks_ = [];
 
 Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
   var targetFunctionDefinitionBlock = Blockly.mainBlockSpace.findFunction(functionName);
@@ -47,34 +47,27 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
   this.functionDefinitionBlock.moveTo(FRAME_MARGIN_SIDE, FRAME_MARGIN_TOP);
   this.functionDefinitionBlock.movable_ = false;
   this.functionDefinitionBlock.setUserVisible(true);
-  this.refreshParamsToolbox();
+  this.populateParamToolbox_();
 
   goog.dom.getElement('functionNameText').value = functionName;
   goog.dom.getElement('functionDescriptionText').value = this.functionDefinitionBlock.description_ || '';
 };
 
-Blockly.FunctionEditor.prototype.refreshParamsToolbox = function () {
-  goog.array.clear(this.paramToolboxBlocks);
+Blockly.FunctionEditor.prototype.populateParamToolbox_ = function () {
+  goog.array.clear(this.paramToolboxBlocks_);
   var self = this;
   this.functionDefinitionBlock.getVars().forEach(function(varName){
-    self.addParameter(varName, true);
+    self.addParameter(varName);
   });
-  this.refreshFlyoutParams_();
+  this.refreshParamsEverywhere();
 };
 
 Blockly.FunctionEditor.prototype.openWithNewFunction = function () {
   this.ensureCreated_();
 
-  // TODO(bjordan): override (add|remove)TopBlock to mirror mainBlockSpace one (for blocks instantiated in function editor)
-  var newBlock = Blockly.Xml.domToBlock_(Blockly.mainBlockSpace,
+  this.functionDefinitionBlock = Blockly.Xml.domToBlock_(Blockly.mainBlockSpace,
     Blockly.createSvgElement('block', {type: 'procedures_defnoreturn'}));
-  this.functionDefinitionBlock = newBlock;
   this.openAndEditFunction(this.functionDefinitionBlock.getTitleValue('NAME'));
-};
-
-Blockly.FunctionEditor.prototype.refreshFlyoutParams_ = function () {
-  this.flyout_.hide();
-  this.flyout_.show(this.paramToolboxBlocks);
 };
 
 Blockly.FunctionEditor.prototype.bindToolboxHandlers_ = function() {
@@ -90,41 +83,53 @@ Blockly.FunctionEditor.prototype.bindToolboxHandlers_ = function() {
     var varName = paramAddText.value;
     paramAddText.value = '';
     this.addParameter(varName);
+    this.refreshParamsEverywhere();
   }
 };
 
-Blockly.FunctionEditor.prototype.addParameter = function(newParameterName, opt_toolboxOnly) {
+Blockly.FunctionEditor.prototype.addParameter = function(newParameterName) {
   // Add the new param block to the local toolbox
   var param = Blockly.createSvgElement('block', {type: 'parameters_get'});
   var v = Blockly.createSvgElement('title', {name: 'VAR'}, param);
   v.innerHTML = newParameterName;
-  this.paramToolboxBlocks.push(param);
-  this.flyout_.hide();
-  this.flyout_.show(this.paramToolboxBlocks);
-  // Update the function definition
-  if (!opt_toolboxOnly) {
-    this.functionDefinitionBlock.arguments_.push(newParameterName);
-    this.functionDefinitionBlock.updateParams_();
-  }
+  this.paramToolboxBlocks_.push(param);
 };
 
 Blockly.FunctionEditor.prototype.renameParameter = function(oldName, newName) {
-  this.paramToolboxBlocks.forEach(function (block) {
+  this.paramToolboxBlocks_.forEach(function (block) {
     if (block.firstElementChild && block.firstElementChild.innerHTML === oldName) {
       block.firstElementChild.innerHTML = newName;
     }
   });
-  this.refreshFlyoutParams_();
 };
 
 Blockly.FunctionEditor.prototype.removeParameter = function(oldName) {
-  this.paramToolboxBlocks.forEach(function (block, n, arr) {
+  this.paramToolboxBlocks_.forEach(function (block, n, arr) {
     if (block.firstElementChild && block.firstElementChild.innerHTML === oldName) {
       arr.splice(n, 1);
     }
   });
+  this.refreshParamsEverywhere();
+};
+
+Blockly.FunctionEditor.prototype.refreshParamsEverywhere = function() {
+  this.refreshParamsInFlyout_();
+  this.refreshParamsOnFunction_();
+};
+
+Blockly.FunctionEditor.prototype.refreshParamsInFlyout_ = function () {
   this.flyout_.hide();
-  this.flyout_.show(this.paramToolboxBlocks);
+  this.flyout_.show(this.paramToolboxBlocks_);
+};
+
+Blockly.FunctionEditor.prototype.refreshParamsOnFunction_ = function() {
+  var paramNames = [];
+  var paramIDs = [];
+  goog.array.forEach(this.paramToolboxBlocks_, function(blockXML, index) {
+    paramNames.push(blockXML.firstElementChild.innerHTML);
+    paramIDs.push(index);
+  }, this);
+  this.functionDefinitionBlock.updateParamsFromArrays(paramNames, paramIDs);
 };
 
 Blockly.FunctionEditor.prototype.show = function() {

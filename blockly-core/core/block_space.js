@@ -105,7 +105,7 @@ Blockly.BlockSpace.prototype.fireChangeEventPid_ = null;
 Blockly.BlockSpace.prototype.scrollbar = null;
 
 Blockly.BlockSpace.prototype.findFunction = function(functionName) {
-  var blocks = this.topBlocks_;
+  var blocks = this.getTopBlocks();
   for (var x = 0, block; block = blocks[x]; x++) {
     if ((block.type === 'procedures_defnoreturn' || block.type === 'procedures_defreturn')
       && Blockly.Names.equals(functionName, block.getTitleValue('NAME'))) {
@@ -214,10 +214,14 @@ Blockly.BlockSpace.prototype.removeTopBlock = function(block) {
  * @return {!Array.<!Blockly.Block>} The top-level block objects.
  */
 Blockly.BlockSpace.prototype.getTopBlocks = function(ordered) {
-  // Copy the topBlocks_ list.
-  var blocks = [].concat(this.topBlocks_);
-  if (this === Blockly.mainBlockSpace && Blockly.modalBlockSpace) {
-    blocks = blocks.concat(Blockly.modalBlockSpace.getTopBlocks());
+  var blocks = [];
+  if (this === Blockly.mainBlockSpace || this === Blockly.modalBlockSpace) {
+    // Main + modal blockspaces share top blocks
+    blocks = blocks.concat(Blockly.mainBlockSpace.topBlocks_)
+      .concat(Blockly.modalBlockSpace ? Blockly.modalBlockSpace.topBlocks_ : []);
+  } else {
+    // Copy the topBlocks_ list.
+    blocks = blocks.concat(this.topBlocks_);
   }
   if (ordered && blocks.length > 1) {
     var offset = Math.sin(Blockly.BlockSpace.SCAN_ANGLE / 180 * Math.PI);

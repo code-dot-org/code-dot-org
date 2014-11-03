@@ -118,6 +118,7 @@ Blockly.Variables.deleteVariable = function(oldName) {
     // Yield until after the current event callback finishes
     setTimeout(function() {
       Blockly.functionEditor.removeParameter(oldName);
+      Blockly.functionEditor.refreshParamsEverywhere();
     }, 0);
   }
 };
