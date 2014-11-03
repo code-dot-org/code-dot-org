@@ -63,11 +63,6 @@ Blockly.inject = function(container, opt_options) {
    */
   Blockly.mainBlockSpace = Blockly.mainBlockSpaceEditor.blockSpace;
 
-  /**
-   * @type {Blockly.BlockSpace}
-   */
-  Blockly.activeWorkspace = Blockly.mainBlockSpace;
-
   if (Blockly.useModalFunctionEditor) {
     Blockly.functionEditor = new Blockly.FunctionEditor();
   }

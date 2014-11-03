@@ -41,6 +41,7 @@ Blockly.Variables.NAME_TYPE_LOCAL = 'LOCALVARIABLE';
 
 /**
  * Find all user-created variables.
+ * Currently searches the main blockspace only
  * @param {Blockly.Block=} opt_block Optional root block.
  * @return {!Array.<string>} Array of variable names.
  */
@@ -50,9 +51,6 @@ Blockly.Variables.allVariables = function(opt_block) {
     blocks = opt_block.getDescendants();
   } else {
     blocks = Blockly.mainBlockSpace.getAllBlocks();
-    if (Blockly.activeWorkspace !== Blockly.mainBlockSpace) {
-      blocks.concat(Blockly.activeWorkspace.getAllBlocks());
-    }
   }
   var variableHash = {};
   // Iterate through every block and add each variable to the hash.
@@ -83,9 +81,10 @@ Blockly.Variables.allVariables = function(opt_block) {
  * rename them. Does not affect variables in other workspaces.
  * @param {string} oldName Variable to rename.
  * @param {string} newName New variable name.
+ * @param {Blockly.BlockSpace} blockSpace BlockSpace to rename child blocks of
  */
-Blockly.Variables.renameVariable = function(oldName, newName) {
-  var blocks = Blockly.activeWorkspace.getAllBlocks();
+Blockly.Variables.renameVariable = function(oldName, newName, blockSpace) {
+  var blocks = blockSpace.getAllBlocks();
   if (Blockly.modalBlockSpace) {
     blocks = blocks.concat(Blockly.functionEditor.flyout_.blockSpace_.getTopBlocks());
   }
@@ -102,10 +101,10 @@ Blockly.Variables.renameVariable = function(oldName, newName) {
  * Find all instances of the specified variable in the current workspace and
  * delete them. Does not affect variables in other workspaces.
  * @param {string} oldName Variable to rename.
- * @param {string} newName New variable name.
+ * @param {Blockly.BlockSpace} blockSpace blockspace context for variable
  */
-Blockly.Variables.deleteVariable = function(oldName) {
-  var blocks = Blockly.activeWorkspace.getAllBlocks();
+Blockly.Variables.deleteVariable = function(oldName, blockSpace) {
+  var blocks = blockSpace.getAllBlocks();
   // Iterate through every block.
   for (var x = 0; x < blocks.length; x++) {
     var func = blocks[x].removeVar;
@@ -114,7 +113,7 @@ Blockly.Variables.deleteVariable = function(oldName) {
     }
   }
   // Notify the modal workspace to remove the parameter from its flyout
-  if (Blockly.functionEditor) {
+  if (Blockly.modalBlockSpace) {
     // Yield until after the current event callback finishes
     setTimeout(function() {
       Blockly.functionEditor.removeParameter(oldName);

@@ -386,7 +386,7 @@ Blockly.Flyout.prototype.show = function(xmlList) {
         /** @type {!Blockly.BlockSpace} */ (this.blockSpace_));
   } else if (firstBlock === Blockly.Procedures.NAME_TYPE) {
     // Special category for procedures.
-    if (Blockly.useModalFunctionEditor && Blockly.activeWorkspace === Blockly.mainBlockSpace) {
+    if (Blockly.useModalFunctionEditor && !Blockly.functionEditor.isOpen()) {
       var button = Blockly.createSvgElement('g', {'class': 'createFunction'},
           this.blockSpace_.svgGroup_);
       var padding = 5;
@@ -623,7 +623,6 @@ Blockly.Flyout.prototype.createBlockFunc_ = function(originBlock) {
     // Create the new block by cloning the block in the flyout (via XML).
     var xml = Blockly.Xml.blockToDom_(originBlock);
     var targetBlockSpace = flyout.targetBlockSpace_;
-    if (targetBlockSpace == Blockly.mainBlockSpace) targetBlockSpace = Blockly.activeWorkspace;
     var block = Blockly.Xml.domToBlock_(targetBlockSpace, xml);
     // Place it in the same spot as the flyout copy.
     var svgRootOld = originBlock.getSvgRoot();
