@@ -523,7 +523,7 @@ BlocklyApps.init = function(config) {
     if (config.level.edit_blocks === 'required_blocks' ||
       config.level.edit_blocks === 'toolbox_blocks') {
       // Don't show when run block for toolbox/required block editing
-      config.insertWhenRun = false;
+      config.forceInsertTopBlock = null;
     }
   }
 
@@ -562,8 +562,8 @@ BlocklyApps.init = function(config) {
 
   // Add the starting block(s).
   var startBlocks = config.level.startBlocks || '';
-  if (config.insertWhenRun) {
-    startBlocks = blockUtils.insertWhenRunBlock(startBlocks);
+  if (config.forceInsertTopBlock) {
+    startBlocks = blockUtils.forceInsertTopBlock(startBlocks, config.forceInsertTopBlock);
   }
   startBlocks = BlocklyApps.arrangeBlockPosition(startBlocks, config.blockArrangement);
   BlocklyApps.loadBlocks(startBlocks);
@@ -1139,12 +1139,12 @@ exports.domStringToBlock = function(blockDOMString) {
 };
 
 /**
- * Takes a set of start blocks, and returns them with a when run button inserted
- * in front of the first non-function block.  If we already have a when_run block,
- * does nothing.
+ * Takes a set of start blocks, and returns them with a particular top level
+ * block inserted in front of the first non-function block.  If we already have
+ * this block, does nothing.
  */
-exports.insertWhenRunBlock = function (input) {
-  if (input.indexOf('when_run') !== -1) {
+exports.forceInsertTopBlock = function (input, blockType) {
+  if (input.indexOf(blockType) !== -1) {
     return input;
   }
 
@@ -1154,10 +1154,10 @@ exports.insertWhenRunBlock = function (input) {
   // using document.createElement elsewhere is
   var doc = root.parentNode;
 
-  var whenRun = doc.createElement('block');
-  whenRun.setAttribute('type', 'when_run');
-  whenRun.setAttribute('movable', 'false');
-  whenRun.setAttribute('deletable', 'false');
+  var topBlock = doc.createElement('block');
+  topBlock.setAttribute('type', blockType);
+  topBlock.setAttribute('movable', 'false');
+  topBlock.setAttribute('deletable', 'false');
 
   var numChildren = root.childNodes ? root.childNodes.length : 0;
 
@@ -1178,15 +1178,21 @@ exports.insertWhenRunBlock = function (input) {
 
   if (firstBlock !== null) {
     // when run -> next -> firstBlock
-    var next = doc.createElement('next');
+    var next;
+    if (/^functional/.test(blockType)) {
+      next = doc.createElement('functional_input');
+      next.setAttribute('name', 'ARG1');
+    } else {
+      next = doc.createElement('next');
+    }
     next.appendChild(firstBlock);
-    whenRun.appendChild(next);
+    topBlock.appendChild(next);
   }
 
   if (numChildren > 0) {
-    root.insertBefore(whenRun, root.childNodes[0]);
+    root.insertBefore(topBlock, root.childNodes[0]);
   } else {
-    root.appendChild(whenRun);
+    root.appendChild(topBlock);
   }
   return xml.serialize(root);
 };
@@ -1615,20 +1621,27 @@ exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
     var start = node.start - userCodeStartOffset;
     var end = node.end - userCodeStartOffset;
 
-    inUserCode = (start > 0) && (start < userCodeLength);
-
-    // If we are showing Javascript code in the ace editor, highlight
-    // the code being executed in each step:
-    if (!editor.currentlyUsingBlocks) {
-      // Only show selection if the node being executed is inside the user's
-      // code (not inside code we inserted before or after their code that is
-      // not visible in the editor):
-      var selection = editor.aceEditor.getSelection();
-      if (inUserCode) {
-        createSelection(selection, cumulativeLength, start, end);
+    // Only show selection if the node being executed is inside the user's
+    // code (not inside code we inserted before or after their code that is
+    // not visible in the editor):
+    if (start > 0 && start < userCodeLength) {
+      // Highlight the code being executed in each step:
+      if (editor.currentlyUsingBlocks) {
+        var style = {color: '#FFFF22'};
+        var line = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
+        editor.clearLineMarks();
+        editor.markLine(line, style);
       } else {
-        selection.clearSelection();
+        var selection = editor.aceEditor.getSelection();
+        createSelection(selection, cumulativeLength, start, end);
       }
+      inUserCode = true;
+    }
+  } else {
+    if (editor.currentlyUsingBlocks) {
+      editor.clearLineMarks();
+    } else {
+      editor.aceEditor.getSelection().clearSelection();
     }
   }
   return inUserCode;
@@ -10119,7 +10132,7 @@ Maze.init = function(config) {
   level = config.level;
 
   config.grayOutUndeletableBlocks = true;
-  config.insertWhenRun = true;
+  config.forceInsertTopBlock = 'when_run';
 
   if (mazeUtils.isBeeSkin(config.skinId)) {
     Maze.bee = new Bee(Maze, config);

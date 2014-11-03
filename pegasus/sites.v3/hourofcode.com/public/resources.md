@@ -3,6 +3,7 @@ title: Resources
 layout: wide
 nav: resources_nav
 ---
+<a href="/#join"><button style="float: right; margin-top: 50px">Sign up your event</button></a>
 # Resources
 
 ## Hosting an Hour of Code? <a href="<%= hoc_uri('/resources/how-to') %>">See the how-to guide</a>
@@ -154,3 +155,4 @@ Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your res
 Sincerely,
 [NAME], [TITLE]
 
+<a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>
