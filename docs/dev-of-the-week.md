@@ -11,11 +11,20 @@ This is a living document.  Please update it to help the next DotW, and to help 
 ### Areas of responsibility
 
 * 2-3x per week
+  * [Investigate Slow DB Queries](#investigate-slow-db-queries)
   * [Check New & Existing Zendesk Tickets](#zendesk)
 * As notified in the Developers HipChat room
   * [Investigate Build Failures](#build-failures)
   * [Level Activity Monitor](#level-activity-monitor)
   * [HoneyBadger Notifications](#honeybadger-notifications)
+
+### Investigate Slow DB Queries
+This is a temporary item leading up to the HoC launch.  [Follow the steps to access error/mysql-error-running.log] (http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.Procedural.Viewing.html), then address each slow query:
+  * Always slow: run it via script (every 5 min, every day, etc.)
+  * Not indexed: add indexes
+  * Unoptimized: optimize query directly
+  * Big complicated joins: improve data model
+  * Not sure: ask in the Developers HipChat room
 
 ### Zendesk
 
