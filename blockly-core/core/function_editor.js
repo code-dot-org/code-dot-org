@@ -134,9 +134,15 @@ Blockly.FunctionEditor.prototype.refreshParamsOnFunction_ = function() {
 
 Blockly.FunctionEditor.prototype.show = function() {
   this.ensureCreated_();
-  Blockly.activeWorkspace = Blockly.modalBlockSpaceEditor.blockSpace;
   goog.style.showElement(this.container_, true);
   goog.style.showElement(this.modalBackground_, true);
+};
+
+/**
+ * Is the function editor currently open?
+ */
+Blockly.FunctionEditor.prototype.isOpen = function() {
+  return this.created_ && goog.style.isElementShown(this.modalBackground_);
 };
 
 Blockly.FunctionEditor.prototype.ensureCreated_ = function() {
@@ -147,7 +153,6 @@ Blockly.FunctionEditor.prototype.ensureCreated_ = function() {
 };
 
 Blockly.FunctionEditor.prototype.hide = function() {
-  Blockly.activeWorkspace = Blockly.mainBlockSpace;
   this.functionDefinitionBlock.setUserVisible(false);
   this.functionDefinitionBlock.movable_ = true;
   var dom = Blockly.Xml.blockToDom_(this.functionDefinitionBlock);

@@ -120,7 +120,7 @@ Blockly.Procedures.findLegalName = function(name, block) {
  * @return {boolean} True if the name is legal.
  */
 Blockly.Procedures.isLegalName = function(name, blockSpace, opt_exclude) {
-  var blocks = Blockly.mainBlockSpace.getAllBlocks(); // TODO(bjordan): this is dirty, refactor
+  var blocks = blockSpace.getAllBlocks();
   // Iterate through every block and check the name.
   for (var x = 0; x < blocks.length; x++) {
     if (blocks[x] == opt_exclude) {
@@ -150,7 +150,7 @@ Blockly.Procedures.rename = function(text) {
   // Ensure two identically-named procedures don't exist.
   text = Blockly.Procedures.findLegalName(text, this.sourceBlock_);
   // Rename any callers.
-  var blocks = Blockly.mainBlockSpace.getAllBlocks(); // TODO(bjordan): this is dirty, refactor
+  var blocks = this.sourceBlock_.blockSpace.getAllBlocks();
   for (var x = 0; x < blocks.length; x++) {
     var func = blocks[x].renameProcedure;
     if (func) {
@@ -221,7 +221,7 @@ Blockly.Procedures.flyoutCategory = function(blocks, gaps, margin, blockSpace) {
  */
 Blockly.Procedures.getCallers = function(name, blockSpace) {
   var callers = [];
-  var blocks = blockSpace.getAllBlocks(); // TODO(bjordan): this is dirty, refactor
+  var blocks = blockSpace.getAllBlocks();
   // Iterate through every block and check the name.
   for (var x = 0; x < blocks.length; x++) {
     var func = blocks[x].getProcedureCall;
@@ -272,7 +272,7 @@ Blockly.Procedures.mutateCallers = function(name, blockSpace,
  * @return {Blockly.Block} The procedure definition block, or null not found.
  */
 Blockly.Procedures.getDefinition = function(name, blockSpace) {
-  var blocks = Blockly.mainBlockSpace.getAllBlocks(); // TODO(bjordan): this is dirty, refactor
+  var blocks = blockSpace.getAllBlocks();
   for (var x = 0; x < blocks.length; x++) {
     var func = blocks[x].getProcedureDef;
     if (func) {
