@@ -1,0 +1,37 @@
+:scss
+  .key {
+    margin: 10px 0;
+    float: left;
+    padding: 10px;
+    background-color: #eee;
+    dl {
+      margin: 0;
+      float: left;
+    }
+    dd, dt {
+      float: left;
+      height: 36px;
+    }
+    dt { margin-right: 5px; }
+    dd {
+      line-height: 36px;
+      margin-right: 30px;
+    }
+  }
+.key
+  %dl
+    %dt
+      %span.puzzle_outer_level
+        %a.level_link{ href: "", class: "not_tried", onclick: 'return false;'}
+          %span.puzzle-number 1
+    %dd= t('progress.not_completed')
+    %dt
+      %span.puzzle_outer_level
+        %a.level_link{ href: "", class: "passed", onclick: 'return false;'}
+          = check_mark_html
+    %dd= t('progress.completed_too_many_blocks')
+    %dt
+      %span.puzzle_outer_level
+        %a.level_link{ href: "", class: "perfect", onclick: 'return false'}
+          = check_mark_html
+    %dd= t('progress.completed_perfect')
