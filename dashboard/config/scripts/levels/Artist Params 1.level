@@ -1,0 +1,123 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2014-10-31T00:21:25.000Z",
+  "level_num": "custom",
+  "ideal_level_source_id": 521,
+  "user_id": 16,
+  "properties": {
+    "skin": "artist",
+    "instructions": "Make a triangle using the \"triangle function\" ",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "free_play": "false",
+    "start_direction": "90",
+    "x": "150",
+    "y": "300"
+  }
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+            <block type="math_number">
+              <title name="NUM">100</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_turn" inline="true">
+          <title name="DIR">turnLeft</title>
+          <value name="VALUE">
+            <block type="math_number">
+              <title name="NUM">90</title>
+            </block>
+          </value>
+        </block>
+        <block type="controls_repeat_dropdown">
+          <title config="3-10" name="TIMES">3</title>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">Draw a triangle</title>
+        </block>
+        <block type="procedures_callnoreturn">
+          <mutation name="Draw a triangle"/>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+        </block>
+        <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+            <block type="math_number">
+              <title name="NUM">100</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_turn" inline="true">
+          <title name="DIR">turnLeft</title>
+          <value name="VALUE">
+            <block type="math_number">
+              <title name="NUM">120</title>
+            </block>
+          </value>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">Draw a triangle</title>
+        </block>
+        <block type="procedures_callnoreturn">
+          <mutation name="Draw a triangle"/>
+        </block>
+      </xml>
+    </required_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="procedures_callnoreturn">
+              <mutation name="Draw a triangle"/>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">Draw a triangle</title>
+          <statement name="STACK">
+            <block type="controls_repeat_dropdown">
+              <title name="TIMES" config="3-10">3</title>
+              <statement name="DO">
+                <block type="draw_move" inline="true">
+                  <title name="DIR">moveForward</title>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <title name="NUM">100</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="draw_turn" inline="true">
+                      <title name="DIR">turnLeft</title>
+                      <value name="VALUE">
+                        <block type="math_number">
+                          <title name="NUM">120</title>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Artist>
