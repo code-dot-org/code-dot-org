@@ -324,5 +324,3 @@ Blockly.FunctionEditor.prototype.createContractDom_ = function() {
   this.contractDiv_.style.width = metrics.viewWidth + 'px';
   this.contractDiv_.style.display = 'block';
 };
-
-Blockly.functionEditor = new Blockly.FunctionEditor();
