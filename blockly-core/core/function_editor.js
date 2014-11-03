@@ -50,6 +50,7 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
   this.functionDefinitionBlock.setUserVisible(true);
 
   goog.dom.getElement('functionNameText').value = functionName;
+  goog.dom.getElement('functionDescriptionText').value = this.functionDefinitionBlock.description_ || '';
 };
 
 Blockly.FunctionEditor.prototype.refreshParamsToolbox = function () {
@@ -150,6 +151,10 @@ Blockly.FunctionEditor.prototype.hide = function() {
 
   goog.style.showElement(this.container_, false);
   goog.style.showElement(this.modalBackground_, false);
+
+  goog.dom.getElement('functionNameText').value = '';
+  goog.dom.getElement('functionDescriptionText').value = '';
+  goog.dom.getElement('paramAddText').value = '';
 };
 
 Blockly.FunctionEditor.prototype.create_ = function() {
@@ -205,14 +210,20 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   Blockly.bindEvent_(goog.dom.getElement('modalEditorClose'), 'mousedown', this, this.hide);
   Blockly.bindEvent_(goog.dom.getElement('functionNameText'), 'input', this, functionNameChange);
   Blockly.bindEvent_(goog.dom.getElement('functionNameText'), 'keydown', this, functionNameChange); // IE9 doesn't fire oninput when delete key is pressed
+  function functionNameChange(e) {
+    this.functionDefinitionBlock.setTitleValue(e.target.value, 'NAME');
+  }
+
   Blockly.bindEvent_(this.contractDiv_, 'mousedown', null, function() {
     if (Blockly.selected) {
       Blockly.selected.unselect();
     }
   });
 
-  function functionNameChange(e) {
-    this.functionDefinitionBlock.setTitleValue(e.target.value, 'NAME');
+  Blockly.bindEvent_(goog.dom.getElement('functionDescriptionText'), 'input', this, functionDescriptionChange);
+  Blockly.bindEvent_(goog.dom.getElement('functionDescriptionText'), 'keydown', this, functionDescriptionChange); // IE9 doesn't fire oninput when delete key is pressed
+  function functionDescriptionChange(e) {
+    this.functionDefinitionBlock.description_ = e.target.value;
   }
 
   // Set up parameters toolbox
@@ -297,7 +308,7 @@ Blockly.FunctionEditor.prototype.createContractDom_ = function() {
   this.contractDiv_.innerHTML = '<div>Name your function:</div>'
       + '<div><input id="functionNameText" type="text"></div>'
       + '<div>What is your function supposed to do?</div>'
-      + '<div><textarea rows="2"></textarea></div>'
+      + '<div><textarea id="functionDescriptionText" rows="2"></textarea></div>'
       + '<div>What parameters does your function take?</div>'
       + '<div><input id="paramAddText" type="text" style="width: 200px;"> <button id="paramAddButton" class="btn">Add Parameter</button>';
   var metrics = Blockly.modalWorkspace.getMetrics();
