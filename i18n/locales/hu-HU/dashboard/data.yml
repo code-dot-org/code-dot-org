@@ -49,6 +49,7 @@ hu:
           desc: Szerkeszd a kódot (béta)
           MazeEC: 1. szakasz
           Webapp: 2. szakasz
+          ArtistEC: 3. szakasz
         events:
           desc: Bounce (béta)
           Bounce: 1. szakasz
@@ -98,6 +99,7 @@ hu:
         MazeStep: Labirintus üzemmód
         Wordsearch: Wordsearch
         Webapp: Webapp
+        ArtistEC: A művész
     trophy:
       name:
         Bronze: Bronz
@@ -120,23 +122,23 @@ hu:
         maze_2_1: Ez a malac bosszantó. Segíts megtalálni!
         maze_2_2_5: Tervezd meg az utat a malacig. A TNT-t viszont kerüld el mindenképp, vagy repülsz!
         maze_2_3: Vezess el a zöld förtelemig! (Vigyázz a TNT-vel)
-        maze_2_4: 'Őrizd meg nyugalmad, és segíts,  meg keresni rossz disznót. Egyébként lehet, hogy dühös!'
+        maze_2_4: Őrizd meg nyugalmad, és segíts megkeresni rossz disznót. Egyébként lehet, hogy dühös!
         maze_2_5: Van egy 2 utasításból álló út a malachoz. Kitalálod?
         maze_2_6: Próbálj meg elvezetni a zöld behatolóhoz nem több mint 3 utasítás használatával.
-        maze_2_7: 'Segíts elűzni a rossz malackát a legkevesebb blokk segítségével. Próbáld meg több, mint egy "ismételj szor" blokkal.'
+        maze_2_7: Segíts elűzni a rossz malackát a legkevesebb blokk segítségével. Próbáld meg több, mint egy „ismétlés” blokk felhasználásával.
         maze_2_8: |-
           When a block is grey, that means you can't delete it. Solve this puzzle using the "repeat" block that repeats 3 times. Try putting these 3 blocks inside the grey "repeat" block: move, move, turn.
-        maze_2_9: 'Ok, próbáld ki az új "ismétlés, amíg a" blokk - ez addig ismétlődik, amíg el nem érem a bosszantó disznót.'
+        maze_2_9: 'Ok, próbáld ki az új „ismételd amíg" blokkot - ez addig ismétli a benne lévő utasítást, amíg a madár el nem éri a bosszantó disznót.'
         maze_2_10: 'Ok, még egyszer, utoljára a gyakorlatban - meg tudod oldani ezt csak 4 blokkal?'
         maze_2_11: 'Arghhh - kedves akárki. Én lenni zombi. Zombi lenni éhes. El... kell... a napraforgóhoz... Eltudnál vezetni oda csupán 5 utasítással?'
         maze_2_12: Hasonló mint az előző, de picit más. 5 utasításból megoldod?
-        maze_2_13: 'Használd az új, "ha" blokk, hogy hagyd eldönteni, mikor kell fordulni. Tipp: csak akkor kell még egy blokk, de megtanuljuk, hogyan tudjuk beállítani, így meg tudod csinálni legközelebb.'
-        maze_2_14: 'Rendben, ez olyan, mint a legutóbbi játék, de most emlékezned kell hogyan használtad az "if" és a "repeat" elemeket együtt.'
+        maze_2_13: 'Használd az új „ha” blokkot, hogy el tudjam dönteni, hogy mikor forduljak el. Tipp: most csak egy blokkot kell beillesz, de megtanulhatod a szerkezet felépítését, hogy legközelebb önállóan is össze tudd állítani.'
+        maze_2_14: Rendben, ez olyan, mint a legutóbbi játék, de most emlékezned kell hogyan használtad együtt az „if” és a „repeat” elemeket.
         maze_2_15: Napraforgót szeretnék! Használj egy ha blokkot, hogy a legkevesebb lépésből eljussak odáig.
         maze_2_16: 'Oké, csináljuk meg mégegyszer gyakorlásképpen -  hasonló a feladat, de vigyázz a szörnynövényekre!'
         maze_2_17: 'A "If-else" blokk ellenőriz egy feltételt és aszerint tesz meg valamit VAGY valami mást. Próbálj meg úgy eljuttatni a napraforgóhoz, hogy használod ezt az új blokkot.'
-        maze_2_18: 'Még egy gyakorlat az "if-else" blokkhoz, meg tudod csinálni elsőre?'
-        maze_2_19: Csak 3 blokk hozzáadásával tud segíteni bejárni egy sokkal bonyolultabb labirintust? Ha igen, bármilyen kanyargós utat bejárhatok, függetlenül annak hosszától.
+        maze_2_18: Még egy gyakorlat az „ha különben” blokkhoz. Meg tudod csinálni elsőre?
+        maze_2_19: Tudsz segíteni kijutni ebből az összetett útvesztőből mindössze 3 blokk hozzáadásával? Ha jól csinálod, akkor bármilyen kacskaringós utat be tudok járni annak hosszától függetlenül.
         turtle_1_1: Szia, én egy művész vagyok. Te tudsz nekem olyan kódot írni, amivel majdnem mindent le tudok rajzolni. Használd a blokkokat hogy lefessem a képen látható szürke vonalakat.
         turtle_1_2: 'Most rajzolj egy négyzetet. Megjegyzés: használd a kedvenc színed az új "set color" blokk segítségével.'
         turtle_1_3: Rajzolj egy negyszogot csak harom blokk hasznalataval.
@@ -202,7 +204,7 @@ hu:
         turtle_3_8: 'Itt van minden a blokkokat az előző puzzle.  Módosítsa a "egy ház rajzolása", úgyhogy a végén a jobb alsó sarokban után rajz egy új házat. Ehhez a funkcióhoz módosított rajzoljunk három ház.'
         turtle_3_9: 'Lehet újra létrehozni segítség nélkül "dolgozzon egy ház" funkció? Próbálja ki, és Ezután rajzolja a házak sora.'
         turtle_3_10: 'Már sokmindent megtanult! Most használhatja mindezt, és azt rajzolhat, amit csak akar. Megpróbálhat  csillag, spirál, vagy akár egy izgalmas hópehely megrajzolásával.'
-        maze_karel_debug_seq_1: Üdvözöljük hibakeresés földjén! A kódom nem fut helyesen. Meg tudja keresni a problémát, és ki tudja javítani, hogy a szántóföldem egyenletes legyen, készen álljon a palántázásra?
+        maze_karel_debug_seq_1: Üdvözöljük hibakeresés földjén! A kódom nem fut helyesen. Látod már a problémát, és ki tudod javítani, hogy előkészíthessem a földet az ültetéshez?
         maze_karel_debug_seq_2: Mi a baj ezzel a programmal? Hogyan lehet kijavítani, hogy eltávolíthassam a földhányásokat?
         maze_karel_debug_repeat: Irtsd ki a programhibákat (ezt hívjuk debuggolásnak), hogy a földem sima és szép lehessen.
         maze_karel_debug_while: Mit kell változtatni a programon, hogy segítsen a gödrök feltöltésében?
@@ -320,13 +322,15 @@ hu:
         maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
         maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
         maze_wordsearch_k_20: This is a test! Move me one way, then another to spell the word STORY
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColour" block.'
     video:
       name:
-        maze_intro: Labirintus Intro
+        maze_intro: Útvesztő ismertető
         artist_intro: Művész Intro
         farmer_intro: Farmer Intro
         flappy_intro: Flappy intró
-        loop_times: Ismételje szor blokk
+        loop_times: Ismétlés valahányszor blokk
         loop_until: Ismételd amíg, blokk
         if: Ha blokk
         if_else: Ha/egyébként blokk
@@ -394,12 +398,12 @@ hu:
         C3_songwriting_with_parameters: Songwriting With Parameters
     callout:
       text:
-        drag_blocks: 'Húzz egy "mozgás" blokkot, és csatold a másik blokk alá'
-        run: 'Nyomd meg a "Futtatás" gombot, hogy kipróbáld a programodat'
+        drag_blocks: Húzz egy „előrelépni” blokkot, és csatold a másik blokk alá
+        run: Nyomd meg a „Futtatás” gombot, hogy kipróbáld a programodat
         watch_again: 'Kattints ide, hogy újra megnézhesd a videót '
-        gray_block_explanation: "Blocks that are grey can't be deleted. Can you solve the puzzle anyway?"
+        gray_block_explanation: A szürke blokkok nem törölhetők. Így is meg tudod oldani a feladatot?
         show_code_explanation: Kattints ide, hogy lásd a kódot amit írtál
-        instructions_repeat_explanation: The instructions for each puzzle are repeated here
+        instructions_repeat_explanation: Az egyes feladványokhoz tartozó leírás itt jelenik meg újra
         category_explanation: "You have all the same blocks but they've now been arranged in categories"
         set_sprite_image: 'Attach a "set actor to image" block to the "when story starts" block to enable an actor for this story'
         studio_say_text: Type what you want your actor to say within these quotes

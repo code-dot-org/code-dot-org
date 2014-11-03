@@ -69,17 +69,7 @@
     no_signup_message: Bạn có thể dùng mã <a target="_blank" href="http://learn.code.org">
       để duyệt các màn và các câu đố khác nhau</a>,nhưng bạn cần đăng ký để lưu lại
       tiến trình của bạn.
-    prizes_message: Những học viên Hoa Kỳ đạt được tất cả %{num_trophies} những danh
-      hiệu có thể chọn một loạt những phần thưởng khác nhau bao gồm dung lượng miễn
-      phí trên Dropbox, tín dụng của Skype và có thể tải về nhiều trò chơi của Electronic
-      Arts.
     teacher_educator_guide: Hãy xem chỉ dẫn
-    teacher_prize_header: Nhận $1000 tại <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
-    teacher_prize_message: 'Với liên kết đối tác cùng <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>,
-      Code.org sẽ tài trợ số tiền trang bị lớp học lên tới 1,000$ cho những giáo viên
-      trong hệ thống trường công lập của Hoa Kì đã dẫn dắt ít nhất  15 học sinh qua
-      khóa học này. <a href="http://code.org/educate/20hr">Xem Hướng dẫn dành cho
-      người đào tạo để có thêm thông tin.</a> '
     teacher_pitch: 'Dạy "Giới thiệu về Khoa học Máy tính" trong lớp học của bạn (K-8
       : từ Lớp Mẫu giáo tới lớp 8)'
     teacher_title: Giáo viên đăng ký
@@ -92,6 +82,7 @@
     gender: Giới tính (tùy chọn)
     birthday: Ngày sinh (tùy chọn)
     age: Age (optional)
+    user_type: Are you a student or teacher?
     submit: "Đăng ký"
     teacher: Bạn có phải là giáo viên?
     valid_username: "Đã tồn tại!"
@@ -386,8 +377,6 @@
     student_stats: You've earned %{trophy_count} out of %{trophy_max} "Concept Mastery"
       trophies.
     student_left_off: 'Nơi bạn rời đi:'
-    student_finished_prize: You've completed all tutorials, claim your %{prize_link}
-      and pick another class %{online_link} or at a %{local_school_link}
     student_finished: You've completed all tutorials, pick another class %{online_link}
       or at a %{local_school_link}
     local_school: trường học ở địa phương
@@ -415,6 +404,9 @@
     male: Nam
     female: Nữ
     none: Tùy chọn không muốn trả lời
+  user_type:
+    student: học sinh
+    teacher: Teacher
   footer:
     help_from_html: Engineers from <a href="http://www.google.com">Google</a>, <a
       href="http://www.microsoft.com">Microsoft</a>, <a href="http://www.facebook.com">Facebook</a>,
@@ -430,13 +422,6 @@
     tos: "Điều khoản Dịch vụ"
     privacy: Chính sách riêng tư
     secure: Secure Version
-  prize_mail:
-    prize_earned:
-      subject: Redeem your prize at Code.org!
-    teacher_prize_earned:
-      subject: Redeem your prize at Code.org!
-    teacher_bonus_prize_earned:
-      subject: Redeem your bonus prize at Code.org!
   reference_area:
     title: Cần trợ giúp?
     subtitle: Xem các video và gợi ý

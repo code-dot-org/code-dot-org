@@ -90,7 +90,7 @@ module.exports = function(app, levels, options) {
 };
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./base":2,"./blocksCommon":4,"./dom":8,"./required_block_utils":25,"./utils":40}],2:[function(require,module,exports){
+},{"./base":2,"./blocksCommon":4,"./dom":8,"./required_block_utils":30,"./utils":45}],2:[function(require,module,exports){
 /**
  * Blockly Apps: Common code
  *
@@ -154,6 +154,7 @@ BlocklyApps.LOCALE = 'en_us';
 BlocklyApps.MIN_WIDTH = 900;
 BlocklyApps.MIN_MOBILE_SHARE_WIDTH = 450;
 BlocklyApps.MIN_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
+var WORKSPACE_PLAYSPACE_GAP = 15;
 
 /**
  * If the user presses backspace, stop propagation - this prevents blockly
@@ -179,6 +180,31 @@ BlocklyApps.toggleRunReset = function(button) {
   reset.style.display = !showRun ? 'inline-block' : 'none';
   reset.disabled = showRun;
 };
+
+/**
+ * Modify the workspace header after a droplet blocks/code toggle
+ */
+function updateHeadersAfterDropletToggle(usingBlocks) {
+  // Update header titles:
+  var showCodeHeader = document.getElementById('show-code-header');
+  var newButtonTitle = usingBlocks ? msg.showCodeHeader() :
+                                     msg.showBlocksHeader();
+  showCodeHeader.firstChild.innerText = newButtonTitle;
+
+  var workspaceHeaderSpan = document.getElementById('workspace-header-span');
+  newButtonTitle = usingBlocks ? msg.workspaceHeader() :
+                                 msg.workspaceHeaderJavaScript();
+  workspaceHeaderSpan.innerText = newButtonTitle;
+
+  var blockCount = document.getElementById('blockCounter');
+  if (blockCount) {
+    blockCount.style.visibility =
+      (usingBlocks && BlocklyApps.enableShowBlockCount) ? 'visible' : 'hidden';
+  }
+
+  // Resize (including headers), so the category header will appear/disappear:
+  BlocklyApps.onResize();
+}
 
 /**
  * Common startup tasks for all apps.
@@ -397,12 +423,8 @@ BlocklyApps.init = function(config) {
         mode: 'javascript',
         palette: palette
       });
-      // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
-        BlocklyApps.editor.toggleBlocks();
-      });
 
-      var startText = '// ' + msg.typeCode() +'\n// ' + msg.typeHint() + '\n';
+      var startText = '// ' + msg.typeHint() + '\n';
       var codeFunctions = config.level.codeFunctions;
       // Insert hint text from level codeFunctions into editCode area
       if (codeFunctions) {
@@ -421,7 +443,12 @@ BlocklyApps.init = function(config) {
   var showCode = document.getElementById('show-code-header');
   if (showCode && BlocklyApps.enableShowCode) {
     dom.addClickTouchEvent(showCode, function() {
-      feedback.showGeneratedCode(BlocklyApps.Dialog);
+      if (BlocklyApps.editCode) {
+        BlocklyApps.editor.toggleBlocks();
+        updateHeadersAfterDropletToggle(BlocklyApps.editor.currentlyUsingBlocks);
+      } else {
+        feedback.showGeneratedCode(BlocklyApps.Dialog);
+      }
     });
   }
 
@@ -496,7 +523,7 @@ BlocklyApps.init = function(config) {
     if (config.level.edit_blocks === 'required_blocks' ||
       config.level.edit_blocks === 'toolbox_blocks') {
       // Don't show when run block for toolbox/required block editing
-      config.insertWhenRun = false;
+      config.forceInsertTopBlock = null;
     }
   }
 
@@ -533,36 +560,26 @@ BlocklyApps.init = function(config) {
     }
   }
 
-  if (config.level.editCode) {
-    // Swap the visibility of the codeText element and the blocklyDiv
-    document.getElementById('codeTextbox').style.display = 'block';
-    div.style.display = 'none';
-  }
-
   // Add the starting block(s).
   var startBlocks = config.level.startBlocks || '';
-  if (config.insertWhenRun) {
-    startBlocks = blockUtils.insertWhenRunBlock(startBlocks);
+  if (config.forceInsertTopBlock) {
+    startBlocks = blockUtils.forceInsertTopBlock(startBlocks, config.forceInsertTopBlock);
   }
   startBlocks = BlocklyApps.arrangeBlockPosition(startBlocks, config.blockArrangement);
   BlocklyApps.loadBlocks(startBlocks);
 
-  var onResize = function() {
-    BlocklyApps.onResize(config.getDisplayWidth());
-  };
-
   // listen for scroll and resize to ensure onResize() is called
   window.addEventListener('scroll', function() {
-    onResize();
+    BlocklyApps.onResize();
     Blockly.fireUiEvent(window, 'resize');
   });
-  window.addEventListener('resize', onResize);
+  window.addEventListener('resize', BlocklyApps.onResize);
 
   // call initial onResize() asynchronously - need 100ms delay to work
   // around relayout which changes height on the left side to the proper
   // value
   window.setTimeout(function() {
-      onResize();
+      BlocklyApps.onResize();
       Blockly.fireUiEvent(window, 'resize');
     },
     100);
@@ -722,56 +739,78 @@ var showInstructions = function(level, autoClose) {
 /**
  *  Resizes the blockly workspace.
  */
-BlocklyApps.onResize = function(gameWidth) {
-  gameWidth = gameWidth || 0;
+BlocklyApps.onResize = function() {
+  var visualizationColumn = document.getElementById('visualizationColumn');
+  var gameWidth = visualizationColumn.getBoundingClientRect().width;
+
   var blocklyDiv = document.getElementById('blockly');
-  var codeTextbox = document.getElementById('codeTextbox');
+  var codeWorkspace = document.getElementById('codeWorkspace');
 
-  // resize either blockly or codetextbox
-  var div = BlocklyApps.editCode ? codeTextbox : blocklyDiv;
+  // resize either blockly or codeWorkspace
+  var div = BlocklyApps.editCode ? codeWorkspace : blocklyDiv;
 
-  var blocklyDivParent = blocklyDiv.parentNode;
-  var parentStyle = window.getComputedStyle ?
-                    window.getComputedStyle(blocklyDivParent) :
-                    blocklyDivParent.currentStyle;  // IE
+  var divParent = div.parentNode;
+  var parentStyle = window.getComputedStyle(divParent);
 
   var parentWidth = parseInt(parentStyle.width, 10);
   var parentHeight = parseInt(parentStyle.height, 10);
 
   var headers = document.getElementById('headers');
-  var headersStyle = window.getComputedStyle ?
-                       window.getComputedStyle(headers) :
-                       headers.currentStyle;  // IE
-  var headersHeight = parseInt(headersStyle.height, 10);
+  var headersHeight = parseInt(window.getComputedStyle(headers).height, 10);
 
-  div.style.top = blocklyDivParent.offsetTop + 'px';
-  div.style.width = (parentWidth - (gameWidth + 15)) + 'px';
+  div.style.top = divParent.offsetTop + 'px';
+  var fullWorkspaceWidth = parentWidth - (gameWidth + WORKSPACE_PLAYSPACE_GAP);
+  div.style.width = fullWorkspaceWidth + 'px';
+
   if (BlocklyApps.isRtl()) {
-    div.style.marginRight = (gameWidth + 15) + 'px';
+    div.style.marginRight = (gameWidth + WORKSPACE_PLAYSPACE_GAP) + 'px';
   }
   else {
-    div.style.marginLeft = (gameWidth + 15) + 'px';
+    div.style.marginLeft = (gameWidth + WORKSPACE_PLAYSPACE_GAP) + 'px';
   }
-  // reduce height by headers height because blockly isn't aware of headers
-  // and will size its svg element to be too tall
-  div.style.height = (parentHeight - headersHeight) + 'px';
+  if (BlocklyApps.editCode) {
+    // Position the inner codeTextbox element below the headers
+    var codeTextbox = document.getElementById('codeTextbox');
+    codeTextbox.style.height = (parentHeight - headersHeight) + 'px';
+    codeTextbox.style.width = fullWorkspaceWidth + 'px';
+    codeTextbox.style.top = headersHeight + 'px';
 
-  BlocklyApps.resizeHeaders();
+    // The outer codeWorkspace element height should match its parent:
+    div.style.height = parentHeight + 'px';
+  } else {
+    // reduce height by headers height because blockly isn't aware of headers
+    // and will size its svg element to be too tall
+    div.style.height = (parentHeight - headersHeight) + 'px';
+  }
+
+  BlocklyApps.resizeHeaders(fullWorkspaceWidth);
 };
 
 // |         toolbox-header           | workspace-header  | show-code-header |
 // |
 // | categoriesWidth |  toolboxWidth  |
 // |                 |         <--------- workspaceWidth ---------->         |
-BlocklyApps.resizeHeaders = function() {
+// |         <---------------- fullWorkspaceWidth ----------------->         |
+BlocklyApps.resizeHeaders = function (fullWorkspaceWidth) {
   var categoriesWidth = 0;
-  var categories = Blockly.Toolbox.HtmlDiv;
+  var categories = BlocklyApps.editCode ?
+                    document.querySelector('.droplet-palette-wrapper') :
+                    Blockly.Toolbox.HtmlDiv;
   if (categories) {
-    categoriesWidth = parseInt(window.getComputedStyle(categories).width, 10);
+    // If in the droplet editor, but not using blocks, keep categoryWidth at 0
+    if (!BlocklyApps.editCode || BlocklyApps.editor.currentlyUsingBlocks) {
+      // set CategoryWidth based on the block toolbox/palette width:
+      categoriesWidth = parseInt(window.getComputedStyle(categories).width, 10);
+    }
   }
 
   var workspaceWidth = Blockly.getWorkspaceWidth();
   var toolboxWidth = Blockly.getToolboxWidth();
+
+  if (BlocklyApps.editCode) {
+    workspaceWidth = fullWorkspaceWidth - categoriesWidth;
+    toolboxWidth = 0;
+  }
 
   var headers = document.getElementById('headers');
   var workspaceHeader = document.getElementById('workspace-header');
@@ -779,7 +818,9 @@ BlocklyApps.resizeHeaders = function() {
   var showCodeHeader = document.getElementById('show-code-header');
 
   var showCodeWidth;
-  if (BlocklyApps.enableShowCode && (workspaceWidth - toolboxWidth > 450)) {
+  var minWorkspaceWidthForShowCode = BlocklyApps.editCode ? 250 : 450;
+  if (BlocklyApps.enableShowCode &&
+      (workspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
     showCodeWidth = parseInt(window.getComputedStyle(showCodeHeader).width, 10);
     showCodeHeader.style.display = "";
   }
@@ -1004,7 +1045,7 @@ var getIdealBlockNumberMsg = function() {
       msg.infinity() : BlocklyApps.IDEAL_BLOCK_NUM;
 };
 
-},{"../locale/id_id/common":42,"./block_utils":3,"./builder":5,"./constants.js":7,"./dom":8,"./feedback.js":21,"./slider":27,"./templates/buttons.html":29,"./templates/instructions.html":31,"./templates/learn.html":32,"./templates/makeYourOwn.html":33,"./utils":40,"./xml":41}],3:[function(require,module,exports){
+},{"../locale/id_id/common":47,"./block_utils":3,"./builder":5,"./constants.js":7,"./dom":8,"./feedback.js":26,"./slider":32,"./templates/buttons.html":34,"./templates/instructions.html":36,"./templates/learn.html":37,"./templates/makeYourOwn.html":38,"./utils":45,"./xml":46}],3:[function(require,module,exports){
 var xml = require('./xml');
 
 exports.createToolbox = function(blocks) {
@@ -1098,12 +1139,12 @@ exports.domStringToBlock = function(blockDOMString) {
 };
 
 /**
- * Takes a set of start blocks, and returns them with a when run button inserted
- * in front of the first non-function block.  If we already have a when_run block,
- * does nothing.
+ * Takes a set of start blocks, and returns them with a particular top level
+ * block inserted in front of the first non-function block.  If we already have
+ * this block, does nothing.
  */
-exports.insertWhenRunBlock = function (input) {
-  if (input.indexOf('when_run') !== -1) {
+exports.forceInsertTopBlock = function (input, blockType) {
+  if (input.indexOf(blockType) !== -1) {
     return input;
   }
 
@@ -1113,10 +1154,10 @@ exports.insertWhenRunBlock = function (input) {
   // using document.createElement elsewhere is
   var doc = root.parentNode;
 
-  var whenRun = doc.createElement('block');
-  whenRun.setAttribute('type', 'when_run');
-  whenRun.setAttribute('movable', 'false');
-  whenRun.setAttribute('deletable', 'false');
+  var topBlock = doc.createElement('block');
+  topBlock.setAttribute('type', blockType);
+  topBlock.setAttribute('movable', 'false');
+  topBlock.setAttribute('deletable', 'false');
 
   var numChildren = root.childNodes ? root.childNodes.length : 0;
 
@@ -1137,15 +1178,21 @@ exports.insertWhenRunBlock = function (input) {
 
   if (firstBlock !== null) {
     // when run -> next -> firstBlock
-    var next = doc.createElement('next');
+    var next;
+    if (/^functional/.test(blockType)) {
+      next = doc.createElement('functional_input');
+      next.setAttribute('name', 'ARG1');
+    } else {
+      next = doc.createElement('next');
+    }
     next.appendChild(firstBlock);
-    whenRun.appendChild(next);
+    topBlock.appendChild(next);
   }
 
   if (numChildren > 0) {
-    root.insertBefore(whenRun, root.childNodes[0]);
+    root.insertBefore(topBlock, root.childNodes[0]);
   } else {
-    root.appendChild(whenRun);
+    root.appendChild(topBlock);
   }
   return xml.serialize(root);
 };
@@ -1185,7 +1232,7 @@ exports.mathBlockXml = function (type, inputs, titles) {
   return str;
 };
 
-},{"./xml":41}],4:[function(require,module,exports){
+},{"./xml":46}],4:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -1350,7 +1397,7 @@ function installWhenRun(blockly, skin, isK1) {
   };
 }
 
-},{"../locale/id_id/common":42}],5:[function(require,module,exports){
+},{"../locale/id_id/common":47}],5:[function(require,module,exports){
 var feedback = require('./feedback.js');
 var dom = require('./dom.js');
 var utils = require('./utils.js');
@@ -1380,7 +1427,7 @@ exports.builderForm = function(onAttemptCallback) {
   dialog.show({ backdrop: 'static' });
 };
 
-},{"./dom.js":8,"./feedback.js":21,"./templates/builder.html":28,"./utils.js":40,"url":54}],6:[function(require,module,exports){
+},{"./dom.js":8,"./feedback.js":26,"./templates/builder.html":33,"./utils.js":45,"url":59}],6:[function(require,module,exports){
 var INFINITE_LOOP_TRAP = '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 
 var LOOP_HIGHLIGHT = 'loopHighlight();\n';
@@ -1435,16 +1482,57 @@ exports.workspaceCode = function(blockly) {
 };
 
 /**
+ * Generate a native function wrapper for use with the JS interpreter.
+ */
+exports.makeNativeMemberFunction = function (interpreter, nativeFunc, parentObj) {
+  return function() {
+    // Call the native function:
+    var retVal = nativeFunc.apply(parentObj, arguments);
+
+    // Now figure out what to do with the return value...
+
+    if (retVal instanceof Function) {
+      // Don't call createPrimitive() for functions
+      return retVal;
+    } else if (retVal instanceof Object) {
+      var newObj = interpreter.createObject(interpreter.OBJECT);
+      // Limited attempt to marshal back complex return values
+      // Special case: only one-level deep, only handling
+      // primitives and arrays of primitives
+      for (var prop in retVal) {
+        var isFuncOrObj = retVal[prop] instanceof Function ||
+                          retVal[prop] instanceof Object;
+        // replace properties with wrapped properties
+        if (retVal[prop] instanceof Array) {
+          var newArray = interpreter.createObject(interpreter.ARRAY);
+          for (var i = 0; i < retVal[prop].length; i++) {
+            newArray.properties[i] = interpreter.createPrimitive(retVal[prop][i]);
+          }
+          newArray.length = retVal[prop].length;
+          interpreter.setProperty(newObj, prop, newArray);
+        } else if (isFuncOrObj) {
+          // skipping over these - they could be objects that should
+          // be converted into interpreter objects. they could be native
+          // functions that should be converted. Or they could be objects
+          // that are already interpreter objects, which is what we assume
+          // for now:
+          interpreter.setProperty(newObj, prop, retVal[prop]);
+        } else {
+          // wrap as a primitive if it is not a function or object:
+          interpreter.setProperty(newObj, prop, interpreter.createPrimitive(retVal[prop]));
+        }
+      }
+      return newObj;
+    } else {
+      return interpreter.createPrimitive(retVal);
+    }
+  };
+};
+
+/**
  * Initialize a JS interpreter.
  */
 exports.initJSInterpreter = function (interpreter, scope, options) {
-  // helper function used below..
-  function makeNativeMemberFunction(nativeFunc, parentObj) {
-    return function() {
-      return interpreter.createPrimitive(
-                            nativeFunc.apply(parentObj, arguments));
-    };
-  }
   for (var optsObj in options) {
     var func, wrapper;
     // The options object contains objects that will be referenced
@@ -1460,13 +1548,103 @@ exports.initJSInterpreter = function (interpreter, scope, options) {
       if (func instanceof Function) {
         // Populate each of the global objects with native functions
         // NOTE: other properties are not currently passed to the interpreter
-        wrapper = makeNativeMemberFunction(func, options[optsObj]);
+        wrapper = exports.makeNativeMemberFunction(interpreter, func, options[optsObj]);
         interpreter.setProperty(obj,
                                 prop,
                                 interpreter.createNativeFunction(wrapper));
       }
     }
   }
+};
+
+// session is an instance of Ace editSession
+// Usage
+// var lengthArray = aceCalculateCumulativeLength(editor.getSession());
+// Need to call this only if the document is updated after the last call.
+exports.aceCalculateCumulativeLength = function (session) {
+  var cumulativeLength = [];
+  var cnt = session.getLength();
+  var cuml = 0, nlLength = session.getDocument().getNewLineCharacter().length;
+  cumulativeLength.push(cuml);
+  var text = session.getLines(0, cnt);
+  for (var i = 0; i < cnt; i++) {
+    cuml += text[i].length + nlLength;
+    cumulativeLength.push(cuml);
+  }
+  return cumulativeLength;
+};
+
+// Fast binary search implementation
+// Pass the cumulative length array here.
+// Usage
+// var row = aceFindRow(lengthArray, 0, lengthArray.length, 2512);
+// tries to find 2512th character lies in which row.
+function aceFindRow(cumulativeLength, rows, rowe, pos) {
+  if (rows > rowe) {
+    return null;
+  }
+  if (rows + 1 === rowe) {
+    return rows;
+  }
+
+  var mid = Math.floor((rows + rowe) / 2);
+  
+  if (pos < cumulativeLength[mid]) {
+    return aceFindRow(cumulativeLength, rows, mid, pos);
+  } else if(pos > cumulativeLength[mid]) {
+    return aceFindRow(cumulativeLength, mid, rowe, pos);
+  }
+  return mid;
+}
+
+/**
+ * Selects code in an ace editor.
+ */
+function createSelection (selection, cumulativeLength, start, end) {
+  var range = selection.getRange();
+
+  range.start.row = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
+  range.start.col = start - cumulativeLength[range.start.row];
+  range.end.row = aceFindRow(cumulativeLength, 0, cumulativeLength.length, end);
+  range.end.col = end - cumulativeLength[range.end.row];
+
+  selection.setSelectionRange(range);
+}
+
+exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
+                                      userCodeStartOffset, userCodeLength) {
+  var inUserCode = false;
+  if (interpreter.stateStack[0]) {
+    var node = interpreter.stateStack[0].node;
+    // Adjust start/end by Webapp.userCodeStartOffset since the code running
+    // has been expanded vs. what the user sees in the editor window:
+    var start = node.start - userCodeStartOffset;
+    var end = node.end - userCodeStartOffset;
+
+    // Only show selection if the node being executed is inside the user's
+    // code (not inside code we inserted before or after their code that is
+    // not visible in the editor):
+    if (start > 0 && start < userCodeLength) {
+      // Highlight the code being executed in each step:
+      if (editor.currentlyUsingBlocks) {
+        var style = {color: '#FFFF22'};
+        var line = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
+        editor.clearLineMarks();
+        editor.markLine(line, style);
+      } else {
+        var selection = editor.aceEditor.getSelection();
+        createSelection(selection, cumulativeLength, start, end);
+      }
+      inUserCode = true;
+    }
+  } else {
+    if (editor.currentlyUsingBlocks) {
+      editor.clearLineMarks();
+    } else {
+      editor.aceEditor.getSelection().clearSelection();
+    }
+  }
+  return inUserCode;
 };
 
 /**
@@ -1692,9 +1870,15 @@ exports.isIOS = function() {
 };
 
 },{}],9:[function(require,module,exports){
+var evalUtils = require('./evalUtils');
 var EvalString = require('./evalString');
 var EvalCircle = require('./evalCircle');
+var EvalTriangle = require('./evalTriangle');
 var EvalMulti = require('./evalMulti');
+var EvalRect = require('./evalRect');
+var EvalEllipse = require('./evalEllipse');
+var EvalText = require('./evalText');
+var EvalStar = require('./evalStar');
 
 // todo (brent) - make use of blockId?
 
@@ -1714,19 +1898,79 @@ exports.circle = function (size, style, color) {
   return exports.register(new EvalCircle(size, style, color));
 };
 
-exports.placeImage = function (image, x, y, blockId) {
+exports.triangle = function (size, style, color) {
+  return exports.register(new EvalTriangle(size, style, color));
+};
+
+exports.overlay = function (top, bottom) {
+  return exports.register(new EvalMulti(top, bottom));
+};
+
+exports.underlay = function (bottom, top) {
+  return exports.register(new EvalMulti(top, bottom));
+};
+
+exports.square = function (size, style, color) {
+  return exports.register(new EvalRect(size, size, style, color));
+};
+
+exports.rectangle = function (width, height, style, color) {
+  return exports.register(new EvalRect(width, height, style, color));
+};
+
+exports.ellipse = function (width, height, style, color) {
+  return exports.register(new EvalEllipse(width, height, style, color));
+};
+
+exports.text = function (text, fontSize, color) {
+  return exports.register(new EvalText(text, fontSize, color));
+};
+
+exports.star = function (radius, fontSize, color) {
+  return exports.register(new EvalStar(radius, fontSize, color));
+};
+
+exports.placeImage = function (x, y, image, blockId) {
   // todo - validate we have an image, use public setter
   // todo - where does argument validation happen?
-  image.x_ = x;
-  image.y_ = y;
+
+  // User inputs why in cartesian space. Convert to pixel space before sending
+  // to our EvalObject.
+  y = evalUtils.cartesianToPixel(y);
+
+  image.place(x, y);
   return exports.register(image);
 };
 
-exports.overlay = function (image1, image2) {
-  return exports.register(new EvalMulti(image1, image2));
+exports.rotateImage = function (degrees, image) {
+  image.rotate(degrees);
+  return exports.register(image);
 };
 
-},{"./evalCircle":13,"./evalMulti":14,"./evalString":16}],10:[function(require,module,exports){
+exports.scaleImage = function (factor, image) {
+  image.scale(factor, factor);
+  return exports.register(image);
+};
+
+exports.stringAppend = function (first, second) {
+  evalUtils.ensureType(first, EvalString);
+  evalUtils.ensureType(second, EvalString);
+
+  var str = new EvalString(first.getValue() + second.getValue());
+  return exports.register(str);
+};
+
+// polling for values
+exports.stringLength = function (str) {
+  evalUtils.ensureType(str, EvalString);
+  // kind of hacky. register  a string version of the number, so that if this
+  // is our top level block, it will be drawn, but return the number itself
+  var len = str.getValue().length;
+  exports.register(new EvalString(len.toString()));
+  return len;
+};
+
+},{"./evalCircle":13,"./evalEllipse":14,"./evalMulti":15,"./evalRect":17,"./evalStar":18,"./evalString":19,"./evalText":20,"./evalTriangle":21,"./evalUtils":22}],10:[function(require,module,exports){
 /**
  * Blockly Demo: Eval Graphics
  *
@@ -1777,11 +2021,200 @@ exports.install = function(blockly, blockInstallOptions) {
   mathBlocks.install(blockly, generator, gensym);
 
   installString(blockly, generator, gensym);
-  installCircle(blockly, generator, gensym);
-  installPlaceImage(blockly, generator, gensym);
-  installOverlay(blockly, generator, gensym);
+
+  // shapes
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'functional_circle',
+    blockTitle: msg.circleBlockTitle(),
+    apiName: 'circle',
+    args: [
+      { name: 'SIZE', type: 'Number' },
+      { name: 'STYLE', type: 'string' },
+      { name: 'COLOR', type: 'string' }
+    ]
+  });
+
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'functional_triangle',
+    blockTitle: msg.triangleBlockTitle(),
+    apiName: 'triangle',
+    args: [
+      { name: 'SIZE', type: 'Number' },
+      { name: 'STYLE', type: 'string' },
+      { name: 'COLOR', type: 'string' }
+    ]
+  });
+
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'functional_square',
+    blockTitle: msg.squareBlockTitle(),
+    apiName: 'square',
+    args: [
+      { name: 'SIZE', type: 'Number' },
+      { name: 'STYLE', type: 'string' },
+      { name: 'COLOR', type: 'string' }
+    ]
+  });
+
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'functional_rectangle',
+    blockTitle: msg.rectangleBlockTitle(),
+    apiName: 'rectangle',
+    args: [
+      { name: 'WIDTH', type: 'Number' },
+      { name: 'HEIGHT', type: 'Number' },
+      { name: 'STYLE', type: 'string' },
+      { name: 'COLOR', type: 'string' }
+    ]
+  });
+
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'functional_ellipse',
+    blockTitle: msg.ellipseBlockTitle(),
+    apiName: 'ellipse',
+    args: [
+      { name: 'WIDTH', type: 'Number' },
+      { name: 'HEIGHT', type: 'Number' },
+      { name: 'STYLE', type: 'string' },
+      { name: 'COLOR', type: 'string' }
+    ]
+  });
+
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'functional_star',
+    blockTitle: msg.starBlockTitle(),
+    apiName: 'star',
+    args: [
+      { name: 'SIZE', type: 'Number' },
+      { name: 'STYLE', type: 'string' },
+      { name: 'COLOR', type: 'string' }
+    ]
+  });
+
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'functional_text',
+    blockTitle: msg.textBlockTitle(),
+    apiName: 'text',
+    args: [
+      { name: 'TEXT', type: 'string' },
+      { name: 'SIZE', type: 'Number' },
+      { name: 'COLOR', type: 'string' }
+    ]
+  });
+
+  // image manipulation
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'overlay',
+    blockTitle: msg.overlayBlockTitle(),
+    apiName: 'overlay',
+    args: [
+      { name: 'TOP', type: 'image' },
+      { name: 'BOTTOM', type: 'image' },
+    ]
+  });
+
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'underlay',
+    blockTitle: msg.underlayBlockTitle(),
+    apiName: 'underlay',
+    args: [
+      { name: 'BOTTOM', type: 'image' },
+      { name: 'TOP', type: 'image' }
+    ]
+  });
+
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'place_image',
+    blockTitle: msg.placeImageBlockTitle(),
+    apiName: 'placeImage',
+    args: [
+      { name: 'X', type: 'Number' },
+      { name: 'Y', type: 'Number' },
+      { name: 'IMAGE', type: 'image' }
+    ]
+  });
+
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'rotate',
+    blockTitle: msg.rotateImageBlockTitle(),
+    apiName: 'rotateImage',
+    args: [
+      { name: 'DEGREES', type: 'Number' },
+      { name: 'IMAGE', type: 'image' }
+    ]
+  });
+
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'scale',
+    blockTitle: msg.scaleImageBlockTitle(),
+    apiName: 'scaleImage',
+    args: [
+      { name: 'FACTOR', type: 'Number' },
+      { name: 'IMAGE', type: 'image' }
+    ]
+  });
+
+  // string manipulation
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'string_append',
+    blockTitle: msg.stringAppendBlockTitle(),
+    apiName: 'stringAppend',
+    returnType: 'string',
+    args: [
+      { name: 'FIRST', type: 'string' },
+      { name: 'SECOND', type: 'string' }
+    ]
+  });
+
+  // polling for values
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'string_length',
+    blockTitle: msg.stringLengthBlockTitle(),
+    apiName: 'stringLength',
+    returnType: 'Number',
+    args: [
+      { name: 'STR', type: 'string' }
+    ]
+  });
+
   installStyle(blockly, generator, gensym);
 };
+
+
+function installFunctionalBlock (blockly, generator, gensym, options) {
+  var blockName = options.blockName;
+  var blockTitle = options.blockTitle;
+  var apiName = options.apiName;
+  var args = options.args;
+  var returnType = options.returnType || 'image';
+
+  blockly.Blocks[blockName] = {
+    init: function () {
+      initTitledFunctionalBlock(this, blockTitle, returnType, args);
+    }
+  };
+
+  generator[blockName] = function() {
+    var apiArgs = [];
+    for (var i = 0; i < args.length; i++) {
+      var arg = args[i];
+      var apiArg = Blockly.JavaScript.statementToCode(this, arg.name, false);
+      // Provide defaults
+      if (!apiArg) {
+        if (arg.type === 'Number') {
+          apiArg = '0';
+        } else if (arg.name === 'STYLE') {
+          apiArg = "Eval.string('solid')";
+        } else if (arg.name === 'COLOR') {
+          apiArg = "Eval.string('black')";
+        }
+      }
+      apiArgs.push(apiArg);
+    }
+
+    return "Eval." + apiName + "(" + apiArgs.join(", ") + ")";
+  };
+}
 
 /**
  * functional_string
@@ -1797,7 +2230,7 @@ function installString(blockly, generator, gensym) {
       this.setHSV.apply(this, colors.string);
       this.appendDummyInput()
           .appendTitle(new Blockly.FieldLabel('"'))
-          .appendTitle(new Blockly.FieldTextInput('string'), 'VAL')
+          .appendTitle(new Blockly.FieldTextInput(msg.string()), 'VAL')
           .appendTitle(new Blockly.FieldLabel('"'))
           .setAlign(Blockly.ALIGN_CENTRE);
       this.setFunctionalOutput(true, 'string');
@@ -1810,90 +2243,17 @@ function installString(blockly, generator, gensym) {
 }
 
 /**
- * functional_circle
- */
-function installCircle(blockly, generator, gensym) {
-  blockly.Blocks.functional_circle = {
-    init: function () {
-      // todo - i18n
-      initTitledFunctionalBlock(this, 'circle (radius, style, color)', 'image', [
-        { name: 'SIZE', type: 'Number' },
-        { name: 'STYLE', type: 'string' },
-        { name: 'COLOR', type: 'string' }
-      ]);
-    }
-  };
-
-  generator.functional_circle = function() {
-    var color = Blockly.JavaScript.statementToCode(this, 'COLOR', false) ||
-      "Eval.string('black')";
-    var style = Blockly.JavaScript.statementToCode(this, 'STYLE', false) ||
-      "Eval.string('solid')";
-    var size = Blockly.JavaScript.statementToCode(this, 'SIZE', false) || '0';
-
-    return "Eval.circle(" + [size, style, color].join(", ") + ")";
-  };
-}
-
-/**
- * place_image
- */
-function installPlaceImage(blockly, generator, gensym) {
-  blockly.Blocks.place_image = {
-    init: function () {
-      initTitledFunctionalBlock(this, 'place-image (image, x, y)', 'image', [
-        { name: 'IMAGE', type: 'image' },
-        { name: 'X', type: 'Number' },
-        { name: 'Y', type: 'Number' }
-      ]);
-    }
-  };
-
-  generator.place_image = function() {
-    var image = Blockly.JavaScript.statementToCode(this, 'IMAGE', false);
-    var x = Blockly.JavaScript.statementToCode(this, 'X', false) || '0';
-    var y = Blockly.JavaScript.statementToCode(this, 'Y', false) || '0';
-
-    y = evalUtils.cartesianToPixel(y);
-
-    return "Eval.placeImage(" + [image, x, y].join(", ") + ")";
-  };
-}
-
-
-/**
- * overlay
- */
-function installOverlay(blockly, generator, gensym) {
-  blockly.Blocks.overlay = {
-    init: function () {
-      initTitledFunctionalBlock(this, 'overlay (top, bottom)', 'image', [
-        { name: 'TOP', type: 'image' },
-        { name: 'BOTTOM', type: 'image' },
-      ]);
-    }
-  };
-
-  generator.overlay = function() {
-    var top = Blockly.JavaScript.statementToCode(this, 'TOP', false);
-    var bottom = Blockly.JavaScript.statementToCode(this, 'BOTTOM', false);
-
-    return "Eval.overlay(" + [top, bottom].join(", ") + ")";
-  };
-}
-
-/**
  * functional_style
  */
 function installStyle(blockly, generator, gensym) {
   blockly.Blocks.functional_style = {
     init: function () {
       var VALUES = [
-        ['solid', 'solid'],
+        [msg.solid(), 'solid'],
         ['75%', '75%'],
         ['50%', '50%'],
         ['25%', '25%'],
-        ['outline', 'outline']
+        [msg.outline(), 'outline']
       ];
 
       this.setFunctional(true, {
@@ -1916,7 +2276,7 @@ function installStyle(blockly, generator, gensym) {
   };
 }
 
-},{"../../locale/id_id/common":42,"../../locale/id_id/eval":43,"../functionalBlockUtils":22,"../mathBlocks":24,"./evalUtils":17}],11:[function(require,module,exports){
+},{"../../locale/id_id/common":47,"../../locale/id_id/eval":48,"../functionalBlockUtils":27,"../mathBlocks":29,"./evalUtils":22}],11:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -1929,9 +2289,10 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/id_id/eval') ; buf.push('\n\n<button id="continueButton" class="launch hide float-right">\n  ');4; // splitting these lines causes an extra space to show up in front of the word, breaking centering
-  // todo (brent) : continue should be a msg
-  ; buf.push('\n  <img src="', escape((7,  assetUrl('media/1x1.gif') )), '">Continue\n</button>\n'); })();
+ buf.push('');1;
+  var msg = require('../../locale/id_id/eval');
+  var commonMsg = require('../../locale/id_id/common');
+; buf.push('\n\n<button id="continueButton" class="launch hide float-right">\n  <img src="', escape((7,  assetUrl('media/1x1.gif') )), '">', escape((7,  commonMsg.continue() )), '\n</button>\n'); })();
 } 
 return buf.join('');
 };
@@ -1939,7 +2300,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/id_id/eval":43,"ejs":44}],12:[function(require,module,exports){
+},{"../../locale/id_id/common":47,"../../locale/id_id/eval":48,"ejs":49}],12:[function(require,module,exports){
 /**
  * Blockly Demo: Eval Graphics
  *
@@ -1998,7 +2359,7 @@ Eval.init = function(config) {
   Eval.shownFeedback_ = false;
 
   config.grayOutUndeletableBlocks = true;
-  config.insertWhenRun = false;
+  config.forceInsertTopBlock = null;
 
   config.html = page({
     assetUrl: BlocklyApps.assetUrl,
@@ -2010,6 +2371,7 @@ Eval.init = function(config) {
       }),
       blockUsed : undefined,
       idealBlockNumber : undefined,
+      editCode: level.editCode,
       blockCounterClass : 'block-counter-default'
     }
   });
@@ -2039,7 +2401,9 @@ Eval.init = function(config) {
     Blockly.JavaScript.addReservedWords('Eval,code');
 
     Eval.answerObject = generateEvalObjectFromBlockXml(level.solutionBlocks);
-    Eval.answerObject.draw(document.getElementById('answer'));
+    if (Eval.answerObject) {
+      Eval.answerObject.draw(document.getElementById('answer'));
+    }
 
     // Adjust visualizationColumn width.
     var visualizationColumn = document.getElementById('visualizationColumn');
@@ -2048,11 +2412,6 @@ Eval.init = function(config) {
     // base's BlocklyApps.resetButtonClick will be called first
     var resetButton = document.getElementById('resetButton');
     dom.addClickTouchEvent(resetButton, Eval.resetButtonClick);
-  };
-
-  config.getDisplayWidth = function() {
-    var el = document.getElementById('visualizationColumn');
-    return el.getBoundingClientRect().width;
   };
 
   BlocklyApps.init(config);
@@ -2135,6 +2494,10 @@ function generateEvalObjectFromBlockXml(blockXml) {
  * Execute the user's code.  Heaven help us...
  */
 Eval.execute = function() {
+  Eval.result = BlocklyApps.ResultType.UNSET;
+  Eval.testResults = BlocklyApps.TestResults.NO_TESTS_RUN;
+  Eval.message = undefined;
+
   // todo (brent) perhaps try to share user vs. expected generation better
   var code = Blockly.Generator.workspaceToCode('JavaScript');
   evalCode(code);
@@ -2144,8 +2507,8 @@ Eval.execute = function() {
     Eval.userObject.draw(document.getElementById("user"));
   }
 
-  var result = evaluateAnswer();
-  Eval.message = result ?  "Good jorb!" : '';
+  Eval.result = evaluateAnswer();
+  Eval.testResults = Eval.result ? TestResults.ALL_PASS : TestResults.LEVEL_INCOMPLETE_FAIL;
 
   var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
   var textBlocks = Blockly.Xml.domToText(xml);
@@ -2154,8 +2517,8 @@ Eval.execute = function() {
     app: 'eval',
     level: level.id,
     builder: level.builder,
-    result: result,
-    testResult: result ? TestResults.ALL_PASS : TestResults.APP_SPECIFIC_FAIL,
+    result: Eval.result,
+    testResult: Eval.testResults,
     program: encodeURIComponent(textBlocks),
     onComplete: onReportComplete
   };
@@ -2185,8 +2548,7 @@ var displayFeedback = function(response) {
   BlocklyApps.displayFeedback({
     app: 'Eval',
     skin: skin.id,
-    // feedbackType: Eval.testResults,
-    message: Eval.message ? Eval.message : "todo (brent): wrong",
+    feedbackType: Eval.testResults,
     response: response,
     level: level
   });
@@ -2203,7 +2565,7 @@ function onReportComplete(response) {
   displayFeedback(response);
 }
 
-},{"../../locale/id_id/common":42,"../../locale/id_id/eval":43,"../base":2,"../codegen":6,"../constants":7,"../dom":8,"../feedback.js":21,"../skins":26,"../templates/page.html":34,"./api":9,"./controls.html":11,"./levels":18,"./visualization.html":20}],13:[function(require,module,exports){
+},{"../../locale/id_id/common":47,"../../locale/id_id/eval":48,"../base":2,"../codegen":6,"../constants":7,"../dom":8,"../feedback.js":26,"../skins":31,"../templates/page.html":39,"./api":9,"./controls.html":11,"./levels":23,"./visualization.html":25}],13:[function(require,module,exports){
 var EvalObject = require('./evalObject');
 var EvalString = require('./evalString');
 var evalUtils = require('./evalUtils');
@@ -2228,17 +2590,48 @@ EvalCircle.prototype.draw = function (parent) {
     this.element_ = document.createElementNS(Blockly.SVG_NS, 'circle');
     parent.appendChild(this.element_);
   }
-  this.element_.setAttribute('cx', this.x_);
-  this.element_.setAttribute('cy', this.y_);
+  this.element_.setAttribute('cx', 0);
+  this.element_.setAttribute('cy', 0);
   this.element_.setAttribute('r', this.radius_);
 
-  // todo - alpha
-  this.element_.setAttribute('fill', evalUtils.getFill(this.style_, this.color_));
-  this.element_.setAttribute('stroke', evalUtils.getStroke(this.style_, this.color_));
-  this.element_.setAttribute('opacity', evalUtils.getOpacity(this.style_, this.color_));
+  EvalObject.prototype.draw.apply(this, arguments);
 };
 
-},{"./evalObject":15,"./evalString":16,"./evalUtils":17}],14:[function(require,module,exports){
+},{"./evalObject":16,"./evalString":19,"./evalUtils":22}],14:[function(require,module,exports){
+var EvalObject = require('./evalObject');
+var EvalString = require('./evalString');
+var evalUtils = require('./evalUtils');
+
+var EvalCircle = function (width, height, style, color) {
+  evalUtils.ensureType(style, EvalString);
+  evalUtils.ensureType(color, EvalString);
+
+  EvalObject.apply(this);
+
+  this.width_ = width;
+  this.height_ = height;
+  this.color_ = color.getValue();
+  this.style_ = style.getValue();
+
+  this.element_ = null;
+};
+EvalCircle.inherits(EvalObject);
+module.exports = EvalCircle;
+
+EvalCircle.prototype.draw = function (parent) {
+  if (!this.element_) {
+    this.element_ = document.createElementNS(Blockly.SVG_NS, 'ellipse');
+    parent.appendChild(this.element_);
+  }
+  this.element_.setAttribute('cx', 0);
+  this.element_.setAttribute('cy', 0);
+  this.element_.setAttribute('rx', this.width_ / 2);
+  this.element_.setAttribute('ry', this.height_ / 2);
+
+  EvalObject.prototype.draw.apply(this, arguments);
+};
+
+},{"./evalObject":16,"./evalString":19,"./evalUtils":22}],15:[function(require,module,exports){
 var EvalObject = require('./evalObject');
 var evalUtils = require('./evalUtils');
 
@@ -2251,6 +2644,17 @@ var EvalMulti = function (image1, image2) {
   this.image1_ = image1;
   this.image2_ = image2;
 
+  // we want an object centered at 0, 0 that we can then apply transforms to.
+  // to accomplish this, we need to adjust the children's x/y's to be relative
+  // to us
+  var deltaX, deltaY;
+  deltaX = this.image1_.x_ - this.x_;
+  deltaY = this.image1_.y_ - this.y_;
+  this.image1_.updatePosition(deltaX, deltaY);
+  deltaX = this.image2_.x_ - this.x_;
+  deltaY = this.image2_.y_ - this.y_;
+  this.image2_.updatePosition(deltaX, deltaY);
+
   this.element_ = null;
 };
 EvalMulti.inherits(EvalObject);
@@ -2258,27 +2662,157 @@ module.exports = EvalMulti;
 
 EvalMulti.prototype.draw = function (parent) {
   if (!this.element_) {
+    var deltaX, deltaY;
+
     this.element_ = document.createElementNS(Blockly.SVG_NS, 'g');
     parent.appendChild(this.element_);
   }
-  this.element_.setAttribute('transform', "translate(" + this.x_ + ", " + this.y_ + ")");
+
   this.image2_.draw(this.element_);
   this.image1_.draw(this.element_);
+
+  EvalObject.prototype.draw.apply(this, arguments);
 };
 
-},{"./evalObject":15,"./evalUtils":17}],15:[function(require,module,exports){
+},{"./evalObject":16,"./evalUtils":22}],16:[function(require,module,exports){
+var evalUtils = require('./evalUtils');
+
 var EvalObject = function () {
-  // x/y location in pixel space
+  // x/y location in pixel space of object's center
   this.x_ = 200;
   this.y_ = 200;
+
+  this.rotation_ = 0;
+  this.scaleX_ = 1.0;
+  this.scaleY = 1.0;
 };
 module.exports = EvalObject;
 
-EvalObject.prototype.draw = function (parent) {
-  throw "Overriden by descendants";
+EvalObject.prototype.updatePosition = function (x, y) {
+  this.x_ = x;
+  this.y_ = y;
 };
 
-},{}],16:[function(require,module,exports){
+// todo (brent) arguably some of these things should be on an EvalImage instead of EvalObject
+EvalObject.prototype.draw = function (parentElement) {
+  // todo (brent) - should style/color be init'ed in this ctor, and taken as inputs?
+  if (this.style_ && this.color_) {
+    this.element_.setAttribute('fill', evalUtils.getFill(this.style_, this.color_));
+    this.element_.setAttribute('stroke', evalUtils.getStroke(this.style_, this.color_));
+    this.element_.setAttribute('opacity', evalUtils.getOpacity(this.style_, this.color_));
+  }
+
+  var transform = "";
+  transform += " translate(" + this.x_ + " " + this.y_ + ")";
+
+  if (this.scaleX_ !== 1.0 || this.scaleY !== 1.0) {
+    transform += " scale(" + this.scaleX_ + " " + this.scaleY_ + ")";
+  }
+
+  if (this.rotation_ !== 0) {
+    transform += " rotate(" + this.rotation_ + ")";
+  }
+
+  if (transform === "") {
+    this.element_.removeAttribute("transform");
+  } else {
+    this.element_.setAttribute("transform", transform);
+  }
+};
+
+EvalObject.prototype.place = function (x, y) {
+  this.x_ = x;
+  this.y_ = y;
+};
+
+EvalObject.prototype.rotate = function (degrees) {
+  this.rotation_ = degrees;
+};
+
+EvalObject.prototype.scale = function (scaleX, scaleY) {
+  this.scaleX_ = scaleX;
+  this.scaleY_ = scaleY;
+};
+
+},{"./evalUtils":22}],17:[function(require,module,exports){
+var EvalObject = require('./evalObject');
+var EvalString = require('./evalString');
+var evalUtils = require('./evalUtils');
+
+var EvalRect = function (width, height, style, color) {
+  evalUtils.ensureType(style, EvalString);
+  evalUtils.ensureType(color, EvalString);
+
+  EvalObject.apply(this);
+
+  this.width_ = width;
+  this.height_ = height;
+  this.color_ = color.getValue();
+  this.style_ = style.getValue();
+
+  this.element_ = null;
+};
+EvalRect.inherits(EvalObject);
+module.exports = EvalRect;
+
+EvalRect.prototype.draw = function (parent) {
+  if (!this.element_) {
+    this.element_ = document.createElementNS(Blockly.SVG_NS, 'rect');
+    parent.appendChild(this.element_);
+  }
+
+  // center rect at 0, 0. we'll use transforms to move it.
+  this.element_.setAttribute('x', -this.width_ / 2);
+  this.element_.setAttribute('y', -this.height_ / 2);
+  this.element_.setAttribute('width', this.width_);
+  this.element_.setAttribute('height', this.height_);
+
+  EvalObject.prototype.draw.apply(this, arguments);
+};
+
+},{"./evalObject":16,"./evalString":19,"./evalUtils":22}],18:[function(require,module,exports){
+var EvalObject = require('./evalObject');
+var EvalString = require('./evalString');
+var evalUtils = require('./evalUtils');
+
+var EvalStar = function (radius, style, color) {
+  evalUtils.ensureType(style, EvalString);
+  evalUtils.ensureType(color, EvalString);
+
+  EvalObject.apply(this);
+
+  this.radius_ = radius;
+  this.color_ = color.getValue();
+  this.style_ = style.getValue();
+
+  this.element_ = null;
+};
+EvalStar.inherits(EvalObject);
+module.exports = EvalStar;
+
+EvalStar.prototype.draw = function (parent) {
+  if (!this.element_) {
+    this.element_ = document.createElementNS(Blockly.SVG_NS, 'polygon');
+    parent.appendChild(this.element_);
+  }
+
+  var points = [];
+  var outerRadius = this.radius_;
+  var innerRadius = (3 - Math.sqrt(5)) / 2 * outerRadius;
+
+  var angleDelta = 2 * Math.PI / 5;
+  for (var angle = 0; angle < 2 * Math.PI; angle += angleDelta) {
+    points.push(outerRadius * Math.cos(angle) + "," + outerRadius * Math.sin(angle));
+    points.push(innerRadius * Math.cos(angle + angleDelta / 2) + "," +
+      innerRadius * Math.sin(angle + angleDelta / 2));
+  }
+
+  this.element_.setAttribute('points', points.join(' '));
+
+  EvalObject.prototype.draw.apply(this, arguments);
+};
+
+},{"./evalObject":16,"./evalString":19,"./evalUtils":22}],19:[function(require,module,exports){
 var EvalObject = require('./evalObject');
 
 var EvalString = function (val) {
@@ -2308,7 +2842,92 @@ EvalString.prototype.getValue = function () {
   return this.val_;
 };
 
-},{"./evalObject":15}],17:[function(require,module,exports){
+},{"./evalObject":16}],20:[function(require,module,exports){
+var EvalObject = require('./evalObject');
+var EvalString = require('./evalString');
+var evalUtils = require('./evalUtils');
+
+var EvalStringImage = function (text, fontSize, color) {
+  evalUtils.ensureType(text, EvalString);
+  evalUtils.ensureType(color, EvalString);
+
+  EvalObject.apply(this);
+
+  this.text_ = text.getValue();
+  this.fontSize_ = fontSize;
+
+  this.color_ = color.getValue();
+
+  this.element_ = null;
+};
+EvalStringImage.inherits(EvalObject);
+module.exports = EvalStringImage;
+
+EvalStringImage.prototype.draw = function (parent) {
+  if (!this.element_) {
+    this.element_ = document.createElementNS(Blockly.SVG_NS, 'text');
+    parent.appendChild(this.element_);
+  }
+  this.element_.textContent = this.text_;
+  this.element_.setAttribute('style', 'font-size: ' + this.fontSize_ + 'pt');
+
+  EvalObject.prototype.draw.apply(this, arguments);
+};
+
+},{"./evalObject":16,"./evalString":19,"./evalUtils":22}],21:[function(require,module,exports){
+var EvalObject = require('./evalObject');
+var EvalString = require('./evalString');
+var evalUtils = require('./evalUtils');
+
+var EvalTriangle = function (edge, style, color) {
+  evalUtils.ensureType(style, EvalString);
+  evalUtils.ensureType(color, EvalString);
+
+  EvalObject.apply(this);
+
+  this.edge_ = edge;
+  this.color_ = color.getValue();
+  this.style_ = style.getValue();
+
+  this.element_ = null;
+};
+EvalTriangle.inherits(EvalObject);
+module.exports = EvalTriangle;
+
+EvalTriangle.prototype.draw = function (parent) {
+  if (!this.element_) {
+    this.element_ = document.createElementNS(Blockly.SVG_NS, 'polygon');
+    parent.appendChild(this.element_);
+  }
+
+  // center at 0, 0 (allowing transforms to move it around)
+  // the center is halfway between width, and a third of the way up the height
+  var height = Math.sqrt(3) / 2 * this.edge_;
+
+  var bottomLeft = {
+    x: -this.edge_ / 2,
+    y: height / 3
+  };
+
+  var bottomRight = {
+    x: this.edge_ / 2,
+    y: height / 3
+  };
+
+  var top = {
+    x: 0,
+    y: -height * 2 / 3
+  };
+
+  this.element_.setAttribute('points',
+    bottomLeft.x +',' + bottomLeft.y + ' ' +
+    bottomRight.x + ',' + bottomRight.y + ' ' +
+    top.x + ',' + top.y);
+
+  EvalObject.prototype.draw.apply(this, arguments);
+};
+
+},{"./evalObject":16,"./evalString":19,"./evalUtils":22}],22:[function(require,module,exports){
 module.exports.ensureType = function (val, type) {
   if (!(val instanceof type)) {
     // todo - better strategy than throwing?
@@ -2317,8 +2936,7 @@ module.exports.ensureType = function (val, type) {
 };
 
 module.exports.getFill = function (style, color) {
-  // todo - i18n
-  // todo - 1asdf becomes 1 with parseInt
+  // todo - 1asdf becomes 1 with parseInt. do we care?
   // for now, we treat anything we don't recognize as solid.
   var alpha = parseInt(style, 10);
   if (style !== "outline") {
@@ -2357,7 +2975,7 @@ module.exports.cartesianToPixel = function (cartesianY) {
   return 400 - cartesianY;
 };
 
-},{}],18:[function(require,module,exports){
+},{}],23:[function(require,module,exports){
 var msg = require('../../locale/id_id/eval');
 var blockUtils = require('../block_utils');
 
@@ -2366,7 +2984,11 @@ var blockUtils = require('../block_utils');
  */
 module.exports = {
   'eval1': {
-    solutionBlocks: '<block type="functional_circle" inline="false"><functional_input name="COLOR"><block type="functional_string"><title name="VAL">red</title></block></functional_input><functional_input name="SIZE"><block type="functional_math_number"><title name="NUM">50</title></block></functional_input></block>',
+    solutionBlocks: blockUtils.mathBlockXml('functional_square', {
+      'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'black' } ),
+      'STYLE': blockUtils.mathBlockXml('functional_string', null, { VAL: 'solid' }),
+      'SIZE': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 4 } )
+    }),
     ideal: Infinity,
     toolbox: blockUtils.createToolbox(
       blockUtils.blockOfType('functional_plus') +
@@ -2377,9 +2999,25 @@ module.exports = {
       blockUtils.blockOfType('functional_string') +
       blockUtils.blockOfType('functional_style') +
       blockUtils.blockOfType('functional_circle') +
+      blockUtils.blockOfType('functional_triangle') +
+      blockUtils.blockOfType('functional_square') +
+      blockUtils.blockOfType('functional_rectangle') +
+      blockUtils.blockOfType('functional_ellipse') +
+      blockUtils.blockOfType('functional_star') +
       blockUtils.blockOfType('place_image') +
-      blockUtils.blockOfType('overlay')),
-    startBlocks: '<block type="functional_circle" inline="false"><functional_input name="COLOR"><block type="functional_string"><title name="VAL">red</title></block></functional_input><functional_input name="SIZE"><block type="functional_math_number"><title name="NUM">50</title></block></functional_input></block>',
+      blockUtils.blockOfType('overlay') +
+      blockUtils.blockOfType('underlay') +
+      blockUtils.blockOfType('rotate') +
+      blockUtils.blockOfType('scale') +
+      blockUtils.blockOfType('functional_text') +
+      blockUtils.blockOfType('string_append') +
+      blockUtils.blockOfType('string_length')
+    ),
+    startBlocks: blockUtils.mathBlockXml('functional_star', {
+      'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'black' } ),
+      'STYLE': blockUtils.mathBlockXml('functional_string', null, { VAL: 'solid' }),
+      'SIZE': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 20 } )
+    }),
     requiredBlocks: '',
     freePlay: false
   },
@@ -2394,7 +3032,7 @@ module.exports = {
   }
 };
 
-},{"../../locale/id_id/eval":43,"../block_utils":3}],19:[function(require,module,exports){
+},{"../../locale/id_id/eval":48,"../block_utils":3}],24:[function(require,module,exports){
 var appMain = require('../appMain');
 window.Eval = require('./eval');
 var blocks = require('./blocks');
@@ -2407,7 +3045,7 @@ window.evalMain = function(options) {
   appMain(window.Eval, levels, options);
 };
 
-},{"../appMain":1,"../skins":26,"./blocks":10,"./eval":12,"./levels":18}],20:[function(require,module,exports){
+},{"../appMain":1,"../skins":31,"./blocks":10,"./eval":12,"./levels":23}],25:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -2428,7 +3066,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":44}],21:[function(require,module,exports){
+},{"ejs":49}],26:[function(require,module,exports){
 var trophy = require('./templates/trophy.html');
 var utils = require('./utils');
 var readonly = require('./templates/readonly.html');
@@ -3375,7 +4013,7 @@ var generateXMLForBlocks = function(blocks) {
 };
 
 
-},{"../locale/id_id/common":42,"./codegen":6,"./constants":7,"./dom":8,"./templates/buttons.html":29,"./templates/code.html":30,"./templates/readonly.html":35,"./templates/shareFailure.html":36,"./templates/sharing.html":37,"./templates/showCode.html":38,"./templates/trophy.html":39,"./utils":40}],22:[function(require,module,exports){
+},{"../locale/id_id/common":47,"./codegen":6,"./constants":7,"./dom":8,"./templates/buttons.html":34,"./templates/code.html":35,"./templates/readonly.html":40,"./templates/shareFailure.html":41,"./templates/sharing.html":42,"./templates/showCode.html":43,"./templates/trophy.html":44,"./utils":45}],27:[function(require,module,exports){
 var colors = {
   Number: [192, 1.00, 0.99], // 00ccff
   string: [180, 1.00, 0.60], // 0099999
@@ -3419,7 +4057,7 @@ module.exports.initTitledFunctionalBlock = function (block, title, type, args) {
   }
 };
 
-},{}],23:[function(require,module,exports){
+},{}],28:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -6346,7 +6984,7 @@ module.exports.initTitledFunctionalBlock = function (block, title, type, args) {
 }.call(this));
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],24:[function(require,module,exports){
+},{}],29:[function(require,module,exports){
 /**
  * A set of functional blocks
  */
@@ -6457,7 +7095,7 @@ function installMathNumber(blockly, generator, gensym) {
   };
 }
 
-},{"./functionalBlockUtils":22}],25:[function(require,module,exports){
+},{"./functionalBlockUtils":27}],30:[function(require,module,exports){
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
@@ -6695,7 +7333,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"./block_utils":3,"./utils":40,"./xml":41}],26:[function(require,module,exports){
+},{"./block_utils":3,"./utils":45,"./xml":46}],31:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -6764,7 +7402,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{}],27:[function(require,module,exports){
+},{}],32:[function(require,module,exports){
 /**
  * Blockly Apps: SVG Slider
  *
@@ -6990,7 +7628,7 @@ Slider.bindEvent_ = function(element, name, func) {
 
 module.exports = Slider;
 
-},{"./dom":8}],28:[function(require,module,exports){
+},{"./dom":8}],33:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7011,7 +7649,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":44}],29:[function(require,module,exports){
+},{"ejs":49}],34:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7032,7 +7670,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/id_id/common":42,"ejs":44}],30:[function(require,module,exports){
+},{"../../locale/id_id/common":47,"ejs":49}],35:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7053,7 +7691,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":44}],31:[function(require,module,exports){
+},{"ejs":49}],36:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7074,7 +7712,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/id_id/common":42,"ejs":44}],32:[function(require,module,exports){
+},{"../../locale/id_id/common":47,"ejs":49}],37:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7097,7 +7735,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/id_id/common":42,"ejs":44}],33:[function(require,module,exports){
+},{"../../locale/id_id/common":47,"ejs":49}],38:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7118,7 +7756,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/id_id/common":42,"ejs":44}],34:[function(require,module,exports){
+},{"../../locale/id_id/common":47,"ejs":49}],39:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7135,7 +7773,7 @@ with (locals || {}) { (function(){
   var msg = require('../../locale/id_id/common');
   var hideRunButton = locals.hideRunButton || false;
 ; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var instructions = function() {; buf.push('  <div id="bubble" class="clearfix">\n    <table id="prompt-table">\n      <tr>\n        <td id="prompt-icon-cell">\n          <img id="prompt-icon"/>\n        </td>\n        <td id="prompt-cell">\n          <p id="prompt">\n          </p>\n        </td>\n      </tr>\n    </table>\n    <div id="ani-gif-preview-wrapper">\n      <div id="ani-gif-preview">\n        <img id="play-button" src="', escape((26,  assetUrl('media/play-circle.png') )), '"/>\n      </div>\n    </div>\n  </div>\n');30; };; buf.push('\n');31; // A spot for the server to inject some HTML for help content.
-var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n');36; var codeArea = function() {; buf.push('  <div id="codeTextbox" contenteditable spellcheck=false>\n  </div>\n');38; }; ; buf.push('\n\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (42,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((48,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((49,  msg.runProgram() )), '</div>\n        <img src="', escape((50,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((53,  msg.resetProgram() )), '</div>\n        <img src="', escape((54,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');56; if (data.controls) { ; buf.push('\n      ', (57,  data.controls ), '\n      ');58; } ; buf.push('\n      ');59; if (data.extraControlRows) { ; buf.push('\n      ', (60,  data.extraControlRows ), '\n      ');61; } ; buf.push('\n    </div>\n\n    ');64; instructions() ; buf.push('\n    ');65; helpArea(data.helpHtml) ; buf.push('\n\n  </div>\n</div>\n\n<div id="blockly">\n  <div id="headers" dir="', escape((71,  data.localeDirection )), '">\n    <div id="toolbox-header" class="blockly-header"><span>', escape((72,  msg.toolboxHeader() )), '</span></div>\n    <div id="workspace-header" class="blockly-header">\n      <span>', escape((74,  msg.workspaceHeader())), ' </span>\n      <div id="blockCounter">\n        <div id="blockUsed" class=', escape((76,  data.blockCounterClass )), '>\n          ', escape((77,  data.blockUsed )), '\n        </div>\n        <span>&nbsp;/</span>\n        <span id="idealBlockNumber">', escape((80,  data.idealBlockNumber )), '</span>\n      </div>\n    </div>\n    <div id="show-code-header" class="blockly-header"><span>', escape((83,  msg.showCodeHeader() )), '</span></div>\n  </div>\n</div>\n\n<div class="clear"></div>\n\n');89; codeArea() ; buf.push('\n'); })();
+var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (38,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((44,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((45,  msg.runProgram() )), '</div>\n        <img src="', escape((46,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((49,  msg.resetProgram() )), '</div>\n        <img src="', escape((50,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');52; if (data.controls) { ; buf.push('\n      ', (53,  data.controls ), '\n      ');54; } ; buf.push('\n      ');55; if (data.extraControlRows) { ; buf.push('\n      ', (56,  data.extraControlRows ), '\n      ');57; } ; buf.push('\n    </div>\n\n    ');60; instructions() ; buf.push('\n    ');61; helpArea(data.helpHtml) ; buf.push('\n\n  </div>\n</div>\n\n');66; if (data.editCode) { ; buf.push('\n  <div id="blockly" style="display:none"></div>\n  <div id="codeWorkspace">\n');69; } else { ; buf.push('\n  <div id="blockly">\n');71; } ; buf.push('\n  <div id="headers" dir="', escape((72,  data.localeDirection )), '">\n    <div id="toolbox-header" class="blockly-header"><span>', escape((73,  msg.toolboxHeader() )), '</span></div>\n    <div id="workspace-header" class="blockly-header">\n      <span id="workspace-header-span">', escape((75,  msg.workspaceHeader())), ' </span>\n      <div id="blockCounter">\n        <div id="blockUsed" class=', escape((77,  data.blockCounterClass )), '>\n          ', escape((78,  data.blockUsed )), '\n        </div>\n        <span>&nbsp;/</span>\n        <span id="idealBlockNumber">', escape((81,  data.idealBlockNumber )), '</span>\n      </div>\n    </div>\n    <div id="show-code-header" class="blockly-header"><span>', escape((84,  msg.showCodeHeader() )), '</span></div>\n  </div>\n  ');86; if (data.editCode) { ; buf.push('\n    <div id="codeTextbox" contenteditable spellcheck=false></div>\n  ');88; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
 } 
 return buf.join('');
 };
@@ -7143,7 +7781,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/id_id/common":42,"ejs":44}],35:[function(require,module,exports){
+},{"../../locale/id_id/common":47,"ejs":49}],40:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7165,7 +7803,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":44}],36:[function(require,module,exports){
+},{"ejs":49}],41:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7186,7 +7824,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":44}],37:[function(require,module,exports){
+},{"ejs":49}],42:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7207,7 +7845,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/id_id/common":42,"ejs":44}],38:[function(require,module,exports){
+},{"../../locale/id_id/common":47,"ejs":49}],43:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7228,7 +7866,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/id_id/common":42,"ejs":44}],39:[function(require,module,exports){
+},{"../../locale/id_id/common":47,"ejs":49}],44:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -7249,7 +7887,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":44}],40:[function(require,module,exports){
+},{"ejs":49}],45:[function(require,module,exports){
 var xml = require('./xml');
 var savedAmd;
 
@@ -7393,8 +8031,9 @@ exports.generateCodeAliases = function (codeFunctions, parentObjName) {
     for (var i = 0; i < codeFunctions.length; i++) {
       var cf = codeFunctions[i];
       code += "var " + cf.func +
-          " = function() { var newArgs = [''].concat(arguments); return " +
-          parentObjName + "." + cf.func +
+          " = function() { var newArgs = " +
+          (cf.idArgLast ? "arguments.concat(['']);" : "[''].concat(arguments);") +
+          " return " + parentObjName + "." + cf.func +
           ".apply(" + parentObjName + ", newArgs); };\n";
     }
   }
@@ -7526,7 +8165,7 @@ exports.generateDropletPalette = function (codeFunctions) {
   return palette;
 };
 
-},{"./lodash":23,"./xml":41}],41:[function(require,module,exports){
+},{"./lodash":28,"./xml":46}],46:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
@@ -7554,7 +8193,7 @@ exports.parseElement = function(text) {
   return element;
 };
 
-},{}],42:[function(require,module,exports){
+},{}],47:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.id=function(n){return "other"}
 exports.and = function(d){return "dan"};
 
@@ -7654,6 +8293,8 @@ exports.score = function(d){return "Skor"};
 
 exports.showCodeHeader = function(d){return "Tampilkan kode"};
 
+exports.showBlocksHeader = function(d){return "Show Blocks"};
+
 exports.showGeneratedCode = function(d){return "Tampilkan kode"};
 
 exports.subtitle = function(d){return "Perangkat pemrograman visual"};
@@ -7684,13 +8325,13 @@ exports.savedToGallery = function(d){return "Simpan ke galeri Anda!"};
 
 exports.shareFailure = function(d){return "Sorry, we can't share this program."};
 
-exports.typeCode = function(d){return "Ketik kode JavaScript di bawah instruksi ini."};
-
 exports.typeFuncs = function(d){return "Fungsi yang tersedia: %1"};
 
 exports.typeHint = function(d){return "Perhatikan bahwa tanda kurung dan titik koma diperlukan."};
 
 exports.workspaceHeader = function(d){return "Rakitlah blok Anda disini: "};
+
+exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
 
 exports.infinity = function(d){return "∞"};
 
@@ -7715,150 +8356,44 @@ exports.hintHeader = function(d){return "Berikut adalah tip:"};
 exports.genericFeedback = function(d){return "Lihatlah hasil anda dan cobalah untuk memperbaiki program Anda."};
 
 
-},{"messageformat":55}],43:[function(require,module,exports){
+},{"messageformat":60}],48:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.id=function(n){return "other"}
-exports.blocksUsed = function(d){return "Blok yang digunakan: %1"};
+exports.circleBlockTitle = function(d){return "circle (radius, style, color)"};
 
-exports.branches = function(d){return "cabang"};
+exports.ellipseBlockTitle = function(d){return "ellipse (width, height, style, color)"};
 
-exports.catColour = function(d){return "Warna"};
+exports.overlayBlockTitle = function(d){return "overlay (top, bottom)"};
 
-exports.catControl = function(d){return "Loop"};
+exports.placeImageBlockTitle = function(d){return "place-image (x, y, image)"};
 
-exports.catMath = function(d){return "Matematika"};
+exports.rectangleBlockTitle = function(d){return "rectangle (width, height, style, color)"};
 
-exports.catProcedures = function(d){return "Fungsi"};
+exports.rotateImageBlockTitle = function(d){return "rotate (degrees, image)"};
 
-exports.catTurtle = function(d){return "Aksi"};
+exports.scaleImageBlockTitle = function(d){return "scale (factor)"};
 
-exports.catVariables = function(d){return "Variabel"};
+exports.squareBlockTitle = function(d){return "square (size, style, color)"};
 
-exports.catLogic = function(d){return "Logika"};
+exports.starBlockTitle = function(d){return "star (radius, style, color)"};
 
-exports.colourTooltip = function(d){return "Perubahan warna pensil."};
+exports.stringAppendBlockTitle = function(d){return "string-append (first, second)"};
 
-exports.degrees = function(d){return "derajat"};
+exports.stringLengthBlockTitle = function(d){return "string-length (string)"};
 
-exports.depth = function(d){return "kedalaman"};
+exports.textBlockTitle = function(d){return "text (string, size, color)"};
 
-exports.dots = function(d){return "piksel"};
+exports.triangleBlockTitle = function(d){return "triangle (size, style, color)"};
 
-exports.drawASquare = function(d){return "menggambar sebuah persegi empat"};
+exports.underlayBlockTitle = function(d){return "underlay (bottom, top)"};
 
-exports.drawATriangle = function(d){return "menggambar sebuah segitiga"};
+exports.outline = function(d){return "outline"};
 
-exports.drawACircle = function(d){return "Gambar sebuah lingkaran"};
+exports.solid = function(d){return "solid"};
 
-exports.drawAFlower = function(d){return "menggambar bunga"};
+exports.string = function(d){return "string"};
 
-exports.drawAHexagon = function(d){return "menggambar segi enam"};
 
-exports.drawAHouse = function(d){return "gambar sebuah rumah"};
-
-exports.drawAPlanet = function(d){return "menggambar planet"};
-
-exports.drawARhombus = function(d){return "menggambar ketupat"};
-
-exports.drawARobot = function(d){return "menggambar robot"};
-
-exports.drawARocket = function(d){return "menggambar roket"};
-
-exports.drawASnowflake = function(d){return "menggambar kristal salju"};
-
-exports.drawASnowman = function(d){return "Menggambar manusia salju"};
-
-exports.drawAStar = function(d){return "menggambar bintang"};
-
-exports.drawATree = function(d){return "Gambar sebuah pohon"};
-
-exports.drawUpperWave = function(d){return "menggambar atas gelombang"};
-
-exports.drawLowerWave = function(d){return "menggambar bawah gelombang"};
-
-exports.heightParameter = function(d){return "tinggi"};
-
-exports.hideTurtle = function(d){return "sembunyikan artis"};
-
-exports.jump = function(d){return "lompat"};
-
-exports.jumpBackward = function(d){return "lompat ke belakang "};
-
-exports.jumpForward = function(d){return "lompat maju "};
-
-exports.jumpTooltip = function(d){return "Mengerakan artis tanpa meninggalkan bekas apapun."};
-
-exports.jumpEastTooltip = function(d){return "Memindahkan karakter kearah timur tanpa ada bekas pada jalur yang dilalui."};
-
-exports.jumpNorthTooltip = function(d){return "Memindahkan karakter kearah utara tanpa ada bekas pada jalur yang dilalui."};
-
-exports.jumpSouthTooltip = function(d){return "Memindahkan karakter kearah selatan tanpa ada bekas pada jalur yang dilalui."};
-
-exports.jumpWestTooltip = function(d){return "Memindahkan karakter kearah barat tanpa ada bekas pada jalur yang dilalui."};
-
-exports.lengthFeedback = function(d){return "sudah benar sih, cuma jumlah langkah/geraknya perlu diperbaiki."};
-
-exports.lengthParameter = function(d){return "panjang"};
-
-exports.loopVariable = function(d){return "Pencacah"};
-
-exports.moveBackward = function(d){return "gerak mundur"};
-
-exports.moveEastTooltip = function(d){return "pindahkan karakter ke Timur."};
-
-exports.moveForward = function(d){return "Gerak maju "};
-
-exports.moveForwardTooltip = function(d){return "Artis bergerak maju."};
-
-exports.moveNorthTooltip = function(d){return "pindahkan karakter ke Utara."};
-
-exports.moveSouthTooltip = function(d){return "pindahkan karakter ke Selatan."};
-
-exports.moveWestTooltip = function(d){return "pindahkan karakter ke Barat."};
-
-exports.moveTooltip = function(d){return "Menggerak artis maju atau mundur oleh jumlah yang ditentukan."};
-
-exports.notBlackColour = function(d){return "Anda perlu untuk mengatur warna selain hitam untuk teka-teki ini."};
-
-exports.numBlocksNeeded = function(d){return "Teka-teki ini dapat diselesaikan dengan %1 blok.  Anda menggunakan %2."};
-
-exports.penDown = function(d){return "pensil kebawah"};
-
-exports.penTooltip = function(d){return "Mengangkat atau menurunkan pensil, mulai atau berhenti menggambar."};
-
-exports.penUp = function(d){return "pensil keatas"};
-
-exports.reinfFeedbackMsg = function(d){return "Apa hasilnya sudah seperti apa yang Anda inginkan? Tekan tombol \"Ayo coba lagi\" untuk melihat gambar Anda."};
-
-exports.setColour = function(d){return "Atur warna"};
-
-exports.setWidth = function(d){return "atur lebar"};
-
-exports.shareDrawing = function(d){return "Bagikan gambar anda:"};
-
-exports.showMe = function(d){return "Tunjukkan padaku"};
-
-exports.showTurtle = function(d){return "tampilkan artis"};
-
-exports.step = function(d){return "langkah"};
-
-exports.tooFewColours = function(d){return "Anda perlu menggunakan setidaknya %1 warna yang berbeda untuk teka-teki ini.  Anda menggunakan hanya %2."};
-
-exports.turnLeft = function(d){return "Belok kiri"};
-
-exports.turnRight = function(d){return "Belok kanan"};
-
-exports.turnRightTooltip = function(d){return "Membelok artis ke kanan dengan sudut tertentu."};
-
-exports.turnTooltip = function(d){return "Membelok artis ke kiri atau ke kanan dengan beberapa derajat."};
-
-exports.turtleVisibilityTooltip = function(d){return "Membuat artis terlihat atau tidak terlihat."};
-
-exports.widthTooltip = function(d){return "Merubah lebar pensil."};
-
-exports.wrongColour = function(d){return "Gambar Anda memiliki warna yang salah.  Untuk teka-teki ini, perlu untuk menjadi %1."};
-
-
-},{"messageformat":55}],44:[function(require,module,exports){
+},{"messageformat":60}],49:[function(require,module,exports){
 
 /*!
  * EJS
@@ -8217,7 +8752,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":45,"./utils":46,"fs":47,"path":48}],45:[function(require,module,exports){
+},{"./filters":50,"./utils":51,"fs":52,"path":53}],50:[function(require,module,exports){
 /*!
  * EJS - Filters
  * Copyright(c) 2010 TJ Holowaychuk <tj@vision-media.ca>
@@ -8420,7 +8955,7 @@ exports.json = function(obj){
   return JSON.stringify(obj);
 };
 
-},{}],46:[function(require,module,exports){
+},{}],51:[function(require,module,exports){
 
 /*!
  * EJS
@@ -8446,9 +8981,9 @@ exports.escape = function(html){
 };
  
 
-},{}],47:[function(require,module,exports){
+},{}],52:[function(require,module,exports){
 
-},{}],48:[function(require,module,exports){
+},{}],53:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -8676,7 +9211,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require("JkpR2F"))
-},{"JkpR2F":49}],49:[function(require,module,exports){
+},{"JkpR2F":54}],54:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -8741,7 +9276,7 @@ process.chdir = function (dir) {
     throw new Error('process.chdir is not supported');
 };
 
-},{}],50:[function(require,module,exports){
+},{}],55:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -9252,7 +9787,7 @@ process.chdir = function (dir) {
 }(this));
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],51:[function(require,module,exports){
+},{}],56:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -9338,7 +9873,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],52:[function(require,module,exports){
+},{}],57:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -9425,13 +9960,13 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],53:[function(require,module,exports){
+},{}],58:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":51,"./encode":52}],54:[function(require,module,exports){
+},{"./decode":56,"./encode":57}],59:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -10140,7 +10675,7 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":50,"querystring":53}],55:[function(require,module,exports){
+},{"punycode":55,"querystring":58}],60:[function(require,module,exports){
 /**
  * messageformat.js
  *
@@ -11723,4 +12258,4 @@ function isNullOrUndefined(arg) {
 
 })( this );
 
-},{}]},{},[19])
+},{}]},{},[24])

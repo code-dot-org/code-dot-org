@@ -102,11 +102,27 @@ títol: Recursos maquetació: àmplia nav: recursos_nav
     </p>
     
     <p>
+      <a id="social"></a>
+    </p>
+    
+    <h2>
+      Post these on social media
+    </h2>
+    
+    <p>
+      <a href="/images/social-1.jpg"><img src="/images/fit-200/social-1.jpg" alt="imatge" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-2.jpg"><img src="/images/fit-200/social-2.jpg" alt="imatge" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-3.jpg"><img src="/images/fit-200/social-3.jpg" alt="imatge" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    
+    <p>
+      <a href="/images/mark.jpg"><img src="/images/fit-200/mark.jpg" alt="imatge" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-200/susan.jpg" alt="imatge" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-200/ashton.jpg" alt="imatge" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-200/marissa.jpg" alt="imatge" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-200/chris.jpg" alt="imatge" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    
+    <p>
       <a id="sample-emails"></a>
     </p>
     
     <h2>
-      Envia aquests correus per ajudar a promoure l'Hora de Codi
+      Send these emails to help promote the Hour of Code
     </h2>
     
     <p>
@@ -114,27 +130,27 @@ títol: Recursos maquetació: àmplia nav: recursos_nav
     </p>
     
     <h2>
-      Demana a l'escola, empresaris o amics que s'inscriguin:
+      Ask your school, employer or friends to sign up:
     </h2>
     
     <p>
-      Els ordinadors són pertot arreu, però menys escoles ensenyen computació que 10 anys enrere. La bona notícia és, estem en el camí de canviar això. Si has sentit parlar sobre l'Hora de Codi de l'any passat, sabràs que ha fet història. En una setmana, 15 milions d'estudiants provaren la informàtica!
+      Els ordinadors són pertot arreu, però menys escoles ensenyen computació que 10 anys enrere. Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. In one week, 15 million students tried computer science!
     </p>
     
     <p>
-      La informàtica estava en pàgines de Google, MSN, Yahoo! i Disney. El president Obama, Shakira i Ashton Kutcher van donar inici a l'Hora de Codi amb vídeos. Més de 100 col·laboradors es van reunir per donar suport a aquest moviment.
+      Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
     </p>
     
     <p>
-      Aquest any, fem-ho encara més gran. T'estic demanant unir-te a l'Hora de Codi 2014. Si us plau, Involucreu-vos amb l'esdeveniment d'Hora de Codi durant la setmana de les Ciències Informàtiques de l'Educació, 8-14 de desembre de 2014.
+      This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2014. Please get involved with an Hour of Code event during Computer Science Education Week, December 8-14, 2014.
     </p>
     
     <p>
-      Corre la veu. Acull un esdeveniment. Demana a una escola local que s'inscrigui. O prova l'Hora de Codi tu mateix -- tothom pot beneficiar-se de l'aprenentatge bàsic.
+      Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself -- everyone can benefit from learning the basics.
     </p>
     
     <p>
-      Ajuda'ns a assolir 100 milions d'estudiants al final de l'any! Comença a http://hourofcode.com
+      Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com
     </p>
     
     <p>
@@ -142,51 +158,51 @@ títol: Recursos maquetació: àmplia nav: recursos_nav
     </p>
     
     <h2>
-      Convida als mitjans de comunicació a assistir al teu esdeveniment:
+      Invite media to attend your event:
     </h2>
     
     <p>
-      <strong>Línia d'assumpte:</strong> L'escola local s'uneix a la missió d'introduir 100m estudiants a la informàtica
+      <strong>Subject line:</strong> Local school joins mission to introduce 100m students to computer science
     </p>
     
     <p>
-      Els ordinadors són a pertot arreu, però menys escoles ensenyen informàtica que 10 anys enrere. Les nenes i les minories són severament subrepresentades. La bona notícia és, estem en el camí de canviar-ho.
+      Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and minorities are severely underrepresented. Good news is, we’re on our way to change this.
     </p>
     
     <p>
-      En una setmana l'any passat, 15 milions d'estudiants provaren la informàtica! La informàtica estava en pàgines de Google, MSN, Yahoo! i Disney. El president Obama, Shakira i Ashton Kutcher van donar inici a l'Hora de Codi amb vídeos. Més de 100 col·laboradors es van reunir per donar suport a aquest moviment.
+      In one week last year, 15 million students tried computer science! Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
     </p>
     
     <p>
-      Ara el moviment d'Hora de Codi aspira a 100 milions d'estudiants.
+      Now the Hour of Code movement is aiming for 100 million students.
     </p>
     
     <p>
-      És per això que cadascun dels [nombre X] estudiants de [nom de l'escola] s'estan unint al esdeveniment d'aprenentatge més gran de la història: L'Hora de Codi, durant desembre 8-14.
+      That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Dec. 8-14.
     </p>
     
     <p>
-      Em dirigeixo a tu per convidar-te a assistir a la nostra reunió inicial, i veure com els nens comencen l'activitat [DATE].
+      I'm writing to invite you to attend our kickoff assembly, and to see kids start the activity on [DATE].
     </p>
     
     <p>
-      L'Hora de Codi, organitzat per l'associació sense ànim de lucre Code.org i més de 100 d'altres, és una declaració de que la generació actual d'estudiants estan disposats a aprendre les habilitats crítiques per l'èxit del segle XXI. Si us plau, uneix-t'hi.
+      The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a statement that today’s generation of students are ready to learn critical skills for 21st century success. Please join us.
     </p>
     
     <p>
-      <strong>Contacte:</strong> [EL TEU NOM], [TITLE], mòbil: (212) 555-5555
+      <strong>Contact:</strong> [YOUR NAME], [TITLE], cell: (212) 555-5555
     </p>
     
     <p>
-      <strong>Quan:</strong> [Data i hora del teu esdeveniment]
+      <strong>When:</strong> [DATE and TIME of your event]
     </p>
     
     <p>
-      <strong>On:</strong> [Adreces i direccions]
+      <strong>Where:</strong> [ADDRESS and DIRECTIONS]
     </p>
     
     <p>
-      Espero que estem en contacte.
+      I look forward to being in touch.
     </p>
     
     <p>
@@ -194,39 +210,39 @@ títol: Recursos maquetació: àmplia nav: recursos_nav
     </p>
     
     <h2>
-      Digues als pares sobre l'esdeveniment de la vostra escola:
+      Tell parents about your school's event:
     </h2>
     
     <p>
-      Benvolguts pares,
+      Dear Parents,
     </p>
     
     <p>
-      Vivim en un món envoltat de tecnologia. I sabem que a qualsevol camp que els alumnes trien, decideixen entrar com a adults, i que la seva capacitat per tenir èxit cada vegada més dependrà de la comprensió de com funciona la tecnologia. Però només una petita fracció de nosaltres estem aprenent Ciències de la Computació, i menys estudiants que fa una dècada estan estudiant-les.
+      We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly hinge on understanding how technology works. But only a tiny fraction of us are learning computer science, and less students are studying it than a decade ago.
     </p>
     
     <p>
-      És per això que la nostra escola sencera s'uneix a l'esdeveniment d'aprenentatge més gran de la història: L'Hora de Codi, durant la setmana de les Ciències Informàtiques de l'Educació (Dic. 8-14). L'any passat, 15 milions d'estudiants provaren la informàtica en una setmana. Aquest any, estem reunint estudiants d'arreu del món per arribar a 100 milions d'estudiants!
+      That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 8-14). Last year, 15 million students tried computer science in one week. This year, we're joining students worldwide to reach 100 million students!
     </p>
     
     <p>
-      La nostre Hora de Codi és una declaració de que [nom de l'escola] està disposada a ensenyar aquestes habilitats fonamentals del segle XXI. Per continuar portant activitats de programació al teus estudiants, volem fer el nostre esdeveniment d'Hora de Codi enorme. T'animo a ser voluntari, arribar als mitjans de comunicació locals, compartir les notícies en els teus canals socials de comunicació i considerar col·laborar en esdeveniments addicionals d'Hora de Codi en la teva comunitat.
+      Our Hour of Code is a statement that [SCHOOL NAME] is ready to teach these foundational 21st century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on your social media channels and consider hosting additional Hour of Code events in the community.
     </p>
     
     <p>
-      Aquesta és una oportunitat per canviar el futur de l'educació en [NOM POBLACIÓ/CIUTAT].
+      This is a chance to change the future of education in [TOWN/CITY NAME].
     </p>
     
     <p>
-      Mira http://hourofcode.com per a més detalls, i ajuda a córrer la veu.
+      See http://hourofcode.com for details, and help spread the word.
     </p>
     
     <p>
-      Atentament,
+      Sincerely,
     </p>
     
     <p>
-      El teu director
+      Your principal
     </p>
     
     <p>
@@ -234,29 +250,29 @@ títol: Recursos maquetació: àmplia nav: recursos_nav
     </p>
     
     <h2>
-      Convida a un polític local a l'esdeveniment de la teva escola:
+      Invite a local politician to your school's event:
     </h2>
     
     <p>
-      Estimat [cognom Alcalde/Governador/Representant/Senador]:
+      Dear [Mayor/Governor/Representative/Senator LAST NAME]:
     </p>
     
     <p>
-      Sabia vostè que en l'economia actual, les feines de computació superen en nombre als estudiants que es graduen en relació 3-a-1? I, que les Ciències de la Computació son fonamentals per a <em>qualsevol</em> indústria d'avui dia. No obstant això, el 90% de les escoles no les ensenyen. A [NOM DE L'ESCOLA], estem tractant de canviar aixó.
+      Did you know that in today’s economy, computing jobs outnumber students graduating into the field by 3-to-1? And, computer science is foundational for <em>every</em> industry today. Yet 90% of schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
     </p>
     
     <p>
-      És per això que la nostra escola sencera s'uneix a l'esdeveniment d'aprenentatge més gran de la història: L'Hora de Codi, durant la setmana de les Ciències Informàtiques de l'Educació (Dic. 8-14). L'any passat, 15 milions d'estudiants provaren la informàtica en una setmana. Aquest any, estem reunint estudiants d'arreu del món per arribar a 100 milions d'estudiants!
+      That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 8-14). Last year, 15 million students tried computer science in one week. This year, we're joining students worldwide to reach 100 million students!
     </p>
     
     <p>
-      Em dirigeixo a vostè per convidar-lo a participar en el nostre esdeveniment d'Hora de Codi i parlar en la nostra Assemblea inicial. Tindrà lloc el [DATA, HORA, LLOC], i farà una forta declaració de que [nom Estat o Ciutat] està disposat a ensenyar als nostres estudiants les habilitats crítiques del segle XXI. Volem garantir que els nostres alumnes són en l'avantguarda de crear tecnologia del futur - no només consumint-lo.
+      I'm writing to invite you to take part in our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st century skills. We want to ensure that our students are on the forefront of creating technology of the future--not just consuming it.
     </p>
     
     <p>
-      Si us plau, contacteu amb mi en [telèfon o adreça de correu electrònic]. Espero la seva resposta.
+      Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
     </p>
     
     <p>
-      Sincerament, [NAME], [TITLE]
+      Sincerely, [NAME], [TITLE]
     </p>

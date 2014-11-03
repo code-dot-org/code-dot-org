@@ -238,12 +238,23 @@ backend levelbuilder {
 <% end %>
 
 # api.change.org
-backend api_change_org {
-  .host = "api.change.org";
+backend api_change_org_4 {
+  .host = "104.16.4.13";
   .port = "80";
   .connect_timeout = 600s;
   .first_byte_timeout = 600s;
   .between_bytes_timeout = 600s;
+}
+backend api_change_org_5 {
+  .host = "104.16.5.13";
+  .port = "80";
+  .connect_timeout = 600s;
+  .first_byte_timeout = 600s;
+  .between_bytes_timeout = 600s;
+}
+director api_change_org round-robin {
+  { .backend = api_change_org_4; }
+  { .backend = api_change_org_5; }
 }
 
 # Respond to incoming requests.

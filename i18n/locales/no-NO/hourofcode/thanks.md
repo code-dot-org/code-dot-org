@@ -14,11 +14,11 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Takk for at du meldte deg på som vert for Kodetimen!
 
-**ALLE** som organiserer en Kodetime får 10 GB Dropbox-lagringsplass eller $10 Skype-kredit som en takk. [Detaljer](/prizes)
+**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](<%= hoc_uri('/prizes') %>)
 
 <% if @country == 'us' %>
 
-Få hele [skolen din til å delta](/us/prizes) for å gi den en sjanse til å vinne store premier.
+Get your [whole school to participate](<%= hoc_uri('/prizes') %>) for a chance for big prizes for your entire school.
 
 <% end %>
 
@@ -32,23 +32,23 @@ Fortell vennene dine om #Kodetimen.
 
 ## 2. Spør hele skolen din om å tilby en Kodetime
 
-[Send denne eposten](/resources#email) eller [gi denne flyeren til rektoren din](/files/schools-handout.pdf). Når skolen din har meldt seg på, [bli med i konkurransen om $10,000 i datautstyr til din skole](/prizes) og utfordre andre skoler i ditt område til å bli med.
+[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](<%= hoc_uri('/files/schools-handout.pdf') %>). Når skolen din har meldt seg på, [bli med i konkurransen om $10,000 i datautstyr til din skole](/prizes) og utfordre andre skoler i ditt område til å bli med.
 
 <% else %>
 
 ## 2. Spør hele skolen din om å tilby en Kodetime
 
-[Send denne e-posten](/resources#email) eller gi [dette støttearket](/files/schools-handout.pdf) til rektoren din.
+[Send this email](<%= hoc_uri('/resources#email') %>) or give [this handout](<%= hoc_uri('/files/schools-handout.pdf') %>) to your principal.
 
 <% end %>
 
 ## 3. Bidra med midler
 
-[Bidra til vår crowdfunding-kampanje](http://code.org/donate). For å lære 100 millioner barn programmering, trenger vi din støtte. Vi har akkurat lansert det som kan bli den [største crowdfunding-kampanje for opplæring](http://code.org/donate) i historien. Hver krone som samles inn vil bli matchet av Code.orgs [sponsoer ](http://code.org/about/donors), så din gave blir dobbelt så stor.
+[Donate to our crowdfunding campaign.](http://<%= codeorg_url() %>/donate) To teach 100 million children, we need your support. We just launched what could be the [largest education crowdfunding campaign](http://<%= codeorg_url() %>/donate) in history. Every dollar will be matched by major Code.org [donors](http://<%= codeorg_url() %>/about/donors), doubling your impact.
 
 ## 4. Be arbeidsgiveren din engasjere seg
 
-[Send denne e-posten](/resources#email) til din leder eller administrerende direktør. Eller [gi dem dette fllygebladet](/resources/hoc-one-pager.pdf).
+[Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](<%= hoc_uri('/resources/hoc-one-pager.pdf') %>).
 
 ## 5. Snakk om Kodetimen i ditt lokalmiljø
 
@@ -56,6 +56,6 @@ Rekrutter en lokal klubb, ett idrettslag, universitet eller fagforening. Eller a
 
 ## 6. Spør en lokalpolitiker om å støtte Kodetimen
 
-[Send denne e-posten](/resources#politicians) til ordfører, bystyret eller skolestyret. Eller [gi dem dette flygebladet](/resources/hoc-one-pager.pdf) og invitere dem til skolen.
+[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board. Or [give them this handout](<%= hoc_uri('/resources/hoc-one-pager.pdf') %>) and invite them to visit your school.
 
 <%= view 'popup_window.js' %>

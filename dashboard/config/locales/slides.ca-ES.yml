@@ -30,8 +30,8 @@
           instruccions per a cada puzzle estan a sota el laberint.
       8:
         image: notes/hoc1_8.jpg
-        text: La caixa d'eines d'enmig té les ordres per l'Angry Bird. Aquestes les
-          utilitzaràs per construir el teu codi.
+        text: La caixa d'eines del mig té les ordres per l'"Angry Bird". Utilitzaràs
+          aquestes caixes per construir el teu codi.
       9:
         image: notes/hoc1_9.jpg
         text: A la dreta hi ha la teva àrea de treball on podràs arrossegar els blocs
@@ -45,7 +45,7 @@
       11:
         image: notes/hoc1_11.jpg
         text: Per fer més d'una acció, pots arrossegar molts blocs a la teva àrea
-          de treball i unir-los. L'ocell executarà les ordres des de dalt a baix.
+          de treball i unir-los. L'ocell executarà les ordres de dalt a baix.
       12:
         image: notes/hoc1_12.jpg
         text: Si executes un programa i el vols arreglar i provar de nou, prem el
@@ -56,20 +56,20 @@
     artist_intro:
       1:
         image: notes/stage5_1.jpg
-        text: Hola, sóc JR! Tots els equips d'automobilisme necessiten informàtics
-          per guanyar. Ells analitzen les dades del cotxe per fer-lo més ràpid.
+        text: Hola, sóc en JR! Tots els equips d'automobilisme necessiten informàtics
+          per guanyar. Ells analitzen les dades del cotxe per fer-lo corre més ràpid.
       2:
         image: notes/stage5_2.jpg
-        text: En aquests puzzles, tu seràs un artista que dibuixarà una línia darrera
-          seu per allà on passi.
+        text: En aquests puzles, tu seràs un artista que dibuixarà una línia, darrera
+          seu, per allà on passi.
       3:
         image: notes/stage5_3.jpg
-        text: Aquest bloc diu "avança 100 píxels". Els píxels són els puntets petits
+        text: Aquest bloc diu "avança 100 píxels". Els píxels són punts realment petits
           de la teva pantalla.
       4:
         image: notes/stage5_4.jpg
-        text: Aquest bloc diu "gira a la dreta 90º". Això girarà el teu artista el
-          valor total dels blocs de gir en el puzzle del laberint.
+        text: Aquest bloc diu "gira a la dreta 90º". Farà que el teu artista giri
+          tant com feia el bloc de "gira" en el puzle del laberint.
       5:
         image: notes/stage5_5.jpg
         text: Clica sobre la fletxa d'aquests blocs per canviar la quantitat d'avançaments
@@ -85,8 +85,8 @@
           forats.
       3:
         image: notes/stage9_3.jpg
-        text: The new blocks remove 1 shovelful of dirt from a pile and fill in 1
-          shovelful of dirt to a hole.
+        text: Els nous blocs treuen 1 palada de terra d'una pila i omplen 1 palada
+          de terra d'un forat.
       4:
         image: notes/stage9_4.jpg
         text: Les piles i els forats son de diferents mides, per la qual cosa li hauràs
@@ -94,48 +94,49 @@
     flappy_intro:
       1:
         image: notes/flappy01.jpg
-        text: Hi, I'm Katie! One of the most exciting things about computer science
-          is that a computer program can be interactive.
+        text: Hola, sóc la Katie! Una de les coses més emocionants sobre l'informàtica
+          és que un programa informàtic pot ser interactiu.
       2:
         image: notes/flappy02.jpg
-        text: Any time somebody clicks or taps or types on a computer or phone, that
-          generates an EVENT, and there's some code that decides what to do when an
-          EVENT occurs.
+        text: Cada vegada que algú clica o toca o escriu en un ordinador o telèfon,
+          això genera un esdeveniment, i hi ha algun codi que decideix què fer quan
+          es produeix un esdeveniment.
       3:
         image: notes/flappy03.jpg
-        text: 'For example, you could have an EVENT-HANDLER that says "when the mouse
-          is clicked, play a sound" '
+        text: 'Per exemple, tu pots tenir un controlador d''incidències que diu "quan
+          hi hagi un clic del ratolí, reprodueix un so" '
       4:
         image: notes/flappy04.jpg
-        text: Have you ever heard of the game FlappyBird? By using Event handlers,
-          we're going to learn to program our own custom version of FlappyBird!
+        text: Has sentit parlar del joc "FlappyBird"? Mitjançant controladors d'incidències,
+          aprendrem a programar la nostra pròpia versió de "FlappyBird"!
       5:
         image: notes/flappy05.jpg
-        text: The code you'll write involves dragging and dropping blocks that represent
-          commands for the computer. Under the hood, each of these blocks is represented
-          by real code.
+        text: El codi que escriuràs implica arrossegar i col·locar blocs que representen
+          ordres per a l'ordinador. Sota la seva façana, cada un d'aquests blocs conté
+          codi real.
       6:
         image: notes/flappy06.jpg
-        text: 'If you take a look at the workspace, there are some green blocks that
-          are filled in for you - these are "event handlers" '
+        text: 'Si observes l''àrea de treball, hi ha alguns blocs verds que han estat
+          configurats - aquests són "controladors d''incidències" '
       7:
         image: notes/flappy07.jpg
-        text: If you want the bird to FLAP when you CLICK the mouse, you can do that
-          by attaching the "FLAP" block to the appropriate event handler, and now
-          in your game whenever you click the mouse, the bird will flap.
+        text: Si vols que l'ocell aletegi quan fas clic amb el ratolí, ho pots fer
+          adjuntant el bloc "Aleteig" al controlador d'incidències adequat. I ara,
+          en el teu joc, sempre que cliquis el ratolí, l'ocell aletejarà.
       8:
         image: notes/flappy08.jpg
-        text: In each puzzle of this activity we'll introduce new types of events
-          as green blocks on the workspace, and you can decide the appropriate blocks
-          to add in response to those events.
+        text: En tots els puzles d'aquesta activitat introduirem nous tipus d'esdeveniments,
+          com a blocs verds, a l'àrea de treball. Pots decidir els blocs apropiats
+          per afegir en resposta a aquests esdeveniments.
       9:
         image: notes/flappy09.jpg
-        text: When you see a drop down arrow like this, that means you can change
-          the settings - like what sound to play when flappy hits the ground.
+        text: Quan vegis una fletxa desplegable com aquesta, significa que pots canviar
+          les característiques - com el so que es reproduirà quan el "Flappy" toqui
+          el terra.
       10:
         image: notes/flappy10.jpg
-        text: In the final puzzle you'll be able to create your own game and share
-          it with your friends. Have fun!
+        text: En el puzle final podràs crear el teu propi joc i compartir-lo amb els
+          teus amics. Diverteix-te!
     loop_times:
       1:
         image: notes/hoc2_1.jpg
@@ -250,8 +251,9 @@
           un bloc de "repetició" i un bloc de "omplir".
       4:
         image: notes/stage13_4.jpg
-        text: The definition sits on the workspace, but our farmer won't run the function
-          until we drag out our "fill 5" function block from functions category.
+        text: La definició resta en l'àrea de treball, però el nostre agricultor no
+          executarà la funció fins que haguem arrossegat el nostre bloc funció "omplir
+          5" fora de la categoria de funcions.
       5:
         image: notes/stage13_5.jpg
         text: Let's put the "fun" back in "FUNction!"
@@ -265,8 +267,8 @@
           que l'expressió que l'encapçala sigui certa.
       3:
         image: notes/stage9_7.jpg
-        text: For example, if the farmer is standing on a pile, she will continue
-          to remove 1 shovelful WHILE there is still a pile beneath her.
+        text: Per exemple, si l'agricultor està sobre una pila de sorra, continuarà
+          traient 1 palada de terra MENTRE hi hagi una pila de sorra sota.
     loop_for:
       1:
         image: notes/stage11_1.jpg

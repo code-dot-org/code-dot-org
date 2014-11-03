@@ -71,17 +71,7 @@
     no_signup_message: Jūs galite <a target="_blank" href="http://learn.code.org">
       peržiūrėti įvairius etapus bei galvosūkius </a>, bet Jums reikės prisiregistruoti,
       kad Jūsų veiksmai išsisaugotų.
-    prizes_message: JAV moksleiviai, kurie gauna visus %{num_trophies} laimėjimus,
-      gali išsirinkti įvairius prizus, pavyzdžiui, papildomą vietą Dropbox svetainėje
-      ir t. t.
     teacher_educator_guide: Peržiūrėti pedagogo vadovą
-    teacher_prize_header: Laimėkite $1,000 <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
-      (Tik JAV mokytojams)
-    teacher_prize_message: 'Bendradarbiaujant su <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>,
-      Code.org padovanos $1,000 JAV mokyklų mokytojams, kurių bent 15 mokinių praeis
-      informatikos kurso įvadą (iki 2014 m. birželio 15 d.). <a href="http://code.org/educate/20hr">Peržiūrėkite
-      pedagogų vadovą</a>. (Limitas: $1,000 vienam mokytojui. <a target="_blank" href="http://help.donorschoose.org/app/answers/detail/a_id/454/kw/code.org">See
-      FAQ for more limits</a>.)'
     teacher_pitch: Mokytojų registracija prie Code.org
     teacher_title: Mokytojų registracija
     student_pitch: Mokinių registracija prie Code.org
@@ -92,6 +82,7 @@
     gender: Lytis (neprivaloma)
     birthday: Gimimo data (neprivaloma)
     age: Amžius
+    user_type: Are you a student or teacher?
     submit: Užsiregistruoti
     teacher: Ar jūs mokytojas?
     valid_username: Galima!
@@ -369,8 +360,6 @@
     student_progress: Tavo mokymosi pažanga
     student_stats: Tu gavai %{trophy_count} iš %{trophy_max} "Concept Mastery" laimėjimus(-ų).
     student_left_off: 'Kur baigei paskutinį kartą:'
-    student_finished_prize: Jūs baigėte visas pamokėles, gaukite prizą %{prize_link}
-      ir pasirinkite kitas pamokėles %{online_link} arba %{local_school_link}
     student_finished: Jūs baigėte visas pamokėles, išmėginkite kitas pamokas %{online_link}
       arba %{local_school_link}
     local_school: vietinėje mokykloje
@@ -397,6 +386,9 @@
     male: Vyras
     female: Moteris
     none: Nenoriu atsakyti
+  user_type:
+    student: Mokinys
+    teacher: Teacher
   footer:
     help_from_html: Google, Microsoft, Facebook ir Twitter inžinieriai padėjo sukurti
       šias pamokėles.
@@ -410,13 +402,6 @@
     tos: Naudojimo taisyklės
     privacy: Privatumo politika
     secure: Saugaus ryšio versija
-  prize_mail:
-    prize_earned:
-      subject: Redeem your prize at Code.org!
-    teacher_prize_earned:
-      subject: Code.org sveikinimai!
-    teacher_bonus_prize_earned:
-      subject: Redeem your bonus prize at Code.org!
   reference_area:
     title: Reikia pagalbos?
     subtitle: Peržiūrėkite šiuos vaizdo įrašus bei patarimus

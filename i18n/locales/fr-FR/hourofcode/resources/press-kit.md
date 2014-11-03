@@ -53,7 +53,7 @@ En Chine, tous les étudiants prennent l'informatique pour obtenir leur diplôme
 
 **A propos de Code.org**
 
-Code.org® est une association publique à but non lucratif dédié à accroître la participation à l'informatique, d'accroître la participation des femmes et des étudiants de couleur sous-représentés. Sa vision est que chaque élève de chaque école devrait avoir la possibilité d'apprendre la programmation informatique. Après le lancement en 2013, Code.org a organisé la campagne de une heure de Code — qui a donné un aperçu à des millions d'élèves de l'informatique, en partenariat avec plus de 30 districts scolaires publics dans tout le pays et a lancé le Code Studio, une plate-forme d'apprentissage en ligne, libre pour tous les âges. For more information, please visit: <% if @country == 'uk' %> [www.uk.code.org](http://uk.code.org). <% else %> [www.code.org](http://code.org). <% end %>
+Code.org® est une association publique à but non lucratif dédié à accroître la participation à l'informatique, d'accroître la participation des femmes et des étudiants de couleur sous-représentés. Sa vision est que chaque élève de chaque école devrait avoir la possibilité d'apprendre la programmation informatique. Après le lancement en 2013, Code.org a organisé la campagne de une heure de Code — qui a donné un aperçu à des millions d'élèves de l'informatique, en partenariat avec plus de 30 districts scolaires publics dans tout le pays et a lancé le Code Studio, une plate-forme d'apprentissage en ligne, libre pour tous les âges. For more information, please visit: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
 Find more resources and sample emails [here](<%= hoc_uri('/resources') %>).

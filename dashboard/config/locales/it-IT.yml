@@ -80,20 +80,7 @@
       le varie lezioni e gli esercizi</a>, ma devi iscriverti per salvare i tuoi progressi.
       <1/>ATTENZIONE: Se sei italiano iscriviti attraverso <a href="http://programmailfuturo.it">il
       sito italiano di supporto</a>.'
-    prizes_message: 'Gli studenti degli Stati Uniti che guadagnano tutti i %{num_trophies}
-      trofei possono selezionare una varietà di premi tra cui: spazio gratuito su
-      Dropbox, crediti Skype e giochi scaricabili da Electronic Arts.'
     teacher_educator_guide: Vedi la guida per l'insegnante
-    teacher_prize_header: Vinci $1,000 in buoni di <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
-      (entro il 15 Giugno 2014, fino a esaurimento scorte)
-    teacher_prize_message: 'In collaborazione con <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>,
-      Code.org offrirà fino a $1.000 in finanziamenti per la classe ad insegnanti
-      di scuola pubblica degli Stati Uniti che portano almeno 15 studenti a terminare
-      il Corso Introduttivo di informatica per scuole elementari e medie inferiori
-      (entro il 15 giugno 2014, fino ad esaurimento scorte).  <a href="http://code.org/educate/20hr">
-      Vedi la guida per gli insegnanti</a>.  (Limite: 1.000 $ per ogni insegnante.  <a
-      target="_blank" href="http://help.donorschoose.org/app/answers/detail/a_id/454/kw/code.org">
-      Vedi le FAQ per ulteriori condizioni</a>).'
     teacher_pitch: Iscrizione dell'insegnante a Code.org
     teacher_title: Iscrizione dell'insegnante
     student_pitch: Iscrizione dello studente a Code.org
@@ -104,6 +91,7 @@
     gender: Sesso (facoltativo)
     birthday: Data di nascita (facoltativo)
     age: Età
+    user_type: Are you a student or teacher?
     submit: Registrati
     teacher: Sei un insegnante?
     valid_username: Disponibile!
@@ -411,8 +399,6 @@
     student_stats: Hai guadagnato %{trophy_count} trofei su %{trophy_max} in "Padronanza
       dei concetti".
     student_left_off: 'Eri arrivato qua:'
-    student_finished_prize: Hai completato tutti i tutorial, rivendica il tuo %{prize_link}
-      e scegli un'altra classe %{online_link} o una %{local_school_link}
     student_finished: Hai completato tutti i corsi, scegli un'altra classe %{online_link}
       o una %{local_school_link}
     local_school: scuola locale
@@ -443,6 +429,9 @@
     male: Maschile
     female: Femminile
     none: Preferisco non rispondere
+  user_type:
+    student: studente
+    teacher: Teacher
   footer:
     help_from_html: Gli ingegneri di Google, Microsoft, Facebook e Twitter hanno contribuito
       a creare questo corso.
@@ -456,13 +445,6 @@
     tos: Termini di servizio
     privacy: Informativa sulla privacy
     secure: Versione sicura
-  prize_mail:
-    prize_earned:
-      subject: Richiedi il tuo premio a Code.org!
-    teacher_prize_earned:
-      subject: Congratulazioni da Code.org!
-    teacher_bonus_prize_earned:
-      subject: Richiedi il tuo buono-premio a Code.org!
   reference_area:
     title: Hai bisogno di aiuto?
     subtitle: Guarda questi video e suggerimenti

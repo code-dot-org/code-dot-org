@@ -9,14 +9,14 @@
           Match: "Соответствие"
           Math Image: "Математическое изображение"
           title: "Тестовый курс"
-          description: Just an internal test course.
+          description: "Просто внутренний проверочный курс."
         course1:
           'Jigsaw: Learn to drag and drop': "Головоломки: Научитесь перетаскивать"
           'Maze: Sequence': "Лабиринт: Последовательность"
           'Maze: Debugging': "Лабиринт: Отладка"
           'Artist 1: Intro': "Художник 1: Введение"
           Artists 2: "Художник 2"
-          Spelling Bee: Spelling Bee
+          Spelling Bee: "Пишущая пчела"
           Spelling Bee not blockly: Spelling Bee not blockly
           'Bee 1: Intro': "Пчела 1: Введение"
           'Maze 2: Loops': "Лабиринт 2: Циклы"
@@ -28,11 +28,11 @@
           Artist 2: "Художник 2"
           Happy Maps: Happy Maps
           Move it, Move it: Move it, Move it
-          'Real-life Algorithms: Plant a Seed': 'Real-life Algorithms: Plant a Seed'
-          Building a Foundation: Building a Foundation
+          'Real-life Algorithms: Plant a Seed': "Реальные алгоритмы: Посадить семя"
+          Building a Foundation: "Создание основы"
           Getting Loopy: "Зацикливание"
-          The Big Event: The Big Event
-          Going Places Safely: Going Places Safely
+          The Big Event: "Большое Событие"
+          Going Places Safely: "Безопасное путешествие"
           description: "Курс 1 позволяет рано научившимся читать создавать компьютерные
             программы, которые помогут ученикам взаимодействовать друг с другом, развивать
             навыки решения задач и преодолевать трудности. К концу курса ученики создадут
@@ -48,7 +48,7 @@
           'Artist: Loops': "Художник: Циклы"
         course2:
           The Maze: "Лабиринт"
-          Suzi: Suzi
+          Suzi: "Сюзи"
           The Artist: "Художник"
           Artist Debugging: "Художник: Отладка"
           Bounce: "Прыжок"
@@ -69,8 +69,8 @@
           Relay programming: "Эстафетное программирование"
           Conditionals: "Условные команды"
           Binary Bracelets: "Двоичные браслеты"
-          The Big Event: The Big Event
-          Your Digital Footprint: Your Digital Footprint
+          The Big Event: "Большое Событие"
+          Your Digital Footprint: "Твой цифровой отпечаток"
           description: "Курс 2 разработан для учеников, умеющих читать, без опыта
             программирования. В этом курсе ученики будут создавать программы для решения
             задач и разрабатывать интерактивные игры или истории, которыми они могут
@@ -94,7 +94,7 @@
           The Artist: "Художник"
           title: "Курс 3"
           Artist Functions: "Художник: Процедуры"
-          Artist For Loops: Artist For Loops
+          Artist For Loops: 'Художник:  Циклы "для"'
           Artist Nested Loops: "Художник: Вложенные циклы"
           Bee Conditionals: "Пчела: Условные команды"
           Bee Nested Loops: "Пчела: Вложенные циклы"
@@ -104,7 +104,7 @@
           Artist Functions with Params: "Художник: процедуры с параметрами"
           Bounce: "Прыжок"
           Maze Conditionals: "Лабиринт: Условные команды"
-          Artist Functions with Parameters: Artist Functions with Parameters
+          Artist Functions with Parameters: "Художник: процедуры с параметрами"
           Computational Thinking: "Вычислительное мышление"
           Functional Suncatchers: Functional Suncatchers
           Songwriting Parameters: Songwriting Parameters
@@ -137,7 +137,7 @@
           'Bee: Conditionals2': "Пчела: Условные команды2"
           'Maze: Conditionals2': "Лабиринт: Условные команды2"
           'Artist: Nested Loops2': "Художник: Вложенные циклы2"
-          'Farmer: While Loops2': 'Farmer: While Loops2'
+          'Farmer: While Loops2': 'Фермер: Циклы "Пока" - 2'
           'Bee: Nested Loops2': "Пчела: Вложенные циклы2"
           'Bee: Debugging2': "Пчела: Отладка2"
           'Artist: Patterns': "Художник: Узоры"

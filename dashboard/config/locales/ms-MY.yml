@@ -69,19 +69,7 @@
     no_signup_message: Anda boleh <a target="_blank" href="http://learn.code.org">
       layari pelbagai tahap dan susun-suai</a>, tetapi anda perlu mendaftar untuk
       menyimpan perkembangan anda.
-    prizes_message: Pelajar-pelajar Amerika Syarikat yang mendapat semua %{num_trophies}
-      Piala konsep boleh memilih pelbagai hadiah termasuk ruangan Dropbox, kredit
-      Skype, dan permainan yang boleh dimuat turun dari  Electronic Arts.
     teacher_educator_guide: Lihat panduan pendidik
-    teacher_prize_header: Menangi $1,000 dalam <a target="_blank" href="http://DonorsChoose.org">
-      DonorsChoose.org</a> ganjaran (melalui Jun 15, 2014, sehingga bekalan terakhir)
-    teacher_prize_message: 'Dalam usahasama dengan <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>,
-      Code.org akan menawarkan sehingga $1,000 dalam pembiayaan kelas kepada guru
-      sekoalah awam Amerika Syarikat yang mengetuai sekurang-kurangnya 15 pelajar
-      melalui K-8 Pengenalan kepada Kursus Sains Komputer (dari June 15, 2014, hingga
-      bekalan berakhir).  <a href="http://code.org/educate/20hr">Lihat panduan pendidik</a>.  (Limit:
-      $1,000 untuk seorang guru.  <a target="_blank" href="http://help.donorschoose.org/app/answers/detail/a_id/454/kw/code.org">Lihat
-      FAQ untuk lebih limit</a>.)'
     teacher_pitch: Daftar guru untuk Code.org
     teacher_title: Daftar guru
     student_pitch: Daftar pelajar untuk Code.org
@@ -92,6 +80,7 @@
     gender: Jantina (pilihan)
     birthday: Hari Lahir (pilihan)
     age: Umur (tidak wajib)
+    user_type: Are you a student or teacher?
     submit: Mendaftar
     teacher: Adakah anda seorang guru?
     valid_username: Boleh digunakan!
@@ -385,8 +374,6 @@
     student_stats: Anda telah memperolehi %{trophy_count} daripada %{trophy_max} "Concept
       Mastery" trofi.
     student_left_off: 'Mana anda tinggalkan:'
-    student_finished_prize: Anda telah melengkapkan kesemua tutorial, tuntut %{prize_link}
-      dan pilih kelas lain %{online_link} atau di %{local_school_link}
     student_finished: Anda telah selesaikan semua tutorial, pilih kelas lain %{online_link}
       atau %{local_school_link}
     local_school: sekolah tempatan
@@ -413,6 +400,9 @@
     male: Lelaki
     female: Perempuan
     none: Memilih untuk tidak menjawab
+  user_type:
+    student: pelajar
+    teacher: Teacher
   footer:
     help_from_html: Jurutera daripada <a href="http://www.google.com">Google</a>,
       <a href="http://www.microsoft.com">Microsoft</a>, <a href="http://www.facebook.com">Facebook</a>,
@@ -429,13 +419,6 @@
     tos: Terma
     privacy: Dasar privasi
     secure: Versi Dilindungi
-  prize_mail:
-    prize_earned:
-      subject: Redeem your prize at Code.org!
-    teacher_prize_earned:
-      subject: Tahniah dari Code.org!
-    teacher_bonus_prize_earned:
-      subject: Redeem your bonus prize at Code.org!
   reference_area:
     title: Perlukan bantuan?
     subtitle: Lihat video dan petunjuk ini

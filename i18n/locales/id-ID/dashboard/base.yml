@@ -5,7 +5,7 @@ id:
         blank: diperlukan
     attributes:
       user:
-        name: Tampilan Nama
+        name: Nama Tampilan
         email: email
         username: nama pengguna
         password: kata sandi
@@ -32,7 +32,7 @@ id:
     submit: tambah petunjuk
   appname: Code.org
   stage: tahapan
-  stage_number: 'tahapan%{number}'
+  stage_number: 'Tahapan %{number}'
   puzzle: Teka-teki
   trophies: Piala
   courses: Kursus
@@ -65,10 +65,7 @@ id:
     overview_student: 'Daftarkan untuk akun untuk melacak kemajuan Anda. Email utama anda akan digunakan untuk menginjinkan anda untuk masuk dan pemulihan password. Untuk selengkapnya <a href="<a href="http://code.org/privacy">Kebijakan privasi</a> kami.'
     overview_teacher: 'Ajarkan ilmu kompter pada kelas anda dengan mendaftar untuk akun.<p/> Anda akan dapat menambahkan pelajar anda dan mendata kemajuan mereka.'
     no_signup_message: 'Anda dapat <a target="_blank" href="http://learn.code.org"> mencoba berbagai tahap dan berbagai teka-teki</a>, tetapi Anda akan perlu untuk masuk supaya kemajuan belajar Anda dapat dicatat.'
-    prizes_message: 'Siswa Amerika Serikat yang memperoleh semua %{num_trophies} piala konsep dapat memilih berbagai hadiah seperti ruang simpan Dropbox gratis, kredit Skype, dan mengunduh permainan dari Electronic Arts.'
     teacher_educator_guide: Lihat panduan guru
-    teacher_prize_header: 'Win $1.000 di <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> imbalan (melalui 15 Juni 2014, persediaan terbatas)'
-    teacher_prize_message: 'dalam kerjasama dengan <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>, Code.org akan menawarkan bantuan dana sebanyak  $1,000  untuk guru-guru sekolah di Amerika yang telah mengajar paling tidak 15 siswa  dari  K-8 Intro sampai  Kursus Ilmu Komputer  (hingga 15 Juni,  saat persediaan masih ada). <a href="http://code.org/educate/20hr">See educator guide</a>. (Batasan: $1,000 tiap guru. <a target="_blank" href="http://help.donorschoose.org/app/answers/detail/a_id/454/kw/code.org">See FAQ for more limits</a>.)'
     teacher_pitch: Guru daftar untuk Code.org
     teacher_title: Guru mendaftar
     student_pitch: Siswa daftar untuk Code.org
@@ -79,6 +76,7 @@ id:
     gender: Jenis kelamin (opsional)
     birthday: Tanggal ulang tahun (opsional)
     age: Umur
+    user_type: Are you a student or teacher?
     submit: Daftar
     teacher: Apakah anda seorang guru?
     valid_username: Tersedia!
@@ -216,8 +214,8 @@ id:
       finished_hoc: Saya telah menyelesaikan jam kode!
       sign_in_to_save: Masuk untuk mencatat kemajuan belajar
       free_play:
-        playlab: Make an App
-        artist: Draw Something
+        playlab: Buat App
+        artist: Gambarlah Sesuatu
     user:
       classroom: Murid-murid saya
       label: 'Halo %{username}'
@@ -314,8 +312,8 @@ id:
     classroom_activity: Kegiatan tanpa komputer
   home:
     title: Kode Studio
-    all_courses: Overview of Courses 1, 2, and 3
-    lesson_plans: Lesson plans
+    all_courses: Tinjauan Kursus 1, 2, dan 3
+    lesson_plans: Rencana pelajaran
     signin_message: 'Sudah terdaftar? %{link}'
     student_reg_link: Daftar sebagai siswa
     teacher_reg_link: Daftar sebagai guru
@@ -330,7 +328,6 @@ id:
     student_progress: Kemajuan belajar Anda
     student_stats: 'Anda telah menerima  %{trophy_count} dari total %{trophy_max} piala "Penguasaan Konsep".'
     student_left_off: 'Anda berada terakhir kali pada:'
-    student_finished_prize: 'Anda telah menyelesaikan semua tutorial, klaim piala anda  %{prize_link} dan pilih kelas lain di  %{online_link} atau di sini %{local_school_link}'
     student_finished: 'Anda telah menyelesaikan semua tutorial, pilihlah kelas lain %{online_link} atau %{local_school_link}'
     local_school: sekolah lokal
     online: online
@@ -347,12 +344,15 @@ id:
     heading_apps: '<h2>Menyenagkan bagi</h2><h1>Semua orang</h1>'
     heading_legacy: '<h2>Kursus umum kami untuk</h2><h1>Semua Umur</h1>'
     gallery:
-      your_turtle: My Art
-      your_studio: My Apps
+      your_turtle: Karya Saya
+      your_studio: App Saya
   gender:
     male: Laki-laki
     female: Wanita
     none: Memilih untuk tidak menjawab
+  user_type:
+    student: siswa
+    teacher: Teacher
   footer:
     help_from_html: 'Tim teknis dari  Google, Microsoft, Facebook, dan Twitter yang membantu membuat tutorial ini.'
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. All Rights Reserved.'
@@ -363,20 +363,13 @@ id:
     tos: Syarat
     privacy: Kebijakan privasi
     secure: Versi yang aman
-  prize_mail:
-    prize_earned:
-      subject: Ambil hadiah Anda di Code.org!
-    teacher_prize_earned:
-      subject: Selamat dari Code.org!
-    teacher_bonus_prize_earned:
-      subject: Ambil hadiah bonus Anda di Code.org!
   reference_area:
     title: Perlu bantuan?
     subtitle: Lihat video ini dan tips lainnya
     teacher: Lihat solusi
     auth_error: Anda tidak diizinkan untuk melihat solusi.
     submit: Memperbarui lokasi artis
-    direction: Start Direction (in degrees)
+    direction: Arah Mulai (dalam derajat)
   video:
     tab: Video.
     notes: Tidak ada video? Tunjukkan catatan kaki.
@@ -402,12 +395,12 @@ id:
     title: "klik 'Jalankan' untuk melihat program saya berjalan"
     bounce_og_title: Check out permainan Bouncing ku
     flappy_og_title: Cobalah permainan Flappyku
-    studio_og_title: Check out my Play Lab App
+    studio_og_title: Lihat Play Lab App Saya
     og_description: Saya menulis kode ini sendiri dengan Code.org
-    phone_number_not_allowed: It looks like there is a phone number in it. Try changing the text.
-    address_not_allowed: It looks like there is an address in it. Try changing the text.
-    email_not_allowed: It looks like there is an email in it. Try changing the text.
-    profanity_not_allowed: It looks like there is profanity in it. Try changing the text.
+    phone_number_not_allowed: Tampaknya ada nomor telepon di sini. Harap perbaiki.
+    address_not_allowed: Tampaknya ada alamat di sini. Harap perbaiki.
+    email_not_allowed: Tampaknya ada alamat surel di sini. Harap perbaiki.
+    profanity_not_allowed: Tampaknya ada kata tak senonoh di sini. Harap perbaiki.
   builder:
     created: Kamu membuat skript baru.
     destroyed: Anda menghapus satu script.
@@ -431,13 +424,13 @@ id:
       body: Mencoba kami Introduksi Kursus ilmu komputer dalam 20 jam.
   gallery:
     students_drew_these_with_code: Siswa-siswa telah menggambar ini dengan kode!
-    students_made_these_with_code: Students made these with code!
+    students_made_these_with_code: Siswa membuat ini dengan kode program!
     picture_count: 'Masa lalu <b>%{days}</b> hari, siswa-siswa telah membuat <b>%{count}</b> gambar dengan pemrograman komputer. Klik gambar untuk melihat jalannya setiap program.'
-    activity_count: 'In the past <b>%{days}</b> days, students have made <b>%{count}</b> apps and pictures by writing their own computer programs. Click on the pictures and screenshots to see each program in action.'
+    activity_count: 'Dalam <b>%{days}</b> hari terakhir, para siswa telah membuat <b>%{count}</b> app dan gambar dengan menulis sendiri program komputer mereka. Klik pada gambar dan tangkapan layar untuk melihat jalannya tiap program.'
     want_to_make_your_own: Mau membuat sendiri ?
     more: 'lebih &rarr;'
-    caption_by_name_age: 'by %{name}, age %{age}'
-    caption_time_ago: '%{time_ago} ago'
+    caption_by_name_age: 'oleh %{name}, usia %{age}'
+    caption_time_ago: '%{time_ago} yang lalu'
   landing:
     prerelease: "Kursus ini dalam <span class='betatext'>beta</span>.  Ini bukan berarti sebuah kursus final dan ditujukan untuk revisi saat usulan diterima dan pengembangan dibuat."
     feedback: Berikan usulan

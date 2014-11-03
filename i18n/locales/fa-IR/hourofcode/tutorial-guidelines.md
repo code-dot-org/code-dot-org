@@ -4,13 +4,13 @@ layout: wide
 
 * * *
 
-# Tutorial guidelines for the Hour of Code and Computer Science Education Week
+# راهنماي آموزشي "ساعت كد نويسي" و "هفته آموزش علوم كامپيوتر"
 
-**The deadline to submit a tutorial for Hour of Code 2014 has passed. You may still submit an entry and we will try to review it if time allows.**
+**مهلت ارسال برنامه آموزشي براي"ساعت كد نويسي ٢٠١٤" به پايان رسيده است. با اين حال مي توانيد شرحي از برنامه را ارسال نماييد و درصورتيكه زمان اجازه دهد برنامه تان مورد بازبيني قرار خواهد گرفت.**
 
-Code.org will host a variety of Hour of Code activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [code.org/learn](http://code.org/learn).
+Code.org will host a variety of Hour of Code activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= codeorg_url() %>](http://<%= codeorg_url() %>/learn).
 
-We’d like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science. Please use this document to guide the creation of your activity, targeted to the user who has no background in coding, computer programming, and computer science.
+ما مي خواهيم ميزبان مجموعه اي از گزينه هاي جذاب باشيم، با اين حال هدف اصلي ما بهبود تجارب دانش آموزان و معلماني است كه در حوزه علوم كامپيوتر تازه وارد هستند. Please use this document to guide the creation of your activity, targeted to the user who has no background in coding, computer programming, and computer science.
 
 <a id="top"></a>
 

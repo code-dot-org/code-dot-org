@@ -14,11 +14,11 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Maraming salamat sa pagsama bilang host ng Hour of Code!
 
-**BAWAT** Hour of Code organizer ay makakatanggap ng 10 GB ng Dropbox space o $10 na Skype credit bilang pasasalamat. [Detalye](/prizes)
+**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](<%= hoc_uri('/prizes') %>)
 
 <% if @country == 'us' %>
 
-Get your [whole school to participate](/us/prizes) for a chance for big prizes for your entire school.
+Get your [whole school to participate](<%= hoc_uri('/prizes') %>) for a chance for big prizes for your entire school.
 
 <% end %>
 
@@ -32,23 +32,23 @@ Sabihin sa iyong mga kaibigan ang tungkol sa #HourOfCode.
 
 ## 2. Sabihin sa inyong buong paaralan na makisali sa Hour of Code
 
-[Send this email](/resources#email) or [give this handout to your principal](/files/schools-handout.pdf). Pag ang inyong paaralan ay nakilahok, [may pagkakataong manalo ng $10,000 halaga ng papremyo para sa inyong paaralan](/prizes) at himukin din ang ibang paaralan sa inyong lugar na sumali.
+[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](<%= hoc_uri('/files/schools-handout.pdf') %>). Pag ang inyong paaralan ay nakilahok, [may pagkakataong manalo ng $10,000 halaga ng papremyo para sa inyong paaralan](/prizes) at himukin din ang ibang paaralan sa inyong lugar na sumali.
 
 <% else %>
 
 ## 2. Sabihin sa inyong buong paaralan na makisali sa Hour of Code
 
-[Send this email](/resources#email) or give [this handout](/files/schools-handout.pdf) to your principal.
+[Send this email](<%= hoc_uri('/resources#email') %>) or give [this handout](<%= hoc_uri('/files/schools-handout.pdf') %>) to your principal.
 
 <% end %>
 
 ## 3. Make a generous donation
 
-[Donate to our crowdfunding campaign](http://code.org/donate). To teach 100 million children, we need your support. We just launched what could be the [largest education crowdfunding campaign](http://code.org/donate) in history. Every dollar will be matched by major Code.org [donors](http://code.org/about/donors), doubling your impact.
+[Donate to our crowdfunding campaign.](http://<%= codeorg_url() %>/donate) To teach 100 million children, we need your support. We just launched what could be the [largest education crowdfunding campaign](http://<%= codeorg_url() %>/donate) in history. Every dollar will be matched by major Code.org [donors](http://<%= codeorg_url() %>/about/donors), doubling your impact.
 
 ## 4. Ask your employer to get involved
 
-[Send this email](/resources#email) to your manager, or the CEO. Or [give them this handout](/resources/hoc-one-pager.pdf).
+[Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](<%= hoc_uri('/resources/hoc-one-pager.pdf') %>).
 
 ## 5. Promote Hour of Code within your community
 
@@ -56,6 +56,6 @@ Mag-anyaya ng mga grupo - mga boy scouts, simbayan, unibersidad, mga grupo ng se
 
 ## 6. Ask a local elected official to support the Hour of Code
 
-[Send this email](/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](/resources/hoc-one-pager.pdf) and invite them to visit your school.
+[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board. Or [give them this handout](<%= hoc_uri('/resources/hoc-one-pager.pdf') %>) and invite them to visit your school.
 
 <%= view 'popup_window.js' %>

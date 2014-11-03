@@ -39,21 +39,21 @@ Den beste måten å nå ut på et gjennom epost. Hold deg kortfattet og prøv å
 
 *Hvorfor er skolen din med på Kodetimen?*
 
-Alle vet at det er viktig for elevene å lære hvordan de skal orientere seg i en verden som er full av teknologi, men mange lærere mangler erfaring med den samme teknologien og vet ikke helt hvor de skal begynne. Denne arrangementet er en mulighet for oss alle til å lære hva programmering er.
+Alle vet at det er viktig for elevene å lære hvordan de skal orientere seg i en verden som er full av teknologi, men mange lærere mangler erfaring med den samme teknologien og vet ikke helt hvor de skal begynne. Denne arrangementet er en mulighet for oss alle til å lære hva datavitenskap er.
 
 Vi håper det vil vekke en interesse hos elevene som motiverer til mer læring. Forskning viser også at barn kan plukke opp konsepter fra programmering før de har lært å lese og skrive. Faktis er hjernen mer mottakelig for programmeringsspråk i en ung alder, akkurat som fremmedspråk.
 
 *Hvorfor er dette viktig?*
 
-I Kina lærer alle elevene programmering før de går ut av videregående skole. I USA er det 90 prosent av skolene som ikke engang underviser i data. Det er tide å nå igjen det 21. århundret. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them the confidence and know-how to succeed.
+I Kina tar alle elevene datavitenskap som fag før de går ut av videregående skole. 90 prosent av skolene i USA underviser ikke i det engang. Det er tide å nå igjen det 21. århundret. Vi vet at uansett hva studentene velger å gjøre når de vokser opp, om de går inn i medisin, forretning, politikk eller kunst, det å vite hvordan man bygger teknologi vil gi dem selvtilliten og kunnskapen til å lykkes.
 
 **Flere detaljer og et sitat som du kan bruke i materiellet**
 
-"Kodetimen er tenkt å skulle avmystifisere og vise at programmering ikke er rakett vitenskap. Alle kan lære grunnleggende programmering," sier Hadi Partovi, grunnlegger og adm. dir i Code.org. "På en uke i fjor, prøvde 15 millioner elever en time med programmering. I år har 100 millioner på verdensbasis som mål for å bevise at etterspørselen etter relevante IT-kompetanse for det 21. århundre krysser alle landegrenser og er uten begrensninger."
+"Kodetimen er beregnet til å avmystifisere og vise at datavitenskap ikke er rakettvitenskap. Alle kan lære grunnleggende programmering," sier Hadi Partovi, grunnlegger og adm. dir i Code.org. "På én uke i fjor prøvde 15 millioner elever en Kodetime. I år har 100 millioner på verdensbasis som mål for å bevise at etterspørselen etter relevante IT-kompetanse for det 21. århundre krysser alle landegrenser og er uten begrensninger."
 
 **Om Code.org**
 
-Code.org® er en almennyttig stiftelse med formål om å utvide deltakelsen i programmering og øke deltakelse av kvinner og andre underrepresenterte grupper. Visjonen er at alle elever i alle skoler skal få muligheten til å lære programmering. Etter lanseringen i 2013 organisert Code.org kampanjen Kodetimen, som introduserte millioner av elever for programmering. Vi gikk i partnerskap med mer enn 30 offentlige skoledistrikter over hele USA og lanserte Kode Studio, som er en åpen kildekode læringsplattform på web for alle aldre. For mer informasjon besøk: < % of @country == 'uk' %> [www.uk.code.org](http://uk.code.org). < % else %> [www.code.org](http://code.org). <% end %>
+Code.org® er en almennyttig stiftelse med formål om å utvide deltakelsen i datavitenskap og øke deltakelse av kvinner og andre underrepresenterte grupper. Visjonen er at alle elever i alle skoler skal få muligheten til å lære programmering. Etter lanseringen i 2013 organisert Code.org kampanjen Kodetimen, som introduserte millioner av elever for datavitenskap. Vi gikk i partnerskap med mer enn 30 offentlige skoledistrikter over hele USA og lanserte Kode Studio, som er en åpen kildekode læringsplattform på web for alle aldre. For mere informasjon, besøk: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
 Du finner flere ressurser og eksempler på meldinger [ her](<%= hoc_uri('/resources') %>).

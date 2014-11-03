@@ -481,6 +481,7 @@ Flappy.init = function(config) {
       controls: require('./controls.html')({assetUrl: BlocklyApps.assetUrl, shareable: level.shareable}),
       blockUsed: undefined,
       idealBlockNumber: undefined,
+      editCode: level.editCode,
       blockCounterClass: 'block-counter-default'
     }
   });
@@ -518,11 +519,6 @@ Flappy.init = function(config) {
     Blockly.SNAP_RADIUS *= Flappy.scale.snapRadius;
 
     drawMap();
-  };
-
-  config.getDisplayWidth = function() {
-    var el = document.getElementById('visualizationColumn');
-    return el.getBoundingClientRect().width;
   };
 
   config.trashcan = false;

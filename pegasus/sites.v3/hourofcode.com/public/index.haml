@@ -180,23 +180,7 @@ social:
 
   #join
     %h1=hoc_s(:front_join_us_button)
-    %div#original-version
-      .row
-        .col-md-12
-          =view :join_us_description
-      .row{:style=>'margin-top: 45px'}
-        .col-md-8
-          =view :signup_form
-        .col-md-4
-          =view :prizes
-    %div#new-version{:style=>'display: none'}
-      .row
-        .col-md-6
-          =view :join_us_description
-          =view :prizes
-        .col-md-6
-          =view :signup_form
-    %div#form-left-version{:style=>'display: none'}
+    %div
       .row
         .col-md-6
           =view :signup_form
@@ -209,7 +193,9 @@ social:
     .col-xs-12
       =view :faq
 
-= view 'popup_window.js'
+  %button{:style=>"margin-top: 25px", :onclick=>"return adjustScroll('join')"}
+    Sign up your event
+  = view 'popup_window.js'
 
 :javascript
 
@@ -248,7 +234,7 @@ social:
   {
     if (videoStarted)
       return;
-    
+
     $("<iframe allowfullscreen frameborder='0' src='https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0&amp;autoplay=1&cc_load_policy=1' style='position:absolute; top: 0; left: 0; width: 100%; height: 100%; background-color:black;'></iframe>").appendTo("#videodiv");
 
     $("#videodiv").fadeTo(1000, 1);

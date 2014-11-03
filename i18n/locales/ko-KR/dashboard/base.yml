@@ -65,10 +65,7 @@ ko:
     overview_student: '진도를 확인하기 위해서는 로그인하세요. 이메일 주소는 비밀번호 복구를 위해 사용됩니다.  <a href="http://code.org/privacy">개인정보보호 정책</a>.'
     overview_teacher: 계정을 이용해 로그인하고 수업에서 컴퓨터과학(정보과학)을 교육하세요. 학생들을 추가하고 진도를 확인할 수 있습니다.
     no_signup_message: '여러 개의 단계로 이루어진 퍼즐들을 살펴보세요. <a target="_blank" href="http://learn.code.org">browse the various stages and puzzles</a> 해결한 퍼즐을 저장하려면 가입해야 합니다.'
-    prizes_message: '모든 기초개념학습 트로피(총 %{num_trophies} 개)를 모은 미국 학생들은 드롭박스 저장공간, 스카이프 크레딧, EA 와 Valve의 게임 등의 다양한 상품을 얻을 수 있습니다.'
     teacher_educator_guide: 교육자 가이드
-    teacher_prize_header: '$1,000 상당의 <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> 상품을 받아보세요. 2014.06.15~ 소진시까지.'
-    teacher_prize_message: '<a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> 과의 제휴로 Code.org 는 15명 이상의 학생들을 참여시켜 교육하는 미국 공립학교 교사들에게 $1,000 상당의 상품을 제공하고 있습니다. 2014.06.15부터 소진시까지. <a href="http://code.org/educate/20hr">교사 가이드를 살펴보세요. </a>. (Limit: $1,000 per teacher. <a target="_blank" href="http://help.donorschoose.org/appcode/answers/detail/a_id/454/kw/appcode.org">See FAQ for more limits</a>.)'
     teacher_pitch: 교사 로그인
     teacher_title: 선생님으로 등록하기
     student_pitch: 학생 로그인
@@ -79,6 +76,7 @@ ko:
     gender: 성별 (옵션)
     birthday: 생일 (옵션)
     age: 나이
+    user_type: Are you a student or teacher?
     submit: 가입 신청하기
     teacher: 선생님이신가요?
     valid_username: 사용 가능!
@@ -329,7 +327,6 @@ ko:
     student_progress: 나의 학습 진도
     student_stats: '%{trophy_count} 개의 "기초개념학습 트로피"를 획득했습니다. 총 %{trophy_max} 개.'
     student_left_off: '마지막 학습:'
-    student_finished_prize: '모든 기초개념학습 과정을 완료하였습니다. 상품(%{prize_link})을 신청하고, 다른 학급 %{online_link} 이나 학교 수업 %{local_school_link} 에 참여해 보세요'
     student_finished: '모든 과정을 완료했습니다. 다른 수업(%{online_link})이나 학교과정(%{local_school_link})을 선택하세요'
     local_school: 학교
     online: 온라인
@@ -352,6 +349,9 @@ ko:
     male: 남
     female: 여
     none: 응답 안 함
+  user_type:
+    student: student
+    teacher: 선생님
   footer:
     help_from_html: 구글, 마이크로소프트, 페이스북, 트위터의 컴퓨터과학자들이 이 튜토리얼을 만들었습니다.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. All Rights Reserved.'
@@ -362,20 +362,13 @@ ko:
     tos: 이용 약관
     privacy: 개인정보보호 정책
     secure: 보안 버전
-  prize_mail:
-    prize_earned:
-      subject: Code.org 에서 Redeem 코드 상품을 받으세요!
-    teacher_prize_earned:
-      subject: 축하합니다.
-    teacher_bonus_prize_earned:
-      subject: Code.org 에서 보너스 Redeem 코드를 받으세요!
   reference_area:
     title: 도움이 필요하신가요?
     subtitle: 동영상 및 힌트
     teacher: 해법 보기
     auth_error: 해법 보기 권한이 없습니다.
     submit: 예술가 위치 업데이트
-    direction: Start Direction (in degrees)
+    direction: 시작 방향(학년에 따른)
   video:
     tab: 소개 동영상.
     notes: 소개 프레젠테이션.

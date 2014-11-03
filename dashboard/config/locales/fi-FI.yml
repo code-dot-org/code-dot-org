@@ -24,7 +24,7 @@
       label: 'Lisää opettaja käyttäen pääsykoodia tai sähköpostiosoitetta:'
       placeholder: Koodi (ABCDEF) tai sähköpostiosoite (ope@koulu.fi)
     code:
-      label: 'Lisää opettaja ryhmän koodilla:'
+      label: 'Lisää opettaja ryhmän tunnuksella:'
       placeholder: Koodi (ABCDEF)
     submit: Lisää opettaja
   add_hint_form:
@@ -71,17 +71,7 @@
     no_signup_message: Voit <a target="_blank" href="http://learn.code.org">selata
       eri tasoja ja pulmia</a>, mutta sinun pitää rekistöröityä, jotta voit tallentaa
       edistymisesi.
-    prizes_message: U.S. students who earn all %{num_trophies} concept trophies can
-      select a variety of prizes including free Dropbox space, Skype credits, and
-      downloadable games from Electronic Arts.
     teacher_educator_guide: Katso opettajan opas
-    teacher_prize_header: Voita 1000 doll aria <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
-      palkintoina (voimassa kesänkuun 15 päivään, 2014, niin kauan kuin tavaraa riittää)
-    teacher_prize_message: 'Yhteistyössä <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>:in
-      kanssa Code.org tarjoaa jopa tuhat dollaria luokkarahoitusta yhdysvaltalaisten
-      valtion koulujen opettajille, jotka opastavat vähintään 15 opiskelijaa läpi
-      tästä kurssista. <a href="http://code.org/educate/20hr">Katso lisätiedot opettajan
-      oppaasta.</a> '
     teacher_pitch: Code.org:iin liittyminen opettajana
     teacher_title: Opettajien rekisteröityminen
     student_pitch: Code.org:iin liittyminen oppilaana
@@ -92,6 +82,7 @@
     gender: Sukupuoli (vapaaehtoinen)
     birthday: Syntymäpäivä (vapaaehtoinen)
     age: Ikä
+    user_type: Are you a student or teacher?
     submit: Rekisteröidy
     teacher: Oletko opettaja?
     valid_username: Vapaa!
@@ -101,7 +92,7 @@
     invalid_password: Salasanan tulee olla vähintään 6 merkkiä pitkä
     mismatch_password: Antamasi salasanat eivät täsmää
     student_terms: Sitoudun noudattamaan Code.org <a href='http://code.org/tos'>käyttöehtoja</a>.
-      Jos open aloe 13-vuotias, vahvistan tämän lomakkeen kuittauksella että minulla
+      Jos olen alle 13-vuotias, vahvistan tämän lomakkeen kuittauksella että minulla
       on vanhempieni tai huoltajani lupa käyttää Code.org palveluita.<br/>Alle 13-vuotiaiden
       käyttäjien sähköpostiosoitteita ei tallenneta muodossa, jossa heihin voi ottaa
       yhteyttä.
@@ -146,16 +137,16 @@
   follower:
     invite_sent: Kutsu lähetetty
     added_teacher: "%{name} lisätty opettajaksesi"
-    registered: Olet registeröitynyt osioon %{section_name}.
+    registered: Olet registeröitynyt ryhmään %{section_name}.
     error:
       signed_in: Ole hyvä ja kirjaudu ensin sisään
       username_not_found: Käyttäjätunnusta %{username} ei löydy
       username_in_use: Käyttäjätunnus %{username} on jo käytössä, valitse jokin toinen
       no_teacher: Käyttäjää '%{teacher_email_or_code}' ei löytynyt. Pyydä häntä ensin
         luomaan tunnus ja kokeile sitten uudestaan
-      section_not_found: Could not find a section with code '%{section_code}'.
-      blank_code: Anna osan koodi
-      cant_join_own_section: Et voi liittyä omaan osaasi.
+      section_not_found: Ryhmää tunnuksella '%{section_code}' ei löytynyt.
+      blank_code: Anna ryhmän tunnus
+      cant_join_own_section: Et voi liittyä omaan ryhmääsi.
     mail:
       invite_student:
         subject: Liity opettajan %{teacher_name} luokkaan Code.org:ssa!
@@ -260,7 +251,7 @@
       logout: Kirjaudu ulos
       signin: Kirjaudu
       signup: Rekisteröidy
-      already_registered: Jo rekisteröity?
+      already_registered: Jo rekisteröitynyt?
     popup:
       progress: Sinun edistymisesi
       lines: 'Koodirivien yhteismäärä: %{lines}'
@@ -293,7 +284,7 @@
       tried: Kokeiltu, mutta ei valmis
       not_tried: Ei kokeiltu
       activity: Indicates student activity in the last %{hours} %{plural}
-      no_section: Ei kohdistettuja osioita
+      no_section: Ei valittuja ryhmiä
       trophies: pokaalit
     students:
       name: Nimi
@@ -304,33 +295,33 @@
       add: Lisää opiskelijoita
       remove: poista oppilas
       confirm_remove: Oletko varma että haluat poistaa tämän oppilaan?
-      help_reassign: To divide your class into multiple sections, select students
-        to assign to a new section.
-      help_register: Instead of making you spend a lot of time individually importing
-        student data, you can set up your class quickly by asking them to signup.
-        Your students will need to choose usernames and passwords, but they WILL NOT
-        be required to provide an email address. If a student forgets their password,
-        you will be able to reset it for them.
+      help_reassign: Jakaaksesi luokkasi useisiin ryhmiin, valitse oppilaat jotka
+        siirretään uuteen ryhmään.
+      help_register: Sen sijaan että käytät paljon aikaa tuodaksesi yksittäisten oppilaiden
+        tiedot, voit perustaa luokkasi nopeasti pyytäen heitä rekisteröitymään. Oppilaidesi
+        tulee valita käyttäjänimet ja salasanat, mutta heitä EI VAADITA antaamaan
+        sähköpostiosoitetta. Jos oppilas unohtaa salasanansa, voit nollata sen heidän
+        puolestaan.
       register: Pyydä oppilaitasi rekisteröimään itsensä
       vist: Pyydä oppilaitasi käymään
-      section_code: 'and enter their section-code:'
-      first_please: First, please %{add_section}
+      section_code: 'ja anna heidän ryhmän tunnuksensa:'
+      first_please: Lisää ensin %{add_section}
       for: For
       enter: 'anna:'
     sections:
-      add: Lisää osa
-      manage: Hallinnoi osia
-      section: Osa
+      add: Lisää ryhmä
+      manage: Hallinnoi ryhmiä
+      section: Ryhmä
       students: Oppilaat
-      section_code: Osan koodi
-      add_section_code: Lisää oppilaiden osan koodi
+      section_code: Ryhmän tunnus
+      add_section_code: Lisää oppilaiden ryhmän tunnus
       secret: Salainen tyyppi
       grade: Arvosana
       course: Kurssi
       rename: nimeä uudelleen
       edit: muokkaa
       delete: poista
-      confirm_delete: Oletko varma että haluat poistaa tämän osan?
+      confirm_delete: Oletko varma että haluat poistaa tämän ryhmän?
       email: Lähetä sähköpostilla
     rollup: Edistymistaulu
     activity: Luokan tapahtumat
@@ -356,7 +347,7 @@
   user_stats:
     recent_activity: Tapahtumat
     show_more: Näytä lisää
-    classroom_activity: Unplugged Activity
+    classroom_activity: Tietokoneeton tekeminen
   home:
     title: Code Studio
     all_courses: Katsaus kursseihin 1, 2 ja 3
@@ -379,8 +370,6 @@
     student_stats: Olet ansainnut %{trophy_count}/%{trophy_max} "käsitteiden hallinta"
       pokaalia.
     student_left_off: 'Jäit tähän:'
-    student_finished_prize: Olet suorittanut johdannon. Vastaanota %{prize_link} ja
-      valitse toinen luokka täältä %{online_link} tai %{local_school_link}
     student_finished: Olet suorittanut johdannon. Valitse toinen luokka täältä %{online_link}
       tai %{local_school_link}
     local_school: koulu
@@ -406,6 +395,9 @@
     male: Mies
     female: Nainen
     none: En halua vastata
+  user_type:
+    student: Oppilas
+    teacher: Opettaja
   footer:
     help_from_html: Insinöörit Googlelta, Microsoftilta, Facebookilta ja Twitterilta
       auttoivat luomaan tämän opetusohjelman.
@@ -419,20 +411,13 @@
     tos: Ehdot
     privacy: Yksityisyyskäytäntö
     secure: Turvallinen versio
-  prize_mail:
-    prize_earned:
-      subject: Lunasta palkintosi Code.org:sta!
-    teacher_prize_earned:
-      subject: Onnittelut Code.org:lta!
-    teacher_bonus_prize_earned:
-      subject: Lunasta bonuspalkintosi Code.org:sta!
   reference_area:
     title: Tarvitsetko apua?
     subtitle: Katso nämä videot ja vihjeet
     teacher: Katso ratkaisu
     auth_error: Sinulla ei ole oikeutta katsoa ratkaisua.
     submit: Päivitä taitelijan sijainti
-    direction: Start Direction
+    direction: Aloitussuunta (asteina)
   video:
     tab: Video.
     notes: Ei videota? Näytä muistiinpanot.
@@ -570,7 +555,7 @@
     age: Ikäsi
     header: Käyttäjätilin tietojen päivitys
     message: Olemme päivittämässä käyttökokemustamme luodaksemme sinulle vahvemman
-      yksityisyyden suojan. Tämän vuoksi nykyisten käyttäjiien tulee antaa ikänsä.<br/>Kuten
+      yksityisyyden suojan. Tämän vuoksi nykyisten käyttäjien tulee antaa ikänsä.<br/>Kuten
       aina, code.org ei koskaan vuokraa, myy tai jaa tätä tietoa kolmansille osapuolille.
     sign_out: Jos et halua kertoa ikääsi voit <a href="%{url}">kirjautua ulos</a>.
   zendesk_too_young_message: Pahoittelut, nuoremmat käyttäjät eivät voi kirjautua

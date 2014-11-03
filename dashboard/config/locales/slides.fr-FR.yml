@@ -166,8 +166,8 @@
           et écrire un nombre dans le bloc pour lui dire combien de fois il doit répéter.
       6:
         image: notes/hoc2_6.jpg
-        text: 'Et ceci est important: "tu peux mettre plus d''une commande à l''intérieur
-          d''un bloc \" répéter \" ."'
+        text: 'Et ceci est important: tu peux mettre plus d''une commande à l''intérieur
+          d''un bloc " répéter " .'
       7:
         image: notes/hoc2_7.jpg
         text: Amuse-toi en utilisant ton nouveau bloc "répéter"!
@@ -188,8 +188,8 @@
           se cogne sur un mur).
       4:
         image: notes/hoc3_4.jpg
-        text: 'Et ceci est important: "comme avant, on peut mettre plusieurs blocs
-          à l''intérieur du bloc \"répéter jusqu''à\", et ils seront tous répétés."'
+        text: 'Et ceci est important: comme avant, on peut mettre plusieurs blocs
+          à l''intérieur du bloc "répéter jusqu''à", et ils seront tous répétés.'
     if:
       1:
         image: notes/hoc4_1.jpg
@@ -357,8 +357,8 @@
         text: Si tu as aimé ta première heure de code, visite code.org pour continuer
           ton éducation en informatique! Une fois que tu auras complété 20 heures
           de cours, tu auras maîtrisé les bases de la programmation, et tu pourras
-          commencer à apprendre comment écrire des applications de téléphones intelligents,
-          des instructions de robot, des jeux...  C'est toi qui choisis.
+          commencer à apprendre comment écrire des applications pour téléphones, des
+          instructions de robot, des jeux...  C'est toi qui choisis.
       4:
         image: notes/hoc6_4.jpg
         text: 'La technologie change tout ce que nous faisons et peu importe qu''on
@@ -367,4 +367,4 @@
     20_wrapup:
       1:
         image: notes/bird.png
-        text: Les notes d'indications vont bientôt arriver!
+        text: Montrer les notes à venir bientôt !
