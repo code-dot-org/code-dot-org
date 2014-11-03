@@ -85,15 +85,27 @@
   .dot {
     box-sizing: content-box;
     border-radius: 20px;
-    background-color: white;
-    padding: 7px;
+    border: 2px solid #ccc;
+    background-color: $level_attempted;
+    padding: 5px 7px 9px 7px;
     color: #333;
     width: 18px;
     height: 18px;
     font-weight: 600;
     cursor:default;
     text-align: center;
-    opacity: 0.8
+
+    &.perfect {
+      border: none;
+      background-color: $level_perfect;
+      color: white;
+    }
+
+    &.passed {
+      border: none;
+      background-color: $level_passed;
+      color: white;
+    }
   }
 
   .key {
@@ -119,6 +131,9 @@
     }
     .bar {
       margin: 0;
+    }
+    .dot {
+      margin-top: -12px;
     }
   }
 
@@ -155,7 +170,7 @@
               .stage{style: "width: #{width * widthpx}px;"}
                 &nbsp;    
           .studentbar{style: "position: absolute; display: none", id: "studentbar_#{student.id}"}
-          .studentdot{style: "position: absolute; left: -15px; padding-top:4px; padding-bottom:4px", id: "studentdot_#{student.id}"}
+          .studentdot{style: "position: absolute; display: none, left: -15px; padding-top:4px; padding-bottom:4px", id: "studentdot_#{student.id}"}
             .dot
               35
    
@@ -172,16 +187,16 @@
   %dl
     %dt
       %span.bar.attempted &nbsp;
-    %dd
-      not done
+    %dd= t('progress.not_completed')
     %dt
       %span.bar.passed &nbsp;
-    %dd
-      done
+    %dd= t('progress.completed_too_many_blocks')
     %dt
       %span.bar.perfect &nbsp;
-    %dd
-      done, perfect
+    %dd= t('progress.completed_perfect')
+    %dt
+      .dot 10
+    %dd= t('progress.furthest_level_attempted')
 
 :javascript
   function progressLoaded() {
@@ -189,50 +204,67 @@
 
     for (var s = 0; s < studentIds.length; s++) {
       var highestLevel = 0;
+      var levels = allLevels[s];
+      var studentId = studentIds[s];
 
-      for (var l = 0; l < allLevels[s].length; l++) {
-        var levelInfo = allLevels[s][l];
-      
-        var passed = levelInfo && levelInfo.best_result >= #{Activity::MINIMUM_PASS_RESULT};
-        if (passed) {
+      // find the furthest level that this student has attempted
+      for (var l = levels.length - 1; l > 0; l--) {
+        if (levels[l]) {
           highestLevel = l;
-        }  
+          break;
+        }
       }   
 
-      // Draw the level history, though it'll be hidden until we fade it in.
+      var classForLevelInfo = function(levelInfo) {
+        if (levelInfo) {
+          if (levelInfo.best_result >= #{Activity::FREE_PLAY_RESULT}) {
+            return  'perfect'; // perfect (or free play)
+          } else if (levelInfo.best_result >= #{Activity::MINIMUM_PASS_RESULT}) {
+            return 'passed'; // passed but not perfect
+          } else {
+            return 'attempted'; // attempted, not passed
+          }
+        }
+        return '';
+      };
+
+      var stringForLevelInfo = function(levelInfo) {
+        if (levelInfo) {
+          if (levelInfo.best_result >= #{Activity::FREE_PLAY_RESULT}) {
+            return "#{t('progress.completed_perfect')}";
+          } else if (levelInfo.best_result >= #{Activity::MINIMUM_PASS_RESULT}) {
+            return '#{t("progress.completed_too_many_blocks")}';
+          } else {
+            return '#{t("progress.not_completed")}';
+          }
+        }
+        return '';
+      };
+
+
+      /* Draw the level history, though it'll be hidden until we fade it in. */
       for (var l = 0; l <= highestLevel; l++)
       {
         var levelInfo = allLevels[s][l];
-        passed = levelInfo && levelInfo.best_result >= #{Activity::MINIMUM_PASS_RESULT};
-          
-        var backgroundColor = passed ? "rgb(14, 190, 14)" : "rgb(230, 90, 90)";
-        var completionClass = ''; // not attempted
-        if (levelInfo) {
-          if (levelInfo.best_result >= #{Activity::FREE_PLAY_RESULT}) {
-            completionClass = 'perfect'; // perfect (or free play)
-          } else if (levelInfo.best_result >= #{Activity::MINIMUM_PASS_RESULT}) {
-            completionClass = 'passed'; // passed but not perfect
-          } else {
-            completionClass = 'attempted'; // attempted, not passed
-          }
-        }
 
-        var id = "#studentbar_" + studentIds[s];
-        var title = "Level " + (getLevelNumberInStage(l) + 1) + (passed ? " completed" : " not completed"); // TODO loc
-        $(id).append('<div class="bar '+ completionClass +'" title="' + title + '" >&nbsp;</div>');
+        var id = "#studentbar_" + studentId;
+        var title = "Level " + (getLevelNumberInStage(l) + 1) + " " + stringForLevelInfo(levelInfo);
+        $(id).append($('<div>&nbsp;</div>').addClass('bar').addClass(classForLevelInfo(levelInfo)).attr('title', title));
       }
 
-      // Animate each student's dot to the correct level.
-      var level = highestLevel;
+      /* Animate each student's dot to the correct level. */
       var id = "#studentdot_" + studentIds[s];
-      var widthPx = parseInt("#{widthpx}");
-      $(id).animate({left: level * widthPx + 5 + "px"}, 4000 /*, "easeInOutCubic" */);
-      $(id + " .dot").text(getLevelNumberInStage(level) + 1);
-
-      // Set dot color.
-      if (level < 20)
-      {
-      //        $(id + " .dot").css("background-color", "rgb(230, 90, 90)");
+      if (highestLevel == levels.length - 1) {
+        /* student has attempted the last level, do not show dot */
+        $(id).hide();
+      } else {
+        /* move dot to after the last level attempted */
+        var widthPx = parseInt("#{widthpx}");
+        $(id).animate({left: (highestLevel + 1) * widthPx + "px"}, 4000 /*, "easeInOutCubic" */);
+        $(id + " .dot").
+          text(getLevelNumberInStage(highestLevel) + 1).
+          addClass(classForLevelInfo(levels[highestLevel]));
+        $(id).show();
       }
 
       // And set up the bars to fade in.
@@ -241,8 +273,8 @@
         return function() 
         {
           $("#studentbar_" + studentId).fadeIn(3000);
-        }
-      }
+        };
+      };
       setTimeout(fDelayed(studentIds[s]), 3000);
     }
 
