@@ -67,6 +67,8 @@
     "EXPAND_ALL": "Expand Blocks",
     "EXPAND_BLOCK": "Expand Block",
     "EXTERNAL_INPUTS": "External Inputs",
+    "FUNCTION_CREATE": "Create a Function",
+    "FUNCTION_EDIT": "edit",
     "FUNCTION_HEADER": "Function",
     "HELP": "Help",
     "INLINE_INPUTS": "Inline Inputs",
