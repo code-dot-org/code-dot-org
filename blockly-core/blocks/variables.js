@@ -121,6 +121,7 @@ Blockly.Blocks.parameters_get = {
     // Params should only be used in the FunctionEditor but better to be safe
     if (Blockly.functionEditor) {
       Blockly.functionEditor.renameParameter(oldName, newName);
+      Blockly.functionEditor.refreshParamsEverywhere();
     }
   },
   removeVar: Blockly.Blocks.variables_get.removeVar

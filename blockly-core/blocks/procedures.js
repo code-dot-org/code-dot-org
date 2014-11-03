@@ -125,18 +125,26 @@ Blockly.Blocks.procedures_defnoreturn = {
     return containerBlock;
   },
   compose: function(containerBlock) {
-    this.arguments_ = [];
-    this.paramIds_ = [];
-    var paramBlock = containerBlock.getInputTargetBlock('STACK');
-    while (paramBlock) {
-      this.arguments_.push(paramBlock.getTitleValue('NAME'));
-      this.paramIds_.push(paramBlock.id);
-      paramBlock = paramBlock.nextConnection &&
-          paramBlock.nextConnection.targetBlock();
+    var currentParamBlock = containerBlock.getInputTargetBlock('STACK');
+    var paramNames = [];
+    var paramIDs = [];
+    while (currentParamBlock) {
+      paramNames.push(currentParamBlock.getTitleValue('NAME'));
+      paramIDs.push(currentParamBlock.id);
+      currentParamBlock = currentParamBlock.nextConnection &&
+        currentParamBlock.nextConnection.targetBlock();
     }
+    this.updateParamsFromArrays(paramNames, paramIDs);
+  },
+  updateParamsFromArrays: function(paramNames, paramIDs) {
+    this.arguments_ = goog.array.clone(paramNames);
+    this.paramIds_ = goog.array.clone(paramIDs);
     this.updateParams_();
+    this.updateCallerParams_();
+  },
+  updateCallerParams_: function() {
     Blockly.Procedures.mutateCallers(this.getTitleValue('NAME'),
-        this.blockSpace, this.arguments_, this.paramIds_);
+      this.blockSpace, this.arguments_, this.paramIds_);
   },
   dispose: function(healStack, animate, opt_keepCallers) {
     if (!opt_keepCallers) {
