@@ -147,7 +147,7 @@ Blockly.parseOptions_ = function(options) {
     languageTree: tree,
     disableParamEditing: options['disableParamEditing'] || false,
     disableVariableEditing: options['disableVariableEditing'] || false,
-    useModalFunctionEditor: options['useModalFunctionEditor'] || true, // TODO(bjordan/jlory): default to false
+    useModalFunctionEditor: options['useModalFunctionEditor'] || false,
     grayOutUndeletableBlocks: grayOutUndeletableBlocks
   };
 };
