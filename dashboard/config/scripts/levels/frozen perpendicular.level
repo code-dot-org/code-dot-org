@@ -16,7 +16,7 @@
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "free_play": "false",
-    "slider_speed": "0.3"
+    "slider_speed": "0.1"
   }
 }]]></config>
   <blocks>

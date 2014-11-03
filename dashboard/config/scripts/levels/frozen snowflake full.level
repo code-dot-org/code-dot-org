@@ -16,7 +16,8 @@
     "start_direction": "0",
     "x": "200",
     "y": "200",
-    "slider_speed": "0.8"
+    "slider_speed": "0.8",
+    "impressive": "true"
   }
 }]]></config>
   <blocks>
