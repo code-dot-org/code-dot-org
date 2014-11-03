@@ -1819,9 +1819,7 @@ Studio.setSpriteEmotion = function (opts) {
 };
 
 Studio.setSpriteSpeed = function (opts) {
-  var speed = opts.value;
-  speed = (speed < 2 ? 2 : speed);
-  speed = (speed > 12 ? 12 : speed);
+  var speed = Math.min(Math.max(opts.value, 2), 12);
   Studio.sprite[opts.spriteIndex].speed = speed;
 };
 

@@ -10,7 +10,6 @@ var msg = require('../../locale/current/studio');
 var mathBlocks = require('../mathBlocks');
 var commonMsg = require('../../locale/current/common');
 var codegen = require('../codegen');
-var installString = require('../functionalBlockUtils').installString;
 var installFunctionalApiCallBlock = require('../functionalBlockUtils').installFunctionalApiCallBlock;
 var tiles = require('./tiles');
 var utils = require('../utils');
@@ -1451,16 +1450,16 @@ exports.install = function(blockly, blockInstallOptions) {
     blockName: 'functional_setPlayerSpeed',
     blockTitle: msg.setPlayerSpeed(),
     apiName: 'Studio.setSpriteSpeed',
-    extraArgs: ['0'], // spriteIndex
-    args: [{name: 'SPEED', type: 'Number', default:'7'}]
+    args: [{constantValue: '0'}, // spriteIndex
+           {name: 'SPEED', type: 'Number', default:'7'}]
   });
 
   installFunctionalApiCallBlock(blockly, generator, {
     blockName: 'functional_setEnemySpeed',
     blockTitle: msg.setEnemySpeed(),
     apiName: 'Studio.setSpriteSpeed',
-    extraArgs: ['1'], // spriteIndex
-    args: [{name: 'SPEED', type: 'Number', default:'7'}]
+    args: [{constantValue: '1'}, // spriteIndex
+           {name: 'SPEED', type: 'Number', default:'7'}]
   });
 
   installFunctionalApiCallBlock(blockly, generator, {
@@ -1471,8 +1470,7 @@ exports.install = function(blockly, blockInstallOptions) {
            {name: 'TEXT', type: 'string', default:'\'\''}]
   });
 
-  installString(blockly, generator);
-
+  // install number and string
   mathBlocks.install(blockly, generator);
 };
 

@@ -11,6 +11,7 @@ exports.install = function(blockly, generator, gensym) {
   installTimes(blockly, generator, gensym);
   installDividedBy(blockly, generator, gensym);
   installMathNumber(blockly, generator, gensym);
+  installString(blockly, generator, gensym);
 };
 
 function installPlus(blockly, generator, gensym) {
@@ -107,3 +108,26 @@ function installMathNumber(blockly, generator, gensym) {
     return this.getTitleValue('NUM');
   };
 }
+
+function installString(blockly, generator) {
+  blockly.Blocks.functional_string = {
+    init: function() {
+      this.setFunctional(true, {
+        headerHeight: 0,
+        rowBuffer: 3
+      });
+      this.setHSV.apply(this, functionalBlockUtils.colors.string);
+      this.appendDummyInput()
+        .appendTitle(new Blockly.FieldLabel('"'))
+        .appendTitle(new Blockly.FieldTextInput(''), 'VAL')
+        .appendTitle(new Blockly.FieldLabel('"'))
+        .setAlign(Blockly.ALIGN_CENTRE);
+      this.setFunctionalOutput(true, 'string');
+    }
+  };
+
+  generator.functional_string = function() {
+    return blockly.JavaScript.quote_(this.getTitleValue('VAL'));
+  };
+};
+
