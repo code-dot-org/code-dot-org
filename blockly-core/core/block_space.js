@@ -243,9 +243,8 @@ Blockly.BlockSpace.prototype.getTopBlocks = function(ordered) {
  * @return {!Array.<!Blockly.Block>} Array of blocks.
  */
 Blockly.BlockSpace.prototype.getAllVisibleBlocks = function() {
-  var self = this;
   return goog.iter.filter(this.getAllBlocks(), function(block) {
-    return block.blockSpace === self; // && block.isVisible();
+    return block.isUserVisible();
   });
 };
 
@@ -266,7 +265,7 @@ Blockly.BlockSpace.prototype.getAllBlocks = function() {
  * @return {Number} Count of blocks.
  */
 Blockly.BlockSpace.prototype.getBlockCount = function() {
-  return this.getAllBlocks().length;
+  return this.getAllVisibleBlocks().length;
 };
 
 /**
