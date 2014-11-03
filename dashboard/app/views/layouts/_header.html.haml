@@ -38,13 +38,6 @@
         = t('nav.popup.close')
 
 
-- if @script_level
-  :javascript
-    var script_level_id = #{@script_level.level_id};
-- else
-  :javascript
-    var script_level_id = null;
-
 :javascript
   handleUserMenuClick = function () {
     $('.user_options').toggle();
@@ -86,6 +79,7 @@
     if (!loadedPopup) {
       loadedPopup = true;
       togglePopup();
+      var script_level_id = #{@script_level.try(:level_id).to_json};
       $.ajax({url:'#{header_stats_path()}', data: { script_id: #{@script.id}, script_level_id: script_level_id }, success:function(result) {
           $("#headerPopupBody").html(result);
           if (trophiesClicked === true) {

@@ -146,9 +146,9 @@
         - width = levels.length
         - if width > 0
           - stage_lengths << width
-          .stage{style: "width:#{width * widthpx}px", title: game.name}
+          .stage{style: "width:#{width * widthpx}px", title: strip_tags(stage_title(@script, game))}
             - if width > 1
-              =game.name
+              = stage_title(@script, game)
     - student_ids = []  
     - all_levels = []        
     - students.each do |student|
