@@ -1,18 +1,15 @@
----
-title: Resources 
-layout: wide
----
 
-# How to attract media to your Hour of Code event
 
-## Some shocking statistics (USA):
+# Как привлечь СМИ на событие "Час программирования"
 
-  * There will be one million more computing jobs than students over the next 10 years (adding up to $500 billion in salaries).
-  * More than 50 percent of all projected math and science occupations are in computing occupations. 
-  * Computing occupations are among the highest-paying jobs for new graduates. Yet fewer than 3% of college students graduate with a degree in computer science.
-  * In 26 states, computer science classes don’t count toward math or science high school graduation requirements. 
-  * Less than 20% of AP Computer Science students are women. Less than 10% are black or Latino.
+## Некоторые шокирующие статистические данные (США):
 
-## Infrographic version:
+  * В США планируется на один миллион больше рабочих мест в сфере компьютерных технологий, чем учеников, знающих информатику за ближайшие 10 лет (инвестиция до $500 млрд в зарплату).
+  * Более 50 процентов всех предполагаемых профессий связанных с математикой и наукой находятся в профессиях, связанных с информатикой. 
+  * Профессии в сфере информатики являются наиболее высокооплачиваемыми для выпускников. Тем не менее, меньше, чем 3% студентов колледжей выпускаются со степенью в области информатики.
+  * В 26 штатах занятия по информатики не считаются с математикой или наукой и не являются требованием для окончания средней школы. 
+  * Женщины составляют менее 20% студентов в информатике. Менее 10% — черные или латиноамериканцы.
+
+## Версия в графике:
 
 ![image](http://code.org/images/fit-8000/Code.org_infographic.png)

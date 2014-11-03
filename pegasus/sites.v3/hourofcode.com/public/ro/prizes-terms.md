@@ -1,6 +1,4 @@
----
-layout: wide
----
+
 
 # Premii - termeni și condiții
 
@@ -16,10 +14,16 @@ Code.org va contacta organizatorii după Hour of Code (dec 8-14) pentru a oferi 
 
 ## Video chat cu un vorbitor invitat:
 
-Premiul limitat numai pentru şcoli K-12 din Statele Unite. Pentru a se califica, trebuie să se înregistreze pentru Hour of Code întreaga şcoală până în 14 noiembrie 2014. Code.org va selecta aleator şcolile câştigătoare, ofering un slot de timp de web chat şi va lucra cu profesorul pentru a pune la punct detaliile legate de tehnologie.
+Prize limited to K-12 classrooms in the U.S. and Canada only. To qualify, sign up your classroom by November 14, 2014. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligbile to win.
 
 ## Laptopuri pentru întreaga clasă (sau 10.000 USD pentru alte tehnologii):
 
-Premiul limitat numai pentru şcoli publice K-12 SUA. De ce numai scolile publice? [See the answer here](http://www.hourofcode.com/#faq). Pentru a se califica, trebuie să se înregistreze pentru Hour of Code întreaga şcoală până în 14 noiembrie 2014. O şcoală în fiecare stat al SUA va primi un set de calculatoare pentru clasă. Code.org va selecta şi notifica câştigătorii prin email până la 1 decembrie 2014.
+Premiul limitat numai pentru şcoli publice K-12 SUA. To qualify, your entire school must register for the Hour of Code by November 14, 2014. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2014.
+
+Pentru a clarifica, acest lucru nu este un concurs care implică noroc.
+
+1) nu există nici o miza financiara sau risc in a aplica - orice şcoală sau clasă pot participa, fără nici o plată la Code.org sau orice altă organizație
+
+2) câştigătorii vor fi selectați numai între şcoli unde întreaga clasă (sau scoala) participă la o oră de programare, care implică un test de aptitudini colective elevilor şi profesorilor.
 
 <% end %>

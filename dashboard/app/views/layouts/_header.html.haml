@@ -9,7 +9,7 @@
 - elsif browser.cdo_partially_supported?
   = render partial: 'layouts/partially_supported_browser'
 
-.navbar-static-top.header
+.navbar-static-top.header{:class => ('hide_on_mobile' if true)}
   .container{style:(@full_width ? "width: 880px;" : "")}
     .navbar-header
       .row.header_row
