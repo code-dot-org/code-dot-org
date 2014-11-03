@@ -378,6 +378,7 @@ Blockly.Flyout.prototype.show = function(xmlList) {
   // Create the blocks to be shown in this flyout.
   var blocks = [];
   var gaps = [];
+  this.minFlyoutWidth_ = 0;
   var firstBlock = xmlList && xmlList[0];
   if (firstBlock === Blockly.Variables.NAME_TYPE) {
     // Special category for variables.
@@ -385,12 +386,22 @@ Blockly.Flyout.prototype.show = function(xmlList) {
         /** @type {!Blockly.BlockSpace} */ (this.blockSpace_));
   } else if (firstBlock === Blockly.Procedures.NAME_TYPE) {
     // Special category for procedures.
-    var button = Blockly.createSvgElement('text', {'class': 'createFunction'},
-        this.blockSpace_.svgGroup_);
-    button.innerHTML = 'Create a Function';
-    button.setAttribute('transform', 'translate(10, 20)');
-    Blockly.bindEvent_(button, 'mousedown', this, this.createFunction_);
-    cursor.y += 20;
+    if (Blockly.useModalFunctionEditor && Blockly.activeWorkspace === Blockly.mainBlockSpace) {
+      var button = Blockly.createSvgElement('g', {'class': 'createFunction'},
+          this.blockSpace_.svgGroup_);
+      var padding = 5;
+      var r = Blockly.createSvgElement('rect', {rx: 5, ry: 5, fill: 'orange', stroke: 'white'}, button);
+      var text = Blockly.createSvgElement('text', {x: padding, y: padding, 'class': 'blocklyText'}, button);
+      text.innerHTML = 'Create a Function';
+      var bounds = text.getBoundingClientRect();
+      this.minFlyoutWidth_ = bounds.width + 2 * padding;
+      r.setAttribute('width', bounds.width + 2 * padding);
+      r.setAttribute('height', bounds.height + 2 * padding);
+      r.setAttribute('y', -bounds.height + padding - 1);
+      button.setAttribute('transform', 'translate(17, 25)');
+      Blockly.bindEvent_(button, 'mousedown', this, this.createFunction_);
+      cursor.y += 40;
+    }
     Blockly.Procedures.flyoutCategory(blocks, gaps, margin,
         /** @type {!Blockly.BlockSpace} */ (this.blockSpace_));
   } else {
@@ -459,15 +470,14 @@ Blockly.Flyout.prototype.show = function(xmlList) {
 };
 
 /**
- * Compute width of flyout.  Position button under each block.
+ * Compute width of flyout.
  * For RTL: Lay out the blocks right-aligned.
  */
 Blockly.Flyout.prototype.reflow = function() {
-  var flyoutWidth = 0;
+  var flyoutWidth = this.minFlyoutWidth_ || 0;
   var margin = this.CORNER_RADIUS;
   var blocks = this.blockSpace_.getTopBlocks(false);
   for (var x = 0, block; block = blocks[x]; x++) {
-    var root = block.getSvgRoot();
     var blockHW = block.getHeightWidth();
     flyoutWidth = Math.max(flyoutWidth, blockHW.width);
   }

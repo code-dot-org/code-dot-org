@@ -168,27 +168,29 @@ Blockly.Procedures.rename = function(text) {
  * @param {!Blockly.BlockSpace} blockSpace The flyout's blockSpace.
  */
 Blockly.Procedures.flyoutCategory = function(blocks, gaps, margin, blockSpace) {
-  if (Blockly.Blocks.procedures_defnoreturn) {
-    var block = new Blockly.Block(blockSpace, 'procedures_defnoreturn');
-    block.initSvg();
-    blocks.push(block);
-    gaps.push(margin * 2);
-  }
-  if (Blockly.Blocks.procedures_defreturn) {
-    var block = new Blockly.Block(blockSpace, 'procedures_defreturn');
-    block.initSvg();
-    blocks.push(block);
-    gaps.push(margin * 2);
-  }
-  if (Blockly.Blocks.procedures_ifreturn) {
-    var block = new Blockly.Block(blockSpace, 'procedures_ifreturn');
-    block.initSvg();
-    blocks.push(block);
-    gaps.push(margin * 2);
-  }
-  if (gaps.length) {
-    // Add slightly larger gap between system blocks and user calls.
-    gaps[gaps.length - 1] = margin * 3;
+  if (!Blockly.useModalFunctionEditor) {
+    if (Blockly.Blocks.procedures_defnoreturn) {
+      var block = new Blockly.Block(blockSpace, 'procedures_defnoreturn');
+      block.initSvg();
+      blocks.push(block);
+      gaps.push(margin * 2);
+    }
+    if (Blockly.Blocks.procedures_defreturn) {
+      var block = new Blockly.Block(blockSpace, 'procedures_defreturn');
+      block.initSvg();
+      blocks.push(block);
+      gaps.push(margin * 2);
+    }
+    if (Blockly.Blocks.procedures_ifreturn) {
+      var block = new Blockly.Block(blockSpace, 'procedures_ifreturn');
+      block.initSvg();
+      blocks.push(block);
+      gaps.push(margin * 2);
+    }
+    if (gaps.length) {
+      // Add slightly larger gap between system blocks and user calls.
+      gaps[gaps.length - 1] = margin * 3;
+    }
   }
 
   function populateProcedures(procedureList, templateName) {
