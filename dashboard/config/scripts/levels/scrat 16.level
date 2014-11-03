@@ -6,7 +6,7 @@
   "user_id": 3,
   "properties": {
     "skin": "scrat",
-    "maze": "[[0,0,0,4,0,0,0,0],[0,0,0,1,0,0,0,0],[0,1,1,1,1,1,0,0],[0,1,0,0,0,1,0,0],[0,1,0,0,0,1,0,0],[0,1,0,3,0,1,1,4],[0,1,1,1,0,2,0,0],[0,0,0,0,0,0,0,0]]",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,1,1,1,1,1,1,0],[0,1,0,0,0,0,1,0],[0,1,0,0,0,0,1,0],[0,1,0,3,0,0,1,0],[0,1,0,1,0,0,1,0],[0,1,1,1,0,0,2,0],[0,0,0,0,0,0,0,0]]",
     "instructions": "Acorn! Acorn! Acorn! Use an \"if\" block to get me there with the fewest number of blocks.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -16,7 +16,7 @@
     "start_direction": "0",
     "step_mode": "0",
     "maze_data": null,
-    "step_speed": "2"
+    "step_speed": "1"
   }
 }]]></config>
   <blocks>

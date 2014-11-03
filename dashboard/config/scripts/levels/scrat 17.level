@@ -6,7 +6,7 @@
   "user_id": 3,
   "properties": {
     "skin": "scrat",
-    "maze": "[[0,0,0,4,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,1,1,1,2,0,0],[0,0,0,0,0,1,1,4],[0,1,1,3,0,1,0,4],[0,1,0,0,0,1,0,1],[0,1,1,1,1,1,1,1],[0,0,0,0,0,0,0,0]]",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,1,1,1,2,0,0],[0,0,0,0,0,1,1,0],[0,1,1,3,0,1,0,0],[0,1,0,0,0,1,0,1],[0,1,1,1,1,1,1,1],[0,0,0,0,0,0,0,0]]",
     "instructions": "Ok, let's do that again for practice - this isn't very different, but watch out for the wall!",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -16,7 +16,7 @@
     "start_direction": "2",
     "step_mode": "0",
     "maze_data": null,
-    "step_speed": "2"
+    "step_speed": "1"
   }
 }]]></config>
   <blocks>
