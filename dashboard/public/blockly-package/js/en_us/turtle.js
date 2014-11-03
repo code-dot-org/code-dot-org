@@ -10135,7 +10135,7 @@ Turtle.init = function(config) {
   }
   else if (skin.id == "elsa")
   {
-    Turtle.AVATAR_WIDTH = 85;
+    Turtle.AVATAR_WIDTH = 73;
     Turtle.AVATAR_HEIGHT = 100;
     Turtle.DECORATIONANIMATION_WIDTH = 85;
     Turtle.DECORATIONANIMATION_HEIGHT = 85;
@@ -10387,8 +10387,8 @@ Turtle.drawDecorationAnimation = function() {
     var sourceHeight = Turtle.decorationAnimationImage.height;
     var destWidth = sourceWidth;
     var destHeight = sourceHeight;
-    var destX = Turtle.x - destWidth / 2 - 20;
-    var destY = Turtle.y - destHeight / 2 - 90;
+    var destX = Turtle.x - destWidth / 2 - 15;
+    var destY = Turtle.y - destHeight / 2 - 100;
 
     Turtle.ctxDisplay.drawImage(Turtle.decorationAnimationImage, sourceX, sourceY,
                                 sourceWidth, sourceHeight, destX, destY,
@@ -10683,20 +10683,30 @@ Turtle.doSmoothAnimate = function(options, distance)
   if (options && options.smoothAnimate)
   {
     var fullDistance = distance;
-    //distance /= jumpDistance;
 
     if (fullDistance < 0) {
       // Going backward.
-      distance = -jumpDistance;
-      jumpDistanceCovered -= jumpDistance;
-      if (jumpDistanceCovered > fullDistance)
+      if (jumpDistanceCovered - jumpDistance < fullDistance) {
+        // clamp at maximum
+        distance = fullDistance - jumpDistanceCovered;
+        jumpDistanceCovered = fullDistance;
+      } else {
+        distance = -jumpDistance;
+        jumpDistanceCovered -= jumpDistance;
         tupleDone = false;
+      }
+
     } else {
       // Going foward.
-      distance = jumpDistance;
-      jumpDistanceCovered += jumpDistance;
-      if (jumpDistanceCovered < fullDistance)
+      if (jumpDistanceCovered + jumpDistance > fullDistance) {
+        // clamp at maximum
+        distance = fullDistance - jumpDistanceCovered;
+        jumpDistanceCovered = fullDistance;
+      } else {
+        distance = jumpDistance;
+        jumpDistanceCovered += jumpDistance;
         tupleDone = false;
+      }
     }
   }
 
