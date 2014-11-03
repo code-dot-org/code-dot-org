@@ -6,8 +6,7 @@
     - multiple_puzzles = game_levels.count > 1
 
     .header_text
-      = "#{@script_level.stage_position_str}#{multiple_puzzles || @stage ? ':' : ''}" if @script.multiple_games?
-      = "#{@script_level.name}" if @stage
+      = stage_title(@script, @stage || @game)
     - if multiple_puzzles
       .progress_container
         - game_levels.each do |sl|
