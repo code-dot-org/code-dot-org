@@ -274,3 +274,29 @@ exports.generateDropletPalette = function (codeFunctions) {
 
   return palette;
 };
+
+/**
+ * Generate modeOptions for the droplet editor based on some level data.
+ */
+exports.generateDropletModeOptions = function (codeFunctions) {
+  var modeOptions = {
+    blockFunctions: [],
+  };
+
+  // BLOCK, VALUE, and EITHER functions that are normally used in droplet
+  // are included here in comments for reference. When we return our own
+  // modeOptions from this function, it overrides and replaces the list below.
+/*
+  BLOCK_FUNCTIONS = ['fd', 'bk', 'rt', 'lt', 'slide', 'movexy', 'moveto', 'jump', 'jumpto', 'turnto', 'home', 'pen', 'fill', 'dot', 'box', 'mirror', 'twist', 'scale', 'pause', 'st', 'ht', 'cs', 'cg', 'ct', 'pu', 'pd', 'pe', 'pf', 'play', 'tone', 'silence', 'speed', 'wear', 'write', 'drawon', 'label', 'reload', 'see', 'sync', 'send', 'recv', 'click', 'mousemove', 'mouseup', 'mousedown', 'keyup', 'keydown', 'keypress', 'alert'];
+  VALUE_FUNCTIONS = ['abs', 'acos', 'asin', 'atan', 'atan2', 'cos', 'sin', 'tan', 'ceil', 'floor', 'round', 'exp', 'ln', 'log10', 'pow', 'sqrt', 'max', 'min', 'random', 'pagexy', 'getxy', 'direction', 'distance', 'shown', 'hidden', 'inside', 'touches', 'within', 'notwithin', 'nearest', 'pressed', 'canvas', 'hsl', 'hsla', 'rgb', 'rgba', 'cell'];
+  EITHER_FUNCTIONS = ['button', 'read', 'readstr', 'readnum', 'table', 'append', 'finish', 'loadscript'];
+*/
+
+  if (codeFunctions) {
+    for (var i = 0; i < codeFunctions.length; i++) {
+      modeOptions.blockFunctions[i] = codeFunctions[i].func;
+    }
+  }
+
+  return modeOptions;
+};
