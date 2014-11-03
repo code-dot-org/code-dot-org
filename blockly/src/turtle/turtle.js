@@ -89,7 +89,7 @@ Turtle.init = function(config) {
   level = config.level;
 
   config.grayOutUndeletableBlocks = true;
-  config.insertWhenRun = true;
+  config.forceInsertTopBlock = 'when_run';
 
   Turtle.AVATAR_HEIGHT = 51;
   Turtle.AVATAR_WIDTH = 70;
