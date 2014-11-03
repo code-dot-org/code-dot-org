@@ -10598,11 +10598,17 @@ Maze.execute = function(stepMode) {
   // to help the user see the mistake.
   BlocklyApps.playAudio('start');
   try {
-    codegen.evalWith(code, {
-      BlocklyApps: BlocklyApps,
-      Maze: api,
-      executionInfo: Maze.executionInfo
-    });
+    // don't bother running code if we're just editting required blocks. all
+    // we care about is the contents of report.
+    var runCode = !level.edit_blocks;
+
+    if (runCode) {
+      codegen.evalWith(code, {
+        BlocklyApps: BlocklyApps,
+        Maze: api,
+        executionInfo: Maze.executionInfo
+      });
+    }
 
     Maze.onExecutionFinish();
 
