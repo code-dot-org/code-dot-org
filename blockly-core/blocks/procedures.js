@@ -79,18 +79,28 @@ Blockly.Blocks.procedures_defnoreturn = {
   },
   mutationToDom: function() {
     var container = document.createElement('mutation');
+    // Add argument mutations
     for (var x = 0; x < this.arguments_.length; x++) {
       var parameter = document.createElement('arg');
       parameter.setAttribute('name', this.arguments_[x]);
       container.appendChild(parameter);
+    }
+    // Add description mutation
+    if (this.description_) {
+      var desc = document.createElement('description');
+      desc.innerHTML = this.description_;
+      container.appendChild(desc);
     }
     return container;
   },
   domToMutation: function(xmlElement) {
     this.arguments_ = [];
     for (var x = 0, childNode; childNode = xmlElement.childNodes[x]; x++) {
-      if (childNode.nodeName.toLowerCase() == 'arg') {
+      var node = childNode.nodeName.toLowerCase();
+      if (node === 'arg') {
         this.arguments_.push(childNode.getAttribute('name'));
+      } else if (node === 'description') {
+        this.description_ = childNode.innerHTML;
       }
     }
     this.updateParams_();
