@@ -3,9 +3,12 @@ title: Resources
 layout: wide
 nav: resources_nav
 ---
-<a href="/#join"><button style="float: right; margin-top: 50px">Sign up your event</button></a>
-# Resources
-
+<div class="row">
+    <h1 class="col-sm-6">Resources</h1>
+    <div class="col-sm-6" style="text-align:right">
+        <a href="/#join"><button style="float: right; margin-top: 50px">Sign up your event</button></a>
+    </div>
+</div>
 ## Hosting an Hour of Code? <a href="<%= hoc_uri('/resources/how-to') %>">See the how-to guide</a>
 
 <a id="handouts">

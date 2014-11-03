@@ -2,10 +2,13 @@
 title: Resources
 layout: wide
 ---
-<a href="/#join"><button style="float: right; margin-top: 50px">Sign up your event</button></a>
-# How to teach one Hour of Code
-
-## 1) Try the tutorials: 
+<div class="row">
+    <h1 class="col-sm-6">How to teach one Hour of Code</h1>
+    <div class="col-sm-6" style="text-align:right">
+        <a href="/#join"><button style="float: right; margin-top: 50px">Sign up your event</button></a>
+    </div>
+</div>
+## 1) Try the tutorials:
 We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
 
 **All Hour of Code tutorials:**
