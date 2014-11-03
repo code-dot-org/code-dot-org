@@ -86,7 +86,7 @@ Blockly.Variables.allVariables = function(opt_block) {
  */
 Blockly.Variables.renameVariable = function(oldName, newName) {
   var blocks = Blockly.activeWorkspace.getAllBlocks();
-  if (Blockly.modalWorkspace) {
+  if (Blockly.modalBlockSpace) {
     blocks = blocks.concat(Blockly.functionEditor.flyout_.blockSpace_.getTopBlocks());
   }
   // Iterate through every block.

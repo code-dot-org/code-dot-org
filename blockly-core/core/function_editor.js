@@ -40,14 +40,14 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
   }
 
   this.show();
-  this.refreshParamsToolbox();
 
   var dom = Blockly.Xml.blockToDom_(targetFunctionDefinitionBlock);
   targetFunctionDefinitionBlock.dispose(false, false, true);
-  this.functionDefinitionBlock = Blockly.Xml.domToBlock_(Blockly.modalWorkspace, dom);
+  this.functionDefinitionBlock = Blockly.Xml.domToBlock_(Blockly.modalBlockSpace, dom);
   this.functionDefinitionBlock.moveTo(FRAME_MARGIN_SIDE, FRAME_MARGIN_TOP);
   this.functionDefinitionBlock.movable_ = false;
   this.functionDefinitionBlock.setUserVisible(true);
+  this.refreshParamsToolbox();
 
   goog.dom.getElement('functionNameText').value = functionName;
   goog.dom.getElement('functionDescriptionText').value = this.functionDefinitionBlock.description_ || '';
@@ -155,6 +155,8 @@ Blockly.FunctionEditor.prototype.hide = function() {
   goog.dom.getElement('functionNameText').value = '';
   goog.dom.getElement('functionDescriptionText').value = '';
   goog.dom.getElement('paramAddText').value = '';
+
+  Blockly.modalBlockSpace.clear();
 };
 
 Blockly.FunctionEditor.prototype.create_ = function() {
@@ -178,7 +180,7 @@ Blockly.FunctionEditor.prototype.create_ = function() {
     }
     return metrics;
   });
-  Blockly.modalWorkspace = Blockly.modalBlockSpaceEditor.blockSpace;
+  Blockly.modalBlockSpace = Blockly.modalBlockSpaceEditor.blockSpace;
 
   Blockly.modalBlockSpaceEditor.addChangeListener(function() {
     Blockly.mainBlockSpace.fireChangeEvent();
@@ -229,8 +231,8 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   // Set up parameters toolbox
   this.flyout_ = new Blockly.HorizontalFlyout(Blockly.modalBlockSpaceEditor);
   var flyoutDom = this.flyout_.createDom();
-  Blockly.modalWorkspace.svgGroup_.insertBefore(flyoutDom, Blockly.modalWorkspace.svgBlockCanvas_);
-  this.flyout_.init(Blockly.modalWorkspace, false);
+  Blockly.modalBlockSpace.svgGroup_.insertBefore(flyoutDom, Blockly.modalBlockSpace.svgBlockCanvas_);
+  this.flyout_.init(Blockly.modalBlockSpace, false);
   this.bindToolboxHandlers_();
 
   var left = goog.dom.getElementByClass(Blockly.hasCategories ? 'blocklyToolboxDiv' : 'blocklyFlyoutBackground').getBoundingClientRect().width;
@@ -266,7 +268,7 @@ Blockly.FunctionEditor.prototype.create_ = function() {
 
 Blockly.FunctionEditor.prototype.destroy_ = function() {
   // TODO(bjordan/jlory): needed? when to call?
-  delete Blockly.modalWorkspace;
+  delete Blockly.modalBlockSpace;
   this.modalBackground_ = null;
   if (this.onResizeWrapper_) {
     Blockly.unbindEvent_(this.onResizeWrapper_);
@@ -275,7 +277,7 @@ Blockly.FunctionEditor.prototype.destroy_ = function() {
 };
 
 Blockly.FunctionEditor.prototype.position_ = function() {
-  var metrics = Blockly.modalWorkspace.getMetrics();
+  var metrics = Blockly.modalBlockSpace.getMetrics();
   var width = metrics.viewWidth;
   var height = metrics.viewHeight;
   if (!Blockly.hasCategories) {
@@ -311,7 +313,7 @@ Blockly.FunctionEditor.prototype.createContractDom_ = function() {
       + '<div><textarea id="functionDescriptionText" rows="2"></textarea></div>'
       + '<div>What parameters does your function take?</div>'
       + '<div><input id="paramAddText" type="text" style="width: 200px;"> <button id="paramAddButton" class="btn">Add Parameter</button>';
-  var metrics = Blockly.modalWorkspace.getMetrics();
+  var metrics = Blockly.modalBlockSpace.getMetrics();
   this.contractDiv_.style.left = metrics.absoluteLeft + 'px';
   this.contractDiv_.style.top = metrics.absoluteTop + 'px';
   this.contractDiv_.style.width = metrics.viewWidth + 'px';
