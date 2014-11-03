@@ -121,7 +121,7 @@ Turtle.init = function(config) {
   }
   else if (skin.id == "elsa")
   {
-    Turtle.AVATAR_WIDTH = 85;
+    Turtle.AVATAR_WIDTH = 73;
     Turtle.AVATAR_HEIGHT = 100;
     Turtle.DECORATIONANIMATION_WIDTH = 85;
     Turtle.DECORATIONANIMATION_HEIGHT = 85;
