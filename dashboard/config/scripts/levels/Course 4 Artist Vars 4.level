@@ -1,0 +1,139 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2014-10-16T20:16:06.000Z",
+  "level_num": "custom",
+  "ideal_level_source_id": 434,
+  "user_id": 1,
+  "properties": {
+    "skin": "artist",
+    "instructions": "Now I want to make a rectangle that is twice as long as it is height. We've got a variable called \"height\" that is set to 100, can you use the math blocks to complete the code?",
+    "x": "100",
+    "y": "250",
+    "start_direction": "90",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "ideal": "12",
+    "slider_speed": ".5",
+    "disable_param_editing": "true",
+    "free_play": "false"
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="variables_set" inline="false" movable="false" editable="false">
+              <title name="VAR">height</title>
+              <value name="VALUE">
+                <block type="math_number" movable="false" editable="false">
+                  <title name="NUM">100</title>
+                </block>
+              </value>
+              <next>
+                <block type="controls_repeat" deletable="false" movable="false" editable="false">
+                  <title name="TIMES">2</title>
+                  <statement name="DO">
+                    <block type="draw_move" inline="true" deletable="false" movable="false" editable="false">
+                      <title name="DIR">moveForward</title>
+                      <next>
+                        <block type="draw_turn_by_constant" deletable="false" movable="false" editable="false">
+                          <title name="DIR">turnLeft</title>
+                          <title name="VALUE">90</title>
+                          <next>
+                            <block type="draw_move" inline="true" deletable="false" movable="false" editable="false">
+                              <title name="DIR">moveForward</title>
+                              <next>
+                                <block type="draw_turn_by_constant" deletable="false" movable="false" editable="false">
+                                  <title name="DIR">turnLeft</title>
+                                  <title name="VALUE">90</title>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="variables_get" editable="false">
+          <title name="VAR">height</title>
+        </block>
+        <block type="math_arithmetic" inline="true">
+          <title name="OP">MULTIPLY</title>
+          <value name="A">
+            <block type="variables_get" movable="false" editable="false">
+              <title name="VAR">height</title>
+            </block>
+          </value>
+          <value name="B">
+            <block type="math_number" movable="false" editable="false">
+              <title name="NUM">2</title>
+            </block>
+          </value>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="math_arithmetic" inline="true">
+          <title name="OP">MULTIPLY</title>
+          <value name="A">
+            <block type="variables_get">
+              <title name="VAR">height</title>
+            </block>
+          </value>
+          <value name="B">
+            <block type="math_number">
+              <title name="NUM">2</title>
+            </block>
+          </value>
+        </block>
+      </xml>
+    </required_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">2</title>
+              <statement name="DO">
+                <block type="draw_move_by_constant">
+                  <title name="DIR">moveForward</title>
+                  <title name="VALUE">200</title>
+                  <next>
+                    <block type="draw_turn_by_constant">
+                      <title name="DIR">turnLeft</title>
+                      <title name="VALUE">90</title>
+                      <next>
+                        <block type="draw_move_by_constant">
+                          <title name="DIR">moveForward</title>
+                          <title name="VALUE">100</title>
+                          <next>
+                            <block type="draw_turn_by_constant">
+                              <title name="DIR">turnLeft</title>
+                              <title name="VALUE">90</title>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Artist>
