@@ -325,10 +325,10 @@ BlocklyApps.init = function(config) {
     // using window.require forces us to use requirejs version of require
     window.require(['droplet'], function(droplet) {
       var displayMessage, examplePrograms, messageElement, onChange, startingText;
-      var palette = utils.generateDropletPalette(config.level.codeFunctions);
       BlocklyApps.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
         mode: 'javascript',
-        palette: palette
+        modeOptions: utils.generateDropletModeOptions(config.level.codeFunctions),
+        palette: utils.generateDropletPalette(config.level.codeFunctions)
       });
 
       var startText = '// ' + msg.typeHint() + '\n';
