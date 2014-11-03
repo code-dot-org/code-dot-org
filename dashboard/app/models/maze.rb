@@ -22,16 +22,22 @@ class Maze < Grid
 <category name="Actions">
   <block type='maze_moveForward'></block>
   <block type='maze_move'></block>
-  <block type='maze_turn'>
-    <title name='DIR'>turnLeft</title>
+  <block type='maze_move'>
+    <title name='DIR'>???</title>
   </block>
   <block type='maze_turn'>
     <title name='DIR'>turnRight</title>
+  </block>
+  <block type='maze_turn'>
+    <title name='DIR'>???</title>
   </block>
 </category>
 <category name="Loops">
   <block type='controls_repeat'>
     <title name='TIMES'>5</title>
+  </block>
+  <block type="controls_repeat_dropdown">
+    <title name="TIMES" config="3-10">???</title>
   </block>
   <block type="controls_repeat_dropdown">
     <title name="TIMES" config="3-10">3</title>
