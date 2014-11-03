@@ -392,7 +392,7 @@ Blockly.Flyout.prototype.show = function(xmlList) {
       var padding = 5;
       var r = Blockly.createSvgElement('rect', {rx: 5, ry: 5, fill: 'orange', stroke: 'white'}, button);
       var text = Blockly.createSvgElement('text', {x: padding, y: padding, 'class': 'blocklyText'}, button);
-      text.innerHTML = 'Create a Function';
+      text.innerHTML = Blockly.Msg.FUNCTION_CREATE;
       var bounds = text.getBoundingClientRect();
       this.minFlyoutWidth_ = bounds.width + 2 * padding;
       r.setAttribute('width', bounds.width + 2 * padding);
