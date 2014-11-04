@@ -394,7 +394,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     get :show, script_id: @custom_script, stage_id: 2, id: 1
     assert_template partial: '_header'
     # js-encoded referenceArea causes assert_select to output warnings, so we need to use Nokogiri instead
-    assert_equal I18n.t("data.script.name.#{@custom_script.name}.#{@custom_stage_2.name}"),
+    assert_equal "Stage 2: " + I18n.t("data.script.name.#{@custom_script.name}.#{@custom_stage_2.name}"),
       css('body div.header_level div.header_text').text.strip
   end
 

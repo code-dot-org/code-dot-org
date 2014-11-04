@@ -51,12 +51,18 @@ module ApplicationHelper
   end
 
   def level_info(user, script_level)
-    user_level = script_level.user_level
-    css_class = if user_level.nil?
+    result =
+      if user
+        script_level.try(:user_level).try(:best_result)
+      elsif (session[:progress] && session[:progress][script_level.level_id])
+        result = session[:progress][script_level.level_id]
+      end
+
+    css_class = if result.nil?
                   'not_tried'
-                elsif user_level.best_result >= Activity::FREE_PLAY_RESULT 
+                elsif result >= Activity::FREE_PLAY_RESULT
                   'perfect'
-                elsif user_level.passing?
+                elsif result >= Activity::MINIMUM_PASS_RESULT
                   'passed'
                 else
                   'attempted'
