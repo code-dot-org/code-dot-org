@@ -73,11 +73,11 @@ Blockly.FieldParameter.dropdownChange = function(text) {
     if (text) {
       Blockly.Variables.renameVariable(oldVar, text, this.sourceBlock_.blockSpace);
     }
-    return null;
   } else if (text === Blockly.Msg.DELETE_PARAMETER) {
     var result = window.confirm(Blockly.Msg.DELETE_PARAMETER_TITLE.replace('%1', oldVar));
     if (result) {
       Blockly.Variables.deleteVariable(oldVar, this.sourceBlock_.blockSpace);
     }
   }
+  return null;
 };
