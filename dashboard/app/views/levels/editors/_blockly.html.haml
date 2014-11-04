@@ -56,7 +56,7 @@
   = f.label :step_speed, 'Step speed'
   %p Number is a multiplier for how long each step takes (so higher numbers are slower). Default is 5 for Maze, 2 for Bee.
   = f.number_field :step_speed
-- unless @level.is_a? Grid
+- if @level.respond_to? :free_play
   .field
     = f.label :free_play, "Free Play"
     %p Free Play levels are not checked for correctness (any solution is accepted), can be shared, and can be saved to the public and private gallery
