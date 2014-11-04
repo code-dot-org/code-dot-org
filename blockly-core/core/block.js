@@ -80,13 +80,6 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
   this.dragging_ = false;
 
   /**
-   * Custom description of what this block does
-   * @type {?String}
-   * @private
-   */
-  this.description_ = null;
-
-  /**
    * @type {!Blockly.BlockSpace}
    */
   this.blockSpace = blockSpace;
