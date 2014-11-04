@@ -73,6 +73,13 @@ If you’ve signed up your entire school to participate in the Hour of Code, ent
 
 <% end %>
 
+<% if @country == 'us' %>
+
+## 100 classrooms will win a set of programmable robots
+[Sphero](http://www.gosphero.com/) is the app-controlled robotic ball changing the way students learn. Powered by [SPRK lessons](http://www.gosphero.com/education/), these round robots give kids a fun crash course in programming while sharpening their skills in math and science. Sphero is giving away 100 classroom sets – each including 5 robots. Any classroom (public or private) within the U.S. or Canada is eligible to win this prize. 
+
+<% end %>
+
 ## More questions about prizes?
 
 Check out <a href="<%= hoc_uri('/prizes-terms') %>">Terms and Conditions</a> or visit our forum to see [FAQs](http://support.code.org) and ask your questions.
