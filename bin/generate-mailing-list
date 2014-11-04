@@ -60,44 +60,48 @@ UNSUBSCRIBERS = {}.tap do |results|
 end
 puts "#{UNSUBSCRIBERS.count} unsubscribers loaded."
 
-DONORS = {}.tap do |results|
-  csv_contacts('donors.csv').each do |i|
+#DONORS = {}.tap do |results|
+#  csv_contacts('donors.csv').each do |i|
+#    email = i[:email].downcase.strip
+#    results[email] = i unless UNSUBSCRIBERS[email]
+#  end
+#end
+#puts "#{DONORS.count} donors loaded."
+
+ORGANIZERS = {}.tap do |results|
+  query_contacts(q:'kind_s:"HocSignup2014"', fields:['hoc_country_s']).each do |i|
     email = i[:email].downcase.strip
     results[email] = i unless UNSUBSCRIBERS[email]
   end
 end
-puts "#{DONORS.count} donors loaded."
+puts "#{ORGANIZERS.count} organizers loaded."
 
-TEACHERS = {}.tap do |results|
+DOMESTIC_TEACHERS = {}.tap do |results|
   (
     dashboard_teachers +
     query_contacts(q:'kind_s:"Petition" && role_s:"educator" && country_s:"united states"') +
     query_contacts(q:'kind_s:"BringToSchool2013" && (role_s:"teacher" || role_s:"principal" || role_s:"superintendent" || role_s:"district_admin") && country_s:"united states"') +
     query_contacts(q:'kind_s:"CSEdWeekEvent2013" && (role_s:"teacher" || role_s:"principal" || role_s:"superintendent" || role_s:"district_admin") && country_s:"united states"') +
-    query_contacts(q:'kind_s:"HocSignup2014" && country_s:"united states"') +
     query_contacts(q:'kind_s:"ClassSubmission"')
   ).each do |i|
     email = i[:email].downcase.strip
-    results[email] = i unless UNSUBSCRIBERS[email] || DONORS[email]
+    results[email] = i unless UNSUBSCRIBERS[email] || ORGANIZERS[email]
   end
 end
-puts "#{TEACHERS.count} teachers loaded."
+puts "#{DOMESTIC_TEACHERS.count} domestic teachers loaded."
 
-DOMESTIC = {}.tap do |results|
-  query_contacts(q:'(kind_s:"Petition" && country_s:"united states") || (kind_s:"HelpUs2013" && country_s:"united states") || kind_s:"VolunteerEngineerSubmission"').each do |i|
+INTERNATIONAL_TEACHERS = {}.tap do |results|
+  (
+    query_contacts(q:'kind_s:"Petition" && role_s:"educator" && -country_s:"united states"') +
+    query_contacts(q:'kind_s:"BringToSchool2013" && (role_s:"teacher" || role_s:"principal" || role_s:"superintendent" || role_s:"district_admin") && -country_s:"united states"') +
+    query_contacts(q:'kind_s:"CSEdWeekEvent2013" && (role_s:"teacher" || role_s:"principal" || role_s:"superintendent" || role_s:"district_admin") && -country_s:"united states"')
+  ).each do |i|
     email = i[:email].downcase.strip
-    results[email] = i unless UNSUBSCRIBERS[email] || DONORS[email] || TEACHERS[email]
+    results[email] = i unless UNSUBSCRIBERS[email] || ORGANIZERS[email] || DOMESTIC_TEACHERS[email]
   end
 end
-puts "#{DOMESTIC.count} domestic users loaded."
+puts "#{INTERNATIONAL_TEACHERS.count} international teachers loaded."
 
-INTERNATIONAL = {}.tap do |results|
-  query_contacts(q:'(kind_s:"Petition" && -country_s:"united states") || (kind_s:"HelpUs2013" && -country_s:"united states")').each do |i|
-    email = i[:email].downcase.strip
-    results[email] = i unless UNSUBSCRIBERS[email] || DONORS[email] || TEACHERS[email] || DOMESTIC[email]
-  end
-end
-puts "#{INTERNATIONAL.count} international users loaded."
-
-export_contacts_to_csv DOMESTIC, 'domestic.csv'
-export_contacts_to_csv INTERNATIONAL, 'international.csv'
+export_contacts_to_csv ORGANIZERS, 'organizers.csv'
+export_contacts_to_csv DOMESTIC_TEACHERS, 'domestic-teachers.csv'
+export_contacts_to_csv INTERNATIONAL_TEACHERS, 'international-teachers.csv'
