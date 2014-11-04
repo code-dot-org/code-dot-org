@@ -116,14 +116,14 @@ Blockly.FunctionEditor.prototype.addParameter = function(newParameterName) {
   // Add the new param block to the local toolbox
   var param = Blockly.createSvgElement('block', {type: 'parameters_get'});
   var v = Blockly.createSvgElement('title', {name: 'VAR'}, param);
-  v.innerHTML = newParameterName;
+  v.textContent = newParameterName;
   this.paramToolboxBlocks_.push(param);
 };
 
 Blockly.FunctionEditor.prototype.renameParameter = function(oldName, newName) {
   this.paramToolboxBlocks_.forEach(function (block) {
-    if (block.firstElementChild && block.firstElementChild.innerHTML === oldName) {
-      block.firstElementChild.innerHTML = newName;
+    if (block.firstElementChild && block.firstElementChild.textContent === oldName) {
+      block.firstElementChild.textContent = newName;
     }
   });
 };
@@ -134,7 +134,7 @@ Blockly.FunctionEditor.prototype.renameParameter = function(oldName, newName) {
  */
 Blockly.FunctionEditor.prototype.removeParameter = function(nameToRemove) {
   goog.array.removeIf(this.paramToolboxBlocks_, function (block) {
-    return block.firstElementChild && block.firstElementChild.innerHTML === nameToRemove;
+    return block.firstElementChild && block.firstElementChild.textContent === nameToRemove;
   });
   this.refreshParamsEverywhere();
 };
@@ -153,7 +153,7 @@ Blockly.FunctionEditor.prototype.refreshParamsOnFunction_ = function() {
   var paramNames = [];
   var paramIDs = [];
   goog.array.forEach(this.paramToolboxBlocks_, function(blockXML, index) {
-    paramNames.push(blockXML.firstElementChild.innerHTML);
+    paramNames.push(blockXML.firstElementChild.textContent);
     paramIDs.push(index);
   }, this);
   this.functionDefinitionBlock.updateParamsFromArrays(paramNames, paramIDs);
