@@ -29,13 +29,13 @@ goog.require('Blockly.FieldDropdown');
 goog.require('Blockly.Msg');
 goog.require('Blockly.Variables');
 
-
 /**
  * Class for a variable's dropdown field.
  * @param {!string} varname The default name for the variable.  If null,
  *     a unique variable name will be generated.
- * @param {Function} opt_changeHandler A function that is executed when a new
+ * @param {?Function} opt_changeHandler A function that is executed when a new
  *     option is selected.
+ * @param {?Function} opt_createHandler A function that is executed after creation
  * @extends {Blockly.FieldDropdown}
  * @constructor
  */
@@ -153,62 +153,24 @@ Blockly.FieldVariable.prototype.dropdownChange = function(text) {
 };
 
 /**
- * Class for a variable's dropdown field.
- * @param {!string} varname The default name for the variable.  If null,
- *     a unique variable name will be generated.
- * @param {Function} opt_changeHandler A function that is executed when a new
- *     option is selected.
- * @extends {Blockly.FieldDropdown}
- * @constructor
+ * Prompt the user for a variable name and perform some whitespace cleanup
+ * @param {string} promptText description text for window prompt
+ * @param {string} defaultText default input text for window prompt
+ * @returns {?string} the provided variable name, with extra whitespace removed
  */
-Blockly.FieldParameter = function(varname) {
-
-  Blockly.FieldParameter.superClass_.constructor.call(this, varname,
-      Blockly.FieldParameter.dropdownChange, Blockly.FieldParameter.dropdownCreate);
-};
-goog.inherits(Blockly.FieldParameter, Blockly.FieldVariable);
-
-/**
- * Return a sorted list of parameter names for parameter dropdown menus.
- * Include a special option at the end for deleting a parameter.
- * @return {!Array.<string>} Array of parameter names.
- * @this {!Blockly.FieldParameter}
- */
-Blockly.FieldParameter.dropdownCreate = function() {
-  var variableList = [
-    Blockly.Msg.RENAME_PARAMETER,
-    Blockly.Msg.DELETE_PARAMETER
-  ];
-  // Variables are not language-specific, use the name as both the user-facing
-  // text and the internal representation.
-  var options = [];
-  for (var x = 0; x < variableList.length; x++) {
-    options[x] = [variableList[x], variableList[x]];
-  }
-  return options;
-};
-
-Blockly.FieldParameter.dropdownChange = function(text) {
-  var oldVar = this.getText();
-  if (text == Blockly.Msg.RENAME_PARAMETER) {
-    this.getParentEditor_().hideChaff();
-    text = promptName(Blockly.Msg.RENAME_PARAMETER_TITLE.replace('%1', oldVar),
-        oldVar);
-    if (text) {
-      Blockly.Variables.renameVariable(oldVar, text, this.sourceBlock_.blockSpace);
-    }
-    return null;
-  } else if (text == Blockly.Msg.DELETE_PARAMETER) {
-    var result = window.confirm(Blockly.Msg.DELETE_PARAMETER_TITLE.replace('%1', oldVar));
-    if (result) {
-      Blockly.Variables.deleteVariable(oldVar, this.sourceBlock_.blockSpace);
-    }
-  }
-};
-
-function promptName(promptText, defaultText) {
+Blockly.FieldVariable.promptName = function(promptText, defaultText) {
   var newVar = window.prompt(promptText, defaultText);
-  // Merge runs of whitespace.  Strip leading and trailing whitespace.
-  // Beyond this, all names are legal.
-  return newVar && newVar.replace(/[\s\xa0]+/g, ' ').replace(/^ | $/g, '');
-}
+  if (!newVar) {
+    return newVar;
+  }
+
+  return Blockly.FieldVariable.removeExtraWhitespace(newVar);
+};
+
+Blockly.FieldVariable.removeExtraWhitespace = function(inputString) {
+  var multipleWhitespaceCharactersRegex = /[\s\xa0]+/g;
+  var leadingTrailingWhitespaceRegex = /^ | $/g;
+  return inputString
+    .replace(multipleWhitespaceCharactersRegex, ' ')
+    .replace(leadingTrailingWhitespaceRegex, '');
+};
