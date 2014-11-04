@@ -12,8 +12,7 @@
     "step_mode": "0",
     "is_k1": "true",
     "skip_instructions_popup": "true",
-    "ideal": "4",
-    "maze_data": null
+    "ideal": "4"
   }
 }]]></config>
   <blocks>
