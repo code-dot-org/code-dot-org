@@ -206,11 +206,6 @@ th {
   padding: 1px;
   display: inline-block;
   border-radius: 20px;
-  background-color: $level_current;
-}
-
-.puzzle_outer_assessment {
-  background-color: yellow;
 }
 
 .user-stats-block
@@ -529,9 +524,10 @@ html, body {
   .puzzle_outer_current,
   .puzzle_outer_level.last,
   .puzzle_outer_assessment.last {
-    position: relative;
-    top: 0;
+    margin: 0 -1px;
+    vertical-align: middle;
     border-radius: 20px;
+
     .level_link {
       border-radius: 20px;
       height: 18px;
@@ -547,16 +543,18 @@ html, body {
   /* all others are small dot */
   .puzzle_outer_level,
   .puzzle_outer_assessment {
-    margin: 0;
-    position: relative;
-    top: 5px;
+    margin: 0 -1px;
+    vertical-align: middle;
     border-radius: 11px;
     line-height: 1px;
+
     .level_link {
       min-width: 1px;
       width: 1px;
       height: 1px;
       border-radius: 9px;
+      padding: 3px;
+      margin: 1px;
       /* hack to hide the number: */
       font-size: 1px;
       color: transparent;
