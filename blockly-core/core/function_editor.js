@@ -18,20 +18,35 @@ goog.require('goog.array');
  * @constructor
  */
 Blockly.FunctionEditor = function() {
+  /**
+   * Whether this editor has been initialized
+   * @type {boolean}
+   * @private
+   */
+  this.created_ = false;
+
+  /**
+   * Current blocks in the editor's parameter toolbox
+   * @type {!Array.<!Blockly.Block>}
+   */
+  this.paramToolboxBlocks_ = [];
+
+  /**
+   * Current block being edited
+   * @type {?Blockly.Block}
+   */
+  this.functionDefinitionBlock = null;
+
+  this.closeButton_ = null;
+  this.container_ = null;
+  this.contractDiv_ = null;
+  this.flyout_ = null;
+  this.frameBase_ = null;
+  this.frameInner_ = null;
+  this.frameText_ = null;
+  this.modalBackground_ = null;
+  this.onResizeWrapper_ = null;
 };
-
-/**
- * Whether this editor has been initialized
- * @type {boolean}
- * @private
- */
-Blockly.FunctionEditor.prototype.created_ = false;
-
-/**
- * Current blocks in the editor's toolbox
- * @type {!Array.<!Blockly.Block>}
- */
-Blockly.FunctionEditor.prototype.paramToolboxBlocks_ = [];
 
 Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
   var targetFunctionDefinitionBlock = Blockly.mainBlockSpace.findFunction(functionName);
@@ -154,7 +169,7 @@ Blockly.FunctionEditor.prototype.ensureCreated_ = function() {
 
 Blockly.FunctionEditor.prototype.hide = function() {
   this.functionDefinitionBlock.setUserVisible(false);
-  this.functionDefinitionBlock.movable_ = true;
+  this.functionDefinitionBlock.setMovable(true);
   var dom = Blockly.Xml.blockToDom_(this.functionDefinitionBlock);
   this.functionDefinitionBlock.dispose(false, false, true);
   Blockly.Xml.domToBlock_(Blockly.mainBlockSpace, dom);
