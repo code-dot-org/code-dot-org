@@ -90,7 +90,7 @@ module.exports = function(app, levels, options) {
 };
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./base":2,"./blocksCommon":4,"./dom":12,"./required_block_utils":16,"./utils":43}],2:[function(require,module,exports){
+},{"./base":2,"./blocksCommon":4,"./dom":12,"./required_block_utils":17,"./utils":45}],2:[function(require,module,exports){
 /**
  * Blockly Apps: Common code
  *
@@ -1045,7 +1045,7 @@ var getIdealBlockNumberMsg = function() {
       msg.infinity() : BlocklyApps.IDEAL_BLOCK_NUM;
 };
 
-},{"../locale/ta_in/common":45,"./block_utils":3,"./builder":5,"./constants.js":11,"./dom":12,"./feedback.js":13,"./slider":18,"./templates/buttons.html":32,"./templates/instructions.html":34,"./templates/learn.html":35,"./templates/makeYourOwn.html":36,"./utils":43,"./xml":44}],3:[function(require,module,exports){
+},{"../locale/ta_in/common":47,"./block_utils":3,"./builder":5,"./constants.js":11,"./dom":12,"./feedback.js":13,"./slider":20,"./templates/buttons.html":34,"./templates/instructions.html":36,"./templates/learn.html":37,"./templates/makeYourOwn.html":38,"./utils":45,"./xml":46}],3:[function(require,module,exports){
 var xml = require('./xml');
 
 exports.createToolbox = function(blocks) {
@@ -1232,7 +1232,7 @@ exports.mathBlockXml = function (type, inputs, titles) {
   return str;
 };
 
-},{"./xml":44}],4:[function(require,module,exports){
+},{"./xml":46}],4:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -1397,7 +1397,7 @@ function installWhenRun(blockly, skin, isK1) {
   };
 }
 
-},{"../locale/ta_in/common":45}],5:[function(require,module,exports){
+},{"../locale/ta_in/common":47}],5:[function(require,module,exports){
 var feedback = require('./feedback.js');
 var dom = require('./dom.js');
 var utils = require('./utils.js');
@@ -1427,7 +1427,7 @@ exports.builderForm = function(onAttemptCallback) {
   dialog.show({ backdrop: 'static' });
 };
 
-},{"./dom.js":12,"./feedback.js":13,"./templates/builder.html":31,"./utils.js":43,"url":57}],6:[function(require,module,exports){
+},{"./dom.js":12,"./feedback.js":13,"./templates/builder.html":33,"./utils.js":45,"url":59}],6:[function(require,module,exports){
 /*
 
 StackBlur - a fast almost Gaussian Blur For Canvas
@@ -6907,7 +6907,109 @@ var generateXMLForBlocks = function(blocks) {
 };
 
 
-},{"../locale/ta_in/common":45,"./codegen":10,"./constants":11,"./dom":12,"./templates/buttons.html":32,"./templates/code.html":33,"./templates/readonly.html":38,"./templates/shareFailure.html":39,"./templates/sharing.html":40,"./templates/showCode.html":41,"./templates/trophy.html":42,"./utils":43}],14:[function(require,module,exports){
+},{"../locale/ta_in/common":47,"./codegen":10,"./constants":11,"./dom":12,"./templates/buttons.html":34,"./templates/code.html":35,"./templates/readonly.html":40,"./templates/shareFailure.html":41,"./templates/sharing.html":42,"./templates/showCode.html":43,"./templates/trophy.html":44,"./utils":45}],14:[function(require,module,exports){
+var utils = require('./utils');
+var _ = utils.getLodash();
+
+var colors = {
+  Number: [192, 1.00, 0.99], // 00ccff
+  string: [180, 1.00, 0.60], // 0099999
+  image: [285, 1.00, 0.80], // 9900cc
+  boolean: [90, 1.00, 0.4], // 336600
+  none: [0, 0, 0.6]
+};
+module.exports.colors = colors;
+
+/**
+ * Helper function to create the init section for a functional block
+ */
+module.exports.initTitledFunctionalBlock = function (block, title, type, args) {
+  block.setFunctional(true, {
+    headerHeight: 30
+  });
+  block.setHSV.apply(block, colors[type]);
+
+  var options = {
+    fixedSize: { height: 35 }
+  };
+
+  block.appendDummyInput()
+    .appendTitle(new Blockly.FieldLabel(title, options))
+    .setAlign(Blockly.ALIGN_CENTRE);
+
+  for (var i = 0; i < args.length; i++) {
+    var arg = args[i];
+    var input = block.appendFunctionalInput(arg.name);
+    input.setInline(i > 0);
+    input.setHSV.apply(input, colors[arg.type]);
+    input.setCheck(arg.type);
+    input.setAlign(Blockly.ALIGN_CENTRE);
+  }
+
+  if (type === 'none') {
+    block.setFunctionalOutput(false);
+  } else {
+    block.setFunctionalOutput(true, type);
+  }
+};
+
+/**
+ * Installs a block which generates code that makes an API call, which
+ * looks roughly like:
+ *
+ *     apiName(block_id, arg1 [,arg2 ...])
+ *
+ * where args with "constantValue" defined are pre-specified arguments,
+ * and other args are read from functional inputs. For example:
+ *
+ *     options = {
+ *       blockName: 'functional_setSpriteZeroSpeed', 
+ *       blockTitle: 'set sprite zero speed',
+ *       apiName: 'Studio.setSpriteSpeed',
+ *       args: [{constantValue: '0'}, // spriteIndex
+ *              {name: 'SPEED', type: 'Number', default:'7'}]
+ *     }
+ *
+ * creates a block which, with an id of '43' and an input of '12', would
+ * generate the following code:
+ *
+ *     'Studio.setSpriteSpeed(block_id_43, 0, 12)'
+ */
+module.exports.installFunctionalApiCallBlock = function(blockly, generator,
+    options) {
+  var blockName = options.blockName;
+  var blockTitle = options.blockTitle;
+  var apiName = options.apiName;
+  var args = options.args;             
+
+  var blockArgs = args.filter(function(arg) {
+    return arg.constantValue === undefined;
+  });
+  var blockType = 'none';
+  blockly.Blocks[blockName] = {
+    init: function () {
+      module.exports.initTitledFunctionalBlock(this, blockTitle, blockType,
+          blockArgs);
+    }
+  };
+
+  // The generator function depends on "this" being the block object.
+  generator[blockName] = function() {
+    var apiArgs = [];
+    apiArgs.push('\'block_id_' + this.id + '\'');
+    for (var i = 0; i < args.length; i++) {
+      var arg = args[i];
+      var value = arg.constantValue !== undefined ?
+            arg.constantValue :
+            Blockly.JavaScript.statementToCode(this, arg.name, false) ||
+                arg.default;
+      apiArgs.push(value);
+    }
+    return apiName + '(' + apiArgs.join(',') + ');\n';
+  };
+};
+
+},{"./utils":45}],15:[function(require,module,exports){
 /*! Hammer.JS - v1.1.3 - 2014-05-22
  * http://eightmedia.github.io/hammer.js
  *
@@ -9071,7 +9173,7 @@ if(typeof define == 'function' && define.amd) {
 }
 
 })(window);
-},{}],15:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -11998,7 +12100,7 @@ if(typeof define == 'function' && define.amd) {
 }.call(this));
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],16:[function(require,module,exports){
+},{}],17:[function(require,module,exports){
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
@@ -12236,7 +12338,142 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"./block_utils":3,"./utils":43,"./xml":44}],17:[function(require,module,exports){
+},{"./block_utils":3,"./utils":45,"./xml":46}],18:[function(require,module,exports){
+/**
+ * A set of functional blocks
+ */
+
+var functionalBlockUtils = require('./functionalBlockUtils');
+var initTitledFunctionalBlock = functionalBlockUtils.initTitledFunctionalBlock;
+
+exports.install = function(blockly, generator, gensym) {
+  installPlus(blockly, generator, gensym);
+  installMinus(blockly, generator, gensym);
+  installTimes(blockly, generator, gensym);
+  installDividedBy(blockly, generator, gensym);
+  installMathNumber(blockly, generator, gensym);
+  installString(blockly, generator, gensym);
+};
+
+function installPlus(blockly, generator, gensym) {
+  blockly.Blocks.functional_plus = {
+
+    helpUrl: '',
+    init: function() {
+      initTitledFunctionalBlock(this, '+', 'Number', [
+        { name: 'ARG1', type: 'Number' },
+        { name: 'ARG2', type: 'Number' }
+      ]);
+    }
+  };
+
+  generator.functional_plus = function() {
+    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
+    var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
+    return arg1 + " + " + arg2;
+  };
+}
+
+function installMinus(blockly, generator, gensym) {
+  blockly.Blocks.functional_minus = {
+    helpUrl: '',
+    init: function() {
+      initTitledFunctionalBlock(this, '-', 'Number', [
+        { name: 'ARG1', type: 'Number' },
+        { name: 'ARG2', type: 'Number' }
+      ]);
+    }
+  };
+
+  generator.functional_minus = function() {
+    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
+    var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
+    return arg1 + " - " + arg2;
+  };
+}
+
+function installTimes(blockly, generator, gensym) {
+  blockly.Blocks.functional_times = {
+    helpUrl: '',
+    init: function() {
+      initTitledFunctionalBlock(this, '*', 'Number', [
+        { name: 'ARG1', type: 'Number' },
+        { name: 'ARG2', type: 'Number' }
+      ]);
+    }
+  };
+
+  generator.functional_times = function() {
+    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
+    var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
+    return arg1 + " * " + arg2;
+  };
+}
+
+function installDividedBy(blockly, generator, gensym) {
+  blockly.Blocks.functional_dividedby = {
+    helpUrl: '',
+    init: function() {
+      initTitledFunctionalBlock(this, '/', 'Number', [
+        { name: 'ARG1', type: 'Number' },
+        { name: 'ARG2', type: 'Number' }
+      ]);
+    }
+  };
+
+  generator.functional_dividedby = function() {
+    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
+    var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
+    return arg1 + " / " + arg2;
+  };
+}
+
+function installMathNumber(blockly, generator, gensym) {
+  blockly.Blocks.functional_math_number = {
+    // Numeric value.
+    init: function() {
+      this.setFunctional(true, {
+        headerHeight: 0,
+        rowBuffer: 3
+      });
+      this.setHSV.apply(this, functionalBlockUtils.colors.Number);
+      this.appendDummyInput()
+          .appendTitle(new Blockly.FieldTextInput('0',
+            Blockly.FieldTextInput.numberValidator), 'NUM')
+          .setAlign(Blockly.ALIGN_CENTRE);
+      this.setFunctionalOutput(true, 'Number');
+    }
+  };
+
+  generator.functional_math_number = function() {
+    return this.getTitleValue('NUM');
+  };
+}
+
+function installString(blockly, generator) {
+  blockly.Blocks.functional_string = {
+    init: function() {
+      this.setFunctional(true, {
+        headerHeight: 0,
+        rowBuffer: 3
+      });
+      this.setHSV.apply(this, functionalBlockUtils.colors.string);
+      this.appendDummyInput()
+        .appendTitle(new Blockly.FieldLabel('"'))
+        .appendTitle(new Blockly.FieldTextInput(''), 'VAL')
+        .appendTitle(new Blockly.FieldLabel('"'))
+        .setAlign(Blockly.ALIGN_CENTRE);
+      this.setFunctionalOutput(true, 'string');
+    }
+  };
+
+  generator.functional_string = function() {
+    return blockly.JavaScript.quote_(this.getTitleValue('VAL'));
+  };
+}
+
+
+},{"./functionalBlockUtils":14}],19:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -12305,7 +12542,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{}],18:[function(require,module,exports){
+},{}],20:[function(require,module,exports){
 /**
  * Blockly Apps: SVG Slider
  *
@@ -12531,7 +12768,7 @@ Slider.bindEvent_ = function(element, name, func) {
 
 module.exports = Slider;
 
-},{"./dom":12}],19:[function(require,module,exports){
+},{"./dom":12}],21:[function(require,module,exports){
 var tiles = require('./tiles');
 
 exports.SpriteSpeed = {
@@ -12646,7 +12883,7 @@ exports.vanish = function (id, spriteIndex) {
   Studio.queueCmd(id, 'vanish', {spriteIndex: spriteIndex});
 };
 
-},{"./tiles":29}],20:[function(require,module,exports){
+},{"./tiles":31}],22:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -12656,8 +12893,10 @@ exports.vanish = function (id, spriteIndex) {
 'use strict';
 
 var msg = require('../../locale/ta_in/studio');
+var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
 var commonMsg = require('../../locale/ta_in/common');
 var codegen = require('../codegen');
+var installFunctionalApiCallBlock = require('../functionalBlockUtils').installFunctionalApiCallBlock;
 var tiles = require('./tiles');
 var utils = require('../utils');
 var _ = utils.getLodash();
@@ -14082,6 +14321,43 @@ exports.install = function(blockly, blockInstallOptions) {
         '\', (' + valueParam + ' * 1000));\n';
   };
 
+  //
+  // Install functional blocks
+  //
+
+  installFunctionalApiCallBlock(blockly, generator, {
+    blockName: 'functional_setBackground',
+    blockTitle: msg.setBackground(),
+    apiName: 'Studio.setBackground',
+    args: [{ name: 'BACKGROUND', type: 'string', default: 'space'}]
+  });
+
+  installFunctionalApiCallBlock(blockly, generator, {
+    blockName: 'functional_setPlayerSpeed',
+    blockTitle: msg.setPlayerSpeed(),
+    apiName: 'Studio.setSpriteSpeed',
+    args: [{constantValue: '0'}, // spriteIndex
+           {name: 'SPEED', type: 'Number', default:'7'}]
+  });
+
+  installFunctionalApiCallBlock(blockly, generator, {
+    blockName: 'functional_setEnemySpeed',
+    blockTitle: msg.setEnemySpeed(),
+    apiName: 'Studio.setSpriteSpeed',
+    args: [{constantValue: '1'}, // spriteIndex
+           {name: 'SPEED', type: 'Number', default:'7'}]
+  });
+
+  installFunctionalApiCallBlock(blockly, generator, {
+    blockName: 'functional_showTitleScreen',
+    blockTitle: msg.showTitleScreen(),
+    apiName: 'Studio.showTitleScreen',
+    args: [{name: 'TITLE', type: 'string', default:'\'\''},
+           {name: 'TEXT', type: 'string', default:'\'\''}]
+  });
+
+  // install number and string
+  sharedFunctionalBlocks.install(blockly, generator);
 };
 
 function installVanish(blockly, generator, spriteNumberTextDropdown, startingSpriteImageDropdown, blockInstallOptions) {
@@ -14111,7 +14387,7 @@ function installVanish(blockly, generator, spriteNumberTextDropdown, startingSpr
   };
 }
 
-},{"../../locale/ta_in/common":45,"../../locale/ta_in/studio":46,"../codegen":10,"../utils":43,"./tiles":29}],21:[function(require,module,exports){
+},{"../../locale/ta_in/common":47,"../../locale/ta_in/studio":48,"../codegen":10,"../functionalBlockUtils":14,"../sharedFunctionalBlocks":18,"../utils":45,"./tiles":31}],23:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -14217,7 +14493,7 @@ Collidable.prototype.outOfBounds = function () {
          (this.y > Studio.MAZE_HEIGHT + (this.height / 2));
 };
 
-},{"./studio":28,"./tiles":29}],22:[function(require,module,exports){
+},{"./studio":30,"./tiles":31}],24:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -14238,7 +14514,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/ta_in/common":45,"ejs":47}],23:[function(require,module,exports){
+},{"../../locale/ta_in/common":47,"ejs":49}],25:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -14259,7 +14535,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/ta_in/common":45,"ejs":47}],24:[function(require,module,exports){
+},{"../../locale/ta_in/common":47,"ejs":49}],26:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/ta_in/studio');
@@ -15305,12 +15581,19 @@ levels.full_sandbox =  {
                           </value> \
                         </block>') +
        createCategory(msg.catVariables(), '', 'VARIABLE') +
-       createCategory(msg.catProcedures(), '', 'PROCEDURE')),
+       createCategory(msg.catProcedures(), '', 'PROCEDURE') +
+       createCategory('Functional',
+                     blockOfType('functional_setBackground') +
+                     blockOfType('functional_setPlayerSpeed') +
+                     blockOfType('functional_setEnemySpeed') +
+                     blockOfType('functional_showTitleScreen') +
+                     blockOfType('functional_string') +
+                     blockOfType('functional_math_number'))),
   'startBlocks':
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
 
-},{"../../locale/ta_in/studio":46,"../block_utils":3,"../utils":43,"./tiles":29}],25:[function(require,module,exports){
+},{"../../locale/ta_in/studio":48,"../block_utils":3,"../utils":45,"./tiles":31}],27:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Studio = require('./studio');
@@ -15328,7 +15611,7 @@ window.studioMain = function(options) {
 };
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":1,"./blocks":20,"./levels":24,"./skins":27,"./studio":28}],26:[function(require,module,exports){
+},{"../appMain":1,"./blocks":22,"./levels":26,"./skins":29,"./studio":30}],28:[function(require,module,exports){
 var Collidable = require('./collidable');
 var Direction = require('./tiles').Direction;
 var tiles = require('./tiles');
@@ -15501,7 +15784,7 @@ Projectile.prototype.moveToNextPosition = function () {
   this.y = next.y;
 };
 
-},{"./collidable":21,"./tiles":29}],27:[function(require,module,exports){
+},{"./collidable":23,"./tiles":31}],29:[function(require,module,exports){
 /**
  * Load Skin for Studio.
  */
@@ -15640,7 +15923,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{"../skins":17}],28:[function(require,module,exports){
+},{"../skins":19}],30:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -17043,6 +17326,10 @@ Studio.execute = function() {
 
   var handlers = [];
   registerHandlers(handlers, 'when_run', 'whenGameStarts');
+  registerHandlers(handlers, 'functional_setBackground', 'whenGameStarts');
+  registerHandlers(handlers, 'functional_setPlayerSpeed', 'whenGameStarts');
+  registerHandlers(handlers, 'functional_setEnemySpeed', 'whenGameStarts');
+  registerHandlers(handlers, 'functional_showTitleScreen', 'whenGameStarts');
   registerHandlers(handlers, 'studio_whenLeft', 'when-left');
   registerHandlers(handlers, 'studio_whenRight', 'when-right');
   registerHandlers(handlers, 'studio_whenUp', 'when-up');
@@ -17458,7 +17745,8 @@ Studio.setSpriteEmotion = function (opts) {
 };
 
 Studio.setSpriteSpeed = function (opts) {
-  Studio.sprite[opts.spriteIndex].speed = opts.value;
+  var speed = Math.min(Math.max(opts.value, 2), 12);
+  Studio.sprite[opts.spriteIndex].speed = speed;
 };
 
 Studio.setSpriteSize = function (opts) {
@@ -18129,7 +18417,7 @@ var checkFinished = function () {
   return false;
 };
 
-},{"../../locale/ta_in/common":45,"../../locale/ta_in/studio":46,"../base":2,"../canvg/StackBlur.js":6,"../canvg/canvg.js":7,"../canvg/rgbcolor.js":8,"../canvg/svg_todataurl":9,"../codegen":10,"../dom":12,"../feedback.js":13,"../hammer":14,"../skins":17,"../templates/page.html":37,"../utils":43,"../xml":44,"./api":19,"./blocks":20,"./collidable":21,"./controls.html":22,"./extraControlRows.html":23,"./projectile":26,"./tiles":29,"./visualization.html":30}],29:[function(require,module,exports){
+},{"../../locale/ta_in/common":47,"../../locale/ta_in/studio":48,"../base":2,"../canvg/StackBlur.js":6,"../canvg/canvg.js":7,"../canvg/rgbcolor.js":8,"../canvg/svg_todataurl":9,"../codegen":10,"../dom":12,"../feedback.js":13,"../hammer":15,"../skins":19,"../templates/page.html":39,"../utils":45,"../xml":46,"./api":21,"./blocks":22,"./collidable":23,"./controls.html":24,"./extraControlRows.html":25,"./projectile":28,"./tiles":31,"./visualization.html":32}],31:[function(require,module,exports){
 'use strict';
 
 exports.Direction = {
@@ -18300,7 +18588,7 @@ exports.SquareType = {
   SPRITESTART: 16
 };
 
-},{}],30:[function(require,module,exports){
+},{}],32:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -18321,7 +18609,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":47}],31:[function(require,module,exports){
+},{"ejs":49}],33:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -18342,7 +18630,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":47}],32:[function(require,module,exports){
+},{"ejs":49}],34:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -18363,7 +18651,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/ta_in/common":45,"ejs":47}],33:[function(require,module,exports){
+},{"../../locale/ta_in/common":47,"ejs":49}],35:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -18384,7 +18672,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":47}],34:[function(require,module,exports){
+},{"ejs":49}],36:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -18405,7 +18693,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/ta_in/common":45,"ejs":47}],35:[function(require,module,exports){
+},{"../../locale/ta_in/common":47,"ejs":49}],37:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -18428,7 +18716,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/ta_in/common":45,"ejs":47}],36:[function(require,module,exports){
+},{"../../locale/ta_in/common":47,"ejs":49}],38:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -18449,7 +18737,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/ta_in/common":45,"ejs":47}],37:[function(require,module,exports){
+},{"../../locale/ta_in/common":47,"ejs":49}],39:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -18474,7 +18762,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/ta_in/common":45,"ejs":47}],38:[function(require,module,exports){
+},{"../../locale/ta_in/common":47,"ejs":49}],40:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -18496,7 +18784,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":47}],39:[function(require,module,exports){
+},{"ejs":49}],41:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -18517,7 +18805,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":47}],40:[function(require,module,exports){
+},{"ejs":49}],42:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -18538,7 +18826,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/ta_in/common":45,"ejs":47}],41:[function(require,module,exports){
+},{"../../locale/ta_in/common":47,"ejs":49}],43:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -18559,7 +18847,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/ta_in/common":45,"ejs":47}],42:[function(require,module,exports){
+},{"../../locale/ta_in/common":47,"ejs":49}],44:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -18580,7 +18868,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":47}],43:[function(require,module,exports){
+},{"ejs":49}],45:[function(require,module,exports){
 var xml = require('./xml');
 var savedAmd;
 
@@ -18884,7 +19172,7 @@ exports.generateDropletModeOptions = function (codeFunctions) {
   return modeOptions;
 };
 
-},{"./lodash":15,"./xml":44}],44:[function(require,module,exports){
+},{"./lodash":16,"./xml":46}],46:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
@@ -18912,7 +19200,7 @@ exports.parseElement = function(text) {
   return element;
 };
 
-},{}],45:[function(require,module,exports){
+},{}],47:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.ta=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "மற்றும்"};
 
@@ -19075,7 +19363,7 @@ exports.hintHeader = function(d){return "Here's a tip:"};
 exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
 
 
-},{"messageformat":58}],46:[function(require,module,exports){
+},{"messageformat":60}],48:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.ta=function(n){return n===1?"one":"other"}
 exports.actor = function(d){return "actor"};
 
@@ -19314,6 +19602,10 @@ exports.setBackgroundTennis = function(d){return "set tennis background"};
 exports.setBackgroundWinter = function(d){return "set winter background"};
 
 exports.setBackgroundTooltip = function(d){return "Sets the background image"};
+
+exports.setEnemySpeed = function(d){return "set enemy speed"};
+
+exports.setPlayerSpeed = function(d){return "set player speed"};
 
 exports.setScoreText = function(d){return "set score"};
 
@@ -19590,7 +19882,7 @@ exports.whenUpTooltip = function(d){return "Execute the actions below when the U
 exports.yes = function(d){return "ஆம்"};
 
 
-},{"messageformat":58}],47:[function(require,module,exports){
+},{"messageformat":60}],49:[function(require,module,exports){
 
 /*!
  * EJS
@@ -19949,7 +20241,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":48,"./utils":49,"fs":50,"path":51}],48:[function(require,module,exports){
+},{"./filters":50,"./utils":51,"fs":52,"path":53}],50:[function(require,module,exports){
 /*!
  * EJS - Filters
  * Copyright(c) 2010 TJ Holowaychuk <tj@vision-media.ca>
@@ -20152,7 +20444,7 @@ exports.json = function(obj){
   return JSON.stringify(obj);
 };
 
-},{}],49:[function(require,module,exports){
+},{}],51:[function(require,module,exports){
 
 /*!
  * EJS
@@ -20178,9 +20470,9 @@ exports.escape = function(html){
 };
  
 
-},{}],50:[function(require,module,exports){
+},{}],52:[function(require,module,exports){
 
-},{}],51:[function(require,module,exports){
+},{}],53:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -20408,7 +20700,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require("JkpR2F"))
-},{"JkpR2F":52}],52:[function(require,module,exports){
+},{"JkpR2F":54}],54:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -20473,7 +20765,7 @@ process.chdir = function (dir) {
     throw new Error('process.chdir is not supported');
 };
 
-},{}],53:[function(require,module,exports){
+},{}],55:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -20984,7 +21276,7 @@ process.chdir = function (dir) {
 }(this));
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],54:[function(require,module,exports){
+},{}],56:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -21070,7 +21362,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],55:[function(require,module,exports){
+},{}],57:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -21157,13 +21449,13 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],56:[function(require,module,exports){
+},{}],58:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":54,"./encode":55}],57:[function(require,module,exports){
+},{"./decode":56,"./encode":57}],59:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -21872,7 +22164,7 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":53,"querystring":56}],58:[function(require,module,exports){
+},{"punycode":55,"querystring":58}],60:[function(require,module,exports){
 /**
  * messageformat.js
  *
@@ -23455,4 +23747,4 @@ function isNullOrUndefined(arg) {
 
 })( this );
 
-},{}]},{},[25])
+},{}]},{},[27])
