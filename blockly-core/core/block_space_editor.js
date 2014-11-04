@@ -422,6 +422,20 @@ Blockly.BlockSpaceEditor.prototype.svgResize = function() {
 };
 
 /**
+ * @param {Element} svgElementToAdd
+ */
+Blockly.BlockSpaceEditor.prototype.appendSVGChild = function(svgElementToAdd) {
+  this.svg_.appendChild(svgElementToAdd);
+};
+
+/**
+ * @returns {!SVGElement}
+ */
+Blockly.BlockSpaceEditor.prototype.getSVGElement = function() {
+  return this.svg_;
+};
+
+/**
  * @return {number} Return the width, in pixels, of the blockSpace.
  */
 Blockly.BlockSpaceEditor.prototype.getBlockSpaceWidth = function() {
