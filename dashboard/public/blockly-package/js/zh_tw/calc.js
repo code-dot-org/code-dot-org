@@ -1615,6 +1615,7 @@ Calc.init = function(config) {
 
   config.grayOutUndeletableBlocks = true;
   config.forceInsertTopBlock = 'functional_compute';
+  config.enableShowCode = false;
 
   config.html = page({
     assetUrl: BlocklyApps.assetUrl,
@@ -1641,6 +1642,10 @@ Calc.init = function(config) {
     var svg = document.getElementById('svgCalc');
     svg.setAttribute('width', CANVAS_WIDTH);
     svg.setAttribute('height', CANVAS_HEIGHT);
+
+    if (level.freePlay) {
+      document.getElementById('goalHeader').setAttribute('visibility', 'hidden');
+    }
 
     // This is hack that I haven't been able to fully understand. Furthermore,
     // it seems to break the functional blocks in some browsers. As such, I'm
@@ -1766,9 +1771,10 @@ Calc.execute = function() {
   }
 
   Calc.expressions.user = Calc.lastExpression.clone();
-  Calc.expressions.current = Calc.expressions.target.clone();
-
-  Calc.expressions.user.applyExpectation(Calc.expressions.target);
+  if (Calc.expressions.target) {
+    Calc.expressions.current = Calc.expressions.target.clone();
+    Calc.expressions.user.applyExpectation(Calc.expressions.target);
+  }
 
   Calc.result = !Calc.expressions.user.failedExpectation(true);
   Calc.testResults = BlocklyApps.getTestResults(Calc.result);
@@ -1780,6 +1786,10 @@ Calc.execute = function() {
   if (!Calc.result && Calc.expressions.user.isEquivalent(Calc.expressions.target)) {
     Calc.testResults = TestResults.APP_SPECIFIC_FAIL;
     Calc.message = calcMsg.equivalentExpression();
+  }
+
+  if (level.freePlay) {
+    Calc.testResults = BlocklyApps.TestResults.FREE_PLAY;
   }
 
   Calc.drawExpressions();
@@ -1827,7 +1837,9 @@ Calc.step = function (ignoreFailures) {
   if (!collapsed) {
     continueButton.className = continueButton.className.replace(/hide/g, "");
   } else {
-    Calc.expressions.current.collapse();
+    if (Calc.expressions.current) {
+      Calc.expressions.current.collapse();
+    }
     Calc.drawExpressions();
 
     continueButton.className += " hide";
@@ -1851,11 +1863,15 @@ Calc.drawExpressions = function () {
   // user: (0 * (3 + 4))
   // right now, we'll highlight the 1 + 2 for goal, and the 3 + 4 for user
 
-  expected.applyExpectation(expected);
-  drawSvgExpression('answerExpression', expected, user !== null);
+  if (expected) {
+    expected.applyExpectation(expected);
+    drawSvgExpression('answerExpression', expected, user !== null);
+  }
 
   if (user) {
-    user.applyExpectation(expected);
+    if (expected) {
+      user.applyExpectation(expected);
+    }
     drawSvgExpression('userExpression', user, true);
   } else {
     clearSvgExpression('userExpression');
@@ -1929,6 +1945,9 @@ var displayFeedback = function(response) {
       response: response,
       level: level,
       feedbackType: Calc.testResults,
+      appStrings: {
+        reinfFeedbackMsg: calcMsg.reinfFeedbackMsg()
+      }
     };
     if (Calc.message) {
       options.message = Calc.message;
@@ -1987,8 +2006,7 @@ var ExpressionNode = function (val, left, right) {
     this.right = right instanceof ExpressionNode ? right : new ExpressionNode(right);
   }
 
-  // null indicates not set. otherwise will be true/false
-  this.valMetExpectation_ = null;
+  this.valMetExpectation_ = true;
 };
 module.exports = ExpressionNode;
 
@@ -2025,11 +2043,6 @@ ExpressionNode.prototype.clone = function () {
  *  descendants failed expectations, otherwise we only check this node's val.
  */
 ExpressionNode.prototype.failedExpectation = function (includeDescendants) {
-  // Don't fail if we don't have an expectation set
-  if (this.valMetExpectation_ === null) {
-    return false;
-  }
-
   var fails = (this.valMetExpectation_ === false);
   if (includeDescendants && this.left && this.left.failedExpectation(true)) {
     fails = true;
@@ -2155,10 +2168,6 @@ ExpressionNode.prototype.isEquivalent = function (target) {
  * it is correct.
  */
 ExpressionNode.prototype.getTokenList = function (markNextParens) {
-  if (this.valMetExpectation_ === null) {
-    throw new Error("Can't get token list without expectation set");
-  }
-
   if (!this.isOperation()) {
     return [token(this.val.toString(), this.valMetExpectation_ === false)];
   }
@@ -2249,7 +2258,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/zh_tw/calc'); ; buf.push('\n\n<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgCalc">\n  <rect x="0" y="0" width="400" height="300" fill="#33ccff"/>\n  <rect x="0" y="300" width="400" height="100" fill="#996633"/>\n  <text x="0" y="30" class="calcHeader">', escape((6,  msg.yourExpression() )), '</text>\n  <g id="userExpression" class="expr" transform="translate(0, 250)">\n  </g>\n  <text x="0" y="330" class="calcHeader">', escape((9,  msg.goal() )), '</text>\n  <g id="answerExpression" class="expr" transform="translate(0, 350)">\n  </g>\n</svg>\n'); })();
+ buf.push('');1; var msg = require('../../locale/zh_tw/calc'); ; buf.push('\n\n<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgCalc">\n  <rect x="0" y="0" width="400" height="300" fill="#33ccff"/>\n  <rect x="0" y="300" width="400" height="100" fill="#996633"/>\n  <text x="0" y="30" class="calcHeader">', escape((6,  msg.yourExpression() )), '</text>\n  <g id="userExpression" class="expr" transform="translate(0, 250)">\n  </g>\n  <text x="0" y="330" class="calcHeader" id="goalHeader">', escape((9,  msg.goal() )), '</text>\n  <g id="answerExpression" class="expr" transform="translate(0, 350)">\n  </g>\n</svg>\n'); })();
 } 
 return buf.join('');
 };
@@ -7861,6 +7870,8 @@ exports.equivalentExpression = function(d){return "Try reordering your arguments
 exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"compute\" block?"};
 
 exports.goal = function(d){return "Goal:"};
+
+exports.reinfFeedbackMsg = function(d){return "這看起來像你想要的嗎？你可以按\"再試一次\"按鈕來看看你畫出來的圖形。"};
 
 exports.yourExpression = function(d){return "Your expression:"};
 
