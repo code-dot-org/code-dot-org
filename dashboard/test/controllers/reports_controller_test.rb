@@ -320,7 +320,7 @@ class ReportsControllerTest < ActionController::TestCase
     get :header_stats, script_id: @script.id
     # render string from test translation data
     assert_select 'div.stage', 2
-    assert_select 'div.stage', /\Areport-stage-\d\z/
+    assert_select 'div.stage', 'Stage 1: report-stage-1'
   end
 
   test 'should get admin progress' do
