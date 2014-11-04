@@ -60,7 +60,9 @@ Blockly.BlockSpaceEditor.prototype.populateSVGEffects_ = function(container) {
     return;
   }
   var svg = Blockly.createSvgElement('svg', {
-    id: 'blocklyFilters'
+    id: 'blocklyFilters',
+    width: 0,
+    height: 0
   }, container);
   /*
    <defs>
