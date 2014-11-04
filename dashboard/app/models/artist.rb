@@ -47,7 +47,7 @@ class Artist < Blockly
         <title name="VALUE">100</title>
       </block>
       <block type="draw_move_by_constant_dropdown">
-        <title name="VALUE" config="50,100,150,200,300">100</title>
+        <title name="VALUE" config="50,100,150,200,300">???</title>
       </block>
       <block type="draw_move">
         <value name="VALUE">
@@ -60,7 +60,7 @@ class Artist < Blockly
         <title name="VALUE">90</title>
       </block>
       <block type="draw_turn_by_constant_dropdown">
-        <title name="VALUE" config="45,60,90,120,180">90</title>
+        <title name="VALUE" config="45,60,90,120,180">???</title>
       </block>
       <block type="draw_turn">
         <value name="VALUE">
@@ -73,7 +73,7 @@ class Artist < Blockly
         <title name="VALUE">100</title>
       </block>
       <block type="jump_by_constant_dropdown">
-        <title name="VALUE" config="50,100,150,200,300">100</title>
+        <title name="VALUE" config="50,100,150,200,300">???</title>
       </block>
       <block type="jump">
         <value name="VALUE">
@@ -155,7 +155,7 @@ class Artist < Blockly
         <title name="TIMES">4</title>
       </block>
       <block type="controls_repeat_dropdown">
-        <title name="TIMES" config="3-10">3</title>
+        <title name="TIMES" config="3-10">???</title>
       </block>
       <block type="controls_repeat_ext">
         <value name="TIMES"></value>
