@@ -409,7 +409,7 @@ Webapp.execute = function() {
     defineProcedures('procedures_defreturn');
     defineProcedures('procedures_defnoreturn');
 
-    var blocks = Blockly.mainWorkspace.getTopBlocks();
+    var blocks = Blockly.mainBlockSpace.getTopBlocks();
     for (var x = 0; blocks[x]; x++) {
       var block = blocks[x];
       if (block.type === 'when_run') {

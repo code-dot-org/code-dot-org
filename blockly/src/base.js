@@ -760,7 +760,7 @@ BlocklyApps.highlight = function(id, spotlight) {
     }
   }
 
-  Blockly.mainWorkspace.highlightBlock(id, spotlight);
+  Blockly.mainBlockSpace.highlightBlock(id, spotlight);
 };
 
 /**
