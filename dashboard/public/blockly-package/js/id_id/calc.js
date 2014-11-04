@@ -8088,7 +8088,7 @@ exports.saveToGallery = function(d){return "Simpan ke galeri Anda"};
 
 exports.savedToGallery = function(d){return "Simpan ke galeri Anda!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Maaf, kami tidak bisa membagikan program ini."};
 
 exports.typeFuncs = function(d){return "Fungsi yang tersedia: %1"};
 

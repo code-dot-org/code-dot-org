@@ -11379,7 +11379,7 @@ exports.reinfFeedbackMsg = function(d){return "Lítur þetta út eins og þú vi
 
 exports.setColour = function(d){return "stilla lit"};
 
-exports.setPattern = function(d){return "set pattern"};
+exports.setPattern = function(d){return "stilla mynstur"};
 
 exports.setWidth = function(d){return "stilla breidd"};
 

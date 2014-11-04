@@ -19244,9 +19244,9 @@ exports.end = function(d){return "vége"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Akkor van értelme az \"Ismétel\" vagy a \"Ha\" blokknak, ha van  bennük egy vagy több blokk. Bizonyosodj meg róla, hogy a belső blokk megfelelően illeszkedik a külső blokkhoz."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "A függvény blokknak szüksége van további elemekre a belsejében."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "A függvény blokkok belsejében szükség van több elemre, hogy működjön."};
 
-exports.extraTopBlocks = function(d){return "Van különálló blokkod. Vagy csatlakoztasd a \"futtatáskor\"/\"when run\" blokkhoz vagy töröld."};
+exports.extraTopBlocks = function(d){return "Van különálló blokkod. Vagy csatlakoztasd a \"futtatáskor\" blokkhoz, vagy töröld."};
 
 exports.finalStage = function(d){return "Gratulálok! Teljesítetted az utolsó szakaszt."};
 
@@ -19286,7 +19286,7 @@ exports.numLinesOfCodeWritten = function(d){return "Éppen most írtál újabb "
 
 exports.play = function(d){return "lejátszás"};
 
-exports.puzzleTitle = function(d){return v(d,"puzzle_number")+". feladvány a "+v(d,"stage_total")+" -ból"};
+exports.puzzleTitle = function(d){return v(d,"puzzle_number")+"/"+v(d,"stage_total")+". feladvány"};
 
 exports.repeat = function(d){return "ismételd"};
 
@@ -19330,9 +19330,9 @@ exports.saveToGallery = function(d){return "Mentés a galériába"};
 
 exports.savedToGallery = function(d){return "Elmentve a galáriádba"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Sajnálom, de nem tudtam megosztani ezt a programot."};
 
-exports.typeFuncs = function(d){return "Elérhető funkciók:%1"};
+exports.typeFuncs = function(d){return "Elérhető függvények:%1"};
 
 exports.typeHint = function(d){return "Vedd figyelembe, hogy a zárójelek és a pontosvesszők is szükségesek."};
 
@@ -19340,7 +19340,7 @@ exports.workspaceHeader = function(d){return "Építsd össze a blokkokat itt: "
 
 exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
 
-exports.infinity = function(d){return "Végtelenség"};
+exports.infinity = function(d){return "Végtelen"};
 
 exports.rotateText = function(d){return "Fordítsd el a készüléket."};
 
@@ -19819,7 +19819,7 @@ exports.whenArrowTooltip = function(d){return "Execute the actions below when th
 
 exports.whenDown = function(d){return "Ha van lefelé nyíl"};
 
-exports.whenDownTooltip = function(d){return "Execute the actions below when the Down arrow button is pressed."};
+exports.whenDownTooltip = function(d){return "Végrehajtja az alábbi parancsokat, ha a lefelé mutató nyíl van lenyomva."};
 
 exports.whenGameStarts = function(d){return "Amikor a történet kezdődik"};
 
@@ -19827,11 +19827,11 @@ exports.whenGameStartsTooltip = function(d){return "Execute the actions below wh
 
 exports.whenLeft = function(d){return "Ha van balra nyíl"};
 
-exports.whenLeftTooltip = function(d){return "Execute the actions below when the Left arrow button is pressed."};
+exports.whenLeftTooltip = function(d){return "Végrehajtja az alábbi parancsokat, ha a balra mutató nyíl van lenyomva."};
 
 exports.whenRight = function(d){return "Ha van jobbra nyíl"};
 
-exports.whenRightTooltip = function(d){return "Execute the actions below when the Right arrow button is pressed."};
+exports.whenRightTooltip = function(d){return "Végrehajtja az alábbi parancsokat, ha a jobbra mutató nyíl van lenyomva."};
 
 exports.whenSpriteClicked = function(d){return "amikor a szereplőre kattintunk"};
 
@@ -19877,7 +19877,7 @@ exports.whenSpriteCollidedWithTopEdge = function(d){return "touches top edge"};
 
 exports.whenUp = function(d){return "Ha van felfelé nyíl"};
 
-exports.whenUpTooltip = function(d){return "Execute the actions below when the Up arrow button is pressed."};
+exports.whenUpTooltip = function(d){return "Végrehajtja az alábbi parancsokat, ha a felfelé mutató nyíl van lenyomva."};
 
 exports.yes = function(d){return "Igen"};
 

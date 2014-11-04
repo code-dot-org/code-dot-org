@@ -11379,7 +11379,7 @@ exports.reinfFeedbackMsg = function(d){return "Това изглежда ли к
 
 exports.setColour = function(d){return "задава цвят"};
 
-exports.setPattern = function(d){return "set pattern"};
+exports.setPattern = function(d){return "определен шаблон"};
 
 exports.setWidth = function(d){return "задава дебелина"};
 

@@ -19330,7 +19330,7 @@ exports.saveToGallery = function(d){return "Simpan ke galeri Anda"};
 
 exports.savedToGallery = function(d){return "Simpan ke galeri Anda!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Maaf, kami tidak bisa membagikan program ini."};
 
 exports.typeFuncs = function(d){return "Fungsi yang tersedia: %1"};
 
@@ -19421,7 +19421,7 @@ exports.makeProjectileRedHearts = function(d){return "membuat hati merah"};
 
 exports.makeProjectileTooltip = function(d){return "Membuat peluru yang baru saja bertabrakan menghilang atau memantul."};
 
-exports.makeYourOwn = function(d){return "Buat cerita Anda sendiri"};
+exports.makeYourOwn = function(d){return "Membuat aplikasi Play Lab anda sendiri"};
 
 exports.moveDirectionDown = function(d){return "turun"};
 
@@ -19845,13 +19845,13 @@ exports.whenSpriteCollidedTooltip = function(d){return "Lakukan kegiatan di bawa
 
 exports.whenSpriteCollidedWith = function(d){return "menyentuh"};
 
-exports.whenSpriteCollidedWithAnyActor = function(d){return "touches any actor"};
+exports.whenSpriteCollidedWithAnyActor = function(d){return "sentuh aktor apa saja"};
 
-exports.whenSpriteCollidedWithAnyEdge = function(d){return "touches any edge"};
+exports.whenSpriteCollidedWithAnyEdge = function(d){return "sentuh tepi apa saja"};
 
-exports.whenSpriteCollidedWithAnyProjectile = function(d){return "touches any projectile"};
+exports.whenSpriteCollidedWithAnyProjectile = function(d){return "sentuh proyektil apa saja"};
 
-exports.whenSpriteCollidedWithAnything = function(d){return "touches anything"};
+exports.whenSpriteCollidedWithAnything = function(d){return "sentuh apa saja"};
 
 exports.whenSpriteCollidedWithN = function(d){return "menyentuh aktor"};
 

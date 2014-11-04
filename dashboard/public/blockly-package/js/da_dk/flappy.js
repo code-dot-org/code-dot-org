@@ -9463,7 +9463,7 @@ exports.emptyBlocksErrorMsg = function(d){return "\"Gentag\" eller \"Hvis\" blok
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Funktionen blok skal have andre blokke inde i det for at virke."};
 
-exports.extraTopBlocks = function(d){return "Du har ekstra blokke, der ikke er knyttet til en hændelsesblok."};
+exports.extraTopBlocks = function(d){return "Du har ikke sammenhængende blokke. Ville du fastgøre disse til \"når køre\" blokken?"};
 
 exports.finalStage = function(d){return "Tillykke! Du har fuldført det sidste trin."};
 
@@ -9547,7 +9547,7 @@ exports.saveToGallery = function(d){return "Gem til dit galleri"};
 
 exports.savedToGallery = function(d){return "Gem til dit galleri!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Beklager, ikke kan vi dele dette program."};
 
 exports.typeFuncs = function(d){return "Tilgængelige funktioner: %1"};
 

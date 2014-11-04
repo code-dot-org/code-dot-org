@@ -8004,7 +8004,7 @@ exports.emptyBlocksErrorMsg = function(d){return "”Repeat”または\"If\"の
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "関数ブロックは、中に他のブロックがないと動きません。"};
 
-exports.extraTopBlocks = function(d){return "イベントブロックに付いていない余分なブロックがあります。"};
+exports.extraTopBlocks = function(d){return "ブロックを外しました。もしかして、「実行時」のブロックにつなげたかったですか？"};
 
 exports.finalStage = function(d){return "おめでとうございます ！最終ステージをクリアしました。"};
 
@@ -8036,7 +8036,7 @@ exports.nextLevelTrophies = function(d){return "おめでとうございます �
 
 exports.nextStage = function(d){return "おめでとうございます ！"+v(d,"stageName")+"を コンプリートしました。"};
 
-exports.nextStageTrophies = function(d){return "おめでとうございます！あなたはステージ "+v(d,"stageNumber")+" をクリアし、"+p(d,"numTrophies",0,"ja",{"one":"トロフィー","other":n(d,"numTrophies")+" トロフィー"})+"を獲得しました。"};
+exports.nextStageTrophies = function(d){return "おめでとうございます！ "+v(d,"stageName")+" をクリアして "+p(d,"numTrophies",0,"ja",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+" を手に入れました。"};
 
 exports.numBlocksNeeded = function(d){return "おめでとうございます ！あなたはパズル "+v(d,"puzzleNumber")+" を完了しました。 (もしくは "+p(d,"numBlocks",0,"ja",{"one":"1 block","other":n(d,"numBlocks")+" blocks"})+" のみの使用だけでも可能でした。)"};
 
@@ -8088,7 +8088,7 @@ exports.saveToGallery = function(d){return "ギャラリーに保存"};
 
 exports.savedToGallery = function(d){return "ギャラリーに保存しました！"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "プログラムをシェアできませんでした。"};
 
 exports.typeFuncs = function(d){return "利用可能な機能:%1"};
 

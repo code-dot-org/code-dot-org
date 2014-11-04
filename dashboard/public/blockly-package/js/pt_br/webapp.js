@@ -8088,7 +8088,7 @@ exports.no = function(d){return "Não"};
 
 exports.numBlocksNeeded = function(d){return "Este desafio pode ser resolvido com %1 blocos."};
 
-exports.pause = function(d){return "Pause"};
+exports.pause = function(d){return "Pausar"};
 
 exports.reinfFeedbackMsg = function(d){return "Você pode pressionar o botão \"Tentar novamente\" para voltar a executar seu aplicativo."};
 

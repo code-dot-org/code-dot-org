@@ -19246,7 +19246,7 @@ exports.emptyBlocksErrorMsg = function(d){return "”Repeat”または\"If\"の
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "関数ブロックは、中に他のブロックがないと動きません。"};
 
-exports.extraTopBlocks = function(d){return "イベントブロックに付いていない余分なブロックがあります。"};
+exports.extraTopBlocks = function(d){return "ブロックを外しました。もしかして、「実行時」のブロックにつなげたかったですか？"};
 
 exports.finalStage = function(d){return "おめでとうございます ！最終ステージをクリアしました。"};
 
@@ -19278,7 +19278,7 @@ exports.nextLevelTrophies = function(d){return "おめでとうございます �
 
 exports.nextStage = function(d){return "おめでとうございます ！"+v(d,"stageName")+"を コンプリートしました。"};
 
-exports.nextStageTrophies = function(d){return "おめでとうございます！あなたはステージ "+v(d,"stageNumber")+" をクリアし、"+p(d,"numTrophies",0,"ja",{"one":"トロフィー","other":n(d,"numTrophies")+" トロフィー"})+"を獲得しました。"};
+exports.nextStageTrophies = function(d){return "おめでとうございます！ "+v(d,"stageName")+" をクリアして "+p(d,"numTrophies",0,"ja",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+" を手に入れました。"};
 
 exports.numBlocksNeeded = function(d){return "おめでとうございます ！あなたはパズル "+v(d,"puzzleNumber")+" を完了しました。 (もしくは "+p(d,"numBlocks",0,"ja",{"one":"1 block","other":n(d,"numBlocks")+" blocks"})+" のみの使用だけでも可能でした。)"};
 
@@ -19330,7 +19330,7 @@ exports.saveToGallery = function(d){return "ギャラリーに保存"};
 
 exports.savedToGallery = function(d){return "ギャラリーに保存しました！"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "プログラムをシェアできませんでした。"};
 
 exports.typeFuncs = function(d){return "利用可能な機能:%1"};
 
@@ -19365,7 +19365,7 @@ exports.genericFeedback = function(d){return "どうなったかよく見て、�
 
 },{"messageformat":60}],48:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.ja=function(n){return "other"}
-exports.actor = function(d){return "俳優"};
+exports.actor = function(d){return "キャラクター"};
 
 exports.catActions = function(d){return "操作"};
 
@@ -19383,13 +19383,13 @@ exports.catText = function(d){return "テキスト"};
 
 exports.catVariables = function(d){return "変数"};
 
-exports.changeScoreTooltip = function(d){return "スコアへポイントを追加または削除します。"};
+exports.changeScoreTooltip = function(d){return "スコアへポイントをふやしたりへらしたりします。"};
 
 exports.changeScoreTooltipK1 = function(d){return "スコアにポイントを追加します。"};
 
 exports.continue = function(d){return "次へ"};
 
-exports.decrementPlayerScore = function(d){return "ポイントを消します。"};
+exports.decrementPlayerScore = function(d){return "ポイントをへらします。"};
 
 exports.defaultSayText = function(d){return "ここに入力。"};
 
@@ -19405,23 +19405,23 @@ exports.incrementPlayerScore = function(d){return "ポイントを採点する�
 
 exports.makeProjectileDisappear = function(d){return "消える"};
 
-exports.makeProjectileBounce = function(d){return "バウンス"};
+exports.makeProjectileBounce = function(d){return "はねる"};
 
-exports.makeProjectileBlueFireball = function(d){return "make blue fireball"};
+exports.makeProjectileBlueFireball = function(d){return "青い火の玉を作る"};
 
-exports.makeProjectilePurpleFireball = function(d){return "make purple fireball"};
+exports.makeProjectilePurpleFireball = function(d){return "むらさきの火の玉を作る"};
 
-exports.makeProjectileRedFireball = function(d){return "make red fireball"};
+exports.makeProjectileRedFireball = function(d){return "赤い火の玉を作る"};
 
-exports.makeProjectileYellowHearts = function(d){return "make yellow hearts"};
+exports.makeProjectileYellowHearts = function(d){return "きいろいハートを作る"};
 
-exports.makeProjectilePurpleHearts = function(d){return "make purple hearts"};
+exports.makeProjectilePurpleHearts = function(d){return "むらさきのハートを作る"};
 
-exports.makeProjectileRedHearts = function(d){return "make red hearts"};
+exports.makeProjectileRedHearts = function(d){return "赤いハートを作る"};
 
 exports.makeProjectileTooltip = function(d){return "Make the projectile that just collided disappear or bounce."};
 
-exports.makeYourOwn = function(d){return "あなたのストーリーを作る"};
+exports.makeYourOwn = function(d){return "じぶんだけのプレイラボアプリを作ろう！"};
 
 exports.moveDirectionDown = function(d){return "下"};
 
@@ -19451,7 +19451,7 @@ exports.moveDistanceTooltip = function(d){return "俳優を指定方向に特定
 
 exports.moveSprite = function(d){return "移動"};
 
-exports.moveSpriteN = function(d){return "move actor "+v(d,"spriteIndex")};
+exports.moveSpriteN = function(d){return "キャラクター "+v(d,"spriteIndex")+" をうごかす"};
 
 exports.moveDown = function(d){return "下に移動します。"};
 
@@ -19477,7 +19477,7 @@ exports.no = function(d){return "いいえ"};
 
 exports.numBlocksNeeded = function(d){return "このパズルは%1個のブロックで解けます。"};
 
-exports.ouchExclamation = function(d){return "Ouch!"};
+exports.ouchExclamation = function(d){return "いたい！"};
 
 exports.playSoundCrunch = function(d){return "バリバリ音の再生"};
 
@@ -19511,27 +19511,27 @@ exports.positionOutTopRight = function(d){return "to the above top right positio
 
 exports.positionTopOutLeft = function(d){return "to the top outside left position"};
 
-exports.positionTopLeft = function(d){return "to the top left position"};
+exports.positionTopLeft = function(d){return "左上に"};
 
-exports.positionTopCenter = function(d){return "to the top center position"};
+exports.positionTopCenter = function(d){return "上のまんなかに"};
 
-exports.positionTopRight = function(d){return "to the top right position"};
+exports.positionTopRight = function(d){return "右上に"};
 
 exports.positionTopOutRight = function(d){return "to the top outside right position"};
 
-exports.positionMiddleLeft = function(d){return "to the middle left position"};
+exports.positionMiddleLeft = function(d){return "左はしの真ん中に"};
 
-exports.positionMiddleCenter = function(d){return "to the middle center position"};
+exports.positionMiddleCenter = function(d){return "まんなかに"};
 
-exports.positionMiddleRight = function(d){return "to the middle right position"};
+exports.positionMiddleRight = function(d){return "右はしのまんなかに"};
 
 exports.positionBottomOutLeft = function(d){return "to the bottom outside left position"};
 
-exports.positionBottomLeft = function(d){return "to the bottom left position"};
+exports.positionBottomLeft = function(d){return "左下に"};
 
-exports.positionBottomCenter = function(d){return "to the bottom center position"};
+exports.positionBottomCenter = function(d){return "下のまんなかに"};
 
-exports.positionBottomRight = function(d){return "to the bottom right position"};
+exports.positionBottomRight = function(d){return "右下に"};
 
 exports.positionBottomOutRight = function(d){return "to the bottom outside right position"};
 
@@ -19541,65 +19541,65 @@ exports.positionOutBottomRight = function(d){return "to the below bottom right p
 
 exports.positionRandom = function(d){return "to the random position"};
 
-exports.projectileBlueFireball = function(d){return "blue fireball"};
+exports.projectileBlueFireball = function(d){return "青い火の玉"};
 
-exports.projectilePurpleFireball = function(d){return "purple fireball"};
+exports.projectilePurpleFireball = function(d){return "むらさきの火の玉"};
 
-exports.projectileRedFireball = function(d){return "red fireball"};
+exports.projectileRedFireball = function(d){return "赤い火の玉"};
 
-exports.projectileYellowHearts = function(d){return "yellow hearts"};
+exports.projectileYellowHearts = function(d){return "きいろいハート"};
 
-exports.projectilePurpleHearts = function(d){return "purple hearts"};
+exports.projectilePurpleHearts = function(d){return "むらさきのハート"};
 
-exports.projectileRedHearts = function(d){return "red hearts"};
+exports.projectileRedHearts = function(d){return "赤いハート"};
 
 exports.projectileRandom = function(d){return "ランダム"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to playing your story."};
+exports.reinfFeedbackMsg = function(d){return "「やり直す」ボタンをおすとお話をもう一度見ることができます。"};
 
-exports.repeatForever = function(d){return "repeat forever"};
+exports.repeatForever = function(d){return "ずっと"};
 
 exports.repeatDo = function(d){return "してください"};
 
-exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the story is running."};
+exports.repeatForeverTooltip = function(d){return "物語を動かしている間ずっと、ブロックの中のアクションをくりかえします。"};
 
-exports.saySprite = function(d){return "say"};
+exports.saySprite = function(d){return "という"};
 
-exports.saySpriteN = function(d){return "actor "+v(d,"spriteIndex")+" say"};
+exports.saySpriteN = function(d){return "と、スプライト "+v(d,"spriteIndex")+" が言う"};
 
 exports.saySpriteTooltip = function(d){return "Pop up a speech bubble with the associated text from the specified character."};
 
 exports.scoreText = function(d){return "得点："};
 
-exports.setBackground = function(d){return "set background"};
+exports.setBackground = function(d){return "背景をセット"};
 
 exports.setBackgroundRandom = function(d){return "set random scene"};
 
-exports.setBackgroundBlack = function(d){return "set black background"};
+exports.setBackgroundBlack = function(d){return "背景を黒くする"};
 
-exports.setBackgroundCave = function(d){return "set cave background"};
+exports.setBackgroundCave = function(d){return "背景をどうくつにする"};
 
-exports.setBackgroundCloudy = function(d){return "set cloudy background"};
+exports.setBackgroundCloudy = function(d){return "背景を雲にする"};
 
-exports.setBackgroundHardcourt = function(d){return "set hardcourt scene"};
+exports.setBackgroundHardcourt = function(d){return "背景を木の模様にする"};
 
-exports.setBackgroundNight = function(d){return "set night background"};
+exports.setBackgroundNight = function(d){return "背景を夜にする"};
 
-exports.setBackgroundUnderwater = function(d){return "set underwater background"};
+exports.setBackgroundUnderwater = function(d){return "背景を水の中にする"};
 
-exports.setBackgroundCity = function(d){return "set city background"};
+exports.setBackgroundCity = function(d){return "背景を街の中にする"};
 
-exports.setBackgroundDesert = function(d){return "set desert background"};
+exports.setBackgroundDesert = function(d){return "背景を砂漠にする"};
 
-exports.setBackgroundRainbow = function(d){return "set rainbow background"};
+exports.setBackgroundRainbow = function(d){return "背景を虹にする"};
 
-exports.setBackgroundSoccer = function(d){return "set soccer background"};
+exports.setBackgroundSoccer = function(d){return "背景をサッカー場にする"};
 
-exports.setBackgroundSpace = function(d){return "set space background"};
+exports.setBackgroundSpace = function(d){return "背景を宇宙にする"};
 
-exports.setBackgroundTennis = function(d){return "set tennis background"};
+exports.setBackgroundTennis = function(d){return "背景をテニスコートにする"};
 
-exports.setBackgroundWinter = function(d){return "set winter background"};
+exports.setBackgroundWinter = function(d){return "背景を冬に"};
 
 exports.setBackgroundTooltip = function(d){return "背景画像を設定"};
 
@@ -19611,273 +19611,273 @@ exports.setScoreText = function(d){return "得点を設定"};
 
 exports.setScoreTextTooltip = function(d){return "Sets the text to be displayed in the score area."};
 
-exports.setSpriteEmotionAngry = function(d){return "to a angry emotion"};
+exports.setSpriteEmotionAngry = function(d){return "おこったかおに"};
 
-exports.setSpriteEmotionHappy = function(d){return "to a happy emotion"};
+exports.setSpriteEmotionHappy = function(d){return "うれしいかおに"};
 
-exports.setSpriteEmotionNormal = function(d){return "to a normal emotion"};
+exports.setSpriteEmotionNormal = function(d){return "ふつうのかおに"};
 
 exports.setSpriteEmotionRandom = function(d){return "to a random emotion"};
 
-exports.setSpriteEmotionSad = function(d){return "to a sad emotion"};
+exports.setSpriteEmotionSad = function(d){return "かなしいかおに"};
 
-exports.setSpriteEmotionTooltip = function(d){return "Sets the actor emotion"};
+exports.setSpriteEmotionTooltip = function(d){return "キャラの表情をセット"};
 
-exports.setSpriteAlien = function(d){return "to an alien image"};
+exports.setSpriteAlien = function(d){return "宇宙人"};
 
-exports.setSpriteBat = function(d){return "to a bat image"};
+exports.setSpriteBat = function(d){return "こうもりに"};
 
-exports.setSpriteBird = function(d){return "to a bird image"};
+exports.setSpriteBird = function(d){return "鳥に"};
 
-exports.setSpriteCat = function(d){return "to a cat image"};
+exports.setSpriteCat = function(d){return "ねこに"};
 
-exports.setSpriteCaveBoy = function(d){return "to a cave boy image"};
+exports.setSpriteCaveBoy = function(d){return "たんけんたいの男の子に"};
 
-exports.setSpriteCaveGirl = function(d){return "to a cave girl image"};
+exports.setSpriteCaveGirl = function(d){return "たんけんたいの女の子に"};
 
-exports.setSpriteDinosaur = function(d){return "to a dinosaur image"};
+exports.setSpriteDinosaur = function(d){return "恐竜に"};
 
-exports.setSpriteDog = function(d){return "to a dog image"};
+exports.setSpriteDog = function(d){return "犬に"};
 
-exports.setSpriteDragon = function(d){return "to a dragon image"};
+exports.setSpriteDragon = function(d){return "竜に"};
 
-exports.setSpriteGhost = function(d){return "to a ghost image"};
+exports.setSpriteGhost = function(d){return "おばけに"};
 
 exports.setSpriteHidden = function(d){return "to a hidden image"};
 
-exports.setSpriteHideK1 = function(d){return "hide"};
+exports.setSpriteHideK1 = function(d){return "かくす"};
 
-exports.setSpriteKnight = function(d){return "to a knight image"};
+exports.setSpriteKnight = function(d){return "騎士に"};
 
-exports.setSpriteMonster = function(d){return "to a monster image"};
+exports.setSpriteMonster = function(d){return "モンスターに"};
 
-exports.setSpriteNinja = function(d){return "to a masked ninja image"};
+exports.setSpriteNinja = function(d){return "忍者に"};
 
-exports.setSpriteOctopus = function(d){return "to an octopus image"};
+exports.setSpriteOctopus = function(d){return "たこに"};
 
-exports.setSpritePenguin = function(d){return "to a penguin image"};
+exports.setSpritePenguin = function(d){return "ペンギンに"};
 
-exports.setSpritePirate = function(d){return "to a pirate image"};
+exports.setSpritePirate = function(d){return "海賊に"};
 
-exports.setSpritePrincess = function(d){return "to a princess image"};
+exports.setSpritePrincess = function(d){return "おひめさまに"};
 
 exports.setSpriteRandom = function(d){return "to a random image"};
 
-exports.setSpriteRobot = function(d){return "to a robot image"};
+exports.setSpriteRobot = function(d){return "ロボットに"};
 
-exports.setSpriteShowK1 = function(d){return "show"};
+exports.setSpriteShowK1 = function(d){return "表示する"};
 
-exports.setSpriteSpacebot = function(d){return "to a spacebot image"};
+exports.setSpriteSpacebot = function(d){return "宇宙ロボットに"};
 
-exports.setSpriteSoccerGirl = function(d){return "to a soccer girl image"};
+exports.setSpriteSoccerGirl = function(d){return "サッカーする女の子に"};
 
-exports.setSpriteSoccerBoy = function(d){return "to a soccer boy image"};
+exports.setSpriteSoccerBoy = function(d){return "サッカーをする男の子に"};
 
-exports.setSpriteSquirrel = function(d){return "to a squirrel image"};
+exports.setSpriteSquirrel = function(d){return "リスに"};
 
-exports.setSpriteTennisGirl = function(d){return "to a tennis girl image"};
+exports.setSpriteTennisGirl = function(d){return "テニスする女の子に"};
 
-exports.setSpriteTennisBoy = function(d){return "to a tennis boy image"};
+exports.setSpriteTennisBoy = function(d){return "テニスする男の子に"};
 
-exports.setSpriteUnicorn = function(d){return "to a unicorn image"};
+exports.setSpriteUnicorn = function(d){return "ユニコーンに"};
 
-exports.setSpriteWitch = function(d){return "to a witch image"};
+exports.setSpriteWitch = function(d){return "魔女に"};
 
-exports.setSpriteWizard = function(d){return "to a wizard image"};
+exports.setSpriteWizard = function(d){return "魔法使いに"};
 
-exports.setSpritePositionTooltip = function(d){return "Instantly moves an actor to the specified location."};
+exports.setSpritePositionTooltip = function(d){return "キャラを指定した場所にすぐにうごかします。"};
 
-exports.setSpriteK1Tooltip = function(d){return "Shows or hides the specified actor."};
+exports.setSpriteK1Tooltip = function(d){return "キャラクターを表示したりかくしたりします。"};
 
-exports.setSpriteTooltip = function(d){return "Sets the character image"};
+exports.setSpriteTooltip = function(d){return "キャラクターのイメージを設定"};
 
-exports.setSpriteSizeRandom = function(d){return "to a random size"};
+exports.setSpriteSizeRandom = function(d){return "ランダムなサイズに"};
 
-exports.setSpriteSizeVerySmall = function(d){return "to a very small size"};
+exports.setSpriteSizeVerySmall = function(d){return "とても小さいサイズに"};
 
-exports.setSpriteSizeSmall = function(d){return "to a small size"};
+exports.setSpriteSizeSmall = function(d){return "小さいサイズに"};
 
-exports.setSpriteSizeNormal = function(d){return "to a normal size"};
+exports.setSpriteSizeNormal = function(d){return "もとのサイズに"};
 
-exports.setSpriteSizeLarge = function(d){return "to a large size"};
+exports.setSpriteSizeLarge = function(d){return "大きいサイズに"};
 
-exports.setSpriteSizeVeryLarge = function(d){return "to a very large size"};
+exports.setSpriteSizeVeryLarge = function(d){return "とても大きいサイズに"};
 
-exports.setSpriteSizeTooltip = function(d){return "Sets the size of an actor"};
+exports.setSpriteSizeTooltip = function(d){return "キャラクターの大きさを設定"};
 
-exports.setSpriteSpeedRandom = function(d){return "to a random speed"};
+exports.setSpriteSpeedRandom = function(d){return "ランダムなスピードに"};
 
-exports.setSpriteSpeedVerySlow = function(d){return "to a very slow speed"};
+exports.setSpriteSpeedVerySlow = function(d){return "とてもおそいスピードに"};
 
-exports.setSpriteSpeedSlow = function(d){return "to a slow speed"};
+exports.setSpriteSpeedSlow = function(d){return "おそいスピードに"};
 
-exports.setSpriteSpeedNormal = function(d){return "to a normal speed"};
+exports.setSpriteSpeedNormal = function(d){return "ふつうのスピードに"};
 
-exports.setSpriteSpeedFast = function(d){return "to a fast speed"};
+exports.setSpriteSpeedFast = function(d){return "はやいスピードに"};
 
-exports.setSpriteSpeedVeryFast = function(d){return "to a very fast speed"};
+exports.setSpriteSpeedVeryFast = function(d){return "とてもはやいスピードに"};
 
-exports.setSpriteSpeedTooltip = function(d){return "Sets the speed of a character"};
+exports.setSpriteSpeedTooltip = function(d){return "キャラクターのはやさをセット"};
 
-exports.setSpriteZombie = function(d){return "to a zombie image"};
+exports.setSpriteZombie = function(d){return "ゾンビに"};
 
-exports.shareStudioTwitter = function(d){return "Check out the story I made. I wrote it myself with @codeorg"};
+exports.shareStudioTwitter = function(d){return "私のお話を見てください。 @codeorg を使って自分で作りました。"};
 
-exports.shareGame = function(d){return "Share your story:"};
+exports.shareGame = function(d){return "お話をみんなに見てもらう"};
 
-exports.showTitleScreen = function(d){return "show title screen"};
+exports.showTitleScreen = function(d){return "表紙を見せる"};
 
-exports.showTitleScreenTitle = function(d){return "title"};
+exports.showTitleScreenTitle = function(d){return "だいめい"};
 
 exports.showTitleScreenText = function(d){return "テキスト"};
 
-exports.showTSDefTitle = function(d){return "type title here"};
+exports.showTSDefTitle = function(d){return "ここにタイトルを入れる"};
 
-exports.showTSDefText = function(d){return "type text here"};
+exports.showTSDefText = function(d){return "ここにテキストを入力"};
 
-exports.showTitleScreenTooltip = function(d){return "Show a title screen with the associated title and text."};
+exports.showTitleScreenTooltip = function(d){return "だいめいとせつめいのあるひょうしをひょうじします。"};
 
 exports.setSprite = function(d){return "セット"};
 
-exports.setSpriteN = function(d){return "set actor "+v(d,"spriteIndex")};
+exports.setSpriteN = function(d){return "キャラクター "+v(d,"spriteIndex")+" をセット"};
 
 exports.soundCrunch = function(d){return "crunch"};
 
-exports.soundGoal1 = function(d){return "goal 1"};
+exports.soundGoal1 = function(d){return "ゴール1"};
 
-exports.soundGoal2 = function(d){return "goal 2"};
+exports.soundGoal2 = function(d){return "ゴール2"};
 
-exports.soundHit = function(d){return "hit"};
+exports.soundHit = function(d){return "ヒット"};
 
-exports.soundLosePoint = function(d){return "lose point"};
+exports.soundLosePoint = function(d){return "ポイントがへる"};
 
 exports.soundLosePoint2 = function(d){return "lose point 2"};
 
-exports.soundRetro = function(d){return "retro"};
+exports.soundRetro = function(d){return "レトロ"};
 
-exports.soundRubber = function(d){return "rubber"};
+exports.soundRubber = function(d){return "ゴム"};
 
-exports.soundSlap = function(d){return "slap"};
+exports.soundSlap = function(d){return "たたく"};
 
-exports.soundWinPoint = function(d){return "win point"};
+exports.soundWinPoint = function(d){return "ポイントがふえる"};
 
 exports.soundWinPoint2 = function(d){return "win point 2"};
 
-exports.soundWood = function(d){return "wood"};
+exports.soundWood = function(d){return "木"};
 
-exports.speed = function(d){return "speed"};
+exports.speed = function(d){return "スピード"};
 
-exports.stopSprite = function(d){return "stop"};
+exports.stopSprite = function(d){return "ストップ"};
 
-exports.stopSpriteN = function(d){return "stop actor "+v(d,"spriteIndex")};
+exports.stopSpriteN = function(d){return "キャラクター "+v(d,"spriteIndex")+" を止める"};
 
-exports.stopTooltip = function(d){return "Stops an actor's movement."};
+exports.stopTooltip = function(d){return "キャラクターの動きを止めます。"};
 
-exports.throwSprite = function(d){return "throw"};
+exports.throwSprite = function(d){return "投げる"};
 
-exports.throwSpriteN = function(d){return "actor "+v(d,"spriteIndex")+" throw"};
+exports.throwSpriteN = function(d){return "キャラクター "+v(d,"spriteIndex")+" が投げる"};
 
-exports.throwTooltip = function(d){return "Throws a projectile from the specified actor."};
+exports.throwTooltip = function(d){return "指定したキャラクターからの物をなげます。"};
 
-exports.vanish = function(d){return "vanish"};
+exports.vanish = function(d){return "消す"};
 
-exports.vanishActorN = function(d){return "vanish actor "+v(d,"spriteIndex")};
+exports.vanishActorN = function(d){return "キャラクター "+v(d,"spriteIndex")+" を消す"};
 
-exports.vanishTooltip = function(d){return "Vanishes the actor."};
+exports.vanishTooltip = function(d){return "キャラクターを消します。"};
 
-exports.waitFor = function(d){return "wait for"};
+exports.waitFor = function(d){return "まで待つ"};
 
-exports.waitSeconds = function(d){return "seconds"};
+exports.waitSeconds = function(d){return "秒"};
 
-exports.waitForClick = function(d){return "wait for click"};
+exports.waitForClick = function(d){return "クリックされるまで待つ"};
 
 exports.waitForRandom = function(d){return "wait for random"};
 
-exports.waitForHalfSecond = function(d){return "wait for a half second"};
+exports.waitForHalfSecond = function(d){return "0.5秒まつ"};
 
-exports.waitFor1Second = function(d){return "wait for 1 second"};
+exports.waitFor1Second = function(d){return "1びょうまつ"};
 
-exports.waitFor2Seconds = function(d){return "wait for 2 seconds"};
+exports.waitFor2Seconds = function(d){return "2びょうまつ"};
 
-exports.waitFor5Seconds = function(d){return "wait for 5 seconds"};
+exports.waitFor5Seconds = function(d){return "5びょうまつ"};
 
-exports.waitFor10Seconds = function(d){return "wait for 10 seconds"};
+exports.waitFor10Seconds = function(d){return "10びょうまつ"};
 
 exports.waitParamsTooltip = function(d){return "Waits for a specified number of seconds or use zero to wait until a click occurs."};
 
 exports.waitTooltip = function(d){return "Waits for a specified amount of time or until a click occurs."};
 
-exports.whenArrowDown = function(d){return "down arrow"};
+exports.whenArrowDown = function(d){return "↓"};
 
-exports.whenArrowLeft = function(d){return "left arrow"};
+exports.whenArrowLeft = function(d){return "←"};
 
-exports.whenArrowRight = function(d){return "right arrow"};
+exports.whenArrowRight = function(d){return "→"};
 
-exports.whenArrowUp = function(d){return "up arrow"};
+exports.whenArrowUp = function(d){return "↑"};
 
-exports.whenArrowTooltip = function(d){return "Execute the actions below when the specified arrow key is pressed."};
+exports.whenArrowTooltip = function(d){return "指定した矢印キーが押されるまでアクションを実行します。"};
 
 exports.whenDown = function(d){return "矢印が下のとき"};
 
 exports.whenDownTooltip = function(d){return "下向きの矢印キーが押されたとき次のアクションを実行します。"};
 
-exports.whenGameStarts = function(d){return "when game starts"};
+exports.whenGameStarts = function(d){return "ストーリーが始まったとき"};
 
-exports.whenGameStartsTooltip = function(d){return "Execute the actions below when the game starts."};
+exports.whenGameStartsTooltip = function(d){return "物語が始まったときアクションを実行します"};
 
 exports.whenLeft = function(d){return "左矢印"};
 
 exports.whenLeftTooltip = function(d){return "下向きの矢印キーが押されたとき以下のアクションを実行します。"};
 
-exports.whenRight = function(d){return "when Right arrow"};
+exports.whenRight = function(d){return "右向き矢印キーが押されたとき"};
 
-exports.whenRightTooltip = function(d){return "Execute the actions below when the Right arrow button is pressed."};
+exports.whenRightTooltip = function(d){return "右向きの矢印キーが押されたとき以下のアクションを実行します。"};
 
-exports.whenSpriteClicked = function(d){return "when actor clicked"};
+exports.whenSpriteClicked = function(d){return "クリックされたとき"};
 
-exports.whenSpriteClickedN = function(d){return "when actor "+v(d,"spriteIndex")+" clicked"};
+exports.whenSpriteClickedN = function(d){return "キャラクター "+v(d,"spriteIndex")+" がクリックされたとき"};
 
-exports.whenSpriteClickedTooltip = function(d){return "Execute the actions below when a character is clicked."};
+exports.whenSpriteClickedTooltip = function(d){return "キャラクターがクリックされたときアクションを実行します。"};
 
-exports.whenSpriteCollidedN = function(d){return "when actor "+v(d,"spriteIndex")};
+exports.whenSpriteCollidedN = function(d){return "キャラクター "+v(d,"spriteIndex")+" が"};
 
-exports.whenSpriteCollidedTooltip = function(d){return "Execute the actions below when a character touches another character."};
+exports.whenSpriteCollidedTooltip = function(d){return "キャラクターがほかのキャラクターにさわるとアクションを実行します"};
 
-exports.whenSpriteCollidedWith = function(d){return "touches"};
+exports.whenSpriteCollidedWith = function(d){return "さわった"};
 
-exports.whenSpriteCollidedWithAnyActor = function(d){return "touches any actor"};
+exports.whenSpriteCollidedWithAnyActor = function(d){return "何かキャラクターにさわる"};
 
-exports.whenSpriteCollidedWithAnyEdge = function(d){return "touches any edge"};
+exports.whenSpriteCollidedWithAnyEdge = function(d){return "どこかのはしっこにさわる"};
 
-exports.whenSpriteCollidedWithAnyProjectile = function(d){return "touches any projectile"};
+exports.whenSpriteCollidedWithAnyProjectile = function(d){return "だれかがなげたなにかにさわる"};
 
-exports.whenSpriteCollidedWithAnything = function(d){return "touches anything"};
+exports.whenSpriteCollidedWithAnything = function(d){return "何かにさわる"};
 
-exports.whenSpriteCollidedWithN = function(d){return "touches actor "+v(d,"spriteIndex")};
+exports.whenSpriteCollidedWithN = function(d){return "キャラクター "+v(d,"spriteIndex")+" にさわる"};
 
-exports.whenSpriteCollidedWithBlueFireball = function(d){return "touches blue fireball"};
+exports.whenSpriteCollidedWithBlueFireball = function(d){return "青い火の玉にさわる"};
 
-exports.whenSpriteCollidedWithPurpleFireball = function(d){return "touches purple fireball"};
+exports.whenSpriteCollidedWithPurpleFireball = function(d){return "むらさきの火の玉にさわる"};
 
-exports.whenSpriteCollidedWithRedFireball = function(d){return "touches red fireball"};
+exports.whenSpriteCollidedWithRedFireball = function(d){return "赤い火の玉にさわる"};
 
-exports.whenSpriteCollidedWithYellowHearts = function(d){return "touches yellow hearts"};
+exports.whenSpriteCollidedWithYellowHearts = function(d){return "黄色のハートにさわる"};
 
-exports.whenSpriteCollidedWithPurpleHearts = function(d){return "touches purple hearts"};
+exports.whenSpriteCollidedWithPurpleHearts = function(d){return "むらさきのハートにさわる"};
 
-exports.whenSpriteCollidedWithRedHearts = function(d){return "touches red hearts"};
+exports.whenSpriteCollidedWithRedHearts = function(d){return "赤のハートにさわる"};
 
 exports.whenSpriteCollidedWithBottomEdge = function(d){return "touches bottom edge"};
 
-exports.whenSpriteCollidedWithLeftEdge = function(d){return "touches left edge"};
+exports.whenSpriteCollidedWithLeftEdge = function(d){return "ひだりはしにさわる"};
 
-exports.whenSpriteCollidedWithRightEdge = function(d){return "touches right edge"};
+exports.whenSpriteCollidedWithRightEdge = function(d){return "みぎはしにさわる"};
 
-exports.whenSpriteCollidedWithTopEdge = function(d){return "touches top edge"};
+exports.whenSpriteCollidedWithTopEdge = function(d){return "うえのはしにさわる"};
 
-exports.whenUp = function(d){return "when Up arrow"};
+exports.whenUp = function(d){return "上向き矢印が押されたとき"};
 
-exports.whenUpTooltip = function(d){return "Execute the actions below when the Up arrow button is pressed."};
+exports.whenUpTooltip = function(d){return "上向きの矢印キーが押されたとき以下のアクションを実行します。"};
 
 exports.yes = function(d){return "はい"};
 

@@ -11855,9 +11855,9 @@ exports.playSoundGoal2 = function(d){return "目標 2 サウンドを再生し�
 
 exports.playSoundHit = function(d){return "サウンドを押して再生します。"};
 
-exports.playSoundLosePoint = function(d){return "失点音の再生してください。"};
+exports.playSoundLosePoint = function(d){return "敗北ポイントの音を再生します。"};
 
-exports.playSoundLosePoint2 = function(d){return "失点音2の再生をしてください。"};
+exports.playSoundLosePoint2 = function(d){return "敗北ポイント2の音を再生します。"};
 
 exports.playSoundRetro = function(d){return "レトロなサウンドを再生します。"};
 
@@ -11871,7 +11871,7 @@ exports.playSoundWinPoint = function(d){return "勝利ポイントの音を再�
 
 exports.playSoundWinPoint2 = function(d){return "勝利ポイント2の音を再生します。"};
 
-exports.playSoundWood = function(d){return "木製の音を再生します。"};
+exports.playSoundWood = function(d){return "木の音を再生します。"};
 
 exports.putdownTower = function(d){return "タワーを置く"};
 
@@ -11965,25 +11965,25 @@ exports.whenGameStarts = function(d){return "ゲームの開始時"};
 
 exports.whenGameStartsTooltip = function(d){return "ゲーム開始時、次のアクションを実行"};
 
-exports.whenLeft = function(d){return "左矢印"};
+exports.whenLeft = function(d){return "矢印が左のとき"};
 
-exports.whenLeftTooltip = function(d){return "下向きの矢印キーが押されたとき以下のアクションを実行します。"};
+exports.whenLeftTooltip = function(d){return "左向きの矢印キーが押されたとき以下のアクションを実行します。"};
 
 exports.whenPaddleCollided = function(d){return "パドルにボールが当たったら"};
 
 exports.whenPaddleCollidedTooltip = function(d){return "ボールがパドルにぶつかったら、次のアクションを実行します。"};
 
-exports.whenRight = function(d){return "when Right arrow"};
+exports.whenRight = function(d){return "矢印が右のとき"};
 
-exports.whenRightTooltip = function(d){return "Execute the actions below when the Right arrow button is pressed."};
+exports.whenRightTooltip = function(d){return "右向きの矢印キーが押されたとき以下のアクションを実行します。"};
 
-exports.whenUp = function(d){return "when Up arrow"};
+exports.whenUp = function(d){return "矢印が上のとき"};
 
-exports.whenUpTooltip = function(d){return "Execute the actions below when the Up arrow button is pressed."};
+exports.whenUpTooltip = function(d){return "上向きの矢印キーが押されたとき以下のアクションを実行します。"};
 
-exports.whenWallCollided = function(d){return "when ball hits wall"};
+exports.whenWallCollided = function(d){return "ボールが壁にあたったとき"};
 
-exports.whenWallCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a wall."};
+exports.whenWallCollidedTooltip = function(d){return "ボールが壁にぶつかったら、次のアクションを実行します。"};
 
 exports.whileMsg = function(d){return "以下の間"};
 
@@ -12038,7 +12038,7 @@ exports.emptyBlocksErrorMsg = function(d){return "”Repeat”または\"If\"の
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "関数ブロックは、中に他のブロックがないと動きません。"};
 
-exports.extraTopBlocks = function(d){return "イベントブロックに付いていない余分なブロックがあります。"};
+exports.extraTopBlocks = function(d){return "ブロックを外しました。もしかして、「実行時」のブロックにつなげたかったですか？"};
 
 exports.finalStage = function(d){return "おめでとうございます ！最終ステージをクリアしました。"};
 
@@ -12070,7 +12070,7 @@ exports.nextLevelTrophies = function(d){return "おめでとうございます �
 
 exports.nextStage = function(d){return "おめでとうございます ！"+v(d,"stageName")+"を コンプリートしました。"};
 
-exports.nextStageTrophies = function(d){return "おめでとうございます！あなたはステージ "+v(d,"stageNumber")+" をクリアし、"+p(d,"numTrophies",0,"ja",{"one":"トロフィー","other":n(d,"numTrophies")+" トロフィー"})+"を獲得しました。"};
+exports.nextStageTrophies = function(d){return "おめでとうございます！ "+v(d,"stageName")+" をクリアして "+p(d,"numTrophies",0,"ja",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+" を手に入れました。"};
 
 exports.numBlocksNeeded = function(d){return "おめでとうございます ！あなたはパズル "+v(d,"puzzleNumber")+" を完了しました。 (もしくは "+p(d,"numBlocks",0,"ja",{"one":"1 block","other":n(d,"numBlocks")+" blocks"})+" のみの使用だけでも可能でした。)"};
 
@@ -12122,7 +12122,7 @@ exports.saveToGallery = function(d){return "ギャラリーに保存"};
 
 exports.savedToGallery = function(d){return "ギャラリーに保存しました！"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "プログラムをシェアできませんでした。"};
 
 exports.typeFuncs = function(d){return "利用可能な機能:%1"};
 

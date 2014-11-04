@@ -7937,7 +7937,7 @@ exports.emptyBlocksErrorMsg = function(d){return "\"Gentag\" eller \"Hvis\" blok
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Funktionen blok skal have andre blokke inde i det for at virke."};
 
-exports.extraTopBlocks = function(d){return "Du har ekstra blokke, der ikke er knyttet til en hændelsesblok."};
+exports.extraTopBlocks = function(d){return "Du har ikke sammenhængende blokke. Ville du fastgøre disse til \"når køre\" blokken?"};
 
 exports.finalStage = function(d){return "Tillykke! Du har fuldført det sidste trin."};
 
@@ -8021,7 +8021,7 @@ exports.saveToGallery = function(d){return "Gem til dit galleri"};
 
 exports.savedToGallery = function(d){return "Gem til dit galleri!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Beklager, ikke kan vi dele dette program."};
 
 exports.typeFuncs = function(d){return "Tilgængelige funktioner: %1"};
 
@@ -8074,13 +8074,13 @@ exports.catVariables = function(d){return "Variabler"};
 
 exports.continue = function(d){return "Fortsæt"};
 
-exports.createHtmlBlock = function(d){return "create html block"};
+exports.createHtmlBlock = function(d){return "Opret HTML-blok"};
 
-exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
+exports.createHtmlBlockTooltip = function(d){return "Opretter en blok af HTML i app."};
 
 exports.finalLevel = function(d){return "Tillykke! Du har løst den sidste opgave."};
 
-exports.makeYourOwn = function(d){return "Make Your Own App"};
+exports.makeYourOwn = function(d){return "Lav din egen App"};
 
 exports.nextLevel = function(d){return "Tillykke! Du har fuldført denne opgave."};
 
@@ -8090,21 +8090,21 @@ exports.numBlocksNeeded = function(d){return "Denne opgave kan løses med %1 blo
 
 exports.pause = function(d){return "Pause"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
+exports.reinfFeedbackMsg = function(d){return "Du kan trykke på \"Prøv igen\" knappen for at gå tilbage til at køre din app."};
 
 exports.repeatForever = function(d){return "Gentag for evigt"};
 
 exports.repeatDo = function(d){return "udfør"};
 
-exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
+exports.repeatForeverTooltip = function(d){return "Udføre handlinger i denne blok gentagne gange mens app kører."};
 
-exports.shareWebappTwitter = function(d){return "Check out the app I made. I wrote it myself with @codeorg"};
+exports.shareWebappTwitter = function(d){return "Tjek appen jeg lavede. Jeg skrev det selv med @codeorg"};
 
-exports.shareGame = function(d){return "Share your app:"};
+exports.shareGame = function(d){return "Del din app:"};
 
-exports.turnBlack = function(d){return "turn black"};
+exports.turnBlack = function(d){return "vende sort"};
 
-exports.turnBlackTooltip = function(d){return "Turns the screen black."};
+exports.turnBlackTooltip = function(d){return "Sætter skærmen sort."};
 
 exports.yes = function(d){return "Ja"};
 

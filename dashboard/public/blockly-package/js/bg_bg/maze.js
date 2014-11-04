@@ -13650,7 +13650,7 @@ exports.moveBackward = function(d){return "премести назад"};
 
 exports.moveEastTooltip = function(d){return "Преместете ме на изток с един ход."};
 
-exports.moveForward = function(d){return "предвижване напред"};
+exports.moveForward = function(d){return "върви напред"};
 
 exports.moveForwardTooltip = function(d){return "Преместете ме напред с един ход."};
 
