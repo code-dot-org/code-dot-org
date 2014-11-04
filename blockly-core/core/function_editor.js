@@ -12,6 +12,7 @@ goog.require('Blockly.HorizontalFlyout');
 goog.require('goog.style');
 goog.require('goog.dom');
 goog.require('goog.array');
+goog.require('goog.events');
 
 /**
  * Class for a modal function editor.
@@ -86,20 +87,21 @@ Blockly.FunctionEditor.prototype.openWithNewFunction = function () {
 };
 
 Blockly.FunctionEditor.prototype.bindToolboxHandlers_ = function() {
-  var paramAddText = goog.dom.getElement('paramAddText');
+  var paramAddTextElement = goog.dom.getElement('paramAddText');
   var paramAddButton = goog.dom.getElement('paramAddButton');
-  Blockly.bindEvent_(paramAddButton, 'mousedown', this, handleParamAdd);
-  Blockly.bindEvent_(paramAddText, 'keydown', this, function(e) {
-    if (e.keyCode == 13) {
-      handleParamAdd.apply(this, arguments);
+  Blockly.bindEvent_(paramAddButton, 'mousedown', this, goog.bind(this.addParamFromInputField_, this, paramAddTextElement));
+  Blockly.bindEvent_(paramAddTextElement, 'keydown', this, function(e) {
+    if (e.keyCode === goog.events.KeyCodes.ENTER) {
+      this.addParamFromInputField_(paramAddTextElement);
     }
   });
-  function handleParamAdd() {
-    var varName = paramAddText.value;
-    paramAddText.value = '';
-    this.addParameter(varName);
-    this.refreshParamsEverywhere();
-  }
+};
+
+Blockly.FunctionEditor.prototype.addParamFromInputField_ = function(parameterTextElement) {
+  var newParamName = parameterTextElement.value;
+  parameterTextElement.value = '';
+  this.addParameter(newParamName);
+  this.refreshParamsEverywhere();
 };
 
 Blockly.FunctionEditor.prototype.addParameter = function(newParameterName) {
