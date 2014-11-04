@@ -3,7 +3,6 @@
   "game_id": 23,
   "created_at": "2014-09-04T18:32:36.000Z",
   "level_num": "custom",
-  "ideal_level_source_id": 264,
   "user_id": 19,
   "properties": {
     "skin": "artist",
