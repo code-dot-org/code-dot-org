@@ -186,6 +186,14 @@ class Studio < Grid
 </category>
 <category name="Variables" custom="VARIABLE" />
 <category name="Functions" custom="PROCEDURE" />
+<category name="Functional">
+  <block type="functional_setBackground" />
+  <block type="functional_setPlayerSpeed" />
+  <block type="functional_setEnemySpeed" />
+  <block type="functional_showTitleScreen" />
+  <block type="functional_string" />
+  <block type="functional_math_number" />
+</category>
 #{k1_blocks(type) if is_k1 == 'true'}
     XML
   end
