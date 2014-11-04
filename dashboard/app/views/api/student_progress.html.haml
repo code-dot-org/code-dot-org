@@ -1,3 +1,141 @@
+:css
+  /* HACK -- copy the compiled CSS from dashboard */
+  /* line 132, /Users/laurel/code-dot-org/dashboard/app/assets/stylesheets/application.css.scss */
+  .level_link, .level_link:link, level_link:visited {
+    border-radius: 20px;
+    min-width: 22px;
+    line-height: 22px;
+    padding: 4px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    margin: 2px;
+    font-weight: 400;
+    color: white;
+  }
+
+  /* line 146, /Users/laurel/code-dot-org/dashboard/app/assets/stylesheets/application.css.scss */
+  .level_link.not_tried, .level_link.not_tried:link, .level_link.not_tried:visited {
+    background-color: #fefefe;
+    color: #666 !important;
+  }
+
+  /* line 151, /Users/laurel/code-dot-org/dashboard/app/assets/stylesheets/application.css.scss */
+  .level_link.attempted, .level_link.attempted:link, .level_link.attempted:visited {
+    background-color: #fefefe;
+    color: #666 !important;
+  }
+
+  /* line 156, /Users/laurel/code-dot-org/dashboard/app/assets/stylesheets/application.css.scss */
+  .level_link.perfect, .level_link.perfect:link, .level_link.perfect:visited {
+    background-color: #0ebe0e;
+    color: white !important;
+  }
+
+  /* line 162, /Users/laurel/code-dot-org/dashboard/app/assets/stylesheets/application.css.scss */
+  .level_link.passed, .level_link.passed:link, .level_link.passed:visited {
+    background-color: #9fd49f;
+    color: white !important;
+  }
+
+  /* line 169, /Users/laurel/code-dot-org/dashboard/app/assets/stylesheets/application.css.scss */
+  .puzzle_outer_level,
+  .puzzle_outer_assessment,
+  .puzzle_outer_current {
+    padding: 1px;
+    display: inline-block;
+    border-radius: 20px;
+  }
+
+  /* line 175, /Users/laurel/code-dot-org/dashboard/app/assets/stylesheets/application.css.scss */
+  .puzzle_outer_level {
+    background-color: #ccc;
+  }
+
+  /* line 179, /Users/laurel/code-dot-org/dashboard/app/assets/stylesheets/application.css.scss */
+  .puzzle_outer_current {
+    background-color: #ffa400;
+  }
+
+  /* line 183, /Users/laurel/code-dot-org/dashboard/app/assets/stylesheets/application.css.scss */
+  .puzzle_outer_assessment {
+    background-color: yellow;
+  }
+
+  /* line 188, /Users/laurel/code-dot-org/dashboard/app/assets/stylesheets/application.css.scss */
+  .user-stats-block {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    float: left;
+    width: 100%;
+  }
+  /* line 188, /Users/laurel/code-dot-org/dashboard/app/assets/stylesheets/application.css.scss */
+  .user-stats-block {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    float: left;
+    width: 100%;
+  }
+
+  /* line 197, /Users/laurel/code-dot-org/dashboard/app/assets/stylesheets/application.css.scss */
+  .stage-lesson-plan-link a {
+    font-size: 10px;
+    color: #7665a0;
+    font-weight: 500;
+  }
+
+  /* line 203, /Users/laurel/code-dot-org/dashboard/app/assets/stylesheets/application.css.scss */
+  .game-group {
+    background-color: #eee;
+    display: table;
+    table-layout: fixed;
+    padding: 10px;
+    width: 100%;
+  }
+  /* line 209, /Users/laurel/code-dot-org/dashboard/app/assets/stylesheets/application.css.scss */
+  .game-group .stage {
+    display: table-cell;
+    width: 200px;
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+  /* line 214, /Users/laurel/code-dot-org/dashboard/app/assets/stylesheets/application.css.scss */
+  .game-group .stage .game-title {
+    font-weight: 500;
+  }
+  /* line 218, /Users/laurel/code-dot-org/dashboard/app/assets/stylesheets/application.css.scss */
+  .game-group .games {
+    display: table-cell;
+    vertical-align: middle;
+    box-sizing: border-box;
+    padding-right: 10px;
+  }
+  /* line 223, /Users/laurel/code-dot-org/dashboard/app/assets/stylesheets/application.css.scss */
+  .game-group .games .level {
+    display: inline-block;
+  }
+  /* line 225, /Users/laurel/code-dot-org/dashboard/app/assets/stylesheets/application.css.scss */
+  .game-group .games .level .puzzle-number {
+    position: relative;
+    top: 1px;
+  }
+
+  /* line 233, /Users/laurel/code-dot-org/dashboard/app/assets/stylesheets/application.css.scss */
+  .game-group + .game-group {
+    border-top: 2px solid #ccc;
+  }
+
+  /* line 237, /Users/laurel/code-dot-org/dashboard/app/assets/stylesheets/application.css.scss */
+  .puzzle-named {
+    font-size: 13px;
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+
 %h1 Progress information for #{@student.name} in #{data_t_suffix('script.name', @script.name, 'title')}
 
 = render partial: 'shared/user_stats', locals: { user: @student }

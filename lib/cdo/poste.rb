@@ -82,8 +82,7 @@ module Poste2
 
     contact = contacts.where(email:address).first
     unless contact
-      puts "create"
-      contacts.insert({}.tap do |contact|
+      id = contacts.insert({}.tap do |contact|
         contact[:email] = address
         contact[:name] = name if name
         contact[:created_at] = contact[:created_on] = now
@@ -91,7 +90,7 @@ module Poste2
         contact[:updated_at] = contact[:updated_on] = now
         contact[:updated_ip] = ip_address
       end)
-      contact = contacts.where(email:address).first
+      contact = {id:id}
     end
 
     {id:contact[:id], email:address, name:name, ip_address:ip_address}
