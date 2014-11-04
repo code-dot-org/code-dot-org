@@ -213,6 +213,13 @@ Blockly.Flyout.prototype.getMetrics_ = function() {
 };
 
 /**
+ * @returns {number} the height of this flyout
+ */
+Blockly.Flyout.prototype.getHeight = function() {
+  return this.height_;
+};
+
+/**
  * Sets the Y translation of the flyout to match the scrollbars.
  * @param {!Object} yRatio Contains a y property which is a float
  *     between 0 and 1 specifying the degree of scrolling.
