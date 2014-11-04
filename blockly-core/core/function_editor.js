@@ -54,7 +54,7 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
 };
 
 Blockly.FunctionEditor.prototype.populateParamToolbox_ = function () {
-  goog.array.clear(this.paramToolboxBlocks_);
+  this.paramToolboxBlocks_ = [];
   var self = this;
   this.functionDefinitionBlock.getVars().forEach(function(varName){
     self.addParameter(varName);

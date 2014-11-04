@@ -94,7 +94,7 @@ Blockly.Procedures.procTupleComparator_ = function(ta, tb) {
  * @return {string} Non-colliding name.
  */
 Blockly.Procedures.findLegalName = function(name, block) {
-  if (block.isInFlyout || block.blockSpace != Blockly.mainBlockSpace) {
+  if (block.isInFlyout) {
     // Flyouts can have multiple procedures called 'procedure'.
     return name;
   }

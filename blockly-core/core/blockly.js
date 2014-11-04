@@ -39,6 +39,7 @@ goog.require('Blockly.FieldImageDropdown');
 goog.require('Blockly.FieldRectangularDropdown');
 goog.require('Blockly.FieldTextInput');
 goog.require('Blockly.FieldVariable');
+goog.require('Blockly.FieldParameter');
 goog.require('Blockly.FunctionEditor');
 goog.require('Blockly.Generator');
 goog.require('Blockly.ImageDimensionCache');

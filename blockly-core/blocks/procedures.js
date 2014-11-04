@@ -96,10 +96,10 @@ Blockly.Blocks.procedures_defnoreturn = {
   domToMutation: function(xmlElement) {
     this.arguments_ = [];
     for (var x = 0, childNode; childNode = xmlElement.childNodes[x]; x++) {
-      var node = childNode.nodeName.toLowerCase();
-      if (node === 'arg') {
+      var nodeName = childNode.nodeName.toLowerCase();
+      if (nodeName === 'arg') {
         this.arguments_.push(childNode.getAttribute('name'));
-      } else if (node === 'description') {
+      } else if (nodeName === 'description') {
         this.description_ = childNode.innerHTML;
       }
     }
@@ -121,9 +121,13 @@ Blockly.Blocks.procedures_defnoreturn = {
     }
     // Initialize procedure's callers with blank IDs.
     Blockly.Procedures.mutateCallers(this.getTitleValue('NAME'),
-                                     this.blockSpace, this.arguments_, null);
+        this.blockSpace, this.arguments_, null);
     return containerBlock;
   },
+  /**
+   * Modifies this block's parameters to match a given mutator block
+   * @param {Blockly.Block} containerBlock mutator container block
+   */
   compose: function(containerBlock) {
     var currentParamBlock = containerBlock.getInputTargetBlock('STACK');
     var paramNames = [];
@@ -136,6 +140,13 @@ Blockly.Blocks.procedures_defnoreturn = {
     }
     this.updateParamsFromArrays(paramNames, paramIDs);
   },
+  /**
+   * Updates parameters (renaming, deleting, adding as appropriate)
+   * on this procedure and its callers.
+   * @param {Array.<String>} paramNames ordered names of parameters for this procedure
+   * @param {Array.<String>} paramIDs unique IDs for each parameter, used to update existing
+   *     references to parameters across renames
+   */
   updateParamsFromArrays: function(paramNames, paramIDs) {
     this.arguments_ = goog.array.clone(paramNames);
     this.paramIds_ = goog.array.clone(paramIDs);
@@ -144,8 +155,16 @@ Blockly.Blocks.procedures_defnoreturn = {
   },
   updateCallerParams_: function() {
     Blockly.Procedures.mutateCallers(this.getTitleValue('NAME'),
-      this.blockSpace, this.arguments_, this.paramIds_);
+        this.blockSpace, this.arguments_, this.paramIds_);
   },
+  /**
+   * Disposes of this block and (optionally) its callers
+   * @param {boolean} healStack see superclass
+   * @param {boolean} animate see superclass
+   * @param {?boolean} opt_keepCallers if false, callers of this method
+   *    are disposed
+   * @override
+   */
   dispose: function(healStack, animate, opt_keepCallers) {
     if (!opt_keepCallers) {
       // Dispose of any callers.
