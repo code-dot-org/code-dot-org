@@ -267,7 +267,7 @@ th {
   padding-bottom: 15px;
   @media screen and (max-width: 1150px) {
     padding-top: 0px;
-    padding-bottom: 0px;
+    padding-bottom: 5px;
   }
   background-color: $bkgnd_color;
   color: $header_text;
@@ -503,14 +503,14 @@ html, body {
 }
 
 .header_level {
-  padding-top: 28px;
+  padding-top: 15px;
   padding-bottom: 10px;
   text-align: center;
   font-size: 150%;
   cursor: default;
   white-space: nowrap;
   @media screen and (max-width: 1150px) {
-    padding-top: 15px;
+    padding-top: 10px;
   }
 
   .progress_container {
