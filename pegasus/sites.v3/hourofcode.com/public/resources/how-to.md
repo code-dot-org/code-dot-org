@@ -4,8 +4,8 @@ layout: wide
 ---
 <div class="row">
     <h1 class="col-sm-6">How to teach one Hour of Code</h1>
-    <div class="col-sm-6" style="text-align:right">
-        <a href="/#join"><button style="float: right; margin-top: 50px">Sign up your event</button></a>
+    <div class="col-sm-6 button-container centered">
+        <a href="/#join"><button class="signup-button">Sign up your event</button></a>
     </div>
 </div>
 ## 1) Try the tutorials:
