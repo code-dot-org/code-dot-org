@@ -481,7 +481,7 @@ Blockly.Blocks.procedures_callreturn = {
         .appendTitle(Blockly.Msg.PROCEDURES_CALLRETURN_CALL)
         .appendTitle('', 'NAME');
     if (Blockly.useModalFunctionEditor) {
-      var editLabel = new Blockly.FieldLabel('edit' /**TODO(bjordan): Localize*/);
+      var editLabel = new Blockly.FieldLabel(Blockly.Msg.FUNCTION_EDIT);
       Blockly.bindEvent_(editLabel.textElement_, 'mousedown', this, this.openEditor);
       mainTitle.appendTitle(editLabel);
     }
