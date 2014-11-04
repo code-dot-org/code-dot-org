@@ -371,9 +371,9 @@ Blockly.Flyout.prototype.show = function(xmlList) {
   var margin = this.CORNER_RADIUS;
   var initialX = Blockly.RTL ? 0 : margin + Blockly.BlockSvg.TAB_WIDTH;
   var cursor = {
-        x: initialX,
-        y: margin
-      };
+    x: initialX,
+    y: margin
+  };
 
   // Create the blocks to be shown in this flyout.
   var blocks = [];
@@ -382,8 +382,7 @@ Blockly.Flyout.prototype.show = function(xmlList) {
   var firstBlock = xmlList && xmlList[0];
   if (firstBlock === Blockly.Variables.NAME_TYPE) {
     // Special category for variables.
-    Blockly.Variables.flyoutCategory(blocks, gaps, margin,
-        /** @type {!Blockly.BlockSpace} */ (this.blockSpace_));
+    Blockly.Variables.flyoutCategory(blocks, gaps, margin, this.blockSpace_);
   } else if (firstBlock === Blockly.Procedures.NAME_TYPE) {
     // Special category for procedures.
     if (Blockly.useModalFunctionEditor && !Blockly.functionEditor.isOpen()) {
@@ -402,14 +401,11 @@ Blockly.Flyout.prototype.show = function(xmlList) {
       Blockly.bindEvent_(button, 'mousedown', this, this.createFunction_);
       cursor.y += 40;
     }
-    Blockly.Procedures.flyoutCategory(blocks, gaps, margin,
-        /** @type {!Blockly.BlockSpace} */ (this.blockSpace_));
+    Blockly.Procedures.flyoutCategory(blocks, gaps, margin, this.blockSpace_);
   } else {
     for (var i = 0, xml; xml = xmlList[i]; i++) {
       if (xml.tagName && xml.tagName.toUpperCase() == 'BLOCK') {
-        var block = Blockly.Xml.domToBlock_(
-            /** @type {!Blockly.BlockSpace} */ (this.blockSpace_), xml);
-        blocks.push(block);
+        blocks.push(Blockly.Xml.domToBlock_(this.blockSpace_, xml));
         gaps.push(margin * 3);
       }
     }
