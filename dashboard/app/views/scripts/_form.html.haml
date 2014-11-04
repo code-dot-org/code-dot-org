@@ -14,13 +14,23 @@
           = f.label :name
           = f.text_field :name
         .script_text
-          - cols = @script_file ? @script_file.lines.max_by(&:length).length : 20
-          - rows = @script_file ? @script_file.lines.count + 1 : 5
-          = text_area_tag('script_text', @script_file || "stage 'new stage'\n", rows: rows, cols: cols, style: 'width:auto')
+          - rows = @script_file ? @script_file.lines.count + 10 : 5
+          = text_area_tag('script_text', @script_file || "stage 'new stage'\n", rows: rows, style: 'width: 700px')
         .actions
           = f.submit
     %td
-      %h4 Level names:
+      %h4 Levels by name:
       %ul
         - Naturally.sort_by(Level.where.not(user_id: nil), :name).each do |level|
-          %li(style="background-color: darkturquoise; display: inline-flex; border-radius: 10px;")=level.name
+          %li.level_name
+            = "'#{level.name}'"
+            = link_to edit_level_path(level) do
+              %i.fa.fa-pencil-square-o
+    %td
+      %h4 Most recently updated levels:
+      %ul
+        - Level.where.not(user_id: nil).order('updated_at desc').each do |level|
+          %li.level_name
+            = "'#{level.name}'"
+            = link_to edit_level_path(level) do
+              %i.fa.fa-pencil-square-o

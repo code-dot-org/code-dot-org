@@ -15,7 +15,8 @@ class User < ActiveRecord::Base
   
   TYPE_STUDENT = 'student'
   TYPE_TEACHER = 'teacher'
-  validates_inclusion_of :user_type, in: [TYPE_STUDENT, TYPE_TEACHER], on: :create
+  USER_TYPE_OPTIONS = [TYPE_STUDENT, TYPE_TEACHER]
+  validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS, on: :create
 
   GENDER_OPTIONS = [[nil, ''], ['gender.male', 'm'], ['gender.female', 'f'], ['gender.none', '-']]
 
@@ -310,28 +311,6 @@ from (
 SQL
   end
 
-  # determines and returns teacher_prize, teacher_bonus_prize
-  # ** Does not change values on this User object **
-  def check_teacher_prize_eligibility
-    completed_students = 0
-    completed_female_students = 0
-    total_students = self.students.length
-    if total_students >= STUDENTS_COMPLETED_FOR_PRIZE
-      self.students.each do |student|
-        if student.prize_earned && student.valid_prize_teacher.try(:id) == self.id
-          completed_students += 1
-          if student.gender == "f"
-            completed_female_students += 1
-          end
-        end
-      end
-    end
-
-    teacher_prize = completed_students >= STUDENTS_COMPLETED_FOR_PRIZE
-    teacher_bonus_prize = teacher_prize && (completed_female_students >= STUDENTS_FEMALE_FOR_BONUS)
-    return teacher_prize, teacher_bonus_prize
-  end
-
   def trophy_count
     User.connection.select_value(<<SQL)
 select coalesce(sum(trophy_id), 0) as num
@@ -348,15 +327,6 @@ SQL
     self.user_type == TYPE_TEACHER
   end
 
-  # this method will eventually return a per-user value based on an async process of
-  # marking each user in the db after checking their first sign-in IP
-
-  # this method should not be used for displaying or claiming prizes - only used as a quick
-  # check to decide whether or not to hide UI elements from the pages
-  def show_prize_ui?
-    false
-  end
-
   def locale
     read_attribute(:locale).try(:to_sym)
   end
@@ -370,12 +340,6 @@ SQL
 
   def confirmation_required?
     (self.teacher? || self.students.length > 0) && !self.confirmed?
-  end
-
-  # return first teacher unless the first_teacher_id doesn't match (meaning that teacher was later removed)
-  def valid_prize_teacher
-    return self.teachers.first if self.prize_teacher_id.blank? || self.teachers.first.try(:id) == self.prize_teacher_id
-    nil
   end
 
   # There are some shenanigans going on with this age stuff. The
@@ -409,7 +373,6 @@ SQL
   end
 
   def generate_username
-    return unless username.blank?
     return if name.blank?
     self.username = UserHelpers.generate_username(User, name)
   end

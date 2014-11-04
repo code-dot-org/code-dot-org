@@ -7,6 +7,7 @@ class Artist < Blockly
     images
     free_play
     permitted_errors
+    impressive
   )
 
   before_save :update_ideal_level_source
@@ -92,6 +93,7 @@ class Artist < Blockly
         </value>
       </block>
       <block type="draw_pen"></block>
+      <block type="draw_line_style_pattern"></block>
     </category>
     <category name="Color">
       <block id="draw-color" type="draw_colour">
@@ -208,6 +210,7 @@ class Artist < Blockly
         <title name="TIMES" config="3-10">3</title>
       </block>
       <block type="draw_colour_simple"></block>
+      <block type="draw_line_style_pattern"></block>
       <block type="simple_move_up"></block>
       <block type="simple_move_down"></block>
       <block type="simple_move_right"></block>

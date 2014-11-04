@@ -1,0 +1,19 @@
+{
+  "circleBlockTitle": "circle (radius, style, color)",
+  "ellipseBlockTitle": "ellipse (width, height, style, color)",
+  "overlayBlockTitle": "overlay (top, bottom)",
+  "placeImageBlockTitle": "place-image (x, y, image)",
+  "rectangleBlockTitle": "rectangle (width, height, style, color)",
+  "rotateImageBlockTitle": "rotate (degrees, image)",
+  "scaleImageBlockTitle": "scale (factor)",
+  "squareBlockTitle": "square (size, style, color)",
+  "starBlockTitle": "star (radius, style, color)",
+  "stringAppendBlockTitle": "string-append (first, second)",
+  "stringLengthBlockTitle": "string-length (string)",
+  "textBlockTitle": "text (string, size, color)",
+  "triangleBlockTitle": "triangle (size, style, color)",
+  "underlayBlockTitle": "underlay (bottom, top)",
+  "outline": "outline",
+  "solid": "solid",
+  "string": "string"
+}

@@ -43,5 +43,5 @@ La mayoría de los niños y adolescentes no saben en qué consiste la informáti
 
 **¿Y si un estudiante termina rápidamente?** 
 
-- Los podés invitar a probar más [tutoriales](/learn /beyond).
+- Los podés invitar a probar más [tutoriales](/learn/beyond).
 - También le podés pedir a los alumnos que terminan pronto que ayuden a los compañeros que están teniendo problemas.

@@ -1,8 +1,5 @@
----
-title: Thank you
-layout: wide
----
 
-# Thank you
 
-Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology).
+# Благодарим вас
+
+Вся ваша школа теперь введена в список, чтобы выиграть класс-комплект ноутбуков (или $ 10000 для других электронных устройств для усовершенствованию процесса обучения информатике).

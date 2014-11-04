@@ -1,10 +1,11 @@
 ---
-title: Ресурси
 layout: wide
 nav: resources_nav
 ---
 
 # Ресурси
+
+## Смятате да организирате Часът на кодирането? <a href = "< % = hoc_uri('/resources/how-to') % >" > Вижте "как да" ръководството</a>
 
 <a id="handouts"></p> 
 
@@ -32,14 +33,14 @@ nav: resources_nav
   </h2>
   
   <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"> <strong>Това, което повечето училища не преподават (5 мин)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       <a href="https://www.youtube.com/watch?FC5FbmsH4fw"> <strong>Часът на кодирането е тук - всеки може да се научи</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
     </p>
@@ -49,14 +50,14 @@ nav: resources_nav
   </div>
   
   <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>Президентът Обама за компютърните науки</strong></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       <a href="https://www.youtube.com/watch?qYZF6oIZtfc"> <strong>Всеки може да се научи (1 мин.)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
@@ -68,7 +69,7 @@ nav: resources_nav
   <div style='clear:both'>
   </div>
   
-  <p>
+<p>
 <a id="posters"></p> 
 
 <h2>
@@ -80,7 +81,7 @@ nav: resources_nav
 </p>
 
 <h4>
-  <a href="http://hourofcode.com/#signup"> Запишете</a> ваше събитие Часът на кодирането и ние ще ви изпратим плакати безплатно.
+  <a href="http://hourofcode.com/#signup"> Регистрирайте</a> вашето събитие и ние ще ви изпратим плакати безплатно.
 </h4>
 
 <p>
@@ -100,11 +101,27 @@ nav: resources_nav
 </p>
 
 <p>
+  <a id="social"></a>
+</p>
+
+<h2>
+  Post these on social media
+</h2>
+
+<p>
+  <a href="/images/social-1.jpg"><img src="/images/fit-200/social-1.jpg" alt="изображение" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-2.jpg"><img src="/images/fit-200/social-2.jpg" alt="изображение" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-3.jpg"><img src="/images/fit-200/social-3.jpg" alt="изображение" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+
+<p>
+  <a href="/images/mark.jpg"><img src="/images/fit-200/mark.jpg" alt="изображение" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-200/susan.jpg" alt="изображение" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-200/ashton.jpg" alt="изображение" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-200/marissa.jpg" alt="изображение" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-200/chris.jpg" alt="изображение" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+
+<p>
   <a id="sample-emails"></a>
 </p>
 
 <h2>
-  Изпратете тези имейли, за да подпомогнете провеждането на Часът на кодирането
+  Send these emails to help promote the Hour of Code
 </h2>
 
 <p>
@@ -112,11 +129,11 @@ nav: resources_nav
 </p>
 
 <h2>
-  Попитайте вашето училище, работодател или приятели дали може се регистрирате:
+  Ask your school, employer or friends to sign up:
 </h2>
 
 <p>
-  Computers are everywhere, but fewer schools teach computer science than 10 years ago. Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. In one week, 15 million students tried computer science!
+  Компютрите са навсякъде, но в малко училища се изучават компютърни науки. Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. In one week, 15 million students tried computer science!
 </p>
 
 <p>
@@ -140,7 +157,7 @@ nav: resources_nav
 </p>
 
 <h2>
-  Поканете медии да присъстват на събитието:
+  Invite media to attend your event:
 </h2>
 
 <p>
@@ -192,7 +209,7 @@ nav: resources_nav
 </p>
 
 <h2>
-  Разкажете на родителите за вашето училищно събитие:
+  Tell parents about your school's event:
 </h2>
 
 <p>
@@ -232,7 +249,7 @@ nav: resources_nav
 </p>
 
 <h2>
-  Поканете местен политик на училищното ви събитие:
+  Invite a local politician to your school's event:
 </h2>
 
 <p>

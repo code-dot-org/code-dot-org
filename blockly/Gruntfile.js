@@ -11,7 +11,8 @@ var APPS = process.env.MOOC_APP ? [process.env.MOOC_APP] : [
   'studio',
   'jigsaw',
   'calc',
-  'webapp'
+  'webapp',
+  'eval'
 ];
 
 // Parse options from environment.
