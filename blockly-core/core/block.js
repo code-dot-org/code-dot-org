@@ -79,6 +79,9 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
   this.collapsed_ = false;
   this.dragging_ = false;
 
+  /**
+   * @type {!Blockly.BlockSpace}
+   */
   this.blockSpace = blockSpace;
   this.isInFlyout = blockSpace.isFlyout;
 
@@ -114,65 +117,47 @@ Blockly.Block.prototype.svg_ = null;
 
 /**
  * Block's mutator icon (if any).
- * @type {Blockly.Mutator}
+ * @type {?Blockly.Mutator}
  */
 Blockly.Block.prototype.mutator = null;
 
 /**
  * Block's comment icon (if any).
- * @type {Blockly.Comment}
+ * @type {?Blockly.Comment}
  */
 Blockly.Block.prototype.comment = null;
 
 /**
  * Block's warning icon (if any).
- * @type {Blockly.Warning}
+ * @type {?Blockly.Warning}
  */
 Blockly.Block.prototype.warning = null;
 
 /**
- * onchange event handle from Blockly.bindEvent_ call
- * Suitable for unbinding with Blockly.unbindEvent_
- * @type {!Array.<!Array>}
+ * Callback function called after initialization
+ * (typically defined by subclasses)
+ * @type {?function()}
  */
-Blockly.Block.prototype.onChangeHandle = null;
+Blockly.Block.prototype.init = null;
+
+/**
+ * Callback function called after initialization
+ * (typically defined by subclasses)
+ * @type {?function()}
+ */
+Blockly.Block.prototype.onchange = null;
 
 /**
  * @param {Blockly.BlockSpace} blockSpace target blockspace to begin rendering on
  */
 Blockly.Block.prototype.setRenderBlockSpace = function(blockSpace) {
-  if (this.blockSpace) {
-    this.stopRenderingInBlockSpace(this.blockSpace);
-  }
   this.blockSpace = blockSpace;
   this.blockSpace.addTopBlock(this);
 
-  // Bind an onchange function, if it exists.
+  // Bind an onchange function if one exists (typically set by block subclasses)
   if (goog.isFunction(this.onchange)) {
-    Blockly.bindEvent_(this.blockSpace.getCanvas(), 'blocklyBlockSpaceChange', this,
-      this.onchange);
-  }
-
-  if (this.svg_) {
-    this.moveToCurrentBlockSpace();
-  }
-};
-
-/**
- * Moves block SVG root element to the current blockSpace
- */
-Blockly.Block.prototype.moveToCurrentBlockSpace = function() {
-  this.blockSpace.getCanvas().appendChild(this.svg_.getRootElement());
-};
-
-/**
- * @param {Blockly.BlockSpace} blockSpace blockspace to stop rendering on (note: does not remove from top blocks)
- */
-Blockly.Block.prototype.stopRenderingInBlockSpace = function(blockSpace) {
-  // Unbind onchange function, if it exists.
-  if (this.onChangeHandle) {
-    Blockly.unbindEvent_(this.onChangeHandle);
-    this.onChangeHandle = null;
+    Blockly.bindEvent_(this.blockSpace.getCanvas(), 'blocklyBlockSpaceChange',
+      this, this.onchange);
   }
 };
 
@@ -204,7 +189,7 @@ Blockly.Block.prototype.initSvg = function() {
     Blockly.bindEvent_(this.svg_.getRootElement(), 'mousedown', this,
                        this.onMouseDown_);
   }
-  this.moveToCurrentBlockSpace();
+  this.moveToFrontOfBlockSpace_();
 };
 
 /**
@@ -900,11 +885,15 @@ Blockly.Block.prototype.setDraggingHandleImmovable_ = function(adding, immovable
 };
 
 /**
- * Moves this block to the front of the canvas
+ * Moves this block to the front of its BlockSpace
  * @private
  */
-Blockly.Block.prototype.moveToFrontOfCanvas_ = function () {
-  this.blockSpace.getCanvas().appendChild(this.svg_.getRootElement());
+Blockly.Block.prototype.moveToFrontOfBlockSpace_ = function () {
+  if (!this.svg_) {
+    return;
+  }
+
+  this.blockSpace.moveElementToFront(this.svg_.getRootElement());
 };
 
 /**
@@ -936,7 +925,7 @@ Blockly.Block.prototype.onMouseMove_ = function(e) {
       var firstImmovableBlockHandler = this.generateReconnector_(this.previousConnection);
       this.setParent(null);
       this.setDraggingHandleImmovable_(true, firstImmovableBlockHandler);
-      this.moveToFrontOfCanvas_();
+      this.moveToFrontOfBlockSpace_();
     }
   }
   if (Blockly.Block.dragMode_ == Blockly.Block.DRAG_MODE_FREELY_DRAGGING) {
@@ -1130,7 +1119,7 @@ Blockly.Block.prototype.setParent = function(newParent) {
     }
     // Move this block up the DOM.  Keep track of x/y translations.
     var xy = this.getRelativeToSurfaceXY();
-    this.moveToFrontOfCanvas_();
+    this.moveToFrontOfBlockSpace_();
     this.svg_.getRootElement().setAttribute('transform',
         'translate(' + xy.x + ', ' + xy.y + ')');
 

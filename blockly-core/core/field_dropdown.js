@@ -117,7 +117,7 @@ Blockly.FieldDropdown.prototype.showEditor_ = function() {
   // Record windowSize and scrollOffset before adding menu.
   var windowSize = goog.dom.getViewportSize();
   var scrollOffset = goog.style.getViewportPageOffset(document);
-  var xy = Blockly.getAbsoluteXY_(/** @type {!Element} */ (this.borderRect_));
+  var xy = Blockly.getAbsoluteXY_(/** @type {!Element} */ (this.borderRect_), this.getRootSVGElement_());
   var borderBBox = this.borderRect_.getBBox();
   var div = Blockly.WidgetDiv.DIV;
 

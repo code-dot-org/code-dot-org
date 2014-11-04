@@ -361,14 +361,15 @@ Blockly.BlockSvg.prototype.dispose = function() {
 Blockly.BlockSvg.prototype.disposeUiEffect = function() {
   Blockly.playAudio('delete');
 
-  var xy = Blockly.getSvgXY_(this.svgGroup_);
+  var parentSVGElement = this.block_.blockSpace.blockSpaceEditor.svg_;
+  var xy = Blockly.getSvgXY_(this.svgGroup_, parentSVGElement);
   // Deeply clone the current block.
   var clone = this.svgGroup_.cloneNode(true);
   clone.translateX_ = xy.x;
   clone.translateY_ = xy.y;
   clone.setAttribute('transform',
       'translate(' + clone.translateX_ + ',' + clone.translateY_ + ')');
-  this.block_.blockSpace.blockSpaceEditor.svg_.appendChild(clone);
+  parentSVGElement.appendChild(clone);
   if (navigator.userAgent.indexOf("MSIE") >= 0 || navigator.userAgent.indexOf("Trident") >= 0) {
       clone.style.display = "inline";   /* reqd for IE */
       clone.bBox_ = {
@@ -417,7 +418,7 @@ Blockly.BlockSvg.prototype.connectionUiEffect = function() {
   Blockly.playAudio('click');
 
   // Determine the absolute coordinates of the inferior block.
-  var xy = Blockly.getSvgXY_(this.svgGroup_);
+  var xy = Blockly.getSvgXY_(this.svgGroup_, this.block_.blockSpace.blockSpaceEditor.svg_);
   // Offset the coordinates based on the two connection types.
   if (this.block_.outputConnection) {
     xy.x += oppositeIfRTL(-3);

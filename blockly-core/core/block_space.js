@@ -135,6 +135,14 @@ Blockly.BlockSpace.prototype.createDom = function() {
 };
 
 /**
+ * Moves element currently in this BlockSpace to the front of the canvas
+ * @param {Element} blockSVGElement svg element to move to the front
+ */
+Blockly.BlockSpace.prototype.moveElementToFront = function(blockSVGElement) {
+  this.getCanvas().appendChild(blockSVGElement);
+};
+
+/**
  * Dispose of this blockSpace.
  * Unlink from all DOM elements to prevent memory leaks.
  */

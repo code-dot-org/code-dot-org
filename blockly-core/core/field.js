@@ -55,6 +55,23 @@ Blockly.Field = function(text) {
 };
 
 /**
+ * @returns {Blockly.BlockSpace.blockSpaceEditor}
+ * @protected
+ */
+Blockly.Field.prototype.getParentEditor_ = function() {
+  return this.sourceBlock_.blockSpace.blockSpaceEditor;
+};
+
+/**
+ * The root <svg> element this field is a child of
+ * @returns {Blockly.BlockSpaceEditor.svg_}
+ * @protected
+ */
+Blockly.Field.prototype.getRootSVGElement_ = function() {
+  return this.getParentEditor_().svg_;
+};
+
+/**
  * Non-breaking space.
  */
 Blockly.Field.NBSP = '\u00A0';
