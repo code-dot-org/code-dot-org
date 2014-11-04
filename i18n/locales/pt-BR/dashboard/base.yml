@@ -76,7 +76,7 @@
     gender: "Gênero (opcional)"
     birthday: "Aniversário (opcional)"
     age: "Idade"
-    user_type: "Are you a student or teacher?"
+    user_type: "Você é um aluno ou professor?"
     submit: "Inscreva-se"
     teacher: "Você é um professor?"
     valid_username: "Disponível!"
@@ -350,7 +350,7 @@
     female: "Feminino"
     none: "Prefiro não responder"
   user_type:
-    student: "estudante"
+    student: "Estudante"
     teacher: "Professor"
   footer:
     help_from_html: "Engenheiros da Google, Microsoft, Facebook e Twitter ajudaram a criar este tutorial."
@@ -368,7 +368,7 @@
     teacher: "Ver a solução"
     auth_error: "Você não está autorizado a ver a solução."
     submit: "Atualize a Localização do Artista"
-    direction: "Direção de Início (em graus)"
+    direction: "Direção de início (em graus)"
   video:
     tab: "Vídeo."
     notes: "Nenhum vídeo? Mostrar notas."

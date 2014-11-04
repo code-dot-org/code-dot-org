@@ -1,59 +1,63 @@
 * * *
 
-title: Materialen layout: wide
+title: Materialen layout: wide nav: resources_nav
 
 * * *
 
-## Nuttige statistieken over informatica
+[<button style="float: right; margin-top: 50px">Sign up your event</button>](/#join)
 
-*Voor vragen van pers en media, neem contact op met <press@code.org>*
+## Hoe je de aandacht van de media trekt voor je Uur Code-evenement
+
+*For all press and media inquiries, contact <press@code.org>*
 
 ### Belangrijke Tips
 
   * Neem twee weken voor je evenement contact op met de media. Krijg je niet direct antwoord, bel of mail dan nog even na.
   * Vraag of een collega of vrijwilliger fotos wil nemen om online te delen en naar de pers te sturen.
-  * Schrijf over het Hour of Code op de website van de school en in het schoolblad. Schrijf over het evenement zelf en voeg afbeeldingen toe van deelnemers.
+  * Schrijf over het Uur Code op de website van de school en in het schoolblad. Schrijf over het evenement zelf en voeg afbeeldingen toe van deelnemers.
   * Deel je plannen en aankondigen op Facebook en Twitter. Gebruik de hashtag **#HourOfCode** zodat Code.org je evenement kan zien en promoten.
 
 ### Stappenplan:
 
-**1. Plan je evenement**
+**1. Plan your event**
 
-  * Plan een bijeenkomst om het Hour of Code af te trappen.
+  * Plan een bijeenkomst om het Uur Code af te trappen.
   * Verzend [ een brief](<%= hoc_uri('/resources/#sample-emails') %>) naar de ouders. Vraag hun om het woord te verspreiden.
   * Verzend [ een brief](<%= hoc_uri('/resources/#sample-emails') %>) om uw burgemeester, Congreslid, gouverneur, of invloedrijke ondernemer uit te nodigen om dit bij te wonen en te spreken met uw leerlingen.
   * Organiseer groepsactiviteiten (zoals een demonstratie van een 'unplugged'-programmeeractiviteit), of laat door deelnemers gemaakte en geleidde activiteiten zien.
-  * Toon Code.org de [ Hour of Code video](<%= hoc_uri('/') %>) of één van [ deze](<%= hoc_uri('/resources#videos') %>) om te inspireren.
+  * Toon Code.org de [ Uur Code video](<%= hoc_uri('/') %>) of één van [ deze](<%= hoc_uri('/resources#videos') %>) om te inspireren.
 
-**2. Vind journalisten die onderwijs of lokale evenementen verslaan.**
+**2. Identify specific local reporters that cover education or local events.**
 
-Denk aan de lokale kranten, TV- of radiostations of blogs.
+Think a local newspaper, TV station, radio station or blog.
 
-Kijk online of je contactinformatie kan vinden voor journalisten. Kun je deze niet vinden, bel de publicatie, of mail naar een algemeen adres en vraag of je mail doorgestuurd kan worden naar de juiste journalist.
+Look online to find reporter contact information. If you can't find it, call the publication to ask, or email a general tips@PUBLICATIONNAME.com email address and ask for your message to be directed to the correct reporter.
 
-**3. Neem contact op met lokale media**
+**3. Contact local media**
 
-De beste manier om contact op te nemen is per mail. Deze moet kort zijn en overbrengen waarom dit evenement voor anderen interessant is. Zorg dat er contactinformatie (inclusief een 06-nummer) in staat van iemand die bij het evenement aanwezig zal zijn. **Zie een [ voorbeeld toonhoogte naar media](<%= hoc_uri('/resources#sample-emails') %>):**
+The best way to reach out is by email. It should be short and communicate: why should other people care about this event? Include contact information (including a cellphone number) for who will be on site at the event. **See a [sample pitch to media](<%= hoc_uri('/resources#sample-emails') %>):**
 
-**4. Bereid je voor vragen te beantwoorden over je evenement. Voorbeelden:**
+**4. Prepare to field questions about your school event. Here are some examples:**
 
-*Waarom doet jouw school mee aan Hour of Code?*
+*Why is your school doing an Hour of Code?*
 
-We weten allemaal dat het belangrijk is dat leerlingen wegwijs worden in onze digitale wereld. Veel leraren hebben weinig ervaring met informatica en weten niet waar ze moeten beginnen. Dit evenement is voor ons allemaal een kans te zien waar informatica over gaat.
+While all of us know that it’s important for students to learn how to navigate today’s tech-saturated world, many teachers aren’t experienced in computer science and don’t know where to start. This event is a chance for all of us to see what computer science is about.
 
-We hopen dat leerlingen de smaak te pakken krijgen en blijven leren. Uit onderzoek blijkt ook dat kinderen programmeerconcepten al oppikken voordat ze kunnen lezen en schrijven. Hun hersenen staan op jonge leeftijd open voor programmeertalen, net zoals met vreemde talen.
+We hope it’ll spark interest in students to keep learning. Research also shows that kids pick up programming concepts before they know how to read and write. In fact, their brains are more receptive to computer languages at a young age, just like foreign languages.
 
-*Waarom is dit belangrijk?*
+*Why is this important?*
 
-In China krijgen alle leerlingen informatica om te slagen voor hun middelbare school. In de westerse wereld wordt het op 90% van de scholen niet eens gegeven. Het wordt tijd dat we aansluiten bij de 21e eeuw. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them the confidence and know-how to succeed.
+In China, every students takes computer science to graduate high school. In the U.S., 90 percent of schools don’t even teach it. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them the confidence and know-how to succeed.
 
-**Meer details en een citaat dat je kunt gebruiken in materialen**
+**More details and a quote you can use in materials**
 
-"Het Uur Code is ontworpen om code te ontrafelen en te laten zien dat informatica geen rocket-science is: iedereen kan de grondbeginselen leren," aldus Hadi Partovi, oprichter en directeur van Code.org. "Vorig jaar probeerden 15 miljoen leerlingen een Uur Code. Nu richten we ons op 100 miljoen leerlingen over de hele wereld om te laten zien dat de vraag naar relevant 21ste-eeuws informaticaonderwijs alle landsgrenzen overschijdt en geen beperkingen kent."
+"The Hour of Code is designed to demystify code and show that computer science is not rocket-science, anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "In one week last year, 15 million students tried an Hour of Code. Now we're aiming for 100 million worldwide to prove that the demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
 
-**Over Code.org**
+**About Code.org**
 
-Code.org® is een 501c3 publieke non-profit die zich richt op het uitbreiden van deelname aan informatica en het vergroten van de deelname door vrouwen en studenten uit ondergerepresenteerde ethnische groepen. Het is haar visie dat iedere leerling in iedere school de kans zou moeten hebben informatica te leren. Na de start in 2013 organiseerde Code.org de 'Uur Code'-campagne — welke miljoenen leerlingen in aanraking heeft gebracht met informatica — ging partnerschappen aan met meer dan 30 schooldistricten in Amerika, en lanceerde Code Studio, een open-source online leerplatform voor alle leeftijden. For more information, please visit: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
+Code.org® is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign — which has introduced millions of students to computer science — partnered with more than 30 public school districts nationwide, and launched Code Studio, an open-source, online learning platform for all ages. For more information, please visit: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
-Voor meer matriaal en voorbeeld e-mails klik[ hier](<%= hoc_uri('/resources') %>).
+Find more resources and sample emails [here](<%= hoc_uri('/resources') %>).
+
+<a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>

@@ -11,29 +11,6 @@ nl:
   header_menu_faq: Veelgestelde Vragen
   header_menu_prizes: Prijzen
   header_menu_uk_code_org: uk.code.org
-  choose_country_header: Wereldwijd Deelnemen!
-  country_al: Albania
-  country_ar: Argentinië
-  country_au: Australië
-  country_br: Brazilië
-  country_bg: Bulgarije
-  country_de: Duitsland
-  country_es: Latijns Amerika
-  country_eu: Europese Unie
-  country_gr: Griekenland
-  country_hr: Kroatië
-  country_id: Indonesië
-  country_it: Italië
-  country_jp: Japan
-  country_me: Midden-Oosten en Noord-Afrika
-  country_my: Malaysia
-  country_nz: Nieuw Zeeland
-  country_ro: Roemenië
-  country_ru: Rusland
-  country_ua: Oekraïne
-  country_uk: Verenigd Koninkrijk
-  country_us: Verenigde Staten
-  country_vn: Vietnam
   company_4-H: 4-H Youth Development
   company_bgca: Boys and Girls Club of America
   company_cgcs: Council of the Great City Schools
@@ -47,7 +24,7 @@ nl:
   prizes_all: Prijzen voor elke organisator
   prizes_every_organizer: 'Elke Uur Code-organisator ontvangt een Dropbox- of Skypekrediet als bedankje'
   prizes_technology: 'Een openbare school in elke Amerikaanse staat (& Washington DC) wint technologie ter waarde van $10.000'
-  prizes_tech_chats: 96 classrooms will win video chats with very special guests
+  prizes_tech_chats: 96 klaslokalen zullen een videogesprek winnen met zeer speciale gasten
   prizes_details: Details
   n_have_learned_an_hoc: '<h1>#</h1><h3>probeerde een</h3><h2>Uur van de Code</h2>'
   anybody_can_learn: Iedereen kan leren.
@@ -100,7 +77,7 @@ nl:
   signup_thank_you_header: Bedankt voor het registreren om een Uur van de Code evenement te organiseren.
   signup_thank_you_message: We sturen u een bevestigingse-mail met informatie om u aan de slag te kunnen.
   map_header: '# Uur van Code gebeurtenissen rond de wereld'
-  map_header_company: '# Hour of Code events organized by company'
+  map_header_company: '# Uur van Code evenementen  zijn georganiseerd door het bedrijf'
   meta_tag_og_title: Het Uur Code komt eraan
   meta_tag_og_description: 'Het Uur Code is een wereldwijde beweging die tientallen miljoenen leerlingen wil bereiken in 180+ landen en in meer dan 30 talen. Leeftijd: 4 t/m 104.'
   meta_tag_twitter_title: Het Uur Code komt eraan
@@ -144,8 +121,8 @@ nl:
   hoc_faq_international_a: Iedereen kan een Uur Code-evenement organiseren, waar ook ter wereld. Vorig jaar deden leerlingen van over de hele wereld mee aan een Uur Code.
   hoc_faq_tutorial_q: Hoe kan ik een Uur Code-opdracht maken?
   hoc_faq_tutorial_a: "Als je opdracht-partner wil worden, <a href='targetHOC'>lees onze richtlijnen en instructies</a>. We bieden graag een veelheid aan mogelijkheden, maar het hoofddoel is de ervaring voor leerlingen en leraren die nieuw zijn in de informatica te optimaliseren."
-  hoc_faq_more_questions_q: Still have more questions?
-  hoc_faq_more_questions_a: "Try finding an answer in our <a href='http://support.code.org'>support forum</a>."
+  hoc_faq_more_questions_q: Heb je meer vragen?
+  hoc_faq_more_questions_a: "Probeer het antwoord te vinden in ons  <a href='http://support.code.org'>forum</a>."
   hoc_faq_more_questions_br_q: Outras dúvidas?
   hoc_faq_more_questions_br_a: "Por favor visite nosso <a href='http://support.code.org'>forum de suporte</a> disponível apenas em inglês."
   hoc_faq_what_is_hoc_uk_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://uk.code.org/learn'>Check out the tutorials</a>, and look out for new ones coming for the Hour of Code 2014."
@@ -173,11 +150,22 @@ nl:
   resources_handouts: Documenten om te verspreiden
   resources_videos: "Video 's"
   resources_posters: Posters
-  resources_social: Social
+  resources_social: Sociaal
   resources_banners: Banners
   resources_emails: Voorbeeld e-mails
   resources_stats: Nuttige computer wetenschap statistieken
   resources_press_kit: Persmap
+  events_title: All Hour of Code Events
+  events_nav_all: All Events
+  events_nav_classrooms: Classrooms
+  events_nav_whole_schools: Whole Schools
+  events_nav_special: Special Events
+  events_all_title: All Hour of Code events
+  events_classroom_title: Classroom Hour of Code events
+  events_whole_school_title: Whole-school Hour of Code events
+  events_special_title: Special Hour of Code events
+  event: event
+  events: events
   footer_copyright_message: Copyright 2014 Code.org. Alle rechten voorbehouden.
   footer_trademark_message: Uur van Code ™ is een handelsmerk van Code.org.
   footer_menu_partners: Partners

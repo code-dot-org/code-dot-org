@@ -38,7 +38,7 @@ ja:
           desc: コードの時間(Hour of code)
           Maze: ステージ 1
         Edit Code:
-          desc: Edit Code (beta)
+          desc: コードを編集する(ベータ版)
           MazeEC: ステージ 1
         2014 Levels:
           desc: Bounce (beta)
@@ -56,7 +56,7 @@ ja:
           desc: Maze (beta)
           MazeStep: Stage Step
         edit-code:
-          desc: Edit Code (beta)
+          desc: コードを編集する(ベータ版)
           MazeEC: ステージ 1
           Webapp: ステージ 2
           ArtistEC: ステージ 3
@@ -128,10 +128,10 @@ ja:
         parameters: パラメーター付き関数
     level:
       instructions:
-        maze_2_2: 'Can you help me to catch the naughty pig? Stack a couple of "move forward" blocks together and press "Run" to help me get there. '
+        maze_2_2: ブタをつかまえるのを手伝ってくれない？「まえにうごく」ブロックをつみあげて、「実行」ボタンをおしてね。
         maze_2_1: このブタは私の羽を逆立てます。私が彼を見つけられるよう助けて！
-        maze_2_2_5: 道をたどって、おばかなブタのところへ案内してください。TNTを避けないと、羽が飛びます！
-        maze_2_3: 緑の悪者に私を案内して！（TNTに気をつけよう）
+        maze_2_2_5: みちをとおって、おばかなブタまでつれていってね。ばくだんにきをつけて、ばくはつします！
+        maze_2_3: みどりのブタまでつれていって！(ばくだんに気をつけよう)
         maze_2_4: 落ち着いて、そして悪いブタを見つけるのを助けてください。でないと私は怒るかもよ！
         maze_2_5: ブロックを2つだけ使って、緑のブタにたどり着ける方法があります。分かりますか？
         maze_2_6: ブロックを３つだけ使って私を緑の侵入者のところへ行かせてください。
@@ -162,7 +162,7 @@ ja:
           
           よくできたね！あなたが描きたいものを何でもいいから描いてください。いくつかの楽しいアイデア： スティック図、雪片、またはスパイラル。また、新しい「設定幅」ブロックを試みてください。楽しんでね！
         turtle_4_1: ブロック３つだけ （100 ピクセルのエッジ) で三角形を描くことができますか？ヒント:「リピート」のブロックを使用します。
-        turtle_4_2: 'Add a "turn right by 90 degrees" block somewhere in the middle of the program already out on the workspace to draw these triangles.'
+        turtle_4_2: 「90度右に曲がる」ブロックをプログラムのどこかに追加して、指定された三角形を描いてください。
         turtle_4_3: Ok、これはあなたが書いた単一の三角形を描画するコードです。かわいい花を作るために「繰り返し」と「ターン」のブロックを追加できますか？
         turtle_4_4: 'これは前のパズルと同じコードです。でも各三角形を描画した後に36度だけ回転させました。何回これを繰り返す必要があるのでしょうか？（ヒント: 360度回転した後は完全な円ができます。）'
         turtle_4_5: '前回のパズルと同じコードです、ただ回転を36回繰り返しました。回転角度は何度にすればよいですか？(ヒント: 360 度回転すると描画は完全な円になります。）'
@@ -253,8 +253,8 @@ ja:
         turtle_5_6: このプログラムを実行してみてください、そして何が起こるかを参照し変更をしてください。それがどのように動作するかを理解できますか？(または削除し、完全に別の何かと交換)
         maze_3_1: 豚を捕まえないといけない。move(); を何回かコールして卵をとりかえしてください。
         maze_3_2: 豚の居るとこに行けるようにプログラムを書いてください。
-        maze_3_3: どうやって豚を捕まえたらいいでしょうか？TNT　爆弾にぶつからないようにきおつけてください。
-        maze_3_4: なんてこった、TNT　を避けて豚が捕まえれるプログラム作って下さい。
+        maze_3_3: ブタのところまでどうやっていけばいい？ばくだんにぶつからないようにきをつけてね。
+        maze_3_4: うわーん！ばくだんにぶつからずにブタをつかまえるプログラムをかいてよ！
         bounce_1: 'Attach a block to the "when left arrow" block and press "Run". Move the paddle using the left arrow to reach the finish target.'
         bounce_2: 「右矢印のとき」と「左矢印のとき」ブロックにブロックを接続します。両方の最終目標に到達するためにラケットを移動します。
         bounce_3: 「上矢印のとき」ブロックと似たことを試しましょう。頂上の最終目標にラケットを移動します。
@@ -272,7 +272,7 @@ ja:
         flappy_4: もしクラッシュさせるためのコードを書かない場合、フラッピーは障害物を通り抜けて飛びます。「障害物にヒットしたとき」ブロックにブロックを接続します。フラッピーが最初に設置されtパイプにクラッシュするときに「ゲームエンド」のコードが必要になります。
         flappy_5: スコアボード（得点表）を追加してフラッピーが障害物を過ぎたときの得点を数えましょう。「障害物と過ぎたとき」ブロックを追加して、飛んでいるフラッピーが最初の設定したパイプを過ぎるたびに得点をさせてください。
         flappy_6: フラッピーのふらふら飛ぶ量を小さくや大きくした後、まだ得点しているかどうか見てください。
-        flappy_7: 'Next, try changing the scene by attaching another block to the "when run" block.'
+        flappy_7: 次に、「実行時」ブロックにもう1つのブロックをくっつけて背景を変えてみてください。
         flappy_8: |
           ゲームが開始したときだけでなく、いつでもビジュアルを設定できます。例えば、障害物を過ぎたとき、などのイベントが発生時にランダムな状況を設定するようにしてください。
           
@@ -285,7 +285,7 @@ ja:
         flappy_k1_5: もしクラッシュさせるためのコードを書かない場合、フラッピーは障害物を通り抜けて飛びます。「障害物にヒットしたとき」ブロックにブロックを接続します。フラッピーが最初に設置されtパイプにクラッシュするときに「ゲームエンド」のコードが必要になります。
         flappy_k1_6: スコアボード（得点表）を追加してフラッピーが障害物を過ぎたときの得点を数えましょう。「障害物と過ぎたとき」ブロックを追加して、飛んでいるフラッピーが最初の設定したパイプを過ぎるたびに得点をさせてください。
         flappy_k1_7: See if you can score multiple points for making it past an obstacle
-        flappy_k1_8: 'Next, try changing the scene by attaching another block to the "when run" block.'
+        flappy_k1_8: 次に、「実行時」ブロックにもう1つのブロックをくっつけて背景を変えてみてください。
         flappy_k1_9: 'Try changing the player by attaching a "set player" block to the "when run" block.'
         jigsaw_1: Click the block
         jigsaw_2: Drag the block to the target

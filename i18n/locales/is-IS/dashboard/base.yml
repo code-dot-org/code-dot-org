@@ -76,7 +76,7 @@ is:
     gender: Kyn (valfrjálst)
     birthday: afmælisdagur (valfrjálst)
     age: Aldur
-    user_type: Are you a student or teacher?
+    user_type: Ert þú nemandi eða kennari?
     submit: Skráning
     teacher: Ertu kennari?
     valid_username: Laust!

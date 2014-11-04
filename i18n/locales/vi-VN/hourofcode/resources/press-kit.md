@@ -1,12 +1,14 @@
 * * *
 
-tiêu đề : Tài liệu Khung nhìn : rộng
+title: Resources layout: wide nav: resources_nav
 
 * * *
 
-## Số liệu thống kê hữu ích về khoa học máy tính
+[<button style="float: right; margin-top: 50px">Sign up your event</button>](/#join)
 
-*Đối với tất cả báo chí và truyền thông yêu cầu, hãy liên hệ với <press@code.org>*
+## Làm thế nào để thu hút các phương tiện truyền thông tới sự kiện Hour of Code của bạn
+
+*For all press and media inquiries, contact <press@code.org>*
 
 ### Mẹo
 
@@ -17,7 +19,7 @@ tiêu đề : Tài liệu Khung nhìn : rộng
 
 ### Hướng dẫn từng bước:
 
-**1. kế hoạch sự kiện của bạn**
+**1. Plan your event**
 
   * Lên kế hoạch tuần tự để khởi động Hour of Code.
   * Send [a letter](<%= hoc_uri('/resources/#sample-emails') %>) to parents. Ask them to spread the word.
@@ -25,35 +27,37 @@ tiêu đề : Tài liệu Khung nhìn : rộng
   * Tổ chức các hoạt động của nhóm (như việc trình diễn một hoạt động lập trình 'unplugged').
   * Show Code.org’s [Hour of Code video](<%= hoc_uri('/') %>) or one of [these](<%= hoc_uri('/resources#videos') %>) to inspire.
 
-**2. xác định cụ thể các phóng viên địa phương về giáo dục và các hoạt động.**
+**2. Identify specific local reporters that cover education or local events.**
 
-Nghĩ ra một tờ báo địa phương, một bản tin phát thanh hoặc các bài viết chia sẻ.
+Think a local newspaper, TV station, radio station or blog.
 
-Tìm kiếm trên mạng các phóng viên và thông tin để liên lạc với họ. Nếu bạn không tìm được, hãy nhờ tới mọi người xung quanh, hoặc gửi email tới những tổ chức về truyền thông để nhờ sự giúp đỡ.
+Look online to find reporter contact information. If you can't find it, call the publication to ask, or email a general tips@PUBLICATIONNAME.com email address and ask for your message to be directed to the correct reporter.
 
-**3. liên hệ báo chí địa phương**
+**3. Contact local media**
 
-Cách tốt nhất để tiếp cận là bằng email. Nó nên ngắn gọn và mang tính xã giao: tại sao những người khác quan tâm tới sự kiện này? Bao gồm thông tin liên lạc (bao gồm cả một số điện thoại di động) cho những ai ở trên trang web tại sự kiện này. **See a [sample pitch to media](<%= hoc_uri('/resources#sample-emails') %>):**
+The best way to reach out is by email. It should be short and communicate: why should other people care about this event? Include contact information (including a cellphone number) for who will be on site at the event. **See a [sample pitch to media](<%= hoc_uri('/resources#sample-emails') %>):**
 
-**4. chuẩn bị các câu hỏi về sự kiện tại trường của bạn. Dưới đây là một số ví dụ:**
+**4. Prepare to field questions about your school event. Here are some examples:**
 
-*Tại sao trường học của bạn tổ chức Hour of Code?*
+*Why is your school doing an Hour of Code?*
 
-Trong khi tất cả chúng ta biết rằng nó là quan trọng cho học sinh để học sinh biết cách điều khiển công nghệ ngày này, nhiều giáo viên không có kinh nghiệm trong khoa học máy tính và không biết bắt đầu từ đâu. Sự kiện này là một cơ hội cho tất cả chúng ta để chúng ta tìm hiểu về khoa học máy tính.
+While all of us know that it’s important for students to learn how to navigate today’s tech-saturated world, many teachers aren’t experienced in computer science and don’t know where to start. This event is a chance for all of us to see what computer science is about.
 
-Chúng tôi hy vọng nó sẽ tia lửa thắp nên sự ham mê học tập cho học sinh. Nghiên cứu cũng cho thấy rằng trẻ em tiếp nhận các khái niệm lập trình trước khi họ biết làm thế nào để đọc và viết. Trong thực tế, bộ não của chúng dễ tiếp nhận ngôn ngữ máy tính khi còn trẻ , giống như chúng học tiếng mẻ đẻ.
+We hope it’ll spark interest in students to keep learning. Research also shows that kids pick up programming concepts before they know how to read and write. In fact, their brains are more receptive to computer languages at a young age, just like foreign languages.
 
-*Tại sao điều này quan trọng?*
+*Why is this important?*
 
-Tại Trung Quốc, mỗi sinh viên tham khóa khóa học khoa học máy tính để tốt nghiệp cấp 3. Ở Mỹ, 90 phần trăm các trường thậm chí không dạy cho về nó. Đây là lúc để chúgn tôi bắt kịp với thể kỷ 21. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them the confidence and know-how to succeed.
+In China, every students takes computer science to graduate high school. In the U.S., 90 percent of schools don’t even teach it. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them the confidence and know-how to succeed.
 
-**Chi tiết bạn có thể xem thêm trong các tài liệu**
+**More details and a quote you can use in materials**
 
-Hadi Partovi, người sáng lập và CEO của Code.org nói rằng "Hour of Code được thiết kế để làm sáng tỏ những đoạn mã và cho thấy rằng khoa học máy tính không phải là khoa học mũi nhọn, bất cứ ai có thể tìm hiểu những điều cơ bản," . "Trong một tuần của năm ngoái, 15 triệu sinh đã tham gia hour of code. Bây giờ chúng tôi đang nhắm đến 100 triệu người trên toàn thế giới để chứng minh rằng nhu cầu giáo dục khoa học máy tính cho thế kỷ 21 là không có giới hạn."
+"The Hour of Code is designed to demystify code and show that computer science is not rocket-science, anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "In one week last year, 15 million students tried an Hour of Code. Now we're aiming for 100 million worldwide to prove that the demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
 
-**Thông tin về Code.org**
+**About Code.org**
 
-Code.org® là một tổ chức phi lợi nhuận được chỉ định để mở rộng sự tham gia trong khoa học máy tính và gia tăng sự tham gia của phụ nữ trong lĩnh vực nghiên cứu khoa học máy tính. Tầm nhìn của nó là mỗi học sinh trong tất cả các trường nên có cơ hội để học lập trình máy tính. Sau khi phát động vào năm 2013, Code.org tổ chức chiến dịch Hour of Code cũng giới thiệu hàng triệu sinh viên cho khoa học máy tính-hợp tác với hơn 30 khu vực trên toàn quốc, thành lập Codr Studio, một nền tảng mã nguồn mở, trực tuyến học cho mọi lứa tuổi. For more information, please visit: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
+Code.org® is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign — which has introduced millions of students to computer science — partnered with more than 30 public school districts nationwide, and launched Code Studio, an open-source, online learning platform for all ages. For more information, please visit: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
 Find more resources and sample emails [here](<%= hoc_uri('/resources') %>).
+
+<a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>

@@ -14,7 +14,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Takk for at du meldte deg på som vert for Kodetimen!
 
-**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](<%= hoc_uri('/prizes') %>)
+**HVER** arrangør av Kodetimen får 10 GB lagringsplass i Dropbox eller Skype-kreditt til en verdi av 10 dollar som takk. [ Detaljer](<%= hoc_uri('/prizes') %>)
 
 <% if @country == 'us' %>
 
@@ -22,7 +22,7 @@ Get your [whole school to participate](<%= hoc_uri('/prizes') %>) for a chance f
 
 <% end %>
 
-## 1. Spre ordet
+## 1. Spre budskapet
 
 Fortell vennene dine om #Kodetimen.
 

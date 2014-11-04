@@ -8,7 +8,7 @@ layout: wide
 
 **Ya ha finalizado el plazo para enviar un tutorial a consideración para la Hora de Programación 2014. Sin embargo, aún puedes proponer uno y trataremos de revisarlo si el tiempo lo permite.**
 
-Code.org will host a variety of Hour of Code activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= codeorg_url() %>](http://<%= codeorg_url() %>/learn).
+Code.org realizará una gran variedad de actividades de la Hora de Programación en las página(s) web de Code.org, de la Hora de la Programación y CSEdWeek. La lista actual está en [<%= codeorg_url() %>](http://<%= codeorg_url() %>/learn).
 
 Nos gustaría ofrecer una amplia variedad de opciones atractivas, pero el objetivo principal es optimizar la experiencia de los estudiantes y profesores que son nuevos en las Ciencias de la Computación. Por favor usa este documento como guía para la creación de tu actividad, diseñada para usuarios sin experiencia alguna en programación ni Ciencias de la Computación.
 
@@ -61,13 +61,13 @@ Un comité de educadores en Ciencias de la Computación evaluarán las propuesta
   * se centran solamente en diseño web HTML+CSS
   * se envían después de la fecha límite, o con información incompleta (vea más abajo)
 
-La meta última de la campaña de una Hora de Programación es ampliar la participación en Ciencias de Computación por parte de maestros y estudiantes, y además demostrar que las Ciencias de Computacion son accesibles a todos y "más fáciles de lo que crees". Desde varios puntos de vista, esta meta se alcanza de mejor manera ofreciendo a estudiantes y maestros menos opciones y más simples, concentrándose en las opciones de más alta calidad para un usuario nuevo.
+La principal meta de la campaña de la Hora de Programación es ampliar la participación en Ciencias de Computación por parte de maestros y estudiantes, y además demostrar que las Ciencias de Computacion son accesibles a todos y "más fáciles de lo que crees". Desde varios puntos de vista, ésta meta se alcanza de mejor manera ofreciendo a los estudiantes y maestros menos opciones y más simples, concentrándose en las opciones de más alta calidad para un usuario nuevo.
 
-Note also, that the 2013 CSEdWeek was a fantastic success as measured by the responses from teachers and students - 20M participants from Dec 9 - 23, and 97% said they enjoyed it and want to repeat the campaign!!
+Ten en cuenta también, que la Semana de Educación en Ciencias Computacionales del 2013 tuvo un éxito sorprendente, de acuerdo a las respuestas de estudiantes y maestros - 20 millones de participantes del 9 al 23 de diciembre, ¡y 97% de ellos dijeron que lo disfrutaron y que quieren repetir la experiencia!!
 
-As a result, the existing listings are certainly “good enough,” and the driving reason to add tutorials to the Hour of Code listings isn’t to broaden the choices, but to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2014 campaign.
+Como resultado, los listados actuales están "suficientemente bien", y la razón para agregar más tutorías a los listados de la Hora de Programación no es ampliar las opciones, sino elevar la calidad (o novedad) para los estudiantes, o expandir las opciones para los que no hablan inglés, debido a la naturaleza global de la campaña 2014.
 
-[**Back to the top**](#top)
+[**Volver al principio**](#top)
 
 <a id="guidelines"></a>
 
@@ -84,15 +84,15 @@ As a result, the existing listings are certainly “good enough,” and the driv
       * **Bien, pero no preferidos:** instalación de app, aplicación de escritorio, o experiencias con juegos de consola.
   * **Formato:** Tutorías o lecciones autodirigidas, opcionalmente facilitadas por el profesor. Deben haber instrucciones para los estudiantes en lugar de un reto abierto de una hora. Idealmente, las instrucciones y las tutorías están integradas directamente en la plataforma de programación, para evitar intercambio de pestañas o ventanas entre la tutoría y la plataforma de programación.
 
-[**Back to the top**](#top)
+[**Volver al principio**](#top)
 
 <a id="submit"></a>
 
 ## ¿Cómo enviar? (Fecha límite 10/1/2014)
 
-Visit the [Hour of Code Activity Submission page](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform) and follow the steps to submit your tutorial.
+Visita la [página de envío de actividades para la Hora de Programación](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform) y sigue los pasos ahí indicados para enviar tu tutorial.
 
-**What you’ll need:**
+**Necesitas:**
 
   * Tu nombre, logo (jpg, png, etc.)
   * URL para una imagen de pantalla o de marketing de la actividad de la Hora de Programación. Las imágenes deben tener una resolución de 446 x 335 exactamente. Si no se proporciona una imagen adecuada, podremos tomar una de tu tutoría O podremos NO incluirla.
@@ -140,7 +140,7 @@ Visit the [Hour of Code Activity Submission page](https://docs.google.com/a/code
       * Para las actividades fuera de línea 
           * Número de descargas de la versión en papel de la actividad (si corresponde)
 
-[**Back to the top**](#top)
+[**Volver al principio**](#top)
 
 <a id="design"></a>
 
@@ -181,7 +181,7 @@ Benefits of Pair Programming:
   * Mostrar que la codificación no es una actividad individual, sino que involucra la interacción social
   * No todas las aulas o laboratorios tienen suficientes computadoras para una experiencia de 1:1
 
-[**Back to the top**](#top)
+[**Volver al principio**](#top)
 
 <a id="tm"></a>
 
@@ -199,13 +199,13 @@ One piece of this is to protect the trademark "Hour of Code" to prevent confusio
 
   4. No usar la marca "Hora de Programación" o "Hour Of Code" en inglés en nombres de apps
 
-[**Back to the top**](#top)
+[**Volver al principio**](#top)
 
 <a id="pixel"></a>
 
 ## Rastrear un Pixel
 
-In order to more accurately track participation we ask every third party tutorial partners to include 1-pixel tracking images on the first and last page of their Hour of Code tutorials (A starting pixel-image on the start page and a final pixel-image on the end page. And not on interim pages).
+Para rastrear con más precisión la participación le pedimos a cada socio que hace tutoriales incluir una imagen de 1 pixel en la primera y ultima hoja de sus tutoriales de Hora de Programación (Una imagen de un pixel al inicio y una imagen de un pixel en la página final. No en páginas intermedias).
 
 This will allow us to count users who you directly recruit to visit your website to do their Hour of Code, or users who visit when a teacher types your URL directly on their whiteboard. It will lead to more accurate participation counts for your tutorial, which will help you attract users. If you integrate the pixel at the end it will also allow us to measure tutorial completion rates.
 
@@ -219,13 +219,13 @@ IMG SRC="http://code.org/api/hour/begin_appinventor.png/"
 
 IMG SRC="http://code.org/api/hour/finish_appinventor.png/"
 
-[**Back to the top**](#top)
+[**Volver al principio**](#top)
 
 <a id="promote"></a>
 
 ## Promocionar tus tutoriales, CSEdWeek, y Hora de Programación
 
-We are asking everyone to promote their own 1-hour tutorial to your users. Please direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your tutorial. Use the international Hour of Code campaign for Computer Science Education Week as an excuse to encourage users to invite others to join in, help us reach 100 million total participants.
+Pedimos a todos que promocionen sus tutorías de 1 hora con todos sus usuarios. Por favor dirigelos a tu página de la Hora de Programación. Es mucho más probable que tus usuarios reaccionen a un mensaje tuyo acerca de tu tutoría. Usa la campaña internacional de la Hora de Programación para la Semana de Educación en Ciencias de Computación como una excusa para animar a usuarios a invitar a otros a unirse, para alcanzar un total de 100 millones de participantes.
 
   * Presenta la Hour fo Code y la SCEdWeek en tu página web.   
     Ej.: <http://www.tynker.com/hour-of-code>
@@ -233,12 +233,12 @@ We are asking everyone to promote their own 1-hour tutorial to your users. Pleas
   * Sé el anfitrión de un evento local o pídele a tus empleados que organicen un evento en escuelas locales o grupos comunitarios.
   * Consulta nuestro kit de recursos para más información (próximamente).
 
-[**Back to the top**](#top)
+[**Volver al principio**](#top)
 
 <a id="disabilities"></a>
 
 ## Una nota especial para estudiantes con discapacidades
 
-If you create a tutorial that is designed for the vision-impaired, we’d love to highlight it for viewers with screen-readers. We have not yet received such a tutorial, and would be eager to include one as an option for these students.
+Si haz creado una tutoría orientada a estudiantes con visión deteriorada, nos gustaría resaltarlo para estudiantes con lectores de pantalla. Aún no hemos recibido este tipo de tutoría, y nos encantaría incluirlo como una opción para éstos estudiantes.
 
-[**Back to the top**](#top)
+[**Volver al principio**](#top)

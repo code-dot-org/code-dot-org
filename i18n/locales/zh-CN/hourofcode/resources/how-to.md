@@ -4,7 +4,15 @@
 
 * * *
 
-# 如何教授编程一小时
+<div class="row">
+  <h1 class="col-sm-6">
+    How to teach one Hour of Code
+  </h1>
+  
+  <div class="col-sm-6 button-container centered">
+    <a href="/#join"><button class="signup-button">Sign up your event</button></a>
+  </div>
+</div>
 
 ## 试用教程
 
@@ -30,45 +38,45 @@
   * 没有足够的设备？采用配对编程。 学生之间搭档之后，他们会互相帮助并减少对老师的依赖。 他们也将明白计算机科学是一种社交和协作。
   * 宽带较低？可计划在全班面前进行视频演示，这样就不是每个学生都在各自下载视屏，或或尝试不插电/离线教程。
 
-## 4) Inspire students - show them a video
+## 4) 鼓励学生-向他们展示视频
 
-Show students an inspirational video to kick off the Hour of Code. Examples:
+向学生们展示鼓舞人心的视频以此揭开编程一小时的序幕，例如：
 
-  * The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
-  * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [Hour of Code 2014 video](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
-  * [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+  * Code.org推出的原始视频有比尔·盖茨，马克·扎克伯格和NBA球星克里斯 - 波什（它们分别为[1分钟](https://www.youtube.com/watch?v=qYZF6oIZtfc)，[5分钟](https://www.youtube.com/watch?v=nKIu9yen5nc)和[9分钟](https://www.youtube.com/watch?v=dU1xS07N-FA)版本）
+  * 编程一小时2013发布视频，或编程一小时2014发布视频，编程一小时2014视频 <% end %>
+  * [奥巴马总统号召所有对的学生学习计算机科学](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**Get your students excited - give them a short intro**
+**激发你的学生-给他们做一个简短的介绍**
 
-Most kids don’t know what computer science is. Here are some ideas:
+大多数的孩子不知道什么是计算机科学，以下是一些建议：
 
-  * Explain it in a simple way that includes examples of applications that both boys and girls will care about (saving lives, helping people, connecting people, etc.).
-  * Try: "Think about things in your everyday life that use computer science: a cell phone, a microwave, a computer, a traffic light… all of these things needed a computer scientist to help build them.”
-  * Or: “Computer science is the art of blending human ideas and digital tools to increase our power. Computer scientists work in so many different areas: writing apps for phones, curing diseases, creating animated movies, working on social media, building robots that explore other planets and so much more."
-  * See tips for getting girls interested in computer science [here](http://<%= codeorg_url() %>/girls). 
+  * 可用一些简单的方法来解释，比如男孩儿们和女孩儿们都感兴趣的应用实例（拯救生命，帮助别人，人的联系，等等）
+  * 尝试：“想象一下你们每天日常生活中用到计算机的场景：一部手机，一个软件，一台电脑，一盏红绿灯……所有这些都需要计算机科学家来将他们组建。”
+  * 或者：“计算机科学是融合人类理念和数字化工具的艺术，从而增加我们的力量。 计算机科学家在很多不同的领域工作：编写手机应用程序，治疗疾病，创建动画电影，从事社交媒体，建造机器人探索其它行星等等。”
+  * 帮助女孩对计算机科学感兴趣的小贴士见这里. 
 
-## 5) Start your Hour of Code
+## 5)开始你的编程一小时
 
-**Direct students to the activity**
+**让学生直接参与活动**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](http://<%= codeorg_url() %>/learn) under the number of participants. [hourofcode.com/co](http://hourofcode.com/co)
-  * Tell students to visit the URL and start the tutorial.
+  * 在白板上写下教程链接 查找根据参加人数你所选教程列出的资料链接 hourofcode.com/co
+  * 告诉学生访问此URL，并启动教程。
 
-**When your students come across difficulties**
+**当你的学生遇到困难**
 
-  * Tell students, “Ask 3 then me.” Ask 3 classmates, and if they don’t have the answer, then ask the teacher.
-  * Encourage students and offer positive reinforcement: “You’re doing great, so keep trying.”
-  * It’s okay to respond: “I don’t know. Let’s figure this out together.” If you can’t figure out a problem, use it as a good learning lesson for the class: “Technology doesn’t always work out the way we want. Together, we’re a community of learners.” And: “Learning to program is like learning a new language; you won’t be fluent right away.“
+  * 告诉学生们“问过3人之后再问我”，如果问过3个同学仍然没有答案再来问老师。
+  * 鼓励学生，并给出正面激励：“你做的很好，继续努力。”
+  * 也可以回答：“我不知道。 让我们一起找出答案。”如果你弄不清楚一个程序，可以把它当作一个对全班来说很好的学习课程。：“技术并不总是以我们希望的方式工作。 大家一起，我们是一个学习的集体。”而且：“学习编程就像学习一门新的语言，你不可能马上就说得很流利。”
 
-**What to do if a student finishes early?**
+**如果学生提早完成应该做什么？**
 
-  * Students can see all tutorials and try another Hour of Code activity at [<%= codeorg_url() %>/learn](http://<%= codeorg_url() %>/learn)
-  * Or, ask students who finish early to help classmates who are having trouble with the activity.
+  * 学生们可以观看所有的教程并尝试其他的编程一小时活动。
+  * 或者可以让提早完成的学生去帮助那些在活动中遇到困难的同学。
 
-**How do I print certificates for my students?**
+**如何为我的学生打印证书？**
 
-Each student gets a chance to get a certificate via email when they finish the [Code.org tutorials](http://studio.code.org). You can click on the certificate to print it. However, if you want to make new certificates for your students, visit our [Certificates](http://<%= codeorg_url() %>/certificates) page to print as many certificates as you like, in one fell swoop!
+当每个学生完成Code.org 教程时，都有机会通过电子邮件获得一个证书当。 你可以点击证书并打印。 但是，如果你想为你的学生制作新证书，可以访问我们的证书页面，一举打印所有你喜欢的证书！
 
-**What comes after the Hour of Code?**
+**编程一小时之后做什么？**
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %>
+编程一小时只是详细学习科技如何工作和如何制造应用软件过程中的第一步。 编程一小时只是详细学习科技如何工作和如何制造应用软件过程中的第一步。 为了继续这段旅程，鼓励您的孩子在网上学习。 为了继续这段旅程，在这里查找更多的教育资源。 或鼓励您的孩子在线学习。 <% end %> <a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>

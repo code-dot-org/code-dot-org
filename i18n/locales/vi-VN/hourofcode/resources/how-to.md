@@ -4,7 +4,15 @@ tiêu đề : Tài liệu Khung nhìn : rộng
 
 * * *
 
-# Làm thế nào để dạy một Hour of Code
+<div class="row">
+  <h1 class="col-sm-6">
+    How to teach one Hour of Code
+  </h1>
+  
+  <div class="col-sm-6 button-container centered">
+    <a href="/#join"><button class="signup-button">Sign up your event</button></a>
+  </div>
+</div>
 
 ## 1) Thử thực hành các khóa học:
 
@@ -71,4 +79,4 @@ Mỗi học sinh có cơ hội nhận chứng chỉ qua email khi họ kết th�
 
 **Tiếp theo Hour of Code sẽ là gì?**
 
-Hour of Code chỉ là bước đầu tiên trong hành trình tìm hiểu về cách thức hoạt động của công nghệ và cách tạo ra ứng dụng phần mềm. < % if @country == 'vi' %> Hour of Code chỉ là bước đầu tiên vào một cuộc hành trình để tìm hiểu thêm về cách hoạt động của công nghệ và làm thế nào để tạo các ứng dụng phần mềm. Để tiếp tục cuộc hành trình này, [khuyến khích những đứa trẻ của bạn học tập trực tuyến](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %>
+Hour of Code chỉ là bước đầu tiên trong hành trình tìm hiểu về cách thức hoạt động của công nghệ và cách tạo ra ứng dụng phần mềm. < % if @country == 'vi' %> Hour of Code chỉ là bước đầu tiên vào một cuộc hành trình để tìm hiểu thêm về cách hoạt động của công nghệ và làm thế nào để tạo các ứng dụng phần mềm. Để tiếp tục cuộc hành trình này, [khuyến khích những đứa trẻ của bạn học tập trực tuyến](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %> <a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>

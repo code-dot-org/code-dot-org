@@ -553,9 +553,9 @@
           BELOW (НИЖЧЕ)"
         maze_wordsearch_k_20: "Це перевірка! Переміщуйте мене в різні сторони, щоб
           написати слово STORY (ІСТОРІЯ)"
-        webapp_ec_simple: Create your web app by using createHtmlBlock.
-        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
-          it in the new "penColour" block.'
+        webapp_ec_simple: "Створити свій веб-додаток за допомогою createHtmlBlock."
+        turtle_ec_1_2: 'Тепер намалюйте квадрат. Примітка: використайте свій улюблений
+          колір, вибравши його у новому блоці "penColour".'
     video:
       name:
         maze_intro: "Вступ до лабіринту"
