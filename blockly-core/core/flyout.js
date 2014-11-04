@@ -629,12 +629,12 @@ Blockly.Flyout.prototype.createBlockFunc_ = function(originBlock) {
     if (!svgRootOld) {
       throw 'originBlock is not rendered.';
     }
-    var xyOld = Blockly.getSvgXY_(svgRootOld);
+    var xyOld = Blockly.getSvgXY_(svgRootOld, originBlock.blockSpace.blockSpaceEditor.svg_);
     var svgRootNew = block.getSvgRoot();
     if (!svgRootNew) {
       throw 'block is not rendered.';
     }
-    var xyNew = Blockly.getSvgXY_(svgRootNew);
+    var xyNew = Blockly.getSvgXY_(svgRootNew, block.blockSpace.blockSpaceEditor.svg_);
     block.moveBy(xyOld.x - xyNew.x, xyOld.y - xyNew.y);
     if (flyout.autoClose) {
       flyout.hide();

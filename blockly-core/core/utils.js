@@ -243,13 +243,15 @@ Blockly.getRelativeXY_ = function(element) {
  * Return the absolute coordinates of the top-left corner of this element.
  * The origin (0,0) is the top-left corner of the Blockly svg.
  * @param {!Element} element Element to find the coordinates of.
+ * @param {Element=} opt_svgParent optional parent <svg> element, otherwise
+ *    `element`'s parents will be searched
  * @return {!Object} Object with .x and .y properties.
  * @private
  */
-Blockly.getSvgXY_ = function(element) {
+Blockly.getSvgXY_ = function(element, opt_svgParent) {
   var x = 0;
   var y = 0;
-  var topMostSVG = Blockly.topMostSVGParent(element);
+  var topMostSVG = opt_svgParent || Blockly.topMostSVGParent(element);
   do {
     // Loop through this block and every parent.
     var xy = Blockly.getRelativeXY_(element);
@@ -264,18 +266,20 @@ Blockly.getSvgXY_ = function(element) {
  * Return the absolute coordinates of the top-left corner of this element.
  * The origin (0,0) is the top-left corner of the page body.
  * @param {!Element} element Element to find the coordinates of.
+ * @param {Element=} opt_svgParent optional parent <svg> element, otherwise
+ *    `element`'s parents will be searched
  * @return {!Object} Object with .x and .y properties.
  * @private
  */
-Blockly.getAbsoluteXY_ = function(element) {
-  var xy = Blockly.getSvgXY_(element);
-  return Blockly.convertCoordinates(xy.x, xy.y, Blockly.topMostSVGParent(element), false);
+Blockly.getAbsoluteXY_ = function(element, opt_svgParent) {
+  var xy = Blockly.getSvgXY_(element, opt_svgParent);
+  return Blockly.convertCoordinates(xy.x, xy.y, opt_svgParent || Blockly.topMostSVGParent(element), false);
 };
 
 /**
  * Find top-most SVG element the given element is a child of
  * @param {!Element} element Element to find the coordinates of.
- * @return {!Element|null} topmost SVG element, if one exists
+ * @return {!Element} topmost SVG element, if one exists, or the main editor SVG
  */
 Blockly.topMostSVGParent = function(element) {
   var topMostSVG = null;
@@ -366,11 +370,15 @@ Blockly.convertCoordinates = function(x, y, svg, toSvg) {
  * Return the converted coordinates of the given mouse event.
  * The origin (0,0) is the top-left corner of the Blockly svg.
  * @param {!Event} e Mouse event.
+ * @param {Element=} opt_svgParent optional parent <svg> element, otherwise
+ *    `element`'s parents will be searched
  * @return {!Object} Object with .x and .y properties.
  */
-Blockly.mouseToSvg = function(e) {
-  return Blockly.convertCoordinates(e.clientX + window.pageXOffset,
-    e.clientY + window.pageYOffset, Blockly.topMostSVGParent(e.target), true);
+Blockly.mouseToSvg = function(e, opt_svgParent) {
+  return Blockly.convertCoordinates(
+      e.clientX + window.pageXOffset,
+      e.clientY + window.pageYOffset,
+      opt_svgParent || Blockly.topMostSVGParent(e.target), true);
 };
 
 /**
