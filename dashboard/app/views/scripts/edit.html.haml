@@ -1,5 +1,4 @@
-%h3= t('landing.prerelease')
-%h1 Editing script #{@script.name}
+%h1= @page_title = "Editing script #{@script.name}"
 %h3 Note: to rename stages, for now, ask an engineer to change the name in the localization file rather than changing it in this form
 = render 'form'
 = link_to t('crud.show'), @script

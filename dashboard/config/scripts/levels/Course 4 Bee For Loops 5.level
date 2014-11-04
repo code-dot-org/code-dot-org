@@ -1,0 +1,81 @@
+<Karel>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2014-10-20T22:46:25.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "bee",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,2,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,2,0,0,0,0],[0,0,0,3,0,0,0,0],[0,0,0,4,0,0,0,0],[0,0,0,5,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "is_k1": "false",
+    "skip_instructions_popup": "true",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "true",
+    "start_direction": "2",
+    "step_mode": "0",
+    "flower_type": "redWithNectar",
+    "nectar_goal": "15",
+    "ideal": "9",
+    "instructions": "Ah, the for loop could make this much easier! You can use the variable \"i\" to loop the \"get nectar\" block the same number of times as the loop has been run!",
+    "maze_data": null
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_for" inline="true" deletable="false" movable="false" editable="false">
+              <title name="VAR">i</title>
+              <value name="FROM">
+                <block type="math_number" deletable="false" movable="false" editable="false">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+              <value name="TO">
+                <block type="math_number" deletable="false" movable="false" editable="false">
+                  <title name="NUM">5</title>
+                </block>
+              </value>
+              <value name="BY">
+                <block type="math_number" deletable="false" movable="false" editable="false">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_move">
+          <title name="DIR">moveForward</title>
+        </block>
+        <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+            <block type="variables_get">
+              <title name="VAR">i</title>
+            </block>
+          </value>
+          <statement name="DO">
+            <block type="maze_nectar"/>
+          </statement>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+            <block type="variables_get">
+              <title name="VAR">i</title>
+            </block>
+          </value>
+        </block>
+      </xml>
+    </required_blocks>
+  </blocks>
+</Karel>
