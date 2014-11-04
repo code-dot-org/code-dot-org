@@ -538,6 +538,13 @@ html, body {
       text-align: center;
       display: inline-block;
     }
+
+    .level_link.unplugged_level {
+      font-size: 12px;
+      padding-left: 10px;
+      padding-right: 10px;
+      width: auto;
+    }
   }
 
   /* all others are small dot */
@@ -572,12 +579,6 @@ html, body {
     color: white !important;
   }
 
-  .level_link.unplugged_level {
-    font-size: 12px;
-    padding-left: 10px;
-    padding-right: 10px;
-    width: auto;
-  }
 }
 
 
