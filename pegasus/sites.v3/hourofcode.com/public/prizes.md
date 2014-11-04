@@ -4,11 +4,10 @@ layout: wide
 ---
 <div class="row">
     <h1 class="col-sm-6">The Hour of Code — prizes for every organizer</h1>
-    <div class="col-sm-6" style="text-align:right">
-        <a href="/#join"><button style="float: right; margin-top: 50px">Sign up your event</button></a>
+    <div class="col-sm-6 button-container centered">
+        <a href="/#join"><button class="signup-button">Sign up your event</button></a>
     </div>
 </div>
-
 ## Every organizer wins a thank you gift-code
 Every educator who hosts an Hour of Code for students will receive 10 GB of Dropbox space or $10 Skype credit as a thank you gift!
 
