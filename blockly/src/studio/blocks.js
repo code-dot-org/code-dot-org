@@ -7,7 +7,7 @@
 'use strict';
 
 var msg = require('../../locale/current/studio');
-var mathBlocks = require('../mathBlocks');
+var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
 var commonMsg = require('../../locale/current/common');
 var codegen = require('../codegen');
 var installFunctionalApiCallBlock = require('../functionalBlockUtils').installFunctionalApiCallBlock;
@@ -1471,7 +1471,7 @@ exports.install = function(blockly, blockInstallOptions) {
   });
 
   // install number and string
-  mathBlocks.install(blockly, generator);
+  sharedFunctionalBlocks.install(blockly, generator);
 };
 
 function installVanish(blockly, generator, spriteNumberTextDropdown, startingSpriteImageDropdown, blockInstallOptions) {
