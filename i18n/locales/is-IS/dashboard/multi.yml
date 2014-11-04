@@ -106,7 +106,7 @@ is:
       2-3 Conditionals Multi 1:
         Multiple Choice: Valspurningar
         /script_assets/2-3_images/unplugged/conditionals_1_q.png: /script_assets/2-3_images/unplugged/conditionals_1_q.png
-        According to the rules of the game, which set of cards is scored correctly?: According to the rules of the game, which set of cards is scored correctly?
+        According to the rules of the game, which set of cards is scored correctly?: Hvaða spjöld eru rétt skoruð ef miðað er við reglur leiksins?
         /script_assets/2-3_images/unplugged/conditionals_1_a1.png: /script_assets/2-3_images/unplugged/conditionals_1_a1.png
         /script_assets/2-3_images/unplugged/conditionals_1_a2.png: /script_assets/2-3_images/unplugged/conditionals_1_a2.png
         /script_assets/2-3_images/unplugged/conditionals_1_a3.png: /script_assets/2-3_images/unplugged/conditionals_1_a3.png
@@ -528,3 +528,9 @@ is:
         Martha Washington: Martha Washington
         George Washington: George Washington
         George Jetson: George Jetson
+      unique level name here:
+        title: titill
+        description here: description here
+        Question: Question
+        wrong answer: wrong answer
+        right answer: right answer

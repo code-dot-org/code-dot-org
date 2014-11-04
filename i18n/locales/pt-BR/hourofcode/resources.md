@@ -4,7 +4,15 @@ title: Recursos layout: amplo nav: resources_nav
 
 * * *
 
-# Recursos
+<div class="row">
+  <h1 class="col-sm-6">
+    Recursos
+  </h1>
+  
+  <div class="col-sm-6 button-container centered">
+    <a href="/#join"><button class="signup-button">Sign up your event</button></a>
+  </div>
+</div>
 
 ## Está organizando um evento da Hora do Código? [Veja este guia prático](<%= hoc_uri('/resources/how-to') %>)
 
@@ -36,14 +44,14 @@ title: Recursos layout: amplo nav: resources_nav
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>O que a maioria das escolas não ensina (5 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
+      <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>What Most Schools Don't Teach (5 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>Hora do Código está aqui - Qualquer um pode aprender</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
+      <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>Hour of Code is Here - Anybody Can Learn</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
@@ -53,14 +61,14 @@ title: Recursos layout: amplo nav: resources_nav
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>Presidente Obama fala sobre ciência da computação</strong></a>
+      <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>President Obama on computer science</strong></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>Qualquer um pode aprender (1 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
+      <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>Anybody Can Learn (1 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
@@ -102,6 +110,22 @@ title: Recursos layout: amplo nav: resources_nav
     </p>
     
     <p>
+      <a id="social"></a>
+    </p>
+    
+    <h2>
+      Publique-os em mídias sociais
+    </h2>
+    
+    <p>
+      <a href="/images/social-1.jpg"><img src="/images/fit-250/social-1.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-2.jpg"><img src="/images/fit-250/social-2.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-3.jpg"><img src="/images/fit-250/social-3.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    
+    <p>
+      <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    
+    <p>
       <a id="sample-emails"></a>
     </p>
     
@@ -122,7 +146,7 @@ title: Recursos layout: amplo nav: resources_nav
     </p>
     
     <p>
-      A ciência da computação estava nas páginas iniciais da Google, MSN, Yahoo! e Disney. Os vídeos do presidente Obama, Shakira e Ashton Kutcher abriram a Hora do Código. Mais de 100 parceiros se uniram para apoiar este movimento.
+      A ciência da computação estava nas páginas iniciais da Google, MSN, Yahoo! e Disney. Os vídeos do presidente Obama, Shakira e Ashton Kutcher abriram a Hora do Código, e mais de 100 parceiros se uniram para apoiar este movimento.
     </p>
     
     <p>
@@ -154,15 +178,15 @@ title: Recursos layout: amplo nav: resources_nav
     </p>
     
     <p>
-      Em uma semana, 15 milhões de estudantes entraram em contato com a ciência da computação! A ciência da computação estava nas páginas iniciais da Google, MSN, Yahoo! e Disney. Os vídeos do presidente Obama, Shakira e Ashton Kutcher abriram a Hora do Código. Mais de 100 parceiros se uniram para apoiar este movimento.
+      No ano passado, em apenas uma semana, 15 milhões de estudantes entraram em contato com a ciência da computação! A ciência da computação estava nas páginas iniciais da Google, MSN, Yahoo! e Disney. Os vídeos do presidente Obama, Shakira e Ashton Kutcher abriram a Hora do Código, e mais de 100 parceiros se uniram para apoiar este movimento.
     </p>
     
     <p>
-      Agora, a Hora do Código quer chegar a 100 milhões de estudantes.
+      Agora o movimento da Hora do Código pretende alcançar 100 milhões de estudantes.
     </p>
     
     <p>
-      Por isso, de 8 a 14 de dezembro, os [X número] alunos da [NOME DA ESCOLA] estarão participando do maior evento de aprendizagem da história: a Hora do Código.
+      Por isso, de 8 a 14 de dezembro, os [X número] alunos da [NOME DA ESCOLA] participarão do maior evento de aprendizagem da história: a Hora do Código.
     </p>
     
     <p>
@@ -238,7 +262,7 @@ title: Recursos layout: amplo nav: resources_nav
     </h2>
     
     <p>
-      Caro [nome do Prefeito / Secretário / Governador / Senador]:
+      Caro [nome do Prefeito/Secretário/Governador/Senador]:
     </p>
     
     <p>
@@ -259,4 +283,8 @@ title: Recursos layout: amplo nav: resources_nav
     
     <p>
       Atenciosamente, [NOME], [CARGO]
+    </p>
+    
+    <p>
+      <a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>
     </p>

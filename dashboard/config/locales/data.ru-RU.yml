@@ -31,7 +31,7 @@
           desc: "Редактировать код (beta)"
           MazeEC: "Этап 1"
         2014 Levels:
-          desc: 2014 Головоломки (beta)
+          desc: "Отскок (бета)"
           Bounce: "Этап 1"
         Builder Levels:
           desc: "Пользовательский редактор пазлов (beta)"
@@ -49,8 +49,9 @@
           desc: "Редактировать код (beta)"
           MazeEC: "Этап 1"
           Webapp: "Этап 2"
+          ArtistEC: "Этап 3"
         events:
-          desc: Bounce (beta)
+          desc: "Отскок (бета)"
           Bounce: "Этап 1"
           Studio: "Этап 2"
         builder:
@@ -66,7 +67,7 @@
           desc: "Лабиринт (бета)"
           MazeStep: Stage Step
         wordsearch:
-          desc: Spelling Bee (beta)
+          desc: "Пишущая пчела (бета)"
           WordSearch: "Этап 1"
     game:
       name:
@@ -98,6 +99,7 @@
         MazeStep: "Лабиринт: Пошаговый режим"
         Wordsearch: Wordsearch
         Webapp: Webapp
+        ArtistEC: "Художник"
     trophy:
       name:
         Bronze: "Бронзовый"
@@ -457,15 +459,14 @@
         jigsaw_11: "Собери картинку из блоков"
         jigsaw_12: "Собери картинку из блоков"
         jigsaw_13: "Собери картинку правильно!"
-        mazestep_1: Maze step description here
-        mazestep_2: Maze step description here
-        mazestep_3: Maze step description here
-        mazestep_4: Maze step description here
-        mazestep_5: Maze step description here
+        mazestep_1: "Описание шага лабиринта здесь"
+        mazestep_2: "Описание шага лабиринта здесь"
+        mazestep_3: "Описание шага лабиринта здесь"
+        mazestep_4: "Описание шага лабиринта здесь"
+        mazestep_5: "Описание шага лабиринта здесь"
         studio_c2_1: "Вы можете заставить собаку сказать «hello world»?"
-        studio_c2_2: Can you make the dog say something and then have the cat say
-          something afterwards?
-        studio_c2_3: Can you write a program to make this dog move to the cat?
+        studio_c2_2: "Ты можешь заставить собаку сказать что-то, и после неё, кошку?"
+        studio_c2_3: "Ты можешь написать программу, чтобы собака двигалась к кошке?"
         studio_c2_4: "Вы можете написать программу, которая заставит собаку подойти
           к кошке, и сказать «hello», когда собака подойдет к нему?"
         studio_c2_5: "Можешь написать программу, чтобы осьминог сказал «Привет», при
@@ -487,7 +488,8 @@
         studio_c3_story_1: "Вы можете заставить собаку сказать «hello world»?"
         studio_c3_story_2: Can you make the dog say something and then have the cat
           say something afterwards?
-        studio_c3_story_3: Can you write a program to make this dog move to the cat?
+        studio_c3_story_3: "Ты можешь написать программу, чтобы собака двигалась к
+          кошке?"
         studio_c3_story_4: "Вы можете написать программу, которая заставит собаку
           подойти к кошке, и сказать «hello», когда собака подойдет к нему?"
         studio_c3_story_5: Can you add a block to make the octopus happy?
@@ -513,7 +515,8 @@
         studio_playlab_1: "Вы можете заставить собаку сказать «hello world»?"
         studio_playlab_2: Can you make the dog say something and then have the cat
           say something afterwards?
-        studio_playlab_3: Can you write a program to make this dog move to the cat?
+        studio_playlab_3: "Ты можешь написать программу, чтобы собака двигалась к
+          кошке?"
         studio_playlab_4: "Вы можете написать программу, которая заставит собаку подойти
           к кошке, и сказать «hello», когда собака подойдет к нему?"
         studio_playlab_5: "Можешь написать программу, чтобы осьминог сказал «Привет»,
@@ -535,7 +538,7 @@
         studio_k1_1: "Вы можете заставить собаку сказать «hello world»?"
         studio_k1_2: Can you make the dog say something and then have the cat say
           something afterwards?
-        studio_k1_3: Can you write a program to make this dog move to the target?
+        studio_k1_3: "Ты можешь написать программу, чтобы собака двигалась к кошке?"
         studio_k1_4: Make the dog move to the cat and the cat say "hello" when he
           gets there.
         studio_k1_5: Can you add a block to make the octopus happy?
@@ -556,6 +559,9 @@
           по буквам BELOW"
         maze_wordsearch_k_20: "Это проверка! Перемести меня в одном направлении, потом
           в другом, по буквам STORY"
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
+          it in the new "penColour" block.'
     video:
       name:
         maze_intro: "Лабиринт - Введение"
@@ -585,20 +591,20 @@
         Unplug11: "Итоги"
         C1_happy_maps_unplugged: Happy Maps
         C1_moveitmoveit_unplugged: Move It, Move It
-        C1_bigevent_unplugged: The Big Event
+        C1_bigevent_unplugged: "Большое Событие"
         C1_getting_loop: "Зацикливание"
         C1_pair_programming: Pair Programming
         C1_maze_intro_sequencing: Maze Sequencing Intro
-        C1_maze_debugging: Maze Debugging
+        C1_maze_debugging: "Лабиринт: Отладка"
         C1_bee_level_intro: Bee Level - Intro
         C1_artist_intro: "Художник - Введение"
-        C1_spelling_bee_intro: Spelling Bee Intro
+        C1_spelling_bee_intro: "Пишущая пчела: Введение"
         C1_zuck_repeat_loop: "Лабиринт: Циклы"
         C1_bee_loops: "Пчела: Циклы"
         C1_maze_loops: "Лабиринт: Циклы"
         C1_playlab_storytelling: "Лаборатория игр: Создай историю"
         C1_planting_seed: Planting a Seed
-        C1_building_foundating: Building a Foundation
+        C1_building_foundating: "Создание основы"
         C2_maze_intro: "Лабиринт - Введение"
         C2_artist_intro: "Художник - Введение"
         C2_zuck_repeat_loop: "Лабиринт: Циклы"
@@ -644,4 +650,4 @@
         set_sprite_image: Attach a "set actor to image" block to the "when story starts"
           block to enable an actor for this story
         studio_say_text: Type what you want your actor to say within these quotes
-        jigsaw_click: Click this block!
+        jigsaw_click: "Нажмите этот блок!"

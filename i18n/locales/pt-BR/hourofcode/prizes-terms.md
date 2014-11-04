@@ -18,16 +18,16 @@ A Code.org entrará em contato com os organizadores após a Hora de Código (8-1
 
 ## Chat com vídeo com um orador convidado
 
-Prêmio limitado apenas às escolas de ensino fundamental e médio dos EUA. Para se qualificar, sua escola inteira deve se cadastrar na Hora do Código até 14 de novembro de 2014. A Code.org selecionará aleatoriamente as escolas vencedoras, determinará um horário para o bate-papo via Web e trabalhará com o professor apropriado para definir os detalhes da tecnologia.
+Prêmio limitado para turmas do ensino fundamental e médio dos EUA e Canadá. Para se qualificar, inscreva sua sala até 14 de novembro de 2014. A Code.org selecionará as turmas vencedoras, fornecerá um horário para o bate-papo on-line e trabalhará com o professor apropriado para definir os detalhes da tecnologia. Não é preciso que a escola toda se inscreva para se qualificar para este prêmio. Tanto escolas públicas como privadas podem concorrer.
 
-## Kits de laptops (ou US$10.000 para outra tecnologia)
+## Conjunto de laptops para sala de aula (ou US$10.000 para outra tecnologia)
 
-Prêmio limitado apenas às escolas públicas de ensino fundamental e médio dos EUA. Por que apenas as escolas públicas? [Veja a resposta aqui](http://www.hourofcode.com/#faq). Para se qualificar, sua escola inteira deve se cadastrar na Hora do Código até 14 de novembro de 2014. Uma escola de cada estado dos EUA receberá um kit de computadores. A Code.org vai selecionar e notificar os vencedores por e-mail em 1 de dezembro de 2014.
+Prêmio limitado apenas às escolas públicas de ensino fundamental e médio dos EUA. Para se qualificar, sua escola inteira deve se inscrever na Hora do Código até 14 de novembro de 2014. Uma escola de cada Estado dos EUA receberá um conjunto de computadores para a sala de aula. A Code.org vai selecionar e notificar os vencedores por e-mail, em 1º de dezembro de 2014.
 
-To clarify, this is not a sweepstakes or a contest involving pure chance.
+Para esclarecer, essa premiação não será feita por sorteio, nem como concurso envolvendo sorte.
 
-1) There is no financial stake or risk involved in applying - any school or classroom may participate, without any payment to Code.org or any other organization
+1) Não há nenhum interesse financeiro ou risco envolvido na inscrição - qualquer escola ou sala de aula pode participar, sem qualquer pagamento para a Code.org ou qualquer outra organização
 
-2) Winners will only be selected among schools where the entire classroom (or school) participates in an Hour of Code, which involves a test of the students' and teachers' collective skill.
+2) Os vencedores serão selecionados somente dentre as escolas em que a sala de aula inteira (ou escola) participar de uma Hora de Código, que envolve um teste de habilidade coletiva dos estudantes e dos professores.
 
 <% end %>

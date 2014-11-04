@@ -1,27 +1,27 @@
 * * *
 
-title: Partners
+タイトル: パートナー
 
 * * *
 
-# Major Partners and Corporate Supporters
+# 主要なパートナーと協賛企業
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 
 * * *
 
-# Hour of Code Promotional partners
+# Hour of Code のプロモーションパートナー
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
 
 * * *
 
-# Tutorial partners
+# チュートリアルのパートナー
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 * * *
 
-# Additional partners
+# その他のパートナー
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>

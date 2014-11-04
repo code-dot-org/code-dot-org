@@ -117,7 +117,7 @@
   "LISTS_IS_EMPTY_HELPURL":"https:\/\/code.google.com\/p\/blockly\/wiki\/Lists#is_empty",
   "LISTS_IS_EMPTY_TITLE":"%1 kosong",
   "LISTS_LENGTH_HELPURL":"https:\/\/code.google.com\/p\/blockly\/wiki\/Lists#length_of",
-  "LISTS_LENGTH_INPUT_LENGTH":"length of",
+  "LISTS_LENGTH_INPUT_LENGTH":"panjang dari",
   "LISTS_LENGTH_TITLE":"panjang dari %1",
   "LISTS_LENGTH_TOOLTIP":"Mengembalikan panjang list.",
   "LISTS_REPEAT_HELPURL":"https:\/\/code.google.com\/p\/blockly\/wiki\/Lists#create_list_with",

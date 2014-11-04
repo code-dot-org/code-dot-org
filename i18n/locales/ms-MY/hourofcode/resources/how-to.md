@@ -4,7 +4,15 @@ title: Resources layout: wide
 
 * * *
 
-# Bagaimana mengajar menggunakan Hour of Code
+<div class="row">
+  <h1 class="col-sm-6">
+    How to teach one Hour of Code
+  </h1>
+  
+  <div class="col-sm-6 button-container centered">
+    <a href="/#join"><button class="signup-button">Sign up your event</button></a>
+  </div>
+</div>
 
 ## 1) Cuba tutorial tersedia:
 
@@ -15,7 +23,7 @@ Kita akan mengendalikan pelbagai tutorial satu jam yang menyeronokkan, untuk pel
   * Memerlukan masa persediaan yang minimum untuk guru
   * Berasaskan pandu diri - membolehkan pelajar untuk berusaha pada kadar dan tahap kemahiran mereka sendiri
 
-[![image](http://code.org/images/tutorials.png)](http://code.org/learn)
+[![](http://<%= codeorg_url() %>/images/tutorials.png)](http://<%=codeorg_url() %>/learn)
 
 ## 2) Rancang perkakasan yang perlu - komputer bukan kemestian
 
@@ -32,39 +40,43 @@ Pengalaman terbaik menggunakan Hour of Code adalah dengan komputer yang dihubung
 
 ## 4) Memberi inspirasi kepada pelajar - tayangkan video kepada mereka
 
-Tayangkan kepada pelajar <% if @country == 'uk' %> [video ini](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [video ini](http://www.youtube.com/watch?v=FC5FbmsH4fw) <% end %> untuk memulakan Hour of Code. Semak juga [video ini](http://youtube.com/codeorg), menampilkan Bill Gates, Mark Zuckerberg, Black Eyed Peas pengasas will.i.am dan bintang NBA Chris Bosh bercakap tentang kepentingan pengaturcaraan. (Terdapat versi [1 minit](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minit](https://www.youtube.com/watch?v=nKIu9yen5nc), dan [9 minit](https://www.youtube.com/watch?v=dU1xS07N-FA))
+Show students an inspirational video to kick off the Hour of Code. Examples:
+
+  * The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
+  * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [Hour of Code 2014 video](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
+  * [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
 **Jadikan pelajar anda teruja - berikan intro pendek**
 
 Kebanyakan anak-anak tidak mengenali sains komputer. Berikut beberapa idea:
 
-  * Terangkan dengan cara yang mudah, termasuk melalui contoh aplikasi yang diambil berat oleh anak-anak lelaki dan perempuan (usaha menyelamatkan nyawa, membantu orang, menghubungkan orang-orang, dan lain-lain).
-  * Cuba: "Fikirkan perkara dalam kehidupan seharian anda yang menggunakan Sains Komputer: telefon bimbit, microwave, komputer, lampu isyarat... semua perkara ini diperlukan seorang saintis komputer untuk membantu membina mereka."
-  * Atau: "sains komputer merupakan seni menggabungkan idea manusia dan peralatan digital untuk meningkatkan kekuatan kita. Ahli-ahli sains komputer bekerja di pelbagai bidang yang berbeza: menulis aplikasi untuk telefon, mengubati penyakit, membuat filem animasi, bekerja di media sosial, membina robot yang meneroka planet-planet lain dan banyak lagi. "
-  * Lihat tip-tip untuk menarik minat anak-anak gadis dalam bidang sains komputer [di sini](http://code.org/girls). 
+  * Explain it in a simple way that includes examples of applications that both boys and girls will care about (saving lives, helping people, connecting people, etc.).
+  * Try: "Think about things in your everyday life that use computer science: a cell phone, a microwave, a computer, a traffic light… all of these things needed a computer scientist to help build them.”
+  * Or: “Computer science is the art of blending human ideas and digital tools to increase our power. Computer scientists work in so many different areas: writing apps for phones, curing diseases, creating animated movies, working on social media, building robots that explore other planets and so much more."
+  * See tips for getting girls interested in computer science [here](http://<%= codeorg_url() %>/girls). 
 
 ## 5) Memulakan Hour of Code anda
 
 **Memberi panduan aktiviti kepada pelajar**
 
-  * Tulis pautan tutorial di papan tulis. Cari pautan yang disenaraikan di <% if %country == 'uk'> [ maklumat untuk tutorial yang anda pilih ](http://uk.code.org/learn) <% else %> [ maklumat untuk tutorial yang anda pilih ](http://code.org/learn) <% end %> di bawah bilangan peserta. (Contoh: [hourofcode.com/co](http://code.org/learn)) 
-  * Beritahu pelajar untuk melawat URL dan memulakan tutorial.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](http://<%= codeorg_url() %>/learn) under the number of participants. [hourofcode.com/co](http://hourofcode.com/co)
+  * Tell students to visit the URL and start the tutorial.
 
 **Apabila pelajar anda menghadapi kesukaran**
 
-  * Jelaskan kepada mereka, "Tanya 3 baru saya." Tanya 3 rakan sekelas, dan jika mereka tidak dapat memberi jawapannya, baru bertanya kepada guru.
-  * Memberi galakan kepada pelajar dan mengeluarkan kenyataan sokongan yang positif: "Anda sedang melakukan dengan bagus, terus mencuba."
-  * Tidak mengapa untuk menjawab: "saya tidak tahu. Mari kita memikirkan bersama." Jika anda tidak boleh menyelesaikan masalah, gunakannya sebagai satu pengajaran pembelajaran yang baik bagi kelas:". Teknologi tidak selalu berhasil seperti yang kita mahu. Bersama, kita adalah komuniti pelajar." Dan: "Belajar untuk membuat program adalah seperti belajar bahasa baru;. Anda tidak akan fasih dengan segera."
+  * Tell students, “Ask 3 then me.” Ask 3 classmates, and if they don’t have the answer, then ask the teacher.
+  * Encourage students and offer positive reinforcement: “You’re doing great, so keep trying.”
+  * It’s okay to respond: “I don’t know. Let’s figure this out together.” If you can’t figure out a problem, use it as a good learning lesson for the class: “Technology doesn’t always work out the way we want. Together, we’re a community of learners.” And: “Learning to program is like learning a new language; you won’t be fluent right away.“
 
 **Apa yang perlu dilakukan sekiranya terdapat pelajar yang selesai awal?**
 
-  * Pelajar boleh melihat keseluruhan tutorial dan mencuba aktiviti yang lain Hour of Code di <% if @country == 'uk'%> [ uk.code.org/learn ](http://uk.code.org/learn). <% else %> [code.org/learn](http://code.org/learn). <% end %> 
-  * Atau, meminta pelajar yang selesai awal untuk membantu rakan sekelas yang menghadapi masalah dengan aktiviti.
+  * Students can see all tutorials and try another Hour of Code activity at [<%= codeorg_url() %>/learn](http://<%= codeorg_url() %>/learn)
+  * Or, ask students who finish early to help classmates who are having trouble with the activity.
 
 **Bagaimana cara untuk mencetak sijil pelajar saya?**
 
-Setiap pelajar berpeluang untuk mendapatkan sijil melalui e-mel apabila mereka menyelesaikan [tutorial di Code.org ](http://studio.code.org). Klik pada sijil untuk mencetaknya. Walau bagaimanapun, jika anda mahu untuk membuat sijil baru untuk pelajar anda, kunjungi <% if @country == 'uk' %> [Sijil](http://uk.code.org/certificates) <% else %> [Sijil](http://code.org/certificates) <% end %> laman untuk mencetak seberapa banyak yang anda mahu, sekali gus!
+Setiap pelajar berpeluang untuk mendapatkan sijil melalui e-mel apabila mereka menyelesaikan [tutorial di Code.org ](http://studio.code.org). Klik pada sijil untuk mencetaknya. However, if you want to make new certificates for your students, visit our [Certificates](http://<%= codeorg_url() %>/certificates) page to print as many certificates as you like, in one fell swoop!
 
 **Apakah selepas Hour of Code?**
 
-Hour of Code hanya langkah pertama di dalam perjalanan untuk mengetahui lebih mendalam tentang bagaimana teknologi berfungsi dan bagaimana membuat aplikasi perisian. <% if @country == 'uk' %> The Hour Kod adalah hanya langkah pertama di dalam perjalanan untuk mengetahui lebih lanjut tentang bagaimana teknologi berfungsi dan bagaimana untuk membuat aplikasi perisian. Untuk meneruskan perjalanan ini, [beri galakan kepada anak anda untuk belajar secara dalam talian](http://uk.code.org/learn/beyond). <% else %> untuk meneruskan perjalanan ini, cari sumber tambahan untuk pendidik [di sini](http://code.org/educate). Atau beri galakan kepada anak anda untuk belajar [secara dalam talian](http://code.org/learn/beyond). <% end %>
+Hour of Code hanya langkah pertama di dalam perjalanan untuk mengetahui lebih mendalam tentang bagaimana teknologi berfungsi dan bagaimana membuat aplikasi perisian. <% if @country == 'uk' %> The Hour Kod adalah hanya langkah pertama di dalam perjalanan untuk mengetahui lebih lanjut tentang bagaimana teknologi berfungsi dan bagaimana untuk membuat aplikasi perisian. Untuk meneruskan perjalanan ini, [beri galakan kepada anak anda untuk belajar secara dalam talian](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %> <a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>

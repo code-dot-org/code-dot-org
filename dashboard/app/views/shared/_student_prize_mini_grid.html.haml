@@ -1,7 +1,0 @@
-%div{style:"clear:left;"}
-- Prize.where(:user_id => nil).group(:prize_provider).count.each do |provider, count|
-  - if count > 0
-    .prize-item-mini-grid
-      %p
-        = image_tag(provider.image_name, :class => 'prize-card-mini-img')
-%div{style:"clear:left;"}

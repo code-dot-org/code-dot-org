@@ -117,7 +117,7 @@
   "LISTS_IS_EMPTY_HELPURL":"https:\/\/code.google.com\/p\/blockly\/wiki\/Lists#is_empty",
   "LISTS_IS_EMPTY_TITLE":"%1 ist leer",
   "LISTS_LENGTH_HELPURL":"https:\/\/code.google.com\/p\/blockly\/wiki\/Lists#length_of",
-  "LISTS_LENGTH_INPUT_LENGTH":"length of",
+  "LISTS_LENGTH_INPUT_LENGTH":"Länge von",
   "LISTS_LENGTH_TITLE":"Länge %1",
   "LISTS_LENGTH_TOOLTIP":"Die Anzahl von Elementen in der Liste.",
   "LISTS_REPEAT_HELPURL":"https:\/\/code.google.com\/p\/blockly\/wiki\/Lists#create_list_with",

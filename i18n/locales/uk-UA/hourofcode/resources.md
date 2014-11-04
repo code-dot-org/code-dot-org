@@ -4,7 +4,15 @@ title: Ресурси layout: wide nav: resources_nav
 
 * * *
 
-# Ресурси
+<div class="row">
+  <h1 class="col-sm-6">
+    Ресурси
+  </h1>
+  
+  <div class="col-sm-6 button-container centered">
+    <a href="/#join"><button class="signup-button">Sign up your event</button></a>
+  </div>
+</div>
 
 ## Проводите Годину коду? [Скористайтесь інструкціями](<%= hoc_uri('/resources/how-to') %>)
 
@@ -36,14 +44,14 @@ title: Ресурси layout: wide nav: resources_nav
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>Те, чому не вчать у більшості шкіл (5 хв)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
+      <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>What Most Schools Don't Teach (5 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>Настала Година коду - навчитись може кожен</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
+      <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>Hour of Code is Here - Anybody Can Learn</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
@@ -53,14 +61,14 @@ title: Ресурси layout: wide nav: resources_nav
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>Президент Обама про інформатику</strong></a>
+      <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>President Obama on computer science</strong></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>Навчитись може кожен (1 хв)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
+      <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>Anybody Can Learn (1 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
@@ -102,11 +110,27 @@ title: Ресурси layout: wide nav: resources_nav
     </p>
     
     <p>
+      <a id="social"></a>
+    </p>
+    
+    <h2>
+      Розмістіть у соціальних мережах
+    </h2>
+    
+    <p>
+      <a href="/images/social-1.jpg"><img src="/images/fit-250/social-1.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-2.jpg"><img src="/images/fit-250/social-2.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-3.jpg"><img src="/images/fit-250/social-3.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    
+    <p>
+      <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    
+    <p>
       <a id="sample-emails"></a>
     </p>
     
     <h2>
-      Розішліть листи, щоб поширити інформацію про Годину коду
+      Розішліть ці листи, щоб поширити інформацію про Годину коду
     </h2>
     
     <p>
@@ -114,15 +138,15 @@ title: Ресурси layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Запросіть свою школу, працедавця чи друзів:
+      Запросіть підписатись свою школу, працедавця чи друзів:
     </h2>
     
     <p>
-      Комп'ютери поширені повсюдно, але все менше шкіл викладають інформатику, аніж 10 років тому. Хорошою новиною є те, що ми можемо це змінити. Якщо Ви чули про Годину коду минулого року, можливо знаєте, що вона увійшла в історію. Лише за один тиждень 15 мільйонів учнів познайомились з інформатикою!
+      Комп'ютери поширені повсюдно, але все менше шкіл викладають інформатику, аніж 10 років тому. Хорошою новиною є те, що ми можемо це змінити. Якщо ви чули про Годину коду в минулому році, можливо, ви знаєте, що вона увійшла в історію. Лише за один тиждень 15 мільйонів учнів познайомились з інформатикою!
     </p>
     
     <p>
-      Інформатика була на домашніх сторінках Google, MSN, Yahoo! та Діснею. Президент Обама, Шакір та Ештон Катчер розпочали Годину коду відео-зверненнями. Більше 100 партнерів підтримали цей рух.
+      Інформатика була на домашніх сторінках Google, MSN, Yahoo! та Діснею. Президент Обама, Шакіра і Ештон Катчер розпочали Годину коду відео-зверненням. Більше 100 партнерів підтримали цей рух.
     </p>
     
     <p>
@@ -130,11 +154,11 @@ title: Ресурси layout: wide nav: resources_nav
     </p>
     
     <p>
-      Поширюйте інформацію. Сплануйте заходи. Запросіть місцеву школу приєднатися. Або просто спробуйте Годину коду - кожен може скористатись базовим навчанням.
+      Поширюйте інформацію. Проведіть захід. Запросіть до участі найближчу школу. Або спробуйте Годину коду самі - кожен може навчитися основам.
     </p>
     
     <p>
-      Допоможіть нам залучити 100 мільйонів учнів до кінця року! Розпочинаймо на http://hourofcode.com
+      Допоможіть нам досягти 100 мільйонів учнів до кінця року! Розпочинаймо на http://hourofcode.com
     </p>
     
     <p>
@@ -142,7 +166,7 @@ title: Ресурси layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Запросіть пресу на свій захід:
+      Запросіть ЗМІ на свій захід:
     </h2>
     
     <p>
@@ -154,7 +178,7 @@ title: Ресурси layout: wide nav: resources_nav
     </p>
     
     <p>
-      За один тиждень минулого року 15 мільйонів учнів спробували програмування! Інформатика була на домашніх сторінках Google, MSN, Yahoo! та Діснею. Президент Обама, Шакір та Ештон Катчер розпочали Годину коду відео-зверненнями. Більше 100 партнерів підтримали цей рух.
+      За один тиждень минулого року 15 мільйонів учнів спробували програмування! Інформатика була на домашніх сторінках Google, MSN, Yahoo! та Діснею. Президент Обама, Шакіра і Ештон Катчер розпочали Годину коду відео-зверненням. Більше 100 партнерів підтримали цей рух.
     </p>
     
     <p>
@@ -162,19 +186,19 @@ title: Ресурси layout: wide nav: resources_nav
     </p>
     
     <p>
-      Ось чому кожен із [X number] учнів школи [SCHOOL NAME] приєднується до найбільшої навчальної події в історії: Година коду, протягом тижня інформатики 8-14 грудня.
+      Ось чому кожен із [X кількість] учнів школи [назва школи] приєднується до найбільшої навчальної події в історії: Години коду, протягом тижня інформатики 8-14 грудня.
     </p>
     
     <p>
-      Я пишу, щоб запросити Вас відвідати наші вступні збори і поглянути, як учні розпочнуть свою роботу [DATE].
+      Хочемо запросити Вас відвідати наші вступні збори і подивитись, як учні розпочнуть цю діяльність [DATE].
     </p>
     
     <p>
-      Година коду, що проводиться некомерційною організацією Code.org і більш як сотнею інших, є доказом того, що нинішнє покоління учнів готове вчитися необхідним навичкам для успіху в 21-му столітті. Приєднуйтеся!
+      Година коду, що проводиться некомерційною організацією Code.org і більш як сотнею інших, є доказом того, що нинішнє покоління учнів готове вчитися необхідним навичкам для успіху в 21-му столітті. Приєднуйтеся.
     </p>
     
     <p>
-      <strong>Контакт:</strong> [YOUR NAME], [TITLE], тел.: (212) 555-5555
+      <strong>Контакт:</strong> [Ім'я], [посада], тел.: (212) 555-5555
     </p>
     
     <p>
@@ -202,19 +226,19 @@ title: Ресурси layout: wide nav: resources_nav
     </p>
     
     <p>
-      Ми живемо у світі, наповненому технологіями. І ми знаємо, що яку б професію не обрали наші учні у майбутньому, їхній успіх залежатиме від розуміння принципів роботи цих технологій. Але лише невеликий відсоток із нас вивчає інформатику, і до неї залучено менше учнів, ніж 10 років тому.
+      Ми живемо у світі, наповненому технологіями. І ми знаємо, що яку б професію не обрали наші учні у майбутньому, їхній успіх залежатиме від розуміння принципів роботи цих технологій. Але дуже мало людей вивчають програмування, зокрема менше учнів, ніж 10 років тому.
     </p>
     
     <p>
-      Саме тому вся наша школа бере участь у найбільшій навчальній події в історії: Годині коду протягом тижня інформатики 8-14 грудня 2014 року. Минулого року інформатику спробували 15 мільйонів учнів. Цього року ми приєднуємось до 100 мільйонів учнів з усього світу!
+      Тому наша школа приєднується до найбільшої навчальної події в історії: Години коду, протягом тижня інформатики (8-14 грудня 2014 року). Минулого року програмування спробували 15 мільйонів учнів. Цього року ми приєднуємось до 100 мільйонів учнів з усього світу!
     </p>
     
     <p>
-      Наша Година коду є доказом того, що [Назва школи] готова навчати цих базових навичок 21го століття. Щоб залучити учнів до програмування, ми плануємо великий захід в рамках Години коду. Я запрошую Вас до співпраці, поширення інформації серед ЗМІ, у соціальних мережах та проведення ознайомчих заходів у спільноті.
+      Наша Година коду є доказом того, що [Назва школи] готова навчати цих базових навичок 21го століття. Для поширення вивчення програмування, ми хочемо провести великий захід Години коду. Я запрошую Вас до співпраці, поширення інформації серед ЗМІ, у соціальних мережах та проведення ознайомчих заходів у спільноті.
     </p>
     
     <p>
-      Це шанс змінити майбутнє освіти у [назва міста].
+      Це шанс змінити майбутнє освіти в [місто].
     </p>
     
     <p>
@@ -234,7 +258,7 @@ title: Ресурси layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Запросіть місцевих політиків на захід у вашій школі:
+      Запросіть місцевих політиків на захід у Вашій школі:
     </h2>
     
     <p>
@@ -242,21 +266,25 @@ title: Ресурси layout: wide nav: resources_nav
     </p>
     
     <p>
-      Чи знаєте Ви, що кількість робочих місць у галузі інформаційних технологій втричі перевищує кількість випускників відповідних спеціальностей? А інформатика сьогодні є основоположною для <em>усіх</em> сфер діяльності. Проте у 90% шкіл цьому не навчають. Ми, у школі [SCHOOL NAME], намагаємося це змінити.
+      Did you know that in today’s economy, computing jobs outnumber students graduating into the field by 3-to-1? And, computer science is foundational for <em>every</em> industry today. Yet 90% of schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
     </p>
     
     <p>
-      Саме тому вся наша школа бере участь у найбільшій навчальній події в історії: Годині коду протягом тижня інформатики 8-14 грудня 2014 року. Минулого року інформатику спробували 15 мільйонів учнів. Цього року ми приєднуємось до 100 мільйонів учнів з усього світу!
+      Тому наша школа приєднується до найбільшої навчальної події в історії: Години коду, протягом тижня інформатики (8-14 грудня 2014 року). Минулого року програмування спробували 15 мільйонів учнів. Цього року ми приєднуємось до 100 мільйонів учнів з усього світу!
     </p>
     
     <p>
-      Я хочу запросити Вас взяти участь в нашому заході Години коду і виступити на вступних зборах. Вони відбудуться [Дата, Час, Місце], і ми хотіли б наголосити, що [Місто] готовий навчати учнів критичним навикам 21-го століття. Ми хочемо бути певними, що наші учні перебувають в авангарді створення технологій майбутнього - не лише їхнього використання.
+      I'm writing to invite you to take part in our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st century skills. We want to ensure that our students are on the forefront of creating technology of the future--not just consuming it.
     </p>
     
     <p>
-      Будь ласка, зв'яжіться зі мною за [номер телефону чи електронна адреса]. Чекатиму Вашої відповіді.
+      Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
     </p>
     
     <p>
-      З повагою, [NAME], [TITLE]
+      Sincerely, [NAME], [TITLE]
+    </p>
+    
+    <p>
+      <a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>
     </p>

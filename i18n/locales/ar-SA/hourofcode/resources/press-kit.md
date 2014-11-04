@@ -1,12 +1,14 @@
 * * *
 
-العنوان: موارد التنسيق: واسع
+title: Resources layout: wide nav: resources_nav
 
 * * *
 
-## إحصائيات مفيدة حول علوم الحاسوب
+[<button style="float: right; margin-top: 50px">Sign up your event</button>](/#join)
 
-*لجميع استفسارات الصحافة ووسائل الإعلام، اتصل ب <press@code.org>*
+## كيفية جذب وسائل الإعلام إلى الحدث الذي ستقيمه
+
+*For all press and media inquiries, contact <press@code.org>*
 
 ### نصائح الرئيسية
 
@@ -17,7 +19,7 @@
 
 ### الدليل خطوة بخطوة:
 
-**1-التخطيط للحدث الذي ستنظمه**
+**1. Plan your event**
 
   * نظم اجتماع لاطلاق الحدث.
   * Send [a letter](<%= hoc_uri('/resources/#sample-emails') %>) to parents. Ask them to spread the word.
@@ -25,17 +27,17 @@
   * قم بتنظيم أنشطة للفرق (مثل الانشطة الغير موصولة)، أو عرض اهم الأنشطة التي أنشأها الطلاب.
   * Show Code.org’s [Hour of Code video](<%= hoc_uri('/') %>) or one of [these](<%= hoc_uri('/resources#videos') %>) to inspire.
 
-**2. قم بتحديد الصحفيين المحليين الذين يغطون مجال التعليم أو الأحداث الجهوية.**
+**2. Identify specific local reporters that cover education or local events.**
 
-فكر في الصحف المحلية، ومحطات التلفزيون، محطات الراديو أو المدونات.
+Think a local newspaper, TV station, radio station or blog.
 
-ابحث على الإنترنت للعثور على كيفية اتصال بالمراسلين. If you can't find it, call the publication to ask, or email a general tips@PUBLICATIONNAME.com email address and ask for your message to be directed to the correct reporter.
+Look online to find reporter contact information. If you can't find it, call the publication to ask, or email a general tips@PUBLICATIONNAME.com email address and ask for your message to be directed to the correct reporter.
 
-**3-الاتصال بوسائل الإعلام المحلية**
+**3. Contact local media**
 
-أفضل وسيلة للتواصل تكون عن طريق البريد الإلكتروني. ينبغي أن يكون الاتصال قصيرا ومعبرا: لماذا يجب أن يهتم الآخرون بهذا الحدث؟ و ارفق كيفية الاتصال بك (بما في ذلك رقم الهاتف المحمول) للذين سوف يكون موجودين خلال هذا الحدث. **See a [sample pitch to media](<%= hoc_uri('/resources#sample-emails') %>):**
+The best way to reach out is by email. It should be short and communicate: why should other people care about this event? Include contact information (including a cellphone number) for who will be on site at the event. **See a [sample pitch to media](<%= hoc_uri('/resources#sample-emails') %>):**
 
-**4-إعداد الأسئلة الميدانية حول الحدث. وإليك بعض الأمثلة:**
+**4. Prepare to field questions about your school event. Here are some examples:**
 
 *Why is your school doing an Hour of Code?*
 
@@ -53,7 +55,9 @@ In China, every students takes computer science to graduate high school. In the 
 
 **About Code.org**
 
-Code.org® is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign — which has introduced millions of students to computer science — partnered with more than 30 public school districts nationwide, and launched Code Studio, an open-source, online learning platform for all ages. For more information, please visit: <% if @country == 'uk' %> [www.uk.code.org](http://uk.code.org). <% else %> [www.code.org](http://code.org). <% end %>
+Code.org® is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign — which has introduced millions of students to computer science — partnered with more than 30 public school districts nationwide, and launched Code Studio, an open-source, online learning platform for all ages. For more information, please visit: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
 Find more resources and sample emails [here](<%= hoc_uri('/resources') %>).
+
+<a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>

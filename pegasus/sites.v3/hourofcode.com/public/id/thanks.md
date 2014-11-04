@@ -1,22 +1,16 @@
----
-title: Terima kasih telah mendaftar sebagai penyelenggara Hour of Code!
-layout: wide
----
+<% facebook = {:u=>"http://#{request.host}/us"}
+                      twitter = {:url=>"http://hourofcode.com", :related=>"codeorg", :hashtags=>"", :text=>hoc_s(:twitter_default_text)}
+                      twitter[:hashtags] = "HourOfCode" unless hoc_s(:twitter_default_text).include? "#HourOfCode" %>
 
-<%
-  facebook = {:u=>"http://#{request.host}/us"}
 
-  twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
-  twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
-%>
 
 # Terima kasih karena telah mendaftar sebagai penyelengara Hour of Code!
 
-**SETIAP** Penyelenggara Hour of Code akan mendapatkan 10GB Ruang Dropbox atau $10 kredit skype sebagai rasa terima kasih kami untuk anda [Details](/prizes)
+**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](<%= hoc_uri('/prizes') %>)
 
 <% if @country == 'us' %>
 
-Dapatkan kesempatan memperoleh hadiah besar dengan [mempartisipasikan sekolah anda](/us/prizes).
+Get your [whole school to participate](<%= hoc_uri('/prizes') %>) for a chance for big prizes for your entire school.
 
 <% end %>
 
@@ -30,26 +24,30 @@ Beritahu temanmu mengenai #HourOfCode.
 
 ## 2. Tawarkan pada seluruh isi sekolah anda untuk mengikuti Hour of Code
 
-[Kirim email ini](/resources#email) atau [berikan selebaran ini kepada kepala sekolah](/files/schools-handout.pdf). Ketika sekolah anda telah tedaftar, [masuk dan menangkan teknologi senilai $10.000 untuk sekolah anda](/prizes) dan tantang sekolah lain di sekitar anda untuk ikut serta.
+[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](<%= hoc_uri('/files/schools-handout.pdf') %>). Setelah sekolah anda telah ikut serta, [masuk dan menangkan teknologi bernilai $10,000 untuk sekolah anda](/prizes) dan tantang sekolah lain di daerahmu untuk ikut serta juga.
 
 <% else %>
 
 ## 2. Tawarkan pada seluruh isi sekolah anda untuk mengikuti Hour of Code
 
-[Kirim email ini](/resources#email) atau berikan [selebaran ini](/files/schools-handout.pdf) kepada kepala sekolah.
+[Send this email](<%= hoc_uri('/resources#email') %>) or give [this handout](<%= hoc_uri('/files/schools-handout.pdf') %>) to your principal.
 
 <% end %>
 
-## 3. Tanyakanlah kepada boss anda untuk terlibat
+## 3. Make a generous donation
 
-[Kirim email ini](/resources#email) kepada manajer atau CEO anda. Atau [berikan selebaran ini kepada mereka](/resources/hoc-one-pager.pdf).
+[Donate to our crowdfunding campaign.](http://<%= codeorg_url() %>/donate) To teach 100 million children, we need your support. We just launched what could be the [largest education crowdfunding campaign](http://<%= codeorg_url() %>/donate) in history. Every dollar will be matched by major Code.org [donors](http://<%= codeorg_url() %>/about/donors), doubling your impact.
 
-## 4. Promosikan Hour of Code dalam komunitas Anda
+## 4. Ask your employer to get involved
+
+[Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](<%= hoc_uri('/resources/hoc-one-pager.pdf') %>).
+
+## 5. Promote Hour of Code within your community
 
 Rekrut kelompok lokal — anak Pramuka, gereja, Universitas, veteran kelompok atau Serikat pekerja. Atau selenggarakan Hour of Code "pesta blok" untuk lingkungan tempat Anda tinggal.
 
-## 5. Tanyakan seorang pejabat terpilih setempat untuk mendukung Hour of Code
+## 6. Ask a local elected official to support the Hour of Code
 
-[Send this email](/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](/resources/hoc-one-pager.pdf) and invite them to visit your school.
+[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board. Or [give them this handout](<%= hoc_uri('/resources/hoc-one-pager.pdf') %>) and invite them to visit your school.
 
 <%= view 'popup_window.js' %>

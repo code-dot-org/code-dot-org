@@ -1,12 +1,12 @@
 * * *
 
-fra: '"Hadi Partovi(Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)' tittel: Takk for at du melder deg som vertskap for Kodetimen! view: none theme: none
+frå: '"Hadi Partovi(Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)' tittel: Takk for at du melder deg som vertskap for Kodetimen! view: none theme: none
 
 * * *
 
 <% hostname = CDO.canonical_hostname('hourofcode.com') %>
 
-# Takk for at du meldte deg på som vert for Kodetimen!
+# Takk for at du melde deg som vert for Kodetimen!
 
 **ALLE** Kodetimen-arrangørar får 10 GB lagringsplass på Dropbox eller $10 Skype-kredit som ein takk. [Detaljar](http://<%= hostname %>/premier)
 
@@ -16,19 +16,19 @@ Få [heile skulen din til å vere med](http://<%= hostname %>/heile-skulen) for 
 
 <% end %>
 
-## 1. Spre ordet
+## Spre bodskapet
 
-Fortell vennene dine om #Kodetimen.
+Fortel venane dine om #Kodetimen.
 
 <% if @country == 'us' %>
 
-## 2. Spør hele skolen din om å tilby en Kodetime
+## 2. Be heile skulen din om å tilby ein Kodetime
 
-[Send denne e-posten](http://<%= hostname %>/ressurser#email) eller [gje dette flygebladet til rektoren din](http://<%= hostname %>/filer/skole-flyer.pdf). Når skolen din har meldt seg på, [ gå inn her for å kunne vinne datautstyr til en verdi av $10000 til din skole](http://<%= hostname %>/premier) og utfordre andre skoler i ditt område til å bli med.
+[Send denne e-posten](http://<%= hostname %>/ressurser#email) eller [gje dette flygebladet til rektoren din](http://<%= hostname %>/filer/skole-flyer.pdf). Når skulen din er påmeld,[gå inn her for ein sjanse til å vinne datautstyr til ein verdi av $10000 for skulen din](http://<%= hostname %>/premier) og utfordre andre skular i nærleiken til å bli med.
 
 <% else %>
 
-## 2. Spør hele skolen din om å tilby en Kodetime
+## 2. Be heile skulen din om å tilby ein Kodetime
 
 [Send denne e-posten](http://<%= hostname %>/ressursar#epost) eller gje [denne brosjyra](http://<%= hostname %>/filer/skule-brosjyre.pdf) til rektor.
 
@@ -50,12 +50,12 @@ Rekrutter ein lokal klubb - eit idrettslag, høgskule eller fagforeining. Eller 
 
 Takk for kunngjøringa om arrangementet ditt! Gje oss beskjed om du treng ytterlegare informasjon eller viss du har spørsmål. Lat oss lage historie i lag!
 
-Hour of Code Romania hoc@adfaber.org
+Kodetimen Noreg
 
 <% end %>
 
 * * *
 
-Code.org er en frivillig organisasjon. Vår adresse er 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Hvis du ikke liker disse epostene? [Meld deg av nyhetsbrevet](%= unsubscribe_link %).
+Code.org er en frivillig organisasjon. Adressa vår er 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Vil du ikkje ha desse epostane?[Meld deg av nyhendebrevet](%= unsubscribe_link %).
 
 ![](<%= tracking_pixel %>)

@@ -1145,6 +1145,17 @@ Blockly.BlockSvg.prototype.renderDrawRightInline_ = function (renderInfo, inputR
   // Inline inputs.
   var row = inputRows[rowIndex];
   var hasFunctionalInput = false;
+
+  // If the first input is functional, assume all inputs are functional. Figure
+  // out how much space they will take up, so that we can center the set of them.
+  if (row[0].type === Blockly.FUNCTIONAL_INPUT) {
+    var widths = BS.SEP_SPACE_X * (row.length - 1);
+    row.forEach(function (input) { widths += input.renderWidth; } );
+    if (inputRows.rightEdge > widths) {
+      renderInfo.curX = (inputRows.rightEdge - widths) / 2;
+    }
+  }
+
   for (var x = 0, input; input = row[x]; x++) {
     var titleX = renderInfo.curX;
     var titleY = renderInfo.curY + BS.TITLE_HEIGHT;

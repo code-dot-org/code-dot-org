@@ -39,9 +39,6 @@
 .field
   = f.label :sprites_hidden_to_start, 'Spires hidden to start'
   = boolean_check_box f, :sprites_hidden_to_start
-.field
-  = f.label :free_play, 'Free Play'
-  = boolean_check_box f, :free_play
 
 :javascript
   CodeMirror.fromTextArea($('#level_success_condition').get(0), {

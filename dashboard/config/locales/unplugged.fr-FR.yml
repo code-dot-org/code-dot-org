@@ -2,7 +2,7 @@
   data:
     unplugged:
       Unplug1:
-        title: Introduction à l'Informatique
+        title: Introduction à l'informatique
         desc: Ici, vous allez apprendre en quoi consiste l'informatique et nous allons
           vous expliquer se que fait un ingénieur en informatique. Cette leçon va
           également donner l'opportunité aux étudiants, de se mettre à la place d'un
@@ -15,7 +15,7 @@
         - unplug1
         video: Unplug1
       Unplug2:
-        title: L'algorithmique
+        title: Algorithmique
         desc: With nothing but paper and markers, students will learn the four steps
           of computational thinking. After a brief introduction, students should be
           split into groups where they will have to create directions for other students
@@ -51,7 +51,7 @@
         - unplug4
         video: Unplug4
       Unplug5:
-        title: Les fonctions
+        title: fonctions
         desc: In this lesson, students will make a suncatcher out of string, beads,
           and a special charm. The students will follow a series of repetitive steps,
           then be asked to identify certain sets of "skills" that are duplicated several
@@ -173,7 +173,7 @@
         desc: The Internet is a powerful, but sometimes dangerous place. Teachers
           introduce how to stay safe while navigating the Internet.
       GraphPaperProgramming:
-        title: Programmation dans un repère quadrillé
+        title: Programmation sur papier quadrillé
         desc: Students write an algorithm (a set of instructions) using a set of predefined
           commands to direct their classmates to reproduce a drawing.
         video: C2_graph_paper

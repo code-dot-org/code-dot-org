@@ -1,8 +1,10 @@
 ---
 title: Resources
 layout: wide
+nav: resources_nav
 ---
-## Useful stats on computer science
+<a href="/#join"><button style="float: right; margin-top: 50px">Sign up your event</button></a>
+## How to attract media to your Hour of Code event
 
 *For all press and media inquiries, contact [press@code.org](mailto:press@code.org)*
 
@@ -51,9 +53,11 @@ In China, every students takes computer science to graduate high school. In the 
 
 **About Code.org**
 
-Code.org® is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign — which has introduced millions of students to computer science — partnered with more than 30 public school districts nationwide, and launched Code Studio, an open-source, online learning platform for all ages. For more information, please visit: <% if @country == 'uk' %> [www.uk.code.org](http://uk.code.org). <% else %> [www.code.org](http://code.org). <% end %>
+Code.org® is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign — which has introduced millions of students to computer science — partnered with more than 30 public school districts nationwide, and launched Code Studio, an open-source, online learning platform for all ages. For more information, please visit: <a href="http://<%= codeorg_url() %>"><%= codeorg_url() %></a>.
 
 <br />
 Find more resources and sample emails <a href="<%= hoc_uri('/resources') %>">here</a>.
+
+<a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>
 
 

@@ -3,16 +3,16 @@
     script:
       name:
         20-hour:
-          desc: Cours d'introduction à l'informatique pour écoles primaires
-          Unplug1: "Étape 1 "
-          Maze: "Étape 2 "
-          Unplug2: "Étape 3 "
-          Unplug3: "Étape 4 "
-          Artist: "Étape 5 "
-          Unplug4: "Étape 6 "
-          Artist2: "Étape 7 "
-          Unplug5: "Étape 8 "
-          Farmer: "Étape 9 "
+          desc: K-8 Intro au cours d'informatique
+          Unplug1: Processus 1
+          Maze: Processus 2
+          Unplug2: Processus 3
+          Unplug3: Processus 4
+          Artist: Processus 5
+          Unplug4: Processus 6
+          Artist2: Processus 7
+          Unplug5: Processus 8
+          Farmer: Processus 9
           Unplug6: "Étape 10 "
           Artist3: "Étape 11 "
           Unplug7: "Étape 12 "
@@ -26,54 +26,56 @@
           Unplug11: "Étape 20 "
         Hour of Code:
           desc: Heure de Code
-          Maze: "Étape 1"
+          Maze: Processus 1
         Edit Code:
           desc: Modifier le Code (bêta)
-          MazeEC: "Étape 1"
+          MazeEC: Processus 1
         2014 Levels:
           desc: Rebond (bêta)
-          Bounce: "Étape 1"
+          Bounce: Processus 1
         Builder Levels:
           desc: "Énigmes créées par l'utilisateur (bêta)"
-          Custom: "Étape 1"
+          Custom: Processus 1
         Flappy Levels:
           desc: Flappy Bird
-          Flappy: "Étape 1"
+          Flappy: Processus 1
         Jigsaw Levels:
           desc: Pièces de puzzle (bêta)
-          Jigsaw: "Étape 1"
+          Jigsaw: Processus 1
         Step Levels:
           desc: Labyrinthe (bêta)
           MazeStep: Palier de l'étape
         edit-code:
           desc: Modifier le Code (bêta)
-          MazeEC: "Étape 1"
+          MazeEC: Processus 1
+          Webapp: Processus 2
+          ArtistEC: Processus 3
         events:
           desc: Rebond (bêta)
-          Bounce: "Étape 1"
-          Studio: "Étape 2"
+          Bounce: Processus 1
+          Studio: Processus 2
         builder:
           desc: "Énigmes créées par l'utilisateur (bêta)"
-          Custom: "Étape 1"
+          Custom: Processus 1
         flappy:
           desc: Flappy Bird
-          Flappy: "Étape 1"
+          Flappy: Processus 1
         jigsaw:
           desc: Pièces de puzzle (bêta)
-          Jigsaw: "Étape 1"
+          Jigsaw: Processus 1
         step:
           desc: Labyrinthe (bêta)
           MazeStep: Palier de l'étape
         wordsearch:
           desc: Concours d'orthographe (bêta)
-          WordSearch: "Étape 1"
+          WordSearch: Processus 1
     game:
       name:
-        Unplug1: Introduction à l'informatique
-        Maze: Le Labyrinthe
+        Unplug1: Introduction à l'Informatique
+        Maze: Le labyrinthe
         Multi: Choix Multiples
-        Unplug2: Algorithmique
-        Unplug3: Programmation dans un repère quadrillé
+        Unplug2: L'algorithmique
+        Unplug3: Programmation sur papier quadrillé
         Artist: L'Artiste
         Unplug4: Algorithmes
         Artist2: L'Artiste 2
@@ -81,7 +83,7 @@
         Farmer: Le Fermier
         Unplug6: Instructions conditionnelles
         Artist3: L'Artiste 3
-        Unplug7: "Écriture de Chansons"
+        Unplug7: Ecriture de chanson
         Farmer2: Le Fermier 2
         Unplug8: Abstraction
         Artist4: L'Artiste 4
@@ -96,6 +98,8 @@
         Jigsaw: Pièces de Puzzle
         MazeStep: Mode pas à pas du labyrinthe
         Wordsearch: Mots mêlés
+        Webapp: Webapp
+        ArtistEC: L'Artiste
     trophy:
       name:
         Bronze: Bronze
@@ -365,8 +369,8 @@
         maze_karel_debug_function_3: Modifiez ce programme pour que je rase toutes
           les mottes présentes sur mon terrain.
         turtle_5_1: Essayez d'exécuter ce programme, et apportez-y des modifications
-          pour voir quels changements sont produits. Comprenez-vous comment cela fonctionne ?
-          (Vous pouvez également tout supprimer et mettre quelque chose de totalement
+          pour voir quels changements sont produits. Comprenez-vous comment cela fonctionne
+          ? (Vous pouvez également tout supprimer et mettre quelque chose de totalement
           différent à la place.)
         turtle_5_2: Essayez d'exécuter ce programme, et apportez-y des modifications
           pour voir quels changements sont produits. Comprenez-vous comment cela fonctionne
@@ -430,12 +434,13 @@
           l'espace de travail pour former le niveau que vous souhaitez réaliser. Cliquez
           sur « Démarrer » quand vous êtes prêt.
         flappy_1: Attachez un bloc au bloc « lors d'un clic », puis cliquez sur « Démarrer ».
-          Cliquez ou tapotez l'écran pour déplacer Flappy vers la cible.
+          Cliquez sur l'écran ou tapotez-le pour déplacer Flappy vers la cible.
         flappy_2: "À présent, nous avons ajouté du sol. Attachez un bloc au bloc « lorsque
-          le sol est touché ». Votre code doit « terminer le jeu » quand Flappy s'écrase."
-        flappy_3: Le bloc « lors du lancement du jeu » vous permet d'exécuter du code
-          au démarrage de votre partie. Essayez de régler la vitesse du niveau et
-          de voler vers la cible.
+          le sol est touché ». Votre code doit « terminer le jeu » lorsque Flappy
+          s'écrase."
+        flappy_3: Le bloc « lors du lancement » vous permet d'exécuter du code au
+          démarrage de votre jeu.  Essayez de régler la vitesse du niveau et le battement
+          d'ailes.
         flappy_4: Flappy volera à travers les obstacles à moins que vous mettiez en
           place le code pour qu'il s'écrase. Attachez un bloc au bloc « lors de la
           rencontre avec un obstacle ». Votre code doit « terminer le jeu » lorsque
@@ -446,8 +451,8 @@
           les tuyaux.
         flappy_6: Regardez si vous pouvez toujours marquer un point en changeant l'énergie
           que Flappy met dans ses battements d'ailes.
-        flappy_7: Ensuite, essayez de changer l'image d'arrière-plan en attachant
-          un autre bloc au bloc « lors du lancement du jeu ».
+        flappy_7: Ensuite, essayez de changer l'arrière-plan en attachant un autre
+          bloc à bloc « lors du lancement ».
         flappy_8: Vous pouvez changer l'apparence à tout moment, pas seulement au
           lancement du jeu. Essayez donc de choisir un arrière-plan aléatoire lorsque
           d'autres événements se produisent, par exemple, lors du dépassement d'un
@@ -460,15 +465,15 @@
           vous avez terminé, cliquez sur Terminer pour permettre à vos amis d'essayer
           votre jeu sur leur téléphone.
         flappy_k1_1: Jouer à Flappy Bird
-        flappy_k1_2: Attachez un bloc au bloc « lors d'un clic », puis cliquez sur
-          « Démarrer ». Cliquez sur l'écran ou tapotez-le pour déplacer Flappy vers
+        flappy_k1_2: Attaches un bloc au bloc « lors d'un clic », puis cliques sur
+          « Lancer ». Cliques sur l'écran ou tapotes-le pour déplacer Flappy vers
           la cible.
         flappy_k1_3: "À présent, nous avons ajouté du sol. Attachez un bloc au bloc
           « lorsque le sol est touché ». Votre code doit « terminer le jeu » lorsque
           Flappy s'écrase."
-        flappy_k1_4: Le bloc « lors du lancement du jeu » vous permet d'exécuter du
-          code au démarrage de votre partie. Essayez de régler la vitesse du niveau
-          et de voler vers la cible.
+        flappy_k1_4: Le bloc « lors du lancement » vous permet d'exécuter du code
+          au démarrage de votre jeu.  Essayez de régler la vitesse du niveau et le
+          battement d'ailes.
         flappy_k1_5: Flappy volera à travers les obstacles à moins que vous mettiez
           en place le code pour qu'il s'écrase. Attachez un bloc au bloc « lors de
           la rencontre avec un obstacle ». Votre code doit « terminer le jeu » lorsque
@@ -478,10 +483,10 @@
           d'un obstacle », puis marquez des points en faisant voler Flappy à travers
           les tuyaux.
         flappy_k1_7: Regardez si vous pouvez marquer des points en dépassant des obstacles.
-        flappy_k1_8: Ensuite, essayez de changer l'image d'arrière-plan en attachant
-          un autre bloc au bloc « lors du lancement du jeu ».
-        flappy_k1_9: Essayez de changer l'apparence du personnage volant en attachant
-          un bloc « choisir le personnage » au bloc « lors du lancement du jeu ».
+        flappy_k1_8: Ensuite, essayez de changer l'arrière-plan en attachant un autre
+          bloc à bloc « lors du lancement ».
+        flappy_k1_9: Essayez de modifier le joueur en attachant un bloc « choisir
+          le personnage » pour le bloc « lors du lancement ».
         jigsaw_1: Clique sur le bloc
         jigsaw_2: Glisse le bloc sur la cible
         jigsaw_3: Ordonne les blocs pour former l'image
@@ -495,7 +500,7 @@
         jigsaw_11: Ordonne les blocs pour former l'image
         jigsaw_12: Ordonne les blocs pour former l'image
         jigsaw_13: Résous l'énigme !
-        mazestep_1: Description du palier du dédale ici
+        mazestep_1: Description de l'étape du labyrinthe ici
         mazestep_2: Description de l'étape du labyrinthe ici
         mazestep_3: Description de l'étape du labyrinthe ici
         mazestep_4: Description de l'étape du labyrinthe ici
@@ -503,65 +508,80 @@
         studio_c2_1: Peux-tu faire dire « Bonjour » à ce chien ?
         studio_c2_2: Peux-tu faire dire quelque chose au chien puis faire parler le
           chat juste après ?
-        studio_c2_3: Can you write a program to make this dog move to the cat?
-        studio_c2_4: Can you write a program that makes the dog move to the cat, and
-          have the cat say "hello" when the dog reaches him?
-        studio_c2_5: Can you write a program to make the octopus say "hello" when
-          it is clicked?
-        studio_c2_6: Can you write a program to make this penguin move around using
-          the up / down / left /right keys to hit all of the targets?
-        studio_c2_7: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to move this dinosaur up and down repeatedly?
-        studio_c2_8: Can you have the penguin say "Ouch!" and play a "hit" sound if
-          he runs into the dinosaur, and then move him with the arrows to make that
-          happen?
-        studio_c2_9: Can you add a block to score a point when the penguin runs into
-          the octopus, and then move him with the arrows until you score?
-        studio_c2_10: Can you add blocks to change the background and the speed of
-          the penguin, and then move him with the arrows until you score?
-        studio_c2_11: Create your own story. When you're done, click Finish to let
-          friends try your story on their phones.
+        studio_c2_3: Peux-tu écrire un programme pour que ce chien se déplace jusqu'au
+          chat?
+        studio_c2_4: Peux-tu écrire un programme qui déplace le chien jusqu'au chat,
+          et qui fait dire « Bonjour » au chat lorsque le chien l'atteint ?
+        studio_c2_5: Peux-tu écrire un programme pour faire dire « Bonjour » à la
+          pieuvre lorsque l'on clique dessus ?
+        studio_c2_6: Peux-tu écrire un programme qui déplace ce manchot sur chacun
+          des drapeaux d'arrivée, en utilisant les touches fléchées du clavier haut
+          ↑, bas ↓, gauche ← et droite → ?
+        studio_c2_7: Le bloc « répéter à l'infini » permet d'exécuter du code en continu.
+          Peux-tu assembler les blocs qui vont permettre à ce dinosaure de se déplacer
+          vers le haut et vers le bas sans qu'il s'arrête jamais ?
+        studio_c2_8: Peux-tu faire dire « Aïe ! » au manchot et jouer le son de « heurt »
+          lorsqu'il rentre dans le dinosaure, puis le déplacer avec les flèches pour
+          que cela se produise ?
+        studio_c2_9: Peux-tu ajouter un bloc qui marque un point lorsque le manchot
+          croise la pieuvre, puis le déplacer avec les flèches jusqu'à ce que tu marques
+          un point ?
+        studio_c2_10: Peux-tu ajouter des blocs pour changer l'arrière-plan et la
+          vitesse du manchot, puis le déplacer avec les flèches jusqu'à ce que tu
+          marques un point ?
+        studio_c2_11: Crée ta propre histoire! Quand tu as fini, clique sur Terminer
+          pour que tes amis puissent essayer ton histoire sur leurs téléphones.
         studio_c3_story_1: Peux-tu faire dire « Bonjour » à ce chien ?
         studio_c3_story_2: Peux-tu faire dire quelque chose au chien puis faire parler
           le chat juste après ?
-        studio_c3_story_3: Can you write a program to make this dog move to the cat?
-        studio_c3_story_4: Can you write a program that makes the dog move to the
-          cat, and have the cat say "hello" when the dog reaches him?
+        studio_c3_story_3: Peux-tu écrire un programme pour que ce chien se déplace
+          jusqu'au chat?
+        studio_c3_story_4: Peux-tu écrire un programme qui déplace le chien jusqu'au
+          chat, et qui fait dire « Bonjour » au chat lorsque le chien l'atteint ?
         studio_c3_story_5: Peux-tu ajouter un bloc pour rendre la pieuvre heureuse ?
-        studio_c3_story_6: Create your own story. When you're done, click Finish to
-          let friends try your story on their phones.
-        studio_c3_game_1: Can you write a program to make the octopus say "hello"
-          when it is clicked?
-        studio_c3_game_2: Can you write a program to make this penguin move around
-          using the up / down / left /right keys to hit all of the targets?
-        studio_c3_game_3: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to move this dinosaur up and down repeatedly?
-        studio_c3_game_4: Can you have the penguin say "Ouch!" and play a "hit" sound
-          if he runs into the dinosaur, and then move him with the arrows to make
-          that happen?
-        studio_c3_game_5: Can you add a block to score a point when the penguin runs
-          into the octopus, and then move him with the arrows until you score?
-        studio_c3_game_6: Can you add blocks to change the background and the speed
-          of the penguin, and then move him with the arrows until you score?
+        studio_c3_story_6: Crée ta propre histoire! Quand tu as fini, clique sur Terminer
+          pour que tes amis puissent essayer ton histoire sur leurs téléphones.
+        studio_c3_game_1: Peux-tu écrire un programme pour faire dire « Bonjour »
+          à la pieuvre lorsque l'on clique dessus ?
+        studio_c3_game_2: Peux-tu écrire un programme qui déplace ce manchot sur chacun
+          des drapeaux d'arrivée, en utilisant les touches fléchées du clavier haut
+          ↑, bas ↓, gauche ← et droite → ?
+        studio_c3_game_3: Le bloc « répéter à l'infini » permet d'exécuter du code
+          en continu. Peux-tu assembler les blocs qui vont permettre à ce dinosaure
+          de se déplacer vers le haut et vers le bas sans qu'il s'arrête jamais ?
+        studio_c3_game_4: Peux-tu faire dire « Aïe ! » au manchot et jouer le son
+          de « heurt » lorsqu'il rentre dans le dinosaure, puis le déplacer avec les
+          flèches pour que cela se produise ?
+        studio_c3_game_5: Peux-tu ajouter un bloc qui marque un point lorsque le manchot
+          croise la pieuvre, puis le déplacer avec les flèches jusqu'à ce que tu marques
+          un point ?
+        studio_c3_game_6: Peux-tu ajouter des blocs pour changer l'arrière-plan et
+          la vitesse du manchot, puis le déplacer avec les flèches jusqu'à ce que
+          tu marques un point ?
         studio_c3_game_7: Créer votre propre jeu. Lorsque vous avez terminé, cliquez
           sur Terminer pour permettre à vos amis de jouer à votre histoire sur leur
           téléphone.
         studio_playlab_1: Peux-tu faire dire « Bonjour » à ce chien ?
         studio_playlab_2: Peux-tu faire dire quelque chose au chien puis faire parler
           le chat juste après ?
-        studio_playlab_3: Can you write a program to make this dog move to the cat?
-        studio_playlab_4: Can you write a program that makes the dog move to the cat,
-          and have the cat say "hello" when the dog reaches him?
-        studio_playlab_5: Can you write a program to make the octopus say "hello"
-          when it is clicked?
-        studio_playlab_6: Can you write a program to make this penguin move around
-          using the up / down / left /right keys to hit all of the targets?
-        studio_playlab_7: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to move this dinosaur up and down repeatedly?
-        studio_playlab_8: Can you add a block to score a point when the penguin runs
-          into the octopus, and then move him with the arrows until you score?
-        studio_playlab_9: Can you add blocks to change the background and the speed
-          of the penguin, and then move him with the arrows until you score?
+        studio_playlab_3: Peux-tu écrire un programme pour que ce chien se déplace
+          jusqu'au chat?
+        studio_playlab_4: Peux-tu écrire un programme qui déplace le chien jusqu'au
+          chat, et qui fait dire « Bonjour » au chat lorsque le chien l'atteint ?
+        studio_playlab_5: Peux-tu écrire un programme pour faire dire « Bonjour »
+          à la pieuvre lorsque l'on clique dessus ?
+        studio_playlab_6: Peux-tu écrire un programme qui déplace ce manchot sur chacun
+          des drapeaux d'arrivée, en utilisant les touches fléchées du clavier haut
+          ↑, bas ↓, gauche ← et droite → ?
+        studio_playlab_7: Le bloc « répéter à l'infini » permet d'exécuter du code
+          en continu. Peux-tu assembler les blocs qui vont permettre à ce dinosaure
+          de se déplacer vers le haut et vers le bas sans qu'il s'arrête jamais ?
+        studio_playlab_8: Peux-tu ajouter un bloc qui marque un point lorsque le manchot
+          croise la pieuvre, puis le déplacer avec les flèches jusqu'à ce que tu marques
+          un point ?
+        studio_playlab_9: Peux-tu ajouter des blocs pour changer l'arrière-plan et
+          la vitesse du manchot, puis le déplacer avec les flèches jusqu'à ce que
+          tu marques un point ?
         studio_playlab_10: Créer votre propre jeu. Lorsque vous avez terminé, cliquez
           sur Terminer pour permettre à vos amis de jouer à votre histoire sur leur
           téléphone.
@@ -571,13 +591,13 @@
         studio_k1_1: Peux-tu faire dire « Bonjour » à ce chien ?
         studio_k1_2: Peux-tu faire dire quelque chose au chien puis faire parler le
           chat juste après ?
-        studio_k1_3: Peux-tu écrire un programme qui déplace le chien jusqu'au drapeau ?
+        studio_k1_3: Peux-tu écrire un programme pour que ce chien se déplace jusqu'au
+          chat?
         studio_k1_4: Déplacez le chien jusqu'au chat et faites dire « Bonjour » au
           chat une fois la destination atteinte.
         studio_k1_5: Peux-tu ajouter un bloc pour rendre la pieuvre heureuse ?
-        studio_k1_6: Peux-tu écrire un programme qui va permettre de déplacer ce manchot
-          avec les touches fléchées du clavier haut ↑, bas ↓, gauche ← et droite →
-          pour qu'il atteigne chacun des drapeaux ?
+        studio_k1_6: Crée ta propre histoire! Déplace le chat et le chien autour,
+          et fais-les dire des choses.
         maze_wordsearch_k_1: Déplace-moi pour épeler le mot EST
         maze_wordsearch_k_2: Déplace-moi pour épeler le mot SUD
         maze_wordsearch_k_3: Déplace-moi pour épeler le mot OUEST
@@ -594,9 +614,12 @@
           épeler le terme EN DESSOUS
         maze_wordsearch_k_20: C'est un test ! Déplace-moi dans une direction, puis
           une autre, pour épeler le mot HISTOIRE
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
+          it in the new "penColour" block.'
     video:
       name:
-        maze_intro: Introduction au Dédale
+        maze_intro: Intro au Labyrinthe
         artist_intro: Introduction à l'Artiste
         farmer_intro: Introduction au Fermier
         flappy_intro: Introduction à Flappy Bird
@@ -610,9 +633,9 @@
         parameters: Fonctions avec Paramètres
         hoc_wrapup: Conclusion de l'heure de programmation
         20_wrapup: Conclusion du cours de 20 heures
-        Unplug1: What is CS?
-        Unplug2: Algorithmique
-        Unplug3: Programmation dans un repère quadrillé
+        Unplug1: Qu'est-ce que CS?
+        Unplug2: L'algorithmique
+        Unplug3: Programmation sur papier quadrillé
         Unplug4: Algorithmes
         Unplug5: Fonctions
         Unplug6: Instructions conditionnelles
@@ -623,9 +646,9 @@
         Unplug11: Résumé et ouverture
         C1_happy_maps_unplugged: Happy Maps
         C1_moveitmoveit_unplugged: Move It, Move It
-        C1_bigevent_unplugged: The Big Event
+        C1_bigevent_unplugged: Le Grand Evénement
         C1_getting_loop: Getting Loopy
-        C1_pair_programming: Pair Programming
+        C1_pair_programming: Programmation à deux
         C1_maze_intro_sequencing: Maze Sequencing Intro
         C1_maze_debugging: Maze Debugging
         C1_bee_level_intro: Bee Level - Intro
@@ -634,34 +657,34 @@
         C1_zuck_repeat_loop: Labyrinthe et boucles
         C1_bee_loops: Abeilles et boucles
         C1_maze_loops: Labyrinthe et boucles
-        C1_playlab_storytelling: Play Lab - Create a Story
-        C1_planting_seed: Planting a Seed
-        C1_building_foundating: Building a Foundation
+        C1_playlab_storytelling: Jouer au Labo - Créer une Histoire
+        C1_planting_seed: Planter une Graine
+        C1_building_foundating: Créer une Fondation
         C2_maze_intro: Introduction au Dédale
         C2_artist_intro: Introduction à l'Artiste
         C2_zuck_repeat_loop: Labyrinthe et boucles
-        C2_artist_loops: Artist Loops
+        C2_artist_loops: Boucles d'artiste
         C2_bee_conditionals: Abeilles et instructions conditionnelles
-        C2_playlab_createstory: Play Lab - Create a Story
-        C2_graph_paper: Programmation dans un repère quadrillé
+        C2_playlab_createstory: Jouer au Labo - Créer une Histoire
+        C2_graph_paper: Programmation sur papier quadrillé
         C2_conditionals_with_cards: Instructions conditionnelles
-        C2_binary_bracelets: Binary Bracelets
+        C2_binary_bracelets: Bracelets binaires
         C2_replay_programming: Relayer la programmation
-        C2_paper_airplanes: Paper Airplanes
+        C2_paper_airplanes: Avions en papier
         C3_maze_intro: Introduction au Dédale
         C3_artist_intro: Introduction à l'Artiste
-        C3_artist_functions: Artist Functions
+        C3_artist_functions: 'Artiste : les fonctions'
         C3_bee_functions: Abeilles et fonctions
         C3_bee_conditionals: Abeilles et instructions conditionnelles
         C3_maze_conditionals: 'Labyrinthe : instructions conditionnelles'
-        C3_artist_nested_loops: Nested Loops
-        C3_farmer_while: While Loops
-        C3_bee_nested_loops: Nested Loops
+        C3_artist_nested_loops: Boucles imbriquées
+        C3_farmer_while: Pendant que les Boucles
+        C3_bee_nested_loops: Boucles imbriquées
         C3_bee_debugging: Abeilles et debugging
         C3_bounce: Rebond
-        C3_playlab_create_game: Play Lab - Create a Game
-        C3_computational_thinking: Algorithmique
-        C3_dice_race: Dice Race
+        C3_playlab_create_game: Jouer au Labo - Créer un Jeu
+        C3_computational_thinking: L'algorithmique
+        C3_dice_race: Course de Dés
         C3_internet: Internet
         C3_crowdsourcing: Financement participatif
         C3_functional_suncatchers: Functional Suncatchers

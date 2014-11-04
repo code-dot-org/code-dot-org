@@ -62,6 +62,7 @@ class DashboardStudent
              :secret_words_2__word___secret_word_2
             ).
       where(users__id:id).
+      server(:default).
       first
 
     row.merge(age: birthday_to_age(row[:birthday]))

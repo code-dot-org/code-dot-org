@@ -18,11 +18,11 @@ Code.org contatterà gli organizzatori dopo il termina dell'Ora del Codice (8-14
 
 ## Video chat con un ospite d'onore:
 
-Premio limitato alle scuole elementari, medie e superiori degli Stati Uniti. Per qualificarsi, l'intera scuola deve registrarsi per l'Ora del Codice entro il 14 novembre 2014. Code.org selezionerà casualmente le scuole vincenti, fornirà una fascia oraria per la web chat e lavorerà con l'insegnante appropriato per definire i dettagli di relativi alla strumentazione tecnologia necessaria.
+Prize limited to K-12 classrooms in the U.S. and Canada only. To qualify, sign up your classroom by November 14, 2014. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligbile to win.
 
 ## Portatili per una intera classe (o $10.000 in altra strumentazione tecnologica):
 
-Premio limitato alle scuole pubbliche elementari, medie e superiori degli Stati Uniti. Perché solo le scuole pubbliche? [See the answer here](http://www.hourofcode.com/#faq). Per qualificarsi, l'intera scuola deve registrarsi per l'Ora del Codice entro il 14 novembre 2014. Una sola scuola per ogni stato americano riceverà un set computer per un'intera classe. Code.org selezionerà e notificherà i vincitori via email entro il 1° dicembre 2014.
+Premio limitato alle scuole pubbliche elementari, medie e superiori degli Stati Uniti. To qualify, your entire school must register for the Hour of Code by November 14, 2014. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2014.
 
 To clarify, this is not a sweepstakes or a contest involving pure chance.
 

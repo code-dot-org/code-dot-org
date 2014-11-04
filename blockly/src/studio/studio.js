@@ -973,6 +973,7 @@ Studio.init = function(config) {
       extraControlRows: extraControlsRow,
       blockUsed: undefined,
       idealBlockNumber: undefined,
+      editCode: level.editCode,
       blockCounterClass: 'block-counter-default'
     }
   });
@@ -1021,11 +1022,6 @@ Studio.init = function(config) {
     Blockly.SNAP_RADIUS *= Studio.scale.snapRadius;
 
     drawMap();
-  };
-
-  config.getDisplayWidth = function() {
-    var el = document.getElementById('visualizationColumn');
-    return el.getBoundingClientRect().width;
   };
 
   if (config.level.edit_blocks != 'toolbox_blocks') {
@@ -1404,6 +1400,10 @@ Studio.execute = function() {
 
   var handlers = [];
   registerHandlers(handlers, 'when_run', 'whenGameStarts');
+  registerHandlers(handlers, 'functional_setBackground', 'whenGameStarts');
+  registerHandlers(handlers, 'functional_setPlayerSpeed', 'whenGameStarts');
+  registerHandlers(handlers, 'functional_setEnemySpeed', 'whenGameStarts');
+  registerHandlers(handlers, 'functional_showTitleScreen', 'whenGameStarts');
   registerHandlers(handlers, 'studio_whenLeft', 'when-left');
   registerHandlers(handlers, 'studio_whenRight', 'when-right');
   registerHandlers(handlers, 'studio_whenUp', 'when-up');
@@ -1819,7 +1819,8 @@ Studio.setSpriteEmotion = function (opts) {
 };
 
 Studio.setSpriteSpeed = function (opts) {
-  Studio.sprite[opts.spriteIndex].speed = opts.value;
+  var speed = Math.min(Math.max(opts.value, 2), 12);
+  Studio.sprite[opts.spriteIndex].speed = speed;
 };
 
 Studio.setSpriteSize = function (opts) {

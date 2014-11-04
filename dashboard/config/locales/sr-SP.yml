@@ -69,16 +69,7 @@
     no_signup_message: Можете <a target="_blank" href="http://learn.code.org">претраживати
       разне нивое и загонетке</a>, али ће те морати да се пријавите како бих запамтили
       ваш напредак.
-    prizes_message: "Студенти С.А.Д. који освоје свих %{num_trophies} концепта трофеја
-      могу бирати мноштво награда укључујући бесплатан Дропбокс простор, Скајп кредит,
-      и игре спремне за преузимање од Електроник Артс-а."
     teacher_educator_guide: "Погледај водич за едукатора"
-    teacher_prize_header: Освоји $1,000 у <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
-      Награде
-    teacher_prize_message: 'У партнерству са <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>,
-      Code.org понудиће до $1000 за финансирање учионица, учитељима државних школа
-      у С.А.Д. који спроведу барем 15 ученика кроз овај курс.<a href="http://code.org/educate/20hr">Погледај
-      упутство за употребу за више информација.</a> '
     teacher_pitch: "Регистрација за Code.org - nastavnici"
     teacher_title: "Учитељ пријављивање"
     student_pitch: "Регистрација за Code.org - студенти"
@@ -89,6 +80,7 @@
     gender: "Пол (опционо)"
     birthday: "Датум рођења (опционо)"
     age: "Узраст"
+    user_type: Are you a student or teacher?
     submit: "Региструј се"
     teacher: "Да ли сте наставник?"
     valid_username: "Доступно!"
@@ -381,8 +373,6 @@
     student_stats: Ви сте зарадили %{trophy_count} од %{trophy_max} "Concept Mastery"
       трофеја.
     student_left_off: "Гдје сте оставили заднји пут:"
-    student_finished_prize: "Завршили сте све туторијале, узмите своју %{prize_link}
-      и изаберите неки други разред %{online_link} или у %{local_school_link} "
     student_finished: You've completed all tutorials, pick another class %{online_link}
       or at a %{local_school_link}
     local_school: "локална школа"
@@ -409,6 +399,9 @@
     male: "Мушко"
     female: "Женско"
     none: "Желим задржати приватност"
+  user_type:
+    student: "студент"
+    teacher: Teacher
   footer:
     help_from_html: Инженјери са <a href="http://www.google.com">Google</a>, <a href="http://www.microsoft.com">Microsoft</a>,
       <a href="http://www.facebook.com">Facebook</a>, и <a href="http://www.twitter.com">Twitter</a>
@@ -424,13 +417,6 @@
     tos: "Увјети кориштенја"
     privacy: "Политика приватности"
     secure: Secure Version
-  prize_mail:
-    prize_earned:
-      subject: "Откупи своји награду на Code.org!"
-    teacher_prize_earned:
-      subject: "Откупи своји награду на Code.org!"
-    teacher_bonus_prize_earned:
-      subject: "Откупи своју бонус награду на Code.org!"
   reference_area:
     title: "Требаш помоћ?"
     subtitle: "Погледај ове снимке и савете"

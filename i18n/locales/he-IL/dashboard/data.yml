@@ -49,6 +49,7 @@ he:
           desc: ערוך קוד (בטא)
           MazeEC: שלב 1
           Webapp: שלב 2
+          ArtistEC: שלב 3
         events:
           desc: קפיצה (בטא)
           Bounce: שלב 1
@@ -98,6 +99,7 @@ he:
         MazeStep: מצב שלב מבוך
         Wordsearch: תפזורת
         Webapp: Webapp
+        ArtistEC: האמן
     trophy:
       name:
         Bronze: ארד
@@ -268,12 +270,12 @@ he:
         jigsaw_10: Arrange the blocks to form the image
         jigsaw_11: Arrange the blocks to form the image
         jigsaw_12: Arrange the blocks to form the image
-        jigsaw_13: Fix the puzzle!
-        mazestep_1: Maze step description here
-        mazestep_2: Maze step description here
-        mazestep_3: Maze step description here
-        mazestep_4: Maze step description here
-        mazestep_5: Maze step description here
+        jigsaw_13: פתור את החידה!
+        mazestep_1: תיאור צעדי ההליכה במבוך כאן
+        mazestep_2: תיאור צעדי ההליכה במבוך כאן
+        mazestep_3: תיאור צעדי ההליכה במבוך כאן
+        mazestep_4: תיאור צעדי ההליכה במבוך כאן
+        mazestep_5: תיאור צעדי ההליכה במבוך כאן
         studio_c2_1: 'Can you make this dog say "hello world"?'
         studio_c2_2: Can you make the dog say something and then have the cat say something afterwards?
         studio_c2_3: Can you write a program to make this dog move to the cat?
@@ -325,6 +327,8 @@ he:
         maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
         maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
         maze_wordsearch_k_20: This is a test! Move me one way, then another to spell the word STORY
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColour" block.'
     video:
       name:
         maze_intro: מבוא למבוך

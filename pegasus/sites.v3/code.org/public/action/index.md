@@ -3,7 +3,7 @@ title: Where computer science counts
 nav: blank
 rightbar: blank
 social:
-  "og:description": "Only 23 US states count computer science towards high school graduation. Is yours on the list?"
+  "og:description": "Only 25 US states count computer science towards high school graduation. Is yours on the list?"
   "og:image": "/images/mapimage.png"
   "og:image:width": 600
   "og:image:height": 331
@@ -13,7 +13,7 @@ social:
   "og:video:type": ""
 ---
 <% facebook = {:u=>'http://code.org/action'} %>
-<% twitter = {:url=>'http://code.org/action', :related=>'codeorg', :hashtags=>'CODE', :text=>'Only 23 US states count computer science towards high school graduation. Is yours on the list? @codeorg'} %>
+<% twitter = {:url=>'http://code.org/action', :related=>'codeorg', :hashtags=>'CODE', :text=>'Only 25 US states count computer science towards high school graduation. Is yours on the list? @codeorg'} %>
 
 # Where Computer Science Counts
 
@@ -45,6 +45,7 @@ social:
 | Maryland | Math |
 | Michigan | Math |
 | Missouri | Math |
+| New York | Math |
 | North Carolina | Math |
 | Ohio | Math |
 | Oklahoma | Math |

@@ -26,12 +26,13 @@ module Poste2
     url_id = @@url_cache[href]
     return url_id if url_id
 
-    unless url = DB[:poste_urls].where(hash:hash, url:href).first
-      DB[:poste_urls].insert(hash:hash, url:href)
-      url = DB[:poste_urls].where(hash:hash, url:href).first
+    if url = DB[:poste_urls].where(hash:hash, url:href).first
+      url_id = url[:id]
+    else
+      url_id = DB[:poste_urls].insert(hash:hash, url:href)
     end
 
-    @@url_cache[href] = url[:id]
+    @@url_cache[href] = url_id
   end
 
   def self.create_recipient(address, params={})
@@ -55,7 +56,7 @@ module Poste2
         )
       end
     else
-      contacts.insert({}.tap do |contact|
+      id = contacts.insert({}.tap do |contact|
         contact[:email] = address
         contact[:name] = name if name
         contact[:created_at] = contact[:created_on] = now
@@ -63,7 +64,7 @@ module Poste2
         contact[:updated_at] = contact[:updated_on] = now
         contact[:updated_ip] = ip_address
       end)
-      contact = contacts.where(email:address).first
+      contact = {id:id}
     end
 
     {id:contact[:id], email:address, name:name, ip_address:ip_address}
@@ -81,8 +82,7 @@ module Poste2
 
     contact = contacts.where(email:address).first
     unless contact
-      puts "create"
-      contacts.insert({}.tap do |contact|
+      id = contacts.insert({}.tap do |contact|
         contact[:email] = address
         contact[:name] = name if name
         contact[:created_at] = contact[:created_on] = now
@@ -90,7 +90,7 @@ module Poste2
         contact[:updated_at] = contact[:updated_on] = now
         contact[:updated_ip] = ip_address
       end)
-      contact = contacts.where(email:address).first
+      contact = {id:id}
     end
 
     {id:contact[:id], email:address, name:name, ip_address:ip_address}

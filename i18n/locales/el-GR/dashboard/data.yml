@@ -49,6 +49,7 @@ el:
           desc: Edit Code (beta)
           MazeEC: Στάδιο 1
           Webapp: Στάδιο 2
+          ArtistEC: Στάδιο 3
         events:
           desc: Bounce (beta)
           Bounce: Στάδιο 1
@@ -98,6 +99,7 @@ el:
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
         Webapp: Webapp
+        ArtistEC: Ο Καλλιτέχνης
     trophy:
       name:
         Bronze: Χάλκινο
@@ -326,6 +328,8 @@ el:
         maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
         maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
         maze_wordsearch_k_20: This is a test! Move me one way, then another to spell the word STORY
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColour" block.'
     video:
       name:
         maze_intro: Πρόλογος λαβυρίνθου

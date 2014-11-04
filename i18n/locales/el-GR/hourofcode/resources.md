@@ -4,14 +4,22 @@ title: Πόροι layout: wide nav: resources_nav
 
 * * *
 
-# Πόροι
+<div class="row">
+  <h1 class="col-sm-6">
+    Πόροι
+  </h1>
+  
+  <div class="col-sm-6 button-container centered">
+    <a href="/#join"><button class="signup-button">Sign up your event</button></a>
+  </div>
+</div>
 
-## Hosting an Hour of Code? [See the how-to guide](<%= hoc_uri('/resources/how-to') %>)
+## Φιλοξενείτε μια εκδήλωση για την του Ώρα του Κώδικα;[Δείτε τον οδηγό](<%= hoc_uri('/resources/how-to') %>)
 
 <a id="handouts"></p> 
 
 <h2>
-  Use this handout to spread the word
+  Χρησιμοποίησε αυτό το φυλλάδιο για να διαδοθεί η Ώρα του Κώδικα
 </h2>
 
 <p>
@@ -19,7 +27,7 @@ title: Πόροι layout: wide nav: resources_nav
 </p>
 
 <h2>
-  Give this handout to teachers and schools
+  Δώσε αυτό το φυλλάδιο σε εκπαιδευτικούς και σχολεία
 </h2>
 
 <p>
@@ -30,20 +38,20 @@ title: Πόροι layout: wide nav: resources_nav
   <a id="videos"></p> 
   
   <h2>
-    Show these videos to inspire students
+    Δείξε αυτά τα βίντεο για να εμπνεύσεις τους μαθητές
   </h2>
   
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>Τι δεν διδάσκουν τα περισσότερα σχολεία (5 λεπτά)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
+      <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>What Most Schools Don't Teach (5 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong> Η Ώρα του Κώδικα είναι εδώ - Όλοι μπορούν να μάθουν </strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
+      <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>Hour of Code is Here - Anybody Can Learn</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
@@ -53,14 +61,14 @@ title: Πόροι layout: wide nav: resources_nav
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>Ο Πρόεδρος Ομπάμα για την Πληροφορική</strong></a>
+      <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>President Obama on computer science</strong></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>Όλοι μπορούν να μάθουν (1 λεπτό)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
+      <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>Anybody Can Learn (1 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
@@ -74,7 +82,7 @@ title: Πόροι layout: wide nav: resources_nav
     <a id="posters"></p> 
     
     <h2>
-      Hang these posters in your school
+      Κρεμάστε αυτές τις αφίσες στο σχολείο σας
     </h2>
     
     <p>
@@ -82,7 +90,7 @@ title: Πόροι layout: wide nav: resources_nav
     </p>
     
     <h4>
-      <a href="http://hourofcode.com/#signup">Sign up</a> your Hour of Code event and we'll mail you posters for free.
+      <a href="http://hourofcode.com/#signup">Κάνε εγγραφή</a> της εκδήλωσης σου για την Ώρα του Κώδικα και θα σου στείλουμε αφίσες δωρεάν.
     </h4>
     
     <p>
@@ -94,7 +102,7 @@ title: Πόροι layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Feature these banners on your website
+      Τοποθετήστε αυτά τα διαφημιστικά στην ιστοσελίδα σας
     </h2>
     
     <p>
@@ -102,11 +110,27 @@ title: Πόροι layout: wide nav: resources_nav
     </p>
     
     <p>
+      <a id="social"></a>
+    </p>
+    
+    <h2>
+      Δημοσιεύστε τα στα κοινωνικά μέσα
+    </h2>
+    
+    <p>
+      <a href="/images/social-1.jpg"><img src="/images/fit-250/social-1.jpg" alt="εικόνα" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-2.jpg"><img src="/images/fit-250/social-2.jpg" alt="εικόνα" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-3.jpg"><img src="/images/fit-250/social-3.jpg" alt="εικόνα" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    
+    <p>
+      <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="εικόνα" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="εικόνα" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="εικόνα" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="εικόνα" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="εικόνα" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    
+    <p>
       <a id="sample-emails"></a>
     </p>
     
     <h2>
-      Send these emails to help promote the Hour of Code
+      Στείλτε αυτά τα ηλεκτρονικά μηνύματα για να βοηθήσετε στην προώθηση της Ώρας του Κώδικα
     </h2>
     
     <p>
@@ -114,15 +138,15 @@ title: Πόροι layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Ask your school, employer or friends to sign up:
+      Ζήτησε από το σχολείο, τον εργοδότη ή τους φίλους σου να εγγραφούν:
     </h2>
     
     <p>
-      Οι υπολογιστές είναι παντού, αλλά λιγότερα σχολεία διδάσκουν Πληροφορική από ό, τι πριν από 10 χρόνια. Τα καλά νέα είναι, ότι πρόκειται να το αλλάξουμε αυτό. Αν ακούσατε για την Ώρα του Κώδικα πέρυσι, ίσως γνωρίζετε ότι έκανε αίσθηση. Σε μία μόνο εβδομάδα, 15 εκατομμύρια μαθητές ήρθαν σε επαφή με την επιστήμη της Πληροφορικής!
+      Οι υπολογιστές είναι παντού, αλλά λιγότερα σχολεία διδάσκουν Πληροφορική από ό, τι πριν από 10 χρόνια. Τα καλά νέα είναι, ότι πρόκειται να το αλλάξουμε αυτό. Αν ακούσατε για την Ώρα του Κώδικα πέρυσι, θα γνωρίζετε ότι έγραψε ιστορία. Σε μία μόνο εβδομάδα, 15 εκατομμύρια μαθητές ήρθαν σε επαφή με την επιστήμη της Πληροφορικής!
     </p>
     
     <p>
-      Η Επιστήμη των υπολογιστών ήταν στις ιστοσελίδες των Google, MSN, Yahoo! και Disney. Ο Πρόεδρος Obama, η Shakira και ο Ashton Kutcher ξεκίνησαν την Ώρα του Κώδικα με βίντεο. Πάνω από 100 εταίροι ενώθηκαν για να υποστηρίξουν αυτή την κίνηση.
+      Η Επιστήμη των υπολογιστών ήταν στις αρχικές ιστοσελίδες των Google, MSN, Yahoo! και Disney. Ο Πρόεδρος Obama, η Shakira και Ashton Kutcher ξεκίνησαν την Ώρα του Κώδικα με ένα βίντεο. Πάνω από 100 εταίροι ενώθηκαν για να υποστηρίξουν αυτό το κίνημα.
     </p>
     
     <p>
@@ -130,11 +154,11 @@ title: Πόροι layout: wide nav: resources_nav
     </p>
     
     <p>
-      Μεταδώστε το. Φιλοξενήστε μια εκδήλωση. Ζητήστε από ένα τοπικό σχολείο να εγγραφεί. Ή δοκιμάστε οι ίδιοι την Ώρα του Κώδικα --όλοι μπορούν να επωφεληθούν από την εκμάθηση των βασικών αρχών.
+      Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself -- everyone can benefit from learning the basics.
     </p>
     
     <p>
-      Βοηθήστε μας να φτάσουμε τα 100 εκατομμύρια μαθητές συνολικά μέχρι το τέλος του έτους! Ξεκινήστε στην ιστοσελίδα http://hourofcode.com
+      Βοηθείστε μας να φτάσουμε 100 εκατομμύρια μαθητές μέχρι το τέλος του χρόνου! Μπείτε στην διεύθυνση http://hourofcode.com
     </p>
     
     <p>
@@ -142,51 +166,51 @@ title: Πόροι layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Invite media to attend your event:
+      Κάλεσε τα ΜΜΕ να καλύψουν την εκδήλωσή σου:
     </h2>
     
     <p>
-      <strong>Γραμμή θέματος:</strong> Τοπικό σχολείο συμμετέχει στην αποστολή του να γνωρίσουν 100 εκατομύρια μαθητές την Επιστήμη των Υπολογιστών
+      <strong>Subject line:</strong> Local school joins mission to introduce 100m students to computer science
     </p>
     
     <p>
-      Οι υπολογιστές είναι παντού, αλλά λιγότερα σχολεία διδάσκουν Πληροφορική από ό, τι πριν από 10 χρόνια. Τα καλά νέα είναι, ότι πρόκειται να το αλλάξουμε αυτό.
+      Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and minorities are severely underrepresented. Good news is, we’re on our way to change this.
     </p>
     
     <p>
-      Σε μία μόνο εβδομάδα, 15 εκατομμύρια μαθητές ήρθαν σε επαφή με την επιστήμη της Πληροφορικής! Η Επιστήμη των υπολογιστών ήταν στις ιστοσελίδες των Google, MSN, Yahoo! και Disney. Ο Πρόεδρος Obama, η Shakira και ο Ashton Kutcher ξεκίνησαν την Ώρα του Κώδικα με βίντεο. Πάνω από 100 εταίροι ενώθηκαν για να υποστηρίξουν αυτή την κίνηση.
+      In one week last year, 15 million students tried computer science! Η Επιστήμη των υπολογιστών ήταν στις αρχικές ιστοσελίδες των Google, MSN, Yahoo! και Disney. Ο Πρόεδρος Obama, η Shakira και Ashton Kutcher ξεκίνησαν την Ώρα του Κώδικα με ένα βίντεο. Πάνω από 100 εταίροι ενώθηκαν για να υποστηρίξουν αυτό το κίνημα.
     </p>
     
     <p>
-      Τώρα ο στόχος του κινήματος είναι οι 100 εκατομμύρια μαθητές.
+      Now the Hour of Code movement is aiming for 100 million students.
     </p>
     
     <p>
-      Για αυτό το λόγο, κάθε ένας από τους [X number] μαθητές στο [SCHOOL NAME] παίρνουν μέρος στη μεγαλύτερη εκπαιδευτική εκδήλωση στην Ιστορία: την Ώρα του Κωδικα, στις 8-14 Δεκεμβρίου.
+      That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Dec. 8-14.
     </p>
     
     <p>
-      Σας γράφω για να σας προσκαλέσω να παρακολουθήσετε την έναρξη της εκδήλωσης και να δείτε τα παιδιά να αρχίζουν τη δραστηριότητά τους στις [DATE].
+      I'm writing to invite you to attend our kickoff assembly, and to see kids start the activity on [DATE].
     </p>
     
     <p>
-      Η Ώρα του Κώδικα, που διοργανώνεται από τον μη κερδοσκοπικό οργανισμό Code.org και πάνω από 100 άλλους, είναι μια δήλωση ότι τωρινή γενιά μαθητών είναι έτοιμη να καλλιεργήσει κρίσιμες δεξιότητες για την επιτυχία της τον 21ο αιώνα. Σας παρακαλούμε να έρθετε μαζί μας.
+      The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a statement that today’s generation of students are ready to learn critical skills for 21st century success. Please join us.
     </p>
     
     <p>
-      <strong>Επικοινωνία:</strong> [ΤΟ ΟΝΟΜΑ ΣΑΣ], [TITLE], ΑΡΙΘΜΟΣ ΕΠΙΚΟΙΝΩΝΙΑΣ
+      <strong>Contact:</strong> [YOUR NAME], [TITLE], cell: (212) 555-5555
     </p>
     
     <p>
-      <strong>Πότε:</strong>[ΗΜΕΡΟΜΗΝΙΑ and ΩΡΑ της εκδήλωσής σας]
+      <strong>When:</strong> [DATE and TIME of your event]
     </p>
     
     <p>
-      <strong>Που</strong> [ΔΙΕΥΘΥΝΣΗ και ΟΔΗΓΙΕΣ ΠΡΟΣΒΑΣΗΣ]
+      <strong>Where:</strong> [ADDRESS and DIRECTIONS]
     </p>
     
     <p>
-      Ανυπομονώ να τα πούμε από κοντά.
+      I look forward to being in touch.
     </p>
     
     <p>
@@ -198,35 +222,35 @@ title: Πόροι layout: wide nav: resources_nav
     </h2>
     
     <p>
-      Αγαπητοί Γονείς,
+      Dear Parents,
     </p>
     
     <p>
-      Ζούμε σε έναν κόσμο που περιβάλλεται από την τεχνολογία. Γνωρίζουμε ότι, ανεξάρτητα από τον τομέα που θα επιλέξει κάθε μαθητής να ασχοληθεί ως ενήλικας, η ικανότητα του να πετύχει θα εξαρτάται όλο και περισσότερο από τον βαθμό κατανόησης του πως λειτουργεί η τεχνολογία. Αλλά μόνο πολύ λίγοι από εμάς μαθαίνουν την Επιστήμη των Υπολογιστών και λιγότεροι μαθητές την μελετούν από ότι πριν μια δεκαετία.
+      We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly hinge on understanding how technology works. But only a tiny fraction of us are learning computer science, and less students are studying it than a decade ago.
     </p>
     
     <p>
-      Γι' αυτό, όλο το σχολείο συμμετέχει στην μεγαλύτερη εκπαιδευτική εκδήλωση στην Ιστορία: την Ώρα του Κώδικα, κατά τη διάρκεια της Εκπαιδευτικής Εβδομάδας της Επιστήμης της Πληροφορικής (8-14 Δεκεμβρίου). Πέρυσι, 15 εκατομμύρια μαθητές δοκίμασαν την Επιστήμη των Υπολογιστών σε μια εβδομάδα. Αυτό το χρόνο, συγκεντρώνουμε μαθητές από όλο τον κόσμο, με σκοπό να φτάσουμε τα 100 εκατομμύρια!
+      That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 8-14). Last year, 15 million students tried computer science in one week. This year, we're joining students worldwide to reach 100 million students!
     </p>
     
     <p>
-      Η εκδήλωσή μας είναι μια δήλωση ότι το [ΟΝΟΜΑ ΣΧΟΛΕΙΟΥ] είναι έτοιμο να διδάξει και να καλλιργήσει αυτές τις θεμελιώδεις δεξιότητες για τον 21 αιώνα. Για να μπορέσουμε να συνεχίσουμε να παρέχουμε στα παιδιά σας δραστηριότητες προγραμματισμούς, θέλουμε να κάνουμε την εκδήλωση της Ώρας του Κώδικα τεράστια. Σας ενθαρρύνω να γίνεται εθελοντής, να έρθετε σε επαφή με τα ΜΜΕ, να μοιραστείτε τα νέα στα μέσα κοινωνικής δικτύωσης και ίσως να εκδηλώσετε επιπρόσθετες εκδηλώσεις για την Ώρα του Κώδικα στην Κοινότητα.
+      Our Hour of Code is a statement that [SCHOOL NAME] is ready to teach these foundational 21st century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on your social media channels and consider hosting additional Hour of Code events in the community.
     </p>
     
     <p>
-      Εϊναι η ευκαιρία να αλλάξουμε το μέλλον της εκπαίδευσης στην [ΟΝΟΜΑ ΠΟΛΗΣ/ΚΟΙΝΟΤΗΤΑΣ].
+      This is a chance to change the future of education in [TOWN/CITY NAME].
     </p>
     
     <p>
-      Δείτε το http://hourofcode.com για λεπτομέρειες και βοηθείστε στη διάδοση της εκδήλωσης.
+      See http://hourofcode.com for details, and help spread the word.
     </p>
     
     <p>
-      Με εκτίμηση,
+      Sincerely,
     </p>
     
     <p>
-      Ο Διευθυντής σας
+      Your principal
     </p>
     
     <p>
@@ -238,25 +262,29 @@ title: Πόροι layout: wide nav: resources_nav
     </h2>
     
     <p>
-      Κύριε [Βουλευτά/Περιφερειάρχη/Περιφεριακές Σύμβουλε/Δήμαρχε/Δημοτικέ Σύμβουλε ΕΠΙΘΕΤΟ]:
+      Dear [Mayor/Governor/Representative/Senator LAST NAME]:
     </p>
     
     <p>
-      Γνωρίζατε ότι στην σημερινή οικονομία, οι θέσεις εργασίας που αφορούν την Πληροφορική είναι τριπλάσιες από τους αποφοίτους του τομέα; Και ότι η επιστήμη των υπολογιστών είναι θεμελιώδης για <em>κάθε</em> τομέα σήμερα; Κι όμως το 90% των σχολείων στην Αμερική δεν το διδάσκουν. Εμείς εδώ στο [ΟΝΟΜΑ ΣΧΟΛΕΙΟΥ], προσπαθούμε να το αλλάξουμε.
+      Did you know that in today’s economy, computing jobs outnumber students graduating into the field by 3-to-1? And, computer science is foundational for <em>every</em> industry today. Yet 90% of schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
     </p>
     
     <p>
-      Γι' αυτό, όλο το σχολείο συμμετέχει στην μεγαλύτερη εκπαιδευτική εκδήλωση στην Ιστορία: την Ώρα του Κώδικα, κατά τη διάρκεια της Εκπαιδευτικής Εβδομάδας της Επιστήμης της Πληροφορικής (8-14 Δεκεμβρίου). Πέρυσι, 15 εκατομμύρια μαθητές δοκίμασαν την Επιστήμη των Υπολογιστών σε μια εβδομάδα. Αυτό το χρόνο, συγκεντρώνουμε μαθητές από όλο τον κόσμο, με σκοπό να φτάσουμε τα 100 εκατομμύρια!
+      That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 8-14). Last year, 15 million students tried computer science in one week. This year, we're joining students worldwide to reach 100 million students!
     </p>
     
     <p>
-      Σας γράφω για να σας προσκαλέσω να πάρετε μέρος στην εκδήλωση για την Ώρα του Κώδικα, με μια ομιλία σας στην τελετή έναρξης. Η εκδήλωση θα γίνει στις [ΗΜ/ΝΙΑ, ΩΡΑ, ΤΟΠΟΘΕΣΙΑ], και θα δηλώσουμε σθεναρά ότι η [ΠΟΛΗ/ΠΕΡΙΟΧΗ] είναι έτοιμη να καλλιεργήσει στους μαθητές κρίσιμες δεξιότητες για τον 21ο αιώνα. Θέλουμε να διασφαλίσουμε ότι οι μαθητές μας είναι στην πρώτη γραμμή της δημιουργίας της τεχνολογίας του μέλλοντος--και όχι απλοί καταναλωτές της.
+      I'm writing to invite you to take part in our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st century skills. We want to ensure that our students are on the forefront of creating technology of the future--not just consuming it.
     </p>
     
     <p>
-      Παρακαλώ επικοινωνείστε μαζί μου στο [ΤΗΛΕΦΩΝΟ ή ΔΙΕΥΘΥΝΣΗ ΗΛΕΚΤΡΟΝΙΚΟΥ ΤΑΧΥΔΡΟΜΕΙΟΥ]. Ανυπομονώ για την απάντησή σας.
+      Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
     </p>
     
     <p>
-      Με εκτίμηση, [NAME],[TITLE]
+      Sincerely, [NAME], [TITLE]
+    </p>
+    
+    <p>
+      <a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>
     </p>

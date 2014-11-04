@@ -50,6 +50,7 @@
           desc: Editar Código (beta)
           MazeEC: Fase 1
           Webapp: Fase 2
+          ArtistEC: Fase 3
         events:
           desc: Pingue-pongue (beta)
           Bounce: Fase 1
@@ -99,6 +100,7 @@
         MazeStep: Modo Labirinto
         Wordsearch: Caça Palavras
         Webapp: Webapp
+        ArtistEC: O Artista
     trophy:
       name:
         Bronze: Bronze
@@ -568,6 +570,9 @@
           formar a palavra BELOW
         maze_wordsearch_k_20: Isso é um teste! Movimente-me para um lado, e então
           para o outro, para formar a palavra STORY
+        webapp_ec_simple: Crie seu aplicativo da Web com createHtmlBlock.
+        turtle_ec_1_2: 'Agora, desenhe um quadrado. OBSERVAÇÃO: para usar sua cor
+          preferida, selecione-a no novo bloco "penColour".'
     video:
       name:
         maze_intro: Introdução ao Labirinto

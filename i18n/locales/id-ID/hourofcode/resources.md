@@ -4,7 +4,15 @@ title: Resources layout: wide nav: resources_nav
 
 * * *
 
-# Sumber daya
+<div class="row">
+  <h1 class="col-sm-6">
+    Sumber daya
+  </h1>
+  
+  <div class="col-sm-6 button-container centered">
+    <a href="/#join"><button class="signup-button">Sign up your event</button></a>
+  </div>
+</div>
 
 ## Hosting an Hour of Code? [See the how-to guide](<%= hoc_uri('/resources/how-to') %>)
 
@@ -30,20 +38,20 @@ title: Resources layout: wide nav: resources_nav
   <a id="videos"></p> 
   
   <h2>
-    Show these videos to inspire students
+    Tampilkan video ini untuk menginspirasi para pelajar
   </h2>
   
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>Apa yang kebanyakan sekolah tidak pernah ajarkan (5 menit)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
+      <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>What Most Schools Don't Teach (5 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>Hour of Code telah hadir - Siapa saja dapat belajar</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
+      <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>Hour of Code is Here - Anybody Can Learn</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
@@ -53,14 +61,14 @@ title: Resources layout: wide nav: resources_nav
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>President Obama pada Ilmu Komputer</strong></a>
+      <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>President Obama on computer science</strong></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>Siapa Saja Dapat Belajar (1 menit)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
+      <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>Anybody Can Learn (1 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
@@ -74,7 +82,7 @@ title: Resources layout: wide nav: resources_nav
     <a id="posters"></p> 
     
     <h2>
-      Hang these posters in your school
+      Pajang poster - poster ini di sekolah anda
     </h2>
     
     <p>
@@ -102,6 +110,22 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <p>
+      <a id="social"></a>
+    </p>
+    
+    <h2>
+      Post these on social media
+    </h2>
+    
+    <p>
+      <a href="/images/social-1.jpg"><img src="/images/fit-250/social-1.jpg" alt="gambar" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-2.jpg"><img src="/images/fit-250/social-2.jpg" alt="gambar" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-3.jpg"><img src="/images/fit-250/social-3.jpg" alt="gambar" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    
+    <p>
+      <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="gambar" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="gambar" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="gambar" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="gambar" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="gambar" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    
+    <p>
       <a id="sample-emails"></a>
     </p>
     
@@ -114,27 +138,27 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Ask your school, employer or friends to sign up:
+      Ajak sekolah anda, kantor, dan teman anda untuk mendaftar:
     </h2>
     
     <p>
-      Komputer ada dimana-mana, tetapi sedikit sekolah yang mengajar ilmu komputer dari 10 tahun yang lalu. Kabar baiknya, kita berada pada jalur yang tepat untuk merubah itu. Jika anda pernah mendengar Hour of Code tahun lalu, anda mungkin tahu sejarahnya. Dalam satu minggu saja, sudah lebih dari 15 juta pelajar mencoba ilmu komputer!
+      Komputer ada dimana-mana, tetapi sedikit sekolah yang mengajar ilmu komputer dari 10 tahun yang lalu. Kabar baiknya, kita berada pada jalur yang tepat untuk merubah itu. Jika Anda mendengar tentang Hour of Code tahun lalu, Anda mungkin tahu itu membuat sejarah. Dalam satu minggu saja, sudah lebih dari 15 juta pelajar mencoba ilmu komputer!
     </p>
     
     <p>
-      Komputer science juga terdapat pada hompage dari Google, MSN, Yahoo! dan Disney. President Obama, Shakira dan Ashton Kutcher juga ikut serta dalam Hour of Code disertai video mereka. Lebih dari 100 mitra kerja datang untuk mendukng gerakan ini.
+      Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
     </p>
     
     <p>
-      Untuk tahun ini, marilah kita buat lebih besar lagi. Kami meminta anda untuk bergabung dalam Hour of Code 2014. Ayo bergabunglah dalam Hour of Code saat Computer Education Week, 8-14 Desember 2014.
+      Untuk tahun ini, mari kita buat lebih besar lagi. Kami meminta anda untuk bergabung dalam Hour of Code 2014. Ayo bergabunglah dalam Hour of Code saat Pekan Edukasi Ilmu Komputer, 8-14 Desember 2014.
     </p>
     
     <p>
-      Sebarkan mengenai berita ini. Selenggarakan aktivitasnya. Tanyakan sekolah dilingkungan anda untuk bergabung. Atau mencoba Hour of Code sendiri -- setiap orang dapat mendapatkan manfaat dengan mempelajari dasarnya.
+      Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself -- everyone can benefit from learning the basics.
     </p>
     
     <p>
-      Bantu kami untuk mencapai 100 juta pelajar yang ikut serta pada akhir tahun! Mulailah pada http://hourofcode.com
+      Bantu kami mencapai 100 juta siswa pada akhir tahun! Mulailah di http://hourofcode.com
     </p>
     
     <p>
@@ -142,51 +166,51 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Invite media to attend your event:
+      Undanglah media untuk menghadiri kegiatan anda:
     </h2>
     
     <p>
-      <strong>Baris subjek:</strong> Sekolah lokal bergabung dalam misi untuk memperkenalkan pada 100 juta pelajar mengenai ilmu komputer
+      <strong>Subject line:</strong> Local school joins mission to introduce 100m students to computer science
     </p>
     
     <p>
-      Komputer ada dimana-mana, tetapi sedikit sekolah yang mengajar ilmu komputer daripada 10 tahun yang lalu. Perempuan dan minoritas sangat kurang terwakili mengenai hal ini. Berita baiknya, kita dalam jalur yang tepat untuk merubahnya.
+      Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and minorities are severely underrepresented. Good news is, we’re on our way to change this.
     </p>
     
     <p>
-      Dalam satu minggu tahun lalu, 15 juta pelajar telah mencoba ilmu komputer! Komputer science juga terdapat pada hompage dari Google, MSN, Yahoo! dan Disney. President Obama, Shakira dan Ashton Kutcher juga ikut serta dalam Hour of Code disertai video mereka. Lebih dari 100 mitra kerja datang untuk mendukng gerakan ini.
+      In one week last year, 15 million students tried computer science! Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
     </p>
     
     <p>
-      Sekaran gerakan Hour of Code ingin mencapai 100 juta pelajar.
+      Now the Hour of Code movement is aiming for 100 million students.
     </p>
     
     <p>
-      Itulah sebabnya setiap [X number] pelajar pada [SCHOOL NAME] akan bergabung dalam kegiatan belajar terbesar dalam sejarah: Hour of Code pada Desember tanggal 8-14.
+      That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Dec. 8-14.
     </p>
     
     <p>
-      Saya menulis ini untuk mengundang anda untuk menghadiri acara pembukaan dan melihat aktivitas anak-anak pada tanggal [DATE].
+      I'm writing to invite you to attend our kickoff assembly, and to see kids start the activity on [DATE].
     </p>
     
     <p>
-      Hour of Code, diorganisir oraganisasi Code.org nirlaba dan lebih dari 100 mitra lainnya, ini adalah pernyataan bahwa genarasi pelajar hari ini siap untuk belajar kemampuan kritikal untu menuju sukses pada abad 21. Bergabunglah dengan kami.
+      The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a statement that today’s generation of students are ready to learn critical skills for 21st century success. Please join us.
     </p>
     
     <p>
-      <strong>Contact:</strong> [YOUR NAME], [TITLE], HP: (212) 555-5555
+      <strong>Contact:</strong> [YOUR NAME], [TITLE], cell: (212) 555-5555
     </p>
     
     <p>
-      <strong>Kapan:</strong> [DATE and TIME of your event]
+      <strong>When:</strong> [DATE and TIME of your event]
     </p>
     
     <p>
-      <strong>Dimana:</strong> [ADDRESS and DIRECTIONS]
+      <strong>Where:</strong> [ADDRESS and DIRECTIONS]
     </p>
     
     <p>
-      Saya berharap untuk menjalin hubungan.
+      I look forward to being in touch.
     </p>
     
     <p>
@@ -198,11 +222,11 @@ title: Resources layout: wide nav: resources_nav
     </h2>
     
     <p>
-      Orang tua yang terhormat,
+      Dear Parents,
     </p>
     
     <p>
-      Kita hidup di dunia yang dikelilingi dengan teknologi. Dan sekarang kita tahu apa pun bidang yang dipilih pelajar kita untuk menuju kedewasaan, kemampuan mereka untuk sukses akan mulai bergantung pada pemahaman bagaiman teknologi bekerja. Tetapi hanya sebagian kecil dari kita yang mempelajari ilmu komputer, dan sedikit pelajar yang mempelajar dari dekade yang lalu.
+      We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly hinge on understanding how technology works. But only a tiny fraction of us are learning computer science, and less students are studying it than a decade ago.
     </p>
     
     <p>
@@ -259,4 +283,8 @@ title: Resources layout: wide nav: resources_nav
     
     <p>
       Sincerely, [NAME], [TITLE]
+    </p>
+    
+    <p>
+      <a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>
     </p>

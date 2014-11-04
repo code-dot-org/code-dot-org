@@ -138,8 +138,8 @@
       2-3 Conditionals Multi 1:
         Multiple Choice: "Избор от множество отговори"
         "/script_assets/2-3_images/unplugged/conditionals_1_q.png": "/script_assets/2-3_images/unplugged/conditionals_1_q.png"
-        According to the rules of the game, which set of cards is scored correctly?: According
-          to the rules of the game, which set of cards is scored correctly?
+        According to the rules of the game, which set of cards is scored correctly?: "Според
+          правилата на играта кой набор от карти е въведен правилно?"
         "/script_assets/2-3_images/unplugged/conditionals_1_a1.png": "/script_assets/2-3_images/unplugged/conditionals_1_a1.png"
         "/script_assets/2-3_images/unplugged/conditionals_1_a2.png": "/script_assets/2-3_images/unplugged/conditionals_1_a2.png"
         "/script_assets/2-3_images/unplugged/conditionals_1_a3.png": "/script_assets/2-3_images/unplugged/conditionals_1_a3.png"
@@ -292,10 +292,8 @@
         "<h4>Banana</h4>": "<h4>Банан</h4>"
       4-5 Computational Thinking Multi 1:
         Multiple Choice: "избор от множество отговори"
-        0: "? Тук има три изречения. Кой от шаблоните по-долу подхожда на примерите
-          и на трите?"
-        1: ": Тук има три изречения. Кой от шаблоните по-долу подхожда на примерите
-          и на трите?"
+        0: "? Тук има три изречения. Кой от шаблоните по-долу подхожда  и на трите?"
+        1: ": Тук има три изречения. Кой от шаблоните по-долу подхожда и на трите?"
         "<h4>Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.</h4>": "<h4>Сиатъл
           е един голям град. <br/>Eugene е среден град <br/> Хилвию е малък град.</h4>"
         "<h4>Seattle _____ a _____ _____.</h4>": "<h4>Сиатъл _____ a _____ _____.</h4>"
@@ -652,3 +650,9 @@
         Martha Washington: "Марта Вашингтон"
         George Washington: "Джордж Вашингтон"
         George Jetson: "Джордж Джетсън"
+      unique level name here:
+        title: "Заглавие"
+        description here: description here
+        Question: Question
+        wrong answer: wrong answer
+        right answer: right answer

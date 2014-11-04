@@ -46,7 +46,7 @@
           'Maze: Loops': "Лабиринт: цикли"
           'Bee: Loops': "Пчела: цикли"
           'Studio: Create a Story': "Театрална лаборатория: Създаване на история"
-          description_short: "Курс 1 е предназначен за ранните читатели в класовете
+          description_short: "Курс 1 е предназначен за малките читатели в класовете
             от начален етап на обучение."
           'Artist: Loops': "Художник - цикли"
         course2:
@@ -57,7 +57,7 @@
           Bounce: "Скачане"
           'Studio: Create a Story': "Театрална лаборатория: Създаване на история"
           Artist Loops: "Художник - цикли"
-          Bee Conditionals: "Пчела - условности"
+          Bee Conditionals: "Пчела - условия"
           Flappy: Flappy
           title: "Курс 2"
           Bee Loops: "Пчела - цикли"
@@ -85,7 +85,7 @@
           'Bee: Loops': "Пчела: цикли"
           'Bee: Debugging': "Пчела: отстраняване на грешки"
           'Artist: Debugging': "Художник: отстраняване на грешки"
-          'Bee: Conditionals': "Пчела: условности"
+          'Bee: Conditionals': "Пчела: условия"
           description_short: "Курс 2 е предназначен за ученици от начален етап на
             обучение, които могат да четат."
           'Artist: Sequence2': "Художник: последователност 2"
@@ -99,14 +99,14 @@
           Artist Functions: "Художник: функции"
           Artist For Loops: "Художник - за циклите"
           Artist Nested Loops: "Художник - въвеждане на цикли"
-          Bee Conditionals: "Пчела - условности"
+          Bee Conditionals: "Пчела - условия"
           Bee Nested Loops: "Пчела - влождане на цикли"
           Bee Debuggin: "Пчела - отстраняване на грешки"
           Bee Debugging: "Пчела - отстраняване на грешки"
           Bee Functions: "Пчела - функции"
           Artist Functions with Params: "Художник- функции с параметри"
           Bounce: "Скачане"
-          Maze Conditionals: "Лабиринт - условности"
+          Maze Conditionals: "Лабиринт - условия"
           Artist Functions with Parameters: "Художник - функции с параметри"
           Computational Thinking: "Изчислително мислене"
           Functional Suncatchers: "Функционални отразители на светлина"
@@ -127,8 +127,8 @@
           Artist: "Художник"
           'Artist: Functions': "Художник: функции"
           'Bee: Functions': "Пчела: функции"
-          'Bee: Conditionals': "Пчела: условности"
-          'Maze: Conditionals': "Лабиринт: условности"
+          'Bee: Conditionals': "Пчела: условия"
+          'Maze: Conditionals': "Лабиринт: услоия"
           'Artist: Nested Loops': "Художник: въвеждане на цикли"
           'Farmer: While Loops': 'Фермер: повторения "докато"'
           'Bee: Nested Loops': "Пчела:  въвеждане на цикли"
@@ -139,8 +139,8 @@
           Artist2: "Художник 2"
           'Artist: Functions2': "Художник: функции 2"
           'Bee: Functions2': "Пчела: функции 2"
-          'Bee: Conditionals2': "Пчела: условности 2"
-          'Maze: Conditionals2': "Лабиринт: условности 2"
+          'Bee: Conditionals2': "Пчела: условия 2"
+          'Maze: Conditionals2': "Лабиринт: условия 2"
           'Artist: Nested Loops2': "Художник: въвеждане на цикли 2"
           'Farmer: While Loops2': 'Фермер: повторения "докато" 2'
           'Bee: Nested Loops2': "Пчела:  въвеждане на цикли 2"
@@ -165,3 +165,23 @@
           description: "Начертайте готини картинки и дизайни с художникът!"
           Artist: "Художник"
           description_short: "Начертайте готини картинки и дизайни с художникът!"
+        course4:
+          description_short: Students taking Course 4 should have already taken Courses
+            2 and 3.
+          description: Course 4 is designed for students who have taken Course 2 and
+            3. Students will delve deeper into programming topics introduced in previous
+            courses to flexible solutions to more complex problems. By the end of
+            this course, students create interactive stories and games they can share
+            with anyone. Recommended for grades 4-8.
+          'Artist: Variables': 'Artist: Variables'
+          'Bee: For Loops': 'Bee: For Loops'
+          title: Course 4
+          'Algorithms: Tangrams': 'Algorithms: Tangrams'
+          Variables: "Променливи"
+          'Play Lab: Variables': 'Play Lab: Variables'
+          'Play Lab: Functions with Parameters': 'Play Lab: Functions with Parameters'
+          'Bee: Functions with Parameters': 'Bee: Functions with Parameters'
+          'Artist: For Loops': 'Artist: For Loops'
+          'Play Lab: For Loops': 'Play Lab: For Loops'
+          'Artist: Functions': "Художник: функции"
+          'Artist: Functions with Paraqmeters': 'Artist: Functions with Paraqmeters'

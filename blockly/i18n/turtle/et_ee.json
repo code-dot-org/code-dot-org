@@ -54,8 +54,9 @@
   "penDown": "pliiats alla",
   "penTooltip": "tõstab või langetab pliiatsi joonistamise alustamiseks või lõpetamiseks.",
   "penUp": "pliiats üles",
-  "reinfFeedbackMsg": "Does this look like what you want? You can press the \"Try again\" button to see your drawing.",
+  "reinfFeedbackMsg": "Kas see on selline nagu tahtsid? Vajuta \"Proovi uuesti\", et oma joonistust näha.",
   "setColour": "vali värv",
+  "setPattern": "vali muster",
   "setWidth": "vali laius",
   "shareDrawing": "Jaga oma joonistust:",
   "showMe": "Näita",
@@ -68,5 +69,5 @@
   "turnTooltip": "Pöörab kunstnikku vasakule või paremale etteantud nurga võrra.",
   "turtleVisibilityTooltip": "Teeb kunstniku nähtavaks või peidab selle.",
   "widthTooltip": "Muudab pliiatsi laiust.",
-  "wrongColour": "Your picture is the wrong color.  For this puzzle, it needs to be %1."
+  "wrongColour": "Sinu pilt on valet värvi. Selle mõistatuse jaoks peab värv olema %1."
 }

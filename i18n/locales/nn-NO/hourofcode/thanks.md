@@ -1,6 +1,6 @@
 * * *
 
-title: Takk for at du meldte deg på som vert for Kodetimen! layout: wide
+title: Takk for at du melde deg som vert for Kodetimen! layout: wide
 
 social: "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= hoc_s(:meta_tag_og_description) %>" "og:image": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "og:image:width": 1705 "og:image:height": 949 "og:url": "http://<%=request.host%>" "og:video": "https://youtube.googleapis.com/v/rH7AjDMz_dc"
 
@@ -12,50 +12,50 @@ social: "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= ho
 
 twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#Kodetimen' %>
 
-# Takk for at du meldte deg på som vert for Kodetimen!
+# Takk for at du melde deg som vert for Kodetimen!
 
-**ALLE** som organiserer en Kodetime får 10 GB Dropbox-lagringsplass eller $10 Skype-kredit som en takk. [Detaljer](/prizes)
+**KVAR** arrangør av Kodetimen får som takk anten 10 GB lagringsplass i Dropbox eller Skype-kreditt verd 10 dollar. [ Detaljer](<%= hoc_uri('/prizes') %>)
 
 <% if @country == 'us' %>
 
-Få hele [skolen din til å delta](/us/prizes) for å gi den en sjanse til å vinne store premier.
+Få [ heile skulen din til å vere med](<%= hoc_uri('/prizes') %>), og de kan vinne store premiar.
 
 <% end %>
 
-## 1. Spre ordet
+## Spre bodskapet
 
-Fortell vennene dine om #Kodetimen.
+Fortel venane dine om #Kodetimen.
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
 <% if @country == 'us' %>
 
-## 2. Spør hele skolen din om å tilby en Kodetime
+## 2. Be heile skulen din om å tilby ein Kodetime
 
-[Send denne eposten](/resources#email) eller [gi denne flyeren til rektoren din](/files/schools-handout.pdf). Når skolen din har meldt seg på, [bli med i konkurransen om $10,000 i datautstyr til din skole](/prizes) og utfordre andre skoler i ditt område til å bli med.
+[ Sende denne e-posten](<%= hoc_uri('/resources#email') %>) eller [ dette flygebladet](<%= hoc_uri('/files/schools-handout.pdf') %>). Når skulen din har meldt seg på, [bli med i konkurransen om datautstyr til ein verdi av 10.000 dollar til skulen din](/prizes) og utfordre andre skular i ditt område til å bli med.
 
 <% else %>
 
-## 2. Spør hele skolen din om å tilby en Kodetime
+## 2. Be heile skulen din om å tilby ein Kodetime
 
-[Send denne e-posten](/resources#email) eller gi [dette støttearket](/files/schools-handout.pdf) til rektoren din.
+[ Sende denne e-posten](<%= hoc_uri('/resources#email') %>) eller gi [ dette flygebladet](<%= hoc_uri('/files/schools-handout.pdf') %>) til rektoren din.
 
 <% end %>
 
 ## 3. Bidra med midler
 
-[Bidra til vår crowdfunding-kampanje](http://code.org/donate). For å lære 100 millioner barn programmering, trenger vi din støtte. Vi har akkurat lansert det som kan bli den [største crowdfunding-kampanje for opplæring](http://code.org/donate) i historien. Hver krone som samles inn vil bli matchet av Code.orgs [sponsoer ](http://code.org/about/donors), så din gave blir dobbelt så stor.
+[Støtt crowdfunding-kampanja vår!](http://<%= codeorg_url() %>/ donere)For å undervise 100 millioner barn, treng vi støtta di. Vi har akkurat lansert det som kan bli[historias største crowdfunding kampanje for utdanning](http://<%= codeorg_url() %>/ donere). Kva krone du gir vil bli matchet av Code.org sine hovudsponsorar [ hovudsponsorar](http://<%= codeorg_url() %>om/givere) slik at ditt bidrag får dobbel effekt.
 
-## 4. Be arbeidsgiveren din engasjere seg
+## 4. Be arbeidsgjevaren din om å engasjere seg
 
-[Send denne e-posten](/resources#email) til din leder eller administrerende direktør. Eller [gi dem dette fllygebladet](/resources/hoc-one-pager.pdf).
+[ Send denne e-posten](<%= hoc_uri('/resources#email') %>) til sjefen din, eller direktøren. Eller [ gi dei dette flygebladet](<%= hoc_uri('/resources/hoc-one-pager.pdf') %>).
 
-## 5. Snakk om Kodetimen i ditt lokalmiljø
+## Reklamer for Kodetimen i lokalmiljøet
 
 Rekrutter ein lokal klubb - eit idrettslag, høgskule eller fagforeining. Eller arranger en "Kodetimefest" for nabolaget.
 
-## 6. Spør en lokalpolitiker om å støtte Kodetimen
+## 6. Be ein lokalpolitikar om å støtte Kodetimen
 
-[Send denne e-posten](/resources#politicians) til ordfører, bystyret eller skolestyret. Eller [gi dem dette flygebladet](/resources/hoc-one-pager.pdf) og invitere dem til skolen.
+[ Sende denne e-posten](<%= hoc_uri('/resources#politicians') %>) til ordførar, bystyret eller skulestyret. Eller [ gi dei dette flygebladet](<%= hoc_uri('/resources/hoc-one-pager.pdf') %>) og invitere dei til skulen.
 
 <%= view 'popup_window.js' %>

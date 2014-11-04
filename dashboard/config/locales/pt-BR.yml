@@ -74,20 +74,7 @@
     no_signup_message: Você pode <a target="_blank" href="http://learn.code.org">
       consultar as várias fases e desafios</a>, mas você precisa se cadastrar para
       salvar seu progresso.
-    prizes_message: Estudantes dos EUA que ganham todos os %{num_trophies} troféus
-      de conceito podem escolher uma variedade de prêmios, incluindo espaço grátis
-      no Dropbox, créditos Skype, e jogos da Electronic Arts para baixar.
     teacher_educator_guide: Consultar o guia do professor
-    teacher_prize_header: Ganhe $1.000 em <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
-      recompensas (até 15 de junho de 2014, enquanto durarem os estoques)
-    teacher_prize_message: 'Em parceria com a <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>,
-      a Code.org oferecerá até $1.000 em financiamento escolar para professores de
-      escolas públicas dos EUA que monitorarem ao menos 15 alunos na introdução ao
-      curso de Ciência da Computação no Ensino Fundamental (até 15 de junho de 2014,
-      enquanto durarem os estoques). <a href="http://code.org/educate/20hr">Veja o
-      manual do professor</a>. (Limite: $1.000 por professor.  <a target="_blank"
-      href="http://help.donorschoose.org/app/answers/detail/a_id/454/kw/code.org">Veja
-      as Perguntas Frequentes para mais informações</a>.)'
     teacher_pitch: Cadastro de professor na Code.org
     teacher_title: Cadastro de professores
     student_pitch: Cadastro de aluno na Code.org
@@ -98,6 +85,7 @@
     gender: Gênero (opcional)
     birthday: Aniversário (opcional)
     age: Idade
+    user_type: Você é um aluno ou professor?
     submit: Inscreva-se
     teacher: Você é um professor?
     valid_username: Disponível!
@@ -399,8 +387,6 @@
     student_stats: Você ganhou %{trophy_count} dos %{trophy_max} troféus de "Domínio
       de Conceitos" disponíveis.
     student_left_off: 'Onde você parou:'
-    student_finished_prize: Você completou todos os tutoriais, reivindicar seu %{prize_link}
-      e escolha outra aula em %{online_link} ou %{local_school_link}
     student_finished: Você completou todos os tutoriais, escolha outra aula em %{online_link}
       ou %{local_school_link}
     local_school: escola local
@@ -428,6 +414,9 @@
     male: Masculino
     female: Feminino
     none: Prefiro não responder
+  user_type:
+    student: Estudante
+    teacher: Professor
   footer:
     help_from_html: Engenheiros da Google, Microsoft, Facebook e Twitter ajudaram
       a criar este tutorial.
@@ -441,20 +430,13 @@
     tos: Termos
     privacy: Política de Privacidade
     secure: Versão Segura
-  prize_mail:
-    prize_earned:
-      subject: Resgate seu prêmio na Code.org!
-    teacher_prize_earned:
-      subject: Parabéns da Code.org!
-    teacher_bonus_prize_earned:
-      subject: Resgate seu prêmio bônus na Code.org!
   reference_area:
     title: Precisa de ajuda?
     subtitle: Veja os vídeos e as dicas
     teacher: Ver a solução
     auth_error: Você não está autorizado a ver a solução.
     submit: Atualize a Localização do Artista
-    direction: Direção Inicial
+    direction: Direção de início (em graus)
   video:
     tab: Vídeo.
     notes: Nenhum vídeo? Mostrar notas.

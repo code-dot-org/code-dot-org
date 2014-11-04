@@ -4,14 +4,22 @@ title: Resources layout: wide nav: resources_nav
 
 * * *
 
-# Rezurse
+<div class="row">
+  <h1 class="col-sm-6">
+    Rezurse
+  </h1>
+  
+  <div class="col-sm-6 button-container centered">
+    <a href="/#join"><button class="signup-button">Sign up your event</button></a>
+  </div>
+</div>
 
-## Hosting an Hour of Code? [See the how-to guide](<%= hoc_uri('/resources/how-to') %>)
+## Je nikoqir i Një Ore Kodim? [Shihe udhëzuesin praktik](<%= hoc_uri('/resources/how-to') %>)
 
 <a id="handouts"></p> 
 
 <h2>
-  Use this handout to spread the word
+  Përdore këtë prospekt (flajer) për ta përhapur fjalën
 </h2>
 
 <p>
@@ -19,7 +27,7 @@ title: Resources layout: wide nav: resources_nav
 </p>
 
 <h2>
-  Give this handout to teachers and schools
+  Jepua këtë prospekt (flajer) mësuesve dhe shkollave
 </h2>
 
 <p>
@@ -30,7 +38,7 @@ title: Resources layout: wide nav: resources_nav
   <a id="videos"></p> 
   
   <h2>
-    Show these videos to inspire students
+    Tregoji këto video për t'i inspiruar studentët
   </h2>
   
   <div style="float:left; padding:10px">
@@ -74,7 +82,7 @@ title: Resources layout: wide nav: resources_nav
     <a id="posters"></p> 
     
     <h2>
-      Hang these posters in your school
+      Ngjiti këto postere në shkollën tënde
     </h2>
     
     <p>
@@ -82,7 +90,7 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <h4>
-      <a href="http://hourofcode.com/#signup">Sign up</a> your Hour of Code event and we'll mail you posters for free.
+      <a href="http://hourofcode.com/#signup">Regjistroje</a> ngjarjen tënde të Orës së Kodimit dhe do t'ua dërgojmë me postë posterët falas.
     </h4>
     
     <p>
@@ -94,11 +102,27 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Feature these banners on your website
+      Paraqitni këta banera në websajtin tuaj
     </h2>
     
     <p>
       <a href="/images/banner1.jpg"><img src="/images/fit-250/banner1.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner3.jpg"><img src="/images/fit-250/banner3.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner5.jpg"><img src="/images/fit-500/banner5.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    
+    <p>
+      <a id="social"></a>
+    </p>
+    
+    <h2>
+      Post these on social media
+    </h2>
+    
+    <p>
+      <a href="/images/social-1.jpg"><img src="/images/fit-250/social-1.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-2.jpg"><img src="/images/fit-250/social-2.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-3.jpg"><img src="/images/fit-250/social-3.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    
+    <p>
+      <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
     </p>
     
     <p>
@@ -118,7 +142,7 @@ title: Resources layout: wide nav: resources_nav
     </h2>
     
     <p>
-      Computers are everywhere, but fewer schools teach computer science than 10 years ago. Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. In one week, 15 million students tried computer science!
+      Kompjuterët janë kudo, por më pak shkolla e mësojnë shkencën kompjuterike tash se sa para 10 vitesh. Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. In one week, 15 million students tried computer science!
     </p>
     
     <p>
@@ -259,4 +283,8 @@ title: Resources layout: wide nav: resources_nav
     
     <p>
       Sincerely, [NAME], [TITLE]
+    </p>
+    
+    <p>
+      <a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>
     </p>

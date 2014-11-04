@@ -1,9 +1,9 @@
 * * *
 
-title: Gracias layout: wide
+Gracias
 
 * * *
 
 # Gracias
 
-Toda su escuela ha entrado a participar en el sorteo de computadores portátiles (o el equivalente a $10,000 dólares en otras tecnologías).
+Tu escuela está anotada para participar por un premio de USD 10000 en equipamiento. ATENCIÓN: premio sólo válido para escuela de Estados Unidos.

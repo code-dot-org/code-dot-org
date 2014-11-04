@@ -52,12 +52,12 @@ class SessionsControllerTest < ActionController::TestCase
   end
 
   test 'signing in as user with username' do
-    user = create(:user, birthday: Date.new(2010, 1, 3), email: 'my@email.xx', username: 'user1')
+    user = create(:user, birthday: Date.new(2010, 1, 3), email: 'my@email.xx')
     
     assert user.email.blank?
     assert user.hashed_email.present?
 
-    post :create, user: {login: 'user1', hashed_email: '', password: user.password}
+    post :create, user: {login: user.username, hashed_email: '', password: user.password}
 
     assert_signed_in_as user
     assert_redirected_to '/'

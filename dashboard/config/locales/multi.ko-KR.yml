@@ -122,8 +122,8 @@
       2-3 Conditionals Multi 1:
         Multiple Choice: "객관식"
         "/script_assets/2-3_images/unplugged/conditionals_1_q.png": "/script_assets/2-3_images/unplugged/conditionals_1_q.png"
-        According to the rules of the game, which set of cards is scored correctly?: According
-          to the rules of the game, which set of cards is scored correctly?
+        According to the rules of the game, which set of cards is scored correctly?: "게임의
+          규칙에 따라 정확하게 점수가 부여된 카드 세트는?"
         "/script_assets/2-3_images/unplugged/conditionals_1_a1.png": "/script_assets/2-3_images/unplugged/conditionals_1_a1.png"
         "/script_assets/2-3_images/unplugged/conditionals_1_a2.png": "/script_assets/2-3_images/unplugged/conditionals_1_a2.png"
         "/script_assets/2-3_images/unplugged/conditionals_1_a3.png": "/script_assets/2-3_images/unplugged/conditionals_1_a3.png"
@@ -601,3 +601,9 @@
         Martha Washington: Martha Washington
         George Washington: George Washington
         George Jetson: George Jetson
+      unique level name here:
+        title: "제목화면 주제"
+        description here: description here
+        Question: Question
+        wrong answer: wrong answer
+        right answer: right answer

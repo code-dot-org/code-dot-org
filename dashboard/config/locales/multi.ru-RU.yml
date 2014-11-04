@@ -311,11 +311,11 @@
         Multiple Choice: "Выбор варианта"
         Which piece of information listed below is okay to share on the internet?: Which
           piece of information listed below is okay to share on the internet?
-        "<h4>Your birthday</h4>": "<h4>Your birthday</h4>"
-        "<h4>Your favorite food</h4>": "<h4>Your favorite food</h4>"
+        "<h4>Your birthday</h4>": "<h4>Ваш день рождения</h4>"
+        "<h4>Your favorite food</h4>": "<h4>Ваше любимое блюдо</h4>"
         "<h4>Your address</h4>": "<h4>Your address</h4>"
-        "<h4>Your parent's credit card number</h4>": "<h4>Your parent's credit card
-          number</h4>"
+        "<h4>Your parent's credit card number</h4>": "<h4>Номер кредитной карты твоих
+          родителей</h4>"
       4-5 Internet Multi 1:
         Multiple Choice: "Выбор варианта"
         "/script_assets/4-5_images/unplugged/internet_1_q.png": "/script_assets/4-5_images/unplugged/internet_1_q.png"
@@ -643,3 +643,9 @@
         Martha Washington: "Марта Вашингтон"
         George Washington: "Джордж Вашингтон"
         George Jetson: "Джордж Джетсон"
+      unique level name here:
+        title: "название"
+        description here: description here
+        Question: Question
+        wrong answer: wrong answer
+        right answer: right answer

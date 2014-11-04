@@ -114,9 +114,9 @@
           de FlappyBird!"
       5:
         image: notes/flappy05.jpg
-        text: El código que escribiras consiste en arrastrar y soltar bloques que
-          representan los comandos de la computadora. Bajo ellos, hay una representacion
-          de codigo real.
+        text: El código que escribirás consiste de arrastrar y soltar bloques que
+          representan los comandos de la computadora. Sin que puedas verlo, cada uno
+          de estos bloques está representado por código real.
       6:
         image: notes/flappy06.jpg
         text: 'Si echas un vistazo en el espacio de trabajo, hay algunos bloques verdes
@@ -133,8 +133,8 @@
           apropiados para agregar en respuesta a esos eventos.
       9:
         image: notes/flappy09.jpg
-        text: Cuando ves un menú desplegable como este así, significa que puede cambiar
-          los ajustes - como qué sonido usar para jugar cuando flappy caiga al suelo.
+        text: Cuando ves un menú desplegable como este, significa que puedes cambiar
+          los ajustes - como qué sonido usar cuando flappy caiga al suelo.
       10:
         image: notes/flappy10.jpg
         text: En el puzzle final serás capaz de crear tu propio juego y compartirlo
@@ -158,7 +158,7 @@
       5:
         image: notes/hoc2_5.jpg
         text: Podemos poner el bloque "avanzar" dentro del bloque "repetir" y escribir
-          un número en el bloque para decirle cuántas veces debe repetirse.
+          un número en el bloque para decirle cuántas veces repetirlo.
       6:
         image: notes/hoc2_6.jpg
         text: 'Y esto es importante: puedes poner más de un comando dentro de un bloque

@@ -659,6 +659,7 @@ Bounce.init = function(config) {
       controls: require('./controls.html')({assetUrl: BlocklyApps.assetUrl}),
       blockUsed: undefined,
       idealBlockNumber: undefined,
+      editCode: level.editCode,
       blockCounterClass: 'block-counter-default'
     }
   });
@@ -744,11 +745,6 @@ Bounce.init = function(config) {
     Bounce.originalBallCount = Bounce.ballCount;
 
     drawMap();
-  };
-
-  config.getDisplayWidth = function() {
-    var el = document.getElementById('visualizationColumn');
-    return el.getBoundingClientRect().width;
   };
 
   // Block placement default (used as fallback in the share levels)

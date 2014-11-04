@@ -65,10 +65,7 @@ he:
     overview_student: 'Sign up for an account to track your progress. Your email is primarily used to allow you to log in and for password recovery. For more information, see our <a href="http://code.org/privacy">Privacy Policy</a>.'
     overview_teacher: "Teach computer science in your classroom by signing up for an account.<p/> You'll be able to add your students and track their progress."
     no_signup_message: 'אתה יכול <a target="_blank" href="http://learn.code.org">לדפדף בחידות והשלבים השונים</a>, אבל אתה צריך להירשם על-מנת לשמור את התקדמותך.'
-    prizes_message: 'תלמידים מארה"ב שזוכים בכל %{num_trophies} גביעי המושגים יכולים לבחור מסוגי פרסים רבים כגון מקום דרופבוקס בחינם, אשראי Skype, ומשחקים להורדה מבית Electronic Arts.'
     teacher_educator_guide: ראה מדריך למחנך
-    teacher_prize_header: 'זכה ב 1000$ ב <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> פרסים(מ 15 ביוני 2014 עד סוף האספקה)'
-    teacher_prize_message: 'בשיתוף עם <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a>, Code.org יציע עד 1,000 דולר במימון בכיתה כדי מורות בבית ספר ציבורי אמריקאי להוביל תלמידים לפחות 15 דרך ההקדמה K-8 קורס מדעי המחשב (דרך יוני 15, 2014, גמר המלאי).  <a href="http://code.org/educate/20hr"> עיין במדריך למחנך</a>.  (מגבלה: 1,000 דולר לכל מורה.  <a target="_blank" href="http://help.donorschoose.org/app/answers/detail/a_id/454/kw/code.org"> ראה שאלות נפוצות לגבי גבולות יותר</a>.)'
     teacher_pitch: הירשמות מורה ל code.org
     teacher_title: הרשמת מורה
     student_pitch: הירשמות תלמיד ל code.org
@@ -79,6 +76,7 @@ he:
     gender: מין (אופציונלי)
     birthday: יום הולדת (אופציונלי)
     age: Age
+    user_type: Are you a student or teacher?
     submit: הירשם
     teacher: האם אתה מורה?
     valid_username: זמין!
@@ -333,7 +331,6 @@ he:
     student_progress: התקדמות הלמידה שלך
     student_stats: 'הרווחת %{trophy_count} פרסים מתוך %{trophy_max} אפשריים.'
     student_left_off: 'היכן שהפסקתם:'
-    student_finished_prize: 'השלמת את כל המדריכים הרווחת את %{prize_link} ותוכל לקחת שיעור אחר %{online_link} או %{local_school_link}'
     student_finished: 'את/ה גמרת את כל שיעורי ההדרכה. בחר כיתה אחרת %{online_link} או ב%{local_school_link}'
     local_school: 'בה"ס מקומי'
     online: באינטרנט
@@ -356,6 +353,9 @@ he:
     male: גבר
     female: אישה
     none: מעדיף לא לענות
+  user_type:
+    student: תלמיד
+    teacher: Teacher
   footer:
     help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped create this tutorial.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. All Rights Reserved.'
@@ -366,13 +366,6 @@ he:
     tos: תנאים
     privacy: הצהרת פרטיות
     secure: גרסה מאובטחת
-  prize_mail:
-    prize_earned:
-      subject: Redeem your prize at Code.org!
-    teacher_prize_earned:
-      subject: Congratulations from Code.org!
-    teacher_bonus_prize_earned:
-      subject: Redeem your bonus prize at Code.org!
   reference_area:
     title: צריך עזרה?
     subtitle: לראות את קטעי וידאו ורמזים

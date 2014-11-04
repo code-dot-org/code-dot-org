@@ -65,10 +65,7 @@
     overview_student: 'Registrer en konto for å følge med på progresjonen din. Din epost er hovedsaklig brukt for å tillate deg å logge inn og for å gjenopprette passord. For mer informasjon, se våre <a href="http://code.org/privacy">rettningslinjer for personvern</a>.'
     overview_teacher: 'Undervis Informatikk i ditt klasserom med å registrere en konto.<p/> Du vil være i stand til å legge til dine studenter og følge med på deres fremdrift.'
     no_signup_message: 'Du kan <a target="_blank" href="http://learn.code.org">bla gjennom de forskjellige nivåene og oppgavene</a>, men du må registrere deg for å lagre hvor langt du har nådd.'
-    prizes_message: 'Amerikanske elever som får alle %{num_trophies} konsept-pokaler kan velge mellom flere premier som gratis Dropbox-lagringsplass, Skype-kreditt, og nedlastbare spill fra Electronic Arts.'
     teacher_educator_guide: Se lærerveiledningen
-    teacher_prize_header: 'Vinn $1000 i <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> premier (igjennom Juni 15, 2014, så lenge lageret rekker)'
-    teacher_prize_message: 'I samarbeid med <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> tilbyr Code.org opp til $1000 i støtte til amerikanske lærere i offentlig skole som underviser minst 15 elever i K-8 Intro til informatikk kurs (gjelder fra 15. juni 2014 og så lenge beholdningen rekker).  <a href="http://code.org/educate/20hr"> se guide for lærere</a>.  (Beløpsgrensen er $1000 per lærer.  <a target="_blank" href="http://help.donorschoose.org/appcode/answers/detail/a_id/454/kw/appcode.org"> Les vilkårene i FAQ</a>.)'
     teacher_pitch: Registrering for lærerer på code.org
     teacher_title: Påmelding for lærere
     student_pitch: Registrering for elever på code.org
@@ -79,6 +76,7 @@
     gender: Kjønn (valgfritt)
     birthday: Bursdag (valgfritt)
     age: Alder
+    user_type: Are you a student or teacher?
     submit: Meld deg på
     teacher: Er du en lærer?
     valid_username: Tilgjengelig!
@@ -329,7 +327,6 @@
     student_progress: Din læringskurve
     student_stats: 'Du har fått %{trophy_count} av maks %{trophy_max} pokaler for Konseptmestring.'
     student_left_off: 'Der du slapp:'
-    student_finished_prize: 'Du har fullført alle opplæringsprogrammer. Krev din %{prize_link} og velg en annen klasse %{online_link} eller på %{local_school_link}'
     student_finished: 'Du har fullført alle øvelsene. Velge et annet opplegg  %{online_link} eller kurs ved %{local_school_link}'
     local_school: den lokale skolen
     online: på nett
@@ -352,6 +349,9 @@
     male: Mann
     female: Kvinne
     none: Foretrekker å ikke svare
+  user_type:
+    student: student
+    teacher: Teacher
   footer:
     help_from_html: Teknikere fra Google, Microsoft, Facebook og Twitter bidro til å lage denne guiden.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. Alle rettigheter reservert.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. Alle rettigheter reservert.'
@@ -362,20 +362,13 @@
     tos: Vilkår
     privacy: Personvern
     secure: Sikker versjon
-  prize_mail:
-    prize_earned:
-      subject: Løs inn premien på Code.org!
-    teacher_prize_earned:
-      subject: Gratulerer fra Code.org!
-    teacher_bonus_prize_earned:
-      subject: Løs inn bonuspremien din på Code.org!
   reference_area:
     title: Trenger du hjelp?
     subtitle: Se disse videoene og tipsene
     teacher: Se løsningen
     auth_error: Du er ikke autorisert å se løsningen.
     submit: Oppdatere artist-sted
-    direction: Start Direction (in degrees)
+    direction: Start retning (i grader)
   video:
     tab: Video.
     notes: Ingen video? Vis notater.

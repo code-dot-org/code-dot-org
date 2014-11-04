@@ -74,20 +74,7 @@
     no_signup_message: Μπορείτε να <a target="_blank" href="http://learn.code.org">
       περιηγηθείτε στα διάφορα στάδια και παζλ</a>, αλλά θα πρέπει να εγγραφείτε για
       να αποθηκεύσετε την πρόοδό σας.
-    prizes_message: "Οι Αμερικανοί φοιτητές που κερδίζουν όλα τα %{num_trophies} βραβεία
-      μπορούν να επιλέξουν ανάμεσα σε δώρα, συμπεριλαμβανομένου του χώρου στο Dropbox,
-      μονάδες στο Skype και παιχνίδια που μπορούν να κατεβάσουν από την Electronic
-      Arts."
     teacher_educator_guide: "Δείτε τον οδηγό εκπαιδευτικού"
-    teacher_prize_header: Κερδίστε $1.000 σε ανταμοιβές στην <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
-      (από τις 15 Ιουνίου 2014 και όσο διαρκεί το απόθεμα)
-    teacher_prize_message: 'Σε συνεργασία με την <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>,
-      η Code.org θα προσφέρει μέχρι $1.000 σε χρηματοδότηση σε δασκάλους τάξης δημοσίου
-      σχολίου στην Αμερική οι οποίοι διδάσκουν σε τουλάχιστον 15 μαθητές την εισαγωγή
-      Κ-8 στο μάθημα της Επιστήμης Υπολογιστών (από τις 15 Ιουνίου 2014 και όσο διαρκεί
-      το απόθεμα). Δείτε τον <a href="http://code.org/educate/20hr">οδηγό δασκάλου</a>.
-      (Όριο: $1.000 ανά δάσκαλο. <a target="_blank" href="http://help.donorschoose.org/appcode/answers/detail/a_id/454/kw/appcode.org">Δείτε
-      τις Συχνές Ερωτήσεις για άλλα όρια</a>.)'
     teacher_pitch: "Εγγραφή δασκάλου στο Code.org"
     teacher_title: "Εγγραφή Δασκάλου"
     student_pitch: "Εγγραφή μαθητή στο Code.org"
@@ -98,6 +85,7 @@
     gender: "Φύλο (προαιρετικά)"
     birthday: "Γενέθλια (προαιρετικά)"
     age: "Ηλικία"
+    user_type: Are you a student or teacher?
     submit: "Εγγραφή"
     teacher: "Είσαι δάσκαλος;"
     valid_username: "Διαθέσιμο!"
@@ -406,8 +394,6 @@
     student_progress: "Η πρόοδός σας"
     student_stats: Κέρδισες %{trophy_count} από %{trophy_max} τρόπαια "Μαεστρίας".
     student_left_off: "Εκεί που έφυγες:"
-    student_finished_prize: "Ολοκλήρωσες όλα τα εισαγωγικά μαθήματα, πάρε το %{prize_link}
-      και διάλεξε ένα άλλο μάθημα %{online_link} ή στο %{local_school_link}"
     student_finished: "Ολοκληρώσατε όλα τα σεμινάρια, διαλέξτε μία άλλη τάξη %{online_link}
       ή σε %{local_school_link}"
     local_school: "τοπικό σχολείο"
@@ -435,6 +421,9 @@
     male: "Αγόρι"
     female: "Κορίτσι"
     none: "Προτιμώ να μην απαντήσω"
+  user_type:
+    student: "φοιτητής/μαθητής"
+    teacher: Teacher
   footer:
     help_from_html: Μηχανικοί από την <a href="http://www.google.com">Google</a>,
       την <a href="http://www.microsoft.com">Microsoft</a>, το <a href="http://www.facebook.com">Facebook</a>,
@@ -451,13 +440,6 @@
     tos: "Όροι"
     privacy: "Πολιτική Aπορρήτου"
     secure: "Ασφαλής έκδοση"
-  prize_mail:
-    prize_earned:
-      subject: "Εξαργυρώστε το βραβείο σας στο Code.org!"
-    teacher_prize_earned:
-      subject: "Συγχαρητήρια από το Code.org!"
-    teacher_bonus_prize_earned:
-      subject: "Εξαργυρώστε το βραβείο-μπόνους σας στο Code.org!"
   reference_area:
     title: "Χρειάζεσε βοήθεια;"
     subtitle: "Δες αυτά τα βίντεο και τις υποδείξεις"

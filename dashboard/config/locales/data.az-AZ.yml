@@ -43,12 +43,13 @@
           desc: Jigsaw (beta)
           Jigsaw: Mərhələ 1
         Step Levels:
-          desc: Maze (beta)
+          desc: Labirint (beta versiya)
           MazeStep: Stage Step
         edit-code:
           desc: Edit Code (beta)
           MazeEC: Mərhələ 1
           Webapp: Mərhələ 2
+          ArtistEC: Mərhələ 3
         events:
           desc: Bounce (beta)
           Bounce: Mərhələ 1
@@ -63,7 +64,7 @@
           desc: Jigsaw (beta)
           Jigsaw: Mərhələ 1
         step:
-          desc: Maze (beta)
+          desc: Labirint (beta versiya)
           MazeStep: Stage Step
         wordsearch:
           desc: Spelling Bee (beta)
@@ -98,6 +99,7 @@
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
         Webapp: Webapp
+        ArtistEC: Rəssam
     trophy:
       name:
         Bronze: Bürünc
@@ -547,6 +549,9 @@
         maze_wordsearch_k_15: Find the word ABOVE
         maze_wordsearch_k_16: Find the word BELOW
         maze_wordsearch_k_20: Find the word DEBUG
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
+          it in the new "penColour" block.'
     video:
       name:
         maze_intro: Labirint oyununa giriş

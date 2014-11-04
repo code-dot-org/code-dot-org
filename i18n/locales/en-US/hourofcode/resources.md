@@ -4,7 +4,15 @@ crwdns20172:0crwdne20172:0
 
 * * *
 
-# crwdns19598:0crwdne19598:0
+<div class="row">
+  <h1 class="col-sm-6">
+    crwdns22134:0crwdne22134:0
+  </h1>
+  
+  <div class="col-sm-6 button-container centered">
+    <a href="/#join"><button class="signup-button">crwdns22135:0crwdne22135:0</button></a>
+  </div>
+</div>
 
 ## crwdns20706:0crwdne20706:0
 
@@ -36,14 +44,14 @@ crwdns20172:0crwdne20172:0
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      crwdns19612:0crwdne19612:0 <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
+      crwdns22136:0crwdne22136:0 <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      crwdns19613:0crwdne19613:0 <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
+      crwdns22137:0crwdne22137:0 <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
@@ -53,14 +61,14 @@ crwdns20172:0crwdne20172:0
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>crwdns19614:0crwdne19614:0</strong></a>
+      <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>crwdns22138:0crwdne22138:0</strong></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      crwdns19615:0crwdne19615:0 <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
+      crwdns22139:0crwdne22139:0 <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
@@ -102,11 +110,27 @@ crwdns20172:0crwdne20172:0
     </p>
     
     <p>
+      <a id="social"></a>
+    </p>
+    
+    <h2>
+      crwdns21343:0crwdne21343:0
+    </h2>
+    
+    <p>
+      <a href="/images/social-1.jpg"><img src="/images/fit-250/social-1.jpg" alt="crwdns21344:0crwdne21344:0" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-2.jpg"><img src="/images/fit-250/social-2.jpg" alt="crwdns21345:0crwdne21345:0" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-3.jpg"><img src="/images/fit-250/social-3.jpg" alt="crwdns21346:0crwdne21346:0" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    
+    <p>
+      <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="crwdns21347:0crwdne21347:0" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="crwdns21348:0crwdne21348:0" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="crwdns21349:0crwdne21349:0" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="crwdns21350:0crwdne21350:0" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="crwdns21351:0crwdne21351:0" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    
+    <p>
       <a id="sample-emails"></a>
     </p>
     
     <h2>
-      crwdns20713:0crwdne20713:0
+      crwdns21352:0crwdne21352:0
     </h2>
     
     <p>
@@ -114,27 +138,27 @@ crwdns20172:0crwdne20172:0
     </p>
     
     <h2>
-      crwdns20714:0crwdne20714:0
+      crwdns21353:0crwdne21353:0
     </h2>
     
     <p>
-      crwdns20182:0crwdne20182:0 crwdns20183:0crwdne20183:0 crwdns20184:0crwdne20184:0 crwdns20185:0crwdne20185:0
+      crwdns21354:0crwdne21354:0 crwdns21355:0crwdne21355:0 crwdns21356:0crwdne21356:0 crwdns21357:0crwdne21357:0
     </p>
     
     <p>
-      crwdns20186:0crwdne20186:0 crwdns20187:0crwdne20187:0 crwdns20188:0crwdne20188:0 crwdns20189:0crwdne20189:0
+      crwdns21358:0crwdne21358:0 crwdns21359:0crwdne21359:0 crwdns21360:0crwdne21360:0 crwdns21361:0crwdne21361:0
     </p>
     
     <p>
-      crwdns20190:0crwdne20190:0
+      crwdns21362:0crwdne21362:0
     </p>
     
     <p>
-      crwdns20191:0crwdne20191:0
+      crwdns21363:0crwdne21363:0
     </p>
     
     <p>
-      crwdns20192:0crwdne20192:0
+      crwdns21364:0crwdne21364:0
     </p>
     
     <p>
@@ -142,51 +166,51 @@ crwdns20172:0crwdne20172:0
     </p>
     
     <h2>
-      crwdns20715:0crwdne20715:0
+      crwdns21365:0crwdne21365:0
     </h2>
     
     <p>
-      crwdns20193:0crwdne20193:0
+      crwdns21366:0crwdne21366:0
     </p>
     
     <p>
-      crwdns20194:0crwdne20194:0
+      crwdns21367:0crwdne21367:0
     </p>
     
     <p>
-      crwdns20195:0crwdne20195:0 crwdns20196:0crwdne20196:0 crwdns20197:0crwdne20197:0 crwdns20198:0crwdne20198:0 crwdns20199:0crwdne20199:0
+      crwdns21368:0crwdne21368:0 crwdns21369:0crwdne21369:0 crwdns21370:0crwdne21370:0 crwdns21371:0crwdne21371:0 crwdns21372:0crwdne21372:0
     </p>
     
     <p>
-      crwdns20200:0crwdne20200:0
+      crwdns21373:0crwdne21373:0
     </p>
     
     <p>
-      crwdns20201:0crwdne20201:0
+      crwdns21374:0crwdne21374:0
     </p>
     
     <p>
-      crwdns20202:0[DATE]crwdne20202:0
+      crwdns21375:0[DATE]crwdne21375:0
     </p>
     
     <p>
-      crwdns20203:0crwdne20203:0 crwdns20204:0crwdne20204:0
+      crwdns21376:0crwdne21376:0 crwdns21377:0crwdne21377:0
     </p>
     
     <p>
-      crwdns20205:0[TITLE]crwdne20205:0
+      crwdns21378:0[TITLE]crwdne21378:0
     </p>
     
     <p>
-      crwdns20206:0crwdne20206:0
+      crwdns21379:0crwdne21379:0
     </p>
     
     <p>
-      crwdns20207:0crwdne20207:0
+      crwdns21380:0crwdne21380:0
     </p>
     
     <p>
-      crwdns20208:0crwdne20208:0
+      crwdns21381:0crwdne21381:0
     </p>
     
     <p>
@@ -194,39 +218,39 @@ crwdns20172:0crwdne20172:0
     </p>
     
     <h2>
-      crwdns20716:0crwdne20716:0
+      crwdns21382:0crwdne21382:0
     </h2>
     
     <p>
-      crwdns20209:0crwdne20209:0
+      crwdns21383:0crwdne21383:0
     </p>
     
     <p>
-      crwdns20210:0crwdne20210:0 crwdns20211:0crwdne20211:0 crwdns20212:0crwdne20212:0
+      crwdns21384:0crwdne21384:0 crwdns21385:0crwdne21385:0 crwdns21386:0crwdne21386:0
     </p>
     
     <p>
-      crwdns20213:0crwdne20213:0 crwdns20214:0crwdne20214:0 crwdns20215:0crwdne20215:0 crwdns20216:0crwdne20216:0
+      crwdns21387:0crwdne21387:0 crwdns21388:0crwdne21388:0 crwdns21389:0crwdne21389:0 crwdns21390:0crwdne21390:0
     </p>
     
     <p>
-      crwdns20217:0crwdne20217:0 crwdns20218:0crwdne20218:0 crwdns20219:0crwdne20219:0
+      crwdns21391:0crwdne21391:0 crwdns21392:0crwdne21392:0 crwdns21393:0crwdne21393:0
     </p>
     
     <p>
-      crwdns20220:0crwdne20220:0
+      crwdns21394:0crwdne21394:0
     </p>
     
     <p>
-      crwdns20221:0crwdne20221:0
+      crwdns21395:0crwdne21395:0
     </p>
     
     <p>
-      crwdns20222:0crwdne20222:0
+      crwdns21396:0crwdne21396:0
     </p>
     
     <p>
-      crwdns20223:0crwdne20223:0
+      crwdns21397:0crwdne21397:0
     </p>
     
     <p>
@@ -234,29 +258,33 @@ crwdns20172:0crwdne20172:0
     </p>
     
     <h2>
-      crwdns20717:0crwdne20717:0
+      crwdns21398:0crwdne21398:0
     </h2>
     
     <p>
-      crwdns20224:0crwdne20224:0
+      crwdns21399:0crwdne21399:0
     </p>
     
     <p>
-      crwdns20225:0crwdne20225:0 crwdns20226:0crwdne20226:0 crwdns20227:0crwdne20227:0 crwdns20228:0crwdne20228:0
+      crwdns21400:0crwdne21400:0 crwdns21401:0crwdne21401:0 crwdns21402:0crwdne21402:0 crwdns21403:0crwdne21403:0
     </p>
     
     <p>
-      crwdns20229:0crwdne20229:0 crwdns20230:0crwdne20230:0 crwdns20231:0crwdne20231:0 crwdns20232:0crwdne20232:0
+      crwdns21404:0crwdne21404:0 crwdns21405:0crwdne21405:0 crwdns21406:0crwdne21406:0 crwdns21407:0crwdne21407:0
     </p>
     
     <p>
-      crwdns20233:0crwdne20233:0 crwdns20234:0crwdne20234:0 crwdns20235:0crwdne20235:0
+      crwdns21408:0crwdne21408:0 crwdns21409:0crwdne21409:0 crwdns21410:0crwdne21410:0
     </p>
     
     <p>
-      crwdns20236:0crwdne20236:0
+      crwdns21411:0crwdne21411:0
     </p>
     
     <p>
-      crwdns20237:0[NAME]crwdnd20237:0[TITLE]crwdne20237:0
+      crwdns21412:0[NAME]crwdnd21412:0[TITLE]crwdne21412:0
+    </p>
+    
+    <p>
+      <a style="display: block" href="/#join"><button style="float: right;">crwdns22140:0crwdne22140:0</button></a>
     </p>

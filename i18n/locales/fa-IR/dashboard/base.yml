@@ -65,10 +65,7 @@ fa:
     overview_student: 'Sign up for an account to track your progress. Your email is primarily used to allow you to log in and for password recovery. For more information, see our <a href="http://code.org/privacy">Privacy Policy</a>.'
     overview_teacher: "Teach computer science in your classroom by signing up for an account.<p/> You'll be able to add your students and track their progress."
     no_signup_message: 'شما می‌توانید <a target="_blank" href="http://learn.code.org"> فهرست مراحل و پازل‌های مختلف را بررسی کنید</a>. باید ثبت نام کنید تا بتوانید پیشرفت‌های خود را ذخیره کنید.'
-    prizes_message: 'دانش‌آموزان ایالات متحده که همه %{num_trophies} جایزه مفهومی را بدست آورند، می‌توانند انواع پاداش از جمله فضای رایگان دراپ‌باکس، اعتبار اسکایپ و بازیهای قابل دانلود از Electronic Arts را انتخاب کنند.'
     teacher_educator_guide: به راهنمای معلم مراجعه کنید
-    teacher_prize_header: 'برنده 1000$ در <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> باشید (از 15 ژوئن 2014 تا زمان اتمام موجودی)'
-    teacher_prize_message: 'با همکاری <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>، Code.org تا سقف 1000$ از وجوه صندوق کلاس را به معلم‌هایی در مدارس عمومی ایالات متحده تقدیم می‌کند که حداقل 15 دانش‌آموز را در دوره آشنایی با علوم کامپیوتر K-8 راهنمایی کنند (از 15 ژوئن 2014 تا زمان اتمام موجودی). <a href="http://code.org/educate/20hr">مشاهده راهنمای معلمین</a>. (محدودیت: 1000$ به ازای هر معلم. <a target="_blank" href="http://help.donorschoose.org/app/answers/detail/a_id/454/kw/code.org">صفحه پرسش و پاسخ را برای مشاهده سایر محدودیت‌ها ببینید</a>.)'
     teacher_pitch: ثبت نام معلم در Code.org
     teacher_title: ثبت نام معلم
     student_pitch: ثبت نام دانش‌آموز در Code.org
@@ -79,6 +76,7 @@ fa:
     gender: جنسیت (اختیاری)
     birthday: تاریخ تولد (اختیاری)
     age: Age
+    user_type: Are you a student or teacher?
     submit: ثبت نام
     teacher: آیا شما یک معلم هستید؟
     valid_username: موجود است!
@@ -327,7 +325,6 @@ fa:
     student_progress: میزان پیشرفت یادگیری شما
     student_stats: 'شما %{trophy_count} گنج از مجموع %{trophy_max} گنج مرتبط با «تسلط بر مفهوم» را به دست آورده اید.'
     student_left_off: 'جایی که شما ترک کردید:'
-    student_finished_prize: 'شما همه خودآموزهای خود را به پایان بردید، %{prize_link} خود را ادعا کرده و کلاس دیگری را از %{online_link} و یا در %{local_school_link} انتخاب کنید'
     student_finished: 'شما همه آموزش‌ها را به پایان رساندید، کلاس دیگری بصورت %{online_link} یا در یک %{local_school_link} بردارید'
     local_school: مدرسه محلی
     online: آنلاین
@@ -350,6 +347,9 @@ fa:
     male: مرد
     female: زن
     none: ترجیح می دهم چواب ندهم
+  user_type:
+    student: دانش آموز
+    teacher: Teacher
   footer:
     help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped create this tutorial.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. All Rights Reserved.'
@@ -360,13 +360,6 @@ fa:
     tos: Terms
     privacy: قوانین حفظ حریم خصوصی
     secure: Secure Version
-  prize_mail:
-    prize_earned:
-      subject: جایزه خود را در Code.org آزاد کنید!
-    teacher_prize_earned:
-      subject: Congratulations from Code.org!
-    teacher_bonus_prize_earned:
-      subject: جایزه ویژه خود را در Code.org آزاد کنید!
   reference_area:
     title: کمک نیاز دارید؟
     subtitle: دیدن این فیلم ها و نکات

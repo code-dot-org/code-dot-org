@@ -1,0 +1,187 @@
+hi:
+  site_name: एक घंटा कोड का
+  language: हिन्दी
+  front_title: 08-14 दिसम्बर, 2014 को,इतिहास के सबसे बड़े शिक्षण कार्यक्रम हा हिस्सा बने
+  coming_soon: जल्द आ रहा है
+  front_header_banner: 08-14 दिसम्बर, 2014 को,इतिहास के सबसे बड़े शिक्षण कार्यक्रम हा हिस्सा बने
+  front_intro_default: 'एक घंटा कोड का ये एक जागतिक आंदोलन है जो १८० से भी ज्यादा देशोंके के करोडो लोगोसे बानी हुई है|कोईभी किसीभी जगहासे एक घंटा कोड का की मेजबानी कर सकता है|इस कार्यक्रम के लिए एक घंटेका अभ्यासक्रम ३० भाषाओमे उपलब्ध है| पूर्व अनुभव की आवश्यकता नहीं है| <strong>आयु ४ से १०४ के लिए</strong>'
+  front_intro_default_uk: "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone can organize an Hour of Code event. Over 3M students did the first Hour of Code in the UK. Let's double that in December! <strong>No experience needed. Ages 4 to 104.</strong>"
+  front_watch_video: नया वीडियो देखें
+  header_menu_resources: संसाधन
+  header_menu_faq: आम सवाल
+  header_menu_prizes: इनाम
+  header_menu_uk_code_org: uk.code.org
+  choose_country_header: दुनिया भर में भाग ले!
+  country_al: Albania
+  country_ar: अर्जेंटीना
+  country_au: ऑस्ट्रेलिया
+  country_br: ब्राज़ील
+  country_bg: बल्गारिया
+  country_de: जर्मनी
+  country_es: लातिन अमरिका
+  country_eu: यूरोपीय यूनियन
+  country_gr: यूनान
+  country_hr: क्रोएशिया
+  country_id: इंडोनेशिया
+  country_it: इटली
+  country_jp: जापान
+  country_me: मध्य पूर्व और उत्तरी अफ्रीका
+  country_my: Malaysia
+  country_nz: न्यूज़ीलैंड
+  country_ro: रोमानिया
+  country_ru: रूस
+  country_ua: यूक्रेन
+  country_uk: युनाइटेड किंगडम
+  country_us: अमरीका
+  country_vn: वियतनाम
+  company_4-H: 4-H Youth Development
+  company_bgca: Boys and Girls Club of America
+  company_cgcs: Council of the Great City Schools
+  company_gsusa: Girl Scouts of America
+  company_bsusa: Boy Scouts of America
+  company_napcs: National Alliance of Public Charter Schools
+  company_tfa: Teachers for America
+  company_tntp: TNTP
+  company_asa: Afterschool Alliance
+  company_ngcp: National Girls Collaborative Project
+  prizes_all: हर आयोजक के लिए पुरस्कार
+  prizes_every_organizer: "'एक घंटा कोड का' के हर आयोजक को आभार की तौर पे उन्हें ड्रॉपबॉक्स स्पेस या स्काइप क्रेडिट दिया जायेगा"
+  prizes_technology: अमरीका के हर राज्य (एवं वाशिंगटन डीसी) के एक सरकारी प्रशाला को $१०,००० कीमतकी तकनिकी सामग्री जितनेका मौका मिलेगा
+  prizes_tech_chats: 96 classrooms will win video chats with very special guests
+  prizes_details: विवरण
+  n_have_learned_an_hoc: '<h1>#</h1>मैं <h2>एक घंटा कोड का</h2><h3>का हिस्सा हु</h3>'
+  anybody_can_learn: हर कोई सीख सकता है
+  register_now: एक खाता अभी बनाएँ
+  front_join_us_heading: "हर छात्र के लिए 'एक घंटा कोड का'"
+  front_join_us_description: संघनक विज्ञान ये हर छात्र के लिए आधार है। हमें इसे १० कोटी छात्रों तक पोहोचने में मदद करे ।
+  front_join_us_button: हमसे जुड़ें
+  front_what_is_hoc: क्या है ये एक घंटा कोड का?
+  front_join_us_header: 'दिसंबर ८ - १४ के, संगणक विज्ञान प्रशिक्षण सप्ताह के दौरान, एक घंटा कोड का की मेजबानीकरके दिखाईये के कोईभी आनंद लेते हुए मूलबहुत संकल्पना सिख सकता है!'
+  front_join_us_header_uk: 'दिसंबर ८ - १४ के, संगणक विज्ञान प्रशिक्षण सप्ताह के दौरान, एक घंटा कोड का की मेजबानीकरके दिखाईये के कोईभी आनंद लेते हुए मूलबहुत संकल्पना सिख सकता है'
+  front_join_us_teacher: क्या आप शिक्षक है?
+  front_join_us_inspire: आपके छात्रोंको प्रेरित करनेके लिए
+  front_join_us_inspire_link: आपके कक्षा में एक घंटा कोड का |
+  front_join_us_parent: क्या आप पालक है?
+  front_join_us_ask_link: आपके स्थानिक प्रशाला से पूछिये
+  front_join_us_ask: एक घंटा कोड का की मेजबानी करने|
+  front_join_us_computer_science: आपको संघनक विज्ञान पसंद है?
+  front_join_us_spread: आपके समुदायमें प्रचार करे|
+  front_join_us_organize: या आप स्वयम एक घंटा कोड का की मेजबानी करे|
+  front_join_us_how_to_run: "'एक घंटा कोड का' सीखने का तरीका"
+  front_join_us_help_promote: "'एक घंटा कोड का' का प्रचार करे"
+  front_join_us_students: छात्र
+  front_join_us_teachers: शिक्षक
+  front_join_us_everyone: हर कोई
+  front_join_us_try: कर के देखे
+  front_join_us_host: मेजबानी करे
+  front_join_us_support: समर्थन करे
+  signup_header: "हमें बताइये अगर आप 'एक घंटा कोड का' की मेजबानी कर रहे है"
+  signup_name_label: आपका नाम
+  signup_email_label: आपका ईमेल
+  signup_organization_name_label: प्रशाला या संस्था का नाम
+  signup_event_type_label: कार्यक्रम का प्रकार
+  signup_event_entire_school_label: मेरी पूरी प्रशाला भाग ले रही है
+  signup_event_location_label: स्थल (वैकल्पिक)
+  signup_special_event_flag_label: मेरे कार्यक्रम का प्रचार करे
+  signup_special_event_details_label: विशेष कार्यक्रम का विवरण
+  signup_send_posters_flag_label: 'कृपया मेरी पाठशाला को एक घंटा कोड का की <a href= "/resources#posters">पत्रिका</a> भेजिए'
+  signup_send_posters_address_label: प्रशाला या संस्था का पता
+  signup_whole_school_flag_label: ये कार्यक्रम संपूर्ण प्रशाला के लिए है
+  signup_name_placeholder: आपका नाम
+  signup_email_placeholder: आप@नमूना.com
+  signup_organization_name_placeholder: उदाहरण के लिए, लिंकन हाई स्कूल
+  signup_event_location_placeholder: "पोस्टल कोड और देश या पूर्ण पते। \r\n(इस्का इस्तमॉल हम नक़्शेपे पिन के रूप में दिखनेके लिए करेंगे)"
+  signup_special_event_details_placeholder: इस कार्यक्रम की विशेषताए बताये
+  signup_send_posters_address_placeholder: पता नक़्शे पे लिखा नहीं जायेगा
+  signup_event_type_in_school: प्रशाला में
+  signup_event_type_out_of_school: प्रशाला के बहर
+  signup_submit_label: साइन अप
+  signup_submit_error_message: गलती हो गयी है. सभी जरुरी हिस्से पूर्ण किये गए है ये सुनिश्चित करे
+  signup_thank_you_header: एक घंटा कोड का का हिस्सा बनने के लिए धन्यवाद|
+  signup_thank_you_message: हमने आपको पुष्टिकरण के लिए और आरम्भमें मदत करनेकेलिए ईमेल भेजा है|
+  map_header: '# एक घंटा कोड का के दुनियाभर में होने वाले कार्यक्रम'
+  map_header_company: '# Hour of Code events organized by company'
+  meta_tag_og_title: एक घंटा कोड का आ रहा है
+  meta_tag_og_description: एक घंटा कोड का ये एक जागतिक आंदोलन है जो १८० से भी ज्यादा देशोंके आयु ४ से १०४ के करोडो लोगोसे बानी हुई है
+  meta_tag_twitter_title: एक घंटा कोड का आ रहा है
+  meta_tag_twitter_description: एक घंटा कोड का ये एक जागतिक आंदोलन है जो १८० से भी ज्यादा देशोंके आयु ४ से १०४ के करोडो लोगोसे बानी हुई है
+  twitter_default_text: 'मै इस साल #HourOfCode का हिस्सा हु, क्या आप है? @codeorg'
+  hardware_prizes_form_name_label: आपका नाम
+  hardware_prizes_form_name_placeholder: आपका नाम
+  hardware_prizes_form_email_label: आपका ईमेल
+  hardware_prizes_form_email_placeholder: आपका ईमेल
+  hardware_prizes_form_school_name_label: प्रशाला का नाम
+  hardware_prizes_form_school_name_placeholder: प्रशाला का नाम
+  hardware_prizes_form_school_address_label: प्रशाला का पता
+  hardware_prizes_form_school_address_placeholder: प्रशाला का पता
+  hardware_prizes_form_school_type_label: प्रशाला का स्वरुप
+  hardware_prizes_form_school_type_option_elementary: प्राथमिक
+  hardware_prizes_form_school_type_option_middle_school: माध्यमिक विद्यालय
+  hardware_prizes_form_school_type_option_high_school: उच्च विद्यालय
+  hardware_prizes_form_qualifying_school_label: यह एक पूर्व प्रार्थमिक से १२ तक की अमरीकी सरकारी प्रशाला है
+  hardware_prizes_form_number_students_label: भाग लेने वाले छात्रों की संख्या
+  hardware_prizes_form_number_students_placeholder: विद्यार्थियों की संख्या
+  hardware_prizes_form_plan_file_label: आपकी एक घंटा कोड का के प्रचलन तंत्र की योजना अपलोड करे
+  hardware_prizes_form_plan_file_description: "आपके प्रशाला के हर विद्यार्थी को आप 'एक घंटा कोड का' का हिस्सा कैसे बनाएंगे इसकी योजना दाखिल करे। उदहारण के तौर पे: #PDF# | #Word#"
+  hardware_prizes_form_submit_label: जमा करें
+  hoc_faq_title: सामान्य प्रश्न
+  hoc_faq_what_is_hoc_q: क्या है ये एक घंटा कोड का?
+  hoc_faq_what_is_hoc_a: "एक घंटा कोड का ये संगणक विज्ञानं का एक घंटे का अभ्यासक्रम है जो, ये दिखता है के इसके मूलतत्व कोई भी सिख सकता है| <a href='http://code.org/learn'>ये अभ्यासक्रम देखिये</a> और, जल्दही आपको २०१४ के लिए बनायागया अभ्यासक्रमभी मिलेगा|"
+  hoc_faq_last_year: पिछले साल के ट्यूटोरियल ये कोशिश करके देखे
+  hoc_faq_when_is_hoc_q: "'एक घंटा कोड का' कब है?"
+  hoc_faq_when_is_hoc_a: "एक घंटा कोड का की मेजबानी कोई भी कर सकता है पर इस अभियानका हेतु है के करोडो छात्र ८-१४ दिसंबर में होने वाले <a href='http://csedweek.org'>संगणक शिक्षण सप्ताह</a> के अंतर्गत 'एक घंटा कोड का' का हिस्सा बने|क्या ये इस दौरान कोई एक <i>सुनिश्चित घंटा</i> है? नहीं। आप एक घंटा कोड का का अभ्यास इस दौरान कभीभी करसकते है| (और अगर इस सप्ताहमें नहीं तो इसके अलावा भी करसकते है)"
+  hoc_faq_why_cs_q: क्या है ये संगणक विज्ञान?
+  hoc_faq_why_cs_a: "<i>हर</i> छात्रको संगणक विज्ञानं का शिक्षण मिलना चाहिए|इससे सवालो पे सोचना, तर्क लगाना और रचनात्मकता का अभ्यास होता है|काम उम्र में इसका अभ्यास करनेसे छात्रोंको २१वी सदीके कोईभी रोजगारमे सफलता मिलने उपयुक्त मुल सिद्धान्तोका परिचय होता है|कुछ आकडेवारी देखनेके लिये जाइए <a href='http://code.org'>code.org</a>"
+  hoc_faq_how_participate_q: "मै 'एक घंटा कोड का' का हिस्सा कैसे बनु?"
+  hoc_faq_how_participate_a: "<a href='http://hourofcode.org'>यहाँ</a> एक घंटा कोड का की मेजबानी के लिए साइन-उप करे और <a href='target-resources-how-to'>आपका कार्यक्रम बनाना चालू करे</a>| आप इसकी मेजबानी अपनी प्रशालामें, आपके समुदाय में या आपके कार्यालय में करसकते है|या आप ८ दिसंबर को इसका अभ्यास करके देखे|"
+  hoc_faq_behind_hoc_q: "'एक घंटा कोड का' कार्यक्रम के आयोजक कोन है?"
+  hoc_faq_behind_hoc_a: "The Hour of Code is organized by <a href='http://code.org'>Code.org</a>, a public 501c3 non-profit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color. An <a href='http://code.org/about/partners'>unprecedented coalition of partners</a> have come together to support the Hour of Code, too &mdash; including Microsoft, Apple, Amazon, Boys and Girls Clubs of America and the College Board."
+  hoc_faq_host_q: मै कोड करना जनता नहीं हु । क्या मै इस कार्यक्रम की मेजबानी कर सकता हु?
+  hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='http://code.org/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='target-resources-how-to'>how to guide</a>."
+  hoc_faq_need_computers_q: क्या हर छात्र को अलग संगानक की आवश्यकता है?
+  hoc_faq_need_computers_a: "No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have. <p><i>Here are a few options:</i> <br> <ul> <li><b>Work in pairs.</b> Research shows students learn best with <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>pair programming</a>, sharing a computer and working together. Encourage your students to double up. <li><b>Use a projected screen.</b> If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions. <li><b>Go unplugged.</b> We offer tutorials that require no computer at all. </ul>"
+  hoc_faq_international_q: मै अमरीका में नहीं रहता। मै अंतर्राष्ट्रीय दौरपे इसका हिस्सा कैसे बन सकता हु?
+  hoc_faq_international_a: "दुनिया में कोईभी एक घंटा कोड का की मेजबानी कर सकता है। पिछले साल अनेक छात्र साथ मिलके 'एक घंटा कोड का' का हिस्सा बने।"
+  hoc_faq_tutorial_q: मई एक घंटा कोड का के लिए अभ्यास पत्रिका कैसे बनाऊ?
+  hoc_faq_tutorial_a: "If you're interested in becoming a tutorial partner, <a href='target-tutorial-guidelines'>see our guidelines and instructions</a>. We'd like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science."
+  hoc_faq_more_questions_q: आपको और सवाल है?
+  hoc_faq_more_questions_a: "हमारे <a href='http://support.code.org'>सहकरी मंच</a> पर पूछिये|"
+  hoc_faq_more_questions_br_q: Outras dúvidas?
+  hoc_faq_more_questions_br_a: "Por favor visite nosso <a href='http://support.code.org'>forum de suporte</a> disponível apenas em inglês."
+  hoc_faq_what_is_hoc_uk_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://uk.code.org/learn'>Check out the tutorials</a>, and look out for new ones coming for the Hour of Code 2014."
+  hoc_faq_when_is_hoc_uk_a: "The Hour of Code will take place during December 8-14, 2014. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. The Hour of Code in the UK will happen at the same time as in the US where it is timed to celebrate the annual <a href='http://csedweek.org'>Computer Science Education Week.</a>"
+  hoc_faq_why_cs_uk_a: '<i>Every</i> student should have the opportunity to learn computer science. It helps nurture problem-solving skills, logic and creativity. By starting early, students will have a foundation for success in any 21st-century career path.'
+  hoc_faq_how_participate_uk_a: "Sign up to host an Hour of Code event <a href='http://hourofcode.com/uk'>here</a> and start planning. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when Dec. 8 arrives."
+  hoc_faq_behind_hoc_uk_a: "The Hour of Code is organised by <a href='http://uk.code.org'>Code.org</a>, a public 501c3 non-profit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color. An <a href='http://uk.code.org/about/partners'>unprecedented coalition of partners</a> have come together to support the Hour of Code, too &mdash; including Microsoft, Google, Cambridge University Press, Tech City and The Department of Education."
+  hoc_faq_host_uk_a: "Of course. Hour of Code activities are self-guided. All you have to do is pick the tutorial you want and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. <a href='http://uk.code.org/learn'>Try our current tutorials</a>."
+  stats_hoc_2013_heading: 'पिछले सालके एक घंटा कोड का से कुछ अभूतपूर्व आंकड़े। सिर्फ एक हफ्ते में:'
+  stats_hoc_2013_image_alt: २०१३ के एक घंटा कोड का के कुछ अकड़े
+  stats_growth: सबसे तेज १५ कोटी उपभोक्ताओं तक पोहोचा
+  stats_tumblr: 'टंबलर: 3.5 साल'
+  stats_facebook: 'फेसबुक: 3 साल'
+  stats_twitter: 'ट्विटर: २.५ साल'
+  stats_pinterest: 'पिंट्रेस्ट: 2 साल'
+  stats_instagram: 'इंस्टाग्राम: 14 महीने'
+  stats_hoc: 'एक घंटा कोड का: ५ दिन'
+  stats_global: दुनियाभर में १५ कोटी छात्रोने एक घंटा कोड का द्वारा पढ़ाई की |
+  stats_girls_more: पिछले ७० सालोमें जितनी छात्राओंॅ संगणक विज्ञानं सीखनेका प्रयास कियाथा उससे ज्यादा छात्राओंने संगणक विज्ञानं सीखनेका प्रयास किया |
+  stats_girls_million: १० कोटी सेभी ज्यादा छात्राऍ
+  stats_nina: '"हर दिन मुझे छात्रोंका १००% ध्यान दिखा" - नीना निकोलस पेरी, शिक्षक'
+  stats_student: '"मुझे ये पताथा की ये <b>जिन्दगीमे एक बार मिलने वाला</b> मौका है" - मरिआना अलज़ते, कक्षा ५'
+  stats_michael: 'मैंने मेरे छात्रोंको <b>कभीभी</b> पढ़ाई के लिए उत्साहित नहीं देखा है" - माइकल क्लार्क, शिक्षक'
+  resources_how_to: अध्यापको के लिए प्रशिक्षण पत्र
+  resources_handouts: प्रचार पत्रक
+  resources_videos: वीडियो
+  resources_posters: प्रचार पत्रिका
+  resources_social: Social
+  resources_banners: बैनर
+  resources_emails: ईमेल का नमूना
+  resources_stats: संघनक विज्ञान पे उपयुक्त अकड़े
+  resources_press_kit: पत्रकारों के किये सामान
+  footer_copyright_message: मुद्रधिकार २०१४ code.org. सर्व अधिकार आरक्षित
+  footer_trademark_message: Hour of Code™ ये code.org का ट्रेडमार्क है।
+  footer_menu_partners: भागीदार
+  footer_menu_contact: हमसे संपर्क करें
+  footer_menu_support: समर्थन
+  footer_menu_terms: शर्तें
+  footer_menu_privacy: गोपनीयता नीति

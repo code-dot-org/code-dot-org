@@ -11,10 +11,10 @@
           title: Test Course
           description: Just an internal test course.
         course1:
-          'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
-          'Maze: Sequence': 'Maze: Sequence'
-          'Maze: Debugging': 'Maze: Debugging'
-          'Artist 1: Intro': 'Artist 1: Intro'
+          'Jigsaw: Learn to drag and drop': "拼圖: 學會拖放"
+          'Maze: Sequence': "迷宮: 序列"
+          'Maze: Debugging': "迷宮: 除錯"
+          'Artist 1: Intro': "藝術家1: 簡介"
           Artists 2: Artists 2
           Spelling Bee: Spelling Bee
           Spelling Bee not blockly: Spelling Bee not blockly
@@ -74,7 +74,7 @@
             and middle elementary grades.  Create programs with loops, events, and
             conditionals.  By the end of the course, create your very own interactive
             game or story that you can share.
-          'Maze: Sequence': 'Maze: Sequence'
+          'Maze: Sequence': "迷宮: 序列"
           'Artist: Sequence': 'Artist: Sequence'
           'Maze: Loops': 'Maze: Loops'
           'Artist: Loops': 'Artist: Loops'
@@ -158,3 +158,23 @@
           description: Draw cool pictures and designs with the Artist!
           Artist: Artist
           description_short: Draw cool pictures and designs with the Artist!
+        course4:
+          description_short: Students taking Course 4 should have already taken Courses
+            2 and 3.
+          description: Course 4 is designed for students who have taken Course 2 and
+            3. Students will delve deeper into programming topics introduced in previous
+            courses to flexible solutions to more complex problems. By the end of
+            this course, students create interactive stories and games they can share
+            with anyone. Recommended for grades 4-8.
+          'Artist: Variables': 'Artist: Variables'
+          'Bee: For Loops': 'Bee: For Loops'
+          title: Course 4
+          'Algorithms: Tangrams': 'Algorithms: Tangrams'
+          Variables: "變數類別"
+          'Play Lab: Variables': 'Play Lab: Variables'
+          'Play Lab: Functions with Parameters': 'Play Lab: Functions with Parameters'
+          'Bee: Functions with Parameters': 'Bee: Functions with Parameters'
+          'Artist: For Loops': 'Artist: For Loops'
+          'Play Lab: For Loops': 'Play Lab: For Loops'
+          'Artist: Functions': 'Artist: Functions'
+          'Artist: Functions with Paraqmeters': 'Artist: Functions with Paraqmeters'

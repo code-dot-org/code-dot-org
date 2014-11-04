@@ -4,7 +4,15 @@ title: Resources layout: wide nav: resources_nav
 
 * * *
 
-# منابع
+<div class="row">
+  <h1 class="col-sm-6">
+    منابع
+  </h1>
+  
+  <div class="col-sm-6 button-container centered">
+    <a href="/#join"><button class="signup-button">Sign up your event</button></a>
+  </div>
+</div>
 
 ## Hosting an Hour of Code? [See the how-to guide](<%= hoc_uri('/resources/how-to') %>)
 
@@ -99,6 +107,22 @@ title: Resources layout: wide nav: resources_nav
     
     <p>
       <a href="/images/banner1.jpg"><img src="/images/fit-250/banner1.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner3.jpg"><img src="/images/fit-250/banner3.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner5.jpg"><img src="/images/fit-500/banner5.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    
+    <p>
+      <a id="social"></a>
+    </p>
+    
+    <h2>
+      Post these on social media
+    </h2>
+    
+    <p>
+      <a href="/images/social-1.jpg"><img src="/images/fit-250/social-1.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-2.jpg"><img src="/images/fit-250/social-2.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-3.jpg"><img src="/images/fit-250/social-3.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    
+    <p>
+      <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
     </p>
     
     <p>
@@ -259,4 +283,8 @@ title: Resources layout: wide nav: resources_nav
     
     <p>
       Sincerely, [NAME], [TITLE]
+    </p>
+    
+    <p>
+      <a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>
     </p>

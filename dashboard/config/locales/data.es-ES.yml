@@ -49,6 +49,7 @@
           desc: Editar código (beta)
           MazeEC: Etapa 1
           Webapp: Etapa 2
+          ArtistEC: Etapa 3
         events:
           desc: Bounce (beta)
           Bounce: Etapa 1
@@ -98,6 +99,7 @@
         MazeStep: Modo paso a paso de laberinto
         Wordsearch: Sopa de Letras
         Webapp: Webapp
+        ArtistEC: El artista
     trophy:
       name:
         Bronze: Bronce
@@ -577,6 +579,9 @@
           la palabra DEBAJO
         maze_wordsearch_k_20: "¡Esta es una prueba! Mueveme en una dirección, y luego
           en otra para deletrear la palabra HISTORIA"
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
+          it in the new "penColour" block.'
     video:
       name:
         maze_intro: Introducción al Laberinto

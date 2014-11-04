@@ -1,8 +1,4 @@
-* * *
 
-title: Resources layout: wide
-
-* * *
 
 # How to attract media to your Hour of Code event
 
@@ -14,6 +10,6 @@ title: Resources layout: wide
   * In 26 states, computer science classes don’t count toward math or science high school graduation requirements. 
   * Less than 20% of AP Computer Science students are women. Less than 10% are black or Latino.
 
-## Infrographic version:
+## Infographic version:
 
 ![image](http://code.org/images/fit-8000/Code.org_infographic.png)

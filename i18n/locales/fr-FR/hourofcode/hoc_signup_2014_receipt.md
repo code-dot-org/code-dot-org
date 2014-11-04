@@ -6,7 +6,7 @@ de: '"Hadi Partovi (Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;
 
 <% hostname = CDO.canonical_hostname('hourofcode.com') %>
 
-# Thanks for signing up to host an Hour of Code!
+# Merci de vous inscrire pour organiser une Heure de Code!
 
 **CHAQUE** organisateur d'une Heure de Code recevra 10GB de stockage sur Dropbox ou 10$ de crédit Skype en guise de remerciement. [Détails](http://<%= hostname %>/prizes)
 
@@ -16,19 +16,19 @@ Fais [participer toute ton école](http://<%= hostname %>/whole-school) pour une
 
 <% end %>
 
-## 1. Spread the word
+## Passer le mot
 
-Tell your friends about the #HourOfCode.
+Parlez de #HourOfCode à vos amis.
 
 <% if @country == 'us' %>
 
-## 2. Ask your whole school to offer an Hour of Code
+## 2. Demandez à toute votre école de participer à l'Heure de Code
 
 [Envoie cet e-mail](http://<%= hostname %>/resources#email) ou [donne ce document à ton principal](http://<%= hostname %>/files/schools-handout.pdf). Lorsque ton école sera partante, [participez pour gagner 10 000$ d'équipement inforatique](http://<%= hostname %>/prizes) et défiez les écoles alentours de participer aussi.
 
 <% else %>
 
-## 2. Ask your whole school to offer an Hour of Code
+## 2. Demandez à toute votre école de participer à l'Heure de Code
 
 [Envoie cet email](http://<%= hostname %>/resources#email) ou [donne ce document à ton principal](http://<%= hostname %>/files/schools-handout.pdf).
 
@@ -44,7 +44,7 @@ Recruit a local group — boy scouts club, church, university, veterans group or
 
 ## 5. Ask a local elected official to support the Hour of Code
 
-[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
+[Envoyez cet email](http://<%= hostname %>/resources#politicians) à votre maire, votre conseiller municipal, ou à votre comission scolaire. Ou [donnez-leur ce document](http://<%= hostname %>/resources/hoc-one-pager.pdf) et invitez-les à visiter votre école.
 
 <% if @country == 'ro' %>
 

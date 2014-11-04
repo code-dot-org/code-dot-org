@@ -102,18 +102,7 @@ class ActivitiesController < ApplicationController
   end
 
   def track_script_progress
-    retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-      @user_script = UserScript.where(user: current_user, script: @script_level.script).first_or_create
-      time_now = Time.now
-      @user_script.started_at ||= time_now
-      @user_script.last_progress_at = time_now
-
-      if @user_script.check_completed?
-        @user_script.completed_at ||= time_now
-      end
-    end
-
-    @user_script.save!
+    @user_script = current_user.track_script_progress(@script_level.script)
   end
 
   def track_progress_for_user
@@ -166,10 +155,6 @@ class ActivitiesController < ApplicationController
       trophy_check(current_user) if passed
     rescue Exception => e
       Rails.logger.error "Error updating trophy exception: #{e.inspect}"
-    end
-
-    unless @trophy_updates.blank?
-      prize_check(current_user)
     end
   end
 
@@ -224,37 +209,6 @@ class ActivitiesController < ApplicationController
         else
           UserTrophy.create!(user: user, trophy_id: new_trophy.id, concept: concept)
           @trophy_updates << [data_t('concept.description', concept.name), new_trophy.name, view_context.image_path(new_trophy.image_name)]
-        end
-      end
-    end
-  end
-
-  def prize_check(user)
-    if user.trophy_count == (Concept.cached.length * Trophy::TROPHIES_PER_CONCEPT)
-      if !user.prize_earned
-        user.prize_earned = true
-        user.save!
-        # student prizes disabled
-        # PrizeMailer.prize_earned(user).deliver if user.email.present? && eligible_for_prize?
-      end
-
-      # for awarding prizes, we only honor the first (primary) teacher
-      teacher = user.valid_prize_teacher
-
-      if teacher && (!teacher.teacher_prize_earned || !teacher.teacher_bonus_prize_earned)
-        t_prize, t_bonus = teacher.check_teacher_prize_eligibility
-        if t_prize && !teacher.teacher_prize_earned
-          teacher.teacher_prize_earned = true
-          teacher.save!
-          # teacher prizes disabled, but we still are sending a congrats mail to people who would have received a prize
-          PrizeMailer.teacher_prize_earned(teacher).deliver if teacher.email.present? && eligible_for_prize?
-        end
-
-        if t_bonus && !teacher.teacher_bonus_prize_earned
-          teacher.teacher_bonus_prize_earned = true
-          teacher.save!
-          # teacher bonus prizes disabled
-          # PrizeMailer.teacher_bonus_prize_earned(teacher).deliver if teacher.email.present? && eligible_for_prize?
         end
       end
     end

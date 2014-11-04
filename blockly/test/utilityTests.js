@@ -148,14 +148,14 @@ describe("mazeUtils", function () {
   });
 });
 
-describe('insertWhenRunBlock', function () {
+describe('forceInsertTopBlock', function () {
   global.DOMParser = require('xmldom').DOMParser;
   global.XMLSerializer = require('xmldom').XMLSerializer;
 
   it("no blocks", function () {
     var withXml, withoutXml, result, expected, msg;
     withoutXml = '';
-    result = blockUtils.insertWhenRunBlock(withoutXml);
+    result = blockUtils.forceInsertTopBlock(withoutXml, 'when_run');
     expected = '<xml><block type="when_run" movable="false" deletable="false"/></xml>';
     msg = "\n" +
       "result: " + result + "\n" +
@@ -163,7 +163,7 @@ describe('insertWhenRunBlock', function () {
     assert(result === expected, msg);
 
     withXml = '<xml>' + withoutXml + '</xml>';
-    result = blockUtils.insertWhenRunBlock(withXml);
+    result = blockUtils.forceInsertTopBlock(withXml, 'when_run');
     expected = '<xml><block type="when_run" movable="false" deletable="false"/></xml>';
     msg = "\n" +
       "result: " + result + "\n" +
@@ -174,7 +174,7 @@ describe('insertWhenRunBlock', function () {
   it ("single block", function () {
     var withXml, withoutXml, result, expected, msg;
     withoutXml = '<block type="foo"/>';
-    result = blockUtils.insertWhenRunBlock(withoutXml);
+    result = blockUtils.forceInsertTopBlock(withoutXml, 'when_run');
     expected = '<xml><block type="when_run" movable="false" deletable="false"><next>' +
       withoutXml + '</next></block></xml>';
     msg = "\n" +
@@ -183,7 +183,7 @@ describe('insertWhenRunBlock', function () {
     assert(result === expected, msg);
 
     withXml = '<xml>' + withoutXml + '</xml>';
-    result = blockUtils.insertWhenRunBlock(withXml);
+    result = blockUtils.forceInsertTopBlock(withXml, 'when_run');
     expected = '<xml><block type="when_run" movable="false" deletable="false"><next>' +
       withoutXml + '</next></block></xml>';
     msg = "\n" +
@@ -198,7 +198,7 @@ describe('insertWhenRunBlock', function () {
     var block1 = '<block type="foo"/>';
     var block2 = '<block type="foo2"/>';
     withoutXml = block1 + block2;
-    result = blockUtils.insertWhenRunBlock(withoutXml);
+    result = blockUtils.forceInsertTopBlock(withoutXml, 'when_run');
     expected = '<xml><block type="when_run" movable="false" deletable="false"><next>' + block1 +
       '</next></block>' + block2 + '</xml>';
     msg = "\n" +
@@ -207,7 +207,7 @@ describe('insertWhenRunBlock', function () {
     assert(result === expected, msg);
 
     withXml = '<xml>' + withoutXml + '</xml>';
-    result = blockUtils.insertWhenRunBlock(withXml);
+    result = blockUtils.forceInsertTopBlock(withXml, 'when_run');
     expected = '<xml><block type="when_run" movable="false" deletable="false"><next>' + block1 +
       '</next></block>' + block2 + '</xml>';
     msg = "\n" +
@@ -219,7 +219,7 @@ describe('insertWhenRunBlock', function () {
   it("two attached blocks", function () {
     var withXml, withoutXml, result, expected, msg;
     withoutXml = '<block type="foo"><next><block type="foo2"/></next></block>';
-    result = blockUtils.insertWhenRunBlock(withoutXml);
+    result = blockUtils.forceInsertTopBlock(withoutXml, 'when_run');
     expected = '<xml><block type="when_run" movable="false" deletable="false"><next>' +
         withoutXml + '</next></block></xml>';
     msg = "\n" +
@@ -228,7 +228,7 @@ describe('insertWhenRunBlock', function () {
     assert(result === expected, msg);
 
     withXml = '<xml>' + withoutXml + '</xml>';
-    result = blockUtils.insertWhenRunBlock(withXml);
+    result = blockUtils.forceInsertTopBlock(withXml, 'when_run');
     expected = '<xml><block type="when_run" movable="false" deletable="false"><next>' +
         withoutXml + '</next></block></xml>';
     msg = "\n" +
@@ -242,7 +242,7 @@ describe('insertWhenRunBlock', function () {
     var block1 = '<block type="procedures_defnoreturn"/>';
     var block2 = '<block type="procedures_defnoreturn"/>';
     withoutXml = block1 + block2;
-    result = blockUtils.insertWhenRunBlock(withoutXml);
+    result = blockUtils.forceInsertTopBlock(withoutXml, 'when_run');
     expected = '<xml><block type="when_run" movable="false" deletable="false"/>' + block1 +
       block2 + '</xml>';
     msg = "\n" +
@@ -251,7 +251,7 @@ describe('insertWhenRunBlock', function () {
     assert(result === expected, msg);
 
     withXml = '<xml>' + withoutXml + '</xml>';
-    result = blockUtils.insertWhenRunBlock(withXml);
+    result = blockUtils.forceInsertTopBlock(withXml, 'when_run');
     expected = '<xml><block type="when_run" movable="false" deletable="false"/>' + block1 +
         block2 + '</xml>';
     msg = "\n" +
@@ -263,7 +263,7 @@ describe('insertWhenRunBlock', function () {
   it("already has a when_run", function () {
     var withXml, withoutXml, result, expected, msg;
     withoutXml = '<block type="when_run" movable="false" deletable="false"><next><block type="foo"/></next></block>';
-    result = blockUtils.insertWhenRunBlock(withoutXml);
+    result = blockUtils.forceInsertTopBlock(withoutXml, 'when_run');
     expected = withoutXml;
     msg = "\n" +
       "result: " + result + "\n" +
@@ -271,12 +271,34 @@ describe('insertWhenRunBlock', function () {
     assert(result === expected, msg);
 
     withXml = '<xml>' + withoutXml + '</xml>';
-    result = blockUtils.insertWhenRunBlock(withXml);
+    result = blockUtils.forceInsertTopBlock(withXml, 'when_run');
     expected = withXml;
     msg = "\n" +
       "result: " + result + "\n" +
       "expect: " + expected + "\n";
     assert(result === expected, msg);
+  });
+
+  it ("insert functional_compute", function () {
+    var withXml, withoutXml, result, expected, msg;
+    withoutXml = '<block type="foo"/>';
+    result = blockUtils.forceInsertTopBlock(withoutXml, 'functional_compute');
+    expected = '<xml><block type="functional_compute" movable="false" deletable="false">' +
+      '<functional_input name="ARG1">' + withoutXml + '</functional_input></block></xml>';
+    msg = "\n" +
+      "result: " + result + "\n" +
+      "expect: " + expected + "\n";
+    assert(result === expected, msg);
+
+    withXml = '<xml>' + withoutXml + '</xml>';
+    result = blockUtils.forceInsertTopBlock(withXml, 'functional_compute');
+    expected = '<xml><block type="functional_compute" movable="false" deletable="false">' +
+        '<functional_input name="ARG1">' + withoutXml + '</functional_input></block></xml>';
+    msg = "\n" +
+      "result: " + result + "\n" +
+      "expect: " + expected + "\n";
+    assert(result === expected, msg);
+
   });
 
 });
