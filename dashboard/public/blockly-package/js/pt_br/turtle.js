@@ -11379,7 +11379,7 @@ exports.reinfFeedbackMsg = function(d){return "Isto parece com o que você quer?
 
 exports.setColour = function(d){return "definir cor"};
 
-exports.setPattern = function(d){return "set pattern"};
+exports.setPattern = function(d){return "definir padrão"};
 
 exports.setWidth = function(d){return "definir largura"};
 

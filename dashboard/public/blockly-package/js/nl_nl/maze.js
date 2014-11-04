@@ -13646,21 +13646,21 @@ exports.insufficientNectar = function(d){return "Je gebruikt wel de juiste blokk
 
 exports.make = function(d){return "maken"};
 
-exports.moveBackward = function(d){return "move backward"};
+exports.moveBackward = function(d){return "ga achteruit"};
 
-exports.moveEastTooltip = function(d){return "Verzet me een plaats oost."};
+exports.moveEastTooltip = function(d){return "Ga een plek oost."};
 
 exports.moveForward = function(d){return "beweeg vooruit"};
 
-exports.moveForwardTooltip = function(d){return "Beweeg me een plek naar voren."};
+exports.moveForwardTooltip = function(d){return "Ga een plek naar voren."};
 
-exports.moveNorthTooltip = function(d){return "Verzet me een plaats noord."};
+exports.moveNorthTooltip = function(d){return "Ga een plek noord."};
 
-exports.moveSouthTooltip = function(d){return "Verzet me een plaats zuid."};
+exports.moveSouthTooltip = function(d){return "Ga een plek naar zuid."};
 
-exports.moveTooltip = function(d){return "Move me forward/backward one space"};
+exports.moveTooltip = function(d){return "Ga een plek vooruit/achteruit"};
 
-exports.moveWestTooltip = function(d){return "Verzet me een plaats west."};
+exports.moveWestTooltip = function(d){return "ga een plek west."};
 
 exports.nectar = function(d){return "haal nektar"};
 
@@ -13724,9 +13724,9 @@ exports.turnRight = function(d){return "Draai rechtsom"};
 
 exports.turnTooltip = function(d){return "Draait me 90 graden linksom of rechtsom."};
 
-exports.uncheckedCloudError = function(d){return "Make sure to check all clouds to see if they're flowers or honeycombs."};
+exports.uncheckedCloudError = function(d){return "Kijk bij alle wolken als ze bloemen zijn of honingraten."};
 
-exports.uncheckedPurpleError = function(d){return "Make sure to check all purple flowers to see if they have nectar"};
+exports.uncheckedPurpleError = function(d){return "Kijk bij alle paarse bloemen of ze nectar hebben"};
 
 exports.whileMsg = function(d){return "terwijl"};
 

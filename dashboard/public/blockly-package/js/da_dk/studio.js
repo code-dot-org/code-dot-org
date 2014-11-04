@@ -19246,7 +19246,7 @@ exports.emptyBlocksErrorMsg = function(d){return "\"Gentag\" eller \"Hvis\" blok
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Funktionen blok skal have andre blokke inde i det for at virke."};
 
-exports.extraTopBlocks = function(d){return "Du har ekstra blokke, der ikke er knyttet til en hændelsesblok."};
+exports.extraTopBlocks = function(d){return "Du har ikke sammenhængende blokke. Ville du fastgøre disse til \"når køre\" blokken?"};
 
 exports.finalStage = function(d){return "Tillykke! Du har fuldført det sidste trin."};
 
@@ -19330,7 +19330,7 @@ exports.saveToGallery = function(d){return "Gem til dit galleri"};
 
 exports.savedToGallery = function(d){return "Gem til dit galleri!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Beklager, ikke kan vi dele dette program."};
 
 exports.typeFuncs = function(d){return "Tilgængelige funktioner: %1"};
 
@@ -19421,7 +19421,7 @@ exports.makeProjectileRedHearts = function(d){return "lav røde hjerter"};
 
 exports.makeProjectileTooltip = function(d){return "Lad kuglen, der netop ramte, forsvinde eller hoppe."};
 
-exports.makeYourOwn = function(d){return "Lav din egen historie"};
+exports.makeYourOwn = function(d){return "Lav din egen Spille-Lab-App"};
 
 exports.moveDirectionDown = function(d){return "ned"};
 
@@ -19845,13 +19845,13 @@ exports.whenSpriteCollidedTooltip = function(d){return "Udføre handlingen neden
 
 exports.whenSpriteCollidedWith = function(d){return "rører"};
 
-exports.whenSpriteCollidedWithAnyActor = function(d){return "touches any actor"};
+exports.whenSpriteCollidedWithAnyActor = function(d){return "rører enhver spiller"};
 
-exports.whenSpriteCollidedWithAnyEdge = function(d){return "touches any edge"};
+exports.whenSpriteCollidedWithAnyEdge = function(d){return "rører enhver kant"};
 
-exports.whenSpriteCollidedWithAnyProjectile = function(d){return "touches any projectile"};
+exports.whenSpriteCollidedWithAnyProjectile = function(d){return "rører enhver projektil"};
 
-exports.whenSpriteCollidedWithAnything = function(d){return "touches anything"};
+exports.whenSpriteCollidedWithAnything = function(d){return "rører ved noget"};
 
 exports.whenSpriteCollidedWithN = function(d){return "rører spilleren "+v(d,"spriteIndex")};
 

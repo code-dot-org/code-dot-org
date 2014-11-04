@@ -118,6 +118,8 @@
   "setBackgroundTennis":"set tennis background",
   "setBackgroundWinter":"set winter background",
   "setBackgroundTooltip":"Nastavite sliko ozadja",
+  "setEnemySpeed":"set enemy speed",
+  "setPlayerSpeed":"set player speed",
   "setScoreText":"set score",
   "setScoreTextTooltip":"Sets the text to be displayed in the score area.",
   "setSpriteEmotionAngry":"to a angry mood",

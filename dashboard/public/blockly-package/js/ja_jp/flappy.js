@@ -9463,7 +9463,7 @@ exports.emptyBlocksErrorMsg = function(d){return "”Repeat”または\"If\"の
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "関数ブロックは、中に他のブロックがないと動きません。"};
 
-exports.extraTopBlocks = function(d){return "イベントブロックに付いていない余分なブロックがあります。"};
+exports.extraTopBlocks = function(d){return "ブロックを外しました。もしかして、「実行時」のブロックにつなげたかったですか？"};
 
 exports.finalStage = function(d){return "おめでとうございます ！最終ステージをクリアしました。"};
 
@@ -9495,7 +9495,7 @@ exports.nextLevelTrophies = function(d){return "おめでとうございます �
 
 exports.nextStage = function(d){return "おめでとうございます ！"+v(d,"stageName")+"を コンプリートしました。"};
 
-exports.nextStageTrophies = function(d){return "おめでとうございます！あなたはステージ "+v(d,"stageNumber")+" をクリアし、"+p(d,"numTrophies",0,"ja",{"one":"トロフィー","other":n(d,"numTrophies")+" トロフィー"})+"を獲得しました。"};
+exports.nextStageTrophies = function(d){return "おめでとうございます！ "+v(d,"stageName")+" をクリアして "+p(d,"numTrophies",0,"ja",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+" を手に入れました。"};
 
 exports.numBlocksNeeded = function(d){return "おめでとうございます ！あなたはパズル "+v(d,"puzzleNumber")+" を完了しました。 (もしくは "+p(d,"numBlocks",0,"ja",{"one":"1 block","other":n(d,"numBlocks")+" blocks"})+" のみの使用だけでも可能でした。)"};
 
@@ -9547,7 +9547,7 @@ exports.saveToGallery = function(d){return "ギャラリーに保存"};
 
 exports.savedToGallery = function(d){return "ギャラリーに保存しました！"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "プログラムをシェアできませんでした。"};
 
 exports.typeFuncs = function(d){return "利用可能な機能:%1"};
 
@@ -9654,17 +9654,17 @@ exports.reinfFeedbackMsg = function(d){return "\"Try again\" ボタンを押す�
 
 exports.scoreText = function(d){return "得点："};
 
-exports.setBackground = function(d){return "set scene"};
+exports.setBackground = function(d){return "背景をセット"};
 
 exports.setBackgroundRandom = function(d){return "状況をランダム に設定"};
 
 exports.setBackgroundFlappy = function(d){return "状況を街（昼）に設定"};
 
-exports.setBackgroundNight = function(d){return "状況を街（夜）に設定"};
+exports.setBackgroundNight = function(d){return "背景を夜の街にセット"};
 
 exports.setBackgroundSciFi = function(d){return "状況をSFに設定"};
 
-exports.setBackgroundUnderwater = function(d){return "状況を水中に設定"};
+exports.setBackgroundUnderwater = function(d){return "背景を水中にセット"};
 
 exports.setBackgroundCave = function(d){return "状況を洞窟に設定"};
 
@@ -9700,7 +9700,7 @@ exports.setGravityVeryHigh = function(d){return "重力を非常に大きいに�
 
 exports.setGravityTooltip = function(d){return "重力のレベルを設定"};
 
-exports.setGround = function(d){return "set ground"};
+exports.setGround = function(d){return "じめんをセット"};
 
 exports.setGroundRandom = function(d){return "地面をランダムに設定"};
 
@@ -9718,7 +9718,7 @@ exports.setGroundLava = function(d){return "地面を溶岩に設定"};
 
 exports.setGroundTooltip = function(d){return "地面の画像を設定"};
 
-exports.setObstacle = function(d){return "set obstacle"};
+exports.setObstacle = function(d){return "しょうがい物をセット"};
 
 exports.setObstacleRandom = function(d){return "障害物をランダムに設定"};
 
@@ -9736,7 +9736,7 @@ exports.setObstacleLaser = function(d){return "障害物をレーザーに設定
 
 exports.setObstacleTooltip = function(d){return "障害物の背景を設定"};
 
-exports.setPlayer = function(d){return "set player"};
+exports.setPlayer = function(d){return "プレイヤーをセット"};
 
 exports.setPlayerRandom = function(d){return "プレーヤーをランダムに設定"};
 
@@ -9788,25 +9788,25 @@ exports.soundBounce = function(d){return "バウンス"};
 
 exports.soundCrunch = function(d){return "crunch"};
 
-exports.soundDie = function(d){return "sad"};
+exports.soundDie = function(d){return "かなしい"};
 
-exports.soundHit = function(d){return "smash"};
+exports.soundHit = function(d){return "うつ"};
 
-exports.soundPoint = function(d){return "point"};
+exports.soundPoint = function(d){return "ポイント"};
 
 exports.soundSwoosh = function(d){return "swoosh"};
 
-exports.soundWing = function(d){return "wing"};
+exports.soundWing = function(d){return "羽"};
 
 exports.soundJet = function(d){return "jet"};
 
-exports.soundCrash = function(d){return "crash"};
+exports.soundCrash = function(d){return "ぶつかる"};
 
 exports.soundJingle = function(d){return "jingle"};
 
 exports.soundSplash = function(d){return "splash"};
 
-exports.soundLaser = function(d){return "laser"};
+exports.soundLaser = function(d){return "レーザー"};
 
 exports.speedRandom = function(d){return "速度をランダムに設定"};
 

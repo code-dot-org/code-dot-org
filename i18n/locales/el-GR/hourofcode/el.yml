@@ -11,29 +11,6 @@ el:
   header_menu_faq: Συχνές Ερωτήσεις
   header_menu_prizes: Βραβεία
   header_menu_uk_code_org: uk.code.org
-  choose_country_header: Συμμετέχετε σε όλο τον κόσμο!
-  country_al: Albania
-  country_ar: Αργεντινή
-  country_au: Αυστραλία
-  country_br: Βραζιλία
-  country_bg: Βουλγαρία
-  country_de: Γερμανία
-  country_es: Λατινική Αμερική
-  country_eu: Ευρωπαϊκή Ένωση
-  country_gr: Ελλάδα
-  country_hr: Κροατία
-  country_id: Ινδονησία
-  country_it: Ιταλία
-  country_jp: Ιαπωνία
-  country_me: Μέση Ανατολή και Βόρεια Αφρική
-  country_my: Malaysia
-  country_nz: Νέα Ζηλανδία
-  country_ro: Ρουμανία
-  country_ru: Ρωσία
-  country_ua: Ουκρανία
-  country_uk: Ηνωμένο Βασίλειο
-  country_us: Ηνωμένες Πολιτείες
-  country_vn: Βιετνάμ
   company_4-H: 4-H Youth Development
   company_bgca: Boys and Girls Club of America
   company_cgcs: Council of the Great City Schools
@@ -144,8 +121,8 @@ el:
   hoc_faq_international_a: Οποιοσδήποτε μπορεί να οργανώσει μια εκδήλωση για την Ώρα του Κώδικα, οπουδήποτε στον κόσμο. Πέρυσι, μαθητές από όλο τον κόσμο συμμετείχαν στην Ώρα του Κώδικα.
   hoc_faq_tutorial_q: Πώς μπορώ να δημιουργήσω ένα μάθημα για την Ώρα του Κώδικα;
   hoc_faq_tutorial_a: "If you're interested in becoming a tutorial partner, <a href='target-tutorial-guidelines'>see our guidelines and instructions</a>. We'd like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science."
-  hoc_faq_more_questions_q: Still have more questions?
-  hoc_faq_more_questions_a: "Try finding an answer in our <a href='http://support.code.org'>support forum</a>."
+  hoc_faq_more_questions_q: Έχετε ακόμα ερωτήσεις;
+  hoc_faq_more_questions_a: "Προσπαθείστε να βρείτε μια απάντηση στο <a href='http://support.code.org'>φόρουμ υποστήριξης</a>."
   hoc_faq_more_questions_br_q: Outras dúvidas?
   hoc_faq_more_questions_br_a: "Por favor visite nosso <a href='http://support.code.org'>forum de suporte</a> disponível apenas em inglês."
   hoc_faq_what_is_hoc_uk_a: "Η Ώρα του Κώδικα είναι μια εισαγωγή στην επιστήμη των υπολογιστών διάρκειας μιας ώρας , σχεδιασμένη να απομυθοποιήσει τον κώδικα και να δείξει ότι οποιοσδήποτε μπορεί να μάθει τα βασικά. <a href='http://code.org/learn'>Ελέγξτε τα μαθήματα</a>, και κοιτάξτε για τα νέα που θα βγουν για την Ώρα του Κώδικα 2014."
@@ -178,6 +155,17 @@ el:
   resources_emails: Δείγμα μηνυμάτων ηλεκτρονικού ταχυδρομείου
   resources_stats: Χρήσιμες επιστημονικές υπολογιστικές στατικές
   resources_press_kit: Press Kit
+  events_title: All Hour of Code Events
+  events_nav_all: All Events
+  events_nav_classrooms: Classrooms
+  events_nav_whole_schools: Whole Schools
+  events_nav_special: Special Events
+  events_all_title: All Hour of Code events
+  events_classroom_title: Classroom Hour of Code events
+  events_whole_school_title: Whole-school Hour of Code events
+  events_special_title: Special Hour of Code events
+  event: event
+  events: events
   footer_copyright_message: Πνευματικά δικαιώματα Code.org 2014. Όλα τα δικαιώματα είναι κατοχυρωμένα.
   footer_trademark_message: Η Ώρα του κώδικα ™ είναι εμπορικό σήμα της Code.org.
   footer_menu_partners: Συνεργάτες

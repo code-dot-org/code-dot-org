@@ -44,18 +44,18 @@ Rekrut kelompok lokal — anak Pramuka, gereja, Universitas, veteran kelompok at
 
 ## 5. Tanyakan seorang pejabat terpilih setempat untuk mendukung Hour of Code
 
-[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
+[Kirimkan email ini](http://<%= hostname %>/resources#politicians) kepada walikota, dewan kota, atau dewan sekolah. Atau [berikan selebaran ini](http://<%= hostname %>/resources/hoc-one-pager.pdf) dan undang mereka untuk mengujungi sekolah anda.
 
 <% if @country == 'ro' %>
 
-Multumim ca ne-ai anuntat despre evenimentul tau! Anunta-ne daca doresti informatii suplimentare sau daca ai intrebari. Hai sa facem istorie impreuna!
+Terima kasih telah memberitahukan kami mengenai kegiatan anda. Jika anda memerlukan bantuan atau memiliki pertanyaan lebih lanjut, maka beritahulah kami. Ayo kita buat ini bersejarah!
 
-Echipa Hour of Code Romania hoc@adfaber.org
+Team Hour of Code Rumania hoc@adfaber.org
 
 <% end %>
 
 * * *
 
-Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't like these emails? [Unsubscribe](%= unsubscribe_link %).
+Code.org adalah non-profit 501c 3. Alamat kami adalah 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Tidak suka email ini? [Berhenti berlangganan](%= unsubscribe_link %).
 
 ![](<%= tracking_pixel %>)

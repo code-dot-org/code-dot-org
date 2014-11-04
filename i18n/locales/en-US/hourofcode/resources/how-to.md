@@ -4,7 +4,15 @@ crwdns19908:0crwdne19908:0
 
 * * *
 
-# crwdns19909:0crwdne19909:0
+<div class="row">
+  <h1 class="col-sm-6">
+    crwdns22141:0crwdne22141:0
+  </h1>
+  
+  <div class="col-sm-6 button-container centered">
+    <a href="/#join"><button class="signup-button">crwdns22142:0crwdne22142:0</button></a>
+  </div>
+</div>
 
 ## crwdns19910:0crwdne19910:0
 
@@ -71,4 +79,4 @@ crwdns19953:0crwdne19953:0 crwdns19954:0crwdne19954:0 crwdns21444:0crwdne21444:0
 
 **crwdns19956:0crwdne19956:0**
 
-crwdns19957:0crwdne19957:0 crwdns20244:0crwdne20244:0 crwdns20245:0crwdne20245:0 crwdns21445:0crwdne21445:0 crwdns21446:0crwdne21446:0 <% end %>
+crwdns19957:0crwdne19957:0 crwdns20244:0crwdne20244:0 crwdns20245:0crwdne20245:0 crwdns21445:0crwdne21445:0 crwdns21446:0crwdne21446:0 crwdns22143:0crwdne22143:0

@@ -8114,7 +8114,7 @@ exports.no = function(d){return "Ні"};
 
 exports.numBlocksNeeded = function(d){return "Це завдання можна розв'язати за допомогою %1 блоків."};
 
-exports.pause = function(d){return "Pause"};
+exports.pause = function(d){return "Пауза"};
 
 exports.reinfFeedbackMsg = function(d){return "Можна натиснути кнопку \"Повторити спробу\", щоб повернутися до запуску застосунку."};
 

@@ -1,5 +1,6 @@
 "el-GR":
   hello: "Γεια σου κόσμε"
+  select_language: Please select your language
   computer_science: "Επιστήμη Υπολογιστών"
   computer_science_edweek: "Εβδομάδα Εκπαίδευσης στην Επιστήμη Υπολογιστών"
   csedweek_dates: 9-15 Δεκεμβρίου 2013

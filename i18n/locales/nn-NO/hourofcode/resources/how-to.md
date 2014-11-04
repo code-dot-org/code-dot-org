@@ -4,7 +4,15 @@ title: Ressurser layout: wide
 
 * * *
 
-# Korleis undervise Kodetimen
+<div class="row">
+  <h1 class="col-sm-6">
+    How to teach one Hour of Code
+  </h1>
+  
+  <div class="col-sm-6 button-container centered">
+    <a href="/#join"><button class="signup-button">Sign up your event</button></a>
+  </div>
+</div>
 
 ## 1) Prøv leksjonane sjølv:
 
@@ -49,26 +57,26 @@ De fleste barn veit ikkje kva programmering er. Her er nokre idear:
 
 ## 5) Start Kodetimen din
 
-**Sett elevene i gang!**
+**Set elevane i aktivitet!**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](http://<%= codeorg_url() %>/learn) under the number of participants. [hourofcode.com/co](http://hourofcode.com/co)
-  * Tell students to visit the URL and start the tutorial.
+  * Skriv lenkjeadressa til leksjonen på tavla! Lenkjeadressa er oppført etter talet på deltakarar i [informasjonen om den leksjonen du har vald](http://<%= codeorg_url() %>/learn). [hourofcode.com/co](http://hourofcode.com/co)
+  * Be elevene on å skrive inn adressa i nettlesar og starte leksjonen.
 
-**Når elevene støter på vansker**
+**Dersom elevane støyter på vanskar**
 
-  * Tell students, “Ask 3 then me.” Ask 3 classmates, and if they don’t have the answer, then ask the teacher.
-  * Encourage students and offer positive reinforcement: “You’re doing great, so keep trying.”
-  * It’s okay to respond: “I don’t know. Let’s figure this out together.” If you can’t figure out a problem, use it as a good learning lesson for the class: “Technology doesn’t always work out the way we want. Together, we’re a community of learners.” And: “Learning to program is like learning a new language; you won’t be fluent right away.“
+  * Fortell elevene, "Spør 3, så meg." Spør 3 klassekameratar, og dersom dei heller ikkje veit svaret, så spør læraren.
+  * Oppmuntre elevane og gi positive tilbakemeldingar: "Du klarer det fint, så berre hald fram"
+  * Det er greit å svare: "Eg veit ikkje. Lat oss prøve å finne det ut saman." Dersom du ikkje får løyst eit problem, bruk det som eit eksempel: "Teknologien fungerer ikkje alltid slik vi ynskjer. Vi lærer dette saman." Og: "Å lære programmering er som å lære eit nytt språk, du kan ikkje det flytande med ein gong."
 
-**Hva kan jeg gjøre hvis en elev blir fort ferdig?**
+**Kva om ein elev blir fort ferdig?**
 
-  * Students can see all tutorials and try another Hour of Code activity at [<%= codeorg_url() %>/learn](http://<%= codeorg_url() %>/learn)
-  * Or, ask students who finish early to help classmates who are having trouble with the activity.
+  * Elevane kan sjå alle leksjonane og prøve ein av dei andre aktivitetane for Kodetimen på [<%= codeorg_url() %>/learn](http://<%= codeorg_url() %>/learn)
+  * Eller du kan be dei elevane som blir fort ferdige om å hjelpe dei som slit med å få det til.
 
-**Hvordan skriver jeg ut sertifikater for mine elever?**
+**Korleis kan eg skrive ut kursbevisa for elevane mine?**
 
-Hver elev får en sjanse til å få et sertifikat via e-post når de er ferdige med [Code.org leksjonene](http://studio.code.org). Du kan klikke på sertifikatet for å skrive det ut. However, if you want to make new certificates for your students, visit our [Certificates](http://<%= codeorg_url() %>/certificates) page to print as many certificates as you like, in one fell swoop!
+Kvar elev kan få eit kurbevis tilsendt via e-post når dei er ferdige med [Code.org leksjonane](http://studio.code.org). Du kan klikke på kurbeviset for å skrive det ut. Dersom du vil lage nye kursbevis til elevane dine, gå til vår [kursbevis-side](http://<%= codeorg_url() %>/certificates) og skriv ut så mange du vil på ein gong!
 
-**Hva kommer etter Kodetimen?**
+**Kva kjem etter Kodetimen?**
 
-Kodetimen er bare det første skrittet på en reise for å lære mer om hvordan teknologien virker og hvordan programmer lages. < % if @country == 'uk' %> Time av koden er bare første skritt på en reise for å lære mer om hvordan teknologien virker og hvordan å lage programmer. For å fortsette den reisen, må [barna oppmuntres til å lære mer på nettet](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %>
+Kodetimen er berre det første steget på ein reise for å lære meir om korleis teknologi fungerer og korleis programvare blir laga. < % if @country == 'uk' %> Kodetimen er berre det første steget på ein reise for å lære mer om korleis teknologi fungerer og korleis programmvare blir laga. For å halde fram den reisa, må [barna bli oppmuntra til å lære meir på nettet](http://uk.code.org/learn/beyond). <% else %> For å halde fram den reisa, kan du finne fleire ressursar for lærarar [her](http://<%= codeorg_url() %>/educate). Eller uppmuntre elever til å sjølve finne meir på[nettet](http://<%= codeorg_url() %>/learn/behond). <% end %> <a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>

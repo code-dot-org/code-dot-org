@@ -19453,7 +19453,7 @@ exports.moveSprite = function(d){return "move"};
 
 exports.moveSpriteN = function(d){return "move actor "+v(d,"spriteIndex")};
 
-exports.moveDown = function(d){return "move down"};
+exports.moveDown = function(d){return "lëviz poshtë"};
 
 exports.moveDownTooltip = function(d){return "Move the paddle down."};
 

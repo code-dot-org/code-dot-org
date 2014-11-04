@@ -11,29 +11,6 @@ hu:
   header_menu_faq: GYIK
   header_menu_prizes: Díjak
   header_menu_uk_code_org: uk.code.org
-  choose_country_header: Vegyél részt benne, bárhol is vagy a világon!
-  country_al: Albania
-  country_ar: Argentína
-  country_au: Ausztrália
-  country_br: Brazília
-  country_bg: Bulgária
-  country_de: Németország
-  country_es: Latin-Amerika
-  country_eu: Európai Unió
-  country_gr: Görögország
-  country_hr: Horvátország
-  country_id: Indonézia
-  country_it: Olaszország
-  country_jp: Japán
-  country_me: Közel-Kelet és Észak-Afrika
-  country_my: Malaysia
-  country_nz: Új Zéland
-  country_ro: Románia
-  country_ru: Oroszország
-  country_ua: Ukrajna
-  country_uk: Egyesült Királyság
-  country_us: Egyesült Államok
-  country_vn: Vietnám
   company_4-H: 4-H Youth Development
   company_bgca: Boys and Girls Club of America
   company_cgcs: Council of the Great City Schools
@@ -182,6 +159,17 @@ hu:
   resources_emails: Minta e-mailek
   resources_stats: Hasznos számítástechnikai statisztikák
   resources_press_kit: Sajtóanyag
+  events_title: All Hour of Code Events
+  events_nav_all: All Events
+  events_nav_classrooms: Classrooms
+  events_nav_whole_schools: Whole Schools
+  events_nav_special: Special Events
+  events_all_title: All Hour of Code events
+  events_classroom_title: Classroom Hour of Code events
+  events_whole_school_title: Whole-school Hour of Code events
+  events_special_title: Special Hour of Code events
+  event: event
+  events: events
   footer_copyright_message: Copyright 2014 Code.org. Minden jog fenntartva.
   footer_trademark_message: Hour of Code™ a Code.org bejegyzett védjegye.
   footer_menu_partners: Partnerek

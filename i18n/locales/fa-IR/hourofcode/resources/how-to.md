@@ -4,7 +4,15 @@
 
 * * *
 
-# چگونگي تدريس يك ساعت كد نويسي
+<div class="row">
+  <h1 class="col-sm-6">
+    How to teach one Hour of Code
+  </h1>
+  
+  <div class="col-sm-6 button-container centered">
+    <a href="/#join"><button class="signup-button">Sign up your event</button></a>
+  </div>
+</div>
 
 ## ١) آموزش ها را تجربه كنيد:
 
@@ -71,4 +79,4 @@ Show students an inspirational video to kick off the Hour of Code. Examples:
 
 **مرحله بعد از ساعت كدنويسي چيست؟**
 
-"ساعت کدنويسي" تنها اولين قدم در سفر بسوي يادگيري چگونگي عملكرد تكنولوژي و ساخت كاربردهاي نرم افزاري است. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. براي ادامه اين سفر، [بچه هايتان را تشويق به يادگيري آنلاين كنيد](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %>
+"ساعت کدنويسي" تنها اولين قدم در سفر بسوي يادگيري چگونگي عملكرد تكنولوژي و ساخت كاربردهاي نرم افزاري است. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. براي ادامه اين سفر، [بچه هايتان را تشويق به يادگيري آنلاين كنيد](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %> <a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>

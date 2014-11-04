@@ -8080,7 +8080,7 @@ exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in 
 
 exports.finalLevel = function(d){return "Tebrikler! Son bulmacayı da çözdünüz."};
 
-exports.makeYourOwn = function(d){return "Make Your Own App"};
+exports.makeYourOwn = function(d){return "Kendi uygulamanı yarat"};
 
 exports.nextLevel = function(d){return "Tebrikler! Bu bulmacayı tamamladınız."};
 
@@ -8088,9 +8088,9 @@ exports.no = function(d){return "Hayır"};
 
 exports.numBlocksNeeded = function(d){return "Bu bulmaca %1 blok kullanılarak çözülebilir."};
 
-exports.pause = function(d){return "Pause"};
+exports.pause = function(d){return "Durdur"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
+exports.reinfFeedbackMsg = function(d){return "Çalışan uygulamaya dönmek için \"Yeniden dene\" tuşuna basabilirsiniz."};
 
 exports.repeatForever = function(d){return "Sonsuza kadar tekrarla"};
 
@@ -8098,13 +8098,13 @@ exports.repeatDo = function(d){return "yap"};
 
 exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
 
-exports.shareWebappTwitter = function(d){return "Check out the app I made. I wrote it myself with @codeorg"};
+exports.shareWebappTwitter = function(d){return "Yaptığım hikayeye göz atın. @codeorg ile kendim yazdım"};
 
-exports.shareGame = function(d){return "Share your app:"};
+exports.shareGame = function(d){return "Uygulamanı paylaş:"};
 
-exports.turnBlack = function(d){return "turn black"};
+exports.turnBlack = function(d){return "geri karart"};
 
-exports.turnBlackTooltip = function(d){return "Turns the screen black."};
+exports.turnBlackTooltip = function(d){return "Ekranı karartır."};
 
 exports.yes = function(d){return "Evet"};
 

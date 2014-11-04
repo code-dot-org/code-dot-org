@@ -8088,7 +8088,7 @@ exports.no = function(d){return "Не"};
 
 exports.numBlocksNeeded = function(d){return "Този пъзел може да бъде решен с %1 блокове."};
 
-exports.pause = function(d){return "Pause"};
+exports.pause = function(d){return "Пауза"};
 
 exports.reinfFeedbackMsg = function(d){return "Можете да натиснете бутона \"Опитайте отново\", за да се върнете да работите над приложението ви."};
 

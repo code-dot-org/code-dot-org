@@ -4,7 +4,15 @@ title: Resources layout: wide nav: resources_nav
 
 * * *
 
-# Sumber daya
+<div class="row">
+  <h1 class="col-sm-6">
+    Sumber daya
+  </h1>
+  
+  <div class="col-sm-6 button-container centered">
+    <a href="/#join"><button class="signup-button">Sign up your event</button></a>
+  </div>
+</div>
 
 ## Hosting an Hour of Code? [See the how-to guide](<%= hoc_uri('/resources/how-to') %>)
 
@@ -30,20 +38,20 @@ title: Resources layout: wide nav: resources_nav
   <a id="videos"></p> 
   
   <h2>
-    Show these videos to inspire students
+    Tampilkan video ini untuk menginspirasi para pelajar
   </h2>
   
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>Apa yang kebanyakan sekolah tidak pernah ajarkan (5 menit)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
+      <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>What Most Schools Don't Teach (5 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>Hour of Code telah hadir - Siapa saja dapat belajar</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
+      <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>Hour of Code is Here - Anybody Can Learn</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
@@ -53,14 +61,14 @@ title: Resources layout: wide nav: resources_nav
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>President Obama pada Ilmu Komputer</strong></a>
+      <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>President Obama on computer science</strong></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>Siapa Saja Dapat Belajar (1 menit)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
+      <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>Anybody Can Learn (1 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
@@ -74,7 +82,7 @@ title: Resources layout: wide nav: resources_nav
     <a id="posters"></p> 
     
     <h2>
-      Hang these posters in your school
+      Pajang poster - poster ini di sekolah anda
     </h2>
     
     <p>
@@ -110,11 +118,11 @@ title: Resources layout: wide nav: resources_nav
     </h2>
     
     <p>
-      <a href="/images/social-1.jpg"><img src="/images/fit-200/social-1.jpg" alt="gambar" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-2.jpg"><img src="/images/fit-200/social-2.jpg" alt="gambar" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-3.jpg"><img src="/images/fit-200/social-3.jpg" alt="gambar" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="/images/social-1.jpg"><img src="/images/fit-250/social-1.jpg" alt="gambar" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-2.jpg"><img src="/images/fit-250/social-2.jpg" alt="gambar" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-3.jpg"><img src="/images/fit-250/social-3.jpg" alt="gambar" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
     </p>
     
     <p>
-      <a href="/images/mark.jpg"><img src="/images/fit-200/mark.jpg" alt="gambar" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-200/susan.jpg" alt="gambar" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-200/ashton.jpg" alt="gambar" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-200/marissa.jpg" alt="gambar" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-200/chris.jpg" alt="gambar" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="gambar" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="gambar" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="gambar" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="gambar" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="gambar" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
     </p>
     
     <p>
@@ -130,11 +138,11 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Ask your school, employer or friends to sign up:
+      Ajak sekolah anda, kantor, dan teman anda untuk mendaftar:
     </h2>
     
     <p>
-      Komputer ada dimana-mana, tetapi sedikit sekolah yang mengajar ilmu komputer dari 10 tahun yang lalu. Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. In one week, 15 million students tried computer science!
+      Komputer ada dimana-mana, tetapi sedikit sekolah yang mengajar ilmu komputer dari 10 tahun yang lalu. Kabar baiknya, kita berada pada jalur yang tepat untuk merubah itu. Jika Anda mendengar tentang Hour of Code tahun lalu, Anda mungkin tahu itu membuat sejarah. Dalam satu minggu saja, sudah lebih dari 15 juta pelajar mencoba ilmu komputer!
     </p>
     
     <p>
@@ -142,7 +150,7 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <p>
-      This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2014. Please get involved with an Hour of Code event during Computer Science Education Week, December 8-14, 2014.
+      Untuk tahun ini, mari kita buat lebih besar lagi. Kami meminta anda untuk bergabung dalam Hour of Code 2014. Ayo bergabunglah dalam Hour of Code saat Pekan Edukasi Ilmu Komputer, 8-14 Desember 2014.
     </p>
     
     <p>
@@ -150,7 +158,7 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <p>
-      Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com
+      Bantu kami mencapai 100 juta siswa pada akhir tahun! Mulailah di http://hourofcode.com
     </p>
     
     <p>
@@ -158,7 +166,7 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Invite media to attend your event:
+      Undanglah media untuk menghadiri kegiatan anda:
     </h2>
     
     <p>
@@ -275,4 +283,8 @@ title: Resources layout: wide nav: resources_nav
     
     <p>
       Sincerely, [NAME], [TITLE]
+    </p>
+    
+    <p>
+      <a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>
     </p>

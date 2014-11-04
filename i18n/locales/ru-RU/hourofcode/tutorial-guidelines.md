@@ -121,7 +121,7 @@ Visit the [Hour of Code Activity Submission page](https://docs.google.com/a/code
       * Elementary school: grades K-2 or 3-5
       * Middle School: grades 6-8
       * High School: grades 9-12
-      * All ages
+      * Всех возрастов
   * Please also include recommended computer science knowledge within grade level: Beginner, Intermediate, or Advanced. The Hour of Code website will highlight activities for Beginners most prominently. If you’d like to prepare Intermediate and Advanced Hour of Code Activities, please include the prior knowledge needed in the description of your activity.
   * Technical requirements: 
       * In order to more accurately track participation we want every third party tutorial partners to include 1-pixel tracking images on the first and last page of their Hour of Code tutorials. Place a starting pixel-image on the start page and a final pixel-image on the end page. Do not place pixels on interim pages). See the Tracking Pixel section below for more details. 
@@ -130,9 +130,9 @@ Visit the [Hour of Code Activity Submission page](https://docs.google.com/a/code
           * Receive a certificate that they completed the Hour of Code
           * See leaderboards about which countries/cities have the highest participation rates in Hour of Code activities
           * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to <http://code.org/api/hour/finish> as well. 
-  * ***(Optional)*** We will follow-up with an online survey/form link asking for a report of the following activity metrics for the week of Dec. 8, 12:01 am through Dec. 14, 11:59 pm) 
+  * ***(Не обязательно)*** We will follow-up with an online survey/form link asking for a report of the following activity metrics for the week of Dec. 8, 12:01 am through Dec. 14, 11:59 pm) 
       * For online activities (especially smartphone/tablet apps): 
-          * Number of users
+          * Кол-во пользователей
           * How many completed the task
           * Average time on task
           * Number of total lines of code written over all users

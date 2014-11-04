@@ -16,7 +16,7 @@ ja:
         gender: 性別
         edit_header: アカウントの詳細を編集
         error:
-          future: "can't be in the future"
+          future: 過去の日付にしてください。
   hello: ハローワールド
   welcome_back: 'Welcome Back, %{name}'
   add_teacher_form:
@@ -32,7 +32,7 @@ ja:
     submit: ヒントを追加します。
   appname: Code.org
   stage: ステージ
-  stage_number: 'Stage %{number}'
+  stage_number: 'ステージ %{number}'
   puzzle: パズル
   trophies: トロフィー
   courses: コース
@@ -60,7 +60,7 @@ ja:
     windowslive: Microsoft アカウント
     forgot_password: パスワードをお忘れですか？
     need_confirmation: 確認イーメイルが来ませんでしたか？
-    need_unlock: ロックを解除をするインストラクションとど来ましたか？
+    need_unlock: ロック解除用のメールは届きましたか？
   signup_form:
     overview_student: 'Sign up for an account to track your progress. Your email is primarily used to allow you to log in and for password recovery. For more information, see our <a href="http://code.org/privacy">Privacy Policy</a>.'
     overview_teacher: "Teach computer science in your classroom by signing up for an account.<p/> You'll be able to add your students and track their progress."
@@ -99,8 +99,8 @@ ja:
     try_hoc: 最初に 1 時間分のコード学習を試す
     try_20hours: 20 時間分のコンピュータ科学入門編を試してください。
   signinsection:
-    welcome: 'Welcome to %{section_name}'
-    name: Choose your name
+    welcome: '%{section_name} へようこそ！'
+    name: 名前を選んでください。
     picture: Now find your secret picture
     words: Now enter your secret words
     login: ログイン
@@ -185,7 +185,7 @@ ja:
       choose: 賞品を選択します。
       choose_teacher: 'Click on the logo below to claim your prize:'
       earned: 賞を獲得しました！(米国の学生のみ）
-      not_earned_title: Finish the tutorial, earn rewards (U.S. students only)
+      not_earned_title: チュートリアルを終了して賞品を貰いましょう(米国の学生のみ)
       not_earned: 'コンピューターサイエンスの概念を全て学び、 %{num_trophies}トロフィーと実際の商品を獲得します。10 ドル分の iTunes ギフトカード、10 GB の無料の Dropbox のストレージ、 10 ドル分のSkipeクレジットそしてゲームの無料ダウンロードから選択できます。注：米国内の生徒のみ対象となります。また商品はなくなり次第終了いたします。 '
       teacher:
         earned: '15人 以上の学生が % {num_trophies} 個すべてのトロフィーを獲得しました。教師賞を授与します！（米国の教師のみ）'
@@ -414,13 +414,13 @@ ja:
   upsell:
     hoc:
       title: コードの時間(Hour of code)
-      body: Try the basics of computer science. Millions have given it a shot.
+      body: コンピューター・サイエンスの基本に挑戦してみてください。もう何百万人も挑戦した人がいます。
     flappy:
       title: Flappy Code
       body: Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!
     20hour:
-      title: Intro Course
-      body: Try our 20-hour Intro to Computer Science course.
+      title: 入門コース
+      body: コンピューター科学コースの入門編（20時間）に挑戦してみてください。
   gallery:
     students_drew_these_with_code: Students drew these with code!
     students_made_these_with_code: Students made these with code!
@@ -428,30 +428,30 @@ ja:
     activity_count: 'In the past <b>%{days}</b> days, students have made <b>%{count}</b> apps and pictures by writing their own computer programs. Click on the pictures and screenshots to see each program in action.'
     want_to_make_your_own: Want to make your own?
     more: 'More &rarr;'
-    caption_by_name_age: 'by %{name}, age %{age}'
-    caption_time_ago: '%{time_ago} ago'
+    caption_by_name_age: '作成者： %{name} ( %{age} 歳)'
+    caption_time_ago: '%{time_ago} 前'
   landing:
     prerelease: "This course is in <span class='betatext'>beta</span>.  This means it is not the final version of the course, and is subject to revision as feedback is received and improvements are made."
     feedback: Give Feedback
-    report_bug: Report Bug
+    report_bug: バグを報告
     support: Get Help
     support_url: //support.code.org
   multi:
-    wrong_title: Incorrect answer
+    wrong_title: 不正解
     wrong_body: "The answer you've entered is not correct.  Please try again!"
-    correct_title: Correct
+    correct_title: 正解
     correct_body: That is the correct answer.
   match:
     wrong_title: Incorrect solution
     wrong_body: "The solution you've entered is not correct.  Please try again!"
-    correct_title: Correct
+    correct_title: 正解
     correct_body: That is the correct answer.
   dialog:
     ok: OK
   time:
-    hour: 1 hour
-    day: day
-    week: week
+    hour: 1 時間
+    day: 日
+    week: 週
   data:
     script:
       name:
@@ -474,7 +474,7 @@ ja:
           title: Flappy Code
           description: Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!
         jigsaw:
-          title: Jigsaw
+          title: ジグソーパズル
           description: ""
         step:
           title: Step
@@ -483,7 +483,7 @@ ja:
           title: Sample Level Builder
           description: ""
   age_interstitial:
-    age: Your age
+    age: 年齢
     header: Account Information Update
     message: "We're in the process of updating our experience to provide you with even stronger privacy protections. To do this, we need existing users to enter their age here.<br/>As always, code.org will never rent, sell or share this information with any third parties."
     sign_out: 'If you do not wish to provide your age you may <a href="%{url}">sign out</a>.'

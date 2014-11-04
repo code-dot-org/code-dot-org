@@ -76,7 +76,7 @@ bg:
     gender: Пол (по избор)
     birthday: Рожденна дата (по избор)
     age: Възраст
-    user_type: Are you a student or teacher?
+    user_type: Вие ученик или преподавател сте?
     submit: Регистрирайте се
     teacher: Учител ли сте?
     valid_username: Достъпно!

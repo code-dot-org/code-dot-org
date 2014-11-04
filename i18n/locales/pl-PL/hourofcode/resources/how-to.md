@@ -4,7 +4,15 @@ title: Materiały layout: wide
 
 * * *
 
-# Jak poprowadzić Godzinę Kodowania
+<div class="row">
+  <h1 class="col-sm-6">
+    How to teach one Hour of Code
+  </h1>
+  
+  <div class="col-sm-6 button-container centered">
+    <a href="/#join"><button class="signup-button">Sign up your event</button></a>
+  </div>
+</div>
 
 ## 1) Spróbuj samouczków:
 
@@ -71,4 +79,4 @@ Każdy uczeń może uzyskać certyfikat za pośrednictwem poczty elektronicznej,
 
 **Co dzieje się po ukończeniu Godziny Kodowania?**
 
-Godzina Kodowania jest tylko pierwszym krokiem do tego, aby dowiedzieć się jak działa technologia i jak tworzy się aplikacje. <% if @country == 'uk' %> Godzina Kodowania jest tylko pierwszym krokiem do tego, aby dowiedzieć się jak działa technologia i jak tworzy się aplikacje. Aby kontynuować tę podróż, [zachęcaj dzieci do nauki online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %>
+Godzina Kodowania jest tylko pierwszym krokiem do tego, aby dowiedzieć się jak działa technologia i jak tworzy się aplikacje. <% if @country == 'uk' %> Godzina Kodowania jest tylko pierwszym krokiem do tego, aby dowiedzieć się jak działa technologia i jak tworzy się aplikacje. Aby kontynuować tę podróż, [zachęcaj dzieci do nauki online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %> <a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>

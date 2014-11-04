@@ -13650,7 +13650,7 @@ exports.moveBackward = function(d){return "mova para trás"};
 
 exports.moveEastTooltip = function(d){return "Mova-me um espaço para leste."};
 
-exports.moveForward = function(d){return "avançar"};
+exports.moveForward = function(d){return "avance"};
 
 exports.moveForwardTooltip = function(d){return "Mova-me um espaço para a frente."};
 

@@ -24,7 +24,7 @@ de:
           Multi & Match: 'Multi & Match'
           K-1 Flappy: K-1 Flappy
           Flappy non blockly: Flappy non blockly
-          title: 'Course 1 - For early readers'
+          title: Course 1
           Artist 2: Künstler 2
           Happy Maps: Glücklich Karten
           Move it, Move it: Achtung, fertig, LOS
@@ -40,7 +40,7 @@ de:
           "Maze: Loops": 'Labyrinth: Schleifen'
           "Bee: Loops": 'Biene: Schleifen'
           "Studio: Create a Story": 'Play Lab: Erstelle eine Story'
-          description_short: Course 1 is designed for early readers in the lower elementary grades.
+          description_short: Course 1 is designed for early readers. Recommended for grades K-1.
           "Artist: Loops": 'Künstler: Schleifen'
         course2:
           The Maze: Das Labyrinth
@@ -76,7 +76,7 @@ de:
           "Bee: Debugging": 'Biene: Debuggen'
           "Artist: Debugging": 'Künstler: Debuggen'
           "Bee: Conditionals": 'Biene: Bedingungen'
-          description_short: Kurs 2 richtet sich an Schüler/-innen, die in der unteren und mittleren Grundschule lesen können.
+          description_short: 'Course 2 is designed for students who can read.  Recommended for grades 2-5.'
           "Artist: Sequence2": 'Künstler: Sequenz2'
           "Maze: Sequence2": 'Labyrinth: Sequenz'
           "Artist: Nested Loops": 'Artist: Nested Loops'
@@ -117,7 +117,7 @@ de:
           "Farmer: While Loops": 'Farmer: While Loops'
           "Bee: Nested Loops": 'Bee: Nested Loops'
           "Bee: Debugging": 'Biene: Debuggen'
-          description_short: Students taking Course 3 should have already taken Course 2.
+          description_short: 'Course 3 is a follow-up to Course 2.  Recommended for grades 4-5.'
           Maze2: Maze2
           Artist2: Artist2
           "Artist: Functions2": 'Artist: Functions2'
@@ -147,3 +147,18 @@ de:
           description: Zeichne coole Bilder und Designs mit dem Künstler!
           Artist: Künstler
           description_short: Zeichne coole Bilder und Designs mit dem Künstler!
+        course4:
+          description_short: Students taking Course 4 should have already taken Courses 2 and 3.
+          description: Course 4 is designed for students who have taken Course 2 and 3. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8.
+          "Artist: Variables": 'Artist: Variables'
+          "Bee: For Loops": 'Bee: For Loops'
+          title: Course 4
+          "Algorithms: Tangrams": 'Algorithms: Tangrams'
+          Variables: Variablen
+          "Play Lab: Variables": 'Play Lab: Variables'
+          "Play Lab: Functions with Parameters": 'Play Lab: Functions with Parameters'
+          "Bee: Functions with Parameters": 'Bee: Functions with Parameters'
+          "Artist: For Loops": 'Artist: For Loops'
+          "Play Lab: For Loops": 'Play Lab: For Loops'
+          "Artist: Functions": 'Artist: Functions'
+          "Artist: Functions with Paraqmeters": 'Artist: Functions with Paraqmeters'

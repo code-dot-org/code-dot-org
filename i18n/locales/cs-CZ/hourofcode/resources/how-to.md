@@ -4,7 +4,15 @@ název: Zdroje rozvržení: široké
 
 * * *
 
-# Jak vyučovat Hodinu kódu
+<div class="row">
+  <h1 class="col-sm-6">
+    How to teach one Hour of Code
+  </h1>
+  
+  <div class="col-sm-6 button-container centered">
+    <a href="/#join"><button class="signup-button">Sign up your event</button></a>
+  </div>
+</div>
 
 ## 1) Vyzkoušejte cvičení:
 
@@ -71,4 +79,4 @@ Každý student má po dokončení [cvičení na Code.org](http://studio.code.or
 
 **Co následuje po Hodině kódu?**
 
-Hodina Kódu je pouze prvním krokem na cestě k dalším vědomostem o tom, jak technologie funguje a jak vytvářet softwarové aplikace. <% if @country == 'uk' %> Hodina Kódu je pouze prvním krokem na cestě k dalším vědomostem o tom, jak technologie funguje a jak vytvořit softwarové aplikace. Chcete-li v této cestě pokračovat, [povzbuďte své děti k učení se online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %>
+Hodina Kódu je pouze prvním krokem na cestě k dalším vědomostem o tom, jak technologie funguje a jak vytvářet softwarové aplikace. <% if @country == 'uk' %> Hodina Kódu je pouze prvním krokem na cestě k dalším vědomostem o tom, jak technologie funguje a jak vytvořit softwarové aplikace. Chcete-li v této cestě pokračovat, [povzbuďte své děti k učení se online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %> <a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>

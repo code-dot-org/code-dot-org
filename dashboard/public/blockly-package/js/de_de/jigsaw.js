@@ -8042,7 +8042,7 @@ exports.saveToGallery = function(d){return "In deiner Galerie abspeichern"};
 
 exports.savedToGallery = function(d){return "In deiner Gallerie gespeichert!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Leider können wir dieses Programm nicht teilen."};
 
 exports.typeFuncs = function(d){return "Verfügbare Funktionen:%1"};
 

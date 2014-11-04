@@ -99,7 +99,7 @@
         Jigsaw: Teka-teki
         MazeStep: Mode tahapan labirin
         Wordsearch: Carikata
-        Webapp: Webapp
+        Webapp: Aplkasi Web
         ArtistEC: Artis
     trophy:
       name:
@@ -498,8 +498,8 @@
         studio_c2_10: Bisakah kamu menambahkan blok-blok untuk mengubah latar belakang
           dan kecepatan si penguin, lalu menggerakan ia dengan panah-panah sampai
           mendapatkan poin?
-        studio_c2_11: Create your own story. When you're done, click Finish to let
-          friends try your story on their phones.
+        studio_c2_11: Buat ceritamu sendiri. Ketika selesai, klik Selesai untuk memberitahu
+          teman anda untuk mencobanya di ponsel mereka.
         studio_c3_story_1: Dapatkah anda membuat anjing ini mengatakan "Halo dunia"?
         studio_c3_story_2: Bisakah Anda membuat anjing itu mengatakan sesuatu, kemudian
           membuat kucing itu mengatakan sesuatu?
@@ -509,8 +509,8 @@
           kucing dan membuat kucing mengatakan "halo" ketika anjing mencapainya?
         studio_c3_story_5: Bisakah kamu menambahkan sebuah blok untuk membuat si gurita
           senang?
-        studio_c3_story_6: Create your own story. When you're done, click Finish to
-          let friends try your story on their phones.
+        studio_c3_story_6: Buat ceritamu sendiri. Ketika selesai, klik Selesai untuk
+          memberitahu teman anda untuk mencobanya di ponsel mereka.
         studio_c3_game_1: Bisakah kamu menuliskan program untuk membuat si gurita
           mengatakan "halo" saat diklik?
         studio_c3_game_2: Dapatkah anda menulis program untuk membuat penguin bergerak
@@ -526,8 +526,8 @@
         studio_c3_game_6: Bisakah kamu menambahkan blok-blok untuk mengubah latar
           belakang dan kecepatan si penguin, lalu menggerakan ia dengan panah-panah
           sampai mendapatkan poin?
-        studio_c3_game_7: Create your own game. When you're done, click Finish to
-          let friends try your story on their phones.
+        studio_c3_game_7: Buat game anda sendiri. Ketika selesai, klik Selesai untuk
+          memberitahu teman anda untuk mencobanya di ponsel mereka.
         studio_playlab_1: Dapatkah anda membuat anjing ini mengatakan "Halo dunia"?
         studio_playlab_2: Bisakah Anda membuat anjing itu mengatakan sesuatu, kemudian
           membuat kucing itu mengatakan sesuatu?
@@ -548,35 +548,40 @@
         studio_playlab_9: Bisakah kamu menambahkan blok-blok untuk mengubah latar
           belakang dan kecepatan si penguin, lalu menggerakan ia dengan panah-panah
           sampai mendapatkan poin?
-        studio_playlab_10: Create your own game. When you're done, click Finish to
-          let friends try your story on their phones.
-        studio_full_sandbox: Create your own game. When you're done, click Finish
-          to let friends try your story on their phones.
+        studio_playlab_10: Buat game anda sendiri. Ketika selesai, klik Selesai untuk
+          memberitahu teman anda untuk mencobanya di ponsel mereka.
+        studio_full_sandbox: Buat game anda sendiri. Ketika selesai, klik Selesai
+          untuk memberitahu teman anda untuk mencobanya di ponsel mereka.
         studio_k1_1: Dapatkah anda membuat anjing ini mengatakan "Halo dunia"?
         studio_k1_2: Bisakah Anda membuat anjing itu mengatakan sesuatu, kemudian
           membuat kucing itu mengatakan sesuatu?
         studio_k1_3: Dapatkah anda menulis program untuk membuat anjing ini bergerak
           menuju kucing?
-        studio_k1_4: Make the dog move to the cat and the cat say "hello" when he
-          gets there.
+        studio_k1_4: Membuat anjing bergerak menuju kucing dan kucing mengatakan "hello"
+          ketika ia sampai disitu.
         studio_k1_5: Bisakah kamu menambahkan sebuah blok untuk membuat si gurita
           senang?
-        studio_k1_6: Can you write a program to make this penguin move around using
-          the up / down / left /right keys to hit all of the targets?
+        studio_k1_6: Buat cerita Anda sendiri! Gerakan kucing dan anjing, dan buat
+          mereka mengatakan berbagai hal-hal.
         maze_wordsearch_k_1: Pindahkan saya untuk mengeja kata Timur
         maze_wordsearch_k_2: Pindahkan saya untuk mengeja kata Selatan
         maze_wordsearch_k_3: Pindahkan saya untuk mengeja kata Barat
         maze_wordsearch_k_4: Pindahkan saya untuk mengeja kata Utara
-        maze_wordsearch_k_6: Move me East and then South to spell the word JUMP
-        maze_wordsearch_k_9: Move me one way, then another to spell the word CODE
-        maze_wordsearch_k_13: Move me one way, then another to spell the word DEBUG
-        maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
-        maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
-        maze_wordsearch_k_20: This is a test! Move me one way, then another to spell
-          the word STORY
-        webapp_ec_simple: Create your web app by using createHtmlBlock.
-        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
-          it in the new "penColour" block.'
+        maze_wordsearch_k_6: Gerakkan saya ke Timur dan kemudian ke Selatan untuk
+          mengeja kata JUMP
+        maze_wordsearch_k_9: Gerakkan saya lurus, kemudian saya akan mengeja kata
+          CODE
+        maze_wordsearch_k_13: Gerakkan saya lurus, kemudian saya akan mengeja kata
+          DEBUG
+        maze_wordsearch_k_15: Gerakkan saya lurus, kemudian saya akan mengeja kata
+          Above
+        maze_wordsearch_k_16: Gerakkan saya lurus, kemudian saya akan mengeja kata
+          BELOW
+        maze_wordsearch_k_20: Ini adalah tes! Gerakkan saya lurus, kemudian akan mengeja
+          kata STORY
+        webapp_ec_simple: Buatlah aplikasi web anda dengan memakai createHtmlBlock.
+        turtle_ec_1_2: 'Sekarang, gambarkan persegi. CATATAN: gunakan warna kesukaan
+          anda dengan cara memilih itu dalam new "penColour" blok.'
     video:
       name:
         maze_intro: Introduksi labirin
@@ -593,7 +598,7 @@
         parameters: Fungsi dengan parameter
         hoc_wrapup: Penutupan Jam kode
         20_wrapup: 'Penutupan 20 Jam '
-        Unplug1: What is CS?
+        Unplug1: Apa itu CS?
         Unplug2: Berpikir secara komputasi
         Unplug3: Pemrograman grafis diatas kertas
         Unplug4: Algoritma
@@ -601,13 +606,13 @@
         Unplug6: Kondisi
         Unplug7: Penulis lagu
         Unplug8: Abstraksi
-        Unplug9: Relay programming
+        Unplug9: Pemrograman relay
         Unplug10: Internet
         Unplug11: Penutupan
-        C1_happy_maps_unplugged: Happy Maps
+        C1_happy_maps_unplugged: Pemetaan bahagia
         C1_moveitmoveit_unplugged: Gerakkan itu, Gerakkan itu
         C1_bigevent_unplugged: Acara besar
-        C1_getting_loop: Getting Loopy
+        C1_getting_loop: Dapat berulang-ulang
         C1_pair_programming: Pemrograman berpasangan
         C1_maze_intro_sequencing: Introduksi Sekuensi Labirin
         C1_maze_debugging: Labirin Debugging
@@ -623,7 +628,7 @@
         C2_maze_intro: Apa itu Labirin?
         C2_artist_intro: Introduksi Artis
         C2_zuck_repeat_loop: Pengulangan labirin
-        C2_artist_loops: Artist Loops
+        C2_artist_loops: Perulangan Artis
         C2_bee_conditionals: kondisi lebah
         C2_playlab_createstory: Mainkan Lab - Buat sebuah Cerita
         C2_graph_paper: Pemrograman grafis diatas kertas
@@ -633,22 +638,22 @@
         C2_paper_airplanes: Pesawat kertas
         C3_maze_intro: Apa itu Labirin?
         C3_artist_intro: Introduksi Artis
-        C3_artist_functions: Artist Functions
-        C3_bee_functions: Bee Functions
+        C3_artist_functions: Fungsi Artis
+        C3_bee_functions: Fungsi lebah
         C3_bee_conditionals: kondisi lebah
-        C3_maze_conditionals: Maze Conditionals
-        C3_artist_nested_loops: Nested Loops
-        C3_farmer_while: While Loops
-        C3_bee_nested_loops: Nested Loops
-        C3_bee_debugging: Bee Debugging
+        C3_maze_conditionals: Kondisional labirin
+        C3_artist_nested_loops: Perulangan bercabang
+        C3_farmer_while: Perulangan While
+        C3_bee_nested_loops: Perulangan bercabang
+        C3_bee_debugging: Lebah Debugging
         C3_bounce: Terpental
         C3_playlab_create_game: Mainkan Lab - Buat sebuah Permainan
         C3_computational_thinking: Berpikir secara komputasi
-        C3_dice_race: Dice Race
+        C3_dice_race: Dadu ras
         C3_internet: Internet
-        C3_crowdsourcing: Crowdsourcing
-        C3_functional_suncatchers: Functional Suncatchers
-        C3_songwriting_with_parameters: Songwriting With Parameters
+        C3_crowdsourcing: Sumber kerumunan
+        C3_functional_suncatchers: Fungsional pengkap matahari
+        C3_songwriting_with_parameters: Parameter penulis lagu
     callout:
       text:
         drag_blocks: Tarik blok "gerak" dan letakkan di bawah blok lain

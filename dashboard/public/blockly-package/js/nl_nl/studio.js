@@ -19397,9 +19397,9 @@ exports.emotion = function(d){return "humeur"};
 
 exports.finalLevel = function(d){return "Gefeliciteerd! je hebt de laatste puzzel opgelost."};
 
-exports.hello = function(d){return "hello"};
+exports.hello = function(d){return "hallo"};
 
-exports.helloWorld = function(d){return "Hello World!"};
+exports.helloWorld = function(d){return "Hallo wereld!"};
 
 exports.incrementPlayerScore = function(d){return "Scoor punt"};
 
@@ -19407,21 +19407,21 @@ exports.makeProjectileDisappear = function(d){return "Verdwijnen"};
 
 exports.makeProjectileBounce = function(d){return "stuiter"};
 
-exports.makeProjectileBlueFireball = function(d){return "make blue fireball"};
+exports.makeProjectileBlueFireball = function(d){return "maak een blauwe vuurbal"};
 
-exports.makeProjectilePurpleFireball = function(d){return "make purple fireball"};
+exports.makeProjectilePurpleFireball = function(d){return "maak een paarse vuurbal"};
 
-exports.makeProjectileRedFireball = function(d){return "make red fireball"};
+exports.makeProjectileRedFireball = function(d){return "maak een rode vuurbal"};
 
-exports.makeProjectileYellowHearts = function(d){return "make yellow hearts"};
+exports.makeProjectileYellowHearts = function(d){return "maak een geel hart"};
 
-exports.makeProjectilePurpleHearts = function(d){return "make purple hearts"};
+exports.makeProjectilePurpleHearts = function(d){return "maak een paars hart"};
 
-exports.makeProjectileRedHearts = function(d){return "make red hearts"};
+exports.makeProjectileRedHearts = function(d){return "maak een rood hart"};
 
 exports.makeProjectileTooltip = function(d){return "Laat het projectiel verdwijnen of stuiteren dat net botste."};
 
-exports.makeYourOwn = function(d){return "Maak je eigen verhaal"};
+exports.makeYourOwn = function(d){return "maak je eigen Play Lab App"};
 
 exports.moveDirectionDown = function(d){return "omlaag"};
 
@@ -19477,7 +19477,7 @@ exports.no = function(d){return "Nee"};
 
 exports.numBlocksNeeded = function(d){return "Deze puzzel kan opgelost worden met %1 blokken."};
 
-exports.ouchExclamation = function(d){return "Ouch!"};
+exports.ouchExclamation = function(d){return "Auw!"};
 
 exports.playSoundCrunch = function(d){return "krakend geluid afspelen"};
 
@@ -19541,17 +19541,17 @@ exports.positionOutBottomRight = function(d){return "naar benden rechts"};
 
 exports.positionRandom = function(d){return "naar de willekeurige positie"};
 
-exports.projectileBlueFireball = function(d){return "blue fireball"};
+exports.projectileBlueFireball = function(d){return "blauwe vuurbal"};
 
-exports.projectilePurpleFireball = function(d){return "purple fireball"};
+exports.projectilePurpleFireball = function(d){return "paarse vuurbal"};
 
-exports.projectileRedFireball = function(d){return "red fireball"};
+exports.projectileRedFireball = function(d){return "rode vuurbal"};
 
-exports.projectileYellowHearts = function(d){return "yellow hearts"};
+exports.projectileYellowHearts = function(d){return "geel hart"};
 
-exports.projectilePurpleHearts = function(d){return "purple hearts"};
+exports.projectilePurpleHearts = function(d){return "paars hart"};
 
-exports.projectileRedHearts = function(d){return "red hearts"};
+exports.projectileRedHearts = function(d){return "rood hart"};
 
 exports.projectileRandom = function(d){return "willekeurig"};
 
@@ -19587,19 +19587,19 @@ exports.setBackgroundNight = function(d){return "stel de nachtachtergrond in"};
 
 exports.setBackgroundUnderwater = function(d){return "stel de onderwaterachtergrond in"};
 
-exports.setBackgroundCity = function(d){return "set city background"};
+exports.setBackgroundCity = function(d){return "gebruik stadsachtergrond"};
 
-exports.setBackgroundDesert = function(d){return "set desert background"};
+exports.setBackgroundDesert = function(d){return "gebruik woestijnachtergrond"};
 
-exports.setBackgroundRainbow = function(d){return "set rainbow background"};
+exports.setBackgroundRainbow = function(d){return "gebruik regenboogachtergrond"};
 
-exports.setBackgroundSoccer = function(d){return "set soccer background"};
+exports.setBackgroundSoccer = function(d){return "gebruik voetbalachtergrond"};
 
-exports.setBackgroundSpace = function(d){return "set space background"};
+exports.setBackgroundSpace = function(d){return "gebruik ruimteachtergrond"};
 
-exports.setBackgroundTennis = function(d){return "set tennis background"};
+exports.setBackgroundTennis = function(d){return "gebruik tennisachtergrond"};
 
-exports.setBackgroundWinter = function(d){return "set winter background"};
+exports.setBackgroundWinter = function(d){return "gebruik winterachtergrond"};
 
 exports.setBackgroundTooltip = function(d){return "Hiermee stelt u de achtergrondafbeelding in"};
 
@@ -19631,9 +19631,9 @@ exports.setSpriteBird = function(d){return "naar een vogel plaatje"};
 
 exports.setSpriteCat = function(d){return "naar een kat"};
 
-exports.setSpriteCaveBoy = function(d){return "to a cave boy image"};
+exports.setSpriteCaveBoy = function(d){return "in een grot-jongen plaatje"};
 
-exports.setSpriteCaveGirl = function(d){return "to a cave girl image"};
+exports.setSpriteCaveGirl = function(d){return "in een grot-meisje plaatje"};
 
 exports.setSpriteDinosaur = function(d){return "naar een dinosaurus"};
 
@@ -19669,15 +19669,15 @@ exports.setSpriteShowK1 = function(d){return "toon"};
 
 exports.setSpriteSpacebot = function(d){return "naar een spacebot plaatje"};
 
-exports.setSpriteSoccerGirl = function(d){return "to a soccer girl image"};
+exports.setSpriteSoccerGirl = function(d){return "in een voetbal-meisje plaatje"};
 
-exports.setSpriteSoccerBoy = function(d){return "to a soccer boy image"};
+exports.setSpriteSoccerBoy = function(d){return "in een voetbal-jongen plaatje"};
 
 exports.setSpriteSquirrel = function(d){return "naar een eekhoorn plaatje"};
 
-exports.setSpriteTennisGirl = function(d){return "to a tennis girl image"};
+exports.setSpriteTennisGirl = function(d){return "in een tennis-meisje plaatje"};
 
-exports.setSpriteTennisBoy = function(d){return "to a tennis boy image"};
+exports.setSpriteTennisBoy = function(d){return "in een tennis-meisje plaatje"};
 
 exports.setSpriteUnicorn = function(d){return "naar een eenhoorn plaatje"};
 
@@ -19691,19 +19691,19 @@ exports.setSpriteK1Tooltip = function(d){return "Toont of verbergt de speler."};
 
 exports.setSpriteTooltip = function(d){return "Hiermee wordt de acteur afbeelding ingesteld"};
 
-exports.setSpriteSizeRandom = function(d){return "to a random size"};
+exports.setSpriteSizeRandom = function(d){return "in een willekeurige grootte"};
 
-exports.setSpriteSizeVerySmall = function(d){return "to a very small size"};
+exports.setSpriteSizeVerySmall = function(d){return "in een erg kleine grootte"};
 
-exports.setSpriteSizeSmall = function(d){return "to a small size"};
+exports.setSpriteSizeSmall = function(d){return "in een kleine grootte"};
 
-exports.setSpriteSizeNormal = function(d){return "to a normal size"};
+exports.setSpriteSizeNormal = function(d){return "in een normale grootte"};
 
-exports.setSpriteSizeLarge = function(d){return "to a large size"};
+exports.setSpriteSizeLarge = function(d){return "in een grote grootte"};
 
-exports.setSpriteSizeVeryLarge = function(d){return "to a very large size"};
+exports.setSpriteSizeVeryLarge = function(d){return "in een erg grote grootte"};
 
-exports.setSpriteSizeTooltip = function(d){return "Sets the size of an actor"};
+exports.setSpriteSizeTooltip = function(d){return "Verander het formaat van een acteur"};
 
 exports.setSpriteSpeedRandom = function(d){return "op willekeurige snelheid"};
 
@@ -19779,11 +19779,11 @@ exports.throwSpriteN = function(d){return "speler "+v(d,"spriteIndex")+" gooit"}
 
 exports.throwTooltip = function(d){return "Gooit een projectiel vanaf de gekozen speler."};
 
-exports.vanish = function(d){return "vanish"};
+exports.vanish = function(d){return "verdwijnen"};
 
-exports.vanishActorN = function(d){return "vanish actor "+v(d,"spriteIndex")};
+exports.vanishActorN = function(d){return "verdwenen acteur "+v(d,"spriteIndex")};
 
-exports.vanishTooltip = function(d){return "Vanishes the actor."};
+exports.vanishTooltip = function(d){return "Laat de acteur verdwijnen."};
 
 exports.waitFor = function(d){return "wacht op"};
 
@@ -19845,27 +19845,27 @@ exports.whenSpriteCollidedTooltip = function(d){return "Voer de acties hieronder
 
 exports.whenSpriteCollidedWith = function(d){return "raakt"};
 
-exports.whenSpriteCollidedWithAnyActor = function(d){return "touches any actor"};
+exports.whenSpriteCollidedWithAnyActor = function(d){return "raakt een acteur"};
 
-exports.whenSpriteCollidedWithAnyEdge = function(d){return "touches any edge"};
+exports.whenSpriteCollidedWithAnyEdge = function(d){return "raakt een rand"};
 
-exports.whenSpriteCollidedWithAnyProjectile = function(d){return "touches any projectile"};
+exports.whenSpriteCollidedWithAnyProjectile = function(d){return "raakt een voorwerp"};
 
-exports.whenSpriteCollidedWithAnything = function(d){return "touches anything"};
+exports.whenSpriteCollidedWithAnything = function(d){return "raakt iets"};
 
 exports.whenSpriteCollidedWithN = function(d){return "raakt speler "+v(d,"spriteIndex")};
 
-exports.whenSpriteCollidedWithBlueFireball = function(d){return "touches blue fireball"};
+exports.whenSpriteCollidedWithBlueFireball = function(d){return "raakt een blauwe vuurbal"};
 
-exports.whenSpriteCollidedWithPurpleFireball = function(d){return "touches purple fireball"};
+exports.whenSpriteCollidedWithPurpleFireball = function(d){return "raakt paarse vuurbal"};
 
-exports.whenSpriteCollidedWithRedFireball = function(d){return "touches red fireball"};
+exports.whenSpriteCollidedWithRedFireball = function(d){return "raakt een rode vuurbal"};
 
-exports.whenSpriteCollidedWithYellowHearts = function(d){return "touches yellow hearts"};
+exports.whenSpriteCollidedWithYellowHearts = function(d){return "raakt een  geel hart"};
 
-exports.whenSpriteCollidedWithPurpleHearts = function(d){return "touches purple hearts"};
+exports.whenSpriteCollidedWithPurpleHearts = function(d){return "raakt een paars hart"};
 
-exports.whenSpriteCollidedWithRedHearts = function(d){return "touches red hearts"};
+exports.whenSpriteCollidedWithRedHearts = function(d){return "raakt een rood hart"};
 
 exports.whenSpriteCollidedWithBottomEdge = function(d){return "raakt onderrand"};
 

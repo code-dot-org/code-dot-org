@@ -8074,13 +8074,13 @@ exports.catVariables = function(d){return "Variabelen"};
 
 exports.continue = function(d){return "Verder"};
 
-exports.createHtmlBlock = function(d){return "create html block"};
+exports.createHtmlBlock = function(d){return "maak HTML blok"};
 
-exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
+exports.createHtmlBlockTooltip = function(d){return "maak een blok HTML in de app."};
 
 exports.finalLevel = function(d){return "Gefeliciteerd! je hebt de laatste puzzel opgelost."};
 
-exports.makeYourOwn = function(d){return "Make Your Own App"};
+exports.makeYourOwn = function(d){return "Maak je eigen App"};
 
 exports.nextLevel = function(d){return "Gefeliciteerd! Je hebt de puzzel voltooid."};
 
@@ -8088,23 +8088,23 @@ exports.no = function(d){return "Nee"};
 
 exports.numBlocksNeeded = function(d){return "Deze puzzel kan worden opgelost met %1 blokken."};
 
-exports.pause = function(d){return "Pause"};
+exports.pause = function(d){return "Pauze"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
+exports.reinfFeedbackMsg = function(d){return "Je kunt op de \"Opnieuw\" knop drukken om terug te gaan naar het uitvoeren van je app."};
 
 exports.repeatForever = function(d){return "blijven herhalen"};
 
 exports.repeatDo = function(d){return "voer uit"};
 
-exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
+exports.repeatForeverTooltip = function(d){return "Herhaal de acties in dit blok wanneer de app wordt uitgevoerd."};
 
-exports.shareWebappTwitter = function(d){return "Check out the app I made. I wrote it myself with @codeorg"};
+exports.shareWebappTwitter = function(d){return "Bekijk de app die ik heb gemaakt. Ik heb het zelf geschreven met @codeorg"};
 
-exports.shareGame = function(d){return "Share your app:"};
+exports.shareGame = function(d){return "Deel je app:"};
 
-exports.turnBlack = function(d){return "turn black"};
+exports.turnBlack = function(d){return "verdonker blok"};
 
-exports.turnBlackTooltip = function(d){return "Turns the screen black."};
+exports.turnBlackTooltip = function(d){return "Maakt het scherm zwart."};
 
 exports.yes = function(d){return "Ja"};
 

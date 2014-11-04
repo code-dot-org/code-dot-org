@@ -11230,7 +11230,7 @@ exports.saveToGallery = function(d){return "In deiner Galerie abspeichern"};
 
 exports.savedToGallery = function(d){return "In deiner Gallerie gespeichert!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Leider können wir dieses Programm nicht teilen."};
 
 exports.typeFuncs = function(d){return "Verfügbare Funktionen:%1"};
 
@@ -11379,7 +11379,7 @@ exports.reinfFeedbackMsg = function(d){return "Sieht das so aus, wie du es möch
 
 exports.setColour = function(d){return "Farbe festlegen"};
 
-exports.setPattern = function(d){return "set pattern"};
+exports.setPattern = function(d){return "Muster einstellen"};
 
 exports.setWidth = function(d){return "Breite festlegen"};
 

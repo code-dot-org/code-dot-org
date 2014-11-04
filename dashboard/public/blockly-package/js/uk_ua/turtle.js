@@ -11405,7 +11405,7 @@ exports.reinfFeedbackMsg = function(d){return "Це виглядає так, я�
 
 exports.setColour = function(d){return "встановити колір"};
 
-exports.setPattern = function(d){return "set pattern"};
+exports.setPattern = function(d){return "встановити шаблон"};
 
 exports.setWidth = function(d){return "встановити ширину"};
 

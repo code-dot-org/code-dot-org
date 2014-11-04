@@ -8088,7 +8088,7 @@ exports.no = function(d){return "Nei"};
 
 exports.numBlocksNeeded = function(d){return "Þessa þraut er hægt að leysa með %1 kubbum."};
 
-exports.pause = function(d){return "Pause"};
+exports.pause = function(d){return "Hlé"};
 
 exports.reinfFeedbackMsg = function(d){return "Þú getur smellt á \"Reyna aftur\" hnappinn til að fara aftur í að keyra appið þitt."};
 

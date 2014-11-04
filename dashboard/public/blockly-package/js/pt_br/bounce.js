@@ -11811,7 +11811,7 @@ exports.moveDown = function(d){return "mova para baixo"};
 
 exports.moveDownTooltip = function(d){return "Move a raquete para baixo."};
 
-exports.moveForward = function(d){return "avançar"};
+exports.moveForward = function(d){return "avance"};
 
 exports.moveForwardTooltip = function(d){return "Mova-me um espaço para a frente."};
 

@@ -1,5 +1,6 @@
-"tk-TM":
+"th-TH":
   hello: "สวัสดีชาวโลก"
+  select_language: Please select your language
   computer_science: "วิทยาการคอมพิวเตอร์"
   computer_science_edweek: "สัปดาห์การศึกษาวิทยาศาสตร์คอมพิวเตอร์"
   csedweek_dates: 9-15 ธันวาคม 2013
@@ -324,7 +325,7 @@
   dashboard_sections_password_account_creation: Student-created text password
   dashboard_sections_login_type_explanation: This table helps explain which of these
     login types, <b>picture, word, or email</b>, you'll want to choose for a section.
-  codeorg_name: Write your first computer program
+  codeorg_name: "เขียนโปรแกรมแรกของคุณ"
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: An introduction to JavaScript
   khanes_name: An introduction to JavaScript
@@ -359,9 +360,9 @@
   khanes_gradelevel: Middle school +
   tynker_gradelevel: Ages 5-13
   scratch_gradelevel: Ages 8+
-  thinkersmith_gradelevel: All ages
-  lightbot_gradelevel: All ages
-  lightbotintl_gradelevel: All ages
+  thinkersmith_gradelevel: "ทุกเพศทุกวัย"
+  lightbot_gradelevel: "ทุกเพศทุกวัย"
+  lightbotintl_gradelevel: "ทุกเพศทุกวัย"
   codecademy_gradelevel: High school
   kodable_gradelevel: Elementary
   hopscotch_gradelevel: Middle school +
@@ -372,7 +373,7 @@
   makegameswithus_gradelevel: High school
   appinventor_gradelevel: Middle school +
   touchdevelop_gradelevel: High school
-  blockly_gradelevel: All ages
+  blockly_gradelevel: "ทุกเพศทุกวัย"
   thinkersmith2_gradelevel: Ages 8+
   codehs_gradelevel: High school
   codeavengers_gradelevel: Middle school +
@@ -675,7 +676,7 @@
   khan_beyond_gradelevel: Middle school +
   tynker_beyond_gradelevel: Ages 5-13
   scratch_beyond_gradelevel: Ages 8+
-  lightbot_beyond_gradelevel: All ages
+  lightbot_beyond_gradelevel: "ทุกเพศทุกวัย"
   codecademy_beyond_gradelevel: High school
   kodable_beyond_gradelevel: Elementary
   hopscotch_beyond_gradelevel: Middle school +

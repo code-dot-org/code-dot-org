@@ -13455,7 +13455,7 @@ exports.emptyBlocksErrorMsg = function(d){return "\"Gentag\" eller \"Hvis\" blok
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Funktionen blok skal have andre blokke inde i det for at virke."};
 
-exports.extraTopBlocks = function(d){return "Du har ekstra blokke, der ikke er knyttet til en hændelsesblok."};
+exports.extraTopBlocks = function(d){return "Du har ikke sammenhængende blokke. Ville du fastgøre disse til \"når køre\" blokken?"};
 
 exports.finalStage = function(d){return "Tillykke! Du har fuldført det sidste trin."};
 
@@ -13539,7 +13539,7 @@ exports.saveToGallery = function(d){return "Gem til dit galleri"};
 
 exports.savedToGallery = function(d){return "Gem til dit galleri!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Beklager, ikke kan vi dele dette program."};
 
 exports.typeFuncs = function(d){return "Tilgængelige funktioner: %1"};
 
@@ -13640,9 +13640,9 @@ exports.ifFlowerTooltip = function(d){return "Hvis der er en blomst/bistade i de
 
 exports.ifelseFlowerTooltip = function(d){return "Hvis der er en blomst/bistade i den angivne retning, så udfør den første blok af handlinger. Ellers udfør den anden blok af handlinger."};
 
-exports.insufficientHoney = function(d){return "You're using all the right blocks, but you need to make the right amount of honey."};
+exports.insufficientHoney = function(d){return "Du bruger alle de rigtige blokke, men du skal lave den rigtige mængde af honning."};
 
-exports.insufficientNectar = function(d){return "You're using all the right blocks, but you need to collect the right amount of nectar."};
+exports.insufficientNectar = function(d){return "Du bruger alle de rigtige blokke, men du har brug at indsamle den rigtige mængde af nektar."};
 
 exports.make = function(d){return "lav"};
 
