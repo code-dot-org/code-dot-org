@@ -102,18 +102,7 @@ class ActivitiesController < ApplicationController
   end
 
   def track_script_progress
-    retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-      @user_script = UserScript.where(user: current_user, script: @script_level.script).first_or_create
-      time_now = Time.now
-      @user_script.started_at ||= time_now
-      @user_script.last_progress_at = time_now
-
-      if @user_script.check_completed?
-        @user_script.completed_at ||= time_now
-      end
-    end
-
-    @user_script.save!
+    @user_script = current_user.track_script_progress(@script_level.script)
   end
 
   def track_progress_for_user
