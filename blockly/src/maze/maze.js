@@ -1640,7 +1640,7 @@ Maze.scheduleScratDance = function()
 
   scheduleSheetedMovement({x: start.x, y: start.y}, {x: 0, y: 0 },
     skin.celebratePegmanRow, timePerFrame, 'celebrate', Direction.NORTH, true);
-}
+};
 
 
 /**
