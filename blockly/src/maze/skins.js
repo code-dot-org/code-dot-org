@@ -119,6 +119,10 @@ var CONFIGS = {
     acornPegmanCol: 1,
     acornPegmanRow: 20,
 
+    celebrateAnimation: 'jump_acorn_sheet.png',
+    celebratePegmanCol: 1,
+    celebratePegmanRow: 9,
+
     movePegmanAnimation: 'move_avatar.png',
     movePegmanAnimationSpeedScale: 1.5,
     // This is required when move pegman animation is set
