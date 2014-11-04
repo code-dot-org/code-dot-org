@@ -335,7 +335,7 @@ Blockly.Block.prototype.dispose = function(healStack, animate) {
     this.svg_.disposeUiEffect();
   }
 
-  //This block is now at the top of the blockSpace.
+  // This block is now at the top of the blockSpace.
   // Remove this block from the blockSpace's list of top-most blocks.
   this.blockSpace.removeTopBlock(this);
   this.blockSpace = null;
