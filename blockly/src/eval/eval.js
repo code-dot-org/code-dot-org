@@ -119,7 +119,7 @@ Eval.init = function(config) {
  */
 BlocklyApps.runButtonClick = function() {
   BlocklyApps.toggleRunReset('reset');
-  Blockly.mainWorkspace.traceOn(true);
+  Blockly.mainBlockSpace.traceOn(true);
   BlocklyApps.attempts++;
   Eval.execute();
 };
@@ -169,7 +169,7 @@ function evalCode (code) {
 function generateEvalObjectFromBlockXml(blockXml) {
   var xml = blockXml || '';
 
-  if (Blockly.mainWorkspace.getTopBlocks().length !== 0) {
+  if (Blockly.mainBlockSpace.getTopBlocks().length !== 0) {
     throw new Error("generateExpressionFromBlockXml shouldn't be called if " +
       "we already have blocks in the workspace");
   }
@@ -180,7 +180,7 @@ function generateEvalObjectFromBlockXml(blockXml) {
   evalCode(code);
 
   // Remove the blocks
-  Blockly.mainWorkspace.getTopBlocks().forEach(function (b) { b.dispose(); });
+  Blockly.mainBlockSpace.getTopBlocks().forEach(function (b) { b.dispose(); });
   var object = Eval.lastEvalObject;
   Eval.lastEvalObject = null;
 
@@ -207,7 +207,7 @@ Eval.execute = function() {
   Eval.result = evaluateAnswer();
   Eval.testResults = Eval.result ? TestResults.ALL_PASS : TestResults.LEVEL_INCOMPLETE_FAIL;
 
-  var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
+  var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   var textBlocks = Blockly.Xml.domToText(xml);
 
   var reportData = {
