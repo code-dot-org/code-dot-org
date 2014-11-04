@@ -441,7 +441,13 @@ function drawMapTiles(svg) {
             if (islandX == x - 1 && islandY == y - 1)
               tile = '1,2';
 
-            if (islandX === undefined && islandY === undefined && Math.random() < 1/20 && y != Maze.ROWS-1 && x != Maze.COLS-1)
+            if (islandX === undefined &&
+                islandY === undefined &&
+                Math.random() < 1/20 &&
+                y != Maze.ROWS-1 && x != Maze.COLS-1 &&
+                normalize(x + 1, y + 0) == '0' &&
+                normalize(x + 0, y + 1) == '0' &&
+                normalize(x + 1, y + 1) == '0')
             {
               islandX = x;
               islandY = y;
