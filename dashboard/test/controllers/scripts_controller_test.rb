@@ -65,23 +65,6 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should not see edit level links if not admin" do
-    sign_in @not_admin
-    get :show, id: Script::FLAPPY_ID
-    assert_response :success
-
-    assert_select 'a', text: 'Edit', count: 0
-  end
-
-  test "should see edit level links for custom levels if admin" do
-    sign_in @admin
-    get :show, id: Script.find_by_name('course1').id
-    assert_response :success
-
-    assert_select 'a', text: 'Edit', minimum: 1
-  end
-
-
   test "should use script name as param where script name is words but looks like a number" do
     script = create(:script, name: '15-16')
     get :show, id: "15-16"
