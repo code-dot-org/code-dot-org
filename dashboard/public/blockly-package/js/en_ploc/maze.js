@@ -10042,7 +10042,7 @@ function drawMapTiles(svg) {
 
   var islandX;
   var islandY;
-  
+
   // Compute and draw the tile for each square.
   var tileId = 0;
   var tile, origTile;
@@ -10058,7 +10058,7 @@ function drawMapTiles(svg) {
       var adjacentToPath = false;
 
       if (mazeUtils.isScratSkin(skin.id)) {
-        var diagonalTiles = 
+        var diagonalTiles =
           normalize(x - 1, y - 1) +  // NW.
           normalize(x + 1, y - 1) +  // NE.
           normalize(x - 1, y + 1) +  // SW.
@@ -10695,11 +10695,17 @@ Maze.execute = function(stepMode) {
   // to help the user see the mistake.
   BlocklyApps.playAudio('start');
   try {
-    codegen.evalWith(code, {
-      BlocklyApps: BlocklyApps,
-      Maze: api,
-      executionInfo: Maze.executionInfo
-    });
+    // don't bother running code if we're just editting required blocks. all
+    // we care about is the contents of report.
+    var runCode = !level.edit_blocks;
+
+    if (runCode) {
+      codegen.evalWith(code, {
+        BlocklyApps: BlocklyApps,
+        Maze: api,
+        executionInfo: Maze.executionInfo
+      });
+    }
 
     Maze.onExecutionFinish();
 
