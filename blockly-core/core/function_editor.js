@@ -38,8 +38,16 @@ Blockly.FunctionEditor = function() {
    */
   this.functionDefinitionBlock = null;
 
-  this.closeButton_ = null;
+  /**
+   * Enclosing container div for the function editor, shown and hidden as
+   * editor is toggled.
+   * Note: visibility is used as indicator of modal open state.
+   * @type {?Element}
+   * @private
+   */
   this.container_ = null;
+
+  this.closeButton_ = null;
   this.contractDiv_ = null;
   this.flyout_ = null;
   this.frameBase_ = null;
@@ -61,7 +69,7 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
   targetFunctionDefinitionBlock.dispose(false, false, true);
   this.functionDefinitionBlock = Blockly.Xml.domToBlock_(Blockly.modalBlockSpace, dom);
   this.functionDefinitionBlock.moveTo(FRAME_MARGIN_SIDE, FRAME_MARGIN_TOP);
-  this.functionDefinitionBlock.movable_ = false;
+  this.functionDefinitionBlock.setMovable(false);
   this.functionDefinitionBlock.setUserVisible(true);
   this.populateParamToolbox_();
 
@@ -120,11 +128,13 @@ Blockly.FunctionEditor.prototype.renameParameter = function(oldName, newName) {
   });
 };
 
-Blockly.FunctionEditor.prototype.removeParameter = function(oldName) {
-  this.paramToolboxBlocks_.forEach(function (block, n, arr) {
-    if (block.firstElementChild && block.firstElementChild.innerHTML === oldName) {
-      arr.splice(n, 1);
-    }
+/**
+ * Remove procedure parameter from the toolbox and everywhere it is used
+ * @param {String} nameToRemove
+ */
+Blockly.FunctionEditor.prototype.removeParameter = function(nameToRemove) {
+  goog.array.removeIf(this.paramToolboxBlocks_, function (block) {
+    return block.firstElementChild && block.firstElementChild.innerHTML === nameToRemove;
   });
   this.refreshParamsEverywhere();
 };
@@ -159,13 +169,16 @@ Blockly.FunctionEditor.prototype.show = function() {
  * Is the function editor currently open?
  */
 Blockly.FunctionEditor.prototype.isOpen = function() {
-  return this.created_ && goog.style.isElementShown(this.modalBackground_);
+  return this.isCreated() && goog.style.isElementShown(this.container_);
+};
+
+Blockly.FunctionEditor.prototype.isCreated = function() {
+  return !!this.container_;
 };
 
 Blockly.FunctionEditor.prototype.ensureCreated_ = function() {
-  if (!this.created_) {
+  if (!this.isCreated()) {
     this.create_();
-    this.created_ = true;
   }
 };
 
@@ -195,6 +208,7 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   this.container_.setAttribute('id', 'modalContainer');
   goog.dom.getElement('blockly').appendChild(this.container_);
   Blockly.modalBlockSpaceEditor = new Blockly.BlockSpaceEditor(this.container_, function() {
+    // Define a special getMetrics function for our block space editor
     var metrics = Blockly.mainBlockSpace.getMetrics();
     var contractDivHeight = Blockly.functionEditor.contractDiv_ ? Blockly.functionEditor.contractDiv_.getBoundingClientRect().height : 0;
     var topOffset = FRAME_MARGIN_TOP + Blockly.Bubble.BORDER_WIDTH + FRAME_HEADER_HEIGHT;
@@ -203,7 +217,7 @@ Blockly.FunctionEditor.prototype.create_ = function() {
     metrics.viewWidth -= (FRAME_MARGIN_SIDE + Blockly.Bubble.BORDER_WIDTH) * 2;
     metrics.viewHeight -= FRAME_MARGIN_TOP + Blockly.Bubble.BORDER_WIDTH + topOffset;
     if (Blockly.functionEditor.flyout_) {
-      metrics.absoluteTop += Blockly.functionEditor.flyout_.height_;
+      metrics.absoluteTop += Blockly.functionEditor.flyout_.getHeight();
     }
     return metrics;
   });
