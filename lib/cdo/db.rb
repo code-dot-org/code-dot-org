@@ -6,14 +6,18 @@ def sequel_connect(writer, reader)
 
   reader_uri = URI(reader)
   if reader_uri.host != URI(writer).host
-    Sequel.connect writer, servers:{read_only:{host:reader_uri.host}}
+    db = Sequel.connect writer, servers:{read_only:{host:reader_uri.host}}
   else
-    Sequel.connect writer
+    db = Sequel.connect writer
   end
+
+  db.extension :server_block
+
+  #db.loggers << $log if rack_env?(:development)
+
+  db
 end
 
 PEGASUS_DB = sequel_connect CDO.pegasus_db_writer, CDO.pegasus_db_reader
-#PEGASUS_DB.loggers << $log if rack_env?(:development)
-
 DASHBOARD_DB = sequel_connect CDO.dashboard_db_writer, CDO.dashboard_db_reader
-#DASHBOARD_DB.loggers << $log if rack_env?(:development)
+
