@@ -109,11 +109,11 @@ For the time being—email [brian@code.org](mailto:brian@code.org) to get an ele
 
 If you want to make sure you get our attention, include an **@all** (everyone) or **@here** (everyone currently in the room) in your message.
 
-#### Pivotal Tracker
+#### Contribution ideas
 
-We pull our tasks from a Pivotal Tracker and mark certain tickets as volunteer-friendly.
+We maintain a [Pivotal Tracker board](https://www.pivotaltracker.com/n/projects/1192642) with volunteer-friendly bug tasks, project ideas and small infrastructure/code quality opportunities here: https://www.pivotaltracker.com/n/projects/1192642
 
-For the time being—for access to Pivotal Tracker, email [brian@code.org](mailto:brian@code.org).
+If you'd like to grab a task, have ideas for projects or want to discuss an item, email [brian@code.org](mailto:brian@code.org) for a board invite.
 
 ## Submitting Contributions
 
@@ -125,11 +125,11 @@ We support recent versions of Firefox, Chrome, IE9, iOS Safari and the Android b
 
 #### Unit tests
 
-For dashboard changes, be sure to test your changes using `rake test`. For [blockly](https://github.com/code-dot-org/blockly) changes, see our [grunt testing instructions](https://github.com/code-dot-org/blockly#running-tests).
+For dashboard changes, be sure to test your changes using `rake test`. For [blockly](./blockly) changes, see our [grunt testing instructions](./blockly#running-tests).
 
 #### UI tests
 
-Our continuous integration server regularly runs a suite of [UI tests](https://github.com/code-dot-org/dashboard/tree/finished/test/ui) using Selenium / Cucumber which run against many browsers via [BrowserStack Automate](https://www.browserstack.com/automate), and can also be run locally using `chromedriver`. See the [README](https://github.com/code-dot-org/dashboard/tree/finished/test/ui) in that folder for instructions.
+Our continuous integration server regularly runs a suite of [UI tests](./dashboard/test/ui) using Selenium / Cucumber which run against many browsers via [BrowserStack Automate](https://www.browserstack.com/automate), and can also be run locally using `chromedriver`. See the [README](./dashboard/test/ui) in that folder for instructions.
 
 If your changes might affect level paths, blockly UI, or critical path site logic, be sure to test your changes with a local UI test.
 

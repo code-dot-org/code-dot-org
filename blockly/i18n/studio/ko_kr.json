@@ -118,6 +118,8 @@
   "setBackgroundTennis": "테니스 배경 설정",
   "setBackgroundWinter": "겨울 배경 설정",
   "setBackgroundTooltip": "배경 이미지 설정",
+  "setEnemySpeed": "set enemy speed",
+  "setPlayerSpeed": "set player speed",
   "setScoreText": "점수 등록",
   "setScoreTextTooltip": "점수 판에 문장이 출력되도록 합니다.",
   "setSpriteEmotionAngry": "화난 표정으로",

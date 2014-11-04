@@ -2,15 +2,15 @@
   .span9#heading
     %h3.whitetext= data_t_suffix('script.name', current_user.primary_script.name, "title")
   .span3#heading{style: 'text-align: right;'}
-    %a.level_link{href: playlab_freeplay_path}
+    %a.level_link.not_tried{href: playlab_freeplay_path}
       %span.puzzle-named
         %i.fa.fa-rocket
         = t('nav.header.free_play.playlab')
-    %a.level_link{href: artist_freeplay_path}
+    %a.level_link.not_tried{href: artist_freeplay_path}
       %span.puzzle-named
         %i.fa.fa-pencil
         = t('nav.header.free_play.artist')
 
 .row#stats
-  .span12#rightside
+  .span12#rightside{style: 'margin-left: 10px;'}
     = render partial: 'shared/user_stats', locals: { user: current_user, script: current_user.primary_script }

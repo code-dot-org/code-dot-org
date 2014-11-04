@@ -1,0 +1,123 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2014-10-16T22:48:56.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "artist",
+    "instructions": "Free play: Experiment with using feeding different values into that algorithm you've built. What happens to the size of the shape as you increase the number of sides? Could you modify the algorithm so that the overall size of the shape stays the same, no matter how many sides it has?",
+    "x": "150",
+    "y": "350",
+    "start_direction": "90",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "slider_speed": ".5",
+    "disable_param_editing": "true",
+    "free_play": "true",
+    "disable_variable_editing": "false"
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="variables_set" inline="false" editable="false">
+              <title name="VAR">sides</title>
+              <value name="VALUE">
+                <block type="math_number">
+                  <title name="NUM">4</title>
+                </block>
+              </value>
+              <next>
+                <block type="controls_repeat_ext" inline="true">
+                  <value name="TIMES">
+                    <block type="variables_get" editable="false">
+                      <title name="VAR">sides</title>
+                    </block>
+                  </value>
+                  <statement name="DO">
+                    <block type="draw_move" inline="true">
+                      <title name="DIR">moveForward</title>
+                      <value name="VALUE">
+                        <block type="math_number">
+                          <title name="NUM">100</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="draw_turn" inline="true">
+                          <title name="DIR">turnLeft</title>
+                          <value name="VALUE">
+                            <block type="math_arithmetic" inline="true">
+                              <title name="OP">DIVIDE</title>
+                              <value name="A">
+                                <block type="math_number">
+                                  <title name="NUM">360</title>
+                                </block>
+                              </value>
+                              <value name="B">
+                                <block type="variables_get" editable="false">
+                                  <title name="VAR">sides</title>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+            <block type="math_number">
+              <title name="NUM">100</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_turn" inline="true">
+          <title name="DIR">turnRight</title>
+          <value name="VALUE">
+            <block type="math_number">
+              <title name="NUM">90</title>
+            </block>
+          </value>
+        </block>
+        <block type="controls_repeat_ext" inline="true"/>
+        <block type="math_number">
+          <title name="NUM">???</title>
+        </block>
+        <block type="math_arithmetic" inline="true">
+          <title name="OP">ADD</title>
+        </block>
+        <block type="variables_get" editable="false">
+          <title name="VAR">sides</title>
+        </block>
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_picker">
+              <title name="COLOUR">#ff0000</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_random"/>
+          </value>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml/>
+    </required_blocks>
+  </blocks>
+</Artist>

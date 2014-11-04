@@ -81,6 +81,9 @@ namespace :build do
 
       HipChat.log 'Starting <b>dashboard</b>.'
       RakeUtils.start_service CDO.dashboard_unicorn_name unless rack_env?(:development)
+
+      # report deployment to honeybadger
+      RakeUtils.system 'rake', "honeybadger:deploy TO=#{rack_env} REVISION=`git rev-parse HEAD`"
     end
   end
 
@@ -203,7 +206,7 @@ namespace :install do
       end
       RakeUtils.sudo_ln_s dashboard_dir('config/init.d'), File.join('/etc/init.d', CDO.dashboard_unicorn_name)
       RakeUtils.sudo 'update-rc.d', CDO.dashboard_unicorn_name, 'defaults'
-      RakeUtils.sudo 'cp', dashboard_dir('config/logrotate'), File.join('/etc/logrotate.d', CDO.dashboard_unicorn_name)
+      RakeUtils.sudo_ln_s dashboard_dir('config/logrotate'), File.join('/etc/logrotate.d', CDO.dashboard_unicorn_name)
       RakeUtils.sudo 'service', CDO.dashboard_unicorn_name, 'start'
     end
   end

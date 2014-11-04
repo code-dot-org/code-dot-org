@@ -71,58 +71,6 @@ var drawDiv = function () {
   visualizationColumn.style.width = divWidth + 'px';
 };
 
-// session is an instance of Ace editSession
-// Usage
-// var lengthArray = aceCalculateCumulativeLength(editor.getSession());
-// Need to call this only if the document is updated after the last call.
-function aceCalculateCumulativeLength(session) {
-  var cumulativeLength = [];
-  var cnt = session.getLength();
-  var cuml = 0, nlLength = session.getDocument().getNewLineCharacter().length;
-  cumulativeLength.push(cuml);
-  var text = session.getLines(0, cnt);
-  for (var i = 0; i < cnt; i++) {
-    cuml += text[i].length + nlLength;
-    cumulativeLength.push(cuml);
-  }
-  return cumulativeLength;
-}
-
-// Fast binary search implementation
-// Pass the cumulative length array here.
-// Usage
-// var row = aceFindRow(lengthArray, 0, lengthArray.length, 2512);
-// tries to find 2512th character lies in which row.
-function aceFindRow(cumulativeLength, rows, rowe, pos) {
-  if (rows > rowe) {
-    return null;
-  }
-  if (rows + 1 === rowe) {
-    return rows;
-  }
-
-  var mid = Math.floor((rows + rowe) / 2);
-
-  if (pos < cumulativeLength[mid]) {
-    return aceFindRow(cumulativeLength, rows, mid, pos);
-  } else if(pos > cumulativeLength[mid]) {
-    return aceFindRow(cumulativeLength, mid, rowe, pos);
-  }
-  return mid;
-}
-
-function createSelection(start, end) {
-  var selection = BlocklyApps.editor.aceEditor.getSelection();
-  var range = selection.getRange();
-
-  range.start.row = aceFindRow(Webapp.cumulativeLength, 0, Webapp.cumulativeLength.length, start);
-  range.start.col = start - Webapp.cumulativeLength[range.start.row];
-  range.end.row = aceFindRow(Webapp.cumulativeLength, 0, Webapp.cumulativeLength.length, end);
-  range.end.col = end - Webapp.cumulativeLength[range.end.row];
-
-  selection.setSelectionRange(range);
-}
-
 function queueOnTick() {
   var stepSpeed = Webapp.scale.stepSpeed;
   if (Webapp.speedSlider) {
@@ -153,31 +101,18 @@ Webapp.onTick = function() {
     for (var stepsThisTick = 0;
          stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK && !inUserCode;
          stepsThisTick++) {
-      if (Webapp.interpreter.stateStack[0]) {
-        var node = Webapp.interpreter.stateStack[0].node;
-        // Adjust start/end by Webapp.userCodeStartOffset since the code running
-        // has been expanded vs. what the user sees in the editor window:
-        var start = node.start - Webapp.userCodeStartOffset;
-        var end = node.end - Webapp.userCodeStartOffset;
-
-        inUserCode = (start > 0) && (start < Webapp.userCodeLength);
-
-        // If we are showing Javascript code in the ace editor, highlight
-        // the code being executed in each step:
-        if (!BlocklyApps.editor.currentlyUsingBlocks) {
-          // Only show selection if the node being executed is inside the user's
-          // code (not inside code we inserted before or after their code that is
-          // not visible in the editor):
-          if (inUserCode) {
-            createSelection(start, end);
-          } else {
-            BlocklyApps.editor.aceEditor.getSelection().clearSelection();
-          }
-        }
-      } else {
-        inUserCode = false;
+      inUserCode = codegen.selectCurrentCode(Webapp.interpreter,
+                                             BlocklyApps.editor,
+                                             Webapp.cumulativeLength,
+                                             Webapp.userCodeStartOffset,
+                                             Webapp.userCodeLength);
+      try {
+        Webapp.interpreter.step();
       }
-      Webapp.interpreter.step();
+      catch(err) {
+        Webapp.executionError = err;
+        Webapp.onPuzzleComplete();
+      }
     }
   } else {
     if (Webapp.tickCount === 1) {
@@ -229,6 +164,7 @@ Webapp.init = function(config) {
       extraControlRows: extraControlsRow,
       blockUsed: undefined,
       idealBlockNumber: undefined,
+      editCode: level.editCode,
       blockCounterClass: 'block-counter-default'
     }
   });
@@ -253,11 +189,6 @@ Webapp.init = function(config) {
     drawDiv();
   };
 
-  config.getDisplayWidth = function() {
-    var el = document.getElementById('visualizationColumn');
-    return el.getBoundingClientRect().width;
-  };
-
   // arrangeStartBlocks(config);
 
   config.twitter = twitterOptions;
@@ -269,7 +200,6 @@ Webapp.init = function(config) {
   config.makeUrl = "http://code.org/webapp";
   config.makeImage = BlocklyApps.assetUrl('media/promo.png');
 
-  config.enableShowCode = false;
   config.varsInGlobals = true;
 
   // Webapp.initMinimal();
@@ -356,6 +286,7 @@ BlocklyApps.reset = function(first) {
   // Reset the Globals object used to contain program variables:
   Webapp.Globals = {};
   Webapp.eventQueue = [];
+  Webapp.executionError = null;
   Webapp.interpreter = null;
 };
 
@@ -424,7 +355,7 @@ Webapp.onReportComplete = function(response) {
 //
 
 var defineProcedures = function (blockType) {
-  var code = Blockly.Generator.workspaceToCode('JavaScript', blockType);
+  var code = Blockly.Generator.blockSpaceToCode('JavaScript', blockType);
   // TODO: handle editCode JS interpreter
   try { codegen.evalWith(code, {
                          codeFunctions: level.codeFunctions,
@@ -471,14 +402,14 @@ Webapp.execute = function() {
     codeWhenRun += '\nwhile (true) { var obj = getCallback(); ' +
       'if (obj) { obj.fn.apply(null, obj.arguments ? obj.arguments : null); }}';
     var session = BlocklyApps.editor.aceEditor.getSession();
-    Webapp.cumulativeLength = aceCalculateCumulativeLength(session);
+    Webapp.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
   } else {
     // Define any top-level procedures the user may have created
     // (must be after reset(), which resets the Webapp.Globals namespace)
     defineProcedures('procedures_defreturn');
     defineProcedures('procedures_defnoreturn');
 
-    var blocks = Blockly.mainBlockSpace.getTopBlocks();
+    var blocks = Blockly.mainWorkspace.getTopBlocks();
     for (var x = 0; blocks[x]; x++) {
       var block = blocks[x];
       if (block.type === 'when_run') {
@@ -496,53 +427,11 @@ Webapp.execute = function() {
                                           Webapp: api,
                                           Globals: Webapp.Globals } );
 
-        function makeNativeMemberFunction(nativeFunc, parentObj) {
-          return function() {
-            // Call the native function:
-            var retVal = nativeFunc.apply(parentObj, arguments);
-
-            // Now figure out what to do with the return value...
-
-            if (retVal instanceof Function) {
-              // Don't call createPrimitive() for functions
-              return retVal;
-            } else if (retVal instanceof Object) {
-              var newObj = interpreter.createObject(interpreter.OBJECT);
-              // Limited attempt to marshal back complex return values
-              // Special case: only one-level deep, only handling
-              // primitives and arrays of primitives
-              for (var prop in retVal) {
-                var isFuncOrObj = retVal[prop] instanceof Function ||
-                                  retVal[prop] instanceof Object;
-                // replace properties with wrapped properties
-                if (retVal[prop] instanceof Array) {
-                  var newArray = interpreter.createObject(interpreter.ARRAY);
-                  for (var i = 0; i < retVal[prop].length; i++) {
-                    newArray.properties[i] = interpreter.createPrimitive(retVal[prop][i]);
-                  }
-                  newArray.length = retVal[prop].length;
-                  interpreter.setProperty(newObj, prop, newArray);
-                } else if (isFuncOrObj) {
-                  // skipping over these - they could be objects that should
-                  // be converted into interpreter objects. they could be native
-                  // functions that should be converted. Or they could be objects
-                  // that are already interpreter objects, which is what we assume
-                  // for now:
-                  interpreter.setProperty(newObj, prop, retVal[prop]);
-                } else {
-                  // wrap as a primitive if it is not a function or object:
-                  interpreter.setProperty(newObj, prop, interpreter.createPrimitive(retVal[prop]));
-                }
-              }
-              return newObj;
-            } else {
-              return interpreter.createPrimitive(retVal);
-            }
-          };
-        }
 
         var getCallbackObj = interpreter.createObject(interpreter.FUNCTION);
-        var wrapper = makeNativeMemberFunction(nativeGetCallback, null);
+        var wrapper = codegen.makeNativeMemberFunction(interpreter,
+                                                       nativeGetCallback,
+                                                       null);
         interpreter.setProperty(scope,
                                 'getCallback',
                                 interpreter.createNativeFunction(wrapper));
@@ -586,7 +475,9 @@ Webapp.feedbackImage = '';
 Webapp.encodedFeedbackImage = '';
 
 Webapp.onPuzzleComplete = function() {
-  if (level.freePlay) {
+  if (Webapp.executionError) {
+    Webapp.result = BlocklyApps.ResultType.ERROR;
+  } else if (level.freePlay) {
     Webapp.result = BlocklyApps.ResultType.SUCCESS;
   }
 

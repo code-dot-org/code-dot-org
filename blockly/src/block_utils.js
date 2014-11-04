@@ -91,12 +91,12 @@ exports.domStringToBlock = function(blockDOMString) {
 };
 
 /**
- * Takes a set of start blocks, and returns them with a when run button inserted
- * in front of the first non-function block.  If we already have a when_run block,
- * does nothing.
+ * Takes a set of start blocks, and returns them with a particular top level
+ * block inserted in front of the first non-function block.  If we already have
+ * this block, does nothing.
  */
-exports.insertWhenRunBlock = function (input) {
-  if (input.indexOf('when_run') !== -1) {
+exports.forceInsertTopBlock = function (input, blockType) {
+  if (input.indexOf(blockType) !== -1) {
     return input;
   }
 
@@ -106,10 +106,10 @@ exports.insertWhenRunBlock = function (input) {
   // using document.createElement elsewhere is
   var doc = root.parentNode;
 
-  var whenRun = doc.createElement('block');
-  whenRun.setAttribute('type', 'when_run');
-  whenRun.setAttribute('movable', 'false');
-  whenRun.setAttribute('deletable', 'false');
+  var topBlock = doc.createElement('block');
+  topBlock.setAttribute('type', blockType);
+  topBlock.setAttribute('movable', 'false');
+  topBlock.setAttribute('deletable', 'false');
 
   var numChildren = root.childNodes ? root.childNodes.length : 0;
 
@@ -130,15 +130,21 @@ exports.insertWhenRunBlock = function (input) {
 
   if (firstBlock !== null) {
     // when run -> next -> firstBlock
-    var next = doc.createElement('next');
+    var next;
+    if (/^functional/.test(blockType)) {
+      next = doc.createElement('functional_input');
+      next.setAttribute('name', 'ARG1');
+    } else {
+      next = doc.createElement('next');
+    }
     next.appendChild(firstBlock);
-    whenRun.appendChild(next);
+    topBlock.appendChild(next);
   }
 
   if (numChildren > 0) {
-    root.insertBefore(whenRun, root.childNodes[0]);
+    root.insertBefore(topBlock, root.childNodes[0]);
   } else {
-    root.appendChild(whenRun);
+    root.appendChild(topBlock);
   }
   return xml.serialize(root);
 };
@@ -158,7 +164,22 @@ exports.calcBlockXml = function (type, args) {
     str += arg;
     str += '</functional_input>';
   }
-  str+= '</block>';
+  str += '</block>';
+
+  return str;
+};
+
+exports.mathBlockXml = function (type, inputs, titles) {
+  var str = '<block type="' + type + '" inline="false">';
+  for (var title in titles) {
+    str += '<title name="' + title + '">' + titles[title] + '</title>';
+  }
+
+  for (var input in inputs) {
+    str += '<functional_input name="' + input + '">' + inputs[input] + '</functional_input>';
+  }
+
+  str += '</block>';
 
   return str;
 };

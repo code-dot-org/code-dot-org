@@ -118,6 +118,8 @@
   "setBackgroundTennis": "όρισε φόντο τένις",
   "setBackgroundWinter": "όρισε φόντο χειμώνα",
   "setBackgroundTooltip": "Ορίζει την εικόνα στο φόντο",
+  "setEnemySpeed": "set enemy speed",
+  "setPlayerSpeed": "set player speed",
   "setScoreText": "όρισε σκορ",
   "setScoreTextTooltip": "Ορίζει το κείμενο που θα εμφανίζεται στην περιοχή της βαθμολογίας.",
   "setSpriteEmotionAngry": "σε οργισμένη διάθεση",

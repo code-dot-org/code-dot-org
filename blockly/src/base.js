@@ -61,6 +61,7 @@ BlocklyApps.LOCALE = 'en_us';
 BlocklyApps.MIN_WIDTH = 900;
 BlocklyApps.MIN_MOBILE_SHARE_WIDTH = 450;
 BlocklyApps.MIN_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
+var WORKSPACE_PLAYSPACE_GAP = 15;
 
 /**
  * If the user presses backspace, stop propagation - this prevents blockly
@@ -86,6 +87,31 @@ BlocklyApps.toggleRunReset = function(button) {
   reset.style.display = !showRun ? 'inline-block' : 'none';
   reset.disabled = showRun;
 };
+
+/**
+ * Modify the workspace header after a droplet blocks/code toggle
+ */
+function updateHeadersAfterDropletToggle(usingBlocks) {
+  // Update header titles:
+  var showCodeHeader = document.getElementById('show-code-header');
+  var newButtonTitle = usingBlocks ? msg.showCodeHeader() :
+                                     msg.showBlocksHeader();
+  showCodeHeader.firstChild.innerText = newButtonTitle;
+
+  var workspaceHeaderSpan = document.getElementById('workspace-header-span');
+  newButtonTitle = usingBlocks ? msg.workspaceHeader() :
+                                 msg.workspaceHeaderJavaScript();
+  workspaceHeaderSpan.innerText = newButtonTitle;
+
+  var blockCount = document.getElementById('blockCounter');
+  if (blockCount) {
+    blockCount.style.visibility =
+      (usingBlocks && BlocklyApps.enableShowBlockCount) ? 'visible' : 'hidden';
+  }
+
+  // Resize (including headers), so the category header will appear/disappear:
+  BlocklyApps.onResize();
+}
 
 /**
  * Common startup tasks for all apps.
@@ -301,17 +327,13 @@ BlocklyApps.init = function(config) {
     // using window.require forces us to use requirejs version of require
     window.require(['droplet'], function(droplet) {
       var displayMessage, examplePrograms, messageElement, onChange, startingText;
-      var palette = utils.generateDropletPalette(config.level.codeFunctions);
       BlocklyApps.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
         mode: 'javascript',
-        palette: palette
-      });
-      // temporary: use prompt icon to switch text/blocks
-      document.getElementById('prompt-icon-cell').addEventListener('click', function() {
-        BlocklyApps.editor.toggleBlocks();
+        modeOptions: utils.generateDropletModeOptions(config.level.codeFunctions),
+        palette: utils.generateDropletPalette(config.level.codeFunctions)
       });
 
-      var startText = '// ' + msg.typeCode() +'\n// ' + msg.typeHint() + '\n';
+      var startText = '// ' + msg.typeHint() + '\n';
       var codeFunctions = config.level.codeFunctions;
       // Insert hint text from level codeFunctions into editCode area
       if (codeFunctions) {
@@ -330,7 +352,12 @@ BlocklyApps.init = function(config) {
   var showCode = document.getElementById('show-code-header');
   if (showCode && BlocklyApps.enableShowCode) {
     dom.addClickTouchEvent(showCode, function() {
-      feedback.showGeneratedCode(BlocklyApps.Dialog);
+      if (BlocklyApps.editCode) {
+        BlocklyApps.editor.toggleBlocks();
+        updateHeadersAfterDropletToggle(BlocklyApps.editor.currentlyUsingBlocks);
+      } else {
+        feedback.showGeneratedCode(BlocklyApps.Dialog);
+      }
     });
   }
 
@@ -405,7 +432,7 @@ BlocklyApps.init = function(config) {
     if (config.level.edit_blocks === 'required_blocks' ||
       config.level.edit_blocks === 'toolbox_blocks') {
       // Don't show when run block for toolbox/required block editing
-      config.insertWhenRun = false;
+      config.forceInsertTopBlock = null;
     }
   }
 
@@ -444,30 +471,26 @@ BlocklyApps.init = function(config) {
     }
   }
 
-  if (config.level.editCode) {
-    // Swap the visibility of the codeText element and the blocklyDiv
-    document.getElementById('codeTextbox').style.display = 'block';
-    div.style.display = 'none';
-  }
-
   // Add the starting block(s).
   var startBlocks = config.level.startBlocks || '';
-  if (config.insertWhenRun) {
-    startBlocks = blockUtils.insertWhenRunBlock(startBlocks);
+  if (config.forceInsertTopBlock) {
+    startBlocks = blockUtils.forceInsertTopBlock(startBlocks, config.forceInsertTopBlock);
   }
   startBlocks = BlocklyApps.arrangeBlockPosition(startBlocks, config.blockArrangement);
   BlocklyApps.loadBlocks(startBlocks);
 
-  var onResize = function() {
-    BlocklyApps.onResize(config.getDisplayWidth());
-  };
-  window.addEventListener('resize', onResize);
+  // listen for scroll and resize to ensure onResize() is called
+  window.addEventListener('scroll', function() {
+    BlocklyApps.onResize();
+    Blockly.fireUiEvent(window, 'resize');
+  });
+  window.addEventListener('resize', BlocklyApps.onResize);
 
   // call initial onResize() asynchronously - need 100ms delay to work
   // around relayout which changes height on the left side to the proper
   // value
   window.setTimeout(function() {
-      onResize();
+      BlocklyApps.onResize();
       Blockly.fireUiEvent(window, 'resize');
     },
     100);
@@ -627,56 +650,78 @@ var showInstructions = function(level, autoClose) {
 /**
  *  Resizes the blockly workspace.
  */
-BlocklyApps.onResize = function(gameWidth) {
-  gameWidth = gameWidth || 0;
+BlocklyApps.onResize = function() {
+  var visualizationColumn = document.getElementById('visualizationColumn');
+  var gameWidth = visualizationColumn.getBoundingClientRect().width;
+
   var blocklyDiv = document.getElementById('blockly');
-  var codeTextbox = document.getElementById('codeTextbox');
+  var codeWorkspace = document.getElementById('codeWorkspace');
 
-  // resize either blockly or codetextbox
-  var div = BlocklyApps.editCode ? codeTextbox : blocklyDiv;
+  // resize either blockly or codeWorkspace
+  var div = BlocklyApps.editCode ? codeWorkspace : blocklyDiv;
 
-  var blocklyDivParent = blocklyDiv.parentNode;
-  var parentStyle = window.getComputedStyle ?
-                    window.getComputedStyle(blocklyDivParent) :
-                    blocklyDivParent.currentStyle;  // IE
+  var divParent = div.parentNode;
+  var parentStyle = window.getComputedStyle(divParent);
 
   var parentWidth = parseInt(parentStyle.width, 10);
   var parentHeight = parseInt(parentStyle.height, 10);
 
   var headers = document.getElementById('headers');
-  var headersStyle = window.getComputedStyle ?
-                       window.getComputedStyle(headers) :
-                       headers.currentStyle;  // IE
-  var headersHeight = parseInt(headersStyle.height, 10);
+  var headersHeight = parseInt(window.getComputedStyle(headers).height, 10);
 
-  div.style.top = blocklyDivParent.offsetTop + 'px';
-  div.style.width = (parentWidth - (gameWidth + 15)) + 'px';
+  div.style.top = divParent.offsetTop + 'px';
+  var fullWorkspaceWidth = parentWidth - (gameWidth + WORKSPACE_PLAYSPACE_GAP);
+  div.style.width = fullWorkspaceWidth + 'px';
+
   if (BlocklyApps.isRtl()) {
-    div.style.marginRight = (gameWidth + 15) + 'px';
+    div.style.marginRight = (gameWidth + WORKSPACE_PLAYSPACE_GAP) + 'px';
   }
   else {
-    div.style.marginLeft = (gameWidth + 15) + 'px';
+    div.style.marginLeft = (gameWidth + WORKSPACE_PLAYSPACE_GAP) + 'px';
   }
-  // reduce height by headers height because blockly isn't aware of headers
-  // and will size its svg element to be too tall
-  div.style.height = (parentHeight - headersHeight) + 'px';
+  if (BlocklyApps.editCode) {
+    // Position the inner codeTextbox element below the headers
+    var codeTextbox = document.getElementById('codeTextbox');
+    codeTextbox.style.height = (parentHeight - headersHeight) + 'px';
+    codeTextbox.style.width = fullWorkspaceWidth + 'px';
+    codeTextbox.style.top = headersHeight + 'px';
 
-  BlocklyApps.resizeHeaders();
+    // The outer codeWorkspace element height should match its parent:
+    div.style.height = parentHeight + 'px';
+  } else {
+    // reduce height by headers height because blockly isn't aware of headers
+    // and will size its svg element to be too tall
+    div.style.height = (parentHeight - headersHeight) + 'px';
+  }
+
+  BlocklyApps.resizeHeaders(fullWorkspaceWidth);
 };
 
 // |         toolbox-header           | workspace-header  | show-code-header |
 // |
 // | categoriesWidth |  toolboxWidth  |
 // |                 |         <--------- workspaceWidth ---------->         |
-BlocklyApps.resizeHeaders = function() {
+// |         <---------------- fullWorkspaceWidth ----------------->         |
+BlocklyApps.resizeHeaders = function (fullWorkspaceWidth) {
   var categoriesWidth = 0;
-  var categories = Blockly.mainBlockSpaceEditor.toolbox;
+  var categories = BlocklyApps.editCode ?
+                    document.querySelector('.droplet-palette-wrapper') :
+                    Blockly.Toolbox.HtmlDiv;
   if (categories) {
-    categoriesWidth = parseInt(window.getComputedStyle(categories.HtmlDiv).width, 10);
+    // If in the droplet editor, but not using blocks, keep categoryWidth at 0
+    if (!BlocklyApps.editCode || BlocklyApps.editor.currentlyUsingBlocks) {
+      // set CategoryWidth based on the block toolbox/palette width:
+      categoriesWidth = parseInt(window.getComputedStyle(categories).width, 10);
+    }
   }
 
   var workspaceWidth = Blockly.mainBlockSpaceEditor.getBlockSpaceWidth();
   var toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
+
+  if (BlocklyApps.editCode) {
+    workspaceWidth = fullWorkspaceWidth - categoriesWidth;
+    toolboxWidth = 0;
+  }
 
   var headers = document.getElementById('headers');
   var workspaceHeader = document.getElementById('workspace-header');
@@ -684,7 +729,9 @@ BlocklyApps.resizeHeaders = function() {
   var showCodeHeader = document.getElementById('show-code-header');
 
   var showCodeWidth;
-  if (BlocklyApps.enableShowCode && (workspaceWidth - toolboxWidth > 450)) {
+  var minWorkspaceWidthForShowCode = BlocklyApps.editCode ? 250 : 450;
+  if (BlocklyApps.enableShowCode &&
+      (workspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
     showCodeWidth = parseInt(window.getComputedStyle(showCodeHeader).width, 10);
     showCodeHeader.style.display = "";
   }
@@ -713,7 +760,7 @@ BlocklyApps.highlight = function(id, spotlight) {
     }
   }
 
-  Blockly.mainBlockSpace.highlightBlock(id, spotlight);
+  Blockly.mainWorkspace.highlightBlock(id, spotlight);
 };
 
 /**

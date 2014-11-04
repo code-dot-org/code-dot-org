@@ -118,6 +118,8 @@
   "setBackgroundTennis": "fonas = tenisas",
   "setBackgroundWinter": "fonas = žiema",
   "setBackgroundTooltip": "Nustato fono paveikslėlį",
+  "setEnemySpeed": "set enemy speed",
+  "setPlayerSpeed": "set player speed",
   "setScoreText": "taškai =",
   "setScoreTextTooltip": "Kokį tekstą rodyti šalia taškų.",
   "setSpriteEmotionAngry": "nuotaika = pikta",

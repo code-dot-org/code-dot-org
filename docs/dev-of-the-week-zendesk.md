@@ -1,6 +1,7 @@
 # IN ZENDESK
 
 1. Go to Zendesk: codeorg.zendesk.com (If you don't have a personal log-in ask Katie for one, or use dev@code.org log in)
+ - If the single sign on doesn't work, you might need to use [support.code.org/access/normal](https://support.code.org/access/normal/) to log in to your Zendesk account.
 
 2. On the left hand side, click the second icon "Views" and then choose "Unassigned Developer Tickets"
 
@@ -20,7 +21,7 @@
 
 3. For each item:
   1. drag to icebox
-  2. tag appropritately (e.g. course1/2/3, account management)
+  2. tag appropriately (e.g. course1/2/3, account management)
   3. Assign to Mona and
     - Brent: blockly code bugs
     - Brendan: UI issue

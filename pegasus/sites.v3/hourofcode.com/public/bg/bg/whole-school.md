@@ -1,7 +1,5 @@
----
-layout: wide
----
 
-# Нека цялото училище да участва
 
-Информация за участието на цели училища в Часа на кодирането, ще се появява тук.
+# Aconsegueix tota l'escola per participar
+
+La informació sobre com aconseguir escoles complertes per participar en l'Hora de Codi anirà aquí.

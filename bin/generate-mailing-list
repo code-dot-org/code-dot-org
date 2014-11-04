@@ -1,0 +1,107 @@
+#!/usr/bin/env ruby
+require_relative '../pegasus/src/env'
+require 'cdo/solr'
+require src_dir 'database'
+
+SOLR = Solr::Server.new(host:'ec2-54-83-22-254.compute-1.amazonaws.com')
+
+def csv_contacts(path, params={})
+  fields = params[:fields] if params[:fields]
+
+  [].tap do |results|
+    CSV.foreach(path, headers:true) do |i|
+      i = yield(i) if block_given?
+      results << {email:i['email'].downcase.strip, name:i['name']}.merge(i.to_hash.slice(*fields)) if i
+    end
+  end
+end
+
+def dashboard_teachers(params={})
+  fields = params[:fields] if params[:fields]
+  
+  [].tap do |results|
+    DASHBOARD_DB[:users].where(user_type:'teacher').each do |i|
+      i = yield(i) if block_given?
+      results << {email:i[:email].downcase.strip, name:i[:name]}.merge(i.to_hash.slice(*fields)) if i
+    end
+  end
+end
+
+def export_contacts_to_csv(contacts, path)
+  columns = nil
+  
+  CSV.open(path, 'wb') do |results|
+    contacts.values.each do |contact|
+      unless columns
+        columns = contact.keys
+        results << columns
+      end
+      results << columns.map{|column| contact[column]}
+    end
+  end
+end
+
+def query_contacts(params)
+  fields = params[:fields] if params[:fields]
+
+  [].tap do |results|
+    SOLR.query(params.merge(rows:10000)).each do |i|
+      i = yield(i) if block_given?
+      results << {email:i['email_s'].downcase.strip, name:i['name_s']}.merge(i.slice(*fields)) if i
+    end
+  end
+end
+
+UNSUBSCRIBERS = {}.tap do |results|
+  DB[:contacts].where('unsubscribed_at IS NOT NULL').each do |i|
+    email = i[:email].downcase.strip
+    results[email] = true
+  end
+end
+puts "#{UNSUBSCRIBERS.count} unsubscribers loaded."
+
+#DONORS = {}.tap do |results|
+#  csv_contacts('donors.csv').each do |i|
+#    email = i[:email].downcase.strip
+#    results[email] = i unless UNSUBSCRIBERS[email]
+#  end
+#end
+#puts "#{DONORS.count} donors loaded."
+
+ORGANIZERS = {}.tap do |results|
+  query_contacts(q:'kind_s:"HocSignup2014"', fields:['hoc_country_s']).each do |i|
+    email = i[:email].downcase.strip
+    results[email] = i unless UNSUBSCRIBERS[email]
+  end
+end
+puts "#{ORGANIZERS.count} organizers loaded."
+
+DOMESTIC_TEACHERS = {}.tap do |results|
+  (
+    dashboard_teachers +
+    query_contacts(q:'kind_s:"Petition" && role_s:"educator" && country_s:"united states"') +
+    query_contacts(q:'kind_s:"BringToSchool2013" && (role_s:"teacher" || role_s:"principal" || role_s:"superintendent" || role_s:"district_admin") && country_s:"united states"') +
+    query_contacts(q:'kind_s:"CSEdWeekEvent2013" && (role_s:"teacher" || role_s:"principal" || role_s:"superintendent" || role_s:"district_admin") && country_s:"united states"') +
+    query_contacts(q:'kind_s:"ClassSubmission"')
+  ).each do |i|
+    email = i[:email].downcase.strip
+    results[email] = i unless UNSUBSCRIBERS[email] || ORGANIZERS[email]
+  end
+end
+puts "#{DOMESTIC_TEACHERS.count} domestic teachers loaded."
+
+INTERNATIONAL_TEACHERS = {}.tap do |results|
+  (
+    query_contacts(q:'kind_s:"Petition" && role_s:"educator" && -country_s:"united states"') +
+    query_contacts(q:'kind_s:"BringToSchool2013" && (role_s:"teacher" || role_s:"principal" || role_s:"superintendent" || role_s:"district_admin") && -country_s:"united states"') +
+    query_contacts(q:'kind_s:"CSEdWeekEvent2013" && (role_s:"teacher" || role_s:"principal" || role_s:"superintendent" || role_s:"district_admin") && -country_s:"united states"')
+  ).each do |i|
+    email = i[:email].downcase.strip
+    results[email] = i unless UNSUBSCRIBERS[email] || ORGANIZERS[email] || DOMESTIC_TEACHERS[email]
+  end
+end
+puts "#{INTERNATIONAL_TEACHERS.count} international teachers loaded."
+
+export_contacts_to_csv ORGANIZERS, 'organizers.csv'
+export_contacts_to_csv DOMESTIC_TEACHERS, 'domestic-teachers.csv'
+export_contacts_to_csv INTERNATIONAL_TEACHERS, 'international-teachers.csv'

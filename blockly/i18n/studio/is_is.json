@@ -118,6 +118,8 @@
   "setBackgroundTennis": "hafa tennisbakgrunn",
   "setBackgroundWinter": "hafa vetrarbakgrunn",
   "setBackgroundTooltip": "Stillir bakgrunnsmynd",
+  "setEnemySpeed": "set enemy speed",
+  "setPlayerSpeed": "set player speed",
   "setScoreText": "setja stig á",
   "setScoreTextTooltip": "Stillir textann sem á að birtast á stigasvæðinu.",
   "setSpriteEmotionAngry": "á vont skap",

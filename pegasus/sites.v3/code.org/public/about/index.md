@@ -17,7 +17,7 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding participa
 | Inspire students | 45 million students have tried the [Hour of Code](/learn). |
 | Create fantastic  courses | 99% of teachers recommend the Code.org [intro CS curriculum](http://learn.code.org) |
 | Reach classrooms | Our [intro course](http://studio.code.org) is in 46,000 classrooms, reaching 1.5M students |
-| Improve diversity in CS | In our online courses, 40% of the students are girls. In our high school classrooms, [34% are girls, and 60% African American or Hispanic](http://codeorg.tumblr.com/post/98856300118/diversity) |
+| Improve diversity in CS | In our online courses, [40% of the students are girls](http://codeorg.tumblr.com/post/98856300118/diversity). In our high school classrooms, [34% are girls, and 60% African American or Hispanic](http://codeorg.tumblr.com/post/98856300118/diversity) |
 | Go global | Our courses are available in 30+ languages, used in 170+ countries |
 | Train new CS teachers | We trained 700 new teachers in summer 2014. |
 | Change school district curriculum | [30+ districts](/educate/partner-districts) are adding [CS classes](/educate/curriculum) with us, including 3 of the largest 6|
@@ -42,6 +42,8 @@ We believe that a quality computer science education should be available to ever
 Code.org&reg; is a registered public 501c3 nonprofit, with support from the general public. We've been overwhelmed by small and large acts of generosity from [individuals and organizations](/about/donors) who support our vision.
 
 [<button>Make a donation</button>](/donate)&nbsp;&nbsp;or [see our list of donors](/about/donors)
+
+[Code.org's 2013 IRS Form 990](/files/irs-form.pdf)
 
 <hr/>
 
