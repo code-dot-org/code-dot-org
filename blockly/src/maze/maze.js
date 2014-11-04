@@ -333,6 +333,17 @@ function drawMap () {
     });
   }
 
+  if (skin.celebrateAnimation) {
+    createPegmanAnimation({
+      idStr: 'celebrate',
+      pegmanImage: skin.celebrateAnimation,
+      row: Maze.start_.y,
+      col: Maze.start_.x,
+      direction: Direction.NORTH,
+      numColPegman: skin.celebratePegmanCol,
+      numRowPegman: skin.celebratePegmanRow
+    });
+  }
 
   // Add the hidden dazed pegman when hitting the wall.
   if (skin.wallPegmanAnimation) {
@@ -863,6 +874,11 @@ BlocklyApps.reset = function(first) {
     acorn.setAttribute('visibility', 'hidden');
   }
 
+  if (skin.celebrateAnimation) {
+    var celebrateAnimation = document.getElementById('celebratePegman');
+    celebrateAnimation.setAttribute('visibility', 'hidden');
+  }
+
   // Move the init dirt marker icons into position.
   resetDirt();
   resetDirtImages(false);
@@ -1283,7 +1299,11 @@ function animateAction (action, spotlightBlocks, timePerStep) {
         case BlocklyApps.TestResults.FREE_PLAY:
         case BlocklyApps.TestResults.TOO_MANY_BLOCKS_FAIL:
         case BlocklyApps.TestResults.ALL_PASS:
-          Maze.scheduleDance(true, timePerStep);
+          if (mazeUtils.isScratSkin(skin.id)) {
+            Maze.scheduleScratDance();
+          } else {
+            Maze.scheduleDance(true, timePerStep);
+          }
           break;
         default:
           timeoutList.setTimeout(function() {
@@ -1602,6 +1622,26 @@ function setPegmanTransparent() {
     pegmanFadeoutAnimation.beginElement();
   }
 }
+
+
+/**
+ * Schedule the animations for Scrat dancing.
+ */
+
+Maze.scheduleScratDance = function()
+{
+  var finishIcon = document.getElementById('finish');
+  if (finishIcon) {
+    finishIcon.setAttribute('visibility', 'hidden');
+  }
+
+  var timePerFrame = 100;
+  var start = {x: Maze.pegmanX, y: Maze.pegmanY};
+
+  scheduleSheetedMovement({x: start.x, y: start.y}, {x: 0, y: 0 },
+    skin.celebratePegmanRow, timePerFrame, 'celebrate', Direction.NORTH, true);
+}
+
 
 /**
  * Schedule the animations and sound for a dance.
