@@ -54,3 +54,13 @@ label.has-error {
         margin-top: 0;
     }
 }
+.button-container {
+    text-align:right;
+    margin-top: 50px;
+}
+@media (max-width: 768px) {
+    .centered {
+        text-align: left;
+        margin-top: 0px;
+    }
+}
