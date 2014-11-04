@@ -13,17 +13,48 @@ Every educator who hosts an Hour of Code for students will receive 10 GB of Drop
 ## Lucky classrooms win a video chat with a guest speaker!
 20 lucky classrooms will be invited to join a video chat to celebrate the Hour of Code during December 8-14. Your students will be able to ask questions and chat with technology-industry leaders. [Check out last year’s chats](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) with Bill Gates, Twitter founder Jack Dorsey, Susan Wojcicki of Google and Gabe Newell of Valve.
 
-- Ashton Kutcher
-- 
-
 <% end %>
 
 <% if @country == 'us' %>
 
-## 96 lucky classrooms win a video chat with a guest speaker!
-96 lucky classrooms will be invited to join a video chat to celebrate the Hour of Code during December 8-14. Your students will be able to ask questions and chat with technology-industry leaders. [Check out last year’s chats](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) with Bill Gates, Twitter founder Jack Dorsey, Susan Wojcicki of Google and Gabe Newell of Valve.
+## 100 lucky classrooms win a video chat with a guest speaker!
+
+100 lucky classrooms will be invited to participate in live video Q&As with tech titans and tech-loving celebrities. Students will be able to ask questions and chat with these exciting role models to kick off your Hour of Code. 
 
 Any classroom (public or private) within the U.S. or Canada is eligible to win this prize. Your whole school does not need to apply.
+
+### This year's celebrity video chat  participants:
+
+![image](/images/fit-120/JR-Hildebrand-headshot.png)&nbsp;&nbsp;
+![image](/images/fit-120/Bill-Gates-headshot.jpg)&nbsp;&nbsp;
+![image](/images/fit-120/Usher-headshot.jpg)&nbsp;&nbsp;
+![image](/images/fit-120/Sheryl-Sandberg-headshot.jpg)&nbsp;&nbsp;
+![image](/images/fit-120/Jack-Dorsey-headshot.jpg)&nbsp;&nbsp;
+![image](/images/fit-120/Hadi-Partovi-headshot.jpg)&nbsp;&nbsp;
+![image](/images/fit-120/Ashton-Kutcher-headshot.jpg)&nbsp;&nbsp;
+
+![image](/images/fit-120/Clara-Shih-headshot.jpg)&nbsp;&nbsp;
+![image](/images/fit-120/Lyndsey-Scott-headshot.jpg)&nbsp;&nbsp;
+![image](/images/fit-120/Karlie-Kloss-headshot.jpg)&nbsp;&nbsp;
+![image](/images/fit-120/Jess-Lee-headshot.jpg)&nbsp;&nbsp;
+![image](/images/fit-120/David-Karp-headshot.png)&nbsp;&nbsp;
+![image](/images/fit-120/Cory-Booker-headshot.jpg)&nbsp;&nbsp;
+
+
+- JR Hildebrand (NASCAR Racecar Driver)
+- Bill Gates (Microsoft founder)
+- Usher (Recording artist)
+- Sheryl Sandberg (Facebook COO)
+- Jack Dorsey (Twitter co-founder, Square CEO)
+- Hadi Partovi (Code.org co-founder)
+- Ashton Kutcher (Actor and tech investor)
+- Clara Shih (Hearsay Social CEO)
+- Lyndsey Scott (App developer and model)
+- Karlie Kloss (supermodel, learning to code)
+- Jess Lee (Polyvore CEO)
+- David Karp (Tumblr founder)
+- Cory Booker (United States Senator of New Jersey)
+
 
 ## 51 Lucky schools win a class-set of laptops (or $10,000 for other technology)
 One lucky school in ***every*** U.S. state (+ Washington D.C.) will win $10,000 worth of technology. Organize the Hour of Code for every student in your school to qualify. Fill out the form below to apply.
