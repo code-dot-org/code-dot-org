@@ -4,7 +4,15 @@ title: 'Participation Kit - for Computer Science Teachers'
 # Participation Kit - for Computer Science Teachers
 
 In addition to the Hour of Code, here are some things you can do to celebrate CSEdWeek.
-NOTE: Please celebrate CS Education throughout the year, with highlighted activities whenever it’s convenient for you, your students, your school.	
+NOTE: Please celebrate CS Education throughout the year, with highlighted activities whenever it’s convenient for you, your students, your school.
+
+See what others are doing to celebrate CSEdWeek 2014 below. Browse the listings or search using different criteria on the right. Or view our map to see events across the country and in your area. And please submit your own event to add to the calendar.
+
+[<button>View the map of events</button>](https://mapsengine.google.com/16135125564646265347-05414812628978701557-4/mapview/?authuser=0)<br />
+
+[<button>Submit an event</button>](http://csedweek.cs10kcommunity.org/submission)<br />
+
+[<button>See a calendar of events</button>](http://csedweek.cs10kcommunity.org)<br />
 
 ## How can you promote computer science during CS Ed Week 2014?
 
@@ -33,7 +41,7 @@ NOTE: Please celebrate CS Education throughout the year, with highlighted activi
 ## 4) Garner Support 
 - Pitch CS education to your local school board, superintendent, or principal. Start with [these PowerPoint slides](/files/CS-pitch-basic-stats.pptx), [this video](http://www.youtube.com/watch?v=MwLXrN0Yguk&feature=c4-overview-vl&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q), or [these talking points](http://www.ncwit.org/resources/moving-beyond-computer-literacy-why-schools-should-teach-computer-science)
 - Ask your local Congressman to support the Computer Science Education Act
-- Ask your governor (or other local official) for a [CSEdWeek proclamation](/public/csteacher/proclamationinstructions). 
+- Ask your governor (or other local official) for a [CSEdWeek proclamation](/public/csteacher/proclamationinstructions.pdf). 
 <br/>
 <br/>
 
@@ -94,24 +102,23 @@ Have students demonstrate the work that they have been doing
 # Sample Activities
 ## Grades K-2
 - [Kinderlogo](http://www.kinderlogo.com/activities.html)
-- [Robot Dance](/public/csteacher/robotdance.pdf)
-- [Mirror Images](/public/csteacher/mirrorimages.pdf)
+- [Robot Dance](/csteacher/robotdance.pdf)
+- [Mirror Images](/csteacher/mirrorimages.pdf)
 
 ## Grades 3-5
-- [Grace Hopper Debugging Activity](/public/csteacher/gracehopperdebugging.pdf)
+- [Grace Hopper Debugging Activity](/csteacher/gracehopperdebugging.pdf)
 
 
 ## Middle School
-- [Secret Codes Activity](/public/csteacher/secretcodes.pdf)
-- [Computer History Activity](/public/csteacher/computerhistory.pdf)
-- [Arduino Activity](/public/csteacher/arduino.pdf)
-- [Image Representation](/public/csteacher/imagerepresentation.pdf)
-- [Rock Paper Scissors](/public/csteacher/rockpaperscissors.pdf)
-- http://www.brainpop.com/technology/computerscience/
+- [Secret Codes Activity](/csteacher/secretcodes.pdf)
+- [Computer History Activity](/csteacher/computerhistory.pdf)
+- [Arduino Activity](/csteacher/arduino.pdf)
+- [Image Representation](/csteacher/imagerepresentation.pdf)
+- [Rock Paper Scissors](/csteacher/rockpaperscissors.pdf)
 
 ## High School
 - [Computing Educators Oral History Project Lessons](http://www.cs.southwestern.edu/OHProject/materials-overview.html)
-- [Best Technology Activity](/public/csteacher/besttechnology.pdf) 
+- [Best Technology Activity](/csteacher/besttechnology.pdf) 
 <br/>
 <br/>
 
