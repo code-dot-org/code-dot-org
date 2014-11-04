@@ -28,4 +28,6 @@
 - if Rails.env.production? && request.path == hoc_chapter_path(chapter: 1)
   -# special tracking image to make sure a cookie is set when hoc starts (/hoc/1)
   = image_tag('http://code.org/api/hour/begin_codeorg.png')
-= link_to "edit", edit_level_path(@level) if @level.is_a?(Match) && current_user.try(:admin?)
+
+- if current_user.try(:admin?)
+  = render partial: 'levels/admin'

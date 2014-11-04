@@ -12,8 +12,22 @@
  */
 function Sounds() {
   window.AudioContext = window.AudioContext || window.webkitAudioContext;
+
+  this.audioContext = null;
+
   if (window.AudioContext) {
-    this.audioContext = new AudioContext();
+    try {
+      this.audioContext = new AudioContext();
+    } catch (e) {
+      /**
+       * Chrome occasionally chokes on creating singleton AudioContext instances in separate tabs
+       * when iframes are open, potentially related to:
+       *    https://code.google.com/p/chromium/issues/detail?id=308784
+       * or https://code.google.com/p/chromium/issues/detail?id=160022
+       *
+       * In the Chrome case, this will fall-back to the `window.Audio` method
+       */
+    }
   }
 
   this.soundsById = {};
@@ -34,6 +48,12 @@ Sounds.prototype.get = function (soundId) {
   return this.soundsById[soundId];
 };
 
+/**
+ * Initialize an individual sound
+ * @param config available sound files for this audio
+ * @param audioContext context this sound can be played on, or null if none
+ * @constructor
+ */
 function Sound(config, audioContext) {
   this.config = config;
   this.audioContext = audioContext;
@@ -111,7 +131,7 @@ Sound.prototype.preload = function () {
     return;
   }
 
-  if (window.AudioContext) {
+  if (window.AudioContext && this.audioContext) {
     var self = this;
     this.preloadViaWebAudio(file, function (buffer) {
       self.reusableBuffer = buffer;

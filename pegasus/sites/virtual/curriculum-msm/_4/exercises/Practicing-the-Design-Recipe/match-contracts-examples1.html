@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"/><title>Exercise: Matching Contracts and Examples</title><link rel="stylesheet" type="text/css" href="scribble.css" title="default"/><link rel="stylesheet" type="text/css" href="pretty-printing.css" title="default"/><link rel="stylesheet" type="text/css" href="codemirror.css" title="default"/><link rel="stylesheet" type="text/css" href="bootstrap.css" title="default"/><link rel="stylesheet" type="text/css" href="textbook.css" title="default"/><link rel="stylesheet" type="text/css" href="extra_curriculum.css" title="default"/><script type="text/javascript" src="scribble-common.js"></script><script type="text/javascript" src="codemirror.js"></script><script type="text/javascript" src="runmode.js"></script><script type="text/javascript" src="scheme2.js"></script><script type="text/javascript" src="bootstraplesson.js"></script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML%2Chttp%3A%2F%2Fwww.cs.wpi.edu%2F%7Ekfisler%2Fmathjaxlocal.js"></script><!--[if IE 6]><style type="text/css">.SIEHidden { overflow: hidden; }</style><![endif]--></head><body id="scribble-racket-lang-org"><div class="tocset"><div class="tocview"><div class="tocviewlist tocviewlisttopspace"><div class="tocviewtitle"><table cellspacing="0" cellpadding="0"><tr><td style="width: 1em;">&bull;</td><td></td><td><a href="" class="tocviewselflink" data-pltdoc="x">Exercise:<span class="mywbr"> &nbsp;</span> Matching Contracts and Examples</a></td></tr></table></div></div></div><div class="tocsub"><table class="tocsublist" cellspacing="0"><tr><td><span class="tocsublinknumber"></span><a href="#%28part._.Exercise__.Matching_.Contracts_and_.Examples%29" class="tocsubseclink" data-pltdoc="x">Exercise:<span class="mywbr"> &nbsp;</span> Matching Contracts and Examples</a></td></tr></table></div></div><div class="maincolumn"><div class="main"><a name="(part._.Exercise__.Matching_.Contracts_and_.Examples)"></a><p><script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script><noscript></noscript><script type="text/javascript" src="easyXDM.min.js"></script><noscript></noscript><script type="text/javascript" src="json2.min.js"></script><noscript></noscript><script type="text/javascript" src="bootstrap-helpers.js"></script><noscript></noscript></p><p><span class="BootstrapTitle">Exercise: Matching Contracts and Examples</span></p><div class="content"><div class="segment " id="exercises"><div class="exercise-instr"><span style="font-weight: bold">Directions: </span>Match each <span style="font-style: italic">Example</span> on the left with the <span style="font-style: italic">Contract</span> on the right. NOTE: Multiple examples 
+           may match to the same contract!</div><ul class="twoColumnLayout matching"><li class="twoColumnLayout matchingItem"><div class="leftColumn "><p>&nbsp;<textarea>
+(EXAMPLE (match 30 "red")
+         (+ 30 (string-length "red")))
+</textarea></p></div><div class="rightColumn "><p><tt>; match : image -&gt; image</tt></p></div></li><li class="twoColumnLayout matchingItem"><div class="leftColumn "><p>&nbsp;<textarea>
+(EXAMPLE (match 10 "blue")
+         (+ 10 (string-length "blue")))
+</textarea></p></div><div class="rightColumn "><p><tt>; match : number string -&gt; number</tt></p></div></li><li class="twoColumnLayout matchingItem"><div class="leftColumn "><p>&nbsp;<textarea>
+(EXAMPLE (match (triangle 20 "solid" "blue") 
+                3)
+         (scale 3 (triangle 20 "solid" 
+                            "blue")))
+</textarea></p></div><div class="rightColumn "><p><tt>; match : number image -&gt; image</tt></p></div></li><li class="twoColumnLayout matchingItem"><div class="leftColumn "><p>&nbsp;<textarea>
+(EXAMPLE (match (circle 10 "solid" "orange") 
+                22)
+         (scale 22 
+                (circle 10 "solid" "orange")))
+</textarea></p></div><div class="rightColumn "><p><tt>; match : number -&gt; image</tt></p></div></li><li class="twoColumnLayout matchingItem"><div class="leftColumn "><p>&nbsp;<textarea>
+(EXAMPLE (match 5 (star 20 "solid" "red"))
+         (rotate (- 90 5) 
+                 (star 20 "solid" "red")))
+</textarea></p></div><div class="rightColumn "><p><tt>; match : image number -&gt; number</tt></p></div></li><li class="twoColumnLayout matchingItem"><div class="leftColumn "><p>&nbsp;<textarea>
+(EXAMPLE (match (circle 20 "outline" "gold"))
+         (rotate 37 (circle 20 "outline" 
+                            "gold")))
+</textarea></p></div><div class="rightColumn "><p><tt>; match : image number -&gt; image</tt></p></div></li><li class="twoColumnLayout matchingItem"><div class="leftColumn "><p>&nbsp;<textarea>
+(EXAMPLE (match (circle 10 "solid" "green"))
+         (rotate 37 
+                 (circle 10 "solid" "green")))
+</textarea></p></div><div class="rightColumn "></div></li><li class="twoColumnLayout matchingItem"><div class="leftColumn "><p>&nbsp;<textarea>
+(EXAMPLE (match 30)
+         (star (* 30 2) "outline" "purple"))
+</textarea></p></div><div class="rightColumn "></div></li><li class="twoColumnLayout matchingItem"><div class="leftColumn "><p>&nbsp;<textarea>
+(EXAMPLE (match (circle 10 "solid" "silver") 
+                16)
+         (* 16 
+            (image-height 
+                (circle 10 "solid" "silver"))))
+</textarea></p></div><div class="rightColumn "></div></li></ul></div></div><div id="copyright"><a href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img src="pict.png" alt="image" width="88" height="31"/></a>Bootstrap by <a href="http://www.bootstrapworld.org/">Emmanuel Schanzer</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons 3.0 Unported License</a>. Based on a work at <a href="http://www.bootstrapworld.org/">www.BootstrapWorld.org</a>. Permissions beyond the scope of this license may be available at <a href="mailto:schanzer@BootstrapWorld.org">schanzer@BootstrapWorld.org</a>.</div></div></div><div id="contextindicator">&nbsp;</div></body></html>

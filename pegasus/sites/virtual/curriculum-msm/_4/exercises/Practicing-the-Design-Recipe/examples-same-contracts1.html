@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"/><title>Exercise: Do Examples Have the Same Contracts?</title><link rel="stylesheet" type="text/css" href="scribble.css" title="default"/><link rel="stylesheet" type="text/css" href="pretty-printing.css" title="default"/><link rel="stylesheet" type="text/css" href="codemirror.css" title="default"/><link rel="stylesheet" type="text/css" href="bootstrap.css" title="default"/><link rel="stylesheet" type="text/css" href="textbook.css" title="default"/><link rel="stylesheet" type="text/css" href="extra_curriculum.css" title="default"/><script type="text/javascript" src="scribble-common.js"></script><script type="text/javascript" src="codemirror.js"></script><script type="text/javascript" src="runmode.js"></script><script type="text/javascript" src="scheme2.js"></script><script type="text/javascript" src="bootstraplesson.js"></script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML%2Chttp%3A%2F%2Fwww.cs.wpi.edu%2F%7Ekfisler%2Fmathjaxlocal.js"></script><!--[if IE 6]><style type="text/css">.SIEHidden { overflow: hidden; }</style><![endif]--></head><body id="scribble-racket-lang-org"><div class="tocset"><div class="tocview"><div class="tocviewlist tocviewlisttopspace"><div class="tocviewtitle"><table cellspacing="0" cellpadding="0"><tr><td style="width: 1em;">&bull;</td><td></td><td><a href="" class="tocviewselflink" data-pltdoc="x">Exercise:<span class="mywbr"> &nbsp;</span> Do Examples Have the Same Contracts?</a></td></tr></table></div></div></div><div class="tocsub"><table class="tocsublist" cellspacing="0"><tr><td><span class="tocsublinknumber"></span><a href="#%28part._.Exercise__.Do_.Examples_.Have_the_.Same_.Contracts_%29" class="tocsubseclink" data-pltdoc="x">Exercise:<span class="mywbr"> &nbsp;</span> Do Examples Have the Same Contracts?</a></td></tr></table></div></div><div class="maincolumn"><div class="main"><a name="(part._.Exercise__.Do_.Examples_.Have_the_.Same_.Contracts_)"></a><p><script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script><noscript></noscript><script type="text/javascript" src="easyXDM.min.js"></script><noscript></noscript><script type="text/javascript" src="json2.min.js"></script><noscript></noscript><script type="text/javascript" src="bootstrap-helpers.js"></script><noscript></noscript></p><p><span class="BootstrapTitle">Exercise: Do Examples Have the Same Contracts?</span></p><div class="content"><div class="segment " id="exercises"><div class="exercise-instr"><span style="font-weight: bold">Directions: </span>For each pairs of <span style="font-style: italic">Example</span>s below, decide whether the two examples
+           have the same contract. If they do, fill in the contract in the space
+           provided. If not, write a few words explaining why.</div><ol><li><div class="ExerciseListItem">; <span class="contract-name studentAnswer"></span> : <span class="contract-domain studentAnswer"></span> -&gt; <span class="contract-range studentAnswer"></span>&nbsp;<textarea>
+(EXAMPLE (mystery 30)
+         (* 30 50))
+(EXAMPLE (mystery 10)
+         (text "Welcome!" 10 "darkgreen"))
+</textarea></div></li><li><div class="ExerciseListItem">; <span class="contract-name studentAnswer"></span> : <span class="contract-domain studentAnswer"></span> -&gt; <span class="contract-range studentAnswer"></span>&nbsp;<textarea>
+(EXAMPLE (mystery 30 40)
+         (- 40 (* 2 30)))
+(EXAMPLE (mystery 10 15)
+         (- 15 (* 2 10)))
+</textarea></div></li><li><div class="ExerciseListItem">; <span class="contract-name studentAnswer"></span> : <span class="contract-domain studentAnswer"></span> -&gt; <span class="contract-range studentAnswer"></span>&nbsp;<textarea>
+(EXAMPLE (mystery "New York")
+         (text "New York" 20 "red"))
+(EXAMPLE (mystery 20)
+         (text "New York" 20 "red"))
+</textarea></div></li><li><div class="ExerciseListItem">; <span class="contract-name studentAnswer"></span> : <span class="contract-domain studentAnswer"></span> -&gt; <span class="contract-range studentAnswer"></span>&nbsp;<textarea>
+(EXAMPLE (mystery "green" 32)
+         (circle 32 "outline" "green"))
+(EXAMPLE (mystery 18 "green")
+         (circle 18 "outline" "green"))
+</textarea></div></li><li><div class="ExerciseListItem">; <span class="contract-name studentAnswer"></span> : <span class="contract-domain studentAnswer"></span> -&gt; <span class="contract-range studentAnswer"></span>&nbsp;<textarea>
+(EXAMPLE (mystery 6 9 10)
+         (/ 6 (+ 9 10)))
+(EXAMPLE (mystery 3 7)
+         (/ 3 (+ 7 10)))
+</textarea></div></li><li><div class="ExerciseListItem">; <span class="contract-name studentAnswer"></span> : <span class="contract-domain studentAnswer"></span> -&gt; <span class="contract-range studentAnswer"></span>&nbsp;<textarea>
+(EXAMPLE (mystery "red" "blue")
+         (text "blue" 25 "red"))
+(EXAMPLE (mystery "purple" "Go Team!")
+         (text "Go Team!" 25 "purple"))
+</textarea></div></li><li><div class="ExerciseListItem">; <span class="contract-name studentAnswer"></span> : <span class="contract-domain studentAnswer"></span> -&gt; <span class="contract-range studentAnswer"></span>&nbsp;<textarea>
+(EXAMPLE (mystery (circle 55 "outline" "black") 12)
+         (scale 12 (circle 55 "outline" "black")))
+(EXAMPLE (mystery (rectangle 24 32 "outline" "purple") 5)
+         (scale 5 (rectangle 24 32 "outline" "purple")))
+</textarea></div></li><li><div class="ExerciseListItem">; <span class="contract-name studentAnswer"></span> : <span class="contract-domain studentAnswer"></span> -&gt; <span class="contract-range studentAnswer"></span>&nbsp;<textarea>
+(EXAMPLE (mystery "Free Phone" 25 "darkgreen")
+         (text "Free Phone" 25 "darkgreen"))
+(EXAMPLE (mystery 25 "Free Phone")
+         (text "Free Phone" 25 "darkgreen"))
+</textarea></div></li></ol></div></div><div id="copyright"><a href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img src="pict.png" alt="image" width="88" height="31"/></a>Bootstrap by <a href="http://www.bootstrapworld.org/">Emmanuel Schanzer</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons 3.0 Unported License</a>. Based on a work at <a href="http://www.bootstrapworld.org/">www.BootstrapWorld.org</a>. Permissions beyond the scope of this license may be available at <a href="mailto:schanzer@BootstrapWorld.org">schanzer@BootstrapWorld.org</a>.</div><p>)</p></div></div><div id="contextindicator">&nbsp;</div></body></html>

@@ -13,7 +13,6 @@ DEPENDENCIES = [
   deploy_dir('deployment.rb'),
   deploy_dir('aws','Rakefile'),
   deploy_dir('locals.yml'),
-  aws_dir('secrets.tgz.aes'),
   secrets_dir('config.yml'),
 ].select{|i| File.file?(i)}
 
@@ -38,36 +37,17 @@ file aws_dir('profile') => [aws_dir('profile.erb')] + DEPENDENCIES do |t|
   RakeUtils.erb t.prerequisites[0], t.name, task:t
 end
 
-if File.file? aws_dir('secrets.key')
-  tgz_file = aws_dir('secrets.tgz')
-
-  task :secrets => [aws_dir('secrets.key')] do
-    Dir.chdir(aws_dir) do
-      rm tgz_file if File.file?(tgz_file)
-      RakeUtils.system 'COPYFILE_DISABLE=1', 'tar', '-zcf', 'secrets.tgz', 'secrets'
-      RakeUtils.system 'openssl', 'aes-256-cbc', '-e', '-in', 'secrets.tgz', '-out', 'secrets.tgz.aes', '-k', 'secrets.key'
-      rm tgz_file
-    end
-  end
-
-  file secrets_dir('config.yml') => [aws_dir('secrets.tgz.aes'), aws_dir('secrets.key')] do |t|
-    Dir.chdir(aws_dir) do
-      rm tgz_file if File.file?(tgz_file)
-      RakeUtils.system 'openssl', 'aes-256-cbc', '-d', '-in', 'secrets.tgz.aes', '-out', 'secrets.tgz', '-k', 'secrets.key'
-      rm_rf secrets_dir if File.directory?(secrets_dir)
-      RakeUtils.system 'tar', '-zxf', tgz_file
-      rm tgz_file
-      touch secrets_dir('config.yml')
-    end
-  end
-
-  SECRETS = secrets_dir('config.yml')
-else
-  SECRETS = deploy_dir('deployment.rb')
-end
-
 file home_dir('.profile') => [aws_dir('profile')] + DEPENDENCIES do |t|
   cp t.prerequisites[0], t.name
+end
+
+file dashboard_dir('config/logrotate') => [dashboard_dir('config/logrotate.erb')] + DEPENDENCIES do |t|
+  RakeUtils.erb t.prerequisites[0], t.name, task:t
+end
+
+LOGROTATE_DASHBOARD = "/etc/logrotate.d/#{CDO.dashboard_unicorn_name}"
+task LOGROTATE_DASHBOARD => [dashboard_dir('config/logrotate')] do |t|
+  RakeUtils.sudo_ln_s t.prerequisites[0], t.name
 end
 
 file dashboard_dir('config/init.d') => [dashboard_dir('config/init.d.erb')] + DEPENDENCIES do |t|
@@ -120,13 +100,12 @@ end
 INSTALL = [:production, :staging, :test].include?(rack_env)
 
 task :default => [
-  SECRETS,
-
   INSTALL ? aws_dir('crontab.installed')        : aws_dir('crontab'),
   INSTALL ? home_dir('.bashrc')                 : aws_dir('bashrc'),
   INSTALL ? home_dir('.profile')                : aws_dir('profile'),
   INSTALL ? ETC_INIT_D_DASHBOARD                : dashboard_dir('config/init.d'),
   INSTALL ? ETC_INIT_D_PEGASUS                  : pegasus_dir('config/init.d'),
+  INSTALL ? LOGROTATE_DASHBOARD                 : dashboard_dir('config/logrotate'),
   aws_dir('varnish.config'),
   aws_dir('varnish.secret'),
   aws_dir('varnish.vcl'),
@@ -148,6 +127,7 @@ task :clean do
     aws_dir('varnish.vcl'),
     dashboard_dir('config/init.d'),
     pegasus_dir('config/init.d'),
+    dashboard_dir('config/logrotate'),
     deploy_dir('i18n/crowdin.yaml'),
     pegasus_dir('config/newrelic.yml'),
   ].each do |path|

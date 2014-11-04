@@ -44,7 +44,7 @@
   "puzzleTitle": "Łamigłówka {puzzle_number} z {stage_total}",
   "repeat": "powtórz",
   "resetProgram": "Zresetuj",
-  "runProgram": "Biegnij",
+  "runProgram": "Uruchom",
   "runTooltip": "Uruchom program zdefiniowany poprzez bloki w miejscu roboczym.",
   "score": "wynik",
   "showCodeHeader": "Pokaż kod",

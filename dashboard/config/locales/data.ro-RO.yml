@@ -49,6 +49,7 @@
           desc: Editează codul (beta)
           MazeEC: Etapa 1
           Webapp: Etapa 2
+          ArtistEC: Etapa 3
         events:
           desc: Sări (beta)
           Bounce: Etapa 1
@@ -98,6 +99,7 @@
         MazeStep: Modul Pas Labirint
         Wordsearch: Cautare de cuvinte
         Webapp: Webapp
+        ArtistEC: Artistul
     trophy:
       name:
         Bronze: Bronz
@@ -556,6 +558,9 @@
         maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
         maze_wordsearch_k_20: This is a test! Move me one way, then another to spell
           the word STORY
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
+          it in the new "penColour" block.'
     video:
       name:
         maze_intro: Intro Labirint

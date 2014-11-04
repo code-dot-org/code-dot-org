@@ -49,6 +49,7 @@ lt:
           desc: Redaguoti kodą (beta)
           MazeEC: 1 Etapas
           Webapp: 2 Etapas
+          ArtistEC: 3 Etapas
         events:
           desc: Bounce (beta versija)
           Bounce: 1 Etapas
@@ -98,6 +99,7 @@ lt:
         MazeStep: Labirintas Žingsnio režimu
         Wordsearch: Žodžių paieška
         Webapp: Webapp
+        ArtistEC: Menininkas
     trophy:
       name:
         Bronze: Bronza
@@ -321,6 +323,8 @@ lt:
         maze_wordsearch_k_15: 'Pajudink mane į vieną pusę, paskui - kitą, kad parašyčiau žodį "ABOVE"'
         maze_wordsearch_k_16: 'Pajudink mane į vieną pusę, paskui - kitą, kad parašyčiau žodį "BELOW"'
         maze_wordsearch_k_20: 'Pajudink mane į vieną pusę, paskui - kitą, kad parašyčiau žodį "STORY"'
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColour" block.'
     video:
       name:
         maze_intro: Labirinto užduoties įvadas

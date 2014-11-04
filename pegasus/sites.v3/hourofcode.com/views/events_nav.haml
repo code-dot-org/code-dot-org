@@ -1,0 +1,9 @@
+-current_url = request.path_info
+%ul
+  -{ hoc_s(:events_nav_all)=>hoc_uri('/events2'), hoc_s(:events_nav_classrooms)=>hoc_uri('/events2/classrooms'), hoc_s(:events_nav_whole_schools)=>hoc_uri('/events2/schools'), hoc_s(:events_nav_special)=>hoc_uri('/events2/special'), }.each_pair do |label,url|
+    - if current_url == url
+      %li
+        %span{style: "font-weight: bold; color: #ff8a00;"}= label
+    -else
+      %li
+        %a{:href=>url}= label

@@ -123,6 +123,7 @@ Jigsaw.init = function(config) {
     data: {
       localeDirection: BlocklyApps.localeDirection(),
       controls: require('./controls.html')({assetUrl: BlocklyApps.assetUrl}),
+      editCode: level.editCode,
       blockCounterClass: 'block-counter-default'
     }
   });
@@ -143,11 +144,6 @@ Jigsaw.init = function(config) {
     Blockly.HSV_SATURATION = 0.6;
 
     drawMap();
-  };
-
-  config.getDisplayWidth = function() {
-    var el = document.getElementById('visualizationColumn');
-    return el.getBoundingClientRect().width;
   };
 
   // only have trashcan for levels with toolbox

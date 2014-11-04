@@ -1,6 +1,6 @@
 * * *
 
-title: Resources layout: wide nav: resources_nav
+tittel: Resurser oppsett:bred nav: resurs_nav
 
 * * *
 
@@ -102,11 +102,27 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <p>
+      <a id="social"></a>
+    </p>
+    
+    <h2>
+      Post these on social media
+    </h2>
+    
+    <p>
+      <a href="/images/social-1.jpg"><img src="/images/fit-200/social-1.jpg" alt="bilde" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-2.jpg"><img src="/images/fit-200/social-2.jpg" alt="bilde" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-3.jpg"><img src="/images/fit-200/social-3.jpg" alt="bilde" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    
+    <p>
+      <a href="/images/mark.jpg"><img src="/images/fit-200/mark.jpg" alt="bilde" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-200/susan.jpg" alt="bilde" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-200/ashton.jpg" alt="bilde" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-200/marissa.jpg" alt="bilde" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-200/chris.jpg" alt="bilde" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    
+    <p>
       <a id="sample-emails"></a>
     </p>
     
     <h2>
-      Send disse e-postene for å promotere Kodetimen
+      Send these emails to help promote the Hour of Code
     </h2>
     
     <p>
@@ -114,27 +130,27 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Be om at skole, arbeidgiver eller venner registrerer seg:
+      Ask your school, employer or friends to sign up:
     </h2>
     
     <p>
-      Datamaskiner er overalt, men færre skoler underviser i informatikk nå enn for 10 år siden. De gode nyhetene er at vi jobber for å endre dette. Hvis du hørte om Kodetimen i fjor, skal du vite at den ble historisk. På en uke prøvde 15 millioner elever informatikk!
+      Datamaskiner er overalt, men færre skoler underviser i informatikk nå enn for 10 år siden. Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. In one week, 15 million students tried computer science!
     </p>
     
     <p>
-      Datavitenskap var på websidene til Google, MSN og Yahoo! og Disney, President Obama, Shakira og Ashton Kutcher dro i gang Kodetimen med videoer. Over 100 partnere ble med og støttet denne bevegelsen.
+      Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
     </p>
     
     <p>
-      La oss gjøre det enda større i år. Jeg ber deg om å delta i Kodetimen 2014. Bli med og lag din egen Kodetime i perioden 8. til 14. desember.
+      This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2014. Please get involved with an Hour of Code event during Computer Science Education Week, December 8-14, 2014.
     </p>
     
     <p>
-      Snakk om det! Lag et arrangement! Be din skole om å melde seg på! Eller prøv Kodetimen selv! Alle kan ha nytte av å lære det grunnleggende.
+      Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself -- everyone can benefit from learning the basics.
     </p>
     
     <p>
-      Hjelp oss med nå 100 millioner elever før året er omme! Komme i gang på http://hourofcode.com
+      Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com
     </p>
     
     <p>
@@ -142,51 +158,51 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Inviter media til å dekke arrangementet:
+      Invite media to attend your event:
     </h2>
     
     <p>
-      <strong>Tema:</strong> Lokalskolen er med på bevegelsen for at 100 millomer elever skal bli interessert i data
+      <strong>Subject line:</strong> Local school joins mission to introduce 100m students to computer science
     </p>
     
     <p>
-      Datamaskiner er overalt, men færre skoler underviser data nå enn for 10 år siden. Jenter og minoriteter er sterkt underrepresentert. Den gode nyheten er at nå skal det bli en forandring.
+      Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and minorities are severely underrepresented. Good news is, we’re on our way to change this.
     </p>
     
     <p>
-      På en uke i fjor fikk 15 millioner elever prøve seg på programmering! Datavitenskap var på websidene til Google, MSN og Yahoo! og Disney, President Obama, Shakira og Ashton Kutcher dro i gang Kodetimen med videoer. Over 100 partnere ble med og støttet denne bevegelsen.
+      In one week last year, 15 million students tried computer science! Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
     </p>
     
     <p>
-      Nå satser Kodetime-bevegelsen på å få med 100 millioner elever.
+      Now the Hour of Code movement is aiming for 100 million students.
     </p>
     
     <p>
-      Det er derfor alle [X antall] elever ved [navn på skole] skal være med på den største hendelsen i opplæringshistorien: Kodetimen 8. til 14 desember.
+      That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Dec. 8-14.
     </p>
     
     <p>
-      Jeg vil invitere deg til å delta bli med og se barna starte aktiviteten den [dato].
+      I'm writing to invite you to attend our kickoff assembly, and to see kids start the activity on [DATE].
     </p>
     
     <p>
-      Kodetimen er organisert av den ideelle organisasjonen Code.org og over 100 andre anser at det er nødvendig at dagens elever må lære seg kritiske ferdigheter for å lykkes i fremtiden. Vennligst bli med oss.
+      The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a statement that today’s generation of students are ready to learn critical skills for 21st century success. Please join us.
     </p>
     
     <p>
-      <strong>Kontakt:</strong> [Ditt navn], [tittel], mobil: 55 55 55 55
+      <strong>Contact:</strong> [YOUR NAME], [TITLE], cell: (212) 555-5555
     </p>
     
     <p>
-      <strong>Når:</strong> [Dato og klokkeslett for hendelsen]
+      <strong>When:</strong> [DATE and TIME of your event]
     </p>
     
     <p>
-      <strong>Hvor:</strong> [Adresse og veibeskrivelse]
+      <strong>Where:</strong> [ADDRESS and DIRECTIONS]
     </p>
     
     <p>
-      Jeg ser frem til å snakke med dere.
+      I look forward to being in touch.
     </p>
     
     <p>
@@ -194,39 +210,39 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Informere foreldrene om skolens arrangement:
+      Tell parents about your school's event:
     </h2>
     
     <p>
-      Kjære foreldre!
+      Dear Parents,
     </p>
     
     <p>
-      Vi lever i en verden omgitt av teknologi. Og vi vet at uansett hvilket område våre elever vil satse på som voksne, vil deres evne til å lykkes være avhengig av at de forstår hvordan teknologi fungerer. Men bare en lite brøkdel av oss lærer informatikk, og ferre studerer velger det nå enn for ti år siden.
+      We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly hinge on understanding how technology works. But only a tiny fraction of us are learning computer science, and less students are studying it than a decade ago.
     </p>
     
     <p>
-      Derfor vil hele skolen våren bli med på det største lærearrangementet i historien: Kodetimen som arrangeres 8. til 14. desember. I fjor prøvde 15 millioner elever datavitenskap i løpet av en uke. I år er blir det med elever fra hele verden for å nå 100 millioner!
+      That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 8-14). Last year, 15 million students tried computer science in one week. This year, we're joining students worldwide to reach 100 million students!
     </p>
     
     <p>
-      Vår Kodetime er et uttrykk for at [navn på skole] er opptatt av å lære eleven ferdigheter for framtida. For at våre elever skal fortsette med programmering, så vil vil lage Kodetimen til et stort arrangement. Jeg oppfordrer deg til å stille som frivillig, spre informasjon i lokale medier og på din sosiale mediekanaler og til å vurdre om du eller din arbeidsgiver vil være vertskap for programmeringsaktiviteter.
+      Our Hour of Code is a statement that [SCHOOL NAME] is ready to teach these foundational 21st century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on your social media channels and consider hosting additional Hour of Code events in the community.
     </p>
     
     <p>
-      Dette er en mulighet til å forande innholdet i skolene i [navn på sted eller by].
+      This is a chance to change the future of education in [TOWN/CITY NAME].
     </p>
     
     <p>
-      Se http://hourofcode.com for mer informasjon og hjelp til med å spre budskapet!
+      See http://hourofcode.com for details, and help spread the word.
     </p>
     
     <p>
-      Vennlig hilsen
+      Sincerely,
     </p>
     
     <p>
-      Rektor
+      Your principal
     </p>
     
     <p>
@@ -234,29 +250,29 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Inviter en lokalpolitiker til skolens arrangement:
+      Invite a local politician to your school's event:
     </h2>
     
     <p>
-      Kjære [ordfører/bystyrerepresentant Etternavn]:
+      Dear [Mayor/Governor/Representative/Senator LAST NAME]:
     </p>
     
     <p>
-      Visste du at i dagens arbeidsliv er det tre ganger så mange ledige IT-jobber som uteksaminerte kandidater innen fagområdet? Og programmering er i dag viktig for <em>alle</em> bransjer. Men 90% av skolene underviser det likevel ikke. På [navn på UTDANNINGSINSTITUSJON] prøver vi å endre på dette.
+      Did you know that in today’s economy, computing jobs outnumber students graduating into the field by 3-to-1? And, computer science is foundational for <em>every</em> industry today. Yet 90% of schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
     </p>
     
     <p>
-      Derfor vil hele skolen våren bli med på det største lærearrangementet i historien: Kodetimen som arrangeres 8. til 14. desember. I fjor prøvde 15 millioner elever datavitenskap i løpet av en uke. I år er blir det med elever fra hele verden for å nå 100 millioner!
+      That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 8-14). Last year, 15 million students tried computer science in one week. This year, we're joining students worldwide to reach 100 million students!
     </p>
     
     <p>
-      Jeg skriver for å invitere deg til å delta i vårt arrangement Kodetimen og holde en apell ved åpningen. Det vil foregå på [dato, tidspunkt, sted], og vil gi et viktig signal om at [delstat eller byen navn] vil lære elvene viktige ferdighetene for det 21. århundret. Vi ønsker å sikre at våre elever går i bresjen med å skape teknologi for fremtiden og ikke bare forbruker den.
+      I'm writing to invite you to take part in our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st century skills. We want to ensure that our students are on the forefront of creating technology of the future--not just consuming it.
     </p>
     
     <p>
-      Vennligst kontakt meg på [telefon eller epost]. Jeg ser frem til å høre fra deg.
+      Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
     </p>
     
     <p>
-      Med vennlig hilsen [navn], [tittel]
+      Sincerely, [NAME], [TITLE]
     </p>

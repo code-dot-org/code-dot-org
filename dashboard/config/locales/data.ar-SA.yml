@@ -49,6 +49,7 @@
           desc: "تحرير التعليمات البرمجية (بيتا)"
           MazeEC: "المرحلة 1"
           Webapp: "المرحلة 2"
+          ArtistEC: "المرحلة 3"
         events:
           desc: "ترتد (بيتا)"
           Bounce: "المرحلة 1"
@@ -98,6 +99,7 @@
         MazeStep: "وضع خطوة المتاهة"
         Wordsearch: "البحث"
         Webapp: Webapp
+        ArtistEC: "الاعب"
     trophy:
       name:
         Bronze: "برونزية"
@@ -509,6 +511,9 @@
         maze_wordsearch_k_16: حركني طريقاً واحداً , ثم آخر لتهجئة الكلمة "أسفل"
         maze_wordsearch_k_20: هذا اختبار ! حركني طريقاً واحداً , ثم آخر لتهجئة الكلمة
           "قصة"
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
+          it in the new "penColour" block.'
     video:
       name:
         maze_intro: "مقدمة حول المتاهة"

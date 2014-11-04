@@ -66,13 +66,7 @@
     overview_teacher: Teach computer science in your classroom by signing up for an
       account.<p/> You'll be able to track your students' progress and get rewards.
     no_signup_message: <a target="_blank"href="http://learn.code.org"> いろいろなステージとパズルを見られます。</a>しかし、あなたの進捗状況を保存するために入会する必要があります。
-    prizes_message: "コンセプトトロフィー %{num_trophies} こ（全部）を獲得した米国の学生は無料Dropbox、スカイプのクレジット、とかElectronic
-      Artsからの無料ダウンロードできるゲームなど、バラエティにあふれる商品が選べます。"
     teacher_educator_guide: "教育者のガイドを参照してください。"
-    teacher_prize_header: 100ドル賞金が当たります<a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
-      rewards
-    teacher_prize_message: <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>とパートナーを組んで,Code.orgでは
-      $1,000を上限とするクラスで使う資金を、このコースの間に少なくとも15人の学生を導いた米国の公立学校の教師へ提供します。 <a href="http://code.org/educate/20hr">詳細は教育者ガイドを参考にしてください。</a> 
     teacher_pitch: "あなたの教室でK 8(幼稚園から８学年生）にコンピューター科学の紹介を教える。"
     teacher_title: "教師入会"
     student_pitch: '1 時間を超えて: 私たちのK 8 入門コンピューターサイエンスを試してみてください'
@@ -83,6 +77,7 @@
     gender: "性別 （オプションです）"
     birthday: "誕生日 (optionalです)"
     age: "年齢"
+    user_type: Are you a student or teacher?
     submit: "入会"
     teacher: "あなたは教師ですか？"
     valid_username: "利用可能 ！"
@@ -356,8 +351,6 @@
     student_progress: "学習の進行状況"
     student_stats: '%{trophy_max}このうち%{trophy_count} の"コンセプト"習得のトロフィーを獲得しました。'
     student_left_off: "中断したところから。"
-    student_finished_prize: "すべてのチュートリアルを完了したら、あなたの %{prize_link} を主張した後、別のクラス %{online_link}
-      か%{local_school_link}を選らんでください"
     student_finished: "すべてのチュートリアルを完了したら、別のクラス % {online_link} または % {local_school_link}を選んでください。"
     local_school: "地元の学校"
     online: "オンライン"
@@ -381,6 +374,9 @@
     male: "男性"
     female: "女性"
     none: "答えたくないです。"
+  user_type:
+    student: "生徒"
+    teacher: Teacher
   footer:
     help_from_html: チュートリアルを作成わ<a href="http://www.google.com">Google</a>、<a href="http://www.microsoft.com">マイクロソフト</a>、<a
       href="http://www.facebook.com">Facebook</a>、<a href="http://www.twitter.com">
@@ -396,13 +392,6 @@
     tos: "サービス利用規約"
     privacy: "プライバシー ポリシー"
     secure: Secure Version
-  prize_mail:
-    prize_earned:
-      subject: Code.org であなたの賞品を交換 ！
-    teacher_prize_earned:
-      subject: Code.org であなたの賞品を交換 ！
-    teacher_bonus_prize_earned:
-      subject: Code.org であなたのボーナス賞品を交換 ！
   reference_area:
     title: "助けが必要ですか？"
     subtitle: "ビデオやヒントを見る"

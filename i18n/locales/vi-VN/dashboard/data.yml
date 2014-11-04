@@ -53,6 +53,7 @@ vi:
           Webapp: |
             màn 2
             
+          ArtistEC: màn 3
         events:
           desc: Bounce (thử nghiệm)
           Bounce: màn 1
@@ -104,6 +105,7 @@ vi:
         MazeStep: Chế độ mê cung từng bước thực hiện
         Wordsearch: Tìm kiếm từ/ từ vựng
         Webapp: Webapp
+        ArtistEC: nghệ sĩ
     trophy:
       name:
         Bronze: Đồng
@@ -341,6 +343,8 @@ vi:
         maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
         maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
         maze_wordsearch_k_20: This is a test! Move me one way, then another to spell the word STORY
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColour" block.'
     video:
       name:
         maze_intro: Maze Intro

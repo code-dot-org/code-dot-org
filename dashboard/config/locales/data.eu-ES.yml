@@ -49,6 +49,7 @@
           desc: Aldatu Kodea (beta)
           MazeEC: 1. etapa
           Webapp: 2. etapa
+          ArtistEC: 3. etapa
         events:
           desc: Errebotea (beta)
           Bounce: 1. etapa
@@ -98,6 +99,7 @@
         MazeStep: Labirinto pausu modua
         Wordsearch: Wordsearch
         Webapp: Webapp
+        ArtistEC: Artista
     trophy:
       name:
         Bronze: Brontzea
@@ -523,6 +525,9 @@
         maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
         maze_wordsearch_k_20: This is a test! Move me one way, then another to spell
           the word STORY
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
+          it in the new "penColour" block.'
     video:
       name:
         maze_intro: Labirintora sarrera

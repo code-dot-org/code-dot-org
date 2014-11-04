@@ -117,7 +117,7 @@
   "LISTS_IS_EMPTY_HELPURL":"https:\/\/code.google.com\/p\/blockly\/wiki\/Lists#is_empty",
   "LISTS_IS_EMPTY_TITLE":"%1 пуст",
   "LISTS_LENGTH_HELPURL":"https:\/\/code.google.com\/p\/blockly\/wiki\/Lists#length_of",
-  "LISTS_LENGTH_INPUT_LENGTH":"length of",
+  "LISTS_LENGTH_INPUT_LENGTH":"длина",
   "LISTS_LENGTH_TITLE":"длина %1",
   "LISTS_LENGTH_TOOLTIP":"Возвращает длину списка.",
   "LISTS_REPEAT_HELPURL":"https:\/\/code.google.com\/p\/blockly\/wiki\/Lists#create_list_with",

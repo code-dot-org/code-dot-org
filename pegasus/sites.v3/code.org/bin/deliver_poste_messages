@@ -6,8 +6,8 @@ require 'base64'
 require 'nokogiri'
 
 BATCH_SIZE = 10000
-MAX_THREAD_COUNT = 400
-MIN_MESSAGES_PER_THREAD = 25
+MAX_THREAD_COUNT = 100
+MIN_MESSAGES_PER_THREAD = 50
 
 POSTE_DB = Sequel.connect(CDO.pegasus_db_writer.sub('mysql:', 'mysql2:'), max_connections:MAX_THREAD_COUNT)
 #POSTE_DB.loggers << $log
@@ -164,7 +164,7 @@ class Deliverer
     name = address[:name].to_s.strip
     return email if name.empty?
     
-    name = "\"#{name.gsub('"', '\"')}\"" if name =~ /[;,\"\'\(\)]/
+    name = "\"#{name.gsub('"', '\"').gsub("'", "\\'")}\"" if name =~ /[;,\"\'\(\)]/
     "#{name} <#{email}>".strip
   end
   
@@ -246,11 +246,15 @@ def main()
     until queue.empty?
       next unless delivery = queue.pop(true) rescue nil
 
-      #begin
+      begin
         deliverer.send delivery
+      rescue Net::SMTPSyntaxError => e
+        puts "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
+      rescue Net::SMTPFatalError => e
+        puts "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
       #rescue => e
         #puts "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
-      #end
+      end
 
       POSTE_DB[:poste_deliveries].where(id:delivery[:id]).update(sent_at:DateTime.now)
     end

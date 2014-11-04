@@ -12,11 +12,11 @@
         password_confirmation: "密碼確認"
         current_password: "目前的密碼："
         locale: "語言"
-        age: Age
+        age: "年齡"
         gender: "性別"
         edit_header: "編輯帳戶的詳細資訊"
         error:
-          future: can't be in the future
+          future: "不能在未來"
   hello: "世界您好"
   welcome_back: "歡迎回來，%{name}"
   add_teacher_form:
@@ -24,7 +24,7 @@
       label: "通過代碼或電子郵件指定一個教師："
       placeholder: "代碼 (ABCDEF) 或電子郵件 (teacher@school.edu)"
     code:
-      label: "透過區代碼增加一位教師"
+      label: "透過班級代碼增加一位教師"
       placeholder: Code (ABCDEF)
     submit: "指定教師"
   add_hint_form:
@@ -32,7 +32,7 @@
     submit: "添加提示"
   appname: Code.org
   stage: "階段"
-  stage_number: Stage %{number}
+  stage_number: "階段 %{number}"
   puzzle: "關卡"
   trophies: "獎盃"
   courses: "課程"
@@ -55,10 +55,10 @@
       to sign out of %{provider}.
     already_signedup: "已經註冊了嗎？"
     notyet_signedup: "還未註冊嗎？"
-    google_oauth2: Google Account
+    google_oauth2: Google帳戶
     twitter: Twitter
     facebook: Facebook
-    windowslive: Microsoft Account
+    windowslive: "微軟帳戶"
     forgot_password: "忘記了您的密碼嗎？"
     need_confirmation: "沒有收到確認說明嗎？"
     need_unlock: "沒有收到解鎖說明嗎？"
@@ -67,22 +67,18 @@
     overview_teacher: Teach computer science in your classroom by signing up for an
       account.<p/> You'll be able to track your students' progress and get rewards.
     no_signup_message: 您可以從 <a target="_blank"href="HTTP://learn.code.org"> 瀏覽各個階段和關卡</a>，但您需要註冊一個帳號來保存您的進度。
-    prizes_message: "贏得所有 %{num_trophies} 個概念獎盃的美國學生，可以以下項目中選取獎品，包括免費的DropBox空間、Skype點數及EA所提供的遊戲下載。"
     teacher_educator_guide: "請參閱教育者指南"
-    teacher_prize_header: ' 贏取由<a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>所提供的
-      $1,000 獎勵'
-    teacher_prize_message: 透過與 <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>合作。
-      Code.org 將為帶領15位以上學生參加本次課程的全美公立學校教師提供高達$1000的教學基金。 <a href="http://code.org/educate/20hr">更詳細的訊息請參閱教師指南。</a> 
-    teacher_pitch: "在您的班上進行K-8電腦科學簡介課程。"
+    teacher_pitch: "教師註冊Code.org"
     teacher_title: "教師註冊"
-    student_pitch: "在一小時之後：試試我們的K-8電腦科學簡介課程"
+    student_pitch: "學生註冊Code.org"
     student_title: "學生註冊"
     school_name: "學校名稱 （選填）"
     school_address: "學校地址 （選填）"
     address_placeholder: "地址、 城市、 州、 郵遞區號"
     gender: "性別 （選填）"
     birthday: "生日 （選填）"
-    age: Age (optional)
+    age: "年齡"
+    user_type: Are you a student or teacher?
     submit: "登錄"
     teacher: "你是老師嗎？"
     valid_username: "可以使用!"
@@ -94,8 +90,7 @@
     student_terms: "我同意遵守Code.org的服務條款。如果我的年齡小於13歲，當我按下確認鈕送出此表單的同時，表示我已經取得父母或法定監護人的允許來使用
       Code.org 的服務。"
     teacher_terms: "我同意接受 Code.org服務條款的約束。"
-    additional_information: We need some additional information to continue signing
-      you up.
+    additional_information: "我們還需要一些其他資訊來完成你的註冊"
   signin_form:
     title: "你已經有一個帳號了嗎？請登入"
     login: "電子郵件或使用者名稱"
@@ -103,14 +98,14 @@
     remember: "記住密碼"
     submit: "登入"
   signin:
-    try_heading: Want to try coding without signing up?
+    try_heading: "想要在還沒註冊之前就先試試寫程式嗎？"
     try_hoc: "第一次嘗試一小時編程"
     try_20hours: "試試看我們的 20 小時簡介電腦科學"
   signinsection:
-    welcome: Welcome to %{section_name}
-    name: Choose your name
-    picture: Now find your secret picture
-    words: Now enter your secret words
+    welcome: "歡迎來到%{section_name}"
+    name: "選取你的名字"
+    picture: "現在找出你的秘密圖片"
+    words: "現在輸入你的通關密語"
     login: "登入"
   password:
     reset_form:
@@ -141,9 +136,9 @@
       username_not_found: "使用者名稱 %{username}找不到"
       username_in_use: "%{username} 已經被使用了，請重新挑選一個。"
       no_teacher: "找不到以 %{teacher_email_or_code}註冊的使用者。請邀請他們到這註冊，然後再嘗試新增他們。"
-      section_not_found: Could not find a section with code '%{section_code}'.
-      blank_code: "請輸入教師代碼或是電子信箱"
-      cant_join_own_section: Sorry, you can't join your own section.
+      section_not_found: "找不到代碼是 %{section_code} 的班級。"
+      blank_code: "請輸入班級代碼"
+      cant_join_own_section: "抱歉, 你不能加入你自己創建的班級"
     mail:
       invite_student:
         subject: "加入%{teacher_name}老師在Code.org的班級。"
@@ -171,13 +166,13 @@
     teacher_info_required: "教師的獎勵需要學校名稱跟地址:"
     teacher_email_required: "老師獎需要一個已確認電子郵件地址："
     confirm:
-      title: Please Confirm
+      title: "請確認"
       'no': "否"
       'yes': "確定"
       msg: Are you sure you want to claim the %{prize_name} prize?
       msg_student: 'NOTE: You can only choose one type of prize.'
       msg_publicschool: "請確認您是美國公立學校的老師。"
-      msg_visit_website: Visit website
+      msg_visit_website: "訪問網站"
     providers:
       apple_itunes: "$10 iTunes Gift Card"
       donors_choose: DonorsChoose.org $750 credit
@@ -229,8 +224,8 @@
       finished_hoc: 我已經完成我的"一小時程式設計"課程。
       sign_in_to_save: "登入以儲存進度"
       free_play:
-        playlab: Make an App
-        artist: Draw Something
+        playlab: "製作一個App"
+        artist: "畫些什麼東西"
     user:
       classroom: "我的學生"
       label: "嗨 %{username}"
@@ -240,7 +235,7 @@
       logout: "登出"
       signin: "登入"
       signup: "註冊帳號"
-      already_registered: Already registered?
+      already_registered: "已經註冊了嗎？"
     popup:
       progress: "您的進度"
       lines: "全部程式碼行數: %{lines}"
@@ -260,28 +255,27 @@
       remove: "你確認要刪除這個老師嗎？"
     tools: "教師工具"
     followers:
-      section: 'Section:'
-      stages: 'Stage(s) to display:'
+      section: "班别："
+      stages: "要顯示的階段:"
       show_past: 'Show student activity (%{bullet_html}) in the past:'
       levels_key: Levels key
       perfect: Completed, perfect
       completed: "完成了，但是用到太多程式積木"
       tried: Tried, but not completed
-      not_tried: Not tried yet
+      not_tried: "還沒試過"
       activity: Indicates student activity in the last %{hours} %{plural}
-      no_section: No assigned section
+      no_section: "沒有指定班級"
       trophies: "獎盃"
     students:
       name: "你的名字"
       username: "使用者名稱 "
       password: "密碼"
       manage: "學生管理"
-      dashboard: Go to Teacher Dashboard
+      dashboard: "到教師主控台"
       add: "新增學生"
-      remove: remove student
-      confirm_remove: Are you sure you want to remove this student?
-      help_reassign: To divide your class into multiple sections, select students
-        to assign to a new section.
+      remove: "刪除學生"
+      confirm_remove: "你確定要刪除這個學生嗎？"
+      help_reassign: "要將你的學生分成不同班級，請選取要指派到新班級的學生"
       help_register: Instead of making you spend a lot of time individually importing
         student data, you can set up your class quickly by asking them to signup.
         Your students will need to choose usernames and passwords, but they WILL NOT
@@ -289,30 +283,31 @@
         you will be able to reset it for them.
       register: Ask your students to register themselves
       vist: Ask your students to visit
-      section_code: 'and enter their section-code:'
-      first_please: First, please %{add_section}
+      section_code: "並輸入他們的班級代碼:"
+      first_please: "首先，請 %{add_section}"
       for: For
       enter: 'enter:'
     sections:
-      add: Add section
-      manage: "管理區"
-      section: Section
-      students: Students
-      section_code: Section Code
-      add_section_code: Add Students Section-Code
-      secret: Secret type
-      grade: Grade
-      course: Course
-      rename: rename
-      edit: edit
-      delete: delete
-      confirm_delete: Are you sure you want to delete this section?
-      email: Send in email
+      add: "增加班級"
+      manage: "管理班級"
+      section: "班級"
+      students: "學生"
+      section_code: "班級代碼"
+      add_section_code: "增加學生班級代碼"
+      secret: "密碼類型"
+      grade: "年級"
+      course: "課程"
+      rename: "重新命名"
+      edit: "編輯"
+      delete: "刪除"
+      confirm_delete: "你確定要刪除這個班級嗎？"
+      email: "在電子郵件中發送"
     rollup: "進度表"
     activity: "最近的班級活動"
     user_not_found: "無法找到該名老師或學生"
-    cant_remove_student_no_email: "因為 %{student_name} 並未註冊電子郵件，故 %{student_name} 無法作為你的學生被移除"
-    cant_remove_teacher_no_email: "因為您尚未註冊電子郵件，故 %{teacher_name} 無法作為你的老師被移除的"
+    cant_remove_student_no_email: "因為 %{student_name} 並未註冊電子郵件，所以無法將 %{student_name}
+      從你的學生中移除"
+    cant_remove_teacher_no_email: "因為您尚未註冊電子郵件，所以無法移除你的老師 %{teacher_name}"
     student_teacher_disassociated: "%{student_name}的老師%{teacher_name}已經被移除"
   user:
     email_confirm_needed: "電子郵件地址尚未被確認："
@@ -348,8 +343,6 @@
     student_progress: "您的學習進度"
     student_stats: 你已經獲得 %{trophy_count}/%{trophy_max} "概念通達"獎盃
     student_left_off: "你離開的地方："
-    student_finished_prize: "你已經完成所有練習課程，換取你的 %{prize_link}，並挑選另外的 %{online_link}
-      或到 {local_school_link} %學習"
     student_finished: "你已經完成所有練習課程，換取你的 %{prize_link}，並挑選另外的 %{online_link} 或到 {local_school_link}
       %學習"
     local_school: "當地的學校"
@@ -373,6 +366,9 @@
     male: "男性"
     female: "女性"
     none: "不願回答"
+  user_type:
+    student: "學生 "
+    teacher: Teacher
   footer:
     help_from_html: 本課程由來自 <a href="http://www.google.com">Google</a>, <a href="http://www.microsoft.com">Microsoft</a>,
       <a href="http://www.facebook.com">Facebook</a>, 和 <a href="http://www.twitter.com">Twitter</a>的工程師共同建立。.
@@ -386,13 +382,6 @@
     tos: "服務條款"
     privacy: "隱私權政策"
     secure: Secure Version
-  prize_mail:
-    prize_earned:
-      subject: Redeem your prize at Code.org!
-    teacher_prize_earned:
-      subject: Redeem your prize at Code.org!
-    teacher_bonus_prize_earned:
-      subject: "贖回你在 Code.org 的額外獎勵 ！"
   reference_area:
     title: "需要幫忙嗎？"
     subtitle: "看看這些影片和提示"
@@ -458,9 +447,8 @@
       title: "一小時的程式設計課程"
       body: Try the basics of computer science. Millions have given it a shot.
     flappy:
-      title: Flappy Code
-      body: Wanna write your own game in less than 10 minutes? Try our Flappy Code
-        tutorial!
+      title: Flappy遊戲設計
+      body: 寫出一個你自己的遊戲只要不到十分鐘!? 試試我們的"Flappy程式設計"教學
     20hour:
       title: Intro Course
       body: Try our 20-hour Intro to Computer Science course.
@@ -518,9 +506,8 @@
           title: Builder
           description: ''
         flappy:
-          title: Flappy Code
-          description: Wanna write your own game in less than 10 minutes? Try our
-            Flappy Code tutorial!
+          title: Flappy遊戲設計
+          description: 寫出一個你自己的遊戲只要不到十分鐘!? 試試我們的"Flappy程式設計"教學
         jigsaw:
           title: Jigsaw
           description: ''

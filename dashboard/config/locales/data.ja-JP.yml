@@ -53,6 +53,7 @@
           desc: Edit Code (beta)
           MazeEC: "ステージ 1"
           Webapp: "ステージ 2"
+          ArtistEC: "ステージ 3"
         events:
           desc: Bounce (beta)
           Bounce: "ステージ 1"
@@ -102,6 +103,7 @@
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
         Webapp: Webapp
+        ArtistEC: "アーティスト"
     trophy:
       name:
         Bronze: "銅"
@@ -388,6 +390,9 @@
         maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
         maze_wordsearch_k_20: This is a test! Move me one way, then another to spell
           the word STORY
+        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
+          it in the new "penColour" block.'
     video:
       name:
         maze_intro: "迷路入門"

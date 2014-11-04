@@ -6,6 +6,8 @@
 <br/>
 - <a href="<%= hoc_uri('/resources#posters') %>"><%= hoc_s(:resources_posters)%></a>
 <br/>
+- <a href="<%= hoc_uri('/resources#social') %>"><%= hoc_s(:resources_social)%></a>
+<br/>
 <% if @country != 'uk' %>
 - <a href="<%= hoc_uri('/resources#banners') %>"><%= hoc_s(:resources_banners)%></a>
 <br/>

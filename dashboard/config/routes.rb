@@ -6,9 +6,6 @@ Dashboard::Application.routes.draw do
     end
   end
   resources :activity_hints, only: [:update]
-  resources :teacher_bonus_prizes
-  resources :teacher_prizes
-  resources :prizes
   resources :callouts
   resources :videos do
     collection do
@@ -121,9 +118,6 @@ Dashboard::Application.routes.draw do
   get '/jigsaw/:chapter', to: 'script_levels#show', script_id: Script::JIGSAW_ID, as: 'jigsaw_chapter', format: false
   get '/jigsaw/:chapter', to: 'script_levels#show', script_id: Script::JIGSAW_ID.to_s, format: false
 
-
-  resources :prize_providers
-  get '/prize_providers/:id/claim_prize', to: 'prize_providers#claim_prize', as: 'prize_provider_claim_prize'
 
   resources :followers, only: [:create, :index]
   get '/followers/:teacher_user_id/accept', to: 'followers#accept', as: 'follower_accept'

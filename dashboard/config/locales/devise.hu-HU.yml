@@ -1,7 +1,7 @@
 "hu":
   devise:
     confirmations:
-      confirmed: Sikeresen megerősítették, az e-mail címét.
+      confirmed: Az e-mail cím megerősítése sikeresen megtörtént.
       send_instructions: Néhány percen belül kapsz egy e-mailt arról, hogy miként
         erősítsd meg a fiókod.
       send_paranoid_instructions: Ha az email címe létezik az a adatbázisunkban, akkor

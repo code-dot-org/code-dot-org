@@ -63,7 +63,8 @@ Calc.init = function(config) {
   Calc.shownFeedback_ = false;
 
   config.grayOutUndeletableBlocks = true;
-  config.insertWhenRun = false;
+  config.forceInsertTopBlock = 'functional_compute';
+  config.enableShowCode = false;
 
   config.html = page({
     assetUrl: BlocklyApps.assetUrl,
@@ -75,6 +76,7 @@ Calc.init = function(config) {
       }),
       blockUsed : undefined,
       idealBlockNumber : undefined,
+      editCode: level.editCode,
       blockCounterClass : 'block-counter-default'
     }
   });
@@ -89,6 +91,10 @@ Calc.init = function(config) {
     var svg = document.getElementById('svgCalc');
     svg.setAttribute('width', CANVAS_WIDTH);
     svg.setAttribute('height', CANVAS_HEIGHT);
+
+    if (level.freePlay) {
+      document.getElementById('goalHeader').setAttribute('visibility', 'hidden');
+    }
 
     // This is hack that I haven't been able to fully understand. Furthermore,
     // it seems to break the functional blocks in some browsers. As such, I'm
@@ -116,11 +122,6 @@ Calc.init = function(config) {
     dom.addClickTouchEvent(resetButton, Calc.resetButtonClick);
   };
 
-  config.getDisplayWidth = function() {
-    var el = document.getElementById('visualizationColumn');
-    return el.getBoundingClientRect().width;
-  };
-
   BlocklyApps.init(config);
 };
 
@@ -146,6 +147,7 @@ Calc.resetButtonClick = function () {
   Calc.expressions.user = null;
   Calc.expressions.current = null;
   Calc.shownFeedback_ = false;
+  Calc.message = null;
 
   Calc.drawExpressions();
 };
@@ -205,8 +207,12 @@ function generateExpressionFromBlockXml(blockXml) {
  * Execute the user's code.  Heaven help us...
  */
 Calc.execute = function() {
+  Calc.result = BlocklyApps.ResultType.UNSET;
+  Calc.testResults = BlocklyApps.TestResults.NO_TESTS_RUN;
+  Calc.message = undefined;
+
   // todo (brent) perhaps try to share user vs. expected generation better
-  var code = Blockly.Generator.workspaceToCode('JavaScript');
+  var code = Blockly.Generator.workspaceToCode('JavaScript', 'functional_compute');
   evalCode(code);
 
   if (!Calc.lastExpression) {
@@ -214,32 +220,38 @@ Calc.execute = function() {
   }
 
   Calc.expressions.user = Calc.lastExpression.clone();
-  Calc.expressions.current = Calc.expressions.target.clone();
+  if (Calc.expressions.target) {
+    Calc.expressions.current = Calc.expressions.target.clone();
+    Calc.expressions.user.applyExpectation(Calc.expressions.target);
+  }
 
-  Calc.expressions.user.applyExpectation(Calc.expressions.target);
+  Calc.result = !Calc.expressions.user.failedExpectation(true);
+  Calc.testResults = BlocklyApps.getTestResults(Calc.result);
 
-  var result = !Calc.expressions.user.failedExpectation(true);
 
-  var equivalent = Calc.expressions.user.isEquivalent(Calc.expressions.target);
+  // equivalence means the expressions are the same if we ignore the ordering
+  // of inputs
+  // todo - check for particular testResult instead of result
+  if (!Calc.result && Calc.expressions.user.isEquivalent(Calc.expressions.target)) {
+    Calc.testResults = TestResults.APP_SPECIFIC_FAIL;
+    Calc.message = calcMsg.equivalentExpression();
+  }
+
+  if (level.freePlay) {
+    Calc.testResults = BlocklyApps.TestResults.FREE_PLAY;
+  }
 
   Calc.drawExpressions();
 
   var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
   var textBlocks = Blockly.Xml.domToText(xml);
 
-  // todo (brent) - better way of doing this
-  if (equivalent) {
-    Calc.message = result ? "correct" : "expression equivalent";
-  } else {
-    Calc.message = null;
-  }
-
   var reportData = {
     app: 'calc',
     level: level.id,
     builder: level.builder,
-    result: result,
-    testResult: result ? TestResults.ALL_PASS : TestResults.APP_SPECIFIC_FAIL,
+    result: Calc.result,
+    testResult: Calc.testResults,
     program: encodeURIComponent(textBlocks),
     onComplete: onReportComplete
   };
@@ -262,6 +274,7 @@ Calc.step = function (ignoreFailures) {
     return;
   }
 
+  // If we've fully collapsed our expression, display feedback
   if (!Calc.expressions.user.isOperation()) {
     displayFeedback();
     return;
@@ -273,7 +286,9 @@ Calc.step = function (ignoreFailures) {
   if (!collapsed) {
     continueButton.className = continueButton.className.replace(/hide/g, "");
   } else {
-    Calc.expressions.current.collapse();
+    if (Calc.expressions.current) {
+      Calc.expressions.current.collapse();
+    }
     Calc.drawExpressions();
 
     continueButton.className += " hide";
@@ -297,11 +312,15 @@ Calc.drawExpressions = function () {
   // user: (0 * (3 + 4))
   // right now, we'll highlight the 1 + 2 for goal, and the 3 + 4 for user
 
-  expected.applyExpectation(expected);
-  drawSvgExpression('answerExpression', expected, user !== null);
+  if (expected) {
+    expected.applyExpectation(expected);
+    drawSvgExpression('answerExpression', expected, user !== null);
+  }
 
   if (user) {
-    user.applyExpectation(expected);
+    if (expected) {
+      user.applyExpectation(expected);
+    }
     drawSvgExpression('userExpression', user, true);
   } else {
     clearSvgExpression('userExpression');
@@ -367,14 +386,23 @@ function drawSvgExpression(elementId, expr, styleMarks) {
 var displayFeedback = function(response) {
   if (!Calc.expressions.user.isOperation() && !Calc.shownFeedback_) {
     Calc.shownFeedback_ = true;
-    BlocklyApps.displayFeedback({
+    // override extra top blocks message
+    level.extraTopBlocks = calcMsg.extraTopBlocks();
+    var options = {
       app: 'Calc',
       skin: skin.id,
-      // feedbackType: Calc.testResults,
-      message: Calc.message ? Calc.message : "todo (brent): wrong",
       response: response,
-      level: level
-    });
+      level: level,
+      feedbackType: Calc.testResults,
+      appStrings: {
+        reinfFeedbackMsg: calcMsg.reinfFeedbackMsg()
+      }
+    };
+    if (Calc.message) {
+      options.message = Calc.message;
+    }
+
+    BlocklyApps.displayFeedback(options);
   }
 };
 

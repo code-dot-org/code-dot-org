@@ -102,6 +102,22 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <p>
+      <a id="social"></a>
+    </p>
+    
+    <h2>
+      Post these on social media
+    </h2>
+    
+    <p>
+      <a href="/images/social-1.jpg"><img src="/images/fit-200/social-1.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-2.jpg"><img src="/images/fit-200/social-2.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-3.jpg"><img src="/images/fit-200/social-3.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    
+    <p>
+      <a href="/images/mark.jpg"><img src="/images/fit-200/mark.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-200/susan.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-200/ashton.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-200/marissa.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-200/chris.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    
+    <p>
       <a id="sample-emails"></a>
     </p>
     
@@ -118,19 +134,19 @@ title: Resources layout: wide nav: resources_nav
     </h2>
     
     <p>
-      Computers are everywhere, but fewer schools teach computer science than 10 years ago. 良いお知らせは、私たちはこれを変えようとしているということです。 去年開催したHour of Codeについて聞いた事がある人は、それが新たな歴史を産んだという事をわかっていらっしゃると思います。 In one week, 15 million students tried computer science!
+      Computers are everywhere, but fewer schools teach computer science than 10 years ago. Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. In one week, 15 million students tried computer science!
     </p>
     
     <p>
-      コンピューター科学はGoogle,MSN, Yahoo!のホームページ上にありました。 そしてディズニーも。 オバマ大統領、シャキーラやアシュトン・カッチャーが動画でHour of Codeのキックオフに参加しました。 100 以上のパートナー会社が、この動きをサポートするために支援してくれました。
+      Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
     </p>
     
     <p>
-      今年はさらによりよいものにしましょう。Hour of Code 2014に参加しませんか。2014年12月8日〜14日に行われるコンピューター科学教育週間の間に行われるHour of Codeのイベントにぜひ覗いてみてください。
+      This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2014. Please get involved with an Hour of Code event during Computer Science Education Week, December 8-14, 2014.
     </p>
     
     <p>
-      どんどん広めてください。イベントを開催してください。地域の学校にサインアップするようお勧めください。もしくはHour of Codeを自分自身で経験してみてください--基礎を学ぶことによって得る物があります。
+      Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself -- everyone can benefit from learning the basics.
     </p>
     
     <p>
@@ -154,7 +170,7 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <p>
-      In one week last year, 15 million students tried computer science! コンピューター科学はGoogle,MSN, Yahoo!のホームページ上にありました。 そしてディズニーも。 オバマ大統領、シャキーラやアシュトン・カッチャーが動画でHour of Codeのキックオフに参加しました。 100 以上のパートナー会社が、この動きをサポートするために支援してくれました。
+      In one week last year, 15 million students tried computer science! Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
     </p>
     
     <p>

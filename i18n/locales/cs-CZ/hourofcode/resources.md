@@ -102,11 +102,27 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <p>
+      <a id="social"></a>
+    </p>
+    
+    <h2>
+      Post these on social media
+    </h2>
+    
+    <p>
+      <a href="/images/social-1.jpg"><img src="/images/fit-200/social-1.jpg" alt="obrázek" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-2.jpg"><img src="/images/fit-200/social-2.jpg" alt="obrázek" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-3.jpg"><img src="/images/fit-200/social-3.jpg" alt="obrázek" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    
+    <p>
+      <a href="/images/mark.jpg"><img src="/images/fit-200/mark.jpg" alt="obrázek" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-200/susan.jpg" alt="obrázek" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-200/ashton.jpg" alt="obrázek" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-200/marissa.jpg" alt="obrázek" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-200/chris.jpg" alt="obrázek" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    
+    <p>
       <a id="sample-emails"></a>
     </p>
     
     <h2>
-      Propagujte Hodinu kódování odesláním těchto e-mailových zpráv
+      Send these emails to help promote the Hour of Code
     </h2>
     
     <p>
@@ -114,27 +130,27 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Poproste svou školu, zaměstnavatele nebo přátele, aby se přihlásili:
+      Ask your school, employer or friends to sign up:
     </h2>
     
     <p>
-      Počítače jsou všude, ale dnes vyučuje informatiku méně škol než tomu bylo před 10 lety. Dobrou zprávou je, že jsme na cestě jak to změnit. Pokud v loňském roce jste slyšeli o Hodině kódu , možná víte, že vstoupila do dějin. Během jediného týdne si informatiku vyzkoušelo 15 miliónů studentů!
+      Počítače jsou všude, ale dnes vyučuje informatiku méně škol než tomu bylo před 10 lety. Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. In one week, 15 million students tried computer science!
     </p>
     
     <p>
-      Informatika byla na domovských stránkách Google, MSN, Yahoo! a Disney. Prezident Obama, Shakira a Ashton Kutcher odstartovali Hodinu kódu z videí. Přes 100 partnerů se dalo dohromady na podporu tohoto hnutí.
+      Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
     </p>
     
     <p>
-      V letošním roce to bude ještě větší. Přidejte se, prosím, na Hodinu kódu 2014. Zapojte se k události Hodina kódu během vzdělávacího týdne informatiky od 8. až 14. prosinci 2014.
+      This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2014. Please get involved with an Hour of Code event during Computer Science Education Week, December 8-14, 2014.
     </p>
     
     <p>
-      Dostanete slovo. Hostit akci. Požádejte místní školu, aby se přihlásila. Nebo zkuste Hodinu kódu sami – každý může využívat výhody se naučit základům.
+      Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself -- everyone can benefit from learning the basics.
     </p>
     
     <p>
-      Pomozte nám dosáhnout 100 milionů studentů do konce roku! Začněte na http://hourofcode.com
+      Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com
     </p>
     
     <p>
@@ -142,51 +158,51 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Pozvěte k účasti na své akci média:
+      Invite media to attend your event:
     </h2>
     
     <p>
-      <strong>Subject line:</strong> Místní školy se přidávají k misi seznámit 100 milionů studentů s informatikou
+      <strong>Subject line:</strong> Local school joins mission to introduce 100m students to computer science
     </p>
     
     <p>
-      Počítače jsou všude, ale dnes vyučuje informatiku méně škol než tomu bylo před 10 lety. Dívky a menšiny jsou nedostatečně zastoupeny. Dobrou zprávou je, že jsme na cestě změnit to.
+      Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and minorities are severely underrepresented. Good news is, we’re on our way to change this.
     </p>
     
     <p>
-      V loňském roce si během jediného týdne informatiku vyzkoušelo 15 milionů studentů! Informatika byla na domovských stránkách Google, MSN, Yahoo! a Disney. Prezident Obama, Shakira a Ashton Kutcher odstartovali Hodinu kódu z videí. Přes 100 partnerů se dalo dohromady na podporu tohoto hnutí.
+      In one week last year, 15 million students tried computer science! Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
     </p>
     
     <p>
-      Nyní hnutí Hodina kódu usiluje o 100 milionů studentů.
+      Now the Hour of Code movement is aiming for 100 million students.
     </p>
     
     <p>
-      To je důvodem proč se každý z [X number] studentů ve škole [SCHOOL NAME] přidává k největší učební události v historii: Hodině kódu, ve dnech 8.–14. prosince.
+      That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Dec. 8-14.
     </p>
     
     <p>
-      Píši Vám, abychom Vás pozvali k účasti na úvodním shromáždění a abyste viděli, jak se děti [DATE] pouštějí do činnosti.
+      I'm writing to invite you to attend our kickoff assembly, and to see kids start the activity on [DATE].
     </p>
     
     <p>
-      Hodina kódu, pořádaná neziskovou společností Code.org a více než stovkou dalších, je vyjádřením, že dnešní generace studentů je připravena naučit se klíčové dovednosti pro úspěch v 21. století. Přidejte se k nám.
+      The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a statement that today’s generation of students are ready to learn critical skills for 21st century success. Please join us.
     </p>
     
     <p>
-      <strong>Kontakt:</strong> [JMÉNO A PŘÍJMENÍ], [TITLE], mobil: (212) 555-5555
+      <strong>Contact:</strong> [YOUR NAME], [TITLE], cell: (212) 555-5555
     </p>
     
     <p>
-      <strong>Kdy:</strong> [DATUM a ČAS vaší události]
+      <strong>When:</strong> [DATE and TIME of your event]
     </p>
     
     <p>
-      <strong>Kde:</strong> [ADRESA a POPIS CESTY]
+      <strong>Where:</strong> [ADDRESS and DIRECTIONS]
     </p>
     
     <p>
-      Těším se, že zůstaneme ve spojení.
+      I look forward to being in touch.
     </p>
     
     <p>
@@ -194,39 +210,39 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Řekněte rodičům o své školní události:
+      Tell parents about your school's event:
     </h2>
     
     <p>
-      Vážení rodiče,
+      Dear Parents,
     </p>
     
     <p>
-      Žijeme ve světě obklopeném technologiemi. A víme, že ať si naši studenti vyberou pro své budoucí povolání jakýkoli obor, jejich schopnost uspět bude čím dál tím víc záviset na porozumění jak takové technologie fungují. Ale jen nepatrný zlomek z nás se učí informatiku, kterou dnes studuje méně studentů než před deseti lety.
+      We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly hinge on understanding how technology works. But only a tiny fraction of us are learning computer science, and less students are studying it than a decade ago.
     </p>
     
     <p>
-      To je důvodem, proč se celá naše škola přidává k největší učební události v historii: Hodině kódu, během výukového týdne informatiky (ve dnech 8.–14. prosince). V loňském roce si během jediného týdne informatiku vyzkoušelo 15 milionů studentů. V letošním roce se připojujeme ke studentům po celém světě, abychom dosáhli 100 milionů studentů!
+      That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 8-14). Last year, 15 million students tried computer science in one week. This year, we're joining students worldwide to reach 100 million students!
     </p>
     
     <p>
-      Naše Hodina kódu je vyjádřením, že [NÁZEV ŠKOLY] je připravena vyučovat základní dovednosti 21. století. Abychom mohli našim studentům přinášet další programovací aktivity, chceme z Hodiny kódu udělat obrovskou akci. Vyzývám vás stát se dobrovolníky, obrátit se na místní média, sdílet novinky na vašich sociálních sítích a zvážit uspořádání další Hodiny kódu ve vaší komunitě.
+      Our Hour of Code is a statement that [SCHOOL NAME] is ready to teach these foundational 21st century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on your social media channels and consider hosting additional Hour of Code events in the community.
     </p>
     
     <p>
-      Toto je šance změnit budoucnost výuky v [JMÉNO MĚSTA/OBCE].
+      This is a chance to change the future of education in [TOWN/CITY NAME].
     </p>
     
     <p>
-      Podívejte se na podrobnosti na http://hourofcode.com a zmiňte se dalším.
+      See http://hourofcode.com for details, and help spread the word.
     </p>
     
     <p>
-      Se srdečným pozdravem,
+      Sincerely,
     </p>
     
     <p>
-      váš ředitel školy
+      Your principal
     </p>
     
     <p>
@@ -234,7 +250,7 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Pozvěte na svoji školní událost místního politika:
+      Invite a local politician to your school's event:
     </h2>
     
     <p>
@@ -246,7 +262,7 @@ title: Resources layout: wide nav: resources_nav
     </p>
     
     <p>
-      To je důvodem, proč se celá naše škola přidává k největší učební události v historii: Hodině kódu, během výukového týdne informatiky (ve dnech 8.–14. prosince). V loňském roce si během jediného týdne informatiku vyzkoušelo 15 milionů studentů. V letošním roce se připojujeme ke studentům po celém světě, abychom dosáhli 100 milionů studentů!
+      That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 8-14). Last year, 15 million students tried computer science in one week. This year, we're joining students worldwide to reach 100 million students!
     </p>
     
     <p>

@@ -8,7 +8,7 @@ crwdns19712:0crwdne19712:0
 
 **crwdns20984:0crwdne20984:0**
 
-crwdns20985:0crwdne20985:0.
+crwdns21423:0crwdne21423:0[<%= codeorg_url() %>](http://<%= codeorg_url() %>/learn).
 
 crwdns20986:0crwdne20986:0 crwdns20987:0crwdne20987:0
 

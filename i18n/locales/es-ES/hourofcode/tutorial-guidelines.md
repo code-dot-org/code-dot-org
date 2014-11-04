@@ -6,11 +6,11 @@ layout: wide
 
 # Guía para los tutoriales de la Hora de Programación y la semana educativa de Ciencias Computacionales
 
-**The deadline to submit a tutorial for Hour of Code 2014 has passed. You may still submit an entry and we will try to review it if time allows.**
+**Ya ha finalizado el plazo para enviar un tutorial a consideración para la Hora de Programación 2014. Sin embargo, aún puedes proponer uno y trataremos de revisarlo si el tiempo lo permite.**
 
-Code.org will host a variety of Hour of Code activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [code.org/learn](http://code.org/learn).
+Code.org will host a variety of Hour of Code activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= codeorg_url() %>](http://<%= codeorg_url() %>/learn).
 
-We’d like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science. Please use this document to guide the creation of your activity, targeted to the user who has no background in coding, computer programming, and computer science.
+Nos gustaría ofrecer una amplia variedad de opciones atractivas, pero el objetivo principal es optimizar la experiencia de los estudiantes y profesores que son nuevos en las Ciencias de la Computación. Por favor usa este documento como guía para la creación de tu actividad, diseñada para usuarios sin experiencia alguna en programación ni Ciencias de la Computación.
 
 <a id="top"></a>
 
@@ -29,9 +29,9 @@ We’d like to host a variety of engaging options, but the primary goal is to op
 
 ## Cómo serán evaluadas las tutorías en cuánto a inclusión
 
-A committee of computer science educators will rank submissions based on qualitative and quantitative metrics, including survey results from a broader set of educators.
+Un comité de educadores en Ciencias de la Computación evaluarán las propuestas con base en medidas cualitativas y cuantitativas, incluyendo resultados de encuestas hechas a un grupo más amplio de educadores.
 
-**Tutorials will be listed higher if they are:**
+**Los tutoriales aparecerán en posiciones más altas si:**
 
   * Alta calidad
   * son auto-dirigidas, no requieren ninguna instrucción
@@ -42,7 +42,7 @@ A committee of computer science educators will rank submissions based on qualita
   * promueven aprendizaje en todos los grupos demográficos (especialmente los grupos marginados)
   * no se centran solamente en diseño web HTML+CSS - (nuestra meta es la ciencia computacional, no sólo codificación en HTML)
 
-**Tutorials will be listed lower if they are:**
+**Los tutoriales aparecerán en posiciones más bajas si:**
 
   * tienen baja calidad
   * tienen un nivel más avanzado de enseñanza (no para principiantes)
@@ -51,7 +51,7 @@ A committee of computer science educators will rank submissions based on qualita
   * tienen una tendencia específica hacia un género (ej.: temática dirigida principalmente a niños)
   * sirven para promover una plataforma de aprendizaje que cobra
 
-**Tutorials will NOT be listed if they:**
+**Los tutoriales NO serán listados si:**
 
   * requieren un alto grado de participación del profesor con bastante preparación con antelación (no son autodirigidos)
   * no estan diseñados para ser actividades de aproximadamente una hora
@@ -61,7 +61,7 @@ A committee of computer science educators will rank submissions based on qualita
   * se centran solamente en diseño web HTML+CSS
   * se envían después de la fecha límite, o con información incompleta (vea más abajo)
 
-Ultimately, the goal of the Hour of Code campaign is to broaden participation in computer science by students and teachers, and to help show that computer science is accessible to all, and “easier than you think.” In many ways, this goal is better achieved by giving students and teachers fewer and simpler choices, with a focus on the highest quality options for a first-time user.
+La meta última de la campaña de una Hora de Programación es ampliar la participación en Ciencias de Computación por parte de maestros y estudiantes, y además demostrar que las Ciencias de Computacion son accesibles a todos y "más fáciles de lo que crees". Desde varios puntos de vista, esta meta se alcanza de mejor manera ofreciendo a estudiantes y maestros menos opciones y más simples, concentrándose en las opciones de más alta calidad para un usuario nuevo.
 
 Note also, that the 2013 CSEdWeek was a fantastic success as measured by the responses from teachers and students - 20M participants from Dec 9 - 23, and 97% said they enjoyed it and want to repeat the campaign!!
 

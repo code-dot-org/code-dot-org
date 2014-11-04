@@ -1,15 +1,16 @@
 ---
-title: Nguồn xây dựng
 layout: wide
 nav: resources_nav
 ---
 
 # Nguồn xây dựng
 
+## Hosting an Hour of Code? [See the how-to guide](<%= hoc_uri('/resources/how-to') %>)
+
 <a id="handouts"></p> 
 
 <h2>
-  Sử dụng bản tin này để hiểu hơn về chúng tôi
+  Use this handout to spread the word
 </h2>
 
 <p>
@@ -17,7 +18,7 @@ nav: resources_nav
 </p>
 
 <h2>
-  Đưa bản cầm tay này tới các giáo viên và trường học
+  Give this handout to teachers and schools
 </h2>
 
 <p>
@@ -28,18 +29,18 @@ nav: resources_nav
   <a id="videos"></p> 
   
   <h2>
-    Mở những video này để truyền cảm hứng cho học sinh
+    Show these videos to inspire students
   </h2>
   
   <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>Những gì hầu hết các trường đều không dạy (5 phút)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>Hour of Code ở đây - Bất cứ ai cũng có thể tìm hiểu và học tập</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
     </p>
@@ -49,14 +50,14 @@ nav: resources_nav
   </div>
   
   <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>Tổng thống Obama về khoa học máy tính</strong></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
       <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>Bất cứ ai cũng có thể học (1 phút)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
@@ -68,11 +69,11 @@ nav: resources_nav
   <div style='clear:both'>
   </div>
   
-  <p>
+<p>
 <a id="posters"></p> 
 
 <h2>
-  Treo những đề can này trong trường của bạn
+  Hang these posters in your school
 </h2>
 
 <p>
@@ -80,7 +81,7 @@ nav: resources_nav
 </p>
 
 <h4>
-  <a href="http://hourofcode.com/#signup">Đăng ký</a> sự kiện Hour of Code của bạn và chúng tôi sẽ gửi cho bạn áp phích quảng cáo miễn phí.
+  <a href="http://hourofcode.com/#signup">Sign up</a> your Hour of Code event and we'll mail you posters for free.
 </h4>
 
 <p>
@@ -92,7 +93,7 @@ nav: resources_nav
 </p>
 
 <h2>
-  Đặt những bức quảng cáo này lên website của bạn
+  Feature these banners on your website
 </h2>
 
 <p>
@@ -100,11 +101,27 @@ nav: resources_nav
 </p>
 
 <p>
+  <a id="social"></a>
+</p>
+
+<h2>
+  Post these on social media
+</h2>
+
+<p>
+  <a href="/images/social-1.jpg"><img src="/images/fit-200/social-1.jpg" alt="hình ảnh" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-2.jpg"><img src="/images/fit-200/social-2.jpg" alt="hình ảnh" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-3.jpg"><img src="/images/fit-200/social-3.jpg" alt="hình ảnh" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+
+<p>
+  <a href="/images/mark.jpg"><img src="/images/fit-200/mark.jpg" alt="hình ảnh" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-200/susan.jpg" alt="hình ảnh" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-200/ashton.jpg" alt="hình ảnh" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-200/marissa.jpg" alt="hình ảnh" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-200/chris.jpg" alt="hình ảnh" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+
+<p>
   <a id="sample-emails"></a>
 </p>
 
 <h2>
-  gửi những email này để quảng bá Hour of Code tới mới người
+  Send these emails to help promote the Hour of Code
 </h2>
 
 <p>
@@ -112,11 +129,11 @@ nav: resources_nav
 </p>
 
 <h2>
-  Giới thiệu tới trường học của bạn, nhân viên hoặc bạn bè của bạn để họ đăng ký tham gia:
+  Ask your school, employer or friends to sign up:
 </h2>
 
 <p>
-  Computers are everywhere, but fewer schools teach computer science than 10 years ago. Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. In one week, 15 million students tried computer science!
+  Máy tính có ở khắp mọi nơi, nhưng chỉ một số ít các trường học dạy về khoa học máy tính 10 năm trở về trước. Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. In one week, 15 million students tried computer science!
 </p>
 
 <p>
@@ -140,7 +157,7 @@ nav: resources_nav
 </p>
 
 <h2>
-  Mời truyền thông tham gia vào sự kiện:
+  Invite media to attend your event:
 </h2>
 
 <p>
@@ -192,7 +209,7 @@ nav: resources_nav
 </p>
 
 <h2>
-  Nói với cha mẹ về của bạn trường hợp:
+  Tell parents about your school's event:
 </h2>
 
 <p>
@@ -232,7 +249,7 @@ nav: resources_nav
 </p>
 
 <h2>
-  Mời một chính trị gia địa phương để của bạn trường hợp:
+  Invite a local politician to your school's event:
 </h2>
 
 <p>
