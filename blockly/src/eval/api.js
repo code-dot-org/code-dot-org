@@ -10,6 +10,11 @@ var EvalStar = require('./evalStar');
 
 // todo (brent) - make use of blockId?
 
+exports.draw = function (object) {
+  return exports.register(object);
+};
+
+// todo (brent) - get rid of register
 exports.register = function (object) {
 
   // todo (brent) - hacky way to get last object

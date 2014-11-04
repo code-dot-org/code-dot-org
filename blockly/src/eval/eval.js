@@ -53,10 +53,8 @@ Eval.init = function(config) {
   skin = config.skin;
   level = config.level;
 
-  Eval.shownFeedback_ = false;
-
   config.grayOutUndeletableBlocks = true;
-  config.forceInsertTopBlock = null;
+  config.forceInsertTopBlock = 'functional_draw';
 
   config.html = page({
     assetUrl: BlocklyApps.assetUrl,
@@ -196,7 +194,7 @@ Eval.execute = function() {
   Eval.message = undefined;
 
   // todo (brent) perhaps try to share user vs. expected generation better
-  var code = Blockly.Generator.blockSpaceToCode('JavaScript');
+  var code = Blockly.Generator.workspaceToCode('JavaScript', 'functional_draw');
   evalCode(code);
 
   Eval.userObject = Eval.lastEvalObject;
@@ -205,7 +203,7 @@ Eval.execute = function() {
   }
 
   Eval.result = evaluateAnswer();
-  Eval.testResults = Eval.result ? TestResults.ALL_PASS : TestResults.LEVEL_INCOMPLETE_FAIL;
+  Eval.testResults = BlocklyApps.getTestResults(Eval.result);
 
   var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   var textBlocks = Blockly.Xml.domToText(xml);
@@ -242,6 +240,9 @@ function evaluateAnswer() {
  * BlocklyApps.displayFeedback when appropriate
  */
 var displayFeedback = function(response) {
+  // override extra top blocks message
+  level.extraTopBlocks = evalMsg.extraTopBlocks();
+
   BlocklyApps.displayFeedback({
     app: 'Eval',
     skin: skin.id,

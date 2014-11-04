@@ -49,6 +49,16 @@ exports.install = function(blockly, blockInstallOptions) {
 
   installString(blockly, generator, gensym);
 
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'functional_draw',
+    blockTitle: msg.drawBlockTitle(),
+    apiName: 'draw',
+    returnType: 'none',
+    args: [
+      { name: 'ARG1', type: 'image' },
+    ]
+  });
+
   // shapes
   installFunctionalBlock(blockly, generator, gensym, {
     blockName: 'functional_circle',
@@ -265,7 +275,7 @@ function installString(blockly, generator, gensym) {
   };
 
   generator.functional_string = function() {
-    return "Eval.string(" + 
+    return "Eval.string(" +
         blockly.JavaScript.quote_(this.getTitleValue('VAL')) + ")";
   };
 }
