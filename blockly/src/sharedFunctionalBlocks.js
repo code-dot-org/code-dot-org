@@ -129,5 +129,5 @@ function installString(blockly, generator) {
   generator.functional_string = function() {
     return blockly.JavaScript.quote_(this.getTitleValue('VAL'));
   };
-};
+}
 
