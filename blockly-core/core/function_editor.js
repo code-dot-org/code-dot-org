@@ -223,13 +223,11 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   });
   Blockly.modalBlockSpace = Blockly.modalBlockSpaceEditor.blockSpace;
 
-  Blockly.modalBlockSpaceEditor.addChangeListener(function() {
-    Blockly.mainBlockSpace.fireChangeEvent();
-  });
+  Blockly.modalBlockSpaceEditor.addChangeListener(Blockly.mainBlockSpace.fireChangeEvent);
 
   // Add modal background and close button
   this.modalBackground_ = Blockly.createSvgElement('g', {'class': 'modalBackground'});
-  Blockly.mainBlockSpaceEditor.svg_.appendChild(this.modalBackground_);
+  Blockly.mainBlockSpaceEditor.appendSVGChild(this.modalBackground_);
   this.closeButton_ = Blockly.createSvgElement('image', {
     'id': 'modalEditorClose',
     'width': 50,
@@ -237,7 +235,7 @@ Blockly.FunctionEditor.prototype.create_ = function() {
     'y': -2
   });
   this.closeButton_.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', '/blockly/media/common_images/x-button.png');
-  Blockly.modalBlockSpaceEditor.svg_.appendChild(this.closeButton_);
+  Blockly.modalBlockSpaceEditor.appendSVGChild(this.closeButton_);
 
   // Set up contract definition HTML section
   this.createContractDom_();
@@ -282,7 +280,7 @@ Blockly.FunctionEditor.prototype.create_ = function() {
     x: left + FRAME_MARGIN_SIDE,
     y: top + FRAME_MARGIN_TOP,
     fill: 'hsl(94, 73%, 35%)',
-    // TODO: filter causes slow repaints while dragging blocks in Chrome 38
+    // TODO(jlory): filter causes slow repaints while dragging blocks in Chrome 38
     // filter: 'url(#blocklyEmboss)',
     rx: Blockly.Bubble.BORDER_WIDTH,
     ry: Blockly.Bubble.BORDER_WIDTH
@@ -307,16 +305,6 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   Blockly.modalBlockSpaceEditor.svgResize();
 };
 
-Blockly.FunctionEditor.prototype.destroy_ = function() {
-  // TODO(bjordan/jlory): needed? when to call?
-  delete Blockly.modalBlockSpace;
-  this.modalBackground_ = null;
-  if (this.onResizeWrapper_) {
-    Blockly.unbindEvent_(this.onResizeWrapper_);
-    this.onResizeWrapper_ = null;
-  }
-};
-
 Blockly.FunctionEditor.prototype.position_ = function() {
   var metrics = Blockly.modalBlockSpace.getMetrics();
   var width = metrics.viewWidth;
@@ -329,7 +317,7 @@ Blockly.FunctionEditor.prototype.position_ = function() {
   this.frameInner_.setAttribute('width', width);
   this.frameInner_.setAttribute('height', height);
   if (Blockly.RTL) {
-    // TODO: Fix RTL
+    // TODO(jlory/bjordan): Fix RTL
     this.frameBase_.setAttribute('x', -width + FRAME_MARGIN_SIDE);
     this.frameInner_.setAttribute('x', -width + FRAME_MARGIN_SIDE);
     this.frameText_.setAttribute('x', -width + 2 * FRAME_MARGIN_SIDE);

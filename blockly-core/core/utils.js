@@ -291,7 +291,7 @@ Blockly.topMostSVGParent = function(element) {
     element = goog.dom.getParentElement(element);
   }
 
-  return (topMostSVG || Blockly.mainBlockSpaceEditor.svg_);
+  return (topMostSVG || Blockly.mainBlockSpaceEditor.getSVGElement());
 };
 
 /**
@@ -333,8 +333,8 @@ Blockly.isRightButton = function(e) {
  * Convert between HTML coordinates and SVG coordinates.
  * @param {number} x X input coordinate.
  * @param {number} y Y input coordinate.
- * @param {boolean} toSvg True to convert to SVG coordinates.
  * @param {Element} svg parent SVG element
+ * @param {boolean} toSvg True to convert to SVG coordinates.
  *     False to convert to mouse/HTML coordinates.
  * @return {!Object} Object with x and y properties in output coordinates.
  */

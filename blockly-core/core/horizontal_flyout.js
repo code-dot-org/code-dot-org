@@ -78,8 +78,7 @@ Blockly.HorizontalFlyout.prototype.position_ = function() {
     x += metrics.viewWidth;
     x -= this.width_;
   }
-  this.svgGroup_.setAttribute('transform',
-          'translate(' + x + ',' + y + ')');
+  this.svgGroup_.setAttribute('transform', 'translate(' + x + ',' + y + ')');
 
   // Update the scrollbar (if one exists).
   if (this.scrollbar_) {
