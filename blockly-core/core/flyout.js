@@ -185,18 +185,18 @@ Blockly.Flyout.prototype.getMetrics_ = function() {
   var viewHeight = this.height_ - 2 * this.CORNER_RADIUS;
   var viewWidth = this.width_;
   try {
-      if (Blockly.isMsie() || Blockly.isTrident()) {
-          this.blockSpace_.getCanvas().style.display = "inline";   /* reqd for IE */
-          var optionBox = {
-              x: this.blockSpace_.getCanvas().getBBox().x,
-              y: this.blockSpace_.getCanvas().getBBox().y,
-              width: this.blockSpace_.getCanvas().scrollWidth,
-              height: this.blockSpace_.getCanvas().scrollHeight
-          };
-      }
-      else {
-          var optionBox = this.blockSpace_.getCanvas().getBBox();
-      }
+    if (Blockly.isMsie() || Blockly.isTrident()) {
+      this.blockSpace_.getCanvas().style.display = "inline"; // required for IE
+      var optionBox = {
+        x: this.blockSpace_.getCanvas().getBBox().x,
+        y: this.blockSpace_.getCanvas().getBBox().y,
+        width: this.blockSpace_.getCanvas().scrollWidth,
+        height: this.blockSpace_.getCanvas().scrollHeight
+      };
+    }
+    else {
+      var optionBox = this.blockSpace_.getCanvas().getBBox();
+    }
   } catch (e) {
     // Firefox has trouble with hidden elements (Bug 528969).
     var optionBox = {height: 0, y: 0};
@@ -228,12 +228,12 @@ Blockly.Flyout.prototype.getHeight = function() {
 Blockly.Flyout.prototype.setMetrics_ = function(yRatio) {
   var metrics = this.getMetrics_();
   if (goog.isNumber(yRatio.y)) {
-      this.blockSpace_.pageYOffset =
-        -metrics.contentHeight * yRatio.y - metrics.contentTop;
+    this.blockSpace_.pageYOffset = -metrics.contentHeight * yRatio.y
+        - metrics.contentTop;
   }
   var y = this.blockSpace_.pageYOffset + metrics.absoluteTop;
-  this.blockSpace_.getCanvas().setAttribute('transform',
-                                           'translate(0,' + y + ')');
+  this.blockSpace_.getCanvas().setAttribute('transform', 'translate(0,'
+      + y + ')');
 };
 
 /**
@@ -242,8 +242,7 @@ Blockly.Flyout.prototype.setMetrics_ = function(yRatio) {
  *     blocks.
  * @param {boolean} withScrollbar True if a scrollbar should be displayed.
  */
-Blockly.Flyout.prototype.init =
-    function(blockSpace, withScrollbar) {
+Blockly.Flyout.prototype.init = function(blockSpace, withScrollbar) {
   this.targetBlockSpace_ = blockSpace;
   // Add scrollbars.
   var flyout = this;
@@ -301,8 +300,7 @@ Blockly.Flyout.prototype.position_ = function() {
     x += metrics.viewWidth;
     x -= this.width_;
   }
-  this.svgGroup_.setAttribute('transform',
-      'translate(' + x + ',' + y + ')');
+  this.svgGroup_.setAttribute('transform', 'translate(' + x + ',' + y + ')');
 
   // Record the height for Blockly.Flyout.getMetrics_.
   this.height_ = metrics.viewHeight;
@@ -350,7 +348,8 @@ Blockly.Flyout.prototype.hide = function() {
     goog.dom.removeNode(rect);
   }
   // Delete the 'Create a Function' button.
-  goog.dom.removeNode(goog.dom.getElementByClass('createFunction', this.blockSpace_.svgGroup_));
+  goog.dom.removeNode(goog.dom.getElementByClass('createFunction',
+      this.blockSpace_.svgGroup_));
   this.buttons_.splice(0);
 };
 
@@ -377,7 +376,8 @@ Blockly.Flyout.prototype.show = function(xmlList) {
   this.svgGroup_.style.display = 'block';
 
   var margin = this.CORNER_RADIUS;
-  var initialX = Blockly.RTL ? this.width_ : margin + Blockly.BlockSvg.TAB_WIDTH;
+  var initialX = Blockly.RTL ? this.width_ : margin
+      + Blockly.BlockSvg.TAB_WIDTH;
   var cursor = {
     x: initialX,
     y: margin
@@ -397,8 +397,17 @@ Blockly.Flyout.prototype.show = function(xmlList) {
       var button = Blockly.createSvgElement('g', {'class': 'createFunction'},
           this.blockSpace_.svgGroup_);
       var padding = 5;
-      var r = Blockly.createSvgElement('rect', {rx: 5, ry: 5, fill: 'orange', stroke: 'white'}, button);
-      var text = Blockly.createSvgElement('text', {x: padding, y: padding, 'class': 'blocklyText'}, button);
+      var r = Blockly.createSvgElement('rect', {
+        rx: 5,
+        ry: 5,
+        fill: 'orange',
+        stroke: 'white'
+      }, button);
+      var text = Blockly.createSvgElement('text', {
+        x: padding,
+        y: padding,
+        'class': 'blocklyText'
+      }, button);
       text.textContent = Blockly.Msg.FUNCTION_CREATE;
       var bounds = text.getBoundingClientRect();
       this.minFlyoutWidth_ = bounds.width + 2 * padding;
@@ -633,12 +642,14 @@ Blockly.Flyout.prototype.createBlockFunc_ = function(originBlock) {
     if (!svgRootOld) {
       throw 'originBlock is not rendered.';
     }
-    var xyOld = Blockly.getSvgXY_(svgRootOld, originBlock.blockSpace.blockSpaceEditor.svg_);
+    var xyOld = Blockly.getSvgXY_(svgRootOld,
+        originBlock.blockSpace.blockSpaceEditor.svg_);
     var svgRootNew = block.getSvgRoot();
     if (!svgRootNew) {
       throw 'block is not rendered.';
     }
-    var xyNew = Blockly.getSvgXY_(svgRootNew, block.blockSpace.blockSpaceEditor.svg_);
+    var xyNew = Blockly.getSvgXY_(svgRootNew,
+        block.blockSpace.blockSpaceEditor.svg_);
     block.moveBy(xyOld.x - xyNew.x, xyOld.y - xyNew.y);
     if (flyout.autoClose) {
       flyout.hide();

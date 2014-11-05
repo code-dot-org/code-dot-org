@@ -79,15 +79,13 @@ Blockly.HorizontalFlyout.prototype.position_ = function() {
 
 /**
  * Arrange the given block in the flyout, and update cursorX/cursorY.
- * @param block
- * @param cursor
- * @param gap
  * @private
  */
-Blockly.HorizontalFlyout.prototype.layoutBlock_ = function(block, cursor, gap, initialX) {
+Blockly.HorizontalFlyout.prototype.layoutBlock_ = function(block, cursor, gap,
+    initialX) {
   var blockHW = block.getHeightWidth();
   if ((Blockly.RTL && cursor.x - blockHW.width < 0)
-    || (!Blockly.RTL && cursor.x + blockHW.width > this.width_)) {
+      || (!Blockly.RTL && cursor.x + blockHW.width > this.width_)) {
     this.flyoutRows++;
     cursor.y += blockHW.height + gap / 2;
     cursor.x = initialX;
