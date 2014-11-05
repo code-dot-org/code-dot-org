@@ -68,7 +68,9 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
   var dom = Blockly.Xml.blockToDom_(targetFunctionDefinitionBlock);
   targetFunctionDefinitionBlock.dispose(false, false, true);
   this.functionDefinitionBlock = Blockly.Xml.domToBlock_(Blockly.modalBlockSpace, dom);
-  this.functionDefinitionBlock.moveTo(FRAME_MARGIN_SIDE, FRAME_MARGIN_TOP);
+  this.functionDefinitionBlock.moveTo(Blockly.RTL
+      ? Blockly.modalBlockSpace.getMetrics().viewWidth - FRAME_MARGIN_SIDE
+      : FRAME_MARGIN_SIDE, FRAME_MARGIN_TOP);
   this.functionDefinitionBlock.setMovable(false);
   this.functionDefinitionBlock.setUserVisible(true);
   this.populateParamToolbox_();
@@ -317,17 +319,17 @@ Blockly.FunctionEditor.prototype.position_ = function() {
   this.frameInner_.setAttribute('width', width);
   this.frameInner_.setAttribute('height', height);
   if (Blockly.RTL) {
-    // TODO(jlory/bjordan): Fix RTL
-    this.frameBase_.setAttribute('x', -width + FRAME_MARGIN_SIDE);
-    this.frameInner_.setAttribute('x', -width + FRAME_MARGIN_SIDE);
-    this.frameText_.setAttribute('x', -width + 2 * FRAME_MARGIN_SIDE);
+    this.frameBase_.setAttribute('x', FRAME_MARGIN_SIDE);
+    this.frameInner_.setAttribute('x', FRAME_MARGIN_SIDE + Blockly.Bubble.BORDER_WIDTH + 1);
+    this.frameText_.setAttribute('x', width - 2 * FRAME_MARGIN_SIDE);
   }
 
   // Resize contract div width
   this.contractDiv_.style.width = metrics.viewWidth + 'px';
 
   // Move the close button
-  this.closeButton_.setAttribute('x', metrics.absoluteLeft + metrics.viewWidth - 30 + 'px');
+  this.closeButton_.setAttribute('x',
+      Blockly.RTL ? 2 : metrics.absoluteLeft + metrics.viewWidth - 30 + 'px');
 
   // Move workspace to account for horizontal flyout height
   Blockly.modalBlockSpaceEditor.svgResize();
@@ -335,16 +337,20 @@ Blockly.FunctionEditor.prototype.position_ = function() {
 
 Blockly.FunctionEditor.prototype.createContractDom_ = function() {
   this.contractDiv_ = goog.dom.createDom('div', 'blocklyToolboxDiv paramToolbox blocklyText');
-  this.container_.insertBefore(this.contractDiv_, this.container_.firstChild);
+  if (Blockly.RTL) {
+    this.contractDiv_.setAttribute('dir', 'RTL');
+  }
   this.contractDiv_.innerHTML = '<div>Name your function:</div>'
       + '<div><input id="functionNameText" type="text"></div>'
       + '<div>What is your function supposed to do?</div>'
       + '<div><textarea id="functionDescriptionText" rows="2"></textarea></div>'
       + '<div>What parameters does your function take?</div>'
-      + '<div><input id="paramAddText" type="text" style="width: 200px;"> <button id="paramAddButton" class="btn">Add Parameter</button>';
+      + '<div><input id="paramAddText" type="text" style="width: 200px;"> '
+      + '<button id="paramAddButton" class="btn">Add Parameter</button>';
   var metrics = Blockly.modalBlockSpace.getMetrics();
   this.contractDiv_.style.left = metrics.absoluteLeft + 'px';
   this.contractDiv_.style.top = metrics.absoluteTop + 'px';
   this.contractDiv_.style.width = metrics.viewWidth + 'px';
   this.contractDiv_.style.display = 'block';
+  this.container_.insertBefore(this.contractDiv_, this.container_.firstChild);
 };
