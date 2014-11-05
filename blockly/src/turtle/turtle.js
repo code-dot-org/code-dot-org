@@ -240,10 +240,10 @@ Turtle.drawLogOnCanvas = function(log, canvas) {
 
 Turtle.drawBlocksOnCanvas = function(blocks, canvas) {
   var domBlocks = Blockly.Xml.textToDom(blocks);
-  Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, domBlocks);
-  var code = Blockly.Generator.workspaceToCode('JavaScript');
+  Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, domBlocks);
+  var code = Blockly.Generator.blockSpaceToCode('JavaScript');
   Turtle.evalCode(code);
-  Blockly.mainWorkspace.clear();
+  Blockly.mainBlockSpace.clear();
   Turtle.drawCurrentBlocksOnCanvas(canvas);
 };
 
@@ -498,7 +498,7 @@ Turtle.display = function() {
 BlocklyApps.runButtonClick = function() {
   BlocklyApps.toggleRunReset('reset');
   document.getElementById('spinner').style.visibility = 'visible';
-  Blockly.mainWorkspace.traceOn(true);
+  Blockly.mainBlockSpace.traceOn(true);
   BlocklyApps.attempts++;
   Turtle.execute();
 };
@@ -563,7 +563,7 @@ Turtle.execute = function() {
   if (level.editCode) {
     generateTurtleCodeFromJS();
   } else {
-    Turtle.code = Blockly.Generator.workspaceToCode('JavaScript');
+    Turtle.code = Blockly.Generator.blockSpaceToCode('JavaScript');
     Turtle.evalCode(Turtle.code);
   }
 
@@ -573,7 +573,7 @@ Turtle.execute = function() {
   Turtle.pid = window.setTimeout(Turtle.animate, 100);
 
   // Disable toolbox while running
-  Blockly.mainWorkspace.setEnableToolbox(false);
+  Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
 };
 
 // Divide each jump into substeps so that we can animate every movement.
@@ -615,7 +615,7 @@ function executeTuple () {
  */
 function finishExecution () {
   document.getElementById('spinner').style.visibility = 'hidden';
-  Blockly.mainWorkspace.highlightBlock(null);
+  Blockly.mainBlockSpace.highlightBlock(null);
   Turtle.checkAnswer();
 }
 
@@ -1047,7 +1047,7 @@ Turtle.checkAnswer = function() {
   var levelComplete = level.freePlay || isCorrect(delta, permittedErrors);
   Turtle.testResults = BlocklyApps.getTestResults(levelComplete);
 
-  var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
+  var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   var textBlocks = Blockly.Xml.domToText(xml);
 
   // Make sure we don't reuse an old message, since not all paths set one.
@@ -1075,7 +1075,7 @@ Turtle.checkAnswer = function() {
     // circle.  This complains if the limit doesn't start with 3.
     // Note that this level does not use colour, so no need to check for that.
     if (level.failForCircleRepeatValue) {
-      var code = Blockly.Generator.workspaceToCode('JavaScript');
+      var code = Blockly.Generator.blockSpaceToCode('JavaScript');
       if (code.indexOf('count < 3') == -1) {
         Turtle.testResults =
             BlocklyApps.TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
@@ -1127,7 +1127,7 @@ Turtle.checkAnswer = function() {
   BlocklyApps.report(reportData);
 
   // reenable toolbox
-  Blockly.mainWorkspace.setEnableToolbox(true);
+  Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
 
   // The call to displayFeedback() will happen later in onReportComplete()
 };

@@ -74,7 +74,7 @@ Blockly.FieldCheckbox.prototype.setValue = function(strBool) {
     this.state_ = newState;
     this.checkElement_.style.display = newState ? 'block' : 'none';
     if (this.sourceBlock_ && this.sourceBlock_.rendered) {
-      this.sourceBlock_.workspace.fireChangeEvent();
+      this.sourceBlock_.blockSpace.fireChangeEvent();
     }
   }
 };

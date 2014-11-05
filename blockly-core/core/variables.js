@@ -30,7 +30,7 @@ goog.provide('Blockly.Variables');
 // TODO(scr): Fix circular dependencies
 // goog.require('Blockly.Block');
 goog.require('Blockly.Toolbox');
-goog.require('Blockly.Workspace');
+goog.require('Blockly.BlockSpace');
 
 
 /**
@@ -41,6 +41,7 @@ Blockly.Variables.NAME_TYPE_LOCAL = 'LOCALVARIABLE';
 
 /**
  * Find all user-created variables.
+ * Currently searches the main blockspace only
  * @param {Blockly.Block=} opt_block Optional root block.
  * @return {!Array.<string>} Array of variable names.
  */
@@ -49,7 +50,7 @@ Blockly.Variables.allVariables = function(opt_block) {
   if (opt_block) {
     blocks = opt_block.getDescendants();
   } else {
-    blocks = Blockly.mainWorkspace.getAllBlocks();
+    blocks = Blockly.mainBlockSpace.getAllBlocks();
   }
   var variableHash = {};
   // Iterate through every block and add each variable to the hash.
@@ -76,12 +77,18 @@ Blockly.Variables.allVariables = function(opt_block) {
 };
 
 /**
- * Find all instances of the specified variable and rename them.
+ * Find all instances of the specified variable in the current workspace and
+ * rename them. Does not affect variables in other workspaces.
  * @param {string} oldName Variable to rename.
  * @param {string} newName New variable name.
+ * @param {Blockly.BlockSpace} blockSpace BlockSpace to rename child blocks of
  */
-Blockly.Variables.renameVariable = function(oldName, newName) {
-  var blocks = Blockly.mainWorkspace.getAllBlocks();
+Blockly.Variables.renameVariable = function(oldName, newName, blockSpace) {
+  var blocks = blockSpace.getAllBlocks();
+  if (Blockly.modalBlockSpace) {
+    blocks = blocks.concat(
+        Blockly.functionEditor.flyout_.blockSpace_.getTopBlocks());
+  }
   // Iterate through every block.
   for (var x = 0; x < blocks.length; x++) {
     var func = blocks[x].renameVar;
@@ -92,13 +99,35 @@ Blockly.Variables.renameVariable = function(oldName, newName) {
 };
 
 /**
+ * Find all instances of the specified variable in the current workspace and
+ * delete them. Does not affect variables in other workspaces.
+ * @param {string} oldName Variable to rename.
+ * @param {Blockly.BlockSpace} blockSpace blockspace context for variable
+ */
+Blockly.Variables.deleteVariable = function(nameToRemove, blockSpace) {
+  var blocks = blockSpace.getAllBlocks();
+  // Iterate through every block.
+  for (var x = 0; x < blocks.length; x++) {
+    var func = blocks[x].removeVar;
+    if (func) {
+      func.call(blocks[x], nameToRemove);
+    }
+  }
+  // Notify the modal workspace to remove the parameter from its flyout
+  if (Blockly.modalBlockSpace) {
+    Blockly.functionEditor.removeParameter(nameToRemove);
+    Blockly.functionEditor.refreshParamsEverywhere();
+  }
+};
+
+/**
  * Construct the blocks required by the flyout for the variable category.
  * @param {!Array.<!Blockly.Block>} blocks List of blocks to show.
  * @param {!Array.<number>} gaps List of widths between blocks.
  * @param {number} margin Standard margin width for calculating gaps.
- * @param {!Blockly.Workspace} workspace The flyout's workspace.
+ * @param {!Blockly.BlockSpace} blockSpace The flyout's blockSpace.
  */
-Blockly.Variables.flyoutCategory = function(blocks, gaps, margin, workspace) {
+Blockly.Variables.flyoutCategory = function(blocks, gaps, margin, blockSpace) {
   var variableList = Blockly.Variables.allVariables();
   variableList.sort(goog.string.caseInsensitiveCompare);
   // In addition to the user's variables, we also want to display the default
@@ -111,10 +140,10 @@ Blockly.Variables.flyoutCategory = function(blocks, gaps, margin, workspace) {
       continue;
     }
     var getBlock = Blockly.Blocks.variables_get ?
-        new Blockly.Block(workspace, 'variables_get') : null;
+        new Blockly.Block(blockSpace, 'variables_get') : null;
     getBlock && getBlock.initSvg();
     var setBlock = Blockly.Blocks.variables_set ?
-        new Blockly.Block(workspace, 'variables_set') : null;
+        new Blockly.Block(blockSpace, 'variables_set') : null;
     setBlock && setBlock.initSvg();
     if (variableList[i] === null) {
       defaultVariable = (getBlock || setBlock).getVars()[0];

@@ -72,7 +72,7 @@
           <title name="DIR">moveForward</title>
           <value name="VALUE">
             <block type="math_number">
-              <title name="NUM">???</title>
+              <title name="NUM">100</title>
             </block>
           </value>
         </block>
@@ -80,7 +80,7 @@
           <title name="DIR">jumpForward</title>
           <value name="VALUE">
             <block type="math_number">
-              <title name="NUM">???</title>
+              <title name="NUM">100</title>
             </block>
           </value>
         </block>
@@ -88,7 +88,7 @@
           <title name="DIR">turnLeft</title>
           <value name="VALUE">
             <block type="math_number">
-              <title name="NUM">???</title>
+              <title name="NUM">90</title>
             </block>
           </value>
         </block>
@@ -96,7 +96,7 @@
           <title name="DIR">turnRight</title>
           <value name="VALUE">
             <block type="math_number">
-              <title name="NUM">???</title>
+              <title name="NUM">90</title>
             </block>
           </value>
         </block>
@@ -104,17 +104,17 @@
           <mutation counter="counter"/>
           <value name="FROM">
             <block type="math_number">
-              <title name="NUM">???</title>
+              <title name="NUM">1</title>
             </block>
           </value>
           <value name="TO">
             <block type="math_number">
-              <title name="NUM">???</title>
+              <title name="NUM">100</title>
             </block>
           </value>
           <value name="BY">
             <block type="math_number">
-              <title name="NUM">???</title>
+              <title name="NUM">10</title>
             </block>
           </value>
         </block>
@@ -124,7 +124,7 @@
         <block type="controls_repeat_ext" inline="true">
           <value name="TIMES">
             <block type="math_number">
-              <title name="NUM">???</title>
+              <title name="NUM">3</title>
             </block>
           </value>
         </block>
@@ -132,12 +132,12 @@
           <title name="OP">DIVIDE</title>
           <value name="A">
             <block type="math_number">
-              <title name="NUM">360</title>
+              <title name="NUM">0</title>
             </block>
           </value>
           <value name="B">
             <block type="math_number">
-              <title name="NUM">???</title>
+              <title name="NUM">0</title>
             </block>
           </value>
         </block>
