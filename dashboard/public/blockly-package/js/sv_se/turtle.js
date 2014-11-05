@@ -291,9 +291,12 @@ BlocklyApps.init = function(config) {
   }
 
   if (config.hide_source) {
-    var blockly = container.querySelector('#blockly');
+    BlocklyApps.hideSource = true;
+    var workspaceDiv = config.level.editCode ?
+                        document.getElementById('codeWorkspace') :
+                        container.querySelector('#blockly');
     container.className = 'hide-source';
-    blockly.style.display = 'none';
+    workspaceDiv.style.display = 'none';
     // For share page on mobile, do not show this part.
     if (!BlocklyApps.share || !dom.isMobile()) {
       var buttonRow = runButton.parentElement;
@@ -367,7 +370,7 @@ BlocklyApps.init = function(config) {
         }
       });
       if (BlocklyApps.noPadding) {
-        upSale.style.marginLeft = '30px';
+        upSale.style.marginLeft = '10px';
       }
     } else if (!dom.isMobile()) {
       upSale.innerHTML = require('./templates/learn.html')();
@@ -426,17 +429,21 @@ BlocklyApps.init = function(config) {
         palette: utils.generateDropletPalette(config.level.codeFunctions)
       });
 
-      var startText = '// ' + msg.typeHint() + '\n';
-      var codeFunctions = config.level.codeFunctions;
-      // Insert hint text from level codeFunctions into editCode area
-      if (codeFunctions) {
-        var hintText = '';
-        for (var i = 0; i < codeFunctions.length; i++) {
-          hintText += " " + codeFunctions[i].func + "();";
+      if (config.level.startBlocks) {
+        BlocklyApps.editor.setValue(config.level.startBlocks);
+      } else {
+        var startText = '// ' + msg.typeHint() + '\n';
+        var codeFunctions = config.level.codeFunctions;
+        // Insert hint text from level codeFunctions into editCode area
+        if (codeFunctions) {
+          var hintText = '';
+          for (var i = 0; i < codeFunctions.length; i++) {
+            hintText += " " + codeFunctions[i].func + "();";
+          }
+          startText += '// ' + msg.typeFuncs().replace('%1', hintText) + '\n';
         }
-        startText += '// ' + msg.typeFuncs().replace('%1', hintText) + '\n';
+        BlocklyApps.editor.setValue(startText);
       }
-      BlocklyApps.editor.setValue(startText);
     });
   }
 
@@ -556,6 +563,7 @@ BlocklyApps.init = function(config) {
   // Initialize the slider.
   var slider = document.getElementById('slider');
   if (slider) {
+    // TODO (noted by cpirich): remove Turtle specific code here:
     Turtle.speedSlider = new Slider(10, 35, 130, slider);
 
     // Change default speed (eg Speed up levels that have lots of steps).
@@ -564,13 +572,15 @@ BlocklyApps.init = function(config) {
     }
   }
 
-  // Add the starting block(s).
-  var startBlocks = config.level.startBlocks || '';
-  if (config.forceInsertTopBlock) {
-    startBlocks = blockUtils.forceInsertTopBlock(startBlocks, config.forceInsertTopBlock);
+  if (!BlocklyApps.editCode) {
+    // Add the starting block(s).
+    var startBlocks = config.level.startBlocks || '';
+    if (config.forceInsertTopBlock) {
+      startBlocks = blockUtils.forceInsertTopBlock(startBlocks, config.forceInsertTopBlock);
+    }
+    startBlocks = BlocklyApps.arrangeBlockPosition(startBlocks, config.blockArrangement);
+    BlocklyApps.loadBlocks(startBlocks);
   }
-  startBlocks = BlocklyApps.arrangeBlockPosition(startBlocks, config.blockArrangement);
-  BlocklyApps.loadBlocks(startBlocks);
 
   // listen for scroll and resize to ensure onResize() is called
   window.addEventListener('scroll', function() {
@@ -982,21 +992,27 @@ BlocklyApps.report = function(options) {
   report.attempt = BlocklyApps.attempts;
   report.lines = feedback.getNumBlocksUsed();
 
-  var onAttemptCallback = (function() {
-    return function(builderDetails) {
-      for (var option in builderDetails) {
-        report[option] = builderDetails[option];
-      }
-      onAttempt(report);
-    };
-  })();
+  // If hideSource is enabled, the user is looking at a shared level that
+  // they cannot have modified. In that case, don't report it to the service
+  // or call the onComplete() callback expected. The app will just sit
+  // there with the Reset button as the only option.
+  if (!BlocklyApps.hideSource) {
+    var onAttemptCallback = (function() {
+      return function(builderDetails) {
+        for (var option in builderDetails) {
+          report[option] = builderDetails[option];
+        }
+        onAttempt(report);
+      };
+    })();
 
-  // If this is the level builder, go to builderForm to get more info from
-  // the level builder.
-  if (options.builder) {
-    builder.builderForm(onAttemptCallback);
-  } else {
-    onAttemptCallback();
+    // If this is the level builder, go to builderForm to get more info from
+    // the level builder.
+    if (options.builder) {
+      builder.builderForm(onAttemptCallback);
+    } else {
+      onAttemptCallback();
+    }
   }
 };
 
@@ -9414,6 +9430,7 @@ levels.ec_1_1 = utils.extend(levels['1_1'], {
     {'func': 'moveForward', 'params': ["100"], 'idArgLast': true },
     {'func': 'turnRight', 'params': ["90"], 'idArgLast': true },
   ],
+  'startBlocks': "moveForward(100);\n",
 });
 levels.ec_1_2 = utils.extend(levels['1_2'], {
   'editCode': true,
@@ -9422,6 +9439,7 @@ levels.ec_1_2 = utils.extend(levels['1_2'], {
     {'func': 'turnRight', 'params': ["90"], 'idArgLast': true },
     {'func': 'penColour', 'params': ["'#ff0000'"], 'idArgLast': true },
   ],
+  'startBlocks': "penColour('#ff0000');\nmoveForward(100);\n",
 });
 levels.ec_1_3 = utils.extend(levels['1_3'], {
   'editCode': true,
@@ -9430,6 +9448,7 @@ levels.ec_1_3 = utils.extend(levels['1_3'], {
     {'func': 'turnRight', 'params': ["90"], 'idArgLast': true },
     {'func': 'penColour', 'params': ["'#ff0000'"], 'idArgLast': true },
   ],
+  'startBlocks': "for (var i = 0; i < 4; i++) {\n  __\n}\n",
 });
 levels.ec_1_4 = utils.extend(levels['1_4'], {
   'editCode': true,
@@ -9438,8 +9457,18 @@ levels.ec_1_4 = utils.extend(levels['1_4'], {
     {'func': 'turnRight', 'params': ["90"], 'idArgLast': true },
     {'func': 'penColour', 'params': ["'#ff0000'"], 'idArgLast': true },
   ],
+  'startBlocks': "for (var i = 0; i < 3; i++) {\n  penColour('#ff0000');\n}\n",
 });
-
+levels.ec_1_10 = utils.extend(levels['1_10'], {
+  'editCode': true,
+  'codeFunctions': [
+    {'func': 'moveForward', 'params': ["100"], 'idArgLast': true },
+    {'func': 'turnRight', 'params': ["90"], 'idArgLast': true },
+    {'func': 'penColour', 'params': ["'#ff0000'"], 'idArgLast': true },
+    {'func': 'penWidth', 'params': ["1"], 'idArgLast': true },
+  ],
+  'startBlocks': "moveForward(100);\n",
+});
 
 },{"../../locale/sv_se/turtle":42,"../block_utils":3,"../level_base":10,"../utils":39,"./answers":27,"./core":31,"./requiredBlocks":35,"./startBlocks.xml":36,"./toolbox.xml":37}],34:[function(require,module,exports){
 var appMain = require('../appMain');
@@ -10679,8 +10708,11 @@ Turtle.checkAnswer = function() {
   var levelComplete = level.freePlay || isCorrect(delta, permittedErrors);
   Turtle.testResults = BlocklyApps.getTestResults(levelComplete);
 
-  var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
-  var textBlocks = Blockly.Xml.domToText(xml);
+  var program;
+  if (!level.editCode) {
+    var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+    program = Blockly.Xml.domToText(xml);
+  }
 
   // Make sure we don't reuse an old message, since not all paths set one.
   Turtle.message = undefined;
@@ -10688,7 +10720,7 @@ Turtle.checkAnswer = function() {
   // In level K1, check if only lengths differ.
   if (level.isK1 && !levelComplete && !BlocklyApps.editCode &&
       level.solutionBlocks &&
-      removeK1Lengths(textBlocks) === removeK1Lengths(level.solutionBlocks)) {
+      removeK1Lengths(program) === removeK1Lengths(level.solutionBlocks)) {
     Turtle.testResults = BlocklyApps.TestResults.APP_SPECIFIC_ERROR;
     Turtle.message = turtleMsg.lengthFeedback();
   }
@@ -10723,6 +10755,14 @@ Turtle.checkAnswer = function() {
     Turtle.testResults = levelComplete ?
       BlocklyApps.TestResults.ALL_PASS :
       BlocklyApps.TestResults.TOO_FEW_BLOCKS_FAIL;
+
+    // If we want to "normalize" the JavaScript to avoid proliferation of nearly
+    // identical versions of the code on the service, we could do either of these:
+
+    // do an acorn.parse and then use escodegen to generate back a "clean" version
+    // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
+
+    program = BlocklyApps.editor.getValue();
   }
 
   // If the current level is a free play, always return the free play
@@ -10746,7 +10786,7 @@ Turtle.checkAnswer = function() {
     builder: level.builder,
     result: levelComplete,
     testResult: Turtle.testResults,
-    program: encodeURIComponent(textBlocks),
+    program: encodeURIComponent(program),
     onComplete: Turtle.onReportComplete,
     save_to_gallery: level.impressive
   };
