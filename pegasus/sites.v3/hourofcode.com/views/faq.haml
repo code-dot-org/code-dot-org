@@ -31,7 +31,7 @@
 
 -else 
   %h2#about= hoc_s(:hoc_faq_what_is_hoc_q)
-  %div= hoc_s(:hoc_faq_what_is_hoc_a)
+  %div= hoc_s(:hoc_faq_what_is_hoc_a).gsub(/http:\/\/code.org/, "http://#{codeorg_url()}")
 
   %br/
   %a{href: "http://#{codeorg_url()}/learn", target: "_blank"}
@@ -42,16 +42,16 @@
   %div= hoc_s(:hoc_faq_when_is_hoc_a)
 
   %h2= hoc_s(:hoc_faq_why_cs_q)
-  %div= hoc_s(:hoc_faq_why_cs_a)
+  %div= hoc_s(:hoc_faq_why_cs_a).gsub(/http:\/\/code.org/, "http://#{codeorg_url()}")
 
   %h2= hoc_s(:hoc_faq_how_participate_q)
   %div= hoc_s(:hoc_faq_how_participate_a).gsub(/target-resources-how-to/, hoc_uri('/resources/how-to'))
 
   %h2= hoc_s(:hoc_faq_behind_hoc_q)
-  %div= hoc_s(:hoc_faq_behind_hoc_a)
+  %div= hoc_s(:hoc_faq_behind_hoc_a).gsub(/http:\/\/code.org/, "http://#{codeorg_url()}")
 
   %h2= hoc_s(:hoc_faq_host_q)
-  %div= hoc_s(:hoc_faq_host_a).gsub(/target-resources-how-to/, hoc_uri('/resources/how-to'))
+  %div= hoc_s(:hoc_faq_host_a).gsub(/target-resources-how-to/, hoc_uri('/resources/how-to')).gsub(/http:\/\/code.org/, "http://#{codeorg_url()}")
 
   %h2= hoc_s(:hoc_faq_need_computers_q)
   %div= hoc_s(:hoc_faq_need_computers_a)
