@@ -794,4 +794,6 @@ Blockly.JavaScript.variables_set = function() {
   var a = Blockly.JavaScript.valueToCode(this, "VALUE", Blockly.JavaScript.ORDER_ASSIGNMENT) || "0";
   return Blockly.JavaScript.translateVarName(this.getTitleValue("VAR")) + " = " + a + ";\n"
 };
+Blockly.JavaScript.parameters_get = Blockly.JavaScript.variables_get;
+Blockly.JavaScript.parameters_set = Blockly.JavaScript.variables_set;
 
