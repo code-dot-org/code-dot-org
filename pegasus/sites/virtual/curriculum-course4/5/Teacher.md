@@ -1,5 +1,5 @@
 ---
-title: Envelope Variables
+title: Abstraction with Mad Glibs
 view: page_curriculum
 theme: none
 ---
@@ -8,12 +8,12 @@ theme: none
 Live preview (once saved to dropbox) is at http://staging.code.org/curriculum/course4 Don't share this URL!
 -->
 
-<%= partial('curriculum_header', :title=> 'Envelope Variables', :unplugged=>true,:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>20) %>
+<%= partial('curriculum_header', :title=> 'Abstraction with Mad Glibs', :unplugged=>true,:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>20) %>
 
 [content]
 
 ## Lesson Overview
-Variables allow for a lot of freedom in computer science.  This lesson helps to explain what variables are and how we can use them in many different ways. Use this activity before (or in conjunction with) the lesson on abstraction to really hit the idea home.
+Abstraction is one of the most important skills for a computer scientist to understand.  This activity will have your students analyzing stories for differences so that they can abstract them away. Those abstracted stories become templates for fun and crazy new ones. 
 
 [summary]
 
@@ -23,11 +23,11 @@ Variables allow for a lot of freedom in computer science.  This lesson helps to 
 
 1) [Review](#Review) <br/>
 2) [Vocabulary](#Vocab) <br/>
-3) [Introducing Variables](#GetStarted) <br/>
+3) [An Abstract Reminder](#GetStarted) <br/>
 
-### **Activity: Envelope Variables** - 20  minutes  
+### **Activity: Mad Glibs** - 20  minutes  
 
-4) [Envelope Variables](#Activity1)
+4) [Mad Glibs](#Activity1)
 
 ### **Wrap-up** - 10  minutes 
 
@@ -36,7 +36,7 @@ Variables allow for a lot of freedom in computer science.  This lesson helps to 
 
 ### **Assessment** - 10  minutes 
 
-7) [Variables Assessment](#Assessment)
+7) [Abstraction Assessment](#Assessment)
 
 
 [/summary]
@@ -45,10 +45,9 @@ Variables allow for a lot of freedom in computer science.  This lesson helps to 
 
 Students will:
 
-- Identify variables and determine their values
-- Define and call variables in the context of real-life activities
-- Create situations which require the use of variables
-- Utilize teamwork to enrich creative game play
+- Have the chance to internalize the idea of “abstraction”
+- Combine writing and abstraction to test their own creativity
+- Analyze their day to find differences that they can turn into similarities
 
 
 # Teaching Guide
@@ -56,18 +55,15 @@ Students will:
 
 ### For the Student
 
-- Blank Paper
-- 6 envelopes per group, labeled with the names (name1, name2, Name1, eyes1, sisters1, sisters2)
-- 1 [Envelope Variables Worksheet](Activity4-Variables.pdf) per group
-- Pens/Pencils/Markers
-- [Variables Assessment Worksheet](Assessment4-Variables.pdf)
+- [Mad Glibs Abstraction Worksheet](Activity6-MadGlibs.pdf)
+- [Abstraction Assessment Worksheet](Assessment6-MadGlibs.pdf)
+- Pens/Pencils
 
 ### For the Teacher
 
-- Prepare your variable presentation by writing variable names on the back of envelopes and stuffing them with appropriate values
-- Print one [Envelope Variables Worksheet](Activity4-Variables.pdf) per student
-- Print one [Variables Assessment Worksheet](Assessment4-Variables.pdf)
-- Provide students with envelopes (details above), paper, pens & pencils
+- Print one [Mad Glibs Abstraction Worksheet](Activity6-MadGlibs.pdf) per student
+- Print one [Abstraction Assessment Worksheet](Assessment6-MadGlibs.pdf)
+- Provide student with paper, pens & pencils
 
 
 ## Getting Started (10 min) 
@@ -102,67 +98,34 @@ This lesson has one important word to review:<br/>
 
 [/centerIt]
 
-**Variable** - Say it with me: Vayr-ee-ah-buhl <br/>
-A placeholder for a piece of information that can change
+**Abstraction** - Say it with me: Ab-strac-shun <br/>
+Pulling out specific differences to make one solution work for multiple problems
 
 
-### <a name="GetStarted"></a>3) Introducing Variables
+### <a name="GetStarted"></a>3) An Abstract Reminder
+When you finish your review, try taking your class by surprise.
 
-On the board (or under your document camera) write the sentence:
+>> “So, what did you have for waffles this morning?”
 
->> "Hello, my name is <u> name1</u> ."
+Your students might look perplexed?
 
-In your hand, you should hold three envelopes.  One labeled "name1", another labeled "name2", and another with an imperfect variation of name1 -- such as "Name1".
+>> “No one? Okay, what did you have for toast yesterday?”
 
-![](envelopes.png)
+You may start to get some hands raising, and people eager to share and agree because they want to relate, but possibly not because they understand.
 
-- Be sure that only the envelope called "name1" has your correct name in it (ideally the name that you expect the class to identify for you).
+>> “See what I was doing there? I identified my experience in a very specific manner, and that made it harder for everyone else to relate to. What could I have said that more people would have understood?”
 
-Call attention to the board and inquire:
+At some point, they’ll start to come up with the idea of using “breakfast” in place of the actual food that was consumed.
 
->> "If this sentence on the board is for me, what should go into the blank called 'name1'?"
+>> “In a way, the word ‘breakfast’ is like a variable that we use to hold a space for whatever it is we ate this morning. By taking the specific word out and replacing the space it leaves with ‘breakfast,’ we are using abstraction to make something work for multiple people.”
 
-Let the students register their guess, then have someone come check the envelope.  Be sure that they pick the envelope from the three (this can make for a fun and interesting extra bit to the lesson if they should happen to choose the 'Name1' envelope and see a word like "Monkey".)  You can use that as an opportunity to introduce the fact that, for this game, capitalization matters.
-
-Next, ask:
-
->> - "Does this sentence only work for me?"
-
->> - "How could I get it to work for someone else in the class?"
-
-Hopefully the students will recognize that they just need to put a new name in the envelope.  If they don't get that idea right away, help guide them to that answer.  You will want to be very specific about which envelope that name needs to go into.
-
-- Feel free to do multiple examples using different envelopes. 
-- Work your way up to using two or more envelopes in one sentence.
-  - Have fun with it. Incorporate students. You can do first and last names, ages, or even positive qualities about individuals.
-  
-
-## Activity: [Envelope Variables](Activity4-Variables.pdf) (20 min)
-### <a name="Activity1"></a>4) Envelope Variables
-
-Now it's the students' turn!
-
-Once the students understand how the envelopes relate to the sentences, challenge the students to create their own sentences that can work for anyone in the group as long as they change what goes into the envelope.
-
-Give the students some [sample sentence templates](Activity4-Variables.pdf) to begin with.
-
-**Directions:**
-
-> 1) Divide students into groups of 2-4.
-
-> 2) Have groups assign a sentence to each person.
-
-> 3) Each student will out a slip of paper to put inside of their envelope “variable” to fill in the blank from their sentence. 
-
-> 4) Once everyone has an answer in their envelope, students will throw the envelopes into the middle of the table. 
-
-> 5) Starting with question 1, students will try to guess the value of every team member’s variable, then pull the envelope with that variable name to see if they were right.
-
-> 6) Once all filled envelopes have been revealed, students should switch questions and start again.
+Ask the class to give you some examples of other places that they may naturally use abstraction to allow more people to understand them. The idea of lunch and dinner will most-likely come up. Is there anything *not* food related?
 
 
-If they finish early, encourage students to come up with their own templates to share with the class.
 
+## Activity: Mad Glibs (20 min)
+### <a name="Activity1"></a>4) [Mad Glibs Abstraction Worksheet](Activity6-MadGlibs.pdf)
+The next step is to pass out a “fill-in-the-blank” story (see the [Mad Glibs Abstraction Worksheet](Activity6-MadGlibs.pdf) for a copy to print out) . Let them know that this started as a specific story about one thing, but we used abstraction to turn some of the specific words into blanks, and now the story can be about lots of things. Ask them what they can make their story about.
 
 ![](story.png)
 
@@ -171,37 +134,39 @@ If they finish early, encourage students to come up with their own templates to 
 ### <a name="FlashChat"></a>5) Flash Chat: What did we learn? 
 
 - What did we learn today?
-- Can you think of anywhere that you have seen variables before? 
-- There is at least one variable at the top of most homework hand outs? Can you think of what it could be?
+- How might you be able to use abstraction when describing things outside? 
+- Can you think of ways to use abstraction when talking about animals?
 
 ### <a name="Shmocab"></a>6) Vocab Shmocab
 You can choose to do these as a class, or have the students discuss with an elbow partner and share.
 
-- Do you remember the definition of the word "variable"?
+- Do you remember the definition of the word "abstraction"?
 
-> "A four sided parallelogram"<br/>
-> "A placeholder for a piece of information that can change"<br/>
-> "The wheels on the bottom of chair legs"<br/>
+> "A list of steps that you can follow to finish a task"<br/>
+> "An object that looks like a triangle from one direction and a circle from another"<br/>
+> "Pulling out specific differences to make one solution work for multiple problems"<br/>
 
 
 ## Assessment (10 min)
-### <a name="Assessment"></a>7) [Variables Assessment Worksheet](Assessment4-Variables.pdf) <br/><br/>
+### <a name="Assessment"></a>7) [Abstraction Assessment Worksheet](Assessment6-MadGlibs.pdf) <br/><br/>
 
 
 ## Extended Learning 
 Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
 
-### What's in the box?
+### Mad Drawing
 
-- Draw boxes on a piece of paper with simple mathmatic operators between them.
-  - For instance  |_ + _| = |_|
-- Have similar size squares with numbers between 1 & 20.
-- Ask one student to come create a true equation, using the numbers provided.
-- Once the student has finished (and the class verifies the equation) exchange one of the numbers with another one, then remove a second number entirely.
-  - Tell the students that there is a hidden number in the empty box that makes that equation true again.
-  - What number is in the box?
-- Play this game over and over again until you can remove the number from any location and the students can figure out what it is supposed to be.
+- Challenge the students to use these same ideas to make puzzles out of drawings. 
+  - Have the students fold two pieces of paper in half three times and re-open them to lay them flat.<br/>  
+  - On one of those pieces, have them make a drawing where they leave one of the resulting rectangles blank.
+  - Have them cut the other folded piece along the creases to wind up with eight rectangle shapes.
+      - Encourage the students to make different drawings on all eight rectangles that belivably complete their original drawing.
+- Be sure to allow students time to share.
 
+### Prep for Songwriting with Parameters
+
+- Can students find songs where there are phrases that repeat, except for one or two words that change? 
+  - Using "Old MacDonald" or "Five Little Monkeys" will prepare the students nicely for an activity that is coming up.<br/>  
 
 ## Connections and Background Information
 
