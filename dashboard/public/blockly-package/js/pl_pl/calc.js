@@ -1436,15 +1436,12 @@ exports.builderForm = function(onAttemptCallback) {
 var ExpressionNode = require('./expressionNode');
 
 exports.compute = function (expr, blockId) {
-
+  Calc.computedExpression = expr;
 };
 
 exports.expression = function (operator, arg1, arg2, blockId) {
   // todo (brent) - make use of blockId
-  // todo (brent) - hacky way to get last expression
-  Calc.lastExpression = new ExpressionNode(operator, arg1, arg2);
-
-  return Calc.lastExpression;
+  return new ExpressionNode(operator, arg1, arg2);
 };
 
 },{"./expressionNode":10}],7:[function(require,module,exports){
@@ -1588,7 +1585,7 @@ var api = require('./api');
 var page = require('../templates/page.html');
 var feedback = require('../feedback.js');
 var dom = require('../dom');
-
+var blockUtils = require('../block_utils');
 
 var ExpressionNode = require('./expressionNode');
 var TestResults = require('../constants').TestResults;
@@ -1659,10 +1656,11 @@ Calc.init = function(config) {
 
     // Add to reserved word list: API, local variables in execution evironment
     // (execute) and the infinite loop detection function.
-    //XXX Not sure if this is still right.
     Blockly.JavaScript.addReservedWords('Calc,code');
 
-    Calc.expressions.target = generateExpressionFromBlockXml(level.solutionBlocks);
+    var solutionBlocks = blockUtils.forceInsertTopBlock(level.solutionBlocks,
+      config.forceInsertTopBlock);
+    Calc.expressions.target = getExpressionFromBlocks(solutionBlocks);
     Calc.drawExpressions();
 
     // Adjust visualizationColumn width.
@@ -1734,29 +1732,32 @@ function evalCode (code) {
 }
 
 /**
- * Given the xml for a set of blocks, generates an expression from them by
- * temporarily sticking them into the workspace, generating code, and
- * evaluating said code.
+ * Generates an ExpressionNode from the blocks in the workspace. If blockXml
+ * is provided, temporarily sticks those blocks into the workspace to generate
+ * the ExpressionNode, then deletes blocks.
  */
-function generateExpressionFromBlockXml(blockXml) {
-  var xml = blockXml || '';
 
-  if (Blockly.mainBlockSpace.getTopBlocks().length !== 0) {
-    throw new Error("generateExpressionFromBlockXml shouldn't be called if " +
-      "we already have blocks in the workspace");
+function getExpressionFromBlocks(blockXml) {
+  if (blockXml) {
+    if (Blockly.mainBlockSpace.getTopBlocks().length !== 0) {
+      throw new Error("getExpressionFromBlocks shouldn't be called with blocks if " +
+        "we already have blocks in the workspace");
+    }
+    // Temporarily put the blocks into the workspace so that we can generate code
+    BlocklyApps.loadBlocks(blockXml);
   }
 
-  // Temporarily put the blocks into the workspace so that we can generate code
-  BlocklyApps.loadBlocks(xml);
-  var code = Blockly.Generator.blockSpaceToCode('JavaScript');
+  var code = Blockly.Generator.blockSpaceToCode('JavaScript', 'functional_compute');
   evalCode(code);
+  var object = Calc.computedExpression;
+  Calc.computedExpression = null;
 
-  // Remove the blocks
-  Blockly.mainBlockSpace.getTopBlocks().forEach(function (b) { b.dispose(); });
-  var expression = Calc.lastExpression;
-  Calc.lastExpression = null;
+  if (blockXml) {
+    // Remove the blocks
+    Blockly.mainBlockSpace.getTopBlocks().forEach(function (b) { b.dispose(); });
+  }
 
-  return expression;
+  return object;
 }
 
 /**
@@ -1767,15 +1768,13 @@ Calc.execute = function() {
   Calc.testResults = BlocklyApps.TestResults.NO_TESTS_RUN;
   Calc.message = undefined;
 
-  // todo (brent) perhaps try to share user vs. expected generation better
-  var code = Blockly.Generator.blockSpaceToCode('JavaScript', 'functional_compute');
-  evalCode(code);
-
-  if (!Calc.lastExpression) {
-    Calc.lastExpression = new ExpressionNode(0);
+  var userExpression = getExpressionFromBlocks();
+  if (userExpression) {
+    Calc.expressions.user = userExpression.clone();
+  } else {
+    Calc.expressions.user = new ExpressionNode(0);
   }
 
-  Calc.expressions.user = Calc.lastExpression.clone();
   if (Calc.expressions.target) {
     Calc.expressions.current = Calc.expressions.target.clone();
     Calc.expressions.user.applyExpectation(Calc.expressions.target);
@@ -1973,7 +1972,7 @@ function onReportComplete(response) {
   displayFeedback(response);
 }
 
-},{"../../locale/pl_pl/calc":38,"../../locale/pl_pl/common":39,"../base":2,"../codegen":14,"../constants":15,"../dom":16,"../feedback.js":17,"../skins":22,"../templates/page.html":30,"./api":6,"./controls.html":9,"./expressionNode":10,"./levels":11,"./visualization.html":13}],9:[function(require,module,exports){
+},{"../../locale/pl_pl/calc":38,"../../locale/pl_pl/common":39,"../base":2,"../block_utils":3,"../codegen":14,"../constants":15,"../dom":16,"../feedback.js":17,"../skins":22,"../templates/page.html":30,"./api":6,"./controls.html":9,"./expressionNode":10,"./levels":11,"./visualization.html":13}],9:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -3694,8 +3693,12 @@ module.exports.initTitledFunctionalBlock = function (block, title, type, args) {
     var arg = args[i];
     var input = block.appendFunctionalInput(arg.name);
     input.setInline(i > 0);
-    input.setHSV.apply(input, colors[arg.type]);
-    input.setCheck(arg.type);
+    if (arg.type === 'none') {
+      input.setHSV(0, 0, 0.99);
+    } else {
+      input.setHSV.apply(input, colors[arg.type]);
+      input.setCheck(arg.type);
+    }
     input.setAlign(Blockly.ALIGN_CENTRE);
   }
 
@@ -3716,7 +3719,7 @@ module.exports.initTitledFunctionalBlock = function (block, title, type, args) {
  * and other args are read from functional inputs. For example:
  *
  *     options = {
- *       blockName: 'functional_setSpriteZeroSpeed', 
+ *       blockName: 'functional_setSpriteZeroSpeed',
  *       blockTitle: 'set sprite zero speed',
  *       apiName: 'Studio.setSpriteSpeed',
  *       args: [{constantValue: '0'}, // spriteIndex
@@ -3733,7 +3736,7 @@ module.exports.installFunctionalApiCallBlock = function(blockly, generator,
   var blockName = options.blockName;
   var blockTitle = options.blockTitle;
   var apiName = options.apiName;
-  var args = options.args;             
+  var args = options.args;
 
   var blockArgs = args.filter(function(arg) {
     return arg.constantValue === undefined;

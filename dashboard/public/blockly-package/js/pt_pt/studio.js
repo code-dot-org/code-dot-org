@@ -6946,8 +6946,12 @@ module.exports.initTitledFunctionalBlock = function (block, title, type, args) {
     var arg = args[i];
     var input = block.appendFunctionalInput(arg.name);
     input.setInline(i > 0);
-    input.setHSV.apply(input, colors[arg.type]);
-    input.setCheck(arg.type);
+    if (arg.type === 'none') {
+      input.setHSV(0, 0, 0.99);
+    } else {
+      input.setHSV.apply(input, colors[arg.type]);
+      input.setCheck(arg.type);
+    }
     input.setAlign(Blockly.ALIGN_CENTRE);
   }
 
@@ -6968,7 +6972,7 @@ module.exports.initTitledFunctionalBlock = function (block, title, type, args) {
  * and other args are read from functional inputs. For example:
  *
  *     options = {
- *       blockName: 'functional_setSpriteZeroSpeed', 
+ *       blockName: 'functional_setSpriteZeroSpeed',
  *       blockTitle: 'set sprite zero speed',
  *       apiName: 'Studio.setSpriteSpeed',
  *       args: [{constantValue: '0'}, // spriteIndex
@@ -6985,7 +6989,7 @@ module.exports.installFunctionalApiCallBlock = function(blockly, generator,
   var blockName = options.blockName;
   var blockTitle = options.blockTitle;
   var apiName = options.apiName;
-  var args = options.args;             
+  var args = options.args;
 
   var blockArgs = args.filter(function(arg) {
     return arg.constantValue === undefined;
