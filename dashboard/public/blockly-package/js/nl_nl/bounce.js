@@ -418,10 +418,10 @@ BlocklyApps.init = function(config) {
     // using window.require forces us to use requirejs version of require
     window.require(['droplet'], function(droplet) {
       var displayMessage, examplePrograms, messageElement, onChange, startingText;
-      var palette = utils.generateDropletPalette(config.level.codeFunctions);
       BlocklyApps.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
         mode: 'javascript',
-        palette: palette
+        modeOptions: utils.generateDropletModeOptions(config.level.codeFunctions),
+        palette: utils.generateDropletPalette(config.level.codeFunctions)
       });
 
       var startText = '// ' + msg.typeHint() + '\n';
@@ -4329,20 +4329,27 @@ exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
     var start = node.start - userCodeStartOffset;
     var end = node.end - userCodeStartOffset;
 
-    inUserCode = (start > 0) && (start < userCodeLength);
-
-    // If we are showing Javascript code in the ace editor, highlight
-    // the code being executed in each step:
-    if (!editor.currentlyUsingBlocks) {
-      // Only show selection if the node being executed is inside the user's
-      // code (not inside code we inserted before or after their code that is
-      // not visible in the editor):
-      var selection = editor.aceEditor.getSelection();
-      if (inUserCode) {
-        createSelection(selection, cumulativeLength, start, end);
+    // Only show selection if the node being executed is inside the user's
+    // code (not inside code we inserted before or after their code that is
+    // not visible in the editor):
+    if (start > 0 && start < userCodeLength) {
+      // Highlight the code being executed in each step:
+      if (editor.currentlyUsingBlocks) {
+        var style = {color: '#FFFF22'};
+        var line = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
+        editor.clearLineMarks();
+        editor.markLine(line, style);
       } else {
-        selection.clearSelection();
+        var selection = editor.aceEditor.getSelection();
+        createSelection(selection, cumulativeLength, start, end);
       }
+      inUserCode = true;
+    }
+  } else {
+    if (editor.currentlyUsingBlocks) {
+      editor.clearLineMarks();
+    } else {
+      editor.aceEditor.getSelection().clearSelection();
     }
   }
   return inUserCode;
@@ -11696,6 +11703,32 @@ exports.generateDropletPalette = function (codeFunctions) {
   return palette;
 };
 
+/**
+ * Generate modeOptions for the droplet editor based on some level data.
+ */
+exports.generateDropletModeOptions = function (codeFunctions) {
+  var modeOptions = {
+    blockFunctions: [],
+  };
+
+  // BLOCK, VALUE, and EITHER functions that are normally used in droplet
+  // are included here in comments for reference. When we return our own
+  // modeOptions from this function, it overrides and replaces the list below.
+/*
+  BLOCK_FUNCTIONS = ['fd', 'bk', 'rt', 'lt', 'slide', 'movexy', 'moveto', 'jump', 'jumpto', 'turnto', 'home', 'pen', 'fill', 'dot', 'box', 'mirror', 'twist', 'scale', 'pause', 'st', 'ht', 'cs', 'cg', 'ct', 'pu', 'pd', 'pe', 'pf', 'play', 'tone', 'silence', 'speed', 'wear', 'write', 'drawon', 'label', 'reload', 'see', 'sync', 'send', 'recv', 'click', 'mousemove', 'mouseup', 'mousedown', 'keyup', 'keydown', 'keypress', 'alert'];
+  VALUE_FUNCTIONS = ['abs', 'acos', 'asin', 'atan', 'atan2', 'cos', 'sin', 'tan', 'ceil', 'floor', 'round', 'exp', 'ln', 'log10', 'pow', 'sqrt', 'max', 'min', 'random', 'pagexy', 'getxy', 'direction', 'distance', 'shown', 'hidden', 'inside', 'touches', 'within', 'notwithin', 'nearest', 'pressed', 'canvas', 'hsl', 'hsla', 'rgb', 'rgba', 'cell'];
+  EITHER_FUNCTIONS = ['button', 'read', 'readstr', 'readnum', 'table', 'append', 'finish', 'loadscript'];
+*/
+
+  if (codeFunctions) {
+    for (var i = 0; i < codeFunctions.length; i++) {
+      modeOptions.blockFunctions[i] = codeFunctions[i].func;
+    }
+  }
+
+  return modeOptions;
+};
+
 },{"./lodash":20,"./xml":38}],38:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
@@ -11728,7 +11761,7 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.nl=function(n){return n===1?"one":"other"}
 exports.bounceBall = function(d){return "laat de bal botsen"};
 
-exports.bounceBallTooltip = function(d){return "Bounce a ball off of an object."};
+exports.bounceBallTooltip = function(d){return "Stuiter de bal tegen een object."};
 
 exports.continue = function(d){return "Doorgaan"};
 
@@ -11756,9 +11789,9 @@ exports.ifTooltip = function(d){return "als er een pad is in de aangegeven richt
 
 exports.ifelseTooltip = function(d){return "als er een pad in de opgegeven richting is, doe je het eerste actie blok. anders, doe je de tweede actie blok."};
 
-exports.incrementOpponentScore = function(d){return "increment opponent score"};
+exports.incrementOpponentScore = function(d){return "punt voor de tegenstander"};
 
-exports.incrementOpponentScoreTooltip = function(d){return "Add one to the current opponent score."};
+exports.incrementOpponentScoreTooltip = function(d){return "Geef de tegenstander een punt."};
 
 exports.incrementPlayerScore = function(d){return "Scoor punt"};
 
@@ -11766,7 +11799,7 @@ exports.incrementPlayerScoreTooltip = function(d){return "Een punt toevoegen aan
 
 exports.isWall = function(d){return "is dit een muur"};
 
-exports.isWallTooltip = function(d){return "Returns true if there is a wall here"};
+exports.isWallTooltip = function(d){return "Geeft waar als er hier een muur is"};
 
 exports.launchBall = function(d){return "lanceer nieuwe bal"};
 
@@ -11776,7 +11809,7 @@ exports.makeYourOwn = function(d){return "Maak je eigen Bounce-spel"};
 
 exports.moveDown = function(d){return "omlaag"};
 
-exports.moveDownTooltip = function(d){return "Move the paddle down."};
+exports.moveDownTooltip = function(d){return "Beweeg het batje naar beneden."};
 
 exports.moveForward = function(d){return "beweeg vooruit"};
 
@@ -11784,15 +11817,15 @@ exports.moveForwardTooltip = function(d){return "Beweeg me een plek naar voren."
 
 exports.moveLeft = function(d){return "naar links"};
 
-exports.moveLeftTooltip = function(d){return "Move the paddle to the left."};
+exports.moveLeftTooltip = function(d){return "Beweeg het batje naar links."};
 
 exports.moveRight = function(d){return "naar rechts"};
 
-exports.moveRightTooltip = function(d){return "Move the paddle to the right."};
+exports.moveRightTooltip = function(d){return "Beweeg het batje naar rechts."};
 
 exports.moveUp = function(d){return "omhoog"};
 
-exports.moveUpTooltip = function(d){return "Move the paddle up."};
+exports.moveUpTooltip = function(d){return "Beweeg het batje naar boven."};
 
 exports.nextLevel = function(d){return "Gefeliciteerd! Je hebt de puzzel voltooid."};
 
@@ -11916,13 +11949,13 @@ exports.turnRight = function(d){return "Draai rechtsom"};
 
 exports.turnTooltip = function(d){return "Draait me 90 graden linksom of rechtsom."};
 
-exports.whenBallInGoal = function(d){return "when ball in goal"};
+exports.whenBallInGoal = function(d){return "Wanneer de bal in het doel is"};
 
-exports.whenBallInGoalTooltip = function(d){return "Execute the actions below when a ball enters the goal."};
+exports.whenBallInGoalTooltip = function(d){return "Voer de acties hieronder uit wanneer een bal het doel ingaat."};
 
-exports.whenBallMissesPaddle = function(d){return "when ball misses paddle"};
+exports.whenBallMissesPaddle = function(d){return "wanneer de bal het batje mist"};
 
-exports.whenBallMissesPaddleTooltip = function(d){return "Execute the actions below when a ball misses the paddle."};
+exports.whenBallMissesPaddleTooltip = function(d){return "Voer de acties hieronder uit wanneer een bal het batje mist."};
 
 exports.whenDown = function(d){return "als pijltje naar beneden"};
 
@@ -11936,9 +11969,9 @@ exports.whenLeft = function(d){return "als pijltje naar links"};
 
 exports.whenLeftTooltip = function(d){return "Voer de acties hieronder uit als pijltje naar links wordt ingedrukt."};
 
-exports.whenPaddleCollided = function(d){return "when ball hits paddle"};
+exports.whenPaddleCollided = function(d){return "wanneer de bal het batje raakt"};
 
-exports.whenPaddleCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a paddle."};
+exports.whenPaddleCollidedTooltip = function(d){return "Voer de actie hieronder uit wanneer een bal botst met een batje."};
 
 exports.whenRight = function(d){return "als pijltje naar rechts"};
 
@@ -11948,9 +11981,9 @@ exports.whenUp = function(d){return "als pijltje naar boven"};
 
 exports.whenUpTooltip = function(d){return "Voer de acties hieronder uit als pijltje naar boven wordt ingedrukt."};
 
-exports.whenWallCollided = function(d){return "when ball hits wall"};
+exports.whenWallCollided = function(d){return "wanneer de bal een muur raakt"};
 
-exports.whenWallCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a wall."};
+exports.whenWallCollidedTooltip = function(d){return "Voer de actie hieronder uit wanneer een bal botst met een muur."};
 
 exports.whileMsg = function(d){return "terwijl"};
 

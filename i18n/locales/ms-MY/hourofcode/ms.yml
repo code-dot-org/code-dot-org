@@ -11,29 +11,6 @@ ms:
   header_menu_faq: Soalan lazim
   header_menu_prizes: Hadiah
   header_menu_uk_code_org: uk.code.org
-  choose_country_header: Penyertaan dari seluruh dunia!
-  country_al: Albania
-  country_ar: Argentina
-  country_au: Australia
-  country_br: Brazil
-  country_bg: Bulgaria
-  country_de: Jerman
-  country_es: Amerika Latin
-  country_eu: Kesatuan Eropah
-  country_gr: Greece
-  country_hr: Croatia
-  country_id: Indonesia
-  country_it: Itali
-  country_jp: Jepun
-  country_me: Timur Tengah dan Afrika Utara
-  country_my: Malaysia
-  country_nz: New Zealand
-  country_ro: Romania
-  country_ru: Rusia
-  country_ua: Ukraine
-  country_uk: United Kingdom
-  country_us: Amerika Syarikat
-  country_vn: Vietnam
   company_4-H: 4-H Youth Development
   company_bgca: Boys and Girls Club of America
   company_cgcs: Council of the Great City Schools
@@ -178,6 +155,17 @@ ms:
   resources_emails: E-mel contoh
   resources_stats: Statistik berguna Sains Komputer
   resources_press_kit: Kenyataan akhbar
+  events_title: All Hour of Code Events
+  events_nav_all: All Events
+  events_nav_classrooms: Classrooms
+  events_nav_whole_schools: Whole Schools
+  events_nav_special: Special Events
+  events_all_title: All Hour of Code events
+  events_classroom_title: Classroom Hour of Code events
+  events_whole_school_title: Whole-school Hour of Code events
+  events_special_title: Special Hour of Code events
+  event: event
+  events: events
   footer_copyright_message: Hak Cipta 2014 Code.org. Semua hak terpelihara.
   footer_trademark_message: Hour of Code™ adalah tanda perniagaan bagi Code.org.
   footer_menu_partners: Rakan kongsi

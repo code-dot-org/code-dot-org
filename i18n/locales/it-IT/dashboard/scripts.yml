@@ -24,7 +24,7 @@ it:
           Multi & Match: Risposte Multiple e Corrispondenze
           K-1 Flappy: K-1 Flappy
           Flappy non blockly: Flappy senza blocchi
-          title: Corso 1
+          title: Course 1
           Artist 2: Artista 2
           Happy Maps: Le Mappe Felici
           Move it, Move it: Muovilo, Muovilo
@@ -40,7 +40,7 @@ it:
           "Maze: Loops": 'Labirinto: Cicli'
           "Bee: Loops": 'Ape: Cicli'
           "Studio: Create a Story": 'Laboratorio: Crea una Storia'
-          description_short: Il Corso 1 è per studenti di prima elementare che stanno iniziando a leggere.
+          description_short: Course 1 is designed for early readers. Recommended for grades K-1.
           "Artist: Loops": 'Artista: Cicli'
         course2:
           The Maze: Il Labirinto
@@ -76,7 +76,7 @@ it:
           "Bee: Debugging": 'Ape: Correzione di Errori'
           "Artist: Debugging": 'Artista: Correzione di Errori'
           "Bee: Conditionals": 'Ape: Istruzioni Condizionali'
-          description_short: Il Corso 2 è per studenti delle scuole elementari che sanno già leggere.
+          description_short: 'Course 2 is designed for students who can read.  Recommended for grades 2-5.'
           "Artist: Sequence2": 'Artista: Sequenza 2'
           "Maze: Sequence2": 'Labirinto: Sequenza 2'
           "Artist: Nested Loops": 'Artista: Cicli Annidati'
@@ -117,7 +117,7 @@ it:
           "Farmer: While Loops": 'Agricoltore: Cicli "Mentre"'
           "Bee: Nested Loops": 'Ape: Cicli Annidati'
           "Bee: Debugging": 'Ape: Correzione di Errori'
-          description_short: Gli studenti che seguono il Corso 3 dovrebbero aver già svolto il Corso 2.
+          description_short: 'Course 3 is a follow-up to Course 2.  Recommended for grades 4-5.'
           Maze2: Labirinto 2
           Artist2: Artista 2
           "Artist: Functions2": 'Artista: Funzioni 2'
@@ -147,3 +147,18 @@ it:
           description: "Disegna fantastiche immagini e decorazioni con l'artista!"
           Artist: Artista
           description_short: "Disegna fantastiche immagini e decorazioni con l'artista!"
+        course4:
+          description_short: Students taking Course 4 should have already taken Courses 2 and 3.
+          description: Course 4 is designed for students who have taken Course 2 and 3. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8.
+          "Artist: Variables": 'Artist: Variables'
+          "Bee: For Loops": 'Bee: For Loops'
+          title: Course 4
+          "Algorithms: Tangrams": 'Algorithms: Tangrams'
+          Variables: Variabili
+          "Play Lab: Variables": 'Play Lab: Variables'
+          "Play Lab: Functions with Parameters": 'Play Lab: Functions with Parameters'
+          "Bee: Functions with Parameters": 'Bee: Functions with Parameters'
+          "Artist: For Loops": 'Artist: For Loops'
+          "Play Lab: For Loops": 'Play Lab: For Loops'
+          "Artist: Functions": 'Artista: Funzioni'
+          "Artist: Functions with Paraqmeters": 'Artist: Functions with Paraqmeters'

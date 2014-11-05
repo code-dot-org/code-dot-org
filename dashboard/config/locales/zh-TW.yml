@@ -343,8 +343,7 @@
     student_progress: "您的學習進度"
     student_stats: 你已經獲得 %{trophy_count}/%{trophy_max} "概念通達"獎盃
     student_left_off: "你離開的地方："
-    student_finished: "你已經完成所有練習課程，換取你的 %{prize_link}，並挑選另外的 %{online_link} 或到 {local_school_link}
-      %學習"
+    student_finished: "你已經完成所有練習課程，挑戰另外的 %{online_link} 或到% {local_school_link} "
     local_school: "當地的學校"
     online: "在線上"
     see_details: "查看詳細資訊"

@@ -4,7 +4,15 @@ title: Ressurser layout: wide
 
 * * *
 
-# Hvordan undervise Kodetimen
+<div class="row">
+  <h1 class="col-sm-6">
+    How to teach one Hour of Code
+  </h1>
+  
+  <div class="col-sm-6 button-container centered">
+    <a href="/#join"><button class="signup-button">Sign up your event</button></a>
+  </div>
+</div>
 
 ## 1) Prøv veiledningene:
 
@@ -34,7 +42,7 @@ Den beste opplevelsen av Kodetimen vil være med datamaskiner med internett. Men
 
 Vis elevene en inspirerende video for å sparke i gang Kodetimen. Eksempelvis:
 
-  * Bill Gates, Mark Zuckerberg og NBA stjernen Chris Bosh var med i den opprinnelige lanseringsvideoen for Code.org (Det finnes versjoner på [ett minutt](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutters](https://www.youtube.com/watch?v=nKIu9yen5nc) og [9 minutters](https://www.youtube.com/watch?v=dU1xS07N-FA))
+  * Bill Gates, Mark Zuckerberg og NBA stjernen Chris Bosh var med i den opprinnelige lanseringsvideoen for Code.org (Det finnes versjoner på [ett minutt](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutter](https://www.youtube.com/watch?v=nKIu9yen5nc) og [9 minutter](https://www.youtube.com/watch?v=dU1xS07N-FA))
   * [Lanseringsvideoen for Kodetimen 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), eller < % if @country == 'uk' %> [Videoen for Kodetimen 2014](https://www.youtube.com/watch?v=96B5-JGA9EQ) < % else %> [Videoen for Kodetimen 2014](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
   * [President Obama oppfordrer alle elever til å lære datavitenskap](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
@@ -45,30 +53,30 @@ De fleste barn vet ikke hva programmering er. Her er noen ideer:
   * Forklar det på en enkel måte med eksempler på bruksområder som både gutter og jenter vil bryr seg om (redde liv, hjelpe folk, knytter mennesker sammen, osv.).
   * Prøv f.eks: "Tenk på tingene som du bruker hver dag: mobiltelefon, mikrobølgeovn, datamaskin, trafikklys... alle disse tingene måtte programmeres av datakyndige."
   * Eller: "datavitenskap er kunsten å smelte sammen mennesklige ideer med digitale verktøy for å øke evnene våre. IT-folk jobber innenfor så mange forskjellige områder: apputvikling, helbreding av sykdommer, skaping av tegnefilmer, arbeid med sosiale medier, bygging av roboter, utforsking av andre planeter og mye mye mer. "
-  * See tips for getting girls interested in computer science [here](http://<%= codeorg_url() %>/girls). 
+  * Se tips for å få jenter interessert i dataprogrammering [her](http://<%= codeorg_url() %>/girls). 
 
 ## 5) Start Kodetimen din!
 
 **Sett elevene i gang!**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](http://<%= codeorg_url() %>/learn) under the number of participants. [hourofcode.com/co](http://hourofcode.com/co)
-  * Tell students to visit the URL and start the tutorial.
+  * Skriv linken til veiledningen på en tavle. Finn linken som er oppført i [informasjonen for den veiledningen du har valgt](http://<%= codeorg_url() %>/learn) under antall deltakere. [hourofcode.com/co](http://hourofcode.com/co)
+  * Be elevene gå til denne nettadressen og starte veiledningen.
 
 **Når elevene støter på vansker**
 
-  * Tell students, “Ask 3 then me.” Ask 3 classmates, and if they don’t have the answer, then ask the teacher.
-  * Encourage students and offer positive reinforcement: “You’re doing great, so keep trying.”
-  * It’s okay to respond: “I don’t know. Let’s figure this out together.” If you can’t figure out a problem, use it as a good learning lesson for the class: “Technology doesn’t always work out the way we want. Together, we’re a community of learners.” And: “Learning to program is like learning a new language; you won’t be fluent right away.“
+  * Si dette til elevene: “Spør 3 før du spør meg.” Spør 3 i klassen, og hvis de ikke kan svare, så kan du spørre læreren.
+  * Oppmuntre elevene og gi positive tilbakemeldinger: "Du klarer det fint, så bare fortsett"
+  * Det er greit å svare: "Jeg vet ikke. La oss prøve å finne det ut sammen." Hvis du ikke får løst et problem, bruk det som en et eksempel: "teknologien fungerer ikke alltid ut slik vi ønsker. men vi kan lærer dette sammen." Og: "Å lære programmering er som å lære et nytt språk, du kan det ikke flytende med en gang."
 
 **Hva kan jeg gjøre hvis en elev blir fort ferdig?**
 
-  * Students can see all tutorials and try another Hour of Code activity at [<%= codeorg_url() %>/learn](http://<%= codeorg_url() %>/learn)
-  * Or, ask students who finish early to help classmates who are having trouble with the activity.
+  * Elevene kan se alle leksjonene og prøve en av de andre aktivitetene for Kodetimen på [<%= codeorg_url() %>/learn](http://<%= codeorg_url() %>/learn)
+  * Eller du kan be de elevene som blir fort ferdige om å hjelpe de som sliter med å få det til.
 
-**Hvordan skriver jeg ut sertifikater for mine elever?**
+**Hvordan skriver jeg ut kursbeviser for mine elever?**
 
-Hver elev får en sjanse til å få et sertifikat via e-post når de er ferdige med [Code.org leksjonene](http://studio.code.org). Du kan klikke på sertifikatet for å skrive det ut. However, if you want to make new certificates for your students, visit our [Certificates](http://<%= codeorg_url() %>/certificates) page to print as many certificates as you like, in one fell swoop!
+Hver elev får tilsendt et kursbevis via e-post når de er ferdige med [Code.org leksjonene](http://studio.code.org). Du kan klikke på sertifikatet for å skrive det ut. Dersom du vil lage nye kursbevis til elevene dine, gå til vår [kursbevis-side](http://<%= codeorg_url() %>/certificates) og skriv ut så mange du vil på en gang!
 
 **Hva kommer etter Kodetimen?**
 
-Kodetimen er bare det første skrittet på en reise for å lære mer om hvordan teknologien virker og hvordan programmer lages. < % if @country == 'uk' %> Time av koden er bare første skritt på en reise for å lære mer om hvordan teknologien virker og hvordan å lage programmer. For å fortsette den reisen, må [barna oppmuntres til å lære mer på nettet](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %>
+Kodetimen er bare det første skrittet på en reise for å lære mer om hvordan teknologien virker og hvordan programmer lages. < % if @country == 'uk' %> Time av koden er bare første skritt på en reise for å lære mer om hvordan teknologien virker og hvordan å lage programmer. For å fortsette den reisen, må [barna oppmuntres til å lære mer på nettet](http://uk.code.org/learn/beyond). <% else %> For å fortsette den reisen, kan du finne fleere ressurser for lærare [her](http://<%= codeorg_url() %>/educate). Eller uppmuntre elevene til selv å finne mer på[nettet](http://<%= codeorg_url() %>/learn/behond). <% end %> <a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>

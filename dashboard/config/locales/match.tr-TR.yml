@@ -167,8 +167,8 @@
         "/script_assets/4-5_images/unplugged/suncatchers_1_a3.png": "/script_assets/4-5_images/unplugged/suncatchers_1_a3.png"
         "/script_assets/4-5_images/unplugged/suncatchers_1_a4.png": "/script_assets/4-5_images/unplugged/suncatchers_1_a4.png"
         "<h4>STACK</h4>": "<h4>STACK</h4>"
-        "<h4>STAMP</h4>": "<h4>STAMP</h4>"
-        "<h4>STAR</h4>": "<h4>STAR</h4>"
+        "<h4>STAMP</h4>": "<h4>Pul</h4>"
+        "<h4>STAR</h4>": "<h4>Yıldız</h4>"
         "<h4>RAMP</h4>": "<h4>RAMP</h4>"
       K-1 Artist 2 Match 1:
         Matching: Eşleştirme
@@ -340,12 +340,12 @@
           it.
         yearbook-picture: yearbook-picture
         string numer: string numer
-        image: image
-        (yearbook-picture "Sally" 1992): (yearbook-picture "Sally" 1992)
-        function name: function name
-        domain: domain
+        image: görüntü
+        (yearbook-picture "Sally" 1992): (Yıllık-resmi "Selin" 1992)
+        function name: Fonksiyon adı
+        domain: alan adı
         range: range
-        example: example
+        example: "örnek"
       Match example to contract:
         Contracts of Functions: Contracts of Functions
         Match each example with the correct contract!: Match each example with the

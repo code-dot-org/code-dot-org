@@ -76,7 +76,7 @@ nl:
     gender: Geslacht (optioneel)
     birthday: Verjaardag (optioneel)
     age: Leeftijd
-    user_type: Are you a student or teacher?
+    user_type: Bent u een leerling of een leraar?
     submit: Meld je aan
     teacher: Bent u een leraar?
     valid_username: Beschikbaar!
@@ -270,7 +270,7 @@ nl:
       vist: Vraag je leerlingen te gaan naar
       section_code: 'en hun groepscode in te vullen:'
       first_please: 'Als eerste, %{add_section}'
-      for: For
+      for: voor
       enter: 'vul in:'
     sections:
       add: Groep toevoegen
@@ -351,7 +351,7 @@ nl:
     none: Wil ik liever niet zeggen
   user_type:
     student: Leerling
-    teacher: Teacher
+    teacher: Leraar
   footer:
     help_from_html: Werknemers van Google, Microsoft, Facebook en Twitter hebben geholpen bij het samenstellen van deze opdracht.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. All Rights Reserved.'
@@ -368,7 +368,7 @@ nl:
     teacher: Zie de oplossing
     auth_error: U bent niet gemachtigd om de oplossing te zien.
     submit: Werk de locatie van de Kunstenaar bij
-    direction: Start Direction (in degrees)
+    direction: Start richting (in graden)
   video:
     tab: Video.
     notes: Geen video? Laat notities zien.

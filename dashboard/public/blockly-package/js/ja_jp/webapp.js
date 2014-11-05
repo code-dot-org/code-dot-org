@@ -418,10 +418,10 @@ BlocklyApps.init = function(config) {
     // using window.require forces us to use requirejs version of require
     window.require(['droplet'], function(droplet) {
       var displayMessage, examplePrograms, messageElement, onChange, startingText;
-      var palette = utils.generateDropletPalette(config.level.codeFunctions);
       BlocklyApps.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
         mode: 'javascript',
-        palette: palette
+        modeOptions: utils.generateDropletModeOptions(config.level.codeFunctions),
+        palette: utils.generateDropletPalette(config.level.codeFunctions)
       });
 
       var startText = '// ' + msg.typeHint() + '\n';
@@ -1621,20 +1621,27 @@ exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
     var start = node.start - userCodeStartOffset;
     var end = node.end - userCodeStartOffset;
 
-    inUserCode = (start > 0) && (start < userCodeLength);
-
-    // If we are showing Javascript code in the ace editor, highlight
-    // the code being executed in each step:
-    if (!editor.currentlyUsingBlocks) {
-      // Only show selection if the node being executed is inside the user's
-      // code (not inside code we inserted before or after their code that is
-      // not visible in the editor):
-      var selection = editor.aceEditor.getSelection();
-      if (inUserCode) {
-        createSelection(selection, cumulativeLength, start, end);
+    // Only show selection if the node being executed is inside the user's
+    // code (not inside code we inserted before or after their code that is
+    // not visible in the editor):
+    if (start > 0 && start < userCodeLength) {
+      // Highlight the code being executed in each step:
+      if (editor.currentlyUsingBlocks) {
+        var style = {color: '#FFFF22'};
+        var line = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
+        editor.clearLineMarks();
+        editor.markLine(line, style);
       } else {
-        selection.clearSelection();
+        var selection = editor.aceEditor.getSelection();
+        createSelection(selection, cumulativeLength, start, end);
       }
+      inUserCode = true;
+    }
+  } else {
+    if (editor.currentlyUsingBlocks) {
+      editor.clearLineMarks();
+    } else {
+      editor.aceEditor.getSelection().clearSelection();
     }
   }
   return inUserCode;
@@ -6806,6 +6813,32 @@ exports.generateDropletPalette = function (codeFunctions) {
   return palette;
 };
 
+/**
+ * Generate modeOptions for the droplet editor based on some level data.
+ */
+exports.generateDropletModeOptions = function (codeFunctions) {
+  var modeOptions = {
+    blockFunctions: [],
+  };
+
+  // BLOCK, VALUE, and EITHER functions that are normally used in droplet
+  // are included here in comments for reference. When we return our own
+  // modeOptions from this function, it overrides and replaces the list below.
+/*
+  BLOCK_FUNCTIONS = ['fd', 'bk', 'rt', 'lt', 'slide', 'movexy', 'moveto', 'jump', 'jumpto', 'turnto', 'home', 'pen', 'fill', 'dot', 'box', 'mirror', 'twist', 'scale', 'pause', 'st', 'ht', 'cs', 'cg', 'ct', 'pu', 'pd', 'pe', 'pf', 'play', 'tone', 'silence', 'speed', 'wear', 'write', 'drawon', 'label', 'reload', 'see', 'sync', 'send', 'recv', 'click', 'mousemove', 'mouseup', 'mousedown', 'keyup', 'keydown', 'keypress', 'alert'];
+  VALUE_FUNCTIONS = ['abs', 'acos', 'asin', 'atan', 'atan2', 'cos', 'sin', 'tan', 'ceil', 'floor', 'round', 'exp', 'ln', 'log10', 'pow', 'sqrt', 'max', 'min', 'random', 'pagexy', 'getxy', 'direction', 'distance', 'shown', 'hidden', 'inside', 'touches', 'within', 'notwithin', 'nearest', 'pressed', 'canvas', 'hsl', 'hsla', 'rgb', 'rgba', 'cell'];
+  EITHER_FUNCTIONS = ['button', 'read', 'readstr', 'readnum', 'table', 'append', 'finish', 'loadscript'];
+*/
+
+  if (codeFunctions) {
+    for (var i = 0; i < codeFunctions.length; i++) {
+      modeOptions.blockFunctions[i] = codeFunctions[i].func;
+    }
+  }
+
+  return modeOptions;
+};
+
 },{"./lodash":10,"./xml":36}],27:[function(require,module,exports){
 
 exports.random = function (values) {
@@ -7258,7 +7291,13 @@ Webapp.onTick = function() {
                                              Webapp.cumulativeLength,
                                              Webapp.userCodeStartOffset,
                                              Webapp.userCodeLength);
-      Webapp.interpreter.step();
+      try {
+        Webapp.interpreter.step();
+      }
+      catch(err) {
+        Webapp.executionError = err;
+        Webapp.onPuzzleComplete();
+      }
     }
   } else {
     if (Webapp.tickCount === 1) {
@@ -7432,6 +7471,7 @@ BlocklyApps.reset = function(first) {
   // Reset the Globals object used to contain program variables:
   Webapp.Globals = {};
   Webapp.eventQueue = [];
+  Webapp.executionError = null;
   Webapp.interpreter = null;
 };
 
@@ -7620,7 +7660,9 @@ Webapp.feedbackImage = '';
 Webapp.encodedFeedbackImage = '';
 
 Webapp.onPuzzleComplete = function() {
-  if (level.freePlay) {
+  if (Webapp.executionError) {
+    Webapp.result = BlocklyApps.ResultType.ERROR;
+  } else if (level.freePlay) {
     Webapp.result = BlocklyApps.ResultType.SUCCESS;
   }
 
@@ -7895,7 +7937,7 @@ exports.emptyBlocksErrorMsg = function(d){return "”Repeat”または\"If\"の
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "関数ブロックは、中に他のブロックがないと動きません。"};
 
-exports.extraTopBlocks = function(d){return "イベントブロックに付いていない余分なブロックがあります。"};
+exports.extraTopBlocks = function(d){return "ブロックを外しました。もしかして、「実行時」のブロックにつなげたかったですか？"};
 
 exports.finalStage = function(d){return "おめでとうございます ！最終ステージをクリアしました。"};
 
@@ -7927,7 +7969,7 @@ exports.nextLevelTrophies = function(d){return "おめでとうございます �
 
 exports.nextStage = function(d){return "おめでとうございます ！"+v(d,"stageName")+"を コンプリートしました。"};
 
-exports.nextStageTrophies = function(d){return "おめでとうございます！あなたはステージ "+v(d,"stageNumber")+" をクリアし、"+p(d,"numTrophies",0,"ja",{"one":"トロフィー","other":n(d,"numTrophies")+" トロフィー"})+"を獲得しました。"};
+exports.nextStageTrophies = function(d){return "おめでとうございます！ "+v(d,"stageName")+" をクリアして "+p(d,"numTrophies",0,"ja",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+" を手に入れました。"};
 
 exports.numBlocksNeeded = function(d){return "おめでとうございます ！あなたはパズル "+v(d,"puzzleNumber")+" を完了しました。 (もしくは "+p(d,"numBlocks",0,"ja",{"one":"1 block","other":n(d,"numBlocks")+" blocks"})+" のみの使用だけでも可能でした。)"};
 
@@ -7979,7 +8021,7 @@ exports.saveToGallery = function(d){return "ギャラリーに保存"};
 
 exports.savedToGallery = function(d){return "ギャラリーに保存しました！"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "プログラムをシェアできませんでした。"};
 
 exports.typeFuncs = function(d){return "利用可能な機能:%1"};
 
@@ -8032,13 +8074,13 @@ exports.catVariables = function(d){return "変数"};
 
 exports.continue = function(d){return "続行"};
 
-exports.createHtmlBlock = function(d){return "create html block"};
+exports.createHtmlBlock = function(d){return "html のブロックを作成します。"};
 
-exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
+exports.createHtmlBlockTooltip = function(d){return "アプリの html のブロックを作成します。"};
 
 exports.finalLevel = function(d){return "おめでとうございます ！最後のパズルを解決しました。"};
 
-exports.makeYourOwn = function(d){return "Make Your Own App"};
+exports.makeYourOwn = function(d){return "自分のアプリを作る"};
 
 exports.nextLevel = function(d){return "おめでとうございます ！このパズルを完了しました。"};
 
@@ -8046,23 +8088,23 @@ exports.no = function(d){return "いいえ"};
 
 exports.numBlocksNeeded = function(d){return "このパズルは%1個のブロックで解けます。"};
 
-exports.pause = function(d){return "Pause"};
+exports.pause = function(d){return "一時停止"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
+exports.reinfFeedbackMsg = function(d){return "「やり直す」ボタンを押すとアプリに戻ります。"};
 
-exports.repeatForever = function(d){return "repeat forever"};
+exports.repeatForever = function(d){return "ずっと"};
 
 exports.repeatDo = function(d){return "実行"};
 
-exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
+exports.repeatForeverTooltip = function(d){return "このブロックの中に入れたアクションを、アプリが動いている間ずっとくりかえします。"};
 
-exports.shareWebappTwitter = function(d){return "Check out the app I made. I wrote it myself with @codeorg"};
+exports.shareWebappTwitter = function(d){return "私のアプリを見てください。 @codeorg を使って自分で書きました。"};
 
-exports.shareGame = function(d){return "Share your app:"};
+exports.shareGame = function(d){return "アプリをみんなに見せる"};
 
-exports.turnBlack = function(d){return "turn black"};
+exports.turnBlack = function(d){return "もどる"};
 
-exports.turnBlackTooltip = function(d){return "Turns the screen black."};
+exports.turnBlackTooltip = function(d){return "画面を黒くする"};
 
 exports.yes = function(d){return "はい"};
 

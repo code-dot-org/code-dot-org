@@ -55,21 +55,21 @@ Other Curriculum (MSM, MSS, ECS & CSP)
 [col-33]
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[<button>Learn More</button>](/start)
+[<button>Learn More</button>](/curriculum)
 
 [/col-33]
 
 [col-33]
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[<button>Learn More</button>](/profdev)
+[<button>Learn More</button>](/professional-development)
 
 [/col-33]
 
 [col-33]
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[<button>Learn More</button>](/inspire)
+[<button>Learn More</button>](/inspiration)
 
 [/col-33]
 

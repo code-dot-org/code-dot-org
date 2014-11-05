@@ -23,6 +23,23 @@ Ability and willingness to travel up to 25% of the time is required.
 
 Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
+## Operations Program Coordinator (Seattle)
+
+**Job Summary:** 
+
+Code.org is recruiting for an experienced Program Coordinator, an event planning expert, to join our  Operations team. Responsibilities of the position include coordinating event logistics  for teacher workshops on a national basis (dates, location, travel, accommodations, and catering), managing event participant lists, drafting communications to stakeholders, responding to requests for information and distributing materials externally. Full-time, salaried.
+
+**Minimum Qualifications:**
+
+- Minimum of 1-2 years of experience as an event planner
+- Strong administrative and event planning skills
+- Excellent customer service attitude
+- Tech-savvy; proficiency in working with Google Docs and Microsoft Office a must
+
+Minimal travel (0-5% of the time) is required.
+
+Email cover letter and resume to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
 ## Operations/Developer (Seattle)
 
 **Job Summary:** 

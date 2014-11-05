@@ -14,7 +14,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Terima kasih karena telah mendaftar sebagai penyelengara Hour of Code!
 
-**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](<%= hoc_uri('/prizes') %>)
+**SETIAP** penyelenggara Hour of Code akan menerima 10 GB ruang Dropbox atau $10 kredit dari Skype sebagai terima kasih. </p> 
 
 <% if @country == 'us' %>
 
@@ -32,7 +32,7 @@ Beritahu temanmu mengenai #HourOfCode.
 
 ## 2. Tawarkan pada seluruh isi sekolah anda untuk mengikuti Hour of Code
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](<%= hoc_uri('/files/schools-handout.pdf') %>). Setelah sekolah anda telah ikut serta, [masuk dan menangkan teknologi bernilai $10,000 untuk sekolah anda](/prizes) dan tantang sekolah lain di daerahmu untuk ikut serta juga.
+[ atau <a href="<%= hoc_uri('/files/schools-handout.pdf') %>" handout ini](<%= hoc_uri('/resources#email') %>). Setelah sekolah anda telah ikut serta, [masuk dan menangkan teknologi bernilai $10,000 untuk sekolah anda](/prizes) dan tantang sekolah lain di daerahmu untuk ikut serta juga.
 
 <% else %>
 
@@ -50,7 +50,7 @@ Beritahu temanmu mengenai #HourOfCode.
 
 [Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](<%= hoc_uri('/resources/hoc-one-pager.pdf') %>).
 
-## 5. Promote Hour of Code within your community
+## 5. Promosikan Hour of Code dalam komunitas Anda
 
 Rekrut kelompok lokal — anak Pramuka, gereja, Universitas, veteran kelompok atau Serikat pekerja. Atau selenggarakan Hour of Code "pesta blok" untuk lingkungan tempat Anda tinggal.
 

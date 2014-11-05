@@ -1,5 +1,6 @@
 "fi-FI":
   hello: Hei maailma
+  select_language: Please select your language
   computer_science: Tietojenkäsittelytiede
   computer_science_edweek: Tietojenkäsittelyn koulutusviikko
   csedweek_dates: 9.-15. joulukuuta 2013

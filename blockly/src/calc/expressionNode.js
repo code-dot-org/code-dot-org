@@ -11,8 +11,7 @@ var ExpressionNode = function (val, left, right) {
     this.right = right instanceof ExpressionNode ? right : new ExpressionNode(right);
   }
 
-  // null indicates not set. otherwise will be true/false
-  this.valMetExpectation_ = null;
+  this.valMetExpectation_ = true;
 };
 module.exports = ExpressionNode;
 
@@ -49,11 +48,6 @@ ExpressionNode.prototype.clone = function () {
  *  descendants failed expectations, otherwise we only check this node's val.
  */
 ExpressionNode.prototype.failedExpectation = function (includeDescendants) {
-  // Don't fail if we don't have an expectation set
-  if (this.valMetExpectation_ === null) {
-    return false;
-  }
-
   var fails = (this.valMetExpectation_ === false);
   if (includeDescendants && this.left && this.left.failedExpectation(true)) {
     fails = true;
@@ -179,10 +173,6 @@ ExpressionNode.prototype.isEquivalent = function (target) {
  * it is correct.
  */
 ExpressionNode.prototype.getTokenList = function (markNextParens) {
-  if (this.valMetExpectation_ === null) {
-    throw new Error("Can't get token list without expectation set");
-  }
-
   if (!this.isOperation()) {
     return [token(this.val.toString(), this.valMetExpectation_ === false)];
   }

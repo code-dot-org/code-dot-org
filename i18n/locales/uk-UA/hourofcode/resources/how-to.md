@@ -4,7 +4,15 @@ title: Resources layout: wide
 
 * * *
 
-# Як провести Годину коду
+<div class="row">
+  <h1 class="col-sm-6">
+    How to teach one Hour of Code
+  </h1>
+  
+  <div class="col-sm-6 button-container centered">
+    <a href="/#join"><button class="signup-button">Sign up your event</button></a>
+  </div>
+</div>
 
 ## 1) Спробуйте підручники:
 
@@ -32,43 +40,43 @@ title: Resources layout: wide
 
 ## 4) Надихайте учнів - покажіть відео-ролики
 
-Show students an inspirational video to kick off the Hour of Code. Examples:
+Покажіть учням заохочувальне відео на початку Години коду. Наприклад:
 
-  * The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
-  * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [Hour of Code 2014 video](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
-  * [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+  * Перше відео від Code.org, у ролях Біл Гейтс, Марк Цукенберг, зірка НБА Кріс Бош (Існують версії на [1 хвилину](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 хвилин](https://www.youtube.com/watch?v=nKIu9yen5nc), та [9 хвилин](https://www.youtube.com/watch?v=dU1xS07N-FA))
+  * Відео від [Години коду 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), або <% if @country == 'uk' %> [Години коду 2014](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [Години коду 2014](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
+  * [Заклик Президента Обами до всіх учнів - вивчати програмування](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
 **Запаліть учнів - проведіть короткий вступ**
 
 Більшість учнів не знають, чим займається інформатика. Ось кілька ідей:
 
-  * Explain it in a simple way that includes examples of applications that both boys and girls will care about (saving lives, helping people, connecting people, etc.).
-  * Try: "Think about things in your everyday life that use computer science: a cell phone, a microwave, a computer, a traffic light… all of these things needed a computer scientist to help build them.”
-  * Or: “Computer science is the art of blending human ideas and digital tools to increase our power. Computer scientists work in so many different areas: writing apps for phones, curing diseases, creating animated movies, working on social media, building robots that explore other planets and so much more."
-  * See tips for getting girls interested in computer science [here](http://<%= codeorg_url() %>/girls). 
+  * Пояснюйте простими аналогіями із діяльностями, котрі важливі для хлопців та дівчат (порятунок життя, допомога людям, спілкування тощо).
+  * Спробуйте таке: "Подумайте про те, як у вашому житті застосовуються здобутки інформатики: в телефоні, мікрохвильовці, комп'ютері, світлофорі... всі ці речі можливі завдяки тому, що програмісти створили відповідні програми."
+  * Або: «Інформатика - це мистецтво поєднання людських ідей та цифрових інструментів для того, щоб розширити наші можливості. Програмісти працюють у різноманітних сферах: пишуть програми для телефонів, здійснюють розробки для медицини, створюють мультфільми, працюють у соціальних медіа, розробляють роботів, які досліджують інші планети та багатьох інших."
+  * Поради залучення дівчаток до галузі інформатики [ тут](http://<%= codeorg_url() %>/girls). 
 
 ## 5) Розпочніть свою Годину коду
 
 **Скеруйте учнів до діяльності**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](http://<%= codeorg_url() %>/learn) under the number of participants. [hourofcode.com/co](http://hourofcode.com/co)
-  * Tell students to visit the URL and start the tutorial.
+  * Запишіть веб-адресу підручника на дошці. Знайти посилання можна серед [інформації про обраний підручник](http://<%= codeorg_url() %>/learn) під кількістю учасників. [hourofcode.com/co](http://hourofcode.com/co)
+  * Запросіть учнів відкрити URL-адресу та розпочати навчання.
 
 **Коли учні стикаються із труднощами**
 
-  * Tell students, “Ask 3 then me.” Ask 3 classmates, and if they don’t have the answer, then ask the teacher.
-  * Encourage students and offer positive reinforcement: “You’re doing great, so keep trying.”
-  * It’s okay to respond: “I don’t know. Let’s figure this out together.” If you can’t figure out a problem, use it as a good learning lesson for the class: “Technology doesn’t always work out the way we want. Together, we’re a community of learners.” And: “Learning to program is like learning a new language; you won’t be fluent right away.“
+  * Оголосіть правило: "Спитай сусідів, тоді мене". Нехай учні запитають трьох однокласників перед тим, як задавати питання вчителеві.
+  * Заохочуйте учнів та позитивно підкріплюйте їхній успіх: "У тебе добре виходить, пробуй далі."
+  * Нормальною є відповідь: "Я не знаю. Спробуймо розібратись разом." Якщо не вдається знайти рішення задачі, використайте це в якості уроку: "Технології не завжди працюють так, як нам цього хочеться. Ми вчимося разом". І: "Вивчення програмування - це як вивчення нової мови; нею неможливо одразу вільно говорити."
 
 **Що робити, якщо учень справився швидше?**
 
-  * Students can see all tutorials and try another Hour of Code activity at [<%= codeorg_url() %>/learn](http://<%= codeorg_url() %>/learn)
-  * Or, ask students who finish early to help classmates who are having trouble with the activity.
+  * Учні можуть скористатись іншим підручником Години коду [<%= codeorg_url() %>/learn](http://<%= codeorg_url() %>/learn)
+  * Або попросіть учнів, котрі справились швидше, допомогти однокласникам, у яких виникли труднощі з вправами.
 
 **Як надрукувати сертифікати для учнів?**
 
-Кожен учень може отримати сертифікат електронною поштою після завершення навчання на [Code.org](http://studio.code.org). Його можна роздрукувати, якщо клацнути на сертифікаті. However, if you want to make new certificates for your students, visit our [Certificates](http://<%= codeorg_url() %>/certificates) page to print as many certificates as you like, in one fell swoop!
+Кожен учень може отримати сертифікат електронною поштою після завершення навчання на [Code.org](http://studio.code.org). Його можна роздрукувати, якщо клацнути на сертифікаті. Проте, якщо ви хочете зробити більше сертифікатів для своїх учнів, відвідайте сторінку [Сертифікати](http://<%= codeorg_url() %>/certificates) і надрукуйте їх достатню кількість!
 
 **Що після Години коду?**
 
-Година коду є лише першим кроком на шляху вивчення технологій, принципів їх роботи, та створення програмних проектів. <% if @country == 'uk' %> Година коду є лише першим кроком на шляху вивчення технологій, принципів їх роботи, та створення програмних проектів. Щоб продовжити цю подорож, [заохочуйте учнів до самостійного дистанційного навчання](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %>
+Година коду є лише першим кроком на шляху вивчення технологій, принципів їх роботи, та створення програмних проектів. <% if @country == 'uk' %> Година коду є лише першим кроком на шляху вивчення технологій, принципів їх роботи, та створення програмних проектів. Щоб продовжити цю подорож, [заохочуйте учнів до самостійного дистанційного навчання](http://uk.code.org/learn/beyond). <% else %> Щоб продовжити цю подорож, перегляньте додаткові ресурси для вчителів [тут](http://<%= codeorg_url() %>/educate). Або заохочуйте учнів навчатися [онлайн](http://<%= codeorg_url() %>/learn/beyond). <% end %> <a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>

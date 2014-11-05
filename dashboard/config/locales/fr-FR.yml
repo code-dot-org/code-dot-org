@@ -84,7 +84,7 @@
     gender: Sexe (facultatif)
     birthday: Date de naissance (optionnel)
     age: "Âge (facultatif)"
-    user_type: Are you a student or teacher?
+    user_type: Es-tu un élève ou un professeur?
     submit: S’inscrire
     teacher: Etes-vous un professeur?
     valid_username: Disponible !
@@ -297,7 +297,7 @@
     tools: Outils de gestion des enseignants
     followers:
       section: 'Section:'
-      stages: 'Stage(s) to display:'
+      stages: 'Etape(s) à afficher:'
       show_past: 'Montrer l''activité passée de l''élève (%{bullet_html})  :'
       levels_key: Clé de niveaux
       perfect: Terminé, parfait
@@ -423,7 +423,7 @@
     none: Je ne souhaite pas l'indiquer
   user_type:
     student: "étudiant"
-    teacher: Teacher
+    teacher: Professeur
   footer:
     help_from_html: Les ingénieurs de Google, Microsoft, Facebook et Twitter ont contribué
       à créer ce didacticiel.

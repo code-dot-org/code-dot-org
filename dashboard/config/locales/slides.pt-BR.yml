@@ -157,8 +157,8 @@
         text: Ao invés de arrastar 5 blocos "avance"...
       5:
         image: notes/hoc2_5.jpg
-        text: Podemos colocar o bloco "Avançar" dentro do bloco "repetir" e escrever
-          um número no bloco para dizer quantas vezes repetir.
+        text: Podemos colocar o bloco "avance" dentro do bloco "repita" e escrever
+          um número no bloco para definir o número de repetições.
       6:
         image: notes/hoc2_6.jpg
         text: 'E isso é importante: você pode colocar mais de um comando dentro de

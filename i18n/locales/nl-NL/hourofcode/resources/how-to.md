@@ -4,7 +4,15 @@ title: Materialen layout: wide
 
 * * *
 
-# Hoe begeleid je een Uur Code
+<div class="row">
+  <h1 class="col-sm-6">
+    How to teach one Hour of Code
+  </h1>
+  
+  <div class="col-sm-6 button-container centered">
+    <a href="/#join"><button class="signup-button">Sign up your event</button></a>
+  </div>
+</div>
 
 ## 1) Probeer de opdrachten:
 
@@ -32,43 +40,43 @@ Je ervaart het Uur Code het best met een aan het Internet verbonden computer. Ma
 
 ## 4) Inspireer leerlingen - laat ze een video zien
 
-Show students an inspirational video to kick off the Hour of Code. Examples:
+Toon studenten een inspirerende video bij het begin van het Uur Code. Voorbeelden:
 
-  * The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
-  * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [Hour of Code 2014 video](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
-  * [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+  * De originele Code.org lancering video, met daarin Bill Gates, Mark Zuckerberg en NBA ster Chris Bosh (er zijn versies voor [1 minuut](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minuten](https://www.youtube.com/watch?v=nKIu9yen5nc), en [9 minuten](https://www.youtube.com/watch?v=dU1xS07N-FA))
+  * De [Uur Code 2013 lancering video](https://www.youtube.com/watch?v=FC5FbmsH4fw), of de < % als @country == 'uk' %> [Uur Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ) < % anders %> [Uur Code 2014 video](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
+  * [President Obama roept alle leerlingen op om te leren programmeren](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
 **Maak je leerlingen enthousiast - geef ze een korte inleiding**
 
 De meeste kinderen weten niet wat informatica is. Hier zijn wat ideeen:
 
-  * Explain it in a simple way that includes examples of applications that both boys and girls will care about (saving lives, helping people, connecting people, etc.).
-  * Try: "Think about things in your everyday life that use computer science: a cell phone, a microwave, a computer, a traffic light… all of these things needed a computer scientist to help build them.”
-  * Or: “Computer science is the art of blending human ideas and digital tools to increase our power. Computer scientists work in so many different areas: writing apps for phones, curing diseases, creating animated movies, working on social media, building robots that explore other planets and so much more."
-  * See tips for getting girls interested in computer science [here](http://<%= codeorg_url() %>/girls). 
+  * Leg het op een eenvoudige manier uit met voorbeelden van toepassingen waar jongens en meisjes om geven (levens redden, mensen helpen, mensen verbinden, etc.).
+  * Probeer: "Denk eens na over de dingen in je dagelijks leven waar informatica in zit: een mobiele telefoon, een magnetron, een computer, een stoplicht... voor al dit soort dingen is een informaticus nodig geweest om het te helpen bouwen."
+  * Of: "informatica is de kunst van het verbinden van menselijke ideeën en digitale hulpmiddelen om iets mogelijk te maken. Informatici werken in allerlei verschillende gebieden: apps schrijven voor telefoons, ziekten genezen, animatiefilms maken, aan sociale media werken, robots bouwen die andere planeten verkennen en nog veel meer."
+  * Zie tips om meisjes geintresseerd in informatica te krijgen [ hier](http://<%= codeorg_url() %>/ meisjes). 
 
 ## 5) Begin met je Uur Code
 
 **Wijs de leerlingen de weg naar de activiteit**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](http://<%= codeorg_url() %>/learn) under the number of participants. [hourofcode.com/co](http://hourofcode.com/co)
-  * Tell students to visit the URL and start the tutorial.
+  * Schrijf de link naar de opdracht op het whiteboard. Vindt de link op de [ informatie over de geselecteerde opdracht ](http://<%= codeorg_url() %>/ leren) onder het aantal deelnemers. [hourofcode.com/co](http://hourofcode.com/co)
+  * Zeg leerlingen dat ze naar de URL moeten gaan en met de opdracht kunnen beginnen.
 
 **Wanneer leerlingen tegen problemen aanlopen**
 
-  * Tell students, “Ask 3 then me.” Ask 3 classmates, and if they don’t have the answer, then ask the teacher.
-  * Encourage students and offer positive reinforcement: “You’re doing great, so keep trying.”
-  * It’s okay to respond: “I don’t know. Let’s figure this out together.” If you can’t figure out a problem, use it as a good learning lesson for the class: “Technology doesn’t always work out the way we want. Together, we’re a community of learners.” And: “Learning to program is like learning a new language; you won’t be fluent right away.“
+  * Vertel je leerlingen dat ze eerst 3 klasgenootjes om hulp moeten vragen. Als het ze dan nog niet lukt, vraag het dan aan de leerkracht.
+  * Moedig leerlingen aan en biedt positieve bevestiging: "Je doet het heel goed, dus gewoon blijven proberen."
+  * Het is prima om te zeggen: "Ik weet het ook niet. Laten we het samen uitzoeken." Als je niet uit een probleem komt, gebruik het dan als een goede les voor de klas: "Technologie werkt niet altijd zoals we willen. Samen zijn we een groep leerlingen." En: "Leren programma is als het leren van een nieuwe taal; je zult het niet meteen vloeiend spreken."
 
 **Wat kun je doen als een leerling sneller klaar is?**
 
-  * Students can see all tutorials and try another Hour of Code activity at [<%= codeorg_url() %>/learn](http://<%= codeorg_url() %>/learn)
-  * Or, ask students who finish early to help classmates who are having trouble with the activity.
+  * Studenten kunnen alle opdrachten zien en een andere Uur Code activiteit proberen op [<%= codeorg_url() %>/learn](http://<%= codeorg_url() %>/learn)
+  * Of, vraag de leerlingen die snel klaar zijn om klasgenoten te helpen die meer moeite hebben met de activiteit.
 
 **Hoe maak ik certificaten voor mijn leerlingen?**
 
-Iedere leerling krijgt de kans een certificaat te ontvangen via e-mail wanneer ze de [Code.org opdrachten](http://studio.code.org) volbrengen. Je kunt het certificaat aanklikken om het af te drukken. However, if you want to make new certificates for your students, visit our [Certificates](http://<%= codeorg_url() %>/certificates) page to print as many certificates as you like, in one fell swoop!
+Iedere leerling krijgt de kans een certificaat te ontvangen via e-mail wanneer ze de [Code.org opdrachten](http://studio.code.org) volbrengen. Je kunt het certificaat aanklikken om het af te drukken. Echter, als je nieuwe certificaten voor uw studenten wilt, bezoek onze [ certificaten](http://<%= codeorg_url() %>/ certificaten) pagina zo veel certificaten af te drukken als u wilt, in één stap!
 
 **Wat komt er na het Uur Code?**
 
-Het Uur Code is nog maar de eerste stap in het leren over hoe technologie werkt en hoe je software kunt maken. < % als @country == 'uk' %> Het uur van Code is slechts de eerste stap op een reis naar meer informatie over hoe technologie werkt en hoe softwaretoepassingen gemaakt worden. [Moedig je kinderen aan online te leren](http://uk.code.org/learn/beyond) om de reis te vervolgen. <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %>
+Het Uur Code is nog maar de eerste stap in het leren over hoe technologie werkt en hoe je software kunt maken. < % als @country == 'uk' %> Het uur van Code is slechts de eerste stap op een reis naar meer informatie over hoe technologie werkt en hoe softwaretoepassingen gemaakt worden. [Moedig je kinderen aan online te leren](http://uk.code.org/learn/beyond) om de reis te vervolgen. < % anders %> om door te gaan met programmeren, vind extra informatie voor docenten [ hier](http://<%= codeorg_url() %>/ voeden). Of moedig uw leerligen aan om [ online](http://<%= codeorg_url() %>/leer/beyond) verder te leren. <% end %> <a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>

@@ -1,5 +1,6 @@
 "hi-IN":
   hello: Hello world
+  select_language: Please select your language
   computer_science: Computer Science
   computer_science_edweek: Computer Science Education Week
   csedweek_dates: December 9-15, 2013

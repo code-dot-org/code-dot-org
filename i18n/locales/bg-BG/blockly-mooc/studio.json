@@ -118,6 +118,8 @@
   "setBackgroundTennis":"задава фон тенискорт",
   "setBackgroundWinter":"задава фон зима",
   "setBackgroundTooltip":"Задава фоновото изображение",
+  "setEnemySpeed":"set enemy speed",
+  "setPlayerSpeed":"set player speed",
   "setScoreText":"постави резултат",
   "setScoreTextTooltip":"Задава текстът да се показва в областта на резултата.",
   "setSpriteEmotionAngry":"с ядосано настроение",

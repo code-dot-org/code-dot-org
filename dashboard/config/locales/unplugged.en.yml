@@ -91,6 +91,7 @@ en:
       'GoingPlacesSafely':
         title: 'Going Places Safely'
         desc: 'The Internet is a powerful, but sometimes dangerous place. Teachers introduce how to stay safe while navigating the Internet.'
+        video: 'C1_going_places_safely'
       'GraphPaperProgramming':
         title: 'Graph Paper Programming'
         desc: 'Students write an algorithm (a set of instructions) using a set of predefined commands to direct their classmates to reproduce a drawing.'
@@ -106,6 +107,7 @@ en:
       'DigitalFootprint':
         title: 'Your Digital Footprint'
         desc: 'Teachers introduce to students the idea that putting information about themselves online creates a digital footprint or "trail" that has consequences.'
+        video: 'C2_digital_footprint'
       'ComputationalThinking':
         title: 'Computational Thinking'
         desc: 'Students use the steps of computational thinking (decompose, pattern match, abstract, algorithm) to figure out how to play a game that comes with no instructions.'

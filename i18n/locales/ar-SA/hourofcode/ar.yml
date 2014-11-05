@@ -11,29 +11,6 @@ ar:
   header_menu_faq: الأسئلة المتداولة
   header_menu_prizes: الجوائز
   header_menu_uk_code_org: uk.code.org
-  choose_country_header: شارك في جميع أنحاء العالم!
-  country_al: Albania
-  country_ar: الأرجنتين
-  country_au: أُستراليا
-  country_br: البرازيل
-  country_bg: بلغاريا
-  country_de: المانيا
-  country_es: أمريكا اللاتينية
-  country_eu: الاتحاد الأوربي
-  country_gr: اليونان
-  country_hr: كرواتيا
-  country_id: أندونيسيا
-  country_it: إيطاليا
-  country_jp: اليابان
-  country_me: الشرق الأوسط وشمال أفريقيا
-  country_my: Malaysia
-  country_nz: نيوزيلندا
-  country_ro: رومانيا
-  country_ru: روسيا
-  country_ua: أكرانيا
-  country_uk: المملكة المتحدة
-  country_us: الولايات المتحدة الأمريكية
-  country_vn: فيتنام
   company_4-H: 4-H Youth Development
   company_bgca: Boys and Girls Club of America
   company_cgcs: Council of the Great City Schools
@@ -180,6 +157,17 @@ ar:
   resources_emails: نموذج رسائل البريد الإلكتروني
   resources_stats: إحصائيات مفيدة حول علوم الحاسوب
   resources_press_kit: مواد صحفية
+  events_title: All Hour of Code Events
+  events_nav_all: All Events
+  events_nav_classrooms: Classrooms
+  events_nav_whole_schools: Whole Schools
+  events_nav_special: Special Events
+  events_all_title: All Hour of Code events
+  events_classroom_title: Classroom Hour of Code events
+  events_whole_school_title: Whole-school Hour of Code events
+  events_special_title: Special Hour of Code events
+  event: event
+  events: events
   footer_copyright_message: حقوق الطبع والنشر Code.org عام 2014. جميع الحقوق محفوظة.
   footer_trademark_message: إن ™Hour of Code هي علامة تجارية لصالح Code.org.
   footer_menu_partners: الشركاء

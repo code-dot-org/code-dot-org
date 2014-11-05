@@ -76,7 +76,7 @@ id:
     gender: Jenis kelamin (opsional)
     birthday: Tanggal ulang tahun (opsional)
     age: Umur
-    user_type: Are you a student or teacher?
+    user_type: Apakah anda palajar atau guru?
     submit: Daftar
     teacher: Apakah anda seorang guru?
     valid_username: Tersedia!
@@ -352,7 +352,7 @@ id:
     none: Memilih untuk tidak menjawab
   user_type:
     student: siswa
-    teacher: Teacher
+    teacher: Pelajar
   footer:
     help_from_html: 'Tim teknis dari  Google, Microsoft, Facebook, dan Twitter yang membantu membuat tutorial ini.'
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. All Rights Reserved.'

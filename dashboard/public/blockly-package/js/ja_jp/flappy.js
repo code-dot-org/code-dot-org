@@ -418,10 +418,10 @@ BlocklyApps.init = function(config) {
     // using window.require forces us to use requirejs version of require
     window.require(['droplet'], function(droplet) {
       var displayMessage, examplePrograms, messageElement, onChange, startingText;
-      var palette = utils.generateDropletPalette(config.level.codeFunctions);
       BlocklyApps.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
         mode: 'javascript',
-        palette: palette
+        modeOptions: utils.generateDropletModeOptions(config.level.codeFunctions),
+        palette: utils.generateDropletPalette(config.level.codeFunctions)
       });
 
       var startText = '// ' + msg.typeHint() + '\n';
@@ -1621,20 +1621,27 @@ exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
     var start = node.start - userCodeStartOffset;
     var end = node.end - userCodeStartOffset;
 
-    inUserCode = (start > 0) && (start < userCodeLength);
-
-    // If we are showing Javascript code in the ace editor, highlight
-    // the code being executed in each step:
-    if (!editor.currentlyUsingBlocks) {
-      // Only show selection if the node being executed is inside the user's
-      // code (not inside code we inserted before or after their code that is
-      // not visible in the editor):
-      var selection = editor.aceEditor.getSelection();
-      if (inUserCode) {
-        createSelection(selection, cumulativeLength, start, end);
+    // Only show selection if the node being executed is inside the user's
+    // code (not inside code we inserted before or after their code that is
+    // not visible in the editor):
+    if (start > 0 && start < userCodeLength) {
+      // Highlight the code being executed in each step:
+      if (editor.currentlyUsingBlocks) {
+        var style = {color: '#FFFF22'};
+        var line = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
+        editor.clearLineMarks();
+        editor.markLine(line, style);
       } else {
-        selection.clearSelection();
+        var selection = editor.aceEditor.getSelection();
+        createSelection(selection, cumulativeLength, start, end);
       }
+      inUserCode = true;
+    }
+  } else {
+    if (editor.currentlyUsingBlocks) {
+      editor.clearLineMarks();
+    } else {
+      editor.aceEditor.getSelection().clearSelection();
     }
   }
   return inUserCode;
@@ -9356,6 +9363,32 @@ exports.generateDropletPalette = function (codeFunctions) {
   return palette;
 };
 
+/**
+ * Generate modeOptions for the droplet editor based on some level data.
+ */
+exports.generateDropletModeOptions = function (codeFunctions) {
+  var modeOptions = {
+    blockFunctions: [],
+  };
+
+  // BLOCK, VALUE, and EITHER functions that are normally used in droplet
+  // are included here in comments for reference. When we return our own
+  // modeOptions from this function, it overrides and replaces the list below.
+/*
+  BLOCK_FUNCTIONS = ['fd', 'bk', 'rt', 'lt', 'slide', 'movexy', 'moveto', 'jump', 'jumpto', 'turnto', 'home', 'pen', 'fill', 'dot', 'box', 'mirror', 'twist', 'scale', 'pause', 'st', 'ht', 'cs', 'cg', 'ct', 'pu', 'pd', 'pe', 'pf', 'play', 'tone', 'silence', 'speed', 'wear', 'write', 'drawon', 'label', 'reload', 'see', 'sync', 'send', 'recv', 'click', 'mousemove', 'mouseup', 'mousedown', 'keyup', 'keydown', 'keypress', 'alert'];
+  VALUE_FUNCTIONS = ['abs', 'acos', 'asin', 'atan', 'atan2', 'cos', 'sin', 'tan', 'ceil', 'floor', 'round', 'exp', 'ln', 'log10', 'pow', 'sqrt', 'max', 'min', 'random', 'pagexy', 'getxy', 'direction', 'distance', 'shown', 'hidden', 'inside', 'touches', 'within', 'notwithin', 'nearest', 'pressed', 'canvas', 'hsl', 'hsla', 'rgb', 'rgba', 'cell'];
+  EITHER_FUNCTIONS = ['button', 'read', 'readstr', 'readnum', 'table', 'append', 'finish', 'loadscript'];
+*/
+
+  if (codeFunctions) {
+    for (var i = 0; i < codeFunctions.length; i++) {
+      modeOptions.blockFunctions[i] = codeFunctions[i].func;
+    }
+  }
+
+  return modeOptions;
+};
+
 },{"./lodash":19,"./xml":36}],36:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
@@ -9430,7 +9463,7 @@ exports.emptyBlocksErrorMsg = function(d){return "”Repeat”または\"If\"の
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "関数ブロックは、中に他のブロックがないと動きません。"};
 
-exports.extraTopBlocks = function(d){return "イベントブロックに付いていない余分なブロックがあります。"};
+exports.extraTopBlocks = function(d){return "ブロックを外しました。もしかして、「実行時」のブロックにつなげたかったですか？"};
 
 exports.finalStage = function(d){return "おめでとうございます ！最終ステージをクリアしました。"};
 
@@ -9462,7 +9495,7 @@ exports.nextLevelTrophies = function(d){return "おめでとうございます �
 
 exports.nextStage = function(d){return "おめでとうございます ！"+v(d,"stageName")+"を コンプリートしました。"};
 
-exports.nextStageTrophies = function(d){return "おめでとうございます！あなたはステージ "+v(d,"stageNumber")+" をクリアし、"+p(d,"numTrophies",0,"ja",{"one":"トロフィー","other":n(d,"numTrophies")+" トロフィー"})+"を獲得しました。"};
+exports.nextStageTrophies = function(d){return "おめでとうございます！ "+v(d,"stageName")+" をクリアして "+p(d,"numTrophies",0,"ja",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+" を手に入れました。"};
 
 exports.numBlocksNeeded = function(d){return "おめでとうございます ！あなたはパズル "+v(d,"puzzleNumber")+" を完了しました。 (もしくは "+p(d,"numBlocks",0,"ja",{"one":"1 block","other":n(d,"numBlocks")+" blocks"})+" のみの使用だけでも可能でした。)"};
 
@@ -9514,7 +9547,7 @@ exports.saveToGallery = function(d){return "ギャラリーに保存"};
 
 exports.savedToGallery = function(d){return "ギャラリーに保存しました！"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "プログラムをシェアできませんでした。"};
 
 exports.typeFuncs = function(d){return "利用可能な機能:%1"};
 
@@ -9621,17 +9654,17 @@ exports.reinfFeedbackMsg = function(d){return "\"Try again\" ボタンを押す�
 
 exports.scoreText = function(d){return "得点："};
 
-exports.setBackground = function(d){return "set scene"};
+exports.setBackground = function(d){return "背景をセット"};
 
 exports.setBackgroundRandom = function(d){return "状況をランダム に設定"};
 
 exports.setBackgroundFlappy = function(d){return "状況を街（昼）に設定"};
 
-exports.setBackgroundNight = function(d){return "状況を街（夜）に設定"};
+exports.setBackgroundNight = function(d){return "背景を夜の街にセット"};
 
 exports.setBackgroundSciFi = function(d){return "状況をSFに設定"};
 
-exports.setBackgroundUnderwater = function(d){return "状況を水中に設定"};
+exports.setBackgroundUnderwater = function(d){return "背景を水中にセット"};
 
 exports.setBackgroundCave = function(d){return "状況を洞窟に設定"};
 
@@ -9667,7 +9700,7 @@ exports.setGravityVeryHigh = function(d){return "重力を非常に大きいに�
 
 exports.setGravityTooltip = function(d){return "重力のレベルを設定"};
 
-exports.setGround = function(d){return "set ground"};
+exports.setGround = function(d){return "じめんをセット"};
 
 exports.setGroundRandom = function(d){return "地面をランダムに設定"};
 
@@ -9685,7 +9718,7 @@ exports.setGroundLava = function(d){return "地面を溶岩に設定"};
 
 exports.setGroundTooltip = function(d){return "地面の画像を設定"};
 
-exports.setObstacle = function(d){return "set obstacle"};
+exports.setObstacle = function(d){return "しょうがい物をセット"};
 
 exports.setObstacleRandom = function(d){return "障害物をランダムに設定"};
 
@@ -9703,7 +9736,7 @@ exports.setObstacleLaser = function(d){return "障害物をレーザーに設定
 
 exports.setObstacleTooltip = function(d){return "障害物の背景を設定"};
 
-exports.setPlayer = function(d){return "set player"};
+exports.setPlayer = function(d){return "プレイヤーをセット"};
 
 exports.setPlayerRandom = function(d){return "プレーヤーをランダムに設定"};
 
@@ -9755,25 +9788,25 @@ exports.soundBounce = function(d){return "バウンス"};
 
 exports.soundCrunch = function(d){return "crunch"};
 
-exports.soundDie = function(d){return "sad"};
+exports.soundDie = function(d){return "かなしい"};
 
-exports.soundHit = function(d){return "smash"};
+exports.soundHit = function(d){return "うつ"};
 
-exports.soundPoint = function(d){return "point"};
+exports.soundPoint = function(d){return "ポイント"};
 
 exports.soundSwoosh = function(d){return "swoosh"};
 
-exports.soundWing = function(d){return "wing"};
+exports.soundWing = function(d){return "羽"};
 
 exports.soundJet = function(d){return "jet"};
 
-exports.soundCrash = function(d){return "crash"};
+exports.soundCrash = function(d){return "ぶつかる"};
 
 exports.soundJingle = function(d){return "jingle"};
 
 exports.soundSplash = function(d){return "splash"};
 
-exports.soundLaser = function(d){return "laser"};
+exports.soundLaser = function(d){return "レーザー"};
 
 exports.speedRandom = function(d){return "速度をランダムに設定"};
 

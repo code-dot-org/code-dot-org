@@ -84,7 +84,7 @@
     gender: Jenis kelamin (opsional)
     birthday: Tanggal ulang tahun (opsional)
     age: Umur
-    user_type: Are you a student or teacher?
+    user_type: Apakah anda palajar atau guru?
     submit: Daftar
     teacher: Apakah anda seorang guru?
     valid_username: Tersedia!
@@ -418,7 +418,7 @@
     none: Memilih untuk tidak menjawab
   user_type:
     student: siswa
-    teacher: Teacher
+    teacher: Pelajar
   footer:
     help_from_html: Tim teknis dari  Google, Microsoft, Facebook, dan Twitter yang
       membantu membuat tutorial ini.
