@@ -186,7 +186,7 @@ function evalCode (code) {
 
 function getExpressionFromBlocks(blockXml) {
   if (blockXml) {
-    if (Blockly.mainWorkspace.getTopBlocks().length !== 0) {
+    if (Blockly.mainBlockSpace.getTopBlocks().length !== 0) {
       throw new Error("getExpressionFromBlocks shouldn't be called with blocks if " +
         "we already have blocks in the workspace");
     }
@@ -194,14 +194,14 @@ function getExpressionFromBlocks(blockXml) {
     BlocklyApps.loadBlocks(blockXml);
   }
 
-  var code = Blockly.Generator.workspaceToCode('JavaScript', 'functional_compute');
+  var code = Blockly.Generator.blockSpaceToCode('JavaScript', 'functional_compute');
   evalCode(code);
   var object = Calc.computedExpression;
   Calc.computedExpression = null;
 
   if (blockXml) {
     // Remove the blocks
-    Blockly.mainWorkspace.getTopBlocks().forEach(function (b) { b.dispose(); });
+    Blockly.mainBlockSpace.getTopBlocks().forEach(function (b) { b.dispose(); });
   }
 
   return object;
