@@ -52,6 +52,11 @@ Blockly.Blocks.variables_get = {
       this.setTitleValue(newName, 'VAR');
     }
   },
+  removeVar: function(oldName) {
+    if (Blockly.Names.equals(oldName, this.getTitleValue('VAR'))) {
+      this.dispose(true, true);
+    }
+  },
   contextMenuType_: 'variables_set',
   customContextMenu: function(options) {
     var option = {enabled: true};
@@ -94,4 +99,30 @@ Blockly.Blocks.variables_set = {
   contextMenuMsg_: Blockly.Msg.VARIABLES_SET_CREATE_GET,
   contextMenuType_: 'variables_get',
   customContextMenu: Blockly.Blocks.variables_get.customContextMenu
+};
+
+Blockly.Blocks.parameters_get = {
+  // Variable getter.
+  init: function() {
+    var fieldLabel = new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);
+    // Must be marked EDITABLE so that cloned blocks share the same var name
+    fieldLabel.EDITABLE = true;
+    this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
+    this.setHSV(312, 0.32, 0.62);
+    this.appendDummyInput()
+        .appendTitle(Blockly.Msg.VARIABLES_GET_TITLE)
+        .appendTitle(Blockly.disableVariableEditing ? fieldLabel
+            : new Blockly.FieldParameter(Blockly.Msg.VARIABLES_GET_ITEM), 'VAR')
+        .appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);
+    this.setOutput(true);
+    this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
+  },
+  renameVar: function(oldName, newName) {
+    // Params should only be used in the FunctionEditor but better to be safe
+    if (Blockly.functionEditor) {
+      Blockly.functionEditor.renameParameter(oldName, newName);
+      Blockly.functionEditor.refreshParamsEverywhere();
+    }
+  },
+  removeVar: Blockly.Blocks.variables_get.removeVar
 };

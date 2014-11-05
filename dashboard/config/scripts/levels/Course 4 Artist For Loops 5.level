@@ -55,7 +55,7 @@
           <title name="DIR">moveForward</title>
           <value name="VALUE">
             <block type="math_number">
-              <title name="NUM">???</title>
+              <title name="NUM">100</title>
             </block>
           </value>
         </block>
@@ -70,7 +70,7 @@
         <block type="controls_repeat_ext" inline="true">
           <value name="TIMES">
             <block type="math_number">
-              <title name="NUM">???</title>
+              <title name="NUM">3</title>
             </block>
           </value>
         </block>

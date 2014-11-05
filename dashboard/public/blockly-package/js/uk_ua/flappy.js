@@ -266,6 +266,8 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
+    // Set a class on the main blockly div so CSS can style blocks differently
+    Blockly.addClass_(container.querySelector('#blockly'), 'edit');
     // If in level builder editing blocks, make workspace extra tall
     visualizationColumn.style.height = "3000px";
     // Modify the arrangement of toolbox blocks so categories align left
@@ -534,6 +536,8 @@ BlocklyApps.init = function(config) {
         true : config.level.disableParamEditing,
     disableVariableEditing: config.level.disableVariableEditing === undefined ?
         false : config.level.disableVariableEditing,
+    useModalFunctionEditor: config.level.useModalFunctionEditor === undefined ?
+        false : config.level.useModalFunctionEditor,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -588,7 +592,7 @@ BlocklyApps.init = function(config) {
 
   // Add display of blocks used.
   setIdealBlockNumber();
-  Blockly.addChangeListener(function() {
+  Blockly.mainBlockSpaceEditor.addChangeListener(function() {
     BlocklyApps.updateBlockCount();
   });
 };
@@ -645,7 +649,7 @@ BlocklyApps.localeDirection = function() {
 /**
  * Initialize Blockly for a readonly iframe.  Called on page load.
  * XML argument may be generated from the console with:
- * Blockly.Xml.domToText(Blockly.Xml.workspaceToDom(Blockly.mainWorkspace)).slice(5, -6)
+ * Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)).slice(5, -6)
  */
 BlocklyApps.initReadonly = function(options) {
   Blockly.inject(document.getElementById('blockly'), {
@@ -663,7 +667,7 @@ BlocklyApps.initReadonly = function(options) {
  */
 BlocklyApps.loadBlocks = function(blocksXml) {
   var xml = parseXmlElement(blocksXml);
-  Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, xml);
+  Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, xml);
 };
 
 BlocklyApps.BLOCK_X_COORDINATE = 70;
@@ -794,8 +798,9 @@ BlocklyApps.onResize = function() {
 BlocklyApps.resizeHeaders = function (fullWorkspaceWidth) {
   var categoriesWidth = 0;
   var categories = BlocklyApps.editCode ?
-                    document.querySelector('.droplet-palette-wrapper') :
-                    Blockly.Toolbox.HtmlDiv;
+      document.querySelector('.droplet-palette-wrapper') :
+      Blockly.mainBlockSpaceEditor.toolbox &&
+      Blockly.mainBlockSpaceEditor.toolbox.HtmlDiv;
   if (categories) {
     // If in the droplet editor, but not using blocks, keep categoryWidth at 0
     if (!BlocklyApps.editCode || BlocklyApps.editor.currentlyUsingBlocks) {
@@ -804,8 +809,8 @@ BlocklyApps.resizeHeaders = function (fullWorkspaceWidth) {
     }
   }
 
-  var workspaceWidth = Blockly.getWorkspaceWidth();
-  var toolboxWidth = Blockly.getToolboxWidth();
+  var workspaceWidth = Blockly.mainBlockSpaceEditor.getBlockSpaceWidth();
+  var toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
 
   if (BlocklyApps.editCode) {
     workspaceWidth = fullWorkspaceWidth - categoriesWidth;
@@ -849,7 +854,7 @@ BlocklyApps.highlight = function(id, spotlight) {
     }
   }
 
-  Blockly.mainWorkspace.highlightBlock(id, spotlight);
+  Blockly.mainBlockSpace.highlightBlock(id, spotlight);
 };
 
 /**
@@ -1002,8 +1007,8 @@ BlocklyApps.resetButtonClick = function() {
   onResetPressed();
   BlocklyApps.toggleRunReset('run');
   BlocklyApps.clearHighlighting();
-  Blockly.mainWorkspace.setEnableToolbox(true);
-  Blockly.mainWorkspace.traceOn(false);
+  Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
+  Blockly.mainBlockSpace.traceOn(false);
   BlocklyApps.reset(false);
 };
 
@@ -1125,7 +1130,7 @@ exports.generateSimpleBlock = function (blockly, generator, options) {
  * @returns {*}
  */
 exports.domToBlock = function(blockDOM) {
-  return Blockly.Xml.domToBlock_(Blockly.mainWorkspace, blockDOM);
+  return Blockly.Xml.domToBlock_(Blockly.mainBlockSpace, blockDOM);
 };
 
 /**
@@ -1477,7 +1482,7 @@ exports.strip = function(code) {
  * Extract the user's code as raw JavaScript.
  */
 exports.workspaceCode = function(blockly) {
-  var code = blockly.Generator.workspaceToCode('JavaScript');
+  var code = blockly.Generator.blockSpaceToCode('JavaScript');
   return exports.strip(code);
 };
 
@@ -2570,7 +2575,7 @@ var hasEmptyContainerBlocks = function() {
  * @return {Blockly.Block} an empty container block, or null if none exist.
  */
 var getEmptyContainerBlock = function() {
-  var blocks = Blockly.mainWorkspace.getAllBlocks();
+  var blocks = Blockly.mainBlockSpace.getAllBlocks();
   for (var i = 0; i < blocks.length; i++) {
     var block = blocks[i];
     for (var j = 0; j < block.inputList.length; j++) {
@@ -2599,7 +2604,7 @@ var hasAllRequiredBlocks = function() {
  * @return {Array<Object>} The blocks.
  */
 var getUserBlocks = function() {
-  var allBlocks = Blockly.mainWorkspace.getAllBlocks();
+  var allBlocks = Blockly.mainBlockSpace.getAllBlocks();
   var blocks = allBlocks.filter(function(block) {
     return !block.disabled && block.isEditable() && block.type !== 'when_run';
   });
@@ -2613,7 +2618,7 @@ var getUserBlocks = function() {
  * @return {Array<Object>} The blocks.
  */
 var getCountableBlocks = function() {
-  var allBlocks = Blockly.mainWorkspace.getAllBlocks();
+  var allBlocks = Blockly.mainBlockSpace.getAllBlocks();
   var blocks = allBlocks.filter(function(block) {
     return !block.disabled;
   });
@@ -2648,7 +2653,7 @@ var getMissingRequiredBlocks = function () {
       for (var testId = 0; testId < requiredBlock.length; testId++) {
         var test = requiredBlock[testId].test;
         if (typeof test === 'string') {
-          code = code || Blockly.Generator.workspaceToCode('JavaScript');
+          code = code || Blockly.Generator.blockSpaceToCode('JavaScript');
           if (code.indexOf(test) !== -1) {
             // Succeeded, moving to the next list of tests
             usedRequiredBlock = true;
@@ -2677,7 +2682,7 @@ var getMissingRequiredBlocks = function () {
  * Do we have any floating blocks not attached to an event block or function block?
  */
 exports.hasExtraTopBlocks = function () {
-  var topBlocks = Blockly.mainWorkspace.getTopBlocks();
+  var topBlocks = Blockly.mainBlockSpace.getTopBlocks();
   for (var i = 0; i < topBlocks.length; i++) {
     // ignore disabled top blocks. we have a level turtle:2_7 that depends on
     // having disabled top level blocks
@@ -4251,7 +4256,7 @@ BlocklyApps.runButtonClick = function() {
   document.getElementById('getready').setAttribute('visibility', 'visible');
 
   BlocklyApps.toggleRunReset('reset');
-  Blockly.mainWorkspace.traceOn(true);
+  Blockly.mainBlockSpace.traceOn(true);
   // BlocklyApps.reset(false);
   BlocklyApps.attempts++;
   Flappy.execute();
@@ -4313,7 +4318,7 @@ Flappy.execute = function() {
     code += BlocklyApps.editor.getValue();
   }
 
-  var codeClick = Blockly.Generator.workspaceToCode(
+  var codeClick = Blockly.Generator.blockSpaceToCode(
                                     'JavaScript',
                                     'flappy_whenClick');
   var whenClickFunc = codegen.functionFromCode(
@@ -4321,7 +4326,7 @@ Flappy.execute = function() {
                                       BlocklyApps: BlocklyApps,
                                       Flappy: api } );
 
-  var codeCollideGround = Blockly.Generator.workspaceToCode(
+  var codeCollideGround = Blockly.Generator.blockSpaceToCode(
                                     'JavaScript',
                                     'flappy_whenCollideGround');
   var whenCollideGroundFunc = codegen.functionFromCode(
@@ -4329,7 +4334,7 @@ Flappy.execute = function() {
                                       BlocklyApps: BlocklyApps,
                                       Flappy: api } );
 
-  var codeEnterObstacle = Blockly.Generator.workspaceToCode(
+  var codeEnterObstacle = Blockly.Generator.blockSpaceToCode(
                                     'JavaScript',
                                     'flappy_whenEnterObstacle');
   var whenEnterObstacleFunc = codegen.functionFromCode(
@@ -4337,7 +4342,7 @@ Flappy.execute = function() {
                                       BlocklyApps: BlocklyApps,
                                       Flappy: api } );
 
-  var codeCollideObstacle = Blockly.Generator.workspaceToCode(
+  var codeCollideObstacle = Blockly.Generator.blockSpaceToCode(
                                     'JavaScript',
                                     'flappy_whenCollideObstacle');
   var whenCollideObstacleFunc = codegen.functionFromCode(
@@ -4345,7 +4350,7 @@ Flappy.execute = function() {
                                       BlocklyApps: BlocklyApps,
                                       Flappy: api } );
 
-  var codeWhenRunButton = Blockly.Generator.workspaceToCode(
+  var codeWhenRunButton = Blockly.Generator.blockSpaceToCode(
                                     'JavaScript',
                                     'when_run');
   var whenRunButtonFunc = codegen.functionFromCode(
@@ -4416,7 +4421,7 @@ Flappy.onPuzzleComplete = function() {
       BlocklyApps.TestResults.TOO_FEW_BLOCKS_FAIL;
   }
 
-  var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
+  var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   var textBlocks = Blockly.Xml.domToText(xml);
 
   Flappy.waitingForReport = true;
@@ -9228,11 +9233,16 @@ exports.generateCodeAliases = function (codeFunctions, parentObjName) {
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
       var cf = codeFunctions[i];
-      code += "var " + cf.func +
-          " = function() { var newArgs = " +
+      code += "var " + cf.func + " = function() { ";
+      if (cf.idArgNone) {
+        code += "return " + parentObjName + "." + cf.func + ".apply(" +
+                parentObjName + ", arguments); };\n";
+      } else {
+        code += "var newArgs = " +
           (cf.idArgLast ? "arguments.concat(['']);" : "[''].concat(arguments);") +
           " return " + parentObjName + "." + cf.func +
           ".apply(" + parentObjName + ", newArgs); };\n";
+      }
     }
   }
   return code;
@@ -9338,8 +9348,11 @@ exports.generateDropletPalette = function (codeFunctions) {
   };
 
   if (codeFunctions) {
-    for (var i = 0; i < codeFunctions.length; i++) {
+    for (var i = 0, blockIndex = 0; i < codeFunctions.length; i++) {
       var cf = codeFunctions[i];
+      if (cf.category === 'hidden') {
+        continue;
+      }
       var block = cf.func + "(";
       if (cf.params) {
         for (var j = 0; j < cf.params.length; j++) {
@@ -9354,7 +9367,8 @@ exports.generateDropletPalette = function (codeFunctions) {
         block: block,
         title: cf.func
       };
-      appPaletteCategory.blocks[i] = blockPair;
+      appPaletteCategory.blocks[blockIndex] = blockPair;
+      blockIndex++;
     }
   }
 
@@ -9369,6 +9383,8 @@ exports.generateDropletPalette = function (codeFunctions) {
 exports.generateDropletModeOptions = function (codeFunctions) {
   var modeOptions = {
     blockFunctions: [],
+    valueFunctions: [],
+    eitherFunctions: [],
   };
 
   // BLOCK, VALUE, and EITHER functions that are normally used in droplet
@@ -9382,7 +9398,12 @@ exports.generateDropletModeOptions = function (codeFunctions) {
 
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
-      modeOptions.blockFunctions[i] = codeFunctions[i].func;
+      if (codeFunctions[i].category === 'value') {
+        modeOptions.valueFunctions[i] = codeFunctions[i].func;
+      }
+      else if (codeFunctions[i].category !== 'hidden') {
+        modeOptions.blockFunctions[i] = codeFunctions[i].func;
+      }
     }
   }
 

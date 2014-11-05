@@ -78,7 +78,7 @@ describe("getMissingRequiredBlocks tests", function () {
 
     // make sure we loaded correctly. text wont match exactly, but make sure if
     // we had xml, we loaded something
-    var loaded = Blockly.Xml.domToText(Blockly.Xml.workspaceToDom(Blockly.mainWorkspace));
+    var loaded = Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
     assert(!options.userBlockXml || loaded, "either we didnt have  input xml" +
       "or we did, and we loaded something");
 
