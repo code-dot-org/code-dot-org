@@ -991,7 +991,7 @@ BlocklyApps.runButtonClick = function() {
   BlocklyApps.attempts++;
   Bounce.execute();
 
-  if (level.freePlay) {
+  if (level.freePlay && !BlocklyApps.hideSource) {
     var shareCell = document.getElementById('share-cell');
     shareCell.className = 'share-cell-enabled';
   }
