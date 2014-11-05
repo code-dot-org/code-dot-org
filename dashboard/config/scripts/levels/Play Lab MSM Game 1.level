@@ -16,14 +16,42 @@
     "edge_collisions": "false",
     "projectile_collisions": "false",
     "allow_sprites_outside_playspace": "false",
-    "sprites_hidden_to_start": "false"
+    "sprites_hidden_to_start": "false",
+    "free_play": "false"
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run"/>
+        <block type="when_run">
+          <next>
+            <block type="studio_setSprite">
+              <title name="VALUE">"squirrel"</title>
+              <next>
+                <block type="studio_setSprite">
+                  <title name="VALUE">"monster"</title>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
       </xml>
     </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="functional_string">
+          <title name="VAL"/>
+        </block>
+        <block type="studio_setSprite">
+          <title name="VALUE">"witch"</title>
+        </block>
+        <block type="functional_math_number">
+          <title name="NUM">0</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml/>
+    </required_blocks>
   </blocks>
 </Studio>
