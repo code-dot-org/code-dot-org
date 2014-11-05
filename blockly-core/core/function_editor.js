@@ -340,13 +340,13 @@ Blockly.FunctionEditor.prototype.createContractDom_ = function() {
   if (Blockly.RTL) {
     this.contractDiv_.setAttribute('dir', 'RTL');
   }
-  this.contractDiv_.innerHTML = '<div>Name your function:</div>'
+  this.contractDiv_.innerHTML = '<div>' + Blockly.Msg.FUNCTION_NAME_LABEL + '</div>'
       + '<div><input id="functionNameText" type="text"></div>'
-      + '<div>What is your function supposed to do?</div>'
+      + '<div>' + Blockly.Msg.FUNCTION_DESCRIPTION_LABEL + '</div>'
       + '<div><textarea id="functionDescriptionText" rows="2"></textarea></div>'
-      + '<div>What parameters does your function take?</div>'
+      + '<div>' + Blockly.Msg.FUNCTION_PARAMETERS_LABEL + '</div>'
       + '<div><input id="paramAddText" type="text" style="width: 200px;"> '
-      + '<button id="paramAddButton" class="btn">Add Parameter</button>';
+      + '<button id="paramAddButton" class="btn">' + Blockly.Msg.ADD_PARAMETER + '</button>';
   var metrics = Blockly.modalBlockSpace.getMetrics();
   this.contractDiv_.style.left = metrics.absoluteLeft + 'px';
   this.contractDiv_.style.top = metrics.absoluteTop + 'px';

@@ -1,6 +1,7 @@
 goog.provide('Blockly.Msg.en_us');
 goog.require('Blockly.Msg');
 Blockly.Msg.ADD_COMMENT = "Add Comment";
+Blockly.Msg.ADD_PARAMETER = "Add Parameter";
 Blockly.Msg.CHANGE_VALUE_TITLE = "Change value:";
 Blockly.Msg.COLLAPSE_ALL = "Collapse Blocks";
 Blockly.Msg.COLLAPSE_BLOCK = "Collapse Block";
@@ -70,6 +71,9 @@ Blockly.Msg.EXPAND_BLOCK = "Expand Block";
 Blockly.Msg.EXTERNAL_INPUTS = "External Inputs";
 Blockly.Msg.FUNCTION_CREATE = "Create a Function";
 Blockly.Msg.FUNCTION_EDIT = "edit";
+Blockly.Msg.FUNCTION_NAME_LABEL = "Name your function:";
+Blockly.Msg.FUNCTION_DESCRIPTION_LABEL = "What is your function supposed to do?";
+Blockly.Msg.FUNCTION_PARAMETERS_LABEL = "What parameters does your function take?";
 Blockly.Msg.FUNCTION_HEADER = "Function";
 Blockly.Msg.HELP = "Help";
 Blockly.Msg.INLINE_INPUTS = "Inline Inputs";
