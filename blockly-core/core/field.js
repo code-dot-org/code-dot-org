@@ -55,6 +55,23 @@ Blockly.Field = function(text) {
 };
 
 /**
+ * @returns {Blockly.BlockSpace.blockSpaceEditor}
+ * @protected
+ */
+Blockly.Field.prototype.getParentEditor_ = function() {
+  return this.sourceBlock_.blockSpace.blockSpaceEditor;
+};
+
+/**
+ * The root <svg> element this field is a child of
+ * @returns {Blockly.BlockSpaceEditor.svg_}
+ * @protected
+ */
+Blockly.Field.prototype.getRootSVGElement_ = function() {
+  return this.getParentEditor_().svg_;
+};
+
+/**
  * Non-breaking space.
  */
 Blockly.Field.NBSP = '\u00A0';
@@ -238,7 +255,7 @@ Blockly.Field.prototype.refreshRender = function () {
   if (this.sourceBlock_ && this.sourceBlock_.rendered) {
     this.sourceBlock_.render();
     this.sourceBlock_.bumpNeighbours_();
-    this.sourceBlock_.workspace.fireChangeEvent();
+    this.sourceBlock_.blockSpace.fireChangeEvent();
   }
 };
 

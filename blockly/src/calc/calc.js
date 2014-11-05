@@ -130,7 +130,7 @@ Calc.init = function(config) {
  */
 BlocklyApps.runButtonClick = function() {
   BlocklyApps.toggleRunReset('reset');
-  Blockly.mainWorkspace.traceOn(true);
+  Blockly.mainBlockSpace.traceOn(true);
   BlocklyApps.attempts++;
   Calc.execute();
 };
@@ -185,18 +185,18 @@ function evalCode (code) {
 function generateExpressionFromBlockXml(blockXml) {
   var xml = blockXml || '';
 
-  if (Blockly.mainWorkspace.getTopBlocks().length !== 0) {
+  if (Blockly.mainBlockSpace.getTopBlocks().length !== 0) {
     throw new Error("generateExpressionFromBlockXml shouldn't be called if " +
       "we already have blocks in the workspace");
   }
 
   // Temporarily put the blocks into the workspace so that we can generate code
   BlocklyApps.loadBlocks(xml);
-  var code = Blockly.Generator.workspaceToCode('JavaScript');
+  var code = Blockly.Generator.blockSpaceToCode('JavaScript');
   evalCode(code);
 
   // Remove the blocks
-  Blockly.mainWorkspace.getTopBlocks().forEach(function (b) { b.dispose(); });
+  Blockly.mainBlockSpace.getTopBlocks().forEach(function (b) { b.dispose(); });
   var expression = Calc.lastExpression;
   Calc.lastExpression = null;
 
@@ -212,7 +212,7 @@ Calc.execute = function() {
   Calc.message = undefined;
 
   // todo (brent) perhaps try to share user vs. expected generation better
-  var code = Blockly.Generator.workspaceToCode('JavaScript', 'functional_compute');
+  var code = Blockly.Generator.blockSpaceToCode('JavaScript', 'functional_compute');
   evalCode(code);
 
   if (!Calc.lastExpression) {
@@ -243,7 +243,7 @@ Calc.execute = function() {
 
   Calc.drawExpressions();
 
-  var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
+  var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   var textBlocks = Blockly.Xml.domToText(xml);
 
   var reportData = {
