@@ -92,7 +92,7 @@ Eval.init = function(config) {
     // just going to disable the hack for this app.
     Blockly.BROKEN_CONTROL_POINTS = false;
 
-    // Add to reserved word list: API, local variables in execution evironment
+    // Add to reserved word list: API, local variables in execution environment
     // (execute) and the infinite loop detection function.
     //XXX Not sure if this is still right.
     Blockly.JavaScript.addReservedWords('Eval,code');
@@ -176,7 +176,7 @@ function generateEvalObjectFromBlockXml(blockXml) {
 
   // Temporarily put the blocks into the workspace so that we can generate code
   BlocklyApps.loadBlocks(xml);
-  var code = Blockly.Generator.workspaceToCode('JavaScript');
+  var code = Blockly.Generator.blockSpaceToCode('JavaScript');
   evalCode(code);
 
   // Remove the blocks
@@ -196,7 +196,7 @@ Eval.execute = function() {
   Eval.message = undefined;
 
   // todo (brent) perhaps try to share user vs. expected generation better
-  var code = Blockly.Generator.workspaceToCode('JavaScript');
+  var code = Blockly.Generator.blockSpaceToCode('JavaScript');
   evalCode(code);
 
   Eval.userObject = Eval.lastEvalObject;

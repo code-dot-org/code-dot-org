@@ -251,7 +251,7 @@ Blockly.BlockSpace.prototype.getTopBlocks = function(ordered) {
  * @return {!Array.<!Blockly.Block>} Array of blocks.
  */
 Blockly.BlockSpace.prototype.getAllVisibleBlocks = function() {
-  return goog.iter.filter(this.getAllBlocks(), function(block) {
+  return goog.array.filter(this.getAllBlocks(), function(block) {
     return block.isUserVisible();
   });
 };
