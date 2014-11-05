@@ -332,6 +332,7 @@ en:
         'maze_wordsearch_k_20': "This is a test! Move me one way, then another to spell the word STORY"
         'webapp_ec_simple': "Create your web app by using createHtmlBlock."
         'turtle_ec_1_2': "Now, draw a square. NOTE: use your favorite color by picking it in the new \"penColour\" block."
+        'turtle_ec_1_10': "You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new \"penWidth\" block. Have fun!"
     video:
       name:
         # Keyed by video.key
