@@ -18107,7 +18107,11 @@ Blockly.Variables.allVariables = function(opt_block) {
   if(opt_block) {
     blocks = opt_block.getDescendants()
   }else {
-    blocks = Blockly.mainBlockSpace.getAllBlocks()
+    if(Blockly.mainBlockSpace) {
+      blocks = Blockly.mainBlockSpace.getAllBlocks()
+    }else {
+      return[]
+    }
   }
   var variableHash = {};
   for(var x = 0;x < blocks.length;x++) {
