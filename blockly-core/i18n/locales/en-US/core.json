@@ -1,5 +1,6 @@
 {
     "ADD_COMMENT": "Add Comment",
+    "ADD_PARAMETER": "Add Parameter",
     "CHANGE_VALUE_TITLE": "Change value:",
     "COLLAPSE_ALL": "Collapse Blocks",
     "COLLAPSE_BLOCK": "Collapse Block",
@@ -69,6 +70,9 @@
     "EXTERNAL_INPUTS": "External Inputs",
     "FUNCTION_CREATE": "Create a Function",
     "FUNCTION_EDIT": "edit",
+    "FUNCTION_NAME_LABEL": "Name your function:",
+    "FUNCTION_DESCRIPTION_LABEL": "What is your function supposed to do?",
+    "FUNCTION_PARAMETERS_LABEL": "What parameters does your function take?",
     "FUNCTION_HEADER": "Function",
     "HELP": "Help",
     "INLINE_INPUTS": "Inline Inputs",
