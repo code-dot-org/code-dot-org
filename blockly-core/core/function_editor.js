@@ -57,6 +57,13 @@ Blockly.FunctionEditor = function() {
   this.onResizeWrapper_ = null;
 };
 
+/**
+ * The type of block to instantiate in the function editing area
+ * @type {string}
+ * @protected
+ */
+Blockly.FunctionEditor.prototype.definitionBlockType = 'procedures_defnoreturn';
+
 Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
   var targetFunctionDefinitionBlock = Blockly.mainBlockSpace.findFunction(
       functionName);
@@ -95,7 +102,7 @@ Blockly.FunctionEditor.prototype.openWithNewFunction = function() {
   this.ensureCreated_();
 
   this.functionDefinitionBlock = Blockly.Xml.domToBlock_(Blockly.mainBlockSpace,
-      Blockly.createSvgElement('block', {type: 'procedures_defnoreturn'}));
+    Blockly.createSvgElement('block', {type: this.definitionBlockType}));
   this.openAndEditFunction(this.functionDefinitionBlock.getTitleValue('NAME'));
 };
 

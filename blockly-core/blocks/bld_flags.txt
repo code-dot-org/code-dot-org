@@ -1,1 +1,1 @@
---js blocks/block_stub.js blocks/colour.js blocks/lists.js blocks/logic.js blocks/loops.js blocks/math.js blocks/procedures.js blocks/text.js blocks/variables.js
+--js blocks/block_stub.js blocks/colour.js blocks/lists.js blocks/logic.js blocks/loops.js blocks/math.js blocks/procedures.js blocks/text.js blocks/variables.js blocks/functional_procedures.js
