@@ -11,29 +11,6 @@ pl:
   header_menu_faq: FAQ
   header_menu_prizes: Nagrody
   header_menu_uk_code_org: uk.code.org
-  choose_country_header: Uczestnicz na całym świecie!
-  country_al: Albania
-  country_ar: Argentyna
-  country_au: Australia
-  country_br: Brazylia
-  country_bg: Bułgaria
-  country_de: Niemcy
-  country_es: Ameryka Łacińska
-  country_eu: Unia Europejska
-  country_gr: Grecja
-  country_hr: Chorwacja
-  country_id: Indonezja
-  country_it: Włochy
-  country_jp: Japonia
-  country_me: Bliski Wschód i Afryka Północna
-  country_my: Malaysia
-  country_nz: Nowa Zelandia
-  country_ro: Rumunia
-  country_ru: Rosja
-  country_ua: Ukraina
-  country_uk: Wielka Brytania
-  country_us: USA
-  country_vn: Wietnam
   company_4-H: 4-H Youth Development
   company_bgca: Boys and Girls Club of America
   company_cgcs: Council of the Great City Schools
@@ -178,6 +155,17 @@ pl:
   resources_emails: Przykładowe e-maile
   resources_stats: Przydatne statystyki informatyczne
   resources_press_kit: Press Kit
+  events_title: All Hour of Code Events
+  events_nav_all: All Events
+  events_nav_classrooms: Classrooms
+  events_nav_whole_schools: Whole Schools
+  events_nav_special: Special Events
+  events_all_title: All Hour of Code events
+  events_classroom_title: Classroom Hour of Code events
+  events_whole_school_title: Whole-school Hour of Code events
+  events_special_title: Special Hour of Code events
+  event: event
+  events: events
   footer_copyright_message: Copyright 2014 Code.org. All rights reserved.
   footer_trademark_message: Hour of Code™ is a trademark of Code.org.
   footer_menu_partners: Partnerzy

@@ -4,14 +4,22 @@ title: Πόροι layout: wide nav: resources_nav
 
 * * *
 
-# Πόροι
+<div class="row">
+  <h1 class="col-sm-6">
+    Πόροι
+  </h1>
+  
+  <div class="col-sm-6 button-container centered">
+    <a href="/#join"><button class="signup-button">Sign up your event</button></a>
+  </div>
+</div>
 
-## Hosting an Hour of Code? [See the how-to guide](<%= hoc_uri('/resources/how-to') %>)
+## Φιλοξενείτε μια εκδήλωση για την του Ώρα του Κώδικα;[Δείτε τον οδηγό](<%= hoc_uri('/resources/how-to') %>)
 
 <a id="handouts"></p> 
 
 <h2>
-  Use this handout to spread the word
+  Χρησιμοποίησε αυτό το φυλλάδιο για να διαδοθεί η Ώρα του Κώδικα
 </h2>
 
 <p>
@@ -19,7 +27,7 @@ title: Πόροι layout: wide nav: resources_nav
 </p>
 
 <h2>
-  Give this handout to teachers and schools
+  Δώσε αυτό το φυλλάδιο σε εκπαιδευτικούς και σχολεία
 </h2>
 
 <p>
@@ -30,20 +38,20 @@ title: Πόροι layout: wide nav: resources_nav
   <a id="videos"></p> 
   
   <h2>
-    Show these videos to inspire students
+    Δείξε αυτά τα βίντεο για να εμπνεύσεις τους μαθητές
   </h2>
   
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>Τι δεν διδάσκουν τα περισσότερα σχολεία (5 λεπτά)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
+      <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>What Most Schools Don't Teach (5 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong> Η Ώρα του Κώδικα είναι εδώ - Όλοι μπορούν να μάθουν </strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
+      <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>Hour of Code is Here - Anybody Can Learn</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
@@ -53,14 +61,14 @@ title: Πόροι layout: wide nav: resources_nav
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>Ο Πρόεδρος Ομπάμα για την Πληροφορική</strong></a>
+      <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>President Obama on computer science</strong></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>Όλοι μπορούν να μάθουν (1 λεπτό)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
+      <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>Anybody Can Learn (1 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
@@ -74,7 +82,7 @@ title: Πόροι layout: wide nav: resources_nav
     <a id="posters"></p> 
     
     <h2>
-      Hang these posters in your school
+      Κρεμάστε αυτές τις αφίσες στο σχολείο σας
     </h2>
     
     <p>
@@ -82,7 +90,7 @@ title: Πόροι layout: wide nav: resources_nav
     </p>
     
     <h4>
-      <a href="http://hourofcode.com/#signup">Sign up</a> your Hour of Code event and we'll mail you posters for free.
+      <a href="http://hourofcode.com/#signup">Κάνε εγγραφή</a> της εκδήλωσης σου για την Ώρα του Κώδικα και θα σου στείλουμε αφίσες δωρεάν.
     </h4>
     
     <p>
@@ -94,7 +102,7 @@ title: Πόροι layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Feature these banners on your website
+      Τοποθετήστε αυτά τα διαφημιστικά στην ιστοσελίδα σας
     </h2>
     
     <p>
@@ -106,15 +114,15 @@ title: Πόροι layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Post these on social media
+      Δημοσιεύστε τα στα κοινωνικά μέσα
     </h2>
     
     <p>
-      <a href="/images/social-1.jpg"><img src="/images/fit-200/social-1.jpg" alt="εικόνα" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-2.jpg"><img src="/images/fit-200/social-2.jpg" alt="εικόνα" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-3.jpg"><img src="/images/fit-200/social-3.jpg" alt="εικόνα" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="/images/social-1.jpg"><img src="/images/fit-250/social-1.jpg" alt="εικόνα" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-2.jpg"><img src="/images/fit-250/social-2.jpg" alt="εικόνα" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-3.jpg"><img src="/images/fit-250/social-3.jpg" alt="εικόνα" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
     </p>
     
     <p>
-      <a href="/images/mark.jpg"><img src="/images/fit-200/mark.jpg" alt="εικόνα" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-200/susan.jpg" alt="εικόνα" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-200/ashton.jpg" alt="εικόνα" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-200/marissa.jpg" alt="εικόνα" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-200/chris.jpg" alt="εικόνα" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="εικόνα" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="εικόνα" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="εικόνα" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="εικόνα" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="εικόνα" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
     </p>
     
     <p>
@@ -122,7 +130,7 @@ title: Πόροι layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Send these emails to help promote the Hour of Code
+      Στείλτε αυτά τα ηλεκτρονικά μηνύματα για να βοηθήσετε στην προώθηση της Ώρας του Κώδικα
     </h2>
     
     <p>
@@ -130,19 +138,19 @@ title: Πόροι layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Ask your school, employer or friends to sign up:
+      Ζήτησε από το σχολείο, τον εργοδότη ή τους φίλους σου να εγγραφούν:
     </h2>
     
     <p>
-      Οι υπολογιστές είναι παντού, αλλά λιγότερα σχολεία διδάσκουν Πληροφορική από ό, τι πριν από 10 χρόνια. Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. In one week, 15 million students tried computer science!
+      Οι υπολογιστές είναι παντού, αλλά λιγότερα σχολεία διδάσκουν Πληροφορική από ό, τι πριν από 10 χρόνια. Τα καλά νέα είναι, ότι πρόκειται να το αλλάξουμε αυτό. Αν ακούσατε για την Ώρα του Κώδικα πέρυσι, θα γνωρίζετε ότι έγραψε ιστορία. Σε μία μόνο εβδομάδα, 15 εκατομμύρια μαθητές ήρθαν σε επαφή με την επιστήμη της Πληροφορικής!
     </p>
     
     <p>
-      Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+      Η Επιστήμη των υπολογιστών ήταν στις αρχικές ιστοσελίδες των Google, MSN, Yahoo! και Disney. Ο Πρόεδρος Obama, η Shakira και Ashton Kutcher ξεκίνησαν την Ώρα του Κώδικα με ένα βίντεο. Πάνω από 100 εταίροι ενώθηκαν για να υποστηρίξουν αυτό το κίνημα.
     </p>
     
     <p>
-      This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2014. Please get involved with an Hour of Code event during Computer Science Education Week, December 8-14, 2014.
+      Φέτος, ας το κάνουμε ακόμα μεγαλύτερο. Σας ζητώ να συμμετάσχετε στην Ώρα του Κώδικα 2014. Παρακαλούμε να λάβετε μέρος με μια εκδήλωση για την Ώρα του Κώδικα κατά τη διάρκεια της Εβδομάδας Εκπαίδευσης για την Επιστήμη των Υπολογιστών, 8-14 Δεκεμβρίου, 2014.
     </p>
     
     <p>
@@ -150,7 +158,7 @@ title: Πόροι layout: wide nav: resources_nav
     </p>
     
     <p>
-      Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com
+      Βοηθείστε μας να φτάσουμε 100 εκατομμύρια μαθητές μέχρι το τέλος του χρόνου! Μπείτε στην διεύθυνση http://hourofcode.com
     </p>
     
     <p>
@@ -158,7 +166,7 @@ title: Πόροι layout: wide nav: resources_nav
     </p>
     
     <h2>
-      Invite media to attend your event:
+      Κάλεσε τα ΜΜΕ να καλύψουν την εκδήλωσή σου:
     </h2>
     
     <p>
@@ -170,7 +178,7 @@ title: Πόροι layout: wide nav: resources_nav
     </p>
     
     <p>
-      In one week last year, 15 million students tried computer science! Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+      In one week last year, 15 million students tried computer science! Η Επιστήμη των υπολογιστών ήταν στις αρχικές ιστοσελίδες των Google, MSN, Yahoo! και Disney. Ο Πρόεδρος Obama, η Shakira και Ashton Kutcher ξεκίνησαν την Ώρα του Κώδικα με ένα βίντεο. Πάνω από 100 εταίροι ενώθηκαν για να υποστηρίξουν αυτό το κίνημα.
     </p>
     
     <p>
@@ -275,4 +283,8 @@ title: Πόροι layout: wide nav: resources_nav
     
     <p>
       Sincerely, [NAME], [TITLE]
+    </p>
+    
+    <p>
+      <a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>
     </p>

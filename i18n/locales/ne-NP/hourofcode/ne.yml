@@ -11,29 +11,6 @@ ne:
   header_menu_faq: लगातर सोधिने प्रश्नहरू
   header_menu_prizes: पुरस्कारहरू
   header_menu_uk_code_org: uk.code.org
-  choose_country_header: विश्वव्यापी रूपले सहभागी हुनुहोस्!
-  country_al: Albania
-  country_ar: अर्जेन्टिना
-  country_au: अस्ट्रेलिया
-  country_br: ब्राजिल
-  country_bg: बुलगेरिया
-  country_de: जर्मनी
-  country_es: ल्याटिन अमेरिका
-  country_eu: यूरोपेलि संघ
-  country_gr: ग्रिक
-  country_hr: क्रोएटा
-  country_id: इन्डोनेसिया
-  country_it: ईटाली
-  country_jp: जापान
-  country_me: मध्य पूर्वी र उत्तर अफ्रिका
-  country_my: Malaysia
-  country_nz: न्यूजिल्याण्ड
-  country_ro: रोमानिया
-  country_ru: रसिया
-  country_ua: यूक्रेन
-  country_uk: संयुक्त राज्य बेलायत
-  country_us: संयुक्त राज्य अमेरीका
-  country_vn: भियतनाम
   company_4-H: 4-H Youth Development
   company_bgca: Boys and Girls Club of America
   company_cgcs: Council of the Great City Schools
@@ -180,6 +157,17 @@ ne:
   resources_emails: इमेलहरूको नमुना
   resources_stats: उपयोगी कम्प्युटर विज्ञानको स्थितहरू
   resources_press_kit: किटलाई थिच्नुहोस्
+  events_title: All Hour of Code Events
+  events_nav_all: All Events
+  events_nav_classrooms: Classrooms
+  events_nav_whole_schools: Whole Schools
+  events_nav_special: Special Events
+  events_all_title: All Hour of Code events
+  events_classroom_title: Classroom Hour of Code events
+  events_whole_school_title: Whole-school Hour of Code events
+  events_special_title: Special Hour of Code events
+  event: event
+  events: events
   footer_copyright_message: Copyright 2014 Code.org। सर्वाधिकार सुरक्षित गरियो।
   footer_trademark_message: Hour of Code™ Code.org को व्यापार चिन्ह हो।
   footer_menu_partners: साथीहरू

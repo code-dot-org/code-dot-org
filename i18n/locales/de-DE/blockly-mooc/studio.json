@@ -118,6 +118,8 @@
   "setBackgroundTennis":"Setze Hintergrund Tennis",
   "setBackgroundWinter":"Setze Hintergrund Winter",
   "setBackgroundTooltip":"Hintergrundbild setzen",
+  "setEnemySpeed":"set enemy speed",
+  "setPlayerSpeed":"set player speed",
   "setScoreText":"Punktestand setzen",
   "setScoreTextTooltip":"Setzt den Text, welcher im Punktestand-Bereich angezeigt werden soll.",
   "setSpriteEmotionAngry":"wütend machen",

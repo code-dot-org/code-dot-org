@@ -22,6 +22,19 @@ class HomeControllerTest < ActionController::TestCase
     assert_equal "es-ES", cookies[:language_]
 
     assert_equal "language_=es-ES; domain=.code.org; path=/", @response.headers["Set-Cookie"]
+
+    assert_redirected_to 'http://blahblah'
+  end
+
+
+  test "handle nonsense in return_to" do
+    sign_in User.new # devise uses an empty user instead of nil? Hm
+
+    request.host = "learn.code.org"
+
+    get :set_locale, :return_to => ["blah"], :locale => "es-ES"
+
+    assert_redirected_to '["blah"]'
   end
 
   test "should get index with edmodo header" do

@@ -14,11 +14,11 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Дякуємо за реєстрацію заходу в межах Години коду!
 
-**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](<%= hoc_uri('/prizes') %>)
+**КОЖЕН** організатор заходів Години коду отримає 10 GB простору на Dropbox або $10 кредиту Skype в якості подяки. [Детальніше](<%= hoc_uri('/prizes') %>)
 
 <% if @country == 'us' %>
 
-Get your [whole school to participate](<%= hoc_uri('/prizes') %>) for a chance for big prizes for your entire school.
+Реєструйте [для участі всю школу,](<%= hoc_uri('/prizes') %>) щоб претендувати на більші призи.
 
 <% end %>
 
@@ -32,23 +32,23 @@ Get your [whole school to participate](<%= hoc_uri('/prizes') %>) for a chance f
 
 ## 2. Запропонуйте взяти участь у Годині коду всій школі
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](<%= hoc_uri('/files/schools-handout.pdf') %>). Як тільки ваша школа зареєструється, вона [отримує шанс виграти техніку вартістю $10,000](/prizes) і кинути виклик іншим школам району.
+[Розішліть цього листа](<%= hoc_uri('/resources#email') %>) або [цю роздруківку](<%= hoc_uri('/files/schools-handout.pdf') %>). Як тільки ваша школа зареєструється, вона [отримує шанс виграти техніку вартістю $10,000](/prizes) і кинути виклик іншим школам району.
 
 <% else %>
 
 ## 2. Запропонуйте взяти участь у Годині коду всій школі
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or give [this handout](<%= hoc_uri('/files/schools-handout.pdf') %>) to your principal.
+[Розішліть цього листа](<%= hoc_uri('/resources#email') %>) або передайте [цю роздруківку](<%= hoc_uri('/files/schools-handout.pdf') %>) своїй адміністрації.
 
 <% end %>
 
 ## 3. Зробіть пожертву
 
-[Donate to our crowdfunding campaign.](http://<%= codeorg_url() %>/donate) To teach 100 million children, we need your support. We just launched what could be the [largest education crowdfunding campaign](http://<%= codeorg_url() %>/donate) in history. Every dollar will be matched by major Code.org [donors](http://<%= codeorg_url() %>/about/donors), doubling your impact.
+[Зробіть внесок у нашу краудфандингову кампанію.](http://<%= codeorg_url() %>/donate) Щоб навчити 100 мільйонів учнів, нам потрібна підтримка. Ми оголосили кампанію, котра може стати [найбільшою освітньою краудфандинговою кампанією](http://<%= codeorg_url() %>/donate) в історії. Кожен отриманий долар пожертв буде подвоєний основними [спонсорами](http://<%= codeorg_url() %>/about/donors) Code.org.
 
 ## 4. Попросіть про участь свою адміністрацію
 
-[Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](<%= hoc_uri('/resources/hoc-one-pager.pdf') %>).
+[Надішліть цього листа](<%= hoc_uri('/resources#email') %>) своєму керівникові. Або [передайте цю роздруківку](<%= hoc_uri('/resources/hoc-one-pager.pdf') %>).
 
 ## 5. Сприяйте Годині коду у свій спільноті
 
@@ -56,6 +56,6 @@ Get your [whole school to participate](<%= hoc_uri('/prizes') %>) for a chance f
 
 ## 6. Зверніться до місцевих депутатів по підтримку Години коду
 
-[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board. Or [give them this handout](<%= hoc_uri('/resources/hoc-one-pager.pdf') %>) and invite them to visit your school.
+[Надішліть цього листа](<%= hoc_uri('/resources#politicians') %>) своєму мерові, міській чи шкільній раді. Або [передайте роздруківку](<%= hoc_uri('/resources/hoc-one-pager.pdf') %>) та запросіть відвідати школу.
 
 <%= view 'popup_window.js' %>

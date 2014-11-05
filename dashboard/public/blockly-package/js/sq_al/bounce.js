@@ -11789,7 +11789,7 @@ exports.ifTooltip = function(d){return "Nese ka vend ne nje drejtim te caktuar, 
 
 exports.ifelseTooltip = function(d){return "Nese eshte nje rruge ne drejtimin e caktuar, atehere bej veprimet e grupit te pare. Perndryshe, bej veprimet e grupit te dyte."};
 
-exports.incrementOpponentScore = function(d){return "increment opponent score"};
+exports.incrementOpponentScore = function(d){return "rezultati i oponentit/es"};
 
 exports.incrementOpponentScoreTooltip = function(d){return "Add one to the current opponent score."};
 
@@ -11797,7 +11797,7 @@ exports.incrementPlayerScore = function(d){return "increment player score"};
 
 exports.incrementPlayerScoreTooltip = function(d){return "Add one to the current player score."};
 
-exports.isWall = function(d){return "is this a wall"};
+exports.isWall = function(d){return "a është muri"};
 
 exports.isWallTooltip = function(d){return "Returns true if there is a wall here"};
 
@@ -11807,7 +11807,7 @@ exports.launchBallTooltip = function(d){return "Nis nje top ne loje."};
 
 exports.makeYourOwn = function(d){return "Krijo Lojen Tende"};
 
-exports.moveDown = function(d){return "move down"};
+exports.moveDown = function(d){return "lëviz poshtë"};
 
 exports.moveDownTooltip = function(d){return "Move the paddle down."};
 

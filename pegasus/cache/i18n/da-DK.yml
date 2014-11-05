@@ -1,5 +1,6 @@
 "da-DK":
   hello: Hej verden
+  select_language: Please select your language
   computer_science: Computer videnskab
   computer_science_edweek: Computer Videnskabs Uddannelses Uge
   csedweek_dates: December 9-15, 2013
@@ -15,21 +16,21 @@
   twentyhours_heading: Prøv vores Intro til datalogi kursus
   twentyhours_text: Færdig med din første time kode? Lær flere kerne datalogi og programmeringbegreber
     i dette opfølgende kursus.
-  hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
-    8 - 14, 2014<br/>
+  hoc2014_heading: Tilslut dig <a href="http://hourofcode.com">En times kodning</a>
+    <br/>8. - 14. December 2014 <br/>
   hoc2014_students: Studerende
-  hoc2014_try: Try it
-  hoc2014_teachers: Teachers
-  hoc2014_host: Host it
-  hoc2014_everyone: Everyone
-  hoc2014_support: Support it
-  hoc2014_whatishoc: What is the Hour of Code?
+  hoc2014_try: Prøv det
+  hoc2014_teachers: Lærere
+  hoc2014_host: Være vært for det
+  hoc2014_everyone: Alle
+  hoc2014_support: Støtte dette
+  hoc2014_whatishoc: Hvad er "En times kodning"?
   twentyhours_trynow: Prøv nu
   california_heading: Bed din skole om undervisning i datalogi
-  california_text: Any teacher can offer our <a href='http://learn.code.org/'>free
-    intro course</a>.  Any elementary school can <a href='http://code.org/educate/k5'>teach
-    computer science</a>. Ask high schools to <a href='http://code.org/educate/districts'>partner
-    with us.
+  california_text: Enhver lærer kan tilbyde vores <a href='http://learn.code.org/'>gratis
+    introforløb</a>.  Enhver grundskole kan <a href='http://code.org/educate/k5'>lære
+    computer videnskab</a>. Spørg gymnasier <a href='http://code.org/educate/districts'>om
+    de vil være partner med os.
   california_button: Lær mere
   flappy_heading: Flappy fødselsdag til Code.org
   flappy_text: Code.org er lige fyldt 1 år gammel.<br/><br/> Fejr den med os ved at
@@ -64,7 +65,7 @@
   beyond_hour_message: Fortsæt med vores  <a href='http://studio.code.org'>andre kurser</a>,
     eller se flere muligheder for at <a href='/learn/beyond'>lære ud over Kodetimen</a>.
   leaderboards_for_hoc: Ranglister for En Times Kodning.
-  support_url: http://support.code.org/
+  support_url: http://support.Code.org
   country: Land
   city: By
   gender: Køn
@@ -89,8 +90,8 @@
   i_am_a: Jeg er en
   never_spam: Vi vil aldrig spamme dig
   enter_country: Indtast land, hvis udenfor USA
-  used_infrequent_updates: Only used for infrequent updates
-  privacy_practices_children: See our privacy practices for children
+  used_infrequent_updates: Kun anvendes til sjældne opdateringer
+  privacy_practices_children: Se vores beskyttelses betingelser for børn
   petition_thankyou: Tak for at du underskrev indsamlingen
   carousel_heading_international: Vejledninger på dit sprog
   continue_learning_header: Fortsat læring efter En Time
@@ -116,15 +117,15 @@
     %{lines} linjer af kode."
   start_hoc: Start Hour of Code nu
   contact_form_topic_press: Pressen/medierne (interview eller taler-arrangementer)
-  studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
-  studiobar_elementary_title: Elementary courses
-  studiobar_elementary_body: Our three new courses for K&#8209;5
+  studiobar_title: Udforske <a href='http://studio.code.org'>kode skolen</a>
+  studiobar_elementary_title: Grundlæggende kurser
+  studiobar_elementary_body: Vores tre nye kurser for K &#8209; 5
   studiobar_hoc_title: Kodetimen
   studiobar_hoc_body: Lær at kode med Angry Birds
   studiobar_flappy_title: Flappy kode
-  studiobar_flappy_body: Make and share your own Flappy game
-  studiobar_teacher_title: Teacher dashboard
-  studiobar_teacher_body: 'For teachers: view your students'' progress'
+  studiobar_flappy_body: Lav og del dit eget Flappy spil
+  studiobar_teacher_title: Lavet til lærere
+  studiobar_teacher_body: Indføre Kode Skole i klasselokalet
   contact_form_topic_student: Jeg er studerende
   contact_form_topic_parent: Jeg er en forælder
   contact_form_topic_teacher: Jeg er en lærer/pædagog
@@ -142,7 +143,7 @@
   class_submission_in_school_full_university_cs_curriculum: Fuld Universitets kvalifikation
   class_submission_in_school_robotics_club: Robotteknologi klub
   class_submission_in_school_programming_integrated_in_other_classes: Programmering
-    integreret i andre timer
+    integreret i andre klasser (matematik, videnskab, osv)
   class_submission_in_school_summer_school_cs_program: Sommerskole CS program
   class_submission_in_school_exploring_computer_science: At udforske datalogi
   class_submission_in_school_other: Andre i skolen
@@ -186,12 +187,13 @@
   dashboard_landing_view_as_student: Se dette site som studerende
   dashboard_landing_students_title: Dine elever
   dashboard_landing_students_manage: Få vist og administrere dine elever
-  dashboard_landing_news_title: Seneste nyheder
+  dashboard_landing_news_title: 5. klasses pædagog ressourcer (kun på engelsk - kommer
+    på Dansk)
   dashboard_landing_new_beta: Nyt! Prøv vores beta kurser for K-5 elever.
-  dashboard_landing_new_k5courses: New! Try our courses for K-5 students.
-  dashboard_landing_useful_links: Andre nyttige links
-  dashboard_landing_office_hours: Ask a question in person! Visit our monthly video
-    office hours.
+  dashboard_landing_new_k5courses: Ny! Prøv vores kurser for 5. klasses elever.
+  dashboard_landing_useful_links: Andre nyttige links (kun på engelsk)
+  dashboard_landing_office_hours: Stil et spørgsmål personligt! Besøg vores månedlige
+    video kontortid.
   dashboard_landing_print_certificates: Udskriv certifikater for studerende, der er
     færdig med dette kursus
   dashboard_landing_educator_blog: Læs om nyheder og opdateringer til vores materialer
@@ -220,7 +222,7 @@
   dashboard_navigation_view_progress: Se fremskridt
   dashboard_navigation_add_students: Tilføje studerende
   dashboard_navigation_manage_students: Administrer studerende
-  dashboard_navigation_view_stats: View Stats
+  dashboard_navigation_view_stats: Vis statistikker
   dashboard_navigation_section: 'Afsnit: %{section_name}'
   dashboard_navigation_student: 'Studerende: %{student_name}'
   dashboard_sections_new_section: Nyt afsnit
@@ -228,12 +230,12 @@
     Afsnit hjælper dig til at organisere eleverne i mindre grupper, så du kan spore
     deres fremdrift og administrere deres konti.
   dashboard_sections_table_section: Afsnit
-  dashboard_sections_table_secret: Hemmelig type
+  dashboard_sections_table_secret: Login type
   dashboard_sections_table_grade: Graduering
   dashboard_sections_table_course: Kursus
   dashboard_sections_table_students: Studerende
   dashboard_sections_table_code: Afsnitskode
-  dashboard_sections_name: Section Name
+  dashboard_sections_name: Sektionsnavnet
   dashboard_sections_choose_secret: Hvis du vil give dine elever konti, Vælg en hemmelige
     <b>ord</b> eller <b>billede</b> for det pågældende afsnit.
   dashboard_sections_secret_word: Et <b>ord</b> tillader du kan indstille et hemmeligt
@@ -253,7 +255,7 @@
   dashboard_students_new_section: Du har oprettet et nyt afsnit! Tilføje nu dine elever
     ved hjælp af knapperne <b>Tilføj studerende</b> og <b>Tilføje flere studerende</b>
     ovenfor.
-  dashboard_students_placeholder_name: Student Name
+  dashboard_students_placeholder_name: Studerendes navn
   dashboard_students_name: Navn
   dashboard_students_age: Alder
   dashboard_students_gender: Køn
@@ -263,8 +265,8 @@
   dashboard_students_password: adgangskode
   dashboard_students_username: 'Brugernavn: %{student_username}'
   dashboard_students_email: 'E-mail: %{student_email}'
-  dashboard_students_completed_levels: Completed Levels
-  dashboard_students_total_lines: Lines of Code
+  dashboard_students_completed_levels: Afsluttede niveauer
+  dashboard_students_total_lines: Linjer af kode
   dashboard_students_show_secret: Vis hemmeligt
   dashboard_students_auto_generated: Auto genereret
   dashboard_students_reset_secret: Nulstil hemmeligt
@@ -288,33 +290,34 @@
     eller <b>billede</b>.
   dashboard_students_print_page: Udskrive denne side
   dashboard_students_url: Web-adresse
-  dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Click
-    here</a> for our privacy document that can be shared or printed for your students.
-  dashboard_curriculum_overview: K-5 Curriculum Overview
-  dashboard_view_all_lesson_plans: View all lesson plans
-  dashboard_course1: 'Course 1:'
-  dashboard_course2: 'Course 2:'
-  dashboard_course3: 'Course 3:'
+  dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">
+    Klik her</a> for vores privatlivs betingelser, der kan deles eller udskrives til
+    dine elever.
+  dashboard_curriculum_overview: 5. Klasses Curriculum oversigt
+  dashboard_view_all_lesson_plans: Se alle lektionsplaner
+  dashboard_course1: 'Kursus 1:'
+  dashboard_course2: 'Kursus 2:'
+  dashboard_course3: 'Kursus 3:'
   dashboard_sequence: Sekvens
-  dashboard_framework: Framework
-  dashboard_standards: Standards
-  dashboard_implementation_guide: Implementation Guide
-  dashboard_glossary: Glossary
-  dashboard_classroom_strategies: Classroom strategies for teachers
-  dashboard_debugging: 'Debugging:'
-  dashboard_puzzle_solving: 'Puzzle-solving:'
-  dashboard_student_worksheet: student worksheet
-  dashboard_teacher_worksheet: teacher worksheet
+  dashboard_framework: Værktøjskasse
+  dashboard_standards: Standarder
+  dashboard_implementation_guide: Implementeringsvejledning
+  dashboard_glossary: Ordliste
+  dashboard_classroom_strategies: Klasseværelset strategier for lærere
+  dashboard_debugging: 'Fejlfinding:'
+  dashboard_puzzle_solving: 'Opgaveløsning:'
+  dashboard_student_worksheet: Student regneark
+  dashboard_teacher_worksheet: lærer regneark
   dashboard_grade_k: K
   dashboard_grade_other: Andre
-  dashboard_login_word: word
-  dashboard_login_picture: picture
+  dashboard_login_word: Ord
+  dashboard_login_picture: Billede
   dashboard_login_none: E-mail
-  dashboard_new_password: new password
-  stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
-    week alone:'
-  stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
-  dashboard_teacher: Teacher
+  dashboard_new_password: Ny adgangskode
+  stats_hoc_2013_heading: 'Utrolige statistik fra sidste års "En times kodning". I
+    en uge alene:'
+  stats_hoc_2013_image_alt: Statistik fra 2013 "En times kodning"
+  dashboard_teacher: Lærer
   dashboard_student: studerende
   dashboard_sections_email_question: Do all students have a valid email address?
   dashboard_sections_account_creation_question: Who creates the student's account?
@@ -367,24 +370,24 @@
   lightbotintl_gradelevel: Alle aldre
   codecademy_gradelevel: Gymnasium
   kodable_gradelevel: Folkeskole
-  hopscotch_gradelevel: Middle school +
-  groklearning_gradelevel: Middle school +
+  hopscotch_gradelevel: Mellemskole +
+  groklearning_gradelevel: Mellemskole +
   processing_gradelevel: Gymnasium
-  robomind_gradelevel: Ages 8-13
-  robomindnl_gradelevel: Ages 8-13
+  robomind_gradelevel: Alder 8-13
+  robomindnl_gradelevel: Alder 8-13
   makegameswithus_gradelevel: Gymnasium
-  appinventor_gradelevel: Middle school +
+  appinventor_gradelevel: Mellemskole +
   touchdevelop_gradelevel: Gymnasium
   blockly_gradelevel: Alle aldre
-  thinkersmith2_gradelevel: Ages 8+
+  thinkersmith2_gradelevel: Alder 8+
   codehs_gradelevel: Gymnasium
-  codeavengers_gradelevel: Middle school +
-  codecombat_gradelevel: Middle school +
-  agentcubes_gradelevel: Middle school +
-  alice_gradelevel: Middle school +
+  codeavengers_gradelevel: Mellemskole +
+  codecombat_gradelevel: Mellemskole +
+  agentcubes_gradelevel: Mellemskole +
+  alice_gradelevel: Mellemskole +
   livecode_gradelevel: Gymnasium
-  lookingglass_gradelevel: Middle school +
-  kodableunplugged_gradelevel: Ages 8-13
+  lookingglass_gradelevel: Mellemskole +
+  kodableunplugged_gradelevel: Alder 8-13
   codeorg_platformtext: Learn the basic concepts of Computer Science with drag and
     drop programming. This is a game-like, self-directed tutorial starring video lectures
     by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops,
@@ -526,45 +529,47 @@
   livecode_shortdescription: Learn to code with LiveCode
   lookingglass_shortdescription: Make an animated story
   kodableunplugged_shortdescription: A fun unplugged exercise
-  codeorg_longdescription: Learn the basic concepts of Computer Science with drag
-    and drop programming. This is a game-like, self-directed tutorial starring video
-    lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn
-    repeat-loops, conditionals, and basic algorithms. Available in 34 languages.
+  codeorg_longdescription: Lær de grundlæggende begreber i computer videnskab med
+    træk og slip-programmering. Dette er et spil-lignende, selvstyret opgaveforløb
+    med stjernespækket video foredrag af Bill Gates, Mark Zuckerberg, Angry Birds
+    og Plants vs Zombier. Lære gentag-løkker, betingede og grundlæggende algoritmer.
+    Tilgængelige i 34 sprog.
   thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
     los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
     espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
     a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
     como la valiosa habilidad de depuraci&oacute;n.
-  khan_longdescription: Learn the basics of JavaScript programming while creating
-    fun drawings with your code. Do it on your own or with your class!
-  khanes_longdescription: Learn the basics of JavaScript programming while creating
-    fun drawings with your code. Do it on your own or with your class!
-  tynker_longdescription: A collection of 8 fun activities for children of all ages
-    to try programming. Solve a series of simple puzzles to help Pixel the puppy reach
-    home, and Biff the spaceman reach his moon base. Build the Space Zombies game
-    or create Math Art using our fun and easy visual approach to programming.  The
-    session can be teacher facilitated or self-paced.
-  scratch_longdescription: With Scratch, you can code your own interactive games,
-    stories, animations, and more. In this activity, you'll create an interactive
-    holiday card that you can share with friends and family.
-  thinkersmith_longdescription: Using a pre-defined "Robot Vocabulary" students will
-    figure out how to guide each other to accomplish specific tasks without discussing
-    them first. This lesson teaches children the connection between symbols and actions,
-    as well as the invaluable skill of debugging. "My Robotic Friends" works best
-    as a group activity and includes a teacher workbook for classroom use.
-  lightbot_longdescription: Learn core programming logic, starting from super-basic
-    programming, for ages 4+, on iOS or Android (or Web browser) . Learn how to sequence
-    commands, identify patterns, use procedures, and utilize loops!
-  lightbotintl_longdescription: Learn core programming logic, starting from super-basic
-    programming, for ages 4+, on iOS or Android (or Web browser) . Learn how to sequence
-    commands, identify patterns, use procedures, and utilize loops!
-  codecademy_longdescription: Codecademy is an interactive, student-guided introduction
-    to the basics of CS through JavaScript that's used by tens of millions of students
-    around the world. We've prepared a no-hassle Hour of Code experience with accompanying
-    quizzes, slides, and a completed project for students at the end.
-  kodable_longdescription: Kodable is a self-guided iPad game that introduces kids
-    5+ to programming basics. Having a teacher or parent nearby is optimal, but not
-    necessary.
+  khan_longdescription: Lær grundlæggende i JavaScript programmering samtidig skabe
+    sjove tegninger med din kode. Gøre det på egen hånd eller med din klasse!
+  khanes_longdescription: Lær grundlæggende i JavaScript programmering samtidig skabe
+    sjove tegninger med din kode. Gøre det på egen hånd eller med din klasse!
+  tynker_longdescription: En samling af 8 sjove aktiviteter for børn i alle aldre
+    som vil prøve programmering. Løse en række enkle gåder for at hjælpe Pixel hvalpen
+    med at nå hjem og Biff spaceman at nå hans månebase. Byg plads zombier spil eller
+    oprette Matematik kunst ved hjælp af vores sjove og nemme visuelle tilgang til
+    programmering.  Lektionen kan være lærer støtter eller selv-studie.
+  scratch_longdescription: Med Scratch, kan du kode dine egne interaktive spil, historier,
+    animationer og meget mere. I denne aktivitet, skal du oprette en interaktiv feriekort,
+    som du kan dele med venner og familie.
+  thinkersmith_longdescription: Ved hjælp af et foruddefineret "Robot ordforråd" vil
+    studerende finde ud af at vejlede hinanden for at udføre specifikke opgaver uden
+    at diskutere dem først. Denne lektion lærer børn forbindelsen mellem symboler
+    og handlinger, samt den uvurderlige dygtighed fejlfinding. "Mine robot venner"
+    fungerer bedst som en gruppe aktivitet og omfatter en lærer projektmappe til brug
+    i klasseværelset.
+  lightbot_longdescription: Lær grundlæggende programmering logik, startende fra Super-grundlæggende
+    programmering, for aldre 4+, på iOS eller Android (eller webbrowser). Lær at sekvens
+    kommandoer, identificere mønstre, bruge procedurer og udnyt sløjfer!
+  lightbotintl_longdescription: Lær grundlæggende programmering logik, startende fra
+    Super-grundlæggende programmering, for aldre 4+, på iOS eller Android (eller webbrowser).
+    Lær at sekvens kommandoer, identificere mønstre, bruge procedurer og udnyt sløjfer!
+  codecademy_longdescription: KodeAkademiet er en interaktiv, studerende-styrede Introduktion
+    til grundlæggende i Kode Skole gennem JavaScript, der bruges af millioner af studerende
+    rundt om i verden. Vi har forberedt "En times kodning" med tilhørende quizzer,
+    dias og et afsluttet projekt for studerende i slutningen.
+  kodable_longdescription: Kodable er et selv-guidet iPad spil, der introducerer børn
+    i alderen 5+ til bases programmering. At have en lærer eller forælder i nærheden
+    er optimalt, men ikke nødvendigt.
   hopscotch_longdescription: Student-guided tutorial on the iPad using the Hopscotch
     programming language. Students will build games and apps for their iPad on their
     iPad. Students can work individually or with friends (up to 3 per iPad).
@@ -684,7 +689,7 @@
   hopscotch_beyond_gradelevel: Middle school +
   groklearning_beyond_gradelevel: Middle school +
   hacketyhack_beyond_gradelevel: Gymnasium
-  robomind_beyond_gradelevel: Ages 8-13
+  robomind_beyond_gradelevel: Alder 8-13
   makegameswithus_beyond_gradelevel: Gymnasium
   appinventor_beyond_gradelevel: Middle school +
   touchdevelop_beyond_gradelevel: Gymnasium
@@ -784,8 +789,8 @@
     tutorials starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds
     and Plants vs. Zombies. Learn repeat-loops, conditionals, basic algorithms, functions,
     and variables.
-  khan_beyond_longdescription: Learn the basics of JavaScript programming while creating
-    fun drawings with your code. Do it on your own or with your class!
+  khan_beyond_longdescription: Lær grundlæggende i JavaScript programmering samtidig
+    skabe sjove tegninger med din kode. Gøre det på egen hånd eller med din klasse!
   tynker_beyond_longdescription: Tynker makes it fun & easy to learn programming.
     It makes it visual. Kids build games and mobile apps by arranging blocks of code.
     It removes the need to know programming syntax. Kids transform ideas into animated
@@ -798,17 +803,17 @@
     systematically, and work collaboratively&mdash; essential skills for life in the
     21st century. Scratch is a project of the Lifelong Kindergarten Group at the MIT
     Media Lab. It is provided free of charge.
-  lightbot_beyond_longdescription: Learn core programming logic, starting from super-basic
-    programming, for ages 4+, on iOS or Android (or Web browser) . Learn how to sequence
-    commands, identify patterns, use procedures, and utilize loops!
-  codecademy_beyond_longdescription: Codecademy is an interactive, student-guided
-    introduction to the basics of CS through JavaScript that's used by tens of millions
-    of students around the world. We've prepared a no-hassle Hour of Code experience
-    with accompanying quizzes, slides, and a completed project for students at the
-    end.
-  kodable_beyond_longdescription: Kodable is a self-guided iPad game that introduces
-    kids 5+ to programming basics. Having a teacher or parent nearby is optimal, but
-    not necessary.
+  lightbot_beyond_longdescription: Lær grundlæggende programmering logik, startende
+    fra Super-grundlæggende programmering, for aldre 4+, på iOS eller Android (eller
+    webbrowser). Lær at sekvens kommandoer, identificere mønstre, bruge procedurer
+    og udnyt sløjfer!
+  codecademy_beyond_longdescription: KodeAkademiet er en interaktiv, studerende-styrede
+    Introduktion til grundlæggende i Kode Skole gennem JavaScript, der bruges af millioner
+    af studerende rundt om i verden. Vi har forberedt "En times kodning" med tilhørende
+    quizzer, dias og et afsluttet projekt for studerende i slutningen.
+  kodable_beyond_longdescription: Kodable er et selv-guidet iPad spil, der introducerer
+    børn i alderen 5+ til bases programmering. At have en lærer eller forælder i nærheden
+    er optimalt, men ikke nødvendigt.
   hopscotch_beyond_longdescription: Student-guided tutorial on the iPad using the
     Hopscotch programming language. Students will build games and apps for their iPad
     on their iPad. Students can work individually or with friends (up to 3 per iPad).

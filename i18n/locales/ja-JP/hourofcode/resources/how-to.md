@@ -4,7 +4,15 @@ title: Resources layout: wide
 
 * * *
 
-# Hour of Codeを教える方法
+<div class="row">
+  <h1 class="col-sm-6">
+    How to teach one Hour of Code
+  </h1>
+  
+  <div class="col-sm-6 button-container centered">
+    <a href="/#join"><button class="signup-button">Sign up your event</button></a>
+  </div>
+</div>
 
 ## 1） チュートリアルを試す。
 
@@ -38,20 +46,20 @@ Hour of Codeの最適に経験していただくために、お使いのPCがイ
   * [Hour of Codeは2013リリース済みビデオ](https://www.youtube.com/watch?v=FC5FbmsH4fw), もしくは <% if @country == 'uk' %> [Hour of Code 2014 ビデオ](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [Hour of Code 2014 ビデオ](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
   * [オバマ大統領が生徒たちにコンピューター科学を学ぶよう呼びかけてる。](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**Get your students excited - give them a short intro**
+**あなたの生徒たちを興奮させます - 短いイントロを紹介する。**
 
-Most kids don’t know what computer science is. Here are some ideas:
+ほとんどの子供達はコンピュター科学を知りません。これらはアイデアです。
 
-  * Explain it in a simple way that includes examples of applications that both boys and girls will care about (saving lives, helping people, connecting people, etc.).
-  * Try: "Think about things in your everyday life that use computer science: a cell phone, a microwave, a computer, a traffic light… all of these things needed a computer scientist to help build them.”
-  * Or: “Computer science is the art of blending human ideas and digital tools to increase our power. Computer scientists work in so many different areas: writing apps for phones, curing diseases, creating animated movies, working on social media, building robots that explore other planets and so much more."
-  * See tips for getting girls interested in computer science [here](http://<%= codeorg_url() %>/girls). 
+  * 女の子と男の子の両方の関心を引く（誰かの命を救うとか、人々を助ける、人とつながるなどの）ことを応用した話を交えて簡単に説明する。
+  * トライ：「日常生活の中にあるコンピューター科学を考えてみる：携帯電話、電子レンジ、コンピューター、信号。。。これらを作るのにはコンピューター科学なしではできません。」
+  * または、「コンピューター科学は私たちに力をあたえてくれる、人間のアイデアとデジタルツールが融合した芸術です。 コンピューター科学は様々な分野で活躍しています：携帯アプリの制作、不治の病を治したり、アニメ制作、ソーシャルメディアの制作、他の惑星を発掘するロボットの構築、そのほかにもたくさん」
+  * コンピューター科学をもっと女の子に興味持ってもらうヒントは [こちら ](http://<%= codeorg_url() %>/girls). 
 
-## 5) Start your Hour of Code
+## 5) Hour of Codeを始めてください
 
-**Direct students to the activity**
+**生徒たちに何をするのか指示する**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](http://<%= codeorg_url() %>/learn) under the number of participants. [hourofcode.com/co](http://hourofcode.com/co)
+  * 黒板にチュートリアルのリンク先を書きます Find the link listed on the [information for your selected tutorial](http://<%= codeorg_url() %>/learn) under the number of participants. [hourofcode.com/co](http://hourofcode.com/co)
   * Tell students to visit the URL and start the tutorial.
 
 **When your students come across difficulties**
@@ -71,4 +79,4 @@ Each student gets a chance to get a certificate via email when they finish the [
 
 **What comes after the Hour of Code?**
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %>
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %> <a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>

@@ -7291,7 +7291,13 @@ Webapp.onTick = function() {
                                              Webapp.cumulativeLength,
                                              Webapp.userCodeStartOffset,
                                              Webapp.userCodeLength);
-      Webapp.interpreter.step();
+      try {
+        Webapp.interpreter.step();
+      }
+      catch(err) {
+        Webapp.executionError = err;
+        Webapp.onPuzzleComplete();
+      }
     }
   } else {
     if (Webapp.tickCount === 1) {
@@ -7465,6 +7471,7 @@ BlocklyApps.reset = function(first) {
   // Reset the Globals object used to contain program variables:
   Webapp.Globals = {};
   Webapp.eventQueue = [];
+  Webapp.executionError = null;
   Webapp.interpreter = null;
 };
 
@@ -7653,7 +7660,9 @@ Webapp.feedbackImage = '';
 Webapp.encodedFeedbackImage = '';
 
 Webapp.onPuzzleComplete = function() {
-  if (level.freePlay) {
+  if (Webapp.executionError) {
+    Webapp.result = BlocklyApps.ResultType.ERROR;
+  } else if (level.freePlay) {
     Webapp.result = BlocklyApps.ResultType.SUCCESS;
   }
 
@@ -8012,7 +8021,7 @@ exports.saveToGallery = function(d){return "In deiner Galerie abspeichern"};
 
 exports.savedToGallery = function(d){return "In deiner Gallerie gespeichert!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Leider können wir dieses Programm nicht teilen."};
 
 exports.typeFuncs = function(d){return "Verfügbare Funktionen:%1"};
 
@@ -8065,13 +8074,13 @@ exports.catVariables = function(d){return "Variablen"};
 
 exports.continue = function(d){return "Weiter"};
 
-exports.createHtmlBlock = function(d){return "create html block"};
+exports.createHtmlBlock = function(d){return "HTML-Block erstellen"};
 
-exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
+exports.createHtmlBlockTooltip = function(d){return "Erstellt einen HTML-Block in der App."};
 
 exports.finalLevel = function(d){return "Glückwunsch! Sie haben das letzte Puzzle gelöst."};
 
-exports.makeYourOwn = function(d){return "Make Your Own App"};
+exports.makeYourOwn = function(d){return "Erstellen sie ihre eigene App"};
 
 exports.nextLevel = function(d){return "Herzlichen Glückwunsch! Du hast dieses Puzzle abgeschlossen."};
 
@@ -8089,13 +8098,13 @@ exports.repeatDo = function(d){return "mache"};
 
 exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
 
-exports.shareWebappTwitter = function(d){return "Check out the app I made. I wrote it myself with @codeorg"};
+exports.shareWebappTwitter = function(d){return "Schau Dir die App an, die ich gemacht habe. Ich habe sie selbst mit @codeorg geschrieben"};
 
-exports.shareGame = function(d){return "Share your app:"};
+exports.shareGame = function(d){return "Teilen Sie Ihre App:"};
 
-exports.turnBlack = function(d){return "turn black"};
+exports.turnBlack = function(d){return "schwarz machen"};
 
-exports.turnBlackTooltip = function(d){return "Turns the screen black."};
+exports.turnBlackTooltip = function(d){return "Macht den Bildschirm schwarz."};
 
 exports.yes = function(d){return "Ja"};
 

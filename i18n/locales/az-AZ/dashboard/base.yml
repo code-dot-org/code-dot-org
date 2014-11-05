@@ -77,7 +77,7 @@ az:
     birthday: Ad günü (vacib deyil)
     age: Yaşınız
     user_type: Are you a student or teacher?
-    submit: Qeydiyyatdan keç
+    submit: Qeydiyyatdan keçin
     teacher: Müəllimsiniz?
     valid_username: Olar!
     invalid_username: İstifadəçi adı ən azı 5 simvoldan ibarət olmalıdır

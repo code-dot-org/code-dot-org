@@ -11759,9 +11759,9 @@ exports.parseElement = function(text) {
 
 },{}],39:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.hu=function(n){return "other"}
-exports.bounceBall = function(d){return "ugráló labda"};
+exports.bounceBall = function(d){return "pattogó labda"};
 
-exports.bounceBallTooltip = function(d){return "Bounce a ball off of an object."};
+exports.bounceBallTooltip = function(d){return "Pattintsd vissza a labdát egy tárgyról."};
 
 exports.continue = function(d){return "Tovább"};
 
@@ -11789,27 +11789,27 @@ exports.ifTooltip = function(d){return "Ha a megadott irányban létezik egy út
 
 exports.ifelseTooltip = function(d){return "Ha van egy út a megadott irányban, akkor csináld az első blokk műveletek. Másképp csinál a második blokk műveletek."};
 
-exports.incrementOpponentScore = function(d){return "ellenfél pontszám"};
+exports.incrementOpponentScore = function(d){return "pontot szerez az ellenfél"};
 
-exports.incrementOpponentScoreTooltip = function(d){return "Adjon egyet az ellenfél pontszámához."};
+exports.incrementOpponentScoreTooltip = function(d){return "Egyet hozzáad az ellenfél pontszámához."};
 
 exports.incrementPlayerScore = function(d){return "pontszám"};
 
 exports.incrementPlayerScoreTooltip = function(d){return "Adjon egyet az aktuális játékos pontjaihoz."};
 
-exports.isWall = function(d){return "Ez egy fal"};
+exports.isWall = function(d){return "Ez egy fal?"};
 
-exports.isWallTooltip = function(d){return "Returns true if there is a wall here"};
+exports.isWallTooltip = function(d){return "Igaz értéket ad, ha ott van egy fal"};
 
 exports.launchBall = function(d){return "Indíts új labdát"};
 
 exports.launchBallTooltip = function(d){return "Hozd játékba a labdát."};
 
-exports.makeYourOwn = function(d){return "Készítsd el a saját Bounce játékodat"};
+exports.makeYourOwn = function(d){return "Készítsd el a saját Pattogó Labda játékodat"};
 
 exports.moveDown = function(d){return "lejjebb"};
 
-exports.moveDownTooltip = function(d){return "Mozgasd lejjebb a lapátot."};
+exports.moveDownTooltip = function(d){return "Vidd lejjebb az ütőt."};
 
 exports.moveForward = function(d){return "előrelépni"};
 
@@ -11817,15 +11817,15 @@ exports.moveForwardTooltip = function(d){return "Vigyél előre egy helyet."};
 
 exports.moveLeft = function(d){return "balra"};
 
-exports.moveLeftTooltip = function(d){return "Mozgasd balra a lapátot."};
+exports.moveLeftTooltip = function(d){return "Vidd balra az ütőt."};
 
 exports.moveRight = function(d){return "jobbra"};
 
-exports.moveRightTooltip = function(d){return "Mozgasd jobbra a lapátot."};
+exports.moveRightTooltip = function(d){return "Vidd jobbra az ütőt."};
 
 exports.moveUp = function(d){return "feljebb"};
 
-exports.moveUpTooltip = function(d){return "Mozgasd feljebb a lapátot."};
+exports.moveUpTooltip = function(d){return "Vidd feljebb az ütőt."};
 
 exports.nextLevel = function(d){return "Gratulálok! Ezt a feladatot megoldottad."};
 
@@ -11887,23 +11887,23 @@ exports.repeatUntilFinish = function(d){return "befejezésig ismételd"};
 
 exports.scoreText = function(d){return "Pontszám: "+v(d,"playerScore")+": "+v(d,"opponentScore")};
 
-exports.setBackgroundRandom = function(d){return "Véletlenszerű háttér beállítása"};
+exports.setBackgroundRandom = function(d){return "háttér típusa: random"};
 
-exports.setBackgroundHardcourt = function(d){return "Salakos háttér beállítása"};
+exports.setBackgroundHardcourt = function(d){return "háttér típusa: keménypályás"};
 
-exports.setBackgroundRetro = function(d){return "Retró háttér beállítása"};
+exports.setBackgroundRetro = function(d){return "háttér típusa: retró"};
 
 exports.setBackgroundTooltip = function(d){return "Adja meg a háttér képet"};
 
-exports.setBallRandom = function(d){return "Véletlenszerű labda beállítása"};
+exports.setBallRandom = function(d){return "labda típusa: random"};
 
-exports.setBallHardcourt = function(d){return "set hardcourt ball"};
+exports.setBallHardcourt = function(d){return "labda típusa: keménypályás"};
 
-exports.setBallRetro = function(d){return "Retro labda beállítása"};
+exports.setBallRetro = function(d){return "labda típusa: retró"};
 
-exports.setBallTooltip = function(d){return "Labda képének beállítása"};
+exports.setBallTooltip = function(d){return "Labda típusának beállítása"};
 
-exports.setBallSpeedRandom = function(d){return "Változó labdasebesség beállítása"};
+exports.setBallSpeedRandom = function(d){return "labda sebessége: random"};
 
 exports.setBallSpeedVerySlow = function(d){return "Labda sebesség beállítása: Nagyon lassú"};
 
@@ -11917,29 +11917,29 @@ exports.setBallSpeedVeryFast = function(d){return "Labda sebesség beállítása
 
 exports.setBallSpeedTooltip = function(d){return "Beállítja a labda sebességét."};
 
-exports.setPaddleRandom = function(d){return "Véletlenszerű evező beállítása"};
+exports.setPaddleRandom = function(d){return "ütő típusa: random"};
 
-exports.setPaddleHardcourt = function(d){return "set hardcourt paddle"};
+exports.setPaddleHardcourt = function(d){return "ütő típusa: keménypályás"};
 
-exports.setPaddleRetro = function(d){return "set retro paddle"};
+exports.setPaddleRetro = function(d){return "ütő típusa: retro"};
 
-exports.setPaddleTooltip = function(d){return "Sets the ball paddle"};
+exports.setPaddleTooltip = function(d){return "Az ütő típusát állítja be"};
 
-exports.setPaddleSpeedRandom = function(d){return "set random paddle speed"};
+exports.setPaddleSpeedRandom = function(d){return "Az ütő sebessége: random"};
 
-exports.setPaddleSpeedVerySlow = function(d){return "Nagyon lassan mozogjon a lapát"};
+exports.setPaddleSpeedVerySlow = function(d){return "Ütő sebessége: nagyon lassú"};
 
-exports.setPaddleSpeedSlow = function(d){return "Lassan mozogjon a lapát"};
+exports.setPaddleSpeedSlow = function(d){return "Ütő sebessége: lassú"};
 
-exports.setPaddleSpeedNormal = function(d){return "Normálisan mozogjon a lapát"};
+exports.setPaddleSpeedNormal = function(d){return "Ütő sebessége: normál"};
 
-exports.setPaddleSpeedFast = function(d){return "Gyorsan mozogjon a lapát"};
+exports.setPaddleSpeedFast = function(d){return "Ütő sebessége: gyors"};
 
-exports.setPaddleSpeedVeryFast = function(d){return "Nagyon gyorsan mozogjon a lapát"};
+exports.setPaddleSpeedVeryFast = function(d){return "Ütő sebessége: nagyon gyors"};
 
-exports.setPaddleSpeedTooltip = function(d){return "Sets the speed of the paddle"};
+exports.setPaddleSpeedTooltip = function(d){return "Az ütő sebességét állítja be"};
 
-exports.shareBounceTwitter = function(d){return "Nézd meg milyen Bounce játékot készítettem. Magam programoztam a code.org felületén"};
+exports.shareBounceTwitter = function(d){return "Próbáld ki a Bounce játékot, amit én programoztam a code.org weblapján!"};
 
 exports.shareGame = function(d){return "Oszd meg a játékod:"};
 
@@ -11951,15 +11951,15 @@ exports.turnTooltip = function(d){return "Balra vagy jobbra fordít 90 fokkal."}
 
 exports.whenBallInGoal = function(d){return "Ha a labda célba ér"};
 
-exports.whenBallInGoalTooltip = function(d){return "Execute the actions below when a ball enters the goal."};
+exports.whenBallInGoalTooltip = function(d){return "Az alábbi parancsokat hajtja végre akkor, ha a labda a célba ér."};
 
-exports.whenBallMissesPaddle = function(d){return "when ball misses paddle"};
+exports.whenBallMissesPaddle = function(d){return "Amikor a labda nem találja el az ütőt"};
 
-exports.whenBallMissesPaddleTooltip = function(d){return "Execute the actions below when a ball misses the paddle."};
+exports.whenBallMissesPaddleTooltip = function(d){return "Végrehajtja az alábbi parancsokat, ha a labda nem találja el az ütőt."};
 
 exports.whenDown = function(d){return "Lefele nyílnál"};
 
-exports.whenDownTooltip = function(d){return "Execute the actions below when the Down arrow button is pressed."};
+exports.whenDownTooltip = function(d){return "Végrehajtja az alábbi parancsokat, ha a lefelé mutató nyíl van lenyomva."};
 
 exports.whenGameStarts = function(d){return "amikor a játék elindul"};
 
@@ -11967,23 +11967,23 @@ exports.whenGameStartsTooltip = function(d){return "Végrehajtja a lenti utasít
 
 exports.whenLeft = function(d){return "balra nyíl esetén"};
 
-exports.whenLeftTooltip = function(d){return "Execute the actions below when the Left arrow button is pressed."};
+exports.whenLeftTooltip = function(d){return "Végrehajtja az alábbi parancsokat, ha a balra mutató nyíl van lenyomva."};
 
 exports.whenPaddleCollided = function(d){return "Ha a labda nekimegy az ásónak"};
 
-exports.whenPaddleCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a paddle."};
+exports.whenPaddleCollidedTooltip = function(d){return "Végrehajtja az alábbi parancsokat, ha a labda nekimegy az ütőnek."};
 
 exports.whenRight = function(d){return "jobbra nyíl esetén"};
 
-exports.whenRightTooltip = function(d){return "Execute the actions below when the Right arrow button is pressed."};
+exports.whenRightTooltip = function(d){return "Végrehajtja az alábbi parancsokat, ha a jobbra mutató nyíl van lenyomva."};
 
 exports.whenUp = function(d){return "Ha van felfelé nyíl"};
 
-exports.whenUpTooltip = function(d){return "Execute the actions below when the Up arrow button is pressed."};
+exports.whenUpTooltip = function(d){return "Végrehajtja az alábbi parancsokat, ha a felfelé mutató nyíl van lenyomva."};
 
 exports.whenWallCollided = function(d){return "Amikor a labda nekimegy a falnak"};
 
-exports.whenWallCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a wall."};
+exports.whenWallCollidedTooltip = function(d){return "Végrehajtja az alábbi parancsokat, ha a labda nekimegy a falnak."};
 
 exports.whileMsg = function(d){return "amíg"};
 
@@ -12036,9 +12036,9 @@ exports.end = function(d){return "vége"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Akkor van értelme az \"Ismétel\" vagy a \"Ha\" blokknak, ha van  bennük egy vagy több blokk. Bizonyosodj meg róla, hogy a belső blokk megfelelően illeszkedik a külső blokkhoz."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "A függvény blokknak szüksége van további elemekre a belsejében."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "A függvény blokkok belsejében szükség van több elemre, hogy működjön."};
 
-exports.extraTopBlocks = function(d){return "Van különálló blokkod. Vagy csatlakoztasd a \"futtatáskor\"/\"when run\" blokkhoz vagy töröld."};
+exports.extraTopBlocks = function(d){return "Van különálló blokkod. Vagy csatlakoztasd a \"futtatáskor\" blokkhoz, vagy töröld."};
 
 exports.finalStage = function(d){return "Gratulálok! Teljesítetted az utolsó szakaszt."};
 
@@ -12078,7 +12078,7 @@ exports.numLinesOfCodeWritten = function(d){return "Éppen most írtál újabb "
 
 exports.play = function(d){return "lejátszás"};
 
-exports.puzzleTitle = function(d){return v(d,"puzzle_number")+". feladvány a "+v(d,"stage_total")+" -ból"};
+exports.puzzleTitle = function(d){return v(d,"puzzle_number")+"/"+v(d,"stage_total")+". feladvány"};
 
 exports.repeat = function(d){return "ismételd"};
 
@@ -12122,9 +12122,9 @@ exports.saveToGallery = function(d){return "Mentés a galériába"};
 
 exports.savedToGallery = function(d){return "Elmentve a galáriádba"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Sajnálom, de nem tudtam megosztani ezt a programot."};
 
-exports.typeFuncs = function(d){return "Elérhető funkciók:%1"};
+exports.typeFuncs = function(d){return "Elérhető függvények:%1"};
 
 exports.typeHint = function(d){return "Vedd figyelembe, hogy a zárójelek és a pontosvesszők is szükségesek."};
 
@@ -12132,7 +12132,7 @@ exports.workspaceHeader = function(d){return "Építsd össze a blokkokat itt: "
 
 exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
 
-exports.infinity = function(d){return "Végtelenség"};
+exports.infinity = function(d){return "Végtelen"};
 
 exports.rotateText = function(d){return "Fordítsd el a készüléket."};
 

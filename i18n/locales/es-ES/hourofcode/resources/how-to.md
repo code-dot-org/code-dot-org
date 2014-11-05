@@ -4,7 +4,15 @@ title: Recursos layout: wide
 
 * * *
 
-# Como Enseñar Una Hora de Programación
+<div class="row">
+  <h1 class="col-sm-6">
+    How to teach one Hour of Code
+  </h1>
+  
+  <div class="col-sm-6 button-container centered">
+    <a href="/#join"><button class="signup-button">Sign up your event</button></a>
+  </div>
+</div>
 
 ## 1) Prueba los tutoriales:
 
@@ -44,31 +52,31 @@ La mayoría de los chicos no saben que es ciencias computacionales. Aquí tienes
 
   * Explica en una forma sencilla que incluya ejemplos de aplicaciones que les interesen tanto a niños como a niñas (salvar vidas, ayudar a la gente, conectar personas, etc).
   * Prueba decir: "Piensen acerca de cosas en la vida diaria que usan Ciencias de la Computación: un teléfono celular, un microondas, una computadora, un semáforo... Todas esas cosas necesitan un profesinal en Ciencias de la Computación para ayudar a construirlas."
-  * Or: “Computer science is the art of blending human ideas and digital tools to increase our power. Computer scientists work in so many different areas: writing apps for phones, curing diseases, creating animated movies, working on social media, building robots that explore other planets and so much more."
-  * See tips for getting girls interested in computer science [here](http://<%= codeorg_url() %>/girls). 
+  * O: "Las Ciencias de la Computación son el arte de combinar ideas humanas y herramientas digitales para incrementar nuestro poder. Los expertos en informática trabajan en muchas áreas diferentes: escriben aplicaciones para teléfonos, curan enfermedades, crean películas animadas, trabajan en redes sociales, construyen robots que exploran otros planetas y muchas cosas más."
+  * [Aquí](http://<%= codeorg_url() %>/girls) puedes ver consejos para interesar a las chicas en Ciencias de la Computación. 
 
 ## 5) Inicia tu Hora de Programación
 
 **Dirige a los estudiantes a la actividad**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](http://<%= codeorg_url() %>/learn) under the number of participants. [hourofcode.com/co](http://hourofcode.com/co)
-  * Tell students to visit the URL and start the tutorial.
+  * Escribe el enlace al tutorial en el tablero. Encuentra el enlace en la [información para el tutorial seleccionado](http://<%= codeorg_url() %>/learn) bajo el número de participantes. [hourofcode.com/co](http://hourofcode.com/co)
+  * Indica a los estudiantes que visiten la URL e inicien el tutorial.
 
 **Cuando los estudiantes se topan con dificultades**
 
-  * Tell students, “Ask 3 then me.” Ask 3 classmates, and if they don’t have the answer, then ask the teacher.
-  * Encourage students and offer positive reinforcement: “You’re doing great, so keep trying.”
-  * It’s okay to respond: “I don’t know. Let’s figure this out together.” If you can’t figure out a problem, use it as a good learning lesson for the class: “Technology doesn’t always work out the way we want. Together, we’re a community of learners.” And: “Learning to program is like learning a new language; you won’t be fluent right away.“
+  * Indica a los estudiantes, "Pregunta a 3 personas, luego a mi". Pregunta a 3 compañeros y si ellos no conocen la respuesta entonces pregunta al profesor.
+  * Alienta a los estudiantes y dales refuerzos positivos: "Lo estás haciendo muy bien, sigue intentando."
+  * Está bien responder: "No sé. Encontremos la respuesta juntos." Si no puedes resolver un problema úsalo como una buena lección para toda la clase: "La tecnología no siempre funciona como queremos. Todos juntos somos una comunidad de aprendizaje". Y: "Aprender a programar es como aprender un nuevo idioma, no serás fluido enseguida."
 
 **¿Qué hacer si un estudiante termina antes?**
 
-  * Students can see all tutorials and try another Hour of Code activity at [<%= codeorg_url() %>/learn](http://<%= codeorg_url() %>/learn)
-  * Or, ask students who finish early to help classmates who are having trouble with the activity.
+  * Los estudiantes pueden ver todos los tutoriales e intentar otra actividad de la Hora de Programación en [<%= codeorg_url() %>/learn](http://<%= codeorg_url() %>/learn)
+  * O pide a los estudiantes que terminen primero que ayuden a los que tegan problemas con la actividad.
 
 **¿Cómo imprimo los certificados de mis estudiantes?**
 
-Cada estudiante tiene la oportunidad de obtener un certificado via correo electrónico, cuando terminan un [tutorial de Code.org](http://studio.code.org). Puedes hacer clic en el certificado para imprimirlo. However, if you want to make new certificates for your students, visit our [Certificates](http://<%= codeorg_url() %>/certificates) page to print as many certificates as you like, in one fell swoop!
+Cada estudiante tiene la oportunidad de obtener un certificado via correo electrónico, cuando terminan un [tutorial de Code.org](http://studio.code.org). Puedes hacer clic en el certificado para imprimirlo. Sin embargo, si quieres hacer certificados nuevos para tus estudiantes visita nuestra página [Certificados](http://<%= codeorg_url() %>/certificates) para imprimir todos los certificados que quieras, de una sola vez.
 
 **¿Qué viene después de la Hora de Programación?**
 
-La Hora de Programación es el primer paso en el camino para aprender mas acerca de como trabaja la tecnología y como crear aplicaciones de software. <% if @country == 'uk' %> La Hora de Programación es el primer paso del camino para aprender más acerca de como funciona la tecnología y como crear aplicaciones de software. Para continuar este camino [motive a sus chicos a aprender en línea](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %>
+La Hora de Programación es el primer paso en el camino para aprender mas acerca de como trabaja la tecnología y como crear aplicaciones de software. <% if @country == 'uk' %> La Hora de Programación es el primer paso del camino para aprender más acerca de como funciona la tecnología y como crear aplicaciones de software. Para continuar este camino [motive a sus chicos a aprender en línea](http://uk.code.org/learn/beyond). <% else %> Para continuar este camino, encuentra [aquí](http://<%= codeorg_url() %>/educate) recursos adicionales para educadores. O anima a tus hijos a aprender más [en línea](http://<%= codeorg_url() %>/learn/beyond). <% end %> <a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>

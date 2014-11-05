@@ -24,3 +24,5 @@ Dir.glob("../../pegasus/sites.v3/hourofcode.com/public/us/**/thanks.md").each do
                       twitter = {:url=>"http://hourofcode.com", :related=>"codeorg", :hashtags=>"", :text=>hoc_s(:twitter_default_text)}
                       twitter[:hashtags] = "HourOfCode" unless hoc_s(:twitter_default_text).include? "#HourOfCode" %>' + File.read(file))
 end
+
+#TODO: rename pt-BR and pt-PT to pt and po

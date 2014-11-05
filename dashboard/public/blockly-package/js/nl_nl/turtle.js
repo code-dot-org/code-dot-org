@@ -10173,6 +10173,7 @@ BlocklyApps.reset = function(ignore) {
 
   // Discard the interpreter.
   Turtle.interpreter = null;
+  Turtle.executionError = null;
 
   // Stop the looping sound.
   BlocklyApps.stopLoopingAudio('start');
@@ -10336,6 +10337,13 @@ Turtle.animate = function() {
                                 Turtle.cumulativeLength,
                                 Turtle.userCodeStartOffset,
                                 Turtle.userCodeLength);
+      try {
+        stepped = Turtle.interpreter.step();
+      }
+      catch(err) {
+        Turtle.executionError = err;
+        finishExecution();
+      }
       stepped = Turtle.interpreter.step();
 
       if (executeTuple()) {
@@ -10704,6 +10712,9 @@ Turtle.checkAnswer = function() {
   }
 
   if (level.editCode) {
+    if (Turtle.executionError) {
+      levelComplete = false;
+    }
     Turtle.testResults = levelComplete ?
       BlocklyApps.TestResults.ALL_PASS :
       BlocklyApps.TestResults.TOO_FEW_BLOCKS_FAIL;
@@ -11256,7 +11267,7 @@ exports.genericFeedback = function(d){return "Kijk waar je uitkwam, en probeer j
 var MessageFormat = require("messageformat");MessageFormat.locale.nl=function(n){return n===1?"one":"other"}
 exports.blocksUsed = function(d){return "Blokken gebruikt: %1"};
 
-exports.branches = function(d){return "branches"};
+exports.branches = function(d){return "afdeling"};
 
 exports.catColour = function(d){return "Kleur"};
 
@@ -11276,7 +11287,7 @@ exports.colourTooltip = function(d){return "Verandert de kleur van het potlood."
 
 exports.degrees = function(d){return "graden"};
 
-exports.depth = function(d){return "depth"};
+exports.depth = function(d){return "diepte"};
 
 exports.dots = function(d){return "pixels"};
 
@@ -11286,31 +11297,31 @@ exports.drawATriangle = function(d){return "teken een driehoek"};
 
 exports.drawACircle = function(d){return "teken een cirkel"};
 
-exports.drawAFlower = function(d){return "draw a flower"};
+exports.drawAFlower = function(d){return "teken een bloem"};
 
-exports.drawAHexagon = function(d){return "draw a hexagon"};
+exports.drawAHexagon = function(d){return "teken een zeshoek"};
 
 exports.drawAHouse = function(d){return "teken een huis"};
 
-exports.drawAPlanet = function(d){return "draw a planet"};
+exports.drawAPlanet = function(d){return "teken een planeet"};
 
-exports.drawARhombus = function(d){return "draw a rhombus"};
+exports.drawARhombus = function(d){return "teken een ruit"};
 
-exports.drawARobot = function(d){return "draw a robot"};
+exports.drawARobot = function(d){return "teken een robot"};
 
-exports.drawARocket = function(d){return "draw a rocket"};
+exports.drawARocket = function(d){return "teken een raket"};
 
-exports.drawASnowflake = function(d){return "draw a snowflake"};
+exports.drawASnowflake = function(d){return "teken een sneeuwvlok"};
 
 exports.drawASnowman = function(d){return "teken een sneeuwpop"};
 
-exports.drawAStar = function(d){return "draw a star"};
+exports.drawAStar = function(d){return "teken een ster"};
 
 exports.drawATree = function(d){return "teken een boom"};
 
-exports.drawUpperWave = function(d){return "draw upper wave"};
+exports.drawUpperWave = function(d){return "teken een bovengolf"};
 
-exports.drawLowerWave = function(d){return "draw lower wave"};
+exports.drawLowerWave = function(d){return "teken een benedengolf"};
 
 exports.heightParameter = function(d){return "hoogte"};
 
@@ -11332,7 +11343,7 @@ exports.jumpSouthTooltip = function(d){return "Beweegt de artiest zuid zonder ie
 
 exports.jumpWestTooltip = function(d){return "Beweegt de artiest west zonder iets achter te laten."};
 
-exports.lengthFeedback = function(d){return "You got it right except for the lengths to move."};
+exports.lengthFeedback = function(d){return "Het is goed behalve de bewegingslengtes."};
 
 exports.lengthParameter = function(d){return "lengte"};
 
@@ -11368,7 +11379,7 @@ exports.reinfFeedbackMsg = function(d){return "Ziet dit eruit als het gene wat j
 
 exports.setColour = function(d){return "kleur instellen"};
 
-exports.setPattern = function(d){return "set pattern"};
+exports.setPattern = function(d){return "stel patroon in"};
 
 exports.setWidth = function(d){return "dikte instellen"};
 
@@ -11378,7 +11389,7 @@ exports.showMe = function(d){return "Laat zien"};
 
 exports.showTurtle = function(d){return "laat kunstenaar zien"};
 
-exports.step = function(d){return "step"};
+exports.step = function(d){return "stap"};
 
 exports.tooFewColours = function(d){return "Je moet in ieder geval %1 verschillende kleuren gebruiken voor deze puzzel. Je hebt er %2 gebruikt."};
 

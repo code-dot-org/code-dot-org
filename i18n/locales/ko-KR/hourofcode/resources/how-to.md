@@ -4,7 +4,15 @@ title: Resources layout: wide
 
 * * *
 
-# 1시간짜리 Hour of Code 교육 방법
+<div class="row">
+  <h1 class="col-sm-6">
+    How to teach one Hour of Code
+  </h1>
+  
+  <div class="col-sm-6 button-container centered">
+    <a href="/#join"><button class="signup-button">Sign up your event</button></a>
+  </div>
+</div>
 
 ## 1) 다음 튜토리얼을 따라해 보세요:
 
@@ -71,4 +79,4 @@ Code.org는 나이에 상관없이 모든 학생들이 즐겁게 배울 수 있�
     
     **Hour of Code 이후에는 어떤 것들이 있나요?**
     
-    Hour of Code 는 어떻게 IT 기술이 활용되며, 소프트웨어 앱이 어떻게 만들어지는지 배울 수 있게 하는 긴 과정의 첫 번째 한 걸음일 뿐입니다. <% if @country == 'uk' %>Hour of Code 는 어떻게 IT 기술이 활용되며, 소프트웨어 앱이 어떻게 만들어지는지 배울 수 있게 하는 긴 과정의 첫 번째 한 걸음일 뿐입니다. 계속해서 더 나아가고 싶다면, [온라인으로 학습할 수 있도록 학생들을 응원해주세요.](http://uk.code.org/learn/beyond) <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %>
+    Hour of Code 는 어떻게 IT 기술이 활용되며, 소프트웨어 앱이 어떻게 만들어지는지 배울 수 있게 하는 긴 과정의 첫 번째 한 걸음일 뿐입니다. <% if @country == 'uk' %>Hour of Code 는 어떻게 IT 기술이 활용되며, 소프트웨어 앱이 어떻게 만들어지는지 배울 수 있게 하는 긴 과정의 첫 번째 한 걸음일 뿐입니다. 계속해서 더 나아가고 싶다면, [온라인으로 학습할 수 있도록 학생들을 응원해주세요.](http://uk.code.org/learn/beyond) <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %> <a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>

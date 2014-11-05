@@ -1481,7 +1481,7 @@ Blockly.Msg.LISTS_INLIST = "in der Liste";
 Blockly.Msg.LISTS_IS_EMPTY_HELPURL = "http://www.liv.ac.uk/HPC/HTMLF90Course/HTMLF90CourseNotesnode91.html";
 Blockly.Msg.LISTS_IS_EMPTY_TITLE = "%1 ist leer";
 Blockly.Msg.LISTS_LENGTH_HELPURL = "https://code.google.com/p/blockly/wiki/Lists#length_of";
-Blockly.Msg.LISTS_LENGTH_INPUT_LENGTH = "length of";
+Blockly.Msg.LISTS_LENGTH_INPUT_LENGTH = "Länge von";
 Blockly.Msg.LISTS_LENGTH_TITLE = "Länge %1";
 Blockly.Msg.LISTS_LENGTH_TOOLTIP = "Die Anzahl von Elementen in der Liste.";
 Blockly.Msg.LISTS_REPEAT_HELPURL = "http://publib.boulder.ibm.com/infocenter/lnxpcomp/v8v101/index.jsp?topic=%2Fcom.ibm.xlcpp8l.doc%2Flanguage%2Fref%2Farsubex.htm";

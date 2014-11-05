@@ -10173,6 +10173,7 @@ BlocklyApps.reset = function(ignore) {
 
   // Discard the interpreter.
   Turtle.interpreter = null;
+  Turtle.executionError = null;
 
   // Stop the looping sound.
   BlocklyApps.stopLoopingAudio('start');
@@ -10336,6 +10337,13 @@ Turtle.animate = function() {
                                 Turtle.cumulativeLength,
                                 Turtle.userCodeStartOffset,
                                 Turtle.userCodeLength);
+      try {
+        stepped = Turtle.interpreter.step();
+      }
+      catch(err) {
+        Turtle.executionError = err;
+        finishExecution();
+      }
       stepped = Turtle.interpreter.step();
 
       if (executeTuple()) {
@@ -10704,6 +10712,9 @@ Turtle.checkAnswer = function() {
   }
 
   if (level.editCode) {
+    if (Turtle.executionError) {
+      levelComplete = false;
+    }
     Turtle.testResults = levelComplete ?
       BlocklyApps.TestResults.ALL_PASS :
       BlocklyApps.TestResults.TOO_FEW_BLOCKS_FAIL;
@@ -11135,7 +11146,7 @@ exports.emptyBlocksErrorMsg = function(d){return "”Repeat”または\"If\"の
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "関数ブロックは、中に他のブロックがないと動きません。"};
 
-exports.extraTopBlocks = function(d){return "イベントブロックに付いていない余分なブロックがあります。"};
+exports.extraTopBlocks = function(d){return "ブロックを外しました。もしかして、「実行時」のブロックにつなげたかったですか？"};
 
 exports.finalStage = function(d){return "おめでとうございます ！最終ステージをクリアしました。"};
 
@@ -11167,7 +11178,7 @@ exports.nextLevelTrophies = function(d){return "おめでとうございます �
 
 exports.nextStage = function(d){return "おめでとうございます ！"+v(d,"stageName")+"を コンプリートしました。"};
 
-exports.nextStageTrophies = function(d){return "おめでとうございます！あなたはステージ "+v(d,"stageNumber")+" をクリアし、"+p(d,"numTrophies",0,"ja",{"one":"トロフィー","other":n(d,"numTrophies")+" トロフィー"})+"を獲得しました。"};
+exports.nextStageTrophies = function(d){return "おめでとうございます！ "+v(d,"stageName")+" をクリアして "+p(d,"numTrophies",0,"ja",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+" を手に入れました。"};
 
 exports.numBlocksNeeded = function(d){return "おめでとうございます ！あなたはパズル "+v(d,"puzzleNumber")+" を完了しました。 (もしくは "+p(d,"numBlocks",0,"ja",{"one":"1 block","other":n(d,"numBlocks")+" blocks"})+" のみの使用だけでも可能でした。)"};
 
@@ -11219,7 +11230,7 @@ exports.saveToGallery = function(d){return "ギャラリーに保存"};
 
 exports.savedToGallery = function(d){return "ギャラリーに保存しました！"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "プログラムをシェアできませんでした。"};
 
 exports.typeFuncs = function(d){return "利用可能な機能:%1"};
 
@@ -11254,7 +11265,7 @@ exports.genericFeedback = function(d){return "どうなったかよく見て、�
 
 },{"messageformat":54}],42:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.ja=function(n){return "other"}
-exports.blocksUsed = function(d){return "使用ブロック: %1"};
+exports.blocksUsed = function(d){return "使われているブロック: %1"};
 
 exports.branches = function(d){return "branches"};
 
@@ -11276,35 +11287,35 @@ exports.colourTooltip = function(d){return "鉛筆の色を変更"};
 
 exports.degrees = function(d){return "度"};
 
-exports.depth = function(d){return "depth"};
+exports.depth = function(d){return "深さ"};
 
 exports.dots = function(d){return "ピクセル"};
 
-exports.drawASquare = function(d){return "正方形を描画"};
+exports.drawASquare = function(d){return "正方形を描く"};
 
 exports.drawATriangle = function(d){return "三角形を描画"};
 
 exports.drawACircle = function(d){return "円を描く"};
 
-exports.drawAFlower = function(d){return "draw a flower"};
+exports.drawAFlower = function(d){return "花を描画"};
 
-exports.drawAHexagon = function(d){return "draw a hexagon"};
+exports.drawAHexagon = function(d){return "六角形を描画"};
 
 exports.drawAHouse = function(d){return "家を描画"};
 
-exports.drawAPlanet = function(d){return "draw a planet"};
+exports.drawAPlanet = function(d){return "惑星を描画"};
 
-exports.drawARhombus = function(d){return "draw a rhombus"};
+exports.drawARhombus = function(d){return "ひし形を描画"};
 
-exports.drawARobot = function(d){return "draw a robot"};
+exports.drawARobot = function(d){return "ロボットを描画"};
 
-exports.drawARocket = function(d){return "draw a rocket"};
+exports.drawARocket = function(d){return "ロケットを描画"};
 
-exports.drawASnowflake = function(d){return "draw a snowflake"};
+exports.drawASnowflake = function(d){return "雪の結晶を描画"};
 
 exports.drawASnowman = function(d){return "雪だるまを描画"};
 
-exports.drawAStar = function(d){return "draw a star"};
+exports.drawAStar = function(d){return "星形を描画"};
 
 exports.drawATree = function(d){return "木を描画"};
 
@@ -11318,39 +11329,39 @@ exports.hideTurtle = function(d){return "アーティストを隠す"};
 
 exports.jump = function(d){return "ジャンプ"};
 
-exports.jumpBackward = function(d){return "後方へジャンプ"};
+exports.jumpBackward = function(d){return "うしろへジャンプ"};
 
-exports.jumpForward = function(d){return "前方へジャンプ"};
+exports.jumpForward = function(d){return "まえにジャンプ"};
 
 exports.jumpTooltip = function(d){return "跡をつけずにアーティストを移動"};
 
-exports.jumpEastTooltip = function(d){return "Moves the artist east without leaving any marks."};
+exports.jumpEastTooltip = function(d){return "何も描かずに右に動かします。"};
 
-exports.jumpNorthTooltip = function(d){return "Moves the artist north without leaving any marks."};
+exports.jumpNorthTooltip = function(d){return "何も描かずに上に動かします。"};
 
-exports.jumpSouthTooltip = function(d){return "Moves the artist south without leaving any marks."};
+exports.jumpSouthTooltip = function(d){return "何も描かずに下に動かします。"};
 
-exports.jumpWestTooltip = function(d){return "Moves the artist west without leaving any marks."};
+exports.jumpWestTooltip = function(d){return "何も描かずに左に動かします。"};
 
-exports.lengthFeedback = function(d){return "You got it right except for the lengths to move."};
+exports.lengthFeedback = function(d){return "おしい！あとは動かすきょりだけ！"};
 
 exports.lengthParameter = function(d){return "長さ"};
 
 exports.loopVariable = function(d){return "カウンター"};
 
-exports.moveBackward = function(d){return "後進"};
+exports.moveBackward = function(d){return "うしろにうごく"};
 
-exports.moveEastTooltip = function(d){return "Moves the artist east."};
+exports.moveEastTooltip = function(d){return "右に動かします。"};
 
-exports.moveForward = function(d){return "前進"};
+exports.moveForward = function(d){return "まえにうごく"};
 
-exports.moveForwardTooltip = function(d){return "アーティストを前進"};
+exports.moveForwardTooltip = function(d){return "アーティストを前に動かします。"};
 
-exports.moveNorthTooltip = function(d){return "Moves the artist north."};
+exports.moveNorthTooltip = function(d){return "上に動かします。"};
 
-exports.moveSouthTooltip = function(d){return "Moves the artist south."};
+exports.moveSouthTooltip = function(d){return "下に動かします。"};
 
-exports.moveWestTooltip = function(d){return "Moves the artist west."};
+exports.moveWestTooltip = function(d){return "左に動かします。"};
 
 exports.moveTooltip = function(d){return "指定した量で、アーティストを前進または後進"};
 
@@ -11368,7 +11379,7 @@ exports.reinfFeedbackMsg = function(d){return "これは自分が描こうとし
 
 exports.setColour = function(d){return "色の設定"};
 
-exports.setPattern = function(d){return "set pattern"};
+exports.setPattern = function(d){return "パターンをセット"};
 
 exports.setWidth = function(d){return "幅を設定"};
 
@@ -11378,7 +11389,7 @@ exports.showMe = function(d){return "見せてください"};
 
 exports.showTurtle = function(d){return "アーティストを見せる。"};
 
-exports.step = function(d){return "step"};
+exports.step = function(d){return "ステップ"};
 
 exports.tooFewColours = function(d){return "このパズルには少なくとも %1 別の色を使います。 %2しか使っていません。"};
 

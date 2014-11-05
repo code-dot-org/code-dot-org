@@ -10173,6 +10173,7 @@ BlocklyApps.reset = function(ignore) {
 
   // Discard the interpreter.
   Turtle.interpreter = null;
+  Turtle.executionError = null;
 
   // Stop the looping sound.
   BlocklyApps.stopLoopingAudio('start');
@@ -10336,6 +10337,13 @@ Turtle.animate = function() {
                                 Turtle.cumulativeLength,
                                 Turtle.userCodeStartOffset,
                                 Turtle.userCodeLength);
+      try {
+        stepped = Turtle.interpreter.step();
+      }
+      catch(err) {
+        Turtle.executionError = err;
+        finishExecution();
+      }
       stepped = Turtle.interpreter.step();
 
       if (executeTuple()) {
@@ -10704,6 +10712,9 @@ Turtle.checkAnswer = function() {
   }
 
   if (level.editCode) {
+    if (Turtle.executionError) {
+      levelComplete = false;
+    }
     Turtle.testResults = levelComplete ?
       BlocklyApps.TestResults.ALL_PASS :
       BlocklyApps.TestResults.TOO_FEW_BLOCKS_FAIL;
@@ -11219,7 +11230,7 @@ exports.saveToGallery = function(d){return "In deiner Galerie abspeichern"};
 
 exports.savedToGallery = function(d){return "In deiner Gallerie gespeichert!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Leider können wir dieses Programm nicht teilen."};
 
 exports.typeFuncs = function(d){return "Verfügbare Funktionen:%1"};
 
@@ -11368,7 +11379,7 @@ exports.reinfFeedbackMsg = function(d){return "Sieht das so aus, wie du es möch
 
 exports.setColour = function(d){return "Farbe festlegen"};
 
-exports.setPattern = function(d){return "set pattern"};
+exports.setPattern = function(d){return "Muster einstellen"};
 
 exports.setWidth = function(d){return "Breite festlegen"};
 

@@ -10173,6 +10173,7 @@ BlocklyApps.reset = function(ignore) {
 
   // Discard the interpreter.
   Turtle.interpreter = null;
+  Turtle.executionError = null;
 
   // Stop the looping sound.
   BlocklyApps.stopLoopingAudio('start');
@@ -10336,6 +10337,13 @@ Turtle.animate = function() {
                                 Turtle.cumulativeLength,
                                 Turtle.userCodeStartOffset,
                                 Turtle.userCodeLength);
+      try {
+        stepped = Turtle.interpreter.step();
+      }
+      catch(err) {
+        Turtle.executionError = err;
+        finishExecution();
+      }
       stepped = Turtle.interpreter.step();
 
       if (executeTuple()) {
@@ -10704,6 +10712,9 @@ Turtle.checkAnswer = function() {
   }
 
   if (level.editCode) {
+    if (Turtle.executionError) {
+      levelComplete = false;
+    }
     Turtle.testResults = levelComplete ?
       BlocklyApps.TestResults.ALL_PASS :
       BlocklyApps.TestResults.TOO_FEW_BLOCKS_FAIL;
@@ -11368,7 +11379,7 @@ exports.reinfFeedbackMsg = function(d){return "Lítur þetta út eins og þú vi
 
 exports.setColour = function(d){return "stilla lit"};
 
-exports.setPattern = function(d){return "set pattern"};
+exports.setPattern = function(d){return "stilla mynstur"};
 
 exports.setWidth = function(d){return "stilla breidd"};
 

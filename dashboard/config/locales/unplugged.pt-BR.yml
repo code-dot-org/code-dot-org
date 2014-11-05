@@ -222,9 +222,9 @@
         video: C3_internet
       Crowdsourcing:
         title: Crowdsourcing
-        desc: O aluno usa o crowdsourcing, uma técnica de resolução de problemas comum
-          em ciência da computação, para realizar uma tarefa em conjunto, com a turma
-          toda, obtendo um resultado mais eficiente do que quando feito sozinho.
+        desc: Os alunos usam o crowdsourcing, uma técnica comum de resolução de problemas
+          em ciência da computação, para concluir uma tarefa juntos, em sala de aula,
+          de maneira mais eficiente do que se um aluno tentasse resolver sozinho.
         video: C3_crowdsourcing
       DigitalCitizenship:
         title: Cidadania digital

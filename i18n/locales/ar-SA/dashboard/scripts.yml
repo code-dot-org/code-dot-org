@@ -24,7 +24,7 @@ ar:
           Multi & Match: التعدد والتوصيل
           K-1 Flappy: لعبة الطائر الوثاب لصف K-1
           Flappy non blockly: لعبة الطائر الوثاب الغير تركيبية
-          title: 'Course 1 - For early readers'
+          title: Course 1
           Artist 2: الفنان 2
           Happy Maps: الخرائط السعيدة
           Move it, Move it: حركها ! حركها
@@ -40,7 +40,7 @@ ar:
           "Maze: Loops": 'المتاهة : الحلقات'
           "Bee: Loops": 'النحلة : الحلقات'
           "Studio: Create a Story": 'مختبر اللعب: إنشاء قصة'
-          description_short: الدورة 1 مصممة للقراء الصغار في الصفوف الدنيا من المرحلة الابتدائية .
+          description_short: Course 1 is designed for early readers. Recommended for grades K-1.
           "Artist: Loops": 'الرسام : الحلقات'
         course2:
           The Maze: المتاهة
@@ -76,7 +76,7 @@ ar:
           "Bee: Debugging": 'النحلة: تصحيح الأخطاء'
           "Artist: Debugging": 'الرسام : تصحيح الأخطاء'
           "Bee: Conditionals": 'النحلة: الجمل الشرطية'
-          description_short: الدورة 2 مصممة للطلاب الذين يستطيعون القراءة في الصفوف الابتدائية , الدنيا والمتوسطة.
+          description_short: 'Course 2 is designed for students who can read.  Recommended for grades 2-5.'
           "Artist: Sequence2": 'الرسام : التسلسل 2'
           "Maze: Sequence2": 'المتاهة : التسلسل 2'
           "Artist: Nested Loops": 'الرسام : الحلقات المتداخلة'
@@ -117,7 +117,7 @@ ar:
           "Farmer: While Loops": 'المزارع : حلقات بينما'
           "Bee: Nested Loops": 'النحلة : الحلقات المتداخلة'
           "Bee: Debugging": 'النحلة: تصحيح الأخطاء'
-          description_short: الطلاب الذين يأخذون الدورة 3 يجب أن يكونوا قد أنهوا الدورة 2 .
+          description_short: 'Course 3 is a follow-up to Course 2.  Recommended for grades 4-5.'
           Maze2: المتاهة 2
           Artist2: الرسام 2
           "Artist: Functions2": 'الرسام : المهام 2'
@@ -147,3 +147,18 @@ ar:
           description: ارسم صور رائعة و صمم مع الرسام !
           Artist: الرسام
           description_short: ارسم صور رائعة و صمم مع الرسام !
+        course4:
+          description_short: Students taking Course 4 should have already taken Courses 2 and 3.
+          description: Course 4 is designed for students who have taken Course 2 and 3. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8.
+          "Artist: Variables": 'Artist: Variables'
+          "Bee: For Loops": 'Bee: For Loops'
+          title: Course 4
+          "Algorithms: Tangrams": 'Algorithms: Tangrams'
+          Variables: المتغيرات
+          "Play Lab: Variables": 'Play Lab: Variables'
+          "Play Lab: Functions with Parameters": 'Play Lab: Functions with Parameters'
+          "Bee: Functions with Parameters": 'Bee: Functions with Parameters'
+          "Artist: For Loops": 'Artist: For Loops'
+          "Play Lab: For Loops": 'Play Lab: For Loops'
+          "Artist: Functions": 'الرسام : المهام'
+          "Artist: Functions with Paraqmeters": 'Artist: Functions with Paraqmeters'

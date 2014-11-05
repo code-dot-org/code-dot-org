@@ -11,29 +11,6 @@ en-US:
   header_menu_faq: crwdns19412:0crwdne19412:0
   header_menu_prizes: crwdns19413:0crwdne19413:0
   header_menu_uk_code_org: crwdns19414:0crwdne19414:0
-  choose_country_header: crwdns19415:0crwdne19415:0
-  country_al: crwdns21281:0crwdne21281:0
-  country_ar: crwdns19416:0crwdne19416:0
-  country_au: crwdns19417:0crwdne19417:0
-  country_br: crwdns19418:0crwdne19418:0
-  country_bg: crwdns20668:0crwdne20668:0
-  country_de: crwdns20669:0crwdne20669:0
-  country_es: crwdns20670:0crwdne20670:0
-  country_eu: crwdns19419:0crwdne19419:0
-  country_gr: crwdns20671:0crwdne20671:0
-  country_hr: crwdns20672:0crwdne20672:0
-  country_id: crwdns20673:0crwdne20673:0
-  country_it: crwdns19420:0crwdne19420:0
-  country_jp: crwdns20674:0crwdne20674:0
-  country_me: crwdns20675:0crwdne20675:0
-  country_my: crwdns21282:0crwdne21282:0
-  country_nz: crwdns19421:0crwdne19421:0
-  country_ro: crwdns19422:0crwdne19422:0
-  country_ru: crwdns20676:0crwdne20676:0
-  country_ua: crwdns20677:0crwdne20677:0
-  country_uk: crwdns19423:0crwdne19423:0
-  country_us: crwdns19424:0crwdne19424:0
-  country_vn: crwdns20678:0crwdne20678:0
   company_4-H: crwdns21283:0crwdne21283:0
   company_bgca: crwdns21284:0crwdne21284:0
   company_cgcs: crwdns21285:0crwdne21285:0
@@ -178,6 +155,17 @@ en-US:
   resources_emails: crwdns20688:0crwdne20688:0
   resources_stats: crwdns20689:0crwdne20689:0
   resources_press_kit: crwdns20690:0crwdne20690:0
+  events_title: crwdns22049:0crwdne22049:0
+  events_nav_all: crwdns22050:0crwdne22050:0
+  events_nav_classrooms: crwdns22051:0crwdne22051:0
+  events_nav_whole_schools: crwdns22052:0crwdne22052:0
+  events_nav_special: crwdns22053:0crwdne22053:0
+  events_all_title: crwdns22054:0crwdne22054:0
+  events_classroom_title: crwdns22055:0crwdne22055:0
+  events_whole_school_title: crwdns22056:0crwdne22056:0
+  events_special_title: crwdns22057:0crwdne22057:0
+  event: crwdns22058:0crwdne22058:0
+  events: crwdns22059:0crwdne22059:0
   footer_copyright_message: crwdns19551:0crwdne19551:0
   footer_trademark_message: crwdns19552:0crwdne19552:0
   footer_menu_partners: crwdns20069:0crwdne20069:0

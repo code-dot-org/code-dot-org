@@ -67,6 +67,10 @@ class ScriptLevel < ActiveRecord::Base
     end
   end
 
+  def stage_or_game
+    stage ? stage : level.game
+  end
+
   def stage_or_game_position
     self.stage ? self.position : self.game_chapter
   end

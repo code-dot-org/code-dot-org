@@ -539,9 +539,9 @@
         maze_wordsearch_k_16: Færðu mig í eina átt svo aðra til að stafa orðið BELOW
         maze_wordsearch_k_20: "Þetta er próf! Færðu mig í eina átt svo aðra til að
           stafa orðið STORY"
-        webapp_ec_simple: Create your web app by using createHtmlBlock.
-        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
-          it in the new "penColour" block.'
+        webapp_ec_simple: Búa til vefapp með því að nota createHtmlBlock.
+        turtle_ec_1_2: 'Teiknaðu nú ferning. ATHUGAÐU: notaðu uppáhaldslitinn þinn
+          með því að velja hann í nýja kubbnum "pennalitur".'
     video:
       name:
         maze_intro: Kynning á Völundarhúsi

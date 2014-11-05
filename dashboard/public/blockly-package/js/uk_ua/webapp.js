@@ -7291,7 +7291,13 @@ Webapp.onTick = function() {
                                              Webapp.cumulativeLength,
                                              Webapp.userCodeStartOffset,
                                              Webapp.userCodeLength);
-      Webapp.interpreter.step();
+      try {
+        Webapp.interpreter.step();
+      }
+      catch(err) {
+        Webapp.executionError = err;
+        Webapp.onPuzzleComplete();
+      }
     }
   } else {
     if (Webapp.tickCount === 1) {
@@ -7465,6 +7471,7 @@ BlocklyApps.reset = function(first) {
   // Reset the Globals object used to contain program variables:
   Webapp.Globals = {};
   Webapp.eventQueue = [];
+  Webapp.executionError = null;
   Webapp.interpreter = null;
 };
 
@@ -7653,7 +7660,9 @@ Webapp.feedbackImage = '';
 Webapp.encodedFeedbackImage = '';
 
 Webapp.onPuzzleComplete = function() {
-  if (level.freePlay) {
+  if (Webapp.executionError) {
+    Webapp.result = BlocklyApps.ResultType.ERROR;
+  } else if (level.freePlay) {
     Webapp.result = BlocklyApps.ResultType.SUCCESS;
   }
 
@@ -8105,7 +8114,7 @@ exports.no = function(d){return "Ні"};
 
 exports.numBlocksNeeded = function(d){return "Це завдання можна розв'язати за допомогою %1 блоків."};
 
-exports.pause = function(d){return "Pause"};
+exports.pause = function(d){return "Пауза"};
 
 exports.reinfFeedbackMsg = function(d){return "Можна натиснути кнопку \"Повторити спробу\", щоб повернутися до запуску застосунку."};
 

@@ -118,6 +118,8 @@
   "setBackgroundTennis":"setează terenul de tenis ca fundal",
   "setBackgroundWinter":"setează peisaj de iarnă ca fundal",
   "setBackgroundTooltip":"Setează imaginea de fundal",
+  "setEnemySpeed":"set enemy speed",
+  "setPlayerSpeed":"set player speed",
   "setScoreText":"Setează scor",
   "setScoreTextTooltip":"Setează textul ca să fie afișat în zona scorului.",
   "setSpriteEmotionAngry":"la o stare de spirit furioasă",
