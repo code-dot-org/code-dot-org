@@ -43,19 +43,17 @@ exports.install = function(blockly, blockInstallOptions) {
     return generator.variableDB_.getDistinctName(name, NAME_TYPE);
   };
 
-  // todo (brent) - rationalize what's in functionalBlocks vs. here and if we
-  // can share code between calc and evals functionalBlocks
   sharedFunctionalBlocks.install(blockly, generator, gensym);
 
   installString(blockly, generator, gensym);
 
   installFunctionalBlock(blockly, generator, gensym, {
-    blockName: 'functional_draw',
-    blockTitle: msg.drawBlockTitle(),
-    apiName: 'draw',
+    blockName: 'functional_display',
+    blockTitle: msg.displayBlockTitle(),
+    apiName: 'display',
     returnType: 'none',
     args: [
-      { name: 'ARG1', type: 'image' },
+      { name: 'ARG1', type: 'none' },
     ]
   });
 

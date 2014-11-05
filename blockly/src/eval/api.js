@@ -10,8 +10,14 @@ var EvalStar = require('./evalStar');
 
 // todo (brent) - make use of blockId?
 
-exports.draw = function (object) {
-  Eval.drawnObject = object;
+exports.display = function (object) {
+  if (object === undefined) {
+    object = new EvalString("");
+  }
+  if (!object.draw) {
+    object = new EvalString(object.toString());
+  }
+  Eval.displayedObject = object;
 };
 
 exports.string = function (str, blockId) {

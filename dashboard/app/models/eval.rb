@@ -52,7 +52,8 @@ class Eval < Blockly
       <block type="rotate"></block>
       <block type="scale"></block>
       <block type="functional_text"></block>
-
+      <block type="string_append"></block>
+      <block type="string_length"></block>
     XML
   end
 
