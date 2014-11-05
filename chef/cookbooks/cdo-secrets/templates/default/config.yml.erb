@@ -1,1 +1,6 @@
-<%= YAML::dump node['cdo-secrets']['config'].to_hash %>
+<%=
+  secrets = node['cdo-secrets']['config'].to_hash
+  secrets['hosts'][node['hostname']] ||= {}
+  secrets['hosts'][node['hostname']]['env'] = node.chef_environment
+  YAML::dump secrets
+%>
