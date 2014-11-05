@@ -24,7 +24,7 @@
     function init() {
       Blockly.inject(document.getElementById('svgDiv'),
           {path: '../../', rtl: true, toolbox: document.getElementById('toolbox')});
-      Blockly.Xml.domToWorkspace(Blockly.mainWorkspace,
+      Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace,
           document.getElementById('startBlocks'));
       //window.onbeforeunload = function() {
       //  return 'Leaving this page will result in the loss of your work.';

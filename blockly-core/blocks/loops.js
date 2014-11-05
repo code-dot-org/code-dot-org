@@ -197,7 +197,7 @@ Blockly.Blocks.controls_flow_statements = {
     });
   },
   onchange: function() {
-    if (!this.workspace) {
+    if (!this.blockSpace) {
       // Block has been deleted.
       return;
     }
