@@ -174,7 +174,7 @@ function evalCode (code) {
  */
 function getDrawableFromBlocks(blockXml) {
   if (blockXml) {
-    if (Blockly.mainWorkspace.getTopBlocks().length !== 0) {
+    if (Blockly.mainBlockSpace.getTopBlocks().length !== 0) {
       throw new Error("getDrawableFromBlocks shouldn't be called with blocks if " +
         "we already have blocks in the workspace");
     }
@@ -182,14 +182,14 @@ function getDrawableFromBlocks(blockXml) {
     BlocklyApps.loadBlocks(blockXml);
   }
 
-  var code = Blockly.Generator.workspaceToCode('JavaScript', 'functional_display');
+  var code = Blockly.Generator.blockSpaceToCode('JavaScript', 'functional_display');
   evalCode(code);
   var object = Eval.displayedObject;
   Eval.displayedObject = null;
 
   if (blockXml) {
     // Remove the blocks
-    Blockly.mainWorkspace.getTopBlocks().forEach(function (b) { b.dispose(); });
+    Blockly.mainBlockSpace.getTopBlocks().forEach(function (b) { b.dispose(); });
   }
 
   return object;
