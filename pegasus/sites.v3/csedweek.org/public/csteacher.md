@@ -6,15 +6,14 @@ title: 'Participation Kit - for Computer Science Teachers'
 In addition to the Hour of Code, here are some things you can do to celebrate CSEdWeek.
 NOTE: Please celebrate CS Education throughout the year, with highlighted activities whenever it’s convenient for you, your students, your school.
 
-See what others are doing to celebrate CSEdWeek 2014 below. Browse the listings or search using different criteria on the right. Or view our map to see events across the country and in your area. And please submit your own event to add to the calendar.
+# What are you doing for CSEdWeek?
+<br />
+[<button>Tell us</button>](http://csedweek.cs10kcommunity.org/submission)    [<button>Map of events</button>](https://mapsengine.google.com/16135125564646265347-05414812628978701557-4/mapview/?authuser=0)    [<button>Calendar of events</button>](http://csedweek.cs10kcommunity.org)
+<br />
+<br />
 
-[<button>View the map of events</button>](https://mapsengine.google.com/16135125564646265347-05414812628978701557-4/mapview/?authuser=0)<br />
-
-[<button>Submit an event</button>](http://csedweek.cs10kcommunity.org/submission)<br />
-
-[<button>See a calendar of events</button>](http://csedweek.cs10kcommunity.org)<br />
-
-## How can you promote computer science during CS Ed Week 2014?
+# How can you promote computer science during CS Ed Week 2014?
+<br />
 
 ## 1) Host an event
 
@@ -24,6 +23,7 @@ See what others are doing to celebrate CSEdWeek 2014 below. Browse the listings 
 | [Awards Ceremony](#awards) | [Presentations](#present) |
 |[Hands on](#hands) | [Gaming](#gaming) |
 
+<br />
 ## 2) Engage your students 
 
 | Sample Activities ||
@@ -31,6 +31,7 @@ See what others are doing to celebrate CSEdWeek 2014 below. Browse the listings 
 | [Grades K-2](#activities) | [Grades 3-5](#activities)
 | [Middle School](#activities) | [High School](#activities) |
 
+<br />
 ## 3) Involve others
 - Any group can host a CSEdWeek event, whether it is a church, boy scouts, local university, library, YMCA, veterans association, or labor union. If you have connections to any such organizations, reach out to them, send them a [participation guide](http://hourofcode.com/us/resources#handouts), and encourage them to visit <http://csedweek.org> and participate.
 - Make sure to see NCWIT's [10 ways to recruit girls to CS](https://www.ncwit.org/resources/top-10-ways-recruiting-high-school-women-your-computing-classes/top-10-ways-recruiting) for ideas on activities to grow participation by women.
@@ -38,6 +39,7 @@ See what others are doing to celebrate CSEdWeek 2014 below. Browse the listings 
 - Bring other teachers and administrators into the conversation by asking them to host a discussion on how computer science impacts their discipline
 - Meet with your middle school to show the course offerings and importance of CS education to them. Start with [one of these videos](http://hourofcode.com/us/resources#videos).
 
+<br />
 ## 4) Garner Support 
 - Pitch CS education to your local school board, superintendent, or principal. Start with [these PowerPoint slides](/files/CS-pitch-basic-stats.pptx), [this video](http://www.youtube.com/watch?v=MwLXrN0Yguk&feature=c4-overview-vl&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q), or [these talking points](http://www.ncwit.org/resources/moving-beyond-computer-literacy-why-schools-should-teach-computer-science)
 - Ask your local Congressman to support the Computer Science Education Act
@@ -47,6 +49,7 @@ See what others are doing to celebrate CSEdWeek 2014 below. Browse the listings 
 
 [Back to top](/csteacher)
 
+<br />
 # Sample Events
 <a id="compete"></a>
 ## Competition
@@ -98,6 +101,7 @@ Have students demonstrate the work that they have been doing
 
 [Back to top](/csteacher)
 
+<br />
 <a id="activities"></a>
 # Sample Activities
 ## Grades K-2
