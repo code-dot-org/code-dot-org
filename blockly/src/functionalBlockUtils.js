@@ -119,11 +119,10 @@ module.exports.installStringPicker = function(blockly, generator, options) {
           .appendTitle(new Blockly.FieldLabel('"'))
           .setAlign(Blockly.ALIGN_CENTRE);
       this.setFunctionalOutput(true, 'string');
-
     }
   };
 
   generator[blockName] = function() {
-    return "(" + blockly.JavaScript.quote_(this.getTitleValue('VAL')) + ")";
+    return blockly.JavaScript.quote_(this.getTitleValue('VAL'));
   };
-}
+};
