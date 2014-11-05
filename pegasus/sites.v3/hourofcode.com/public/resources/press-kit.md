@@ -1,8 +1,10 @@
 ---
 title: Resources
 layout: wide
+nav: resources_nav
 ---
-## Useful stats on computer science
+<a href="/#join"><button style="float: right; margin-top: 50px">Sign up your event</button></a>
+## How to attract media to your Hour of Code event
 
 *For all press and media inquiries, contact [press@code.org](mailto:press@code.org)*
 
@@ -55,5 +57,7 @@ Code.org® is a 501c3 public non-profit dedicated to expanding participation in 
 
 <br />
 Find more resources and sample emails <a href="<%= hoc_uri('/resources') %>">here</a>.
+
+<a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>
 
 

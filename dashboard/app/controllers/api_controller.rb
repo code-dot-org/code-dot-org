@@ -19,6 +19,9 @@ class ApiController < ApplicationController
     @all_concepts = Concept.cached
 
     @all_games = Game.where(['id in (select game_id from levels l inner join script_levels sl on sl.level_id = l.id where sl.script_id = ?)', @script.id])
+
+    student_ids = @section.students.pluck(:id)
+    @recent_activities = Activity.recent(30).where("user_id in (?)", student_ids)
   end
 
   def student_progress

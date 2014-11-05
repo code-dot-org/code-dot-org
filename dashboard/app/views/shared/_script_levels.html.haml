@@ -1,8 +1,0 @@
-- if script
-  - script_levels = user ? user.levels_from_script(script) : script.script_levels
-
-  %div
-    - script_levels.each do |sl|
-      - link = build_script_level_path(sl)
-      - best_result = sl.user_level ? sl.user_level.best_result : nil
-      = link_to ' ', link, class: "#{"level_current " if sl.level_id == level.try(:id)}level_box #{level_box_class(best_result)}"

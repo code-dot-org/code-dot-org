@@ -13,8 +13,7 @@
     "start_direction": "1",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,3,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,1,0,0],[0,0,0,2,1,1,0,0],[0,0,0,0,0,4,0,0]]",
     "ideal": "5",
-    "video_key": "C3_maze_conditionals",
-    "maze_data": null
+    "video_key": "C3_maze_conditionals"
   }
 }]]></config>
   <blocks>
