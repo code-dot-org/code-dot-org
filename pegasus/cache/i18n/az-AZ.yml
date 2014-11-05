@@ -1,5 +1,6 @@
 "az-AZ":
   hello: Salam, dünya
+  select_language: Please select your language
   computer_science: "İnformatika"
   computer_science_edweek: "İnformatika təhsili həftəsi"
   csedweek_dates: 9-15 dekabr 2013-cü il

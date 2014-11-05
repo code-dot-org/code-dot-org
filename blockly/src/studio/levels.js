@@ -1043,7 +1043,14 @@ levels.full_sandbox =  {
                           </value> \
                         </block>') +
        createCategory(msg.catVariables(), '', 'VARIABLE') +
-       createCategory(msg.catProcedures(), '', 'PROCEDURE')),
+       createCategory(msg.catProcedures(), '', 'PROCEDURE') +
+       createCategory('Functional',
+                     blockOfType('functional_setBackground') +
+                     blockOfType('functional_setPlayerSpeed') +
+                     blockOfType('functional_setEnemySpeed') +
+                     blockOfType('functional_showTitleScreen') +
+                     blockOfType('functional_string') +
+                     blockOfType('functional_math_number'))),
   'startBlocks':
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };

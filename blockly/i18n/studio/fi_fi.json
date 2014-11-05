@@ -118,6 +118,8 @@
   "setBackgroundTennis": "aseta tennistausta",
   "setBackgroundWinter": "aseta talvitausta",
   "setBackgroundTooltip": "Aseta taustakuva",
+  "setEnemySpeed": "set enemy speed",
+  "setPlayerSpeed": "set player speed",
   "setScoreText": "aseta pisteet",
   "setScoreTextTooltip": "Asettaa tekstin näytettäväksi pistealueella.",
   "setSpriteEmotionAngry": "vihaiseen mielialaan",

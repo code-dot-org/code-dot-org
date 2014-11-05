@@ -1,5 +1,6 @@
 "zh-CN":
   hello: "世界你好"
+  select_language: Please select your language
   computer_science: "计算机科学"
   computer_science_edweek: "计算机科学教育周"
   csedweek_dates: 2013年12月9日 -- 15日

@@ -118,6 +118,8 @@
   "setBackgroundTennis": "Tenis arka planını ayarla",
   "setBackgroundWinter": "Kış arka planını ayarla",
   "setBackgroundTooltip": "arkaplanda resmini ayarla",
+  "setEnemySpeed": "set enemy speed",
+  "setPlayerSpeed": "set player speed",
   "setScoreText": "skor ayarla",
   "setScoreTextTooltip": "Skor alanında görüntülenecek metni ayarlar.",
   "setSpriteEmotionAngry": "sinirli hal için",

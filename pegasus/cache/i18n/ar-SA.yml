@@ -1,5 +1,6 @@
 "ar-SA":
   hello: "مرحباً بالعالم"
+  select_language: Please select your language
   computer_science: "علوم الكمبيوتر"
   computer_science_edweek: "الاسبوع التعليمي لعلوم الكمبيوتر"
   csedweek_dates: 9-15 كانون الأول/ديسمبر، عام 2013

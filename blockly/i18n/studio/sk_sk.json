@@ -118,6 +118,8 @@
   "setBackgroundTennis": "nastaviť tenis ako pozadie",
   "setBackgroundWinter": "nastaviť zimu ako pozadie",
   "setBackgroundTooltip": "Nastaví obrázok pozadia",
+  "setEnemySpeed": "set enemy speed",
+  "setPlayerSpeed": "set player speed",
   "setScoreText": "nastaviť skóre",
   "setScoreTextTooltip": "Nastaviť text, ktorý sa zobrazí v oblasti počtu bodov.",
   "setSpriteEmotionAngry": "prejdi k nahnevanej nálade",
