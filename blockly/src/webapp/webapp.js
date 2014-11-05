@@ -259,7 +259,6 @@ BlocklyApps.reset = function(first) {
 
   // Reset configurable variables
   var divWebapp = document.getElementById('divWebapp');
-  divWebapp.style.backgroundColor = 'white';
 
   while (divWebapp.firstChild) {
     divWebapp.removeChild(divWebapp.firstChild);
@@ -567,29 +566,19 @@ Webapp.callCmd = function (cmd) {
       }
       return Studio.wait(cmd.opts);
     */
-    case 'turnBlack':
-      BlocklyApps.highlight(cmd.id);
-      retVal = Webapp.turnBlack(cmd.opts);
-      break;
     case 'createHtmlBlock':
-      BlocklyApps.highlight(cmd.id);
-      retVal = Webapp.createHtmlBlock(cmd.opts);
-      break;
+    case 'replaceHtmlBlock':
+    case 'deleteHtmlBlock':
+    case 'createButton':
+    case 'createTextInput':
+    case 'getText':
+    case 'setStyle':
     case 'attachEventHandler':
       BlocklyApps.highlight(cmd.id);
-      retVal = Webapp.attachEventHandler(cmd.opts);
+      retVal = Webapp[cmd.name](cmd.opts);
       break;
   }
   return retVal;
-};
-
-Webapp.turnBlack = function (opts) {
-  var divWebapp = document.getElementById('divWebapp');
-
-  // sample
-  divWebapp.style.backgroundColor = 'black';
-
-  return true;
 };
 
 Webapp.createHtmlBlock = function (opts) {
@@ -599,9 +588,69 @@ Webapp.createHtmlBlock = function (opts) {
   newDiv.id = opts.elementId;
   newDiv.innerHTML = opts.html;
 
-  divWebapp.appendChild(newDiv);
+  return Boolean(divWebapp.appendChild(newDiv));
+};
 
-  return newDiv;
+Webapp.createButton = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+
+  var newButton = document.createElement("button");
+  var textNode = document.createTextNode(opts.text);
+  newButton.id = opts.elementId;
+
+  return Boolean(newButton.appendChild(textNode) &&
+                 divWebapp.appendChild(newButton));
+};
+
+Webapp.createTextInput = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+
+  var newInput = document.createElement("input");
+  newInput.value = opts.text;
+  newInput.id = opts.elementId;
+
+  return Boolean(divWebapp.appendChild(newInput));
+};
+
+Webapp.getText = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var div = document.getElementById(opts.elementId);
+  if (divWebapp.contains(div)) {
+    return String(div.value);
+  }
+  return false;
+};
+
+Webapp.replaceHtmlBlock = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var oldDiv = document.getElementById(opts.elementId);
+  if (divWebapp.contains(oldDiv)) {
+    var newDiv = document.createElement("div");
+    newDiv.id = opts.elementId;
+    newDiv.innerHTML = opts.html;
+
+    return Boolean(divWebapp.replaceChild(newDiv, oldDiv));
+  }
+  return false;
+};
+
+Webapp.deleteHtmlBlock = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var div = document.getElementById(opts.elementId);
+  if (divWebapp.contains(div)) {
+    return Boolean(divWebapp.removeChild(div));
+  }
+  return false;
+};
+
+Webapp.setStyle = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var div = document.getElementById(opts.elementId);
+  if (divWebapp.contains(div)) {
+    div.style.cssText = opts.style;
+    return true;
+  }
+  return false;
 };
 
 Webapp.onEventFired = function (opts, e) {
@@ -609,12 +658,16 @@ Webapp.onEventFired = function (opts, e) {
 };
 
 Webapp.attachEventHandler = function (opts) {
-  // For now, we're not tracking how many of these we add and we don't allow
-  // the user to detach the handler. We detach all listeners by cloning the
-  // divWebapp DOM node inside of reset()
-  document.getElementById(opts.elementId).addEventListener(
-      opts.eventName,
-      Webapp.onEventFired.bind(this, opts));
+  var divWebapp = document.getElementById('divWebapp');
+  var divElement = document.getElementById(opts.elementId);
+  if (divWebapp.contains(divElement)) {
+    // For now, we're not tracking how many of these we add and we don't allow
+    // the user to detach the handler. We detach all listeners by cloning the
+    // divWebapp DOM node inside of reset()
+    divElement.addEventListener(
+        opts.eventName,
+        Webapp.onEventFired.bind(this, opts));
+  }
 };
 
 /*
