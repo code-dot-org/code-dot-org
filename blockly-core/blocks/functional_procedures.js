@@ -43,7 +43,7 @@ Blockly.Blocks.functional_definition = {
     this.appendDummyInput()
         .appendTitle('Define' /**TODO(bjordan): i18n*/)
         .appendTitle(name, 'NAME')
-        .appendTitle('', 'PARAMS');
+        .appendTitle(new Blockly.FieldTextInput('temp fn name', Blockly.Procedures.rename), 'NAME')
     this.appendFunctionalInput('INPUT');
     this.setFunctional(true);
     this.setTooltip('Define a functional method' /**TODO(bjordan): i18n*/);
