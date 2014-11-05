@@ -13,8 +13,7 @@
     "is_k1": "true",
     "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/06_V2.gif",
     "skip_instructions_popup": "true",
-    "ideal": "3",
-    "maze_data": null
+    "ideal": "3"
   }
 }]]></config>
   <blocks>

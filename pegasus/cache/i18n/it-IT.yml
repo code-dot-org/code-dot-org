@@ -1,5 +1,6 @@
 "it-IT":
   hello: Ciao a tutti
+  select_language: Please select your language
   computer_science: Informatica
   computer_science_edweek: Settimana di Educazione all'Informatica
   csedweek_dates: 9-15 dicembre 2013

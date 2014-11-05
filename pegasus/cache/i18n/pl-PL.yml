@@ -1,5 +1,6 @@
 "pl-PL":
   hello: Witaj świecie
+  select_language: Please select your language
   computer_science: Informatyka
   computer_science_edweek: Tydzień Edukacji Informatycznej
   csedweek_dates: 9-15 Grudnia 2013

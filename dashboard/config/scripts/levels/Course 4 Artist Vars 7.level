@@ -1,0 +1,156 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2014-10-16T22:39:56.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "artist",
+    "instructions": "Can you modify the sides variable to help me draw this hexagon?",
+    "x": "125",
+    "y": "325",
+    "start_direction": "90",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "ideal": "10",
+    "slider_speed": ".5",
+    "disable_param_editing": "true",
+    "free_play": "false"
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="variables_set" inline="false" editable="false">
+              <title name="VAR">sides</title>
+              <value name="VALUE">
+                <block type="math_number">
+                  <title name="NUM">4</title>
+                </block>
+              </value>
+              <next>
+                <block type="controls_repeat_ext" inline="true">
+                  <value name="TIMES">
+                    <block type="variables_get" editable="false">
+                      <title name="VAR">sides</title>
+                    </block>
+                  </value>
+                  <statement name="DO">
+                    <block type="draw_move_by_constant">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">150</title>
+                      <next>
+                        <block type="draw_turn" inline="true">
+                          <title name="DIR">turnLeft</title>
+                          <value name="VALUE">
+                            <block type="math_arithmetic" inline="true">
+                              <title name="OP">DIVIDE</title>
+                              <value name="A">
+                                <block type="math_number">
+                                  <title name="NUM">360</title>
+                                </block>
+                              </value>
+                              <value name="B">
+                                <block type="variables_get" editable="false">
+                                  <title name="VAR">sides</title>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml/>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="math_number">
+          <title name="NUM">6</title>
+        </block>
+        <block type="pick_one">
+          <statement name="PICK">
+            <block type="draw_turn" inline="true">
+              <title name="DIR">turnLeft</title>
+              <value name="VALUE">
+                <block type="math_arithmetic" inline="true">
+                  <title name="OP">DIVIDE</title>
+                  <value name="A">
+                    <block type="math_number">
+                      <title name="NUM">360</title>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="variables_get">
+                      <title name="VAR">sides</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="draw_turn" inline="true">
+                  <title name="DIR">turnRight</title>
+                  <value name="VALUE">
+                    <block type="math_arithmetic" inline="true">
+                      <title name="OP">DIVIDE</title>
+                      <value name="A">
+                        <block type="math_number">
+                          <title name="NUM">360</title>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="variables_get">
+                          <title name="VAR">sides</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+            <block type="variables_get">
+              <title name="VAR">sides</title>
+            </block>
+          </value>
+        </block>
+      </xml>
+    </required_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">6</title>
+              <statement name="DO">
+                <block type="draw_move_by_constant">
+                  <title name="DIR">moveForward</title>
+                  <title name="VALUE">150</title>
+                  <next>
+                    <block type="draw_turn_by_constant">
+                      <title name="DIR">turnLeft</title>
+                      <title name="VALUE">60</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Artist>

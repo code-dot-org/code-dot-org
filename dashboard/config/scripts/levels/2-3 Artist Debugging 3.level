@@ -14,7 +14,10 @@
     "skip_instructions_popup": "false",
     "ideal": "8",
     "slider_speed": "0.4",
-    "free_play": "false"
+    "free_play": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "permitted_errors": "0"
   }
 }]]></config>
   <blocks>

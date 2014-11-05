@@ -1,5 +1,6 @@
 "ru-RU":
   hello: "Привет, мир!"
+  select_language: Please select your language
   computer_science: "Информатика"
   computer_science_edweek: "Образовательная неделя компьютерных технологий"
   csedweek_dates: 9-15 декабря 2013 года
@@ -317,7 +318,7 @@
   dashboard_grade_k: "Детский сад"
   dashboard_grade_other: "Другое"
   dashboard_login_word: "Слово"
-  dashboard_login_picture: picture
+  dashboard_login_picture: "Изображение"
   dashboard_login_none: "Электронная почта"
   dashboard_new_password: "новый пароль"
   stats_hoc_2013_heading: "Невероятная статистика с прошлогоднего Часа Кода. Всего
@@ -328,7 +329,7 @@
   dashboard_sections_email_question: "Есть ли у всех учеников действительный адрес
     электронной почты?"
   dashboard_sections_account_creation_question: "Кто регистрирует ученика?"
-  dashboard_sections_password_question: What do students use as a "password"?
+  dashboard_sections_password_question: Что ученики используют в качестве "пароля"?
   dashboard_sections_picture_account_creation: A picture assigned by Code.org
   dashboard_sections_word_account_creation: A simple word assigned by Code.org
   dashboard_sections_sign_in_question: "Где ученики заходят?"
@@ -339,8 +340,8 @@
     login types, <b>picture, word, or email</b>, you'll want to choose for a section.
   codeorg_name: "Написать первую компьютерную программу"
   thinkersmithspanish_name: Mis Amigos Roboticos
-  khan_name: An introduction to JavaScript
-  khanes_name: An introduction to JavaScript
+  khan_name: "Введение в JavaScript"
+  khanes_name: "Введение в JavaScript"
   tynker_name: Build your own game
   scratch_name: Create a holiday card
   thinkersmith_name: My Robotic Friends
@@ -350,7 +351,7 @@
   kodable_name: Kodable
   hopscotch_name: 'Hopscotch: Code on your iPad'
   groklearning_name: A taste of Python programming
-  processing_name: Drawing with Code
+  processing_name: "Рисование с помощью Кода"
   robomind_name: Program a virtual robot
   robomindnl_name: Program a virtual robot
   makegameswithus_name: Build an iPhone game in your browser!

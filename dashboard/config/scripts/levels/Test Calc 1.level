@@ -1,0 +1,30 @@
+<Calc>
+  <config><![CDATA[{
+  "game_id": 34,
+  "created_at": "2014-10-30T23:43:33.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "calc",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false"
+  }
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="functional_draw"/>
+        <block type="functional_plus"/>
+        <block type="functional_minus"/>
+        <block type="functional_times"/>
+        <block type="functional_dividedby"/>
+        <block type="functional_math_number"/>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <block type="functional_plus"/>
+    </solution_blocks>
+  </blocks>
+</Calc>

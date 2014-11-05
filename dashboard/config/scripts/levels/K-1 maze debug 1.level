@@ -13,8 +13,7 @@
     "is_k1": "true",
     "skip_instructions_popup": "false",
     "ideal": "4",
-    "video_key": "C1_maze_debugging",
-    "maze_data": null
+    "video_key": "C1_maze_debugging"
   }
 }]]></config>
   <blocks>
