@@ -269,7 +269,8 @@ Blockly.Flyout.prototype.position_ = function() {
   if (!this.isVisible()) {
     return;
   }
-  var metrics = this.targetBlockSpace_.getMetrics();
+  var metrics = Blockly.modalBlockSpace ? Blockly.mainBlockSpace.getMetrics()
+      : this.targetBlockSpace_.getMetrics();
   if (!metrics) {
     // Hidden components will return null.
     return;
@@ -293,10 +294,10 @@ Blockly.Flyout.prototype.position_ = function() {
   path.push('z');
   this.svgBackground_.setAttribute('d', path.join(' '));
 
-  var leftAnchor = this.blockSpaceEditor_.toolbox ? this.blockSpaceEditor_.toolbox.width : 0;
-  var x = this.insideBubble_ ? metrics.absoluteLeft : leftAnchor;
-  var y = this.insideBubble_ ? metrics.absoluteTop : 0;
+  var x = metrics.absoluteLeft;
+  var y = metrics.absoluteTop;
   if (Blockly.RTL) {
+    x = 0;
     x += metrics.viewWidth;
     x -= this.width_;
   }
@@ -376,7 +377,7 @@ Blockly.Flyout.prototype.show = function(xmlList) {
   this.svgGroup_.style.display = 'block';
 
   var margin = this.CORNER_RADIUS;
-  var initialX = Blockly.RTL ? 0 : margin + Blockly.BlockSvg.TAB_WIDTH;
+  var initialX = Blockly.RTL ? this.width_ : margin + Blockly.BlockSvg.TAB_WIDTH;
   var cursor = {
     x: initialX,
     y: margin
