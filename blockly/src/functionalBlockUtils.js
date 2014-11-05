@@ -102,3 +102,28 @@ module.exports.installFunctionalApiCallBlock = function(blockly, generator,
     return apiName + '(' + apiArgs.join(',') + ');\n';
   };
 };
+
+module.exports.installStringPicker = function(blockly, generator, options) {
+  var values = options.values;
+  var blockName = options.blockName;
+  blockly.Blocks[blockName] = {
+    init: function () {
+      this.setFunctional(true, {
+        headerHeight: 0,
+        rowBuffer: 3
+      });
+      this.setHSV.apply(this, colors.string);
+      this.appendDummyInput()
+          .appendTitle(new Blockly.FieldLabel('"'))
+          .appendTitle(new blockly.FieldDropdown(values), 'VAL')
+          .appendTitle(new Blockly.FieldLabel('"'))
+          .setAlign(Blockly.ALIGN_CENTRE);
+      this.setFunctionalOutput(true, 'string');
+
+    }
+  };
+
+  generator[blockName] = function() {
+    return "(" + blockly.JavaScript.quote_(this.getTitleValue('VAL')) + ")";
+  };
+}
