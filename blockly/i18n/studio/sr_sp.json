@@ -118,6 +118,8 @@
   "setBackgroundTennis": "постави тениску позадину",
   "setBackgroundWinter": "постави зимску позадину",
   "setBackgroundTooltip": "Подешава позадинску слику",
+  "setEnemySpeed": "set enemy speed",
+  "setPlayerSpeed": "set player speed",
   "setScoreText": "постави резултат",
   "setScoreTextTooltip": "Подешавање текста који се приказује поред резултата.",
   "setSpriteEmotionAngry": "to a angry emotion",

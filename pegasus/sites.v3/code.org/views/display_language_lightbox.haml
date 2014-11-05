@@ -1,3 +1,24 @@
+%script{type: "text/javascript", src: "/js/bootstrap.min.js"}
+
+%div{:class=>"modal fade", :id=>"selectLanguage"}
+  %div{:class=>"modal-dialog", :width=>"500px"}
+    %div{:class=>"modal-content"}
+      %div{:class=>"modal-header"}
+        %button{:type=>"button", :class=>"close", :"data-dismiss"=>"modal"}
+          %span{:"aria-hidden"=>"true"} &times;
+          %span{:class=>"sr-only"} Close
+        %img{:src=>avatar_image("Flags"), :style=>"width: 235px; height: 73px;"}
+      %div{:class=>"modal-body"}
+        %h4{:class=>"modal-title"}= I18n.t('select_language')
+        =view :language
+      %div{:class=>"modal-footer"}
+        %button{:type=>"button", :class=>"btn btn-primary", :"data-dismiss"=>"modal"}= I18n.t('submit')  
+
+:css
+  .modal{
+    text-align: center;
+  }
+
 :javascript
   function setCookie(key, value, days) {
     var expires = new Date();
@@ -16,7 +37,7 @@
       $.getJSON( "/v2/client-location", function( data ) {
         country_code = data['country_code'];
         if(country_code != 'US') {
-          alert(country_code);
+          $('#selectLanguage').modal('show')
         }
       });
       setCookie('_loc_notice', '1', 365)

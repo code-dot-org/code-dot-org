@@ -7,8 +7,10 @@
 'use strict';
 
 var msg = require('../../locale/current/studio');
+var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
 var commonMsg = require('../../locale/current/common');
 var codegen = require('../codegen');
+var installFunctionalApiCallBlock = require('../functionalBlockUtils').installFunctionalApiCallBlock;
 var tiles = require('./tiles');
 var utils = require('../utils');
 var _ = utils.getLodash();
@@ -1433,6 +1435,43 @@ exports.install = function(blockly, blockInstallOptions) {
         '\', (' + valueParam + ' * 1000));\n';
   };
 
+  //
+  // Install functional blocks
+  //
+
+  installFunctionalApiCallBlock(blockly, generator, {
+    blockName: 'functional_setBackground',
+    blockTitle: msg.setBackground(),
+    apiName: 'Studio.setBackground',
+    args: [{ name: 'BACKGROUND', type: 'string', default: 'space'}]
+  });
+
+  installFunctionalApiCallBlock(blockly, generator, {
+    blockName: 'functional_setPlayerSpeed',
+    blockTitle: msg.setPlayerSpeed(),
+    apiName: 'Studio.setSpriteSpeed',
+    args: [{constantValue: '0'}, // spriteIndex
+           {name: 'SPEED', type: 'Number', default:'7'}]
+  });
+
+  installFunctionalApiCallBlock(blockly, generator, {
+    blockName: 'functional_setEnemySpeed',
+    blockTitle: msg.setEnemySpeed(),
+    apiName: 'Studio.setSpriteSpeed',
+    args: [{constantValue: '1'}, // spriteIndex
+           {name: 'SPEED', type: 'Number', default:'7'}]
+  });
+
+  installFunctionalApiCallBlock(blockly, generator, {
+    blockName: 'functional_showTitleScreen',
+    blockTitle: msg.showTitleScreen(),
+    apiName: 'Studio.showTitleScreen',
+    args: [{name: 'TITLE', type: 'string', default:'\'\''},
+           {name: 'TEXT', type: 'string', default:'\'\''}]
+  });
+
+  // install number and string
+  sharedFunctionalBlocks.install(blockly, generator);
 };
 
 function installVanish(blockly, generator, spriteNumberTextDropdown, startingSpriteImageDropdown, blockInstallOptions) {

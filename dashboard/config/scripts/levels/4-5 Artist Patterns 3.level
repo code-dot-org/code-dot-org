@@ -111,20 +111,6 @@
             </block>
           </statement>
         </block>
-        <block type="pick_one">
-          <statement name="PICK">
-            <block type="draw_move_by_constant">
-              <title name="DIR">moveForward</title>
-              <title name="VALUE">300</title>
-              <next>
-                <block type="draw_move_by_constant">
-                  <title name="DIR">moveBackward</title>
-                  <title name="VALUE">300</title>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
       </xml>
     </required_blocks>
     <solution_blocks>

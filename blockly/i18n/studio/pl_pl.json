@@ -118,6 +118,8 @@
   "setBackgroundTennis": "set tennis background",
   "setBackgroundWinter": "set winter background",
   "setBackgroundTooltip": "Ustawia obraz w tle",
+  "setEnemySpeed": "set enemy speed",
+  "setPlayerSpeed": "set player speed",
   "setScoreText": "ustaw wynik",
   "setScoreTextTooltip": "Ustawia tekst, który będzie pokazany w obszarze wyniku.",
   "setSpriteEmotionAngry": "to a angry emotion",

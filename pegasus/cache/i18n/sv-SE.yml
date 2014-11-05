@@ -1,5 +1,6 @@
 "sv-SE":
   hello: Hej världen
+  select_language: Please select your language
   computer_science: Datavetenskap
   computer_science_edweek: Utbildningsvecka för Dataveteskap
   csedweek_dates: Den 9-15 december 2013
