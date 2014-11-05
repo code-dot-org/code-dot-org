@@ -92,7 +92,7 @@ Eval.init = function(config) {
     // just going to disable the hack for this app.
     Blockly.BROKEN_CONTROL_POINTS = false;
 
-    // Add to reserved word list: API, local variables in execution evironment
+    // Add to reserved word list: API, local variables in execution environment
     // (execute) and the infinite loop detection function.
     //XXX Not sure if this is still right.
     Blockly.JavaScript.addReservedWords('Eval,code');
@@ -119,7 +119,7 @@ Eval.init = function(config) {
  */
 BlocklyApps.runButtonClick = function() {
   BlocklyApps.toggleRunReset('reset');
-  Blockly.mainWorkspace.traceOn(true);
+  Blockly.mainBlockSpace.traceOn(true);
   BlocklyApps.attempts++;
   Eval.execute();
 };
@@ -169,18 +169,18 @@ function evalCode (code) {
 function generateEvalObjectFromBlockXml(blockXml) {
   var xml = blockXml || '';
 
-  if (Blockly.mainWorkspace.getTopBlocks().length !== 0) {
+  if (Blockly.mainBlockSpace.getTopBlocks().length !== 0) {
     throw new Error("generateExpressionFromBlockXml shouldn't be called if " +
       "we already have blocks in the workspace");
   }
 
   // Temporarily put the blocks into the workspace so that we can generate code
   BlocklyApps.loadBlocks(xml);
-  var code = Blockly.Generator.workspaceToCode('JavaScript');
+  var code = Blockly.Generator.blockSpaceToCode('JavaScript');
   evalCode(code);
 
   // Remove the blocks
-  Blockly.mainWorkspace.getTopBlocks().forEach(function (b) { b.dispose(); });
+  Blockly.mainBlockSpace.getTopBlocks().forEach(function (b) { b.dispose(); });
   var object = Eval.lastEvalObject;
   Eval.lastEvalObject = null;
 
@@ -196,7 +196,7 @@ Eval.execute = function() {
   Eval.message = undefined;
 
   // todo (brent) perhaps try to share user vs. expected generation better
-  var code = Blockly.Generator.workspaceToCode('JavaScript');
+  var code = Blockly.Generator.blockSpaceToCode('JavaScript');
   evalCode(code);
 
   Eval.userObject = Eval.lastEvalObject;
@@ -207,7 +207,7 @@ Eval.execute = function() {
   Eval.result = evaluateAnswer();
   Eval.testResults = Eval.result ? TestResults.ALL_PASS : TestResults.LEVEL_INCOMPLETE_FAIL;
 
-  var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
+  var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   var textBlocks = Blockly.Xml.domToText(xml);
 
   var reportData = {

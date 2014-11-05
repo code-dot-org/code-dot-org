@@ -7,12 +7,12 @@
         %button{:type=>"button", :class=>"close", :"data-dismiss"=>"modal"}
           %span{:"aria-hidden"=>"true"} &times;
           %span{:class=>"sr-only"} Close
-        %h4{:class=>"modal-title"}= I18n.t('select_language')
+        %img{:src=>avatar_image("Flags"), :style=>"width: 235px; height: 73px;"}
       %div{:class=>"modal-body"}
-        %img{:src=>avatar_image("flags")}
-        %br
-        %br
+        %h4{:class=>"modal-title"}= I18n.t('select_language')
         =view :language
+      %div{:class=>"modal-footer"}
+        %button{:type=>"button", :class=>"btn btn-primary", :"data-dismiss"=>"modal"}= I18n.t('submit')  
 
 :css
   .modal{
