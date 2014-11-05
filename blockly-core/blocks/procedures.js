@@ -331,7 +331,7 @@ Blockly.Blocks.procedures_callnoreturn = {
       .appendTitle(Blockly.Msg.PROCEDURES_CALLNORETURN_CALL)
       .appendTitle('', 'NAME');
 
-    if (Blockly.useModalFunctionEditor) {
+    if (Blockly.functionEditor) {
       var editLabel = new Blockly.FieldLabel(Blockly.Msg.FUNCTION_EDIT);
       Blockly.bindEvent_(editLabel.textElement_, 'mousedown', this, this.openEditor);
       mainTitle.appendTitle(editLabel);
@@ -499,7 +499,7 @@ Blockly.Blocks.procedures_callreturn = {
     var mainTitle = this.appendDummyInput()
         .appendTitle(Blockly.Msg.PROCEDURES_CALLRETURN_CALL)
         .appendTitle('', 'NAME');
-    if (Blockly.useModalFunctionEditor) {
+    if (Blockly.functionEditor) {
       var editLabel = new Blockly.FieldLabel(Blockly.Msg.FUNCTION_EDIT);
       Blockly.bindEvent_(editLabel.textElement_, 'mousedown', this, this.openEditor);
       mainTitle.appendTitle(editLabel);

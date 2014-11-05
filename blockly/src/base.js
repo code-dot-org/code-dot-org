@@ -445,6 +445,8 @@ BlocklyApps.init = function(config) {
         false : config.level.disableVariableEditing,
     useModalFunctionEditor: config.level.useModalFunctionEditor === undefined ?
         false : config.level.useModalFunctionEditor,
+    useContractEditor: config.level.useContractEditor === undefined ?
+        false : config.level.useContractEditor,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
