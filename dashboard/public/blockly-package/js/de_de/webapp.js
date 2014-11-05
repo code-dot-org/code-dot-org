@@ -6678,11 +6678,16 @@ exports.generateCodeAliases = function (codeFunctions, parentObjName) {
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
       var cf = codeFunctions[i];
-      code += "var " + cf.func +
-          " = function() { var newArgs = " +
+      code += "var " + cf.func + " = function() { ";
+      if (cf.idArgNone) {
+        code += "return " + parentObjName + "." + cf.func + ".apply(" +
+                parentObjName + ", arguments); };\n";
+      } else {
+        code += "var newArgs = " +
           (cf.idArgLast ? "arguments.concat(['']);" : "[''].concat(arguments);") +
           " return " + parentObjName + "." + cf.func +
           ".apply(" + parentObjName + ", newArgs); };\n";
+      }
     }
   }
   return code;
@@ -6788,8 +6793,11 @@ exports.generateDropletPalette = function (codeFunctions) {
   };
 
   if (codeFunctions) {
-    for (var i = 0; i < codeFunctions.length; i++) {
+    for (var i = 0, blockIndex = 0; i < codeFunctions.length; i++) {
       var cf = codeFunctions[i];
+      if (cf.category === 'hidden') {
+        continue;
+      }
       var block = cf.func + "(";
       if (cf.params) {
         for (var j = 0; j < cf.params.length; j++) {
@@ -6804,7 +6812,8 @@ exports.generateDropletPalette = function (codeFunctions) {
         block: block,
         title: cf.func
       };
-      appPaletteCategory.blocks[i] = blockPair;
+      appPaletteCategory.blocks[blockIndex] = blockPair;
+      blockIndex++;
     }
   }
 
@@ -6819,6 +6828,8 @@ exports.generateDropletPalette = function (codeFunctions) {
 exports.generateDropletModeOptions = function (codeFunctions) {
   var modeOptions = {
     blockFunctions: [],
+    valueFunctions: [],
+    eitherFunctions: [],
   };
 
   // BLOCK, VALUE, and EITHER functions that are normally used in droplet
@@ -6832,7 +6843,12 @@ exports.generateDropletModeOptions = function (codeFunctions) {
 
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
-      modeOptions.blockFunctions[i] = codeFunctions[i].func;
+      if (codeFunctions[i].category === 'value') {
+        modeOptions.valueFunctions[i] = codeFunctions[i].func;
+      }
+      else if (codeFunctions[i].category !== 'hidden') {
+        modeOptions.blockFunctions[i] = codeFunctions[i].func;
+      }
     }
   }
 
@@ -6841,20 +6857,65 @@ exports.generateDropletModeOptions = function (codeFunctions) {
 
 },{"./lodash":10,"./xml":36}],27:[function(require,module,exports){
 
-exports.random = function (values) {
+exports.randomFromArray = function (values) {
   var key = Math.floor(Math.random() * values.length);
   return values[key];
 };
 
-exports.turnBlack = function (id) {
-  return Webapp.executeCmd(String(id), 'turnBlack');
+// APIs needed only for droplet:
+
+exports.random = function (min, max)
+{
+    return Math.floor(Math.random()*(max-min+1)+min);
 };
+
+// APIs needed for droplet and/or blockly (must include blockId):
 
 exports.createHtmlBlock = function (blockId, elementId, html) {
   return Webapp.executeCmd(String(blockId),
                           'createHtmlBlock',
                           {'elementId': elementId,
                            'html': html });
+};
+
+exports.replaceHtmlBlock = function (blockId, elementId, html) {
+  return Webapp.executeCmd(String(blockId),
+                          'replaceHtmlBlock',
+                          {'elementId': elementId,
+                           'html': html });
+};
+
+exports.deleteHtmlBlock = function (blockId, elementId) {
+  return Webapp.executeCmd(String(blockId),
+                          'deleteHtmlBlock',
+                          {'elementId': elementId });
+};
+
+exports.createButton = function (blockId, elementId, text) {
+  return Webapp.executeCmd(String(blockId),
+                          'createButton',
+                          {'elementId': elementId,
+                           'text': text });
+};
+
+exports.createTextInput = function (blockId, elementId, text) {
+  return Webapp.executeCmd(String(blockId),
+                          'createTextInput',
+                          {'elementId': elementId,
+                           'text': text });
+};
+
+exports.getText = function (blockId, elementId) {
+  return Webapp.executeCmd(String(blockId),
+                          'getText',
+                          {'elementId': elementId });
+};
+
+exports.setStyle = function (blockId, elementId, style) {
+  return Webapp.executeCmd(String(blockId),
+                           'setStyle',
+                           {'elementId': elementId,
+                           'style': style });
 };
 
 exports.attachEventHandler = function (blockId, elementId, eventName, func) {
@@ -6893,7 +6954,7 @@ var generateSetterCode = function (opts) {
       _(opts.ctx.VALUES)
         .map(function (item) { return item[1]; })
         .without(RANDOM_VALUE, HIDDEN_VALUE, CLICK_VALUE);
-    value = 'Webapp.random([' + possibleValues + '])';
+    value = 'Webapp.randomFromArray([' + possibleValues + '])';
   }
 
   return 'Webapp.' + opts.name + '(\'block_id_' + opts.ctx.id + '\', ' +
@@ -6911,27 +6972,8 @@ exports.install = function(blockly, blockInstallOptions) {
     return '\n';
   };
 
-  installTurnBlack(blockly, generator, blockInstallOptions);
   installCreateHtmlBlock(blockly, generator, blockInstallOptions);
 };
-
-function installTurnBlack(blockly, generator, blockInstallOptions) {
-  blockly.Blocks.webapp_turnBlack = {
-    helpUrl: '',
-    init: function() {
-      this.setHSV(184, 1.00, 0.74);
-      this.appendDummyInput().appendTitle(msg.turnBlack());
-      this.setPreviousStatement(true);
-      this.setInputsInline(true);
-      this.setNextStatement(true);
-      this.setTooltip(msg.turnBlackTooltip());
-    }
-  };
-
-  generator.webapp_turnBlack = function() {
-    return 'Webapp.turnBlack(\'block_id_' + this.id + '\');\n';
-  };
-}
 
 function installCreateHtmlBlock(blockly, generator, blockInstallOptions) {
   blockly.Blocks.webapp_createHtmlBlock = {
@@ -7022,8 +7064,7 @@ levels.simple = {
     'snapRadius': 2
   },
   'toolbox':
-    tb(blockOfType('webapp_turnBlack') +
-      '<block type="webapp_createHtmlBlock" inline="true"> \
+      tb('<block type="webapp_createHtmlBlock" inline="true"> \
         <value name="ID"><block type="text"><title name="TEXT">id</title></block></value> \
         <value name="HTML"><block type="text"><title name="TEXT">html</title></block></value></block>'),
   'startBlocks':
@@ -7034,8 +7075,14 @@ levels.ec_simple = {
   'editCode': true,
   'sliderSpeed': 0.7,
   'codeFunctions': [
-    {'func': 'turnBlack' },
+    {'func': 'random', 'params': ["1", "100"], 'category': 'hidden', 'idArgNone': true },
+    {'func': 'createButton', 'params': ["'id'", "'text'"] },
+    {'func': 'createTextInput', 'params': ["'id'", "'text'"] },
+    {'func': 'getText', 'params': ["'id'"], 'category': 'value' },
+    {'func': 'setStyle', 'params': ["'id'", "'color:red;'"] },
     {'func': 'createHtmlBlock', 'params': ["'id'", "'html'"] },
+    {'func': 'replaceHtmlBlock', 'params': ["'id'", "'html'"] },
+    {'func': 'deleteHtmlBlock', 'params': ["'id'"] },
     {'func': 'attachEventHandler', 'params': ["'id'", "'click'", "function() {\n  \n}"] },
   ],
 };
@@ -7058,7 +7105,6 @@ levels.full_sandbox =  {
   'toolbox':
     tb(createCategory(
         msg.catActions(),
-        blockOfType('webapp_turnBlack') +
         '<block type="webapp_createHtmlBlock" inline="true"> \
           <value name="ID"><block type="text"><title name="TEXT">id</title></block></value> \
           <value name="HTML"><block type="text"><title name="TEXT">html</title></block></value></block>') +
@@ -7291,7 +7337,13 @@ Webapp.onTick = function() {
                                              Webapp.cumulativeLength,
                                              Webapp.userCodeStartOffset,
                                              Webapp.userCodeLength);
-      Webapp.interpreter.step();
+      try {
+        Webapp.interpreter.step();
+      }
+      catch(err) {
+        Webapp.executionError = err;
+        Webapp.onPuzzleComplete();
+      }
     }
   } else {
     if (Webapp.tickCount === 1) {
@@ -7438,7 +7490,6 @@ BlocklyApps.reset = function(first) {
 
   // Reset configurable variables
   var divWebapp = document.getElementById('divWebapp');
-  divWebapp.style.backgroundColor = 'white';
 
   while (divWebapp.firstChild) {
     divWebapp.removeChild(divWebapp.firstChild);
@@ -7465,6 +7516,7 @@ BlocklyApps.reset = function(first) {
   // Reset the Globals object used to contain program variables:
   Webapp.Globals = {};
   Webapp.eventQueue = [];
+  Webapp.executionError = null;
   Webapp.interpreter = null;
 };
 
@@ -7653,7 +7705,9 @@ Webapp.feedbackImage = '';
 Webapp.encodedFeedbackImage = '';
 
 Webapp.onPuzzleComplete = function() {
-  if (level.freePlay) {
+  if (Webapp.executionError) {
+    Webapp.result = BlocklyApps.ResultType.ERROR;
+  } else if (level.freePlay) {
     Webapp.result = BlocklyApps.ResultType.SUCCESS;
   }
 
@@ -7743,29 +7797,19 @@ Webapp.callCmd = function (cmd) {
       }
       return Studio.wait(cmd.opts);
     */
-    case 'turnBlack':
-      BlocklyApps.highlight(cmd.id);
-      retVal = Webapp.turnBlack(cmd.opts);
-      break;
     case 'createHtmlBlock':
-      BlocklyApps.highlight(cmd.id);
-      retVal = Webapp.createHtmlBlock(cmd.opts);
-      break;
+    case 'replaceHtmlBlock':
+    case 'deleteHtmlBlock':
+    case 'createButton':
+    case 'createTextInput':
+    case 'getText':
+    case 'setStyle':
     case 'attachEventHandler':
       BlocklyApps.highlight(cmd.id);
-      retVal = Webapp.attachEventHandler(cmd.opts);
+      retVal = Webapp[cmd.name](cmd.opts);
       break;
   }
   return retVal;
-};
-
-Webapp.turnBlack = function (opts) {
-  var divWebapp = document.getElementById('divWebapp');
-
-  // sample
-  divWebapp.style.backgroundColor = 'black';
-
-  return true;
 };
 
 Webapp.createHtmlBlock = function (opts) {
@@ -7775,9 +7819,69 @@ Webapp.createHtmlBlock = function (opts) {
   newDiv.id = opts.elementId;
   newDiv.innerHTML = opts.html;
 
-  divWebapp.appendChild(newDiv);
+  return Boolean(divWebapp.appendChild(newDiv));
+};
 
-  return newDiv;
+Webapp.createButton = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+
+  var newButton = document.createElement("button");
+  var textNode = document.createTextNode(opts.text);
+  newButton.id = opts.elementId;
+
+  return Boolean(newButton.appendChild(textNode) &&
+                 divWebapp.appendChild(newButton));
+};
+
+Webapp.createTextInput = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+
+  var newInput = document.createElement("input");
+  newInput.value = opts.text;
+  newInput.id = opts.elementId;
+
+  return Boolean(divWebapp.appendChild(newInput));
+};
+
+Webapp.getText = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var div = document.getElementById(opts.elementId);
+  if (divWebapp.contains(div)) {
+    return String(div.value);
+  }
+  return false;
+};
+
+Webapp.replaceHtmlBlock = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var oldDiv = document.getElementById(opts.elementId);
+  if (divWebapp.contains(oldDiv)) {
+    var newDiv = document.createElement("div");
+    newDiv.id = opts.elementId;
+    newDiv.innerHTML = opts.html;
+
+    return Boolean(divWebapp.replaceChild(newDiv, oldDiv));
+  }
+  return false;
+};
+
+Webapp.deleteHtmlBlock = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var div = document.getElementById(opts.elementId);
+  if (divWebapp.contains(div)) {
+    return Boolean(divWebapp.removeChild(div));
+  }
+  return false;
+};
+
+Webapp.setStyle = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var div = document.getElementById(opts.elementId);
+  if (divWebapp.contains(div)) {
+    div.style.cssText = opts.style;
+    return true;
+  }
+  return false;
 };
 
 Webapp.onEventFired = function (opts, e) {
@@ -7785,12 +7889,16 @@ Webapp.onEventFired = function (opts, e) {
 };
 
 Webapp.attachEventHandler = function (opts) {
-  // For now, we're not tracking how many of these we add and we don't allow
-  // the user to detach the handler. We detach all listeners by cloning the
-  // divWebapp DOM node inside of reset()
-  document.getElementById(opts.elementId).addEventListener(
-      opts.eventName,
-      Webapp.onEventFired.bind(this, opts));
+  var divWebapp = document.getElementById('divWebapp');
+  var divElement = document.getElementById(opts.elementId);
+  if (divWebapp.contains(divElement)) {
+    // For now, we're not tracking how many of these we add and we don't allow
+    // the user to detach the handler. We detach all listeners by cloning the
+    // divWebapp DOM node inside of reset()
+    divElement.addEventListener(
+        opts.eventName,
+        Webapp.onEventFired.bind(this, opts));
+  }
 };
 
 /*
@@ -8012,7 +8120,7 @@ exports.saveToGallery = function(d){return "In deiner Galerie abspeichern"};
 
 exports.savedToGallery = function(d){return "In deiner Gallerie gespeichert!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Leider können wir dieses Programm nicht teilen."};
 
 exports.typeFuncs = function(d){return "Verfügbare Funktionen:%1"};
 
@@ -8065,13 +8173,13 @@ exports.catVariables = function(d){return "Variablen"};
 
 exports.continue = function(d){return "Weiter"};
 
-exports.createHtmlBlock = function(d){return "create html block"};
+exports.createHtmlBlock = function(d){return "HTML-Block erstellen"};
 
-exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
+exports.createHtmlBlockTooltip = function(d){return "Erstellt einen HTML-Block in der App."};
 
 exports.finalLevel = function(d){return "Glückwunsch! Sie haben das letzte Puzzle gelöst."};
 
-exports.makeYourOwn = function(d){return "Make Your Own App"};
+exports.makeYourOwn = function(d){return "Erstellen sie ihre eigene App"};
 
 exports.nextLevel = function(d){return "Herzlichen Glückwunsch! Du hast dieses Puzzle abgeschlossen."};
 
@@ -8089,13 +8197,13 @@ exports.repeatDo = function(d){return "mache"};
 
 exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
 
-exports.shareWebappTwitter = function(d){return "Check out the app I made. I wrote it myself with @codeorg"};
+exports.shareWebappTwitter = function(d){return "Schau Dir die App an, die ich gemacht habe. Ich habe sie selbst mit @codeorg geschrieben"};
 
-exports.shareGame = function(d){return "Share your app:"};
+exports.shareGame = function(d){return "Teilen Sie Ihre App:"};
 
-exports.turnBlack = function(d){return "turn black"};
+exports.turnBlack = function(d){return "schwarz machen"};
 
-exports.turnBlackTooltip = function(d){return "Turns the screen black."};
+exports.turnBlackTooltip = function(d){return "Macht den Bildschirm schwarz."};
 
 exports.yes = function(d){return "Ja"};
 

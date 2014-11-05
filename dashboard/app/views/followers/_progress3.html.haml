@@ -1,3 +1,4 @@
+
 -# @all_script_levels = Script.twenty_hour_script.script_levels.includes({ level: :game })
 -# @all_script_levels = Script.get_from_cache("k-1").script_levels.includes({ level: :game })
 
@@ -13,22 +14,141 @@
     - numLevels += levels.length
 - widthpx = (780 / numLevels).floor
 
+:scss
+  $level_passed: rgb(159, 212, 159);
+  $level_perfect: rgb(14, 190, 14);
+  $level_attempted: #fefefe;
+  $level_not_tried: #fefefe;
+  $progress_background: #eee;
+
+  .progressheader .stage {
+    box-sizing: border-box;
+    background-color: #aaa;
+    color: white; 
+    float:left;
+    height:50px;
+    padding: 5px 0 0 5px;
+    border-left: 1px solid #888;
+  }
+
+  .studentzone {float: left; position: relative}
+
+  .studentzone .stage {
+    box-sizing: border-box;
+    background-color: #eee;
+    color: white;
+    float:left;
+    padding: 5px 0 0 5px;
+    height:40px; 
+    border-left: 1px solid #ccc
+  }
+
+  .studentname {
+    width: 160px;
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    float: left;
+  }
+
+  .studentzone .studentname {
+    height: 40px;
+  }
+
+  .bar {
+    float: left;
+    width:#{widthpx}px;
+    margin-top: 15px;
+    height:10px;
+    opacity: 0.8;
+    cursor: default;
+    background-color: $level_not_tried;
+
+    &.perfect {
+      border: none;
+      background-color: $level_perfect;
+    }
+
+    &.passed {
+      border: none;
+      background-color: $level_passed;
+    }
+
+    &.attempted {
+      border: none;
+      background-color: $level_attempted;
+    }
+  }
+
+  .dot {
+    box-sizing: content-box;
+    border-radius: 20px;
+    border: 2px solid #ccc;
+    background-color: $level_attempted;
+    padding: 5px 7px 9px 7px;
+    color: #333;
+    width: 18px;
+    height: 18px;
+    font-weight: 600;
+    cursor:default;
+    text-align: center;
+
+    &.perfect {
+      border: none;
+      background-color: $level_perfect;
+      color: white;
+    }
+
+    &.passed {
+      border: none;
+      background-color: $level_passed;
+      color: white;
+    }
+  }
+
+  .key {
+    margin: 10px 0;
+    float: left;
+    background-color: #eee;
+    padding: 10px;
+    dl {
+      margin: 0;
+      float: left;
+    }
+    dd, dt {
+      height: 20px;
+      line-height: 20px;
+      float: left;
+      margin-right: 5px;
+    }
+    dt {
+      padding: 5px 0;
+    }
+    dd {
+      margin-right: 30px;
+    }
+    .bar {
+      margin: 0;
+    }
+    .dot {
+      margin-top: -12px;
+    }
+  }
+
 #progress
   - @section_map.each_pair do |section, students|
     .progressheader
-      .studentname{style: "width: 160px; float: left"}
+      .studentname
         &nbsp;
       - stage_map.each_pair do |game, levels|
         - width = levels.length
         - if width > 0
           - stage_lengths << width
-          - if width > 1
-            - background_color = cycle("#666", "#777", name: "big_header")
-          - else
-            - background_color = cycle("#888", "#999", name: "little_header")
-          .stage{style: "box-sizing: content-box; background-color: #{background_color}; color: white; float:left; width: #{width * widthpx}px; height:50px; padding-left:5px; padding-top:5px; padding-right:0px; padding-bottom:0px; box-sizing:border-box;", title: game.name}
+          .stage{style: "width:#{width * widthpx}px", title: strip_tags(stage_title(@script, game))}
             - if width > 1
-              =game.name
+              = stage_title(@script, game)
     - student_ids = []  
     - all_levels = []        
     - students.each do |student|
@@ -40,98 +160,111 @@
       - all_levels << student_levels
       .clear
       .studentrow
-        .studentname{style: "width: 160px; float: left; height: 40px"}
-          .gap{style: "height:10px"}
-            &nbsp;
+        .studentname
           - if section && student
             = link_to student.name, "teacher-dashboard#/sections/#{section.id}/student/#{student.id}"
-        .studentzone{style: "float: left; position: relative"}
-          - reset_cycle("big_body")
-          - reset_cycle("little_body")
+        .studentzone
           - stage_map.each_pair do |game, levels|
             - width = levels.length
             - if width > 0
-              - if width > 1
-                - background_color = cycle("#dadada", "#eeeeee", name: "big_body")
-              - else
-                - background_color = cycle("#f2f2f2", "#ffffff", name: "little_body")
-              .stage{style: "box-sizing: content-box; background-color: #{background_color}; color: white; float:left; width: #{width * widthpx}px; padding-top: 5px; padding-bottom:5px; height:30px;"}
+              .stage{style: "width: #{width * widthpx}px;"}
                 &nbsp;    
           .studentbar{style: "position: absolute; display: none", id: "studentbar_#{student.id}"}
-          .studentdot{style: "position: absolute; left: -15px; padding-top:4px; padding-bottom:4px", id: "studentdot_#{student.id}"}
-            .dot{style: "box-sizing: content-box; border-radius: 20px; background-color: rgb(14, 190, 14); padding: 7px; color: white; width: 18px; height: 18px; font-weight: 600; cursor:default; text-align: center; opacity: 0.8"}
+          .studentdot{style: "position: absolute; display: none, left: -15px; padding-top:4px; padding-bottom:4px", id: "studentdot_#{student.id}"}
+            .dot
               35
    
         .clear
 
+          
     :javascript
       var studentIds = JSON.parse('#{student_ids.to_json}'); 
       var allLevels = JSON.parse('#{all_levels.to_json}');
       var stageLengths = JSON.parse('#{stage_lengths}');
 %br/
 
--# Set this to true if you just want to see some random student values.  Handy for testing.
-- showRandomValues = false
+.key
+  %dl
+    %dt
+      %span.bar.attempted &nbsp;
+    %dd= t('progress.not_completed')
+    %dt
+      %span.bar.passed &nbsp;
+    %dd= t('progress.completed_too_many_blocks')
+    %dt
+      %span.bar.perfect &nbsp;
+    %dd= t('progress.completed_perfect')
+    %dt
+      .dot 10
+    %dd= t('progress.furthest_level_attempted')
 
 :javascript
-
-  function progressLoaded()
-  {
+  function progressLoaded() {
     // Rendering with javascript here gives us the option of doing a version that updates in realtime with ajax calls.
 
-    for (var s = 0; s < studentIds.length; s++)
-    {
+    for (var s = 0; s < studentIds.length; s++) {
       var highestLevel = 0;
+      var levels = allLevels[s];
+      var studentId = studentIds[s];
 
-      // Determine the highest completed level before we draw bars.  We don't want to draw unfinished levels beyond
-      // the last finished one.
-      if ("#{showRandomValues}" == "true")
-      {
-        highestLevel = Math.round(Math.random() * allLevels[s].length);
-        console.log("highestLevel", s, highestLevel, allLevels[s].length);
-      }
-      else
-      {
-        for (var l = 0; l < allLevels[s].length; l++)
-        {
-          var levelInfo = allLevels[s][l];
+      // find the furthest level that this student has attempted
+      for (var l = levels.length - 1; l > 0; l--) {
+        if (levels[l]) {
+          highestLevel = l;
+          break;
+        }
+      }   
 
-          var passed = levelInfo && levelInfo.best_result >= #{Activity::MINIMUM_PASS_RESULT};
-          if (passed)
-          {
-            highestLevel = l;
-          }  
-        }   
-      }
+      var classForLevelInfo = function(levelInfo) {
+        if (levelInfo) {
+          if (levelInfo.best_result >= #{Activity::FREE_PLAY_RESULT}) {
+            return  'perfect'; // perfect (or free play)
+          } else if (levelInfo.best_result >= #{Activity::MINIMUM_PASS_RESULT}) {
+            return 'passed'; // passed but not perfect
+          } else {
+            return 'attempted'; // attempted, not passed
+          }
+        }
+        return '';
+      };
 
-      // Draw the level history, though it'll be hidden until we fade it in.
+      var stringForLevelInfo = function(levelInfo) {
+        if (levelInfo) {
+          if (levelInfo.best_result >= #{Activity::FREE_PLAY_RESULT}) {
+            return "#{t('progress.completed_perfect')}";
+          } else if (levelInfo.best_result >= #{Activity::MINIMUM_PASS_RESULT}) {
+            return '#{t("progress.completed_too_many_blocks")}';
+          } else {
+            return '#{t("progress.not_completed")}';
+          }
+        }
+        return '';
+      };
+
+
+      /* Draw the level history, though it'll be hidden until we fade it in. */
       for (var l = 0; l <= highestLevel; l++)
       {
         var levelInfo = allLevels[s][l];
-        var passed;
 
-        if ("#{showRandomValues}" == "true")
-          passed = Math.random() > 0.5;
-        else
-          passed = levelInfo && levelInfo.best_result >= #{Activity::MINIMUM_PASS_RESULT};
-
-        var backgroundColor = passed ? "rgb(14, 190, 14)" : "rgb(230, 90, 90)";
-        var id = "#studentbar_" + studentIds[s];
-        var title = "Level " + (getLevelNumberInStage(l) + 1) + (passed ? " completed" : " not completed"); // TODO loc
-        $(id).append('<div class="bar" title="' + title + '" style="float:left; width:#{widthpx}px; margin-top:15px; height:10px; opacity: 0.8; cursor: default; background-color: '+ backgroundColor + '" >&nbsp;</div>');
+        var id = "#studentbar_" + studentId;
+        var title = "Level " + (getLevelNumberInStage(l) + 1) + " " + stringForLevelInfo(levelInfo);
+        $(id).append($('<div>&nbsp;</div>').addClass('bar').addClass(classForLevelInfo(levelInfo)).attr('title', title));
       }
 
-      // Animate each student's dot to the correct level.
-      var level = highestLevel;
+      /* Animate each student's dot to the correct level. */
       var id = "#studentdot_" + studentIds[s];
-      var widthPx = parseInt("#{widthpx}");
-      $(id).animate({left: level * widthPx -15 + "px"}, 4000 /*, "easeInOutCubic" */);
-      $(id + " .dot").text(getLevelNumberInStage(level) + 1);
-
-      // Set dot color.
-      if (level < 20)
-      {
-        $(id + " .dot").css("background-color", "rgb(230, 90, 90)");
+      if (highestLevel == levels.length - 1) {
+        /* student has attempted the last level, do not show dot */
+        $(id).hide();
+      } else {
+        /* move dot to after the last level attempted */
+        var widthPx = parseInt("#{widthpx}");
+        $(id).animate({left: (highestLevel + 1) * widthPx + "px"}, 4000 /*, "easeInOutCubic" */);
+        $(id + " .dot").
+          text(getLevelNumberInStage(highestLevel) + 1).
+          addClass(classForLevelInfo(levels[highestLevel]));
+        $(id).show();
       }
 
       // And set up the bars to fade in.
@@ -140,8 +273,8 @@
         return function() 
         {
           $("#studentbar_" + studentId).fadeIn(3000);
-        }
-      }
+        };
+      };
       setTimeout(fDelayed(studentIds[s]), 3000);
     }
 

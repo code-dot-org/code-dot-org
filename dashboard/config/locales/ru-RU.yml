@@ -55,10 +55,10 @@
       здесь</a>, чтобы выйти из %{provider}.
     already_signedup: "Уже зарегистрировались?"
     notyet_signedup: "Еще не присоединились?"
-    google_oauth2: Google Account
+    google_oauth2: "Аккаунт Google"
     twitter: Twitter
     facebook: Facebook
-    windowslive: Microsoft Account
+    windowslive: "Учетная запись Майкрософт"
     forgot_password: "Забыли пароль?"
     need_confirmation: "Не получили письмо для подтверждения?"
     need_unlock: "Не получили письмо-инструкцию для разблокировки?"
@@ -82,7 +82,7 @@
     gender: "Пол (не обязательно)"
     birthday: "Дата рождения (не обязательно)"
     age: "Возраст"
-    user_type: Are you a student or teacher?
+    user_type: "Вы студент или преподаватель?"
     submit: "Зарегистрироваться"
     teacher: "Вы учитель?"
     valid_username: "Доступно!"
@@ -275,7 +275,7 @@
       remove: "Вы уверены, что хотите удалить этого учителя?"
     tools: "Инструментарий учителя"
     followers:
-      section: 'Section:'
+      section: "Раздел:"
       stages: 'Stage(s) to display:'
       show_past: "Показать деятельность ученика (%{bullet_html}) в прошлом:"
       levels_key: Levels key
@@ -306,7 +306,7 @@
       vist: "Предложите Вашим ученикам посетить"
       section_code: 'and enter their section-code:'
       first_please: "Во-первых, пожалуйста %{add_section}"
-      for: For
+      for: "Для"
       enter: "введите:"
     sections:
       add: Add section
@@ -560,7 +560,7 @@
           description: ''
   age_interstitial:
     age: "Ваш возраст"
-    header: Account Information Update
+    header: "Обновление информации учетной записи"
     message: "Мы совершенствуем нашу практику, чтобы предоставить вам ещё большую
       защиту личной информации. Для этого нужно, чтобы пользователи ввеси здесь их
       возраст. <br/> Как и всегда, code.org не будет продавать или делиться этой информации

@@ -118,6 +118,8 @@
   "setBackgroundTennis":"設置網球背景",
   "setBackgroundWinter":"設置冬季背景",
   "setBackgroundTooltip":"設置背景圖像",
+  "setEnemySpeed":"set enemy speed",
+  "setPlayerSpeed":"set player speed",
   "setScoreText":"設置得分",
   "setScoreTextTooltip":"設置得分區域中顯示的文字。",
   "setSpriteEmotionAngry":"設置憤怒模式",

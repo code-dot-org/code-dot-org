@@ -11,29 +11,6 @@ zh:
   header_menu_faq: 常見問題與解答
   header_menu_prizes: 獎勵
   header_menu_uk_code_org: uk.code.org
-  choose_country_header: 和全世界一起參與！
-  country_al: Albania
-  country_ar: 阿根廷
-  country_au: 澳洲
-  country_br: 巴西
-  country_bg: 保加利亞
-  country_de: 德國
-  country_es: 拉丁美洲
-  country_eu: 歐洲聯盟
-  country_gr: 希臘
-  country_hr: 克羅埃西亞
-  country_id: 印度尼西亞
-  country_it: 義大利
-  country_jp: 日本
-  country_me: 中東和北非
-  country_my: Malaysia
-  country_nz: 紐西蘭
-  country_ro: 羅馬尼亞
-  country_ru: 俄羅斯
-  country_ua: 烏克蘭
-  country_uk: 英國
-  country_us: 美國
-  country_vn: 越南
   company_4-H: 4-H Youth Development
   company_bgca: Boys and Girls Club of America
   company_cgcs: Council of the Great City Schools
@@ -178,6 +155,17 @@ zh:
   resources_emails: 電子郵件範例
   resources_stats: 有用的電腦科學統計
   resources_press_kit: 新聞資料袋
+  events_title: All Hour of Code Events
+  events_nav_all: All Events
+  events_nav_classrooms: Classrooms
+  events_nav_whole_schools: Whole Schools
+  events_nav_special: Special Events
+  events_all_title: All Hour of Code events
+  events_classroom_title: Classroom Hour of Code events
+  events_whole_school_title: Whole-school Hour of Code events
+  events_special_title: Special Hour of Code events
+  event: event
+  events: events
   footer_copyright_message: Copyright 2014 Code.org. All rights reserved.
   footer_trademark_message: Hour of Code™是Code.org的註冊商標.
   footer_menu_partners: 合作夥伴

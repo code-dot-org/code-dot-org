@@ -55,7 +55,7 @@ describe("ExpressionNode", function () {
 
     node = new ExpressionNode(0);
     expected = new ExpressionNode(0);
-    assert.equal(node.valMetExpectation_, null);
+    assert.equal(node.valMetExpectation_, true);
     node.applyExpectation(expected);
     assert.equal(node.valMetExpectation_, true);
     list = node.getTokenList(true);

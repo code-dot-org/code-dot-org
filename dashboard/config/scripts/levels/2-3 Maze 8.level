@@ -12,8 +12,7 @@
     "is_k1": "false",
     "skip_instructions_popup": "true",
     "instructions": "Get me to the pig!",
-    "ideal": "10",
-    "maze_data": null
+    "ideal": "10"
   }
 }]]></config>
   <blocks>

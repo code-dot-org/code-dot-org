@@ -11,29 +11,6 @@ cs:
   header_menu_faq: 'FAQ - často kladené dotazy'
   header_menu_prizes: Ceny
   header_menu_uk_code_org: UK.code.org
-  choose_country_header: Celosvětová účast!
-  country_al: Albania
-  country_ar: Argentina
-  country_au: Austrálie
-  country_br: Brazílie
-  country_bg: Bulharsko
-  country_de: Německo
-  country_es: Latinská Amerika
-  country_eu: Evropská unie
-  country_gr: Řecko
-  country_hr: Chorvatsko
-  country_id: Indonésie
-  country_it: Ilálie
-  country_jp: Japonsko
-  country_me: Střední východ a Severní Afrika
-  country_my: Malaysia
-  country_nz: Nový Zéland
-  country_ro: Rumunsko
-  country_ru: Rusko
-  country_ua: Ukrajina
-  country_uk: Spojené království
-  country_us: Spojené státy americké
-  country_vn: Vietnam
   company_4-H: 4-H Youth Development
   company_bgca: Boys and Girls Club of America
   company_cgcs: Council of the Great City Schools
@@ -178,6 +155,17 @@ cs:
   resources_emails: Vzorové emaily
   resources_stats: Užitečné statistiky informatiky
   resources_press_kit: Pro tisk
+  events_title: All Hour of Code Events
+  events_nav_all: All Events
+  events_nav_classrooms: Classrooms
+  events_nav_whole_schools: Whole Schools
+  events_nav_special: Special Events
+  events_all_title: All Hour of Code events
+  events_classroom_title: Classroom Hour of Code events
+  events_whole_school_title: Whole-school Hour of Code events
+  events_special_title: Special Hour of Code events
+  event: event
+  events: events
   footer_copyright_message: Copyright 2014 Code.org. Všechna práva vyhrazena.
   footer_trademark_message: Hodina of Code ™ je ochranná známka společnosti Code.org.
   footer_menu_partners: Partneři

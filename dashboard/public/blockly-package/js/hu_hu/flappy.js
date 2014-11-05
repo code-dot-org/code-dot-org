@@ -9228,11 +9228,16 @@ exports.generateCodeAliases = function (codeFunctions, parentObjName) {
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
       var cf = codeFunctions[i];
-      code += "var " + cf.func +
-          " = function() { var newArgs = " +
+      code += "var " + cf.func + " = function() { ";
+      if (cf.idArgNone) {
+        code += "return " + parentObjName + "." + cf.func + ".apply(" +
+                parentObjName + ", arguments); };\n";
+      } else {
+        code += "var newArgs = " +
           (cf.idArgLast ? "arguments.concat(['']);" : "[''].concat(arguments);") +
           " return " + parentObjName + "." + cf.func +
           ".apply(" + parentObjName + ", newArgs); };\n";
+      }
     }
   }
   return code;
@@ -9338,8 +9343,11 @@ exports.generateDropletPalette = function (codeFunctions) {
   };
 
   if (codeFunctions) {
-    for (var i = 0; i < codeFunctions.length; i++) {
+    for (var i = 0, blockIndex = 0; i < codeFunctions.length; i++) {
       var cf = codeFunctions[i];
+      if (cf.category === 'hidden') {
+        continue;
+      }
       var block = cf.func + "(";
       if (cf.params) {
         for (var j = 0; j < cf.params.length; j++) {
@@ -9354,7 +9362,8 @@ exports.generateDropletPalette = function (codeFunctions) {
         block: block,
         title: cf.func
       };
-      appPaletteCategory.blocks[i] = blockPair;
+      appPaletteCategory.blocks[blockIndex] = blockPair;
+      blockIndex++;
     }
   }
 
@@ -9369,6 +9378,8 @@ exports.generateDropletPalette = function (codeFunctions) {
 exports.generateDropletModeOptions = function (codeFunctions) {
   var modeOptions = {
     blockFunctions: [],
+    valueFunctions: [],
+    eitherFunctions: [],
   };
 
   // BLOCK, VALUE, and EITHER functions that are normally used in droplet
@@ -9382,7 +9393,12 @@ exports.generateDropletModeOptions = function (codeFunctions) {
 
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
-      modeOptions.blockFunctions[i] = codeFunctions[i].func;
+      if (codeFunctions[i].category === 'value') {
+        modeOptions.valueFunctions[i] = codeFunctions[i].func;
+      }
+      else if (codeFunctions[i].category !== 'hidden') {
+        modeOptions.blockFunctions[i] = codeFunctions[i].func;
+      }
     }
   }
 
@@ -9461,9 +9477,9 @@ exports.end = function(d){return "vége"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Akkor van értelme az \"Ismétel\" vagy a \"Ha\" blokknak, ha van  bennük egy vagy több blokk. Bizonyosodj meg róla, hogy a belső blokk megfelelően illeszkedik a külső blokkhoz."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "A függvény blokknak szüksége van további elemekre a belsejében."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "A függvény blokkok belsejében szükség van több elemre, hogy működjön."};
 
-exports.extraTopBlocks = function(d){return "Van különálló blokkod. Vagy csatlakoztasd a \"futtatáskor\"/\"when run\" blokkhoz vagy töröld."};
+exports.extraTopBlocks = function(d){return "Van különálló blokkod. Vagy csatlakoztasd a \"futtatáskor\" blokkhoz, vagy töröld."};
 
 exports.finalStage = function(d){return "Gratulálok! Teljesítetted az utolsó szakaszt."};
 
@@ -9503,7 +9519,7 @@ exports.numLinesOfCodeWritten = function(d){return "Éppen most írtál újabb "
 
 exports.play = function(d){return "lejátszás"};
 
-exports.puzzleTitle = function(d){return v(d,"puzzle_number")+". feladvány a "+v(d,"stage_total")+" -ból"};
+exports.puzzleTitle = function(d){return v(d,"puzzle_number")+"/"+v(d,"stage_total")+". feladvány"};
 
 exports.repeat = function(d){return "ismételd"};
 
@@ -9547,9 +9563,9 @@ exports.saveToGallery = function(d){return "Mentés a galériába"};
 
 exports.savedToGallery = function(d){return "Elmentve a galáriádba"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Sajnálom, de nem tudtam megosztani ezt a programot."};
 
-exports.typeFuncs = function(d){return "Elérhető funkciók:%1"};
+exports.typeFuncs = function(d){return "Elérhető függvények:%1"};
 
 exports.typeHint = function(d){return "Vedd figyelembe, hogy a zárójelek és a pontosvesszők is szükségesek."};
 
@@ -9557,7 +9573,7 @@ exports.workspaceHeader = function(d){return "Építsd össze a blokkokat itt: "
 
 exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
 
-exports.infinity = function(d){return "Végtelenség"};
+exports.infinity = function(d){return "Végtelen"};
 
 exports.rotateText = function(d){return "Fordítsd el a készüléket."};
 
@@ -9654,7 +9670,7 @@ exports.reinfFeedbackMsg = function(d){return "Nyomd meg az \"Próbáld újra\" 
 
 exports.scoreText = function(d){return "Pontszám: "+v(d,"playerScore")};
 
-exports.setBackground = function(d){return "set scene"};
+exports.setBackground = function(d){return "jelenet beállítása"};
 
 exports.setBackgroundRandom = function(d){return "Jelenet kiválasztása: Véletlen"};
 
@@ -9700,7 +9716,7 @@ exports.setGravityVeryHigh = function(d){return "Nagyon erős gravitáció beál
 
 exports.setGravityTooltip = function(d){return "A pálya gravitációjának beállítása"};
 
-exports.setGround = function(d){return "set ground"};
+exports.setGround = function(d){return "talaj típusa"};
 
 exports.setGroundRandom = function(d){return "Véletlenszerű talaj beállítása"};
 
@@ -9712,11 +9728,11 @@ exports.setGroundUnderwater = function(d){return "Talaj beállítása: Vízalatt
 
 exports.setGroundCave = function(d){return "Talaj beállítása: Barlang"};
 
-exports.setGroundSanta = function(d){return "set ground Santa"};
+exports.setGroundSanta = function(d){return "talaj típusa: Mikulás"};
 
-exports.setGroundLava = function(d){return "set ground Lava"};
+exports.setGroundLava = function(d){return "Talaj típusa: Láva"};
 
-exports.setGroundTooltip = function(d){return "Sets the ground image"};
+exports.setGroundTooltip = function(d){return "Beállítja a talaj típusát"};
 
 exports.setObstacle = function(d){return "set obstacle"};
 
@@ -9736,7 +9752,7 @@ exports.setObstacleLaser = function(d){return "Akadály beállítása: Lézer"};
 
 exports.setObstacleTooltip = function(d){return "Sets the obstacle image"};
 
-exports.setPlayer = function(d){return "set player"};
+exports.setPlayer = function(d){return "játékos típusa"};
 
 exports.setPlayerRandom = function(d){return "Karakter beállítása: Véletlenszerű"};
 
@@ -9756,7 +9772,7 @@ exports.setPlayerShark = function(d){return "Karakter beállítása: Cápa"};
 
 exports.setPlayerEaster = function(d){return "Karakter beállítása: Húsvéti nyuszi"};
 
-exports.setPlayerBatman = function(d){return "set player Bat guy"};
+exports.setPlayerBatman = function(d){return "játékos típusa: Denevér ember"};
 
 exports.setPlayerSubmarine = function(d){return "Karakter beállítása: Tengeralattjáró"};
 
@@ -9834,7 +9850,7 @@ exports.whenCollideObstacleTooltip = function(d){return "Végrehajtja a lenti ut
 
 exports.whenEnterObstacle = function(d){return "ha átjut egy akadályon"};
 
-exports.whenEnterObstacleTooltip = function(d){return "Execute the actions below when Flappy enters an obstacle."};
+exports.whenEnterObstacleTooltip = function(d){return "Végrehajtja a lenti utasítást, ha Flappy átmegy egy akadályon."};
 
 exports.whenRunButtonClick = function(d){return "amikor a játék elindul"};
 

@@ -1,33 +1,35 @@
-tk:
+th:
   slides:
     maze_intro:
       1:
         image: notes/hoc1_1.jpg
-        text: "Welcome to your first hour of code! Let's dive right into your first taste of programming."
+        text: ยินดีต้อนรับสู่ Hour of Code มาลองลิ้มรสการเขียนโปรแกรมดูสิ
       2:
         image: notes/hoc1_2.jpg
-        text: "We'll be using Blockly, a visual programming language where you drag and drop blocks to write code."
+        text: 'เราจะใช้  Blockly  เป็นภาษาในการเขียนโปรแกรมที่คลิ๊กลากแล้ววางลงเพื่อที่จะเขียนโค้ด.'
       3:
         image: notes/hoc1_3.jpg
-        text: 'Most code is typed, but Blockly is visual. Each blocks corresponds to a line of "real" code.'
+        text: 'Blockly  คือมิติใหม่ที่มากกว่าการเขียนโค้ดซึ่งทุก blocks ที่วางลงจะเหมือนเขียนโค้ดจริงๆ.'
       4:
         image: notes/hoc1_4.jpg
-        text: "You'll learn the foundations of computer science, concepts which are used anywhere from making apps to controlling the Mars rover."
+        text: คุณจะได้เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์, คำจำกัดความซึ่งนำไปใช้กันอย่างแพร่หลาย.
       5:
         image: notes/hoc1_5.jpg
-        text: A program is a set of instructions for your computer to follow.
+        text: โปรแกรมถูกติดตั้งเพื่อให้คอมพิวเตอร์ของคุณเป็นสื่อกลางในการสอน.
       6:
         image: notes/hoc1_6.jpg
-        text: The goal of your first program is to get an Angry Bird through a maze to hit a Green Pig.
+        text: 'เป้าหมายของโปรแกรมแรกของคุณคือการทำให้  Angry Bird  ชน  หมูเขียว.'
       7:
         image: notes/hoc1_7.jpg
-        text: The left side is the maze where your program is run. The instructions for each puzzle are below the maze.
+        text: 'ช่องทางซ้ายคือฐานให้โปรแกรมของคุณรัน  เป็นฐานหลักของทุกชิ้นส่วน.'
       8:
         image: notes/hoc1_8.jpg
-        text: "The middle toolbox has the commands for the Angry Bird. You'll use these to build your code."
+        text: กล่องเครื่องมือส่วนกลางใช้เป็นคำสั่งสำหรับ Angry Bird. คุณอาจใช้สิ่งนี้สร้างโค้ดของคุณ.
       9:
         image: notes/hoc1_9.jpg
-        text: "On the right is your workspace where you'll drag blocks from the toolbox to build your program. To delete a block, drag it to the trash in the corner."
+        text: |
+          ด้านบนขวาคือช่องทางทำงานของคุณซึ่งคุณจะลาก blocks จากกล่องเครื่องมือเพื่อสร้างโปรแกรมของคุณ.
+          หากคุณจะลบบล็อก  ให้คุณลากบล็อกไปวางตรงถังขยะที่มุม.
       10:
         image: notes/hoc1_10.jpg
         text: 'Each block is one instruction. If you drag a "move forward" block to your workspace and press "Run Program", the bird moves one space on the maze.'
@@ -36,7 +38,7 @@ tk:
         text: To do more than one action, you can drag many block to your workspace and attach them together. The bird will do the commands from top to bottom.
       12:
         image: notes/hoc1_12.jpg
-        text: 'If you run a program and want to fix it and try again, press the "Reset" button.'
+        text: ถ้าคุณรันโปรแกรมแล้วต้องการแก้ไข กรุณากดปุ่ม Reset
       13:
         image: notes/hoc1_13.jpg
         text: "Let's go get those pigs!"
@@ -196,12 +198,12 @@ tk:
       5:
         image: notes/stage13_5.jpg
         text: |-
-          Let's put the "fun" back in "FUNction!" 
+          Let's put the "fun" back in "FUNction!"
     loop_while:
       1:
         image: notes/stage9_5.jpg
         text: |-
-          Hi, I'm Makinde! Let's learn about the "while block." 
+          Hi, I'm Makinde! Let's learn about the "while block."
       2:
         image: notes/stage9_6.jpg
         text: 'The "while block" will do whatever you put inside it AS LONG AS the statement on the top is TRUE.'

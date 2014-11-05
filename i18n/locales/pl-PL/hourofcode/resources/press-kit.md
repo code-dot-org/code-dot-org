@@ -1,12 +1,14 @@
 * * *
 
-title: Materiały layout: wide
+title: Materiały layout: wide nav: resources_nav
 
 * * *
 
-## Przydatne statystyki informatyczne
+[<button style="float: right; margin-top: 50px">Sign up your event</button>](/#join)
 
-*Wszelkie zapytania odnośnie prasy i mediów kieruj na <press@code.org>*
+## Jak przyciągnąć uwagę mediów do twojej akcji "Godzina Kodowania"
+
+*For all press and media inquiries, contact <press@code.org>*
 
 ### Najważniejsze wskazówki
 
@@ -57,3 +59,5 @@ Code.org® is a 501c3 public non-profit dedicated to expanding participation in 
 
   
 Find more resources and sample emails [here](<%= hoc_uri('/resources') %>).
+
+<a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>

@@ -76,7 +76,7 @@ uk:
     gender: "Стать (необов'язково)"
     birthday: "День народження (необов'язково)"
     age: Вік
-    user_type: Are you a student or teacher?
+    user_type: Ви учень або вчитель?
     submit: Зареєструватися
     teacher: Ви вчитель?
     valid_username: Доступно!

@@ -1,12 +1,14 @@
 * * *
 
-title: Resurse layout: wide
+title: Resurse layout: wide nav: resources_nav
 
 * * *
 
-## Statistici utile despre tehnologia computerelor
+[<button style="float: right; margin-top: 50px">Sign up your event</button>](/#join)
 
-*Pentru întrebări din partea presei și mass-media contactați <press@code.org>*
+## Cum să atragi mass-media la evenimentul Hour of Code organizat de tine
+
+*For all press and media inquiries, contact <press@code.org>*
 
 ### Sfaturi utile
 
@@ -17,7 +19,7 @@ title: Resurse layout: wide
 
 ### Ghid pas cu pas:
 
-**1. Planifică evenimentul tău**
+**1. Plan your event**
 
   * Planifică o întâlnire pentru a începe evenimentul.
   * Trimite [o scrisoare](<%= hoc_uri('/resources/#sample-emails') %>) părinţilor. Le puteți cere să răspândească vestea evenimentului.
@@ -25,35 +27,37 @@ title: Resurse layout: wide
   * Organizează activităţi de grup (cum ar fi o demonstraţie de activitate de programare "unplugged"), sau prezentați activităţi create şi conduse de elevi.
   * Arătați [noul clip video Hour of Code](<%= hoc_uri('/') %>) sau unul dintre [acestea](<%= hoc_uri('/resources#videos') %>) pentru motivare.
 
-**2. identifică reporteri locali care se ocupă de evenimente locale despre educaţie.**
+**2. Identify specific local reporters that cover education or local events.**
 
-Gândește-te la un ziar local, post tv, post de radio sau blog.
+Think a local newspaper, TV station, radio station or blog.
 
-Caută online informațiile de contact ale reporterului. Dacă nu găsești, sună publicația pentru a le cere, sau trimite email la o adresa de contact a acesteia şi cere ca mesajul tău să fie forwardat către reporterul corespunzător.
+Look online to find reporter contact information. If you can't find it, call the publication to ask, or email a general tips@PUBLICATIONNAME.com email address and ask for your message to be directed to the correct reporter.
 
-**3. Contactează media locală**
+**3. Contact local media**
 
-Cel mai bun mod de a ajunge la ei este e-mail-ul. Ar trebui să fie scurt şi să comunice: de ce ar trebui să pese altor persoane despre acest eveniment? Include informaţii de contact (inclusiv un număr de telefon mobil) pentru persoana prezentă la eveniment. **Aici [exemplu de mesaj pentru media](<%= hoc_uri('/resources#sample-emails') %>):**
+The best way to reach out is by email. It should be short and communicate: why should other people care about this event? Include contact information (including a cellphone number) for who will be on site at the event. **See a [sample pitch to media](<%= hoc_uri('/resources#sample-emails') %>):**
 
-**4. Pregătește raspunsuri la întrebări despre evenimentul dumneavoastră. Iată câteva exemple:**
+**4. Prepare to field questions about your school event. Here are some examples:**
 
-*De ce organizează școala ta Hour of Code?*
+*Why is your school doing an Hour of Code?*
 
-În timp ce mulți dintre noi ştiu că este important ca elevii să înveţe cum să navigheze prin lumea saturată de tehnologie în zilele noastre, mulţi profesori nu au experienţă în tehnologia computerelor şi nu ştiu de unde să înceapă. Acest eveniment este o şansă pentru noi toţi pentru a vedea ce este de fapt tehnologia computerelor.
+While all of us know that it’s important for students to learn how to navigate today’s tech-saturated world, many teachers aren’t experienced in computer science and don’t know where to start. This event is a chance for all of us to see what computer science is about.
 
-Sperăm că va trezi interesul elevilor pentru a continua învăţarea. Cercetarile, arată de asemenea, că sunt copii care înteleg concepte de programare înainte ca ei să ştie cum să citească sau să scrie. De fapt, creierele lor sunt mai receptive la limbajul computerului la o vârstă fragedă, la fel ca și în cazul limbilor straine.
+We hope it’ll spark interest in students to keep learning. Research also shows that kids pick up programming concepts before they know how to read and write. In fact, their brains are more receptive to computer languages at a young age, just like foreign languages.
 
-*De ce este important acest lucru?*
+*Why is this important?*
 
-În China, fiecare elev dă examen la tehnologia computerelor pentru a absolvi Liceul. În SUA, 90 la sută din şcoli nici macar nu predau tehnologia computerelor. Este timpul să prindem din urmă secolul 21. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them the confidence and know-how to succeed.
+In China, every students takes computer science to graduate high school. In the U.S., 90 percent of schools don’t even teach it. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them the confidence and know-how to succeed.
 
-**Mai multe detalii şi un citat pe care îl puteţi utiliza în materiale**
+**More details and a quote you can use in materials**
 
-"Hour of Code este proiectat să demitizeze programarea şi arată că tehnologia computerelor este ştiinţă accesibilă, oricine poate învăţa elementele de bază", a spus Hadi Partovi, fondator şi CEO al Code.org. "Anul trecut, într-o săptămână, 15 milioane de elevi au încercat o oră de programare. Acum noi țintim la 100 de milioane în întreaga lume pentru a demonstra că cererea pentru educație relevantă în tehnonogia computerelor în secolul 21 traversează toate frontierele şi nu cunoaşte graniţe."
+"The Hour of Code is designed to demystify code and show that computer science is not rocket-science, anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "In one week last year, 15 million students tried an Hour of Code. Now we're aiming for 100 million worldwide to prove that the demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
 
-**Despre Code.org**
+**About Code.org**
 
-Code.org® este o organizație non-profit dedicată extinderii educației cu privire la tehnologia computerelor și programare, prin promovarea acesteia în școli și prin creșterea participării femeilor dar și a elevilor minorități. Viziunea organizației este că fiecare elev din fiecare şcoală ar trebui să aibă posibilitatea să învețe programare. După lansarea în 2013, Code.org a organizat campania Hour of Code — care a introdus tehnologia computerelor la milioane de elevi — stabilind un parteneriat cu mai mult de 30 de districte şcolare la nivel naţional şi lansând Code Studio, o platformă de învațare open-source online, pentru toate vârstele. For more information, please visit: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
+Code.org® is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign — which has introduced millions of students to computer science — partnered with more than 30 public school districts nationwide, and launched Code Studio, an open-source, online learning platform for all ages. For more information, please visit: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
-Găsiţi mai multe resurse şi exemple de e-mailuri [ aici](<%= hoc_uri('/resources') %>).
+Find more resources and sample emails [here](<%= hoc_uri('/resources') %>).
+
+<a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>

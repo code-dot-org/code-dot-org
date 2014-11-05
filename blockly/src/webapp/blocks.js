@@ -24,7 +24,7 @@ var generateSetterCode = function (opts) {
       _(opts.ctx.VALUES)
         .map(function (item) { return item[1]; })
         .without(RANDOM_VALUE, HIDDEN_VALUE, CLICK_VALUE);
-    value = 'Webapp.random([' + possibleValues + '])';
+    value = 'Webapp.randomFromArray([' + possibleValues + '])';
   }
 
   return 'Webapp.' + opts.name + '(\'block_id_' + opts.ctx.id + '\', ' +
@@ -42,27 +42,8 @@ exports.install = function(blockly, blockInstallOptions) {
     return '\n';
   };
 
-  installTurnBlack(blockly, generator, blockInstallOptions);
   installCreateHtmlBlock(blockly, generator, blockInstallOptions);
 };
-
-function installTurnBlack(blockly, generator, blockInstallOptions) {
-  blockly.Blocks.webapp_turnBlack = {
-    helpUrl: '',
-    init: function() {
-      this.setHSV(184, 1.00, 0.74);
-      this.appendDummyInput().appendTitle(msg.turnBlack());
-      this.setPreviousStatement(true);
-      this.setInputsInline(true);
-      this.setNextStatement(true);
-      this.setTooltip(msg.turnBlackTooltip());
-    }
-  };
-
-  generator.webapp_turnBlack = function() {
-    return 'Webapp.turnBlack(\'block_id_' + this.id + '\');\n';
-  };
-}
 
 function installCreateHtmlBlock(blockly, generator, blockInstallOptions) {
   blockly.Blocks.webapp_createHtmlBlock = {

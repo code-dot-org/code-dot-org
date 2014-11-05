@@ -11568,11 +11568,16 @@ exports.generateCodeAliases = function (codeFunctions, parentObjName) {
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
       var cf = codeFunctions[i];
-      code += "var " + cf.func +
-          " = function() { var newArgs = " +
+      code += "var " + cf.func + " = function() { ";
+      if (cf.idArgNone) {
+        code += "return " + parentObjName + "." + cf.func + ".apply(" +
+                parentObjName + ", arguments); };\n";
+      } else {
+        code += "var newArgs = " +
           (cf.idArgLast ? "arguments.concat(['']);" : "[''].concat(arguments);") +
           " return " + parentObjName + "." + cf.func +
           ".apply(" + parentObjName + ", newArgs); };\n";
+      }
     }
   }
   return code;
@@ -11678,8 +11683,11 @@ exports.generateDropletPalette = function (codeFunctions) {
   };
 
   if (codeFunctions) {
-    for (var i = 0; i < codeFunctions.length; i++) {
+    for (var i = 0, blockIndex = 0; i < codeFunctions.length; i++) {
       var cf = codeFunctions[i];
+      if (cf.category === 'hidden') {
+        continue;
+      }
       var block = cf.func + "(";
       if (cf.params) {
         for (var j = 0; j < cf.params.length; j++) {
@@ -11694,7 +11702,8 @@ exports.generateDropletPalette = function (codeFunctions) {
         block: block,
         title: cf.func
       };
-      appPaletteCategory.blocks[i] = blockPair;
+      appPaletteCategory.blocks[blockIndex] = blockPair;
+      blockIndex++;
     }
   }
 
@@ -11709,6 +11718,8 @@ exports.generateDropletPalette = function (codeFunctions) {
 exports.generateDropletModeOptions = function (codeFunctions) {
   var modeOptions = {
     blockFunctions: [],
+    valueFunctions: [],
+    eitherFunctions: [],
   };
 
   // BLOCK, VALUE, and EITHER functions that are normally used in droplet
@@ -11722,7 +11733,12 @@ exports.generateDropletModeOptions = function (codeFunctions) {
 
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
-      modeOptions.blockFunctions[i] = codeFunctions[i].func;
+      if (codeFunctions[i].category === 'value') {
+        modeOptions.valueFunctions[i] = codeFunctions[i].func;
+      }
+      else if (codeFunctions[i].category !== 'hidden') {
+        modeOptions.blockFunctions[i] = codeFunctions[i].func;
+      }
     }
   }
 
@@ -11761,7 +11777,7 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.nl=function(n){return n===1?"one":"other"}
 exports.bounceBall = function(d){return "laat de bal botsen"};
 
-exports.bounceBallTooltip = function(d){return "Bounce a ball off of an object."};
+exports.bounceBallTooltip = function(d){return "Stuiter de bal tegen een object."};
 
 exports.continue = function(d){return "Doorgaan"};
 
@@ -11789,9 +11805,9 @@ exports.ifTooltip = function(d){return "als er een pad is in de aangegeven richt
 
 exports.ifelseTooltip = function(d){return "als er een pad in de opgegeven richting is, doe je het eerste actie blok. anders, doe je de tweede actie blok."};
 
-exports.incrementOpponentScore = function(d){return "increment opponent score"};
+exports.incrementOpponentScore = function(d){return "punt voor de tegenstander"};
 
-exports.incrementOpponentScoreTooltip = function(d){return "Add one to the current opponent score."};
+exports.incrementOpponentScoreTooltip = function(d){return "Geef de tegenstander een punt."};
 
 exports.incrementPlayerScore = function(d){return "Scoor punt"};
 
@@ -11799,7 +11815,7 @@ exports.incrementPlayerScoreTooltip = function(d){return "Een punt toevoegen aan
 
 exports.isWall = function(d){return "is dit een muur"};
 
-exports.isWallTooltip = function(d){return "Returns true if there is a wall here"};
+exports.isWallTooltip = function(d){return "Geeft waar als er hier een muur is"};
 
 exports.launchBall = function(d){return "lanceer nieuwe bal"};
 
@@ -11809,7 +11825,7 @@ exports.makeYourOwn = function(d){return "Maak je eigen Bounce-spel"};
 
 exports.moveDown = function(d){return "omlaag"};
 
-exports.moveDownTooltip = function(d){return "Move the paddle down."};
+exports.moveDownTooltip = function(d){return "Beweeg het batje naar beneden."};
 
 exports.moveForward = function(d){return "beweeg vooruit"};
 
@@ -11817,15 +11833,15 @@ exports.moveForwardTooltip = function(d){return "Beweeg me een plek naar voren."
 
 exports.moveLeft = function(d){return "naar links"};
 
-exports.moveLeftTooltip = function(d){return "Move the paddle to the left."};
+exports.moveLeftTooltip = function(d){return "Beweeg het batje naar links."};
 
 exports.moveRight = function(d){return "naar rechts"};
 
-exports.moveRightTooltip = function(d){return "Move the paddle to the right."};
+exports.moveRightTooltip = function(d){return "Beweeg het batje naar rechts."};
 
 exports.moveUp = function(d){return "omhoog"};
 
-exports.moveUpTooltip = function(d){return "Move the paddle up."};
+exports.moveUpTooltip = function(d){return "Beweeg het batje naar boven."};
 
 exports.nextLevel = function(d){return "Gefeliciteerd! Je hebt de puzzel voltooid."};
 
@@ -11949,13 +11965,13 @@ exports.turnRight = function(d){return "Draai rechtsom"};
 
 exports.turnTooltip = function(d){return "Draait me 90 graden linksom of rechtsom."};
 
-exports.whenBallInGoal = function(d){return "when ball in goal"};
+exports.whenBallInGoal = function(d){return "Wanneer de bal in het doel is"};
 
-exports.whenBallInGoalTooltip = function(d){return "Execute the actions below when a ball enters the goal."};
+exports.whenBallInGoalTooltip = function(d){return "Voer de acties hieronder uit wanneer een bal het doel ingaat."};
 
-exports.whenBallMissesPaddle = function(d){return "when ball misses paddle"};
+exports.whenBallMissesPaddle = function(d){return "wanneer de bal het batje mist"};
 
-exports.whenBallMissesPaddleTooltip = function(d){return "Execute the actions below when a ball misses the paddle."};
+exports.whenBallMissesPaddleTooltip = function(d){return "Voer de acties hieronder uit wanneer een bal het batje mist."};
 
 exports.whenDown = function(d){return "als pijltje naar beneden"};
 
@@ -11969,9 +11985,9 @@ exports.whenLeft = function(d){return "als pijltje naar links"};
 
 exports.whenLeftTooltip = function(d){return "Voer de acties hieronder uit als pijltje naar links wordt ingedrukt."};
 
-exports.whenPaddleCollided = function(d){return "when ball hits paddle"};
+exports.whenPaddleCollided = function(d){return "wanneer de bal het batje raakt"};
 
-exports.whenPaddleCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a paddle."};
+exports.whenPaddleCollidedTooltip = function(d){return "Voer de actie hieronder uit wanneer een bal botst met een batje."};
 
 exports.whenRight = function(d){return "als pijltje naar rechts"};
 
@@ -11981,9 +11997,9 @@ exports.whenUp = function(d){return "als pijltje naar boven"};
 
 exports.whenUpTooltip = function(d){return "Voer de acties hieronder uit als pijltje naar boven wordt ingedrukt."};
 
-exports.whenWallCollided = function(d){return "when ball hits wall"};
+exports.whenWallCollided = function(d){return "wanneer de bal een muur raakt"};
 
-exports.whenWallCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a wall."};
+exports.whenWallCollidedTooltip = function(d){return "Voer de actie hieronder uit wanneer een bal botst met een muur."};
 
 exports.whileMsg = function(d){return "terwijl"};
 

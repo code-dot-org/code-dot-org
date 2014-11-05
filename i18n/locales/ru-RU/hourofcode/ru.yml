@@ -11,29 +11,6 @@ ru:
   header_menu_faq: Часто задаваемые вопросы
   header_menu_prizes: Призы
   header_menu_uk_code_org: uk.code.org
-  choose_country_header: Участвуйте во всем мире!
-  country_al: Albania
-  country_ar: Аргентина
-  country_au: Австралия
-  country_br: Бразилия
-  country_bg: Болгария
-  country_de: Германия
-  country_es: Латинская Америка
-  country_eu: Европейский Союз
-  country_gr: Греция
-  country_hr: Хорватия
-  country_id: Индонезия
-  country_it: Италия
-  country_jp: Япония
-  country_me: Ближний Восток и Северная Африка
-  country_my: Malaysia
-  country_nz: Новая Зеландия
-  country_ro: Румыния
-  country_ru: Россия
-  country_ua: Украина
-  country_uk: Великобритания
-  country_us: Соединенные Штаты Америки
-  country_vn: Вьетнам
   company_4-H: 4-H Youth Development
   company_bgca: Boys and Girls Club of America
   company_cgcs: Council of the Great City Schools
@@ -178,6 +155,17 @@ ru:
   resources_emails: Образцы писем
   resources_stats: Полезные материалы по информатике
   resources_press_kit: Материалы для прессы
+  events_title: All Hour of Code Events
+  events_nav_all: All Events
+  events_nav_classrooms: Classrooms
+  events_nav_whole_schools: Whole Schools
+  events_nav_special: Special Events
+  events_all_title: All Hour of Code events
+  events_classroom_title: Classroom Hour of Code events
+  events_whole_school_title: Whole-school Hour of Code events
+  events_special_title: Special Hour of Code events
+  event: event
+  events: events
   footer_copyright_message: Авторские права 2014 Code.org. Все права защищены.
   footer_trademark_message: Hour of Code™ является торговой маркой Code.org.
   footer_menu_partners: Партнеры

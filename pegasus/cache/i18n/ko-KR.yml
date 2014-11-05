@@ -1,5 +1,6 @@
 "ko-KR":
   hello: Hello world
+  select_language: Please select your language
   computer_science: "컴퓨터과학(Computer Science, 정보과학)"
   computer_science_edweek: "컴퓨터과학(Computer Science, 정보과학) 교육 주간"
   csedweek_dates: 2013년 12월 9일 부터 15일 까지

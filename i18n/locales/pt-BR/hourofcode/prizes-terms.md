@@ -18,16 +18,16 @@ A Code.org entrará em contato com os organizadores após a Hora de Código (8-1
 
 ## Chat com vídeo com um orador convidado
 
-Prize limited to K-12 classrooms in the U.S. and Canada only. To qualify, sign up your classroom by November 14, 2014. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligbile to win.
+Prêmio limitado para turmas do ensino fundamental e médio dos EUA e Canadá. Para se qualificar, inscreva sua sala até 14 de novembro de 2014. A Code.org selecionará as turmas vencedoras, fornecerá um horário para o bate-papo on-line e trabalhará com o professor apropriado para definir os detalhes da tecnologia. Não é preciso que a escola toda se inscreva para se qualificar para este prêmio. Tanto escolas públicas como privadas podem concorrer.
 
-## Kits de laptops (ou US$10.000 para outra tecnologia)
+## Conjunto de laptops para sala de aula (ou US$10.000 para outra tecnologia)
 
-Prêmio limitado apenas às escolas públicas de ensino fundamental e médio dos EUA. To qualify, your entire school must register for the Hour of Code by November 14, 2014. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2014.
+Prêmio limitado apenas às escolas públicas de ensino fundamental e médio dos EUA. Para se qualificar, sua escola inteira deve se inscrever na Hora do Código até 14 de novembro de 2014. Uma escola de cada Estado dos EUA receberá um conjunto de computadores para a sala de aula. A Code.org vai selecionar e notificar os vencedores por e-mail, em 1º de dezembro de 2014.
 
-Para esclarecer, isso não é um sorteio ou um concurso envolvendo mero acaso.
+Para esclarecer, essa premiação não será feita por sorteio, nem como concurso envolvendo sorte.
 
-1) Não há nenhum interesse financeiro ou risco envolvido na inscrição - qualquer escola ou sala de aula poderão participar, sem qualquer pagamento para a Code.org ou qualquer outra organização
+1) Não há nenhum interesse financeiro ou risco envolvido na inscrição - qualquer escola ou sala de aula pode participar, sem qualquer pagamento para a Code.org ou qualquer outra organização
 
-2) Os vencedores serão selecionados somente entre escolas em que a sala de aula inteira (ou escola) participa de uma Hora de Código, que envolve um teste de habilidade coletiva dos estudantes e dos professores.
+2) Os vencedores serão selecionados somente dentre as escolas em que a sala de aula inteira (ou escola) participar de uma Hora de Código, que envolve um teste de habilidade coletiva dos estudantes e dos professores.
 
 <% end %>

@@ -118,6 +118,8 @@
   "setBackgroundTennis":"وضع خلفية للتنس",
   "setBackgroundWinter":"وضع خلفية الشتاء",
   "setBackgroundTooltip":"تعيين صورة الخلفية",
+  "setEnemySpeed":"set enemy speed",
+  "setPlayerSpeed":"set player speed",
   "setScoreText":"تعيين نقاط",
   "setScoreTextTooltip":"تعيين النص ليتم عرضها في منطقة نقاط.",
   "setSpriteEmotionAngry":"لمزاج غاضب",

@@ -1,4 +1,4 @@
-tk:
+th:
   data:
     multi:
       2-3 artist debug multi 1:
@@ -482,7 +482,7 @@ tk:
         When converting a circle to code, the correct order is: When converting a circle to code, the correct order is
         top, left, right: top, left, right
         left, right, top: left, right, top
-        random: random
+        random: สุ่ม
         left top right: left top right
       Circle to code:
         Code from Circle: Code from Circle
@@ -521,10 +521,16 @@ tk:
         /script_assets/matches/images/a3.jpg: /script_assets/matches/images/a3.jpg
         /script_assets/matches/images/a4.jpg: /script_assets/matches/images/a4.jpg
       test multi text:
-        Presidents: Presidents
-        This multiple choice is all about the presidents of the United States.: This multiple choice is all about the presidents of the United States.
-        Who was the first president of the USA?: Who was the first president of the USA?
+        Presidents: ประธานาธิบดี
+        This multiple choice is all about the presidents of the United States.: โจทย์ข้อนี้เกี่ยวกับประธานาธิบดีของสหรัฐอเมริกา
+        Who was the first president of the USA?: ประธานาธิบดีคนแรกของสหรัฐอเมริกาคือใคร
         Fred Flintstone: Fred Flintstone
         Martha Washington: Martha Washington
         George Washington: George Washington
         George Jetson: George Jetson
+      unique level name here:
+        title: title
+        description here: description here
+        Question: Question
+        wrong answer: wrong answer
+        right answer: right answer
