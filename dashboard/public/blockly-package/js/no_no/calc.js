@@ -7754,11 +7754,16 @@ exports.generateCodeAliases = function (codeFunctions, parentObjName) {
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
       var cf = codeFunctions[i];
-      code += "var " + cf.func +
-          " = function() { var newArgs = " +
+      code += "var " + cf.func + " = function() { ";
+      if (cf.idArgNone) {
+        code += "return " + parentObjName + "." + cf.func + ".apply(" +
+                parentObjName + ", arguments); };\n";
+      } else {
+        code += "var newArgs = " +
           (cf.idArgLast ? "arguments.concat(['']);" : "[''].concat(arguments);") +
           " return " + parentObjName + "." + cf.func +
           ".apply(" + parentObjName + ", newArgs); };\n";
+      }
     }
   }
   return code;
@@ -7864,8 +7869,11 @@ exports.generateDropletPalette = function (codeFunctions) {
   };
 
   if (codeFunctions) {
-    for (var i = 0; i < codeFunctions.length; i++) {
+    for (var i = 0, blockIndex = 0; i < codeFunctions.length; i++) {
       var cf = codeFunctions[i];
+      if (cf.category === 'hidden') {
+        continue;
+      }
       var block = cf.func + "(";
       if (cf.params) {
         for (var j = 0; j < cf.params.length; j++) {
@@ -7880,7 +7888,8 @@ exports.generateDropletPalette = function (codeFunctions) {
         block: block,
         title: cf.func
       };
-      appPaletteCategory.blocks[i] = blockPair;
+      appPaletteCategory.blocks[blockIndex] = blockPair;
+      blockIndex++;
     }
   }
 
@@ -7895,6 +7904,8 @@ exports.generateDropletPalette = function (codeFunctions) {
 exports.generateDropletModeOptions = function (codeFunctions) {
   var modeOptions = {
     blockFunctions: [],
+    valueFunctions: [],
+    eitherFunctions: [],
   };
 
   // BLOCK, VALUE, and EITHER functions that are normally used in droplet
@@ -7908,7 +7919,12 @@ exports.generateDropletModeOptions = function (codeFunctions) {
 
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
-      modeOptions.blockFunctions[i] = codeFunctions[i].func;
+      if (codeFunctions[i].category === 'value') {
+        modeOptions.valueFunctions[i] = codeFunctions[i].func;
+      }
+      else if (codeFunctions[i].category !== 'hidden') {
+        modeOptions.blockFunctions[i] = codeFunctions[i].func;
+      }
     }
   }
 
