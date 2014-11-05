@@ -17,7 +17,7 @@ module StagesHelper
         return title.html_safe
       end
     else # script only has one stage/game, use the script name
-      data_t_suffix('script.name', @script.name, "title")
+      data_t_suffix('script.name', script.name, "title")
     end
   end
 
