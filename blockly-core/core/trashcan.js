@@ -28,11 +28,11 @@ goog.provide('Blockly.Trashcan');
 
 /**
  * Class for a trash can.
- * @param {!Blockly.Workspace} workspace The workspace to sit in.
+ * @param {!Blockly.BlockSpace} blockSpace The blockSpace to sit in.
  * @constructor
  */
-Blockly.Trashcan = function(workspace) {
-  this.workspace_ = workspace;
+Blockly.Trashcan = function(blockSpace) {
+  this.blockSpace_ = blockSpace;
 };
 
 /**
@@ -64,14 +64,14 @@ Blockly.Trashcan.prototype.WIDTH_ = 70;
 Blockly.Trashcan.prototype.HEIGHT_ = 70;
 
 /**
- * Distance between trashcan and top edge of workspace.
+ * Distance between trashcan and top edge of blockSpace.
  * @type {number}
  * @private
  */
 Blockly.Trashcan.prototype.MARGIN_TOP_ = 15;
 
 /**
- * Distance between trashcan and right edge of workspace.
+ * Distance between trashcan and right edge of blockSpace.
  * @type {number}
  * @private
  */
@@ -174,7 +174,7 @@ Blockly.Trashcan.prototype.dispose = function() {
   }
   this.svgClosedCan_ = null;
   this.svgOpenCan_ = null;
-  this.workspace_ = null;
+  this.blockSpace_ = null;
 };
 
 /**
@@ -182,16 +182,15 @@ Blockly.Trashcan.prototype.dispose = function() {
  * @private
  */
 Blockly.Trashcan.prototype.position_ = function() {
-  var metrics = this.workspace_.getMetrics();
+  var metrics = this.blockSpace_.getMetrics();
   if (!metrics) {
-    // There are no metrics available (workspace is probably not visible).
+    // There are no metrics available (blockSpace is probably not visible).
     return;
   }
   if (Blockly.RTL) {
     this.left_ = this.MARGIN_SIDE_;
   } else {
-    this.left_ = metrics.viewWidth + metrics.absoluteLeft -
-        this.WIDTH_ - this.MARGIN_SIDE_;
+    this.left_ = metrics.viewWidth - this.WIDTH_ - this.MARGIN_SIDE_;
   }
   this.top_ = this.MARGIN_TOP_;
   this.svgGroup_.setAttribute('transform',
@@ -214,8 +213,8 @@ Blockly.Trashcan.prototype.onMouseMove = function(e) {
   if (!this.svgGroup_) {
     return;
   }
-  var mouseXY = Blockly.mouseToSvg(e);
-  var trashXY = Blockly.getSvgXY_(this.svgGroup_);
+  var mouseXY = Blockly.mouseToSvg(e, this.blockSpace_.blockSpaceEditor.svg_);
+  var trashXY = Blockly.getSvgXY_(this.svgGroup_, this.blockSpace_.blockSpaceEditor.svg_);
   if (Blockly.ieVersion() && Blockly.ieVersion() <= 10) {
     // Revert to HTML coordinates since getScreenCTM is broken in IE <= 10.
     mouseXY = {
