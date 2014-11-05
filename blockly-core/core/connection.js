@@ -142,12 +142,9 @@ Blockly.Connection.prototype.connect = function(connectTo) {
     }
   }
 
-  // Check if an ancestor block is marked userHidden
-  for (var block = this.sourceBlock_; block = block.parentBlock_; block) {
-    if (!block.isUserVisible()) {
-      this.sourceBlock_.setUserVisible(false);
-      break;
-    }
+  // Mark as userHidden if the parent is userHidden
+  if (!this.sourceBlock_.isUserVisible()) {
+    this.sourceBlock_.setUserVisible(false);
   }
 };
 
@@ -188,7 +185,8 @@ Blockly.Connection.prototype.handleOrphan_ = function (existingConnection) {
         orphanBlock.outputConnection.bumpAwayFrom_(existingConnection);
       }, Blockly.BUMP_DELAY);
     }
-  } else if (this.type === Blockly.FUNCTIONAL_INPUT || this.type === Blockly.FUNCTIONAL_OUTPUT) {
+  } else if (this.type === Blockly.FUNCTIONAL_INPUT
+      || this.type === Blockly.FUNCTIONAL_OUTPUT) {
     if (!orphanBlock.previousConnection) {
       throw 'Orphan block does not have a previous connection.';
     }
@@ -378,9 +376,11 @@ Blockly.Connection.prototype.highlight = function() {
   } else {
     var moveWidth = 5 + Blockly.BlockSvg.NOTCH_PATH_WIDTH;
     if (Blockly.RTL) {
-      steps = 'm ' + moveWidth + ',0 h -5 ' + Blockly.BlockSvg.NOTCH_PATH_RIGHT + ' h -5';
+      steps = 'm ' + moveWidth + ',0 h -5 '
+          + Blockly.BlockSvg.NOTCH_PATH_RIGHT + ' h -5';
     } else {
-      steps = 'm -' + moveWidth + ',0 h 5 ' + Blockly.BlockSvg.NOTCH_PATH_LEFT + ' h 5';
+      steps = 'm -' + moveWidth + ',0 h 5 '
+          + Blockly.BlockSvg.NOTCH_PATH_LEFT + ' h 5';
     }
   }
   var xy = this.sourceBlock_.getRelativeToSurfaceXY();
@@ -486,7 +486,7 @@ Blockly.Connection.prototype.closest = function(maxLimit, dx, dy) {
     var targetSourceBlock = connection.sourceBlock_;
 
     // Don't offer to connect to hidden blocks, unless we're in edit mode
-    // TODO(Josh or Dave): don't return true in edit mode
+    // TODO(Josh or Dave): don't bail in edit mode
     if (!targetSourceBlock.isUserVisible()) {
       return true;
     }
@@ -646,7 +646,7 @@ Blockly.Connection.prototype.neighbours_ = function(maxLimit) {
     var targetSourceBlock = connection.sourceBlock_;
 
     // Don't include invisible blocks unless we're in edit mode
-    // TODO(Josh or Dave): don't return true in edit mode
+    // TODO(Josh or Dave): don't bail in edit mode
     if (!targetSourceBlock.isUserVisible()) {
       return true;
     }
