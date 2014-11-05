@@ -34,6 +34,8 @@ var feedback = require('../feedback.js');
 var dom = require('../dom');
 var blockUtils = require('../block_utils');
 
+var EvalString = require('./evalString');
+
 var TestResults = require('../constants').TestResults;
 
 var level;
@@ -47,7 +49,7 @@ var CANVAS_WIDTH = 400;
 
 // This property is set in the api call to draw, and extracted in
 // getDrawableFromBlocks
-Eval.drawnObject = null;
+Eval.displayedObject = null;
 
 /**
  * Initialize Blockly and the Eval.  Called on page load.
@@ -58,7 +60,7 @@ Eval.init = function(config) {
   level = config.level;
 
   config.grayOutUndeletableBlocks = true;
-  config.forceInsertTopBlock = 'functional_draw';
+  config.forceInsertTopBlock = 'functional_display';
 
   config.html = page({
     assetUrl: BlocklyApps.assetUrl,
@@ -180,10 +182,10 @@ function getDrawableFromBlocks(blockXml) {
     BlocklyApps.loadBlocks(blockXml);
   }
 
-  var code = Blockly.Generator.workspaceToCode('JavaScript', 'functional_draw');
+  var code = Blockly.Generator.workspaceToCode('JavaScript', 'functional_display');
   evalCode(code);
-  var object = Eval.drawnObject;
-  Eval.drawnObject = null;
+  var object = Eval.displayedObject;
+  Eval.displayedObject = null;
 
   if (blockXml) {
     // Remove the blocks
@@ -202,10 +204,7 @@ Eval.execute = function() {
   Eval.message = undefined;
 
   var userObject = getDrawableFromBlocks(null);
-
-  if (userObject) {
-    userObject.draw(document.getElementById("user"));
-  }
+  userObject.draw(document.getElementById("user"));
 
   Eval.result = evaluateAnswer();
   Eval.testResults = BlocklyApps.getTestResults(Eval.result);
