@@ -13,10 +13,11 @@
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "free_play": "false",
-    "start_direction": "0",
+    "start_direction": "180",
     "x": "200",
     "y": "200",
-    "slider_speed": "0.4"
+    "slider_speed": "0.4",
+    "impressive": "false"
   }
 }]]></config>
   <blocks>
@@ -43,6 +44,18 @@
           <title name="TIMES" config="3-10">3</title>
         </block>
         <block type="create_a_snowflake_branch"/>
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_picker">
+              <title name="COLOUR">#ffffff</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_random"/>
+          </value>
+        </block>
       </xml>
     </toolbox_blocks>
     <required_blocks>

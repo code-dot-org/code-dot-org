@@ -16,7 +16,8 @@
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "free_play": "false",
-    "slider_speed": "1.0"
+    "slider_speed": "1.0",
+    "impressive": "false"
   }
 }]]></config>
   <blocks>
@@ -48,6 +49,18 @@
             <block type="math_number">
               <title name="NUM">???</title>
             </block>
+          </value>
+        </block>
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_picker">
+              <title name="COLOUR">#ffffff</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_random"/>
           </value>
         </block>
       </xml>

@@ -15,7 +15,8 @@
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
-    "free_play": "false"
+    "free_play": "false",
+    "impressive": "false"
   }
 }]]></config>
   <blocks>
@@ -46,6 +47,18 @@
           <title name="TIMES" config="3-10">3</title>
         </block>
         <block type="create_a_snowflower"/>
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_picker">
+              <title name="COLOUR">#ffffff</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_random"/>
+          </value>
+        </block>
       </xml>
     </toolbox_blocks>
     <required_blocks>
