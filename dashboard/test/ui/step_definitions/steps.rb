@@ -233,3 +233,8 @@ Given(/^I am a teacher$/) do
   end
   log_in_as(@teacher)
 end
+
+And(/^I ctrl-([^"]*)$/) do |key|
+  # Note: Safari webdriver does not support actions API
+  @browser.action.key_down(:control).send_keys(key).key_up(:control).perform
+end

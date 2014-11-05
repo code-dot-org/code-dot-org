@@ -68,7 +68,7 @@
           <title name="VAR">counter</title>
         </block>
         <block type="controls_repeat">
-          <title name="TIMES">???</title>
+          <title name="TIMES">3</title>
         </block>
       </xml>
     </toolbox_blocks>

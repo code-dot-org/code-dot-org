@@ -70,7 +70,7 @@
     function showCode() {
       // Generate JavaScript code and display it.
       Blockly.JavaScript.INFINITE_LOOP_TRAP = null;
-      var code = Blockly.Generator.workspaceToCode('JavaScript');
+      var code = Blockly.Generator.blockSpaceToCode('JavaScript');
       alert(code);
     }
 
@@ -79,7 +79,7 @@
       window.LoopTrap = 1000;
       Blockly.JavaScript.INFINITE_LOOP_TRAP =
           'if (--window.LoopTrap == 0) throw "Infinite loop.";\n';
-      var code = Blockly.Generator.workspaceToCode('JavaScript');
+      var code = Blockly.Generator.blockSpaceToCode('JavaScript');
       Blockly.JavaScript.INFINITE_LOOP_TRAP = null;
       try {
         eval(code);
