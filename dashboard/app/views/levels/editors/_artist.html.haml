@@ -3,10 +3,6 @@
   %p Number from 0.0 to 1.0 for how fast artist runs. If not set, default is 1.0
   = f.number_field :slider_speed, :step => 0.1
 .field
-  = f.label :free_play, "Free Play"
-  %p Free Play levels are not checked for correctness (any solution is accepted), can be shared, and can be saved to the public and private gallery
-  = boolean_check_box f, :free_play
-.field
   = f.label :impressive, "Impressive"
   %p Impressive levels can be shared and are automatically saved to the private gallery
   = boolean_check_box f, :impressive

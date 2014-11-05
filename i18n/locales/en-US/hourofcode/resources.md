@@ -4,7 +4,15 @@ crwdns20172:0crwdne20172:0
 
 * * *
 
-# crwdns19598:0crwdne19598:0
+<div class="row">
+  <h1 class="col-sm-6">
+    crwdns22134:0crwdne22134:0
+  </h1>
+  
+  <div class="col-sm-6 button-container centered">
+    <a href="/#join"><button class="signup-button">crwdns22135:0crwdne22135:0</button></a>
+  </div>
+</div>
 
 ## crwdns20706:0crwdne20706:0
 
@@ -36,14 +44,14 @@ crwdns20172:0crwdne20172:0
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      crwdns19612:0crwdne19612:0 <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
+      crwdns22136:0crwdne22136:0 <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      crwdns19613:0crwdne19613:0 <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
+      crwdns22137:0crwdne22137:0 <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
@@ -53,14 +61,14 @@ crwdns20172:0crwdne20172:0
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>crwdns19614:0crwdne19614:0</strong></a>
+      <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>crwdns22138:0crwdne22138:0</strong></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      crwdns19615:0crwdne19615:0 <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
+      crwdns22139:0crwdne22139:0 <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
@@ -110,11 +118,11 @@ crwdns20172:0crwdne20172:0
     </h2>
     
     <p>
-      <a href="/images/social-1.jpg"><img src="/images/fit-200/social-1.jpg" alt="crwdns21344:0crwdne21344:0" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-2.jpg"><img src="/images/fit-200/social-2.jpg" alt="crwdns21345:0crwdne21345:0" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-3.jpg"><img src="/images/fit-200/social-3.jpg" alt="crwdns21346:0crwdne21346:0" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="/images/social-1.jpg"><img src="/images/fit-250/social-1.jpg" alt="crwdns21344:0crwdne21344:0" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-2.jpg"><img src="/images/fit-250/social-2.jpg" alt="crwdns21345:0crwdne21345:0" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-3.jpg"><img src="/images/fit-250/social-3.jpg" alt="crwdns21346:0crwdne21346:0" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
     </p>
     
     <p>
-      <a href="/images/mark.jpg"><img src="/images/fit-200/mark.jpg" alt="crwdns21347:0crwdne21347:0" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-200/susan.jpg" alt="crwdns21348:0crwdne21348:0" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-200/ashton.jpg" alt="crwdns21349:0crwdne21349:0" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-200/marissa.jpg" alt="crwdns21350:0crwdne21350:0" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-200/chris.jpg" alt="crwdns21351:0crwdne21351:0" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="crwdns21347:0crwdne21347:0" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="crwdns21348:0crwdne21348:0" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="crwdns21349:0crwdne21349:0" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="crwdns21350:0crwdne21350:0" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="crwdns21351:0crwdne21351:0" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
     </p>
     
     <p>
@@ -275,4 +283,8 @@ crwdns20172:0crwdne20172:0
     
     <p>
       crwdns21412:0[NAME]crwdnd21412:0[TITLE]crwdne21412:0
+    </p>
+    
+    <p>
+      <a style="display: block" href="/#join"><button style="float: right;">crwdns22140:0crwdne22140:0</button></a>
     </p>

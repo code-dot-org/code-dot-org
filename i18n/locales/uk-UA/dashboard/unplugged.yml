@@ -141,7 +141,7 @@ uk:
         video: C3_internet
       Crowdsourcing:
         title: Краудсорсинг
-        desc: Students use crowdsourcing, a problem-solving technique common in computer science, to complete a task together as a classroom more efficiently than if a student attempted it alone.
+        desc: "Учні використовують методи краудсорсингу, навички розв'язання задач, поширені в інформатиці, для того, щоб виконати завдання як єдиний клас, з більшою ефективністю, аніж при індивідуальній роботі."
         video: C3_crowdsourcing
       DigitalCitizenship:
         title: Цифрове громадянство

@@ -6,8 +6,8 @@ require 'base64'
 require 'nokogiri'
 
 BATCH_SIZE = 10000
-MAX_THREAD_COUNT = 400
-MIN_MESSAGES_PER_THREAD = 25
+MAX_THREAD_COUNT = 100
+MIN_MESSAGES_PER_THREAD = 50
 
 POSTE_DB = Sequel.connect(CDO.pegasus_db_writer.sub('mysql:', 'mysql2:'), max_connections:MAX_THREAD_COUNT)
 #POSTE_DB.loggers << $log

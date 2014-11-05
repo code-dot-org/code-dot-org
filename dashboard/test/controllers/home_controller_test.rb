@@ -22,6 +22,19 @@ class HomeControllerTest < ActionController::TestCase
     assert_equal "es-ES", cookies[:language_]
 
     assert_equal "language_=es-ES; domain=.code.org; path=/", @response.headers["Set-Cookie"]
+
+    assert_redirected_to 'http://blahblah'
+  end
+
+
+  test "handle nonsense in return_to" do
+    sign_in User.new # devise uses an empty user instead of nil? Hm
+
+    request.host = "learn.code.org"
+
+    get :set_locale, :return_to => ["blah"], :locale => "es-ES"
+
+    assert_redirected_to '["blah"]'
   end
 
   test "should get index with edmodo header" do
@@ -102,33 +115,29 @@ class HomeControllerTest < ActionController::TestCase
     assert_select '#left_off', 0
   end
 
+  Script.all.each do |script|
+    next if script.hidden? # only test public facing scripts
+    test "logged in user sees resume info and progress for course #{script.name}" do
+      user = create(:user)
+      UserScript.create!(user_id: user.id, script_id: script.id, started_at: Time.now)
+      sign_in(user)
+      get :index
+      assert_response :success
 
-  test 'logged in user sees resume info and progress for 20hour' do
-    user = create(:user)
-    UserScript.create!(user_id: user.id, script_id: 1, started_at: Time.now)
-    sign_in(user)
-    get :index
-    assert_response :success
-
-    assert_select '#left_off'
-    assert_select 'form[action=http://test.host/s/1/level/2]' # continue link
-    assert_select 'h3', 'K-8 Intro to Computer Science Course (15-25 hours)' # progress block
-    assert_select 'a.level_link[href=http://test.host/s/1/level/2]' # link to level in progress
+      if script.hoc? 
+        url = "http://test.host/hoc"
+      elsif script.flappy?
+        url = "http://test.host/flappy"
+      else
+        url = "http://test.host/s/#{script.to_param}"
+      end
+      assert_select '#left_off'
+      assert_select "form[action^=#{url}]" # continue link
+      assert_select 'h3',  I18n.t("data.script.name.#{script.name}.title") # script title
+      assert_select "a.level_link[href^=#{url}]" # link to level in progress
+    end
   end
-
-  test 'logged in user sees resume info and progress for course1' do
-    user = create(:user)
-    UserScript.create!(user_id: user.id, script_id: Script.find_by_name('course1').id, started_at: Time.now)
-    sign_in(user)
-    get :index
-    assert_response :success
-
-    assert_select '#left_off'
-    assert_select 'form[action=http://test.host/s/course1/stage/3/puzzle/1]' # continue link
-    assert_select 'h3', 'Course 1' # progress block
-    assert_select 'a.level_link[href=http://test.host/s/course1/stage/3/puzzle/1]' # link to level in progress
-  end
-
+    
   test 'finishing whole 20hr curriculum does not show resume info' do
     user = create(:user)
     sign_in(user)

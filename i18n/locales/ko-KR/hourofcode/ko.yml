@@ -11,29 +11,6 @@ ko:
   header_menu_faq: 자주 묻는 질문 (FAQ)
   header_menu_prizes: 상품
   header_menu_uk_code_org: uk.code.org
-  choose_country_header: 전세계와 함께하세요!
-  country_al: Albania
-  country_ar: 아르헨티나
-  country_au: 오스트레일리아
-  country_br: 브라질
-  country_bg: 불가리아
-  country_de: 독일
-  country_es: 라틴아메리카
-  country_eu: 유럽연합
-  country_gr: 그리스
-  country_hr: 크로아티아
-  country_id: 인도네시아
-  country_it: 이태리
-  country_jp: 일본
-  country_me: 중동 및 북아프리카
-  country_my: Malaysia
-  country_nz: 뉴질랜드
-  country_ro: 루마니아
-  country_ru: 러시아
-  country_ua: 우크라이나
-  country_uk: 영국
-  country_us: 미국
-  country_vn: 베트남
   company_4-H: 4-H Youth Development
   company_bgca: Boys and Girls Club of America
   company_cgcs: Council of the Great City Schools
@@ -180,6 +157,17 @@ ko:
   resources_emails: 샘플 이메일
   resources_stats: 유용한 컴퓨터과학(정보과학) 통계 자료
   resources_press_kit: 언론매체 관련 키트
+  events_title: All Hour of Code Events
+  events_nav_all: All Events
+  events_nav_classrooms: Classrooms
+  events_nav_whole_schools: Whole Schools
+  events_nav_special: Special Events
+  events_all_title: All Hour of Code events
+  events_classroom_title: Classroom Hour of Code events
+  events_whole_school_title: Whole-school Hour of Code events
+  events_special_title: Special Hour of Code events
+  event: event
+  events: events
   footer_copyright_message: Copyright 2014 Code.org. All rights reserved.
   footer_trademark_message: Hour of Code™ is a trademark of Code.org.
   footer_menu_partners: 후원

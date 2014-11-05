@@ -1,4 +1,4 @@
-"tk":
+"th":
   data:
     script:
       name:
@@ -49,7 +49,7 @@
           desc: Edit Code (beta)
           MazeEC: "ขั้นตอนที่ 1"
           Webapp: "ขั้นตอนที่ 2"
-          ArtistEC: Stage 3
+          ArtistEC: "ขั้นตอนที่ 3"
         events:
           desc: Bounce (beta)
           Bounce: "ขั้นตอนที่ 1"
@@ -99,7 +99,7 @@
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
         Webapp: Webapp
-        ArtistEC: The Artist
+        ArtistEC: "ศิลปิน"
     trophy:
       name:
         Bronze: "ทองแดง"

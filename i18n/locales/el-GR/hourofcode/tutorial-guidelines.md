@@ -6,11 +6,11 @@
 
 # Οδηγός σεναρίων εκμάθησης για την Ώρα του Κώδικα και την Εκπαιδευτική Εβδομάδα Πληροφορικής (CSEdWeek)
 
-**The deadline to submit a tutorial for Hour of Code 2014 has passed. You may still submit an entry and we will try to review it if time allows.**
+**Η προθεσμία για την αποστολή ενός οδηγού εκμάθησης για την Ώρα του Κώδικα 2014 έληξε. Μπορείτε να ακόμα να στείλετε έναν οδηγό και θα προσπαθήσουμε, αν ο χρόνος το επιτρέπει, να το ελέξγουμε.**
 
-Code.org will host a variety of Hour of Code activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= codeorg_url() %>](http://<%= codeorg_url() %>/learn).
+Στις ιστοσελίδες Code.org, Hour of Code, και CSEdWeek θα φιλοξενηθούν διάφορες δραστηριότητες της Ώρας του Κώδικα. Η τρέχουσα λίστα είναι διαθέσιμη [<%= codeorg_url() %>](http://<%= codeorg_url() %>/learn).
 
-We’d like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science. Please use this document to guide the creation of your activity, targeted to the user who has no background in coding, computer programming, and computer science.
+Θα θέλαμε να φιλοξενήσουμε ποικιλία ελκτυστικών δραστηριοτήτων, αλλά ο πρωταρχικός σκοπός είναι να βελτιώσουμε την εμπειρία των μαθητών και των δασκάλων που είναι νέοι στην επιστήμη των υπολογιστών. Χρησιμοποιήστε το παρών έγγραφο σαν οδηγό της δικής σας δραστηριότητας, στοχεύοντας σε χρήστες που δεν έχουν εμπειρία στη δημιουργία κώδικα, τον προγραμματισμό και την επιστήμη των υπολογιστών.
 
 <a id="top"></a>
 
@@ -31,7 +31,7 @@ We’d like to host a variety of engaging options, but the primary goal is to op
 
 A committee of computer science educators will rank submissions based on qualitative and quantitative metrics, including survey results from a broader set of educators.
 
-**Tutorials will be listed higher if they are:**
+**Οι οδηγοί θα εμφανίζονται πιο ψηλά αν:**
 
   * είναι υψηλής ποιότητας
   * είναι αυτο-κατευθυνόμενα, χωρίς να απαιτούν κάποια επεξήγηση
@@ -42,7 +42,7 @@ A committee of computer science educators will rank submissions based on qualita
   * προωθούν τη μάθηση σε όλες τις δημογραφικές ομάδες (ιδιαίτερα στις ομάδες με μερική εκπροσώπηση)
   * δεν αποτελούν απλή σχεδίαση HTML+CSS - (ο στόχος μας είναι η επιστήμη των υπολογιστών, όχι απλά ο προγραμματισμός σε HTML)
 
-**Tutorials will be listed lower if they are:**
+**Οι οδηγοί θα εμφανίζονται πιο χαμηλά αν:**
 
   * είναι χαμηλής ποιότητας
   * αφορούν σε προχωρημένο επίπεδο διδασκαλίας (όχι για αρχάριους)
@@ -51,7 +51,7 @@ A committee of computer science educators will rank submissions based on qualita
   * κλίνουν προς ένα συγκεκριμένο φύλο (π.χ. η θεματολογία αφορά κυρίως αγόρια)
   * χρησιμοποιούνται ως μέσο προώθησης προς εκπαιδευτικές πλατφόρμες που χρεώνουν δίδακτρα
 
-**Tutorials will NOT be listed if they:**
+**Δεν θα προβάλλονται οδηγοί που:**
 
   * απαιτούν υψηλό βαθμό συμμετοχής και προετοιμασίας από τον εκπαιδευτκό (δηλαδή να μην είναι αυτοκαθοδηγούμενα για τους μαθητές)
   * δεν έχουν σχεδιαστεί να διαρκούν (περίπου) μια ώρα
@@ -67,7 +67,7 @@ Note also, that the 2013 CSEdWeek was a fantastic success as measured by the res
 
 As a result, the existing listings are certainly “good enough,” and the driving reason to add tutorials to the Hour of Code listings isn’t to broaden the choices, but to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2014 campaign.
 
-[**Back to the top**](#top)
+[**Επιστροφή στην κορυφή**](#top)
 
 <a id="guidelines"></a>
 
@@ -84,7 +84,7 @@ As a result, the existing listings are certainly “good enough,” and the driv
       * **Καλοί, αλλά δεν προτιμώνται :** εφαρμογές που απαιτούν εγκατάσταση, εφαρμογές για υπολογιστή ή που προφέρουν εμπειρία μέσα από κονσόλες παιχνιδιών.
   * **Μορφή:** Αυτοκαθοδηγούμενα σενάρια ή μαθήματα, που προαιρετικά απαιτούν τη συνδρομή του εκπαιδευτικού. Πρέπει να υπάρχουν οδηγίες για του μαθητές και όχι μια χωρίς στόχο απασχόληση μιας ώρας. Στην ιδανική περίπτωση, οι οδηγίες και τα σενάρια, βρίσκονται ενσωματωμένα στην προγραμματισική πλατφόρμα, ώστε να μην εναλλάσσονται καρτέλες ή παράθυρα μεταξύ του σεναρίου και της προγραμματιστικής πλατφόρμας.
 
-[**Back to the top**](#top)
+[**Επιστροφή στην κορυφή**](#top)
 
 <a id="submit"></a>
 
@@ -140,7 +140,7 @@ Visit the [Hour of Code Activity Submission page](https://docs.google.com/a/code
       * Για τις offline δρατηριότητες 
           * Αριθμός λήψεων των δραστηριοτήτων σε χαρτί (κατά περίπτωση)
 
-[**Back to the top**](#top)
+[**Επιστροφή στην κορυφή**](#top)
 
 <a id="design"></a>
 
@@ -181,7 +181,7 @@ Benefits of Pair Programming:
   * Δείχνει ότι ο προγραμματισμός δεν είναι μια ατομική δραστηριότητα, αλλά μια δραστηριότητα που περιλαμβάνει κοινωνική αλληλεπίδραση
   * Δεν έχουν όλες οι αίθουσες ή τα εργαστήρια αρκετούς υπολογιστές για μια 1:1 εμπειρία
 
-[**Back to the top**](#top)
+[**Επιστροφή στην κορυφή**](#top)
 
 <a id="tm"></a>
 
@@ -199,7 +199,7 @@ One piece of this is to protect the trademark "Hour of Code" to prevent confusio
 
   4. Μην χρησιμοποιείται το "Ώρα του Κώδικα" ως ονόματα εφαρμογών
 
-[**Back to the top**](#top)
+[**Επιστροφή στην κορυφή**](#top)
 
 <a id="pixel"></a>
 
@@ -219,7 +219,7 @@ IMG SRC="http://code.org/api/hour/begin_appinventor.png/"
 
 IMG SRC="http://code.org/api/hour/finish_appinventor.png/"
 
-[**Back to the top**](#top)
+[**Επιστροφή στην κορυφή**](#top)
 
 <a id="promote"></a>
 
@@ -233,7 +233,7 @@ We are asking everyone to promote their own 1-hour tutorial to your users. Pleas
   * Διοργανώστε μια τοπική εκδήλωση ή ζητήστε από τους υπαλλήλους σας να διοργανώσουν μια εκδήλωση στα σχολεία ή στην γειτονιά τους.
   * Δείτε το κουτί παροχών μαν για περισσότερες πληροφορίες (προσεχώς).
 
-[**Back to the top**](#top)
+[**Επιστροφή στην κορυφή**](#top)
 
 <a id="disabilities"></a>
 
@@ -241,4 +241,4 @@ We are asking everyone to promote their own 1-hour tutorial to your users. Pleas
 
 If you create a tutorial that is designed for the vision-impaired, we’d love to highlight it for viewers with screen-readers. We have not yet received such a tutorial, and would be eager to include one as an option for these students.
 
-[**Back to the top**](#top)
+[**Επιστροφή στην κορυφή**](#top)

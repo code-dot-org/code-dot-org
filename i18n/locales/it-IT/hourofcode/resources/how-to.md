@@ -4,7 +4,15 @@ title: Risorse layout: wide
 
 * * *
 
-# Come insegnare un'Ora del Codice
+<div class="row">
+  <h1 class="col-sm-6">
+    How to teach one Hour of Code
+  </h1>
+  
+  <div class="col-sm-6 button-container centered">
+    <a href="/#join"><button class="signup-button">Sign up your event</button></a>
+  </div>
+</div>
 
 ## 1) Prova i tutorial:
 
@@ -71,4 +79,4 @@ Ogni studente ha l'opportunità di ricevere un certificato via email quanto fini
 
 **Cosa viene dopo l'Ora del Codice?**
 
-L'Ora del Codice è soltanto il primo passo di un viaggio che ti porterà ad imparare come funziona la tecnologia e come creare applicazioni software. < % se @country = = 'uk' %> L'ora del codice è solo il primo passo in un viaggio per saperne di più su come funziona la tecnologia e come creare applicazioni software. Per continuare questo viaggio, [incoraggia i tuoi ragazzi ad apprendere in rete](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %>
+L'Ora del Codice è soltanto il primo passo di un viaggio che ti porterà ad imparare come funziona la tecnologia e come creare applicazioni software. < % se @country = = 'uk' %> L'ora del codice è solo il primo passo in un viaggio per saperne di più su come funziona la tecnologia e come creare applicazioni software. Per continuare questo viaggio, [incoraggia i tuoi ragazzi ad apprendere in rete](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %> <a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>

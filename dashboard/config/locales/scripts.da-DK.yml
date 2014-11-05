@@ -33,10 +33,12 @@
           Getting Loopy: Blive Svimmel
           The Big Event: Den store begivenhed
           Going Places Safely: Gå til sikre steder
-          description: Kursus 1 er designet for tidlige læsere i de lavere elementære
-            kvaliteter.  Oprette computerprogrammer med sløjfer og begivenheder.  I
-            slutningen af kurset, opret dit helt eget brugerdefinerede spil, kunst
-            eller historie, end du kan dele.
+          description: Kursus 1 er designet til at tillade tidlig læsere til at skabe
+            IT-programmer, der vil hjælpe dem med at lære at samarbejde med andre,
+            udvikle problemløsninger, færdigheder og fortsætte gennem vanskelige opgaver.
+            Ved slutningen af dette kursus opretter den studerende deres helt egen
+            brugerdefinerede spil eller historien, som kan deles. Anbefales til 1.
+            klasses elever.
           'Bee: Sequence': 'Bi: Sekvens'
           'Artist: Sequence': 'Kunstner: Sekvens'
           'Artist: Shapes': 'Kunstner: Figurer'
@@ -70,10 +72,10 @@
           Binary Bracelets: Binære armbånd
           The Big Event: Den store begivenhed
           Your Digital Footprint: Dit digitale fodspor
-          description: Kursus 2 er designet til studerende, der kan læse i de lavere
-            og mellemste elementære niveau.  Oprette programmer med sløjfer, begivenheder
-            og betingelser.  I slutningen af kurset, oprette dit helt eget brugerdefinerede
-            spil, kunst eller historie, end du kan dele.
+          description: Kursus 2 er designet til studerende, der kan læse og har ingen
+            forudgående erfaring med programmering. I dette kursus vil studerende
+            skabe programmer til at løse problemer og udvikle interaktive spil eller
+            historier der kan deles. Anbefales af 2. - 5. klasses elever.
           'Maze: Sequence': 'Labyrint: Sekvens'
           'Artist: Sequence': 'Kunstner: Sekvens'
           'Maze: Loops': 'Labyrint: Sløjfer'
@@ -106,17 +108,17 @@
           Artist Functions with Parameters: Kunstner funktioner med parametre
           Computational Thinking: Data-Tænkning
           Functional Suncatchers: Funktionelle solfangere
-          Songwriting Parameters: Sangskrivning
+          Songwriting Parameters: Sangskrivnings parametre
           Dice Race: Terning Race
           Internet: Internet
           Crowdsourcing: Crowdsourcing
           Digital Citizenship: Digital statsborgerskab
           Farmer - While Loops: Landmand - Når sløjfer
-          description: Studerende der tager kursus 3 bør allerede have taget kursus
-            2.  Studerende skal skabe programmer med forskellige former for løkker,
-            hændelser, funktioner og betingelser.  I slutningen af kurset, oprette
-            dit helt eget brugerdefinerede spil, kunst eller historie, som du kan
-            dele med nogen.
+          description: Kursus 3 er udviklet til studerende, der har taget kursus 2.
+            Studerende vil dykke dybere ned i programmering emner introduceret i tidligere
+            kurser til fleksible løsninger til mere komplekse problemer. Ved slutningen
+            af dette kursus oprette studerende interaktive historier og spil de kan
+            dele med nogen. Anbefales til 4. -5. klasses elever.
           'Studio: Create a Game': 'Spille Lab: Oprette et spil'
           Maze: Labyrint
           Artist: Kunstner
@@ -140,7 +142,7 @@
           'Farmer: While Loops2': 'Landmand: Når sløjfer 2'
           'Bee: Nested Loops2': 'Bi: Indlejrede løkker 2'
           'Bee: Debugging2': 'Bi: Fejlfinding 2'
-          'Artist: Patterns': 'Artist: Patterns'
+          'Artist: Patterns': 'Kunstner: Mønstre'
           Songwriting: Sangskrivning
         msm:
           title: Efterskole matematik
@@ -159,3 +161,23 @@
           description: Tegn seje billeder og designs med spilleren!
           Artist: Kunstner
           description_short: Tegn seje billeder og designs med spilleren!
+        course4:
+          description_short: Students taking Course 4 should have already taken Courses
+            2 and 3.
+          description: Course 4 is designed for students who have taken Course 2 and
+            3. Students will delve deeper into programming topics introduced in previous
+            courses to flexible solutions to more complex problems. By the end of
+            this course, students create interactive stories and games they can share
+            with anyone. Recommended for grades 4-8.
+          'Artist: Variables': 'Artist: Variables'
+          'Bee: For Loops': 'Bee: For Loops'
+          title: Course 4
+          'Algorithms: Tangrams': 'Algorithms: Tangrams'
+          Variables: Variabler
+          'Play Lab: Variables': 'Play Lab: Variables'
+          'Play Lab: Functions with Parameters': 'Play Lab: Functions with Parameters'
+          'Bee: Functions with Parameters': 'Bee: Functions with Parameters'
+          'Artist: For Loops': 'Artist: For Loops'
+          'Play Lab: For Loops': 'Play Lab: For Loops'
+          'Artist: Functions': 'Kunstner: Funktioner'
+          'Artist: Functions with Paraqmeters': 'Artist: Functions with Paraqmeters'

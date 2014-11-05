@@ -11,29 +11,6 @@ ca:
   header_menu_faq: PMFs
   header_menu_prizes: Premis
   header_menu_uk_code_org: uk.code.org
-  choose_country_header: Participació Mundial!
-  country_al: Albania
-  country_ar: Argentina
-  country_au: Austràlia
-  country_br: Brasil
-  country_bg: Bulgària
-  country_de: Alemanya
-  country_es: Amèrica Llatina
-  country_eu: Unió Europea
-  country_gr: Grècia
-  country_hr: Croàcia
-  country_id: Indonèsia
-  country_it: Itàlia
-  country_jp: Japó
-  country_me: "Orient Mitjà i Nord d'Àfrica"
-  country_my: Malaysia
-  country_nz: Nova Zelanda
-  country_ro: Romania
-  country_ru: Rússia
-  country_ua: Ucraïna
-  country_uk: Regne Unit
-  country_us: Estats Units
-  country_vn: Vietnam
   company_4-H: 4-H Youth Development
   company_bgca: Boys and Girls Club of America
   company_cgcs: Council of the Great City Schools
@@ -180,6 +157,17 @@ ca:
   resources_emails: Correus de mostra
   resources_stats: "Estadístiques útils d'informàtica"
   resources_press_kit: Dossier de premsa
+  events_title: All Hour of Code Events
+  events_nav_all: All Events
+  events_nav_classrooms: Classrooms
+  events_nav_whole_schools: Whole Schools
+  events_nav_special: Special Events
+  events_all_title: All Hour of Code events
+  events_classroom_title: Classroom Hour of Code events
+  events_whole_school_title: Whole-school Hour of Code events
+  events_special_title: Special Hour of Code events
+  event: event
+  events: events
   footer_copyright_message: Copyright 2014 Code.org. Tots els drets reservats.
   footer_trademark_message: Hora de Codi ™ és una marca registrada de Code.org.
   footer_menu_partners: Col·laboradors

@@ -4,7 +4,15 @@ title: Prijzen layout: wide
 
 * * *
 
-# Het Uur Code - prijzen voor iedere organisator
+<div class="row">
+  <h1 class="col-sm-6">
+    The Hour of Code — prizes for every organizer
+  </h1>
+  
+  <div class="col-sm-6 button-container centered">
+    <a href="/#join"><button class="signup-button">Sign up your event</button></a>
+  </div>
+</div>
 
 ## Iedere organisator wint een "bedankt" coupon-code
 
@@ -20,11 +28,31 @@ Elke docent die een Uur Code voor studenten organiseert, ontvangt 10 GB Dropbox 
 
 <% if @country == 'us' %>
 
-## 96 lucky classrooms win a video chat with a guest speaker!
+## 100 lucky classrooms win a video chat with a guest speaker!
 
-96 lucky classrooms will be invited to join a video chat to celebrate the Hour of Code during December 8-14. Uw leerlingen kunnen vragen stellen en chatten met technologie-industrie leiders. [Kijk naar de chats van vorig jaar](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) met Bill Gates, Twitter oprichter Jack Dorsey, Susan Wojcicki van Google en Gabe Newell van Valve.
+100 lucky classrooms will be invited to participate in live video Q&As with tech titans and tech-loving celebrities. Students will be able to ask questions and chat with these exciting role models to kick off your Hour of Code.
 
 Any classroom (public or private) within the U.S. or Canada is eligible to win this prize. Your whole school does not need to apply.
+
+### This year's celebrity video chat participants:
+
+![afbeelding](/images/fit-120/JR-Hildebrand-headshot.png)&nbsp;&nbsp; ![afbeelding](/images/fit-120/Bill-Gates-headshot.jpg)&nbsp;&nbsp; ![afbeelding](/images/fit-120/Usher-headshot.jpg)&nbsp;&nbsp; ![afbeelding](/images/fit-120/Sheryl-Sandberg-headshot.jpg)&nbsp;&nbsp; ![afbeelding](/images/fit-120/Jack-Dorsey-headshot.jpg)&nbsp;&nbsp; ![afbeelding](/images/fit-120/Hadi-Partovi-headshot.jpg)&nbsp;&nbsp; ![afbeelding](/images/fit-120/Ashton-Kutcher-headshot.jpg)&nbsp;&nbsp;
+
+![afbeelding](/images/fit-120/Clara-Shih-headshot.jpg)&nbsp;&nbsp; ![afbeelding](/images/fit-120/Lyndsey-Scott-headshot.jpg)&nbsp;&nbsp; ![afbeelding](/images/fit-120/Karlie-Kloss-headshot.jpg)&nbsp;&nbsp; ![afbeelding](/images/fit-120/Jess-Lee-headshot.jpg)&nbsp;&nbsp; ![afbeelding](/images/fit-120/David-Karp-headshot.png)&nbsp;&nbsp; ![afbeelding](/images/fit-120/Cory-Booker-headshot.jpg)&nbsp;&nbsp;
+
+  * JR Hildebrand (NASCAR Racecar Driver)
+  * Bill Gates (Microsoft founder)
+  * Usher (Recording artist)
+  * Sheryl Sandberg (Facebook COO)
+  * Jack Dorsey (Twitter co-founder, Square CEO)
+  * Hadi Partovi (Code.org co-founder)
+  * Ashton Kutcher (Actor and tech investor)
+  * Clara Shih (Hearsay Social CEO)
+  * Lyndsey Scott (App developer and model)
+  * Karlie Kloss (supermodel, learning to code)
+  * Jess Lee (Polyvore CEO)
+  * David Karp (Tumblr founder)
+  * Cory Booker (United States Senator of New Jersey)
 
 ## 51 Lucky schools win a class-set of laptops (or $10,000 for other technology)
 
@@ -42,7 +70,15 @@ If you’ve signed up your entire school to participate in the Hour of Code, ent
 
 <% end %>
 
-## Meer vragen over de prijzen?
+<% if @country == 'us' %>
+
+## 100 classrooms will win a set of programmable robots
+
+[Sphero](http://www.gosphero.com/) is the app-controlled robotic ball changing the way students learn. Powered by [SPRK lessons](http://www.gosphero.com/education/), these round robots give kids a fun crash course in programming while sharpening their skills in math and science. Sphero is giving away 100 classroom sets – each including 5 robots. Any classroom (public or private) within the U.S. or Canada is eligible to win this prize.
+
+<% end %>
+
+## More questions about prizes?
 
 Check out [Terms and Conditions](<%= hoc_uri('/prizes-terms') %>) or visit our forum to see [FAQs](http://support.code.org) and ask your questions.
 
@@ -76,18 +112,16 @@ Due to a small full-time staff, Code.org is unable to handle the logistics of ad
 
 ## When is the deadline to apply for the hardware prize?
 
-To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 14, 2014. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2014.
+To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 14, 2014. Een school in iedere Amerikaanse staat krijgt computers voor een heel klaslokaal. Code.org selecteert winnaars en bericht ze via email voor 1 december 2014.
 
 ## When is the deadline to be eligible to win a tech chat?
 
-To qualify, you must register your classroom for the Hour of Code by November 14, 2014. Classrooms will win a video chat with a celebrity. Code.org will select and notify winners via email by December 1, 2014.
+To qualify, you must register your classroom for the Hour of Code by November 14, 2014. Classrooms will win a video chat with a celebrity. Code.org selecteert winnaars en bericht ze via email voor 1 december 2014.
 
 ## When will I be notified if my school or classroom wins a prize?
 
-To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 14, 2014. Code.org will select and notify winners via email by December 1, 2014.
+To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 14, 2014. Code.org selecteert winnaars en bericht ze via email voor 1 december 2014.
 
 ## If my whole school can’t do the Hour of Code during Computer Science Education Week (Dec. 8-14), can I still qualify for prizes?
 
-Yes, just be sure to submit a logistics plan that outlines how your whole school is participating over a reasonable length of time and register for the Hour of Code by November 14th.
-
-<% end %>
+Yes, just be sure to submit a logistics plan that outlines how your whole school is participating over a reasonable length of time and register for the Hour of Code by November 14th. <a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a> <% end %>

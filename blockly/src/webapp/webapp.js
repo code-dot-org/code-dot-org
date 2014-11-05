@@ -106,7 +106,13 @@ Webapp.onTick = function() {
                                              Webapp.cumulativeLength,
                                              Webapp.userCodeStartOffset,
                                              Webapp.userCodeLength);
-      Webapp.interpreter.step();
+      try {
+        Webapp.interpreter.step();
+      }
+      catch(err) {
+        Webapp.executionError = err;
+        Webapp.onPuzzleComplete();
+      }
     }
   } else {
     if (Webapp.tickCount === 1) {
@@ -280,6 +286,7 @@ BlocklyApps.reset = function(first) {
   // Reset the Globals object used to contain program variables:
   Webapp.Globals = {};
   Webapp.eventQueue = [];
+  Webapp.executionError = null;
   Webapp.interpreter = null;
 };
 
@@ -468,7 +475,9 @@ Webapp.feedbackImage = '';
 Webapp.encodedFeedbackImage = '';
 
 Webapp.onPuzzleComplete = function() {
-  if (level.freePlay) {
+  if (Webapp.executionError) {
+    Webapp.result = BlocklyApps.ResultType.ERROR;
+  } else if (level.freePlay) {
     Webapp.result = BlocklyApps.ResultType.SUCCESS;
   }
 

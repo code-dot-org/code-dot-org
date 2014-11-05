@@ -1,4 +1,4 @@
-tk:
+th:
   activerecord:
     errors:
       messages:
@@ -6,132 +6,132 @@ tk:
     attributes:
       user:
         name: Display Name
-        email: Email
-        username: Username
-        password: Password
-        password_confirmation: Password confirmation
-        current_password: Current password
-        locale: Language
+        email: อีเมล
+        username: ชื่อผู้ใช้
+        password: รหัสผ่าน
+        password_confirmation: ยืนยันรหัสผ่าน
+        current_password: รหัสผ่านปัจจุบัน
+        locale: ภาษา
         age: Age
-        gender: Gender
-        edit_header: Edit Account Details
+        gender: เพศ
+        edit_header: แก้ไขรายละเอียดบัญชี
         error:
-          future: "can't be in the future"
-  hello: Hello world
-  welcome_back: 'Welcome back, %{name}'
+          future: ไม่สามารถทำได้ในอนาคต
+  hello: สวัสดีชาวโลก
+  welcome_back: 'ยินดีต้อนรับอีกครั้ง, % {name}'
   add_teacher_form:
     code_or_email:
-      label: 'Add a teacher by code or email address:'
-      placeholder: Code (ABCDEF) or email (teacher@school.edu)
+      label: 'เพิ่มครู โดยรหัสหรืออีเมล์:'
+      placeholder: โค้ด(ABCDEF) หรือ อีเมล์(อาจารย์@school.edu)
     code:
       label: 'Add a teacher by section code:'
       placeholder: Code (ABCDEF)
-    submit: Add teacher
+    submit: เพิ่มครู
   add_hint_form:
-    placeholder: Please enter your hint here
-    submit: Add hint
+    placeholder: กรุณาป้อนคำแนะนำของคุณที่นี่
+    submit: เพิ่มคำแนะนำ
   appname: Code.org
-  stage: Stage
+  stage: ขั้นตอน
   stage_number: 'Stage %{number}'
-  puzzle: Puzzle
-  trophies: Trophies
-  courses: Courses
-  of: of
-  more: MORE
-  less: LESS
-  try_hoc: 'Try the Hour of Code, click here >> '
-  try_k8intro: Try our K-8 Intro to Computer Science Course (15-25 hours)
-  k8intro: K-8 Intro to Computer Science Course (15-25 hours)
-  already_started: 'Already started? Resume here >> '
-  demos: 'Admin: All Demos'
-  continue: Continue
+  puzzle: ปริศนา
+  trophies: ถ้วยรางวัล
+  courses: คอร์ส
+  of: ของ
+  more: เพิ่มเติม
+  less: น้อย
+  try_hoc: 'ลอง "ชั่วโมงแห่งการโค้ด" คลิกที่นี่ >>'
+  try_k8intro: 'ทดลอง K-8 ของพวกเราเพื่อเริ่มต้นศึกษาคอมพิวเตอร์  (15-25 ชั่วโมง)'
+  k8intro: K-8 เพื่อเริ่มต้นกับวิชาวิทยาศาสตร์คอมพิวเตอร์(15-25 ชั่วโมง)
+  already_started: 'พร้อมที่จะเริ่มแล้วหรือยัง.  ต่อทางนี้'
+  demos: 'Admin: ตัวสาธิตทั้งหมด'
+  continue: ต่อไป
   prize: prize
-  more_info: More info
+  more_info: ข้อมูลเพิ่มเติม
   auth:
-    sign_in_with: 'Sign in with %{provider}'
-    signed_in: Signed in!
+    sign_in_with: 'ลงทะเบียนด้วย %{provider}'
+    signed_in: ลงชื่อเข้าใช้
     signed_out: 'You have signed out of <a href="%{url}">Code.org</a>.'
     sign_out_of: 'You used %{provider} to sign in. <a href="%{url}">Click here</a> to sign out of %{provider}.'
-    already_signedup: Already signed up?
-    notyet_signedup: "Haven't joined yet?"
+    already_signedup: พร้อมที่จะสมัครแล้วหรือยัง.
+    notyet_signedup: สมัครใช้งานหรือยัง?
     google_oauth2: Google Account
-    twitter: Twitter
-    facebook: Facebook
+    twitter: ทวิตเตอร์
+    facebook: เฟซบุค
     windowslive: Microsoft Account
-    forgot_password: Forgot your password?
-    need_confirmation: "Didn't receive confirmation instructions?"
-    need_unlock: "Didn't receive unlock instructions?"
+    forgot_password: ลืมรหัสผ่าน?
+    need_confirmation: ไม่ได้รับการยืนยันคำแนะนำ?
+    need_unlock: ไม่ได้รับคำแนะนำในการปลดล็อค?
   signup_form:
     overview_student: 'Sign up for an account to track your progress. Your email is primarily used to allow you to log in and for password recovery. For more information, see our <a href="http://code.org/privacy">Privacy Policy</a>.'
     overview_teacher: "Teach computer science in your classroom by signing up for an account.<p/> You'll be able to add your students and track their progress."
-    no_signup_message: 'You can <a target="_blank" href="http://learn.code.org">browse the various stages and puzzles</a>, but you will need to sign up to save your progress.'
-    teacher_educator_guide: See educator guide
+    no_signup_message: 'คุณสามารถ<a target="_blank" href="http://learn.code.org">เรียกดูระยะและปริศนาต่าง ๆ</a> แต่คุณจะต้องลงทะเบียนเพื่อบันทึกความคืบหน้าของคุณ'
+    teacher_educator_guide: ดูคำแนะนำสำหรับผู้ฝึกสอน
     teacher_pitch: Teacher sign up for Code.org
-    teacher_title: Teacher sign up
-    student_pitch: Student sign up for Code.org
-    student_title: Student sign up
-    school_name: School Name (optional)
+    teacher_title: สมัครเป็นครู
+    student_pitch: สมัครเป็นนักเรียนสำหรับ code.org
+    student_title: สมัครเป็นนักเรียน
+    school_name: ชื่อโรงเรียน (ถ้ามี)
     school_address: School Address (optional)
     address_placeholder: address, city, state, zip
     gender: Gender (optional)
     birthday: Birthday (optional)
     age: Age
     user_type: Are you a student or teacher?
-    submit: Sign up
-    teacher: Are you a teacher?
-    valid_username: Available!
-    invalid_username: Username must be at least 5 characters
-    taken_username: Username is already taken
+    submit: สมัครสมาชิก
+    teacher: คุณเป็นครูหรือ
+    valid_username: อนุญาต
+    invalid_username: ชื่อผู้ใช้ต้องมีอย่างน้อย 5 ตัวอักษร
+    taken_username: ชื่อผู้ใช้นี้ถูกใช้ไปแล้ว
     valid_password: Valid password!
-    invalid_password: Password must be at least 6 characters
-    mismatch_password: The two passwords you entered do not match
+    invalid_password: รหัสผ่านต้องมีอย่างน้อย 6 ตัวอักษร
+    mismatch_password: รหัสผ่านที่คุณป้อนไม่ตรงกัน
     student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/>For users under 13, email addresses are not stored in a form that allows us to contact them."
     teacher_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>."
     additional_information: We need some additional information to continue signing you up.
   signin_form:
     title: Have an account already? Sign in
-    login: Email or username
-    password: Password
-    remember: Remember me
-    submit: Sign in
+    login: อีเมล หรือ ชื่อผู้ใช้งาน
+    password: รหัสผ่าน
+    remember: จำฉัน
+    submit: เข้าสู่ระบบ
   signin:
-    try_heading: Want to try coding without signing up?
-    try_hoc: Try one Hour of Code first
-    try_20hours: Try our 20 hour Intro to Computer Science
+    try_heading: อยากลองเขียนโค้ด โดยไม่มีการลงทะเบียนหรือไม่?
+    try_hoc: 'ลอง  Hour of Code ก่อนเป็นอันดับแรก'
+    try_20hours: 'ทดลอง  ๒๐  ชั่วโมงของเราเพื่อเริ่มต้นกับวิทยาศาสตร์คอมพิวเตอร์'
   signinsection:
     welcome: 'Welcome to %{section_name}'
     name: Choose your name
     picture: Now find your secret picture
     words: Now enter your secret words
-    login: Sign in
+    login: เข้าสู่ระบบ
   password:
     reset_form:
-      title: Forgot your password?
-      email: Email address
-      submit: Send me reset password instructions
+      title: ลืมรหัสผ่าน?
+      email: ที่อยู่อีเมล
+      submit: ส่งคำแนะนำการเปลี่ยนรหัสผ่านมาให้ฉัน
     change_form:
-      title: Change your password
-      new_password: New password
-      confirm_password: Confirm new password
-      submit: Change my password
+      title: เปลี่ยนรหัสผ่านของคุณ
+      new_password: รหัสผ่านใหม่
+      confirm_password: ยืนยันรหัสผ่านใหม่
+      submit: เปลี่ยนรหัสผ่านของฉัน
   welcome_email:
-    subject: Join my class (on Code.org)
+    subject: เข้าร่วมชั้นเรียนของฉัน (ใน Code.org)
     body: |
-      Click the link below to sign up for computer science tutorials on Code.org (with me as your "teacher"):
+      คลิกลิงค์ด้านล่างเพื่อลงทะเบียนสำหรับบทวิทยาการคอมพิวเตอร์ Code.org (กับฉันเป็น "ครู" ของคุณ):
       
       %{link}
       
-      The tutorials are fun, visually engaging, and teach the basic concepts of computer science using a simple, guided, game-like experience. Learn to code from Bill Gates, Mark Zuckerberg, Angry Birds, and Plants vs. Zombies! :-)
+      บทเรียนที่สนุก, การเห็นร่วมกัน, และสอนแนวคิดพื้นฐานของวิทยาการคอมพิวเตอร์ที่ได้ใช้ง่าย, การแนะนำ, ประสบการณ์เหมือนเกม. เรียนรู้การเขียนโปรแกรมจากบิลเกตส์, มาร์ค ซัคเกอร์เบิร์ก, Angry Birds, และ Plants vs. Zombies! :-)
       
       %{name}
   follower:
-    invite_sent: Invite sent
-    added_teacher: '%{name} added as your teacher'
-    registered: "You've registered for %{section_name}."
+    invite_sent: ส่งคำเชิญ
+    added_teacher: '%{name} เพิ่มเป็นครูของคุณ'
+    registered: 'คุณได้ลงทะเบียนสำหรับ %{section_name}.'
     error:
-      signed_in: Please signout before proceeding
-      username_not_found: 'Username %{username} not found'
-      username_in_use: '%{username} is already taken, please pick another'
+      signed_in: กรุณาออกจากระบบก่อนดำเนินการ
+      username_not_found: 'ไม่พบ %{username} ในชื่อผู้ใช้งาน'
+      username_in_use: '%{username} ถูกใช้ไปแล้วกรุณาเลือกชื่ออื่น'
       no_teacher: "Could not find anyone signed in with '%{teacher_email_or_code}'. Please ask them to sign up here and then try adding them again"
       section_not_found: "Could not find a section with code '%{section_code}'."
       blank_code: Please enter a section code
@@ -153,7 +153,7 @@ tk:
     redeem_header: 'To redeem:'
     donorschoose_register: Register as a teacher on DonorsChoose.org
     donorschoose_project: Post a project
-    donorschoose_how_to: How to use your code
+    donorschoose_how_to: วิธีการใช้โค้ดของคุณ
     success: Your prize was succesfully redeemed, see code below.
     error: Your prize could not be redeemed, please try again.
     error_us_only: The prize offer is only valid for U.S. users.
@@ -164,8 +164,8 @@ tk:
     teacher_email_required: 'Teacher prizes require a confirmed email address:'
     confirm:
       title: Please Confirm
-      "no": 'No'
-      "yes": 'Yes'
+      "no": ไม่ใช่
+      "yes": ใช่
       msg: 'Are you sure you want to claim the %{prize_name} prize?'
       msg_student: 'NOTE: You can only choose one type of prize.'
       msg_publicschool: Please confirm that you are a U.S. public school teacher.
@@ -216,25 +216,25 @@ tk:
         playlab: Make an App
         artist: Draw Something
     user:
-      classroom: My students
+      classroom: นักเรียนของฉัน
       label: 'Hi %{username}'
       stats: My progress
       settings: My account
-      prizes: Prizes
-      logout: Sign out
-      signin: Sign in
-      signup: Sign up
+      prizes: รางวัล
+      logout: ออกจากระบบ
+      signin: เข้าสู่ระบบ
+      signup: สมัครสมาชิก
       already_registered: Already registered?
     popup:
-      progress: Your progress
+      progress: ความคืบหน้าของคุณ
       lines: 'Total lines of code: %{lines}'
-      close: CLOSE
-      mastery: Concepts
-      puzzle_map: Stages
+      close: ปิด
+      mastery: แนวคิด
+      puzzle_map: ขั้นตอน
       prizes: 'Collect all %{total_trophies} trophies and win prizes!'
       prize_earned: 'All %{total_trophies} trophies collected. Prize won!'
       prize_us_only: (U.S. students only)
-      prizes_link: more info
+      prizes_link: ข้อมูลเพิ่มเติม
   teacher:
     title:
       one: 'Your teacher:'
@@ -254,11 +254,11 @@ tk:
       not_tried: Not tried yet
       activity: 'Indicates student activity in the last %{hours} %{plural}'
       no_section: No assigned section
-      trophies: Trophies
+      trophies: ถ้วยรางวัล
     students:
-      name: Name
-      username: Username
-      password: Password
+      name: ชื่อ
+      username: ชื่อผู้ใช้
+      password: รหัสผ่าน
       manage: Manage students
       dashboard: Go to Teacher Dashboard
       add: Add students
@@ -334,7 +334,7 @@ tk:
     see_details: See details
     prize_info: 'Prizes for participation (U.S. public school teachers only): Up to $1,000 in classroom rewards.'
     tryfirst: 'Or, you can try it first, and sign up later:'
-    trynow: Try now
+    trynow: ลองตอนนี้
     add_hint_help: Please help us to add smart hints to Code.org tutorials
     20hour_overview: This 20-hour course introduces core computer science and programming concepts. The course is designed for use in classrooms for grades K-8, but it is fun to learn at all ages.
     test_videos_help: Test our new video player at your school
@@ -351,7 +351,7 @@ tk:
     female: Female
     none: Prefer not to answer
   user_type:
-    student: Student
+    student: นักเรียน
     teacher: Teacher
   footer:
     help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped create this tutorial.
@@ -414,7 +414,7 @@ tk:
       unused: Unused Levels
   upsell:
     hoc:
-      title: Hour of Code
+      title: ช่วงเวลาของ Code
       body: Try the basics of computer science. Millions have given it a shot.
     flappy:
       title: Flappy Code
@@ -448,7 +448,7 @@ tk:
     correct_title: Correct
     correct_body: That is the correct answer.
   dialog:
-    ok: OK
+    ok: ตกลง
   time:
     hour: 1 hour
     day: day
@@ -457,13 +457,13 @@ tk:
     script:
       name:
         20-hour:
-          title: K-8 Intro to Computer Science Course (15-25 hours)
+          title: K-8 เพื่อเริ่มต้นกับวิชาวิทยาศาสตร์คอมพิวเตอร์(15-25 ชั่วโมง)
           description: This 20-hour course introduces core computer science and programming concepts. The course is designed for use in classrooms for grades K-8, but it is fun to learn at all ages.
         Hour of Code:
-          title: Hour of Code
+          title: ช่วงเวลาของ Code
           description: ""
         edit-code:
-          title: Edit Code
+          title: แก้ไข Code
           description: ""
         events:
           title: Events

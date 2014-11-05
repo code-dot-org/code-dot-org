@@ -11,29 +11,6 @@ hr:
   header_menu_faq: često postavljana pitanja
   header_menu_prizes: Nagrade
   header_menu_uk_code_org: uk.code.org
-  choose_country_header: Sudjelujte širom svijeta!
-  country_al: Albania
-  country_ar: Argentina
-  country_au: Australija
-  country_br: Brazil
-  country_bg: Bugarska
-  country_de: Njemačka
-  country_es: Latinska Amerika
-  country_eu: Europska Unija
-  country_gr: Grčka
-  country_hr: Hrvatska
-  country_id: Indonezija
-  country_it: Italija
-  country_jp: Japan
-  country_me: Bliski Istok i Sjeverna Afrika
-  country_my: Malaysia
-  country_nz: Novi Zeland
-  country_ro: Rumunjska
-  country_ru: Rusija
-  country_ua: Ukrajina
-  country_uk: Ujedinjeno Kraljevstvo
-  country_us: Sjedinjene Američke Države
-  country_vn: Vijetnam
   company_4-H: 4-H Youth Development
   company_bgca: Boys and Girls Club of America
   company_cgcs: Council of the Great City Schools
@@ -178,6 +155,17 @@ hr:
   resources_emails: Uzorci e-pošte
   resources_stats: Korisne statistike o informatici
   resources_press_kit: Mterijal za novinare
+  events_title: All Hour of Code Events
+  events_nav_all: All Events
+  events_nav_classrooms: Classrooms
+  events_nav_whole_schools: Whole Schools
+  events_nav_special: Special Events
+  events_all_title: All Hour of Code events
+  events_classroom_title: Classroom Hour of Code events
+  events_whole_school_title: Whole-school Hour of Code events
+  events_special_title: Special Hour of Code events
+  event: event
+  events: events
   footer_copyright_message: Copyright 2014 Code.org. Sva prava pridržana.
   footer_trademark_message: Sata Kodiranja ™ je zaštitni znak tvrtke Code.org.
   footer_menu_partners: Partneri

@@ -323,8 +323,8 @@
         maze_wordsearch_k_15: "Movimente-me para um lado, e então para o outro, para formar a palavra ABOVE"
         maze_wordsearch_k_16: "Movimente-me para um lado, e então para o outro, para formar a palavra BELOW"
         maze_wordsearch_k_20: "Isso é um teste! Movimente-me para um lado, e então para o outro, para formar a palavra STORY"
-        webapp_ec_simple: "Create your web app by using createHtmlBlock."
-        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColour" block.'
+        webapp_ec_simple: "Crie seu aplicativo da Web com createHtmlBlock."
+        turtle_ec_1_2: 'Agora, desenhe um quadrado. OBSERVAÇÃO: para usar sua cor preferida, selecione-a no novo bloco "penColour".'
     video:
       name:
         maze_intro: "Introdução ao Labirinto"

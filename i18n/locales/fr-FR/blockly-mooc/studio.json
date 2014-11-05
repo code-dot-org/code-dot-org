@@ -118,6 +118,8 @@
   "setBackgroundTennis":"définir l'arrière plan tennis",
   "setBackgroundWinter":"définir l'arrière plan hiver",
   "setBackgroundTooltip":"Définit l'image d'arrière-plan",
+  "setEnemySpeed":"set enemy speed",
+  "setPlayerSpeed":"set player speed",
   "setScoreText":"mettre le score à",
   "setScoreTextTooltip":"définit le texte à afficher dans la zone de score.",
   "setSpriteEmotionAngry":"une mauvaise humeur",

@@ -11,29 +11,6 @@ fa:
   header_menu_faq: پرسش و پاسخ
   header_menu_prizes: جوایز
   header_menu_uk_code_org: uk.code.org
-  choose_country_header: مشاركت جهاني!
-  country_al: Albania
-  country_ar: آرژانتين
-  country_au: استراليا
-  country_br: برزيل
-  country_bg: بلغارستان
-  country_de: آلمان
-  country_es: امریکاي لاتین
-  country_eu: اتحاديه اروپا
-  country_gr: یونان
-  country_hr: کرواسی
-  country_id: اندونزی
-  country_it: ايتاليا
-  country_jp: ژاپن
-  country_me: خاورمیانه و شمال آفریقا
-  country_my: Malaysia
-  country_nz: نيوزلند
-  country_ro: روماني
-  country_ru: روسیه
-  country_ua: اکراین
-  country_uk: انگلستان
-  country_us: ایالات متحده آمریکا
-  country_vn: ویتنام
   company_4-H: 4-H Youth Development
   company_bgca: Boys and Girls Club of America
   company_cgcs: Council of the Great City Schools
@@ -181,6 +158,17 @@ fa:
   resources_emails: نمونه ایمیل
   resources_stats: آمار مفيد از علوم كامپيوتر
   resources_press_kit: بسته مطبوعات
+  events_title: All Hour of Code Events
+  events_nav_all: All Events
+  events_nav_classrooms: Classrooms
+  events_nav_whole_schools: Whole Schools
+  events_nav_special: Special Events
+  events_all_title: All Hour of Code events
+  events_classroom_title: Classroom Hour of Code events
+  events_whole_school_title: Whole-school Hour of Code events
+  events_special_title: Special Hour of Code events
+  event: event
+  events: events
   footer_copyright_message: 'حق طبع و نشر Code.org  2014. کلیه حقوق محفوظ می‌باشد.'
   footer_trademark_message: ™Hour of Code علامت تجاري Code.org است.
   footer_menu_partners: شرکا

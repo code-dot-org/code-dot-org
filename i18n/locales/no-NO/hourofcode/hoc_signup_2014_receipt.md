@@ -16,7 +16,7 @@ Få [hele skolen din til å delta](http://<%= hostname %>/hele-skolen) for å bl
 
 <% end %>
 
-## 1. Spre ordet
+## 1. Spre budskapet
 
 Fortell vennene dine om #Kodetimen.
 

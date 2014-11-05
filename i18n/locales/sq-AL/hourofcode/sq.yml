@@ -11,29 +11,6 @@ sq:
   header_menu_faq: PESH (pyetjet e shpeshta)
   header_menu_prizes: Çmime
   header_menu_uk_code_org: uk.code.org
-  choose_country_header: 'Mirni pjese an e mban botes! '
-  country_al: Albania
-  country_ar: Argjentinë
-  country_au: Australi
-  country_br: Brazil
-  country_bg: Bullgari
-  country_de: Gjermani
-  country_es: Amerikë Latine (Jugore)
-  country_eu: Bashkimi Europian
-  country_gr: Greqi
-  country_hr: Kroaci
-  country_id: Indonezi
-  country_it: Itali
-  country_jp: Japoni
-  country_me: Lindje e Mesme dhe Afrikë Veriore
-  country_my: Malaysia
-  country_nz: Zelandë e Re
-  country_ro: Rumani
-  country_ru: Rusi
-  country_ua: Ukrainë
-  country_uk: Britania e Madhe
-  country_us: Shtetet e Bashkuara
-  country_vn: Vietnam
   company_4-H: 4-H Youth Development
   company_bgca: Boys and Girls Club of America
   company_cgcs: Council of the Great City Schools
@@ -178,6 +155,17 @@ sq:
   resources_emails: Mostra të emailave
   resources_stats: Statistika të dobishme për shkencë kompjuterike
   resources_press_kit: Press Kit
+  events_title: All Hour of Code Events
+  events_nav_all: All Events
+  events_nav_classrooms: Classrooms
+  events_nav_whole_schools: Whole Schools
+  events_nav_special: Special Events
+  events_all_title: All Hour of Code events
+  events_classroom_title: Classroom Hour of Code events
+  events_whole_school_title: Whole-school Hour of Code events
+  events_special_title: Special Hour of Code events
+  event: event
+  events: events
   footer_copyright_message: Copyright 2014 Code.org. Të gjitha të drejtat të rezervuara.
   footer_trademark_message: Hour of Code™ is a trademark of Code.org.
   footer_menu_partners: Partnerët

@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+require_relative '../deployment'
+
+def main()
+  db = URI.parse CDO.dashboard_db_writer
+
+  q = ARGV.join(' ').strip
+
+  command = [
+    'mysql',
+    "--user=#{db.user}",
+    "--host=#{db.host}",
+    "--database=#{db.path[1..-1]}",
+  ]
+  command << "--execute=\"#{q}\"" unless q.empty?
+  command << "--password=#{db.password}" unless db.password.nil?
+
+  system(command.join(' '))
+end
+
+main

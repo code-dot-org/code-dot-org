@@ -4,7 +4,15 @@
 
 * * *
 
-# Часът на кодирането-награди за всеки организатор
+<div class="row">
+  <h1 class="col-sm-6">
+    The Hour of Code — prizes for every organizer
+  </h1>
+  
+  <div class="col-sm-6 button-container centered">
+    <a href="/#join"><button class="signup-button">Sign up your event</button></a>
+  </div>
+</div>
 
 ## Всеки организатор печели Благодаря ви-код за подарък
 
@@ -20,19 +28,39 @@
 
 <% if @country == 'us' %>
 
-## 96 Щастливи класни стаи ще спечелят видео чат с гост-лектор!
+## 100 lucky classrooms win a video chat with a guest speaker!
 
-96 щастливи класни стаи ще бъдат поканени да се присъединят към видео чат, за да празнуват Часът на кодирането през декември 8-14. Учениците ще могат да задават въпроси и чатят с технологични и индустриялни лидери. [ Вижте миналогодишните чатове](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) с Бил Гейтс, Twitter основателят Джак Дорси, Сюзън Войсички от Google и Гейб Нюъл от Valve.
+100 lucky classrooms will be invited to participate in live video Q&As with tech titans and tech-loving celebrities. Students will be able to ask questions and chat with these exciting role models to kick off your Hour of Code.
 
 Всяка класна стая (публични или частни) в рамките на САЩ или Канада има право да спечели тази награда. Вашето училище не е необходимо да бъде регистрирано.
 
+### This year's celebrity video chat participants:
+
+![изображение](/images/fit-120/JR-Hildebrand-headshot.png)&nbsp;&nbsp; ![изображение](/images/fit-120/Bill-Gates-headshot.jpg)&nbsp;&nbsp; ![изображение](/images/fit-120/Usher-headshot.jpg)&nbsp;&nbsp; ![изображение](/images/fit-120/Sheryl-Sandberg-headshot.jpg)&nbsp;&nbsp; ![изображение](/images/fit-120/Jack-Dorsey-headshot.jpg)&nbsp;&nbsp; ![изображение](/images/fit-120/Hadi-Partovi-headshot.jpg)&nbsp;&nbsp; ![изображение](/images/fit-120/Ashton-Kutcher-headshot.jpg)&nbsp;&nbsp;
+
+![изображение](/images/fit-120/Clara-Shih-headshot.jpg)&nbsp;&nbsp; ![изображение](/images/fit-120/Lyndsey-Scott-headshot.jpg)&nbsp;&nbsp; ![изображение](/images/fit-120/Karlie-Kloss-headshot.jpg)&nbsp;&nbsp; ![изображение](/images/fit-120/Jess-Lee-headshot.jpg)&nbsp;&nbsp; ![изображение](/images/fit-120/David-Karp-headshot.png)&nbsp;&nbsp; ![изображение](/images/fit-120/Cory-Booker-headshot.jpg)&nbsp;&nbsp;
+
+  * JR Hildebrand (NASCAR Racecar Driver)
+  * Bill Gates (Microsoft founder)
+  * Usher (Recording artist)
+  * Sheryl Sandberg (Facebook COO)
+  * Jack Dorsey (Twitter co-founder, Square CEO)
+  * Hadi Partovi (Code.org co-founder)
+  * Ashton Kutcher (Actor and tech investor)
+  * Clara Shih (Hearsay Social CEO)
+  * Lyndsey Scott (App developer and model)
+  * Karlie Kloss (supermodel, learning to code)
+  * Jess Lee (Polyvore CEO)
+  * David Karp (Tumblr founder)
+  * Cory Booker (United States Senator of New Jersey)
+
 ## 51 Щастливи училища, ще спечелят набор от преносими компютри (или $10,000 за други технологии)
 
-Едно щастливо училище във ***всеки*** щат на САЩ (+ Вашингтон) ще спечели $10,000 за технологии. Организирайте Часът на кодирането за всеки ученик във вашето училище за да се класираме. Попълнете формата по-долу за да се регистрирате.
+One lucky school in ***every*** U.S. state (+ Washington D.C.) will win $10,000 worth of technology. Organize the Hour of Code for every student in your school to qualify. Fill out the form below to apply.
 
 ## Формуляр за хардуерна награда:
 
-Ако сте регистрирали цялото училище да участва в Часът на кодирането, можете да спечелите набор от преносими компютри (или $10,000 за други технологии) за вашето училище! Само един учител трябва да се регистрира за цялото училище.
+If you’ve signed up your entire school to participate in the Hour of Code, enter to win a class-set of laptops (or $10,000 for other technology) for your school! Only one teacher needs to apply for your entire school.
 
 <%= view :hardware_prizes_form %>
 
@@ -42,13 +70,21 @@
 
 <% end %>
 
-## Повече въпроси за наградите?
+<% if @country == 'us' %>
 
-Вижте <a href = "< % = hoc_uri('/prizes-terms') % >" > условията</a> или посетете нашия форум, за да видите [ ЧЗВ](http://support.code.org) и Задайте вашите въпроси.
+## 100 classrooms will win a set of programmable robots
+
+[Sphero](http://www.gosphero.com/) is the app-controlled robotic ball changing the way students learn. Powered by [SPRK lessons](http://www.gosphero.com/education/), these round robots give kids a fun crash course in programming while sharpening their skills in math and science. Sphero is giving away 100 classroom sets – each including 5 robots. Any classroom (public or private) within the U.S. or Canada is eligible to win this prize.
+
+<% end %>
+
+## More questions about prizes?
+
+Check out [Terms and Conditions](<%= hoc_uri('/prizes-terms') %>) or visit our forum to see [FAQs](http://support.code.org) and ask your questions.
 
 <% if @country == 'us' %>
 
-# Често задавани въпроси
+# Frequently Asked Questions
 
 ## Does your whole school have to enter to win the $10,000 in hardware?
 
@@ -88,6 +124,4 @@ To qualify, your entire school must register for the Hour of Code as well as com
 
 ## If my whole school can’t do the Hour of Code during Computer Science Education Week (Dec. 8-14), can I still qualify for prizes?
 
-Yes, just be sure to submit a logistics plan that outlines how your whole school is participating over a reasonable length of time and register for the Hour of Code by November 14th.
-
-<% end %>
+Yes, just be sure to submit a logistics plan that outlines how your whole school is participating over a reasonable length of time and register for the Hour of Code by November 14th. <a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a> <% end %>

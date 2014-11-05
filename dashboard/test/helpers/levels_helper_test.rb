@@ -65,4 +65,18 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal(choices_cached.count, Video.count)
     Video.all.each{|video| assert_includes(choices_cached, video.key)}
   end
+
+
+  test "blockly options converts 'impressive' => 'false' to 'impressive => false'" do
+    @level = create :artist
+    @script_level = create :script_level, level: @level
+    @level.impressive = "false"
+    @level.free_play = "false"
+
+    level, _ = blockly_options
+
+    assert_equal false, level['impressive']
+    assert_equal false, level['freePlay']
+  end
+
 end

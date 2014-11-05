@@ -64,6 +64,7 @@ Calc.init = function(config) {
 
   config.grayOutUndeletableBlocks = true;
   config.forceInsertTopBlock = 'functional_compute';
+  config.enableShowCode = false;
 
   config.html = page({
     assetUrl: BlocklyApps.assetUrl,
@@ -90,6 +91,10 @@ Calc.init = function(config) {
     var svg = document.getElementById('svgCalc');
     svg.setAttribute('width', CANVAS_WIDTH);
     svg.setAttribute('height', CANVAS_HEIGHT);
+
+    if (level.freePlay) {
+      document.getElementById('goalHeader').setAttribute('visibility', 'hidden');
+    }
 
     // This is hack that I haven't been able to fully understand. Furthermore,
     // it seems to break the functional blocks in some browsers. As such, I'm
@@ -215,9 +220,10 @@ Calc.execute = function() {
   }
 
   Calc.expressions.user = Calc.lastExpression.clone();
-  Calc.expressions.current = Calc.expressions.target.clone();
-
-  Calc.expressions.user.applyExpectation(Calc.expressions.target);
+  if (Calc.expressions.target) {
+    Calc.expressions.current = Calc.expressions.target.clone();
+    Calc.expressions.user.applyExpectation(Calc.expressions.target);
+  }
 
   Calc.result = !Calc.expressions.user.failedExpectation(true);
   Calc.testResults = BlocklyApps.getTestResults(Calc.result);
@@ -229,6 +235,10 @@ Calc.execute = function() {
   if (!Calc.result && Calc.expressions.user.isEquivalent(Calc.expressions.target)) {
     Calc.testResults = TestResults.APP_SPECIFIC_FAIL;
     Calc.message = calcMsg.equivalentExpression();
+  }
+
+  if (level.freePlay) {
+    Calc.testResults = BlocklyApps.TestResults.FREE_PLAY;
   }
 
   Calc.drawExpressions();
@@ -276,7 +286,9 @@ Calc.step = function (ignoreFailures) {
   if (!collapsed) {
     continueButton.className = continueButton.className.replace(/hide/g, "");
   } else {
-    Calc.expressions.current.collapse();
+    if (Calc.expressions.current) {
+      Calc.expressions.current.collapse();
+    }
     Calc.drawExpressions();
 
     continueButton.className += " hide";
@@ -300,11 +312,15 @@ Calc.drawExpressions = function () {
   // user: (0 * (3 + 4))
   // right now, we'll highlight the 1 + 2 for goal, and the 3 + 4 for user
 
-  expected.applyExpectation(expected);
-  drawSvgExpression('answerExpression', expected, user !== null);
+  if (expected) {
+    expected.applyExpectation(expected);
+    drawSvgExpression('answerExpression', expected, user !== null);
+  }
 
   if (user) {
-    user.applyExpectation(expected);
+    if (expected) {
+      user.applyExpectation(expected);
+    }
     drawSvgExpression('userExpression', user, true);
   } else {
     clearSvgExpression('userExpression');
@@ -378,6 +394,9 @@ var displayFeedback = function(response) {
       response: response,
       level: level,
       feedbackType: Calc.testResults,
+      appStrings: {
+        reinfFeedbackMsg: calcMsg.reinfFeedbackMsg()
+      }
     };
     if (Calc.message) {
       options.message = Calc.message;

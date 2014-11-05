@@ -4,7 +4,15 @@ title: Resurse layout: wide
 
 * * *
 
-# Cum să organizezi Hour of Code
+<div class="row">
+  <h1 class="col-sm-6">
+    How to teach one Hour of Code
+  </h1>
+  
+  <div class="col-sm-6 button-container centered">
+    <a href="/#join"><button class="signup-button">Sign up your event</button></a>
+  </div>
+</div>
 
 ## 1) Încercaţi Tutorialele:
 
@@ -71,4 +79,4 @@ Fiecare elev primeste şansa de a obţine o diplomă pe e-mail atunci când term
 
 **Ce urmează după Hour of Code?**
 
-Hour of Code este doar primul pas al călătoriei pentru a afla mai multe despre modul în care funcționează tehnologia și despre cum poți crea aplicații software. <% if @country == 'uk' %> Hour of Code este doar primul pas al călătoriei pentru a afla mai multe despre modul în care funcționează tehnologia și cum poți crea aplicații software. Pentru a continua această călătorie, [încurajează-ți copiii sa învețe online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %>
+Hour of Code este doar primul pas al călătoriei pentru a afla mai multe despre modul în care funcționează tehnologia și despre cum poți crea aplicații software. <% if @country == 'uk' %> Hour of Code este doar primul pas al călătoriei pentru a afla mai multe despre modul în care funcționează tehnologia și cum poți crea aplicații software. Pentru a continua această călătorie, [încurajează-ți copiii sa învețe online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %> <a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>

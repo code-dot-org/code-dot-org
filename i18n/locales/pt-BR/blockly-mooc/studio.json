@@ -118,6 +118,8 @@
   "setBackgroundTennis":"defina o plano de fundo de tênis",
   "setBackgroundWinter":"defina o plano de fundo de inverno",
   "setBackgroundTooltip":"Define a imagem do plano de fundo",
+  "setEnemySpeed":"set enemy speed",
+  "setPlayerSpeed":"set player speed",
   "setScoreText":"defina a pontuação",
   "setScoreTextTooltip":"Define o texto que vai ser exibido na pontuação.",
   "setSpriteEmotionAngry":"como bravo",
