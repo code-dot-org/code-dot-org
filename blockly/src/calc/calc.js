@@ -32,7 +32,7 @@ var api = require('./api');
 var page = require('../templates/page.html');
 var feedback = require('../feedback.js');
 var dom = require('../dom');
-
+var blockUtils = require('../block_utils');
 
 var ExpressionNode = require('./expressionNode');
 var TestResults = require('../constants').TestResults;
@@ -103,10 +103,11 @@ Calc.init = function(config) {
 
     // Add to reserved word list: API, local variables in execution evironment
     // (execute) and the infinite loop detection function.
-    //XXX Not sure if this is still right.
     Blockly.JavaScript.addReservedWords('Calc,code');
 
-    Calc.expressions.target = generateExpressionFromBlockXml(level.solutionBlocks);
+    var solutionBlocks = blockUtils.forceInsertTopBlock(level.solutionBlocks,
+      config.forceInsertTopBlock);
+    Calc.expressions.target = getExpressionFromBlocks(solutionBlocks);
     Calc.drawExpressions();
 
     // Adjust visualizationColumn width.
@@ -130,7 +131,7 @@ Calc.init = function(config) {
  */
 BlocklyApps.runButtonClick = function() {
   BlocklyApps.toggleRunReset('reset');
-  Blockly.mainWorkspace.traceOn(true);
+  Blockly.mainBlockSpace.traceOn(true);
   BlocklyApps.attempts++;
   Calc.execute();
 };
@@ -178,29 +179,32 @@ function evalCode (code) {
 }
 
 /**
- * Given the xml for a set of blocks, generates an expression from them by
- * temporarily sticking them into the workspace, generating code, and
- * evaluating said code.
+ * Generates an ExpressionNode from the blocks in the workspace. If blockXml
+ * is provided, temporarily sticks those blocks into the workspace to generate
+ * the ExpressionNode, then deletes blocks.
  */
-function generateExpressionFromBlockXml(blockXml) {
-  var xml = blockXml || '';
 
-  if (Blockly.mainWorkspace.getTopBlocks().length !== 0) {
-    throw new Error("generateExpressionFromBlockXml shouldn't be called if " +
-      "we already have blocks in the workspace");
+function getExpressionFromBlocks(blockXml) {
+  if (blockXml) {
+    if (Blockly.mainBlockSpace.getTopBlocks().length !== 0) {
+      throw new Error("getExpressionFromBlocks shouldn't be called with blocks if " +
+        "we already have blocks in the workspace");
+    }
+    // Temporarily put the blocks into the workspace so that we can generate code
+    BlocklyApps.loadBlocks(blockXml);
   }
 
-  // Temporarily put the blocks into the workspace so that we can generate code
-  BlocklyApps.loadBlocks(xml);
-  var code = Blockly.Generator.workspaceToCode('JavaScript');
+  var code = Blockly.Generator.blockSpaceToCode('JavaScript', 'functional_compute');
   evalCode(code);
+  var object = Calc.computedExpression;
+  Calc.computedExpression = null;
 
-  // Remove the blocks
-  Blockly.mainWorkspace.getTopBlocks().forEach(function (b) { b.dispose(); });
-  var expression = Calc.lastExpression;
-  Calc.lastExpression = null;
+  if (blockXml) {
+    // Remove the blocks
+    Blockly.mainBlockSpace.getTopBlocks().forEach(function (b) { b.dispose(); });
+  }
 
-  return expression;
+  return object;
 }
 
 /**
@@ -211,15 +215,13 @@ Calc.execute = function() {
   Calc.testResults = BlocklyApps.TestResults.NO_TESTS_RUN;
   Calc.message = undefined;
 
-  // todo (brent) perhaps try to share user vs. expected generation better
-  var code = Blockly.Generator.workspaceToCode('JavaScript', 'functional_compute');
-  evalCode(code);
-
-  if (!Calc.lastExpression) {
-    Calc.lastExpression = new ExpressionNode(0);
+  var userExpression = getExpressionFromBlocks();
+  if (userExpression) {
+    Calc.expressions.user = userExpression.clone();
+  } else {
+    Calc.expressions.user = new ExpressionNode(0);
   }
 
-  Calc.expressions.user = Calc.lastExpression.clone();
   if (Calc.expressions.target) {
     Calc.expressions.current = Calc.expressions.target.clone();
     Calc.expressions.user.applyExpectation(Calc.expressions.target);
@@ -243,7 +245,7 @@ Calc.execute = function() {
 
   Calc.drawExpressions();
 
-  var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
+  var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   var textBlocks = Blockly.Xml.domToText(xml);
 
   var reportData = {

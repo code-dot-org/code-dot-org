@@ -70,21 +70,21 @@ Then /^block "([^"]*)" is not child of block "([^"]*)"$/ do |child, parent|
 end
 
 And /^I've initialized the workspace with an auto\-positioned flappy puzzle$/ do
-  @browser.execute_script("Blockly.mainWorkspace.clear();")
+  @browser.execute_script("Blockly.mainBlockSpace.clear();")
   blocks_xml = '<xml><block type="flappy_whenClick" deletable="false"><next><block type="flappy_flap_height"><title name="VALUE">Flappy.FlapHeight.NORMAL</title><next><block type="flappy_playSound"><title name="VALUE">"sfx_wing"</title></block></next></block></next></block><block type="flappy_whenCollideGround" deletable="false"><next><block type="flappy_endGame"></block></next></block><block type="when_run" deletable="false"><next><block type="flappy_setSpeed"><title name="VALUE">Flappy.LevelSpeed.NORMAL</title></block></next></block><block type="flappy_whenCollideObstacle" deletable="false"><next><block type="flappy_endGame"></block></next></block><block type="flappy_whenEnterObstacle" deletable="false"><next><block type="flappy_incrementPlayerScore"></block></next></block></xml>'
   arranged_blocks_xml = @browser.execute_script("return BlocklyApps.arrangeBlockPosition('" + blocks_xml + "', {});")
   @browser.execute_script("BlocklyApps.loadBlocks('" + arranged_blocks_xml + "');")
 end
 
 And /^I've initialized the workspace with an auto\-positioned flappy puzzle with extra newlines$/ do
-  @browser.execute_script("Blockly.mainWorkspace.clear();")
+  @browser.execute_script("Blockly.mainBlockSpace.clear();")
   blocks_xml = '\n\n    <xml><block type="flappy_whenClick" deletable="false"><next><block type="flappy_flap_height"><title name="VALUE">Flappy.FlapHeight.NORMAL</title><next><block type="flappy_playSound"><title name="VALUE">"sfx_wing"</title></block></next></block></next></block><block type="flappy_whenCollideGround" deletable="false"><next><block type="flappy_endGame"></block></next></block><block type="when_run" deletable="false"><next><block type="flappy_setSpeed"><title name="VALUE">Flappy.LevelSpeed.NORMAL</title></block></next></block><block type="flappy_whenCollideObstacle" deletable="false"><next><block type="flappy_endGame"></block></next></block><block type="flappy_whenEnterObstacle" deletable="false"><next><block type="flappy_incrementPlayerScore"></block></next></block></xml>'
   arranged_blocks_xml = @browser.execute_script("return BlocklyApps.arrangeBlockPosition('" + blocks_xml + "', {});")
   @browser.execute_script("BlocklyApps.loadBlocks('" + arranged_blocks_xml + "');")
 end
 
 And /^I've initialized the workspace with a studio say block saying "([^"]*)"$/ do |phrase|
-  @browser.execute_script("Blockly.mainWorkspace.clear();")
+  @browser.execute_script("Blockly.mainBlockSpace.clear();")
   xml = '<xml><block type="when_run" deletable="false"><next><block type="studio_saySprite"><title name="SPRITE">0</title><title name="TEXT">'+ phrase +'</title></block></next></block></xml>'
   @browser.execute_script("BlocklyApps.loadBlocks('" + xml + "');")
 end
@@ -98,7 +98,7 @@ Then(/^block "([^"]*)" is in front of block "([^"]*)"$/) do |block_front, block_
 end
 
 Then(/^the workspace has "(.*?)" blocks of type "(.*?)"$/) do |n, type|
-  code = "return Blockly.mainWorkspace.getAllBlocks().reduce(function (a, b) { return a + (b.type === '" + type + "' ? 1 : 0) }, 0)"
+  code = "return Blockly.mainBlockSpace.getAllBlocks().reduce(function (a, b) { return a + (b.type === '" + type + "' ? 1 : 0) }, 0)"
   result = @browser.execute_script(code)
   result.should eq n.to_i
 end
@@ -117,7 +117,7 @@ end
 
 When(/^I set block "([^"]*)" to have a value of "(.*?)" for title "(.*?)"$/) do |blockId, value, title|
   script = "
-    Blockly.mainWorkspace.getAllBlocks().forEach(function (b) {
+    Blockly.mainBlockSpace.getAllBlocks().forEach(function (b) {
       if (b.id === #{blockId}) {
         b.setTitleValue('#{value}', '#{title}');
       }

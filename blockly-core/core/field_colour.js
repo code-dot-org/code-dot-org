@@ -76,7 +76,7 @@ Blockly.FieldColour.prototype.setValue = function(colour) {
   this.colour_ = colour;
   this.borderRect_.style.fill = colour;
   if (this.sourceBlock_ && this.sourceBlock_.rendered) {
-    this.sourceBlock_.workspace.fireChangeEvent();
+    this.sourceBlock_.blockSpace.fireChangeEvent();
   }
 };
 
@@ -108,7 +108,8 @@ Blockly.FieldColour.prototype.showEditor_ = function() {
   picker.setSelectedColor(this.getValue());
 
   // Position the palette to line up with the field.
-  var xy = Blockly.getAbsoluteXY_(/** @type {!Element} */ (this.borderRect_));
+  var xy = Blockly.getAbsoluteXY_(/** @type {!Element} */ (this.borderRect_), this.
+    getRootSVGElement_());
   if (navigator.userAgent.indexOf("MSIE") >= 0 || navigator.userAgent.indexOf("Trident") >= 0) {
       this.borderRect_.style.display = "inline";   /* reqd for IE */
       var borderBBox = {

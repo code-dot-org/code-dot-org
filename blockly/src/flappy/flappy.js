@@ -656,7 +656,7 @@ BlocklyApps.runButtonClick = function() {
   document.getElementById('getready').setAttribute('visibility', 'visible');
 
   BlocklyApps.toggleRunReset('reset');
-  Blockly.mainWorkspace.traceOn(true);
+  Blockly.mainBlockSpace.traceOn(true);
   // BlocklyApps.reset(false);
   BlocklyApps.attempts++;
   Flappy.execute();
@@ -718,7 +718,7 @@ Flappy.execute = function() {
     code += BlocklyApps.editor.getValue();
   }
 
-  var codeClick = Blockly.Generator.workspaceToCode(
+  var codeClick = Blockly.Generator.blockSpaceToCode(
                                     'JavaScript',
                                     'flappy_whenClick');
   var whenClickFunc = codegen.functionFromCode(
@@ -726,7 +726,7 @@ Flappy.execute = function() {
                                       BlocklyApps: BlocklyApps,
                                       Flappy: api } );
 
-  var codeCollideGround = Blockly.Generator.workspaceToCode(
+  var codeCollideGround = Blockly.Generator.blockSpaceToCode(
                                     'JavaScript',
                                     'flappy_whenCollideGround');
   var whenCollideGroundFunc = codegen.functionFromCode(
@@ -734,7 +734,7 @@ Flappy.execute = function() {
                                       BlocklyApps: BlocklyApps,
                                       Flappy: api } );
 
-  var codeEnterObstacle = Blockly.Generator.workspaceToCode(
+  var codeEnterObstacle = Blockly.Generator.blockSpaceToCode(
                                     'JavaScript',
                                     'flappy_whenEnterObstacle');
   var whenEnterObstacleFunc = codegen.functionFromCode(
@@ -742,7 +742,7 @@ Flappy.execute = function() {
                                       BlocklyApps: BlocklyApps,
                                       Flappy: api } );
 
-  var codeCollideObstacle = Blockly.Generator.workspaceToCode(
+  var codeCollideObstacle = Blockly.Generator.blockSpaceToCode(
                                     'JavaScript',
                                     'flappy_whenCollideObstacle');
   var whenCollideObstacleFunc = codegen.functionFromCode(
@@ -750,7 +750,7 @@ Flappy.execute = function() {
                                       BlocklyApps: BlocklyApps,
                                       Flappy: api } );
 
-  var codeWhenRunButton = Blockly.Generator.workspaceToCode(
+  var codeWhenRunButton = Blockly.Generator.blockSpaceToCode(
                                     'JavaScript',
                                     'when_run');
   var whenRunButtonFunc = codegen.functionFromCode(
@@ -821,7 +821,7 @@ Flappy.onPuzzleComplete = function() {
       BlocklyApps.TestResults.TOO_FEW_BLOCKS_FAIL;
   }
 
-  var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
+  var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   var textBlocks = Blockly.Xml.domToText(xml);
 
   Flappy.waitingForReport = true;
