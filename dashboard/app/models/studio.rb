@@ -115,6 +115,7 @@ class Studio < Grid
   <block type="studio_setSpriteEmotion" />
   <block type="studio_vanish" />
   <block type="studio_setSpriteSize" />
+  <block type="studio_showCoordinates" />
 </category>
 <category name="Loops">
   <block type="studio_repeatForever" />
