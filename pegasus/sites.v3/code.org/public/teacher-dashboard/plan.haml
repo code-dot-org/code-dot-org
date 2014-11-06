@@ -4,23 +4,14 @@ theme: none
 ---
 %div{"ng-controller" => "PlanDetailController"}
 
-  %div{style: "float:right; width:40%; margin-top:50px; text-align:right"}
-    %a{href: "http://#{canonical_hostname('studio.code.org')}", target: "_blank"}
-      %button.btn.btn-info= I18n.t('dashboard_landing_view_as_student')
+  %div
+    %br/
+    %a{href: '/teacher-dashboard#/'}= I18n.t('dashboard_navigation_home_page')
+    %span{style: "opacity:0.5"} &nbsp; &#9654; &nbsp;
+    %b{style: "color: #ff8b02;"}= I18n.t('dashboard_navigation_all_sections')
+    %br/
+
 
   %div{style: "clear:both"}
 
   = view :teacher_notices
-
-  .biggestClassProgress{"ng-show" => "sectionProgressUrl"}
-    %h2= I18n.t('dashboard_landing_progress_title')
-    %p= I18n.t('dashboard_landing_progress_biggest')
-    %div{"ng-include"=>"", src: "sectionProgressUrl", onload: "init_progress()"}
-    %a{"ng-href" => "#/sections/{{biggestSection.id}}"}
-      %button.btn.btn-info= I18n.t('dashboard_landing_view_progress', biggest_section: '{{biggestSection.name}}')
-
-  .courses
-    %h2= I18n.t('dashboard_landing_available_title')
-    %p= I18n.t('dashboard_landing_available_courses')
-    %br/
-    %div{"ng-include"=>"", src: "'/dashboardapi/courses/'"}
