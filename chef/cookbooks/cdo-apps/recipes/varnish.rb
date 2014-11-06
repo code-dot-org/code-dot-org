@@ -1,10 +1,15 @@
 apt_package "varnish"
 
+service "varnish" do
+  action :nothing
+end
+
 template '/etc/default/varnish' do
   source 'varnish_config.erb'
   user 'root'
   group 'root'
   mode '0644'
+  notifies :restart, "service[varnish]"
 end
 
 template '/etc/varnish/default.vcl' do
@@ -12,6 +17,7 @@ template '/etc/varnish/default.vcl' do
   user 'root'
   group 'root'
   mode '0644'
+  notifies :restart, "service[varnish]"
 end
 
 template '/etc/varnish/secret' do
@@ -19,6 +25,7 @@ template '/etc/varnish/secret' do
   user 'root'
   group 'root'
   mode '0600'
+  notifies :restart, "service[varnish]"
 end
 
 service "varnish" do
