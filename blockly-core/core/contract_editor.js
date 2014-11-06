@@ -42,10 +42,11 @@ Blockly.ContractEditor.prototype.parameterBlockType = 'functional_parameters_get
  */
 Blockly.ContractEditor.prototype.createContractDom_ = function() {
   Blockly.ContractEditor.superClass_.createContractDom_.call(this);
-  this.initializeTypeDropdown();
+  this.initializeInputTypeDropdown();
+  this.initializeOutputTypeDropdown();
 };
 
-Blockly.ContractEditor.prototype.initializeTypeDropdown = function() {
+Blockly.ContractEditor.prototype.initializeOutputTypeDropdown = function() {
   var flatSelector = new goog.ui.Select(null, null,
     goog.ui.FlatMenuButtonRenderer.getInstance());
 
@@ -55,13 +56,34 @@ Blockly.ContractEditor.prototype.initializeTypeDropdown = function() {
   flatSelector.setSelectedIndex(0);
 
   goog.events.listen(flatSelector, goog.ui.Component.EventType.CHANGE,
-    goog.bind(this.typeDropdownChange, this));
+    goog.bind(this.outputTypeDropdownChange, this));
+
+  flatSelector.render(goog.dom.getElement('outputTypeDropdown'));
+};
+
+Blockly.ContractEditor.prototype.outputTypeDropdownChange = function(comboBoxEvent) {
+  var newType = comboBoxEvent.target.getContent();
+  console.log('New output type is ' + newType);
+};
+
+Blockly.ContractEditor.prototype.initializeInputTypeDropdown = function() {
+  /** todo(bjordan): refactor into simplification */
+  var flatSelector = new goog.ui.Select(null, null,
+    goog.ui.FlatMenuButtonRenderer.getInstance());
+
+  goog.object.forEach(Blockly.ContractEditor.typesToColors, function(value, key) {
+    flatSelector.addItem(new goog.ui.MenuItem(key));
+  }, this);
+  flatSelector.setSelectedIndex(0);
+
+  goog.events.listen(flatSelector, goog.ui.Component.EventType.CHANGE,
+    goog.bind(this.inputTypeDropdownChange, this));
 
   flatSelector.render(goog.dom.getElement('paramTypeDropdown'));
 };
 
-Blockly.ContractEditor.prototype.typeDropdownChange = function(comboBoxEvent) {
+Blockly.ContractEditor.prototype.inputTypeDropdownChange = function(comboBoxEvent) {
   var newType = comboBoxEvent.target.getContent();
-  console.log('New type is ' + newType);
+  console.log('New input type is ' + newType);
 };
 
