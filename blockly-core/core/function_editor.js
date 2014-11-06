@@ -391,9 +391,12 @@ Blockly.FunctionEditor.prototype.createContractDom_ = function() {
       + '<div>' + Blockly.Msg.FUNCTION_DESCRIPTION_LABEL + '</div>'
       + '<div><textarea id="functionDescriptionText" rows="2"></textarea></div>'
       + '<div>' + Blockly.Msg.FUNCTION_PARAMETERS_LABEL + '</div>'
-      + '<div><input id="paramAddText" type="text" style="width: 200px;"> '
+      + '<div>'
+      + '<input id="paramAddText" type="text" style="width: 200px;"> '
+      + '<span id="paramTypeDropdown"></span>'
       + '<button id="paramAddButton" class="btn">' + Blockly.Msg.ADD_PARAMETER
-      + '</button>';
+      + '</button>'
+      + '</div>';
   var metrics = Blockly.modalBlockSpace.getMetrics();
   this.contractDiv_.style.left = metrics.absoluteLeft + 'px';
   this.contractDiv_.style.top = metrics.absoluteTop + 'px';
