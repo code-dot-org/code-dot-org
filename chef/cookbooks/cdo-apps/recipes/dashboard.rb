@@ -2,7 +2,7 @@ include_recipe 'cdo-apps::aws'
 include_recipe 'cdo-apps::varnish'
 
 execute "bundle-install-dashboard" do
-  command "bundle install"
+  command "sudo bundle install"
   cwd "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard"
   user node[:current_user]
   group node[:current_user]
