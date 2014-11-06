@@ -35,6 +35,8 @@ var dom = require('../dom');
 var blockUtils = require('../block_utils');
 
 var EvalString = require('./evalString');
+// requiring this loads canvg into the global namespace
+require('../canvg/canvg.js');
 
 var TestResults = require('../constants').TestResults;
 
@@ -225,9 +227,41 @@ Eval.execute = function() {
   BlocklyApps.report(reportData);
 };
 
+function imageDataForSvg(elementId) {
+  var canvas = document.createElement('canvas');
+  canvas.width = CANVAS_WIDTH;
+  canvas.height = CANVAS_HEIGHT;
+  canvg(canvas, document.getElementById(elementId).outerHTML);
+
+  // canvg attaches an svg object to the canvas, and attaches a setInterval.
+  // We don't need this, and that blocks our node process from exitting in
+  // tests, so stop it.
+  canvas.svg.stop();
+
+  var ctx = canvas.getContext('2d');
+  return ctx.getImageData(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+}
+
 function evaluateAnswer() {
-  var answer = document.getElementById('answer');
-  var user = document.getElementById('user');
+  // Compare the solution and user canvas
+  var userImageData = imageDataForSvg('user');
+  var solutionImageData = imageDataForSvg('answer');
+
+  // Turtle only looks at alphas for some reason
+  var totalDiff = 0;
+  for (var i = 0; i < userImageData.data.length; i++) {
+    var diff = Math.abs(userImageData.data[i] - solutionImageData.data[i]);
+    if (diff > 2) {
+      totalDiff += diff;
+    }
+  }
+  if (totalDiff > 0) {
+    return false;
+  }
+  return true;
+
+  // var answer = document.getElementById('answer');
+  // var user = document.getElementById('user');
 
   // is this good enough?
   // todo (brent) : can come up with at least one case where it isnt. goal is
@@ -236,7 +270,7 @@ function evaluateAnswer() {
   // html
   // we might be able to use canvg to convert the svg to a canvas representation,
   // and then do our comparison similar to how we do in artist
-  return answer.innerHTML.trim() == user.innerHTML.trim();
+  // return answer.innerHTML.trim() == user.innerHTML.trim();
 }
 
 /**
