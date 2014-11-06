@@ -30,7 +30,7 @@ goog.require('Blockly.JavaScript');
 
 Blockly.JavaScript.controls_repeat = function() {
   // Repeat n times (internal number).
-  var repeats = Number(this.getTitleValue('TIMES'));
+  var repeats = Number(this.getTitleValue('TIMES')) || 0;
   var branch = Blockly.JavaScript.statementToCode(this, 'DO');
   if (Blockly.JavaScript.INFINITE_LOOP_TRAP) {
     branch = Blockly.JavaScript.INFINITE_LOOP_TRAP.replace(/%1/g,
