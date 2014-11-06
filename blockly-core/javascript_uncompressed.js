@@ -386,7 +386,7 @@ Blockly.JavaScript.logic_ternary = function() {
 };
 Blockly.JavaScript.loops = {};
 Blockly.JavaScript.controls_repeat = function() {
-  var a = Number(this.getTitleValue("TIMES")), b = Blockly.JavaScript.statementToCode(this, "DO");
+  var a = Number(this.getTitleValue("TIMES")) || 0, b = Blockly.JavaScript.statementToCode(this, "DO");
   Blockly.JavaScript.INFINITE_LOOP_TRAP && (b = Blockly.JavaScript.INFINITE_LOOP_TRAP.replace(/%1/g, "'" + this.id + "'") + b);
   var c = Blockly.JavaScript.variableDB_.getDistinctName("count", Blockly.Variables.NAME_TYPE);
   return"for (var " + c + " = 0; " + c + " < " + a + "; " + c + "++) {\n" + b + "}\n"
@@ -794,4 +794,6 @@ Blockly.JavaScript.variables_set = function() {
   var a = Blockly.JavaScript.valueToCode(this, "VALUE", Blockly.JavaScript.ORDER_ASSIGNMENT) || "0";
   return Blockly.JavaScript.translateVarName(this.getTitleValue("VAR")) + " = " + a + ";\n"
 };
+Blockly.JavaScript.parameters_get = Blockly.JavaScript.variables_get;
+Blockly.JavaScript.parameters_set = Blockly.JavaScript.variables_set;
 

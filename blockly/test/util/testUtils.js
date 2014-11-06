@@ -90,8 +90,8 @@ exports.setupTestBlockly = function() {
   assert(Blockly.Blocks.text, "text block exists");
   assert(Blockly.Blocks.math_number, "math_number block exists");
   assert(BlocklyApps, "BlocklyApps exists");
-  assert(Blockly.mainWorkspace, "Blockly workspace exists");
+  assert(Blockly.mainBlockSpace, "Blockly workspace exists");
 
-  Blockly.mainWorkspace.clear();
-  assert(Blockly.mainWorkspace.getBlockCount() === 0, "Blockly workspace is empty");
+  Blockly.mainBlockSpace.clear();
+  assert(Blockly.mainBlockSpace.getBlockCount() === 0, "Blockly workspace is empty");
 };

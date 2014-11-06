@@ -3,20 +3,21 @@
   "game_id": 23,
   "created_at": "2014-10-27T23:55:52.000Z",
   "level_num": "custom",
-  "ideal_level_source_id": 412,
+  "ideal_level_source_id": 504,
   "user_id": 1,
   "properties": {
     "skin": "anna",
     "instructions": "Did you know every snowflake is a different shape?  Let's create a new snowflake by using the repeat block and repeating the diamond 10 times, turning right by 36 degrees between each diamond.",
     "x": "200",
     "y": "200",
-    "start_direction": "30",
+    "start_direction": "180",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "free_play": "false",
-    "slider_speed": "1.0"
+    "slider_speed": "1.0",
+    "impressive": "false"
   }
 }]]></config>
   <blocks>
@@ -24,24 +25,24 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_repeat" deletable="false" editable="false">
-              <title name="TIMES">2</title>
+            <block type="controls_repeat_dropdown">
+              <title name="TIMES" config="2-10">2</title>
               <statement name="DO">
                 <block type="draw_move_by_constant_dropdown" deletable="false" editable="false">
                   <title name="DIR">moveForward</title>
                   <title name="VALUE" config="50,100,150,200,300">100</title>
                   <next>
-                    <block type="draw_turn_by_constant" deletable="false" editable="false">
+                    <block type="draw_turn_by_constant_dropdown" deletable="false" editable="false">
                       <title name="DIR">turnRight</title>
-                      <title name="VALUE">120</title>
+                      <title name="VALUE" config="45,60,90,120,180">60</title>
                       <next>
                         <block type="draw_move_by_constant_dropdown" deletable="false" editable="false">
                           <title name="DIR">moveForward</title>
                           <title name="VALUE" config="50,100,150,200,300">100</title>
                           <next>
-                            <block type="draw_turn_by_constant" deletable="false" editable="false">
+                            <block type="draw_turn_by_constant_dropdown" deletable="false" editable="false">
                               <title name="DIR">turnRight</title>
-                              <title name="VALUE">60</title>
+                              <title name="VALUE" config="45,60,90,120,180">120</title>
                             </block>
                           </next>
                         </block>
@@ -61,16 +62,28 @@
           <title name="DIR">moveForward</title>
           <title name="VALUE" config="50,100,150,200,300">100</title>
         </block>
-        <block type="draw_turn_by_constant">
+        <block type="draw_turn_by_constant_dropdown">
           <title name="DIR">turnRight</title>
-          <title name="VALUE">36</title>
+          <title name="VALUE" config="36,45,60,90,120,180">36</title>
         </block>
-        <block type="draw_turn_by_constant">
+        <block type="draw_turn_by_constant_dropdown">
           <title name="DIR">turnLeft</title>
-          <title name="VALUE">36</title>
+          <title name="VALUE" config="36,45,60,90,120,180">36</title>
         </block>
         <block type="controls_repeat_dropdown">
           <title name="TIMES" config="3-10">10</title>
+        </block>
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_picker">
+              <title name="COLOUR">#ffffff</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_random"/>
+          </value>
         </block>
       </xml>
     </toolbox_blocks>
@@ -78,13 +91,13 @@
       <xml>
         <block type="pick_one">
           <statement name="PICK">
-            <block type="draw_turn_by_constant">
+            <block type="draw_turn_by_constant_dropdown">
               <title name="DIR">turnRight</title>
-              <title name="VALUE">36</title>
+              <title name="VALUE" config="36,45,60,90,120,180">36</title>
               <next>
-                <block type="draw_turn_by_constant">
+                <block type="draw_turn_by_constant_dropdown">
                   <title name="DIR">turnLeft</title>
-                  <title name="VALUE">36</title>
+                  <title name="VALUE" config="36,45,60,90,120,180">36</title>
                 </block>
               </next>
             </block>
@@ -102,24 +115,24 @@
             <block type="controls_repeat_dropdown">
               <title name="TIMES" config="3-10">10</title>
               <statement name="DO">
-                <block type="controls_repeat">
-                  <title name="TIMES">2</title>
+                <block type="controls_repeat_dropdown">
+                  <title name="TIMES" config="2-10">2</title>
                   <statement name="DO">
                     <block type="draw_move_by_constant_dropdown">
                       <title name="DIR">moveForward</title>
                       <title name="VALUE" config="50,100,150,200,300">100</title>
                       <next>
-                        <block type="draw_turn_by_constant">
+                        <block type="draw_turn_by_constant_dropdown">
                           <title name="DIR">turnRight</title>
-                          <title name="VALUE">120</title>
+                          <title name="VALUE" config="45,60,90,120,180">60</title>
                           <next>
                             <block type="draw_move_by_constant_dropdown">
                               <title name="DIR">moveForward</title>
                               <title name="VALUE" config="50,100,150,200,300">100</title>
                               <next>
-                                <block type="draw_turn_by_constant">
+                                <block type="draw_turn_by_constant_dropdown">
                                   <title name="DIR">turnRight</title>
-                                  <title name="VALUE">60</title>
+                                  <title name="VALUE" config="45,60,90,120,180">120</title>
                                 </block>
                               </next>
                             </block>
@@ -129,9 +142,9 @@
                     </block>
                   </statement>
                   <next>
-                    <block type="draw_turn_by_constant">
+                    <block type="draw_turn_by_constant_dropdown">
                       <title name="DIR">turnRight</title>
-                      <title name="VALUE">36</title>
+                      <title name="VALUE" config="36,45,60,90,120,180">36</title>
                     </block>
                   </next>
                 </block>

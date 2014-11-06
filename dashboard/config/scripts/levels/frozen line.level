@@ -8,15 +8,16 @@
   "properties": {
     "skin": "elsa",
     "instructions": "Hi! I'm Elsa of Arendelle. Help me create a single line.",
-    "x": "150",
-    "y": "200",
-    "start_direction": "90",
+    "x": "200",
+    "y": "150",
+    "start_direction": "180",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "free_play": "false",
-    "slider_speed": "0.1"
+    "slider_speed": "0.1",
+    "impressive": "false"
   }
 }]]></config>
   <blocks>

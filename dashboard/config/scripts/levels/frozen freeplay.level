@@ -15,7 +15,8 @@
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
-    "free_play": "true"
+    "free_play": "true",
+    "impressive": "false"
   }
 }]]></config>
   <blocks>
@@ -45,6 +46,15 @@
         <block type="draw_width_inline">
           <title name="WIDTH">1</title>
         </block>
+        <block type="create_a_circle_size" inline="false">
+          <value name="VALUE">
+            <block type="math_number">
+              <title name="NUM">0</title>
+            </block>
+          </value>
+        </block>
+        <block type="create_a_snowflake_branch"/>
+        <block type="create_a_snowflower"/>
         <block type="controls_repeat">
           <title name="TIMES">3</title>
         </block>

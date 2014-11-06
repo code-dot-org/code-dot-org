@@ -47,7 +47,7 @@ exports.strip = function(code) {
  * Extract the user's code as raw JavaScript.
  */
 exports.workspaceCode = function(blockly) {
-  var code = blockly.Generator.workspaceToCode('JavaScript');
+  var code = blockly.Generator.blockSpaceToCode('JavaScript');
   return exports.strip(code);
 };
 
@@ -191,20 +191,27 @@ exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
     var start = node.start - userCodeStartOffset;
     var end = node.end - userCodeStartOffset;
 
-    inUserCode = (start > 0) && (start < userCodeLength);
-
-    // If we are showing Javascript code in the ace editor, highlight
-    // the code being executed in each step:
-    if (!editor.currentlyUsingBlocks) {
-      // Only show selection if the node being executed is inside the user's
-      // code (not inside code we inserted before or after their code that is
-      // not visible in the editor):
-      var selection = editor.aceEditor.getSelection();
-      if (inUserCode) {
-        createSelection(selection, cumulativeLength, start, end);
+    // Only show selection if the node being executed is inside the user's
+    // code (not inside code we inserted before or after their code that is
+    // not visible in the editor):
+    if (start > 0 && start < userCodeLength) {
+      // Highlight the code being executed in each step:
+      if (editor.currentlyUsingBlocks) {
+        var style = {color: '#FFFF22'};
+        var line = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
+        editor.clearLineMarks();
+        editor.markLine(line, style);
       } else {
-        selection.clearSelection();
+        var selection = editor.aceEditor.getSelection();
+        createSelection(selection, cumulativeLength, start, end);
       }
+      inUserCode = true;
+    }
+  } else {
+    if (editor.currentlyUsingBlocks) {
+      editor.clearLineMarks();
+    } else {
+      editor.aceEditor.getSelection().clearSelection();
     }
   }
   return inUserCode;

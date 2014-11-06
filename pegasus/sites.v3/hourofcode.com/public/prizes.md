@@ -2,9 +2,12 @@
 title: Prizes
 layout: wide
 ---
-<a href="/#join"><button style="float: right; margin-top: 50px">Sign up your event</button></a>
-# The Hour of Code — prizes for every organizer
-
+<div class="row">
+    <h1 class="col-sm-6">The Hour of Code — prizes for every organizer</h1>
+    <div class="col-sm-6 button-container centered">
+        <a href="/#join"><button class="signup-button">Sign up for a chance to win</button></a>
+    </div>
+</div>
 ## Every organizer wins a thank you gift-code
 Every educator who hosts an Hour of Code for students will receive 10 GB of Dropbox space or $10 Skype credit as a thank you gift!
 
@@ -17,10 +20,14 @@ Every educator who hosts an Hour of Code for students will receive 10 GB of Drop
 
 <% if @country == 'us' %>
 
-## 96 lucky classrooms win a video chat with a guest speaker!
-96 lucky classrooms will be invited to join a video chat to celebrate the Hour of Code during December 8-14. Your students will be able to ask questions and chat with technology-industry leaders. [Check out last year’s chats](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) with Bill Gates, Twitter founder Jack Dorsey, Susan Wojcicki of Google and Gabe Newell of Valve.
+## 100 lucky classrooms win a video chat with a guest speaker!
+
+100 lucky classrooms will be invited to participate in live video Q&As with tech titans and tech-loving celebrities. Students will be able to ask questions and chat with these exciting role models to kick off your Hour of Code. 
 
 Any classroom (public or private) within the U.S. or Canada is eligible to win this prize. Your whole school does not need to apply.
+
+### This year's celebrity video chat  participants:
+<%= view :video_chat_speakers %>
 
 ## 51 Lucky schools win a class-set of laptops (or $10,000 for other technology)
 One lucky school in ***every*** U.S. state (+ Washington D.C.) will win $10,000 worth of technology. Organize the Hour of Code for every student in your school to qualify. Fill out the form below to apply.
@@ -33,6 +40,13 @@ If you’ve signed up your entire school to participate in the Hour of Code, ent
 <What are your odds of winning?>
 
 <See a list of all schools signed up for the Hour of Code in your state. One public K-12 school in every U.S. state will win a class-set of laptops.>
+
+<% end %>
+
+<% if @country == 'us' %>
+
+## 100 classrooms will win a set of programmable robots
+[Sphero](http://www.gosphero.com/) is the app-controlled robotic ball changing the way students learn. Powered by [SPRK lessons](http://www.gosphero.com/education/), these round robots give kids a fun crash course in programming while sharpening their skills in math and science. Sphero is giving away 100 classroom sets – each including 5 robots. Any classroom (public or private) within the U.S. or Canada is eligible to win this prize. 
 
 <% end %>
 
@@ -85,7 +99,7 @@ To qualify, your entire school must register for the Hour of Code as well as com
 
 ## If my whole school can’t do the Hour of Code during Computer Science Education Week (Dec. 8-14), can I still qualify for prizes?
 Yes, just be sure to submit a logistics plan that outlines how your whole school is participating over a reasonable length of time and register for the Hour of Code by November 14th.
-<a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>
+<a style="display: block" href="/#join"><button style="float: right;">Sign up for a chance to win</button></a>
 <% end %>
 
 

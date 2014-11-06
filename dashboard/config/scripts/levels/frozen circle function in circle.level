@@ -1,0 +1,124 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2014-11-04T02:31:26.000Z",
+  "level_num": "custom",
+  "ideal_level_source_id": 634,
+  "user_id": 1,
+  "properties": {
+    "skin": "elsa",
+    "instructions": "Now let's create 20 overlapping circles, rotating 18 degrees between each circle. ",
+    "x": "350",
+    "y": "180",
+    "start_direction": "180",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "free_play": "false",
+    "slider_speed": "0.8",
+    "impressive": "false"
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat_dropdown" deletable="false">
+              <title name="TIMES" config="3, 5, 10, 20">???</title>
+              <statement name="DO">
+                <block type="create_a_circle" deletable="false" editable="false">
+                  <next>
+                    <block type="jump_by_constant_dropdown" deletable="false">
+                      <title name="DIR">jumpForward</title>
+                      <title name="VALUE" config="50,100,150,200,300">???</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="draw_move_by_constant_dropdown">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE" config="50,100,150,200,300">100</title>
+        </block>
+        <block type="jump_by_constant_dropdown">
+          <title name="DIR">jumpForward</title>
+          <title name="VALUE" config="50,100,150,200,300">50</title>
+        </block>
+        <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE" config="18,45,60,90,120,180">18</title>
+        </block>
+        <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">turnLeft</title>
+          <title name="VALUE" config="18,45,60,90,120,180">18</title>
+        </block>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="2, 5, 10, 20">20</title>
+        </block>
+        <block type="create_a_circle"/>
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_picker">
+              <title name="COLOUR">#ffffff</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_random"/>
+          </value>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3, 5, 10, 20">20</title>
+        </block>
+        <block type="jump_by_constant_dropdown">
+          <title name="DIR">jumpForward</title>
+          <title name="VALUE" config="50,100,150,200,300">50</title>
+        </block>
+        <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE" config="18,45,60,90,120,180">18</title>
+        </block>
+      </xml>
+    </required_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat_dropdown">
+              <title name="TIMES" config="3, 5, 10, 20">20</title>
+              <statement name="DO">
+                <block type="create_a_circle">
+                  <next>
+                    <block type="jump_by_constant_dropdown">
+                      <title name="DIR">jumpForward</title>
+                      <title name="VALUE" config="50,100,150,200,300">50</title>
+                      <next>
+                        <block type="draw_turn_by_constant_dropdown">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE" config="18,45,60,90,120,180">18</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Artist>

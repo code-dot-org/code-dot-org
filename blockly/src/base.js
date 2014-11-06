@@ -173,6 +173,8 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
+    // Set a class on the main blockly div so CSS can style blocks differently
+    Blockly.addClass_(container.querySelector('#blockly'), 'edit');
     // If in level builder editing blocks, make workspace extra tall
     visualizationColumn.style.height = "3000px";
     // Modify the arrangement of toolbox blocks so categories align left
@@ -325,10 +327,10 @@ BlocklyApps.init = function(config) {
     // using window.require forces us to use requirejs version of require
     window.require(['droplet'], function(droplet) {
       var displayMessage, examplePrograms, messageElement, onChange, startingText;
-      var palette = utils.generateDropletPalette(config.level.codeFunctions);
       BlocklyApps.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
         mode: 'javascript',
-        palette: palette
+        modeOptions: utils.generateDropletModeOptions(config.level.codeFunctions),
+        palette: utils.generateDropletPalette(config.level.codeFunctions)
       });
 
       var startText = '// ' + msg.typeHint() + '\n';
@@ -441,6 +443,8 @@ BlocklyApps.init = function(config) {
         true : config.level.disableParamEditing,
     disableVariableEditing: config.level.disableVariableEditing === undefined ?
         false : config.level.disableVariableEditing,
+    useModalFunctionEditor: config.level.useModalFunctionEditor === undefined ?
+        false : config.level.useModalFunctionEditor,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -495,7 +499,7 @@ BlocklyApps.init = function(config) {
 
   // Add display of blocks used.
   setIdealBlockNumber();
-  Blockly.addChangeListener(function() {
+  Blockly.mainBlockSpaceEditor.addChangeListener(function() {
     BlocklyApps.updateBlockCount();
   });
 };
@@ -552,7 +556,7 @@ BlocklyApps.localeDirection = function() {
 /**
  * Initialize Blockly for a readonly iframe.  Called on page load.
  * XML argument may be generated from the console with:
- * Blockly.Xml.domToText(Blockly.Xml.workspaceToDom(Blockly.mainWorkspace)).slice(5, -6)
+ * Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)).slice(5, -6)
  */
 BlocklyApps.initReadonly = function(options) {
   Blockly.inject(document.getElementById('blockly'), {
@@ -570,7 +574,7 @@ BlocklyApps.initReadonly = function(options) {
  */
 BlocklyApps.loadBlocks = function(blocksXml) {
   var xml = parseXmlElement(blocksXml);
-  Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, xml);
+  Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, xml);
 };
 
 BlocklyApps.BLOCK_X_COORDINATE = 70;
@@ -701,8 +705,9 @@ BlocklyApps.onResize = function() {
 BlocklyApps.resizeHeaders = function (fullWorkspaceWidth) {
   var categoriesWidth = 0;
   var categories = BlocklyApps.editCode ?
-                    document.querySelector('.droplet-palette-wrapper') :
-                    Blockly.Toolbox.HtmlDiv;
+      document.querySelector('.droplet-palette-wrapper') :
+      Blockly.mainBlockSpaceEditor.toolbox &&
+      Blockly.mainBlockSpaceEditor.toolbox.HtmlDiv;
   if (categories) {
     // If in the droplet editor, but not using blocks, keep categoryWidth at 0
     if (!BlocklyApps.editCode || BlocklyApps.editor.currentlyUsingBlocks) {
@@ -711,8 +716,8 @@ BlocklyApps.resizeHeaders = function (fullWorkspaceWidth) {
     }
   }
 
-  var workspaceWidth = Blockly.getWorkspaceWidth();
-  var toolboxWidth = Blockly.getToolboxWidth();
+  var workspaceWidth = Blockly.mainBlockSpaceEditor.getBlockSpaceWidth();
+  var toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
 
   if (BlocklyApps.editCode) {
     workspaceWidth = fullWorkspaceWidth - categoriesWidth;
@@ -756,7 +761,7 @@ BlocklyApps.highlight = function(id, spotlight) {
     }
   }
 
-  Blockly.mainWorkspace.highlightBlock(id, spotlight);
+  Blockly.mainBlockSpace.highlightBlock(id, spotlight);
 };
 
 /**
@@ -909,8 +914,8 @@ BlocklyApps.resetButtonClick = function() {
   onResetPressed();
   BlocklyApps.toggleRunReset('run');
   BlocklyApps.clearHighlighting();
-  Blockly.mainWorkspace.setEnableToolbox(true);
-  Blockly.mainWorkspace.traceOn(false);
+  Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
+  Blockly.mainBlockSpace.traceOn(false);
   BlocklyApps.reset(false);
 };
 

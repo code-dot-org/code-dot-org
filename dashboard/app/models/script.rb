@@ -131,7 +131,11 @@ class Script < ActiveRecord::Base
   end
 
   def k5_course?
-    return ['course1', 'course2', 'course3'].include? self.name
+    return ['course1', 'course2', 'course3', 'course4'].include? self.name
+  end
+
+  def has_lesson_plan?
+    k5_course?
   end
 
   SCRIPT_CSV_MAPPING = %w(Game Name Level:level_num Skin Concepts Url:level_url Stage)

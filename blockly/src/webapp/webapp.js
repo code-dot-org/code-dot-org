@@ -106,7 +106,13 @@ Webapp.onTick = function() {
                                              Webapp.cumulativeLength,
                                              Webapp.userCodeStartOffset,
                                              Webapp.userCodeLength);
-      Webapp.interpreter.step();
+      try {
+        Webapp.interpreter.step();
+      }
+      catch(err) {
+        Webapp.executionError = err;
+        Webapp.onPuzzleComplete();
+      }
     }
   } else {
     if (Webapp.tickCount === 1) {
@@ -253,7 +259,6 @@ BlocklyApps.reset = function(first) {
 
   // Reset configurable variables
   var divWebapp = document.getElementById('divWebapp');
-  divWebapp.style.backgroundColor = 'white';
 
   while (divWebapp.firstChild) {
     divWebapp.removeChild(divWebapp.firstChild);
@@ -280,6 +285,7 @@ BlocklyApps.reset = function(first) {
   // Reset the Globals object used to contain program variables:
   Webapp.Globals = {};
   Webapp.eventQueue = [];
+  Webapp.executionError = null;
   Webapp.interpreter = null;
 };
 
@@ -295,7 +301,7 @@ BlocklyApps.runButtonClick = function() {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
   BlocklyApps.toggleRunReset('reset');
-  Blockly.mainWorkspace.traceOn(true);
+  Blockly.mainBlockSpace.traceOn(true);
   BlocklyApps.reset(false);
   BlocklyApps.attempts++;
   Webapp.execute();
@@ -348,7 +354,7 @@ Webapp.onReportComplete = function(response) {
 //
 
 var defineProcedures = function (blockType) {
-  var code = Blockly.Generator.workspaceToCode('JavaScript', blockType);
+  var code = Blockly.Generator.blockSpaceToCode('JavaScript', blockType);
   // TODO: handle editCode JS interpreter
   try { codegen.evalWith(code, {
                          codeFunctions: level.codeFunctions,
@@ -402,7 +408,7 @@ Webapp.execute = function() {
     defineProcedures('procedures_defreturn');
     defineProcedures('procedures_defnoreturn');
 
-    var blocks = Blockly.mainWorkspace.getTopBlocks();
+    var blocks = Blockly.mainBlockSpace.getTopBlocks();
     for (var x = 0; blocks[x]; x++) {
       var block = blocks[x];
       if (block.type === 'when_run') {
@@ -468,7 +474,9 @@ Webapp.feedbackImage = '';
 Webapp.encodedFeedbackImage = '';
 
 Webapp.onPuzzleComplete = function() {
-  if (level.freePlay) {
+  if (Webapp.executionError) {
+    Webapp.result = BlocklyApps.ResultType.ERROR;
+  } else if (level.freePlay) {
     Webapp.result = BlocklyApps.ResultType.SUCCESS;
   }
 
@@ -499,7 +507,7 @@ Webapp.onPuzzleComplete = function() {
       BlocklyApps.TestResults.TOO_FEW_BLOCKS_FAIL;
   }
 
-  var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
+  var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   var textBlocks = Blockly.Xml.domToText(xml);
 
   Webapp.waitingForReport = true;
@@ -523,7 +531,7 @@ Webapp.onPuzzleComplete = function() {
       callback: function(pngDataUrl) {
         Webapp.feedbackImage = pngDataUrl;
         Webapp.encodedFeedbackImage = encodeURIComponent(Webapp.feedbackImage.split(',')[1]);
-        
+
         sendReport();
       }
     });
@@ -551,36 +559,26 @@ Webapp.executeCmd = function (id, name, opts) {
 Webapp.callCmd = function (cmd) {
   var retVal = true;
   switch (cmd.name) {
-    /* 
+    /*
     case 'wait':
       if (!cmd.opts.started) {
         BlocklyApps.highlight(cmd.id);
       }
       return Studio.wait(cmd.opts);
     */
-    case 'turnBlack':
-      BlocklyApps.highlight(cmd.id);
-      retVal = Webapp.turnBlack(cmd.opts);
-      break;
     case 'createHtmlBlock':
-      BlocklyApps.highlight(cmd.id);
-      retVal = Webapp.createHtmlBlock(cmd.opts);
-      break;
+    case 'replaceHtmlBlock':
+    case 'deleteHtmlBlock':
+    case 'createButton':
+    case 'createTextInput':
+    case 'getText':
+    case 'setStyle':
     case 'attachEventHandler':
       BlocklyApps.highlight(cmd.id);
-      retVal = Webapp.attachEventHandler(cmd.opts);
+      retVal = Webapp[cmd.name](cmd.opts);
       break;
   }
   return retVal;
-};
-
-Webapp.turnBlack = function (opts) {
-  var divWebapp = document.getElementById('divWebapp');
-
-  // sample
-  divWebapp.style.backgroundColor = 'black';
-
-  return true;
 };
 
 Webapp.createHtmlBlock = function (opts) {
@@ -590,9 +588,69 @@ Webapp.createHtmlBlock = function (opts) {
   newDiv.id = opts.elementId;
   newDiv.innerHTML = opts.html;
 
-  divWebapp.appendChild(newDiv);
+  return Boolean(divWebapp.appendChild(newDiv));
+};
 
-  return newDiv;
+Webapp.createButton = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+
+  var newButton = document.createElement("button");
+  var textNode = document.createTextNode(opts.text);
+  newButton.id = opts.elementId;
+
+  return Boolean(newButton.appendChild(textNode) &&
+                 divWebapp.appendChild(newButton));
+};
+
+Webapp.createTextInput = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+
+  var newInput = document.createElement("input");
+  newInput.value = opts.text;
+  newInput.id = opts.elementId;
+
+  return Boolean(divWebapp.appendChild(newInput));
+};
+
+Webapp.getText = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var div = document.getElementById(opts.elementId);
+  if (divWebapp.contains(div)) {
+    return String(div.value);
+  }
+  return false;
+};
+
+Webapp.replaceHtmlBlock = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var oldDiv = document.getElementById(opts.elementId);
+  if (divWebapp.contains(oldDiv)) {
+    var newDiv = document.createElement("div");
+    newDiv.id = opts.elementId;
+    newDiv.innerHTML = opts.html;
+
+    return Boolean(divWebapp.replaceChild(newDiv, oldDiv));
+  }
+  return false;
+};
+
+Webapp.deleteHtmlBlock = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var div = document.getElementById(opts.elementId);
+  if (divWebapp.contains(div)) {
+    return Boolean(divWebapp.removeChild(div));
+  }
+  return false;
+};
+
+Webapp.setStyle = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var div = document.getElementById(opts.elementId);
+  if (divWebapp.contains(div)) {
+    div.style.cssText = opts.style;
+    return true;
+  }
+  return false;
 };
 
 Webapp.onEventFired = function (opts, e) {
@@ -600,12 +658,16 @@ Webapp.onEventFired = function (opts, e) {
 };
 
 Webapp.attachEventHandler = function (opts) {
-  // For now, we're not tracking how many of these we add and we don't allow
-  // the user to detach the handler. We detach all listeners by cloning the
-  // divWebapp DOM node inside of reset()
-  document.getElementById(opts.elementId).addEventListener(
-      opts.eventName,
-      Webapp.onEventFired.bind(this, opts));
+  var divWebapp = document.getElementById('divWebapp');
+  var divElement = document.getElementById(opts.elementId);
+  if (divWebapp.contains(divElement)) {
+    // For now, we're not tracking how many of these we add and we don't allow
+    // the user to detach the handler. We detach all listeners by cloning the
+    // divWebapp DOM node inside of reset()
+    divElement.addEventListener(
+        opts.eventName,
+        Webapp.onEventFired.bind(this, opts));
+  }
 };
 
 /*
