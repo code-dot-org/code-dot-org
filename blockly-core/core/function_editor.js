@@ -64,6 +64,12 @@ Blockly.FunctionEditor = function() {
  */
 Blockly.FunctionEditor.prototype.definitionBlockType = 'procedures_defnoreturn';
 
+/**
+ * The type of block to instantiate for parameter definition
+ * @type {string}
+ */
+Blockly.FunctionEditor.prototype.parameterBlockType = 'parameters_get';
+
 Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
   var targetFunctionDefinitionBlock = Blockly.mainBlockSpace.findFunction(
       functionName);
@@ -128,7 +134,7 @@ Blockly.FunctionEditor.prototype.addParamFromInputField_ = function(
 
 Blockly.FunctionEditor.prototype.addParameter = function(newParameterName) {
   // Add the new param block to the local toolbox
-  var param = Blockly.createSvgElement('block', {type: 'parameters_get'});
+  var param = Blockly.createSvgElement('block', {type: this.parameterBlockType});
   var v = Blockly.createSvgElement('title', {name: 'VAR'}, param);
   v.textContent = newParameterName;
   this.paramToolboxBlocks_.push(param);
