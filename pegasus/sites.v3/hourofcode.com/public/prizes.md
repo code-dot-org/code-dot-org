@@ -110,7 +110,7 @@ To qualify, your entire school must register for the Hour of Code as well as com
 
 ## If my whole school can’t do the Hour of Code during Computer Science Education Week (Dec. 8-14), can I still qualify for prizes?
 Yes, just be sure to submit a logistics plan that outlines how your whole school is participating over a reasonable length of time and register for the Hour of Code by November 14th.
-<a style="display: block" href="<%= hoc_uri('/#join' %>"><button style="float: right;">Sign up for a chance to win</button></a>
+<a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Sign up for a chance to win</button></a>
 <% end %>
 
 
