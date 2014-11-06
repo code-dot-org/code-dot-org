@@ -124,9 +124,12 @@ body {
 /* styling for the embedded dashboard components... */
 
 a.user-menu-link {
-  color:white;
   font-weight:400;
   padding-left:10px;
+}
+
+.user_menu > a:link {
+  color:white;
 }
 
 .user_menu a:link,
@@ -167,8 +170,8 @@ a.user-menu-link {
   -webkit-user-select: none;
   -webkit-writing-mode: horizontal-tb;
   align-items: flex-start;
-  background-color: rgb(255, 164, 0) ;
-  border-color: rgb(255, 164, 0) ;
+  background-color: #b9bf15;
+  border-color: #b9bf15;
   background-image: none;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
