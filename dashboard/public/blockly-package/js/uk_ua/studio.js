@@ -7034,6 +7034,30 @@ module.exports.installFunctionalApiCallBlock = function(blockly, generator,
   };
 };
 
+module.exports.installStringPicker = function(blockly, generator, options) {
+  var values = options.values;
+  var blockName = options.blockName;
+  blockly.Blocks[blockName] = {
+    init: function () {
+      this.setFunctional(true, {
+        headerHeight: 0,
+        rowBuffer: 3
+      });
+      this.setHSV.apply(this, colors.string);
+      this.appendDummyInput()
+          .appendTitle(new Blockly.FieldLabel('"'))
+          .appendTitle(new blockly.FieldDropdown(values), 'VAL')
+          .appendTitle(new Blockly.FieldLabel('"'))
+          .setAlign(Blockly.ALIGN_CENTRE);
+      this.setFunctionalOutput(true, 'string');
+    }
+  };
+
+  generator[blockName] = function() {
+    return blockly.JavaScript.quote_(this.getTitleValue('VAL'));
+  };
+};
+
 },{"./utils":45}],15:[function(require,module,exports){
 /*! Hammer.JS - v1.1.3 - 2014-05-22
  * http://eightmedia.github.io/hammer.js
@@ -12921,6 +12945,7 @@ var msg = require('../../locale/uk_ua/studio');
 var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
 var commonMsg = require('../../locale/uk_ua/common');
 var codegen = require('../codegen');
+var functionalBlockUtils = require('../functionalBlockUtils');
 var installFunctionalApiCallBlock = require('../functionalBlockUtils').installFunctionalApiCallBlock;
 var tiles = require('./tiles');
 var utils = require('../utils');
@@ -14383,6 +14408,33 @@ exports.install = function(blockly, blockInstallOptions) {
 
   // install number and string
   sharedFunctionalBlocks.install(blockly, generator);
+
+  // Note: in other languages, the translated values won't be accepted
+  // as valid backgrounds if they are typed in as free text. Also this
+  // block will have the effect of translating the selected text to
+  // english if not connected to the functional_setBackground block.
+  // TODO(i18n): translate these strings in the Studio.setBackground
+  // API instead of here.
+  var functional_background_values = [
+    [msg.backgroundCave(), 'cave'],
+    [msg.backgroundNight(), 'night'],
+    [msg.backgroundCloudy(), 'cloudy'],
+    [msg.backgroundUnderwater(), 'underwater'],
+    [msg.backgroundHardcourt(), 'hardcourt'],
+    [msg.backgroundBlack(), 'black'],
+    [msg.backgroundCity(), 'city'],
+    [msg.backgroundDesert(), 'desert'],
+    [msg.backgroundRainbow(), 'rainbow'],
+    [msg.backgroundSoccer(), 'soccer'],
+    [msg.backgroundSpace(), 'space'],
+    [msg.backgroundTennis(), 'tennis'],
+    [msg.backgroundWinter(), 'winter']
+  ];
+
+  functionalBlockUtils.installStringPicker(blockly, generator, {
+    blockName: 'functional_background_string_picker',
+    values: functional_background_values
+  });
 };
 
 function installVanish(blockly, generator, spriteNumberTextDropdown, startingSpriteImageDropdown, blockInstallOptions) {
@@ -15613,6 +15665,7 @@ levels.full_sandbox =  {
                      blockOfType('functional_setEnemySpeed') +
                      blockOfType('functional_showTitleScreen') +
                      blockOfType('functional_string') +
+                     blockOfType('functional_background_string_picker') +
                      blockOfType('functional_math_number'))),
   'startBlocks':
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
@@ -19433,6 +19486,32 @@ var MessageFormat = require("messageformat");MessageFormat.locale.uk = function 
   return 'other';
 };
 exports.actor = function(d){return "персонаж"};
+
+exports.backgroundBlack = function(d){return "black"};
+
+exports.backgroundCave = function(d){return "cave"};
+
+exports.backgroundCloudy = function(d){return "cloudy"};
+
+exports.backgroundHardcourt = function(d){return "hardcourt"};
+
+exports.backgroundNight = function(d){return "night"};
+
+exports.backgroundUnderwater = function(d){return "underwater"};
+
+exports.backgroundCity = function(d){return "city"};
+
+exports.backgroundDesert = function(d){return "desert"};
+
+exports.backgroundRainbow = function(d){return "rainbow"};
+
+exports.backgroundSoccer = function(d){return "soccer"};
+
+exports.backgroundSpace = function(d){return "space"};
+
+exports.backgroundTennis = function(d){return "tennis"};
+
+exports.backgroundWinter = function(d){return "winter"};
 
 exports.catActions = function(d){return "Дії"};
 
