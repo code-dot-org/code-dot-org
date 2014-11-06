@@ -128,7 +128,10 @@ a.user-menu-link {
   padding-left:10px;
 }
 
-.user_menu > a:link {
+.user_menu > a:link,
+.user_menu > a:active,
+.user_menu > a:hover,
+.user_menu > a:visited {
   color:white;
 }
 
