@@ -15,19 +15,27 @@ theme: none
     %br/
 
 %div.tile
-  = view :light_tile, url:"http://studio.code.org", target:"", img_src:"/images/logo_tall_hoc.jpg", title:"Your Course Progress", text:""
+  = view :light_tile, url:"/teacher-dashboard#/sections", target:"", img_src:"/images/dashboard_teacher_progress.png", title:"Student Accounts & Progress", text:""
 %div.tile
-  = view :light_tile, url:"/teacher-dashboard#/plan", img_src:"/images/logo_graph_paper.png", target:"", title:"Lesson Plans and Resources", text:""
+  = view :light_tile, url:"http://studio.code.org", target:"", img_src:"/images/logo_tall_hoc.jpg", title:"Your Course Progress", text:""
 %div.tile{:style=>"margin-right: 0px"}
-  = view :light_tile, url:"/teacher-dashboard#/sections", target:"", img_src:"/images/dashboard_teacher_progress.png", title:"Student Accounts and Progress", text:""
+  = view :light_tile, url:"/teacher-dashboard#/plan", img_src:"/images/logo_graph_paper.png", target:"", title:"Lesson Plans & Resources", text:""
+
 %div.tile{:style=>"margin-top: 26px;"}
-  = view :light_tile, url:"teacher-dashboard#/tips", target:"", img_src:"/images/logo_tall_elementary.jpg", title:"Teaching Tips", text:""
+  = view :light_tile, url:"http://support.code.org/hc/communities/public/topics", target:"_blank", img_src:"/images/logo_community.jpg", title:"Help & Community", text:""
 %div.tile{:style=>"margin-top: 26px"}
   = view :light_tile, url:"/professional-development-workshops", target:"_blank", img_src:"/images/logo_us_map.png", title:"PD Workshops", text:""
 %div.tile{:style=>"margin-top: 26px; margin-right: 0px"}
-  = view :light_tile, url:"http://support.code.org/hc/communities/public/topics", target:"_blank", img_src:"/images/logo_community.jpg", title:"Community", text:""
+  = view :light_tile, url:"https://education.skype.com/computerscience", target:"_blank", img_src:"/images/logo_skype_classroom.jpg", title:"Skype in the Classroom", text:""
 
   -#.debug
     %h2 DEBUG
     %pre
       {{student | json}}
+
+:css
+  .tile {
+    margin-right: 26px;
+    display: inline-block;
+    width: 31.2%
+  }

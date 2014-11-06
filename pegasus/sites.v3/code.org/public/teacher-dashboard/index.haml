@@ -12,13 +12,6 @@ angular: teacherDashboard
 
 %div{'ng-view' => ''}
 
-:css
-  .tile {
-    margin-right: 26px;
-    display: inline-block;
-    width: 31.2%
-  }
-
 :javascript
   'use strict';
 
@@ -35,9 +28,10 @@ angular: teacherDashboard
 
   config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/',                  {templateUrl: '/teacher-dashboard/landing'});
-    $routeProvider.when('/plan',                  {templateUrl: '/teacher-dashboard/plan'});
     $routeProvider.when('/sections',          {templateUrl: '/teacher-dashboard/sections',
                                                controller: 'SectionsController'});
+    $routeProvider.when('/plan',          {templateUrl: '/teacher-dashboard/plan',
+                                               controller: 'PlanController'});
     $routeProvider.when('/sections/:id',      {templateUrl: '/teacher-dashboard/section',
                                                controller: 'SectionDetailController'});
     $routeProvider.when('/sections/:sectionid/student/:studentid',
@@ -109,6 +103,9 @@ angular: teacherDashboard
   // CONTROLLERS
 
   var app = angular.module('teacherDashboard.controllers', []);
+  app.controller('PlanController', ['$scope', '$location', '$window', 'sectionsService', function($scope, $location, $window, sectionsService){
+
+  }]);
 
   app.controller('SectionsController', ['$scope', '$location', '$window', 'sectionsService',
                                        function($scope, $location, $window, sectionsService){
