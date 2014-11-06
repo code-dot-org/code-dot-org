@@ -78,7 +78,7 @@
     "FUNCTIONAL_CREATE": "New Block",
     "FUNCTIONAL_EDIT": "edit",
     "FUNCTIONAL_NAME_LABEL": "Name",
-    "FUNCTIONAL_TYPE_LABEL": "Type",
+    "FUNCTIONAL_TYPE_LABEL": "Choose type...",
     "FUNCTIONAL_DESCRIPTION_LABEL": "Description",
     "FUNCTIONAL_DOMAIN_LABEL": "Domain",
     "FUNCTIONAL_RANGE_LABEL": "Range",

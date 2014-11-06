@@ -78,7 +78,7 @@ Blockly.ContractEditor.prototype.initializeOutputTypeDropdown = function() {
   goog.object.forEach(Blockly.ContractEditor.typesToColors, function(value, key) {
     flatSelector.addItem(new goog.ui.MenuItem(key));
   }, this);
-  flatSelector.setSelectedIndex(0);
+  flatSelector.setDefaultCaption(Blockly.Msg.FUNCTIONAL_TYPE_LABEL);
 
   goog.events.listen(flatSelector, goog.ui.Component.EventType.CHANGE,
     goog.bind(this.outputTypeDropdownChange, this));
@@ -99,7 +99,7 @@ Blockly.ContractEditor.prototype.initializeInputTypeDropdown = function() {
   goog.object.forEach(Blockly.ContractEditor.typesToColors, function(value, key) {
     flatSelector.addItem(new goog.ui.MenuItem(key));
   }, this);
-  flatSelector.setSelectedIndex(0);
+  flatSelector.setDefaultCaption(Blockly.Msg.FUNCTIONAL_TYPE_LABEL);
 
   goog.events.listen(flatSelector, goog.ui.Component.EventType.CHANGE,
     goog.bind(this.inputTypeDropdownChange, this));
@@ -111,4 +111,3 @@ Blockly.ContractEditor.prototype.inputTypeDropdownChange = function(comboBoxEven
   var newType = comboBoxEvent.target.getContent();
   console.log('New input type is ' + newType);
 };
-
