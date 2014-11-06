@@ -22,6 +22,10 @@
 .sliderKnob:hover {
   fill: #eeeeee; }
 
+#pauseButton {
+  min-width: 111px;
+  margin-right: 10px; }
+
 /* Sprited icons. */
 .icon21 {
   height: 21px;

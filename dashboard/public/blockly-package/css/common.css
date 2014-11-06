@@ -674,8 +674,7 @@ input[type="radio"] {
   display: inline-block; }
 .hide-source #belowVisualization {
   display: inline-block;
-  vertical-align: top;
-  margin-left: 30px; }
+  vertical-align: top; }
 .hide-source #bubble {
   display: none; }
 
