@@ -10207,7 +10207,9 @@ Turtle.init = function(config) {
     // Set their initial contents.
     Turtle.loadTurtle();
     Turtle.drawImages();
+    Turtle.isDrawingAnswer_ = true;
     Turtle.drawAnswer();
+    Turtle.isDrawingAnswer_ = false;
     if (level.predraw_blocks) {
       Turtle.isPredrawing_ = true;
       Turtle.drawBlocksOnCanvas(level.predraw_blocks, Turtle.ctxPredraw);
@@ -10219,7 +10221,7 @@ Turtle.init = function(config) {
     // pre-load image for line pattern block. Creating the image object and setting source doesn't seem to be
     // enough in this case, so we're actually creating and reusing the object within the document body.
 
-    if (config.level.edit_blocks)
+    if (config.level.edit_blocks || skin.id == "elsa")
     {
       var imageContainer = document.createElement('div');
       imageContainer.style.display='none';
@@ -10443,7 +10445,7 @@ BlocklyApps.reset = function(ignore) {
   } else if (skin.id == "elsa") {
     Turtle.ctxScratch.strokeStyle = 'rgb(255,255,238)';
     Turtle.ctxScratch.fillStyle = 'rgb(255,255,238)';
-    Turtle.ctxScratch.lineWidth = 4;
+    Turtle.ctxScratch.lineWidth = 2;
   } else {
     Turtle.ctxScratch.strokeStyle = '#000000';
     Turtle.ctxScratch.fillStyle = '#000000';
@@ -10458,8 +10460,12 @@ BlocklyApps.reset = function(ignore) {
   Turtle.ctxFeedback.clearRect(
       0, 0, Turtle.ctxFeedback.canvas.width, Turtle.ctxFeedback.canvas.height);
 
-  // Reset to empty pattern
-  Turtle.setPattern(null);
+  if (skin.id == "elsa") {
+    Turtle.setPattern(document.getElementById("swirlyLine"));
+  } else {
+    // Reset to empty pattern
+    Turtle.setPattern(null);
+  }
 
   // Kill any task.
   if (Turtle.pid) {
@@ -10474,8 +10480,16 @@ BlocklyApps.reset = function(ignore) {
   // Stop the looping sound.
   BlocklyApps.stopLoopingAudio('start');
 
-  jumpDistanceCovered = 0;
+  clearTuple();
 };
+
+function clearTuple()
+{
+  Turtle.stepStartX = Turtle.x;
+  Turtle.stepStartY = Turtle.y;
+  jumpDistanceCovered = 0;
+}
+
 
 /**
  * Copy the scratch canvas to the display canvas. Add a turtle marker.
@@ -10604,7 +10618,7 @@ Turtle.execute = function() {
 
 // Divide each jump into substeps so that we can animate every movement.
 var jumpDistance = 5;
-var jumpDistanceCovered = 0;
+var jumpDistanceCovered;
 
 /**
  * Attempt to execute one command from the log of API commands.
@@ -10625,7 +10639,7 @@ function executeTuple () {
     if (tupleDone)
     {
       api.log.shift();
-      jumpDistanceCovered = 0;
+      clearTuple();
     }
 
     return true;
@@ -10706,7 +10720,7 @@ Turtle.doSmoothAnimate = function(options, distance)
 
     if (fullDistance < 0) {
       // Going backward.
-      if (jumpDistanceCovered - jumpDistance < fullDistance) {
+      if (jumpDistanceCovered - jumpDistance <= fullDistance) {
         // clamp at maximum
         distance = fullDistance - jumpDistanceCovered;
         jumpDistanceCovered = fullDistance;
@@ -10718,7 +10732,7 @@ Turtle.doSmoothAnimate = function(options, distance)
 
     } else {
       // Going foward.
-      if (jumpDistanceCovered + jumpDistance > fullDistance) {
+      if (jumpDistanceCovered + jumpDistance >= fullDistance) {
         // clamp at maximum
         distance = fullDistance - jumpDistanceCovered;
         jumpDistanceCovered = fullDistance;
@@ -10891,7 +10905,11 @@ Turtle.moveForward_ = function (distance) {
   }
   if (Turtle.isDrawingWithPattern) {
     Turtle.drawForwardWithPattern_(distance);
-    return;
+
+    // elsa gets both a pattern and a line over the top of it.
+    if (skin.id != "elsa") {
+      return;
+    }
   }
 
   Turtle.drawForward_(distance);
@@ -10936,32 +10954,71 @@ Turtle.drawForwardWithJoints_ = function (distance) {
 };
 
 Turtle.drawForwardLine_ = function (distance) {
-  Turtle.ctxScratch.beginPath();
-  Turtle.ctxScratch.moveTo(Turtle.x, Turtle.y);
-  Turtle.jumpForward_(distance);
-  Turtle.drawToTurtle_(distance);
-  Turtle.ctxScratch.stroke();
+
+  if (skin.id == "elsa") {
+    Turtle.ctxScratch.beginPath();
+    Turtle.ctxScratch.moveTo(Turtle.stepStartX, Turtle.stepStartY);
+    Turtle.jumpForward_(distance);
+    Turtle.drawToTurtle_(distance);
+    Turtle.ctxScratch.stroke(); 
+  } else {
+    Turtle.ctxScratch.beginPath();
+    Turtle.ctxScratch.moveTo(Turtle.x, Turtle.y);
+    Turtle.jumpForward_(distance);
+    Turtle.drawToTurtle_(distance);
+    Turtle.ctxScratch.stroke();
+  }
+
 };
 
 Turtle.drawForwardLineWithPattern_ = function (distance) {
-  Turtle.ctxScratch.moveTo(Turtle.x, Turtle.y);
-  var img = Turtle.patternForPaths;
-  var startX = Turtle.x;
-  var startY = Turtle.y;
+  var img;
+  var startX;
+  var startY;
 
-  Turtle.jumpForward_(distance);
-  Turtle.ctxScratch.save();
-  Turtle.ctxScratch.translate(startX, startY);
-  Turtle.ctxScratch.rotate(Math.PI * (Turtle.heading - 90) / 180); // increment the angle and rotate the image.
-                                                                 // Need to subtract 90 to accomodate difference in canvas
-                                                                 // vs. Turtle direction
-  Turtle.ctxScratch.drawImage(img,
-    0, 0,                                 // Start point for clipping image
-    distance+img.height / 2, img.height,  // clip region size
-    -img.height / 4, -img.height / 2,      // draw location relative to the ctx.translate point pre-rotation
-    distance+img.height / 2, img.height);
+  if (skin.id == "elsa") {
+    Turtle.ctxScratch.moveTo(Turtle.stepStartX, Turtle.stepStartY);
+    img = Turtle.patternForPaths;
+    startX = Turtle.stepStartX;
+    startY = Turtle.stepStartY;
 
-  Turtle.ctxScratch.restore();
+    var lineDistance = jumpDistanceCovered;
+
+    Turtle.ctxScratch.save();
+    Turtle.ctxScratch.translate(startX, startY);
+    Turtle.ctxScratch.rotate(Math.PI * (Turtle.heading - 90) / 180); // increment the angle and rotate the image.
+                                                                     // Need to subtract 90 to accomodate difference in canvas
+                                                                     // vs. Turtle direction
+
+    Turtle.ctxScratch.drawImage(img,
+      jumpDistanceCovered, 0,             // Start point for clipping image
+      jumpDistance, img.height,           // clip region size
+      jumpDistanceCovered - 7, - 18,      // draw location relative to the ctx.translate point pre-rotation
+      jumpDistance, img.height);
+
+    Turtle.ctxScratch.restore();
+
+  } else {
+
+    Turtle.ctxScratch.moveTo(Turtle.x, Turtle.y);
+    img = Turtle.patternForPaths;
+    startX = Turtle.x;
+    startY = Turtle.y;
+
+    Turtle.jumpForward_(distance);
+    Turtle.ctxScratch.save();
+    Turtle.ctxScratch.translate(startX, startY);
+    Turtle.ctxScratch.rotate(Math.PI * (Turtle.heading - 90) / 180); // increment the angle and rotate the image.
+                                                                     // Need to subtract 90 to accomodate difference in canvas
+                                                                     // vs. Turtle direction
+    Turtle.ctxScratch.drawImage(img,
+      0, 0,                                 // Start point for clipping image
+      distance+img.height / 2, img.height,  // clip region size
+      -img.height / 4, -img.height / 2,     // draw location relative to the ctx.translate point pre-rotation
+      distance+img.height / 2, img.height);
+
+    Turtle.ctxScratch.restore();
+  }
 };
 
 Turtle.shouldDrawJoints_ = function () {
