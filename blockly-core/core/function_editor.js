@@ -390,6 +390,8 @@ Blockly.FunctionEditor.prototype.createContractDom_ = function() {
       + '<div><input id="functionNameText" type="text"></div>'
       + '<div>' + Blockly.Msg.FUNCTION_DESCRIPTION_LABEL + '</div>'
       + '<div><textarea id="functionDescriptionText" rows="2"></textarea></div>'
+      + '<div>What does it output?</div>' /** TODO(bjordan): localize */
+      + '<span id="outputTypeDropdown"></span>'
       + '<div>' + Blockly.Msg.FUNCTION_PARAMETERS_LABEL + '</div>'
       + '<div>'
       + '<input id="paramAddText" type="text" style="width: 200px;"> '
