@@ -291,9 +291,12 @@ BlocklyApps.init = function(config) {
   }
 
   if (config.hide_source) {
-    var blockly = container.querySelector('#blockly');
+    BlocklyApps.hideSource = true;
+    var workspaceDiv = config.level.editCode ?
+                        document.getElementById('codeWorkspace') :
+                        container.querySelector('#blockly');
     container.className = 'hide-source';
-    blockly.style.display = 'none';
+    workspaceDiv.style.display = 'none';
     // For share page on mobile, do not show this part.
     if (!BlocklyApps.share || !dom.isMobile()) {
       var buttonRow = runButton.parentElement;
@@ -367,7 +370,7 @@ BlocklyApps.init = function(config) {
         }
       });
       if (BlocklyApps.noPadding) {
-        upSale.style.marginLeft = '30px';
+        upSale.style.marginLeft = '10px';
       }
     } else if (!dom.isMobile()) {
       upSale.innerHTML = require('./templates/learn.html')();
@@ -426,17 +429,21 @@ BlocklyApps.init = function(config) {
         palette: utils.generateDropletPalette(config.level.codeFunctions)
       });
 
-      var startText = '// ' + msg.typeHint() + '\n';
-      var codeFunctions = config.level.codeFunctions;
-      // Insert hint text from level codeFunctions into editCode area
-      if (codeFunctions) {
-        var hintText = '';
-        for (var i = 0; i < codeFunctions.length; i++) {
-          hintText += " " + codeFunctions[i].func + "();";
+      if (config.level.startBlocks) {
+        BlocklyApps.editor.setValue(config.level.startBlocks);
+      } else {
+        var startText = '// ' + msg.typeHint() + '\n';
+        var codeFunctions = config.level.codeFunctions;
+        // Insert hint text from level codeFunctions into editCode area
+        if (codeFunctions) {
+          var hintText = '';
+          for (var i = 0; i < codeFunctions.length; i++) {
+            hintText += " " + codeFunctions[i].func + "();";
+          }
+          startText += '// ' + msg.typeFuncs().replace('%1', hintText) + '\n';
         }
-        startText += '// ' + msg.typeFuncs().replace('%1', hintText) + '\n';
+        BlocklyApps.editor.setValue(startText);
       }
-      BlocklyApps.editor.setValue(startText);
     });
   }
 
@@ -556,6 +563,7 @@ BlocklyApps.init = function(config) {
   // Initialize the slider.
   var slider = document.getElementById('slider');
   if (slider) {
+    // TODO (noted by cpirich): remove Turtle specific code here:
     Turtle.speedSlider = new Slider(10, 35, 130, slider);
 
     // Change default speed (eg Speed up levels that have lots of steps).
@@ -564,13 +572,15 @@ BlocklyApps.init = function(config) {
     }
   }
 
-  // Add the starting block(s).
-  var startBlocks = config.level.startBlocks || '';
-  if (config.forceInsertTopBlock) {
-    startBlocks = blockUtils.forceInsertTopBlock(startBlocks, config.forceInsertTopBlock);
+  if (!BlocklyApps.editCode) {
+    // Add the starting block(s).
+    var startBlocks = config.level.startBlocks || '';
+    if (config.forceInsertTopBlock) {
+      startBlocks = blockUtils.forceInsertTopBlock(startBlocks, config.forceInsertTopBlock);
+    }
+    startBlocks = BlocklyApps.arrangeBlockPosition(startBlocks, config.blockArrangement);
+    BlocklyApps.loadBlocks(startBlocks);
   }
-  startBlocks = BlocklyApps.arrangeBlockPosition(startBlocks, config.blockArrangement);
-  BlocklyApps.loadBlocks(startBlocks);
 
   // listen for scroll and resize to ensure onResize() is called
   window.addEventListener('scroll', function() {
@@ -982,21 +992,27 @@ BlocklyApps.report = function(options) {
   report.attempt = BlocklyApps.attempts;
   report.lines = feedback.getNumBlocksUsed();
 
-  var onAttemptCallback = (function() {
-    return function(builderDetails) {
-      for (var option in builderDetails) {
-        report[option] = builderDetails[option];
-      }
-      onAttempt(report);
-    };
-  })();
+  // If hideSource is enabled, the user is looking at a shared level that
+  // they cannot have modified. In that case, don't report it to the service
+  // or call the onComplete() callback expected. The app will just sit
+  // there with the Reset button as the only option.
+  if (!BlocklyApps.hideSource) {
+    var onAttemptCallback = (function() {
+      return function(builderDetails) {
+        for (var option in builderDetails) {
+          report[option] = builderDetails[option];
+        }
+        onAttempt(report);
+      };
+    })();
 
-  // If this is the level builder, go to builderForm to get more info from
-  // the level builder.
-  if (options.builder) {
-    builder.builderForm(onAttemptCallback);
-  } else {
-    onAttemptCallback();
+    // If this is the level builder, go to builderForm to get more info from
+    // the level builder.
+    if (options.builder) {
+      builder.builderForm(onAttemptCallback);
+    } else {
+      onAttemptCallback();
+    }
   }
 };
 
@@ -1887,52 +1903,54 @@ var EvalStar = require('./evalStar');
 
 // todo (brent) - make use of blockId?
 
-exports.register = function (object) {
-
-  // todo (brent) - hacky way to get last object
-  Eval.lastEvalObject = object;
-
-  return object;
+exports.display = function (object) {
+  if (object === undefined) {
+    object = new EvalString("");
+  }
+  if (!object.draw) {
+    object = new EvalString(object.toString());
+  }
+  Eval.displayedObject = object;
 };
 
 exports.string = function (str, blockId) {
-  return exports.register(new EvalString(str));
+  return new EvalString(str);
 };
 
 exports.circle = function (size, style, color) {
-  return exports.register(new EvalCircle(size, style, color));
+  return new EvalCircle(size, style, color);
 };
 
 exports.triangle = function (size, style, color) {
-  return exports.register(new EvalTriangle(size, style, color));
+  return new EvalTriangle(size, style, color);
 };
 
 exports.overlay = function (top, bottom) {
-  return exports.register(new EvalMulti(top, bottom));
+  return new EvalMulti(top, bottom);
 };
 
 exports.underlay = function (bottom, top) {
-  return exports.register(new EvalMulti(top, bottom));
+  return new EvalMulti(top, bottom);
 };
 
 exports.square = function (size, style, color) {
-  return exports.register(new EvalRect(size, size, style, color));
+  return new EvalRect(size, size, style, color);
 };
 
 exports.rectangle = function (width, height, style, color) {
-  return exports.register(new EvalRect(width, height, style, color));
+  return new EvalRect(width, height, style, color);
 };
 
 exports.ellipse = function (width, height, style, color) {
-  return exports.register(new EvalEllipse(width, height, style, color));
+  return new EvalEllipse(width, height, style, color);
 };
 
 exports.text = function (text, fontSize, color) {
-  return exports.register(new EvalText(text, fontSize, color));
+  return new EvalText(text, fontSize, color);
 };
 
 exports.star = function (radius, fontSize, color) {
-  return exports.register(new EvalStar(radius, fontSize, color));
+  return new EvalStar(radius, fontSize, color);
 };
 
 exports.placeImage = function (x, y, image, blockId) {
@@ -1944,35 +1962,31 @@ exports.placeImage = function (x, y, image, blockId) {
   y = evalUtils.cartesianToPixel(y);
 
   image.place(x, y);
-  return exports.register(image);
+  return image;
 };
 
 exports.rotateImage = function (degrees, image) {
   image.rotate(degrees);
-  return exports.register(image);
+  return image;
 };
 
 exports.scaleImage = function (factor, image) {
   image.scale(factor, factor);
-  return exports.register(image);
+  return image;
 };
 
 exports.stringAppend = function (first, second) {
   evalUtils.ensureType(first, EvalString);
   evalUtils.ensureType(second, EvalString);
 
-  var str = new EvalString(first.getValue() + second.getValue());
-  return exports.register(str);
+  return new EvalString(first.getValue() + second.getValue());
 };
 
 // polling for values
 exports.stringLength = function (str) {
   evalUtils.ensureType(str, EvalString);
-  // kind of hacky. register  a string version of the number, so that if this
-  // is our top level block, it will be drawn, but return the number itself
-  var len = str.getValue().length;
-  exports.register(new EvalString(len.toString()));
-  return len;
+
+  return str.getValue().length;
 };
 
 },{"./evalCircle":13,"./evalEllipse":14,"./evalMulti":15,"./evalRect":17,"./evalStar":18,"./evalString":19,"./evalText":20,"./evalTriangle":21,"./evalUtils":22}],10:[function(require,module,exports){
@@ -2021,11 +2035,19 @@ exports.install = function(blockly, blockInstallOptions) {
     return generator.variableDB_.getDistinctName(name, NAME_TYPE);
   };
 
-  // todo (brent) - rationalize what's in functionalBlocks vs. here and if we
-  // can share code between calc and evals functionalBlocks
   sharedFunctionalBlocks.install(blockly, generator, gensym);
 
   installString(blockly, generator, gensym);
+
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'functional_display',
+    blockTitle: msg.displayBlockTitle(),
+    apiName: 'display',
+    returnType: 'none',
+    args: [
+      { name: 'ARG1', type: 'none' },
+    ]
+  });
 
   // shapes
   installFunctionalBlock(blockly, generator, gensym, {
@@ -2243,7 +2265,7 @@ function installString(blockly, generator, gensym) {
   };
 
   generator.functional_string = function() {
-    return "Eval.string(" + 
+    return "Eval.string(" +
         blockly.JavaScript.quote_(this.getTitleValue('VAL')) + ")";
   };
 }
@@ -2341,7 +2363,9 @@ var api = require('./api');
 var page = require('../templates/page.html');
 var feedback = require('../feedback.js');
 var dom = require('../dom');
+var blockUtils = require('../block_utils');
 
+var EvalString = require('./evalString');
 
 var TestResults = require('../constants').TestResults;
 
@@ -2354,6 +2378,10 @@ BlocklyApps.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
 
+// This property is set in the api call to draw, and extracted in
+// getDrawableFromBlocks
+Eval.displayedObject = null;
+
 /**
  * Initialize Blockly and the Eval.  Called on page load.
  */
@@ -2362,10 +2390,8 @@ Eval.init = function(config) {
   skin = config.skin;
   level = config.level;
 
-  Eval.shownFeedback_ = false;
-
   config.grayOutUndeletableBlocks = true;
-  config.forceInsertTopBlock = null;
+  config.forceInsertTopBlock = 'functional_display';
 
   config.html = page({
     assetUrl: BlocklyApps.assetUrl,
@@ -2403,12 +2429,14 @@ Eval.init = function(config) {
 
     // Add to reserved word list: API, local variables in execution environment
     // (execute) and the infinite loop detection function.
-    //XXX Not sure if this is still right.
     Blockly.JavaScript.addReservedWords('Eval,code');
 
-    Eval.answerObject = generateEvalObjectFromBlockXml(level.solutionBlocks);
-    if (Eval.answerObject) {
-      Eval.answerObject.draw(document.getElementById('answer'));
+    var solutionBlocks = blockUtils.forceInsertTopBlock(level.solutionBlocks,
+      config.forceInsertTopBlock);
+
+    var answerObject = getDrawableFromBlocks(solutionBlocks);
+    if (answerObject) {
+      answerObject.draw(document.getElementById('answer'));
     }
 
     // Adjust visualizationColumn width.
@@ -2471,27 +2499,29 @@ function evalCode (code) {
 }
 
 /**
- * Given the xml for a set of blocks, generates an eval object from them by
- * temporarily sticking them into the workspace, generating code, and
- * evaluating said code.
+ * Generates a drawable evalObject from the blocks in the workspace. If blockXml
+ * is provided, temporarily sticks those blocks into the workspace to generate
+ * the evalObject, then deletes blocks.
  */
-function generateEvalObjectFromBlockXml(blockXml) {
-  var xml = blockXml || '';
-
-  if (Blockly.mainBlockSpace.getTopBlocks().length !== 0) {
-    throw new Error("generateExpressionFromBlockXml shouldn't be called if " +
-      "we already have blocks in the workspace");
+function getDrawableFromBlocks(blockXml) {
+  if (blockXml) {
+    if (Blockly.mainBlockSpace.getTopBlocks().length !== 0) {
+      throw new Error("getDrawableFromBlocks shouldn't be called with blocks if " +
+        "we already have blocks in the workspace");
+    }
+    // Temporarily put the blocks into the workspace so that we can generate code
+    BlocklyApps.loadBlocks(blockXml);
   }
 
-  // Temporarily put the blocks into the workspace so that we can generate code
-  BlocklyApps.loadBlocks(xml);
-  var code = Blockly.Generator.blockSpaceToCode('JavaScript');
+  var code = Blockly.Generator.blockSpaceToCode('JavaScript', 'functional_display');
   evalCode(code);
+  var object = Eval.displayedObject;
+  Eval.displayedObject = null;
 
-  // Remove the blocks
-  Blockly.mainBlockSpace.getTopBlocks().forEach(function (b) { b.dispose(); });
-  var object = Eval.lastEvalObject;
-  Eval.lastEvalObject = null;
+  if (blockXml) {
+    // Remove the blocks
+    Blockly.mainBlockSpace.getTopBlocks().forEach(function (b) { b.dispose(); });
+  }
 
   return object;
 }
@@ -2504,17 +2534,11 @@ Eval.execute = function() {
   Eval.testResults = BlocklyApps.TestResults.NO_TESTS_RUN;
   Eval.message = undefined;
 
-  // todo (brent) perhaps try to share user vs. expected generation better
-  var code = Blockly.Generator.blockSpaceToCode('JavaScript');
-  evalCode(code);
-
-  Eval.userObject = Eval.lastEvalObject;
-  if (Eval.userObject) {
-    Eval.userObject.draw(document.getElementById("user"));
-  }
+  var userObject = getDrawableFromBlocks(null);
+  userObject.draw(document.getElementById("user"));
 
   Eval.result = evaluateAnswer();
-  Eval.testResults = Eval.result ? TestResults.ALL_PASS : TestResults.LEVEL_INCOMPLETE_FAIL;
+  Eval.testResults = BlocklyApps.getTestResults(Eval.result);
 
   var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   var textBlocks = Blockly.Xml.domToText(xml);
@@ -2551,6 +2575,9 @@ function evaluateAnswer() {
  * BlocklyApps.displayFeedback when appropriate
  */
 var displayFeedback = function(response) {
+  // override extra top blocks message
+  level.extraTopBlocks = evalMsg.extraTopBlocks();
+
   BlocklyApps.displayFeedback({
     app: 'Eval',
     skin: skin.id,
@@ -2571,7 +2598,7 @@ function onReportComplete(response) {
   displayFeedback(response);
 }
 
-},{"../../locale/zh_tw/common":47,"../../locale/zh_tw/eval":48,"../base":2,"../codegen":6,"../constants":7,"../dom":8,"../feedback.js":26,"../skins":31,"../templates/page.html":39,"./api":9,"./controls.html":11,"./levels":23,"./visualization.html":25}],13:[function(require,module,exports){
+},{"../../locale/zh_tw/common":47,"../../locale/zh_tw/eval":48,"../base":2,"../block_utils":3,"../codegen":6,"../constants":7,"../dom":8,"../feedback.js":26,"../skins":31,"../templates/page.html":39,"./api":9,"./controls.html":11,"./evalString":19,"./levels":23,"./visualization.html":25}],13:[function(require,module,exports){
 var EvalObject = require('./evalObject');
 var EvalString = require('./evalString');
 var evalUtils = require('./evalUtils');
@@ -2990,10 +3017,10 @@ var blockUtils = require('../block_utils');
  */
 module.exports = {
   'eval1': {
-    solutionBlocks: blockUtils.mathBlockXml('functional_square', {
-      'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'black' } ),
+    solutionBlocks: blockUtils.mathBlockXml('functional_star', {
+      'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'green' } ),
       'STYLE': blockUtils.mathBlockXml('functional_string', null, { VAL: 'solid' }),
-      'SIZE': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 4 } )
+      'SIZE': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 20 } )
     }),
     ideal: Infinity,
     toolbox: blockUtils.createToolbox(
@@ -4053,8 +4080,12 @@ module.exports.initTitledFunctionalBlock = function (block, title, type, args) {
     var arg = args[i];
     var input = block.appendFunctionalInput(arg.name);
     input.setInline(i > 0);
-    input.setHSV.apply(input, colors[arg.type]);
-    input.setCheck(arg.type);
+    if (arg.type === 'none') {
+      input.setHSV(0, 0, 0.99);
+    } else {
+      input.setHSV.apply(input, colors[arg.type]);
+      input.setCheck(arg.type);
+    }
     input.setAlign(Blockly.ALIGN_CENTRE);
   }
 
@@ -4075,7 +4106,7 @@ module.exports.initTitledFunctionalBlock = function (block, title, type, args) {
  * and other args are read from functional inputs. For example:
  *
  *     options = {
- *       blockName: 'functional_setSpriteZeroSpeed', 
+ *       blockName: 'functional_setSpriteZeroSpeed',
  *       blockTitle: 'set sprite zero speed',
  *       apiName: 'Studio.setSpriteSpeed',
  *       args: [{constantValue: '0'}, // spriteIndex
@@ -4092,7 +4123,7 @@ module.exports.installFunctionalApiCallBlock = function(blockly, generator,
   var blockName = options.blockName;
   var blockTitle = options.blockTitle;
   var apiName = options.apiName;
-  var args = options.args;             
+  var args = options.args;
 
   var blockArgs = args.filter(function(arg) {
     return arg.constantValue === undefined;
@@ -4118,6 +4149,30 @@ module.exports.installFunctionalApiCallBlock = function(blockly, generator,
       apiArgs.push(value);
     }
     return apiName + '(' + apiArgs.join(',') + ');\n';
+  };
+};
+
+module.exports.installStringPicker = function(blockly, generator, options) {
+  var values = options.values;
+  var blockName = options.blockName;
+  blockly.Blocks[blockName] = {
+    init: function () {
+      this.setFunctional(true, {
+        headerHeight: 0,
+        rowBuffer: 3
+      });
+      this.setHSV.apply(this, colors.string);
+      this.appendDummyInput()
+          .appendTitle(new Blockly.FieldLabel('"'))
+          .appendTitle(new blockly.FieldDropdown(values), 'VAL')
+          .appendTitle(new Blockly.FieldLabel('"'))
+          .setAlign(Blockly.ALIGN_CENTRE);
+      this.setFunctionalOutput(true, 'string');
+    }
+  };
+
+  generator[blockName] = function() {
+    return blockly.JavaScript.quote_(this.getTitleValue('VAL'));
   };
 };
 
@@ -7883,7 +7938,7 @@ escape = escape || function (html){
 var buf = [];
 with (locals || {}) { (function(){ 
  buf.push('<!DOCTYPE html>\n<html dir="', escape((2,  options.localeDirection )), '">\n<head>\n  <meta charset="utf-8">\n  <title>Blockly</title>\n  <script type="text/javascript" src="', escape((6,  assetUrl('js/' + options.locale + '/vendor.js') )), '"></script>\n  <script type="text/javascript" src="', escape((7,  assetUrl('js/' + options.locale + '/' + app + '.js') )), '"></script>\n  <script type="text/javascript">\n    ');9; // delay to onload to fix IE9. 
-; buf.push('\n    window.onload = function() {\n      ', escape((11,  app )), 'Main(', (11, filters. json ( options )), ');\n    };\n  </script>\n</head>\n<body>\n  <div id="blockly"></div>\n  <style>\n    html, body {\n      background-color: transparent;\n      margin: 0;\n      padding:0;\n      overflow: hidden;\n      height: 100%;\n      font-family: \'Gotham A\', \'Gotham B\', sans-serif;\n    }\n    .blocklyText, .blocklyMenuText, .blocklyTreeLabel, .blocklyHtmlInput,\n        .blocklyIconMark, .blocklyTooltipText, .goog-menuitem-content {\n      font-family: \'Gotham A\', \'Gotham B\', sans-serif;\n    }\n    #blockly>svg {\n      background-color: transparent;\n      border: none;\n    }\n    #blockly {\n      position: absolute;\n      top: 0;\n      left: 0;\n      overflow: hidden;\n      height: 100%;\n      width: 100%;\n    }\n  </style>\n</body>\n</html>\n'); })();
+; buf.push('\n    window.onload = function() {\n      ', escape((11,  app )), 'Main(', (11, filters. json ( options )), ');\n    };\n  </script>\n</head>\n<body>\n  <div id="blockly" class="readonly"></div>\n  <style>\n    html, body {\n      background-color: transparent;\n      margin: 0;\n      padding:0;\n      overflow: hidden;\n      height: 100%;\n      font-family: \'Gotham A\', \'Gotham B\', sans-serif;\n    }\n    .blocklyText, .blocklyMenuText, .blocklyTreeLabel, .blocklyHtmlInput,\n        .blocklyIconMark, .blocklyTooltipText, .goog-menuitem-content {\n      font-family: \'Gotham A\', \'Gotham B\', sans-serif;\n    }\n    #blockly>svg {\n      background-color: transparent;\n      border: none;\n    }\n    #blockly {\n      position: absolute;\n      top: 0;\n      left: 0;\n      overflow: hidden;\n      height: 100%;\n      width: 100%;\n    }\n  </style>\n</body>\n</html>\n'); })();
 } 
 return buf.join('');
 };
@@ -8490,7 +8545,11 @@ exports.genericFeedback = function(d){return "看看你的成果如何, 並試�
 var MessageFormat = require("messageformat");MessageFormat.locale.zh=function(n){return "other"}
 exports.circleBlockTitle = function(d){return "circle (radius, style, color)"};
 
+exports.displayBlockTitle = function(d){return "display"};
+
 exports.ellipseBlockTitle = function(d){return "ellipse (width, height, style, color)"};
+
+exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"display\" block?"};
 
 exports.overlayBlockTitle = function(d){return "overlay (top, bottom)"};
 

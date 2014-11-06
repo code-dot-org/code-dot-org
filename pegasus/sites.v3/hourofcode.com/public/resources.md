@@ -6,7 +6,7 @@ nav: resources_nav
 <div class="row">
     <h1 class="col-sm-6">Resources</h1>
     <div class="col-sm-6 button-container centered">
-        <a href="/#join"><button class="signup-button">Sign up your event</button></a>
+        <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Sign up your event</button></a>
     </div>
 </div>
 ## Hosting an Hour of Code? <a href="<%= hoc_uri('/resources/how-to') %>">See the how-to guide</a>
@@ -158,4 +158,4 @@ Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your res
 Sincerely,
 [NAME], [TITLE]
 
-<a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>
+<a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Sign up your event</button></a>

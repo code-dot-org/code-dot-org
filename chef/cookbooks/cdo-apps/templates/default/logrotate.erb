@@ -1,0 +1,33 @@
+# See logrotate man page for configuration file format.
+<%= File.join(@log_dir, '*.log') %> {
+# Log files are rotated when they grow bigger than size bytes, but not before the additionally specified time interval.
+minsize 10M
+
+# Log files are rotated every day.
+daily
+
+# If the log file is missing, go on to the next one without issuing an error message.
+missingok
+
+# Archive old versions of log files adding a daily extension like YYYYMMDD instead of simply adding a number.
+dateext
+
+# Log files are rotated count times before being removed or mailed to the address specified in a mail directive.
+rotate 30
+
+# Old versions of log files are compressed with gzip by default.
+compress
+
+# Command line options passed to the compression program.
+compressoptions -3
+
+# Do not rotate the log if it is empty
+notifempty
+
+# Truncate the original log file in place after creating a copy, instead of moving the old log file and optionally creating a new one.
+# It can be used when some program cannot be told to close its logfile and thus might continue writing (appending) to the previous log file forever.
+copytruncate
+
+# Set user/group permissions for archived log files.
+su <%= node[:current_user] %> <%= node[:current_user] %>
+}
