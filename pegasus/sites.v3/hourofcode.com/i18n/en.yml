@@ -29,6 +29,8 @@
   prizes_every_organizer: 'Every Hour of Code organizer will receive Dropbox or Skype credit as a thank you'
   prizes_technology: 'One public school in every US state (& Washington DC) will win $10,000 worth of technology'
   prizes_tech_chats: '96 classrooms will win video chats with very special guests'
+  prizes_robots: '100 classrooms will win a set of programmable robots'
+  prizes_brilliant: 'One school in each province and territory will receive $2000 for a Brilliant Project'
   prizes_details: 'Details'
 
   n_have_learned_an_hoc: "<h1>#</h1><h3>have tried an</h3><h2>HOUR of CODE</h2>"
@@ -71,6 +73,7 @@
   signup_send_posters_flag_label: 'Send <a href= "/resources#posters">posters</a> to my school or organization'
   signup_send_posters_address_label: 'Address of school or organization'
   signup_whole_school_flag_label: 'This event is for a whole school'
+  signup_your_event: 'Sign up your event'
 
   signup_name_placeholder: 'Your Name'
   signup_email_placeholder: 'you@example.com'
@@ -164,9 +167,12 @@
   stats_girls_million: "Over 10 million girls in 2013"
   stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
   stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
-  stats_michael: 'I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
+  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
 
   resources_how_to: How-to guide for teachers
+  resources_how_to_events: Event how-to guide
+  resources_how_to_districts: How-to guide for districts 
+  resources_how_to_officials: How-to guide for public officials 
   resources_handouts: Handouts to spread the word
   resources_videos: Videos
   resources_posters: Posters
