@@ -19,3 +19,4 @@ Blockly.ContractEditor = function() {
 goog.inherits(Blockly.ContractEditor, Blockly.FunctionEditor);
 
 Blockly.ContractEditor.prototype.definitionBlockType = 'functional_definition';
+Blockly.ContractEditor.prototype.parameterBlockType = 'functional_parameters_get';

@@ -47,7 +47,7 @@ Blockly.JavaScript.functional_definition = function() {
     branch = Blockly.JavaScript.INFINITE_LOOP_TRAP.replace(/%1/g,
         '\'' + this.id + '\'') + branch;
   }
-  var returnValue = Blockly.JavaScript.valueToCode(this, 'RETURN',
+  var returnValue = Blockly.JavaScript.statementToCode(this, 'RETURN',
       Blockly.JavaScript.ORDER_NONE) || '';
   if (returnValue) {
     returnValue = '  return ' + returnValue + ';\n';
@@ -67,7 +67,7 @@ Blockly.JavaScript.functional_call = function() {
       this.getTitleValue('NAME'), Blockly.Procedures.NAME_TYPE);
   var args = [];
   for (var x = 0; x < this.arguments_.length; x++) {
-    args[x] = Blockly.JavaScript.valueToCode(this, 'ARG' + x,
+    args[x] = Blockly.JavaScript.statementToCode(this, 'ARG' + x,
         Blockly.JavaScript.ORDER_COMMA) || 'null';
   }
   var code = (Blockly.varsInGlobals ? 'Globals.' : '') +
