@@ -9,19 +9,27 @@ nav: educate2_nav
 
 <h2 style="margin-top:35px">Curriculum</h2>
 
-[Code Studio](http://studio.code.org/)
-<br/>
-20 hour courses for K-8 students who go to school
-
 [Hour of Code](http://hourofcode.com)
 <br/>
-Join the largest learning event in history in fact
+Join the largest learning event in history
 
-[Other Curriculum](/)
+[Code Studio](http://studio.code.org/)
 <br/>
-(MSM, MSS, ECS & CSP)
+20 hour courses, recommended for K-5 students
 
-3rd party resources 
+[Middle School Math](http://code.org/curriculum/msm/)
+<br/>
+A middle school math course that uses computer science as a tool 
+
+[Middle School Science](http://code.org/curriculum/mss/)
+<br/>
+A middle school science course that uses computer science as a tool 
+
+[AP Computer Science Principles](http://code.org/educate2/csp/)
+<br/>
+An AP course covering a wide range of computer science topics
+
+[3rd party resources](http://code.org/educate2/3rdparty/) 
 
 <br/>
 
@@ -31,13 +39,13 @@ Join the largest learning event in history in fact
 
 <h2 style="margin-top:35px">Professional Development</h2>
 
-[New K-5 Program](http://code.org/educate/k5)
+[K-5 Program](http://code.org/educate/k5)
 <br/>
-Computer science for K-5 students who go to school
+Computer science professional development for K-5 educators
 
 [District Partnership](http://code.org/educate/districts)
 <br/>
-Partner with Code.org to bring CS to your school
+Partner with Code.org to bring computer science to your district in grades 6-12
 
 <br/>
 
