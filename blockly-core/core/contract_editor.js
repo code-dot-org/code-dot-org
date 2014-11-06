@@ -41,7 +41,32 @@ Blockly.ContractEditor.prototype.parameterBlockType = 'functional_parameters_get
  * @override
  */
 Blockly.ContractEditor.prototype.createContractDom_ = function() {
-  Blockly.ContractEditor.superClass_.createContractDom_.call(this);
+  this.contractDiv_ = goog.dom.createDom('div',
+      'blocklyToolboxDiv paramToolbox blocklyText');
+  if (Blockly.RTL) {
+    this.contractDiv_.setAttribute('dir', 'RTL');
+  }
+  this.contractDiv_.innerHTML =
+      '<div>' + Blockly.Msg.FUNCTIONAL_NAME_LABEL + '</div>'
+      + '<div><input id="functionNameText" type="text"></div>'
+      + '<div>' + Blockly.Msg.FUNCTIONAL_DESCRIPTION_LABEL + '</div>'
+      + '<div><textarea id="functionDescriptionText" rows="2"></textarea></div>'
+      + '<div>' + Blockly.Msg.FUNCTIONAL_RANGE_LABEL + '</div>'
+      + '<span id="outputTypeDropdown"></span>'
+      + '<div>' + Blockly.Msg.FUNCTIONAL_DOMAIN_LABEL + '</div>'
+      + '<div><input id="paramAddText" type="text" style="width: 200px;" '
+      + 'placeholder="' + Blockly.Msg.FUNCTIONAL_NAME_LABEL + '"> '
+      + '<span id="paramTypeDropdown"></span>'
+      + '<button id="paramAddButton" class="btn">' + Blockly.Msg.ADD
+      + '</button>'
+      + '</div>';
+  var metrics = Blockly.modalBlockSpace.getMetrics();
+  this.contractDiv_.style.left = metrics.absoluteLeft + 'px';
+  this.contractDiv_.style.top = metrics.absoluteTop + 'px';
+  this.contractDiv_.style.width = metrics.viewWidth + 'px';
+  this.contractDiv_.style.display = 'block';
+  this.container_.insertBefore(this.contractDiv_, this.container_.firstChild);
+
   this.initializeInputTypeDropdown();
   this.initializeOutputTypeDropdown();
 };
