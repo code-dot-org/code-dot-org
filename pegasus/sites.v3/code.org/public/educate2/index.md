@@ -3,68 +3,91 @@ title: Educator Overview
 nav: educate2_nav
 ---
 
-# Educator Overview
+<h1 style="margin-bottom:0px">Educator Overview</h1>
+
+[col-50]
+
+<h2 style="margin-top:35px">Curriculum</h2>
+
+[Hour of Code](http://hourofcode.com)
+<br/>
+Join the largest learning event in history
+
+[Code Studio](http://studio.code.org/)
+<br/>
+20 hour courses, recommended for K-5 students
+
+[Middle School Math](http://code.org/curriculum/msm/)
+<br/>
+A middle school math course that uses computer science as a tool 
+
+[Middle School Science](http://code.org/curriculum/mss/)
+<br/>
+A middle school science course that uses computer science as a tool 
+
+[AP Computer Science Principles](http://code.org/educate2/csp/)
+<br/>
+An AP course covering a wide range of computer science topics
+
+[3rd party resources](http://code.org/educate2/3rdparty/) 
+
+<br/>
+
+[/col-50]
+
+[col-50]
+
+<h2 style="margin-top:35px">Professional Development</h2>
+
+[K-5 Program](http://code.org/educate/k5)
+<br/>
+Computer science professional development for K-5 educators
+
+[District Partnership](http://code.org/educate/districts)
+<br/>
+Partner with Code.org to bring computer science to your district in grades 6-12
+
+<br/>
+
+[/col-50]
+
+<!--
 
 [col-33]
 
-### Curriculum
+## Inspire Students
 
-[Code Studio](http://studio.code.org/): 20 hour courses for Elementary Students
+[Inspire Students](http://code.org/educate/inspire) 
+<br/>
+Inspire students to learn
 
-[Hour of Code](http://hourofcode.com): Join the largest learning event in history
+Want more? 
+<br/>
+Check out our [educational video library](http://code.org/educate/videos)
 
-Other Curriculum (MSM, MSS, ECS & CSP)
-
-3rd party resources 
+<br/>
 
 [/col-33]
 
-[col-33]
+-->
 
-### Professional Development
+<div style="clear:both"/>
 
-- [New K-5 Program](http://code.org/educate/k5): Computer science for elementary school
-- [District Partnership](http://code.org/educate/districts): Partner with Code.org to bring K-12 computer science to your district
-
-<br/>
-<br/>
-<br/>
-<br/>
-
-[/col-33]
-
-[col-33]
-
-### Inspire Students
-
-- [Inspire Students](http://code.org/educate/inspire) to Try Computer Science
-- Want more? Check out our [educational video library](http://code.org/educate/videos)
-- test
-- test
-
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-
-[/col-33]
-
-
-[col-33]
+[col-50]
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [<button>Learn More</button>](/curriculum)
 
-[/col-33]
+[/col-50]
 
-[col-33]
+[col-50]
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [<button>Learn More</button>](/professional-development)
 
-[/col-33]
+[/col-50]
+
+<!--
 
 [col-33]
 
@@ -73,8 +96,8 @@ Other Curriculum (MSM, MSS, ECS & CSP)
 
 [/col-33]
 
+
 <p style="clear:both">&nbsp;</p>
 
-<br />
-<br />
+-->
 

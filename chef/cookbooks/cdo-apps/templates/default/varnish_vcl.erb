@@ -1,0 +1,592 @@
+<%
+  def canonical_hostname(domain)
+    return "localhost.#{domain}" if rack_env?(:development)
+    return "#{node.name}.#{domain}" if ['console', 'hoc-levels'].include?(node.name)
+    return domain if rack_env?(:production)
+    "#{node.chef_environment}.#{domain}"
+  end
+
+  def rack_env?(env)
+    env.to_s == node.chef_environment
+  end
+  
+  def session_cookie()
+    cookie = "_learn_session"
+    cookie += "_#{node.chef_environment}" unless rack_env?(:production)
+    cookie
+  end
+%>
+
+C{
+
+/*
+ * Accept-language header normalization
+ *
+ * - Parses client Accept-Language HTTP header
+ * - Tries to find the best match with the supported languages
+ * - Writes the best match as req.http.X-Varnish-Accept-Language
+ *
+ * First version: Cosimo, 21/Jan/2010
+ * Last update:   Cosimo, 18/Nov/2010
+ *
+ * http://github.com/cosimo/varnish-accept-language
+ *
+ */
+
+#include <ctype.h>  /* isupper */
+#include <stdio.h>
+#include <stdlib.h> /* qsort */
+#include <string.h>
+
+#define DEFAULT_LANGUAGE "en"
+#define SUPPORTED_LANGUAGES ":<%= node['cdo-apps']['i18n']['languages'].to_hash.keys.join(':') %>:"
+
+#define vcl_string char
+#define LANG_LIST_SIZE 16
+#define HDR_MAXLEN 256
+#define LANG_MAXLEN 8
+#define RETURN_LANG(x) { \
+    strncpy(lang, x, LANG_MAXLEN); \
+    return; \
+}
+#define RETURN_DEFAULT_LANG RETURN_LANG(DEFAULT_LANGUAGE)
+#define PUSH_LANG(x,y) { \
+    /* fprintf(stderr, "Pushing lang [%d] %s %.4f\n", curr_lang, x, y); */ \
+    /* We have to copy, otherwise root_lang will be the same every time */ \
+    strncpy(pl[curr_lang].lang, x, LANG_MAXLEN); \
+    pl[curr_lang].q = y;       \
+    curr_lang++;               \
+}
+
+struct lang_list {
+    vcl_string lang[LANG_MAXLEN];
+    float q;
+};
+
+/* In-place lowercase of a string */
+static void strtolower(char *s) {
+    register char *c;
+    for (c=s; *c; c++) {
+        if (isupper(*c)) {
+            *c = tolower(*c);
+        }
+    }
+    return;
+}
+
+/* Checks if a given language is in the static list of the ones we support */
+int is_supported(vcl_string *lang) {
+    vcl_string *supported_languages = SUPPORTED_LANGUAGES;
+    vcl_string match_str[LANG_MAXLEN + 3] = "";  /* :, :, \0 = 3 */
+    int is_supported = 0;
+
+    /* We want to match 'zh-cn' and 'zh-CN' too */
+    strtolower(lang);
+
+    /* Search ":<lang>:" in supported languages string */
+    strncpy(match_str, ":", 1);
+    strncat(match_str, lang, LANG_MAXLEN);
+    strncat(match_str, ":\0", 2);
+
+    if (strstr(supported_languages, match_str))
+        is_supported = 1;
+
+    return is_supported;
+}
+
+/* Used by qsort() below */
+int sort_by_q(const void *x, const void *y) {
+    struct lang_list *a = (struct lang_list *)x;
+    struct lang_list *b = (struct lang_list *)y;
+    if (a->q > b->q) return -1;
+    if (a->q < b->q) return 1;
+    return 0;
+}
+
+/* Reads Accept-Language, parses it, and finds the first match
+   among the supported languages. In case of no match,
+   returns the default language.
+*/
+void select_language(const vcl_string *incoming_header, char *lang) {
+
+    struct lang_list pl[LANG_LIST_SIZE];
+    vcl_string *lang_tok = NULL;
+    vcl_string root_lang[3];
+    vcl_string *header;
+    vcl_string header_copy[HDR_MAXLEN];
+    vcl_string *pos = NULL;
+    vcl_string *q_spec = NULL;
+    unsigned int curr_lang = 0, i = 0;
+    float q;
+
+    /* Empty or default string, return default language immediately */
+    if (
+        !incoming_header
+        || (0 == strcmp(incoming_header, "en-US"))
+        || (0 == strcmp(incoming_header, "en-GB"))
+        || (0 == strcmp(incoming_header, DEFAULT_LANGUAGE))
+        || (0 == strcmp(incoming_header, ""))
+    )
+        RETURN_DEFAULT_LANG;
+
+    /* Tokenize Accept-Language */
+    header = strncpy(header_copy, incoming_header, sizeof(header_copy));
+
+    while ((lang_tok = strtok_r(header, " ,", &pos))) {
+
+        q = 1.0;
+
+        if ((q_spec = strstr(lang_tok, ";q="))) {
+            /* Truncate language name before ';' */
+            *q_spec = '\0';
+            /* Get q value */
+            sscanf(q_spec + 3, "%f", &q);
+        }
+
+        /* Wildcard language '*' should be last in list */
+        if ((*lang_tok) == '*') q = 0.0;
+
+        /* Push in the prioritized list */
+        PUSH_LANG(lang_tok, q);
+
+        /* For cases like 'en-GB', we also want the root language in the final list */
+        if ('-' == lang_tok[2]) {
+            root_lang[0] = lang_tok[0];
+            root_lang[1] = lang_tok[1];
+            root_lang[2] = '\0';
+            PUSH_LANG(root_lang, q - 0.001);
+        }
+
+        /* For strtok_r() to proceed from where it left off */
+        header = NULL;
+
+        /* Break out if stored max no. of languages */
+        if (curr_lang >= LANG_LIST_SIZE)
+            break;
+    }
+
+    /* Sort by priority */
+    qsort(pl, curr_lang, sizeof(struct lang_list), &sort_by_q);
+
+    /* Match with supported languages */
+    for (i = 0; i < curr_lang; i++) {
+        if (is_supported(pl[i].lang))
+            RETURN_LANG(pl[i].lang);
+    }
+
+    RETURN_DEFAULT_LANG;
+}
+
+/* Reads req.http.Accept-Language and writes X-Varnish-Accept-Language */
+void vcl_rewrite_accept_language(const struct sess *sp) {
+    vcl_string *in_hdr;
+    vcl_string lang[LANG_MAXLEN];
+
+    /* Get Accept-Language header from client */
+    in_hdr = VRT_GetHdr(sp, HDR_REQ, "\020Accept-Language:");
+
+    /* Normalize and filter out by list of supported languages */
+    memset(lang, 0, sizeof(lang));
+    select_language(in_hdr, lang);
+
+    /* By default, use a different header name: don't mess with backend logic */
+    VRT_SetHdr(sp, HDR_REQ, "\032X-Varnish-Accept-Language:", lang, vrt_magic_string_end);
+
+    return;
+}
+
+}C
+
+
+<%
+  BACKENDS = node['cdo-apps']['varnish']['backends'].to_hash
+  BACKENDS.each_pair do |id, ip|
+%>
+backend pegasus_<%= id %> {
+  .host = "<%= ip %>";
+  .port = "<%= node['cdo-apps']['pegasus']['port'] %>";
+  .connect_timeout = 600s;
+  .first_byte_timeout = 600s;
+  .between_bytes_timeout = 600s;
+}
+
+backend dashboard_<%= id %> {
+  .host = "<%= ip %>";
+  .port = "<%= node['cdo-apps']['dashboard']['port'] %>";
+  .connect_timeout = 600s;
+  .first_byte_timeout = 600s;
+  .between_bytes_timeout = 600s;
+}
+<%
+  end
+%>
+
+director default round-robin {
+<% BACKENDS.keys.each do |id| %>
+{
+  .backend = pegasus_<%= id %>;
+}
+<% end %>
+}
+
+director dashboard round-robin {
+<% BACKENDS.keys.each do |id| %>
+{
+  .backend = dashboard_<%= id %>;
+}
+<% end %>
+}
+
+<% if node['cdo-apps']['levelbuilder']['enabled'] %>
+# levelbuilder
+backend levelbuilder {
+  .host = "127.0.0.1";
+  .port = "<%= node['cdo-apps']['levelbuilder']['port'] %>";
+  .connect_timeout = 600s;
+  .first_byte_timeout = 600s;
+  .between_bytes_timeout = 600s;
+}
+<% end %>
+
+# api.change.org
+backend api_change_org_4 {
+  .host = "104.16.4.13";
+  .port = "80";
+  .connect_timeout = 600s;
+  .first_byte_timeout = 600s;
+  .between_bytes_timeout = 600s;
+}
+backend api_change_org_5 {
+  .host = "104.16.5.13";
+  .port = "80";
+  .connect_timeout = 600s;
+  .first_byte_timeout = 600s;
+  .between_bytes_timeout = 600s;
+}
+director api_change_org round-robin {
+  { .backend = api_change_org_4; }
+  { .backend = api_change_org_5; }
+}
+
+# Respond to incoming requests.
+sub vcl_recv
+{
+  # Use "/varnishcheck" to determine if you are hitting a Varnish instance.
+  if (req.request == "GET" && req.url ~ "^/varnishcheck$") {
+    error 200 "Varnish is ready.";
+  }
+
+  # Use "/health_check.php" to keep this instance in the load balancer.
+  if (req.request == "GET" && req.url ~ "^/health_check.php$") {
+    error 200 "Varnish is healthy.";
+  }
+  
+  if(req.http.host ~ "\.$")
+  {
+    /* Don't allow domain names that end in "." */
+    error 751 "http://" + regsub(req.http.host, "\.$","") + req.url;
+  }
+  else if(req.http.host ~ "^www\.")
+  {
+    /* Normalize domain names to the short (non www.) form. */
+    error 751 "http://" + regsub(req.http.host, "^www\.","") + req.url;
+  }
+  else if(req.http.Host == "forums.code.org")
+  {
+    /* forums.code.org redirects to support */
+    error 751 "http://support.code.org/";
+  }
+  <%
+    # Alias the following domains to one of our primary ones.
+    {
+      'aws.code.org'      => 'code.org',
+      'blockly.com'       => 'learn.code.org',
+
+      'hourofcode.org'    => 'hourofcode.com',
+      'hourofcode.co'     => 'hourofcode.com',
+      'hourofcode.net'    => 'hourofcode.com',
+      'hourofcode.co.uk'  => 'hourofcode.com',
+      'hourofcode.org.uk' => 'hourofcode.com',
+      'onehourofcode.com' => 'hourofcode.com',
+      'onehourofcode.org' => 'hourofcode.com',
+      'dayofcode.com'     => 'hourofcode.com',
+      'dayofcode.org'     => 'hourofcode.com',
+      'monthofcode.com'   => 'hourofcode.com',
+      'weekofcode.org'    => 'hourofcode.com',
+      'weekofcode.com'    => 'hourofcode.com',
+      'yearofcode.co.uk'  => 'uk.code.org',
+      'yearofcode.org.uk' => 'uk.code.org',
+
+      'csedweek.com'        => 'csedweek.org',
+      'csedweek.net'        => 'csedweek.org',
+      'cseducationweek.com' => 'csedweek.org',
+      'cseducationweek.org' => 'csedweek.org',
+    }.each_pair do |domain,site|
+  %>else if(req.http.Host == "<%= domain %>")
+  {
+    /* <%= domain %> redirects to <%= site %> */
+    error 751 "http://<%= site %>" + req.url;
+  }
+  <% end%>
+
+  C{
+      vcl_rewrite_accept_language(sp);
+  }C
+
+  /*
+  ** Convert language cookie into X-Varnish-Accept-Language header
+  */
+<%
+i = 0
+node['cdo-apps']['i18n']['languages'].to_hash.keys.each do |language|
+  js = (i += 1) != 1 ? '  else ' : '  '
+  js.concat("if(req.http.Cookie ~ \"language_=#{language}\") {\n    set req.http.X-Varnish-Accept-Language = \"#{language}\";\n  }\n")
+%><%= js %><%
+end
+%>
+
+  if (req.http.host == "<%= canonical_hostname('learn.code.org') %>" || req.http.host == "<%= canonical_hostname('studio.code.org') %>")
+  {
+    if (req.url ~ "^/v2/")
+    {
+      set req.backend = default;
+      set req.http.host = "<%= canonical_hostname('code.org') %>";
+    }
+    else
+    {
+      set req.backend = dashboard;
+    }
+  }
+<% if rack_env?(:staging) %>
+  else if (req.http.host == "levelbuilder.code.org")
+  {
+    set req.backend = levelbuilder;
+    return(pass);
+  }
+<% end %>
+  else if (req.url ~ "^/dashboardapi/")
+  {
+    # Map /dashboardapi to learn.code.org/api
+    set req.backend = dashboard;
+    set req.http.host = "<%= canonical_hostname('learn.code.org') %>";
+    set req.url = regsub(req.url, "^/dashboardapi/", "/api/");
+    return(pass);
+  }
+  else if (req.url ~ "^/api/change.org/")
+  {
+    set req.backend = api_change_org;
+    set req.http.host = "api.change.org";
+    set req.url = regsub(req.url, "^/api/change.org/", "/");
+    return(pass);
+  }
+  else
+  {
+    set req.backend = default;
+  }
+
+  # Allow the backend to serve up stale content if it is responding slowly.
+  if (!req.backend.healthy) {
+    # Use anonymous, cached pages if all backends are down.
+    unset req.http.Cookie;
+    if (req.http.X-Forwarded-Proto == "https") {
+      set req.http.X-Forwarded-Proto = "http";
+    }
+    set req.grace = 30m;
+  } else {
+    set req.grace = 15s;
+  }
+
+  # [DRUPAL] Get ride of progress.js query params
+  if (req.url ~ "^/misc/progress\.js\?[0-9]+$") {
+    set req.url = "/misc/progress.js";
+  }
+
+  # [DRUPAL] Do not cache these paths.
+  if (req.url ~ "^/ooyala/ping$" ||
+      req.url ~ "^/info/.*$" ||
+      req.url ~ "^/flag/.*$" ||
+      req.url ~ "^.*/ajax/.*$" ||
+      req.url ~ "^.*/ahah/.*$") {
+    return (pass);
+  }
+
+  # Handle compression correctly. Different browsers send different
+  # "Accept-Encoding" headers, even though they mostly all support the same
+  # compression mechanisms. By consolidating these compression headers into
+  # a consistent format, we can reduce the size of the cache and get more hits.=
+  # @see: http:// varnish.projects.linpro.no/wiki/FAQ/Compression
+  if (req.http.Accept-Encoding) {
+    if (req.http.Accept-Encoding ~ "gzip") {
+      # If the browser supports it, we'll use gzip.
+      set req.http.Accept-Encoding = "gzip";
+    }
+    else if (req.http.Accept-Encoding ~ "deflate") {
+      # Next, try deflate if it is supported.
+      set req.http.Accept-Encoding = "deflate";
+    }
+    else {
+      # Unknown algorithm. Remove it and send unencoded.
+      unset req.http.Accept-Encoding;
+    }
+  }
+
+  # Always cache the following file types for all users.
+  if( (req.url ~ "(?i)\.(cur|pdf|png|gif|jpeg|jpg|ico|mp3|swf|css|js)(\?[a-z0-9]+)?$") && (!(req.url ~ "^/api/")) ) {
+    unset req.http.Cookie;
+  }
+
+  # Remove all cookies that our sites don't need to know about. ANY remaining
+  # cookie will cause the request to pass-through to a backend. For the most part
+  # we always set the NO_CACHE cookie after any POST request, disabling the
+  # Varnish cache temporarily. The session cookie allows all authenticated users
+  # to pass through as long as they're logged in.
+  #
+  # 1. Append a semi-colon to the front of the cookie string.
+  # 2. Remove all spaces that appear after semi-colons.
+  # 3. Match the cookies we want to keep, adding the space we removed
+  #    previously, back. (\1) is first matching group in the regsuball.
+  # 4. Remove all other cookies, identifying them by the fact that they have
+  #    no space after the preceding semi-colon.
+  # 5. Remove all spaces and semi-colons from the beginning and end of the
+  #    cookie string.
+  if (req.http.Cookie) {
+    set req.http.Cookie = ";" + req.http.Cookie;
+    set req.http.Cookie = regsuball(req.http.Cookie, "; +", ";");
+    if (req.url ~ "^/volunteers") {
+      set req.http.Cookie = regsuball(req.http.Cookie, ";(_fe_session|hour_of_code|NO_CACHE)=", "; \1=");
+    } else if (req.url ~ "^/auth") {
+      set req.http.Cookie = regsuball(req.http.Cookie, ";(cdo-private|hour_of_code|NO_CACHE)=", "; \1=");
+    } else if (req.http.host == "<%= canonical_hostname('learn.code.org') %>" || req.http.host == "<%= canonical_hostname('studio.code.org') %>") {
+      set req.http.Cookie = regsuball(req.http.Cookie, ";(language_|<%= session_cookie %>|hour_of_code|NO_CACHE)=", "; \1=");
+    } else if (req.url ~ "^/dashboardapi/" || req.url ~ "^/v2/" || req.url ~ "^/api/" || req.url == "/private" || req.url ~ "^/private/" || req.url ~ "^/create-company-profile"  || req.url ~ "^/edit-company-profile" || req.url ~ "^/teacher-dashboard" || req.url ~ "^/manage-professional-development-workshops" || req.url ~ "^/professional-development-workshop-surveys/") {
+      set req.http.Cookie = regsuball(req.http.Cookie, ";(<%= session_cookie %>|hour_of_code|NO_CACHE)=", "; \1=");
+    } else {
+      set req.http.Cookie = regsuball(req.http.Cookie, ";(NO_CACHE)=", "; \1=");
+    }
+    set req.http.Cookie = regsuball(req.http.Cookie, ";[^ ][^;]*", "");
+    set req.http.Cookie = regsuball(req.http.Cookie, "^[; ]+|[; ]+$", "");
+
+    if (req.http.Cookie == "") {
+      # If there are no remaining cookies, remove the cookie header. If there
+      # aren't any cookie headers, Varnish's default behavior will be to cache
+      # the page.
+      unset req.http.Cookie;
+    }
+    else {
+      # If there is any cookies left (a session or NO_CACHE cookie), do not
+      # cache the page. Pass it on to Apache directly.
+      return (pass);
+    }
+  }
+
+  ## From default below ##
+  if (req.restarts == 0) {
+    if (req.http.x-forwarded-for) {
+      set req.http.X-Forwarded-For =
+      req.http.X-Forwarded-For + ", " + client.ip;
+    } else {
+      set req.http.X-Forwarded-For = client.ip;
+    }
+  }
+  if (req.request != "GET" &&
+    req.request != "HEAD" &&
+    req.request != "PUT" &&
+    req.request != "POST" &&
+    req.request != "TRACE" &&
+    req.request != "OPTIONS" &&
+    req.request != "DELETE") {
+      /* Non-RFC2616 or CONNECT which is weird. */
+      return (pipe);
+  }
+  if (req.request != "GET" && req.request != "HEAD") {
+      /* We only deal with GET and HEAD by default */
+      return (pass);
+  }
+  ## Unset Authorization header if it has the correct details...
+  #if (req.http.Authorization == "Basic ") {
+  #  unset req.http.Authorization;
+  #}
+  if (req.http.Authorization) {
+      /* Not cacheable by default */
+      return (pass);
+  }
+  return (lookup);
+}
+
+# Code determining what to do when serving items from the Apache servers.
+sub vcl_fetch {
+  if (req.url ~ "^/api/hour/begin/" || req.url ~ "^/api/hour/begin_" || req.url ~ "^/auth$" || req.url ~ "^/auth/") {
+    # allow this route to always set cookies.
+  } else if (req.url ~ "(?i)\.(png|gif|jpeg|jpg|ico|swf|css|js)(\?[a-z0-9]+)?$") {
+    # Don't allow static files to set cookies.
+    # beresp == Back-end response from the web server.
+    unset beresp.http.set-cookie;
+  }
+  else if (beresp.http.Cache-Control) {
+    unset beresp.http.Expires;
+  }
+
+  if (beresp.status == 301) {
+    set beresp.ttl = 1h;
+    return(deliver);
+  }
+
+  ## Doesn't seem to work as expected
+  #if (beresp.status == 500) {
+  #  set beresp.saintmode = 10s;
+  #  return(restart);
+  #}
+
+  # Allow items to be stale if needed.
+  set beresp.grace = 1h;
+}
+
+# Set a header to track a cache HIT/MISS.
+sub vcl_deliver {
+
+  if (obj.hits > 0) {
+    set resp.http.X-Varnish-Cache = "HIT";
+  }
+  else {
+    set resp.http.X-Varnish-Cache = "MISS";
+  }
+
+  set resp.http.X-Varnish-Node = "<%= node.name %>";
+}
+
+# In the event of an error, show friendlier messages.
+sub vcl_error {
+  if(obj.status == 750) {
+    set obj.http.Location = obj.response;
+    set obj.status = 302;
+    return(deliver);
+  }
+
+  if(obj.status == 751) {
+    set obj.http.Location = obj.response;
+    set obj.status = 301;
+    return(deliver);
+  }
+
+  set obj.http.Content-Type = "text/html; charset=utf-8";
+  set obj.http.Retry-After = "5";
+  synthetic {"
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+   <head>
+     <title>"} + obj.status + " " + obj.response + {"</title>
+   </head>
+   <body>
+     <h1>Error "} + obj.status + " " + obj.response + {"</h1>
+     <p>"} + obj.response + {"</p>
+     <h3>Guru Meditation:</h3>
+     <p>XID: "} + req.xid + {"</p>
+     <hr>
+     <p>Varnish cache server</p>
+   </body>
+</html>
+"};
+  return (deliver);
+}

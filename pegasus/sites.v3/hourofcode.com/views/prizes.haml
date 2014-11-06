@@ -5,5 +5,9 @@
     -if @country == 'us'
       %li=hoc_s(:prizes_technology)
       %li=hoc_s(:prizes_tech_chats)
+    -if @country == 'ca'  
+      %li=hoc_s(:prizes_tech_chats)
+      %li=hoc_s(:prizes_brilliant)
+      %li=hoc_s(:prizes_robots)
     %li
       %a{href:hoc_uri("/prizes")}=hoc_s(:prizes_details)

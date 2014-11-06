@@ -987,14 +987,23 @@ Maze.execute = function(stepMode) {
     Maze.testResults = BlocklyApps.getTestResults(levelComplete);
   }
 
+  var program;
   if (level.editCode) {
     Maze.testResults = levelComplete ?
       BlocklyApps.TestResults.ALL_PASS :
       BlocklyApps.TestResults.TOO_FEW_BLOCKS_FAIL;
-  }
 
-  var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
-  var textBlocks = Blockly.Xml.domToText(xml);
+    // If we want to "normalize" the JavaScript to avoid proliferation of nearly
+    // identical versions of the code on the service, we could do either of these:
+
+    // do an acorn.parse and then use escodegen to generate back a "clean" version
+    // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
+
+    program = BlocklyApps.editor.getValue();
+  } else {
+    var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+    program = Blockly.Xml.domToText(xml);
+  }
 
   Maze.waitingForReport = true;
 
@@ -1004,7 +1013,7 @@ Maze.execute = function(stepMode) {
     level: level.id,
     result: Maze.result === BlocklyApps.ResultType.SUCCESS,
     testResult: Maze.testResults,
-    program: encodeURIComponent(textBlocks),
+    program: encodeURIComponent(program),
     onComplete: Maze.onReportComplete
   });
 
