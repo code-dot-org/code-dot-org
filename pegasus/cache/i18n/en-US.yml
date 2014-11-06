@@ -1,4 +1,4 @@
-"en-US":
+en-US:
   hello: "Hello world"
   select_language: "Please select your language"
   computer_science: "Computer Science"
@@ -192,10 +192,11 @@
   dashboard_action_done: "Done"
   dashboard_action_required: "required"
   dashboard_navigation_home_page: "Teacher home page"
-  dashboard_navigation_all_sections: "All sections"
+  dashboard_navigation_all_sections: "Student Accounts and Progress"
   dashboard_navigation_view_progress: "View Progress"
   dashboard_navigation_add_students: "Add Students"
   dashboard_navigation_manage_students: "Manage Students"
+  dashboard_navigation_lesson_plans_resources: "Lesson Plans and Resources"
   dashboard_navigation_view_stats: "View Stats"
   dashboard_navigation_section: 'Section: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
