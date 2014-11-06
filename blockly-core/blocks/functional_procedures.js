@@ -42,9 +42,9 @@ Blockly.Blocks.functional_definition = {
     var name = Blockly.Procedures.findLegalName(Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE, this);
     this.appendDummyInput()
         .appendTitle('Define' /**TODO(bjordan): i18n*/)
-        .appendTitle(name, 'NAME')
         .appendTitle(new Blockly.FieldTextInput('temp fn name', Blockly.Procedures.rename), 'NAME')
-    this.appendFunctionalInput('INPUT');
+        .appendTitle('', 'PARAMS');
+    this.appendFunctionalInput('STACK');
     this.setFunctional(true);
     this.setTooltip('Define a functional method' /**TODO(bjordan): i18n*/);
     /**
