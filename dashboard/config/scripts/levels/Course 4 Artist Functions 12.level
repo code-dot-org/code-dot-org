@@ -1,0 +1,431 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2014-11-04T22:01:46.000Z",
+  "level_num": "custom",
+  "user_id": 16,
+  "properties": {
+    "skin": "artist",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "free_play": "false",
+    "impressive": "false",
+    "start_direction": "180",
+    "x": "200",
+    "y": "100"
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" movable="false" deletable="false">
+          <next>
+            <block type="controls_for_counter" inline="true">
+              <mutation counter="counter"/>
+              <value name="FROM">
+                <block type="math_number">
+                  <title name="NUM">4</title>
+                </block>
+              </value>
+              <value name="TO">
+                <block type="math_number">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+              <value name="BY">
+                <block type="math_number">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="controls_repeat_ext" inline="true">
+                  <value name="TIMES">
+                    <block type="variables_get">
+                      <title name="VAR">counter</title>
+                    </block>
+                  </value>
+                  <statement name="DO">
+                    <block type="jump" inline="true">
+                      <title name="DIR">jumpForward</title>
+                      <value name="VALUE">
+                        <block type="math_number">
+                          <title name="NUM">50</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="draw_turn" inline="true">
+                          <title name="DIR">turnRight</title>
+                          <value name="VALUE">
+                            <block type="math_number">
+                              <title name="NUM">60</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="jump" inline="true">
+                              <title name="DIR">jumpForward</title>
+                              <value name="VALUE">
+                                <block type="math_number">
+                                  <title name="NUM">50</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="draw_turn" inline="true">
+                                  <title name="DIR">turnLeft</title>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <title name="NUM">60</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="jump" inline="true">
+                      <title name="DIR">jumpBackward</title>
+                      <value name="VALUE">
+                        <block type="math_arithmetic" inline="true">
+                          <title name="OP">MULTIPLY</title>
+                          <value name="A">
+                            <block type="math_number">
+                              <title name="NUM">50</title>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="math_arithmetic" inline="true">
+                              <title name="OP">MINUS</title>
+                              <value name="A">
+                                <block type="variables_get">
+                                  <title name="VAR">counter</title>
+                                </block>
+                              </value>
+                              <value name="B">
+                                <block type="math_number">
+                                  <title name="NUM">2</title>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="draw_turn" inline="true">
+                          <title name="DIR">turnRight</title>
+                          <value name="VALUE">
+                            <block type="math_number">
+                              <title name="NUM">60</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="jump" inline="true">
+                              <title name="DIR">jumpBackward</title>
+                              <value name="VALUE">
+                                <block type="math_arithmetic" inline="true">
+                                  <title name="OP">MULTIPLY</title>
+                                  <value name="A">
+                                    <block type="math_number">
+                                      <title name="NUM">50</title>
+                                    </block>
+                                  </value>
+                                  <value name="B">
+                                    <block type="math_arithmetic" inline="true">
+                                      <title name="OP">ADD</title>
+                                      <value name="A">
+                                        <block type="variables_get">
+                                          <title name="VAR">counter</title>
+                                        </block>
+                                      </value>
+                                      <value name="B">
+                                        <block type="math_number">
+                                          <title name="NUM">1</title>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+            <block type="math_number">
+              <title name="NUM">100</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_turn" inline="true">
+          <title name="DIR">turnRight</title>
+          <value name="VALUE">
+            <block type="math_number">
+              <title name="NUM">90</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_turn" inline="true">
+          <title name="DIR">turnLeft</title>
+          <value name="VALUE">
+            <block type="math_number">
+              <title name="NUM">90</title>
+            </block>
+          </value>
+        </block>
+        <block type="jump" inline="true">
+          <title name="DIR">jumpForward</title>
+          <value name="VALUE">
+            <block type="math_number">
+              <title name="NUM">100</title>
+            </block>
+          </value>
+        </block>
+        <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+            <block type="math_number">
+              <title name="NUM">???</title>
+            </block>
+          </value>
+        </block>
+        <block type="controls_for_counter" inline="true">
+          <mutation counter="counter"/>
+          <value name="FROM">
+            <block type="math_number">
+              <title name="NUM">???</title>
+            </block>
+          </value>
+          <value name="TO">
+            <block type="math_number">
+              <title name="NUM">???</title>
+            </block>
+          </value>
+          <value name="BY">
+            <block type="math_number">
+              <title name="NUM">???</title>
+            </block>
+          </value>
+        </block>
+        <block type="variables_get">
+          <title name="VAR">Counter</title>
+        </block>
+        <block type="math_arithmetic" inline="true">
+          <title name="OP">ADD</title>
+          <value name="A">
+            <block type="math_number">
+              <title name="NUM">???</title>
+            </block>
+          </value>
+          <value name="B">
+            <block type="math_number">
+              <title name="NUM">???</title>
+            </block>
+          </value>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">Draw a Cube</title>
+        </block>
+        <block type="procedures_callnoreturn">
+          <mutation name="Draw a Cube"/>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" movable="false" deletable="false">
+          <next>
+            <block type="controls_for_counter" inline="true">
+              <mutation counter="counter"/>
+              <value name="FROM">
+                <block type="math_number">
+                  <title name="NUM">3</title>
+                </block>
+              </value>
+              <value name="TO">
+                <block type="math_number">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+              <value name="BY">
+                <block type="math_number">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="controls_repeat_ext" inline="true">
+                  <value name="TIMES">
+                    <block type="variables_get">
+                      <title name="VAR">counter</title>
+                    </block>
+                  </value>
+                  <statement name="DO">
+                    <block type="procedures_callnoreturn">
+                      <mutation name="cube"/>
+                      <next>
+                        <block type="jump_by_constant">
+                          <title name="DIR">jumpForward</title>
+                          <title name="VALUE">50</title>
+                          <next>
+                            <block type="draw_turn_by_constant">
+                              <title name="DIR">turnRight</title>
+                              <title name="VALUE">60</title>
+                              <next>
+                                <block type="jump_by_constant">
+                                  <title name="DIR">jumpForward</title>
+                                  <title name="VALUE">50</title>
+                                  <next>
+                                    <block type="draw_turn_by_constant">
+                                      <title name="DIR">turnLeft</title>
+                                      <title name="VALUE">60</title>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="jump" inline="true">
+                      <title name="DIR">jumpBackward</title>
+                      <value name="VALUE">
+                        <block type="math_arithmetic" inline="true">
+                          <title name="OP">MULTIPLY</title>
+                          <value name="A">
+                            <block type="math_number">
+                              <title name="NUM">50</title>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="math_arithmetic" inline="true">
+                              <title name="OP">MINUS</title>
+                              <value name="A">
+                                <block type="variables_get">
+                                  <title name="VAR">counter</title>
+                                </block>
+                              </value>
+                              <value name="B">
+                                <block type="math_number">
+                                  <title name="NUM">2</title>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="draw_turn_by_constant">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE">60</title>
+                          <next>
+                            <block type="jump" inline="true">
+                              <title name="DIR">jumpBackward</title>
+                              <value name="VALUE">
+                                <block type="math_arithmetic" inline="true">
+                                  <title name="OP">MULTIPLY</title>
+                                  <value name="A">
+                                    <block type="math_number">
+                                      <title name="NUM">50</title>
+                                    </block>
+                                  </value>
+                                  <value name="B">
+                                    <block type="math_arithmetic" inline="true">
+                                      <title name="OP">ADD</title>
+                                      <value name="A">
+                                        <block type="variables_get">
+                                          <title name="VAR">counter</title>
+                                        </block>
+                                      </value>
+                                      <value name="B">
+                                        <block type="math_number">
+                                          <title name="NUM">1</title>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="draw_turn_by_constant">
+                                  <title name="DIR">turnLeft</title>
+                                  <title name="VALUE">60</title>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">cube</title>
+          <statement name="STACK">
+            <block type="controls_repeat">
+              <title name="TIMES">3</title>
+              <statement name="DO">
+                <block type="controls_repeat">
+                  <title name="TIMES">2</title>
+                  <statement name="DO">
+                    <block type="draw_move_by_constant">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">50</title>
+                      <next>
+                        <block type="draw_turn_by_constant">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE">120</title>
+                          <next>
+                            <block type="draw_move_by_constant">
+                              <title name="DIR">moveForward</title>
+                              <title name="VALUE">50</title>
+                              <next>
+                                <block type="draw_turn_by_constant">
+                                  <title name="DIR">turnRight</title>
+                                  <title name="VALUE">60</title>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="draw_turn_by_constant">
+                      <title name="DIR">turnRight</title>
+                      <title name="VALUE">120</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Artist>

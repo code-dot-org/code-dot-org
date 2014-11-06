@@ -15,6 +15,9 @@
   = f.label :skip_instructions_popup, "Skip instructions popup"
   = boolean_check_box f, :skip_instructions_popup
 .field
+  = f.label :use_modal_function_editor, "Use modal function editor"
+  = boolean_check_box f, :use_modal_function_editor
+.field
   = f.label :disable_param_editing, "Enable param editing in function blocks"
   = f.check_box :disable_param_editing, {}, 'false', 'true'
 .field
@@ -56,3 +59,8 @@
   = f.label :step_speed, 'Step speed'
   %p Number is a multiplier for how long each step takes (so higher numbers are slower). Default is 5 for Maze, 2 for Bee.
   = f.number_field :step_speed
+- if @level.respond_to? :free_play
+  .field
+    = f.label :free_play, "Free Play"
+    %p Free Play levels are not checked for correctness (any solution is accepted), can be shared, and can be saved to the public and private gallery
+    = boolean_check_box f, :free_play

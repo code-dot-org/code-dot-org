@@ -13,7 +13,7 @@
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "free_play": "false",
-    "start_direction": "0",
+    "start_direction": "180",
     "x": "200",
     "y": "200",
     "slider_speed": "0.8",
@@ -29,16 +29,28 @@
         </block>
         <block type="draw_turn_by_constant_dropdown">
           <title name="DIR">turnRight</title>
-          <title name="VALUE" config="45,60,90,120,180">90</title>
+          <title name="VALUE" config="45,60,90,120,180">45</title>
         </block>
         <block type="draw_turn_by_constant_dropdown">
           <title name="DIR">turnLeft</title>
-          <title name="VALUE" config="45,60,90,120,180">90</title>
+          <title name="VALUE" config="45,60,90,120,180">45</title>
         </block>
         <block type="controls_repeat_dropdown">
           <title name="TIMES" config="3-10">8</title>
         </block>
         <block type="create_a_snowflake_branch"/>
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_picker">
+              <title name="COLOUR">#ffffff</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_random"/>
+          </value>
+        </block>
       </xml>
     </toolbox_blocks>
     <required_blocks>

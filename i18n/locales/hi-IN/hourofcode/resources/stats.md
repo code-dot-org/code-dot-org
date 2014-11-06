@@ -1,19 +1,29 @@
 * * *
 
-title: Resources layout: wide
+title: Resources layout: wide nav: resources_nav
 
 * * *
 
-# एक घंटा कोड का में पत्रकारोंको आकर्षित करनेके कुछ तरीके
+[<button style="float: right; margin-top: 50px">Sign up your event</button>](/#join)
 
-## कुछ अभूतपूर्व आंकड़े (अमरीकसे):
+# Blurbs and Useful Stats
+
+## Some shocking statistics (USA)
 
   * अगले १० सालमे १० लाख सभी ज्यादा संगणक विज्ञानं संदर्भित रोजगारोको प्रशिक्षित विद्यार्थी नहीं मिलेंगे (अनुमान के मुताबिक ये कुल मिलाके ३०,००० कोटि रूपए का वेतन है)|
   * अनुमान के मुताबिक ये गणित व विज्ञानं द्वारा मिलने वाले रोजगार अवसरोंके ५०% है| 
   * सुशिक्षित िद्यार्थियोंको मिलनेवाला शुरवाती वेतन में सबसे ज्यादा वेतन संगणक विज्ञानमें पढ़े-लिखे छात्रोंको मिलता है फिरभी सिर्फ ३% छात्र संगणक विज्ञानं की शिक्षा लेते है|
-  * अमरीकाके २६ राज्योमें, संगणक विज्ञानके वर्गोंको उच्चमाध्यमिक शिक्षण पूर्ण करनेके लिए लगनेवाले गणित व विज्ञानं के विषयोमे नहीं गिना जाता है| 
+  * In 25 states, computer science classes don’t count toward math or science high school graduation requirements. 
   * ए पि संगणक विज्ञानके छात्रोमेसे २०% से भी काम महिलाये है। १०% से भी काम अफ़्रीकी-अमेरिकी समाज व लेटिन-अमेरिकी समाज से आते है|
 
-## समाचारपत्रक का संस्करण:
+## Use this short blurb in newsletters
+
+### Bring computer science to your school. Start with an Hour of Code
+
+Computers are everywhere, but fewer schools teach computer science than 10 years ago. Good news is, we’re on our way to change this. If you heard about the [Hour of Code](<%= hoc_uri('/') %>) last year, you might know it made history. In one week, 15 million students tried computer science! The [Hour of Code](<%= hoc_uri('/') %>) is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. [Sign up](<%= hoc_uri('/') %>) to host an Hour of Code this December 8-14 during Computer Science Education Week and help reach 100 million students by the end of the year. If you did this last year, you know that students loved it. Try to go even bigger, get every student at your school participating. We’ll have new tutorials for all ages and ones that require no computer at all. Watch the [video](<%= hoc_uri('/') %>), and ask all educators to give it a shot. Every participating educator will receive [thank you gifts](<%= hoc_uri('/us/prizes') %>). 100 classrooms will win tech chats with special guest speakers (participants include Bill Gates, Sheryl Sandberg, Ashton Kutcher and more). And in each state, one participating school will win $10,000 in technology for their school! Add your school to the map, go to <http://hourofcode.com>
+
+## Infographic version:
 
 ![image](http://code.org/images/fit-8000/Code.org_infographic.png)
+
+<a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>

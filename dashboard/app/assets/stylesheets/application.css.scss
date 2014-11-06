@@ -83,83 +83,6 @@ th {
   background-color: lightgray;
 }
 
-.level_highlight {
-  border-radius: 20px;
-  color: white;
-  font-size: 16px;
-  height: 22px;
-  padding: 4px 2px 0 2px;
-  text-align: center;
-  min-width: 22px;
-  display: inline-block;
-}
-
-.level_highlight:hover {
-  text-decoration: none;
-  background-color: orange;
-}
-
-.level_highlight_outer_assessment {
-  display: inline-block;
-  background-color: yellow;
-  border-radius: 20px;
-  padding: 2px;
-}
-
-.level_highlight_outer_level {
-  display: inline-block;
-}
-
-.level_current_header {
-  background-color: orange;
-}
-
-.level_current_header:hover {
-  background-color: orange;
-}
-
-.level_current_header_unplugged {
-  font-size: 12px;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.other_level {
-  border-radius: 10px;
-  height: 10px;
-  min-width: 10px;
-  margin-left: -1px;
-  margin-right: -1px;
-  display: inline-block;
-}
-
-.other_level:hover {
-  background-color: orange;
-}
-
-.level_box {
-  width: 17px;
-  height: 17px;
-  margin: 3px;
-  display: inline-block;
-}
-
-.level_untried {
-  background-color: white;
-}
-
-.level_undone {
-  background-color: $dark_color;
-}
-
-.level_done {
-  background-color: #e7e9ad;
-}
-
-.level_aced {
-  background-color: #b9bf15;
-}
-
 .trophy_gold {
   background-color: gold;
 }
@@ -204,17 +127,7 @@ th {
   height: 35px;
 }
 
-.level_current {
-  position: relative;
-  border: 3px solid yellow;
-  top: 3px;
-  margin-top: -3px;
-  margin-bottom: 3px;
-  margin-left: 0px;
-  margin-right: 0px;
-}
-
-.level_link {
+.level_link, .level_link:link, level_link:visited {
   border-radius: 20px;
   min-width: 22px;
   line-height: 22px;
@@ -223,29 +136,73 @@ th {
   text-align: center;
   cursor: pointer;
   display: inline-block;
-  background-color: $dark_color;
-  color: white;
   margin: 2px;
+  font-weight: 400;
+  color: white;
 }
 
-.level_link_done {
-  background-color: orange;
-  padding: 4px;
+.level_link.not_tried, .level_link.not_tried:link, .level_link.not_tried:visited {
+  background-color: $level_not_tried;
+  color: #666 !important;
+  &:hover {
+    background-color: $level_current;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.level_link.attempted, .level_link.attempted:link, .level_link.attempted:visited {
+  background-color: $level_attempted;
+  color: #666 !important;
+  &:hover {
+    background-color: $level_current;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.level_link.perfect, .level_link.perfect:link, .level_link.perfect:visited {
+  background-color: $level_perfect;
+  color: white !important;
+  &:hover {
+    background-color: $level_current;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+
+.level_link.passed, .level_link.passed:link, .level_link.passed:visited {
+  background-color: $level_passed;
+  color: white !important;
+  &:hover {
+    background-color: $level_current;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.puzzle_outer_level,
+.puzzle_outer_assessment,
+.puzzle_outer_current {
+  padding: 1px;
+  display: inline-block;
+  border-radius: 20px;
 }
 
 .puzzle_outer_level {
-  display: inline-block;
+  background-color: #ccc;
 }
 
 .puzzle_outer_current {
-  background-color: rgba(118, 101, 160, 0.5);
+  background-color: $level_current;
   padding: 1px;
   display: inline-block;
   border-radius: 20px;
 }
 
 .puzzle_outer_assessment {
-  background-color: rgba(255, 255, 0, 0.5);
+  background-color: yellow;
   padding: 1px;
   display: inline-block;
   border-radius: 20px;
@@ -268,6 +225,8 @@ th {
 }
 
 .game-group {
+  border-bottom: 2px solid #ccc;
+  background-color: #eee;
   display: table;
   table-layout: fixed;
   padding: 10px;
@@ -287,6 +246,7 @@ th {
     box-sizing: border-box;
     padding-right: 10px;
     .level {
+      margin: 1px;
       display: inline-block;
       .puzzle-number {
         position: relative;
@@ -302,27 +262,12 @@ th {
   padding-right: 6px;
 }
 
-.progress-outer {
-  background: #d1d567;
-  -webkit-border-radius: 13px;
-  height: 20px;
-  width: 300px;
-  padding: 3px;
-}
-
-.progress-inner {
-  background: #ffc459;
-  width: 50%;
-  height: 100%;
-  -webkit-border-radius: 9px;
-}
-
 .header {
   padding-top: 15px;
   padding-bottom: 15px;
   @media screen and (max-width: 1150px) {
     padding-top: 0px;
-    padding-bottom: 0px;
+    padding-bottom: 5px;
   }
   background-color: $bkgnd_color;
   color: $header_text;
@@ -368,10 +313,6 @@ a.header_status_bar:hover {
   a:hover {font-weight: bold; color:$dark_color; background-color: transparent;   text-decoration: underline; }  /* mouse over link */
   a:active {font-weight: bold; color:$dark_color; background-color: transparent;}  /* selected link */
 }
-
-a.level_link:link,a.level_link:visited { color: white; font-weight: 400; }
-a.level_link:hover { color: white; font-weight: 400; background-color: black; text-decoration: underline; }
-a.level_link:active { color: white; font-weight: 400; background-color: black; }
 
 /* This styling helps to push the footer to the bottom of a page. */
 $footer_height: 110px;
@@ -554,25 +495,92 @@ html, body {
   right: 0;
 }
 
-.header_level {
-  position: relative;
-  padding-top: 28px;
-  padding-bottom: 10px;
-  text-align: center;
-  font-size: 150%;
-  cursor: default;
-  white-space: nowrap;
-  @media screen and (max-width: 1150px) {
-    padding-top: 15px;
-  }
-}
-
 .header_level_container {
   border-bottom: 1px solid $inset_color;
   border-bottom-style: inset;
   padding-bottom: 10px;
   display: inline-block;
 }
+
+.header_level {
+  padding-top: 15px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 150%;
+  cursor: default;
+  white-space: nowrap;
+  @media screen and (max-width: 1150px) {
+    padding-top: 10px;
+  }
+
+  .progress_container {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  /* current and last are large dots */
+  .puzzle_outer_current,
+  .puzzle_outer_level.last,
+  .puzzle_outer_assessment.last {
+    margin: 0 -1px;
+    vertical-align: middle;
+    border-radius: 20px;
+
+    .level_link {
+      border-radius: 20px;
+      height: 18px;
+      min-width: 18px;
+      width: 18px;
+      font-size: 14px;
+      padding: 0 2px 4px 2px;
+      text-align: center;
+      display: inline-block;
+    }
+
+    .level_link.unplugged_level {
+      font-size: 12px;
+      padding-left: 10px;
+      padding-right: 10px;
+      width: auto;
+    }
+  }
+
+  /* all others are small dot */
+  .puzzle_outer_level,
+  .puzzle_outer_assessment {
+    margin: 0 -1px;
+    vertical-align: middle;
+    border-radius: 11px;
+    line-height: 1px;
+
+    .level_link {
+      min-width: 1px;
+      width: 1px;
+      height: 1px;
+      border-radius: 9px;
+      padding: 3px;
+      margin: 1px;
+      /* hack to hide the number: */
+      font-size: 1px;
+      color: transparent;
+    }
+  }
+
+  .level_link:hover {
+    text-decoration: none;
+    background-color: $level_current;
+  }
+
+  .puzzle_outer_current,
+  .puzzle_outer_current .level_link {
+    background-color: $level_current;
+    color: white !important;
+  }
+
+}
+
 
 .header_user {
   position: absolute;
@@ -689,43 +697,6 @@ html, body {
 .trophy_image {
   width: 45px;
   height: 45px;
-}
-
-.stage_separator {
-  padding-top: 8px;
-  margin-bottom: 4px;
-  border-bottom: 1px solid $inset_color;
-  border-bottom-style: inset;
-}
-.game-group:last-child .stage_separator {
-  display: none;
-}
-
-.medium-height-button {
-  height: 50px;
-}
-
-th.manage-th {
-  background-color: rgb(0, 178, 192);
-  color: white;
-  padding: 10px 15px;
-  border-color: white;
-  border-width: 1px;
-  border-style: solid;
-
-  border-top-color: rgb(0, 178, 192);
-  border-left-color: rgb(0, 178, 192);
-  border-right-color: rgb(0, 178, 192);
-}
-
-td.manage-td {
-  padding: 10px 15px;
-}
-
-tr.manage-tr {
-  border-width: 1px;
-  border-color: rgb(141, 138, 138);
-  border-style: solid;
 }
 
 #alert {

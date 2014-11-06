@@ -1,6 +1,6 @@
 az:
-  site_name: Kodlama Saatı
-  language: İngilis Dili
+  site_name: KOD SAATI
+  language: Azərbaycan dili
   front_title: Tarix boyu ən böyük öyrənmə olayında siz də iştirak edin, Dek 8-14-2014
   coming_soon: Tezliklə
   front_header_banner: Tarix boyu ən böyük öyrənmə olayında siz də iştirak edin, Dek 8-14-2014
@@ -11,29 +11,6 @@ az:
   header_menu_faq: ÇSS (Çox Soruşulan Suallar)
   header_menu_prizes: Hədiyyələr
   header_menu_uk_code_org: uk.code.org
-  choose_country_header: Dünya çapında iştirak!
-  country_al: Albania
-  country_ar: Argentina
-  country_au: Avustraliya
-  country_br: Braziliya
-  country_bg: Bulgaria
-  country_de: Germany
-  country_es: Latin America
-  country_eu: Avropa Birliyi Ölkələri
-  country_gr: Greece
-  country_hr: Croatia
-  country_id: Indonesia
-  country_it: İtaliya
-  country_jp: Japan
-  country_me: Middle East and North Africa
-  country_my: Malaysia
-  country_nz: Yeni Zellanda
-  country_ro: Romaniya
-  country_ru: Russia
-  country_ua: Ukraine
-  country_uk: Birləşmiş Krallıq
-  country_us: Amerika Birləşmiş Ştatları
-  country_vn: Vietnam
   company_4-H: 4-H Youth Development
   company_bgca: Boys and Girls Club of America
   company_cgcs: Council of the Great City Schools
@@ -84,13 +61,13 @@ az:
   signup_event_location_label: Hadisə yeri (istəyə bağlı)
   signup_special_event_flag_label: Mənim hadisəmi işıqlandır
   signup_special_event_details_label: Özəl hadisə detalları
-  signup_send_posters_flag_label: 'Mənim məktəbə vəya Təşkilata <a href= "/resources#posters">afişa</a> göndər'
-  signup_send_posters_address_label: Məktəb vəya təşkilat adresi
-  signup_whole_school_flag_label: Bu hadisə bütün məktəb üçündür
+  signup_send_posters_flag_label: 'Mənim məktəbimə və ya təşkilatıma <a href= "/resources#posters">afişa</a> göndərin'
+  signup_send_posters_address_label: Məktəb və ya təşkilatın ünvanı
+  signup_whole_school_flag_label: Bu tədbir bütün məktəb üçündür
   signup_name_placeholder: Adınız
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: Məsələn, Linkoln litseyi
-  signup_event_location_placeholder: "Post kodu vəya bütün adres.\r\n(bunu xəritədə sancaqla göstərəciyik)"
+  signup_event_location_placeholder: "Poçt kodu VƏ YA tam ünvan.\r\n(Bunu xəritəyə bir sancaq yerləşdirmək üçün istifadə edəcəyik)"
   signup_special_event_details_placeholder: Describe what makes this a special event
   signup_send_posters_address_placeholder: This address will not be shared on our map
   signup_event_type_in_school: In a school
@@ -178,6 +155,17 @@ az:
   resources_emails: Sample emails
   resources_stats: Useful computer science stats
   resources_press_kit: Press Kit
+  events_title: All Hour of Code Events
+  events_nav_all: All Events
+  events_nav_classrooms: Classrooms
+  events_nav_whole_schools: Whole Schools
+  events_nav_special: Special Events
+  events_all_title: All Hour of Code events
+  events_classroom_title: Classroom Hour of Code events
+  events_whole_school_title: Whole-school Hour of Code events
+  events_special_title: Special Hour of Code events
+  event: event
+  events: events
   footer_copyright_message: Copyright 2014 Code.org. All rights reserved.
   footer_trademark_message: Hour of Code™ is a trademark of Code.org.
   footer_menu_partners: Partners

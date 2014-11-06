@@ -1,6 +1,7 @@
 class Eval < Blockly
   serialized_attrs %w(
     solution_blocks
+    free_play
   )
 
   before_save :update_ideal_level_source
@@ -51,7 +52,8 @@ class Eval < Blockly
       <block type="rotate"></block>
       <block type="scale"></block>
       <block type="functional_text"></block>
-
+      <block type="string_append"></block>
+      <block type="string_length"></block>
     XML
   end
 

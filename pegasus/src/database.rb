@@ -136,6 +136,7 @@ end
 require 'cdo/geocoder'
 
 def search_for_address(address)
+  sleep(0.01)
   Geocoder.search(address).first
 end
 

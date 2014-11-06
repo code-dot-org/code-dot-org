@@ -158,3 +158,23 @@
           description: Draw cool pictures and designs with the Artist!
           Artist: Artist
           description_short: Draw cool pictures and designs with the Artist!
+        course4:
+          description_short: Students taking Course 4 should have already taken Courses
+            2 and 3.
+          description: Course 4 is designed for students who have taken Course 2 and
+            3. Students will delve deeper into programming topics introduced in previous
+            courses to flexible solutions to more complex problems. By the end of
+            this course, students create interactive stories and games they can share
+            with anyone. Recommended for grades 4-8.
+          'Artist: Variables': 'Artist: Variables'
+          'Bee: For Loops': 'Bee: For Loops'
+          title: Course 4
+          'Algorithms: Tangrams': 'Algorithms: Tangrams'
+          Variables: Spremenljivke
+          'Play Lab: Variables': 'Play Lab: Variables'
+          'Play Lab: Functions with Parameters': 'Play Lab: Functions with Parameters'
+          'Bee: Functions with Parameters': 'Bee: Functions with Parameters'
+          'Artist: For Loops': 'Artist: For Loops'
+          'Play Lab: For Loops': 'Play Lab: For Loops'
+          'Artist: Functions': 'Artist: Functions'
+          'Artist: Functions with Paraqmeters': 'Artist: Functions with Paraqmeters'

@@ -38,17 +38,17 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 ## 2. Попитайте във вашето училище, дали предлага участие в Часът на кодирането
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or give [this handout](<%= hoc_uri('/files/schools-handout.pdf') %>) to your principal.
+[ Изпратете този имейл](<%= hoc_uri('/resources#email') %>) или да дайте <a href = "< % = hoc_uri('/files/schools-handout.pdf') % >" > това изложение</a> на своя директор.
 
 <% end %>
 
 ## 3. Направете щедро дарение
 
-[Donate to our crowdfunding campaign.](http://<%= codeorg_url() %>/donate) To teach 100 million children, we need your support. We just launched what could be the [largest education crowdfunding campaign](http://<%= codeorg_url() %>/donate) in history. Every dollar will be matched by major Code.org [donors](http://<%= codeorg_url() %>/about/donors), doubling your impact.
+[Станете спонсор чрез нашата crowdfunding кампания.](http://<%= codeorg_url() %>/donate) За да предоставим обучение на 100 милиона деца, имаме нужда от вашата подкрепа. Ние току-що стартирахме вероятно [най-голямата образователна crowdfunding кампания](http://<%= codeorg_url() %>/donate) в историята. Всеки долар, който дарите, ще бъдe събран от организатора Code.org [donors](http://<%= codeorg_url() %>/about/donors), за да удвои въздействието си.
 
 ## 3. Посъветвайте се с вашия работодател за възможно включване
 
-[Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](<%= hoc_uri('/resources/hoc-one-pager.pdf') %>).
+[Изпратете този имейл](<%= hoc_uri('/resources#email') %>) на вашия ръководител или изпълнителен директор. Или [ им дайте това изложение](<%= hoc_uri('/resources/hoc-one-pager.pdf') %>).
 
 ## 4. Насърчете включването в Часът на кодирането в рамките на вашата общност
 
@@ -56,6 +56,6 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 ## 5 Ангажирайте местната власт в подкрепа на Часът на Кодирането
 
-[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board. Or [give them this handout](<%= hoc_uri('/resources/hoc-one-pager.pdf') %>) and invite them to visit your school.
+[ 4Изпратете този имейл](<%= hoc_uri('/resources#politicians') %>) до кмета, Общинския съвет или училищното настоятелство. Или [ им дайте това изложение](<%= hoc_uri('/resources/hoc-one-pager.pdf') %>) и ги поканете да посетят вашето училище.
 
 <%= view 'popup_window.js' %>

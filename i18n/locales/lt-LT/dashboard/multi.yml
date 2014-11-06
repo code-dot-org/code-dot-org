@@ -528,3 +528,9 @@ lt:
         Martha Washington: Marta Vašington
         George Washington: Džordžas Vašingtonas
         George Jetson: Džordžas Džetsonas
+      unique level name here:
+        title: pavadinimas
+        description here: description here
+        Question: Question
+        wrong answer: wrong answer
+        right answer: right answer

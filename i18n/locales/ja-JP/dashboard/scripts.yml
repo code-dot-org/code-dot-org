@@ -3,7 +3,7 @@ ja:
     script:
       name:
         test:
-          "Jigsaw: Learn to drag and drop": 'Jigsaw: Learn to drag and drop'
+          "Jigsaw: Learn to drag and drop": ジグソーパズル：ドラッグ＆ドロップを学びましょう
           The Maze: 迷路
           Multi: Multi
           Match: Match
@@ -11,7 +11,7 @@ ja:
           title: Test Course
           description: Just an internal test course.
         course1:
-          "Jigsaw: Learn to drag and drop": 'Jigsaw: Learn to drag and drop'
+          "Jigsaw: Learn to drag and drop": ジグソーパズル：ドラッグ＆ドロップを学びましょう
           "Maze: Sequence": 'Maze: Sequence'
           "Maze: Debugging": 'Maze: Debugging'
           "Artist 1: Intro": 'Artist 1: Intro'
@@ -19,28 +19,28 @@ ja:
           Spelling Bee: Spelling Bee
           Spelling Bee not blockly: Spelling Bee not blockly
           "Bee 1: Intro": 'Bee 1: Intro'
-          "Maze 2: Loops": 'Maze 2: Loops'
+          "Maze 2: Loops": '迷路2: くりかえし'
           "Bee 2: Loops": 'Bee 2: Loops'
           Multi & Match: 'Multi & Match'
           K-1 Flappy: K-1 Flappy
           Flappy non blockly: Flappy non blockly
-          title: 'Course 1 - For early readers'
+          title: Course 1
           Artist 2: Artist 2
           Happy Maps: Happy Maps
           Move it, Move it: Move it, Move it
-          "Real-life Algorithms: Plant a Seed": 'Real-life Algorithms: Plant a Seed'
+          "Real-life Algorithms: Plant a Seed": 現実のアルゴリズム：種を植えましょう
           Building a Foundation: Building a Foundation
           Getting Loopy: Getting Loopy
           The Big Event: The Big Event
-          Going Places Safely: Going Places Safely
+          Going Places Safely: 安全な道を通って行く
           description: Course 1 is designed to allow early readers to create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.
           "Bee: Sequence": 'Bee: Sequence'
           "Artist: Sequence": 'Artist: Sequence'
           "Artist: Shapes": 'Artist: Shapes'
           "Maze: Loops": 'Maze: Loops'
           "Bee: Loops": 'Bee: Loops'
-          "Studio: Create a Story": 'Play Lab: Create a Story'
-          description_short: Course 1 is designed for early readers in the lower elementary grades.
+          "Studio: Create a Story": プレイラボ：お話を作りましょう
+          description_short: Course 1 is designed for early readers. Recommended for grades K-1.
           "Artist: Loops": 'Artist: Loops'
         course2:
           The Maze: 迷路
@@ -48,11 +48,11 @@ ja:
           The Artist: アーティスト
           Artist Debugging: Artist Debugging
           Bounce: バウンド
-          "Studio: Create a Story": 'Play Lab: Create a Story'
+          "Studio: Create a Story": プレイラボ：お話を作りましょう
           Artist Loops: Artist Loops
           Bee Conditionals: Bee Conditionals
           Flappy: Flappy
-          title: Course 2
+          title: コース2
           Bee Loops: Bee Loops
           Artist Functions: Artist Functions
           The Artist Debugging: The Artist Debugging
@@ -67,7 +67,7 @@ ja:
           Binary Bracelets: Binary Bracelets
           The Big Event: The Big Event
           Your Digital Footprint: Your Digital Footprint
-          description: Course 2 is designed for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.
+          description: コース2は、読み書きができてプログラミング経験のない生徒のためのコースです。このコースでは、問題を解くプログラムやインタラクティブなゲームや物語を作ってシェアします。2年生〜5年生向け。
           "Maze: Sequence": 'Maze: Sequence'
           "Artist: Sequence": 'Artist: Sequence'
           "Maze: Loops": 'Maze: Loops'
@@ -76,27 +76,27 @@ ja:
           "Bee: Debugging": 'Bee: Debugging'
           "Artist: Debugging": 'Artist: Debugging'
           "Bee: Conditionals": 'Bee: Conditionals'
-          description_short: Course 2 is designed for students who can read in the lower and middle elementary grades.
+          description_short: 'Course 2 is designed for students who can read.  Recommended for grades 2-5.'
           "Artist: Sequence2": 'Artist: Sequence2'
           "Maze: Sequence2": 'Maze: Sequence2'
-          "Artist: Nested Loops": 'Artist: Nested Loops'
+          "Artist: Nested Loops": アーティスト：入れ子のループ
         course3:
           The Maze: 迷路
-          "Studio: Create a Story": 'Play Lab: Create a Story'
+          "Studio: Create a Story": プレイラボ：お話を作りましょう
           The Artist: アーティスト
-          title: Course 3
-          Artist Functions: Artist Functions
-          Artist For Loops: Artist For Loops
-          Artist Nested Loops: Artist Nested Loops
+          title: コース3
+          Artist Functions: アーティスト：関数
+          Artist For Loops: アーティスト：Forループ
+          Artist Nested Loops: アーティスト：入れ子のループ
           Bee Conditionals: Bee Conditionals
           Bee Nested Loops: Bee Nested Loops
           Bee Debuggin: Bee Debuggin
           Bee Debugging: Bee Debugging
           Bee Functions: Bee Functions
-          Artist Functions with Params: Artist Functions with Params
+          Artist Functions with Params: アーティスト：引数のある関数
           Bounce: バウンド
           Maze Conditionals: Maze Conditionals
-          Artist Functions with Parameters: Artist Functions with Parameters
+          Artist Functions with Parameters: アーティスト：引数のある関数
           Computational Thinking: コンピュテーショナル・シンキング（コンピューターの様に考える）
           Functional Suncatchers: Functional Suncatchers
           Songwriting Parameters: Songwriting Parameters
@@ -106,20 +106,20 @@ ja:
           Digital Citizenship: Digital Citizenship
           Farmer - While Loops: 'Farmer - While Loops'
           description: Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
-          "Studio: Create a Game": 'Play Lab: Create a Game'
+          "Studio: Create a Game": プレイラボ：ゲームを作りましょう
           Maze: 迷路
-          Artist: Artist
-          "Artist: Functions": 'Artist: Functions'
+          Artist: アーティスト
+          "Artist: Functions": アーティスト：関数
           "Bee: Functions": 'Bee: Functions'
           "Bee: Conditionals": 'Bee: Conditionals'
           "Maze: Conditionals": 'Maze: Conditionals'
-          "Artist: Nested Loops": 'Artist: Nested Loops'
+          "Artist: Nested Loops": アーティスト：入れ子のループ
           "Farmer: While Loops": 'Farmer: While Loops'
           "Bee: Nested Loops": 'Bee: Nested Loops'
           "Bee: Debugging": 'Bee: Debugging'
-          description_short: Students taking Course 3 should have already taken Course 2.
+          description_short: 'Course 3 is a follow-up to Course 2.  Recommended for grades 4-5.'
           Maze2: Maze2
-          Artist2: Artist2
+          Artist2: アーティスト2
           "Artist: Functions2": 'Artist: Functions2'
           "Bee: Functions2": 'Bee: Functions2'
           "Bee: Conditionals2": 'Bee: Conditionals2'
@@ -139,11 +139,26 @@ ja:
           Unit 2: Unit 2
         playlab:
           title: Play Lab
-          description: Create a story or make a game with Play Lab!
+          description: プレイラボでお話やゲームを作りましょう！
           Play Lab: Play Lab
-          description_short: Create a story or make a game with Play Lab!
+          description_short: プレイラボでお話やゲームを作りましょう！
         artist:
-          title: Artist
-          description: Draw cool pictures and designs with the Artist!
-          Artist: Artist
-          description_short: Draw cool pictures and designs with the Artist!
+          title: アーティスト
+          description: アーティストでかっこいい絵やデザインを描きましょう！
+          Artist: アーティスト
+          description_short: アーティストでかっこいい絵やデザインを描きましょう！
+        course4:
+          description_short: Students taking Course 4 should have already taken Courses 2 and 3.
+          description: Course 4 is designed for students who have taken Course 2 and 3. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8.
+          "Artist: Variables": 'Artist: Variables'
+          "Bee: For Loops": 'Bee: For Loops'
+          title: Course 4
+          "Algorithms: Tangrams": 'Algorithms: Tangrams'
+          Variables: 変数
+          "Play Lab: Variables": 'Play Lab: Variables'
+          "Play Lab: Functions with Parameters": 'Play Lab: Functions with Parameters'
+          "Bee: Functions with Parameters": 'Bee: Functions with Parameters'
+          "Artist: For Loops": 'Artist: For Loops'
+          "Play Lab: For Loops": 'Play Lab: For Loops'
+          "Artist: Functions": アーティスト：関数
+          "Artist: Functions with Paraqmeters": 'Artist: Functions with Paraqmeters'

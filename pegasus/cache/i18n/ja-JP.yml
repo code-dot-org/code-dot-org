@@ -1,5 +1,6 @@
 "ja-JP":
   hello: "ハローワールド"
+  select_language: Please select your language
   computer_science: "コンピュータ ・ サイエンス"
   computer_science_edweek: "コンピューター科学教育ウィーク"
   csedweek_dates: 2013 年 12 月 9-15日
@@ -17,12 +18,12 @@
   hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
     8 - 14, 2014<br/>
   hoc2014_students: Students
-  hoc2014_try: Try it
+  hoc2014_try: "挑戦してみる"
   hoc2014_teachers: Teachers
   hoc2014_host: Host it
   hoc2014_everyone: Everyone
   hoc2014_support: Support it
-  hoc2014_whatishoc: What is the Hour of Code?
+  hoc2014_whatishoc: Hour of Codeとは何でしょう？
   twentyhours_trynow: "今すぐ試す"
   california_heading: Ask your school to teach computer science
   california_text: Any teacher can offer our <a href='http://learn.code.org/'>free

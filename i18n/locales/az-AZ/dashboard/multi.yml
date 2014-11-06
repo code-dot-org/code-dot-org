@@ -528,3 +528,9 @@ az:
         Martha Washington: Martha Washington
         George Washington: Corc Vaşinqton
         George Jetson: George Jetson
+      unique level name here:
+        title: title
+        description here: description here
+        Question: Question
+        wrong answer: wrong answer
+        right answer: right answer

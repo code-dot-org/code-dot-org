@@ -90,7 +90,7 @@ module.exports = function(app, levels, options) {
 };
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./base":2,"./blocksCommon":4,"./dom":8,"./required_block_utils":30,"./utils":45}],2:[function(require,module,exports){
+},{"./base":2,"./blocksCommon":4,"./dom":8,"./required_block_utils":29,"./utils":45}],2:[function(require,module,exports){
 /**
  * Blockly Apps: Common code
  *
@@ -266,6 +266,8 @@ BlocklyApps.init = function(config) {
 
   var visualizationColumn = document.getElementById('visualizationColumn');
   if (config.level.edit_blocks) {
+    // Set a class on the main blockly div so CSS can style blocks differently
+    Blockly.addClass_(container.querySelector('#blockly'), 'edit');
     // If in level builder editing blocks, make workspace extra tall
     visualizationColumn.style.height = "3000px";
     // Modify the arrangement of toolbox blocks so categories align left
@@ -418,10 +420,10 @@ BlocklyApps.init = function(config) {
     // using window.require forces us to use requirejs version of require
     window.require(['droplet'], function(droplet) {
       var displayMessage, examplePrograms, messageElement, onChange, startingText;
-      var palette = utils.generateDropletPalette(config.level.codeFunctions);
       BlocklyApps.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
         mode: 'javascript',
-        palette: palette
+        modeOptions: utils.generateDropletModeOptions(config.level.codeFunctions),
+        palette: utils.generateDropletPalette(config.level.codeFunctions)
       });
 
       var startText = '// ' + msg.typeHint() + '\n';
@@ -534,6 +536,8 @@ BlocklyApps.init = function(config) {
         true : config.level.disableParamEditing,
     disableVariableEditing: config.level.disableVariableEditing === undefined ?
         false : config.level.disableVariableEditing,
+    useModalFunctionEditor: config.level.useModalFunctionEditor === undefined ?
+        false : config.level.useModalFunctionEditor,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -588,7 +592,7 @@ BlocklyApps.init = function(config) {
 
   // Add display of blocks used.
   setIdealBlockNumber();
-  Blockly.addChangeListener(function() {
+  Blockly.mainBlockSpaceEditor.addChangeListener(function() {
     BlocklyApps.updateBlockCount();
   });
 };
@@ -645,7 +649,7 @@ BlocklyApps.localeDirection = function() {
 /**
  * Initialize Blockly for a readonly iframe.  Called on page load.
  * XML argument may be generated from the console with:
- * Blockly.Xml.domToText(Blockly.Xml.workspaceToDom(Blockly.mainWorkspace)).slice(5, -6)
+ * Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)).slice(5, -6)
  */
 BlocklyApps.initReadonly = function(options) {
   Blockly.inject(document.getElementById('blockly'), {
@@ -663,7 +667,7 @@ BlocklyApps.initReadonly = function(options) {
  */
 BlocklyApps.loadBlocks = function(blocksXml) {
   var xml = parseXmlElement(blocksXml);
-  Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, xml);
+  Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, xml);
 };
 
 BlocklyApps.BLOCK_X_COORDINATE = 70;
@@ -794,8 +798,9 @@ BlocklyApps.onResize = function() {
 BlocklyApps.resizeHeaders = function (fullWorkspaceWidth) {
   var categoriesWidth = 0;
   var categories = BlocklyApps.editCode ?
-                    document.querySelector('.droplet-palette-wrapper') :
-                    Blockly.Toolbox.HtmlDiv;
+      document.querySelector('.droplet-palette-wrapper') :
+      Blockly.mainBlockSpaceEditor.toolbox &&
+      Blockly.mainBlockSpaceEditor.toolbox.HtmlDiv;
   if (categories) {
     // If in the droplet editor, but not using blocks, keep categoryWidth at 0
     if (!BlocklyApps.editCode || BlocklyApps.editor.currentlyUsingBlocks) {
@@ -804,8 +809,8 @@ BlocklyApps.resizeHeaders = function (fullWorkspaceWidth) {
     }
   }
 
-  var workspaceWidth = Blockly.getWorkspaceWidth();
-  var toolboxWidth = Blockly.getToolboxWidth();
+  var workspaceWidth = Blockly.mainBlockSpaceEditor.getBlockSpaceWidth();
+  var toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
 
   if (BlocklyApps.editCode) {
     workspaceWidth = fullWorkspaceWidth - categoriesWidth;
@@ -849,7 +854,7 @@ BlocklyApps.highlight = function(id, spotlight) {
     }
   }
 
-  Blockly.mainWorkspace.highlightBlock(id, spotlight);
+  Blockly.mainBlockSpace.highlightBlock(id, spotlight);
 };
 
 /**
@@ -1002,8 +1007,8 @@ BlocklyApps.resetButtonClick = function() {
   onResetPressed();
   BlocklyApps.toggleRunReset('run');
   BlocklyApps.clearHighlighting();
-  Blockly.mainWorkspace.setEnableToolbox(true);
-  Blockly.mainWorkspace.traceOn(false);
+  Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
+  Blockly.mainBlockSpace.traceOn(false);
   BlocklyApps.reset(false);
 };
 
@@ -1125,7 +1130,7 @@ exports.generateSimpleBlock = function (blockly, generator, options) {
  * @returns {*}
  */
 exports.domToBlock = function(blockDOM) {
-  return Blockly.Xml.domToBlock_(Blockly.mainWorkspace, blockDOM);
+  return Blockly.Xml.domToBlock_(Blockly.mainBlockSpace, blockDOM);
 };
 
 /**
@@ -1477,7 +1482,7 @@ exports.strip = function(code) {
  * Extract the user's code as raw JavaScript.
  */
 exports.workspaceCode = function(blockly) {
-  var code = blockly.Generator.workspaceToCode('JavaScript');
+  var code = blockly.Generator.blockSpaceToCode('JavaScript');
   return exports.strip(code);
 };
 
@@ -1621,20 +1626,27 @@ exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
     var start = node.start - userCodeStartOffset;
     var end = node.end - userCodeStartOffset;
 
-    inUserCode = (start > 0) && (start < userCodeLength);
-
-    // If we are showing Javascript code in the ace editor, highlight
-    // the code being executed in each step:
-    if (!editor.currentlyUsingBlocks) {
-      // Only show selection if the node being executed is inside the user's
-      // code (not inside code we inserted before or after their code that is
-      // not visible in the editor):
-      var selection = editor.aceEditor.getSelection();
-      if (inUserCode) {
-        createSelection(selection, cumulativeLength, start, end);
+    // Only show selection if the node being executed is inside the user's
+    // code (not inside code we inserted before or after their code that is
+    // not visible in the editor):
+    if (start > 0 && start < userCodeLength) {
+      // Highlight the code being executed in each step:
+      if (editor.currentlyUsingBlocks) {
+        var style = {color: '#FFFF22'};
+        var line = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
+        editor.clearLineMarks();
+        editor.markLine(line, style);
       } else {
-        selection.clearSelection();
+        var selection = editor.aceEditor.getSelection();
+        createSelection(selection, cumulativeLength, start, end);
       }
+      inUserCode = true;
+    }
+  } else {
+    if (editor.currentlyUsingBlocks) {
+      editor.clearLineMarks();
+    } else {
+      editor.aceEditor.getSelection().clearSelection();
     }
   }
   return inUserCode;
@@ -1875,52 +1887,54 @@ var EvalStar = require('./evalStar');
 
 // todo (brent) - make use of blockId?
 
-exports.register = function (object) {
-
-  // todo (brent) - hacky way to get last object
-  Eval.lastEvalObject = object;
-
-  return object;
+exports.display = function (object) {
+  if (object === undefined) {
+    object = new EvalString("");
+  }
+  if (!object.draw) {
+    object = new EvalString(object.toString());
+  }
+  Eval.displayedObject = object;
 };
 
 exports.string = function (str, blockId) {
-  return exports.register(new EvalString(str));
+  return new EvalString(str);
 };
 
 exports.circle = function (size, style, color) {
-  return exports.register(new EvalCircle(size, style, color));
+  return new EvalCircle(size, style, color);
 };
 
 exports.triangle = function (size, style, color) {
-  return exports.register(new EvalTriangle(size, style, color));
+  return new EvalTriangle(size, style, color);
 };
 
 exports.overlay = function (top, bottom) {
-  return exports.register(new EvalMulti(top, bottom));
+  return new EvalMulti(top, bottom);
 };
 
 exports.underlay = function (bottom, top) {
-  return exports.register(new EvalMulti(top, bottom));
+  return new EvalMulti(top, bottom);
 };
 
 exports.square = function (size, style, color) {
-  return exports.register(new EvalRect(size, size, style, color));
+  return new EvalRect(size, size, style, color);
 };
 
 exports.rectangle = function (width, height, style, color) {
-  return exports.register(new EvalRect(width, height, style, color));
+  return new EvalRect(width, height, style, color);
 };
 
 exports.ellipse = function (width, height, style, color) {
-  return exports.register(new EvalEllipse(width, height, style, color));
+  return new EvalEllipse(width, height, style, color);
 };
 
 exports.text = function (text, fontSize, color) {
-  return exports.register(new EvalText(text, fontSize, color));
+  return new EvalText(text, fontSize, color);
 };
 
 exports.star = function (radius, fontSize, color) {
-  return exports.register(new EvalStar(radius, fontSize, color));
+  return new EvalStar(radius, fontSize, color);
 };
 
 exports.placeImage = function (x, y, image, blockId) {
@@ -1932,35 +1946,31 @@ exports.placeImage = function (x, y, image, blockId) {
   y = evalUtils.cartesianToPixel(y);
 
   image.place(x, y);
-  return exports.register(image);
+  return image;
 };
 
 exports.rotateImage = function (degrees, image) {
   image.rotate(degrees);
-  return exports.register(image);
+  return image;
 };
 
 exports.scaleImage = function (factor, image) {
   image.scale(factor, factor);
-  return exports.register(image);
+  return image;
 };
 
 exports.stringAppend = function (first, second) {
   evalUtils.ensureType(first, EvalString);
   evalUtils.ensureType(second, EvalString);
 
-  var str = new EvalString(first.getValue() + second.getValue());
-  return exports.register(str);
+  return new EvalString(first.getValue() + second.getValue());
 };
 
 // polling for values
 exports.stringLength = function (str) {
   evalUtils.ensureType(str, EvalString);
-  // kind of hacky. register  a string version of the number, so that if this
-  // is our top level block, it will be drawn, but return the number itself
-  var len = str.getValue().length;
-  exports.register(new EvalString(len.toString()));
-  return len;
+
+  return str.getValue().length;
 };
 
 },{"./evalCircle":13,"./evalEllipse":14,"./evalMulti":15,"./evalRect":17,"./evalStar":18,"./evalString":19,"./evalText":20,"./evalTriangle":21,"./evalUtils":22}],10:[function(require,module,exports){
@@ -1993,7 +2003,7 @@ var msg = require('../../locale/en_ploc/eval');
 var commonMsg = require('../../locale/en_ploc/common');
 
 var evalUtils = require('./evalUtils');
-var mathBlocks = require('../mathBlocks');
+var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
 var colors = require('../functionalBlockUtils').colors;
 var initTitledFunctionalBlock = require('../functionalBlockUtils').initTitledFunctionalBlock;
 
@@ -2009,11 +2019,19 @@ exports.install = function(blockly, blockInstallOptions) {
     return generator.variableDB_.getDistinctName(name, NAME_TYPE);
   };
 
-  // todo (brent) - rationalize what's in functionalBlocks vs. here and if we
-  // can share code between calc and evals functionalBlocks
-  mathBlocks.install(blockly, generator, gensym);
+  sharedFunctionalBlocks.install(blockly, generator, gensym);
 
   installString(blockly, generator, gensym);
+
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'functional_display',
+    blockTitle: msg.displayBlockTitle(),
+    apiName: 'display',
+    returnType: 'none',
+    args: [
+      { name: 'ARG1', type: 'none' },
+    ]
+  });
 
   // shapes
   installFunctionalBlock(blockly, generator, gensym, {
@@ -2231,7 +2249,8 @@ function installString(blockly, generator, gensym) {
   };
 
   generator.functional_string = function() {
-    return "Eval.string('" + this.getTitleValue('VAL') + "')";
+    return "Eval.string(" +
+        blockly.JavaScript.quote_(this.getTitleValue('VAL')) + ")";
   };
 }
 
@@ -2269,7 +2288,7 @@ function installStyle(blockly, generator, gensym) {
   };
 }
 
-},{"../../locale/en_ploc/common":47,"../../locale/en_ploc/eval":48,"../functionalBlockUtils":27,"../mathBlocks":29,"./evalUtils":22}],11:[function(require,module,exports){
+},{"../../locale/en_ploc/common":47,"../../locale/en_ploc/eval":48,"../functionalBlockUtils":27,"../sharedFunctionalBlocks":30,"./evalUtils":22}],11:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -2328,7 +2347,9 @@ var api = require('./api');
 var page = require('../templates/page.html');
 var feedback = require('../feedback.js');
 var dom = require('../dom');
+var blockUtils = require('../block_utils');
 
+var EvalString = require('./evalString');
 
 var TestResults = require('../constants').TestResults;
 
@@ -2341,6 +2362,10 @@ BlocklyApps.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
 
+// This property is set in the api call to draw, and extracted in
+// getDrawableFromBlocks
+Eval.displayedObject = null;
+
 /**
  * Initialize Blockly and the Eval.  Called on page load.
  */
@@ -2349,10 +2374,8 @@ Eval.init = function(config) {
   skin = config.skin;
   level = config.level;
 
-  Eval.shownFeedback_ = false;
-
   config.grayOutUndeletableBlocks = true;
-  config.forceInsertTopBlock = null;
+  config.forceInsertTopBlock = 'functional_display';
 
   config.html = page({
     assetUrl: BlocklyApps.assetUrl,
@@ -2388,14 +2411,16 @@ Eval.init = function(config) {
     // just going to disable the hack for this app.
     Blockly.BROKEN_CONTROL_POINTS = false;
 
-    // Add to reserved word list: API, local variables in execution evironment
+    // Add to reserved word list: API, local variables in execution environment
     // (execute) and the infinite loop detection function.
-    //XXX Not sure if this is still right.
     Blockly.JavaScript.addReservedWords('Eval,code');
 
-    Eval.answerObject = generateEvalObjectFromBlockXml(level.solutionBlocks);
-    if (Eval.answerObject) {
-      Eval.answerObject.draw(document.getElementById('answer'));
+    var solutionBlocks = blockUtils.forceInsertTopBlock(level.solutionBlocks,
+      config.forceInsertTopBlock);
+
+    var answerObject = getDrawableFromBlocks(solutionBlocks);
+    if (answerObject) {
+      answerObject.draw(document.getElementById('answer'));
     }
 
     // Adjust visualizationColumn width.
@@ -2415,7 +2440,7 @@ Eval.init = function(config) {
  */
 BlocklyApps.runButtonClick = function() {
   BlocklyApps.toggleRunReset('reset');
-  Blockly.mainWorkspace.traceOn(true);
+  Blockly.mainBlockSpace.traceOn(true);
   BlocklyApps.attempts++;
   Eval.execute();
 };
@@ -2458,27 +2483,29 @@ function evalCode (code) {
 }
 
 /**
- * Given the xml for a set of blocks, generates an eval object from them by
- * temporarily sticking them into the workspace, generating code, and
- * evaluating said code.
+ * Generates a drawable evalObject from the blocks in the workspace. If blockXml
+ * is provided, temporarily sticks those blocks into the workspace to generate
+ * the evalObject, then deletes blocks.
  */
-function generateEvalObjectFromBlockXml(blockXml) {
-  var xml = blockXml || '';
-
-  if (Blockly.mainWorkspace.getTopBlocks().length !== 0) {
-    throw new Error("generateExpressionFromBlockXml shouldn't be called if " +
-      "we already have blocks in the workspace");
+function getDrawableFromBlocks(blockXml) {
+  if (blockXml) {
+    if (Blockly.mainBlockSpace.getTopBlocks().length !== 0) {
+      throw new Error("getDrawableFromBlocks shouldn't be called with blocks if " +
+        "we already have blocks in the workspace");
+    }
+    // Temporarily put the blocks into the workspace so that we can generate code
+    BlocklyApps.loadBlocks(blockXml);
   }
 
-  // Temporarily put the blocks into the workspace so that we can generate code
-  BlocklyApps.loadBlocks(xml);
-  var code = Blockly.Generator.workspaceToCode('JavaScript');
+  var code = Blockly.Generator.blockSpaceToCode('JavaScript', 'functional_display');
   evalCode(code);
+  var object = Eval.displayedObject;
+  Eval.displayedObject = null;
 
-  // Remove the blocks
-  Blockly.mainWorkspace.getTopBlocks().forEach(function (b) { b.dispose(); });
-  var object = Eval.lastEvalObject;
-  Eval.lastEvalObject = null;
+  if (blockXml) {
+    // Remove the blocks
+    Blockly.mainBlockSpace.getTopBlocks().forEach(function (b) { b.dispose(); });
+  }
 
   return object;
 }
@@ -2491,19 +2518,13 @@ Eval.execute = function() {
   Eval.testResults = BlocklyApps.TestResults.NO_TESTS_RUN;
   Eval.message = undefined;
 
-  // todo (brent) perhaps try to share user vs. expected generation better
-  var code = Blockly.Generator.workspaceToCode('JavaScript');
-  evalCode(code);
-
-  Eval.userObject = Eval.lastEvalObject;
-  if (Eval.userObject) {
-    Eval.userObject.draw(document.getElementById("user"));
-  }
+  var userObject = getDrawableFromBlocks(null);
+  userObject.draw(document.getElementById("user"));
 
   Eval.result = evaluateAnswer();
-  Eval.testResults = Eval.result ? TestResults.ALL_PASS : TestResults.LEVEL_INCOMPLETE_FAIL;
+  Eval.testResults = BlocklyApps.getTestResults(Eval.result);
 
-  var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
+  var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   var textBlocks = Blockly.Xml.domToText(xml);
 
   var reportData = {
@@ -2538,6 +2559,9 @@ function evaluateAnswer() {
  * BlocklyApps.displayFeedback when appropriate
  */
 var displayFeedback = function(response) {
+  // override extra top blocks message
+  level.extraTopBlocks = evalMsg.extraTopBlocks();
+
   BlocklyApps.displayFeedback({
     app: 'Eval',
     skin: skin.id,
@@ -2558,7 +2582,7 @@ function onReportComplete(response) {
   displayFeedback(response);
 }
 
-},{"../../locale/en_ploc/common":47,"../../locale/en_ploc/eval":48,"../base":2,"../codegen":6,"../constants":7,"../dom":8,"../feedback.js":26,"../skins":31,"../templates/page.html":39,"./api":9,"./controls.html":11,"./levels":23,"./visualization.html":25}],13:[function(require,module,exports){
+},{"../../locale/en_ploc/common":47,"../../locale/en_ploc/eval":48,"../base":2,"../block_utils":3,"../codegen":6,"../constants":7,"../dom":8,"../feedback.js":26,"../skins":31,"../templates/page.html":39,"./api":9,"./controls.html":11,"./evalString":19,"./levels":23,"./visualization.html":25}],13:[function(require,module,exports){
 var EvalObject = require('./evalObject');
 var EvalString = require('./evalString');
 var evalUtils = require('./evalUtils');
@@ -2977,10 +3001,10 @@ var blockUtils = require('../block_utils');
  */
 module.exports = {
   'eval1': {
-    solutionBlocks: blockUtils.mathBlockXml('functional_square', {
-      'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'black' } ),
+    solutionBlocks: blockUtils.mathBlockXml('functional_star', {
+      'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'green' } ),
       'STYLE': blockUtils.mathBlockXml('functional_string', null, { VAL: 'solid' }),
-      'SIZE': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 4 } )
+      'SIZE': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 20 } )
     }),
     ideal: Infinity,
     toolbox: blockUtils.createToolbox(
@@ -3760,7 +3784,7 @@ var hasEmptyContainerBlocks = function() {
  * @return {Blockly.Block} an empty container block, or null if none exist.
  */
 var getEmptyContainerBlock = function() {
-  var blocks = Blockly.mainWorkspace.getAllBlocks();
+  var blocks = Blockly.mainBlockSpace.getAllBlocks();
   for (var i = 0; i < blocks.length; i++) {
     var block = blocks[i];
     for (var j = 0; j < block.inputList.length; j++) {
@@ -3789,7 +3813,7 @@ var hasAllRequiredBlocks = function() {
  * @return {Array<Object>} The blocks.
  */
 var getUserBlocks = function() {
-  var allBlocks = Blockly.mainWorkspace.getAllBlocks();
+  var allBlocks = Blockly.mainBlockSpace.getAllBlocks();
   var blocks = allBlocks.filter(function(block) {
     return !block.disabled && block.isEditable() && block.type !== 'when_run';
   });
@@ -3803,7 +3827,7 @@ var getUserBlocks = function() {
  * @return {Array<Object>} The blocks.
  */
 var getCountableBlocks = function() {
-  var allBlocks = Blockly.mainWorkspace.getAllBlocks();
+  var allBlocks = Blockly.mainBlockSpace.getAllBlocks();
   var blocks = allBlocks.filter(function(block) {
     return !block.disabled;
   });
@@ -3838,7 +3862,7 @@ var getMissingRequiredBlocks = function () {
       for (var testId = 0; testId < requiredBlock.length; testId++) {
         var test = requiredBlock[testId].test;
         if (typeof test === 'string') {
-          code = code || Blockly.Generator.workspaceToCode('JavaScript');
+          code = code || Blockly.Generator.blockSpaceToCode('JavaScript');
           if (code.indexOf(test) !== -1) {
             // Succeeded, moving to the next list of tests
             usedRequiredBlock = true;
@@ -3867,7 +3891,7 @@ var getMissingRequiredBlocks = function () {
  * Do we have any floating blocks not attached to an event block or function block?
  */
 exports.hasExtraTopBlocks = function () {
-  var topBlocks = Blockly.mainWorkspace.getTopBlocks();
+  var topBlocks = Blockly.mainBlockSpace.getTopBlocks();
   for (var i = 0; i < topBlocks.length; i++) {
     // ignore disabled top blocks. we have a level turtle:2_7 that depends on
     // having disabled top level blocks
@@ -4007,12 +4031,14 @@ var generateXMLForBlocks = function(blocks) {
 
 
 },{"../locale/en_ploc/common":47,"./codegen":6,"./constants":7,"./dom":8,"./templates/buttons.html":34,"./templates/code.html":35,"./templates/readonly.html":40,"./templates/shareFailure.html":41,"./templates/sharing.html":42,"./templates/showCode.html":43,"./templates/trophy.html":44,"./utils":45}],27:[function(require,module,exports){
+var utils = require('./utils');
+var _ = utils.getLodash();
+
 var colors = {
   Number: [192, 1.00, 0.99], // 00ccff
   string: [180, 1.00, 0.60], // 0099999
   image: [285, 1.00, 0.80], // 9900cc
   boolean: [90, 1.00, 0.4], // 336600
-  // not sure we will actually need this.
   none: [0, 0, 0.6]
 };
 module.exports.colors = colors;
@@ -4038,8 +4064,12 @@ module.exports.initTitledFunctionalBlock = function (block, title, type, args) {
     var arg = args[i];
     var input = block.appendFunctionalInput(arg.name);
     input.setInline(i > 0);
-    input.setHSV.apply(input, colors[arg.type]);
-    input.setCheck(arg.type);
+    if (arg.type === 'none') {
+      input.setHSV(0, 0, 0.99);
+    } else {
+      input.setHSV.apply(input, colors[arg.type]);
+      input.setCheck(arg.type);
+    }
     input.setAlign(Blockly.ALIGN_CENTRE);
   }
 
@@ -4050,7 +4080,63 @@ module.exports.initTitledFunctionalBlock = function (block, title, type, args) {
   }
 };
 
-},{}],28:[function(require,module,exports){
+/**
+ * Installs a block which generates code that makes an API call, which
+ * looks roughly like:
+ *
+ *     apiName(block_id, arg1 [,arg2 ...])
+ *
+ * where args with "constantValue" defined are pre-specified arguments,
+ * and other args are read from functional inputs. For example:
+ *
+ *     options = {
+ *       blockName: 'functional_setSpriteZeroSpeed',
+ *       blockTitle: 'set sprite zero speed',
+ *       apiName: 'Studio.setSpriteSpeed',
+ *       args: [{constantValue: '0'}, // spriteIndex
+ *              {name: 'SPEED', type: 'Number', default:'7'}]
+ *     }
+ *
+ * creates a block which, with an id of '43' and an input of '12', would
+ * generate the following code:
+ *
+ *     'Studio.setSpriteSpeed(block_id_43, 0, 12)'
+ */
+module.exports.installFunctionalApiCallBlock = function(blockly, generator,
+    options) {
+  var blockName = options.blockName;
+  var blockTitle = options.blockTitle;
+  var apiName = options.apiName;
+  var args = options.args;
+
+  var blockArgs = args.filter(function(arg) {
+    return arg.constantValue === undefined;
+  });
+  var blockType = 'none';
+  blockly.Blocks[blockName] = {
+    init: function () {
+      module.exports.initTitledFunctionalBlock(this, blockTitle, blockType,
+          blockArgs);
+    }
+  };
+
+  // The generator function depends on "this" being the block object.
+  generator[blockName] = function() {
+    var apiArgs = [];
+    apiArgs.push('\'block_id_' + this.id + '\'');
+    for (var i = 0; i < args.length; i++) {
+      var arg = args[i];
+      var value = arg.constantValue !== undefined ?
+            arg.constantValue :
+            Blockly.JavaScript.statementToCode(this, arg.name, false) ||
+                arg.default;
+      apiArgs.push(value);
+    }
+    return apiName + '(' + apiArgs.join(',') + ');\n';
+  };
+};
+
+},{"./utils":45}],28:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -6978,117 +7064,6 @@ module.exports.initTitledFunctionalBlock = function (block, title, type, args) {
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{}],29:[function(require,module,exports){
-/**
- * A set of functional blocks
- */
-
-var functionalBlockUtils = require('./functionalBlockUtils');
-var initTitledFunctionalBlock = functionalBlockUtils.initTitledFunctionalBlock;
-
-exports.install = function(blockly, generator, gensym) {
-  installPlus(blockly, generator, gensym);
-  installMinus(blockly, generator, gensym);
-  installTimes(blockly, generator, gensym);
-  installDividedBy(blockly, generator, gensym);
-  installMathNumber(blockly, generator, gensym);
-};
-
-function installPlus(blockly, generator, gensym) {
-  blockly.Blocks.functional_plus = {
-
-    helpUrl: '',
-    init: function() {
-      initTitledFunctionalBlock(this, '+', 'Number', [
-        { name: 'ARG1', type: 'Number' },
-        { name: 'ARG2', type: 'Number' }
-      ]);
-    }
-  };
-
-  generator.functional_plus = function() {
-    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
-    var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    return arg1 + " + " + arg2;
-  };
-}
-
-function installMinus(blockly, generator, gensym) {
-  blockly.Blocks.functional_minus = {
-    helpUrl: '',
-    init: function() {
-      initTitledFunctionalBlock(this, '-', 'Number', [
-        { name: 'ARG1', type: 'Number' },
-        { name: 'ARG2', type: 'Number' }
-      ]);
-    }
-  };
-
-  generator.functional_minus = function() {
-    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
-    var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    return arg1 + " - " + arg2;
-  };
-}
-
-function installTimes(blockly, generator, gensym) {
-  blockly.Blocks.functional_times = {
-    helpUrl: '',
-    init: function() {
-      initTitledFunctionalBlock(this, '*', 'Number', [
-        { name: 'ARG1', type: 'Number' },
-        { name: 'ARG2', type: 'Number' }
-      ]);
-    }
-  };
-
-  generator.functional_times = function() {
-    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
-    var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    return arg1 + " * " + arg2;
-  };
-}
-
-function installDividedBy(blockly, generator, gensym) {
-  blockly.Blocks.functional_dividedby = {
-    helpUrl: '',
-    init: function() {
-      initTitledFunctionalBlock(this, '/', 'Number', [
-        { name: 'ARG1', type: 'Number' },
-        { name: 'ARG2', type: 'Number' }
-      ]);
-    }
-  };
-
-  generator.functional_dividedby = function() {
-    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
-    var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
-    return arg1 + " / " + arg2;
-  };
-}
-
-function installMathNumber(blockly, generator, gensym) {
-  blockly.Blocks.functional_math_number = {
-    // Numeric value.
-    init: function() {
-      this.setFunctional(true, {
-        headerHeight: 0,
-        rowBuffer: 3
-      });
-      this.setHSV.apply(this, functionalBlockUtils.colors.Number);
-      this.appendDummyInput()
-          .appendTitle(new Blockly.FieldTextInput('0',
-            Blockly.FieldTextInput.numberValidator), 'NUM')
-          .setAlign(Blockly.ALIGN_CENTRE);
-      this.setFunctionalOutput(true, 'Number');
-    }
-  };
-
-  generator.functional_math_number = function() {
-    return this.getTitleValue('NUM');
-  };
-}
-
-},{"./functionalBlockUtils":27}],30:[function(require,module,exports){
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
@@ -7326,7 +7301,142 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"./block_utils":3,"./utils":45,"./xml":46}],31:[function(require,module,exports){
+},{"./block_utils":3,"./utils":45,"./xml":46}],30:[function(require,module,exports){
+/**
+ * A set of functional blocks
+ */
+
+var functionalBlockUtils = require('./functionalBlockUtils');
+var initTitledFunctionalBlock = functionalBlockUtils.initTitledFunctionalBlock;
+
+exports.install = function(blockly, generator, gensym) {
+  installPlus(blockly, generator, gensym);
+  installMinus(blockly, generator, gensym);
+  installTimes(blockly, generator, gensym);
+  installDividedBy(blockly, generator, gensym);
+  installMathNumber(blockly, generator, gensym);
+  installString(blockly, generator, gensym);
+};
+
+function installPlus(blockly, generator, gensym) {
+  blockly.Blocks.functional_plus = {
+
+    helpUrl: '',
+    init: function() {
+      initTitledFunctionalBlock(this, '+', 'Number', [
+        { name: 'ARG1', type: 'Number' },
+        { name: 'ARG2', type: 'Number' }
+      ]);
+    }
+  };
+
+  generator.functional_plus = function() {
+    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
+    var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
+    return arg1 + " + " + arg2;
+  };
+}
+
+function installMinus(blockly, generator, gensym) {
+  blockly.Blocks.functional_minus = {
+    helpUrl: '',
+    init: function() {
+      initTitledFunctionalBlock(this, '-', 'Number', [
+        { name: 'ARG1', type: 'Number' },
+        { name: 'ARG2', type: 'Number' }
+      ]);
+    }
+  };
+
+  generator.functional_minus = function() {
+    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
+    var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
+    return arg1 + " - " + arg2;
+  };
+}
+
+function installTimes(blockly, generator, gensym) {
+  blockly.Blocks.functional_times = {
+    helpUrl: '',
+    init: function() {
+      initTitledFunctionalBlock(this, '*', 'Number', [
+        { name: 'ARG1', type: 'Number' },
+        { name: 'ARG2', type: 'Number' }
+      ]);
+    }
+  };
+
+  generator.functional_times = function() {
+    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
+    var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
+    return arg1 + " * " + arg2;
+  };
+}
+
+function installDividedBy(blockly, generator, gensym) {
+  blockly.Blocks.functional_dividedby = {
+    helpUrl: '',
+    init: function() {
+      initTitledFunctionalBlock(this, '/', 'Number', [
+        { name: 'ARG1', type: 'Number' },
+        { name: 'ARG2', type: 'Number' }
+      ]);
+    }
+  };
+
+  generator.functional_dividedby = function() {
+    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
+    var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
+    return arg1 + " / " + arg2;
+  };
+}
+
+function installMathNumber(blockly, generator, gensym) {
+  blockly.Blocks.functional_math_number = {
+    // Numeric value.
+    init: function() {
+      this.setFunctional(true, {
+        headerHeight: 0,
+        rowBuffer: 3
+      });
+      this.setHSV.apply(this, functionalBlockUtils.colors.Number);
+      this.appendDummyInput()
+          .appendTitle(new Blockly.FieldTextInput('0',
+            Blockly.FieldTextInput.numberValidator), 'NUM')
+          .setAlign(Blockly.ALIGN_CENTRE);
+      this.setFunctionalOutput(true, 'Number');
+    }
+  };
+
+  generator.functional_math_number = function() {
+    return this.getTitleValue('NUM');
+  };
+}
+
+function installString(blockly, generator) {
+  blockly.Blocks.functional_string = {
+    init: function() {
+      this.setFunctional(true, {
+        headerHeight: 0,
+        rowBuffer: 3
+      });
+      this.setHSV.apply(this, functionalBlockUtils.colors.string);
+      this.appendDummyInput()
+        .appendTitle(new Blockly.FieldLabel('"'))
+        .appendTitle(new Blockly.FieldTextInput(''), 'VAL')
+        .appendTitle(new Blockly.FieldLabel('"'))
+        .setAlign(Blockly.ALIGN_CENTRE);
+      this.setFunctionalOutput(true, 'string');
+    }
+  };
+
+  generator.functional_string = function() {
+    return blockly.JavaScript.quote_(this.getTitleValue('VAL'));
+  };
+}
+
+
+},{"./functionalBlockUtils":27}],31:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -8025,11 +8135,16 @@ exports.generateCodeAliases = function (codeFunctions, parentObjName) {
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
       var cf = codeFunctions[i];
-      code += "var " + cf.func +
-          " = function() { var newArgs = " +
+      code += "var " + cf.func + " = function() { ";
+      if (cf.idArgNone) {
+        code += "return " + parentObjName + "." + cf.func + ".apply(" +
+                parentObjName + ", arguments); };\n";
+      } else {
+        code += "var newArgs = " +
           (cf.idArgLast ? "arguments.concat(['']);" : "[''].concat(arguments);") +
           " return " + parentObjName + "." + cf.func +
           ".apply(" + parentObjName + ", newArgs); };\n";
+      }
     }
   }
   return code;
@@ -8135,8 +8250,11 @@ exports.generateDropletPalette = function (codeFunctions) {
   };
 
   if (codeFunctions) {
-    for (var i = 0; i < codeFunctions.length; i++) {
+    for (var i = 0, blockIndex = 0; i < codeFunctions.length; i++) {
       var cf = codeFunctions[i];
+      if (cf.category === 'hidden') {
+        continue;
+      }
       var block = cf.func + "(";
       if (cf.params) {
         for (var j = 0; j < cf.params.length; j++) {
@@ -8151,13 +8269,47 @@ exports.generateDropletPalette = function (codeFunctions) {
         block: block,
         title: cf.func
       };
-      appPaletteCategory.blocks[i] = blockPair;
+      appPaletteCategory.blocks[blockIndex] = blockPair;
+      blockIndex++;
     }
   }
 
   palette.unshift(appPaletteCategory);
 
   return palette;
+};
+
+/**
+ * Generate modeOptions for the droplet editor based on some level data.
+ */
+exports.generateDropletModeOptions = function (codeFunctions) {
+  var modeOptions = {
+    blockFunctions: [],
+    valueFunctions: [],
+    eitherFunctions: [],
+  };
+
+  // BLOCK, VALUE, and EITHER functions that are normally used in droplet
+  // are included here in comments for reference. When we return our own
+  // modeOptions from this function, it overrides and replaces the list below.
+/*
+  BLOCK_FUNCTIONS = ['fd', 'bk', 'rt', 'lt', 'slide', 'movexy', 'moveto', 'jump', 'jumpto', 'turnto', 'home', 'pen', 'fill', 'dot', 'box', 'mirror', 'twist', 'scale', 'pause', 'st', 'ht', 'cs', 'cg', 'ct', 'pu', 'pd', 'pe', 'pf', 'play', 'tone', 'silence', 'speed', 'wear', 'write', 'drawon', 'label', 'reload', 'see', 'sync', 'send', 'recv', 'click', 'mousemove', 'mouseup', 'mousedown', 'keyup', 'keydown', 'keypress', 'alert'];
+  VALUE_FUNCTIONS = ['abs', 'acos', 'asin', 'atan', 'atan2', 'cos', 'sin', 'tan', 'ceil', 'floor', 'round', 'exp', 'ln', 'log10', 'pow', 'sqrt', 'max', 'min', 'random', 'pagexy', 'getxy', 'direction', 'distance', 'shown', 'hidden', 'inside', 'touches', 'within', 'notwithin', 'nearest', 'pressed', 'canvas', 'hsl', 'hsla', 'rgb', 'rgba', 'cell'];
+  EITHER_FUNCTIONS = ['button', 'read', 'readstr', 'readnum', 'table', 'append', 'finish', 'loadscript'];
+*/
+
+  if (codeFunctions) {
+    for (var i = 0; i < codeFunctions.length; i++) {
+      if (codeFunctions[i].category === 'value') {
+        modeOptions.valueFunctions[i] = codeFunctions[i].func;
+      }
+      else if (codeFunctions[i].category !== 'hidden') {
+        modeOptions.blockFunctions[i] = codeFunctions[i].func;
+      }
+    }
+  }
+
+  return modeOptions;
 };
 
 },{"./lodash":28,"./xml":46}],46:[function(require,module,exports){
@@ -8355,7 +8507,11 @@ exports.genericFeedback = function(d){return "!!-See how you ended up, and try t
 var MessageFormat = require("messageformat");MessageFormat.locale.en=function(n){return n===1?"one":"other"}
 exports.circleBlockTitle = function(d){return "!!-circle (radius, style, color)-!!"};
 
+exports.displayBlockTitle = function(d){return "!!-display-!!"};
+
 exports.ellipseBlockTitle = function(d){return "!!-ellipse (width, height, style, color)-!!"};
+
+exports.extraTopBlocks = function(d){return "!!-You have unattached blocks. Did you mean to attach these to the \"display\" block?-!!"};
 
 exports.overlayBlockTitle = function(d){return "!!-overlay (top, bottom)-!!"};
 

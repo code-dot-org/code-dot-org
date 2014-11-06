@@ -207,6 +207,7 @@ module LevelsHelper
       projectile_collisions
       allow_sprites_outside_playspace
       sprites_hidden_to_start
+      use_modal_function_editor
       impressive
     ).map{ |x| x.include?(':') ? x.split(':') : [x,x.camelize(:lower)]}]
     .each do |dashboard, blockly|
@@ -216,7 +217,8 @@ module LevelsHelper
         @level[dashboard].presence ||
         instance_variable_get("@#{dashboard}").presence ||
         level[dashboard.to_s].presence
-      level[blockly.to_s] ||= blockly_value(property) if property.present?
+      value = blockly_value(level[blockly.to_s] || property)
+      level[blockly.to_s] = value unless value.nil? # make sure we convert false
     end
 
     level['images'] = JSON.parse(level['images']) if level['images'].present?

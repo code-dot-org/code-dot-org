@@ -118,6 +118,8 @@
   "setBackgroundTennis": "установить Теннис фон",
   "setBackgroundWinter": "установить зимний фон",
   "setBackgroundTooltip": "Установить на задний план изображение",
+  "setEnemySpeed": "set enemy speed",
+  "setPlayerSpeed": "set player speed",
   "setScoreText": "задать счет",
   "setScoreTextTooltip": "задать текст, отображаемый в области оценки.",
   "setSpriteEmotionAngry": "сердитое настроение",

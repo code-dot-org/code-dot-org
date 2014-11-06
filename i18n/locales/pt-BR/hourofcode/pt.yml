@@ -11,29 +11,6 @@ pt-BR:
   header_menu_faq: Perguntas Frequentes
   header_menu_prizes: Prêmios
   header_menu_uk_code_org: UK.Code.org
-  choose_country_header: Participe no mundo todo!
-  country_al: Albania
-  country_ar: Argentina
-  country_au: Austrália
-  country_br: Brasil
-  country_bg: Bulgária
-  country_de: Alemanha
-  country_es: América Latina
-  country_eu: União Europeia
-  country_gr: Grécia
-  country_hr: Croácia
-  country_id: Indonésia
-  country_it: Itália
-  country_jp: Japão
-  country_me: Oriente Médio e norte da África
-  country_my: Malaysia
-  country_nz: Nova Zelândia
-  country_ro: Romênia
-  country_ru: Rússia
-  country_ua: Ucrânia
-  country_uk: Reino Unido
-  country_us: Estados Unidos
-  country_vn: Vietnã
   company_4-H: 4-H Youth Development
   company_bgca: Boys and Girls Club of America
   company_cgcs: Council of the Great City Schools
@@ -47,7 +24,7 @@ pt-BR:
   prizes_all: Prêmios para os organizadores
   prizes_every_organizer: Todo organizador da Hora do Código ganhará espaço no Dropbox ou crédito no Skype como forma de agradecimento
   prizes_technology: Uma escola pública de cada Estado dos EUA (e Washington DC) ganhará US$10 mil em tecnologia
-  prizes_tech_chats: 96 classrooms will win video chats with very special guests
+  prizes_tech_chats: 96 salas de aula ganharão chats de vídeo com convidados muito especiais
   prizes_details: Detalhes
   n_have_learned_an_hoc: '<h1>#</h1><h3>tentaram uma</h3><h2>HORA de CÓDIGO</h2>'
   anybody_can_learn: Qualquer um pode aprender.
@@ -100,7 +77,7 @@ pt-BR:
   signup_thank_you_header: Obrigado por registrar-se para sediar um evento da Hora do Código.
   signup_thank_you_message: Enviamos um e-mail de confirmação com informações para ajudar você a começar.
   map_header: '# Eventos da Hora do Código ao redor do mundo'
-  map_header_company: '# Hour of Code events organized by company'
+  map_header_company: '# Eventos Hora do Código organizados pela empresa'
   meta_tag_og_title: A Hora do Código está chegando
   meta_tag_og_description: A Hora do Código é um movimento global que atinge dezenas de milhões de estudantes em mais de 180 países e mais de 30 idiomas. Podem participar pessoas com idades entre 4 e 104 anos.
   meta_tag_twitter_title: A Hora do Código está chegando
@@ -139,7 +116,7 @@ pt-BR:
   hoc_faq_host_q: Não sei nada sobre programação. Ainda assim posso sediar um evento?
   hoc_faq_host_a: "Pode, sim! As atividades da Hora do Código são autoexplicativas. Tudo o que você precisa fazer é <a href='http://code.org/learn'>experimentar nossos tutoriais</a>, escolher um tutorial e uma hora &mdash; nós tomamos conta do resto. Também temos opções para diferentes idades e níveis de experiência - a partir do jardim de infância. Comece a planejar seu evento, leia nosso <a href='target-resources-how-to'>Guia prático</a>."
   hoc_faq_need_computers_q: É necessário um computador para cada participante?
-  hoc_faq_need_computers_a: "Não. Temos tutoriais da Hora do Código que funcionam em computadores, smartphones, tablets e alguns que não exigem computador! Você pode participar independentemente de onde esteja e do que tenha. <p><i>Estas são algumas opções:</i> <br> <ul> <li><b>Trabalho em duplas.</b> Pesquisas mostram que alunos aprendem mais <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>programando em duplas</a>, compartilhando um computador e trabalhando juntos. Incentive seus alunos a trabalharem em duplas. <li><b>Use uma tela projetada.</b> Se você tem um projetor e uma tela para um computador conectado à internet, o grupo inteiro pode fazer a Hora do Código junto. Assista a vídeos juntos e se revezem para resolver desafios ou para responder a perguntas. <li><b>Desconectado.</b> Oferecemos tutoriais que não exigem computador.</ul>"
+  hoc_faq_need_computers_a: "Não. Temos tutoriais da Hora do Código que funcionam em computadores, smartphones, tablets e alguns que não exigem computador! Você pode participar independentemente de onde esteja e do que tenha. <p><i>Estas são algumas opções:</i> <br> <ul> <li><b>Trabalho em duplas.</b> Pesquisas mostram que alunos aprendem mais <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>programando em duplas</a>, compartilhando um computador e trabalhando juntos. Incentive seus alunos a trabalharem em duplas. <li><b>Use uma tela projetada.</b> Se você tem um projetor e uma tela para um computador conectado à internet, o grupo inteiro pode fazer a Hora do Código junto. Assistam aos vídeos juntos e se revezem para resolver desafios ou para responder a perguntas. <li><b>Atividades offline.</b> Oferecemos tutoriais que não exigem computador.</ul>"
   hoc_faq_international_q: Não estou nos Estados Unidos. Como posso participar internacionalmente?
   hoc_faq_international_a: Qualquer pessoa pode organizar a Hora do Código em qualquer lugar do mundo. No ano passado, estudantes do mundo todo participaram da Hora do Código.
   hoc_faq_tutorial_q: Como posso fazer um tutorial da Hora do Código?
@@ -178,6 +155,17 @@ pt-BR:
   resources_emails: Modelos de e-mail
   resources_stats: Estatísticas úteis de ciência da computação
   resources_press_kit: Kit para a imprensa
+  events_title: All Hour of Code Events
+  events_nav_all: All Events
+  events_nav_classrooms: Classrooms
+  events_nav_whole_schools: Whole Schools
+  events_nav_special: Special Events
+  events_all_title: All Hour of Code events
+  events_classroom_title: Classroom Hour of Code events
+  events_whole_school_title: Whole-school Hour of Code events
+  events_special_title: Special Hour of Code events
+  event: event
+  events: events
   footer_copyright_message: Copyright 2014 Code.org. Todos os direitos reservados.
   footer_trademark_message: Hora do Código™ é uma marca comercial de Code.org.
   footer_menu_partners: Parceiros

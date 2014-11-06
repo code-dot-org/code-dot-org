@@ -4,20 +4,28 @@ titre: Ressources affichage: large
 
 * * *
 
-# Comment enseigner une Heure de Code
+<div class="row">
+  <h1 class="col-sm-6">
+    How to teach one Hour of Code
+  </h1>
+  
+  <div class="col-sm-6 button-container centered">
+    <a href="/#join"><button class="signup-button">Sign up your event</button></a>
+  </div>
+</div>
 
 ## 1) Essayez les tutoriels:
 
-We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
+Nous allons accueillir une variété de tutoriels divertissants, des tutoriels d'une heure pour les étudiants de tout âge, créés par divers partenaires. De nouveaux tutoriels arriveront avant le coup d'envoi de l'Heure de Code du 8 au 14 décembre.
 
-**Tout les tutoriels Heure de Code:**
+**Tous les tutoriels Heure de Code:**
 
   * Nécessitent un minimum de temps de préparation pour les enseignants
-  * Sont guidé, permettant aux élèves de travailler à leur rythme et à leur niveau
+  * Sont guidés, permettant aux élèves de travailler à leur rythme et à leur niveau
 
 [![](http://<%= codeorg_url() %>/images/tutorials.png)](http://<%=codeorg_url() %>/learn)
 
-## 2) planifier vos besoins de matériel - les ordinateurs sont facultatifs
+## 2) planifier vos besoins en matériel - les ordinateurs sont facultatifs
 
 La meilleure expérience d'une Heure de Code sera avec des ordinateurs connectés à Internet. Mais vous n'avez pas besoin d'un ordinateur pour chaque enfant et pouvez même faire l'heure de Code sans ordinateur du tout.
 
@@ -32,43 +40,43 @@ La meilleure expérience d'une Heure de Code sera avec des ordinateurs connecté
 
 ## 4) Inspirez les élèves - montrez leur une video
 
-Show students an inspirational video to kick off the Hour of Code. Examples:
+Montrez à vos étudiants une vidéo de lancement de l'Heure de Code qui les inspirera. Par exemple :
 
-  * The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
-  * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [Hour of Code 2014 video](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
-  * [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+  * La vidéo originale du lancement de Code.org, avec Bill Gates, Mark Zuckerberg et la joueur de basket ball NBA Chris Bosh (Il y a une version [d'1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [de 5 minutes](https://www.youtube.com/watch?v=nKIu9yen5nc), et [de 9 minutes](https://www.youtube.com/watch?v=dU1xS07N-FA) )
+  * La vidéo de lancement de [l'Heure de Code 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), ou la vidéo <% if @country == 'uk' %> [de l' Heure de Code 2014](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [de l' Heure de Code 2014](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
+  * [L'appel à tous les étudiants du Président des Etats-Unis Barack Obama, pour apprendre l'informatique](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
 **Éveillez la curiosité de vos élèves - en leur faisant une petite introduction**
 
 La plus part des enfants ne savent pas ce qu'est l'informatique. Voici quelques idées:
 
-  * Explain it in a simple way that includes examples of applications that both boys and girls will care about (saving lives, helping people, connecting people, etc.).
-  * Try: "Think about things in your everyday life that use computer science: a cell phone, a microwave, a computer, a traffic light… all of these things needed a computer scientist to help build them.”
-  * Or: “Computer science is the art of blending human ideas and digital tools to increase our power. Computer scientists work in so many different areas: writing apps for phones, curing diseases, creating animated movies, working on social media, building robots that explore other planets and so much more."
-  * See tips for getting girls interested in computer science [here](http://<%= codeorg_url() %>/girls). 
+  * Expliquez leur de façon simple avec des exemples d'utilisation des ordinateurs qui intéressent aussi bien les filles que les garçons (sauver des vies, aider les gens, connecter les personnes, etc.).
+  * Essayez le discours suivant : "Pensez à toutes ces choses que vous utilisez tous les jours dans votre vie et qui s'appuient sur l'informatique : un téléphone, un micro-onde, un ordinateur... toutes ces choses ont eu besoin d'un informaticien pour les construire."
+  * Ou encore : "L'informatique est l'art de concilier les outils numériques avec les idées humaines pour nous donner de super-pouvoirs." Les informaticiens travaillent dans de nombreux domaines: ils écrivent des programmes pour nos téléphones, pour guérir des maladies, pour créer des films d'animation, pour travailler sur les réseaux sociaux, pour construire des robots qui explorent d'autres planètes et beaucoup d'autres choses encore. »
+  * Voir [ici](http://<%= codeorg_url() %>/girls) des trucs et astuces pour intéresser les filles à l'informatique. 
 
 ## 5) Démarrer votre Heure de Code
 
 **Dirigez les élèves vers l'activité**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](http://<%= codeorg_url() %>/learn) under the number of participants. [hourofcode.com/co](http://hourofcode.com/co)
-  * Tell students to visit the URL and start the tutorial.
+  * Notez l'adresse du tutoriel au tableau. Retrouvez la liste des liens dans [les informations pour votre tutoriel choisi](http://<%= codeorg_url() %>/learn) sous le nombre de participants. [hourofcode.com/co](http://hourofcode.com/co)
+  * Demandez aux élèves d'aller sur le lien et de commencer le tutoriel.
 
 **Quand vos élèves rencontre des difficultés**
 
-  * Tell students, “Ask 3 then me.” Ask 3 classmates, and if they don’t have the answer, then ask the teacher.
-  * Encourage students and offer positive reinforcement: “You’re doing great, so keep trying.”
-  * It’s okay to respond: “I don’t know. Let’s figure this out together.” If you can’t figure out a problem, use it as a good learning lesson for the class: “Technology doesn’t always work out the way we want. Together, we’re a community of learners.” And: “Learning to program is like learning a new language; you won’t be fluent right away.“
+  * Dites à vos étudiants, "Demandez d'abord à 3 autres camarades.". S'ils n'ont toujours pas de réponse, alors ils peuvent demander à l'enseignant.
+  * Encouragez les élèves et donnez leur une vision positive: « Vous êtes sur la bonne voix, continuez. »
+  * C'est normal de répondre: "Je ne sais pas." Nous allons essayer d'élucider ça ensemble. » Si vous ne pouvez pas trouver la solution, utilisez l'expérience comme une nouvelle leçon: "la technologie ne fonctionne pas toujours de la façon dont nous voulons." Ensemble, nous sommes une communauté d'apprenants. » Et: "Apprendre à programmer est comme apprendre une nouvelle langue ; vous ne parlerez pas couramment tout de suite. »
 
 **Que faire si un élève fini en avance?**
 
-  * Students can see all tutorials and try another Hour of Code activity at [<%= codeorg_url() %>/learn](http://<%= codeorg_url() %>/learn)
-  * Or, ask students who finish early to help classmates who are having trouble with the activity.
+  * Les étudiants peuvent voir tous les tutoriels et essayer une autre activité d'Heure de Code à [<%= codeorg_url() %>/learn](http://<%= codeorg_url() %>/learn)
+  * Ou bien, demandez leur d'aider leurs camarades qui ont des difficultés à terminer l'activité.
 
 **Comment imprimer des diplômes pour mes élèves?**
 
-Chaque élève peut obtenir un diplôme par e-mail quand il fini les [tutoriels de Code.org](http://studio.code.org). Vous pouvez cliquer sur le diplôme pour l'imprimer. However, if you want to make new certificates for your students, visit our [Certificates](http://<%= codeorg_url() %>/certificates) page to print as many certificates as you like, in one fell swoop!
+Chaque élève peut obtenir un diplôme par e-mail quand il fini les [tutoriels de Code.org](http://studio.code.org). Vous pouvez cliquer sur le diplôme pour l'imprimer. Toutefois, si vous voulez faire de nouveaux certificats pour vos élèves ou en imprimer plusieurs en un seul coup, visitez notre page des [ certificats](http://<%= codeorg_url() %>/ certificats) !
 
 **Qu'est ce qui viens après une Heure de Code?**
 
-Une Heure de Code n'est que la première étape dans une aventure pour en savoir plus sur comment fonctionne les technologies et la création d'applications. < % si @country == « uk » %> Une Heure de Code n'est que la première étape dans une aventure pour en savoir plus sur comment fonctionne les technologies et la création d'applications logicielles. Pour poursuivre cette aventure, [Encouragez vos élèves à apprendre en ligne](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %>
+Une Heure de Code n'est que la première étape dans une aventure pour en savoir plus sur comment fonctionne les technologies et la création d'applications. < % si @country == « uk » %> Une Heure de Code n'est que la première étape dans une aventure pour en savoir plus sur comment fonctionne les technologies et la création d'applications logicielles. Pour poursuivre cette aventure, [Encouragez vos élèves à apprendre en ligne](http://uk.code.org/learn/beyond). < % else %> pour poursuivre ce voyage, trouver des ressources supplémentaires pour les éducateurs [ici](http://<%= codeorg_url() %>/educate). Ou encourager vos enfants [à apprendre en ligne](http://<%= codeorg_url() %>/learn/beyond). <% end %> <a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>

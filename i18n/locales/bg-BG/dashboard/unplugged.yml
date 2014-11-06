@@ -139,7 +139,7 @@ bg:
         video: C3_internet
       Crowdsourcing:
         title: Съвместен код
-        desc: Students use crowdsourcing, a problem-solving technique common in computer science, to complete a task together as a classroom more efficiently than if a student attempted it alone.
+        desc: Учениците използват crowdsourcing техниката, за решаване на проблеми в компютърните науки. При нея за да завършите задачата по-ефективно, трябва да работите заедно като клас, отколкото ако един ученик се опитва сам.
         video: C3_crowdsourcing
       DigitalCitizenship:
         title: Дигитални граждани

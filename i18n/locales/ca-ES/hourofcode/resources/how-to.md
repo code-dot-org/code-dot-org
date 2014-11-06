@@ -4,7 +4,15 @@ títol: Recursos disseny: ampli
 
 * * *
 
-# Com ensenyar una Hora de Codi
+<div class="row">
+  <h1 class="col-sm-6">
+    How to teach one Hour of Code
+  </h1>
+  
+  <div class="col-sm-6 button-container centered">
+    <a href="/#join"><button class="signup-button">Sign up your event</button></a>
+  </div>
+</div>
 
 ## 1) Prova els tutorials:
 
@@ -71,4 +79,4 @@ Cada estudiant té l'oportunitat d'obtenir un certificat a través de correu ele
 
 **Què ve després de l'Hora de Codi?**
 
-L'Hora de Codi és només el primer pas en un viatge per aprendre més sobre com funciona la tecnologia i com crear aplicacions i programari. <% if @country == 'uk' %> L'Hora de Codi és només el primer pas en un viatge per aprendre més sobre com funciona la tecnologia i com crear aplicacions i programari. Per continuar aquest viatge, [anima els teus fills a aprendre en línia](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %>
+L'Hora de Codi és només el primer pas en un viatge per aprendre més sobre com funciona la tecnologia i com crear aplicacions i programari. <% if @country == 'uk' %> L'Hora de Codi és només el primer pas en un viatge per aprendre més sobre com funciona la tecnologia i com crear aplicacions i programari. Per continuar aquest viatge, [anima els teus fills a aprendre en línia](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %> <a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>

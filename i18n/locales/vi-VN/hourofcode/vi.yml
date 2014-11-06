@@ -11,29 +11,6 @@ vi:
   header_menu_faq: Những câu hỏi thường gặp
   header_menu_prizes: Phần thưởng
   header_menu_uk_code_org: uk.code.org
-  choose_country_header: Cùng tham gia trên toàn thế giới!
-  country_al: Albania
-  country_ar: Ác-ghen-tina
-  country_au: Úc
-  country_br: Braxin
-  country_bg: Bulgaria
-  country_de: Germany
-  country_es: Latin America
-  country_eu: Liên minh châu Âu
-  country_gr: Greece
-  country_hr: Croatia
-  country_id: Indonesia
-  country_it: 'Italia - Ý'
-  country_jp: Japan
-  country_me: Middle East and North Africa
-  country_my: Malaysia
-  country_nz: New Zealand
-  country_ro: Rô-ma-ni
-  country_ru: Russia
-  country_ua: Ukraine
-  country_uk: Vương quốc Anh
-  country_us: 'Hoa kỳ - Mỹ'
-  country_vn: Vietnam
   company_4-H: 4-H Youth Development
   company_bgca: Boys and Girls Club of America
   company_cgcs: Council of the Great City Schools
@@ -178,6 +155,17 @@ vi:
   resources_emails: Sample emails
   resources_stats: Useful computer science stats
   resources_press_kit: Press Kit
+  events_title: All Hour of Code Events
+  events_nav_all: All Events
+  events_nav_classrooms: Classrooms
+  events_nav_whole_schools: Whole Schools
+  events_nav_special: Special Events
+  events_all_title: All Hour of Code events
+  events_classroom_title: Classroom Hour of Code events
+  events_whole_school_title: Whole-school Hour of Code events
+  events_special_title: Special Hour of Code events
+  event: event
+  events: events
   footer_copyright_message: Tất cả thông tin lấy từ trang Code.org, đều thuộc quyền sở hữu của Code.org, Mọi trích dẫn từ trang vui lòng ghi rõ nguồn Code.org 2014
   footer_trademark_message: Hour of Code là một tác quyền cá nhân/ thương hiệu của Code.org.
   footer_menu_partners: Đối tác

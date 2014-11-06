@@ -528,3 +528,9 @@
         Martha Washington: "Pedro Álvares Cabral"
         George Washington: "Marechal Deodoro da Fonseca"
         George Jetson: "Marechal Rondon"
+      unique level name here:
+        title: "título"
+        description here: "description here"
+        Question: "Question"
+        wrong answer: "wrong answer"
+        right answer: "right answer"

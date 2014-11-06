@@ -11,29 +11,6 @@ bg:
   header_menu_faq: ЧЕСТО ЗАДАВАНИ ВЪПРОСИ
   header_menu_prizes: Награди
   header_menu_uk_code_org: uk.code.org
-  choose_country_header: Участници от целия свят!
-  country_al: Албания
-  country_ar: Аржентина
-  country_au: Австралия 
-  country_br: Бразилия
-  country_bg: България
-  country_de: Германия 
-  country_es: Латинска Америка
-  country_eu: Европейски съюз
-  country_gr: Гърция 
-  country_hr: Хърватия
-  country_id: Индонезия 
-  country_it: Италия 
-  country_jp: Япония
-  country_me: Близкия изток и Северна Африка
-  country_my: Малайзия
-  country_nz: Нова Зеландия 
-  country_ro: Румъния
-  country_ru: Русия
-  country_ua: Украйна
-  country_uk: Обединено кралство
-  country_us: САЩ
-  country_vn: Виетнам 
   company_4-H: 4-H Youth Development
   company_bgca: Момчета и момичета от клуб Америка
   company_cgcs: Съвет на големите градски училища
@@ -178,6 +155,17 @@ bg:
   resources_emails: Примерни имейли
   resources_stats: Полезна статистика
   resources_press_kit: Изявления за пресата
+  events_title: All Hour of Code Events
+  events_nav_all: All Events
+  events_nav_classrooms: Classrooms
+  events_nav_whole_schools: Whole Schools
+  events_nav_special: Special Events
+  events_all_title: All Hour of Code events
+  events_classroom_title: Classroom Hour of Code events
+  events_whole_school_title: Whole-school Hour of Code events
+  events_special_title: Special Hour of Code events
+  event: event
+  events: events
   footer_copyright_message: Copyright 2014 Code.org. Всички права запазени.
   footer_trademark_message: Часът на кодирането ™ е търговска марка на Code.org.
   footer_menu_partners: Партньори

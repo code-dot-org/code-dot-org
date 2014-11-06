@@ -1,6 +1,7 @@
 class Calc < Blockly
   serialized_attrs %w(
     solution_blocks
+    free_play
   )
 
   before_save :update_ideal_level_source
@@ -24,7 +25,7 @@ class Calc < Blockly
         game: Game.calc,
         level_num: 'custom',
         properties: {
-          solution_blocks: params[:program] || '<block type="functional_plus"></block>',
+          solution_blocks: params[:program] || '',
           toolbox_blocks: "<xml>#{toolbox}</xml>"
         }
     ))
@@ -32,7 +33,6 @@ class Calc < Blockly
 
   def self.toolbox
     <<-XML.strip_heredoc.chomp
-      <block type="functional_compute"></block>
       <block type="functional_plus"></block>
       <block type="functional_minus"></block>
       <block type="functional_times"></block>
