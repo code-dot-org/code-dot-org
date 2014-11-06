@@ -73,6 +73,7 @@
   signup_send_posters_flag_label: 'Send <a href= "/resources#posters">posters</a> to my school or organization'
   signup_send_posters_address_label: 'Address of school or organization'
   signup_whole_school_flag_label: 'This event is for a whole school'
+  signup_your_event: 'Sign up your event'
 
   signup_name_placeholder: 'Your Name'
   signup_email_placeholder: 'you@example.com'
