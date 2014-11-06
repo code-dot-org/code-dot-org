@@ -1,4 +1,5 @@
 include_recipe 'cdo-apps::aws'
+include_recipe 'cdo-apps::varnish'
 
 execute "bundle-install-dashboard" do
   command "bundle install"
