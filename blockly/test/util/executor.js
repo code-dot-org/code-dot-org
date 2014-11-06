@@ -39,6 +39,7 @@ function setGlobals () {
   global.document = jsdom(html);
   global.window = global.document.parentWindow;
   global.DOMParser = xmldom.DOMParser;
+  global.window.DOMParser = global.DOMParser;
   global.XMLSerializer = xmldom.XMLSerializer;
   global.Blockly = initBlockly(window);
   global.Image = canvas.Image;
