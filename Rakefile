@@ -197,32 +197,36 @@ end
 namespace :install do
 
   task :dashboard do
-    Dir.chdir(aws_dir) { RakeUtils.rake }
-    Dir.chdir(dashboard_dir) do
-      RakeUtils.bundle_install
-      unless rack_env?(:production)
-        RakeUtils.rake 'db:create'
-        RakeUtils.rake 'db:schema:load'
+    unless CDO.chef_managed
+      Dir.chdir(aws_dir) { RakeUtils.rake }
+      Dir.chdir(dashboard_dir) do
+        RakeUtils.bundle_install
+        unless rack_env?(:production)
+          RakeUtils.rake 'db:create'
+          RakeUtils.rake 'db:schema:load'
+        end
+        RakeUtils.sudo_ln_s dashboard_dir('config/init.d'), File.join('/etc/init.d', CDO.dashboard_unicorn_name)
+        RakeUtils.sudo 'update-rc.d', CDO.dashboard_unicorn_name, 'defaults'
+        RakeUtils.sudo_ln_s dashboard_dir('config/logrotate'), File.join('/etc/logrotate.d', CDO.dashboard_unicorn_name)
+        RakeUtils.sudo 'service', CDO.dashboard_unicorn_name, 'start'
       end
-      RakeUtils.sudo_ln_s dashboard_dir('config/init.d'), File.join('/etc/init.d', CDO.dashboard_unicorn_name)
-      RakeUtils.sudo 'update-rc.d', CDO.dashboard_unicorn_name, 'defaults'
-      RakeUtils.sudo_ln_s dashboard_dir('config/logrotate'), File.join('/etc/logrotate.d', CDO.dashboard_unicorn_name)
-      RakeUtils.sudo 'service', CDO.dashboard_unicorn_name, 'start'
     end
   end
 
   task :pegasus do
-    Dir.chdir(aws_dir) { RakeUtils.rake }
-    Dir.chdir(pegasus_dir) do
-      RakeUtils.bundle_install
-      unless rack_env?(:production)
-        RakeUtils.system 'echo', "'CREATE DATABASE IF NOT EXISTS #{CDO.pegasus_db_name}'", '|', 'mysql', '-uroot'
-        RakeUtils.rake 'db:migrate'
-        RakeUtils.rake 'seed:migrate'
+    unless CDO.chef_managed
+      Dir.chdir(aws_dir) { RakeUtils.rake }
+      Dir.chdir(pegasus_dir) do
+        RakeUtils.bundle_install
+        unless rack_env?(:production)
+          RakeUtils.system 'echo', "'CREATE DATABASE IF NOT EXISTS #{CDO.pegasus_db_name}'", '|', 'mysql', '-uroot'
+          RakeUtils.rake 'db:migrate'
+          RakeUtils.rake 'seed:migrate'
+        end
+        RakeUtils.sudo_ln_s dashboard_dir('config/init.d'), File.join('/etc/init.d', CDO.pegasus_unicorn_name)
+        RakeUtils.sudo 'update-rc.d', CDO.pegasus_unicorn_name, 'defaults'
+        RakeUtils.sudo 'service', CDO.pegasus_unicorn_name, 'start'
       end
-      RakeUtils.sudo_ln_s dashboard_dir('config/init.d'), File.join('/etc/init.d', CDO.pegasus_unicorn_name)
-      RakeUtils.sudo 'update-rc.d', CDO.pegasus_unicorn_name, 'defaults'
-      RakeUtils.sudo 'service', CDO.pegasus_unicorn_name, 'start'
     end
   end
 
