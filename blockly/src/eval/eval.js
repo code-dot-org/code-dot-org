@@ -37,6 +37,7 @@ var blockUtils = require('../block_utils');
 var EvalString = require('./evalString');
 // requiring this loads canvg into the global namespace
 require('../canvg/canvg.js');
+var canvg = window.canvg || global.canvg;
 
 var TestResults = require('../constants').TestResults;
 
@@ -227,11 +228,21 @@ Eval.execute = function() {
   BlocklyApps.report(reportData);
 };
 
+/**
+ * Calling outerHTML on svg elements in safari does not work. Instead we stick
+ * it inside a div and get that div's inner html.
+ */
+function outerHTML (element) {
+  var div = document.createElement('div');
+  div.appendChild(element.cloneNode(true));
+  return div.innerHTML;
+}
+
 function imageDataForSvg(elementId) {
   var canvas = document.createElement('canvas');
   canvas.width = CANVAS_WIDTH;
   canvas.height = CANVAS_HEIGHT;
-  canvg(canvas, document.getElementById(elementId).outerHTML);
+  canvg(canvas, outerHTML(document.getElementById(elementId)));
 
   // canvg attaches an svg object to the canvas, and attaches a setInterval.
   // We don't need this, and that blocks our node process from exitting in
@@ -247,30 +258,12 @@ function evaluateAnswer() {
   var userImageData = imageDataForSvg('user');
   var solutionImageData = imageDataForSvg('answer');
 
-  // Turtle only looks at alphas for some reason
-  var totalDiff = 0;
   for (var i = 0; i < userImageData.data.length; i++) {
-    var diff = Math.abs(userImageData.data[i] - solutionImageData.data[i]);
-    if (diff > 2) {
-      totalDiff += diff;
+    if (0 !== Math.abs(userImageData.data[i] - solutionImageData.data[i])) {
+      return false;
     }
   }
-  if (totalDiff > 0) {
-    return false;
-  }
   return true;
-
-  // var answer = document.getElementById('answer');
-  // var user = document.getElementById('user');
-
-  // is this good enough?
-  // todo (brent) : can come up with at least one case where it isnt. goal is
-  // to create a star rotated 90 degrees. i instead create a star rotated -270
-  // degrees. these are exactly the same visually, but will have different
-  // html
-  // we might be able to use canvg to convert the svg to a canvas representation,
-  // and then do our comparison similar to how we do in artist
-  // return answer.innerHTML.trim() == user.innerHTML.trim();
 }
 
 /**
