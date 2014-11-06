@@ -1,13 +1,6 @@
 include_recipe 'cdo-apps::aws'
 include_recipe 'cdo-apps::varnish'
 
-execute "bundle-install-pegasus" do
-  command "sudo bundle install"
-  cwd "/home/#{node[:current_user]}/#{node.chef_environment}/pegasus"
-  user node[:current_user]
-  group node[:current_user]
-end
-
 template "/etc/init.d/pegasus" do
   source 'init.d.erb'
   user 'root'
@@ -20,6 +13,16 @@ template "/etc/init.d/pegasus" do
     user:node[:current_user],
     env:node.chef_environment,
   })
+  notifies :run, 'execute[bundle-install-pegasus]', :immediately
+end
+
+execute "bundle-install-pegasus" do
+  command "sudo bundle install"
+  cwd "/home/#{node[:current_user]}/#{node.chef_environment}/pegasus"
+  user node[:current_user]
+  group node[:current_user]
+  action :nothing
+  notifies :run, 'execute[build-pegasus]', :immediately
 end
 
 execute "build-pegasus" do
@@ -30,6 +33,7 @@ execute "build-pegasus" do
   })
   user node[:current_user]
   group node[:current_user]
+  action :nothing
 end
 
 service 'pegasus' do
