@@ -1050,6 +1050,7 @@ levels.full_sandbox =  {
                      blockOfType('functional_setEnemySpeed') +
                      blockOfType('functional_showTitleScreen') +
                      blockOfType('functional_string') +
+                     blockOfType('functional_background_string_picker') +
                      blockOfType('functional_math_number'))),
   'startBlocks':
    '<block type="when_run" deletable="false" x="20" y="20"></block>'

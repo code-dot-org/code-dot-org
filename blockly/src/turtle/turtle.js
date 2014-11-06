@@ -822,8 +822,11 @@ Turtle.checkAnswer = function() {
   var levelComplete = level.freePlay || isCorrect(delta, permittedErrors);
   Turtle.testResults = BlocklyApps.getTestResults(levelComplete);
 
-  var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
-  var textBlocks = Blockly.Xml.domToText(xml);
+  var program;
+  if (!level.editCode) {
+    var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+    program = Blockly.Xml.domToText(xml);
+  }
 
   // Make sure we don't reuse an old message, since not all paths set one.
   Turtle.message = undefined;
@@ -831,7 +834,7 @@ Turtle.checkAnswer = function() {
   // In level K1, check if only lengths differ.
   if (level.isK1 && !levelComplete && !BlocklyApps.editCode &&
       level.solutionBlocks &&
-      removeK1Lengths(textBlocks) === removeK1Lengths(level.solutionBlocks)) {
+      removeK1Lengths(program) === removeK1Lengths(level.solutionBlocks)) {
     Turtle.testResults = BlocklyApps.TestResults.APP_SPECIFIC_ERROR;
     Turtle.message = turtleMsg.lengthFeedback();
   }
@@ -866,6 +869,14 @@ Turtle.checkAnswer = function() {
     Turtle.testResults = levelComplete ?
       BlocklyApps.TestResults.ALL_PASS :
       BlocklyApps.TestResults.TOO_FEW_BLOCKS_FAIL;
+
+    // If we want to "normalize" the JavaScript to avoid proliferation of nearly
+    // identical versions of the code on the service, we could do either of these:
+
+    // do an acorn.parse and then use escodegen to generate back a "clean" version
+    // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
+
+    program = BlocklyApps.editor.getValue();
   }
 
   // If the current level is a free play, always return the free play
@@ -889,7 +900,7 @@ Turtle.checkAnswer = function() {
     builder: level.builder,
     result: levelComplete,
     testResult: Turtle.testResults,
-    program: encodeURIComponent(textBlocks),
+    program: encodeURIComponent(program),
     onComplete: Turtle.onReportComplete,
     save_to_gallery: level.impressive
   };

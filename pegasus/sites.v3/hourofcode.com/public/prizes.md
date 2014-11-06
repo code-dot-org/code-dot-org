@@ -5,7 +5,7 @@ layout: wide
 <div class="row">
     <h1 class="col-sm-6">The Hour of Code — prizes for every organizer</h1>
     <div class="col-sm-6 button-container centered">
-        <a href="/#join"><button class="signup-button">Sign up for a chance to win</button></a>
+        <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Sign up for a chance to win</button></a>
     </div>
 </div>
 ## Every organizer wins a thank you gift-code
@@ -18,7 +18,7 @@ Every educator who hosts an Hour of Code for students will receive 10 GB of Drop
 
 <% end %>
 
-<% if @country == 'us' %>
+<% if @country ==  'us' || @country == 'ca' %>
 
 ## 100 lucky classrooms win a video chat with a guest speaker!
 
@@ -28,6 +28,10 @@ Any classroom (public or private) within the U.S. or Canada is eligible to win t
 
 ### This year's celebrity video chat  participants:
 <%= view :video_chat_speakers %>
+
+<% end %>
+
+<% if @country == 'us' %>
 
 ## 51 Lucky schools win a class-set of laptops (or $10,000 for other technology)
 One lucky school in ***every*** U.S. state (+ Washington D.C.) will win $10,000 worth of technology. Organize the Hour of Code for every student in your school to qualify. Fill out the form below to apply.
@@ -43,7 +47,14 @@ If you’ve signed up your entire school to participate in the Hour of Code, ent
 
 <% end %>
 
-<% if @country == 'us' %>
+<% if @country == 'ca' %>
+
+## $2000 Brilliant Project
+[Brilliant Labs](http://brilliantlabs.com/hourofcode) will provide the resources necessary, up to a value of $2000.00, to implement a technology based, hands on, student centric learning project to one classroom in each province and territory (note: with the exception of Quebec). To qualify, teachers must register at hourofcode.com/ca#signup by November 21, 2014. For more details, terms, and conditions, please visit [brilliantlabs.com/hourofcode](http://brilliantlabs.com/hourofcode).
+
+<% end %>
+
+<% if @country ==  'us' || @country == 'ca' %>
 
 ## 100 classrooms will win a set of programmable robots
 [Sphero](http://www.gosphero.com/) is the app-controlled robotic ball changing the way students learn. Powered by [SPRK lessons](http://www.gosphero.com/education/), these round robots give kids a fun crash course in programming while sharpening their skills in math and science. Sphero is giving away 100 classroom sets – each including 5 robots. Any classroom (public or private) within the U.S. or Canada is eligible to win this prize. 
@@ -99,7 +110,7 @@ To qualify, your entire school must register for the Hour of Code as well as com
 
 ## If my whole school can’t do the Hour of Code during Computer Science Education Week (Dec. 8-14), can I still qualify for prizes?
 Yes, just be sure to submit a logistics plan that outlines how your whole school is participating over a reasonable length of time and register for the Hour of Code by November 14th.
-<a style="display: block" href="/#join"><button style="float: right;">Sign up for a chance to win</button></a>
+<a style="display: block" href="<%= hoc_uri('/#join' %>"><button style="float: right;">Sign up for a chance to win</button></a>
 <% end %>
 
 
