@@ -128,12 +128,15 @@ a.user-menu-link {
   padding-left:10px;
 }
 
+.user_menu > a:link {
+  color:white;
+}
+
 .user_menu a:link,
 .user_menu a:visited,
 .user_menu a:hover,
 .user_menu a:active  {
   text-decoration: none;
-  color: white;
 }
 
 #user_hero #welcome {
