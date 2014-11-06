@@ -192,6 +192,7 @@ class Studio < Grid
   <block type="functional_setEnemySpeed" />
   <block type="functional_showTitleScreen" />
   <block type="functional_string" />
+  <block type="functional_background_string_picker" />
   <block type="functional_math_number" />
 </category>
 #{k1_blocks(type) if is_k1 == 'true'}
