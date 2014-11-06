@@ -22,16 +22,15 @@ template "/etc/init.d/dashboard" do
   })
 end
 
-#execute "precompile-dashboard-assets" do
-#  command "bundle exec rake assets:precompile"
-#  cwd "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard"
-#  user node[:current_user]
-#  group node[:current_user]
-#  environment ({
-#    'RAILS_ENV'=>node.chef_environment,
-#    'LANG'=>'en_US.UTF-8',
-#  })
-#end
+execute "build-dashboard" do
+  command "rake build:dashboard"
+  cwd "/home/#{node[:current_user]}/#{node.chef_environment}"
+  environment ({
+    'LC_ALL'=>nil,
+  })
+  user node[:current_user]
+  group node[:current_user]
+end
 
 service 'dashboard' do
   action [:enable, :start]
