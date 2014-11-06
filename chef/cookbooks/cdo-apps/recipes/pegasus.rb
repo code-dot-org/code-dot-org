@@ -22,6 +22,16 @@ template "/etc/init.d/pegasus" do
   })
 end
 
+execute "build-pegasus" do
+  command "rake build:pegasus"
+  cwd "/home/#{node[:current_user]}/#{node.chef_environment}"
+  environment ({
+    'LC_ALL'=>nil,
+  })
+  user node[:current_user]
+  group node[:current_user]
+end
+
 service 'pegasus' do
   action [:enable, :start]
 end
