@@ -856,6 +856,7 @@ levels.ec_1_1 = utils.extend(levels['1_1'], {
     {'func': 'moveForward', 'params': ["100"], 'idArgLast': true },
     {'func': 'turnRight', 'params': ["90"], 'idArgLast': true },
   ],
+  'startBlocks': "moveForward(100);\n",
 });
 levels.ec_1_2 = utils.extend(levels['1_2'], {
   'editCode': true,
@@ -864,6 +865,7 @@ levels.ec_1_2 = utils.extend(levels['1_2'], {
     {'func': 'turnRight', 'params': ["90"], 'idArgLast': true },
     {'func': 'penColour', 'params': ["'#ff0000'"], 'idArgLast': true },
   ],
+  'startBlocks': "penColour('#ff0000');\nmoveForward(100);\n",
 });
 levels.ec_1_3 = utils.extend(levels['1_3'], {
   'editCode': true,
@@ -872,6 +874,7 @@ levels.ec_1_3 = utils.extend(levels['1_3'], {
     {'func': 'turnRight', 'params': ["90"], 'idArgLast': true },
     {'func': 'penColour', 'params': ["'#ff0000'"], 'idArgLast': true },
   ],
+  'startBlocks': "for (var i = 0; i < 4; i++) {\n  __\n}\n",
 });
 levels.ec_1_4 = utils.extend(levels['1_4'], {
   'editCode': true,
@@ -880,5 +883,15 @@ levels.ec_1_4 = utils.extend(levels['1_4'], {
     {'func': 'turnRight', 'params': ["90"], 'idArgLast': true },
     {'func': 'penColour', 'params': ["'#ff0000'"], 'idArgLast': true },
   ],
+  'startBlocks': "for (var i = 0; i < 3; i++) {\n  penColour('#ff0000');\n}\n",
 });
-
+levels.ec_1_10 = utils.extend(levels['1_10'], {
+  'editCode': true,
+  'codeFunctions': [
+    {'func': 'moveForward', 'params': ["100"], 'idArgLast': true },
+    {'func': 'turnRight', 'params': ["90"], 'idArgLast': true },
+    {'func': 'penColour', 'params': ["'#ff0000'"], 'idArgLast': true },
+    {'func': 'penWidth', 'params': ["1"], 'idArgLast': true },
+  ],
+  'startBlocks': "moveForward(100);\n",
+});
