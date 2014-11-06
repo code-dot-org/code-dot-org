@@ -1,5 +1,6 @@
 include_recipe 'cdo-repository'
 include_recipe 'cdo-secrets'
+include_recipe 'cdo-postfix'
 
 execute "bundle-install-aws" do
   command "sudo bundle install"
