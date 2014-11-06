@@ -23,9 +23,16 @@ end
 namespace :build do
 
   task :configure do
+    if CDO.chef_managed
+      HipChat.log 'Apply Chef profile...'
+      RakeUtils.sudo 'chef-client'
+    end
+
     Dir.chdir(aws_dir) do
-      HipChat.log 'Installing <b>aws</b> bundle...'
-      RakeUtils.bundle_install
+      unless CDO.chef_managed
+        HipChat.log 'Installing <b>aws</b> bundle...'
+        RakeUtils.bundle_install 
+      end
 
       HipChat.log 'Configuring <b>aws</b>...'
       RakeUtils.rake
