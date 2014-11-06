@@ -28,6 +28,21 @@ theme: none
 %div.tile{:style=>"margin-top: 26px; margin-right: 0px"}
   = view :light_tile, url:"https://education.skype.com/computerscience", target:"_blank", img_src:"/images/logo_skype_classroom.jpg", title:"Skype in the Classroom", text:""
 
+
+%div{style: "clear:both; margin-top: 20px"}
+
+  .biggestClassProgress{"ng-show" => "sectionProgressUrl"}
+    %h2= I18n.t('dashboard_landing_progress_title')
+    %p= I18n.t('dashboard_landing_progress_biggest')
+    %div{"ng-include"=>"", src: "sectionProgressUrl", onload: "init_progress()"}
+    %a{"ng-href" => "#/sections/{{biggestSection.id}}"}
+      %button.btn.btn-info= I18n.t('dashboard_landing_view_progress', biggest_section: '{{biggestSection.name}}')
+
+  .courses
+    %h2= I18n.t('dashboard_landing_available_title')
+    %p= I18n.t('dashboard_landing_available_courses')
+    %br/
+    %div{"ng-include"=>"", src: "'/dashboardapi/courses/'"}
   -#.debug
     %h2 DEBUG
     %pre
