@@ -1,0 +1,158 @@
+<Karel>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2014-11-06T16:43:22.950Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "farmer",
+    "step_mode": "0",
+    "is_k1": "false",
+    "skip_instructions_popup": "true",
+    "step_speed": "1",
+    "start_direction": "1",
+    "flower_type": "redWithNectar",
+    "maze": "[[2,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1]]",
+    "initial_dirt": "[[0,0,-1,-1,0,-1,0,0],[-1,-1,0,-1,0,0,-1,-1],[0,-1,0,0,-1,-1,0,-1],[0,0,-1,-1,0,-1,0,0],[-1,-1,0,-1,0,0,-1,-1],[0,-1,0,0,-1,-1,0,-1],[0,0,-1,-1,0,-1,0,0],[-1,-1,0,-1,0,0,0,0]]",
+    "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "instructions": "Which binary string, repeated 10 times, will draw this image?",
+    "use_modal_function_editor": "false"
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false"/>
+        <block type="procedures_defnoreturn">
+          <mutation>
+            <arg name="binary"/>
+          </mutation>
+          <title name="NAME">draw</title>
+          <statement name="STACK">
+            <block type="controls_for" inline="true">
+              <title name="VAR">i</title>
+              <value name="FROM">
+                <block type="math_number">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+              <value name="TO">
+                <block type="text_length" inline="false">
+                  <value name="VALUE">
+                    <block type="variables_get">
+                      <title name="VAR">binary</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <value name="BY">
+                <block type="math_number">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="controls_if" inline="false">
+                  <value name="IF0">
+                    <block type="logic_compare" inline="true">
+                      <title name="OP">EQ</title>
+                      <value name="A">
+                        <block type="text_charAt" inline="true">
+                          <mutation at="true"/>
+                          <title name="WHERE">FROM_START</title>
+                          <value name="VALUE">
+                            <block type="variables_get">
+                              <title name="VAR">binary</title>
+                            </block>
+                          </value>
+                          <value name="AT">
+                            <block type="variables_get">
+                              <title name="VAR">i</title>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="math_number">
+                          <title name="NUM">1</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="maze_fill">
+                      <next>
+                        <block type="maze_fill"/>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="maze_ifElse">
+                      <title name="DIR">isPathForward</title>
+                      <statement name="DO">
+                        <block type="maze_move">
+                          <title name="DIR">moveForward</title>
+                        </block>
+                      </statement>
+                      <statement name="ELSE">
+                        <block type="controls_repeat">
+                          <title name="TIMES">7</title>
+                          <statement name="DO">
+                            <block type="maze_move">
+                              <title name="DIR">moveBackward</title>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="maze_if">
+                              <title name="DIR">isPathRight</title>
+                              <statement name="DO">
+                                <block type="maze_turn">
+                                  <title name="DIR">turnRight</title>
+                                  <next>
+                                    <block type="maze_move">
+                                      <title name="DIR">moveForward</title>
+                                      <next>
+                                        <block type="maze_turn">
+                                          <title name="DIR">turnLeft</title>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </statement>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="procedures_callnoreturn" inline="true">
+          <mutation name="draw">
+            <arg name="binary"/>
+          </mutation>
+          <value name="ARG0">
+            <block type="text">
+              <title name="TEXT"/>
+            </block>
+          </value>
+        </block>
+        <block type="controls_repeat">
+          <title name="TIMES">???</title>
+        </block>
+        <block type="text">
+          <title name="TEXT"/>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Karel>

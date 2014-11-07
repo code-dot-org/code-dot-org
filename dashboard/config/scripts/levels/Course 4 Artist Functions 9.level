@@ -16,7 +16,9 @@
     "x": "75",
     "y": "75",
     "free_play": "false",
-    "impressive": "false"
+    "impressive": "false",
+    "ideal": "19",
+    "use_modal_function_editor": "false"
   }
 }]]></config>
   <blocks>
@@ -38,10 +40,18 @@
             </block>
           </value>
         </block>
+        <block type="draw_turn" inline="true">
+          <title name="DIR">turnLeft</title>
+          <value name="VALUE">
+            <block type="math_number">
+              <title name="NUM">90</title>
+            </block>
+          </value>
+        </block>
         <block type="controls_repeat_ext" inline="true">
           <value name="TIMES">
             <block type="math_number">
-              <title name="NUM">???</title>
+              <title name="NUM">3</title>
             </block>
           </value>
         </block>
