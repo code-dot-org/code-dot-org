@@ -24,7 +24,7 @@ namespace :build do
 
   task :configure do
     if CDO.chef_managed
-      HipChat.log 'Applying Chef profile...'
+      HipChat.log 'Applying <b>chef</b> profile...'
       RakeUtils.sudo 'chef-client'
     end
 
@@ -59,6 +59,15 @@ namespace :build do
         RakeUtils.system 'MOOC_LOCALIZE=1', 'grunt'
       else
         RakeUtils.system 'grunt'
+      end
+    end
+  end
+
+  task :stop_varnish do
+    Dir.chdir(aws_dir) do
+      unless rack_env?(:development)
+        HipChat.log 'Stopping <b>varnish</b>...'
+        RakeUtils.stop_service 'varnish'
       end
     end
   end
@@ -120,11 +129,10 @@ namespace :build do
     end
   end
 
-  task :varnish do
+  task :start_varnish do
     Dir.chdir(aws_dir) do
       unless rack_env?(:development)
-        HipChat.log 'Restarting <b>varnish</b>...'
-        RakeUtils.stop_service 'varnish'
+        HipChat.log 'Starting <b>varnish</b>...'
         RakeUtils.start_service 'varnish'
       end
     end
@@ -134,61 +142,14 @@ namespace :build do
   tasks << :configure
   tasks << :blockly_core if CDO.build_blockly_core
   tasks << :blockly if CDO.build_blockly
+  tasks << :stop_varnish if CDO.build_dashboard || CDO.build_pegasus
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
-  tasks << :varnish
+  tasks << :start_varnish if CDO.build_dashboard || CDO.build_pegasus
   task :all => tasks
 
 end
 task :build => ['build:all']
-
-
-
-
-##################################################################################################
-##
-##
-## production - tasks related to the production instances
-##
-##
-##################################################################################################
-
-namespace :production do
-
-  namespace :varnish do
-
-    task :upgrade do
-      CDO.varnish_instances.each do |host|
-        begin
-          remote_command = [
-            'cd production/aws',
-            'git pull',
-            'bundle',
-            'touch Rakefile',
-            'rake',
-            'cd ..',
-            'rake build:varnish',
-          ].join('; ')
-          RakeUtils.system 'ssh', host, "'#{remote_command} 2>&1'"
-        rescue
-          puts "Unable to update #{host}!"
-        end
-      end
-    end
-
-    task :restart do
-      CDO.varnish_instances.each do |host|
-        remote_command = [
-          'sudo service varnish stop',
-          'sudo service varnish start',
-        ].join('; ')
-        RakeUtils.system 'ssh', host, "'#{remote_command} 2>&1'"
-      end
-    end
-
-  end
-
-end
 
 
 
