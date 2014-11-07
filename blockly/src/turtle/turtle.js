@@ -183,7 +183,7 @@ Turtle.init = function(config) {
     if (skin.id == "anna" || skin.id == "elsa") {
       Blockly.JavaScript.colour_random = function() {
         // Generate a random colour.
-        if (!Blockly.JavaScript.definitions_['colour_random']) {
+        if (!Blockly.JavaScript.definitions_.colour_random) {
           var functionName = Blockly.JavaScript.variableDB_.getDistinctName(
               'colour_random', Blockly.Generator.NAME_TYPE);
           Blockly.JavaScript.colour_random.functionName = functionName;
@@ -193,9 +193,7 @@ Turtle.init = function(config) {
           //func.push('  return "rgb(" + Math.floor(Math.random()*255) + ",0,0);"');
           func.push('  return colors[Math.floor(Math.random()*colors.length)];');
           func.push('}');
-          Blockly.JavaScript.definitions_['colour_random'] = func.join('\n');
-
-          console.log(Blockly.JavaScript.definitions_['colour_random']);
+          Blockly.JavaScript.definitions_.colour_random = func.join('\n');
         }
         var code = Blockly.JavaScript.colour_random.functionName + '()';
         return [code, Blockly.JavaScript.ORDER_FUNCTION_CALL];
