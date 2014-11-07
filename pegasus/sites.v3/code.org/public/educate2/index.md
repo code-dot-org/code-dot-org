@@ -25,6 +25,10 @@ A middle school math course that uses computer science as a tool
 <br/>
 A middle school science course that uses computer science as a tool 
 
+[Exploring Computer Science](http://www.exploringcs.org)
+<br/>
+A high school course designed to broaden participation in computer science
+
 [AP Computer Science Principles](http://code.org/educate2/csp/)
 <br/>
 An AP course covering a wide range of computer science topics
@@ -41,63 +45,32 @@ An AP course covering a wide range of computer science topics
 
 [K-5 Program](http://code.org/educate/k5)
 <br/>
-Computer science professional development for K-5 educators
+Sign up now for computer science professional development for K-5 educators
 
 [District Partnership](http://code.org/educate/districts)
 <br/>
-Partner with Code.org to bring computer science to your district in grades 6-12
+Partner with Code.org to bring computer science to your district for grades 6-12
 
 <br/>
 
 [/col-50]
 
-<!--
-
-[col-33]
-
-## Inspire Students
-
-[Inspire Students](http://code.org/educate/inspire) 
-<br/>
-Inspire students to learn
-
-Want more? 
-<br/>
-Check out our [educational video library](http://code.org/educate/videos)
-
-<br/>
-
-[/col-33]
-
--->
 
 <div style="clear:both"/>
 
 [col-50]
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[<button>Learn More</button>](/curriculum)
+[<button>Learn More</button>](http://code.org/educate2/curriculum)
 
 [/col-50]
 
 [col-50]
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[<button>Learn More</button>](/professional-development)
+[<button>Learn More</button>](http://code.org/educate2/professional-development)
 
 [/col-50]
 
-<!--
 
-[col-33]
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[<button>Learn More</button>](/inspiration)
-
-[/col-33]
-
-
-<p style="clear:both">&nbsp;</p>
-
--->
 

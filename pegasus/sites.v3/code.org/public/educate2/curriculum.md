@@ -15,7 +15,7 @@ For information about our Elementary school computer science courses, see [this 
 
 # Middle School #
 
-Code.org has two interdisciplinary modules at the middle school level. Code.org has partnered with the award-winning Project GUTS (Growing Up Thinking Scientifically) to create [CS in Science](http://code.org/curriculum/mss), and Code.org has partnered with Bootstrap to offer[CS in Math](http://code.org/curriculum/msm). Each module exists as multiple sets of topical lessons that are able to be integrated into pre-existing Science and Math classes.
+Code.org has two interdisciplinary modules at the middle school level. Code.org has partnered with the award-winning Project GUTS (Growing Up Thinking Scientifically) to create [CS in Science](http://code.org/curriculum/mss), and Code.org has partnered with Bootstrap to offer [CS in Math](http://code.org/curriculum/msm). Each module exists as multiple sets of topical lessons that are able to be integrated into pre-existing Science and Math classes.
 
 [<button>CS in Science</button>](http://code.org/curriculum/mss)
 
@@ -42,7 +42,7 @@ AP® is a registered trademark of the College Board.
 
 ## Code.org's Curriculum Philosophy ##
 
-[Click here](https://docs.google.com/document/d/1lUpzzEAsA2CkUH70vbEWHaQTqgGUfc7hJ7-pS_3Mp0s/pub) for curriculum philosophy. *** Needs to be finalized
+[Click here](http://code.org/educate2/curriculum-philosphy) for curriculum philosophy and goals.
 
 ## Educational Videos ##
 

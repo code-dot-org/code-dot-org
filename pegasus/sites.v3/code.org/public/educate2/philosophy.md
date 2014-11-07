@@ -6,27 +6,16 @@ nav: educate2_nav
 
 # Code.org Philosophy
 
-Need to finalize both docs below
+Click the buttons below to read Code.org's guiding principles on curriculum on professional development. 
 
-[col-50]
+[<button>K-12 Curriculum Philosophy and Goals</button>](http://code.org/educate2/curriculum-philosophy)
 
-### Curriculum philosophy			
-[link](https://docs.google.com/document/d/1lUpzzEAsA2CkUH70vbEWHaQTqgGUfc7hJ7-pS_3Mp0s/pub)				
+[<button>K-12 Professional Development Philosophy and Goals</button>](http://code.org/educate2/professional-development-philosophy)
 
-[/col-50]
 
-[col-50]
+## Code.org's Educational Philosophy
 
-### PD philosophy
-[link](https://docs.google.com/document/d/17vDu7OoSIogtCwCZVEokUcvQF0xwFBNsT629_OmrMvw/pub)
-
-[/col-50]
-
-Logic model and theory of action -- someone on the Ed team will write this up
-
-### Code.org's Educational Philosophy ###
-
-We believe that:
+### We believe that:
 
 1. There is more to computer science than coding; we’re just called Code.org because it’s short and snappy.
 2. Students should learn the why of computer science, not just the what and how.
