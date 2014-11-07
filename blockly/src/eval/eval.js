@@ -35,6 +35,9 @@ var dom = require('../dom');
 var blockUtils = require('../block_utils');
 
 var EvalString = require('./evalString');
+// requiring this loads canvg into the global namespace
+require('../canvg/canvg.js');
+var canvg = window.canvg || global.canvg;
 
 var TestResults = require('../constants').TestResults;
 
@@ -61,6 +64,7 @@ Eval.init = function(config) {
 
   config.grayOutUndeletableBlocks = true;
   config.forceInsertTopBlock = 'functional_display';
+  config.enableShowCode = false;
 
   config.html = page({
     assetUrl: BlocklyApps.assetUrl,
@@ -225,18 +229,42 @@ Eval.execute = function() {
   BlocklyApps.report(reportData);
 };
 
-function evaluateAnswer() {
-  var answer = document.getElementById('answer');
-  var user = document.getElementById('user');
+/**
+ * Calling outerHTML on svg elements in safari does not work. Instead we stick
+ * it inside a div and get that div's inner html.
+ */
+function outerHTML (element) {
+  var div = document.createElement('div');
+  div.appendChild(element.cloneNode(true));
+  return div.innerHTML;
+}
 
-  // is this good enough?
-  // todo (brent) : can come up with at least one case where it isnt. goal is
-  // to create a star rotated 90 degrees. i instead create a star rotated -270
-  // degrees. these are exactly the same visually, but will have different
-  // html
-  // we might be able to use canvg to convert the svg to a canvas representation,
-  // and then do our comparison similar to how we do in artist
-  return answer.innerHTML.trim() == user.innerHTML.trim();
+function imageDataForSvg(elementId) {
+  var canvas = document.createElement('canvas');
+  canvas.width = CANVAS_WIDTH;
+  canvas.height = CANVAS_HEIGHT;
+  canvg(canvas, outerHTML(document.getElementById(elementId)));
+
+  // canvg attaches an svg object to the canvas, and attaches a setInterval.
+  // We don't need this, and that blocks our node process from exitting in
+  // tests, so stop it.
+  canvas.svg.stop();
+
+  var ctx = canvas.getContext('2d');
+  return ctx.getImageData(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+}
+
+function evaluateAnswer() {
+  // Compare the solution and user canvas
+  var userImageData = imageDataForSvg('user');
+  var solutionImageData = imageDataForSvg('answer');
+
+  for (var i = 0; i < userImageData.data.length; i++) {
+    if (0 !== Math.abs(userImageData.data[i] - solutionImageData.data[i])) {
+      return false;
+    }
+  }
+  return true;
 }
 
 /**

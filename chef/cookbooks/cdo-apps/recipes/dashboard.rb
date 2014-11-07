@@ -1,5 +1,5 @@
 include_recipe 'cdo-apps::aws'
-include_recipe 'cdo-apps::varnish'
+include_recipe 'cdo-varnish'
 
 template "/etc/init.d/dashboard" do
   source 'init.d.erb'

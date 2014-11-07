@@ -6932,6 +6932,13 @@ exports.getText = function (blockId, elementId) {
                           {'elementId': elementId });
 };
 
+exports.setText = function (blockId, elementId, text) {
+  return Webapp.executeCmd(String(blockId),
+                          'setText',
+                          {'elementId': elementId,
+                           'text': text });
+};
+
 exports.setStyle = function (blockId, elementId, style) {
   return Webapp.executeCmd(String(blockId),
                            'setStyle',
@@ -7102,6 +7109,7 @@ levels.ec_simple = {
     {'func': 'createButton', 'params': ["'id'", "'text'"] },
     {'func': 'createTextInput', 'params': ["'id'", "'text'"] },
     {'func': 'getText', 'params': ["'id'"], 'category': 'value' },
+    {'func': 'setText', 'params': ["'id'", "'text'"] },
     {'func': 'setStyle', 'params': ["'id'", "'color:red;'"] },
     {'func': 'createHtmlBlock', 'params': ["'id'", "'html'"] },
     {'func': 'replaceHtmlBlock', 'params': ["'id'", "'html'"] },
@@ -7850,6 +7858,7 @@ Webapp.callCmd = function (cmd) {
     case 'createButton':
     case 'createTextInput':
     case 'getText':
+    case 'setText':
     case 'setStyle':
     case 'attachEventHandler':
       BlocklyApps.highlight(cmd.id);
@@ -7895,6 +7904,15 @@ Webapp.getText = function (opts) {
   var div = document.getElementById(opts.elementId);
   if (divWebapp.contains(div)) {
     return String(div.value);
+  }
+  return false;
+};
+
+Webapp.setText = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var div = document.getElementById(opts.elementId);
+  if (divWebapp.contains(div)) {
+    div.value = opts.text;
   }
   return false;
 };
