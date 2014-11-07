@@ -42,7 +42,7 @@ Blockly.Blocks.functional_definition = {
     var name = Blockly.Procedures.findLegalName(Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE, this);
     this.appendDummyInput()
         .appendTitle('Define' /**TODO(bjordan): i18n*/)
-        .appendTitle(new Blockly.FieldTextInput('temp fn name', Blockly.Procedures.rename), 'NAME')
+        .appendTitle(new Blockly.FieldTextInput('My New Function', Blockly.Procedures.rename), 'NAME')
         .appendTitle('', 'PARAMS');
     this.appendFunctionalInput('STACK');
     this.setFunctional(true);
@@ -209,7 +209,8 @@ Blockly.Blocks.functional_call = {
 
     var mainTitle = this.appendDummyInput()
         .appendTitle(new Blockly.FieldLabel('Function Call', options), 'NAME')
-        .setAlign(Blockly.ALIGN_CENTRE);
+        .appendTitle('', 'PARAM_TEXT');
+        // .setAlign(Blockly.ALIGN_CENTRE); TODO(bjordan): re-add
 
     if (Blockly.functionEditor) {
       var editLabel = new Blockly.FieldLabel(Blockly.Msg.FUNCTION_EDIT);
@@ -345,8 +346,16 @@ Blockly.Blocks.functional_call = {
     }
     this.setProcedureParameters(this.arguments_, this.arguments_);
 
-    if (procedureDefinition && procedureDefinition.outputType_) {
-      this.changeFunctionalOutput(def.outputType_);
+    if (procedureDefinition) {
+      if (procedureDefinition.outputType_) {
+        this.changeFunctionalOutput(procedureDefinition.outputType_);
+      }
+      if (procedureDefinition.description_) {
+        this.setTooltip(procedureDefinition.description_);
+      }
+      if (procedureDefinition.arguments_.length) {
+        this.setTitleValue(' (' + this.arguments_.join(', ') + ')', 'PARAM_TEXT');
+      }
     }
   },
   renameVar: function(oldName, newName) {
@@ -356,17 +365,5 @@ Blockly.Blocks.functional_call = {
         this.getInput('ARG' + x).titleRow[0].setText(newName);
       }
     }
-  },
-  customContextMenu: function(options) {
-    // Add option to find caller.
-    var option = {enabled: true};
-    option.text = Blockly.Msg.PROCEDURES_HIGHLIGHT_DEF;
-    var name = this.getTitleValue('NAME');
-    var blockSpace = this.blockSpace;
-    option.callback = function() {
-      var def = Blockly.Procedures.getDefinition(name, blockSpace);
-      def && def.select();
-    };
-    options.push(option);
   }
 };
