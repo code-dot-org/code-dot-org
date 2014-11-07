@@ -2,9 +2,10 @@
   - data = @level.properties
   .mainblock
     %h2= string_or_image('text_match', data['title'])
-    .prompt
-      != string_or_image('text_match', data['prompt'])
-      %textarea.response
+    %p.content1!= string_or_image('text_match', data['content1']) unless data['content1'].blank?
+    %p.content2!= string_or_image('text_match', data['content2']) unless data['content2'].blank?
+    %p.content3!= string_or_image('text_match', data['content3']) unless data['content3'].blank?
+    %textarea.response{placeholder: data['placeholder'] ? string_or_image('text_match', data['placeholder']) : t('text_match.placeholder'), style: 'width: 700px'}
     .buttons
       %a.btn.btn-large.btn-primary.next-stage.submitButton
         Submit
