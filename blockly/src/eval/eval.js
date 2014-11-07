@@ -188,7 +188,7 @@ function getDrawableFromBlocks(blockXml) {
     BlocklyApps.loadBlocks(blockXml);
   }
 
-  var code = Blockly.Generator.blockSpaceToCode('JavaScript', 'functional_display');
+  var code = Blockly.Generator.blockSpaceToCode('JavaScript', ['functional_display', 'functional_definition']);
   evalCode(code);
   var object = Eval.displayedObject;
   Eval.displayedObject = null;
