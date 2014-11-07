@@ -199,7 +199,7 @@ void vcl_rewrite_accept_language(const struct sess *sp) {
 
 
 <%
-  BACKENDS = node['cdo-apps']['varnish']['backends'].to_hash
+  BACKENDS = node['cdo-varnish']['backends'].to_hash
   BACKENDS.each_pair do |id, ip|
 %>
 backend pegasus_<%= id %> {
