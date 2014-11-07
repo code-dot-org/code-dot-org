@@ -2056,6 +2056,9 @@ Studio.saySprite = function (opts) {
 
   var spriteIndex = opts.spriteIndex;
   var sprite = Studio.sprite[spriteIndex];
+  if (!sprite) {
+    return;
+  }
 
   opts.started = true;
 
