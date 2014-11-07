@@ -208,6 +208,7 @@ module LevelsHelper
       allow_sprites_outside_playspace
       sprites_hidden_to_start
       use_modal_function_editor
+      use_contract_editor
       impressive
     ).map{ |x| x.include?(':') ? x.split(':') : [x,x.camelize(:lower)]}]
     .each do |dashboard, blockly|
