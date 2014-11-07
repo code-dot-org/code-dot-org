@@ -11,11 +11,7 @@ Do you have a question about Code.org's K-5 Courses that you'd like answered by 
 
 Click the links below at that time and date to join.
 
-[Wednesday October 8, 2014 • 5 p.m. *ET* / 1 hr](https://bluejeans.com/942691423/browser)
-
-[Wednesday October 8, 2014 • 5 p.m. *PT* / 1 hr](https://bluejeans.com/425322694/browser)
-
-[Thursday November 6, 2014 • 5 p.m. *ET* / 1 hr](https://bluejeans.com/833796826/browser)
+Thursday November 6, 2014 • 5 p.m. *ET* / 1 hr [View Recording](http://youtu.be/Jb2xhFeNvG4)
 
 [Thursday November 6, 2014 • 5 p.m. *PT* / 1 hr](https://bluejeans.com/735694011/browser)
 
