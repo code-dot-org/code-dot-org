@@ -36,9 +36,9 @@ class LevelsController < ApplicationController
     if @level.is_a? Grid
       @level.maze_data = @level.class.unparse_maze(@level.properties)
     end
-    if @level.is_a? Match
+    if @level.is_a? DSLDefined
       @filename = @level.filename
-      @match_file = File.read(@filename) if @filename && File.exists?(@filename)
+      @dsl_file = File.read(@filename) if @filename && File.exists?(@filename)
     end
   end
 
@@ -148,7 +148,7 @@ class LevelsController < ApplicationController
         @game = Game.custom_maze
         @level = @type_class.new
         render :edit
-      elsif @type_class <= Match
+      elsif @type_class <= DSLDefined
         @game = Game.find_by(name: @type_class.to_s)
         @level = @type_class.new
         render :edit
@@ -203,7 +203,7 @@ class LevelsController < ApplicationController
         :type,
         :level_num,
         :user,
-        :match_text,
+        :dsl_text,
         {concept_ids: []},
         {soft_buttons: []}
       ]

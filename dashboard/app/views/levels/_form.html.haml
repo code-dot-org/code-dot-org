@@ -20,7 +20,7 @@
     = render partial: 'levels/editors/grid', locals: {f: f} if @level.is_a? Grid
     = render partial: 'levels/editors/karel', locals: {f: f} if @level.is_a? Karel
     = render partial: 'levels/editors/artist', locals: {f: f} if @level.is_a? Artist
-    = render partial: 'levels/editors/match', locals: {f: f} if @level.is_a? Match
+    = render partial: 'levels/editors/dsl', locals: {f: f} if @level.is_a? DSLDefined
   .actions
     = f.submit
 #validation-error
