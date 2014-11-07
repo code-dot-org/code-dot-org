@@ -15,7 +15,10 @@
     "disable_param_editing": "true",
     "disable_variable_editing": "true",
     "free_play": "false",
-    "slider_speed": ".5"
+    "slider_speed": ".5",
+    "ideal": "9",
+    "use_modal_function_editor": "false",
+    "impressive": "false"
   }
 }]]></config>
   <blocks>
