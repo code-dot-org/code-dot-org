@@ -596,6 +596,7 @@ Webapp.callCmd = function (cmd) {
     case 'createButton':
     case 'createTextInput':
     case 'getText':
+    case 'setText':
     case 'setStyle':
     case 'attachEventHandler':
       BlocklyApps.highlight(cmd.id);
@@ -641,6 +642,15 @@ Webapp.getText = function (opts) {
   var div = document.getElementById(opts.elementId);
   if (divWebapp.contains(div)) {
     return String(div.value);
+  }
+  return false;
+};
+
+Webapp.setText = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var div = document.getElementById(opts.elementId);
+  if (divWebapp.contains(div)) {
+    div.value = opts.text;
   }
   return false;
 };

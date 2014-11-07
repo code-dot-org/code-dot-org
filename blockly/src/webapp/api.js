@@ -53,6 +53,13 @@ exports.getText = function (blockId, elementId) {
                           {'elementId': elementId });
 };
 
+exports.setText = function (blockId, elementId, text) {
+  return Webapp.executeCmd(String(blockId),
+                          'setText',
+                          {'elementId': elementId,
+                           'text': text });
+};
+
 exports.setStyle = function (blockId, elementId, style) {
   return Webapp.executeCmd(String(blockId),
                            'setStyle',

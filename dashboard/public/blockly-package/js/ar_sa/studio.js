@@ -6933,11 +6933,11 @@ var utils = require('./utils');
 var _ = utils.getLodash();
 
 var colors = {
-  Number: [192, 1.00, 0.99], // 00ccff
-  string: [180, 1.00, 0.60], // 0099999
-  image: [285, 1.00, 0.80], // 9900cc
-  boolean: [90, 1.00, 0.4], // 336600
-  none: [0, 0, 0.6]
+  'Number': [192, 1.00, 0.99], // 00ccff
+  'string': [180, 1.00, 0.60], // 0099999
+  'image': [285, 1.00, 0.80], // 9900cc
+  'boolean': [90, 1.00, 0.4], // 336600
+  'none': [0, 0, 0.6]
 };
 module.exports.colors = colors;
 
@@ -12846,41 +12846,53 @@ exports.setBackground = function (id, value) {
 };
 
 exports.setSprite = function (id, spriteIndex, value) {
-  Studio.queueCmd(id,
-                  'setSprite',
-                  {'spriteIndex': spriteIndex, 'value': value});
+  Studio.queueCmd(id, 'setSprite', {
+    'spriteIndex': spriteIndex,
+    'value': value
+  });
 };
 
-exports.saySprite = function (id, spriteIndex, text) {
-  Studio.queueCmd(id, 'saySprite', {'spriteIndex': spriteIndex, 'text': text});
+exports.saySprite = function (id, spriteIndex, text, opt_seconds) {
+  Studio.queueCmd(id, 'saySprite', {
+    'spriteIndex': spriteIndex,
+    'text': text,
+    'seconds': opt_seconds
+  });
 };
 
 exports.showTitleScreen = function (id, title, text) {
-  Studio.queueCmd(id, 'showTitleScreen', {'title': title, 'text': text});
+  Studio.queueCmd(id, 'showTitleScreen', {
+    'title': title,
+    'text': text
+  });
 };
 
 exports.setSpriteEmotion = function (id, spriteIndex, value) {
-  Studio.queueCmd(id,
-                  'setSpriteEmotion',
-                  {'spriteIndex': spriteIndex, 'value': value});
+  Studio.queueCmd(id, 'setSpriteEmotion', {
+    'spriteIndex': spriteIndex,
+    'value': value
+  });
 };
 
 exports.setSpriteSpeed = function (id, spriteIndex, value) {
-  Studio.queueCmd(id,
-                  'setSpriteSpeed',
-                  {'spriteIndex': spriteIndex, 'value': value});
+  Studio.queueCmd(id, 'setSpriteSpeed', {
+    'spriteIndex': spriteIndex,
+    'value': value
+  });
 };
 
 exports.setSpriteSize = function (id, spriteIndex, value) {
-  Studio.queueCmd(id,
-                  'setSpriteSize',
-                  {'spriteIndex': spriteIndex, 'value': value});
+  Studio.queueCmd(id, 'setSpriteSize', {
+    'spriteIndex': spriteIndex,
+    'value': value
+  });
 };
 
 exports.setSpritePosition = function (id, spriteIndex, value) {
-  Studio.queueCmd(id,
-                  'setSpritePosition',
-                  {'spriteIndex': spriteIndex, 'value': value});
+  Studio.queueCmd(id, 'setSpritePosition', {
+    'spriteIndex': spriteIndex,
+    'value': value
+  });
 };
 
 exports.playSound = function(id, soundName) {
@@ -12892,28 +12904,33 @@ exports.stop = function(id, spriteIndex) {
 };
 
 exports.throwProjectile = function(id, spriteIndex, dir, className) {
-  Studio.queueCmd(id,
-                  'throwProjectile',
-                  {'spriteIndex': spriteIndex,
-                   'dir': dir,
-                   'className': className});
+  Studio.queueCmd(id, 'throwProjectile', {
+    'spriteIndex': spriteIndex,
+    'dir': dir,
+    'className': className
+  });
 };
 
 exports.makeProjectile = function(id, className, action) {
-  Studio.queueCmd(id,
-                  'makeProjectile',
-                  {'className': className, 'action': action});
+  Studio.queueCmd(id, 'makeProjectile', {
+    'className': className,
+    'action': action
+  });
 };
 
 exports.move = function(id, spriteIndex, dir) {
-  Studio.queueCmd(id, 'move', {'spriteIndex': spriteIndex, 'dir': dir});
+  Studio.queueCmd(id, 'move', {
+    'spriteIndex': spriteIndex,
+    'dir': dir
+  });
 };
 
 exports.moveDistance = function(id, spriteIndex, dir, distance) {
-  Studio.queueCmd(
-      id,
-      'moveDistance',
-      {'spriteIndex': spriteIndex, 'dir': dir, 'distance': distance});
+  Studio.queueCmd(id, 'moveDistance', {
+    'spriteIndex': spriteIndex,
+    'dir': dir,
+    'distance': distance
+  });
 };
 
 exports.changeScore = function(id, value) {
@@ -14278,10 +14295,14 @@ exports.install = function(blockly, blockInstallOptions) {
           quotedTextInput.appendTitle(new Blockly.FieldImage(skin.speechBubble));
         }
         quotedTextInput.appendTitle(new Blockly.FieldImage(
-                  Blockly.assetUrl('media/quote0.png'), 12, 12))
+              Blockly.assetUrl('media/quote0.png'), 12, 12))
           .appendTitle(new Blockly.FieldTextInput(msg.defaultSayText()), 'TEXT')
           .appendTitle(new Blockly.FieldImage(
-                  Blockly.assetUrl('media/quote1.png'), 12, 12));
+              Blockly.assetUrl('media/quote1.png'), 12, 12));
+      }
+      if (block.time) {
+        this.appendValueInput('TIME').setCheck('Number').appendTitle(msg.for());
+        this.appendDummyInput().appendTitle(msg.waitSeconds());
       }
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -14294,6 +14315,8 @@ exports.install = function(blockly, blockInstallOptions) {
   initSayBlock(blockly.Blocks.studio_saySprite);
   blockly.Blocks.studio_saySpriteParams = { 'params': true };
   initSayBlock(blockly.Blocks.studio_saySpriteParams);
+  blockly.Blocks.studio_saySpriteParamsTime = { 'params': true, 'time': true };
+  initSayBlock(blockly.Blocks.studio_saySpriteParamsTime);
 
   generator.studio_saySprite = function() {
     // Generate JavaScript for saying.
@@ -14311,6 +14334,18 @@ exports.install = function(blockly, blockInstallOptions) {
                '\', ' +
                (this.getTitleValue('SPRITE') || '0') + ', ' +
                textParam + ');\n';
+  };
+
+  generator.studio_saySpriteParamsTime = function() {
+    // Generate JavaScript for saying (param version).
+    var textParam = Blockly.JavaScript.valueToCode(this, 'TEXT',
+        Blockly.JavaScript.ORDER_NONE) || '';
+    var secondsParam = Blockly.JavaScript.valueToCode(this, 'TIME',
+        Blockly.JavaScript.ORDER_NONE) || 1;
+    return 'Studio.saySprite(\'block_id_' + this.id +
+        '\', ' +
+        (this.getTitleValue('SPRITE') || '0') + ', ' +
+        textParam + ',' + secondsParam + ');\n';
   };
 
   var initWaitBlock = function (block) {
@@ -18097,7 +18132,7 @@ Studio.saySprite = function (opts) {
 
   sprite.bubbleTimeoutFunc = delegate(this, Studio.hideSpeechBubble, opts);
   sprite.bubbleTimeout = window.setTimeout(sprite.bubbleTimeoutFunc,
-    SPEECH_BUBBLE_TIMEOUT);
+    opts.seconds * 1000 || SPEECH_BUBBLE_TIMEOUT);
 
   return opts.complete;
 };
@@ -19550,6 +19585,8 @@ exports.defaultSayText = function(d){return "اكتب هنا"};
 exports.emotion = function(d){return "الحالة"};
 
 exports.finalLevel = function(d){return "تهانينا ! لقد قمت بحل اللغز الاخير."};
+
+exports.for = function(d){return "for"};
 
 exports.hello = function(d){return "مرحبا"};
 
