@@ -76,6 +76,23 @@ Blockly.ContractEditor.prototype.createContractDom_ = function() {
   this.initializeOutputTypeDropdown();
 };
 
+/**
+ * Add a new parameter block to the toolbox (and set an output type mutation on it)
+ * @param newParameterName
+ * @override
+ */
+Blockly.ContractEditor.prototype.addParameter = function(newParameterName) {
+  var newParameterOutputType = this.inputTypeSelector.getValue();
+  // TODO(bjordan): Q: use e.g. document.createElement / .innerHTML / appendChild() instead?
+  var param = Blockly.createSvgElement('block', {type: this.parameterBlockType});
+  var title = Blockly.createSvgElement('title', {name: 'VAR'}, param);
+  title.textContent = newParameterName;
+  var mutation = Blockly.createSvgElement('mutation', {}, param);
+  var outputType = Blockly.createSvgElement('outputType', {}, mutation);
+  outputType.textContent = newParameterOutputType;
+  this.paramToolboxBlocks_.push(param);
+};
+
 Blockly.ContractEditor.prototype.initializeOutputTypeDropdown = function() {
   this.outputTypeSelector = new goog.ui.Select(null, null,
     goog.ui.FlatMenuButtonRenderer.getInstance());
@@ -106,10 +123,4 @@ Blockly.ContractEditor.prototype.initializeInputTypeDropdown = function() {
   this.inputTypeSelector.setDefaultCaption(Blockly.Msg.FUNCTIONAL_TYPE_LABEL);
 
   this.inputTypeSelector.render(goog.dom.getElement('paramTypeDropdown'));
-};
-
-Blockly.ContractEditor.prototype.addParamFromInputField_ = function(textElement) {
-  Blockly.ContractEditor.superClass_.addParamFromInputField_.call(this, textElement);
-  var justAddedParamBlock = goog.array.peek(this.flyout_.blockSpace_.topBlocks_);
-  justAddedParamBlock.changeFunctionalOutput(this.inputTypeSelector.getValue());
 };

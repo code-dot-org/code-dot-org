@@ -136,6 +136,10 @@ Blockly.FunctionEditor.prototype.addParameter = function(newParameterName) {
   // Add the new param block to the local toolbox
   var param = Blockly.createSvgElement('block', {type: this.parameterBlockType});
   var v = Blockly.createSvgElement('title', {name: 'VAR'}, param);
+  var mutation = Blockly.createSvgElement('mutation', {name: 'VAR'}, param);
+  var outputType = Blockly.createSvgElement('outputType', param);
+  outputType.textContent =
+
   v.textContent = newParameterName;
   this.paramToolboxBlocks_.push(param);
 };

@@ -47,7 +47,7 @@ Blockly.Blocks.functional_parameters_get = {
             : new Blockly.FieldParameter(Blockly.Msg.VARIABLES_GET_ITEM), 'VAR')
         .appendTitle(Blockly.Msg.VARIABLES_GET_TAIL)
         .setAlign(Blockly.ALIGN_CENTRE);
-    this.setFunctionalOutput(true); // TODO(bjordan): set/update type
+    this.setFunctionalOutput(true);
     this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
   },
   renameVar: function(oldName, newName) {
@@ -60,7 +60,6 @@ Blockly.Blocks.functional_parameters_get = {
   },
   removeVar: Blockly.Blocks.variables_get.removeVar,
   mutationToDom: function() {
-    return; // TODO(bjordan): implement
     var container = document.createElement('mutation');
     // Add description mutation
     if (this.description_) {
@@ -68,10 +67,14 @@ Blockly.Blocks.functional_parameters_get = {
       desc.innerHTML = this.description_;
       container.appendChild(desc);
     }
+    if (this.outputType_) {
+      var outputType = document.createElement('outputType');
+      outputType.innerHTML = this.outputType_;
+      container.appendChild(outputType);
+    }
     return container;
   },
   domToMutation: function(xmlElement) {
-    return; // TODO(bjordan): implement
     this.arguments_ = [];
     for (var x = 0, childNode; childNode = xmlElement.childNodes[x]; x++) {
       var nodeName = childNode.nodeName.toLowerCase();
@@ -79,6 +82,9 @@ Blockly.Blocks.functional_parameters_get = {
         this.arguments_.push(childNode.getAttribute('name'));
       } else if (nodeName === 'description') {
         this.description_ = childNode.innerHTML;
+      } else if (nodeName === 'outputtype') {
+        this.outputType_ = childNode.innerHTML;
+        this.changeFunctionalOutput(this.outputType_);
       }
     }
   }
