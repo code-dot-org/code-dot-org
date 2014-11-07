@@ -3,15 +3,17 @@ var EvalString = require('./evalString');
 var evalUtils = require('./evalUtils');
 
 var EvalCircle = function (width, height, style, color) {
-  evalUtils.ensureType(style, EvalString);
-  evalUtils.ensureType(color, EvalString);
+  evalUtils.ensureType(width, "number");
+  evalUtils.ensureType(height, "number");
+  evalUtils.ensureType(style, "string");
+  evalUtils.ensureType(color, "string");
 
   EvalObject.apply(this);
 
   this.width_ = width;
   this.height_ = height;
-  this.color_ = color.getValue();
-  this.style_ = style.getValue();
+  this.color_ = color;
+  this.style_ = style;
 
   this.element_ = null;
 };
