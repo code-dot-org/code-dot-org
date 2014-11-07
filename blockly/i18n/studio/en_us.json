@@ -28,6 +28,7 @@
   "defaultSayText": "type here",
   "emotion": "mood",
   "finalLevel": "Congratulations! You have solved the final puzzle.",
+  "for": "for",
   "hello": "hello",
   "helloWorld": "Hello World!",
   "incrementPlayerScore" : "score point",
