@@ -135,6 +135,11 @@ class Studio < Grid
     </value>
   </block>
   <block type="studio_saySpriteParamsTime" inline="true">
+    <value name="SPRITE">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
     <value name="TEXT">
       <block type="text" />
     </value>
@@ -149,8 +154,15 @@ class Studio < Grid
   <block type="studio_makeProjectile" />
   <block type="studio_setSpriteSpeed" />
   <block type="studio_setSpriteEmotion" />
-  <block type="studio_vanish" />
   <block type="studio_setSpriteSize" />
+  <block type="studio_vanish" />
+  <block type="studio_vanishSprite">
+    <value name="SPRITE">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+  </block>
 </category>
 <category name="Loops">
   <block type="studio_repeatForever" />
