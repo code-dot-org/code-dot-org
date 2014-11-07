@@ -16,7 +16,9 @@
     "y": "175",
     "free_play": "false",
     "impressive": "false",
-    "slider_speed": ".5"
+    "slider_speed": ".5",
+    "ideal": "19",
+    "use_modal_function_editor": "false"
   }
 }]]></config>
   <blocks>
@@ -49,7 +51,7 @@
         <block type="controls_repeat_ext" inline="true">
           <value name="TIMES">
             <block type="math_number">
-              <title name="NUM">???</title>
+              <title name="NUM">3</title>
             </block>
           </value>
         </block>
