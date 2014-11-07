@@ -42,7 +42,7 @@ AP® is a registered trademark of the College Board.
 
 ## Code.org's Curriculum Philosophy ##
 
-[Click here](https://docs.google.com/document/d/1lUpzzEAsA2CkUH70vbEWHaQTqgGUfc7hJ7-pS_3Mp0s/pub) for curriculum philosophy. *** Needs to be finalized
+[Click here](http://code.org/educate2/curriculum-philosphy) for curriculum philosophy and goals.
 
 ## Educational Videos ##
 
