@@ -121,6 +121,10 @@ exports.setScoreText = function(id, text) {
   Studio.queueCmd(id, 'setScoreText', {'text': text});
 };
 
+exports.showCoordinates = function(id) {
+  Studio.queueCmd(id, 'showCoordinates', {});
+};
+
 exports.wait = function(id, value) {
   Studio.queueCmd(id, 'wait', {'value': value});
 };

@@ -939,6 +939,24 @@ exports.install = function(blockly, blockInstallOptions) {
     return 'Studio.setScoreText(\'block_id_' + this.id + '\', ' + arg + ');\n';
   };
 
+  blockly.Blocks.studio_showCoordinates = {
+    // Block for showing the protagonist's coordinates.
+    helpUrl: '',
+    init: function() {
+      this.setHSV(184, 1.00, 0.74);
+        this.appendDummyInput().appendTitle(msg.showCoordinates());
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.showCoordinatesTooltip());
+    }
+  };
+
+  generator.studio_showCoordinates = function() {
+    // Generate JavaScript for showing the protagonist's coordinates.
+    return 'Studio.showCoordinates(\'block_id_' + this.id + '\');\n';
+  };
+
   blockly.Blocks.studio_setSpriteSpeed = {
     // Block for setting sprite speed
     helpUrl: '',

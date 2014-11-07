@@ -193,6 +193,8 @@
   "setSpriteZombie": "to a zombie image",
   "shareStudioTwitter": "Check out the story I made. I wrote it myself with @codeorg",
   "shareGame": "Share your story:",
+  "showCoordinates": "show coordinates",
+  "showCoordinatesTooltip": "show the protagonist's coordinates on the screen",
   "showTitleScreen": "show title screen",
   "showTitleScreenTitle": "title",
   "showTitleScreenText": "text",

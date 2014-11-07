@@ -1150,7 +1150,11 @@ BlocklyApps.reset = function(first) {
     .setAttribute('visibility', 'hidden');
 
   // Reset configurable variables
-  Studio.setBackground({'value': 'cave'});
+  if (level.coordinateGridBackground) {
+    Studio.setBackground({value: 'grid'});
+  } else {
+    Studio.setBackground({value: 'cave'});
+  }
 
   // Reset currentCmdQueue and various counts:
   Studio.gesturesObserved = {};
@@ -1657,6 +1661,16 @@ Studio.displayScore = function() {
   score.setAttribute('visibility', 'visible');
 };
 
+Studio.showCoordinates = function() {
+  var sprite = Studio.sprite[Studio.protaganistSpriteIndex];
+  // convert to math coordinates, with the origin at the bottom left
+  // corner of the grid, and distances measured from the center of the
+  // sprite.
+  var x = sprite.x + 50;
+  var y = 350 - sprite.y;
+  Studio.setScoreText({text: 'x: ' + x + ' y: ' + y});
+};
+
 Studio.queueCmd = function (id, name, opts) {
   var cmd = {
     'id': id,
@@ -1766,6 +1780,9 @@ Studio.callCmd = function (cmd) {
       BlocklyApps.highlight(cmd.id);
       Studio.setScoreText(cmd.opts);
       break;
+    case 'showCoordinates':
+      BlocklyApps.highlight(cmd.id);
+      Studio.showCoordinates();
     case 'wait':
       if (!cmd.opts.started) {
         BlocklyApps.highlight(cmd.id);
