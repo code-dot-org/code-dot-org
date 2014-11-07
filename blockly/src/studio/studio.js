@@ -1150,7 +1150,11 @@ BlocklyApps.reset = function(first) {
     .setAttribute('visibility', 'hidden');
 
   // Reset configurable variables
-  Studio.setBackground({'value': 'cave'});
+  if (level.coordinateGridBackground) {
+    Studio.setBackground({value: 'grid'});
+  } else {
+    Studio.setBackground({value: 'cave'});
+  }
 
   // Reset currentCmdQueue and various counts:
   Studio.gesturesObserved = {};
