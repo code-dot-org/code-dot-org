@@ -217,7 +217,7 @@ Turtle.init = function(config) {
     // pre-load image for line pattern block. Creating the image object and setting source doesn't seem to be
     // enough in this case, so we're actually creating and reusing the object within the document body.
 
-    if (config.level.edit_blocks || skin.id == "elsa")
+    if (config.level.edit_blocks || skin.id == "anna" || skin.id == "elsa")
     {
       var imageContainer = document.createElement('div');
       imageContainer.style.display='none';
@@ -439,7 +439,7 @@ BlocklyApps.reset = function(ignore) {
   if (skin.id == "anna") {
     Turtle.ctxScratch.strokeStyle = 'rgb(255,255,238)';
     Turtle.ctxScratch.fillStyle = 'rgb(255,255,238)';
-    Turtle.ctxScratch.lineWidth = 4;
+    Turtle.ctxScratch.lineWidth = 2;
   } else if (skin.id == "elsa") {
     Turtle.ctxScratch.strokeStyle = 'rgb(255,255,238)';
     Turtle.ctxScratch.fillStyle = 'rgb(255,255,238)';
@@ -458,7 +458,9 @@ BlocklyApps.reset = function(ignore) {
   Turtle.ctxFeedback.clearRect(
       0, 0, Turtle.ctxFeedback.canvas.width, Turtle.ctxFeedback.canvas.height);
 
-  if (skin.id == "elsa") {
+  if (skin.id == "anna") {
+    Turtle.setPattern(document.getElementById("squigglyLine"));
+  } else if (skin.id == "elsa") {
     Turtle.setPattern(document.getElementById("swirlyLine"));
   } else {
     // Reset to empty pattern
@@ -910,8 +912,8 @@ Turtle.moveForward_ = function (distance) {
   if (Turtle.isDrawingWithPattern) {
     Turtle.drawForwardWithPattern_(distance);
 
-    // elsa gets both a pattern and a line over the top of it.
-    if (skin.id != "elsa") {
+    // Frozen gets both a pattern and a line over the top of it.
+    if (skin.id != "elsa" && skin.id != "anna") {
       return;
     }
   }
@@ -980,7 +982,7 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
   var startX;
   var startY;
 
-  if (skin.id == "elsa") {
+  if (skin.id == "anna" || skin.id == "elsa") {
     Turtle.ctxPattern.moveTo(Turtle.stepStartX, Turtle.stepStartY);
     img = Turtle.patternForPaths;
     startX = Turtle.stepStartX;
