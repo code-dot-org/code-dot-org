@@ -393,7 +393,7 @@ Blockly.Flyout.prototype.show = function(xmlList) {
     Blockly.Variables.flyoutCategory(blocks, gaps, margin, this.blockSpace_);
   } else if (firstBlock === Blockly.Procedures.NAME_TYPE) {
     // Special category for procedures.
-    if (Blockly.useModalFunctionEditor && !Blockly.functionEditor.isOpen()) {
+    if (Blockly.functionEditor && !Blockly.functionEditor.isOpen()) {
       var button = Blockly.createSvgElement('g', {'class': 'createFunction'},
           this.blockSpace_.svgGroup_);
       var padding = 5;
