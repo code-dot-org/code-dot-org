@@ -590,12 +590,15 @@ html, body {
   @media screen and (max-width: 1150px) {
     padding-top: 10px;
   }
-  background-color: orange;
+  background-color: rgb(255, 164, 0);
   line-height: 25px;
   border-radius: 5px;
   padding: 5px;
+  a:hover {
+    text-decoration: none;
+    background-color: rgb(255, 164, 0);
+  }
 }
-
 .header_popup {
   display:none;
   top:auto;
