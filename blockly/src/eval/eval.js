@@ -104,12 +104,14 @@ Eval.init = function(config) {
     // (execute) and the infinite loop detection function.
     Blockly.JavaScript.addReservedWords('Eval,code');
 
-    var solutionBlocks = blockUtils.forceInsertTopBlock(level.solutionBlocks,
-      config.forceInsertTopBlock);
+    if (level.solutionBlocks) {
+      var solutionBlocks = blockUtils.forceInsertTopBlock(level.solutionBlocks,
+        config.forceInsertTopBlock);
 
-    var answerObject = getDrawableFromBlocks(solutionBlocks);
-    if (answerObject) {
-      answerObject.draw(document.getElementById('answer'));
+      var answerObject = getDrawableFromBlocks(solutionBlocks);
+      if (answerObject) {
+        answerObject.draw(document.getElementById('answer'));
+      }
     }
 
     // Adjust visualizationColumn width.
