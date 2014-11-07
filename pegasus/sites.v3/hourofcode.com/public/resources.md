@@ -6,7 +6,7 @@ nav: resources_nav
 <div class="row">
     <h1 class="col-sm-6">Resources</h1>
     <div class="col-sm-6 button-container centered">
-        <a href="/#join"><button class="signup-button">Sign up your event</button></a>
+        <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Sign up your event</button></a>
     </div>
 </div>
 ## Hosting an Hour of Code? <a href="<%= hoc_uri('/resources/how-to') %>">See the how-to guide</a>
@@ -50,9 +50,7 @@ nav: resources_nav
 <div style='clear:both'></div>
 <a id="posters">
 ## Hang these posters in your school
-<% if @country == 'us' %>
-#### [Sign up](http://hourofcode.com/#signup) your Hour of Code event and we'll mail you posters for free.
-<% end %>
+
 <br />
 [![image](/images/fit-280/mark-zuckerberg.png)](/resources/mark-zuckerberg-poster.pdf)
 [![image](/images/fit-280/marissa-mayer.png)](/resources/marissa-mayer-poster.pdf)
@@ -158,4 +156,4 @@ Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your res
 Sincerely,
 [NAME], [TITLE]
 
-<a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>
+<a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Sign up your event</button></a>

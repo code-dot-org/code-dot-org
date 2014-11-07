@@ -56,7 +56,7 @@ Blockly.BlockSpaceEditor = function(container, opt_getMetrics, opt_setMetrics) {
  * @private
  */
 Blockly.BlockSpaceEditor.prototype.populateSVGEffects_ = function(container) {
-  if (goog.dom.getElement('blocklySvgDefs')) {
+  if (goog.dom.getElement('blocklySvgDefsGlobal')) {
     return;
   }
   var svg = Blockly.createSvgElement('svg', {
@@ -70,7 +70,7 @@ Blockly.BlockSpaceEditor.prototype.populateSVGEffects_ = function(container) {
    </defs>
    */
   var defs = Blockly.createSvgElement('defs', {
-    id: 'blocklySvgDefs'
+    id: 'blocklySvgDefsGlobal'
   }, svg);
   var filter, feSpecularLighting, feMerge, pattern;
   /*
@@ -177,6 +177,9 @@ Blockly.BlockSpaceEditor.prototype.createDom_ = function(container) {
   this.svg_ = svg;
   container.appendChild(svg);
   goog.events.listen(svg, 'selectstart', function() { return false; });
+  var defs = Blockly.createSvgElement('defs', {
+    id: 'blocklySvgDefs'
+  }, svg);
   this.populateSVGEffects_(container);
   this.blockSpace.maxBlocks = Blockly.maxBlocks;
 

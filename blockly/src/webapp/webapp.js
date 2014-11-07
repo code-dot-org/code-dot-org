@@ -151,9 +151,11 @@ Webapp.init = function(config) {
 
   loadLevel();
 
-  var finishButtonFirstLine = _.isEmpty(level.softButtons);
-  var firstControlsRow = require('./controls.html')({assetUrl: BlocklyApps.assetUrl, showSlider: config.level.editCode, finishButton: finishButtonFirstLine});
-  var extraControlsRow = require('./extraControlRows.html')({assetUrl: BlocklyApps.assetUrl, finishButton: !finishButtonFirstLine, debugButtons: config.level.editCode});
+  var showSlider = !config.hide_source && config.level.editCode;
+  var showDebugButtons = !config.hide_source && config.level.editCode;
+  var finishButtonFirstLine = _.isEmpty(level.softButtons) && !showSlider;
+  var firstControlsRow = require('./controls.html')({assetUrl: BlocklyApps.assetUrl, showSlider: showSlider, finishButton: finishButtonFirstLine});
+  var extraControlsRow = require('./extraControlRows.html')({assetUrl: BlocklyApps.assetUrl, finishButton: !finishButtonFirstLine, debugButtons: showDebugButtons});
 
   config.html = page({
     assetUrl: BlocklyApps.assetUrl,
@@ -224,7 +226,9 @@ Webapp.init = function(config) {
 
   if (level.editCode) {
     var pauseButton = document.getElementById('pauseButton');
-    dom.addClickTouchEvent(pauseButton, Webapp.onPauseButton);
+    if (pauseButton) {
+      dom.addClickTouchEvent(pauseButton, Webapp.onPauseButton);
+    }
   }
 };
 
@@ -274,12 +278,17 @@ BlocklyApps.reset = function(first) {
   }
 
   if (level.editCode) {
+    Webapp.paused = false;
     // Reset the pause button:
     var pauseButton = document.getElementById('pauseButton');
-    pauseButton.textContent = webappMsg.pause();
-    pauseButton.disabled = true;
-    Webapp.paused = false;
-    document.getElementById('spinner').style.visibility = 'hidden';
+    if (pauseButton) {
+      pauseButton.textContent = webappMsg.pause();
+      pauseButton.disabled = true;
+    }
+    var spinner = document.getElementById('spinner');
+    if (spinner) {
+      spinner.style.visibility = 'hidden';
+    }
   }
 
   // Reset the Globals object used to contain program variables:
@@ -306,7 +315,7 @@ BlocklyApps.runButtonClick = function() {
   BlocklyApps.attempts++;
   Webapp.execute();
 
-  if (level.freePlay) {
+  if (level.freePlay && !BlocklyApps.hideSource) {
     var shareCell = document.getElementById('share-cell');
     shareCell.className = 'share-cell-enabled';
   }
@@ -446,8 +455,13 @@ Webapp.execute = function() {
 
   if (level.editCode) {
     var pauseButton = document.getElementById('pauseButton');
-    pauseButton.disabled = false;
-    document.getElementById('spinner').style.visibility = 'visible';
+    if (pauseButton) {
+      pauseButton.disabled = false;
+    }
+    var spinner = document.getElementById('spinner');
+    if (spinner) {
+      spinner.style.visibility = 'visible';
+    }
   }
 
   Webapp.running = true;
@@ -501,14 +515,24 @@ Webapp.onPuzzleComplete = function() {
     BlocklyApps.playAudio('failure');
   }
 
+  var program;
+
   if (level.editCode) {
     Webapp.testResults = levelComplete ?
       BlocklyApps.TestResults.ALL_PASS :
       BlocklyApps.TestResults.TOO_FEW_BLOCKS_FAIL;
-  }
 
-  var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
-  var textBlocks = Blockly.Xml.domToText(xml);
+    // If we want to "normalize" the JavaScript to avoid proliferation of nearly
+    // identical versions of the code on the service, we could do either of these:
+
+    // do an acorn.parse and then use escodegen to generate back a "clean" version
+    // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
+
+    program = BlocklyApps.editor.getValue();
+  } else {
+    var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+    program = Blockly.Xml.domToText(xml);
+  }
 
   Webapp.waitingForReport = true;
 
@@ -518,7 +542,7 @@ Webapp.onPuzzleComplete = function() {
       level: level.id,
       result: Webapp.result === BlocklyApps.ResultType.SUCCESS,
       testResult: Webapp.testResults,
-      program: encodeURIComponent(textBlocks),
+      program: encodeURIComponent(program),
       image: Webapp.encodedFeedbackImage,
       onComplete: Webapp.onReportComplete
     });
@@ -572,6 +596,7 @@ Webapp.callCmd = function (cmd) {
     case 'createButton':
     case 'createTextInput':
     case 'getText':
+    case 'setText':
     case 'setStyle':
     case 'attachEventHandler':
       BlocklyApps.highlight(cmd.id);
@@ -617,6 +642,15 @@ Webapp.getText = function (opts) {
   var div = document.getElementById(opts.elementId);
   if (divWebapp.contains(div)) {
     return String(div.value);
+  }
+  return false;
+};
+
+Webapp.setText = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var div = document.getElementById(opts.elementId);
+  if (divWebapp.contains(div)) {
+    div.value = opts.text;
   }
   return false;
 };

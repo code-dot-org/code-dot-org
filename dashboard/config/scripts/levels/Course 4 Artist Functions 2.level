@@ -34,7 +34,7 @@
           <title name="DIR">turnRight</title>
           <value name="VALUE">
             <block type="math_number">
-              <title name="NUM">???</title>
+              <title name="NUM">90</title>
             </block>
           </value>
         </block>
@@ -42,7 +42,7 @@
           <title name="DIR">turnLeft</title>
           <value name="VALUE">
             <block type="math_number">
-              <title name="NUM">???</title>
+              <title name="NUM">90</title>
             </block>
           </value>
         </block>
@@ -56,7 +56,7 @@
         <block type="controls_repeat_ext" inline="true">
           <value name="TIMES">
             <block type="math_number">
-              <title name="NUM">???</title>
+              <title name="NUM">3</title>
             </block>
           </value>
         </block>

@@ -239,7 +239,7 @@ en:
         playlab: 'Make an App'
         artist: 'Draw Something'
     user:
-      classroom: 'My students'
+      classroom: 'Teacher Home Page'
       label: 'Hi %{username}'
       stats: 'My progress'
       settings: 'My account'
