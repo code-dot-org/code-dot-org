@@ -57,6 +57,20 @@ Blockly.FunctionEditor = function() {
   this.onResizeWrapper_ = null;
 };
 
+
+/**
+ * The type of block to instantiate in the function editing area
+ * @type {string}
+ * @protected
+ */
+Blockly.FunctionEditor.prototype.definitionBlockType = 'procedures_defnoreturn';
+
+/**
+ * The type of block to instantiate for parameter definition
+ * @type {string}
+ */
+Blockly.FunctionEditor.prototype.parameterBlockType = 'parameters_get';
+
 Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
   var targetFunctionDefinitionBlock = Blockly.mainBlockSpace.findFunction(
       functionName);
