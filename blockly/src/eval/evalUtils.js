@@ -1,6 +1,6 @@
 /**
  * Throws an expection if val is not of the expected type. Type is either a
- * string (like "number" or "string") or an object (Like EvalObject).
+ * string (like "number" or "string") or an object (Like EvalImage).
  */
 module.exports.ensureType = function (val, type) {
   if (typeof(type) === "string") {
@@ -13,13 +13,11 @@ module.exports.ensureType = function (val, type) {
 };
 
 module.exports.getFill = function (style, color) {
-  // todo - 1asdf becomes 1 with parseInt. do we care?
-  // for now, we treat anything we don't recognize as solid.
-  var alpha = parseInt(style, 10);
-  if (style !== "outline") {
-    return color;
+  if (style === 'outline') {
+    return "none";
   }
-  return "none";
+  // for now, we treat anything we don't recognize as solid.
+  return color;
 };
 
 module.exports.getStroke = function (style, color) {

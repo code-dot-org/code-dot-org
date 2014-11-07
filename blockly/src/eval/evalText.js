@@ -1,5 +1,4 @@
-var EvalObject = require('./evalObject');
-var EvalString = require('./evalString');
+var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
 var EvalText = function (text, fontSize, color) {
@@ -7,17 +6,14 @@ var EvalText = function (text, fontSize, color) {
   evalUtils.ensureType(fontSize, "number");
   evalUtils.ensureType(color, "string");
 
-  EvalObject.apply(this);
+  EvalImage.apply(this, ['solid', color]);
 
   this.text_ = text;
   this.fontSize_ = fontSize;
 
-  this.style_ = 'solid';
-  this.color_ = color;
-
   this.element_ = null;
 };
-EvalText.inherits(EvalObject);
+EvalText.inherits(EvalImage);
 module.exports = EvalText;
 
 EvalText.prototype.draw = function (parent) {
@@ -33,5 +29,5 @@ EvalText.prototype.draw = function (parent) {
   this.element_.setAttribute('x', -bbox.width / 2);
   this.element_.setAttribute('y', -bbox.height / 2);
 
-  EvalObject.prototype.draw.apply(this, arguments);
+  EvalImage.prototype.draw.apply(this, arguments);
 };
