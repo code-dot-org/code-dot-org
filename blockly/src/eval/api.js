@@ -1,4 +1,5 @@
 var evalUtils = require('./evalUtils');
+var EvalImage = require('./evalImage');
 var EvalText = require('./evalText');
 var EvalCircle = require('./evalCircle');
 var EvalTriangle = require('./evalTriangle');
@@ -8,7 +9,7 @@ var EvalEllipse = require('./evalEllipse');
 var EvalText = require('./evalText');
 var EvalStar = require('./evalStar');
 
-// todo (brent) - make use of blockId?
+// We don't use blockId at all in Eval since everything is evaluated at once.
 
 exports.display = function (object) {
   if (object === undefined) {
@@ -59,10 +60,10 @@ exports.star = function (radius, fontSize, color) {
 exports.placeImage = function (x, y, image) {
   evalUtils.ensureType(x, "number");
   evalUtils.ensureType(y, "number");
-  // todo - validate we have an image
+  evalUtils.ensureType(image, EvalImage);
 
   // User inputs why in cartesian space. Convert to pixel space before sending
-  // to our EvalObject.
+  // to our EvalImage.
   y = evalUtils.cartesianToPixel(y);
 
   image.place(x, y);

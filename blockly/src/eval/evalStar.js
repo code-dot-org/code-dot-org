@@ -1,5 +1,4 @@
-var EvalObject = require('./evalObject');
-var EvalString = require('./evalString');
+var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
 var EvalStar = function (radius, style, color) {
@@ -7,15 +6,13 @@ var EvalStar = function (radius, style, color) {
   evalUtils.ensureType(style, "string");
   evalUtils.ensureType(color, "string");
 
-  EvalObject.apply(this);
+  EvalImage.apply(this, [style, color]);
 
   this.radius_ = radius;
-  this.color_ = color;
-  this.style_ = style;
 
   this.element_ = null;
 };
-EvalStar.inherits(EvalObject);
+EvalStar.inherits(EvalImage);
 module.exports = EvalStar;
 
 EvalStar.prototype.draw = function (parent) {
@@ -37,5 +34,5 @@ EvalStar.prototype.draw = function (parent) {
 
   this.element_.setAttribute('points', points.join(' '));
 
-  EvalObject.prototype.draw.apply(this, arguments);
+  EvalImage.prototype.draw.apply(this, arguments);
 };

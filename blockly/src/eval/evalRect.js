@@ -1,5 +1,4 @@
-var EvalObject = require('./evalObject');
-var EvalString = require('./evalString');
+var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
 var EvalRect = function (width, height, style, color) {
@@ -8,16 +7,14 @@ var EvalRect = function (width, height, style, color) {
   evalUtils.ensureType(style, "string");
   evalUtils.ensureType(color, "string");
 
-  EvalObject.apply(this);
+  EvalImage.apply(this, [style, color]);
 
   this.width_ = width;
   this.height_ = height;
-  this.color_ = color;
-  this.style_ = style;
 
   this.element_ = null;
 };
-EvalRect.inherits(EvalObject);
+EvalRect.inherits(EvalImage);
 module.exports = EvalRect;
 
 EvalRect.prototype.draw = function (parent) {
@@ -32,5 +29,5 @@ EvalRect.prototype.draw = function (parent) {
   this.element_.setAttribute('width', this.width_);
   this.element_.setAttribute('height', this.height_);
 
-  EvalObject.prototype.draw.apply(this, arguments);
+  EvalImage.prototype.draw.apply(this, arguments);
 };
