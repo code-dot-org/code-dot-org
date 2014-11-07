@@ -12943,6 +12943,10 @@ exports.setScoreText = function(id, text) {
   Studio.queueCmd(id, 'setScoreText', {'text': text});
 };
 
+exports.showCoordinates = function(id) {
+  Studio.queueCmd(id, 'showCoordinates', {});
+};
+
 exports.wait = function(id, value) {
   Studio.queueCmd(id, 'wait', {'value': value});
 };
@@ -13891,6 +13895,24 @@ exports.install = function(blockly, blockInstallOptions) {
     var arg = Blockly.JavaScript.valueToCode(this, 'TEXT',
         Blockly.JavaScript.ORDER_NONE) || '';
     return 'Studio.setScoreText(\'block_id_' + this.id + '\', ' + arg + ');\n';
+  };
+
+  blockly.Blocks.studio_showCoordinates = {
+    // Block for showing the protagonist's coordinates.
+    helpUrl: '',
+    init: function() {
+      this.setHSV(184, 1.00, 0.74);
+        this.appendDummyInput().appendTitle(msg.showCoordinates());
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.showCoordinatesTooltip());
+    }
+  };
+
+  generator.studio_showCoordinates = function() {
+    // Generate JavaScript for showing the protagonist's coordinates.
+    return 'Studio.showCoordinates(\'block_id_' + this.id + '\');\n';
   };
 
   blockly.Blocks.studio_setSpriteSpeed = {
@@ -15625,7 +15647,8 @@ levels.full_sandbox =  {
                         blockOfType('studio_setSpriteSpeed') +
                         blockOfType('studio_setSpriteEmotion') +
                         blockOfType('studio_vanish') +
-                        blockOfType('studio_setSpriteSize')) +
+                        blockOfType('studio_setSpriteSize') +
+                        blockOfType('studio_showCoordinates')) +
        createCategory(msg.catEvents(),
                         blockOfType('studio_whenArrow') +
                         blockOfType('studio_whenSpriteClicked') +
@@ -15956,6 +15979,9 @@ exports.load = function(assetUrl, id) {
   };
   skin.winter = {
     background: skin.assetUrl('background_winter.png'),
+  };
+  skin.grid = {
+    background: skin.assetUrl('background_grid.png'),
   };
 
   skin.avatarList = [ "dog", "cat", "penguin", "dinosaur", "octopus", "witch",
@@ -17191,7 +17217,11 @@ BlocklyApps.reset = function(first) {
     .setAttribute('visibility', 'hidden');
 
   // Reset configurable variables
-  Studio.setBackground({'value': 'cave'});
+  if (level.coordinateGridBackground) {
+    Studio.setBackground({value: 'grid'});
+  } else {
+    Studio.setBackground({value: 'cave'});
+  }
 
   // Reset currentCmdQueue and various counts:
   Studio.gesturesObserved = {};
@@ -17698,6 +17728,16 @@ Studio.displayScore = function() {
   score.setAttribute('visibility', 'visible');
 };
 
+Studio.showCoordinates = function() {
+  var sprite = Studio.sprite[Studio.protaganistSpriteIndex];
+  // convert to math coordinates, with the origin at the bottom left
+  // corner of the grid, and distances measured from the center of the
+  // sprite.
+  var x = sprite.x + 50;
+  var y = 350 - sprite.y;
+  Studio.setScoreText({text: 'x: ' + x + ' y: ' + y});
+};
+
 Studio.queueCmd = function (id, name, opts) {
   var cmd = {
     'id': id,
@@ -17806,6 +17846,10 @@ Studio.callCmd = function (cmd) {
     case 'setScoreText':
       BlocklyApps.highlight(cmd.id);
       Studio.setScoreText(cmd.opts);
+      break;
+    case 'showCoordinates':
+      BlocklyApps.highlight(cmd.id);
+      Studio.showCoordinates();
       break;
     case 'wait':
       if (!cmd.opts.started) {
@@ -19883,6 +19927,10 @@ exports.setSpriteZombie = function(d){return "到僵屍圖像"};
 exports.shareStudioTwitter = function(d){return "看看我在@codeorg ，自己所編寫的故事。"};
 
 exports.shareGame = function(d){return "分享你的故事："};
+
+exports.showCoordinates = function(d){return "show coordinates"};
+
+exports.showCoordinatesTooltip = function(d){return "show the protagonist's coordinates on the screen"};
 
 exports.showTitleScreen = function(d){return "顯示標題螢幕"};
 
