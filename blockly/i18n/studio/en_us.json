@@ -199,6 +199,7 @@
   "showTSDefTitle": "type title here",
   "showTSDefText": "type text here",
   "showTitleScreenTooltip": "Show a title screen with the associated title and text.",
+  "size": "size",
   "setSprite": "set",
   "setSpriteN": "set actor {spriteIndex}",
   "soundCrunch": "crunch",

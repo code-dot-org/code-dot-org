@@ -58,7 +58,7 @@ class Studio < Grid
   <block type="studio_setSpriteParams">
     <value name="SPRITE">
       <block type="math_number">
-        <title name="NUM">0</title>
+        <title name="NUM">1</title>
       </block>
     </value>
   </block>
@@ -90,7 +90,7 @@ class Studio < Grid
   <block type="studio_moveDistanceParamsSprite">
     <value name="SPRITE">
       <block type="math_number">
-        <title name="NUM">0</title>
+        <title name="NUM">1</title>
       </block>
     </value>
     <value name="DISTANCE">
@@ -103,7 +103,7 @@ class Studio < Grid
   <block type="studio_stopSprite">
     <value name="SPRITE">
       <block type="math_number">
-        <title name="NUM">0</title>
+        <title name="NUM">1</title>
       </block>
     </value>
   </block>
@@ -153,8 +153,39 @@ class Studio < Grid
   <block type="studio_throw" />
   <block type="studio_makeProjectile" />
   <block type="studio_setSpriteSpeed" />
+  <block type="studio_setSpriteSpeedParams">
+    <value name="SPRITE">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+    <value name="VALUE">
+      <block type="math_number">
+        <title name="NUM">5</title>
+      </block>
+    </value>
+  </block>
   <block type="studio_setSpriteEmotion" />
+  <block type="studio_setSpriteEmotionParams">
+    <value name="SPRITE">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+  </block>
   <block type="studio_setSpriteSize" />
+  <block type="studio_setSpriteSizeParams">
+    <value name="SPRITE">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+    <value name="VALUE">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+  </block>
   <block type="studio_vanish" />
   <block type="studio_vanishSprite">
     <value name="SPRITE">
