@@ -1783,6 +1783,7 @@ Studio.callCmd = function (cmd) {
     case 'showCoordinates':
       BlocklyApps.highlight(cmd.id);
       Studio.showCoordinates();
+      break;
     case 'wait':
       if (!cmd.opts.started) {
         BlocklyApps.highlight(cmd.id);
