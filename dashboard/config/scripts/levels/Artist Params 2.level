@@ -15,13 +15,16 @@
     "x": "150",
     "y": "225",
     "free_play": "false",
-    "impressive": "false"
+    "impressive": "false",
+    "ideal": "3",
+    "slider_speed": ".5",
+    "use_modal_function_editor": "false"
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
+        <block type="when_run" movable="false" deletable="false">
           <next>
             <block type="draw_a_triangle" inline="false"/>
           </next>
@@ -65,23 +68,23 @@
           <mutation counter="counter"/>
           <value name="FROM">
             <block type="math_number">
-              <title name="NUM">???</title>
+              <title name="NUM">1</title>
             </block>
           </value>
           <value name="TO">
             <block type="math_number">
-              <title name="NUM">???</title>
+              <title name="NUM">100</title>
             </block>
           </value>
           <value name="BY">
             <block type="math_number">
-              <title name="NUM">???</title>
+              <title name="NUM">10</title>
             </block>
           </value>
         </block>
         <block type="controls_repeat_ext" inline="true"/>
         <block type="math_number">
-          <title name="NUM">???</title>
+          <title name="NUM">0</title>
         </block>
         <block type="draw_a_triangle" inline="false"/>
       </xml>

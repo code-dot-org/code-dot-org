@@ -15,7 +15,9 @@
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "free_play": "false",
-    "impressive": "false"
+    "impressive": "false",
+    "ideal": "11",
+    "use_modal_function_editor": "false"
   }
 }]]></config>
   <blocks>
