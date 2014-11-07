@@ -4089,7 +4089,10 @@ Blockly.Trashcan.prototype.position_ = function() {
   if(Blockly.RTL) {
     this.left_ = this.MARGIN_SIDE_
   }else {
-    this.left_ = metrics.viewWidth - this.WIDTH_ - this.MARGIN_SIDE_
+    this.left_ = metrics.viewWidth - this.WIDTH_ - this.MARGIN_SIDE_;
+    if(this.blockSpace_.blockSpaceEditor.flyout_) {
+      this.left_ -= this.blockSpace_.blockSpaceEditor.flyout_.width_
+    }
   }
   this.top_ = this.MARGIN_TOP_;
   this.svgGroup_.setAttribute("transform", "translate(" + this.left_ + "," + this.top_ + ")")
@@ -18588,12 +18591,12 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
     throw new Error("Can't find definition block to edit");
   }
   this.show();
-  targetFunctionDefinitionBlock.setUserVisible(true);
   var dom = Blockly.Xml.blockToDom_(targetFunctionDefinitionBlock);
   targetFunctionDefinitionBlock.dispose(false, false, true);
   this.functionDefinitionBlock = Blockly.Xml.domToBlock_(Blockly.modalBlockSpace, dom);
   this.functionDefinitionBlock.moveTo(Blockly.RTL ? Blockly.modalBlockSpace.getMetrics().viewWidth - FRAME_MARGIN_SIDE : FRAME_MARGIN_SIDE, FRAME_MARGIN_TOP);
   this.functionDefinitionBlock.setMovable(false);
+  this.functionDefinitionBlock.setUserVisible(true);
   this.populateParamToolbox_();
   goog.dom.getElement("functionNameText").value = functionName;
   goog.dom.getElement("functionDescriptionText").value = this.functionDefinitionBlock.description_ || ""
