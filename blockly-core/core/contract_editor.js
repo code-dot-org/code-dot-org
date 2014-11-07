@@ -23,6 +23,11 @@ goog.require('goog.events');
  */
 Blockly.ContractEditor = function() {
   Blockly.ContractEditor.superClass_.constructor.call(this);
+
+  /** @type {goog.ui.Select} */
+  this.inputTypeSelector = null;
+  /** @type {goog.ui.Select} */
+  this.outputTypeSelector = null;
 };
 goog.inherits(Blockly.ContractEditor, Blockly.FunctionEditor);
 
@@ -72,42 +77,39 @@ Blockly.ContractEditor.prototype.createContractDom_ = function() {
 };
 
 Blockly.ContractEditor.prototype.initializeOutputTypeDropdown = function() {
-  var flatSelector = new goog.ui.Select(null, null,
+  this.outputTypeSelector = new goog.ui.Select(null, null,
     goog.ui.FlatMenuButtonRenderer.getInstance());
 
   goog.object.forEach(Blockly.ContractEditor.typesToColors, function(value, key) {
-    flatSelector.addItem(new goog.ui.MenuItem(key));
+    this.outputTypeSelector.addItem(new goog.ui.MenuItem(key));
   }, this);
-  flatSelector.setDefaultCaption(Blockly.Msg.FUNCTIONAL_TYPE_LABEL);
+  this.outputTypeSelector.setDefaultCaption(Blockly.Msg.FUNCTIONAL_TYPE_LABEL);
 
-  goog.events.listen(flatSelector, goog.ui.Component.EventType.CHANGE,
+  goog.events.listen(this.outputTypeSelector, goog.ui.Component.EventType.CHANGE,
     goog.bind(this.outputTypeDropdownChange, this));
 
-  flatSelector.render(goog.dom.getElement('outputTypeDropdown'));
+  this.outputTypeSelector.render(goog.dom.getElement('outputTypeDropdown'));
 };
 
 Blockly.ContractEditor.prototype.outputTypeDropdownChange = function(comboBoxEvent) {
   var newType = comboBoxEvent.target.getContent();
-  console.log('New output type is ' + newType);
+  this.functionDefinitionBlock.updateOutputType(newType);
 };
 
 Blockly.ContractEditor.prototype.initializeInputTypeDropdown = function() {
-  /** todo(bjordan): refactor into simplification */
-  var flatSelector = new goog.ui.Select(null, null,
+  this.inputTypeSelector = new goog.ui.Select(null, null,
     goog.ui.FlatMenuButtonRenderer.getInstance());
 
   goog.object.forEach(Blockly.ContractEditor.typesToColors, function(value, key) {
-    flatSelector.addItem(new goog.ui.MenuItem(key));
+    this.inputTypeSelector.addItem(new goog.ui.MenuItem(key));
   }, this);
-  flatSelector.setDefaultCaption(Blockly.Msg.FUNCTIONAL_TYPE_LABEL);
+  this.inputTypeSelector.setDefaultCaption(Blockly.Msg.FUNCTIONAL_TYPE_LABEL);
 
-  goog.events.listen(flatSelector, goog.ui.Component.EventType.CHANGE,
-    goog.bind(this.inputTypeDropdownChange, this));
-
-  flatSelector.render(goog.dom.getElement('paramTypeDropdown'));
+  this.inputTypeSelector.render(goog.dom.getElement('paramTypeDropdown'));
 };
 
-Blockly.ContractEditor.prototype.inputTypeDropdownChange = function(comboBoxEvent) {
-  var newType = comboBoxEvent.target.getContent();
-  console.log('New input type is ' + newType);
+Blockly.ContractEditor.prototype.addParamFromInputField_ = function(textElement) {
+  Blockly.ContractEditor.superClass_.addParamFromInputField_.call(this, textElement);
+  var justAddedParamBlock = goog.array.peek(this.flyout_.blockSpace_.topBlocks_);
+  justAddedParamBlock.changeFunctionalOutput(this.inputTypeSelector.getValue());
 };

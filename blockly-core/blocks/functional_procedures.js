@@ -123,6 +123,10 @@ Blockly.Blocks.functional_definition = {
     Blockly.Procedures.mutateCallers(this.getTitleValue('NAME'),
         this.blockSpace, this.arguments_, this.paramIds_);
   },
+  updateOutputType: function(outputType) {
+    this.changeFunctionalOutput(outputType);
+    // TODO(bjordan): update callers
+  },
   /**
    * Disposes of this block and (optionally) its callers
    * @param {boolean} healStack see superclass

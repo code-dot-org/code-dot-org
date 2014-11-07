@@ -58,5 +58,28 @@ Blockly.Blocks.functional_parameters_get = {
     Blockly.functionEditor.renameParameter(oldName, newName);
     Blockly.functionEditor.refreshParamsEverywhere();
   },
-  removeVar: Blockly.Blocks.variables_get.removeVar
+  removeVar: Blockly.Blocks.variables_get.removeVar,
+  mutationToDom: function() {
+    return; // TODO(bjordan): implement
+    var container = document.createElement('mutation');
+    // Add description mutation
+    if (this.description_) {
+      var desc = document.createElement('description');
+      desc.innerHTML = this.description_;
+      container.appendChild(desc);
+    }
+    return container;
+  },
+  domToMutation: function(xmlElement) {
+    return; // TODO(bjordan): implement
+    this.arguments_ = [];
+    for (var x = 0, childNode; childNode = xmlElement.childNodes[x]; x++) {
+      var nodeName = childNode.nodeName.toLowerCase();
+      if (nodeName === 'arg') {
+        this.arguments_.push(childNode.getAttribute('name'));
+      } else if (nodeName === 'description') {
+        this.description_ = childNode.innerHTML;
+      }
+    }
+  }
 };

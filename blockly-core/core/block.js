@@ -1596,6 +1596,25 @@ Blockly.Block.prototype.setFunctionalOutput = function(hasOutput, opt_check) {
   }
 };
 
+Blockly.Block.prototype.changeFunctionalOutput = function(newType) {
+//  if (this.previousConnection) {
+//    if (this.previousConnection.targetConnection) {
+//      // TODO(bjordan): check if type has changed using something like checkType_
+//      console.log("Warning: potential invalid type");
+//    }
+////    this.previousConnection.dispose();
+////    this.previousConnection = null;
+//  }
+  this.setHSV.apply(this, Blockly.ContractEditor.typesToColors[newType]);
+  this.previousConnection = this.previousConnection || new Blockly.Connection(this, Blockly.FUNCTIONAL_OUTPUT);
+  this.previousConnection.setCheck(newType);
+
+  if (this.rendered) {
+    this.render();
+    this.bumpNeighbours_();
+  }
+};
+
 /**
  * Set whether value inputs are arranged horizontally or vertically.
  * @param {boolean} inputsInline True if inputs are horizontal.
