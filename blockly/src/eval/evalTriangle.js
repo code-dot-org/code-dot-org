@@ -3,14 +3,15 @@ var EvalString = require('./evalString');
 var evalUtils = require('./evalUtils');
 
 var EvalTriangle = function (edge, style, color) {
-  evalUtils.ensureType(style, EvalString);
-  evalUtils.ensureType(color, EvalString);
+  evalUtils.ensureType(edge, "number");
+  evalUtils.ensureType(style, "string");
+  evalUtils.ensureType(color, "string");
 
   EvalObject.apply(this);
 
   this.edge_ = edge;
-  this.color_ = color.getValue();
-  this.style_ = style.getValue();
+  this.color_ = color;
+  this.style_ = style;
 
   this.element_ = null;
 };

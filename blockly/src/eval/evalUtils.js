@@ -1,6 +1,13 @@
+/**
+ * Throws an expection if val is not of the expected type. Type is either a
+ * string (like "number" or "string") or an object (Like EvalObject).
+ */
 module.exports.ensureType = function (val, type) {
-  if (!(val instanceof type)) {
-    // todo - better strategy than throwing?
+  if (typeof(type) === "string") {
+    if (typeof(val) !== type) {
+      throw new Error("expected type: " + type + "\ngot type: " + typeof(val));
+    }
+  } else if (!(val instanceof type)) {
     throw new Error("unexpected object");
   }
 };

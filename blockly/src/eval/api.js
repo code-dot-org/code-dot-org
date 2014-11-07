@@ -1,5 +1,5 @@
 var evalUtils = require('./evalUtils');
-var EvalString = require('./evalString');
+var EvalText = require('./evalText');
 var EvalCircle = require('./evalCircle');
 var EvalTriangle = require('./evalTriangle');
 var EvalMulti = require('./evalMulti');
@@ -12,16 +12,12 @@ var EvalStar = require('./evalStar');
 
 exports.display = function (object) {
   if (object === undefined) {
-    object = new EvalString("");
+    object = "";
   }
   if (!object.draw) {
-    object = new EvalString(object.toString());
+    object = new EvalText(object.toString(), 12, 'black');
   }
   Eval.displayedObject = object;
-};
-
-exports.string = function (str, blockId) {
-  return new EvalString(str);
 };
 
 exports.circle = function (size, style, color) {
@@ -60,9 +56,10 @@ exports.star = function (radius, fontSize, color) {
   return new EvalStar(radius, fontSize, color);
 };
 
-exports.placeImage = function (x, y, image, blockId) {
-  // todo - validate we have an image, use public setter
-  // todo - where does argument validation happen?
+exports.placeImage = function (x, y, image) {
+  evalUtils.ensureType(x, "number");
+  evalUtils.ensureType(y, "number");
+  // todo - validate we have an image
 
   // User inputs why in cartesian space. Convert to pixel space before sending
   // to our EvalObject.
@@ -73,6 +70,8 @@ exports.placeImage = function (x, y, image, blockId) {
 };
 
 exports.rotateImage = function (degrees, image) {
+  evalUtils.ensureType(degrees, "number");
+
   image.rotate(degrees);
   return image;
 };
@@ -83,15 +82,15 @@ exports.scaleImage = function (factor, image) {
 };
 
 exports.stringAppend = function (first, second) {
-  evalUtils.ensureType(first, EvalString);
-  evalUtils.ensureType(second, EvalString);
+  evalUtils.ensureType(first, "string");
+  evalUtils.ensureType(second, "string");
 
-  return new EvalString(first.getValue() + second.getValue());
+  return first + second;
 };
 
 // polling for values
 exports.stringLength = function (str) {
-  evalUtils.ensureType(str, EvalString);
+  evalUtils.ensureType(str, "string");
 
-  return str.getValue().length;
+  return str.length;
 };
