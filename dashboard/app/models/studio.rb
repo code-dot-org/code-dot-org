@@ -55,6 +55,13 @@ class Studio < Grid
 </category>
 <category name="Actions">
   <block type="studio_setSprite" />
+  <block type="studio_setSpriteParams">
+    <value name="SPRITE">
+      <block type="math_number">
+        <title name="NUM">0</title>
+      </block>
+    </value>
+  </block>
   <block type="studio_setBackground" />
   <block type="studio_showTitleScreen">
     <title name="TITLE">type title here</title>
@@ -80,7 +87,26 @@ class Studio < Grid
       </block>
     </value>
   </block>
+  <block type="studio_moveDistanceParamsSprite">
+    <value name="SPRITE">
+      <block type="math_number">
+        <title name="NUM">0</title>
+      </block>
+    </value>
+    <value name="DISTANCE">
+      <block type="math_number">
+        <title name="NUM">25</title>
+      </block>
+    </value>
+  </block>
   <block type="studio_stop" />
+  <block type="studio_stopSprite">
+    <value name="SPRITE">
+      <block type="math_number">
+        <title name="NUM">0</title>
+      </block>
+    </value>
+  </block>
   <block type="studio_wait">
     <title name="VALUE">500</title>
   </block>
