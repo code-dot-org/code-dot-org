@@ -26,41 +26,53 @@ exports.setBackground = function (id, value) {
 };
 
 exports.setSprite = function (id, spriteIndex, value) {
-  Studio.queueCmd(id,
-                  'setSprite',
-                  {'spriteIndex': spriteIndex, 'value': value});
+  Studio.queueCmd(id, 'setSprite', {
+    'spriteIndex': spriteIndex,
+    'value': value
+  });
 };
 
-exports.saySprite = function (id, spriteIndex, text) {
-  Studio.queueCmd(id, 'saySprite', {'spriteIndex': spriteIndex, 'text': text});
+exports.saySprite = function (id, spriteIndex, text, opt_seconds) {
+  Studio.queueCmd(id, 'saySprite', {
+    'spriteIndex': spriteIndex,
+    'text': text,
+    'seconds': opt_seconds
+  });
 };
 
 exports.showTitleScreen = function (id, title, text) {
-  Studio.queueCmd(id, 'showTitleScreen', {'title': title, 'text': text});
+  Studio.queueCmd(id, 'showTitleScreen', {
+    'title': title,
+    'text': text
+  });
 };
 
 exports.setSpriteEmotion = function (id, spriteIndex, value) {
-  Studio.queueCmd(id,
-                  'setSpriteEmotion',
-                  {'spriteIndex': spriteIndex, 'value': value});
+  Studio.queueCmd(id, 'setSpriteEmotion', {
+    'spriteIndex': spriteIndex,
+    'value': value
+  });
 };
 
 exports.setSpriteSpeed = function (id, spriteIndex, value) {
-  Studio.queueCmd(id,
-                  'setSpriteSpeed',
-                  {'spriteIndex': spriteIndex, 'value': value});
+  Studio.queueCmd(id, 'setSpriteSpeed', {
+    'spriteIndex': spriteIndex,
+    'value': value
+  });
 };
 
 exports.setSpriteSize = function (id, spriteIndex, value) {
-  Studio.queueCmd(id,
-                  'setSpriteSize',
-                  {'spriteIndex': spriteIndex, 'value': value});
+  Studio.queueCmd(id, 'setSpriteSize', {
+    'spriteIndex': spriteIndex,
+    'value': value
+  });
 };
 
 exports.setSpritePosition = function (id, spriteIndex, value) {
-  Studio.queueCmd(id,
-                  'setSpritePosition',
-                  {'spriteIndex': spriteIndex, 'value': value});
+  Studio.queueCmd(id, 'setSpritePosition', {
+    'spriteIndex': spriteIndex,
+    'value': value
+  });
 };
 
 exports.playSound = function(id, soundName) {
@@ -72,28 +84,33 @@ exports.stop = function(id, spriteIndex) {
 };
 
 exports.throwProjectile = function(id, spriteIndex, dir, className) {
-  Studio.queueCmd(id,
-                  'throwProjectile',
-                  {'spriteIndex': spriteIndex,
-                   'dir': dir,
-                   'className': className});
+  Studio.queueCmd(id, 'throwProjectile', {
+    'spriteIndex': spriteIndex,
+    'dir': dir,
+    'className': className
+  });
 };
 
 exports.makeProjectile = function(id, className, action) {
-  Studio.queueCmd(id,
-                  'makeProjectile',
-                  {'className': className, 'action': action});
+  Studio.queueCmd(id, 'makeProjectile', {
+    'className': className,
+    'action': action
+  });
 };
 
 exports.move = function(id, spriteIndex, dir) {
-  Studio.queueCmd(id, 'move', {'spriteIndex': spriteIndex, 'dir': dir});
+  Studio.queueCmd(id, 'move', {
+    'spriteIndex': spriteIndex,
+    'dir': dir
+  });
 };
 
 exports.moveDistance = function(id, spriteIndex, dir, distance) {
-  Studio.queueCmd(
-      id,
-      'moveDistance',
-      {'spriteIndex': spriteIndex, 'dir': dir, 'distance': distance});
+  Studio.queueCmd(id, 'moveDistance', {
+    'spriteIndex': spriteIndex,
+    'dir': dir,
+    'distance': distance
+  });
 };
 
 exports.changeScore = function(id, value) {

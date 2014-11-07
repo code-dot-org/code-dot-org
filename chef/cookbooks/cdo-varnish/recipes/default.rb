@@ -1,3 +1,7 @@
+#
+# Cookbook Name:: cdo-varnish
+# Recipe:: default
+#
 apt_package "varnish"
 
 service "varnish" do
@@ -5,7 +9,7 @@ service "varnish" do
 end
 
 template '/etc/default/varnish' do
-  source 'varnish_config.erb'
+  source 'config.erb'
   user 'root'
   group 'root'
   mode '0644'
@@ -13,7 +17,7 @@ template '/etc/default/varnish' do
 end
 
 template '/etc/varnish/default.vcl' do
-  source 'varnish_vcl.erb'
+  source 'default.vcl.erb'
   user 'root'
   group 'root'
   mode '0644'
@@ -21,7 +25,7 @@ template '/etc/varnish/default.vcl' do
 end
 
 template '/etc/varnish/secret' do
-  source 'varnish_secret.erb'
+  source 'secret.erb'
   user 'root'
   group 'root'
   mode '0600'

@@ -48,7 +48,7 @@ VARNISH_THREAD_TIMEOUT=120
 #VARNISH_STORAGE_SIZE=10G
 #VARNISH_STORAGE_FILE=/mnt/varnish.cache
 #VARNISH_STORAGE="file,${VARNISH_STORAGE_FILE},${VARNISH_STORAGE_SIZE}"
-VARNISH_STORAGE="<%= node['cdo-apps']['varnish']['storage'] %>"
+VARNISH_STORAGE="<%= node['cdo-varnish']['storage'] %>"
 
 # File containing administration secret
 VARNISH_SECRET_FILE=/etc/varnish/secret
