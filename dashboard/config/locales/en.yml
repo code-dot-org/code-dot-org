@@ -469,6 +469,8 @@ en:
     wrong_body: "The solution you've entered is not correct.  Please try again!"
     correct_title: "Correct"
     correct_body: "That is the correct answer."
+  text_match:
+    placeholder: "Enter your answer here"
   dialog:
     ok: "OK"
   time:
