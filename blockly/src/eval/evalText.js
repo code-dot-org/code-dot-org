@@ -11,6 +11,7 @@ var EvalStringImage = function (text, fontSize, color) {
   this.text_ = text.getValue();
   this.fontSize_ = fontSize;
 
+  this.style_ = 'solid';
   this.color_ = color.getValue();
 
   this.element_ = null;
@@ -25,6 +26,11 @@ EvalStringImage.prototype.draw = function (parent) {
   }
   this.element_.textContent = this.text_;
   this.element_.setAttribute('style', 'font-size: ' + this.fontSize_ + 'pt');
+
+  var bbox = this.element_.getBBox();
+  // center at origin
+  this.element_.setAttribute('x', -bbox.width / 2);
+  this.element_.setAttribute('y', -bbox.height / 2);
 
   EvalObject.prototype.draw.apply(this, arguments);
 };
