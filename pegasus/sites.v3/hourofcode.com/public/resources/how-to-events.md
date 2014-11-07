@@ -1,7 +1,7 @@
 Hour of Code Event How to Guide
 ====
 
-Host an Hour of Code event during Computer Science Education Week (Dec 8-14) to celebrate computer science and inspire more students to enter the field. Anyone, anywhere can organize an Hour of Code event. 
+Host an Hour of Code event during Computer Science Education Week (Dec 8-14) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event. 
 
 ## 1) Prepare for your event
 - Determine a venue, date and time
@@ -14,6 +14,7 @@ Host an Hour of Code event during Computer Science Education Week (Dec 8-14) to 
 - Give an intro overviewing the importance of computer science.
 	- Discuss these  <a href="<%= hoc_uri('/resources/stats') %>">statistics</a>. 
 	- Show these <a href="<%= hoc_uri('/resources/stats') %>">infographics</a>.
+	<br/>
 	<br/>
 - Other event ideas:
 	- Invite a local industry leader to discuss his or her work involving computer science
