@@ -58,13 +58,16 @@ Blockly.Procedures.allProcedures = function() {
     if (func) {
       var tuple = func.call(blocks[x]);
       if (tuple) {
-        // TODO(bjordan): clean up pattern
-        if (tuple[3]) {
-          proceduresFunctional.push(tuple);
-        } else if (tuple[2]) {
-          proceduresReturn.push(tuple);
-        } else {
-          proceduresNoReturn.push(tuple);
+        switch(blocks[x].type) {
+          case 'functional_definition':
+            proceduresFunctional.push(tuple);
+            break;
+          case 'procedures_defreturn':
+            proceduresReturn.push(tuple);
+            break;
+          case 'procedures_defnoreturn':
+            proceduresNoReturn.push(tuple);
+            break;
         }
       }
     }
