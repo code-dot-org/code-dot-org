@@ -23,7 +23,7 @@ end
 namespace :build do
 
   task :configure do
-    if CDO.chef_managed
+    if CDO.chef_managed && !(rack_env?(:production) && CDO.name =='daemon')
       HipChat.log 'Applying <b>chef</b> profile...'
       RakeUtils.sudo 'chef-client'
     end
@@ -65,7 +65,7 @@ namespace :build do
 
   task :stop_varnish do
     Dir.chdir(aws_dir) do
-      unless rack_env?(:development)
+      unless rack_env?(:development) || (RakeUtils.system_('ps aux | grep -v grep | grep varnishd -q') != 0)
         HipChat.log 'Stopping <b>varnish</b>...'
         RakeUtils.stop_service 'varnish'
       end
@@ -131,7 +131,7 @@ namespace :build do
 
   task :start_varnish do
     Dir.chdir(aws_dir) do
-      unless rack_env?(:development)
+      unless rack_env?(:development) || (RakeUtils.system_('ps aux | grep -v grep | grep varnishd -q') == 0)
         HipChat.log 'Starting <b>varnish</b>...'
         RakeUtils.start_service 'varnish'
       end
