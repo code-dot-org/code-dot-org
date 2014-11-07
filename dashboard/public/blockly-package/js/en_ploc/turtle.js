@@ -10196,6 +10196,7 @@ Turtle.init = function(config) {
     Turtle.ctxImages = createCanvas('images', 400, 400).getContext('2d');
     Turtle.ctxPredraw = createCanvas('predraw', 400, 400).getContext('2d');
     Turtle.ctxScratch = createCanvas('scratch', 400, 400).getContext('2d');
+    Turtle.ctxPattern = createCanvas('pattern', 400, 400).getContext('2d');
     Turtle.ctxFeedback = createCanvas('feedback', 154, 154).getContext('2d');
 
     // Create display canvas.
@@ -10203,6 +10204,27 @@ Turtle.init = function(config) {
     var visualization = document.getElementById('visualization');
     visualization.appendChild(display);
     Turtle.ctxDisplay = display.getContext('2d');
+
+
+    if (skin.id == "anna" || skin.id == "elsa") {
+      Blockly.JavaScript.colour_random = function() {
+        // Generate a random colour.
+        if (!Blockly.JavaScript.definitions_.colour_random) {
+          var functionName = Blockly.JavaScript.variableDB_.getDistinctName(
+              'colour_random', Blockly.Generator.NAME_TYPE);
+          Blockly.JavaScript.colour_random.functionName = functionName;
+          var func = [];
+          func.push('function ' + functionName + '() {');
+          func.push('  var colors = [ "#e8ebed", "#bbd1e4", "#e8ebed", "#1e618f", "#212b62", "#40808f", "#a9d0dd", "#a9d0dd", "#56a7b5", "#3d839c", "#7eb3a8", "#ebddd8", "#82849e", "#3f7799", "#59a3bd", "#64c2c7", "#bbd9d9", "#e8e7ef"];');
+          //func.push('  return "rgb(" + Math.floor(Math.random()*255) + ",0,0);"');
+          func.push('  return colors[Math.floor(Math.random()*colors.length)];');
+          func.push('}');
+          Blockly.JavaScript.definitions_.colour_random = func.join('\n');
+        }
+        var code = Blockly.JavaScript.colour_random.functionName + '()';
+        return [code, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+      };
+    }
 
     // Set their initial contents.
     Turtle.loadTurtle();
@@ -10260,6 +10282,7 @@ Turtle.drawLogOnCanvas = function(log, canvas) {
   while (log.length) {
     var tuple = log.shift();
     Turtle.step(tuple[0], tuple.splice(1), {smoothAnimate: false});
+    clearTuple();
   }
   canvas.globalCompositeOperation = 'copy';
   canvas.drawImage(Turtle.ctxScratch.canvas, 0, 0);
@@ -10438,6 +10461,7 @@ BlocklyApps.reset = function(ignore) {
   }
   // Clear the display.
   Turtle.ctxScratch.canvas.width = Turtle.ctxScratch.canvas.width;
+  Turtle.ctxPattern.canvas.width = Turtle.ctxPattern.canvas.width;
   if (skin.id == "anna") {
     Turtle.ctxScratch.strokeStyle = 'rgb(255,255,238)';
     Turtle.ctxScratch.fillStyle = 'rgb(255,255,238)';
@@ -10520,6 +10544,10 @@ Turtle.display = function() {
   // Draw the predraw layer.
   Turtle.ctxDisplay.globalCompositeOperation = 'source-over';
   Turtle.ctxDisplay.drawImage(Turtle.ctxPredraw.canvas, 0, 0);
+
+  // Draw the pattern layer.
+  Turtle.ctxDisplay.globalCompositeOperation = 'source-over';
+  Turtle.ctxDisplay.drawImage(Turtle.ctxPattern.canvas, 0, 0);
 
   // Draw the user layer.
   Turtle.ctxDisplay.globalCompositeOperation = 'source-over';
@@ -10814,7 +10842,9 @@ Turtle.step = function(command, values, options) {
     case 'PC':  // Pen Colour
       Turtle.ctxScratch.strokeStyle = values[0];
       Turtle.ctxScratch.fillStyle = values[0];
-      Turtle.isDrawingWithPattern = false;
+      if (skin.id != "anna" && skin.id != "elsa") {
+        Turtle.isDrawingWithPattern = false;
+      }
       break;
     case 'PS':  // Pen style with image
       if (!values[0] || values[0] == 'DEFAULT') {
@@ -10977,26 +11007,26 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
   var startY;
 
   if (skin.id == "elsa") {
-    Turtle.ctxScratch.moveTo(Turtle.stepStartX, Turtle.stepStartY);
+    Turtle.ctxPattern.moveTo(Turtle.stepStartX, Turtle.stepStartY);
     img = Turtle.patternForPaths;
     startX = Turtle.stepStartX;
     startY = Turtle.stepStartY;
 
     var lineDistance = jumpDistanceCovered;
 
-    Turtle.ctxScratch.save();
-    Turtle.ctxScratch.translate(startX, startY);
-    Turtle.ctxScratch.rotate(Math.PI * (Turtle.heading - 90) / 180); // increment the angle and rotate the image.
+    Turtle.ctxPattern.save();
+    Turtle.ctxPattern.translate(startX, startY);
+    Turtle.ctxPattern.rotate(Math.PI * (Turtle.heading - 90) / 180); // increment the angle and rotate the image.
                                                                      // Need to subtract 90 to accomodate difference in canvas
                                                                      // vs. Turtle direction
 
-    Turtle.ctxScratch.drawImage(img,
+    Turtle.ctxPattern.drawImage(img,
       jumpDistanceCovered, 0,             // Start point for clipping image
       jumpDistance, img.height,           // clip region size
       jumpDistanceCovered - 7, - 18,      // draw location relative to the ctx.translate point pre-rotation
       jumpDistance, img.height);
 
-    Turtle.ctxScratch.restore();
+    Turtle.ctxPattern.restore();
 
   } else {
 
