@@ -1,3 +1,0 @@
-name 'test open response assessment'
-title 'Open Response'
-prompt 'Put the prompt here.'
