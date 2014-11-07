@@ -12,14 +12,14 @@ end
 
 apt_package 'newrelic-sysmond'
 
+service 'newrelic-sysmond' do
+  action [:enable]
+end
+
 template '/etc/newrelic/nrsysmond.cfg' do
   source 'nrsysmond.cfg.erb'
   user 'root'
   group 'newrelic'
   mode '640'
   notifies :restart, "service[newrelic-sysmond]", :immediately
-end
-
-service 'newrelic-sysmond' do
-  action [:start, :enable]
 end

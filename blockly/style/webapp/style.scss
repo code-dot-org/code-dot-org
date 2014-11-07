@@ -26,6 +26,11 @@ $root: '/blockly/media/webapp/'; //TODO: Parameterize for asset pipeline
   fill: #eee;
 }
 
+#pauseButton {
+  min-width: 111px;
+  margin-right: 10px;
+}
+
 /* Sprited icons. */
 .icon21 {
   height: 21px;

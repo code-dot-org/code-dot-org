@@ -108,6 +108,16 @@ class Studio < Grid
       <block type="text" />
     </value>
   </block>
+  <block type="studio_saySpriteParamsTime" inline="true">
+    <value name="TEXT">
+      <block type="text" />
+    </value>
+    <value name="TIME">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+  </block>
   <block type="studio_setSpritePosition" />
   <block type="studio_throw" />
   <block type="studio_makeProjectile" />
@@ -195,6 +205,7 @@ class Studio < Grid
   <block type="functional_setEnemySpeed" />
   <block type="functional_showTitleScreen" />
   <block type="functional_string" />
+  <block type="functional_background_string_picker" />
   <block type="functional_math_number" />
 </category>
 #{k1_blocks(type) if is_k1 == 'true'}

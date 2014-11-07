@@ -43,6 +43,8 @@ class Eval < Blockly
       <category name="String">
         <block type="functional_string"></block>
         <block type="functional_style"></block>
+        <block type="string_append"></block>
+        <block type="string_length"></block>
       </category>
       <category name="Image">
         <block type="functional_circle"></block>

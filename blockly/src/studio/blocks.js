@@ -10,6 +10,7 @@ var msg = require('../../locale/current/studio');
 var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
 var commonMsg = require('../../locale/current/common');
 var codegen = require('../codegen');
+var functionalBlockUtils = require('../functionalBlockUtils');
 var installFunctionalApiCallBlock = require('../functionalBlockUtils').installFunctionalApiCallBlock;
 var tiles = require('./tiles');
 var utils = require('../utils');
@@ -1342,10 +1343,14 @@ exports.install = function(blockly, blockInstallOptions) {
           quotedTextInput.appendTitle(new Blockly.FieldImage(skin.speechBubble));
         }
         quotedTextInput.appendTitle(new Blockly.FieldImage(
-                  Blockly.assetUrl('media/quote0.png'), 12, 12))
+              Blockly.assetUrl('media/quote0.png'), 12, 12))
           .appendTitle(new Blockly.FieldTextInput(msg.defaultSayText()), 'TEXT')
           .appendTitle(new Blockly.FieldImage(
-                  Blockly.assetUrl('media/quote1.png'), 12, 12));
+              Blockly.assetUrl('media/quote1.png'), 12, 12));
+      }
+      if (block.time) {
+        this.appendValueInput('TIME').setCheck('Number').appendTitle(msg.for());
+        this.appendDummyInput().appendTitle(msg.waitSeconds());
       }
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -1358,6 +1363,8 @@ exports.install = function(blockly, blockInstallOptions) {
   initSayBlock(blockly.Blocks.studio_saySprite);
   blockly.Blocks.studio_saySpriteParams = { 'params': true };
   initSayBlock(blockly.Blocks.studio_saySpriteParams);
+  blockly.Blocks.studio_saySpriteParamsTime = { 'params': true, 'time': true };
+  initSayBlock(blockly.Blocks.studio_saySpriteParamsTime);
 
   generator.studio_saySprite = function() {
     // Generate JavaScript for saying.
@@ -1375,6 +1382,18 @@ exports.install = function(blockly, blockInstallOptions) {
                '\', ' +
                (this.getTitleValue('SPRITE') || '0') + ', ' +
                textParam + ');\n';
+  };
+
+  generator.studio_saySpriteParamsTime = function() {
+    // Generate JavaScript for saying (param version).
+    var textParam = Blockly.JavaScript.valueToCode(this, 'TEXT',
+        Blockly.JavaScript.ORDER_NONE) || '';
+    var secondsParam = Blockly.JavaScript.valueToCode(this, 'TIME',
+        Blockly.JavaScript.ORDER_NONE) || 1;
+    return 'Studio.saySprite(\'block_id_' + this.id +
+        '\', ' +
+        (this.getTitleValue('SPRITE') || '0') + ', ' +
+        textParam + ',' + secondsParam + ');\n';
   };
 
   var initWaitBlock = function (block) {
@@ -1472,6 +1491,33 @@ exports.install = function(blockly, blockInstallOptions) {
 
   // install number and string
   sharedFunctionalBlocks.install(blockly, generator);
+
+  // Note: in other languages, the translated values won't be accepted
+  // as valid backgrounds if they are typed in as free text. Also this
+  // block will have the effect of translating the selected text to
+  // english if not connected to the functional_setBackground block.
+  // TODO(i18n): translate these strings in the Studio.setBackground
+  // API instead of here.
+  var functional_background_values = [
+    [msg.backgroundCave(), 'cave'],
+    [msg.backgroundNight(), 'night'],
+    [msg.backgroundCloudy(), 'cloudy'],
+    [msg.backgroundUnderwater(), 'underwater'],
+    [msg.backgroundHardcourt(), 'hardcourt'],
+    [msg.backgroundBlack(), 'black'],
+    [msg.backgroundCity(), 'city'],
+    [msg.backgroundDesert(), 'desert'],
+    [msg.backgroundRainbow(), 'rainbow'],
+    [msg.backgroundSoccer(), 'soccer'],
+    [msg.backgroundSpace(), 'space'],
+    [msg.backgroundTennis(), 'tennis'],
+    [msg.backgroundWinter(), 'winter']
+  ];
+
+  functionalBlockUtils.installStringPicker(blockly, generator, {
+    blockName: 'functional_background_string_picker',
+    values: functional_background_values
+  });
 };
 
 function installVanish(blockly, generator, spriteNumberTextDropdown, startingSpriteImageDropdown, blockInstallOptions) {

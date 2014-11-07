@@ -97,7 +97,7 @@ file deploy_dir('i18n/curriculum/crowdin.yaml') => [deploy_dir('i18n/curriculum/
   RakeUtils.erb t.prerequisites[0], t.name, task:t
 end
 
-INSTALL = [:production, :staging, :test].include?(rack_env)
+INSTALL = [:production, :staging, :test].include?(rack_env) && !CDO.chef_managed
 
 task :default => [
   INSTALL ? aws_dir('crontab.installed')        : aws_dir('crontab'),
