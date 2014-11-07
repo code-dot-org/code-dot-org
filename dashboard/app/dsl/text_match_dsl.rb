@@ -6,6 +6,7 @@ class TextMatchDSL < ContentDSL
   end
 
   def answer(text) @hash[:answers] << text end
+  def placeholder(text) @hash[:placeholder] = text end
 
   def i18n_strings
     strings = super[@name]
@@ -13,6 +14,7 @@ class TextMatchDSL < ContentDSL
     @hash[:answers].each do |answer|
       strings[answer] = answer
     end
+    strings[@hash[:placeholder]] = @hash[:placeholder] unless @hash[:placeholder].blank?
 
     {@name => strings}
   end
