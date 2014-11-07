@@ -127,10 +127,7 @@ task 'websites' => [$websites] {}
 
 $websites_test = build_task('websites-test', [deploy_dir('rebuild')]) do
   Dir.chdir(deploy_dir) do
-    RakeUtils.system 'rake', 'build:configure'
-    RakeUtils.system 'rake', 'build:dashboard'
-    RakeUtils.system 'rake', 'build:pegasus'
-    RakeUtils.system 'rake', 'build:varnish'
+    RakeUtils.system 'rake', 'build'
   end
 
   Dir.chdir(dashboard_dir) do
