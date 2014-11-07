@@ -68,6 +68,11 @@ Blockly.Blocks.functional_definition = {
       desc.innerHTML = this.description_;
       container.appendChild(desc);
     }
+    if (this.outputType_) {
+      var outputTypeMutation = document.createElement('outputType');
+      outputTypeMutation.innerHTML = this.outputType_;
+      container.appendChild(outputTypeMutation);
+    }
     return container;
   },
   domToMutation: function(xmlElement) {
@@ -78,6 +83,8 @@ Blockly.Blocks.functional_definition = {
         this.arguments_.push(childNode.getAttribute('name'));
       } else if (nodeName === 'description') {
         this.description_ = childNode.innerHTML;
+      } else if (nodeName === 'outputtype') {
+        this.updateOutputType(childNode.innerHTML);
       }
     }
     this.updateParams_();
@@ -124,8 +131,8 @@ Blockly.Blocks.functional_definition = {
         this.blockSpace, this.arguments_, this.paramIds_);
   },
   updateOutputType: function(outputType) {
-    this.changeFunctionalOutput(outputType);
-    // TODO(bjordan): update callers
+    this.outputType_ = outputType;
+    this.changeFunctionalOutput(this.outputType_);
   },
   /**
    * Disposes of this block and (optionally) its callers
@@ -328,20 +335,18 @@ Blockly.Blocks.functional_call = {
     this.setTooltip(
       (this.outputConnection ? Blockly.Msg.PROCEDURES_CALLRETURN_TOOLTIP
         : Blockly.Msg.PROCEDURES_CALLNORETURN_TOOLTIP).replace('%1', name));
-    var def = Blockly.Procedures.getDefinition(name, this.blockSpace);
-    if (def && def.mutator && def.mutator.isVisible()) {
-      // Initialize caller with the mutator's IDs.
-      this.setProcedureParameters(def.arguments_, def.paramIds_);
-    } else {
-      this.arguments_ = [];
-      for (var x = 0, childNode; childNode = xmlElement.childNodes[x]; x++) {
-        if (childNode.nodeName.toLowerCase() == 'arg') {
-          this.arguments_.push(childNode.getAttribute('name'));
-        }
+    var procedureDefinition = Blockly.Procedures.getDefinition(name, this.blockSpace);
+
+    this.arguments_ = [];
+    for (var x = 0, childNode; childNode = xmlElement.childNodes[x]; x++) {
+      if (childNode.nodeName.toLowerCase() == 'arg') {
+        this.arguments_.push(childNode.getAttribute('name'));
       }
-      // For the second argument (paramIds) use the arguments list as a dummy
-      // list.
-      this.setProcedureParameters(this.arguments_, this.arguments_);
+    }
+    this.setProcedureParameters(this.arguments_, this.arguments_);
+
+    if (procedureDefinition && procedureDefinition.outputType_) {
+      this.changeFunctionalOutput(def.outputType_);
     }
   },
   renameVar: function(oldName, newName) {
