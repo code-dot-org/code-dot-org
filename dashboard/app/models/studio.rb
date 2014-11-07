@@ -10,6 +10,7 @@ class Studio < Grid
     projectile_collisions
     allow_sprites_outside_playspace
     sprites_hidden_to_start
+    coordinate_grid_background
     free_play
   )
 
