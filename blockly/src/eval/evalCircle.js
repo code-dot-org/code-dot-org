@@ -28,3 +28,8 @@ EvalCircle.prototype.draw = function (parent) {
 
   EvalObject.prototype.draw.apply(this, arguments);
 };
+
+EvalCircle.prototype.rotate = function () {
+  // No-op. Rotating the circle svg gives us some problems when we convert to
+  // a bitmap.
+};

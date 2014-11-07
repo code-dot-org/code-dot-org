@@ -2,11 +2,11 @@ var utils = require('./utils');
 var _ = utils.getLodash();
 
 var colors = {
-  Number: [192, 1.00, 0.99], // 00ccff
-  string: [180, 1.00, 0.60], // 0099999
-  image: [285, 1.00, 0.80], // 9900cc
-  boolean: [90, 1.00, 0.4], // 336600
-  none: [0, 0, 0.6]
+  'Number': [192, 1.00, 0.99], // 00ccff
+  'string': [180, 1.00, 0.60], // 0099999
+  'image': [285, 1.00, 0.80], // 9900cc
+  'boolean': [90, 1.00, 0.4], // 336600
+  'none': [0, 0, 0.6]
 };
 module.exports.colors = colors;
 
