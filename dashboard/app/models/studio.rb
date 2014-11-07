@@ -10,6 +10,7 @@ class Studio < Grid
     projectile_collisions
     allow_sprites_outside_playspace
     sprites_hidden_to_start
+    coordinate_grid_background
     free_play
   )
 
@@ -125,6 +126,7 @@ class Studio < Grid
   <block type="studio_setSpriteEmotion" />
   <block type="studio_vanish" />
   <block type="studio_setSpriteSize" />
+  <block type="studio_showCoordinates" />
 </category>
 <category name="Loops">
   <block type="studio_repeatForever" />
