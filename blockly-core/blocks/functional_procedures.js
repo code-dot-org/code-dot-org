@@ -152,10 +152,7 @@ Blockly.Blocks.functional_definition = {
     Blockly.Block.prototype.dispose.apply(this, arguments);
   },
   getProcedureDef: function() {
-    // Return the name of the defined procedure, a list of all its arguments,
-    return [this.getTitleValue('NAME'), this.arguments_, false /** hasReturnValue */,
-      'this is a silly way of filtering procedure types'];
-    // TODO(bjordan): clean up pattern
+    return [this.getTitleValue('NAME'), this.arguments_, false];
   },
   getVars: function() {
     return this.arguments_;
