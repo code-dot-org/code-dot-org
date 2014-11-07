@@ -626,13 +626,13 @@ exports.install = function(blockly, blockInstallOptions) {
     },
     generateBlocksForDirection: function(direction) {
       generator["studio_move" + direction] = SimpleMove.generateCodeGenerator(direction, true);
-      blockly.Blocks['studio_move' + direction] = SimpleMove.generateMoveBlock(direction);
-      generator["studio_move" + direction + "Distance"] = SimpleMove.generateCodeGenerator(direction);
-      blockly.Blocks['studio_move' + direction + "Distance"] = SimpleMove.generateMoveBlock(direction);
-      generator["studio_move" + direction + "_length"] = SimpleMove.generateCodeGenerator(direction);
+      blockly.Blocks['studio_move' + direction] = SimpleMove.generateMoveBlock(direction, false);
+      generator["studio_move" + direction + "Distance"] = SimpleMove.generateCodeGenerator(direction, false);
+      blockly.Blocks['studio_move' + direction + "Distance"] = SimpleMove.generateMoveBlock(direction, false);
+      generator["studio_move" + direction + "_length"] = SimpleMove.generateCodeGenerator(direction, false);
       blockly.Blocks['studio_move' + direction + "_length"] = SimpleMove.generateMoveBlock(direction, true);
     },
-    generateMoveBlock: function(direction, opt_hasLengthInput) {
+    generateMoveBlock: function(direction, hasLengthInput) {
       var directionConfig = SimpleMove.DIRECTION_CONFIGS[direction];
 
       return {
@@ -648,7 +648,7 @@ exports.install = function(blockly, blockInstallOptions) {
             this.appendDummyInput().appendTitle(startingSpriteImageDropdown(), 'SPRITE');
           }
 
-          if (opt_hasLengthInput) {
+          if (hasLengthInput) {
             this.appendDummyInput().appendTitle(new blockly.FieldImageDropdown(SimpleMove.DISTANCES), 'DISTANCE');
           }
 
