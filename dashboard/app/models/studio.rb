@@ -194,9 +194,6 @@ class Studio < Grid
     </value>
   </block>
 </category>
-<category name="Functional Functions" >
-  <block type="functional_definition" />
-</category>
 <category name="Variables" custom="VARIABLE" />
 <category name="Functions" custom="PROCEDURE" />
 <category name="Functional">
