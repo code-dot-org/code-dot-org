@@ -9,14 +9,16 @@
     "instructions": "Create house function that calls triangle and square function",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "disable_param_editing": "false",
-    "disable_variable_editing": "true",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
     "start_direction": "90",
     "x": "150",
-    "y": "200",
+    "y": "300",
     "free_play": "false",
     "impressive": "false",
-    "slider_speed": "0.5"
+    "slider_speed": "0.5",
+    "ideal": "19",
+    "use_modal_function_editor": "true"
   }
 }]]></config>
   <blocks>
@@ -49,7 +51,7 @@
         <block type="controls_repeat_ext" inline="true">
           <value name="TIMES">
             <block type="math_number">
-              <title name="NUM">???</title>
+              <title name="NUM">3</title>
             </block>
           </value>
         </block>
@@ -120,31 +122,8 @@
     </required_blocks>
     <solution_blocks>
       <xml>
-        <block type="when_run" movable="false" deletable="false">
+        <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="procedures_callnoreturn">
-              <mutation name="Draw a house"/>
-            </block>
-          </next>
-        </block>
-        <block type="procedures_defnoreturn">
-          <mutation/>
-          <title name="NAME">Draw a house</title>
-          <statement name="STACK">
-            <block type="procedures_callnoreturn">
-              <mutation name="Draw a square"/>
-              <next>
-                <block type="procedures_callnoreturn">
-                  <mutation name="Draw a triangle"/>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
-        <block type="procedures_defnoreturn">
-          <mutation/>
-          <title name="NAME">Draw a square</title>
-          <statement name="STACK">
             <block type="controls_repeat_ext" inline="true">
               <value name="TIMES">
                 <block type="math_number">
@@ -161,7 +140,7 @@
                   </value>
                   <next>
                     <block type="draw_turn" inline="true">
-                      <title name="DIR">turnRight</title>
+                      <title name="DIR">turnLeft</title>
                       <value name="VALUE">
                         <block type="math_number">
                           <title name="NUM">90</title>
@@ -171,41 +150,67 @@
                   </next>
                 </block>
               </statement>
-            </block>
-          </statement>
-        </block>
-        <block type="procedures_defnoreturn">
-          <mutation/>
-          <title name="NAME">Draw a triangle</title>
-          <statement name="STACK">
-            <block type="controls_repeat_ext" inline="true">
-              <value name="TIMES">
-                <block type="math_number">
-                  <title name="NUM">3</title>
-                </block>
-              </value>
-              <statement name="DO">
-                <block type="draw_move" inline="true">
-                  <title name="DIR">moveForward</title>
+              <next>
+                <block type="draw_turn" inline="true">
+                  <title name="DIR">turnLeft</title>
                   <value name="VALUE">
                     <block type="math_number">
-                      <title name="NUM">100</title>
+                      <title name="NUM">90</title>
                     </block>
                   </value>
                   <next>
-                    <block type="draw_turn" inline="true">
-                      <title name="DIR">turnLeft</title>
+                    <block type="draw_move" inline="true">
+                      <title name="DIR">moveForward</title>
                       <value name="VALUE">
                         <block type="math_number">
-                          <title name="NUM">120</title>
+                          <title name="NUM">100</title>
                         </block>
                       </value>
+                      <next>
+                        <block type="draw_turn" inline="true">
+                          <title name="DIR">turnRight</title>
+                          <value name="VALUE">
+                            <block type="math_number">
+                              <title name="NUM">90</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="controls_repeat_ext" inline="true">
+                              <value name="TIMES">
+                                <block type="math_number">
+                                  <title name="NUM">3</title>
+                                </block>
+                              </value>
+                              <statement name="DO">
+                                <block type="draw_move" inline="true">
+                                  <title name="DIR">moveForward</title>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <title name="NUM">100</title>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="draw_turn" inline="true">
+                                      <title name="DIR">turnLeft</title>
+                                      <value name="VALUE">
+                                        <block type="math_number">
+                                          <title name="NUM">120</title>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </next>
+                                </block>
+                              </statement>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
                     </block>
                   </next>
                 </block>
-              </statement>
+              </next>
             </block>
-          </statement>
+          </next>
         </block>
       </xml>
     </solution_blocks>

@@ -545,6 +545,8 @@ BlocklyApps.init = function(config) {
         false : config.level.disableVariableEditing,
     useModalFunctionEditor: config.level.useModalFunctionEditor === undefined ?
         false : config.level.useModalFunctionEditor,
+    useContractEditor: config.level.useContractEditor === undefined ?
+        false : config.level.useContractEditor,
     scrollbars: config.level.scrollbars
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
@@ -5404,12 +5406,14 @@ Eval.init = function(config) {
     // (execute) and the infinite loop detection function.
     Blockly.JavaScript.addReservedWords('Eval,code');
 
-    var solutionBlocks = blockUtils.forceInsertTopBlock(level.solutionBlocks,
-      config.forceInsertTopBlock);
+    if (level.solutionBlocks) {
+      var solutionBlocks = blockUtils.forceInsertTopBlock(level.solutionBlocks,
+        config.forceInsertTopBlock);
 
-    var answerObject = getDrawableFromBlocks(solutionBlocks);
-    if (answerObject) {
-      answerObject.draw(document.getElementById('answer'));
+      var answerObject = getDrawableFromBlocks(solutionBlocks);
+      if (answerObject) {
+        answerObject.draw(document.getElementById('answer'));
+      }
     }
 
     // Adjust visualizationColumn width.
@@ -5486,7 +5490,7 @@ function getDrawableFromBlocks(blockXml) {
     BlocklyApps.loadBlocks(blockXml);
   }
 
-  var code = Blockly.Generator.blockSpaceToCode('JavaScript', 'functional_display');
+  var code = Blockly.Generator.blockSpaceToCode('JavaScript', ['functional_display', 'functional_definition']);
   evalCode(code);
   var object = Eval.displayedObject;
   Eval.displayedObject = null;
