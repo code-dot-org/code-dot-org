@@ -109,14 +109,12 @@ $websites = build_task('websites', [deploy_dir('rebuild'), BLOCKLY_COMMIT_TASK])
       CDO.varnish_instances.each do |host|
         #Process.fork do
           remote_command = [
-            'cd website-ci/aws',
-            'git pull',
-            'bundle',
-            'rake',
-            'cd ..',
-            'rake build:varnish',
+            'sudo chef-client',
+            'sudo service varnish stop',
+            'sudo service varnish start',
           ].join('; ')
           begin
+            HipChat.log "Upgrading <b>#{host}</b> varnish instance..."
             RakeUtils.system 'ssh', '-i', '~/.ssh/deploy-id_rsa', host, "'#{remote_command} 2>&1'"
           rescue
             HipChat.log "Unable to upgrade <b>#{host}</b> varnish instance."
