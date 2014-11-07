@@ -106,7 +106,7 @@ namespace :seed do
     end
   end
 
-  # detect changes to .ora.txt files
+  # detect changes to .text_match.txt files
   DSL_TYPES = %w(TextMatch)
   DSLS_GLOB = DSL_TYPES.map{|x|Dir.glob("config/scripts/**/*.#{x.underscore}*")}.sort.flatten
   file 'config/scripts/.dsls_seeded' => DSLS_GLOB do |t|
