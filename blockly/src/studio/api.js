@@ -31,8 +31,9 @@ exports.setSprite = function (id, spriteIndex, value) {
                   {'spriteIndex': spriteIndex, 'value': value});
 };
 
-exports.saySprite = function (id, spriteIndex, text) {
-  Studio.queueCmd(id, 'saySprite', {'spriteIndex': spriteIndex, 'text': text});
+exports.saySprite = function (id, spriteIndex, text, opt_seconds) {
+  Studio.queueCmd(id, 'saySprite', {'spriteIndex': spriteIndex, 'text': text,
+      'seconds': opt_seconds});
 };
 
 exports.showTitleScreen = function (id, title, text) {
