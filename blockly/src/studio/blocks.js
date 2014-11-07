@@ -1405,7 +1405,12 @@ exports.install = function(blockly, blockInstallOptions) {
     block.helpUrl = '';
     block.init = function() {
       this.setHSV(184, 1.00, 0.74);
-      if (spriteCount > 1) {
+      if (block.time) {
+        this.appendValueInput('SPRITE').setCheck('Number')
+            .appendTitle(msg.actor());
+        this.appendDummyInput()
+            .appendTitle(msg.saySprite());
+      } else if (spriteCount > 1) {
         if (isK1) {
           this.appendDummyInput().appendTitle(msg.saySprite())
             .appendTitle(startingSpriteImageDropdown(), 'SPRITE');
@@ -1468,14 +1473,14 @@ exports.install = function(blockly, blockInstallOptions) {
 
   generator.studio_saySpriteParamsTime = function() {
     // Generate JavaScript for saying (param version).
+    var spriteParam = (Blockly.JavaScript.valueToCode(this, 'SPRITE',
+        Blockly.JavaScript.ORDER_NONE) || 0) - 1 + '';
     var textParam = Blockly.JavaScript.valueToCode(this, 'TEXT',
         Blockly.JavaScript.ORDER_NONE) || '';
     var secondsParam = Blockly.JavaScript.valueToCode(this, 'TIME',
         Blockly.JavaScript.ORDER_NONE) || 1;
-    return 'Studio.saySprite(\'block_id_' + this.id +
-        '\', ' +
-        (this.getTitleValue('SPRITE') || '0') + ', ' +
-        textParam + ',' + secondsParam + ');\n';
+    return 'Studio.saySprite(\'block_id_' + this.id + '\', ' +
+        spriteParam + ', ' + textParam + ',' + secondsParam + ');\n';
   };
 
   var initWaitBlock = function (block) {
@@ -1600,6 +1605,26 @@ exports.install = function(blockly, blockInstallOptions) {
     blockName: 'functional_background_string_picker',
     values: functional_background_values
   });
+
+  blockly.Blocks.studio_vanishSprite = {
+    helpUrl: '',
+    init: function() {
+      this.setHSV(184, 1.00, 0.74);
+      this.appendValueInput('SPRITE')
+          .appendTitle(msg.vanishActorN({spriteIndex: ''}));
+      this.setPreviousStatement(true);
+      this.setInputsInline(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.vanishTooltip());
+    }
+  };
+
+  generator.studio_vanishSprite = function() {
+    var spriteParam = (Blockly.JavaScript.valueToCode(this, 'SPRITE',
+        Blockly.JavaScript.ORDER_NONE) || 0) - 1 + '';
+    return 'Studio.vanish(\'block_id_' + this.id + '\', ' + spriteParam +
+        ');\n';
+  };
 };
 
 function installVanish(blockly, generator, spriteNumberTextDropdown, startingSpriteImageDropdown, blockInstallOptions) {
