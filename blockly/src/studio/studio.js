@@ -141,7 +141,6 @@ var TITLE_SCREEN_TEXT_HEIGHT =
 var TITLE_SPRITE_X_POS = 3;
 var TITLE_SPRITE_Y_POS = 6;
 
-var SPEECH_BUBBLE_TIMEOUT = 3000;
 var SPEECH_BUBBLE_RADIUS = 20;
 var SPEECH_BUBBLE_H_OFFSET = 50;
 var SPEECH_BUBBLE_PADDING = 5;
@@ -2116,8 +2115,7 @@ Studio.saySprite = function (opts) {
   speechBubble.setAttribute('visibility', 'visible');
 
   sprite.bubbleTimeoutFunc = delegate(this, Studio.hideSpeechBubble, opts);
-  sprite.bubbleTimeout = window.setTimeout(sprite.bubbleTimeoutFunc,
-    opts.seconds * 1000 || SPEECH_BUBBLE_TIMEOUT);
+  sprite.bubbleTimeout = window.setTimeout(sprite.bubbleTimeoutFunc, opts.seconds);
 
   return opts.complete;
 };
