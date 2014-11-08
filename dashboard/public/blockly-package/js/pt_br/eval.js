@@ -11485,7 +11485,7 @@ exports.score = function(d){return "pontuação"};
 
 exports.showCodeHeader = function(d){return "Mostrar código"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Mostrar blocos"};
 
 exports.showGeneratedCode = function(d){return "Mostrar código"};
 
@@ -11523,7 +11523,7 @@ exports.typeHint = function(d){return "Observe que os parênteses e os ponto e v
 
 exports.workspaceHeader = function(d){return "Monte seus blocos aqui: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Insira seu código JavaScript aqui"};
 
 exports.infinity = function(d){return "Infinito"};
 
@@ -11550,43 +11550,43 @@ exports.genericFeedback = function(d){return "Veja como você terminou e tente c
 
 },{"messageformat":61}],49:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.pt=function(n){return n===1?"one":"other"}
-exports.circleBlockTitle = function(d){return "circle (radius, style, color)"};
+exports.circleBlockTitle = function(d){return "círculo (raio, estilo, cor)"};
 
 exports.displayBlockTitle = function(d){return "display"};
 
-exports.ellipseBlockTitle = function(d){return "ellipse (width, height, style, color)"};
+exports.ellipseBlockTitle = function(d){return "elipse (largura, altura, estilo, cor)"};
 
 exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"display\" block?"};
 
-exports.overlayBlockTitle = function(d){return "overlay (top, bottom)"};
+exports.overlayBlockTitle = function(d){return "sobreposição (superior, inferior)"};
 
-exports.placeImageBlockTitle = function(d){return "place-image (x, y, image)"};
+exports.placeImageBlockTitle = function(d){return "lugar-imagem (x, y, imagem)"};
 
-exports.rectangleBlockTitle = function(d){return "rectangle (width, height, style, color)"};
+exports.rectangleBlockTitle = function(d){return "retângulo (largura, altura, estilo, cor)"};
 
-exports.rotateImageBlockTitle = function(d){return "rotate (degrees, image)"};
+exports.rotateImageBlockTitle = function(d){return "rotacionar (graus, imagem)"};
 
-exports.scaleImageBlockTitle = function(d){return "scale (factor)"};
+exports.scaleImageBlockTitle = function(d){return "escala (fator)"};
 
-exports.squareBlockTitle = function(d){return "square (size, style, color)"};
+exports.squareBlockTitle = function(d){return "quadrado (tamanho, estilo, cor)"};
 
-exports.starBlockTitle = function(d){return "star (radius, style, color)"};
+exports.starBlockTitle = function(d){return "pentagrama (raio, estilo, cor)"};
 
-exports.stringAppendBlockTitle = function(d){return "string-append (first, second)"};
+exports.stringAppendBlockTitle = function(d){return "cadeia de caracteres-acréscimo (primeira, segunda)"};
 
-exports.stringLengthBlockTitle = function(d){return "string-length (string)"};
+exports.stringLengthBlockTitle = function(d){return "cadeia de caracteres-comprimento (cadeia de caracteres)"};
 
-exports.textBlockTitle = function(d){return "text (string, size, color)"};
+exports.textBlockTitle = function(d){return "texto (cadeia de caracteres, tamanho, cor)"};
 
-exports.triangleBlockTitle = function(d){return "triangle (size, style, color)"};
+exports.triangleBlockTitle = function(d){return "triângulo (tamanho, estilo, cor)"};
 
-exports.underlayBlockTitle = function(d){return "underlay (bottom, top)"};
+exports.underlayBlockTitle = function(d){return "subjacente (inferior, superior)"};
 
-exports.outline = function(d){return "outline"};
+exports.outline = function(d){return "estrutura de tópicos"};
 
-exports.solid = function(d){return "solid"};
+exports.solid = function(d){return "sólido"};
 
-exports.string = function(d){return "string"};
+exports.string = function(d){return "cadeia de caracteres"};
 
 
 },{"messageformat":61}],50:[function(require,module,exports){

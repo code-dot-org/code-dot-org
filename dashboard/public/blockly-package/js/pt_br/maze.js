@@ -13557,7 +13557,7 @@ exports.score = function(d){return "pontuação"};
 
 exports.showCodeHeader = function(d){return "Mostrar código"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Mostrar blocos"};
 
 exports.showGeneratedCode = function(d){return "Mostrar código"};
 
@@ -13595,7 +13595,7 @@ exports.typeHint = function(d){return "Observe que os parênteses e os ponto e v
 
 exports.workspaceHeader = function(d){return "Monte seus blocos aqui: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Insira seu código JavaScript aqui"};
 
 exports.infinity = function(d){return "Infinito"};
 
