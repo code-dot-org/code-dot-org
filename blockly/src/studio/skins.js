@@ -55,6 +55,9 @@ exports.load = function(assetUrl, id) {
   skin.winter = {
     background: skin.assetUrl('background_winter.png'),
   };
+  skin.grid = {
+    background: skin.assetUrl('background_grid.png'),
+  };
 
   skin.avatarList = [ "dog", "cat", "penguin", "dinosaur", "octopus", "witch",
     "bat", "bird", "dragon", "squirrel", "wizard", "alien", "ghost", "monster",
