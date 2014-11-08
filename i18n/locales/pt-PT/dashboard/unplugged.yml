@@ -1,4 +1,4 @@
-"pt-PT":
+"pt":
   data:
     unplugged:
       Unplug1:
@@ -104,6 +104,7 @@
       GoingPlacesSafely:
         title: "Ir a Locais de um modo Seguro"
         desc: "The Internet is a powerful, but sometimes dangerous place. Teachers introduce how to stay safe while navigating the Internet."
+        video: "C1_going_places_safely"
       GraphPaperProgramming:
         title: "Programação de papel milimetrico"
         desc: "Estudantos escrevem um algoritmo (um conjunto de instruções) usando um conjunto de comandos pré-definidos para direcionar os colegad a reproduzir um desenho."
@@ -119,6 +120,7 @@
       DigitalFootprint:
         title: "Your Digital Footprint"
         desc: 'Teachers introduce to students the idea that putting information about themselves online creates a digital footprint or "trail" that has consequences.'
+        video: "C2_digital_footprint"
       ComputationalThinking:
         title: "Pensamento computacional"
         desc: "Students use the steps of computational thinking (decompose, pattern match, abstract, algorithm) to figure out how to play a game that comes with no instructions."
@@ -146,3 +148,21 @@
       DigitalCitizenship:
         title: "Digital Citizenship"
         desc: "Students explore the difference between private information and personal information, distinguishing what is safe and unsafe to share online."
+      TangramAlgorithms:
+        title: "Tangram Algorithms"
+        desc: "This lesson shows us something important about algorithms. If you keep an algorithm simple there are lots of ways to use it. If you want to make sure everyone ends up with the same thing, then your algorithm needs more detail."
+      EnvelopeVariables:
+        title: "Envelope Variables"
+        desc: 'Variables allow for a lot of freedom in computer science.  This lesson helps to explain what variables are and how we can use them in many different ways. Use this activity before (or in conjunction with) the lesson on abstraction to really hit the idea home.'
+      MadGlibs:
+        title: "Mad Glibs"
+        desc: 'Abstraction is one of the most important skills for a computer scientist to understand.  This activity will have your students analyzing stories for differences so that they can abstract them away. Those abstracted stories become templates for fun and crazy new ones.'
+      ForLoopFun:
+        title: "For Loop Fun"
+        desc: "We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops with extra structure built right in."
+      SongwritingWithParameters:
+        title: "Songwriting With Parameters"
+        desc: 'One of the most magnificent structures in the computer science world is the function.  Functions (sometimes called procedures) are mini programs that you can use over and over inside of your bigger program. This lesson will help students intuitively understand why combining chunks of code into functions is such a helpful practice.  '
+      BinaryImages:
+        title: "Binary Images"
+        desc: 'Though many people think of binary as strictly zeros and ones, our previous courses taught students that information can be represented in a variety of binary options.  This lesson takes that concept one step further as it illustrates how a computer can store even more complex information (such as images and colors) in binary, as well.'

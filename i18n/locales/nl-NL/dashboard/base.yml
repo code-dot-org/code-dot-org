@@ -1,121 +1,121 @@
-nl:
+"nl":
   activerecord:
     errors:
       messages:
-        blank: verplicht veld
+        blank: "verplicht veld"
     attributes:
       user:
-        name: Weergegeven naam
-        email: Email
-        username: gebruikersnaam
-        password: wachtwoord
-        password_confirmation: Wachtwoord bevestiging
-        current_password: Huidig wachtwoord
-        locale: Taal
-        age: Leeftijd
-        gender: Geslacht
-        edit_header: Accountdetails bewerken
+        name: "Weergegeven naam"
+        email: "Email"
+        username: "gebruikersnaam"
+        password: "wachtwoord"
+        password_confirmation: "Wachtwoord bevestiging"
+        current_password: "Huidig wachtwoord"
+        locale: "Taal"
+        age: "Leeftijd"
+        gender: "Geslacht"
+        edit_header: "Accountdetails bewerken"
         error:
-          future: kan niet in de toekomst
-  hello: Hallo wereld
+          future: "kan niet in de toekomst"
+  hello: "Hallo wereld"
   welcome_back: 'Welkom terug, %{name}'
   add_teacher_form:
     code_or_email:
       label: 'voeg een leraar toe door code of e-mail adres:'
-      placeholder: code (ABCDEF) of email (teacher@school.edu)
+      placeholder: "code (ABCDEF) of email (teacher@school.edu)"
     code:
       label: 'Voeg een leraar toe via onderdeel code:'
-      placeholder: Code (ABCDEF)
-    submit: voeg leraar toe
+      placeholder: "Code (ABCDEF)"
+    submit: "voeg leraar toe"
   add_hint_form:
-    placeholder: Voer hier uw hint
-    submit: Hint toevoegen
-  appname: Code.org
-  stage: level
+    placeholder: "Voer hier uw hint"
+    submit: "Hint toevoegen"
+  appname: "Code.org"
+  stage: "level"
   stage_number: 'Niveau %{number}'
-  puzzle: Puzzel
-  trophies: prijzen
-  courses: Cursussen
-  of: van
-  more: MEER
-  less: MINDER
+  puzzle: "Puzzel"
+  trophies: "prijzen"
+  courses: "Cursussen"
+  of: "van"
+  more: "MEER"
+  less: "MINDER"
   try_hoc: 'Probeer the Hour of Code, klik hier >> '
-  try_k8intro: Probeer onze informatica-introductiecursus voor basisschoolleerlingen (15-25 uur)
-  k8intro: Informatica-introductiecursus voor basisschoolleerlingen (15-25 uur)
+  try_k8intro: "Probeer onze informatica-introductiecursus voor basisschoolleerlingen (15-25 uur)"
+  k8intro: "Informatica-introductiecursus voor basisschoolleerlingen (15-25 uur)"
   already_started: 'al begonnen? ga hier verder >> '
   demos: "Admin: alle demo's"
-  continue: Doorgaan
-  prize: prijs
-  more_info: Meer info
+  continue: "Doorgaan"
+  prize: "prijs"
+  more_info: "Meer info"
   auth:
     sign_in_with: 'Meld je aan met %{provider}'
-    signed_in: Ingelogd!
+    signed_in: "Ingelogd!"
     signed_out: 'Je bent nu uitgelogd uit <a href="%{url}">Code.org</a>.'
     sign_out_of: 'Je hebt %{provider} gebruikt om in te loggen. <a href="%{url}">Klik hier </a> om je af te melden bij %{provider}.'
-    already_signedup: Al aangemeld?
-    notyet_signedup: nog niet aangesloten?
-    google_oauth2: Google Account
-    twitter: Twitter
-    facebook: Facebook
-    windowslive: Microsoft Account
-    forgot_password: Wachtwoord vergeten?
-    need_confirmation: Geen bevestigingsinstructies ontvangen?
-    need_unlock: Nog niet uw ontgrendel instructies ontvangen?
+    already_signedup: "Al aangemeld?"
+    notyet_signedup: "nog niet aangesloten?"
+    google_oauth2: "Google Account"
+    twitter: "Twitter"
+    facebook: "Facebook"
+    windowslive: "Microsoft Account"
+    forgot_password: "Wachtwoord vergeten?"
+    need_confirmation: "Geen bevestigingsinstructies ontvangen?"
+    need_unlock: "Nog niet uw ontgrendel instructies ontvangen?"
   signup_form:
     overview_student: 'Meld je aan voor een account om je voortgang bij te houden. Je e-mail wordt in eerste instantie gebruikt om je te laten inloggen en om je wachtwoord aan te passen. Zie voor meer informatie onze <a href="http://code.org/privacy">Privacy Policy</a>.'
     overview_teacher: 'Leer computer techniek in uw klaslokaal, maak een gebruikersnaam aan. <p/> U kan uw leerlingen toevoegen en hun vooruitgang zien.'
     no_signup_message: 'Je kunt <a target="_blank" href="http://learn.code.org">de verschillende niveaus en levels bekijken</a>, maar om je voortgang te bewaren moet je je aanmelden.'
-    teacher_educator_guide: Kijk in de lerarengids
-    teacher_pitch: Registreer als leraar voor Code.org
-    teacher_title: Inschrijven voor leraren
-    student_pitch: Registreren als leerling voor Code.org
-    student_title: Registreren als leerling
-    school_name: School naam (optioneel)
-    school_address: Schooladres (optioneel)
-    address_placeholder: adres, stad, staat, zip
-    gender: Geslacht (optioneel)
-    birthday: Verjaardag (optioneel)
-    age: Leeftijd
-    user_type: Bent u een leerling of een leraar?
-    submit: Meld je aan
-    teacher: Bent u een leraar?
-    valid_username: Beschikbaar!
-    invalid_username: Gebruikersnaam moet minstens 5 tekens zijn
-    taken_username: Gebruikersnaam is al in gebruik
-    valid_password: Geldig wachtwoord!
-    invalid_password: Wachtwoord moet ten minste 6 tekens lang zijn
-    mismatch_password: De twee wachtwoorden komen niet overeen
+    teacher_educator_guide: "Kijk in de lerarengids"
+    teacher_pitch: "Registreer als leraar voor Code.org"
+    teacher_title: "Inschrijven voor leraren"
+    student_pitch: "Registreren als leerling voor Code.org"
+    student_title: "Registreren als leerling"
+    school_name: "School naam (optioneel)"
+    school_address: "Schooladres (optioneel)"
+    address_placeholder: "adres, stad, staat, zip"
+    gender: "Geslacht (optioneel)"
+    birthday: "Verjaardag (optioneel)"
+    age: "Leeftijd"
+    user_type: "Bent u een leerling of een leraar?"
+    submit: "Meld je aan"
+    teacher: "Bent u een leraar?"
+    valid_username: "Beschikbaar!"
+    invalid_username: "Gebruikersnaam moet minstens 5 tekens zijn"
+    taken_username: "Gebruikersnaam is al in gebruik"
+    valid_password: "Geldig wachtwoord!"
+    invalid_password: "Wachtwoord moet ten minste 6 tekens lang zijn"
+    mismatch_password: "De twee wachtwoorden komen niet overeen"
     student_terms: "Ik ben het eens te worden gebonden door de Code.org <a href='http://code.org/tos'> gebruiksvoorwaarden</a>. Als ik jonger dan 13 jaar ben, bevestig ik dit door het indienen van dit formulier waarvoor ik door mijn ouders of wettelijke voogd toestemming heb gekregen om gebruik te maken van de diensten van Code.org  <br/>Voor gebruikers onder de 13, worden e-mailadressen niet opgeslagen in een vorm die het mogelijk maakt om hen te contacteren."
     teacher_terms: "Ik ben het eens te worden gebonden door de Code.org <a href='http://code.org/tos'> gebruiksvoorwaarden</a>."
-    additional_information: We moeten enige aanvullende informatie hebben om u te kunnen aanmelden.
+    additional_information: "We moeten enige aanvullende informatie hebben om u te kunnen aanmelden."
   signin_form:
-    title: Heb je al een account? Log in
-    login: Email of gebruikersnaam
-    password: Wachtwoord
-    remember: Onthoud me
-    submit: Aanmelden
+    title: "Heb je al een account? Log in"
+    login: "Email of gebruikersnaam"
+    password: "Wachtwoord"
+    remember: "Onthoud me"
+    submit: "Aanmelden"
   signin:
-    try_heading: Wil je proberen te programmeren zonder te registreren?
-    try_hoc: Probeer eerst een Hour of Code
-    try_20hours: Probeer onze 20-urige introductie tot de informatica
+    try_heading: "Wil je proberen te programmeren zonder te registreren?"
+    try_hoc: "Probeer eerst een Hour of Code"
+    try_20hours: "Probeer onze 20-urige introductie tot de informatica"
   signinsection:
     welcome: 'Welkom bij %{section_name}'
-    name: Kies uw naam
-    picture: Zoek nu uw geheime afbeelding
-    words: Vul nu uw geheime woorden in
-    login: Aanmelden
+    name: "Kies uw naam"
+    picture: "Zoek nu uw geheime afbeelding"
+    words: "Vul nu uw geheime woorden in"
+    login: "Aanmelden"
   password:
     reset_form:
-      title: Wachtwoord vergeten?
-      email: Email-adres
-      submit: Stuur me uitleg over wachtwoord resetten
+      title: "Wachtwoord vergeten?"
+      email: "Email-adres"
+      submit: "Stuur me uitleg over wachtwoord resetten"
     change_form:
-      title: Verander je wachtwoord
-      new_password: Nieuw wachtwoord
-      confirm_password: Bevestig je nieuwe wachtwoord
-      submit: Verander mijn wachtwoord
+      title: "Verander je wachtwoord"
+      new_password: "Nieuw wachtwoord"
+      confirm_password: "Bevestig je nieuwe wachtwoord"
+      submit: "Verander mijn wachtwoord"
   welcome_email:
-    subject: Doe mee met mijn klas (op Code.org)
+    subject: "Doe mee met mijn klas (op Code.org)"
     body: |
       Klik op de link hieronder om je aan te melden voor informatica-opdrachten op Code.org (met mij als je "leraar"):
       
@@ -125,17 +125,17 @@ nl:
       
       %{name}
   follower:
-    invite_sent: Uitnodiging verstuurd
+    invite_sent: "Uitnodiging verstuurd"
     added_teacher: '%{name} toegevoegd als je leraar'
     registered: 'Je hebt je aangemeld voor %{section_name}.'
     error:
-      signed_in: Log uit om verder te gaan
+      signed_in: "Log uit om verder te gaan"
       username_not_found: 'Gebruikersnaam %{username} niet gevonden'
       username_in_use: '%{username} wordt al gebruikt, kies een andere'
       no_teacher: "Er is niemand ingelogd met '%{teacher_email_or_code}'. Vraag ze hier aan te melden en probeer ze dan nog eens toe te voegen"
       section_not_found: "Kan geen onderdeel vinden met code '%{section_code}'."
-      blank_code: Voer een onderdeel code in
-      cant_join_own_section: Sorry, je kan niet aan je eigen onderdeel deelnemen.
+      blank_code: "Voer een onderdeel code in"
+      cant_join_own_section: "Sorry, je kan niet aan je eigen onderdeel deelnemen."
     mail:
       invite_student:
         subject: 'Doe mee met een klas met %{teacher_name} op Code.org!'
@@ -145,47 +145,47 @@ nl:
         subject: 'Code.org melding: %{teacher_name} is niet langer als leraar aan je gekoppeld.'
   reports:
     error:
-      access_denied: Je hebt geen toegang tot de statistieken van deze persoon
+      access_denied: "Je hebt geen toegang tot de statistieken van deze persoon"
   redeem_prizes:
     title: 'Geef prijzen vrij: %{name}'
     provider: 'Aanbieder:'
     code: 'Code:'
     redeem_header: 'Vrijgeven:'
-    donorschoose_register: Registreer je als leraar op DonorsChoose.org
-    donorschoose_project: Een project posten
-    donorschoose_how_to: Hoe gebruiken u uw code
-    success: Je prijs is vrijgegeven, gebruik de code hieronder.
-    error: Je prijs kon niet worden vrijgegeven, probeer het opnieuw.
-    error_us_only: Prijzen zijn alleen geldig voor gebruikers in de Verenigde Staten.
-    error_not_earned: Deze prijs heb je nog niet verdiend.
-    error_already_redeemed: Je hebt je prijs al gekregen.
-    no_prizes_available: sorry, maar er zijn momenteel geen prijzen beschikbaar.
+    donorschoose_register: "Registreer je als leraar op DonorsChoose.org"
+    donorschoose_project: "Een project posten"
+    donorschoose_how_to: "Hoe gebruiken u uw code"
+    success: "Je prijs is vrijgegeven, gebruik de code hieronder."
+    error: "Je prijs kon niet worden vrijgegeven, probeer het opnieuw."
+    error_us_only: "Prijzen zijn alleen geldig voor gebruikers in de Verenigde Staten."
+    error_not_earned: "Deze prijs heb je nog niet verdiend."
+    error_already_redeemed: "Je hebt je prijs al gekregen."
+    no_prizes_available: "sorry, maar er zijn momenteel geen prijzen beschikbaar."
     teacher_info_required: 'Voor de prijzen voor leerkrachten hebben we de schoolnaam en -adres nodig:'
     teacher_email_required: 'Voor de prijzen voor leerkrachten hebben we een bevestigd emailadres nodig:'
     confirm:
-      title: Bevestigen
+      title: "Bevestigen"
       "no": Nee
       "yes": Ja
       msg: "Weet je zeker dat je de prijs '%{prize_name}' wil kiezen?"
       msg_student: 'Let op: je kunt maar een soort prijs kiezen.'
-      msg_publicschool: Bevestig dat u een Amerikaanse openbare-schoolleerkracht bent.
-      msg_visit_website: Website bezoeken
+      msg_publicschool: "Bevestig dat u een Amerikaanse openbare-schoolleerkracht bent."
+      msg_visit_website: "Website bezoeken"
     providers:
-      apple_itunes: $10 iTunes Gift Card
-      donors_choose: DonorsChoose.org $750 credit
-      donors_choose_bonus: DonorsChoose.org $250 credit
-      dropbox: 10GB Dropbox ruimte
-      valve: Portal 2 (PC or Mac game download)
-      ea_bejeweled: Bejeweled 3 (PC game download)
-      ea_fifa: FIFA Soccer 13 (PC game download)
-      ea_simcity: SimCity 4 Deluxe Edition (PC game download)
-      ea_pvz: Plants vs. Zombies (PC game download)
-      skype: $10 Skype credit
+      apple_itunes: "$10 iTunes Gift Card"
+      donors_choose: "DonorsChoose.org $750 credit"
+      donors_choose_bonus: "DonorsChoose.org $250 credit"
+      dropbox: "10GB Dropbox ruimte"
+      valve: "Portal 2 (PC or Mac game download)"
+      ea_bejeweled: "Bejeweled 3 (PC game download)"
+      ea_fifa: "FIFA Soccer 13 (PC game download)"
+      ea_simcity: "SimCity 4 Deluxe Edition (PC game download)"
+      ea_pvz: "Plants vs. Zombies (PC game download)"
+      skype: "$10 Skype credit"
     msg:
       choose: 'Kies een prijs:'
       choose_teacher: 'Click on the logo below to claim your prize:'
-      earned: Je hebt een prijs verdiend! (Alleen voor leerlingen uit de Verenigde Staten)
-      not_earned_title: Voltooi de opdracht en verdien prijzen (alleen voor leerlingen in de Verenigde Staten)
+      earned: "Je hebt een prijs verdiend! (Alleen voor leerlingen uit de Verenigde Staten)"
+      not_earned_title: "Voltooi de opdracht en verdien prijzen (alleen voor leerlingen in de Verenigde Staten)"
       not_earned: 'Leer alle informatica-concepten, verzamel alle %{num_trophies} bekers, en win echte prijzen. Je kunt kiezen tussen een iTunes-waardebon van $10, 10GB gratis Dropbox-opslagruimte, $10 aan Skype-credits of download gratis spelletjes. LET OP: dit aanbod geldt alleen voor leerlingen in de Verenigde Staten, en zolang de voorraad strekt.'
       teacher:
         earned: 'Minstens 15 leerlingen hebben alle %{num_trophies} bekers verzameld. Je hebt een lerarenprijs gewonnen! (alleen voor leraren in de Verenigde Staten)'
@@ -197,295 +197,295 @@ nl:
           not_earned: 'Wanneer minstens 7 van de leerlingen die alle %{num_trophies} bekers verdienen meisjes zijn, word je beloond met $250 aan extra <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits. <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits kunnen alleen gebruikt worden door leraren in openbare scholen in de Verenigde Staten.'
   crud:
     new_model: 'Nieuw %{model}'
-    show: Toon
-    edit: Bewerk
+    show: "Toon"
+    edit: "Bewerk"
     edit_model: 'Bewerk %{model}'
-    update: Bijwerken
-    destroy: Verwijderen
-    back: Terug
-    confirm: Weet je het zeker?
+    update: "Bijwerken"
+    destroy: "Verwijderen"
+    back: "Terug"
+    confirm: "Weet je het zeker?"
     created: '%{model} aangemaakt.'
     updated: '%{model} bijgewerkt.'
     destroyed: '%{model} is succesvol verwijderd.'
     access_denied: 'Je hebt geen toegang tot dit %{model}.'
   nav:
     header:
-      finished_hoc: Ik heb mijn Uur Code afgemaakt
-      sign_in_to_save: Log in om je vooruitgang op te slaan
+      finished_hoc: "Ik heb mijn Uur Code afgemaakt"
+      sign_in_to_save: "Log in om je vooruitgang op te slaan"
       free_play:
-        playlab: Maak een App
-        artist: Teken iets
+        playlab: "Maak een App"
+        artist: "Teken iets"
     user:
-      classroom: Mijn leerlingen
+      classroom: "Mijn leerlingen"
       label: 'Hallo %{username}'
-      stats: Mijn vooruitgang
-      settings: Mijn account
-      prizes: Prijzen
-      logout: Uitloggen
-      signin: Aanmelden
-      signup: Meld je aan
-      already_registered: Al geregistreerd?
+      stats: "Mijn vooruitgang"
+      settings: "Mijn account"
+      prizes: "Prijzen"
+      logout: "Uitloggen"
+      signin: "Aanmelden"
+      signup: "Meld je aan"
+      already_registered: "Al geregistreerd?"
     popup:
-      progress: Je vooruitgang
+      progress: "Je vooruitgang"
       lines: 'Totaal aantal regels code: %{lines}'
-      close: SLUITEN
-      mastery: Begrippen
-      puzzle_map: Niveaus
+      close: "SLUITEN"
+      mastery: "Begrippen"
+      puzzle_map: "Niveaus"
       prizes: 'Verzamel alle %{total_trophies} trofeeën en win prijzen!'
       prize_earned: 'Alle %{total_trophies} bekers verzameld!'
-      prize_us_only: (alleen voor leerlingen in de Verenigde Staten)
-      prizes_link: Meer info
+      prize_us_only: "(alleen voor leerlingen in de Verenigde Staten)"
+      prizes_link: "Meer info"
   teacher:
     title:
       one: 'Je leraar:'
       other: 'Je leraren:'
-    remove: (verwijder leraar)
+    remove: "(verwijder leraar)"
     confirm:
-      remove: Weet je zeker dat je deze leraar wilt verwijderen?
-    tools: Hulpmiddelen voor Leraren
+      remove: "Weet je zeker dat je deze leraar wilt verwijderen?"
+    tools: "Hulpmiddelen voor Leraren"
     followers:
       section: 'Onderdeel:'
       stages: 'Niveaus tonen:'
       show_past: 'Toon de activiteit van de leerling (%{bullet_html}) in het verleden:'
-      levels_key: Level-sleutel
-      perfect: Voltooid, perfect
-      completed: Voltooid, maar met te veel blokken
-      tried: Geprobeerd, maar niet voltooid
-      not_tried: Nog niet geprobeerd
+      levels_key: "Level-sleutel"
+      perfect: "Voltooid, perfect"
+      completed: "Voltooid, maar met te veel blokken"
+      tried: "Geprobeerd, maar niet voltooid"
+      not_tried: "Nog niet geprobeerd"
       activity: 'Geeft de activiteit van de leerling in het laatste %{hours} %{plural} weer'
-      no_section: Geen onderdeel toegewezen
-      trophies: prijzen
+      no_section: "Geen onderdeel toegewezen"
+      trophies: "prijzen"
     students:
-      name: Naam
-      username: gebruikersnaam
-      password: wachtwoord
-      manage: Beheer leerling
-      dashboard: Leerkrachten Dashboard
-      add: voeg leerling toe
-      remove: leerling verwijderen
-      confirm_remove: Weet je zeker dat je deze leerling wilt verwijderen?
-      help_reassign: Je kunt je klas in meerdere groepen verdelen door leerlingen aan een nieuwe groep toe te wijzen.
-      help_register: In plaats van alle leerlinggegevens zelf een voor een te importeren kun je je groep ook snel samenstellen door de leerlingen te vragen zich aan te melden. Je leerlingen moeten gebruikersnamen en wachtwoorden kiezen, maar ze zullen NIET gevraagd worden om een mailadres. Wanneer een leerling een wachtwoord vergeet kun je het voor hem/haar resetten.
-      register: Vraag je leerlingen zich te registreren
-      vist: Vraag je leerlingen te gaan naar
+      name: "Naam"
+      username: "gebruikersnaam"
+      password: "wachtwoord"
+      manage: "Beheer leerling"
+      dashboard: "Leerkrachten Dashboard"
+      add: "voeg leerling toe"
+      remove: "leerling verwijderen"
+      confirm_remove: "Weet je zeker dat je deze leerling wilt verwijderen?"
+      help_reassign: "Je kunt je klas in meerdere groepen verdelen door leerlingen aan een nieuwe groep toe te wijzen."
+      help_register: "In plaats van alle leerlinggegevens zelf een voor een te importeren kun je je groep ook snel samenstellen door de leerlingen te vragen zich aan te melden. Je leerlingen moeten gebruikersnamen en wachtwoorden kiezen, maar ze zullen NIET gevraagd worden om een mailadres. Wanneer een leerling een wachtwoord vergeet kun je het voor hem/haar resetten."
+      register: "Vraag je leerlingen zich te registreren"
+      vist: "Vraag je leerlingen te gaan naar"
       section_code: 'en hun groepscode in te vullen:'
       first_please: 'Als eerste, %{add_section}'
-      for: voor
+      for: "voor"
       enter: 'vul in:'
     sections:
-      add: Groep toevoegen
-      manage: beheer onderdelen
-      section: Groep
-      students: Leerlingen
-      section_code: Groepscode
-      add_section_code: Leerling-groepscode toevoegen
-      secret: Soort geheim
-      grade: Cijfer
-      course: Cursus
-      rename: hernoemen
-      edit: edit
-      delete: delete
-      confirm_delete: Weet je zeker dat je deze groep wilt verwijderen?
-      email: Verstuur mail
-    rollup: Overzicht vooruitgang
-    activity: Recente klasactiviteiten
-    user_not_found: De leraar of leerling kan niet worden gevonden
+      add: "Groep toevoegen"
+      manage: "beheer onderdelen"
+      section: "Groep"
+      students: "Leerlingen"
+      section_code: "Groepscode"
+      add_section_code: "Leerling-groepscode toevoegen"
+      secret: "Soort geheim"
+      grade: "Cijfer"
+      course: "Cursus"
+      rename: "hernoemen"
+      edit: "edit"
+      delete: "delete"
+      confirm_delete: "Weet je zeker dat je deze groep wilt verwijderen?"
+      email: "Verstuur mail"
+    rollup: "Overzicht vooruitgang"
+    activity: "Recente klasactiviteiten"
+    user_not_found: "De leraar of leerling kan niet worden gevonden"
     cant_remove_student_no_email: '%{student_name} kan niet worden verwijderd als je leerling omdat %{student_name} geen emailadres heeft opgegeven'
     cant_remove_teacher_no_email: '%{teacher_name} kan niet worden verwijderd als je leraar omdat je geen emailadres hebt opgegeven'
     student_teacher_disassociated: '%{teacher_name} is verwijderd als een leraar voor %{student_name}'
   user:
     email_confirm_needed: 'Emailadres is niet bevestigd:'
-    email_resend_confirm: Verstuur de bevestigingsinstructie nog een keer
-    new_password_hint: (laat leeg als je het niet wilt veranderen)
-    current_password_hint: (we hebben je huidige wachtwoord nodig om je veranderingen te bevestigen)
+    email_resend_confirm: "Verstuur de bevestigingsinstructie nog een keer"
+    new_password_hint: "(laat leeg als je het niet wilt veranderen)"
+    current_password_hint: "(we hebben je huidige wachtwoord nodig om je veranderingen te bevestigen)"
     cancel:
-      title: Annuleer mijn account
-      hint: Ontevreden?
-      button: Annuleer mijn account
+      title: "Annuleer mijn account"
+      hint: "Ontevreden?"
+      button: "Annuleer mijn account"
   user_level:
-    completed: Voltooid
-    tried: Probeerde
+    completed: "Voltooid"
+    tried: "Probeerde"
   user_stats:
-    recent_activity: Recente activiteiten
-    show_more: Toon meer
-    classroom_activity: Losgekoppelde activiteit
+    recent_activity: "Recente activiteiten"
+    show_more: "Toon meer"
+    classroom_activity: "Losgekoppelde activiteit"
   home:
-    title: Code Studio
-    all_courses: Overzicht van cursussen 1, 2 en 3
-    lesson_plans: Lesplannen
+    title: "Code Studio"
+    all_courses: "Overzicht van cursussen 1, 2 en 3"
+    lesson_plans: "Lesplannen"
     signin_message: 'Al geregistreerd? %{link}'
-    student_reg_link: Registreer als leerling
-    teacher_reg_link: Registreer als leraar
+    student_reg_link: "Registreer als leerling"
+    teacher_reg_link: "Registreer als leraar"
     signin_directions: 'Gebruik een account gebruiken om je voortgang bij te houden.<br/> Leraren, houd je hele klas bij.'
-    teacher_dashboard: Ga naar voorgangsoverzicht
+    teacher_dashboard: "Ga naar voorgangsoverzicht"
     teacher_student_count_one: 'Je hebt %{count} leerling.'
     teacher_student_count: 'Je hebt %{count} studenten.'
     teacher_averages: 'Gemiddeld hebben je studenten %{trophy_average} van de %{trophy_max} "Concept Mastery" trofeeën.'
-    teacher_print_certificates: Print certificaten voor leerlingen die deze cursus afronden
-    teacher_read_blog: Lees over nieuws en updates voor onze materialen op onze Leerkracht-Blog
-    classroom: Je klas
-    student_progress: Je voortgang
+    teacher_print_certificates: "Print certificaten voor leerlingen die deze cursus afronden"
+    teacher_read_blog: "Lees over nieuws en updates voor onze materialen op onze Leerkracht-Blog"
+    classroom: "Je klas"
+    student_progress: "Je voortgang"
     student_stats: 'Je hebt %{trophy_count} van de %{trophy_max} "Concept Mastery" trofeeën.'
     student_left_off: 'Waar je geëindigd bent:'
     student_finished: 'Je hebt alle opdrachten gedaan, kies een andere les %{online_link} of kijk bij %{local_school_link}'
-    local_school: lokale school
-    online: online
-    see_details: Bekijk details
+    local_school: "lokale school"
+    online: "online"
+    see_details: "Bekijk details"
     prize_info: 'Prijzen voor deelname (alleen voor leerkrachten van Amerikaanse openbare scholen): tot $1.000 aan prijzengeld voor je klas.'
     tryfirst: 'Of, je kunt het eerst proberen, en later registreren:'
-    trynow: Probeer nu
-    add_hint_help: Help ons alsjeblieft om slimme tips aan de Code.org-opdrachten toe te voegen
-    20hour_overview: Deze cursus van 20 uur introduceert basisbegrippen voor informatica en programmeren. De cursus is bedoeld voor basisschool-klassen, maar is voor alle leeftijden leuk om te leren.
-    test_videos_help: Test de nieuwe video-speler op uw school
-    try_beta_courses: Nieuw! Probeer cursussen die nog in ontwikkeling zijn voor basisschoolleerlingen
-    use_as_teacher: Gebruik de site als leerkracht
+    trynow: "Probeer nu"
+    add_hint_help: "Help ons alsjeblieft om slimme tips aan de Code.org-opdrachten toe te voegen"
+    20hour_overview: "Deze cursus van 20 uur introduceert basisbegrippen voor informatica en programmeren. De cursus is bedoeld voor basisschool-klassen, maar is voor alle leeftijden leuk om te leren."
+    test_videos_help: "Test de nieuwe video-speler op uw school"
+    try_beta_courses: "Nieuw! Probeer cursussen die nog in ontwikkeling zijn voor basisschoolleerlingen"
+    use_as_teacher: "Gebruik de site als leerkracht"
     heading_elementary: '<h2>Cursussen van 20 uur voor</h2><h2>Basisschoolleerlingen</h1>'
     heading_apps: '<h2>Leuk voor</h2><h1>Iedereen</h1>'
     heading_legacy: '<h2>Onze algemene cursus voor</h2><h1>Alle Leeftijden</h1>'
     gallery:
-      your_turtle: Mijn Kunst
-      your_studio: Mijn Apps
+      your_turtle: "Mijn Kunst"
+      your_studio: "Mijn Apps"
   gender:
-    male: Man
-    female: Vrouw
-    none: Wil ik liever niet zeggen
+    male: "Man"
+    female: "Vrouw"
+    none: "Wil ik liever niet zeggen"
   user_type:
-    student: Leerling
-    teacher: Leraar
+    student: "Leerling"
+    teacher: "Leraar"
   footer:
-    help_from_html: Werknemers van Google, Microsoft, Facebook en Twitter hebben geholpen bij het samenstellen van deze opdracht.
+    help_from_html: "Werknemers van Google, Microsoft, Facebook en Twitter hebben geholpen bij het samenstellen van deze opdracht."
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. All Rights Reserved.'
-    feedback: Geef feedback
-    translate: Help ons om te vertalen naar uw taal
-    support: Ondersteuning
-    support_url: http://support.code.org
-    tos: Voorwaarden
-    privacy: Privacy Policy
-    secure: Beveiligde versie
+    feedback: "Geef feedback"
+    translate: "Help ons om te vertalen naar uw taal"
+    support: "Ondersteuning"
+    support_url: "http://support.code.org"
+    tos: "Voorwaarden"
+    privacy: "Privacy Policy"
+    secure: "Beveiligde versie"
   reference_area:
-    title: Hulp nodig?
+    title: "Hulp nodig?"
     subtitle: "Bekijk deze video's en hints"
-    teacher: Zie de oplossing
-    auth_error: U bent niet gemachtigd om de oplossing te zien.
-    submit: Werk de locatie van de Kunstenaar bij
-    direction: Start richting (in graden)
+    teacher: "Zie de oplossing"
+    auth_error: "U bent niet gemachtigd om de oplossing te zien."
+    submit: "Werk de locatie van de Kunstenaar bij"
+    direction: "Start richting (in graden)"
   video:
-    tab: Video.
-    notes: Geen video? Laat notities zien.
-    notes_coming_soon: Notities voor deze video komen binnenkort.
+    tab: "Video."
+    notes: "Geen video? Laat notities zien."
+    notes_coming_soon: "Notities voor deze video komen binnenkort."
     autoplay_option: "Video's automatisch afspelen"
-    download: Video downloaden
+    download: "Video downloaden"
   compatability:
     working:
-      header: We zijn bezig om ondersteuning voor je browser toe te voegen.
+      header: "We zijn bezig om ondersteuning voor je browser toe te voegen."
       message: |-
         Code.org gebruikt moderne webtechnologie. Dat maakt de site sneller. Je browser ondersteunt niet alle vereiste functionaliteiten, waardoor je fouten kunt tegenkomen bij het gebruik van de site. Help ons door <a href='%{report_issue_url}'>fouten die je vindt te rapporteren</a>. Je kunt ook <a href="%{supported_browsers_url}">je browser upgraden naar een versie die we wel ondersteunen</a>.
-      hide_this_warning: Verberg deze waarschuwing
+      hide_this_warning: "Verberg deze waarschuwing"
     upgrade:
-      header: Upgrade je browser.
+      header: "Upgrade je browser."
       message: "Code.org gebruikt moderne webtechnologie. Dit maakt de site sneller in het gebruik. Helaas ondersteunt jouw browser niet alle functionaliteiten die nodig zijn om deze site te draaien<br/><br/>Installeer een browser van onze lijst van ondersteunde browsers om verder te kunnen. Je kunt <a href='#'>de pagina bekijken</a>, maar waarschijnlijk werkt niet alles goed."
-      button: Naar de lijst ondersteunde browsers
-  slow_loading: Dit duurt langer dan normaal...
-  try_reloading: Probeer de pagina opnieuw te laden
-  next_stage: Klaar! Verder naar het volgende niveau
-  download_pdf: Open lesplan
-  view_lesson_plan: Lesplan bekijken
-  pdf_download: PDF downloaden
+      button: "Naar de lijst ondersteunde browsers"
+  slow_loading: "Dit duurt langer dan normaal..."
+  try_reloading: "Probeer de pagina opnieuw te laden"
+  next_stage: "Klaar! Verder naar het volgende niveau"
+  download_pdf: "Open lesplan"
+  view_lesson_plan: "Lesplan bekijken"
+  pdf_download: "PDF downloaden"
   share_code:
     title: "Klik op 'Uitvoeren' om mijn programma te draaien"
-    bounce_og_title: Bekijk mijn Stuiterspel
-    flappy_og_title: Check mijn Flappy Game
-    studio_og_title: Check mijn Play Lab App
-    og_description: Ik heb met Code.org het programma zelf geschreven
-    phone_number_not_allowed: Het lijkt erop dat er een telefoonnummer in zit. Probeer de tekst te veranderen.
-    address_not_allowed: Het lijkt erop dat er een adres in zit. Probeer de tekst te veranderen.
-    email_not_allowed: Het lijkt erop dat er een mailadres in zit. Probeer de tekst te veranderen.
-    profanity_not_allowed: Het lijkt erop dat er vieze woorden in staan. Probeer de tekst te veranderen.
+    bounce_og_title: "Bekijk mijn Stuiterspel"
+    flappy_og_title: "Check mijn Flappy Game"
+    studio_og_title: "Check mijn Play Lab App"
+    og_description: "Ik heb met Code.org het programma zelf geschreven"
+    phone_number_not_allowed: "Het lijkt erop dat er een telefoonnummer in zit. Probeer de tekst te veranderen."
+    address_not_allowed: "Het lijkt erop dat er een adres in zit. Probeer de tekst te veranderen."
+    email_not_allowed: "Het lijkt erop dat er een mailadres in zit. Probeer de tekst te veranderen."
+    profanity_not_allowed: "Het lijkt erop dat er vieze woorden in staan. Probeer de tekst te veranderen."
   builder:
-    created: Je hebt een nieuw script gemaakt.
-    destroyed: Je hebt een script vernietigd.
-    manage: Bouw Niveaus
-    view: Overzicht
-    back: Terug naar scripts
-    success: Je hebt de blokken goed gemaakt.
+    created: "Je hebt een nieuw script gemaakt."
+    destroyed: "Je hebt een script vernietigd."
+    manage: "Bouw Niveaus"
+    view: "Overzicht"
+    back: "Terug naar scripts"
+    success: "Je hebt de blokken goed gemaakt."
     level:
-      create: Nieuw niveau maken
-      current: Huidige niveaus
-      unused: Ongebruikte niveaus
+      create: "Nieuw niveau maken"
+      current: "Huidige niveaus"
+      unused: "Ongebruikte niveaus"
   upsell:
     hoc:
-      title: Een Uur Code
-      body: Probeer de beginselen van de informatica. Miljoenen gingen je voor!
+      title: "Een Uur Code"
+      body: "Probeer de beginselen van de informatica. Miljoenen gingen je voor!"
     flappy:
-      title: Flappy Code
-      body: Wil je ook binnen 10 minuten je eigen spel schrijven? Probeer onze Flappy Code opdracht!
+      title: "Flappy Code"
+      body: "Wil je ook binnen 10 minuten je eigen spel schrijven? Probeer onze Flappy Code opdracht!"
     20hour:
-      title: Introductiecursus
-      body: Probeer onze cursus Introductie Informatica van 20 uur.
+      title: "Introductiecursus"
+      body: "Probeer onze cursus Introductie Informatica van 20 uur."
   gallery:
-    students_drew_these_with_code: Leerlingen wonnen deze met programmeren!
-    students_made_these_with_code: Leerlingen hebben dit gemaakt met code!
+    students_drew_these_with_code: "Leerlingen wonnen deze met programmeren!"
+    students_made_these_with_code: "Leerlingen hebben dit gemaakt met code!"
     picture_count: 'In het afgelopen <b>%{days}</b> dagen hebben leerlingen <b>%{count}</b> afbeeldingen getekend door hun eigen computerprogramma te schrijven. Klik op de afbeeldingen om elk programma uit te voeren.'
     activity_count: "In de afgelopen <b>%{days}</b> dagen hebben leerlingen <b>%{count}</b> apps en plaatjes gemaakt door hun eigen computerprogramma's te schrijven. Klik op de plaatjes en screenshots om ieder programma in actie te zien."
-    want_to_make_your_own: Wil je dit zelf doen?
+    want_to_make_your_own: "Wil je dit zelf doen?"
     more: 'Meer &rarr;'
     caption_by_name_age: 'door %{name}, %{age} jaar'
     caption_time_ago: '%{time_ago} geleden'
   landing:
     prerelease: "Deze cursus is in <span class='betatext'>beta</span>. Dat betekent dat het nog niet de uiteindelijke versie van de cursus is, en nog zal worden aangepast wanneer we feedback krijgen en verbeteringen doorvoeren."
-    feedback: Geef Feedback
-    report_bug: Meld Bug
-    support: Help
-    support_url: //support.code.org
+    feedback: "Geef Feedback"
+    report_bug: "Meld Bug"
+    support: "Help"
+    support_url: "//support.code.org"
   multi:
-    wrong_title: Onjuist antwoord
+    wrong_title: "Onjuist antwoord"
     wrong_body: 'Het antwoord dat je hebt ingevoerd is niet correct.  Probeer het opnieuw!'
-    correct_title: Juist
-    correct_body: Dat is het juiste antwoord.
+    correct_title: "Juist"
+    correct_body: "Dat is het juiste antwoord."
   match:
-    wrong_title: Onjuist antwoord
+    wrong_title: "Onjuist antwoord"
     wrong_body: 'De oplossing die je hebt ingevoerd is niet juist.  Probeer het opnieuw!'
-    correct_title: Juist
-    correct_body: Dat is het juiste antwoord.
+    correct_title: "Juist"
+    correct_body: "Dat is het juiste antwoord."
   dialog:
-    ok: OK
+    ok: "OK"
   time:
-    hour: 1 uur
-    day: dag
-    week: week
+    hour: "1 uur"
+    day: "dag"
+    week: "week"
   data:
     script:
       name:
         20-hour:
-          title: Informatica-introductiecursus voor basisschoolleerlingen (15-25 uur)
-          description: Deze cursus van 20 uur introduceert basisbegrippen voor informatica en programmeren. De cursus is bedoeld voor basisschool-klassen, maar is voor alle leeftijden leuk om te leren.
+          title: "Informatica-introductiecursus voor basisschoolleerlingen (15-25 uur)"
+          description: "Deze cursus van 20 uur introduceert basisbegrippen voor informatica en programmeren. De cursus is bedoeld voor basisschool-klassen, maar is voor alle leeftijden leuk om te leren."
         Hour of Code:
-          title: Een Uur Code
+          title: "Een Uur Code"
           description: ""
         edit-code:
-          title: Bewerk de code
+          title: "Bewerk de code"
           description: ""
         events:
-          title: Gebeurtenissen
+          title: "Gebeurtenissen"
           description: ""
         builder:
-          title: Builder
+          title: "Builder"
           description: ""
         flappy:
-          title: Flappy Code
-          description: Wil je ook binnen 10 minuten je eigen spel schrijven? Probeer onze Flappy Code opdracht!
+          title: "Flappy Code"
+          description: "Wil je ook binnen 10 minuten je eigen spel schrijven? Probeer onze Flappy Code opdracht!"
         jigsaw:
-          title: Legpuzzel
+          title: "Legpuzzel"
           description: ""
         step:
-          title: Stap
+          title: "Stap"
           description: ""
         sample_level_builder:
-          title: Voorbeeld-levelbuilder
+          title: "Voorbeeld-levelbuilder"
           description: ""
   age_interstitial:
-    age: Je leeftijd
-    header: Update Account Informatie
+    age: "Je leeftijd"
+    header: "Update Account Informatie"
     message: 'We zijn bezig onze ervaring te verbeteren zodat je privacy nog beter wordt gewaarborgd. Hiervoor moeten we bestaande gebruikers vragen hier hun leeftijd in te vullen.<br/>Zoals altijd zal code.org deze informatie nooit uitlenen, verkopen of delen met anderen.'
     sign_out: 'Als je je leeftijd niet wilt geven kun je <a href="%{url}">uitloggen</a>.'
   zendesk_too_young_message: 'Sorry, jeugdige gebruikers mogen niet inloggen op onze ondersteuningssite. Je mag <a href="http://support.code.org">support.code.org</a> wel bekijken zonder in te loggen of je ouder of leraar vragen met ons contact op te nemen.'

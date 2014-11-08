@@ -216,7 +216,7 @@
         playlab: "Hacer una aplicación"
         artist: "Dibujar algo"
     user:
-      classroom: "Mis alumnos"
+      classroom: "Página de inicio del maestro"
       label: 'Hola %{username}'
       stats: "Mi progreso"
       settings: "Mi cuenta"
@@ -446,6 +446,8 @@
     wrong_body: 'La solución ingresada no es la correcta.  ¡Intenta nuevamente!'
     correct_title: "Correcto"
     correct_body: "Esa respuesta es la correcta."
+  text_match:
+    placeholder: "Enter your answer here"
   dialog:
     ok: "OK"
   time:
@@ -488,3 +490,8 @@
     message: 'Estamos actualizando nuestro servicio para ofrecerte una mayor protección de privacidad. Para hacerlo, necesitamos que los usuarios introduzcan aquí su edad. <br/>Como siempre, code.org nunca alquilará, venderá o compartirá esta información con terceros. '
     sign_out: 'Si no quieres proporcionar tu edad puedes <a heref="%{url}">finalizar tu sesión</a>.'
   zendesk_too_young_message: 'Lo sentimos, los usuarios más jóvenes no pueden registrarse en nuestro sitio de soporte. Puedes navegar <a href="http://support.code.org">support.code.org</a> sin registrarte o pedir a tus padres o maestros que nos contacten en tu nombre.'
+  progress:
+    not_completed: "not completed"
+    completed_too_many_blocks: "completed, too many blocks"
+    completed_perfect: "completed, perfect"
+    furthest_level_attempted: "furthest level attempted"

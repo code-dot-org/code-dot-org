@@ -1,172 +1,172 @@
-is:
+"is":
   data:
     script:
       name:
         20-hour:
-          desc: K-8 inngangur að tölvunarfræði
-          Unplug1: Stig 1
-          Maze: Stig 2
-          Unplug2: Stig 3
-          Unplug3: Stig 4
-          Artist: Stig 5
-          Unplug4: Stig 6
-          Artist2: Stig 7
-          Unplug5: Stig 8
-          Farmer: Stig 9
-          Unplug6: Áfangi 10
-          Artist3: Áfangi 11
-          Unplug7: Áfangi 12
-          Farmer2: Áfangi 13
-          Unplug8: Áfangi 14
-          Artist4: Áfangi 15
-          Unplug9: Áfangi 16
-          Farmer3: Áfangi 17
-          Unplug10: Áfangi 18
-          Artist5: Áfangi 19
-          Unplug11: Áfangi 20
+          desc: "K-8 inngangur að tölvunarfræði"
+          Unplug1: "Stig 1"
+          Maze: "Stig 2"
+          Unplug2: "Stig 3"
+          Unplug3: "Stig 4"
+          Artist: "Stig 5"
+          Unplug4: "Stig 6"
+          Artist2: "Stig 7"
+          Unplug5: "Stig 8"
+          Farmer: "Stig 9"
+          Unplug6: "Áfangi 10"
+          Artist3: "Áfangi 11"
+          Unplug7: "Áfangi 12"
+          Farmer2: "Áfangi 13"
+          Unplug8: "Áfangi 14"
+          Artist4: "Áfangi 15"
+          Unplug9: "Áfangi 16"
+          Farmer3: "Áfangi 17"
+          Unplug10: "Áfangi 18"
+          Artist5: "Áfangi 19"
+          Unplug11: "Áfangi 20"
         Hour of Code:
-          desc: Klukkustund kóðunar
-          Maze: Stig 1
+          desc: "Klukkustund kóðunar"
+          Maze: "Stig 1"
         Edit Code:
-          desc: Breyta kóða (beta)
-          MazeEC: Stig 1
+          desc: "Breyta kóða (beta)"
+          MazeEC: "Stig 1"
         2014 Levels:
-          desc: Skopp (beta)
-          Bounce: Stig 1
+          desc: "Skopp (beta)"
+          Bounce: "Stig 1"
         Builder Levels:
-          desc: Þrautir gerðar af notendum (beta)
-          Custom: Stig 1
+          desc: "Þrautir gerðar af notendum (beta)"
+          Custom: "Stig 1"
         Flappy Levels:
-          desc: Fuglinn Flappy
-          Flappy: Stig 1
+          desc: "Fuglinn Flappy"
+          Flappy: "Stig 1"
         Jigsaw Levels:
-          desc: Púsl (beta)
-          Jigsaw: Stig 1
+          desc: "Púsl (beta)"
+          Jigsaw: "Stig 1"
         Step Levels:
-          desc: Völundarhús (beta)
-          MazeStep: Þrep í áfanga
+          desc: "Völundarhús (beta)"
+          MazeStep: "Þrep í áfanga"
         edit-code:
-          desc: Breyta kóða (beta)
-          MazeEC: Stig 1
-          Webapp: Stig 2
-          ArtistEC: Stig 3
+          desc: "Breyta kóða (beta)"
+          MazeEC: "Stig 1"
+          Webapp: "Stig 2"
+          ArtistEC: "Stig 3"
         events:
-          desc: Skopp (beta)
-          Bounce: Stig 1
-          Studio: Stig 2
+          desc: "Skopp (beta)"
+          Bounce: "Stig 1"
+          Studio: "Stig 2"
         builder:
-          desc: Þrautir gerðar af notendum (beta)
-          Custom: Stig 1
+          desc: "Þrautir gerðar af notendum (beta)"
+          Custom: "Stig 1"
         flappy:
-          desc: Fuglinn Flappy
-          Flappy: Stig 1
+          desc: "Fuglinn Flappy"
+          Flappy: "Stig 1"
         jigsaw:
-          desc: Púsl (beta)
-          Jigsaw: Stig 1
+          desc: "Púsl (beta)"
+          Jigsaw: "Stig 1"
         step:
-          desc: Völundarhús (beta)
-          MazeStep: Þrep í áfanga
+          desc: "Völundarhús (beta)"
+          MazeStep: "Þrep í áfanga"
         wordsearch:
-          desc: Stafsetning (beta)
-          WordSearch: Stig 1
+          desc: "Stafsetning (beta)"
+          WordSearch: "Stig 1"
     game:
       name:
-        Unplug1: Kynning á tölvunarfræði
-        Maze: Völundarhúsið
-        Multi: Alls konar val
-        Unplug2: Tölvunarmiðuð hugsun
-        Unplug3: Forritun rúðublaða
-        Artist: Listamaðurinn
-        Unplug4: Algrím
-        Artist2: Listamaðurinn 2
-        Unplug5: Föll
-        Farmer: Bóndinn
-        Unplug6: Skilyrði
-        Artist3: Listamaðurinn 3
-        Unplug7: Lagasmíð
-        Farmer2: Bóndinn 2
-        Unplug8: Greining kjarna
-        Artist4: Listamaðurinn 4
-        Unplug9: Boðhlaupsforritun
-        Farmer3: Bóndinn 3
-        Unplug10: Internetið
-        Artist5: Listamaðurinn 5
-        Unplug11: Samantekt
-        MazeEC: Völundarhúsið
-        Bounce: Skopp
-        Flappy: Fuglinn Flappy
-        Jigsaw: Púsl
-        MazeStep: Völundarhús, þrep
-        Wordsearch: Orðaleit
-        Webapp: Vefapp
-        ArtistEC: Listamaðurinn
+        Unplug1: "Kynning á tölvunarfræði"
+        Maze: "Völundarhúsið"
+        Multi: "Alls konar val"
+        Unplug2: "Tölvunarmiðuð hugsun"
+        Unplug3: "Forritun rúðublaða"
+        Artist: "Listamaðurinn"
+        Unplug4: "Algrím"
+        Artist2: "Listamaðurinn 2"
+        Unplug5: "Föll"
+        Farmer: "Bóndinn"
+        Unplug6: "Skilyrði"
+        Artist3: "Listamaðurinn 3"
+        Unplug7: "Lagasmíð"
+        Farmer2: "Bóndinn 2"
+        Unplug8: "Greining kjarna"
+        Artist4: "Listamaðurinn 4"
+        Unplug9: "Boðhlaupsforritun"
+        Farmer3: "Bóndinn 3"
+        Unplug10: "Internetið"
+        Artist5: "Listamaðurinn 5"
+        Unplug11: "Samantekt"
+        MazeEC: "Völundarhúsið"
+        Bounce: "Skopp"
+        Flappy: "Fuglinn Flappy"
+        Jigsaw: "Púsl"
+        MazeStep: "Völundarhús, þrep"
+        Wordsearch: "Orðaleit"
+        Webapp: "Vefapp"
+        ArtistEC: "Listamaðurinn"
     trophy:
       name:
-        Bronze: Brons
-        Silver: Silfur
-        Gold: Gull
+        Bronze: "Brons"
+        Silver: "Silfur"
+        Gold: "Gull"
     concept:
       description:
-        sequence: Runa
-        if: Ef kubbur
-        if_else: Ef-annars kubbur
-        loop_times: Endurtaka X kubbur
-        loop_until: Endurtaka þar til kubbur
-        loop_while: Meðan kubbur
-        loop_for: Teljarakubbur
-        function: Föll
-        parameters: Föll með stikum
+        sequence: "Runa"
+        if: "Ef kubbur"
+        if_else: "Ef-annars kubbur"
+        loop_times: "Endurtaka X kubbur"
+        loop_until: "Endurtaka þar til kubbur"
+        loop_while: "Meðan kubbur"
+        loop_for: "Teljarakubbur"
+        function: "Föll"
+        parameters: "Föll með stikum"
     level:
       instructions:
         maze_2_2: 'Getur þú hjálpað mér að ná óþæga svíninu? Raðaðu nokkrum "fara áfram" kubbum saman og ýttu svo á "Keyra forrit" til að hjálpa mér að komast þangað. '
-        maze_2_1: Þetta svín ýfir á mér fjaðrirnar. Hjálpaðu mér að finna það!
-        maze_2_2_5: Fylgdu slóðinni og leiddu mig að svínka. Forðastu TNT sprengjuna annars verður fjaðrafok!
-        maze_2_3: Leiddu mig að hinum illa græna grís! (Gættu þín á TNT sprengjunum)
-        maze_2_4: Slappaðu af og hjálpaðu mér að finna vonda svínið. Annars gæti ég reiðst!
-        maze_2_5: Ég get komist að svíninu með því að nota bara 2 kubba. Geturðu fundið út úr því?
-        maze_2_6: Reyndu að koma mér til grænu boðflennunnar með aðeins 3 kubbum.
+        maze_2_1: "Þetta svín ýfir á mér fjaðrirnar. Hjálpaðu mér að finna það!"
+        maze_2_2_5: "Fylgdu slóðinni og leiddu mig að svínka. Forðastu TNT sprengjuna annars verður fjaðrafok!"
+        maze_2_3: "Leiddu mig að hinum illa græna grís! (Gættu þín á TNT sprengjunum)"
+        maze_2_4: "Slappaðu af og hjálpaðu mér að finna vonda svínið. Annars gæti ég reiðst!"
+        maze_2_5: "Ég get komist að svíninu með því að nota bara 2 kubba. Geturðu fundið út úr því?"
+        maze_2_6: "Reyndu að koma mér til grænu boðflennunnar með aðeins 3 kubbum."
         maze_2_7: 'Hjálpaðu mér að hrekja vonda grísinn í burtu með sem fæstum kubbum. Prófaðu að nota fleiri en einn "endurtaka" kubb.'
         maze_2_8: 'Þegar kubbur er grár merkir það að þú getur ekki eytt honum. Leystu þessa þraut með "endurtaka" kubbi sem endurtekur 3svar sinnum. Prófaðu að setja þessa 3 kubba inn í gráa "endurtaka" kubbinn: færa, færa, snúa.'
         maze_2_9: 'Prófaðu að nota nýja "endurtaka þar til" kubbinn - hann endurtekur þar til ég kemst til svínka.'
         maze_2_10: 'Bara ein æfing í viðbót  - geturðu leyst þetta með því að nota aðeins 4 kubba?'
-        maze_2_11: Kæra mannvera. Ég uppvakningur. Ég svangur. Verð..komast...að sólblóminu... Geturðu komið mér þangað með aðeins 5 kubbum?
-        maze_2_12: Jæja, þessi er svipuð en aðeins öðruvísi. Geturðu leyst hana með aðeins 5 kubbum?
+        maze_2_11: "Kæra mannvera. Ég uppvakningur. Ég svangur. Verð..komast...að sólblóminu... Geturðu komið mér þangað með aðeins 5 kubbum?"
+        maze_2_12: "Jæja, þessi er svipuð en aðeins öðruvísi. Geturðu leyst hana með aðeins 5 kubbum?"
         maze_2_13: 'Notaðu nýja "ef" kubbinn til að láta mig ákveða hvenær ég á að snúa. Vísbending: Þú þarft aðeins að nota einn kubb í viðbót, en taktu eftir hvernig við höfum útbúið hann svo þú getir gert þetta upp á eigin spýtur næst.'
         maze_2_14: 'Jæja, þetta er alveg eins og síðasta þraut, en þú þarft að muna hvernig þú notaðir "ef" og "endurtaka" kubbana saman.'
         maze_2_15: 'Ég vilja sólblóm! Notaðu "ef" kubb til að koma mér þangað með sem fæstum kubbum.'
         maze_2_16: 'Nú skulum við æfa þetta aftur - þessi þraut er ekki svo ólík, en gættu þín á kjömsurunum!'
         maze_2_17: '"Ef-annars" kubburinn athugar skilyrði og gerir svo annaðhvort eitt eða eitthvað annað. Prófaðu að nota þennan nýja kubb til að koma mér til sólblómsins.'
         maze_2_18: 'Ein æfing í viðbót með "ef-annars" kubbinn. Geturðu leyst þrautina í fyrstu tilraun?'
-        maze_2_19: Getur þú bætt við bara 3 kubbum til að hjálpa mér að rata flóknari leið? Ef þú gerir það rétt, get ég gengið hvaða slóð sem er alveg sama hvað hún er löng.
-        turtle_1_1: Hæ, ég er listamaður. Þú getur skrifað forrit sem lætur mig teikna nánast hvað sem er. Notaðu nokkra kubba til að láta mig teikna yfir gráu strikin á myndinni.
+        maze_2_19: "Getur þú bætt við bara 3 kubbum til að hjálpa mér að rata flóknari leið? Ef þú gerir það rétt, get ég gengið hvaða slóð sem er alveg sama hvað hún er löng."
+        turtle_1_1: "Hæ, ég er listamaður. Þú getur skrifað forrit sem lætur mig teikna nánast hvað sem er. Notaðu nokkra kubba til að láta mig teikna yfir gráu strikin á myndinni."
         turtle_1_2: 'Teiknaðu nú ferning. ATHUGAÐU: Notaðu uppáhaldslitinn þinn með því að velja hann í nýja litakubbnum.'
-        turtle_1_3: Búðu til ferning með því að nota aðeins 3 kubba.
+        turtle_1_3: "Búðu til ferning með því að nota aðeins 3 kubba."
         turtle_1_4: 'Teiknaðu þríhyrning með hliðar í mismunandi litum með því að nota kubbinn "einhver litur" sem velur lit af handahófi í hvert sinn. Vísbending: Þú þarft að finna út hve mikið á að snúa með því að smella á töluna í snúningskubbnum.'
-        turtle_1_5: Æfðu þetta nú með því að teikna þríhyrning og ferning til að búa til mynd af umslagi.
+        turtle_1_5: "Æfðu þetta nú með því að teikna þríhyrning og ferning til að búa til mynd af umslagi."
         turtle_1_6: 'Getur þú fundið út hvernig á að teikna þennan þríhyrning og ferning? Vísbending: Teiknaðu þríhyrninginn fyrst og finndu svo út hve mikið á að snúa áður en ferningurinn er teiknaður.'
         turtle_1_7: 'Nú skulum við reyna svolítið erfiðara: reyndu að teikna þessi grænu gleraugu. Ferningarnir er 100 pixlar á hverja hlið og þeir eru 50 pixla frá hvor öðrum. Ekki gleyma að nota grænan lit!'
         turtle_1_8: 'Reyndu að finna út hvað gerist ef þú keyrir þetta forrit (eða ýttu á "Keyra" til að prófa). Láttu það svo endurtaka sig nógu oft til að klára teikninguna. Litirnir breytast í hvert skipti.'
-        turtle_1_9: Getur þú fundið út hvaða tölu þarf að setja í stað spurningarmerkisins til að teikna hring?
+        turtle_1_9: "Getur þú fundið út hvaða tölu þarf að setja í stað spurningarmerkisins til að teikna hring?"
         turtle_1_10: 'Þér tókst það! Nú máttu teikna hvað sem þú vilt. Nokkrar skemmtilegar hugmyndir: spýtukarl, snjókorn eða spíral. Prófaðu líka að nota nýja "stilla breidd" kubbinn. Góða skemmtun!'
         turtle_4_1: 'Getur þú teiknað þríhyrning (með 100 pixla hliðar) með aðeins 3 kubbum? Vísbending: Notaðu "endurtaka" kubb.'
         turtle_4_2: 'Bættu "snúa til hægri um 90 gráður" kubbi inn í forritið sem er nú þegar á vinnusvæðinu til að teikna þessa þríhyrninga.'
         turtle_4_3: 'Hér er kóðinn sem þú skrifaðir til að teikna einn þríhyrning. Getur þú bætt við "endurtaka" og "snúa" kubbum til að búa til fallegt blóm?'
         turtle_4_4: 'Hér er sami kóðinn frá þrautinni á undan, en þessi snýr aðeins 36 gráður eftir að hafa teiknað hvern þríhyrning. Hversu oft þarf þetta að endurtaka sig? (Vísbending: Eftir 360 gráðu snúning er teikningin komin í heilan hring)'
         turtle_4_5: 'Hér er sami kóðinn frá þrautinni á undan, en þessi endurtekur snúninginn 36 sinnum. Hve margar gráður á hver snúningur að vera? (Vísbending: Eftir 360 gráða snúning hefur teikningin farið heilan hring)'
-        turtle_4_6: Getur þú notað aðeins 3 kubba til að teikna ferning með 20 pixla hliðar?
+        turtle_4_6: "Getur þú notað aðeins 3 kubba til að teikna ferning með 20 pixla hliðar?"
         turtle_4_7: 'Hér er kóðinn til að teikna ferning frá þrautinni á undan. Getur þú endurtekið hann til að teikna 10 samliggjandi ferninga eins og stiga? Vísbending: Þú þarft aðeins 2 kubba í viðbót.'
-        turtle_4_8: Hér lausnin á síðustu þraut. Getur þú bætt við bara 2 kubbum til að klára teikninguna?
-        turtle_4_9: Hér er lausnin á síðustu þraut. Um hve margar gráður ætti að snúa til að ljúka teikningunni? (Þú verður líklega að giska nokkrum sinnum)
-        turtle_4_10: Hér er lausnin á síðustu þraut. Hve oft ætti að endurtaka til að ljúka teikningunni?
+        turtle_4_8: "Hér lausnin á síðustu þraut. Getur þú bætt við bara 2 kubbum til að klára teikninguna?"
+        turtle_4_9: "Hér er lausnin á síðustu þraut. Um hve margar gráður ætti að snúa til að ljúka teikningunni? (Þú verður líklega að giska nokkrum sinnum)"
+        turtle_4_10: "Hér er lausnin á síðustu þraut. Hve oft ætti að endurtaka til að ljúka teikningunni?"
         turtle_4_11: 'Prófaðu að breyta tölunum í "snúa" og "endurtaka" kubbunum til að búa til mismunandi mynstur. Eða gerðu tilraunir með aðra hluta kóðans til að teikna hvað sem þú vilt.'
         maze_karel_1_1: 'Hæ, ég er bóndi. Ég þarf hjálp þína við að slétta túnið á jörðinni minni. Færðu mig að moldarhaugnum og notaðu "fjarlægja" kubbinn til að fjarlægja hauginn.'
         maze_karel_1_2: 'Færðu mig svo að holunni og fylltu hana með TVEIMUR skóflum af mold með því að nota "fylla" kubbinn.'
-        maze_karel_1_3: Færðu mig að moldarhaugnum og segðu mér hve margar skóflur á að fjarlægja en notaðu eins fáa kubba og hægt er.
+        maze_karel_1_3: "Færðu mig að moldarhaugnum og segðu mér hve margar skóflur á að fjarlægja en notaðu eins fáa kubba og hægt er."
         maze_karel_1_4: 'Getur þú hjálpað mér að fjarlægja alla fjóra moldarhaugana? Vísbending: Notaðu endurtekningarkubb ef þú getur.'
         maze_karel_1_5: 'Hjálpaðu mér að fylla allar þessar holur með 5 skóflum af mold. Vísbending: Þú getur sett "endurtaka" blokk innan í "meðan" blokk.'
         maze_karel_1_6: 'Fjarlægðu alla moldarhaugana með sem fæstum kubbum. Nýju valkostirnir í fellilistanum á "meðan" kubbnum segja mér hvort ég standi á haug eða holu.'
-        maze_karel_1_7: Ég fann mjög djúpa holu! Ég veit ekki hve margar skóflur þarf til að fylla hana. Getur þú skrifað forrit sem fyllir holuna þar til yfirborðið er slétt?
-        maze_karel_1_8: Hjálpaðu mér að fylla holuna við endann á túninu og með sem fæstum kubbum.
+        maze_karel_1_7: "Ég fann mjög djúpa holu! Ég veit ekki hve margar skóflur þarf til að fylla hana. Getur þú skrifað forrit sem fyllir holuna þar til yfirborðið er slétt?"
+        maze_karel_1_8: "Hjálpaðu mér að fylla holuna við endann á túninu og með sem fæstum kubbum."
         maze_karel_1_9: 'Láttu mig fjarlægja alla þessa moldarhauga. Reyndu að nota sem fæsta kubba. Vísbending: Prófaðu að nota "meðan" kubb.'
         maze_karel_1_10: 'Ég er að vinna seint og það er orðið svo dimmt að ég sé ekki hve stórir haugarnir eru. Nú hef ég ekki alla valkostina sem voru á "meðan" kubbnum. Láttu mig færast eftir túninu og fjarlægja hauga í leiðinni.'
         maze_karel_1_11: 'Það er enn dimmt úti. Láttu mig færast eftir túninu. Ef það er haugur á að fjarlægja hann og ef það er hola á að fylla hana. Vísbending: Notaðu valkosti í fellilistanum á "ef" kubbnum.'
@@ -180,17 +180,17 @@ is:
         turtle_2_7_5: 'Það er komið nýtt "teikna snjókarl" fall (undir flokknum Föll). Teiknaðu tvo snjókarla, 250 og 100 á hæð.'
         turtle_2_8: 'Þessi er svolítið snúin. Notaðu "teikna snjókarl" fallið og nýja "hoppa fram" kubbinn (undir flokknum Aðgerðir). Teiknaðu 3 snjókarla í mismunandi litum með 100 pixla millibili.'
         turtle_2_9: 'Notaðu "telja með" kubb til að teikna fjölskyldu snjókarla með hæðirnar 110, 100, 90, 80 og 70 með 60 pixla bil á milli þeirra allra.'
-        turtle_2_10: Hér er kóði til að gera tilraunir með mismunandi spírala. Hvað gerist ef þú breytir snúningstölunni? Eða setur handahófslit í lykkjuna? Teiknaðu hvað sem þér dettur í hug.
-        maze_karel_2_1: Reyndu að nota kubbana til að láta mig fjarlægja alla haugana og fylla allar holurnar á túninu. Reyndu að nota lykkjur í staðinn fyrir marga kubba. Vísbending; Þú getur sett eina lykkju innan í aðra.
+        turtle_2_10: "Hér er kóði til að gera tilraunir með mismunandi spírala. Hvað gerist ef þú breytir snúningstölunni? Eða setur handahófslit í lykkjuna? Teiknaðu hvað sem þér dettur í hug."
+        maze_karel_2_1: "Reyndu að nota kubbana til að láta mig fjarlægja alla haugana og fylla allar holurnar á túninu. Reyndu að nota lykkjur í staðinn fyrir marga kubba. Vísbending; Þú getur sett eina lykkju innan í aðra."
         maze_karel_2_2: 'Við höfum skilgreint okkar eigin kubb sem heitir "fylla 5" og er í flokknum Föll. Notaðu hann til að hjálpa mér að fylla þessa holu.'
         maze_karel_2_3: 'Notaðu nýja "fylla 5" fallið til að láta mig fylla allar holurnar. Þú verður að draga "fylla 5" kubbinn út úr flokknum Föll.'
-        maze_karel_2_4: Skilgreindu nýtt fall sem fjarlægir 7 skóflufylli. Notaðu það svo til að skrifa forrit sem hjálpar mér að fjarlægja alla haugana.
-        maze_karel_2_5: Búðu til nýtt fall sem fjarlægir 6 skóflufylli úr haug og notaðu það til að hjálpa mér að slétta alla haugana.
+        maze_karel_2_4: "Skilgreindu nýtt fall sem fjarlægir 7 skóflufylli. Notaðu það svo til að skrifa forrit sem hjálpar mér að fjarlægja alla haugana."
+        maze_karel_2_5: "Búðu til nýtt fall sem fjarlægir 6 skóflufylli úr haug og notaðu það til að hjálpa mér að slétta alla haugana."
         maze_karel_2_6: 'Notaðu tvö ný föll, "fylla 8" og "fjarlægja 8", til að hjálpa mér að slétta hauginn og fylla upp í holuna.'
-        maze_karel_2_7: Það er kýr á túninu mínu! Skrifaðu nýtt fall sem hjálpar mér að forðast kúna en fjarlægja hauginn. Settu alla kubbana inn í nýja fallið.
+        maze_karel_2_7: "Það er kýr á túninu mínu! Skrifaðu nýtt fall sem hjálpar mér að forðast kúna en fjarlægja hauginn. Settu alla kubbana inn í nýja fallið."
         maze_karel_2_8: 'Notaðu þetta nýja fall "forðast kúna og fjarlægja 1" til að hjálpa mér að fjarlægja alla haugana.'
-        maze_karel_2_9: Jæja, hér er fall sem fjarlægir 4 mismunandi moldarhauga lóðrétt. Reyndu að setja þetta fall inn í lykkju svo að þú fjarlægir alla haugana með því að nota aðeins fáa nýja kubba.
-        maze_karel_2_10: Færðu mig yfir túnið og notaðu þessi tvö föll til að hjálpa mér að fjarlægja alla haugana og fylla upp í allar holurnar.
+        maze_karel_2_9: "Jæja, hér er fall sem fjarlægir 4 mismunandi moldarhauga lóðrétt. Reyndu að setja þetta fall inn í lykkju svo að þú fjarlægir alla haugana með því að nota aðeins fáa nýja kubba."
+        maze_karel_2_10: "Færðu mig yfir túnið og notaðu þessi tvö föll til að hjálpa mér að fjarlægja alla haugana og fylla upp í allar holurnar."
         turtle_3_1: 'Þetta verkefni sýnir þér hvernig föllin "teikna ferning" og "teikna hring" eru skilgreind. Skilgreining á falli keyrir ekki kubbana í því. Þú verður að draga "teikna ferning" kubbinn út til að teikna ferning.'
         turtle_3_2: 'Notaðu "teikna ferning" fallið sem fyrirmynd og búðu til fallið "teikna þríhyrning". Notaðu það svo.'
         turtle_3_3: 'Teiknaðu þríhyrndar girðingar í kringum kettina og ferhyrnda girðingu í kringum kúna. Ráðlegging: Prófaðu forritið á meðan þú vinnur í því.'
@@ -200,208 +200,208 @@ is:
         turtle_3_7: 'Bættu inntakinu "lengd" við "teikna hús" og byggðu svo nægilega stórt hús fyrir fílinn (með 150 pixla langar hliðar)'
         turtle_3_8: 'Hér eru allir kubbarnir úr síðustu þraut. Breyttu "teikna hús" svo ég endi niðri í hægra horni eftir að nýtt hús hefur verið teiknað. Notaðu þetta breytta fall til að teikna þrjú hús.'
         turtle_3_9: 'Getur þú búið til "teikna hús" fallið aftur án hjálpar? Reyndu það og teiknaðu svo röð af húsum.'
-        turtle_3_10: Þú hefur lært heilmikið! Notaðu kunnáttuna til að teikna hvað sem þú vilt. Reyndu að teikna stjörnu, spíral eða flott snjókorn.
-        maze_karel_debug_seq_1: Velkomin í villuleit! Kóðinn minn virkar ekki. Getur þú komið auga á ástæðuna og lagað kóðann svo ég geti sléttað akurinn og undirbúið hann fyrir sáningu?
-        maze_karel_debug_seq_2: Hvað er að þessu forriti? Hvernig þarf að laga það svo ég fjarlægi hauginn?
-        maze_karel_debug_repeat: Leiðréttu þetta forrit svo túnið verði slétt og fínt.
-        maze_karel_debug_while: Hvernig þarf að breyta þessu forriti svo það hjálpi mér að fylla holuna?
-        maze_karel_debug_if: Hjálp! Lagaðu forritið svo túnið verði rennislétt.
-        maze_karel_debug_if_else: Lagaðu þetta forrit svo að ég geti fyllt holurnar og fjarlægt alla haugana.
-        maze_karel_debug_function_1: Hverju mundir þú breyta í þessu forriti svo það hjálpi mér að fjarlægja alla haugana?
-        maze_karel_debug_function_2: Getur þú leiðrétt þetta forrit svo ég geti sléttað túnið?
+        turtle_3_10: "Þú hefur lært heilmikið! Notaðu kunnáttuna til að teikna hvað sem þú vilt. Reyndu að teikna stjörnu, spíral eða flott snjókorn."
+        maze_karel_debug_seq_1: "Velkomin í villuleit! Kóðinn minn virkar ekki. Getur þú komið auga á ástæðuna og lagað kóðann svo ég geti sléttað akurinn og undirbúið hann fyrir sáningu?"
+        maze_karel_debug_seq_2: "Hvað er að þessu forriti? Hvernig þarf að laga það svo ég fjarlægi hauginn?"
+        maze_karel_debug_repeat: "Leiðréttu þetta forrit svo túnið verði slétt og fínt."
+        maze_karel_debug_while: "Hvernig þarf að breyta þessu forriti svo það hjálpi mér að fylla holuna?"
+        maze_karel_debug_if: "Hjálp! Lagaðu forritið svo túnið verði rennislétt."
+        maze_karel_debug_if_else: "Lagaðu þetta forrit svo að ég geti fyllt holurnar og fjarlægt alla haugana."
+        maze_karel_debug_function_1: "Hverju mundir þú breyta í þessu forriti svo það hjálpi mér að fjarlægja alla haugana?"
+        maze_karel_debug_function_2: "Getur þú leiðrétt þetta forrit svo ég geti sléttað túnið?"
         maze_karel_debug_function_3: 'Breyttu þessu forriti svo að ég fjarlægi alla haugana á túninu mínu. '
-        turtle_5_1: Prófaðu að keyra þetta forrit. Gerðu breytingar til að sjá hvaða áhrif þær hafa. Getur þú fundið út hvernig það virkar? (Eða eytt því og sett eitthvað allt annað í staðinn)
-        turtle_5_2: Prófaðu að keyra þetta forrit. Gerðu breytingar til að sjá hvaða áhrif þær hafa. Getur þú fundið út hvernig það virkar? (Eða eytt því og sett eitthvað allt annað í staðinn)
-        turtle_5_3: Prófaðu að keyra þetta forrit. Gerðu breytingar til að sjá hvaða áhrif þær hafa. Getur þú fundið út hvernig það virkar? (Eða eytt því og sett eitthvað allt annað í staðinn)
-        turtle_5_4: Prófaðu að keyra þetta forrit. Gerðu breytingar til að sjá hvaða áhrif þær hafa. Getur þú fundið út hvernig það virkar? (Eða eytt því og sett eitthvað allt annað í staðinn)
-        turtle_5_5: Prófaðu að keyra þetta forrit og gerðu breytingar til að sjá hvaða áhrif það hefur. Geturðu fundið út hvernig það virkar? (Eða eytt því og búið til eitthvað gjörólíkt)
-        turtle_5_6: Prófaðu að keyra þetta forrit. Gerðu breytingar til að sjá hvaða áhrif þær hafa. Getur þú fundið út hvernig það virkar? (Eða eytt því og sett eitthvað allt annað í staðinn)
-        maze_3_1: Ég verð að ná þessu svíni! Skrifaðu kóða sem kallar tvisvar á move(); svo ég geti fengið eggin mín til baka.
-        maze_3_2: Skrifaðu forrit fyrir mig svo ég nái alla leið til svínsins.
-        maze_3_3: Hvernig kemst ég til svínsins? Gættu þess að ég rekist ekki á TNT sprengiefnið!
-        maze_3_4: Arrg! Skrifaðu forrit fyrir mig sem kemur mér í kringum TNT sprengiefnið og til svínsins.
+        turtle_5_1: "Prófaðu að keyra þetta forrit. Gerðu breytingar til að sjá hvaða áhrif þær hafa. Getur þú fundið út hvernig það virkar? (Eða eytt því og sett eitthvað allt annað í staðinn)"
+        turtle_5_2: "Prófaðu að keyra þetta forrit. Gerðu breytingar til að sjá hvaða áhrif þær hafa. Getur þú fundið út hvernig það virkar? (Eða eytt því og sett eitthvað allt annað í staðinn)"
+        turtle_5_3: "Prófaðu að keyra þetta forrit. Gerðu breytingar til að sjá hvaða áhrif þær hafa. Getur þú fundið út hvernig það virkar? (Eða eytt því og sett eitthvað allt annað í staðinn)"
+        turtle_5_4: "Prófaðu að keyra þetta forrit. Gerðu breytingar til að sjá hvaða áhrif þær hafa. Getur þú fundið út hvernig það virkar? (Eða eytt því og sett eitthvað allt annað í staðinn)"
+        turtle_5_5: "Prófaðu að keyra þetta forrit og gerðu breytingar til að sjá hvaða áhrif það hefur. Geturðu fundið út hvernig það virkar? (Eða eytt því og búið til eitthvað gjörólíkt)"
+        turtle_5_6: "Prófaðu að keyra þetta forrit. Gerðu breytingar til að sjá hvaða áhrif þær hafa. Getur þú fundið út hvernig það virkar? (Eða eytt því og sett eitthvað allt annað í staðinn)"
+        maze_3_1: "Ég verð að ná þessu svíni! Skrifaðu kóða sem kallar tvisvar á move(); svo ég geti fengið eggin mín til baka."
+        maze_3_2: "Skrifaðu forrit fyrir mig svo ég nái alla leið til svínsins."
+        maze_3_3: "Hvernig kemst ég til svínsins? Gættu þess að ég rekist ekki á TNT sprengiefnið!"
+        maze_3_4: "Arrg! Skrifaðu forrit fyrir mig sem kemur mér í kringum TNT sprengiefnið og til svínsins."
         bounce_1: 'Tengdu kubb við "þegar vinstri ör" kubbinn og ýttu á "Keyra forrit". Færðu spaðann með vinstri ör til að komast að endamarkinu.'
         bounce_2: 'Tengdu kubb við "þegar til hægri" og "þegar til vinstri" kubbana. Færðu spaðann til að ná báðum endamörkum.'
         bounce_3: 'Reyndu nú eitthvað svipað með kubbnum "þegar upp ör". Færðu spaðann upp að endamarkinu.'
-        bounce_4: Í þetta sinn þarft þú að bæta við fjórum kubbum. Færðu spaðann að öllum fjórum endamörkum til að ljúka þessari þraut.
+        bounce_4: "Í þetta sinn þarft þú að bæta við fjórum kubbum. Færðu spaðann að öllum fjórum endamörkum til að ljúka þessari þraut."
         bounce_5: 'Við ætlum að senda bolta svífandi niður í átt að spaðanum. Tengdu kubb við kubbinn "þegar bolti hittir spaða" til að tryggja að boltinn nái að endamarkinu.'
         bounce_6: 'Nú er endamarkið að ofanverðu. Þú þarft að tengja kubba við báða "þegar bolti hittir" kubbana til að leysa þrautina.'
         bounce_7: 'Tengdu kubba við hvern "þegar" kubb. Láttu boltann skoppa þar til hann hittir í endamarkið.'
         bounce_10: 'Nú er mark efst. Tengdu kubbana "skora stig" og "skora stig andstæðings" við kubbana "þegar bolti í marki" og "þegar bolti hittir ekki spaða" til að búa til leik. Reyndu að skora sem flest stig áður en andstæðingurinn skorar tvisvar.'
         bounce_11: 'Þú getur núna tengt kubba við kubbinn "þegar keyrt". Þú verður að tengja nýja "varpa nýjum bolta" kubbinn á fleiri en einum stað. Prófaðu líka að breyta sviðinu eða hraða spaðans og boltans og sjáðu hvað þú getur skorað mörg stig áður en andstæðingurinn hefur skorað tvisvar.'
-        bounce_12: Búðu til þinn eigin Skopp leik. Þú getur breytt öllu myndefninu og reglunum. Þegar leikurinn er tilbúinn getur þú smellt á Ljúka til að vinir geti prófað leikinn í símunum sínum.
-        Custom_builder: Dragðu kubba úr verkfærakassanum inn á vinnusvæðið til að teikna áfangann sem þú vilt búa til. Ýttu svo á Keyra forrit.
+        bounce_12: "Búðu til þinn eigin Skopp leik. Þú getur breytt öllu myndefninu og reglunum. Þegar leikurinn er tilbúinn getur þú smellt á Ljúka til að vinir geti prófað leikinn í símunum sínum."
+        Custom_builder: "Dragðu kubba úr verkfærakassanum inn á vinnusvæðið til að teikna áfangann sem þú vilt búa til. Ýttu svo á Keyra forrit."
         flappy_1: 'Tengdu kubb við "þegar smellt" kubbinn og ýttu svo á "Keyra forrit". Smelltu eða sláðu á skjáinn til að færa Flappy að markinu.'
         flappy_2: 'Nú höfum við  bætt við jörð. Tengdu kubb við kubbinn "þegar rekst á jörð". Kóðinn þinn verður að "LJÚKA LEIK" þegar Flappy hrapar til jarðar.'
         flappy_3: 'Með kubbnum "þegar keyrt" getur þú keyrt kóða þegar leikurinn byrjar. Prófaðu að stilla hraðann og fljúga að markinu.'
         flappy_4: 'Flappy mun fljúga í gegnum hindranir nema þú skrifir kóða til að láta hann rekast á. Tengdu kubb við kubbinn "þegar rekst á hindrun". Kóðinn þinn verður að "LJÚKA LEIK" þegar Flappy rekst á fyrstu pípurnar.'
         flappy_5: 'Nú skulum við bæta við stigagjöf og telja stig þegar Flappy kemst fram hjá hindrunum. Bættu við kubbinn "þegar framhjá hindrun" og skoraðu stig með því að fljúga Flappy framhjá fyrstu pípunum.'
-        flappy_6: Prófaðu hvort þú getir enn skorað stig eftir að þú lætur Flappy blaka vængjunum meira eða minna.
+        flappy_6: "Prófaðu hvort þú getir enn skorað stig eftir að þú lætur Flappy blaka vængjunum meira eða minna."
         flappy_7: 'Prófaðu svo að breyta leiknum með því að tengja annan kubb við "þegar keyrt" kubbinn.'
-        flappy_8: Þú getur stillt umhverfið hvenær sem er, ekki bara í byrjun. Prófaðu að still umhverfið á HANDAHÓF þegar aðrir atburðir gerast, t.d. þegar farið er framhjá hindrun.
-        flappy_9: Prófaðu nú aðra útfærslu með því að ljúka ekki leiknum heldur núllstilla skorið þegar rekist er á hindrun eða jörð.
-        flappy_11: Búðu til þinn eiginn Flappy leik. Þú getur breytt öllu umhverfi og öllum reglum, jafnvel þyngdaraflinu. Smelltu svo á Ljúka til að vinir þínir geti prófað leikinn í símunum sínum.
-        flappy_k1_1: Spila Flappy
+        flappy_8: "Þú getur stillt umhverfið hvenær sem er, ekki bara í byrjun. Prófaðu að still umhverfið á HANDAHÓF þegar aðrir atburðir gerast, t.d. þegar farið er framhjá hindrun."
+        flappy_9: "Prófaðu nú aðra útfærslu með því að ljúka ekki leiknum heldur núllstilla skorið þegar rekist er á hindrun eða jörð."
+        flappy_11: "Búðu til þinn eiginn Flappy leik. Þú getur breytt öllu umhverfi og öllum reglum, jafnvel þyngdaraflinu. Smelltu svo á Ljúka til að vinir þínir geti prófað leikinn í símunum sínum."
+        flappy_k1_1: "Spila Flappy"
         flappy_k1_2: 'Tengdu kubb við "þegar smellt" kubbinn og ýttu svo á "Keyra forrit". Smelltu eða sláðu á skjáinn til að færa Flappy að markinu.'
         flappy_k1_3: 'Nú höfum bætt við jörð. Tengdu kubb við kubbinn "þegar rekst á jörð". Kóðinn þinn verður að "LJÚKA LEIK" þegar Flappy hrapar til jarðar.'
         flappy_k1_4: 'Með kubbnum "þegar keyrt" getur þú keyrt kóða þegar leikurinn byrjar. Prófaðu að stilla hraðann og fljúga að markinu.'
         flappy_k1_5: 'Flappy mun fljúga í gegnum hindranir nema þú skrifir kóða til að láta hann rekast á. Tengdu kubb við kubbinn "þegar rekst á hindrun". Kóðinn þinn verður að "LJÚKA LEIK" þegar Flappy rekst á fyrstu pípurnar.'
         flappy_k1_6: 'Nú skulum við bæta við stigagjöf og telja stig þegar Flappy kemst fram hjá hindrunum. Bættu við kubbinn "þegar framhjá hindrun" og skoraðu stig með því að fljúga Flappy framhjá fyrstu pípunum.'
-        flappy_k1_7: Gáðu hvort þú getir skorað mörg stig fyrir að komast framhjá hindrun
+        flappy_k1_7: "Gáðu hvort þú getir skorað mörg stig fyrir að komast framhjá hindrun"
         flappy_k1_8: 'Prófaðu svo að breyta leiknum með því að tengja annan kubb við "þegar keyrt" kubbinn.'
         flappy_k1_9: 'Prófaðu að skipta um leikmann með því að tengja "stilla leikmann" kubb við "þegar keyrt" kubbinn.'
-        jigsaw_1: Smelltu á kubbinn
-        jigsaw_2: Dragðu kubbinn að markinu
-        jigsaw_3: Raðaðu kubbunum til að búa til myndina
-        jigsaw_4: Raðaðu kubbunum til að búa til myndina
-        jigsaw_5: Raðaðu kubbunum til að búa til myndina
-        jigsaw_6: Raðaðu kubbunum til að búa til myndina
-        jigsaw_7: Raðaðu kubbunum til að búa til myndina
-        jigsaw_8: Raðaðu kubbunum til að búa til myndina
-        jigsaw_9: Raðaðu kubbunum til að búa til myndina
-        jigsaw_10: Raðaðu kubbunum til að búa til myndina
-        jigsaw_11: Raðaðu kubbunum til að búa til myndina
-        jigsaw_12: Raðaðu kubbunum til að búa til myndina
-        jigsaw_13: Lagaðu þrautina!
-        mazestep_1: Lýsing á þrepi völundarhúss hér
-        mazestep_2: Lýsing á þrepi völundarhúss hér
-        mazestep_3: Lýsing á þrepi völundarhúss hér
-        mazestep_4: Lýsing á þrepi völundarhúss hér
-        mazestep_5: Lýsing á þrepi völundarhúss hér
+        jigsaw_1: "Smelltu á kubbinn"
+        jigsaw_2: "Dragðu kubbinn að markinu"
+        jigsaw_3: "Raðaðu kubbunum til að búa til myndina"
+        jigsaw_4: "Raðaðu kubbunum til að búa til myndina"
+        jigsaw_5: "Raðaðu kubbunum til að búa til myndina"
+        jigsaw_6: "Raðaðu kubbunum til að búa til myndina"
+        jigsaw_7: "Raðaðu kubbunum til að búa til myndina"
+        jigsaw_8: "Raðaðu kubbunum til að búa til myndina"
+        jigsaw_9: "Raðaðu kubbunum til að búa til myndina"
+        jigsaw_10: "Raðaðu kubbunum til að búa til myndina"
+        jigsaw_11: "Raðaðu kubbunum til að búa til myndina"
+        jigsaw_12: "Raðaðu kubbunum til að búa til myndina"
+        jigsaw_13: "Lagaðu þrautina!"
+        mazestep_1: "Lýsing á þrepi völundarhúss hér"
+        mazestep_2: "Lýsing á þrepi völundarhúss hér"
+        mazestep_3: "Lýsing á þrepi völundarhúss hér"
+        mazestep_4: "Lýsing á þrepi völundarhúss hér"
+        mazestep_5: "Lýsing á þrepi völundarhúss hér"
         studio_c2_1: 'Getur þú látið hundinn segja "Halló heimur"?'
-        studio_c2_2: Getur þú látið hundinn segja eitthvað og síðan látið köttinn segja eitthvað?
-        studio_c2_3: Getur þú skrifað forrit sem færir hundinn að kettinum?
+        studio_c2_2: "Getur þú látið hundinn segja eitthvað og síðan látið köttinn segja eitthvað?"
+        studio_c2_3: "Getur þú skrifað forrit sem færir hundinn að kettinum?"
         studio_c2_4: 'Getur þú skrifað forrit sem lætur hundinn færa sig að kettinum og látið köttinn segja "Hæ" þegar hundurinn kemur til hans?'
         studio_c2_5: 'Getur þú skrifað forrit sem lætur kolkrabbann segja "Hæ" þegar smellt er á hann?'
-        studio_c2_6: Getur þú skrifað forrit sem lætur þessa mörgæs hreyfast með því að nota örvarlyklana upp / niður / vinstri / hægri til að snerta öll mörkin?
+        studio_c2_6: "Getur þú skrifað forrit sem lætur þessa mörgæs hreyfast með því að nota örvarlyklana upp / niður / vinstri / hægri til að snerta öll mörkin?"
         studio_c2_7: 'Með kubbnum "endurtaka endalaust" getur þú látið kóða keyra án þess að stöðvast. Geturðu bætt við kubbum svo að risaeðlan hreyfist stanslaust upp og niður?'
         studio_c2_8: 'Getur þú látið mörgæsina segja "Ááá!" og spilað viðeigandi hljóð þegar hún rekst á risaeðluna og notað örvarlykla til að færa hana svo það geti orðið árekstur?'
-        studio_c2_9: Getur þú bætt við kubbi til að skora stig þegar mörgæsin rekst á kolkrabbann og síðan fært hana með örvarlyklunum þar til þú skorar?
-        studio_c2_10: Getur þú bætt við kubbum til að breyta bakgrunni og hraða mörgæsarinnar og síðan fært hana með örvarlyklunum þar til þú skorar?
-        studio_c2_11: Búðu til sögu eftir eigin höfði. Smelltu svo á Ljúka til að leyfa vinum að prófa söguna í símum sínum.
+        studio_c2_9: "Getur þú bætt við kubbi til að skora stig þegar mörgæsin rekst á kolkrabbann og síðan fært hana með örvarlyklunum þar til þú skorar?"
+        studio_c2_10: "Getur þú bætt við kubbum til að breyta bakgrunni og hraða mörgæsarinnar og síðan fært hana með örvarlyklunum þar til þú skorar?"
+        studio_c2_11: "Búðu til sögu eftir eigin höfði. Smelltu svo á Ljúka til að leyfa vinum að prófa söguna í símum sínum."
         studio_c3_story_1: 'Getur þú látið hundinn segja "Halló heimur"?'
-        studio_c3_story_2: Getur þú látið hundinn segja eitthvað og síðan látið köttinn segja eitthvað?
-        studio_c3_story_3: Getur þú skrifað forrit sem færir hundinn að kettinum?
+        studio_c3_story_2: "Getur þú látið hundinn segja eitthvað og síðan látið köttinn segja eitthvað?"
+        studio_c3_story_3: "Getur þú skrifað forrit sem færir hundinn að kettinum?"
         studio_c3_story_4: 'Getur þú skrifað forrit sem lætur hundinn færa sig að kettinum og látið köttinn segja "Hæ" þegar hundurinn kemur til hans?'
-        studio_c3_story_5: Getur þú bætt við kubbi sem kemur kolkrabbanum í gott skap?
-        studio_c3_story_6: Búðu til leik eftir eigin höfði. Smelltu svo á Ljúka til að leyfa vinum að prófa söguna í símum sínum.
+        studio_c3_story_5: "Getur þú bætt við kubbi sem kemur kolkrabbanum í gott skap?"
+        studio_c3_story_6: "Búðu til leik eftir eigin höfði. Smelltu svo á Ljúka til að leyfa vinum að prófa söguna í símum sínum."
         studio_c3_game_1: 'Getur þú skrifað forrit sem lætur kolkrabbann segja "Hæ" þegar smellt er á hann?'
-        studio_c3_game_2: Getur þú skrifað forrit sem lætur þessa mörgæs hreyfast með því að nota örvarlyklana upp / niður / vinstri / hægri til að snerta öll mörkin?
+        studio_c3_game_2: "Getur þú skrifað forrit sem lætur þessa mörgæs hreyfast með því að nota örvarlyklana upp / niður / vinstri / hægri til að snerta öll mörkin?"
         studio_c3_game_3: 'Með kubbnum "endurtaka endalaust" getur þú látið kóða keyra án þess að stöðvast. Geturðu bætt við kubbum svo að risaeðlan hreyfist stanslaust upp og niður?'
         studio_c3_game_4: 'Getur þú látið mörgæsina segja "Ááá!" og spilað viðeigandi hljóð þegar hún rekst á risaeðluna og notað örvarlykla til að færa hana svo það geti orðið árekstur?'
-        studio_c3_game_5: Getur þú bætt við kubbi til að skora stig þegar mörgæsin rekst á kolkrabbann og síðan fært hana með örvarlyklunum þar til þú skorar?
-        studio_c3_game_6: Getur þú bætt við kubbum til að breyta bakgrunni og hraða mörgæsarinnar og síðan fært hana með örvarlyklunum þar til þú skorar?
-        studio_c3_game_7: Búðu til leik eftir eigin höfði. Smelltu svo á Ljúka til að leyfa vinum að prófa söguna í símum sínum.
+        studio_c3_game_5: "Getur þú bætt við kubbi til að skora stig þegar mörgæsin rekst á kolkrabbann og síðan fært hana með örvarlyklunum þar til þú skorar?"
+        studio_c3_game_6: "Getur þú bætt við kubbum til að breyta bakgrunni og hraða mörgæsarinnar og síðan fært hana með örvarlyklunum þar til þú skorar?"
+        studio_c3_game_7: "Búðu til leik eftir eigin höfði. Smelltu svo á Ljúka til að leyfa vinum að prófa söguna í símum sínum."
         studio_playlab_1: 'Getur þú látið hundinn segja "Halló heimur"?'
-        studio_playlab_2: Getur þú látið hundinn segja eitthvað og síðan látið köttinn segja eitthvað?
-        studio_playlab_3: Getur þú skrifað forrit sem færir hundinn að kettinum?
+        studio_playlab_2: "Getur þú látið hundinn segja eitthvað og síðan látið köttinn segja eitthvað?"
+        studio_playlab_3: "Getur þú skrifað forrit sem færir hundinn að kettinum?"
         studio_playlab_4: 'Getur þú skrifað forrit sem lætur hundinn færa sig að kettinum og látið köttinn segja "Hæ" þegar hundurinn kemur til hans?'
         studio_playlab_5: 'Getur þú skrifað forrit sem lætur kolkrabbann segja "Hæ" þegar smellt er á hann?'
-        studio_playlab_6: Getur þú skrifað forrit sem lætur þessa mörgæs hreyfast með því að nota örvarlyklana upp / niður / vinstri / hægri til að snerta öll mörkin?
+        studio_playlab_6: "Getur þú skrifað forrit sem lætur þessa mörgæs hreyfast með því að nota örvarlyklana upp / niður / vinstri / hægri til að snerta öll mörkin?"
         studio_playlab_7: 'Með kubbnum "endurtaka endalaust" getur þú látið kóða keyra án þess að stöðvast. Geturðu bætt við kubbum svo að risaeðlan hreyfist stanslaust upp og niður?'
-        studio_playlab_8: Getur þú bætt við kubbi til að skora stig þegar mörgæsin rekst á kolkrabbann og síðan fært hana með örvarlyklunum þar til þú skorar?
-        studio_playlab_9: Getur þú bætt við kubbum til að breyta bakgrunni og hraða mörgæsarinnar og síðan fært hana með örvarlyklunum þar til þú skorar?
-        studio_playlab_10: Búðu til leik eftir eigin höfði. Smelltu svo á Ljúka til að leyfa vinum að prófa söguna í símum sínum.
-        studio_full_sandbox: Búðu til leik eftir eigin höfði. Smelltu svo á Ljúka til að leyfa vinum að prófa söguna í símum sínum.
+        studio_playlab_8: "Getur þú bætt við kubbi til að skora stig þegar mörgæsin rekst á kolkrabbann og síðan fært hana með örvarlyklunum þar til þú skorar?"
+        studio_playlab_9: "Getur þú bætt við kubbum til að breyta bakgrunni og hraða mörgæsarinnar og síðan fært hana með örvarlyklunum þar til þú skorar?"
+        studio_playlab_10: "Búðu til leik eftir eigin höfði. Smelltu svo á Ljúka til að leyfa vinum að prófa söguna í símum sínum."
+        studio_full_sandbox: "Búðu til leik eftir eigin höfði. Smelltu svo á Ljúka til að leyfa vinum að prófa söguna í símum sínum."
         studio_k1_1: 'Getur þú látið hundinn segja "Halló heimur"?'
-        studio_k1_2: Getur þú látið hundinn segja eitthvað og síðan látið köttinn segja eitthvað?
-        studio_k1_3: Getur þú skrifað forrit sem færir hundinn að kettinum?
+        studio_k1_2: "Getur þú látið hundinn segja eitthvað og síðan látið köttinn segja eitthvað?"
+        studio_k1_3: "Getur þú skrifað forrit sem færir hundinn að kettinum?"
         studio_k1_4: 'Láttu hundinn færa sig að kettinum og köttinn segja "Hæ" þegar hundurinn kemur.'
-        studio_k1_5: Getur þú bætt við kubbi sem kemur kolkrabbanum í gott skap?
-        studio_k1_6: Búðu til þína eigin sögu! Láttu hundinn og köttinn hreyfast og láttu þá tala.
-        maze_wordsearch_k_1: Færðu mig svo ég stafi orðið EAST
-        maze_wordsearch_k_2: Færðu mig svo ég stafi orðið SOUTH
-        maze_wordsearch_k_3: Færðu mig svo ég stafi orðið WEST
-        maze_wordsearch_k_4: Færðu mig svo ég stafi orðið NORTH
-        maze_wordsearch_k_6: Færðu mig austur og svo suður til að stafa orðið JUMP
-        maze_wordsearch_k_9: Færðu mig í eina átt og svo aðra til að stafa orðið CODE
-        maze_wordsearch_k_13: Færðu mig í eina átt svo aðra til að stafa orðið DEBUG
-        maze_wordsearch_k_15: Færðu mig í eina átt svo aðra til að stafa orðið ABOVE
-        maze_wordsearch_k_16: Færðu mig í eina átt svo aðra til að stafa orðið BELOW
-        maze_wordsearch_k_20: Þetta er próf! Færðu mig í eina átt svo aðra til að stafa orðið STORY
-        webapp_ec_simple: Búa til vefapp með því að nota createHtmlBlock.
+        studio_k1_5: "Getur þú bætt við kubbi sem kemur kolkrabbanum í gott skap?"
+        studio_k1_6: "Búðu til þína eigin sögu! Láttu hundinn og köttinn hreyfast og láttu þá tala."
+        maze_wordsearch_k_1: "Færðu mig svo ég stafi orðið EAST"
+        maze_wordsearch_k_2: "Færðu mig svo ég stafi orðið SOUTH"
+        maze_wordsearch_k_3: "Færðu mig svo ég stafi orðið WEST"
+        maze_wordsearch_k_4: "Færðu mig svo ég stafi orðið NORTH"
+        maze_wordsearch_k_6: "Færðu mig austur og svo suður til að stafa orðið JUMP"
+        maze_wordsearch_k_9: "Færðu mig í eina átt og svo aðra til að stafa orðið CODE"
+        maze_wordsearch_k_13: "Færðu mig í eina átt svo aðra til að stafa orðið DEBUG"
+        maze_wordsearch_k_15: "Færðu mig í eina átt svo aðra til að stafa orðið ABOVE"
+        maze_wordsearch_k_16: "Færðu mig í eina átt svo aðra til að stafa orðið BELOW"
+        maze_wordsearch_k_20: "Þetta er próf! Færðu mig í eina átt svo aðra til að stafa orðið STORY"
+        webapp_ec_simple: "Búa til vefapp með því að nota createHtmlBlock."
         turtle_ec_1_2: 'Teiknaðu nú ferning. ATHUGAÐU: notaðu uppáhaldslitinn þinn með því að velja hann í nýja kubbnum "pennalitur".'
     video:
       name:
-        maze_intro: Kynning á Völundarhúsi
-        artist_intro: Kynning á listamanni
-        farmer_intro: Kynning á bónda
-        flappy_intro: Kynning á Flappy
-        loop_times: Endurtaka X kubbur
-        loop_until: Endurtaka þar til kubbur
-        if: Ef kubbur
-        if_else: Ef-annars kubbur
-        function: Föll
-        loop_while: Meðan kubbur
-        loop_for: Teljarakubbur
-        parameters: Föll með stikum
-        hoc_wrapup: Samantekt á Kóðun í klukkustund
-        20_wrapup: Samantekt 20 klukkustunda
-        Unplug1: Hvað er tölvunarfræði?
-        Unplug2: Tölvunarmiðuð hugsun
-        Unplug3: Forritun rúðublaða
-        Unplug4: Algrím
-        Unplug5: Föll
-        Unplug6: Skilyrði
-        Unplug7: Lagasmíð
-        Unplug8: Greining aðalatriða
-        Unplug9: Boðhlaupsforritun
-        Unplug10: Internet
-        Unplug11: Samantekt
-        C1_happy_maps_unplugged: Krúttleg kort
-        C1_moveitmoveit_unplugged: Hreyfa sig, hreyfa sig
-        C1_bigevent_unplugged: Stórviðburður
-        C1_getting_loop: Lykkjulæti
-        C1_pair_programming: Félagaforritun
+        maze_intro: "Kynning á Völundarhúsi"
+        artist_intro: "Kynning á listamanni"
+        farmer_intro: "Kynning á bónda"
+        flappy_intro: "Kynning á Flappy"
+        loop_times: "Endurtaka X kubbur"
+        loop_until: "Endurtaka þar til kubbur"
+        if: "Ef kubbur"
+        if_else: "Ef-annars kubbur"
+        function: "Föll"
+        loop_while: "Meðan kubbur"
+        loop_for: "Teljarakubbur"
+        parameters: "Föll með stikum"
+        hoc_wrapup: "Samantekt á Kóðun í klukkustund"
+        20_wrapup: "Samantekt 20 klukkustunda"
+        Unplug1: "Hvað er tölvunarfræði?"
+        Unplug2: "Tölvunarmiðuð hugsun"
+        Unplug3: "Forritun rúðublaða"
+        Unplug4: "Algrím"
+        Unplug5: "Föll"
+        Unplug6: "Skilyrði"
+        Unplug7: "Lagasmíð"
+        Unplug8: "Greining aðalatriða"
+        Unplug9: "Boðhlaupsforritun"
+        Unplug10: "Internet"
+        Unplug11: "Samantekt"
+        C1_happy_maps_unplugged: "Krúttleg kort"
+        C1_moveitmoveit_unplugged: "Hreyfa sig, hreyfa sig"
+        C1_bigevent_unplugged: "Stórviðburður"
+        C1_getting_loop: "Lykkjulæti"
+        C1_pair_programming: "Félagaforritun"
         C1_maze_intro_sequencing: 'Röð í völundarhúsi - kynning'
-        C1_maze_debugging: Villuleit í völundarhúsi
+        C1_maze_debugging: "Villuleit í völundarhúsi"
         C1_bee_level_intro: 'Býflugnaborð - kynning'
-        C1_artist_intro: Kynning á listamanni
+        C1_artist_intro: "Kynning á listamanni"
         C1_spelling_bee_intro: 'Stafsetning - kynning'
         C1_zuck_repeat_loop: 'Völundarhús - lykkjur'
         C1_bee_loops: 'Býfluga - lykkjur'
-        C1_maze_loops: Lykkjur völundarhúss
+        C1_maze_loops: "Lykkjur völundarhúss"
         C1_playlab_storytelling: 'Leikjasmiðja - Búa til sögu'
-        C1_planting_seed: Fræsáning
-        C1_building_foundating: Að byggja grunn
-        C2_maze_intro: Kynning á Völundarhúsi
-        C2_artist_intro: Kynning á listamanni
-        C2_zuck_repeat_loop: Lykkjur völundarhúss
+        C1_planting_seed: "Fræsáning"
+        C1_building_foundating: "Að byggja grunn"
+        C2_maze_intro: "Kynning á Völundarhúsi"
+        C2_artist_intro: "Kynning á listamanni"
+        C2_zuck_repeat_loop: "Lykkjur völundarhúss"
         C2_artist_loops: 'Listamaður - lykkjur'
-        C2_bee_conditionals: Skilyrði býflugu
+        C2_bee_conditionals: "Skilyrði býflugu"
         C2_playlab_createstory: 'Leikjasmiðja - búa til sögu'
-        C2_graph_paper: Forritun rúðublaða
-        C2_conditionals_with_cards: Skilyrði
-        C2_binary_bracelets: Stafræn armbönd
-        C2_replay_programming: Boðhlaupsforritun
-        C2_paper_airplanes: Pappírsflaugar
-        C3_maze_intro: Kynning á Völundarhúsi
-        C3_artist_intro: Kynning á listamanni
+        C2_graph_paper: "Forritun rúðublaða"
+        C2_conditionals_with_cards: "Skilyrði"
+        C2_binary_bracelets: "Stafræn armbönd"
+        C2_replay_programming: "Boðhlaupsforritun"
+        C2_paper_airplanes: "Pappírsflaugar"
+        C3_maze_intro: "Kynning á Völundarhúsi"
+        C3_artist_intro: "Kynning á listamanni"
         C3_artist_functions: 'Listamaður - föll'
         C3_bee_functions: 'Býfluga - föll'
         C3_bee_conditionals: 'Býfluga - skilyrði'
         C3_maze_conditionals: 'Völundarhús - skilyrði'
-        C3_artist_nested_loops: Innri lykkjur
-        C3_farmer_while: Á meðan lykkjur
-        C3_bee_nested_loops: Innri lykkjur
+        C3_artist_nested_loops: "Innri lykkjur"
+        C3_farmer_while: "Á meðan lykkjur"
+        C3_bee_nested_loops: "Innri lykkjur"
         C3_bee_debugging: 'Býfluga - villuleit'
-        C3_bounce: Skopp
+        C3_bounce: "Skopp"
         C3_playlab_create_game: 'Leikjasmiðja - Búa til leik'
-        C3_computational_thinking: Tölvunarmiðuð hugsun
-        C3_dice_race: Teningakapp
-        C3_internet: Internet
-        C3_crowdsourcing: Hópvistun
-        C3_functional_suncatchers: Sólarskraut með föllum
-        C3_songwriting_with_parameters: Lagasmíð með stikum
+        C3_computational_thinking: "Tölvunarmiðuð hugsun"
+        C3_dice_race: "Teningakapp"
+        C3_internet: "Internet"
+        C3_crowdsourcing: "Hópvistun"
+        C3_functional_suncatchers: "Sólarskraut með föllum"
+        C3_songwriting_with_parameters: "Lagasmíð með stikum"
     callout:
       text:
         drag_blocks: 'Dragðu "færa" kubb og festu hann neðan í hinn kubbinn'
         run: 'Smelltu á "Keyra" til að prófa forritið þitt'
-        watch_again: Smelltu hér til að sjá myndskeiðið aftur
-        gray_block_explanation: Gráum kubbum er ekki hægt að eyða. Getur þú samt leyst þrautina?
-        show_code_explanation: Smelltu hér til að sjá kóða forritsins sem þú ert að búa til
-        instructions_repeat_explanation: Leiðbeiningar fyrir hverja þraut eru endurteknar hér
-        category_explanation: Þú hefur alla sömu kubbana en nú er búið að raða þeim í flokka
+        watch_again: "Smelltu hér til að sjá myndskeiðið aftur"
+        gray_block_explanation: "Gráum kubbum er ekki hægt að eyða. Getur þú samt leyst þrautina?"
+        show_code_explanation: "Smelltu hér til að sjá kóða forritsins sem þú ert að búa til"
+        instructions_repeat_explanation: "Leiðbeiningar fyrir hverja þraut eru endurteknar hér"
+        category_explanation: "Þú hefur alla sömu kubbana en nú er búið að raða þeim í flokka"
         set_sprite_image: 'Tengdu "hafa leikmann" kubb við "þegar sagan byrjar" kubb til að virkja leikmann fyrir þessa sögu'
-        studio_say_text: Skrifaðu það sem leikmaðurinn á að segja innan þessara gæsalappa
-        jigsaw_click: Smelltu á þennan kubb!
+        studio_say_text: "Skrifaðu það sem leikmaðurinn á að segja innan þessara gæsalappa"
+        jigsaw_click: "Smelltu á þennan kubb!"

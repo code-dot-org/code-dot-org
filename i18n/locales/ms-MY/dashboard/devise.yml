@@ -1,57 +1,57 @@
-ms:
+"ms":
   devise:
     confirmations:
-      confirmed: Alamat e-mel anda telah berjaya disahkan.
-      send_instructions: Anda akan menerima e-mel dengan arahan bagaimana untuk mengesahkan akaun anda dalam masa beberapa minit.
-      send_paranoid_instructions: Jika alamat e-mel anda wujud dalam pangkalan data kami, anda akan menerima e-mel bersama arahan untuk mengesahkan akaun anda dalam masa beberapa minit.
+      confirmed: "Alamat e-mel anda telah berjaya disahkan."
+      send_instructions: "Anda akan menerima e-mel dengan arahan bagaimana untuk mengesahkan akaun anda dalam masa beberapa minit."
+      send_paranoid_instructions: "Jika alamat e-mel anda wujud dalam pangkalan data kami, anda akan menerima e-mel bersama arahan untuk mengesahkan akaun anda dalam masa beberapa minit."
     failure:
-      already_authenticated: Anda sudah mendaftar masuk.
-      inactive: Akaun anda belum diaktifkan lagi.
-      invalid: E-mel atau kata laluan tidak sah.
-      invalid_token: Token pengesahan tidak sah.
-      locked: Akaun anda telah dikunci.
-      not_found_in_database: E-mel atau kata laluan tidak sah.
-      timeout: Sesi anda telah tamat tempoh, sila daftar masuk semula untuk teruskan.
-      unauthenticated: Anda perlu daftar masuk atau mendaftar sebelum meneruskan.
-      unconfirmed: Anda perlu sahkan akaun anda sebelum meneruskan.
+      already_authenticated: "Anda sudah mendaftar masuk."
+      inactive: "Akaun anda belum diaktifkan lagi."
+      invalid: "E-mel atau kata laluan tidak sah."
+      invalid_token: "Token pengesahan tidak sah."
+      locked: "Akaun anda telah dikunci."
+      not_found_in_database: "E-mel atau kata laluan tidak sah."
+      timeout: "Sesi anda telah tamat tempoh, sila daftar masuk semula untuk teruskan."
+      unauthenticated: "Anda perlu daftar masuk atau mendaftar sebelum meneruskan."
+      unconfirmed: "Anda perlu sahkan akaun anda sebelum meneruskan."
     mailer:
       confirmation_instructions:
-        subject: Arahan pengesahan Code.org
+        subject: "Arahan pengesahan Code.org"
       reset_password_instructions:
-        subject: Code.org arahan set semula kata laluan
+        subject: "Code.org arahan set semula kata laluan"
       unlock_instructions:
-        subject: Buka arahan
+        subject: "Buka arahan"
     omniauth_callbacks:
       failure: 'Tidak dapat mengesahkan anda daripada %{kind} kerana "%{reason}".'
       success: 'Berjaya disahkan daripada akaun %{kind}.'
     passwords:
-      no_token: Anda tidak boleh mengakses laman ini tanpa melalui e-mel set semula kata laluan. Jika anda datang dari e-mel set semula kata laluan, sila pastikan anda menggunakan URL penuh yang diberikan.
-      send_instructions: Anda akan menerima e-mel dengan arahan mengenai cara untuk mereset semula kata laluan anda dalam beberapa minit.
-      send_paranoid_instructions: Jika alamat e-mel anda telah wujud dalam pangkalan data kami, anda akan menerima link pemulihan kata laluan di alamat e-mel anda dalam beberapa minit.
-      updated: Kata laluan anda berjaya ditukar. Anda kini didaftar masuk.
-      updated_not_active: Kata laluan anda berjaya ditukar.
+      no_token: "Anda tidak boleh mengakses laman ini tanpa melalui e-mel set semula kata laluan. Jika anda datang dari e-mel set semula kata laluan, sila pastikan anda menggunakan URL penuh yang diberikan."
+      send_instructions: "Anda akan menerima e-mel dengan arahan mengenai cara untuk mereset semula kata laluan anda dalam beberapa minit."
+      send_paranoid_instructions: "Jika alamat e-mel anda telah wujud dalam pangkalan data kami, anda akan menerima link pemulihan kata laluan di alamat e-mel anda dalam beberapa minit."
+      updated: "Kata laluan anda berjaya ditukar. Anda kini didaftar masuk."
+      updated_not_active: "Kata laluan anda berjaya ditukar."
     registrations:
-      destroyed: Bye! Akaun anda telah berjaya dibatalkan. Kami berharap untuk berjumpa anda semula nanti.
-      signed_up: Selamat datang! Anda berjaya mendaftar masuk.
-      signed_up_but_inactive: Anda berjaya mendaftar. Walau bagaimanapun, kami tidak dapat mendaftar anda masuk kerana akaun anda belum lagi diaktifkan.
-      signed_up_but_locked: Anda berjaya mendaftar. Walau bagaimanapun, kami tidak dapat mendaftar anda masuk kerana akaun anda dikunci.
-      signed_up_but_unconfirmed: Mesej dengan link pengesahan telah dihantar ke alamat e-mel anda. Sila buka pautan untuk mengaktifkan akaun anda.
-      update_needs_confirmation: Anda berjaya memperbaharui akaun anda, tetapi kami perlu menguji e-mel baru anda. Sila semak e-mel dan klik talian untuk pengesahan akhir alamat e-mel baru anda.
-      updated: Akaun anda berjaya dikemas kini.
+      destroyed: "Bye! Akaun anda telah berjaya dibatalkan. Kami berharap untuk berjumpa anda semula nanti."
+      signed_up: "Selamat datang! Anda berjaya mendaftar masuk."
+      signed_up_but_inactive: "Anda berjaya mendaftar. Walau bagaimanapun, kami tidak dapat mendaftar anda masuk kerana akaun anda belum lagi diaktifkan."
+      signed_up_but_locked: "Anda berjaya mendaftar. Walau bagaimanapun, kami tidak dapat mendaftar anda masuk kerana akaun anda dikunci."
+      signed_up_but_unconfirmed: "Mesej dengan link pengesahan telah dihantar ke alamat e-mel anda. Sila buka pautan untuk mengaktifkan akaun anda."
+      update_needs_confirmation: "Anda berjaya memperbaharui akaun anda, tetapi kami perlu menguji e-mel baru anda. Sila semak e-mel dan klik talian untuk pengesahan akhir alamat e-mel baru anda."
+      updated: "Akaun anda berjaya dikemas kini."
     sessions:
-      signed_in: Daftar masuk berjaya.
-      signed_out: Berjaya didaftar keluar.
+      signed_in: "Daftar masuk berjaya."
+      signed_out: "Berjaya didaftar keluar."
     unlocks:
-      send_instructions: Anda akan menerima e-mel dengan arahan tentang bagaimana untuk mengesahkan akaun anda dalam masa beberapa minit.
-      send_paranoid_instructions: Jika akaun anda wujud, anda akan menerima e-mel dengan arahan tentang bagaimana untuk membuka kunci dalam beberapa minit.
-      unlocked: Akaun anda telah berjaya dibuka. Sila daftar masuk untuk teruskan.
+      send_instructions: "Anda akan menerima e-mel dengan arahan tentang bagaimana untuk mengesahkan akaun anda dalam masa beberapa minit."
+      send_paranoid_instructions: "Jika akaun anda wujud, anda akan menerima e-mel dengan arahan tentang bagaimana untuk membuka kunci dalam beberapa minit."
+      unlocked: "Akaun anda telah berjaya dibuka. Sila daftar masuk untuk teruskan."
   errors:
     messages:
-      already_confirmed: telah disahkan, sila cuba daftar masuk
+      already_confirmed: "telah disahkan, sila cuba daftar masuk"
       confirmation_period_expired: 'perlu disahkan dalam tempoh %{period}, sila dapatkan yang baru'
-      expired: telah tamat tempoh, sila buat permintaan baru
-      not_found: tidak dijumpai
-      not_locked: tidak dikunci
+      expired: "telah tamat tempoh, sila buat permintaan baru"
+      not_found: "tidak dijumpai"
+      not_locked: "tidak dikunci"
       not_saved:
         one: '1 kesilapan menghalang %{resource} daripada disimpan:'
         other: '%{count} kesalahan menghalang %{resource} daripada disimpan:'
