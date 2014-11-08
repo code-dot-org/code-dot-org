@@ -96,20 +96,20 @@ Blockly.Generator.blocksToCode = function(name, blocks) {
 /**
  * Generate code for all blocks in the blockSpace to the specified language.
  * @param {string} name Language name (e.g. 'JavaScript').
- * @param {string} type Only return code under top blocks of this type
+ * @param {?string|Array.<string>} opt_typeFilter Only return code under top
+ *   blocks of this type (or list of types).
  * @return {string} Generated code.
  */
-Blockly.Generator.blockSpaceToCode = function(name, type) {
-  var blocksToGenerate = [];
-  if (type) {
-    // Filter top blocks by type.
-    var blocks = Blockly.mainBlockSpace.getTopBlocks(true);
-    for (var x = 0, block; block = blocks[x]; x++) {
-      if (type && block.type != type) {
-        continue;
-      }
-      blocksToGenerate.push(block);
+Blockly.Generator.blockSpaceToCode = function(name, opt_typeFilter) {
+  var blocksToGenerate;
+  if (opt_typeFilter) {
+    if (typeof opt_typeFilter == 'string') {
+      opt_typeFilter = [opt_typeFilter];
     }
+    blocksToGenerate =
+      goog.array.filter(Blockly.mainBlockSpace.getTopBlocks(true), function(block) {
+        return goog.array.contains(opt_typeFilter, block.type);
+      }, this);
   } else {
     // Generate all top blocks.
     blocksToGenerate = Blockly.mainBlockSpace.getTopBlocks(true);

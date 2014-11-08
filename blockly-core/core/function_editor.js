@@ -57,6 +57,20 @@ Blockly.FunctionEditor = function() {
   this.onResizeWrapper_ = null;
 };
 
+
+/**
+ * The type of block to instantiate in the function editing area
+ * @type {string}
+ * @protected
+ */
+Blockly.FunctionEditor.prototype.definitionBlockType = 'procedures_defnoreturn';
+
+/**
+ * The type of block to instantiate for parameter definition
+ * @type {string}
+ */
+Blockly.FunctionEditor.prototype.parameterBlockType = 'parameters_get';
+
 Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
   var targetFunctionDefinitionBlock = Blockly.mainBlockSpace.findFunction(
       functionName);
@@ -66,6 +80,7 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
 
   this.show();
 
+  targetFunctionDefinitionBlock.setUserVisible(true);
   var dom = Blockly.Xml.blockToDom_(targetFunctionDefinitionBlock);
   targetFunctionDefinitionBlock.dispose(false, false, true);
   this.functionDefinitionBlock =
@@ -74,7 +89,6 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
       ? Blockly.modalBlockSpace.getMetrics().viewWidth - FRAME_MARGIN_SIDE
       : FRAME_MARGIN_SIDE, FRAME_MARGIN_TOP);
   this.functionDefinitionBlock.setMovable(false);
-  this.functionDefinitionBlock.setUserVisible(true);
   this.populateParamToolbox_();
 
   goog.dom.getElement('functionNameText').value = functionName;
@@ -95,7 +109,7 @@ Blockly.FunctionEditor.prototype.openWithNewFunction = function() {
   this.ensureCreated_();
 
   this.functionDefinitionBlock = Blockly.Xml.domToBlock_(Blockly.mainBlockSpace,
-      Blockly.createSvgElement('block', {type: 'procedures_defnoreturn'}));
+    Blockly.createSvgElement('block', {type: this.definitionBlockType}));
   this.openAndEditFunction(this.functionDefinitionBlock.getTitleValue('NAME'));
 };
 
@@ -123,7 +137,7 @@ Blockly.FunctionEditor.prototype.addParamFromInputField_ = function(
 
 Blockly.FunctionEditor.prototype.addParameter = function(newParameterName) {
   // Add the new param block to the local toolbox
-  var param = Blockly.createSvgElement('block', {type: 'parameters_get'});
+  var param = Blockly.createSvgElement('block', {type: this.parameterBlockType});
   var v = Blockly.createSvgElement('title', {name: 'VAR'}, param);
   v.textContent = newParameterName;
   this.paramToolboxBlocks_.push(param);

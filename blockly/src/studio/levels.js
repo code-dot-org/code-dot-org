@@ -973,7 +973,8 @@ levels.full_sandbox =  {
                         blockOfType('studio_setSpriteSpeed') +
                         blockOfType('studio_setSpriteEmotion') +
                         blockOfType('studio_vanish') +
-                        blockOfType('studio_setSpriteSize')) +
+                        blockOfType('studio_setSpriteSize') +
+                        blockOfType('studio_showCoordinates')) +
        createCategory(msg.catEvents(),
                         blockOfType('studio_whenArrow') +
                         blockOfType('studio_whenSpriteClicked') +
