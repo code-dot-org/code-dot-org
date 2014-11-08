@@ -80,6 +80,7 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
 
   this.show();
 
+  targetFunctionDefinitionBlock.setUserVisible(true);
   var dom = Blockly.Xml.blockToDom_(targetFunctionDefinitionBlock);
   targetFunctionDefinitionBlock.dispose(false, false, true);
   this.functionDefinitionBlock =
@@ -88,7 +89,6 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
       ? Blockly.modalBlockSpace.getMetrics().viewWidth - FRAME_MARGIN_SIDE
       : FRAME_MARGIN_SIDE, FRAME_MARGIN_TOP);
   this.functionDefinitionBlock.setMovable(false);
-  this.functionDefinitionBlock.setUserVisible(true);
   this.populateParamToolbox_();
 
   goog.dom.getElement('functionNameText').value = functionName;
