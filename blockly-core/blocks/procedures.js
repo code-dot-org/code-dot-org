@@ -271,6 +271,8 @@ Blockly.Blocks.procedures_defreturn = {
     this.arguments_ = [];
   },
   updateParams_: Blockly.Blocks.procedures_defnoreturn.updateParams_,
+  updateCallerParams_: Blockly.Blocks.procedures_defnoreturn.updateCallerParams_,
+  updateParamsFromArrays: Blockly.Blocks.procedures_defnoreturn.updateParamsFromArrays,
   mutationToDom: Blockly.Blocks.procedures_defnoreturn.mutationToDom,
   domToMutation: Blockly.Blocks.procedures_defnoreturn.domToMutation,
   decompose: Blockly.Blocks.procedures_defnoreturn.decompose,
