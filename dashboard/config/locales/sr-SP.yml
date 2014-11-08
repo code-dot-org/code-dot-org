@@ -2,66 +2,66 @@
   activerecord:
     errors:
       messages:
-        blank: "је обавезан"
+        blank: је обавезан
     attributes:
       user:
-        name: "Прикажи назив"
-        email: "Електронска пошта"
-        username: "корисничко име"
-        password: "Шифра"
-        password_confirmation: "Потврдите лозинку"
-        current_password: "Тренутна лозинка"
-        locale: "Језик"
-        age: "Узраст"
-        gender: "Пол"
-        edit_header: "Уреди детаље налога"
+        name: Прикажи назив
+        email: Електронска пошта
+        username: корисничко име
+        password: Шифра
+        password_confirmation: Потврдите лозинку
+        current_password: Тренутна лозинка
+        locale: Језик
+        age: Узраст
+        gender: Пол
+        edit_header: Уреди детаље налога
         error:
-          future: "не може бити у будућности"
-  hello: "Здраво свете"
-  welcome_back: "Добродошао назад, %{name}"
+          future: не може бити у будућности
+  hello: Здраво свете
+  welcome_back: Добродошао назад, %{name}
   add_teacher_form:
     code_or_email:
-      label: "Додај предавача кодом или емаил адресом:"
-      placeholder: "Код (ABCDEF) или емаил (teacher@school.edu)"
+      label: 'Додај предавача кодом или емаил адресом:'
+      placeholder: Код (ABCDEF) или емаил (teacher@school.edu)
     code:
-      label: "Додај наставника по шифри одељења:"
-      placeholder: "Шифра (ABCDEF)"
-    submit: "Додај наставника"
+      label: 'Додај наставника по шифри одељења:'
+      placeholder: Шифра (ABCDEF)
+    submit: Додај наставника
   add_hint_form:
-    placeholder: "Молимо унесите ваш савет овде"
-    submit: "Додај савет"
+    placeholder: Молимо унесите ваш савет овде
+    submit: Додај савет
   appname: Code.org
-  stage: "фаза"
+  stage: фаза
   stage_number: Stage %{number}
-  puzzle: "Пузла"
-  trophies: "трофеји"
-  courses: "курсеви"
-  of: "од"
-  more: "ВИШЕ"
-  less: "МАЊЕ"
-  try_hoc: "Испробајте Hour of Code.Кликните овде >> "
-  try_k8intro: "Пробај наш К-8 курс Увод у рачунарство (15-25 часова)"
-  k8intro: "К-8 курс Увод у рачунарство (15-25 часова)"
-  already_started: "Већ почели? Наставите овде >>"
+  puzzle: Пузла
+  trophies: трофеји
+  courses: курсеви
+  of: од
+  more: ВИШЕ
+  less: МАЊЕ
+  try_hoc: 'Испробајте Hour of Code.Кликните овде >> '
+  try_k8intro: Пробај наш К-8 курс Увод у рачунарство (15-25 часова)
+  k8intro: К-8 курс Увод у рачунарство (15-25 часова)
+  already_started: Већ почели? Наставите овде >>
   demos: 'Admin: All Demos'
-  continue: "Настави"
-  prize: "награда"
-  more_info: "Више информација"
+  continue: Настави
+  prize: награда
+  more_info: Више информација
   auth:
-    sign_in_with: "Пријавите се помоћу %{provider}"
-    signed_in: "Пријављени сте!"
+    sign_in_with: Пријавите се помоћу %{provider}
+    signed_in: Пријављени сте!
     signed_out: Одјавили сте се са <a href="%{url}">Code.org</a>.
     sign_out_of: Користили сте %{provider} да би се пријавили. <a href="%{url}">Кликните
       овде</a> да би се одјавили са %{provider}.
-    already_signedup: "Већ сте направили налог?"
-    notyet_signedup: "Нисте се придружили?"
-    google_oauth2: "Гугл налог"
+    already_signedup: Већ сте направили налог?
+    notyet_signedup: Нисте се придружили?
+    google_oauth2: Гугл налог
     twitter: Twitter
     facebook: Facebook
-    windowslive: "Мајкрософт налог"
-    forgot_password: "Заборавили сте лозинку?"
-    need_confirmation: "Нисте примили инструкције за потврду?"
-    need_unlock: "Нисте примили инструкције за откључавање?"
+    windowslive: Мајкрософт налог
+    forgot_password: Заборавили сте лозинку?
+    need_confirmation: Нисте примили инструкције за потврду?
+    need_unlock: Нисте примили инструкције за откључавање?
   signup_form:
     overview_student: Sign up for an account to track your progress.
     overview_teacher: Teach computer science in your classroom by signing up for an
@@ -69,60 +69,60 @@
     no_signup_message: Можете <a target="_blank" href="http://learn.code.org">претраживати
       разне нивое и загонетке</a>, али ће те морати да се пријавите како бих запамтили
       ваш напредак.
-    teacher_educator_guide: "Погледај водич за едукатора"
-    teacher_pitch: "Регистрација за Code.org - nastavnici"
-    teacher_title: "Учитељ пријављивање"
-    student_pitch: "Регистрација за Code.org - студенти"
-    student_title: "Регистрација - студенти"
-    school_name: "Име школе (опционо)"
-    school_address: "Адреса школе (опционо)"
-    address_placeholder: "адреса, град, држава, поштански код"
-    gender: "Пол (опционо)"
-    birthday: "Датум рођења (опционо)"
-    age: "Узраст"
+    teacher_educator_guide: Погледај водич за едукатора
+    teacher_pitch: Регистрација за Code.org - nastavnici
+    teacher_title: Учитељ пријављивање
+    student_pitch: Регистрација за Code.org - студенти
+    student_title: Регистрација - студенти
+    school_name: Име школе (опционо)
+    school_address: Адреса школе (опционо)
+    address_placeholder: адреса, град, држава, поштански код
+    gender: Пол (опционо)
+    birthday: Датум рођења (опционо)
+    age: Узраст
     user_type: Are you a student or teacher?
-    submit: "Региструј се"
-    teacher: "Да ли сте наставник?"
-    valid_username: "Доступно!"
-    invalid_username: "Корисничко име мора имати барем 5 знакова"
-    taken_username: "Корисничко име заузето"
-    valid_password: "Валидна лозинка!"
-    invalid_password: "Лозинка мора имати барем 6 знакова"
-    mismatch_password: "Лозинке се не поклапају"
-    student_terms: "Слажем се и обавезујем са Code.org условима коришћења. Ако сам
+    submit: Региструј се
+    teacher: Да ли сте наставник?
+    valid_username: Доступно!
+    invalid_username: Корисничко име мора имати барем 5 знакова
+    taken_username: Корисничко име заузето
+    valid_password: Валидна лозинка!
+    invalid_password: Лозинка мора имати барем 6 знакова
+    mismatch_password: Лозинке се не поклапају
+    student_terms: Слажем се и обавезујем са Code.org условима коришћења. Ако сам
       млађи од 13 година, овом пријавом потврђујем да имам дозволу родитеља или старатеља
-      за коришћења Code.org услуга."
-    teacher_terms: "Слажем се и обавезујем са Code.org условима коришћења."
+      за коришћења Code.org услуга.
+    teacher_terms: Слажем се и обавезујем са Code.org условима коришћења.
     additional_information: We need some additional information to continue signing
       you up.
   signin_form:
-    title: "Већ имате налог? Пријавите се"
+    title: Већ имате налог? Пријавите се
     login: E-mail или корисничко име
-    password: "Лозинка"
-    remember: "Запамти ме"
-    submit: "Пријави се"
+    password: Лозинка
+    remember: Запамти ме
+    submit: Пријави се
   signin:
     try_heading: Want to try coding without signing up?
-    try_hoc: "Прво испробај један Сат Кода"
-    try_20hours: "Испробајте наш 20-часовни увод у Рачунарство"
+    try_hoc: Прво испробај један Сат Кода
+    try_20hours: Испробајте наш 20-часовни увод у Рачунарство
   signinsection:
     welcome: Welcome to %{section_name}
-    name: "Изаберите име"
+    name: Изаберите име
     picture: Now find your secret picture
     words: Now enter your secret words
-    login: "Пријави се"
+    login: Пријави се
   password:
     reset_form:
-      title: "Заборавили сте лозинку?"
-      email: "Емаил адреса"
-      submit: "Пошаљите ми инструкције за ресетовање лозинке"
+      title: Заборавили сте лозинку?
+      email: Емаил адреса
+      submit: Пошаљите ми инструкције за ресетовање лозинке
     change_form:
-      title: "Промените вашу лозинку"
-      new_password: "Нова лозинка"
-      confirm_password: "Потврдите нову лозинку"
-      submit: "Промени моју лозинку"
+      title: Промените вашу лозинку
+      new_password: Нова лозинка
+      confirm_password: Потврдите нову лозинку
+      submit: Промени моју лозинку
   welcome_email:
-    subject: "Придружи се мом предавању (на Code.org)"
+    subject: Придружи се мом предавању (на Code.org)
     body: |
       Кликни линк испод како би се пријавио за туторијале на Code.org (ја ћу ти бити "учителј"):
 
@@ -132,21 +132,21 @@
 
       %{name}
   follower:
-    invite_sent: "Позивница послата"
-    added_teacher: "%{name} вас је додао као предавача"
-    registered: "Регистровали сте се за %{section_name}."
+    invite_sent: Позивница послата
+    added_teacher: '%{name} вас је додао као предавача'
+    registered: Регистровали сте се за %{section_name}.
     error:
-      signed_in: "Молимо вас да се одјавите пре наставка"
-      username_not_found: "Корисничко име %{username} није пронађено"
-      username_in_use: "%{username} је заузето, молимо узмите друго"
-      no_teacher: "Нисмо нашли никога пријавлјеног са '%{teacher_email_or_code}'.
-        Молимо затражите да се поновно пријаве и онда их покушајте поновно додати"
+      signed_in: Молимо вас да се одјавите пре наставка
+      username_not_found: Корисничко име %{username} није пронађено
+      username_in_use: '%{username} је заузето, молимо узмите друго'
+      no_teacher: Нисмо нашли никога пријавлјеног са '%{teacher_email_or_code}'. Молимо
+        затражите да се поновно пријаве и онда их покушајте поновно додати
       section_not_found: Could not find a section with code '%{section_code}'.
-      blank_code: "Молимо унесите шифру или учитељеву имејл адресу"
+      blank_code: Молимо унесите шифру или учитељеву имејл адресу
       cant_join_own_section: Sorry, you can't join your own section.
     mail:
       invite_student:
-        subject: "Придружи се разреду %{teacher_name} на Code.org!"
+        subject: Придружи се разреду %{teacher_name} на Code.org!
       student_disassociated:
         subject: 'Code.org обавештење: студент%{student_name} више се не сматра вашим
           учеником.'
@@ -154,34 +154,34 @@
         subject: 'Code.org обавештење: %{teacher_name} више се не сматра вашим учитељем.'
   reports:
     error:
-      access_denied: "Немате приступ овој особи"
+      access_denied: Немате приступ овој особи
   redeem_prizes:
-    title: "Откупи награду: %{name}"
-    provider: "Пружаоц услуга:"
-    code: "Код:"
+    title: 'Откупи награду: %{name}'
+    provider: 'Пружаоц услуга:'
+    code: 'Код:'
     redeem_header: 'To redeem:'
     donorschoose_register: Register as a teacher on DonorsChoose.org
     donorschoose_project: Post a project
-    donorschoose_how_to: "Како да користите вашу шифру"
-    success: "Ваша је награда успешно откуплјена, погледајте код испод."
-    error: "Ваша награда није могла бити откуплјена, молимо покушајте поновно."
-    error_us_only: "Понуда награде важи само за кориснике Уједињених држава (САД)."
-    error_not_earned: "Нисте још освојили ову награду."
-    error_already_redeemed: "Ваша награда већ је откупљена."
-    no_prizes_available: "Извињавамо се, тенутно немамо доступних награда."
-    teacher_info_required: "Награде за учитеље захтевају информације о имену школе
-      и адреси:"
-    teacher_email_required: "Награде за учитеље захтевају потврђену имејл адресу:"
+    donorschoose_how_to: Како да користите вашу шифру
+    success: Ваша је награда успешно откуплјена, погледајте код испод.
+    error: Ваша награда није могла бити откуплјена, молимо покушајте поновно.
+    error_us_only: Понуда награде важи само за кориснике Уједињених држава (САД).
+    error_not_earned: Нисте још освојили ову награду.
+    error_already_redeemed: Ваша награда већ је откупљена.
+    no_prizes_available: Извињавамо се, тенутно немамо доступних награда.
+    teacher_info_required: 'Награде за учитеље захтевају информације о имену школе
+      и адреси:'
+    teacher_email_required: 'Награде за учитеље захтевају потврђену имејл адресу:'
     confirm:
-      title: "Молимо потврдите"
-      'no': "не"
-      'yes': "Да"
-      msg: "Јесте ли сигурни да желите узети %{prize_name} награду?"
-      msg_student: "Запамтите: Можете узети само један тип награде."
-      msg_publicschool: "Молимо потврдите да сте учитељ у државној школи С.Д."
+      title: Молимо потврдите
+      'no': не
+      'yes': Да
+      msg: Јесте ли сигурни да желите узети %{prize_name} награду?
+      msg_student: 'Запамтите: Можете узети само један тип награде.'
+      msg_publicschool: Молимо потврдите да сте учитељ у државној школи С.Д.
       msg_visit_website: Visit website
     providers:
-      apple_itunes: "$10 iTunes Gift Card"
+      apple_itunes: $10 iTunes Gift Card
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10ГБ Дропбокс Простора
@@ -190,11 +190,11 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: "$10 Skype credit"
+      skype: $10 Skype credit
     msg:
-      choose: "Изабери награду:"
+      choose: 'Изабери награду:'
       choose_teacher: 'Click on the logo below to claim your prize:'
-      earned: "Заслужили сте награду! (само за студенте САД-а)"
+      earned: Заслужили сте награду! (само за студенте САД-а)
       not_earned_title: Finish the tutorial, earn rewards (U.S. students only)
       not_earned: 'Learn all the computer science concepts, collect all %{num_trophies}
         trophies, and earn real-world prizes. You can choose between 10GB of free
@@ -229,53 +229,53 @@
             href="http://DonorsChoose.org">DonorsChoose.org</a> могу користити само
             учитељи у јавним школама у САД.
   crud:
-    new_model: "Нови %{model}"
-    show: "Покажи"
-    edit: "Уреди"
-    edit_model: "Уреди %{model}"
-    update: "Ажурирај"
-    destroy: "Уништи"
-    back: "Побратак"
-    confirm: "Јесте ли сигурни?"
-    created: "%{model} је успешно направлјен."
-    updated: "%{model} је успешно ажуриран."
-    destroyed: "%{model} was successfully deleted."
-    access_denied: "Немаш приступ овом %{model}."
+    new_model: Нови %{model}
+    show: Покажи
+    edit: Уреди
+    edit_model: Уреди %{model}
+    update: Ажурирај
+    destroy: Уништи
+    back: Побратак
+    confirm: Јесте ли сигурни?
+    created: '%{model} је успешно направлјен.'
+    updated: '%{model} је успешно ажуриран.'
+    destroyed: '%{model} was successfully deleted.'
+    access_denied: Немаш приступ овом %{model}.
   nav:
     header:
-      finished_hoc: "Завршио сам свој Сат Програмиранја"
-      sign_in_to_save: "Пријави се да сачуваш напредак"
+      finished_hoc: Завршио сам свој Сат Програмиранја
+      sign_in_to_save: Пријави се да сачуваш напредак
       free_play:
         playlab: Make an App
         artist: Draw Something
     user:
-      classroom: "Моји студенти"
-      label: "Здраво %{username}"
-      stats: "Мој напредак"
-      settings: "Мој рачун"
-      prizes: "Награде"
-      logout: "Одјави се"
-      signin: "Пријави се"
-      signup: "Региструј се"
+      classroom: Моји студенти
+      label: Здраво %{username}
+      stats: Мој напредак
+      settings: Мој рачун
+      prizes: Награде
+      logout: Одјави се
+      signin: Пријави се
+      signup: Региструј се
       already_registered: Already registered?
     popup:
-      progress: "Напредак"
-      lines: "Укупно линија кода: %{lines}"
-      close: "ЗАТВОРИ"
-      mastery: "Концепти"
-      puzzle_map: "Нивои"
-      prizes: "Сакупи све %{total_trophies} трофеје и освоји награде!"
-      prize_earned: "Сви %{total_trophies} трофеји сакуплјени. Награда освојена!"
-      prize_us_only: "(Само за ученике из САД-а)"
-      prizes_link: "Више информација"
+      progress: Напредак
+      lines: 'Укупно линија кода: %{lines}'
+      close: ЗАТВОРИ
+      mastery: Концепти
+      puzzle_map: Нивои
+      prizes: Сакупи све %{total_trophies} трофеје и освоји награде!
+      prize_earned: Сви %{total_trophies} трофеји сакуплјени. Награда освојена!
+      prize_us_only: (Само за ученике из САД-а)
+      prizes_link: Више информација
   teacher:
     title:
-      one: "Твој учитељ:"
-      other: "Твоји учителји:"
-    remove: "(уклони учитеља)"
+      one: 'Твој учитељ:'
+      other: 'Твоји учителји:'
+    remove: (уклони учитеља)
     confirm:
-      remove: "Да ли си сигуран/а да желиш да уклониш овог учитеља?"
-    tools: "Учителјева помагала"
+      remove: Да ли си сигуран/а да желиш да уклониш овог учитеља?
+    tools: Учителјева помагала
     followers:
       section: 'Section:'
       stages: 'Stage(s) to display:'
@@ -287,14 +287,14 @@
       not_tried: Not tried yet
       activity: Indicates student activity in the last %{hours} %{plural}
       no_section: No assigned section
-      trophies: "трофеји"
+      trophies: трофеји
     students:
-      name: "Име"
-      username: "корисничко име"
-      password: "Шифра"
-      manage: "Рспоредити студенте"
+      name: Име
+      username: корисничко име
+      password: Шифра
+      manage: Рспоредити студенте
       dashboard: Go to Teacher Dashboard
-      add: "Сви студенти"
+      add: Сви студенти
       remove: remove student
       confirm_remove: Are you sure you want to remove this student?
       help_reassign: To divide your class into multiple sections, select students
@@ -320,87 +320,87 @@
       secret: Secret type
       grade: Grade
       course: Course
-      rename: "преименуј"
+      rename: преименуј
       edit: edit
       delete: delete
       confirm_delete: Are you sure you want to delete this section?
       email: Send in email
-    rollup: "Плоча напретка"
-    activity: "Скорашнје активности разреда"
-    user_not_found: "Учитељ или ученик није пронађен"
-    cant_remove_student_no_email: "%{student_name} cannot be removed as your student
-      because %{student_name} has not registered an e-mail address"
-    cant_remove_teacher_no_email: "%{teacher_name} cannot be removed as your teacher
-      because you have not registered an e-mail address"
-    student_teacher_disassociated: "%{teacher_name} has been removed as a teacher
-      for %{student_name}"
+    rollup: Плоча напретка
+    activity: Скорашнје активности разреда
+    user_not_found: Учитељ или ученик није пронађен
+    cant_remove_student_no_email: '%{student_name} cannot be removed as your student
+      because %{student_name} has not registered an e-mail address'
+    cant_remove_teacher_no_email: '%{teacher_name} cannot be removed as your teacher
+      because you have not registered an e-mail address'
+    student_teacher_disassociated: '%{teacher_name} has been removed as a teacher
+      for %{student_name}'
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
     email_resend_confirm: Resend confirmation instructions
-    new_password_hint: "(остави празно ако не желиш промијенити)"
-    current_password_hint: "(потребна нам је твоја тренутна лозинка како би потврдили
-      твоје промјене)"
+    new_password_hint: (остави празно ако не желиш промијенити)
+    current_password_hint: (потребна нам је твоја тренутна лозинка како би потврдили
+      твоје промјене)
     cancel:
-      title: "Угаси мој рачун"
-      hint: "Незадоволјни?"
-      button: "Угаси мој рачун"
+      title: Угаси мој рачун
+      hint: Незадоволјни?
+      button: Угаси мој рачун
   user_level:
-    completed: "Готово"
-    tried: "Покушао"
+    completed: Готово
+    tried: Покушао
   user_stats:
-    recent_activity: "Недавна активност"
-    show_more: "Покажи још"
+    recent_activity: Недавна активност
+    show_more: Покажи још
     classroom_activity: Unplugged Activity
   home:
     title: Code Studio
     all_courses: Overview of Courses 1, 2, and 3
     lesson_plans: Lesson plans
-    signin_message: "Или ако сте већ регистровани, %{link}"
-    student_reg_link: "Регистрација за Ученике"
-    teacher_reg_link: "Регистрација за Учитеље"
+    signin_message: Или ако сте већ регистровани, %{link}
+    student_reg_link: Регистрација за Ученике
+    teacher_reg_link: Регистрација за Учитеље
     signin_directions: Use an account to track progress and get rewards.<br/> Teachers,
       track your entire class.
-    teacher_dashboard: "Видјети плочу напретка"
-    teacher_student_count_one: "Имате %{count} студената."
-    teacher_student_count: "Ви имате %{count} студената."
+    teacher_dashboard: Видјети плочу напретка
+    teacher_student_count_one: Имате %{count} студената.
+    teacher_student_count: Ви имате %{count} студената.
     teacher_averages: У просјеку су ваши студенти зарадили %{trophy_average} од %{trophy_max}
       "Concept Mastery" трофеја.
     teacher_print_certificates: Print certificates for students who finish this course
     teacher_read_blog: Read about news and updates to our materials at our Educator
       Blog
-    classroom: "Ваша учионица"
-    student_progress: "Ваш напредак у ученју"
+    classroom: Ваша учионица
+    student_progress: Ваш напредак у ученју
     student_stats: Ви сте зарадили %{trophy_count} од %{trophy_max} "Concept Mastery"
       трофеја.
-    student_left_off: "Гдје сте оставили заднји пут:"
+    student_left_off: 'Гдје сте оставили заднји пут:'
     student_finished: You've completed all tutorials, pick another class %{online_link}
       or at a %{local_school_link}
-    local_school: "локална школа"
-    online: "пријавлјен"
-    see_details: "Погледај деталје"
+    local_school: локална школа
+    online: пријавлјен
+    see_details: Погледај деталје
     prize_info: 'Prizes for participation (U.S. only): $10 gift cards for student
       completion and up to $1,000 in classroom rewards for public school teachers'
-    tryfirst: "Или, можеш прво да пробаш, а да се региструјеш касније:"
-    trynow: "Испробај сада"
+    tryfirst: 'Или, можеш прво да пробаш, а да се региструјеш касније:'
+    trynow: Испробај сада
     add_hint_help: Please help us to add smart hints to Code.org tutorials
-    20hour_overview: "Овај 20-часовни  курс представља срж компјутерских наука и програмерских
+    20hour_overview: Овај 20-часовни  курс представља срж компјутерских наука и програмерских
       основа. Курс је дизајниран за употребу у учионицама за разреде К-8, али је забавно
-      учити у било којем животном периоду."
+      учити у било којем животном периоду.
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
-    heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
-    heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
-    heading_legacy: "<h2>Our previous course for</h2><h1>Existing Students</h1>"
+    heading_elementary: <h2>20 hour courses for</h2><h1>Elementary Students</h1>
+    heading_apps: <h2>Fun for</h2><h1>Everybody</h1>
+    heading_legacy: <h2>Our previous course for</h2><h1>Existing Students</h1>
     gallery:
       your_turtle: My Art
       your_studio: My Apps
   gender:
-    male: "Мушко"
-    female: "Женско"
-    none: "Желим задржати приватност"
+    male: Мушко
+    female: Женско
+    none: Желим задржати приватност
   user_type:
-    student: "студент"
+    student: студент
     teacher: Teacher
   footer:
     help_from_html: Инженјери са <a href="http://www.google.com">Google</a>, <a href="http://www.microsoft.com">Microsoft</a>,
@@ -410,29 +410,29 @@
       Entertainment Ltd</a>. All Rights Reserved.<br/> Plants vs. Zombies&trade; &
       &copy; 2013 <a href="http://www.ea.com">Electronic Arts Inc.</a>. All Rights
       Reserved.
-    feedback: "Обезбедити податке о резултатима"
-    translate: "Помози нам превести на твој језик"
+    feedback: Обезбедити податке о резултатима
+    translate: Помози нам превести на твој језик
     support: Support
     support_url: http://support.code.org
-    tos: "Увјети кориштенја"
-    privacy: "Политика приватности"
+    tos: Увјети кориштенја
+    privacy: Политика приватности
     secure: Secure Version
   reference_area:
-    title: "Требаш помоћ?"
-    subtitle: "Погледај ове снимке и савете"
-    teacher: "Погледај решење"
-    auth_error: "Ниси овлашћен/а да видиш решење."
+    title: Требаш помоћ?
+    subtitle: Погледај ове снимке и савете
+    teacher: Погледај решење
+    auth_error: Ниси овлашћен/а да видиш решење.
     submit: Update Artist Location
     direction: Start Direction
   video:
-    tab: "Видео."
-    notes: "Нема видеа? Покаћи забилјешке."
+    tab: Видео.
+    notes: Нема видеа? Покаћи забилјешке.
     notes_coming_soon: Notes for this video coming soon.
-    autoplay_option: "Аутоматски покрени видео"
-    download: "Преузмите видео"
+    autoplay_option: Аутоматски покрени видео
+    download: Преузмите видео
   compatability:
     working:
-      header: "Радимо на потпори за твој претраживаћ."
+      header: Радимо на потпори за твој претраживаћ.
       message: Code.org uses modern web technology. This makes the site faster to
         use. Your browser doesn't support all the features required, and you may experience
         issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting
@@ -440,17 +440,17 @@
         your browser to a supported version</a>.
       hide_this_warning: Hide this warning
     upgrade:
-      header: "Молимо набавите савременији претраживаћ."
+      header: Молимо набавите савременији претраживаћ.
       message: Code.org uses modern web technology. This makes the site faster to
         use. Unfortunately your browser doesn't support all the features required
         to run this part of the site.<br/><br/>Install a browser on our supported
         browsers list to continue. You can <a href='#'>try viewing the page</a>, but
         expect functionality to be broken.
       button: Take me to the list of supported browsers
-  slow_loading: "Ово траје дуже него што је уобичајено ..."
-  try_reloading: "Покушајте са поновним покретањем странице"
-  next_stage: "Завршено! Наставите на следећу фазу"
-  download_pdf: "Отворен План Лекције"
+  slow_loading: Ово траје дуже него што је уобичајено ...
+  try_reloading: Покушајте са поновним покретањем странице
+  next_stage: Завршено! Наставите на следећу фазу
+  download_pdf: Отворен План Лекције
   view_lesson_plan: View Lesson Plan
   pdf_download: Download PDF
   share_code:
@@ -474,12 +474,12 @@
     back: Back to scripts
     success: You successfully edited the blocks.
     level:
-      create: "Направи нов ниво"
-      current: "Тренутни Нивои"
-      unused: "Неупотребљени Нивои"
+      create: Направи нов ниво
+      current: Тренутни Нивои
+      unused: Неупотребљени Нивои
   upsell:
     hoc:
-      title: "Час кода"
+      title: Час кода
       body: Try the basics of computer science. Millions have given it a shot.
     flappy:
       title: Flappy Code
@@ -500,13 +500,13 @@
     want_to_make_your_own: Want to make your own?
     more: More &rarr;
     caption_by_name_age: by %{name}, age %{age}
-    caption_time_ago: "%{time_ago} ago"
+    caption_time_ago: '%{time_ago} ago'
   landing:
     prerelease: This page is still under development.
     feedback: Give Feedback
     report_bug: Report Bug
     support: Get Help
-    support_url: "//support.code.org"
+    support_url: //support.code.org
   multi:
     wrong_title: Incorrect answer
     wrong_body: The answer you've entered is not correct.  Please try again!
@@ -518,7 +518,7 @@
     correct_title: Correct
     correct_body: That is the correct answer.
   dialog:
-    ok: "У реду"
+    ok: У реду
   time:
     hour: 1 hour
     day: day
@@ -527,18 +527,18 @@
     script:
       name:
         20-hour:
-          title: "К-8 курс Увод у рачунарство (15-25 часова)"
-          description: "Овај 20-часовни  курс представља срж компјутерских наука и
+          title: К-8 курс Увод у рачунарство (15-25 часова)
+          description: Овај 20-часовни  курс представља срж компјутерских наука и
             програмерских основа. Курс је дизајниран за употребу у учионицама за разреде
-            К-8, али је забавно учити у било којем животном периоду."
+            К-8, али је забавно учити у било којем животном периоду.
         Hour of Code:
-          title: "Час кода"
+          title: Час кода
           description: ''
         edit-code:
-          title: "Уреди код"
+          title: Уреди код
           description: ''
         events:
-          title: "Догађаји"
+          title: Догађаји
           description: ''
         builder:
           title: Builder
@@ -548,7 +548,7 @@
           description: Wanna write your own game in less than 10 minutes? Try our
             Flappy Code tutorial!
         jigsaw:
-          title: "Слагалица"
+          title: Слагалица
           description: ''
         step:
           title: Step

@@ -4,7 +4,7 @@
   computer_science: Računalstvo
   computer_science_edweek: Tjedan podučavanja Računalstva
   csedweek_dates: 9. - 15. prosinca 2013.
-  n_have_learned_an_hoc: "<h1>#</h1><h3>have tried an</h3><h2>HOUR of CODE</h2>"
+  n_have_learned_an_hoc: <h1>#</h1><h3>have tried an</h3><h2>HOUR of CODE</h2>
   anybody_can_learn: Svatko može naučiti.
   learn_now: Nauči sad
   petition_message: Potpiši svoje ime ako misliš da bi svi učenici u svim školama
@@ -45,10 +45,10 @@
     ponavljanje, "ako-onda" naredbe odlučivanja i osnovne algoritme.
   all_ages: Svi uzrasti
   beginner: Početnik
-  n_participants: "# sudionika"
+  n_participants: '# sudionika'
   go: Kreni
   thank_you_: Hvala!
-  congratulations: "Čestitamo!"
+  congratulations: Čestitamo!
   congratulations_on_completing_hoc: Čestitamo na završetku jednog "Hour of Code".
   get_a_certificate_of_achievement: Preuzmi potvrdu o postignuću
   enter_valid_email: Unesite ispravnu e-mail adresu, molim
@@ -81,7 +81,7 @@
   beyond_an_hour: Beyond an HOUR OF CODE >
   get_started: Započni
   i_agree: Slažem se
-  participant_select: "- Izaberi -"
+  participant_select: '- Izaberi -'
   participant_student: Učenik
   participant_parent: Roditelj
   participant_educator: Nastavnik
@@ -100,7 +100,7 @@
   learn_next_level: Prijeđi na sljedeći nivo
   learn_online: Nauči preko interneta
   learn_classes: Pronađi lokalne nastave
-  hoc_is_here: "#HourOfCode je ovdje - pogledaj! @codeorg"
+  hoc_is_here: '#HourOfCode je ovdje - pogledaj! @codeorg'
   just_did_hoc: 'Upravo sam završio #HourOfCode - pogledaj! @codeorg'
   learn_hoc: Nauči Hour of Code
   beyond_hoc: Prije sat vremena
@@ -110,11 +110,11 @@
   help_recruit_coders: Pomogni nam zaposliti više programera u tvom timu!
   help_recruit: Pomogni nam zaposliti više programera!
   lines_of_code: Iznad <b># linija koda </b> napisanih do datuma.
-  lines_of_code_alt: "<b>#</b> linija koda koje su učenici napisali"
+  lines_of_code_alt: <b>#</b> linija koda koje su učenici napisali
   who_has_done_hoc: 'Tko je napravio #HourOfCode? @codeorg'
   hoc_leaderboards: Hour of Code ljestvica poretka
-  students_and_lines: "%{students} učenika je napravilo Hour of Code i napisali su
-    %{lines} linija koda."
+  students_and_lines: '%{students} učenika je napravilo Hour of Code i napisali su
+    %{lines} linija koda.'
   start_hoc: Kreni s Hour of Code sada
   contact_form_topic_press: Press/media (interview or speaking engagement)
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
@@ -258,7 +258,7 @@
   dashboard_students_age: Age
   dashboard_students_gender: Spol
   dashboard_students_male: Muško
-  dashboard_students_female: "Žensko"
+  dashboard_students_female: Žensko
   dashboard_students_secret: Secret
   dashboard_students_password: Lozinka
   dashboard_students_username: 'Username: %{student_username}'

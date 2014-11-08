@@ -1,10 +1,10 @@
 "pt-BR":
   hello: Olá, mundo
-  select_language: Please select your language
+  select_language: Selecione seu idioma
   computer_science: Ciência da Computação
   computer_science_edweek: Semana de Educação em Ciência da Computação
   csedweek_dates: 9 a 15 de dezembro de 2013
-  n_have_learned_an_hoc: "<h1>#</h1><h3>participaram da</h3><h2>Hora do Código</h2>"
+  n_have_learned_an_hoc: <h1>#</h1><h3>participaram da</h3><h2>Hora do Código</h2>
   anybody_can_learn: Qualquer pessoa pode aprender.
   learn_now: Aprenda Agora
   petition_message: Todos os alunos, em todas as escolas, devem ter a oportunidade
@@ -46,7 +46,7 @@
     declarações se-então e algoritmos básicos.
   all_ages: Todas as idades
   beginner: Iniciante
-  n_participants: "# participantes"
+  n_participants: '# participantes'
   go: Ir
   thank_you_: Obrigado!
   congratulations: Parabéns!
@@ -82,7 +82,7 @@
   beyond_an_hour: Além da Hora do Código >
   get_started: Começar
   i_agree: Aceito
-  participant_select: "- Selecionar -"
+  participant_select: '- Selecionar -'
   participant_student: Estudante
   participant_parent: Pai / Mãe
   participant_educator: Educador
@@ -110,12 +110,12 @@
   boy: Menino
   help_recruit_coders: Ajude-nos a recrutar mais programadores para a sua equipe!
   help_recruit: Ajude-nos a recrutar mais programadores!
-  lines_of_code: "<b>#</b> LINHAS DE CÓDIGO ESCRITAS ATÉ A DATA."
-  lines_of_code_alt: "<b>#</b> LINHAS DE CÓDIGO ESCRITAS POR ESTUDANTES"
+  lines_of_code: <b>#</b> LINHAS DE CÓDIGO ESCRITAS ATÉ A DATA.
+  lines_of_code_alt: <b>#</b> LINHAS DE CÓDIGO ESCRITAS POR ESTUDANTES
   who_has_done_hoc: 'Quem participou da #HourOfCode? @codeorg'
   hoc_leaderboards: Classificações da Hora do Código
-  students_and_lines: "%{students} estudantes têm participado da Hora do Código e
-    escreveram %{lines} linhas de programação."
+  students_and_lines: '%{students} estudantes têm participado da Hora do Código e
+    escreveram %{lines} linhas de programação.'
   start_hoc: Comece a Hora do Código agora
   contact_form_topic_press: Imprensa/mídia (entrevista ou falando de compromisso)
   studiobar_title: Explore o <a href='http://studio.code.org'>Code Studio</a>
@@ -230,6 +230,7 @@
   dashboard_navigation_view_progress: Exibir progresso
   dashboard_navigation_add_students: Adicionar alunos
   dashboard_navigation_manage_students: Gerenciar alunos
+  dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
   dashboard_navigation_view_stats: Ver estatísticas
   dashboard_navigation_section: 'Turma: %{section_name}'
   dashboard_navigation_student: 'Aluno: %{student_name}'
@@ -590,11 +591,11 @@
   lookingglass_longdescription: 'Nesta atividade, os alunos serão apresentados à programação
     ao construir uma história animada. Eles conhecerão o pensamento computacional
     e terão uma demonstração da criatividade inerente à computação. Além disso, essa
-    atividade incorpora uma mistura de ações (animações de outros usuários do Looking
-    Glass), e destaca o tipo de reutilização de código que geralmente ocorre entre
-    programadores de todos os níveis, desde aqueles que veem a programação como um
-    passatempo até os que são profissionais. Esta atividade é autoexplicativa. [OBSERVAÇÃO:
-    a instalação na área de trabalho é necessária]'
+    atividade incorpora uma mistura de ações (animações de outros usuários do Espelho),
+    e destaca o tipo de reutilização de código que geralmente ocorre entre programadores
+    de todos os níveis, desde aqueles que veem a programação como um passatempo até
+    os que são profissionais. Esta atividade é autoexplicativa. [OBSERVAÇÃO: a instalação
+    na área de trabalho é necessária]'
   kodableunplugged_longdescription: 'Desenvolvido para ser usado com papel comum,
     o fuzzFamily Frenzy é uma introdução à lógica da programação para crianças a partir
     de 5 anos. Um professor explicará o jogo, então, os alunos vão programar um parceiro,

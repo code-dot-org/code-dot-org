@@ -81,10 +81,10 @@
     address_placeholder: adress, stad, län, postnummer
     gender: Kön (valfritt)
     birthday: Födelsedag (valfritt)
-    age: "Ålder (frivilligt)"
+    age: Ålder (frivilligt)
     user_type: Are you a student or teacher?
     submit: Registrera dig
-    teacher: "Är du en lärare?"
+    teacher: Är du en lärare?
     valid_username: Tillgänglig!
     invalid_username: Användarnamnet måste innehålla minst fem tecken
     taken_username: Användarnamnet är upptaget
@@ -121,10 +121,10 @@
       email: E-postadress
       submit: Skicka "byta lösenord"-instruktioner till mig
     change_form:
-      title: "Ändra ditt lösenord"
+      title: Ändra ditt lösenord
       new_password: Nytt lösenord
       confirm_password: Bekräfta nytt lösenord
-      submit: "Ändra mitt lösenord"
+      submit: Ändra mitt lösenord
   welcome_email:
     subject: Gå med i min klass (på Code.org)
     body: |
@@ -137,12 +137,12 @@
       %{name}
   follower:
     invite_sent: Inbjuda skickades
-    added_teacher: "%{name} är tillagd som din lärare"
+    added_teacher: '%{name} är tillagd som din lärare'
     registered: Du har registrerat dig för %{section_name}.
     error:
       signed_in: Vänligen logga ut innan du fortsätter
       username_not_found: Användarnamnet %{username} hittades inte
-      username_in_use: "%{username} används redan, vänligen välj ett annat"
+      username_in_use: '%{username} används redan, vänligen välj ett annat'
       no_teacher: Kunde inte hitta någon inloggad med '%{teacher_email_or_code}'.
         Vänligen be dem att registrera sig här och försök sedan lägga till dem igen
       section_not_found: Could not find a section with code '%{section_code}'.
@@ -181,13 +181,13 @@
       title: Vänligen bekräfta
       'no': Nej
       'yes': Ja
-      msg: "Är du säker på att du vill begära %{prize_name} priset?"
+      msg: Är du säker på att du vill begära %{prize_name} priset?
       msg_student: 'OBS: Du kan bara välja en sorts pris.'
       msg_publicschool: Var vänlig och bekräfta att du är en amerikansk ''Public School''
         lärare.
       msg_visit_website: Visit website
     providers:
-      apple_itunes: "$10 iTunes Gift Card"
+      apple_itunes: $10 iTunes Gift Card
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10GB Dropbox utrymme
@@ -196,7 +196,7 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: "$10 Skype credit"
+      skype: $10 Skype credit
     msg:
       choose: 'Välj ett pris:'
       choose_teacher: 'Click on the logo below to claim your prize:'
@@ -236,10 +236,10 @@
     update: Uppdatera
     destroy: Förstöra
     back: Tillbaka
-    confirm: "Är du säker?"
-    created: "%{model} har skapats."
-    updated: "%{model} har uppdaterats."
-    destroyed: "%{model} was successfully deleted."
+    confirm: Är du säker?
+    created: '%{model} har skapats.'
+    updated: '%{model} har uppdaterats.'
+    destroyed: '%{model} was successfully deleted.'
     access_denied: You do not have access to this %{model}.
   nav:
     header:
@@ -266,15 +266,15 @@
       puzzle_map: Nivåer
       prizes: Samla in alla %{total_trophies} troféer och vinn priser!
       prize_earned: Alla %{total_trophies} troféerna är insamlade. Pris vunnet!
-      prize_us_only: "(Endast US-studenter)"
+      prize_us_only: (Endast US-studenter)
       prizes_link: Mer information
   teacher:
     title:
       one: 'Din lärare:'
       other: 'Dina lärare:'
-    remove: "(ta bort lärare)"
+    remove: (ta bort lärare)
     confirm:
-      remove: "Är du säker du vill ta bort denna lärare?"
+      remove: Är du säker du vill ta bort denna lärare?
     tools: Lärar-verktyg
     followers:
       section: 'Grupp:'
@@ -329,18 +329,17 @@
     rollup: Framstegsmeny
     activity: Senaste klasshändelserna
     user_not_found: The teacher or student could not be found
-    cant_remove_student_no_email: "%{student_name} cannot be removed as your student
-      because %{student_name} has not registered an e-mail address"
-    cant_remove_teacher_no_email: "%{teacher_name} cannot be removed as your teacher
-      because you have not registered an e-mail address"
-    student_teacher_disassociated: "%{teacher_name} has been removed as a teacher
-      for %{student_name}"
+    cant_remove_student_no_email: '%{student_name} cannot be removed as your student
+      because %{student_name} has not registered an e-mail address'
+    cant_remove_teacher_no_email: '%{teacher_name} cannot be removed as your teacher
+      because you have not registered an e-mail address'
+    student_teacher_disassociated: '%{teacher_name} has been removed as a teacher
+      for %{student_name}'
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
     email_resend_confirm: Resend confirmation instructions
-    new_password_hint: "(lämna tomt om du inte vill ändra det)"
-    current_password_hint: "(vi behöver ditt nuvarande lösenord att bekräfta dina
-      ändringar)"
+    new_password_hint: (lämna tomt om du inte vill ändra det)
+    current_password_hint: (vi behöver ditt nuvarande lösenord att bekräfta dina ändringar)
     cancel:
       title: Ta bort mitt konto
       hint: Missnöjd?
@@ -390,9 +389,9 @@
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
-    heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
-    heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
-    heading_legacy: "<h2>Our previous course for</h2><h1>Existing Students</h1>"
+    heading_elementary: <h2>20 hour courses for</h2><h1>Elementary Students</h1>
+    heading_apps: <h2>Fun for</h2><h1>Everybody</h1>
+    heading_legacy: <h2>Our previous course for</h2><h1>Existing Students</h1>
     gallery:
       your_turtle: My Art
       your_studio: My Apps
@@ -452,7 +451,7 @@
   slow_loading: Det här tar längre tid  än vanligt...
   try_reloading: Försök ladda sidan igen
   next_stage: Klar! Fortsätt till nästa nivå
-  download_pdf: "Öppen kursplan"
+  download_pdf: Öppen kursplan
   view_lesson_plan: View Lesson Plan
   pdf_download: Ladda ner PDF
   share_code:
@@ -502,13 +501,13 @@
     want_to_make_your_own: Vill du göra din egen?
     more: Mer &rarr;
     caption_by_name_age: by %{name}, age %{age}
-    caption_time_ago: "%{time_ago} ago"
+    caption_time_ago: '%{time_ago} ago'
   landing:
     prerelease: This page is still under development.
     feedback: Give Feedback
     report_bug: Report Bug
     support: Få hjälp
-    support_url: "//support.code.org"
+    support_url: //support.code.org
   multi:
     wrong_title: Incorrect answer
     wrong_body: The answer you've entered is not correct.  Please try again!
@@ -519,6 +518,8 @@
     wrong_body: Din lösning är inte rätt.  Försök pånytt!
     correct_title: Rätt
     correct_body: Det är det rätta svaret.
+  text_match:
+    placeholder: Enter your answer here
   dialog:
     ok: Ok
   time:
@@ -571,3 +572,8 @@
   zendesk_too_young_message: Sorry, younger users may not sign in to our support site.
     You may browse <a href="http://support.code.org">support.code.org</a> without
     signing in or ask your parent or teacher to contact us for you.
+  progress:
+    not_completed: not completed
+    completed_too_many_blocks: completed, too many blocks
+    completed_perfect: completed, perfect
+    furthest_level_attempted: furthest level attempted

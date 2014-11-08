@@ -23,8 +23,8 @@
           kümesidir.
       6:
         image: notes/hoc1_6.jpg
-        text: "İlk programınızın amacı, Yeşil Domuzu vurmak için labirent aracılığıyla
-          bir Angry Bird elde etmektir."
+        text: İlk programınızın amacı, Yeşil Domuzu vurmak için labirent aracılığıyla
+          bir Angry Bird elde etmektir.
       7:
         image: notes/hoc1_7.jpg
         text: Sol taraf programın çalıştığı labirenttir. Her bulmaca için talimatlar
@@ -231,7 +231,7 @@
           "eğer değilse" bloğu da dönülecek bir yer olup olmadığını kontrol edecek.'
       4:
         image: notes/hoc5_4.jpg
-        text: "Şimdi, bu zombileri ait oldukları yere sok!"
+        text: Şimdi, bu zombileri ait oldukları yere sok!
     function:
       1:
         image: notes/stage13_1.jpg
@@ -317,8 +317,8 @@
           and drag out your "draw a triangle with length" function.
       8:
         image: notes/stage15_8.jpg
-        text: "Şimdi farklı boyutlarda üçgenler çizmek için matematik bloğunu kullanarak
-          farklı numaralar girebilirsin."
+        text: Şimdi farklı boyutlarda üçgenler çizmek için matematik bloğunu kullanarak
+          farklı numaralar girebilirsin.
     hoc_wrapup:
       1:
         image: notes/hoc6_1.jpg

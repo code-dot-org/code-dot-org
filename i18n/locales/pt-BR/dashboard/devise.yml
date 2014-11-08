@@ -1,4 +1,4 @@
-"pt-BR":
+"pt":
   devise:
     confirmations:
       confirmed: "Seu endereço de email foi confirmado com sucesso."

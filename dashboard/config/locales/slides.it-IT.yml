@@ -172,8 +172,8 @@
           stabilire quante ripetizioni fare.
       6:
         image: notes/hoc2_6.jpg
-        text: 'Fai attenzione: è possibile inserire più di un blocco all''interno
-          di un blocco di ripetizione "ripeti ... volte" .'
+        text: 'Fai attenzione: "è possibile inserire più di un blocco all''interno
+          di un blocco di ripetizione \"ripeti ... volte\" ."'
       7:
         image: notes/hoc2_7.jpg
         text: Divertiti ad usare il blocco di ripetizione "ripeti ... volte" !
@@ -194,8 +194,9 @@
           avanti FINO A CHE raggiunge il maiale (o sbatte contro un muro).
       4:
         image: notes/hoc3_4.jpg
-        text: 'Fai attenzione: proprio come prima, possiamo mettere più blocchi all''interno
-          del blocco di ripetizione "ripeti fino a che", ed essi verranno tutti ripetuti.'
+        text: 'Fai attenzione: "proprio come prima, possiamo mettere più blocchi all''interno
+          del blocco di ripetizione \"ripeti fino a che\", ed essi verranno tutti
+          ripetuti."'
     if:
       1:
         image: notes/hoc4_1.jpg
@@ -312,11 +313,11 @@
           e lo inserisci al fianco di "lunghezza" (length) ...
       4:
         image: note/stadio11_4.jpg
-        text: "...questo significa che il nostro artista inizia disegnando un quadrato
+        text: '...questo significa che il nostro artista inizia disegnando un quadrato
           con lati lunghi 50 pixel. Poi aggiungerà 10 e disegnerà un quadrato con
           lati lunghi 60 pixel. Poi continuerà ad aggiungere 10 e disegnare quadrati
           con lati sempre più lunghi fino a quando raggiungerà 90. Così avremo quadrati
-          di 50, 60, 70, 80 e 90 pixel."
+          di 50, 60, 70, 80 e 90 pixel.'
     parameters:
       1:
         image: note/stadio15_1.jpg

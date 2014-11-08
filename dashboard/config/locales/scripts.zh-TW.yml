@@ -4,17 +4,17 @@
       name:
         test:
           'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
-          The Maze: "迷宮"
+          The Maze: 迷宮
           Multi: Multi
           Match: Match
           Math Image: Math Image
           title: Test Course
           description: Just an internal test course.
         course1:
-          'Jigsaw: Learn to drag and drop': "拼圖: 學會拖放"
-          'Maze: Sequence': "迷宮: 序列"
-          'Maze: Debugging': "迷宮: 除錯"
-          'Artist 1: Intro': "藝術家1: 簡介"
+          'Jigsaw: Learn to drag and drop': '拼圖: 學會拖放'
+          'Maze: Sequence': '迷宮: 序列'
+          'Maze: Debugging': '迷宮: 除錯'
+          'Artist 1: Intro': '藝術家1: 簡介'
           Artists 2: Artists 2
           Spelling Bee: Spelling Bee
           Spelling Bee not blockly: Spelling Bee not blockly
@@ -46,11 +46,11 @@
             grades.
           'Artist: Loops': 'Artist: Loops'
         course2:
-          The Maze: "迷宮"
+          The Maze: 迷宮
           Suzi: Suzi
-          The Artist: "藝術家"
+          The Artist: 藝術家
           Artist Debugging: Artist Debugging
-          Bounce: "彈跳"
+          Bounce: 彈跳
           'Studio: Create a Story': 'Studio: Create a Story'
           Artist Loops: Artist Loops
           Bee Conditionals: Bee Conditionals
@@ -62,11 +62,11 @@
           Bee Debugging: Bee Debugging
           Bee Functions: Bee Functions
           Maze Loops: Maze Loops
-          Graph Paper Programming: "圖畫紙程式設計"
+          Graph Paper Programming: 圖畫紙程式設計
           'Real-life Algorithms: Paper Planes': 'Real-life Algorithms: Paper Planes'
           Getting Loopy: Getting Loopy
           Relay programming: Relay programming
-          Conditionals: "流程類別"
+          Conditionals: 流程類別
           Binary Bracelets: Binary Bracelets
           The Big Event: The Big Event
           Your Digital Footprint: Your Digital Footprint
@@ -74,7 +74,7 @@
             and middle elementary grades.  Create programs with loops, events, and
             conditionals.  By the end of the course, create your very own interactive
             game or story that you can share.
-          'Maze: Sequence': "迷宮: 序列"
+          'Maze: Sequence': '迷宮: 序列'
           'Artist: Sequence': 'Artist: Sequence'
           'Maze: Loops': 'Maze: Loops'
           'Artist: Loops': 'Artist: Loops'
@@ -88,9 +88,9 @@
           'Maze: Sequence2': 'Maze: Sequence2'
           'Artist: Nested Loops': 'Artist: Nested Loops'
         course3:
-          The Maze: "迷宮"
+          The Maze: 迷宮
           'Studio: Create a Story': 'Studio: Create a Story'
-          The Artist: "藝術家"
+          The Artist: 藝術家
           title: Course 3
           Artist Functions: Artist Functions
           Artist For Loops: Artist For Loops
@@ -101,10 +101,10 @@
           Bee Debugging: Bee Debugging
           Bee Functions: Bee Functions
           Artist Functions with Params: Artist Functions with Params
-          Bounce: "彈跳"
+          Bounce: 彈跳
           Maze Conditionals: Maze Conditionals
           Artist Functions with Parameters: Artist Functions with Parameters
-          Computational Thinking: "電腦計算式思維"
+          Computational Thinking: 電腦計算式思維
           Functional Suncatchers: Functional Suncatchers
           Songwriting Parameters: Songwriting Parameters
           Dice Race: Dice Race
@@ -144,10 +144,31 @@
         msm:
           title: Middle School Math
           description: Private work in progress for Middle School Math.
-          Graph Paper Programming: "圖畫紙程式設計"
+          Graph Paper Programming: 圖畫紙程式設計
           Assessments: Assessments
           Unit 1: Unit 1
           Unit 2: Unit 2
+          Ninja Cat and the Coordinate Plane: Ninja Cat and the Coordinate Plane
+          'Calc: Circles of Evaluation': 'Calc: Circles of Evaluation'
+          'Artist: Strings and Images': 'Artist: Strings and Images'
+          Contracts: Contracts
+          'Artist: Writing Contracts': 'Artist: Writing Contracts'
+          'Calc: Defining Variables': 'Calc: Defining Variables'
+          'Play Lab: Defining Variables': 'Play Lab: Defining Variables'
+          The Design Recipe: The Design Recipe
+          'Artist: Defining Functions': 'Artist: Defining Functions'
+          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          'Artist: Functions': 'Artist: Functions'
+          'Play Lab: Animation': 'Play Lab: Animation'
+          Booleans: Booleans
+          'Play Lab: Booleans': 'Play Lab: Booleans'
+          'Calc: Boolean Operators': 'Calc: Boolean Operators'
+          'Play Lab: Boolean Operators': 'Play Lab: Boolean Operators'
+          Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
+          'Artist: Conditionals': 'Artist: Conditionals'
+          Collision Detection and the Distance Formula: Collision Detection and the
+            Distance Formula
+          'Play Lab: Collision Detection': 'Play Lab: Collision Detection'
         playlab:
           title: Play Lab
           description: Create a story or make a game with Play Lab!
@@ -170,7 +191,7 @@
           'Bee: For Loops': 'Bee: For Loops'
           title: Course 4
           'Algorithms: Tangrams': 'Algorithms: Tangrams'
-          Variables: "變數類別"
+          Variables: 變數類別
           'Play Lab: Variables': 'Play Lab: Variables'
           'Play Lab: Functions with Parameters': 'Play Lab: Functions with Parameters'
           'Bee: Functions with Parameters': 'Bee: Functions with Parameters'
@@ -178,3 +199,28 @@
           'Play Lab: For Loops': 'Play Lab: For Loops'
           'Artist: Functions': 'Artist: Functions'
           'Artist: Functions with Paraqmeters': 'Artist: Functions with Paraqmeters'
+          'Unplugged: Tangrams': 'Unplugged: Tangrams'
+          Artist: Artist
+          Bee: Bee
+          'Unplugged: Envelope Variables': 'Unplugged: Envelope Variables'
+          'Unplugged: Madlibs': 'Unplugged: Madlibs'
+          'Unplugged: For Loop Fun': 'Unplugged: For Loop Fun'
+          'Unplugged: Songwriting with Parameters': 'Unplugged: Songwriting with Parameters'
+          'Artist: Functions with Parameters': 'Artist: Functions with Parameters'
+          'Unplugged: Binary': 'Unplugged: Binary'
+          Bee Binary: Bee Binary
+          Farmer Binary: Farmer Binary
+          Maze and Bee: Maze and Bee
+        Course4pre:
+          description_short: A brief rampup of concepts for students who have not
+            taken Course 2 and 3.
+          Course 4 Prerequisite: Course 4 Prerequisite
+          'Maze: Sequence': '迷宮: 序列'
+          'Artist: Sequence': 'Artist: Sequence'
+          'Artist: Loops': 'Artist: Loops'
+          'Bee: Conditionals': 'Bee: Conditionals'
+          'Artist: Nested Loops': 'Artist: Nested Loops'
+          'Farmer: While Loops': 'Farmer: While Loops'
+          'Bee: Nested Loops': 'Bee: Nested Loops'
+          'Artist: Functions': 'Artist: Functions'
+          'Bee: Debugging': 'Bee: Debugging'

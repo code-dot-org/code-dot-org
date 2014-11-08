@@ -60,8 +60,8 @@
   errors:
     messages:
       already_confirmed: dagoeneko baieztatuta zegoen, mesedez saiatu sartzen
-      confirmation_period_expired: "%{period}ean baieztapena behar du, mesedez eskatu
-        berri bat"
+      confirmation_period_expired: '%{period}ean baieztapena behar du, mesedez eskatu
+        berri bat'
       expired: iraungi da, mesedez eskatu berri bat
       not_found: ez da aurkitu
       not_locked: ez zegoen lokatuta

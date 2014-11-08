@@ -4,7 +4,7 @@
   computer_science: Računalništvo
   computer_science_edweek: Computer Science Education Week
   csedweek_dates: 9-15 December 2013
-  n_have_learned_an_hoc: "<h1>#</h1><h3>have tried an</h3><h2>HOUR of CODE</h2>"
+  n_have_learned_an_hoc: <h1>#</h1><h3>have tried an</h3><h2>HOUR of CODE</h2>
   anybody_can_learn: Vsakdo se lahko nauči.
   learn_now: Nauči se zdaj
   petition_message: Sign your name if you think every student in every school should
@@ -45,7 +45,7 @@
     statements, and basic algorithms.
   all_ages: Vse starosti
   beginner: Začetnik
-  n_participants: "#udeležencev"
+  n_participants: '#udeležencev'
   go: Pojdi
   thank_you_: Hvala!
   congratulations: Congratulations!
@@ -81,7 +81,7 @@
   beyond_an_hour: Beyond an HOUR OF CODE >
   get_started: Get Started
   i_agree: I agree
-  participant_select: "- Select -"
+  participant_select: '- Select -'
   participant_student: Učenec
   participant_parent: Parent
   participant_educator: Educator
@@ -110,11 +110,11 @@
   help_recruit_coders: Help us recruit more coders to your team!
   help_recruit: Help us recruit more coders!
   lines_of_code: OVER <b># LINES OF CODE</b> WRITTEN TO DATE.
-  lines_of_code_alt: "<b>#</b> LINES OF CODE WRITTEN BY STUDENTS"
+  lines_of_code_alt: <b>#</b> LINES OF CODE WRITTEN BY STUDENTS
   who_has_done_hoc: 'Who has done the #HourOfCode? @codeorg'
   hoc_leaderboards: The Hour of Code Leaderboards
-  students_and_lines: "%{students} students have done the Hour of Code and written
-    %{lines} lines of code."
+  students_and_lines: '%{students} students have done the Hour of Code and written
+    %{lines} lines of code.'
   start_hoc: Start the Hour of Code now
   contact_form_topic_press: Press/media (interview or speaking engagement)
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
@@ -258,7 +258,7 @@
   dashboard_students_age: Age
   dashboard_students_gender: Spol
   dashboard_students_male: Moški
-  dashboard_students_female: "Ženska"
+  dashboard_students_female: Ženska
   dashboard_students_secret: Secret
   dashboard_students_password: Geslo
   dashboard_students_username: 'Username: %{student_username}'

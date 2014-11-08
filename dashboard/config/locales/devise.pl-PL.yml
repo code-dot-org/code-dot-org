@@ -70,4 +70,4 @@
       not_locked: nie było zablokowane
       not_saved:
         one: '1 błąd zabrania temu %{resource}, by został zapisany:'
-        other: "%{count} błędów zabrania temu %{resource}, by został zapisany:"
+        other: '%{count} błędów zabrania temu %{resource}, by został zapisany:'
