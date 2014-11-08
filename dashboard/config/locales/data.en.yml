@@ -109,6 +109,7 @@ en:
         'Wordsearch': 'Wordsearch'
         'Webapp': 'Webapp'
         'ArtistEC': 'The Artist'
+        'TextMatch': 'Text Match'
     trophy:
       name:
         'Bronze': 'Bronze'

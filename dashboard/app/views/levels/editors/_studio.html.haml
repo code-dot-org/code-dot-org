@@ -37,8 +37,11 @@
   = f.label :allow_sprites_outside_playspace, 'Allow sprites outside playspace'
   = boolean_check_box f, :allow_sprites_outside_playspace
 .field
-  = f.label :sprites_hidden_to_start, 'Spires hidden to start'
+  = f.label :sprites_hidden_to_start, 'Sprites hidden to start'
   = boolean_check_box f, :sprites_hidden_to_start
+.field
+  = f.label :coordinate_grid_background, 'Coordinate grid background'
+  = boolean_check_box f, :coordinate_grid_background
 
 :javascript
   CodeMirror.fromTextArea($('#level_success_condition').get(0), {

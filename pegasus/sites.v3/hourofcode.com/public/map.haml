@@ -1,0 +1,103 @@
+---
+title: Hour of Code map
+layout: wide_index
+theme: responsive
+---
+
+:css
+  html, body, #gmap {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+  }
+
+%script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=false&libraries=places,geometry&v=3.7"}
+
+.row
+  .col-xs-10.col-sm-12
+    #gmap{style: 'width: 100%; max-width: 1024px;'}
+
+:javascript
+  var gmap;
+  var resizeZoom;
+
+  $(document).ready(function() {
+    initializeMap();
+
+    $(window).resize(function() {
+      resizeMap();
+    }).trigger('resize');
+  });
+
+  function initializeMap() {
+    var mapOptions = {
+      center: new google.maps.LatLng(22.2116,4.5775),
+      zoom: 2,
+      scrollwheel: false,
+      draggable: false,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+
+    gmap = new google.maps.Map(document.getElementById("gmap"), mapOptions);
+
+    var layer = new google.maps.FusionTablesLayer({
+      query: {
+        from: '11ZkoDt2oifYs_OIi2HiZc6MjrMFMZmgD9YVFvay8'
+      },
+      styles: [{
+        markerOptions: {
+          iconName: "small_red"
+        }
+      }],
+      map: gmap
+    });
+
+    google.maps.event.addListener(layer, 'click', function(event) {
+      enableDrag();
+      event.infoWindowHtml = event.row['organization_name'].value + '<br>';
+    });
+    google.maps.event.addListener(gmap, 'zoom_changed', function(event) {
+      enableDrag();
+    });
+    google.maps.event.addListener(gmap, 'click', function(event) {
+      enableDrag();
+    });
+  }
+
+  function enableDrag() {
+    var map_options = {
+      scrollwheel: true,
+      draggable: true,
+    }
+    gmap.setOptions(map_options);
+  }
+
+  function resizeMap() {
+    var map_width = $('#gmap').width();
+    var map_zoom = gmap.getZoom();
+    var map_center = gmap.getCenter();
+
+    var map_height = map_width / 2;
+    $('#gmap').height(map_height);
+
+    if (map_width < 256 && map_zoom < 3) {
+      map_zoom = 0;
+      map_center = new google.maps.LatLng(22.2116,4.5775);
+    }
+    else if (map_width < 512 && map_zoom < 3) {
+      map_zoom = 1;
+      map_center = new google.maps.LatLng(22.2116,4.5775);
+    }
+    else if (map_zoom < 3) {
+      map_zoom = 2;
+      map_center = new google.maps.LatLng(22.2116,4.5775);
+    }
+
+    var map_options = {
+      center: map_center,
+      zoom: map_zoom,
+      minZoom: map_zoom,
+    }
+
+    gmap.setOptions(map_options);
+  }

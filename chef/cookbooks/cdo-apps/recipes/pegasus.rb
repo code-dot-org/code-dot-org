@@ -16,6 +16,16 @@ template "/etc/init.d/pegasus" do
   notifies :run, 'execute[bundle-install-pegasus]', :immediately
 end
 
+template "/etc/logrotate.d/pegasus" do
+  source 'logrotate.erb'
+  user 'root'
+  group 'root'
+  mode '0644'
+  variables ({
+    log_dir:"/home/#{node[:current_user]}/#{node.chef_environment}/pegasus/log",
+  })
+end
+
 execute "bundle-install-pegasus" do
   command "sudo bundle install"
   cwd "/home/#{node[:current_user]}/#{node.chef_environment}/pegasus"
