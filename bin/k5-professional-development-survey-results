@@ -11,6 +11,21 @@ def fetch_workshop_info(workshop_id)
   JSON.parse(workshop[:data]).merge(JSON.parse(workshop[:processed_data]))    
 end
 
+def satisfaction_s_to_i(value)
+  case value
+  when 'extremely satisfied (would recommend to others)'
+    return 5
+  when 'moderately satisfied'
+    return 4
+  when 'neither satisfied nor dissatisfied'
+    return 3
+  when 'moderately dissatisfied'
+    return 2
+  when 'dissatisfied (would not recommend to others)'
+    return 1
+  end
+end
+
 def main()
   keys = nil
   
@@ -21,6 +36,9 @@ def main()
     data['workshop_stopped_dt'] = workshop['stopped_dt']
     data['workshop_facilitator_email'] = workshop['email_s']
     data['workshop_facilitator_name'] = workshop['name_s']
+
+    data['satisfaction_s'] = satisfaction_s_to_i(data['satisfaction_s'])
+    data['teacher_years_s'] = "'#{data['teacher_years_s']}"
     
     unless keys
       keys = data.keys
