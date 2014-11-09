@@ -4,7 +4,7 @@
   computer_science: Informatica
   computer_science_edweek: Settimana di Educazione all'Informatica
   csedweek_dates: 9-15 dicembre 2013
-  n_have_learned_an_hoc: "<h1>#</h1><h3>hanno completato la</h3><h2>Ora del Codice</h2>"
+  n_have_learned_an_hoc: <h1>#</h1><h3>hanno completato la</h3><h2>Ora del Codice</h2>
   anybody_can_learn: Chiunque può imparare.
   learn_now: Impara Adesso
   petition_message: Ogni studente di ogni Scuola dovrebbe avere l'opportunità di imparare
@@ -47,7 +47,7 @@
     Impara le istruzioni di ripetizione, le istruzioni di scelta e gli algoritmi fondamentali.
   all_ages: Tutte le età
   beginner: Principiante
-  n_participants: "# partecipanti"
+  n_participants: '# partecipanti'
   go: Inizia
   thank_you_: Grazie!
   congratulations: Congratulazioni!
@@ -84,7 +84,7 @@
   beyond_an_hour: Dopo l'Ora del Codice >
   get_started: Inizia
   i_agree: Firmo
-  participant_select: "- Seleziona -"
+  participant_select: '- Seleziona -'
   participant_student: studente
   participant_parent: Genitore
   participant_educator: Insegnante
@@ -114,11 +114,11 @@
   help_recruit_coders: Aiutaci a reclutare più scrittori di codice per la tua squadra!
   help_recruit: Aiutaci a reclutare più scrittori di codice!
   lines_of_code: OLTRE <b># LINEE DI CODICE</b> SCRITTO IN DATA.
-  lines_of_code_alt: "<b>#</b> LINEE DI CODICE SCRITTE DAGLI STUDENTI"
+  lines_of_code_alt: <b>#</b> LINEE DI CODICE SCRITTE DAGLI STUDENTI
   who_has_done_hoc: 'Chi ha realizzato l''Ora del Codice #HourOfCode? @codeorg'
   hoc_leaderboards: Le classifiche dell'Ora del Codice
-  students_and_lines: "% {studenti} studenti hanno fatto l'ora di codice e scritto
-    % {linee} linee di codice."
+  students_and_lines: '% {studenti} studenti hanno fatto l''ora di codice e scritto
+    % {linee} linee di codice.'
   start_hoc: Inizia l'Ora del Codice adesso
   contact_form_topic_press: Stampa/media (appuntameno per un'intervista o per parlare)
   studiobar_title: Esplora l'<a href='http://studio.code.org'>Officina del Codice</a>
