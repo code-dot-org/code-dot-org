@@ -4,7 +4,7 @@
   computer_science: Tölvunarfræði
   computer_science_edweek: Vika tölvunarfræði
   csedweek_dates: 9.-15. desember 2013
-  n_have_learned_an_hoc: "<h1>#</h1><h3>hafa prófað</h3><h2>Kóðun í klukkstund</h2>"
+  n_have_learned_an_hoc: <h1>#</h1><h3>hafa prófað</h3><h2>Kóðun í klukkstund</h2>
   anybody_can_learn: Allir geta lært.
   learn_now: Læra núna
   petition_message: Allir nemendur í öllum skólum ættu að fá tækifæri til að læra
@@ -46,8 +46,8 @@
     ef-þá setningar og grunnalgrím.
   all_ages: Allur aldur
   beginner: Byrjandi
-  n_participants: "# þátttakendur"
-  go: "Áfram"
+  n_participants: '# þátttakendur'
+  go: Áfram
   thank_you_: Takk fyrir!
   congratulations: Til hamingju!
   congratulations_on_completing_hoc: Til hamingju með að klára Kóðun í klukkustund.
@@ -83,14 +83,14 @@
   share_on_twitter: Deila á Twitter
   beyond_an_hour: Eftir Kóðun í klukkustund
   get_started: Byrja
-  i_agree: "Ég samþykki"
-  participant_select: "- Velja -"
+  i_agree: Ég samþykki
+  participant_select: '- Velja -'
   participant_student: nemandi
   participant_parent: Foreldri
   participant_educator: Kennari
   participant_engineer: Tölvunarfræðingur
   participant_other: Ekkert af ofantöldu
-  i_am_a: "Ég er"
+  i_am_a: Ég er
   never_spam: Við munum aldrei senda þér ruslpóst
   enter_country: Skrifaðu land ef það er utan Bandaríkjanna
   used_infrequent_updates: Aðeins notað fyrir fátíðar uppfærslur
@@ -98,13 +98,13 @@
   petition_thankyou: Takk fyrir að skrifa undir beiðnina
   carousel_heading_international: Kennsluefni á þínu tungumáli
   continue_learning_header: Halda áfram að læra eftir Kóðun í klukkustund
-  continue_learning_body: "Það eru margir valkostir. Þú getur lært á vefnum, í skólanum
-    eða á sumarnámskeiðum."
+  continue_learning_body: Það eru margir valkostir. Þú getur lært á vefnum, í skólanum
+    eða á sumarnámskeiðum.
   learn_next_level: Halda áfram í næsta áfanga
   learn_online: Prófa önnur námskeið á netinu
   learn_classes: Finna námskeið nálægt þér
-  hoc_is_here: "#HourOfCode er hér - kíktu á það! @codeorg"
-  just_did_hoc: "Ég var að klára #HourOfCode - kíktu á það! @codeorg"
+  hoc_is_here: '#HourOfCode er hér - kíktu á það! @codeorg'
+  just_did_hoc: 'Ég var að klára #HourOfCode - kíktu á það! @codeorg'
   learn_hoc: Lærðu Kóðun í klukkustund
   beyond_hoc: Eftir Kóðun í klukkustund
   what_gender: Ertu stelpa eða strákur?
@@ -113,34 +113,34 @@
   help_recruit_coders: Hjálpaðu okkur að fá fleiri kóðara í liðið þitt!
   help_recruit: Hjálpaðu okkur að fá fleiri kóðara!
   lines_of_code: MEIRA EN <b># LÍNUR AF KÓÐA</b> SKRIFAÐAR TIL ÞESSA.
-  lines_of_code_alt: "<b>#</b> LÍNUR AF KÓÐA SKRIFAÐAR AF NEMENDUM"
+  lines_of_code_alt: <b>#</b> LÍNUR AF KÓÐA SKRIFAÐAR AF NEMENDUM
   who_has_done_hoc: 'Hver hefur lokið #HourOfCode? @codeorg'
   hoc_leaderboards: Topplistar fyrir Kóðun í klukkustund
-  students_and_lines: "%{students} nemendur hafa lokið Kóðun í klukkustund og skrifað
-    %{lines} línur af kóða."
+  students_and_lines: '%{students} nemendur hafa lokið Kóðun í klukkustund og skrifað
+    %{lines} línur af kóða.'
   start_hoc: Byrjaðu núna á Kóðun í klukkustund
   contact_form_topic_press: Fjölmiðlar (viðtal eða erindi)
   studiobar_title: Prófa <a href='http://studio.code.org'>Kóðastúdíóið</a>
   studiobar_elementary_title: Grunnskólanámskeið
-  studiobar_elementary_body: "Þrjú ný námskeið okkar fyrir 11 - 12 ára (K&#8209;5)"
+  studiobar_elementary_body: Þrjú ný námskeið okkar fyrir 11 - 12 ára (K&#8209;5)
   studiobar_hoc_title: Kóðun í klukkustund
   studiobar_hoc_body: Lærðu að kóða með Angry Brids
   studiobar_flappy_title: Flappy kóði
   studiobar_flappy_body: Búa til og deila þínum eiginn Flappy leik
   studiobar_teacher_title: Gert fyrir kennara
   studiobar_teacher_body: Kynna Kóðastúdíó í skólastofunni
-  contact_form_topic_student: "Ég er nemandi"
-  contact_form_topic_parent: "Ég er foreldri"
-  contact_form_topic_teacher: "Ég er kennari/fræðari"
-  contact_form_topic_outside_us: "Ég er utan Bandaríkjanna"
+  contact_form_topic_student: Ég er nemandi
+  contact_form_topic_parent: Ég er foreldri
+  contact_form_topic_teacher: Ég er kennari/fræðari
+  contact_form_topic_outside_us: Ég er utan Bandaríkjanna
   contact_form_topic_contribution: Gjafaframlag
-  contact_form_topic_partner: "Ég vil gerast samstarfsaðili"
+  contact_form_topic_partner: Ég vil gerast samstarfsaðili
   contact_form_topic_other: Annað
   contact_form_label_topic: Efni
   contact_form_label_email: Netfang þitt
   contact_form_label_message: Skilaboð
   contact_form_label_submit: Senda skilaboð
-  class_submission_in_school: "Í skólanum"
+  class_submission_in_school: Í skólanum
   class_submission_in_school_daily_programming_course: Daglegt forritunarnámskeið
   class_submission_in_school_ap_computer_science: AP tölvunarfræði
   class_submission_in_school_full_university_cs_curriculum: Full háskólanámskrá í
@@ -150,7 +150,7 @@
     öðrum fögum (stærðfræði, vísindum, o.fl.)
   class_submission_in_school_summer_school_cs_program: Sumarskóli í tölvunarfræði
   class_submission_in_school_exploring_computer_science: Tölvunarfræði könnuð
-  class_submission_in_school_other: "Í skóla, annað"
+  class_submission_in_school_other: Í skóla, annað
   class_submission_out_of_school: Utan skóla
   class_submission_out_of_school_summer_camp: Sumarnámskeið
   class_submission_out_of_school_afterschool_program: Dægradvöl eftir skóla
@@ -158,7 +158,7 @@
     vika)
   class_submission_out_of_school_multi-week_workshop: Vinnustofa (lengur en 1 vika)
   class_submission_out_of_school_other: Utan skóla, annað
-  class_submission_online: "Á netinu"
+  class_submission_online: Á netinu
   class_submission_online_programming_class: Forritunarkennsla á netinu
   class_submission_online_teacher_resource: Auðlind kennara á netinu
   class_submission_online_other: Annað á netinu
@@ -168,19 +168,19 @@
   class_submission_level_high_school: Framhaldsskólastig
   class_submission_level_college: Háskólastig
   class_submission_level_vocational: Starfsmenntun
-  class_submission_languages_other: "Önnur tungumál"
-  volunteer_engineer_submission_commitment_uncertain: "Óvíst"
+  class_submission_languages_other: Önnur tungumál
+  volunteer_engineer_submission_commitment_uncertain: Óvíst
   volunteer_engineer_submission_commitment_now_and_then: Af og til
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 klst. á viku
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 klst. á viku
   volunteer_engineer_submission_commitment_five_hrs_per_week: 5 klst. á viku
   volunteer_engineer_submission_commitment_more: Meira
-  volunteer_engineer_submission_location_flexibility_onsite: "Á staðnum í skóla"
+  volunteer_engineer_submission_location_flexibility_onsite: Á staðnum í skóla
   volunteer_engineer_submission_location_flexibility_remote: Leiðsögn úr fjarlægð
     (kennarar eða nemendur)
   volunteer_engineer_submission_location_flexibility_curriculum: Vil leggja af mörkum
     til opinna verkefna í námsefnisgerð
-  volunteer_engineer_submission_experience_unspecified: "Ótiltekið"
+  volunteer_engineer_submission_experience_unspecified: Ótiltekið
   volunteer_engineer_submission_experience_university_student_or_researcher: Sem stendur
     við nám eða rannsóknir í háskóla
   volunteer_engineer_submission_experience_software_professional: Hugbúnaðarsérfræðingur
@@ -207,11 +207,11 @@
   dashboard_landing_video_player: Prófaðu nýja myndbandaspilarann okkar í skólanum
     þínum
   dashboard_landing_progress_title: Framvinda aðalhóps
-  dashboard_landing_progress_biggest: "Þetta er framvinda stærsta hópsins þíns."
+  dashboard_landing_progress_biggest: Þetta er framvinda stærsta hópsins þíns.
   dashboard_landing_view_progress: Skoða framvindu fyrir %{biggest_section}
   dashboard_landing_available_title: Tiltæk námskeið
-  dashboard_landing_available_courses: "Þetta eru námskeiðin sem eru nú tiltæk fyrir
-    þig og nemendur þína."
+  dashboard_landing_available_courses: Þetta eru námskeiðin sem eru nú tiltæk fyrir
+    þig og nemendur þína.
   dashboard_landing_loading: Hleð...
   dashboard_action_edit: Breyta
   dashboard_action_save: Vista
@@ -250,16 +250,16 @@
     að fá sína mynd. Þetta hentar fyrir yngri nemendur sem kunna ekki á lyklaborð.
   dashboard_sections_secret_none: Ef þú vilt láta nemendur sjá um sinn eigin aðgang,
     þar á meðal að velja sér leyniorð, skaltu velja <b>ekkert</b> sem tegund leyndarmáls.
-  dashboard_sections_print_secrets: "Þú getur síðan prentað spjöld með aðgangsupplýsingum
-    til að úthluta til einstakra nemenda."
+  dashboard_sections_print_secrets: Þú getur síðan prentað spjöld með aðgangsupplýsingum
+    til að úthluta til einstakra nemenda.
   dashboard_sections_switch_section: 'Skipta um hóp:'
   dashboard_students_add_student: Bæta við nemanda
   dashboard_students_add_students: Bæta við mörgum nemendum
   dashboard_students_add_multiple: 'Ritaðu eða límdu nöfn nemenda þinna, eitt í hverja
     línu:'
-  dashboard_students_new_section: "Þú hefur búið til nýjan hóp! Bættu nemendum í hann
+  dashboard_students_new_section: Þú hefur búið til nýjan hóp! Bættu nemendum í hann
     með hnöppunum <b>Bæta við nemanda</b> eða <b>Bæta við mörgum nemendum</b> hér
-    fyrir ofan."
+    fyrir ofan.
   dashboard_students_placeholder_name: Nafn nemanda
   dashboard_students_name: Nafn
   dashboard_students_age: Aldur
@@ -270,7 +270,7 @@
   dashboard_students_password: lykilorð
   dashboard_students_username: 'Notandanafn: %{student_username}'
   dashboard_students_email: 'Netfang: %{student_email}'
-  dashboard_students_completed_levels: "Áföngum lokið"
+  dashboard_students_completed_levels: Áföngum lokið
   dashboard_students_total_lines: Línur af kóða
   dashboard_students_show_secret: Sýna leyndarmál
   dashboard_students_auto_generated: Búið til sjálfvirkt
@@ -281,13 +281,13 @@
   dashboard_students_print_info: Prenta út spjöld með innskráningarupplýsingum nemenda
     þinna.
   dashboard_students_secret_picture: Leynimynd
-  dashboard_students_reset_picture: "Þú getur endurstillt leynimynd nemanda hvenær
+  dashboard_students_reset_picture: Þú getur endurstillt leynimynd nemanda hvenær
     sem er með því að velja <b>Sýna leyndarmál</b> og síðan <b>Endurstilla leyndarmál</b>.
-    Ný leynimynd verður búin til sem nemandi notar til að skrá sig inn."
+    Ný leynimynd verður búin til sem nemandi notar til að skrá sig inn.
   dashboard_students_secret_word: Leyniorð
-  dashboard_students_reset_word: "Þú getur endurstillt leyniorð nemanda hvenær sem
+  dashboard_students_reset_word: 'Þú getur endurstillt leyniorð nemanda hvenær sem
     er með því að velja <b>Sýna leyndarmál</b> og síðan <b>Endurstilla leyndarmál</b>.
-    Nýtt par leyniorða verður búið til sem nemandi notar til að skrá sig inn. "
+    Nýtt par leyniorða verður búið til sem nemandi notar til að skrá sig inn. '
   dashboard_students_join_link: Segðu nemendum þínum að búa til eigin aðgang og ganga
     svo í hópinn á
   dashboard_students_no_email: Ef nemendur hafa ekki netföng eða ef þú vilt búa til
@@ -310,7 +310,7 @@
   dashboard_glossary: Orðasafn
   dashboard_classroom_strategies: Aðferðafræði fyrir kennara
   dashboard_debugging: 'Villuleit:'
-  dashboard_puzzle_solving: "Þrautalausnir:"
+  dashboard_puzzle_solving: 'Þrautalausnir:'
   dashboard_student_worksheet: vinnublað nemanda
   dashboard_teacher_worksheet: vinnublað kennara
   dashboard_grade_k: K
@@ -319,8 +319,8 @@
   dashboard_login_picture: Mynd
   dashboard_login_none: Netfang
   dashboard_new_password: nýtt leyniorð
-  stats_hoc_2013_heading: "Ótrúlegar tölur frá síðasta ári um Kóðun í klukkustund.
-    Á aðeins einni viku:"
+  stats_hoc_2013_heading: 'Ótrúlegar tölur frá síðasta ári um Kóðun í klukkustund.
+    Á aðeins einni viku:'
   stats_hoc_2013_image_alt: Um Kóðun í klukkustund árið 2013
   dashboard_teacher: Kennari
   dashboard_student: nemandi
@@ -334,8 +334,8 @@
     nemenda"
   dashboard_sections_sign_in_main: http://code.org og smelltu á "Skrá inn"
   dashboard_sections_password_account_creation: Textaaðgangsorð skráð af nemanda
-  dashboard_sections_login_type_explanation: "Þessi tafla á að hjálpa þér að velja
-    hvernig aðgang þú vilt nota fyrir hóp: <b>mynd, orð eða netfang</b>."
+  dashboard_sections_login_type_explanation: 'Þessi tafla á að hjálpa þér að velja
+    hvernig aðgang þú vilt nota fyrir hóp: <b>mynd, orð eða netfang</b>.'
   codeorg_name: Skrifaðu fyrsta forritið þitt
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Kynning á JavaScript

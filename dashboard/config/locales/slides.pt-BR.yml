@@ -35,9 +35,9 @@
           vai usá-los para criar o seu programa.
       9:
         image: notes/hoc1_9.jpg
-        text: "À direita você tem sua área de trabalho, onde você vai arrastar os
-          blocos da caixa de ferramentas para criar o seu programa. Para excluir um
-          bloco, arraste-o para a lixeira no canto."
+        text: À direita você tem sua área de trabalho, onde você vai arrastar os blocos
+          da caixa de ferramentas para criar o seu programa. Para excluir um bloco,
+          arraste-o para a lixeira no canto.
       10:
         image: notes/hoc1_10.jpg
         text: Cada bloco é uma instrução. Se você arrastar um bloco "avance" para

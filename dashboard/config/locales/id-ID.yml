@@ -138,12 +138,12 @@
       %{name}
   follower:
     invite_sent: Undangan telah dikirim
-    added_teacher: "%{name} telah dicantumkan sebagai nama guru Anda"
+    added_teacher: '%{name} telah dicantumkan sebagai nama guru Anda'
     registered: Anda sudah terdaftar pada %{section_name}.
     error:
       signed_in: Silahkan logout sebelum melanjutkan
       username_not_found: Nama akun %{username} tidak ditemukan
-      username_in_use: "%{username} sudah diambil, silakan memilih nama lain"
+      username_in_use: '%{username} sudah diambil, silakan memilih nama lain'
       no_teacher: 'Tidak di temukan siapapun dengan akun ''%{teacher_email_or_code}''.
         Mintalah mereka untuk registrasi di sini dan kemudian cobalah lagi untuk tambahkan
         mereka '
@@ -190,7 +190,7 @@
         umum US.
       msg_visit_website: Kunjungi website
     providers:
-      apple_itunes: "$10 iTunes hadiah voucher"
+      apple_itunes: $10 iTunes hadiah voucher
       donors_choose: kredit DonorsChoose.org $750
       donors_choose_bonus: kredit DonorsChoose.org $250
       dropbox: 10GB ruang Dropbox
@@ -199,7 +199,7 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: "$10 Skype credit"
+      skype: $10 Skype credit
     msg:
       choose: 'Pilih hadiah:'
       choose_teacher: 'Click on the logo below to claim your prize:'
@@ -243,7 +243,7 @@
             kredit. <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a>
             kredit hanya dapat berlaku untuk guru-guru sekolah umum di Amerika Serikat.
   crud:
-    new_model: "%{model} baru"
+    new_model: '%{model} baru'
     show: Tampilkan
     edit: Edit
     edit_model: Edit %{model}
@@ -251,9 +251,9 @@
     destroy: Hancurkan
     back: Kembali
     confirm: Anda yakin?
-    created: "%{model} berhasil dibuat."
-    updated: "%{model} berhasil dibuat."
-    destroyed: "% {model} telah berhasil dihapus."
+    created: '%{model} berhasil dibuat.'
+    updated: '%{model} berhasil dibuat.'
+    destroyed: '% {model} telah berhasil dihapus.'
     access_denied: Anda tidak memiliki akses untuk %{model} ini.
   nav:
     header:
@@ -280,13 +280,13 @@
       puzzle_map: Tahap
       prizes: Kumpulkan semua %{total_trophies} piala dan menangkan hadiah!
       prize_earned: Semua Piala %{total_trophies} telah terkumpul. Memenangkan hadiah!
-      prize_us_only: "(Hanya untuk siswa dari Amerika Serikat)"
+      prize_us_only: (Hanya untuk siswa dari Amerika Serikat)
       prizes_link: Info lebih lanjut
   teacher:
     title:
       one: 'Guru anda:'
       other: 'Guru Anda:'
-    remove: "(hapus guru)"
+    remove: (hapus guru)
     confirm:
       remove: Apakah anda yakin ingin menghapus guru ini?
     tools: Peralatan Guru
@@ -342,18 +342,18 @@
     rollup: 'Dashboard Kemajuan '
     activity: Aktivitas kelas
     user_not_found: Guru atau murid tidak dapat ditemukan
-    cant_remove_student_no_email: "% {student_name} tidak dapat dihapus sebagai siswa
-      Anda karena %{student_name} belum mendaftar e-mail"
-    cant_remove_teacher_no_email: "%{teacher_name} tidak dapat dihapus sebagai guru
-      Anda karena Anda belum mendaftarkan e-mail"
-    student_teacher_disassociated: "%{teacher_name} telah dihapus sebagai guru dari
-      %{student_name}"
+    cant_remove_student_no_email: '% {student_name} tidak dapat dihapus sebagai siswa
+      Anda karena %{student_name} belum mendaftar e-mail'
+    cant_remove_teacher_no_email: '%{teacher_name} tidak dapat dihapus sebagai guru
+      Anda karena Anda belum mendaftarkan e-mail'
+    student_teacher_disassociated: '%{teacher_name} telah dihapus sebagai guru dari
+      %{student_name}'
   user:
     email_confirm_needed: 'Alamat email belum dikonfirmasi:'
     email_resend_confirm: Kirim ulang petunjuk konfirmasi
-    new_password_hint: "(Kosongkan jika Anda tidak ingin mengubahnya)"
-    current_password_hint: "(kita perlu password Anda saat ini untuk mengkonfirmasi
-      perubahan Anda)"
+    new_password_hint: (Kosongkan jika Anda tidak ingin mengubahnya)
+    current_password_hint: (kita perlu password Anda saat ini untuk mengkonfirmasi
+      perubahan Anda)
     cancel:
       title: Batalkan akun saya
       hint: Tidak Puas?
@@ -406,9 +406,9 @@
     test_videos_help: Coba pemutar video baru kami di sekolah anda
     try_beta_courses: Baru! Cobalah kelas percobaan kami untuk siswa K-5
     use_as_teacher: Gunakan situs ini sebagai seorang guru
-    heading_elementary: "<h2>20 jam kursus untuk</h2><h1>Pelajar Sekolah Dasar</h1>"
-    heading_apps: "<h2>Menyenagkan bagi</h2><h1>Semua orang</h1>"
-    heading_legacy: "<h2>Kursus umum kami untuk</h2><h1>Semua Umur</h1>"
+    heading_elementary: <h2>20 jam kursus untuk</h2><h1>Pelajar Sekolah Dasar</h1>
+    heading_apps: <h2>Menyenagkan bagi</h2><h1>Semua orang</h1>
+    heading_legacy: <h2>Kursus umum kami untuk</h2><h1>Semua Umur</h1>
     gallery:
       your_turtle: Karya Saya
       your_studio: App Saya
@@ -513,7 +513,7 @@
     want_to_make_your_own: Mau membuat sendiri ?
     more: lebih &rarr;
     caption_by_name_age: oleh %{name}, usia %{age}
-    caption_time_ago: "%{time_ago} yang lalu"
+    caption_time_ago: '%{time_ago} yang lalu'
   landing:
     prerelease: Kursus ini dalam <span class='betatext'>beta</span>.  Ini bukan berarti
       sebuah kursus final dan ditujukan untuk revisi saat usulan diterima dan pengembangan
@@ -521,7 +521,7 @@
     feedback: Berikan usulan
     report_bug: Laporkan kesalahan
     support: Dapatkan bantuan
-    support_url: "//support.code.org"
+    support_url: //support.code.org
   multi:
     wrong_title: Jawaban Salah
     wrong_body: Jawaban yang anda masukkan salah. Silakan coba lagi!

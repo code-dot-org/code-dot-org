@@ -1,76 +1,76 @@
-ca:
-  site_name: HORA de CODI
-  language: Català
+"ca":
+  site_name: "HORA de CODI"
+  language: "Català"
   front_title: "Uneix-te a l'esdeveniment d'aprenentatge més gran de la història, 8-14 desembre 2014"
-  coming_soon: Properament
+  coming_soon: "Properament"
   front_header_banner: "Uneix-te a l'esdeveniment d'aprenentatge més gran de la història, 8-14 desembre 2014"
   front_intro_default: "L'Hora de Codi és un moviment global que arriba a desenes de milions d'estudiants en 180+ països. Qualsevol a qualsevol lloc pot organitzar un esdeveniment de l'Hora de Codi. Tutorials d'una hora estan disponibles en més de 30 llengües. No necessitas cap experiència. <strong>Edat 4 a 104.</strong>"
   front_intro_default_uk: "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone can organize an Hour of Code event. Over 3M students did the first Hour of Code in the UK. Let's double that in December! <strong>No experience needed. Ages 4 to 104.</strong>"
-  front_watch_video: Mira el nou vídeo
-  header_menu_resources: Recursos
-  header_menu_faq: PMFs
-  header_menu_prizes: Premis
-  header_menu_uk_code_org: uk.code.org
+  front_watch_video: "Mira el nou vídeo"
+  header_menu_resources: "Recursos"
+  header_menu_faq: "PMFs"
+  header_menu_prizes: "Premis"
+  header_menu_uk_code_org: "uk.code.org"
   company_4-H: 4-H Youth Development
-  company_bgca: Boys and Girls Club of America
-  company_cgcs: Council of the Great City Schools
-  company_gsusa: Girl Scouts of America
-  company_bsusa: Boy Scouts of America
-  company_napcs: National Alliance of Public Charter Schools
-  company_tfa: Teachers for America
-  company_tntp: TNTP
-  company_asa: Afterschool Alliance
-  company_ngcp: National Girls Collaborative Project
-  prizes_all: Premis per a cada organitzador
+  company_bgca: "Boys and Girls Club of America"
+  company_cgcs: "Council of the Great City Schools"
+  company_gsusa: "Girl Scouts of America"
+  company_bsusa: "Boy Scouts of America"
+  company_napcs: "National Alliance of Public Charter Schools"
+  company_tfa: "Teachers for America"
+  company_tntp: "TNTP"
+  company_asa: "Afterschool Alliance"
+  company_ngcp: "National Girls Collaborative Project"
+  prizes_all: "Premis per a cada organitzador"
   prizes_every_organizer: "Cada organitzador d'Hores de Codi rebrà crèdit a Dropbox o Skype com agraïment"
   prizes_technology: "Una escola pública a cada estat d'EUA (& Washington DC) guanyarà tecnologia per valor de 10,000 dòlars"
-  prizes_tech_chats: 96 classrooms will win video chats with very special guests
-  prizes_details: Detalls
+  prizes_tech_chats: "96 classrooms will win video chats with very special guests"
+  prizes_details: "Detalls"
   n_have_learned_an_hoc: '<h1>#</h1><h3>has provat una</h3><h2>Hora de Codi</h2>'
-  anybody_can_learn: Qualsevol pot aprendre.
+  anybody_can_learn: "Qualsevol pot aprendre."
   register_now: "Registra't ara"
-  front_join_us_heading: Una Hora de Codi per a cada alumne.
+  front_join_us_heading: "Una Hora de Codi per a cada alumne."
   front_join_us_description: "La informàtica és la base per a tots els estudiants. Ajuda'ns a arribar als 100 milions."
   front_join_us_button: "uneix-te'ns"
   front_what_is_hoc: "Què és l'Hora de Codi?"
   front_join_us_header: "A qualsevol moment del  8 al 14 de desembre, la setmana de les Ciències de la Computació, acull l'esdeveniment de l'Hora de Codi per mostrar que qualsevol pot aprendre els conceptes bàsics i divertir-se fent-ho!"
   front_join_us_header_uk: "A qualsevol moment del  8 al 14 de desembre acull l'esdeveniment de l'Hora de Codi per mostrar que qualsevol pot aprendre els conceptes bàsics, i divertir-se fent-ho!"
-  front_join_us_teacher: Ets un mestre?
-  front_join_us_inspire: Inspira els teus estudiants amb
-  front_join_us_inspire_link: una Hora de Codi a la teva aula.
-  front_join_us_parent: Ets un pare?
-  front_join_us_ask_link: Demana a la teva escola local
-  front_join_us_ask: que aculli una Hora de Codi.
+  front_join_us_teacher: "Ets un mestre?"
+  front_join_us_inspire: "Inspira els teus estudiants amb"
+  front_join_us_inspire_link: "una Hora de Codi a la teva aula."
+  front_join_us_parent: "Ets un pare?"
+  front_join_us_ask_link: "Demana a la teva escola local"
+  front_join_us_ask: "que aculli una Hora de Codi."
   front_join_us_computer_science: "Simplement t'encanta la informàtica?"
-  front_join_us_spread: Corre la veu a la teva comunitat.
+  front_join_us_spread: "Corre la veu a la teva comunitat."
   front_join_us_organize: "O organitza un esdeveniment d'Hora de Codi tu mateix."
-  front_join_us_how_to_run: Aquí està com fer una Hora de Codi
+  front_join_us_how_to_run: "Aquí està com fer una Hora de Codi"
   front_join_us_help_promote: "Ajuda a promoure l'Hora de Codi"
-  front_join_us_students: Estudiants
-  front_join_us_teachers: Professors
-  front_join_us_everyone: Tothom
-  front_join_us_try: Prova-ho
-  front_join_us_host: Acolleix-ho
-  front_join_us_support: Donar-li suport
+  front_join_us_students: "Estudiants"
+  front_join_us_teachers: "Professors"
+  front_join_us_everyone: "Tothom"
+  front_join_us_try: "Prova-ho"
+  front_join_us_host: "Acolleix-ho"
+  front_join_us_support: "Donar-li suport"
   signup_header: "Fes-nos saber si ets l'amfitrió d'una Hora de Codi"
-  signup_name_label: El teu nom
-  signup_email_label: El teu correu
+  signup_name_label: "El teu nom"
+  signup_email_label: "El teu correu"
   signup_organization_name_label: "Nom de l'escola o l'organització"
   signup_event_type_label: "Tipus d'esdeveniment"
-  signup_event_entire_school_label: Tothom de la meva escola està participant
+  signup_event_entire_school_label: "Tothom de la meva escola està participant"
   signup_event_location_label: "Ubicació de l'esdeveniment (opcional)"
-  signup_special_event_flag_label: Destacar el meu esdeveniment especial
+  signup_special_event_flag_label: "Destacar el meu esdeveniment especial"
   signup_special_event_details_label: "Detalls de l'esdeveniment especial"
   signup_send_posters_flag_label: 'Enviar <a href= "/resources#posters"> pòsters</a> a la meva escola o organització'
   signup_send_posters_address_label: "Adreça de l'escola o l'organització"
   signup_whole_school_flag_label: "Aquest esdeveniment és per a tota l'escola"
-  signup_name_placeholder: El teu nom
-  signup_email_placeholder: Tu@exemple.com
-  signup_organization_name_placeholder: Per exemple, Universitat Autònoma
+  signup_name_placeholder: "El teu nom"
+  signup_email_placeholder: "Tu@exemple.com"
+  signup_organization_name_placeholder: "Per exemple, Universitat Autònoma"
   signup_event_location_placeholder: "Codi postal i país O adreça completa. \r (l'utilitzarem per situar una xinxeta al nostre mapa)"
   signup_special_event_details_placeholder: "Descriu el que fa d'aquest un esdeveniment especial"
-  signup_send_posters_address_placeholder: Aquesta adreça no serà compartida en el nostre mapa
-  signup_event_type_in_school: En una escola
+  signup_send_posters_address_placeholder: "Aquesta adreça no serà compartida en el nostre mapa"
+  signup_event_type_in_school: "En una escola"
   signup_event_type_out_of_school: "Fora de l'escola"
   signup_submit_label: "Registra't"
   signup_submit_error_message: "S'ha produït un error. Si us plau comprova que tots els camps obligatoris han estat omplert correctament."
@@ -83,47 +83,47 @@ ca:
   meta_tag_twitter_title: "S'acosta l'Hora de Codi"
   meta_tag_twitter_description: "L'Hora de Codi és un moviment mundial que arriba a desenes de milions d'estudiants en més de 180 països i més de 30 llengües. Edat 4 a 104."
   twitter_default_text: 'Jo estic participant en aquest any de #HourOfCode, i tu? @codeorg'
-  hardware_prizes_form_name_label: El teu nom
-  hardware_prizes_form_name_placeholder: El teu nom
-  hardware_prizes_form_email_label: El teu correu
-  hardware_prizes_form_email_placeholder: El teu correu
+  hardware_prizes_form_name_label: "El teu nom"
+  hardware_prizes_form_name_placeholder: "El teu nom"
+  hardware_prizes_form_email_label: "El teu correu"
+  hardware_prizes_form_email_placeholder: "El teu correu"
   hardware_prizes_form_school_name_label: "Nom de l'escola"
   hardware_prizes_form_school_name_placeholder: "Nom de l'escola"
   hardware_prizes_form_school_address_label: "Adreça de l'escola"
   hardware_prizes_form_school_address_placeholder: "Adreça de l'escola"
   hardware_prizes_form_school_type_label: "Tipus d'escola"
-  hardware_prizes_form_school_type_option_elementary: Primària
-  hardware_prizes_form_school_type_option_middle_school: ESO
-  hardware_prizes_form_school_type_option_high_school: Batxillerat
-  hardware_prizes_form_qualifying_school_label: És una escola pública K-12
+  hardware_prizes_form_school_type_option_elementary: "Primària"
+  hardware_prizes_form_school_type_option_middle_school: "ESO"
+  hardware_prizes_form_school_type_option_high_school: "Batxillerat"
+  hardware_prizes_form_qualifying_school_label: "És una escola pública K-12"
   hardware_prizes_form_number_students_label: "Nombre d'alumnes que participen"
   hardware_prizes_form_number_students_placeholder: "Nombre d'alumnes"
   hardware_prizes_form_plan_file_label: "Puja el teu pla logístic d'Hora de Codi"
   hardware_prizes_form_plan_file_description: "Envia un horari simple de com vas a organitzar cada estudiant per fer l'Hora de Codi a la teva escola. Veure un plan de mostra: #PDF # | #Word #"
-  hardware_prizes_form_submit_label: Envia
-  hoc_faq_title: Preguntes freqüents
+  hardware_prizes_form_submit_label: "Envia"
+  hoc_faq_title: "Preguntes freqüents"
   hoc_faq_what_is_hoc_q: "Què és l'Hora de Codi?"
   hoc_faq_what_is_hoc_a: "L'Hora de Codi és una introducció d'una hora a la informàtica, dissenyada per desmitificar el codi i demostrar que qualsevol pot aprendre el bàsic. <a href='http://code.org/learn'>Mirat els tutorials</a>, i busca els nous que arribaran per a l'Hora de Codi 2014."
   hoc_faq_last_year: "Prova els tutorials de l'any passat"
   hoc_faq_when_is_hoc_q: "Quan és l'Hora de Codi?"
   hoc_faq_when_is_hoc_a: "Qualsevol pot acollir una Hora de Codi en qualsevol moment, però l'objectiu bàsic de la campanya és per desenes de milions d'alumnes provin una Hora de Codi el període del 8-14 de desembre de 2014, en la celebració de la <a href='http://csedweek.org'> Setmana de les Ciències informàtiques</a>. És una <i>hora</i> específica? No. Podeu fer l'Hora de Codi en qualsevol moment durant aquesta setmana. (I si no ho feu durant aquella setmana, feu-ho la setmana d'abans o la següent)."
-  hoc_faq_why_cs_q: Per què informàtica?
+  hoc_faq_why_cs_q: "Per què informàtica?"
   hoc_faq_why_cs_a: "<i>Cada</i> estudiant ha de tenir l'oportunitat d'aprendre informàtica. Ajuda a generar habilitats, lògica i creativitat en la resolució de problemes. Començant aviat, els alumnes tindran els fonaments per tenir èxit en qualsevol carrera del segle XXI. Veure més informes a <a href='http://code.org'> Code.org</a>."
   hoc_faq_how_participate_q: "Com participo a l'Hora de Codi?"
   hoc_faq_how_participate_a: "Inscriu-te per acollir un esdeveniment d'Hora de Codi <a href='http://hourofcode.org'> aquí</a> i <a href='/resources/how-to'> començar a planificar-ho</a>. Pots organitzar un esdeveniment d'Hora de Codi a la teva escola o a la teva comunitat &mdash; com una extraescolar, sense ànim de lucre o a la feina. O, només prova-ho tu mateix quan arribi el 8 de desembre."
   hoc_faq_behind_hoc_q: "Qui hi ha darrere l'Hora de Codi?"
   hoc_faq_behind_hoc_a: "L'Hora de Codi esta organitzat per <a href='http://code.org'> Code.org</a>, una organització pública 501c3 sense ànim de lucre dedicada a promoure la participació en informàtica fent-lo disponible a més escoles i incrementant la participació de les dones i de les minories de estudiants de color. Una <a href='http://code.org/about/partners'> coalició sense precedents de socis</a> que s'han ajuntat per donar suport a l'Hora de Codi, també &mdash; incloent-hi Microsoft, Apple, Amazon, Boys i Girls Clubs d'Amèrica i el Consell Escolar."
-  hoc_faq_host_q: Jo no sé res sobre programació. Puc acollir un esdeveniment?
+  hoc_faq_host_q: "Jo no sé res sobre programació. Puc acollir un esdeveniment?"
   hoc_faq_host_a: "Per descomptat. Hora de Codi son activitats autoguiades. Tot el que has de fer és <a href='http://code.org/learn'> provar els tutorials actuals</a>, triar la classe que vols i escollir una hora &mdash; nosaltres ens ocupem de la resta. A més tenim opcions per a cada edat i nivell d'experiència, des de llar d'infants cap amunt. Comença a planificar el teu esdeveniment llegint els nostres <a href='/resources/how-to'> com a guia</a>."
-  hoc_faq_need_computers_q: Necessito ordinadors per a cada persona participant?
+  hoc_faq_need_computers_q: "Necessito ordinadors per a cada persona participant?"
   hoc_faq_need_computers_a: "No. Tenim tutorials d'Hora de Codi que funcionen en PCs, smartphones, tauletes i alguns que no requereixen cap ordinador en absolut! Pots unir-te siguis on siguis, amb el que tinguis. <p><i>Aquí hi ha unes quantes opcions:</i> <br><ul><li><b>Treballar en parelles.</b>La investigació mostra que els estudiants aprenen millor la <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>programació per parelles</a>, compartint un ordinador i treballant junts. Encoratja els teus estudiants a unir-se. <li><b>Utilitza una pantalla de projecció.</b> Si teniu un ordinador  connectat a la Web, amb pantalla i projector, tot el teu grup pot fer una Hora de Codi conjunta. Veieu junts fragments de vídeo i feu torns per resoldre puzles o respondre preguntes. <li><b>Sense connexió.</b> Oferim tutorials que no requereixen cap ordinador. </ul>"
-  hoc_faq_international_q: Estic fora dels Estats Units. Com participo internacionalment?
+  hoc_faq_international_q: "Estic fora dels Estats Units. Com participo internacionalment?"
   hoc_faq_international_a: "Qualsevol pot organitzar un esdeveniment d'Hora de Codi, des de qualsevol part del món. L'any passat, els estudiants d'arreu del món van unir-se per a l'Hora de Codi."
   hoc_faq_tutorial_q: "Com puc fer una classe d'Hora de Codi?"
   hoc_faq_tutorial_a: "Si estàs interessat en convertir-te en col·laborador de tutorials, <a href='target-tutorial-guidelines'> mira les nostres guies i instruccions</a>. Ens agradaria oferir una varietat d'opcions atractives, però l'objectiu principal és optimitzar l'experiència per a estudiants i professors que són nous en informàtica."
-  hoc_faq_more_questions_q: Still have more questions?
+  hoc_faq_more_questions_q: "Still have more questions?"
   hoc_faq_more_questions_a: "Try finding an answer in our <a href='http://support.code.org'>support forum</a>."
-  hoc_faq_more_questions_br_q: Outras dúvidas?
+  hoc_faq_more_questions_br_q: "Outras dúvidas?"
   hoc_faq_more_questions_br_a: "Por favor visite nosso <a href='http://support.code.org'>forum de suporte</a> disponível apenas em inglês."
   hoc_faq_what_is_hoc_uk_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://uk.code.org/learn'>Check out the tutorials</a>, and look out for new ones coming for the Hour of Code 2014."
   hoc_faq_when_is_hoc_uk_a: "The Hour of Code will take place during December 8-14, 2014. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. The Hour of Code in the UK will happen at the same time as in the US where it is timed to celebrate the annual <a href='http://csedweek.org'>Computer Science Education Week.</a>"
@@ -141,37 +141,37 @@ ca:
   stats_instagram: 'Instagram: 14 mesos'
   stats_hoc: "L'Hora de Codi: 5 dies"
   stats_global: "15 milions d'estudiants del món van aprendre una Hora de Codi."
-  stats_girls_more: Més noies van provar la informàtica que en els últims 70 anys.
-  stats_girls_million: Més de 10 milions de noies en 2013
+  stats_girls_more: "Més noies van provar la informàtica que en els últims 70 anys."
+  stats_girls_million: "Més de 10 milions de noies en 2013"
   stats_nina: '"Cada dia dona els mateixos resultats &mdash; 100% addictiu."-Nina Nichols Peery, professora'
   stats_student: |-
     "Sabia que això era una oportunitat d'<b>una-vegada-a-la-vida</b>."-Mariana Alzate, 5è grau
   stats_michael: |-
     No he vist <b>mai, mai</b> als meus alumnes tan entusiasmats amb l'aprenentatge. "-Michael Clark, professor
-  resources_how_to: Manual per a professors
-  resources_handouts: Follets per córrer la veu
-  resources_videos: Vídeos
-  resources_posters: Pòsters
-  resources_social: Social
-  resources_banners: Anuncis
-  resources_emails: Correus de mostra
+  resources_how_to: "Manual per a professors"
+  resources_handouts: "Follets per córrer la veu"
+  resources_videos: "Vídeos"
+  resources_posters: "Pòsters"
+  resources_social: "Social"
+  resources_banners: "Anuncis"
+  resources_emails: "Correus de mostra"
   resources_stats: "Estadístiques útils d'informàtica"
-  resources_press_kit: Dossier de premsa
-  events_title: All Hour of Code Events
-  events_nav_all: All Events
-  events_nav_classrooms: Classrooms
-  events_nav_whole_schools: Whole Schools
-  events_nav_special: Special Events
-  events_all_title: All Hour of Code events
-  events_classroom_title: Classroom Hour of Code events
-  events_whole_school_title: Whole-school Hour of Code events
-  events_special_title: Special Hour of Code events
-  event: event
-  events: events
-  footer_copyright_message: Copyright 2014 Code.org. Tots els drets reservats.
-  footer_trademark_message: Hora de Codi ™ és una marca registrada de Code.org.
-  footer_menu_partners: Col·laboradors
+  resources_press_kit: "Dossier de premsa"
+  events_title: "All Hour of Code Events"
+  events_nav_all: "All Events"
+  events_nav_classrooms: "Classrooms"
+  events_nav_whole_schools: "Whole Schools"
+  events_nav_special: "Special Events"
+  events_all_title: "All Hour of Code events"
+  events_classroom_title: "Classroom Hour of Code events"
+  events_whole_school_title: "Whole-school Hour of Code events"
+  events_special_title: "Special Hour of Code events"
+  event: "event"
+  events: "events"
+  footer_copyright_message: "Copyright 2014 Code.org. Tots els drets reservats."
+  footer_trademark_message: "Hora de Codi ™ és una marca registrada de Code.org."
+  footer_menu_partners: "Col·laboradors"
   footer_menu_contact: "Contacta'ns"
-  footer_menu_support: Suport
-  footer_menu_terms: Condicions
-  footer_menu_privacy: Política de privacitat
+  footer_menu_support: "Suport"
+  footer_menu_terms: "Condicions"
+  footer_menu_privacy: "Política de privacitat"

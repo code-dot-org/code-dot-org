@@ -71,7 +71,7 @@
           WordSearch: Fáze 1
     game:
       name:
-        Unplug1: "Úvod do počítačové vědy"
+        Unplug1: Úvod do počítačové vědy
         Maze: Bludiště
         Multi: Multiple Choice Stuffs
         Unplug2: Aritmetické Myšlení
@@ -87,7 +87,7 @@
         Farmer2: Farmářka 2
         Unplug8: Abstrakce
         Artist4: Malíř 4
-        Unplug9: "Štafetové Programování"
+        Unplug9: Štafetové Programování
         Farmer3: Farmářka 3
         Unplug10: Internet
         Artist5: Malíř 5
@@ -532,10 +532,10 @@
           it in the new "penColour" block.'
     video:
       name:
-        maze_intro: "Úvod Bludiště"
-        artist_intro: "Úvod Malíř"
-        farmer_intro: "Úvod Farmářka"
-        flappy_intro: "Úvod do Flappy"
+        maze_intro: Úvod Bludiště
+        artist_intro: Úvod Malíř
+        farmer_intro: Úvod Farmářka
+        flappy_intro: Úvod do Flappy
         loop_times: Blok Opakovat n-krát
         loop_until: Blok Opakovat Dokud
         if: Blok Pokud
@@ -565,7 +565,7 @@
         C1_maze_intro_sequencing: Maze Sequencing Intro
         C1_maze_debugging: Maze Debugging
         C1_bee_level_intro: Bee Level - Intro
-        C1_artist_intro: "Úvod Malíř"
+        C1_artist_intro: Úvod Malíř
         C1_spelling_bee_intro: Spelling Bee Intro
         C1_zuck_repeat_loop: Maze Loops
         C1_bee_loops: Bee Loops
@@ -573,8 +573,8 @@
         C1_playlab_storytelling: Play Lab - Create a Story
         C1_planting_seed: Planting a Seed
         C1_building_foundating: Building a Foundation
-        C2_maze_intro: "Úvod Bludiště"
-        C2_artist_intro: "Úvod Malíř"
+        C2_maze_intro: Úvod Bludiště
+        C2_artist_intro: Úvod Malíř
         C2_zuck_repeat_loop: Maze Loops
         C2_artist_loops: Artist Loops
         C2_bee_conditionals: Bee Conditionals
@@ -582,10 +582,10 @@
         C2_graph_paper: Programování Na Milimetrovém Papíru
         C2_conditionals_with_cards: Podmínky
         C2_binary_bracelets: Binary Bracelets
-        C2_replay_programming: "Štafetové Programování"
+        C2_replay_programming: Štafetové Programování
         C2_paper_airplanes: Paper Airplanes
-        C3_maze_intro: "Úvod Bludiště"
-        C3_artist_intro: "Úvod Malíř"
+        C3_maze_intro: Úvod Bludiště
+        C3_artist_intro: Úvod Malíř
         C3_artist_functions: Artist Functions
         C3_bee_functions: Bee Functions
         C3_bee_conditionals: Bee Conditionals

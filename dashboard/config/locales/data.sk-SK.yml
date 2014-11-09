@@ -4,71 +4,71 @@
       name:
         20-hour:
           desc: K-8 Intro to Computer Science Course
-          Unplug1: "Úroveň 1"
-          Maze: "Úroveň 2"
-          Unplug2: "Úroveň 3"
-          Unplug3: "Úroveň 4"
-          Artist: "Úroveň 5"
-          Unplug4: "Úroveň 6"
-          Artist2: "Úroveň 7"
-          Unplug5: "Úroveň 8"
-          Farmer: "Úroveň 9"
-          Unplug6: "Úroveň 10"
-          Artist3: "Úroveň 11"
-          Unplug7: "Úroveň 12"
-          Farmer2: "Úroveň 13"
-          Unplug8: "Úroveň 14"
-          Artist4: "Úroveň 15"
-          Unplug9: "Úroveň 16"
-          Farmer3: "Úroveň 17"
-          Unplug10: "Úroveň 18"
-          Artist5: "Úroveň 19"
-          Unplug11: "Úroveň 20"
+          Unplug1: Úroveň 1
+          Maze: Úroveň 2
+          Unplug2: Úroveň 3
+          Unplug3: Úroveň 4
+          Artist: Úroveň 5
+          Unplug4: Úroveň 6
+          Artist2: Úroveň 7
+          Unplug5: Úroveň 8
+          Farmer: Úroveň 9
+          Unplug6: Úroveň 10
+          Artist3: Úroveň 11
+          Unplug7: Úroveň 12
+          Farmer2: Úroveň 13
+          Unplug8: Úroveň 14
+          Artist4: Úroveň 15
+          Unplug9: Úroveň 16
+          Farmer3: Úroveň 17
+          Unplug10: Úroveň 18
+          Artist5: Úroveň 19
+          Unplug11: Úroveň 20
         Hour of Code:
           desc: Hodina kódovania
-          Maze: "Úroveň 1"
+          Maze: Úroveň 1
         Edit Code:
           desc: Edit Code
-          MazeEC: "Úroveň 1"
+          MazeEC: Úroveň 1
         2014 Levels:
           desc: 2014 Puzzles (beta)
-          Bounce: "Úroveň 1"
+          Bounce: Úroveň 1
         Builder Levels:
           desc: User-Created Puzzles (beta)
-          Custom: "Úroveň 1"
+          Custom: Úroveň 1
         Flappy Levels:
           desc: Flappy Bird
-          Flappy: "Úroveň 1"
+          Flappy: Úroveň 1
         Jigsaw Levels:
           desc: Jigsaw (beta)
-          Jigsaw: "Úroveň 1"
+          Jigsaw: Úroveň 1
         Step Levels:
           desc: Maze (beta)
           MazeStep: Stage Step
         edit-code:
           desc: Edit Code (beta)
-          MazeEC: "Úroveň 1"
-          Webapp: "Úroveň 2"
-          ArtistEC: "Úroveň 3"
+          MazeEC: Úroveň 1
+          Webapp: Úroveň 2
+          ArtistEC: Úroveň 3
         events:
           desc: Bounce (beta)
-          Bounce: "Úroveň 1"
-          Studio: "Úroveň 2"
+          Bounce: Úroveň 1
+          Studio: Úroveň 2
         builder:
           desc: User-Created Puzzles (beta)
-          Custom: "Úroveň 1"
+          Custom: Úroveň 1
         flappy:
           desc: Flappy Bird
-          Flappy: "Úroveň 1"
+          Flappy: Úroveň 1
         jigsaw:
           desc: Jigsaw (beta)
-          Jigsaw: "Úroveň 1"
+          Jigsaw: Úroveň 1
         step:
           desc: Maze (beta)
           MazeStep: Stage Step
         wordsearch:
           desc: Spelling Bee (beta)
-          WordSearch: "Úroveň 1"
+          WordSearch: Úroveň 1
     game:
       name:
         Unplug1: Introduction to Computer Science

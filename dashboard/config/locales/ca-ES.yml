@@ -83,7 +83,7 @@
     age: Age (optional)
     user_type: Are you a student or teacher?
     submit: Inscriure's
-    teacher: "És vostè un professor?"
+    teacher: És vostè un professor?
     valid_username: Disponible!
     invalid_username: El nom d'usuari ha de tenir almenys 5 caràcters
     taken_username: El nom d'usuari ja existeix
@@ -139,7 +139,7 @@
     error:
       signed_in: Tanca la sessió abans de continuar
       username_not_found: Usuari %{username} no trobat
-      username_in_use: "%{username} ja existeix, tria'n un altre"
+      username_in_use: '%{username} ja existeix, tria''n un altre'
       no_teacher: No s'ha trobat ningú registrat amb '%{teacher_email_or_code}'. Si
         us plau, demana'ls que es registrin aquí i després, prova a afegir-los una
         altra vegada
@@ -240,9 +240,9 @@
     destroy: Destrueix
     back: Torna
     confirm: Estàs segur?
-    created: "%{model} s'ha creat correctament."
-    updated: "%{model} s'ha actualitzat correctament."
-    destroyed: "%{model} s'ha esborrat correctament."
+    created: '%{model} s''ha creat correctament.'
+    updated: '%{model} s''ha actualitzat correctament.'
+    destroyed: '%{model} s''ha esborrat correctament.'
     access_denied: No tens accés a aquest %{model}.
   nav:
     header:
@@ -269,13 +269,13 @@
       puzzle_map: Etapes
       prizes: Recull els %{total_trophies} trofeus i guanya premis!
       prize_earned: Has agafat els %{total_trophies} trofeus. El premi és teu!
-      prize_us_only: "(només estudiants EUA)"
+      prize_us_only: (només estudiants EUA)
       prizes_link: Més informació
   teacher:
     title:
       one: 'El teu professor:'
       other: 'Els teus mestres:'
-    remove: "(eliminar professor)"
+    remove: (eliminar professor)
     confirm:
       remove: Are you sure you want to remove this teacher?
     tools: Eines del mestre
@@ -331,18 +331,18 @@
     rollup: Quadre de progrés
     activity: Activitat recent de la classe
     user_not_found: The teacher or student could not be found
-    cant_remove_student_no_email: "%{student_name} cannot be removed as your student
-      because %{student_name} has not registered an e-mail address"
-    cant_remove_teacher_no_email: "%{teacher_name} cannot be removed as your teacher
-      because you have not registered an e-mail address"
-    student_teacher_disassociated: "%{teacher_name} has been removed as a teacher
-      for %{student_name}"
+    cant_remove_student_no_email: '%{student_name} cannot be removed as your student
+      because %{student_name} has not registered an e-mail address'
+    cant_remove_teacher_no_email: '%{teacher_name} cannot be removed as your teacher
+      because you have not registered an e-mail address'
+    student_teacher_disassociated: '%{teacher_name} has been removed as a teacher
+      for %{student_name}'
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
     email_resend_confirm: Torna a enviar les instruccions de confirmació
-    new_password_hint: "(deixa-ho en blanc si no vols canviar-lo)"
-    current_password_hint: "(necessitem la teva contrasenya actual per a confirmar
-      els canvis)"
+    new_password_hint: (deixa-ho en blanc si no vols canviar-lo)
+    current_password_hint: (necessitem la teva contrasenya actual per a confirmar
+      els canvis)
     cancel:
       title: Cancel·la el meu compte
       hint: Insatisfet?
@@ -393,9 +393,9 @@
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
-    heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
-    heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
-    heading_legacy: "<h2>Our previous course for</h2><h1>Existing Students</h1>"
+    heading_elementary: <h2>20 hour courses for</h2><h1>Elementary Students</h1>
+    heading_apps: <h2>Fun for</h2><h1>Everybody</h1>
+    heading_legacy: <h2>Our previous course for</h2><h1>Existing Students</h1>
     gallery:
       your_turtle: My Art
       your_studio: My Apps
@@ -504,13 +504,13 @@
     want_to_make_your_own: Want to make your own?
     more: More &rarr;
     caption_by_name_age: by %{name}, age %{age}
-    caption_time_ago: "%{time_ago} ago"
+    caption_time_ago: '%{time_ago} ago'
   landing:
     prerelease: This page is still under development.
     feedback: Give Feedback
     report_bug: Report Bug
     support: Get Help
-    support_url: "//support.code.org"
+    support_url: //support.code.org
   multi:
     wrong_title: Incorrect answer
     wrong_body: The answer you've entered is not correct.  Please try again!

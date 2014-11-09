@@ -4,7 +4,7 @@
   computer_science: Ciência da computação
   computer_science_edweek: Semana da Educação da Ciência da Computação
   csedweek_dates: 9-15 de Dezembro de 2013
-  n_have_learned_an_hoc: "<h1>#</h1><h3>tentaram uma</h3><h2>HORA do CÓDIGO&trade;</h2>"
+  n_have_learned_an_hoc: <h1>#</h1><h3>tentaram uma</h3><h2>HORA do CÓDIGO&trade;</h2>
   anybody_can_learn: Qualquer pessoa pode aprender.
   learn_now: Aprende agora
   petition_message: Todos os alunos em todas as escolas deviam ter a oportunidade
@@ -45,7 +45,7 @@
     programação se-então e algoritmos básicos.
   all_ages: Todas as idades
   beginner: Iniciante
-  n_participants: "# participantes"
+  n_participants: '# participantes'
   go: Ir
   thank_you_: Obrigado!
   congratulations: Parabéns!
@@ -82,7 +82,7 @@
   beyond_an_hour: Além de UMA HORA DE CÓDIGO >
   get_started: Começar
   i_agree: Concordo
-  participant_select: "-Selecione-"
+  participant_select: -Selecione-
   participant_student: estudante
   participant_parent: Pais
   participant_educator: Educador
@@ -111,11 +111,11 @@
   help_recruit_coders: Ajuda-nos recrutar mais codificadores para a tua equipa!
   help_recruit: Ajuda-nos a recrutar mais programadores!
   lines_of_code: MAIS DE <b># LINHAS DE CÓDIGO</b> ESCRITAS ATÉ AGORA.
-  lines_of_code_alt: "<b>#</b> LINHAS DE CÓDIGO ESCRITAS POR ESTUDANTES"
+  lines_of_code_alt: <b>#</b> LINHAS DE CÓDIGO ESCRITAS POR ESTUDANTES
   who_has_done_hoc: 'Quem fez o #HourOfCode? @codeorg'
   hoc_leaderboards: Classificações da Hora do Código
-  students_and_lines: "%{students} os estudantes fizeram a Hora de Código e escreveram
-    %{lines} linhas de código."
+  students_and_lines: '%{students} os estudantes fizeram a Hora de Código e escreveram
+    %{lines} linhas de código.'
   start_hoc: Começa agora a Hora de Código
   contact_form_topic_press: Imprensa (entrevista ou palestra)
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
@@ -222,6 +222,7 @@
   dashboard_navigation_view_progress: View Progress
   dashboard_navigation_add_students: Add Students
   dashboard_navigation_manage_students: Manage Students
+  dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
   dashboard_navigation_view_stats: View Stats
   dashboard_navigation_section: 'Section: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'

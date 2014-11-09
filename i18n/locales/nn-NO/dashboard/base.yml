@@ -2,65 +2,65 @@
   activerecord:
     errors:
       messages:
-        blank: "er påkrevd"
+        blank: "er påkreva"
     attributes:
       user:
-        name: "Vis Navn"
+        name: "Vis namn"
         email: "E-post"
-        username: "brukernavn"
-        password: "passord"
-        password_confirmation: "Bekreftelse på passord"
-        current_password: "Nåværende passord"
+        username: "Brukarnamn"
+        password: "Passord"
+        password_confirmation: "Stadfesting av passord"
+        current_password: "Passordet du har no"
         locale: "Språk"
         age: "Alder"
         gender: "Kjønn"
-        edit_header: "Rediger kontodetaljer"
+        edit_header: "Rediger kontodetaljar"
         error:
-          future: "ikke mulig å være i framtiden"
-  hello: "Hei, verden"
-  welcome_back: 'Velkommen tilbake, %{name}'
+          future: "kan ikkje vere i framtida"
+  hello: "Hallo, verda"
+  welcome_back: 'Velkommen attende, %{name}'
   add_teacher_form:
     code_or_email:
-      label: 'Legg til en lærer med kode eller e-postadresse:'
-      placeholder: "Kode (ABCDEF) eller e-post (navn@skole.no)"
+      label: 'Legg til ein lærar med kode eller e-postadresse:'
+      placeholder: "Kode (ABCDEF) eller e-post (namn@skole.no)"
     code:
-      label: 'Legg til en lærer med seksjonskode:'
-      placeholder: "Kode (ABCDEF)"
-    submit: "Legg til lærer"
+      label: 'Legg til ein lærar med seksjonskode:'
+      placeholder: "Koden (ABCDEF)"
+    submit: "Legg til lærar"
   add_hint_form:
-    placeholder: "Skriv inn et hint her"
-    submit: "Legg til hint"
+    placeholder: "Skriv inn eit hint her"
+    submit: "Legg til eit hint"
   appname: "Code.org"
-  stage: "nivå"
-  stage_number: 'Scene %{number}'
-  puzzle: "Oppgave"
-  trophies: "pokaler"
-  courses: "kurs"
+  stage: "Nivå"
+  stage_number: 'Nivå %{number}'
+  puzzle: "Puslespel"
+  trophies: "Pokalar"
+  courses: "Kurs"
   of: "av"
-  more: "MER"
+  more: "MEIR"
   less: "MINDRE"
-  try_hoc: 'Prøv Hour of Code (kodetimen), klikk her >> '
-  try_k8intro: "Prøv vår K-8 introduksjon til Informatikkkurs (15-25 timer)"
-  k8intro: "K-8 Introduksjon i informatikk (15-25 timer)"
-  already_started: 'Har du allerede startet? Fortsett her >> '
-  demos: 'Administrator: Alle demoer'
+  try_hoc: 'Prøv Kodetimen, klikk her >> '
+  try_k8intro: "Eller prøv vår barneskuleintroduksjon til informatikkurs (15-25 timar)"
+  k8intro: "Barneskuleintroduksjon til informatikkurs (15-25 timar)"
+  already_started: 'Allereie starta? Hald fram her >> '
+  demos: 'Administrator: Alle demoar'
   continue: "Fortsett"
   prize: "premie"
-  more_info: "Mer info"
+  more_info: "Meir info"
   auth:
     sign_in_with: 'Logg inn med %{provider}'
-    signed_in: "Logget inn!"
-    signed_out: 'Du har logget ut av <a href="%{url}">Code.org</a>.'
-    sign_out_of: 'Du brukte %{provider} for å logge inn. <a href="%{url}">Trykk her</a> for å logge ut fra %{provider}.'
-    already_signedup: "Allerede registrert?"
-    notyet_signedup: "Har du ikke blitt medlem ennå?"
+    signed_in: "Logga inn!"
+    signed_out: 'Du har logga deg av <a href="%{url}">Code.org</a>.'
+    sign_out_of: 'Du nytta %{provider} for å logge inn. <a href="%{url}"> Klikk her</a> for å logge av %{provider}.'
+    already_signedup: "Allereie registrert?"
+    notyet_signedup: "Er du ikkje medlem enno?"
     google_oauth2: "Google-konto"
     twitter: "Twitter"
     facebook: "Facebook"
     windowslive: "Microsoft-konto"
-    forgot_password: "Har du glemt passordet ditt?"
-    need_confirmation: "Mottok du ikke instruksjoner om hvordan du bekrefter?"
-    need_unlock: "Mottok du ingen instruksjoner om hvordan du låser opp?"
+    forgot_password: "Har du gløymt passordet ditt?"
+    need_confirmation: "Har du ikkje motteke instruksjonar om korleis du stadfester?"
+    need_unlock: "Har du ikkje motteke instruksjonar om korleis du låser opp?"
   signup_form:
     overview_student: 'Registrer en konto for å følge med på progresjonen din. Din epost er hovedsaklig brukt for å tillate deg å logge inn og for å gjenopprette passord. For mer informasjon, se våre <a href="http://code.org/privacy">rettningslinjer for personvern</a>.'
     overview_teacher: 'Undervis Informatikk i ditt klasserom med å registrere en konto.<p/> Du vil være i stand til å legge til dine studenter og følge med på deres fremdrift.'
@@ -76,7 +76,7 @@
     gender: "Kjønn (valgfritt)"
     birthday: "Bursdag (valgfritt)"
     age: "Alder"
-    user_type: "Are you a student or teacher?"
+    user_type: "Er du student eller lærar?"
     submit: "Meld deg på"
     teacher: "Er du en lærer?"
     valid_username: "Tilgjengelig!"
@@ -91,7 +91,7 @@
   signin_form:
     title: "Har du allerede en bruker? Logg på"
     login: "E-post eller brukernavn"
-    password: "passord"
+    password: "Passord"
     remember: "Husk meg"
     submit: "Logg inn"
   signin:
@@ -106,7 +106,7 @@
     login: "Logg inn"
   password:
     reset_form:
-      title: "Har du glemt passordet ditt?"
+      title: "Har du gløymt passordet ditt?"
       email: "E-postadresse"
       submit: "Send meg instruksjoner om å tilbakestille passordet"
     change_form:
@@ -216,7 +216,7 @@
         playlab: "Lag en app"
         artist: "Tegn noe"
     user:
-      classroom: "Mine elever"
+      classroom: "Lærerens startside"
       label: 'Hei %{username}'
       stats: "Min fremdrift"
       settings: "Min konto"
@@ -254,11 +254,11 @@
       not_tried: "Ikke trøtt ennå"
       activity: 'Viser elevens aktivitet i de siste %{hours} %{plural}'
       no_section: "Ingen tilordnet seksjon"
-      trophies: "pokaler"
+      trophies: "Pokalar"
     students:
       name: "Navn"
-      username: "brukernavn"
-      password: "passord"
+      username: "Brukarnamn"
+      password: "Passord"
       manage: "Administrer elever"
       dashboard: "Gå til lærer-oversikten"
       add: "Legg til elever"
@@ -351,7 +351,7 @@
     none: "Foretrekker å ikke svare"
   user_type:
     student: "student"
-    teacher: "Teacher"
+    teacher: "Lærer"
   footer:
     help_from_html: "Teknikere fra Google, Microsoft, Facebook og Twitter bidro til å lage denne guiden."
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. Alle rettigheter reservert.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. Alle rettigheter reservert.'
@@ -446,6 +446,8 @@
     wrong_body: 'Løsningen du har angitt er ikke riktig.  Prøv på nytt!'
     correct_title: "Riktig"
     correct_body: "Det er riktig svar."
+  text_match:
+    placeholder: "Enter your answer here"
   dialog:
     ok: "OK"
   time:
@@ -456,7 +458,7 @@
     script:
       name:
         20-hour:
-          title: "K-8 Introduksjon i informatikk (15-25 timer)"
+          title: "Barneskuleintroduksjon til informatikkurs (15-25 timar)"
           description: "Denne 20-timers kurset introduserer kjernebegreper innen informatikk og programmering. Kurset er utviklet for bruk i 5.klasse og oppover, men det er morsomt å lære for alle aldersgrupper."
         Hour of Code:
           title: "Hour of Code (kodetimen)"
@@ -488,3 +490,8 @@
     message: 'Vi er i ferd med å oppdatere våre erfaringer for å gi deg enda sterkere personvern. Derfor må eksisterende brukere skriver inn sin alder her. <br/>Code.org vil aldri leie ut, selge eller dele denne informasjonen med noen andre.'
     sign_out: 'Hvis du ikke ønsker å oppgi din alder, kan du <a href="%{url}"> avslutte</a>.'
   zendesk_too_young_message: 'Beklager, yngre brukere kan ikke logge på nettstedet for kundestøtte. Du kan bla gjennom <a href="http://support.code.org"> support.code.org</a> uten å logge på eller be en forelder eller lærer å kontakte oss for deg.'
+  progress:
+    not_completed: "not completed"
+    completed_too_many_blocks: "completed, too many blocks"
+    completed_perfect: "completed, perfect"
+    furthest_level_attempted: "furthest level attempted"

@@ -84,7 +84,7 @@
         Artist2: Nghệ sĩ 2
         Unplug5: Các hàm
         Farmer: người nông dân
-        Unplug6: "Điều kiện"
+        Unplug6: Điều kiện
         Artist3: nghệ sĩ 3
         Unplug7: Viết nhạc
         Farmer2: Người nông dân 2
@@ -105,7 +105,7 @@
         ArtistEC: nghệ sĩ
     trophy:
       name:
-        Bronze: "Đồng"
+        Bronze: Đồng
         Silver: Bạc
         Gold: Vàng
     concept:
@@ -142,13 +142,13 @@
           lần lượt.'
         maze_2_9: Ok, hãy thử khối mới " lặp lại cho đến khi" nó sẽ lặp lại hành động
           cho đến khi gặp được những chú lợn phiền toái.
-        maze_2_10: "Được rồi, lần cuối để luyện tập nhé - Bạn có thể giải quyết trò
-          này chỉ bằng 4 khối được không?"
+        maze_2_10: Được rồi, lần cuối để luyện tập nhé - Bạn có thể giải quyết trò
+          này chỉ bằng 4 khối được không?
         maze_2_11: Bạn thân mến. Tôi zombie đây... Tôi đói quá... Tôi cần tới chỗ
           có hoa hướng dương. Bạn có thể giúp tôi tới nơi mà chỉ cần sử dụng 5 khối
           không?
-        maze_2_12: "Được rồi, nó cũng tương tự nhưng chỉ hơi khác một chút. Liệu bạn
-          có thể thực hiện chỉ với 5 khối không?"
+        maze_2_12: Được rồi, nó cũng tương tự nhưng chỉ hơi khác một chút. Liệu bạn
+          có thể thực hiện chỉ với 5 khối không?
         maze_2_13: 'Sử dụng khối "nếu" mới cho tôi quyết định khi nào thì chuyển/vòng
           lại. Gợi ý: bạn chỉ cần nhiều hơn 1 khối, nhưng để tìm hiểu chúng tôi thiết
           lập nó như thế nào thì bạn có thể thực hiện như vậy vào lần tới.'
@@ -561,7 +561,7 @@
         Unplug3: lập trình đồ thị trên giấy
         Unplug4: các bước lập trình
         Unplug5: Các hàm
-        Unplug6: "Điều kiện"
+        Unplug6: Điều kiện
         Unplug7: Songwriting
         Unplug8: Trừu tượng
         Unplug9: Relay programming
@@ -590,7 +590,7 @@
         C2_bee_conditionals: Bee Conditionals
         C2_playlab_createstory: Play Lab - Create a Story
         C2_graph_paper: lập trình đồ thị trên giấy
-        C2_conditionals_with_cards: "Điều kiện"
+        C2_conditionals_with_cards: Điều kiện
         C2_binary_bracelets: Binary Bracelets
         C2_replay_programming: Chương trình chuyển tiếp
         C2_paper_airplanes: Paper Airplanes

@@ -1,134 +1,134 @@
-ms:
+"ms":
   activerecord:
     errors:
       messages:
-        blank: is required
+        blank: "is required"
     attributes:
       user:
-        name: Display Name
-        email: E-mel
-        username: nama pengguna
-        password: kata laluan
-        password_confirmation: Pengesahan kata laluan
-        current_password: Kata laluan semasa
-        locale: Bahasa
-        age: Age
-        gender: Jantina
-        edit_header: Edit Maklumat Akaun
+        name: "Display Name"
+        email: "E-mel"
+        username: "nama pengguna"
+        password: "kata laluan"
+        password_confirmation: "Pengesahan kata laluan"
+        current_password: "Kata laluan semasa"
+        locale: "Bahasa"
+        age: "Age"
+        gender: "Jantina"
+        edit_header: "Edit Maklumat Akaun"
         error:
-          future: tidak boleh ada di masa depan
-  hello: Helo dunia
+          future: "tidak boleh ada di masa depan"
+  hello: "Helo dunia"
   welcome_back: 'Selamat datang kembali, % {nama}'
   add_teacher_form:
     code_or_email:
       label: 'Tambah seorang guru melalui kod atau alamat email:'
-      placeholder: Kod (ABCDEF) atau e-mel (teacher@school.edu)
+      placeholder: "Kod (ABCDEF) atau e-mel (teacher@school.edu)"
     code:
       label: 'Tambah guru mengikut bahagian Kod:'
-      placeholder: Kod (ABCDEF)
-    submit: Tambah guru
+      placeholder: "Kod (ABCDEF)"
+    submit: "Tambah guru"
   add_hint_form:
-    placeholder: Sila masukkan petunjuk anda di sini
-    submit: Tambah petunjuk
-  appname: Code.org
-  stage: peringkat
+    placeholder: "Sila masukkan petunjuk anda di sini"
+    submit: "Tambah petunjuk"
+  appname: "Code.org"
+  stage: "peringkat"
   stage_number: 'Stage %{number}'
-  puzzle: Teka-teki
-  trophies: Piala
-  courses: kursus-kursus
-  of: dari
-  more: LAGI
-  less: KURANG
+  puzzle: "Teka-teki"
+  trophies: "Piala"
+  courses: "kursus-kursus"
+  of: "dari"
+  more: "LAGI"
+  less: "KURANG"
   try_hoc: 'Cuba Kod Sejam, klik di sini >> '
-  try_k8intro: Cuba pengenalan K-8 kami untuk kursus Sains Komputer (15-25 jam)
-  k8intro: Pengenalan K-8 untuk kursus Sains Komputer (15-25 jam)
+  try_k8intro: "Cuba pengenalan K-8 kami untuk kursus Sains Komputer (15-25 jam)"
+  k8intro: "Pengenalan K-8 untuk kursus Sains Komputer (15-25 jam)"
   already_started: 'Sudah mulakan? Sambung di sini >> '
   demos: 'Admin: Semua Demo'
-  continue: Teruskan
-  prize: hadiah
-  more_info: Maklumat lanjut
+  continue: "Teruskan"
+  prize: "hadiah"
+  more_info: "Maklumat lanjut"
   auth:
     sign_in_with: 'Daftar Masuk dengan % {pembekal}'
-    signed_in: Daftar masuk!
+    signed_in: "Daftar masuk!"
     signed_out: 'You have signed out of <a href="%{url}">Code.org</a>.'
     sign_out_of: 'You used %{provider} to sign in. <a href="%{url}">Click here</a> to sign out of %{provider}.'
-    already_signedup: Sudah mendaftar?
-    notyet_signedup: Belum menyertai lagi?
-    google_oauth2: Google Account
-    twitter: Twitter
-    facebook: Facebook
-    windowslive: Microsoft Account
-    forgot_password: Lupa kata laluan anda?
-    need_confirmation: Tidak menerima arahan pengesahan?
-    need_unlock: Tidak menerima kunci arahan?
+    already_signedup: "Sudah mendaftar?"
+    notyet_signedup: "Belum menyertai lagi?"
+    google_oauth2: "Google Account"
+    twitter: "Twitter"
+    facebook: "Facebook"
+    windowslive: "Microsoft Account"
+    forgot_password: "Lupa kata laluan anda?"
+    need_confirmation: "Tidak menerima arahan pengesahan?"
+    need_unlock: "Tidak menerima kunci arahan?"
   signup_form:
     overview_student: 'Sign up for an account to track your progress. Your email is primarily used to allow you to log in and for password recovery. For more information, see our <a href="http://code.org/privacy">Privacy Policy</a>.'
     overview_teacher: "Teach computer science in your classroom by signing up for an account.<p/> You'll be able to add your students and track their progress."
     no_signup_message: 'Anda boleh <a target="_blank" href="http://learn.code.org"> layari pelbagai tahap dan susun-suai</a>, tetapi anda perlu mendaftar untuk menyimpan perkembangan anda.'
-    teacher_educator_guide: Lihat panduan pendidik
-    teacher_pitch: Daftar guru untuk Code.org
-    teacher_title: Daftar guru
-    student_pitch: Daftar pelajar untuk Code.org
-    student_title: Daftar pelajar
-    school_name: Nama sekolah (pilihan)
-    school_address: Alamat sekolah (pilihan)
-    address_placeholder: alamat, bandar, Negeri, zip
-    gender: Jantina (pilihan)
-    birthday: Hari Lahir (pilihan)
-    age: Age
-    user_type: Are you a student or teacher?
-    submit: Mendaftar
-    teacher: Adakah anda seorang guru?
-    valid_username: Boleh digunakan!
-    invalid_username: Nama pengguna mestilah sekurang-kurangnya 5 aksara
-    taken_username: Nama pengguna telah diambil
-    valid_password: Kata laluan sah!
-    invalid_password: Kata laluan mestilah sekurang-kurangnya 6 aksara
-    mismatch_password: Dua kata laluan yang anda masukkan tidak sepadan
+    teacher_educator_guide: "Lihat panduan pendidik"
+    teacher_pitch: "Daftar guru untuk Code.org"
+    teacher_title: "Daftar guru"
+    student_pitch: "Daftar pelajar untuk Code.org"
+    student_title: "Daftar pelajar"
+    school_name: "Nama sekolah (pilihan)"
+    school_address: "Alamat sekolah (pilihan)"
+    address_placeholder: "alamat, bandar, Negeri, zip"
+    gender: "Jantina (pilihan)"
+    birthday: "Hari Lahir (pilihan)"
+    age: "Age"
+    user_type: "Are you a student or teacher?"
+    submit: "Mendaftar"
+    teacher: "Adakah anda seorang guru?"
+    valid_username: "Boleh digunakan!"
+    invalid_username: "Nama pengguna mestilah sekurang-kurangnya 5 aksara"
+    taken_username: "Nama pengguna telah diambil"
+    valid_password: "Kata laluan sah!"
+    invalid_password: "Kata laluan mestilah sekurang-kurangnya 6 aksara"
+    mismatch_password: "Dua kata laluan yang anda masukkan tidak sepadan"
     student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/>For users under 13, email addresses are not stored in a form that allows us to contact them."
     teacher_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>."
-    additional_information: We need some additional information to continue signing you up.
+    additional_information: "We need some additional information to continue signing you up."
   signin_form:
-    title: Sudah ada akaun? log masuk
-    login: E-mel atau nama pengguna
-    password: Kata laluan
-    remember: Ingat saya
-    submit: Log masuk
+    title: "Sudah ada akaun? log masuk"
+    login: "E-mel atau nama pengguna"
+    password: "Kata laluan"
+    remember: "Ingat saya"
+    submit: "Log masuk"
   signin:
-    try_heading: Ingin mencuba mengekod tanpa mendaftar?
-    try_hoc: Cuba satu jam kod dahulu
-    try_20hours: Cuba 20 jam pengenalan kepada Sains komputer kami
+    try_heading: "Ingin mencuba mengekod tanpa mendaftar?"
+    try_hoc: "Cuba satu jam kod dahulu"
+    try_20hours: "Cuba 20 jam pengenalan kepada Sains komputer kami"
   signinsection:
     welcome: 'Welcome to %{section_name}'
-    name: Choose your name
-    picture: Now find your secret picture
-    words: Now enter your secret words
-    login: Log masuk
+    name: "Choose your name"
+    picture: "Now find your secret picture"
+    words: "Now enter your secret words"
+    login: "Log masuk"
   password:
     reset_form:
-      title: Lupa kata laluan anda?
-      email: Alamat e-mel
-      submit: Hantar set semula kata laluan arahan
+      title: "Lupa kata laluan anda?"
+      email: "Alamat e-mel"
+      submit: "Hantar set semula kata laluan arahan"
     change_form:
-      title: Tukar kata laluan
-      new_password: Kata laluan baru
-      confirm_password: Sahkan kata laluan baru
-      submit: Tukar kata laluan
+      title: "Tukar kata laluan"
+      new_password: "Kata laluan baru"
+      confirm_password: "Sahkan kata laluan baru"
+      submit: "Tukar kata laluan"
   welcome_email:
-    subject: Sertai kelas saya (di Code.org)
+    subject: "Sertai kelas saya (di Code.org)"
     body: 'Klik pautan di bawah untuk mendaftar bagi tutorial Sains Komputer di Code.org (dengan saya sebagai "guru"): % {link} tutorial ini adalah menyeronokkan, penglibatan visual, dan mengajar konsep asas sains komputer melalui pendekatan mudah, berpandu, seperti-permainan. Belajar kod dari Bill Gates, Mark Zuckerberg, Angry Birds, dan Plants vs Zombie! :-) % {nama}'
   follower:
-    invite_sent: Jemputan dihantar
+    invite_sent: "Jemputan dihantar"
     added_teacher: '%{name} ditambah sebagai guru anda'
     registered: 'Anda telah berdaftar untuk %{section_name}.'
     error:
-      signed_in: Sila daftar keluar sebelum teruskan
+      signed_in: "Sila daftar keluar sebelum teruskan"
       username_not_found: 'Pengguna %{username} tidak dijumpai'
       username_in_use: '%{username} telah dipilih, silih pilih yang lain'
       no_teacher: "Tidak dapat menemui sesiapa yang mendaftar masuk  dengan '%{teacher_email_or_code}'. Sila minta mereka untuk mendaftar di sini dan cuba tambah mereka lagi"
       section_not_found: "Tidak dapat mencari bahagian dengan kod '%{section_code}'."
-      blank_code: Sila masukkan kod bahagian
-      cant_join_own_section: Maaf, anda tidak dapat menyertai bahagian anda sendiri.
+      blank_code: "Sila masukkan kod bahagian"
+      cant_join_own_section: "Maaf, anda tidak dapat menyertai bahagian anda sendiri."
     mail:
       invite_student:
         subject: 'Sertai kelas dengan  %{teacher_name} di Code.org!'
@@ -138,47 +138,47 @@ ms:
         subject: 'Code.org pemberitahuan: %{teacher_name} ini tidak lagi dianggap sebagai guru anda.'
   reports:
     error:
-      access_denied: Anda tidak mempunyai akses kepada statistik orang ini
+      access_denied: "Anda tidak mempunyai akses kepada statistik orang ini"
   redeem_prizes:
     title: 'Redeem Prizes: %{name}'
     provider: 'Provider:'
     code: 'Code:'
     redeem_header: 'To redeem:'
-    donorschoose_register: Daftar sebagai guru pada DonorsChoose.org
-    donorschoose_project: Poskan projek
-    donorschoose_how_to: Bagaimana menggunakan kod anda
-    success: Your prize was succesfully redeemed, see code below.
-    error: Your prize could not be redeemed, please try again.
-    error_us_only: Tawaran Hadiah hanyalah sah untuk pengguna dari Amerika Syarikat.
-    error_not_earned: Anda telah belum lagi mendapat Hadiah ini.
-    error_already_redeemed: Hadiah anda telah ditebus.
-    no_prizes_available: Harap Maaf, tetapi kami tiada hadiah yang disediakan pada masa ini.
+    donorschoose_register: "Daftar sebagai guru pada DonorsChoose.org"
+    donorschoose_project: "Poskan projek"
+    donorschoose_how_to: "Bagaimana menggunakan kod anda"
+    success: "Your prize was succesfully redeemed, see code below."
+    error: "Your prize could not be redeemed, please try again."
+    error_us_only: "Tawaran Hadiah hanyalah sah untuk pengguna dari Amerika Syarikat."
+    error_not_earned: "Anda telah belum lagi mendapat Hadiah ini."
+    error_already_redeemed: "Hadiah anda telah ditebus."
+    no_prizes_available: "Harap Maaf, tetapi kami tiada hadiah yang disediakan pada masa ini."
     teacher_info_required: 'Hadiah-hadiah guru memerlukan maklumat nama dan alamat sekolah:'
     teacher_email_required: 'Hadiah-hadiah guru memerlukan alamat e-mel telah disahkan:'
     confirm:
-      title: Please Confirm
+      title: "Please Confirm"
       "no": Tidak
       "yes": Ya
       msg: 'Are you sure you want to claim the %{prize_name} prize?'
       msg_student: 'NOTE: You can only choose one type of prize.'
-      msg_publicschool: Sila sahkan bahawa anda adalah seorang guru sekolah awam Amerika Syarikat.
-      msg_visit_website: Visit website
+      msg_publicschool: "Sila sahkan bahawa anda adalah seorang guru sekolah awam Amerika Syarikat."
+      msg_visit_website: "Visit website"
     providers:
-      apple_itunes: $10 iTunes Gift Card
-      donors_choose: DonorsChoose.org $750 credit
-      donors_choose_bonus: DonorsChoose.org $250 credit
-      dropbox: 10GB ruang Dropbox
-      valve: Portal 2 (PC or Mac game download)
-      ea_bejeweled: Bejeweled 3 (PC game download)
-      ea_fifa: FIFA Soccer 13 (PC game download)
-      ea_simcity: SimCity 4 Deluxe Edition (PC game download)
-      ea_pvz: Plants vs. Zombies (PC game download)
-      skype: $10 Skype credit
+      apple_itunes: "$10 iTunes Gift Card"
+      donors_choose: "DonorsChoose.org $750 credit"
+      donors_choose_bonus: "DonorsChoose.org $250 credit"
+      dropbox: "10GB ruang Dropbox"
+      valve: "Portal 2 (PC or Mac game download)"
+      ea_bejeweled: "Bejeweled 3 (PC game download)"
+      ea_fifa: "FIFA Soccer 13 (PC game download)"
+      ea_simcity: "SimCity 4 Deluxe Edition (PC game download)"
+      ea_pvz: "Plants vs. Zombies (PC game download)"
+      skype: "$10 Skype credit"
     msg:
       choose: 'Choose a prize:'
       choose_teacher: 'Click on the logo below to claim your prize:'
-      earned: Anda telah memperoleh Hadiah! (pelajar Amerika Syarikat sahaja)
-      not_earned_title: Finish the tutorial, earn rewards (U.S. students only)
+      earned: "Anda telah memperoleh Hadiah! (pelajar Amerika Syarikat sahaja)"
+      not_earned_title: "Finish the tutorial, earn rewards (U.S. students only)"
       not_earned: 'Belajar semua konsep Sains Komputer, kumpul semua Piala %{num_trophies}, dan dapatkan Hadiah sebenar. Anda boleh memilih antara 10GB ruang Dropbox percuma, $10 dalam kredit Skype, dan muat turun permainan percuma. Nota: Tawaran hanya sah kepada pelajar-pelajar Amerika Syarikat, dan selagi stok masih ada.'
       teacher:
         earned: '15 atau lebih pelajar telah mengumpul semua Piala %{num_trophies}. Anda telah memenangi Hadiah guru! (guru Amerika Syarikat sahaja)'
@@ -190,294 +190,294 @@ ms:
           not_earned: 'Jika sekurang-kurangnya 7 pelajar anda yang mendapat %{num_trophies} piala adalah perempuan, ganjaran anda adalah dengan tambahan $250 dalam <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> kredit. <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> kredit hanya boleh digunakan guru dari sekolah awam Amerika Syarikat.'
   crud:
     new_model: 'Baru %{model}'
-    show: Papar
-    edit: Edit
+    show: "Papar"
+    edit: "Edit"
     edit_model: 'Edit %{model}'
-    update: Kemas kini
-    destroy: Hapuskan
-    back: Belakang
-    confirm: Adakah anda pasti?
+    update: "Kemas kini"
+    destroy: "Hapuskan"
+    back: "Belakang"
+    confirm: "Adakah anda pasti?"
     created: '%{model} telah berjaya dicipta.'
     updated: '%{model} telah berjaya diperbaharui.'
     destroyed: '%{model} telah berjaya dihapuskan.'
     access_denied: 'Anda tidak mempunyai akses kepada %{model} ini.'
   nav:
     header:
-      finished_hoc: Saya telah menyelesaikan Hour of Code saya
-      sign_in_to_save: Daftar Masuk untuk menyimpan kemajuan
+      finished_hoc: "Saya telah menyelesaikan Hour of Code saya"
+      sign_in_to_save: "Daftar Masuk untuk menyimpan kemajuan"
       free_play:
-        playlab: Make an App
-        artist: Draw Something
+        playlab: "Make an App"
+        artist: "Draw Something"
     user:
-      classroom: Pelajar-pelajar saya
+      classroom: "Pelajar-pelajar saya"
       label: 'Hi %{username}'
-      stats: Kemajuan saya
-      settings: Akaun saya
-      prizes: Hadiah-hadiah
-      logout: Daftar keluar
-      signin: Log masuk
-      signup: Mendaftar
-      already_registered: Already registered?
+      stats: "Kemajuan saya"
+      settings: "Akaun saya"
+      prizes: "Hadiah-hadiah"
+      logout: "Daftar keluar"
+      signin: "Log masuk"
+      signup: "Mendaftar"
+      already_registered: "Already registered?"
     popup:
-      progress: Kemajuan anda
+      progress: "Kemajuan anda"
       lines: 'Total baris kod: %{lines}'
-      close: TUTUP
-      mastery: Konsep-konsep
-      puzzle_map: Peringkat
+      close: "TUTUP"
+      mastery: "Konsep-konsep"
+      puzzle_map: "Peringkat"
       prizes: 'Kumpul semua %{total_trophies} trofi dan menangi hadiah-hadiah!'
       prize_earned: 'Semua %{total_trophies} Piala telah dikumpul. Menang Hadiah!'
       prize_us_only: '(Pelajar dari  A.S. sahaja)'
-      prizes_link: maklumat lanjut
+      prizes_link: "maklumat lanjut"
   teacher:
     title:
       one: 'Guru anda:'
       other: 'Guru anda:'
-    remove: (keluarkan guru)
+    remove: "(keluarkan guru)"
     confirm:
-      remove: Adakah anda pasti anda mahu keluarkan guru ini?
-    tools: Peralatan Guru
+      remove: "Adakah anda pasti anda mahu keluarkan guru ini?"
+    tools: "Peralatan Guru"
     followers:
       section: 'Section:'
       stages: 'Stage(s) to display:'
       show_past: 'Show student activity (%{bullet_html}) in the past:'
-      levels_key: Levels key
-      perfect: Completed, perfect
-      completed: Completed, but using too many blocks
-      tried: Tried, but not completed
-      not_tried: Not tried yet
+      levels_key: "Levels key"
+      perfect: "Completed, perfect"
+      completed: "Completed, but using too many blocks"
+      tried: "Tried, but not completed"
+      not_tried: "Not tried yet"
       activity: 'Indicates student activity in the last %{hours} %{plural}'
-      no_section: No assigned section
-      trophies: Piala
+      no_section: "No assigned section"
+      trophies: "Piala"
     students:
-      name: Nama
-      username: nama pengguna
-      password: kata laluan
-      manage: Mengurus pelajar
-      dashboard: Go to Teacher Dashboard
-      add: Menambah pelajar
-      remove: remove student
-      confirm_remove: Are you sure you want to remove this student?
-      help_reassign: To divide your class into multiple sections, select students to assign to a new section.
-      help_register: Instead of making you spend a lot of time individually importing student data, you can set up your class quickly by asking them to signup. Your students will need to choose usernames and passwords, but they WILL NOT be required to provide an email address. If a student forgets their password, you will be able to reset it for them.
-      register: Ask your students to register themselves
-      vist: Ask your students to visit
+      name: "Nama"
+      username: "nama pengguna"
+      password: "kata laluan"
+      manage: "Mengurus pelajar"
+      dashboard: "Go to Teacher Dashboard"
+      add: "Menambah pelajar"
+      remove: "remove student"
+      confirm_remove: "Are you sure you want to remove this student?"
+      help_reassign: "To divide your class into multiple sections, select students to assign to a new section."
+      help_register: "Instead of making you spend a lot of time individually importing student data, you can set up your class quickly by asking them to signup. Your students will need to choose usernames and passwords, but they WILL NOT be required to provide an email address. If a student forgets their password, you will be able to reset it for them."
+      register: "Ask your students to register themselves"
+      vist: "Ask your students to visit"
       section_code: 'and enter their section-code:'
       first_please: 'First, please %{add_section}'
-      for: For
+      for: "For"
       enter: 'enter:'
     sections:
-      add: Add section
-      manage: Urus bahagian
-      section: Section
-      students: Students
-      section_code: Section Code
-      add_section_code: Add Students Section-Code
-      secret: Secret type
-      grade: Grade
-      course: Course
-      rename: rename
-      edit: edit
-      delete: delete
-      confirm_delete: Are you sure you want to delete this section?
-      email: Send in email
-    rollup: Dasbor Perkembangan
-    activity: Aktiviti kelas terkini
-    user_not_found: Guru atau pelajar tidak dapat dijumpai
+      add: "Add section"
+      manage: "Urus bahagian"
+      section: "Section"
+      students: "Students"
+      section_code: "Section Code"
+      add_section_code: "Add Students Section-Code"
+      secret: "Secret type"
+      grade: "Grade"
+      course: "Course"
+      rename: "rename"
+      edit: "edit"
+      delete: "delete"
+      confirm_delete: "Are you sure you want to delete this section?"
+      email: "Send in email"
+    rollup: "Dasbor Perkembangan"
+    activity: "Aktiviti kelas terkini"
+    user_not_found: "Guru atau pelajar tidak dapat dijumpai"
     cant_remove_student_no_email: '%{student_name} tidak dapat dikeluarkan sebagai pelajar anda kerana %{student_name} belum mendaftar alamat e-mel'
     cant_remove_teacher_no_email: '%{teacher_name} tidak dapat dikeluarkan sebagai guru anda kerana anda belum mendaftarkan alamat e-mel'
     student_teacher_disassociated: '%{teacher_name} telah dikeluarkan sebagai guru %{student_name}'
   user:
     email_confirm_needed: 'Alamat e-mel belum disahkan:'
-    email_resend_confirm: Hantar semula arahan pengesahan
-    new_password_hint: (biarkan kosong jika anda tidak mahu mengubahnya)
-    current_password_hint: (kami memerlukan kata laluan semasa anda untuk mengesahkan perubahan anda)
+    email_resend_confirm: "Hantar semula arahan pengesahan"
+    new_password_hint: "(biarkan kosong jika anda tidak mahu mengubahnya)"
+    current_password_hint: "(kami memerlukan kata laluan semasa anda untuk mengesahkan perubahan anda)"
     cancel:
-      title: Batalkan akaun saya
-      hint: Tidak berpuas hati?
-      button: Batalkan akaun saya
+      title: "Batalkan akaun saya"
+      hint: "Tidak berpuas hati?"
+      button: "Batalkan akaun saya"
   user_level:
-    completed: Lengkap
-    tried: Telah dicuba
+    completed: "Lengkap"
+    tried: "Telah dicuba"
   user_stats:
-    recent_activity: Aktiviti terkini
-    show_more: Tunjukkan Lagi
-    classroom_activity: Cabut aktiviti
+    recent_activity: "Aktiviti terkini"
+    show_more: "Tunjukkan Lagi"
+    classroom_activity: "Cabut aktiviti"
   home:
-    title: Code Studio
-    all_courses: Overview of Courses 1, 2, and 3
-    lesson_plans: Lesson plans
+    title: "Code Studio"
+    all_courses: "Overview of Courses 1, 2, and 3"
+    lesson_plans: "Lesson plans"
     signin_message: 'Sudah mendaftar? %{link}'
-    student_reg_link: Daftar Pelajar
-    teacher_reg_link: Daftar Guru
+    student_reg_link: "Daftar Pelajar"
+    teacher_reg_link: "Daftar Guru"
     signin_directions: 'Gunakan akaun untuk merekod kemajuan. <br/> Guru, melihat semua kelas anda.'
-    teacher_dashboard: Lihat dashboard kemajuan
+    teacher_dashboard: "Lihat dashboard kemajuan"
     teacher_student_count_one: 'Anda mempunyai %{count} orang pelajar.'
     teacher_student_count: 'Anda mempunyai %{count} pelajar.'
     teacher_averages: 'Secara puratanya, pelajar anda mendapat %{trophy_average} daripada %{trophy_max} "Concept Mastery" trofi.'
-    teacher_print_certificates: Cetak Sijil bagi pelajar yang menamatkan kursus ini
-    teacher_read_blog: Baca tentang berita dan maklumat terkini mengenai bahan-bahan kami di Blog pendidik kami
-    classroom: Kelas anda
-    student_progress: Kemajuan pembelajaran anda
+    teacher_print_certificates: "Cetak Sijil bagi pelajar yang menamatkan kursus ini"
+    teacher_read_blog: "Baca tentang berita dan maklumat terkini mengenai bahan-bahan kami di Blog pendidik kami"
+    classroom: "Kelas anda"
+    student_progress: "Kemajuan pembelajaran anda"
     student_stats: 'Anda telah memperolehi %{trophy_count} daripada %{trophy_max} "Concept Mastery" trofi.'
     student_left_off: 'Mana anda tinggalkan:'
     student_finished: 'Anda telah selesaikan semua tutorial, pilih kelas lain %{online_link} atau %{local_school_link}'
-    local_school: sekolah tempatan
-    online: online
-    see_details: Lihat butiran
+    local_school: "sekolah tempatan"
+    online: "online"
+    see_details: "Lihat butiran"
     prize_info: 'Hadiah untuk penyertaan (guru-guru sekolah awam A.S. sahaja): sehingga $1,000 dalam ganjaran bilik darjah.'
     tryfirst: 'Atau, anda boleh cuba dahulu, dan mendaftar kemudian:'
-    trynow: Cuba sekarang
-    add_hint_help: Sila bantu kami untuk menambah petunjuk pintar ke tutorial Code.org
-    20hour_overview: Kursus 20 jam ini memperkenalkan asas Sains komputer dan konsep programming. Kursus ini direka untuk kegunaan di bilik darjah bagi gred K-8, tetapi ia adalah menyeronokkan untuk belajar di semua peringkat umur.
-    test_videos_help: Uji pemain video baru kami di sekolah anda
-    try_beta_courses: New! Try our beta courses for K-5 students
-    use_as_teacher: Use this site as a teacher
+    trynow: "Cuba sekarang"
+    add_hint_help: "Sila bantu kami untuk menambah petunjuk pintar ke tutorial Code.org"
+    20hour_overview: "Kursus 20 jam ini memperkenalkan asas Sains komputer dan konsep programming. Kursus ini direka untuk kegunaan di bilik darjah bagi gred K-8, tetapi ia adalah menyeronokkan untuk belajar di semua peringkat umur."
+    test_videos_help: "Uji pemain video baru kami di sekolah anda"
+    try_beta_courses: "New! Try our beta courses for K-5 students"
+    use_as_teacher: "Use this site as a teacher"
     heading_elementary: '<h2>20 hour courses for</h2><h1>Elementary Students</h1>'
     heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
     heading_legacy: '<h2>Our general course for</h2><h1>All Ages</h1>'
     gallery:
-      your_turtle: My Art
-      your_studio: My Apps
+      your_turtle: "My Art"
+      your_studio: "My Apps"
   gender:
-    male: Lelaki
-    female: Perempuan
-    none: Memilih untuk tidak menjawab
+    male: "Lelaki"
+    female: "Perempuan"
+    none: "Memilih untuk tidak menjawab"
   user_type:
-    student: pelajar
-    teacher: Teacher
+    student: "pelajar"
+    teacher: "Teacher"
   footer:
-    help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped create this tutorial.
+    help_from_html: "Engineers from Google, Microsoft, Facebook, and Twitter helped create this tutorial."
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. All Rights Reserved.'
-    feedback: Sediakan maklum balas
-    translate: Bantu kami menterjemahkan ke bahasa anda
-    support: Sokongan
-    support_url: http://support.code.org
-    tos: Terma
-    privacy: Dasar privasi
-    secure: Versi Dilindungi
+    feedback: "Sediakan maklum balas"
+    translate: "Bantu kami menterjemahkan ke bahasa anda"
+    support: "Sokongan"
+    support_url: "http://support.code.org"
+    tos: "Terma"
+    privacy: "Dasar privasi"
+    secure: "Versi Dilindungi"
   reference_area:
-    title: Perlukan bantuan?
-    subtitle: Lihat video dan petunjuk ini
-    teacher: Lihat penyelesaian
-    auth_error: Anda tidak disahkan untuk melihat penyelesaian tersebut.
-    submit: Kemaskini Lokasi Pelukis
-    direction: Start Direction (in degrees)
+    title: "Perlukan bantuan?"
+    subtitle: "Lihat video dan petunjuk ini"
+    teacher: "Lihat penyelesaian"
+    auth_error: "Anda tidak disahkan untuk melihat penyelesaian tersebut."
+    submit: "Kemaskini Lokasi Pelukis"
+    direction: "Start Direction (in degrees)"
   video:
-    tab: Video.
-    notes: Tiada video? Lihat nota.
-    notes_coming_soon: Notes for this video coming soon.
-    autoplay_option: Video AutoMain
-    download: Muat turun Video
+    tab: "Video."
+    notes: "Tiada video? Lihat nota."
+    notes_coming_soon: "Notes for this video coming soon."
+    autoplay_option: "Video AutoMain"
+    download: "Muat turun Video"
   compatability:
     working:
-      header: Kami sedang berusaha menyokong pelayar anda.
+      header: "Kami sedang berusaha menyokong pelayar anda."
       message: "Code.org uses modern web technology. This makes the site faster to use. Your browser doesn't support all the features required, and you may experience issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade your browser to a supported version</a>."
-      hide_this_warning: Hide this warning
+      hide_this_warning: "Hide this warning"
     upgrade:
-      header: Sila naik taraf pelayar anda.
+      header: "Sila naik taraf pelayar anda."
       message: "Code.org uses modern web technology. This makes the site faster to use. Unfortunately your browser doesn't support all the features required to run this part of the site.<br/><br/>Install a browser on our supported browsers list to continue. You can <a href='#'>try viewing the page</a>, but expect functionality to be broken."
-      button: Take me to the list of supported browsers
-  slow_loading: Ini memakan masa lebih lama daripada biasa...
-  try_reloading: Cuba memuat semula halaman
-  next_stage: Selesai! Teruskan ke tahap seterusnya
-  download_pdf: Bukan Plan Pembelajaran
-  view_lesson_plan: View Lesson Plan
-  pdf_download: Download PDF
+      button: "Take me to the list of supported browsers"
+  slow_loading: "Ini memakan masa lebih lama daripada biasa..."
+  try_reloading: "Cuba memuat semula halaman"
+  next_stage: "Selesai! Teruskan ke tahap seterusnya"
+  download_pdf: "Bukan Plan Pembelajaran"
+  view_lesson_plan: "View Lesson Plan"
+  pdf_download: "Download PDF"
   share_code:
     title: "Klik 'Mainkan' untuk lihat program saya berfungsi"
-    bounce_og_title: Semak permainan Lantun saya
-    flappy_og_title: Semak permainan Flappy saya
-    studio_og_title: Check out my Play Lab App
-    og_description: Saya menulis kod sendiri dengan Code.org
-    phone_number_not_allowed: It looks like there is a phone number in it. Try changing the text.
-    address_not_allowed: It looks like there is an address in it. Try changing the text.
-    email_not_allowed: It looks like there is an email in it. Try changing the text.
-    profanity_not_allowed: It looks like there is profanity in it. Try changing the text.
+    bounce_og_title: "Semak permainan Lantun saya"
+    flappy_og_title: "Semak permainan Flappy saya"
+    studio_og_title: "Check out my Play Lab App"
+    og_description: "Saya menulis kod sendiri dengan Code.org"
+    phone_number_not_allowed: "It looks like there is a phone number in it. Try changing the text."
+    address_not_allowed: "It looks like there is an address in it. Try changing the text."
+    email_not_allowed: "It looks like there is an email in it. Try changing the text."
+    profanity_not_allowed: "It looks like there is profanity in it. Try changing the text."
   builder:
-    created: Anda mencipta skrip baru.
-    destroyed: Anda telah musnahkan skrip.
-    manage: Membina tahap
-    view: Lihat
-    back: Kembali kepada skrip
-    success: Anda berjaya menyunting blok.
+    created: "Anda mencipta skrip baru."
+    destroyed: "Anda telah musnahkan skrip."
+    manage: "Membina tahap"
+    view: "Lihat"
+    back: "Kembali kepada skrip"
+    success: "Anda berjaya menyunting blok."
     level:
-      create: Cipta tahap baru
-      current: Tahap semasa
-      unused: Tahap yang tidak digunakan
+      create: "Cipta tahap baru"
+      current: "Tahap semasa"
+      unused: "Tahap yang tidak digunakan"
   upsell:
     hoc:
-      title: Hour of Code
-      body: Cuba asas-asas sains komputer. Ramai yang telah mencuba.
+      title: "Hour of Code"
+      body: "Cuba asas-asas sains komputer. Ramai yang telah mencuba."
     flappy:
-      title: Kod Flappy
-      body: ingin menulis permainan anda sendiri dalam masa kurang dari 10 minit? Cuba tutorial kod Flappy kami!
+      title: "Kod Flappy"
+      body: "ingin menulis permainan anda sendiri dalam masa kurang dari 10 minit? Cuba tutorial kod Flappy kami!"
     20hour:
-      title: Kursus Pengenalan
-      body: Cuba 20 jam Pengenalan kepada kursus Sains Komputer kami.
+      title: "Kursus Pengenalan"
+      body: "Cuba 20 jam Pengenalan kepada kursus Sains Komputer kami."
   gallery:
-    students_drew_these_with_code: Pelajar telah melukis ini dengan kod!
-    students_made_these_with_code: Students made these with code!
+    students_drew_these_with_code: "Pelajar telah melukis ini dengan kod!"
+    students_made_these_with_code: "Students made these with code!"
     picture_count: 'Sebelum ini <b>%{days}</b> hari, pelajar telah melukis <b>%{count}</b> gambar dengan menulis program komputer mereka sendiri. Klik pada gambar untuk melihat program dimainkan.'
     activity_count: 'In the past <b>%{days}</b> days, students have made <b>%{count}</b> apps and pictures by writing their own computer programs. Click on the pictures and screenshots to see each program in action.'
-    want_to_make_your_own: Ingin buat anda punya sendiri?
+    want_to_make_your_own: "Ingin buat anda punya sendiri?"
     more: 'Lagi &rarr;'
     caption_by_name_age: 'by %{name}, age %{age}'
     caption_time_ago: '%{time_ago} ago'
   landing:
     prerelease: "This course is in <span class='betatext'>beta</span>.  This means it is not the final version of the course, and is subject to revision as feedback is received and improvements are made."
-    feedback: Give Feedback
-    report_bug: Report Bug
-    support: Get Help
-    support_url: //support.code.org
+    feedback: "Give Feedback"
+    report_bug: "Report Bug"
+    support: "Get Help"
+    support_url: "//support.code.org"
   multi:
-    wrong_title: Jawapan yang salah
+    wrong_title: "Jawapan yang salah"
     wrong_body: 'Jawapan yang telah anda masukkan adalah tidak betul.  Sila cuba lagi!'
-    correct_title: Betul
-    correct_body: Itulah jawapan yang betul.
+    correct_title: "Betul"
+    correct_body: "Itulah jawapan yang betul."
   match:
-    wrong_title: Penyelesaian salah
+    wrong_title: "Penyelesaian salah"
     wrong_body: 'Penyelesaian yang anda masukkan tidak betul.  Sila cuba lagi!'
-    correct_title: Betul
-    correct_body: Itulah jawapan yang betul.
+    correct_title: "Betul"
+    correct_body: "Itulah jawapan yang betul."
   dialog:
-    ok: OK
+    ok: "OK"
   time:
-    hour: 1 hour
-    day: day
-    week: week
+    hour: "1 hour"
+    day: "day"
+    week: "week"
   data:
     script:
       name:
         20-hour:
-          title: Pengenalan K-8 untuk kursus Sains Komputer (15-25 jam)
-          description: Kursus 20 jam ini memperkenalkan asas Sains komputer dan konsep programming. Kursus ini direka untuk kegunaan di bilik darjah bagi gred K-8, tetapi ia adalah menyeronokkan untuk belajar di semua peringkat umur.
+          title: "Pengenalan K-8 untuk kursus Sains Komputer (15-25 jam)"
+          description: "Kursus 20 jam ini memperkenalkan asas Sains komputer dan konsep programming. Kursus ini direka untuk kegunaan di bilik darjah bagi gred K-8, tetapi ia adalah menyeronokkan untuk belajar di semua peringkat umur."
         Hour of Code:
-          title: Hour of Code
+          title: "Hour of Code"
           description: ""
         edit-code:
-          title: Edit kod
+          title: "Edit kod"
           description: ""
         events:
-          title: Events
+          title: "Events"
           description: ""
         builder:
-          title: Builder
+          title: "Builder"
           description: ""
         flappy:
-          title: Kod Flappy
-          description: ingin menulis permainan anda sendiri dalam masa kurang dari 10 minit? Cuba tutorial kod Flappy kami!
+          title: "Kod Flappy"
+          description: "ingin menulis permainan anda sendiri dalam masa kurang dari 10 minit? Cuba tutorial kod Flappy kami!"
         jigsaw:
-          title: Jigsaw
+          title: "Jigsaw"
           description: ""
         step:
-          title: Step
+          title: "Step"
           description: ""
         sample_level_builder:
-          title: Sample Level Builder
+          title: "Sample Level Builder"
           description: ""
   age_interstitial:
-    age: Your age
-    header: Account Information Update
+    age: "Your age"
+    header: "Account Information Update"
     message: "We're in the process of updating our experience to provide you with even stronger privacy protections. To do this, we need existing users to enter their age here.<br/>As always, code.org will never rent, sell or share this information with any third parties."
     sign_out: 'If you do not wish to provide your age you may <a href="%{url}">sign out</a>.'
   zendesk_too_young_message: 'Sorry, younger users may not sign in to our support site. You may browse <a href="http://support.code.org">support.code.org</a> without signing in or ask your parent or teacher to contact us for you.'

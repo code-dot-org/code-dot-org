@@ -1,22 +1,22 @@
-da:
+"da":
   data:
     script:
       name:
         test:
           "Jigsaw: Learn to drag and drop": 'Puslespil: Lær at trække og slippe'
-          The Maze: Labyrinten
-          Multi: Multi
-          Match: Match
-          Math Image: Math billedet
-          title: Test banen
-          description: Bare en intern test bane.
+          The Maze: "Labyrinten"
+          Multi: "Multi"
+          Match: "Match"
+          Math Image: "Math billedet"
+          title: "Test banen"
+          description: "Bare en intern test bane."
         course1:
           "Jigsaw: Learn to drag and drop": 'Puslespil: Lær at trække og slippe'
           "Maze: Sequence": 'Labyrint: Sekvens'
           "Maze: Debugging": 'Labyrint: Fejlfinding'
           "Artist 1: Intro": 'Kunstner 1: Intro'
-          Artists 2: Kunstnere 2
-          Spelling Bee: Stave bien
+          Artists 2: "Kunstnere 2"
+          Spelling Bee: "Stave bien"
           Spelling Bee not blockly: 'Stave bien - Ikke blockly'
           "Bee 1: Intro": 'Bi 1: Intro'
           "Maze 2: Loops": 'Labyrint 2: Sløjfer'
@@ -24,49 +24,49 @@ da:
           Multi & Match: 'Multi & Match'
           K-1 Flappy: K-1 Flappy
           Flappy non blockly: 'Flappy - ikke blockly'
-          title: Course 1
-          Artist 2: Artist 2
-          Happy Maps: Glade Kort
+          title: "Course 1"
+          Artist 2: "Artist 2"
+          Happy Maps: "Glade Kort"
           Move it, Move it: Flyt det, Flyt det
           "Real-life Algorithms: Plant a Seed": 'Real-life algoritmer: Plante et frø'
-          Building a Foundation: Opbygge et fundament
-          Getting Loopy: Blive Svimmel
-          The Big Event: Den store begivenhed
-          Going Places Safely: Gå til sikre steder
-          description: Kursus 1 er designet til at tillade tidlig læsere til at skabe IT-programmer, der vil hjælpe dem med at lære at samarbejde med andre, udvikle problemløsninger, færdigheder og fortsætte gennem vanskelige opgaver. Ved slutningen af dette kursus opretter den studerende deres helt egen brugerdefinerede spil eller historien, som kan deles. Anbefales til 1. klasses elever.
+          Building a Foundation: "Opbygge et fundament"
+          Getting Loopy: "Blive Svimmel"
+          The Big Event: "Den store begivenhed"
+          Going Places Safely: "Gå til sikre steder"
+          description: "Kursus 1 er designet til at tillade tidlig læsere til at skabe IT-programmer, der vil hjælpe dem med at lære at samarbejde med andre, udvikle problemløsninger, færdigheder og fortsætte gennem vanskelige opgaver. Ved slutningen af dette kursus opretter den studerende deres helt egen brugerdefinerede spil eller historien, som kan deles. Anbefales til 1. klasses elever."
           "Bee: Sequence": 'Bi: Sekvens'
           "Artist: Sequence": 'Kunstner: Sekvens'
           "Artist: Shapes": 'Kunstner: Figurer'
           "Maze: Loops": 'Labyrint: Sløjfer'
           "Bee: Loops": 'Bi: Sløjfer'
           "Studio: Create a Story": 'Spil Lab - Opret en historie'
-          description_short: Course 1 is designed for early readers. Recommended for grades K-1.
+          description_short: "Course 1 is designed for early readers. Recommended for grades K-1."
           "Artist: Loops": 'Kunstner: Sløjfer'
         course2:
-          The Maze: Labyrinten
-          Suzi: Suzi
-          The Artist: Kunstneren
-          Artist Debugging: Kunstner-fejlfinding
-          Bounce: Hoppe
+          The Maze: "Labyrinten"
+          Suzi: "Suzi"
+          The Artist: "Kunstneren"
+          Artist Debugging: "Kunstner-fejlfinding"
+          Bounce: "Hoppe"
           "Studio: Create a Story": 'Spil Lab - Opret en historie'
-          Artist Loops: Kunstner sløjfer
-          Bee Conditionals: Bi betingelser
-          Flappy: Flappy
-          title: Kursus 2
-          Bee Loops: Bi sløjfer
-          Artist Functions: Kunstner funktioner
-          The Artist Debugging: Kunstneren fejlfinding
-          Bee Debugging: Bi fejlfinding
-          Bee Functions: Bi Funktioner
-          Maze Loops: Labyrint sløjfer
-          Graph Paper Programming: Programmering på millimeterpapir
+          Artist Loops: "Kunstner sløjfer"
+          Bee Conditionals: "Bi betingelser"
+          Flappy: "Flappy"
+          title: "Kursus 2"
+          Bee Loops: "Bi sløjfer"
+          Artist Functions: "Kunstner funktioner"
+          The Artist Debugging: "Kunstneren fejlfinding"
+          Bee Debugging: "Bi fejlfinding"
+          Bee Functions: "Bi Funktioner"
+          Maze Loops: "Labyrint sløjfer"
+          Graph Paper Programming: "Programmering på millimeterpapir"
           "Real-life Algorithms: Paper Planes": 'Real-life algoritmer: Papir fly'
-          Getting Loopy: Blive Svimmel
-          Relay programming: Stafet-programmering
-          Conditionals: Betingelser
-          Binary Bracelets: Binære armbånd
-          The Big Event: Den store begivenhed
-          Your Digital Footprint: Dit digitale fodspor
+          Getting Loopy: "Blive Svimmel"
+          Relay programming: "Stafet-programmering"
+          Conditionals: "Betingelser"
+          Binary Bracelets: "Binære armbånd"
+          The Big Event: "Den store begivenhed"
+          Your Digital Footprint: "Dit digitale fodspor"
           description: 'Kursus 2 er designet til studerende, der kan læse og har ingen forudgående erfaring med programmering. I dette kursus vil studerende skabe programmer til at løse problemer og udvikle interaktive spil eller historier der kan deles. Anbefales af 2. - 5. klasses elever.'
           "Maze: Sequence": 'Labyrint: Sekvens'
           "Artist: Sequence": 'Kunstner: Sekvens'
@@ -81,34 +81,34 @@ da:
           "Maze: Sequence2": 'Labyrint: Sekvens 2'
           "Artist: Nested Loops": 'Kunstner: Indlejrede løkker'
         course3:
-          The Maze: Labyrinten
+          The Maze: "Labyrinten"
           "Studio: Create a Story": 'Spil Lab - Opret en historie'
-          The Artist: Kunstneren
-          title: Kursus 3
-          Artist Functions: Kunstner funktioner
-          Artist For Loops: Kunstner For sløjfer
-          Artist Nested Loops: Kunstner Indlejrede løkker
-          Bee Conditionals: Bi betingelser
-          Bee Nested Loops: Bi Indlejrede løkker
-          Bee Debuggin: Bi fejlfinding
-          Bee Debugging: Bi fejlfinding
-          Bee Functions: Bi Funktioner
-          Artist Functions with Params: Kunstner funktioner med parametre
-          Bounce: Hoppe
-          Maze Conditionals: Labyrint Betingelser
-          Artist Functions with Parameters: Kunstner funktioner med parametre
-          Computational Thinking: Data-Tænkning
-          Functional Suncatchers: Funktionelle solfangere
-          Songwriting Parameters: Sangskrivnings parametre
-          Dice Race: Terning Race
-          Internet: Internet
-          Crowdsourcing: Crowdsourcing
-          Digital Citizenship: Digital statsborgerskab
+          The Artist: "Kunstneren"
+          title: "Kursus 3"
+          Artist Functions: "Kunstner funktioner"
+          Artist For Loops: "Kunstner For sløjfer"
+          Artist Nested Loops: "Kunstner Indlejrede løkker"
+          Bee Conditionals: "Bi betingelser"
+          Bee Nested Loops: "Bi Indlejrede løkker"
+          Bee Debuggin: "Bi fejlfinding"
+          Bee Debugging: "Bi fejlfinding"
+          Bee Functions: "Bi Funktioner"
+          Artist Functions with Params: "Kunstner funktioner med parametre"
+          Bounce: "Hoppe"
+          Maze Conditionals: "Labyrint Betingelser"
+          Artist Functions with Parameters: "Kunstner funktioner med parametre"
+          Computational Thinking: "Data-Tænkning"
+          Functional Suncatchers: "Funktionelle solfangere"
+          Songwriting Parameters: "Sangskrivnings parametre"
+          Dice Race: "Terning Race"
+          Internet: "Internet"
+          Crowdsourcing: "Crowdsourcing"
+          Digital Citizenship: "Digital statsborgerskab"
           Farmer - While Loops: 'Landmand - Når sløjfer'
-          description: Kursus 3 er udviklet til studerende, der har taget kursus 2. Studerende vil dykke dybere ned i programmering emner introduceret i tidligere kurser til fleksible løsninger til mere komplekse problemer. Ved slutningen af dette kursus oprette studerende interaktive historier og spil de kan dele med nogen. Anbefales til 4. -5. klasses elever.
+          description: "Kursus 3 er udviklet til studerende, der har taget kursus 2. Studerende vil dykke dybere ned i programmering emner introduceret i tidligere kurser til fleksible løsninger til mere komplekse problemer. Ved slutningen af dette kursus oprette studerende interaktive historier og spil de kan dele med nogen. Anbefales til 4. -5. klasses elever."
           "Studio: Create a Game": 'Spille Lab: Oprette et spil'
-          Maze: Labyrint
-          Artist: Kunstner
+          Maze: "Labyrint"
+          Artist: "Kunstner"
           "Artist: Functions": 'Kunstner: Funktioner'
           "Bee: Functions": 'Bi: Funktioner'
           "Bee: Conditionals": 'Bi: Betingelser'
@@ -118,8 +118,8 @@ da:
           "Bee: Nested Loops": 'Bi: Indlejrede løkker'
           "Bee: Debugging": 'Bi: Fejlfinding'
           description_short: 'Course 3 is a follow-up to Course 2.  Recommended for grades 4-5.'
-          Maze2: Labyrint 2
-          Artist2: Kunstner 2
+          Maze2: "Labyrint 2"
+          Artist2: "Kunstner 2"
           "Artist: Functions2": 'Kunstner: Funktioner 2'
           "Bee: Functions2": 'Bi: Funktioner 2'
           "Bee: Conditionals2": 'Bi: Betingelser 2'
@@ -129,32 +129,32 @@ da:
           "Bee: Nested Loops2": 'Bi: Indlejrede løkker 2'
           "Bee: Debugging2": 'Bi: Fejlfinding 2'
           "Artist: Patterns": 'Kunstner: Mønstre'
-          Songwriting: Sangskrivning
+          Songwriting: "Sangskrivning"
         msm:
-          title: Efterskole matematik
-          description: Privat arbejde i gang for efterskole matematik.
-          Graph Paper Programming: Programmering på millimeterpapir
-          Assessments: Vurderinger
-          Unit 1: Enhed 1
-          Unit 2: Enhed 2
+          title: "Efterskole matematik"
+          description: "Privat arbejde i gang for efterskole matematik."
+          Graph Paper Programming: "Programmering på millimeterpapir"
+          Assessments: "Vurderinger"
+          Unit 1: "Enhed 1"
+          Unit 2: "Enhed 2"
         playlab:
-          title: Spille Lab
-          description: Oprette en historie eller lav et spil med Play Lab!
-          Play Lab: Spille Lab
-          description_short: Oprette en historie eller lav et spil med Play Lab!
+          title: "Spille Lab"
+          description: "Oprette en historie eller lav et spil med Play Lab!"
+          Play Lab: "Spille Lab"
+          description_short: "Oprette en historie eller lav et spil med Play Lab!"
         artist:
-          title: Kunstner
-          description: Tegn seje billeder og designs med spilleren!
-          Artist: Kunstner
-          description_short: Tegn seje billeder og designs med spilleren!
+          title: "Kunstner"
+          description: "Tegn seje billeder og designs med spilleren!"
+          Artist: "Kunstner"
+          description_short: "Tegn seje billeder og designs med spilleren!"
         course4:
-          description_short: Students taking Course 4 should have already taken Courses 2 and 3.
-          description: Course 4 is designed for students who have taken Course 2 and 3. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8.
+          description_short: "Students taking Course 4 should have already taken Courses 2 and 3."
+          description: "Course 4 is designed for students who have taken Course 2 and 3. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8."
           "Artist: Variables": 'Artist: Variables'
           "Bee: For Loops": 'Bee: For Loops'
-          title: Course 4
+          title: "Course 4"
           "Algorithms: Tangrams": 'Algorithms: Tangrams'
-          Variables: Variabler
+          Variables: "Variabler"
           "Play Lab: Variables": 'Play Lab: Variables'
           "Play Lab: Functions with Parameters": 'Play Lab: Functions with Parameters'
           "Bee: Functions with Parameters": 'Bee: Functions with Parameters'

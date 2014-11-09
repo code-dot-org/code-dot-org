@@ -1,27 +1,27 @@
 "km":
   devise:
     confirmations:
-      confirmed: "អាសយដ្ឋាន​អ៊ីមែល​របស់​អ្នក​ត្រូវ​បាន​បញ្ជាក់​ដោយ​ជោគជ័យ​ហើយ។"
-      send_instructions: "អ្នក​នឹង​ទទួល​បាន​អ៊ីមែល​ដែល​មាន​សេចក្ដី​ណែនាំ​អំពី​វិធី​បញ្ជាក់​គណនី​របស់​អ្នក​ដោយ​ប្រើ​ពេល​តែ​ប៉ុន្មាន​នាទី​ប៉ុណ្ណោះ។"
-      send_paranoid_instructions: "ប្រសិន​បើ​អ៊ីមែល​របស់​អ្នក​មាន​ក្នុង​មូលដ្ឋាន​ទិន្នន័យ​របស់​យើង​ហើយ
-        អ្នក​នឹង​ទទួល​បាន​អ៊ីមែល​មួយ​ដែល​មាន​សេចក្ដី​ណែនាំ​អំពី​វិធី​បញ្ជាក់​គណនី​របស់​អ្នក​ដោយ​ប្រើ​ពេល​តែ​ប៉ុន្មាន​នាទី​ប៉ុណ្ណោះ។"
+      confirmed: អាសយដ្ឋាន​អ៊ីមែល​របស់​អ្នក​ត្រូវ​បាន​បញ្ជាក់​ដោយ​ជោគជ័យ​ហើយ។
+      send_instructions: អ្នក​នឹង​ទទួល​បាន​អ៊ីមែល​ដែល​មាន​សេចក្ដី​ណែនាំ​អំពី​វិធី​បញ្ជាក់​គណនី​របស់​អ្នក​ដោយ​ប្រើ​ពេល​តែ​ប៉ុន្មាន​នាទី​ប៉ុណ្ណោះ។
+      send_paranoid_instructions: ប្រសិន​បើ​អ៊ីមែល​របស់​អ្នក​មាន​ក្នុង​មូលដ្ឋាន​ទិន្នន័យ​របស់​យើង​ហើយ
+        អ្នក​នឹង​ទទួល​បាន​អ៊ីមែល​មួយ​ដែល​មាន​សេចក្ដី​ណែនាំ​អំពី​វិធី​បញ្ជាក់​គណនី​របស់​អ្នក​ដោយ​ប្រើ​ពេល​តែ​ប៉ុន្មាន​នាទី​ប៉ុណ្ណោះ។
     failure:
-      already_authenticated: "អ្នក​បាន​ចូល​គណនី​រួច​ហើយ។"
-      inactive: "គណនី​របស់​អ្នក​មិន​ទាន់​បាន​បើក​ដំណើរការ​ទេ។"
-      invalid: "ខុស​អ៊ីមែល ឬ​ពាក្យ​សម្ងាត់។"
+      already_authenticated: អ្នក​បាន​ចូល​គណនី​រួច​ហើយ។
+      inactive: គណនី​របស់​អ្នក​មិន​ទាន់​បាន​បើក​ដំណើរការ​ទេ។
+      invalid: ខុស​អ៊ីមែល ឬ​ពាក្យ​សម្ងាត់។
       invalid_token: Invalid authentication token.
-      locked: "គណនី​របស់​អ្នក​ត្រូវបាន​ចាក់សោ។"
-      not_found_in_database: "ខុស​អ៊ីមែល ឬ​ពាក្យ​សម្ងាត់។"
+      locked: គណនី​របស់​អ្នក​ត្រូវបាន​ចាក់សោ។
+      not_found_in_database: ខុស​អ៊ីមែល ឬ​ពាក្យ​សម្ងាត់។
       timeout: Your session expired, please sign in again to continue.
-      unauthenticated: "អ្នក​ត្រូវ​ចូល​គណនី ឬ​ចុះ​ឈ្មោះ​សិន មុន​នឹង​បន្ត​ទៅ​មុខ​ទៀត។"
-      unconfirmed: "អ្នក​ត្រូវតែ​បញ្ជាក់​គណនី​របស់​អ្នក​សិន មុន​ពេល​បន្ត​ទៅ​មុខ​ទៀត។"
+      unauthenticated: អ្នក​ត្រូវ​ចូល​គណនី ឬ​ចុះ​ឈ្មោះ​សិន មុន​នឹង​បន្ត​ទៅ​មុខ​ទៀត។
+      unconfirmed: អ្នក​ត្រូវតែ​បញ្ជាក់​គណនី​របស់​អ្នក​សិន មុន​ពេល​បន្ត​ទៅ​មុខ​ទៀត។
     mailer:
       confirmation_instructions:
-        subject: "សេចក្ដី​ណែនាំ​អំពី​ការ​បញ្ជាក់ Code.org"
+        subject: សេចក្ដី​ណែនាំ​អំពី​ការ​បញ្ជាក់ Code.org
       reset_password_instructions:
-        subject: "សេចក្ដី​ណែនាំ​អំពី​ការ​កំណត់​ឡើង​វិញ​នូវ​ពាក្យ​សម្ងាត់ Code.org"
+        subject: សេចក្ដី​ណែនាំ​អំពី​ការ​កំណត់​ឡើង​វិញ​នូវ​ពាក្យ​សម្ងាត់ Code.org
       unlock_instructions:
-        subject: "សេចក្ដីណែនាំ​អំពី​ការ​ដោះសោ"
+        subject: សេចក្ដីណែនាំ​អំពី​ការ​ដោះសោ
     omniauth_callbacks:
       failure: Could not authenticate you from %{kind} because "%{reason}".
       success: Successfully authenticated from %{kind} account.
@@ -50,8 +50,8 @@
         confirm link to finalize confirming your new email address.
       updated: You updated your account successfully.
     sessions:
-      signed_in: "បាន​ចូល​ដោយ​ជោគជ័យ។"
-      signed_out: "បាន​ចាកចេញ​ដោយ​ជោគជ័យ។"
+      signed_in: បាន​ចូល​ដោយ​ជោគជ័យ។
+      signed_out: បាន​ចាកចេញ​ដោយ​ជោគជ័យ។
     unlocks:
       send_instructions: You will receive an email with instructions about how to
         unlock your account in a few minutes.
@@ -60,12 +60,12 @@
       unlocked: Your account has been unlocked successfully. Please sign in to continue.
   errors:
     messages:
-      already_confirmed: "ត្រូវបានបញ្ជាក់រួចហើយសូមព្យាយាមចូល​គណនី​ម្តងទៀត"
+      already_confirmed: ត្រូវបានបញ្ជាក់រួចហើយសូមព្យាយាមចូល​គណនី​ម្តងទៀត
       confirmation_period_expired: needs to be confirmed within %{period}, please
         request a new one
-      expired: "បាន​ផុត​កំណត់​ហើយ, សូម​ស្នើសុំ​ថ្មី​មួយ​ទៀត"
-      not_found: "រក​មិន​ឃើញ"
-      not_locked: "មិន​ត្រូវ​បាន​ចាក់សោ"
+      expired: បាន​ផុត​កំណត់​ហើយ, សូម​ស្នើសុំ​ថ្មី​មួយ​ទៀត
+      not_found: រក​មិន​ឃើញ
+      not_locked: មិន​ត្រូវ​បាន​ចាក់សោ
       not_saved:
         one: '1 error prohibited this %{resource} from being saved:'
-        other: "%{count} errors prohibited this %{resource} from being saved:"
+        other: '%{count} errors prohibited this %{resource} from being saved:'

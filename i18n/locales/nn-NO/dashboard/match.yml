@@ -258,13 +258,13 @@
         /script_assets/k_1_images/unplugged_images/rightrightup.png: /script_assets/k_1_images/unplugged_images/rightrightup.png
         /script_assets/k_1_images/unplugged_images/rightdown.png: /script_assets/k_1_images/unplugged_images/rightdown.png
       Coordinate Matching:
-        Coordinates of Ninjacat: "Coordinates of Ninjacat"
+        Coordinates of Ninjacat: "Koordinatene til Ninjakatt"
         Match each character with its correct coordinate!: Match each character with its correct coordinate!
         /script_assets/msm/Unit 1/exercise_3_ninjacat.png: /script_assets/msm/Unit 1/exercise_3_ninjacat.png
         Cloud: "Sky"
         Ruby: "Ruby"
         Dog: "Hund"
-        Ninjacat: "Ninjacat"
+        Ninjacat: "Ninjakatt"
         (250, 400): (250, 400)
         (500, 240): (500, 240)
         (480, 100): (480, 100)
@@ -280,7 +280,7 @@
         /script_assets/msm/Unit 1/Exercise_4_question_3.png: /script_assets/msm/Unit 1/Exercise_4_question_3.png
         /script_assets/msm/Unit 1/Exercise_4_question_4.png: /script_assets/msm/Unit 1/Exercise_4_question_4.png
       Match circles to code:
-        Converting Circles to Code: "Converting Circles to Code"
+        Converting Circles to Code: "Konvertere sirkler til kode"
         Match each circle of evaluation with the correct code!: Match each circle of evaluation with the correct code!
         (+ (- (/ 4 7) 9) 3): '(+ (- (/ 4 7) 9) 3)'
         (+ (- 9 3) (* 4 7)): '(+ (- 9 3) (* 4 7))'
@@ -291,7 +291,7 @@
         /script_assets/msm/Unit 1/Exercise_5_question_3.png: /script_assets/msm/Unit 1/Exercise_5_question_3.png
         /script_assets/msm/Unit 1/Exercise_5_question_4.png: /script_assets/msm/Unit 1/Exercise_5_question_4.png
       Match math to code:
-        Converting Math to Code: "Converting Math to Code"
+        Converting Math to Code: "Konvertere matematikk til kode"
         Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!: Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!
         (15 + 3) x (72 - 19): '(15 + 3) x (72 - 19)'
         3 x 15 + (- 72 19): '3 x 15 + (- 72 19)'
@@ -302,11 +302,11 @@
         (- (+ 72 3) (* 19 15)): '(- (+ 72 3) (* 19 15))'
         (+ (- (* 3 15) 72) 19): '(+ (- (* 3 15) 72) 19)'
       parts of contract:
-        Parts of a Contract: "Parts of a Contract"
+        Parts of a Contract: "Deler av en kontrakt"
         Here is a contract for a new function. Match each item with the word that describes it.: Here is a contract for a new function. Match each item with the word that describes it.
         yearbook-picture: yearbook-picture
         string numer: "string numer"
-        image: "image"
+        image: "bilde"
         (yearbook-picture "Sally" 1992): '(yearbook-picture "Sally" 1992)'
         function name: "function name"
         domain: "domain"
@@ -322,7 +322,7 @@
         (small-star "solid"): '(small-star "solid")'
         (find-price "cheese"): '(find-price "cheese")'
         "big-string: string number -> boolean": 'big-string: string number -> boolean'
-        "find-price: number -> number": 'find-price: number -> number'
+        "find-price: number -> number": 'finn-pris: nummer -> nummer'
         "small-star: string -> image": 'small-star: string -> image'
         "bigger-string: string string -> string": 'bigger-string: string string -> string'
         "find-price: string -> number": 'find-price: string -> number'
@@ -331,7 +331,7 @@
         Match up all the flowers by colour!: Match up all the flowers by colour!
         /script_assets/matches/images/head.jpg,300: /script_assets/matches/images/head.jpg,300
         Instructions: "Istruksjoner"
-        Drag the images from right to center.: Drag the images from right to center.
+        Drag the images from right to center.: Dra bildene fra høyre til senter.
         /script_assets/matches/images/a1.jpg: /script_assets/matches/images/a1.jpg
         /script_assets/matches/images/q1.jpg: /script_assets/matches/images/q1.jpg
         /script_assets/matches/images/q2.jpg: /script_assets/matches/images/q2.jpg
