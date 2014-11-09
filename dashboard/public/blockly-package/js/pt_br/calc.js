@@ -8011,17 +8011,17 @@ exports.parseElement = function(text) {
 
 },{}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.pt=function(n){return n===1?"one":"other"}
-exports.compute = function(d){return "compute"};
+exports.compute = function(d){return "calcular"};
 
-exports.equivalentExpression = function(d){return "Try reordering your arguments to get exactly the same expression."};
+exports.equivalentExpression = function(d){return "Tente reorganizar seus argumentos para obter exatamente a mesma expressão."};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"compute\" block?"};
+exports.extraTopBlocks = function(d){return "Você tem blocos não conectados. Você pretendia conectá-los ao bloco \"calcular\"?"};
 
-exports.goal = function(d){return "Goal:"};
+exports.goal = function(d){return "Meta:"};
 
-exports.reinfFeedbackMsg = function(d){return "Isto parece com o que você quer? Você pode pressionar o botão de \"Tentar novamente\" para ver seu desenho."};
+exports.reinfFeedbackMsg = function(d){return "Pressione o botão \"Tentar novamente\" para editar sua expressão."};
 
-exports.yourExpression = function(d){return "Your expression:"};
+exports.yourExpression = function(d){return "Sua expressão:"};
 
 
 },{"messageformat":51}],39:[function(require,module,exports){
@@ -8124,7 +8124,7 @@ exports.score = function(d){return "pontuação"};
 
 exports.showCodeHeader = function(d){return "Mostrar código"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Mostrar blocos"};
 
 exports.showGeneratedCode = function(d){return "Mostrar código"};
 
@@ -8162,7 +8162,7 @@ exports.typeHint = function(d){return "Observe que os parênteses e os ponto e v
 
 exports.workspaceHeader = function(d){return "Monte seus blocos aqui: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Insira seu código JavaScript aqui"};
 
 exports.infinity = function(d){return "Infinito"};
 

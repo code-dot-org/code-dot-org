@@ -4,13 +4,13 @@
       name:
         20-hour:
           desc: K-8 সূচনা থেকে কম্পিউটার সায়েন্স কোর্স
-          Unplug1: "ধাপ ১"
-          Maze: "ধাপ ২"
-          Unplug2: "ধাপ ৩"
-          Unplug3: "ধাপ ৪"
-          Artist: "ধাপ ৫"
-          Unplug4: "ধাপ ৬"
-          Artist2: "ধাপ ৭"
+          Unplug1: ধাপ ১
+          Maze: ধাপ ২
+          Unplug2: ধাপ ৩
+          Unplug3: ধাপ ৪
+          Artist: ধাপ ৫
+          Unplug4: ধাপ ৬
+          Artist2: ধাপ ৭
           Unplug5: Stage 8
           Farmer: Stage 9
           Unplug6: Stage 10
@@ -26,49 +26,49 @@
           Unplug11: Stage 20
         Hour of Code:
           desc: Hour of Code
-          Maze: "ধাপ ১"
+          Maze: ধাপ ১
         Edit Code:
-          desc: "কোড সম্পাদনা করুন"
-          MazeEC: "ধাপ ১"
+          desc: কোড সম্পাদনা করুন
+          MazeEC: ধাপ ১
         2014 Levels:
           desc: 2014 Puzzles (beta)
-          Bounce: "ধাপ ১"
+          Bounce: ধাপ ১
         Builder Levels:
           desc: User-Created Puzzles (beta)
-          Custom: "ধাপ ১"
+          Custom: ধাপ ১
         Flappy Levels:
           desc: Flappy Bird
-          Flappy: "ধাপ ১"
+          Flappy: ধাপ ১
         Jigsaw Levels:
           desc: Jigsaw (beta)
-          Jigsaw: "ধাপ ১"
+          Jigsaw: ধাপ ১
         Step Levels:
           desc: Maze (beta)
           MazeStep: Stage Step
         edit-code:
           desc: Edit Code (beta)
-          MazeEC: "ধাপ ১"
-          Webapp: "ধাপ ২"
-          ArtistEC: "ধাপ ৩"
+          MazeEC: ধাপ ১
+          Webapp: ধাপ ২
+          ArtistEC: ধাপ ৩
         events:
           desc: Bounce (beta)
-          Bounce: "ধাপ ১"
-          Studio: "ধাপ ২"
+          Bounce: ধাপ ১
+          Studio: ধাপ ২
         builder:
           desc: User-Created Puzzles (beta)
-          Custom: "ধাপ ১"
+          Custom: ধাপ ১
         flappy:
           desc: Flappy Bird
-          Flappy: "ধাপ ১"
+          Flappy: ধাপ ১
         jigsaw:
           desc: Jigsaw (beta)
-          Jigsaw: "ধাপ ১"
+          Jigsaw: ধাপ ১
         step:
           desc: Maze (beta)
           MazeStep: Stage Step
         wordsearch:
           desc: Spelling Bee (beta)
-          WordSearch: "ধাপ ১"
+          WordSearch: ধাপ ১
     game:
       name:
         Unplug1: Introduction to Computer Science
@@ -76,20 +76,20 @@
         Multi: Multiple Choice Stuffs
         Unplug2: Computational Thinking
         Unplug3: Graph Paper Programming
-        Artist: "শিল্পী"
+        Artist: শিল্পী
         Unplug4: Algorithms
         Artist2: The Artist 2
-        Unplug5: "ফাংশনগুলি"
+        Unplug5: ফাংশনগুলি
         Farmer: The Farmer
         Unplug6: Conditionals
         Artist3: The Artist 3
-        Unplug7: "গান লিখা"
+        Unplug7: গান লিখা
         Farmer2: The Farmer 2
         Unplug8: Abstraction
         Artist4: The Artist 4
         Unplug9: Relay Programming
         Farmer3: The Farmer 3
-        Unplug10: "ইন্টারনেট"
+        Unplug10: ইন্টারনেট
         Artist5: The Artist 5
         Unplug11: Wrap-up
         MazeEC: The Maze
@@ -99,22 +99,22 @@
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
         Webapp: Webapp
-        ArtistEC: "শিল্পী"
+        ArtistEC: শিল্পী
     trophy:
       name:
-        Bronze: "ব্রোঞ্জ"
-        Silver: "রৌপ্য"
-        Gold: "স্বর্ণ"
+        Bronze: ব্রোঞ্জ
+        Silver: রৌপ্য
+        Gold: স্বর্ণ
     concept:
       description:
-        sequence: "অনুক্রম"
+        sequence: অনুক্রম
         if: If block
         if_else: If-else block
         loop_times: Repeat times block
         loop_until: Repeat until block
         loop_while: While block
         loop_for: Counter block
-        function: "ফাংশনগুলি"
+        function: ফাংশনগুলি
         parameters: Functions with parameters
     level:
       instructions:
@@ -537,7 +537,7 @@
         loop_until: Repeat Until Block
         if: If Block
         if_else: If/else Block
-        function: "ফাংশনগুলি"
+        function: ফাংশনগুলি
         loop_while: While Block
         loop_for: Counter Block
         parameters: Functions with Parameters
@@ -547,7 +547,7 @@
         Unplug2: Computational Thinking
         Unplug3: Graph Paper Programming
         Unplug4: Algorithms
-        Unplug5: "ফাংশনগুলি"
+        Unplug5: ফাংশনগুলি
         Unplug6: Conditionals
         Unplug7: Songwriting
         Unplug8: Abstraction

@@ -2,66 +2,66 @@
   activerecord:
     errors:
       messages:
-        blank: er påkrevd
+        blank: er påkreva
     attributes:
       user:
-        name: Vis Navn
+        name: Vis namn
         email: E-post
-        username: brukernavn
-        password: passord
-        password_confirmation: Bekreftelse på passord
-        current_password: Nåværende passord
+        username: Brukarnamn
+        password: Passord
+        password_confirmation: Stadfesting av passord
+        current_password: Passordet du har no
         locale: Språk
         age: Alder
         gender: Kjønn
-        edit_header: Rediger kontodetaljer
+        edit_header: Rediger kontodetaljar
         error:
-          future: ikke mulig å være i framtiden
-  hello: Hei, verden
-  welcome_back: Velkommen tilbake, %{name}
+          future: kan ikkje vere i framtida
+  hello: Hallo, verda
+  welcome_back: Velkommen attende, %{name}
   add_teacher_form:
     code_or_email:
-      label: 'Legg til en lærer med kode eller e-postadresse:'
-      placeholder: Kode (ABCDEF) eller e-post (navn@skole.no)
+      label: 'Legg til ein lærar med kode eller e-postadresse:'
+      placeholder: Kode (ABCDEF) eller e-post (namn@skole.no)
     code:
-      label: 'Legg til en lærer med seksjonskode:'
-      placeholder: Kode (ABCDEF)
-    submit: Legg til lærer
+      label: 'Legg til ein lærar med seksjonskode:'
+      placeholder: Koden (ABCDEF)
+    submit: Legg til lærar
   add_hint_form:
-    placeholder: Skriv inn et hint her
-    submit: Legg til hint
+    placeholder: Skriv inn eit hint her
+    submit: Legg til eit hint
   appname: Code.org
-  stage: nivå
-  stage_number: Scene %{number}
-  puzzle: Oppgave
-  trophies: pokaler
-  courses: kurs
+  stage: Nivå
+  stage_number: Nivå %{number}
+  puzzle: Puslespel
+  trophies: Pokalar
+  courses: Kurs
   of: av
-  more: MER
+  more: MEIR
   less: MINDRE
-  try_hoc: 'Prøv Hour of Code (kodetimen), klikk her >> '
-  try_k8intro: Prøv vår K-8 introduksjon til Informatikkkurs (15-25 timer)
-  k8intro: K-8 Introduksjon i informatikk (15-25 timer)
-  already_started: 'Har du allerede startet? Fortsett her >> '
-  demos: 'Administrator: Alle demoer'
+  try_hoc: 'Prøv Kodetimen, klikk her >> '
+  try_k8intro: Eller prøv vår barneskuleintroduksjon til informatikkurs (15-25 timar)
+  k8intro: Barneskuleintroduksjon til informatikkurs (15-25 timar)
+  already_started: 'Allereie starta? Hald fram her >> '
+  demos: 'Administrator: Alle demoar'
   continue: Fortsett
   prize: premie
-  more_info: Mer info
+  more_info: Meir info
   auth:
     sign_in_with: Logg inn med %{provider}
-    signed_in: Logget inn!
-    signed_out: Du har logget ut av <a href="%{url}">Code.org</a>.
-    sign_out_of: Du brukte %{provider} for å logge inn. <a href="%{url}">Trykk her</a>
-      for å logge ut fra %{provider}.
-    already_signedup: Allerede registrert?
-    notyet_signedup: Har du ikke blitt medlem ennå?
+    signed_in: Logga inn!
+    signed_out: Du har logga deg av <a href="%{url}">Code.org</a>.
+    sign_out_of: Du nytta %{provider} for å logge inn. <a href="%{url}"> Klikk her</a>
+      for å logge av %{provider}.
+    already_signedup: Allereie registrert?
+    notyet_signedup: Er du ikkje medlem enno?
     google_oauth2: Google-konto
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft-konto
-    forgot_password: Har du glemt passordet ditt?
-    need_confirmation: Mottok du ikke instruksjoner om hvordan du bekrefter?
-    need_unlock: Mottok du ingen instruksjoner om hvordan du låser opp?
+    forgot_password: Har du gløymt passordet ditt?
+    need_confirmation: Har du ikkje motteke instruksjonar om korleis du stadfester?
+    need_unlock: Har du ikkje motteke instruksjonar om korleis du låser opp?
   signup_form:
     overview_student: Registrer en konto for å følge med på progresjonen din. Din
       epost er hovedsaklig brukt for å tillate deg å logge inn og for å gjenopprette
@@ -83,7 +83,7 @@
     gender: Kjønn (valgfritt)
     birthday: Bursdag (valgfritt)
     age: Alder
-    user_type: Are you a student or teacher?
+    user_type: Er du student eller lærar?
     submit: Meld deg på
     teacher: Er du en lærer?
     valid_username: Tilgjengelig!
@@ -104,7 +104,7 @@
   signin_form:
     title: Har du allerede en bruker? Logg på
     login: E-post eller brukernavn
-    password: passord
+    password: Passord
     remember: Husk meg
     submit: Logg inn
   signin:
@@ -119,7 +119,7 @@
     login: Logg inn
   password:
     reset_form:
-      title: Har du glemt passordet ditt?
+      title: Har du gløymt passordet ditt?
       email: E-postadresse
       submit: Send meg instruksjoner om å tilbakestille passordet
     change_form:
@@ -139,12 +139,12 @@
       %{name}
   follower:
     invite_sent: Invitasjon er sendt
-    added_teacher: "%{name} er lagt til som din lærer"
+    added_teacher: '%{name} er lagt til som din lærer'
     registered: Du har meldt deg på %{section_name}.
     error:
       signed_in: Vennligst logg ut før du fortsetter
       username_not_found: Brukernavnet %{username} finnes ikke
-      username_in_use: "%{username} er allerede tatt. Vennligst velg et annet"
+      username_in_use: '%{username} er allerede tatt. Vennligst velg et annet'
       no_teacher: Kan ikke finne noen som er logget på med '%{teacher_email_or_code}'.
         Vennligst be dem melde seg på og forsøk deretter å legge dem til på nytt
       section_not_found: Kunne ikke finne en seksjon med koden '%{section_code}'.
@@ -187,7 +187,7 @@
       msg_publicschool: Bekreft at du er amerikanske offentlige skolelærer.
       msg_visit_website: Besøk webside
     providers:
-      apple_itunes: "$10 iTunes Gift Card"
+      apple_itunes: $10 iTunes Gift Card
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10GB Dropbox plass
@@ -196,7 +196,7 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: "$10 Skype credit"
+      skype: $10 Skype credit
     msg:
       choose: 'Velg en premie:'
       choose_teacher: 'Click on the logo below to claim your prize:'
@@ -239,12 +239,12 @@
     edit: Rediger
     edit_model: Rediger %{model}
     update: Oppdater
-    destroy: "Ødelegg"
+    destroy: Ødelegg
     back: Tilbake
     confirm: Er du sikker?
-    created: "%{model} ble opprettet."
-    updated: "%{model} ble oppdatert."
-    destroyed: "%{model} ble slettet."
+    created: '%{model} ble opprettet.'
+    updated: '%{model} ble oppdatert.'
+    destroyed: '%{model} ble slettet.'
     access_denied: Du har ikke tilgang til denne %{model}.
   nav:
     header:
@@ -254,7 +254,7 @@
         playlab: Lag en app
         artist: Tegn noe
     user:
-      classroom: Mine elever
+      classroom: Lærerens startside
       label: Hei %{username}
       stats: Min fremdrift
       settings: Min konto
@@ -271,13 +271,13 @@
       puzzle_map: Stadier
       prizes: Samle alle %{total_trophies} pokalene og vinn premier!
       prize_earned: Alle %{total_trophies} premiene er samlet. Premien er vunnet!
-      prize_us_only: "(Kun amerikanske elever)"
+      prize_us_only: (Kun amerikanske elever)
       prizes_link: Mer info
   teacher:
     title:
       one: 'Din lærer:'
       other: 'Dine lærere:'
-    remove: "(Fjern lærer)"
+    remove: (Fjern lærer)
     confirm:
       remove: Er du sikker på at du vil fjerne denne læreren?
     tools: Lærerverktøy
@@ -292,11 +292,11 @@
       not_tried: Ikke trøtt ennå
       activity: Viser elevens aktivitet i de siste %{hours} %{plural}
       no_section: Ingen tilordnet seksjon
-      trophies: pokaler
+      trophies: Pokalar
     students:
       name: Navn
-      username: brukernavn
-      password: passord
+      username: Brukarnamn
+      password: Passord
       manage: Administrer elever
       dashboard: Gå til lærer-oversikten
       add: Legg til elever
@@ -332,17 +332,17 @@
     rollup: Fremdriftsoversikt
     activity: Nylig klasseaktivitet
     user_not_found: Læreren eller studenten ble ikke funnet
-    cant_remove_student_no_email: "%{student_name} kan ikke fjernes som din student
-      fordi %{student_name} ikke har registrert en e-postadresse"
-    cant_remove_teacher_no_email: "%{teacher_name} kan ikke fjernes som din lærer
-      fordi du ikke har registrert en e-postadresse"
-    student_teacher_disassociated: "%{teacher_name} er fjernet som lærer for %{student_name}"
+    cant_remove_student_no_email: '%{student_name} kan ikke fjernes som din student
+      fordi %{student_name} ikke har registrert en e-postadresse'
+    cant_remove_teacher_no_email: '%{teacher_name} kan ikke fjernes som din lærer
+      fordi du ikke har registrert en e-postadresse'
+    student_teacher_disassociated: '%{teacher_name} er fjernet som lærer for %{student_name}'
   user:
     email_confirm_needed: 'E-postadressen er ikke bekreftet:'
     email_resend_confirm: Send bekreftelse på nytt
-    new_password_hint: "(la stå tomt hvis du ikke vil endre det)"
-    current_password_hint: "(vi trenger ditt gjeldende passord for å bekrefte dine
-      endringer)"
+    new_password_hint: (la stå tomt hvis du ikke vil endre det)
+    current_password_hint: (vi trenger ditt gjeldende passord for å bekrefte dine
+      endringer)
     cancel:
       title: Avslutt kontoen min
       hint: Utilfreds?
@@ -390,9 +390,9 @@
     test_videos_help: Test vår nye videospiller på skolen din
     try_beta_courses: Nyhet! Prøv våre betakurs for barneskoleelever
     use_as_teacher: Bruk denne nettsiden som lærer
-    heading_elementary: "<h2>20 timers kurs for</h2><h1>barneskoleelever</h1>"
-    heading_apps: "<h2>Moro for</h2><h1>Alle</h1>"
-    heading_legacy: "<h2>Våre generelle kurs for</h2><h1>Alle aldre</h1>"
+    heading_elementary: <h2>20 timers kurs for</h2><h1>barneskoleelever</h1>
+    heading_apps: <h2>Moro for</h2><h1>Alle</h1>
+    heading_legacy: <h2>Våre generelle kurs for</h2><h1>Alle aldre</h1>
     gallery:
       your_turtle: Min kunst
       your_studio: Mine Apps
@@ -402,7 +402,7 @@
     none: Foretrekker å ikke svare
   user_type:
     student: student
-    teacher: Teacher
+    teacher: Lærer
   footer:
     help_from_html: Teknikere fra Google, Microsoft, Facebook og Twitter bidro til
       å lage denne guiden.
@@ -450,7 +450,7 @@
   slow_loading: Dette tar lengre tid enn vanlig...
   try_reloading: Last siden på nytt
   next_stage: Ferdig! Fortsett til neste nivå
-  download_pdf: "Åpne oppgavelisten"
+  download_pdf: Åpne oppgavelisten
   view_lesson_plan: Vis leksjonsplan
   pdf_download: Last ned PDF
   share_code:
@@ -498,7 +498,7 @@
     want_to_make_your_own: Vil du lage din egen?
     more: Flere &rarr;
     caption_by_name_age: av %{name}, %{age} år
-    caption_time_ago: "%{time_ago} siden"
+    caption_time_ago: '%{time_ago} siden'
   landing:
     prerelease: Dette kurset er i <span class='betatext'> beta</span>.  Det betyr
       at det ikke er den endelige versjonen av kurset, men at det blir endret når
@@ -506,7 +506,7 @@
     feedback: Gi tilbakemelding
     report_bug: Rapporter feil
     support: Få hjelp
-    support_url: "//support.code.org"
+    support_url: //support.code.org
   multi:
     wrong_title: Feil svar
     wrong_body: Svaret du har angitt er ikke riktig.  Prøv på nytt!
@@ -517,6 +517,8 @@
     wrong_body: Løsningen du har angitt er ikke riktig.  Prøv på nytt!
     correct_title: Riktig
     correct_body: Det er riktig svar.
+  text_match:
+    placeholder: Enter your answer here
   dialog:
     ok: OK
   time:
@@ -527,7 +529,7 @@
     script:
       name:
         20-hour:
-          title: K-8 Introduksjon i informatikk (15-25 timer)
+          title: Barneskuleintroduksjon til informatikkurs (15-25 timar)
           description: Denne 20-timers kurset introduserer kjernebegreper innen informatikk
             og programmering. Kurset er utviklet for bruk i 5.klasse og oppover, men
             det er morsomt å lære for alle aldersgrupper.
@@ -566,3 +568,8 @@
   zendesk_too_young_message: Beklager, yngre brukere kan ikke logge på nettstedet
     for kundestøtte. Du kan bla gjennom <a href="http://support.code.org"> support.code.org</a>
     uten å logge på eller be en forelder eller lærer å kontakte oss for deg.
+  progress:
+    not_completed: not completed
+    completed_too_many_blocks: completed, too many blocks
+    completed_perfect: completed, perfect
+    furthest_level_attempted: furthest level attempted

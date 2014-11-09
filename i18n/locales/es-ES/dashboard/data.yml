@@ -100,6 +100,7 @@
         Wordsearch: "Sopa de Letras"
         Webapp: "Webapp"
         ArtistEC: "El artista"
+        TextMatch: "Text Match"
     trophy:
       name:
         Bronze: "Bronce"
@@ -325,6 +326,7 @@
         maze_wordsearch_k_20: "¡Esta es una prueba! Mueveme en una dirección, y luego en otra para deletrear la palabra HISTORIA"
         webapp_ec_simple: "Create your web app by using createHtmlBlock."
         turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColour" block.'
+        turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new "penWidth" block. Have fun!'
     video:
       name:
         maze_intro: "Introducción al Laberinto"
@@ -340,7 +342,6 @@
         loop_for: "Bloque Contador"
         parameters: "Funciones con parámetros"
         hoc_wrapup: "Repaso de la Hora del Código"
-        20_wrapup: "Repaso de 20 horas"
         Unplug1: "¿Que son las CC?"
         Unplug2: "Pensamiento computacional"
         Unplug3: "Programación de hoja cuadriculada"
@@ -355,7 +356,7 @@
         C1_happy_maps_unplugged: "Mapas Felices"
         C1_moveitmoveit_unplugged: "Muévelo, Muévelo"
         C1_bigevent_unplugged: "El Gran Evento"
-        C1_getting_loop: "Alocandose"
+        C1_getting_loopy: "Bucleandose"
         C1_pair_programming: "Programación de pares"
         C1_maze_intro_sequencing: "Introducción a Secuenciamiento del Laberinto"
         C1_maze_debugging: "Depuración del Laberinto"
@@ -367,19 +368,22 @@
         C1_maze_loops: "Bucles de Laberinto"
         C1_playlab_storytelling: 'Laboratorio de Juego - Crear una Historia'
         C1_planting_seed: "Plantando una Semilla"
-        C1_building_foundating: "Construyendo una base"
+        C1_building_foundation: "Construyendo una base"
         C2_maze_intro: "Introducción al Laberinto"
         C2_artist_intro: "Introducción al Artista"
         C2_zuck_repeat_loop: "Bucles de Laberinto"
         C2_artist_loops: "Ciclos del Artista"
+        C2_artist_debugging: "Debugging del Artista"
+        C2_bee_loops: "Bucles de Abeja"
+        C2_bee_debugging: "Depuración Abeja"
         C2_bee_conditionals: "Condiciones de la Abeja"
         C2_playlab_createstory: 'Laboratorio de Juego - Crear una Historia'
         C2_graph_paper: "Programación de hoja cuadriculada"
         C2_conditionals_with_cards: "Condicionales"
         C2_binary_bracelets: "Pulseras Binarias"
-        C2_replay_programming: "Programación bajo presión"
+        C2_relay_programming: "Programación bajo presión"
         C2_paper_airplanes: "Aviones de Papel"
-        C3_maze_intro: "Introducción al Laberinto"
+        C3_maze_level_4: "Bucles de Laberinto"
         C3_artist_intro: "Introducción al Artista"
         C3_artist_functions: "Funciones de artista"
         C3_bee_functions: "Funciones Abeja"

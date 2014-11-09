@@ -74,7 +74,7 @@
         - unplug6
         video: Unplug6
       Unplug7:
-        title: "Şarkı yazma"
+        title: Şarkı yazma
         desc: Reading lyrics is a pretty intuitive venture for most students.  We'll
           take an activity that's already common knowledge and shift it into a solid
           education on defining and calling functions. Once students are familiar
@@ -105,7 +105,7 @@
         - unplug9
         video: Unplug9
       Unplug10:
-        title: "İnternet"
+        title: İnternet
         desc: In this lesson, students will pretend to flow through the Internet,
           all the while learning about web addresses, IPs and the DNS.
         pdfs:
@@ -122,13 +122,13 @@
         video: Unplug11
       UnplugHappyMaps:
         title: Mutlu Haritalar
-        desc: "Öğrenciler basit algoritmalar (yönergeler silsilesi) oluşturarak tek
-          bir komutla bir karakteri labirentte hareket ettirirler."
+        desc: Öğrenciler basit algoritmalar (yönergeler silsilesi) oluşturarak tek
+          bir komutla bir karakteri labirentte hareket ettirirler.
         video: C1_happy_maps_unplugged
       MoveIt:
         title: Oynat, Oynat
-        desc: "Öğrenciler basit algoritmalar (yönergeler silsilesi) oluşturarak tek
-          bir komutla bir karakteri labirentte hareket ettirirler."
+        desc: Öğrenciler basit algoritmalar (yönergeler silsilesi) oluşturarak tek
+          bir komutla bir karakteri labirentte hareket ettirirler.
         video: C1_moveitmoveit_unplugged
       PlantASeed:
         title: 'Gerçek-yaşam Algoritmaları: Bir Tohum Ek'
@@ -170,8 +170,8 @@
         video: C1_bigevent_unplugged
       GoingPlacesSafely:
         title: Biryerlere Güvenle Gitmek
-        desc: "İnternet güçlü, fakat bazen tehlikeli bir yerdir. Öğretmenler internette
-          gezinirken nasıl güvende olunabileceğine dair bilgi verir."
+        desc: İnternet güçlü, fakat bazen tehlikeli bir yerdir. Öğretmenler internette
+          gezinirken nasıl güvende olunabileceğine dair bilgi verir.
       GraphPaperProgramming:
         title: Grafik Kağıdı Programlama
         desc: Students write an algorithm (a set of instructions) using a set of predefined
@@ -184,7 +184,7 @@
           computer science and how algorithms play an essential part.
         video: C2_paper_airplanes
       BinaryBracelets:
-        title: "İkilik Bileklikler"
+        title: İkilik Bileklikler
         desc: Students create bracelets as a binary representations of the first letter
           of their name. Students learn that data can be represented and stored in
           more than one way.
@@ -218,7 +218,7 @@
           dice race game.
         video: C3_dice_race
       Internet:
-        title: "İnternet"
+        title: İnternet
         desc: Students send messages representing various Internet transmission methods
           using pieces of paper.
         video: C3_internet

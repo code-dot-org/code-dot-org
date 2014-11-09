@@ -39,8 +39,8 @@
   of: de
   more: MAI MULT
   less: MAI PUŢIN
-  try_hoc: "Încearcă Ora de Cod, faceți clic aici >> "
-  try_k8intro: "Încearcă Cursul nostru K-8 de introducere în Informatică (15-25 ore)"
+  try_hoc: 'Încearcă Ora de Cod, faceți clic aici >> '
+  try_k8intro: Încearcă Cursul nostru K-8 de introducere în Informatică (15-25 ore)
   k8intro: Cursul Introducere K-8 in Programare (15-25 ore)
   already_started: Ai început deja? Rezumă aici >>
   demos: 'Admin: Toate demo-urile'
@@ -49,7 +49,7 @@
   more_info: Mai multe informaţii
   auth:
     sign_in_with: Loghează-te cu %{provider}
-    signed_in: "Înregistrat!"
+    signed_in: Înregistrat!
     signed_out: Aţi ieşit de pe <a href="%{url}">Code.org</a>.
     sign_out_of: Ai folosit %{provider} pentru a intra. <a href="%{url}">Fă clic aici</a>
       pentru a ieşi de pe %{provider}.
@@ -63,7 +63,7 @@
     need_confirmation: Nu ai primit instrucţiuni de confirmare?
     need_unlock: Nu ai primit instrucţiuni de deblocare?
   signup_form:
-    overview_student: "Înscrie-te pentru un cont şi vei putea urmări progresul tău."
+    overview_student: Înscrie-te pentru un cont şi vei putea urmări progresul tău.
     overview_teacher: Predă ştiinţa calculatoarelor în clasa ta prin crearea unui
       cont. <p/> Vei putea urmări progresul elevilor tăi şi obţine recompense.
     no_signup_message: Poţi <a target="_blank" href="http://learn.code.org"> parcurge
@@ -71,9 +71,9 @@
       salva progresul.
     teacher_educator_guide: Consultă ghidul educatorului
     teacher_pitch: Profesor înscriere Code.org
-    teacher_title: "Înregistrare Profesor"
+    teacher_title: Înregistrare Profesor
     student_pitch: Student înscriere Code.org
-    student_title: "Înscriere student"
+    student_title: Înscriere student
     school_name: Numele şcolii (opţional)
     school_address: Adresa şcolii (opţional)
     address_placeholder: adresă, oraş, județ, cod poștal
@@ -100,12 +100,12 @@
     title: Ai deja un cont? Conectează-te
     login: Email sau nume de utilizator
     password: Parolă
-    remember: "Ține-mă minte"
+    remember: Ține-mă minte
     submit: Loghează-te
   signin:
     try_heading: Dorești să încerci să programezi fără înscriere?
-    try_hoc: "Încearcă prima dată o Oră de Cod"
-    try_20hours: "Încearcă cele 20 de ore ale noastre de Introducere în Informatică"
+    try_hoc: Încearcă prima dată o Oră de Cod
+    try_20hours: Încearcă cele 20 de ore ale noastre de Introducere în Informatică
   signinsection:
     welcome: Bine ai venit pe %{section_name}
     name: Alege-ţi numele
@@ -134,12 +134,12 @@
       %{name}
   follower:
     invite_sent: Invitație trimisă
-    added_teacher: "%{name} adăugat(ă) ca și profesorul tău"
+    added_teacher: '%{name} adăugat(ă) ca și profesorul tău'
     registered: Te-ai înregistrat pentru %{section_name}.
     error:
       signed_in: Te rugăm să te deloghezi înainte de a continua
       username_not_found: Utilizatorul %{username} nu a fost găsit
-      username_in_use: "%{username} este deja luat, te rugăm să alegi altul"
+      username_in_use: '%{username} este deja luat, te rugăm să alegi altul'
       no_teacher: Nu am găsit pe nimeni logat cu '%{teacher_email_or_code}'. Te rugăm
         să le ceri să se înregistreze aici și apoi încearcă să-i mai adăugi o dată
       section_not_found: Nu s-a putut găsi o secţiune conţinând codul '%{section_code}'.
@@ -162,10 +162,10 @@
     provider: 'Furnizor:'
     code: 'Cod:'
     redeem_header: 'De revendicat:'
-    donorschoose_register: "Înregistrează-te ca profesor pe DonorsChoose.org"
+    donorschoose_register: Înregistrează-te ca profesor pe DonorsChoose.org
     donorschoose_project: Postează un proiect
     donorschoose_how_to: Cum să-ți utilizezi codul
-    success: "Ți-ai revendicat cu succes premiul, vezi codul de mai jos."
+    success: Ți-ai revendicat cu succes premiul, vezi codul de mai jos.
     error: Premiul tău nu a putut fi revendicat, te rugăm să încerci din nou.
     error_us_only: Oferta de premii este valabilă doar pentru utilizatorii din Statele
       Unite.
@@ -185,7 +185,7 @@
         din SUA.
       msg_visit_website: Vizitaţi site-ul
     providers:
-      apple_itunes: "$10 iTunes Gift Card"
+      apple_itunes: $10 iTunes Gift Card
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10GB de spațiu pe Dropbox
@@ -194,18 +194,18 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: "$10 Skype credit"
+      skype: $10 Skype credit
     msg:
       choose: 'Alege un premiu:'
       choose_teacher: 'Click on the logo below to claim your prize:'
       earned: Ai câştigat un premiu! (Numai pentru studenţii din SUA)
       not_earned_title: Dacă termini tutorial-ul o să câştigi premii (valabil doar
         pentru studenţii din SUA)
-      not_earned: "Învață toate conceptele de informatică, colectează toate %{num_trophies}
+      not_earned: 'Învață toate conceptele de informatică, colectează toate %{num_trophies}
         trofee, şi câştigă premii reale. Poţi alege între 10GB de spaţiu gratuit pe
         Dropbox, $10 în credit pe Skype, şi descărcări gratuite de jocuri. Notă: Ofertă
         valabilă numai pentru studenţii din SUA, şi numai atât timp cât încă mai sunt
-        pe stoc."
+        pe stoc.'
       teacher:
         earned: 15 sau mai mulți studenţii au colectat toate %{num_trophies} trofee.
           Ai câștigat un premiu pentru profesor! (Numai pentru profesorii din SUA)
@@ -238,17 +238,17 @@
             Creditele de pe <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a>
             pot fi utilizate numai de profesori din școlile de stat din SUA.
   crud:
-    new_model: "%{model} nou"
+    new_model: '%{model} nou'
     show: Arată
     edit: Editează
     edit_model: Editează %{model}
     update: Actualizează
     destroy: Distruge
-    back: "Înapoi"
+    back: Înapoi
     confirm: Eşti sigur(ă)?
-    created: "%{model} a fost creat cu succes."
-    updated: "%{model} a fost actualizat cu succes."
-    destroyed: "%{model} a fost şters cu succes."
+    created: '%{model} a fost creat cu succes.'
+    updated: '%{model} a fost actualizat cu succes.'
+    destroyed: '%{model} a fost şters cu succes.'
     access_denied: Nu ai acces la această %{model}.
   nav:
     header:
@@ -270,19 +270,19 @@
     popup:
       progress: Progresul tău
       lines: 'Total linii de cod: %{lines}'
-      close: "ÎNCHIDE"
+      close: ÎNCHIDE
       mastery: Concepte
       puzzle_map: Etape
       prizes: Colectează toate cele %{total_trophies} trofee și câștigă premii!
       prize_earned: Toate cele %{total_trophies} trofee au fost colectate. Premiu
         câștigat!
-      prize_us_only: "(Numai pentru studenţii din SUA)"
+      prize_us_only: (Numai pentru studenţii din SUA)
       prizes_link: Mai multe informaţii
   teacher:
     title:
       one: 'Profesorul tău:'
       other: 'Profesorii tăi:'
-    remove: "(elimină profesor)"
+    remove: (elimină profesor)
     confirm:
       remove: Ești sigur(ă) că vrei să elimini acest profesor?
     tools: Instrumente pentru profesor
@@ -293,7 +293,7 @@
       levels_key: Cheia nivelurilor
       perfect: Terminat, perfect
       completed: Terminat, dar ai folosit prea multe blocuri
-      tried: "Încercat, dar neterminat"
+      tried: Încercat, dar neterminat
       not_tried: Nu a fost încercat incă
       activity: Indică activitatea elevului din ultimele %{hours} %{plural}
       no_section: Nici o secţiune atribuită
@@ -309,15 +309,15 @@
       confirm_remove: Sunteţi sigur că vreţi să eliminaţi acest elev?
       help_reassign: Pentru a-ţi împărţi clasa în mai multe secţiuni, alege elevii
         atribuiţi unei secţiuni noi.
-      help_register: "În loc de a petrece mult timp importând datele studenţilor,
-        îţi poţi configura clasa foarte repede rugându-i să se înregistreze. Elevii
-        tăi vor fi nevoiţi să îşi aleagă nume de utilizator şi parole, dar NU va trebui
+      help_register: În loc de a petrece mult timp importând datele studenţilor, îţi
+        poţi configura clasa foarte repede rugându-i să se înregistreze. Elevii tăi
+        vor fi nevoiţi să îşi aleagă nume de utilizator şi parole, dar NU va trebui
         să introducă o adresă de e-mail. Dacă un elev şi-a uitat parola, vei putea
-        să o resetezi pentru el/ea."
+        să o resetezi pentru el/ea.
       register: Roagă-i pe elevii tăi să se înregistreze
       vist: Cere elevilor să viziteze
-      section_code: "şi să îşi introducă codul lor de secţiune:"
-      first_please: "În primul rând, vă rugăm să %{add_section}"
+      section_code: 'şi să îşi introducă codul lor de secţiune:'
+      first_please: În primul rând, vă rugăm să %{add_section}
       for: Pentru
       enter: 'introdu:'
     sections:
@@ -332,30 +332,30 @@
       course: Curs
       rename: redenumește
       edit: editează
-      delete: "şterge"
+      delete: şterge
       confirm_delete: Eşti sigur că vrei să ştergi această secţiune?
       email: Trimite e-mail
     rollup: Grilă de progress
     activity: Activitatea recentă a clasei
     user_not_found: Profesorul sau studentul nu poate fi găsit
-    cant_remove_student_no_email: "%{student_name} nu se poate elimina ca student,
-      deoarece %{student_name} nu a înregistrat o adresă de e-mail"
-    cant_remove_teacher_no_email: "%{teacher_name} nu poate fi eliminat ca profesor
-      al tău pentru că nu ai înregistrat o adresă de e-mail"
-    student_teacher_disassociated: "%{teacher_name} a fost eliminat(ă) ca profesor
-      pentru %{student_name}"
+    cant_remove_student_no_email: '%{student_name} nu se poate elimina ca student,
+      deoarece %{student_name} nu a înregistrat o adresă de e-mail'
+    cant_remove_teacher_no_email: '%{teacher_name} nu poate fi eliminat ca profesor
+      al tău pentru că nu ai înregistrat o adresă de e-mail'
+    student_teacher_disassociated: '%{teacher_name} a fost eliminat(ă) ca profesor
+      pentru %{student_name}'
   user:
     email_confirm_needed: 'Adresa de email nu a fost confirmată:'
     email_resend_confirm: Retrimite instrucțiunile de confirmare
-    new_password_hint: "(lasă necompletat dacă nu dorești să schimbi)"
-    current_password_hint: "(avem nevoie de parola ta curentă pentru a confirma modificările)"
+    new_password_hint: (lasă necompletat dacă nu dorești să schimbi)
+    current_password_hint: (avem nevoie de parola ta curentă pentru a confirma modificările)
     cancel:
       title: Anulează-mi contul
       hint: Nefericit?
       button: Anulează-mi contul
   user_level:
     completed: Finalizat
-    tried: "Încercat"
+    tried: Încercat
   user_stats:
     recent_activity: Activitate recentă
     show_more: Arată mai multe
@@ -365,8 +365,8 @@
     all_courses: Overview of Courses 1, 2, and 3
     lesson_plans: Lesson plans
     signin_message: Deja înregistrat? %{link}
-    student_reg_link: "Înregistrare student"
-    teacher_reg_link: "Înregistrare profesor"
+    student_reg_link: Înregistrare student
+    teacher_reg_link: Înregistrare profesor
     signin_directions: Folosește un cont pentru a urmări progresul. <br/> Profesori,
       urmăriţi întreaga clasă.
     teacher_dashboard: Vezi grila de progres
@@ -385,23 +385,23 @@
     student_left_off: 'Unde ai rămas:'
     student_finished: Ai completat toate tutoriale, alege o altă clasă %{online_link}
       sau la o altă școală %{local_school_link}
-    local_school: "şcoală locală"
+    local_school: şcoală locală
     online: online
     see_details: Vezi detalii
     prize_info: 'Premii pentru participarea (doar pentru profesorii americani din
       sistemul public de învățământ): până la 1.000 dolari în recompense pentru clasă.'
     tryfirst: 'Sau, poţi încerca prima dată, urmând să te înscrii mai târziu:'
-    trynow: "Încearcă acum"
+    trynow: Încearcă acum
     add_hint_help: Ajută-ne să adăugăm sugestii inteligente pentru tutorialele Code.org
     20hour_overview: Acest curs de 20 de ore prezintă concepte de bază din informatică
       şi programare. Cursul este creat pentru utilizarea în săli de clasă pentru clasele
       K-8, dar este distractiv de învăţat la toate vârstele.
-    test_videos_help: "Încearcă noul nostru video player la şcoala ta"
+    test_videos_help: Încearcă noul nostru video player la şcoala ta
     try_beta_courses: Nou! Încearcă cursele noastre beta pentru elevi K-5
     use_as_teacher: Foloseşte acest site drept profesor
-    heading_elementary: "<h2>curse de 20 de ore pentru</h2><h1>Elevi Primari</h1>"
-    heading_apps: "<h2>Distracţie pentru</h2><h1>Toată lumea</h1>"
-    heading_legacy: "<h2>Cursul nostru general pentru</h2><h1>Toate vârstele</h1>"
+    heading_elementary: <h2>curse de 20 de ore pentru</h2><h1>Elevi Primari</h1>
+    heading_apps: <h2>Distracţie pentru</h2><h1>Toată lumea</h1>
+    heading_legacy: <h2>Cursul nostru general pentru</h2><h1>Toate vârstele</h1>
     gallery:
       your_turtle: My Art
       your_studio: My Apps
@@ -431,7 +431,7 @@
     teacher: Vezi soluția
     auth_error: Nu ești autorizat pentru a vedea soluția.
     submit: Actualizează locaţia Artistului
-    direction: "Începe Direcţia"
+    direction: Începe Direcţia
   video:
     tab: Video.
     notes: Nici un video? Arată note.
@@ -456,7 +456,7 @@
         expect functionality to be broken.
       button: Take me to the list of supported browsers
   slow_loading: Aceasta durează mai mult decât de obicei...
-  try_reloading: "Încearcă să reîncarci pagina"
+  try_reloading: Încearcă să reîncarci pagina
   next_stage: Ai terminat! Continuă cu următoarea etapă
   download_pdf: Plan de lecţie deschisă
   view_lesson_plan: Vezi Planul de Lecţii
@@ -479,7 +479,7 @@
     destroyed: Ai distrus un script.
     manage: Construiește nivelurile
     view: Vizualizare
-    back: "Înapoi la script-uri"
+    back: Înapoi la script-uri
     success: Ai editat cu succes blocurile.
     level:
       create: Crează nivel nou
@@ -488,15 +488,15 @@
   upsell:
     hoc:
       title: Oră de Cod
-      body: "Încercaţi elementele de bază ale științei calculatoarelor. Milioane de
-        oameni au încercat."
+      body: Încercaţi elementele de bază ale științei calculatoarelor. Milioane de
+        oameni au încercat.
     flappy:
       title: Codul Flappy
       body: Vrei să programezi propriul joc în mai puţin de 10 minute? Încearcă lecția
         noastră Codul Floppy!
     20hour:
       title: Curs Introductiv
-      body: "Încearcă cursul nostru de 20 de ore Introducere în Știința Calculatorului."
+      body: Încearcă cursul nostru de 20 de ore Introducere în Știința Calculatorului.
   gallery:
     students_drew_these_with_code: Elevii au realizat aceste desene prin programare!
     students_made_these_with_code: Students made these with code!
@@ -509,7 +509,7 @@
     want_to_make_your_own: Vrei să realizezi propriul tău program?
     more: Mai mult &rarr;
     caption_by_name_age: by %{name}, age %{age}
-    caption_time_ago: "%{time_ago} ago"
+    caption_time_ago: '%{time_ago} ago'
   landing:
     prerelease: Acest curs este în <span class='betatext'>beta</span>. Asta înseamnă
       că aceasta nu este versiunea finală a cursului, şi poate fii revizuit din moment
@@ -517,7 +517,7 @@
     feedback: Trimiteți feedback
     report_bug: Raporteazã eroare
     support: Obţine ajutor
-    support_url: "//support.code.org"
+    support_url: //support.code.org
   multi:
     wrong_title: Răspuns incorect
     wrong_body: Răspunsul introdus nu este corect.  Te rugăm să încerci din nou!
@@ -544,29 +544,29 @@
             clasele K-8, dar este distractiv de învăţat la toate vârstele.
         Hour of Code:
           title: Oră de Cod
-          description: "[șir gol]"
+          description: '[șir gol]'
         edit-code:
           title: Editează Codul
-          description: "[șir gol]"
+          description: '[șir gol]'
         events:
           title: Evenimente
-          description: "[șir gol]"
+          description: '[șir gol]'
         builder:
           title: Constructor
-          description: "[șir gol]"
+          description: '[șir gol]'
         flappy:
           title: Codul Flappy
           description: Vrei să programezi propriul joc în mai puţin de 10 minute?
             Încearcă lecția noastră Codul Floppy!
         jigsaw:
           title: Puzzle
-          description: "[șir gol]"
+          description: '[șir gol]'
         step:
           title: Pas
-          description: "[șir gol]"
+          description: '[șir gol]'
         sample_level_builder:
           title: Constructor de niveluri de probă
-          description: "[șir gol]"
+          description: '[șir gol]'
   age_interstitial:
     age: Varsta ta
     header: Actualizarea Informaţiilor Contului

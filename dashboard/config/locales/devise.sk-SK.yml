@@ -52,8 +52,8 @@
         confirm link to finalize confirming your new email address.
       updated: You updated your account successfully.
     sessions:
-      signed_in: "Úspešne prihlásení."
-      signed_out: "Úspešne odhlásení."
+      signed_in: Úspešne prihlásení.
+      signed_out: Úspešne odhlásení.
     unlocks:
       send_instructions: You will receive an email with instructions about how to
         unlock your account in a few minutes.
@@ -70,4 +70,4 @@
       not_locked: was not locked
       not_saved:
         one: '1 error prohibited this %{resource} from being saved:'
-        other: "%{count} errors prohibited this %{resource} from being saved:"
+        other: '%{count} errors prohibited this %{resource} from being saved:'

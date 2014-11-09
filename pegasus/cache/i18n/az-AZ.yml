@@ -1,26 +1,26 @@
 "az-AZ":
   hello: Salam, dünya
   select_language: Please select your language
-  computer_science: "İnformatika"
-  computer_science_edweek: "İnformatika təhsili həftəsi"
+  computer_science: İnformatika
+  computer_science_edweek: İnformatika təhsili həftəsi
   csedweek_dates: 9-15 dekabr 2013-cü il
-  n_have_learned_an_hoc: "<h1>#</h1><h3>nəfər artıq </h3><h2>Kod Saatı</h2>nda özünü
-    sınayıb"
+  n_have_learned_an_hoc: <h1>#</h1><h3>nəfər artıq </h3><h2>Kod Saatı</h2>nda özünü
+    sınayıb
   anybody_can_learn: Hər kəs öyrənə bilər.
-  learn_now: "İndi öyrən"
-  petition_message: "Əgər fikirləşirsinizsə ki, hər bir məktəbdə bütün tələbələrin
-    informatikanı öyrənmək imkanı olmalıdır, adınızı yazın"
+  learn_now: İndi öyrən
+  petition_message: Əgər fikirləşirsinizsə ki, hər bir məktəbdə bütün tələbələrin
+    informatikanı öyrənmək imkanı olmalıdır, adınızı yazın
   petition_sign_message: 'Razısınızsa, adınızı yazın. Daha # nəfərə qoşulun.'
   name: Ad
   email: E-poçt
-  zipcode: "Ölkə və ya poçt indeksi"
+  zipcode: Ölkə və ya poçt indeksi
   submit: Göndər
   twentyhours_heading: Try our Intro to Computer Science Course
   twentyhours_text: Finished your first Hour of Code? Learn more core computer science
     and programming concepts in this follow-up course.
   hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
     8 - 14, 2014<br/>
-  hoc2014_students: "Şagirdlər"
+  hoc2014_students: Şagirdlər
   hoc2014_try: Try it
   hoc2014_teachers: Teachers
   hoc2014_host: Host it
@@ -28,7 +28,7 @@
   hoc2014_support: Support it
   hoc2014_whatishoc: What is the Hour of Code?
   twentyhours_trynow: Try now
-  california_heading: "İnformatikanı tədris etməyi məktəbinizdən xahiş edin"
+  california_heading: İnformatikanı tədris etməyi məktəbinizdən xahiş edin
   california_text: Any teacher can offer our <a href='http://learn.code.org/'>free
     intro course</a>.  Any elementary school can <a href='http://code.org/educate/k5'>teach
     computer science</a>. Ask high schools to <a href='http://code.org/educate/districts'>partner
@@ -37,16 +37,16 @@
   flappy_heading: Flappy Birthday to Code.org
   flappy_text: Code.org just turned 1 year old.<br/><br/> Celebrate with us by making
     your own custom <b>Flappy</b> game. Code your own rules, and share it with friends!
-  view_english_site: "İngiliscə saytı göstər"
+  view_english_site: İngiliscə saytı göstər
   non_english_tutorials: 'Bir neçə dilə tərcümə olunmuş dərsliklər:'
-  write_your_first_program: "İlk kompüter proqramınızı yazın"
+  write_your_first_program: İlk kompüter proqramınızı yazın
   learn_cs_concepts: İnfromatikanın təməl anlayışlarını sürüklə-burax tipli proqramlaşdırma
     ilə öyrənin. Bu oyuna bənzər dərslikdə Bill Qeyts və Mark Tsukerberqin video mühazirələri,
     "Angry Birds" və "Plants vs. Zombies" yer alır. "Təkrar et" dövrləri, "əgər-onda"
     ifadələrini və sadə alqoritmləri öyrənin.
   all_ages: Bütün yaşlar
   beginner: Yeni başlayan
-  n_participants: "# iştirakçı"
+  n_participants: '# iştirakçı'
   go: Getdik
   thank_you_: Sağ olun!
   congratulations: Təbriklər!
@@ -60,16 +60,16 @@
     our <a href='http://learn.code.org'>20-hour course</a>, or see more options to
     <a href='/learn/beyond'>Learn beyond One Hour</a>.
   thanks_for_submitting: Göndərdiyiniz üçün təşəkkürlər!
-  if_you_enjoyed: "Öyrənmək xoşunuza gəldisə, dostlarınızdan da bunu sınaqdan keçirməyi
-    xahiş edin! Bütün dünyanın öyrənməyini istəyirik."
+  if_you_enjoyed: Öyrənmək xoşunuza gəldisə, dostlarınızdan da bunu sınaqdan keçirməyi
+    xahiş edin! Bütün dünyanın öyrənməyini istəyirik.
   personalize_certificate: Sertifikatınızı fərdiləşdirin
   share_achievement: Nailiyyətinizi bölüşün
   beyond_hour_message: Burada <a href='/learn/beyond'>Kod Saatından sonra da öyrən</a>məyin
     yolları barədə əlavə məlumat var
   leaderboards_for_hoc: Kod Saaatı üçün liderlər cədvəli.
   support_url: http://support.code.org/
-  country: "Ölkə"
-  city: "Şəhər"
+  country: Ölkə
+  city: Şəhər
   gender: Cins
   boys: Oğlanlar
   girls: Qızlar
@@ -83,8 +83,8 @@
   beyond_an_hour: KOD SAATI bitəndən sonra >
   get_started: Başlayın
   i_agree: Razıyam
-  participant_select: "- Seçin -"
-  participant_student: "şagird"
+  participant_select: '- Seçin -'
+  participant_student: şagird
   participant_parent: Valideyn
   participant_educator: Təhsil işçisi
   participant_engineer: Proqramçı-mühəndis
@@ -102,7 +102,7 @@
   learn_next_level: Continue to the next level
   learn_online: Onlayn öyrənin
   learn_classes: Yerli siniflər tapın
-  hoc_is_here: "#HourOfCode Kod Saatı gəldi - özünüz baxın! @codeorg"
+  hoc_is_here: '#HourOfCode Kod Saatı gəldi - özünüz baxın! @codeorg'
   just_did_hoc: 'Mən elə indicə #HourOfCode Kod Saatını bitirdim - özünüz baxın! @codeorg'
   learn_hoc: Bir Kod Saatı öyrənin
   beyond_hoc: Kod Saatı bitəndən sonra
@@ -112,11 +112,11 @@
   help_recruit_coders: Komandanıza daha çox proqramçı cəlb etməyimizə kömək edin!
   help_recruit: Daha çox proqramçı cəlb etməyimizə kömək edin!
   lines_of_code: BU GÜNƏ QƏDƏR <b># SƏTİRDƏN ÇOX KOD</b> YAZILIB.
-  lines_of_code_alt: "ŞAGİRDLƏR <b>#</b> SƏTİR KOD YAZIB"
-  who_has_done_hoc: "#HourOfCode Kod Saatını kim bitirdi? @codeorg"
+  lines_of_code_alt: ŞAGİRDLƏR <b>#</b> SƏTİR KOD YAZIB
+  who_has_done_hoc: '#HourOfCode Kod Saatını kim bitirdi? @codeorg'
   hoc_leaderboards: Kod Saatı liderlər cədvəli
-  students_and_lines: "%{students} şagird Kod Saatını başa vurdu və %{lines} sətir
-    kod yazdı."
+  students_and_lines: '%{students} şagird Kod Saatını başa vurdu və %{lines} sətir
+    kod yazdı.'
   start_hoc: Kod Saatına indi başlayın
   contact_form_topic_press: Press/media (interview or speaking engagement)
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
@@ -211,7 +211,7 @@
   dashboard_action_edit: Düzəliş et
   dashboard_action_save: Save
   dashboard_action_save_all: Save all
-  dashboard_action_cancel: "İmtina et"
+  dashboard_action_cancel: İmtina et
   dashboard_action_delete: Delete
   dashboard_action_confirm: Delete?
   dashboard_action_delete_yes: Bəli
@@ -234,7 +234,7 @@
   dashboard_sections_table_secret: Secret type
   dashboard_sections_table_grade: Grade
   dashboard_sections_table_course: Course
-  dashboard_sections_table_students: "Şagirdlər"
+  dashboard_sections_table_students: Şagirdlər
   dashboard_sections_table_code: Section Code
   dashboard_sections_name: Section Name
   dashboard_sections_choose_secret: If you would like to provide accounts to your
@@ -316,7 +316,7 @@
     week alone:'
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
   dashboard_teacher: Teacher
-  dashboard_student: "şagird"
+  dashboard_student: şagird
   dashboard_sections_email_question: Do all students have a valid email address?
   dashboard_sections_account_creation_question: Who creates the student's account?
   dashboard_sections_password_question: What do students use as a "password"?
@@ -328,7 +328,7 @@
   dashboard_sections_password_account_creation: Student-created text password
   dashboard_sections_login_type_explanation: This table helps explain which of these
     login types, <b>picture, word, or email</b>, you'll want to choose for a section.
-  codeorg_name: "İlk kompüter proqramınızı yazın"
+  codeorg_name: İlk kompüter proqramınızı yazın
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: An introduction to JavaScript
   khanes_name: An introduction to JavaScript

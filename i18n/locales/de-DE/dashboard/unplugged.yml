@@ -1,146 +1,146 @@
-de:
+"de":
   data:
     unplugged:
       Unplug1:
-        title: Einführung in die Informatik
-        desc: Diese Lektion führt die Schüler in die Konzepte der Informatik ein und erklärt, was ein Informatiker macht. Die Schüler können dabei in die Rolle eines Informatikers schlüpfen. Am Ende der Lektion können alle SchülerInnen etwas wertvolles mit nach Hause nehmen. Sie sind vielleicht versucht gewisse Wörter, welche erst in späteren Lektionen vertieft werden, auszulassen. Sie werden in dieser Lektion jedoch in einer lustigen und spielerischen Art präsentiert, was die Lernerfahrung stark steigert.
+        title: "Einführung in die Informatik"
+        desc: "Diese Lektion führt die Schüler in die Konzepte der Informatik ein und erklärt, was ein Informatiker macht. Die Schüler können dabei in die Rolle eines Informatikers schlüpfen. Am Ende der Lektion können alle SchülerInnen etwas wertvolles mit nach Hause nehmen. Sie sind vielleicht versucht gewisse Wörter, welche erst in späteren Lektionen vertieft werden, auszulassen. Sie werden in dieser Lektion jedoch in einer lustigen und spielerischen Art präsentiert, was die Lernerfahrung stark steigert."
         pdfs:
           - unplug1
-        video: Unplug1
+        video: "Unplug1"
       Unplug2:
-        title: Computerorientiertes Denken
-        desc: Mit nichts als Papier und Stift, lernen die Schüler/-innen die vier Schritte des Computerbezogenen Denkens. Nach einer kurzen Einführung sollten die Schüler/-innen in Teams aufgeteilt werden, wo sie Anweisungen für andere Teams erstellen, um ein bestimmtes Monster (aus einem Katalog von vorausgewählten Monster) zu zeichnen. Der gesamte Vorgang soll zersetzt werden, danach werden die Teams die Monter auf Muster überprüfen, verschiedene Details abstrahieren und diese Informationen zu einem Algorithmus(Anweisungen) zusammenstellen, welcher beschreibt wie das Monster zu zeichnen ist. Die Teams tauschen dann ihre Algorithmen untereinander aus und zeichnen das Monster basierend auf dem erhaltenen Algorithmus. Ist das Monster so wie vom ursprünglichen Team gedacht?
+        title: "Computerorientiertes Denken"
+        desc: "Mit nichts als Papier und Stift, lernen die Schüler/-innen die vier Schritte des Computerbezogenen Denkens. Nach einer kurzen Einführung sollten die Schüler/-innen in Teams aufgeteilt werden, wo sie Anweisungen für andere Teams erstellen, um ein bestimmtes Monster (aus einem Katalog von vorausgewählten Monster) zu zeichnen. Der gesamte Vorgang soll zersetzt werden, danach werden die Teams die Monter auf Muster überprüfen, verschiedene Details abstrahieren und diese Informationen zu einem Algorithmus(Anweisungen) zusammenstellen, welcher beschreibt wie das Monster zu zeichnen ist. Die Teams tauschen dann ihre Algorithmen untereinander aus und zeichnen das Monster basierend auf dem erhaltenen Algorithmus. Ist das Monster so wie vom ursprünglichen Team gedacht?"
         pdfs:
           - unplug2
-        video: Unplug2
+        video: "Unplug2"
       Unplug3:
-        title: Millimeterpapier Programmierung
+        title: "Millimeterpapier Programmierung"
         desc: 'Die Schüler/-innen "programmieren" sich gegenseitig Bilder zu zeichnen, wodurch sie schnell verstehen um was es beim programmieren eigentlich geht. Die Lektion beginnt mit Schüler/-innen, welche sich gegenseitig anweisen farbige Quadrate auf Millimeterpapier zu zeichnen, um das ursprüngliche Bild zu rekonstruieren. Ist noch Zeit vorhanden, so können die Schüler/-innen eigene Bilder entwerfen.'
         pdfs:
           - unplug3
-        video: Unplug3
+        video: "Unplug3"
       Unplug4:
-        title: Algorithmen
+        title: "Algorithmen"
         desc: 'Diese Lektion behandelt Algorithmen.  Mit Tangram-Formen und Millimeterpapier wird die erste Übung zeigen wie wichtig es ist, jede Anweisung so klar und eindeutig wie möglich zu machen.  Danach wird die Klasse untersuchen wie viele Möglichkeiten es gibt um ein Papier in ein Rechteck zu falten, wobei sie feststellen das einige Methoden mehr oder weniger Faltungen erlauben.'
         pdfs:
           - unplug4
-        video: Unplug4
+        video: "Unplug4"
       Unplug5:
-        title: Funktionen
+        title: "Funktionen"
         desc: 'In dieser Lektion werden die Studenten einen Sonnenfänger aus Faden, Perlen und einem besonderen Talisman machen. Die Schüler werden einer Reihe sich wiederholender Schritten folgen und dann aufgefordert bestimmte Arbeitsschritte, welche immer wieder gemacht werden, zu identifizieren. Sobald diese Arbeitsschrite definiert sind, werden sie aus einem Hauptprogramm aufgerufen und der ganze rafinierte Herstellungsprozess wird auf ein Blatt Papier aufgezeichnet. Das endgültige Programm richtet sich an die gesamte Klasse, unabhängig der verschiedenen Arten der Fäden, Perlen und Talismane. Um dies effektiv zu ermöglichen, müssen die Schüler/-innen ihre Details (spezifische Materialien) "abstrahieren"  und vage Begriffe für die Versorgung jedes Teilchens erstellen.  Diese Verwendung von generischen Platzhalter ist eine wunderbare Einführung der Variablen.'
         pdfs:
           - unplug5
-        video: Unplug5
+        video: "Unplug5"
       Unplug6:
-        title: Bedingungen
+        title: "Bedingungen"
         desc: 'Dies ist ein Klassen-Spiel.  Nach der Einführung der Idee von Bedingungen, Wenn-Anweisungen und Schleifen, kann die Klasse,  zusammen mit einem zuvor erstellte Programm, einem Kartenspiel und ein bisschen Glück, üben.'
         pdfs:
           - unplug6
-        video: Unplug6
+        video: "Unplug6"
       Unplug7:
-        title: Lieder schreiben
+        title: "Lieder schreiben"
         desc: 'Noten lesen ist für viele kein Problem.  Wir nehmen eine Aktivität, die bereits allgemein bekannt ist und führen die Schüler/-innen in die Definition und das Aufrufen von Funktionen ein. Nachdem Studenten mit dem Definitions/Aufruf-Prozess vertraut sind, werden wir die weitere Funktionen erstellen, welchen wir zusätzlich noch Parameter übergeben.'
         pdfs:
           - unplug7
-        video: Unplug7
+        video: "Unplug7"
       Unplug8:
-        title: Abstraktion
-        desc: Diese Aktivität kombiniert den Alltag Ihrer Schüler und ein Denkspiel im Mad-Lib Stil denken , um der Klasse die Wirksamkeit der Abstraktion zu demonstrieren.
+        title: "Abstraktion"
+        desc: "Diese Aktivität kombiniert den Alltag Ihrer Schüler und ein Denkspiel im Mad-Lib Stil denken , um der Klasse die Wirksamkeit der Abstraktion zu demonstrieren."
         pdfs:
           - unplug8
-        video: Unplug8
+        video: "Unplug8"
       Unplug9:
-        title: Relais-Programmierung
+        title: "Relais-Programmierung"
         desc: 'Diese Lektion nimmt Ideean aus einer vorhergehenden Aktivität (4. Millimeterpapier Programmierung) und benutzt die dort erlernten Fähigkeiten um zu unterstreichen wie wichtig es ist Programme welche in Sequenz ablaufen zu vervollständigen und regelmässig auf "Bugs" zu überprüfen.'
         pdfs:
           - unplug9
-        video: Unplug9
+        video: "Unplug9"
       Unplug10:
-        title: das Internet
-        desc: In dieser Lektion werden die Schüler/-innen durch das Internet fliegen, während sie lernen wie Internetadressen, IPs und der DNS funktioniert.
+        title: "das Internet"
+        desc: "In dieser Lektion werden die Schüler/-innen durch das Internet fliegen, während sie lernen wie Internetadressen, IPs und der DNS funktioniert."
         pdfs:
           - unplug10
-        video: Unplug10
+        video: "Unplug10"
       Unplug11:
-        title: Abschluss
-        desc: Als Abschluss der ersten 20-Stunden Serie kann die Klasse nochmals all ihre Lieblingsmomente durchleben, während ihr die nächsten Schritte präsentiert werden, mit denen sie, wenn sie interessiert ist, ihre Reise durch die Informatik fortführen kann.
+        title: "Abschluss"
+        desc: "Als Abschluss der ersten 20-Stunden Serie kann die Klasse nochmals all ihre Lieblingsmomente durchleben, während ihr die nächsten Schritte präsentiert werden, mit denen sie, wenn sie interessiert ist, ihre Reise durch die Informatik fortführen kann."
         pdfs:
           - unplug11
-        video: Unplug11
+        video: "Unplug11"
       UnplugHappyMaps:
-        title: Glücklich Karten
-        desc: Die Schüler erstellen einfache Algorithmen (Gruppen von Anweisungen), um einen Charakter mit einem einzigen Befehl durch ein Labyrinth zu steuern.
-        video: C1_happy_maps_unplugged
+        title: "Glücklich Karten"
+        desc: "Die Schüler erstellen einfache Algorithmen (Gruppen von Anweisungen), um einen Charakter mit einem einzigen Befehl durch ein Labyrinth zu steuern."
+        video: "C1_happy_maps_unplugged"
       MoveIt:
-        title: Achtung, fertig, LOS
-        desc: Die Schüler erstellen einfache Algorithmen (Gruppen von Anweisungen), um einen Charakter mit einem einzigen Befehl durch ein Labyrinth zu steuern.
-        video: C1_moveitmoveit_unplugged
+        title: "Achtung, fertig, LOS"
+        desc: "Die Schüler erstellen einfache Algorithmen (Gruppen von Anweisungen), um einen Charakter mit einem einzigen Befehl durch ein Labyrinth zu steuern."
+        video: "C1_moveitmoveit_unplugged"
       PlantASeed:
         title: 'Real-Life-Algorithmen: Pflanze Samen'
-        desc: Diese Lektion soll zeigen, dass wir Algorithmen tagein, tagaus benutzen, welches wir am Pflanzen von Samen demonstrieren. Es soll auch zeigen, das in der Informatik Algorithmen einen essentielen Teil spielen.
-        video: C1_planting_seed
+        desc: "Diese Lektion soll zeigen, dass wir Algorithmen tagein, tagaus benutzen, welches wir am Pflanzen von Samen demonstrieren. Es soll auch zeigen, das in der Informatik Algorithmen einen essentielen Teil spielen."
+        video: "C1_planting_seed"
       BuildingAFoundation:
-        title: Grundlagen aufbauen
-        desc: Nur mit den gegebenen Materialien bauen die Schüler/-innen eine Struktur. Die Struktur muss eine gewisse Eigenheit besitzen(eine bestimmte Höhe erreichen oder ein Gewicht tragen). Dabei diskutieren sie was es heisst persistent zu sein wenn es kompliziert wird.
-        video: C1_building_foundation
+        title: "Grundlagen aufbauen"
+        desc: "Nur mit den gegebenen Materialien bauen die Schüler/-innen eine Struktur. Die Struktur muss eine gewisse Eigenheit besitzen(eine bestimmte Höhe erreichen oder ein Gewicht tragen). Dabei diskutieren sie was es heisst persistent zu sein wenn es kompliziert wird."
+        video: "C1_building_foundation"
       GettingLoopy:
-        title: Schöne Schleifen
-        desc: Diese Lektion führt Schleifen (wiederholte Anweisungen) mithilfe einer Tanzaktivität ein. Die Schüler/-innen lernen eine simple Choreographie und werden dann angewiesen sie zu wiederholen.
-        video: C1_getting_loopy
+        title: "Schöne Schleifen"
+        desc: "Diese Lektion führt Schleifen (wiederholte Anweisungen) mithilfe einer Tanzaktivität ein. Die Schüler/-innen lernen eine simple Choreographie und werden dann angewiesen sie zu wiederholen."
+        video: "C1_getting_loopy"
       RelayProgramming:
-        title: Relais-Programmierung
+        title: "Relais-Programmierung"
         desc: 'Bei einem Staffellauf schreiben die Schüler/-innen einen Algorithmus, basierend auf einem "Millimeterpapier Programmierung" Bild. Sie können nur jeweils eine Anweisung pro Lauf schreiben. Machen sie einen Fehler, so müssen sie alles was seit dem Fehler geschrieben wurde wieder löschen.'
-        video: C2_relay_programming
+        video: "C2_relay_programming"
       Conditionals:
-        title: Bedingungen
+        title: "Bedingungen"
         desc: 'Als Einführung in die bedingten Anweisungen spielen die Schüler/-innen ein Kartenspiel, für welches sie Regeln wie "Wenn ich eine rote Karte ziehe, bekomme ich einen Punkt" und "Wenn ich eine schwarze Karte ziehe, bekommst du einen Punkt" erstellen.'
-        video: C2_conditionals_with_cards
+        video: "C2_conditionals_with_cards"
       BigEvent:
-        title: Der große Event
+        title: "Der große Event"
         desc: 'Die Schüler/-innen werden an das Konzept der "Ereignisse" herangeführt, auf welche der Computer die ganze Zeit wartet. Die Lehrperson drückt einen Knopf auf einer Papierferbedienung, worauf die Schüler/-innen entsprechend reagieren.'
-        video: C1_bigevent_unplugged
+        video: "C1_bigevent_unplugged"
       GoingPlacesSafely:
-        title: Sicher unterwegs
-        desc: Das Internet ist ein machtvolles Werkzeug, bietet aber einige gefährliche Orte. Die Lehrperson zeigt, wie man sicher ist während dem Surfen.
+        title: "Sicher unterwegs"
+        desc: "Das Internet ist ein machtvolles Werkzeug, bietet aber einige gefährliche Orte. Die Lehrperson zeigt, wie man sicher ist während dem Surfen."
       GraphPaperProgramming:
-        title: Programmieren auf Millimeterpapier
-        desc: Die Schüler/-innen notieren einen Algorithmus(ein Satz von Anweisungen), mittels eines vordefinierten Satz von Anweisungen, mit dem sie ihre Klassenkameraden anweisen ein Bild zu reproduzieren.
-        video: C2_graph_paper
+        title: "Programmieren auf Millimeterpapier"
+        desc: "Die Schüler/-innen notieren einen Algorithmus(ein Satz von Anweisungen), mittels eines vordefinierten Satz von Anweisungen, mit dem sie ihre Klassenkameraden anweisen ein Bild zu reproduzieren."
+        video: "C2_graph_paper"
       PaperPlanes:
         title: 'Alltagsalgorithmen: Papierflieger'
-        desc: Diese Lektion macht deutlich, wie wir in unserem täglichen Leben Algorithmen anwenden, beispielsweise beim Basteln eines Papierfliegers. Diese Lektion richtet ihr Augenmerk auf das Gesamtbild der Informatik und die wichtige Rolle, die Algorithmen dort spielen.
-        video: C2_paper_airplanes
+        desc: "Diese Lektion macht deutlich, wie wir in unserem täglichen Leben Algorithmen anwenden, beispielsweise beim Basteln eines Papierfliegers. Diese Lektion richtet ihr Augenmerk auf das Gesamtbild der Informatik und die wichtige Rolle, die Algorithmen dort spielen."
+        video: "C2_paper_airplanes"
       BinaryBracelets:
-        title: Binäre Armbänder
-        desc: Schüler entwerfen Armbänder zur Binärdarstellung des ersten Buchstabens ihres Namens. Schüler lernen, dass Daten auf mehr als eine Art dargestellt und gespeichert werden können.
-        video: C2_binary_bracelets
+        title: "Binäre Armbänder"
+        desc: "Schüler entwerfen Armbänder zur Binärdarstellung des ersten Buchstabens ihres Namens. Schüler lernen, dass Daten auf mehr als eine Art dargestellt und gespeichert werden können."
+        video: "C2_binary_bracelets"
       DigitalFootprint:
-        title: Dein digitaler Fußabdruck
-        desc: Die Lehrer bringen den Schülern die Idee nahe, dass man einen digitalen Fußabdruck oder eine Fährte hinterläßt, wenn man Informationen über sich selbst ins Internet stellt, was Konsequenzen hat.
+        title: "Dein digitaler Fußabdruck"
+        desc: "Die Lehrer bringen den Schülern die Idee nahe, dass man einen digitalen Fußabdruck oder eine Fährte hinterläßt, wenn man Informationen über sich selbst ins Internet stellt, was Konsequenzen hat."
       ComputationalThinking:
-        title: Computerorientiertes Denken
-        desc: Die Schüler benutzen die Schritte computerorentierten Denkens (Zerlegung, Musterabgleich, Zusammenfassung, Algorithmus) um herauszufinden, wie man ein Spiel spielt, das ihnen ohne Anleitung vorgelegt wurde.
-        video: C3_computational_thinking
+        title: "Computerorientiertes Denken"
+        desc: "Die Schüler benutzen die Schritte computerorentierten Denkens (Zerlegung, Musterabgleich, Zusammenfassung, Algorithmus) um herauszufinden, wie man ein Spiel spielt, das ihnen ohne Anleitung vorgelegt wurde."
+        video: "C3_computational_thinking"
       FunctionalSuncatchers:
-        title: Funktionale Sonnenfänger
-        desc: Die Schüler/-innen erstellen einen Algorithmus mit Variablen und Funktionen(wiederverwendbarer Code) um einen Sonnenfänger mit Faden und Perlen zu machen.
-        video: C3_functional_suncatchers
+        title: "Funktionale Sonnenfänger"
+        desc: "Die Schüler/-innen erstellen einen Algorithmus mit Variablen und Funktionen(wiederverwendbarer Code) um einen Sonnenfänger mit Faden und Perlen zu machen."
+        video: "C3_functional_suncatchers"
       SongwritingParameters:
-        title: Komponieren mit Parametern
-        desc: Der Chor soll den Schüler/-innen das Konzept der Übergabe von Parameter näherbringen (welche das Resultat einer Funktion beeinflussen).
-        video: C3_songwriting_with_parameters
+        title: "Komponieren mit Parametern"
+        desc: "Der Chor soll den Schüler/-innen das Konzept der Übergabe von Parameter näherbringen (welche das Resultat einer Funktion beeinflussen)."
+        video: "C3_songwriting_with_parameters"
       DiceRace:
         title: 'Algorithmen im Alltag: Würfel-Rennen'
-        desc: Wir benutzten täglich Algorithmen, was diese Lektion zeigen soll. Dazu werden die Schüler/-innen werden dazu einen Algorithmus für ein Würfel-Rennen ermitteln und niederschreiben.
-        video: C3_dice_race
+        desc: "Wir benutzten täglich Algorithmen, was diese Lektion zeigen soll. Dazu werden die Schüler/-innen werden dazu einen Algorithmus für ein Würfel-Rennen ermitteln und niederschreiben."
+        video: "C3_dice_race"
       Internet:
-        title: Internet
-        desc: Die Schüler/-innen verschicken Nachrichten, welche Internetübertragungen repräsentieren, mittels Papierschnipsel.
-        video: C3_internet
+        title: "Internet"
+        desc: "Die Schüler/-innen verschicken Nachrichten, welche Internetübertragungen repräsentieren, mittels Papierschnipsel."
+        video: "C3_internet"
       Crowdsourcing:
-        title: Crowdsourcing
-        desc: Students use crowdsourcing, a problem-solving technique common in computer science, to complete a task together as a classroom more efficiently than if a student attempted it alone.
-        video: C3_crowdsourcing
+        title: "Crowdsourcing"
+        desc: "Students use crowdsourcing, a problem-solving technique common in computer science, to complete a task together as a classroom more efficiently than if a student attempted it alone."
+        video: "C3_crowdsourcing"
       DigitalCitizenship:
-        title: Digitalen Staatsbürgerschaft
-        desc: Schüler entdecken den Unterschied zwischen privaten und persönlichen Informationen und lernen zu verstehen was sicher und was unsicher ist online zu teilen.
+        title: "Digitalen Staatsbürgerschaft"
+        desc: "Schüler entdecken den Unterschied zwischen privaten und persönlichen Informationen und lernen zu verstehen was sicher und was unsicher ist online zu teilen."

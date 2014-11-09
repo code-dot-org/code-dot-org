@@ -530,7 +530,7 @@
         George Jetson: "Marechal Rondon"
       unique level name here:
         title: "título"
-        description here: "description here"
-        Question: "Question"
-        wrong answer: "wrong answer"
-        right answer: "right answer"
+        description here: "descrição aqui"
+        Question: "Pergunta"
+        wrong answer: "resposta errada"
+        right answer: "resposta certa"

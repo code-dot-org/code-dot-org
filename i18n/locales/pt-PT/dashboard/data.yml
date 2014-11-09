@@ -100,6 +100,7 @@
         Wordsearch: "Wordsearch"
         Webapp: "Webapp"
         ArtistEC: "O Artista"
+        TextMatch: "Text Match"
     trophy:
       name:
         Bronze: "Bronze"
@@ -329,6 +330,7 @@
         maze_wordsearch_k_20: "This is a test! Move me one way, then another to spell the word STORY"
         webapp_ec_simple: "Create your web app by using createHtmlBlock."
         turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColour" block.'
+        turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new "penWidth" block. Have fun!'
     video:
       name:
         maze_intro: "Introdução ao labirinto"
@@ -344,7 +346,6 @@
         loop_for: "Bloco Contador"
         parameters: "Funções com parâmetros"
         hoc_wrapup: "Resumo Hora de Código"
-        20_wrapup: "Resumo de 20 Horas"
         Unplug1: "What is CS?"
         Unplug2: "Pensamento computacional"
         Unplug3: "Programação de papel milimetrico"
@@ -359,7 +360,7 @@
         C1_happy_maps_unplugged: "Happy Maps"
         C1_moveitmoveit_unplugged: "Move It, Move It"
         C1_bigevent_unplugged: "O Grande Evento"
-        C1_getting_loop: "Getting Loopy"
+        C1_getting_loopy: "Getting Loopy"
         C1_pair_programming: "Pair Programming"
         C1_maze_intro_sequencing: "Maze Sequencing Intro"
         C1_maze_debugging: "Maze Debugging"
@@ -371,19 +372,22 @@
         C1_maze_loops: "Maze Loops"
         C1_playlab_storytelling: 'Play Lab - Create a Story'
         C1_planting_seed: "Planting a Seed"
-        C1_building_foundating: "Building a Foundation"
+        C1_building_foundation: "Building a Foundation"
         C2_maze_intro: "Introdução ao labirinto"
         C2_artist_intro: "Introdução ao artista"
         C2_zuck_repeat_loop: "Maze Loops"
         C2_artist_loops: "Artist Loops"
+        C2_artist_debugging: "Artist Debugging"
+        C2_bee_loops: "Bee Loops"
+        C2_bee_debugging: "Bee Debugging"
         C2_bee_conditionals: "Bee Conditionals"
         C2_playlab_createstory: 'Play Lab - Create a Story'
         C2_graph_paper: "Programação de papel milimetrico"
         C2_conditionals_with_cards: "Condicionais"
         C2_binary_bracelets: "Binary Bracelets"
-        C2_replay_programming: "Programação do relé"
+        C2_relay_programming: "Programação do relé"
         C2_paper_airplanes: "Paper Airplanes"
-        C3_maze_intro: "Introdução ao labirinto"
+        C3_maze_level_4: "Maze Loops"
         C3_artist_intro: "Introdução ao artista"
         C3_artist_functions: "Artist Functions"
         C3_bee_functions: "Bee Functions"
