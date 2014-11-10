@@ -1,21 +1,20 @@
-var EvalObject = require('./evalObject');
-var EvalString = require('./evalString');
+var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
 var EvalCircle = function (width, height, style, color) {
-  evalUtils.ensureType(style, EvalString);
-  evalUtils.ensureType(color, EvalString);
+  evalUtils.ensureNumber(width);
+  evalUtils.ensureNumber(height);
+  evalUtils.ensureString(style);
+  evalUtils.ensureString(color);
 
-  EvalObject.apply(this);
+  EvalImage.apply(this, [style, color]);
 
   this.width_ = width;
   this.height_ = height;
-  this.color_ = color.getValue();
-  this.style_ = style.getValue();
 
   this.element_ = null;
 };
-EvalCircle.inherits(EvalObject);
+EvalCircle.inherits(EvalImage);
 module.exports = EvalCircle;
 
 EvalCircle.prototype.draw = function (parent) {
@@ -28,5 +27,5 @@ EvalCircle.prototype.draw = function (parent) {
   this.element_.setAttribute('rx', this.width_ / 2);
   this.element_.setAttribute('ry', this.height_ / 2);
 
-  EvalObject.prototype.draw.apply(this, arguments);
+  EvalImage.prototype.draw.apply(this, arguments);
 };
