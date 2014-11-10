@@ -90,7 +90,7 @@ social:
                 %br/
 
               %div{style: "width: 44%; float:left; padding-right: 5px; padding-top:10px; text-align:right; clear:both"}
-                =hoc_s(:front_join_us_teachers)
+                Teachers or Organisations
                 &nbsp;
               %div{style: "width: 56%; float:left;"}
                 %a#hostbutton{onclick: "return adjustScroll('join')", style: "text-decoration:none"}
@@ -128,10 +128,7 @@ social:
     .col-xs-1
       &nbsp;
     .col-xs-10{style: "text-align: center; font-size: 24px; line-height:30px; font-weight: 500; color: rgb(26,172,186)"}
-      -if @country == 'uk'
-        =hoc_s(:front_intro_default_uk)
-      -else
-        =hoc_s(:front_intro_default)
+      =hoc_s(:front_intro_default_uk)
 
   %br/
   %br/

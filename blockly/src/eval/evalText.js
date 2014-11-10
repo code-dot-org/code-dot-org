@@ -1,24 +1,22 @@
-var EvalObject = require('./evalObject');
-var EvalString = require('./evalString');
+var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
-var EvalStringImage = function (text, fontSize, color) {
-  evalUtils.ensureType(text, EvalString);
-  evalUtils.ensureType(color, EvalString);
+var EvalText = function (text, fontSize, color) {
+  evalUtils.ensureString(text);
+  evalUtils.ensureNumber(fontSize);
+  evalUtils.ensureString(color);
 
-  EvalObject.apply(this);
+  EvalImage.apply(this, ['solid', color]);
 
-  this.text_ = text.getValue();
+  this.text_ = text;
   this.fontSize_ = fontSize;
-
-  this.color_ = color.getValue();
 
   this.element_ = null;
 };
-EvalStringImage.inherits(EvalObject);
-module.exports = EvalStringImage;
+EvalText.inherits(EvalImage);
+module.exports = EvalText;
 
-EvalStringImage.prototype.draw = function (parent) {
+EvalText.prototype.draw = function (parent) {
   if (!this.element_) {
     this.element_ = document.createElementNS(Blockly.SVG_NS, 'text');
     parent.appendChild(this.element_);
@@ -26,5 +24,10 @@ EvalStringImage.prototype.draw = function (parent) {
   this.element_.textContent = this.text_;
   this.element_.setAttribute('style', 'font-size: ' + this.fontSize_ + 'pt');
 
-  EvalObject.prototype.draw.apply(this, arguments);
+  var bbox = this.element_.getBBox();
+  // center at origin
+  this.element_.setAttribute('x', -bbox.width / 2);
+  this.element_.setAttribute('y', -bbox.height / 2);
+
+  EvalImage.prototype.draw.apply(this, arguments);
 };

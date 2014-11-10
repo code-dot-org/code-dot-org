@@ -16,6 +16,8 @@ exports.SpriteSize = {
   VERY_LARGE: 2
 };
 
+var SPEECH_BUBBLE_TIME = 3;
+
 exports.random = function (values) {
   var key = Math.floor(Math.random() * values.length);
   return values[key];
@@ -32,11 +34,14 @@ exports.setSprite = function (id, spriteIndex, value) {
   });
 };
 
-exports.saySprite = function (id, spriteIndex, text, opt_seconds) {
+exports.saySprite = function (id, spriteIndex, text, seconds) {
+  if (seconds === undefined) {
+    seconds = SPEECH_BUBBLE_TIME;
+  }
   Studio.queueCmd(id, 'saySprite', {
     'spriteIndex': spriteIndex,
     'text': text,
-    'seconds': opt_seconds
+    'seconds': seconds
   });
 };
 
