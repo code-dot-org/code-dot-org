@@ -13,14 +13,17 @@
         =hoc_s(:front_join_us_inspire)
         %a{href:hoc_uri('/resources/how-to')}
           =hoc_s(:front_join_us_inspire_link)
+      -if @country == 'uk'
+        %li
+          %b Are you an organisation? 
+          %a{href:hoc_uri('/resources/how-to-organisations')} Inspire your colleagues 
+          with an Hour of Code at your company
       %li
-
         %b=hoc_s(:front_join_us_parent)
         %a{href:hoc_uri('/resources')}
           =hoc_s(:front_join_us_ask_link)
         =hoc_s(:front_join_us_ask)
       %li
-
         %b=hoc_s(:front_join_us_computer_science)
         %a{href:hoc_uri('/resources')}
           =hoc_s(:front_join_us_spread)
