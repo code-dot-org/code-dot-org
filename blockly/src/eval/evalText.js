@@ -2,9 +2,9 @@ var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
 var EvalText = function (text, fontSize, color) {
-  evalUtils.ensureType(text, "string");
-  evalUtils.ensureType(fontSize, "number");
-  evalUtils.ensureType(color, "string");
+  evalUtils.ensureString(text);
+  evalUtils.ensureNumber(fontSize);
+  evalUtils.ensureString(color);
 
   EvalImage.apply(this, ['solid', color]);
 

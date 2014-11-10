@@ -2,9 +2,9 @@ var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
 var EvalTriangle = function (edge, style, color) {
-  evalUtils.ensureType(edge, "number");
-  evalUtils.ensureType(style, "string");
-  evalUtils.ensureType(color, "string");
+  evalUtils.ensureNumber(edge);
+  evalUtils.ensureString(style);
+  evalUtils.ensureString(color);
 
   EvalImage.apply(this, [style, color]);
 

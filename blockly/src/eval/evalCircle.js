@@ -2,9 +2,9 @@ var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
 var EvalCircle = function (radius, style, color) {
-  evalUtils.ensureType(radius, "number");
-  evalUtils.ensureType(style, "string");
-  evalUtils.ensureType(color, "string");
+  evalUtils.ensureNumber(radius);
+  evalUtils.ensureString(style);
+  evalUtils.ensureString(color);
 
   EvalImage.apply(this, [style, color]);
 
