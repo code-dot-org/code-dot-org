@@ -153,7 +153,8 @@ Blockly.parseOptions_ = function(options) {
     disableVariableEditing: options['disableVariableEditing'] || false,
     useModalFunctionEditor: options['useModalFunctionEditor'] || false,
     useContractEditor: options['useContractEditor'] || false,
-    grayOutUndeletableBlocks: grayOutUndeletableBlocks
+    grayOutUndeletableBlocks: grayOutUndeletableBlocks,
+    editStartBlocks: options['editStartBlocks'] || false
   };
 };
 
