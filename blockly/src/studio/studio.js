@@ -2115,7 +2115,8 @@ Studio.saySprite = function (opts) {
   speechBubble.setAttribute('visibility', 'visible');
 
   sprite.bubbleTimeoutFunc = delegate(this, Studio.hideSpeechBubble, opts);
-  sprite.bubbleTimeout = window.setTimeout(sprite.bubbleTimeoutFunc, opts.seconds);
+  sprite.bubbleTimeout = window.setTimeout(sprite.bubbleTimeoutFunc,
+    opts.seconds * 1000);
 
   return opts.complete;
 };
