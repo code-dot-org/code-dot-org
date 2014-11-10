@@ -67,4 +67,4 @@ Todos os alunos podem receber um certificado por e-mail ao terminar os [tutoriai
 
 **O que vem depois da Hora do Código?**
 
-A Hora do Código é apenas o primeiro passo de uma jornada para aprender mais sobre como a tecnologia funciona e como devemos criar aplicativos de software. A Hora do Código é apenas o primeiro passo de uma jornada para aprender mais sobre como a tecnologia funciona e como devemos criar aplicativos de software. Para continuar esta jornada, [incentive seus filhos a aprenderem on-line](http://uk.code.org/learn/beyond).
+A Hora do Código é apenas o primeiro passo de uma jornada para aprender mais sobre como a tecnologia funciona e como devemos criar aplicativos de software. A Hora do Código é apenas o primeiro passo de uma jornada para aprender mais sobre como a tecnologia funciona e como devemos criar aplicativos de software. Para continuar esta jornada, [incentive seus filhos a aprenderem on-line](http://br.code.org/learn/beyond).
