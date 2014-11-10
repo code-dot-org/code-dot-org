@@ -85,6 +85,17 @@ Turtle.decorationAnimationImage = new Image();
 Turtle.patternForPaths = new Image();
 Turtle.isDrawingWithPattern = false;
 
+function backingScale(context) {
+  if ('devicePixelRatio' in window) {
+    if (window.devicePixelRatio > 1) {
+      return window.devicePixelRatio;
+    }
+  }
+  return 1;
+}
+
+var retina = 1;
+
 /**
  * Initialize Blockly and the turtle.  Called on page load.
  */
@@ -95,6 +106,8 @@ Turtle.init = function(config) {
 
   if (skin.id == "anna" || skin.id == "elsa")
   {
+    retina = backingScale();
+
     if (skin.id == "elsa")
     {
       turtleNumFrames = 20;
@@ -106,9 +119,15 @@ Turtle.init = function(config) {
 
     // let's try adding a background image
     level.images = [{}];
-    level.images[0].filename = 'background.jpg';
+    if (retina > 1) {
+      level.images[0].filename = 'background_2x.jpg';
+    }
+    else {
+      level.images[0].filename = 'background.jpg';
+    }
+
     level.images[0].position = [ 0, 0 ];
-    level.images[0].scale = 0.5;  // image is double sized for retina
+    level.images[0].scale = 1;
   }
 
   config.grayOutUndeletableBlocks = true;
@@ -166,15 +185,22 @@ Turtle.init = function(config) {
     };
 
     // Create hidden canvases.
-    Turtle.ctxAnswer = createCanvas('answer', 400, 400).getContext('2d');
-    Turtle.ctxImages = createCanvas('images', 400, 400).getContext('2d');
-    Turtle.ctxPredraw = createCanvas('predraw', 400, 400).getContext('2d');
-    Turtle.ctxScratch = createCanvas('scratch', 400, 400).getContext('2d');
-    Turtle.ctxPattern = createCanvas('pattern', 400, 400).getContext('2d');
-    Turtle.ctxFeedback = createCanvas('feedback', 154, 154).getContext('2d');
+    Turtle.ctxAnswer = createCanvas('answer', 400 * retina, 400 * retina).getContext('2d');
+    Turtle.ctxImages = createCanvas('images', 400 * retina, 400 * retina).getContext('2d');
+    Turtle.ctxPredraw = createCanvas('predraw', 400 * retina, 400 * retina).getContext('2d');
+    Turtle.ctxScratch = createCanvas('scratch', 400 * retina, 400 * retina).getContext('2d');
+    Turtle.ctxPattern = createCanvas('pattern', 400 * retina, 400 * retina).getContext('2d');
+    Turtle.ctxFeedback = createCanvas('feedback', 154 * retina, 154 * retina).getContext('2d');
 
     // Create display canvas.
-    var display = createCanvas('display', 400, 400);
+    var display = createCanvas('display', 400 * retina, 400 * retina);
+
+    if (retina > 1)
+    {
+      display.style.width = '400px';
+      display.style.height = '400px';
+    }
+
     var visualization = document.getElementById('visualization');
     visualization.appendChild(display);
     Turtle.ctxDisplay = display.getContext('2d');
@@ -287,9 +313,9 @@ Turtle.placeImage = function(filename, position, scale) {
   var img = new Image();
   img.onload = function() {
     if (scale) {
-      Turtle.ctxImages.drawImage(img, position[0], position[1], img.width, img.height, 0, 0, img.width * scale, img.height * scale);
+      Turtle.ctxImages.drawImage(img, position[0] * retina, position[1] * retina, img.width, img.height, 0, 0, img.width * scale, img.height * scale);
     } else {
-      Turtle.ctxImages.drawImage(img, position[0], position[1]);
+      Turtle.ctxImages.drawImage(img, position[0] * retina, position[1] * retina);
     }
     Turtle.display();
   };
@@ -326,7 +352,10 @@ Turtle.loadTurtle = function() {
   Turtle.avatarImage.onload = function() {
     Turtle.display();
   };
-  Turtle.avatarImage.src = skin.avatar;
+  if ((skin.id == "anna" || skin.id == "elsa") && retina > 1)
+    Turtle.avatarImage.src = skin.avatar_2x;
+  else
+    Turtle.avatarImage.src = skin.avatar;
   if (skin.id == "anna")
     Turtle.numberAvatarHeadings = 36;
   else if (skin.id == "elsa")
@@ -343,7 +372,10 @@ Turtle.loadTurtle = function() {
 Turtle.loadDecorationAnimation = function() {
   if (skin.id == "elsa")
   {
-    Turtle.decorationAnimationImage.src = skin.decorationAnimation;
+    if (retina > 1)
+      Turtle.decorationAnimationImage.src = skin.decorationAnimation_2x;
+    else
+      Turtle.decorationAnimationImage.src = skin.decorationAnimation;
     Turtle.decorationAnimationImage.height = Turtle.DECORATIONANIMATION_HEIGHT;
     Turtle.decorationAnimationImage.width = Turtle.DECORATIONANIMATION_WIDTH;
   }
@@ -381,9 +413,9 @@ Turtle.drawTurtle = function() {
   var destX = Turtle.x - destWidth / 2;
   var destY = Turtle.y - destHeight + 7;
 
-  Turtle.ctxDisplay.drawImage(Turtle.avatarImage, sourceX, sourceY,
-                              sourceWidth, sourceHeight, Math.round(destX), Math.round(destY),
-                              destWidth, destHeight);
+  Turtle.ctxDisplay.drawImage(Turtle.avatarImage, Math.round(sourceX * retina), Math.round(sourceY * retina),
+                              sourceWidth * retina, sourceHeight * retina, Math.round(destX * retina), Math.round(destY * retina),
+                              destWidth * retina, destHeight * retina);
 };
 
 var turtleNumFrames = 19;
@@ -401,9 +433,12 @@ Turtle.drawDecorationAnimation = function() {
     var destX = Turtle.x - destWidth / 2 - 15;
     var destY = Turtle.y - destHeight / 2 - 100;
 
-    Turtle.ctxDisplay.drawImage(Turtle.decorationAnimationImage, sourceX, sourceY,
-                                sourceWidth, sourceHeight, destX, destY,
-                                destWidth, destHeight);
+    Turtle.ctxDisplay.drawImage(
+      Turtle.decorationAnimationImage, 
+      Math.round(sourceX * retina), Math.round(sourceY * retina),
+      sourceWidth * retina, sourceHeight * retina, 
+      Math.round(destX * retina), Math.round(destY * retina),
+      destWidth * retina, destHeight * retina);
 
     //turtleFrame = (turtleFrame + 1) % turtleNumFrames;
   }
@@ -439,11 +474,11 @@ BlocklyApps.reset = function(ignore) {
   if (skin.id == "anna") {
     Turtle.ctxScratch.strokeStyle = 'rgb(255,255,238)';
     Turtle.ctxScratch.fillStyle = 'rgb(255,255,238)';
-    Turtle.ctxScratch.lineWidth = 2;
+    Turtle.ctxScratch.lineWidth = 2 * retina;
   } else if (skin.id == "elsa") {
     Turtle.ctxScratch.strokeStyle = 'rgb(255,255,238)';
     Turtle.ctxScratch.fillStyle = 'rgb(255,255,238)';
-    Turtle.ctxScratch.lineWidth = 2;
+    Turtle.ctxScratch.lineWidth = 2 * retina;
   } else {
     Turtle.ctxScratch.strokeStyle = '#000000';
     Turtle.ctxScratch.fillStyle = '#000000';
@@ -459,9 +494,15 @@ BlocklyApps.reset = function(ignore) {
       0, 0, Turtle.ctxFeedback.canvas.width, Turtle.ctxFeedback.canvas.height);
 
   if (skin.id == "anna") {
-    Turtle.setPattern(document.getElementById("squigglyLine"));
+    if (retina > 1)
+      Turtle.setPattern(document.getElementById("annaLine_2x"));
+    else
+      Turtle.setPattern(document.getElementById("annaLine"));
   } else if (skin.id == "elsa") {
-    Turtle.setPattern(document.getElementById("swirlyLine"));
+    if (retina > 1)
+      Turtle.setPattern(document.getElementById("elsaLine_2x"));
+    else
+      Turtle.setPattern(document.getElementById("elsaLine"));
   } else {
     // Reset to empty pattern
     Turtle.setPattern(null);
@@ -883,7 +924,7 @@ Turtle.drawToTurtle_ = function (distance) {
   if (isDot) {
     Turtle.dotAt_(Turtle.x, Turtle.y);
   } else {
-    Turtle.ctxScratch.lineTo(Turtle.x, Turtle.y);
+    Turtle.ctxScratch.lineTo(Turtle.x * retina, Turtle.y * retina);
   }
 };
 
@@ -961,9 +1002,9 @@ Turtle.drawForwardWithJoints_ = function (distance) {
 
 Turtle.drawForwardLine_ = function (distance) {
 
-  if (skin.id == "elsa") {
+  if (skin.id == "anna" || skin.id == "elsa") {
     Turtle.ctxScratch.beginPath();
-    Turtle.ctxScratch.moveTo(Turtle.stepStartX, Turtle.stepStartY);
+    Turtle.ctxScratch.moveTo(Turtle.stepStartX * retina, Turtle.stepStartY * retina);
     Turtle.jumpForward_(distance);
     Turtle.drawToTurtle_(distance);
     Turtle.ctxScratch.stroke(); 
@@ -983,7 +1024,7 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
   var startY;
 
   if (skin.id == "anna" || skin.id == "elsa") {
-    Turtle.ctxPattern.moveTo(Turtle.stepStartX, Turtle.stepStartY);
+    Turtle.ctxPattern.moveTo(Turtle.stepStartX * retina, Turtle.stepStartY * retina);
     img = Turtle.patternForPaths;
     startX = Turtle.stepStartX;
     startY = Turtle.stepStartY;
@@ -991,16 +1032,16 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
     var lineDistance = jumpDistanceCovered;
 
     Turtle.ctxPattern.save();
-    Turtle.ctxPattern.translate(startX, startY);
+    Turtle.ctxPattern.translate(startX * retina, startY * retina);
     Turtle.ctxPattern.rotate(Math.PI * (Turtle.heading - 90) / 180); // increment the angle and rotate the image.
                                                                      // Need to subtract 90 to accomodate difference in canvas
                                                                      // vs. Turtle direction
 
     Turtle.ctxPattern.drawImage(img,
-      jumpDistanceCovered, 0,             // Start point for clipping image
-      jumpDistance, img.height,           // clip region size
-      jumpDistanceCovered - 7, - 18,      // draw location relative to the ctx.translate point pre-rotation
-      jumpDistance, img.height);
+      Math.round(jumpDistanceCovered * retina), 0,             // Start point for clipping image
+      jumpDistance * retina, img.height,           // clip region size
+      Math.round((jumpDistanceCovered - 7) * retina), Math.round((- 18) * retina),      // draw location relative to the ctx.translate point pre-rotation
+      jumpDistance * retina, img.height);
 
     Turtle.ctxPattern.restore();
 
