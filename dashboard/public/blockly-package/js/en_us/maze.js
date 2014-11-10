@@ -9842,18 +9842,18 @@ var TILE_SHAPES = {
   'null3': [0, 3],
   'null4': [1, 3],
 
-  '0,0':   [0, 0],
-  '1,0':   [1, 0],
-  '2,0':   [2, 0],
-  '0,1':   [0, 1],
-  '1,1':   [1, 1],
-  '0,2':   [0, 2],
-  '1,2':   [1, 2],
+  'log':             [0, 0],
+  'lily1':           [1, 0],
+  'land1':           [2, 0],
+  'island_start':    [0, 1],
+  'island_topRight': [1, 1],
+  'island_botLeft':  [0, 2],
+  'island_botRight': [1, 2],
 
-  '2,1':   [2, 1],
-  '3,1':   [3, 1],
-  '2,2':   [2, 2],
-  '3,2':   [3, 2],
+  'lily2': [2, 1],
+  'lily3': [3, 1],
+  'lily4': [2, 2],
+  'lily5': [3, 2],
 
   'empty': [4, 0]
 };
@@ -10003,18 +10003,6 @@ function drawMap () {
     }
   }
 
-  if (skin.acornAnimation) {
-    createPegmanAnimation({
-      idStr: 'acorn',
-      pegmanImage: skin.acornAnimation,
-      row: Maze.start_.y,
-      col: Maze.start_.x,
-      direction: Maze.startDirection,
-      numColPegman: skin.acornPegmanCol,
-      numRowPegman: skin.acornPegmanRow
-    });
-  }
-
   if (skin.celebrateAnimation) {
     createPegmanAnimation({
       idStr: 'celebrate',
@@ -10048,23 +10036,30 @@ function drawMap () {
   }
 }
 
+// Draw the tiles making up the maze map.
 function drawMapTiles(svg) {
   if (Maze.wordSearch) {
     return Maze.wordSearch.drawMapTiles(svg);
   }
 
-  // Draw the tiles making up the maze map.
+  // Returns true if the tile at x,y is either a wall or out of bounds
+  var isWallOrOutOfBounds = function(x, y) {
+    return Maze.map[y] === undefined || Maze.map[y][x] === undefined ||
+      Maze.map[y][x] === SquareType.WALL;
+  };
+
+  // Returns true if the tile at x,y is a wall that is in bounds.
+  var isWall = function (x, y) {
+    return Maze.map[y] !== undefined && Maze.map[y][x] === SquareType.WALL;
+  };
 
   // Return a value of '0' if the specified square is wall or out of bounds '1'
   // otherwise (empty, obstacle, start, finish).
-  var normalize = function(x, y) {
-    return ((Maze.map[y] === undefined) ||
-            (Maze.map[y][x] === undefined) ||
-            (Maze.map[y][x] == SquareType.WALL)) ? '0' : '1';
+  var isOnPathStr = function (x, y) {
+    return isWallOrOutOfBounds(x, y) ? "0" : "1";
   };
 
-  var islandX;
-  var islandY;
+  var island = null;
 
   // Compute and draw the tile for each square.
   var tileId = 0;
@@ -10072,23 +10067,20 @@ function drawMapTiles(svg) {
   for (var y = 0; y < Maze.ROWS; y++) {
     for (var x = 0; x < Maze.COLS; x++) {
       // Compute the tile index.
-      tile = normalize(x, y) +
-        normalize(x, y - 1) +  // North.
-        normalize(x + 1, y) +  // West.
-        normalize(x, y + 1) +  // South.
-        normalize(x - 1, y);   // East.
+      tile = isOnPathStr(x, y) +
+        isOnPathStr(x, y - 1) +  // North.
+        isOnPathStr(x + 1, y) +  // West.
+        isOnPathStr(x, y + 1) +  // South.
+        isOnPathStr(x - 1, y);   // East.
 
-      var adjacentToPath = false;
+      var adjacentToPath = (tile !== '00000');
 
-      if (mazeUtils.isScratSkin(skin.id)) {
-        var diagonalTiles =
-          normalize(x - 1, y - 1) +  // NW.
-          normalize(x + 1, y - 1) +  // NE.
-          normalize(x - 1, y + 1) +  // SW.
-          normalize(x + 1, y + 1);   // SE.
-        adjacentToPath = (tile !== '00000') || (diagonalTiles !== '0000');
-      } else {
-        adjacentToPath = (tile !== '00000');
+      if (mazeUtils.isScratSkin(skin.id) && !adjacentToPath && (
+          !isWallOrOutOfBounds(x - 1, y - 1) ||  // NW.
+          !isWallOrOutOfBounds(x + 1, y - 1) ||  // NE.
+          !isWallOrOutOfBounds(x - 1, y + 1) ||  // SW.
+          !isWallOrOutOfBounds(x + 1, y + 1))) {  // SE.
+        adjacentToPath = true;
       }
 
       // Draw the tile.
@@ -10113,28 +10105,27 @@ function drawMapTiles(svg) {
           // if next to the path, always just have water. otherwise, there's
           // a chance of one of our other tiles
           tile = '10010';
-          if (!adjacentToPath) {
-            tile = _.sample(['empty', 'empty', 'empty', '2,1', '3,1', '2,2', '3,2', '1,0', '0,0', '1,0', '2,0']);
+          tile = _.sample(['empty', 'empty', 'empty', 'empty', 'empty', 'lily2',
+            'lily3', 'lily4', 'lily5', 'lily1', 'log', 'lily1', 'land1']);
 
-            if (islandX == x - 1 && islandY == y)
-              tile = '1,1';
-            if (islandX == x && islandY == y - 1)
-              tile = '0,2';
-            if (islandX == x - 1 && islandY == y - 1)
-              tile = '1,2';
-
-            if (islandX === undefined &&
-                islandY === undefined &&
-                Math.random() < 1/20 &&
-                y != Maze.ROWS-1 && x != Maze.COLS-1 &&
-                normalize(x + 1, y + 0) == '0' &&
-                normalize(x + 0, y + 1) == '0' &&
-                normalize(x + 1, y + 1) == '0')
-            {
-              islandX = x;
-              islandY = y;
-              tile = '0,1';
+          if (island !== null) {
+            if (island.x === x - 1 && island.y === y) {
+              tile = 'island_topRight';
+            } else  if (island.x === x && island.y === y - 1) {
+              tile = 'island_botLeft';
+            } else  if (island.x === x - 1 && island.y === y - 1) {
+              tile = 'island_botRight';
             }
+          } else if (Math.random() < 1/20 &&
+              isWall(x + 1, y + 0) && isWallOrOutOfBounds(x + 2, y) &&
+              isWall(x + 0, y + 1) && isWallOrOutOfBounds(x, y + 2) &&
+              isWall(x + 1, y + 1)) {
+            island = { x: x, y: y};
+            tile = 'island_start';
+          }
+
+          if (adjacentToPath && tile === 'land1') {
+            tile = 'empty';
           }
         }
 
@@ -10555,11 +10546,6 @@ BlocklyApps.reset = function(first) {
   if (skin.movePegmanAnimation) {
     var movePegmanIcon = document.getElementById('movePegman');
     movePegmanIcon.setAttribute('visibility', 'hidden');
-  }
-
-  if (skin.acornAnimation) {
-    var acorn = document.getElementById('acornPegman');
-    acorn.setAttribute('visibility', 'hidden');
   }
 
   if (skin.celebrateAnimation) {
@@ -11347,9 +11333,6 @@ Maze.scheduleDance = function(victoryDance, timeAlloted) {
     BlocklyApps.playAudio('winGoal');
     finishIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
       skin.goalAnimation);
-    if (mazeUtils.isScratSkin(skin.id)) {
-      Maze.moveAcorn(timeAlloted);
-    }
   }
 
   if (victoryDance) {
@@ -11383,37 +11366,6 @@ Maze.scheduleDance = function(victoryDance, timeAlloted) {
       setPegmanTransparent();
     }
   }, danceSpeed * 5);
-};
-
-Maze.moveAcorn = function (timeAlloted) {
-  // todo - is 8 hardcoded somewhere?
-  var numFrames = (8 - Maze.pegmanX - 1) * 4;
-  var finish = document.getElementById('finish');
-  finish.setAttribute('x', (Maze.pegmanX + 1) * Maze.SQUARE_SIZE);
-  // finish.setAttribute('visibility', 'visible');
-  var timePerFrame = 100;
-
-  var start = {x: Maze.pegmanX, y: Maze.pegmanY};
-  // WALL is non-ice for scrat. Find a neighbor that is water so that we can
-  // have the acorn splash into the water
-  if (level.map[start.y][start.x + 1] === SquareType.WALL) {
-    start.x++;
-  } else if (level.map[start.y - 1][start.x] === SquareType.WALL) {
-    start.y--;
-  } else if (level.map[start.y + 1][start.x] === SquareType.WALL) {
-    start.y++;
-  } else {
-    throw "Can't have level where finish is surrounded by land";
-  }
-
-  scheduleSheetedMovement(start, {x: 0, y: 0 },
-    skin.hittingWallAnimationFrameNumber, 100, 'acorn', Direction.NORTH, false);
-
-  // todo (brent) - may need to tune this once we fill out the sheet of the
-  // acorn falling into the water
-  timeoutList.setTimeout(function() {
-    finish.setAttribute('visibility', 'hidden');
-  }, timePerFrame * numFrames);
 };
 
 /**
@@ -11741,10 +11693,6 @@ var CONFIGS = {
     hittingWallAnimationSpeedScale: 1.5,
     wallPegmanCol: 1,
     wallPegmanRow: 20,
-
-    acornAnimation: 'splash.png',
-    acornPegmanCol: 1,
-    acornPegmanRow: 20,
 
     celebrateAnimation: 'jump_acorn_sheet.png',
     celebratePegmanCol: 1,
