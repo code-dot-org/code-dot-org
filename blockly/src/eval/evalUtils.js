@@ -2,6 +2,14 @@
  * Throws an expection if val is not of the expected type. Type is either a
  * string (like "number" or "string") or an object (Like EvalImage).
  */
+module.exports.ensureString = function (val) {
+  return module.exports.ensureType(val, "string");
+};
+
+module.exports.ensureNumber = function (val) {
+  return module.exports.ensureType(val, "number");
+};
+
 module.exports.ensureType = function (val, type) {
   if (typeof(type) === "string") {
     if (typeof(val) !== type) {

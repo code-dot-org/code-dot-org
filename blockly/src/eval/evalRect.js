@@ -2,10 +2,10 @@ var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
 var EvalRect = function (width, height, style, color) {
-  evalUtils.ensureType(width, "number");
-  evalUtils.ensureType(height, "number");
-  evalUtils.ensureType(style, "string");
-  evalUtils.ensureType(color, "string");
+  evalUtils.ensureNumber(width);
+  evalUtils.ensureNumber(height);
+  evalUtils.ensureString(style);
+  evalUtils.ensureString(color);
 
   EvalImage.apply(this, [style, color]);
 

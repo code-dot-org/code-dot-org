@@ -58,8 +58,8 @@ exports.star = function (radius, fontSize, color) {
 };
 
 exports.placeImage = function (x, y, image) {
-  evalUtils.ensureType(x, "number");
-  evalUtils.ensureType(y, "number");
+  evalUtils.ensureNumber(x);
+  evalUtils.ensureNumber(y);
   evalUtils.ensureType(image, EvalImage);
 
   // User inputs why in cartesian space. Convert to pixel space before sending
@@ -71,7 +71,7 @@ exports.placeImage = function (x, y, image) {
 };
 
 exports.rotateImage = function (degrees, image) {
-  evalUtils.ensureType(degrees, "number");
+  evalUtils.ensureNumber(degrees);
 
   image.rotate(degrees);
   return image;
@@ -83,15 +83,15 @@ exports.scaleImage = function (factor, image) {
 };
 
 exports.stringAppend = function (first, second) {
-  evalUtils.ensureType(first, "string");
-  evalUtils.ensureType(second, "string");
+  evalUtils.ensureString(first);
+  evalUtils.ensureString(second);
 
   return first + second;
 };
 
 // polling for values
 exports.stringLength = function (str) {
-  evalUtils.ensureType(str, "string");
+  evalUtils.ensureString(str);
 
   return str.length;
 };
