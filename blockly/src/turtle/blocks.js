@@ -856,7 +856,12 @@ exports.install = function(blockly, blockInstallOptions) {
      [skin.rainbowMenu, 'rainbowLine'],  // set to property name for image within skin
      [skin.ropeMenu, 'ropeLine'],  // referenced as skin[pattern];
      [skin.squigglyMenu, 'squigglyLine'],
-     [skin.swirlyMenu, 'swirlyLine']];
+     [skin.swirlyMenu, 'swirlyLine'],
+     [skin.annaLine, 'annaLine'],
+     [skin.elsaLine, 'elsaLine'],
+     [skin.annaLine_2x, 'annaLine_2x'],
+     [skin.elsaLine_2x, 'elsaLine_2x'],
+     ];
 
   generator.draw_line_style_pattern = function() {
     // Generate JavaScript for setting the image for a patterned line.
