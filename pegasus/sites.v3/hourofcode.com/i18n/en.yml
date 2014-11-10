@@ -93,7 +93,7 @@
   signup_thank_you_message: 'We sent you a confirmation email with information to help you get started.'
 
   map_header: '# Hour of Code events around the world'
-  map_header_company: '# Hour of Code events organized by company'
+  map_header_company: '# by company organizers'
 
   meta_tag_og_title: 'The Hour of Code is coming'
   meta_tag_og_description: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 30 languages. Ages 4 to 104.'
@@ -186,13 +186,13 @@
 
   events_title: All Hour of Code Events
   events_nav_all: All Events
-  events_nav_classrooms: Classrooms
   events_nav_whole_schools: Whole Schools
   events_nav_special: Special Events
+  events_nav_orgs: Organizations
   events_all_title: All Hour of Code events
-  events_classroom_title: Classroom Hour of Code events
   events_whole_school_title: Whole-school Hour of Code events
   events_special_title: Special Hour of Code events
+  events_orgs_title: All Hour of Code events organized by Partner Organizations
   event: event
   events: events
 
