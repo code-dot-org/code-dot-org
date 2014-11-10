@@ -217,10 +217,59 @@ Blockly.Blocks.functional_call = {
 
     this.setFunctional(true);
     this.setFunctionalOutput(true); // TODO(bjordan): set based on dropdown type change
+
+    /**
+     * Argument names for this function call
+     * @type {Array}
+     * @private
+     */
     this.arguments_ = [];
-    /** TODO(bjordan): can we remove or rename these? */
+
     this.quarkConnections_ = null;
     this.quarkArguments_ = null;
+
+    /**
+     * Used to detect changes in parent function definition
+     * (in lieu of an MVVM framework)
+     * @private
+     */
+    /** @type {string} @private */
+    this.currentOutputType_ = null;
+    /** @type {Array.<string>} @private */
+    this.currentArguments_ = null;
+    /** @type {string} @private */
+    this.currentDescription_ = null;
+
+    this.blockSpace.events.listen(Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE,
+      this.updateAttributesFromDefinition_, false, this);
+  },
+  updateAttributesFromDefinition_: function() {
+    var procedureDefinition = Blockly.Procedures.getDefinition(
+      this.getTitleValue('NAME'), this.blockSpace.blockSpaceEditor.blockSpace);
+    if (!procedureDefinition) {
+      throw "No procedure definition when initializing functional call";
+    }
+
+    var outputTypeChanged = procedureDefinition.outputType_ && procedureDefinition.outputType_ !== this.currentOutputType_;
+    if (outputTypeChanged) {
+      this.currentOutputType_ = procedureDefinition.outputType_;
+      this.changeFunctionalOutput(procedureDefinition.outputType_);
+    }
+    var descriptionChanged = procedureDefinition.description_ && procedureDefinition.description_ !== this.currentDescription_;
+    if (descriptionChanged) {
+      this.currentDescription_ = procedureDefinition.description_;
+      this.setTooltip(procedureDefinition.description_);
+    }
+    var argumentsChanged = procedureDefinition.arguments_.length &&
+      (!procedureDefinition.arguments_ || !goog.array.equals(procedureDefinition.arguments_, this.currentArguments_));
+    if (argumentsChanged) {
+      this.currentArguments_ = procedureDefinition.arguments_;
+      this.setTitleValue(' (' + this.arguments_.join(', ') + ')', 'PARAM_TEXT');
+    }
+  },
+  beforeDispose: function() {
+    this.blockSpace.events.unlisten(Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE,
+      this.updateAttributesFromDefinition_, false, this);
   },
   openEditor: function() {
     Blockly.functionEditor.openAndEditFunction(this.getTitleValue('NAME'));
@@ -333,7 +382,6 @@ Blockly.Blocks.functional_call = {
     this.setTooltip(
       (this.outputConnection ? Blockly.Msg.PROCEDURES_CALLRETURN_TOOLTIP
         : Blockly.Msg.PROCEDURES_CALLNORETURN_TOOLTIP).replace('%1', name));
-    var procedureDefinition = Blockly.Procedures.getDefinition(name, this.blockSpace);
 
     this.arguments_ = [];
     for (var x = 0, childNode; childNode = xmlElement.childNodes[x]; x++) {
@@ -342,18 +390,7 @@ Blockly.Blocks.functional_call = {
       }
     }
     this.setProcedureParameters(this.arguments_, this.arguments_);
-
-    if (procedureDefinition) {
-      if (procedureDefinition.outputType_) {
-        this.changeFunctionalOutput(procedureDefinition.outputType_);
-      }
-      if (procedureDefinition.description_) {
-        this.setTooltip(procedureDefinition.description_);
-      }
-      if (procedureDefinition.arguments_.length) {
-        this.setTitleValue(' (' + this.arguments_.join(', ') + ')', 'PARAM_TEXT');
-      }
-    }
+    this.updateAttributesFromDefinition_();
   },
   renameVar: function(oldName, newName) {
     for (var x = 0; x < this.arguments_.length; x++) {
