@@ -1,8 +1,8 @@
 .row
   .col-xs-12
     -total_count = DB[:forms].where(kind:'HocSignup2014').count
-    %a{href: hoc_uri("/events")}
-      %h2= hoc_s(:map_header_company).gsub('#', format_integer_with_commas(total_count)).gsub('company', hoc_s("company_" + @company))
+    -company_count = DB[:forms].where(kind:'HocSignup2014').count
+    %h2= "<a href='#{hoc_uri('/events')}'>#{hoc_s(:map_header).gsub('#', format_integer_with_commas(total_count))}</a>" + ". " + "<a href='#{hoc_uri('/events2/organizations')}'>#{hoc_s(:map_header_company).gsub('#', format_integer_with_commas(company_count)).gsub('company', hoc_s("company_" + @company))}</a>"
 
 .row
   .col-xs-1.hidden-sm
