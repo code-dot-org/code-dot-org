@@ -11333,9 +11333,6 @@ Maze.scheduleDance = function(victoryDance, timeAlloted) {
     BlocklyApps.playAudio('winGoal');
     finishIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
       skin.goalAnimation);
-    if (mazeUtils.isScratSkin(skin.id)) {
-      Maze.moveAcorn(timeAlloted);
-    }
   }
 
   if (victoryDance) {
@@ -11369,37 +11366,6 @@ Maze.scheduleDance = function(victoryDance, timeAlloted) {
       setPegmanTransparent();
     }
   }, danceSpeed * 5);
-};
-
-Maze.moveAcorn = function (timeAlloted) {
-  // todo - is 8 hardcoded somewhere?
-  var numFrames = (8 - Maze.pegmanX - 1) * 4;
-  var finish = document.getElementById('finish');
-  finish.setAttribute('x', (Maze.pegmanX + 1) * Maze.SQUARE_SIZE);
-  // finish.setAttribute('visibility', 'visible');
-  var timePerFrame = 100;
-
-  var start = {x: Maze.pegmanX, y: Maze.pegmanY};
-  // WALL is non-ice for scrat. Find a neighbor that is water so that we can
-  // have the acorn splash into the water
-  if (level.map[start.y][start.x + 1] === SquareType.WALL) {
-    start.x++;
-  } else if (level.map[start.y - 1][start.x] === SquareType.WALL) {
-    start.y--;
-  } else if (level.map[start.y + 1][start.x] === SquareType.WALL) {
-    start.y++;
-  } else {
-    throw "Can't have level where finish is surrounded by land";
-  }
-
-  scheduleSheetedMovement(start, {x: 0, y: 0 },
-    skin.hittingWallAnimationFrameNumber, 100, 'acorn', Direction.NORTH, false);
-
-  // todo (brent) - may need to tune this once we fill out the sheet of the
-  // acorn falling into the water
-  timeoutList.setTimeout(function() {
-    finish.setAttribute('visibility', 'hidden');
-  }, timePerFrame * numFrames);
 };
 
 /**
