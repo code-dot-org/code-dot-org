@@ -34,7 +34,19 @@
       %li
         %a{href:hoc_uri('/resources')}
           =hoc_s(:front_join_us_help_promote)
+      -if @country == 'ar'
+        %li 
+          Para más información, por favor visite
+          %a{href:'http://ar.code.org'} ar.code.org
+      -if @country == 'br'
+        %li 
+          Voce está no Brasil? Por favor, visite
+          %a{href:'http://br.code.org'} br.code.org
       -if @country == 'it'
         %li 
           Sei in Italia? Visita per favore 
-          %a{href:'italia.code.org'} italia.code.org
+          %a{href:'http://italia.code.org'} italia.code.org
+      -if @country == 'ro'
+        %li 
+          Esti din Romania? Te rugam sa vizitezi
+          %a{href:'http://ro.code.org'} ro.code.org
