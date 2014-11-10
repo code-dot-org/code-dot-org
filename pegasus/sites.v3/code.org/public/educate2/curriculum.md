@@ -40,16 +40,19 @@ AP® is a registered trademark of the College Board.
 [<button>Computer Science Principles</button>](http://code.org/educate2/csp)
 
 
-## Code.org's Curriculum Philosophy ##
+# Code.org's Curriculum Philosophy #
 
-[Click here](http://code.org/educate2/curriculum-philosphy) for curriculum philosophy and goals.
+Click below for curriculum philosophy and goals.
 
-## Educational Videos ##
+[<button>Curriculum Philosophy</button>](http://code.org/educate2/curriculum-philosphy)
 
-[Click here](http://code.org/educate/videos) for educational videos that can be used in any computer science course.
+# Educational Videos #
 
+Click below for educational videos that can be used in any computer science course.
 
-## Third-party resources for educators ##
+[<button>Get Videos</button>](/educate/videos)
+
+# Third-party resources for educators #
 Click below for links to other resources for educators interested in teaching computer science.
 
 [<button>Get Tools</button>](/educate/3rdparty)
