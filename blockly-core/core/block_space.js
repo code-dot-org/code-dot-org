@@ -55,8 +55,33 @@ Blockly.BlockSpace = function(blockSpaceEditor, getMetrics, setMetrics) {
   /** @type {number} */
   this.maxBlocks = Infinity;
 
+  /** @type {goog.events.EventTarget} */
+  this.events = new goog.events.EventTarget();
+
   Blockly.ConnectionDB.init(this);
+  if (Blockly.BlockSpace.DEBUG_EVENTS) {
+    goog.object.forEach(Blockly.BlockSpace.EVENTS, function(v, k) {
+      this.events.listen(v, function(e) {console.log(e);console.log(k);console.log(v);}, false, this)
+    }, this);
+  }
 };
+
+Blockly.BlockSpace.DEBUG_EVENTS = true; // TODO(bjordan): false
+
+Blockly.BlockSpace.EVENTS = {};
+
+/**
+ * Called after a blockspace has been populated with a set of blocks
+ * (e.g. when using domToBlockSpace)
+ * @type {string}
+ */
+Blockly.BlockSpace.EVENTS.EVENT_BLOCKS_IMPORTED = 'blocksImported';
+
+/**
+ * Fired whenever blocklyBlockSpaceChange normally gets fired
+ * @type {string}
+ */
+Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE = 'blockSpaceChange';
 
 /**
  * Angle away from the horizontal to sweep for blocks.  Order of execution is
@@ -367,9 +392,11 @@ Blockly.BlockSpace.prototype.fireChangeEvent = function() {
   }
   var canvas = this.svgBlockCanvas_;
   if (canvas) {
+    var self = this;
     this.fireChangeEventPid_ = window.setTimeout(function() {
+        self.events.dispatchEvent(Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE);
         Blockly.fireUiEvent(canvas, 'blocklyBlockSpaceChange');
-      }, 0);
+    }, 0);
   }
 };
 
