@@ -4,7 +4,9 @@
     %li=hoc_s(:prizes_every_organizer)
     -if @country == 'us'
       %li=hoc_s(:prizes_technology)
-      %li=hoc_s(:prizes_tech_chats)
+      %li=hoc_s(:prizes_tech_chats).gsub(/#/, '96')
+    -if @country == 'uk'  
+      %li=hoc_s(:prizes_tech_chats).gsub(/#/, '20')
     -if @country == 'ca'  
       %li=hoc_s(:prizes_tech_chats)
       %li=hoc_s(:prizes_brilliant)

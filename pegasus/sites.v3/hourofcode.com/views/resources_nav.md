@@ -1,3 +1,7 @@
+<% if @country == 'ie' %>
+- <a href="<%= hoc_uri('/resources/how-to-ireland') %>">How to get started in Ireland</a>
+<br/>
+<% end %>
 - <a href="<%= hoc_uri('/resources/how-to') %>"><%= hoc_s(:resources_how_to)%></a>
 <br/>
 <% if @country == 'us' %>

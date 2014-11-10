@@ -6,7 +6,7 @@
 
   front_header_banner: 'Join the largest learning event in history, Dec 8-14, 2014'
   front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 30 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
-  front_intro_default_uk: "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone can organize an Hour of Code event. Over 3M students did the first Hour of Code in the UK. Let's double that in December! <strong>No experience needed. Ages 4 to 104.</strong>"
+  front_intro_default_uk: "The Hour of Code is a global movement reaching tens of millions of people in 180+ countries. Anyone can organize an Hour of Code event. Over 3M people did the first Hour of Code in the UK. Let's double that in December! <strong>No experience needed. Ages 4 to 104.</strong>"
   front_watch_video: 'Watch the new video'
 
   header_menu_resources: 'Resources'
@@ -28,7 +28,7 @@
   prizes_all: 'Prizes for every organizer'
   prizes_every_organizer: 'Every Hour of Code organizer will receive Dropbox or Skype credit as a thank you'
   prizes_technology: 'One public school in every US state (& Washington DC) will win $10,000 worth of technology'
-  prizes_tech_chats: '96 classrooms will win video chats with very special guests'
+  prizes_tech_chats: '# classrooms will win video chats with very special guests'
   prizes_robots: '100 classrooms will win a set of programmable robots'
   prizes_brilliant: 'One school in each province and territory will receive $2000 for a Brilliant Project'
   prizes_actua: "15 schools across Canada will receive 2 hands-on STEM workshops by one of Actua's members"
@@ -93,7 +93,7 @@
   signup_thank_you_message: 'We sent you a confirmation email with information to help you get started.'
 
   map_header: '# Hour of Code events around the world'
-  map_header_company: '# Hour of Code events organized by company'
+  map_header_company: '# by company organizers'
 
   meta_tag_og_title: 'The Hour of Code is coming'
   meta_tag_og_description: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 30 languages. Ages 4 to 104.'
@@ -137,8 +137,8 @@
   hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='http://code.org/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='target-resources-how-to'>how to guide</a>."
   hoc_faq_need_computers_q: 'Do I need computers for every participant?'
   hoc_faq_need_computers_a: "No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have. <p><i>Here are a few options:</i> <br> <ul> <li><b>Work in pairs.</b> Research shows students learn best with <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>pair programming</a>, sharing a computer and working together. Encourage your students to double up. <li><b>Use a projected screen.</b> If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions. <li><b>Go unplugged.</b> We offer tutorials that require no computer at all. </ul>"
-  hoc_faq_international_q: "I'm outside of the United States. How do I participate internationally?"
-  hoc_faq_international_a: 'Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code.'
+  hoc_faq_international_q: "I am in <country>. How do I participate internationally?"
+  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='target-resources'>here</a>."
   hoc_faq_tutorial_q: 'How can I make an Hour of Code tutorial?'
   hoc_faq_tutorial_a: "If you're interested in becoming a tutorial partner, <a href='target-tutorial-guidelines'>see our guidelines and instructions</a>. We'd like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science."
   hoc_faq_more_questions_q: "Still have more questions?"
@@ -186,13 +186,13 @@
 
   events_title: All Hour of Code Events
   events_nav_all: All Events
-  events_nav_classrooms: Classrooms
   events_nav_whole_schools: Whole Schools
   events_nav_special: Special Events
+  events_nav_orgs: Organizations
   events_all_title: All Hour of Code events
-  events_classroom_title: Classroom Hour of Code events
   events_whole_school_title: Whole-school Hour of Code events
   events_special_title: Special Hour of Code events
+  events_orgs_title: All Hour of Code events organized by Partner Organizations
   event: event
   events: events
 

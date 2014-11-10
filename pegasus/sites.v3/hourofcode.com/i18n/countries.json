@@ -31,6 +31,10 @@
     "full_name": "China",
     "default_language": "cn"
   },
+  "co": {
+    "full_name": "Colombia",
+    "default_language": "es"
+  },
   "cz": {
     "full_name": "Czech Republic",
     "default_language": "cs"
@@ -80,7 +84,7 @@
     "default_language": "fa"
   },
   "it": {
-    "full_name": "Itally",
+    "full_name": "Italy",
     "default_language": "it"
   },
   "jp": {
@@ -99,6 +103,10 @@
     "full_name": "Malaysia",
     "default_language": "ms"
   },
+  "mz": {
+    "full_name": "Mozambique",
+    "default_language": "po"
+  },
   "nl": {
     "full_name": "Netherlands",
     "default_language": "nl"
@@ -114,6 +122,10 @@
   "nz": {
     "full_name": "New Zealand",
     "default_language": "en"
+  },
+  "pe": {
+    "full_name": "Peru",
+    "default_language": "es"
   },
   "pt": {
     "full_name": "Portugal",
