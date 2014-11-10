@@ -321,18 +321,6 @@ function drawMap () {
     }
   }
 
-  if (skin.acornAnimation) {
-    createPegmanAnimation({
-      idStr: 'acorn',
-      pegmanImage: skin.acornAnimation,
-      row: Maze.start_.y,
-      col: Maze.start_.x,
-      direction: Maze.startDirection,
-      numColPegman: skin.acornPegmanCol,
-      numRowPegman: skin.acornPegmanRow
-    });
-  }
-
   if (skin.celebrateAnimation) {
     createPegmanAnimation({
       idStr: 'celebrate',
@@ -876,11 +864,6 @@ BlocklyApps.reset = function(first) {
   if (skin.movePegmanAnimation) {
     var movePegmanIcon = document.getElementById('movePegman');
     movePegmanIcon.setAttribute('visibility', 'hidden');
-  }
-
-  if (skin.acornAnimation) {
-    var acorn = document.getElementById('acornPegman');
-    acorn.setAttribute('visibility', 'hidden');
   }
 
   if (skin.celebrateAnimation) {

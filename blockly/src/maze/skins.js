@@ -115,10 +115,6 @@ var CONFIGS = {
     wallPegmanCol: 1,
     wallPegmanRow: 20,
 
-    acornAnimation: 'splash.png',
-    acornPegmanCol: 1,
-    acornPegmanRow: 20,
-
     celebrateAnimation: 'jump_acorn_sheet.png',
     celebratePegmanCol: 1,
     celebratePegmanRow: 9,
