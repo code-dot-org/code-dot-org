@@ -12838,6 +12838,8 @@ exports.SpriteSize = {
   VERY_LARGE: 2
 };
 
+var SPEECH_BUBBLE_TIME = 3;
+
 exports.random = function (values) {
   var key = Math.floor(Math.random() * values.length);
   return values[key];
@@ -12854,11 +12856,14 @@ exports.setSprite = function (id, spriteIndex, value) {
   });
 };
 
-exports.saySprite = function (id, spriteIndex, text, opt_seconds) {
+exports.saySprite = function (id, spriteIndex, text, seconds) {
+  if (seconds === undefined) {
+    seconds = SPEECH_BUBBLE_TIME;
+  }
   Studio.queueCmd(id, 'saySprite', {
     'spriteIndex': spriteIndex,
     'text': text,
-    'seconds': opt_seconds
+    'seconds': seconds
   });
 };
 
@@ -13689,12 +13694,13 @@ exports.install = function(blockly, blockInstallOptions) {
         this.getTitleValue('DIR') + ');\n';
   };
 
-  var initMoveDistanceBlock = function (block) {
+  var initMoveDistanceBlock = function (options) {
+    var block = {};
     // Block for moving/gliding a specific distance.
     block.helpUrl = '';
     block.init = function() {
       this.setHSV(184, 1.00, 0.74);
-      if (block.sprite) {
+      if (options.sprite) {
         this.appendValueInput('SPRITE')
             .setCheck('Number')
             .appendTitle(msg.moveSpriteN({spriteIndex: ''}));
@@ -13723,7 +13729,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
       this.appendDummyInput()
         .appendTitle('\t');
-      if (block.params) {
+      if (options.params) {
         this.appendValueInput('DISTANCE')
           .setCheck('Number');
         this.appendDummyInput()
@@ -13756,7 +13762,7 @@ exports.install = function(blockly, blockInstallOptions) {
          [msg.moveDirectionRight(), Direction.EAST.toString()],
          [msg.moveDirectionRandom(), 'random']];
 
-    if (!block.params) {
+    if (!options.params) {
       block.DISTANCE =
           [[msg.moveDistance25(), '25'],
            [msg.moveDistance50(), '50'],
@@ -13769,17 +13775,18 @@ exports.install = function(blockly, blockInstallOptions) {
         [[skin.shortLine, '25'],
         [skin.longLine, '400']];
     }
+
+    return block;
   };
 
-  blockly.Blocks.studio_moveDistance = {};
-  initMoveDistanceBlock(blockly.Blocks.studio_moveDistance);
-  blockly.Blocks.studio_moveDistanceParams = { 'params': true };
-  initMoveDistanceBlock(blockly.Blocks.studio_moveDistanceParams);
-  blockly.Blocks.studio_moveDistanceParamsSprite = {
+  blockly.Blocks.studio_moveDistance = initMoveDistanceBlock({});
+  blockly.Blocks.studio_moveDistanceParams = initMoveDistanceBlock({
+    'params': true
+  });
+  blockly.Blocks.studio_moveDistanceParamsSprite = initMoveDistanceBlock({
     'params': true,
     'sprite': true
-  };
-  initMoveDistanceBlock(blockly.Blocks.studio_moveDistanceParamsSprite);
+  });
 
   generator.studio_moveDistance = function() {
     // Generate JavaScript for moving.
@@ -14193,13 +14200,15 @@ exports.install = function(blockly, blockInstallOptions) {
   /**
    * showTitleScreen
    */
-  var initShowTitleScreenBlock = function (block) {
+  var initShowTitleScreenBlock = function (options) {
+    var block = {};
+
     block.helpUrl = '';
     block.init = function() {
       this.setHSV(184, 1.00, 0.74);
       this.appendDummyInput()
         .appendTitle(msg.showTitleScreen());
-      if (block.params) {
+      if (options.params) {
         this.appendValueInput('TITLE')
           .setCheck('String')
           .setAlign(Blockly.ALIGN_RIGHT)
@@ -14230,12 +14239,13 @@ exports.install = function(blockly, blockInstallOptions) {
       this.setNextStatement(true);
       this.setTooltip(msg.showTitleScreenTooltip());
     };
+    return block;
   };
 
-  blockly.Blocks.studio_showTitleScreen = {};
-  initShowTitleScreenBlock(blockly.Blocks.studio_showTitleScreen);
-  blockly.Blocks.studio_showTitleScreenParams = { 'params': true };
-  initShowTitleScreenBlock(blockly.Blocks.studio_showTitleScreenParams);
+  blockly.Blocks.studio_showTitleScreen = initShowTitleScreenBlock({});
+  blockly.Blocks.studio_showTitleScreenParams = initShowTitleScreenBlock({
+    'params': true
+  });
 
   generator.studio_showTitleScreen = function() {
     // Generate JavaScript for showing title screen.
@@ -14459,12 +14469,13 @@ exports.install = function(blockly, blockInstallOptions) {
       name: 'setSpriteEmotion'});
   };
 
-  var initSayBlock = function (block) {
+  var initSayBlock = function (options) {
+    var block = {};
     // Block for waiting a specific amount of time.
     block.helpUrl = '';
     block.init = function() {
       this.setHSV(184, 1.00, 0.74);
-      if (block.time) {
+      if (options.time) {
         this.appendValueInput('SPRITE').setCheck('Number')
             .appendTitle(msg.actor());
         this.appendDummyInput()
@@ -14481,7 +14492,7 @@ exports.install = function(blockly, blockInstallOptions) {
         this.appendDummyInput()
           .appendTitle(msg.saySprite());
       }
-      if (block.params) {
+      if (options.params) {
         this.appendValueInput('TEXT');
       } else {
         var quotedTextInput = this.appendDummyInput();
@@ -14494,7 +14505,7 @@ exports.install = function(blockly, blockInstallOptions) {
           .appendTitle(new Blockly.FieldImage(
               Blockly.assetUrl('media/quote1.png'), 12, 12));
       }
-      if (block.time) {
+      if (options.time) {
         this.appendValueInput('TIME').setCheck('Number').appendTitle(msg.for());
         this.appendDummyInput().appendTitle(msg.waitSeconds());
       }
@@ -14503,14 +14514,13 @@ exports.install = function(blockly, blockInstallOptions) {
       this.setNextStatement(true);
       this.setTooltip(msg.saySpriteTooltip());
     };
+
+    return block;
   };
 
-  blockly.Blocks.studio_saySprite = {};
-  initSayBlock(blockly.Blocks.studio_saySprite);
-  blockly.Blocks.studio_saySpriteParams = { 'params': true };
-  initSayBlock(blockly.Blocks.studio_saySpriteParams);
-  blockly.Blocks.studio_saySpriteParamsTime = { 'params': true, 'time': true };
-  initSayBlock(blockly.Blocks.studio_saySpriteParamsTime);
+  blockly.Blocks.studio_saySprite = initSayBlock({});
+  blockly.Blocks.studio_saySpriteParams = initSayBlock({'params': true});
+  blockly.Blocks.studio_saySpriteParamsTime = initSayBlock({'params': true, 'time': true});
 
   generator.studio_saySprite = function() {
     // Generate JavaScript for saying.
@@ -14541,12 +14551,13 @@ exports.install = function(blockly, blockInstallOptions) {
         spriteParam + ', ' + textParam + ',' + secondsParam + ');\n';
   };
 
-  var initWaitBlock = function (block) {
+  var initWaitBlock = function (options) {
+    var block = {};
     // Block for waiting a specific amount of time.
     block.helpUrl = '';
     block.init = function() {
       this.setHSV(184, 1.00, 0.74);
-      if (block.params) {
+      if (options.params) {
         this.appendDummyInput()
           .appendTitle(msg.waitFor());
         this.appendValueInput('VALUE')
@@ -14563,12 +14574,11 @@ exports.install = function(blockly, blockInstallOptions) {
       this.setInputsInline(true);
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-      this.setTooltip(block.params ?
-                        msg.waitParamsTooltip() :
-                        msg.waitTooltip());
+      this.setTooltip(options.params ? msg.waitParamsTooltip() :
+        msg.waitTooltip());
     };
 
-    if (!block.params) {
+    if (!options.params) {
       block.VALUES =
         [[msg.waitForClick(), '"click"'],
          [msg.waitForRandom(), 'random'],
@@ -14578,12 +14588,12 @@ exports.install = function(blockly, blockInstallOptions) {
          [msg.waitFor5Seconds(), '5000'],
          [msg.waitFor10Seconds(), '10000']];
     }
+
+    return block;
   };
 
-  blockly.Blocks.studio_wait = {};
-  initWaitBlock(blockly.Blocks.studio_wait);
-  blockly.Blocks.studio_waitParams = { 'params': true };
-  initWaitBlock(blockly.Blocks.studio_waitParams);
+  blockly.Blocks.studio_wait = initWaitBlock({});
+  blockly.Blocks.studio_waitParams = initWaitBlock({ 'params': true });
 
   generator.studio_wait = function() {
     return generateSetterCode({
@@ -16396,7 +16406,6 @@ var TITLE_SCREEN_TEXT_HEIGHT =
 var TITLE_SPRITE_X_POS = 3;
 var TITLE_SPRITE_Y_POS = 6;
 
-var SPEECH_BUBBLE_TIMEOUT = 3000;
 var SPEECH_BUBBLE_RADIUS = 20;
 var SPEECH_BUBBLE_H_OFFSET = 50;
 var SPEECH_BUBBLE_PADDING = 5;
@@ -18372,7 +18381,7 @@ Studio.saySprite = function (opts) {
 
   sprite.bubbleTimeoutFunc = delegate(this, Studio.hideSpeechBubble, opts);
   sprite.bubbleTimeout = window.setTimeout(sprite.bubbleTimeoutFunc,
-    opts.seconds * 1000 || SPEECH_BUBBLE_TIMEOUT);
+    opts.seconds * 1000);
 
   return opts.complete;
 };
