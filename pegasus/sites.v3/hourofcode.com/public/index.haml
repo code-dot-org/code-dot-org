@@ -46,8 +46,11 @@ social:
 - imageheight = 590
 
 #top{style: "position:relative; /*height: #{imageheight}px; */ width:100%; overflow:hidden"}
-  #fullwidth0{style: "z-index: -5; position:absolute; left: 0; top: 0; background-image: url('/images/the-world.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 1; background-position: 0% 0%"}
-
+  -if @country == 'ie'
+    #fullwidth0{style: "z-index: -5; position:absolute; left: 0; top: 0; background-image: url('/images/girl-learning.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 1; background-position: 0% 0%"}
+  -else
+    #fullwidth0{style: "z-index: -5; position:absolute; left: 0; top: 0; background-image: url('/images/the-world.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 1; background-position: 0% 0%"}
+  
   #fullwidth1{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url('/images/girl-learning.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0; background-position: 50% 50%"}
 
   #fullwidth2{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url('/images/kids-learning.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0; background-position: 30% 40%"}
@@ -129,6 +132,10 @@ social:
       &nbsp;
     .col-xs-10{style: "text-align: center; font-size: 24px; line-height:30px; font-weight: 500; color: rgb(26,172,186)"}
       =hoc_s(:front_intro_default)
+      -if @country == 'ie'
+        %br/
+        %br/
+        We are calling on people from all walks of life to get involved and to sign up for an Hour of Code in a school, community centre or workplace near them. In support of the global movement we are working with partners locally including Coder Dojo, Junior Achievement, Foroige, the Arts Council, the Digital Schools and plan to get more than 100 events up and running on December 8th.
 
   %br/
   %br/
