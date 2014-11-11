@@ -491,6 +491,7 @@ Turtle.animate = function() {
       catch(err) {
         Turtle.executionError = err;
         finishExecution();
+        return;
       }
       stepped = Turtle.interpreter.step();
 
