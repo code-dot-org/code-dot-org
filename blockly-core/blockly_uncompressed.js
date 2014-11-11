@@ -13176,7 +13176,7 @@ Blockly.Connection.prototype.closest = function(maxLimit, dx, dy) {
   function checkConnection_(yIndex) {
     var connection = db[yIndex];
     var targetSourceBlock = connection.sourceBlock_;
-    if(!targetSourceBlock.isUserVisible()) {
+    if(!Blockly.editBlocks && !targetSourceBlock.isUserVisible()) {
       return true
     }
     if(connection.type === Blockly.OUTPUT_VALUE || (connection.type === Blockly.FUNCTIONAL_OUTPUT || connection.type === Blockly.PREVIOUS_STATEMENT)) {
@@ -13271,7 +13271,7 @@ Blockly.Connection.prototype.neighbours_ = function(maxLimit) {
   function checkConnection_(yIndex) {
     var connection = db[yIndex];
     var targetSourceBlock = connection.sourceBlock_;
-    if(!targetSourceBlock.isUserVisible()) {
+    if(!Blockly.editBlocks && !targetSourceBlock.isUserVisible()) {
       return true
     }
     var dx = currentX - connection.x_;
@@ -22155,7 +22155,7 @@ Blockly.BlockSpaceEditor.prototype.populateSVGEffects_ = function(container) {
   if(goog.dom.getElement("blocklySvgDefsGlobal")) {
     return
   }
-  var svg = Blockly.createSvgElement("svg", {id:"blocklyFilters", width:0, height:0}, container);
+  var svg = Blockly.createSvgElement("svg", {id:"blocklyFilters", width:0, height:0, style:"display: block"}, container);
   var defs = Blockly.createSvgElement("defs", {id:"blocklySvgDefsGlobal"}, svg);
   var filter, feSpecularLighting, feMerge, pattern;
   filter = Blockly.createSvgElement("filter", {"id":"blocklyEmboss"}, defs);
@@ -22178,6 +22178,7 @@ Blockly.BlockSpaceEditor.prototype.populateSVGEffects_ = function(container) {
 };
 Blockly.BlockSpaceEditor.prototype.createDom_ = function(container) {
   container.setAttribute("dir", "LTR");
+  this.populateSVGEffects_(container);
   var svg = Blockly.createSvgElement("svg", {"xmlns":"http://www.w3.org/2000/svg", "xmlns:html":"http://www.w3.org/1999/xhtml", "xmlns:xlink":"http://www.w3.org/1999/xlink", "version":"1.1", "class":"blocklySvg"}, null);
   this.svg_ = svg;
   container.appendChild(svg);
@@ -22185,7 +22186,6 @@ Blockly.BlockSpaceEditor.prototype.createDom_ = function(container) {
     return false
   });
   var defs = Blockly.createSvgElement("defs", {id:"blocklySvgDefs"}, svg);
-  this.populateSVGEffects_(container);
   this.blockSpace.maxBlocks = Blockly.maxBlocks;
   svg.appendChild(this.blockSpace.createDom());
   if(!Blockly.readOnly) {
@@ -22865,7 +22865,8 @@ Blockly.parseOptions_ = function(options) {
   }
   return{RTL:!!options["rtl"], collapse:hasCollapse, readOnly:readOnly, maxBlocks:options["maxBlocks"] || Infinity, assetUrl:options["assetUrl"] || function(path) {
     return"./" + path
-  }, hasCategories:hasCategories, hasScrollbars:hasScrollbars, hasConcreteBlocks:hasConcreteBlocks, hasTrashcan:hasTrashcan, varsInGlobals:varsInGlobals, languageTree:tree, disableParamEditing:options["disableParamEditing"] || false, disableVariableEditing:options["disableVariableEditing"] || false, useModalFunctionEditor:options["useModalFunctionEditor"] || false, useContractEditor:options["useContractEditor"] || false, grayOutUndeletableBlocks:grayOutUndeletableBlocks}
+  }, hasCategories:hasCategories, hasScrollbars:hasScrollbars, hasConcreteBlocks:hasConcreteBlocks, hasTrashcan:hasTrashcan, varsInGlobals:varsInGlobals, languageTree:tree, disableParamEditing:options["disableParamEditing"] || false, disableVariableEditing:options["disableVariableEditing"] || false, useModalFunctionEditor:options["useModalFunctionEditor"] || false, useContractEditor:options["useContractEditor"] || false, grayOutUndeletableBlocks:grayOutUndeletableBlocks, editBlocks:options["editBlocks"] || 
+  false}
 };
 Blockly.initUISounds_ = function() {
   Blockly.loadAudio_([Blockly.assetUrl("media/click.mp3"), Blockly.assetUrl("media/click.wav"), Blockly.assetUrl("media/click.ogg")], "click");
