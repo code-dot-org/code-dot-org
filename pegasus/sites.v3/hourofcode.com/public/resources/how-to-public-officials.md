@@ -9,7 +9,7 @@ How-to guide for public officials
 
 3. **Attend an event during Computer Science Education Week (Dec 8-14).** <a href="<%= hoc_uri('/events') %>">Find classrooms and schools</a> participating in your district, city or state. 
 
-4. **Issue a proclamation or resolution.** See this sample resolution <a href="<%= hoc_uri('resources/proclamation') %>">sample resolution</a> supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
+4. **Issue a proclamation or resolution.** See this <a href="<%= hoc_uri('resources/proclamation') %>">sample resolution</a> supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
 
 5. **Draft an op-ed**. Consider publishing an opinion piece in your local paper. See this <a href="/resources/op-ed') %>">sample op-ed</a>  supporting comupter supportive of Computer Science Education Week and its goals.
 
