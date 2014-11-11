@@ -32,7 +32,7 @@ var api = require('./api');
 var page = require('../templates/page.html');
 var feedback = require('../feedback.js');
 var dom = require('../dom');
-
+var blockUtils = require('../block_utils');
 
 var ExpressionNode = require('./expressionNode');
 var TestResults = require('../constants').TestResults;
@@ -63,7 +63,8 @@ Calc.init = function(config) {
   Calc.shownFeedback_ = false;
 
   config.grayOutUndeletableBlocks = true;
-  config.insertWhenRun = false;
+  config.forceInsertTopBlock = 'functional_compute';
+  config.enableShowCode = false;
 
   config.html = page({
     assetUrl: BlocklyApps.assetUrl,
@@ -91,6 +92,10 @@ Calc.init = function(config) {
     svg.setAttribute('width', CANVAS_WIDTH);
     svg.setAttribute('height', CANVAS_HEIGHT);
 
+    if (level.freePlay) {
+      document.getElementById('goalHeader').setAttribute('visibility', 'hidden');
+    }
+
     // This is hack that I haven't been able to fully understand. Furthermore,
     // it seems to break the functional blocks in some browsers. As such, I'm
     // just going to disable the hack for this app.
@@ -98,10 +103,11 @@ Calc.init = function(config) {
 
     // Add to reserved word list: API, local variables in execution evironment
     // (execute) and the infinite loop detection function.
-    //XXX Not sure if this is still right.
     Blockly.JavaScript.addReservedWords('Calc,code');
 
-    Calc.expressions.target = generateExpressionFromBlockXml(level.solutionBlocks);
+    var solutionBlocks = blockUtils.forceInsertTopBlock(level.solutionBlocks,
+      config.forceInsertTopBlock);
+    Calc.expressions.target = getExpressionFromBlocks(solutionBlocks);
     Calc.drawExpressions();
 
     // Adjust visualizationColumn width.
@@ -125,7 +131,7 @@ Calc.init = function(config) {
  */
 BlocklyApps.runButtonClick = function() {
   BlocklyApps.toggleRunReset('reset');
-  Blockly.mainWorkspace.traceOn(true);
+  Blockly.mainBlockSpace.traceOn(true);
   BlocklyApps.attempts++;
   Calc.execute();
 };
@@ -142,6 +148,7 @@ Calc.resetButtonClick = function () {
   Calc.expressions.user = null;
   Calc.expressions.current = null;
   Calc.shownFeedback_ = false;
+  Calc.message = null;
 
   Calc.drawExpressions();
 };
@@ -172,70 +179,81 @@ function evalCode (code) {
 }
 
 /**
- * Given the xml for a set of blocks, generates an expression from them by
- * temporarily sticking them into the workspace, generating code, and
- * evaluating said code.
+ * Generates an ExpressionNode from the blocks in the workspace. If blockXml
+ * is provided, temporarily sticks those blocks into the workspace to generate
+ * the ExpressionNode, then deletes blocks.
  */
-function generateExpressionFromBlockXml(blockXml) {
-  var xml = blockXml || '';
 
-  if (Blockly.mainWorkspace.getTopBlocks().length !== 0) {
-    throw new Error("generateExpressionFromBlockXml shouldn't be called if " +
-      "we already have blocks in the workspace");
+function getExpressionFromBlocks(blockXml) {
+  if (blockXml) {
+    if (Blockly.mainBlockSpace.getTopBlocks().length !== 0) {
+      throw new Error("getExpressionFromBlocks shouldn't be called with blocks if " +
+        "we already have blocks in the workspace");
+    }
+    // Temporarily put the blocks into the workspace so that we can generate code
+    BlocklyApps.loadBlocks(blockXml);
   }
 
-  // Temporarily put the blocks into the workspace so that we can generate code
-  BlocklyApps.loadBlocks(xml);
-  var code = Blockly.Generator.workspaceToCode('JavaScript');
+  var code = Blockly.Generator.blockSpaceToCode('JavaScript', 'functional_compute');
   evalCode(code);
+  var object = Calc.computedExpression;
+  Calc.computedExpression = null;
 
-  // Remove the blocks
-  Blockly.mainWorkspace.getTopBlocks().forEach(function (b) { b.dispose(); });
-  var expression = Calc.lastExpression;
-  Calc.lastExpression = null;
+  if (blockXml) {
+    // Remove the blocks
+    Blockly.mainBlockSpace.getTopBlocks().forEach(function (b) { b.dispose(); });
+  }
 
-  return expression;
+  return object;
 }
 
 /**
  * Execute the user's code.  Heaven help us...
  */
 Calc.execute = function() {
-  // todo (brent) perhaps try to share user vs. expected generation better
-  var code = Blockly.Generator.workspaceToCode('JavaScript');
-  evalCode(code);
+  Calc.result = BlocklyApps.ResultType.UNSET;
+  Calc.testResults = BlocklyApps.TestResults.NO_TESTS_RUN;
+  Calc.message = undefined;
 
-  if (!Calc.lastExpression) {
-    Calc.lastExpression = new ExpressionNode(0);
+  var userExpression = getExpressionFromBlocks();
+  if (userExpression) {
+    Calc.expressions.user = userExpression.clone();
+  } else {
+    Calc.expressions.user = new ExpressionNode(0);
   }
 
-  Calc.expressions.user = Calc.lastExpression.clone();
-  Calc.expressions.current = Calc.expressions.target.clone();
+  if (Calc.expressions.target) {
+    Calc.expressions.current = Calc.expressions.target.clone();
+    Calc.expressions.user.applyExpectation(Calc.expressions.target);
+  }
 
-  Calc.expressions.user.applyExpectation(Calc.expressions.target);
+  Calc.result = !Calc.expressions.user.failedExpectation(true);
+  Calc.testResults = BlocklyApps.getTestResults(Calc.result);
 
-  var result = !Calc.expressions.user.failedExpectation(true);
 
-  var equivalent = Calc.expressions.user.isEquivalent(Calc.expressions.target);
+  // equivalence means the expressions are the same if we ignore the ordering
+  // of inputs
+  // todo - check for particular testResult instead of result
+  if (!Calc.result && Calc.expressions.user.isEquivalent(Calc.expressions.target)) {
+    Calc.testResults = TestResults.APP_SPECIFIC_FAIL;
+    Calc.message = calcMsg.equivalentExpression();
+  }
+
+  if (level.freePlay) {
+    Calc.testResults = BlocklyApps.TestResults.FREE_PLAY;
+  }
 
   Calc.drawExpressions();
 
-  var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
+  var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   var textBlocks = Blockly.Xml.domToText(xml);
-
-  // todo (brent) - better way of doing this
-  if (equivalent) {
-    Calc.message = result ? "correct" : "expression equivalent";
-  } else {
-    Calc.message = null;
-  }
 
   var reportData = {
     app: 'calc',
     level: level.id,
     builder: level.builder,
-    result: result,
-    testResult: result ? TestResults.ALL_PASS : TestResults.APP_SPECIFIC_FAIL,
+    result: Calc.result,
+    testResult: Calc.testResults,
     program: encodeURIComponent(textBlocks),
     onComplete: onReportComplete
   };
@@ -258,6 +276,7 @@ Calc.step = function (ignoreFailures) {
     return;
   }
 
+  // If we've fully collapsed our expression, display feedback
   if (!Calc.expressions.user.isOperation()) {
     displayFeedback();
     return;
@@ -269,7 +288,9 @@ Calc.step = function (ignoreFailures) {
   if (!collapsed) {
     continueButton.className = continueButton.className.replace(/hide/g, "");
   } else {
-    Calc.expressions.current.collapse();
+    if (Calc.expressions.current) {
+      Calc.expressions.current.collapse();
+    }
     Calc.drawExpressions();
 
     continueButton.className += " hide";
@@ -293,11 +314,15 @@ Calc.drawExpressions = function () {
   // user: (0 * (3 + 4))
   // right now, we'll highlight the 1 + 2 for goal, and the 3 + 4 for user
 
-  expected.applyExpectation(expected);
-  drawSvgExpression('answerExpression', expected, user !== null);
+  if (expected) {
+    expected.applyExpectation(expected);
+    drawSvgExpression('answerExpression', expected, user !== null);
+  }
 
   if (user) {
-    user.applyExpectation(expected);
+    if (expected) {
+      user.applyExpectation(expected);
+    }
     drawSvgExpression('userExpression', user, true);
   } else {
     clearSvgExpression('userExpression');
@@ -363,14 +388,23 @@ function drawSvgExpression(elementId, expr, styleMarks) {
 var displayFeedback = function(response) {
   if (!Calc.expressions.user.isOperation() && !Calc.shownFeedback_) {
     Calc.shownFeedback_ = true;
-    BlocklyApps.displayFeedback({
+    // override extra top blocks message
+    level.extraTopBlocks = calcMsg.extraTopBlocks();
+    var options = {
       app: 'Calc',
       skin: skin.id,
-      // feedbackType: Calc.testResults,
-      message: Calc.message ? Calc.message : "todo (brent): wrong",
       response: response,
-      level: level
-    });
+      level: level,
+      feedbackType: Calc.testResults,
+      appStrings: {
+        reinfFeedbackMsg: calcMsg.reinfFeedbackMsg()
+      }
+    };
+    if (Calc.message) {
+      options.message = Calc.message;
+    }
+
+    BlocklyApps.displayFeedback(options);
   }
 };
 

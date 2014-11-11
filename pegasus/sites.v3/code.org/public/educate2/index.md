@@ -3,78 +3,74 @@ title: Educator Overview
 nav: educate2_nav
 ---
 
-# Educator Overview
+<h1 style="margin-bottom:0px">Educator Overview</h1>
 
-[col-33]
+[col-50]
 
-### Start Teaching
+<h2 style="margin-top:35px">Curriculum</h2>
 
-[Code Studio](http://studio.code.org/): 20 hour courses for Elementary Students
+[Hour of Code](http://hourofcode.com)
+<br/>
+Join the largest learning event in history
 
-[Hour of Code](http://hourofcode.com): Join the largest learning event in history
+[Code Studio](http://studio.code.org/)
+<br/>
+20 hour courses, recommended for K-5 students
 
-Other Curriculum (MSM, MSS, ECS & CSP)
+[Middle School Math](http://code.org/curriculum/msm/)
+<br/>
+Learn how computer programmers use algebra and geometry to develop video games 
 
-3rd party resources 
+[Middle School Science](http://code.org/curriculum/mss/)
+<br/>
+Explore and develop complex scientific models through agent-based programming 
 
-[/col-33]
+[Exploring Computer Science](http://www.exploringcs.org)
+<br/>
+A high school course designed to broaden participation in computer science
 
-[col-33]
+[AP Computer Science Principles](http://code.org/educate2/csp/)
+<br/>
+An AP course covering a wide range of computer science topics
 
-### Professional Development
-
-- [New K-5 Program](http://code.org/educate/k5): Computer science for elementary school
-- [District Partnership](http://code.org/educate/districts): Partner with Code.org to bring K-12 computer science to your district
+[3rd party resources](http://code.org/educate2/3rdparty/) 
 
 <br/>
+
+[/col-50]
+
+[col-50]
+
+<h2 style="margin-top:35px">Professional Development</h2>
+
+[K-5 Program](http://code.org/educate/k5)
 <br/>
+Sign up now for computer science professional development for K-5 educators
+
+[District Partnership](http://code.org/educate/districts)
 <br/>
+Partner with Code.org to bring computer science to your district for grades 6-12
+
 <br/>
 
-[/col-33]
-
-[col-33]
-
-### Inspire Students
-
-- [Inspire Students](http://code.org/educate/inspire) to Try Computer Science
-- Want more? Check out our [educational video library](http://code.org/educate/videos)
-- test
-- test
-
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-
-[/col-33]
+[/col-50]
 
 
-[col-33]
+<div style="clear:both"/>
+
+[col-50]
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[<button>Learn More</button>](/start)
+[<button>Learn More</button>](http://code.org/educate2/curriculum)
 
-[/col-33]
+[/col-50]
 
-[col-33]
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[<button>Learn More</button>](/profdev)
-
-[/col-33]
-
-[col-33]
+[col-50]
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[<button>Learn More</button>](/inspire)
+[<button>Learn More</button>](http://code.org/educate2/professional-development)
 
-[/col-33]
+[/col-50]
 
-<p style="clear:both">&nbsp;</p>
 
-<br />
-<br />
 

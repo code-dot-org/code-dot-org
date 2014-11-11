@@ -1,9 +1,10 @@
 "fi-FI":
   hello: Hei maailma
+  select_language: Please select your language
   computer_science: Tietojenkäsittelytiede
   computer_science_edweek: Tietojenkäsittelyn koulutusviikko
   csedweek_dates: 9.-15. joulukuuta 2013
-  n_have_learned_an_hoc: "<h1>#</h1><h3>on kokeillut</h3><h2>Koodituntia</h2>"
+  n_have_learned_an_hoc: <h1>#</h1><h3>on kokeillut</h3><h2>Koodituntia</h2>
   anybody_can_learn: Kuka tahansa voi oppia.
   learn_now: Opettele nyt
   petition_message: Jokaisen oppilaan jokaisessa koulussa pitää saada mahdollisuus
@@ -44,7 +45,7 @@
     -lauseet ja perusalgoritmit.
   all_ages: Kaikenikäiset
   beginner: Aloittelija
-  n_participants: "# osallistujaa"
+  n_participants: '# osallistujaa'
   go: Mene
   thank_you_: Kiitos!
   congratulations: Onneksi olkoon!
@@ -81,7 +82,7 @@
   beyond_an_hour: Yli Kooditunnin
   get_started: Aloita
   i_agree: Hyväksyn
-  participant_select: "- Valitse -"
+  participant_select: '- Valitse -'
   participant_student: Oppilas
   participant_parent: Vanhempi
   participant_educator: Opettaja
@@ -100,7 +101,7 @@
   learn_next_level: Jatka seuraavalle tasolle
   learn_online: Kokeile muita kursseja verkossa
   learn_classes: Etsi paikallisia oppitunteja
-  hoc_is_here: "#Koodaustunti on täällä - Tsekkaa! @codeorg"
+  hoc_is_here: '#Koodaustunti on täällä - Tsekkaa! @codeorg'
   just_did_hoc: 'Suoritin juuri #Koodaustunti - tsekkaa tämä! @codeorg'
   learn_hoc: Opiskele Koodaustunnilla
   beyond_hoc: Koodaustunnin jälkeen
@@ -110,11 +111,11 @@
   help_recruit_coders: Auta meitä hankkimaan lisää koodaajia joukkueeseesi!
   help_recruit: Auta meitä hankkimaan lisää koodaajia!
   lines_of_code: TÄHÄN MENNESSÄ KIRJOITETTU YLI <b># RIVIÄ KOODIA</b>.
-  lines_of_code_alt: "<b>#</b> RIVIÄ OPISKELIJOIDEN KIRJOITTAMAA KOODIA"
+  lines_of_code_alt: <b>#</b> RIVIÄ OPISKELIJOIDEN KIRJOITTAMAA KOODIA
   who_has_done_hoc: 'Kuka on suorittanut #Koodaustunti? @codeorg'
   hoc_leaderboards: Koodaustunnin pistetaulukot
-  students_and_lines: "%{students} opiskelijaa on suorittanut koodaustunnin ja kirjoittanut
-    %{lines} riviä koodia."
+  students_and_lines: '%{students} opiskelijaa on suorittanut koodaustunnin ja kirjoittanut
+    %{lines} riviä koodia.'
   start_hoc: Aloita Koodaustunti nyt
   contact_form_topic_press: Lehdistö/media (haastattelu- tai luentopyyntö)
   studiobar_title: Tutustu <a href='http://studio.code.org'>Code Studio</a>:on
@@ -240,11 +241,11 @@
   dashboard_sections_name: Ryhmän nimi
   dashboard_sections_choose_secret: Jos haluat antaa tunnukset oppilaillesi, valitse
     salaisuustyypiksi joko <b>sana</b> tai <b>kuva</b> kyseiselle ryhmälle.
-  dashboard_sections_secret_word: "<b>Sana</b> antaa sinun asettaa salaisen sanan
-    jokaiselle oppilaalle."
-  dashboard_sections_secret_picture: "<b>Kuva</b> antaa sinun asettaa salaisen kuvan
+  dashboard_sections_secret_word: <b>Sana</b> antaa sinun asettaa salaisen sanan jokaiselle
+    oppilaalle.
+  dashboard_sections_secret_picture: <b>Kuva</b> antaa sinun asettaa salaisen kuvan
     jokaiselle oppilaalle, sopii erityisesti nuoremmille oppilaille jotka eivät osaa
-    vielä kirjoittaa."
+    vielä kirjoittaa.
   dashboard_sections_secret_none: Jos haluat oppilaidesi hallinnoivan omia tunnuksiaan
     mukaanlukien omia salasanojaan, valitse salaisuustyypiksi <b>ei mitään</b>.
   dashboard_sections_print_secrets: Voit tulostaa joukon kortteja sisältäen tunnustiedot

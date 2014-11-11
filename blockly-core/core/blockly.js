@@ -39,13 +39,16 @@ goog.require('Blockly.FieldImageDropdown');
 goog.require('Blockly.FieldRectangularDropdown');
 goog.require('Blockly.FieldTextInput');
 goog.require('Blockly.FieldVariable');
+goog.require('Blockly.FieldParameter');
+goog.require('Blockly.FunctionEditor');
+goog.require('Blockly.ContractEditor');
 goog.require('Blockly.Generator');
 goog.require('Blockly.ImageDimensionCache');
 goog.require('Blockly.Msg');
 goog.require('Blockly.Procedures');
 goog.require('Blockly.Toolbox');
 goog.require('Blockly.WidgetDiv');
-goog.require('Blockly.Workspace');
+goog.require('Blockly.BlockSpace');
 goog.require('Blockly.inject');
 goog.require('Blockly.utils');
 
@@ -232,10 +235,16 @@ Blockly.BUMP_DELAY = 250;
 Blockly.COLLAPSE_CHARS = 30;
 
 /**
- * The main workspace (defined by inject.js).
- * @type {Blockly.Workspace}
+ * The main blockSpace (defined by inject.js).
+ * @type {Blockly.BlockSpace}
  */
-Blockly.mainWorkspace = null;
+Blockly.mainBlockSpace = null;
+
+/**
+ * The main editor blockSpace (defined by inject.js).
+ * @type {Blockly.BlockSpaceEditor}
+ */
+Blockly.mainBlockSpaceEditor = null;
 
 /**
  * Contents of the local clipboard.
@@ -243,324 +252,6 @@ Blockly.mainWorkspace = null;
  * @private
  */
 Blockly.clipboard_ = null;
-
-/**
- * Returns the dimensions of the current SVG image.
- * @return {!Object} Contains width, height, top and left properties.
- */
-Blockly.svgSize = function() {
-  return {width: Blockly.svg.cachedWidth_,
-          height: Blockly.svg.cachedHeight_};
-};
-
-/**
- * Size the SVG image to completely fill its container.  Record both
- * the height/width and the absolute position of the SVG image.
- */
-Blockly.svgResize = function() {
-  var svg = Blockly.svg;
-  var style = window.getComputedStyle(svg);
-  var borderWidth = 0;
-  if (style) {
-    borderWidth = parseInt(style.borderLeftWidth, 10) +
-                  parseInt(style.borderRightWidth, 10);
-  }
-  var div = svg.parentNode;
-  var width = div.offsetWidth - borderWidth;
-  var height = div.offsetHeight;
-  if (svg.cachedWidth_ != width) {
-    svg.setAttribute('width', width + 'px');
-    svg.cachedWidth_ = width;
-  }
-  if (svg.cachedHeight_ != height) {
-    svg.setAttribute('height', height + 'px');
-    svg.cachedHeight_ = height;
-  }
-  // Update the scrollbars (if they exist).
-  if (Blockly.mainWorkspace.scrollbar) {
-    Blockly.mainWorkspace.scrollbar.resize();
-  } else if (Blockly.hasCategories) {
-    Blockly.setMainWorkspaceMetricsNoScroll_();
-  }
-};
-
-/**
- * @return {number} Return the width, in pixels, of the workspace.
- */
-Blockly.getWorkspaceWidth = function() {
-  var metrics = Blockly.mainWorkspace.getMetrics();
-  var width = metrics ? metrics.viewWidth : 0;
-  return width;
-};
-
-/**
- * @return {number} Return the width, in pixels, of the toolbox. Note, this
- * only includes the 'flyout' part, not the categories tree.
- */
-Blockly.getToolboxWidth = function() {
-  var flyout = Blockly.mainWorkspace.flyout_ || Blockly.Toolbox.flyout_;
-  var metrics = flyout.workspace_.getMetrics();
-  var width = metrics ? metrics.viewWidth : 0;
-  return width;
-};
-
-/**
- * Handle a mouse-down on SVG drawing surface.
- * @param {!Event} e Mouse down event.
- * @private
- */
-Blockly.onMouseDown_ = function(e) {
-  Blockly.terminateDrag_(); // In case mouse-up event was lost.
-  Blockly.hideChaff();
-  var isTargetSvg = e.target && e.target.nodeName &&
-      e.target.nodeName.toLowerCase() == 'svg';
-  if (!Blockly.readOnly && Blockly.selected && isTargetSvg) {
-    // Clicking on the document clears the selection.
-    Blockly.selected.unselect();
-  }
-  if (Blockly.isRightButton(e)) {
-    // Right-click.
-    // Unlike google Blockly, we don't want to show a context menu
-    // Blockly.showContextMenu_(e);
-  } else if ((Blockly.readOnly || isTargetSvg) &&
-             Blockly.mainWorkspace.scrollbar) {
-    // If the workspace is editable, only allow dragging when gripping empty
-    // space.  Otherwise, allow dragging when gripping anywhere.
-    Blockly.mainWorkspace.dragMode = true;
-    // Record the current mouse position.
-    Blockly.mainWorkspace.startDragMouseX = e.clientX;
-    Blockly.mainWorkspace.startDragMouseY = e.clientY;
-    Blockly.mainWorkspace.startDragMetrics =
-        Blockly.mainWorkspace.getMetrics();
-    Blockly.mainWorkspace.startScrollX = Blockly.mainWorkspace.pageXOffset;
-    Blockly.mainWorkspace.startScrollY = Blockly.mainWorkspace.pageYOffset;
-
-    // Stop the browser from scrolling/zooming the page
-    e.preventDefault();
-  }
-};
-
-/**
- * Handle a mouse-up on SVG drawing surface.
- * @param {!Event} e Mouse up event.
- * @private
- */
-Blockly.onMouseUp_ = function(e) {
-  Blockly.setCursorHand_(false);
-  Blockly.mainWorkspace.dragMode = false;
-};
-
-/**
- * Handle a mouse-move on SVG drawing surface.
- * @param {!Event} e Mouse move event.
- * @private
- */
-Blockly.onMouseMove_ = function(e) {
-  if (Blockly.mainWorkspace.dragMode) {
-    Blockly.removeAllRanges();
-    var dx = e.clientX - Blockly.mainWorkspace.startDragMouseX;
-    var dy = e.clientY - Blockly.mainWorkspace.startDragMouseY;
-    var metrics = Blockly.mainWorkspace.startDragMetrics;
-    var x = Blockly.mainWorkspace.startScrollX + dx;
-    var y = Blockly.mainWorkspace.startScrollY + dy;
-    x = Math.min(x, -metrics.contentLeft);
-    y = Math.min(y, -metrics.contentTop);
-    x = Math.max(x, metrics.viewWidth - metrics.contentLeft -
-                 metrics.contentWidth);
-    y = Math.max(y, metrics.viewHeight - metrics.contentTop -
-                 metrics.contentHeight);
-
-    // Move the scrollbars and the page will scroll automatically.
-    Blockly.mainWorkspace.scrollbar.set(-x - metrics.contentLeft,
-                                        -y - metrics.contentTop);
-  }
-};
-
-/**
- * Handle a key-down on SVG drawing surface.
- * @param {!Event} e Key down event.
- * @private
- */
-Blockly.onKeyDown_ = function(e) {
-  if (Blockly.isTargetInput_(e)) {
-    // When focused on an HTML text input widget, don't trap any keys.
-    return;
-  }
-  // TODO: Add keyboard support for cursoring around the context menu.
-  if (e.keyCode == 27) {
-    // Pressing esc closes the context menu.
-    Blockly.hideChaff();
-  } else if (e.keyCode == 8 || e.keyCode == 46) {
-    // Delete or backspace.
-    try {
-      if (Blockly.selected && Blockly.selected.isDeletable()) {
-        Blockly.hideChaff();
-        Blockly.selected.dispose(true, true);
-      }
-    } finally {
-      // Stop the browser from going back to the previous page.
-      // Use a finally so that any error in delete code above doesn't disappear
-      // from the console when the page rolls back.
-      e.preventDefault();
-    }
-  } else if (e.altKey || e.ctrlKey || e.metaKey) {
-    if (Blockly.selected && Blockly.selected.isDeletable() &&
-        Blockly.selected.workspace == Blockly.mainWorkspace) {
-      Blockly.hideChaff();
-      if (e.keyCode == 67) {
-        // 'c' for copy.
-        Blockly.copy_(Blockly.selected);
-      } else if (e.keyCode == 88) {
-        // 'x' for cut.
-        Blockly.copy_(Blockly.selected);
-        Blockly.selected.dispose(true, true);
-      }
-    }
-    if (e.keyCode == 86) {
-      // 'v' for paste.
-      if (Blockly.clipboard_) {
-        Blockly.mainWorkspace.paste(Blockly.clipboard_);
-      }
-    }
-  }
-};
-
-/**
- * Stop binding to the global mouseup and mousemove events.
- * @private
- */
-Blockly.terminateDrag_ = function() {
-  Blockly.Block.terminateDrag_();
-  Blockly.Flyout.terminateDrag_();
-};
-
-/**
- * Copy a block onto the local clipboard.
- * @param {!Blockly.Block} block Block to be copied.
- * @private
- */
-Blockly.copy_ = function(block) {
-  var xmlBlock = Blockly.Xml.blockToDom_(block);
-  Blockly.Xml.deleteNext(xmlBlock);
-  // Encode start position in XML.
-  var xy = block.getRelativeToSurfaceXY();
-  xmlBlock.setAttribute('x', Blockly.RTL ? -xy.x : xy.x);
-  xmlBlock.setAttribute('y', xy.y);
-  Blockly.clipboard_ = xmlBlock;
-};
-
-/**
- * Show the context menu for the workspace.
- * @param {!Event} e Mouse event
- * @private
- */
-Blockly.showContextMenu_ = function(e) {
-  if (Blockly.readOnly) {
-    return;
-  }
-  var options = [];
-
-  if (Blockly.collapse) {
-    var hasCollapsedBlocks = false;
-    var hasExpandedBlocks = false;
-    var topBlocks = Blockly.mainWorkspace.getTopBlocks(false);
-    for (var i = 0; i < topBlocks.length; i++) {
-      if (topBlocks[i].isCollapsed()) {
-        hasCollapsedBlocks = true;
-      } else {
-        hasExpandedBlocks = true;
-      }
-    }
-
-    // Option to collapse top blocks.
-    var collapseOption = {enabled: hasExpandedBlocks};
-    collapseOption.text = Blockly.Msg.COLLAPSE_ALL;
-    collapseOption.callback = function() {
-      for (var i = 0; i < topBlocks.length; i++) {
-        topBlocks[i].setCollapsed(true);
-      }
-    };
-    options.push(collapseOption);
-
-    // Option to expand top blocks.
-    var expandOption = {enabled: hasCollapsedBlocks};
-    expandOption.text = Blockly.Msg.EXPAND_ALL;
-    expandOption.callback = function() {
-      for (var i = 0; i < topBlocks.length; i++) {
-        topBlocks[i].setCollapsed(false);
-      }
-    };
-    options.push(expandOption);
-  }
-
-  // Option to get help.
-  var helpOption = {enabled: false};
-  helpOption.text = Blockly.Msg.HELP;
-  helpOption.callback = function() {};
-  options.push(helpOption);
-
-  Blockly.ContextMenu.show(e, options);
-};
-
-/**
- * Cancel the native context menu, unless the focus is on an HTML input widget.
- * @param {!Event} e Mouse down event.
- * @private
- */
-Blockly.onContextMenu_ = function(e) {
-  if (!Blockly.isTargetInput_(e)) {
-    // When focused on an HTML text input widget, don't cancel the context menu.
-    e.preventDefault();
-  }
-};
-
-/**
- * Close tooltips, context menus, dropdown selections, etc.
- * @param {boolean=} opt_allowToolbox If true, don't close the toolbox.
- */
-Blockly.hideChaff = function(opt_allowToolbox) {
-  Blockly.Tooltip.hide();
-  Blockly.WidgetDiv.hide();
-  if (!opt_allowToolbox &&
-      Blockly.Toolbox.flyout_ && Blockly.Toolbox.flyout_.autoClose) {
-    Blockly.Toolbox.clearSelection();
-  }
-};
-
-/**
- * Deselect any selections on the webpage.
- * Chrome will select text outside the SVG when double-clicking.
- * Deselect this text, so that it doesn't mess up any subsequent drag.
- */
-Blockly.removeAllRanges = function() {
-  function removeAllSafe() {
-    try {
-      window.getSelection().removeAllRanges();
-    } catch (e) {
-      // MSIE throws 'error 800a025e' here.
-    }
-  }
-
-  if (window.getSelection) {  // W3
-    var sel = window.getSelection();
-    if (sel && sel.removeAllRanges) {
-      removeAllSafe();
-      window.setTimeout(function() {
-        removeAllSafe();
-      }, 0);
-    }
-  }
-};
-
-/**
- * Is this event targeting a text input widget?
- * @param {!Event} e An event.
- * @return {boolean} True if text input.
- * @private
- */
-Blockly.isTargetInput_ = function(e) {
-  return e.target.type == 'textarea' || e.target.type == 'text';
-};
 
 /**
  * Create an AJAX onload function scoped to request and name params.
@@ -710,153 +401,26 @@ Blockly.stopLoopingAudio = function(name) {
 };
 
 /**
- * Set the mouse cursor to be either a closed hand or the default.
- * @param {boolean} closed True for closed hand.
- * @private
+ * Deselect any selections on the webpage.
+ * Chrome will select text outside the SVG when double-clicking.
+ * Deselect this text, so that it doesn't mess up any subsequent drag.
  */
-Blockly.setCursorHand_ = function(closed) {
-  if (Blockly.readOnly) {
-    return;
+Blockly.removeAllRanges = function() {
+  function removeAllSafe() {
+    try {
+      window.getSelection().removeAllRanges();
+    } catch (e) {
+      // MSIE throws 'error 800a025e' here.
+    }
   }
-  /* Hotspot coordinates are baked into the CUR file, but they are still
-     required due to a Chrome bug.
-     http://code.google.com/p/chromium/issues/detail?id=1446 */
-  var cursor = '';
-  if (closed) {
-    cursor = 'url(' + Blockly.assetUrl('media/handclosed.cur') + ') 7 3, auto';
-  }
-  if (Blockly.selected) {
-    Blockly.selected.getSvgRoot().style.cursor = cursor;
-  }
-  // Set cursor on the SVG surface as well as block so that rapid movements
-  // don't result in cursor changing to an arrow momentarily.
-  Blockly.svg.style.cursor = cursor;
-};
 
-/**
- * Return an object with all the metrics required to size scrollbars for the
- * main workspace.  The following properties are computed:
- * .viewHeight: Height of the visible rectangle,
- * .viewWidth: Width of the visible rectangle,
- * .contentHeight: Height of the contents,
- * .contentWidth: Width of the content,
- * .viewTop: Offset of top edge of visible rectangle from parent,
- * .viewLeft: Offset of left edge of visible rectangle from parent,
- * .contentTop: Offset of the top-most content from the y=0 coordinate,
- * .contentLeft: Offset of the left-most content from the x=0 coordinate.
- * .absoluteTop: Top-edge of view.
- * .absoluteLeft: Left-edge of view.
- * @return {Object} Contains size and position metrics of main workspace.
- * @private
- */
-Blockly.getMainWorkspaceMetrics_ = function() {
-  var svgSize = Blockly.svgSize();
-  svgSize.width -= Blockly.Toolbox.width;  // Zero if no Toolbox.
-  var viewWidth = svgSize.width - Blockly.Scrollbar.scrollbarThickness;
-  var viewHeight = svgSize.height - Blockly.Scrollbar.scrollbarThickness;
-  try {
-        if (Blockly.isMsie() || Blockly.isTrident()) {
-            Blockly.mainWorkspace.getCanvas().style.display = "inline";   /* reqd for IE */
-            var blockBox = {
-                x: Blockly.mainWorkspace.getCanvas().getBBox().x,
-                y: Blockly.mainWorkspace.getCanvas().getBBox().y,
-                width: Blockly.mainWorkspace.getCanvas().scrollWidth,
-                height: Blockly.mainWorkspace.getCanvas().scrollHeight
-            };
-        }
-        else {
-            var blockBox = Blockly.mainWorkspace.getCanvas().getBBox();
-        }
-  } catch (e) {
-    // Firefox has trouble with hidden elements (Bug 528969).
-    return null;
+  if (window.getSelection) {  // W3
+    var sel = window.getSelection();
+    if (sel && sel.removeAllRanges) {
+      removeAllSafe();
+      window.setTimeout(function() {
+        removeAllSafe();
+      }, 0);
+    }
   }
-  if (Blockly.mainWorkspace.scrollbar) {
-    // add some buffer space to the right/below existing contents
-    var leftEdge = 0;
-    var rightEdge = Math.max(blockBox.x + blockBox.width + viewWidth, viewWidth * 1.5);
-    var topEdge = 0;
-    var bottomEdge = Math.max(blockBox.y + blockBox.height + viewHeight, viewHeight * 1.5);
-
-  } else {
-    var leftEdge = blockBox.x;
-    var rightEdge = leftEdge + blockBox.width;
-    var topEdge = blockBox.y;
-    var bottomEdge = topEdge + blockBox.height;
-  }
-  var absoluteLeft = Blockly.RTL ? 0 : Blockly.Toolbox.width;
-  return {
-    viewHeight: svgSize.height,
-    viewWidth: svgSize.width,
-    contentHeight: bottomEdge - topEdge,
-    contentWidth: rightEdge - leftEdge,
-    viewTop: -Blockly.mainWorkspace.pageYOffset,
-    viewLeft: -Blockly.mainWorkspace.pageXOffset,
-    contentTop: topEdge,
-    contentLeft: leftEdge,
-    absoluteTop: 0,
-    absoluteLeft: absoluteLeft
-  };
-};
-
-/**
- * Sets the X/Y translations of the main workspace to match the scrollbars.
- * @param {!Object} xyRatio Contains an x and/or y property which is a float
- *     between 0 and 1 specifying the degree of scrolling.
- * @private
- */
-Blockly.setMainWorkspaceMetrics_ = function(xyRatio) {
-  if (!Blockly.mainWorkspace.scrollbar) {
-    throw 'Attempt to set main workspace scroll without scrollbars.';
-  }
-  var metrics = Blockly.getMainWorkspaceMetrics_();
-  if (goog.isNumber(xyRatio.x)) {
-      Blockly.mainWorkspace.pageXOffset = -metrics.contentWidth * xyRatio.x -
-        metrics.contentLeft;
-  }
-  if (goog.isNumber(xyRatio.y)) {
-      Blockly.mainWorkspace.pageYOffset = -metrics.contentHeight * xyRatio.y -
-        metrics.contentTop;
-  }
-  var translation = 'translate(' +
-      (Blockly.mainWorkspace.pageXOffset + metrics.absoluteLeft) + ',' +
-      (Blockly.mainWorkspace.pageYOffset + metrics.absoluteTop) + ')';
-  Blockly.mainWorkspace.getCanvas().setAttribute('transform', translation);
-  Blockly.mainWorkspace.getBubbleCanvas().setAttribute('transform',
-                                                       translation);
-};
-
-/**
- * Sets the X/Y translations of the main workspace when scrollbars are
- * disabled.
- * @private
- */
-Blockly.setMainWorkspaceMetricsNoScroll_ = function() {
-  var metrics = Blockly.getMainWorkspaceMetrics_();
-  if (metrics) {
-    var translation = 'translate(' + (metrics.absoluteLeft) + ',' +
-        (metrics.absoluteTop) + ')';
-    Blockly.mainWorkspace.getCanvas().setAttribute('transform', translation);
-    Blockly.mainWorkspace.getBubbleCanvas().setAttribute('transform',
-                                                         translation);
-  }
-};
-
-/**
- * When something in Blockly's workspace changes, call a function.
- * @param {!Function} func Function to call.
- * @return {!Array.<!Array>} Opaque data that can be passed to
- *     removeChangeListener.
- */
-Blockly.addChangeListener = function(func) {
-  return Blockly.bindEvent_(Blockly.mainWorkspace.getCanvas(),
-                            'blocklyWorkspaceChange', null, func);
-};
-
-/**
- * Stop listening for Blockly's workspace changes.
- * @param {!Array.<!Array>} bindData Opaque data from addChangeListener.
- */
-Blockly.removeChangeListener = function(bindData) {
-  Blockly.unbindEvent_(bindData);
 };

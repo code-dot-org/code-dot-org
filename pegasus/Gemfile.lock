@@ -148,6 +148,7 @@ GEM
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
     redcarpet (3.1.1)
+    redis (3.1.0)
     rerun (0.10.0)
       listen (~> 2.7, >= 2.7.3)
     rest-client (1.6.7)
@@ -214,6 +215,7 @@ DEPENDENCIES
   rack-contrib (~> 1.1)
   rake (~> 10.3)
   redcarpet (~> 3.1.1)
+  redis (~> 3.1.0)
   rerun
   rmagick
   sequel (~> 4.10.0)

@@ -1,8 +1,16 @@
-%h2=hoc_s(:prizes_all)
-%ul
-  %li=hoc_s(:prizes_every_organizer)
-  -if @country == 'us'
-    %li=hoc_s(:prizes_technology)
-    %li=hoc_s(:prizes_tech_chats)
-  %li 
-    %a{href:hoc_uri("/prizes")}=hoc_s(:prizes_details)
+#prizes
+  %h2{:style=>'margin-top:25px'}=hoc_s(:prizes_all)
+  %ul{:style=>"line-height:28px"}
+    %li=hoc_s(:prizes_every_organizer)
+    -if @country == 'us'
+      %li=hoc_s(:prizes_technology)
+      %li=hoc_s(:prizes_tech_chats).gsub(/#/, '96')
+    -if @country == 'uk'  
+      %li=hoc_s(:prizes_tech_chats).gsub(/#/, '20')
+    -if @country == 'ca'  
+      %li=hoc_s(:prizes_tech_chats)
+      %li=hoc_s(:prizes_brilliant)
+      %li=hoc_s(:prizes_actua)
+      %li=hoc_s(:prizes_robots)
+    %li
+      %a{href:hoc_uri("/prizes")}=hoc_s(:prizes_details)

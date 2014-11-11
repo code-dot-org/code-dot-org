@@ -30,10 +30,11 @@ angular: teacherDashboard
     $routeProvider.when('/',                  {templateUrl: '/teacher-dashboard/landing'});
     $routeProvider.when('/sections',          {templateUrl: '/teacher-dashboard/sections',
                                                controller: 'SectionsController'});
+    $routeProvider.when('/plan',              {templateUrl: '/teacher-dashboard/plan'});
     $routeProvider.when('/sections/:id',      {templateUrl: '/teacher-dashboard/section',
                                                controller: 'SectionDetailController'});
-    $routeProvider.when('/sections/:sectionid/student/:studentid', 
-                                              {templateUrl: '/teacher-dashboard/student', 
+    $routeProvider.when('/sections/:sectionid/student/:studentid',
+                                              {templateUrl: '/teacher-dashboard/student',
                                                controller: 'StudentDetailController'});
     $routeProvider.when('/sections/:id/print_signin_cards', {templateUrl: '/teacher-dashboard/signin_cards',
                                                controller: 'SectionDetailController'});
@@ -62,7 +63,7 @@ angular: teacherDashboard
       }
     };
   }]);
-    
+
 
   // SERVICES
 
@@ -78,7 +79,7 @@ angular: teacherDashboard
       //  'save':   {method:'POST'},
       //  'query':  {method:'GET', isArray:true},
       //  'remove': {method:'DELETE'},
-      //  'delete': {method:'DELETE'} 
+      //  'delete': {method:'DELETE'}
          update: {method:'POST', url: 'v2/sections/:id/update'},
          addStudents: {method:'POST', url:'/v2/sections/:id/students', isArray: true},
          removeStudent: {method:'DELETE', url:'/v2/sections/:id/students/:studentId'},
@@ -93,7 +94,7 @@ angular: teacherDashboard
       //  'save':   {method:'POST'},
       //  'query':  {method:'GET', isArray:true},
       //  'remove': {method:'DELETE'},
-      //  'delete': {method:'DELETE'} 
+      //  'delete': {method:'DELETE'}
          update: {method:'POST', url: 'v2/students/:id/update'},
       });
     }]);
@@ -109,7 +110,7 @@ angular: teacherDashboard
     $scope.course_list = #{DashboardSection::VALID_COURSES.to_json};
 
     $scope.sections = sectionsService.query();
-    
+
     $scope.sections.$promise.then(function( sections ){
       $scope.sectionsLoaded = true;
     });
@@ -157,7 +158,7 @@ angular: teacherDashboard
     $scope.cancel = function(section) {
       if (section.id) {
         section.editing = false;
-      } else { 
+      } else {
         $scope.sections.splice($scope.sections.indexOf(section), 1); // remove from array
       }
     };
@@ -293,7 +294,7 @@ angular: teacherDashboard
       var modifiedStudents = [];
 
       $.each(students, function(index, student) {
-        console.log(index); 
+        console.log(index);
         if (student.editing || student.editing_password) {
           if (student.id) {
             modifiedStudents.push(student);

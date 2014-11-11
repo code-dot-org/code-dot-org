@@ -16,10 +16,10 @@ social:
 
 # Recursos para docentes
 
-A continuación encontrará recursos para aprender y enseñar informática a sus alumnos más allá de La Hora del Código. Hay toda una comunidad en la Argentina que puede ayudar a los demás y hacer la programación fácil y divertida! 
+A continuación encontrarás recursos para aprender y enseñar informática a tus alumnos más allá de La Hora del Código. ¡Hay toda una comunidad en la Argentina que puede ayudar a los demás y hacer la programación fácil y divertida! 
 
 ## Enseñá una Hora del Código a tus alumnos 
 
-Unite a nosotros para hacer Historia al llegar a cientos de miles de estudiantes participando de una Hora del Código. Hacé una hora de programación con tus alumnos, por más que también sea nuevo para vos. Probá nuestros tutoriales [aquí](/learn).
+Unite a nosotros para hacer Historia al llegar a cientos de miles de estudiantes participando de la Hora del Código. Hacé la Hora del Código con tus alumnos, por más que también sea nuevo para vos. Probá nuestros tutoriales [aquí](/learn).
 
-Le pedimos a los voluntarios que por favor se preregistren en [HourofCode.com/ar](http://www.hourofcode.com/ar). Los estudiantes pueden empezar su Hora del Código directamente [aquí](/learn)!
+Los estudiantes pueden empezar la Hora del Código directamente [aquí](/learn)!

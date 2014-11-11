@@ -455,7 +455,7 @@ Maze.init = function(config) {
   level = config.level;
 
   config.grayOutUndeletableBlocks = true;
-  config.insertWhenRun = true;
+  config.forceInsertTopBlock = 'when_run';
 
   if (mazeUtils.isBeeSkin(config.skinId)) {
     Maze.bee = new Bee(Maze, config);
@@ -822,7 +822,7 @@ function beginAttempt () {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
   BlocklyApps.toggleRunReset('reset');
-  Blockly.mainWorkspace.traceOn(true);
+  Blockly.mainBlockSpace.traceOn(true);
   BlocklyApps.reset(false);
   BlocklyApps.attempts++;
 }
@@ -894,7 +894,7 @@ Maze.execute = function(stepMode) {
   beginAttempt();
 
   Maze.executionInfo = new ExecutionInfo({ticks: 100});
-  var code = Blockly.Generator.workspaceToCode('JavaScript');
+  var code = Blockly.Generator.blockSpaceToCode('JavaScript');
   Maze.result = BlocklyApps.ResultType.UNSET;
   Maze.testResults = BlocklyApps.TestResults.NO_TESTS_RUN;
   Maze.waitingForReport = false;
@@ -921,11 +921,17 @@ Maze.execute = function(stepMode) {
   // to help the user see the mistake.
   BlocklyApps.playAudio('start');
   try {
-    codegen.evalWith(code, {
-      BlocklyApps: BlocklyApps,
-      Maze: api,
-      executionInfo: Maze.executionInfo
-    });
+    // don't bother running code if we're just editting required blocks. all
+    // we care about is the contents of report.
+    var runCode = !level.edit_blocks;
+
+    if (runCode) {
+      codegen.evalWith(code, {
+        BlocklyApps: BlocklyApps,
+        Maze: api,
+        executionInfo: Maze.executionInfo
+      });
+    }
 
     Maze.onExecutionFinish();
 
@@ -981,14 +987,23 @@ Maze.execute = function(stepMode) {
     Maze.testResults = BlocklyApps.getTestResults(levelComplete);
   }
 
+  var program;
   if (level.editCode) {
     Maze.testResults = levelComplete ?
       BlocklyApps.TestResults.ALL_PASS :
       BlocklyApps.TestResults.TOO_FEW_BLOCKS_FAIL;
-  }
 
-  var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
-  var textBlocks = Blockly.Xml.domToText(xml);
+    // If we want to "normalize" the JavaScript to avoid proliferation of nearly
+    // identical versions of the code on the service, we could do either of these:
+
+    // do an acorn.parse and then use escodegen to generate back a "clean" version
+    // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
+
+    program = BlocklyApps.editor.getValue();
+  } else {
+    var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+    program = Blockly.Xml.domToText(xml);
+  }
 
   Maze.waitingForReport = true;
 
@@ -998,7 +1013,7 @@ Maze.execute = function(stepMode) {
     level: level.id,
     result: Maze.result === BlocklyApps.ResultType.SUCCESS,
     testResult: Maze.testResults,
-    program: encodeURIComponent(textBlocks),
+    program: encodeURIComponent(program),
     onComplete: Maze.onReportComplete
   });
 
@@ -1017,14 +1032,14 @@ Maze.execute = function(stepMode) {
   Maze.animating_ = true;
 
   // Disable toolbox while running
-  Blockly.mainWorkspace.setEnableToolbox(false);
+  Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
 
   if (stepMode) {
     if (Maze.cachedBlockStates.length !== 0) {
       throw new Error('Unexpected cachedBlockStates');
     }
     // Disable all blocks, caching their state first
-    Blockly.mainWorkspace.getAllBlocks().forEach(function (block) {
+    Blockly.mainBlockSpace.getAllBlocks().forEach(function (block) {
       Maze.cachedBlockStates.push({
         block: block,
         movable: block.isMovable(),
@@ -1101,7 +1116,7 @@ Maze.scheduleAnimations = function (singleStep) {
       } else {
         Maze.animating_ = false;
         // reenable toolbox
-        Blockly.mainWorkspace.setEnableToolbox(true);
+        Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
         // If stepping and we failed, we want to retain highlighting until
         // clicking reset.  Otherwise we can clear highlighting/disabled
         // blocks now

@@ -10,12 +10,29 @@ This is a living document.  Please update it to help the next DotW, and to help 
 
 ### Areas of responsibility
 
+* Every day
+  * [Ensure we DTT and DTP](#dtt-and-dtp)
 * 2-3x per week
+  * [Investigate Slow DB Queries](#investigate-slow-db-queries)
   * [Check New & Existing Zendesk Tickets](#zendesk)
 * As notified in the Developers HipChat room
   * [Investigate Build Failures](#build-failures)
   * [Level Activity Monitor](#level-activity-monitor)
   * [HoneyBadger Notifications](#honeybadger-notifications)
+
+### DTT and DTP
+Make sure we're deploying to prod daily during the ramp-up to HoC.  There's no action needed if someone is already planning to DTP.  Otherwise it's up to DotW to ensure we deploy daily.
+  * DTT: Create and merge PR for [test...staging](https://github.com/code-dot-org/code-dot-org/compare/test...staging)
+  * Check that there are no UI test failures
+  * DTP: Create and merge a PR for [production...test](https://github.com/code-dot-org/code-dot-org/compare/production...test)
+
+### Investigate Slow DB Queries
+This is a temporary item leading up to the HoC launch.  [Follow the steps to access error/mysql-error-running.log] (http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.Procedural.Viewing.html), then address each slow query:
+  * Always slow: run it via script (every 5 min, every day, etc.)
+  * Not indexed: add indexes
+  * Unoptimized: optimize query directly
+  * Big complicated joins: improve data model
+  * Not sure: ask in the Developers HipChat room
 
 ### Zendesk
 

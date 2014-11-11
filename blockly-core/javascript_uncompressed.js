@@ -676,6 +676,30 @@ Blockly.JavaScript.procedures_ifreturn = function() {
   }
   return a + "}\n"
 };
+Blockly.JavaScript.functionalProcedures = {};
+Blockly.JavaScript.functional_definition = function() {
+  for(var a = Blockly.JavaScript.variableDB_.getName(this.getTitleValue("NAME"), Blockly.Procedures.NAME_TYPE), b = [], c = 0;c < this.arguments_.length;c++) {
+    b[c] = Blockly.JavaScript.variableDB_.getName(this.arguments_[c], Blockly.Variables.NAME_TYPE, Blockly.Variables.NAME_TYPE_LOCAL)
+  }
+  c = Blockly.JavaScript.statementToCode(this, "STACK");
+  Blockly.JavaScript.INFINITE_LOOP_TRAP && (c = Blockly.JavaScript.INFINITE_LOOP_TRAP.replace(/%1/g, "'" + this.id + "'") + c);
+  var d = Blockly.JavaScript.statementToCode(this, "RETURN", Blockly.JavaScript.ORDER_NONE) || "";
+  d && (d = "  return " + d + ";\n");
+  b = (Blockly.varsInGlobals ? "Globals." + a + " = function" : "function " + a) + "(" + b.join(", ") + ") {\nreturn " + c + d + "\n}";
+  b = Blockly.JavaScript.scrub_(this, b);
+  Blockly.JavaScript.definitions_[a] = b;
+  return null
+};
+Blockly.JavaScript.functional_call = function() {
+  for(var a = Blockly.JavaScript.variableDB_.getName(this.getTitleValue("NAME"), Blockly.Procedures.NAME_TYPE), b = [], c = 0;c < this.arguments_.length;c++) {
+    b[c] = Blockly.JavaScript.statementToCode(this, "ARG" + c, Blockly.JavaScript.ORDER_COMMA) || "null"
+  }
+  return(Blockly.varsInGlobals ? "Globals." : "") + a + "(" + b.join(", ") + ")"
+};
+Blockly.JavaScript.functionalParameters = {};
+Blockly.JavaScript.functional_parameters_get = function() {
+  return Blockly.JavaScript.translateVarName(this.getTitleValue("VAR"))
+};
 Blockly.JavaScript.text = function() {
   return[Blockly.JavaScript.quote_(this.getTitleValue("TEXT")), Blockly.JavaScript.ORDER_ATOMIC]
 };
@@ -794,4 +818,6 @@ Blockly.JavaScript.variables_set = function() {
   var a = Blockly.JavaScript.valueToCode(this, "VALUE", Blockly.JavaScript.ORDER_ASSIGNMENT) || "0";
   return Blockly.JavaScript.translateVarName(this.getTitleValue("VAR")) + " = " + a + ";\n"
 };
+Blockly.JavaScript.parameters_get = Blockly.JavaScript.variables_get;
+Blockly.JavaScript.parameters_set = Blockly.JavaScript.variables_set;
 

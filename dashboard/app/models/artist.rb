@@ -7,6 +7,7 @@ class Artist < Blockly
     images
     free_play
     permitted_errors
+    impressive
   )
 
   before_save :update_ideal_level_source

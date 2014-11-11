@@ -1,3 +1,5 @@
+- @script ||= Script.twenty_hour_script
+
 -# Temporarily comment out banner about locale not being supported.
 -# if !support_primary_locale?
   #warning-banner
@@ -6,8 +8,6 @@
   = render partial: 'layouts/unsupported_browser'
 - elsif browser.cdo_partially_supported?
   = render partial: 'layouts/partially_supported_browser'
-
-- script = @script || Script.twenty_hour_script
 
 .navbar-static-top.header{:class => ('hide_on_mobile' if true)}
   .container{style:(@full_width ? "width: 880px;" : "")}
@@ -18,72 +18,7 @@
 
         .header_middle
           - if @script_level
-            .header_level
-              %div{class: "header_level_container"}
-                - game_script_levels = (@stage && @stage.script_levels.includes(:script).joins(:level)) || script.script_levels_from_game(@game.id)
-                - count = game_script_levels.count
-                - game_levels = current_user ? current_user.levels_from_script(script, @game.id, @stage) : game_script_levels
-                - multiple_puzzles = game_levels.count > 1
-
-                .header_text
-                  = "#{@script_level.stage_position_str}#{multiple_puzzles || @stage ? ':' : ''}" if script.multiple_games?
-                  = "#{@script_level.name}#{multiple_puzzles ? ',' : ''}" if @stage
-                  = t(:puzzle) if multiple_puzzles
-                - if multiple_puzzles
-                  - game_levels.each do |sl|
-                    %a{href: build_script_level_path(sl)}
-                    - passed = level_passed({user: current_user, user_level: sl.user_level, level_id: sl.level_id})
-
-                    - if sl.level_id == @script_level.level_id
-                      - if sl.assessment?
-                        - puzzle_outer_class = "level_highlight_outer_assessment"
-                      - else
-                        - puzzle_outer_class = "level_highlight_outer_level"
-                      %div{class: puzzle_outer_class}
-                        - if sl.level.unplugged?
-                          - level_current_class = "level_highlight level_current_header_unplugged"
-                        - else
-                          - level_current_class = "level_highlight"
-                        .level_current_header{class: level_current_class}
-                          = sl.level_display_text
-                    - elsif sl.stage_or_game_position == count
-                      %a.level_highlight{class: passed ? "level_aced" : "level_undone", href: build_script_level_path(sl)}
-                        = sl.level_display_text
-                    - else
-                      %a.other_level{class: passed ? "level_aced" : "level_undone", href: build_script_level_path(sl)}
-                - if script.hoc?
-                  .header_separator
-                  .header_finished_link
-                    %a{href: hoc_finish_url}
-                      = t('nav.header.finished_hoc')
-                - if script.trophies
-                  - if current_user
-                    - progress = current_user.progress(script)
-                    .header_separator
-                    %a.header_trophy_link{href: "#", onclick: "return handlePopupClick(true);"}
-                      .header_text= t(:trophies)
-                      .header_status_bar= progress['current_trophies']
-                      .header_text= "#{t(:of)} #{progress['max_trophies']}"
-                  - else
-                    .header_separator
-                    %a.header_finished_link{href: root_path}
-                      = t('nav.header.sign_in_to_save')
-                - if script.twenty_hour? || script.stages.count > 1
-                  .header_separator
-                  %a.header_status_bar.level_free_play{title: t('nav.header.free_play.playlab'), href: playlab_freeplay_path}
-                    %i.fa.fa-rocket
-                  %a.header_status_bar.level_free_play{title: t('nav.header.free_play.artist'), href: artist_freeplay_path}
-                    %i.fa.fa-pencil
-                  %a.header_popup_link{href: "#", onclick: "return handlePopupClick(false);"}
-                    .header_popup_link_glyph
-                      &#x25BC;
-                    .header_popup_link_text= t(:more)
-              - if script.name == "course1" || script.name == "course2" || script.name == "course3"
-                #betainfo
-                  - if script.feedback_url
-                    = link_to t('landing.feedback'), script.feedback_url
-                    |
-                  = link_to t('landing.report_bug'), @script_level.report_bug_url(request), target: '_blank'
+            = render partial: 'shared/header_progress'
           - elsif @edit_blocks
             .header_level{style:'font-size:300%'} Editing #{@edit_blocks.humanize}
         .header_user
@@ -102,13 +37,6 @@
       %div{id: "popupClose", onclick: "togglePopup();"}
         = t('nav.popup.close')
 
-
-- if @script_level
-  :javascript
-    var script_level_id = #{@script_level.level_id};
-- else
-  :javascript
-    var script_level_id = null;
 
 :javascript
   handleUserMenuClick = function () {
@@ -151,7 +79,8 @@
     if (!loadedPopup) {
       loadedPopup = true;
       togglePopup();
-      $.ajax({url:'#{header_stats_path()}', data: { script_id: #{script.id}, script_level_id: script_level_id }, success:function(result) {
+      var script_level_id = #{@script_level.try(:level_id).to_json};
+      $.ajax({url:'#{header_stats_path()}', data: { script_id: #{@script.id}, script_level_id: script_level_id }, success:function(result) {
           $("#headerPopupBody").html(result);
           if (trophiesClicked === true) {
             jumpToTrophies();

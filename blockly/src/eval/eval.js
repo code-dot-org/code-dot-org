@@ -32,7 +32,11 @@ var api = require('./api');
 var page = require('../templates/page.html');
 var feedback = require('../feedback.js');
 var dom = require('../dom');
+var blockUtils = require('../block_utils');
 
+// requiring this loads canvg into the global namespace
+require('../canvg/canvg.js');
+var canvg = window.canvg || global.canvg;
 
 var TestResults = require('../constants').TestResults;
 
@@ -45,6 +49,10 @@ BlocklyApps.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
 
+// This property is set in the api call to draw, and extracted in
+// getDrawableFromBlocks
+Eval.displayedObject = null;
+
 /**
  * Initialize Blockly and the Eval.  Called on page load.
  */
@@ -53,10 +61,9 @@ Eval.init = function(config) {
   skin = config.skin;
   level = config.level;
 
-  Eval.shownFeedback_ = false;
-
   config.grayOutUndeletableBlocks = true;
-  config.insertWhenRun = false;
+  config.forceInsertTopBlock = 'functional_display';
+  config.enableShowCode = false;
 
   config.html = page({
     assetUrl: BlocklyApps.assetUrl,
@@ -92,13 +99,19 @@ Eval.init = function(config) {
     // just going to disable the hack for this app.
     Blockly.BROKEN_CONTROL_POINTS = false;
 
-    // Add to reserved word list: API, local variables in execution evironment
+    // Add to reserved word list: API, local variables in execution environment
     // (execute) and the infinite loop detection function.
-    //XXX Not sure if this is still right.
     Blockly.JavaScript.addReservedWords('Eval,code');
 
-    Eval.answerObject = generateEvalObjectFromBlockXml(level.solutionBlocks);
-    Eval.answerObject.draw(document.getElementById('answer'));
+    if (level.solutionBlocks) {
+      var solutionBlocks = blockUtils.forceInsertTopBlock(level.solutionBlocks,
+        config.forceInsertTopBlock);
+
+      var answerObject = getDrawableFromBlocks(solutionBlocks);
+      if (answerObject) {
+        answerObject.draw(document.getElementById('answer'));
+      }
+    }
 
     // Adjust visualizationColumn width.
     var visualizationColumn = document.getElementById('visualizationColumn');
@@ -117,7 +130,7 @@ Eval.init = function(config) {
  */
 BlocklyApps.runButtonClick = function() {
   BlocklyApps.toggleRunReset('reset');
-  Blockly.mainWorkspace.traceOn(true);
+  Blockly.mainBlockSpace.traceOn(true);
   BlocklyApps.attempts++;
   Eval.execute();
 };
@@ -160,27 +173,29 @@ function evalCode (code) {
 }
 
 /**
- * Given the xml for a set of blocks, generates an eval object from them by
- * temporarily sticking them into the workspace, generating code, and
- * evaluating said code.
+ * Generates a drawable evalImage from the blocks in the workspace. If blockXml
+ * is provided, temporarily sticks those blocks into the workspace to generate
+ * the evalImage, then deletes blocks.
  */
-function generateEvalObjectFromBlockXml(blockXml) {
-  var xml = blockXml || '';
-
-  if (Blockly.mainWorkspace.getTopBlocks().length !== 0) {
-    throw new Error("generateExpressionFromBlockXml shouldn't be called if " +
-      "we already have blocks in the workspace");
+function getDrawableFromBlocks(blockXml) {
+  if (blockXml) {
+    if (Blockly.mainBlockSpace.getTopBlocks().length !== 0) {
+      throw new Error("getDrawableFromBlocks shouldn't be called with blocks if " +
+        "we already have blocks in the workspace");
+    }
+    // Temporarily put the blocks into the workspace so that we can generate code
+    BlocklyApps.loadBlocks(blockXml);
   }
 
-  // Temporarily put the blocks into the workspace so that we can generate code
-  BlocklyApps.loadBlocks(xml);
-  var code = Blockly.Generator.workspaceToCode('JavaScript');
+  var code = Blockly.Generator.blockSpaceToCode('JavaScript', ['functional_display', 'functional_definition']);
   evalCode(code);
+  var object = Eval.displayedObject;
+  Eval.displayedObject = null;
 
-  // Remove the blocks
-  Blockly.mainWorkspace.getTopBlocks().forEach(function (b) { b.dispose(); });
-  var object = Eval.lastEvalObject;
-  Eval.lastEvalObject = null;
+  if (blockXml) {
+    // Remove the blocks
+    Blockly.mainBlockSpace.getTopBlocks().forEach(function (b) { b.dispose(); });
+  }
 
   return object;
 }
@@ -189,27 +204,25 @@ function generateEvalObjectFromBlockXml(blockXml) {
  * Execute the user's code.  Heaven help us...
  */
 Eval.execute = function() {
-  // todo (brent) perhaps try to share user vs. expected generation better
-  var code = Blockly.Generator.workspaceToCode('JavaScript');
-  evalCode(code);
+  Eval.result = BlocklyApps.ResultType.UNSET;
+  Eval.testResults = BlocklyApps.TestResults.NO_TESTS_RUN;
+  Eval.message = undefined;
 
-  Eval.userObject = Eval.lastEvalObject;
-  if (Eval.userObject) {
-    Eval.userObject.draw(document.getElementById("user"));
-  }
+  var userObject = getDrawableFromBlocks(null);
+  userObject.draw(document.getElementById("user"));
 
-  var result = evaluateAnswer();
-  Eval.message = result ?  "Good jorb!" : '';
+  Eval.result = evaluateAnswer();
+  Eval.testResults = BlocklyApps.getTestResults(Eval.result);
 
-  var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
+  var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   var textBlocks = Blockly.Xml.domToText(xml);
 
   var reportData = {
     app: 'eval',
     level: level.id,
     builder: level.builder,
-    result: result,
-    testResult: result ? TestResults.ALL_PASS : TestResults.APP_SPECIFIC_FAIL,
+    result: Eval.result,
+    testResult: Eval.testResults,
     program: encodeURIComponent(textBlocks),
     onComplete: onReportComplete
   };
@@ -217,18 +230,42 @@ Eval.execute = function() {
   BlocklyApps.report(reportData);
 };
 
-function evaluateAnswer() {
-  var answer = document.getElementById('answer');
-  var user = document.getElementById('user');
+/**
+ * Calling outerHTML on svg elements in safari does not work. Instead we stick
+ * it inside a div and get that div's inner html.
+ */
+function outerHTML (element) {
+  var div = document.createElement('div');
+  div.appendChild(element.cloneNode(true));
+  return div.innerHTML;
+}
 
-  // is this good enough?
-  // todo (brent) : can come up with at least one case where it isnt. goal is
-  // to create a star rotated 90 degrees. i instead create a star rotated -270
-  // degrees. these are exactly the same visually, but will have different
-  // html
-  // we might be able to use canvg to convert the svg to a canvas representation,
-  // and then do our comparison similar to how we do in artist
-  return answer.innerHTML.trim() == user.innerHTML.trim();
+function imageDataForSvg(elementId) {
+  var canvas = document.createElement('canvas');
+  canvas.width = CANVAS_WIDTH;
+  canvas.height = CANVAS_HEIGHT;
+  canvg(canvas, outerHTML(document.getElementById(elementId)));
+
+  // canvg attaches an svg object to the canvas, and attaches a setInterval.
+  // We don't need this, and that blocks our node process from exitting in
+  // tests, so stop it.
+  canvas.svg.stop();
+
+  var ctx = canvas.getContext('2d');
+  return ctx.getImageData(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+}
+
+function evaluateAnswer() {
+  // Compare the solution and user canvas
+  var userImageData = imageDataForSvg('user');
+  var solutionImageData = imageDataForSvg('answer');
+
+  for (var i = 0; i < userImageData.data.length; i++) {
+    if (0 !== Math.abs(userImageData.data[i] - solutionImageData.data[i])) {
+      return false;
+    }
+  }
+  return true;
 }
 
 /**
@@ -236,11 +273,13 @@ function evaluateAnswer() {
  * BlocklyApps.displayFeedback when appropriate
  */
 var displayFeedback = function(response) {
+  // override extra top blocks message
+  level.extraTopBlocks = evalMsg.extraTopBlocks();
+
   BlocklyApps.displayFeedback({
     app: 'Eval',
     skin: skin.id,
-    // feedbackType: Eval.testResults,
-    message: Eval.message ? Eval.message : "todo (brent): wrong",
+    feedbackType: Eval.testResults,
     response: response,
     level: level
   });

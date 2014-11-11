@@ -1,9 +1,10 @@
 "sq-AL":
   hello: Pershendetje Botë
+  select_language: Please select your language
   computer_science: Shkenca Kompjuterike
   computer_science_edweek: Java Edukuese per Shkencat Kompjuterike
   csedweek_dates: 9-15 Dhjetor ,2013
-  n_have_learned_an_hoc: "<h1>#</h1><h3>keni provuar</h3><h2>NJE ORE PROGRAMIMI&trade;</h2>"
+  n_have_learned_an_hoc: <h1>#</h1><h3>keni provuar</h3><h2>NJE ORE PROGRAMIMI&trade;</h2>
   anybody_can_learn: Cdokush mund te mesoj.
   learn_now: Meso tani
   petition_message: Cdo student ne cdo shkolle duhet te kete mundesine te mesoje shkencat
@@ -45,7 +46,7 @@
     fjalitë nëse-atëherë, dhe alegoritme fillestare.
   all_ages: Te gjitha moshat
   beginner: Fillestar
-  n_participants: "# pjesmarrës"
+  n_participants: '# pjesmarrës'
   go: Shko
   thank_you_: Faleminderit!
   congratulations: Urime!
@@ -81,7 +82,7 @@
   beyond_an_hour: Beyond an HOUR OF CODE >
   get_started: Fillo
   i_agree: Un pranoj
-  participant_select: "- Zgjedh -"
+  participant_select: '- Zgjedh -'
   participant_student: student
   participant_parent: Prind
   participant_educator: Edukator
@@ -100,7 +101,7 @@
   learn_next_level: Continue to the next level
   learn_online: Meso online
   learn_classes: Gjej klasa te aferta
-  hoc_is_here: "#OraPerKodim eshte ketu - provoje! @codeorg"
+  hoc_is_here: '#OraPerKodim eshte ketu - provoje! @codeorg'
   just_did_hoc: 'Une sapo mbarova #OrenPerKodim - provoje! @codeorg'
   learn_hoc: Meso nje Ore kodim
   beyond_hoc: Pertej Ores se Kodimit
@@ -110,11 +111,11 @@
   help_recruit_coders: Na ndihmoni te rekrutojme me shume kodues ne skuadren tone!
   help_recruit: Na ndihmo te rekrutojme me shume kodues!
   lines_of_code: MBI <b># VIJAT E KODIT</b> SHKRUAR NE KOHE.
-  lines_of_code_alt: "<b>#</b> VIJAT E KODIMIT TE SHKRUARA NGA STUDENTET"
+  lines_of_code_alt: <b>#</b> VIJAT E KODIMIT TE SHKRUARA NGA STUDENTET
   who_has_done_hoc: 'Kush ka kryer #OrenPerKodim? @codeorg'
   hoc_leaderboards: Tabela e udheheqesve te Ores Se Kodimit
-  students_and_lines: "%{students} studente kane kryer Oren e Kodimit dhe jane shkruar
-    %{lines} rrjeshta me kode."
+  students_and_lines: '%{students} studente kane kryer Oren e Kodimit dhe jane shkruar
+    %{lines} rrjeshta me kode.'
   start_hoc: Fillo Oren e Kodimit tani
   contact_form_topic_press: Press/media (interview or speaking engagement)
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>

@@ -46,13 +46,22 @@ social:
 - imageheight = 590
 
 #top{style: "position:relative; /*height: #{imageheight}px; */ width:100%; overflow:hidden"}
-  #fullwidth0{style: "z-index: -5; position:absolute; left: 0; top: 0; background-image: url('/images/the-world.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 1; background-position: 0% 0%"}
+  -if @country == 'ie'
+    #fullwidth0{style: "z-index: -5; position:absolute; left: 0; top: 0; background-image: url('/images/pair_pink_and_blue.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 1; background-position: 0% 0%"}
 
-  #fullwidth1{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url('/images/girl-learning.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0; background-position: 50% 50%"}
+    #fullwidth1{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url('/images/group_girls.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0; background-position: 50% 50%"}
 
-  #fullwidth2{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url('/images/kids-learning.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0; background-position: 30% 40%"}
+    #fullwidth2{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url('/images/boy_with_games.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0; background-position: 30% 40%"}
 
-  #fullwidth3{style: "z-index: -5; position:absolute; left: 0; top: 0; background-image: url('/images/boy-certificate.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0; background-position: 40% 50%"}
+    #fullwidth3{style: "z-index: -5; position:absolute; left: 0; top: 0; background-image: url('/images/pair_glasses.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0; background-position: 40% 50%"}
+  -else
+    #fullwidth0{style: "z-index: -5; position:absolute; left: 0; top: 0; background-image: url('/images/the-world.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 1; background-position: 0% 0%"}
+  
+    #fullwidth1{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url('/images/girl-learning.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0; background-position: 50% 50%"}
+
+    #fullwidth2{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url('/images/kids-learning.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0; background-position: 30% 40%"}
+
+    #fullwidth3{style: "z-index: -5; position:absolute; left: 0; top: 0; background-image: url('/images/boy-certificate.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0; background-position: 40% 50%"}
 
   #fullwidth{style: "/*position:absolute; left:0; top: 0; */width: 100%; /*height:#{imageheight}px*/"}
 
@@ -83,7 +92,7 @@ social:
                 &nbsp;
 
               %div{style: "width: 56%; float:left;"}
-                %a#trybutton{href: "http://#{canonical_hostname('code.org')}/learn", target: "_blank", style: "text-decoration:none"}
+                %a#trybutton{href: "http://#{codeorg_url()}/learn", target: "_blank", style: "text-decoration:none"}
                   %button.btn.btn-default{style: "font-size: 18px; font-weight: 500; padding-left: 30px; padding-right: 30px; height: 40px;"}
                     =hoc_s(:front_join_us_try)
                 %br/
@@ -103,7 +112,7 @@ social:
                 =hoc_s(:front_join_us_everyone)
                 &nbsp;
               %div{style: "width: 56%; float:left; "}
-                %a#supportbutton{href: "http://#{canonical_hostname('code.org')}/donate", target: "_blank", style: "text-decoration:none"}
+                %a#supportbutton{href: "http://#{codeorg_url()}/donate", target: "_blank", style: "text-decoration:none"}
                   %button.btn.btn-default{style: "font-size: 18px; font-weight: 500; padding-left: 30px; padding-right: 30px; height: 40px;"}
                     =hoc_s(:front_join_us_support)
               &nbsp;
@@ -128,10 +137,11 @@ social:
     .col-xs-1
       &nbsp;
     .col-xs-10{style: "text-align: center; font-size: 24px; line-height:30px; font-weight: 500; color: rgb(26,172,186)"}
-      -if @country == 'uk'
-        =hoc_s(:front_intro_default_uk)
-      -else
-        =hoc_s(:front_intro_default)
+      =hoc_s(:front_intro_default)
+      -if @country == 'ie'
+        %br/
+        %br/
+        We are calling on people from all walks of life to get involved and to sign up for an Hour of Code in a school, community centre or workplace near them. In support of the global movement we are working with partners locally including Coder Dojo, Junior Achievement, Foroige, the Arts Council, the Digital Schools and plan to get more than 100 events up and running on December 8th.
 
   %br/
   %br/
@@ -173,10 +183,7 @@ social:
       =hoc_s(:stats_michael)
 
   #maparea
-    -if @company
-      =view :map_company 
-    -else
-      =view :map 
+    =view :map 
 
   #join
     %h1=hoc_s(:front_join_us_button)
@@ -187,13 +194,16 @@ social:
         .col-md-6
           =view :join_us_description
           =view :prizes
+          =view :whats_next
 
   %a#faqs{name:'faq'}
   .row
     .col-xs-12
       =view :faq
 
-= view 'popup_window.js'
+  %button{:style=>"margin-top: 25px", :onclick=>"return adjustScroll('join')"}
+    =hoc_s(:signup_your_event)
+  = view 'popup_window.js'
 
 :javascript
 

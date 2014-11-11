@@ -1,9 +1,10 @@
 "sk-SK":
   hello: Ahoj svet
+  select_language: Please select your language
   computer_science: Počítačová veda
   computer_science_edweek: Počítačová veda Vzdelávací týždeň
   csedweek_dates: December 9-15,2013
-  n_have_learned_an_hoc: "<h1>#</h1><h3>vypracoval</h3><h2>HOUR of CODE&trade;</h2>"
+  n_have_learned_an_hoc: <h1>#</h1><h3>vypracoval</h3><h2>HOUR of CODE&trade;</h2>
   anybody_can_learn: Každý sa môže naučiť.
   learn_now: Nauč sa teraz
   petition_message: Sign your name if you think every student in every school should
@@ -44,9 +45,9 @@
     algoritmy.
   all_ages: Všetky vekové kategórie
   beginner: Začiatočník
-  n_participants: "# účastníkov"
-  go: "Ísť"
-  thank_you_: "Ďakujeme!"
+  n_participants: '# účastníkov'
+  go: Ísť
+  thank_you_: Ďakujeme!
   congratulations: Gratulujem!
   congratulations_on_completing_hoc: Blahoželáme vám k dokončeniu jednej hodiny kódu.
   get_a_certificate_of_achievement: Získaj osvedčenie o dokončení
@@ -56,7 +57,7 @@
   get_a_certificate_message_after: Certifikát je na ceste. Teraz pokračuj na náš <a
     href='http://learn.code.org'> 20-hodinový kurz</a>, alebo zobraz viac možností
     ako sa <a href='/learn/beyond'> učiť za jednu hodinu</a>.
-  thanks_for_submitting: "Ďakujeme za potvrdenie!"
+  thanks_for_submitting: Ďakujeme za potvrdenie!
   if_you_enjoyed: Ak sa ti páčilo učenie, opýtaj sa priateľov či to chcú skúsiť tiež!  Chceme,
     aby sa celý svet mohol učiť.
   personalize_certificate: Prispôsobenie certifikátu
@@ -81,8 +82,8 @@
   beyond_an_hour: viac ako HOUR OF CODE >
   get_started: Začíname
   i_agree: súhlasím
-  participant_select: "-Vyberte-"
-  participant_student: "Študent"
+  participant_select: -Vyberte-
+  participant_student: Študent
   participant_parent: Rodič
   participant_educator: Pedagóg
   participant_engineer: Softvérový inžinier
@@ -92,7 +93,7 @@
   enter_country: Zadaj krajinu ak si mimo Spojené štáty
   used_infrequent_updates: Only used for infrequent updates
   privacy_practices_children: See our privacy practices for children
-  petition_thankyou: "Ďakujeme, že si podpísal petíciu"
+  petition_thankyou: Ďakujeme, že si podpísal petíciu
   carousel_heading_international: Kurzy vo vašom jazyku
   continue_learning_header: Pokračuj v učení nad rámec jednej hodiny
   continue_learning_body: Existuje veľa možností.  Môžeš sa učiť on-line alebo v miestnej
@@ -100,7 +101,7 @@
   learn_next_level: Pokračovať na ďalšiu úroveň
   learn_online: Skúste iné online kurzy
   learn_classes: Nájsť miestne triedy
-  hoc_is_here: "#HourOfCode je tu - pozri na to! @codeorg"
+  hoc_is_here: '#HourOfCode je tu - pozri na to! @codeorg'
   just_did_hoc: 'Prave som spravil #HourOfCode - Pozri sa na to! @codeorg'
   learn_hoc: Nauč sa Hour of Code
   beyond_hoc: Viac ako Jedna Hodina
@@ -110,11 +111,11 @@
   help_recruit_coders: Pomôžte nám naverbovať viac programátorov do svojho tímu!
   help_recruit: Pomôžte nám zamestnať viac programátorov!
   lines_of_code: CEZ <b># riadkov kódu</b> napísaných k dátumu.
-  lines_of_code_alt: "<b>#</b> RIADKOV KÓDU NAPÍSANÝCH ŠTUDENTAMI"
+  lines_of_code_alt: <b>#</b> RIADKOV KÓDU NAPÍSANÝCH ŠTUDENTAMI
   who_has_done_hoc: 'Kto vytvoril #HourOfCode? @codeorg'
   hoc_leaderboards: Rebríčky v Hour of Code
-  students_and_lines: "%{students} študenti ukončili Hour of Code a napísali %{lines}
-    riadkov kódu."
+  students_and_lines: '%{students} študenti ukončili Hour of Code a napísali %{lines}
+    riadkov kódu.'
   start_hoc: Spusti Hour of Code teraz
   contact_form_topic_press: Tlač/média (rozhovor alebo stretnutie)
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
@@ -212,7 +213,7 @@
   dashboard_action_cancel: Zrušiť
   dashboard_action_delete: Delete
   dashboard_action_confirm: Delete?
-  dashboard_action_delete_yes: "Áno"
+  dashboard_action_delete_yes: Áno
   dashboard_action_delete_no: Nie
   dashboard_action_done: Done
   dashboard_action_required: required
@@ -314,7 +315,7 @@
     week alone:'
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
   dashboard_teacher: Teacher
-  dashboard_student: "Študent"
+  dashboard_student: Študent
   dashboard_sections_email_question: Do all students have a valid email address?
   dashboard_sections_account_creation_question: Who creates the student's account?
   dashboard_sections_password_question: What do students use as a "password"?

@@ -17,8 +17,7 @@
     "honey_goal": "20",
     "flower_type": "redWithNectar",
     "skip_instructions_popup": "false",
-    "ideal": "13",
-    "maze_data": null
+    "ideal": "13"
   }
 }]]></config>
   <blocks>

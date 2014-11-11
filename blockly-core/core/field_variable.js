@@ -29,23 +29,25 @@ goog.require('Blockly.FieldDropdown');
 goog.require('Blockly.Msg');
 goog.require('Blockly.Variables');
 
-
 /**
  * Class for a variable's dropdown field.
  * @param {!string} varname The default name for the variable.  If null,
  *     a unique variable name will be generated.
- * @param {Function} opt_changeHandler A function that is executed when a new
+ * @param {?Function} opt_changeHandler A function that is executed when a new
  *     option is selected.
+ * @param {?Function} opt_createHandler A function that is executed after creation
  * @extends {Blockly.FieldDropdown}
  * @constructor
  */
-Blockly.FieldVariable = function(varname, opt_changeHandler) {
+Blockly.FieldVariable = function(varname, opt_changeHandler, opt_createHandler) {
   var changeHandler;
-  if (opt_changeHandler) {
+  if (opt_changeHandler === Blockly.FieldParameter.dropdownChange) {
+    changeHandler = opt_changeHandler;
+  } else if (opt_changeHandler) {
     // Wrap the user's change handler together with the variable rename handler.
     var thisObj = this;
     changeHandler = function(value) {
-      var retVal = Blockly.FieldVariable.dropdownChange.call(thisObj, value);
+      var retVal = thisObj.dropdownChange(value);
       var newVal;
       if (retVal === undefined) {
         newVal = value;  // Existing variable selected.
@@ -58,11 +60,11 @@ Blockly.FieldVariable = function(varname, opt_changeHandler) {
       return retVal;
     };
   } else {
-    changeHandler = Blockly.FieldVariable.dropdownChange;
+    changeHandler = this.dropdownChange;
   }
 
   Blockly.FieldVariable.superClass_.constructor.call(this,
-      Blockly.FieldVariable.dropdownCreate, changeHandler);
+      opt_createHandler || Blockly.FieldVariable.dropdownCreate, changeHandler);
 
   if (varname) {
     this.setValue(varname);
@@ -126,31 +128,49 @@ Blockly.FieldVariable.dropdownCreate = function() {
  *     handled (rename), or undefined if an existing variable was chosen.
  * @this {!Blockly.FieldVariable}
  */
-Blockly.FieldVariable.dropdownChange = function(text) {
-  function promptName(promptText, defaultText) {
-    Blockly.hideChaff();
-    var newVar = window.prompt(promptText, defaultText);
-    // Merge runs of whitespace.  Strip leading and trailing whitespace.
-    // Beyond this, all names are legal.
-    return newVar && newVar.replace(/[\s\xa0]+/g, ' ').replace(/^ | $/g, '');
-  }
-  if (text == Blockly.Msg.RENAME_VARIABLE) {
+Blockly.FieldVariable.prototype.dropdownChange = function(text) {
+  if (text === Blockly.Msg.RENAME_VARIABLE) {
     var oldVar = this.getText();
-    text = promptName(Blockly.Msg.RENAME_VARIABLE_TITLE.replace('%1', oldVar),
+    this.getParentEditor_().hideChaff();
+    text = Blockly.FieldVariable.promptName(Blockly.Msg.RENAME_VARIABLE_TITLE.replace('%1', oldVar),
                       oldVar);
     if (text) {
-      Blockly.Variables.renameVariable(oldVar, text);
+      Blockly.Variables.renameVariable(oldVar, text, this.sourceBlock_.blockSpace);
     }
     return null;
-  } else if (text == Blockly.Msg.NEW_VARIABLE) {
-    text = promptName(Blockly.Msg.NEW_VARIABLE_TITLE, '');
+  } else if (text === Blockly.Msg.NEW_VARIABLE) {
+    this.getParentEditor_().hideChaff();
+    text = Blockly.FieldVariable.promptName(Blockly.Msg.NEW_VARIABLE_TITLE, '');
     // Since variables are case-insensitive, ensure that if the new variable
     // matches with an existing variable, the new case prevails throughout.
     if (text) {
-      Blockly.Variables.renameVariable(text, text);
+      Blockly.Variables.renameVariable(text, text, this.sourceBlock_.blockSpace);
       return text;
     }
     return null;
   }
   return undefined;
+};
+
+/**
+ * Prompt the user for a variable name and perform some whitespace cleanup
+ * @param {string} promptText description text for window prompt
+ * @param {string} defaultText default input text for window prompt
+ * @returns {?string} the provided variable name, with extra whitespace removed
+ */
+Blockly.FieldVariable.promptName = function(promptText, defaultText) {
+  var newVar = window.prompt(promptText, defaultText);
+  if (!newVar) {
+    return newVar;
+  }
+
+  return Blockly.FieldVariable.removeExtraWhitespace(newVar);
+};
+
+Blockly.FieldVariable.removeExtraWhitespace = function(inputString) {
+  var multipleWhitespaceCharactersRegex = /[\s\xa0]+/g;
+  var leadingTrailingWhitespaceRegex = /^ | $/g;
+  return inputString
+    .replace(multipleWhitespaceCharactersRegex, ' ')
+    .replace(leadingTrailingWhitespaceRegex, '');
 };

@@ -1,9 +1,10 @@
 "sv-SE":
   hello: Hej världen
+  select_language: Please select your language
   computer_science: Datavetenskap
   computer_science_edweek: Utbildningsvecka för Dataveteskap
   csedweek_dates: Den 9-15 december 2013
-  n_have_learned_an_hoc: "<h1>#</h1><h3>har provat en</h3><h2>Timme med Kod</h2>"
+  n_have_learned_an_hoc: <h1>#</h1><h3>har provat en</h3><h2>Timme med Kod</h2>
   anybody_can_learn: Vem som helst kan lära sig.
   learn_now: Lär dig nu
   petition_message: Alla elever i alla skolor borde ha möjligheten att lära sig datavetenskap
@@ -43,7 +44,7 @@
     "om"-satser och grundläggande algoritmer.
   all_ages: Alla åldrar
   beginner: Nybörjare
-  n_participants: "# deltagare"
+  n_participants: '# deltagare'
   go: Gå
   thank_you_: Tack!
   congratulations: Grattis!
@@ -80,7 +81,7 @@
   beyond_an_hour: Efter en TIMME MED KOD
   get_started: Sätt igång
   i_agree: Jag håller med
-  participant_select: "- Välj -"
+  participant_select: '- Välj -'
   participant_student: Student
   participant_parent: Förälder
   participant_educator: Utbildare
@@ -99,7 +100,7 @@
   learn_next_level: Fortsätt till nästa nivå
   learn_online: Prova andra kurser online
   learn_classes: Hitta lokala klasser
-  hoc_is_here: "#HourOfCode/Timmen med Kod är här - kolla! @codeorg"
+  hoc_is_here: '#HourOfCode/Timmen med Kod är här - kolla! @codeorg'
   just_did_hoc: 'Jag har precis gjort #HourOfCode/Timme med Kod - kolla! @codeorg'
   learn_hoc: Lär dig med en Timme av Kod
   beyond_hoc: Efter Timmen med Kod
@@ -108,12 +109,12 @@
   boy: Pojke
   help_recruit_coders: Hjälp oss att rekrytera fler kodare till vårt team!
   help_recruit: Hjälp oss att rekrytera fler kodare!
-  lines_of_code: "ÖVER <b># RADER MED KOD</b> SKRIVET HITTILLS."
-  lines_of_code_alt: "<b>#</b> RADER MED KOD SKRIVET AV ELEVER"
+  lines_of_code: ÖVER <b># RADER MED KOD</b> SKRIVET HITTILLS.
+  lines_of_code_alt: <b>#</b> RADER MED KOD SKRIVET AV ELEVER
   who_has_done_hoc: Vilka har gjort en Timme med Kod? @codeorg
   hoc_leaderboards: Timme med Kod Poängtavla
-  students_and_lines: "%{students} elever har gjort en Timme med Kod och skrivit %{lines}
-    rader med kod."
+  students_and_lines: '%{students} elever har gjort en Timme med Kod och skrivit %{lines}
+    rader med kod.'
   start_hoc: Starta en Timme med Kod nu
   contact_form_topic_press: Press/media (intervjuer eller föredrag)
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
@@ -132,7 +133,7 @@
   contact_form_topic_contribution: Bidrag/Välgörenhet
   contact_form_topic_partner: Jag vill jobba tillsammans med andra
   contact_form_topic_other: Annat
-  contact_form_label_topic: "Ämne"
+  contact_form_label_topic: Ämne
   contact_form_label_email: Din e-postadress
   contact_form_label_message: Meddelande
   contact_form_label_submit: Skicka meddelande
@@ -220,6 +221,7 @@
   dashboard_navigation_view_progress: View Progress
   dashboard_navigation_add_students: Add Students
   dashboard_navigation_manage_students: Manage Students
+  dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
   dashboard_navigation_view_stats: View Stats
   dashboard_navigation_section: 'Section: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'

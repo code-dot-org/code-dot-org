@@ -4,6 +4,7 @@ $root: '/blockly/media/webapp/'; //TODO: Parameterize for asset pipeline
   overflow: hidden;
   width: 400px;
   height: 400px;
+  background-color: white;
 }
 
 /* Slider. */
@@ -23,6 +24,11 @@ $root: '/blockly/media/webapp/'; //TODO: Parameterize for asset pipeline
 }
 .sliderKnob:hover {
   fill: #eee;
+}
+
+#pauseButton {
+  min-width: 111px;
+  margin-right: 10px;
 }
 
 /* Sprited icons. */

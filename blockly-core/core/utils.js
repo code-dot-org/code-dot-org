@@ -27,6 +27,7 @@
 goog.provide('Blockly.utils');
 
 goog.require('goog.array');
+goog.require('goog.memoize');
 
 /**
  * Add a CSS class to a element.
@@ -242,19 +243,22 @@ Blockly.getRelativeXY_ = function(element) {
  * Return the absolute coordinates of the top-left corner of this element.
  * The origin (0,0) is the top-left corner of the Blockly svg.
  * @param {!Element} element Element to find the coordinates of.
+ * @param {Element=} opt_svgParent optional parent <svg> element, otherwise
+ *    `element`'s parents will be searched
  * @return {!Object} Object with .x and .y properties.
  * @private
  */
-Blockly.getSvgXY_ = function(element) {
+Blockly.getSvgXY_ = function(element, opt_svgParent) {
   var x = 0;
   var y = 0;
+  var topMostSVG = opt_svgParent || Blockly.topMostSVGParent(element);
   do {
     // Loop through this block and every parent.
     var xy = Blockly.getRelativeXY_(element);
     x += xy.x;
     y += xy.y;
     element = element.parentNode;
-  } while (element && element != Blockly.svg);
+  } while (element && element !== topMostSVG);
   return {x: x, y: y};
 };
 
@@ -262,12 +266,32 @@ Blockly.getSvgXY_ = function(element) {
  * Return the absolute coordinates of the top-left corner of this element.
  * The origin (0,0) is the top-left corner of the page body.
  * @param {!Element} element Element to find the coordinates of.
+ * @param {Element=} opt_svgParent optional parent <svg> element, otherwise
+ *    `element`'s parents will be searched
  * @return {!Object} Object with .x and .y properties.
  * @private
  */
-Blockly.getAbsoluteXY_ = function(element) {
-  var xy = Blockly.getSvgXY_(element);
-  return Blockly.convertCoordinates(xy.x, xy.y, false);
+Blockly.getAbsoluteXY_ = function(element, opt_svgParent) {
+  var xy = Blockly.getSvgXY_(element, opt_svgParent);
+  return Blockly.convertCoordinates(xy.x, xy.y, opt_svgParent || Blockly.topMostSVGParent(element), false);
+};
+
+/**
+ * Find top-most SVG element the given element is a child of
+ * @param {!Element} element Element to find the coordinates of.
+ * @return {!Element} topmost SVG element, if one exists, or the main editor SVG
+ */
+Blockly.topMostSVGParent = function(element) {
+  var topMostSVG = null;
+
+  while (element) {
+    if (element.tagName === 'svg') {
+      topMostSVG = element;
+    }
+    element = goog.dom.getParentElement(element);
+  }
+
+  return (topMostSVG || Blockly.mainBlockSpaceEditor.getSVGElement());
 };
 
 /**
@@ -309,19 +333,20 @@ Blockly.isRightButton = function(e) {
  * Convert between HTML coordinates and SVG coordinates.
  * @param {number} x X input coordinate.
  * @param {number} y Y input coordinate.
+ * @param {Element} svg parent SVG element
  * @param {boolean} toSvg True to convert to SVG coordinates.
  *     False to convert to mouse/HTML coordinates.
  * @return {!Object} Object with x and y properties in output coordinates.
  */
-Blockly.convertCoordinates = function(x, y, toSvg) {
+Blockly.convertCoordinates = function(x, y, svg, toSvg) {
   if (toSvg) {
     x -= window.pageXOffset;
     y -= window.pageYOffset;
   }
-  var svgPoint = Blockly.svg.createSVGPoint();
+  var svgPoint = svg.createSVGPoint();
   svgPoint.x = x;
   svgPoint.y = y;
-  var matrix = Blockly.svg.getScreenCTM();
+  var matrix = svg.getScreenCTM();
   if (toSvg) {
     matrix = matrix.inverse();
   }
@@ -345,11 +370,15 @@ Blockly.convertCoordinates = function(x, y, toSvg) {
  * Return the converted coordinates of the given mouse event.
  * The origin (0,0) is the top-left corner of the Blockly svg.
  * @param {!Event} e Mouse event.
+ * @param {Element=} opt_svgParent optional parent <svg> element, otherwise
+ *    `element`'s parents will be searched
  * @return {!Object} Object with .x and .y properties.
  */
-Blockly.mouseToSvg = function(e) {
-  return Blockly.convertCoordinates(e.clientX + window.pageXOffset,
-      e.clientY + window.pageYOffset, true);
+Blockly.mouseToSvg = function(e, opt_svgParent) {
+  return Blockly.convertCoordinates(
+      e.clientX + window.pageXOffset,
+      e.clientY + window.pageYOffset,
+      opt_svgParent || Blockly.topMostSVGParent(e.target), true);
 };
 
 /**

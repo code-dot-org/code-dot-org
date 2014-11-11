@@ -1,38 +1,44 @@
 #joindescription
-  #calltoaction.row.hidden-xs
-    .col-xs-12{style: "text-align: left; font-size: 18px; line-height:30px; font-weight: 500; color: rgb(26,172,186)"}
-      %p
-        -if @country == 'uk'
-          =hoc_s(:front_join_us_header_uk)
-        -else
-          =hoc_s(:front_join_us_header)
+  #calltoaction
+    %h2{:style=>"margin-top: 0px"}
+      -if @country == 'uk'
+        =hoc_s(:front_join_us_header_uk)
+      -else
+        =hoc_s(:front_join_us_header)
 
-  #calltoaction.row.hidden-xs
-    .col-xs-12{style: "text-align: left; font-size: 16px; line-height:30px; font-weight: 400; padding-left:3em"}
-      %p
+  #calltoaction
+    %ul{:style=>"line-height:28px"}
+      %li
         %b=hoc_s(:front_join_us_teacher)
         =hoc_s(:front_join_us_inspire)
         %a{href:hoc_uri('/resources/how-to')}
           =hoc_s(:front_join_us_inspire_link)
-        %br/
-
+      -if @country == 'uk'
+        %li
+          %b Are you an organisation? 
+          %a{href:hoc_uri('/resources/how-to-organisations')} Inspire your colleagues 
+          with an Hour of Code at your company
+      %li
         %b=hoc_s(:front_join_us_parent)
         %a{href:hoc_uri('/resources')}
           =hoc_s(:front_join_us_ask_link)
         =hoc_s(:front_join_us_ask)
-        %br/
-
-        %b=hoc_s(:front_join_us_computer_science)
+      %li
         %a{href:hoc_uri('/resources')}
-          =hoc_s(:front_join_us_spread)
-        =hoc_s(:front_join_us_organize)
-        %br/
-
-  #hoclinks.row
-    .col-xs-12{style: "text-align: left; font-size: 16px; line-height:30px; font-weight: 400; padding-left:3em"}
-      %a{href:hoc_uri('/resources/how-to')}
-        =hoc_s(:front_join_us_how_to_run)
-      %br/
-
-      %a{href:hoc_uri('/resources')}
-        =hoc_s(:front_join_us_help_promote)
+          =hoc_s(:front_join_us_help_promote)
+      -if @country == 'ar'
+        %li 
+          Para más información, por favor visite
+          %a{href:'http://ar.code.org'} ar.code.org
+      -if @country == 'br'
+        %li 
+          Voce está no Brasil? Por favor, visite
+          %a{href:'http://br.code.org'} br.code.org
+      -if @country == 'it'
+        %li 
+          Sei in Italia? Visita per favore 
+          %a{href:'http://italia.code.org'} italia.code.org
+      -if @country == 'ro'
+        %li 
+          Esti din Romania? Te rugam sa vizitezi
+          %a{href:'http://ro.code.org'} ro.code.org
