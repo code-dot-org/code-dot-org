@@ -24,13 +24,13 @@ Fale aos seus amigos sobre o #HoraDoCódigo.
 
 ## 2. Peça para sua escola oferecer uma Hora do Código
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](<%= hoc_uri('/files/schools-handout.pdf') %>). Quando toda a escola estiver participando, [inscreva-se para ganhar US$10.000 em tecnologia para sua escola](/prizes) e desafie outras escolas de sua região a participar.
+[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](http://hourofcode.com/files/schools-handout.pdf). Quando toda a escola estiver participando, [inscreva-se para ganhar US$10.000 em tecnologia para sua escola](/prizes) e desafie outras escolas de sua região a participar.
 
 <% else %>
 
 ## 2. Peça para sua escola oferecer uma Hora do Código
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or give [this handout](<%= hoc_uri('/files/schools-handout.pdf') %>) to your principal.
+[Send this email](<%= hoc_uri('/resources#email') %>) or give [this handout](http://hourofcode.com/files/schools-handout.pdf) to your principal.
 
 <% end %>
 
@@ -40,7 +40,7 @@ Fale aos seus amigos sobre o #HoraDoCódigo.
 
 ## 4. Peça para seu empregador participar
 
-[Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](<%= hoc_uri('/files/hoc-one-pager-pt.pdf') %>).
+[Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](http://hourofcode.com/files/hoc-one-pager-pt.pdf).
 
 ## 5. Promova a Hora do Código em sua comunidade
 
@@ -48,6 +48,6 @@ Reúna um grupo local — clube de escoteiros, igreja, universidade, grupo de ve
 
 ## 6. Peça a um representante político para apoiar a Hora do Código
 
-[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board. Or [give them this handout](<%= hoc_uri('/files/hoc-one-pager-pt.pdf') %>) and invite them to visit your school.
+[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board. Or [give them this handout](http://hourofcode.com/files/hoc-one-pager-pt.pdf) and invite them to visit your school.
 
 <%= view 'popup_window.js' %>
