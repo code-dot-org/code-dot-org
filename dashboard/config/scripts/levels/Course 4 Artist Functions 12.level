@@ -8,13 +8,15 @@
     "skin": "artist",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "disable_param_editing": "true",
+    "disable_param_editing": "false",
     "disable_variable_editing": "false",
     "free_play": "false",
     "impressive": "false",
     "start_direction": "180",
     "x": "200",
-    "y": "100"
+    "y": "100",
+    "use_modal_function_editor": "true",
+    "use_contract_editor": "false"
   }
 }]]></config>
   <blocks>

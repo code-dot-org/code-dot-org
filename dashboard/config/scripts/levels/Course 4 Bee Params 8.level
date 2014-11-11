@@ -11,14 +11,17 @@
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "is_k1": "false",
     "skip_instructions_popup": "true",
-    "disable_param_editing": "true",
+    "disable_param_editing": "false",
     "disable_variable_editing": "true",
     "start_direction": "3",
     "step_mode": "0",
     "nectar_goal": "10",
     "flower_type": "redWithNectar",
     "ideal": "32",
-    "instructions": "Oooh, now there's honey to deal with too! How could you update your function to either get nectar or make honey."
+    "instructions": "Oooh, now there's honey to deal with too! How could you update your function to either get nectar or make honey.",
+    "use_modal_function_editor": "true",
+    "use_contract_editor": "false",
+    "maze_data": null
   }
 }]]></config>
   <blocks>

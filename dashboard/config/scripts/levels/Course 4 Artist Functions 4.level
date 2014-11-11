@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Can you draw a create a \"draw a triangle\" function? ",
+    "instructions": "Are you ready to create your own \"Function Block\"? Click on the \"Function\" block in the tool box, name it \"draw a triangle\", then create a triangle as you have done before with the Action and Loops blocks. Create a triangle that is 100 pixels in length. Good luck!",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -18,7 +18,8 @@
     "impressive": "false",
     "ideal": "9",
     "slider_speed": ".5",
-    "use_modal_function_editor": "true"
+    "use_modal_function_editor": "true",
+    "use_contract_editor": "false"
   }
 }]]></config>
   <blocks>
