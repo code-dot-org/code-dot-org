@@ -10,7 +10,7 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
-    "disable_variable_editing": "false",
+    "disable_variable_editing": "true",
     "start_direction": "150",
     "x": "200",
     "y": "250",
@@ -18,7 +18,8 @@
     "impressive": "false",
     "slider_speed": ".8",
     "ideal": "9",
-    "use_modal_function_editor": "false"
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false"
   }
 }]]></config>
   <blocks>

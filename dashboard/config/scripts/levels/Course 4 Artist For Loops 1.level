@@ -40,6 +40,14 @@
             </block>
           </value>
         </block>
+        <block type="draw_turn" inline="true">
+          <title name="DIR">turnLeft</title>
+          <value name="VALUE">
+            <block type="math_number">
+              <title name="NUM">90</title>
+            </block>
+          </value>
+        </block>
         <block type="controls_repeat_ext" inline="true">
           <value name="TIMES">
             <block type="math_number">

@@ -1,6 +1,6 @@
 # Text Match type.
 class TextMatch < DSLDefined
-  def assessment_default
+  def dsl_default
     <<ruby
 name 'Enter name here'
 title 'Enter title here'

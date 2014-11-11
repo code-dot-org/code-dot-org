@@ -13,7 +13,12 @@
     "skip_instructions_popup": "false",
     "slider_speed": ".9",
     "free_play": "false",
-    "instructions": "Let's modify the code from the last puzzle to make this more complex pattern. Notice how the diamonds overlap now, which block(s) will you need to edit to change how far down each row is from the last? Hint: Each diamond has 50 pixel long sides and is also 50 pixels wide."
+    "instructions": "Let's modify the code from the last puzzle to make this more complex pattern. Notice how the diamonds overlap now, try changing the first \"jump backwards\" from 100 to 50 (half as far) - now how far should the artist go in the second \"jump backwards\"?",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "impressive": "false"
   }
 }]]></config>
   <blocks>
