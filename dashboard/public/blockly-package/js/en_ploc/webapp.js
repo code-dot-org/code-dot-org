@@ -291,9 +291,12 @@ BlocklyApps.init = function(config) {
   }
 
   if (config.hide_source) {
-    var blockly = container.querySelector('#blockly');
+    BlocklyApps.hideSource = true;
+    var workspaceDiv = config.level.editCode ?
+                        document.getElementById('codeWorkspace') :
+                        container.querySelector('#blockly');
     container.className = 'hide-source';
-    blockly.style.display = 'none';
+    workspaceDiv.style.display = 'none';
     // For share page on mobile, do not show this part.
     if (!BlocklyApps.share || !dom.isMobile()) {
       var buttonRow = runButton.parentElement;
@@ -367,7 +370,7 @@ BlocklyApps.init = function(config) {
         }
       });
       if (BlocklyApps.noPadding) {
-        upSale.style.marginLeft = '30px';
+        upSale.style.marginLeft = '10px';
       }
     } else if (!dom.isMobile()) {
       upSale.innerHTML = require('./templates/learn.html')();
@@ -426,17 +429,21 @@ BlocklyApps.init = function(config) {
         palette: utils.generateDropletPalette(config.level.codeFunctions)
       });
 
-      var startText = '// ' + msg.typeHint() + '\n';
-      var codeFunctions = config.level.codeFunctions;
-      // Insert hint text from level codeFunctions into editCode area
-      if (codeFunctions) {
-        var hintText = '';
-        for (var i = 0; i < codeFunctions.length; i++) {
-          hintText += " " + codeFunctions[i].func + "();";
+      if (config.level.startBlocks) {
+        BlocklyApps.editor.setValue(config.level.startBlocks);
+      } else {
+        var startText = '// ' + msg.typeHint() + '\n';
+        var codeFunctions = config.level.codeFunctions;
+        // Insert hint text from level codeFunctions into editCode area
+        if (codeFunctions) {
+          var hintText = '';
+          for (var i = 0; i < codeFunctions.length; i++) {
+            hintText += " " + codeFunctions[i].func + "();";
+          }
+          startText += '// ' + msg.typeFuncs().replace('%1', hintText) + '\n';
         }
-        startText += '// ' + msg.typeFuncs().replace('%1', hintText) + '\n';
+        BlocklyApps.editor.setValue(startText);
       }
-      BlocklyApps.editor.setValue(startText);
     });
   }
 
@@ -538,7 +545,11 @@ BlocklyApps.init = function(config) {
         false : config.level.disableVariableEditing,
     useModalFunctionEditor: config.level.useModalFunctionEditor === undefined ?
         false : config.level.useModalFunctionEditor,
-    scrollbars: config.level.scrollbars
+    useContractEditor: config.level.useContractEditor === undefined ?
+        false : config.level.useContractEditor,
+    scrollbars: config.level.scrollbars,
+    editBlocks: config.level.edit_blocks === undefined ?
+        false : config.level.edit_blocks
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
     'grayOutUndeletableBlocks', 'disableParamEditing'].forEach(
@@ -556,6 +567,7 @@ BlocklyApps.init = function(config) {
   // Initialize the slider.
   var slider = document.getElementById('slider');
   if (slider) {
+    // TODO (noted by cpirich): remove Turtle specific code here:
     Turtle.speedSlider = new Slider(10, 35, 130, slider);
 
     // Change default speed (eg Speed up levels that have lots of steps).
@@ -564,13 +576,15 @@ BlocklyApps.init = function(config) {
     }
   }
 
-  // Add the starting block(s).
-  var startBlocks = config.level.startBlocks || '';
-  if (config.forceInsertTopBlock) {
-    startBlocks = blockUtils.forceInsertTopBlock(startBlocks, config.forceInsertTopBlock);
+  if (!BlocklyApps.editCode) {
+    // Add the starting block(s).
+    var startBlocks = config.level.startBlocks || '';
+    if (config.forceInsertTopBlock) {
+      startBlocks = blockUtils.forceInsertTopBlock(startBlocks, config.forceInsertTopBlock);
+    }
+    startBlocks = BlocklyApps.arrangeBlockPosition(startBlocks, config.blockArrangement);
+    BlocklyApps.loadBlocks(startBlocks);
   }
-  startBlocks = BlocklyApps.arrangeBlockPosition(startBlocks, config.blockArrangement);
-  BlocklyApps.loadBlocks(startBlocks);
 
   // listen for scroll and resize to ensure onResize() is called
   window.addEventListener('scroll', function() {
@@ -982,21 +996,27 @@ BlocklyApps.report = function(options) {
   report.attempt = BlocklyApps.attempts;
   report.lines = feedback.getNumBlocksUsed();
 
-  var onAttemptCallback = (function() {
-    return function(builderDetails) {
-      for (var option in builderDetails) {
-        report[option] = builderDetails[option];
-      }
-      onAttempt(report);
-    };
-  })();
+  // If hideSource is enabled, the user is looking at a shared level that
+  // they cannot have modified. In that case, don't report it to the service
+  // or call the onComplete() callback expected. The app will just sit
+  // there with the Reset button as the only option.
+  if (!BlocklyApps.hideSource) {
+    var onAttemptCallback = (function() {
+      return function(builderDetails) {
+        for (var option in builderDetails) {
+          report[option] = builderDetails[option];
+        }
+        onAttempt(report);
+      };
+    })();
 
-  // If this is the level builder, go to builderForm to get more info from
-  // the level builder.
-  if (options.builder) {
-    builder.builderForm(onAttemptCallback);
-  } else {
-    onAttemptCallback();
+    // If this is the level builder, go to builderForm to get more info from
+    // the level builder.
+    if (options.builder) {
+      builder.builderForm(onAttemptCallback);
+    } else {
+      onAttemptCallback();
+    }
   }
 };
 
@@ -1486,51 +1506,62 @@ exports.workspaceCode = function(blockly) {
   return exports.strip(code);
 };
 
+exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativeParentObj, maxDepth) {
+  var retVal;
+  if (typeof maxDepth === "undefined") {
+    maxDepth = 4; // default to 4 levels of depth
+  }
+  if (maxDepth === 0) {
+    return interpreter.createPrimitive(undefined);
+  }
+  if (nativeVar instanceof Array) {
+    retVal = interpreter.createObject(interpreter.ARRAY);
+    for (var i = 0; i < nativeVar.length; i++) {
+      retVal.properties[i] = exports.marshalNativeToInterpreter(interpreter,
+                                                                nativeVar[i],
+                                                                null,
+                                                                maxDepth - 1);
+    }
+    retVal.length = nativeVar.length;
+  } else if (nativeVar instanceof Function) {
+    wrapper = exports.makeNativeMemberFunction(interpreter, nativeVar, nativeParentObj);
+    retVal = interpreter.createNativeFunction(wrapper);
+  } else if (nativeVar instanceof Object) {
+    // note Object must be checked after Function and Array (since they are also Objects)
+    if (interpreter.isa(nativeVar, interpreter.FUNCTION)) {
+      // Special case to see if we are trying to marshal an interpreter object
+      // (this currently happens when we store interpreter function objects in native
+      //  and return them back in nativeGetCallback)
+
+      // NOTE: this check could be expanded to check for other interpreter object types
+      // if we have reason to believe that we may be passing those back
+
+      retVal = nativeVar;
+    } else {
+      retVal = interpreter.createObject(interpreter.OBJECT);
+      for (var prop in nativeVar) {
+        interpreter.setProperty(retVal,
+                                prop,
+                                exports.marshalNativeToInterpreter(interpreter,
+                                                                   nativeVar[prop],
+                                                                   nativeVar,
+                                                                   maxDepth - 1));
+      }
+    }
+  } else {
+    retVal = interpreter.createPrimitive(nativeVar);
+  }
+  return retVal;
+};
+
 /**
  * Generate a native function wrapper for use with the JS interpreter.
  */
-exports.makeNativeMemberFunction = function (interpreter, nativeFunc, parentObj) {
+exports.makeNativeMemberFunction = function (interpreter, nativeFunc, nativeParentObj) {
   return function() {
     // Call the native function:
-    var retVal = nativeFunc.apply(parentObj, arguments);
-
-    // Now figure out what to do with the return value...
-
-    if (retVal instanceof Function) {
-      // Don't call createPrimitive() for functions
-      return retVal;
-    } else if (retVal instanceof Object) {
-      var newObj = interpreter.createObject(interpreter.OBJECT);
-      // Limited attempt to marshal back complex return values
-      // Special case: only one-level deep, only handling
-      // primitives and arrays of primitives
-      for (var prop in retVal) {
-        var isFuncOrObj = retVal[prop] instanceof Function ||
-                          retVal[prop] instanceof Object;
-        // replace properties with wrapped properties
-        if (retVal[prop] instanceof Array) {
-          var newArray = interpreter.createObject(interpreter.ARRAY);
-          for (var i = 0; i < retVal[prop].length; i++) {
-            newArray.properties[i] = interpreter.createPrimitive(retVal[prop][i]);
-          }
-          newArray.length = retVal[prop].length;
-          interpreter.setProperty(newObj, prop, newArray);
-        } else if (isFuncOrObj) {
-          // skipping over these - they could be objects that should
-          // be converted into interpreter objects. they could be native
-          // functions that should be converted. Or they could be objects
-          // that are already interpreter objects, which is what we assume
-          // for now:
-          interpreter.setProperty(newObj, prop, retVal[prop]);
-        } else {
-          // wrap as a primitive if it is not a function or object:
-          interpreter.setProperty(newObj, prop, interpreter.createPrimitive(retVal[prop]));
-        }
-      }
-      return newObj;
-    } else {
-      return interpreter.createPrimitive(retVal);
-    }
+    var nativeRetVal = nativeFunc.apply(nativeParentObj, arguments);
+    return exports.marshalNativeToInterpreter(interpreter, nativeRetVal, null);
   };
 };
 
@@ -6456,7 +6487,7 @@ escape = escape || function (html){
 var buf = [];
 with (locals || {}) { (function(){ 
  buf.push('<!DOCTYPE html>\n<html dir="', escape((2,  options.localeDirection )), '">\n<head>\n  <meta charset="utf-8">\n  <title>Blockly</title>\n  <script type="text/javascript" src="', escape((6,  assetUrl('js/' + options.locale + '/vendor.js') )), '"></script>\n  <script type="text/javascript" src="', escape((7,  assetUrl('js/' + options.locale + '/' + app + '.js') )), '"></script>\n  <script type="text/javascript">\n    ');9; // delay to onload to fix IE9. 
-; buf.push('\n    window.onload = function() {\n      ', escape((11,  app )), 'Main(', (11, filters. json ( options )), ');\n    };\n  </script>\n</head>\n<body>\n  <div id="blockly"></div>\n  <style>\n    html, body {\n      background-color: transparent;\n      margin: 0;\n      padding:0;\n      overflow: hidden;\n      height: 100%;\n      font-family: \'Gotham A\', \'Gotham B\', sans-serif;\n    }\n    .blocklyText, .blocklyMenuText, .blocklyTreeLabel, .blocklyHtmlInput,\n        .blocklyIconMark, .blocklyTooltipText, .goog-menuitem-content {\n      font-family: \'Gotham A\', \'Gotham B\', sans-serif;\n    }\n    #blockly>svg {\n      background-color: transparent;\n      border: none;\n    }\n    #blockly {\n      position: absolute;\n      top: 0;\n      left: 0;\n      overflow: hidden;\n      height: 100%;\n      width: 100%;\n    }\n  </style>\n</body>\n</html>\n'); })();
+; buf.push('\n    window.onload = function() {\n      ', escape((11,  app )), 'Main(', (11, filters. json ( options )), ');\n    };\n  </script>\n</head>\n<body>\n  <div id="blockly" class="readonly"></div>\n  <style>\n    html, body {\n      background-color: transparent;\n      margin: 0;\n      padding:0;\n      overflow: hidden;\n      height: 100%;\n      font-family: \'Gotham A\', \'Gotham B\', sans-serif;\n    }\n    .blocklyText, .blocklyMenuText, .blocklyTreeLabel, .blocklyHtmlInput,\n        .blocklyIconMark, .blocklyTooltipText, .goog-menuitem-content {\n      font-family: \'Gotham A\', \'Gotham B\', sans-serif;\n    }\n    #blockly>svg {\n      background-color: transparent;\n      border: none;\n    }\n    #blockly {\n      position: absolute;\n      top: 0;\n      left: 0;\n      overflow: hidden;\n      height: 100%;\n      width: 100%;\n    }\n  </style>\n</body>\n</html>\n'); })();
 } 
 return buf.join('');
 };
@@ -6924,6 +6955,13 @@ exports.getText = function (blockId, elementId) {
                           {'elementId': elementId });
 };
 
+exports.setText = function (blockId, elementId, text) {
+  return Webapp.executeCmd(String(blockId),
+                          'setText',
+                          {'elementId': elementId,
+                           'text': text });
+};
+
 exports.setStyle = function (blockId, elementId, style) {
   return Webapp.executeCmd(String(blockId),
                            'setStyle',
@@ -7047,7 +7085,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/en_ploc/common') ; buf.push('\n');2; var webappMsg = require('../../locale/en_ploc/webapp') ; buf.push('\n\n');4; if (debugButtons) { ; buf.push('\n  <div id="debug-buttons">\n    <button id="pauseButton" class="share">\n      <img src="', escape((7,  assetUrl('media/1x1.gif') )), '">', escape((7,  webappMsg.pause() )), '\n    </button>\n  </div>\n');10; } ; buf.push('\n\n');12; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((15,  assetUrl('media/1x1.gif') )), '">', escape((15,  msg.finish() )), '\n    </button>\n  </div>\n');18; } ; buf.push('\n'); })();
+ buf.push('');1; var msg = require('../../locale/en_ploc/common') ; buf.push('\n');2; var webappMsg = require('../../locale/en_ploc/webapp') ; buf.push('\n\n');4; if (debugButtons) { ; buf.push('\n<div>\n');6; } ; buf.push('\n\n');8; if (debugButtons) { ; buf.push('\n<div id="debug-buttons" style="display:inline;">\n    <button id="pauseButton" class="share">\n      <img src="', escape((11,  assetUrl('media/1x1.gif') )), '">', escape((11,  webappMsg.pause() )), '\n    </button>\n  </div>\n');14; } ; buf.push('\n\n');16; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((19,  assetUrl('media/1x1.gif') )), '">', escape((19,  msg.finish() )), '\n    </button>\n  </div>\n');22; } ; buf.push('\n\n');24; if (debugButtons) { ; buf.push('\n</div>\n');26; } ; buf.push('\n'); })();
 } 
 return buf.join('');
 };
@@ -7076,6 +7114,7 @@ levels.simple = {
   'scale': {
     'snapRadius': 2
   },
+  'freePlay': true,
   'toolbox':
       tb('<block type="webapp_createHtmlBlock" inline="true"> \
         <value name="ID"><block type="text"><title name="TEXT">id</title></block></value> \
@@ -7085,6 +7124,7 @@ levels.simple = {
 };
 
 levels.ec_simple = {
+  'freePlay': true,
   'editCode': true,
   'sliderSpeed': 0.7,
   'codeFunctions': [
@@ -7092,6 +7132,7 @@ levels.ec_simple = {
     {'func': 'createButton', 'params': ["'id'", "'text'"] },
     {'func': 'createTextInput', 'params': ["'id'", "'text'"] },
     {'func': 'getText', 'params': ["'id'"], 'category': 'value' },
+    {'func': 'setText', 'params': ["'id'", "'text'"] },
     {'func': 'setStyle', 'params': ["'id'", "'color:red;'"] },
     {'func': 'createHtmlBlock', 'params': ["'id'", "'html'"] },
     {'func': 'replaceHtmlBlock', 'params': ["'id'", "'html'"] },
@@ -7356,6 +7397,7 @@ Webapp.onTick = function() {
       catch(err) {
         Webapp.executionError = err;
         Webapp.onPuzzleComplete();
+        return;
       }
     }
   } else {
@@ -7395,9 +7437,11 @@ Webapp.init = function(config) {
 
   loadLevel();
 
-  var finishButtonFirstLine = _.isEmpty(level.softButtons);
-  var firstControlsRow = require('./controls.html')({assetUrl: BlocklyApps.assetUrl, showSlider: config.level.editCode, finishButton: finishButtonFirstLine});
-  var extraControlsRow = require('./extraControlRows.html')({assetUrl: BlocklyApps.assetUrl, finishButton: !finishButtonFirstLine, debugButtons: config.level.editCode});
+  var showSlider = !config.hide_source && config.level.editCode;
+  var showDebugButtons = !config.hide_source && config.level.editCode;
+  var finishButtonFirstLine = _.isEmpty(level.softButtons) && !showSlider;
+  var firstControlsRow = require('./controls.html')({assetUrl: BlocklyApps.assetUrl, showSlider: showSlider, finishButton: finishButtonFirstLine});
+  var extraControlsRow = require('./extraControlRows.html')({assetUrl: BlocklyApps.assetUrl, finishButton: !finishButtonFirstLine, debugButtons: showDebugButtons});
 
   config.html = page({
     assetUrl: BlocklyApps.assetUrl,
@@ -7468,7 +7512,9 @@ Webapp.init = function(config) {
 
   if (level.editCode) {
     var pauseButton = document.getElementById('pauseButton');
-    dom.addClickTouchEvent(pauseButton, Webapp.onPauseButton);
+    if (pauseButton) {
+      dom.addClickTouchEvent(pauseButton, Webapp.onPauseButton);
+    }
   }
 };
 
@@ -7518,12 +7564,17 @@ BlocklyApps.reset = function(first) {
   }
 
   if (level.editCode) {
+    Webapp.paused = false;
     // Reset the pause button:
     var pauseButton = document.getElementById('pauseButton');
-    pauseButton.textContent = webappMsg.pause();
-    pauseButton.disabled = true;
-    Webapp.paused = false;
-    document.getElementById('spinner').style.visibility = 'hidden';
+    if (pauseButton) {
+      pauseButton.textContent = webappMsg.pause();
+      pauseButton.disabled = true;
+    }
+    var spinner = document.getElementById('spinner');
+    if (spinner) {
+      spinner.style.visibility = 'hidden';
+    }
   }
 
   // Reset the Globals object used to contain program variables:
@@ -7550,7 +7601,7 @@ BlocklyApps.runButtonClick = function() {
   BlocklyApps.attempts++;
   Webapp.execute();
 
-  if (level.freePlay) {
+  if (level.freePlay && !BlocklyApps.hideSource) {
     var shareCell = document.getElementById('share-cell');
     shareCell.className = 'share-cell-enabled';
   }
@@ -7572,7 +7623,7 @@ var displayFeedback = function() {
       feedbackImage: Webapp.feedbackImage,
       twitter: twitterOptions,
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
-      saveToGalleryUrl: level.freePlay && Webapp.response.save_to_gallery_url,
+      saveToGalleryUrl: level.freePlay && Webapp.response && Webapp.response.save_to_gallery_url,
       appStrings: {
         reinfFeedbackMsg: webappMsg.reinfFeedbackMsg(),
         sharingText: webappMsg.shareGame()
@@ -7690,8 +7741,13 @@ Webapp.execute = function() {
 
   if (level.editCode) {
     var pauseButton = document.getElementById('pauseButton');
-    pauseButton.disabled = false;
-    document.getElementById('spinner').style.visibility = 'visible';
+    if (pauseButton) {
+      pauseButton.disabled = false;
+    }
+    var spinner = document.getElementById('spinner');
+    if (spinner) {
+      spinner.style.visibility = 'visible';
+    }
   }
 
   Webapp.running = true;
@@ -7745,14 +7801,24 @@ Webapp.onPuzzleComplete = function() {
     BlocklyApps.playAudio('failure');
   }
 
+  var program;
+
   if (level.editCode) {
     Webapp.testResults = levelComplete ?
       BlocklyApps.TestResults.ALL_PASS :
       BlocklyApps.TestResults.TOO_FEW_BLOCKS_FAIL;
-  }
 
-  var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
-  var textBlocks = Blockly.Xml.domToText(xml);
+    // If we want to "normalize" the JavaScript to avoid proliferation of nearly
+    // identical versions of the code on the service, we could do either of these:
+
+    // do an acorn.parse and then use escodegen to generate back a "clean" version
+    // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
+
+    program = BlocklyApps.editor.getValue();
+  } else {
+    var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+    program = Blockly.Xml.domToText(xml);
+  }
 
   Webapp.waitingForReport = true;
 
@@ -7762,7 +7828,7 @@ Webapp.onPuzzleComplete = function() {
       level: level.id,
       result: Webapp.result === BlocklyApps.ResultType.SUCCESS,
       testResult: Webapp.testResults,
-      program: encodeURIComponent(textBlocks),
+      program: encodeURIComponent(program),
       image: Webapp.encodedFeedbackImage,
       onComplete: Webapp.onReportComplete
     });
@@ -7816,6 +7882,7 @@ Webapp.callCmd = function (cmd) {
     case 'createButton':
     case 'createTextInput':
     case 'getText':
+    case 'setText':
     case 'setStyle':
     case 'attachEventHandler':
       BlocklyApps.highlight(cmd.id);
@@ -7865,6 +7932,15 @@ Webapp.getText = function (opts) {
   return false;
 };
 
+Webapp.setText = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var div = document.getElementById(opts.elementId);
+  if (divWebapp.contains(div)) {
+    div.value = opts.text;
+  }
+  return false;
+};
+
 Webapp.replaceHtmlBlock = function (opts) {
   var divWebapp = document.getElementById('divWebapp');
   var oldDiv = document.getElementById(opts.elementId);
@@ -7898,7 +7974,16 @@ Webapp.setStyle = function (opts) {
 };
 
 Webapp.onEventFired = function (opts, e) {
-  Webapp.eventQueue.push({'fn': opts.func});
+  if (typeof e != 'undefined') {
+    // Push a function call on the queue with an array of arguments consisting
+    // of just the 'e' parameter
+    Webapp.eventQueue.push({
+      'fn': opts.func,
+      'arguments': [e]
+    });
+  } else {
+    Webapp.eventQueue.push({'fn': opts.func});
+  }
 };
 
 Webapp.attachEventHandler = function (opts) {

@@ -291,9 +291,12 @@ BlocklyApps.init = function(config) {
   }
 
   if (config.hide_source) {
-    var blockly = container.querySelector('#blockly');
+    BlocklyApps.hideSource = true;
+    var workspaceDiv = config.level.editCode ?
+                        document.getElementById('codeWorkspace') :
+                        container.querySelector('#blockly');
     container.className = 'hide-source';
-    blockly.style.display = 'none';
+    workspaceDiv.style.display = 'none';
     // For share page on mobile, do not show this part.
     if (!BlocklyApps.share || !dom.isMobile()) {
       var buttonRow = runButton.parentElement;
@@ -367,7 +370,7 @@ BlocklyApps.init = function(config) {
         }
       });
       if (BlocklyApps.noPadding) {
-        upSale.style.marginLeft = '30px';
+        upSale.style.marginLeft = '10px';
       }
     } else if (!dom.isMobile()) {
       upSale.innerHTML = require('./templates/learn.html')();
@@ -426,17 +429,21 @@ BlocklyApps.init = function(config) {
         palette: utils.generateDropletPalette(config.level.codeFunctions)
       });
 
-      var startText = '// ' + msg.typeHint() + '\n';
-      var codeFunctions = config.level.codeFunctions;
-      // Insert hint text from level codeFunctions into editCode area
-      if (codeFunctions) {
-        var hintText = '';
-        for (var i = 0; i < codeFunctions.length; i++) {
-          hintText += " " + codeFunctions[i].func + "();";
+      if (config.level.startBlocks) {
+        BlocklyApps.editor.setValue(config.level.startBlocks);
+      } else {
+        var startText = '// ' + msg.typeHint() + '\n';
+        var codeFunctions = config.level.codeFunctions;
+        // Insert hint text from level codeFunctions into editCode area
+        if (codeFunctions) {
+          var hintText = '';
+          for (var i = 0; i < codeFunctions.length; i++) {
+            hintText += " " + codeFunctions[i].func + "();";
+          }
+          startText += '// ' + msg.typeFuncs().replace('%1', hintText) + '\n';
         }
-        startText += '// ' + msg.typeFuncs().replace('%1', hintText) + '\n';
+        BlocklyApps.editor.setValue(startText);
       }
-      BlocklyApps.editor.setValue(startText);
     });
   }
 
@@ -538,7 +545,11 @@ BlocklyApps.init = function(config) {
         false : config.level.disableVariableEditing,
     useModalFunctionEditor: config.level.useModalFunctionEditor === undefined ?
         false : config.level.useModalFunctionEditor,
-    scrollbars: config.level.scrollbars
+    useContractEditor: config.level.useContractEditor === undefined ?
+        false : config.level.useContractEditor,
+    scrollbars: config.level.scrollbars,
+    editBlocks: config.level.edit_blocks === undefined ?
+        false : config.level.edit_blocks
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
     'grayOutUndeletableBlocks', 'disableParamEditing'].forEach(
@@ -556,6 +567,7 @@ BlocklyApps.init = function(config) {
   // Initialize the slider.
   var slider = document.getElementById('slider');
   if (slider) {
+    // TODO (noted by cpirich): remove Turtle specific code here:
     Turtle.speedSlider = new Slider(10, 35, 130, slider);
 
     // Change default speed (eg Speed up levels that have lots of steps).
@@ -564,13 +576,15 @@ BlocklyApps.init = function(config) {
     }
   }
 
-  // Add the starting block(s).
-  var startBlocks = config.level.startBlocks || '';
-  if (config.forceInsertTopBlock) {
-    startBlocks = blockUtils.forceInsertTopBlock(startBlocks, config.forceInsertTopBlock);
+  if (!BlocklyApps.editCode) {
+    // Add the starting block(s).
+    var startBlocks = config.level.startBlocks || '';
+    if (config.forceInsertTopBlock) {
+      startBlocks = blockUtils.forceInsertTopBlock(startBlocks, config.forceInsertTopBlock);
+    }
+    startBlocks = BlocklyApps.arrangeBlockPosition(startBlocks, config.blockArrangement);
+    BlocklyApps.loadBlocks(startBlocks);
   }
-  startBlocks = BlocklyApps.arrangeBlockPosition(startBlocks, config.blockArrangement);
-  BlocklyApps.loadBlocks(startBlocks);
 
   // listen for scroll and resize to ensure onResize() is called
   window.addEventListener('scroll', function() {
@@ -982,21 +996,27 @@ BlocklyApps.report = function(options) {
   report.attempt = BlocklyApps.attempts;
   report.lines = feedback.getNumBlocksUsed();
 
-  var onAttemptCallback = (function() {
-    return function(builderDetails) {
-      for (var option in builderDetails) {
-        report[option] = builderDetails[option];
-      }
-      onAttempt(report);
-    };
-  })();
+  // If hideSource is enabled, the user is looking at a shared level that
+  // they cannot have modified. In that case, don't report it to the service
+  // or call the onComplete() callback expected. The app will just sit
+  // there with the Reset button as the only option.
+  if (!BlocklyApps.hideSource) {
+    var onAttemptCallback = (function() {
+      return function(builderDetails) {
+        for (var option in builderDetails) {
+          report[option] = builderDetails[option];
+        }
+        onAttempt(report);
+      };
+    })();
 
-  // If this is the level builder, go to builderForm to get more info from
-  // the level builder.
-  if (options.builder) {
-    builder.builderForm(onAttemptCallback);
-  } else {
-    onAttemptCallback();
+    // If this is the level builder, go to builderForm to get more info from
+    // the level builder.
+    if (options.builder) {
+      builder.builderForm(onAttemptCallback);
+    } else {
+      onAttemptCallback();
+    }
   }
 };
 
@@ -1486,51 +1506,62 @@ exports.workspaceCode = function(blockly) {
   return exports.strip(code);
 };
 
+exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativeParentObj, maxDepth) {
+  var retVal;
+  if (typeof maxDepth === "undefined") {
+    maxDepth = 4; // default to 4 levels of depth
+  }
+  if (maxDepth === 0) {
+    return interpreter.createPrimitive(undefined);
+  }
+  if (nativeVar instanceof Array) {
+    retVal = interpreter.createObject(interpreter.ARRAY);
+    for (var i = 0; i < nativeVar.length; i++) {
+      retVal.properties[i] = exports.marshalNativeToInterpreter(interpreter,
+                                                                nativeVar[i],
+                                                                null,
+                                                                maxDepth - 1);
+    }
+    retVal.length = nativeVar.length;
+  } else if (nativeVar instanceof Function) {
+    wrapper = exports.makeNativeMemberFunction(interpreter, nativeVar, nativeParentObj);
+    retVal = interpreter.createNativeFunction(wrapper);
+  } else if (nativeVar instanceof Object) {
+    // note Object must be checked after Function and Array (since they are also Objects)
+    if (interpreter.isa(nativeVar, interpreter.FUNCTION)) {
+      // Special case to see if we are trying to marshal an interpreter object
+      // (this currently happens when we store interpreter function objects in native
+      //  and return them back in nativeGetCallback)
+
+      // NOTE: this check could be expanded to check for other interpreter object types
+      // if we have reason to believe that we may be passing those back
+
+      retVal = nativeVar;
+    } else {
+      retVal = interpreter.createObject(interpreter.OBJECT);
+      for (var prop in nativeVar) {
+        interpreter.setProperty(retVal,
+                                prop,
+                                exports.marshalNativeToInterpreter(interpreter,
+                                                                   nativeVar[prop],
+                                                                   nativeVar,
+                                                                   maxDepth - 1));
+      }
+    }
+  } else {
+    retVal = interpreter.createPrimitive(nativeVar);
+  }
+  return retVal;
+};
+
 /**
  * Generate a native function wrapper for use with the JS interpreter.
  */
-exports.makeNativeMemberFunction = function (interpreter, nativeFunc, parentObj) {
+exports.makeNativeMemberFunction = function (interpreter, nativeFunc, nativeParentObj) {
   return function() {
     // Call the native function:
-    var retVal = nativeFunc.apply(parentObj, arguments);
-
-    // Now figure out what to do with the return value...
-
-    if (retVal instanceof Function) {
-      // Don't call createPrimitive() for functions
-      return retVal;
-    } else if (retVal instanceof Object) {
-      var newObj = interpreter.createObject(interpreter.OBJECT);
-      // Limited attempt to marshal back complex return values
-      // Special case: only one-level deep, only handling
-      // primitives and arrays of primitives
-      for (var prop in retVal) {
-        var isFuncOrObj = retVal[prop] instanceof Function ||
-                          retVal[prop] instanceof Object;
-        // replace properties with wrapped properties
-        if (retVal[prop] instanceof Array) {
-          var newArray = interpreter.createObject(interpreter.ARRAY);
-          for (var i = 0; i < retVal[prop].length; i++) {
-            newArray.properties[i] = interpreter.createPrimitive(retVal[prop][i]);
-          }
-          newArray.length = retVal[prop].length;
-          interpreter.setProperty(newObj, prop, newArray);
-        } else if (isFuncOrObj) {
-          // skipping over these - they could be objects that should
-          // be converted into interpreter objects. they could be native
-          // functions that should be converted. Or they could be objects
-          // that are already interpreter objects, which is what we assume
-          // for now:
-          interpreter.setProperty(newObj, prop, retVal[prop]);
-        } else {
-          // wrap as a primitive if it is not a function or object:
-          interpreter.setProperty(newObj, prop, interpreter.createPrimitive(retVal[prop]));
-        }
-      }
-      return newObj;
-    } else {
-      return interpreter.createPrimitive(retVal);
-    }
+    var nativeRetVal = nativeFunc.apply(nativeParentObj, arguments);
+    return exports.marshalNativeToInterpreter(interpreter, nativeRetVal, null);
   };
 };
 
@@ -6515,7 +6546,7 @@ escape = escape || function (html){
 var buf = [];
 with (locals || {}) { (function(){ 
  buf.push('<!DOCTYPE html>\n<html dir="', escape((2,  options.localeDirection )), '">\n<head>\n  <meta charset="utf-8">\n  <title>Blockly</title>\n  <script type="text/javascript" src="', escape((6,  assetUrl('js/' + options.locale + '/vendor.js') )), '"></script>\n  <script type="text/javascript" src="', escape((7,  assetUrl('js/' + options.locale + '/' + app + '.js') )), '"></script>\n  <script type="text/javascript">\n    ');9; // delay to onload to fix IE9. 
-; buf.push('\n    window.onload = function() {\n      ', escape((11,  app )), 'Main(', (11, filters. json ( options )), ');\n    };\n  </script>\n</head>\n<body>\n  <div id="blockly"></div>\n  <style>\n    html, body {\n      background-color: transparent;\n      margin: 0;\n      padding:0;\n      overflow: hidden;\n      height: 100%;\n      font-family: \'Gotham A\', \'Gotham B\', sans-serif;\n    }\n    .blocklyText, .blocklyMenuText, .blocklyTreeLabel, .blocklyHtmlInput,\n        .blocklyIconMark, .blocklyTooltipText, .goog-menuitem-content {\n      font-family: \'Gotham A\', \'Gotham B\', sans-serif;\n    }\n    #blockly>svg {\n      background-color: transparent;\n      border: none;\n    }\n    #blockly {\n      position: absolute;\n      top: 0;\n      left: 0;\n      overflow: hidden;\n      height: 100%;\n      width: 100%;\n    }\n  </style>\n</body>\n</html>\n'); })();
+; buf.push('\n    window.onload = function() {\n      ', escape((11,  app )), 'Main(', (11, filters. json ( options )), ');\n    };\n  </script>\n</head>\n<body>\n  <div id="blockly" class="readonly"></div>\n  <style>\n    html, body {\n      background-color: transparent;\n      margin: 0;\n      padding:0;\n      overflow: hidden;\n      height: 100%;\n      font-family: \'Gotham A\', \'Gotham B\', sans-serif;\n    }\n    .blocklyText, .blocklyMenuText, .blocklyTreeLabel, .blocklyHtmlInput,\n        .blocklyIconMark, .blocklyTooltipText, .goog-menuitem-content {\n      font-family: \'Gotham A\', \'Gotham B\', sans-serif;\n    }\n    #blockly>svg {\n      background-color: transparent;\n      border: none;\n    }\n    #blockly {\n      position: absolute;\n      top: 0;\n      left: 0;\n      overflow: hidden;\n      height: 100%;\n      width: 100%;\n    }\n  </style>\n</body>\n</html>\n'); })();
 } 
 return buf.join('');
 };
@@ -9594,6 +9625,7 @@ levels.ec_1_1 = utils.extend(levels['1_1'], {
     {'func': 'moveForward', 'params': ["100"], 'idArgLast': true },
     {'func': 'turnRight', 'params': ["90"], 'idArgLast': true },
   ],
+  'startBlocks': "moveForward(100);\n",
 });
 levels.ec_1_2 = utils.extend(levels['1_2'], {
   'editCode': true,
@@ -9602,6 +9634,7 @@ levels.ec_1_2 = utils.extend(levels['1_2'], {
     {'func': 'turnRight', 'params': ["90"], 'idArgLast': true },
     {'func': 'penColour', 'params': ["'#ff0000'"], 'idArgLast': true },
   ],
+  'startBlocks': "penColour('#ff0000');\nmoveForward(100);\n",
 });
 levels.ec_1_3 = utils.extend(levels['1_3'], {
   'editCode': true,
@@ -9610,6 +9643,7 @@ levels.ec_1_3 = utils.extend(levels['1_3'], {
     {'func': 'turnRight', 'params': ["90"], 'idArgLast': true },
     {'func': 'penColour', 'params': ["'#ff0000'"], 'idArgLast': true },
   ],
+  'startBlocks': "for (var i = 0; i < 4; i++) {\n  __\n}\n",
 });
 levels.ec_1_4 = utils.extend(levels['1_4'], {
   'editCode': true,
@@ -9618,8 +9652,18 @@ levels.ec_1_4 = utils.extend(levels['1_4'], {
     {'func': 'turnRight', 'params': ["90"], 'idArgLast': true },
     {'func': 'penColour', 'params': ["'#ff0000'"], 'idArgLast': true },
   ],
+  'startBlocks': "for (var i = 0; i < 3; i++) {\n  penColour('#ff0000');\n}\n",
 });
-
+levels.ec_1_10 = utils.extend(levels['1_10'], {
+  'editCode': true,
+  'codeFunctions': [
+    {'func': 'moveForward', 'params': ["100"], 'idArgLast': true },
+    {'func': 'turnRight', 'params': ["90"], 'idArgLast': true },
+    {'func': 'penColour', 'params': ["'#ff0000'"], 'idArgLast': true },
+    {'func': 'penWidth', 'params': ["1"], 'idArgLast': true },
+  ],
+  'startBlocks': "moveForward(100);\n",
+});
 
 },{"../../locale/en_us/turtle":42,"../block_utils":3,"../level_base":10,"../utils":39,"./answers":27,"./core":31,"./requiredBlocks":35,"./startBlocks.xml":36,"./toolbox.xml":37}],34:[function(require,module,exports){
 var appMain = require('../appMain');
@@ -10399,8 +10443,8 @@ Turtle.loadTurtle = function() {
     Turtle.numberAvatarHeadings = 18;
   else
     Turtle.numberAvatarHeadings = 180;
-  Turtle.avatarImage.height = Turtle.AVATAR_HEIGHT;
-  Turtle.avatarImage.width = Turtle.AVATAR_WIDTH;
+  Turtle.avatarImage.spriteHeight = Turtle.AVATAR_HEIGHT;
+  Turtle.avatarImage.spriteWidth = Turtle.AVATAR_WIDTH;
 };
 
 /**
@@ -10436,23 +10480,43 @@ Turtle.drawTurtle = function() {
     // and they are 180 degrees out of phase.
     index = (index + Turtle.numberAvatarHeadings/2) % Turtle.numberAvatarHeadings;
   }
-  var sourceX = Turtle.avatarImage.width * index;
+  var sourceX = Turtle.avatarImage.spriteWidth * index;
   if (skin.id == "anna" || skin.id == "elsa") {
-    sourceY = Turtle.avatarImage.height * turtleFrame;
+    sourceY = Turtle.avatarImage.spriteHeight * turtleFrame;
     turtleFrame = (turtleFrame + 1) % turtleNumFrames;
   } else {
     sourceY = 0;
   }
-  var sourceWidth = Turtle.avatarImage.width;
-  var sourceHeight = Turtle.avatarImage.height;
-  var destWidth = Turtle.avatarImage.width;
-  var destHeight = Turtle.avatarImage.height;
+  var sourceWidth = Turtle.avatarImage.spriteWidth;
+  var sourceHeight = Turtle.avatarImage.spriteHeight;
+  var destWidth = Turtle.avatarImage.spriteWidth;
+  var destHeight = Turtle.avatarImage.spriteHeight;
   var destX = Turtle.x - destWidth / 2;
   var destY = Turtle.y - destHeight + 7;
 
-  Turtle.ctxDisplay.drawImage(Turtle.avatarImage, Math.round(sourceX * retina), Math.round(sourceY * retina),
+  if (Turtle.avatarImage.width === 0 || Turtle.avatarImage.height === 0)
+    return;
+
+  if (sourceX * retina < 0 || 
+      sourceY * retina < 0 ||
+      sourceX * retina + sourceWidth  * retina -0 > Turtle.avatarImage.width ||
+      sourceY * retina + sourceHeight * retina > Turtle.avatarImage.height)
+  {
+    if (console.log)
+      console.log("drawImage out of source bounds!");
+    return;
+  }
+
+  Turtle.ctxDisplay.drawImage(
+    Turtle.avatarImage, 
+    Math.round(sourceX * retina), Math.round(sourceY * retina),
+    sourceWidth * retina - 0, sourceHeight * retina, 
+    Math.round(destX * retina), Math.round(destY * retina),
+    destWidth * retina - 0, destHeight * retina);
+
+  /* console.log(Math.round(sourceX * retina), Math.round(sourceY * retina),
                               sourceWidth * retina, sourceHeight * retina, Math.round(destX * retina), Math.round(destY * retina),
-                              destWidth * retina, destHeight * retina);
+                              destWidth * retina, destHeight * retina); */
 };
 
 var turtleNumFrames = 19;
@@ -10762,6 +10826,7 @@ Turtle.animate = function() {
       catch(err) {
         Turtle.executionError = err;
         finishExecution();
+        return;
       }
       stepped = Turtle.interpreter.step();
 
@@ -11214,8 +11279,11 @@ Turtle.checkAnswer = function() {
   var levelComplete = level.freePlay || isCorrect(delta, permittedErrors);
   Turtle.testResults = BlocklyApps.getTestResults(levelComplete);
 
-  var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
-  var textBlocks = Blockly.Xml.domToText(xml);
+  var program;
+  if (!level.editCode) {
+    var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+    program = Blockly.Xml.domToText(xml);
+  }
 
   // Make sure we don't reuse an old message, since not all paths set one.
   Turtle.message = undefined;
@@ -11223,7 +11291,7 @@ Turtle.checkAnswer = function() {
   // In level K1, check if only lengths differ.
   if (level.isK1 && !levelComplete && !BlocklyApps.editCode &&
       level.solutionBlocks &&
-      removeK1Lengths(textBlocks) === removeK1Lengths(level.solutionBlocks)) {
+      removeK1Lengths(program) === removeK1Lengths(level.solutionBlocks)) {
     Turtle.testResults = BlocklyApps.TestResults.APP_SPECIFIC_ERROR;
     Turtle.message = turtleMsg.lengthFeedback();
   }
@@ -11258,6 +11326,14 @@ Turtle.checkAnswer = function() {
     Turtle.testResults = levelComplete ?
       BlocklyApps.TestResults.ALL_PASS :
       BlocklyApps.TestResults.TOO_FEW_BLOCKS_FAIL;
+
+    // If we want to "normalize" the JavaScript to avoid proliferation of nearly
+    // identical versions of the code on the service, we could do either of these:
+
+    // do an acorn.parse and then use escodegen to generate back a "clean" version
+    // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
+
+    program = BlocklyApps.editor.getValue();
   }
 
   // If the current level is a free play, always return the free play
@@ -11281,7 +11357,7 @@ Turtle.checkAnswer = function() {
     builder: level.builder,
     result: levelComplete,
     testResult: Turtle.testResults,
-    program: encodeURIComponent(textBlocks),
+    program: encodeURIComponent(program),
     onComplete: Turtle.onReportComplete,
     save_to_gallery: level.impressive
   };
