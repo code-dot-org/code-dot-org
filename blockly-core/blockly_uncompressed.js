@@ -4089,7 +4089,10 @@ Blockly.Trashcan.prototype.position_ = function() {
   if(Blockly.RTL) {
     this.left_ = this.MARGIN_SIDE_
   }else {
-    this.left_ = metrics.viewWidth - this.WIDTH_ - this.MARGIN_SIDE_
+    this.left_ = metrics.viewWidth - this.WIDTH_ - this.MARGIN_SIDE_;
+    if(this.blockSpace_.blockSpaceEditor.flyout_) {
+      this.left_ -= this.blockSpace_.blockSpaceEditor.flyout_.width_
+    }
   }
   this.top_ = this.MARGIN_TOP_;
   this.svgGroup_.setAttribute("transform", "translate(" + this.left_ + "," + this.top_ + ")")
@@ -4148,13 +4151,9 @@ Blockly.BlockSpace.prototype.trashcan = null;
 Blockly.BlockSpace.prototype.fireChangeEventPid_ = null;
 Blockly.BlockSpace.prototype.scrollbar = null;
 Blockly.BlockSpace.prototype.findFunction = function(functionName) {
-  var blocks = this.getTopBlocks();
-  for(var x = 0, block;block = blocks[x];x++) {
-    if((block.type === "procedures_defnoreturn" || block.type === "procedures_defreturn") && Blockly.Names.equals(functionName, block.getTitleValue("NAME"))) {
-      return block
-    }
-  }
-  return null
+  return goog.array.find(this.getTopBlocks(), function(block) {
+    return goog.array.contains(Blockly.Procedures.DEFINITION_BLOCK_TYPES, block.type) && Blockly.Names.equals(functionName, block.getTitleValue("NAME"))
+  })
 };
 Blockly.BlockSpace.prototype.createDom = function() {
   this.svgGroup_ = Blockly.createSvgElement("g", {}, null);
@@ -13177,7 +13176,7 @@ Blockly.Connection.prototype.closest = function(maxLimit, dx, dy) {
   function checkConnection_(yIndex) {
     var connection = db[yIndex];
     var targetSourceBlock = connection.sourceBlock_;
-    if(!targetSourceBlock.isUserVisible()) {
+    if(!Blockly.editBlocks && !targetSourceBlock.isUserVisible()) {
       return true
     }
     if(connection.type === Blockly.OUTPUT_VALUE || (connection.type === Blockly.FUNCTIONAL_OUTPUT || connection.type === Blockly.PREVIOUS_STATEMENT)) {
@@ -13272,7 +13271,7 @@ Blockly.Connection.prototype.neighbours_ = function(maxLimit) {
   function checkConnection_(yIndex) {
     var connection = db[yIndex];
     var targetSourceBlock = connection.sourceBlock_;
-    if(!targetSourceBlock.isUserVisible()) {
+    if(!Blockly.editBlocks && !targetSourceBlock.isUserVisible()) {
       return true
     }
     var dx = currentX - connection.x_;
@@ -13424,19 +13423,26 @@ Blockly.BlockSvgFunctional.prototype.initChildren = function() {
   var clip = Blockly.createSvgElement("clipPath", {id:"blockClip" + this.block_.id}, this.svgGroup_);
   this.blockClipRect_ = Blockly.createSvgElement("path", {}, clip);
   this.divider_ = Blockly.createSvgElement("rect", {x:1, y:this.headerHeight, height:3, width:0, fill:goog.color.rgbArrayToHex(lightColor), "clip-path":"url(#blockClip" + this.block_.id + ")", visibility:this.headerHeight > 0 ? "visible" : "hidden"}, this.svgGroup_);
+  this.createFunctionalMarkers_()
+};
+Blockly.BlockSvgFunctional.prototype.renderDraw_ = function(iconWidth, inputRows) {
+  this.createFunctionalMarkers_();
+  goog.base(this, "renderDraw_", iconWidth, inputRows);
+  this.blockClipRect_.setAttribute("d", this.svgPath_.getAttribute("d"));
+  var rect = this.svgPath_.getBBox();
+  this.divider_.setAttribute("width", rect.width - 2)
+};
+Blockly.BlockSvgFunctional.prototype.createFunctionalMarkers_ = function() {
   for(var i = 0;i < this.block_.inputList.length;i++) {
     var input = this.block_.inputList[i];
+    if(this.inputMarkers_[input.name]) {
+      continue
+    }
     if(input.type !== Blockly.FUNCTIONAL_INPUT) {
       continue
     }
     this.inputMarkers_[input.name] = Blockly.createSvgElement("rect", {fill:"red"}, this.svgGroup_)
   }
-};
-Blockly.BlockSvgFunctional.prototype.renderDraw_ = function(iconWidth, inputRows) {
-  goog.base(this, "renderDraw_", iconWidth, inputRows);
-  this.blockClipRect_.setAttribute("d", this.svgPath_.getAttribute("d"));
-  var rect = this.svgPath_.getBBox();
-  this.divider_.setAttribute("width", rect.width - 2)
 };
 Blockly.BlockSvgFunctional.prototype.renderDrawRight_ = function(renderInfo, connectionsXY, inputRows, iconWidth) {
   if(this.rowBuffer) {
@@ -14920,6 +14926,15 @@ Blockly.Block.prototype.setFunctionalOutput = function(hasOutput, opt_check) {
     this.bumpNeighbours_()
   }
 };
+Blockly.Block.prototype.changeFunctionalOutput = function(newType) {
+  this.setHSV.apply(this, Blockly.ContractEditor.typesToColors[newType]);
+  this.previousConnection = this.previousConnection || new Blockly.Connection(this, Blockly.FUNCTIONAL_OUTPUT);
+  this.previousConnection.setCheck(newType);
+  if(this.rendered) {
+    this.render();
+    this.bumpNeighbours_()
+  }
+};
 Blockly.Block.prototype.setInputsInline = function(inputsInline) {
   this.inputsInline = inputsInline;
   if(this.rendered) {
@@ -15372,7 +15387,7 @@ Blockly.Flyout.prototype.show = function(xmlList) {
     Blockly.Variables.flyoutCategory(blocks, gaps, margin, this.blockSpace_)
   }else {
     if(firstBlock === Blockly.Procedures.NAME_TYPE) {
-      if(Blockly.useModalFunctionEditor && !Blockly.functionEditor.isOpen()) {
+      if(Blockly.functionEditor && !Blockly.functionEditor.isOpen()) {
         var button = Blockly.createSvgElement("g", {"class":"createFunction"}, this.blockSpace_.svgGroup_);
         var padding = 5;
         var r = Blockly.createSvgElement("rect", {rx:5, ry:5, fill:"orange", stroke:"white"}, button);
@@ -18107,7 +18122,11 @@ Blockly.Variables.allVariables = function(opt_block) {
   if(opt_block) {
     blocks = opt_block.getDescendants()
   }else {
-    blocks = Blockly.mainBlockSpace.getAllBlocks()
+    if(Blockly.mainBlockSpace) {
+      blocks = Blockly.mainBlockSpace.getAllBlocks()
+    }else {
+      return[]
+    }
   }
   var variableHash = {};
   for(var x = 0;x < blocks.length;x++) {
@@ -18282,7 +18301,7 @@ Blockly.FieldVariable.prototype.dropdownChange = function(text) {
   if(text === Blockly.Msg.RENAME_VARIABLE) {
     var oldVar = this.getText();
     this.getParentEditor_().hideChaff();
-    text = promptName(Blockly.Msg.RENAME_VARIABLE_TITLE.replace("%1", oldVar), oldVar);
+    text = Blockly.FieldVariable.promptName(Blockly.Msg.RENAME_VARIABLE_TITLE.replace("%1", oldVar), oldVar);
     if(text) {
       Blockly.Variables.renameVariable(oldVar, text, this.sourceBlock_.blockSpace)
     }
@@ -18290,7 +18309,7 @@ Blockly.FieldVariable.prototype.dropdownChange = function(text) {
   }else {
     if(text === Blockly.Msg.NEW_VARIABLE) {
       this.getParentEditor_().hideChaff();
-      text = promptName(Blockly.Msg.NEW_VARIABLE_TITLE, "");
+      text = Blockly.FieldVariable.promptName(Blockly.Msg.NEW_VARIABLE_TITLE, "");
       if(text) {
         Blockly.Variables.renameVariable(text, text, this.sourceBlock_.blockSpace);
         return text
@@ -18317,26 +18336,35 @@ goog.require("Blockly.FieldVariable");
 goog.require("Blockly.Names");
 goog.require("Blockly.BlockSpace");
 Blockly.Procedures.NAME_TYPE = "PROCEDURE";
+Blockly.Procedures.DEFINITION_BLOCK_TYPES = ["procedures_defnoreturn", "procedures_defreturn", "functional_definition"];
 Blockly.Procedures.allProcedures = function() {
   var blocks = Blockly.mainBlockSpace.getAllBlocks();
   var proceduresReturn = [];
   var proceduresNoReturn = [];
+  var proceduresFunctional = [];
   for(var x = 0;x < blocks.length;x++) {
     var func = blocks[x].getProcedureDef;
     if(func) {
       var tuple = func.call(blocks[x]);
       if(tuple) {
-        if(tuple[2]) {
-          proceduresReturn.push(tuple)
-        }else {
-          proceduresNoReturn.push(tuple)
+        switch(blocks[x].type) {
+          case "functional_definition":
+            proceduresFunctional.push(tuple);
+            break;
+          case "procedures_defreturn":
+            proceduresReturn.push(tuple);
+            break;
+          case "procedures_defnoreturn":
+            proceduresNoReturn.push(tuple);
+            break
         }
       }
     }
   }
   proceduresNoReturn.sort(Blockly.Procedures.procTupleComparator_);
   proceduresReturn.sort(Blockly.Procedures.procTupleComparator_);
-  return[proceduresNoReturn, proceduresReturn]
+  proceduresFunctional.sort(Blockly.Procedures.procTupleComparator_);
+  return[proceduresNoReturn, proceduresReturn, proceduresFunctional]
 };
 Blockly.Procedures.procTupleComparator_ = function(ta, tb) {
   var a = ta[0].toLowerCase();
@@ -18392,7 +18420,7 @@ Blockly.Procedures.rename = function(text) {
   return text
 };
 Blockly.Procedures.flyoutCategory = function(blocks, gaps, margin, blockSpace) {
-  if(!Blockly.useModalFunctionEditor) {
+  if(!Blockly.functionEditor) {
     if(Blockly.Blocks.procedures_defnoreturn) {
       var block = new Blockly.Block(blockSpace, "procedures_defnoreturn");
       block.initSvg();
@@ -18431,7 +18459,8 @@ Blockly.Procedures.flyoutCategory = function(blocks, gaps, margin, blockSpace) {
   }
   var tuple = Blockly.Procedures.allProcedures();
   populateProcedures(tuple[0], "procedures_callnoreturn");
-  populateProcedures(tuple[1], "procedures_callreturn")
+  populateProcedures(tuple[1], "procedures_callreturn");
+  populateProcedures(tuple[2], "functional_call")
 };
 Blockly.Procedures.getCallers = function(name, blockSpace) {
   var callers = [];
@@ -18554,18 +18583,20 @@ Blockly.FunctionEditor = function() {
   this.modalBackground_ = null;
   this.onResizeWrapper_ = null
 };
+Blockly.FunctionEditor.prototype.definitionBlockType = "procedures_defnoreturn";
+Blockly.FunctionEditor.prototype.parameterBlockType = "parameters_get";
 Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
   var targetFunctionDefinitionBlock = Blockly.mainBlockSpace.findFunction(functionName);
   if(!targetFunctionDefinitionBlock) {
     throw new Error("Can't find definition block to edit");
   }
   this.show();
+  targetFunctionDefinitionBlock.setUserVisible(true);
   var dom = Blockly.Xml.blockToDom_(targetFunctionDefinitionBlock);
   targetFunctionDefinitionBlock.dispose(false, false, true);
   this.functionDefinitionBlock = Blockly.Xml.domToBlock_(Blockly.modalBlockSpace, dom);
   this.functionDefinitionBlock.moveTo(Blockly.RTL ? Blockly.modalBlockSpace.getMetrics().viewWidth - FRAME_MARGIN_SIDE : FRAME_MARGIN_SIDE, FRAME_MARGIN_TOP);
   this.functionDefinitionBlock.setMovable(false);
-  this.functionDefinitionBlock.setUserVisible(true);
   this.populateParamToolbox_();
   goog.dom.getElement("functionNameText").value = functionName;
   goog.dom.getElement("functionDescriptionText").value = this.functionDefinitionBlock.description_ || ""
@@ -18580,18 +18611,20 @@ Blockly.FunctionEditor.prototype.populateParamToolbox_ = function() {
 };
 Blockly.FunctionEditor.prototype.openWithNewFunction = function() {
   this.ensureCreated_();
-  this.functionDefinitionBlock = Blockly.Xml.domToBlock_(Blockly.mainBlockSpace, Blockly.createSvgElement("block", {type:"procedures_defnoreturn"}));
+  this.functionDefinitionBlock = Blockly.Xml.domToBlock_(Blockly.mainBlockSpace, Blockly.createSvgElement("block", {type:this.definitionBlockType}));
   this.openAndEditFunction(this.functionDefinitionBlock.getTitleValue("NAME"))
 };
 Blockly.FunctionEditor.prototype.bindToolboxHandlers_ = function() {
   var paramAddTextElement = goog.dom.getElement("paramAddText");
   var paramAddButton = goog.dom.getElement("paramAddButton");
-  Blockly.bindEvent_(paramAddButton, "mousedown", this, goog.bind(this.addParamFromInputField_, this, paramAddTextElement));
-  Blockly.bindEvent_(paramAddTextElement, "keydown", this, function(e) {
-    if(e.keyCode === goog.events.KeyCodes.ENTER) {
-      this.addParamFromInputField_(paramAddTextElement)
-    }
-  })
+  if(paramAddTextElement && paramAddButton) {
+    Blockly.bindEvent_(paramAddButton, "mousedown", this, goog.bind(this.addParamFromInputField_, this, paramAddTextElement));
+    Blockly.bindEvent_(paramAddTextElement, "keydown", this, function(e) {
+      if(e.keyCode === goog.events.KeyCodes.ENTER) {
+        this.addParamFromInputField_(paramAddTextElement)
+      }
+    })
+  }
 };
 Blockly.FunctionEditor.prototype.addParamFromInputField_ = function(parameterTextElement) {
   var newParamName = parameterTextElement.value;
@@ -18600,7 +18633,7 @@ Blockly.FunctionEditor.prototype.addParamFromInputField_ = function(parameterTex
   this.refreshParamsEverywhere()
 };
 Blockly.FunctionEditor.prototype.addParameter = function(newParameterName) {
-  var param = Blockly.createSvgElement("block", {type:"parameters_get"});
+  var param = Blockly.createSvgElement("block", {type:this.parameterBlockType});
   var v = Blockly.createSvgElement("title", {name:"VAR"}, param);
   v.textContent = newParameterName;
   this.paramToolboxBlocks_.push(param)
@@ -18753,13 +18786,1566 @@ Blockly.FunctionEditor.prototype.createContractDom_ = function() {
   if(Blockly.RTL) {
     this.contractDiv_.setAttribute("dir", "RTL")
   }
-  this.contractDiv_.innerHTML = "<div>" + Blockly.Msg.FUNCTION_NAME_LABEL + "</div>" + '<div><input id="functionNameText" type="text"></div>' + "<div>" + Blockly.Msg.FUNCTION_DESCRIPTION_LABEL + "</div>" + '<div><textarea id="functionDescriptionText" rows="2"></textarea></div>' + "<div>" + Blockly.Msg.FUNCTION_PARAMETERS_LABEL + "</div>" + '<div><input id="paramAddText" type="text" style="width: 200px;"> ' + '<button id="paramAddButton" class="btn">' + Blockly.Msg.ADD_PARAMETER + "</button>";
+  this.contractDiv_.innerHTML = "<div>" + Blockly.Msg.FUNCTION_NAME_LABEL + "</div>" + '<div><input id="functionNameText" type="text"></div>' + "<div>" + Blockly.Msg.FUNCTION_DESCRIPTION_LABEL + "</div>" + '<div><textarea id="functionDescriptionText" rows="2"></textarea></div>';
+  if(!Blockly.disableParamEditing) {
+    this.contractDiv_.innerHTML += "<div>" + Blockly.Msg.FUNCTION_PARAMETERS_LABEL + "</div>" + '<div><input id="paramAddText" type="text" style="width: 200px;"> ' + '<button id="paramAddButton" class="btn">' + Blockly.Msg.ADD_PARAMETER + "</button>"
+  }
   var metrics = Blockly.modalBlockSpace.getMetrics();
   this.contractDiv_.style.left = metrics.absoluteLeft + "px";
   this.contractDiv_.style.top = metrics.absoluteTop + "px";
   this.contractDiv_.style.width = metrics.viewWidth + "px";
   this.contractDiv_.style.display = "block";
   this.container_.insertBefore(this.contractDiv_, this.container_.firstChild)
+};
+goog.provide("goog.style.bidi");
+goog.require("goog.dom");
+goog.require("goog.style");
+goog.require("goog.userAgent");
+goog.style.bidi.getScrollLeft = function(element) {
+  var isRtl = goog.style.isRightToLeft(element);
+  if(isRtl && goog.userAgent.GECKO) {
+    return-element.scrollLeft
+  }else {
+    if(isRtl && !(goog.userAgent.IE && goog.userAgent.isVersionOrHigher("8"))) {
+      var overflowX = goog.style.getComputedOverflowX(element);
+      if(overflowX == "visible") {
+        return element.scrollLeft
+      }else {
+        return element.scrollWidth - element.clientWidth - element.scrollLeft
+      }
+    }
+  }
+  return element.scrollLeft
+};
+goog.style.bidi.getOffsetStart = function(element) {
+  var offsetLeftForReal = element.offsetLeft;
+  var bestParent = element.offsetParent;
+  if(!bestParent && goog.style.getComputedPosition(element) == "fixed") {
+    bestParent = goog.dom.getOwnerDocument(element).documentElement
+  }
+  if(!bestParent) {
+    return offsetLeftForReal
+  }
+  if(goog.userAgent.GECKO) {
+    var borderWidths = goog.style.getBorderBox(bestParent);
+    offsetLeftForReal += borderWidths.left
+  }else {
+    if(goog.userAgent.isDocumentModeOrHigher(8)) {
+      var borderWidths = goog.style.getBorderBox(bestParent);
+      offsetLeftForReal -= borderWidths.left
+    }
+  }
+  if(goog.style.isRightToLeft(bestParent)) {
+    var elementRightOffset = offsetLeftForReal + element.offsetWidth;
+    return bestParent.clientWidth - elementRightOffset
+  }
+  return offsetLeftForReal
+};
+goog.style.bidi.setScrollOffset = function(element, offsetStart) {
+  offsetStart = Math.max(offsetStart, 0);
+  if(!goog.style.isRightToLeft(element)) {
+    element.scrollLeft = offsetStart
+  }else {
+    if(goog.userAgent.GECKO) {
+      element.scrollLeft = -offsetStart
+    }else {
+      if(!(goog.userAgent.IE && goog.userAgent.isVersionOrHigher("8"))) {
+        element.scrollLeft = element.scrollWidth - offsetStart - element.clientWidth
+      }else {
+        element.scrollLeft = offsetStart
+      }
+    }
+  }
+};
+goog.style.bidi.setPosition = function(elem, left, top, isRtl) {
+  if(!goog.isNull(top)) {
+    elem.style.top = top + "px"
+  }
+  if(isRtl) {
+    elem.style.right = left + "px";
+    elem.style.left = ""
+  }else {
+    elem.style.left = left + "px";
+    elem.style.right = ""
+  }
+};
+goog.provide("goog.positioning");
+goog.provide("goog.positioning.Corner");
+goog.provide("goog.positioning.CornerBit");
+goog.provide("goog.positioning.Overflow");
+goog.provide("goog.positioning.OverflowStatus");
+goog.require("goog.asserts");
+goog.require("goog.dom");
+goog.require("goog.dom.TagName");
+goog.require("goog.math.Box");
+goog.require("goog.math.Coordinate");
+goog.require("goog.math.Size");
+goog.require("goog.style");
+goog.require("goog.style.bidi");
+goog.positioning.Corner = {TOP_LEFT:0, TOP_RIGHT:2, BOTTOM_LEFT:1, BOTTOM_RIGHT:3, TOP_START:4, TOP_END:6, BOTTOM_START:5, BOTTOM_END:7};
+goog.positioning.CornerBit = {BOTTOM:1, RIGHT:2, FLIP_RTL:4};
+goog.positioning.Overflow = {IGNORE:0, ADJUST_X:1, FAIL_X:2, ADJUST_Y:4, FAIL_Y:8, RESIZE_WIDTH:16, RESIZE_HEIGHT:32, ADJUST_X_EXCEPT_OFFSCREEN:64 | 1, ADJUST_Y_EXCEPT_OFFSCREEN:128 | 4};
+goog.positioning.OverflowStatus = {NONE:0, ADJUSTED_X:1, ADJUSTED_Y:2, WIDTH_ADJUSTED:4, HEIGHT_ADJUSTED:8, FAILED_LEFT:16, FAILED_RIGHT:32, FAILED_TOP:64, FAILED_BOTTOM:128, FAILED_OUTSIDE_VIEWPORT:256};
+goog.positioning.OverflowStatus.FAILED = goog.positioning.OverflowStatus.FAILED_LEFT | goog.positioning.OverflowStatus.FAILED_RIGHT | goog.positioning.OverflowStatus.FAILED_TOP | goog.positioning.OverflowStatus.FAILED_BOTTOM | goog.positioning.OverflowStatus.FAILED_OUTSIDE_VIEWPORT;
+goog.positioning.OverflowStatus.FAILED_HORIZONTAL = goog.positioning.OverflowStatus.FAILED_LEFT | goog.positioning.OverflowStatus.FAILED_RIGHT;
+goog.positioning.OverflowStatus.FAILED_VERTICAL = goog.positioning.OverflowStatus.FAILED_TOP | goog.positioning.OverflowStatus.FAILED_BOTTOM;
+goog.positioning.positionAtAnchor = function(anchorElement, anchorElementCorner, movableElement, movableElementCorner, opt_offset, opt_margin, opt_overflow, opt_preferredSize, opt_viewport) {
+  goog.asserts.assert(movableElement);
+  var movableParentTopLeft = goog.positioning.getOffsetParentPageOffset(movableElement);
+  var anchorRect = goog.positioning.getVisiblePart_(anchorElement);
+  goog.style.translateRectForAnotherFrame(anchorRect, goog.dom.getDomHelper(anchorElement), goog.dom.getDomHelper(movableElement));
+  var corner = goog.positioning.getEffectiveCorner(anchorElement, anchorElementCorner);
+  var absolutePos = new goog.math.Coordinate(corner & goog.positioning.CornerBit.RIGHT ? anchorRect.left + anchorRect.width : anchorRect.left, corner & goog.positioning.CornerBit.BOTTOM ? anchorRect.top + anchorRect.height : anchorRect.top);
+  absolutePos = goog.math.Coordinate.difference(absolutePos, movableParentTopLeft);
+  if(opt_offset) {
+    absolutePos.x += (corner & goog.positioning.CornerBit.RIGHT ? -1 : 1) * opt_offset.x;
+    absolutePos.y += (corner & goog.positioning.CornerBit.BOTTOM ? -1 : 1) * opt_offset.y
+  }
+  var viewport;
+  if(opt_overflow) {
+    if(opt_viewport) {
+      viewport = opt_viewport
+    }else {
+      viewport = goog.style.getVisibleRectForElement(movableElement);
+      if(viewport) {
+        viewport.top -= movableParentTopLeft.y;
+        viewport.right -= movableParentTopLeft.x;
+        viewport.bottom -= movableParentTopLeft.y;
+        viewport.left -= movableParentTopLeft.x
+      }
+    }
+  }
+  return goog.positioning.positionAtCoordinate(absolutePos, movableElement, movableElementCorner, opt_margin, viewport, opt_overflow, opt_preferredSize)
+};
+goog.positioning.getOffsetParentPageOffset = function(movableElement) {
+  var movableParentTopLeft;
+  var parent = movableElement.offsetParent;
+  if(parent) {
+    var isBody = parent.tagName == goog.dom.TagName.HTML || parent.tagName == goog.dom.TagName.BODY;
+    if(!isBody || goog.style.getComputedPosition(parent) != "static") {
+      movableParentTopLeft = goog.style.getPageOffset(parent);
+      if(!isBody) {
+        movableParentTopLeft = goog.math.Coordinate.difference(movableParentTopLeft, new goog.math.Coordinate(goog.style.bidi.getScrollLeft(parent), parent.scrollTop))
+      }
+    }
+  }
+  return movableParentTopLeft || new goog.math.Coordinate
+};
+goog.positioning.getVisiblePart_ = function(el) {
+  var rect = goog.style.getBounds(el);
+  var visibleBox = goog.style.getVisibleRectForElement(el);
+  if(visibleBox) {
+    rect.intersection(goog.math.Rect.createFromBox(visibleBox))
+  }
+  return rect
+};
+goog.positioning.positionAtCoordinate = function(absolutePos, movableElement, movableElementCorner, opt_margin, opt_viewport, opt_overflow, opt_preferredSize) {
+  absolutePos = absolutePos.clone();
+  var status = goog.positioning.OverflowStatus.NONE;
+  var corner = goog.positioning.getEffectiveCorner(movableElement, movableElementCorner);
+  var elementSize = goog.style.getSize(movableElement);
+  var size = opt_preferredSize ? opt_preferredSize.clone() : elementSize.clone();
+  if(opt_margin || corner != goog.positioning.Corner.TOP_LEFT) {
+    if(corner & goog.positioning.CornerBit.RIGHT) {
+      absolutePos.x -= size.width + (opt_margin ? opt_margin.right : 0)
+    }else {
+      if(opt_margin) {
+        absolutePos.x += opt_margin.left
+      }
+    }
+    if(corner & goog.positioning.CornerBit.BOTTOM) {
+      absolutePos.y -= size.height + (opt_margin ? opt_margin.bottom : 0)
+    }else {
+      if(opt_margin) {
+        absolutePos.y += opt_margin.top
+      }
+    }
+  }
+  if(opt_overflow) {
+    status = opt_viewport ? goog.positioning.adjustForViewport_(absolutePos, size, opt_viewport, opt_overflow) : goog.positioning.OverflowStatus.FAILED_OUTSIDE_VIEWPORT;
+    if(status & goog.positioning.OverflowStatus.FAILED) {
+      return status
+    }
+  }
+  goog.style.setPosition(movableElement, absolutePos);
+  if(!goog.math.Size.equals(elementSize, size)) {
+    goog.style.setBorderBoxSize(movableElement, size)
+  }
+  return status
+};
+goog.positioning.adjustForViewport_ = function(pos, size, viewport, overflow) {
+  var status = goog.positioning.OverflowStatus.NONE;
+  var ADJUST_X_EXCEPT_OFFSCREEN = goog.positioning.Overflow.ADJUST_X_EXCEPT_OFFSCREEN;
+  var ADJUST_Y_EXCEPT_OFFSCREEN = goog.positioning.Overflow.ADJUST_Y_EXCEPT_OFFSCREEN;
+  if((overflow & ADJUST_X_EXCEPT_OFFSCREEN) == ADJUST_X_EXCEPT_OFFSCREEN && (pos.x < viewport.left || pos.x >= viewport.right)) {
+    overflow &= ~goog.positioning.Overflow.ADJUST_X
+  }
+  if((overflow & ADJUST_Y_EXCEPT_OFFSCREEN) == ADJUST_Y_EXCEPT_OFFSCREEN && (pos.y < viewport.top || pos.y >= viewport.bottom)) {
+    overflow &= ~goog.positioning.Overflow.ADJUST_Y
+  }
+  if(pos.x < viewport.left && overflow & goog.positioning.Overflow.ADJUST_X) {
+    pos.x = viewport.left;
+    status |= goog.positioning.OverflowStatus.ADJUSTED_X
+  }
+  if(pos.x < viewport.left && (pos.x + size.width > viewport.right && overflow & goog.positioning.Overflow.RESIZE_WIDTH)) {
+    size.width = Math.max(size.width - (pos.x + size.width - viewport.right), 0);
+    status |= goog.positioning.OverflowStatus.WIDTH_ADJUSTED
+  }
+  if(pos.x + size.width > viewport.right && overflow & goog.positioning.Overflow.ADJUST_X) {
+    pos.x = Math.max(viewport.right - size.width, viewport.left);
+    status |= goog.positioning.OverflowStatus.ADJUSTED_X
+  }
+  if(overflow & goog.positioning.Overflow.FAIL_X) {
+    status |= (pos.x < viewport.left ? goog.positioning.OverflowStatus.FAILED_LEFT : 0) | (pos.x + size.width > viewport.right ? goog.positioning.OverflowStatus.FAILED_RIGHT : 0)
+  }
+  if(pos.y < viewport.top && overflow & goog.positioning.Overflow.ADJUST_Y) {
+    pos.y = viewport.top;
+    status |= goog.positioning.OverflowStatus.ADJUSTED_Y
+  }
+  if(pos.y <= viewport.top && (pos.y + size.height < viewport.bottom && overflow & goog.positioning.Overflow.RESIZE_HEIGHT)) {
+    size.height = Math.max(size.height - (viewport.top - pos.y), 0);
+    pos.y = viewport.top;
+    status |= goog.positioning.OverflowStatus.HEIGHT_ADJUSTED
+  }
+  if(pos.y >= viewport.top && (pos.y + size.height > viewport.bottom && overflow & goog.positioning.Overflow.RESIZE_HEIGHT)) {
+    size.height = Math.max(size.height - (pos.y + size.height - viewport.bottom), 0);
+    status |= goog.positioning.OverflowStatus.HEIGHT_ADJUSTED
+  }
+  if(pos.y + size.height > viewport.bottom && overflow & goog.positioning.Overflow.ADJUST_Y) {
+    pos.y = Math.max(viewport.bottom - size.height, viewport.top);
+    status |= goog.positioning.OverflowStatus.ADJUSTED_Y
+  }
+  if(overflow & goog.positioning.Overflow.FAIL_Y) {
+    status |= (pos.y < viewport.top ? goog.positioning.OverflowStatus.FAILED_TOP : 0) | (pos.y + size.height > viewport.bottom ? goog.positioning.OverflowStatus.FAILED_BOTTOM : 0)
+  }
+  return status
+};
+goog.positioning.getEffectiveCorner = function(element, corner) {
+  return((corner & goog.positioning.CornerBit.FLIP_RTL && goog.style.isRightToLeft(element) ? corner ^ goog.positioning.CornerBit.RIGHT : corner) & ~goog.positioning.CornerBit.FLIP_RTL)
+};
+goog.positioning.flipCornerHorizontal = function(corner) {
+  return(corner ^ goog.positioning.CornerBit.RIGHT)
+};
+goog.positioning.flipCornerVertical = function(corner) {
+  return(corner ^ goog.positioning.CornerBit.BOTTOM)
+};
+goog.positioning.flipCorner = function(corner) {
+  return(corner ^ goog.positioning.CornerBit.BOTTOM ^ goog.positioning.CornerBit.RIGHT)
+};
+goog.provide("goog.userAgent.product");
+goog.require("goog.userAgent");
+goog.define("goog.userAgent.product.ASSUME_FIREFOX", false);
+goog.define("goog.userAgent.product.ASSUME_CAMINO", false);
+goog.define("goog.userAgent.product.ASSUME_IPHONE", false);
+goog.define("goog.userAgent.product.ASSUME_IPAD", false);
+goog.define("goog.userAgent.product.ASSUME_ANDROID", false);
+goog.define("goog.userAgent.product.ASSUME_CHROME", false);
+goog.define("goog.userAgent.product.ASSUME_SAFARI", false);
+goog.userAgent.product.PRODUCT_KNOWN_ = goog.userAgent.ASSUME_IE || (goog.userAgent.ASSUME_OPERA || (goog.userAgent.product.ASSUME_FIREFOX || (goog.userAgent.product.ASSUME_CAMINO || (goog.userAgent.product.ASSUME_IPHONE || (goog.userAgent.product.ASSUME_IPAD || (goog.userAgent.product.ASSUME_ANDROID || (goog.userAgent.product.ASSUME_CHROME || goog.userAgent.product.ASSUME_SAFARI)))))));
+goog.userAgent.product.init_ = function() {
+  goog.userAgent.product.detectedFirefox_ = false;
+  goog.userAgent.product.detectedCamino_ = false;
+  goog.userAgent.product.detectedIphone_ = false;
+  goog.userAgent.product.detectedIpad_ = false;
+  goog.userAgent.product.detectedAndroid_ = false;
+  goog.userAgent.product.detectedChrome_ = false;
+  goog.userAgent.product.detectedSafari_ = false;
+  var ua = goog.userAgent.getUserAgentString();
+  if(!ua) {
+    return
+  }
+  if(ua.indexOf("Firefox") != -1) {
+    goog.userAgent.product.detectedFirefox_ = true
+  }else {
+    if(ua.indexOf("Camino") != -1) {
+      goog.userAgent.product.detectedCamino_ = true
+    }else {
+      if(ua.indexOf("iPhone") != -1 || ua.indexOf("iPod") != -1) {
+        goog.userAgent.product.detectedIphone_ = true
+      }else {
+        if(ua.indexOf("iPad") != -1) {
+          goog.userAgent.product.detectedIpad_ = true
+        }else {
+          if(ua.indexOf("Chrome") != -1) {
+            goog.userAgent.product.detectedChrome_ = true
+          }else {
+            if(ua.indexOf("Android") != -1) {
+              goog.userAgent.product.detectedAndroid_ = true
+            }else {
+              if(ua.indexOf("Safari") != -1) {
+                goog.userAgent.product.detectedSafari_ = true
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+};
+if(!goog.userAgent.product.PRODUCT_KNOWN_) {
+  goog.userAgent.product.init_()
+}
+goog.userAgent.product.OPERA = goog.userAgent.OPERA;
+goog.userAgent.product.IE = goog.userAgent.IE;
+goog.userAgent.product.FIREFOX = goog.userAgent.product.PRODUCT_KNOWN_ ? goog.userAgent.product.ASSUME_FIREFOX : goog.userAgent.product.detectedFirefox_;
+goog.userAgent.product.CAMINO = goog.userAgent.product.PRODUCT_KNOWN_ ? goog.userAgent.product.ASSUME_CAMINO : goog.userAgent.product.detectedCamino_;
+goog.userAgent.product.IPHONE = goog.userAgent.product.PRODUCT_KNOWN_ ? goog.userAgent.product.ASSUME_IPHONE : goog.userAgent.product.detectedIphone_;
+goog.userAgent.product.IPAD = goog.userAgent.product.PRODUCT_KNOWN_ ? goog.userAgent.product.ASSUME_IPAD : goog.userAgent.product.detectedIpad_;
+goog.userAgent.product.ANDROID = goog.userAgent.product.PRODUCT_KNOWN_ ? goog.userAgent.product.ASSUME_ANDROID : goog.userAgent.product.detectedAndroid_;
+goog.userAgent.product.CHROME = goog.userAgent.product.PRODUCT_KNOWN_ ? goog.userAgent.product.ASSUME_CHROME : goog.userAgent.product.detectedChrome_;
+goog.userAgent.product.SAFARI = goog.userAgent.product.PRODUCT_KNOWN_ ? goog.userAgent.product.ASSUME_SAFARI : goog.userAgent.product.detectedSafari_;
+goog.provide("goog.positioning.AbstractPosition");
+goog.require("goog.math.Box");
+goog.require("goog.math.Size");
+goog.require("goog.positioning.Corner");
+goog.positioning.AbstractPosition = function() {
+};
+goog.positioning.AbstractPosition.prototype.reposition = function(movableElement, corner, opt_margin, opt_preferredSize) {
+};
+goog.provide("goog.positioning.AnchoredPosition");
+goog.require("goog.math.Box");
+goog.require("goog.positioning");
+goog.require("goog.positioning.AbstractPosition");
+goog.positioning.AnchoredPosition = function(anchorElement, corner, opt_overflow) {
+  this.element = anchorElement;
+  this.corner = corner;
+  this.overflow_ = opt_overflow
+};
+goog.inherits(goog.positioning.AnchoredPosition, goog.positioning.AbstractPosition);
+goog.positioning.AnchoredPosition.prototype.reposition = function(movableElement, movableCorner, opt_margin, opt_preferredSize) {
+  goog.positioning.positionAtAnchor(this.element, this.corner, movableElement, movableCorner, undefined, opt_margin, this.overflow_)
+};
+goog.provide("goog.positioning.AnchoredViewportPosition");
+goog.require("goog.math.Box");
+goog.require("goog.positioning");
+goog.require("goog.positioning.AnchoredPosition");
+goog.require("goog.positioning.Corner");
+goog.require("goog.positioning.Overflow");
+goog.require("goog.positioning.OverflowStatus");
+goog.positioning.AnchoredViewportPosition = function(anchorElement, corner, opt_adjust, opt_overflowConstraint) {
+  goog.positioning.AnchoredPosition.call(this, anchorElement, corner);
+  this.lastResortOverflow_ = opt_adjust ? goog.positioning.Overflow.ADJUST_X | goog.positioning.Overflow.ADJUST_Y : goog.positioning.Overflow.IGNORE;
+  this.overflowConstraint_ = opt_overflowConstraint || undefined
+};
+goog.inherits(goog.positioning.AnchoredViewportPosition, goog.positioning.AnchoredPosition);
+goog.positioning.AnchoredViewportPosition.prototype.getOverflowConstraint = function() {
+  return this.overflowConstraint_
+};
+goog.positioning.AnchoredViewportPosition.prototype.setOverflowConstraint = function(overflowConstraint) {
+  this.overflowConstraint_ = overflowConstraint
+};
+goog.positioning.AnchoredViewportPosition.prototype.getLastResortOverflow = function() {
+  return this.lastResortOverflow_
+};
+goog.positioning.AnchoredViewportPosition.prototype.setLastResortOverflow = function(lastResortOverflow) {
+  this.lastResortOverflow_ = lastResortOverflow
+};
+goog.positioning.AnchoredViewportPosition.prototype.reposition = function(movableElement, movableCorner, opt_margin, opt_preferredSize) {
+  var status = goog.positioning.positionAtAnchor(this.element, this.corner, movableElement, movableCorner, null, opt_margin, goog.positioning.Overflow.FAIL_X | goog.positioning.Overflow.FAIL_Y, opt_preferredSize, this.overflowConstraint_);
+  if(status & goog.positioning.OverflowStatus.FAILED) {
+    var cornerFallback = this.adjustCorner(status, this.corner);
+    var movableCornerFallback = this.adjustCorner(status, movableCorner);
+    status = goog.positioning.positionAtAnchor(this.element, cornerFallback, movableElement, movableCornerFallback, null, opt_margin, goog.positioning.Overflow.FAIL_X | goog.positioning.Overflow.FAIL_Y, opt_preferredSize, this.overflowConstraint_);
+    if(status & goog.positioning.OverflowStatus.FAILED) {
+      cornerFallback = this.adjustCorner(status, cornerFallback);
+      movableCornerFallback = this.adjustCorner(status, movableCornerFallback);
+      goog.positioning.positionAtAnchor(this.element, cornerFallback, movableElement, movableCornerFallback, null, opt_margin, this.getLastResortOverflow(), opt_preferredSize, this.overflowConstraint_)
+    }
+  }
+};
+goog.positioning.AnchoredViewportPosition.prototype.adjustCorner = function(status, corner) {
+  if(status & goog.positioning.OverflowStatus.FAILED_HORIZONTAL) {
+    corner = goog.positioning.flipCornerHorizontal(corner)
+  }
+  if(status & goog.positioning.OverflowStatus.FAILED_VERTICAL) {
+    corner = goog.positioning.flipCornerVertical(corner)
+  }
+  return corner
+};
+goog.provide("goog.positioning.MenuAnchoredPosition");
+goog.require("goog.math.Box");
+goog.require("goog.math.Size");
+goog.require("goog.positioning");
+goog.require("goog.positioning.AnchoredViewportPosition");
+goog.require("goog.positioning.Corner");
+goog.require("goog.positioning.Overflow");
+goog.positioning.MenuAnchoredPosition = function(anchorElement, corner, opt_adjust, opt_resize) {
+  goog.positioning.AnchoredViewportPosition.call(this, anchorElement, corner, opt_adjust || opt_resize);
+  if(opt_adjust || opt_resize) {
+    var overflowX = goog.positioning.Overflow.ADJUST_X_EXCEPT_OFFSCREEN;
+    var overflowY = opt_resize ? goog.positioning.Overflow.RESIZE_HEIGHT : goog.positioning.Overflow.ADJUST_Y_EXCEPT_OFFSCREEN;
+    this.setLastResortOverflow(overflowX | overflowY)
+  }
+};
+goog.inherits(goog.positioning.MenuAnchoredPosition, goog.positioning.AnchoredViewportPosition);
+goog.provide("goog.ui.ButtonSide");
+goog.ui.ButtonSide = {NONE:0, START:1, END:2, BOTH:3};
+goog.provide("goog.ui.ButtonRenderer");
+goog.require("goog.a11y.aria");
+goog.require("goog.a11y.aria.Role");
+goog.require("goog.a11y.aria.State");
+goog.require("goog.asserts");
+goog.require("goog.ui.ButtonSide");
+goog.require("goog.ui.Component");
+goog.require("goog.ui.ControlRenderer");
+goog.ui.ButtonRenderer = function() {
+  goog.ui.ControlRenderer.call(this)
+};
+goog.inherits(goog.ui.ButtonRenderer, goog.ui.ControlRenderer);
+goog.addSingletonGetter(goog.ui.ButtonRenderer);
+goog.ui.ButtonRenderer.CSS_CLASS = goog.getCssName("goog-button");
+goog.ui.ButtonRenderer.prototype.getAriaRole = function() {
+  return goog.a11y.aria.Role.BUTTON
+};
+goog.ui.ButtonRenderer.prototype.updateAriaState = function(element, state, enable) {
+  switch(state) {
+    case goog.ui.Component.State.SELECTED:
+    ;
+    case goog.ui.Component.State.CHECKED:
+      goog.asserts.assert(element, "The button DOM element cannot be null.");
+      goog.a11y.aria.setState(element, goog.a11y.aria.State.PRESSED, enable);
+      break;
+    default:
+    ;
+    case goog.ui.Component.State.OPENED:
+    ;
+    case goog.ui.Component.State.DISABLED:
+      goog.ui.ButtonRenderer.base(this, "updateAriaState", element, state, enable);
+      break
+  }
+};
+goog.ui.ButtonRenderer.prototype.createDom = function(button) {
+  var element = goog.ui.ButtonRenderer.base(this, "createDom", button);
+  this.setTooltip(element, button.getTooltip());
+  var value = button.getValue();
+  if(value) {
+    this.setValue(element, value)
+  }
+  if(button.isSupportedState(goog.ui.Component.State.CHECKED)) {
+    this.updateAriaState(element, goog.ui.Component.State.CHECKED, button.isChecked())
+  }
+  return element
+};
+goog.ui.ButtonRenderer.prototype.decorate = function(button, element) {
+  element = goog.ui.ButtonRenderer.superClass_.decorate.call(this, button, element);
+  button.setValueInternal(this.getValue(element));
+  button.setTooltipInternal(this.getTooltip(element));
+  if(button.isSupportedState(goog.ui.Component.State.CHECKED)) {
+    this.updateAriaState(element, goog.ui.Component.State.CHECKED, button.isChecked())
+  }
+  return element
+};
+goog.ui.ButtonRenderer.prototype.getValue = goog.nullFunction;
+goog.ui.ButtonRenderer.prototype.setValue = goog.nullFunction;
+goog.ui.ButtonRenderer.prototype.getTooltip = function(element) {
+  return element.title
+};
+goog.ui.ButtonRenderer.prototype.setTooltip = function(element, tooltip) {
+  if(element && tooltip) {
+    element.title = tooltip
+  }
+};
+goog.ui.ButtonRenderer.prototype.setCollapsed = function(button, sides) {
+  var isRtl = button.isRightToLeft();
+  var collapseLeftClassName = goog.getCssName(this.getStructuralCssClass(), "collapse-left");
+  var collapseRightClassName = goog.getCssName(this.getStructuralCssClass(), "collapse-right");
+  button.enableClassName(isRtl ? collapseRightClassName : collapseLeftClassName, !!(sides & goog.ui.ButtonSide.START));
+  button.enableClassName(isRtl ? collapseLeftClassName : collapseRightClassName, !!(sides & goog.ui.ButtonSide.END))
+};
+goog.ui.ButtonRenderer.prototype.getCssClass = function() {
+  return goog.ui.ButtonRenderer.CSS_CLASS
+};
+goog.provide("goog.ui.NativeButtonRenderer");
+goog.require("goog.asserts");
+goog.require("goog.dom.classlist");
+goog.require("goog.events.EventType");
+goog.require("goog.ui.ButtonRenderer");
+goog.require("goog.ui.Component");
+goog.ui.NativeButtonRenderer = function() {
+  goog.ui.ButtonRenderer.call(this)
+};
+goog.inherits(goog.ui.NativeButtonRenderer, goog.ui.ButtonRenderer);
+goog.addSingletonGetter(goog.ui.NativeButtonRenderer);
+goog.ui.NativeButtonRenderer.prototype.getAriaRole = function() {
+  return undefined
+};
+goog.ui.NativeButtonRenderer.prototype.createDom = function(button) {
+  this.setUpNativeButton_(button);
+  return button.getDomHelper().createDom("button", {"class":this.getClassNames(button).join(" "), "disabled":!button.isEnabled(), "title":button.getTooltip() || "", "value":button.getValue() || ""}, button.getCaption() || "")
+};
+goog.ui.NativeButtonRenderer.prototype.canDecorate = function(element) {
+  return element.tagName == "BUTTON" || element.tagName == "INPUT" && (element.type == "button" || (element.type == "submit" || element.type == "reset"))
+};
+goog.ui.NativeButtonRenderer.prototype.decorate = function(button, element) {
+  this.setUpNativeButton_(button);
+  if(element.disabled) {
+    var disabledClassName = goog.asserts.assertString(this.getClassForState(goog.ui.Component.State.DISABLED));
+    goog.dom.classlist.add(element, disabledClassName)
+  }
+  return goog.ui.NativeButtonRenderer.superClass_.decorate.call(this, button, element)
+};
+goog.ui.NativeButtonRenderer.prototype.initializeDom = function(button) {
+  button.getHandler().listen(button.getElement(), goog.events.EventType.CLICK, button.performActionInternal)
+};
+goog.ui.NativeButtonRenderer.prototype.setAllowTextSelection = goog.nullFunction;
+goog.ui.NativeButtonRenderer.prototype.setRightToLeft = goog.nullFunction;
+goog.ui.NativeButtonRenderer.prototype.isFocusable = function(button) {
+  return button.isEnabled()
+};
+goog.ui.NativeButtonRenderer.prototype.setFocusable = goog.nullFunction;
+goog.ui.NativeButtonRenderer.prototype.setState = function(button, state, enable) {
+  goog.ui.NativeButtonRenderer.superClass_.setState.call(this, button, state, enable);
+  var element = button.getElement();
+  if(element && state == goog.ui.Component.State.DISABLED) {
+    element.disabled = enable
+  }
+};
+goog.ui.NativeButtonRenderer.prototype.getValue = function(element) {
+  return element.value
+};
+goog.ui.NativeButtonRenderer.prototype.setValue = function(element, value) {
+  if(element) {
+    element.value = value
+  }
+};
+goog.ui.NativeButtonRenderer.prototype.updateAriaState = goog.nullFunction;
+goog.ui.NativeButtonRenderer.prototype.setUpNativeButton_ = function(button) {
+  button.setHandleMouseEvents(false);
+  button.setAutoStates(goog.ui.Component.State.ALL, false);
+  button.setSupportedState(goog.ui.Component.State.FOCUSED, false)
+};
+goog.provide("goog.ui.Button");
+goog.provide("goog.ui.Button.Side");
+goog.require("goog.events.EventType");
+goog.require("goog.events.KeyCodes");
+goog.require("goog.events.KeyHandler");
+goog.require("goog.ui.ButtonRenderer");
+goog.require("goog.ui.ButtonSide");
+goog.require("goog.ui.Component");
+goog.require("goog.ui.Control");
+goog.require("goog.ui.NativeButtonRenderer");
+goog.require("goog.ui.registry");
+goog.ui.Button = function(opt_content, opt_renderer, opt_domHelper) {
+  goog.ui.Control.call(this, opt_content, opt_renderer || goog.ui.NativeButtonRenderer.getInstance(), opt_domHelper)
+};
+goog.inherits(goog.ui.Button, goog.ui.Control);
+goog.ui.Button.Side = goog.ui.ButtonSide;
+goog.ui.Button.prototype.value_;
+goog.ui.Button.prototype.tooltip_;
+goog.ui.Button.prototype.getValue = function() {
+  return this.value_
+};
+goog.ui.Button.prototype.setValue = function(value) {
+  this.value_ = value;
+  var renderer = (this.getRenderer());
+  renderer.setValue(this.getElement(), (value))
+};
+goog.ui.Button.prototype.setValueInternal = function(value) {
+  this.value_ = value
+};
+goog.ui.Button.prototype.getTooltip = function() {
+  return this.tooltip_
+};
+goog.ui.Button.prototype.setTooltip = function(tooltip) {
+  this.tooltip_ = tooltip;
+  this.getRenderer().setTooltip(this.getElement(), tooltip)
+};
+goog.ui.Button.prototype.setTooltipInternal = function(tooltip) {
+  this.tooltip_ = tooltip
+};
+goog.ui.Button.prototype.setCollapsed = function(sides) {
+  this.getRenderer().setCollapsed(this, sides)
+};
+goog.ui.Button.prototype.disposeInternal = function() {
+  goog.ui.Button.superClass_.disposeInternal.call(this);
+  delete this.value_;
+  delete this.tooltip_
+};
+goog.ui.Button.prototype.enterDocument = function() {
+  goog.ui.Button.superClass_.enterDocument.call(this);
+  if(this.isSupportedState(goog.ui.Component.State.FOCUSED)) {
+    var keyTarget = this.getKeyEventTarget();
+    if(keyTarget) {
+      this.getHandler().listen(keyTarget, goog.events.EventType.KEYUP, this.handleKeyEventInternal)
+    }
+  }
+};
+goog.ui.Button.prototype.handleKeyEventInternal = function(e) {
+  if(e.keyCode == goog.events.KeyCodes.ENTER && e.type == goog.events.KeyHandler.EventType.KEY || e.keyCode == goog.events.KeyCodes.SPACE && e.type == goog.events.EventType.KEYUP) {
+    return this.performActionInternal(e)
+  }
+  return e.keyCode == goog.events.KeyCodes.SPACE
+};
+goog.ui.registry.setDecoratorByClassName(goog.ui.ButtonRenderer.CSS_CLASS, function() {
+  return new goog.ui.Button(null)
+});
+goog.provide("goog.ui.INLINE_BLOCK_CLASSNAME");
+goog.ui.INLINE_BLOCK_CLASSNAME = goog.getCssName("goog-inline-block");
+goog.provide("goog.ui.CustomButtonRenderer");
+goog.require("goog.a11y.aria.Role");
+goog.require("goog.dom.NodeType");
+goog.require("goog.dom.classlist");
+goog.require("goog.string");
+goog.require("goog.ui.ButtonRenderer");
+goog.require("goog.ui.INLINE_BLOCK_CLASSNAME");
+goog.ui.CustomButtonRenderer = function() {
+  goog.ui.ButtonRenderer.call(this)
+};
+goog.inherits(goog.ui.CustomButtonRenderer, goog.ui.ButtonRenderer);
+goog.addSingletonGetter(goog.ui.CustomButtonRenderer);
+goog.ui.CustomButtonRenderer.CSS_CLASS = goog.getCssName("goog-custom-button");
+goog.ui.CustomButtonRenderer.prototype.createDom = function(control) {
+  var button = (control);
+  var classNames = this.getClassNames(button);
+  var attributes = {"class":goog.ui.INLINE_BLOCK_CLASSNAME + " " + classNames.join(" ")};
+  var buttonElement = button.getDomHelper().createDom("div", attributes, this.createButton(button.getContent(), button.getDomHelper()));
+  this.setTooltip(buttonElement, (button.getTooltip()));
+  this.setAriaStates(button, buttonElement);
+  return buttonElement
+};
+goog.ui.CustomButtonRenderer.prototype.getAriaRole = function() {
+  return goog.a11y.aria.Role.BUTTON
+};
+goog.ui.CustomButtonRenderer.prototype.getContentElement = function(element) {
+  return element && (element.firstChild.firstChild)
+};
+goog.ui.CustomButtonRenderer.prototype.createButton = function(content, dom) {
+  return dom.createDom("div", goog.ui.INLINE_BLOCK_CLASSNAME + " " + goog.getCssName(this.getCssClass(), "outer-box"), dom.createDom("div", goog.ui.INLINE_BLOCK_CLASSNAME + " " + goog.getCssName(this.getCssClass(), "inner-box"), content))
+};
+goog.ui.CustomButtonRenderer.prototype.canDecorate = function(element) {
+  return element.tagName == "DIV"
+};
+goog.ui.CustomButtonRenderer.prototype.hasBoxStructure = function(button, element) {
+  var outer = button.getDomHelper().getFirstElementChild(element);
+  var outerClassName = goog.getCssName(this.getCssClass(), "outer-box");
+  if(outer && goog.dom.classlist.contains(outer, outerClassName)) {
+    var inner = button.getDomHelper().getFirstElementChild(outer);
+    var innerClassName = goog.getCssName(this.getCssClass(), "inner-box");
+    if(inner && goog.dom.classlist.contains(inner, innerClassName)) {
+      return true
+    }
+  }
+  return false
+};
+goog.ui.CustomButtonRenderer.prototype.decorate = function(control, element) {
+  var button = (control);
+  goog.ui.CustomButtonRenderer.trimTextNodes_(element, true);
+  goog.ui.CustomButtonRenderer.trimTextNodes_(element, false);
+  if(!this.hasBoxStructure(button, element)) {
+    element.appendChild(this.createButton(element.childNodes, button.getDomHelper()))
+  }
+  goog.dom.classlist.addAll(element, [goog.ui.INLINE_BLOCK_CLASSNAME, this.getCssClass()]);
+  return goog.ui.CustomButtonRenderer.superClass_.decorate.call(this, button, element)
+};
+goog.ui.CustomButtonRenderer.prototype.getCssClass = function() {
+  return goog.ui.CustomButtonRenderer.CSS_CLASS
+};
+goog.ui.CustomButtonRenderer.trimTextNodes_ = function(element, fromStart) {
+  if(element) {
+    var node = fromStart ? element.firstChild : element.lastChild, next;
+    while(node && node.parentNode == element) {
+      next = fromStart ? node.nextSibling : node.previousSibling;
+      if(node.nodeType == goog.dom.NodeType.TEXT) {
+        var text = node.nodeValue;
+        if(goog.string.trim(text) == "") {
+          element.removeChild(node)
+        }else {
+          node.nodeValue = fromStart ? goog.string.trimLeft(text) : goog.string.trimRight(text);
+          break
+        }
+      }else {
+        break
+      }
+      node = next
+    }
+  }
+};
+goog.provide("goog.ui.MenuButtonRenderer");
+goog.require("goog.dom");
+goog.require("goog.style");
+goog.require("goog.ui.CustomButtonRenderer");
+goog.require("goog.ui.INLINE_BLOCK_CLASSNAME");
+goog.require("goog.ui.Menu");
+goog.require("goog.ui.MenuRenderer");
+goog.ui.MenuButtonRenderer = function() {
+  goog.ui.CustomButtonRenderer.call(this)
+};
+goog.inherits(goog.ui.MenuButtonRenderer, goog.ui.CustomButtonRenderer);
+goog.addSingletonGetter(goog.ui.MenuButtonRenderer);
+goog.ui.MenuButtonRenderer.CSS_CLASS = goog.getCssName("goog-menu-button");
+goog.ui.MenuButtonRenderer.prototype.getContentElement = function(element) {
+  return goog.ui.MenuButtonRenderer.superClass_.getContentElement.call(this, (element && element.firstChild))
+};
+goog.ui.MenuButtonRenderer.prototype.decorate = function(control, element) {
+  var button = (control);
+  var menuElem = goog.dom.getElementsByTagNameAndClass("*", goog.ui.MenuRenderer.CSS_CLASS, element)[0];
+  if(menuElem) {
+    goog.style.setElementShown(menuElem, false);
+    goog.dom.appendChild(goog.dom.getOwnerDocument(menuElem).body, menuElem);
+    var menu = new goog.ui.Menu;
+    menu.decorate(menuElem);
+    button.setMenu(menu)
+  }
+  return goog.ui.MenuButtonRenderer.superClass_.decorate.call(this, button, element)
+};
+goog.ui.MenuButtonRenderer.prototype.createButton = function(content, dom) {
+  return goog.ui.MenuButtonRenderer.superClass_.createButton.call(this, [this.createCaption(content, dom), this.createDropdown(dom)], dom)
+};
+goog.ui.MenuButtonRenderer.prototype.createCaption = function(content, dom) {
+  return goog.ui.MenuButtonRenderer.wrapCaption(content, this.getCssClass(), dom)
+};
+goog.ui.MenuButtonRenderer.wrapCaption = function(content, cssClass, dom) {
+  return dom.createDom("div", goog.ui.INLINE_BLOCK_CLASSNAME + " " + goog.getCssName(cssClass, "caption"), content)
+};
+goog.ui.MenuButtonRenderer.prototype.createDropdown = function(dom) {
+  return dom.createDom("div", goog.ui.INLINE_BLOCK_CLASSNAME + " " + goog.getCssName(this.getCssClass(), "dropdown"), "\u00a0")
+};
+goog.ui.MenuButtonRenderer.prototype.getCssClass = function() {
+  return goog.ui.MenuButtonRenderer.CSS_CLASS
+};
+goog.provide("goog.ui.MenuButton");
+goog.require("goog.Timer");
+goog.require("goog.a11y.aria");
+goog.require("goog.a11y.aria.State");
+goog.require("goog.asserts");
+goog.require("goog.dom");
+goog.require("goog.events.EventType");
+goog.require("goog.events.KeyCodes");
+goog.require("goog.events.KeyHandler");
+goog.require("goog.math.Box");
+goog.require("goog.math.Rect");
+goog.require("goog.positioning");
+goog.require("goog.positioning.Corner");
+goog.require("goog.positioning.MenuAnchoredPosition");
+goog.require("goog.positioning.Overflow");
+goog.require("goog.style");
+goog.require("goog.ui.Button");
+goog.require("goog.ui.Component");
+goog.require("goog.ui.Menu");
+goog.require("goog.ui.MenuButtonRenderer");
+goog.require("goog.ui.MenuRenderer");
+goog.require("goog.ui.registry");
+goog.require("goog.userAgent");
+goog.require("goog.userAgent.product");
+goog.ui.MenuButton = function(opt_content, opt_menu, opt_renderer, opt_domHelper, opt_menuRenderer) {
+  goog.ui.Button.call(this, opt_content, opt_renderer || goog.ui.MenuButtonRenderer.getInstance(), opt_domHelper);
+  this.setSupportedState(goog.ui.Component.State.OPENED, true);
+  this.menuPosition_ = new goog.positioning.MenuAnchoredPosition(null, goog.positioning.Corner.BOTTOM_START);
+  if(opt_menu) {
+    this.setMenu(opt_menu)
+  }
+  this.menuMargin_ = null;
+  this.timer_ = new goog.Timer(500);
+  if((goog.userAgent.product.IPHONE || goog.userAgent.product.IPAD) && !goog.userAgent.isVersionOrHigher("533.17.9")) {
+    this.setFocusablePopupMenu(true)
+  }
+  this.menuRenderer_ = opt_menuRenderer || goog.ui.MenuRenderer.getInstance()
+};
+goog.inherits(goog.ui.MenuButton, goog.ui.Button);
+goog.ui.MenuButton.prototype.menu_;
+goog.ui.MenuButton.prototype.positionElement_;
+goog.ui.MenuButton.prototype.menuMargin_;
+goog.ui.MenuButton.prototype.isFocusablePopupMenu_ = false;
+goog.ui.MenuButton.prototype.timer_;
+goog.ui.MenuButton.prototype.buttonRect_;
+goog.ui.MenuButton.prototype.viewportBox_;
+goog.ui.MenuButton.prototype.originalSize_;
+goog.ui.MenuButton.prototype.renderMenuAsSibling_ = false;
+goog.ui.MenuButton.prototype.enterDocument = function() {
+  goog.ui.MenuButton.superClass_.enterDocument.call(this);
+  this.attachKeyDownEventListener_(true);
+  if(this.menu_) {
+    this.attachMenuEventListeners_(this.menu_, true)
+  }
+  goog.a11y.aria.setState(this.getElementStrict(), goog.a11y.aria.State.HASPOPUP, !!this.menu_)
+};
+goog.ui.MenuButton.prototype.exitDocument = function() {
+  goog.ui.MenuButton.superClass_.exitDocument.call(this);
+  this.attachKeyDownEventListener_(false);
+  if(this.menu_) {
+    this.setOpen(false);
+    this.menu_.exitDocument();
+    this.attachMenuEventListeners_(this.menu_, false);
+    var menuElement = this.menu_.getElement();
+    if(menuElement) {
+      goog.dom.removeNode(menuElement)
+    }
+  }
+};
+goog.ui.MenuButton.prototype.disposeInternal = function() {
+  goog.ui.MenuButton.superClass_.disposeInternal.call(this);
+  if(this.menu_) {
+    this.menu_.dispose();
+    delete this.menu_
+  }
+  delete this.positionElement_;
+  this.timer_.dispose()
+};
+goog.ui.MenuButton.prototype.handleMouseDown = function(e) {
+  goog.ui.MenuButton.superClass_.handleMouseDown.call(this, e);
+  if(this.isActive()) {
+    this.setOpen(!this.isOpen(), e);
+    if(this.menu_) {
+      this.menu_.setMouseButtonPressed(this.isOpen())
+    }
+  }
+};
+goog.ui.MenuButton.prototype.handleMouseUp = function(e) {
+  goog.ui.MenuButton.superClass_.handleMouseUp.call(this, e);
+  if(this.menu_ && !this.isActive()) {
+    this.menu_.setMouseButtonPressed(false)
+  }
+};
+goog.ui.MenuButton.prototype.performActionInternal = function(e) {
+  this.setActive(false);
+  return true
+};
+goog.ui.MenuButton.prototype.handleDocumentMouseDown = function(e) {
+  if(this.menu_ && (this.menu_.isVisible() && !this.containsElement((e.target)))) {
+    this.setOpen(false)
+  }
+};
+goog.ui.MenuButton.prototype.containsElement = function(element) {
+  return element && goog.dom.contains(this.getElement(), element) || (this.menu_ && this.menu_.containsElement(element) || false)
+};
+goog.ui.MenuButton.prototype.handleKeyEventInternal = function(e) {
+  if(e.keyCode == goog.events.KeyCodes.SPACE) {
+    e.preventDefault();
+    if(e.type != goog.events.EventType.KEYUP) {
+      return true
+    }
+  }else {
+    if(e.type != goog.events.KeyHandler.EventType.KEY) {
+      return false
+    }
+  }
+  if(this.menu_ && this.menu_.isVisible()) {
+    var handledByMenu = this.menu_.handleKeyEvent(e);
+    if(e.keyCode == goog.events.KeyCodes.ESC) {
+      this.setOpen(false);
+      return true
+    }
+    return handledByMenu
+  }
+  if(e.keyCode == goog.events.KeyCodes.DOWN || (e.keyCode == goog.events.KeyCodes.UP || (e.keyCode == goog.events.KeyCodes.SPACE || e.keyCode == goog.events.KeyCodes.ENTER))) {
+    this.setOpen(true, e);
+    return true
+  }
+  return false
+};
+goog.ui.MenuButton.prototype.handleMenuAction = function(e) {
+  this.setOpen(false)
+};
+goog.ui.MenuButton.prototype.handleMenuBlur = function(e) {
+  if(!this.isActive()) {
+    this.setOpen(false)
+  }
+};
+goog.ui.MenuButton.prototype.handleBlur = function(e) {
+  if(!this.isFocusablePopupMenu()) {
+    this.setOpen(false)
+  }
+  goog.ui.MenuButton.superClass_.handleBlur.call(this, e)
+};
+goog.ui.MenuButton.prototype.getMenu = function() {
+  if(!this.menu_) {
+    this.setMenu(new goog.ui.Menu(this.getDomHelper(), this.menuRenderer_))
+  }
+  return this.menu_ || null
+};
+goog.ui.MenuButton.prototype.setMenu = function(menu) {
+  var oldMenu = this.menu_;
+  if(menu != oldMenu) {
+    if(oldMenu) {
+      this.setOpen(false);
+      if(this.isInDocument()) {
+        this.attachMenuEventListeners_(oldMenu, false)
+      }
+      delete this.menu_
+    }
+    if(this.isInDocument()) {
+      goog.a11y.aria.setState(this.getElementStrict(), goog.a11y.aria.State.HASPOPUP, !!menu)
+    }
+    if(menu) {
+      this.menu_ = menu;
+      menu.setParent(this);
+      menu.setVisible(false);
+      menu.setAllowAutoFocus(this.isFocusablePopupMenu());
+      if(this.isInDocument()) {
+        this.attachMenuEventListeners_(menu, true)
+      }
+    }
+  }
+  return oldMenu
+};
+goog.ui.MenuButton.prototype.setMenuPosition = function(position) {
+  if(position) {
+    this.menuPosition_ = position;
+    this.positionElement_ = position.element
+  }
+};
+goog.ui.MenuButton.prototype.setPositionElement = function(positionElement) {
+  this.positionElement_ = positionElement;
+  this.positionMenu()
+};
+goog.ui.MenuButton.prototype.setMenuMargin = function(margin) {
+  this.menuMargin_ = margin
+};
+goog.ui.MenuButton.prototype.addItem = function(item) {
+  this.getMenu().addChild(item, true)
+};
+goog.ui.MenuButton.prototype.addItemAt = function(item, index) {
+  this.getMenu().addChildAt(item, index, true)
+};
+goog.ui.MenuButton.prototype.removeItem = function(item) {
+  var child = this.getMenu().removeChild(item, true);
+  if(child) {
+    child.dispose()
+  }
+};
+goog.ui.MenuButton.prototype.removeItemAt = function(index) {
+  var child = this.getMenu().removeChildAt(index, true);
+  if(child) {
+    child.dispose()
+  }
+};
+goog.ui.MenuButton.prototype.getItemAt = function(index) {
+  return this.menu_ ? (this.menu_.getChildAt(index)) : null
+};
+goog.ui.MenuButton.prototype.getItemCount = function() {
+  return this.menu_ ? this.menu_.getChildCount() : 0
+};
+goog.ui.MenuButton.prototype.setVisible = function(visible, opt_force) {
+  var visibilityChanged = goog.ui.MenuButton.superClass_.setVisible.call(this, visible, opt_force);
+  if(visibilityChanged && !this.isVisible()) {
+    this.setOpen(false)
+  }
+  return visibilityChanged
+};
+goog.ui.MenuButton.prototype.setEnabled = function(enable) {
+  goog.ui.MenuButton.superClass_.setEnabled.call(this, enable);
+  if(!this.isEnabled()) {
+    this.setOpen(false)
+  }
+};
+goog.ui.MenuButton.prototype.isAlignMenuToStart = function() {
+  var corner = this.menuPosition_.corner;
+  return corner == goog.positioning.Corner.BOTTOM_START || corner == goog.positioning.Corner.TOP_START
+};
+goog.ui.MenuButton.prototype.setAlignMenuToStart = function(alignToStart) {
+  this.menuPosition_.corner = alignToStart ? goog.positioning.Corner.BOTTOM_START : goog.positioning.Corner.BOTTOM_END
+};
+goog.ui.MenuButton.prototype.setScrollOnOverflow = function(scrollOnOverflow) {
+  if(this.menuPosition_.setLastResortOverflow) {
+    var overflowX = goog.positioning.Overflow.ADJUST_X;
+    var overflowY = scrollOnOverflow ? goog.positioning.Overflow.RESIZE_HEIGHT : goog.positioning.Overflow.ADJUST_Y;
+    this.menuPosition_.setLastResortOverflow(overflowX | overflowY)
+  }
+};
+goog.ui.MenuButton.prototype.isScrollOnOverflow = function() {
+  return this.menuPosition_.getLastResortOverflow && !!(this.menuPosition_.getLastResortOverflow() & goog.positioning.Overflow.RESIZE_HEIGHT)
+};
+goog.ui.MenuButton.prototype.isFocusablePopupMenu = function() {
+  return this.isFocusablePopupMenu_
+};
+goog.ui.MenuButton.prototype.setFocusablePopupMenu = function(focusable) {
+  this.isFocusablePopupMenu_ = focusable
+};
+goog.ui.MenuButton.prototype.setRenderMenuAsSibling = function(renderMenuAsSibling) {
+  this.renderMenuAsSibling_ = renderMenuAsSibling
+};
+goog.ui.MenuButton.prototype.showMenu = function() {
+  this.setOpen(true)
+};
+goog.ui.MenuButton.prototype.hideMenu = function() {
+  this.setOpen(false)
+};
+goog.ui.MenuButton.prototype.setOpen = function(open, opt_e) {
+  goog.ui.MenuButton.superClass_.setOpen.call(this, open);
+  if(this.menu_ && this.hasState(goog.ui.Component.State.OPENED) == open) {
+    if(open) {
+      if(!this.menu_.isInDocument()) {
+        if(this.renderMenuAsSibling_) {
+          this.menu_.render((this.getElement().parentNode))
+        }else {
+          this.menu_.render()
+        }
+      }
+      this.viewportBox_ = goog.style.getVisibleRectForElement(this.getElement());
+      this.buttonRect_ = goog.style.getBounds(this.getElement());
+      this.positionMenu();
+      var focus = !!opt_e && (opt_e.keyCode == goog.events.KeyCodes.DOWN || opt_e.keyCode == goog.events.KeyCodes.UP);
+      this.menu_.setHighlightedIndex(focus ? 0 : -1)
+    }else {
+      this.setActive(false);
+      this.menu_.setMouseButtonPressed(false);
+      var element = this.getElement();
+      if(element) {
+        goog.a11y.aria.setState(element, goog.a11y.aria.State.ACTIVEDESCENDANT, "");
+        goog.a11y.aria.setState(element, goog.a11y.aria.State.OWNS, "")
+      }
+      if(goog.isDefAndNotNull(this.originalSize_)) {
+        this.originalSize_ = undefined;
+        var elem = this.menu_.getElement();
+        if(elem) {
+          goog.style.setSize(elem, "", "")
+        }
+      }
+    }
+    this.menu_.setVisible(open, false, opt_e);
+    if(!this.isDisposed()) {
+      this.attachPopupListeners_(open)
+    }
+  }
+};
+goog.ui.MenuButton.prototype.invalidateMenuSize = function() {
+  this.originalSize_ = undefined
+};
+goog.ui.MenuButton.prototype.positionMenu = function() {
+  if(!this.menu_.isInDocument()) {
+    return
+  }
+  var positionElement = this.positionElement_ || this.getElement();
+  var position = this.menuPosition_;
+  this.menuPosition_.element = positionElement;
+  var elem = this.menu_.getElement();
+  if(!this.menu_.isVisible()) {
+    elem.style.visibility = "hidden";
+    goog.style.setElementShown(elem, true)
+  }
+  if(!this.originalSize_ && this.isScrollOnOverflow()) {
+    this.originalSize_ = goog.style.getSize(elem)
+  }
+  var popupCorner = goog.positioning.flipCornerVertical(position.corner);
+  position.reposition(elem, popupCorner, this.menuMargin_, this.originalSize_);
+  if(!this.menu_.isVisible()) {
+    goog.style.setElementShown(elem, false);
+    elem.style.visibility = "visible"
+  }
+};
+goog.ui.MenuButton.prototype.onTick_ = function(e) {
+  var currentButtonRect = goog.style.getBounds(this.getElement());
+  var currentViewport = goog.style.getVisibleRectForElement(this.getElement());
+  if(!goog.math.Rect.equals(this.buttonRect_, currentButtonRect) || !goog.math.Box.equals(this.viewportBox_, currentViewport)) {
+    this.buttonRect_ = currentButtonRect;
+    this.viewportBox_ = currentViewport;
+    this.positionMenu()
+  }
+};
+goog.ui.MenuButton.prototype.attachMenuEventListeners_ = function(menu, attach) {
+  var handler = this.getHandler();
+  var method = attach ? handler.listen : handler.unlisten;
+  method.call(handler, menu, goog.ui.Component.EventType.ACTION, this.handleMenuAction);
+  method.call(handler, menu, goog.ui.Component.EventType.HIGHLIGHT, this.handleHighlightItem);
+  method.call(handler, menu, goog.ui.Component.EventType.UNHIGHLIGHT, this.handleUnHighlightItem)
+};
+goog.ui.MenuButton.prototype.attachKeyDownEventListener_ = function(attach) {
+  var handler = this.getHandler();
+  var method = attach ? handler.listen : handler.unlisten;
+  method.call(handler, this.getElement(), goog.events.EventType.KEYDOWN, this.handleKeyDownEvent_)
+};
+goog.ui.MenuButton.prototype.handleHighlightItem = function(e) {
+  var element = this.getElement();
+  goog.asserts.assert(element, "The menu button DOM element cannot be null.");
+  if(e.target.getElement() != null) {
+    goog.a11y.aria.setState(element, goog.a11y.aria.State.ACTIVEDESCENDANT, e.target.getElement().id);
+    goog.a11y.aria.setState(element, goog.a11y.aria.State.OWNS, e.target.getElement().id)
+  }
+};
+goog.ui.MenuButton.prototype.handleKeyDownEvent_ = function(e) {
+  if(this.isSupportedState(goog.ui.Component.State.FOCUSED) && (this.getKeyEventTarget() && (this.menu_ && this.menu_.isVisible()))) {
+    e.stopPropagation()
+  }
+};
+goog.ui.MenuButton.prototype.handleUnHighlightItem = function(e) {
+  if(!this.menu_.getHighlighted()) {
+    var element = this.getElement();
+    goog.asserts.assert(element, "The menu button DOM element cannot be null.");
+    goog.a11y.aria.setState(element, goog.a11y.aria.State.ACTIVEDESCENDANT, "");
+    goog.a11y.aria.setState(element, goog.a11y.aria.State.OWNS, "")
+  }
+};
+goog.ui.MenuButton.prototype.attachPopupListeners_ = function(attach) {
+  var handler = this.getHandler();
+  var method = attach ? handler.listen : handler.unlisten;
+  method.call(handler, this.getDomHelper().getDocument(), goog.events.EventType.MOUSEDOWN, this.handleDocumentMouseDown, true);
+  if(this.isFocusablePopupMenu()) {
+    method.call(handler, (this.menu_), goog.ui.Component.EventType.BLUR, this.handleMenuBlur)
+  }
+  method.call(handler, this.timer_, goog.Timer.TICK, this.onTick_);
+  if(attach) {
+    this.timer_.start()
+  }else {
+    this.timer_.stop()
+  }
+};
+goog.ui.registry.setDecoratorByClassName(goog.ui.MenuButtonRenderer.CSS_CLASS, function() {
+  return new goog.ui.MenuButton(null)
+});
+goog.provide("goog.ui.SelectionModel");
+goog.require("goog.array");
+goog.require("goog.events.EventTarget");
+goog.require("goog.events.EventType");
+goog.ui.SelectionModel = function(opt_items) {
+  goog.events.EventTarget.call(this);
+  this.items_ = [];
+  this.addItems(opt_items)
+};
+goog.inherits(goog.ui.SelectionModel, goog.events.EventTarget);
+goog.ui.SelectionModel.prototype.selectedItem_ = null;
+goog.ui.SelectionModel.prototype.selectionHandler_ = null;
+goog.ui.SelectionModel.prototype.getSelectionHandler = function() {
+  return this.selectionHandler_
+};
+goog.ui.SelectionModel.prototype.setSelectionHandler = function(handler) {
+  this.selectionHandler_ = handler
+};
+goog.ui.SelectionModel.prototype.getItemCount = function() {
+  return this.items_.length
+};
+goog.ui.SelectionModel.prototype.indexOfItem = function(item) {
+  return item ? goog.array.indexOf(this.items_, item) : -1
+};
+goog.ui.SelectionModel.prototype.getFirst = function() {
+  return this.items_[0]
+};
+goog.ui.SelectionModel.prototype.getLast = function() {
+  return this.items_[this.items_.length - 1]
+};
+goog.ui.SelectionModel.prototype.getItemAt = function(index) {
+  return this.items_[index] || null
+};
+goog.ui.SelectionModel.prototype.addItems = function(items) {
+  if(items) {
+    goog.array.forEach(items, function(item) {
+      this.selectItem_(item, false)
+    }, this);
+    goog.array.extend(this.items_, items)
+  }
+};
+goog.ui.SelectionModel.prototype.addItem = function(item) {
+  this.addItemAt(item, this.getItemCount())
+};
+goog.ui.SelectionModel.prototype.addItemAt = function(item, index) {
+  if(item) {
+    this.selectItem_(item, false);
+    goog.array.insertAt(this.items_, item, index)
+  }
+};
+goog.ui.SelectionModel.prototype.removeItem = function(item) {
+  if(item && goog.array.remove(this.items_, item)) {
+    if(item == this.selectedItem_) {
+      this.selectedItem_ = null;
+      this.dispatchEvent(goog.events.EventType.SELECT)
+    }
+  }
+};
+goog.ui.SelectionModel.prototype.removeItemAt = function(index) {
+  this.removeItem(this.getItemAt(index))
+};
+goog.ui.SelectionModel.prototype.getSelectedItem = function() {
+  return this.selectedItem_
+};
+goog.ui.SelectionModel.prototype.getItems = function() {
+  return goog.array.clone(this.items_)
+};
+goog.ui.SelectionModel.prototype.setSelectedItem = function(item) {
+  if(item != this.selectedItem_) {
+    this.selectItem_(this.selectedItem_, false);
+    this.selectedItem_ = item;
+    this.selectItem_(item, true)
+  }
+  this.dispatchEvent(goog.events.EventType.SELECT)
+};
+goog.ui.SelectionModel.prototype.getSelectedIndex = function() {
+  return this.indexOfItem(this.selectedItem_)
+};
+goog.ui.SelectionModel.prototype.setSelectedIndex = function(index) {
+  this.setSelectedItem(this.getItemAt(index))
+};
+goog.ui.SelectionModel.prototype.clear = function() {
+  goog.array.clear(this.items_);
+  this.selectedItem_ = null
+};
+goog.ui.SelectionModel.prototype.disposeInternal = function() {
+  goog.ui.SelectionModel.superClass_.disposeInternal.call(this);
+  delete this.items_;
+  this.selectedItem_ = null
+};
+goog.ui.SelectionModel.prototype.selectItem_ = function(item, select) {
+  if(item) {
+    if(typeof this.selectionHandler_ == "function") {
+      this.selectionHandler_(item, select)
+    }else {
+      if(typeof item.setSelected == "function") {
+        item.setSelected(select)
+      }
+    }
+  }
+};
+goog.provide("goog.ui.Select");
+goog.require("goog.a11y.aria");
+goog.require("goog.a11y.aria.Role");
+goog.require("goog.events.EventType");
+goog.require("goog.ui.Component");
+goog.require("goog.ui.MenuButton");
+goog.require("goog.ui.MenuItem");
+goog.require("goog.ui.MenuRenderer");
+goog.require("goog.ui.SelectionModel");
+goog.require("goog.ui.registry");
+goog.ui.Select = function(opt_caption, opt_menu, opt_renderer, opt_domHelper, opt_menuRenderer) {
+  goog.ui.Select.base(this, "constructor", opt_caption, opt_menu, opt_renderer, opt_domHelper, opt_menuRenderer || new goog.ui.MenuRenderer(goog.a11y.aria.Role.LISTBOX));
+  this.defaultCaption_ = this.getContent();
+  this.initialAriaLabel_ = null
+};
+goog.inherits(goog.ui.Select, goog.ui.MenuButton);
+goog.ui.Select.prototype.selectionModel_ = null;
+goog.ui.Select.prototype.enterDocument = function() {
+  goog.ui.Select.superClass_.enterDocument.call(this);
+  this.updateCaption();
+  this.listenToSelectionModelEvents_()
+};
+goog.ui.Select.prototype.decorateInternal = function(element) {
+  goog.ui.Select.superClass_.decorateInternal.call(this, element);
+  var caption = this.getCaption();
+  if(caption) {
+    this.setDefaultCaption(caption)
+  }else {
+    if(!this.getSelectedItem()) {
+      this.setSelectedIndex(0)
+    }
+  }
+};
+goog.ui.Select.prototype.disposeInternal = function() {
+  goog.ui.Select.superClass_.disposeInternal.call(this);
+  if(this.selectionModel_) {
+    this.selectionModel_.dispose();
+    this.selectionModel_ = null
+  }
+  this.defaultCaption_ = null
+};
+goog.ui.Select.prototype.handleMenuAction = function(e) {
+  this.setSelectedItem((e.target));
+  goog.ui.Select.base(this, "handleMenuAction", e);
+  e.stopPropagation();
+  this.dispatchEvent(goog.ui.Component.EventType.ACTION)
+};
+goog.ui.Select.prototype.handleSelectionChange = function(e) {
+  var item = this.getSelectedItem();
+  goog.ui.Select.superClass_.setValue.call(this, item && item.getValue());
+  this.updateCaption()
+};
+goog.ui.Select.prototype.setMenu = function(menu) {
+  var oldMenu = goog.ui.Select.superClass_.setMenu.call(this, menu);
+  if(menu != oldMenu) {
+    if(this.selectionModel_) {
+      this.selectionModel_.clear()
+    }
+    if(menu) {
+      if(this.selectionModel_) {
+        menu.forEachChild(function(child, index) {
+          this.setCorrectAriaRole_((child));
+          this.selectionModel_.addItem(child)
+        }, this)
+      }else {
+        this.createSelectionModel_(menu)
+      }
+    }
+  }
+  return oldMenu
+};
+goog.ui.Select.prototype.getDefaultCaption = function() {
+  return this.defaultCaption_
+};
+goog.ui.Select.prototype.setDefaultCaption = function(caption) {
+  this.defaultCaption_ = caption;
+  this.updateCaption()
+};
+goog.ui.Select.prototype.addItem = function(item) {
+  this.setCorrectAriaRole_((item));
+  goog.ui.Select.superClass_.addItem.call(this, item);
+  if(this.selectionModel_) {
+    this.selectionModel_.addItem(item)
+  }else {
+    this.createSelectionModel_(this.getMenu())
+  }
+};
+goog.ui.Select.prototype.addItemAt = function(item, index) {
+  this.setCorrectAriaRole_((item));
+  goog.ui.Select.superClass_.addItemAt.call(this, item, index);
+  if(this.selectionModel_) {
+    this.selectionModel_.addItemAt(item, index)
+  }else {
+    this.createSelectionModel_(this.getMenu())
+  }
+};
+goog.ui.Select.prototype.removeItem = function(item) {
+  goog.ui.Select.superClass_.removeItem.call(this, item);
+  if(this.selectionModel_) {
+    this.selectionModel_.removeItem(item)
+  }
+};
+goog.ui.Select.prototype.removeItemAt = function(index) {
+  goog.ui.Select.superClass_.removeItemAt.call(this, index);
+  if(this.selectionModel_) {
+    this.selectionModel_.removeItemAt(index)
+  }
+};
+goog.ui.Select.prototype.setSelectedItem = function(item) {
+  if(this.selectionModel_) {
+    var prevItem = this.getSelectedItem();
+    this.selectionModel_.setSelectedItem(item);
+    if(item != prevItem) {
+      this.dispatchEvent(goog.ui.Component.EventType.CHANGE)
+    }
+  }
+};
+goog.ui.Select.prototype.setSelectedIndex = function(index) {
+  if(this.selectionModel_) {
+    this.setSelectedItem((this.selectionModel_.getItemAt(index)))
+  }
+};
+goog.ui.Select.prototype.setValue = function(value) {
+  if(goog.isDefAndNotNull(value) && this.selectionModel_) {
+    for(var i = 0, item;item = this.selectionModel_.getItemAt(i);i++) {
+      if(item && (typeof item.getValue == "function" && item.getValue() == value)) {
+        this.setSelectedItem((item));
+        return
+      }
+    }
+  }
+  this.setSelectedItem(null)
+};
+goog.ui.Select.prototype.getValue = function() {
+  var selectedItem = this.getSelectedItem();
+  return selectedItem ? selectedItem.getValue() : null
+};
+goog.ui.Select.prototype.getSelectedItem = function() {
+  return this.selectionModel_ ? (this.selectionModel_.getSelectedItem()) : null
+};
+goog.ui.Select.prototype.getSelectedIndex = function() {
+  return this.selectionModel_ ? this.selectionModel_.getSelectedIndex() : -1
+};
+goog.ui.Select.prototype.getSelectionModel = function() {
+  return this.selectionModel_
+};
+goog.ui.Select.prototype.createSelectionModel_ = function(opt_component) {
+  this.selectionModel_ = new goog.ui.SelectionModel;
+  if(opt_component) {
+    opt_component.forEachChild(function(child, index) {
+      this.setCorrectAriaRole_((child));
+      this.selectionModel_.addItem(child)
+    }, this)
+  }
+  this.listenToSelectionModelEvents_()
+};
+goog.ui.Select.prototype.listenToSelectionModelEvents_ = function() {
+  if(this.selectionModel_) {
+    this.getHandler().listen(this.selectionModel_, goog.events.EventType.SELECT, this.handleSelectionChange)
+  }
+};
+goog.ui.Select.prototype.updateCaption = function() {
+  var item = this.getSelectedItem();
+  this.setContent(item ? item.getCaption() : this.defaultCaption_);
+  var contentElement = this.getRenderer().getContentElement(this.getElement());
+  if(contentElement && this.getDomHelper().isElement(contentElement)) {
+    if(this.initialAriaLabel_ == null) {
+      this.initialAriaLabel_ = goog.a11y.aria.getLabel(contentElement)
+    }
+    var itemElement = item ? item.getElement() : null;
+    goog.a11y.aria.setLabel(contentElement, itemElement ? goog.a11y.aria.getLabel(itemElement) : this.initialAriaLabel_)
+  }
+};
+goog.ui.Select.prototype.setCorrectAriaRole_ = function(item) {
+  item.setPreferredAriaRole(item instanceof goog.ui.MenuItem ? goog.a11y.aria.Role.OPTION : goog.a11y.aria.Role.SEPARATOR)
+};
+goog.ui.Select.prototype.setOpen = function(open, opt_e) {
+  goog.ui.Select.superClass_.setOpen.call(this, open, opt_e);
+  if(this.isOpen()) {
+    this.getMenu().setHighlightedIndex(this.getSelectedIndex())
+  }
+};
+goog.ui.registry.setDecoratorByClassName(goog.getCssName("goog-select"), function() {
+  return new goog.ui.Select(null)
+});
+goog.provide("goog.ui.Option");
+goog.require("goog.ui.Component");
+goog.require("goog.ui.MenuItem");
+goog.require("goog.ui.registry");
+goog.ui.Option = function(content, opt_model, opt_domHelper) {
+  goog.ui.MenuItem.call(this, content, opt_model, opt_domHelper);
+  this.setSelectable(true)
+};
+goog.inherits(goog.ui.Option, goog.ui.MenuItem);
+goog.ui.Option.prototype.performActionInternal = function(e) {
+  return this.dispatchEvent(goog.ui.Component.EventType.ACTION)
+};
+goog.ui.registry.setDecoratorByClassName(goog.getCssName("goog-option"), function() {
+  return new goog.ui.Option(null)
+});
+goog.provide("goog.ui.FlatButtonRenderer");
+goog.require("goog.a11y.aria.Role");
+goog.require("goog.dom.classlist");
+goog.require("goog.ui.Button");
+goog.require("goog.ui.ButtonRenderer");
+goog.require("goog.ui.INLINE_BLOCK_CLASSNAME");
+goog.require("goog.ui.registry");
+goog.ui.FlatButtonRenderer = function() {
+  goog.ui.ButtonRenderer.call(this)
+};
+goog.inherits(goog.ui.FlatButtonRenderer, goog.ui.ButtonRenderer);
+goog.addSingletonGetter(goog.ui.FlatButtonRenderer);
+goog.ui.FlatButtonRenderer.CSS_CLASS = goog.getCssName("goog-flat-button");
+goog.ui.FlatButtonRenderer.prototype.createDom = function(button) {
+  var classNames = this.getClassNames(button);
+  var attributes = {"class":goog.ui.INLINE_BLOCK_CLASSNAME + " " + classNames.join(" ")};
+  var element = button.getDomHelper().createDom("div", attributes, button.getContent());
+  this.setTooltip(element, button.getTooltip());
+  this.setAriaStates(button, element);
+  return element
+};
+goog.ui.FlatButtonRenderer.prototype.getAriaRole = function() {
+  return goog.a11y.aria.Role.BUTTON
+};
+goog.ui.FlatButtonRenderer.prototype.canDecorate = function(element) {
+  return element.tagName == "DIV"
+};
+goog.ui.FlatButtonRenderer.prototype.decorate = function(button, element) {
+  goog.dom.classlist.add(element, goog.ui.INLINE_BLOCK_CLASSNAME);
+  return goog.ui.FlatButtonRenderer.superClass_.decorate.call(this, button, element)
+};
+goog.ui.FlatButtonRenderer.prototype.getValue = function(element) {
+  return""
+};
+goog.ui.FlatButtonRenderer.prototype.getCssClass = function() {
+  return goog.ui.FlatButtonRenderer.CSS_CLASS
+};
+goog.ui.registry.setDecoratorByClassName(goog.ui.FlatButtonRenderer.CSS_CLASS, function() {
+  return new goog.ui.Button(null, goog.ui.FlatButtonRenderer.getInstance())
+});
+goog.provide("goog.ui.FlatMenuButtonRenderer");
+goog.require("goog.dom");
+goog.require("goog.style");
+goog.require("goog.ui.FlatButtonRenderer");
+goog.require("goog.ui.INLINE_BLOCK_CLASSNAME");
+goog.require("goog.ui.Menu");
+goog.require("goog.ui.MenuButton");
+goog.require("goog.ui.MenuRenderer");
+goog.require("goog.ui.registry");
+goog.ui.FlatMenuButtonRenderer = function() {
+  goog.ui.FlatButtonRenderer.call(this)
+};
+goog.inherits(goog.ui.FlatMenuButtonRenderer, goog.ui.FlatButtonRenderer);
+goog.addSingletonGetter(goog.ui.FlatMenuButtonRenderer);
+goog.ui.FlatMenuButtonRenderer.CSS_CLASS = goog.getCssName("goog-flat-menu-button");
+goog.ui.FlatMenuButtonRenderer.prototype.createDom = function(control) {
+  var button = (control);
+  var classNames = this.getClassNames(button);
+  var attributes = {"class":goog.ui.INLINE_BLOCK_CLASSNAME + " " + classNames.join(" ")};
+  var element = button.getDomHelper().createDom("div", attributes, [this.createCaption(button.getContent(), button.getDomHelper()), this.createDropdown(button.getDomHelper())]);
+  this.setTooltip(element, (button.getTooltip()));
+  this.setAriaStates(button, element);
+  return element
+};
+goog.ui.FlatMenuButtonRenderer.prototype.getContentElement = function(element) {
+  return element && (element.firstChild)
+};
+goog.ui.FlatMenuButtonRenderer.prototype.decorate = function(button, element) {
+  var menuElem = goog.dom.getElementsByTagNameAndClass("*", goog.ui.MenuRenderer.CSS_CLASS, element)[0];
+  if(menuElem) {
+    goog.style.setElementShown(menuElem, false);
+    button.getDomHelper().getDocument().body.appendChild(menuElem);
+    var menu = new goog.ui.Menu;
+    menu.decorate(menuElem);
+    button.setMenu(menu)
+  }
+  var captionElem = goog.dom.getElementsByTagNameAndClass("*", goog.getCssName(this.getCssClass(), "caption"), element)[0];
+  if(!captionElem) {
+    element.appendChild(this.createCaption(element.childNodes, button.getDomHelper()))
+  }
+  var dropdownElem = goog.dom.getElementsByTagNameAndClass("*", goog.getCssName(this.getCssClass(), "dropdown"), element)[0];
+  if(!dropdownElem) {
+    element.appendChild(this.createDropdown(button.getDomHelper()))
+  }
+  return goog.ui.FlatMenuButtonRenderer.superClass_.decorate.call(this, button, element)
+};
+goog.ui.FlatMenuButtonRenderer.prototype.createCaption = function(content, dom) {
+  return dom.createDom("div", goog.ui.INLINE_BLOCK_CLASSNAME + " " + goog.getCssName(this.getCssClass(), "caption"), content)
+};
+goog.ui.FlatMenuButtonRenderer.prototype.createDropdown = function(dom) {
+  return dom.createDom("div", {"class":goog.ui.INLINE_BLOCK_CLASSNAME + " " + goog.getCssName(this.getCssClass(), "dropdown"), "aria-hidden":true}, "\u00a0")
+};
+goog.ui.FlatMenuButtonRenderer.prototype.getCssClass = function() {
+  return goog.ui.FlatMenuButtonRenderer.CSS_CLASS
+};
+goog.ui.registry.setDecoratorByClassName(goog.ui.FlatMenuButtonRenderer.CSS_CLASS, function() {
+  return new goog.ui.MenuButton(null, null, goog.ui.FlatMenuButtonRenderer.getInstance())
+});
+goog.provide("Blockly.ContractEditor");
+goog.require("Blockly.FunctionEditor");
+goog.require("goog.ui.Component.EventType");
+goog.require("goog.ui.FlatMenuButtonRenderer");
+goog.require("goog.ui.Option");
+goog.require("goog.ui.Select");
+goog.require("goog.ui.Separator");
+goog.require("goog.ui.decorate");
+goog.require("goog.ui.Component.EventType");
+goog.require("goog.events");
+Blockly.ContractEditor = function() {
+  Blockly.ContractEditor.superClass_.constructor.call(this);
+  this.inputTypeSelector = null;
+  this.outputTypeSelector = null
+};
+goog.inherits(Blockly.ContractEditor, Blockly.FunctionEditor);
+Blockly.ContractEditor.typesToColors = {"none":[0, 0, 0.6], "Number":[192, 1, 0.99], "string":[180, 1, 0.6], "image":[285, 1, 0.8], "boolean":[90, 1, 0.4]};
+Blockly.ContractEditor.prototype.definitionBlockType = "functional_definition";
+Blockly.ContractEditor.prototype.parameterBlockType = "functional_parameters_get";
+Blockly.ContractEditor.prototype.createContractDom_ = function() {
+  this.contractDiv_ = goog.dom.createDom("div", "blocklyToolboxDiv paramToolbox blocklyText");
+  if(Blockly.RTL) {
+    this.contractDiv_.setAttribute("dir", "RTL")
+  }
+  this.contractDiv_.innerHTML = "<div>" + Blockly.Msg.FUNCTIONAL_NAME_LABEL + "</div>" + '<div><input id="functionNameText" type="text"></div>' + "<div>" + Blockly.Msg.FUNCTIONAL_DESCRIPTION_LABEL + "</div>" + '<div><textarea id="functionDescriptionText" rows="2"></textarea></div>' + "<div>" + Blockly.Msg.FUNCTIONAL_RANGE_LABEL + "</div>" + '<span id="outputTypeDropdown"></span>' + "<div>" + Blockly.Msg.FUNCTIONAL_DOMAIN_LABEL + "</div>" + '<div><input id="paramAddText" type="text" style="width: 200px;" ' + 
+  'placeholder="' + Blockly.Msg.FUNCTIONAL_NAME_LABEL + '"> ' + '<span id="paramTypeDropdown"></span>' + '<button id="paramAddButton" class="btn">' + Blockly.Msg.ADD + "</button>" + "</div>";
+  var metrics = Blockly.modalBlockSpace.getMetrics();
+  this.contractDiv_.style.left = metrics.absoluteLeft + "px";
+  this.contractDiv_.style.top = metrics.absoluteTop + "px";
+  this.contractDiv_.style.width = metrics.viewWidth + "px";
+  this.contractDiv_.style.display = "block";
+  this.container_.insertBefore(this.contractDiv_, this.container_.firstChild);
+  this.initializeInputTypeDropdown();
+  this.initializeOutputTypeDropdown()
+};
+Blockly.ContractEditor.prototype.addParameter = function(newParameterName) {
+  var newParameterOutputType = this.inputTypeSelector.getValue();
+  var param = Blockly.createSvgElement("block", {type:this.parameterBlockType});
+  var title = Blockly.createSvgElement("title", {name:"VAR"}, param);
+  title.textContent = newParameterName;
+  var mutation = Blockly.createSvgElement("mutation", {}, param);
+  var outputType = Blockly.createSvgElement("outputType", {}, mutation);
+  outputType.textContent = newParameterOutputType;
+  this.paramToolboxBlocks_.push(param)
+};
+Blockly.ContractEditor.prototype.initializeOutputTypeDropdown = function() {
+  this.outputTypeSelector = new goog.ui.Select(null, null, goog.ui.FlatMenuButtonRenderer.getInstance());
+  goog.object.forEach(Blockly.ContractEditor.typesToColors, function(value, key) {
+    this.outputTypeSelector.addItem(new goog.ui.MenuItem(key))
+  }, this);
+  this.outputTypeSelector.setDefaultCaption(Blockly.Msg.FUNCTIONAL_TYPE_LABEL);
+  goog.events.listen(this.outputTypeSelector, goog.ui.Component.EventType.CHANGE, goog.bind(this.outputTypeDropdownChange, this));
+  this.outputTypeSelector.render(goog.dom.getElement("outputTypeDropdown"))
+};
+Blockly.ContractEditor.prototype.outputTypeDropdownChange = function(comboBoxEvent) {
+  var newType = comboBoxEvent.target.getContent();
+  this.functionDefinitionBlock.updateOutputType(newType)
+};
+Blockly.ContractEditor.prototype.initializeInputTypeDropdown = function() {
+  this.inputTypeSelector = new goog.ui.Select(null, null, goog.ui.FlatMenuButtonRenderer.getInstance());
+  goog.object.forEach(Blockly.ContractEditor.typesToColors, function(value, key) {
+    this.inputTypeSelector.addItem(new goog.ui.MenuItem(key))
+  }, this);
+  this.inputTypeSelector.setDefaultCaption(Blockly.Msg.FUNCTIONAL_TYPE_LABEL);
+  this.inputTypeSelector.render(goog.dom.getElement("paramTypeDropdown"))
 };
 goog.provide("goog.color.names");
 goog.color.names = {"aliceblue":"#f0f8ff", "antiquewhite":"#faebd7", "aqua":"#00ffff", "aquamarine":"#7fffd4", "azure":"#f0ffff", "beige":"#f5f5dc", "bisque":"#ffe4c4", "black":"#000000", "blanchedalmond":"#ffebcd", "blue":"#0000ff", "blueviolet":"#8a2be2", "brown":"#a52a2a", "burlywood":"#deb887", "cadetblue":"#5f9ea0", "chartreuse":"#7fff00", "chocolate":"#d2691e", "coral":"#ff7f50", "cornflowerblue":"#6495ed", "cornsilk":"#fff8dc", "crimson":"#dc143c", "cyan":"#00ffff", "darkblue":"#00008b", "darkcyan":"#008b8b", 
@@ -19508,107 +21094,6 @@ Blockly.FieldImageDropdown.prototype.getUpdatedDimensions_ = function(src) {
 Blockly.FieldImageDropdown.prototype.updatePreviewDimensions_ = function(previewWidth, previewHeight) {
   this.previewElement_.setAttribute("width", previewWidth + "px");
   this.previewElement_.setAttribute("height", previewHeight + "px")
-};
-goog.provide("goog.ui.SelectionModel");
-goog.require("goog.array");
-goog.require("goog.events.EventTarget");
-goog.require("goog.events.EventType");
-goog.ui.SelectionModel = function(opt_items) {
-  goog.events.EventTarget.call(this);
-  this.items_ = [];
-  this.addItems(opt_items)
-};
-goog.inherits(goog.ui.SelectionModel, goog.events.EventTarget);
-goog.ui.SelectionModel.prototype.selectedItem_ = null;
-goog.ui.SelectionModel.prototype.selectionHandler_ = null;
-goog.ui.SelectionModel.prototype.getSelectionHandler = function() {
-  return this.selectionHandler_
-};
-goog.ui.SelectionModel.prototype.setSelectionHandler = function(handler) {
-  this.selectionHandler_ = handler
-};
-goog.ui.SelectionModel.prototype.getItemCount = function() {
-  return this.items_.length
-};
-goog.ui.SelectionModel.prototype.indexOfItem = function(item) {
-  return item ? goog.array.indexOf(this.items_, item) : -1
-};
-goog.ui.SelectionModel.prototype.getFirst = function() {
-  return this.items_[0]
-};
-goog.ui.SelectionModel.prototype.getLast = function() {
-  return this.items_[this.items_.length - 1]
-};
-goog.ui.SelectionModel.prototype.getItemAt = function(index) {
-  return this.items_[index] || null
-};
-goog.ui.SelectionModel.prototype.addItems = function(items) {
-  if(items) {
-    goog.array.forEach(items, function(item) {
-      this.selectItem_(item, false)
-    }, this);
-    goog.array.extend(this.items_, items)
-  }
-};
-goog.ui.SelectionModel.prototype.addItem = function(item) {
-  this.addItemAt(item, this.getItemCount())
-};
-goog.ui.SelectionModel.prototype.addItemAt = function(item, index) {
-  if(item) {
-    this.selectItem_(item, false);
-    goog.array.insertAt(this.items_, item, index)
-  }
-};
-goog.ui.SelectionModel.prototype.removeItem = function(item) {
-  if(item && goog.array.remove(this.items_, item)) {
-    if(item == this.selectedItem_) {
-      this.selectedItem_ = null;
-      this.dispatchEvent(goog.events.EventType.SELECT)
-    }
-  }
-};
-goog.ui.SelectionModel.prototype.removeItemAt = function(index) {
-  this.removeItem(this.getItemAt(index))
-};
-goog.ui.SelectionModel.prototype.getSelectedItem = function() {
-  return this.selectedItem_
-};
-goog.ui.SelectionModel.prototype.getItems = function() {
-  return goog.array.clone(this.items_)
-};
-goog.ui.SelectionModel.prototype.setSelectedItem = function(item) {
-  if(item != this.selectedItem_) {
-    this.selectItem_(this.selectedItem_, false);
-    this.selectedItem_ = item;
-    this.selectItem_(item, true)
-  }
-  this.dispatchEvent(goog.events.EventType.SELECT)
-};
-goog.ui.SelectionModel.prototype.getSelectedIndex = function() {
-  return this.indexOfItem(this.selectedItem_)
-};
-goog.ui.SelectionModel.prototype.setSelectedIndex = function(index) {
-  this.setSelectedItem(this.getItemAt(index))
-};
-goog.ui.SelectionModel.prototype.clear = function() {
-  goog.array.clear(this.items_);
-  this.selectedItem_ = null
-};
-goog.ui.SelectionModel.prototype.disposeInternal = function() {
-  goog.ui.SelectionModel.superClass_.disposeInternal.call(this);
-  delete this.items_;
-  this.selectedItem_ = null
-};
-goog.ui.SelectionModel.prototype.selectItem_ = function(item, select) {
-  if(item) {
-    if(typeof this.selectionHandler_ == "function") {
-      this.selectionHandler_(item, select)
-    }else {
-      if(typeof item.setSelected == "function") {
-        item.setSelected(select)
-      }
-    }
-  }
 };
 goog.provide("goog.dom.TagIterator");
 goog.provide("goog.dom.TagWalkType");
@@ -20560,16 +22045,15 @@ Blockly.Generator.blocksToCode = function(name, blocks) {
   code = code.replace(/[ \t]+\n/g, "\n");
   return code
 };
-Blockly.Generator.blockSpaceToCode = function(name, type) {
-  var blocksToGenerate = [];
-  if(type) {
-    var blocks = Blockly.mainBlockSpace.getTopBlocks(true);
-    for(var x = 0, block;block = blocks[x];x++) {
-      if(type && block.type != type) {
-        continue
-      }
-      blocksToGenerate.push(block)
+Blockly.Generator.blockSpaceToCode = function(name, opt_typeFilter) {
+  var blocksToGenerate;
+  if(opt_typeFilter) {
+    if(typeof opt_typeFilter == "string") {
+      opt_typeFilter = [opt_typeFilter]
     }
+    blocksToGenerate = goog.array.filter(Blockly.mainBlockSpace.getTopBlocks(true), function(block) {
+      return goog.array.contains(opt_typeFilter, block.type)
+    }, this)
   }else {
     blocksToGenerate = Blockly.mainBlockSpace.getTopBlocks(true)
   }
@@ -20668,11 +22152,11 @@ Blockly.BlockSpaceEditor = function(container, opt_getMetrics, opt_setMetrics) {
   this.init_()
 };
 Blockly.BlockSpaceEditor.prototype.populateSVGEffects_ = function(container) {
-  if(goog.dom.getElement("blocklySvgDefs")) {
+  if(goog.dom.getElement("blocklySvgDefsGlobal")) {
     return
   }
-  var svg = Blockly.createSvgElement("svg", {id:"blocklyFilters", width:0, height:0}, container);
-  var defs = Blockly.createSvgElement("defs", {id:"blocklySvgDefs"}, svg);
+  var svg = Blockly.createSvgElement("svg", {id:"blocklyFilters", width:0, height:0, style:"display: block"}, container);
+  var defs = Blockly.createSvgElement("defs", {id:"blocklySvgDefsGlobal"}, svg);
   var filter, feSpecularLighting, feMerge, pattern;
   filter = Blockly.createSvgElement("filter", {"id":"blocklyEmboss"}, defs);
   Blockly.createSvgElement("feGaussianBlur", {"in":"SourceAlpha", "stdDeviation":1, "result":"blur"}, filter);
@@ -20694,13 +22178,14 @@ Blockly.BlockSpaceEditor.prototype.populateSVGEffects_ = function(container) {
 };
 Blockly.BlockSpaceEditor.prototype.createDom_ = function(container) {
   container.setAttribute("dir", "LTR");
+  this.populateSVGEffects_(container);
   var svg = Blockly.createSvgElement("svg", {"xmlns":"http://www.w3.org/2000/svg", "xmlns:html":"http://www.w3.org/1999/xhtml", "xmlns:xlink":"http://www.w3.org/1999/xlink", "version":"1.1", "class":"blocklySvg"}, null);
   this.svg_ = svg;
   container.appendChild(svg);
   goog.events.listen(svg, "selectstart", function() {
     return false
   });
-  this.populateSVGEffects_(container);
+  var defs = Blockly.createSvgElement("defs", {id:"blocklySvgDefs"}, svg);
   this.blockSpace.maxBlocks = Blockly.maxBlocks;
   svg.appendChild(this.blockSpace.createDom());
   if(!Blockly.readOnly) {
@@ -21275,31 +22760,34 @@ Blockly.Css.inject = function() {
   text = text.replace("%HAND_OPEN_PATH%", Blockly.assetUrl("media/handopen.cur")).replace("%TREE_PATH%", Blockly.assetUrl("media/tree.png")).replace("%SPRITES_PATH%", Blockly.assetUrl("media/sprites.png"));
   goog.cssom.addCssText(text)
 };
-Blockly.Css.CONTENT = ["#blockly {", "  border: 1px solid #ddd;", "}", "#blockly .userHidden {", "  display: none;", "}", "#blockly.edit .userHidden {", "  display: inline;", "  fill-opacity: 0.5;", "}", "#blockly.edit .userHidden .blocklyPath {", "  fill-opacity: 0.5;", "}", "#blockly.edit .userHidden .blocklyPathDark, #blockly.edit .userHidden .blocklyPathLight {", "  display: none;", "}", ".blocklySvg {", "  cursor: pointer;", "  background-color: #fff;", "  overflow: hidden;", "}", "g.blocklyDraggable {", 
-"  -ms-touch-action: none;", "  touch-action: none;", "}", ".blocklyWidgetDiv {", "  position: absolute;", "  display: none;", "  z-index: 999;", "}", ".blocklyDraggable {", "  /* Hotspot coordinates are baked into the CUR file, but they are still", "     required in the CSS due to a Chrome bug.", "     http://code.google.com/p/chromium/issues/detail?id=1446 */", "  cursor: url(%HAND_OPEN_PATH%) 8 5, auto;", "}", ".blocklyResizeSE {", "  fill: #aaa;", "  cursor: se-resize;", "}", ".blocklyResizeSW {", 
-"  fill: #aaa;", "  cursor: sw-resize;", "}", ".blocklyResizeLine {", "  stroke-width: 1;", "  stroke: #888;", "}", ".blocklyHighlightedConnectionPath {", "  stroke-width: 4px;", "  stroke: #fc3;", "  fill: none;", "}", ".blocklyPathLight {", "  fill: none;", "  stroke-width: 2;", "  stroke-linecap: round;", "}", ".blocklySpotlight>.blocklyPath {", "  fill: #fc3;", "}", ".blocklySelected:not(.blocklyUndeletable)>.blocklyPath {", "  stroke-width: 3px;", "  stroke: #fc3;", "}", ".blocklySelected:not(.blocklyUndeletable)>.blocklyPathLight {", 
-"  display: none;", "}", ".blocklyUndeletable>.blocklyEditableText>rect {", "  fill-opacity: 1.0;", "  fill: #ffdb74;", "}", ".blocklyDragging>.blocklyPath,", ".blocklyDragging>.blocklyPathLight {", "  fill-opacity: 0.8;", "  stroke-opacity: 0.8;", "}", ".blocklyDragging>.blocklyPathDark {", "  display: none;", "}", ".blocklyDisabled>.blocklyPath {", "  fill-opacity: 0.50;", "  stroke-opacity: 0.50;", "}", ".blocklyDisabled>.blocklyPathLight,", ".blocklyDisabled>.blocklyPathDark {", "  display: none;", 
-"}", ".blocklyText {", "  cursor: default;", "  font-family: sans-serif;", "  font-size: 11pt;", "  fill: #fff;", "}", ".blocklyNonEditableText>text {", "  pointer-events: none;", "}", ".blocklyNonEditableText>rect,", ".blocklyEditableText>rect {", "  fill: #fff;", "  fill-opacity: 0.6;", "}", ".blocklyNonEditableText>text,", ".blocklyEditableText>text {", "  fill: #000;", "}", ".blocklyEditableText:hover>rect {", "  stroke-width: 2;", "  stroke: #fff;", "}", "/*", " * Don't allow users to select text.  It gets annoying when trying to", 
-" * drag a block and selected text moves instead.", " */", ".blocklySvg text {", "  -moz-user-select: none;", "  -webkit-user-select: none;", "  user-select: none;", "  cursor: inherit;", "}", "", ".blocklyHidden {", "  display: none;", "}", ".blocklyFieldDropdown:not(.blocklyHidden) {", "  display: block;", "}", ".blocklyTooltipBackground {", "  fill: #ffffc7;", "  stroke-width: 1px;", "  stroke: #d8d8d8;", "}", ".blocklyTooltipShadow,", ".blocklyContextMenuShadow,", ".blocklyDropdownMenuShadow {", 
-"  fill: #bbb;", "  filter: url(#blocklyShadowFilter);", "}", ".blocklyTooltipText {", "  font-family: sans-serif;", "  font-size: 9pt;", "  fill: #000;", "}", "", ".blocklyIconShield {", "  cursor: default;", "  fill: #00c;", "  stroke-width: 1px;", "  stroke: #ccc;", "}", ".blocklyIconGroup:hover>.blocklyIconShield {", "  fill: #00f;", "  stroke: #fff;", "}", ".blocklyIconGroup:hover>.blocklyIconMark {", "  fill: #fff;", "}", ".blocklyIconMark {", "  cursor: default !important;", "  font-family: sans-serif;", 
-"  font-size: 9pt;", "  font-weight: bold;", "  fill: #ccc;", "  text-anchor: middle;", "}", ".blocklyWarningBody {", "}", ".blocklyMinimalBody {", "  margin: 0;", "  padding: 0;", "}", ".blocklyCommentTextarea {", "  margin: 0;", "  padding: 2px;", "  border: 0;", "  resize: none;", "  background-color: #ffc;", "}", ".blocklyHtmlInput {", "  font-family: sans-serif;", "  font-size: 11pt;", "  border: none;", "  outline: none;", "  width: 100%", "}", ".blocklyContextMenuBackground,", ".blocklyMutatorBackground {", 
-"  fill: #fff;", "  stroke-width: 1;", "  stroke: #ddd;", "}", ".newFunctionDiv {", "  position: absolute;", "  top: 120px;", "  left: 600px;", "}", ".blocklyContextMenuOptions>.blocklyMenuDiv,", ".blocklyContextMenuOptions>.blocklyMenuDivDisabled,", ".blocklyDropdownMenuOptions>.blocklyMenuDiv {", "  fill: #fff;", "}", ".blocklyContextMenuOptions>.blocklyMenuDiv:hover>rect,", ".blocklyDropdownMenuOptions>.blocklyMenuDiv:hover>rect {", "  fill: #57e;", "}", ".blocklyMenuSelected>rect {", "  fill: #57e;", 
-"}", ".blocklyMenuText {", "  cursor: default !important;", "  font-family: sans-serif;", "  font-size: 15px; /* All context menu sizes are based on pixels. */", "  fill: #000;", "}", ".blocklyContextMenuOptions>.blocklyMenuDiv:hover>.blocklyMenuText,", ".blocklyDropdownMenuOptions>.blocklyMenuDiv:hover>.blocklyMenuText {", "  fill: #fff;", "}", ".blocklyMenuSelected>.blocklyMenuText {", "  fill: #fff;", "}", ".blocklyMenuDivDisabled>.blocklyMenuText {", "  fill: #ccc;", "}", ".blocklyFlyoutBackground {", 
-"  fill: #ddd;", "  fill-opacity: 0.8;", "}", ".blocklyColourBackground {", "  fill: #666;", "}", ".blocklyScrollbarBackground {", "  fill: #fff;", "  stroke-width: 1;", "  stroke: #e4e4e4;", "}", ".blocklyScrollbarKnob {", "  fill: #ccc;", "}", ".blocklyScrollbarBackground:hover+.blocklyScrollbarKnob,", ".blocklyScrollbarKnob:hover {", "  fill: #bbb;", "}", ".blocklyInvalidInput {", "  background: #faa;", "}", ".blocklyAngleCircle {", "  stroke: #444;", "  stroke-width: 1;", "  fill: #ddd;", "  fill-opacity: 0.8;", 
-"}", ".blocklyAngleMarks {", "  stroke: #444;", "  stroke-width: 1;", "}", ".blocklyAngleGuage {", "  fill: #d00;", "  fill-opacity: 0.8;  ", "}", ".blocklyContextMenu {", "  border-radius: 4px;", "}", ".blocklyDropdownMenu {", "  padding: 0 !important;", "  position: relative !important;", "}", ".blocklyRectangularDropdownMenu .goog-menuitem {", "  height: 100%;", "  padding: 0 !important;", "  border-radius: 5px;", "  margin-bottom: 4px !important;", "}", ".fieldRectangularDropdownBackdrop {", 
-"  fill: #fff;", "  fill-opacity: 0.6;", "}", ".blocklyRectangularDropdownArrow {", "  fill: #7965a1;", "  font-size: 20px !important;", "}", ".blocklyRectangularDropdownMenu .goog-menuitem-highlight, .goog-menuitem-hover {", "  border-color: #7965a1 !important;", "  border-style: dotted !important;", "  border-width: 0px !important;", "  margin: -4px -4px 0 !important;", "  border-width: 4px !important;", "  border-style: solid !important;", "  padding-bottom: 0px !important;", "  padding-top: 0px !important;", 
-"}", ".blocklyRectangularDropdownMenu img {", "  -webkit-border-radius: 5px;", "  -moz-border-radius: 5px;", "  border-radius: 5px;", "}", ".blocklyRectangularDropdownMenu {", "  border-radius: 5px;", "  box-shadow: none !important;", "}", ".goog-option-selected .goog-menuitem-checkbox,", ".goog-option-selected .goog-menuitem-icon {", "}", "/* Category tree in Toolbox. */", ".blocklyToolboxDiv {", "  background-color: #ddd;", "  display: none;", "  overflow-x: visible;", "  overflow-y: auto;", "  position: absolute;", 
-"}", ".blocklyTreeRoot {", "  padding: 4px 0;", "}", ".blocklyTreeRoot:focus {", "  outline: none;", "}", ".blocklyTreeRow {", "  line-height: 22px;", "  height: 22px;", "  padding-right: 1em;", "  white-space: nowrap;", "}", '.blocklyToolboxDiv[dir="RTL"] .blocklyTreeRow {', "  padding-right: 0;", "  padding-left: 1em !important;", "}", ".blocklyTreeRow:hover {", "  background-color: #e4e4e4;", "}", ".blocklyTreeIcon {", "  height: 16px;", "  width: 16px;", "  vertical-align: middle;", "  background-image: url(%TREE_PATH%);", 
-"}", ".blocklyTreeIconClosedLtr {", "  background-position: -32px -1px;", "}", ".blocklyTreeIconClosedRtl {", "  background-position: 0px -1px;", "}", ".blocklyTreeIconOpen {", "  background-position: -16px -1px;", "}", ".blocklyTreeIconNone {", "  background-position: -48px -1px;", "}", ".blocklyTreeSelected>.blocklyTreeIconClosedLtr {", "  background-position: -32px -17px;", "}", ".blocklyTreeSelected>.blocklyTreeIconClosedRtl {", "  background-position: 0px -17px;", "}", ".blocklyTreeSelected>.blocklyTreeIconOpen {", 
-"  background-position: -16px -17px;", "}", ".blocklyTreeSelected>.blocklyTreeIconNone {", "  background-position: -48px -17px;", "}", ".blocklyTreeLabel {", "  cursor: default;", "  font-family: sans-serif;", "  font-size: 16px;", "  padding: 0 3px;", "  vertical-align: middle;", "}", ".blocklyTreeSelected {", "  background-color: #57e !important;", "}", ".blocklyTreeSelected .blocklyTreeLabel {", "  color: #fff;", "}", ".blocklyArrow {", "  font-size: 80%;", "}", ".paramToolbox {", "  padding: 0 0 5px 0;", 
-"}", ".paramToolbox input, .paramToolbox textarea {", "  box-sizing: border-box;", "  width: 100%;", "  margin: 0;", "  resize: none;", "}", ".paramToolbox input, .paramToolbox button {", "  height: 30px;", "  margin: 0;", "}", ".paramToolbox div {", "  margin: 4px 10px;", "}", "#modalContainer {", "  position: absolute;", "  top: 45px;", "  width: 100%;", "  height: 100%;", "}", "#modalContainer > svg {", "  position: absolute;", "  top: 0;", "  left: 0;", "  background: transparent;", "  pointer-events: none;", 
-"}", "#modalContainer > svg * {", "  pointer-events: visiblePainted;", "}", "", "/*", " * Copyright 2007 The Closure Library Authors. All Rights Reserved.", " *", " * Use of this source code is governed by the Apache License, Version 2.0.", " * See the COPYING file for details.", " */", "", "/* Author: pupius@google.com (Daniel Pupius) */", "", "/*", " Styles to make the colorpicker look like the old gmail color picker", " NOTE: without CSS scoping this will override styles defined in palette.css", 
-"*/", ".goog-palette {", "  outline: none;", "  cursor: default;", "}", "", ".goog-palette-table {", "  border: 1px solid #666;", "  border-collapse: collapse;", "}", "", ".goog-palette-cell {", "  height: 25px;", "  width: 25px;", "  margin: 0;", "  border: 0;", "  text-align: center;", "  vertical-align: middle;", "  border-right: 1px solid #666;", "  font-size: 1px;", "}", "", ".goog-palette-colorswatch {", "  position: relative;", "  height: 25px;", "  width: 25px;", "  border: 1px solid #666;", 
-"}", "", ".goog-palette-cell-hover .goog-palette-colorswatch {", "  border: 1px solid #FFF;", "}", "", ".goog-palette-cell-selected .goog-palette-colorswatch {", "  border: 1px solid #000;", "  color: #fff;", "}", ".goog-menu {", "  background: #fff;", "  border-color: #ccc #666 #666 #ccc;", "  border-style: solid;", "  border-width: 1px;", "  cursor: default;", "  font: normal 13px Arial, sans-serif;", "  margin: 0;", "  outline: none;", "  padding: 4px 0;", "  position: absolute;", "  z-index: 20000;", 
-"}", ".goog-menuitem {", "  color: #000;", "  font: normal 13px Arial, sans-serif;", "  list-style: none;", "  margin: 0;", "  padding: 4px 7em 4px 28px;", "  white-space: nowrap;", "}", ".goog-menuitem.goog-menuitem-rtl {", "  padding-left: 7em;", "  padding-right: 28px;", "}", ".goog-menu-nocheckbox .goog-menuitem,", ".goog-menu-noicon .goog-menuitem {", "  padding-left: 12px;", "}", ".goog-menu-noaccel .goog-menuitem {", "  padding-right: 20px;", "}", ".goog-menuitem-content {", "  color: #000;", 
-"  font-size: 15px;", "}", ".goog-menuitem-disabled .goog-menuitem-accel,", ".goog-menuitem-disabled .goog-menuitem-content {", "  color: #ccc !important;", "}", ".goog-menuitem-disabled .goog-menuitem-icon {", "  opacity: 0.3;", "  -moz-opacity: 0.3;", "  filter: alpha(opacity=30);", "}", ".goog-menuitem-highlight,", ".goog-menuitem-hover {", "  background-color: #d6e9f8;", "  border-color: #d6e9f8;", "  border-style: dotted;", "  border-width: 1px 0;", "  padding-bottom: 3px;", "  padding-top: 3px;", 
-"}", ".goog-menuitem-checkbox,", ".goog-menuitem-icon {", "  background-repeat: no-repeat;", "  height: 16px;", "  left: 6px;", "  position: absolute;", "  right: auto;", "  vertical-align: middle;", "  width: 16px;", "}", ".goog-menuitem-rtl .goog-menuitem-checkbox,", ".goog-menuitem-rtl .goog-menuitem-icon {", "  left: auto;", "  right: 6px;", "}", ".goog-option-selected .goog-menuitem-checkbox,", ".goog-option-selected .goog-menuitem-icon {", "}", ".goog-menuitem-accel {", "  color: #999;", "  direction: ltr;", 
-"  left: auto;", "  padding: 0 6px;", "  position: absolute;", "  right: 0;", "  text-align: right;", "}", ".goog-menuitem-rtl .goog-menuitem-accel {", "  left: 0;", "  right: auto;", "  text-align: left;", "}", ".goog-menuitem-mnemonic-hint {", "  text-decoration: underline;", "}", ".goog-menuitem-mnemonic-separator {", "  color: #999;", "  font-size: 12px;", "  padding-left: 4px;", "}", ".goog-menuseparator {", "  border-top: 1px solid #ccc;", "  margin: 4px 0;", "  padding: 0;", "}", ""];
+Blockly.Css.CONTENT = ["#blockly {", "  border: 1px solid #ddd;", "}", "#blockly .userHidden {", "  display: none;", "}", "#blockly.readonly .userHidden {", "  display: inline;", "}", "#blockly.readonly {", "  border: 0;", "}", "#blockly.edit .userHidden {", "  display: inline;", "  fill-opacity: 0.5;", "}", "#blockly.edit .userHidden .blocklyPath {", "  fill-opacity: 0.5;", "}", "#blockly.edit .userHidden .blocklyPathDark, #blockly.edit .userHidden .blocklyPathLight {", "  display: none;", "}", 
+".blocklySvg {", "  cursor: pointer;", "  background-color: #fff;", "  overflow: hidden;", "}", "g.blocklyDraggable {", "  -ms-touch-action: none;", "  touch-action: none;", "}", ".blocklyWidgetDiv {", "  position: absolute;", "  display: none;", "  z-index: 999;", "}", ".blocklyDraggable {", "  /* Hotspot coordinates are baked into the CUR file, but they are still", "     required in the CSS due to a Chrome bug.", "     http://code.google.com/p/chromium/issues/detail?id=1446 */", "  cursor: url(%HAND_OPEN_PATH%) 8 5, auto;", 
+"}", ".blocklyResizeSE {", "  fill: #aaa;", "  cursor: se-resize;", "}", ".blocklyResizeSW {", "  fill: #aaa;", "  cursor: sw-resize;", "}", ".blocklyResizeLine {", "  stroke-width: 1;", "  stroke: #888;", "}", ".blocklyHighlightedConnectionPath {", "  stroke-width: 4px;", "  stroke: #fc3;", "  fill: none;", "}", ".blocklyPathLight {", "  fill: none;", "  stroke-width: 2;", "  stroke-linecap: round;", "}", ".blocklySpotlight>.blocklyPath {", "  fill: #fc3;", "}", ".blocklySelected:not(.blocklyUndeletable)>.blocklyPath {", 
+"  stroke-width: 3px;", "  stroke: #fc3;", "}", ".blocklySelected:not(.blocklyUndeletable)>.blocklyPathLight {", "  display: none;", "}", ".blocklyUndeletable>.blocklyEditableText>rect {", "  fill-opacity: 1.0;", "  fill: #ffdb74;", "}", ".blocklyDragging>.blocklyPath,", ".blocklyDragging>.blocklyPathLight {", "  fill-opacity: 0.8;", "  stroke-opacity: 0.8;", "}", ".blocklyDragging>.blocklyPathDark {", "  display: none;", "}", ".blocklyDisabled>.blocklyPath {", "  fill-opacity: 0.50;", "  stroke-opacity: 0.50;", 
+"}", ".blocklyDisabled>.blocklyPathLight,", ".blocklyDisabled>.blocklyPathDark {", "  display: none;", "}", ".blocklyText {", "  cursor: default;", "  font-family: sans-serif;", "  font-size: 11pt;", "  fill: #fff;", "}", ".blocklyNonEditableText>text {", "  pointer-events: none;", "}", ".blocklyNonEditableText>rect,", ".blocklyEditableText>rect {", "  fill: #fff;", "  fill-opacity: 0.6;", "}", ".blocklyNonEditableText>text,", ".blocklyEditableText>text {", "  fill: #000;", "}", ".blocklyEditableText:hover>rect {", 
+"  stroke-width: 2;", "  stroke: #fff;", "}", "/*", " * Don't allow users to select text.  It gets annoying when trying to", " * drag a block and selected text moves instead.", " */", ".blocklySvg text {", "  -moz-user-select: none;", "  -webkit-user-select: none;", "  user-select: none;", "  cursor: inherit;", "}", ".blocklyHidden {", "  display: none;", "}", ".blocklyFieldDropdown:not(.blocklyHidden) {", "  display: block;", "}", ".blocklyTooltipBackground {", "  fill: #ffffc7;", "  stroke-width: 1px;", 
+"  stroke: #d8d8d8;", "}", ".blocklyTooltipShadow,", ".blocklyContextMenuShadow,", ".blocklyDropdownMenuShadow {", "  fill: #bbb;", "  filter: url(#blocklyShadowFilter);", "}", ".blocklyTooltipText {", "  font-family: sans-serif;", "  font-size: 9pt;", "  fill: #000;", "}", ".blocklyIconShield {", "  cursor: default;", "  fill: #00c;", "  stroke-width: 1px;", "  stroke: #ccc;", "}", ".blocklyIconGroup:hover>.blocklyIconShield {", "  fill: #00f;", "  stroke: #fff;", "}", ".blocklyIconGroup:hover>.blocklyIconMark {", 
+"  fill: #fff;", "}", ".blocklyIconMark {", "  cursor: default !important;", "  font-family: sans-serif;", "  font-size: 9pt;", "  font-weight: bold;", "  fill: #ccc;", "  text-anchor: middle;", "}", ".blocklyWarningBody {", "}", ".blocklyMinimalBody {", "  margin: 0;", "  padding: 0;", "}", ".blocklyCommentTextarea {", "  margin: 0;", "  padding: 2px;", "  border: 0;", "  resize: none;", "  background-color: #ffc;", "}", ".blocklyHtmlInput {", "  font-family: sans-serif;", "  font-size: 11pt;", 
+"  border: none;", "  outline: none;", "  width: 100%", "}", ".blocklyContextMenuBackground,", ".blocklyMutatorBackground {", "  fill: #fff;", "  stroke-width: 1;", "  stroke: #ddd;", "}", ".newFunctionDiv {", "  position: absolute;", "  top: 120px;", "  left: 600px;", "}", ".blocklyContextMenuOptions>.blocklyMenuDiv,", ".blocklyContextMenuOptions>.blocklyMenuDivDisabled,", ".blocklyDropdownMenuOptions>.blocklyMenuDiv {", "  fill: #fff;", "}", ".blocklyContextMenuOptions>.blocklyMenuDiv:hover>rect,", 
+".blocklyDropdownMenuOptions>.blocklyMenuDiv:hover>rect {", "  fill: #57e;", "}", ".blocklyMenuSelected>rect {", "  fill: #57e;", "}", ".blocklyMenuText {", "  cursor: default !important;", "  font-family: sans-serif;", "  font-size: 15px; /* All context menu sizes are based on pixels. */", "  fill: #000;", "}", ".blocklyContextMenuOptions>.blocklyMenuDiv:hover>.blocklyMenuText,", ".blocklyDropdownMenuOptions>.blocklyMenuDiv:hover>.blocklyMenuText {", "  fill: #fff;", "}", ".blocklyMenuSelected>.blocklyMenuText {", 
+"  fill: #fff;", "}", ".blocklyMenuDivDisabled>.blocklyMenuText {", "  fill: #ccc;", "}", ".blocklyFlyoutBackground {", "  fill: #ddd;", "  fill-opacity: 0.8;", "}", ".blocklyColourBackground {", "  fill: #666;", "}", ".blocklyScrollbarBackground {", "  fill: #fff;", "  stroke-width: 1;", "  stroke: #e4e4e4;", "}", ".blocklyScrollbarKnob {", "  fill: #ccc;", "}", ".blocklyScrollbarBackground:hover+.blocklyScrollbarKnob,", ".blocklyScrollbarKnob:hover {", "  fill: #bbb;", "}", ".blocklyInvalidInput {", 
+"  background: #faa;", "}", ".blocklyAngleCircle {", "  stroke: #444;", "  stroke-width: 1;", "  fill: #ddd;", "  fill-opacity: 0.8;", "}", ".blocklyAngleMarks {", "  stroke: #444;", "  stroke-width: 1;", "}", ".blocklyAngleGuage {", "  fill: #d00;", "  fill-opacity: 0.8;  ", "}", ".blocklyContextMenu {", "  border-radius: 4px;", "}", ".blocklyDropdownMenu {", "  padding: 0 !important;", "  position: relative !important;", "}", ".blocklyRectangularDropdownMenu .goog-menuitem {", "  height: 100%;", 
+"  padding: 0 !important;", "  border-radius: 5px;", "  margin-bottom: 4px !important;", "}", ".fieldRectangularDropdownBackdrop {", "  fill: #fff;", "  fill-opacity: 0.6;", "}", ".blocklyRectangularDropdownArrow {", "  fill: #7965a1;", "  font-size: 20px !important;", "}", ".blocklyRectangularDropdownMenu .goog-menuitem-highlight, .goog-menuitem-hover {", "  border-color: #7965a1 !important;", "  border-style: dotted !important;", "  border-width: 0px !important;", "  margin: -4px -4px 0 !important;", 
+"  border-width: 4px !important;", "  border-style: solid !important;", "  padding-bottom: 0px !important;", "  padding-top: 0px !important;", "}", ".blocklyRectangularDropdownMenu img {", "  -webkit-border-radius: 5px;", "  -moz-border-radius: 5px;", "  border-radius: 5px;", "}", ".blocklyRectangularDropdownMenu {", "  border-radius: 5px;", "  box-shadow: none !important;", "}", ".goog-option-selected .goog-menuitem-checkbox,", ".goog-option-selected .goog-menuitem-icon {", "}", "/* Category tree in Toolbox. */", 
+".blocklyToolboxDiv {", "  background-color: #ddd;", "  display: none;", "  overflow-x: visible;", "  overflow-y: auto;", "  position: absolute;", "}", ".blocklyTreeRoot {", "  padding: 4px 0;", "}", ".blocklyTreeRoot:focus {", "  outline: none;", "}", ".blocklyTreeRow {", "  line-height: 22px;", "  height: 22px;", "  padding-right: 1em;", "  white-space: nowrap;", "}", '.blocklyToolboxDiv[dir="RTL"] .blocklyTreeRow {', "  padding-right: 0;", "  padding-left: 1em !important;", "}", ".blocklyTreeRow:hover {", 
+"  background-color: #e4e4e4;", "}", ".blocklyTreeIcon {", "  height: 16px;", "  width: 16px;", "  vertical-align: middle;", "  background-image: url(%TREE_PATH%);", "}", ".blocklyTreeIconClosedLtr {", "  background-position: -32px -1px;", "}", ".blocklyTreeIconClosedRtl {", "  background-position: 0px -1px;", "}", ".blocklyTreeIconOpen {", "  background-position: -16px -1px;", "}", ".blocklyTreeIconNone {", "  background-position: -48px -1px;", "}", ".blocklyTreeSelected>.blocklyTreeIconClosedLtr {", 
+"  background-position: -32px -17px;", "}", ".blocklyTreeSelected>.blocklyTreeIconClosedRtl {", "  background-position: 0px -17px;", "}", ".blocklyTreeSelected>.blocklyTreeIconOpen {", "  background-position: -16px -17px;", "}", ".blocklyTreeSelected>.blocklyTreeIconNone {", "  background-position: -48px -17px;", "}", ".blocklyTreeLabel {", "  cursor: default;", "  font-family: sans-serif;", "  font-size: 16px;", "  padding: 0 3px;", "  vertical-align: middle;", "}", ".blocklyTreeSelected {", "  background-color: #57e !important;", 
+"}", ".blocklyTreeSelected .blocklyTreeLabel {", "  color: #fff;", "}", ".blocklyArrow {", "  font-size: 80%;", "}", ".paramToolbox {", "  padding: 0 0 5px 0;", "}", ".paramToolbox input, .paramToolbox textarea {", "  box-sizing: border-box;", "  width: 100%;", "  margin: 0;", "  resize: none;", "}", ".paramToolbox input, .paramToolbox button {", "  height: 30px;", "  margin: 0;", "}", ".paramToolbox div {", "  margin: 4px 10px;", "}", "#modalContainer {", "  position: absolute;", "  top: 45px;", 
+"  width: 100%;", "  height: 100%;", "}", "#modalContainer > svg {", "  position: absolute;", "  top: 0;", "  left: 0;", "  background: transparent;", "  pointer-events: none;", "}", "#modalContainer > svg * {", "  pointer-events: visiblePainted;", "}", "/*", " * Copyright 2007 The Closure Library Authors. All Rights Reserved.", " *", " * Use of this source code is governed by the Apache License, Version 2.0.", " * See the COPYING file for details.", " */", "/* Author: pupius@google.com (Daniel Pupius) */", 
+"/*", " Styles to make the colorpicker look like the old gmail color picker", " NOTE: without CSS scoping this will override styles defined in palette.css", "*/", ".goog-palette {", "  outline: none;", "  cursor: default;", "}", ".goog-palette-table {", "  border: 1px solid #666;", "  border-collapse: collapse;", "}", ".goog-palette-cell {", "  height: 25px;", "  width: 25px;", "  margin: 0;", "  border: 0;", "  text-align: center;", "  vertical-align: middle;", "  border-right: 1px solid #666;", 
+"  font-size: 1px;", "}", ".goog-palette-colorswatch {", "  position: relative;", "  height: 25px;", "  width: 25px;", "  border: 1px solid #666;", "}", ".goog-palette-cell-hover .goog-palette-colorswatch {", "  border: 1px solid #FFF;", "}", ".goog-palette-cell-selected .goog-palette-colorswatch {", "  border: 1px solid #000;", "  color: #fff;", "}", ".goog-menu {", "  background: #fff;", "  border-color: #ccc #666 #666 #ccc;", "  border-style: solid;", "  border-width: 1px;", "  cursor: default;", 
+"  font: normal 13px Arial, sans-serif;", "  margin: 0;", "  outline: none;", "  padding: 4px 0;", "  position: absolute;", "  z-index: 20000;", "}", ".goog-menuitem {", "  color: #000;", "  font: normal 13px Arial, sans-serif;", "  list-style: none;", "  margin: 0;", "  padding: 4px 7em 4px 28px;", "  white-space: nowrap;", "}", ".goog-menuitem.goog-menuitem-rtl {", "  padding-left: 7em;", "  padding-right: 28px;", "}", ".goog-menu-nocheckbox .goog-menuitem,", ".goog-menu-noicon .goog-menuitem {", 
+"  padding-left: 12px;", "}", ".goog-menu-noaccel .goog-menuitem {", "  padding-right: 20px;", "}", ".goog-menuitem-content {", "  color: #000;", "  font-size: 15px;", "}", ".goog-menuitem-disabled .goog-menuitem-accel,", ".goog-menuitem-disabled .goog-menuitem-content {", "  color: #ccc !important;", "}", ".goog-menuitem-disabled .goog-menuitem-icon {", "  opacity: 0.3;", "  -moz-opacity: 0.3;", "  filter: alpha(opacity=30);", "}", ".goog-menuitem-highlight,", ".goog-menuitem-hover {", "  background-color: #d6e9f8;", 
+"  border-color: #d6e9f8;", "  border-style: dotted;", "  border-width: 1px 0;", "  padding-bottom: 3px;", "  padding-top: 3px;", "}", ".goog-menuitem-checkbox,", ".goog-menuitem-icon {", "  background-repeat: no-repeat;", "  height: 16px;", "  left: 6px;", "  position: absolute;", "  right: auto;", "  vertical-align: middle;", "  width: 16px;", "}", ".goog-menuitem-rtl .goog-menuitem-checkbox,", ".goog-menuitem-rtl .goog-menuitem-icon {", "  left: auto;", "  right: 6px;", "}", ".goog-option-selected .goog-menuitem-checkbox,", 
+".goog-option-selected .goog-menuitem-icon {", "}", ".goog-menuitem-accel {", "  color: #999;", "  direction: ltr;", "  left: auto;", "  padding: 0 6px;", "  position: absolute;", "  right: 0;", "  text-align: right;", "}", ".goog-menuitem-rtl .goog-menuitem-accel {", "  left: 0;", "  right: auto;", "  text-align: left;", "}", ".goog-menuitem-mnemonic-hint {", "  text-decoration: underline;", "}", ".goog-menuitem-mnemonic-separator {", "  color: #999;", "  font-size: 12px;", "  padding-left: 4px;", 
+"}", ".goog-menuseparator {", "  border-top: 1px solid #ccc;", "  margin: 4px 0;", "  padding: 0;", "}", ".goog-flat-menu-button {", "  background-color: #fff;", "  border: 1px solid #c9c9c9;", "  color: #333;", "  cursor: pointer;", "  font: normal 95%;", "  list-style: none;", "  margin: 0 2px;", "  outline: none;", "  padding: 1px 4px;", "  position: relative;", "  text-decoration: none;", "  vertical-align: middle;", "}", ".goog-flat-menu-button-disabled * {", "  border-color: #ccc;", "  color: #999;", 
+"  cursor: default;", "}", ".goog-flat-menu-button-hover {", "  border-color: #9cf #69e #69e #7af !important; /* Hover border wins. */", "}", ".goog-flat-menu-button-active {", "  background-color: #bbb;", "  background-position: bottom left;", "}", ".goog-flat-menu-button-focused {", "  border-color: #bbb;", "}", ".goog-flat-menu-button-caption {", "  padding-right: 10px;", "  vertical-align: top;", "}", ".goog-flat-menu-button-dropdown {", "  /* Client apps may override the URL at which they serve the sprite. */", 
+"  background: url(https://ssl.gstatic.com/editor/editortoolbar.png) no-repeat -388px 0;", "  position: absolute;", "  right: 2px;", "  top: 0;", "  vertical-align: top;", "  width: 7px;", "}", ".goog-inline-block {", "  position: relative;", "  display: -moz-inline-box; /* Ignored by FF3 and later. */", "  display: inline-block;", "}", ""];
 goog.provide("Blockly.inject");
 goog.require("Blockly.Css");
 goog.require("Blockly.BlockSpaceEditor");
@@ -21318,6 +22806,11 @@ Blockly.inject = function(container, opt_options) {
   Blockly.mainBlockSpace = Blockly.mainBlockSpaceEditor.blockSpace;
   if(Blockly.useModalFunctionEditor) {
     Blockly.functionEditor = new Blockly.FunctionEditor
+  }else {
+    if(Blockly.useContractEditor) {
+      Blockly.functionEditor = new Blockly.ContractEditor;
+      Blockly.contractEditor = Blockly.functionEditor
+    }
   }
 };
 Blockly.parseOptions_ = function(options) {
@@ -21372,7 +22865,8 @@ Blockly.parseOptions_ = function(options) {
   }
   return{RTL:!!options["rtl"], collapse:hasCollapse, readOnly:readOnly, maxBlocks:options["maxBlocks"] || Infinity, assetUrl:options["assetUrl"] || function(path) {
     return"./" + path
-  }, hasCategories:hasCategories, hasScrollbars:hasScrollbars, hasConcreteBlocks:hasConcreteBlocks, hasTrashcan:hasTrashcan, varsInGlobals:varsInGlobals, languageTree:tree, disableParamEditing:options["disableParamEditing"] || false, disableVariableEditing:options["disableVariableEditing"] || false, useModalFunctionEditor:options["useModalFunctionEditor"] || false, grayOutUndeletableBlocks:grayOutUndeletableBlocks}
+  }, hasCategories:hasCategories, hasScrollbars:hasScrollbars, hasConcreteBlocks:hasConcreteBlocks, hasTrashcan:hasTrashcan, varsInGlobals:varsInGlobals, languageTree:tree, disableParamEditing:options["disableParamEditing"] || false, disableVariableEditing:options["disableVariableEditing"] || false, useModalFunctionEditor:options["useModalFunctionEditor"] || false, useContractEditor:options["useContractEditor"] || false, grayOutUndeletableBlocks:grayOutUndeletableBlocks, editBlocks:options["editBlocks"] || 
+  false}
 };
 Blockly.initUISounds_ = function() {
   Blockly.loadAudio_([Blockly.assetUrl("media/click.mp3"), Blockly.assetUrl("media/click.wav"), Blockly.assetUrl("media/click.ogg")], "click");
@@ -21481,7 +22975,7 @@ Blockly.FieldParameter.dropdownChange = function(text) {
   var oldVar = this.getText();
   if(text === Blockly.Msg.RENAME_PARAMETER) {
     this.getParentEditor_().hideChaff();
-    text = Blockly.V.promptName(Blockly.Msg.RENAME_PARAMETER_TITLE.replace("%1", oldVar), oldVar);
+    text = Blockly.FieldVariable.promptName(Blockly.Msg.RENAME_PARAMETER_TITLE.replace("%1", oldVar), oldVar);
     if(text) {
       Blockly.Variables.renameVariable(oldVar, text, this.sourceBlock_.blockSpace)
     }
@@ -21621,6 +23115,7 @@ goog.require("Blockly.FieldTextInput");
 goog.require("Blockly.FieldVariable");
 goog.require("Blockly.FieldParameter");
 goog.require("Blockly.FunctionEditor");
+goog.require("Blockly.ContractEditor");
 goog.require("Blockly.Generator");
 goog.require("Blockly.ImageDimensionCache");
 goog.require("Blockly.Msg");

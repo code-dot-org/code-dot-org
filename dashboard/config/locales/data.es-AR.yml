@@ -100,6 +100,7 @@
         Wordsearch: Sopa de Letras
         Webapp: Webapp
         ArtistEC: El artista
+        TextMatch: Text Match
     trophy:
       name:
         Bronze: Bronce
@@ -123,7 +124,7 @@
         maze_2_1: Este cerdo me está poniendo furioso. ¡Ayudame a encontrarlo!
         maze_2_2_5: Traza el camino y llévame al cerdo tonto. Evita el TNT o las plumas
           volarán!
-        maze_2_3: "¡Guíame al demonio verde! (Cuidado con el TNT)"
+        maze_2_3: ¡Guíame al demonio verde! (Cuidado con el TNT)
         maze_2_4: Mantén la calma y ayúdame a encontrar el cerdo malo. O de lo contrario,
           ¡puedo enfadarme!
         maze_2_5: Hay una forma de llegar al tonto cerdo utilizando sólo 2 bloques.
@@ -156,9 +157,9 @@
           cosa U otra. Para llevarme al girasol intenta usar este nuevo bloque.
         maze_2_18: Una práctica más del bloque "si-sino", ¿Puedes hacerlo bien en
           tu primer intento?
-        maze_2_19: "¿Puedes agregar sólo 3 bloques para ayudarme a resolver un laberinto
+        maze_2_19: ¿Puedes agregar sólo 3 bloques para ayudarme a resolver un laberinto
           más complejo? Si lo haces bien, puedo caminar cualquier camino con curvas
-          sin importar su longitud."
+          sin importar su longitud.
         turtle_1_1: Hola, soy un artista. Puedes escribir código para hacerme dibujar
           casi cualquier cosa. Utiliza algunos bloques para hacerme dibujar por encima
           de las líneas grises de la imagen.
@@ -171,17 +172,17 @@
           bloque girar.'
         turtle_1_5: Ahora, para practicar, dibuja un triángulo y un cuadrado para
           dibujar un sobre.
-        turtle_1_6: "¿Puedes darte cuenta cómo dibujar este triángulo y cuadrado?
+        turtle_1_6: '¿Puedes darte cuenta cómo dibujar este triángulo y cuadrado?
           Ayuda: Haz el triángulo primero, y luego averigua cuánto girar antes de
-          dibujar el cuadrado."
+          dibujar el cuadrado.'
         turtle_1_7: Ok, vamos hacerlo un poco más difícil - ve si puedes dibujar estos
           anteojos verdes. Los cuadrados tienen 100 píxeles en cada lado, y están
           separados por 50 píxeles. ¡No te olvides de dibujar en verde!
         turtle_1_8: Muy bien, tratemos de averiguar qué pasa si ejecutas este código
           (o presionas "Ejecutar" para probarlo). Luego, repítelo las veces necesarias
           para completar el dibujo. Los colores serán diferentes cada vez.
-        turtle_1_9: "¿Puedes adivinar con qué número reemplazarías a los signos de
-          interrogación para dibujar un círculo?"
+        turtle_1_9: ¿Puedes adivinar con qué número reemplazarías a los signos de
+          interrogación para dibujar un círculo?
         turtle_1_10: '¡Lo lograste! Ahora, a dibujar cualquier cosa que quieras. Algunas
           ideas divertidas: un muñeco de palitos, un copo de nieve o un espiral. Prueba
           también el nuevo bloque "ajuste de ancho". ¡Que te diviertas!'
@@ -222,8 +223,8 @@
           paladas de tierra, usando el bloque "llenar".
         maze_karel_1_3: Muéveme a la pila de tierra y dime cuantas paladas de eliminar
           debo dar usando la menor cantidad de bloques posible.
-        maze_karel_1_4: "¿Puedes ayudarme a quitar las cuatro pilas de tierra? Sugerencia:
-          usa un bloque repetir si puedes."
+        maze_karel_1_4: '¿Puedes ayudarme a quitar las cuatro pilas de tierra? Sugerencia:
+          usa un bloque repetir si puedes.'
         maze_karel_1_5: 'Ayúdame a llenar todos estos agujeros con 5 paladas de tierra.
           Sugerencia: puedes poner un bloque "repetir" dentro del bloque "mientras".'
         maze_karel_1_6: Quita todas las pilas de tierra, utilizando la menor cantidad
@@ -293,9 +294,9 @@
           úsala para ayudarme a nivelar todas las pilas.
         maze_karel_2_6: Usa dos nuevas funciones, "llenar 8" y "quitar 8", que me
           ayuden a nivelar la pila y rellenar el agujero.
-        maze_karel_2_7: "¡Hay una vaca en mi campo! Escribe una nueva función que
-          me ayude a esquivar la vaca y quite la pila. Pon todos los bloques dentro
-          de la nueva función."
+        maze_karel_2_7: ¡Hay una vaca en mi campo! Escribe una nueva función que me
+          ayude a esquivar la vaca y quite la pila. Pon todos los bloques dentro de
+          la nueva función.
         maze_karel_2_8: Usa la nueva función, "evitar la vaca y quitar 1", para ayudarme
           a eliminar todas las pilas.
         maze_karel_2_9: Ok, aquí hay una función que elimina 4 diferentes pilas de
@@ -331,25 +332,25 @@
           una nueva casa. Utiliza esta función modificada para dibujar tres casas.
         turtle_3_9: ¿Puedes volver a crear la función "dibujar una casa" sin ayuda?
           Pruébalo y luego dibuja una hilera de casas.
-        turtle_3_10: "¡Has aprendido mucho! Ahora úsalo para dibujar lo que quieras.
-          Intentar dibujar una estrella, o un espiral o un copo de nieve sofisticado."
-        maze_karel_debug_seq_1: "¡Bienvenido a la depuración! Mi código no funciona
+        turtle_3_10: ¡Has aprendido mucho! Ahora úsalo para dibujar lo que quieras.
+          Intentar dibujar una estrella, o un espiral o un copo de nieve sofisticado.
+        maze_karel_debug_seq_1: ¡Bienvenido a la depuración! Mi código no funciona
           bien. ¿Puedes detectar el problema y arreglarlo para que pueda aplanar mi
-          campo y dejarlo listo para la siembra?"
-        maze_karel_debug_seq_2: "¿Qué funciona mal en este programa? ¿Cómo deberías
-          arreglarlo para quitar esa pila?"
+          campo y dejarlo listo para la siembra?
+        maze_karel_debug_seq_2: ¿Qué funciona mal en este programa? ¿Cómo deberías
+          arreglarlo para quitar esa pila?
         maze_karel_debug_repeat: Depura este programa por mí para que mi campo sea
           agradable y plano.
-        maze_karel_debug_while: "¿Cómo deberías cambiar este programa para ayudarme
-          a llenar el agujero?"
-        maze_karel_debug_if: "¡Ayuda! Arregla el programa para que mi campo esté completamente
-          plano."
+        maze_karel_debug_while: ¿Cómo deberías cambiar este programa para ayudarme
+          a llenar el agujero?
+        maze_karel_debug_if: ¡Ayuda! Arregla el programa para que mi campo esté completamente
+          plano.
         maze_karel_debug_if_else: Depura este programa para que pueda llenar los agujeros
           y quite todas las pilas.
-        maze_karel_debug_function_1: "¿Qué deberías cambiar en este programa para
-          ayudarme a eliminar todas las pilas?"
-        maze_karel_debug_function_2: "¿Puedes depurar este programa para mí así puedo
-          dejar mi campo plano?"
+        maze_karel_debug_function_1: ¿Qué deberías cambiar en este programa para ayudarme
+          a eliminar todas las pilas?
+        maze_karel_debug_function_2: ¿Puedes depurar este programa para mí así puedo
+          dejar mi campo plano?
         maze_karel_debug_function_3: 'Edita este programa para que pueda eliminar
           todas las pilas de mi campo. '
         turtle_5_1: Intente ejecutar este programa y haga cambios para ver que ocurre.
@@ -373,10 +374,9 @@
         maze_3_1: Tengo que llegar a ese cerdo! Escriba move() un par de veces, y
           de esa forma poder recuperar mis huevos.
         maze_3_2: Escríbeme un programa para haga todo el camino hasta el cerdo.
-        maze_3_3: "¿Cómo llego al cerdo? Asegúrate de que no pasar por la caja de
-          TNT!"
-        maze_3_4: "¡Argh! Escríbeme un programa que me haga esquivar el TNT y llegue
-          hasta el cerdo."
+        maze_3_3: ¿Cómo llego al cerdo? Asegúrate de que no pasar por la caja de TNT!
+        maze_3_4: ¡Argh! Escríbeme un programa que me haga esquivar el TNT y llegue
+          hasta el cerdo.
         bounce_1: Une un bloque al bloque "cuando flecha izquierda" y presiona "Ejecutar
           Programa". Mueve la paleta usando la flecha izquierda para alcanzar el objetivo
           final.
@@ -470,99 +470,99 @@
         jigsaw_10: Acomoda los bloques para formar una imagen
         jigsaw_11: Acomoda los bloques para formar una imagen
         jigsaw_12: Acomoda los bloques para formar una imagen
-        jigsaw_13: "¡Arregla el puzzle!"
+        jigsaw_13: ¡Arregla el puzzle!
         mazestep_1: Aquí va la descripción del paso del laberinto
         mazestep_2: Aquí va la descripción del paso del laberinto
         mazestep_3: Aquí va la descripción del paso del laberinto
         mazestep_4: Aquí va la descripción del paso del laberinto
         mazestep_5: Aquí va la descripción del paso del laberinto
         studio_c2_1: ¿Puedes hacer que este perro diga "Hola mundo"?
-        studio_c2_2: "¿Puedes hacer que el perro diga algo y que el gato le conteste
-          algo?"
-        studio_c2_3: "¿Puedes crear un programa que haga que el perro se mueva hacia
-          el gato?"
+        studio_c2_2: ¿Puedes hacer que el perro diga algo y que el gato le conteste
+          algo?
+        studio_c2_3: ¿Puedes crear un programa que haga que el perro se mueva hacia
+          el gato?
         studio_c2_4: ¿Puedes escribir un programa que haga que el perro se mueva hacia
           el gato, y que el gato diga "hola" cuando el perro se acerque a él?
         studio_c2_5: ¿Puedes escribir un programa para hacer que el pulpo diga "hola"
           cuando se hace clic sobre él?
-        studio_c2_6: "¿Puedes escribir un programa que haga que este pingüino se mueva
+        studio_c2_6: ¿Puedes escribir un programa que haga que este pingüino se mueva
           al presionar las teclas de flecha arriba /abajo / izquierda / derecha para
-          alcanzar todos los objetivos?"
+          alcanzar todos los objetivos?
         studio_c2_7: El bloque de "repetir para siempre" te permite ejecutar el código
           de manera continua.  ¿Puedes adjuntar los bloques que se necesitan para
           mover este dinosaurio hacia arriba y hacia abajo continuamente?
         studio_c2_8: ¿Puedes hacer que el pingüino diga "¡Ouch!" y reproduzca un sonido
           de "golpe", si él choca con el dinosaurio? hay moverlo con las teclas de
           flecha para hacer que esto ocurra
-        studio_c2_9: "¿Puedes agregar un bloque para anotar un punto cuando el pingüino
+        studio_c2_9: ¿Puedes agregar un bloque para anotar un punto cuando el pingüino
           choque con el pulpo?,  hay que moverlo con las teclas de flecha para anotar
-          un punto"
-        studio_c2_10: "¿Puedes agregar bloques para cambiar el fondo y la velocidad
-          del pingüino y moverlo con las teclas de flecha hasta anotar?"
+          un punto
+        studio_c2_10: ¿Puedes agregar bloques para cambiar el fondo y la velocidad
+          del pingüino y moverlo con las teclas de flecha hasta anotar?
         studio_c2_11: Crea tu propia historia. Cuando finalices, haz clic en Terminar
           para que tus amigos prueben tu historia en sus teléfonos.
         studio_c3_story_1: ¿Puedes hacer que este perro diga "Hola mundo"?
-        studio_c3_story_2: "¿Puedes hacer que el perro diga algo y que el gato le
-          conteste algo?"
-        studio_c3_story_3: "¿Puedes crear un programa que haga que el perro se mueva
-          hacia el gato?"
+        studio_c3_story_2: ¿Puedes hacer que el perro diga algo y que el gato le conteste
+          algo?
+        studio_c3_story_3: ¿Puedes crear un programa que haga que el perro se mueva
+          hacia el gato?
         studio_c3_story_4: ¿Puedes escribir un programa que haga que el perro se mueva
           hacia el gato, y que el gato diga "hola" cuando el perro se acerque a él?
-        studio_c3_story_5: "¿Puedes agregar un bloque para que el pulpo esté feliz?"
+        studio_c3_story_5: ¿Puedes agregar un bloque para que el pulpo esté feliz?
         studio_c3_story_6: Crea tu propia historia. Cuando finalices, haz clic en
           Terminar para que tus amigos prueben tu historia en sus teléfonos.
         studio_c3_game_1: ¿Puedes escribir un programa para hacer que el pulpo diga
           "hola" cuando se hace clic sobre él?
-        studio_c3_game_2: "¿Puedes escribir un programa que haga que este pingüino
+        studio_c3_game_2: ¿Puedes escribir un programa que haga que este pingüino
           se mueva al presionar las teclas de flecha arriba /abajo / izquierda / derecha
-          para alcanzar todos los objetivos?"
+          para alcanzar todos los objetivos?
         studio_c3_game_3: El bloque de "repetir para siempre" te permite ejecutar
           el código de manera continua.  ¿Puedes adjuntar los bloques que se necesitan
           para mover este dinosaurio hacia arriba y hacia abajo continuamente?
         studio_c3_game_4: ¿Puedes hacer que el pingüino diga "¡Ouch!" y reproduzca
           un sonido de "golpe", si él choca con el dinosaurio? hay moverlo con las
           teclas de flecha para hacer que esto ocurra
-        studio_c3_game_5: "¿Puedes agregar un bloque para anotar un punto cuando el
+        studio_c3_game_5: ¿Puedes agregar un bloque para anotar un punto cuando el
           pingüino choque con el pulpo?,  hay que moverlo con las teclas de flecha
-          para anotar un punto"
-        studio_c3_game_6: "¿Puedes agregar bloques para cambiar el fondo y la velocidad
-          del pingüino y moverlo con las teclas de flecha hasta anotar?"
+          para anotar un punto
+        studio_c3_game_6: ¿Puedes agregar bloques para cambiar el fondo y la velocidad
+          del pingüino y moverlo con las teclas de flecha hasta anotar?
         studio_c3_game_7: Crea tu propio juego. Cuando finalices haz clic en Terminar
           para que tus amigos prueben tu historia en sus teléfonos.
         studio_playlab_1: ¿Puedes hacer que este perro diga "Hola mundo"?
-        studio_playlab_2: "¿Puedes hacer que el perro diga algo y que el gato le conteste
-          algo?"
-        studio_playlab_3: "¿Puedes crear un programa que haga que el perro se mueva
-          hacia el gato?"
+        studio_playlab_2: ¿Puedes hacer que el perro diga algo y que el gato le conteste
+          algo?
+        studio_playlab_3: ¿Puedes crear un programa que haga que el perro se mueva
+          hacia el gato?
         studio_playlab_4: ¿Puedes escribir un programa que haga que el perro se mueva
           hacia el gato, y que el gato diga "hola" cuando el perro se acerque a él?
         studio_playlab_5: ¿Puedes escribir un programa para hacer que el pulpo diga
           "hola" cuando se hace clic sobre él?
-        studio_playlab_6: "¿Puedes escribir un programa que haga que este pingüino
+        studio_playlab_6: ¿Puedes escribir un programa que haga que este pingüino
           se mueva al presionar las teclas de flecha arriba /abajo / izquierda / derecha
-          para alcanzar todos los objetivos?"
+          para alcanzar todos los objetivos?
         studio_playlab_7: El bloque de "repetir para siempre" te permite ejecutar
           el código de manera continua.  ¿Puedes adjuntar los bloques que se necesitan
           para mover este dinosaurio hacia arriba y hacia abajo continuamente?
-        studio_playlab_8: "¿Puedes agregar un bloque para anotar un punto cuando el
+        studio_playlab_8: ¿Puedes agregar un bloque para anotar un punto cuando el
           pingüino choque con el pulpo?,  hay que moverlo con las teclas de flecha
-          para anotar un punto"
-        studio_playlab_9: "¿Puedes agregar bloques para cambiar el fondo y la velocidad
-          del pingüino y moverlo con las teclas de flecha hasta anotar?"
+          para anotar un punto
+        studio_playlab_9: ¿Puedes agregar bloques para cambiar el fondo y la velocidad
+          del pingüino y moverlo con las teclas de flecha hasta anotar?
         studio_playlab_10: Crea tu propio juego. Cuando finalices haz clic en Terminar
           para que tus amigos prueben tu historia en sus teléfonos.
         studio_full_sandbox: Crea tu propio juego. Cuando finalices haz clic en Terminar
           para que tus amigos prueben tu historia en sus teléfonos.
         studio_k1_1: ¿Puedes hacer que este perro diga "Hola mundo"?
-        studio_k1_2: "¿Puedes hacer que el perro diga algo y que el gato le conteste
-          algo?"
-        studio_k1_3: "¿Puedes crear un programa que haga que el perro se mueva hacia
-          el gato?"
+        studio_k1_2: ¿Puedes hacer que el perro diga algo y que el gato le conteste
+          algo?
+        studio_k1_3: ¿Puedes crear un programa que haga que el perro se mueva hacia
+          el gato?
         studio_k1_4: Haz que el perro se mueva hacia el gato y el gato diga "hola"
           cuando llegue a él.
-        studio_k1_5: "¿Puedes agregar un bloque para que el pulpo esté feliz?"
-        studio_k1_6: "¡Crea tu propia historia! Mueve al gato y perro alrededor, y
-          hazlos decir cosas."
+        studio_k1_5: ¿Puedes agregar un bloque para que el pulpo esté feliz?
+        studio_k1_6: ¡Crea tu propia historia! Mueve al gato y perro alrededor, y
+          hazlos decir cosas.
         maze_wordsearch_k_1: Muéveme para deletrear la palabra ESTE
         maze_wordsearch_k_2: Muéveme para deletrear la palabra SUR
         maze_wordsearch_k_3: Muéveme para deletrear la palabra OESTE
@@ -577,11 +577,14 @@
           la palabra SOBRE
         maze_wordsearch_k_16: Mueveme en una dirección, y luego en otra para deletrear
           la palabra DEBAJO
-        maze_wordsearch_k_20: "¡Esta es una prueba! Mueveme en una dirección, y luego
-          en otra para deletrear la palabra HISTORIA"
+        maze_wordsearch_k_20: ¡Esta es una prueba! Mueveme en una dirección, y luego
+          en otra para deletrear la palabra HISTORIA
         webapp_ec_simple: Create your web app by using createHtmlBlock.
         turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
           it in the new "penColour" block.'
+        turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas:
+          a stick figure, snowflake, or spiral. Also try the new "penWidth" block.
+          Have fun!'
     video:
       name:
         maze_intro: Introducción al Laberinto
@@ -597,8 +600,7 @@
         loop_for: Bloque Contador
         parameters: Funciones con parámetros
         hoc_wrapup: Repaso de la Hora del Código
-        20_wrapup: Repaso de 20 horas
-        Unplug1: "¿Que son las CC?"
+        Unplug1: ¿Que son las CC?
         Unplug2: Pensamiento computacional
         Unplug3: Programación de hoja cuadriculada
         Unplug4: Algoritmos
@@ -612,7 +614,7 @@
         C1_happy_maps_unplugged: Mapas Felices
         C1_moveitmoveit_unplugged: Muévelo, Muévelo
         C1_bigevent_unplugged: El Gran Evento
-        C1_getting_loop: Bucleandose
+        C1_getting_loopy: Bucleandose
         C1_pair_programming: Programación de pares
         C1_maze_intro_sequencing: Introducción a Secuenciamiento del Laberinto
         C1_maze_debugging: Depuración del Laberinto
@@ -624,19 +626,22 @@
         C1_maze_loops: Bucles de Laberinto
         C1_playlab_storytelling: Laboratorio de Juego - Crear una Historia
         C1_planting_seed: Plantando una Semilla
-        C1_building_foundating: Construyendo una base
+        C1_building_foundation: Construyendo una base
         C2_maze_intro: Introducción al Laberinto
         C2_artist_intro: Introducción al Artista
         C2_zuck_repeat_loop: Bucles de Laberinto
         C2_artist_loops: Ciclos del Artista
+        C2_artist_debugging: Debugging del Artista
+        C2_bee_loops: Bucles de Abeja
+        C2_bee_debugging: Depuración Abeja
         C2_bee_conditionals: Condiciones de la Abeja
         C2_playlab_createstory: Laboratorio de Juego - Crear una Historia
         C2_graph_paper: Programación de hoja cuadriculada
         C2_conditionals_with_cards: Condicionales
         C2_binary_bracelets: Pulseras Binarias
-        C2_replay_programming: Programación bajo presión
+        C2_relay_programming: Programación bajo presión
         C2_paper_airplanes: Aviones de Papel
-        C3_maze_intro: Introducción al Laberinto
+        C3_maze_level_4: Bucles de Laberinto
         C3_artist_intro: Introducción al Artista
         C3_artist_functions: Funciones de artista
         C3_bee_functions: Funciones Abeja
@@ -670,4 +675,4 @@
         set_sprite_image: Adjunta un bloque "fijar actor a imagen" al bloque "cuando
           empieza la historia" para permitir que haya un actor en esta historia
         studio_say_text: Escribe lo que quieres que diga tu actor entre comillas
-        jigsaw_click: "¡Haz clic en este bloque!"
+        jigsaw_click: ¡Haz clic en este bloque!

@@ -139,12 +139,12 @@
       %{name}
   follower:
     invite_sent: Invitation sendt
-    added_teacher: "%{name} er tilføjet som din lærer"
+    added_teacher: '%{name} er tilføjet som din lærer'
     registered: Du er registreret til %{section_name}.
     error:
       signed_in: Log ud inden du fortsætter
       username_not_found: Brugernavn %{username} blev ikke fundet
-      username_in_use: "%{username} bruges allerede, vær venlig og vælg et andet"
+      username_in_use: '%{username} bruges allerede, vær venlig og vælg et andet'
       no_teacher: Vi kunne ikke finde nogen brugere der er logget ind med %{teacher_email_or_code}'.
         Vær venlig og spørg dem om at lave en bruger, og derefter prøv at tilføje
         dem.
@@ -188,7 +188,7 @@
       msg_publicschool: Bekræft venligst, at du er en Amerikansk offentlig skolelærer.
       msg_visit_website: Besøg Hjemmeside
     providers:
-      apple_itunes: "$10 iTunes Gift Card"
+      apple_itunes: $10 iTunes Gift Card
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10GB plads på Dropbox
@@ -197,7 +197,7 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: "$10 Skype credit"
+      skype: $10 Skype credit
     msg:
       choose: 'Choose a prize:'
       choose_teacher: 'Click on the logo below to claim your prize:'
@@ -244,12 +244,12 @@
     edit: Rediger
     edit_model: Rediger %{model}
     update: Opdater
-    destroy: "Ødelæg"
+    destroy: Ødelæg
     back: Tilbage
     confirm: Er du sikker?
-    created: "%{model} blev oprettet."
-    updated: "%{model} blev opdateret."
-    destroyed: "%{model} blev slettet."
+    created: '%{model} blev oprettet.'
+    updated: '%{model} blev opdateret.'
+    destroyed: '%{model} blev slettet.'
     access_denied: Du har ikke adgang til denne %{model}.
   nav:
     header:
@@ -276,13 +276,13 @@
       puzzle_map: Etaper
       prizes: Indsaml alle %{total_trophies} trofæer og vind præmier!
       prize_earned: Alle %{total_trophies} trofæer indsamlet. Prisen vundet!
-      prize_us_only: "(Kun for amerikanske studerende)"
+      prize_us_only: (Kun for amerikanske studerende)
       prizes_link: Mere info
   teacher:
     title:
       one: 'Din lærer:'
       other: 'Dine lærere:'
-    remove: "(Fjern lærer)"
+    remove: (Fjern lærer)
     confirm:
       remove: Er du sikker på, at du vil fjerne denne lærer?
     tools: Lærer redskaber
@@ -338,18 +338,18 @@
     rollup: Fremskridts oversigt
     activity: Seneste klasse aktivitet
     user_not_found: Lærer eller elev kunne ikke findes
-    cant_remove_student_no_email: "%{student_name} kan ikke fjernes som din studerende,
-      fordi %{student_name} ikke har registreret en e-mailadresse"
-    cant_remove_teacher_no_email: "%{teacher_name} kan ikke fjernes som din lærer,
-      fordi du ikke har registreret en e-mailadresse"
-    student_teacher_disassociated: "%{teacher_name} er blevet fjernet som lærer for
-      %{student_name}"
+    cant_remove_student_no_email: '%{student_name} kan ikke fjernes som din studerende,
+      fordi %{student_name} ikke har registreret en e-mailadresse'
+    cant_remove_teacher_no_email: '%{teacher_name} kan ikke fjernes som din lærer,
+      fordi du ikke har registreret en e-mailadresse'
+    student_teacher_disassociated: '%{teacher_name} er blevet fjernet som lærer for
+      %{student_name}'
   user:
     email_confirm_needed: 'E-mailadresse er ikke blevet bekræftet:'
     email_resend_confirm: Gensend bekræftelses instruktioner
-    new_password_hint: "(Efterlad blank hvis du ikke ønsker at ændre det)"
-    current_password_hint: "(vi har brug for din nuværende adgangskode til at bekræfte
-      dine ændringer)"
+    new_password_hint: (Efterlad blank hvis du ikke ønsker at ændre det)
+    current_password_hint: (vi har brug for din nuværende adgangskode til at bekræfte
+      dine ændringer)
     cancel:
       title: Annuller min konto
       hint: Ulykkelig?
@@ -400,9 +400,9 @@
     test_videos_help: Teste vores nye video-afspiller på din skole
     try_beta_courses: Nyt! Prøv vores beta kurser for K-5 elever
     use_as_teacher: Bruge dette websted som en lærer
-    heading_elementary: "<h2>20 timers kurser for</h2><h1>Basis studerende</h1>"
-    heading_apps: "<h2>Sjov for</h2><h1>Alle</h1>"
-    heading_legacy: "<h2>Vores generelle kursus for</h2><h1>Alle aldre</h1>"
+    heading_elementary: <h2>20 timers kurser for</h2><h1>Basis studerende</h1>
+    heading_apps: <h2>Sjov for</h2><h1>Alle</h1>
+    heading_legacy: <h2>Vores generelle kursus for</h2><h1>Alle aldre</h1>
     gallery:
       your_turtle: Mit kunstværk
       your_studio: Mine Apps
@@ -460,7 +460,7 @@
   slow_loading: Dette tager længere tid end normalt...
   try_reloading: Prøv at genindlæse siden
   next_stage: Færdig! Fortsæt til næste fase
-  download_pdf: "Åben lektionsplan"
+  download_pdf: Åben lektionsplan
   view_lesson_plan: Se lektionsplan
   pdf_download: Download PDF
   share_code:
@@ -509,7 +509,7 @@
     want_to_make_your_own: Vil du lave dit eget?
     more: Mere &rarr;
     caption_by_name_age: af %{name}, alder %{age}
-    caption_time_ago: "%{time_ago} siden"
+    caption_time_ago: '%{time_ago} siden'
   landing:
     prerelease: Dette kursus er i <span class='betatext'> beta</span>.  Dette betyder,
       at det ikke er den endelige version af kurset, og er undergivet revision som

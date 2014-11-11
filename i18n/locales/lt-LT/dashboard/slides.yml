@@ -1,253 +1,253 @@
-lt:
+"lt":
   slides:
     maze_intro:
       1:
-        image: notes/hoc1_1.jpg
-        text: Sveiki atvykę į savo pirmąją „Programavimo valandą“ (Hour of Code)! Pamėginkime pažiūrėti, kaip atrodo programavimas.
+        image: "notes/hoc1_1.jpg"
+        text: "Sveiki atvykę į savo pirmąją „Programavimo valandą“ (Hour of Code)! Pamėginkime pažiūrėti, kaip atrodo programavimas."
       2:
-        image: notes/hoc1_2.jpg
-        text: Naudosime Blockly, vizualią programavimo kalbą, kurioje reikia vilkti ir sujungti blokelius, kad parašyti programos kodą.
+        image: "notes/hoc1_2.jpg"
+        text: "Naudosime Blockly, vizualią programavimo kalbą, kurioje reikia vilkti ir sujungti blokelius, kad parašyti programos kodą."
       3:
-        image: notes/hoc1_3.jpg
-        text: Dažniausiai kodas yra rašomas ranka, tačiau Blockly turi vizualią aplinką. Kiekvienas blokelis atitinką vieną eilutę tikro rašomo kodo.
+        image: "notes/hoc1_3.jpg"
+        text: "Dažniausiai kodas yra rašomas ranka, tačiau Blockly turi vizualią aplinką. Kiekvienas blokelis atitinką vieną eilutę tikro rašomo kodo."
       4:
-        image: notes/hoc1_4.jpg
+        image: "notes/hoc1_4.jpg"
         text: 'Susipažinsite su programavimo pagrindais, kurie yra naudojami visur: nuo programėlių kūrimo iki robotų valdymo.'
       5:
-        image: notes/hoc1_5.jpg
-        text: Programa yra instrukcijų sąrašas, kurias turi įvykdyti Jūsų kompiuteris.
+        image: "notes/hoc1_5.jpg"
+        text: "Programa yra instrukcijų sąrašas, kurias turi įvykdyti Jūsų kompiuteris."
       6:
-        image: notes/hoc1_6.jpg
-        text: Jūsų pirmosios programos tikslas yra nuvesti paukštį per labirintą iki žalios kiaulės.
+        image: "notes/hoc1_6.jpg"
+        text: "Jūsų pirmosios programos tikslas yra nuvesti paukštį per labirintą iki žalios kiaulės."
       7:
-        image: notes/hoc1_7.jpg
-        text: Kairėje yra labirintas, kuriame veikia Jūsų programa. Kiekvienos užduoties instrukcijos yra matomos labirinto apačioje.
+        image: "notes/hoc1_7.jpg"
+        text: "Kairėje yra labirintas, kuriame veikia Jūsų programa. Kiekvienos užduoties instrukcijos yra matomos labirinto apačioje."
       8:
-        image: notes/hoc1_8.jpg
-        text: Labirinto dešinėje yra priemonės, su kuriomis galima valdyti paukštį. Jomis reikės naudotis rašant savo programas.
+        image: "notes/hoc1_8.jpg"
+        text: "Labirinto dešinėje yra priemonės, su kuriomis galima valdyti paukštį. Jomis reikės naudotis rašant savo programas."
       9:
-        image: notes/hoc1_9.jpg
-        text: Dešinėje yra baltas darbo laukas, į kurį reikės nuvilkti blokelius, kad sudėlioti programą. Jeigu norite pašalinti blokelį, jį reikia nuvilkti į šiukšlinę kampe.
+        image: "notes/hoc1_9.jpg"
+        text: "Dešinėje yra baltas darbo laukas, į kurį reikės nuvilkti blokelius, kad sudėlioti programą. Jeigu norite pašalinti blokelį, jį reikia nuvilkti į šiukšlinę kampe."
       10:
-        image: notes/hoc1_10.jpg
-        text: Kiekvienas blokelis yra viena instrukcija. Jeigu baltame lauke bus vienas blokelis „judėk į priekį“ ir nuspausite mygtuką „Paleisti programą“, paukštis pajudės per vieną laukelį į priekį.
+        image: "notes/hoc1_10.jpg"
+        text: "Kiekvienas blokelis yra viena instrukcija. Jeigu baltame lauke bus vienas blokelis „judėk į priekį“ ir nuspausite mygtuką „Paleisti programą“, paukštis pajudės per vieną laukelį į priekį."
       11:
-        image: notes/hoc1_11.jpg
-        text: Kad paukštis padarytų daugiau veiksmų, reikia sulipdyti su blokelius baltame darbo lauke. Paukštis atliks visas sulipdytas komandas iš eilės vieną po kitos.
+        image: "notes/hoc1_11.jpg"
+        text: "Kad paukštis padarytų daugiau veiksmų, reikia sulipdyti su blokelius baltame darbo lauke. Paukštis atliks visas sulipdytas komandas iš eilės vieną po kitos."
       12:
-        image: notes/hoc1_12.jpg
-        text: Jeigu jau paleidote programą vieną kartą, galite ją pataisyti ir paspausti mygtuką „Iš naujo“.
+        image: "notes/hoc1_12.jpg"
+        text: "Jeigu jau paleidote programą vieną kartą, galite ją pataisyti ir paspausti mygtuką „Iš naujo“."
       13:
-        image: notes/hoc1_13.jpg
-        text: Einam ir pagaudykim kiaules!
+        image: "notes/hoc1_13.jpg"
+        text: "Einam ir pagaudykim kiaules!"
     artist_intro:
       1:
-        image: notes/stage5_1.jpg
-        text: Labas, aš esu JR! Kiekvienai lenktyninių automobilių komandai reikia bent vieno kompiuteristo, kad laimėtų lenktynes. Jis analizuoja automobilio duomenis ir gali padaryti, kad ji veiktų greičiau.
+        image: "notes/stage5_1.jpg"
+        text: "Labas, aš esu JR! Kiekvienai lenktyninių automobilių komandai reikia bent vieno kompiuteristo, kad laimėtų lenktynes. Jis analizuoja automobilio duomenis ir gali padaryti, kad ji veiktų greičiau."
       2:
-        image: notes/stage5_2.jpg
-        text: Šiose užduotyse reikės valdyti menininką, kuris piešia liniją ten, kur jis eina.
+        image: "notes/stage5_2.jpg"
+        text: "Šiose užduotyse reikės valdyti menininką, kuris piešia liniją ten, kur jis eina."
       3:
-        image: notes/stage5_3.jpg
-        text: Šis blokelis yra pavadintas „Judėk į priekį per 100 pikselių.“ Pikselis yra mažytis taškelis tavo ekrane.
+        image: "notes/stage5_3.jpg"
+        text: "Šis blokelis yra pavadintas „Judėk į priekį per 100 pikselių.“ Pikselis yra mažytis taškelis tavo ekrane."
       4:
-        image: notes/stage5_4.jpg
-        text: Šis blokelis yra pavadintas „Pasisuk į dešinę per 90 laipsnių“. Jis pasuks menininką tokiu pat kampu kaip ir paukštis labirinto užduotyse.
+        image: "notes/stage5_4.jpg"
+        text: "Šis blokelis yra pavadintas „Pasisuk į dešinę per 90 laipsnių“. Jis pasuks menininką tokiu pat kampu kaip ir paukštis labirinto užduotyse."
       5:
-        image: notes/stage5_5.jpg
-        text: Nuspaudus rodyklėlę ant bet kurio iš šių blokelių, galima pakeisti skaičių, per kiek pikselių menininkas pajudės į priekį arba kiek laipsnių pasisuks. Siūlau šiek tiek pažaisti su šiais blokais, kol taps aišku, kaip jie veikia.
+        image: "notes/stage5_5.jpg"
+        text: "Nuspaudus rodyklėlę ant bet kurio iš šių blokelių, galima pakeisti skaičių, per kiek pikselių menininkas pajudės į priekį arba kiek laipsnių pasisuks. Siūlau šiek tiek pažaisti su šiais blokais, kol taps aišku, kaip jie veikia."
     farmer_intro:
       1:
-        image: notes/stage9_1.jpg
-        text: Labas, aš esu Paola! Šiose užduotyse tu valdysi ūkininkę, kuriai reikia paruošti lauką, kad galėtų pradėti sodinti augalus.
+        image: "notes/stage9_1.jpg"
+        text: "Labas, aš esu Paola! Šiose užduotyse tu valdysi ūkininkę, kuriai reikia paruošti lauką, kad galėtų pradėti sodinti augalus."
       2:
-        image: notes/stage9_2.jpg
-        text: Jai reikės padėti nukasti visas purvo krūvas lauke arba užpildyti duobes žemėmis.
+        image: "notes/stage9_2.jpg"
+        text: "Jai reikės padėti nukasti visas purvo krūvas lauke arba užpildyti duobes žemėmis."
       3:
-        image: notes/stage9_3.jpg
+        image: "notes/stage9_3.jpg"
         text: 'Nauji blokeliai veikia štai taip: vienas nukasa vieną kastuvą, pilną purvo, jei tai yra purvo krūva, o kitas suverčia vieną kastuvą, pilną žemių, į duobę, jeigu tai yra duobė.'
       4:
-        image: notes/stage9_4.jpg
-        text: Krūvos ir duobės yra skirtingų dydžių. Ūkininkei reikia nurodyti, kiek kastuvų reikės panaudoti.
+        image: "notes/stage9_4.jpg"
+        text: "Krūvos ir duobės yra skirtingų dydžių. Ūkininkei reikia nurodyti, kiek kastuvų reikės panaudoti."
     flappy_intro:
       1:
-        image: pastabos/flappy01.jpg
-        text: Labas, aš esu Katie! Vienas smagiausių dalykų informatikoje yra tai, kad kompiuterio programa gali būti interaktyvi.
+        image: "pastabos/flappy01.jpg"
+        text: "Labas, aš esu Katie! Vienas smagiausių dalykų informatikoje yra tai, kad kompiuterio programa gali būti interaktyvi."
       2:
-        image: pastabos/flappy02.jpg
-        text: Kiekvieną kartą, kai žmogus nuspaudžia, baksteli pirštu ar ką nors parašo kompiuteryje ar telefone, nutinka koks nors veiksmas. Koks veiksmas yra atliekamas, priklauso nuo kodo, koks yra parašytas programoje.
+        image: "pastabos/flappy02.jpg"
+        text: "Kiekvieną kartą, kai žmogus nuspaudžia, baksteli pirštu ar ką nors parašo kompiuteryje ar telefone, nutinka koks nors veiksmas. Koks veiksmas yra atliekamas, priklauso nuo kodo, koks yra parašytas programoje."
       3:
-        image: pastabos/flappy03.jpg
+        image: "pastabos/flappy03.jpg"
         text: 'Pavyzdžiui, gali būti suprogramuotas toks įvykis: „kai bus nuspaustas pelės klavišas, grok garsą“ '
       4:
-        image: pastabos/flappy04.jpg
-        text: Ar kada nors teko girdėti apie žaidimą FlappyBird? Naudodami įvykius, išmoksime suprogramuoti savo asmeninę FlappyBird žaidimo versiją!
+        image: "pastabos/flappy04.jpg"
+        text: "Ar kada nors teko girdėti apie žaidimą FlappyBird? Naudodami įvykius, išmoksime suprogramuoti savo asmeninę FlappyBird žaidimo versiją!"
       5:
-        image: pastabos/flappy05.jpg
+        image: "pastabos/flappy05.jpg"
         text: 'Jūs kursite programas, jungdami komandų blokelius. '
       6:
-        image: pastabos/flappy06.jpg
+        image: "pastabos/flappy06.jpg"
         text: 'Darbo lauke pamatysi žalių blokelių - tai yra įvykių blokeliai. '
       7:
-        image: pastabos/flappy07.jpg
-        text: Jeigu nori, kad paukštis suplasnotų, kai nuspausi pelės klavišą, tai gali padaryti prikabinęs blokelį „plasnok“ prie reikalingo blokelio. Tai atlikus, žaisdamas Flappy žaidimą ir kaskart nuspaudęs pelės klavišą, priversi paukštį suplasnoti.
+        image: "pastabos/flappy07.jpg"
+        text: "Jeigu nori, kad paukštis suplasnotų, kai nuspausi pelės klavišą, tai gali padaryti prikabinęs blokelį „plasnok“ prie reikalingo blokelio. Tai atlikus, žaisdamas Flappy žaidimą ir kaskart nuspaudęs pelės klavišą, priversi paukštį suplasnoti."
       8:
-        image: pastabos/flappy08.jpg
+        image: "pastabos/flappy08.jpg"
         text: 'Kiekvienoje šio etapo užduotyje mes pateiksime po naują įvykio (angl. "event") blokelį (žalios spalvos). Jums reikės sugalvoti, kokias komandas jame reikės vykdyti.'
       9:
-        image: pastabos/flappy09.jpg
+        image: "pastabos/flappy09.jpg"
         text: 'Kai pamatysi rodyklę ant blokelio, tai reiškia, kad gali pakeisti nustatymus - pavyzdžiui, kokį garsą groti, kai Flappy atsitrenks į žemę.'
       10:
-        image: pastabos/flappy10.jpg
-        text: Paskutinėje užduotyje galėsite sukurti savo žaidimą ir pasidalinti jį su draugais. Linkime smagiai praleisti laiką!
+        image: "pastabos/flappy10.jpg"
+        text: "Paskutinėje užduotyje galėsite sukurti savo žaidimą ir pasidalinti jį su draugais. Linkime smagiai praleisti laiką!"
     loop_times:
       1:
-        image: notes/hoc2_1.jpg
-        text: Labas, aš esu Markas! Pasimokykime apie ciklus. Naudojant ciklus, galima nurodyti kompiuteriui, kad jis pakartotų bet kurias pasirinktas komandas iš naujo ir iš naujo, tūkstančius ar net milijonus kartų.
+        image: "notes/hoc2_1.jpg"
+        text: "Labas, aš esu Markas! Pasimokykime apie ciklus. Naudojant ciklus, galima nurodyti kompiuteriui, kad jis pakartotų bet kurias pasirinktas komandas iš naujo ir iš naujo, tūkstančius ar net milijonus kartų."
       2:
-        image: notes/hoc2_2.jpg
-        text: Šioje užduotyje reikia pajudinti paukštį per 5 laukelius, kad jis pagautų kiaulę.
+        image: "notes/hoc2_2.jpg"
+        text: "Šioje užduotyje reikia pajudinti paukštį per 5 laukelius, kad jis pagautų kiaulę."
       3:
-        image: notes/hoc2_3.jpg
-        text: Panaudokime naują blokelį „Kartok“.
+        image: "notes/hoc2_3.jpg"
+        text: "Panaudokime naują blokelį „Kartok“."
       4:
-        image: notes/hoc2_4.jpg
-        text: Užduot sulipdę 5 blokelius „judėk į priekį“...
+        image: "notes/hoc2_4.jpg"
+        text: "Užduot sulipdę 5 blokelius „judėk į priekį“..."
       5:
-        image: notes/hoc2_5.jpg
-        text: Mes galime įdėti blokelį „judėk į priekį“ į blokelio „kartok“ vidų. Taip pat reikia nurodyti skaičių kartojimo blokelyje, kad paukštis žinotų, kiek kartų kartoti šį veiksmą.
+        image: "notes/hoc2_5.jpg"
+        text: "Mes galime įdėti blokelį „judėk į priekį“ į blokelio „kartok“ vidų. Taip pat reikia nurodyti skaičių kartojimo blokelyje, kad paukštis žinotų, kiek kartų kartoti šį veiksmą."
       6:
-        image: notes/hoc2_6.jpg
+        image: "notes/hoc2_6.jpg"
         text: 'Dar vienas svarbus dalykas: į blokelio „kartok“ vidų galima įdėti daugiau nei vieną komandą.'
       7:
-        image: notes/hoc2_7.jpg
-        text: Sėkmės naudojant kartojimo blokelį!
+        image: "notes/hoc2_7.jpg"
+        text: "Sėkmės naudojant kartojimo blokelį!"
     loop_until:
       1:
-        image: notes/hoc3_1.jpg
-        text: Labas, aš esu Chris. Gruzijoje aš studijavau informatiką. Išmėginkime kartu naują blokelį „Kartok, kol“.
+        image: "notes/hoc3_1.jpg"
+        text: "Labas, aš esu Chris. Gruzijoje aš studijavau informatiką. Išmėginkime kartu naują blokelį „Kartok, kol“."
       2:
-        image: notes/hoc3_2.jpg
-        text: O jeigu mes nežinotume, kiek toli reikia skristi paukščiui, kad jis pasiektų kiaulę?
+        image: "notes/hoc3_2.jpg"
+        text: "O jeigu mes nežinotume, kiek toli reikia skristi paukščiui, kad jis pasiektų kiaulę?"
       3:
-        image: notes/hoc3_3.jpg
-        text: Jeigu į „kartok, kol“ blokelio vidų įdėsime blokelį „judėk į priekį“, paukštis eis į priekį TOL, KOL pasieks kiaulę (arba atsitrenks į sieną).
+        image: "notes/hoc3_3.jpg"
+        text: "Jeigu į „kartok, kol“ blokelio vidų įdėsime blokelį „judėk į priekį“, paukštis eis į priekį TOL, KOL pasieks kiaulę (arba atsitrenks į sieną)."
       4:
-        image: notes/hoc3_4.jpg
+        image: "notes/hoc3_4.jpg"
         text: 'Dar vienas svarbus dalykas: į blokelio „kartok, kol“ vidų, taip pat kaip ir į „kartok“ blokelio vidų, galima įdėti daugiau nei vieną komandą.'
     if:
       1:
-        image: notes/hoc4_1.jpg
+        image: "notes/hoc4_1.jpg"
         text: 'Labas, aš esu Bilas! Dabar išmoksime naują labai svarbų dalyką: sąlygos sakinį su žodeliu „jei“. Su juo kompiuteris nusprendžia, kaip elgtis.'
       2:
-        image: notes/hoc4_2.jpg
+        image: "notes/hoc4_2.jpg"
         text: 'Tokius sakinius tu naudoji kasdien. Pavyzdžiui, prieš išeidamas į lauką, tu nusprendi: „jeigu lyja, užsivilksiu lietpaltį“.'
       3:
-        image: notes/hoc4_3.jpg
-        text: Tu gali nurodyti zombiui, kad jis tikrintų, ar egzistuoja kelias į kairę. Jei tas kelias egzistuoja, zombis turi pasukti į kairę.
+        image: "notes/hoc4_3.jpg"
+        text: "Tu gali nurodyti zombiui, kad jis tikrintų, ar egzistuoja kelias į kairę. Jei tas kelias egzistuoja, zombis turi pasukti į kairę."
       4:
-        image: notes/hoc4_4.jpg
-        text: Kad galėtume tai atlikti, panaudokime blokelį „jei“ ir į jo vidų įdėkime blokelį „pasisuk į kairę“.
+        image: "notes/hoc4_4.jpg"
+        text: "Kad galėtume tai atlikti, panaudokime blokelį „jei“ ir į jo vidų įdėkime blokelį „pasisuk į kairę“."
       5:
-        image: notes/hoc4_5.jpg
-        text: Jeigu mes padėsime blokelį „judėk į priekį“ virš jo bei kartojimo blokelį aplinkui viską, kiekvieną kartą, kai zombis norės pajudėti, jis tikrins, ar egzistuoja kelias į kairę, ir jei jis egzistuoja, jis pasisuks. Kartojimo komanda yra būtina, kad būtų tikrinamas kelias kiekviename žingsnyje.
+        image: "notes/hoc4_5.jpg"
+        text: "Jeigu mes padėsime blokelį „judėk į priekį“ virš jo bei kartojimo blokelį aplinkui viską, kiekvieną kartą, kai zombis norės pajudėti, jis tikrins, ar egzistuoja kelias į kairę, ir jei jis egzistuoja, jis pasisuks. Kartojimo komanda yra būtina, kad būtų tikrinamas kelias kiekviename žingsnyje."
       6:
-        image: notes/hoc4_6.jpg
+        image: "notes/hoc4_6.jpg"
         text: 'Sakinai su žodžiu „jei“ yra labai svarbūs informatikoje. Viena iš pirmųjų programų, kurią aš parašiau, buvo žaidimas kryžiukai-nuliukai. Ten buvo sąlygos sakinys su žodeliu „jei“, kuris darė štai ką: jeigu sekančiu ėjimu žmogus gali laimėti, kompiuteris turi užblokuoti tą laukelį, su kuriuo žmogus galėtų laimėti.'
       7:
-        image: notes/hoc4_7.jpg
-        text: Sėkmės naudojant „jei“ blokelį!
+        image: "notes/hoc4_7.jpg"
+        text: "Sėkmės naudojant „jei“ blokelį!"
     if_else:
       1:
-        image: notes/hoc5_1.jpg
-        text: Labas, mano vardas Saloni. Aš naudoju informatiką medicinoje bei sveikatos apsaugoje. Susipažinkime su „jei-priešingu atveju“ blokeliu. Jis atrodo taip, kaip ir „jei“ blokelis, tačiau jis turi papildomą dalį gale, kuri sako, kas įvyks „priešingu atveju“.
+        image: "notes/hoc5_1.jpg"
+        text: "Labas, mano vardas Saloni. Aš naudoju informatiką medicinoje bei sveikatos apsaugoje. Susipažinkime su „jei-priešingu atveju“ blokeliu. Jis atrodo taip, kaip ir „jei“ blokelis, tačiau jis turi papildomą dalį gale, kuri sako, kas įvyks „priešingu atveju“."
       2:
-        image: notes/hoc5_2.jpg
+        image: "notes/hoc5_2.jpg"
         text: 'Jeigu įdėsime blokelį „judėk į priekį“ į vietą, kurioje yra parašyta „daryk“ bei blokelį „pasisuk į kairę“ į vietą, kurioje yra parašyta „priešingu atveju“, tai reikš, kad zombis rinksis vieną iš dviejų dalykų: jeigu kelias bus priekyje, zombis pajudės į priekį; PRIEŠINGU ATVEJU (jeigu kelio priekyje nebus), zombis pasisuks į kairę.'
       3:
-        image: notes/hoc5_3.jpg
-        text: Panašiai kaip ir su „jei“ blokeliu, aplink šį blokelį galima apgaubti blokelį „kartok, kol“, kad zombis vis judėdamas tikrintų, kur yra kelias ir kur reikia pasisukti.
+        image: "notes/hoc5_3.jpg"
+        text: "Panašiai kaip ir su „jei“ blokeliu, aplink šį blokelį galima apgaubti blokelį „kartok, kol“, kad zombis vis judėdamas tikrintų, kur yra kelias ir kur reikia pasisukti."
       4:
-        image: notes/hoc5_4.jpg
-        text: Nagi, pajudink tuos zombius!
+        image: "notes/hoc5_4.jpg"
+        text: "Nagi, pajudink tuos zombius!"
     function:
       1:
-        image: notes/stage13_1.jpg
-        text: Labas, mano vardas Brina, aš esu programuotoja ir dirbu prie Instagram programos. Susipažinsime su funkcijomis. Funkciją sudaro keletas komandų, įdėtų į ją. Norint tas komandas atlikti, mums tereikės panaudoti vieną funkcijos blokelį.
+        image: "notes/stage13_1.jpg"
+        text: "Labas, mano vardas Brina, aš esu programuotoja ir dirbu prie Instagram programos. Susipažinsime su funkcijomis. Funkciją sudaro keletas komandų, įdėtų į ją. Norint tas komandas atlikti, mums tereikės panaudoti vieną funkcijos blokelį."
       2:
-        image: notes/stage13_2.jpg
-        text: Taip pat išmoksite sukurti savo funkcijas. Funkcijos blokelis kampe turi žvaigždę, o šalia žvaigždės yra tos funkcijos pavadinimas.
+        image: "notes/stage13_2.jpg"
+        text: "Taip pat išmoksite sukurti savo funkcijas. Funkcijos blokelis kampe turi žvaigždę, o šalia žvaigždės yra tos funkcijos pavadinimas."
       3:
-        image: notes/stage13_3.jpg
-        text: Blokeliai, kurie yra įdėti po funkcijos pavadinimu, pasako, ką ši funkcija atliks. Šiame pavyzdyje funkcijos pavadinimas yra „užpildyk 5“, ir ji susideda iš vieno kartojimo blokelio bei blokelio „užpildyk 1“.
+        image: "notes/stage13_3.jpg"
+        text: "Blokeliai, kurie yra įdėti po funkcijos pavadinimu, pasako, ką ši funkcija atliks. Šiame pavyzdyje funkcijos pavadinimas yra „užpildyk 5“, ir ji susideda iš vieno kartojimo blokelio bei blokelio „užpildyk 1“."
       4:
-        image: notes/stage13_4.jpg
-        text: Nors funkcija jau yra baltame darbo lauke, ūkininkė tos funkcijos neatliks. Kad ji ją atliktų, mes turime ištraukti ir padėti blokelį į darbo lauką su reikalingos funkcijos pavadinimu, šiuo atveju „užpildyk 5“.
+        image: "notes/stage13_4.jpg"
+        text: "Nors funkcija jau yra baltame darbo lauke, ūkininkė tos funkcijos neatliks. Kad ji ją atliktų, mes turime ištraukti ir padėti blokelį į darbo lauką su reikalingos funkcijos pavadinimu, šiuo atveju „užpildyk 5“."
       5:
-        image: notes/stage13_5.jpg
+        image: "notes/stage13_5.jpg"
         text: 'Pasismaginkime su funkcijomis! '
     loop_while:
       1:
-        image: notes/stage9_5.jpg
+        image: "notes/stage9_5.jpg"
         text: 'Labas, mano vardas Makinde. Susipažinkime su blokeliu „kol“. '
       2:
-        image: notes/stage9_6.jpg
+        image: "notes/stage9_6.jpg"
         text: '„Kol“ blokelis veikia štai taip: bus atliekamas tas veiksmas, kuris yra į jį įdėtas. Jis vyks TOL, KOL aprašytas veiksmas šalia žodžio „KOL“ bus teisingas.'
       3:
-        image: notes/stage9_7.jpg
-        text: Pavyzdžiui, jeigu ūkininkė stovi ant purvo krūvos, ji ją tol nukasinės, kol ta purvo krūva bus nukasta.
+        image: "notes/stage9_7.jpg"
+        text: "Pavyzdžiui, jeigu ūkininkė stovi ant purvo krūvos, ji ją tol nukasinės, kol ta purvo krūva bus nukasta."
     loop_for:
       1:
-        image: notes/stage11_1.jpg
-        text: Labas, mano vardas Trina, aš dirbu Pixar kompanijoje. Prisidėjau prie daugelio animacinių filmų kūrimo, pavyzdžiui „Šrekas“.
+        image: "notes/stage11_1.jpg"
+        text: "Labas, mano vardas Trina, aš dirbu Pixar kompanijoje. Prisidėjau prie daugelio animacinių filmų kūrimo, pavyzdžiui „Šrekas“."
       2:
-        image: notes/stage11_2.jpg
-        text: Susipažinsime su nauju skaičiavimo blokeliu. Jis kartos ir kartos tuos pačius veiksmus, tačiau jie gali šiek tiek skirtis vienas nuo kito kiekvieną kartą.
+        image: "notes/stage11_2.jpg"
+        text: "Susipažinsime su nauju skaičiavimo blokeliu. Jis kartos ir kartos tuos pačius veiksmus, tačiau jie gali šiek tiek skirtis vienas nuo kito kiekvieną kartą."
       3:
-        image: notes/stage11_3.jpg
+        image: "notes/stage11_3.jpg"
         text: 'Šiame pavyzdyje ant naujo blokelio bus parašyta štai taip: „skaičiuok su skaitikliu nuo 50 iki 90 per 10“. Jo viduje bus blokelis „nubrėžk kvadratą“. Kvadrato kraštinės ilgis turės būti skaitiklis iš kategorijos „Kintamieji“.'
       4:
-        image: notes/stage11_4.jpg
-        text: Tai reiškia, kad mūsų menininkas iš pradžių nubrėš kvadratą su 50 pikselių ilgio kraštinėmis. Po to jis prie kraštinės ilgio pridės 10 ir vėl brėš kvadratą. Po to jis vis pridės po 10 prie dabartinės kraštinės, kol skaičius pasieks 90 pikselių. Taigi, bus nubrėžti kvadratai su kraštinėmis 50, 60, 70, 80 ir 90.
+        image: "notes/stage11_4.jpg"
+        text: "Tai reiškia, kad mūsų menininkas iš pradžių nubrėš kvadratą su 50 pikselių ilgio kraštinėmis. Po to jis prie kraštinės ilgio pridės 10 ir vėl brėš kvadratą. Po to jis vis pridės po 10 prie dabartinės kraštinės, kol skaičius pasieks 90 pikselių. Taigi, bus nubrėžti kvadratai su kraštinėmis 50, 60, 70, 80 ir 90."
     parameters:
       1:
-        image: notes/stage15_1.jpg
-        text: Labas, mano vardas Janete, aš dirbu su programa Zynga.
+        image: "notes/stage15_1.jpg"
+        text: "Labas, mano vardas Janete, aš dirbu su programa Zynga."
       2:
-        image: notes/stage15_2.jpg
-        text: Tarkime, kad mums reikia nupiešti krūvą skirtingų dydžių trikampių.
+        image: "notes/stage15_2.jpg"
+        text: "Tarkime, kad mums reikia nupiešti krūvą skirtingų dydžių trikampių."
       3:
-        image: notes/stage15_3.jpg
-        text: Mes galėtume viską sudėlioti rankomis (kas užimtų labai daug laiko) arba tiesiog panaudoti funkciją su parametrais.
+        image: "notes/stage15_3.jpg"
+        text: "Mes galėtume viską sudėlioti rankomis (kas užimtų labai daug laiko) arba tiesiog panaudoti funkciją su parametrais."
       4:
-        image: notes/stage15_4.jpg
-        text: Kad funkcijai uždėtumėme parametrą, reikia nuspausti ant mėlynos žvaigždės šalia funkcijos vardo, o tada nutempti „parametro pavadinimą“ į „parametro“ blokelį.
+        image: "notes/stage15_4.jpg"
+        text: "Kad funkcijai uždėtumėme parametrą, reikia nuspausti ant mėlynos žvaigždės šalia funkcijos vardo, o tada nutempti „parametro pavadinimą“ į „parametro“ blokelį."
       5:
-        image: notes/stage15_5.jpg
-        text: Jeigu įrašysi žodį „ilgis“ ten, kur yra parašyta raidė x ir nuspausi klavišą ENTER, sukursi ilgio parametrą savo funkcijai.
+        image: "notes/stage15_5.jpg"
+        text: "Jeigu įrašysi žodį „ilgis“ ten, kur yra parašyta raidė x ir nuspausi klavišą ENTER, sukursi ilgio parametrą savo funkcijai."
       6:
-        image: notes/stage15_6.jpg
+        image: "notes/stage15_6.jpg"
         text: 'Kai viską atliksi, nuspausk ant žvaigždės, kad parametrai pasislėptų. Dabar galima pasirinkti kategoriją „Kintamieji“ - ten bus atsiradęs tavo sukurtas blokelis „ilgis“. Jį galima įdėti į blokelį „judėk į priekį“, vietoj duotojo skaičiaus.'
       7:
-        image: notes/stage15_7.jpg
-        text: Kad būtų galima panaudoti funkciją su parametru, pasirink kategoriją „Funkcijos“ ir pasirink savo sukurtą funkciją „nubrėžk trikampį“, kuri apačioje turės sukurtą parametrą „ilgis“.
+        image: "notes/stage15_7.jpg"
+        text: "Kad būtų galima panaudoti funkciją su parametru, pasirink kategoriją „Funkcijos“ ir pasirink savo sukurtą funkciją „nubrėžk trikampį“, kuri apačioje turės sukurtą parametrą „ilgis“."
       8:
-        image: notes/stage15_8.jpg
+        image: "notes/stage15_8.jpg"
         text: 'Šalia parametro reikia prikabinti skaičių - kokio ilgio nori, kad būtų trikampio kraštinė. Tą skaičių galima rasti kategorijoje „Matematika“.'
     hoc_wrapup:
       1:
-        image: notes/hoc6_1.jpg
-        text: Sveikinu! Išspręsdamas paskutinę užduotį, tu parašei kodą, kurį perskaitęs BET KURIS robotas galės rasti kelią bet kokio ilgio labirinte, tunelyje, kas jis bebūtų – zombis, paukštis, robotas marse ar savarankiškai vairuojantis automobilis.
+        image: "notes/hoc6_1.jpg"
+        text: "Sveikinu! Išspręsdamas paskutinę užduotį, tu parašei kodą, kurį perskaitęs BET KURIS robotas galės rasti kelią bet kokio ilgio labirinte, tunelyje, kas jis bebūtų – zombis, paukštis, robotas marse ar savarankiškai vairuojantis automobilis."
       2:
-        image: notes/hoc6_2.jpg
-        text: Pagrindiniai dalykai, kokius čia panaudojai, yra naudojami kiekvienoje programoje, kokią tik esi išbandęs ar dar išbandysi. Tu mokeisi ir išmokai kartojimo komandas, kartojimą, kol įvyks koks nors įvykis, sąlyginius sakinius „jei-tai“ ir „jei-priešingu atveju“.
+        image: "notes/hoc6_2.jpg"
+        text: "Pagrindiniai dalykai, kokius čia panaudojai, yra naudojami kiekvienoje programoje, kokią tik esi išbandęs ar dar išbandysi. Tu mokeisi ir išmokai kartojimo komandas, kartojimą, kol įvyks koks nors įvykis, sąlyginius sakinius „jei-tai“ ir „jei-priešingu atveju“."
       3:
-        image: notes/hoc6_3.jpg
-        text: Jeigu Jums patiko „Programavimo valandos“ kursas, apsilankykite code.org svetainėje ir toliau mokykitės informatikos! Kai užbaigsite mūsų pateiktą 20-ties valandų kursą, būsite įgijęs programavimo pagrindus ir galėsite mokytis, kaip galima sukurti programėles telefonams, valdyti robotus, kurti žaidimus ir t. t.
+        image: "notes/hoc6_3.jpg"
+        text: "Jeigu Jums patiko „Programavimo valandos“ kursas, apsilankykite code.org svetainėje ir toliau mokykitės informatikos! Kai užbaigsite mūsų pateiktą 20-ties valandų kursą, būsite įgijęs programavimo pagrindus ir galėsite mokytis, kaip galima sukurti programėles telefonams, valdyti robotus, kurti žaidimus ir t. t."
       4:
-        image: notes/hoc6_4.jpg
+        image: "notes/hoc6_4.jpg"
         text: 'Technologijos keičia viską, ką mes darome ir visiškai nesvarbu, ar esate jaunas ar senas: programuoti yra smagu, tai kūrybinga ir tai išmokti gali kiekvienas!'
     20_wrapup:
       1:
-        image: notes/bird.png
-        text: Jau greitai bus galima pamatyti pastabas!
+        image: "notes/bird.png"
+        text: "Jau greitai bus galima pamatyti pastabas!"

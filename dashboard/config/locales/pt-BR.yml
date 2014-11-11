@@ -2,7 +2,7 @@
   activerecord:
     errors:
       messages:
-        blank: "é obrigatório"
+        blank: é obrigatório
     attributes:
       user:
         name: Nome para exibição
@@ -141,12 +141,12 @@
       %{name}
   follower:
     invite_sent: Convite enviado
-    added_teacher: "%{name} foi adicionado como seu professor"
+    added_teacher: '%{name} foi adicionado como seu professor'
     registered: Você se cadastrou para %{section_name}.
     error:
       signed_in: Saia antes de prosseguir
       username_not_found: Nome de usuário %{username} não encontrado
-      username_in_use: "%{username} já está em uso, escolha outro"
+      username_in_use: '%{username} já está em uso, escolha outro'
       no_teacher: Nenhum cadastro com '%{teacher_email_or_code}' foi encontrado. Verifique
         se o cadastro está feito, e então adicione novamente
       section_not_found: Não foi possível encontrar uma seção com o código '%{section_code}'.
@@ -198,7 +198,7 @@
       ea_fifa: FIFA Soccer 13 (baixar para PC)
       ea_simcity: SimCity 4 Deluxe Edition (baixar para PC)
       ea_pvz: Plants vs. Zombies (baixar para PC)
-      skype: "$10 em créditos para Skype"
+      skype: $10 em créditos para Skype
     msg:
       choose: 'Escolha um prêmio:'
       choose_teacher: 'Clique no logo abaixo para retirar seu prêmio:'
@@ -250,9 +250,9 @@
     destroy: Destruir
     back: Voltar
     confirm: Tem certeza?
-    created: "%{model} foi criado com sucesso."
-    updated: "%{model} foi atualizado com sucesso."
-    destroyed: "%{model} foi excluído com êxito."
+    created: '%{model} foi criado com sucesso.'
+    updated: '%{model} foi atualizado com sucesso.'
+    destroyed: '%{model} foi excluído com êxito.'
     access_denied: Você não tem acesso a esse %{model}.
   nav:
     header:
@@ -262,7 +262,7 @@
         playlab: Crie um aplicativo
         artist: Desenhe alguma coisa
     user:
-      classroom: Meus alunos
+      classroom: Página inicial do professor
       label: Oi, %{username}
       stats: Meu progresso
       settings: Minha conta
@@ -280,13 +280,13 @@
       prizes: Colete todos os %{total_trophies} troféus e ganhe prêmios!
       prize_earned: Todos os %{total_trophies} troféus foram conquistados. Você ganhou
         o prêmio!
-      prize_us_only: "(Somente para alunos dos EUA)"
+      prize_us_only: (Somente para alunos dos EUA)
       prizes_link: Mais informação
   teacher:
     title:
       one: 'Seu professor:'
       other: 'Seus professores:'
-    remove: "(remover professor)"
+    remove: (remover professor)
     confirm:
       remove: Você tem certeza que deseja remover esse professor?
     tools: Ferramentas do professor
@@ -342,17 +342,17 @@
     rollup: Painel de controle do progresso
     activity: Atividade recente de classe
     user_not_found: O professor ou aluno não pôde ser encontrado
-    cant_remove_student_no_email: "%{student_name} não pode ser removido como seu
-      aluno porque %{student_name} não tem um endereço de email registrado"
-    cant_remove_teacher_no_email: "%{teacher_name} não pode ser removido como seu
-      professor porque você não registrou um endereço de email"
-    student_teacher_disassociated: "%{teacher_name} foi removido como professor de
-      %{student_name}"
+    cant_remove_student_no_email: '%{student_name} não pode ser removido como seu
+      aluno porque %{student_name} não tem um endereço de email registrado'
+    cant_remove_teacher_no_email: '%{teacher_name} não pode ser removido como seu
+      professor porque você não registrou um endereço de email'
+    student_teacher_disassociated: '%{teacher_name} foi removido como professor de
+      %{student_name}'
   user:
     email_confirm_needed: 'O endereço de email não foi confirmado:'
     email_resend_confirm: Reenviar instruções de confirmação
-    new_password_hint: "(deixe em branco se não quiser fazer alteração)"
-    current_password_hint: "(precisamos de sua senha atual para confirmar suas alterações)"
+    new_password_hint: (deixe em branco se não quiser fazer alteração)
+    current_password_hint: (precisamos de sua senha atual para confirmar suas alterações)
     cancel:
       title: Cancelar minha conta
       hint: Não está feliz?
@@ -404,9 +404,9 @@
     try_beta_courses: Novo! Conheça nossos cursos experimentais para alunos do pré
       ao 5º ano
     use_as_teacher: Use este site como um professor
-    heading_elementary: "<h2>Cursos de 20 horas para</h2><h1>alunos do ensino fundamental</h1>"
-    heading_apps: "<h2>Diversão para</h2><h1>todos</h1>"
-    heading_legacy: "<h2>Nosso curso geral para</h2><h1>todas as idades</h1>"
+    heading_elementary: <h2>Cursos de 20 horas para</h2><h1>alunos do ensino fundamental</h1>
+    heading_apps: <h2>Diversão para</h2><h1>todos</h1>
+    heading_legacy: <h2>Nosso curso geral para</h2><h1>todas as idades</h1>
     gallery:
       your_turtle: Minha arte
       your_studio: Meus aplicativos
@@ -522,7 +522,7 @@
     feedback: Dar feedback
     report_bug: Reportar erro
     support: Obter ajuda
-    support_url: "//support.code.org"
+    support_url: //support.code.org
   multi:
     wrong_title: Resposta incorreta
     wrong_body: A resposta que você digitou não está correta. Tente novamente!
@@ -533,6 +533,8 @@
     wrong_body: Sua solução não está correta. Tente novamente!
     correct_title: Correto
     correct_body: Essa é a resposta correta.
+  text_match:
+    placeholder: Enter your answer here
   dialog:
     ok: OK
   time:
@@ -585,3 +587,8 @@
     em nosso site. Você pode acessar <a href="http://support.code.org">support.code.org</a>
     sem se inscrever, ou pedir aos seus pais ou a um professor para que entrem em
     contato conosco.
+  progress:
+    not_completed: not completed
+    completed_too_many_blocks: completed, too many blocks
+    completed_perfect: completed, perfect
+    furthest_level_attempted: furthest level attempted

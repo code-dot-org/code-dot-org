@@ -2,124 +2,123 @@
   activerecord:
     errors:
       messages:
-        blank: "이(가) 필요합니다."
+        blank: 이(가) 필요합니다.
     attributes:
       user:
-        name: "사용자 이름"
-        email: "이메일"
+        name: 사용자 이름
+        email: 이메일
         username: username
         password: password
-        password_confirmation: "비밀번호 재확인"
-        current_password: "현재 비밀번호"
-        locale: "언어"
-        age: "나이"
-        gender: "성별"
-        edit_header: "계정 정보 수정"
+        password_confirmation: 비밀번호 재확인
+        current_password: 현재 비밀번호
+        locale: 언어
+        age: 나이
+        gender: 성별
+        edit_header: 계정 정보 수정
         error:
-          future: "오늘 이전 날짜만 가능합니다."
+          future: 오늘 이전 날짜만 가능합니다.
   hello: Hello world
-  welcome_back: "%{name} 님, 어서오세요. "
+  welcome_back: '%{name} 님, 어서오세요. '
   add_teacher_form:
     code_or_email:
-      label: "코드번호나 이메일 주소를 사용해 선생님을 등록하세요:"
-      placeholder: "코드번호(ABCDEF) 또는 이메일(teacher@school.edu)"
+      label: '코드번호나 이메일 주소를 사용해 선생님을 등록하세요:'
+      placeholder: 코드번호(ABCDEF) 또는 이메일(teacher@school.edu)
     code:
-      label: "섹션 코드로 선생님 추가"
-      placeholder: "코드(ABCDEF)"
-    submit: "선생님 추가하기"
+      label: 섹션 코드로 선생님 추가
+      placeholder: 코드(ABCDEF)
+    submit: 선생님 추가하기
   add_hint_form:
-    placeholder: "도움내용을 입력하세요."
-    submit: "도움말 추가하기"
+    placeholder: 도움내용을 입력하세요.
+    submit: 도움말 추가하기
   appname: Code.org
   stage: stage
-  stage_number: "스테이지 %{number}"
-  puzzle: "퍼즐"
+  stage_number: 스테이지 %{number}
+  puzzle: 퍼즐
   trophies: trophies
   courses: courses
-  of: "중"
-  more: "전체단계"
-  less: "현재단계"
+  of: 중
+  more: 전체단계
+  less: 현재단계
   try_hoc: 'Hour of Code 해보기! >> '
-  try_k8intro: "유치원~중2(K-8) 학생들을 위한 컴퓨터과학(CS, 정보과학) 코스(15-25시간) 를 해보세요."
-  k8intro: "유치원~중2(K-8) 학생들을 위한 컴퓨터과학(CS, 정보과학) 코스"
-  already_started: "학습 계속하기 >>"
-  demos: "관리자: 모든 퍼즐"
-  continue: "계속하기"
-  prize: "상품"
-  more_info: "자세히"
+  try_k8intro: 유치원~중2(K-8) 학생들을 위한 컴퓨터과학(CS, 정보과학) 코스(15-25시간) 를 해보세요.
+  k8intro: 유치원~중2(K-8) 학생들을 위한 컴퓨터과학(CS, 정보과학) 코스
+  already_started: 학습 계속하기 >>
+  demos: '관리자: 모든 퍼즐'
+  continue: 계속하기
+  prize: 상품
+  more_info: 자세히
   auth:
-    sign_in_with: "%{provider} 계정으로 로그인"
-    signed_in: "로그인 되었습니다!"
+    sign_in_with: '%{provider} 계정으로 로그인'
+    signed_in: 로그인 되었습니다!
     signed_out: <a href="%{url}">Code.org</a> 을 로그아웃하였습니다.
     sign_out_of: '%{provider} 를 사용해 로그인하였습니다. %{provider}<a href="%{url}">로그아웃하기</a>.'
-    already_signedup: "이미 가입했나요?"
-    notyet_signedup: "가입하시겠습니까?"
-    google_oauth2: "구글 계정"
+    already_signedup: 이미 가입했나요?
+    notyet_signedup: 가입하시겠습니까?
+    google_oauth2: 구글 계정
     twitter: Twitter
     facebook: Facebook
-    windowslive: "마이크로소프트 계정"
-    forgot_password: "비밀번호를 잊으셨나요?"
-    need_confirmation: "확인 메일을 받지 못 했나요?"
-    need_unlock: "잠김 해제 메일을 받지 못 했나요?"
+    windowslive: 마이크로소프트 계정
+    forgot_password: 비밀번호를 잊으셨나요?
+    need_confirmation: 확인 메일을 받지 못 했나요?
+    need_unlock: 잠김 해제 메일을 받지 못 했나요?
   signup_form:
     overview_student: 진도를 확인하기 위해서는 로그인하세요. 이메일 주소는 비밀번호 복구를 위해 사용됩니다.  <a href="http://code.org/privacy">개인정보보호
       정책</a>.
-    overview_teacher: "계정을 이용해 로그인하고 수업에서 컴퓨터과학(정보과학)을 교육하세요. 학생들을 추가하고 진도를 확인할 수
-      있습니다."
+    overview_teacher: 계정을 이용해 로그인하고 수업에서 컴퓨터과학(정보과학)을 교육하세요. 학생들을 추가하고 진도를 확인할 수 있습니다.
     no_signup_message: 여러 개의 단계로 이루어진 퍼즐들을 살펴보세요. <a target="_blank" href="http://learn.code.org">browse
       the various stages and puzzles</a> 해결한 퍼즐을 저장하려면 가입해야 합니다.
-    teacher_educator_guide: "교육자 가이드"
-    teacher_pitch: "교사 로그인"
-    teacher_title: "선생님으로 등록하기"
-    student_pitch: "학생 로그인"
-    student_title: "학생 가입"
-    school_name: "학교 이름 (옵션)"
-    school_address: "학교 주소 (옵션)"
-    address_placeholder: "주소, 군구, 시도, 우편번호"
-    gender: "성별 (옵션)"
-    birthday: "생일 (옵션)"
-    age: "나이"
+    teacher_educator_guide: 교육자 가이드
+    teacher_pitch: 교사 로그인
+    teacher_title: 선생님으로 등록하기
+    student_pitch: 학생 로그인
+    student_title: 학생 가입
+    school_name: 학교 이름 (옵션)
+    school_address: 학교 주소 (옵션)
+    address_placeholder: 주소, 군구, 시도, 우편번호
+    gender: 성별 (옵션)
+    birthday: 생일 (옵션)
+    age: 나이
     user_type: Are you a student or teacher?
-    submit: "가입 신청하기"
-    teacher: "선생님이신가요?"
-    valid_username: "사용 가능!"
-    invalid_username: "아이디는 최소 5문자 이상이어야 합니다."
-    taken_username: "이미 사용하고 있는 아이디입니다."
-    valid_password: "사용 가능한 비밀번호!"
-    invalid_password: "비밀번호는 최소 6 문자 이상이어야 합니다"
-    mismatch_password: "입력한 비밀번호가 일치하지 않습니다."
-    student_terms: "나는 Code.org 의 <a href='http://code.org/tos'>서비스 정책과  약관</a>에 동의합니다.
-      13세 미만인 경우에는 부모님 또는 보호자의 허락하에 Code.org의 서비스를 사용합니다. 13세 미만의 이메일 주소는 저장되지 않습니다."
-    teacher_terms: "나는 Code.org 의 <a href='http://code.org/tos'>서비스 정책과 약관</a>에 동의합니다."
-    additional_information: "가입하기 위해서는 추가적인 정보가 필요합니다."
+    submit: 가입 신청하기
+    teacher: 선생님이신가요?
+    valid_username: 사용 가능!
+    invalid_username: 아이디는 최소 5문자 이상이어야 합니다.
+    taken_username: 이미 사용하고 있는 아이디입니다.
+    valid_password: 사용 가능한 비밀번호!
+    invalid_password: 비밀번호는 최소 6 문자 이상이어야 합니다
+    mismatch_password: 입력한 비밀번호가 일치하지 않습니다.
+    student_terms: 나는 Code.org 의 <a href='http://code.org/tos'>서비스 정책과  약관</a>에 동의합니다.
+      13세 미만인 경우에는 부모님 또는 보호자의 허락하에 Code.org의 서비스를 사용합니다. 13세 미만의 이메일 주소는 저장되지 않습니다.
+    teacher_terms: 나는 Code.org 의 <a href='http://code.org/tos'>서비스 정책과 약관</a>에 동의합니다.
+    additional_information: 가입하기 위해서는 추가적인 정보가 필요합니다.
   signin_form:
-    title: "계정이 있으면? 로그인"
-    login: "이메일 또는 아이디"
-    password: "비밀번호"
-    remember: "아이디 기억하기"
-    submit: "로그인"
+    title: 계정이 있으면? 로그인
+    login: 이메일 또는 아이디
+    password: 비밀번호
+    remember: 아이디 기억하기
+    submit: 로그인
   signin:
-    try_heading: "가입하지 않고 코딩을 해보시겠습니까?"
+    try_heading: 가입하지 않고 코딩을 해보시겠습니까?
     try_hoc: Hour of Code 한시간 해보기
     try_20hours: 20시간 코스의 컴퓨터과학(CS, 정보과학) 해보기
   signinsection:
-    welcome: "%{section_name} 섹션에 온 것을 환영합니다."
-    name: "이름을 선택 하세요."
-    picture: "자신의 비밀 그림을 선택하세요."
-    words: "자신의 비밀 단어를 입력하세요."
-    login: "로그인"
+    welcome: '%{section_name} 섹션에 온 것을 환영합니다.'
+    name: 이름을 선택 하세요.
+    picture: 자신의 비밀 그림을 선택하세요.
+    words: 자신의 비밀 단어를 입력하세요.
+    login: 로그인
   password:
     reset_form:
-      title: "비밀번호를 잊으셨나요?"
-      email: "이메일"
-      submit: "비밀번호 변경하기"
+      title: 비밀번호를 잊으셨나요?
+      email: 이메일
+      submit: 비밀번호 변경하기
     change_form:
-      title: "비밀번호 변경"
-      new_password: "새 비밀번호"
-      confirm_password: "새 비밀번호 확인"
-      submit: "비밀번호 변경하기"
+      title: 비밀번호 변경
+      new_password: 새 비밀번호
+      confirm_password: 새 비밀번호 확인
+      submit: 비밀번호 변경하기
   welcome_email:
-    subject: "내 학급 가기(on Code.org)"
+    subject: 내 학급 가기(on Code.org)
     body: |
       Code.org 의 컴퓨터과학(Computer Science, 정보과학) 기초개념학습 코스에 가입하려면, 아래 링크를 누르세요.(선생님을 등록하세요)
 
@@ -129,54 +128,54 @@
 
       %{name}
   follower:
-    invite_sent: "초대 메일을 발송하였습니다"
-    added_teacher: "%{name} 가 선생님으로 추가되었습니다"
-    registered: "%{section_name}에 등록되었습니다."
+    invite_sent: 초대 메일을 발송하였습니다
+    added_teacher: '%{name} 가 선생님으로 추가되었습니다'
+    registered: '%{section_name}에 등록되었습니다.'
     error:
-      signed_in: "먼저, 로그아웃 하세요."
-      username_not_found: "%{username} 는 존재하지 않습니다"
-      username_in_use: "%{username} 는 이미 사용하고 있습니다, 다른 아이디를 선택하세요"
-      no_teacher: "'%{teacher_email_or_code}' 선생님을 찾을 수 없습니다. 선생님의 가입 여부를 확인한 후, 다시
-        시도하세요"
-      section_not_found: "'%{section_code}' 섹션의 코드를 찾을 수 없습니다."
-      blank_code: "섹션 코드를 입력하세요."
-      cant_join_own_section: "섹션에 참여할 수 없습니다."
+      signed_in: 먼저, 로그아웃 하세요.
+      username_not_found: '%{username} 는 존재하지 않습니다'
+      username_in_use: '%{username} 는 이미 사용하고 있습니다, 다른 아이디를 선택하세요'
+      no_teacher: '''%{teacher_email_or_code}'' 선생님을 찾을 수 없습니다. 선생님의 가입 여부를 확인한 후,
+        다시 시도하세요'
+      section_not_found: '''%{section_code}'' 섹션의 코드를 찾을 수 없습니다.'
+      blank_code: 섹션 코드를 입력하세요.
+      cant_join_own_section: 섹션에 참여할 수 없습니다.
     mail:
       invite_student:
-        subject: "%{teacher_name} 선생님의 학급에 참여하세요. Code.org!"
+        subject: '%{teacher_name} 선생님의 학급에 참여하세요. Code.org!'
       student_disassociated:
         subject: 'Code.org 알림: %{student_name} 학생은 더이상 등록되어있지 않습니다.'
       teacher_disassociated:
         subject: 'Code.org 알림: %{teacher_name} 선생님은 더이상 등록되어있지 않습니다.'
   reports:
     error:
-      access_denied: "이 학생의 학습 상황에 접근할 수 없습니다"
+      access_denied: 이 학생의 학습 상황에 접근할 수 없습니다
   redeem_prizes:
     title: 'Redeem 상품: %{name}'
-    provider: "제공:"
+    provider: '제공:'
     code: 'Redeem 코드:'
     redeem_header: 'To redeem:'
     donorschoose_register: DonorsChoose.org 에서 선생님으로 등록하세요.
-    donorschoose_project: "프로젝트 제출"
-    donorschoose_how_to: "리딤(redeem)코드 사용"
-    success: "상품을 Redeem 코드로 교환하였습니다. 코드를 확인하세요."
-    error: "상품을 Redeem 코드로 교환할 수 없습니다. 다시 시도해 보세요."
-    error_us_only: "미국 사용자에게만 상품이 주어집니다."
-    error_not_earned: "아직 상품을 얻지 못했습니다."
-    error_already_redeemed: "이미 상품으로 교환 되었습니다."
-    no_prizes_available: "죄송합니다. 현재 가능한 상품이 없습니다."
-    teacher_info_required: "선생님들을 위한 상품은 학교명과 주소 정보가 필요합니다 :"
-    teacher_email_required: "선생님 상품은 이메일 주소가 필요합니다:"
+    donorschoose_project: 프로젝트 제출
+    donorschoose_how_to: 리딤(redeem)코드 사용
+    success: 상품을 Redeem 코드로 교환하였습니다. 코드를 확인하세요.
+    error: 상품을 Redeem 코드로 교환할 수 없습니다. 다시 시도해 보세요.
+    error_us_only: 미국 사용자에게만 상품이 주어집니다.
+    error_not_earned: 아직 상품을 얻지 못했습니다.
+    error_already_redeemed: 이미 상품으로 교환 되었습니다.
+    no_prizes_available: 죄송합니다. 현재 가능한 상품이 없습니다.
+    teacher_info_required: '선생님들을 위한 상품은 학교명과 주소 정보가 필요합니다 :'
+    teacher_email_required: '선생님 상품은 이메일 주소가 필요합니다:'
     confirm:
       title: Redeem 코드 확인
-      'no': "아니요"
-      'yes': "예"
-      msg: "%{prize_name} 상품을 받으시겠습니까?"
-      msg_student: "주의 : 한 가지 유형의 상품만 선택할 수 있습니다."
-      msg_publicschool: "미국 공립학교 선생님인 것을 확인해 주세요."
+      'no': 아니요
+      'yes': 예
+      msg: '%{prize_name} 상품을 받으시겠습니까?'
+      msg_student: '주의 : 한 가지 유형의 상품만 선택할 수 있습니다.'
+      msg_publicschool: 미국 공립학교 선생님인 것을 확인해 주세요.
       msg_visit_website: Visit website
     providers:
-      apple_itunes: "$10 iTunes Gift Card"
+      apple_itunes: $10 iTunes Gift Card
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10GB Dropbox 저장공간
@@ -185,18 +184,18 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: "$10 Skype credit"
+      skype: $10 Skype credit
     msg:
-      choose: "상품을 선택하세요:"
-      choose_teacher: "아래에서 상품 로고를 선택하세요:"
-      earned: "상품을 얻었습니다!(미국 학생만 해당)"
-      not_earned_title: "기초개념학습 과정을 모두 완료하고, 상품을 받으세요.(미국 학생만 해당)"
-      not_earned: "컴퓨터과학(정보과학)의 프로그래밍 관련 기초개념을 배우고, 그와 관련한 트로피를 모두(총  %{num_trophies}개)
+      choose: '상품을 선택하세요:'
+      choose_teacher: '아래에서 상품 로고를 선택하세요:'
+      earned: 상품을 얻었습니다!(미국 학생만 해당)
+      not_earned_title: 기초개념학습 과정을 모두 완료하고, 상품을 받으세요.(미국 학생만 해당)
+      not_earned: '컴퓨터과학(정보과학)의 프로그래밍 관련 기초개념을 배우고, 그와 관련한 트로피를 모두(총  %{num_trophies}개)
         모아서 실제로 사용할 수 있는 상품을 받아보세요. $10 정도의 iTunes 기프트카드, 10GB 만큼의 Dropbox 저장용량, $10
-        만큼의 Skype 요금, 무료 게임 등이 제공됩니다. 주의: 미국 학생들에게만 한정 수량으로 제공됩니다."
+        만큼의 Skype 요금, 무료 게임 등이 제공됩니다. 주의: 미국 학생들에게만 한정 수량으로 제공됩니다.'
       teacher:
-        earned: "트로피를 모두(총 %{num_trophies}개) 모은 학생들이 15명 이상이 되었습니다. 선생님 상품이 주어집니다!(미국
-          선생님만 해당)"
+        earned: 트로피를 모두(총 %{num_trophies}개) 모은 학생들이 15명 이상이 되었습니다. 선생님 상품이 주어집니다!(미국
+          선생님만 해당)
         not_earned_title: 학생들과 함께 하고 $1,000(<a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>)
           크레딧을 받으세요.(미국 선생님만 해당)
         not_earned: 컴퓨터과학(정보과학) 교사들은 학급학생들을 지도해서, 처음에 $1,000 크레딧(<a href="http://DonorsChoose.org">DonorsChoose.org</a>)
@@ -206,321 +205,321 @@
         bonus:
           not_earned_title: 보너스 $250 크레딧(<a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>)을
             받을 수 있습니다.(미국 선생님만 해당)
-          earned: "트로피를 모두(총 %{num_trophies}) 모은 학생들 중 7명 이상이 여학생입니다. 보너스 상품을 받으세요.(미국
-            선생님만 해당)"
+          earned: 트로피를 모두(총 %{num_trophies}) 모은 학생들 중 7명 이상이 여학생입니다. 보너스 상품을 받으세요.(미국
+            선생님만 해당)
           not_earned: 최소 7명의 여학생이 트로피를 모두(총 %{num_trophies}개) 모으면, 추가적으로 $250 크레딧(<a
             target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>)이
             상품으로 주어집니다. 크레딧은 미국 공립학교 선생님들만 사용할 수 있습니다.
   crud:
-    new_model: "%{model} 만들기"
-    show: "보기"
-    edit: "편집"
-    edit_model: "%{model} 수정"
-    update: "갱신"
-    destroy: "삭제"
-    back: "뒤로"
-    confirm: "확실한가요?"
-    created: "%{model} 가 만들어졌습니다."
-    updated: "%{model} 가 수정 되었습니다."
-    destroyed: "%{model} 가 삭제되었습니다."
-    access_denied: "%{model} 에 접근할 권한이 없습니다."
+    new_model: '%{model} 만들기'
+    show: 보기
+    edit: 편집
+    edit_model: '%{model} 수정'
+    update: 갱신
+    destroy: 삭제
+    back: 뒤로
+    confirm: 확실한가요?
+    created: '%{model} 가 만들어졌습니다.'
+    updated: '%{model} 가 수정 되었습니다.'
+    destroyed: '%{model} 가 삭제되었습니다.'
+    access_denied: '%{model} 에 접근할 권한이 없습니다.'
   nav:
     header:
       finished_hoc: Hour of Code 완료
-      sign_in_to_save: "로그인(저장하기)"
+      sign_in_to_save: 로그인(저장하기)
       free_play:
-        playlab: "앱 만들기"
-        artist: "아무거나 그리기"
+        playlab: 앱 만들기
+        artist: 아무거나 그리기
     user:
-      classroom: "내 학생"
-      label: "안녕하세요? %{username} 님"
-      stats: "나의 진도"
-      settings: "내 계정"
-      prizes: "상품"
-      logout: "로그아웃"
-      signin: "로그인"
-      signup: "가입 신청하기"
-      already_registered: "이미 등록하였나요?"
+      classroom: 내 학생
+      label: 안녕하세요? %{username} 님
+      stats: 나의 진도
+      settings: 내 계정
+      prizes: 상품
+      logout: 로그아웃
+      signin: 로그인
+      signup: 가입 신청하기
+      already_registered: 이미 등록하였나요?
     popup:
-      progress: "내 진도"
-      lines: "총 %{lines} 라인"
-      close: "닫기"
-      mastery: "개념"
-      puzzle_map: "단계"
-      prizes: "트로피를 모두(%{total_trophies} 개) 모아 상품을 받으세요!"
-      prize_earned: "트로피를 모두(총 %{total_trophies} 개) 모았습니다. 상품을 받으세요!"
-      prize_us_only: "(U.S. students only)"
-      prizes_link: "자세히"
+      progress: 내 진도
+      lines: 총 %{lines} 라인
+      close: 닫기
+      mastery: 개념
+      puzzle_map: 단계
+      prizes: 트로피를 모두(%{total_trophies} 개) 모아 상품을 받으세요!
+      prize_earned: 트로피를 모두(총 %{total_trophies} 개) 모았습니다. 상품을 받으세요!
+      prize_us_only: (U.S. students only)
+      prizes_link: 자세히
   teacher:
     title:
-      one: "선생님 : "
-      other: "나의 선생님들:"
-    remove: "(선생님 삭제하기)"
+      one: '선생님 : '
+      other: '나의 선생님들:'
+    remove: (선생님 삭제하기)
     confirm:
-      remove: "선생님을 삭제하시겠습니까?"
-    tools: "선생님 메뉴"
+      remove: 선생님을 삭제하시겠습니까?
+    tools: 선생님 메뉴
     followers:
-      section: "섹션:"
-      stages: "단계 선택: "
-      show_past: "지금까지의 학생활동(%{bullet_html}) 살펴보기:"
-      levels_key: "단계 키"
-      perfect: "완벽히 완료하였습니다."
-      completed: "완료하였습니다만, 너무 많은 블럭들을 사용했습니다."
-      tried: "시도했습니다만, 완료되지 않았습니다."
-      not_tried: "아직 시도하지 않았습니다."
-      activity: "지난 %{hours} %{plural} 동안의 학생 활동 살펴보기"
-      no_section: "섹션이 없습니다."
+      section: '섹션:'
+      stages: '단계 선택: '
+      show_past: '지금까지의 학생활동(%{bullet_html}) 살펴보기:'
+      levels_key: 단계 키
+      perfect: 완벽히 완료하였습니다.
+      completed: 완료하였습니다만, 너무 많은 블럭들을 사용했습니다.
+      tried: 시도했습니다만, 완료되지 않았습니다.
+      not_tried: 아직 시도하지 않았습니다.
+      activity: 지난 %{hours} %{plural} 동안의 학생 활동 살펴보기
+      no_section: 섹션이 없습니다.
       trophies: trophies
     students:
-      name: "이름"
+      name: 이름
       username: username
       password: password
-      manage: "학생 관리"
-      dashboard: "선생님용 대시보드 가기"
-      add: "학생 추가"
-      remove: "학생 삭제하기"
-      confirm_remove: "이 학생을 삭제하시겠습니까?"
-      help_reassign: "학급을 여러 개의 섹션으로 나누기 위해서는 학생들을 새로운 섹션으로 할당하세요."
-      help_register: "학생들의 데이터를 가져오기 위해 많은 시간을 들일 필요가 없이, 학생들에게 등록하도록 할 수 있습니다. 학생들은
+      manage: 학생 관리
+      dashboard: 선생님용 대시보드 가기
+      add: 학생 추가
+      remove: 학생 삭제하기
+      confirm_remove: 이 학생을 삭제하시겠습니까?
+      help_reassign: 학급을 여러 개의 섹션으로 나누기 위해서는 학생들을 새로운 섹션으로 할당하세요.
+      help_register: 학생들의 데이터를 가져오기 위해 많은 시간을 들일 필요가 없이, 학생들에게 등록하도록 할 수 있습니다. 학생들은
         사용자이름과 비밀번호를 사용할 수 있으며, 추가적인 이메일 주소가 필요없습니다. 학생이 비밀 번호를 잊어버리면, 학생의 비밀 번호를
-        재설정 할 수 있습니다."
-      register: "학생들이 등록하도록 요청하기"
-      vist: "학생들이 방문하도록 요청하기"
-      section_code: "그리고 섹션코드를 입력하세요."
-      first_please: "먼저, %{add_section} 하세요."
-      for: "~에 대해서"
-      enter: "입력:"
+        재설정 할 수 있습니다.
+      register: 학생들이 등록하도록 요청하기
+      vist: 학생들이 방문하도록 요청하기
+      section_code: 그리고 섹션코드를 입력하세요.
+      first_please: 먼저, %{add_section} 하세요.
+      for: ~에 대해서
+      enter: '입력:'
     sections:
-      add: "섹션 추가하기"
-      manage: "섹션 관리하기"
-      section: "섹션"
-      students: "학생들"
-      section_code: "섹션 코드"
-      add_section_code: "학생 섹션코드 추가하기"
-      secret: "비밀번호 입력"
-      grade: "등급"
-      course: "코스"
-      rename: "이름 바꾸기"
-      edit: "수정하기"
-      delete: "삭제하기"
-      confirm_delete: "이 섹션을 삭제하시겠습니까?"
-      email: "이메일 보내기"
-    rollup: "학습 현황"
-    activity: "최근 학습 활동"
-    user_not_found: "선생님이나 학생을 찾을 수 없습니다."
-    cant_remove_student_no_email: "%{student_name} 학생은 등록된 이메일 주소가 아니기 때문에 삭제할 수 없습니다."
-    cant_remove_teacher_no_email: "%{teacher_name} 선생님은 등록된 이메일 주소가 아니기 때문에 삭제할 수
-      없습니다."
-    student_teacher_disassociated: "%{teacher_name} 선생님은 %{student_name} 학생의 선생님에서
-      삭제되었습니다."
+      add: 섹션 추가하기
+      manage: 섹션 관리하기
+      section: 섹션
+      students: 학생들
+      section_code: 섹션 코드
+      add_section_code: 학생 섹션코드 추가하기
+      secret: 비밀번호 입력
+      grade: 등급
+      course: 코스
+      rename: 이름 바꾸기
+      edit: 수정하기
+      delete: 삭제하기
+      confirm_delete: 이 섹션을 삭제하시겠습니까?
+      email: 이메일 보내기
+    rollup: 학습 현황
+    activity: 최근 학습 활동
+    user_not_found: 선생님이나 학생을 찾을 수 없습니다.
+    cant_remove_student_no_email: '%{student_name} 학생은 등록된 이메일 주소가 아니기 때문에 삭제할 수 없습니다.'
+    cant_remove_teacher_no_email: '%{teacher_name} 선생님은 등록된 이메일 주소가 아니기 때문에 삭제할 수
+      없습니다.'
+    student_teacher_disassociated: '%{teacher_name} 선생님은 %{student_name} 학생의 선생님에서
+      삭제되었습니다.'
   user:
-    email_confirm_needed: "이메일 주소가 확인되지 않았습니다:"
-    email_resend_confirm: "이메일 확인 재발송"
-    new_password_hint: "(바꾸고 싶지 않으면, 비워 두세요)"
-    current_password_hint: "(수정하기 위해 비밀번호를 한 번 더 입력해 주세요.)"
+    email_confirm_needed: '이메일 주소가 확인되지 않았습니다:'
+    email_resend_confirm: 이메일 확인 재발송
+    new_password_hint: (바꾸고 싶지 않으면, 비워 두세요)
+    current_password_hint: (수정하기 위해 비밀번호를 한 번 더 입력해 주세요.)
     cancel:
-      title: "계정 삭제하기"
-      hint: "불편한 점이 있나요?"
-      button: "계정 삭제"
+      title: 계정 삭제하기
+      hint: 불편한 점이 있나요?
+      button: 계정 삭제
   user_level:
-    completed: "완료"
-    tried: "시도"
+    completed: 완료
+    tried: 시도
   user_stats:
-    recent_activity: "최근 활동"
-    show_more: "자세히"
-    classroom_activity: "언플러그드 활동"
+    recent_activity: 최근 활동
+    show_more: 자세히
+    classroom_activity: 언플러그드 활동
   home:
-    title: "코드 스튜디오"
-    all_courses: "코스1, 2, 3 살펴보기"
-    lesson_plans: "레슨 계획"
-    signin_message: "이미 등록되어있나요? %{link}"
-    student_reg_link: "학생 가입하기"
-    teacher_reg_link: "선생님 가입하기"
-    signin_directions: "진도를 기록하기 위해 계정을 사용하세요.<br/> 선생님들은 여러분의 모든 과정을 살펴볼 수 있습니다."
-    teacher_dashboard: "학습 현황"
-    teacher_student_count_one: "나의 학생들은 %{count} 명 입니다."
-    teacher_student_count: "나의 학생들은 %{count} 명 입니다."
+    title: 코드 스튜디오
+    all_courses: 코스1, 2, 3 살펴보기
+    lesson_plans: 레슨 계획
+    signin_message: 이미 등록되어있나요? %{link}
+    student_reg_link: 학생 가입하기
+    teacher_reg_link: 선생님 가입하기
+    signin_directions: 진도를 기록하기 위해 계정을 사용하세요.<br/> 선생님들은 여러분의 모든 과정을 살펴볼 수 있습니다.
+    teacher_dashboard: 학습 현황
+    teacher_student_count_one: 나의 학생들은 %{count} 명 입니다.
+    teacher_student_count: 나의 학생들은 %{count} 명 입니다.
     teacher_averages: 나의 학생들은, 평균 %{trophy_average} 개의 "기초개념학습 트로피"를 획득했습니다. 총 %{trophy_max}
       개.
-    teacher_print_certificates: "이 코스를 완료한 학생들을 위해 인증서 출력하기"
-    teacher_read_blog: "교육 블로그를 통해 관련 뉴스와 최신정보 확인하기"
-    classroom: "내 학급"
-    student_progress: "나의 학습 진도"
+    teacher_print_certificates: 이 코스를 완료한 학생들을 위해 인증서 출력하기
+    teacher_read_blog: 교육 블로그를 통해 관련 뉴스와 최신정보 확인하기
+    classroom: 내 학급
+    student_progress: 나의 학습 진도
     student_stats: '%{trophy_count} 개의 "기초개념학습 트로피"를 획득했습니다. 총 %{trophy_max} 개.'
-    student_left_off: "마지막 학습:"
-    student_finished: "모든 과정을 완료했습니다. 다른 수업(%{online_link})이나 학교과정(%{local_school_link})을
-      선택하세요"
-    local_school: "학교"
-    online: "온라인"
-    see_details: "자세히 살펴보기"
-    prize_info: "상품을 획득해 보세요(미국 공립학교 교사만 해당): 학급당 %1,000까지 제공됩니다."
-    tryfirst: "먼저 해보고, 나중에 가입하기:"
-    trynow: "지금 해보기"
+    student_left_off: '마지막 학습:'
+    student_finished: 모든 과정을 완료했습니다. 다른 수업(%{online_link})이나 학교과정(%{local_school_link})을
+      선택하세요
+    local_school: 학교
+    online: 온라인
+    see_details: 자세히 살펴보기
+    prize_info: '상품을 획득해 보세요(미국 공립학교 교사만 해당): 학급당 %1,000까지 제공됩니다.'
+    tryfirst: '먼저 해보고, 나중에 가입하기:'
+    trynow: 지금 해보기
     add_hint_help: Code.org 튜토리얼을 위해 참신한 도움 내용을 만드는 것을 도와주세요.
-    20hour_overview: "본 20시간 과정은 컴퓨터과학(정보과학)에서의 프로그래밍 기초 개념들을 소개합니다. 유치원~중2(K-8) 학생들을
-      대상으로 설계되어있지만, 연령에 상관없이 재미있게 배울 수 있습니다."
-    test_videos_help: "새로 만든 비디오 플레이어를 테스트해 보세요."
+    20hour_overview: 본 20시간 과정은 컴퓨터과학(정보과학)에서의 프로그래밍 기초 개념들을 소개합니다. 유치원~중2(K-8) 학생들을
+      대상으로 설계되어있지만, 연령에 상관없이 재미있게 배울 수 있습니다.
+    test_videos_help: 새로 만든 비디오 플레이어를 테스트해 보세요.
     try_beta_courses: K-5(~초등5학년) 학생들을 위한 새로운 시범 코스들을 경험해 보세요.
-    use_as_teacher: "선생님으로 사이트 사용하기"
-    heading_elementary: "<h1>초등학생들을 위한</h1><h2>20 시간 코스</h2>"
-    heading_apps: "<h1> 누구나 </h1><h2> 재미있게 </h2>"
-    heading_legacy: "<h1>모든 연령대를 위한 </h1><h2>일반 코스</h2>"
+    use_as_teacher: 선생님으로 사이트 사용하기
+    heading_elementary: <h1>초등학생들을 위한</h1><h2>20 시간 코스</h2>
+    heading_apps: <h1> 누구나 </h1><h2> 재미있게 </h2>
+    heading_legacy: <h1>모든 연령대를 위한 </h1><h2>일반 코스</h2>
     gallery:
-      your_turtle: "나의 작품"
-      your_studio: "나의 앱"
+      your_turtle: 나의 작품
+      your_studio: 나의 앱
   gender:
-    male: "남"
-    female: "여"
-    none: "응답 안 함"
+    male: 남
+    female: 여
+    none: 응답 안 함
   user_type:
     student: student
-    teacher: "선생님"
+    teacher: 선생님
   footer:
-    help_from_html: "구글, 마이크로소프트, 페이스북, 트위터의 컴퓨터과학자들이 이 튜토리얼을 만들었습니다."
+    help_from_html: 구글, 마이크로소프트, 페이스북, 트위터의 컴퓨터과학자들이 이 튜토리얼을 만들었습니다.
     art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 <a href="http://www.rovio.com">Rovio
       Entertainment Ltd</a>. All Rights Reserved.<br/> Plants vs. Zombies&trade; &
       &copy; 2013 <a href="http://www.ea.com">Electronic Arts Inc.</a>. All Rights
       Reserved.
-    feedback: "피드백 남기기"
-    translate: "다른 언어로 번역"
-    support: "고객지원"
+    feedback: 피드백 남기기
+    translate: 다른 언어로 번역
+    support: 고객지원
     support_url: http://support.code.org
-    tos: "이용 약관"
-    privacy: "개인정보보호 정책"
-    secure: "보안 버전"
+    tos: 이용 약관
+    privacy: 개인정보보호 정책
+    secure: 보안 버전
   reference_area:
-    title: "도움이 필요하신가요?"
-    subtitle: "동영상 및 힌트"
-    teacher: "해법 보기"
-    auth_error: "해법 보기 권한이 없습니다."
-    submit: "예술가 위치 업데이트"
-    direction: "시작 방향(학년에 따른)"
+    title: 도움이 필요하신가요?
+    subtitle: 동영상 및 힌트
+    teacher: 해법 보기
+    auth_error: 해법 보기 권한이 없습니다.
+    submit: 예술가 위치 업데이트
+    direction: 시작 방향(학년에 따른)
   video:
-    tab: "소개 동영상."
-    notes: "소개 프레젠테이션."
-    notes_coming_soon: "참고 동영상 준비중"
-    autoplay_option: "비디오 자동 실행"
-    download: "동영상 다운로드"
+    tab: 소개 동영상.
+    notes: 소개 프레젠테이션.
+    notes_coming_soon: 참고 동영상 준비중
+    autoplay_option: 비디오 자동 실행
+    download: 동영상 다운로드
   compatability:
     working:
-      header: "이 웹브라우져를 지원합니다."
+      header: 이 웹브라우져를 지원합니다.
       message: Code.org는 웹 페이지를 보다 빠르게 동작하도록 하기 위해 최신 웹 기술을 사용합니다. 지금 사용하고 있는 웹브라우져는
         최신 기술을 지원하지 않습니다.  <a href='%{report_issue_url}'>발생 가능한 문제</a> <a href='%{supported_browsers_url}'>
         웹 브라우져 업그레이드하</a>
-      hide_this_warning: "경고창 숨기기"
+      hide_this_warning: 경고창 숨기기
     upgrade:
-      header: "웹 브라우져를 업그레이드 하세요."
+      header: 웹 브라우져를 업그레이드 하세요.
       message: Code.org는 웹 페이지를 보다 빠르게 동작하도록 하기 위해 최신 웹 기술을 사용합니다. 지금 사용하고 있는 웹 브라우져는
         모든 기술을 지원하지 않습니다. <br/><br/> 테스트해보시려면 <a href='#'>테스트페이지 확인</a> 하지만, 제대로 실행되지
         않을 것입니다.
-      button: "지원 웹 브라우저 알아보기"
-  slow_loading: "연결이 느립니다."
-  try_reloading: "페이지를 새로고침 해보세요"
-  next_stage: "모두 완료했습니다! 다음 단계를 계속하세요"
+      button: 지원 웹 브라우저 알아보기
+  slow_loading: 연결이 느립니다.
+  try_reloading: 페이지를 새로고침 해보세요
+  next_stage: 모두 완료했습니다! 다음 단계를 계속하세요
   download_pdf: Open Lesson Plan
-  view_lesson_plan: "강의 계획 살펴보기"
+  view_lesson_plan: 강의 계획 살펴보기
   pdf_download: PDF 다운로드
   share_code:
     title: 프로그램을 확인하기 위해 "실행하기"를 클릭하세요.
-    bounce_og_title: "내가 만든 바운스 게임 확인하기"
-    flappy_og_title: "내 플래피(Flappy) 게임 확인"
+    bounce_og_title: 내가 만든 바운스 게임 확인하기
+    flappy_og_title: 내 플래피(Flappy) 게임 확인
     studio_og_title: Play Lab 의 앱을 살펴보세요.
     og_description: Code.org 에서 직접 코드를 작성하였습니다.
-    phone_number_not_allowed: "휴대폰 번호가 입력되어있는 것 같습니다. 내용을 바꾸세요."
-    address_not_allowed: "집주소가 입력되어있는 것 같습니다. 내용을 바꾸세요."
-    email_not_allowed: "이메일 주소가 입력되어있는 것 같습니다. 내용을 바꾸세요."
-    profanity_not_allowed: "금칙어가 입력되어있는 것 같습니다. 내용을 바꾸세요."
+    phone_number_not_allowed: 휴대폰 번호가 입력되어있는 것 같습니다. 내용을 바꾸세요.
+    address_not_allowed: 집주소가 입력되어있는 것 같습니다. 내용을 바꾸세요.
+    email_not_allowed: 이메일 주소가 입력되어있는 것 같습니다. 내용을 바꾸세요.
+    profanity_not_allowed: 금칙어가 입력되어있는 것 같습니다. 내용을 바꾸세요.
   builder:
-    created: "새로운 스크립트를 만들었습니다."
-    destroyed: "스크립트를 삭제하였습니다."
-    manage: "레벨 만들기"
-    view: "보기"
-    back: "스크립트로 돌아가기"
-    success: "블럭을 수정하였습니다."
+    created: 새로운 스크립트를 만들었습니다.
+    destroyed: 스크립트를 삭제하였습니다.
+    manage: 레벨 만들기
+    view: 보기
+    back: 스크립트로 돌아가기
+    success: 블럭을 수정하였습니다.
     level:
-      create: "새로운 레벨 생성"
-      current: "현재 레벨"
-      unused: "비사용 레벨"
+      create: 새로운 레벨 생성
+      current: 현재 레벨
+      unused: 비사용 레벨
   upsell:
     hoc:
       title: The Hour of Code
-      body: "컴퓨터과학(CS, 정보과학)의 기초를 경험해보세요. 수백만 가지의 것들을 가능하게 합니다."
+      body: 컴퓨터과학(CS, 정보과학)의 기초를 경험해보세요. 수백만 가지의 것들을 가능하게 합니다.
     flappy:
-      title: "플래피 코드"
+      title: 플래피 코드
       body: 10분 이내에 자신만의 게임을 만들어보고 싶은가요? 플래피 코드 튜토리얼을 시도해 보세요.
     20hour:
-      title: "소개 코스"
+      title: 소개 코스
       body: 20 시간 코스의 컴퓨터과학(CS, 정보과학) 코스를 경험해 보세요.
   gallery:
-    students_drew_these_with_code: "학생들이 코드로 그려낸 것들!"
-    students_made_these_with_code: "학생들이 만든 작품"
-    picture_count: "지난 <b>%{days}</b> 일 동안, <b>%{count}</b> 개의 그림을 프로그래밍으로 그렸습니다.
-      각 프로그램을 살펴보려면 그림을 누르세요."
-    activity_count: "지난  <b>%{days}</b>일 동안 학생들이 <b>%{count}</b>개의 앱과 그림을 자기 자신의 힘으로
-      만들었습니다. 그림이나 스크린샷을 누르면 각각의 프로그램을 실행시켜볼 수 있습니다."
-    want_to_make_your_own: "자기 코드를 만들겠습니까?"
-    more: "더 살펴보기"
-    caption_by_name_age: "%{age}살, %{name}가"
-    caption_time_ago: "%{time_ago} 전에"
+    students_drew_these_with_code: 학생들이 코드로 그려낸 것들!
+    students_made_these_with_code: 학생들이 만든 작품
+    picture_count: 지난 <b>%{days}</b> 일 동안, <b>%{count}</b> 개의 그림을 프로그래밍으로 그렸습니다. 각
+      프로그램을 살펴보려면 그림을 누르세요.
+    activity_count: 지난  <b>%{days}</b>일 동안 학생들이 <b>%{count}</b>개의 앱과 그림을 자기 자신의 힘으로
+      만들었습니다. 그림이나 스크린샷을 누르면 각각의 프로그램을 실행시켜볼 수 있습니다.
+    want_to_make_your_own: 자기 코드를 만들겠습니까?
+    more: 더 살펴보기
+    caption_by_name_age: '%{age}살, %{name}가'
+    caption_time_ago: '%{time_ago} 전에'
   landing:
-    prerelease: "이 코스는 <span class='betatext'>beta</span> 테스트 중입니다. 이 코스는 최종 완성 버전의
-      코스가 아니며, 여러가지 피드백과 개선작업이 이루어집니다."
-    feedback: "피드백 작성하기"
-    report_bug: "버그(오류) 신고하기"
-    support: "도움 받기"
-    support_url: "//support.code.org"
+    prerelease: 이 코스는 <span class='betatext'>beta</span> 테스트 중입니다. 이 코스는 최종 완성 버전의
+      코스가 아니며, 여러가지 피드백과 개선작업이 이루어집니다.
+    feedback: 피드백 작성하기
+    report_bug: 버그(오류) 신고하기
+    support: 도움 받기
+    support_url: //support.code.org
   multi:
-    wrong_title: "오답"
-    wrong_body: "정답이 안닙니다. 다시 시도해 보세요."
-    correct_title: "정답"
-    correct_body: "정답입니다."
+    wrong_title: 오답
+    wrong_body: 정답이 안닙니다. 다시 시도해 보세요.
+    correct_title: 정답
+    correct_body: 정답입니다.
   match:
-    wrong_title: "정답이 아닌 답안"
-    wrong_body: "제출한 답안은 정답이 아닙니다. 다시 시도해 보세요."
-    correct_title: "정답"
-    correct_body: "정답입니다."
+    wrong_title: 정답이 아닌 답안
+    wrong_body: 제출한 답안은 정답이 아닙니다. 다시 시도해 보세요.
+    correct_title: 정답
+    correct_body: 정답입니다.
   dialog:
-    ok: "확인"
+    ok: 확인
   time:
     hour: 1 시간
-    day: "일"
-    week: "주"
+    day: 일
+    week: 주
   data:
     script:
       name:
         20-hour:
-          title: "유치원~중2(K-8) 학생들을 위한 컴퓨터과학(CS, 정보과학) 코스"
-          description: "본 20시간 과정은 컴퓨터과학(정보과학)에서의 프로그래밍 기초 개념들을 소개합니다. 유치원~중2(K-8)
-            학생들을 대상으로 설계되어있지만, 연령에 상관없이 재미있게 배울 수 있습니다."
+          title: 유치원~중2(K-8) 학생들을 위한 컴퓨터과학(CS, 정보과학) 코스
+          description: 본 20시간 과정은 컴퓨터과학(정보과학)에서의 프로그래밍 기초 개념들을 소개합니다. 유치원~중2(K-8)
+            학생들을 대상으로 설계되어있지만, 연령에 상관없이 재미있게 배울 수 있습니다.
         Hour of Code:
           title: Hour of Code
           description: ''
         edit-code:
-          title: "코드 수정"
+          title: 코드 수정
           description: ''
         events:
-          title: "이벤트"
+          title: 이벤트
           description: ''
         builder:
-          title: "코드 생성기"
+          title: 코드 생성기
           description: ''
         flappy:
-          title: "플래피 코드"
+          title: 플래피 코드
           description: 10분 이내에 나만의 게임을 만들고 싶은가요? 플래피 코드 튜토리얼을 해보세요.
         jigsaw:
-          title: "직소퍼즐"
+          title: 직소퍼즐
           description: ''
         step:
-          title: "단계"
+          title: 단계
           description: ''
         sample_level_builder:
-          title: "샘플 레벨 코드 생성기"
+          title: 샘플 레벨 코드 생성기
           description: ''
   age_interstitial:
-    age: "나이"
-    header: "계정 정보 업데이트"
-    message: "개인 정보 보호 정책에 따라 서비스를 제공합니다. 나이를 입력해 주세요.<br/> code.org 는 제출한 정보를 제3자에게
-      대여/판매/공유하지 않습니다."
+    age: 나이
+    header: 계정 정보 업데이트
+    message: 개인 정보 보호 정책에 따라 서비스를 제공합니다. 나이를 입력해 주세요.<br/> code.org 는 제출한 정보를 제3자에게
+      대여/판매/공유하지 않습니다.
     sign_out: 나이 정보를 제출하기 원하지 않으시면 <a href="%{url}">탈퇴</a>를 하실 수 있습니다.
   zendesk_too_young_message: 어린 학생들은 도움 사이트에 가입할 수 없습니다. 대신 가입하거나 부모나 보호자의 동의 없이  <a
     href="http://support.code.org">support.code.org</a> 를 사용할 수 있습니다.

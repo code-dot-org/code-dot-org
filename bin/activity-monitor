@@ -94,7 +94,7 @@ class Monitor
   def initialize(params)
     @start = params[:start]
     @finish = params[:finish]
-    @hosts = ['production-1c', 'production-1d']
+    @hosts = ['_virtual']
     @filename = "/tmp/dataset-#{@start}-#{@finish}.json"
   end
 
@@ -135,7 +135,7 @@ class Monitor
 
   def fetch()
     puts "Fetching..." if rack_env?(:development)
-    reader = Slog::Reader.new(secret:CDO.logentries_secret, env:'production', hosts:@hosts)
+    reader = Slog::Reader.new(secret:CDO.logentries_secret, hosts:@hosts)
     reader.get(filter: 'tag=activity_start OR tag=activity_finish', start:@start, end:@finish)
   end
 

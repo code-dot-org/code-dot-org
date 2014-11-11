@@ -1,0 +1,17 @@
+---
+layout: none
+theme: none
+---
+%div{"ng-controller" => "PlanDetailController"}
+
+  %div
+    %br/
+    %a{href: '/teacher-dashboard#/'}= I18n.t('dashboard_navigation_home_page')
+    %span{style: "opacity:0.5"} &nbsp; &#9654; &nbsp;
+    %b{style: "color: #ff8b02;"}= I18n.t('dashboard_navigation_lesson_plans_resources')
+    %br/
+
+
+  %div{:style=>"clear:both; margin-top: 16px"}
+
+  = view :teacher_notices

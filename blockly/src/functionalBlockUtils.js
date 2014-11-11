@@ -2,11 +2,11 @@ var utils = require('./utils');
 var _ = utils.getLodash();
 
 var colors = {
-  Number: [192, 1.00, 0.99], // 00ccff
-  string: [180, 1.00, 0.60], // 0099999
-  image: [285, 1.00, 0.80], // 9900cc
-  boolean: [90, 1.00, 0.4], // 336600
-  none: [0, 0, 0.6]
+  'Number': [192, 1.00, 0.99], // 00ccff
+  'string': [180, 1.00, 0.60], // 0099999
+  'image': [285, 1.00, 0.80], // 9900cc
+  'boolean': [90, 1.00, 0.4], // 336600
+  'none': [0, 0, 0.6]
 };
 module.exports.colors = colors;
 
@@ -100,5 +100,29 @@ module.exports.installFunctionalApiCallBlock = function(blockly, generator,
       apiArgs.push(value);
     }
     return apiName + '(' + apiArgs.join(',') + ');\n';
+  };
+};
+
+module.exports.installStringPicker = function(blockly, generator, options) {
+  var values = options.values;
+  var blockName = options.blockName;
+  blockly.Blocks[blockName] = {
+    init: function () {
+      this.setFunctional(true, {
+        headerHeight: 0,
+        rowBuffer: 3
+      });
+      this.setHSV.apply(this, colors.string);
+      this.appendDummyInput()
+          .appendTitle(new Blockly.FieldLabel('"'))
+          .appendTitle(new blockly.FieldDropdown(values), 'VAL')
+          .appendTitle(new Blockly.FieldLabel('"'))
+          .setAlign(Blockly.ALIGN_CENTRE);
+      this.setFunctionalOutput(true, 'string');
+    }
+  };
+
+  generator[blockName] = function() {
+    return blockly.JavaScript.quote_(this.getTitleValue('VAL'));
   };
 };

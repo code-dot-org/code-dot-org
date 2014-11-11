@@ -9,19 +9,31 @@ nav: educate2_nav
 
 <h2 style="margin-top:35px">Curriculum</h2>
 
-[Code Studio](http://studio.code.org/)
-<br/>
-20 hour courses for K-8 students who go to school
-
 [Hour of Code](http://hourofcode.com)
 <br/>
-Join the largest learning event in history in fact
+Join the largest learning event in history
 
-[Other Curriculum](/)
+[Code Studio](http://studio.code.org/)
 <br/>
-(MSM, MSS, ECS & CSP)
+20 hour courses, recommended for K-5 students
 
-3rd party resources 
+[Middle School Math](http://code.org/curriculum/msm/)
+<br/>
+Learn how computer programmers use algebra and geometry to develop video games 
+
+[Middle School Science](http://code.org/curriculum/mss/)
+<br/>
+Explore and develop complex scientific models through agent-based programming 
+
+[Exploring Computer Science](http://www.exploringcs.org)
+<br/>
+A high school course designed to broaden participation in computer science
+
+[AP Computer Science Principles](http://code.org/educate2/csp/)
+<br/>
+An AP course covering a wide range of computer science topics
+
+[3rd party resources](http://code.org/educate2/3rdparty/) 
 
 <br/>
 
@@ -31,65 +43,34 @@ Join the largest learning event in history in fact
 
 <h2 style="margin-top:35px">Professional Development</h2>
 
-[New K-5 Program](http://code.org/educate/k5)
+[K-5 Program](http://code.org/educate/k5)
 <br/>
-Computer science for K-5 students who go to school
+Sign up now for computer science professional development for K-5 educators
 
 [District Partnership](http://code.org/educate/districts)
 <br/>
-Partner with Code.org to bring CS to your school
+Partner with Code.org to bring computer science to your district for grades 6-12
 
 <br/>
 
 [/col-50]
 
-<!--
-
-[col-33]
-
-## Inspire Students
-
-[Inspire Students](http://code.org/educate/inspire) 
-<br/>
-Inspire students to learn
-
-Want more? 
-<br/>
-Check out our [educational video library](http://code.org/educate/videos)
-
-<br/>
-
-[/col-33]
-
--->
 
 <div style="clear:both"/>
 
 [col-50]
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[<button>Learn More</button>](/curriculum)
+[<button>Learn More</button>](http://code.org/educate2/curriculum)
 
 [/col-50]
 
 [col-50]
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[<button>Learn More</button>](/professional-development)
+[<button>Learn More</button>](http://code.org/educate2/professional-development)
 
 [/col-50]
 
-<!--
 
-[col-33]
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[<button>Learn More</button>](/inspiration)
-
-[/col-33]
-
-
-<p style="clear:both">&nbsp;</p>
-
--->
 

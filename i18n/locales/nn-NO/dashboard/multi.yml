@@ -91,7 +91,7 @@
       2-3 Algorithms Multi 2:
         Multiple Choice: "Flervalg"
         Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: 'Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square'
-        Which image does <em>not</em> follow this algorithm?: 'Which image does <em>not</em> follow this algorithm?'
+        Which image does <em>not</em> follow this algorithm?: 'Hvilket bilde følger <em>ikke</em> denne algoritmen?'
         /script_assets/2-3_images/unplugged/algorithms_2_a1.png: /script_assets/2-3_images/unplugged/algorithms_2_a1.png
         /script_assets/2-3_images/unplugged/algorithms_2_a2.png: /script_assets/2-3_images/unplugged/algorithms_2_a2.png
         /script_assets/2-3_images/unplugged/algorithms_2_a3.png: /script_assets/2-3_images/unplugged/algorithms_2_a3.png
@@ -99,14 +99,14 @@
       2-3 Binary Multi 1:
         Multiple Choice: "Flervalg"
         /script_assets/2-3_images/unplugged/graph_paper_1_q.png: /script_assets/2-3_images/unplugged/graph_paper_1_q.png
-        Which program makes this image?: Which program makes this image?
+        Which program makes this image?: Hvilket program lager dette bildet?
         /script_assets/2-3_images/unplugged/graph_paper_1_a1.png: /script_assets/2-3_images/unplugged/graph_paper_1_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a2.png: /script_assets/2-3_images/unplugged/graph_paper_1_a2.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a3.png: /script_assets/2-3_images/unplugged/graph_paper_1_a3.png
       2-3 Conditionals Multi 1:
         Multiple Choice: "Flervalg"
         /script_assets/2-3_images/unplugged/conditionals_1_q.png: /script_assets/2-3_images/unplugged/conditionals_1_q.png
-        According to the rules of the game, which set of cards is scored correctly?: According to the rules of the game, which set of cards is scored correctly?
+        According to the rules of the game, which set of cards is scored correctly?: Ifølge spillets regler, hvilket sett med kort er sortert riktig?
         /script_assets/2-3_images/unplugged/conditionals_1_a1.png: /script_assets/2-3_images/unplugged/conditionals_1_a1.png
         /script_assets/2-3_images/unplugged/conditionals_1_a2.png: /script_assets/2-3_images/unplugged/conditionals_1_a2.png
         /script_assets/2-3_images/unplugged/conditionals_1_a3.png: /script_assets/2-3_images/unplugged/conditionals_1_a3.png
@@ -122,7 +122,7 @@
       2-3 Graph Paper Multi 1:
         Multiple Choice: "Flervalg"
         /script_assets/2-3_images/unplugged/graph_paper_1_q.png: /script_assets/2-3_images/unplugged/graph_paper_1_q.png
-        Which program makes this image?: Which program makes this image?
+        Which program makes this image?: Hvilket program lager dette bildet?
         /script_assets/2-3_images/unplugged/graph_paper_1_a1.png: /script_assets/2-3_images/unplugged/graph_paper_1_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a2.png: /script_assets/2-3_images/unplugged/graph_paper_1_a2.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a3.png: /script_assets/2-3_images/unplugged/graph_paper_1_a3.png
@@ -148,7 +148,7 @@
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png
       4-5 artist multi 2:
         Artist Multiple Choice: "Artist Multiple Choice"
-        Which drawing is symmetric?: Which drawing is symmetric?
+        Which drawing is symmetric?: Hvilken tegning er symmetrisk?
         /script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png
         /script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png
         /script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png
@@ -190,7 +190,7 @@
         Bee Debug Multiple Choice: "Bee Debug Multiple Choice"
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png
-        Which version of the function will work?: Which version of the function will work?
+        Which version of the function will work?: Hvilken versjon av funksjonen vil fungere?
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a3.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a3.png
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png
@@ -230,19 +230,19 @@
       4-5 Algorithms Multi 1:
         Multiple Choice: "Flervalg"
         Which one of these items is hardest to describe an algorithm for?: Which one of these items is hardest to describe an algorithm for?
-        <h4>Brushing your teeth</h4>: '<h4>Brushing your teeth</h4>'
-        <h4>Baking cookies</h4>: '<h4>Baking cookies</h4>'
+        <h4>Brushing your teeth</h4>: '<h4>Pusser tennene</h4>'
+        <h4>Baking cookies</h4>: '<h4>Baker kaker</h4>'
         <h4>Shopping from a grocery list</h4>: '<h4>Shopping from a grocery list</h4>'
-        <h4>Banana</h4>: '<h4>Banana</h4>'
+        <h4>Banana</h4>: '<h4>Banan</h4>'
       4-5 Computational Thinking Multi 1:
         Multiple Choice: "Flervalg"
         0: '? Here are three sentences. Which of the templates below correctly abstracts so that all three match the same pattern as the template?'
         1: ': Here are three sentences. Which of the templates below correctly abstracts so that all three match the same pattern as the template?'
-        <h4>Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.</h4>: '<h4>Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.</h4>'
-        <h4>Seattle _____ a _____ _____.</h4>: '<h4>Seattle _____ a _____ _____.</h4>'
-        <h4>_____ is a _____ city.</h4>: '<h4>_____ is a _____ city.</h4>'
-        <h4>_____ is _____ a _____.</h4>: '<h4>_____ is _____ a _____.</h4>'
-        <h4>Eugene is a _____ city.</h4>: '<h4>Eugene is a _____ city.</h4>'
+        <h4>Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.</h4>: '<h4>Seattle er en stor by. <br/>Eugene er en mellomstor by <br/> Hillview er en liten by.</h4>'
+        <h4>Seattle _____ a _____ _____.</h4>: '<h4>Seattle _____ er _____ _____.</h4>'
+        <h4>_____ is a _____ city.</h4>: '<h4>_____ er en _____ by.</h4>'
+        <h4>_____ is _____ a _____.</h4>: '<h4>_____ er _____ en _____.</h4>'
+        <h4>Eugene is a _____ city.</h4>: '<h4>Eugene er en _____ by.</h4>'
       4-5 Crowdsourcing Multi 1:
         Multiple Choice: "Flervalg"
         Which of these pictures best represents crowdsourcing?: Which of these pictures best represents crowdsourcing?
@@ -251,21 +251,21 @@
       4-5 Crowdsourcing Multi 2:
         Multiple Choice: "Flervalg"
         Which one of these activities would be best for practicing crowdsourcing?: Which one of these activities would be best for practicing crowdsourcing?
-        <h4>Cleaning your room</h4>: '<h4>Cleaning your room</h4>'
-        <h4>Eating your dessert</h4>: '<h4>Eating your dessert</h4>'
-        <h4>Brushing your hair</h4>: '<h4>Brushing your hair</h4>'
-        <h4>Washing your face</h4>: '<h4>Washing your face</h4>'
+        <h4>Cleaning your room</h4>: '<h4>Rydder rommet</h4>'
+        <h4>Eating your dessert</h4>: '<h4>Spiser dessert</h4>'
+        <h4>Brushing your hair</h4>: '<h4>Børster håret</h4>'
+        <h4>Washing your face</h4>: '<h4>Vasker ansiktet</h4>'
       4-5 Digital Footprint Multi 1:
         Multiple Choice: "Flervalg"
         Which piece of information listed below is okay to share on the internet?: Which piece of information listed below is okay to share on the internet?
-        <h4>Your birthday</h4>: '<h4>Your birthday</h4>'
-        <h4>Your favorite food</h4>: '<h4>Your favorite food</h4>'
-        <h4>Your address</h4>: '<h4>Your address</h4>'
+        <h4>Your birthday</h4>: '<h4>Bursdagen din</h4>'
+        <h4>Your favorite food</h4>: '<h4>Din favoritt mat</h4>'
+        <h4>Your address</h4>: '<h4>Din adresse</h4>'
         <h4>Your parent's credit card number</h4>: "<h4>Your parent's credit card number</h4>"
       4-5 Internet Multi 1:
         Multiple Choice: "Flervalg"
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
-        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: When you try to log on to code.org, which IP address is the DNS most likely to take you to?
+        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: "Når du prøver å logge deg på code.org, hvilken IP-adresse vil DNS'en sannsynligvis ta deg til?"
         <h4>23.23.224.106</h4>: '<h4>23.23.224.106</h4>'
         <h4>54.209.61.132</h4>: '<h4>54.209.61.132</h4>'
         <h4>64.14.68.10</h4>: '<h4>64.14.68.10</h4>'
@@ -273,7 +273,7 @@
       4-5 Internet Multi 2:
         Multiple Choice: "Flervalg"
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
-        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?
+        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: "Hvis DNS'en har sendt deg til siden på IP-adressen 100.42.50.110, hvilken nettside er du på?"
         <h4>code.org</h4>: '<h4>code.org</h4>'
         <h4>csisfun.com</h4>: '<h4>csisfun.com</h4>'
         <h4>thinkersmith.org</h4>: '<h4>thinkersmith.org</h4>'
@@ -307,7 +307,7 @@
       K-1 Artist 1 Multi 2:
         Multiple Choice: "Flervalg"
         /script_assets/k_1_images/artist_images/square.png, 500: /script_assets/k_1_images/artist_images/square.png, 500
-        Which blocks draw the square?: Which blocks draw the square?
+        Which blocks draw the square?: Hvilken blokk tegner kvadraten?
         /script_assets/k_1_images/artist_images/N|E|S|W.png: /script_assets/k_1_images/artist_images/N|E|S|W.png
         /script_assets/k_1_images/artist_images/E|S|W|N.png: /script_assets/k_1_images/artist_images/E|S|W|N.png
         /script_assets/k_1_images/artist_images/N|W|S|E.png: /script_assets/k_1_images/artist_images/N|W|S|E.png
@@ -322,7 +322,7 @@
       K-1 Artist Loops Multi 1:
         Multiple Choice: "Flervalg"
         /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png, 300: /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png, 300
-        Which blocks create this picture?: Which blocks create this picture?
+        Which blocks create this picture?: Hvilken blokk lager dette bildet?
         /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a1.png: /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a1.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a2.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a3.png: /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a3.png
@@ -478,12 +478,12 @@
         (+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2)))))): '(+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2))))))'
       Warmup questions:
         Coding in Racket: "Coding in Racket"
-        Select the best answer to the question.: Select the best answer to the question.
-        When converting a circle to code, the correct order is: When converting a circle to code, the correct order is
-        top, left, right: top, left, right
-        left, right, top: left, right, top
+        Select the best answer to the question.: Velg det beste svaret på spørsmålet.
+        When converting a circle to code, the correct order is: Når du konverterer en sirkel til kode, den riktige rekkefølgen er
+        top, left, right: topp, venstre, høyre
+        left, right, top: venstre, høyre, topp
         random: "tilfeldig"
-        left top right: "left top right"
+        left top right: "venstre topp høyre"
       Circle to code:
         Code from Circle: "Code from Circle"
         /script_assets/msm/Unit%202/exercise_1.png: '/script_assets/msm/Unit%202/exercise_1.png'
@@ -493,21 +493,21 @@
         (+ (* (- 8 6) 4) 5) : '(+ (* (- 8 6) 4) 5) '
         (+ 5 (* (- 8 6) 4)): '(+ 5 (* (- 8 6) 4))'
       valid contracts multi:
-        Valid Contracts: "Valid Contracts"
-        Pick the best answer to the question.: Pick the best answer to the question.
+        Valid Contracts: "Gyldige Kontrakter"
+        Pick the best answer to the question.: Velg det beste svaret på spørsmålet.
         Which of these is a valid contract for the function circle?: Which of these is a valid contract for the function circle?
-        "circle: size style color -> image": 'circle: size style color -> image'
+        "circle: size style color -> image": 'sirkel: størrelse stil farge-> bilde'
         "circle: number string string -> image": 'circle: number string string -> image'
         "circle: number string string -> shape": 'circle: number string string -> shape'
-        "circle: 5 solid blue -> circle ": 'circle: 5 solid blue -> circle '
+        "circle: 5 solid blue -> circle ": 'sirkel: 5 solid blå-> sirkel '
       image code from circle:
         Code from Circle: "Code from Circle"
         /script_assets/msm/Unit%202/exercise_5.png: '/script_assets/msm/Unit%202/exercise_5.png'
         Pick the Racket code that comes from the circle of evaluation!: Pick the Racket code that comes from the circle of evaluation!
-        (rectangle (10) (2) "solid" "red"): '(rectangle (10) (2) "solid" "red")'
-        (rectangle 10 2 "solid" "red"): '(rectangle 10 2 "solid" "red")'
-        (rectangle (+ 8 2) (- 7 5) "solid" "red"): '(rectangle (+ 8 2) (- 7 5) "solid" "red")'
-        (rectangle (+ 8 2) (- 7 5) solid red): '(rectangle (+ 8 2) (- 7 5) solid red)'
+        (rectangle (10) (2) "solid" "red"): '(rektangel (10) (2) "solid" "rød")'
+        (rectangle 10 2 "solid" "red"): '(rektangel 10 2 "solid" "rød")'
+        (rectangle (+ 8 2) (- 7 5) "solid" "red"): '(rektangel (+ 8 2) (- 7 5) "solid" "rød")'
+        (rectangle (+ 8 2) (- 7 5) solid red): '(rektangel (+ 8 2) (- 7 5) solid rød)'
       test multi image:
         Maze Multiple Choice Two: "Maze Multiple Choice Two"
         /script_assets/matches/images/head.jpg,400: /script_assets/matches/images/head.jpg,400
@@ -515,7 +515,7 @@
         Instructions: "Istruksjoner"
         Click the right answer, then submit. And here are some longer instructions just to test things more.  How's that word wrapping?: "Click the right answer, then submit. And here are some longer instructions just to test things more.  How's that word wrapping?"
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
-        Which flowers are yellow?: Which flowers are yellow?
+        Which flowers are yellow?: Hvilke blomster er gule?
         /script_assets/matches/images/a1.jpg: /script_assets/matches/images/a1.jpg
         /script_assets/matches/images/a2.jpg: /script_assets/matches/images/a2.jpg
         /script_assets/matches/images/a3.jpg: /script_assets/matches/images/a3.jpg
@@ -530,7 +530,7 @@
         George Jetson: "George Jetson"
       unique level name here:
         title: "tittel"
-        description here: "description here"
-        Question: "Question"
-        wrong answer: "wrong answer"
-        right answer: "right answer"
+        description here: "beskrivelse her"
+        Question: "Spørsmål"
+        wrong answer: "feil svar"
+        right answer: "riktig svar"

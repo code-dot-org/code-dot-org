@@ -70,4 +70,4 @@
       not_locked: var ikke låst
       not_saved:
         one: '1 fejl forhindrede denne %{resource} i at blive gemt:'
-        other: "%{count} fejl forhindrede denne %{resource} i at blive gemt:"
+        other: '%{count} fejl forhindrede denne %{resource} i at blive gemt:'

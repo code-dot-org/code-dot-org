@@ -5,174 +5,174 @@
         blank: is required
     attributes:
       user:
-        name: "姓名"
-        email: "电子邮件"
-        username: "用户名"
-        password: "密码"
-        password_confirmation: "密码确认："
-        current_password: "当前密码："
-        locale: "语言："
+        name: 姓名
+        email: 电子邮件
+        username: 用户名
+        password: 密码
+        password_confirmation: 密码确认：
+        current_password: 当前密码：
+        locale: 语言：
         age: Age
-        gender: "性别"
-        edit_header: "编辑用户信息"
+        gender: 性别
+        edit_header: 编辑用户信息
         error:
-          future: "不能在未来"
-  hello: "世界你好"
-  welcome_back: "欢迎回来，%{name}"
+          future: 不能在未来
+  hello: 世界你好
+  welcome_back: 欢迎回来，%{name}
   add_teacher_form:
     code_or_email:
-      label: "通过代码或电子邮件地址来添加一位老师："
-      placeholder: "代码 (ABCDEF) 或电子邮件 (teacher@school.edu)"
+      label: 通过代码或电子邮件地址来添加一位老师：
+      placeholder: 代码 (ABCDEF) 或电子邮件 (teacher@school.edu)
     code:
       label: 'Add a teacher by section code:'
       placeholder: Code (ABCDEF)
-    submit: "添加老师"
+    submit: 添加老师
   add_hint_form:
-    placeholder: "请在这里输入您的提示"
-    submit: "增加提示"
+    placeholder: 请在这里输入您的提示
+    submit: 增加提示
   appname: Code.org
-  stage: "阶段"
+  stage: 阶段
   stage_number: Stage %{number}
-  puzzle: "谜题"
-  trophies: "奖杯"
-  courses: "课程"
-  of: "的"
-  more: "更多"
-  less: "更少"
-  try_hoc: "尝试一小时代码，请单击此处 >>"
-  try_k8intro: "尝试我们的K-8计算机科学入门课程（15-25小时）"
+  puzzle: 谜题
+  trophies: 奖杯
+  courses: 课程
+  of: 的
+  more: 更多
+  less: 更少
+  try_hoc: 尝试一小时代码，请单击此处 >>
+  try_k8intro: 尝试我们的K-8计算机科学入门课程（15-25小时）
   k8intro: K-8计算机科学入门课程（15-25小时）
-  already_started: "已经开始了吗？在这里恢复 >>"
-  demos: "管理员： 所有演示"
-  continue: "继续"
-  prize: "奖品"
-  more_info: "更多信息"
+  already_started: 已经开始了吗？在这里恢复 >>
+  demos: 管理员： 所有演示
+  continue: 继续
+  prize: 奖品
+  more_info: 更多信息
   auth:
-    sign_in_with: "用%{provider}登录"
-    signed_in: "登陆成功！"
+    sign_in_with: 用%{provider}登录
+    signed_in: 登陆成功！
     signed_out: You have signed out of <a href="%{url}">Code.org</a>.
     sign_out_of: You used %{provider} to sign in. <a href="%{url}">Click here</a>
       to sign out of %{provider}.
-    already_signedup: "已经注册了吗？"
-    notyet_signedup: "还未注册吗？"
+    already_signedup: 已经注册了吗？
+    notyet_signedup: 还未注册吗？
     google_oauth2: Google Account
-    twitter: "推特"
-    facebook: "脸谱"
+    twitter: 推特
+    facebook: 脸谱
     windowslive: Microsoft Account
-    forgot_password: "忘记了您的密码吗？"
-    need_confirmation: "没有收到确认的说明吗？"
-    need_unlock: "没收到解锁指令吗？"
+    forgot_password: 忘记了您的密码吗？
+    need_confirmation: 没有收到确认的说明吗？
+    need_unlock: 没收到解锁指令吗？
   signup_form:
-    overview_student: "注册一个帐户以跟踪您的进度。"
+    overview_student: 注册一个帐户以跟踪您的进度。
     overview_teacher: |
       在教室里教计算机科学,注册一个账户。<p/> 你可以跟踪你的学生进步并获得奖励。
     no_signup_message: 您可以 <a target="_blank"href="http://learn.code.org"> 浏览各个阶段和谜题</a>，但您将需要注册以保存您的进度。
-    teacher_educator_guide: "请参阅教师指南"
+    teacher_educator_guide: 请参阅教师指南
     teacher_pitch: Code.org 老师注册
-    teacher_title: "老师登记"
+    teacher_title: 老师登记
     student_pitch: Code.org 学生注册
-    student_title: "学生注册"
-    school_name: "学校名称 （可选）"
-    school_address: "学校地址 （可选）"
-    address_placeholder: "地址、 城市、 州、 邮编"
-    gender: "性别 （可选）"
-    birthday: "生日 （可选）"
+    student_title: 学生注册
+    school_name: 学校名称 （可选）
+    school_address: 学校地址 （可选）
+    address_placeholder: 地址、 城市、 州、 邮编
+    gender: 性别 （可选）
+    birthday: 生日 （可选）
     age: Age (optional)
     user_type: Are you a student or teacher?
-    submit: "登陆"
-    teacher: "你是老师吗？"
-    valid_username: "可用 ！"
-    invalid_username: "用户名必须至少 5 个字符"
-    taken_username: "用户名已被使用"
-    valid_password: "有效的密码 ！"
-    invalid_password: "密码必须至少为 6 个字符"
-    mismatch_password: "您输入的两个密码不匹配"
-    student_terms: "我同意由 Code.org 服务条款的约束。如果我的年龄为13 岁以下，我确认提交此表单我有我的父母或法定监护人的许可，以使用
-      Code.org 服务。"
-    teacher_terms: "我同意Code.org 的服务条款。"
+    submit: 登陆
+    teacher: 你是老师吗？
+    valid_username: 可用 ！
+    invalid_username: 用户名必须至少 5 个字符
+    taken_username: 用户名已被使用
+    valid_password: 有效的密码 ！
+    invalid_password: 密码必须至少为 6 个字符
+    mismatch_password: 您输入的两个密码不匹配
+    student_terms: 我同意由 Code.org 服务条款的约束。如果我的年龄为13 岁以下，我确认提交此表单我有我的父母或法定监护人的许可，以使用
+      Code.org 服务。
+    teacher_terms: 我同意Code.org 的服务条款。
     additional_information: We need some additional information to continue signing
       you up.
   signin_form:
-    title: "已经有账号了？登录"
-    login: "电子邮件或用户名"
-    password: "密码:"
-    remember: "记住我"
-    submit: "登录"
+    title: 已经有账号了？登录
+    login: 电子邮件或用户名
+    password: '密码:'
+    remember: 记住我
+    submit: 登录
   signin:
-    try_heading: "想不用注册尝试编码吗？"
-    try_hoc: "先尝试一个 代码一小时"
-    try_20hours: "请尝试我们 20 小时计算机科学简介课程"
+    try_heading: 想不用注册尝试编码吗？
+    try_hoc: 先尝试一个 代码一小时
+    try_20hours: 请尝试我们 20 小时计算机科学简介课程
   signinsection:
     welcome: Welcome to %{section_name}
     name: Choose your name
     picture: Now find your secret picture
     words: Now enter your secret words
-    login: "登录"
+    login: 登录
   password:
     reset_form:
-      title: "忘记了您的密码吗？"
-      email: "电子邮件地址"
-      submit: "发送给我重置密码的指令"
+      title: 忘记了您的密码吗？
+      email: 电子邮件地址
+      submit: 发送给我重置密码的指令
     change_form:
-      title: "更换密码"
-      new_password: "新密码"
-      confirm_password: "确认新密码"
-      submit: "更改我的密码"
+      title: 更换密码
+      new_password: 新密码
+      confirm_password: 确认新密码
+      submit: 更改我的密码
   welcome_email:
-    subject: "加入我所在的班级"
+    subject: 加入我所在的班级
     body: |
       请单击下面的链接来报名参加计算机科学教程（我将成为你的"老师"）：
       %{链接}
       本教程轻松有趣吸引眼球，它将教导您如何使用一个简单的、 指导性的、 类似游戏经验的计算机科学的基本概念。快来学习从比尔 · 盖茨、 马克 · 扎克伯格到愤怒的小鸟、 植物大战僵尸的代码吧 ！:-)
       %{name}
   follower:
-    invite_sent: "发送邀请"
-    added_teacher: "添加%{name}为你的老师"
-    registered: "你已经注册了 %{section_name}。"
+    invite_sent: 发送邀请
+    added_teacher: 添加%{name}为你的老师
+    registered: 你已经注册了 %{section_name}。
     error:
-      signed_in: "请在注销后继续下一步操作。"
-      username_not_found: "找不到用户名 %{用户名}"
-      username_in_use: "%{用户名} 已经被占用，请选择其他用户名。"
-      no_teacher: "找不到用户名 %{teacher_email_or_code}。请让该用户先注册，再次尝试添加。"
+      signed_in: 请在注销后继续下一步操作。
+      username_not_found: 找不到用户名 %{用户名}
+      username_in_use: '%{用户名} 已经被占用，请选择其他用户名。'
+      no_teacher: 找不到用户名 %{teacher_email_or_code}。请让该用户先注册，再次尝试添加。
       section_not_found: Could not find a section with code '%{section_code}'.
-      blank_code: "请输入代码或你的老师的电子邮件地址"
+      blank_code: 请输入代码或你的老师的电子邮件地址
       cant_join_own_section: Sorry, you can't join your own section.
     mail:
       invite_student:
-        subject: "加入 %{teacher_name} 老师的班级吧！"
+        subject: 加入 %{teacher_name} 老师的班级吧！
       student_disassociated:
         subject: 'Code.org 提醒: %{student_name} 已不再是您的学生。'
       teacher_disassociated:
         subject: 'Code.org 提醒: %{teacher_name} 已不再作为您的老师。'
   reports:
     error:
-      access_denied: "您没有权限访问此人的信息。"
+      access_denied: 您没有权限访问此人的信息。
   redeem_prizes:
-    title: "奖品兑换: %{name}"
-    provider: "提供者"
-    code: "代码："
+    title: '奖品兑换: %{name}'
+    provider: 提供者
+    code: 代码：
     redeem_header: 'To redeem:'
-    donorschoose_register: "作为一位老师在 DonorsChoose.org 注册"
-    donorschoose_project: "发布项目"
-    donorschoose_how_to: "如何使用您的代码"
-    success: "你的奖金已经成功兑现，请参见下面的代码。"
-    error: "你的奖品无法兑现，请重新尝试。"
-    error_us_only: "奖项仅向美国用户提供。"
-    error_not_earned: "你还没有获得这一奖项。"
-    error_already_redeemed: "您获得的奖项已经被兑现。"
-    no_prizes_available: "我们很抱歉，但我们目前有没有可用的奖品。"
-    teacher_info_required: "老师奖品需要学校名称和地址信息："
-    teacher_email_required: "老师奖品需要一个已确认电子邮件地址："
+    donorschoose_register: 作为一位老师在 DonorsChoose.org 注册
+    donorschoose_project: 发布项目
+    donorschoose_how_to: 如何使用您的代码
+    success: 你的奖金已经成功兑现，请参见下面的代码。
+    error: 你的奖品无法兑现，请重新尝试。
+    error_us_only: 奖项仅向美国用户提供。
+    error_not_earned: 你还没有获得这一奖项。
+    error_already_redeemed: 您获得的奖项已经被兑现。
+    no_prizes_available: 我们很抱歉，但我们目前有没有可用的奖品。
+    teacher_info_required: 老师奖品需要学校名称和地址信息：
+    teacher_email_required: 老师奖品需要一个已确认电子邮件地址：
     confirm:
-      title: "请确认"
-      'no': "不"
-      'yes': "是"
-      msg: "你确定你希望领取奖品%{prize_name}吗？"
-      msg_student: "注意：你只能选择一种奖品。"
-      msg_publicschool: "请确认您是美国公立学校的老师。"
+      title: 请确认
+      'no': 不
+      'yes': 是
+      msg: 你确定你希望领取奖品%{prize_name}吗？
+      msg_student: 注意：你只能选择一种奖品。
+      msg_publicschool: 请确认您是美国公立学校的老师。
       msg_visit_website: Visit website
     providers:
-      apple_itunes: "$10 iTunes Gift Card"
+      apple_itunes: $10 iTunes Gift Card
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10 GB 的 Dropbox 空间
@@ -181,16 +181,16 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: "$10 Skype credit"
+      skype: $10 Skype credit
     msg:
-      choose: "选择奖励："
+      choose: 选择奖励：
       choose_teacher: 'Click on the logo below to claim your prize:'
-      earned: "你赢得了奖 ！（仅适用于美国学生）"
+      earned: 你赢得了奖 ！（仅适用于美国学生）
       not_earned_title: Finish the tutorial, earn rewards (U.S. students only)
-      not_earned: "学习所有的计算机科学概念、 收集所有 %{num_trophies} 奖杯，和赚取真实世界的奖品。您可以选择 10 GB 免费的
-        Dropbox 空间， 10美元Skype信用 和免费游戏下载。注意： 仅向美国学生提供并且仅仅供应至最后一个。"
+      not_earned: 学习所有的计算机科学概念、 收集所有 %{num_trophies} 奖杯，和赚取真实世界的奖品。您可以选择 10 GB 免费的
+        Dropbox 空间， 10美元Skype信用 和免费游戏下载。注意： 仅向美国学生提供并且仅仅供应至最后一个。
       teacher:
-        earned: "超过15 个学生收集到所有 %{num_trophies} 个奖杯。你获得老师奖 ！（仅限美国教师)"
+        earned: 超过15 个学生收集到所有 %{num_trophies} 个奖杯。你获得老师奖 ！（仅限美国教师)
         not_earned_title: Teach the class, earn up to $1,000 in <a target="_blank"
           href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers
           only)
@@ -209,53 +209,53 @@
             DonorsChoose.org</a> 信用。只可由在美国的公立学校教师使用 <a target="_blank"href="http://DonorsChoose.org">
             DonorsChoose.org</a> 信用。
   crud:
-    new_model: "新%{model}"
-    show: "显示"
-    edit: "编辑"
-    edit_model: "编辑 %{型号}"
-    update: "更新"
-    destroy: "销毁"
-    back: "返回"
-    confirm: "是否确定？"
-    created: "%{model} 已成功创建。"
-    updated: "%{model} 已成功更新。"
-    destroyed: "成功删除 %{model} 。"
-    access_denied: "您没有 %{model} 的权限。"
+    new_model: 新%{model}
+    show: 显示
+    edit: 编辑
+    edit_model: 编辑 %{型号}
+    update: 更新
+    destroy: 销毁
+    back: 返回
+    confirm: 是否确定？
+    created: '%{model} 已成功创建。'
+    updated: '%{model} 已成功更新。'
+    destroyed: 成功删除 %{model} 。
+    access_denied: 您没有 %{model} 的权限。
   nav:
     header:
-      finished_hoc: "我已经完成了我的Hour of Code项目。"
-      sign_in_to_save: "登录以保存进度"
+      finished_hoc: 我已经完成了我的Hour of Code项目。
+      sign_in_to_save: 登录以保存进度
       free_play:
         playlab: Make an App
         artist: Draw Something
     user:
-      classroom: "我的学生"
-      label: "你好%{username}"
-      stats: "我的进程"
-      settings: "我的账户"
-      prizes: "奖品"
-      logout: "注销"
-      signin: "登录"
-      signup: "登陆"
+      classroom: 我的学生
+      label: 你好%{username}
+      stats: 我的进程
+      settings: 我的账户
+      prizes: 奖品
+      logout: 注销
+      signin: 登录
+      signup: 登陆
       already_registered: Already registered?
     popup:
-      progress: "您的进度"
-      lines: "代码总行数： %{lines}"
-      close: "关闭"
-      mastery: "概念"
-      puzzle_map: "阶段"
-      prizes: "收集所有 %{total_trophies} 的奖杯，并赢取奖品 ！"
-      prize_earned: "所有 %{total_trophies} 奖杯都收集了。赢到奖品了 ！"
-      prize_us_only: "（仅适用于美国学生）"
-      prizes_link: "更多信息"
+      progress: 您的进度
+      lines: 代码总行数： %{lines}
+      close: 关闭
+      mastery: 概念
+      puzzle_map: 阶段
+      prizes: 收集所有 %{total_trophies} 的奖杯，并赢取奖品 ！
+      prize_earned: 所有 %{total_trophies} 奖杯都收集了。赢到奖品了 ！
+      prize_us_only: （仅适用于美国学生）
+      prizes_link: 更多信息
   teacher:
     title:
-      one: "你的老师："
-      other: "你的老师："
-    remove: "（删除老师）"
+      one: 你的老师：
+      other: 你的老师：
+    remove: （删除老师）
     confirm:
-      remove: "你确实要删除这个老师吗?"
-    tools: "教师工具"
+      remove: 你确实要删除这个老师吗?
+    tools: 教师工具
     followers:
       section: 'Section:'
       stages: 'Stage(s) to display:'
@@ -267,14 +267,14 @@
       not_tried: Not tried yet
       activity: Indicates student activity in the last %{hours} %{plural}
       no_section: No assigned section
-      trophies: "奖杯"
+      trophies: 奖杯
     students:
-      name: "姓名"
-      username: "用户名"
-      password: "密码"
-      manage: "管理学生"
+      name: 姓名
+      username: 用户名
+      password: 密码
+      manage: 管理学生
       dashboard: Go to Teacher Dashboard
-      add: "添加学生"
+      add: 添加学生
       remove: remove student
       confirm_remove: Are you sure you want to remove this student?
       help_reassign: To divide your class into multiple sections, select students
@@ -289,113 +289,113 @@
       section_code: 'and enter their section-code:'
       first_please: First, please %{add_section}
       for: For
-      enter: "请输入："
+      enter: 请输入：
     sections:
-      add: "添加节点"
-      manage: "管理的部分"
-      section: "节点"
-      students: "学生"
-      section_code: "节代码"
-      add_section_code: "添加学生节代码"
-      secret: "秘密类型"
-      grade: "年级"
-      course: "课程："
-      rename: "重命名"
-      edit: "编辑"
-      delete: "删除"
-      confirm_delete: "你确定你想要删除这一节？"
-      email: "在电子邮件中发送"
-    rollup: "进度板"
-    activity: "最近的课程活动"
-    user_not_found: "无法找到这个老师或学生"
-    cant_remove_student_no_email: "因为 %{student_name} 未注册电子邮件地址， %{student_name}不能移动为你的学生。"
-    cant_remove_teacher_no_email: "因为您还没有注册的电子邮件地址，%{teacher_name}不能移为你的老师。"
-    student_teacher_disassociated: "%{teacher_name} 已被移为 %{student_name}的一位老师"
+      add: 添加节点
+      manage: 管理的部分
+      section: 节点
+      students: 学生
+      section_code: 节代码
+      add_section_code: 添加学生节代码
+      secret: 秘密类型
+      grade: 年级
+      course: 课程：
+      rename: 重命名
+      edit: 编辑
+      delete: 删除
+      confirm_delete: 你确定你想要删除这一节？
+      email: 在电子邮件中发送
+    rollup: 进度板
+    activity: 最近的课程活动
+    user_not_found: 无法找到这个老师或学生
+    cant_remove_student_no_email: 因为 %{student_name} 未注册电子邮件地址， %{student_name}不能移动为你的学生。
+    cant_remove_teacher_no_email: 因为您还没有注册的电子邮件地址，%{teacher_name}不能移为你的老师。
+    student_teacher_disassociated: '%{teacher_name} 已被移为 %{student_name}的一位老师'
   user:
-    email_confirm_needed: "没有确认的电子邮件地址："
-    email_resend_confirm: "重新发送确认指令"
-    new_password_hint: "（如果你不想改变它，留空白）"
-    current_password_hint: "（我们需要您的当前密码以确认您的更改）"
+    email_confirm_needed: 没有确认的电子邮件地址：
+    email_resend_confirm: 重新发送确认指令
+    new_password_hint: （如果你不想改变它，留空白）
+    current_password_hint: （我们需要您的当前密码以确认您的更改）
     cancel:
-      title: "取消我的帐户"
-      hint: "不开心吗？"
-      button: "取消我的帐户"
+      title: 取消我的帐户
+      hint: 不开心吗？
+      button: 取消我的帐户
   user_level:
-    completed: "已完成"
-    tried: "试过了"
+    completed: 已完成
+    tried: 试过了
   user_stats:
-    recent_activity: "最近的动态"
-    show_more: "显示更多"
-    classroom_activity: "不用电脑的活动"
+    recent_activity: 最近的动态
+    show_more: 显示更多
+    classroom_activity: 不用电脑的活动
   home:
     title: Code Studio
     all_courses: Overview of Courses 1, 2, and 3
     lesson_plans: Lesson plans
-    signin_message: "已经注册了吗？%{link}"
-    student_reg_link: "学生 注册"
-    teacher_reg_link: "老师 注册"
-    signin_directions: "使用一个帐户来跟踪进度。 <br/>教师，跟踪您的整个班级。"
-    teacher_dashboard: "看进度板"
-    teacher_student_count_one: "你有 %{count} 个学生。"
-    teacher_student_count: "你有 %{count} 个学生。"
-    teacher_averages: "平均下来，您的学生获得了%{trophy_average}/%{trophy_max}个“概念掌握”奖杯。"
-    teacher_print_certificates: "为完成此课程的学生打印证书"
-    teacher_read_blog: "阅读有关新闻和我们在教育家博客的材料的更新"
-    classroom: "你的教室"
-    student_progress: "你的学习进度"
-    student_stats: "你已经获得了%{trophy_count}/%{trophy_max}个“概念掌握”奖杯。"
-    student_left_off: "你上次离开的地方："
-    student_finished: "您已经完成了所有教程，选择另一个 %{online_link} 或 {local_school_link} %"
-    local_school: "本地学校"
-    online: "在线"
-    see_details: "查看详细信息"
-    prize_info: "奖品为参与 （仅限美国公立学校教师）： 最高在课堂奖励 1000 元。"
-    tryfirst: "或者，你也可以先试一试，晚些再注册："
-    trynow: "现在就试试"
-    add_hint_help: "请帮助我们将智能提示添加到 Code.org 教程"
-    20hour_overview: "这个20 小时课程介绍核心计算机科学和编程的概念。课程为 K-8 年级设计，用于室内教学，但是所有年龄段学习起来都很有趣。"
-    test_videos_help: "在你的学校测试我们新的视频播放器"
-    try_beta_courses: "新增功能！尝试我们为K-5 学生准备的 beta 版课程"
-    use_as_teacher: "使用本网站作为一名教师"
-    heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
-    heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
-    heading_legacy: "<h2>Our previous course for</h2><h1>Existing Students</h1>"
+    signin_message: 已经注册了吗？%{link}
+    student_reg_link: 学生 注册
+    teacher_reg_link: 老师 注册
+    signin_directions: 使用一个帐户来跟踪进度。 <br/>教师，跟踪您的整个班级。
+    teacher_dashboard: 看进度板
+    teacher_student_count_one: 你有 %{count} 个学生。
+    teacher_student_count: 你有 %{count} 个学生。
+    teacher_averages: 平均下来，您的学生获得了%{trophy_average}/%{trophy_max}个“概念掌握”奖杯。
+    teacher_print_certificates: 为完成此课程的学生打印证书
+    teacher_read_blog: 阅读有关新闻和我们在教育家博客的材料的更新
+    classroom: 你的教室
+    student_progress: 你的学习进度
+    student_stats: 你已经获得了%{trophy_count}/%{trophy_max}个“概念掌握”奖杯。
+    student_left_off: 你上次离开的地方：
+    student_finished: 您已经完成了所有教程，选择另一个 %{online_link} 或 {local_school_link} %
+    local_school: 本地学校
+    online: 在线
+    see_details: 查看详细信息
+    prize_info: 奖品为参与 （仅限美国公立学校教师）： 最高在课堂奖励 1000 元。
+    tryfirst: 或者，你也可以先试一试，晚些再注册：
+    trynow: 现在就试试
+    add_hint_help: 请帮助我们将智能提示添加到 Code.org 教程
+    20hour_overview: 这个20 小时课程介绍核心计算机科学和编程的概念。课程为 K-8 年级设计，用于室内教学，但是所有年龄段学习起来都很有趣。
+    test_videos_help: 在你的学校测试我们新的视频播放器
+    try_beta_courses: 新增功能！尝试我们为K-5 学生准备的 beta 版课程
+    use_as_teacher: 使用本网站作为一名教师
+    heading_elementary: <h2>20 hour courses for</h2><h1>Elementary Students</h1>
+    heading_apps: <h2>Fun for</h2><h1>Everybody</h1>
+    heading_legacy: <h2>Our previous course for</h2><h1>Existing Students</h1>
     gallery:
       your_turtle: My Art
       your_studio: My Apps
   gender:
-    male: "男性"
-    female: "女性"
-    none: "不愿回答"
+    male: 男性
+    female: 女性
+    none: 不愿回答
   user_type:
-    student: "学生"
+    student: 学生
     teacher: Teacher
   footer:
-    help_from_html: "从谷歌、 微软、 Facebook 和 Twitter 工程师帮助创建本教程。"
-    art_from_html: "愤怒的小鸟 ™ & © 2009年-2013 Rovio 娱乐有限公司版权所有。 <br/>植物与僵尸 ™ & © 2013年电子艺术公司保留所有的权利。"
-    feedback: "提供反馈"
-    translate: "帮助我们翻译成你的语言"
-    support: "支持"
+    help_from_html: 从谷歌、 微软、 Facebook 和 Twitter 工程师帮助创建本教程。
+    art_from_html: 愤怒的小鸟 ™ & © 2009年-2013 Rovio 娱乐有限公司版权所有。 <br/>植物与僵尸 ™ & © 2013年电子艺术公司保留所有的权利。
+    feedback: 提供反馈
+    translate: 帮助我们翻译成你的语言
+    support: 支持
     support_url: http://support.code.org
-    tos: "条目"
-    privacy: "隐私政策"
-    secure: "安全版本"
+    tos: 条目
+    privacy: 隐私政策
+    secure: 安全版本
   reference_area:
-    title: "需要帮助吗？"
-    subtitle: "看看这些视频和提示"
-    teacher: "请参阅解决方案"
-    auth_error: "您无权查看该解决方案。"
-    submit: "更新艺术家的位置"
-    direction: "开始方向"
+    title: 需要帮助吗？
+    subtitle: 看看这些视频和提示
+    teacher: 请参阅解决方案
+    auth_error: 您无权查看该解决方案。
+    submit: 更新艺术家的位置
+    direction: 开始方向
   video:
-    tab: "视频。"
-    notes: "没有视频吗？请看笔记。"
+    tab: 视频。
+    notes: 没有视频吗？请看笔记。
     notes_coming_soon: Notes for this video coming soon.
-    autoplay_option: "自动播放视频"
-    download: "下载视频"
+    autoplay_option: 自动播放视频
+    download: 下载视频
   compatability:
     working:
-      header: "我们在努力加入对你的浏览器的支持。"
+      header: 我们在努力加入对你的浏览器的支持。
       message: Code.org uses modern web technology. This makes the site faster to
         use. Your browser doesn't support all the features required, and you may experience
         issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting
@@ -403,25 +403,25 @@
         your browser to a supported version</a>.
       hide_this_warning: Hide this warning
     upgrade:
-      header: "请升级你的浏览器。"
+      header: 请升级你的浏览器。
       message: Code.org uses modern web technology. This makes the site faster to
         use. Unfortunately your browser doesn't support all the features required
         to run this part of the site.<br/><br/>Install a browser on our supported
         browsers list to continue. You can <a href='#'>try viewing the page</a>, but
         expect functionality to be broken.
       button: Take me to the list of supported browsers
-  slow_loading: "请稍微多等一会..."
-  try_reloading: "请重新刷新页面"
-  next_stage: "完成 ！继续下一个阶段"
-  download_pdf: "开放课程"
+  slow_loading: 请稍微多等一会...
+  try_reloading: 请重新刷新页面
+  next_stage: 完成 ！继续下一个阶段
+  download_pdf: 开放课程
   view_lesson_plan: View Lesson Plan
-  pdf_download: "下载 PDF"
+  pdf_download: 下载 PDF
   share_code:
-    title: "点击运行程序来观看程序的运行情况"
-    bounce_og_title: "看看我的弹球游戏"
-    flappy_og_title: "看看我的Flappy游戏"
+    title: 点击运行程序来观看程序的运行情况
+    bounce_og_title: 看看我的弹球游戏
+    flappy_og_title: 看看我的Flappy游戏
     studio_og_title: Check out my story
-    og_description: "我用 Code.org自己写的代码"
+    og_description: 我用 Code.org自己写的代码
     phone_number_not_allowed: It looks like there is a phone number in it. Try changing
       the text.
     address_not_allowed: It looks like there is an address in it. Try changing the
@@ -430,26 +430,26 @@
     profanity_not_allowed: It looks like there is profanity in it. Try changing the
       text.
   builder:
-    created: "您创建了一个新的脚本。"
-    destroyed: "你毁了一个脚本。"
-    manage: "建立级别"
-    view: "查看"
-    back: "回到脚本"
+    created: 您创建了一个新的脚本。
+    destroyed: 你毁了一个脚本。
+    manage: 建立级别
+    view: 查看
+    back: 回到脚本
     success: You successfully edited the blocks.
     level:
-      create: "创建新的水平"
-      current: "目前的水平"
-      unused: "未使用的水平"
+      create: 创建新的水平
+      current: 目前的水平
+      unused: 未使用的水平
   upsell:
     hoc:
-      title: "编程一小时"
-      body: "请尝试计算机科学的基本知识。数百万人尝试了它"
+      title: 编程一小时
+      body: 请尝试计算机科学的基本知识。数百万人尝试了它
     flappy:
-      title: "飞扬的代码"
-      body: "想要在 10 分钟内写你自己的游戏吗？请尝试我们飞扬的代码教程 ！"
+      title: 飞扬的代码
+      body: 想要在 10 分钟内写你自己的游戏吗？请尝试我们飞扬的代码教程 ！
     20hour:
-      title: "课程简介"
-      body: "尝试我们 20 小时计算机科学课程简介 。"
+      title: 课程简介
+      body: 尝试我们 20 小时计算机科学课程简介 。
   gallery:
     students_drew_these_with_code: Students drew these with code!
     students_made_these_with_code: Students made these with code!
@@ -462,25 +462,27 @@
     want_to_make_your_own: Want to make your own?
     more: More &rarr;
     caption_by_name_age: by %{name}, age %{age}
-    caption_time_ago: "%{time_ago} ago"
+    caption_time_ago: '%{time_ago} ago'
   landing:
     prerelease: This page is still under development.
     feedback: Give Feedback
     report_bug: Report Bug
     support: Get Help
-    support_url: "//support.code.org"
+    support_url: //support.code.org
   multi:
     wrong_title: Incorrect answer
     wrong_body: The answer you've entered is not correct.  Please try again!
-    correct_title: "正确。"
+    correct_title: 正确。
     correct_body: That is the correct answer.
   match:
     wrong_title: Incorrect solution
     wrong_body: The solution you've entered is not correct.  Please try again!
-    correct_title: "正确。"
+    correct_title: 正确。
     correct_body: That is the correct answer.
+  text_match:
+    placeholder: Enter your answer here
   dialog:
-    ok: "确定"
+    ok: 确定
   time:
     hour: 1 hour
     day: day
@@ -490,34 +492,34 @@
       name:
         20-hour:
           title: K-8计算机科学入门课程（15-25小时）
-          description: "这个20 小时课程介绍核心计算机科学和编程的概念。课程为 K-8 年级设计，用于室内教学，但是所有年龄段学习起来都很有趣。"
+          description: 这个20 小时课程介绍核心计算机科学和编程的概念。课程为 K-8 年级设计，用于室内教学，但是所有年龄段学习起来都很有趣。
         Hour of Code:
-          title: "编程一小时"
+          title: 编程一小时
           description: ''
         edit-code:
-          title: "编辑代码"
+          title: 编辑代码
           description: ''
         events:
-          title: "事件"
+          title: 事件
           description: ''
         builder:
-          title: "生成器"
+          title: 生成器
           description: ''
         flappy:
-          title: "飞扬的代码"
-          description: "想要在 10 分钟内写你自己的游戏吗？请尝试我们飞扬的代码教程 ！"
+          title: 飞扬的代码
+          description: 想要在 10 分钟内写你自己的游戏吗？请尝试我们飞扬的代码教程 ！
         jigsaw:
-          title: "拼图"
+          title: 拼图
           description: ''
         step:
-          title: "踏步"
+          title: 踏步
           description: ''
         sample_level_builder:
-          title: "样品水平生成器"
+          title: 样品水平生成器
           description: ''
   age_interstitial:
-    age: "你的年龄"
-    header: "帐户信息更新"
+    age: 你的年龄
+    header: 帐户信息更新
     message: We're in the process of updating our experience to provide you with even
       stronger privacy protections. To do this, we need existing users to enter their
       age here.<br/>As always, code.org will never rent, sell or share this information
@@ -526,3 +528,8 @@
   zendesk_too_young_message: Sorry, younger users may not sign in to our support site.
     You may browse <a href="http://support.code.org">support.code.org</a> without
     signing in or ask your parent or teacher to contact us for you.
+  progress:
+    not_completed: not completed
+    completed_too_many_blocks: completed, too many blocks
+    completed_perfect: completed, perfect
+    furthest_level_attempted: furthest level attempted
