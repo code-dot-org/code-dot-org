@@ -62,7 +62,8 @@ Blockly.BlockSpaceEditor.prototype.populateSVGEffects_ = function(container) {
   var svg = Blockly.createSvgElement('svg', {
     id: 'blocklyFilters',
     width: 0,
-    height: 0
+    height: 0,
+    style: 'display: block'
   }, container);
   /*
    <defs>
@@ -156,6 +157,8 @@ Blockly.BlockSpaceEditor.prototype.createDom_ = function(container) {
   // then manually positions content in RTL as needed.
   container.setAttribute('dir', 'LTR');
 
+  this.populateSVGEffects_(container);
+
   // Build the SVG DOM.
   /*
    <svg
@@ -180,7 +183,6 @@ Blockly.BlockSpaceEditor.prototype.createDom_ = function(container) {
   var defs = Blockly.createSvgElement('defs', {
     id: 'blocklySvgDefs'
   }, svg);
-  this.populateSVGEffects_(container);
   this.blockSpace.maxBlocks = Blockly.maxBlocks;
 
   svg.appendChild(this.blockSpace.createDom());

@@ -34,6 +34,11 @@
   prizes_actua: "15 schools across Canada will receive 2 hands-on STEM workshops by one of Actua's members"
   prizes_details: 'Details'
 
+  whats_next_header: "What's Next?"
+  whats_next_description: "We'll send you materials and helpful tips for your event. New 2014 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
+  whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>How to run an Hour of Code</a>"
+  whats_next_promote: "<a href='http://hourofcode.com/resources'>Promote the Hour of Code</a>"
+
   n_have_learned_an_hoc: "<h1>#</h1><h3>have tried an</h3><h2>HOUR of CODE</h2>"
   anybody_can_learn: 'Anybody can learn.'
   register_now: 'Register Now'
@@ -42,16 +47,16 @@
   front_join_us_description: 'Computer science is a foundation for every student. Help us introduce it to 100 million.'
   front_join_us_button: 'Join us'
   front_what_is_hoc: 'What is the Hour of Code?'
-  front_join_us_header: 'Any time during December 8-14, Computer Science Education Week, host an Hour of Code event to show that anyone can learn the basics, and have fun doing it!'
+  front_join_us_header: 'Anyone can learn the basics, and have fun doing it!'
   front_join_us_header_uk: 'Any time during December 8-14 host an Hour of Code event to show that anyone can learn the basics, and have fun doing it!'
   front_join_us_teacher: 'Are you a teacher?'
-  front_join_us_inspire: 'Inspire your students with' 
-  front_join_us_inspire_link: 'an Hour of Code in your classroom.'
+  front_join_us_inspire: 'Inspire students with'
+  front_join_us_inspire_link: 'an Hour of Code in the classroom.'
   front_join_us_parent: 'Are you a parent?'
   front_join_us_ask_link: 'Ask your local school'
   front_join_us_ask: 'to host an Hour of Code.'
   front_join_us_computer_science: 'Just love computer science?'
-  front_join_us_spread: 'Spread the word in your community.'
+  front_join_us_spread: 'Spread the word.'
   front_join_us_organize: 'Or organize an Hour of Code event yourself.'
   front_join_us_how_to_run: "Here's how to run an Hour of Code"
   front_join_us_help_promote: "Help promote the Hour of Code"
@@ -62,7 +67,7 @@
   front_join_us_host: "Host it"
   front_join_us_support: "Support it"
 
-  signup_header: 'Let us know if you’re hosting an Hour of Code'
+  signup_header: 'Organize an Hour of Code event during Dec 8 - 14, and register it here.'
   signup_name_label: 'Your name'
   signup_email_label: 'Your email'
   signup_organization_name_label: 'School or organization name'
