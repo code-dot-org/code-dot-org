@@ -112,6 +112,7 @@ Webapp.onTick = function() {
       catch(err) {
         Webapp.executionError = err;
         Webapp.onPuzzleComplete();
+        return;
       }
     }
   } else {
@@ -337,7 +338,7 @@ var displayFeedback = function() {
       feedbackImage: Webapp.feedbackImage,
       twitter: twitterOptions,
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
-      saveToGalleryUrl: level.freePlay && Webapp.response.save_to_gallery_url,
+      saveToGalleryUrl: level.freePlay && Webapp.response && Webapp.response.save_to_gallery_url,
       appStrings: {
         reinfFeedbackMsg: webappMsg.reinfFeedbackMsg(),
         sharingText: webappMsg.shareGame()
@@ -688,7 +689,16 @@ Webapp.setStyle = function (opts) {
 };
 
 Webapp.onEventFired = function (opts, e) {
-  Webapp.eventQueue.push({'fn': opts.func});
+  if (typeof e != 'undefined') {
+    // Push a function call on the queue with an array of arguments consisting
+    // of just the 'e' parameter
+    Webapp.eventQueue.push({
+      'fn': opts.func,
+      'arguments': [e]
+    });
+  } else {
+    Webapp.eventQueue.push({'fn': opts.func});
+  }
 };
 
 Webapp.attachEventHandler = function (opts) {
