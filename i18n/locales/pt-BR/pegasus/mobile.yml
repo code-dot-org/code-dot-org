@@ -1,6 +1,6 @@
-"pt":
+"pt-BR":
   hello: "Olá, mundo"
-  select_language: "Please select your language"
+  select_language: "Selecione seu idioma"
   computer_science: "Ciência da Computação"
   computer_science_edweek: "Semana de Educação em Ciência da Computação"
   csedweek_dates: "9 a 15 de dezembro de 2013"
@@ -192,10 +192,11 @@
   dashboard_action_done: "Feito"
   dashboard_action_required: "obrigatório"
   dashboard_navigation_home_page: "Página inicial do professor"
-  dashboard_navigation_all_sections: "Todas as turmas"
+  dashboard_navigation_all_sections: "Student Accounts and Progress"
   dashboard_navigation_view_progress: "Exibir progresso"
   dashboard_navigation_add_students: "Adicionar alunos"
   dashboard_navigation_manage_students: "Gerenciar alunos"
+  dashboard_navigation_lesson_plans_resources: "Lesson Plans and Resources"
   dashboard_navigation_view_stats: "Ver estatísticas"
   dashboard_navigation_section: 'Turma: %{section_name}'
   dashboard_navigation_student: 'Aluno: %{student_name}'
@@ -423,7 +424,7 @@
   agentcubes_longdescription: "Pense em uma ferramenta que permite que você transforme imagens 2D em formas 3D. Utilize o AgentCubes on-line, a primeira ferramenta de programação e modelagem 3D baseada na Web do mundo, para aprender a programar criando e compartilhando jogos 3D empolgantes. Domine seu mundo!"
   alice_longdescription: 'Os alunos vão preparar uma cena e criar uma animação simples com pouquíssima ajuda do professor, usando objetos 3D e interface de arrastar e soltar em um ambiente de codificação envolvente e de apoio. [OBSERVAÇÃO: a instalação do aplicativo na área de trabalho é necessária]'
   livecode_longdescription: '"Todos podem codificar com o LiveCode" contém 6 vídeo aulas, incluindo uma introdução ao ambiente do LiveCode. Ele vai ensiná-lo a fazer o popular jogo "Sheepherder", em destaque no YouTube. Assista a todos os vídeos e acompanhe-os usando a documentação por escrito do passo-a-passo. Todos os códigos do jogo estão disponíveis para que você copie e cole, com explicações claras sobre como e por que eles funcionam. Você poderá fazer o download das imagens e amostras necessárias. [OBSERVAÇÃO: A INSTALAÇÃO NA ÁREA DE TRABALHO É NECESSÁRIA] '
-  lookingglass_longdescription: 'Nesta atividade, os alunos serão apresentados à programação ao construir uma história animada. Eles conhecerão o pensamento computacional e terão uma demonstração da criatividade inerente à computação. Além disso, essa atividade incorpora uma mistura de ações (animações de outros usuários do Looking Glass), e destaca o tipo de reutilização de código que geralmente ocorre entre programadores de todos os níveis, desde aqueles que veem a programação como um passatempo até os que são profissionais. Esta atividade é autoexplicativa. [OBSERVAÇÃO: a instalação na área de trabalho é necessária]'
+  lookingglass_longdescription: 'Nesta atividade, os alunos serão apresentados à programação ao construir uma história animada. Eles conhecerão o pensamento computacional e terão uma demonstração da criatividade inerente à computação. Além disso, essa atividade incorpora uma mistura de ações (animações de outros usuários do Espelho), e destaca o tipo de reutilização de código que geralmente ocorre entre programadores de todos os níveis, desde aqueles que veem a programação como um passatempo até os que são profissionais. Esta atividade é autoexplicativa. [OBSERVAÇÃO: a instalação na área de trabalho é necessária]'
   kodableunplugged_longdescription: 'Desenvolvido para ser usado com papel comum, o fuzzFamily Frenzy é uma introdução à lógica da programação para crianças a partir de 5 anos. Um professor explicará o jogo, então, os alunos vão programar um parceiro, para que ele complete um simples percurso de obstáculos. '
   codeorg_beyond_name: 'Introdução à Ciências da computação (anos: pré até 8)'
   khan_beyond_name: "Aprenda sobre a programação de computador"

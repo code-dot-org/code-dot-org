@@ -25,7 +25,7 @@
         subject: Pokyny k odemknutí
     omniauth_callbacks:
       failure: Nemůžeme tě ověřit z %{kind} kvůli "%{reason}".
-      success: "Úspěšně ověřen z %{kind} účtu."
+      success: Úspěšně ověřen z %{kind} účtu.
     passwords:
       no_token: Nemůžeš vstoupit na tuto stránku jinak, než skrze email pro obnovu
         hesla. Pokud opravdu přecházíš z daného emailu, přesvědč se, prosím, že jsi
@@ -40,19 +40,19 @@
       destroyed: Na shledanou! Tvůj účet byl úspěšně smazán. Doufáme, že tě zase někdy
         uvidíme.
       signed_up: Vítej! Úspěšně jsi byl přihlášen.
-      signed_up_but_inactive: "Úspěšně jsi byl registrován, ale do doby, než bude
-        tvůj účet aktivován, se nemůžeš přihlásit."
-      signed_up_but_locked: "Úspěšně jsi byl registrován, ale nemůžeš se přihlásit,
-        protože tvůj účet je uzamčen."
+      signed_up_but_inactive: Úspěšně jsi byl registrován, ale do doby, než bude tvůj
+        účet aktivován, se nemůžeš přihlásit.
+      signed_up_but_locked: Úspěšně jsi byl registrován, ale nemůžeš se přihlásit,
+        protože tvůj účet je uzamčen.
       signed_up_but_unconfirmed: Zpráva s potvrzovacím odkazem byla zaslána na tvou
         emailovou adresu. Otevři, prosím, daný odkaz pro aktivování účtu.
-      update_needs_confirmation: "Účet byl úspěšně aktualizován, avšak musíme ověřit
+      update_needs_confirmation: Účet byl úspěšně aktualizován, avšak musíme ověřit
         tvou novou emailovou adresu. Prosím, zkontroluj svůj email a klikni na potvrzovací
-        link, aby jsi dokončil změnu své nové emailové adresy."
-      updated: "Účet byl úspěšně aktualizován."
+        link, aby jsi dokončil změnu své nové emailové adresy.
+      updated: Účet byl úspěšně aktualizován.
     sessions:
-      signed_in: "Úspěšně přihlášen."
-      signed_out: "Úspěšně odhlášen."
+      signed_in: Úspěšně přihlášen.
+      signed_out: Úspěšně odhlášen.
     unlocks:
       send_instructions: Do několika minut obdržíš email s pokyny, jak odemknout svůj
         účet.
@@ -69,4 +69,4 @@
       not_locked: nebyl uzamčen
       not_saved:
         one: '1 chyba zabránila %{resource} v uložení:'
-        other: "%{count} chyb zabránilo %{resource} v uložení:"
+        other: '%{count} chyb zabránilo %{resource} v uložení:'

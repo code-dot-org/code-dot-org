@@ -1,57 +1,57 @@
 "no":
   devise:
     confirmations:
-      confirmed: E-postadressen din har blitt bekreftet.
-      send_instructions: Om noen få minutter vil du motta en e-post med instruksjoner om hvordan du bekrefter kontoen.
-      send_paranoid_instructions: Hvis din e-postadresse finnes i vår database, vil du om noen få minutter motta en e-post med instruksjoner om hvordan du bekrefter kontoen.
+      confirmed: "E-postadressen din har blitt bekreftet."
+      send_instructions: "Om noen få minutter vil du motta en e-post med instruksjoner om hvordan du bekrefter kontoen."
+      send_paranoid_instructions: "Hvis din e-postadresse finnes i vår database, vil du om noen få minutter motta en e-post med instruksjoner om hvordan du bekrefter kontoen."
     failure:
-      already_authenticated: Du allerede er logget på.
-      inactive: Kontoen din er ikke aktivert ennå.
-      invalid: Ugyldig epostadresse eller passord.
-      invalid_token: Ugyldig godkjenningstoken.
-      locked: Kontoen er låst.
-      not_found_in_database: Ugyldig epostadresse eller passord.
-      timeout: Økten utløpt, Logg på igjen for å fortsette.
-      unauthenticated: Du må logge på eller registrere deg før du fortsetter.
-      unconfirmed: Du må bekrefte kontoen før du fortsetter.
+      already_authenticated: "Du allerede er logget på."
+      inactive: "Kontoen din er ikke aktivert ennå."
+      invalid: "Ugyldig epostadresse eller passord."
+      invalid_token: "Ugyldig godkjenningstoken."
+      locked: "Kontoen er låst."
+      not_found_in_database: "Ugyldig epostadresse eller passord."
+      timeout: "Økten utløpt, Logg på igjen for å fortsette."
+      unauthenticated: "Du må logge på eller registrere deg før du fortsetter."
+      unconfirmed: "Du må bekrefte kontoen før du fortsetter."
     mailer:
       confirmation_instructions:
-        subject: Code.org instruksjoner for bekreftelse
+        subject: "Code.org instruksjoner for bekreftelse"
       reset_password_instructions:
-        subject: Code.org instruksjoner for å tilbakestille passord
+        subject: "Code.org instruksjoner for å tilbakestille passord"
       unlock_instructions:
-        subject: Instruksjoner for å låse opp
+        subject: "Instruksjoner for å låse opp"
     omniauth_callbacks:
       failure: 'Kunne ikke godkjenne deg fra %{kind} fordi "%{reason}".'
       success: 'Godkjent fra %{kind} konto.'
     passwords:
-      no_token: Du får ikke tilgang til denne siden uten å komme via en passord-tilbakestilling e-post. Hvis du kommer via en passord-tilbakestilling e-post, kontroller at du brukte hele URL-adressen.
-      send_instructions: Om noen minutter vil du motta en e-post med instruksjoner om hvordan du tilbakestiller passordet.
-      send_paranoid_instructions: Hvis e-postadressen din finnes i vår database, vil du motta en gjenopprett passord-kobling om et par minutter.
-      updated: Passordet ble endret. Du er nå logget på.
-      updated_not_active: Passordet ditt er blitt endret.
+      no_token: "Du får ikke tilgang til denne siden uten å komme via en passord-tilbakestilling e-post. Hvis du kommer via en passord-tilbakestilling e-post, kontroller at du brukte hele URL-adressen."
+      send_instructions: "Om noen minutter vil du motta en e-post med instruksjoner om hvordan du tilbakestiller passordet."
+      send_paranoid_instructions: "Hvis e-postadressen din finnes i vår database, vil du motta en gjenopprett passord-kobling om et par minutter."
+      updated: "Passordet ble endret. Du er nå logget på."
+      updated_not_active: "Passordet ditt er blitt endret."
     registrations:
-      destroyed: Ha det! Kontoen din ble avsluttet. Vi håper å se deg igjen snart.
-      signed_up: Velkommen! Du ble meldt på uten problemer.
-      signed_up_but_inactive: Du er blitt meldt på, men vi kunne ikke logge deg på da kontoen din ikke ennå er aktivert.
-      signed_up_but_locked: Du er meldt på, men vi kan ikke slippe deg inn da kontoen din er låst.
-      signed_up_but_unconfirmed: En melding med en bekreftelseslink er blitt sendt til din e-postadresse. Vennligst åpne linken for å aktivere kontoen din.
-      update_needs_confirmation: Du har oppdatert kontoen din, men vi må verifisere din nye e-postadresse. Vennligst sjekk e-posten din og klikk på linken for å bekrefte din nye e-postadresse.
-      updated: Kontoen din er blitt oppdatert.
+      destroyed: "Ha det! Kontoen din ble avsluttet. Vi håper å se deg igjen snart."
+      signed_up: "Velkommen! Du ble meldt på uten problemer."
+      signed_up_but_inactive: "Du er blitt meldt på, men vi kunne ikke logge deg på da kontoen din ikke ennå er aktivert."
+      signed_up_but_locked: "Du er meldt på, men vi kan ikke slippe deg inn da kontoen din er låst."
+      signed_up_but_unconfirmed: "En melding med en bekreftelseslink er blitt sendt til din e-postadresse. Vennligst åpne linken for å aktivere kontoen din."
+      update_needs_confirmation: "Du har oppdatert kontoen din, men vi må verifisere din nye e-postadresse. Vennligst sjekk e-posten din og klikk på linken for å bekrefte din nye e-postadresse."
+      updated: "Kontoen din er blitt oppdatert."
     sessions:
-      signed_in: Logget inn.
-      signed_out: Logget ut.
+      signed_in: "Logget inn."
+      signed_out: "Logget ut."
     unlocks:
-      send_instructions: Du vil motta en e-post om noen få minutter som beskriver hvordan du kan låse opp kontoen din igjen.
-      send_paranoid_instructions: Hvis kontoen din finnes så vil du om noen få minutter motta en e-post som forklarer deg hvordan du kan låse opp kontoen din.
-      unlocked: Kontoen din er blitt låst opp. Vennligst logg på for å fortsette.
+      send_instructions: "Du vil motta en e-post om noen få minutter som beskriver hvordan du kan låse opp kontoen din igjen."
+      send_paranoid_instructions: "Hvis kontoen din finnes så vil du om noen få minutter motta en e-post som forklarer deg hvordan du kan låse opp kontoen din."
+      unlocked: "Kontoen din er blitt låst opp. Vennligst logg på for å fortsette."
   errors:
     messages:
       already_confirmed: 'var allerede bekreftet. Vennligst  prøv å logg på'
       confirmation_period_expired: 'må være bekreftet innen %{period}, vennligst forespør en ny'
-      expired: har utgått, vennligst søk om en ny
-      not_found: ikke funnet
-      not_locked: var ikke låst
+      expired: "har utgått, vennligst søk om en ny"
+      not_found: "ikke funnet"
+      not_locked: "var ikke låst"
       not_saved:
         one: '1 feil forhindret denne %{resource} fra å bli reddet:'
         other: '%{count} feil forhindret denne %{resource} fra å bli reddet:'

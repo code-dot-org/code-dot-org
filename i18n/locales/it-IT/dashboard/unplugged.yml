@@ -1,151 +1,151 @@
-it:
+"it":
   data:
     unplugged:
       Unplug1:
         title: "Introduzione all'informatica"
-        desc: Questa lezione introduce il concetto di “Informatica” e spiega cosa fa un “Informatico”. Fornisce anche agli allievi l’opportunità di assumere il ruolo di un informatico. Al termine dell’attività ogni allievo avrà un ricordo da portare a casa di ciò che ha imparato. Potresti esser tentato di non insegnare adesso ai tuoi allievi le parole complicate associate a queste lezioni, ma presentarle adesso in modo divertente e giocoso è molto più produttivo che aspettare opportunità più avanzate.
+        desc: "Questa lezione introduce il concetto di “Informatica” e spiega cosa fa un “Informatico”. Fornisce anche agli allievi l’opportunità di assumere il ruolo di un informatico. Al termine dell’attività ogni allievo avrà un ricordo da portare a casa di ciò che ha imparato. Potresti esser tentato di non insegnare adesso ai tuoi allievi le parole complicate associate a queste lezioni, ma presentarle adesso in modo divertente e giocoso è molto più produttivo che aspettare opportunità più avanzate."
         pdfs:
           - unplug1
-        video: Unplug1
+        video: "Unplug1"
       Unplug2:
-        title: Pensiero computazionale
+        title: "Pensiero computazionale"
         desc: |-
           Usando solo carta e penna, gli studenti impareranno i 4 passi fondamentali del "pensiero computazionale". Dopo una breve introduzione gli studenti vengono divisi in gruppi nei quali devono creare istruzioni affinché altri studenti disegnino uno specifico mostro (da un catalogo di mostri predefiniti). L'intero compito va decomposto in passi elementari: a questo scopo i gruppi devono analizzare tutti i mostri nel catalogo per trovare schemi ricorrenti, individuare i diversi dettagli degli specifici mostri, poi usare queste informazioni per creare un algoritmo (cioè, una sequenza di istruzioni) affinché un altro gruppo possa disegnare uno specifico mostro. Ogni gruppo poi scambierà il proprio algoritmo con quello di un altro gruppo e disegnerà il mostro seguendo le istruzioni dell'algoritmo ricevuto. Il disegno che che ottengono è ciò che il gruppo che ha scritto l'algoritmo intendeva?
         pdfs:
           - unplug2
-        video: Unplug2
+        video: "Unplug2"
       Unplug3:
-        title: Programmazione su carta a quadretti
+        title: "Programmazione su carta a quadretti"
         desc: "Lo studente impara a capire cos'è davvero la programmazione dando istruzioni ad un altro studente affinché faccia un disegno. L'obiettivo è far sì che uno studente scriva un programma seguendo il quale un altro studente possa colorare le caselle di un foglio di carta a quadretti in modo da riprodurre un disegno esistente. Se c'è tempo, nella lezione si può affrontare la creazione da parte degli studenti di disegni originali."
         pdfs:
           - unplug3
-        video: Unplug3
+        video: "Unplug3"
       Unplug4:
-        title: Algoritmi
-        desc: Questa lezione riguarda gli algoritmi. Usando le forme del tangram e la carta a quadretti, il primo esercizio mostra quanto è importante rendere ogni istruzione chiara e non ambigua il più possibile. Successivamente, si esplora in quanti modi è possibile piegare la carta a formare un rettangolo, osservando come alcuni metodi richiedono più o meno piegature di altri.
+        title: "Algoritmi"
+        desc: "Questa lezione riguarda gli algoritmi. Usando le forme del tangram e la carta a quadretti, il primo esercizio mostra quanto è importante rendere ogni istruzione chiara e non ambigua il più possibile. Successivamente, si esplora in quanti modi è possibile piegare la carta a formare un rettangolo, osservando come alcuni metodi richiedono più o meno piegature di altri."
         pdfs:
           - unplug4
-        video: Unplug4
+        video: "Unplug4"
       Unplug5:
-        title: Funzioni
+        title: "Funzioni"
         desc: |-
           In questa lezione gli studenti realizzano un acchiappa-sole con fili, perline, e uno speciale amuleto. Gli studenti seguono una serie di azioni che si ripetono, poi devono individuare alcuni insiemi di "abilità" che vengono replicate più volte. Una volta che queste abilità sono individuate, vengono richiamate da un programma principale e l'intero processo di realizzazione viene scritto su di un singolo foglio di carta. Il programma finale deve essere utile per l'intera classe, a prescindere dal loro tipo di fili, perline e amuleti. Affinché questo sia possibile, gli studenti devono "astrarre" i dettagli del loro specifico materiale e creare opportuni termini generici per i singoli materiali usati. Quest'uso di termini generici è una magnifica introduzione alle variabili.
         pdfs:
           - unplug5
-        video: Unplug5
+        video: "Unplug5"
       Unplug6:
-        title: Istruzioni condizionali
+        title: "Istruzioni condizionali"
         desc: |-
           Questo è un gioco per l'intera classe. Dopo aver introdotto i concetti di istruzioni condizionali, istruzioni "se" e istruzioni di ripetizione, gli studenti possono esercitarsi tutti insieme usando un programma già scritto, un mazzo di carte, e un po' di fortuna.
         pdfs:
           - unplug6
-        video: Unplug6
+        video: "Unplug6"
       Unplug7:
-        title: Composizione di canzoni
+        title: "Composizione di canzoni"
         desc: "Leggere il testo delle canzoni è un'attività abbastanza intuitiva per la maggior parte degli studenti. Usiamo quindi questa capacità già posseduta dagli studenti per dare una buona formazione sulla definizione ed invocazione di funzioni. Una volta che gli studenti sono familiari con il processo di definizione/invocazione, aggiungiamo le ulteriori capacità di passaggio di parametri nella chiamata di funzioni."
         pdfs:
           - unplug7
-        video: Unplug7
+        video: "Unplug7"
       Unplug8:
-        title: Astrazione
+        title: "Astrazione"
         desc: |-
           Questa lezione combina le attività quotidiane dei tuoi studenti con un gioco con le parole chiamato "Mad-Libs" (che consiste nel riempire con parole a scelta degli spazi vuoti di frasi pre-determinate) per aiutarli a comprendere l'efficacia dell'astrazione.
         pdfs:
           - unplug8
-        video: Unplug8
+        video: "Unplug8"
       Unplug9:
-        title: Programmazione a Staffetta
+        title: "Programmazione a Staffetta"
         desc: |-
           Questa lezione riutilizza l'idea di una precedente lezione (n.4 - Programmazione su carta a quadretti) ed usa le abilità apprese in quella lezione per sottolineare l'importanza di costruire programmi che operano in sequenza e di controllare spesso se nel programma ci sono errori (detti "bug").
         pdfs:
           - unplug9
-        video: Unplug9
+        video: "Unplug9"
       Unplug10:
-        title: Internet
-        desc: In questa lezione gli studenti fanno finta di viaggiare su Internet mentre imparano i segreti degli indirizzi del Web, degli indirizzi fisici della rete (IP), e dei servizi di indirizzamento (DNS).
+        title: "Internet"
+        desc: "In questa lezione gli studenti fanno finta di viaggiare su Internet mentre imparano i segreti degli indirizzi del Web, degli indirizzi fisici della rete (IP), e dei servizi di indirizzamento (DNS)."
         pdfs:
           - unplug10
-        video: Unplug10
+        video: "Unplug10"
       Unplug11:
-        title: Conclusione
+        title: "Conclusione"
         desc: "La conclusione finale di questa serie di 20 lezioni aiuta gli studenti a rivivere i momenti migliori, mentre indica loro i prossimi passi da intraprendere se sono interessati a continuare la loro escursione nell'informatica."
         pdfs:
           - unplug11
-        video: Unplug11
+        video: "Unplug11"
       UnplugHappyMaps:
-        title: Mappe Felici
-        desc: Gli studenti creano semplici algoritmi (sequenze di istruzioni) per spostare un personaggio attraverso un labirinto utilizzando un solo comando.
+        title: "Mappe Felici"
+        desc: "Gli studenti creano semplici algoritmi (sequenze di istruzioni) per spostare un personaggio attraverso un labirinto utilizzando un solo comando."
         video: 'Mappe Felici - "Senza Rete"'
       MoveIt:
-        title: Muovilo, Muovilo
-        desc: Gli studenti creano semplici algoritmi (sequenze di istruzioni) per spostare un personaggio attraverso un labirinto utilizzando un solo comando.
+        title: "Muovilo, Muovilo"
+        desc: "Gli studenti creano semplici algoritmi (sequenze di istruzioni) per spostare un personaggio attraverso un labirinto utilizzando un solo comando."
         video: 'Muovilo, Muovilo - "Senza Rete"'
       PlantASeed:
         title: 'Algoritmi della Vita Reale: Piantare un Seme'
         desc: "Questa lezione tratta degli algoritmi nella vita quotidiana, usando come esempio l'atto del piantare un seme. Viene discussa anche una visione più generale dell'informatica  e il fatto che gli algoritmi ne sono una parte essenziale."
-        video: Piantare un seme
+        video: "Piantare un seme"
       BuildingAFoundation:
-        title: Costruire le Fondamenta
+        title: "Costruire le Fondamenta"
         desc: "Gli studenti costruiscono una struttura usando solo il materiale disponibile. Le strutture devono soddisfare alcuni requisiti (raggiungere una specifica altezza o sopportare un determinato peso) e gli studenti riflettono sull'importanza di insistere quando i problemi sono complicati."
-        video: Costruire le Fondamenta
+        video: "Costruire le Fondamenta"
       GettingLoopy:
-        title: Diventare Ripetitivi
+        title: "Diventare Ripetitivi"
         desc: 'Questa lezione introduce il costrutto di programmazione detto "ciclo" (istruzioni ripetute) attraverso una danza. Gli studenti imparano una semplice coreografia e sono istruiti a ripeterla.'
-        video: Diventare Ripetitivi
+        video: "Diventare Ripetitivi"
       RelayProgramming:
-        title: Programmazione a Staffetta
+        title: "Programmazione a Staffetta"
         desc: 'Gli studenti fanno una corsa a staffetta, nella quale uno alla volta corrono a scrivere un algoritmo basato su un disegno dalla lezione "Programmazione su carta a quadretti". Possono scrivere una sola istruzione alla volta, e se trovano un errore in qualche punto, devono cancellare tutto fino a quel punto.'
         video: 'Programmazione a staffetta - "Senza Rete"'
       Conditionals:
-        title: Condizionali
+        title: "Condizionali"
         desc: 'Per imparare le istruzioni condizionali, gli studenti giocano con le carte e creano regole del tipo "SE estraggo una carta rossa ottengo un punto" e "SE estraggo una carta nera tu ottieni un punto".'
         video: 'Istruzioni condizionali - "Senza Rete"'
       BigEvent:
-        title: Il Grande Evento
+        title: "Il Grande Evento"
         desc: 'Gli studenti vengono introdotti al concetto di "eventi" nella programmazione. Gli eventi sono azioni che un calcolatore continuamente controlla se accadono o meno.'
         video: 'Il Grande Evento - "Senza Rete"'
       GoingPlacesSafely:
-        title: Visitare Luoghi in Modo Sicuro
+        title: "Visitare Luoghi in Modo Sicuro"
         desc: "Internet è un luogo potente, ma alle volte pericoloso. L'insegnante introduce come navigare su Internet in modo sicuro."
       GraphPaperProgramming:
-        title: Programmazione su carta a quadretti
-        desc: Gli studenti scrivono un algoritmo (una sequenza di istruzioni) usando un insieme di comandi predefiniti per guidare i loro compagni di classe nel riprodurre il disegno.
-        video: Programmazione su carta a quadretti
+        title: "Programmazione su carta a quadretti"
+        desc: "Gli studenti scrivono un algoritmo (una sequenza di istruzioni) usando un insieme di comandi predefiniti per guidare i loro compagni di classe nel riprodurre il disegno."
+        video: "Programmazione su carta a quadretti"
       PaperPlanes:
         title: 'Algoritmi della Vita Reale: Aeroplani di Carta'
         desc: "Questa lezione tratta degli algoritmi nella vita quotidiana, nel caso specifico costruire un aeroplano di carta. Viene discussa anche una visione più generale dell'informatica  e il fatto che gli algoritmi ne sono una parte essenziale."
         video: 'Aeroplani di Carta - "Senza Rete"'
       BinaryBracelets:
-        title: Braccialetti Binari
+        title: "Braccialetti Binari"
         desc: "Gli studenti creano dei braccialetti che rappresentano con l'alfabeto binario la prima lettera del loro nome. Imparano quindi che i dati possono essere rappresentati e memorizzati in più di un modo."
         video: 'Braccialetti Binari - "Senza Rete"'
       DigitalFootprint:
-        title: La tua Impronta Digitale
+        title: "La tua Impronta Digitale"
         desc: "L'insegnante introduce agli studenti l'idea che mettere su Internet le loro informazioni personali crea un'impronta digitale che lascia tracce riconoscibili e sfruttabili."
       ComputationalThinking:
-        title: Pensiero computazionale
-        desc: Gli studenti usano i passi fondamentali del pensiero computazione (decomposizione, identificazione di schemi, astrazione, algoritmica) per capire come si svolge un gioco che non ha istruzioni.
+        title: "Pensiero computazionale"
+        desc: "Gli studenti usano i passi fondamentali del pensiero computazione (decomposizione, identificazione di schemi, astrazione, algoritmica) per capire come si svolge un gioco che non ha istruzioni."
         video: 'Pensiero Computazionale - "Senza Rete"'
       FunctionalSuncatchers:
-        title: Acchiappa-sole Funzionale
-        desc: Gli studenti creano un algoritmo con variabili e funzioni (porzioni di codice che si possono usare ripetutamente) per creare degli acchiappa-sole usando fili e perline.
-        video: Acchiappa-Sole Funzionale
+        title: "Acchiappa-sole Funzionale"
+        desc: "Gli studenti creano un algoritmo con variabili e funzioni (porzioni di codice che si possono usare ripetutamente) per creare degli acchiappa-sole usando fili e perline."
+        video: "Acchiappa-Sole Funzionale"
       SongwritingParameters:
         title: 'Composizione di Canzoni - Parametri'
-        desc: Gli studenti usano il concetto del ritornello di una canzone per imparare come passare dei parametri ad una funzione. Questo permette di personalizzare una funzione senza doverla riscrivere interamente.
+        desc: "Gli studenti usano il concetto del ritornello di una canzone per imparare come passare dei parametri ad una funzione. Questo permette di personalizzare una funzione senza doverla riscrivere interamente."
         video: 'Composizione di Canzoni - Parametri'
       DiceRace:
         title: 'Algoritmi della Vita Reale: Gara con i Dadi'
         desc: "Questa lezione tratta degli algoritmi nella vita quotidiana. In questo contesto, gli studenti devono identificare e scrivere l'algoritmo per un gioco con i dadi."
-        video: Gara con i Dadi
+        video: "Gara con i Dadi"
       Internet:
-        title: Internet
-        desc: Gli studenti inviano messaggi che rappresentano i vari metodi di trasmissione su Internet, usando solo dei fogli di carta.
+        title: "Internet"
+        desc: "Gli studenti inviano messaggi che rappresentano i vari metodi di trasmissione su Internet, usando solo dei fogli di carta."
         video: 'Internet - "Senza Rete"'
       Crowdsourcing:
-        title: Intelligenza Collettiva
-        desc: Students use crowdsourcing, a problem-solving technique common in computer science, to complete a task together as a classroom more efficiently than if a student attempted it alone.
-        video: Intelligenza Collettiva
+        title: "Intelligenza Collettiva"
+        desc: "Students use crowdsourcing, a problem-solving technique common in computer science, to complete a task together as a classroom more efficiently than if a student attempted it alone."
+        video: "Intelligenza Collettiva"
       DigitalCitizenship:
-        title: Cittadinanza Digitale
-        desc: Gli studenti esplorano la differenza tra informazioni private e informazioni personali, per distinguere cosa si può condividere su Internet in modo sicuro e cosa no.
+        title: "Cittadinanza Digitale"
+        desc: "Gli studenti esplorano la differenza tra informazioni private e informazioni personali, per distinguere cosa si può condividere su Internet in modo sicuro e cosa no."

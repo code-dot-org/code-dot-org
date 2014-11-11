@@ -124,7 +124,7 @@
       email: E-Mail-Adresse
       submit: Sende mir Anweisungen um das Kennwort zurückzusetzen
     change_form:
-      title: "Ändern Sie Ihr Passwort"
+      title: Ändern Sie Ihr Passwort
       new_password: Neues Passwort
       confirm_password: Neues Passwort bestätigen
       submit: Mein Passwort ändern
@@ -140,12 +140,12 @@
       %{name}
   follower:
     invite_sent: Einladung gesendet
-    added_teacher: "%{name} wurde als Ihr Lehrer hinzugefügt"
+    added_teacher: '%{name} wurde als Ihr Lehrer hinzugefügt'
     registered: Sie haben Sich registriert als %{section_name}.
     error:
       signed_in: Bitte melden Sie sich ab bevor Sie fortfahren
       username_not_found: Benutzername %{username} wurde nicht gefunden
-      username_in_use: "%{username} ist bereits vergeben, bitte wählen Sie einen anderen"
+      username_in_use: '%{username} ist bereits vergeben, bitte wählen Sie einen anderen'
       no_teacher: Es konnte niemand angemeldet mit '%{teacher_email_or_code}' gefunden
         werden. Bitten Sie bitte denjenigen sich hier registrieren und versuchen Sie
         es dann erneut.
@@ -194,7 +194,7 @@
         US-Schule bist.
       msg_visit_website: Website besuchen
     providers:
-      apple_itunes: "$10 iTunes Gift Card"
+      apple_itunes: $10 iTunes Gift Card
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10GB Dropbox-Speicherplatz
@@ -203,7 +203,7 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: "$10 Skype credit"
+      skype: $10 Skype credit
     msg:
       choose: 'Wähle einen Preis:'
       choose_teacher: 'Click on the logo below to claim your prize:'
@@ -252,9 +252,9 @@
     destroy: Zerstören
     back: Zurück
     confirm: Bist du sicher?
-    created: "%{model} wurde erfolgreich erstellt."
-    updated: "%{model} wurde erfolgreich aktualisiert."
-    destroyed: "%{model} wurde erfolgreich gelöscht."
+    created: '%{model} wurde erfolgreich erstellt.'
+    updated: '%{model} wurde erfolgreich aktualisiert.'
+    destroyed: '%{model} wurde erfolgreich gelöscht.'
     access_denied: Sie haben keinen Zugriff auf dieses %{model}.
   nav:
     header:
@@ -281,13 +281,13 @@
       puzzle_map: Level
       prizes: Sammeln Sie alle %{total_trophies} Trophäen und gewinnen Sie Preise!
       prize_earned: Alle %{total_trophies} Trophäen gesammelt. Preis gewonnen!
-      prize_us_only: "(nur für Schüler der USA)"
+      prize_us_only: (nur für Schüler der USA)
       prizes_link: Mehr Informationen
   teacher:
     title:
       one: 'Dein Lehrer:'
       other: 'Ihre Lehrer:'
-    remove: "(entfernen Lehrername)"
+    remove: (entfernen Lehrername)
     confirm:
       remove: Bist du sicher, dass Du diesen Lehrernamen entfernen möchtest?
     tools: Werkzeuge für Lehrer
@@ -343,18 +343,18 @@
     rollup: Fortschrittsanzeige
     activity: Letzte Aktivitäten der Klasse
     user_not_found: Der Lehrer oder Student konnte nicht gefunden werden
-    cant_remove_student_no_email: "%{student_name} kann nicht von ihren Schülern entfernt
-      werden, da %{student_name} nicht mit einer E-Mail-Adresse registriert ist"
-    cant_remove_teacher_no_email: "%{teacher_name} kann nicht als dein Lehrer entfernt
-      werden, da du keine E-Mail-Adresse registriert hast"
-    student_teacher_disassociated: "%{teacher_name} wurde als Lehrerin für %{student_name}
-      entfernt"
+    cant_remove_student_no_email: '%{student_name} kann nicht von ihren Schülern entfernt
+      werden, da %{student_name} nicht mit einer E-Mail-Adresse registriert ist'
+    cant_remove_teacher_no_email: '%{teacher_name} kann nicht als dein Lehrer entfernt
+      werden, da du keine E-Mail-Adresse registriert hast'
+    student_teacher_disassociated: '%{teacher_name} wurde als Lehrerin für %{student_name}
+      entfernt'
   user:
     email_confirm_needed: 'E-Mail-Adresse ist nicht bestätigt worden:'
     email_resend_confirm: Anmeldebestätigung erneut senden
-    new_password_hint: "(freilassen, wenn Sie es nicht verändern möchten)"
-    current_password_hint: "(wir benötigen Ihr aktuelle Kennwort, um Ihre Änderungen
-      zu bestätigen)"
+    new_password_hint: (freilassen, wenn Sie es nicht verändern möchten)
+    current_password_hint: (wir benötigen Ihr aktuelle Kennwort, um Ihre Änderungen
+      zu bestätigen)
     cancel:
       title: Mein Konto kündigen
       hint: Unglücklich?
@@ -368,7 +368,7 @@
     classroom_activity: Aktivität ohne Computer
   home:
     title: Code Studio
-    all_courses: "Übersicht der Level 1, 2 und 3"
+    all_courses: Übersicht der Level 1, 2 und 3
     lesson_plans: Arbeitsplan
     signin_message: Schon registriert? %{link}
     student_reg_link: Studenten Anmeldung
@@ -390,7 +390,7 @@
     student_left_off: 'Wo Sie aufgehört haben:'
     student_finished: Du hast alle Tutorials abgeschlossen. Wähle eine andere Klasse
       %{online_link} oder in deiner %{local_school_link}
-    local_school: "örtliche Schule"
+    local_school: örtliche Schule
     online: online
     see_details: Zeige Details
     prize_info: 'Preise für Teilnahme(nur Lehrer von öffentlichen Schulen der USA):
@@ -405,9 +405,9 @@
     try_beta_courses: Neu! Probieren Sie unsere Beta-Kurse für Schüler der Schulstufen
       1-6
     use_as_teacher: Verwende diese Seite als Lehrer
-    heading_elementary: "<h2>20 Stunden Kurse für</h2><h1>Grundschüler</h1>"
-    heading_apps: "<h2>Spass für</h2><h1>Alle</h1>"
-    heading_legacy: "<h2>Unser allgemeiner Kurs für</h2><h1>Alle Altersstufen</h1>"
+    heading_elementary: <h2>20 Stunden Kurse für</h2><h1>Grundschüler</h1>
+    heading_apps: <h2>Spass für</h2><h1>Alle</h1>
+    heading_legacy: <h2>Unser allgemeiner Kurs für</h2><h1>Alle Altersstufen</h1>
     gallery:
       your_turtle: My Art
       your_studio: My Apps
@@ -465,7 +465,7 @@
   try_reloading: Versuchen Sie die Seite neu zu laden
   next_stage: Geschafft! Fahre mit dem nächsten Level fort.
   download_pdf: Unterrichtsplan öffnen
-  view_lesson_plan: "Überblick des Unterrichtsplans"
+  view_lesson_plan: Überblick des Unterrichtsplans
   pdf_download: PDF herunterladen
   share_code:
     title: Klicken Sie auf "Ausführen", um das Programm in Aktion zu sehen
@@ -515,7 +515,7 @@
     want_to_make_your_own: Möchtest du dein eigenes machen?
     more: Mehr &rarr;
     caption_by_name_age: by %{name}, age %{age}
-    caption_time_ago: "%{time_ago} ago"
+    caption_time_ago: '%{time_ago} ago'
   landing:
     prerelease: Dieser Kurs ist als <span class='betatext'> Beta</span> eingestuft.  Das
       bedeutet, dies ist nicht die endgültige Fassung des Kurses und er unterliegt
@@ -523,7 +523,7 @@
     feedback: Feedback geben
     report_bug: Fehler melden
     support: Hilfe erhalten
-    support_url: "//support.code.org"
+    support_url: //support.code.org
   multi:
     wrong_title: Falsche Antwort
     wrong_body: Die Antwort, die du eingegeben hast, ist nicht korrekt. Bitte versuche

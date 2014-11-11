@@ -14,7 +14,7 @@
       invalid_token: Ugyldig godkjenningstoken.
       locked: Kontoen er låst.
       not_found_in_database: Ugyldig epostadresse eller passord.
-      timeout: "Økten utløpt, Logg på igjen for å fortsette."
+      timeout: Økten utløpt, Logg på igjen for å fortsette.
       unauthenticated: Du må logge på eller registrere deg før du fortsetter.
       unconfirmed: Du må bekrefte kontoen før du fortsetter.
     mailer:
@@ -69,4 +69,4 @@
       not_locked: var ikke låst
       not_saved:
         one: '1 feil forhindret denne %{resource} fra å bli reddet:'
-        other: "%{count} feil forhindret denne %{resource} fra å bli reddet:"
+        other: '%{count} feil forhindret denne %{resource} fra å bli reddet:'

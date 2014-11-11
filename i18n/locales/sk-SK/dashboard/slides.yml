@@ -1,263 +1,263 @@
-sk:
+"sk":
   slides:
     maze_intro:
       1:
-        image: notes/hoc1_1.jpg
-        text: Vitaj na svojej prvej hodine kódovania! Poďme sa pustiť do programovania.
+        image: "notes/hoc1_1.jpg"
+        text: "Vitaj na svojej prvej hodine kódovania! Poďme sa pustiť do programovania."
       2:
-        image: notes/hoc1_2.jpg
-        text: Budeme používať Blockly, vizuálny programovací jazyk, kde budeš presúvať a vkladať bloky, aby si napísal kód.
+        image: "notes/hoc1_2.jpg"
+        text: "Budeme používať Blockly, vizuálny programovací jazyk, kde budeš presúvať a vkladať bloky, aby si napísal kód."
       3:
-        image: notes/hoc1_3.jpg
+        image: "notes/hoc1_3.jpg"
         text: 'Väčšina kódu je písaná, ale Blockly je vizuálny. Každý blok zodpovedá riadku "skutočného" kódu.'
       4:
-        image: notes/hoc1_4.jpg
-        text: Naučíš sa základy informatiky, pojmy, ktoré sú používané kdekoľvek od tvorby aplikácií k tvorbe programov na ovládanie robota na Marse.
+        image: "notes/hoc1_4.jpg"
+        text: "Naučíš sa základy informatiky, pojmy, ktoré sú používané kdekoľvek od tvorby aplikácií k tvorbe programov na ovládanie robota na Marse."
       5:
-        image: notes/hoc1_5.jpg
-        text: Program je súbor pokynov, ktoré tvoj počítač vykonáva.
+        image: "notes/hoc1_5.jpg"
+        text: "Program je súbor pokynov, ktoré tvoj počítač vykonáva."
       6:
-        image: notes/hoc1_6.jpg
-        text: Cieľom tvojho prvého programu je dostať nahnevaného vtáka cez bludisko k zelenému prasaťu.
+        image: "notes/hoc1_6.jpg"
+        text: "Cieľom tvojho prvého programu je dostať nahnevaného vtáka cez bludisko k zelenému prasaťu."
       7:
-        image: notes/hoc1_7.jpg
-        text: Na ľavej strane je bludisko, kde program prebieha. Pokyny pre každý príkaz sú pod bludiskom.
+        image: "notes/hoc1_7.jpg"
+        text: "Na ľavej strane je bludisko, kde program prebieha. Pokyny pre každý príkaz sú pod bludiskom."
       8:
-        image: notes/hoc1_8.jpg
-        text: Panel nástrojov v strede obsahuje príkazy pre nahnevaného vtáka. Príkazy použiješ na poskladanie svojho kódu.
+        image: "notes/hoc1_8.jpg"
+        text: "Panel nástrojov v strede obsahuje príkazy pre nahnevaného vtáka. Príkazy použiješ na poskladanie svojho kódu."
       9:
-        image: notes/hoc1_9.jpg
-        text: Na pravej strane je tvoj pracovný priestor kam presuneš bloky z panelu nástrojov, aby si vytvoril svoj program. Pre vymazanie bloku, presuň blok do koša v rohu.
+        image: "notes/hoc1_9.jpg"
+        text: "Na pravej strane je tvoj pracovný priestor kam presuneš bloky z panelu nástrojov, aby si vytvoril svoj program. Pre vymazanie bloku, presuň blok do koša v rohu."
       10:
-        image: notes/hoc1_10.jpg
+        image: "notes/hoc1_10.jpg"
         text: 'Každý blok je nejakým pokynom. Ak presuneš blok "move forward" do svojho pracovného priestoru a klikneš na "Run Program", vták sa v bludisku pohne o jedno políčko.'
       11:
-        image: notes/hoc1_11.jpg
-        text: Aby si spravil viac ako jeden pokyn, do svojho pracovného priestoru môžeš vložiť viac blokov a spojiť ich dohromady. Vták bude vykonávať príkazy smerom zhora nadol.
+        image: "notes/hoc1_11.jpg"
+        text: "Aby si spravil viac ako jeden pokyn, do svojho pracovného priestoru môžeš vložiť viac blokov a spojiť ich dohromady. Vták bude vykonávať príkazy smerom zhora nadol."
       12:
-        image: notes/hoc1_12.jpg
+        image: "notes/hoc1_12.jpg"
         text: 'Ak spustíš program a chceš ho upraviť a spustiť znovu, klikni na tlačítko "Reset". '
       13:
-        image: notes/hoc1_13.jpg
-        text: Poďme na tie prasce!
+        image: "notes/hoc1_13.jpg"
+        text: "Poďme na tie prasce!"
     artist_intro:
       1:
-        image: notes/stage5_1.jpg
-        text: Ahoj, ja som JR ! Každý automobilový závodný tím potrebuje počítačového vedca, aby vyhral. Oni analyzujú údaje z auta, aby mohlo ísť rýchlejšie.
+        image: "notes/stage5_1.jpg"
+        text: "Ahoj, ja som JR ! Každý automobilový závodný tím potrebuje počítačového vedca, aby vyhral. Oni analyzujú údaje z auta, aby mohlo ísť rýchlejšie."
       2:
-        image: notes/stage5_2.jpg
-        text: Teraz budeš umelec, ktorý za nimi kreslí čiaru všade kade idú.
+        image: "notes/stage5_2.jpg"
+        text: "Teraz budeš umelec, ktorý za nimi kreslí čiaru všade kade idú."
       3:
-        image: notes/stage5_3.jpg
+        image: "notes/stage5_3.jpg"
         text: 'Tento blok hovorí "posuň sa dopredu o 100 pixelov." Pixely sú malé bodky na tvojej obrazovke.'
       4:
-        image: notes/stage5_4.jpg
+        image: "notes/stage5_4.jpg"
         text: 'Tento blok hovorí "zatoč vpravo o 90 stupňov." Toto otočí tvojho umelca o rovnaký počet stupňov ako ako otočka v bludisku.'
       5:
-        image: notes/stage5_5.jpg
+        image: "notes/stage5_5.jpg"
         text: 'Klikni na šípku v každom z týchto blokov a zmen počet o koľko sa artista pohne vpred alebo  sa otočí. Pohraj sa a zoznám sa  s týmito novými blokmi.'
     farmer_intro:
       1:
-        image: notes/stage9_1.jpg
-        text: Ahoj, ja som Paola! V týchto úlohách si farmárkou, ktorej úlohou je vyhladiť pole, aby mohol začať pestovať plodiny.
+        image: "notes/stage9_1.jpg"
+        text: "Ahoj, ja som Paola! V týchto úlohách si farmárkou, ktorej úlohou je vyhladiť pole, aby mohol začať pestovať plodiny."
       2:
-        image: notes/stage9_2.jpg
-        text: Musíš jej pomôcť odstrániť všetky hromady hliny a vyplniť všetky jamy.
+        image: "notes/stage9_2.jpg"
+        text: "Musíš jej pomôcť odstrániť všetky hromady hliny a vyplniť všetky jamy."
       3:
-        image: notes/stage9_3.jpg
+        image: "notes/stage9_3.jpg"
         text: 'Nové bloky: odstrániť 1 lopatu hliny z hromady a naplniť jamu 1 lopatou hliny.'
       4:
-        image: notes/stage9_4.jpg
-        text: Kôpky a jamy sú rozdielnych veľkostí, tak budeš musieť farmárke povedať koľko krát lopatu použije.
+        image: "notes/stage9_4.jpg"
+        text: "Kôpky a jamy sú rozdielnych veľkostí, tak budeš musieť farmárke povedať koľko krát lopatu použije."
     flappy_intro:
       1:
-        image: poznámky/flappy01.jpg
-        text: Ahoj, ja som Katie! Jednou z najzaujímavejších vecí na počítačoch je, že počítačový program môže byť interaktívny.
+        image: "poznámky/flappy01.jpg"
+        text: "Ahoj, ja som Katie! Jednou z najzaujímavejších vecí na počítačoch je, že počítačový program môže byť interaktívny."
       2:
-        image: poznámky/flappy02.jpg
-        text: Kedykoľvek niekto klikne poprípade niečo napíše do počítača, alebo mobilu, ktorý generuje príkazy, je tam kód, ktorý rozhodne ako reagovať na daný príkaz.
+        image: "poznámky/flappy02.jpg"
+        text: "Kedykoľvek niekto klikne poprípade niečo napíše do počítača, alebo mobilu, ktorý generuje príkazy, je tam kód, ktorý rozhodne ako reagovať na daný príkaz."
       3:
-        image: poznámky/flappy03.jpg
+        image: "poznámky/flappy03.jpg"
         text: 'Napríklad by ste mohli mať príkaz obsluhy, ktorý hovorí "po kliknutí prehrať zvuk" '
       4:
-        image: poznámky/flappy04.jpg
-        text: Už si niekedy počul o hre FlappyBird? Pomocou príkazov, sa budeme učiť naprogramovať našu vlastnú verziu hry FlappyBird!
+        image: "poznámky/flappy04.jpg"
+        text: "Už si niekedy počul o hre FlappyBird? Pomocou príkazov, sa budeme učiť naprogramovať našu vlastnú verziu hry FlappyBird!"
       5:
-        image: poznámky/flappy05.jpg
-        text: Budeš písať kód prostredníctvom presúvania blokov, ktoré predstavujú príkazy pre počítač. Každý z týchto blokov predstavuje skutočný kód.
+        image: "poznámky/flappy05.jpg"
+        text: "Budeš písať kód prostredníctvom presúvania blokov, ktoré predstavujú príkazy pre počítač. Každý z týchto blokov predstavuje skutočný kód."
       6:
-        image: poznámky/flappy06.jpg
+        image: "poznámky/flappy06.jpg"
         text: 'Ak sa pozrieš na pracovný priestor, sú tam zelené bloky, ktoré sú pre teba vyplnené - to sú "udalosti pre obsluhu" '
       7:
-        image: poznámky/flappy07.jpg
+        image: "poznámky/flappy07.jpg"
         text: 'Ak chceš, aby vták mykol krídlami a posunul sa hore, môžeš to urobiť pripojením "FLAP" bloku. Teraz keď v hre kedykoľvek klikneš myšou, vták sa posunie hore a mávne krídlami.'
       8:
-        image: poznámky/flappy08.jpg
-        text: V každej puzzle tejto aktivity budeme zavádzať nové typy udalostí ako napríklad zelené bloky v pracovnom priestore a môžeš rozhodnúť, ktoré z blokov budú v tejto udalosti.
+        image: "poznámky/flappy08.jpg"
+        text: "V každej puzzle tejto aktivity budeme zavádzať nové typy udalostí ako napríklad zelené bloky v pracovnom priestore a môžeš rozhodnúť, ktoré z blokov budú v tejto udalosti."
       9:
-        image: poznámky/flappy09.jpg
+        image: "poznámky/flappy09.jpg"
         text: 'Ak vidíš spodnú šípku ako teraz, to znamená, že môžeš zmeniť nastavenia - napríklad aký zvuk prehrať keď vták dopadne na zem.'
       10:
-        image: poznámky/flappy10.jpg
-        text: V posledných puzzle budeš môcť vytvoriť svoju vlastnú hru a zdieľať ju so svojimi priateľmi. Bav sa!
+        image: "poznámky/flappy10.jpg"
+        text: "V posledných puzzle budeš môcť vytvoriť svoju vlastnú hru a zdieľať ju so svojimi priateľmi. Bav sa!"
     loop_times:
       1:
-        image: notes/hoc2_1.jpg
-        text: Ahoj, ja som Mark! Poďme sa naučiť niečo o cykloch. Používaním cyklov rozkážeš počítaču, aby opakoval znova a znova akékoľvek množstvo pokynov, tisíce, alebo dokonca aj miliardy krát.
+        image: "notes/hoc2_1.jpg"
+        text: "Ahoj, ja som Mark! Poďme sa naučiť niečo o cykloch. Používaním cyklov rozkážeš počítaču, aby opakoval znova a znova akékoľvek množstvo pokynov, tisíce, alebo dokonca aj miliardy krát."
       2:
-        image: notes/hoc2_2.jpg
-        text: V týchto puzzle chceme vtáka posunúť vpred o 5 políčok, aby dostal prasa.
+        image: "notes/hoc2_2.jpg"
+        text: "V týchto puzzle chceme vtáka posunúť vpred o 5 políčok, aby dostal prasa."
       3:
-        image: notes/hoc2_3.jpg
+        image: "notes/hoc2_3.jpg"
         text: 'Môžeme použiť nový "opakovací" blok, ktorý nám uľahčí prácu.'
       4:
-        image: notes/hoc2_4.jpg
+        image: "notes/hoc2_4.jpg"
         text: 'Namiesto 5 krát opakovaného vkladania bloku "posuň sa vpred"...'
       5:
-        image: notes/hoc2_5.jpg
+        image: "notes/hoc2_5.jpg"
         text: 'Blok "posuň sa vpred" môžeme vložiť do "opakovacieho" bloku a napísať doň číslo, ktoré určuje koľko krát sa udalosť bude opakovať.'
       6:
-        image: notes/hoc2_6.jpg
+        image: "notes/hoc2_6.jpg"
         text: 'A to je dôležité: do "opakovacieho" bloku môžeš vložiť viac blokov.'
       7:
-        image: notes/hoc2_7.jpg
+        image: "notes/hoc2_7.jpg"
         text: 'Uži si používanie nového "repeat" bloku!'
     loop_until:
       1:
-        image: notes/hoc3_1.jpg
+        image: "notes/hoc3_1.jpg"
         text: 'Ahoj, ja som Chris. Pred nástupom do Miami Heat som šiel študovať informatiku na Georgia Tech. Poďme si vyskúšať nový "opakuj dovtedy" blok.'
       2:
-        image: notes/hoc3_2.jpg
-        text: Čo keby sme nevedeli, ako ďaleko sa musel vták pohnúť, aby dostal prasa?
+        image: "notes/hoc3_2.jpg"
+        text: "Čo keby sme nevedeli, ako ďaleko sa musel vták pohnúť, aby dostal prasa?"
       3:
-        image: notes/hoc3_3.jpg
+        image: "notes/hoc3_3.jpg"
         text: 'Ak vložíme "pohni sa vpred" blok do "opakuj dovtedy" bloku, vták sa bude posúvať vpred, pokým nedosiahne prasa (alebo nenarazí do steny).'
       4:
-        image: notes/hoc3_4.jpg
+        image: "notes/hoc3_4.jpg"
         text: 'A to je dôležité: rovnako ako predtým, do "opakuj dovtedy" bloku môžeme vkladať viaceré bloky. ktoré sa budú opakovať.'
     if:
       1:
-        image: notes/hoc4_1.jpg
+        image: "notes/hoc4_1.jpg"
         text: 'Ahoj ja som Bill! Poďme sa nauči%t niečo o "ak" -podmienkach. Prostredníctvom podmienok sa počítač vie rozhodovať.'
       2:
-        image: notes/hoc4_2.jpg
+        image: "notes/hoc4_2.jpg"
         text: 'Príkaz "If" ("ak") používaš každý deň. Predtým, než ideš von každé ráno, hovoríš si, "ak" vonku  prší , musím si obliecť bundu.'
       3:
-        image: notes/hoc4_3.jpg
-        text: Môžeme povedať, zombíkovi aby skontroloval, či je cesta na ľavej strane, a AK cestu vľavo nájde, môžme ho týmto smerom otočiť.
+        image: "notes/hoc4_3.jpg"
+        text: "Môžeme povedať, zombíkovi aby skontroloval, či je cesta na ľavej strane, a AK cestu vľavo nájde, môžme ho týmto smerom otočiť."
       4:
-        image: notes/hoc4_4.jpg
+        image: "notes/hoc4_4.jpg"
         text: |-
           To write the code for this, let's drag out our "if" block and put a "turn left" block inside it.
       5:
-        image: notes/hoc4_5.jpg
+        image: "notes/hoc4_5.jpg"
         text: |-
           Now, if we put a "move forward" block above it and a "repeat" block around everything, each time the zombie moves, he'll check if there's a path to the left and turn. The "repeat" command is critical, to check for a turn at every step.
       6:
-        image: notes/hoc4_6.jpg
-        text: If statements are really important in computer science. One of the first programs I wrote was a tic-tac-toe game, and there was a If statement that said IF the other person is about to win, block the spot that lets them win.
+        image: "notes/hoc4_6.jpg"
+        text: "If statements are really important in computer science. One of the first programs I wrote was a tic-tac-toe game, and there was a If statement that said IF the other person is about to win, block the spot that lets them win."
       7:
-        image: notes/hoc4_7.jpg
+        image: "notes/hoc4_7.jpg"
         text: 'Zabávaj sa používaním "if" bloku!'
     if_else:
       1:
-        image: notes/hoc5_1.jpg
+        image: "notes/hoc5_1.jpg"
         text: |-
           Hi, my name is Saloni. I use computer science to help solve problems in health and medicine. Let's learn about the "if else" block. It looks like the "if" block, but it has an extra part at the end that says "else".
       2:
-        image: notes/hoc5_2.jpg
+        image: "notes/hoc5_2.jpg"
         text: |-
           If I put a "move forward" block in the spot where it says "do" and a "turn left" block where it says "else" that means that the zombie will choose between 2 options. IF there is a path ahead, the zombie will move forward, and OTHERWISE (there isn't a path ahead), the zombie will turn left.
       3:
-        image: notes/hoc5_3.jpg
+        image: "notes/hoc5_3.jpg"
         text: |-
           Just like the "if" block, we can put "if else" blocks inside a "repeat" blocks so that the zombie keeps moving and the "if else" block will keep checking if there's somewhere to turn.
       4:
-        image: notes/hoc5_4.jpg
-        text: Now, get those zombies where they belong!
+        image: "notes/hoc5_4.jpg"
+        text: "Now, get those zombies where they belong!"
     function:
       1:
-        image: notes/stage13_1.jpg
+        image: "notes/stage13_1.jpg"
         text: "Hi, I'm Brina, an engineer at Instagram. A function is certain lines of code that you want to use over and over again, so instead of writing that code out everytime, you can just use one block."
       2:
-        image: notes/stage13_2.jpg
+        image: "notes/stage13_2.jpg"
         text: "We're going to learn how to define functions. Function definitions have a star in the corner. The name of the function is written on the top line."
       3:
-        image: notes/stage13_3.jpg
+        image: "notes/stage13_3.jpg"
         text: |-
           The blocks that go inside the definition tell us what it does. So this function definition is called "fill 5" and it's made up of a "repeat" block and a "fill" block.
       4:
-        image: notes/stage13_4.jpg
+        image: "notes/stage13_4.jpg"
         text: |-
           The definition sits on the workspace, but our farmer won't run the function until we drag out our "fill 5" function block from functions category.
       5:
-        image: notes/stage13_5.jpg
+        image: "notes/stage13_5.jpg"
         text: |-
           Let's put the "fun" back in "FUNction!" 
     loop_while:
       1:
-        image: notes/stage9_5.jpg
+        image: "notes/stage9_5.jpg"
         text: |-
           Hi, I'm Makinde! Let's learn about the "while block." 
       2:
-        image: notes/stage9_6.jpg
+        image: "notes/stage9_6.jpg"
         text: 'The "while block" will do whatever you put inside it AS LONG AS the statement on the top is TRUE.'
       3:
-        image: notes/stage9_7.jpg
-        text: For example, if the farmer is standing on a pile, she will continue to remove 1 shovelful WHILE there is still a pile beneath her.
+        image: "notes/stage9_7.jpg"
+        text: "For example, if the farmer is standing on a pile, she will continue to remove 1 shovelful WHILE there is still a pile beneath her."
     loop_for:
       1:
-        image: notes/stage11_1.jpg
+        image: "notes/stage11_1.jpg"
         text: "Hi, I'm Trina, and I work for Pixar. I've worked on a bunch of movies, including Shrek."
       2:
-        image: notes/stage11_2.jpg
+        image: "notes/stage11_2.jpg"
         text: 'This is our new "counter" loop. It will perform actions over and over again and you can make the actions change slightly each time.'
       3:
-        image: notes/stage11_3.jpg
+        image: "notes/stage11_3.jpg"
         text: 'In this example, our "counter" loop says "count with counter from 50 to 90 by 10" and inside it, we have our "draw a square" block. Drag the "counter" block from the "Variables" section into the "length" spot.'
       4:
-        image: notes/stage11_4.jpg
+        image: "notes/stage11_4.jpg"
         text: "This means our artist is going to draw a square that has 50 pixel length sides, then it will add 10 to that and draw a square with 60 pixel length sides. Then it will keep adding 10 and drawing squares until it reaches 90. So we'll have squares of 50, 60, 70, 80, and 90."
     parameters:
       1:
-        image: notes/stage15_1.jpg
+        image: "notes/stage15_1.jpg"
         text: "Hi, I'm Janete, and I'm an engineer at Zynga."
       2:
-        image: notes/stage15_2.jpg
-        text: What if we want to draw a bunch of triangles and have their lengths be different sizes?
+        image: "notes/stage15_2.jpg"
+        text: "What if we want to draw a bunch of triangles and have their lengths be different sizes?"
       3:
-        image: notes/stage15_3.jpg
-        text: We could write all that code out by hand or we can use a function with parameters.
+        image: "notes/stage15_3.jpg"
+        text: "We could write all that code out by hand or we can use a function with parameters."
       4:
-        image: notes/stage15_4.jpg
+        image: "notes/stage15_4.jpg"
         text: 'To do this, click the blue star on the "draw a triangle" function definition. Then drag "input name" into the "input" block.'
       5:
-        image: notes/stage15_5.jpg
+        image: "notes/stage15_5.jpg"
         text: |-
           Then if you write "length" in the spot where it says "x" and press "Enter" you'll create a length input for your function.
       6:
-        image: notes/stage15_6.jpg
+        image: "notes/stage15_6.jpg"
         text: 'Then click on the star. Now, you want to click on the variables category and drag the "length" block into the "move forward" block of your function definition. And drag away the old number block.'
       7:
-        image: notes/stage15_7.jpg
+        image: "notes/stage15_7.jpg"
         text: 'To use your function with parameters, click on the functions category and drag out your "draw a triangle with length" function.'
       8:
-        image: notes/stage15_8.jpg
-        text: Now you can use the math block to input different numbers to draw triangles of different sizes.
+        image: "notes/stage15_8.jpg"
+        text: "Now you can use the math block to input different numbers to draw triangles of different sizes."
     hoc_wrapup:
       1:
-        image: notes/hoc6_1.jpg
+        image: "notes/hoc6_1.jpg"
         text: "Congratulations! With the last puzzle you solved, you just wrote code that can tell ANY robot how to find it's way through a non-branching maze or tunnel of any length, whether it's a zombie, a bird, a mars rover, or even a self-driving car."
       2:
-        image: notes/hoc6_2.jpg
+        image: "notes/hoc6_2.jpg"
         text: "The basic concepts you used are at the heart of every program or app you'll ever try.  We learned about repeat loops, repeat until statements, if statements, and if else statements."
       3:
-        image: notes/hoc6_3.jpg
+        image: "notes/hoc6_3.jpg"
         text: "If you liked your first hour of code, visit code.org to continue your education into computer science! Once you complete our 20 hour course, you'll have mastered the basics of programming, and can start learning how to write phone apps, robot instructions, games, you name it."
       4:
-        image: notes/hoc6_4.jpg
+        image: "notes/hoc6_4.jpg"
         text: 'Technológie menia všetko čo robíme, nezáleží na tom, či si mladý, alebo starý: programovanie je zábava, používaš svoju kreativitu a programovať sa môže naučiť ktokoľvek!'
     20_wrapup:
       1:
-        image: notes/bird.png
-        text: Zobraz poznámky už čoskoro!
+        image: "notes/bird.png"
+        text: "Zobraz poznámky už čoskoro!"

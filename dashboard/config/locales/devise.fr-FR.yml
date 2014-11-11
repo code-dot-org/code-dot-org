@@ -75,4 +75,4 @@
       not_locked: n'a pas été verrouillé
       not_saved:
         one: 'Une erreur a empêché ce(tte) %{resource} d''être enregistrée :'
-        other: "%{count} erreurs ont empêché ce(tte) %{resource} d'être enregistrée :"
+        other: '%{count} erreurs ont empêché ce(tte) %{resource} d''être enregistrée :'

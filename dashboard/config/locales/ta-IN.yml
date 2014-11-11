@@ -5,20 +5,20 @@
         blank: is required
     attributes:
       user:
-        name: "பெயர்"
-        email: "மின்னஞ்சல்"
-        username: "பயனர் பெயர்"
-        password: "கடவுச்சொல்"
-        password_confirmation: "கடவுச்சொல் உறுதிப்பாடு"
-        current_password: "தற்போதைய கடவுச்சொல்"
-        locale: "மொழி"
+        name: பெயர்
+        email: மின்னஞ்சல்
+        username: பயனர் பெயர்
+        password: கடவுச்சொல்
+        password_confirmation: கடவுச்சொல் உறுதிப்பாடு
+        current_password: தற்போதைய கடவுச்சொல்
+        locale: மொழி
         age: Age
-        gender: "பாலினம்"
-        edit_header: "கணக்கு விவரங்களை திருத்து"
+        gender: பாலினம்
+        edit_header: கணக்கு விவரங்களை திருத்து
         error:
           future: can't be in the future
-  hello: "ஹலோ உலகம்"
-  welcome_back: "மீண்டும் வருக, %{name}"
+  hello: ஹலோ உலகம்
+  welcome_back: மீண்டும் வருக, %{name}
   add_teacher_form:
     code_or_email:
       label: 'Add a teacher by code or email address:'
@@ -26,30 +26,30 @@
     code:
       label: 'Add a teacher by section code:'
       placeholder: Code (ABCDEF)
-    submit: "ஆசிரியரை சேர்"
+    submit: ஆசிரியரை சேர்
   add_hint_form:
-    placeholder: "உங்கள் குறிப்பை இங்கே உள்ளிடவும்"
-    submit: "உதவிக்குறிப்பு சேர்"
+    placeholder: உங்கள் குறிப்பை இங்கே உள்ளிடவும்
+    submit: உதவிக்குறிப்பு சேர்
   appname: Code.org
-  stage: "மேடை"
+  stage: மேடை
   stage_number: Stage %{number}
-  puzzle: "புதிர்"
-  trophies: "வெற்றிக் கிண்ணங்கள்"
-  courses: "பாடங்கள்"
+  puzzle: புதிர்
+  trophies: வெற்றிக் கிண்ணங்கள்
+  courses: பாடங்கள்
   of: of
-  more: "மேலும்"
-  less: "குறைவாக"
+  more: மேலும்
+  less: குறைவாக
   try_hoc: 'Try the Hour of Code, click here >> '
   try_k8intro: Or, try our K-8 Intro to Computer Science Course (15-25 hours)
   k8intro: K-8 Intro to Computer Science Course (15-25 hours)
-  already_started: "ஏற்கனவே ஆரம்பிக்கப்பட்டதா ? இங்கே தொடர்க >> "
+  already_started: 'ஏற்கனவே ஆரம்பிக்கப்பட்டதா ? இங்கே தொடர்க >> '
   demos: 'Admin: All Demos'
-  continue: "தொடர்ந்து"
+  continue: தொடர்ந்து
   prize: prize
-  more_info: "மேலதிக தகவல்"
+  more_info: மேலதிக தகவல்
   auth:
-    sign_in_with: "%{provider} மூலம் உள்நுழையவும்"
-    signed_in: "உள்நுளைந்தீர்கள்!"
+    sign_in_with: '%{provider} மூலம் உள்நுழையவும்'
+    signed_in: உள்நுளைந்தீர்கள்!
     signed_out: You have signed out of <a href="%{url}">Code.org</a>.
     sign_out_of: You used %{provider} to sign in. <a href="%{url}">Click here</a>
       to sign out of %{provider}.
@@ -59,7 +59,7 @@
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft Account
-    forgot_password: "உங்கள் கடவுச்சொல் மறந்துவிட்டதா?"
+    forgot_password: உங்கள் கடவுச்சொல் மறந்துவிட்டதா?
     need_confirmation: Didn't receive confirmation instructions?
     need_unlock: Didn't receive unlock instructions?
   signup_form:
@@ -98,9 +98,9 @@
   signin_form:
     title: Sign in
     login: Email or username
-    password: "கடவுச்சொல்"
+    password: கடவுச்சொல்
     remember: Remember me
-    submit: "உள்நுழை"
+    submit: உள்நுழை
   signin:
     try_heading: Want to try coding without signing up?
     try_hoc: Try one Hour of Code first
@@ -110,10 +110,10 @@
     name: Choose your name
     picture: Now find your secret picture
     words: Now enter your secret words
-    login: "உள்நுழை"
+    login: உள்நுழை
   password:
     reset_form:
-      title: "உங்கள் கடவுச்சொல் மறந்துவிட்டதா?"
+      title: உங்கள் கடவுச்சொல் மறந்துவிட்டதா?
       email: Email address
       submit: Send me reset password instructions
     change_form:
@@ -122,7 +122,7 @@
       confirm_password: Confirm new password
       submit: Change my password
   welcome_email:
-    subject: "எனது வகுப்பில் இணையவும் (Code.org இல்)"
+    subject: எனது வகுப்பில் இணையவும் (Code.org இல்)
     body: |
       Click the link below to sign up for computer science tutorials on Code.org (with me as your "teacher"):
 
@@ -132,14 +132,14 @@
 
       %{name}
   follower:
-    invite_sent: "அழைப்பு அனுப்பப்பட்டது"
-    added_teacher: "%{name} உங்களது ஆசிரியராக சேர்க்கப்பட்டுள்ளார்"
+    invite_sent: அழைப்பு அனுப்பப்பட்டது
+    added_teacher: '%{name} உங்களது ஆசிரியராக சேர்க்கப்பட்டுள்ளார்'
     registered: You've registered for %{section_name}.
     error:
       signed_in: Please signout before proceeding
-      username_not_found: "பயனர் பெயர் %{username} காணப்படவில்லை"
-      username_in_use: "%{username} ஆனது ஏற்கனவே எடுக்கப்பட்டுள்ளது. தயவு செய்து வேறொன்றை
-        தேர்ந்தெடுக்கவும்"
+      username_not_found: பயனர் பெயர் %{username} காணப்படவில்லை
+      username_in_use: '%{username} ஆனது ஏற்கனவே எடுக்கப்பட்டுள்ளது. தயவு செய்து வேறொன்றை
+        தேர்ந்தெடுக்கவும்'
       no_teacher: Could not find anyone signed in with '%{teacher_email_or_code}'.
         Please ask them to sign up here and then try adding them again
       section_not_found: Could not find a section with code '%{section_code}'.
@@ -175,14 +175,14 @@
     teacher_email_required: 'Teacher prizes require a confirmed email address:'
     confirm:
       title: Please Confirm
-      'no': "இல்லை"
-      'yes': "ஆம்"
+      'no': இல்லை
+      'yes': ஆம்
       msg: Are you sure you want to claim the %{prize_name} prize?
       msg_student: 'NOTE: You can only choose one type of prize.'
       msg_publicschool: Please confirm that you are a U.S. public school teacher.
       msg_visit_website: Visit website
     providers:
-      apple_itunes: "$10 iTunes Gift Card"
+      apple_itunes: $10 iTunes Gift Card
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10GB of Dropbox Space
@@ -191,7 +191,7 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: "$10 Skype credit"
+      skype: $10 Skype credit
     msg:
       choose: 'Choose a prize:'
       choose_teacher: 'Click on the logo below to claim your prize:'
@@ -231,16 +231,16 @@
             used by teachers in U.S. public schools.
   crud:
     new_model: New %{model}
-    show: "காண்பி"
-    edit: "திருத்து"
+    show: காண்பி
+    edit: திருத்து
     edit_model: Edit %{model}
-    update: "புதுப்பிக்கவும்"
-    destroy: "அழிக்கவும்"
+    update: புதுப்பிக்கவும்
+    destroy: அழிக்கவும்
     back: Back
     confirm: Are you sure?
-    created: "%{model} was successfully created."
-    updated: "%{model} was successfully updated."
-    destroyed: "%{model} was successfully deleted."
+    created: '%{model} was successfully created.'
+    updated: '%{model} was successfully updated.'
+    destroyed: '%{model} was successfully deleted.'
     access_denied: You do not have access to this %{model}.
   nav:
     header:
@@ -250,30 +250,30 @@
         playlab: Make an App
         artist: Draw Something
     user:
-      classroom: "எனது மாணவர்கள்"
-      label: "வணக்கம் %{username}"
+      classroom: எனது மாணவர்கள்
+      label: வணக்கம் %{username}
       stats: My progress
-      settings: "எனது கணக்கு"
-      prizes: "பரிசுகள்"
-      logout: "வெளியேறு"
-      signin: "உள்நுழை"
+      settings: எனது கணக்கு
+      prizes: பரிசுகள்
+      logout: வெளியேறு
+      signin: உள்நுழை
       signup: Sign up
       already_registered: Already registered?
     popup:
       progress: Your progress
       lines: 'Total lines of code: %{lines}'
-      close: "மூடு"
+      close: மூடு
       mastery: Concepts
       puzzle_map: Stages
       prizes: Collect all %{total_trophies} trophies and win prizes!
       prize_earned: All %{total_trophies} trophies collected. Prize won!
-      prize_us_only: "(U.S. students only)"
+      prize_us_only: (U.S. students only)
       prizes_link: more info
   teacher:
     title:
       one: Your teacher is %{name}
       other: 'Your teachers:'
-    remove: "(remove teacher)"
+    remove: (remove teacher)
     confirm:
       remove: Are you sure you want to remove this teacher?
     tools: Teacher Tools
@@ -288,14 +288,14 @@
       not_tried: Not tried yet
       activity: Indicates student activity in the last %{hours} %{plural}
       no_section: No assigned section
-      trophies: "வெற்றிக் கிண்ணங்கள்"
+      trophies: வெற்றிக் கிண்ணங்கள்
     students:
-      name: "பெயர்"
-      username: "பயனர் பெயர்"
-      password: "கடவுச்சொல்"
-      manage: "மாணவர்களை நிர்வகிக்கவும்"
+      name: பெயர்
+      username: பயனர் பெயர்
+      password: கடவுச்சொல்
+      manage: மாணவர்களை நிர்வகிக்கவும்
       dashboard: Go to Teacher Dashboard
-      add: "மாணவர்களை சேர்"
+      add: மாணவர்களை சேர்
       remove: remove student
       confirm_remove: Are you sure you want to remove this student?
       help_reassign: To divide your class into multiple sections, select students
@@ -329,35 +329,35 @@
     rollup: Progress Dashboard
     activity: Recent class activity
     user_not_found: The teacher or student could not be found
-    cant_remove_student_no_email: "%{student_name} cannot be removed as your student
-      because %{student_name} has not registered an e-mail address"
-    cant_remove_teacher_no_email: "%{teacher_name} cannot be removed as your teacher
-      because you have not registered an e-mail address"
-    student_teacher_disassociated: "%{teacher_name} has been removed as a teacher
-      for %{student_name}"
+    cant_remove_student_no_email: '%{student_name} cannot be removed as your student
+      because %{student_name} has not registered an e-mail address'
+    cant_remove_teacher_no_email: '%{teacher_name} cannot be removed as your teacher
+      because you have not registered an e-mail address'
+    student_teacher_disassociated: '%{teacher_name} has been removed as a teacher
+      for %{student_name}'
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
     email_resend_confirm: Resend confirmation instructions
-    new_password_hint: "(leave blank if you don't want to change it)"
-    current_password_hint: "(we need your current password to confirm your changes)"
+    new_password_hint: (leave blank if you don't want to change it)
+    current_password_hint: (we need your current password to confirm your changes)
     cancel:
       title: Cancel my account
-      hint: "அதிருப்தியா?"
+      hint: அதிருப்தியா?
       button: Cancel my account
   user_level:
-    completed: "நிறைவடைந்தது"
-    tried: "முயற்சிக்கப்பட்டது"
+    completed: நிறைவடைந்தது
+    tried: முயற்சிக்கப்பட்டது
   user_stats:
-    recent_activity: "சமீப செயற்பாடு"
-    show_more: "மேலும் காண்பி"
+    recent_activity: சமீப செயற்பாடு
+    show_more: மேலும் காண்பி
     classroom_activity: Unplugged Activity
   home:
     title: Code Studio
     all_courses: Overview of Courses 1, 2, and 3
     lesson_plans: Lesson plans
     signin_message: Or if you're already registered, %{link}
-    student_reg_link: "மாணவர்"
-    teacher_reg_link: "ஆசிரியர்"
+    student_reg_link: மாணவர்
+    teacher_reg_link: ஆசிரியர்
     signin_directions: Use an account to track progress and get rewards.<br/> Teachers,
       track your entire class.
     teacher_dashboard: See progress dashboard
@@ -368,7 +368,7 @@
     teacher_print_certificates: Print certificates for students who finish this course
     teacher_read_blog: Read about news and updates to our materials at our Educator
       Blog
-    classroom: "உங்கள் வகுப்பறை"
+    classroom: உங்கள் வகுப்பறை
     student_progress: Your learning progress
     student_stats: You've earned %{trophy_count} out of %{trophy_max} "Concept Mastery"
       trophies.
@@ -389,9 +389,9 @@
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
-    heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
-    heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
-    heading_legacy: "<h2>Our previous course for</h2><h1>Existing Students</h1>"
+    heading_elementary: <h2>20 hour courses for</h2><h1>Elementary Students</h1>
+    heading_apps: <h2>Fun for</h2><h1>Everybody</h1>
+    heading_legacy: <h2>Our previous course for</h2><h1>Existing Students</h1>
     gallery:
       your_turtle: My Art
       your_studio: My Apps
@@ -400,7 +400,7 @@
     female: Female
     none: Prefer not to answer
   user_type:
-    student: "மாணவர்"
+    student: மாணவர்
     teacher: Teacher
   footer:
     help_from_html: Engineers from <a href="http://www.google.com">Google</a>, <a
@@ -500,13 +500,13 @@
     want_to_make_your_own: Want to make your own?
     more: More &rarr;
     caption_by_name_age: by %{name}, age %{age}
-    caption_time_ago: "%{time_ago} ago"
+    caption_time_ago: '%{time_ago} ago'
   landing:
     prerelease: This page is still under development.
     feedback: Give Feedback
     report_bug: Report Bug
     support: Get Help
-    support_url: "//support.code.org"
+    support_url: //support.code.org
   multi:
     wrong_title: Incorrect answer
     wrong_body: The answer you've entered is not correct.  Please try again!
@@ -518,7 +518,7 @@
     correct_title: Correct
     correct_body: That is the correct answer.
   dialog:
-    ok: "சரி"
+    ok: சரி
   time:
     hour: 1 hour
     day: day
@@ -535,7 +535,7 @@
           title: Hour of Code
           description: ''
         edit-code:
-          title: "குறியீட்டை திருத்து"
+          title: குறியீட்டை திருத்து
           description: ''
         events:
           title: Events

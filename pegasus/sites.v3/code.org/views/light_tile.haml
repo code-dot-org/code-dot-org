@@ -1,0 +1,28 @@
+%a{:href=>"#{url}", :target=>"#{target}"}
+  %div.outerblock{:style=>"float: left;"}
+    %div.innerblock{:style=>"float: left;"}
+      %img{:src=>"#{img_src}", :style=>"width: 100%;"}
+      %div.title
+        #{title}
+      %div.body
+        #{text}
+
+:css
+  .title {
+    padding: 10px;
+    font-size: 22px;
+    font-weight: 500;
+    text-align: center;
+    color: #7665a0;
+  }
+  .innerblock {
+    background-color: rgba(88, 103, 113, 0.1);
+  }
+
+  a:hover .title {
+    color: rgb(88, 103, 113);
+  }
+
+  a:hover .innerblock {
+    background-color: rgba(165, 173, 178, 0.1);
+  }

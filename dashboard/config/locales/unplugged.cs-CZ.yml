@@ -2,7 +2,7 @@
   data:
     unplugged:
       Unplug1:
-        title: "Úvod do počítačové vědy"
+        title: Úvod do počítačové vědy
         desc: This lesson will introduce the concept of Computer Science and explain
           what a Computer Scientist does.  It will also give students an opportunity
           to assume the role of a computer scientist.  By the end of the activity,
@@ -96,7 +96,7 @@
         - unplug8
         video: Unplug8
       Unplug9:
-        title: "Štafetové Programování"
+        title: Štafetové Programování
         desc: This lesson will take an idea from a previous activity (4. Graph Paper
           Programming) and use those skills to emphasize the importance of completing
           programs that operate in sequence and frequently checking programs for "bugs".

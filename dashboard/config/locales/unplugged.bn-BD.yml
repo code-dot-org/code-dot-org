@@ -50,7 +50,7 @@
         - unplug4
         video: Unplug4
       Unplug5:
-        title: "ফাংশনগুলি"
+        title: ফাংশনগুলি
         desc: In this lesson, students will make a suncatcher out of string, beads,
           and a special charm. The students will follow a series of repetitive steps,
           then be asked to identify certain sets of "skills" that are duplicated several
@@ -73,7 +73,7 @@
         - unplug6
         video: Unplug6
       Unplug7:
-        title: "গান লিখা"
+        title: গান লিখা
         desc: Reading lyrics is a pretty intuitive venture for most students.  We'll
           take an activity that's already common knowledge and shift it into a solid
           education on defining and calling functions. Once students are familiar
@@ -104,7 +104,7 @@
         - unplug9
         video: Unplug9
       Unplug10:
-        title: "ইন্টারনেট"
+        title: ইন্টারনেট
         desc: In this lesson, students will pretend to flow through the Internet,
           all the while learning about web addresses, IPs and the DNS.
         pdfs:

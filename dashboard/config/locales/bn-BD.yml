@@ -5,64 +5,64 @@
         blank: is required
     attributes:
       user:
-        name: "নাম"
-        email: "ই-মেইল"
-        username: "উজারন্যাম"
-        password: "পাসওআর্ড"
-        password_confirmation: "পাসওআর্ড নিশ্চিতকরণ"
-        current_password: "বর্তমান পাসওআর্ড"
-        locale: "ভাষা"
+        name: নাম
+        email: ই-মেইল
+        username: উজারন্যাম
+        password: পাসওআর্ড
+        password_confirmation: পাসওআর্ড নিশ্চিতকরণ
+        current_password: বর্তমান পাসওআর্ড
+        locale: ভাষা
         age: Age
-        gender: "লিঙ্গ"
-        edit_header: "একাউন্ট বিস্তারিত সম্পাদনা করুন"
+        gender: লিঙ্গ
+        edit_header: একাউন্ট বিস্তারিত সম্পাদনা করুন
         error:
           future: can't be in the future
-  hello: "হ্যালো ওয়ার্ল্ড"
-  welcome_back: "স্বাগতম %{name}"
+  hello: হ্যালো ওয়ার্ল্ড
+  welcome_back: স্বাগতম %{name}
   add_teacher_form:
     code_or_email:
-      label: "কোড বা ই-মেইল দ্বারা শিক্ষকে যুক্ত করুন :"
-      placeholder: "কোড (ABCDEF) বা ই-মেইল (teacher@school.edu)"
+      label: 'কোড বা ই-মেইল দ্বারা শিক্ষকে যুক্ত করুন :'
+      placeholder: কোড (ABCDEF) বা ই-মেইল (teacher@school.edu)
     code:
       label: 'Add a teacher by section code:'
       placeholder: Code (ABCDEF)
-    submit: "শিক্ষক যুক্ত করুন"
+    submit: শিক্ষক যুক্ত করুন
   add_hint_form:
     placeholder: Please enter your hint here
     submit: Add hint
   appname: Code.org
-  stage: "ধাপ"
+  stage: ধাপ
   stage_number: Stage %{number}
-  puzzle: "ধাঁধা"
-  trophies: "পুরষ্কার"
-  courses: "পাঠ্যতালিকা"
-  of: "এর"
-  more: "বেশি"
-  less: "কম"
+  puzzle: ধাঁধা
+  trophies: পুরষ্কার
+  courses: পাঠ্যতালিকা
+  of: এর
+  more: বেশি
+  less: কম
   try_hoc: Hour of Code এ আসতে, এখানে ক্লিক করো>>
-  try_k8intro: "অথবা, আমাদের K-8 Intro কম্পিউটার সায়েন্স কোর্স (15 25 ঘন্টা) করার
-    চেষ্টা করো।"
+  try_k8intro: অথবা, আমাদের K-8 Intro কম্পিউটার সায়েন্স কোর্স (15 25 ঘন্টা) করার
+    চেষ্টা করো।
   k8intro: K-8 Intro to Computer Science Course (15-25 hours)
-  already_started: "ইতোমধ্যে শুরু করেছ? এখান থেকে চালিয়ে যাও >> "
+  already_started: 'ইতোমধ্যে শুরু করেছ? এখান থেকে চালিয়ে যাও >> '
   demos: 'Admin: সকল Demos'
-  continue: "চালিয়ে যান"
+  continue: চালিয়ে যান
   prize: prize
-  more_info: "আরও তথ্য"
+  more_info: আরও তথ্য
   auth:
-    sign_in_with: "%{provider} এর সাথে সাইন ইন করো"
-    signed_in: "সাইনড ইন!"
+    sign_in_with: '%{provider} এর সাথে সাইন ইন করো'
+    signed_in: সাইনড ইন!
     signed_out: You have signed out of <a href="%{url}">Code.org</a>.
     sign_out_of: You used %{provider} to sign in. <a href="%{url}">Click here</a>
       to sign out of %{provider}.
-    already_signedup: "ইতিমধ্যে সাইন আপ করেছ?"
-    notyet_signedup: "এখনো যোগ দেননি?"
-    google_oauth2: "গুগল +"
-    twitter: "টুইটার"
-    facebook: "ফেইসবুক"
+    already_signedup: ইতিমধ্যে সাইন আপ করেছ?
+    notyet_signedup: এখনো যোগ দেননি?
+    google_oauth2: গুগল +
+    twitter: টুইটার
+    facebook: ফেইসবুক
     windowslive: Microsoft Account-এর
-    forgot_password: "আপনার পাসওয়ার্ড ভুলে গেছেন?"
-    need_confirmation: "নিশ্চিতকরণ নির্দেশনা পাওনি?"
-    need_unlock: "আনলক করার নির্দেশাবলী পাওনি?"
+    forgot_password: আপনার পাসওয়ার্ড ভুলে গেছেন?
+    need_confirmation: নিশ্চিতকরণ নির্দেশনা পাওনি?
+    need_unlock: আনলক করার নির্দেশাবলী পাওনি?
   signup_form:
     overview_student: Sign up for an account to track your progress.
     overview_teacher: Teach computer science in your classroom by signing up for an
@@ -72,23 +72,23 @@
       progress.
     teacher_educator_guide: See educator guide
     teacher_pitch: Teach the K-8 Intro to Computer Science in your classroom
-    teacher_title: "শিক্ষক সাইন আপ"
+    teacher_title: শিক্ষক সাইন আপ
     student_pitch: 'Beyond 1 hour: try our K-8 Intro to Computer Science'
-    student_title: "সাইন আপ"
-    school_name: "স্কুলের নাম (ঐচ্ছিক)"
-    school_address: "স্কুলের ঠিকানা (ঐচ্ছিক)"
-    address_placeholder: "ঠিকানা, শহর, রাজ্য, জিপ"
-    gender: "লিঙ্গ (ঐচ্ছিক)"
-    birthday: "জন্মদিন (ঐচ্ছিক)"
+    student_title: সাইন আপ
+    school_name: স্কুলের নাম (ঐচ্ছিক)
+    school_address: স্কুলের ঠিকানা (ঐচ্ছিক)
+    address_placeholder: ঠিকানা, শহর, রাজ্য, জিপ
+    gender: লিঙ্গ (ঐচ্ছিক)
+    birthday: জন্মদিন (ঐচ্ছিক)
     age: Age (optional)
     user_type: Are you a student or teacher?
-    submit: "সাইন আপ"
-    teacher: "আপনি কি শিক্ষক?"
+    submit: সাইন আপ
+    teacher: আপনি কি শিক্ষক?
     valid_username: Available!
-    invalid_username: "ব্যবহারকারীর নাম কমপক্ষে 5 অক্ষর হতে হবে"
+    invalid_username: ব্যবহারকারীর নাম কমপক্ষে 5 অক্ষর হতে হবে
     taken_username: Username is already taken
-    valid_password: "সঠিক পাসওয়ার্ড!"
-    invalid_password: "পাসওয়ার্ডের অন্তত 6 অক্ষর হতে হবে"
+    valid_password: সঠিক পাসওয়ার্ড!
+    invalid_password: পাসওয়ার্ডের অন্তত 6 অক্ষর হতে হবে
     mismatch_password: The two passwords you entered do not match
     student_terms: I agree to be bound by the Code.org terms of service. If I am under
       13 years of age, I confirm by submitting this form that I have my parent or
@@ -97,11 +97,11 @@
     additional_information: We need some additional information to continue signing
       you up.
   signin_form:
-    title: "সাইন ইন করুন"
-    login: "ব্যবহারকারীর নাম অথবা ই-মেইল"
-    password: "পাসওআর্ড"
-    remember: "আমাকে মনে রাখুন"
-    submit: "সাইন ইন করুন"
+    title: সাইন ইন করুন
+    login: ব্যবহারকারীর নাম অথবা ই-মেইল
+    password: পাসওআর্ড
+    remember: আমাকে মনে রাখুন
+    submit: সাইন ইন করুন
   signin:
     try_heading: Want to try coding without signing up?
     try_hoc: Try one Hour of Code first
@@ -111,19 +111,19 @@
     name: Choose your name
     picture: Now find your secret picture
     words: Now enter your secret words
-    login: "সাইন ইন করুন"
+    login: সাইন ইন করুন
   password:
     reset_form:
-      title: "আপনার পাসওয়ার্ড ভুলে গেছেন?"
+      title: আপনার পাসওয়ার্ড ভুলে গেছেন?
       email: Email address
       submit: Send me reset password instructions
     change_form:
-      title: "আপনার পাসওয়ার্ড পরিবর্তন করুন"
-      new_password: "নতুন পাসওয়ার্ড"
-      confirm_password: "নতুন পাসওয়ার্ড নিশ্চিত করুন"
-      submit: "আমার পাসওয়ার্ড পরিবর্তন করুন"
+      title: আপনার পাসওয়ার্ড পরিবর্তন করুন
+      new_password: নতুন পাসওয়ার্ড
+      confirm_password: নতুন পাসওয়ার্ড নিশ্চিত করুন
+      submit: আমার পাসওয়ার্ড পরিবর্তন করুন
   welcome_email:
-    subject: "আমার ক্লাসে (Code.org তে) যোগ দিন।"
+    subject: আমার ক্লাসে (Code.org তে) যোগ দিন।
     body: |
       Click the link below to sign up for computer science tutorials on Code.org (with me as your "teacher"):
 
@@ -133,17 +133,17 @@
 
       %{name}
   follower:
-    invite_sent: "আমন্ত্রণ পাঠানো হল।"
-    added_teacher: "%{name} আপনার শিক্ষক হিসেবে যুক্ত হলেন।"
-    registered: "আপনি %{section_name} এর জন্য নিবন্ধন করেছেন।"
+    invite_sent: আমন্ত্রণ পাঠানো হল।
+    added_teacher: '%{name} আপনার শিক্ষক হিসেবে যুক্ত হলেন।'
+    registered: আপনি %{section_name} এর জন্য নিবন্ধন করেছেন।
     error:
       signed_in: Please signout before proceeding
       username_not_found: Username %{username} not found
-      username_in_use: "%{username} is already taken, please pick another"
+      username_in_use: '%{username} is already taken, please pick another'
       no_teacher: Could not find anyone signed in with '%{teacher_email_or_code}'.
         Please ask them to sign up here and then try adding them again
       section_not_found: Could not find a section with code '%{section_code}'.
-      blank_code: "দয়া করে কোড বা আপনার শিক্ষকের ই-মেইল ঠিকানা প্রবেশ করান"
+      blank_code: দয়া করে কোড বা আপনার শিক্ষকের ই-মেইল ঠিকানা প্রবেশ করান
       cant_join_own_section: Sorry, you can't join your own section.
     mail:
       invite_student:
@@ -175,14 +175,14 @@
     teacher_email_required: 'Teacher prizes require a confirmed email address:'
     confirm:
       title: Please Confirm
-      'no': "না"
+      'no': না
       'yes': '"হ্যাঁ"'
       msg: Are you sure you want to claim the %{prize_name} prize?
       msg_student: 'NOTE: You can only choose one type of prize.'
       msg_publicschool: Please confirm that you are a U.S. public school teacher.
       msg_visit_website: Visit website
     providers:
-      apple_itunes: "$10 iTunes Gift Card"
+      apple_itunes: $10 iTunes Gift Card
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10GB of Dropbox Space
@@ -191,7 +191,7 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: "$10 Skype credit"
+      skype: $10 Skype credit
     msg:
       choose: 'Choose a prize:'
       choose_teacher: 'Click on the logo below to claim your prize:'
@@ -238,9 +238,9 @@
     destroy: Destroy
     back: Back
     confirm: Are you sure?
-    created: "%{model} was successfully created."
-    updated: "%{model} was successfully updated."
-    destroyed: "%{model} was successfully deleted."
+    created: '%{model} was successfully created.'
+    updated: '%{model} was successfully updated.'
+    destroyed: '%{model} was successfully deleted.'
     access_denied: You do not have access to this %{model}.
   nav:
     header:
@@ -256,8 +256,8 @@
       settings: My account
       prizes: Prizes
       logout: Sign out
-      signin: "সাইন ইন করুন"
-      signup: "সাইন আপ"
+      signin: সাইন ইন করুন
+      signup: সাইন আপ
       already_registered: Already registered?
     popup:
       progress: Your progress
@@ -267,13 +267,13 @@
       puzzle_map: Stages
       prizes: Collect all %{total_trophies} trophies and win prizes!
       prize_earned: All %{total_trophies} trophies collected. Prize won!
-      prize_us_only: "(U.S. students only)"
-      prizes_link: "আরও তথ্য"
+      prize_us_only: (U.S. students only)
+      prizes_link: আরও তথ্য
   teacher:
     title:
       one: Your teacher is %{name}
       other: 'Your teachers:'
-    remove: "(remove teacher)"
+    remove: (remove teacher)
     confirm:
       remove: Are you sure you want to remove this teacher?
     tools: Teacher Tools
@@ -288,11 +288,11 @@
       not_tried: Not tried yet
       activity: Indicates student activity in the last %{hours} %{plural}
       no_section: No assigned section
-      trophies: "পুরষ্কার"
+      trophies: পুরষ্কার
     students:
-      name: "নাম"
-      username: "উজারন্যাম"
-      password: "পাসওআর্ড"
+      name: নাম
+      username: উজারন্যাম
+      password: পাসওআর্ড
       manage: Manage students
       dashboard: Go to Teacher Dashboard
       add: Add students
@@ -329,17 +329,17 @@
     rollup: Progress Dashboard
     activity: Recent class activity
     user_not_found: The teacher or student could not be found
-    cant_remove_student_no_email: "%{student_name} cannot be removed as your student
-      because %{student_name} has not registered an e-mail address"
-    cant_remove_teacher_no_email: "%{teacher_name} cannot be removed as your teacher
-      because you have not registered an e-mail address"
-    student_teacher_disassociated: "%{teacher_name} has been removed as a teacher
-      for %{student_name}"
+    cant_remove_student_no_email: '%{student_name} cannot be removed as your student
+      because %{student_name} has not registered an e-mail address'
+    cant_remove_teacher_no_email: '%{teacher_name} cannot be removed as your teacher
+      because you have not registered an e-mail address'
+    student_teacher_disassociated: '%{teacher_name} has been removed as a teacher
+      for %{student_name}'
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
     email_resend_confirm: Resend confirmation instructions
-    new_password_hint: "(leave blank if you don't want to change it)"
-    current_password_hint: "(we need your current password to confirm your changes)"
+    new_password_hint: (leave blank if you don't want to change it)
+    current_password_hint: (we need your current password to confirm your changes)
     cancel:
       title: Cancel my account
       hint: Unhappy?
@@ -389,9 +389,9 @@
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
-    heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
-    heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
-    heading_legacy: "<h2>Our previous course for</h2><h1>Existing Students</h1>"
+    heading_elementary: <h2>20 hour courses for</h2><h1>Elementary Students</h1>
+    heading_apps: <h2>Fun for</h2><h1>Everybody</h1>
+    heading_legacy: <h2>Our previous course for</h2><h1>Existing Students</h1>
     gallery:
       your_turtle: My Art
       your_studio: My Apps
@@ -500,13 +500,13 @@
     want_to_make_your_own: Want to make your own?
     more: More &rarr;
     caption_by_name_age: by %{name}, age %{age}
-    caption_time_ago: "%{time_ago} ago"
+    caption_time_ago: '%{time_ago} ago'
   landing:
     prerelease: This page is still under development.
     feedback: Give Feedback
     report_bug: Report Bug
     support: Get Help
-    support_url: "//support.code.org"
+    support_url: //support.code.org
   multi:
     wrong_title: Incorrect answer
     wrong_body: The answer you've entered is not correct.  Please try again!
@@ -518,7 +518,7 @@
     correct_title: Correct
     correct_body: That is the correct answer.
   dialog:
-    ok: "ঠিক আছে"
+    ok: ঠিক আছে
   time:
     hour: 1 hour
     day: day
@@ -535,7 +535,7 @@
           title: Hour of Code
           description: ''
         edit-code:
-          title: "কোড সম্পাদনা করুন"
+          title: কোড সম্পাদনা করুন
           description: ''
         events:
           title: Events

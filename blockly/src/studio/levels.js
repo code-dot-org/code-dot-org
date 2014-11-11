@@ -973,7 +973,8 @@ levels.full_sandbox =  {
                         blockOfType('studio_setSpriteSpeed') +
                         blockOfType('studio_setSpriteEmotion') +
                         blockOfType('studio_vanish') +
-                        blockOfType('studio_setSpriteSize')) +
+                        blockOfType('studio_setSpriteSize') +
+                        blockOfType('studio_showCoordinates')) +
        createCategory(msg.catEvents(),
                         blockOfType('studio_whenArrow') +
                         blockOfType('studio_whenSpriteClicked') +
@@ -1050,6 +1051,7 @@ levels.full_sandbox =  {
                      blockOfType('functional_setEnemySpeed') +
                      blockOfType('functional_showTitleScreen') +
                      blockOfType('functional_string') +
+                     blockOfType('functional_background_string_picker') +
                      blockOfType('functional_math_number'))),
   'startBlocks':
    '<block type="when_run" deletable="false" x="20" y="20"></block>'

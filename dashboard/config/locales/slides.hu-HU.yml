@@ -3,7 +3,7 @@
     maze_intro:
       1:
         image: notes/hoc1_1.jpg
-        text: "Üdvözlünk az első kód órádban! Kezdjük is el az első programozási leckét."
+        text: Üdvözlünk az első kód órádban! Kezdjük is el az első programozási leckét.
       2:
         image: notes/hoc1_2.jpg
         text: A Blockly nevű vizuális programozási nyelvezetet fogjuk használni, ahol
@@ -166,7 +166,7 @@
         text: 'Fontos: az „ismétlés” blokkba több mint egy utasítást is betehetsz.'
       7:
         image: notes/hoc2_7.jpg
-        text: "Élvezd az új „ismétlés” blokk használatát!"
+        text: Élvezd az új „ismétlés” blokk használatát!
     loop_until:
       1:
         image: notes/hoc3_1.jpg
@@ -349,4 +349,4 @@
     20_wrapup:
       1:
         image: notes/bird.png
-        text: "Útmutató jegyzetek hamarosan!"
+        text: Útmutató jegyzetek hamarosan!

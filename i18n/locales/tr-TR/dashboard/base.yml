@@ -1,138 +1,138 @@
-tr:
+"tr":
   activerecord:
     errors:
       messages:
-        blank: gerekli
+        blank: "gerekli"
     attributes:
       user:
-        name: Görünen isim
-        email: E-posta
-        username: kullanıcı adı
-        password: şifre
-        password_confirmation: Şifre doğrulama
-        current_password: Şu anki parola
-        locale: Dil
-        age: Yaş
-        gender: Cinsiyet
-        edit_header: Hesap Bilgilerini Düzenle
+        name: "Görünen isim"
+        email: "E-posta"
+        username: "kullanıcı adı"
+        password: "şifre"
+        password_confirmation: "Şifre doğrulama"
+        current_password: "Şu anki parola"
+        locale: "Dil"
+        age: "Yaş"
+        gender: "Cinsiyet"
+        edit_header: "Hesap Bilgilerini Düzenle"
         error:
-          future: gelecekte olması mümkün değil
-  hello: Merhaba dünya
+          future: "gelecekte olması mümkün değil"
+  hello: "Merhaba dünya"
   welcome_back: 'Hoş geldiniz %{name}'
   add_teacher_form:
     code_or_email:
       label: 'Koda veya e-posta adresine göre bir öğretmen ekleyin:'
-      placeholder: Kod (ABCDEF) veya e-posta (teacher@school.edu)
+      placeholder: "Kod (ABCDEF) veya e-posta (teacher@school.edu)"
     code:
       label: 'Bölüm koduna göre bir öğretmen ekleyin:'
-      placeholder: Kod (ABCDEF)
-    submit: Öğretmen ekle
+      placeholder: "Kod (ABCDEF)"
+    submit: "Öğretmen ekle"
   add_hint_form:
-    placeholder: Lütfen ipucunu buraya girin
-    submit: İpucu ekle
-  appname: Code.org
-  stage: kademe
+    placeholder: "Lütfen ipucunu buraya girin"
+    submit: "İpucu ekle"
+  appname: "Code.org"
+  stage: "kademe"
   stage_number: 'Sahne %{number}'
-  puzzle: Bulmaca
-  trophies: kupalar
-  courses: kurslar
-  of: /
-  more: DAHA FAZLA
-  less: DAHA AZ
+  puzzle: "Bulmaca"
+  trophies: "kupalar"
+  courses: "kurslar"
+  of: "/"
+  more: "DAHA FAZLA"
+  less: "DAHA AZ"
   try_hoc: "Kod Saati'ni denemek için buraya tıklayın >> "
-  try_k8intro: İlköğretim okullarına yönelik Bilgisayar Bilimlerine Giriş dersimizi deneyin (15-25 saat)
-  k8intro: K-8 Bilişim Teknolojilerine Giriş Kursu (15-25 saat)
+  try_k8intro: "İlköğretim okullarına yönelik Bilgisayar Bilimlerine Giriş dersimizi deneyin (15-25 saat)"
+  k8intro: "K-8 Bilişim Teknolojilerine Giriş Kursu (15-25 saat)"
   already_started: 'Zaten başladınız mı? Buradan devam edin >> '
   demos: 'Yönetici: Tüm Demolar'
-  continue: Devam
-  prize: ödül
-  more_info: Daha fazla bilgi
+  continue: "Devam"
+  prize: "ödül"
+  more_info: "Daha fazla bilgi"
   auth:
     sign_in_with: '%{provider} ile giriş yapın'
-    signed_in: Giriş yapıldı!
+    signed_in: "Giriş yapıldı!"
     signed_out: '<a href="%{url}">Code.org</a> dan çıkış yaptınız.'
     sign_out_of: '%{provider} aracılığıyla giriş yaptınız. %{provider} sağlayıcısından çıkış yapmak için lütfen <a href="%{url}">buraya tıklayın</a>.'
-    already_signedup: Zaten kayıtlı mısınız?
-    notyet_signedup: Henüz kaydolmadınız mı?
-    google_oauth2: Google Hesabı
-    twitter: Twitter
-    facebook: Facebook
-    windowslive: Microsoft Hesabı
-    forgot_password: Şifrenizi mi unuttunuz?
-    need_confirmation: Onay talimatlarını almadınız mı?
-    need_unlock: Kilit açma talimatlarını almadınız mı?
+    already_signedup: "Zaten kayıtlı mısınız?"
+    notyet_signedup: "Henüz kaydolmadınız mı?"
+    google_oauth2: "Google Hesabı"
+    twitter: "Twitter"
+    facebook: "Facebook"
+    windowslive: "Microsoft Hesabı"
+    forgot_password: "Şifrenizi mi unuttunuz?"
+    need_confirmation: "Onay talimatlarını almadınız mı?"
+    need_unlock: "Kilit açma talimatlarını almadınız mı?"
   signup_form:
     overview_student: 'İlerleme durumunuzu takip etmek için kayıt olun. Giriş işlemleri için ve şifrenizi unuttuğunuzda E-posta adresiniz kullanılacaktır. Daha fazla bilgi için <a href="http://code.org/privacy">gizlilik politikamızı</a> tıklayınız.'
     overview_teacher: 'Bİr hesap ile kayıt olun ve sınıfınıza bilgisayar bilimi öğretin.<p/> Öğrenci ekleyebilecek ve onların ilerlemelerini takip edebileceksiniz.'
     no_signup_message: '<a target="_blank" href="http://learn.code.org">Çeşitli aşamalara ve bulmacalara gözatabilirsin</a> ama ilerlemeni kaydetmek için kayıt olman gerekmektedir.'
-    teacher_educator_guide: Eğitim rehberine bakın
+    teacher_educator_guide: "Eğitim rehberine bakın"
     teacher_pitch: "Code.org'a öğretmen olarak kaydolun"
-    teacher_title: Öğretmen Kayıt
+    teacher_title: "Öğretmen Kayıt"
     student_pitch: "Code.org'a öğrenci olarak kaydolun"
-    student_title: Öğrenci üye ol
-    school_name: Okul Adı (isteğe bağlı)
-    school_address: Okul Adresi (isteğe bağlı)
-    address_placeholder: adres, şehir, eyalet, posta kodu
-    gender: Cinsiyet (isteğe bağlı)
-    birthday: Doğum Günü (isteğe bağlı)
-    age: Yaş
-    user_type: Are you a student or teacher?
-    submit: Kaydol
-    teacher: Öğretmen misiniz?
-    valid_username: Mevcut!
-    invalid_username: Kullanıcı adı en az 5 karakter uzunluğunda olmalıdır
-    taken_username: Kullanıcı adı zaten alınmıştır
-    valid_password: Geçerli parola!
-    invalid_password: Parola en az 6 karakter olmalıdır
-    mismatch_password: Girdiğiniz iki parola aynı değil
+    student_title: "Öğrenci üye ol"
+    school_name: "Okul Adı (isteğe bağlı)"
+    school_address: "Okul Adresi (isteğe bağlı)"
+    address_placeholder: "adres, şehir, eyalet, posta kodu"
+    gender: "Cinsiyet (isteğe bağlı)"
+    birthday: "Doğum Günü (isteğe bağlı)"
+    age: "Yaş"
+    user_type: "Are you a student or teacher?"
+    submit: "Kaydol"
+    teacher: "Öğretmen misiniz?"
+    valid_username: "Mevcut!"
+    invalid_username: "Kullanıcı adı en az 5 karakter uzunluğunda olmalıdır"
+    taken_username: "Kullanıcı adı zaten alınmıştır"
+    valid_password: "Geçerli parola!"
+    invalid_password: "Parola en az 6 karakter olmalıdır"
+    mismatch_password: "Girdiğiniz iki parola aynı değil"
     student_terms: "Code.org <a href='http://code.org/tos'>hizmet şartlarını</a> kabul ediyorum. Eğer 13 yaşın altında isem, bu formu doldurarak ebeveynimin veya yasal vasimin izni ile Code.org hizmetlerini kullandığımı onaylarım.<br/> 13 yaşın altındaki kullanıcılar için, iletişimde kullanılan e-posta adresleri saklanmıyor."
     teacher_terms: "Code.org <a href='http://code.org/tos'>hizmet koşullarına</a> bağlı olduğumu kabul ediyorum."
-    additional_information: Giriş işleminize devam edebilmek için ek bilgilere ihtiyaç duymaktayız.
+    additional_information: "Giriş işleminize devam edebilmek için ek bilgilere ihtiyaç duymaktayız."
   signin_form:
-    title: Zaten bir hesabınız var mı? Oturum Aç
-    login: Kullanıcı adınız veya e-posta
-    password: Parola
-    remember: Beni hatırla
-    submit: Giriş Yap
+    title: "Zaten bir hesabınız var mı? Oturum Aç"
+    login: "Kullanıcı adınız veya e-posta"
+    password: "Parola"
+    remember: "Beni hatırla"
+    submit: "Giriş Yap"
   signin:
-    try_heading: Kaydolmadan mı kodlamayı denemek istersiniz?
-    try_hoc: Önce bir Kodlama Saati dene
-    try_20hours: 20 saatlik Bilgisayar Bilimlerine Giriş dersini dene
+    try_heading: "Kaydolmadan mı kodlamayı denemek istersiniz?"
+    try_hoc: "Önce bir Kodlama Saati dene"
+    try_20hours: "20 saatlik Bilgisayar Bilimlerine Giriş dersini dene"
   signinsection:
     welcome: '%{section_name} bölümüne hoşgeldiniz'
-    name: Adınızı seçin
-    picture: Şimdi gizli resminizi bulun
-    words: Şimdi gizli kelimelerinizi girin
-    login: Giriş Yap
+    name: "Adınızı seçin"
+    picture: "Şimdi gizli resminizi bulun"
+    words: "Şimdi gizli kelimelerinizi girin"
+    login: "Giriş Yap"
   password:
     reset_form:
-      title: Şifrenizi mi unuttunuz?
-      email: E-posta adresi
-      submit: Şifre sıfırlama talimatlarını gönder
+      title: "Şifrenizi mi unuttunuz?"
+      email: "E-posta adresi"
+      submit: "Şifre sıfırlama talimatlarını gönder"
     change_form:
-      title: Şifrenizi değiştirin
-      new_password: Yeni şifre
-      confirm_password: Yeni şifreyi doğrula
-      submit: Şifremi değiştir
+      title: "Şifrenizi değiştirin"
+      new_password: "Yeni şifre"
+      confirm_password: "Yeni şifreyi doğrula"
+      submit: "Şifremi değiştir"
   welcome_email:
-    subject: Sınıf katılımım (Code.org üzerinde)
+    subject: "Sınıf katılımım (Code.org üzerinde)"
     body: |
       Code.org taki bilgisayar bilimleri öğretici bölümlerine kayıt olmak için aşağıda ki link'e tıklayın(sizin "öğretmeniniz" olarak benle)
       %{link}
       Öğretici bölümler eğlenceli,görsel olarak alımlı,ve bilgisayar biliminin temel konseptini basit,yönlendirerek,oyun-benzeri tecrübeleri kullanarak öğretir.Kodlamayı Bill Gates'den,Mark Zuckerberg'den,Angry Birds'den, ve Bitkilere karşı Zombiler'den öğrenin! :-)
       %{name}
   follower:
-    invite_sent: Davetiye gönderildi
+    invite_sent: "Davetiye gönderildi"
     added_teacher: '%{name} öğretmeniniz olarak eklendi'
     registered: '%{section_name} için kayıt oldunuz.'
     error:
-      signed_in: Devam etmeden önce lütfen çıkış yapınız
+      signed_in: "Devam etmeden önce lütfen çıkış yapınız"
       username_not_found: '%{username} kullanıcı adı bulunamadı'
       username_in_use: '%{username} önceden alınmış, lütfen başka bir tane seçiniz'
       no_teacher: "Herhangi biri '%{teacher_email_or_code}' ile imzalanan bulamadı. Lütfen şurayı imzalayın isteyin ve sonra onları yeniden eklemeyi deneyin"
       section_not_found: "'%{section_code}' koduyla bir bölge bulunamadı."
-      blank_code: Lütfen bir bölge kodu girin
-      cant_join_own_section: Malesef, kendi bölgenizde katılamazsınız.
+      blank_code: "Lütfen bir bölge kodu girin"
+      cant_join_own_section: "Malesef, kendi bölgenizde katılamazsınız."
     mail:
       invite_student:
         subject: "Code.org'ta %{teacher_name} ile bir sınıfa katıl!"
@@ -142,47 +142,47 @@ tr:
         subject: 'Code.org bildirimi: %{teacher_name} artık öğretmeniniz değil.'
   reports:
     error:
-      access_denied: Bu kişinin istatistiklerine erişemezsiniz
+      access_denied: "Bu kişinin istatistiklerine erişemezsiniz"
   redeem_prizes:
     title: 'Ödülü alın:%{name}'
     provider: 'Sağlayıcı:'
     code: 'Kod:'
     redeem_header: 'Telafi için:'
     donorschoose_register: "DonorsChoose.org'da öğretmen olarak kaydolun"
-    donorschoose_project: Bir proje yayınlayın
-    donorschoose_how_to: Kodunuzu nasıl kullanırsınız
-    success: Ödülünüzü başarılı bir şekilde kullandınız, aşağıdaki koda bakın.
-    error: Ödülünüzü kullanamazsınız, lütfen tekrar deneyin.
-    error_us_only: Ödül teklifi sadece A.B.D. kullanıcıları için geçerlidir.
-    error_not_earned: Henüz bu ödülü kazanmadınız.
-    error_already_redeemed: Ödülün zaten alındı.
-    no_prizes_available: Üzgünüz, ama şu anda kullanılabilir hiçbir ödülümüz yok.
+    donorschoose_project: "Bir proje yayınlayın"
+    donorschoose_how_to: "Kodunuzu nasıl kullanırsınız"
+    success: "Ödülünüzü başarılı bir şekilde kullandınız, aşağıdaki koda bakın."
+    error: "Ödülünüzü kullanamazsınız, lütfen tekrar deneyin."
+    error_us_only: "Ödül teklifi sadece A.B.D. kullanıcıları için geçerlidir."
+    error_not_earned: "Henüz bu ödülü kazanmadınız."
+    error_already_redeemed: "Ödülün zaten alındı."
+    no_prizes_available: "Üzgünüz, ama şu anda kullanılabilir hiçbir ödülümüz yok."
     teacher_info_required: 'Öğretmen ödülleri okul adı ve adres bilgilerini gerektirir:'
     teacher_email_required: 'Öğretmen ödülleri teyitli eposta adresi gerektirir:'
     confirm:
-      title: Lütfen onaylayın
+      title: "Lütfen onaylayın"
       "no": Hayır
       "yes": Evet
       msg: '%{prize_name} ödülünü talep etmek istediğinize emin misiniz?'
       msg_student: 'Not: Yalnızca bir tür ödül seçebilirsiniz.'
-      msg_publicschool: Lütfen ABD devlet okulu öğretmeni olduğunuzu onaylayın.
-      msg_visit_website: Web sitesini ziyaret edin
+      msg_publicschool: "Lütfen ABD devlet okulu öğretmeni olduğunuzu onaylayın."
+      msg_visit_website: "Web sitesini ziyaret edin"
     providers:
-      apple_itunes: $10 iTunes Gift Card
-      donors_choose: DonorsChoose.org $750 credit
-      donors_choose_bonus: DonorsChoose.org $250 credit
-      dropbox: 10GB Dropbox Alanı
-      valve: Portal 2 (PC or Mac game download)
-      ea_bejeweled: Bejeweled 3 (PC game download)
-      ea_fifa: FIFA Soccer 13 (PC game download)
-      ea_simcity: SimCity 4 Deluxe Edition (PC game download)
-      ea_pvz: Plants vs. Zombies (PC game download)
-      skype: $10 Skype credit
+      apple_itunes: "$10 iTunes Gift Card"
+      donors_choose: "DonorsChoose.org $750 credit"
+      donors_choose_bonus: "DonorsChoose.org $250 credit"
+      dropbox: "10GB Dropbox Alanı"
+      valve: "Portal 2 (PC or Mac game download)"
+      ea_bejeweled: "Bejeweled 3 (PC game download)"
+      ea_fifa: "FIFA Soccer 13 (PC game download)"
+      ea_simcity: "SimCity 4 Deluxe Edition (PC game download)"
+      ea_pvz: "Plants vs. Zombies (PC game download)"
+      skype: "$10 Skype credit"
     msg:
       choose: 'Bir ödül seçin:'
       choose_teacher: 'Click on the logo below to claim your prize:'
-      earned: Bir ödül kazandın! (Sadece A.B.D. öğrencileri için)
-      not_earned_title: Öğreticiyi tamamla, ödülleri kazan. (yalnızca ABD öğrenci)
+      earned: "Bir ödül kazandın! (Sadece A.B.D. öğrencileri için)"
+      not_earned_title: "Öğreticiyi tamamla, ödülleri kazan. (yalnızca ABD öğrenci)"
       not_earned: 'Bütün bilgisayar bilimi kavramlarını öğren, %{num_trophies} kupanın tamamını topla ve gerçek hediyeler kazan. 10GB ücretsiz Dropbox disk alanı, 10$ Skype parası veya ücretsiz oyun indirme hediyelerinden birini seçebilirsin. NOT: Bu teklif sadece A.B.D. öğrencileri için geçerlidir ve elimizde kaldığı kadarıyla verilebilir.'
       teacher:
         earned: '10 veya daha fazla öğrenci %{num_trophies} adet kupanın tamamını topladı. Öğretmen ödülü kazandın! (Sadece A.B.D. öğretmenleri için)'
@@ -196,13 +196,13 @@ tr:
           not_earned: 'Eğer, %{num_trophies} adet kupanın tamamını kazanan öğrencilerden 7 veya daha fazlası kız öğrenciler ise, ödülün ilave olarak 250$ <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> parasıdır. <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> parası sadece A.B.D. devlet okullarındaki öğretmenler tarafından kullanılabilir.'
   crud:
     new_model: 'Yeni %{model}'
-    show: Göster
-    edit: Düzenle
+    show: "Göster"
+    edit: "Düzenle"
     edit_model: '%{model} düzenle'
-    update: Güncelle
-    destroy: Yok et
-    back: Geri
-    confirm: Emin misiniz?
+    update: "Güncelle"
+    destroy: "Yok et"
+    back: "Geri"
+    confirm: "Emin misiniz?"
     created: '%{model} başarılı bir şekilde oluşturuldu.'
     updated: '%{model} başarılı bir şekilde güncellendi.'
     destroyed: '%{model} başarıyla silindi.'
@@ -210,280 +210,280 @@ tr:
   nav:
     header:
       finished_hoc: "Kod Saati'ni tamamladım"
-      sign_in_to_save: İlerleme kaydetmek için oturum açın
+      sign_in_to_save: "İlerleme kaydetmek için oturum açın"
       free_play:
-        playlab: Uygulama oluşturun
-        artist: Bir şeyler çizin
+        playlab: "Uygulama oluşturun"
+        artist: "Bir şeyler çizin"
     user:
-      classroom: Öğrencilerim
+      classroom: "Öğrencilerim"
       label: 'Merhaba %{username}'
-      stats: İlerlemem
-      settings: Hesabım
-      prizes: Ödüller
-      logout: Çıkış Yap
-      signin: Giriş Yap
-      signup: Kaydol
-      already_registered: Zaten hesabınız var mı?
+      stats: "İlerlemem"
+      settings: "Hesabım"
+      prizes: "Ödüller"
+      logout: "Çıkış Yap"
+      signin: "Giriş Yap"
+      signup: "Kaydol"
+      already_registered: "Zaten hesabınız var mı?"
     popup:
-      progress: İlerlemeniz
+      progress: "İlerlemeniz"
       lines: 'Toplam kod satırı: %{lines}'
-      close: kapat
-      mastery: Kavramlar
-      puzzle_map: aşamalar
+      close: "kapat"
+      mastery: "Kavramlar"
+      puzzle_map: "aşamalar"
       prizes: '%{total_trophies} kupanın hepsini topla ve ödül kazan!'
       prize_earned: '%{total_trophies} kupanın hepsi toplandı. Ödül kazandın!'
-      prize_us_only: (Sadece ABD öğrencileri)
-      prizes_link: Daha fazla bilgi
+      prize_us_only: "(Sadece ABD öğrencileri)"
+      prizes_link: "Daha fazla bilgi"
   teacher:
     title:
       one: 'Öğretmenin :'
       other: 'Öğretmeniniz:'
-    remove: (öğretmeni kaldır)
+    remove: "(öğretmeni kaldır)"
     confirm:
-      remove: Bu öğretmeni kaldırmak istediğinizden emin misiniz?
-    tools: Öğretmen Araçları
+      remove: "Bu öğretmeni kaldırmak istediğinizden emin misiniz?"
+    tools: "Öğretmen Araçları"
     followers:
       section: 'Bölüm:'
       stages: 'Görüntülenecek kademe(ler):'
       show_past: 'Geçmiş öğrenci aktivitelerini göster (%{bullet_html}):'
-      levels_key: Level anahtarı
-      perfect: Tamamlandı, mükemmel
-      completed: Tamamlandı, fakat çok fazla blok kullanıldı
-      tried: Denendi ama tamamlanmadı
-      not_tried: Daha denenmedi
+      levels_key: "Level anahtarı"
+      perfect: "Tamamlandı, mükemmel"
+      completed: "Tamamlandı, fakat çok fazla blok kullanıldı"
+      tried: "Denendi ama tamamlanmadı"
+      not_tried: "Daha denenmedi"
       activity: 'Son %{hours} %{plural} içerisindeki öğrenci aktivitesini gösterir'
-      no_section: Atanan bölüm yok
-      trophies: kupalar
+      no_section: "Atanan bölüm yok"
+      trophies: "kupalar"
     students:
-      name: İsim
-      username: kullanıcı adı
-      password: şifre
-      manage: Öğrencileri yönet
-      dashboard: Öğretmen Panosuna Git
-      add: Öğrenciler Ekle
-      remove: öğrenciyi sil
-      confirm_remove: Bu öğrenciyi çıkarmak istediğinden emin misin?
-      help_reassign: Sınıfınızı birden çok bölüme ayırmak istiyorsan, yeni bölüme atayacağın öğrencileri seç.
-      help_register: Öğrenci verilerini tek tek içe aktararak fazladan zaman kaybetmek yerine, hızlıca sınıfını giriş yapmaya çağırarak ayarlayabilirsin. Öğrencilerin kullanıcı adı ve parola seçmelidir, fakat e-posta adresi girmeleri gerekmez. Eğer bir öğrenci parolasını unutursa, onlar için sıfırlayabilirsin.
-      register: Öğrencilerinize kaydolmalarını söyleyin
-      vist: Öğrencilerinize ziyaret etmelerini söyleyin
+      name: "İsim"
+      username: "kullanıcı adı"
+      password: "şifre"
+      manage: "Öğrencileri yönet"
+      dashboard: "Öğretmen Panosuna Git"
+      add: "Öğrenciler Ekle"
+      remove: "öğrenciyi sil"
+      confirm_remove: "Bu öğrenciyi çıkarmak istediğinden emin misin?"
+      help_reassign: "Sınıfınızı birden çok bölüme ayırmak istiyorsan, yeni bölüme atayacağın öğrencileri seç."
+      help_register: "Öğrenci verilerini tek tek içe aktararak fazladan zaman kaybetmek yerine, hızlıca sınıfını giriş yapmaya çağırarak ayarlayabilirsin. Öğrencilerin kullanıcı adı ve parola seçmelidir, fakat e-posta adresi girmeleri gerekmez. Eğer bir öğrenci parolasını unutursa, onlar için sıfırlayabilirsin."
+      register: "Öğrencilerinize kaydolmalarını söyleyin"
+      vist: "Öğrencilerinize ziyaret etmelerini söyleyin"
       section_code: 've onların bölge-kodunu girin:'
       first_please: 'İlk olarak, lütfen %{add_section}'
-      for: İçin
+      for: "İçin"
       enter: 'girin:'
     sections:
-      add: Bölüm ekle
-      manage: Bölümleri yönetmek
-      section: Bölüm
-      students: Öğrenciler
-      section_code: Bölge Kodu
-      add_section_code: Öğrencilerin Bölge-Kodunu Girin
-      secret: Gizlilik türü
-      grade: Sınıf
-      course: Kurs
-      rename: yeniden adlandır
-      edit: düzenle
-      delete: sil
-      confirm_delete: Bu bölümü silmek istediğinden emin misin?
-      email: Eposta içinde gönder
-    rollup: İlerleme Kontrol Paneli
-    activity: Son sınıf etkinlikleri
-    user_not_found: Öğrenci ve öğretmen bulunamadı
+      add: "Bölüm ekle"
+      manage: "Bölümleri yönetmek"
+      section: "Bölüm"
+      students: "Öğrenciler"
+      section_code: "Bölge Kodu"
+      add_section_code: "Öğrencilerin Bölge-Kodunu Girin"
+      secret: "Gizlilik türü"
+      grade: "Sınıf"
+      course: "Kurs"
+      rename: "yeniden adlandır"
+      edit: "düzenle"
+      delete: "sil"
+      confirm_delete: "Bu bölümü silmek istediğinden emin misin?"
+      email: "Eposta içinde gönder"
+    rollup: "İlerleme Kontrol Paneli"
+    activity: "Son sınıf etkinlikleri"
+    user_not_found: "Öğrenci ve öğretmen bulunamadı"
     cant_remove_student_no_email: 'Öğrenciniz olan %{student_name} çıkarılamaz çünkü %{student_name} için kayıtlı bir e-posta adresi yok'
     cant_remove_teacher_no_email: 'Öğretmeniniz olan %{teacher_name} çıkarılamaz çünkü kayıtlı bir e-posta adresiniz yok'
     student_teacher_disassociated: "% {teacher_name},  % {student_name} 'in öğretmeni olmaktan kaldırıldı"
   user:
     email_confirm_needed: 'Eposta adresiniz teyit edilmedi:'
-    email_resend_confirm: Onay yönergelerini yeniden gönder
-    new_password_hint: (Eğer değiştirmek iştemiyorsanız boş bırakın)
-    current_password_hint: (Değişikliklerinizi onaylamak için geçerli parolanız gerekiyor)
+    email_resend_confirm: "Onay yönergelerini yeniden gönder"
+    new_password_hint: "(Eğer değiştirmek iştemiyorsanız boş bırakın)"
+    current_password_hint: "(Değişikliklerinizi onaylamak için geçerli parolanız gerekiyor)"
     cancel:
-      title: Hesabımı iptal et
-      hint: Mutsuz?
-      button: Hesabımı iptal et
+      title: "Hesabımı iptal et"
+      hint: "Mutsuz?"
+      button: "Hesabımı iptal et"
   user_level:
-    completed: Tamamlandı
-    tried: Denenmiş
+    completed: "Tamamlandı"
+    tried: "Denenmiş"
   user_stats:
-    recent_activity: Son etkinlik
-    show_more: Daha fazla göster
-    classroom_activity: Bağlantısız Etkinlik
+    recent_activity: "Son etkinlik"
+    show_more: "Daha fazla göster"
+    classroom_activity: "Bağlantısız Etkinlik"
   home:
-    title: Code Studio
-    all_courses: 1, 2 ve 3 nolu derslerine genel bakış
-    lesson_plans: Ders planları
+    title: "Code Studio"
+    all_courses: "1, 2 ve 3 nolu derslerine genel bakış"
+    lesson_plans: "Ders planları"
     signin_message: 'Zaten üye misiniz? % {link}'
-    student_reg_link: Öğrenci Üyelik
-    teacher_reg_link: Öğretmen Üyelik
+    student_reg_link: "Öğrenci Üyelik"
+    teacher_reg_link: "Öğretmen Üyelik"
     signin_directions: 'Süreci takip etmek için bir hesap kullanın.<br/> Öğretmenler, tüm sınıfınızı takip edin.'
-    teacher_dashboard: İlerleme kontrol paneli bakın
+    teacher_dashboard: "İlerleme kontrol paneli bakın"
     teacher_student_count_one: '%{count} öğrenciye sahipsiniz.'
     teacher_student_count: '%{count} öğrenciye sahipsiniz.'
     teacher_averages: 'Öğrencileriniz "Kavram Ustalığı" kupalarından ortalama olarak %{trophy_max} kupadan %{trophy_average} kupayı kazanmıştır.'
-    teacher_print_certificates: Bu dersi bitiren öğrenciler için sertifika bastır
-    teacher_read_blog: Ders malzemeleri hakkında haberler ve güncellemeleri eğitimci bloğumuzda okuyun
-    classroom: Sınıfınız
-    student_progress: Öğrenme ilerlemeniz
+    teacher_print_certificates: "Bu dersi bitiren öğrenciler için sertifika bastır"
+    teacher_read_blog: "Ders malzemeleri hakkında haberler ve güncellemeleri eğitimci bloğumuzda okuyun"
+    classroom: "Sınıfınız"
+    student_progress: "Öğrenme ilerlemeniz"
     student_stats: '"Kavram Ustalığı" kupalarından %{trophy_max} kupadan %{trophy_count} kupayı kazandınız.'
     student_left_off: 'Kaldığınız yer:'
     student_finished: 'Bütün örnek dersleri tamamladınız, şimdi başka bir  %{online_link} ders veya %{local_school_link} yerel ders seçebilirsiniz'
-    local_school: Yerel okul
-    online: Online
-    see_details: Ayrıntılara bakınız
+    local_school: "Yerel okul"
+    online: "Online"
+    see_details: "Ayrıntılara bakınız"
     prize_info: "Katılım ödülleri (yalnızca ABD devlet okulu öğretmenleri için): 1,000$ 'a kadar sınıf ödülleri."
     tryfirst: 'Ya da önce deneyin, sonra üye olun:'
-    trynow: Şimdi dene
-    add_hint_help: Code.org eğitimlerine akıllı ipuçları eklememize yardım edin
-    20hour_overview: Bu 20 saatlik ders temel bilgisayar bilimi ve programlama kavramlarını tanıtır. Ders, K-8 dersliklerinde kullanılmak üzere tasarlanmıştır, ama her yaştan öğrenmek için eğlencelidir.
-    test_videos_help: Okulunuzda yeni video oynatıcımızı deneyin
-    try_beta_courses: Yeni! K-5 öğrencileri için beta kurslarımızı deneyin
-    use_as_teacher: Siteyi öğretmen profiliyle kullan
+    trynow: "Şimdi dene"
+    add_hint_help: "Code.org eğitimlerine akıllı ipuçları eklememize yardım edin"
+    20hour_overview: "Bu 20 saatlik ders temel bilgisayar bilimi ve programlama kavramlarını tanıtır. Ders, K-8 dersliklerinde kullanılmak üzere tasarlanmıştır, ama her yaştan öğrenmek için eğlencelidir."
+    test_videos_help: "Okulunuzda yeni video oynatıcımızı deneyin"
+    try_beta_courses: "Yeni! K-5 öğrencileri için beta kurslarımızı deneyin"
+    use_as_teacher: "Siteyi öğretmen profiliyle kullan"
     heading_elementary: '<h1>İlkögretim öğrenciliri</h1> için <h2>20 saatlik kurslar</h2>'
     heading_apps: '<h1>Herkes</h1> için <h2>eğlence</h2>'
     heading_legacy: '<h1>Tüm yaş</h1> grupları için <h2>genel kurslarımız</h2>'
     gallery:
-      your_turtle: Çizimlerim
-      your_studio: Uygulamalarım
+      your_turtle: "Çizimlerim"
+      your_studio: "Uygulamalarım"
   gender:
-    male: Erkek
-    female: Kadın
-    none: Cevap vermemeyi tercih ederim
+    male: "Erkek"
+    female: "Kadın"
+    none: "Cevap vermemeyi tercih ederim"
   user_type:
-    student: öğrenci
-    teacher: Teacher
+    student: "öğrenci"
+    teacher: "Teacher"
   footer:
     help_from_html: "Bu eğitici Google, Microsoft, Facebook, ve Twitter 'dan mühendislerin yardımıyla oluşturuldu."
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. Tüm hakları saklıdır.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. Tüm hakları saklıdır.'
-    feedback: Geri besleme sağla
-    translate: Kendi dilinize çevirmemiz için bize yardım edin
-    support: Destek
-    support_url: http://support.code.org
-    tos: Şartlar
-    privacy: Gizlilik Politikası
-    secure: Güvenli sürüm
+    feedback: "Geri besleme sağla"
+    translate: "Kendi dilinize çevirmemiz için bize yardım edin"
+    support: "Destek"
+    support_url: "http://support.code.org"
+    tos: "Şartlar"
+    privacy: "Gizlilik Politikası"
+    secure: "Güvenli sürüm"
   reference_area:
-    title: Yardım ister misiniz?
-    subtitle: Bu videolara ve ipuçlarına bakın
-    teacher: Çözüme bakın
-    auth_error: Bu çözümü görmek için yetkiniz yok.
-    submit: Aktör Konumunu Güncelle
-    direction: Start Direction (in degrees)
+    title: "Yardım ister misiniz?"
+    subtitle: "Bu videolara ve ipuçlarına bakın"
+    teacher: "Çözüme bakın"
+    auth_error: "Bu çözümü görmek için yetkiniz yok."
+    submit: "Aktör Konumunu Güncelle"
+    direction: "Start Direction (in degrees)"
   video:
-    tab: Video.
-    notes: Video yok? Notları göster.
-    notes_coming_soon: Video için notlar yakında eklenecek.
-    autoplay_option: Otomatik oynayan video
-    download: Videoyu indir
+    tab: "Video."
+    notes: "Video yok? Notları göster."
+    notes_coming_soon: "Video için notlar yakında eklenecek."
+    autoplay_option: "Otomatik oynayan video"
+    download: "Videoyu indir"
   compatability:
     working:
-      header: Tarayıcı desteği üzerinde çalışıyoruz.
+      header: "Tarayıcı desteği üzerinde çalışıyoruz."
       message: "Code.org modern web teknolojilerini kullanır. Bu sitenin kullanımının daha hızlı olmasını sağlar. Tarayıcınız ihtiyaç duyduğumuz özellikleri desteklemiyorsa sitemizi kullanırken bazı problemler ile karşılaşabilirsiniz. Bulduğunuz herhangi bir hatayı <a href='%{report_issue_url}'>hata bildir</a>i kullanarak bize bildirin. Ayrıca tarayıcınızı da <a href='%{supported_browsers_url}'>desteklenen bir versiyon</a> ile güncelleyebilirsiniz."
-      hide_this_warning: Bu uyarıyı gizle
+      hide_this_warning: "Bu uyarıyı gizle"
     upgrade:
-      header: Lütfen tarayıcınızı yükseltin.
+      header: "Lütfen tarayıcınızı yükseltin."
       message: "Code.org modern web teknolojilerini kullanır. Bu sitenin kullanımının daha hızlı olmasını sağlar. Maalesef tarayıcınız bu sitenin çalışması için gerekli özellikleri desteklemiyor. <br/><br/>Bizim tavsiye ettiğimiz tarayıcı listesinden bir tanesini kurunuz. <a href='#'>Sayfayı görüntülemeyi</a> deneyebilirsiniz, fakat özelliklerin çalışmaması  muhtemeldir."
-      button: Desteklenen tarayıcılar listesi
-  slow_loading: Bu normalden uzun sürüyor...
-  try_reloading: Sayfayı yeniden yüklemeyi deneyin
-  next_stage: Bitti! Bir sonraki aşamaya geç
-  download_pdf: Açık ders planı
-  view_lesson_plan: Ders Planını Görüntüle
-  pdf_download: PDF İndir
+      button: "Desteklenen tarayıcılar listesi"
+  slow_loading: "Bu normalden uzun sürüyor..."
+  try_reloading: "Sayfayı yeniden yüklemeyi deneyin"
+  next_stage: "Bitti! Bir sonraki aşamaya geç"
+  download_pdf: "Açık ders planı"
+  view_lesson_plan: "Ders Planını Görüntüle"
+  pdf_download: "PDF İndir"
   share_code:
     title: "Benim programımın çalışırını görmek için, 'Çalıştır' seçeneğini tıklayın"
-    bounce_og_title: Benim Bounce oyunuma göz atın
+    bounce_og_title: "Benim Bounce oyunuma göz atın"
     flappy_og_title: "Benim Flappy Oyun'uma göz atın"
-    studio_og_title: Play Lab uygulamalarımı kontrol et
-    og_description: Ben Code.org ile kendi kodumu yazdım
-    phone_number_not_allowed: Telefon numarası var gibi görünüyor. Yazıyı değiştirmeyi deneyin.
-    address_not_allowed: İçinde Adres var gibi görünüyor. Yazıyı değiştirmeyi deneyin.
-    email_not_allowed: içinde E-mail var gibi görünüyor. Yazıyı değiştirmeyi deneyiniz.
-    profanity_not_allowed: İçinde küfür, kaba konuşma var gibi görünüyor. İçeriği değiştirmeyi deneyiniz.
+    studio_og_title: "Play Lab uygulamalarımı kontrol et"
+    og_description: "Ben Code.org ile kendi kodumu yazdım"
+    phone_number_not_allowed: "Telefon numarası var gibi görünüyor. Yazıyı değiştirmeyi deneyin."
+    address_not_allowed: "İçinde Adres var gibi görünüyor. Yazıyı değiştirmeyi deneyin."
+    email_not_allowed: "içinde E-mail var gibi görünüyor. Yazıyı değiştirmeyi deneyiniz."
+    profanity_not_allowed: "İçinde küfür, kaba konuşma var gibi görünüyor. İçeriği değiştirmeyi deneyiniz."
   builder:
-    created: Yeni bir komut dosyası oluşturdu.
-    destroyed: Bir komut dosyası yok.
-    manage: Leveller Oluştur
-    view: Görünüm
-    back: Komut dosyalarına geri dön
-    success: Blokları başarıyla düzenlediniz.
+    created: "Yeni bir komut dosyası oluşturdu."
+    destroyed: "Bir komut dosyası yok."
+    manage: "Leveller Oluştur"
+    view: "Görünüm"
+    back: "Komut dosyalarına geri dön"
+    success: "Blokları başarıyla düzenlediniz."
     level:
-      create: Yeni seviye oluştur
-      current: Şu anki Seviyeler
-      unused: Kullanılmamış Seviyeler
+      create: "Yeni seviye oluştur"
+      current: "Şu anki Seviyeler"
+      unused: "Kullanılmamış Seviyeler"
   upsell:
     hoc:
-      title: Saat Kodu
-      body: Temel bilgisayar bilimlerine milyonlar bir şans verdi, sen de dene.
+      title: "Saat Kodu"
+      body: "Temel bilgisayar bilimlerine milyonlar bir şans verdi, sen de dene."
     flappy:
-      title: Flappy Kod
-      body: 10 dakikadan az bir süre içinde kendi oyununu yazmak ister misin? Flappy Kod eğitimimizi deneyin!
+      title: "Flappy Kod"
+      body: "10 dakikadan az bir süre içinde kendi oyununu yazmak ister misin? Flappy Kod eğitimimizi deneyin!"
     20hour:
-      title: Giriş Kursu
-      body: 20 saatlik Bilişim Teknolojilerine Giriş kursumuzu deneyin.
+      title: "Giriş Kursu"
+      body: "20 saatlik Bilişim Teknolojilerine Giriş kursumuzu deneyin."
   gallery:
-    students_drew_these_with_code: Öğrenciler kod ile bunu çizdiler!
-    students_made_these_with_code: Öğrenciler bunları kod ile yaptı!
+    students_drew_these_with_code: "Öğrenciler kod ile bunu çizdiler!"
+    students_made_these_with_code: "Öğrenciler bunları kod ile yaptı!"
     picture_count: 'Geçtiğimiz <b>%{days}</b> günde, öğrenciler <b>%{count}</b> tane resmi kendi yazdıkları programlarla çizdiler. Her programın çalışırını görmek için resimlerin üzerine tıklayın.'
     activity_count: 'geçmiş <b>%{days}</b> günde, öğrenciler kendi bilgisayar programlarını yazarak <b>%{count}</b> kadar uygulama ve resimler oluşturdu. Ekran görüntülerine tıklayıp her bir programın nasıl çalıştığını görün.'
-    want_to_make_your_own: Kendininkini yapmak ister misin?
+    want_to_make_your_own: "Kendininkini yapmak ister misin?"
     more: 'Daha fazla &rarr;'
     caption_by_name_age: '%{name} tarafından, %{age} yaşında'
     caption_time_ago: '%{time_ago} zaman önce'
   landing:
     prerelease: "Bu ders, <span class='betatext'> beta</span> olduğunu.  Bu dersin son hali değildir, geribildirimlerin alındığı ve geliştirmelerin yapıldığı versiyonudur."
-    feedback: Geri bildirimde bulun
-    report_bug: Hata bildir
-    support: Yardım Al
-    support_url: //support.code.org
+    feedback: "Geri bildirimde bulun"
+    report_bug: "Hata bildir"
+    support: "Yardım Al"
+    support_url: "//support.code.org"
   multi:
-    wrong_title: Yanlış cevap
+    wrong_title: "Yanlış cevap"
     wrong_body: 'Girdiğiniz cevap doğru değil.  Lütfen tekrar deneyin!'
-    correct_title: Doğru
-    correct_body: İşte bu doğru cevap.
+    correct_title: "Doğru"
+    correct_body: "İşte bu doğru cevap."
   match:
-    wrong_title: Yanlış çözüm
+    wrong_title: "Yanlış çözüm"
     wrong_body: 'Girdiğiniz çözüm doğru değil.  Lütfen tekrar deneyin!'
-    correct_title: Doğru
-    correct_body: İşte bu doğru cevap.
+    correct_title: "Doğru"
+    correct_body: "İşte bu doğru cevap."
   dialog:
-    ok: TAMAM
+    ok: "TAMAM"
   time:
-    hour: 1 saat
-    day: gün
-    week: hafta
+    hour: "1 saat"
+    day: "gün"
+    week: "hafta"
   data:
     script:
       name:
         20-hour:
-          title: K-8 Bilişim Teknolojileri Kursu Tanıtımı (15-25 saat)
-          description: Bu 20 saatlik ders temel bilgisayar bilimi ve programlama kavramlarını tanıtır. Ders, K-8 dersliklerinde kullanılmak üzere tasarlanmıştır, ama her yaştan öğrenmek için eğlencelidir.
+          title: "K-8 Bilişim Teknolojileri Kursu Tanıtımı (15-25 saat)"
+          description: "Bu 20 saatlik ders temel bilgisayar bilimi ve programlama kavramlarını tanıtır. Ders, K-8 dersliklerinde kullanılmak üzere tasarlanmıştır, ama her yaştan öğrenmek için eğlencelidir."
         Hour of Code:
-          title: Saat Kodu
+          title: "Saat Kodu"
           description: ""
         edit-code:
-          title: Kodu Düzenle
+          title: "Kodu Düzenle"
           description: ""
         events:
-          title: Olaylar
+          title: "Olaylar"
           description: ""
         builder:
-          title: Oluşturucu
+          title: "Oluşturucu"
           description: ""
         flappy:
-          title: Flappy Kod
-          description: 10 dakikadan az bir süre içinde kendi oyununu yazmak ister misin? Flappy Kod eğitimimizi deneyin!
+          title: "Flappy Kod"
+          description: "10 dakikadan az bir süre içinde kendi oyununu yazmak ister misin? Flappy Kod eğitimimizi deneyin!"
         jigsaw:
-          title: Yapboz
+          title: "Yapboz"
           description: ""
         step:
-          title: Adım
+          title: "Adım"
           description: ""
         sample_level_builder:
-          title: Örnek Level Oluşturucu
+          title: "Örnek Level Oluşturucu"
           description: ""
   age_interstitial:
-    age: Yaşın
-    header: Hesap Bilgileri Güncelleme
+    age: "Yaşın"
+    header: "Hesap Bilgileri Güncelleme"
     message: 'Size daha güçlü gizlilik koruması sağlamak konusunda güncellemelerimizi sürdürmekteyiz. Bunu yapabilmek için mevcut kullanıcıların buraya yaşlarını girmesi gerekmektedir.<br/>Herzaman olduğu gibi code.org özel bilgilerinizi asla kiralamaz, satmaz veya üçüncü partilerle paylaşmaz.'
     sign_out: 'Eğer yaşınızı girmek istemiyorsanız <a href="%{url}">buraya tıklayarak</a> çıkış yapabilirsiniz.'
   zendesk_too_young_message: 'Üzgünüz, genç kullanıcılarımız destek sitemize üye olamazlar. <a href="http://support.code.org">support.code.org</a> adresini giriş yapmadan kullanın ya da ebeveynlerinize veya öğretmeninize bizimle temasa geçmelerini söyleyin.'

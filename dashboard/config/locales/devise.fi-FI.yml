@@ -24,7 +24,7 @@
         subject: Avausohjeet
     omniauth_callbacks:
       failure: '%{kind} tunnistus epäonnistui, koska "%{reason}".'
-      success: "%{kind} tunnistus onnistui."
+      success: '%{kind} tunnistus onnistui.'
     passwords:
       no_token: Tähän sivuun on pääsy vain salasanan palautus -sähköpostin kautta.
         Jos kuitenkin tulit tälle sivulle salasanan palautus -sähköpostin kautta,
@@ -68,4 +68,4 @@
       not_locked: ei lukittu
       not_saved:
         one: 'Virhe esti tämän %{resource} tallentamisen:'
-        other: "%{count} virhettä esti tämän %{resource} tallentamisen:"
+        other: '%{count} virhettä esti tämän %{resource} tallentamisen:'

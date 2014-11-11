@@ -28,7 +28,7 @@
       placeholder: Kodas (ABCDEF)
     submit: Pridėk mokytoją
   add_hint_form:
-    placeholder: "Įvesk savo suflerį čia"
+    placeholder: Įvesk savo suflerį čia
     submit: Pridėk suflerį
   appname: Code.org
   stage: Etapas
@@ -111,7 +111,7 @@
     welcome: Sveiki atvykę į %{section_name}
     name: Pasirink savo vardą
     picture: Atrask savo prisijungimo paveikslėlį
-    words: "Įvesk savo prisijungimo žodžius"
+    words: Įvesk savo prisijungimo žodžius
     login: Prisijungti
   password:
     reset_form:
@@ -135,25 +135,25 @@
       %{name}
   follower:
     invite_sent: Pakvietimas išsiųstas
-    added_teacher: "%{name} pridėtas(-a) kaip tavo mokytojas(-a)"
+    added_teacher: '%{name} pridėtas(-a) kaip tavo mokytojas(-a)'
     registered: Jūs užsiregistravote į %{section_name}.
     error:
       signed_in: Prieš tęsdami prašome atsijungti
       username_not_found: Naudotojo vardas %{username} nerastas
-      username_in_use: "%{username} jau užimtas, prašome pasirinkti kitokį"
+      username_in_use: '%{username} jau užimtas, prašome pasirinkti kitokį'
       no_teacher: Nepavyko rasti nieko prisijungusio su '%{teacher_email_or_code}'.
         Prašome paprašyti to žmogaus prisijungti čia ir dabar, o tada mėginkite dar
         kartą
       section_not_found: Nepavyko rasti grupės su kodu '%{section_code}'.
-      blank_code: "Įveskite grupės kodą"
+      blank_code: Įveskite grupės kodą
       cant_join_own_section: Atsiprašome, bet prie savo grupės prisijungti negalite.
     mail:
       invite_student:
         subject: Prisijunk prie klasės su %{teacher_name} Code.org svetainėje!
       student_disassociated:
-        subject: "%{student_name} nebėra susijęs su Jūsų mokiniais."
+        subject: '%{student_name} nebėra susijęs su Jūsų mokiniais.'
       teacher_disassociated:
-        subject: "%{teacher_name} nebėra pažymėtas kaip tavo mokytojas(-a)."
+        subject: '%{teacher_name} nebėra pažymėtas kaip tavo mokytojas(-a).'
   reports:
     error:
       access_denied: Jūs neturite prieigos prie šio asmens statistikos
@@ -182,7 +182,7 @@
       msg_publicschool: Patvirtinkite, kad esate JAV mokyklos mokytojas.
       msg_visit_website: Eiti į svetainę
     providers:
-      apple_itunes: "$10 iTunes Gift Card"
+      apple_itunes: $10 iTunes Gift Card
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10GB Dropbox vietos
@@ -191,7 +191,7 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: "$10 Skype credit"
+      skype: $10 Skype credit
     msg:
       choose: 'Choose a prize:'
       choose_teacher: 'Click on the logo below to claim your prize:'
@@ -228,9 +228,9 @@
     destroy: Sunaikinti
     back: Atgal
     confirm: Ar esate tuo tikras?
-    created: "%{model} buvo sėkmingai sukurtas."
-    updated: "%{model} buvo sėkmingai atnaujintas."
-    destroyed: "%{model} buvo sėkmingai pašalintas."
+    created: '%{model} buvo sėkmingai sukurtas.'
+    updated: '%{model} buvo sėkmingai atnaujintas.'
+    destroyed: '%{model} buvo sėkmingai pašalintas.'
     access_denied: Neturite prieigos prie šio %{model}.
   nav:
     header:
@@ -257,13 +257,13 @@
       puzzle_map: Etapai
       prizes: Surink visus %{total_trophies} laimėjimus ir laimėk prizus!
       prize_earned: Visi %{total_trophies} laimėjimai surinkti. Laimėjai prizą!
-      prize_us_only: "(Tik JAV mokiniams)"
+      prize_us_only: (Tik JAV mokiniams)
       prizes_link: daugiau informacijos
   teacher:
     title:
       one: 'Tavo mokytojas:'
       other: 'Tavo mokytojai:'
-    remove: "(pašalinti mokytoją)"
+    remove: (pašalinti mokytoją)
     confirm:
       remove: Ar tikrai nori pašalinti šį mokytoją?
     tools: Mokytojo įrankiai
@@ -299,7 +299,7 @@
       section_code: 'ir įvestų savo grupės kodą:'
       first_please: Visų pirma  %{add_section}
       for: Už
-      enter: "įveskite:"
+      enter: 'įveskite:'
     sections:
       add: Pridėti grupę
       manage: Tvarkyti grupes
@@ -318,16 +318,16 @@
     rollup: Mokinių pažanga
     activity: Paskutinė klasės veikla
     user_not_found: Mokytojo arba mokinio nepavyko rasti
-    cant_remove_student_no_email: "%{student_name} negalima pašalinti, nes %{student_name}
-      neprisiregistravo su el. pašto adresu"
-    cant_remove_teacher_no_email: "%{teacher_name} negalima pašalinti, nes tu neprisiregistravai
-      su savo el. pašto adresu"
-    student_teacher_disassociated: "%{teacher_name} buvo pašalintas %{student_name}"
+    cant_remove_student_no_email: '%{student_name} negalima pašalinti, nes %{student_name}
+      neprisiregistravo su el. pašto adresu'
+    cant_remove_teacher_no_email: '%{teacher_name} negalima pašalinti, nes tu neprisiregistravai
+      su savo el. pašto adresu'
+    student_teacher_disassociated: '%{teacher_name} buvo pašalintas %{student_name}'
   user:
     email_confirm_needed: 'El. pašto adresas nebuvo patvirtintas:'
     email_resend_confirm: Persiųsti iš naujo patvirtinimo instrukciją
-    new_password_hint: "(palikite tuščią, jei nenorite pakeisti)"
-    current_password_hint: "(įveskite dabartinį slaptažodį, kad išsaugoti pakeitimus)"
+    new_password_hint: (palikite tuščią, jei nenorite pakeisti)
+    current_password_hint: (įveskite dabartinį slaptažodį, kad išsaugoti pakeitimus)
     cancel:
       title: Panaikinti mano paskyrą
       hint: Nepatenkintas?
@@ -370,15 +370,15 @@
     tryfirst: 'Arba iš pradžių galite pamėginti, o prisiregistruoti vėliau:'
     trynow: Išmėginkite dabar
     add_hint_help: Padėkite mums sukurti gudrius suflerius Code.org pamokėlėms
-    20hour_overview: "Šis 20-ties valandų informatikos kursas supažindina su programavimo
+    20hour_overview: Šis 20-ties valandų informatikos kursas supažindina su programavimo
       pagrindais. Jis yra skirtas naudoti pamokose nuo 5 klasės, bet smagu mokytis
-      esant bet kurioje amžiaus grupėje."
+      esant bet kurioje amžiaus grupėje.
     test_videos_help: Išbandykite mūsų naują vaizdo grotuvą savo mokykloje
     try_beta_courses: Naujiena! Išmėginkite testuojamus kursus pradinukams
     use_as_teacher: Naudokite šią svetainę kaip mokytojas
-    heading_elementary: "<h2>20 valandų kursas </h2><h1>pradinių klasių mokiniams</h1>"
-    heading_apps: "<h2>Smagumynai</h2><h1>visiems</h1>"
-    heading_legacy: "<h2>Mūsų bendri kursai</h2><h1>visoms amžių grupėms</h1>"
+    heading_elementary: <h2>20 valandų kursas </h2><h1>pradinių klasių mokiniams</h1>
+    heading_apps: <h2>Smagumynai</h2><h1>visiems</h1>
+    heading_legacy: <h2>Mūsų bendri kursai</h2><h1>visoms amžių grupėms</h1>
     gallery:
       your_turtle: My Art
       your_studio: My Apps
@@ -412,7 +412,7 @@
   video:
     tab: Vaizdo įrašas.
     notes: Nerodo vaizdo? Rodyti tekstą.
-    notes_coming_soon: "Šiam vaizdo įrašui dar nėra pastabų."
+    notes_coming_soon: Šiam vaizdo įrašui dar nėra pastabų.
     autoplay_option: Automatiškas vaizdo įrašų paleidimas
     download: Atsisiųsti vaizdo įrašą
   compatability:
@@ -454,7 +454,7 @@
     created: Jūs sukūrėte naują scenarijų.
     destroyed: Jūs sunaikinote scenarijų.
     manage: Sukurti etapus
-    view: "Žiūrėti"
+    view: Žiūrėti
     back: Atgal į scenarijus
     success: Tu sėkmingai redagavai blokus.
     level:
@@ -463,35 +463,35 @@
       unused: Nepanaudoti lygiai
   upsell:
     hoc:
-      title: "„Programavimo valanda“"
+      title: „Programavimo valanda“
       body: Išmėginkite programavimo pagrindus. Juos išbandė jau milijonai žmonių.
     flappy:
       title: Flappy kodas
       body: Ar nori parašyti savo žaidimą per mažiau nei 10 minučių? Išmėgink Flappy
         Code pamokėles!
     20hour:
-      title: "Įvadiniai kursai"
+      title: Įvadiniai kursai
       body: Išmėginkite mūsų 20-ties valandų įvadą į programavimą.
   gallery:
     students_drew_these_with_code: Mokiniai nupiešė juos parašę kodą!
     students_made_these_with_code: Students made these with code!
-    picture_count: "Šiomis <b>%{days}</b> dienomis, mokiniai nupiešė <b>%{count}</b>
+    picture_count: Šiomis <b>%{days}</b> dienomis, mokiniai nupiešė <b>%{count}</b>
       piešinių parašydami savo kompiuterines programas. Nuspausk ant šių piešinių,
-      kad pamatytum parašytas programas."
+      kad pamatytum parašytas programas.
     activity_count: In the past <b>%{days}</b> days, students have made <b>%{count}</b>
       apps and pictures by writing their own computer programs. Click on the pictures
       and screenshots to see each program in action.
     want_to_make_your_own: Norėtum sukurti savo?
     more: Daugiau &rarr;
     caption_by_name_age: by %{name}, age %{age}
-    caption_time_ago: "%{time_ago} ago"
+    caption_time_ago: '%{time_ago} ago'
   landing:
-    prerelease: "Šis kursas yra <span class='betatext'>beta</span>. Tai reiškia, kad
-      tai nėra galutinis šio kurso variantas ir jis dar yra tobulinamas."
+    prerelease: Šis kursas yra <span class='betatext'>beta</span>. Tai reiškia, kad
+      tai nėra galutinis šio kurso variantas ir jis dar yra tobulinamas.
     feedback: Pateikti atsiliepimus
     report_bug: Pranešti apie problemą
     support: Pagalba
-    support_url: "//support.code.org"
+    support_url: //support.code.org
   multi:
     wrong_title: Neteisingas atsakymas
     wrong_body: Atsakymas, kurį įvedei, nėra teisingas. Pabandyk dar kartą!
@@ -513,17 +513,17 @@
       name:
         20-hour:
           title: Programavimo įvado kursas (15-25 valandos)
-          description: "Šis 20-ties valandų informatikos kursas supažindina su programavimo
+          description: Šis 20-ties valandų informatikos kursas supažindina su programavimo
             pagrindais. Jis yra skirtas naudoti pamokose nuo 5 klasės, bet smagu mokytis
-            esant bet kurioje amžiaus grupėje."
+            esant bet kurioje amžiaus grupėje.
         Hour of Code:
-          title: "„Programavimo valanda“"
+          title: „Programavimo valanda“
           description: ''
         edit-code:
           title: Redaguoti kodą
           description: ''
         events:
-          title: "Įvykiai"
+          title: Įvykiai
           description: ''
         builder:
           title: Kūrimas
@@ -536,7 +536,7 @@
           title: Dėlionės
           description: ''
         step:
-          title: "Žingsnis"
+          title: Žingsnis
           description: ''
         sample_level_builder:
           title: Pavyzdinis lygio kūrimas
@@ -544,10 +544,10 @@
   age_interstitial:
     age: Tavo amžius
     header: Paskyros informacijos atnaujinimas
-    message: "Šiuo metu mes atnaujiname privatumo apsaugą, kad Jūsų duomenys būtų
-      dar saugesni. Norėdami tai padaryti, mums reikia, kad visi naudotojai įvestų
-      savo amžių.<br/>Kaip ir visuomet, code.org niekada neparduos ir neišduos Jūsų
-      asmeninių duomenų tretiesiems asmenims."
+    message: Šiuo metu mes atnaujiname privatumo apsaugą, kad Jūsų duomenys būtų dar
+      saugesni. Norėdami tai padaryti, mums reikia, kad visi naudotojai įvestų savo
+      amžių.<br/>Kaip ir visuomet, code.org niekada neparduos ir neišduos Jūsų asmeninių
+      duomenų tretiesiems asmenims.
     sign_out: Jeigu nenori skelbti savo amžiaus, gali <a href="%{url}">atsijungti</a>.
   zendesk_too_young_message: Atsiprašome, jaunesnio amžiaus naudotojai negali prisijungti
     prie mūsų palaikymo svetainės. Galite peržiūrėti <a href="http://support.code.org">

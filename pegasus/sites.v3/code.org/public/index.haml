@@ -1,6 +1,6 @@
 ---
 theme: responsive
-banner: <%= request.site == 'csedweek.org' ? :index_hoc : :index_donate %>
+banner: <%= request.site == 'csedweek.org' ? :index_hoc : nil %>
 <%
   if request.site == 'csedweek.org'
     twitter_meta = {
