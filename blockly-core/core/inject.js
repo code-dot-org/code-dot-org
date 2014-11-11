@@ -154,7 +154,7 @@ Blockly.parseOptions_ = function(options) {
     useModalFunctionEditor: options['useModalFunctionEditor'] || false,
     useContractEditor: options['useContractEditor'] || false,
     grayOutUndeletableBlocks: grayOutUndeletableBlocks,
-    editStartBlocks: options['editStartBlocks'] || false
+    editBlocks: options['editBlocks'] || false
   };
 };
 
