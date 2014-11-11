@@ -18,6 +18,7 @@ levels.simple = {
   'scale': {
     'snapRadius': 2
   },
+  'freePlay': true,
   'toolbox':
       tb('<block type="webapp_createHtmlBlock" inline="true"> \
         <value name="ID"><block type="text"><title name="TEXT">id</title></block></value> \
@@ -27,6 +28,7 @@ levels.simple = {
 };
 
 levels.ec_simple = {
+  'freePlay': true,
   'editCode': true,
   'sliderSpeed': 0.7,
   'codeFunctions': [
@@ -34,6 +36,7 @@ levels.ec_simple = {
     {'func': 'createButton', 'params': ["'id'", "'text'"] },
     {'func': 'createTextInput', 'params': ["'id'", "'text'"] },
     {'func': 'getText', 'params': ["'id'"], 'category': 'value' },
+    {'func': 'setText', 'params': ["'id'", "'text'"] },
     {'func': 'setStyle', 'params': ["'id'", "'color:red;'"] },
     {'func': 'createHtmlBlock', 'params': ["'id'", "'html'"] },
     {'func': 'replaceHtmlBlock', 'params': ["'id'", "'html'"] },

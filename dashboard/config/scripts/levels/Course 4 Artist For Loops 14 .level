@@ -15,7 +15,9 @@
     "y": "200",
     "free_play": "false",
     "impressive": "false",
-    "slider_speed": ".5"
+    "slider_speed": ".5",
+    "ideal": "9",
+    "use_modal_function_editor": "false"
   }
 }]]></config>
   <blocks>

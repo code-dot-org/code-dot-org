@@ -200,7 +200,7 @@
         <block type="controls_repeat_ext" inline="true">
           <value name="TIMES">
             <block type="math_number">
-              <title name="NUM">???</title>
+              <title name="NUM">3</title>
             </block>
           </value>
         </block>
@@ -208,17 +208,17 @@
           <mutation counter="counter"/>
           <value name="FROM">
             <block type="math_number">
-              <title name="NUM">???</title>
+              <title name="NUM">1</title>
             </block>
           </value>
           <value name="TO">
             <block type="math_number">
-              <title name="NUM">???</title>
+              <title name="NUM">100</title>
             </block>
           </value>
           <value name="BY">
             <block type="math_number">
-              <title name="NUM">???</title>
+              <title name="NUM">10</title>
             </block>
           </value>
         </block>
@@ -229,12 +229,12 @@
           <title name="OP">ADD</title>
           <value name="A">
             <block type="math_number">
-              <title name="NUM">???</title>
+              <title name="NUM">0</title>
             </block>
           </value>
           <value name="B">
             <block type="math_number">
-              <title name="NUM">???</title>
+              <title name="NUM">0</title>
             </block>
           </value>
         </block>

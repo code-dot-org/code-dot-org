@@ -28,8 +28,9 @@ var commonMsg = require('../../locale/current/common');
 
 var evalUtils = require('./evalUtils');
 var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
-var colors = require('../functionalBlockUtils').colors;
-var initTitledFunctionalBlock = require('../functionalBlockUtils').initTitledFunctionalBlock;
+var functionalBlockUtils = require('../functionalBlockUtils');
+var colors = functionalBlockUtils.colors;
+var initTitledFunctionalBlock = functionalBlockUtils.initTitledFunctionalBlock;
 
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function(blockly, blockInstallOptions) {
@@ -44,8 +45,6 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   sharedFunctionalBlocks.install(blockly, generator, gensym);
-
-  installString(blockly, generator, gensym);
 
   installFunctionalBlock(blockly, generator, gensym, {
     blockName: 'functional_display',
@@ -212,7 +211,16 @@ exports.install = function(blockly, blockInstallOptions) {
     ]
   });
 
-  installStyle(blockly, generator, gensym);
+  functionalBlockUtils.installStringPicker(blockly, generator, {
+    blockName: 'functional_style',
+    values: [
+      [msg.solid(), 'solid'],
+      ['75%', '75%'],
+      ['50%', '50%'],
+      ['25%', '25%'],
+      [msg.outline(), 'outline']
+    ]
+  });
 };
 
 
@@ -239,75 +247,14 @@ function installFunctionalBlock (blockly, generator, gensym, options) {
         if (arg.type === 'Number') {
           apiArg = '0';
         } else if (arg.name === 'STYLE') {
-          apiArg = "Eval.string('solid')";
+          apiArg = blockly.JavaScript.quote_('solid');
         } else if (arg.name === 'COLOR') {
-          apiArg = "Eval.string('black')";
+          apiArg = blockly.JavaScript.quote_('black');
         }
       }
       apiArgs.push(apiArg);
     }
 
     return "Eval." + apiName + "(" + apiArgs.join(", ") + ")";
-  };
-}
-
-/**
- * functional_string
- */
-function installString(blockly, generator, gensym) {
-  blockly.Blocks.functional_string = {
-    // Numeric value.
-    init: function() {
-      this.setFunctional(true, {
-        headerHeight: 0,
-        rowBuffer: 3
-      });
-      this.setHSV.apply(this, colors.string);
-      this.appendDummyInput()
-          .appendTitle(new Blockly.FieldLabel('"'))
-          .appendTitle(new Blockly.FieldTextInput(msg.string()), 'VAL')
-          .appendTitle(new Blockly.FieldLabel('"'))
-          .setAlign(Blockly.ALIGN_CENTRE);
-      this.setFunctionalOutput(true, 'string');
-    }
-  };
-
-  generator.functional_string = function() {
-    return "Eval.string(" +
-        blockly.JavaScript.quote_(this.getTitleValue('VAL')) + ")";
-  };
-}
-
-/**
- * functional_style
- */
-function installStyle(blockly, generator, gensym) {
-  blockly.Blocks.functional_style = {
-    init: function () {
-      var VALUES = [
-        [msg.solid(), 'solid'],
-        ['75%', '75%'],
-        ['50%', '50%'],
-        ['25%', '25%'],
-        [msg.outline(), 'outline']
-      ];
-
-      this.setFunctional(true, {
-        headerHeight: 0,
-        rowBuffer: 3
-      });
-      this.setHSV.apply(this, colors.string);
-      this.appendDummyInput()
-          .appendTitle(new Blockly.FieldLabel('"'))
-          .appendTitle(new blockly.FieldDropdown(VALUES), 'VAL')
-          .appendTitle(new Blockly.FieldLabel('"'))
-          .setAlign(Blockly.ALIGN_CENTRE);
-      this.setFunctionalOutput(true, 'string');
-
-    }
-  };
-
-  generator.functional_style = function() {
-    return "Eval.string('" + this.getTitleValue('VAL') + "')";
   };
 }

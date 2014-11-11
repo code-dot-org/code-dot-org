@@ -57,6 +57,20 @@ Blockly.FunctionEditor = function() {
   this.onResizeWrapper_ = null;
 };
 
+
+/**
+ * The type of block to instantiate in the function editing area
+ * @type {string}
+ * @protected
+ */
+Blockly.FunctionEditor.prototype.definitionBlockType = 'procedures_defnoreturn';
+
+/**
+ * The type of block to instantiate for parameter definition
+ * @type {string}
+ */
+Blockly.FunctionEditor.prototype.parameterBlockType = 'parameters_get';
+
 Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
   var targetFunctionDefinitionBlock = Blockly.mainBlockSpace.findFunction(
       functionName);
@@ -66,6 +80,7 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
 
   this.show();
 
+  targetFunctionDefinitionBlock.setUserVisible(true);
   var dom = Blockly.Xml.blockToDom_(targetFunctionDefinitionBlock);
   targetFunctionDefinitionBlock.dispose(false, false, true);
   this.functionDefinitionBlock =
@@ -74,7 +89,6 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
       ? Blockly.modalBlockSpace.getMetrics().viewWidth - FRAME_MARGIN_SIDE
       : FRAME_MARGIN_SIDE, FRAME_MARGIN_TOP);
   this.functionDefinitionBlock.setMovable(false);
-  this.functionDefinitionBlock.setUserVisible(true);
   this.populateParamToolbox_();
 
   goog.dom.getElement('functionNameText').value = functionName;
@@ -95,20 +109,22 @@ Blockly.FunctionEditor.prototype.openWithNewFunction = function() {
   this.ensureCreated_();
 
   this.functionDefinitionBlock = Blockly.Xml.domToBlock_(Blockly.mainBlockSpace,
-      Blockly.createSvgElement('block', {type: 'procedures_defnoreturn'}));
+    Blockly.createSvgElement('block', {type: this.definitionBlockType}));
   this.openAndEditFunction(this.functionDefinitionBlock.getTitleValue('NAME'));
 };
 
 Blockly.FunctionEditor.prototype.bindToolboxHandlers_ = function() {
   var paramAddTextElement = goog.dom.getElement('paramAddText');
   var paramAddButton = goog.dom.getElement('paramAddButton');
-  Blockly.bindEvent_(paramAddButton, 'mousedown', this,
-      goog.bind(this.addParamFromInputField_, this, paramAddTextElement));
-  Blockly.bindEvent_(paramAddTextElement, 'keydown', this, function(e) {
-    if (e.keyCode === goog.events.KeyCodes.ENTER) {
-      this.addParamFromInputField_(paramAddTextElement);
-    }
-  });
+  if (paramAddTextElement && paramAddButton) {
+    Blockly.bindEvent_(paramAddButton, 'mousedown', this,
+        goog.bind(this.addParamFromInputField_, this, paramAddTextElement));
+    Blockly.bindEvent_(paramAddTextElement, 'keydown', this, function(e) {
+      if (e.keyCode === goog.events.KeyCodes.ENTER) {
+        this.addParamFromInputField_(paramAddTextElement);
+      }
+    });
+  }
 };
 
 Blockly.FunctionEditor.prototype.addParamFromInputField_ = function(
@@ -121,7 +137,7 @@ Blockly.FunctionEditor.prototype.addParamFromInputField_ = function(
 
 Blockly.FunctionEditor.prototype.addParameter = function(newParameterName) {
   // Add the new param block to the local toolbox
-  var param = Blockly.createSvgElement('block', {type: 'parameters_get'});
+  var param = Blockly.createSvgElement('block', {type: this.parameterBlockType});
   var v = Blockly.createSvgElement('title', {name: 'VAR'}, param);
   v.textContent = newParameterName;
   this.paramToolboxBlocks_.push(param);
@@ -376,11 +392,14 @@ Blockly.FunctionEditor.prototype.createContractDom_ = function() {
       '<div>' + Blockly.Msg.FUNCTION_NAME_LABEL + '</div>'
       + '<div><input id="functionNameText" type="text"></div>'
       + '<div>' + Blockly.Msg.FUNCTION_DESCRIPTION_LABEL + '</div>'
-      + '<div><textarea id="functionDescriptionText" rows="2"></textarea></div>'
-      + '<div>' + Blockly.Msg.FUNCTION_PARAMETERS_LABEL + '</div>'
+      + '<div><textarea id="functionDescriptionText" rows="2"></textarea></div>';
+  if (!Blockly.disableParamEditing) {
+    this.contractDiv_.innerHTML += '<div>'
+      + Blockly.Msg.FUNCTION_PARAMETERS_LABEL + '</div>'
       + '<div><input id="paramAddText" type="text" style="width: 200px;"> '
       + '<button id="paramAddButton" class="btn">' + Blockly.Msg.ADD_PARAMETER
       + '</button>';
+  }
   var metrics = Blockly.modalBlockSpace.getMetrics();
   this.contractDiv_.style.left = metrics.absoluteLeft + 'px';
   this.contractDiv_.style.top = metrics.absoluteTop + 'px';

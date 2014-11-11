@@ -64,6 +64,23 @@ module.exports = {
       '</xml>'
     },
     {
+      description: "correct answer but rotated 15 degrees",
+      expected: {
+        result: true,
+        testResult: TestResults.ALL_PASS
+      },
+      xml: '<xml>' +
+        blockUtils.mathBlockXml('rotate', {
+          'IMAGE': blockUtils.mathBlockXml('functional_circle', {
+            'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'red' } ),
+            'STYLE': blockUtils.mathBlockXml('functional_style', null, { VAL: 'outline' }),
+            'SIZE': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 50 } )
+          }),
+          'DEGREES': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 15 } )
+        }) +
+      '</xml>'
+    },
+    {
       description: "wrong color",
       expected: {
         result: false,

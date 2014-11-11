@@ -16,6 +16,7 @@ GEM
     rack (1.5.2)
     rake (10.3.1)
     redcarpet (3.1.1)
+    redis (3.1.0)
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
@@ -33,4 +34,5 @@ DEPENDENCIES
   rack
   rake
   redcarpet
+  redis (~> 3.1.0)
   user_agent_parser

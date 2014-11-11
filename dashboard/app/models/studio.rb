@@ -10,6 +10,7 @@ class Studio < Grid
     projectile_collisions
     allow_sprites_outside_playspace
     sprites_hidden_to_start
+    coordinate_grid_background
     free_play
   )
 
@@ -55,6 +56,13 @@ class Studio < Grid
 </category>
 <category name="Actions">
   <block type="studio_setSprite" />
+  <block type="studio_setSpriteParams">
+    <value name="SPRITE">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+  </block>
   <block type="studio_setBackground" />
   <block type="studio_showTitleScreen">
     <title name="TITLE">type title here</title>
@@ -80,7 +88,26 @@ class Studio < Grid
       </block>
     </value>
   </block>
+  <block type="studio_moveDistanceParamsSprite">
+    <value name="SPRITE">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+    <value name="DISTANCE">
+      <block type="math_number">
+        <title name="NUM">25</title>
+      </block>
+    </value>
+  </block>
   <block type="studio_stop" />
+  <block type="studio_stopSprite">
+    <value name="SPRITE">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+  </block>
   <block type="studio_wait">
     <title name="VALUE">500</title>
   </block>
@@ -108,13 +135,67 @@ class Studio < Grid
       <block type="text" />
     </value>
   </block>
+  <block type="studio_saySpriteParamsTime" inline="true">
+    <value name="SPRITE">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+    <value name="TEXT">
+      <block type="text" />
+    </value>
+    <value name="TIME">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+  </block>
   <block type="studio_setSpritePosition" />
   <block type="studio_throw" />
   <block type="studio_makeProjectile" />
   <block type="studio_setSpriteSpeed" />
+  <block type="studio_setSpriteSpeedParams">
+    <value name="SPRITE">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+    <value name="VALUE">
+      <block type="math_number">
+        <title name="NUM">5</title>
+      </block>
+    </value>
+  </block>
   <block type="studio_setSpriteEmotion" />
-  <block type="studio_vanish" />
+  <block type="studio_setSpriteEmotionParams">
+    <value name="SPRITE">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+  </block>
   <block type="studio_setSpriteSize" />
+  <block type="studio_showCoordinates" />
+  <block type="studio_setSpriteSizeParams">
+    <value name="SPRITE">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+    <value name="VALUE">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+  </block>
+  <block type="studio_vanish" />
+  <block type="studio_vanishSprite">
+    <value name="SPRITE">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+  </block>
 </category>
 <category name="Loops">
   <block type="studio_repeatForever" />
@@ -192,6 +273,7 @@ class Studio < Grid
   <block type="functional_setEnemySpeed" />
   <block type="functional_showTitleScreen" />
   <block type="functional_string" />
+  <block type="functional_background_string_picker" />
   <block type="functional_math_number" />
 </category>
 #{k1_blocks(type) if is_k1 == 'true'}

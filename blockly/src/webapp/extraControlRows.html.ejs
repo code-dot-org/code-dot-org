@@ -2,7 +2,11 @@
 <% var webappMsg = require('../../locale/current/webapp') %>
 
 <% if (debugButtons) { %>
-  <div id="debug-buttons">
+<div>
+<% } %>
+
+<% if (debugButtons) { %>
+<div id="debug-buttons" style="display:inline;">
     <button id="pauseButton" class="share">
       <img src="<%= assetUrl('media/1x1.gif') %>"><%= webappMsg.pause() %>
     </button>
@@ -15,4 +19,8 @@
       <img src="<%= assetUrl('media/1x1.gif') %>"><%= msg.finish() %>
     </button>
   </div>
+<% } %>
+
+<% if (debugButtons) { %>
+</div>
 <% } %>
