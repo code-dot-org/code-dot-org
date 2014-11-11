@@ -22,6 +22,8 @@
 :javascript
   var gmap;
   var resizeZoom;
+  var scrollwheelOption = false;
+  var draggableOption = false;
 
   $(document).ready(function() {
     initializeMap();
@@ -35,8 +37,8 @@
     var mapOptions = {
       center: new google.maps.LatLng(22.2116,4.5775),
       zoom: 2,
-      scrollwheel: false,
-      draggable: false,
+      scrollwheel: scrollwheelOption,
+      draggable: draggableOption,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
 
@@ -67,9 +69,12 @@
   }
 
   function enableDrag() {
+    scrollwheelOption = true;
+    draggableOption = true;
+
     var map_options = {
-      scrollwheel: true,
-      draggable: true,
+      scrollwheel: scrollwheelOption,
+      draggable: draggableOption
     }
     gmap.setOptions(map_options);
   }
@@ -99,6 +104,8 @@
       center: map_center,
       zoom: map_zoom,
       minZoom: map_zoom,
+      scrollwheel: scrollwheelOption,
+      draggable: draggableOption
     }
 
     gmap.setOptions(map_options);
