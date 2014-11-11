@@ -908,13 +908,9 @@ Studio.initReadonly = function(config) {
 var arrangeStartBlocks = function (config) {
   var xml = parseXmlElement(config.level.startBlocks);
   var numUnplacedElementNodes = 0;
-  //
-  // first sort the blocks by visibility
-  //
+  // sort the blocks by visibility
   var xmlChildNodes = BlocklyApps.sortBlocksByVisibility(xml.childNodes);
-  //
-  // then do two passes through, one to count the nodes:
-  //
+  // do a first pass to count the nodes
   for (var x = 0, xmlChild; xmlChildNodes && x < xmlChildNodes.length; x++) {
     xmlChild = xmlChildNodes[x];
 
@@ -923,9 +919,7 @@ var arrangeStartBlocks = function (config) {
       numUnplacedElementNodes++;
     }
   }
-  //
-  // and one to place the nodes:
-  //
+  // do a second pass to place the nodes
   if (numUnplacedElementNodes) {
     var numberOfPlacedBlocks = 0;
     var totalHeightAvail =
