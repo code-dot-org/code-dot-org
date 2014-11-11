@@ -28,13 +28,13 @@ nav: pd3_nav
 [col-50]
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[<button>Cohort 1</button>](http://code.org/educate/pd1)
+[<button>Cohort 1</button>](http://code.org/educate/pd3/1)
 
 [/col-50]
 
 [col-50]
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[<button>Cohort 2</button>](http://code.org/educate/pd2)
+[<button>Cohort 2</button>](http://code.org/educate/pd3/2)
 
 [/col-50]
