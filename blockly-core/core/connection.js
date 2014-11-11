@@ -486,7 +486,7 @@ Blockly.Connection.prototype.closest = function(maxLimit, dx, dy) {
     var targetSourceBlock = connection.sourceBlock_;
 
     // Don't offer to connect to hidden blocks, unless we're in edit mode
-    if (!Blockly.editStartBlocks && !targetSourceBlock.isUserVisible()) {
+    if (!Blockly.editBlocks && !targetSourceBlock.isUserVisible()) {
       return true;
     }
 
@@ -645,7 +645,7 @@ Blockly.Connection.prototype.neighbours_ = function(maxLimit) {
     var targetSourceBlock = connection.sourceBlock_;
 
     // Don't include invisible blocks unless we're in edit mode
-    if (!Blockly.editStartBlocks && !targetSourceBlock.isUserVisible()) {
+    if (!Blockly.editBlocks && !targetSourceBlock.isUserVisible()) {
       return true;
     }
 

@@ -455,7 +455,8 @@ BlocklyApps.init = function(config) {
     useContractEditor: config.level.useContractEditor === undefined ?
         false : config.level.useContractEditor,
     scrollbars: config.level.scrollbars,
-    editStartBlocks: config.level.edit_blocks === 'start_blocks'
+    editBlocks: config.level.edit_blocks === undefined ?
+        false : config.level.edit_blocks
   };
   ['trashcan', 'concreteBlocks', 'varsInGlobals',
     'grayOutUndeletableBlocks', 'disableParamEditing'].forEach(
