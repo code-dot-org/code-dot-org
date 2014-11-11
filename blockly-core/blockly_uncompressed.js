@@ -22155,7 +22155,7 @@ Blockly.BlockSpaceEditor.prototype.populateSVGEffects_ = function(container) {
   if(goog.dom.getElement("blocklySvgDefsGlobal")) {
     return
   }
-  var svg = Blockly.createSvgElement("svg", {id:"blocklyFilters", width:0, height:0}, container);
+  var svg = Blockly.createSvgElement("svg", {id:"blocklyFilters", width:0, height:0, style:"display: block"}, container);
   var defs = Blockly.createSvgElement("defs", {id:"blocklySvgDefsGlobal"}, svg);
   var filter, feSpecularLighting, feMerge, pattern;
   filter = Blockly.createSvgElement("filter", {"id":"blocklyEmboss"}, defs);
@@ -22178,6 +22178,7 @@ Blockly.BlockSpaceEditor.prototype.populateSVGEffects_ = function(container) {
 };
 Blockly.BlockSpaceEditor.prototype.createDom_ = function(container) {
   container.setAttribute("dir", "LTR");
+  this.populateSVGEffects_(container);
   var svg = Blockly.createSvgElement("svg", {"xmlns":"http://www.w3.org/2000/svg", "xmlns:html":"http://www.w3.org/1999/xhtml", "xmlns:xlink":"http://www.w3.org/1999/xlink", "version":"1.1", "class":"blocklySvg"}, null);
   this.svg_ = svg;
   container.appendChild(svg);
@@ -22185,7 +22186,6 @@ Blockly.BlockSpaceEditor.prototype.createDom_ = function(container) {
     return false
   });
   var defs = Blockly.createSvgElement("defs", {id:"blocklySvgDefs"}, svg);
-  this.populateSVGEffects_(container);
   this.blockSpace.maxBlocks = Blockly.maxBlocks;
   svg.appendChild(this.blockSpace.createDom());
   if(!Blockly.readOnly) {
