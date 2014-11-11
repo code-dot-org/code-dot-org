@@ -19,7 +19,7 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "instructions": "If we count by larger numbers we could go even higher. Try making the dog count from 10 up to 1000 10 at a time.",
-    "ideal": "7",
+    "ideal": "7"
     "use_modal_function_editor": "false",
     "maze_data": null
   }

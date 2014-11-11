@@ -3,7 +3,6 @@
   "game_id": 23,
   "created_at": "2014-05-01T17:23:18.000Z",
   "level_num": "custom",
-  "ideal_level_source_id": 333,
   "solution_level_source_id": 476,
   "user_id": 17,
   "properties": {

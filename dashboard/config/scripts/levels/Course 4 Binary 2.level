@@ -17,8 +17,7 @@
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
-    "instructions": "What binary string could you loop 8 times to draw this image?",
-    "maze_data": null
+    "instructions": "What binary string could you loop 8 times to draw this image?"
   }
 }]]></config>
   <blocks>

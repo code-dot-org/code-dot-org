@@ -3,7 +3,6 @@
   "game_id": 23,
   "created_at": "2014-11-04T01:25:24.000Z",
   "level_num": "custom",
-  "ideal_level_source_id": 624,
   "user_id": 1,
   "properties": {
     "skin": "elsa",
@@ -15,9 +14,10 @@
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "free_play": "false",
-    "slider_speed": "0.5",
-    "instructions": "Let's repeat it 180 times! How many times does 180 go into 360?",
-    "impressive": "false"
+    "slider_speed": "0.8",
+    "instructions": "Let's repeat it 90 times! How many times does 90 go into 360? It's a really small number.",
+    "impressive": "false",
+    "use_modal_function_editor": "false"
   }
 }]]></config>
   <blocks>
@@ -25,17 +25,24 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="draw_move_by_constant_dropdown" deletable="false" editable="false">
-              <title name="DIR">moveForward</title>
-              <title name="VALUE" config="50,100,150,200,300">100</title>
+            <block type="draw_colour" inline="true">
+              <value name="COLOUR">
+                <block type="colour_random"/>
+              </value>
               <next>
                 <block type="draw_move_by_constant_dropdown" deletable="false" editable="false">
-                  <title name="DIR">moveBackward</title>
+                  <title name="DIR">moveForward</title>
                   <title name="VALUE" config="50,100,150,200,300">100</title>
                   <next>
-                    <block type="draw_turn_by_constant_dropdown" deletable="false">
-                      <title name="DIR">turnRight</title>
-                      <title name="VALUE" config="5,45,60,90,120,180">???</title>
+                    <block type="draw_move_by_constant_dropdown" deletable="false" editable="false">
+                      <title name="DIR">moveBackward</title>
+                      <title name="VALUE" config="50,100,150,200,300">100</title>
+                      <next>
+                        <block type="draw_turn_by_constant_dropdown" deletable="false">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE" config="4,45,60,90,120,180">???</title>
+                        </block>
+                      </next>
                     </block>
                   </next>
                 </block>
@@ -57,14 +64,14 @@
         </block>
         <block type="draw_turn_by_constant_dropdown">
           <title name="DIR">turnRight</title>
-          <title name="VALUE" config="5,45,60,90,120,180">5</title>
+          <title name="VALUE" config="4,45,60,90,120,180">4</title>
         </block>
         <block type="draw_turn_by_constant_dropdown">
           <title name="DIR">turnLeft</title>
-          <title name="VALUE" config="5,45,60,90,120,180">5</title>
+          <title name="VALUE" config="4,45,60,90,120,180">4</title>
         </block>
         <block type="controls_repeat_dropdown">
-          <title name="TIMES" config="10, 50, 72, 100">72</title>
+          <title name="TIMES" config="10, 50, 90, 100">90</title>
         </block>
         <block type="draw_colour" inline="true">
           <value name="COLOUR">
@@ -79,18 +86,18 @@
           <statement name="PICK">
             <block type="draw_turn_by_constant_dropdown">
               <title name="DIR">turnRight</title>
-              <title name="VALUE" config="5,45,60,90,120,180">5</title>
+              <title name="VALUE" config="4,45,60,90,120,180">4</title>
               <next>
                 <block type="draw_turn_by_constant_dropdown">
                   <title name="DIR">turnRight</title>
-                  <title name="VALUE" config="5,45,60,90,120,180">5</title>
+                  <title name="VALUE" config="4,45,60,90,120,180">4</title>
                 </block>
               </next>
             </block>
           </statement>
         </block>
         <block type="controls_repeat_dropdown">
-          <title name="TIMES" config="10, 50, 72, 100">72</title>
+          <title name="TIMES" config="10, 50, 90, 100">90</title>
         </block>
       </xml>
     </required_blocks>
@@ -99,7 +106,7 @@
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="controls_repeat_dropdown">
-              <title name="TIMES" config="10, 50, 72, 100">72</title>
+              <title name="TIMES" config="10, 50, 90, 100">90</title>
               <statement name="DO">
                 <block type="draw_colour" inline="true">
                   <value name="COLOUR">
@@ -116,7 +123,7 @@
                           <next>
                             <block type="draw_turn_by_constant_dropdown">
                               <title name="DIR">turnRight</title>
-                              <title name="VALUE" config="5,45,60,90,120,180">5</title>
+                              <title name="VALUE" config="4,45,60,90,120,180">4</title>
                             </block>
                           </next>
                         </block>

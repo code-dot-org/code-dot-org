@@ -6,7 +6,7 @@
   "user_id": 3,
   "properties": {
     "skin": "scrat",
-    "maze": "[[0,0,0,0,0,0,0,0],[0,1,0,1,1,1,0,0],[0,0,1,0,0,0,0,0],[3,1,1,1,1,1,1,0],[0,1,0,1,0,0,1,0],[1,1,1,0,1,0,1,0],[0,1,0,1,0,2,1,0],[0,0,0,0,0,0,0,0]]",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,1,0,0,0,0,0],[3,1,1,1,1,1,1,0],[0,0,0,1,0,0,1,0],[0,0,0,1,0,0,1,0],[0,0,0,0,0,2,1,0],[0,0,0,0,0,0,0,0]]",
     "instructions": "The \"If-else\" blocks checks a condition, and then does one thing OR another. To get me to the acorn try to use this new block.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -16,7 +16,8 @@
     "start_direction": "1",
     "step_mode": "0",
     "video_key": "if_else",
-    "step_speed": "1",
+    "step_speed": "2",
+    "use_modal_function_editor": "false",
     "maze_data": null
   }
 }]]></config>

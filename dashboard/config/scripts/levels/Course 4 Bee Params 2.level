@@ -18,8 +18,7 @@
     "nectar_goal": "9",
     "flower_type": "redWithNectar",
     "ideal": "19",
-    "instructions": "Here's the same \"get 3 nectar\" function - but now the flowers are to my right! Can you modify the function so it makes me turn right instead of left for the flowers?",
-    "maze_data": null
+    "instructions": "Here's the same \"get 3 nectar\" function - but now the flowers are to my right! Can you modify the function so it makes me turn right instead of left for the flowers?"
   }
 }]]></config>
   <blocks>

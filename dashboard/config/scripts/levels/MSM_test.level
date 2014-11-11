@@ -3,10 +3,13 @@
   "game_id": 23,
   "created_at": "2014-09-29T21:18:43.000Z",
   "level_num": "custom",
-  "ideal_level_source_id": 374,
   "user_id": 2,
   "properties": {
-    "skin": "artist"
+    "skin": "artist",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "free_play": "false"
   }
 }]]></config>
   <blocks>
@@ -16,6 +19,16 @@
         <block type="functional_plus" inline="false"/>
       </xml>
     </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="functional_draw"/>
+        <block type="functional_plus"/>
+        <block type="functional_minus"/>
+        <block type="functional_times"/>
+        <block type="functional_dividedby"/>
+        <block type="functional_math_number"/>
+      </xml>
+    </toolbox_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false"/>

@@ -18,8 +18,7 @@
     "nectar_goal": "13",
     "flower_type": "redWithNectar",
     "ideal": "32",
-    "instructions": "Wouldn't it be nice if we could collect all of these nectars with the a single function? Try adding a new parameter to your function called \"nectars\" to control the amount of nectar to collect. You'll probably want to rename the function too!",
-    "maze_data": null
+    "instructions": "Wouldn't it be nice if we could collect all of these nectars with the a single function? Try adding a new parameter to your function called \"nectars\" to control the amount of nectar to collect. You'll probably want to rename the function too!"
   }
 }]]></config>
   <blocks>
