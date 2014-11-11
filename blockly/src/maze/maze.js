@@ -477,7 +477,6 @@ function drawMapTiles(svg) {
   }
 }
 
-
 /**
  * Draw the given tile at row, col
  */
@@ -810,7 +809,7 @@ BlocklyApps.reset = function(first) {
     // Dance consists of 5 animations, each of which get 150ms
     var danceTime = 150 * 5;
     if (skin.danceOnLoad) {
-      Maze.scheduleDance(false, danceTime);
+      scheduleDance(false, danceTime);
     }
     timeoutList.setTimeout(function() {
       stepSpeed = 100;
@@ -1291,11 +1290,7 @@ function animateAction (action, spotlightBlocks, timePerStep) {
         case BlocklyApps.TestResults.FREE_PLAY:
         case BlocklyApps.TestResults.TOO_MANY_BLOCKS_FAIL:
         case BlocklyApps.TestResults.ALL_PASS:
-          if (mazeUtils.isScratSkin(skin.id)) {
-            Maze.scheduleScratDance();
-          } else {
-            Maze.scheduleDance(true, timePerStep);
-          }
+          scheduleDance(true, timePerStep);
           break;
         default:
           timeoutList.setTimeout(function() {
@@ -1618,20 +1613,20 @@ function setPegmanTransparent() {
 
 /**
  * Schedule the animations for Scrat dancing.
+ * @param {integer} timeAlloted How much time we have for our animations
  */
-
-Maze.scheduleScratDance = function()
-{
+function scheduleScratDance(timeAlloted) {
   var finishIcon = document.getElementById('finish');
   if (finishIcon) {
     finishIcon.setAttribute('visibility', 'hidden');
   }
 
-  var timePerFrame = 100;
+  var numFrames = skin.celebratePegmanRow;
+  var timePerFrame = timeAlloted / numFrames;
   var start = {x: Maze.pegmanX, y: Maze.pegmanY};
 
   scheduleSheetedMovement({x: start.x, y: start.y}, {x: 0, y: 0 },
-    skin.celebratePegmanRow, timePerFrame, 'celebrate', Direction.NORTH, true);
+    numFrames, timePerFrame, 'celebrate', Direction.NORTH, true);
 };
 
 
@@ -1641,7 +1636,12 @@ Maze.scheduleScratDance = function()
  *   puzzle (vs. dancing on load).
  * @param {integer} timeAlloted How much time we have for our animations
  */
-Maze.scheduleDance = function(victoryDance, timeAlloted) {
+function scheduleDance(victoryDance, timeAlloted) {
+  if (mazeUtils.isScratSkin()) {
+    scheduleScratDance(timeAlloted);
+    return;
+  }
+
   var originalFrame = tiles.directionToFrame(Maze.pegmanD);
   Maze.displayPegman(Maze.pegmanX, Maze.pegmanY, 16);
 
