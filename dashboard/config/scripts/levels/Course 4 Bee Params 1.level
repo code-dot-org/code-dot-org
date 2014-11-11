@@ -17,7 +17,6 @@
     "step_mode": "0",
     "nectar_goal": "9",
     "flower_type": "redWithNectar",
-    "maze_data": null,
     "ideal": "19",
     "instructions": "You might recall the \"get 3 nectar\" function from Course 3 - it turns, moves to collect the nectar, and then returns to the original location. Write a sequence to collect all of the nectar using \"get 3 nectar.\""
   }

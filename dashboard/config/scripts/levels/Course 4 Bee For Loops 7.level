@@ -18,8 +18,7 @@
     "flower_type": "redWithNectar",
     "nectar_goal": "3",
     "ideal": "12",
-    "instructions": "Use your for loop variable \"i\" to control how far to move horizontally.",
-    "maze_data": null
+    "instructions": "Use your for loop variable \"i\" to control how far to move horizontally."
   }
 }]]></config>
   <blocks>

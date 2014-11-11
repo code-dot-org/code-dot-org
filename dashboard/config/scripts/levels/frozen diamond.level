@@ -3,7 +3,6 @@
   "game_id": 23,
   "created_at": "2014-10-27T23:50:26.000Z",
   "level_num": "custom",
-  "ideal_level_source_id": 501,
   "user_id": 1,
   "properties": {
     "skin": "anna",

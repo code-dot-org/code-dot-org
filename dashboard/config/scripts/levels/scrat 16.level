@@ -15,8 +15,9 @@
     "disable_variable_editing": "false",
     "start_direction": "0",
     "step_mode": "0",
-    "maze_data": null,
-    "step_speed": "1"
+    "step_speed": "2",
+    "use_modal_function_editor": "false",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
