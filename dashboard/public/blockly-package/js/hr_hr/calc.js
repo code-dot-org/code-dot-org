@@ -609,6 +609,10 @@ BlocklyApps.init = function(config) {
   Blockly.mainBlockSpaceEditor.addChangeListener(function() {
     BlocklyApps.updateBlockCount();
   });
+
+  if (config.level.openFunctionDefinition) {
+    Blockly.functionEditor.openAndEditFunction(config.level.openFunctionDefinition);
+  }
 };
 
 exports.playAudio = function(name, options) {
