@@ -156,6 +156,8 @@ Blockly.BlockSpaceEditor.prototype.createDom_ = function(container) {
   // then manually positions content in RTL as needed.
   container.setAttribute('dir', 'LTR');
 
+  this.populateSVGEffects_(container);
+
   // Build the SVG DOM.
   /*
    <svg
@@ -180,7 +182,6 @@ Blockly.BlockSpaceEditor.prototype.createDom_ = function(container) {
   var defs = Blockly.createSvgElement('defs', {
     id: 'blocklySvgDefs'
   }, svg);
-  this.populateSVGEffects_(container);
   this.blockSpace.maxBlocks = Blockly.maxBlocks;
 
   svg.appendChild(this.blockSpace.createDom());
