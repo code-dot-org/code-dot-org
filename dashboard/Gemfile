@@ -9,6 +9,7 @@ gem 'seamless_database_pool'
 
 gem 'le', '~> 2.2'
 gem 'os'
+gem 'redis', '~> 3.1.0'
 
 group :development, :test do
   # Use debugger

@@ -362,8 +362,8 @@ Turtle.loadTurtle = function() {
     Turtle.numberAvatarHeadings = 18;
   else
     Turtle.numberAvatarHeadings = 180;
-  Turtle.avatarImage.height = Turtle.AVATAR_HEIGHT;
-  Turtle.avatarImage.width = Turtle.AVATAR_WIDTH;
+  Turtle.avatarImage.spriteHeight = Turtle.AVATAR_HEIGHT;
+  Turtle.avatarImage.spriteWidth = Turtle.AVATAR_WIDTH;
 };
 
 /**
@@ -399,29 +399,50 @@ Turtle.drawTurtle = function() {
     // and they are 180 degrees out of phase.
     index = (index + Turtle.numberAvatarHeadings/2) % Turtle.numberAvatarHeadings;
   }
-  var sourceX = Turtle.avatarImage.width * index;
+  var sourceX = Turtle.avatarImage.spriteWidth * index;
   if (skin.id == "anna" || skin.id == "elsa") {
-    sourceY = Turtle.avatarImage.height * turtleFrame;
+    sourceY = Turtle.avatarImage.spriteHeight * turtleFrame;
     turtleFrame = (turtleFrame + 1) % turtleNumFrames;
   } else {
     sourceY = 0;
   }
-  var sourceWidth = Turtle.avatarImage.width;
-  var sourceHeight = Turtle.avatarImage.height;
-  var destWidth = Turtle.avatarImage.width;
-  var destHeight = Turtle.avatarImage.height;
+  var sourceWidth = Turtle.avatarImage.spriteWidth;
+  var sourceHeight = Turtle.avatarImage.spriteHeight;
+  var destWidth = Turtle.avatarImage.spriteWidth;
+  var destHeight = Turtle.avatarImage.spriteHeight;
   var destX = Turtle.x - destWidth / 2;
   var destY = Turtle.y - destHeight + 7;
 
-  Turtle.ctxDisplay.drawImage(Turtle.avatarImage, Math.round(sourceX * retina), Math.round(sourceY * retina),
+  if (Turtle.avatarImage.width == 0 || Turtle.avatarImage.height == 0)
+    return;
+
+  if (sourceX * retina < 0 || 
+      sourceY * retina < 0 ||
+      sourceX * retina + sourceWidth  * retina -0 > Turtle.avatarImage.width ||
+      sourceY * retina + sourceHeight * retina > Turtle.avatarImage.height)
+  {
+    if (console.log)
+      console.log("drawImage out of source bounds!");
+    return;
+  }
+
+  Turtle.ctxDisplay.drawImage(
+    Turtle.avatarImage, 
+    Math.round(sourceX * retina), Math.round(sourceY * retina),
+    sourceWidth * retina - 0, sourceHeight * retina, 
+    Math.round(destX * retina), Math.round(destY * retina),
+    destWidth * retina - 0, destHeight * retina);
+
+  /* console.log(Math.round(sourceX * retina), Math.round(sourceY * retina),
                               sourceWidth * retina, sourceHeight * retina, Math.round(destX * retina), Math.round(destY * retina),
-                              destWidth * retina, destHeight * retina);
+                              destWidth * retina, destHeight * retina); */
 };
 
 var turtleNumFrames = 19;
 var turtleFrame = 0;
 
 Turtle.drawDecorationAnimation = function() {
+  return;
   if (skin.id == "elsa") {
     var index = (turtleFrame + 10) % turtleNumFrames;
     var sourceX = Turtle.decorationAnimationImage.width * index;
@@ -725,6 +746,7 @@ Turtle.animate = function() {
       catch(err) {
         Turtle.executionError = err;
         finishExecution();
+        return;
       }
       stepped = Turtle.interpreter.step();
 
@@ -1022,7 +1044,7 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
   var img;
   var startX;
   var startY;
-
+return;
   if (skin.id == "anna" || skin.id == "elsa") {
     Turtle.ctxPattern.moveTo(Turtle.stepStartX * retina, Turtle.stepStartY * retina);
     img = Turtle.patternForPaths;
@@ -1177,8 +1199,11 @@ Turtle.checkAnswer = function() {
   var levelComplete = level.freePlay || isCorrect(delta, permittedErrors);
   Turtle.testResults = BlocklyApps.getTestResults(levelComplete);
 
-  var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
-  var textBlocks = Blockly.Xml.domToText(xml);
+  var program;
+  if (!level.editCode) {
+    var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+    program = Blockly.Xml.domToText(xml);
+  }
 
   // Make sure we don't reuse an old message, since not all paths set one.
   Turtle.message = undefined;
@@ -1186,7 +1211,7 @@ Turtle.checkAnswer = function() {
   // In level K1, check if only lengths differ.
   if (level.isK1 && !levelComplete && !BlocklyApps.editCode &&
       level.solutionBlocks &&
-      removeK1Lengths(textBlocks) === removeK1Lengths(level.solutionBlocks)) {
+      removeK1Lengths(program) === removeK1Lengths(level.solutionBlocks)) {
     Turtle.testResults = BlocklyApps.TestResults.APP_SPECIFIC_ERROR;
     Turtle.message = turtleMsg.lengthFeedback();
   }
@@ -1221,6 +1246,14 @@ Turtle.checkAnswer = function() {
     Turtle.testResults = levelComplete ?
       BlocklyApps.TestResults.ALL_PASS :
       BlocklyApps.TestResults.TOO_FEW_BLOCKS_FAIL;
+
+    // If we want to "normalize" the JavaScript to avoid proliferation of nearly
+    // identical versions of the code on the service, we could do either of these:
+
+    // do an acorn.parse and then use escodegen to generate back a "clean" version
+    // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
+
+    program = BlocklyApps.editor.getValue();
   }
 
   // If the current level is a free play, always return the free play
@@ -1244,7 +1277,7 @@ Turtle.checkAnswer = function() {
     builder: level.builder,
     result: levelComplete,
     testResult: Turtle.testResults,
-    program: encodeURIComponent(textBlocks),
+    program: encodeURIComponent(program),
     onComplete: Turtle.onReportComplete,
     save_to_gallery: level.impressive
   };

@@ -239,7 +239,7 @@ en:
         playlab: 'Make an App'
         artist: 'Draw Something'
     user:
-      classroom: 'My students'
+      classroom: 'Teacher Home Page'
       label: 'Hi %{username}'
       stats: 'My progress'
       settings: 'My account'
@@ -411,8 +411,11 @@ en:
   try_reloading: 'Try reloading the page'
   next_stage: 'Finished! Continue to next stage'
   download_pdf: 'Open Lesson Plan'
+  lesson_plan: 'Lesson Plan'
   view_lesson_plan: 'View Lesson Plan'
   pdf_download: 'Download PDF'
+  download_coming_soon: 'Downloadable activity coming soon.'
+  video_coming_soon: 'Video Coming Soon!'
   share_code:
     title: "Click 'Run' to see my program in action"
     bounce_og_title: "Check out my Bounce Game"
@@ -469,6 +472,8 @@ en:
     wrong_body: "The solution you've entered is not correct.  Please try again!"
     correct_title: "Correct"
     correct_body: "That is the correct answer."
+  text_match:
+    placeholder: "Enter your answer here"
   dialog:
     ok: "OK"
   time:

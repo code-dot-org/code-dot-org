@@ -3,6 +3,9 @@
   .numeric {
     font-weight: bold;
   }
+
+%h4 Note: Concepts are only implemented for "20-hour" and "Hour of Code" tutorials.
+
 %p
   Total number of concepts at least 20% learned (any trophy):
   %span.numeric= number_with_delimiter UserTrophy.distinct.count('user_id, concept_id')

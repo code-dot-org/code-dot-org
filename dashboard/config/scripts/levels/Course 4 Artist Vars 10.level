@@ -169,7 +169,7 @@
     </required_blocks>
     <solution_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
+        <block type="when_run" movable="false" deletable="false">
           <next>
             <block type="variables_set" inline="false">
               <title name="VAR">sides</title>

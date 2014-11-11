@@ -1,11 +1,11 @@
-var EvalObject = require('./evalObject');
+var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
 var EvalMulti = function (image1, image2) {
-  evalUtils.ensureType(image1, EvalObject);
-  evalUtils.ensureType(image2, EvalObject);
+  evalUtils.ensureType(image1, EvalImage);
+  evalUtils.ensureType(image2, EvalImage);
 
-  EvalObject.apply(this);
+  EvalImage.apply(this);
 
   this.image1_ = image1;
   this.image2_ = image2;
@@ -23,7 +23,7 @@ var EvalMulti = function (image1, image2) {
 
   this.element_ = null;
 };
-EvalMulti.inherits(EvalObject);
+EvalMulti.inherits(EvalImage);
 module.exports = EvalMulti;
 
 EvalMulti.prototype.draw = function (parent) {
@@ -37,5 +37,5 @@ EvalMulti.prototype.draw = function (parent) {
   this.image2_.draw(this.element_);
   this.image1_.draw(this.element_);
 
-  EvalObject.prototype.draw.apply(this, arguments);
+  EvalImage.prototype.draw.apply(this, arguments);
 };

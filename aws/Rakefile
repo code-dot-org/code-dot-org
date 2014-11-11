@@ -97,10 +97,12 @@ file deploy_dir('i18n/curriculum/crowdin.yaml') => [deploy_dir('i18n/curriculum/
   RakeUtils.erb t.prerequisites[0], t.name, task:t
 end
 
-INSTALL = [:production, :staging, :test].include?(rack_env) || CDO.name == 'hoc-levels'
+INSTALL = [:production, :staging, :test].include?(rack_env) && !CDO.chef_managed
+
+DAEMON = rack_env?(:production) && CDO.name == 'daemon'
 
 task :default => [
-  INSTALL ? aws_dir('crontab.installed')        : aws_dir('crontab'),
+  (INSTALL || DAEMON) ? aws_dir('crontab.installed')        : aws_dir('crontab'),
   INSTALL ? home_dir('.bashrc')                 : aws_dir('bashrc'),
   INSTALL ? home_dir('.profile')                : aws_dir('profile'),
   INSTALL ? ETC_INIT_D_DASHBOARD                : dashboard_dir('config/init.d'),

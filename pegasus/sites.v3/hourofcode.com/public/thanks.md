@@ -62,7 +62,7 @@ Tell your friends about the #HourOfCode.
 <a href="<%= hoc_uri('/resources#email') %>">Send this email</a> to your manager, or the CEO. Or <a href="<%= hoc_uri('/resources/hoc-one-pager.pdf') %>">give them this handout</a>.
 
 ## 5. Promote Hour of Code within your community
-Recruit a local group — boy scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
+Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
 
 ## 6. Ask a local elected official to support the Hour of Code
 <a href="<%= hoc_uri('/resources#politicians') %>">Send this email</a> to your mayor, city council, or school board. Or <a href="<%= hoc_uri('/resources/hoc-one-pager.pdf') %>">give them this handout</a> and invite them to visit your school.

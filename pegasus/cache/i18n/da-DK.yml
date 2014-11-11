@@ -4,7 +4,7 @@
   computer_science: Computer videnskab
   computer_science_edweek: Computer Videnskabs Uddannelses Uge
   csedweek_dates: December 9-15, 2013
-  n_have_learned_an_hoc: "<h1>#</h1><h3>har prøvet en</h3><h2>En times kode</h2>"
+  n_have_learned_an_hoc: <h1>#</h1><h3>har prøvet en</h3><h2>En times kode</h2>
   anybody_can_learn: Alle kan lære.
   learn_now: Lær Nu
   petition_message: Alle elever i alle skoler burde have muligheden for at lære datalogi
@@ -45,7 +45,7 @@
     gentag-loops, hvis-så præmisser og grundlæggende algoritmer.
   all_ages: Alle aldre
   beginner: Nybegynder
-  n_participants: "# deltagere"
+  n_participants: '# deltagere'
   go: Kør
   thank_you_: Tak!
   congratulations: Tillykke!
@@ -81,7 +81,7 @@
   beyond_an_hour: Ud over En times kodning >
   get_started: Kom i gang
   i_agree: Jeg er enig
-  participant_select: "- Vælg -"
+  participant_select: '- Vælg -'
   participant_student: studerende
   participant_parent: Forælder
   participant_educator: Pædagog
@@ -100,7 +100,7 @@
   learn_next_level: Fortsæt til det næste niveau
   learn_online: Prøv andre kurser online
   learn_classes: Find lokale klasser
-  hoc_is_here: "#HourOfCode er her - tjek det ud! @codeorg"
+  hoc_is_here: '#HourOfCode er her - tjek det ud! @codeorg'
   just_did_hoc: 'Jeg fuldførte lige #HourOfCode - tjek det ud! @codeorg'
   learn_hoc: Lær En Times Kodning
   beyond_hoc: Efter En Time
@@ -110,11 +110,11 @@
   help_recruit_coders: Hjælpe os med at rekruttere flere programmører til dit hold!
   help_recruit: Hjælpe os med at rekruttere flere programmører!
   lines_of_code: OVER <b># LINJER KODE</b> SKREVET TIL DATO.
-  lines_of_code_alt: "<b>#</b> LINJER AF KODE SKREVET AF STUDERENDE"
+  lines_of_code_alt: <b>#</b> LINJER AF KODE SKREVET AF STUDERENDE
   who_has_done_hoc: 'Hvem har lavet #HourOfCode @codeorg'
   hoc_leaderboards: Rangelisten for Hour Of Code
-  students_and_lines: "%{students} studerende har lavet Hour of Code and har skrevet
-    %{lines} linjer af kode."
+  students_and_lines: '%{students} studerende har lavet Hour of Code and har skrevet
+    %{lines} linjer af kode.'
   start_hoc: Start Hour of Code nu
   contact_form_topic_press: Pressen/medierne (interview eller taler-arrangementer)
   studiobar_title: Udforske <a href='http://studio.code.org'>kode skolen</a>

@@ -56,8 +56,9 @@
   %h2= hoc_s(:hoc_faq_need_computers_q)
   %div= hoc_s(:hoc_faq_need_computers_a)
 
-  %h2= hoc_s(:hoc_faq_international_q)
-  %div= hoc_s(:hoc_faq_international_a)
+  -if @country != 'us'
+    %h2= hoc_s(:hoc_faq_international_q).gsub(/<country>/, HOC_COUNTRIES[@country]['full_name'])
+    %div= hoc_s(:hoc_faq_international_a).gsub(/target-resources/, hoc_uri('/resources'))
 
   %h2= hoc_s(:hoc_faq_tutorial_q)
   %div= hoc_s(:hoc_faq_tutorial_a).gsub(/target-tutorial-guidelines/, hoc_uri('/tutorial-guidelines'))

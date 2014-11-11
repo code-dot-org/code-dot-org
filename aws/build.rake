@@ -88,10 +88,7 @@ end
 
 $websites = build_task('websites', [deploy_dir('rebuild'), BLOCKLY_COMMIT_TASK]) do
   Dir.chdir(deploy_dir) do
-    RakeUtils.system 'rake', 'build:configure'
-    RakeUtils.system 'rake', 'build:dashboard'
-    RakeUtils.system 'rake', 'build:pegasus'
-    RakeUtils.system 'rake', 'build:varnish'
+    RakeUtils.system 'rake', 'build'
 
     if rack_env?(:production) && CDO.daemon
       CDO.app_instances.each do |host|
@@ -109,21 +106,20 @@ $websites = build_task('websites', [deploy_dir('rebuild'), BLOCKLY_COMMIT_TASK])
       CDO.varnish_instances.each do |host|
         #Process.fork do
           remote_command = [
-            'cd website-ci/aws',
-            'git pull',
-            'bundle',
-            'rake',
-            'cd ..',
-            'rake build:varnish',
+            'sudo chef-client',
+            'sudo service varnish stop',
+            'sudo service varnish start',
           ].join('; ')
           begin
+            HipChat.log "Upgrading <b>#{host}</b> varnish instance..."
+            sleep 0.1
             RakeUtils.system 'ssh', '-i', '~/.ssh/deploy-id_rsa', host, "'#{remote_command} 2>&1'"
           rescue
             HipChat.log "Unable to upgrade <b>#{host}</b> varnish instance."
           end
         #end
       end
-      Process.waitall
+      #Process.waitall
     end
   end
 end
@@ -131,10 +127,7 @@ task 'websites' => [$websites] {}
 
 $websites_test = build_task('websites-test', [deploy_dir('rebuild')]) do
   Dir.chdir(deploy_dir) do
-    RakeUtils.system 'rake', 'build:configure'
-    RakeUtils.system 'rake', 'build:dashboard'
-    RakeUtils.system 'rake', 'build:pegasus'
-    RakeUtils.system 'rake', 'build:varnish'
+    RakeUtils.system 'rake', 'build'
   end
 
   Dir.chdir(dashboard_dir) do

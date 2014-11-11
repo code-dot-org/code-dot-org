@@ -6,10 +6,14 @@ nav: resources_nav
 <div class="row">
     <h1 class="col-sm-6">Resources</h1>
     <div class="col-sm-6 button-container centered">
-        <a href="/#join"><button class="signup-button">Sign up your event</button></a>
+        <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Sign up your event</button></a>
     </div>
 </div>
+<% if @country == 'ie' %>
+## Hosting an Hour of Code? <a href="<%= hoc_uri('/resources/how-to-ireland') %>">See the how-to guide</a>
+<% else %>
 ## Hosting an Hour of Code? <a href="<%= hoc_uri('/resources/how-to') %>">See the how-to guide</a>
+<% end %>
 
 <a id="handouts">
 ## Use this handout to spread the word
@@ -50,9 +54,7 @@ nav: resources_nav
 <div style='clear:both'></div>
 <a id="posters">
 ## Hang these posters in your school
-<% if @country == 'us' %>
-#### [Sign up](http://hourofcode.com/#signup) your Hour of Code event and we'll mail you posters for free.
-<% end %>
+
 <br />
 [![image](/images/fit-280/mark-zuckerberg.png)](/resources/mark-zuckerberg-poster.pdf)
 [![image](/images/fit-280/marissa-mayer.png)](/resources/marissa-mayer-poster.pdf)
@@ -93,7 +95,7 @@ This year, let's make it even bigger. I’m asking you to join in for the Hour o
 
 Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself -- everyone can benefit from learning the basics.
 
-Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com
+Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com/<%= @country %>
 
 <a id="media-pitch"></a>
 ## Invite media to attend your event:
@@ -134,7 +136,7 @@ Our Hour of Code is a statement that [SCHOOL NAME] is ready to teach these found
 
 This is a chance to change the future of education in [TOWN/CITY NAME].
 
-See http://hourofcode.com for details, and help spread the word.
+See http://hourofcode.com/<%= @country %> for details, and help spread the word.
 
 
 Sincerely,
@@ -158,4 +160,4 @@ Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your res
 Sincerely,
 [NAME], [TITLE]
 
-<a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>
+<a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Sign up your event</button></a>

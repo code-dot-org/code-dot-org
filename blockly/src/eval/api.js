@@ -1,5 +1,6 @@
 var evalUtils = require('./evalUtils');
-var EvalString = require('./evalString');
+var EvalImage = require('./evalImage');
+var EvalText = require('./evalText');
 var EvalCircle = require('./evalCircle');
 var EvalTriangle = require('./evalTriangle');
 var EvalMulti = require('./evalMulti');
@@ -8,20 +9,16 @@ var EvalEllipse = require('./evalEllipse');
 var EvalText = require('./evalText');
 var EvalStar = require('./evalStar');
 
-// todo (brent) - make use of blockId?
+// We don't use blockId at all in Eval since everything is evaluated at once.
 
 exports.display = function (object) {
   if (object === undefined) {
-    object = new EvalString("");
+    object = "";
   }
   if (!object.draw) {
-    object = new EvalString(object.toString());
+    object = new EvalText(object.toString(), 12, 'black');
   }
   Eval.displayedObject = object;
-};
-
-exports.string = function (str, blockId) {
-  return new EvalString(str);
 };
 
 exports.circle = function (size, style, color) {
@@ -60,12 +57,13 @@ exports.star = function (radius, fontSize, color) {
   return new EvalStar(radius, fontSize, color);
 };
 
-exports.placeImage = function (x, y, image, blockId) {
-  // todo - validate we have an image, use public setter
-  // todo - where does argument validation happen?
+exports.placeImage = function (x, y, image) {
+  evalUtils.ensureNumber(x);
+  evalUtils.ensureNumber(y);
+  evalUtils.ensureType(image, EvalImage);
 
   // User inputs why in cartesian space. Convert to pixel space before sending
-  // to our EvalObject.
+  // to our EvalImage.
   y = evalUtils.cartesianToPixel(y);
 
   image.place(x, y);
@@ -73,6 +71,8 @@ exports.placeImage = function (x, y, image, blockId) {
 };
 
 exports.rotateImage = function (degrees, image) {
+  evalUtils.ensureNumber(degrees);
+
   image.rotate(degrees);
   return image;
 };
@@ -83,15 +83,15 @@ exports.scaleImage = function (factor, image) {
 };
 
 exports.stringAppend = function (first, second) {
-  evalUtils.ensureType(first, EvalString);
-  evalUtils.ensureType(second, EvalString);
+  evalUtils.ensureString(first);
+  evalUtils.ensureString(second);
 
-  return new EvalString(first.getValue() + second.getValue());
+  return first + second;
 };
 
 // polling for values
 exports.stringLength = function (str) {
-  evalUtils.ensureType(str, EvalString);
+  evalUtils.ensureString(str);
 
-  return str.getValue().length;
+  return str.length;
 };
