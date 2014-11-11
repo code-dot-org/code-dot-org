@@ -24,8 +24,8 @@
       unlock_instructions:
         subject: Talimatların kilidini aç
     omniauth_callbacks:
-      failure: "%{kind} kimliği %{reason} nedeniyle doğrulanamadı."
-      success: "%{kind} hesabından başarıyla kimlik doğrulandı."
+      failure: '%{kind} kimliği %{reason} nedeniyle doğrulanamadı.'
+      success: '%{kind} hesabından başarıyla kimlik doğrulandı.'
     passwords:
       no_token: Parola sıfırlama maili olmadan bu sayfaya erişemezsiniz. Eğer parola
         sıfırlama mailinden geldiyseniz, lütfen verilen URL'nin tamamını kullandığınızdan
@@ -35,7 +35,7 @@
       send_paranoid_instructions: Eğer e-posta adresiniz veritabanımızda kayıtlı ise,
         birkaç dakika içinde parola kurtarma bağlantısı içeren bir e-posta alacaksınız.
       updated: Parolanız başarıyla değiştirildi. Şu anda giriş yaptınız.
-      updated_not_active: "Şifreniz başarıyla değiştirildi."
+      updated_not_active: Şifreniz başarıyla değiştirildi.
     registrations:
       destroyed: Hoşça kal! Hesabın başarıyla iptal edildi. Seni tekrar aramızda görmeyi
         umuyoruz.
@@ -64,11 +64,11 @@
   errors:
     messages:
       already_confirmed: zaten onaylandı, lütfen giriş yapmayı deneyiniz
-      confirmation_period_expired: "%{period} içinde onaylanması gerekliydi.Lütfen
-        yeni bir istekte bulunun"
+      confirmation_period_expired: '%{period} içinde onaylanması gerekliydi.Lütfen
+        yeni bir istekte bulunun'
       expired: süresi doldu, yeni bir tane isteyiniz
       not_found: bulunamadı
       not_locked: kilitli değil
       not_saved:
         one: '1 hata %{resource} kaynağın kaydedilmesini engelledi:'
-        other: "%{count} hata %{resource} kaynağının kaydedilmesini engelledi:"
+        other: '%{count} hata %{resource} kaynağının kaydedilmesini engelledi:'

@@ -3,8 +3,9 @@
   %p Number from 0.0 to 1.0 for how fast artist runs. If not set, default is 1.0
   = f.number_field :slider_speed, :step => 0.1
 .field
-  = f.label :free_play, "Free Play"
-  = boolean_check_box f, :free_play
+  = f.label :impressive, "Impressive"
+  %p Impressive levels can be shared and are automatically saved to the private gallery
+  = boolean_check_box f, :impressive
 .field
   = f.label :start_direction, 'Start Direction (in degrees)'
   = f.number_field :start_direction, :in => 0...360, :value => @level.start_direction

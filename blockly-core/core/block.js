@@ -36,7 +36,7 @@ goog.require('Blockly.Input');
 goog.require('Blockly.Msg');
 goog.require('Blockly.Mutator');
 goog.require('Blockly.Warning');
-goog.require('Blockly.Workspace');
+goog.require('Blockly.BlockSpace');
 goog.require('Blockly.Xml');
 goog.require('goog.asserts');
 goog.require('goog.string');
@@ -51,12 +51,12 @@ Blockly.uidCounter_ = 0;
 
 /**
  * Class for one block.
- * @param {!Blockly.Workspace} workspace The new block's workspace.
+ * @param {!Blockly.BlockSpace} blockSpace The new block's blockSpace.
  * @param {?string} prototypeName Name of the language object containing
  *     type-specific functions for this block.
  * @constructor
  */
-Blockly.Block = function(workspace, prototypeName, htmlId) {
+Blockly.Block = function(blockSpace, prototypeName, htmlId) {
   this.id = ++Blockly.uidCounter_;
   this.htmlId = htmlId;
   this.outputConnection = null;
@@ -75,11 +75,15 @@ Blockly.Block = function(workspace, prototypeName, htmlId) {
   this.deletable_ = true;
   this.movable_ = true;
   this.editable_ = true;
+  this.userVisible_ = true;
   this.collapsed_ = false;
   this.dragging_ = false;
 
-  this.workspace = workspace;
-  this.isInFlyout = workspace.isFlyout;
+  /**
+   * @type {!Blockly.BlockSpace}
+   */
+  this.blockSpace = blockSpace;
+  this.isInFlyout = blockSpace.isFlyout;
 
   this.colourSaturation_ = 0.45;
   this.colourValue_ = 0.65;
@@ -87,7 +91,7 @@ Blockly.Block = function(workspace, prototypeName, htmlId) {
   this.blockSvgClass_ = Blockly.BlockSvg;
   this.customOptions_ = {};
 
-  workspace.addTopBlock(this);
+  this.setRenderBlockSpace(blockSpace);
 
   // Copy the type-specific functions and data from the prototype.
   if (prototypeName) {
@@ -102,11 +106,6 @@ Blockly.Block = function(workspace, prototypeName, htmlId) {
   if (goog.isFunction(this.init)) {
     this.init();
   }
-  // Bind an onchange function, if it exists.
-  if (goog.isFunction(this.onchange)) {
-    Blockly.bindEvent_(workspace.getCanvas(), 'blocklyWorkspaceChange', this,
-                       this.onchange);
-  }
 };
 
 /**
@@ -118,21 +117,49 @@ Blockly.Block.prototype.svg_ = null;
 
 /**
  * Block's mutator icon (if any).
- * @type {Blockly.Mutator}
+ * @type {?Blockly.Mutator}
  */
 Blockly.Block.prototype.mutator = null;
 
 /**
  * Block's comment icon (if any).
- * @type {Blockly.Comment}
+ * @type {?Blockly.Comment}
  */
 Blockly.Block.prototype.comment = null;
 
 /**
  * Block's warning icon (if any).
- * @type {Blockly.Warning}
+ * @type {?Blockly.Warning}
  */
 Blockly.Block.prototype.warning = null;
+
+/**
+ * Callback function called after initialization
+ * (typically defined by subclasses)
+ * @type {?function()}
+ */
+Blockly.Block.prototype.init = null;
+
+/**
+ * Callback function called after initialization
+ * (typically defined by subclasses)
+ * @type {?function()}
+ */
+Blockly.Block.prototype.onchange = null;
+
+/**
+ * @param {Blockly.BlockSpace} blockSpace target blockspace to begin rendering on
+ */
+Blockly.Block.prototype.setRenderBlockSpace = function(blockSpace) {
+  this.blockSpace = blockSpace;
+  this.blockSpace.addTopBlock(this);
+
+  // Bind an onchange function if one exists (typically set by block subclasses)
+  if (goog.isFunction(this.onchange)) {
+    Blockly.bindEvent_(this.blockSpace.getCanvas(), 'blocklyBlockSpaceChange',
+      this, this.onchange);
+  }
+};
 
 /**
  * Returns a list of mutator, comment, and warning icons.
@@ -162,7 +189,7 @@ Blockly.Block.prototype.initSvg = function() {
     Blockly.bindEvent_(this.svg_.getRootElement(), 'mousedown', this,
                        this.onMouseDown_);
   }
-  this.workspace.getCanvas().appendChild(this.svg_.getRootElement());
+  this.moveToFrontOfBlockSpace_();
 };
 
 /**
@@ -240,7 +267,7 @@ Blockly.Block.terminateDrag_ = function() {
     }
   }
   if (selected) {
-    selected.workspace.fireChangeEvent();
+    selected.blockSpace.fireChangeEvent();
   }
   Blockly.Block.dragMode_ = Blockly.Block.DRAG_MODE_NOT_DRAGGING;
 };
@@ -261,7 +288,7 @@ Blockly.Block.prototype.select = function(spotlight) {
   if (spotlight) {
     this.svg_.addSpotlight();
   }
-  Blockly.fireUiEvent(this.workspace.getCanvas(), 'blocklySelectChange');
+  Blockly.fireUiEvent(this.blockSpace.getCanvas(), 'blocklySelectChange');
 };
 
 /**
@@ -274,7 +301,7 @@ Blockly.Block.prototype.unselect = function() {
   Blockly.selected = null;
   this.svg_.removeSelect();
   this.svg_.removeSpotlight();
-  Blockly.fireUiEvent(this.workspace.getCanvas(), 'blocklySelectChange');
+  Blockly.fireUiEvent(this.blockSpace.getCanvas(), 'blocklySelectChange');
 };
 
 /**
@@ -293,10 +320,10 @@ Blockly.Block.prototype.dispose = function(healStack, animate) {
     this.svg_.disposeUiEffect();
   }
 
-  //This block is now at the top of the workspace.
-  // Remove this block from the workspace's list of top-most blocks.
-  this.workspace.removeTopBlock(this);
-  this.workspace = null;
+  // This block is now at the top of the blockSpace.
+  // Remove this block from the blockSpace's list of top-most blocks.
+  this.blockSpace.removeTopBlock(this);
+  this.blockSpace = null;
 
   // Just deleting this block from the DOM would result in a memory leak as
   // well as corruption of the connection database.  Therefore we must
@@ -305,7 +332,7 @@ Blockly.Block.prototype.dispose = function(healStack, animate) {
   if (Blockly.selected == this) {
     Blockly.selected = null;
     // If there's a drag in-progress, unlink the mouse events.
-    Blockly.terminateDrag_();
+    Blockly.BlockSpaceEditor.terminateDrag_();
   }
 
   // If this block has a context menu open, close it.
@@ -400,7 +427,7 @@ Blockly.Block.prototype.getRelativeToSurfaceXY = function() {
       x += xy.x;
       y += xy.y;
       element = element.parentNode;
-    } while (element && element != this.workspace.getCanvas());
+    } while (element && element != this.blockSpace.getCanvas());
   }
   return {x: x, y: y};
 };
@@ -461,23 +488,23 @@ Blockly.Block.prototype.onMouseDown_ = function(e) {
     return;
   }
   // Update Blockly's knowledge of its own location.
-  Blockly.svgResize();
-  Blockly.terminateDrag_();
+  this.blockSpace.blockSpaceEditor.svgResize();
+  Blockly.BlockSpaceEditor.terminateDrag_();
   this.select();
-  Blockly.hideChaff();
+  this.blockSpace.blockSpaceEditor.hideChaff();
   if (Blockly.isRightButton(e)) {
     // Right-click.
     // Unlike google Blockly, we don't want to show a context menu
     //this.showContextMenu_(e);
   } else if (!this.isMovable()) {
     // Allow unmovable blocks to be selected and context menued, but not
-    // dragged.  Let this event bubble up to document, so the workspace may be
+    // dragged.  Let this event bubble up to document, so the blockSpace may be
     // dragged instead.
     return;
   } else {
     // Left-click (or middle click)
     Blockly.removeAllRanges();
-    Blockly.setCursorHand_(true);
+    this.blockSpace.blockSpaceEditor.setCursorHand_(true);
     // Look up the current translation and record it.
     var xy = this.getRelativeToSurfaceXY();
     this.startDragX = xy.x;
@@ -523,7 +550,7 @@ Blockly.Block.prototype.onMouseDown_ = function(e) {
  * @private
  */
 Blockly.Block.prototype.onMouseUp_ = function(e) {
-  Blockly.terminateDrag_();
+  Blockly.BlockSpaceEditor.terminateDrag_();
   if (Blockly.selected && Blockly.highlightedConnection_) {
     // Connect two blocks together.
     Blockly.localConnection_.connect(Blockly.highlightedConnection_);
@@ -538,17 +565,17 @@ Blockly.Block.prototype.onMouseUp_ = function(e) {
       }
       inferiorConnection.sourceBlock_.svg_.connectionUiEffect();
     }
-    if (this.workspace.trashcan && this.workspace.trashcan.isOpen) {
+    if (this.blockSpace.trashcan && this.blockSpace.trashcan.isOpen) {
       // Don't throw an object in the trash can if it just got connected.
-      this.workspace.trashcan.close();
+      this.blockSpace.trashcan.close();
     }
-  } else if (this.workspace.trashcan && this.workspace.trashcan.isOpen) {
-    var trashcan = this.workspace.trashcan;
+  } else if (this.blockSpace.trashcan && this.blockSpace.trashcan.isOpen) {
+    var trashcan = this.blockSpace.trashcan;
     goog.Timer.callOnce(trashcan.close, 100, trashcan);
     if (Blockly.selected) {
       Blockly.selected.dispose(false, true);
     }
-    // Dropping a block on the trash can will usually cause the workspace to
+    // Dropping a block on the trash can will usually cause the blockSpace to
     // resize to contain the newly positioned block.  Force a second resize now
     // that the block has been deleted.
     Blockly.fireUiEvent(window, 'resize');
@@ -580,7 +607,7 @@ Blockly.Block.prototype.duplicate_ = function() {
   var xmlBlock = Blockly.Xml.blockToDom_(this);
   Blockly.Xml.deleteNext(xmlBlock);
   var newBlock = Blockly.Xml.domToBlock_(
-      /** @type {!Blockly.Workspace} */ (this.workspace), xmlBlock);
+      /** @type {!Blockly.BlockSpace} */ (this.blockSpace), xmlBlock);
   // Move the duplicate next to the old block.
   var xy = this.getRelativeToSurfaceXY();
   if (Blockly.RTL) {
@@ -615,7 +642,7 @@ Blockly.Block.prototype.showContextMenu_ = function(e) {
         block.duplicate_();
       }
     };
-    if (this.getDescendants().length > this.workspace.remainingCapacity()) {
+    if (this.getDescendants().length > this.blockSpace.remainingCapacity()) {
       duplicateOption.enabled = false;
     }
     options.push(duplicateOption);
@@ -858,11 +885,15 @@ Blockly.Block.prototype.setDraggingHandleImmovable_ = function(adding, immovable
 };
 
 /**
- * Moves this block to the front of the canvas
+ * Moves this block to the front of its BlockSpace
  * @private
  */
-Blockly.Block.prototype.moveToFrontOfCanvas_ = function () {
-  this.workspace.getCanvas().appendChild(this.svg_.getRootElement());
+Blockly.Block.prototype.moveToFrontOfBlockSpace_ = function () {
+  if (!this.svg_) {
+    return;
+  }
+
+  this.blockSpace.moveElementToFront(this.svg_.getRootElement());
 };
 
 /**
@@ -894,7 +925,7 @@ Blockly.Block.prototype.onMouseMove_ = function(e) {
       var firstImmovableBlockHandler = this.generateReconnector_(this.previousConnection);
       this.setParent(null);
       this.setDraggingHandleImmovable_(true, firstImmovableBlockHandler);
-      this.moveToFrontOfCanvas_();
+      this.moveToFrontOfBlockSpace_();
     }
   }
   if (Blockly.Block.dragMode_ == Blockly.Block.DRAG_MODE_FREELY_DRAGGING) {
@@ -941,8 +972,8 @@ Blockly.Block.prototype.onMouseMove_ = function(e) {
       Blockly.localConnection_ = localConnection;
     }
     // Flip the trash can lid if needed.
-    if (this.workspace.trashcan && this.isDeletable()) {
-      this.workspace.trashcan.onMouseMove(e);
+    if (this.blockSpace.trashcan && this.isDeletable()) {
+      this.blockSpace.trashcan.onMouseMove(e);
     }
   }
   // This event has been handled.  No need to bubble up to the document.
@@ -1088,7 +1119,7 @@ Blockly.Block.prototype.setParent = function(newParent) {
     }
     // Move this block up the DOM.  Keep track of x/y translations.
     var xy = this.getRelativeToSurfaceXY();
-    this.moveToFrontOfCanvas_();
+    this.moveToFrontOfBlockSpace_();
     this.svg_.getRootElement().setAttribute('transform',
         'translate(' + xy.x + ', ' + xy.y + ')');
 
@@ -1103,8 +1134,8 @@ Blockly.Block.prototype.setParent = function(newParent) {
     // This block hasn't actually moved on-screen, so there's no need to update
     // its connection locations.
   } else {
-    // Remove this block from the workspace's list of top-most blocks.
-    this.workspace.removeTopBlock(this);
+    // Remove this block from the blockSpace's list of top-most blocks.
+    this.blockSpace.removeTopBlock(this);
   }
 
   this.parentBlock_ = newParent;
@@ -1120,7 +1151,7 @@ Blockly.Block.prototype.setParent = function(newParent) {
     // Move the connections to match the child's new position.
     this.moveConnections_(newXY.x - oldXY.x, newXY.y - oldXY.y);
   } else {
-    this.workspace.addTopBlock(this);
+    this.blockSpace.addTopBlock(this);
   }
 };
 
@@ -1196,6 +1227,31 @@ Blockly.Block.prototype.setEditable = function(editable) {
   for (var x = 0; x < icons.length; x++) {
     icons[x].updateEditable();
   }
+};
+
+/**
+ * Get whether this block is visible to the user.
+ * @return {boolean} True if visible to the user.
+ */
+Blockly.Block.prototype.isUserVisible = function() {
+  return this.userVisible_;
+};
+
+/**
+ * Set whether this block is visible to the user.
+ * @param {boolean} userVisible True if visible to user.
+ */
+Blockly.Block.prototype.setUserVisible = function(userVisible) {
+  this.userVisible_ = userVisible;
+  if (userVisible) {
+    this.svg_ && Blockly.removeClass_(this.svg_.svgGroup_, 'userHidden');
+  } else {
+    this.svg_ && Blockly.addClass_(this.svg_.svgGroup_, 'userHidden');
+  }
+  // Apply to all children recursively
+  this.childBlocks_.forEach(function (child) {
+    child.setUserVisible(userVisible);
+  });
 };
 
 /**
@@ -1540,6 +1596,17 @@ Blockly.Block.prototype.setFunctionalOutput = function(hasOutput, opt_check) {
   }
 };
 
+Blockly.Block.prototype.changeFunctionalOutput = function(newType) {
+  this.setHSV.apply(this, Blockly.ContractEditor.typesToColors[newType]);
+  this.previousConnection = this.previousConnection || new Blockly.Connection(this, Blockly.FUNCTIONAL_OUTPUT);
+  this.previousConnection.setCheck(newType);
+
+  if (this.rendered) {
+    this.render();
+    this.bumpNeighbours_();
+  }
+};
+
 /**
  * Set whether value inputs are arranged horizontally or vertically.
  * @param {boolean} inputsInline True if inputs are horizontal.
@@ -1549,7 +1616,7 @@ Blockly.Block.prototype.setInputsInline = function(inputsInline) {
   if (this.rendered) {
     this.render();
     this.bumpNeighbours_();
-    this.workspace.fireChangeEvent();
+    this.blockSpace.fireChangeEvent();
   }
 };
 
@@ -1563,7 +1630,7 @@ Blockly.Block.prototype.setDisabled = function(disabled) {
   }
   this.disabled = disabled;
   this.svg_.updateDisabled();
-  this.workspace.fireChangeEvent();
+  this.blockSpace.fireChangeEvent();
 };
 
 /**

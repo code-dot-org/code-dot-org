@@ -4,7 +4,7 @@
       name:
         test:
           'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
-          The Maze: "Ο Λαβύρινθος"
+          The Maze: Ο Λαβύρινθος
           Multi: Multi
           Match: Match
           Math Image: Math Image
@@ -44,11 +44,11 @@
             grades.
           'Artist: Loops': 'Artist: Loops'
         course2:
-          The Maze: "Ο Λαβύρινθος"
+          The Maze: Ο Λαβύρινθος
           Suzi: Suzi
-          The Artist: "Ο Καλλιτέχνης"
+          The Artist: Ο Καλλιτέχνης
           Artist Debugging: Artist Debugging
-          Bounce: "αναπήδησε"
+          Bounce: αναπήδησε
           'Studio: Create a Story': 'Studio: Create a Story'
           Artist Loops: Artist Loops
           Bee Conditionals: Bee Conditionals
@@ -60,11 +60,11 @@
           Bee Debugging: Bee Debugging
           Bee Functions: Bee Functions
           Maze Loops: Maze Loops
-          Graph Paper Programming: "Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων"
+          Graph Paper Programming: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
           'Real-life Algorithms: Paper Planes': 'Real-life Algorithms: Paper Planes'
           Getting Loopy: Getting Loopy
           Relay programming: Relay programming
-          Conditionals: "Έλεγχοι"
+          Conditionals: Έλεγχοι
           Binary Bracelets: Binary Bracelets
           The Big Event: The Big Event
           Your Digital Footprint: Your Digital Footprint
@@ -83,9 +83,9 @@
           'Maze: Sequence2': 'Maze: Sequence2'
           'Artist: Nested Loops': 'Artist: Nested Loops'
         course3:
-          The Maze: "Ο Λαβύρινθος"
+          The Maze: Ο Λαβύρινθος
           'Studio: Create a Story': 'Studio: Create a Story'
-          The Artist: "Ο Καλλιτέχνης"
+          The Artist: Ο Καλλιτέχνης
           title: Course 3
           Artist Functions: Artist Functions
           Artist For Loops: Artist For Loops
@@ -96,10 +96,10 @@
           Bee Debugging: Bee Debugging
           Bee Functions: Bee Functions
           Artist Functions with Params: Artist Functions with Params
-          Bounce: "αναπήδησε"
+          Bounce: αναπήδησε
           Maze Conditionals: Maze Conditionals
           Artist Functions with Parameters: Artist Functions with Parameters
-          Computational Thinking: "Αλγοριθμική Σκέψη"
+          Computational Thinking: Αλγοριθμική Σκέψη
           Functional Suncatchers: Functional Suncatchers
           Songwriting Parameters: Songwriting Parameters
           Dice Race: Dice Race
@@ -109,7 +109,7 @@
           Farmer - While Loops: Farmer - While Loops
           description: Formerly known as a 4-5 course.
           'Studio: Create a Game': 'Studio: Create a Game'
-          Maze: "Λαβύρινθος"
+          Maze: Λαβύρινθος
           Artist: Artist
           'Artist: Functions': 'Artist: Functions'
           'Bee: Functions': 'Bee: Functions'
@@ -136,7 +136,7 @@
         msm:
           title: Middle School Math
           description: Private work in progress for Middle School Math.
-          Graph Paper Programming: "Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων"
+          Graph Paper Programming: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
           Assessments: Assessments
           Unit 1: Unit 1
           Unit 2: Unit 2
@@ -150,3 +150,23 @@
           description: Draw cool pictures and designs with the Artist!
           Artist: Artist
           description_short: Draw cool pictures and designs with the Artist!
+        course4:
+          description_short: Students taking Course 4 should have already taken Courses
+            2 and 3.
+          description: Course 4 is designed for students who have taken Course 2 and
+            3. Students will delve deeper into programming topics introduced in previous
+            courses to flexible solutions to more complex problems. By the end of
+            this course, students create interactive stories and games they can share
+            with anyone. Recommended for grades 4-8.
+          'Artist: Variables': 'Artist: Variables'
+          'Bee: For Loops': 'Bee: For Loops'
+          title: Course 4
+          'Algorithms: Tangrams': 'Algorithms: Tangrams'
+          Variables: Μεταβλητές
+          'Play Lab: Variables': 'Play Lab: Variables'
+          'Play Lab: Functions with Parameters': 'Play Lab: Functions with Parameters'
+          'Bee: Functions with Parameters': 'Bee: Functions with Parameters'
+          'Artist: For Loops': 'Artist: For Loops'
+          'Play Lab: For Loops': 'Play Lab: For Loops'
+          'Artist: Functions': 'Artist: Functions'
+          'Artist: Functions with Paraqmeters': 'Artist: Functions with Paraqmeters'

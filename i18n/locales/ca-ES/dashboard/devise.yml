@@ -1,35 +1,35 @@
-ca:
+"ca":
   devise:
     confirmations:
       confirmed: "La teva adreça d'email s'ha confirmat correctament."
-      send_instructions: Rebràs un email amb instruccions sobre com confirmar el teu compte en pocs minuts.
-      send_paranoid_instructions: Si la teva adreça de correu electrònic existeix en la nostra base de dades, rebràs un email amb instruccions sobre com confirmar el teu compte en uns minuts.
+      send_instructions: "Rebràs un email amb instruccions sobre com confirmar el teu compte en pocs minuts."
+      send_paranoid_instructions: "Si la teva adreça de correu electrònic existeix en la nostra base de dades, rebràs un email amb instruccions sobre com confirmar el teu compte en uns minuts."
     failure:
-      already_authenticated: Ja has iniciat sessió.
+      already_authenticated: "Ja has iniciat sessió."
       inactive: "El teu compte encara no s'ha activat."
-      invalid: Correu electrònic o contrasenya invàlids.
+      invalid: "Correu electrònic o contrasenya invàlids."
       invalid_token: "El testimoni d'autenticació no és vàlid."
-      locked: El teu compte està bloquejat.
-      not_found_in_database: Correu electrònic o contrasenya invàlids.
-      timeout: La teva sessió ha expirat, si us plau, inicia sessió novament per a continuar.
-      unauthenticated: Necessites iniciar sessió o registrar-te abans de continuar.
-      unconfirmed: Necessites confirmar el teu compte abans de continuar.
+      locked: "El teu compte està bloquejat."
+      not_found_in_database: "Correu electrònic o contrasenya invàlids."
+      timeout: "La teva sessió ha expirat, si us plau, inicia sessió novament per a continuar."
+      unauthenticated: "Necessites iniciar sessió o registrar-te abans de continuar."
+      unconfirmed: "Necessites confirmar el teu compte abans de continuar."
     mailer:
       confirmation_instructions:
-        subject: Instruccions de confirmació de Code.org
+        subject: "Instruccions de confirmació de Code.org"
       reset_password_instructions:
-        subject: Instruccions per inicialitzar la contrasenya de Code.org
+        subject: "Instruccions per inicialitzar la contrasenya de Code.org"
       unlock_instructions:
-        subject: Instruccions de desbloqueig
+        subject: "Instruccions de desbloqueig"
     omniauth_callbacks:
       failure: 'No hem pogut autenticar-te des de %{kind} perquè "%{reason}".'
       success: 'Autenticat correctament des del compte %{kind}.'
     passwords:
       no_token: "No pots accedir a aquesta pàgina si no has estat derivat d'un correu electrònic per restablir contranseya. Si vens d'un correu electrònic per restablir contrsenya, si us plau, assegura't d'haver utilitzat el URL proporcionat complet."
-      send_instructions: Rebràs un email amb instruccions sobre com restablir la contrasenya en uns minuts.
-      send_paranoid_instructions: Si la teva adreça electrònica existeix en la nostra base de dades, rebràs un enllaç de recuperació de contrasenya a la teva direcció de correu en uns minuts.
-      updated: Contrasenya canviada amb èxit. Ja has iniciat sessió.
-      updated_not_active: Contrasenya canviada amb èxit.
+      send_instructions: "Rebràs un email amb instruccions sobre com restablir la contrasenya en uns minuts."
+      send_paranoid_instructions: "Si la teva adreça electrònica existeix en la nostra base de dades, rebràs un enllaç de recuperació de contrasenya a la teva direcció de correu en uns minuts."
+      updated: "Contrasenya canviada amb èxit. Ja has iniciat sessió."
+      updated_not_active: "Contrasenya canviada amb èxit."
     registrations:
       destroyed: "Adéu! El teu compte ha estat cancel·lat amb èxit. Esperem veure't aviat."
       signed_up: "Benvingut! T'has registrat exitosament."
@@ -37,21 +37,21 @@ ca:
       signed_up_but_locked: "T'has registrar amb èxit. No obstant, no pots iniciar sessió perquè el teu compte està bloquejat."
       signed_up_but_unconfirmed: "Un missatge amb un enllaç de confirmació ha estat enviat a la teva adreça de correu electrònic. Si us plau, obre l'enllaç per activar el teu compte."
       update_needs_confirmation: "Has actualitzat el teu compte amb èxit, però tenim que verificar la teva nova adreça de correu electrònic. Si us plau, revisa el teu correu i clica en l'enllaç de confirmació per finalitzar la confirmació de la teva nova adreça de correu electrònic."
-      updated: Has actualitzat el teu compte correctament.
+      updated: "Has actualitzat el teu compte correctament."
     sessions:
-      signed_in: Has iniciat sessió amb èxit.
-      signed_out: Has tancat la teva sessió amb èxit.
+      signed_in: "Has iniciat sessió amb èxit."
+      signed_out: "Has tancat la teva sessió amb èxit."
     unlocks:
       send_instructions: "D'aquí uns minuts rebràs un email amb instruccions per desbloquejar el teu compte."
       send_paranoid_instructions: "Si el teu compte existeix, rebràs un email d'aquí uns minuts amb instruccions per desbloquejar el teu compte."
-      unlocked: El teu compte ha estat desbloquejat amb èxit. Si us plau, inicia sessió per continuar.
+      unlocked: "El teu compte ha estat desbloquejat amb èxit. Si us plau, inicia sessió per continuar."
   errors:
     messages:
-      already_confirmed: ja estava confirmat, si us plau, intenta iniciar sessió
+      already_confirmed: "ja estava confirmat, si us plau, intenta iniciar sessió"
       confirmation_period_expired: 'té que ser confirmat dins el període %{period}, si us plau, sol·licita un nou'
-      expired: ha caducat, si us plau, sol·licita un nou
-      not_found: no trobat
-      not_locked: no estaba bloquejat
+      expired: "ha caducat, si us plau, sol·licita un nou"
+      not_found: "no trobat"
+      not_locked: "no estaba bloquejat"
       not_saved:
         one: '1 error ha impedit que aquest %{resource} es guardàs:'
         other: '%{count} errors impedeixen aquest %{resource} sigui desat:'

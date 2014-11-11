@@ -1,9 +1,10 @@
 "lt-LT":
   hello: Sveikas, pasauli
+  select_language: Please select your language
   computer_science: Informatika
   computer_science_edweek: Programavimo švietimo savaitė
   csedweek_dates: Gruodžio 9-15, 2013
-  n_have_learned_an_hoc: "<h1>#</h1><h3>išbandė</h3><h2>Vienos Valandos Kodą&trade;</h2>"
+  n_have_learned_an_hoc: <h1>#</h1><h3>išbandė</h3><h2>Vienos Valandos Kodą&trade;</h2>
   anybody_can_learn: Išmokti gali kiekvienas.
   learn_now: Išmokite dabar
   petition_message: Kiekvienas mokinys turėtų turėti galimybę mokytis programavimo
@@ -43,7 +44,7 @@
     ir paprastus algoritmus.
   all_ages: Visoms amžiaus grupėms
   beginner: Pradedantiesiems
-  n_participants: "# dalyviai"
+  n_participants: '# dalyviai'
   go: Eiti
   thank_you_: Ačiū!
   congratulations: Sveikiname!
@@ -63,9 +64,9 @@
   beyond_hour_message: Tęskite mokydamiesi mūsų <a href='http://studio.code.org'>kitus
     kursus</a>, arba pasirinkite kitą <a href='/learn/beyond'>programavimo mokymosi
     kursą</a>.
-  leaderboards_for_hoc: "„Programavimo valandos“ lyderių sąrašas."
+  leaderboards_for_hoc: „Programavimo valandos“ lyderių sąrašas.
   support_url: http://support.code.org/
-  country: "Šalis"
+  country: Šalis
   city: Miestas
   gender: Lytis
   boys: Berniukai
@@ -80,7 +81,7 @@
   beyond_an_hour: Užbaigusiems „Programavimo valandą“ >
   get_started: Pradėti
   i_agree: Sutinku
-  participant_select: "-Pasirinkite-"
+  participant_select: -Pasirinkite-
   participant_student: Mokinys
   participant_parent: Vienas iš tėvų
   participant_educator: Pedagogas
@@ -99,7 +100,7 @@
   learn_next_level: Pereiti į kitą etapą
   learn_online: Išmėginkite kitus internetinius kursus
   learn_classes: Suraskite kursus savo gyvenvietėje
-  hoc_is_here: "#HourOfCode jau čia – išmėginkite! @codeorg"
+  hoc_is_here: '#HourOfCode jau čia – išmėginkite! @codeorg'
   just_did_hoc: 'Aš užbaigiau #HourOfCode - pažiūrėk! @codeorg'
   learn_hoc: Mokykitės „Programavimo valandos“ kurse
   beyond_hoc: Užbaigusiems „Programavimo valandą“
@@ -109,11 +110,11 @@
   help_recruit_coders: Padėkite mums įdarbinti daugiau programuotojų!
   help_recruit: Padėkite mums rasti daugiau programuotojų!
   lines_of_code: DAUGIAU NEI <b># KODO EILUČIŲ</b> IKI ŠIOL PARAŠYTA.
-  lines_of_code_alt: "<b>#</b> KODO EILUČIŲ PARAŠĖ MOKINIAI"
+  lines_of_code_alt: <b>#</b> KODO EILUČIŲ PARAŠĖ MOKINIAI
   who_has_done_hoc: 'Kas užbaigė #HourOfCode? @codeorg'
-  hoc_leaderboards: "„Programavimo valandos“ lyderiai"
-  students_and_lines: "%{students} mokinių užbaigė „Programavimo valandą“ ir parašė
-    %{lines} eilučių kodo."
+  hoc_leaderboards: „Programavimo valandos“ lyderiai
+  students_and_lines: '%{students} mokinių užbaigė „Programavimo valandą“ ir parašė
+    %{lines} eilučių kodo.'
   start_hoc: Pradėkime „Programavimo valandos“ kursą
   contact_form_topic_press: Press/media (interview or speaking engagement)
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
@@ -202,7 +203,7 @@
   dashboard_landing_progress_biggest: Didžiausios grupės pažanga.
   dashboard_landing_view_progress: Peržiūrėti %{biggest_section} pažangą
   dashboard_landing_available_title: Galimi kursai
-  dashboard_landing_available_courses: "Šiuos kursus gali bandyti jūsų mokiniai."
+  dashboard_landing_available_courses: Šiuos kursus gali bandyti jūsų mokiniai.
   dashboard_landing_loading: Kraunama...
   dashboard_action_edit: Redaguoti
   dashboard_action_save: Išsaugoti
@@ -245,8 +246,8 @@
   dashboard_sections_switch_section: 'Pasirinkti grupę:'
   dashboard_students_add_student: Pridėti mokinį
   dashboard_students_add_students: Pridėti daug mokinių
-  dashboard_students_add_multiple: "Įveskite ar įkopijuokite mokinių vardus - po vieną
-    eilutėje:"
+  dashboard_students_add_multiple: 'Įveskite ar įkopijuokite mokinių vardus - po vieną
+    eilutėje:'
   dashboard_students_new_section: Sukūrėte naują grupę! Dabar galite pridėt mokinius
     <b>po vieną (Add student)</b> arba <b>po daug (Add multiple students)</b> - žr
     mygtukus viršuje.
@@ -294,7 +295,7 @@
   dashboard_framework: Framework
   dashboard_standards: Standartai
   dashboard_implementation_guide: Implementation Guide
-  dashboard_glossary: "Žodynėlis"
+  dashboard_glossary: Žodynėlis
   dashboard_classroom_strategies: Klasės darbo organizavimo strategijos
   dashboard_debugging: 'Programos derinimas (klaidų ieškojimas):'
   dashboard_puzzle_solving: 'Galvosūkių sprendimas:'
@@ -302,7 +303,7 @@
   dashboard_teacher_worksheet: mokytojo darbo lapas
   dashboard_grade_k: K
   dashboard_grade_other: Kita
-  dashboard_login_word: "žodžiai"
+  dashboard_login_word: žodžiai
   dashboard_login_picture: paveikslėlis
   dashboard_login_none: El. pašto adresas
   dashboard_new_password: naujas slaptažodis

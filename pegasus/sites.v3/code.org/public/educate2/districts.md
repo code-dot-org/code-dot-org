@@ -1,6 +1,6 @@
 ---
 title: District partnerships
-nav: educate_nav
+nav: educate2_nav
 social:
   "og:description": "Partner with Code.org to bring K-12 computer science to your district."
   "og:image": "http://code.org/images/code-logo-640x640.png"
@@ -11,7 +11,7 @@ social:
   "og:video:height": ""
   "og:video:type": ""
 ---
-# Partner with Code.org to bring K-12 computer science to your district
+# Partner with Code.org to bring computer science in grades K-12 to your district
 
 ## Existing partners
 
@@ -31,7 +31,7 @@ social:
 1. Professional development for teachers (*including stipends*)
 2. Nationally-recognized courses and curriculum in a blended-learning environment
 3. Materials to promote computer science to parents/students
-4. Support for all grade levels K-12
+4. Support for all grade K-12
 <br />
 	
 

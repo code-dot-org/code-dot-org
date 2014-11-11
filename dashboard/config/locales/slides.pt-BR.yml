@@ -35,9 +35,9 @@
           vai usá-los para criar o seu programa.
       9:
         image: notes/hoc1_9.jpg
-        text: "À direita você tem sua área de trabalho, onde você vai arrastar os
-          blocos da caixa de ferramentas para criar o seu programa. Para excluir um
-          bloco, arraste-o para a lixeira no canto."
+        text: À direita você tem sua área de trabalho, onde você vai arrastar os blocos
+          da caixa de ferramentas para criar o seu programa. Para excluir um bloco,
+          arraste-o para a lixeira no canto.
       10:
         image: notes/hoc1_10.jpg
         text: Cada bloco é uma instrução. Se você arrastar um bloco "avance" para
@@ -157,8 +157,8 @@
         text: Ao invés de arrastar 5 blocos "avance"...
       5:
         image: notes/hoc2_5.jpg
-        text: Podemos colocar o bloco "Avançar" dentro do bloco "repetir" e escrever
-          um número no bloco para dizer quantas vezes repetir.
+        text: Podemos colocar o bloco "avance" dentro do bloco "repita" e escrever
+          um número no bloco para definir o número de repetições.
       6:
         image: notes/hoc2_6.jpg
         text: 'E isso é importante: você pode colocar mais de um comando dentro de

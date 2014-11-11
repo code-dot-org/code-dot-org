@@ -24,7 +24,7 @@
           Multi & Match: 'Multi & Match'
           K-1 Flappy: K-1 Flappy
           Flappy non blockly: "Flappy non blockly"
-          title: 'Course 1 - For early readers'
+          title: "Course 1"
           Artist 2: "Artist 2"
           Happy Maps: "Happy Maps"
           Move it, Move it: Move it, Move it
@@ -40,7 +40,7 @@
           "Maze: Loops": 'Maze: Loops'
           "Bee: Loops": 'Bee: Loops'
           "Studio: Create a Story": 'Play Lab: Create a Story'
-          description_short: "Course 1 is designed for early readers in the lower elementary grades."
+          description_short: "Course 1 is designed for early readers. Recommended for grades K-1."
           "Artist: Loops": 'Artist: Loops'
         course2:
           The Maze: "迷宮"
@@ -76,7 +76,7 @@
           "Bee: Debugging": 'Bee: Debugging'
           "Artist: Debugging": 'Artist: Debugging'
           "Bee: Conditionals": 'Bee: Conditionals'
-          description_short: "Course 2 is designed for students who can read in the lower and middle elementary grades."
+          description_short: 'Course 2 is designed for students who can read.  Recommended for grades 2-5.'
           "Artist: Sequence2": 'Artist: Sequence2'
           "Maze: Sequence2": 'Maze: Sequence2'
           "Artist: Nested Loops": 'Artist: Nested Loops'
@@ -117,7 +117,7 @@
           "Farmer: While Loops": 'Farmer: While Loops'
           "Bee: Nested Loops": 'Bee: Nested Loops'
           "Bee: Debugging": 'Bee: Debugging'
-          description_short: "Students taking Course 3 should have already taken Course 2."
+          description_short: 'Course 3 is a follow-up to Course 2.  Recommended for grades 4-5.'
           Maze2: "Maze2"
           Artist2: "Artist2"
           "Artist: Functions2": 'Artist: Functions2'
@@ -137,6 +137,26 @@
           Assessments: "Assessments"
           Unit 1: "Unit 1"
           Unit 2: "Unit 2"
+          Ninja Cat and the Coordinate Plane: "Ninja Cat and the Coordinate Plane"
+          "Calc: Circles of Evaluation": 'Calc: Circles of Evaluation'
+          "Artist: Strings and Images": 'Artist: Strings and Images'
+          Contracts: "Contracts"
+          "Artist: Writing Contracts": 'Artist: Writing Contracts'
+          "Calc: Defining Variables": 'Calc: Defining Variables'
+          "Play Lab: Defining Variables": 'Play Lab: Defining Variables'
+          The Design Recipe: "The Design Recipe"
+          "Artist: Defining Functions": 'Artist: Defining Functions'
+          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
+          "Artist: Functions": 'Artist: Functions'
+          "Play Lab: Animation": 'Play Lab: Animation'
+          Booleans: "Booleans"
+          "Play Lab: Booleans": 'Play Lab: Booleans'
+          "Calc: Boolean Operators": 'Calc: Boolean Operators'
+          "Play Lab: Boolean Operators": 'Play Lab: Boolean Operators'
+          Conditionals and Piecewise Functions: "Conditionals and Piecewise Functions"
+          "Artist: Conditionals": 'Artist: Conditionals'
+          Collision Detection and the Distance Formula: "Collision Detection and the Distance Formula"
+          "Play Lab: Collision Detection": 'Play Lab: Collision Detection'
         playlab:
           title: "Play Lab"
           description: "Create a story or make a game with Play Lab!"
@@ -147,3 +167,42 @@
           description: "Draw cool pictures and designs with the Artist!"
           Artist: "Artist"
           description_short: "Draw cool pictures and designs with the Artist!"
+        course4:
+          description_short: "Students taking Course 4 should have already taken Courses 2 and 3."
+          description: "Course 4 is designed for students who have taken Course 2 and 3. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8."
+          "Artist: Variables": 'Artist: Variables'
+          "Bee: For Loops": 'Bee: For Loops'
+          title: "Course 4"
+          "Algorithms: Tangrams": 'Algorithms: Tangrams'
+          Variables: "變數類別"
+          "Play Lab: Variables": 'Play Lab: Variables'
+          "Play Lab: Functions with Parameters": 'Play Lab: Functions with Parameters'
+          "Bee: Functions with Parameters": 'Bee: Functions with Parameters'
+          "Artist: For Loops": 'Artist: For Loops'
+          "Play Lab: For Loops": 'Play Lab: For Loops'
+          "Artist: Functions": 'Artist: Functions'
+          "Artist: Functions with Paraqmeters": 'Artist: Functions with Paraqmeters'
+          "Unplugged: Tangrams": 'Unplugged: Tangrams'
+          Artist: "Artist"
+          Bee: "Bee"
+          "Unplugged: Envelope Variables": 'Unplugged: Envelope Variables'
+          "Unplugged: Madlibs": 'Unplugged: Madlibs'
+          "Unplugged: For Loop Fun": 'Unplugged: For Loop Fun'
+          "Unplugged: Songwriting with Parameters": 'Unplugged: Songwriting with Parameters'
+          "Artist: Functions with Parameters": 'Artist: Functions with Parameters'
+          "Unplugged: Binary": 'Unplugged: Binary'
+          Bee Binary: "Bee Binary"
+          Farmer Binary: "Farmer Binary"
+          Maze and Bee: "Maze and Bee"
+        Course4pre:
+          description_short: "A brief rampup of concepts for students who have not taken Course 2 and 3."
+          Course 4 Prerequisite: "Course 4 Prerequisite"
+          "Maze: Sequence": '迷宮: 序列'
+          "Artist: Sequence": 'Artist: Sequence'
+          "Artist: Loops": 'Artist: Loops'
+          "Bee: Conditionals": 'Bee: Conditionals'
+          "Artist: Nested Loops": 'Artist: Nested Loops'
+          "Farmer: While Loops": 'Farmer: While Loops'
+          "Bee: Nested Loops": 'Bee: Nested Loops'
+          "Artist: Functions": 'Artist: Functions'
+          "Bee: Debugging": 'Bee: Debugging'

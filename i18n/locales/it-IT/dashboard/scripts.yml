@@ -1,73 +1,73 @@
-it:
+"it":
   data:
     script:
       name:
         test:
           "Jigsaw: Learn to drag and drop": 'Puzzle: Impara come trascinare e rilasciare (drag and drop)'
-          The Maze: Il Labirinto
-          Multi: Risposte Multiple
-          Match: Corrispondenze
-          Math Image: Immagini Matematiche
-          title: Corso di Prova
-          description: Solo un corso di prova interno.
+          The Maze: "Il Labirinto"
+          Multi: "Risposte Multiple"
+          Match: "Corrispondenze"
+          Math Image: "Immagini Matematiche"
+          title: "Corso di Prova"
+          description: "Solo un corso di prova interno."
         course1:
           "Jigsaw: Learn to drag and drop": 'Puzzle: Impara come trascinare e rilasciare (drag and drop)'
           "Maze: Sequence": 'Labirinto: Sequenza'
           "Maze: Debugging": 'Labirinto: Correzione di Errori'
           "Artist 1: Intro": 'Artista 1: Introduzione'
-          Artists 2: Artista 2
-          Spelling Bee: Ape Sapiente
-          Spelling Bee not blockly: Ape Sapiente senza blocchi
+          Artists 2: "Artista 2"
+          Spelling Bee: "Ape Sapiente"
+          Spelling Bee not blockly: "Ape Sapiente senza blocchi"
           "Bee 1: Intro": 'Ape 1: Introduzione'
           "Maze 2: Loops": 'Labirinto 2: Cicli'
           "Bee 2: Loops": 'Ape 2: Cicli'
           Multi & Match: Risposte Multiple e Corrispondenze
           K-1 Flappy: K-1 Flappy
-          Flappy non blockly: Flappy senza blocchi
-          title: Corso 1
-          Artist 2: Artista 2
-          Happy Maps: Le Mappe Felici
+          Flappy non blockly: "Flappy senza blocchi"
+          title: "Course 1"
+          Artist 2: "Artista 2"
+          Happy Maps: "Le Mappe Felici"
           Move it, Move it: Muovilo, Muovilo
           "Real-life Algorithms: Plant a Seed": 'Algoritmi della Vita Reale: Piantare un Seme'
-          Building a Foundation: Costruire le Fondamenta
-          Getting Loopy: Diventare Ripetitivi
-          The Big Event: Il Grande Evento
-          Going Places Safely: Visitare Luoghi in Modo Sicuro
-          description: Il Corso 1 è progettato per permettere a studenti di prima elementare che stanno iniziando a leggere di creare programmi che li aiutano a collaborare con altri, a sviluppare capacità di risolvere problemi, e a perseverare su problemi difficili. Alla fine del corso gli studenti creano i loro giochi o le loro storie, che possono condividere. Il corso è raccomandato per la prima elementare.
+          Building a Foundation: "Costruire le Fondamenta"
+          Getting Loopy: "Diventare Ripetitivi"
+          The Big Event: "Il Grande Evento"
+          Going Places Safely: "Visitare Luoghi in Modo Sicuro"
+          description: "Il Corso 1 è progettato per permettere a studenti di prima elementare che stanno iniziando a leggere di creare programmi che li aiutano a collaborare con altri, a sviluppare capacità di risolvere problemi, e a perseverare su problemi difficili. Alla fine del corso gli studenti creano i loro giochi o le loro storie, che possono condividere. Il corso è raccomandato per la prima elementare."
           "Bee: Sequence": 'Ape: Sequenza'
           "Artist: Sequence": 'Artista: Sequenza'
           "Artist: Shapes": 'Artista: Forme'
           "Maze: Loops": 'Labirinto: Cicli'
           "Bee: Loops": 'Ape: Cicli'
           "Studio: Create a Story": 'Laboratorio: Crea una Storia'
-          description_short: Il Corso 1 è per studenti di prima elementare che stanno iniziando a leggere.
+          description_short: "Course 1 is designed for early readers. Recommended for grades K-1."
           "Artist: Loops": 'Artista: Cicli'
         course2:
-          The Maze: Il Labirinto
-          Suzi: Suzi
+          The Maze: "Il Labirinto"
+          Suzi: "Suzi"
           The Artist: "L'artista"
           Artist Debugging: 'Artista: Correzione di Errori'
-          Bounce: Rimbalzo
+          Bounce: "Rimbalzo"
           "Studio: Create a Story": 'Laboratorio: Crea una Storia'
           Artist Loops: 'Artista: Cicli'
           Bee Conditionals: 'Ape: Istruzioni Condizionali'
-          Flappy: Flappy
-          title: Corso 2
+          Flappy: "Flappy"
+          title: "Corso 2"
           Bee Loops: 'Ape: Cicli'
           Artist Functions: 'Artista: Funzioni'
           The Artist Debugging: "L'Artista: Correzione di Errori"
           Bee Debugging: 'Ape: Correzione di Errori'
           Bee Functions: 'Ape: Funzioni'
           Maze Loops: 'Labirinto: Cicli'
-          Graph Paper Programming: Programmazione su carta a quadretti
+          Graph Paper Programming: "Programmazione su carta a quadretti"
           "Real-life Algorithms: Paper Planes": 'Algoritmi della Vita Reale: Aeroplani di Carta'
-          Getting Loopy: Diventare Ripetitivi
-          Relay programming: Programmazione a Staffetta
-          Conditionals: Condizionali
-          Binary Bracelets: Braccialetti Binari
-          The Big Event: Il Grande Evento
-          Your Digital Footprint: La tua Impronta Digitale
-          description: Il Corso 2 è progettato per studenti delle scuole elementari che hanno già imparato a leggere e non hanno precedenti esperienze di programmazione. Nel corso gli studenti creano programmi per risolvere problemi e sviluppare giochi interattivi o storie da condividere. Il corso è raccomandato dalla seconda alla quinta elementare.
+          Getting Loopy: "Diventare Ripetitivi"
+          Relay programming: "Programmazione a Staffetta"
+          Conditionals: "Condizionali"
+          Binary Bracelets: "Braccialetti Binari"
+          The Big Event: "Il Grande Evento"
+          Your Digital Footprint: "La tua Impronta Digitale"
+          description: "Il Corso 2 è progettato per studenti delle scuole elementari che hanno già imparato a leggere e non hanno precedenti esperienze di programmazione. Nel corso gli studenti creano programmi per risolvere problemi e sviluppare giochi interattivi o storie da condividere. Il corso è raccomandato dalla seconda alla quinta elementare."
           "Maze: Sequence": 'Labirinto: Sequenza'
           "Artist: Sequence": 'Artista: Sequenza'
           "Maze: Loops": 'Labirinto: Cicli'
@@ -76,15 +76,15 @@ it:
           "Bee: Debugging": 'Ape: Correzione di Errori'
           "Artist: Debugging": 'Artista: Correzione di Errori'
           "Bee: Conditionals": 'Ape: Istruzioni Condizionali'
-          description_short: Il Corso 2 è per studenti delle scuole elementari che sanno già leggere.
+          description_short: 'Course 2 is designed for students who can read.  Recommended for grades 2-5.'
           "Artist: Sequence2": 'Artista: Sequenza 2'
           "Maze: Sequence2": 'Labirinto: Sequenza 2'
           "Artist: Nested Loops": 'Artista: Cicli Annidati'
         course3:
-          The Maze: Il Labirinto
+          The Maze: "Il Labirinto"
           "Studio: Create a Story": 'Laboratorio: Crea una Storia'
           The Artist: "L'artista"
-          title: Corso 3
+          title: "Corso 3"
           Artist Functions: 'Artista: Funzioni'
           Artist For Loops: 'Artista: Cicli con Contatore'
           Artist Nested Loops: 'Artista: Cicli Annidati'
@@ -94,21 +94,21 @@ it:
           Bee Debugging: 'Ape: Correzione di Errori'
           Bee Functions: 'Ape: Funzioni'
           Artist Functions with Params: 'Artista: Funzioni con Parametri'
-          Bounce: Rimbalzo
+          Bounce: "Rimbalzo"
           Maze Conditionals: 'Labirinto: Istruzioni Condizionali'
           Artist Functions with Parameters: 'Artista: Funzioni con Parametri'
-          Computational Thinking: Pensiero computazionale
-          Functional Suncatchers: Acchiappa-Sole Funzionale
-          Songwriting Parameters: Parametri per la Composizione di Canzoni
-          Dice Race: Gara con i Dadi
-          Internet: Internet
-          Crowdsourcing: Intelligenza Collettiva
-          Digital Citizenship: Cittadinanza Digitale
+          Computational Thinking: "Pensiero computazionale"
+          Functional Suncatchers: "Acchiappa-Sole Funzionale"
+          Songwriting Parameters: "Parametri per la Composizione di Canzoni"
+          Dice Race: "Gara con i Dadi"
+          Internet: "Internet"
+          Crowdsourcing: "Intelligenza Collettiva"
+          Digital Citizenship: "Cittadinanza Digitale"
           Farmer - While Loops: 'Agricoltore: Cicli "Mentre"'
-          description: Il Corso 3 è progettato per studenti che hanno già svolto il Corso 2. Gli studenti approfondiscono i concetti della programmazione introdotti nei corsi precedenti e imparano a definire soluzioni flessibili per problemi più complessi. Alla fine del corso gli studenti creano giochi interattivi e storie da condividere con tutti. Il corso è raccomandato per la quarta e quinta elementare.
+          description: "Il Corso 3 è progettato per studenti che hanno già svolto il Corso 2. Gli studenti approfondiscono i concetti della programmazione introdotti nei corsi precedenti e imparano a definire soluzioni flessibili per problemi più complessi. Alla fine del corso gli studenti creano giochi interattivi e storie da condividere con tutti. Il corso è raccomandato per la quarta e quinta elementare."
           "Studio: Create a Game": 'Laboratorio: Crea un Gioco'
-          Maze: Labirinto
-          Artist: Artista
+          Maze: "Labirinto"
+          Artist: "Artista"
           "Artist: Functions": 'Artista: Funzioni'
           "Bee: Functions": 'Ape: Funzioni'
           "Bee: Conditionals": 'Ape: Istruzioni Condizionali'
@@ -117,9 +117,9 @@ it:
           "Farmer: While Loops": 'Agricoltore: Cicli "Mentre"'
           "Bee: Nested Loops": 'Ape: Cicli Annidati'
           "Bee: Debugging": 'Ape: Correzione di Errori'
-          description_short: Gli studenti che seguono il Corso 3 dovrebbero aver già svolto il Corso 2.
-          Maze2: Labirinto 2
-          Artist2: Artista 2
+          description_short: 'Course 3 is a follow-up to Course 2.  Recommended for grades 4-5.'
+          Maze2: "Labirinto 2"
+          Artist2: "Artista 2"
           "Artist: Functions2": 'Artista: Funzioni 2'
           "Bee: Functions2": 'Ape: Funzioni 2'
           "Bee: Conditionals2": 'Ape: Istruzioni Condizionali 2'
@@ -129,21 +129,36 @@ it:
           "Bee: Nested Loops2": 'Ape: Cicli Annidati 2'
           "Bee: Debugging2": 'Ape: Correzione di Errori 2'
           "Artist: Patterns": 'Artista: Schemi'
-          Songwriting: Composizione di canzoni
+          Songwriting: "Composizione di canzoni"
         msm:
-          title: Matematica per la Scuola Media
-          description: Lavoro privato in corso per la Matematica per la Scuola Media.
-          Graph Paper Programming: Programmazione su carta a quadretti
-          Assessments: Valutazioni
-          Unit 1: Unità 1
-          Unit 2: Unità 2
+          title: "Matematica per la Scuola Media"
+          description: "Lavoro privato in corso per la Matematica per la Scuola Media."
+          Graph Paper Programming: "Programmazione su carta a quadretti"
+          Assessments: "Valutazioni"
+          Unit 1: "Unità 1"
+          Unit 2: "Unità 2"
         playlab:
-          title: Laboratorio
-          description: Crea una storia o inventa un gioco col Laboratorio!
-          Play Lab: Laboratorio
-          description_short: Crea una storia o inventa un gioco col Laboratorio!
+          title: "Laboratorio"
+          description: "Crea una storia o inventa un gioco col Laboratorio!"
+          Play Lab: "Laboratorio"
+          description_short: "Crea una storia o inventa un gioco col Laboratorio!"
         artist:
-          title: Artista
+          title: "Artista"
           description: "Disegna fantastiche immagini e decorazioni con l'artista!"
-          Artist: Artista
+          Artist: "Artista"
           description_short: "Disegna fantastiche immagini e decorazioni con l'artista!"
+        course4:
+          description_short: "Students taking Course 4 should have already taken Courses 2 and 3."
+          description: "Course 4 is designed for students who have taken Course 2 and 3. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8."
+          "Artist: Variables": 'Artist: Variables'
+          "Bee: For Loops": 'Bee: For Loops'
+          title: "Course 4"
+          "Algorithms: Tangrams": 'Algorithms: Tangrams'
+          Variables: "Variabili"
+          "Play Lab: Variables": 'Play Lab: Variables'
+          "Play Lab: Functions with Parameters": 'Play Lab: Functions with Parameters'
+          "Bee: Functions with Parameters": 'Bee: Functions with Parameters'
+          "Artist: For Loops": 'Artist: For Loops'
+          "Play Lab: For Loops": 'Play Lab: For Loops'
+          "Artist: Functions": 'Artista: Funzioni'
+          "Artist: Functions with Paraqmeters": 'Artist: Functions with Paraqmeters'

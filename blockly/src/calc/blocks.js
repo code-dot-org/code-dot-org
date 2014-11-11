@@ -26,7 +26,7 @@
 var msg = require('../../locale/current/calc');
 var commonMsg = require('../../locale/current/common');
 
-var mathBlocks = require('../mathBlocks');
+var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
 
 var functionalBlockUtils = require('../functionalBlockUtils');
 var initTitledFunctionalBlock = functionalBlockUtils.initTitledFunctionalBlock;
@@ -43,7 +43,7 @@ exports.install = function(blockly, blockInstallOptions) {
     return generator.variableDB_.getDistinctName(name, NAME_TYPE);
   };
 
-  mathBlocks.install(blockly, generator, gensym);
+  sharedFunctionalBlocks.install(blockly, generator, gensym);
 
   // change generation code for Calc version of math blocks
   modifyCalcGenerationCode(generator, 'functional_plus', '+');
@@ -91,7 +91,7 @@ function installCompute(blockly, generator, gensym) {
   blockly.Blocks.functional_compute = {
     helpUrl: '',
     init: function() {
-      initTitledFunctionalBlock(this, ' ', 'none', [
+      initTitledFunctionalBlock(this, msg.compute(), 'none', [
         { name: 'ARG1', type: 'Number' }
       ]);
     }

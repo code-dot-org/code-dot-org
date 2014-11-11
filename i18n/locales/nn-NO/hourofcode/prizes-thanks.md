@@ -6,4 +6,4 @@ title: Takk layout: wide
 
 # Tusen takk
 
-Hele skolen din er nå inn for å vinne et sett med bærbare datamaskiner (eller $10,000 for annen teknoogi).
+Heile skulen din er nå med i trekninga eit klasse-sett med bærbare datamaskiner (eller anna utstyr til ein verdi av 10.000 dollar).

@@ -7,13 +7,6 @@ def avatar_image(name,width=320)
   "/images/fit-#{width}/avatars/#{File.basename(path)}"
 end
 
-def avatar_image_thumbnail(name)
-  basename = name.downcase.gsub(/\W/, '_').gsub(/_+/, '_')
-  path = resolve_image("images/avatars/thumbnails/#{basename}_thumbnail")
-  return nil unless path
-  "/images/avatars/thumbnails/#{File.basename(path)}"
-end
-
 def authentication_required!(url=request.url)
   dont_cache
   return if dashboard_user

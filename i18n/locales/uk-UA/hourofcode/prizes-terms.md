@@ -18,11 +18,11 @@ Code.org зв'яжеться з організаторами після Годи
 
 ## Відео-чат із запрошеним оратором:
 
-Prize limited to K-12 classrooms in the U.S. and Canada only. To qualify, sign up your classroom by November 14, 2014. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligbile to win.
+Приз призначено для шкіл США та Канади. Щоб претендувати на приз, зареєструйте весь ваш клас до 14 листопада 2014 року. Code.org випадковим чином обере школи-переможці, надасть часові інтервали для веб-чату та узгодить технологічні деталі з відповідним вчителем. Щоб претендувати на приз, не потрібно реєструвати всю школу. Приз можуть отримати як для державні, так і приватні школи.
 
 ## Клас ноутбуків (або іншої техніки вартістю $10,000):
 
-Приз призначений лише для державних 12-річних шкіл США. To qualify, your entire school must register for the Hour of Code by November 14, 2014. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2014.
+Приз призначений лише для державних 12-річних шкіл США. Щоб претендувати на приз, зареєструйте всю вашу школу до 14 листопада 2014 року. Одна школа у кожному зі штатів США виграє комп'ютерний клас. Code.org проведе вибір і повідомить переможців електронною поштою до 1 грудня 2014 року.
 
 Уточнимо - це не розіграш чи лотерея.
 

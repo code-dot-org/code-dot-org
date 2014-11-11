@@ -1,0 +1,21 @@
+{
+  "circleBlockTitle":"círculo (raio, estilo, cor)",
+  "displayBlockTitle":"display",
+  "ellipseBlockTitle":"elipse (largura, altura, estilo, cor)",
+  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"display\" block?",
+  "overlayBlockTitle":"sobreposição (superior, inferior)",
+  "placeImageBlockTitle":"lugar-imagem (x, y, imagem)",
+  "rectangleBlockTitle":"retângulo (largura, altura, estilo, cor)",
+  "rotateImageBlockTitle":"rotacionar (graus, imagem)",
+  "scaleImageBlockTitle":"escala (fator)",
+  "squareBlockTitle":"quadrado (tamanho, estilo, cor)",
+  "starBlockTitle":"pentagrama (raio, estilo, cor)",
+  "stringAppendBlockTitle":"cadeia de caracteres-acréscimo (primeira, segunda)",
+  "stringLengthBlockTitle":"cadeia de caracteres-comprimento (cadeia de caracteres)",
+  "textBlockTitle":"texto (cadeia de caracteres, tamanho, cor)",
+  "triangleBlockTitle":"triângulo (tamanho, estilo, cor)",
+  "underlayBlockTitle":"subjacente (inferior, superior)",
+  "outline":"estrutura de tópicos",
+  "solid":"sólido",
+  "string":"cadeia de caracteres"
+}

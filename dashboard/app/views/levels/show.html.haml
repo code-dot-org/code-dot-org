@@ -16,10 +16,8 @@
 
 - if @game.unplugged?
   = render partial: "levels/unplug", locals: { app: @game.app }
-- elsif @game.multi?
-  = render partial: "levels/multi", locals: { app: @game.app }
-- elsif @game.match?
-  = render partial: "levels/match", locals: { app: @game.app }
+- elsif @level.is_a?(DSLDefined)
+  = render partial: "levels/#{@level.class.to_s.underscore}"
 - else
   -# Solution and start blocks may be nil if they don't exist for this level.
   - @solution_blocks = '' if ! defined? @solution_blocks
@@ -28,4 +26,6 @@
 - if Rails.env.production? && request.path == hoc_chapter_path(chapter: 1)
   -# special tracking image to make sure a cookie is set when hoc starts (/hoc/1)
   = image_tag('http://code.org/api/hour/begin_codeorg.png')
-= link_to "edit", edit_level_path(@level) if @level.is_a?(Match) && current_user.try(:admin?)
+
+- if current_user.try(:admin?)
+  = render partial: 'levels/admin'

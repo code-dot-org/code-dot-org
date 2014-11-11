@@ -32,7 +32,7 @@
     submit: Skriv huske-ord
   appname: Code.org
   stage: trin
-  stage_number: Stage %{number}
+  stage_number: Fase %{number}
   puzzle: Puslespil
   trophies: trofæer
   courses: kurser
@@ -63,10 +63,12 @@
     need_confirmation: Har ikke modtaget bekræftelses instruktioner?
     need_unlock: Ikke modtaget lås op instruktioner?
   signup_form:
-    overview_student: Tilmelde dig en konto til at spore dine fremskridt.
-    overview_teacher: Undervis i datalogi i dit klasseværelse ved tilmelding til en
-      konto. <p/> Du vil være i stand til at spore dine studerendes fremskridt og
-      få belønninger.
+    overview_student: Tilmeld dig en konto til at spore dine fremskridt. Din email
+      bruges primært til at tillade log ind og til gendannelse af din adgangskode.
+      For mere information, se vores <a href="http://code.org/privacy">Privat Politik</a>.
+    overview_teacher: Undervis computer videnskab i dit klasseværelse ved tilmelding
+      til en konto. <p/> Du vil være i stand til at tilføje dine elever og spore deres
+      fremdrift.
     no_signup_message: Du kan <a target="_blank" href="http://learn.code.org">gennemse
       de forskellige faser og gåder</a>, men du bliver nødt til at tilmelde dig for
       at gemme dine fremskridt.
@@ -81,7 +83,7 @@
     gender: Køn (valgfri)
     birthday: Fødselsdag (valgfri)
     age: Alder
-    user_type: Are you a student or teacher?
+    user_type: Er du studerende eller lærer?
     submit: Tilmeld
     teacher: Er du en lærer?
     valid_username: Tilgængelig!
@@ -90,10 +92,11 @@
     valid_password: Gyldig adgangskode!
     invalid_password: Adgangskoden skal være på mindst 6 tegn
     mismatch_password: De to adgangskoder du har indtastet stemmer ikke overens
-    student_terms: Jeg accepterer at være bundet af de Code.org <a href='http://code.org/tos'>
-      Servicevilkår</a>. Hvis jeg er under 13 år, bekræfter jeg ved at indsende denne
-      formular, at jeg har en lærer, mine forældre eller værges tilladelse til at
-      benytte Code.org.
+    student_terms: Jeg accepterer Code.org <a href='http://code.org/tos'>Servicevilkår</a>.
+      Hvis jeg er under 13 år, bekræfte jeg ved at indsende denne formular, at jeg
+      har mine forældre eller værges tilladelse til at benytte Code.org. <br/>For
+      brugere under 13, er e-mail-adresser ikke gemt i en form, der tillader os at
+      kontakte dem.
     teacher_terms: Jeg accepterer at være tilsluttet Code.org <a href='http://code.org/tos'>
       Servicevilkår</a>.
     additional_information: Vi har brug for nogle ekstra oplysninger til at fortsætte
@@ -136,12 +139,12 @@
       %{name}
   follower:
     invite_sent: Invitation sendt
-    added_teacher: "%{name} er tilføjet som din lærer"
+    added_teacher: '%{name} er tilføjet som din lærer'
     registered: Du er registreret til %{section_name}.
     error:
       signed_in: Log ud inden du fortsætter
       username_not_found: Brugernavn %{username} blev ikke fundet
-      username_in_use: "%{username} bruges allerede, vær venlig og vælg et andet"
+      username_in_use: '%{username} bruges allerede, vær venlig og vælg et andet'
       no_teacher: Vi kunne ikke finde nogen brugere der er logget ind med %{teacher_email_or_code}'.
         Vær venlig og spørg dem om at lave en bruger, og derefter prøv at tilføje
         dem.
@@ -185,7 +188,7 @@
       msg_publicschool: Bekræft venligst, at du er en Amerikansk offentlig skolelærer.
       msg_visit_website: Besøg Hjemmeside
     providers:
-      apple_itunes: "$10 iTunes Gift Card"
+      apple_itunes: $10 iTunes Gift Card
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10GB plads på Dropbox
@@ -194,7 +197,7 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: "$10 Skype credit"
+      skype: $10 Skype credit
     msg:
       choose: 'Choose a prize:'
       choose_teacher: 'Click on the logo below to claim your prize:'
@@ -241,20 +244,20 @@
     edit: Rediger
     edit_model: Rediger %{model}
     update: Opdater
-    destroy: "Ødelæg"
+    destroy: Ødelæg
     back: Tilbage
     confirm: Er du sikker?
-    created: "%{model} blev oprettet."
-    updated: "%{model} blev opdateret."
-    destroyed: "%{model} blev slettet."
+    created: '%{model} blev oprettet.'
+    updated: '%{model} blev opdateret.'
+    destroyed: '%{model} blev slettet.'
     access_denied: Du har ikke adgang til denne %{model}.
   nav:
     header:
       finished_hoc: Jeg har afsluttet min En Times Kodning
       sign_in_to_save: Log ind for at gemme fremskridt
       free_play:
-        playlab: Make an App
-        artist: Draw Something
+        playlab: Lav en App
+        artist: Tegn noget
     user:
       classroom: Mine elever
       label: Hej %{username}
@@ -273,13 +276,13 @@
       puzzle_map: Etaper
       prizes: Indsaml alle %{total_trophies} trofæer og vind præmier!
       prize_earned: Alle %{total_trophies} trofæer indsamlet. Prisen vundet!
-      prize_us_only: "(Kun for amerikanske studerende)"
+      prize_us_only: (Kun for amerikanske studerende)
       prizes_link: Mere info
   teacher:
     title:
       one: 'Din lærer:'
       other: 'Dine lærere:'
-    remove: "(Fjern lærer)"
+    remove: (Fjern lærer)
     confirm:
       remove: Er du sikker på, at du vil fjerne denne lærer?
     tools: Lærer redskaber
@@ -335,18 +338,18 @@
     rollup: Fremskridts oversigt
     activity: Seneste klasse aktivitet
     user_not_found: Lærer eller elev kunne ikke findes
-    cant_remove_student_no_email: "%{student_name} kan ikke fjernes som din studerende,
-      fordi %{student_name} ikke har registreret en e-mailadresse"
-    cant_remove_teacher_no_email: "%{teacher_name} kan ikke fjernes som din lærer,
-      fordi du ikke har registreret en e-mailadresse"
-    student_teacher_disassociated: "%{teacher_name} er blevet fjernet som lærer for
-      %{student_name}"
+    cant_remove_student_no_email: '%{student_name} kan ikke fjernes som din studerende,
+      fordi %{student_name} ikke har registreret en e-mailadresse'
+    cant_remove_teacher_no_email: '%{teacher_name} kan ikke fjernes som din lærer,
+      fordi du ikke har registreret en e-mailadresse'
+    student_teacher_disassociated: '%{teacher_name} er blevet fjernet som lærer for
+      %{student_name}'
   user:
     email_confirm_needed: 'E-mailadresse er ikke blevet bekræftet:'
     email_resend_confirm: Gensend bekræftelses instruktioner
-    new_password_hint: "(Efterlad blank hvis du ikke ønsker at ændre det)"
-    current_password_hint: "(vi har brug for din nuværende adgangskode til at bekræfte
-      dine ændringer)"
+    new_password_hint: (Efterlad blank hvis du ikke ønsker at ændre det)
+    current_password_hint: (vi har brug for din nuværende adgangskode til at bekræfte
+      dine ændringer)
     cancel:
       title: Annuller min konto
       hint: Ulykkelig?
@@ -359,9 +362,9 @@
     show_more: Vis mere
     classroom_activity: Unplugged aktivitet
   home:
-    title: Code Studio
-    all_courses: Overview of Courses 1, 2, and 3
-    lesson_plans: Lesson plans
+    title: Kode Værktøj
+    all_courses: Oversigt over kursus 1, 2 og 3
+    lesson_plans: Lektionsplaner
     signin_message: Allerede registreret? %{link}
     student_reg_link: Tilmelding for studerende
     teacher_reg_link: Tilmelding for studerende
@@ -397,19 +400,19 @@
     test_videos_help: Teste vores nye video-afspiller på din skole
     try_beta_courses: Nyt! Prøv vores beta kurser for K-5 elever
     use_as_teacher: Bruge dette websted som en lærer
-    heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
-    heading_apps: "<h2>Sjov for</h2><h1>Alle</h1>"
-    heading_legacy: "<h2>Our previous course for</h2><h1>Existing Students</h1>"
+    heading_elementary: <h2>20 timers kurser for</h2><h1>Basis studerende</h1>
+    heading_apps: <h2>Sjov for</h2><h1>Alle</h1>
+    heading_legacy: <h2>Vores generelle kursus for</h2><h1>Alle aldre</h1>
     gallery:
-      your_turtle: My Art
-      your_studio: My Apps
+      your_turtle: Mit kunstværk
+      your_studio: Mine Apps
   gender:
     male: Mand
     female: Kvinde
     none: Foretrækker ikke at svare
   user_type:
     student: studerende
-    teacher: Teacher
+    teacher: Lærer
   footer:
     help_from_html: Ingeniører fra Google, Microsoft, Facebook og Twitter bidraget
       til at skabe denne øvelse. Oversat af Jan Borup Coyle.
@@ -419,7 +422,7 @@
     feedback: Giv feedback
     translate: Hjælp os med at oversætte til dit sprog
     support: Support
-    support_url: http://support.code.org
+    support_url: http://support.Code.org
     tos: Termer
     privacy: Privatlivspolitik
     secure: Sikker Version
@@ -429,7 +432,7 @@
     teacher: Se løsningen
     auth_error: Du har ikke rettigheder til at se løsningen.
     submit: Opdater kunstner placering
-    direction: Start retning
+    direction: Start retning (i grader)
   video:
     tab: Video.
     notes: Ingen video? Vis noter.
@@ -439,39 +442,39 @@
   compatability:
     working:
       header: Vi arbejder på at understøtte din browser.
-      message: Code.org uses modern web technology. This makes the site faster to
-        use. Your browser doesn't support all the features required, and you may experience
-        issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting
-        any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade
-        your browser to a supported version</a>.
-      hide_this_warning: Hide this warning
+      message: Code.org bruger moderne web-teknologi. Dette gør stedet hurtigere at
+        bruge. Din browser understøtter ikke alle de funktioner, der kræves, og du
+        kan opleve problemer med denne del af webstedet. Please hjælp os ved at <a
+        href='%{report_issue_url}'> rapportere eventuelle problemer, du finder</a>.
+        Du kan også <a href='%{supported_browsers_url}'> opgradere din browser til
+        en understøttet version</a>.
+      hide_this_warning: Skjul denne advarsel
     upgrade:
       header: Vær venlig at opgradere din browser.
-      message: Code.org uses modern web technology. This makes the site faster to
-        use. Unfortunately your browser doesn't support all the features required
-        to run this part of the site.<br/><br/>Install a browser on our supported
-        browsers list to continue. You can <a href='#'>try viewing the page</a>, but
-        expect functionality to be broken.
-      button: Take me to the list of supported browsers
+      message: Code.org bruger moderne web-teknologi. Dette gør stedet hurtigere at
+        bruge. Desværre din browser ikke understøtter alle de funktioner, der kræves
+        for at køre denne del af webstedet. <br/> <br/>Installere en browser på vores
+        understøttede browsere listen fortsætter. Du kan <a href='#'> prøve at have
+        set siden</a>, men forventer funktionalitet skal brydes.
+      button: Vis mig til listen over understøttede browsere
   slow_loading: Dette tager længere tid end normalt...
   try_reloading: Prøv at genindlæse siden
   next_stage: Færdig! Fortsæt til næste fase
-  download_pdf: "Åben lektionsplan"
+  download_pdf: Åben lektionsplan
   view_lesson_plan: Se lektionsplan
   pdf_download: Download PDF
   share_code:
     title: Klik på 'Kør' for at se min program i aktion
     bounce_og_title: Tjek mit hoppe spil
     flappy_og_title: Tjek mit Flappy spil
-    studio_og_title: Tjek min historie
+    studio_og_title: Tjek min Spille-Lab-App
     og_description: Jeg skrev selv koden med Code.org
-    phone_number_not_allowed: It looks like there is a phone number in it. Try changing
-      the text.
-    address_not_allowed: It looks like there is an address in it. Try changing the
-      text.
-    email_not_allowed: It looks like there is an email in it. Try changing the text.
-    profanity_not_allowed: It looks like there is profanity in it. Try changing the
-      text.
+    phone_number_not_allowed: Det ser ud som om der er et telefonnummer i det. Prøv
+      at ændre teksten.
+    address_not_allowed: Det ser ud som om der er en adresse i det. Prøv at ændre
+      teksten.
+    email_not_allowed: Det ser ud som om der er en e-mail i det. Prøv at ændre teksten.
+    profanity_not_allowed: Det ser ud til der er blasfemi. Prøv at ændre teksten.
   builder:
     created: Du har oprettet et nyt script.
     destroyed: Du ødelagde et script.
@@ -496,17 +499,17 @@
       body: Prøv vores 20-timers Introduktion til datalogi kursus.
   gallery:
     students_drew_these_with_code: Studerende tegnede disse med kode!
-    students_made_these_with_code: Students made these with code!
+    students_made_these_with_code: Studerende lavet disse med kode!
     picture_count: Tidligere <b>%{days}</b> dage, studerende har tegnet <b>%{count}</b>
       billeder ved at skrive deres egne computerprogrammer. Klik på billederne for
       at se hvert program i aktion.
-    activity_count: In the past <b>%{days}</b> days, students have made <b>%{count}</b>
-      apps and pictures by writing their own computer programs. Click on the pictures
-      and screenshots to see each program in action.
+    activity_count: I de sidste <b>%{days}</b> dage, har studerende lavet <b>%{count}</b>
+      apps og billeder ved at skrive deres egne computerprogrammer. Klik på billeder
+      og skærmklip at se hvert program i aktion.
     want_to_make_your_own: Vil du lave dit eget?
     more: Mere &rarr;
-    caption_by_name_age: by %{name}, age %{age}
-    caption_time_ago: "%{time_ago} ago"
+    caption_by_name_age: af %{name}, alder %{age}
+    caption_time_ago: '%{time_ago} siden'
   landing:
     prerelease: Dette kursus er i <span class='betatext'> beta</span>.  Dette betyder,
       at det ikke er den endelige version af kurset, og er undergivet revision som
@@ -514,7 +517,7 @@
     feedback: Giv feedback
     report_bug: Rapporter fejl
     support: Få hjælp
-    support_url: "//support.code.org"
+    support_url: Support.Code.org
   multi:
     wrong_title: Forkert svar
     wrong_body: Det svar, du har angivet er ikke korrekte.  Prøv venligst igen!

@@ -1,0 +1,21 @@
+{
+  "circleBlockTitle":"sirkel (radius, stil, farge)",
+  "displayBlockTitle":"display",
+  "ellipseBlockTitle":"ellipse (bredde, høyde, stil, farge)",
+  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"display\" block?",
+  "overlayBlockTitle":"overlay (top, bottom)",
+  "placeImageBlockTitle":"place-image (x, y, image)",
+  "rectangleBlockTitle":"rektangel (bredde, høyde, stil, farge)",
+  "rotateImageBlockTitle":"roter (grader, bilde)",
+  "scaleImageBlockTitle":"skaler (faktor)",
+  "squareBlockTitle":"kvadrat (størrelse, stil, farge)",
+  "starBlockTitle":"stjerne (radius, stil, farge)",
+  "stringAppendBlockTitle":"string-append (first, second)",
+  "stringLengthBlockTitle":"string-length (string)",
+  "textBlockTitle":"text (string, size, color)",
+  "triangleBlockTitle":"trekant (størrelse, stil, farge)",
+  "underlayBlockTitle":"underlay (bottom, top)",
+  "outline":"outline",
+  "solid":"solid",
+  "string":"string"
+}

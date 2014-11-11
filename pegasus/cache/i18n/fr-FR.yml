@@ -1,9 +1,10 @@
 "fr-FR":
   hello: Bonjour tout le monde
+  select_language: Please select your language
   computer_science: Informatique
   computer_science_edweek: Semaine de l'éducation des sciences informatiques
   csedweek_dates: 9-15 décembre 2013
-  n_have_learned_an_hoc: "<h1>#</h1><h3>a essayé un</h3><h2>Heure de Code</h2>"
+  n_have_learned_an_hoc: <h1>#</h1><h3>a essayé un</h3><h2>Heure de Code</h2>
   anybody_can_learn: Tout le monde peut apprendre.
   learn_now: Apprends Maintenant
   petition_message: Tous les étudiants dans toutes les écoles devraient avoir la possibilité
@@ -18,7 +19,7 @@
     plus sur les concepts fondamentaux de l'informatique dans la suite ce cours.
   hoc2014_heading: Rejoignez<a href="http://hourofcode.com">l'heure de Code</a> <br/>
     8-14 décembre 2014 <br/>
-  hoc2014_students: "Élèves"
+  hoc2014_students: Élèves
   hoc2014_try: Participez
   hoc2014_teachers: Professeurs
   hoc2014_host: Enseignez
@@ -45,7 +46,7 @@
     boucles de répétition, les conditions "si-alors", et des algorithmes de base.
   all_ages: Tous les âges
   beginner: Débutant
-  n_participants: "# participants"
+  n_participants: '# participants'
   go: Aller
   thank_you_: Merci!
   congratulations: Félicitations!
@@ -73,8 +74,8 @@
   boys: Garçons
   girls: Filles
   give_my_hour: 'Donner mon Heure à:'
-  girls_team: "Équipe des filles"
-  boys_team: "Équipe masculine"
+  girls_team: Équipe des filles
+  boys_team: Équipe masculine
   tell_the_world: Partagez !
   thanks_for_voting: Merci pour votre vote !
   share_on_facebook: Partagez sur Facebook
@@ -82,10 +83,10 @@
   beyond_an_hour: Au-delà d'une HEURE DE CODE >
   get_started: Commencer
   i_agree: Je suis d'accord
-  participant_select: "-Sélectionner-"
-  participant_student: "étudiant"
+  participant_select: -Sélectionner-
+  participant_student: étudiant
   participant_parent: Parent
-  participant_educator: "Éducateur"
+  participant_educator: Éducateur
   participant_engineer: Ingénieur logiciel
   participant_other: Aucun de ce qui se trouve au-dessus
   i_am_a: Je suis un
@@ -112,11 +113,11 @@
     !
   help_recruit: Aidez-nous à recruter plus de programmeurs !
   lines_of_code: PLUS DE <b># LIGNES DE CODE</b> ECRITES A CE JOUR.
-  lines_of_code_alt: "<b>#</b> LIGNES DE CODE ÉCRIT PAR DES ÉTUDIANTS"
+  lines_of_code_alt: <b>#</b> LIGNES DE CODE ÉCRIT PAR DES ÉTUDIANTS
   who_has_done_hoc: 'Qui à crée la #HourOfCode? @codeorg'
   hoc_leaderboards: Le classement de Hour of Code
-  students_and_lines: "%{students} élèves ont participé à Hour of Code et ont écrit
-    %{lines} lignes de code."
+  students_and_lines: '%{students} élèves ont participé à Hour of Code et ont écrit
+    %{lines} lignes de code.'
   start_hoc: Commencez dès maintenant la Hour of Code
   contact_form_topic_press: Presse/médias (interview ou allocution)
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
@@ -139,7 +140,7 @@
   contact_form_label_email: Votre adresse email
   contact_form_label_message: Message
   contact_form_label_submit: Envoyer un message
-  class_submission_in_school: "À l'école"
+  class_submission_in_school: À l'école
   class_submission_in_school_daily_programming_course: Cours de programmation quotidien
   class_submission_in_school_ap_computer_science: Examen d'informatique AP
   class_submission_in_school_full_university_cs_curriculum: Full university CS curriculum
@@ -161,7 +162,7 @@
   class_submission_online_teacher_resource: Ressource en ligne pour l'enseignement
   class_submission_online_other: Autre en ligne
   class_submission_level_preschool: Maternelle
-  class_submission_level_elementary: "École primaire"
+  class_submission_level_elementary: École primaire
   class_submission_level_middle_school: Collège
   class_submission_level_high_school: Lycée
   class_submission_level_college: Université
@@ -237,7 +238,7 @@
   dashboard_sections_table_secret: Secret type
   dashboard_sections_table_grade: Note
   dashboard_sections_table_course: Cours
-  dashboard_sections_table_students: "Élèves"
+  dashboard_sections_table_students: Élèves
   dashboard_sections_table_code: Section de code
   dashboard_sections_name: Section Name
   dashboard_sections_choose_secret: If you would like to provide accounts to your
@@ -319,7 +320,7 @@
     week alone:'
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
   dashboard_teacher: Teacher
-  dashboard_student: "étudiant"
+  dashboard_student: étudiant
   dashboard_sections_email_question: Do all students have a valid email address?
   dashboard_sections_account_creation_question: Who creates the student's account?
   dashboard_sections_password_question: What do students use as a "password"?
@@ -370,7 +371,7 @@
   lightbot_gradelevel: Tous les âges
   lightbotintl_gradelevel: Tous les âges
   codecademy_gradelevel: Lycée
-  kodable_gradelevel: "École primaire"
+  kodable_gradelevel: École primaire
   hopscotch_gradelevel: Middle school +
   groklearning_gradelevel: Middle school +
   processing_gradelevel: Lycée
@@ -684,7 +685,7 @@
   scratch_beyond_gradelevel: Ages 8+
   lightbot_beyond_gradelevel: Tous les âges
   codecademy_beyond_gradelevel: Lycée
-  kodable_beyond_gradelevel: "École primaire"
+  kodable_beyond_gradelevel: École primaire
   hopscotch_beyond_gradelevel: Middle school +
   groklearning_beyond_gradelevel: Middle school +
   hacketyhack_beyond_gradelevel: Lycée

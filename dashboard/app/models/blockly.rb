@@ -17,6 +17,8 @@ class Blockly < Level
     slider_speed
     disable_param_editing
     disable_variable_editing
+    use_modal_function_editor
+    use_contract_editor
   )
 
   before_validation {

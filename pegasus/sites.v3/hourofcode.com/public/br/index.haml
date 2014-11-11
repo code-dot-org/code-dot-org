@@ -173,10 +173,7 @@ social:
       =hoc_s(:stats_michael)
 
   #maparea
-    -if @company
-      =view :map_company 
-    -else
-      =view :map 
+    =view :map 
 
   #join
     %h1=hoc_s(:front_join_us_button)

@@ -1,9 +1,10 @@
 "no-NO":
   hello: Hei, verden
+  select_language: Please select your language
   computer_science: Informatikk
   computer_science_edweek: Computer Science Education Week
   csedweek_dates: 9.–15. desember 2013
-  n_have_learned_an_hoc: "<h1>#</h1><h3>har prøvd en</h3><h2>Time med Kode</h2>"
+  n_have_learned_an_hoc: <h1>#</h1><h3>har prøvd en</h3><h2>Time med Kode</h2>
   anybody_can_learn: Hvem som helst kan lære.
   learn_now: Lær nå
   petition_message: Alle skoleelever burde ha muligheten til å lære om IT
@@ -43,7 +44,7 @@
     hvis-så-setninger og grunnleggende algoritmer.
   all_ages: Alle aldre
   beginner: Nybegynner
-  n_participants: "# deltakere"
+  n_participants: '# deltakere'
   go: Gå
   thank_you_: Takk!
   congratulations: Gratulerer!
@@ -80,7 +81,7 @@
   beyond_an_hour: Utover Kodetimen >
   get_started: Set i gang
   i_agree: Jeg samtykker
-  participant_select: "- Velg -"
+  participant_select: '- Velg -'
   participant_student: student
   participant_parent: Forelder
   participant_educator: Lærer
@@ -99,7 +100,7 @@
   learn_next_level: Fortsett til neste nivå
   learn_online: Prøv andre kurs på nettet
   learn_classes: Finn lokale kodeklubber
-  hoc_is_here: "#Kodetimen er her - sjekk den ut! @kidsakoder"
+  hoc_is_here: '#Kodetimen er her - sjekk den ut! @kidsakoder'
   just_did_hoc: 'Jeg ble nettopp ferdig med #kodetimen! @kidsakoder'
   learn_hoc: Lær en Time med Kode
   beyond_hoc: Utover en time
@@ -109,11 +110,11 @@
   help_recruit_coders: Hjelp oss med å finne flere kodere til laget ditt!
   help_recruit: Hjelp oss med å rekruttere flere kodere!
   lines_of_code: OVER <b># KODELINJER</b> skrevet HITTIL.
-  lines_of_code_alt: "<b>#</b> KODELINJER SKREVET AV ELEVER"
+  lines_of_code_alt: <b>#</b> KODELINJER SKREVET AV ELEVER
   who_has_done_hoc: 'Hvem har vært med på #kodetimen? #HourOfCode? @codeorg'
   hoc_leaderboards: Kodetime oversikt
-  students_and_lines: "%{students}, elever har gjort kodentimen og skrevet %{lines}
-    kodelinjer."
+  students_and_lines: '%{students}, elever har gjort kodentimen og skrevet %{lines}
+    kodelinjer.'
   start_hoc: Start  kodetimen nå
   contact_form_topic_press: Media (Intervju eller taler)
   studiobar_title: Utforsk <a href='http://studio.code.org'>«Code Studio»</a>

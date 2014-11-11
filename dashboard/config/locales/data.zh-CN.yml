@@ -4,238 +4,239 @@
       name:
         20-hour:
           desc: K-8 计算机科学课程简介
-          Unplug1: "第一阶段"
-          Maze: "第二阶段"
-          Unplug2: "第三阶段"
-          Unplug3: "第四阶段"
-          Artist: "第五阶段"
-          Unplug4: "第六阶段"
-          Artist2: "第七阶段"
-          Unplug5: "第八阶段"
-          Farmer: "第九阶段"
-          Unplug6: "阶段 10"
-          Artist3: "阶段 11"
-          Unplug7: "阶段 12"
-          Farmer2: "阶段 13"
-          Unplug8: "阶段 14"
-          Artist4: "阶段 15"
-          Unplug9: "阶段 16"
-          Farmer3: "阶段 17"
-          Unplug10: "阶段 18"
-          Artist5: "阶段 19"
-          Unplug11: "阶段 20"
+          Unplug1: 第一阶段
+          Maze: 第二阶段
+          Unplug2: 第三阶段
+          Unplug3: 第四阶段
+          Artist: 第五阶段
+          Unplug4: 第六阶段
+          Artist2: 第七阶段
+          Unplug5: 第八阶段
+          Farmer: 第九阶段
+          Unplug6: 阶段 10
+          Artist3: 阶段 11
+          Unplug7: 阶段 12
+          Farmer2: 阶段 13
+          Unplug8: 阶段 14
+          Artist4: 阶段 15
+          Unplug9: 阶段 16
+          Farmer3: 阶段 17
+          Unplug10: 阶段 18
+          Artist5: 阶段 19
+          Unplug11: 阶段 20
         Hour of Code:
-          desc: "编程一小时"
-          Maze: "第一阶段"
+          desc: 编程一小时
+          Maze: 第一阶段
         Edit Code:
           desc: |
             编辑代码 (测试版)
-          MazeEC: "第一阶段"
+          MazeEC: 第一阶段
         2014 Levels:
-          desc: "反弹 (测试版)"
-          Bounce: "第一阶段"
+          desc: 反弹 (测试版)
+          Bounce: 第一阶段
         Builder Levels:
-          desc: "创建用户的谜题 （测试版）"
-          Custom: "第一阶段"
+          desc: 创建用户的谜题 （测试版）
+          Custom: 第一阶段
         Flappy Levels:
           desc: Flappy Bird
-          Flappy: "第一阶段"
+          Flappy: 第一阶段
         Jigsaw Levels:
-          desc: "拼图 (测试版)"
-          Jigsaw: "第一阶段"
+          desc: 拼图 (测试版)
+          Jigsaw: 第一阶段
         Step Levels:
           desc: Maze (beta)
           MazeStep: Stage Step
         edit-code:
           desc: |
             编辑代码 (测试版)
-          MazeEC: "第一阶段"
-          Webapp: "第二阶段"
-          ArtistEC: "第三阶段"
+          MazeEC: 第一阶段
+          Webapp: 第二阶段
+          ArtistEC: 第三阶段
         events:
-          desc: "反弹 (测试版)"
-          Bounce: "第一阶段"
-          Studio: "第二阶段"
+          desc: 反弹 (测试版)
+          Bounce: 第一阶段
+          Studio: 第二阶段
         builder:
-          desc: "创建用户的谜题 （测试版）"
-          Custom: "第一阶段"
+          desc: 创建用户的谜题 （测试版）
+          Custom: 第一阶段
         flappy:
           desc: Flappy Bird
-          Flappy: "第一阶段"
+          Flappy: 第一阶段
         jigsaw:
-          desc: "拼图 (测试版)"
-          Jigsaw: "第一阶段"
+          desc: 拼图 (测试版)
+          Jigsaw: 第一阶段
         step:
           desc: Maze (beta)
           MazeStep: Stage Step
         wordsearch:
           desc: Spelling Bee (beta)
-          WordSearch: "第一阶段"
+          WordSearch: 第一阶段
     game:
       name:
-        Unplug1: "计算机科学导论"
-        Maze: "迷宫"
+        Unplug1: 计算机科学导论
+        Maze: 迷宫
         Multi: Multiple Choice Stuffs
-        Unplug2: "计算性思维"
-        Unplug3: "方格纸编程"
-        Artist: "艺术家"
-        Unplug4: "算法"
-        Artist2: "艺术家 2"
-        Unplug5: "函数"
-        Farmer: "农夫"
-        Unplug6: "条件语句"
-        Artist3: "艺术家 3"
-        Unplug7: "歌曲写作"
-        Farmer2: "农民 2"
-        Unplug8: "抽象化"
-        Artist4: "艺术家 4"
-        Unplug9: "编程接力"
-        Farmer3: " 农夫3"
-        Unplug10: "互联网"
-        Artist5: "艺术家 5"
-        Unplug11: "总结"
-        MazeEC: "迷宫"
-        Bounce: "跳"
+        Unplug2: 计算性思维
+        Unplug3: 方格纸编程
+        Artist: 艺术家
+        Unplug4: 算法
+        Artist2: 艺术家 2
+        Unplug5: 函数
+        Farmer: 农夫
+        Unplug6: 条件语句
+        Artist3: 艺术家 3
+        Unplug7: 歌曲写作
+        Farmer2: 农民 2
+        Unplug8: 抽象化
+        Artist4: 艺术家 4
+        Unplug9: 编程接力
+        Farmer3: ' 农夫3'
+        Unplug10: 互联网
+        Artist5: 艺术家 5
+        Unplug11: 总结
+        MazeEC: 迷宫
+        Bounce: 跳
         Flappy: Flappy Bird
-        Jigsaw: "拼图"
+        Jigsaw: 拼图
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
         Webapp: Webapp
-        ArtistEC: "艺术家"
+        ArtistEC: 艺术家
+        TextMatch: Text Match
     trophy:
       name:
-        Bronze: "铜色"
-        Silver: "银色"
-        Gold: "金色"
+        Bronze: 铜色
+        Silver: 银色
+        Gold: 金色
     concept:
       description:
-        sequence: "序列"
-        if: "如果块"
-        if_else: "”假设其他“板块"
-        loop_times: "重复次数块"
-        loop_until: "重复直到块"
-        loop_while: "当块"
-        loop_for: "“计数器”块"
-        function: "函数"
-        parameters: "有参数的函数"
+        sequence: 序列
+        if: 如果块
+        if_else: ”假设其他“板块
+        loop_times: 重复次数块
+        loop_until: 重复直到块
+        loop_while: 当块
+        loop_for: “计数器”块
+        function: 函数
+        parameters: 有参数的函数
     level:
       instructions:
         maze_2_2: '你可以帮我抓住这只淘气猪吗？把两个“向前移动”块堆在一起，然后按"运行程序"来帮我。 '
-        maze_2_1: "这只猪让我生气。帮我抓住他！"
-        maze_2_2_5: "沿着这条路带我去找那只笨猪。躲开 TNT 炸药，不然我的羽毛就要被炸飞了！"
-        maze_2_3: "带我去找那个绿色的小恶魔！（小心 TNT 炸药）"
-        maze_2_4: "保持冷静，帮我找到那只坏猪。不然我要被它气死了！"
-        maze_2_5: "有一种方法可以只用两个块就抓到这只笨猪。你能想出来它是什么么？"
-        maze_2_6: "只用3个块，帮我抓住那只绿色的人侵者！"
-        maze_2_7: "用尽量少得快帮我驱逐这只坏猪。试试看使用“重复多次”块。"
+        maze_2_1: 这只猪让我生气。帮我抓住他！
+        maze_2_2_5: 沿着这条路带我去找那只笨猪。躲开 TNT 炸药，不然我的羽毛就要被炸飞了！
+        maze_2_3: 带我去找那个绿色的小恶魔！（小心 TNT 炸药）
+        maze_2_4: 保持冷静，帮我找到那只坏猪。不然我要被它气死了！
+        maze_2_5: 有一种方法可以只用两个块就抓到这只笨猪。你能想出来它是什么么？
+        maze_2_6: 只用3个块，帮我抓住那只绿色的人侵者！
+        maze_2_7: 用尽量少得快帮我驱逐这只坏猪。试试看使用“重复多次”块。
         maze_2_8: 当块是灰色的时这意味着您不能将其删除或更改它。请尝试并解决这一难题使用的"重复"的块的重复 3 次。试着把这些在灰色的"重复"块中的
           3 块： 移动、 移动、 打开。
-        maze_2_9: "好的，试试看新的“重复直到”块，它会一直重复直到我抓到那只讨人厌的猪。"
-        maze_2_10: "好了，最后一次的联系 —— 你可以只用 4 块块来解决这个问题吗？"
-        maze_2_11: "亲爱的人类。我是一只僵尸。我饿了。我必须......得到向日葵......你可以用5块块让我到达那里吗？"
-        maze_2_12: "好的，这道题目很相似，但略有不同。你可以只用5块块解决它吗？"
+        maze_2_9: 好的，试试看新的“重复直到”块，它会一直重复直到我抓到那只讨人厌的猪。
+        maze_2_10: 好了，最后一次的联系 —— 你可以只用 4 块块来解决这个问题吗？
+        maze_2_11: 亲爱的人类。我是一只僵尸。我饿了。我必须......得到向日葵......你可以用5块块让我到达那里吗？
+        maze_2_12: 好的，这道题目很相似，但略有不同。你可以只用5块块解决它吗？
         maze_2_13: 用新的"如果"块让我来决定什么时候转弯。提示： 你只需要加一个块，但记住那些块是怎么排列的，这样下次你就会自己写了。
         maze_2_14: 好啦，这是最后一个谜题了，但你学会怎么使用"如果"块和"重复"块了么？
         maze_2_15: 我想要向日葵 ！使用"如果"块，让我用最少的块到达那里。
-        maze_2_16: "好啦，让我们再来试一次 —— 这和之前的差不多，小心别被食人花吃了！"
-        maze_2_17: "“如果 - 其他”块检查当前是否满足一个条件，并通过结果执行相应地块。试试用这个新的块让我得到那个向日葵。"
-        maze_2_18: "让我们来再联系一次使用“如果 - 其他”块，你能一次就让我达成目的么？"
-        maze_2_19: "你能不能加三个块来帮我走出这个复杂的迷宫？如果你做对了，那我就可以通过任何长度的弯曲路径了。"
-        turtle_1_1: "你好，我是一个艺术家。您可以用代码让我画任何东西。使用几个块让我画出图中的灰色线条。"
+        maze_2_16: 好啦，让我们再来试一次 —— 这和之前的差不多，小心别被食人花吃了！
+        maze_2_17: “如果 - 其他”块检查当前是否满足一个条件，并通过结果执行相应地块。试试用这个新的块让我得到那个向日葵。
+        maze_2_18: 让我们来再联系一次使用“如果 - 其他”块，你能一次就让我达成目的么？
+        maze_2_19: 你能不能加三个块来帮我走出这个复杂的迷宫？如果你做对了，那我就可以通过任何长度的弯曲路径了。
+        turtle_1_1: 你好，我是一个艺术家。您可以用代码让我画任何东西。使用几个块让我画出图中的灰色线条。
         turtle_1_2: 现在，让我们来画个正方形。注意： 你可以用新的"设置颜色"块选择你最喜欢的颜色。
-        turtle_1_3: "用三个块画一个正方形。"
-        turtle_1_4: "让我们来画一个三条边都是不同颜色的三角形。你可以用“随机颜色”块来选择不同的颜色。提示：你得在“转向”块上写上需要转多少度。"
-        turtle_1_5: "现在，让我们来画一个信封。先画一个三角形，再画一个正方形。"
-        turtle_1_6: "你能想出来怎么能画个三角形和正方形吗？提示： 第一，先画三角形，然后转个弯，来画正方形。"
-        turtle_1_7: "好的，让我们来试试更难一点的 —— 看看你能不能画一个绿色的眼镜。正方形的每边长为100个像素。两个正方形之间相距50像素。别忘了把它画成绿色！"
+        turtle_1_3: 用三个块画一个正方形。
+        turtle_1_4: 让我们来画一个三条边都是不同颜色的三角形。你可以用“随机颜色”块来选择不同的颜色。提示：你得在“转向”块上写上需要转多少度。
+        turtle_1_5: 现在，让我们来画一个信封。先画一个三角形，再画一个正方形。
+        turtle_1_6: 你能想出来怎么能画个三角形和正方形吗？提示： 第一，先画三角形，然后转个弯，来画正方形。
+        turtle_1_7: 好的，让我们来试试更难一点的 —— 看看你能不能画一个绿色的眼镜。正方形的每边长为100个像素。两个正方形之间相距50像素。别忘了把它画成绿色！
         turtle_1_8: 好的，试试看运行这段代码会发生什么（按下"运行"）。然后，重复它来完成我们要画的图。每次的颜色都会不同。
-        turtle_1_9: "如果要画一个圆，你知道应该在画问号的地方填上什么数字么？"
+        turtle_1_9: 如果要画一个圆，你知道应该在画问号的地方填上什么数字么？
         turtle_1_10: 你成功了 ！现在，画你想要画的吧。一些有趣的想法： 棒图、 雪花、 或螺旋线。记得试试看新的"设置宽度"块。玩得愉快！
-        turtle_4_1: "你能只用三个块来画一个三角形么（每边100像素）？提示：使用“重复”块。"
+        turtle_4_1: 你能只用三个块来画一个三角形么（每边100像素）？提示：使用“重复”块。
         turtle_4_2: 绘制这些三角形的工作区中添加某个地方在该程序已经出"正确的 90 度转向"块。
         turtle_4_3: 好的，这里是你写的画一个三角形的代码。你可以加一个"重复"和"转向"块来一朵漂亮的花吗？
-        turtle_4_4: "这个是之前谜题的代码，但每画一个三角形只旋转36度。我们需要重复这段代码多少次呢?（提示： 画一个圆需要转360度)"
-        turtle_4_5: "这个是之前谜题的代码，但是重复了36度。我们每次需要转多少度呢?（提示： 画一个圆需要转360度)"
-        turtle_4_6: "你可以只用3个块来画一个边长为20像素的正方形吗？"
-        turtle_4_7: "这是你在上一个谜题写的画正方形的代码。你能重复它来画一个由10个相邻的正方形组成的梯子么？"
-        turtle_4_8: "这是你在上一个谜题写的代码。你能只加2个块来完成这幅画么？"
-        turtle_4_9: "这是你在上一个谜题写的代码。要完成这幅画，你需要转多少度呢？（你可能需要猜几次）"
-        turtle_4_10: "这是你在上一个谜题写的代码。你需要重复多少次来完成这幅画呢？"
-        turtle_4_11: "试试看改变“转向”块和“重复”块上的数字来画不同的花样。或者，试试看改变其余的代码来画你想要画的东西。"
+        turtle_4_4: 这个是之前谜题的代码，但每画一个三角形只旋转36度。我们需要重复这段代码多少次呢?（提示： 画一个圆需要转360度)
+        turtle_4_5: 这个是之前谜题的代码，但是重复了36度。我们每次需要转多少度呢?（提示： 画一个圆需要转360度)
+        turtle_4_6: 你可以只用3个块来画一个边长为20像素的正方形吗？
+        turtle_4_7: 这是你在上一个谜题写的画正方形的代码。你能重复它来画一个由10个相邻的正方形组成的梯子么？
+        turtle_4_8: 这是你在上一个谜题写的代码。你能只加2个块来完成这幅画么？
+        turtle_4_9: 这是你在上一个谜题写的代码。要完成这幅画，你需要转多少度呢？（你可能需要猜几次）
+        turtle_4_10: 这是你在上一个谜题写的代码。你需要重复多少次来完成这幅画呢？
+        turtle_4_11: 试试看改变“转向”块和“重复”块上的数字来画不同的花样。或者，试试看改变其余的代码来画你想要画的东西。
         maze_karel_1_1: 你好，我是一个农夫。我需要你帮我把一块地翻平来为种植做准备。把我移动到那堆土上面，并使用"删除"块来移除它。
-        maze_karel_1_2: "下一步，把我移动到那个洞，并且用“填充”块来把它填平。这个洞需要两铲子土。"
-        maze_karel_1_3: "把我移到那堆土那里，告诉我需要多少铲子才能把这堆土移除。尽量使用少的块来解开这个谜题。"
-        maze_karel_1_4: "你能帮我移除这所有四堆土么？提示：试试用”重复“块。"
+        maze_karel_1_2: 下一步，把我移动到那个洞，并且用“填充”块来把它填平。这个洞需要两铲子土。
+        maze_karel_1_3: 把我移到那堆土那里，告诉我需要多少铲子才能把这堆土移除。尽量使用少的块来解开这个谜题。
+        maze_karel_1_4: 你能帮我移除这所有四堆土么？提示：试试用”重复“块。
         maze_karel_1_5: 帮我用五铲子的土来填充这些洞。提示： 你可以把"重复"块放在"当"块里面试试。
-        maze_karel_1_6: "删除所有的土堆，尽可能使用尽量少的块。在”当“块的下拉菜单中有新的选项，它能告诉我现在是否站在一个土堆或一个洞上。"
-        maze_karel_1_7: "哇，我发现一个很深的洞 ！我不知道它需要多少铲子的土。您能不能编一个程序，往洞里填土直到地面被填平？"
-        maze_karel_1_8: "用尽量少的块帮我把田地那边的洞填平。"
-        maze_karel_1_9: "请尝试用尽可能少的块来移除所有的土堆。提示：请尝试使用‘while'块"
-        maze_karel_1_10: "我工作的太晚了，外面天都黑了。我没办法知道那些土堆有多大了。所以”当“块上的某些选项消失了。把我挪到田地的另一头，如果遇到一个土堆，就移除它。"
-        maze_karel_1_11: "外面还是一片漆黑。让我移动到田地的另一边。如果遇到一个土堆，就移除它。相对的，如果遇到一个洞，就填平他。提示：你可以使用”如果“块的下拉菜单中的选项。"
-        turtle_2_1: "你好。我是僵尸艺术家。我喜欢画画 ！帮我画一个有颜色的正方形。说明： 现在你可以用的块都被放在了目录里了。"
-        turtle_2_2: "欢迎使用函数功能来定义新的块！在”函数“目录下，找到”画一个正方形“块，用它画一个 50 x 50 的绿色小正方形。"
+        maze_karel_1_6: 删除所有的土堆，尽可能使用尽量少的块。在”当“块的下拉菜单中有新的选项，它能告诉我现在是否站在一个土堆或一个洞上。
+        maze_karel_1_7: 哇，我发现一个很深的洞 ！我不知道它需要多少铲子的土。您能不能编一个程序，往洞里填土直到地面被填平？
+        maze_karel_1_8: 用尽量少的块帮我把田地那边的洞填平。
+        maze_karel_1_9: 请尝试用尽可能少的块来移除所有的土堆。提示：请尝试使用‘while'块
+        maze_karel_1_10: 我工作的太晚了，外面天都黑了。我没办法知道那些土堆有多大了。所以”当“块上的某些选项消失了。把我挪到田地的另一头，如果遇到一个土堆，就移除它。
+        maze_karel_1_11: 外面还是一片漆黑。让我移动到田地的另一边。如果遇到一个土堆，就移除它。相对的，如果遇到一个洞，就填平他。提示：你可以使用”如果“块的下拉菜单中的选项。
+        turtle_2_1: 你好。我是僵尸艺术家。我喜欢画画 ！帮我画一个有颜色的正方形。说明： 现在你可以用的块都被放在了目录里了。
+        turtle_2_2: 欢迎使用函数功能来定义新的块！在”函数“目录下，找到”画一个正方形“块，用它画一个 50 x 50 的绿色小正方形。
         turtle_2_3: 用 （在"循环"目录下） 的"重复"块画 3 个大小为100的正方形，每个相隔120度。试试用3种不同的随机颜色。
-        turtle_2_4: "现在，让我们画更复杂的图案吧。更改代码来画36个正方形，100像素大小，每个相隔10度。提示： 你可以使用滑块来让我走得更快。"
+        turtle_2_4: 现在，让我们画更复杂的图案吧。更改代码来画36个正方形，100像素大小，每个相隔10度。提示： 你可以使用滑块来让我走得更快。
         turtle_2_5: 试试画大小为50，60，70，80，和90的正方形。你可以使用五次"画一个正方形"函数。
-        turtle_2_6: "好的，在这个程序中将要使用计数器，来画一个和上次一样的正方形。你要画的正方形大小和计数器当前数字的大小相同。试试看怎么用“计数器”块。提示：
-          它是在『变量』分类中。"
+        turtle_2_6: 好的，在这个程序中将要使用计数器，来画一个和上次一样的正方形。你要画的正方形大小和计数器当前数字的大小相同。试试看怎么用“计数器”块。提示：
+          它是在『变量』分类中。
         turtle_2_7: 这个程序可以画一个螺旋，但我们已经禁用了这些块，所以它们不能运行。你能不能试试看用 (在循环目录下的）"计数"块 和(在变量类别）"计数器"块
           画一个相同的螺旋。
         turtle_2_7_5: (在函数目录中）有一个新的函数："画一个雪人"。画两个雪人，一个高为250像素，一个高为100像素。
         turtle_2_8: 这个题目有点儿难。试试使用"画一个雪人"的函数和（在动作目录中）新的"向前跳"块。画3个颜色不同的雪人，每两个之间相隔 100
           个像素。
         turtle_2_9: 用一个"计数"循环块来画雪人一家人。他们的高度分别是110， 100， 90， 80，和 70，每两个之间相隔60像素。
-        turtle_2_10: "试试用这些代码来画不同的螺旋。如果你改变旋转的次数会怎么样？或者在循环中设置随机的颜色？画你喜欢的。"
-        maze_karel_2_1: "请帮助我移除所有的土堆，填平地上所有的洞。 尝试使用循环来节省块。提示：你可以将一个循环放在另一个循环里。"
+        turtle_2_10: 试试用这些代码来画不同的螺旋。如果你改变旋转的次数会怎么样？或者在循环中设置随机的颜色？画你喜欢的。
+        maze_karel_2_1: 请帮助我移除所有的土堆，填平地上所有的洞。 尝试使用循环来节省块。提示：你可以将一个循环放在另一个循环里。
         maze_karel_2_2: 我们定义了一个新块："填充5"，在函数目录中。用它来帮我把这个洞填平。
         maze_karel_2_3: 使用新的"填充 5"函数块来帮我填平所有的洞。你得从函数目录里拖出"填充 5"块。
-        maze_karel_2_4: "定义一个新的函数：”移除 7“。然后用它编写一个程序来帮我删除所有土堆。"
-        maze_karel_2_5: "创建一个新的函数，从一个土堆中”移除 6“铲子土，并用它来帮我移平所有的土堆。"
+        maze_karel_2_4: 定义一个新的函数：”移除 7“。然后用它编写一个程序来帮我删除所有土堆。
+        maze_karel_2_5: 创建一个新的函数，从一个土堆中”移除 6“铲子土，并用它来帮我移平所有的土堆。
         maze_karel_2_6: 用这两个新的函数，"填充 8"和"移除 8"，帮我移除所有的土堆并填平所有的洞。
-        maze_karel_2_7: "在我的田里有一头牛！编写一个新的函数，帮助我躲开母牛并且移除一个土堆。把你所有需要用到的块都放到新函数块里面。"
+        maze_karel_2_7: 在我的田里有一头牛！编写一个新的函数，帮助我躲开母牛并且移除一个土堆。把你所有需要用到的块都放到新函数块里面。
         maze_karel_2_8: 使用这个新功能，"避免母牛和移除 1"，来帮我移除所有的土堆。
-        maze_karel_2_9: "好的，这个函数能移除4个一列的土堆。试试把它放在循环里面，看看你能不能只用几个新的块来移除所有的土堆。"
-        maze_karel_2_10: "我要走到田地的另一边，用这两个函数帮我来移除所有的土堆并且填充所有的洞。"
+        maze_karel_2_9: 好的，这个函数能移除4个一列的土堆。试试把它放在循环里面，看看你能不能只用几个新的块来移除所有的土堆。
+        maze_karel_2_10: 我要走到田地的另一边，用这两个函数帮我来移除所有的土堆并且填充所有的洞。
         turtle_3_1: 我们在这个谜题里给了你两个函数，"画一个正方形"和"画一个圆"，的定义。只是定义一个函数是不会运行其中的块的。你必须拖出来"画一个正方形"块才能让它画一个正方形给你。
-        turtle_3_2: "用”画一个正方形“作为例子，创建一个新的函数，”画一个三角形“，并使用它。"
-        turtle_3_3: "在猫周围画一个三角形围栏，然后在牛周围画一个四方形围栏。提示：请边做边测试"
-        turtle_3_4: "你能否使用“画一个正方形”和“画一个三角形”（和其他一些块）来在狮子周围画一座房子？"
+        turtle_3_2: 用”画一个正方形“作为例子，创建一个新的函数，”画一个三角形“，并使用它。
+        turtle_3_3: 在猫周围画一个三角形围栏，然后在牛周围画一个四方形围栏。提示：请边做边测试
+        turtle_3_4: 你能否使用“画一个正方形”和“画一个三角形”（和其他一些块）来在狮子周围画一座房子？
         turtle_3_5: 现在创建一个新的"画房子"函数，使用它来圈住两只猫。提示： 使用"做点什么"块创建一个新的函数，并给它命名。
         turtle_3_6: 以"画一个正方形"为例，给"画一个三角形"加一个“长度”变量。然后画出不同大小的三角形。（提示： 请单击星星标志来为一个函数添加变量)
-        turtle_3_7: "为“画房子”函数添加一个“长度”变量。给大象建一所大房子（边长150像素）"
-        turtle_3_8: "这儿是之前那道谜题用到的全部的块。编辑“画房子”函数，使得最后一笔落在右下角。用这个编辑过的函数画三个房子。"
-        turtle_3_9: "你能在不看帮助的情况下自己重新创建“画房子”函数吗？试试看！然后画一排房子。"
-        turtle_3_10: "你已经学会了很多东西了！试着用他们画任何你想画的图案。试着画一颗星星，一个螺旋或者一片好看的雪花。"
-        maze_karel_debug_seq_1: "欢迎来到代码调试环节！我的代码不能正常工作。你能研究并且解决一下这个问题吗？我想要把地面铲平以便种植作物。"
-        maze_karel_debug_seq_2: "这段程序错在哪里？你应该怎么修改才能让我移除那块土堆？"
-        maze_karel_debug_repeat: "帮我调试一下这段程序。我希望我的地看起来很平整。"
-        maze_karel_debug_while: "怎么修改这段程序才能帮我填上这个洞？"
-        maze_karel_debug_if: "求助！请调试这段程序使得我的地完全平整。"
-        maze_karel_debug_if_else: "请调试这段程序，使得我能把洞填上并且移除所有的土堆。"
-        maze_karel_debug_function_1: "你应该怎么修改这段程序才能够帮我移除所有的土堆呢？"
-        maze_karel_debug_function_2: "你能调试一下这段程序来帮助我铲平我的地吗？"
-        maze_karel_debug_function_3: "请编辑这段程序来使得我能够移除地上所有的土堆。"
-        turtle_5_1: "请尝试运行此程序，并进行更改，看看会发生什么。你能弄清楚它是如何工作的吗？（或者你可以把这段程序删掉并且重写成其他任何你想要的程序）"
-        turtle_5_2: "请尝试运行此程序，并进行更改，看看会发生什么。你能弄清楚它是如何工作的吗？（或者你可以把这段程序删掉并且重写成其他任何你想要的程序）"
-        turtle_5_3: "请尝试运行此程序，并进行更改，看看会发生什么。你能弄清楚它是如何工作的吗？（或者你可以把这段程序删掉并且重写成其他任何你想要的程序）"
-        turtle_5_4: "请尝试运行此程序，并进行更改，看看会发生什么。你能弄清楚它是如何工作的吗？（或者你可以把这段程序删掉并且重写成其他任何你想要的程序）"
-        turtle_5_5: "请尝试运行此程序，并进行更改，看看会发生什么。你能弄清楚它是如何工作的吗？（或者你可以把这段程序删掉并且重写成其他任何你想要的程序）"
-        turtle_5_6: "请尝试运行此程序，并进行更改，看看会发生什么。你能弄清楚它是如何工作的吗？（或者你可以把这段程序删掉并且重写成其他任何你想要的程序）"
-        maze_3_1: "我想要抓住那只猪！输入几个 move(); 语句，我就可以拿回我的蛋了。"
-        maze_3_2: "给我写一个程序，让我能够到达那只猪。"
-        maze_3_3: "我怎样才能抓住那只猪？小心别让我撞上TNT炸弹！"
-        maze_3_4: "写个程序，让我绕过那些TNT炸药，抓住那只猪。"
+        turtle_3_7: 为“画房子”函数添加一个“长度”变量。给大象建一所大房子（边长150像素）
+        turtle_3_8: 这儿是之前那道谜题用到的全部的块。编辑“画房子”函数，使得最后一笔落在右下角。用这个编辑过的函数画三个房子。
+        turtle_3_9: 你能在不看帮助的情况下自己重新创建“画房子”函数吗？试试看！然后画一排房子。
+        turtle_3_10: 你已经学会了很多东西了！试着用他们画任何你想画的图案。试着画一颗星星，一个螺旋或者一片好看的雪花。
+        maze_karel_debug_seq_1: 欢迎来到代码调试环节！我的代码不能正常工作。你能研究并且解决一下这个问题吗？我想要把地面铲平以便种植作物。
+        maze_karel_debug_seq_2: 这段程序错在哪里？你应该怎么修改才能让我移除那块土堆？
+        maze_karel_debug_repeat: 帮我调试一下这段程序。我希望我的地看起来很平整。
+        maze_karel_debug_while: 怎么修改这段程序才能帮我填上这个洞？
+        maze_karel_debug_if: 求助！请调试这段程序使得我的地完全平整。
+        maze_karel_debug_if_else: 请调试这段程序，使得我能把洞填上并且移除所有的土堆。
+        maze_karel_debug_function_1: 你应该怎么修改这段程序才能够帮我移除所有的土堆呢？
+        maze_karel_debug_function_2: 你能调试一下这段程序来帮助我铲平我的地吗？
+        maze_karel_debug_function_3: 请编辑这段程序来使得我能够移除地上所有的土堆。
+        turtle_5_1: 请尝试运行此程序，并进行更改，看看会发生什么。你能弄清楚它是如何工作的吗？（或者你可以把这段程序删掉并且重写成其他任何你想要的程序）
+        turtle_5_2: 请尝试运行此程序，并进行更改，看看会发生什么。你能弄清楚它是如何工作的吗？（或者你可以把这段程序删掉并且重写成其他任何你想要的程序）
+        turtle_5_3: 请尝试运行此程序，并进行更改，看看会发生什么。你能弄清楚它是如何工作的吗？（或者你可以把这段程序删掉并且重写成其他任何你想要的程序）
+        turtle_5_4: 请尝试运行此程序，并进行更改，看看会发生什么。你能弄清楚它是如何工作的吗？（或者你可以把这段程序删掉并且重写成其他任何你想要的程序）
+        turtle_5_5: 请尝试运行此程序，并进行更改，看看会发生什么。你能弄清楚它是如何工作的吗？（或者你可以把这段程序删掉并且重写成其他任何你想要的程序）
+        turtle_5_6: 请尝试运行此程序，并进行更改，看看会发生什么。你能弄清楚它是如何工作的吗？（或者你可以把这段程序删掉并且重写成其他任何你想要的程序）
+        maze_3_1: 我想要抓住那只猪！输入几个 move(); 语句，我就可以拿回我的蛋了。
+        maze_3_2: 给我写一个程序，让我能够到达那只猪。
+        maze_3_3: 我怎样才能抓住那只猪？小心别让我撞上TNT炸弹！
+        maze_3_4: 写个程序，让我绕过那些TNT炸药，抓住那只猪。
         bounce_1: 附加一个块到"当左箭头"块，然后按"运行程序"。使用向左的箭头移动球拍到达结束目标。
         bounce_2: 附加一个块到"当左箭头"块和“当右键头”块，然后按"运行程序"。移动球拍到达两个结束目标。
         bounce_3: 现在，尝试类似的做法同"当上箭头"块。移动球拍到顶部目标。
-        bounce_4: "这次你需要添加四个块。移动到所有四个球拍完成目标，以完成这个谜题。"
+        bounce_4: 这次你需要添加四个块。移动到所有四个球拍完成目标，以完成这个谜题。
         bounce_5: 我们要发送球飞向球拍。将一个块附加到"当球击中桨"块以确保球到达完成目标。
         bounce_6: 现在完成的目标是在顶上。您需要将块附加到两个"当球命中"块以解决这一难题。
         bounce_7: 将块附加到每个"当"块。跳起球，直到它击中完成目标。
         bounce_10: 现在有一个目标在顶部。附加上"得分点"和"分数对手点"块"当球在目标中"和"当球未命中桨"块去做一场游戏。看看你可以获得多少分，在你对手得分两次之前。
         bounce_11: 您现在可以到"游戏启动时"块附加块。您必须附加在多个位置中的新的"启动新球"块。此外，试着改变现场或球拍和球的速度和看看多少分，你就可以得分前您对手的成绩两次。
-        bounce_12: "创建您自己的弹跳游戏。您可以更改所有的视觉效果和规则。当你完成，单击共享，让朋友试试你在手机上的游戏。"
+        bounce_12: 创建您自己的弹跳游戏。您可以更改所有的视觉效果和规则。当你完成，单击共享，让朋友试试你在手机上的游戏。
         Custom_builder: 将块从工具箱中拖动到工作区中绘制您想要创建的水平。当您准备好时，按下"运行程序"。
         flappy_1: 将一个块附加到"单击时"块中，然后按下"运行程序"。单击或点击屏幕移动 Flappy到目标。
         flappy_2: 现在我们已经添加了一些地面。将一个块附加到"撞到地面时"块。Flappy 撞了时，您的代码需要 ' 结束游戏 '。
@@ -243,11 +244,11 @@
         flappy_4: Flappy将会穿越障碍，除非你编写代码使他崩溃。将一个块附加到"命中障碍时"块。当Flappy 撞上到第一组管道时，您的代码需要
           ' 结束游戏 '。
         flappy_5: 让我们添加一个记分牌。当 Flappy 穿过障碍计分数。将添加到"当通过障碍"块，然后得分当 Flappy 通过第一套管道。
-        flappy_6: "看看是否你仍然能得分，在使得 Flappy 飞得距离更小或更大之后。"
+        flappy_6: 看看是否你仍然能得分，在使得 Flappy 飞得距离更小或更大之后。
         flappy_7: 接下来，请尝试更改场景通过将另一个块附加到"游戏启动时"块。
-        flappy_8: "不只是在游戏开始时，您可以随时设置的视觉效果。请尝试在其他事件发生时设置一个随机场景，例如，在通过障碍时。"
-        flappy_9: "去搀混它们，当击中障碍或者掉到地上，不只是结束游戏，尝试设置分数为0。"
-        flappy_11: "创建您自己Flappy游戏。您可以更改所有的视觉效果和所有的规则，甚至重力。当你完成，单击共享，让朋友在手机上试试你的游戏吧。"
+        flappy_8: 不只是在游戏开始时，您可以随时设置的视觉效果。请尝试在其他事件发生时设置一个随机场景，例如，在通过障碍时。
+        flappy_9: 去搀混它们，当击中障碍或者掉到地上，不只是结束游戏，尝试设置分数为0。
+        flappy_11: 创建您自己Flappy游戏。您可以更改所有的视觉效果和所有的规则，甚至重力。当你完成，单击共享，让朋友在手机上试试你的游戏吧。
         flappy_k1_1: Play Flappy
         flappy_k1_2: Attach a block to the "when click" block, then press "Run". Click
           or tap the screen to move Flappy to the target.
@@ -262,18 +263,18 @@
           "when run" block.
         flappy_k1_9: Try changing the player by attaching a "set player" block to
           the "when run" block.
-        jigsaw_1: "单击块"
-        jigsaw_2: "将块拖到目标"
-        jigsaw_3: "排列块以形成图像"
-        jigsaw_4: "排列块以形成图像"
-        jigsaw_5: "排列块以形成图像"
-        jigsaw_6: "排列块以形成图像"
-        jigsaw_7: "排列块以形成图像"
-        jigsaw_8: "排列块以形成图像"
-        jigsaw_9: "排列块以形成图像"
-        jigsaw_10: "排列块以形成图像"
-        jigsaw_11: "排列块以形成图像"
-        jigsaw_12: "排列块以形成图像"
+        jigsaw_1: 单击块
+        jigsaw_2: 将块拖到目标
+        jigsaw_3: 排列块以形成图像
+        jigsaw_4: 排列块以形成图像
+        jigsaw_5: 排列块以形成图像
+        jigsaw_6: 排列块以形成图像
+        jigsaw_7: 排列块以形成图像
+        jigsaw_8: 排列块以形成图像
+        jigsaw_9: 排列块以形成图像
+        jigsaw_10: 排列块以形成图像
+        jigsaw_11: 排列块以形成图像
+        jigsaw_12: 排列块以形成图像
         jigsaw_13: Fix the puzzle!
         mazestep_1: Maze step description here
         mazestep_2: Maze step description here
@@ -368,62 +369,67 @@
         webapp_ec_simple: Create your web app by using createHtmlBlock.
         turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
           it in the new "penColour" block.'
+        turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas:
+          a stick figure, snowflake, or spiral. Also try the new "penWidth" block.
+          Have fun!'
     video:
       name:
-        maze_intro: "迷宫简介"
-        artist_intro: "艺术家简介"
-        farmer_intro: "农夫简介"
+        maze_intro: 迷宫简介
+        artist_intro: 艺术家简介
+        farmer_intro: 农夫简介
         flappy_intro: Flappy简介
-        loop_times: "重复次数块"
-        loop_until: "重复直到块"
-        if: "如果块"
-        if_else: "如果/那么块"
-        function: "函数"
-        loop_while: "当块"
-        loop_for: "“计数”循环块"
-        parameters: "有参数的函数"
-        hoc_wrapup: "编程一小时总结"
-        20_wrapup: 20小时教程总结
+        loop_times: 重复次数块
+        loop_until: 重复直到块
+        if: 如果块
+        if_else: 如果/那么块
+        function: 函数
+        loop_while: 当块
+        loop_for: “计数”循环块
+        parameters: 有参数的函数
+        hoc_wrapup: 编程一小时总结
         Unplug1: What is CS?
-        Unplug2: "计算性思维"
-        Unplug3: "方格纸编程"
-        Unplug4: "算法"
-        Unplug5: "函数"
-        Unplug6: "条件语句"
+        Unplug2: 计算性思维
+        Unplug3: 方格纸编程
+        Unplug4: 算法
+        Unplug5: 函数
+        Unplug6: 条件语句
         Unplug7: Songwriting
-        Unplug8: "抽象化"
+        Unplug8: 抽象化
         Unplug9: Relay programming
         Unplug10: Internet
-        Unplug11: "总结"
+        Unplug11: 总结
         C1_happy_maps_unplugged: Happy Maps
         C1_moveitmoveit_unplugged: Move It, Move It
         C1_bigevent_unplugged: The Big Event
-        C1_getting_loop: Getting Loopy
+        C1_getting_loopy: Getting Loopy
         C1_pair_programming: Pair Programming
         C1_maze_intro_sequencing: Maze Sequencing Intro
         C1_maze_debugging: Maze Debugging
         C1_bee_level_intro: Bee Level - Intro
-        C1_artist_intro: "艺术家简介"
+        C1_artist_intro: 艺术家简介
         C1_spelling_bee_intro: Spelling Bee Intro
         C1_zuck_repeat_loop: Maze Loops
         C1_bee_loops: Bee Loops
         C1_maze_loops: Maze Loops
         C1_playlab_storytelling: Play Lab - Create a Story
         C1_planting_seed: Planting a Seed
-        C1_building_foundating: Building a Foundation
-        C2_maze_intro: "迷宫简介"
-        C2_artist_intro: "艺术家简介"
+        C1_building_foundation: Building a Foundation
+        C2_maze_intro: 迷宫简介
+        C2_artist_intro: 艺术家简介
         C2_zuck_repeat_loop: Maze Loops
         C2_artist_loops: Artist Loops
+        C2_artist_debugging: Artist Debugging
+        C2_bee_loops: Bee Loops
+        C2_bee_debugging: Bee Debugging
         C2_bee_conditionals: Bee Conditionals
         C2_playlab_createstory: Play Lab - Create a Story
-        C2_graph_paper: "方格纸编程"
-        C2_conditionals_with_cards: "条件语句"
+        C2_graph_paper: 方格纸编程
+        C2_conditionals_with_cards: 条件语句
         C2_binary_bracelets: Binary Bracelets
-        C2_replay_programming: "编程接力"
+        C2_relay_programming: 编程接力
         C2_paper_airplanes: Paper Airplanes
-        C3_maze_intro: "迷宫简介"
-        C3_artist_intro: "艺术家简介"
+        C3_maze_level_4: Maze Loops
+        C3_artist_intro: 艺术家简介
         C3_artist_functions: Artist Functions
         C3_bee_functions: Bee Functions
         C3_bee_conditionals: Bee Conditionals
@@ -432,9 +438,9 @@
         C3_farmer_while: While Loops
         C3_bee_nested_loops: Nested Loops
         C3_bee_debugging: Bee Debugging
-        C3_bounce: "跳"
+        C3_bounce: 跳
         C3_playlab_create_game: Play Lab - Create a Game
-        C3_computational_thinking: "计算性思维"
+        C3_computational_thinking: 计算性思维
         C3_dice_race: Dice Race
         C3_internet: Internet
         C3_crowdsourcing: Crowdsourcing
@@ -444,11 +450,11 @@
       text:
         drag_blocks: 拖动一个"移动"的块和捕捉低于它的其他块
         run: 点击"运行"以尝试您的程序
-        watch_again: "单击此处可再次观看视频"
-        gray_block_explanation: "在灰色的块不能移动或删除。你能解决这个难题吗？"
-        show_code_explanation: "单击此处查看你的程序的代码"
-        instructions_repeat_explanation: "在这里重复每个谜题的说明"
-        category_explanation: "你有同样的块，但他们现在已经安排在类别"
+        watch_again: 单击此处可再次观看视频
+        gray_block_explanation: 在灰色的块不能移动或删除。你能解决这个难题吗？
+        show_code_explanation: 单击此处查看你的程序的代码
+        instructions_repeat_explanation: 在这里重复每个谜题的说明
+        category_explanation: 你有同样的块，但他们现在已经安排在类别
         set_sprite_image: Attach a "set actor to image" block to the "when story starts"
           block to enable an actor for this story
         studio_say_text: Type what you want your actor to say within these quotes

@@ -239,7 +239,7 @@ en:
         playlab: 'Make an App'
         artist: 'Draw Something'
     user:
-      classroom: 'My students'
+      classroom: 'Teacher Home Page'
       label: 'Hi %{username}'
       stats: 'My progress'
       settings: 'My account'
@@ -411,8 +411,11 @@ en:
   try_reloading: 'Try reloading the page'
   next_stage: 'Finished! Continue to next stage'
   download_pdf: 'Open Lesson Plan'
+  lesson_plan: 'Lesson Plan'
   view_lesson_plan: 'View Lesson Plan'
   pdf_download: 'Download PDF'
+  download_coming_soon: 'Downloadable activity coming soon.'
+  video_coming_soon: 'Video Coming Soon!'
   share_code:
     title: "Click 'Run' to see my program in action"
     bounce_og_title: "Check out my Bounce Game"
@@ -469,6 +472,8 @@ en:
     wrong_body: "The solution you've entered is not correct.  Please try again!"
     correct_title: "Correct"
     correct_body: "That is the correct answer."
+  text_match:
+    placeholder: "Enter your answer here"
   dialog:
     ok: "OK"
   time:
@@ -511,3 +516,8 @@ en:
     message: "We're in the process of updating our experience to provide you with even stronger privacy protections. To do this, we need existing users to enter their age here.<br/>As always, code.org will never rent, sell or share this information with any third parties."
     sign_out: 'If you do not wish to provide your age you may <a href="%{url}">sign out</a>.'
   zendesk_too_young_message: 'Sorry, younger users may not sign in to our support site. You may browse <a href="http://support.code.org">support.code.org</a> without signing in or ask your parent or teacher to contact us for you.'
+  progress:
+    not_completed: not completed
+    completed_too_many_blocks: completed, too many blocks
+    completed_perfect: completed, perfect
+    furthest_level_attempted: furthest level attempted

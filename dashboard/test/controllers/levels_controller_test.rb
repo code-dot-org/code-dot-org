@@ -387,7 +387,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test 'should show match level' do
-    my_level = create :level, name: 'MatchLevel', type: 'Match'
+    my_level = create :match, name: 'MatchLevel', type: 'Match'
     get :show, id: my_level, game_id: my_level.game
   end
 

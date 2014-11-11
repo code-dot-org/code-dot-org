@@ -1,9 +1,10 @@
 "cs-CZ":
   hello: Ahoj světe
+  select_language: Please select your language
   computer_science: Informatika
   computer_science_edweek: Týden vzdělávání Informatiky
   csedweek_dates: 9-15. prosince 2013
-  n_have_learned_an_hoc: "<h1>#</h1><h3>vyzkoušel si</h3><h2>HODINU KÓDU&trade;</h2>"
+  n_have_learned_an_hoc: <h1>#</h1><h3>vyzkoušel si</h3><h2>HODINU KÓDU&trade;</h2>
   anybody_can_learn: Zvládne to každý.
   learn_now: Učit se teď
   petition_message: Podepiš se svým jménem, pokud si myslíš, že každý student v každé
@@ -44,7 +45,7 @@
     základní algoritmy.
   all_ages: Všechny věkové kategorie
   beginner: Začátečník
-  n_participants: "# účastníků"
+  n_participants: '# účastníků'
   go: Jít
   thank_you_: Díky!
   congratulations: Blahopřejeme!
@@ -63,7 +64,7 @@
   share_achievement: Sdílej svůj úspěch
   beyond_hour_message: Pokračuj s naším <a href='http://learn.code.org'>20hodinovým
     kurzem</a>, nebo další možností <a href='/learn/beyond'>Nauč se za jednu hodinu</a>.
-  leaderboards_for_hoc: "Žebříčky pro Hodinu Kódu."
+  leaderboards_for_hoc: Žebříčky pro Hodinu Kódu.
   support_url: http://support.code.org/
   country: Země
   city: Město
@@ -73,19 +74,19 @@
   give_my_hour: 'Dej moji Hodinu:'
   girls_team: Holčičí Tým
   boys_team: Tým kluků
-  tell_the_world: "Řekni to světu!"
+  tell_the_world: Řekni to světu!
   thanks_for_voting: Díky za hlasování!
   share_on_facebook: Sdílet na Facebooku
   share_on_twitter: Sdílet na Twitteru
   beyond_an_hour: Za JEDNU HODINU KÓDU >
   get_started: Začít
   i_agree: Souhlasím
-  participant_select: "- Vybrat -"
+  participant_select: '- Vybrat -'
   participant_student: student
   participant_parent: Rodič
   participant_educator: Vyučující
   participant_engineer: Softwarový inženýr
-  participant_other: "Žádný z výše uvedených"
+  participant_other: Žádný z výše uvedených
   i_am_a: Jsem
   never_spam: Nikdy ti nebudeme posílat nevyžádanou poštu
   enter_country: Zadej zemi, pokud nejsi z USA
@@ -99,7 +100,7 @@
   learn_next_level: Pokračuj na další úroveň
   learn_online: Vyzkoušet další kurzy online
   learn_classes: Najdi místní učebny
-  hoc_is_here: "#HodinaKódu je tady - vyzkoušejte ji! @codeorg"
+  hoc_is_here: '#HodinaKódu je tady - vyzkoušejte ji! @codeorg'
   just_did_hoc: 'Právě jsem dokončil #HodinuKódu - vyzkoušej to! @codeorg'
   learn_hoc: Učte se s Hodinou Kódu
   beyond_hoc: Po Jedné Hodině
@@ -109,11 +110,11 @@
   help_recruit_coders: Pomoz nám přidat více programátorů do tvého týmu!
   help_recruit: Pomoz nám najít další programátory!
   lines_of_code: DOSUD NAPSÁNO PŘES <b># ŘÁDKŮ KÓDU</b>.
-  lines_of_code_alt: "<b>#</b> ŘÁDKŮ KÓDU NAPSANÝCH STUDENTY"
+  lines_of_code_alt: <b>#</b> ŘÁDKŮ KÓDU NAPSANÝCH STUDENTY
   who_has_done_hoc: 'Kdo udělal #HourOfCode? @codeorg'
-  hoc_leaderboards: "Žebříčky Hodiny Kódu"
-  students_and_lines: "%{students} studentů absolvovalo Hodinu Kódu a napsalo %{lines}
-    řádků kódu."
+  hoc_leaderboards: Žebříčky Hodiny Kódu
+  students_and_lines: '%{students} studentů absolvovalo Hodinu Kódu a napsalo %{lines}
+    řádků kódu.'
   start_hoc: Začni Hodinu Kódu teď
   contact_form_topic_press: Tisk/média (rozhovor nebo mluvené setkání)
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
@@ -257,7 +258,7 @@
   dashboard_students_age: Věk
   dashboard_students_gender: Pohlaví
   dashboard_students_male: Muž
-  dashboard_students_female: "Žena"
+  dashboard_students_female: Žena
   dashboard_students_secret: Secret
   dashboard_students_password: heslo
   dashboard_students_username: 'Username: %{student_username}'

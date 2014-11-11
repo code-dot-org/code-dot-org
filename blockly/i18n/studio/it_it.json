@@ -118,6 +118,8 @@
   "setBackgroundTennis": "imposta lo sfondo Campo da Tennis",
   "setBackgroundWinter": "imposta lo sfondo Inverno",
   "setBackgroundTooltip": "Imposta l'immagine per lo sfondo",
+  "setEnemySpeed": "set enemy speed",
+  "setPlayerSpeed": "set player speed",
   "setScoreText": "imposta il punteggio",
   "setScoreTextTooltip": "Imposta il testo da visualizzare nell'area del punteggio.",
   "setSpriteEmotionAngry": "ad un umore arrabbiato",

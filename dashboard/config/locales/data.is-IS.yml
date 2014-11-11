@@ -13,17 +13,17 @@
           Artist2: Stig 7
           Unplug5: Stig 8
           Farmer: Stig 9
-          Unplug6: "Áfangi 10"
-          Artist3: "Áfangi 11"
-          Unplug7: "Áfangi 12"
-          Farmer2: "Áfangi 13"
-          Unplug8: "Áfangi 14"
-          Artist4: "Áfangi 15"
-          Unplug9: "Áfangi 16"
-          Farmer3: "Áfangi 17"
-          Unplug10: "Áfangi 18"
-          Artist5: "Áfangi 19"
-          Unplug11: "Áfangi 20"
+          Unplug6: Áfangi 10
+          Artist3: Áfangi 11
+          Unplug7: Áfangi 12
+          Farmer2: Áfangi 13
+          Unplug8: Áfangi 14
+          Artist4: Áfangi 15
+          Unplug9: Áfangi 16
+          Farmer3: Áfangi 17
+          Unplug10: Áfangi 18
+          Artist5: Áfangi 19
+          Unplug11: Áfangi 20
         Hour of Code:
           desc: Klukkustund kóðunar
           Maze: Stig 1
@@ -34,7 +34,7 @@
           desc: Skopp (beta)
           Bounce: Stig 1
         Builder Levels:
-          desc: "Þrautir gerðar af notendum (beta)"
+          desc: Þrautir gerðar af notendum (beta)
           Custom: Stig 1
         Flappy Levels:
           desc: Fuglinn Flappy
@@ -44,7 +44,7 @@
           Jigsaw: Stig 1
         Step Levels:
           desc: Völundarhús (beta)
-          MazeStep: "Þrep í áfanga"
+          MazeStep: Þrep í áfanga
         edit-code:
           desc: Breyta kóða (beta)
           MazeEC: Stig 1
@@ -55,7 +55,7 @@
           Bounce: Stig 1
           Studio: Stig 2
         builder:
-          desc: "Þrautir gerðar af notendum (beta)"
+          desc: Þrautir gerðar af notendum (beta)
           Custom: Stig 1
         flappy:
           desc: Fuglinn Flappy
@@ -65,7 +65,7 @@
           Jigsaw: Stig 1
         step:
           desc: Völundarhús (beta)
-          MazeStep: "Þrep í áfanga"
+          MazeStep: Þrep í áfanga
         wordsearch:
           desc: Stafsetning (beta)
           WordSearch: Stig 1
@@ -121,14 +121,14 @@
         maze_2_2: 'Getur þú hjálpað mér að ná óþæga svíninu? Raðaðu nokkrum "fara
           áfram" kubbum saman og ýttu svo á "Keyra forrit" til að hjálpa mér að komast
           þangað. '
-        maze_2_1: "Þetta svín ýfir á mér fjaðrirnar. Hjálpaðu mér að finna það!"
+        maze_2_1: Þetta svín ýfir á mér fjaðrirnar. Hjálpaðu mér að finna það!
         maze_2_2_5: Fylgdu slóðinni og leiddu mig að svínka. Forðastu TNT sprengjuna
           annars verður fjaðrafok!
         maze_2_3: Leiddu mig að hinum illa græna grís! (Gættu þín á TNT sprengjunum)
         maze_2_4: Slappaðu af og hjálpaðu mér að finna vonda svínið. Annars gæti ég
           reiðst!
-        maze_2_5: "Ég get komist að svíninu með því að nota bara 2 kubba. Geturðu
-          fundið út úr því?"
+        maze_2_5: Ég get komist að svíninu með því að nota bara 2 kubba. Geturðu fundið
+          út úr því?
         maze_2_6: Reyndu að koma mér til grænu boðflennunnar með aðeins 3 kubbum.
         maze_2_7: Hjálpaðu mér að hrekja vonda grísinn í burtu með sem fæstum kubbum.
           Prófaðu að nota fleiri en einn "endurtaka" kubb.
@@ -170,8 +170,8 @@
         turtle_1_4: 'Teiknaðu þríhyrning með hliðar í mismunandi litum með því að
           nota kubbinn "einhver litur" sem velur lit af handahófi í hvert sinn. Vísbending:
           Þú þarft að finna út hve mikið á að snúa með því að smella á töluna í snúningskubbnum.'
-        turtle_1_5: "Æfðu þetta nú með því að teikna þríhyrning og ferning til að
-          búa til mynd af umslagi."
+        turtle_1_5: Æfðu þetta nú með því að teikna þríhyrning og ferning til að búa
+          til mynd af umslagi.
         turtle_1_6: 'Getur þú fundið út hvernig á að teikna þennan þríhyrning og ferning?
           Vísbending: Teiknaðu þríhyrninginn fyrst og finndu svo út hve mikið á að
           snúa áður en ferningurinn er teiknaður.'
@@ -226,9 +226,9 @@
           mold. Vísbending: Þú getur sett "endurtaka" blokk innan í "meðan" blokk.'
         maze_karel_1_6: Fjarlægðu alla moldarhaugana með sem fæstum kubbum. Nýju valkostirnir
           í fellilistanum á "meðan" kubbnum segja mér hvort ég standi á haug eða holu.
-        maze_karel_1_7: "Ég fann mjög djúpa holu! Ég veit ekki hve margar skóflur
-          þarf til að fylla hana. Getur þú skrifað forrit sem fyllir holuna þar til
-          yfirborðið er slétt?"
+        maze_karel_1_7: Ég fann mjög djúpa holu! Ég veit ekki hve margar skóflur þarf
+          til að fylla hana. Getur þú skrifað forrit sem fyllir holuna þar til yfirborðið
+          er slétt?
         maze_karel_1_8: Hjálpaðu mér að fylla holuna við endann á túninu og með sem
           fæstum kubbum.
         maze_karel_1_9: 'Láttu mig fjarlægja alla þessa moldarhauga. Reyndu að nota
@@ -253,9 +253,9 @@
           Þú vilt kannske nota sleðann til að láta mig fara hraðar.'
         turtle_2_5: Teiknaðu ferninga með 50, 60, 70, 80 og 90 pixla hliðar. Þú þarft
           að nota "teikna ferning" fallið fimm sinnum.
-        turtle_2_6: "Þetta forrit notar teljara til að teikna sömu ferninga og síðast.
+        turtle_2_6: 'Þetta forrit notar teljara til að teikna sömu ferninga og síðast.
           Hver ferningur á að hafa hlið sem er jafnstór og teljarinn svo þú verður
-          að nota teljarakubbinn. Vísbending: Hann er undir flokknum Breytur."
+          að nota teljarakubbinn. Vísbending: Hann er undir flokknum Breytur.'
         turtle_2_7: Hér er forrit sem teiknar spíral, en kubbarnir eru óvirkir svo
           þeir keyra ekki. Búðu til nýtt forrit með því að nota kubbana "telja með"
           (undir flokknum Lykkjur) og "teljari" (undir Breytur) til að teikna sama
@@ -283,9 +283,8 @@
           notaðu það til að hjálpa mér að slétta alla haugana.
         maze_karel_2_6: Notaðu tvö ný föll, "fylla 8" og "fjarlægja 8", til að hjálpa
           mér að slétta hauginn og fylla upp í holuna.
-        maze_karel_2_7: "Það er kýr á túninu mínu! Skrifaðu nýtt fall sem hjálpar
-          mér að forðast kúna en fjarlægja hauginn. Settu alla kubbana inn í nýja
-          fallið."
+        maze_karel_2_7: Það er kýr á túninu mínu! Skrifaðu nýtt fall sem hjálpar mér
+          að forðast kúna en fjarlægja hauginn. Settu alla kubbana inn í nýja fallið.
         maze_karel_2_8: Notaðu þetta nýja fall "forðast kúna og fjarlægja 1" til að
           hjálpa mér að fjarlægja alla haugana.
         maze_karel_2_9: Jæja, hér er fall sem fjarlægir 4 mismunandi moldarhauga lóðrétt.
@@ -316,8 +315,8 @@
           þetta breytta fall til að teikna þrjú hús.
         turtle_3_9: Getur þú búið til "teikna hús" fallið aftur án hjálpar? Reyndu
           það og teiknaðu svo röð af húsum.
-        turtle_3_10: "Þú hefur lært heilmikið! Notaðu kunnáttuna til að teikna hvað
-          sem þú vilt. Reyndu að teikna stjörnu, spíral eða flott snjókorn."
+        turtle_3_10: Þú hefur lært heilmikið! Notaðu kunnáttuna til að teikna hvað
+          sem þú vilt. Reyndu að teikna stjörnu, spíral eða flott snjókorn.
         maze_karel_debug_seq_1: Velkomin í villuleit! Kóðinn minn virkar ekki. Getur
           þú komið auga á ástæðuna og lagað kóðann svo ég geti sléttað akurinn og
           undirbúið hann fyrir sáningu?
@@ -353,8 +352,8 @@
         turtle_5_6: Prófaðu að keyra þetta forrit. Gerðu breytingar til að sjá hvaða
           áhrif þær hafa. Getur þú fundið út hvernig það virkar? (Eða eytt því og
           sett eitthvað allt annað í staðinn)
-        maze_3_1: "Ég verð að ná þessu svíni! Skrifaðu kóða sem kallar tvisvar á move();
-          svo ég geti fengið eggin mín til baka."
+        maze_3_1: Ég verð að ná þessu svíni! Skrifaðu kóða sem kallar tvisvar á move();
+          svo ég geti fengið eggin mín til baka.
         maze_3_2: Skrifaðu forrit fyrir mig svo ég nái alla leið til svínsins.
         maze_3_3: Hvernig kemst ég til svínsins? Gættu þess að ég rekist ekki á TNT
           sprengiefnið!
@@ -366,8 +365,8 @@
           Færðu spaðann til að ná báðum endamörkum.
         bounce_3: Reyndu nú eitthvað svipað með kubbnum "þegar upp ör". Færðu spaðann
           upp að endamarkinu.
-        bounce_4: "Í þetta sinn þarft þú að bæta við fjórum kubbum. Færðu spaðann
-          að öllum fjórum endamörkum til að ljúka þessari þraut."
+        bounce_4: Í þetta sinn þarft þú að bæta við fjórum kubbum. Færðu spaðann að
+          öllum fjórum endamörkum til að ljúka þessari þraut.
         bounce_5: Við ætlum að senda bolta svífandi niður í átt að spaðanum. Tengdu
           kubb við kubbinn "þegar bolti hittir spaða" til að tryggja að boltinn nái
           að endamarkinu.
@@ -404,9 +403,9 @@
           blaka vængjunum meira eða minna.
         flappy_7: Prófaðu svo að breyta leiknum með því að tengja annan kubb við "þegar
           keyrt" kubbinn.
-        flappy_8: "Þú getur stillt umhverfið hvenær sem er, ekki bara í byrjun. Prófaðu
+        flappy_8: Þú getur stillt umhverfið hvenær sem er, ekki bara í byrjun. Prófaðu
           að still umhverfið á HANDAHÓF þegar aðrir atburðir gerast, t.d. þegar farið
-          er framhjá hindrun."
+          er framhjá hindrun.
         flappy_9: Prófaðu nú aðra útfærslu með því að ljúka ekki leiknum heldur núllstilla
           skorið þegar rekist er á hindrun eða jörð.
         flappy_11: Búðu til þinn eiginn Flappy leik. Þú getur breytt öllu umhverfi
@@ -537,11 +536,11 @@
         maze_wordsearch_k_13: Færðu mig í eina átt svo aðra til að stafa orðið DEBUG
         maze_wordsearch_k_15: Færðu mig í eina átt svo aðra til að stafa orðið ABOVE
         maze_wordsearch_k_16: Færðu mig í eina átt svo aðra til að stafa orðið BELOW
-        maze_wordsearch_k_20: "Þetta er próf! Færðu mig í eina átt svo aðra til að
-          stafa orðið STORY"
-        webapp_ec_simple: Create your web app by using createHtmlBlock.
-        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
-          it in the new "penColour" block.'
+        maze_wordsearch_k_20: Þetta er próf! Færðu mig í eina átt svo aðra til að
+          stafa orðið STORY
+        webapp_ec_simple: Búa til vefapp með því að nota createHtmlBlock.
+        turtle_ec_1_2: 'Teiknaðu nú ferning. ATHUGAÐU: notaðu uppáhaldslitinn þinn
+          með því að velja hann í nýja kubbnum "pennalitur".'
     video:
       name:
         maze_intro: Kynning á Völundarhúsi
@@ -603,7 +602,7 @@
         C3_bee_conditionals: Býfluga - skilyrði
         C3_maze_conditionals: Völundarhús - skilyrði
         C3_artist_nested_loops: Innri lykkjur
-        C3_farmer_while: "Á meðan lykkjur"
+        C3_farmer_while: Á meðan lykkjur
         C3_bee_nested_loops: Innri lykkjur
         C3_bee_debugging: Býfluga - villuleit
         C3_bounce: Skopp
@@ -625,8 +624,8 @@
           búa til
         instructions_repeat_explanation: Leiðbeiningar fyrir hverja þraut eru endurteknar
           hér
-        category_explanation: "Þú hefur alla sömu kubbana en nú er búið að raða þeim
-          í flokka"
+        category_explanation: Þú hefur alla sömu kubbana en nú er búið að raða þeim
+          í flokka
         set_sprite_image: Tengdu "hafa leikmann" kubb við "þegar sagan byrjar" kubb
           til að virkja leikmann fyrir þessa sögu
         studio_say_text: Skrifaðu það sem leikmaðurinn á að segja innan þessara gæsalappa

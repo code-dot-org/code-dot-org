@@ -1,10 +1,11 @@
 "eu-ES":
   hello: Kaixo mundua
+  select_language: Please select your language
   computer_science: Konputazio zientzia
   computer_science_edweek: Konputazio zientzien hezkuntza astea
   csedweek_dates: 2013ko Abenduaren 9-15
-  n_have_learned_an_hoc: "<h1>#</h1><h3>-ek </h3<h2>KODETZE ORDU BAT&trade;</h2><h3>frogatu
-    dute</h3>"
+  n_have_learned_an_hoc: <h1>#</h1><h3>-ek </h3<h2>KODETZE ORDU BAT&trade;</h2><h3>frogatu
+    dute</h3>
   anybody_can_learn: Edozeinek ikasi dezake.
   learn_now: Ikasi orain
   petition_message: Edozein eskoletako edozein ikaslek konputazio zientziak ikasteko
@@ -45,7 +46,7 @@
     baldin-orduan aginduak, eta oinarrizko algoritmoak.
   all_ages: Adin guztiak
   beginner: Hasierako maila
-  n_participants: "# parte hartzaile"
+  n_participants: '# parte hartzaile'
   go: Joan
   thank_you_: Eskerrik asko!
   congratulations: Zorionak!
@@ -81,7 +82,7 @@
   beyond_an_hour: KODE ORDUTIK haratago >
   get_started: Hasi
   i_agree: Ados
-  participant_select: "- Aukeratu -"
+  participant_select: '- Aukeratu -'
   participant_student: Ikaslea
   participant_parent: Gurasoa
   participant_educator: Hezitzailea
@@ -100,7 +101,7 @@
   learn_next_level: Jarraitu hurrengo mailara
   learn_online: Probatu beste online kurtsoak
   learn_classes: Bilatu gertuko klaseak
-  hoc_is_here: "#KodeOrdua hemen dago - probatu! @codeorg"
+  hoc_is_here: '#KodeOrdua hemen dago - probatu! @codeorg'
   just_did_hoc: 'Oraintxe #KodeOrdua egin dut - Probatu! @codeorg'
   learn_hoc: Ikasi kode ordu bat
   beyond_hoc: Ordubetetik haratago
@@ -109,12 +110,12 @@
   boy: Mutila
   help_recruit_coders: Lagundu kodegiel gehiago zure talderako biltzen!
   help_recruit: Kodegile gehaigo biltzen lagundu!
-  lines_of_code: "<b># KODE LERRO</b> BAINO GEHIAGO IDATZIAK GAUR ARTE."
-  lines_of_code_alt: "<b>#</b> KODE LERRO IKASLEEK IDATZIAK"
+  lines_of_code: <b># KODE LERRO</b> BAINO GEHIAGO IDATZIAK GAUR ARTE.
+  lines_of_code_alt: <b>#</b> KODE LERRO IKASLEEK IDATZIAK
   who_has_done_hoc: 'Zeinek egin du #KodeOrdua? @codeorg'
   hoc_leaderboards: Kode orduko buruak
-  students_and_lines: "%{students} ikaslek egin dute ordubete kode eta students have
-    done the Hour of  %{lines} kode lerro idatzi dituzte."
+  students_and_lines: '%{students} ikaslek egin dute ordubete kode eta students have
+    done the Hour of  %{lines} kode lerro idatzi dituzte.'
   start_hoc: Hasi Kode Ordua orain
   contact_form_topic_press: Sakatu/media (elkarrizketa edo ahozko adostasuna)
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>

@@ -8,10 +8,12 @@
 /config/scripts/.hints_imported
 /config/scripts/.matches_seeded
 /config/scripts/.multis_seeded
+/config/scripts/.dsls_seeded
 /config/scripts/.seeded
 /coverage
 /public/assets
 /test/ui/success.log
 /test/ui/error.log
 /test/ui/errorbrowsers.log
-
+/test/ui/log/*
+/config/locales/dsls.en.yml

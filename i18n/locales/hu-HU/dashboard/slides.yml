@@ -1,255 +1,255 @@
-hu:
+"hu":
   slides:
     maze_intro:
       1:
-        image: notes/hoc1_1.jpg
-        text: Üdvözlünk az első kód órádban! Kezdjük is el az első programozási leckét.
+        image: "notes/hoc1_1.jpg"
+        text: "Üdvözlünk az első kód órádban! Kezdjük is el az első programozási leckét."
       2:
-        image: notes/hoc1_2.jpg
-        text: A Blockly nevű vizuális programozási nyelvezetet fogjuk használni, ahol blokkok egymáshoz illesztésével tudsz kódot írni.
+        image: "notes/hoc1_2.jpg"
+        text: "A Blockly nevű vizuális programozási nyelvezetet fogjuk használni, ahol blokkok egymáshoz illesztésével tudsz kódot írni."
       3:
-        image: notes/hoc1_3.jpg
-        text: A kódot legtöbbször gépelik, de a Blockly vizuális. Minden blokk megfelel egy „igazi” sor kódnak.
+        image: "notes/hoc1_3.jpg"
+        text: "A kódot legtöbbször gépelik, de a Blockly vizuális. Minden blokk megfelel egy „igazi” sor kódnak."
       4:
-        image: notes/hoc1_4.jpg
-        text: Olyan számítástechinkai alapokat, koncepciókat fogsz megtanulni, amelyeket az alkalmazások készítésétől a marsjáró vezérléséig mindenütt használnak.
+        image: "notes/hoc1_4.jpg"
+        text: "Olyan számítástechinkai alapokat, koncepciókat fogsz megtanulni, amelyeket az alkalmazások készítésétől a marsjáró vezérléséig mindenütt használnak."
       5:
-        image: notes/hoc1_5.jpg
-        text: Minden program a számítógép által végrehajtandó utasítások listája.
+        image: "notes/hoc1_5.jpg"
+        text: "Minden program a számítógép által végrehajtandó utasítások listája."
       6:
-        image: notes/hoc1_6.jpg
-        text: Első programodban egy Angry Bird madarat kell irányítanod az útvesztőn át, hogy eljusson a Zöld Disznóig.
+        image: "notes/hoc1_6.jpg"
+        text: "Első programodban egy Angry Bird madarat kell irányítanod az útvesztőn át, hogy eljusson a Zöld Disznóig."
       7:
-        image: notes/hoc1_7.jpg
-        text: A bal oldal egy útvesztő, ahol a programod fut. A pálya megoldásához szükséges útmutató az útvesztő alatt olvasható.
+        image: "notes/hoc1_7.jpg"
+        text: "A bal oldal egy útvesztő, ahol a programod fut. A pálya megoldásához szükséges útmutató az útvesztő alatt olvasható."
       8:
-        image: notes/hoc1_8.jpg
-        text: A középső eszköztár tartalmazza az Angry Bird irányításához szükséges utasításokat. Ezeket fogod használni a kód felépítéséhez.
+        image: "notes/hoc1_8.jpg"
+        text: "A középső eszköztár tartalmazza az Angry Bird irányításához szükséges utasításokat. Ezeket fogod használni a kód felépítéséhez."
       9:
-        image: notes/hoc1_9.jpg
-        text: A középső eszköztárból a jobb oldali munkaterületre kell majd áthúznod a blokkokat a program felépítéséhez. Egy blokk törléséhez húzd azt a sarokban lévő kukára.
+        image: "notes/hoc1_9.jpg"
+        text: "A középső eszköztárból a jobb oldali munkaterületre kell majd áthúznod a blokkokat a program felépítéséhez. Egy blokk törléséhez húzd azt a sarokban lévő kukára."
       10:
-        image: notes/hoc1_10.jpg
-        text: Minden blokk egy utasítás. Ha egy „előrelépni” blokkot húzol a munkaterületre, majd megnyomod a „Futtatás” gombot, akkor a madár egy pozíciót lép előre az útvesztőben.
+        image: "notes/hoc1_10.jpg"
+        text: "Minden blokk egy utasítás. Ha egy „előrelépni” blokkot húzol a munkaterületre, majd megnyomod a „Futtatás” gombot, akkor a madár egy pozíciót lép előre az útvesztőben."
       11:
-        image: notes/hoc1_11.jpg
-        text: Egynél több művelet végrehajtásához több blokkot kell a munkaterületre húzni, majd össze kell őket kapcsolni. A madár fentről lefelé haladva hajtja végre az utasításokat.
+        image: "notes/hoc1_11.jpg"
+        text: "Egynél több művelet végrehajtásához több blokkot kell a munkaterületre húzni, majd össze kell őket kapcsolni. A madár fentről lefelé haladva hajtja végre az utasításokat."
       12:
-        image: notes/hoc1_12.jpg
-        text: Ha egy már lefutott programot szeretnél javítani és újra lefuttatni, akkor nyomd meg a „Visszaállítás” gombot.
+        image: "notes/hoc1_12.jpg"
+        text: "Ha egy már lefutott programot szeretnél javítani és újra lefuttatni, akkor nyomd meg a „Visszaállítás” gombot."
       13:
-        image: notes/hoc1_13.jpg
-        text: Gyerünk kapjuk el azokat a disznókat!
+        image: "notes/hoc1_13.jpg"
+        text: "Gyerünk kapjuk el azokat a disznókat!"
     artist_intro:
       1:
-        image: notes/stage5_1.jpg
-        text: Szia, a nevem JR! Mindegy versenyzői csapatnak szüksége van egy számítógép tudósra a nyeréshez. Analizálják az adatokat a járműből, hogy gyorsabbá tehessék azt.
+        image: "notes/stage5_1.jpg"
+        text: "Szia, a nevem JR! Mindegy versenyzői csapatnak szüksége van egy számítógép tudósra a nyeréshez. Analizálják az adatokat a járműből, hogy gyorsabbá tehessék azt."
       2:
-        image: notes/stage5_2.jpg
-        text: Ezeknél a rejtvényeknél ön lesz a művész aki vonalat húz maga mögött bármerre megy.
+        image: "notes/stage5_2.jpg"
+        text: "Ezeknél a rejtvényeknél ön lesz a művész aki vonalat húz maga mögött bármerre megy."
       3:
-        image: notes/stage5_3.jpg
+        image: "notes/stage5_3.jpg"
         text: 'Ez a blokk azt mondja: " előrelépni 100 pixel. " A pixelek csak nagyon apró pontok a képernyőn .'
       4:
-        image: notes/stage5_4.jpg
+        image: "notes/stage5_4.jpg"
         text: 'Ez a blokk azt mondja "forduljon jobbra 90 fokban." Ez el fogja fordítani a művészt ugyanabban a mennyiségben, mint amennyiben a "fordulj" blokkok a labirintus rejtvényekben.'
       5:
-        image: notes/stage5_5.jpg
+        image: "notes/stage5_5.jpg"
         text: 'Kattints valamelyik blokkra, hogy megváltoztasd a művész lépéseinek számát, vagy a fordulások mértékét.  Játssz ezekkel, hogy jobban megismerd ezeket az új blokkokat.'
     farmer_intro:
       1:
-        image: notes/stage9_1.jpg
-        text: Szia, a nevem Paola! Ezekben a rejtvényekben te egy farmer leszel, akinek ki kell simítania a földét, hogy elkezdhesse az ültetvények elültetését.
+        image: "notes/stage9_1.jpg"
+        text: "Szia, a nevem Paola! Ezekben a rejtvényekben te egy farmer leszel, akinek ki kell simítania a földét, hogy elkezdhesse az ültetvények elültetését."
       2:
-        image: notes/stage9_2.jpg
-        text: Segítened kell neki eltávolítani az összes földet, s kitölteni vele a lyukakat.
+        image: "notes/stage9_2.jpg"
+        text: "Segítened kell neki eltávolítani az összes földet, s kitölteni vele a lyukakat."
       3:
-        image: notes/stage9_3.jpg
+        image: "notes/stage9_3.jpg"
         text: 'Az új blokk  1 eltüntet egy ásónyi földet a kupacból, ill.  egy ásónyi földdel feltölt egy gödröt.'
       4:
-        image: notes/stage9_4.jpg
-        text: A halmok és a lyukak különböző méretűek, meg kell mondania a farmernek, hogy hány shovelfult használjon.
+        image: "notes/stage9_4.jpg"
+        text: "A halmok és a lyukak különböző méretűek, meg kell mondania a farmernek, hogy hány shovelfult használjon."
     flappy_intro:
       1:
-        image: Megjegyzések/flappy01.jpg
+        image: "Megjegyzések/flappy01.jpg"
         text: 'Szia, Kati vagyok!  Az egyik legizgalmasabb dolog a számítógéppel, hogy egy program lehet interaktív.'
       2:
-        image: Megjegyzések/flappy02.jpg
+        image: "Megjegyzések/flappy02.jpg"
         text: 'Bármikor gépelek klikkelek vagy megérintem,  a számítógépemen vagy telefonomon, az egy ESEMÉNY-t generál, és valahol van egy kód, ami eldönti, mit is csináljon, ha ez az esemény megtörténik.'
       3:
-        image: Megjegyzések/flappy03.jpg
+        image: "Megjegyzések/flappy03.jpg"
         text: 'Mondjuk lehet egy ESEMÉNYKEZELŐ, ami úgy dönt: "amikor az egéren klikkelnek, lejátszom egy hangot" '
       4:
-        image: Megjegyzések/flappy04.jpg
+        image: "Megjegyzések/flappy04.jpg"
         text: 'Hallottál már a FlappyBird játék-ról ? Eseménykezelők használatával fogunk megtanulni hogyan lehet a saját egyéni  FlappyBird változat programját elkészíteni!'
       5:
-        image: Megjegyzések/flappy05.jpg
+        image: "Megjegyzések/flappy05.jpg"
         text: 'A  kódot, a számítógépnek parancsokat jelentő blokkokat  felkapva és átrakva (drag and drop) fogja írni. Az grafikusan ábrázolt blokkok valódi kódot reprezentálnak.'
       6:
-        image: Megjegyzések/flappy06.jpg
+        image: "Megjegyzések/flappy06.jpg"
         text: 'Ha egy pillantást vet a munkaterületre, lát néhány zöld blokkot, amiket kitöltöttek az Ön részére- ezek a "eseménykezelők" '
       7:
-        image: Megjegyzések/flappy07.jpg
+        image: "Megjegyzések/flappy07.jpg"
         text: 'Ha azt szeretné, hogy a madár csapjon szárnyával, ha RÁKATTINT az egérrel, arra ott van a "FLAP" blokk. Ezt hozzárendeli a megfelelő eseménykezelőhöz, és akkor az ön játékában valahányszor klikkel, a madár csap egyet a szárnyával.'
       8:
-        image: Megjegyzések/flappy08.jpg
+        image: "Megjegyzések/flappy08.jpg"
         text: 'Minden egyes rejtvény bemutat egy új típusú eseményt, mint zöld blokkot a munkaterületen. Ön kiválaszthatja a megfelelő blokkokat, az  eseményekre adott válaszként.'
       9:
-        image: Megjegyzések/flappy09.jpg
+        image: "Megjegyzések/flappy09.jpg"
         text: 'Amikor vagy lát egy lefelé nyilat, mint ez, ez azt jelenti, meg lehet változtatni a beállításokat - például az akkor lejátszandó hangot, amikor flappy eléri a talajt.'
       10:
-        image: Megjegyzések/flappy10.jpg
-        text: Az utolsó lépcsőn már képes létrehozni a saját játékát, és megosztani azt barátaival. Jó szórakozást!
+        image: "Megjegyzések/flappy10.jpg"
+        text: "Az utolsó lépcsőn már képes létrehozni a saját játékát, és megosztani azt barátaival. Jó szórakozást!"
     loop_times:
       1:
-        image: notes/hoc2_1.jpg
-        text: Helló, Márk vagyok! Gyere tanuljuk meg a ciklusok használatát. A ciklust használva megmondhatod a számítógépnek, hogy egy bizonyos utasítást újra és újra, ezerszer vagy milliószor ismételjen meg.
+        image: "notes/hoc2_1.jpg"
+        text: "Helló, Márk vagyok! Gyere tanuljuk meg a ciklusok használatát. A ciklust használva megmondhatod a számítógépnek, hogy egy bizonyos utasítást újra és újra, ezerszer vagy milliószor ismételjen meg."
       2:
-        image: notes/hoc2_2.jpg
-        text: Ebben a rejtvényben azt szeretnénk, ha a madár ötöt lépne előre, hogy elérjen a malachoz.
+        image: "notes/hoc2_2.jpg"
+        text: "Ebben a rejtvényben azt szeretnénk, ha a madár ötöt lépne előre, hogy elérjen a malachoz."
       3:
-        image: notes/hoc2_3.jpg
-        text: A feladat megoldásához használhatjuk a új „Ismétlés” blokkot.
+        image: "notes/hoc2_3.jpg"
+        text: "A feladat megoldásához használhatjuk a új „Ismétlés” blokkot."
       4:
-        image: notes/hoc2_4.jpg
-        text: Ahelyett, hogy 5 külön „előrelépni” blokkot használnánk...
+        image: "notes/hoc2_4.jpg"
+        text: "Ahelyett, hogy 5 külön „előrelépni” blokkot használnánk..."
       5:
-        image: notes/hoc2_5.jpg
-        text: Betehetjük az „előrelépni” blokkot az „ismétlés” blokk belsejébe, majd beírhatjuk a blokkba a szükséges ismétlések számát.
+        image: "notes/hoc2_5.jpg"
+        text: "Betehetjük az „előrelépni” blokkot az „ismétlés” blokk belsejébe, majd beírhatjuk a blokkba a szükséges ismétlések számát."
       6:
-        image: notes/hoc2_6.jpg
+        image: "notes/hoc2_6.jpg"
         text: 'Fontos: az „ismétlés” blokkba több mint egy utasítást is betehetsz.'
       7:
-        image: notes/hoc2_7.jpg
-        text: Élvezd az új „ismétlés” blokk használatát!
+        image: "notes/hoc2_7.jpg"
+        text: "Élvezd az új „ismétlés” blokk használatát!"
     loop_until:
       1:
-        image: notes/hoc3_1.jpg
-        text: Szia, Chris vagyok. Mielőtt a Miami Heathez csatlakoztam Georgia Techbe jártam, hogy számítástechnikát tanulhassak. Gyere próbáljuk ki az új „ismételd amíg” blokkot.
+        image: "notes/hoc3_1.jpg"
+        text: "Szia, Chris vagyok. Mielőtt a Miami Heathez csatlakoztam Georgia Techbe jártam, hogy számítástechnikát tanulhassak. Gyere próbáljuk ki az új „ismételd amíg” blokkot."
       2:
-        image: notes/hoc3_2.jpg
-        text: Mi van ha nem tudjuk milyen messzire kell a madárnak mennie, hogy eljusson a malachoz?
+        image: "notes/hoc3_2.jpg"
+        text: "Mi van ha nem tudjuk milyen messzire kell a madárnak mennie, hogy eljusson a malachoz?"
       3:
-        image: notes/hoc3_3.jpg
+        image: "notes/hoc3_3.jpg"
         text: 'Ha az "előrelépés" blokkot az "ismételd amíg" blokkba helyezzük, akkor a madár addig fog előre haladni AMÍG eléri a malacot (vagy a falnak ütközik).'
       4:
-        image: notes/hoc3_4.jpg
+        image: "notes/hoc3_4.jpg"
         text: 'Fontos: akárcsak az ismétlő blokkba az „ismételd amíg” blokkba is több utasítást helyezhetsz.'
     if:
       1:
-        image: notes/hoc4_1.jpg
-        text: Szia, Bill vagyok! Tanuljunk meg egy új alapvető koncepciót a „ha” feltételt. A számítógépek ezt felhasználva hoznak döntéseket.
+        image: "notes/hoc4_1.jpg"
+        text: "Szia, Bill vagyok! Tanuljunk meg egy új alapvető koncepciót a „ha” feltételt. A számítógépek ezt felhasználva hoznak döntéseket."
       2:
-        image: notes/hoc4_2.jpg
-        text: A „ha” állítást Te is naponta használod. Minden reggel mielőtt elmennél, azt mondod HA esik az eső fel kell vennem a kabátom.
+        image: "notes/hoc4_2.jpg"
+        text: "A „ha” állítást Te is naponta használod. Minden reggel mielőtt elmennél, azt mondod HA esik az eső fel kell vennem a kabátom."
       3:
-        image: notes/hoc4_3.jpg
-        text: Megmondhatjuk egy zombinak HA van út balra és ha megtalálja az utat, akkor forduljon abba az irányba.
+        image: "notes/hoc4_3.jpg"
+        text: "Megmondhatjuk egy zombinak HA van út balra és ha megtalálja az utat, akkor forduljon abba az irányba."
       4:
-        image: notes/hoc4_4.jpg
-        text: Ahhoz hogy megírjuk azt a kódot húzzuk ki a „ha” blokkot, és helyezzük a „balra fordul” blokkot a belsejébe.
+        image: "notes/hoc4_4.jpg"
+        text: "Ahhoz hogy megírjuk azt a kódot húzzuk ki a „ha” blokkot, és helyezzük a „balra fordul” blokkot a belsejébe."
       5:
-        image: notes/hoc4_5.jpg
-        text: Most ha az „előrelépés” blokkot föléje és az „ismétlés” blokkot a kód köré helyezzük, akkor a zombi minden lépésnél ellenőrzi, hogy létezik-e út balra. Ha igen, akkor arra fordul. A ismétlő parancs fontos, mivel minden lépésnél ellenőriznie kell, hogy létezik-e út.
+        image: "notes/hoc4_5.jpg"
+        text: "Most ha az „előrelépés” blokkot föléje és az „ismétlés” blokkot a kód köré helyezzük, akkor a zombi minden lépésnél ellenőrzi, hogy létezik-e út balra. Ha igen, akkor arra fordul. A ismétlő parancs fontos, mivel minden lépésnél ellenőriznie kell, hogy létezik-e út."
       6:
-        image: notes/hoc4_6.jpg
+        image: "notes/hoc4_6.jpg"
         text: 'A ha állítás nagyon fontos a számítástechnikában. Az első programjaim között volt egy amőba játék, amelyben az egyik ha feltétel így szólt: HA az ellenfél nyerő helyzetben van, akkor blokkolni kell a pozíciót, amivel nyerni tudna.'
       7:
-        image: notes/hoc4_7.jpg
-        text: Jó szórakozást a „ha” blokk használatához!
+        image: "notes/hoc4_7.jpg"
+        text: "Jó szórakozást a „ha” blokk használatához!"
     if_else:
       1:
-        image: notes/hoc5_1.jpg
-        text: Szia, Saloni vagyok. Én az egészségügyben és az orvostudományban felmerülő problémák megoldására használom a számítástechnikát. Tanuljuk meg a „ha különben” blokk használatát. Ez a blokk hasonlít a „ha” blokkhoz, de van egy extra kiegészítése „különben” néven.
+        image: "notes/hoc5_1.jpg"
+        text: "Szia, Saloni vagyok. Én az egészségügyben és az orvostudományban felmerülő problémák megoldására használom a számítástechnikát. Tanuljuk meg a „ha különben” blokk használatát. Ez a blokk hasonlít a „ha” blokkhoz, de van egy extra kiegészítése „különben” néven."
       2:
-        image: notes/hoc5_2.jpg
-        text: Ha a feltétel „csináld” részéhez egy „előrelépni”, a „különben” részéhez egy „fordulj balra” blokkot teszel, akkor a zombi e közül a két lehetőség közül fog választani. Ha van út előre, akkor a zombi előre megy, minden más esetben (tehát ha nincs előre út) a zombi balra fog fordulni.
+        image: "notes/hoc5_2.jpg"
+        text: "Ha a feltétel „csináld” részéhez egy „előrelépni”, a „különben” részéhez egy „fordulj balra” blokkot teszel, akkor a zombi e közül a két lehetőség közül fog választani. Ha van út előre, akkor a zombi előre megy, minden más esetben (tehát ha nincs előre út) a zombi balra fog fordulni."
       3:
-        image: notes/hoc5_3.jpg
-        text: A „ha” blokkhoz hasonlóan a „ha különben” blokkot is be lehet tenni „ismétlés” blokkba, így a zombi tovább mozog, és a „ha különben” blokk minden alkalommal ellenőrzi, hogy kell-e fordulnia.
+        image: "notes/hoc5_3.jpg"
+        text: "A „ha” blokkhoz hasonlóan a „ha különben” blokkot is be lehet tenni „ismétlés” blokkba, így a zombi tovább mozog, és a „ha különben” blokk minden alkalommal ellenőrzi, hogy kell-e fordulnia."
       4:
-        image: notes/hoc5_4.jpg
-        text: Most vidd a zombikat oda ahova tartoznak!
+        image: "notes/hoc5_4.jpg"
+        text: "Most vidd a zombikat oda ahova tartoznak!"
     function:
       1:
-        image: notes/stage13_1.jpg
-        text: Szia, Brina vagyok , mérnök az Instagram-nál. Egy függvény az bizonyos sorok a kódból amit újra és újra használni szeretnél, így ahelyett, hogy a kódot ki minden alkalommal be kelljen írni, akkor csak használ egy blokk.
+        image: "notes/stage13_1.jpg"
+        text: "Szia, Brina vagyok , mérnök az Instagram-nál. Egy függvény az bizonyos sorok a kódból amit újra és újra használni szeretnél, így ahelyett, hogy a kódot ki minden alkalommal be kelljen írni, akkor csak használ egy blokk."
       2:
-        image: notes/stage13_2.jpg
-        text: Itt az idő, hogy megtanuljunk függvényeket definiálni. A függvény definíciókat csillaggal jelezzük. A függvény nevét a legfelső sorba írjuk.
+        image: "notes/stage13_2.jpg"
+        text: "Itt az idő, hogy megtanuljunk függvényeket definiálni. A függvény definíciókat csillaggal jelezzük. A függvény nevét a legfelső sorba írjuk."
       3:
-        image: notes/stage13_3.jpg
+        image: "notes/stage13_3.jpg"
         text: 'A blokkok a definíción belül mutatják meg, hogy mit is csinál. Ez a függvény, amit "feltölt 5"-nek hívunk egy repeat/ismételd és egy feltölt blokkból áll.'
       4:
-        image: notes/stage13_4.jpg
+        image: "notes/stage13_4.jpg"
         text: 'A definíció csak ott csücsül a munkapadon, de a farmer nem tudja futtatni, amíg mi ki nem húzzuk a "feltölt 5" függvényblokkot a függvények közül.'
       5:
-        image: notes/stage13_5.jpg
+        image: "notes/stage13_5.jpg"
         text: |-
           Let's put the "fun" back in "FUNction!"
     loop_while:
       1:
-        image: notes/stage9_5.jpg
+        image: "notes/stage9_5.jpg"
         text: |-
           Hi, I'm Makinde! Let's learn about the "while block."
       2:
-        image: notes/stage9_6.jpg
+        image: "notes/stage9_6.jpg"
         text: 'A "While"/"Amíg" blokk addig csinálja amit beletettél, amíg a feltétel amit az elején tettél igaz.'
       3:
-        image: notes/stage9_7.jpg
-        text: Például ha a farmer áll egy földkupacnál, ő ADDIG tüntet el 1-1 lapátnyi földet, AMÍG van ott egyáltalán kupac.
+        image: "notes/stage9_7.jpg"
+        text: "Például ha a farmer áll egy földkupacnál, ő ADDIG tüntet el 1-1 lapátnyi földet, AMÍG van ott egyáltalán kupac."
     loop_for:
       1:
-        image: notes/stage11_1.jpg
-        text: Szia én Trina vagyok, és a Pixar-nál dolgozom. Már egy csomó filmen dolgoztam, beleértve a Shrek.
+        image: "notes/stage11_1.jpg"
+        text: "Szia én Trina vagyok, és a Pixar-nál dolgozom. Már egy csomó filmen dolgoztam, beleértve a Shrek."
       2:
-        image: notes/stage11_2.jpg
-        text: Ez az új számlálós ciklus. Ez végrehajtja a feladatait újra és újra, minden alkalommal egy kicsit másképp.
+        image: "notes/stage11_2.jpg"
+        text: "Ez az új számlálós ciklus. Ez végrehajtja a feladatait újra és újra, minden alkalommal egy kicsit másképp."
       3:
-        image: notes/stage11_3.jpg
+        image: "notes/stage11_3.jpg"
         text: 'Ebben a példában a mi "counter"/"számláló" ciklusunk azt mondja: "Számolj a számlálóval 50-től 90-ig 10-essével", és a cikluson belül van a "négyzet rajzoló" blokk. Húzd a "számláló"-t  "Változók" közül a  "hossza" helyére.'
       4:
-        image: notes/stage11_4.jpg
+        image: "notes/stage11_4.jpg"
         text: 'Ez azt jelenti, hogy a művészünk rajzol egy 50 képpontos négyzetet, majd hozzáad  10-et, és rajzol egy 60 képpontosat,. Majd újra hozzáad 10-et és rajzol egy négyzetet, amíg eléri a 90-et. Végül lesz 50, 60, 70, 80 és 90 oldalú négyzetünk.'
     parameters:
       1:
-        image: notes/stage15_1.jpg
-        text: Szia Janete vagyok, egy mernok vagyok Zynganal.
+        image: "notes/stage15_1.jpg"
+        text: "Szia Janete vagyok, egy mernok vagyok Zynganal."
       2:
-        image: notes/stage15_2.jpg
-        text: Mit tegyünk, ha egy csomó, különböző méretű háromszöget akarunk rajzolni?
+        image: "notes/stage15_2.jpg"
+        text: "Mit tegyünk, ha egy csomó, különböző méretű háromszöget akarunk rajzolni?"
       3:
-        image: notes/stage15_3.jpg
-        text: Legépelhetjük az egész, hosszú kódot, vagy használhatunk függvényt paraméterekkel.
+        image: "notes/stage15_3.jpg"
+        text: "Legépelhetjük az egész, hosszú kódot, vagy használhatunk függvényt paraméterekkel."
       4:
-        image: notes/stage15_4.jpg
+        image: "notes/stage15_4.jpg"
         text: 'Hogy ezt megtehessük, kattintsunk a kék csillagra a"rajzolj háromszöget" függvény definícióján. Ezután húzd a "bemenet neve" változót az "input"/"bemenet" blokkba.'
       5:
-        image: notes/stage15_5.jpg
+        image: "notes/stage15_5.jpg"
         text: 'Ekkor ha "hosszúság"-ot írsz a mezőbe, amikor az írja "x" és lenyomod az "Enter"-t, akkor megadod a "hosszúság" bemenetét a függvényednek.'
       6:
-        image: notes/stage15_6.jpg
+        image: "notes/stage15_6.jpg"
         text: 'Ezután kattints a csillagra. Most kattints a változók kategóriára és húzd a "hossz" elemet a "haladj előre" elemre a függvényeden belül. Ezután dobd ki a régi szám blokkot.'
       7:
-        image: notes/stage15_7.jpg
+        image: "notes/stage15_7.jpg"
         text: 'Hogy egy függvényt paraméterekkel használj, kattints a függvények kategóriájára és húzd ki a "rajzolj egy megadott méretű háromszöget" függvényt.'
       8:
-        image: notes/stage15_8.jpg
-        text: Most a matematikai blokkot használva számokat adhatsz meg, hogy különböző méretű háromszögeket rajzolj.
+        image: "notes/stage15_8.jpg"
+        text: "Most a matematikai blokkot használva számokat adhatsz meg, hogy különböző méretű háromszögeket rajzolj."
     hoc_wrapup:
       1:
-        image: notes/hoc6_1.jpg
-        text: Gratulálok! Az utolsó játék megoldásakor egy olyan kódot írtál, amely bármilyen robotnak segítene végigmenni egy nem elágazó útvesztőben vagy alagútban, függetlenül annak hosszától. Ez a robot nem csak zombi vagy madár, de akár marsjáró vagy önmagát vezető autó is lehet.
+        image: "notes/hoc6_1.jpg"
+        text: "Gratulálok! Az utolsó játék megoldásakor egy olyan kódot írtál, amely bármilyen robotnak segítene végigmenni egy nem elágazó útvesztőben vagy alagútban, függetlenül annak hosszától. Ez a robot nem csak zombi vagy madár, de akár marsjáró vagy önmagát vezető autó is lehet."
       2:
-        image: notes/hoc6_2.jpg
-        text: Ezek az alap koncepciók alkotják a szívét minden programnak vagy alkalmazásnak, amit valaha használni fogsz. Megismertük az ismétlés, az ismétlés amíg, a ha és a ha másképp utasításokat.
+        image: "notes/hoc6_2.jpg"
+        text: "Ezek az alap koncepciók alkotják a szívét minden programnak vagy alkalmazásnak, amit valaha használni fogsz. Megismertük az ismétlés, az ismétlés amíg, a ha és a ha másképp utasításokat."
       3:
-        image: notes/hoc6_3.jpg
-        text: Ha tetszett az első kódolás órád akkor látogass el a code.org weboldalra, hogy tovább folytathasd a tanulást. A 20 órás kurzusunk befejezése után tisztában leszel a programozás alapjaival, és elkezdhetsz telefon alkalmazásokat, robot utasításokat, játékokat vagy bármi mást írni.
+        image: "notes/hoc6_3.jpg"
+        text: "Ha tetszett az első kódolás órád akkor látogass el a code.org weboldalra, hogy tovább folytathasd a tanulást. A 20 órás kurzusunk befejezése után tisztában leszel a programozás alapjaival, és elkezdhetsz telefon alkalmazásokat, robot utasításokat, játékokat vagy bármi mást írni."
       4:
-        image: notes/hoc6_4.jpg
+        image: "notes/hoc6_4.jpg"
         text: 'A technológia mindent megváltoztat, amit csinálunk, és nem számít, ha fiatal vagy öreg vagy: a programozás szórakoztató, kreatív és bárki megtanulhatja!'
     20_wrapup:
       1:
-        image: notes/bird.png
-        text: Útmutató jegyzetek hamarosan!
+        image: "notes/bird.png"
+        text: "Útmutató jegyzetek hamarosan!"

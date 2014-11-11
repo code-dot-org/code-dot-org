@@ -36,7 +36,7 @@
   puzzle: Uganka
   trophies: Trofeje
   courses: Predavanja
-  of: " "
+  of: ' '
   more: VEČ
   less: MANJ
   try_hoc: 'Poskusi Ura programiranja, klikni tu >> '
@@ -96,13 +96,13 @@
     additional_information: We need some additional information to continue signing
       you up.
   signin_form:
-    title: "Že imate račun? Vpišite se"
+    title: Že imate račun? Vpišite se
     login: Elektronska pošta ali uporabniško ime
     password: Geslo
     remember: Zapomni si me
     submit: Vpis
   signin:
-    try_heading: "Želiš poskusiti kodirati brez prijave?"
+    try_heading: Želiš poskusiti kodirati brez prijave?
     try_hoc: Poizkusite najprej eno Uro kode
     try_20hours: Poizkusite naš 20 urni Uvod v računalništvo
   signinsection:
@@ -133,12 +133,12 @@
       %{name}
   follower:
     invite_sent: Povabilo poslano
-    added_teacher: "%{name} dodan/a kot tvoj/a učitelj/ica"
+    added_teacher: '%{name} dodan/a kot tvoj/a učitelj/ica'
     registered: Registriral si se za %{section_name}.
     error:
       signed_in: Prosim, izpiši se pred nadaljevanjem
       username_not_found: Uporabniško ime %{username} ne obstaja
-      username_in_use: "%{username} že obstaja, prosim izberi drugo"
+      username_in_use: '%{username} že obstaja, prosim izberi drugo'
       no_teacher: Ni vpisanega nikogar z '%{teacher_email_or_code}'. Prosi jih za
         prijavo tukaj in jih potem poskusi ponovno dodati
       section_not_found: Could not find a section with code '%{section_code}'.
@@ -180,7 +180,7 @@
       msg_publicschool: Prosim potrdi, da si učitelj/ica na ameriški javni šoli.
       msg_visit_website: Visit website
     providers:
-      apple_itunes: "$10 iTunes Gift Card"
+      apple_itunes: $10 iTunes Gift Card
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10 GB prostora na Dropbox-u
@@ -189,7 +189,7 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: "$10 Skype credit"
+      skype: $10 Skype credit
     msg:
       choose: 'Choose a prize:'
       choose_teacher: 'Click on the logo below to claim your prize:'
@@ -236,9 +236,9 @@
     destroy: Uniči
     back: Nazaj
     confirm: Si prepričan/a?
-    created: "%{model} je bil usprešno ustvarjen."
-    updated: "%{model} je bil uspešno posodobljen."
-    destroyed: "%{model} je bil uspešno izbrisan."
+    created: '%{model} je bil usprešno ustvarjen.'
+    updated: '%{model} je bil uspešno posodobljen.'
+    destroyed: '%{model} je bil uspešno izbrisan.'
     access_denied: Nimaš dostopa do tega %{model}.
   nav:
     header:
@@ -249,7 +249,7 @@
         artist: Draw Something
     user:
       classroom: Moji učenci
-      label: "Živjo %{username}"
+      label: Živjo %{username}
       stats: Moj napredek
       settings: Moj račun
       prizes: Nagrade
@@ -265,13 +265,13 @@
       puzzle_map: Stopnje
       prizes: Zberi vse %{total_trophies} trofeje in osvoji nagrade!
       prize_earned: Vse %{total_trophies} trofeje zbrane. Osvojena nagrada!
-      prize_us_only: "(samo ameriški učenci)"
+      prize_us_only: (samo ameriški učenci)
       prizes_link: več informacij
   teacher:
     title:
       one: 'Vaš učitelj:'
       other: 'Tvoji učitelji:'
-    remove: "(odstrani učitelja/ico)"
+    remove: (odstrani učitelja/ico)
     confirm:
       remove: Ali ste prepričani da želite odstraniti tega učitelja?
     tools: Orodja za učitelje
@@ -327,17 +327,17 @@
     rollup: Plošča napredka
     activity: Zadnje aktivnosti razreda
     user_not_found: Učitelj ali študent ni bil najden
-    cant_remove_student_no_email: "%{student_name} cannot be removed as your student
-      because %{student_name} has not registered an e-mail address"
-    cant_remove_teacher_no_email: "%{teacher_name} cannot be removed as your teacher
-      because you have not registered an e-mail address"
-    student_teacher_disassociated: "%{teacher_name} je bil/a odstranjen/a kot učitelj/ica
-      %{student_name}"
+    cant_remove_student_no_email: '%{student_name} cannot be removed as your student
+      because %{student_name} has not registered an e-mail address'
+    cant_remove_teacher_no_email: '%{teacher_name} cannot be removed as your teacher
+      because you have not registered an e-mail address'
+    student_teacher_disassociated: '%{teacher_name} je bil/a odstranjen/a kot učitelj/ica
+      %{student_name}'
   user:
     email_confirm_needed: 'Elektronska pošta ni bila potrjena:'
     email_resend_confirm: Ponovno pošlji potrditvena navodila
-    new_password_hint: "(pusti prazno, če tega nočeš spremeniti)"
-    current_password_hint: "(potrebujemo tvoje trenutno geslo, da potrdimo tvoje spremembe)"
+    new_password_hint: (pusti prazno, če tega nočeš spremeniti)
+    current_password_hint: (potrebujemo tvoje trenutno geslo, da potrdimo tvoje spremembe)
     cancel:
       title: Prekliči moj račun
       hint: Nezadovoljen?
@@ -353,7 +353,7 @@
     title: Code Studio
     all_courses: Overview of Courses 1, 2, and 3
     lesson_plans: Lesson plans
-    signin_message: "Že registrirani? %{link}"
+    signin_message: Že registrirani? %{link}
     student_reg_link: Vpis študenta
     teacher_reg_link: Vpis učitelja
     signin_directions: Uporabi račun za sledenje napredka.<br/> Učitelji pa sledite
@@ -387,15 +387,15 @@
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
-    heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
-    heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
-    heading_legacy: "<h2>Our previous course for</h2><h1>Existing Students</h1>"
+    heading_elementary: <h2>20 hour courses for</h2><h1>Elementary Students</h1>
+    heading_apps: <h2>Fun for</h2><h1>Everybody</h1>
+    heading_legacy: <h2>Our previous course for</h2><h1>Existing Students</h1>
     gallery:
       your_turtle: My Art
       your_studio: My Apps
   gender:
     male: Moški
-    female: "Ženska"
+    female: Ženska
     none: Raje ne bi odgovoril
   user_type:
     student: Učenec
@@ -498,13 +498,13 @@
     want_to_make_your_own: Want to make your own?
     more: More &rarr;
     caption_by_name_age: by %{name}, age %{age}
-    caption_time_ago: "%{time_ago} ago"
+    caption_time_ago: '%{time_ago} ago'
   landing:
     prerelease: This page is still under development.
     feedback: Give Feedback
     report_bug: Report Bug
     support: Get Help
-    support_url: "//support.code.org"
+    support_url: //support.code.org
   multi:
     wrong_title: Incorrect answer
     wrong_body: The answer you've entered is not correct.  Please try again!

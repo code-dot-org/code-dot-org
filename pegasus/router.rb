@@ -110,6 +110,10 @@ class Documents < Sinatra::Base
       headers['Vary'] = http_vary_add_type(headers['Vary'], header) if pages.include?(request.path_info)
     end
 
+    locale = 'it-IT' if request.site == 'italia.code.org'
+    locale = 'es-ES' if request.site == 'ar.code.org'
+    locale = 'ro-RO' if request.site == 'ro.code.org'
+    locale = 'pt-BR' if request.site == 'br.code.org'
     I18n.locale = request.locale
 
     @config = settings.configs[request.site]
@@ -178,9 +182,10 @@ class Documents < Sinatra::Base
   # Map /dashboardapi/ to the local dashboard instance.
   if rack_env?(:development)
     get_head_or_post %r{^\/dashboardapi\/?} do
-      env = request.env.merge('PATH_INFO'=>request.path_info.gsub('/dashboardapi/', '/api/'))
+      env = request.env.merge('PATH_INFO'=>request.path_info.sub(/^\/dashboardapi/, '/api'))
+
       document = Pegasus::Proxy.new(server:canonical_hostname('learn.code.org') + ":#{CDO.dashboard_port}", host:'learn.code.org').call(env)
-      pass if document.nil?
+      pass unless document
 
       status(document.status)
       headers(document.headers)

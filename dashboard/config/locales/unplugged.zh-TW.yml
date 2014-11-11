@@ -2,7 +2,7 @@
   data:
     unplugged:
       Unplug1:
-        title: "電腦科學導論"
+        title: 電腦科學導論
         desc: This lesson will introduce the concept of Computer Science and explain
           what a Computer Scientist does.  It will also give students an opportunity
           to assume the role of a computer scientist.  By the end of the activity,
@@ -15,7 +15,7 @@
         - unplug1
         video: Unplug1
       Unplug2:
-        title: "電腦計算式思維"
+        title: 電腦計算式思維
         desc: With nothing but paper and markers, students will learn the four steps
           of computational thinking. After a brief introduction, students should be
           split into groups where they will have to create directions for other students
@@ -30,7 +30,7 @@
         - unplug2
         video: Unplug2
       Unplug3:
-        title: "圖畫紙程式設計"
+        title: 圖畫紙程式設計
         desc: By programming one another to draw pictures, students will begin to
           understand what programming is really about. The class will begin by students
           instructing each other to color squares in on graph paper in an effort to
@@ -40,7 +40,7 @@
         - unplug3
         video: Unplug3
       Unplug4:
-        title: "演算法"
+        title: 演算法
         desc: This lesson covers algorithms.  Using tangram shapes and graph paper,
           the first exercise will show how important it is to make each instruction
           as clear and unambiguous as possible.  Afterward, the class will explore
@@ -50,7 +50,7 @@
         - unplug4
         video: Unplug4
       Unplug5:
-        title: "函數類別"
+        title: 函數類別
         desc: In this lesson, students will make a suncatcher out of string, beads,
           and a special charm. The students will follow a series of repetitive steps,
           then be asked to identify certain sets of "skills" that are duplicated several
@@ -73,7 +73,7 @@
         - unplug6
         video: Unplug6
       Unplug7:
-        title: "歌曲創作"
+        title: 歌曲創作
         desc: Reading lyrics is a pretty intuitive venture for most students.  We'll
           take an activity that's already common knowledge and shift it into a solid
           education on defining and calling functions. Once students are familiar
@@ -83,7 +83,7 @@
         - unplug7
         video: Unplug7
       Unplug8:
-        title: "抽象"
+        title: 抽象
         desc: This lesson will introduce the concept of Computer Science and explain
           what a Computer Scientist does.  It will also give students an opportunity
           to assume the role of a computer scientist.  By the end of the activity,
@@ -96,7 +96,7 @@
         - unplug8
         video: Unplug8
       Unplug9:
-        title: "接力式程式設計"
+        title: 接力式程式設計
         desc: This lesson will take an idea from a previous activity (4. Graph Paper
           Programming) and use those skills to emphasize the importance of completing
           programs that operate in sequence and frequently checking programs for "bugs".
@@ -104,7 +104,7 @@
         - unplug9
         video: Unplug9
       Unplug10:
-        title: "網際網路"
+        title: 網際網路
         desc: In this lesson, students will pretend to flow through the Internet,
           all the while learning about web addresses, IPs and the DNS.
         pdfs:
@@ -121,11 +121,11 @@
         video: Unplug11
       UnplugHappyMaps:
         title: Happy Maps
-        desc: "學生創建簡單的算法（一連串的指令），透過一個指令便引導人物走出迷宮。"
+        desc: 學生創建簡單的算法（一連串的指令），透過一個指令便引導人物走出迷宮。
         video: C1_happy_maps_unplugged
       MoveIt:
         title: Move it, Move it
-        desc: "學生創建簡單的算法（一連串的指令），透過一個指令便引導人物走出迷宮。"
+        desc: 學生創建簡單的算法（一連串的指令），透過一個指令便引導人物走出迷宮。
         video: C1_moveitmoveit_unplugged
       PlantASeed:
         title: 'Real-life Algorithms: Plant a Seed'
@@ -153,7 +153,7 @@
           erase everything back to that point.
         video: C2_relay_programming
       Conditionals:
-        title: "流程類別"
+        title: 流程類別
         desc: To learn about conditional statements, students play a card game and
           create rules like "If I draw a red card, I get a point" and "If I draw a
           black card, you get a point."
@@ -169,8 +169,9 @@
         title: Going Places Safely
         desc: The Internet is a powerful, but sometimes dangerous place. Teachers
           introduce how to stay safe while navigating the Internet.
+        video: C1_going_places_safely
       GraphPaperProgramming:
-        title: "圖畫紙程式設計"
+        title: 圖畫紙程式設計
         desc: Students write an algorithm (a set of instructions) using a set of predefined
           commands to direct their classmates to reproduce a drawing.
         video: C2_graph_paper
@@ -190,8 +191,9 @@
         title: Your Digital Footprint
         desc: Teachers introduce to students the idea that putting information about
           themselves online creates a digital footprint or "trail" that has consequences.
+        video: C2_digital_footprint
       ComputationalThinking:
-        title: "電腦計算式思維"
+        title: 電腦計算式思維
         desc: Students use the steps of computational thinking (decompose, pattern
           match, abstract, algorithm) to figure out how to play a game that comes
           with no instructions.
@@ -229,3 +231,39 @@
         title: Digital Citizenship
         desc: Students explore the difference between private information and personal
           information, distinguishing what is safe and unsafe to share online.
+      TangramAlgorithms:
+        title: Tangram Algorithms
+        desc: This lesson shows us something important about algorithms. If you keep
+          an algorithm simple there are lots of ways to use it. If you want to make
+          sure everyone ends up with the same thing, then your algorithm needs more
+          detail.
+      EnvelopeVariables:
+        title: Envelope Variables
+        desc: Variables allow for a lot of freedom in computer science.  This lesson
+          helps to explain what variables are and how we can use them in many different
+          ways. Use this activity before (or in conjunction with) the lesson on abstraction
+          to really hit the idea home.
+      MadGlibs:
+        title: Mad Glibs
+        desc: Abstraction is one of the most important skills for a computer scientist
+          to understand.  This activity will have your students analyzing stories
+          for differences so that they can abstract them away. Those abstracted stories
+          become templates for fun and crazy new ones.
+      ForLoopFun:
+        title: For Loop Fun
+        desc: We know that loops allow us to do things over and over again, but now
+          we’re going to learn how to use loops with extra structure built right in.
+      SongwritingWithParameters:
+        title: Songwriting With Parameters
+        desc: 'One of the most magnificent structures in the computer science world
+          is the function.  Functions (sometimes called procedures) are mini programs
+          that you can use over and over inside of your bigger program. This lesson
+          will help students intuitively understand why combining chunks of code into
+          functions is such a helpful practice.  '
+      BinaryImages:
+        title: Binary Images
+        desc: Though many people think of binary as strictly zeros and ones, our previous
+          courses taught students that information can be represented in a variety
+          of binary options.  This lesson takes that concept one step further as it
+          illustrates how a computer can store even more complex information (such
+          as images and colors) in binary, as well.

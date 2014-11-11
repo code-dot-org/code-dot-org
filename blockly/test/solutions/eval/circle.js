@@ -18,7 +18,7 @@ module.exports = {
       description: "Nothing",
       expected: {
         result: false,
-        testResult: TestResults.APP_SPECIFIC_FAIL
+        testResult: TestResults.LEVEL_INCOMPLETE_FAIL
       },
       xml: '<xml>' +
       '</xml>'
@@ -36,8 +36,9 @@ module.exports = {
         var stroke = circle.getAttribute('stroke');
         assert(fill === 'none', 'fill: ' + fill);
         assert(stroke === 'red', 'stroke: ' + stroke);
-        assert(circle.getAttribute('cx') === '200');
-        assert(circle.getAttribute('cy') === '200');
+        assert(circle.getAttribute('cx') === '0');
+        assert(circle.getAttribute('cy') === '0');
+        assert(circle.getAttribute('transform', ' translate(200, 200)'));
         return true;
       },
       xml: '<xml>' +
@@ -63,10 +64,27 @@ module.exports = {
       '</xml>'
     },
     {
+      description: "correct answer but rotated 15 degrees",
+      expected: {
+        result: true,
+        testResult: TestResults.ALL_PASS
+      },
+      xml: '<xml>' +
+        blockUtils.mathBlockXml('rotate', {
+          'IMAGE': blockUtils.mathBlockXml('functional_circle', {
+            'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'red' } ),
+            'STYLE': blockUtils.mathBlockXml('functional_style', null, { VAL: 'outline' }),
+            'SIZE': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 50 } )
+          }),
+          'DEGREES': blockUtils.mathBlockXml('functional_math_number', null, { NUM: 15 } )
+        }) +
+      '</xml>'
+    },
+    {
       description: "wrong color",
       expected: {
         result: false,
-        testResult: TestResults.APP_SPECIFIC_FAIL
+        testResult: TestResults.LEVEL_INCOMPLETE_FAIL
       },
       xml: '<xml>' +
         blockUtils.mathBlockXml('functional_circle', {

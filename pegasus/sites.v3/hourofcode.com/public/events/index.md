@@ -1,5 +1,5 @@
 ---
-title: Hour of Code events by country and state
+title: <%= hoc_s(:events_title) %>
 layout: wide
 ---
 <%

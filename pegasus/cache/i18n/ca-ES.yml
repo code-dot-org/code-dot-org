@@ -1,9 +1,10 @@
 "ca-ES":
   hello: Hola món
+  select_language: Please select your language
   computer_science: Informàtica
   computer_science_edweek: Setmana de l'Educació en Informàtica
   csedweek_dates: 9-15 de desembre de 2013
-  n_have_learned_an_hoc: "<h1>#</h1><h3>han tractat d'una</h3><h2>Hora de Codi</h2>"
+  n_have_learned_an_hoc: <h1>#</h1><h3>han tractat d'una</h3><h2>Hora de Codi</h2>
   anybody_can_learn: Qualsevol persona pot aprendre.
   learn_now: Aprèn ara
   petition_message: Introdueix el teu nom si consideres que cada alumne de cada escola
@@ -45,7 +46,7 @@
     instruccions si-sino i algoritmes bàsics.
   all_ages: Totes les edats
   beginner: Principiant
-  n_participants: "# participants"
+  n_participants: '# participants'
   go: Anar
   thank_you_: Gràcies!
   congratulations: Felicitats!
@@ -110,11 +111,11 @@
   help_recruit_coders: Ajuda'ns reclutar més codificadors per al teu equip!
   help_recruit: Ajuda'ns reclutar més codificadors!
   lines_of_code: MÉS DE <b># LINES OF CODE</b> LÍNIES DE CODI ESCRITES FINS LA DATA.
-  lines_of_code_alt: "<b>#</b> LÍNIES DE CODI ESCRIT PER ALUMNES"
+  lines_of_code_alt: <b>#</b> LÍNIES DE CODI ESCRIT PER ALUMNES
   who_has_done_hoc: 'Qui ha fet la #HourOfCode? @codeorg'
   hoc_leaderboards: Les Classificacions de la Hora del codi
-  students_and_lines: "%{students} alumnes han fet l'hora de codi i han escrit %{lines}
-    línies de codi."
+  students_and_lines: '%{students} alumnes han fet l''hora de codi i han escrit %{lines}
+    línies de codi.'
   start_hoc: Comença la Hora de Codi ara
   contact_form_topic_press: Press/media (interview or speaking engagement)
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>

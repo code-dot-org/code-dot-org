@@ -89,7 +89,7 @@ Turtle.init = function(config) {
   level = config.level;
 
   config.grayOutUndeletableBlocks = true;
-  config.insertWhenRun = true;
+  config.forceInsertTopBlock = 'when_run';
 
   Turtle.AVATAR_HEIGHT = 51;
   Turtle.AVATAR_WIDTH = 70;
@@ -152,10 +152,10 @@ Turtle.init = function(config) {
 
     // pre-load image for line pattern block. Creating the image object and setting source doesn't seem to be
     // enough in this case, so we're actually creating and reusing the object within the document body.
-  
+
     if (config.level.edit_blocks)
     {
-      var imageContainer = document.createElement('div'); 
+      var imageContainer = document.createElement('div');
       imageContainer.style.display='none';
       document.body.appendChild(imageContainer);
 
@@ -200,10 +200,10 @@ Turtle.drawLogOnCanvas = function(log, canvas) {
 
 Turtle.drawBlocksOnCanvas = function(blocks, canvas) {
   var domBlocks = Blockly.Xml.textToDom(blocks);
-  Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, domBlocks);
-  var code = Blockly.Generator.workspaceToCode('JavaScript');
+  Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, domBlocks);
+  var code = Blockly.Generator.blockSpaceToCode('JavaScript');
   Turtle.evalCode(code);
-  Blockly.mainWorkspace.clear();
+  Blockly.mainBlockSpace.clear();
   Turtle.drawCurrentBlocksOnCanvas(canvas);
 };
 
@@ -321,6 +321,7 @@ BlocklyApps.reset = function(ignore) {
 
   // Discard the interpreter.
   Turtle.interpreter = null;
+  Turtle.executionError = null;
 
   // Stop the looping sound.
   BlocklyApps.stopLoopingAudio('start');
@@ -368,7 +369,7 @@ Turtle.display = function() {
 BlocklyApps.runButtonClick = function() {
   BlocklyApps.toggleRunReset('reset');
   document.getElementById('spinner').style.visibility = 'visible';
-  Blockly.mainWorkspace.traceOn(true);
+  Blockly.mainBlockSpace.traceOn(true);
   BlocklyApps.attempts++;
   Turtle.execute();
 };
@@ -433,7 +434,7 @@ Turtle.execute = function() {
   if (level.editCode) {
     generateTurtleCodeFromJS();
   } else {
-    Turtle.code = Blockly.Generator.workspaceToCode('JavaScript');
+    Turtle.code = Blockly.Generator.blockSpaceToCode('JavaScript');
     Turtle.evalCode(Turtle.code);
   }
 
@@ -443,7 +444,7 @@ Turtle.execute = function() {
   Turtle.pid = window.setTimeout(Turtle.animate, 100);
 
   // Disable toolbox while running
-  Blockly.mainWorkspace.setEnableToolbox(false);
+  Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
 };
 
 /**
@@ -465,7 +466,7 @@ function executeTuple () {
  */
 function finishExecution () {
   document.getElementById('spinner').style.visibility = 'hidden';
-  Blockly.mainWorkspace.highlightBlock(null);
+  Blockly.mainBlockSpace.highlightBlock(null);
   Turtle.checkAnswer();
 }
 
@@ -484,6 +485,14 @@ Turtle.animate = function() {
                                 Turtle.cumulativeLength,
                                 Turtle.userCodeStartOffset,
                                 Turtle.userCodeLength);
+      try {
+        stepped = Turtle.interpreter.step();
+      }
+      catch(err) {
+        Turtle.executionError = err;
+        finishExecution();
+        return;
+      }
       stepped = Turtle.interpreter.step();
 
       if (executeTuple()) {
@@ -564,7 +573,7 @@ Turtle.step = function(command, values) {
       if (!values[0] || values[0] == 'DEFAULT') {
           Turtle.setPattern(null);
       } else {
-        Turtle.setPattern(document.getElementById(values[0])); 
+        Turtle.setPattern(document.getElementById(values[0]));
       }
       break;
     case 'HT':  // Hide Turtle
@@ -641,7 +650,7 @@ Turtle.moveForward_ = function (distance) {
     Turtle.drawForwardWithPattern_(distance);
     return;
   }
-  
+
   Turtle.drawForward_(distance);
 };
 
@@ -698,18 +707,18 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
   var startY = Turtle.y;
 
   Turtle.jumpForward_(distance);
-  Turtle.ctxScratch.save(); 
-  Turtle.ctxScratch.translate(startX, startY); 
-  Turtle.ctxScratch.rotate(Math.PI * (Turtle.heading - 90) / 180); // increment the angle and rotate the image. 
-                                                                 // Need to subtract 90 to accomodate difference in canvas 
+  Turtle.ctxScratch.save();
+  Turtle.ctxScratch.translate(startX, startY);
+  Turtle.ctxScratch.rotate(Math.PI * (Turtle.heading - 90) / 180); // increment the angle and rotate the image.
+                                                                 // Need to subtract 90 to accomodate difference in canvas
                                                                  // vs. Turtle direction
   Turtle.ctxScratch.drawImage(img,
     0, 0,                                 // Start point for clipping image
     distance+img.height / 2, img.height,  // clip region size
     -img.height / 4, -img.height / 2,      // draw location relative to the ctx.translate point pre-rotation
-    distance+img.height / 2, img.height); 
-                                                                     
-  Turtle.ctxScratch.restore();  
+    distance+img.height / 2, img.height);
+
+  Turtle.ctxScratch.restore();
 };
 
 Turtle.shouldDrawJoints_ = function () {
@@ -814,8 +823,11 @@ Turtle.checkAnswer = function() {
   var levelComplete = level.freePlay || isCorrect(delta, permittedErrors);
   Turtle.testResults = BlocklyApps.getTestResults(levelComplete);
 
-  var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
-  var textBlocks = Blockly.Xml.domToText(xml);
+  var program;
+  if (!level.editCode) {
+    var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+    program = Blockly.Xml.domToText(xml);
+  }
 
   // Make sure we don't reuse an old message, since not all paths set one.
   Turtle.message = undefined;
@@ -823,7 +835,7 @@ Turtle.checkAnswer = function() {
   // In level K1, check if only lengths differ.
   if (level.isK1 && !levelComplete && !BlocklyApps.editCode &&
       level.solutionBlocks &&
-      removeK1Lengths(textBlocks) === removeK1Lengths(level.solutionBlocks)) {
+      removeK1Lengths(program) === removeK1Lengths(level.solutionBlocks)) {
     Turtle.testResults = BlocklyApps.TestResults.APP_SPECIFIC_ERROR;
     Turtle.message = turtleMsg.lengthFeedback();
   }
@@ -842,7 +854,7 @@ Turtle.checkAnswer = function() {
     // circle.  This complains if the limit doesn't start with 3.
     // Note that this level does not use colour, so no need to check for that.
     if (level.failForCircleRepeatValue) {
-      var code = Blockly.Generator.workspaceToCode('JavaScript');
+      var code = Blockly.Generator.blockSpaceToCode('JavaScript');
       if (code.indexOf('count < 3') == -1) {
         Turtle.testResults =
             BlocklyApps.TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
@@ -852,9 +864,20 @@ Turtle.checkAnswer = function() {
   }
 
   if (level.editCode) {
+    if (Turtle.executionError) {
+      levelComplete = false;
+    }
     Turtle.testResults = levelComplete ?
       BlocklyApps.TestResults.ALL_PASS :
       BlocklyApps.TestResults.TOO_FEW_BLOCKS_FAIL;
+
+    // If we want to "normalize" the JavaScript to avoid proliferation of nearly
+    // identical versions of the code on the service, we could do either of these:
+
+    // do an acorn.parse and then use escodegen to generate back a "clean" version
+    // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
+
+    program = BlocklyApps.editor.getValue();
   }
 
   // If the current level is a free play, always return the free play
@@ -878,7 +901,7 @@ Turtle.checkAnswer = function() {
     builder: level.builder,
     result: levelComplete,
     testResult: Turtle.testResults,
-    program: encodeURIComponent(textBlocks),
+    program: encodeURIComponent(program),
     onComplete: Turtle.onReportComplete,
     save_to_gallery: level.impressive
   };
@@ -891,7 +914,7 @@ Turtle.checkAnswer = function() {
   BlocklyApps.report(reportData);
 
   // reenable toolbox
-  Blockly.mainWorkspace.setEnableToolbox(true);
+  Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
 
   // The call to displayFeedback() will happen later in onReportComplete()
 };

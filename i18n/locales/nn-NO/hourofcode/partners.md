@@ -1,27 +1,27 @@
 * * *
 
-title: Samarbeidspartnere
+title: Samarbeidsparnarar
 
 * * *
 
-# Store organisasjoner og bedrifter som støtter oss
+# Store samarbeidspartnarar og bedrifter som støttar oss
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 
 * * *
 
-# Kodetimens markedsføringspartnere
+# Kodetimens samarbeidspartnerar for marknadsføring
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
 
 * * *
 
-# Utviklingsmateriale samarbeidspartnere
+# Samarbeidspartnarar for leksjonar
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 * * *
 
-# Andre bidragsytere
+# Øvrige samarbeidspartnarar
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>

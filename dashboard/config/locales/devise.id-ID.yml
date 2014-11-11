@@ -72,4 +72,4 @@
       not_locked: tidak terkunci
       not_saved:
         one: '1 error mengagalkan informasi %{resource} ini untuk disimpan:'
-        other: "%{count} error menggagalkan informasi %{resource} ini untuk disimpan:"
+        other: '%{count} error menggagalkan informasi %{resource} ini untuk disimpan:'

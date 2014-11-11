@@ -31,6 +31,10 @@ class Game < ActiveRecord::Base
     @@game_calc ||= find_by_name("Calc")
   end
 
+  def self.eval
+    @@game_eval ||= find_by_name("Eval")
+  end
+
   def unplugged?
     app == UNPLUG
   end
@@ -98,6 +102,7 @@ class Game < ActiveRecord::Base
         Webapp:webapp
         Eval:eval
         ArtistEC:turtle:artist_intro
+        TextMatch
       ).each_with_index do |game, id|
         name, app, intro_video = game.split ':'
         Game.create!(id: id + 1, name: name, app: app, intro_video: Video.find_by_key(intro_video))

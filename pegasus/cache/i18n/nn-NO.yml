@@ -1,9 +1,10 @@
 "nn-NO":
-  hello: Hei, verden
+  hello: Hallo, verda
+  select_language: Velg ditt språk
   computer_science: Informatikk
   computer_science_edweek: Computer Science Education Week
   csedweek_dates: 9.–15. desember 2013
-  n_have_learned_an_hoc: "<h1>#</h1><h3>har prøvd en</h3><h2>Time med Kode</h2>"
+  n_have_learned_an_hoc: <h1>#</h1><h3>har prøvd en</h3><h2>Time med Kode</h2>
   anybody_can_learn: Hvem som helst kan lære.
   learn_now: Lær nå
   petition_message: Alle skoleelever burde ha muligheten til å lære om IT
@@ -43,7 +44,7 @@
     hvis-så-setninger og grunnleggende algoritmer.
   all_ages: Alle aldre
   beginner: Nybegynner
-  n_participants: "# deltakere"
+  n_participants: '# deltakere'
   go: Gå
   thank_you_: Takk!
   congratulations: Gratulerer!
@@ -79,7 +80,7 @@
   beyond_an_hour: Utover Kodetimen >
   get_started: Start
   i_agree: Jeg samtykker
-  participant_select: "- Velg -"
+  participant_select: '- Velg -'
   participant_student: student
   participant_parent: Forelder
   participant_educator: Lærer
@@ -98,7 +99,7 @@
   learn_next_level: Fortsett til neste nivå
   learn_online: Prøv andre kurs på nettet
   learn_classes: Finn lokale kodeklubber
-  hoc_is_here: "#Kodetimen er her - sjekk den ut! @kidsakoder"
+  hoc_is_here: '#Kodetimen er her - sjekk den ut! @kidsakoder'
   just_did_hoc: 'Jeg ble nettopp ferdig med #kodetimen! @kidsakoder'
   learn_hoc: Lær en Time med Kode
   beyond_hoc: Utover en time
@@ -108,11 +109,11 @@
   help_recruit_coders: Hjelp oss med å finne flere kodere til laget ditt!
   help_recruit: Hjelp oss med å rekruttere flere kodere!
   lines_of_code: OVER <b># KODELINJER</b> skrevet HITTIL.
-  lines_of_code_alt: "<b>#</b> KODELINJER SKREVET AV ELEVER"
+  lines_of_code_alt: <b>#</b> KODELINJER SKREVET AV ELEVER
   who_has_done_hoc: 'Hvem har vært med på #kodetimen? #HourOfCode? @codeorg'
   hoc_leaderboards: Kodetime oversikt
-  students_and_lines: "%{students}, elever har gjort kodentimen og skrevet %{lines}
-    kodelinjer."
+  students_and_lines: '%{students}, elever har gjort kodentimen og skrevet %{lines}
+    kodelinjer.'
   start_hoc: Start  kodetimen nå
   contact_form_topic_press: Media (Intervju eller taler)
   studiobar_title: Utforsk <a href='http://studio.code.org'>«Code Studio»</a>
@@ -213,14 +214,15 @@
   dashboard_action_confirm: Slette?
   dashboard_action_delete_yes: Ja
   dashboard_action_delete_no: Nei
-  dashboard_action_done: Done
-  dashboard_action_required: required
+  dashboard_action_done: Ferdig
+  dashboard_action_required: kreves
   dashboard_navigation_home_page: Teacher home page
   dashboard_navigation_all_sections: All sections
-  dashboard_navigation_view_progress: View Progress
-  dashboard_navigation_add_students: Add Students
-  dashboard_navigation_manage_students: Manage Students
-  dashboard_navigation_view_stats: View Stats
+  dashboard_navigation_view_progress: Vis fremdrift
+  dashboard_navigation_add_students: Legg til elever
+  dashboard_navigation_manage_students: Administrer elever
+  dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
+  dashboard_navigation_view_stats: Se statistikk
   dashboard_navigation_section: 'Section: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
   dashboard_sections_new_section: New section
@@ -259,7 +261,7 @@
   dashboard_students_male: Mann
   dashboard_students_female: Kvinne
   dashboard_students_secret: Hemmelig
-  dashboard_students_password: passord
+  dashboard_students_password: Passord
   dashboard_students_username: 'Brukernavn: %{student_username}'
   dashboard_students_email: 'Epost: %{student_email}'
   dashboard_students_completed_levels: Fullførte nivåer
@@ -305,132 +307,102 @@
   dashboard_teacher_worksheet: arbeidsark for lærere
   dashboard_grade_k: K
   dashboard_grade_other: Andre
-  dashboard_login_word: Word
-  dashboard_login_picture: Picture
+  dashboard_login_word: Ord
+  dashboard_login_picture: Bilde
   dashboard_login_none: E-post
   dashboard_new_password: nytt passord
   stats_hoc_2013_heading: 'Utrolig statistikk fra fjorårets Kodetime. På kun en uke:'
   stats_hoc_2013_image_alt: Statistikk fra Kodetimen 2013
-  dashboard_teacher: Teacher
+  dashboard_teacher: Lærer
   dashboard_student: student
-  dashboard_sections_email_question: Do all students have a valid email address?
-  dashboard_sections_account_creation_question: Who creates the student's account?
-  dashboard_sections_password_question: What do students use as a "password"?
-  dashboard_sections_picture_account_creation: A picture assigned by Code.org
-  dashboard_sections_word_account_creation: A simple word assigned by Code.org
-  dashboard_sections_sign_in_question: Where do students sign-in?
+  dashboard_sections_email_question: Har alle elevene en gyldig epostadresse?
+  dashboard_sections_account_creation_question: Hvem lager elevens konto?
+  dashboard_sections_password_question: Hva bruker elevene som "passord"?
+  dashboard_sections_picture_account_creation: Et bilde tildelt av Code.org
+  dashboard_sections_word_account_creation: Et enkelt ord tildelt av Code.org
+  dashboard_sections_sign_in_question: Hvor logger elevene på?
   dashboard_sections_sign_in_unique: Unique web-page listed on "Manage Students" tab
-  dashboard_sections_sign_in_main: http://code.org and click "Sign in"
+  dashboard_sections_sign_in_main: http://code.org og klikk "Logg på"
   dashboard_sections_password_account_creation: Student-created text password
   dashboard_sections_login_type_explanation: This table helps explain which of these
     login types, <b>picture, word, or email</b>, you'll want to choose for a section.
   codeorg_name: Skriv ditt første dataprogram
   thinkersmithspanish_name: Mis Amigos Roboticos
-  khan_name: An introduction to JavaScript
-  khanes_name: An introduction to JavaScript
-  tynker_name: Build your own game
+  khan_name: En introduksjon til JavaScript
+  khanes_name: En introduksjon til JavaScript
+  tynker_name: Lag ditt eget spill
   scratch_name: Create a holiday card
   thinkersmith_name: My Robotic Friends
   lightbot_name: Lightbot
   lightbotintl_name: Lightbot
   codecademy_name: Codecademy
   kodable_name: Kodable
-  hopscotch_name: 'Hopscotch: Code on your iPad'
-  groklearning_name: A taste of Python programming
-  processing_name: Drawing with Code
-  robomind_name: Program a virtual robot
-  robomindnl_name: Program a virtual robot
-  makegameswithus_name: Build an iPhone game in your browser!
-  appinventor_name: AppInventor Hour of Code
+  hopscotch_name: 'Paradis: Kod på ipad''en din'
+  groklearning_name: Ein smak av Python-programmering
+  processing_name: Å teikne med kode
+  robomind_name: Programmer ein virtuell robot
+  robomindnl_name: Programmer ein virtuell robot
+  makegameswithus_name: Bygg eit iphone-spel i nettlesaren din!
+  appinventor_name: AppInventor Kodetimen
   touchdevelop_name: TouchDevelop
   blockly_name: Blockly
   thinkersmith2_name: Binary Baubles
-  codehs_name: Learn to Code With Karel the Dog
-  codeavengers_name: Build a Game with JavaScript
+  codehs_name: Lære å kode med hunden Karel
+  codeavengers_name: Bygg eit spel med JavaScript
   codecombat_name: CodeCombat
-  agentcubes_name: Make a 3D Frogger game in an hour.
-  alice_name: Intro to Programming with Alice 2
-  livecode_name: Everyone can Code with LiveCode
+  agentcubes_name: Lag eit 3D-froskespel på ein time.
+  alice_name: Introduksjon til programmering med Alice 2
+  livecode_name: Alle kan kode med LiveCode
   lookingglass_name: Looking Glass
   kodableunplugged_name: fuzzFamily Frenzy
-  codeorg_gradelevel: Ages 4-104
+  codeorg_gradelevel: Alder 4-104
   thinkersmithspanish_gradelevel: Por todos
-  khan_gradelevel: Middle school +
-  khanes_gradelevel: Middle school +
-  tynker_gradelevel: Ages 5-13
-  scratch_gradelevel: Ages 8+
+  khan_gradelevel: Mellomtrinnet +
+  khanes_gradelevel: Mellomtrinnet +
+  tynker_gradelevel: Alderen 5 til 13
+  scratch_gradelevel: Alderen 8+
   thinkersmith_gradelevel: Alle aldre
   lightbot_gradelevel: Alle aldre
   lightbotintl_gradelevel: Alle aldre
   codecademy_gradelevel: Videregående
   kodable_gradelevel: Grunnskole
-  hopscotch_gradelevel: Middle school +
-  groklearning_gradelevel: Middle school +
+  hopscotch_gradelevel: Mellomtrinnet +
+  groklearning_gradelevel: Mellomtrinnet +
   processing_gradelevel: Videregående
-  robomind_gradelevel: Ages 8-13
-  robomindnl_gradelevel: Ages 8-13
+  robomind_gradelevel: Alderen 8-13
+  robomindnl_gradelevel: Alderen 8-13
   makegameswithus_gradelevel: Videregående
-  appinventor_gradelevel: Middle school +
+  appinventor_gradelevel: Mellomtrinnet +
   touchdevelop_gradelevel: Videregående
   blockly_gradelevel: Alle aldre
-  thinkersmith2_gradelevel: Ages 8+
+  thinkersmith2_gradelevel: Alderen 8+
   codehs_gradelevel: Videregående
-  codeavengers_gradelevel: Middle school +
-  codecombat_gradelevel: Middle school +
-  agentcubes_gradelevel: Middle school +
-  alice_gradelevel: Middle school +
+  codeavengers_gradelevel: Mellomtrinnet +
+  codecombat_gradelevel: Mellomtrinnet +
+  agentcubes_gradelevel: Mellomtrinnet +
+  alice_gradelevel: Mellomtrinnet +
   livecode_gradelevel: Videregående
-  lookingglass_gradelevel: Middle school +
-  kodableunplugged_gradelevel: Ages 8-13
-  codeorg_platformtext: Learn the basic concepts of Computer Science with drag and
-    drop programming. This is a game-like, self-directed tutorial starring video lectures
-    by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops,
-    conditionals, and basic algorithms. Available in 34 languages.
-  thinkersmithspanish_platformtext: Mediante el uso de un "Vocabulario Robot" predefinido,
-    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
-    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
-    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
-    como la valiosa habilidad de depuraci&oacute;n.
-  khan_platformtext: Learn the basics of JavaScript programming while creating fun
-    drawings with your code. Do it on your own or with your class!
-  khanes_platformtext: Learn the basics of JavaScript programming while creating fun
-    drawings with your code. Do it on your own or with your class!
-  tynker_platformtext: A collection of 8 fun activities for children of all ages to
-    try programming. Solve a series of simple puzzles to help Pixel the puppy reach
-    home, and Biff the spaceman reach his moon base. Build the Space Zombies game
-    or create Math Art using our fun and easy visual approach to programming.  The
-    session can be teacher facilitated or self-paced.
+  lookingglass_gradelevel: Mellomtrinnet +
+  kodableunplugged_gradelevel: Alderen 8-13
+  codeorg_platformtext: Moderne nettlesarar, smarttelefonar, tablet-pc'ar
+  thinkersmithspanish_platformtext: Frakobla
+  khan_platformtext: Moderne nettlesere
+  khanes_platformtext: Moderne nettlesere
+  tynker_platformtext: Moderne nettlesere
   scratch_platformtext: With Scratch, you can code your own interactive games, stories,
     animations, and more. In this activity, you'll create an interactive holiday card
     that you can share with friends and family.
-  thinkersmith_platformtext: Using a pre-defined "Robot Vocabulary" students will
-    figure out how to guide each other to accomplish specific tasks without discussing
-    them first. This lesson teaches children the connection between symbols and actions,
-    as well as the invaluable skill of debugging. "My Robotic Friends" works best
-    as a group activity and includes a teacher workbook for classroom use.
-  lightbot_platformtext: Learn core programming logic, starting from super-basic programming,
-    for ages 4+, on iOS or Android (or Web browser) . Learn how to sequence commands,
-    identify patterns, use procedures, and utilize loops!
-  lightbotintl_platformtext: Learn core programming logic, starting from super-basic
-    programming, for ages 4+, on iOS or Android (or Web browser) . Learn how to sequence
-    commands, identify patterns, use procedures, and utilize loops!
-  codecademy_platformtext: Codecademy is an interactive, student-guided introduction
-    to the basics of CS through JavaScript that's used by tens of millions of students
-    around the world. We've prepared a no-hassle Hour of Code experience with accompanying
-    quizzes, slides, and a completed project for students at the end.
+  thinkersmith_platformtext: Frakobla
+  lightbot_platformtext: iOS, Android (eller nettleser)
+  lightbotintl_platformtext: iOS, Android (eller nettleser)
+  codecademy_platformtext: Moderne nettlesere. iOS, Android apper
   kodable_platformtext: Kodable is a self-guided iPad game that introduces kids 5+
     to programming basics. Having a teacher or parent nearby is optimal, but not necessary.
   hopscotch_platformtext: Student-guided tutorial on the iPad using the Hopscotch
     programming language. Students will build games and apps for their iPad on their
     iPad. Students can work individually or with friends (up to 3 per iPad).
-  groklearning_platformtext: Choose from 3 activities designed to give you your first
-    experience programming. For example, use the programming language Python to build
-    a chatbot called "Eliza". Can she fool your friends into think she's a human not
-    a computer? This can be done in either a student-guided or teacher-facilitated
-    form and comes with all notes and solutions.
-  processing_platformtext: An introduction to programming in the context of the visual
-    arts using the Processing programming language. Short video lessons introduce
-    coding exercises that lead to designing an interactive drawing program
+  groklearning_platformtext: Moderne nettlesere
+  processing_platformtext: Moderne nettlesere
   robomind_platformtext: 'Students learn the basics of programming by controlling
     their own virtual robot. The online course is fully self-contained with short
     presentations, movies, quizzes and automatic guidance/hints to help with the programming
@@ -439,40 +411,15 @@
     their own virtual robot. The online course is fully self-contained with short
     presentations, movies, quizzes and automatic guidance/hints to help with the programming
     exercises. '
-  makegameswithus_platformtext: Know some programming already? Learn to make an iPhone
-    game in an hour! We'll guide you through the process, to code, test, and play
-    your game entirely in the browser and then share it on Facebook for friends to
-    try! No prior iPhone development experience is required. You must understand what
-    variables, methods, and objects are.
-  appinventor_platformtext: Entertaining, quick video tutorials walk you through building
-    three simple apps for your Android phone or tablet. Designed for novices and experts
-    alike, this hour of code will get you ready to start building your own apps before
-    you know it. Imagine sharing your own app creations with your friends! These activities
-    are suitable for individuals and for teachers leading classes.
-  touchdevelop_platformtext: Crazy drawings, flying monsters, swirling flowers...
-    create your apps on your device with TouchDevelop, a friendly mobile app creation
-    environment. Runs on iPhone, iPad, Android, Windows, Windows Phone, Linux, Mac.
-  blockly_platformtext: Got PCs with slow (or non-existent) internet access? Download
-    the Blockly tutorials that were the precursor of the Code.org tutorials - a single
-    3MB ZIP file can be loaded onto any computer or used off a memory stick
-  thinkersmith2_platformtext: Students learn about representing and storing letters
-    in binary, as functions of on and off. At the end, the class gets to encode their
-    own initials to take home with them.
-  codehs_platformtext: Learn the basics of programming with Karel the Dog, a fun,
-    accessible and visual introduction to coding, where giving commands to a computer
-    is just like giving commands to a dog. This tutorial is great if led by a teacher,
-    but can also be done independently.
-  codeavengers_platformtext: Build a 2 player 2D top-down game with JavaScript in
-    10 short tasks. Then continue learning some basics of programming (variables and
-    if statements) as you create a Quiz to share with friends. Along the way  earn
-    points and badges as you compete to reach the top of the class leaderboard.
-  codecombat_platformtext: Play as a Wizard using code (spells) to control your heroes,
-    navigate mazes, defeat ogres, trick enemies, and rescue allies! Learn JavaScript
-    in this HTML 5 web game for complete beginners.
-  agentcubes_platformtext: Imagine a tool that allows you to turn 2D images into 3D
-    shapes. Use AgentCubes online, the world's first 3D web-based programming & modeling
-    tool, to learn to program by creating and sharing exciting 3D games. Rule your
-    world!
+  makegameswithus_platformtext: Moderne nettlesere
+  appinventor_platformtext: Moderne nettleser + Android
+  touchdevelop_platformtext: Moderne nettlesere, smarttelefoner, alle enheter
+  blockly_platformtext: Berre moderne nettlesarar
+  thinkersmith2_platformtext: Frakobla
+  codehs_platformtext: Moderne nettlesere
+  codeavengers_platformtext: Moderne nettlesere
+  codecombat_platformtext: Nettbasert (Firefox, Chrome, Safari, IE10 +)
+  agentcubes_platformtext: Moderne nettlesere
   alice_platformtext: 'Students will set up a scene and create a simple animation
     with minimal teacher facilitation using 3D objects and and drag-and-drop interface
     in an engaging and supportive coding environment. [NOTE: Desktop app install required]'
@@ -483,32 +430,24 @@
     is available for you to copy and paste, with clear explanations of how and why
     it works. You will be provided with necessary images and samples for download.
     [NOTE: DESKTOP INSTALL REQUIRED] '
-  lookingglass_platformtext: 'In this activity, students will be introduced to programming
-    by building an animated story. It introduces computational thinking and showcases
-    the creativity inherent in computing. Furthermore, it incorporates remix actions
-    (animations by other Looking Glass users) highlights the kind of code-reuse that
-    commonly occurs among programmers at all levels, from hobbyist to professional.
-    This is a student-guided activity. [NOTE: Desktop app install required]'
-  kodableunplugged_platformtext: 'Designed for use with plain paper, the fuzzFamily
-    Frenzy is an introduction to programming logic for kids 5 and up. A teacher should
-    explain the game, then students program a partner to complete a simple obstacle
-    course. '
-  codeorg_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
+  lookingglass_platformtext: Skrivebord eller spel-konsoll
+  kodableunplugged_platformtext: Frakobla
+  codeorg_shortdescription: Lær å kode med Mark Zuckerberg og sinte fuglar!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
-  khan_shortdescription: Learn to draw in JavaScript
-  khanes_shortdescription: Learn to draw in JavaScript
-  tynker_shortdescription: Learn the basics of programming in a fun, visual environment
-  scratch_shortdescription: Create an interactive card
-  thinkersmith_shortdescription: Unplugged tutorial for a group with no devices
-  lightbot_shortdescription: A game to teach coding concepts
-  lightbotintl_shortdescription: A game to teach coding concepts
-  codecademy_shortdescription: Learn JavaScript programming, in a web-browser
-  kodable_shortdescription: A fun iPad game to teach computer programming concepts
-  hopscotch_shortdescription: Learn visual programming on an iPad
-  groklearning_shortdescription: Basic intro to python programming
-  processing_shortdescription: A one hour tutorial in the Processing languages
-  robomind_shortdescription: Write code for a virtual robot
-  robomindnl_shortdescription: Write code for a virtual robot
+  khan_shortdescription: Lær å teikne i JavaScript
+  khanes_shortdescription: Lær å teikne i JavaScript
+  tynker_shortdescription: Lær grunnleggande programmering i eit artig, visuelt miljø
+  scratch_shortdescription: Lag eit interaktivt kort
+  thinkersmith_shortdescription: Fråkopla opplæring for ei gruppe utan dingsar
+  lightbot_shortdescription: Eit spel for å lære kodeprinsipp
+  lightbotintl_shortdescription: Eit spel for å lære kodeprinsipp
+  codecademy_shortdescription: Lær JavaScript-programmering, i ein nettlesar
+  kodable_shortdescription: Eit artig ipad-spel for å lære programmeringskonsept
+  hopscotch_shortdescription: Lær visuell programmering på ein ipad
+  groklearning_shortdescription: Grunnleggande introduksjon til python-programmering
+  processing_shortdescription: Eintimes rettleiing i behandlingsspråk
+  robomind_shortdescription: Skriv kode for ein virtuell robot
+  robomindnl_shortdescription: Skriv kode for ein virtuell robot
   makegameswithus_shortdescription: Learn to make an iPhone game in an hour
   appinventor_shortdescription: Make your own app! (Android-only)
   touchdevelop_shortdescription: Code mobile apps directly on your phone, tablet or
@@ -516,7 +455,7 @@
   blockly_shortdescription: Download a ZIP file to learn offline
   thinkersmith2_shortdescription: Learn how computers use 1s and 0s to represent information
   codehs_shortdescription: Learn JavaScript programming with a fun visual environment
-  codeavengers_shortdescription: Learn JavaScript programming, in a web-browser
+  codeavengers_shortdescription: Lær JavaScript-programmering, i ein nettlesar
   codecombat_shortdescription: Play a game and learn JavaScript to win
   agentcubes_shortdescription: Create a 3D game using AgentCubes Online
   alice_shortdescription: Make a 3D animation
@@ -646,12 +585,12 @@
   kodable_beyond_name: Kodable
   hopscotch_beyond_name: 'Hopscotch: Programming On Your iPad'
   groklearning_beyond_name: Learn Python programming
-  hacketyhack_beyond_name: Learn Ruby
-  robomind_beyond_name: Program a virtual robot
-  makegameswithus_beyond_name: Build an iPhone game in your browser!
-  appinventor_beyond_name: AppInventor Hour of Code
+  hacketyhack_beyond_name: Lær Ruby
+  robomind_beyond_name: Programmer ein virtuell robot
+  makegameswithus_beyond_name: Bygg eit iphone-spel i nettlesaren din!
+  appinventor_beyond_name: AppInventor Kodetimen
   touchdevelop_beyond_name: TouchDevelop
-  codehs_beyond_name: Learn to Code With Karel the Dog
+  codehs_beyond_name: Lære å kode med hunden Karel
   udemy_beyond_name: Online Programming Courses
   lynda_beyond_name: Online Programming Courses
   edx_beyond_name: Harvard CS50 class
@@ -661,8 +600,8 @@
   kodu_beyond_name: Kodu
   cargobot_beyond_name: Cargobot
   kidsruby_beyond_name: KidsRuby
-  w3schools_beyond_name: Learn HTML
-  codeavengers_beyond_name: Learn to Code Websites
+  w3schools_beyond_name: Lær HTML
+  codeavengers_beyond_name: Lær å programmere nettsider
   mozilla_beyond_name: Webmaker
   codecombat_beyond_name: CodeCombat
   codea_beyond_name: Codea
@@ -671,19 +610,19 @@
   arduino_beyond_name: Arduino
   processing_beyond_name: Program with Processing
   alice_beyond_name: Alice
-  codeorg_beyond_gradelevel: Ages 4-104
-  khan_beyond_gradelevel: Middle school +
-  tynker_beyond_gradelevel: Ages 5-13
-  scratch_beyond_gradelevel: Ages 8+
+  codeorg_beyond_gradelevel: Alder 4-104
+  khan_beyond_gradelevel: Mellomtrinnet +
+  tynker_beyond_gradelevel: Alderen 5 til 13
+  scratch_beyond_gradelevel: Alderen 8+
   lightbot_beyond_gradelevel: Alle aldre
   codecademy_beyond_gradelevel: Videregående
   kodable_beyond_gradelevel: Grunnskole
-  hopscotch_beyond_gradelevel: Middle school +
-  groklearning_beyond_gradelevel: Middle school +
+  hopscotch_beyond_gradelevel: Mellomtrinnet +
+  groklearning_beyond_gradelevel: Mellomtrinnet +
   hacketyhack_beyond_gradelevel: Videregående
-  robomind_beyond_gradelevel: Ages 8-13
+  robomind_beyond_gradelevel: Alderen 8-13
   makegameswithus_beyond_gradelevel: Videregående
-  appinventor_beyond_gradelevel: Middle school +
+  appinventor_beyond_gradelevel: Mellomtrinnet +
   touchdevelop_beyond_gradelevel: Videregående
   codehs_beyond_gradelevel: Videregående
   udemy_beyond_gradelevel: High school +
@@ -692,65 +631,65 @@
   coursera_beyond_gradelevel: University
   udacity_beyond_gradelevel: University
   teachingtree_beyond_gradelevel: University
-  kodu_beyond_gradelevel: Ages 8+
-  cargobot_beyond_gradelevel: Ages 8+
-  kidsruby_beyond_gradelevel: Ages 12+
-  w3schools_beyond_gradelevel: Ages 12+
-  codeavengers_beyond_gradelevel: Middle school +
-  mozilla_beyond_gradelevel: Ages 12+
-  codecombat_beyond_gradelevel: Middle school +
+  kodu_beyond_gradelevel: Alderen 8+
+  cargobot_beyond_gradelevel: Alderen 8+
+  kidsruby_beyond_gradelevel: Alder 12 +
+  w3schools_beyond_gradelevel: Alder 12 +
+  codeavengers_beyond_gradelevel: Mellomtrinnet +
+  mozilla_beyond_gradelevel: Alder 12 +
+  codecombat_beyond_gradelevel: Mellomtrinnet +
   codea_beyond_gradelevel: High school +
-  lego_beyond_gradelevel: Middle school +
-  finch_beyond_gradelevel: Ages 8+
+  lego_beyond_gradelevel: Mellomtrinnet +
+  finch_beyond_gradelevel: Alderen 8+
   arduino_beyond_gradelevel: High school +
   processing_beyond_gradelevel: Videregående
-  alice_beyond_gradelevel: Middle school +
-  codeorg_beyond_platformtext: Modern browsers, tablets
-  khan_beyond_platformtext: Modern Web browsers
-  tynker_beyond_platformtext: Modern web browsers
+  alice_beyond_gradelevel: Mellomtrinnet +
+  codeorg_beyond_platformtext: Moderne nettlesere, nettbrett
+  khan_beyond_platformtext: Moderne nettlesere
+  tynker_beyond_platformtext: Moderne nettlesere
   scratch_beyond_platformtext: Any browser
-  lightbot_beyond_platformtext: iOS, Android (or web browser)
-  codecademy_beyond_platformtext: Modern web browsers. iOS, Android apps
+  lightbot_beyond_platformtext: iOS, Android (eller nettleser)
+  codecademy_beyond_platformtext: Moderne nettlesere. iOS, Android apper
   kodable_beyond_platformtext: iPad
   hopscotch_beyond_platformtext: iPad
-  groklearning_beyond_platformtext: Modern web browsers
+  groklearning_beyond_platformtext: Moderne nettlesere
   hacketyhack_beyond_platformtext: Desktop install
   robomind_beyond_platformtext: Modern web browsers, Mobile web
-  makegameswithus_beyond_platformtext: Modern Web browsers
-  appinventor_beyond_platformtext: Modern browser + Android
-  touchdevelop_beyond_platformtext: Modern browsers, smartphones, all devices
-  codehs_beyond_platformtext: Modern browsers
-  udemy_beyond_platformtext: Web based
-  lynda_beyond_platformtext: Web based
-  edx_beyond_platformtext: Modern browsers
-  coursera_beyond_platformtext: Modern browsers
-  udacity_beyond_platformtext: Modern browsers
-  teachingtree_beyond_platformtext: Web based
+  makegameswithus_beyond_platformtext: Moderne nettlesere
+  appinventor_beyond_platformtext: Moderne nettleser + Android
+  touchdevelop_beyond_platformtext: Moderne nettlesere, smarttelefoner, alle enheter
+  codehs_beyond_platformtext: Moderne nettlesere
+  udemy_beyond_platformtext: Nettbasert
+  lynda_beyond_platformtext: Nettbasert
+  edx_beyond_platformtext: Moderne nettlesere
+  coursera_beyond_platformtext: Moderne nettlesere
+  udacity_beyond_platformtext: Moderne nettlesere
+  teachingtree_beyond_platformtext: Nettbasert
   kodu_beyond_platformtext: Windows, xBox
   cargobot_beyond_platformtext: iPad
   kidsruby_beyond_platformtext: Desktop install
-  w3schools_beyond_platformtext: Modern Web browsers
-  codeavengers_beyond_platformtext: Modern Web browsers
-  mozilla_beyond_platformtext: Modern Web browsers
-  codecombat_beyond_platformtext: Web based (Firefox, Chrome, Safari, IE9+)
+  w3schools_beyond_platformtext: Moderne nettlesere
+  codeavengers_beyond_platformtext: Moderne nettlesere
+  mozilla_beyond_platformtext: Moderne nettlesere
+  codecombat_beyond_platformtext: Nettbasert (Firefox, Chrome, Safari, IE9 +)
   codea_beyond_platformtext: iPad
   lego_beyond_platformtext: Robot purchase
   finch_beyond_platformtext: Robot purchase
   arduino_beyond_platformtext: Kit purchase
-  processing_beyond_platformtext: Modern web browsers
+  processing_beyond_platformtext: Moderne nettlesere
   alice_beyond_platformtext: Windows or Mac (install required)
-  codeorg_beyond_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
-  khan_beyond_shortdescription: Learn to draw in JavaScript
+  codeorg_beyond_shortdescription: Lær å kode med Mark Zuckerberg og sinte fuglar!
+  khan_beyond_shortdescription: Lær å teikne i JavaScript
   tynker_beyond_shortdescription: A fun and engaging course for children in grades
     4-8
   scratch_beyond_shortdescription: Create an interactive animation or game
-  lightbot_beyond_shortdescription: A game to teach coding concepts
-  codecademy_beyond_shortdescription: Learn JavaScript programming, in a web-browser
-  kodable_beyond_shortdescription: A fun iPad game to teach computer programming concepts
-  hopscotch_beyond_shortdescription: Learn visual programming on an iPad
-  groklearning_beyond_shortdescription: Basic intro to python programming
+  lightbot_beyond_shortdescription: Eit spel for å lære kodeprinsipp
+  codecademy_beyond_shortdescription: Lær JavaScript-programmering, i ein nettlesar
+  kodable_beyond_shortdescription: Eit artig ipad-spel for å lære programmeringskonsept
+  hopscotch_beyond_shortdescription: Lær visuell programmering på ein ipad
+  groklearning_beyond_shortdescription: Grunnleggande introduksjon til python-programmering
   hacketyhack_beyond_shortdescription: Learn Ruby from the ground up
-  robomind_beyond_shortdescription: Write code for a virtual robot
+  robomind_beyond_shortdescription: Skriv kode for ein virtuell robot
   makegameswithus_beyond_shortdescription: Learn to make an iPhone game in an hour
   appinventor_beyond_shortdescription: Make your own app! (Android-only)
   touchdevelop_beyond_shortdescription: Code mobile apps directly on your phone, tablet

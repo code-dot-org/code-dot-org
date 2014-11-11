@@ -2,7 +2,7 @@
   data:
     unplugged:
       Unplug1:
-        title: "コンピューター・サイエンス入門"
+        title: コンピューター・サイエンス入門
         desc: This lesson will introduce the concept of Computer Science and explain
           what a Computer Scientist does.  It will also give students an opportunity
           to assume the role of a computer scientist.  By the end of the activity,
@@ -15,7 +15,7 @@
         - unplug1
         video: Unplug1
       Unplug2:
-        title: "コンピュテーショナル・シンキング（コンピューターの様に考える）"
+        title: コンピュテーショナル・シンキング（コンピューターの様に考える）
         desc: With nothing but paper and markers, students will learn the four steps
           of computational thinking. After a brief introduction, students should be
           split into groups where they will have to create directions for other students
@@ -30,7 +30,7 @@
         - unplug2
         video: Unplug2
       Unplug3:
-        title: "グラフ用紙のプログラミング"
+        title: グラフ用紙のプログラミング
         desc: By programming one another to draw pictures, students will begin to
           understand what programming is really about. The class will begin by students
           instructing each other to color squares in on graph paper in an effort to
@@ -40,7 +40,7 @@
         - unplug3
         video: Unplug3
       Unplug4:
-        title: "アルゴリズム"
+        title: アルゴリズム
         desc: This lesson covers algorithms.  Using tangram shapes and graph paper,
           the first exercise will show how important it is to make each instruction
           as clear and unambiguous as possible.  Afterward, the class will explore
@@ -50,7 +50,7 @@
         - unplug4
         video: Unplug4
       Unplug5:
-        title: "関数"
+        title: 関数
         desc: In this lesson, students will make a suncatcher out of string, beads,
           and a special charm. The students will follow a series of repetitive steps,
           then be asked to identify certain sets of "skills" that are duplicated several
@@ -65,7 +65,7 @@
         - unplug5
         video: Unplug5
       Unplug6:
-        title: Conditions
+        title: 条件
         desc: This is a class game.  After introducing the idea of conditionals, if-statements,
           and loops, the class can practice together using a pre-written program,
           a deck of cards, and luck of the draw.
@@ -73,7 +73,7 @@
         - unplug6
         video: Unplug6
       Unplug7:
-        title: "作曲する"
+        title: 作曲する
         desc: Reading lyrics is a pretty intuitive venture for most students.  We'll
           take an activity that's already common knowledge and shift it into a solid
           education on defining and calling functions. Once students are familiar
@@ -83,7 +83,7 @@
         - unplug7
         video: Unplug7
       Unplug8:
-        title: "抽象化"
+        title: 抽象化
         desc: This lesson will introduce the concept of Computer Science and explain
           what a Computer Scientist does.  It will also give students an opportunity
           to assume the role of a computer scientist.  By the end of the activity,
@@ -96,7 +96,7 @@
         - unplug8
         video: Unplug8
       Unplug9:
-        title: "プログラミングをリレーします。"
+        title: プログラミングをリレーします。
         desc: This lesson will take an idea from a previous activity (4. Graph Paper
           Programming) and use those skills to emphasize the importance of completing
           programs that operate in sequence and frequently checking programs for "bugs".
@@ -104,7 +104,7 @@
         - unplug9
         video: Unplug9
       Unplug10:
-        title: "インターネット"
+        title: インターネット
         desc: In this lesson, students will pretend to flow through the Internet,
           all the while learning about web addresses, IPs and the DNS.
         pdfs:
@@ -130,7 +130,7 @@
           through a maze using a single command.
         video: C1_moveitmoveit_unplugged
       PlantASeed:
-        title: 'Real-life Algorithms: Plant a Seed'
+        title: 現実のアルゴリズム：種を植えましょう
         desc: This lesson calls out ways we use algorithms in our daily lives, using
           the act of planting a seed as an example. It also focuses on the bigger
           picture of computer science and how algorithms play an essential part.
@@ -143,9 +143,7 @@
         video: C1_building_foundation
       GettingLoopy:
         title: Getting Loopy
-        desc: This lesson introduces the programming concept of loops (repeated instructions)
-          through a dance activity. Students will learn simple choreography, then
-          be instructed to repeat it.
+        desc: ダンスを通じてループ (繰り返し命令) のプログラミングの概念を紹介します。学生はまず簡単な振り付けを学び、それを繰り返すように指示されます。
         video: C1_getting_loopy
       RelayProgramming:
         title: Relay programming
@@ -155,7 +153,7 @@
           erase everything back to that point.
         video: C2_relay_programming
       Conditionals:
-        title: "条件"
+        title: 条件
         desc: To learn about conditional statements, students play a card game and
           create rules like "If I draw a red card, I get a point" and "If I draw a
           black card, you get a point."
@@ -168,11 +166,11 @@
           is pressed.
         video: C1_bigevent_unplugged
       GoingPlacesSafely:
-        title: Going Places Safely
+        title: 安全な道を通って行く
         desc: The Internet is a powerful, but sometimes dangerous place. Teachers
           introduce how to stay safe while navigating the Internet.
       GraphPaperProgramming:
-        title: "グラフ用紙のプログラミング"
+        title: グラフ用紙のプログラミング
         desc: Students write an algorithm (a set of instructions) using a set of predefined
           commands to direct their classmates to reproduce a drawing.
         video: C2_graph_paper
@@ -193,7 +191,7 @@
         desc: Teachers introduce to students the idea that putting information about
           themselves online creates a digital footprint or "trail" that has consequences.
       ComputationalThinking:
-        title: "コンピュテーショナル・シンキング（コンピューターの様に考える）"
+        title: コンピュテーショナル・シンキング（コンピューターの様に考える）
         desc: Students use the steps of computational thinking (decompose, pattern
           match, abstract, algorithm) to figure out how to play a game that comes
           with no instructions.

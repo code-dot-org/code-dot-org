@@ -2,9 +2,17 @@
 title: Resources
 layout: wide
 ---
-# How to teach one Hour of Code
+<div class="row">
+    <h1 class="col-sm-6">How to teach one Hour of Code</h1>
+    <div class="col-sm-6 button-container centered">
+        <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Sign up your event</button></a>
+    </div>
+</div>
 
-## 1) Try the tutorials: 
+## 1) Watch this how-to video
+<iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
+
+## 2) Try the tutorials:
 We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
 
 **All Hour of Code tutorials:**
@@ -15,7 +23,7 @@ We’ll host a variety of fun, hour-long tutorials for students of all ages, cre
 <a href="http://<%=codeorg_url() %>/learn"><img src="http://<%= codeorg_url() %>/images/tutorials.png"></a>
 
 
-## 2) Plan your hardware needs - computers are optional
+## 3) Plan your hardware needs - computers are optional
 
 The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every child, and can even do the Hour of Code without a computer at all. 
 
@@ -23,12 +31,12 @@ The best Hour of Code experience will be with Internet-connected computers. But 
 - **Preview the congrats page** to see what students will see when they finish. 
 - **Provide headphones for your class**, or ask students to bring their own, if the tutorial you choose works best with sound.
 
-## 3) Plan ahead based on your technology available
+## 4) Plan ahead based on your technology available
 
 - **Don't have enough devices?** Use [pair programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
 - **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
-## 4) Inspire students - show them a video
+## 5) Inspire students - show them a video
 
 
 Show students an inspirational video to kick off the Hour of Code. Examples:
@@ -46,7 +54,7 @@ Most kids don’t know what computer science is. Here are some ideas:
 - Or: “Computer science is the art of blending human ideas and digital tools to increase our power. Computer scientists work in so many different areas: writing apps for phones, curing diseases, creating animated movies, working on social media, building robots that explore other planets and so much more."
 - See tips for getting girls interested in computer science <a href="http://<%= codeorg_url() %>/girls">here</a>. 
 
-## 5) Start your Hour of Code
+## 6) Start your Hour of Code
 
 **Direct students to the activity**
 
@@ -71,6 +79,6 @@ Each student gets a chance to get a certificate via email when they finish the [
 **What comes after the Hour of Code?**
 
 The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators <a href="http://<%= codeorg_url() %>/educate">here</a>. Or encourage your children to learn <a href="http://<%= codeorg_url() %>/learn/beyond">online</a>. <% end %>
-
+<a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Sign up your event</button></a>
 
 

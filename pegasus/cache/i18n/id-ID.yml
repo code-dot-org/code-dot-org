@@ -1,9 +1,10 @@
 "id-ID":
   hello: Halo dunia
+  select_language: Please select your language
   computer_science: Ilmu komputer
   computer_science_edweek: Minggu pendidikan ilmu komputer
   csedweek_dates: 9-15 Desember 2013
-  n_have_learned_an_hoc: "<h1>#</h1><h3>telah mencoba</h3><h2>Jam Kode</h2>"
+  n_have_learned_an_hoc: <h1>#</h1><h3>telah mencoba</h3><h2>Jam Kode</h2>
   anybody_can_learn: Siapa pun bisa belajar.
   learn_now: Pelajari sekarang
   petition_message: Setiap siswa di setiap sekolah seharusnya memiliki kesempatan
@@ -46,7 +47,7 @@
     vs Zombies. Pelajari ulangi (repeat-loop), pernyataan jika-maka, dan dasar algoritma.
   all_ages: Segala usia
   beginner: Pemula
-  n_participants: "# peserta"
+  n_participants: '# peserta'
   go: Gerak
   thank_you_: Terima kasih!
   congratulations: Selamat!
@@ -84,7 +85,7 @@
   beyond_an_hour: Setelah Jam Kode >
   get_started: Mulai
   i_agree: Saya setuju
-  participant_select: "-Pilih-"
+  participant_select: -Pilih-
   participant_student: siswa
   participant_parent: Orang tua
   participant_educator: Guru
@@ -103,7 +104,7 @@
   learn_next_level: Lanjut ke tingkat berikutnya
   learn_online: Coba kursus online lain
   learn_classes: Cari kelas kursus
-  hoc_is_here: "#HourOfCode ada di sini – coba lihat! @codeorg"
+  hoc_is_here: '#HourOfCode ada di sini – coba lihat! @codeorg'
   just_did_hoc: 'Aku telah mengerjakan #HourOfCode – cobalah lihat! @codeorg'
   learn_hoc: Belajar Kode selama satu Jam
   beyond_hoc: Setelah Satu Jam
@@ -114,7 +115,7 @@
     tim Anda!
   help_recruit: Bantu kami merekrut lebih banyak orang untuk bergabung!
   lines_of_code: Sebanyak <b># baris kode</b> telah ditulis sampai saat ini.
-  lines_of_code_alt: "<b>#</b> BARIS KODE YANG TELAH DITULIS OLEH SISWA-SISWI"
+  lines_of_code_alt: <b>#</b> BARIS KODE YANG TELAH DITULIS OLEH SISWA-SISWI
   who_has_done_hoc: 'Siapakah yang telah menyelesaikan #HourOfCode? @codeorg'
   hoc_leaderboards: 'Papan Prestasi Jam kode '
   students_and_lines: Sebanyak %{students} siswa telah menyelesaikan jam kode dan

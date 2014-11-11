@@ -4,7 +4,15 @@
 
 * * *
 
-# Как да преподаватe един Час на кодирането
+<div class="row">
+  <h1 class="col-sm-6">
+    How to teach one Hour of Code
+  </h1>
+  
+  <div class="col-sm-6 button-container centered">
+    <a href="/#join"><button class="signup-button">Sign up your event</button></a>
+  </div>
+</div>
 
 ## 1) Опитайте уроците:
 
@@ -72,4 +80,4 @@
 **Какво идва след Часът на кодирането?**
 
 Часът на кодирането е само първата стъпка в пътуването, посветено на знанието за технологиите и как работят те. Трябват още много стъпки за да създадете свои софтуерни приложения. < % if @country == 'uk' %> Часът на кодирането е само първата стъпка в образователното пътуване за това как технологията работи и как да създадете свои софтуерни приложения. За да продължат това пътуване, [ насърчете децата си да учат онлайн](http://uk.code.org/learn/beyond). < % else %> За да продължите този път, открийте допълнителни ресурси за преподаватели [тук](http://<%= codeorg_url() %>/educate). Или насърчете учениците да учат[ online](http://<%= codeorg_url() %>
-/learn/beyond). <% end %>
+/learn/beyond). <% end %> <a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>

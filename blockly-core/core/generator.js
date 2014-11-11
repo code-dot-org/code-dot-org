@@ -59,7 +59,7 @@ Blockly.Generator.get = function(name) {
 };
 
 /**
- * Generate code for all blocks in the workspace to the specified language.
+ * Generate code for all blocks in the blockSpace to the specified language.
  * @param {string} name Language name (e.g. 'JavaScript').
  * @param {array} blocks Return code under blocks in this array.
  * @return {string} Generated code.
@@ -94,25 +94,25 @@ Blockly.Generator.blocksToCode = function(name, blocks) {
 };
 
 /**
- * Generate code for all blocks in the workspace to the specified language.
+ * Generate code for all blocks in the blockSpace to the specified language.
  * @param {string} name Language name (e.g. 'JavaScript').
- * @param {string} type Only return code under top blocks of this type
+ * @param {?string|Array.<string>} opt_typeFilter Only return code under top
+ *   blocks of this type (or list of types).
  * @return {string} Generated code.
  */
-Blockly.Generator.workspaceToCode = function(name, type) {
-  var blocksToGenerate = [];
-  if (type) {
-    // Filter top blocks by type.
-    var blocks = Blockly.mainWorkspace.getTopBlocks(true);
-    for (var x = 0, block; block = blocks[x]; x++) {
-      if (type && block.type != type) {
-        continue;
-      }
-      blocksToGenerate.push(block);
+Blockly.Generator.blockSpaceToCode = function(name, opt_typeFilter) {
+  var blocksToGenerate;
+  if (opt_typeFilter) {
+    if (typeof opt_typeFilter == 'string') {
+      opt_typeFilter = [opt_typeFilter];
     }
+    blocksToGenerate =
+      goog.array.filter(Blockly.mainBlockSpace.getTopBlocks(true), function(block) {
+        return goog.array.contains(opt_typeFilter, block.type);
+      }, this);
   } else {
     // Generate all top blocks.
-    blocksToGenerate = Blockly.mainWorkspace.getTopBlocks(true);
+    blocksToGenerate = Blockly.mainBlockSpace.getTopBlocks(true);
   }
   return Blockly.Generator.blocksToCode(name, blocksToGenerate);
 };

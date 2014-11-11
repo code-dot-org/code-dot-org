@@ -1,9 +1,10 @@
 "fil-PH":
   hello: Mabuhay!
+  select_language: Please select your language
   computer_science: Computer Science
   computer_science_edweek: Computer Science Education Week
   csedweek_dates: Disyembre 9-15, 2013
-  n_have_learned_an_hoc: "<h1>#</h1><h3>ay sumubok ng</h3><h2>HOUR of CODE&trade;</h2>"
+  n_have_learned_an_hoc: <h1>#</h1><h3>ay sumubok ng</h3><h2>HOUR of CODE&trade;</h2>
   anybody_can_learn: Lahat ay puwedeng matuto.
   learn_now: Matuto Ngayon
   petition_message: Ang bawat estudyante sa bawat paaralan ay dapat may pagkakataon
@@ -47,7 +48,7 @@
     Matuto ng repeat-loops, if-then statements, at basic na mga algorithm.
   all_ages: Lahat ng edad
   beginner: Baguhan
-  n_participants: "# na mga kalahok"
+  n_participants: '# na mga kalahok'
   go: Pumunta
   thank_you_: Maraming salamat!
   congratulations: Maligayang pagbati!
@@ -86,7 +87,7 @@
   beyond_an_hour: Lampas sa HOUR OF CODE >
   get_started: Panimula
   i_agree: Ako ay sumasang-ayon
-  participant_select: "- Pumili -"
+  participant_select: '- Pumili -'
   participant_student: Estudyante
   participant_parent: Magulang
   participant_educator: Tagapagturo
@@ -116,11 +117,11 @@
     koponan!
   help_recruit: Tumulong sa pag regruit ng marami pang mga coder!
   lines_of_code: HIGIT SA <b># LINES OF CODE</b> NAKASULAT AYON SA PETSA.
-  lines_of_code_alt: "<b>#</b> MGA LINYA NG CODE NA ISINULAT NG MGA ESTUDYANTE"
+  lines_of_code_alt: <b>#</b> MGA LINYA NG CODE NA ISINULAT NG MGA ESTUDYANTE
   who_has_done_hoc: 'Sino na ang nakasubok ng #HourOfCode? @codeorg'
   hoc_leaderboards: Ang mga Leaderboard ng Hour of Code
-  students_and_lines: "%{students} na mga estudyante ang natapos ang Hour of Code
-    at nakapagsulat ng %{lines} linya ng code."
+  students_and_lines: '%{students} na mga estudyante ang natapos ang Hour of Code
+    at nakapagsulat ng %{lines} linya ng code.'
   start_hoc: Umpisahan ang Hour of Code ngayon
   contact_form_topic_press: Press/media (interview o speaking engagement)
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>

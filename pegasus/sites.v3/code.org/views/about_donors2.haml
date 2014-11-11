@@ -6,7 +6,10 @@
         - style = ' border-left: none;'
       .platinum_donor_column{:style=>style}
         %a{:href=>supporter[:url_s], :target=>"_blank"}
-          %img{:src=>avatar_url, :style=>'max-width: 100%;'}
+          %img{:src=>avatar_url, :style=>'max-width: 100%; max-height: 100%'}
+          - if supporter[:kind_s] != "corporate" && supporter[:name_s] != "Omidyar Network"
+            %p
+              =supporter[:name_s]
     - else
       - if  groupindex == 0
         - if index % 2 != 0
