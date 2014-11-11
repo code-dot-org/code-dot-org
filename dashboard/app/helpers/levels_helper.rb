@@ -211,6 +211,7 @@ module LevelsHelper
       use_modal_function_editor
       use_contract_editor
       impressive
+      open_function_definition
     ).map{ |x| x.include?(':') ? x.split(':') : [x,x.camelize(:lower)]}]
     .each do |dashboard, blockly|
       # Select first valid value from 1. local_assigns, 2. property of @level object, 3. named instance variable, 4. properties json

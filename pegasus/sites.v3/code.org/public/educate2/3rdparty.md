@@ -57,3 +57,6 @@ Create games on the PC and XBox via a simple visual programming language. Can be
 
 ### [Scratch](http://scratched.media.mit.edu/)
 Programming language that makes it easy to create your own interactive stories, animations, games, music and art - and share your creations on the web. 
+
+### [ScratchJr](http://www.scratchjr.org/)
+With ScratchJr, young children (ages 5-7) can program their own interactive stories and games on the iPad. In the process, they learn to solve problems, design projects, and express themselves creatively on the computer.

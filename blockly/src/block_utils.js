@@ -96,6 +96,8 @@ exports.domStringToBlock = function(blockDOMString) {
  * this block, does nothing.
  */
 exports.forceInsertTopBlock = function (input, blockType) {
+  input = input || '';
+  
   if (input.indexOf(blockType) !== -1) {
     return input;
   }
