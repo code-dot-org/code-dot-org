@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "studio",
-    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n return Studio.sayComplete > 100;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
+    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  return Studio.sayComplete >= 100;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
     "failure_condition": "function () {\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "is_k1": "false",
@@ -19,8 +19,10 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "instructions": "If we count by larger numbers we could go even higher. Try making the dog count from 10 up to 1000 10 at a time.",
-    "ideal": "7",
+    "ideal": "9",
     "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "coordinate_grid_background": "false",
     "maze_data": null
   }
 }]]></config>
@@ -32,16 +34,20 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="when_run"/>
-        <block type="studio_saySpriteParams" inline="true">
-          <value name="TEXT">
-            <block type="text">
-              <title name="TEXT">???</title>
+        <block type="studio_saySpriteParamsTime" inline="true">
+          <value name="SPRITE">
+            <block type="math_number">
+              <title name="NUM">1</title>
+            </block>
+          </value>
+          <value name="TIME">
+            <block type="math_number">
+              <title name="NUM">0.1</title>
             </block>
           </value>
         </block>
         <block type="controls_for" inline="true">
-          <title name="VAR">Counter</title>
+          <title name="VAR">counter</title>
           <value name="FROM">
             <block type="math_number">
               <title name="NUM">1</title>
@@ -59,19 +65,34 @@
           </value>
         </block>
         <block type="variables_get">
-          <title name="VAR">Counter</title>
+          <title name="VAR">counter</title>
         </block>
       </xml>
     </toolbox_blocks>
     <required_blocks>
       <xml>
-        <block type="when_run"/>
-        <block type="studio_saySpriteParams" inline="true"/>
-        <block type="controls_for" inline="true">
-          <title name="VAR">Counter</title>
-          <value name="FROM">
+        <block type="studio_saySpriteParamsTime" inline="true">
+          <value name="SPRITE">
             <block type="math_number">
               <title name="NUM">1</title>
+            </block>
+          </value>
+          <value name="TEXT">
+            <block type="variables_get">
+              <title name="VAR">counter</title>
+            </block>
+          </value>
+          <value name="TIME">
+            <block type="math_number">
+              <title name="NUM">???</title>
+            </block>
+          </value>
+        </block>
+        <block type="controls_for" inline="true">
+          <title name="VAR">counter</title>
+          <value name="FROM">
+            <block type="math_number">
+              <title name="NUM">10</title>
             </block>
           </value>
           <value name="TO">
@@ -84,9 +105,6 @@
               <title name="NUM">10</title>
             </block>
           </value>
-        </block>
-        <block type="variables_get">
-          <title name="VAR">Counter</title>
         </block>
       </xml>
     </required_blocks>

@@ -14,8 +14,11 @@
     "disable_param_editing": "true",
     "free_play": "false",
     "instructions": "Now we're getting there! But maybe we could make this algorithm even smarter... instead of manually setting the \"length\" variable, what if we used the value of \"sides\" to figure out what \"length\" should be? The more sides a shape has, the shorter each side needs to be in order for the whole thing to fit on screen. Here are a few equations, see which one does what we need.",
-    "disable_variable_editing": "false",
-    "ideal": "23"
+    "disable_variable_editing": "true",
+    "ideal": "23",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "impressive": "false"
   }
 }]]></config>
   <blocks>
@@ -36,14 +39,14 @@
                   <next>
                     <block type="controls_repeat_ext" inline="true" deletable="false" editable="false" movable="false">
                       <value name="TIMES">
-                        <block type="variables_get" deletable="false" editable="false" movable="false">
+                        <block type="variables_get" deletable="false" movable="false">
                           <title name="VAR">sides</title>
                         </block>
                       </value>
                       <statement name="DO">
                         <block type="controls_repeat_ext" inline="true" deletable="false" editable="false" movable="false">
                           <value name="TIMES">
-                            <block type="variables_get" deletable="false" editable="false" movable="false">
+                            <block type="variables_get" deletable="false" movable="false">
                               <title name="VAR">sides</title>
                             </block>
                           </value>
@@ -51,7 +54,7 @@
                             <block type="draw_move" inline="true" deletable="false" editable="false" movable="false">
                               <title name="DIR">moveForward</title>
                               <value name="VALUE">
-                                <block type="variables_get" deletable="false" editable="false" movable="false">
+                                <block type="variables_get" deletable="false" movable="false">
                                   <title name="VAR">length</title>
                                 </block>
                               </value>
@@ -67,7 +70,7 @@
                                         </block>
                                       </value>
                                       <value name="B">
-                                        <block type="variables_get" deletable="false" editable="false" movable="false">
+                                        <block type="variables_get" deletable="false" movable="false">
                                           <title name="VAR">sides</title>
                                         </block>
                                       </value>
@@ -81,7 +84,7 @@
                             <block type="draw_move" inline="true" deletable="false" editable="false" movable="false">
                               <title name="DIR">moveForward</title>
                               <value name="VALUE">
-                                <block type="variables_get" deletable="false" editable="false" movable="false">
+                                <block type="variables_get" deletable="false" movable="false">
                                   <title name="VAR">length</title>
                                 </block>
                               </value>
@@ -97,7 +100,7 @@
                                         </block>
                                       </value>
                                       <value name="B">
-                                        <block type="variables_get" deletable="false" editable="false" movable="false">
+                                        <block type="variables_get" deletable="false" movable="false">
                                           <title name="VAR">sides</title>
                                         </block>
                                       </value>

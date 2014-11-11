@@ -11,7 +11,7 @@
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "disable_param_editing": "true",
+    "disable_param_editing": "false",
     "disable_variable_editing": "false",
     "start_direction": "1",
     "step_mode": "0",
@@ -19,7 +19,9 @@
     "flower_type": "redWithNectar",
     "maze_data": null,
     "ideal": "19",
-    "instructions": "You might recall the \"get 3 nectar\" function from Course 3 - it turns, moves to collect the nectar, and then returns to the original location. Write a sequence to collect all of the nectar using \"get 3 nectar.\""
+    "instructions": "You might recall the \"get 3 nectar\" function from Course 3 - it turns, moves to collect the nectar, and then returns to the original location. Write a sequence to collect all of the nectar using \"get 3 nectar.\"",
+    "use_modal_function_editor": "true",
+    "use_contract_editor": "false"
   }
 }]]></config>
   <blocks>
