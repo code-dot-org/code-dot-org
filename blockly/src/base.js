@@ -454,6 +454,7 @@ BlocklyApps.init = function(config) {
         false : config.level.useModalFunctionEditor,
     useContractEditor: config.level.useContractEditor === undefined ?
         false : config.level.useContractEditor,
+    openFunctionDefinition: config.level.openFunctionDefinition,
     scrollbars: config.level.scrollbars,
     editBlocks: config.level.edit_blocks === undefined ?
         false : config.level.edit_blocks
@@ -516,6 +517,10 @@ BlocklyApps.init = function(config) {
   Blockly.mainBlockSpaceEditor.addChangeListener(function() {
     BlocklyApps.updateBlockCount();
   });
+
+  if (Blockly.openFunctionDefinition) {
+    Blockly.functionEditor.openAndEditFunction(Blockly.openFunctionDefinition);
+  }
 };
 
 exports.playAudio = function(name, options) {
