@@ -90,7 +90,7 @@ module.exports = function(app, levels, options) {
 };
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./base":2,"./blocksCommon":4,"./dom":9,"./required_block_utils":30,"./utils":46}],2:[function(require,module,exports){
+},{"./base":2,"./blocksCommon":4,"./dom":9,"./required_block_utils":29,"./utils":45}],2:[function(require,module,exports){
 /**
  * Blockly Apps: Common code
  *
@@ -1068,7 +1068,7 @@ var getIdealBlockNumberMsg = function() {
       msg.infinity() : BlocklyApps.IDEAL_BLOCK_NUM;
 };
 
-},{"../locale/sl_si/common":48,"./block_utils":3,"./builder":5,"./constants.js":8,"./dom":9,"./feedback.js":27,"./slider":33,"./templates/buttons.html":35,"./templates/instructions.html":37,"./templates/learn.html":38,"./templates/makeYourOwn.html":39,"./utils":46,"./xml":47}],3:[function(require,module,exports){
+},{"../locale/sl_si/common":47,"./block_utils":3,"./builder":5,"./constants.js":8,"./dom":9,"./feedback.js":26,"./slider":32,"./templates/buttons.html":34,"./templates/instructions.html":36,"./templates/learn.html":37,"./templates/makeYourOwn.html":38,"./utils":45,"./xml":46}],3:[function(require,module,exports){
 var xml = require('./xml');
 
 exports.createToolbox = function(blocks) {
@@ -1255,7 +1255,7 @@ exports.mathBlockXml = function (type, inputs, titles) {
   return str;
 };
 
-},{"./xml":47}],4:[function(require,module,exports){
+},{"./xml":46}],4:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -1420,7 +1420,7 @@ function installWhenRun(blockly, skin, isK1) {
   };
 }
 
-},{"../locale/sl_si/common":48}],5:[function(require,module,exports){
+},{"../locale/sl_si/common":47}],5:[function(require,module,exports){
 var feedback = require('./feedback.js');
 var dom = require('./dom.js');
 var utils = require('./utils.js');
@@ -1450,7 +1450,7 @@ exports.builderForm = function(onAttemptCallback) {
   dialog.show({ backdrop: 'static' });
 };
 
-},{"./dom.js":9,"./feedback.js":27,"./templates/builder.html":34,"./utils.js":46,"url":60}],6:[function(require,module,exports){
+},{"./dom.js":9,"./feedback.js":26,"./templates/builder.html":33,"./utils.js":45,"url":59}],6:[function(require,module,exports){
 /*
  * canvg.js - Javascript SVG parser and renderer on Canvas
  * MIT Licensed 
@@ -4862,7 +4862,8 @@ exports.isIOS = function() {
 
 },{}],10:[function(require,module,exports){
 var evalUtils = require('./evalUtils');
-var EvalString = require('./evalString');
+var EvalImage = require('./evalImage');
+var EvalText = require('./evalText');
 var EvalCircle = require('./evalCircle');
 var EvalTriangle = require('./evalTriangle');
 var EvalMulti = require('./evalMulti');
@@ -4871,20 +4872,16 @@ var EvalEllipse = require('./evalEllipse');
 var EvalText = require('./evalText');
 var EvalStar = require('./evalStar');
 
-// todo (brent) - make use of blockId?
+// We don't use blockId at all in Eval since everything is evaluated at once.
 
 exports.display = function (object) {
   if (object === undefined) {
-    object = new EvalString("");
+    object = "";
   }
   if (!object.draw) {
-    object = new EvalString(object.toString());
+    object = new EvalText(object.toString(), 12, 'black');
   }
   Eval.displayedObject = object;
-};
-
-exports.string = function (str, blockId) {
-  return new EvalString(str);
 };
 
 exports.circle = function (size, style, color) {
@@ -4923,12 +4920,13 @@ exports.star = function (radius, fontSize, color) {
   return new EvalStar(radius, fontSize, color);
 };
 
-exports.placeImage = function (x, y, image, blockId) {
-  // todo - validate we have an image, use public setter
-  // todo - where does argument validation happen?
+exports.placeImage = function (x, y, image) {
+  evalUtils.ensureNumber(x);
+  evalUtils.ensureNumber(y);
+  evalUtils.ensureType(image, EvalImage);
 
   // User inputs why in cartesian space. Convert to pixel space before sending
-  // to our EvalObject.
+  // to our EvalImage.
   y = evalUtils.cartesianToPixel(y);
 
   image.place(x, y);
@@ -4936,6 +4934,8 @@ exports.placeImage = function (x, y, image, blockId) {
 };
 
 exports.rotateImage = function (degrees, image) {
+  evalUtils.ensureNumber(degrees);
+
   image.rotate(degrees);
   return image;
 };
@@ -4946,20 +4946,20 @@ exports.scaleImage = function (factor, image) {
 };
 
 exports.stringAppend = function (first, second) {
-  evalUtils.ensureType(first, EvalString);
-  evalUtils.ensureType(second, EvalString);
+  evalUtils.ensureString(first);
+  evalUtils.ensureString(second);
 
-  return new EvalString(first.getValue() + second.getValue());
+  return first + second;
 };
 
 // polling for values
 exports.stringLength = function (str) {
-  evalUtils.ensureType(str, EvalString);
+  evalUtils.ensureString(str);
 
-  return str.getValue().length;
+  return str.length;
 };
 
-},{"./evalCircle":14,"./evalEllipse":15,"./evalMulti":16,"./evalRect":18,"./evalStar":19,"./evalString":20,"./evalText":21,"./evalTriangle":22,"./evalUtils":23}],11:[function(require,module,exports){
+},{"./evalCircle":14,"./evalEllipse":15,"./evalImage":16,"./evalMulti":17,"./evalRect":18,"./evalStar":19,"./evalText":20,"./evalTriangle":21,"./evalUtils":22}],11:[function(require,module,exports){
 /**
  * Blockly Demo: Eval Graphics
  *
@@ -4990,8 +4990,9 @@ var commonMsg = require('../../locale/sl_si/common');
 
 var evalUtils = require('./evalUtils');
 var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
-var colors = require('../functionalBlockUtils').colors;
-var initTitledFunctionalBlock = require('../functionalBlockUtils').initTitledFunctionalBlock;
+var functionalBlockUtils = require('../functionalBlockUtils');
+var colors = functionalBlockUtils.colors;
+var initTitledFunctionalBlock = functionalBlockUtils.initTitledFunctionalBlock;
 
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function(blockly, blockInstallOptions) {
@@ -5006,8 +5007,6 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   sharedFunctionalBlocks.install(blockly, generator, gensym);
-
-  installString(blockly, generator, gensym);
 
   installFunctionalBlock(blockly, generator, gensym, {
     blockName: 'functional_display',
@@ -5174,7 +5173,16 @@ exports.install = function(blockly, blockInstallOptions) {
     ]
   });
 
-  installStyle(blockly, generator, gensym);
+  functionalBlockUtils.installStringPicker(blockly, generator, {
+    blockName: 'functional_style',
+    values: [
+      [msg.solid(), 'solid'],
+      ['75%', '75%'],
+      ['50%', '50%'],
+      ['25%', '25%'],
+      [msg.outline(), 'outline']
+    ]
+  });
 };
 
 
@@ -5201,9 +5209,9 @@ function installFunctionalBlock (blockly, generator, gensym, options) {
         if (arg.type === 'Number') {
           apiArg = '0';
         } else if (arg.name === 'STYLE') {
-          apiArg = "Eval.string('solid')";
+          apiArg = blockly.JavaScript.quote_('solid');
         } else if (arg.name === 'COLOR') {
-          apiArg = "Eval.string('black')";
+          apiArg = blockly.JavaScript.quote_('black');
         }
       }
       apiArgs.push(apiArg);
@@ -5213,68 +5221,7 @@ function installFunctionalBlock (blockly, generator, gensym, options) {
   };
 }
 
-/**
- * functional_string
- */
-function installString(blockly, generator, gensym) {
-  blockly.Blocks.functional_string = {
-    // Numeric value.
-    init: function() {
-      this.setFunctional(true, {
-        headerHeight: 0,
-        rowBuffer: 3
-      });
-      this.setHSV.apply(this, colors.string);
-      this.appendDummyInput()
-          .appendTitle(new Blockly.FieldLabel('"'))
-          .appendTitle(new Blockly.FieldTextInput(msg.string()), 'VAL')
-          .appendTitle(new Blockly.FieldLabel('"'))
-          .setAlign(Blockly.ALIGN_CENTRE);
-      this.setFunctionalOutput(true, 'string');
-    }
-  };
-
-  generator.functional_string = function() {
-    return "Eval.string(" +
-        blockly.JavaScript.quote_(this.getTitleValue('VAL')) + ")";
-  };
-}
-
-/**
- * functional_style
- */
-function installStyle(blockly, generator, gensym) {
-  blockly.Blocks.functional_style = {
-    init: function () {
-      var VALUES = [
-        [msg.solid(), 'solid'],
-        ['75%', '75%'],
-        ['50%', '50%'],
-        ['25%', '25%'],
-        [msg.outline(), 'outline']
-      ];
-
-      this.setFunctional(true, {
-        headerHeight: 0,
-        rowBuffer: 3
-      });
-      this.setHSV.apply(this, colors.string);
-      this.appendDummyInput()
-          .appendTitle(new Blockly.FieldLabel('"'))
-          .appendTitle(new blockly.FieldDropdown(VALUES), 'VAL')
-          .appendTitle(new Blockly.FieldLabel('"'))
-          .setAlign(Blockly.ALIGN_CENTRE);
-      this.setFunctionalOutput(true, 'string');
-
-    }
-  };
-
-  generator.functional_style = function() {
-    return "Eval.string('" + this.getTitleValue('VAL') + "')";
-  };
-}
-
-},{"../../locale/sl_si/common":48,"../../locale/sl_si/eval":49,"../functionalBlockUtils":28,"../sharedFunctionalBlocks":31,"./evalUtils":23}],12:[function(require,module,exports){
+},{"../../locale/sl_si/common":47,"../../locale/sl_si/eval":48,"../functionalBlockUtils":27,"../sharedFunctionalBlocks":30,"./evalUtils":22}],12:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -5298,7 +5245,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/sl_si/common":48,"../../locale/sl_si/eval":49,"ejs":50}],13:[function(require,module,exports){
+},{"../../locale/sl_si/common":47,"../../locale/sl_si/eval":48,"ejs":49}],13:[function(require,module,exports){
 (function (global){
 /**
  * Blockly Demo: Eval Graphics
@@ -5336,7 +5283,6 @@ var feedback = require('../feedback.js');
 var dom = require('../dom');
 var blockUtils = require('../block_utils');
 
-var EvalString = require('./evalString');
 // requiring this loads canvg into the global namespace
 require('../canvg/canvg.js');
 var canvg = window.canvg || global.canvg;
@@ -5476,9 +5422,9 @@ function evalCode (code) {
 }
 
 /**
- * Generates a drawable evalObject from the blocks in the workspace. If blockXml
+ * Generates a drawable evalImage from the blocks in the workspace. If blockXml
  * is provided, temporarily sticks those blocks into the workspace to generate
- * the evalObject, then deletes blocks.
+ * the evalImage, then deletes blocks.
  */
 function getDrawableFromBlocks(blockXml) {
   if (blockXml) {
@@ -5600,24 +5546,22 @@ function onReportComplete(response) {
 }
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../../locale/sl_si/common":48,"../../locale/sl_si/eval":49,"../base":2,"../block_utils":3,"../canvg/canvg.js":6,"../codegen":7,"../constants":8,"../dom":9,"../feedback.js":27,"../skins":32,"../templates/page.html":40,"./api":10,"./controls.html":12,"./evalString":20,"./levels":24,"./visualization.html":26}],14:[function(require,module,exports){
-var EvalObject = require('./evalObject');
-var EvalString = require('./evalString');
+},{"../../locale/sl_si/common":47,"../../locale/sl_si/eval":48,"../base":2,"../block_utils":3,"../canvg/canvg.js":6,"../codegen":7,"../constants":8,"../dom":9,"../feedback.js":26,"../skins":31,"../templates/page.html":39,"./api":10,"./controls.html":12,"./levels":23,"./visualization.html":25}],14:[function(require,module,exports){
+var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
 var EvalCircle = function (radius, style, color) {
-  evalUtils.ensureType(style, EvalString);
-  evalUtils.ensureType(color, EvalString);
+  evalUtils.ensureNumber(radius);
+  evalUtils.ensureString(style);
+  evalUtils.ensureString(color);
 
-  EvalObject.apply(this);
+  EvalImage.apply(this, [style, color]);
 
   this.radius_ = radius;
-  this.color_ = color.getValue();
-  this.style_ = style.getValue();
 
   this.element_ = null;
 };
-EvalCircle.inherits(EvalObject);
+EvalCircle.inherits(EvalImage);
 module.exports = EvalCircle;
 
 EvalCircle.prototype.draw = function (parent) {
@@ -5629,7 +5573,7 @@ EvalCircle.prototype.draw = function (parent) {
   this.element_.setAttribute('cy', 0);
   this.element_.setAttribute('r', this.radius_);
 
-  EvalObject.prototype.draw.apply(this, arguments);
+  EvalImage.prototype.draw.apply(this, arguments);
 };
 
 EvalCircle.prototype.rotate = function () {
@@ -5637,25 +5581,24 @@ EvalCircle.prototype.rotate = function () {
   // a bitmap.
 };
 
-},{"./evalObject":17,"./evalString":20,"./evalUtils":23}],15:[function(require,module,exports){
-var EvalObject = require('./evalObject');
-var EvalString = require('./evalString');
+},{"./evalImage":16,"./evalUtils":22}],15:[function(require,module,exports){
+var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
 var EvalCircle = function (width, height, style, color) {
-  evalUtils.ensureType(style, EvalString);
-  evalUtils.ensureType(color, EvalString);
+  evalUtils.ensureNumber(width);
+  evalUtils.ensureNumber(height);
+  evalUtils.ensureString(style);
+  evalUtils.ensureString(color);
 
-  EvalObject.apply(this);
+  EvalImage.apply(this, [style, color]);
 
   this.width_ = width;
   this.height_ = height;
-  this.color_ = color.getValue();
-  this.style_ = style.getValue();
 
   this.element_ = null;
 };
-EvalCircle.inherits(EvalObject);
+EvalCircle.inherits(EvalImage);
 module.exports = EvalCircle;
 
 EvalCircle.prototype.draw = function (parent) {
@@ -5668,56 +5611,13 @@ EvalCircle.prototype.draw = function (parent) {
   this.element_.setAttribute('rx', this.width_ / 2);
   this.element_.setAttribute('ry', this.height_ / 2);
 
-  EvalObject.prototype.draw.apply(this, arguments);
+  EvalImage.prototype.draw.apply(this, arguments);
 };
 
-},{"./evalObject":17,"./evalString":20,"./evalUtils":23}],16:[function(require,module,exports){
-var EvalObject = require('./evalObject');
+},{"./evalImage":16,"./evalUtils":22}],16:[function(require,module,exports){
 var evalUtils = require('./evalUtils');
 
-var EvalMulti = function (image1, image2) {
-  evalUtils.ensureType(image1, EvalObject);
-  evalUtils.ensureType(image2, EvalObject);
-
-  EvalObject.apply(this);
-
-  this.image1_ = image1;
-  this.image2_ = image2;
-
-  // we want an object centered at 0, 0 that we can then apply transforms to.
-  // to accomplish this, we need to adjust the children's x/y's to be relative
-  // to us
-  var deltaX, deltaY;
-  deltaX = this.image1_.x_ - this.x_;
-  deltaY = this.image1_.y_ - this.y_;
-  this.image1_.updatePosition(deltaX, deltaY);
-  deltaX = this.image2_.x_ - this.x_;
-  deltaY = this.image2_.y_ - this.y_;
-  this.image2_.updatePosition(deltaX, deltaY);
-
-  this.element_ = null;
-};
-EvalMulti.inherits(EvalObject);
-module.exports = EvalMulti;
-
-EvalMulti.prototype.draw = function (parent) {
-  if (!this.element_) {
-    var deltaX, deltaY;
-
-    this.element_ = document.createElementNS(Blockly.SVG_NS, 'g');
-    parent.appendChild(this.element_);
-  }
-
-  this.image2_.draw(this.element_);
-  this.image1_.draw(this.element_);
-
-  EvalObject.prototype.draw.apply(this, arguments);
-};
-
-},{"./evalObject":17,"./evalUtils":23}],17:[function(require,module,exports){
-var evalUtils = require('./evalUtils');
-
-var EvalObject = function () {
+var EvalImage = function (style, color) {
   // x/y location in pixel space of object's center
   this.x_ = 200;
   this.y_ = 200;
@@ -5725,17 +5625,18 @@ var EvalObject = function () {
   this.rotation_ = 0;
   this.scaleX_ = 1.0;
   this.scaleY = 1.0;
-};
-module.exports = EvalObject;
 
-EvalObject.prototype.updatePosition = function (x, y) {
+  this.style_ = style;
+  this.color_ = color;
+};
+module.exports = EvalImage;
+
+EvalImage.prototype.updatePosition = function (x, y) {
   this.x_ = x;
   this.y_ = y;
 };
 
-// todo (brent) arguably some of these things should be on an EvalImage instead of EvalObject
-EvalObject.prototype.draw = function (parentElement) {
-  // todo (brent) - should style/color be init'ed in this ctor, and taken as inputs?
+EvalImage.prototype.draw = function (parentElement) {
   if (this.style_ && this.color_) {
     this.element_.setAttribute('fill', evalUtils.getFill(this.style_, this.color_));
     this.element_.setAttribute('stroke', evalUtils.getStroke(this.style_, this.color_));
@@ -5760,39 +5661,81 @@ EvalObject.prototype.draw = function (parentElement) {
   }
 };
 
-EvalObject.prototype.place = function (x, y) {
+EvalImage.prototype.place = function (x, y) {
   this.x_ = x;
   this.y_ = y;
 };
 
-EvalObject.prototype.rotate = function (degrees) {
+EvalImage.prototype.rotate = function (degrees) {
   this.rotation_ = degrees;
 };
 
-EvalObject.prototype.scale = function (scaleX, scaleY) {
+EvalImage.prototype.scale = function (scaleX, scaleY) {
   this.scaleX_ = scaleX;
   this.scaleY_ = scaleY;
 };
 
-},{"./evalUtils":23}],18:[function(require,module,exports){
-var EvalObject = require('./evalObject');
-var EvalString = require('./evalString');
+},{"./evalUtils":22}],17:[function(require,module,exports){
+var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
-var EvalRect = function (width, height, style, color) {
-  evalUtils.ensureType(style, EvalString);
-  evalUtils.ensureType(color, EvalString);
+var EvalMulti = function (image1, image2) {
+  evalUtils.ensureType(image1, EvalImage);
+  evalUtils.ensureType(image2, EvalImage);
 
-  EvalObject.apply(this);
+  EvalImage.apply(this);
 
-  this.width_ = width;
-  this.height_ = height;
-  this.color_ = color.getValue();
-  this.style_ = style.getValue();
+  this.image1_ = image1;
+  this.image2_ = image2;
+
+  // we want an object centered at 0, 0 that we can then apply transforms to.
+  // to accomplish this, we need to adjust the children's x/y's to be relative
+  // to us
+  var deltaX, deltaY;
+  deltaX = this.image1_.x_ - this.x_;
+  deltaY = this.image1_.y_ - this.y_;
+  this.image1_.updatePosition(deltaX, deltaY);
+  deltaX = this.image2_.x_ - this.x_;
+  deltaY = this.image2_.y_ - this.y_;
+  this.image2_.updatePosition(deltaX, deltaY);
 
   this.element_ = null;
 };
-EvalRect.inherits(EvalObject);
+EvalMulti.inherits(EvalImage);
+module.exports = EvalMulti;
+
+EvalMulti.prototype.draw = function (parent) {
+  if (!this.element_) {
+    var deltaX, deltaY;
+
+    this.element_ = document.createElementNS(Blockly.SVG_NS, 'g');
+    parent.appendChild(this.element_);
+  }
+
+  this.image2_.draw(this.element_);
+  this.image1_.draw(this.element_);
+
+  EvalImage.prototype.draw.apply(this, arguments);
+};
+
+},{"./evalImage":16,"./evalUtils":22}],18:[function(require,module,exports){
+var EvalImage = require('./evalImage');
+var evalUtils = require('./evalUtils');
+
+var EvalRect = function (width, height, style, color) {
+  evalUtils.ensureNumber(width);
+  evalUtils.ensureNumber(height);
+  evalUtils.ensureString(style);
+  evalUtils.ensureString(color);
+
+  EvalImage.apply(this, [style, color]);
+
+  this.width_ = width;
+  this.height_ = height;
+
+  this.element_ = null;
+};
+EvalRect.inherits(EvalImage);
 module.exports = EvalRect;
 
 EvalRect.prototype.draw = function (parent) {
@@ -5807,27 +5750,25 @@ EvalRect.prototype.draw = function (parent) {
   this.element_.setAttribute('width', this.width_);
   this.element_.setAttribute('height', this.height_);
 
-  EvalObject.prototype.draw.apply(this, arguments);
+  EvalImage.prototype.draw.apply(this, arguments);
 };
 
-},{"./evalObject":17,"./evalString":20,"./evalUtils":23}],19:[function(require,module,exports){
-var EvalObject = require('./evalObject');
-var EvalString = require('./evalString');
+},{"./evalImage":16,"./evalUtils":22}],19:[function(require,module,exports){
+var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
 var EvalStar = function (radius, style, color) {
-  evalUtils.ensureType(style, EvalString);
-  evalUtils.ensureType(color, EvalString);
+  evalUtils.ensureNumber(radius);
+  evalUtils.ensureString(style);
+  evalUtils.ensureString(color);
 
-  EvalObject.apply(this);
+  EvalImage.apply(this, [style, color]);
 
   this.radius_ = radius;
-  this.color_ = color.getValue();
-  this.style_ = style.getValue();
 
   this.element_ = null;
 };
-EvalStar.inherits(EvalObject);
+EvalStar.inherits(EvalImage);
 module.exports = EvalStar;
 
 EvalStar.prototype.draw = function (parent) {
@@ -5849,61 +5790,29 @@ EvalStar.prototype.draw = function (parent) {
 
   this.element_.setAttribute('points', points.join(' '));
 
-  EvalObject.prototype.draw.apply(this, arguments);
+  EvalImage.prototype.draw.apply(this, arguments);
 };
 
-},{"./evalObject":17,"./evalString":20,"./evalUtils":23}],20:[function(require,module,exports){
-var EvalObject = require('./evalObject');
-
-var EvalString = function (val) {
-  EvalObject.apply(this);
-
-  this.val_ = val;
-  this.element_ = null;
-};
-EvalString.inherits(EvalObject);
-module.exports = EvalString;
-
-EvalString.prototype.draw = function (parent) {
-  if (!this.element_) {
-    this.element_ = document.createElementNS(Blockly.SVG_NS, 'text');
-    parent.appendChild(this.element_);
-  }
-  this.element_.setAttribute('x', this.x_);
-  this.element_.setAttribute('y', this.y_);
-  this.element_.textContent = this.val_;
-  var bbox = this.element_.getBBox();
-  // have y coordinate refer to top instead of bottom
-  this.element_.setAttribute('y', this.y_ + bbox.height);
-};
-
-// todo - brent - is there a function that can be shared across all EvalObjects?
-EvalString.prototype.getValue = function () {
-  return this.val_;
-};
-
-},{"./evalObject":17}],21:[function(require,module,exports){
-var EvalObject = require('./evalObject');
-var EvalString = require('./evalString');
+},{"./evalImage":16,"./evalUtils":22}],20:[function(require,module,exports){
+var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
-var EvalStringImage = function (text, fontSize, color) {
-  evalUtils.ensureType(text, EvalString);
-  evalUtils.ensureType(color, EvalString);
+var EvalText = function (text, fontSize, color) {
+  evalUtils.ensureString(text);
+  evalUtils.ensureNumber(fontSize);
+  evalUtils.ensureString(color);
 
-  EvalObject.apply(this);
+  EvalImage.apply(this, ['solid', color]);
 
-  this.text_ = text.getValue();
+  this.text_ = text;
   this.fontSize_ = fontSize;
-
-  this.color_ = color.getValue();
 
   this.element_ = null;
 };
-EvalStringImage.inherits(EvalObject);
-module.exports = EvalStringImage;
+EvalText.inherits(EvalImage);
+module.exports = EvalText;
 
-EvalStringImage.prototype.draw = function (parent) {
+EvalText.prototype.draw = function (parent) {
   if (!this.element_) {
     this.element_ = document.createElementNS(Blockly.SVG_NS, 'text');
     parent.appendChild(this.element_);
@@ -5911,27 +5820,30 @@ EvalStringImage.prototype.draw = function (parent) {
   this.element_.textContent = this.text_;
   this.element_.setAttribute('style', 'font-size: ' + this.fontSize_ + 'pt');
 
-  EvalObject.prototype.draw.apply(this, arguments);
+  var bbox = this.element_.getBBox();
+  // center at origin
+  this.element_.setAttribute('x', -bbox.width / 2);
+  this.element_.setAttribute('y', -bbox.height / 2);
+
+  EvalImage.prototype.draw.apply(this, arguments);
 };
 
-},{"./evalObject":17,"./evalString":20,"./evalUtils":23}],22:[function(require,module,exports){
-var EvalObject = require('./evalObject');
-var EvalString = require('./evalString');
+},{"./evalImage":16,"./evalUtils":22}],21:[function(require,module,exports){
+var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
 var EvalTriangle = function (edge, style, color) {
-  evalUtils.ensureType(style, EvalString);
-  evalUtils.ensureType(color, EvalString);
+  evalUtils.ensureNumber(edge);
+  evalUtils.ensureString(style);
+  evalUtils.ensureString(color);
 
-  EvalObject.apply(this);
+  EvalImage.apply(this, [style, color]);
 
   this.edge_ = edge;
-  this.color_ = color.getValue();
-  this.style_ = style.getValue();
 
   this.element_ = null;
 };
-EvalTriangle.inherits(EvalObject);
+EvalTriangle.inherits(EvalImage);
 module.exports = EvalTriangle;
 
 EvalTriangle.prototype.draw = function (parent) {
@@ -5964,25 +5876,38 @@ EvalTriangle.prototype.draw = function (parent) {
     bottomRight.x + ',' + bottomRight.y + ' ' +
     top.x + ',' + top.y);
 
-  EvalObject.prototype.draw.apply(this, arguments);
+  EvalImage.prototype.draw.apply(this, arguments);
 };
 
-},{"./evalObject":17,"./evalString":20,"./evalUtils":23}],23:[function(require,module,exports){
+},{"./evalImage":16,"./evalUtils":22}],22:[function(require,module,exports){
+/**
+ * Throws an expection if val is not of the expected type. Type is either a
+ * string (like "number" or "string") or an object (Like EvalImage).
+ */
+module.exports.ensureString = function (val) {
+  return module.exports.ensureType(val, "string");
+};
+
+module.exports.ensureNumber = function (val) {
+  return module.exports.ensureType(val, "number");
+};
+
 module.exports.ensureType = function (val, type) {
-  if (!(val instanceof type)) {
-    // todo - better strategy than throwing?
+  if (typeof(type) === "string") {
+    if (typeof(val) !== type) {
+      throw new Error("expected type: " + type + "\ngot type: " + typeof(val));
+    }
+  } else if (!(val instanceof type)) {
     throw new Error("unexpected object");
   }
 };
 
 module.exports.getFill = function (style, color) {
-  // todo - 1asdf becomes 1 with parseInt. do we care?
-  // for now, we treat anything we don't recognize as solid.
-  var alpha = parseInt(style, 10);
-  if (style !== "outline") {
-    return color;
+  if (style === 'outline') {
+    return "none";
   }
-  return "none";
+  // for now, we treat anything we don't recognize as solid.
+  return color;
 };
 
 module.exports.getStroke = function (style, color) {
@@ -6015,7 +5940,7 @@ module.exports.cartesianToPixel = function (cartesianY) {
   return 400 - cartesianY;
 };
 
-},{}],24:[function(require,module,exports){
+},{}],23:[function(require,module,exports){
 var msg = require('../../locale/sl_si/eval');
 var blockUtils = require('../block_utils');
 
@@ -6072,7 +5997,7 @@ module.exports = {
   }
 };
 
-},{"../../locale/sl_si/eval":49,"../block_utils":3}],25:[function(require,module,exports){
+},{"../../locale/sl_si/eval":48,"../block_utils":3}],24:[function(require,module,exports){
 var appMain = require('../appMain');
 window.Eval = require('./eval');
 var blocks = require('./blocks');
@@ -6085,7 +6010,7 @@ window.evalMain = function(options) {
   appMain(window.Eval, levels, options);
 };
 
-},{"../appMain":1,"../skins":32,"./blocks":11,"./eval":13,"./levels":24}],26:[function(require,module,exports){
+},{"../appMain":1,"../skins":31,"./blocks":11,"./eval":13,"./levels":23}],25:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -6106,7 +6031,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":50}],27:[function(require,module,exports){
+},{"ejs":49}],26:[function(require,module,exports){
 var trophy = require('./templates/trophy.html');
 var utils = require('./utils');
 var readonly = require('./templates/readonly.html');
@@ -7053,7 +6978,7 @@ var generateXMLForBlocks = function(blocks) {
 };
 
 
-},{"../locale/sl_si/common":48,"./codegen":7,"./constants":8,"./dom":9,"./templates/buttons.html":35,"./templates/code.html":36,"./templates/readonly.html":41,"./templates/shareFailure.html":42,"./templates/sharing.html":43,"./templates/showCode.html":44,"./templates/trophy.html":45,"./utils":46}],28:[function(require,module,exports){
+},{"../locale/sl_si/common":47,"./codegen":7,"./constants":8,"./dom":9,"./templates/buttons.html":34,"./templates/code.html":35,"./templates/readonly.html":40,"./templates/shareFailure.html":41,"./templates/sharing.html":42,"./templates/showCode.html":43,"./templates/trophy.html":44,"./utils":45}],27:[function(require,module,exports){
 var utils = require('./utils');
 var _ = utils.getLodash();
 
@@ -7183,7 +7108,7 @@ module.exports.installStringPicker = function(blockly, generator, options) {
   };
 };
 
-},{"./utils":46}],29:[function(require,module,exports){
+},{"./utils":45}],28:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -10110,7 +10035,7 @@ module.exports.installStringPicker = function(blockly, generator, options) {
 }.call(this));
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],30:[function(require,module,exports){
+},{}],29:[function(require,module,exports){
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
@@ -10348,7 +10273,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"./block_utils":3,"./utils":46,"./xml":47}],31:[function(require,module,exports){
+},{"./block_utils":3,"./utils":45,"./xml":46}],30:[function(require,module,exports){
 /**
  * A set of functional blocks
  */
@@ -10483,7 +10408,7 @@ function installString(blockly, generator) {
 }
 
 
-},{"./functionalBlockUtils":28}],32:[function(require,module,exports){
+},{"./functionalBlockUtils":27}],31:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -10552,7 +10477,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{}],33:[function(require,module,exports){
+},{}],32:[function(require,module,exports){
 /**
  * Blockly Apps: SVG Slider
  *
@@ -10778,7 +10703,7 @@ Slider.bindEvent_ = function(element, name, func) {
 
 module.exports = Slider;
 
-},{"./dom":9}],34:[function(require,module,exports){
+},{"./dom":9}],33:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -10799,7 +10724,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":50}],35:[function(require,module,exports){
+},{"ejs":49}],34:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -10820,7 +10745,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/sl_si/common":48,"ejs":50}],36:[function(require,module,exports){
+},{"../../locale/sl_si/common":47,"ejs":49}],35:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -10841,7 +10766,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":50}],37:[function(require,module,exports){
+},{"ejs":49}],36:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -10862,7 +10787,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/sl_si/common":48,"ejs":50}],38:[function(require,module,exports){
+},{"../../locale/sl_si/common":47,"ejs":49}],37:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -10885,7 +10810,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/sl_si/common":48,"ejs":50}],39:[function(require,module,exports){
+},{"../../locale/sl_si/common":47,"ejs":49}],38:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -10906,7 +10831,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/sl_si/common":48,"ejs":50}],40:[function(require,module,exports){
+},{"../../locale/sl_si/common":47,"ejs":49}],39:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -10931,7 +10856,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/sl_si/common":48,"ejs":50}],41:[function(require,module,exports){
+},{"../../locale/sl_si/common":47,"ejs":49}],40:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -10953,7 +10878,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":50}],42:[function(require,module,exports){
+},{"ejs":49}],41:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -10974,7 +10899,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":50}],43:[function(require,module,exports){
+},{"ejs":49}],42:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -10995,7 +10920,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/sl_si/common":48,"ejs":50}],44:[function(require,module,exports){
+},{"../../locale/sl_si/common":47,"ejs":49}],43:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -11016,7 +10941,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/sl_si/common":48,"ejs":50}],45:[function(require,module,exports){
+},{"../../locale/sl_si/common":47,"ejs":49}],44:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -11037,7 +10962,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":50}],46:[function(require,module,exports){
+},{"ejs":49}],45:[function(require,module,exports){
 var xml = require('./xml');
 var savedAmd;
 
@@ -11357,7 +11282,7 @@ exports.generateDropletModeOptions = function (codeFunctions) {
   return modeOptions;
 };
 
-},{"./lodash":29,"./xml":47}],47:[function(require,module,exports){
+},{"./lodash":28,"./xml":46}],46:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
@@ -11385,7 +11310,7 @@ exports.parseElement = function(text) {
   return element;
 };
 
-},{}],48:[function(require,module,exports){
+},{}],47:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.sl = function (n) {
   if ((n % 100) == 1) {
     return 'one';
@@ -11559,7 +11484,7 @@ exports.hintHeader = function(d){return "Tukaj je namig:"};
 exports.genericFeedback = function(d){return "Poglej kako si končal in poizkusi popraviti svoj program."};
 
 
-},{"messageformat":61}],49:[function(require,module,exports){
+},{"messageformat":60}],48:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.sl = function (n) {
   if ((n % 100) == 1) {
     return 'one';
@@ -11611,7 +11536,7 @@ exports.solid = function(d){return "solid"};
 exports.string = function(d){return "string"};
 
 
-},{"messageformat":61}],50:[function(require,module,exports){
+},{"messageformat":60}],49:[function(require,module,exports){
 
 /*!
  * EJS
@@ -11970,7 +11895,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":51,"./utils":52,"fs":53,"path":54}],51:[function(require,module,exports){
+},{"./filters":50,"./utils":51,"fs":52,"path":53}],50:[function(require,module,exports){
 /*!
  * EJS - Filters
  * Copyright(c) 2010 TJ Holowaychuk <tj@vision-media.ca>
@@ -12173,7 +12098,7 @@ exports.json = function(obj){
   return JSON.stringify(obj);
 };
 
-},{}],52:[function(require,module,exports){
+},{}],51:[function(require,module,exports){
 
 /*!
  * EJS
@@ -12199,9 +12124,9 @@ exports.escape = function(html){
 };
  
 
-},{}],53:[function(require,module,exports){
+},{}],52:[function(require,module,exports){
 
-},{}],54:[function(require,module,exports){
+},{}],53:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -12429,7 +12354,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require("JkpR2F"))
-},{"JkpR2F":55}],55:[function(require,module,exports){
+},{"JkpR2F":54}],54:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -12494,7 +12419,7 @@ process.chdir = function (dir) {
     throw new Error('process.chdir is not supported');
 };
 
-},{}],56:[function(require,module,exports){
+},{}],55:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -13005,7 +12930,7 @@ process.chdir = function (dir) {
 }(this));
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],57:[function(require,module,exports){
+},{}],56:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -13091,7 +13016,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],58:[function(require,module,exports){
+},{}],57:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -13178,13 +13103,13 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],59:[function(require,module,exports){
+},{}],58:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":57,"./encode":58}],60:[function(require,module,exports){
+},{"./decode":56,"./encode":57}],59:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -13893,7 +13818,7 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":56,"querystring":59}],61:[function(require,module,exports){
+},{"punycode":55,"querystring":58}],60:[function(require,module,exports){
 /**
  * messageformat.js
  *
@@ -15476,4 +15401,4 @@ function isNullOrUndefined(arg) {
 
 })( this );
 
-},{}]},{},[25])
+},{}]},{},[24])
