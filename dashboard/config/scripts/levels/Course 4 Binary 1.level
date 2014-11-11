@@ -17,8 +17,7 @@
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
-    "instructions": "Here's a function that takes a binary string of 1's and 0's and instructs the farmer to turn on the go from left to right, top to bottom, turning on the squares where the number has a zero. Run the code provided to see how the farmers uses binary to draw an image.",
-    "maze_data": null
+    "instructions": "Here's a function that takes a binary string of 1's and 0's and instructs the farmer to turn on the go from left to right, top to bottom, turning on the squares where the number has a zero. Run the code provided to see how the farmers uses binary to draw an image."
   }
 }]]></config>
   <blocks>

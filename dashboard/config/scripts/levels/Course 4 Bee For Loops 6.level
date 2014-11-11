@@ -18,8 +18,7 @@
     "flower_type": "redWithNectar",
     "nectar_goal": "15",
     "ideal": "9",
-    "instructions": "You can also use a for loop to count down. Try gathering this nectar by counting down from 5 to 1 by 1.",
-    "maze_data": null
+    "instructions": "You can also use a for loop to count down. Try gathering this nectar by counting down from 5 to 1 by 1."
   }
 }]]></config>
   <blocks>

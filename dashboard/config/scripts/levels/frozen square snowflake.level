@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "anna",
-    "instructions": "Once you know how to make a simple shape like a square, you can use it to create beautiful snow flakes. Can you create a snowflake using the repeat block to create a square 10 times, turning 36 degrees between each square?",
+    "instructions": "Can you create a snowflake using the Repeat block to create a square 10 times, and Turn block turning 36 degrees between each square?",
     "x": "200",
     "y": "200",
     "start_direction": "180",
@@ -16,7 +16,8 @@
     "disable_variable_editing": "false",
     "free_play": "false",
     "slider_speed": "0.8",
-    "impressive": "true"
+    "impressive": "true",
+    "use_modal_function_editor": "false"
   }
 }]]></config>
   <blocks>

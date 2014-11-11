@@ -6,7 +6,6 @@
   "user_id": 16,
   "properties": {
     "skin": "studio",
-    "maze_data": null,
     "success_condition": "function () {\n  // Sample conditions:\n  // return Studio.sprite[0].isCollidingWith(1);\n  // return Studio.sayComplete > 0;\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\n  // return Studio.tickCount > 50;\n}",
     "failure_condition": "function () {\n}",
     "maze": "[[16,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]"

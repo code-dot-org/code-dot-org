@@ -18,8 +18,7 @@
     "flower_type": "redWithNectar",
     "nectar_goal": "15",
     "ideal": "9",
-    "instructions": "Ah, the for loop could make this much easier! You can use the variable \"i\" to loop the \"get nectar\" block the same number of times as the loop has been run!",
-    "maze_data": null
+    "instructions": "Ah, the for loop could make this much easier! You can use the variable \"i\" to loop the \"get nectar\" block the same number of times as the loop has been run!"
   }
 }]]></config>
   <blocks>
