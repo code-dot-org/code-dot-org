@@ -18,8 +18,7 @@
     "step_mode": "0",
     "flower_type": "redWithNectar",
     "nectar_goal": "5",
-    "ideal": "4",
-    "maze_data": null
+    "ideal": "4"
   }
 }]]></config>
   <blocks>

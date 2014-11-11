@@ -18,8 +18,7 @@
     "nectar_goal": "9",
     "flower_type": "redWithNectar",
     "ideal": "32",
-    "instructions": "Now there are flowers on both sides! Maybe you can use a parameter so that the same function works for flowers on either side. I've added a parameter called \"direction\" to the function. If the \"direction\" parameter equals 0 I should turn left, if it's 1 I should turn right.",
-    "maze_data": null
+    "instructions": "Now there are flowers on both sides! Maybe you can use a parameter so that the same function works for flowers on either side. I've added a parameter called \"direction\" to the function. If the \"direction\" parameter equals 0 I should turn left, if it's 1 I should turn right."
   }
 }]]></config>
   <blocks>

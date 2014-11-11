@@ -17,7 +17,6 @@
     "step_mode": "0",
     "flower_type": "redWithNectar",
     "nectar_goal": "16",
-    "maze_data": null,
     "instructions": "The last number in your for loop is called the \"increment,\"  and each time the loop is run the counter variable goes up by the increment. Try collecting these flowers using an increment of 2."
   }
 }]]></config>

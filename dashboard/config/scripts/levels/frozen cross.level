@@ -15,8 +15,9 @@
     "disable_variable_editing": "false",
     "free_play": "false",
     "slider_speed": "0.2",
-    "instructions": "We used perpendicular lines to create a square. Now let's use them to create a cross. Remember the angle between two lines is 90 degrees.",
-    "impressive": "false"
+    "instructions": "Use the Repeat block to create a cross. Did you notice Elsa can move forward and backwards?\r\n",
+    "impressive": "false",
+    "use_modal_function_editor": "false"
   }
 }]]></config>
   <blocks>
