@@ -5,12 +5,13 @@ nav: events_nav
 ---
 -SOLR = Solr::Server.new(host:CDO.solr_server)
 
+-by_company = {}
 -by_country = {}
 -by_state = {}
 
 -events = SOLR.query(q:"*:*", fq:["kind_s:HocSignup2014", "location_country_s:[* TO *]", "organization_name_s:[* TO *]", "hoc_company_s:[* TO *]"], sort:'location_country_s asc, location_state_s asc', rows:1000)
 -events.each do |event|
-  -company = hoc_s("company_" + event['hoc_company_s'].to_s)
+  -company = event['hoc_company_s'].to_s
   -by_company[company] = [] unless by_company.has_key?(company)
   -by_company[company] << event
 
@@ -41,4 +42,4 @@ nav: events_nav
 %ul
   -by_company.each_pair do |company, events|
     %li{class: "hoc-event-country"}
-      %a{href: "#"}= events.count > 1 ? "#{country} (#{events.count} #{hoc_s(:events)})" : "#{country} (#{events.count} #{hoc_s(:event)})"
+      %a{href: "#"}= events.count > 1 ? "#{company} (#{events.count} #{hoc_s(:events)})" : "#{company} (#{events.count} #{hoc_s(:event)})"

@@ -5,41 +5,13 @@ nav: pd3_nav
 
 <h1 style="margin-bottom:0px">Educator Overview</h1>
 
-[col-50]
-
-<h2 style="margin-top:35px">I begin in 2014-2015!</h2>
-
+<br/> 
 <br/>
 
-[/col-50]
-
-[col-50]
-
-<h2 style="margin-top:35px">I begin in 2015-2016!</h2>
+<img src="/images/k5pd.jpg" width="80%"/>
 
 <br/>
-
-[/col-50]
-
-
-<div style="clear:both"/>
-
-[col-50]
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[<button>Cohort 1</button>](http://code.org/educate/pd1)
-
-[/col-50]
-
-[col-50]
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[<button>Cohort 2</button>](http://code.org/educate/pd2)
-
-[/col-50]
-
-
-<img src="/images/k5pd.jpg" width="100%"/>
+<br/>
 
 <table style="width:100%">
   <tr>
