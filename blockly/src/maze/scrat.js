@@ -1,23 +1,26 @@
+var SquareType = require('./tiles').SquareType;
+var utils = require('../utils');
+var _ = utils.getLodash();
 
- var TILE_SHAPES = {
-   'log':             [0, 0],
-   'lily1':           [1, 0],
-   'land1':           [2, 0],
-   'island_start':    [0, 1],
-   'island_topRight': [1, 1],
-   'island_botLeft':  [0, 2],
-   'island_botRight': [1, 2],
-   'water': [4, 0],
+var TILE_SHAPES = {
+  'log':             [0, 0],
+  'lily1':           [1, 0],
+  'land1':           [2, 0],
+  'island_start':    [0, 1],
+  'island_topRight': [1, 1],
+  'island_botLeft':  [0, 2],
+  'island_botRight': [1, 2],
+  'water': [4, 0],
 
-   'lily2': [2, 1],
-   'lily3': [3, 1],
-   'lily4': [2, 2],
-   'lily5': [3, 2],
+  'lily2': [2, 1],
+  'lily3': [3, 1],
+  'lily4': [2, 2],
+  'lily5': [3, 2],
 
-   'ice': [3, 0],
+  'ice': [3, 0],
 
-   'empty': [4, 0]
- };
+  'empty': [4, 0]
+};
 
 // Returns true if the tile at x,y is either a wall or out of bounds
 function isWallOrOutOfBounds (x, y) {
