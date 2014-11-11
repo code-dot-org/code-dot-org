@@ -14,7 +14,7 @@ nav: resources_nav
 </h2>
 
 <p>
-  <a href="/resources/hoc-one-pager.pdf"><img src="/images/fit-250/one-pager.png" alt="image" /></a>
+  <a href="/files/hoc-one-pager-pt.pdf"><img src="/images/fit-250/one-pager.png" alt="image" /></a>
 </p>
 
 <h2>

@@ -24,13 +24,13 @@ Fortell vennene dine om #Kodetimen.
 
 ## 2. Spør hele skolen din om å tilby en Kodetime
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](<%= hoc_uri('/files/schools-handout.pdf') %>). Når skolen din har meldt seg på, [bli med i konkurransen om $10,000 i datautstyr til din skole](/prizes) og utfordre andre skoler i ditt område til å bli med.
+[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](http://hourofcode.com/files/schools-handout.pdf). Når skolen din har meldt seg på, [bli med i konkurransen om $10,000 i datautstyr til din skole](/prizes) og utfordre andre skoler i ditt område til å bli med.
 
 <% else %>
 
 ## 2. Spør hele skolen din om å tilby en Kodetime
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or give [this handout](<%= hoc_uri('/files/schools-handout.pdf') %>) to your principal.
+[Send this email](<%= hoc_uri('/resources#email') %>) or give [this handout](http://hourofcode.com/files/schools-handout.pdf) to your principal.
 
 <% end %>
 
@@ -40,7 +40,7 @@ Fortell vennene dine om #Kodetimen.
 
 ## 4. Be arbeidsgiveren din engasjere seg
 
-[Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](<%= hoc_uri('/resources/hoc-one-pager.pdf') %>).
+[Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](http://hourofcode.com/resources/hoc-one-pager.pdf).
 
 ## 5. Snakk om Kodetimen i ditt lokalmiljø
 
@@ -48,6 +48,6 @@ Rekrutter en lokal klubb, ett idrettslag, universitet eller fagforening. Eller a
 
 ## 6. Spør en lokalpolitiker om å støtte Kodetimen
 
-[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board. Or [give them this handout](<%= hoc_uri('/resources/hoc-one-pager.pdf') %>) and invite them to visit your school.
+[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board. Or [give them this handout](http://hourofcode.com/resources/hoc-one-pager.pdf) and invite them to visit your school.
 
 <%= view 'popup_window.js' %>
