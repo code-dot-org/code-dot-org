@@ -73,7 +73,7 @@ var LOCALES = (LOCALIZE ? [
   'zh_tw'
 ] : [
   'en_us',
-  'en_ploc'
+//  'en_ploc'
 ]);
 
 // if specified will, will build en_us, en_ploc, and specified locale
@@ -88,6 +88,7 @@ config.clean = {
 var ace_suffix = DEV ? '' : '-min';
 var droplet_suffix = DEV ? '' : '.min';
 var requirejs_dir = DEV ? 'full' : 'min';
+
 
 config.copy = {
   src: {
@@ -190,6 +191,7 @@ APPS.filter(function (app) { return app != 'none'; }).forEach(function(app) {
   config.sass.all.files[dest] = src;
 });
 
+// 'Pseudolocalize Messages' (/tasks/pseudoloc.js)
 config.pseudoloc = {
   all: {
     srcBase: 'i18n',
@@ -199,6 +201,7 @@ config.pseudoloc = {
   }
 };
 
+// 'Compile messages' (/tasks/messages.js)
 config.messages = {
   all: {
     locales: LOCALES,
@@ -207,6 +210,9 @@ config.messages = {
   }
 };
 
+// Create a symlink at /build/locale/current pointing to /build/locale/en_us so Blockly require() commands resolve correctly in dev mode.
+// e.g. var commonMsg = require('../../locale/current/common');
+// See also the Browserify transform localify() that translates this require path for compiled+minified apps.
 config.symlink = {
   locale: {
     src: 'build/locale/en_us',
@@ -214,6 +220,7 @@ config.symlink = {
   }
 };
 
+// 'compile ejs templates' (/tasks/ejs.js)
 config.ejs = {
   all: {
     srcBase: 'src',
@@ -221,6 +228,31 @@ config.ejs = {
   }
 };
 
+// These dependencies are externalized to a 'base' browserify bundle shared across all Blockly apps.
+var externalRequires = [
+  './build/js/base:../base',
+  './build/js/skins:../skins',
+  './build/locale/current/common:../../locale/current/common',
+  './build/js/codegen:../codegen',
+  './build/js/templates/page.html:../templates/page.html',
+  './build/js/feedback.js:../feedback.js',
+  './build/js/dom:../dom',
+  './build/js/utils:../utils',
+  './build/js/appMain:../appMain',
+  './build/js/hammer:../hammer',
+  './build/js/xml:../xml',
+  './build/js/canvg/canvg.js:../canvg/canvg.js',
+  './build/js/canvg/StackBlur.js:../canvg/StackBlur.js',
+  './build/js/canvg/rgbcolor.js:../canvg/rgbcolor.js',
+  './build/js/canvg/svg_todataurl:../canvg/svg_todataurl',
+  './build/js/required_block_utils:../required_block_utils',
+  './build/js/block_utils:../block_utils',
+  './build/js/constants.js:../constants.js',
+  './build/js/level_base:../level_base',
+  './build/js/timeoutList:../timeoutList'
+];
+
+// Browserify is a tool for taking your CommonJS-style Javascript code and packaging it for use in the browser.
 config.browserify = {};
 APPS.forEach(function(app) {
   LOCALES.forEach(function(locale) {
@@ -231,10 +263,30 @@ APPS.forEach(function(app) {
     config.browserify[app + '_' + locale] = {
       files: files,
       options: {
+        external: externalRequires,
+        // Specifies a pipeline of functions (or modules) through which the browserified bundle will be run.
         transform: [localify(locale)]
       }
     };
   });
+});
+
+LOCALES.forEach(function(locale) {
+  var src = 'build/js/base.js';
+  var dest = 'build/browserified/' + locale + '/base.js';
+  var files = {};
+  files[dest] = [src];
+  config.browserify['base_' + locale] = {
+    files: files,
+    options: {
+      alias: externalRequires,
+      require: ['base', 'skins', '../locale/current/common', 'codegen', 'templates/page.html',
+        'feedback.js', 'dom', 'utils', 'appMain',
+        'hammer', 'xml', 'canvg/canvg.js', 'canvg/StackBlur.js', 'canvg/rgbcolor.js', 'canvg/svg_todataurl',
+        'required_block_utils', 'block_utils', 'constants.js', 'level_base', 'timeoutList'],
+      transform: [localify(locale)]
+    }
+  }
 });
 
 config.concat = {};
@@ -273,6 +325,10 @@ APPS.forEach(function(app) {
   });
 });
 config.uglify = {
+  options: {
+    mangle: !DEV,
+    compress: !DEV
+  },
   browserified: {
     files: uglifiedFiles
   }
@@ -360,23 +416,54 @@ module.exports = function(grunt) {
 
   grunt.initConfig(config);
 
+  // `watch`: Run tasks whenever watched files change.
+  // https://github.com/gruntjs/grunt-contrib-watch
   grunt.loadNpmTasks('grunt-contrib-watch');
+  // `clean`: Clear files and folders.
+  // https://github.com/gruntjs/grunt-contrib-clean
   grunt.loadNpmTasks('grunt-contrib-clean');
+  // `copy`: Copy files and folders.
+  // https://github.com/gruntjs/grunt-contrib-copy
   grunt.loadNpmTasks('grunt-contrib-copy');
+  // `symlink`: Create symbolic links.
+  // https://github.com/gruntjs/grunt-contrib-symlink
   grunt.loadNpmTasks('grunt-contrib-symlink');
+  // `concat`: Concatenate files.
+  // https://github.com/gruntjs/grunt-contrib-concat
   grunt.loadNpmTasks('grunt-contrib-concat');
+  // `jshint`: Validate files with JSHint.
+  // https://github.com/gruntjs/grunt-contrib-jshint
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  // `uglify`: Minify files with UglifyJS.
+  // https://github.com/gruntjs/grunt-contrib-uglify
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  // `lodash`: A Grunt wrapper around the Lo-Dash command-line interface, lodash-cli.
+  // https://github.com/lodash/grunt-lodash
   grunt.loadNpmTasks('grunt-lodash');
+  // `express`: Start an Express.js web server using grunt.js.
+  // https://github.com/blai/grunt-express
   grunt.loadNpmTasks('grunt-express');
+  // `browserify`: Grunt task for node-browserify.
+  // https://github.com/jmreidy/grunt-browserify
   grunt.loadNpmTasks('grunt-browserify');
+  // `sass`: Compile Sass to CSS.
+  // https://github.com/gruntjs/grunt-contrib-sass
   grunt.loadNpmTasks('grunt-sass');
+  // `mochaTest`: A grunt task for running server side mocha tests.
+  // https://github.com/pghalliday/grunt-mocha-test
   grunt.loadNpmTasks('grunt-mocha-test');
+  // `strip_code`: A GruntJS task to remove dev and test only code blocks from production builds.
+  // https://github.com/nuzzio/grunt-strip-code
   grunt.loadNpmTasks('grunt-strip-code');
+  // Automatic Notifications when Grunt tasks fail.
+  // https://github.com/dylang/grunt-notify
   grunt.loadNpmTasks('grunt-notify');
 
+  // Custom tasks from /tasks directory
   grunt.loadTasks('tasks');
 
+  // `grunt build` runs the following tasks in order specified.
+  // http://gruntjs.com/api/grunt.task#grunt.task.registertask
   grunt.registerTask('build', [
     'pseudoloc',
     'messages',

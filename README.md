@@ -61,13 +61,13 @@ Our code is segmented into four parts:
 
 * Blockly Core is the visual programming language platform used for the interactive tutorials.
 * Blockly includes apps—blockly puzzles built based on Blockly Core.
-  * [Hour of Code](http://studio.code.org/hoc/1)
+    * [Hour of Code](http://studio.code.org/hoc/1)
 * Dashboard, is the tutorial platform which organizes blockly levels into tutorials.
-  * [Code Studio](http://studio.code.org)
+    * [Code Studio](http://studio.code.org)
 * Pegasus is the main site which also includes the teacher dashboard (support for teachers to track student progress).
-  * [code.org](http://code.org)
-  * [csedweek.org](http://csedweek.org)
-  * [Teacher Dashboard](http://code.org/teacher-dashboard)
+    * [code.org](http://code.org)
+    * [csedweek.org](http://csedweek.org)
+    * [Teacher Dashboard](http://code.org/teacher-dashboard)
 
 ## Running Dashboard
 1. `cd code-dot-org/dashboard`

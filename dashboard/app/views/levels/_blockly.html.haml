@@ -21,6 +21,7 @@
     %script{src: "#{blockly_path}js/ace/ext-language_tools.js"}
     %script{src: "#{blockly_path}js/droplet/droplet-full.min.js"}
     %link{href: "#{blockly_path}css/droplet/droplet.min.css", rel: 'stylesheet', type: 'text/css'}
+  %script{src: "#{blockly_path}js/#{js_locale}/base.js"}
   %script{src: "#{blockly_path}js/#{js_locale}/#{app}#{pretty ? '' : '.min'}.js"}
 
   -# Create level options object to pass to Blockly
