@@ -62,7 +62,8 @@ Blockly.BlockSpaceEditor.prototype.populateSVGEffects_ = function(container) {
   var svg = Blockly.createSvgElement('svg', {
     id: 'blocklyFilters',
     width: 0,
-    height: 0
+    height: 0,
+    style: 'display: block'
   }, container);
   /*
    <defs>
