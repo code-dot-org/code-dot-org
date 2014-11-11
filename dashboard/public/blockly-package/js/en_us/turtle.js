@@ -10503,7 +10503,7 @@ Turtle.drawTurtle = function() {
       sourceY * retina + sourceHeight * retina > Turtle.avatarImage.height)
   {
     if (console.log) {
-      console.log("drawImage out of source bounds!");
+      console.log("drawImage is out of source bounds!");
     }
     return;
   }
