@@ -413,7 +413,7 @@ Turtle.drawTurtle = function() {
   var destX = Turtle.x - destWidth / 2;
   var destY = Turtle.y - destHeight + 7;
 
-  if (Turtle.avatarImage.width == 0 || Turtle.avatarImage.height == 0)
+  if (Turtle.avatarImage.width === 0 || Turtle.avatarImage.height === 0)
     return;
 
   if (sourceX * retina < 0 || 
