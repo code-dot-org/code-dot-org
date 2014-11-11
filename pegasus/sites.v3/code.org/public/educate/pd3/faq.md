@@ -6,6 +6,7 @@ nav: pd_nav
 
 # Professional Development FAQs
 
+- [Which cohort am I in?](#cohort)
 - [What should I do if I have phase 1 registration issues?](#pd1)
 - [What should I do if I log-in issues with the online PD?](#login)
 - [What if I miss a live Hangout?](#hangout)
@@ -18,6 +19,11 @@ nav: pd_nav
 
 
 ----------
+
+<a id="cohort"></a>
+## Which cohort am I in? 
+
+You are in Cohort 1 if you started teaching a Code.org program in the 2014-2015 school year and Cohort 2 if you plan in teaching in the 2015-2016 school year.
 
 <a id="pd1"></a>
 ## What should I do if I have phase 1 registration issues?

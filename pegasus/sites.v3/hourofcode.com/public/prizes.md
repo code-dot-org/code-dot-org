@@ -8,6 +8,14 @@ layout: wide
         <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Sign up for a chance to win</button></a>
     </div>
 </div>
+
+<% if @country ==  'us' || @country == 'ca' %>
+
+## One classroom will win a trip to Washington, D.C. for a historic, top-secret Hour of Code!
+Code.org will select one lucky classroom to attend a very special Hour of Code event in the nation’s capital — so special that all the details are under wraps! Winning students (with chaperones) will enjoy an all-expenses-covered trip to Washington, D.C. Students will participate in a full day of top-secret activities on Monday, December 8. 
+
+<% end %>
+
 ## Every organizer wins a thank you gift-code
 Every educator who hosts an Hour of Code for students will receive 10 GB of Dropbox space or $10 Skype credit as a thank you gift!
 
@@ -20,7 +28,7 @@ Every educator who hosts an Hour of Code for students will receive 10 GB of Drop
 
 <% if @country ==  'us' || @country == 'ca' %>
 
-## 100 lucky classrooms win a video chat with a guest speaker!
+## 100 classrooms win a video chat with a guest speaker!
 
 100 lucky classrooms will be invited to participate in live video Q&As with tech titans and tech-loving celebrities. Students will be able to ask questions and chat with these exciting role models to kick off your Hour of Code. 
 
@@ -33,7 +41,7 @@ Any classroom (public or private) within the U.S. or Canada is eligible to win t
 
 <% if @country == 'us' %>
 
-## 51 Lucky schools win a class-set of laptops (or $10,000 for other technology)
+## 51 schools win a class-set of laptops (or $10,000 for other technology)
 One lucky school in ***every*** U.S. state (+ Washington D.C.) will win $10,000 worth of technology. Organize the Hour of Code for every student in your school to qualify. Fill out the form below to apply.
 
 ## Hardware Prize application form:

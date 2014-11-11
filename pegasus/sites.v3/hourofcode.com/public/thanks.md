@@ -46,12 +46,12 @@ Tell your friends about the #HourOfCode.
 <% if @country == 'us' %>
 
 ## 2. Ask your whole school to offer an Hour of Code
-<a href="<%= hoc_uri('/resources#email') %>">Send this email</a> or <a href="<%= hoc_uri('/files/schools-handout.pdf') %>">this handout</a>. Once your school is on board, [enter to win $10,000 worth of technology for your school](/prizes) and challenge other schools in your area to get on board.  
+<a href="<%= hoc_uri('/resources#email') %>">Send this email</a> or <a href="/resources/hoc-one-pager.pdf">this handout</a>. Once your school is on board, [enter to win $10,000 worth of technology for your school](/prizes) and challenge other schools in your area to get on board.  
 
 <% else %>
 
 ## 2. Ask your whole school to offer an Hour of Code
-<a href="<%= hoc_uri('/resources#email') %>">Send this email</a> or give <a href="<%= hoc_uri('/files/schools-handout.pdf') %>">this handout</a> to your principal. 
+<a href="<%= hoc_uri('/resources#email') %>">Send this email</a> or give <a href="/resources/hoc-one-pager.pdf">this handout</a> this handout</a> to your principal. 
 
 <% end %>
 
