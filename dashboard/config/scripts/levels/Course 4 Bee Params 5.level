@@ -11,14 +11,17 @@
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "is_k1": "false",
     "skip_instructions_popup": "true",
-    "disable_param_editing": "true",
+    "disable_param_editing": "false",
     "disable_variable_editing": "true",
     "start_direction": "1",
     "step_mode": "0",
     "nectar_goal": "20",
     "flower_type": "redWithNectar",
     "ideal": "32",
-    "instructions": "Let's start from scratch - can you create a new function called \"get 5 nectar\" with a direction parameter?"
+    "instructions": "Let's start from scratch - can you create a new function called \"get 5 nectar\" with a direction parameter?",
+    "use_modal_function_editor": "true",
+    "use_contract_editor": "false",
+    "maze_data": null
   }
 }]]></config>
   <blocks>

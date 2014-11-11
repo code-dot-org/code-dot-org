@@ -24,13 +24,13 @@ Informa als teus amics sobre #HoraDeCodi.
 
 ## 2. Demana a tothom de la teva escola que ofereixin una Hora de Codi
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](<%= hoc_uri('/files/schools-handout.pdf') %>). Un cop la vostra escola sigui a bord, [entra per guanyar 10,000 dòlars de valor en tecnologia per a la teva escola](/prizes) i intenta que altres escoles de la teva àrea puguin a bord.
+[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](http://hourofcode.com/files/schools-handout.pdf). Un cop la vostra escola sigui a bord, [entra per guanyar 10,000 dòlars de valor en tecnologia per a la teva escola](/prizes) i intenta que altres escoles de la teva àrea puguin a bord.
 
 <% else %>
 
 ## 2. Demana a tothom de la teva escola que ofereixin una Hora de Codi
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or give [this handout](<%= hoc_uri('/files/schools-handout.pdf') %>) to your principal.
+[Send this email](<%= hoc_uri('/resources#email') %>) or give [this handout](http://hourofcode.com/files/schools-handout.pdf) to your principal.
 
 <% end %>
 
@@ -40,7 +40,7 @@ Informa als teus amics sobre #HoraDeCodi.
 
 ## 4. Demana a la teva empresa que s'impliqui
 
-[Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](<%= hoc_uri('/resources/hoc-one-pager.pdf') %>).
+[Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](http://hourofcode.com/resources/hoc-one-pager.pdf).
 
 ## 5. Promou l'Hora de Codi a la teva comunitat
 
@@ -48,6 +48,6 @@ Recluta un grup local — escoltes, església, universitat, grup de veterans o s
 
 ## 6. Demana a un funcionari electe local que doni suport a l'Hora de Codi
 
-[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board. Or [give them this handout](<%= hoc_uri('/resources/hoc-one-pager.pdf') %>) and invite them to visit your school.
+[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board. Or [give them this handout](http://hourofcode.com/resources/hoc-one-pager.pdf) and invite them to visit your school.
 
 <%= view 'popup_window.js' %>
