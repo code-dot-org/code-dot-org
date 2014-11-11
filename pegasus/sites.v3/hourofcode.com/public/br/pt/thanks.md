@@ -40,7 +40,7 @@ Fale aos seus amigos sobre o #HoraDoCódigo.
 
 ## 4. Peça para seu empregador participar
 
-[Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](<%= hoc_uri('/resources/hoc-one-pager.pdf') %>).
+[Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](<%= hoc_uri('/files/hoc-one-pager-pt.pdf') %>).
 
 ## 5. Promova a Hora do Código em sua comunidade
 
@@ -48,6 +48,6 @@ Reúna um grupo local — clube de escoteiros, igreja, universidade, grupo de ve
 
 ## 6. Peça a um representante político para apoiar a Hora do Código
 
-[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board. Or [give them this handout](<%= hoc_uri('/resources/hoc-one-pager.pdf') %>) and invite them to visit your school.
+[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board. Or [give them this handout](<%= hoc_uri('/files/hoc-one-pager-pt.pdf') %>) and invite them to visit your school.
 
 <%= view 'popup_window.js' %>
