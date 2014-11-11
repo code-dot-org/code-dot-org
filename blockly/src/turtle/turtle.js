@@ -362,8 +362,8 @@ Turtle.loadTurtle = function() {
     Turtle.numberAvatarHeadings = 18;
   else
     Turtle.numberAvatarHeadings = 180;
-  Turtle.avatarImage.height = Turtle.AVATAR_HEIGHT;
-  Turtle.avatarImage.width = Turtle.AVATAR_WIDTH;
+  Turtle.avatarImage.spriteHeight = Turtle.AVATAR_HEIGHT;
+  Turtle.avatarImage.spriteWidth = Turtle.AVATAR_WIDTH;
 };
 
 /**
@@ -399,29 +399,50 @@ Turtle.drawTurtle = function() {
     // and they are 180 degrees out of phase.
     index = (index + Turtle.numberAvatarHeadings/2) % Turtle.numberAvatarHeadings;
   }
-  var sourceX = Turtle.avatarImage.width * index;
+  var sourceX = Turtle.avatarImage.spriteWidth * index;
   if (skin.id == "anna" || skin.id == "elsa") {
-    sourceY = Turtle.avatarImage.height * turtleFrame;
+    sourceY = Turtle.avatarImage.spriteHeight * turtleFrame;
     turtleFrame = (turtleFrame + 1) % turtleNumFrames;
   } else {
     sourceY = 0;
   }
-  var sourceWidth = Turtle.avatarImage.width;
-  var sourceHeight = Turtle.avatarImage.height;
-  var destWidth = Turtle.avatarImage.width;
-  var destHeight = Turtle.avatarImage.height;
+  var sourceWidth = Turtle.avatarImage.spriteWidth;
+  var sourceHeight = Turtle.avatarImage.spriteHeight;
+  var destWidth = Turtle.avatarImage.spriteWidth;
+  var destHeight = Turtle.avatarImage.spriteHeight;
   var destX = Turtle.x - destWidth / 2;
   var destY = Turtle.y - destHeight + 7;
 
-  Turtle.ctxDisplay.drawImage(Turtle.avatarImage, Math.round(sourceX * retina), Math.round(sourceY * retina),
+  if (Turtle.avatarImage.width == 0 || Turtle.avatarImage.height == 0)
+    return;
+
+  if (sourceX * retina < 0 || 
+      sourceY * retina < 0 ||
+      sourceX * retina + sourceWidth  * retina -0 > Turtle.avatarImage.width ||
+      sourceY * retina + sourceHeight * retina > Turtle.avatarImage.height)
+  {
+    if (console.log)
+      console.log("drawImage out of source bounds!");
+    return;
+  }
+
+  Turtle.ctxDisplay.drawImage(
+    Turtle.avatarImage, 
+    Math.round(sourceX * retina), Math.round(sourceY * retina),
+    sourceWidth * retina - 0, sourceHeight * retina, 
+    Math.round(destX * retina), Math.round(destY * retina),
+    destWidth * retina - 0, destHeight * retina);
+
+  /* console.log(Math.round(sourceX * retina), Math.round(sourceY * retina),
                               sourceWidth * retina, sourceHeight * retina, Math.round(destX * retina), Math.round(destY * retina),
-                              destWidth * retina, destHeight * retina);
+                              destWidth * retina, destHeight * retina); */
 };
 
 var turtleNumFrames = 19;
 var turtleFrame = 0;
 
 Turtle.drawDecorationAnimation = function() {
+  return;
   if (skin.id == "elsa") {
     var index = (turtleFrame + 10) % turtleNumFrames;
     var sourceX = Turtle.decorationAnimationImage.width * index;
@@ -1022,7 +1043,7 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
   var img;
   var startX;
   var startY;
-
+return;
   if (skin.id == "anna" || skin.id == "elsa") {
     Turtle.ctxPattern.moveTo(Turtle.stepStartX * retina, Turtle.stepStartY * retina);
     img = Turtle.patternForPaths;
