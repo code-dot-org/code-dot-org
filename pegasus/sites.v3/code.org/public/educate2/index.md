@@ -19,11 +19,11 @@ Join the largest learning event in history
 
 [Middle School Math](http://code.org/curriculum/msm/)
 <br/>
-A middle school math course that uses computer science as a tool 
+Learn how computer programmers use algebra and geometry to develop video games 
 
 [Middle School Science](http://code.org/curriculum/mss/)
 <br/>
-A middle school science course that uses computer science as a tool 
+Explore and develop complex scientific models through agent-based programming 
 
 [Exploring Computer Science](http://www.exploringcs.org)
 <br/>

@@ -1,6 +1,6 @@
 -current_url = request.path_info
 %ul
-  -{ hoc_s(:events_nav_all)=>hoc_uri('/events2'), hoc_s(:events_nav_whole_schools)=>hoc_uri('/events2/schools'), hoc_s(:events_nav_special)=>hoc_uri('/events2/special'), }.each_pair do |label,url|
+  -{ hoc_s(:events_nav_all)=>hoc_uri('/events2'), hoc_s(:events_nav_whole_schools)=>hoc_uri('/events2/schools'), hoc_s(:events_nav_special)=>hoc_uri('/events2/special'), hoc_s(:events_nav_orgs)=>hoc_uri('/events2/organizations'), }.each_pair do |label,url|
     - if current_url == url
       %li
         %span{style: "font-weight: bold; color: #ff8a00;"}= label

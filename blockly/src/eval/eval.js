@@ -34,7 +34,6 @@ var feedback = require('../feedback.js');
 var dom = require('../dom');
 var blockUtils = require('../block_utils');
 
-var EvalString = require('./evalString');
 // requiring this loads canvg into the global namespace
 require('../canvg/canvg.js');
 var canvg = window.canvg || global.canvg;
@@ -174,9 +173,9 @@ function evalCode (code) {
 }
 
 /**
- * Generates a drawable evalObject from the blocks in the workspace. If blockXml
+ * Generates a drawable evalImage from the blocks in the workspace. If blockXml
  * is provided, temporarily sticks those blocks into the workspace to generate
- * the evalObject, then deletes blocks.
+ * the evalImage, then deletes blocks.
  */
 function getDrawableFromBlocks(blockXml) {
   if (blockXml) {
