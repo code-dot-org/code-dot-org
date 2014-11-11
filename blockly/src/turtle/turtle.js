@@ -442,7 +442,6 @@ var turtleNumFrames = 19;
 var turtleFrame = 0;
 
 Turtle.drawDecorationAnimation = function() {
-  return;
   if (skin.id == "elsa") {
     var index = (turtleFrame + 10) % turtleNumFrames;
     var sourceX = Turtle.decorationAnimationImage.width * index;
@@ -1044,7 +1043,7 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
   var img;
   var startX;
   var startY;
-return;
+
   if (skin.id == "anna" || skin.id == "elsa") {
     Turtle.ctxPattern.moveTo(Turtle.stepStartX * retina, Turtle.stepStartY * retina);
     img = Turtle.patternForPaths;
