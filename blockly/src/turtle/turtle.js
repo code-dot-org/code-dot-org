@@ -108,6 +108,10 @@ Turtle.init = function(config) {
   {
     retina = backingScale();
 
+    // We don't support ratios other than 2 right now (sorry!) so fall back to 1.
+    if (retina != 2)
+      retina = 1;
+
     if (skin.id == "elsa")
     {
       turtleNumFrames = 20;
