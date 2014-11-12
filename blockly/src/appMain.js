@@ -52,6 +52,7 @@ module.exports = function(app, levels, options) {
   // currently mutually exclusive.
   BlocklyApps.editCode = options.level && options.level.editCode;
   BlocklyApps.usingBlockly = !BlocklyApps.editCode;
+  BlocklyApps.cdoSounds = options.cdoSounds;
 
   BlocklyApps.assetUrl = function(path) {
     var url = options.baseUrl + path;
