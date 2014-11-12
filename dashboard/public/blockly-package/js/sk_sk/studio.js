@@ -694,13 +694,18 @@ BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 200;
 
 /**
  * Spreading out the top blocks in workspace if it is not already set.
+ * @param {string} startBlocks String representation of start blocks xml.
+ * @param {Object.<Object>} arrangement A map from block type to position.
+ * @return {string} String representation of start blocks xml, including
+ *    block position.
  */
 BlocklyApps.arrangeBlockPosition = function(startBlocks, arrangement) {
   var type, arrangeX, arrangeY;
   var xml = parseXmlElement(startBlocks);
+  var xmlChildNodes = BlocklyApps.sortBlocksByVisibility(xml.childNodes);
   var numberOfPlacedBlocks = 0;
-  for (var x = 0, xmlChild; xml.childNodes && x < xml.childNodes.length; x++) {
-    xmlChild = xml.childNodes[x];
+  for (var x = 0, xmlChild; xmlChildNodes && x < xmlChildNodes.length; x++) {
+    xmlChild = xmlChildNodes[x];
 
     // Only look at element nodes
     if (xmlChild.nodeType === 1) {
@@ -718,6 +723,27 @@ BlocklyApps.arrangeBlockPosition = function(startBlocks, arrangement) {
     }
   }
   return Blockly.Xml.domToText(xml);
+};
+
+/**
+ * Sorts the array of xml blocks, moving visible blocks to the front.
+ * @param {Array.<Element>} xmlBlocks An array of xml blocks.
+ * @return {Array.<Element>} A sorted array of xml blocks, with all
+ *     visible blocks preceding all hidden blocks.
+ */
+BlocklyApps.sortBlocksByVisibility = function(xmlBlocks) {
+  var visibleXmlBlocks = [];
+  var hiddenXmlBlocks = [];
+  for (var x = 0, xmlBlock; xmlBlocks && x < xmlBlocks.length; x++) {  
+    xmlBlock = xmlBlocks[x];
+    if (xmlBlock.getAttribute &&
+        xmlBlock.getAttribute('uservisible') === 'false') {
+      hiddenXmlBlocks.push(xmlBlock);
+    } else {
+      visibleXmlBlocks.push(xmlBlock);
+    }
+  }
+  return visibleXmlBlocks.concat(hiddenXmlBlocks);
 };
 
 var showInstructions = function(level, autoClose) {
@@ -17192,27 +17218,25 @@ Studio.initReadonly = function(config) {
 var arrangeStartBlocks = function (config) {
   var xml = parseXmlElement(config.level.startBlocks);
   var numUnplacedElementNodes = 0;
-  //
-  // two passes through, one to count the nodes:
-  //
-  for (var x = 0, xmlChild; xml.childNodes && x < xml.childNodes.length; x++) {
-    xmlChild = xml.childNodes[x];
+  // sort the blocks by visibility
+  var xmlChildNodes = BlocklyApps.sortBlocksByVisibility(xml.childNodes);
+  // do a first pass to count the nodes
+  for (var x = 0, xmlChild; xmlChildNodes && x < xmlChildNodes.length; x++) {
+    xmlChild = xmlChildNodes[x];
 
     // Only look at element nodes without a y coordinate:
     if (xmlChild.nodeType === 1 && !xmlChild.getAttribute('y')) {
       numUnplacedElementNodes++;
     }
   }
-  //
-  // and one to place the nodes:
-  //
+  // do a second pass to place the nodes
   if (numUnplacedElementNodes) {
     var numberOfPlacedBlocks = 0;
     var totalHeightAvail =
-        (config.level.minWorkspaceHeight || 1000) - Studio.BLOCK_Y_COORDINATE;
+        (config.level.minWorkspaceHeight || 800) - Studio.BLOCK_Y_COORDINATE;
     var yCoordInterval = totalHeightAvail / numUnplacedElementNodes;
-    for (x = 0, xmlChild; xml.childNodes && x < xml.childNodes.length; x++) {
-      xmlChild = xml.childNodes[x];
+    for (x = 0, xmlChild; xmlChildNodes && x < xmlChildNodes.length; x++) {
+      xmlChild = xmlChildNodes[x];
 
       // Only look at element nodes without a y coordinate:
       if (xmlChild.nodeType === 1 && !xmlChild.getAttribute('y')) {

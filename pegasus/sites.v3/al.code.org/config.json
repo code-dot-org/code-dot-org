@@ -8,9 +8,9 @@
     "Partners": "/about/partners"
   },
   "header_links": {
-    "HOME": "/",
-    "TUTORIALS": "/learn",
-    "RESOURCES": "/about/resources"
+    "FILLIMI": "/",
+    "TUTORIALET": "/learn",
+    "RESURCET": "/about/resources"
   },
   "footer_links": {
     "Tutorials": "/learn",
