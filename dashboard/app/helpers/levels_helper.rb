@@ -68,12 +68,14 @@ module LevelsHelper
   def select_and_remember_callouts
     session[:callouts_seen] ||= Set.new()
     @callouts_to_show = []
-    if @level.level_num == 'custom'
-      unless @level.callout_json.nil? || @level.callout_json.empty?
-        @callouts_to_show = JSON.parse(@level.callout_json).map do |c|
-          next if session[:callouts_seen].include?(c['localization_key'])
-          session[:callouts_seen].add(c['localization_key'])
-          Callout.new(element_id: c['element_id'], localization_key: c['localization_key'], qtip_config: c['qtip_config'].to_json)
+    if @level.custom?
+      unless @level.callout_json.blank?
+        @callouts_to_show = JSON.parse(@level.callout_json).map do |callout_definition|
+          next if session[:callouts_seen].include?(callout_definition['localization_key'])
+          session[:callouts_seen].add(callout_definition['localization_key'])
+          Callout.new(element_id: callout_definition['element_id'],
+              localization_key: callout_definition['localization_key'],
+              qtip_config: callout_definition['qtip_config'].to_json)
         end.compact
       end
     else
