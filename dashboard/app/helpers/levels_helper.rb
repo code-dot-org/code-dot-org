@@ -69,7 +69,7 @@ module LevelsHelper
     session[:callouts_seen] ||= Set.new()
     available_callouts = []
     if @level.custom?
-      unless @level.callout_json.blank?
+      unless @level.try(:callout_json).blank?
         available_callouts = JSON.parse(@level.callout_json).map do |callout_definition|
           Callout.new(element_id: callout_definition['element_id'],
               localization_key: callout_definition['localization_key'],
