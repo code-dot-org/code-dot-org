@@ -16,8 +16,9 @@
     "free_play": "false",
     "slider_speed": "0.8",
     "instructions": "Let's repeat it 90 times! How many times does 90 go into 360? It's a really small number.",
-    "impressive": "false",
-    "use_modal_function_editor": "false"
+    "impressive": "true",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false"
   }
 }]]></config>
   <blocks>

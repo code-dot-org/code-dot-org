@@ -17,7 +17,8 @@
     "free_play": "false",
     "slider_speed": "0.8",
     "impressive": "true",
-    "use_modal_function_editor": "false"
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false"
   }
 }]]></config>
   <blocks>

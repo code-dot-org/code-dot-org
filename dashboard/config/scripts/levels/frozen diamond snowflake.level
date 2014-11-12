@@ -16,8 +16,9 @@
     "disable_variable_editing": "false",
     "free_play": "false",
     "slider_speed": "1.0",
-    "impressive": "false",
-    "use_modal_function_editor": "false"
+    "impressive": "true",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false"
   }
 }]]></config>
   <blocks>
