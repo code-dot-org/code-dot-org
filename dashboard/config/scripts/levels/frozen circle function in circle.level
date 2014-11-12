@@ -16,7 +16,9 @@
     "disable_variable_editing": "false",
     "free_play": "false",
     "slider_speed": "0.8",
-    "impressive": "false"
+    "impressive": "true",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false"
   }
 }]]></config>
   <blocks>
@@ -96,18 +98,18 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_repeat_dropdown">
-              <title name="TIMES" config="3, 5, 10, 20">20</title>
+            <block type="controls_repeat">
+              <title name="TIMES">20</title>
               <statement name="DO">
                 <block type="create_a_circle">
                   <next>
-                    <block type="jump_by_constant_dropdown">
+                    <block type="jump_by_constant">
                       <title name="DIR">jumpForward</title>
-                      <title name="VALUE" config="50,100,150,200,300">50</title>
+                      <title name="VALUE">50</title>
                       <next>
-                        <block type="draw_turn_by_constant_dropdown">
+                        <block type="draw_turn_by_constant">
                           <title name="DIR">turnRight</title>
-                          <title name="VALUE" config="18,45,60,90,120,180">18</title>
+                          <title name="VALUE">18</title>
                         </block>
                       </next>
                     </block>

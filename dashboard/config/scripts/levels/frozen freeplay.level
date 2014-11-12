@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 1,
   "properties": {
-    "skin": "anna",
+    "skin": "elsa",
     "instructions": "You've officially become a master artist! Create a winter wonderland and share with your friends.",
     "x": "200",
     "y": "200",
@@ -15,7 +15,9 @@
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "free_play": "true",
-    "impressive": "false"
+    "impressive": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false"
   }
 }]]></config>
   <blocks>
@@ -34,16 +36,9 @@
           <title name="DIR">turnRight</title>
           <title name="VALUE">90</title>
         </block>
-        <block type="draw_turn_by_constant">
-          <title name="DIR">turnLeft</title>
-          <title name="VALUE">90</title>
-        </block>
         <block type="jump_by_constant">
           <title name="DIR">jumpForward</title>
           <title name="VALUE">100</title>
-        </block>
-        <block type="draw_width_inline">
-          <title name="WIDTH">1</title>
         </block>
         <block type="create_a_circle_size" inline="false">
           <value name="VALUE">
@@ -52,8 +47,12 @@
             </block>
           </value>
         </block>
-        <block type="create_a_snowflake_branch"/>
+        <block type="create_square_snowflake"/>
+        <block type="create_parallelogram_snowflake"/>
+        <block type="create_lined_snowflake"/>
+        <block type="create_spiral_snowflake"/>
         <block type="create_a_snowflower"/>
+        <block type="create_fractal_snowflake"/>
         <block type="controls_repeat">
           <title name="TIMES">3</title>
         </block>
