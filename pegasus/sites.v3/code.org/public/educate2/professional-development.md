@@ -55,7 +55,7 @@ Code.org has worked with partners and experts in the field to develop and suppor
 		Summer 5 day in person professional development workshop.
 		<ul>
 		<li>Focused on quality computer science pedagogy—Teaching content through inquiry and equity</li>
-		<ul> Explore lessons using Teacher/Learner/Observer Model</li>
+		<li> Explore lessons using Teacher/Learner/Observer Model</li>
 		<li>Creating a professional learning community that will extend beyond the Code.org partnership.</li></ul>
 		</br>
 		<b>Phase 3</b>
