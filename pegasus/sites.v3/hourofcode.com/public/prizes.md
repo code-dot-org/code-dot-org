@@ -18,7 +18,6 @@ Code.org will select one lucky classroom to attend a very special Hour of Code e
 <% end %>
 
 <% if @country == 'us' %>
-<See a list of all schools signed up for the Hour of Code in your state. One public K-12 school in every U.S. state will win a class-set of laptops.>
 
 <h2 id="hardware_prize" style="font-size: 18px">51 schools win a class-set of laptops (or $10,000 for other technology)</h2>
 One lucky school in ***every*** U.S. state (+ Washington D.C.) will win $10,000 worth of technology. Organize the Hour of Code for every student in your school to qualify. Fill out the form below to apply.
@@ -31,7 +30,8 @@ If you’ve signed up your entire school to participate in the Hour of Code, ent
 
 <%= view :hardware_prizes_form %>
 
-<What are your odds of winning?>
+### What are your odds of winning?
+<a href="/events">See a list of all schools</a> signed up for the Hour of Code in your state. One public K-12 school in every U.S. state will win a class-set of laptops.
 <% end %>
 
 <% if @country == 'uk' %>
