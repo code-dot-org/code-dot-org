@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Now that you've written a function for \"Draw a Square\" you can call it any time you want to draw a square. Use your new function to draw these three squares.",
+    "instructions": "Now that you've written a function for \"Draw a Square\" you can call it any time you want to draw a square. Use your new function to draw these three squares. You can find functions that you've written in the \"Functions\" section of the toolbox.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -18,7 +18,8 @@
     "impressive": "false",
     "slider_speed": ".5",
     "ideal": "13",
-    "use_modal_function_editor": "true"
+    "use_modal_function_editor": "true",
+    "use_contract_editor": "false"
   }
 }]]></config>
   <blocks>
