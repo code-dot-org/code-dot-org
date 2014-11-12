@@ -1,7 +1,7 @@
 ---
 title: Prizes
 layout: wide
-nav: prizes_nav
+<% if @country ==  'us' || @country == 'ca' %>nav: prizes_nav<% end %>
 ---
 <div class="row">
     <h1 class="col-sm-9">The Hour of Code: <br/> Prizes for every organizer</h1>
@@ -10,7 +10,7 @@ nav: prizes_nav
     </div>
 </div>
 
-<% if @country ==  'us' || @country == 'ca' %>
+<% if @country ==  'us' %>
 
 <h2 id="dc">One classroom will win a trip to Washington, D.C. for a historic, top-secret Hour of Code!</h2>
 Code.org will select one lucky classroom to attend a very special Hour of Code event in the nation’s capital — so special that all the details are under wraps! Winning students (with chaperones) will enjoy an all-expenses-covered trip to Washington, D.C. Students will participate in a full day of top-secret activities on Monday, December 8. 
@@ -18,7 +18,15 @@ Code.org will select one lucky classroom to attend a very special Hour of Code e
 <% end %>
 
 <% if @country == 'us' %>
-<h2 id="hardware_prize">Hardware Prize application form:</h2>
+<See a list of all schools signed up for the Hour of Code in your state. One public K-12 school in every U.S. state will win a class-set of laptops.>
+
+<h2 id="hardware_prize" style="font-size: 18px">51 schools win a class-set of laptops (or $10,000 for other technology)</h2>
+One lucky school in ***every*** U.S. state (+ Washington D.C.) will win $10,000 worth of technology. Organize the Hour of Code for every student in your school to qualify. Fill out the form below to apply.
+
+<% end %>
+
+<% if @country == 'us' %>
+### Hardware Prize application form:</h2>
 If you’ve signed up your entire school to participate in the Hour of Code, enter to win a class-set of laptops (or $10,000 for other technology) for your school! Only one teacher needs to apply for your entire school.
 
 <%= view :hardware_prizes_form %>
@@ -46,13 +54,6 @@ Any classroom (public or private) within the U.S. or Canada is eligible to win t
 
 <% end %>
 
-<% if @country == 'us' %>
-<See a list of all schools signed up for the Hour of Code in your state. One public K-12 school in every U.S. state will win a class-set of laptops.>
-
-<h2 id="laptops">51 schools win a class-set of laptops (or $10,000 for other technology)</h2>
-One lucky school in ***every*** U.S. state (+ Washington D.C.) will win $10,000 worth of technology. Organize the Hour of Code for every student in your school to qualify. Fill out the form below to apply.
-
-<% end %>
 
 <h2 id="gift_code">Every organizer wins a thank you gift-code</h2>
 Every educator who hosts an Hour of Code for students will receive 10 GB of Dropbox space or $10 Skype credit as a thank you gift!
