@@ -38,6 +38,9 @@ class Calc < Blockly
       <block type="functional_times"></block>
       <block type="functional_dividedby"></block>
       <block type="functional_math_number"></block>
+      <block type="functional_math_number_dropdown">
+        <title name="VALUE" config="0,1,2,3,4,5,6,7,8,9,10">???</title>
+      </block>
     XML
   end
 
