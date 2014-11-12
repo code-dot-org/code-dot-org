@@ -4,9 +4,9 @@ nav: educate2_nav
 ---
 
 
-# Code.org Philosophy
+# Philosophy
 
-Click the buttons below to read Code.org's guiding principles on curriculum on professional development. 
+Click the buttons below to read Code.org's guiding principles on curriculum and professional development. 
 
 [<button>K-12 Curriculum Philosophy and Goals</button>](http://code.org/educate2/curriculum-philosophy)
 
