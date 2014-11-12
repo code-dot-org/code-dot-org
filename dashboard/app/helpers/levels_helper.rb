@@ -67,10 +67,21 @@ module LevelsHelper
 
   def select_and_remember_callouts
     session[:callouts_seen] ||= Set.new()
-    @callouts_to_show = Callout.where(script_level: @script_level)
-      .select(:id, :element_id, :qtip_config, :localization_key)
-      .reject { |c| session[:callouts_seen].include?(c.localization_key) }
-      .each { |c| session[:callouts_seen].add(c.localization_key) }
+    @callouts_to_show = nil
+    if @level.level_num == 'custom'
+      unless @level.callout_json.nil? || @level.callout_json.empty?
+        @callouts_to_show = JSON.parse(@level.callout_json).map do |c|
+          return nil if session[:callouts_seen].include?(c['localization_key'])
+          session[:callouts_seen].add(c['localization_key'])
+          Callout.new(element_id: c['element_id'], localization_key: c['localization_key'], qtip_config: c['qtip_config'].to_json)
+        end.compact
+      end
+    else
+      @callouts_to_show = Callout.where(script_level: @script_level)
+        .select(:id, :element_id, :qtip_config, :localization_key)
+        .reject { |c| session[:callouts_seen].include?(c.localization_key) }
+        .each { |c| session[:callouts_seen].add(c.localization_key) }
+    end
     @callouts = make_localized_hash_of_callouts(@callouts_to_show)
   end
 
@@ -212,6 +223,7 @@ module LevelsHelper
       use_contract_editor
       impressive
       open_function_definition
+      callout_json
     ).map{ |x| x.include?(':') ? x.split(':') : [x,x.camelize(:lower)]}]
     .each do |dashboard, blockly|
       # Select first valid value from 1. local_assigns, 2. property of @level object, 3. named instance variable, 4. properties json
