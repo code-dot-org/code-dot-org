@@ -1223,8 +1223,8 @@ exports.domStringToBlock = function(blockDOMString) {
  */
 exports.forceInsertTopBlock = function (input, blockType) {
   input = input || '';
-  
-  if (input.indexOf(blockType) !== -1) {
+
+  if (blockType === null || input.indexOf(blockType) !== -1) {
     return input;
   }
 
