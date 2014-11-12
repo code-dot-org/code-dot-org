@@ -6,6 +6,7 @@ require('../utils');
 var cellId = require('./mazeUtils').cellId;
 
 var SQUARE_SIZE = 50;
+var SVG_NS = "http://www.w3.org/2000/svg";
 
 /**
  * Inherits DirtDrawer to draw flowers/honeycomb for bee.
@@ -112,7 +113,7 @@ function createText (prefix, row, col, counterText) {
   // Create text.
   var hPadding = 2;
   var vPadding = 2;
-  var text = document.createElementNS(Blockly.SVG_NS, 'text');
+  var text = document.createElementNS(SVG_NS, 'text');
   // Position text just inside the bottom right corner.
   text.setAttribute('x', (col + 1) * SQUARE_SIZE - hPadding);
   text.setAttribute('y', (row + 1) * SQUARE_SIZE - vPadding);
@@ -126,7 +127,7 @@ function createText (prefix, row, col, counterText) {
 
 BeeItemDrawer.prototype.createCounterImage_ = function (prefix, i, row, href) {
   var id = prefix + (i + 1);
-  var image = document.createElementNS(Blockly.SVG_NS, 'image');
+  var image = document.createElementNS(SVG_NS, 'image');
   image.setAttribute('id', id);
   image.setAttribute('width', SQUARE_SIZE);
   image.setAttribute('height', SQUARE_SIZE);
@@ -244,7 +245,7 @@ BeeItemDrawer.prototype.displayCloudAnimation_ = function(row, col, animate) {
   if (!cloudAnimation) {
     var pegmanElement = document.getElementsByClassName('pegman-location')[0];
     var svg = document.getElementById('svgMaze');
-    cloudAnimation = document.createElementNS(Blockly.SVG_NS, 'image');
+    cloudAnimation = document.createElementNS(SVG_NS, 'image');
     cloudAnimation.setAttribute('id', id);
     cloudAnimation.setAttribute('height', SQUARE_SIZE);
     cloudAnimation.setAttribute('width', SQUARE_SIZE);
@@ -268,7 +269,7 @@ BeeItemDrawer.prototype.displayCloudAnimation_ = function(row, col, animate) {
  */
 BeeItemDrawer.prototype.addCheckerboardTile = function (row, col, isPath) {
   var svg = document.getElementById('svgMaze');
-  var rect = document.createElementNS(Blockly.SVG_NS, 'rect');
+  var rect = document.createElementNS(SVG_NS, 'rect');
   rect.setAttribute('width', SQUARE_SIZE);
   rect.setAttribute('height', SQUARE_SIZE);
   rect.setAttribute('x', col * SQUARE_SIZE);
