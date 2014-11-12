@@ -621,7 +621,26 @@ Turtle.drawToTurtle_ = function (distance) {
     Turtle.dotAt_(Turtle.x, Turtle.y);
   } else {
     Turtle.ctxScratch.lineTo(Turtle.x, Turtle.y);
+
+    if (!Turtle.shapewaysPrintablePathPoints) {
+      var script= document.createElement('script');
+      script.type= 'text/javascript';
+      script.src= 'http://joostn.github.io/OpenJsCad/openjscad.js';
+      document.head.appendChild(script);
+      script= document.createElement('script');
+      script.type= 'text/javascript';
+      script.src= 'http://joostn.github.io/OpenJsCad/csg.js';
+      document.head.appendChild(script);
+    }
+
+    Turtle.shapewaysPrintablePathPoints = Turtle.shapewaysPrintablePathPoints || [];
+    Turtle.shapewaysPrintablePathPoints.push([Turtle.x, Turtle.y]);
   }
+};
+
+Turtle.getSTLFile = function() {
+  console.log((new CSG.Path2D(Turtle.shapewaysPrintablePathPoints)).rectangularExtrude(3, 4, 16, true).toStlString());
+  console.log('Copy above into an .stl file, import into Shapeways');
 };
 
 Turtle.turnByDegrees_ = function (degreesRight) {
