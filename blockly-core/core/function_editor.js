@@ -219,7 +219,9 @@ Blockly.FunctionEditor.prototype.hide = function() {
 
   goog.dom.getElement('functionNameText').value = '';
   goog.dom.getElement('functionDescriptionText').value = '';
-  goog.dom.getElement('paramAddText').value = '';
+  if (goog.dom.getElement('paramAddText')) {
+    goog.dom.getElement('paramAddText').value = '';
+  }
 
   Blockly.modalBlockSpace.clear();
 };
