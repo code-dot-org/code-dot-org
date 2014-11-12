@@ -26,6 +26,17 @@ template "/etc/logrotate.d/pegasus" do
   })
 end
 
+template "/home/#{node[:current_user]}/#{node.chef_environment}/pegasus/config/newrelic.yml" do
+  source 'newrelic.yml.erb'
+  user node[:current_user]
+  group node[:current_user]
+  variables ({
+    app_name:'Pegasus',
+    log_dir:"/home/#{node[:current_user]}/#{node.chef_environment}/pegasus/log",
+    auto_instrument:true,
+  })
+end
+
 execute "bundle-install-pegasus" do
   command "sudo bundle install"
   cwd "/home/#{node[:current_user]}/#{node.chef_environment}/pegasus"
