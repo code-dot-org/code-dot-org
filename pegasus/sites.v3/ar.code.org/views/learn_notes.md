@@ -17,7 +17,7 @@
 
 **Mostrales un video** 
 
-Mirá [estos videos](http://youtube.com/codeorg), con artistas como Shakira, el actor Ashton Kutcher o Will.I.Am fundador de Black Eyed Peas, empresarios como Bill Gates y Mark Zuckerberg, fundador de Facebook, o la estrella de la NBA Chris Bosh hablando de la importancia de la programación. Hay versiones de [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutos](https://www.youtube.com/watch?v=nKIu9yen5nc), y [9 minutos](https://www.youtube.com/watch?v=dU1xS07N-FA).
+Mirá [este video](https://www.youtube.com/watch?v=K1TI3tVKmWg), con Manu Ginóbili, Adrián Paenza, Mario Pergolini, Fierita, investigadores y empresarios argentinos hablando de la importancia de la programación. 
 
 **Podés hacer una pequeña introducción para entusiasmar a tus estudiantes** 
 

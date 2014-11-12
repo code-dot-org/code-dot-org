@@ -4,13 +4,13 @@
   computer_science: Computer Science
   computer_science_edweek: Computer Science ka Taleemi hafta
   csedweek_dates: December 9-15, 2013
-  n_have_learned_an_hoc: "<h1>#</h1><h3>have tried an</h3><h2>HOUR of CODE</h2>"
+  n_have_learned_an_hoc: <h1>#</h1><h3>have tried an</h3><h2>HOUR of CODE</h2>
   anybody_can_learn: 'Her koi seekh sakta hai. '
   learn_now: Abi sikhiye
   petition_message: Sign your name if you think every student in every school should
     have the opportunity to learn computer science
   petition_sign_message: 'If you agree, sign your name.  Join # others.'
-  name: "نام"
+  name: نام
   email: Email
   zipcode: ZIP code ya Mulk
   submit: Jama Kerwaein
@@ -45,7 +45,7 @@
     statements, and basic algorithms.
   all_ages: Her umer k log
   beginner: ibtydai
-  n_participants: "# participants"
+  n_participants: '# participants'
   go: jana
   thank_you_: Shukarya!
   congratulations: Mubarik ho!
@@ -113,8 +113,8 @@
   lines_of_code_alt: Talaba se likhi gae code ki lines#
   who_has_done_hoc: 'Who has done the #HourOfCode? @codeorg'
   hoc_leaderboards: The Hour of Code Leaderboards
-  students_and_lines: "%{students} students have done the Hour of Code and written
-    %{lines} lines of code."
+  students_and_lines: '%{students} students have done the Hour of Code and written
+    %{lines} lines of code.'
   start_hoc: Start the Hour of Code now
   contact_form_topic_press: Press/media (interview or speaking engagement)
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
@@ -179,7 +179,7 @@
   volunteer_engineer_submission_experience_university_student_or_researcher: Current
     university student (or researcher)
   volunteer_engineer_submission_experience_software_professional: Software professional
-  petition_age: "عمر"
+  petition_age: عمر
   dashboard_landing_title: Teacher Home Page
   dashboard_landing_welcome: Welcome to the new and improved teacher dashboard.
   dashboard_landing_video: Watch this video
@@ -221,6 +221,7 @@
   dashboard_navigation_view_progress: View Progress
   dashboard_navigation_add_students: Add Students
   dashboard_navigation_manage_students: Manage Students
+  dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
   dashboard_navigation_view_stats: View Stats
   dashboard_navigation_section: 'Section: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
@@ -254,13 +255,13 @@
   dashboard_students_new_section: You've created a new section! Now add your students
     using the <b>Add student</b> and <b>Add multiple students</b> buttons above.
   dashboard_students_placeholder_name: Student Name
-  dashboard_students_name: "نام"
-  dashboard_students_age: "عمر"
+  dashboard_students_name: نام
+  dashboard_students_age: عمر
   dashboard_students_gender: Jinss
   dashboard_students_male: Male
   dashboard_students_female: Female
   dashboard_students_secret: Secret
-  dashboard_students_password: "پاس ورڈ"
+  dashboard_students_password: پاس ورڈ
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
   dashboard_students_completed_levels: Completed Levels

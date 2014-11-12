@@ -62,16 +62,16 @@
           duomenis ir gali padaryti, kad ji veiktų greičiau.
       2:
         image: notes/stage5_2.jpg
-        text: "Šiose užduotyse reikės valdyti menininką, kuris piešia liniją ten,
-          kur jis eina."
+        text: Šiose užduotyse reikės valdyti menininką, kuris piešia liniją ten, kur
+          jis eina.
       3:
         image: notes/stage5_3.jpg
-        text: "Šis blokelis yra pavadintas „Judėk į priekį per 100 pikselių.“ Pikselis
-          yra mažytis taškelis tavo ekrane."
+        text: Šis blokelis yra pavadintas „Judėk į priekį per 100 pikselių.“ Pikselis
+          yra mažytis taškelis tavo ekrane.
       4:
         image: notes/stage5_4.jpg
-        text: "Šis blokelis yra pavadintas „Pasisuk į dešinę per 90 laipsnių“. Jis
-          pasuks menininką tokiu pat kampu kaip ir paukštis labirinto užduotyse."
+        text: Šis blokelis yra pavadintas „Pasisuk į dešinę per 90 laipsnių“. Jis
+          pasuks menininką tokiu pat kampu kaip ir paukštis labirinto užduotyse.
       5:
         image: notes/stage5_5.jpg
         text: Nuspaudus rodyklėlę ant bet kurio iš šių blokelių, galima pakeisti skaičių,
@@ -146,8 +146,8 @@
           iš naujo ir iš naujo, tūkstančius ar net milijonus kartų.
       2:
         image: notes/hoc2_2.jpg
-        text: "Šioje užduotyje reikia pajudinti paukštį per 5 laukelius, kad jis pagautų
-          kiaulę."
+        text: Šioje užduotyje reikia pajudinti paukštį per 5 laukelius, kad jis pagautų
+          kiaulę.
       3:
         image: notes/hoc2_3.jpg
         text: Panaudokime naują blokelį „Kartok“.
@@ -268,9 +268,9 @@
         text: 'Labas, mano vardas Makinde. Susipažinkime su blokeliu „kol“. '
       2:
         image: notes/stage9_6.jpg
-        text: "„Kol“ blokelis veikia štai taip: bus atliekamas tas veiksmas, kuris
+        text: '„Kol“ blokelis veikia štai taip: bus atliekamas tas veiksmas, kuris
           yra į jį įdėtas. Jis vyks TOL, KOL aprašytas veiksmas šalia žodžio „KOL“
-          bus teisingas."
+          bus teisingas.'
       3:
         image: notes/stage9_7.jpg
         text: Pavyzdžiui, jeigu ūkininkė stovi ant purvo krūvos, ji ją tol nukasinės,
@@ -287,9 +287,9 @@
           kartą.
       3:
         image: notes/stage11_3.jpg
-        text: "Šiame pavyzdyje ant naujo blokelio bus parašyta štai taip: „skaičiuok
+        text: 'Šiame pavyzdyje ant naujo blokelio bus parašyta štai taip: „skaičiuok
           su skaitikliu nuo 50 iki 90 per 10“. Jo viduje bus blokelis „nubrėžk kvadratą“.
-          Kvadrato kraštinės ilgis turės būti skaitiklis iš kategorijos „Kintamieji“."
+          Kvadrato kraštinės ilgis turės būti skaitiklis iš kategorijos „Kintamieji“.'
       4:
         image: notes/stage11_4.jpg
         text: Tai reiškia, kad mūsų menininkas iš pradžių nubrėš kvadratą su 50 pikselių
@@ -330,8 +330,8 @@
           turės sukurtą parametrą „ilgis“.
       8:
         image: notes/stage15_8.jpg
-        text: "Šalia parametro reikia prikabinti skaičių - kokio ilgio nori, kad būtų
-          trikampio kraštinė. Tą skaičių galima rasti kategorijoje „Matematika“."
+        text: Šalia parametro reikia prikabinti skaičių - kokio ilgio nori, kad būtų
+          trikampio kraštinė. Tą skaičių galima rasti kategorijoje „Matematika“.
     hoc_wrapup:
       1:
         image: notes/hoc6_1.jpg

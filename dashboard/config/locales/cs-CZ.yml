@@ -133,12 +133,12 @@
       %{name}
   follower:
     invite_sent: Pozvánka odeslána
-    added_teacher: "%{name} přidán jako tvůj učitel"
+    added_teacher: '%{name} přidán jako tvůj učitel'
     registered: Zaregistroval ses k %{section_name}.
     error:
       signed_in: Dříve než budeš pokračovat se, prosím, odhlas
       username_not_found: Uživatelské jméno %{username} nebylo nalezeno
-      username_in_use: "%{username} je již zabráno, prosím, vyber si jiné"
+      username_in_use: '%{username} je již zabráno, prosím, vyber si jiné'
       no_teacher: Nenalezen nikdo přihlášený jako '%{teacher_email_or_code}'. Prosím
         požádej ho, aby se zde přihlásil, a poté jej zkus přidat znovu
       section_not_found: Could not find a section with code '%{section_code}'.
@@ -179,7 +179,7 @@
       msg_publicschool: Prosím potvrďte, že jste učitel veřejné školy v USA.
       msg_visit_website: Visit website
     providers:
-      apple_itunes: "$10 iTunes Gift Card"
+      apple_itunes: $10 iTunes Gift Card
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10BG Místa na Dropbox
@@ -188,7 +188,7 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: "$10 Skype credit"
+      skype: $10 Skype credit
     msg:
       choose: 'Zvol cenu:'
       choose_teacher: 'Click on the logo below to claim your prize:'
@@ -234,9 +234,9 @@
     destroy: Zničit
     back: Zpět
     confirm: Jsi si jistý?
-    created: "%{model} byl úspěšně vytvořen."
-    updated: "%{model} byl úspěšně aktualizován."
-    destroyed: "%{model} byl/a úspěšně odstraněn/a."
+    created: '%{model} byl úspěšně vytvořen.'
+    updated: '%{model} byl úspěšně aktualizován.'
+    destroyed: '%{model} byl/a úspěšně odstraněn/a.'
     access_denied: nemáte přístup k tomuto %{model}.
   nav:
     header:
@@ -263,13 +263,13 @@
       puzzle_map: Fáze
       prizes: Posbírej všech %{total_trophies} trofejí a vyhraj ceny!
       prize_earned: Všech %{total_trophies} trofejí získáno. Vyhrál jsi!
-      prize_us_only: "(Pouze studenti z USA)"
+      prize_us_only: (Pouze studenti z USA)
       prizes_link: Více informací
   teacher:
     title:
       one: 'Tvůj učitel:'
       other: 'Tví učitelé:'
-    remove: "(odstranit učitele)"
+    remove: (odstranit učitele)
     confirm:
       remove: Jsi si jist/á, že chceš odstranit tohoto učitele?
     tools: Nástroje pro učitele
@@ -325,17 +325,17 @@
     rollup: Panel pokroku
     activity: Nedávné aktivity třídy
     user_not_found: Učitel nebo student nebyl nalezen
-    cant_remove_student_no_email: "%{student_name} nemůže být zaregistrován jako tvůj
-      student, protože student%{student_name} nezaregistroval e-mailovou adresu"
-    cant_remove_teacher_no_email: "%{teacher_name} nemůže být odstraněn jako tvůj
-      učitel, protože jsi nezaregistroval e-mailovou adresu"
-    student_teacher_disassociated: "%{teacher_name} byl odstraněn jako učitel pro
-      %{student_name}"
+    cant_remove_student_no_email: '%{student_name} nemůže být zaregistrován jako tvůj
+      student, protože student%{student_name} nezaregistroval e-mailovou adresu'
+    cant_remove_teacher_no_email: '%{teacher_name} nemůže být odstraněn jako tvůj
+      učitel, protože jsi nezaregistroval e-mailovou adresu'
+    student_teacher_disassociated: '%{teacher_name} byl odstraněn jako učitel pro
+      %{student_name}'
   user:
     email_confirm_needed: 'E-mailová adresa nebyla potvrzena:'
     email_resend_confirm: Znovu odeslat instrukce o potvrzení
-    new_password_hint: "(zanech prázdné, pokud nechceš provést změnu)"
-    current_password_hint: "(potřebujeme tvé aktuální heslo pro potvrzení změny)"
+    new_password_hint: (zanech prázdné, pokud nechceš provést změnu)
+    current_password_hint: (potřebujeme tvé aktuální heslo pro potvrzení změny)
     cancel:
       title: Zrušit účet
       hint: Nešťastný?
@@ -386,15 +386,15 @@
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
-    heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
-    heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
-    heading_legacy: "<h2>Our previous course for</h2><h1>Existing Students</h1>"
+    heading_elementary: <h2>20 hour courses for</h2><h1>Elementary Students</h1>
+    heading_apps: <h2>Fun for</h2><h1>Everybody</h1>
+    heading_legacy: <h2>Our previous course for</h2><h1>Existing Students</h1>
     gallery:
       your_turtle: My Art
       your_studio: My Apps
   gender:
     male: Muž
-    female: "Žena"
+    female: Žena
     none: Raději bych neodpovídal/a
   user_type:
     student: student
@@ -423,7 +423,7 @@
     direction: Start Direction
   video:
     tab: Video.
-    notes: "Žádné video? Zobraz poznámky."
+    notes: Žádné video? Zobraz poznámky.
     notes_coming_soon: Notes for this video coming soon.
     autoplay_option: Automatické přehrávání videa
     download: Stáhnout Video
@@ -497,13 +497,13 @@
     want_to_make_your_own: Want to make your own?
     more: More &rarr;
     caption_by_name_age: by %{name}, age %{age}
-    caption_time_ago: "%{time_ago} ago"
+    caption_time_ago: '%{time_ago} ago'
   landing:
     prerelease: This page is still under development.
     feedback: Give Feedback
     report_bug: Report Bug
     support: Get Help
-    support_url: "//support.code.org"
+    support_url: //support.code.org
   multi:
     wrong_title: Incorrect answer
     wrong_body: The answer you've entered is not correct.  Please try again!

@@ -15,16 +15,15 @@
           línu af "alvöru" kóða.
       4:
         image: notes/hoc1_4.jpg
-        text: "Þú munt læra grunnhugtök í tölvunarfræði, en þessi sömu hugtök eru
-          notuð víða, allt frá því að gera smáforrit upp í að stýra geimjeppanum á
-          Mars."
+        text: Þú munt læra grunnhugtök í tölvunarfræði, en þessi sömu hugtök eru notuð
+          víða, allt frá því að gera smáforrit upp í að stýra geimjeppanum á Mars.
       5:
         image: notes/hoc1_5.jpg
         text: Forrit er safn skipana sem tölvan les og fer eftir.
       6:
         image: notes/hoc1_6.jpg
-        text: "Í fyrsta forritinu þínu þarf að láta Angry Bird fuglinn ferðast um
-          völundarhús svo hann geti lúskrað á grænu svíni."
+        text: Í fyrsta forritinu þínu þarf að láta Angry Bird fuglinn ferðast um völundarhús
+          svo hann geti lúskrað á grænu svíni.
       7:
         image: notes/hoc1_7.jpg
         text: Vinstri hliðin er völundarhúsið þar sem forritið þitt er keyrt. Leiðbeiningarnar
@@ -62,8 +61,7 @@
           sigra. Þeir greina gögnin sem koma frá bílnum til að láta hann fara hraðar.
       2:
         image: notes/stage5_2.jpg
-        text: "Í þessum þrautum ert þú listamaður sem teiknar línu hvert sem hann
-          fer."
+        text: Í þessum þrautum ert þú listamaður sem teiknar línu hvert sem hann fer.
       3:
         image: notes/stage5_3.jpg
         text: Þessi kubbur segir "farðu áfram um 100 pixla“. Pixlar eru í raun litlir
@@ -84,8 +82,8 @@
           túninu sínu alveg sléttu til að geta byrjað að rækta.
       2:
         image: notes/stage9_2.jpg
-        text: "Þú verður að hjálpa henni að fjarlægja alla moldarhaugana og fylla
-          upp í allar holurnar."
+        text: Þú verður að hjálpa henni að fjarlægja alla moldarhaugana og fylla upp
+          í allar holurnar.
       3:
         image: notes/stage9_3.jpg
         text: Nýju kubbarnir fjarlægja 1 skóflufylli af mold úr haug og fylla í holu
@@ -101,9 +99,9 @@
           að tölvuforrit getur verið gagnvirkt.
       2:
         image: notes/flappy02.jpg
-        text: "Í hvert skipti sem einhver smellir eða slær eða skrifar á tölvu eða
+        text: Í hvert skipti sem einhver smellir eða slær eða skrifar á tölvu eða
           síma, þá verður til ATVIK og það er kóði sem fangar atvikið og ákveður hvað
-          eigi að gerast þegar ATVIK verður."
+          eigi að gerast þegar ATVIK verður.
       3:
         image: notes/flappy03.jpg
         text: 'Til dæmis gæti maður haft ATVIKAFANGARA sem segir "þegar mús er smellt
@@ -128,17 +126,17 @@
           og í leiknum mun það að smella músinni leiða til þess að fuglinn flýgur.
       8:
         image: notes/flappy08.jpg
-        text: "Í hverri þraut þessa verkefnis munum við kynna nýjar tegundir atvika
+        text: Í hverri þraut þessa verkefnis munum við kynna nýjar tegundir atvika
           sem græna kubba á vinnusvæðinu og þú þarft að ákveða hvaða kubbum á að bæta
-          við til að bregðast rétt við þessum atvikum."
+          við til að bregðast rétt við þessum atvikum.
       9:
         image: notes/flappy09.jpg
-        text: "Þegar þú sérð svona ör fyrir fellilista þá táknar það að þú getir breytt
-          stillingum - eins og hvaða hljóð eigi að spila þegar Flappy rekst á jörðina."
+        text: Þegar þú sérð svona ör fyrir fellilista þá táknar það að þú getir breytt
+          stillingum - eins og hvaða hljóð eigi að spila þegar Flappy rekst á jörðina.
       10:
         image: notes/flappy10.jpg
-        text: "Í síðustu þrautinni getur þú búið til eiginn leik og deilt honum með
-          vinum þínum. Skemmtu þér vel!"
+        text: Í síðustu þrautinni getur þú búið til eiginn leik og deilt honum með
+          vinum þínum. Skemmtu þér vel!
     loop_times:
       1:
         image: notes/hoc2_1.jpg
@@ -147,8 +145,8 @@
           þúsund eða jafnvel miljarð sinnum.
       2:
         image: notes/hoc2_2.jpg
-        text: "Í þessari þraut viljum við láta fuglinn færa sig áfram um 5 svæði til
-          að ná svíninu."
+        text: Í þessari þraut viljum við láta fuglinn færa sig áfram um 5 svæði til
+          að ná svíninu.
       3:
         image: notes/hoc2_3.jpg
         text: Við getum notað nýja "endurtaka" kubbinn til að hjálpa okkur.
@@ -287,10 +285,10 @@
           út frá flokknum Föll og settu hann á staðinn "lengd".
       4:
         image: notes/stage11_4.jpg
-        text: "Það þýðir að listamaðurinn mun teikna ferning með hliðar sem eru 50
+        text: Það þýðir að listamaðurinn mun teikna ferning með hliðar sem eru 50
           pixlar á lengd. Síðan hækkar hann um 10 og teiknar ferning með 60 pixla
           langar hliðar. Síðan heldur hann áfram að hækka um 10 og teikna ferninga
-          þar til hann nær 90. Við fáum þá ferninga með hliðar 50, 60, 70, 80 og 90."
+          þar til hann nær 90. Við fáum þá ferninga með hliðar 50, 60, 70, 80 og 90.
     parameters:
       1:
         image: notes/stage15_1.jpg

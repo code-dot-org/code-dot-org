@@ -3,7 +3,7 @@
     script:
       name:
         20-hour:
-          desc: "Ηyrje ne Kursin e Informatikës"
+          desc: Ηyrje ne Kursin e Informatikës
           Unplug1: Faza 1
           Maze: Faza 2
           Unplug2: Faza 3

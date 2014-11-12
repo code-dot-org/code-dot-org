@@ -101,6 +101,7 @@
         Wordsearch: Caça Palavras
         Webapp: Webapp
         ArtistEC: O Artista
+        TextMatch: Text Match
     trophy:
       name:
         Bronze: Bronze
@@ -573,6 +574,9 @@
         webapp_ec_simple: Crie seu aplicativo da Web com createHtmlBlock.
         turtle_ec_1_2: 'Agora, desenhe um quadrado. OBSERVAÇÃO: para usar sua cor
           preferida, selecione-a no novo bloco "penColour".'
+        turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas:
+          a stick figure, snowflake, or spiral. Also try the new "penWidth" block.
+          Have fun!'
     video:
       name:
         maze_intro: Introdução ao Labirinto
@@ -588,7 +592,6 @@
         loop_for: Bloco contador
         parameters: Funções com Parâmetros
         hoc_wrapup: Conclusão da Hora do Código
-        20_wrapup: Concluindo as 20-horas
         Unplug1: O que é CC?
         Unplug2: Pensamento Computacional
         Unplug3: Programação em Papel Quadriculado
@@ -603,7 +606,7 @@
         C1_happy_maps_unplugged: Mapas divertidos
         C1_moveitmoveit_unplugged: Criando caminhos
         C1_bigevent_unplugged: O grande evento
-        C1_getting_loop: Repetindo
+        C1_getting_loopy: Repetindo
         C1_pair_programming: Programação em duplas
         C1_maze_intro_sequencing: Introdução à sequência dos labirintos
         C1_maze_debugging: Depuração do labirinto
@@ -615,19 +618,22 @@
         C1_maze_loops: Laços do labirinto
         C1_playlab_storytelling: Laboratório - Crie uma história
         C1_planting_seed: Plantando uma semente
-        C1_building_foundating: Criando uma base
+        C1_building_foundation: Criando uma base
         C2_maze_intro: Introdução ao Labirinto
         C2_artist_intro: Introdução ao Artista
         C2_zuck_repeat_loop: Laços do labirinto
         C2_artist_loops: Laços do Artista
+        C2_artist_debugging: Depuração do Artista
+        C2_bee_loops: Laços da abelha
+        C2_bee_debugging: Depuração da abelha
         C2_bee_conditionals: Condicionais da abelha
         C2_playlab_createstory: Laboratório - Crie uma história
         C2_graph_paper: Programação em Papel Quadriculado
         C2_conditionals_with_cards: Condições
         C2_binary_bracelets: Pulseiras binárias
-        C2_replay_programming: Programação Relay
+        C2_relay_programming: Programação Relay
         C2_paper_airplanes: Aviões de papel
-        C3_maze_intro: Introdução ao Labirinto
+        C3_maze_level_4: Laços do labirinto
         C3_artist_intro: Introdução ao Artista
         C3_artist_functions: Funções do artista
         C3_bee_functions: Funções da abelha

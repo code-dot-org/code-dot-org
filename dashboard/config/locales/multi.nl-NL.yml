@@ -3,98 +3,98 @@
     multi:
       2-3 artist debug multi 1:
         Artist Debugging Multiple Choice One: Kunstenaar Debugging Meerkeuze Eén
-        "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png,
-          700"
+        /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png,
+          700
         Why won't this circle go all the way around?: Waarom is deze cirkel niet gesloten?
-        "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png"
-        "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png"
-        "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png"
-        "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
+        /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png
+        /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png
+        /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png
+        /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png
       2-3 artist loops multi 1:
         Artist Loops Multiple Choice: Kunstenaar lussen meerkeuze
-        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png,
-          500"
+        /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png,
+          500
         Which shape is made by this loop?: Welke vorm wordt door deze lus gemaakt?
-        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
-        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
-        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
-        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
+        /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png
+        /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png
+        /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png
+        /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png
       2-3 artist loops multi 2:
         Artist Loops Multiple Choice: Kunstenaar lussen meerkeuze
-        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png, 500": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png,
-          500"
+        /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png, 500: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png,
+          500
         Which shape is made by this program?: Welke vorm is door dit programma gemaakt?
-        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
-        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
-        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
-        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
+        /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png
+        /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png
+        /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png
+        /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png
       2-3 artist functions multi 1:
         Artist Functions Multiple Choice One: Kunstenaar Functies Meerkeuze Eén
-        "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png, 500": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png,
-          500"
+        /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png, 500: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png,
+          500
         Pick the correct blocks to draw this image using the given functions: Kies
           de juiste blokken uit om deze afbeelding met de gegeven functies te maken
-        "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png"
-        "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png"
-        "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png"
+        /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png
+        /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png
+        /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png
       2-3 bee conditionals multi 1:
         Bee Conditionals Multiple Choice One: Bij Voorwaarden Meerkeuze Eén
         Which comparison below is true?: Welke van de volgende vergelijkingen is waar?
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png"
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png"
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png"
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png"
+        /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png
+        /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png
+        /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png
+        /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png
       2-3 bee conditionals multi 2:
         Bee Conditionals Multiple Choice Two: Bij voorwaardelijke instructies meerkeuze
           twee
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png, 500": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png,
-          500"
+        /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png, 500: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png,
+          500
         Choose the best blocks.: Kies de beste blokken.
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png"
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a2.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a2.png"
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a3.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a3.png"
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a4.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a4.png"
+        /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png
+        /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a2.png
+        /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a3.png
+        /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a4.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a4.png
       2-3 bee conditionals multi 3:
         Bee Conditionals Multiple Choice Two: Bij voorwaardelijke instructies meerkeuze
           twee
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png,
-          500"
+        /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png,
+          500
         Choose the best blocks: Kies de beste blokken
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png"
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png"
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png"
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png"
+        /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png
+        /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png
+        /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png
+        /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png
       2-3 bee loops multi 1:
         Bee Loops Multiple Choice One: Bij Lussen Meerkeuze Eén
-        "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png,
-          500"
+        /script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png,
+          500
         Which blocks collect all of the nectar?: Welke blokken verzamelen alle nectar?
-        "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png"
-        "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png"
-        "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png"
-        "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png"
+        /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png
+        /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png
+        /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png
+        /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png
       2-3 maze multi 1:
         Maze Multiple Choice One: Meerkeuze doolhof één
-        "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500": "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png,
-          500"
+        /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png,
+          500
         Choose the best answer.: Kies het beste antwoord.
         Which blocks work?: Welke blokken werken?
-        "/script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png": "/script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png"
-        "/script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png": "/script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png"
-        "/script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png": "/script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png"
-        "/script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png": "/script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png"
+        /script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png
+        /script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png
+        /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png
+        /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png
       2-3 Maze Multi 2:
         Maze Multiple Choice: Doolhof Meerkeuze
-        "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500": "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png,
-          500"
+        /script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_2_q.png,
+          500
         Which blocks work?: Welke blokken werken?
-        "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png"
-        "/script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png"
-        "/script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png"
-        "/script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png"
+        /script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png
+        /script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png
+        /script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png
+        /script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png
       2-3 Algorithms Multi 1:
         Multiple Choice: Meerkeuze
-        "/script_assets/2-3_images/unplugged/algorithms_1_q.png": "/script_assets/2-3_images/unplugged/algorithms_1_q.png"
+        /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
         Choose an algorithm for the image provided: Kies een algoritme voor de gegeven
           afbeelding
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Start
@@ -116,469 +116,468 @@
           een driehoek onder het vierkant
         Which image does <em>not</em> follow this algorithm?: Welk plaatje volgt dit
           algoritme <em>niet</em>?
-        "/script_assets/2-3_images/unplugged/algorithms_2_a1.png": "/script_assets/2-3_images/unplugged/algorithms_2_a1.png"
-        "/script_assets/2-3_images/unplugged/algorithms_2_a2.png": "/script_assets/2-3_images/unplugged/algorithms_2_a2.png"
-        "/script_assets/2-3_images/unplugged/algorithms_2_a3.png": "/script_assets/2-3_images/unplugged/algorithms_2_a3.png"
-        "/script_assets/2-3_images/unplugged/algorithms_2_a4.png": "/script_assets/2-3_images/unplugged/algorithms_2_a4.png"
+        /script_assets/2-3_images/unplugged/algorithms_2_a1.png: /script_assets/2-3_images/unplugged/algorithms_2_a1.png
+        /script_assets/2-3_images/unplugged/algorithms_2_a2.png: /script_assets/2-3_images/unplugged/algorithms_2_a2.png
+        /script_assets/2-3_images/unplugged/algorithms_2_a3.png: /script_assets/2-3_images/unplugged/algorithms_2_a3.png
+        /script_assets/2-3_images/unplugged/algorithms_2_a4.png: /script_assets/2-3_images/unplugged/algorithms_2_a4.png
       2-3 Binary Multi 1:
         Multiple Choice: Meerkeuze
-        "/script_assets/2-3_images/unplugged/graph_paper_1_q.png": "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
+        /script_assets/2-3_images/unplugged/graph_paper_1_q.png: /script_assets/2-3_images/unplugged/graph_paper_1_q.png
         Which program makes this image?: Welk programma maakt deze afbeelding?
-        "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
+        /script_assets/2-3_images/unplugged/graph_paper_1_a1.png: /script_assets/2-3_images/unplugged/graph_paper_1_a1.png
+        /script_assets/2-3_images/unplugged/graph_paper_1_a2.png: /script_assets/2-3_images/unplugged/graph_paper_1_a2.png
+        /script_assets/2-3_images/unplugged/graph_paper_1_a3.png: /script_assets/2-3_images/unplugged/graph_paper_1_a3.png
       2-3 Conditionals Multi 1:
         Multiple Choice: Meerkeuze
-        "/script_assets/2-3_images/unplugged/conditionals_1_q.png": "/script_assets/2-3_images/unplugged/conditionals_1_q.png"
+        /script_assets/2-3_images/unplugged/conditionals_1_q.png: /script_assets/2-3_images/unplugged/conditionals_1_q.png
         According to the rules of the game, which set of cards is scored correctly?: Welke
           set van kaarten is volgens de spelregels goed geturfd?
-        "/script_assets/2-3_images/unplugged/conditionals_1_a1.png": "/script_assets/2-3_images/unplugged/conditionals_1_a1.png"
-        "/script_assets/2-3_images/unplugged/conditionals_1_a2.png": "/script_assets/2-3_images/unplugged/conditionals_1_a2.png"
-        "/script_assets/2-3_images/unplugged/conditionals_1_a3.png": "/script_assets/2-3_images/unplugged/conditionals_1_a3.png"
-        "/script_assets/2-3_images/unplugged/conditionals_1_a4.png": "/script_assets/2-3_images/unplugged/conditionals_1_a4.png"
+        /script_assets/2-3_images/unplugged/conditionals_1_a1.png: /script_assets/2-3_images/unplugged/conditionals_1_a1.png
+        /script_assets/2-3_images/unplugged/conditionals_1_a2.png: /script_assets/2-3_images/unplugged/conditionals_1_a2.png
+        /script_assets/2-3_images/unplugged/conditionals_1_a3.png: /script_assets/2-3_images/unplugged/conditionals_1_a3.png
+        /script_assets/2-3_images/unplugged/conditionals_1_a4.png: /script_assets/2-3_images/unplugged/conditionals_1_a4.png
       2-3 Getting Loopy Multi 1:
         Multiple Choice: Meerkeuze
-        "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png"
+        /script_assets/2-3_images/unplugged/getting_loopy_1_q.png: /script_assets/2-3_images/unplugged/getting_loopy_1_q.png
         How would you simplify this sequence with loops?: Hoe zou je deze keten vereenvoudigen
           met lussen?
-        "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png"
-        "/script_assets/2-3_images/unplugged/getting_loopy_1_a2.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_a2.png"
-        "/script_assets/2-3_images/unplugged/getting_loopy_1_a3.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_a3.png"
-        "/script_assets/2-3_images/unplugged/getting_loopy_1_a4.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_a4.png"
+        /script_assets/2-3_images/unplugged/getting_loopy_1_a1.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a1.png
+        /script_assets/2-3_images/unplugged/getting_loopy_1_a2.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a2.png
+        /script_assets/2-3_images/unplugged/getting_loopy_1_a3.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a3.png
+        /script_assets/2-3_images/unplugged/getting_loopy_1_a4.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a4.png
       2-3 Graph Paper Multi 1:
         Multiple Choice: Meerkeuze
-        "/script_assets/2-3_images/unplugged/graph_paper_1_q.png": "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
+        /script_assets/2-3_images/unplugged/graph_paper_1_q.png: /script_assets/2-3_images/unplugged/graph_paper_1_q.png
         Which program makes this image?: Welk programma maakt deze afbeelding?
-        "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
+        /script_assets/2-3_images/unplugged/graph_paper_1_a1.png: /script_assets/2-3_images/unplugged/graph_paper_1_a1.png
+        /script_assets/2-3_images/unplugged/graph_paper_1_a2.png: /script_assets/2-3_images/unplugged/graph_paper_1_a2.png
+        /script_assets/2-3_images/unplugged/graph_paper_1_a3.png: /script_assets/2-3_images/unplugged/graph_paper_1_a3.png
       2-3 Relay Programming Multi 1:
         Multiple Choice: Meerkeuze
-        "/script_assets/2-3_images/unplugged/relay_programming_1_q.png": "/script_assets/2-3_images/unplugged/relay_programming_1_q.png"
+        /script_assets/2-3_images/unplugged/relay_programming_1_q.png: /script_assets/2-3_images/unplugged/relay_programming_1_q.png
         Which program does not create this image?: Welk programma maakt deze afbeelding
           niet?
-        "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png"
-        "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png"
-        "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png"
+        /script_assets/2-3_images/unplugged/relay_programming_1_a1.png: /script_assets/2-3_images/unplugged/relay_programming_1_a1.png
+        /script_assets/2-3_images/unplugged/relay_programming_1_a2.png: /script_assets/2-3_images/unplugged/relay_programming_1_a2.png
+        /script_assets/2-3_images/unplugged/relay_programming_1_a3.png: /script_assets/2-3_images/unplugged/relay_programming_1_a3.png
       2-3 Relay Programming Multi 2:
         Multiple Choice: Meerkeuze
         Which image-program combo does not contain mistakes?: In welke combinatie
           van afbeeldingsprogramma's zitten geen vergissingen?
-        "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png"
-        "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png"
-        "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png"
+        /script_assets/2-3_images/unplugged/relay_programming_2_a1.png: /script_assets/2-3_images/unplugged/relay_programming_2_a1.png
+        /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
+        /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
       4-5 artist multi 1:
         Artist Multiple Choice: Kunstenaar Meerkeuze
         Which blocks draw a rectangle with a perimeter of 100?: Welk blokken tekenen
           een rechthoek met een omtrek van 100?
-        "/script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png": "/script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png"
-        "/script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png": "/script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png"
-        "/script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png": "/script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png"
-        "/script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png": "/script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png"
+        /script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png
+        /script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png
+        /script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png
+        /script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png
       4-5 artist multi 2:
         Artist Multiple Choice: Kunstenaar Meerkeuze
         Which drawing is symmetric?: Welke tekening is symmetrisch?
-        "/script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png": "/script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png"
-        "/script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png": "/script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png"
-        "/script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png": "/script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png"
-        "/script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png": "/script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png"
+        /script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png
+        /script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png
+        /script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png
+        /script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png
       4-5 artist functions multi 1:
         Artist Functions Multiple Choice: Kunstenaar Functies Meerkeuze
-        "/script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png, 500": "/script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png,
-          500"
+        /script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png,
+          500
         Which function creates a rectangle that can change its size?: Welke functie
           maakt een rechthoek die zijn grootte kan veranderen?
-        "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png": "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png"
-        "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png": "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png"
-        "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a3.png": "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a3.png"
-        "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a4.png": "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a4.png"
+        /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png
+        /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png
+        /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a3.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a3.png
+        /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a4.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a4.png
       4-5 artist loops multi 1:
         Artist Loops Multiple Choice: Kunstenaar lussen meerkeuze
-        "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png, 500": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png,
-          500"
+        /script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png, 500: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png,
+          500
         Which blocks will create the design?: Welke van de blokken maken het ontwerp?
-        "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png"
-        "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png"
-        "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png"
-        "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png"
+        /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png
+        /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png
+        /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png
+        /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png
       4-5 artist loops multi 2:
         Artist Functions Multiple Choice: Kunstenaar Functies Meerkeuze
         'Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50': 'Kies
           de for-lus die de volgende patroon weergeeft: 5, 10, 15, 20, 25, 30, 35,
           40, 45, 50'
-        "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png"
-        "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png"
-        "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png"
-        "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png"
+        /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png
+        /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png
+        /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png
+        /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png
       4-5 bee conditionals multi 1:
         Bee Conditionals Multiple Choice: Bij Condities Meerkeuze
-        "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png"
-        0: "? Een paarse bloem heeft 3, 2 of 1 nectar, maar je weet niet hoeveel.
+        /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png
+        0: '? Een paarse bloem heeft 3, 2 of 1 nectar, maar je weet niet hoeveel.
           Welke blokken controleren dit op de juiste manier en verzamelen alle nectar
-          van een paarse bloem?"
-        1: ": Een paarse bloem heeft 3, 2 of 1 nectar, maar je weet niet hoeveel.
+          van een paarse bloem?'
+        1: ': Een paarse bloem heeft 3, 2 of 1 nectar, maar je weet niet hoeveel.
           Welk blokken controleren dit op de juiste manier en verzamelen alle nectar
-          van een paarse bloem?"
+          van een paarse bloem?'
         Choose the best blocks.: Kies de beste blokken.
-        "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png"
-        "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png"
-        "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png"
-        "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png"
+        /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png
+        /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png
+        /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png
+        /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png
       4-5 bee debug multi 1:
         Bee Debug Multiple Choice: Bij Debug Meerkeuze
-        "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png"
-        "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png"
+        /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png
+        /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png
         Which version of the function will work?: Welke versie van de functie werkt?
-        "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png"
-        "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a3.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a3.png"
-        "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png"
-        "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png"
+        /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png
+        /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a3.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a3.png
+        /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png
+        /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png
       4-5 bee loops multi 1:
         Bee Loops Multiple Choice: Bij Lussen Meerkeuzevraag
-        "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png"
+        /script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png
         Which blocks will solve the puzzle?: Welke blokken lossen de puzzel op?
-        "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png"
-        "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png"
-        "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png"
-        "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png"
+        /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png
+        /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png
+        /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png
+        /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png
       4-5 farmer loops multi 1:
         Famer Loops Multiple Choice: Boer Lussen Meerkeuzevraag
-        "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png, 500": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png,
-          500"
+        /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png, 500: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png,
+          500
         Which blocks solve the puzzle?: Welke blokken lossen de puzzel op?
-        "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png"
-        "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a2.png": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a2.png"
-        "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a3.png": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a3.png"
-        "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png"
+        /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png
+        /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a2.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a2.png
+        /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a3.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a3.png
+        /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png
       4-5 maze multi 1:
         Maze Multiple Choice: Doolhof meerkeuzevraag
-        "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500": "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png,
-          500"
+        /script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_maze_multi_1_q.png,
+          500
         Which blocks solve the puzzle?: Welke blokken lossen de puzzel op?
-        "/script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png": "/script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png"
-        "/script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png": "/script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png"
-        "/script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png": "/script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png"
-        "/script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png": "/script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png"
+        /script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png
+        /script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png
+        /script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png
+        /script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png
       4-5 maze conditionals multi 1:
         Maze Conditionals Multiple Choice: Doolhof Condities Meerkeuzevraag
-        "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png,
-          500"
+        /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png,
+          500
         Which blocks solve the puzzle?: Welke blokken lossen de puzzel op?
-        "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png"
-        "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png"
-        "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png"
-        "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png"
+        /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png
+        /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png
+        /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png
+        /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png
       4-5 Algorithms Multi 1:
         Multiple Choice: Meerkeuze
         Which one of these items is hardest to describe an algorithm for?: Welk van
           deze items is het moeilijkst in een algoritme te schrijven?
-        "<h4>Brushing your teeth</h4>": "<h4>Je tanden poetsen</h4>"
-        "<h4>Baking cookies</h4>": "<h4>Koekjes bakken</h4>"
-        "<h4>Shopping from a grocery list</h4>": "<h4>Winkelen met een boodschappenlijst</h4>"
-        "<h4>Banana</h4>": "<h4>Banaan</h4>"
+        <h4>Brushing your teeth</h4>: <h4>Je tanden poetsen</h4>
+        <h4>Baking cookies</h4>: <h4>Koekjes bakken</h4>
+        <h4>Shopping from a grocery list</h4>: <h4>Winkelen met een boodschappenlijst</h4>
+        <h4>Banana</h4>: <h4>Banaan</h4>
       4-5 Computational Thinking Multi 1:
         Multiple Choice: Meerkeuze
-        0: "? Hier zijn drie zinnen. Welk van onderstaande sjablonen abstraheert op
-          de juiste manier zodat ze alle drie hetzelfde patroon hebben als het sjabloon?"
-        1: ": hier zijn drie zinnen. Welk van onderstaande sjablonen abstraheert op
-          de juiste manier zodat ze alle drie hetzelfde patroon hebben als het sjabloon?"
-        "<h4>Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.</h4>": "<h4>Seattle
+        0: '? Hier zijn drie zinnen. Welk van onderstaande sjablonen abstraheert op
+          de juiste manier zodat ze alle drie hetzelfde patroon hebben als het sjabloon?'
+        1: ': hier zijn drie zinnen. Welk van onderstaande sjablonen abstraheert op
+          de juiste manier zodat ze alle drie hetzelfde patroon hebben als het sjabloon?'
+        <h4>Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.</h4>: <h4>Seattle
           is een grote stad.<br/>Eugene is een middelgrote stad <br/>Hillview is een
-          kleine stad.</h4>"
-        "<h4>Seattle _____ a _____ _____.</h4>": "<h4>Seattle _____ een _____ _____.</h4>"
-        "<h4>_____ is a _____ city.</h4>": "<h4>_____ is een _____ stad.</h4>"
-        "<h4>_____ is _____ a _____.</h4>": "<h4>_____ is _____ een _____.</h4>"
-        "<h4>Eugene is a _____ city.</h4>": "<h4>Eugene is een _____ stad.</h4>"
+          kleine stad.</h4>
+        <h4>Seattle _____ a _____ _____.</h4>: <h4>Seattle _____ een _____ _____.</h4>
+        <h4>_____ is a _____ city.</h4>: <h4>_____ is een _____ stad.</h4>
+        <h4>_____ is _____ a _____.</h4>: <h4>_____ is _____ een _____.</h4>
+        <h4>Eugene is a _____ city.</h4>: <h4>Eugene is een _____ stad.</h4>
       4-5 Crowdsourcing Multi 1:
         Multiple Choice: Meerkeuze
         Which of these pictures best represents crowdsourcing?: Welk plaatje geeft
           crowdsourcing het best weer?
-        "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png": "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png"
-        "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png": "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png"
+        /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png
+        /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png
       4-5 Crowdsourcing Multi 2:
         Multiple Choice: Meerkeuze
         Which one of these activities would be best for practicing crowdsourcing?: Welke
           activiteit is de beste oefening voor crowdsourcing?
-        "<h4>Cleaning your room</h4>": "<h4>Je kamer opruimen</h4>"
-        "<h4>Eating your dessert</h4>": "<h4>Je toetje eten</h4>"
-        "<h4>Brushing your hair</h4>": "<h4>Je haar borstelen</h4>"
-        "<h4>Washing your face</h4>": "<h4>Je gezicht wassen</h4>"
+        <h4>Cleaning your room</h4>: <h4>Je kamer opruimen</h4>
+        <h4>Eating your dessert</h4>: <h4>Je toetje eten</h4>
+        <h4>Brushing your hair</h4>: <h4>Je haar borstelen</h4>
+        <h4>Washing your face</h4>: <h4>Je gezicht wassen</h4>
       4-5 Digital Footprint Multi 1:
         Multiple Choice: Meerkeuze
         Which piece of information listed below is okay to share on the internet?: Welk
           van de hieronder genoemde stukjes informatie zijn geschikt om de delen op
           internet?
-        "<h4>Your birthday</h4>": "<h4>Je verjaardag</h4>"
-        "<h4>Your favorite food</h4>": "<h4>Je lievelingseten</h4>"
-        "<h4>Your address</h4>": "<h4>Je adres</h4>"
-        "<h4>Your parent's credit card number</h4>": "<h4>De creditkaartnummer van
-          je ouders</h4>"
+        <h4>Your birthday</h4>: <h4>Je verjaardag</h4>
+        <h4>Your favorite food</h4>: <h4>Je lievelingseten</h4>
+        <h4>Your address</h4>: <h4>Je adres</h4>
+        <h4>Your parent's credit card number</h4>: <h4>De creditkaartnummer van je
+          ouders</h4>
       4-5 Internet Multi 1:
         Multiple Choice: Meerkeuze
-        "/script_assets/4-5_images/unplugged/internet_1_q.png": "/script_assets/4-5_images/unplugged/internet_1_q.png"
+        /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
         When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Als
           je probeert in te loggen op code.org, naar welk IP-adres zal de DNS je dan
           waarschijnlijk doorsturen?
-        "<h4>23.23.224.106</h4>": "<h4>23.23.224.106</h4>"
-        "<h4>54.209.61.132</h4>": "<h4>54.209.61.132</h4>"
-        "<h4>64.14.68.10</h4>": "<h4>64.14.68.10</h4>"
-        "<h4>54.243.71.82</h4>": "<h4>54.243.71.82</h4>"
+        <h4>23.23.224.106</h4>: <h4>23.23.224.106</h4>
+        <h4>54.209.61.132</h4>: <h4>54.209.61.132</h4>
+        <h4>64.14.68.10</h4>: <h4>64.14.68.10</h4>
+        <h4>54.243.71.82</h4>: <h4>54.243.71.82</h4>
       4-5 Internet Multi 2:
         Multiple Choice: Meerkeuze
-        "/script_assets/4-5_images/unplugged/internet_1_q.png": "/script_assets/4-5_images/unplugged/internet_1_q.png"
+        /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
         If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Als
           de DNS je naar de pagina met IP-adres 100.42.50.110 heeft gestuurd, op welke
           website ben je dan?
-        "<h4>code.org</h4>": "<h4>code.org</h4>"
-        "<h4>csisfun.com</h4>": "<h4>csisfun.com</h4>"
-        "<h4>thinkersmith.org</h4>": "<h4>thinkersmith.org</h4>"
-        "<h4>khanacademy.org</h4>": "<h4>khanacademy.org</h4>"
+        <h4>code.org</h4>: <h4>code.org</h4>
+        <h4>csisfun.com</h4>: <h4>csisfun.com</h4>
+        <h4>thinkersmith.org</h4>: <h4>thinkersmith.org</h4>
+        <h4>khanacademy.org</h4>: <h4>khanacademy.org</h4>
       4-5 Songwriting Multi 1:
         Multiple Choice: Meerkeuze
-        "/script_assets/4-5_images/unplugged/songwriting_1_q.png": "/script_assets/4-5_images/unplugged/songwriting_1_q.png"
-        0: "? Wat is het grootste stuk van dit lied dat je kunt definiëren als het
+        /script_assets/4-5_images/unplugged/songwriting_1_q.png: /script_assets/4-5_images/unplugged/songwriting_1_q.png
+        0: '? Wat is het grootste stuk van dit lied dat je kunt definiëren als het
           refrein, zodat het refrein iedere keer exact herhaald wordt wanneer het
-          aangeroepen wordt?"
-        1: ": Wat is de grootste stuk van dit lied dat je kunt definiëren als het
+          aangeroepen wordt?'
+        1: ': Wat is de grootste stuk van dit lied dat je kunt definiëren als het
           refrein, zodat het refrein, elke keer dat het wordt aangeroepen, precies
-          herhaald wordt?"
+          herhaald wordt?'
         Lou, Lou, skip to my Lou,: Lou, Lou, ga naar mijn Lou,
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Lou,
           Lou, ga naar mijn Lou, <br/>Lou, Lou, ga naar mijn Lou, <br/>Lou, Lou, ga
           naar mijn Lou, <br/>ga naar mijn Lou, mijn schat.
-        2: "? Lou, Lou, ga naar mijn Lou, <br/>Lou, Lou, ga naar mijn Lou, <br/>Lou,
+        2: '? Lou, Lou, ga naar mijn Lou, <br/>Lou, Lou, ga naar mijn Lou, <br/>Lou,
           Lou, ga naar mijn Lou, <br/>ga naar mijn Lou, mijn schat.<br/><br/><p>De
-          vlieg is in de karnemelk, <br/>Weg vlieg, weg,"
-        3: ": Lou, Lou, ga naar mijn Lou, <br/>Lou, Lou, ga naar mijn Lou, <br/>Lou,
+          vlieg is in de karnemelk, <br/>Weg vlieg, weg,'
+        3: ': Lou, Lou, ga naar mijn Lou, <br/>Lou, Lou, ga naar mijn Lou, <br/>Lou,
           Lou, ga naar mijn Lou, <br/>Ga naar mijn Lou, mijn schat.<br/><br/><p>De
-          vlieg is in de karnemelk, <br/>weg vlieg, weg,"
-        4: "? De vlieg is in de karnemelk, <br/>Weg vlieg, weg, <br/>De vlieg is in
+          vlieg is in de karnemelk, <br/>weg vlieg, weg,'
+        4: '? De vlieg is in de karnemelk, <br/>Weg vlieg, weg, <br/>De vlieg is in
           de karnemelk, <br/>Weg vlieg, weg, <br/>De vlieg is in de karnemelk, <br/>Weg
-          vlieg, weg, <br/>Ga naar Lou, mijn schat."
-        5: ": De vlieg is in de karnemelk, <br/>Weg vlieg, weg, <br/>De vlieg is in
+          vlieg, weg, <br/>Ga naar Lou, mijn schat.'
+        5: ': De vlieg is in de karnemelk, <br/>Weg vlieg, weg, <br/>De vlieg is in
           de karnemelk, <br/>Weg vlieg, weg, <br/>De vlieg is in de karnemelk, <br/>Weg
-          vlieg, weg, <br/>Ga naar mijn Lou, mijn schat."
+          vlieg, weg, <br/>Ga naar mijn Lou, mijn schat.'
       4-5 Suncatchers Multi 1:
         Multiple Choice: Meerkeuze
-        "/script_assets/4-5_images/unplugged/suncatchers_2_q.png": "/script_assets/4-5_images/unplugged/suncatchers_2_q.png"
+        /script_assets/4-5_images/unplugged/suncatchers_2_q.png: /script_assets/4-5_images/unplugged/suncatchers_2_q.png
         Which of the programs below <em>does not</em> make the exact same sequence as Program 1: Welke
           van de programma's hieronder maakt <em>niet</em> exact dezelfde reeks als
           programma 1
-        "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png"
-        "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png"
-        "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png"
+        /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
+        /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
+        /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
       K-1 Artist 1 Multi 1:
         Multiple Choice: Meerkeuze
-        "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500": "/script_assets/k_1_images/artist_images/rshort_dlong.png,
-          500"
+        /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png,
+          500
         Which blocks solve this puzzle?: Welke blokken lossen deze puzzel op?
-        "/script_assets/k_1_images/artist_images/W|S|S.png": "/script_assets/k_1_images/artist_images/W|S|S.png"
-        "/script_assets/k_1_images/artist_images/E|S|S.png": "/script_assets/k_1_images/artist_images/E|S|S.png"
-        "/script_assets/k_1_images/artist_images/S|E|E.png": "/script_assets/k_1_images/artist_images/S|E|E.png"
-        "/script_assets/k_1_images/artist_images/E|S.png": "/script_assets/k_1_images/artist_images/E|S.png"
+        /script_assets/k_1_images/artist_images/W|S|S.png: /script_assets/k_1_images/artist_images/W|S|S.png
+        /script_assets/k_1_images/artist_images/E|S|S.png: /script_assets/k_1_images/artist_images/E|S|S.png
+        /script_assets/k_1_images/artist_images/S|E|E.png: /script_assets/k_1_images/artist_images/S|E|E.png
+        /script_assets/k_1_images/artist_images/E|S.png: /script_assets/k_1_images/artist_images/E|S.png
       K-1 Artist 1 Multi 2:
         Multiple Choice: Meerkeuze
-        "/script_assets/k_1_images/artist_images/square.png, 500": "/script_assets/k_1_images/artist_images/square.png,
-          500"
+        /script_assets/k_1_images/artist_images/square.png, 500: /script_assets/k_1_images/artist_images/square.png,
+          500
         Which blocks draw the square?: Welke blokken tekenen het vierkant?
-        "/script_assets/k_1_images/artist_images/N|E|S|W.png": "/script_assets/k_1_images/artist_images/N|E|S|W.png"
-        "/script_assets/k_1_images/artist_images/E|S|W|N.png": "/script_assets/k_1_images/artist_images/E|S|W|N.png"
-        "/script_assets/k_1_images/artist_images/N|W|S|E.png": "/script_assets/k_1_images/artist_images/N|W|S|E.png"
+        /script_assets/k_1_images/artist_images/N|E|S|W.png: /script_assets/k_1_images/artist_images/N|E|S|W.png
+        /script_assets/k_1_images/artist_images/E|S|W|N.png: /script_assets/k_1_images/artist_images/E|S|W|N.png
+        /script_assets/k_1_images/artist_images/N|W|S|E.png: /script_assets/k_1_images/artist_images/N|W|S|E.png
       K-1 Artist 2 Multi 1:
         Multiple Choice: Meerkeuze
-        "/script_assets/k_1_images/artist_images/sq+sq.png, 500": "/script_assets/k_1_images/artist_images/sq+sq.png,
-          500"
+        /script_assets/k_1_images/artist_images/sq+sq.png, 500: /script_assets/k_1_images/artist_images/sq+sq.png,
+          500
         Which shape do these squares combine to make?: Welke vorm krijg je als je
           de vierkanten combineert?
-        "/script_assets/k_1_images/artist_images/medium_circle.png": "/script_assets/k_1_images/artist_images/medium_circle.png"
-        "/script_assets/k_1_images/artist_images/small_rectangle.png": "/script_assets/k_1_images/artist_images/small_rectangle.png"
-        "/script_assets/k_1_images/artist_images/medium_square.png": "/script_assets/k_1_images/artist_images/medium_square.png"
-        "/script_assets/k_1_images/artist_images/medium_triangle.png": "/script_assets/k_1_images/artist_images/medium_triangle.png"
+        /script_assets/k_1_images/artist_images/medium_circle.png: /script_assets/k_1_images/artist_images/medium_circle.png
+        /script_assets/k_1_images/artist_images/small_rectangle.png: /script_assets/k_1_images/artist_images/small_rectangle.png
+        /script_assets/k_1_images/artist_images/medium_square.png: /script_assets/k_1_images/artist_images/medium_square.png
+        /script_assets/k_1_images/artist_images/medium_triangle.png: /script_assets/k_1_images/artist_images/medium_triangle.png
       K-1 Artist Loops Multi 1:
         Multiple Choice: Meerkeuze
-        "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png, 300": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png,
-          300"
+        /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png, 300: /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png,
+          300
         Which blocks create this picture?: Welke blokken hebben dit plaatje gemaakt?
-        "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a1.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a1.png"
-        "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a2.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a2.png"
-        "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a3.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a3.png"
-        "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a4.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a4.png"
+        /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a1.png: /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a1.png
+        /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a2.png
+        /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a3.png: /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a3.png
+        /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a4.png: /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a4.png
       K-1 Bee 1 Multi 1:
         Multiple Choice: Meerkeuze
-        "/script_assets/k_1_images/bee_images/1nectar+2nectar.png": "/script_assets/k_1_images/bee_images/1nectar+2nectar.png"
+        /script_assets/k_1_images/bee_images/1nectar+2nectar.png: /script_assets/k_1_images/bee_images/1nectar+2nectar.png
         How many nectars is this?: Hoeveel nectar is dit?
-        "/script_assets/k_1_images/bee_images/nectar.png": "/script_assets/k_1_images/bee_images/nectar.png"
-        "/script_assets/k_1_images/bee_images/2nectar.png": "/script_assets/k_1_images/bee_images/2nectar.png"
-        "/script_assets/k_1_images/bee_images/3nectar.png": "/script_assets/k_1_images/bee_images/3nectar.png"
-        "/script_assets/k_1_images/bee_images/4nectar.png": "/script_assets/k_1_images/bee_images/4nectar.png"
+        /script_assets/k_1_images/bee_images/nectar.png: /script_assets/k_1_images/bee_images/nectar.png
+        /script_assets/k_1_images/bee_images/2nectar.png: /script_assets/k_1_images/bee_images/2nectar.png
+        /script_assets/k_1_images/bee_images/3nectar.png: /script_assets/k_1_images/bee_images/3nectar.png
+        /script_assets/k_1_images/bee_images/4nectar.png: /script_assets/k_1_images/bee_images/4nectar.png
       K-1 Bee 1 Multi 2:
         Multiple Choice: Meerkeuze
-        "/script_assets/k_1_images/bee_images/2nectar+2nectar.png": "/script_assets/k_1_images/bee_images/2nectar+2nectar.png"
+        /script_assets/k_1_images/bee_images/2nectar+2nectar.png: /script_assets/k_1_images/bee_images/2nectar+2nectar.png
         How many nectars is this?: Hoeveel nectar is dit?
-        "/script_assets/k_1_images/bee_images/nectar.png": "/script_assets/k_1_images/bee_images/nectar.png"
-        "/script_assets/k_1_images/bee_images/2nectar.png": "/script_assets/k_1_images/bee_images/2nectar.png"
-        "/script_assets/k_1_images/bee_images/3nectar.png": "/script_assets/k_1_images/bee_images/3nectar.png"
-        "/script_assets/k_1_images/bee_images/4nectar.png": "/script_assets/k_1_images/bee_images/4nectar.png"
+        /script_assets/k_1_images/bee_images/nectar.png: /script_assets/k_1_images/bee_images/nectar.png
+        /script_assets/k_1_images/bee_images/2nectar.png: /script_assets/k_1_images/bee_images/2nectar.png
+        /script_assets/k_1_images/bee_images/3nectar.png: /script_assets/k_1_images/bee_images/3nectar.png
+        /script_assets/k_1_images/bee_images/4nectar.png: /script_assets/k_1_images/bee_images/4nectar.png
       K-1 Maze Debugging Multi 1:
         Multiple Choice: Meerkeuze
-        "/script_assets/k_1_images/maze_images/EESq.png, 700": "/script_assets/k_1_images/maze_images/EESq.png,
-          700"
+        /script_assets/k_1_images/maze_images/EESq.png, 700: /script_assets/k_1_images/maze_images/EESq.png,
+          700
         Which choice should be the final block?: Welke keuze zou het laatste blok
           moeten zijn?
-        "/script_assets/k_1_images/move_blocks/N.png": "/script_assets/k_1_images/move_blocks/N.png"
-        "/script_assets/k_1_images/move_blocks/S.png": "/script_assets/k_1_images/move_blocks/S.png"
-        "/script_assets/k_1_images/move_blocks/E.png": "/script_assets/k_1_images/move_blocks/E.png"
-        "/script_assets/k_1_images/move_blocks/W.png": "/script_assets/k_1_images/move_blocks/W.png"
+        /script_assets/k_1_images/move_blocks/N.png: /script_assets/k_1_images/move_blocks/N.png
+        /script_assets/k_1_images/move_blocks/S.png: /script_assets/k_1_images/move_blocks/S.png
+        /script_assets/k_1_images/move_blocks/E.png: /script_assets/k_1_images/move_blocks/E.png
+        /script_assets/k_1_images/move_blocks/W.png: /script_assets/k_1_images/move_blocks/W.png
       K-1 Maze Multiple Choice 2:
         Maze: Doolhof
-        "/script_assets/k_1_images/maze_images/maze_WS.png, 500": "/script_assets/k_1_images/maze_images/maze_WS.png,
-          500"
+        /script_assets/k_1_images/maze_images/maze_WS.png, 500: /script_assets/k_1_images/maze_images/maze_WS.png,
+          500
         Which answer solves this level?: Welk antwoord is de oplossing voor dit level?
-        "/script_assets/k_1_images/move_blocks/EN.png": "/script_assets/k_1_images/move_blocks/EN.png"
-        "/script_assets/k_1_images/move_blocks/ES.png": "/script_assets/k_1_images/move_blocks/ES.png"
-        "/script_assets/k_1_images/move_blocks/WS.png": "/script_assets/k_1_images/move_blocks/WS.png"
-        "/script_assets/k_1_images/move_blocks/WN.png": "/script_assets/k_1_images/move_blocks/WN.png"
+        /script_assets/k_1_images/move_blocks/EN.png: /script_assets/k_1_images/move_blocks/EN.png
+        /script_assets/k_1_images/move_blocks/ES.png: /script_assets/k_1_images/move_blocks/ES.png
+        /script_assets/k_1_images/move_blocks/WS.png: /script_assets/k_1_images/move_blocks/WS.png
+        /script_assets/k_1_images/move_blocks/WN.png: /script_assets/k_1_images/move_blocks/WN.png
       K-1 Maze Loops Multi 1:
         Multiple Choice: Meerkeuze
-        "/script_assets/k_1_images/move_blocks/NNNequals.png, 300": "/script_assets/k_1_images/move_blocks/NNNequals.png,
-          300"
+        /script_assets/k_1_images/move_blocks/NNNequals.png, 300: /script_assets/k_1_images/move_blocks/NNNequals.png,
+          300
         Which repeat block is the same?: Welk herhaalblok is hetzelfde?
-        "/script_assets/k_1_images/move_blocks/r3_N.png": "/script_assets/k_1_images/move_blocks/r3_N.png"
-        "/script_assets/k_1_images/move_blocks/r3_NN.png": "/script_assets/k_1_images/move_blocks/r3_NN.png"
-        "/script_assets/k_1_images/move_blocks/r4_N.png": "/script_assets/k_1_images/move_blocks/r4_N.png"
+        /script_assets/k_1_images/move_blocks/r3_N.png: /script_assets/k_1_images/move_blocks/r3_N.png
+        /script_assets/k_1_images/move_blocks/r3_NN.png: /script_assets/k_1_images/move_blocks/r3_NN.png
+        /script_assets/k_1_images/move_blocks/r4_N.png: /script_assets/k_1_images/move_blocks/r4_N.png
       K-1 Maze Loops Multi 2:
         Multiple Choice: Meerkeuze
-        "/script_assets/k_1_images/move_blocks/SESESEequals.png, 240": "/script_assets/k_1_images/move_blocks/SESESEequals.png,
-          240"
+        /script_assets/k_1_images/move_blocks/SESESEequals.png, 240: /script_assets/k_1_images/move_blocks/SESESEequals.png,
+          240
         Pick the correct repeat block.: Kies het juiste herhaalblok.
-        "/script_assets/k_1_images/move_blocks/r3_S.png": "/script_assets/k_1_images/move_blocks/r3_S.png"
-        "/script_assets/k_1_images/move_blocks/r3_ES.png": "/script_assets/k_1_images/move_blocks/r3_ES.png"
-        "/script_assets/k_1_images/move_blocks/r3_SE.png": "/script_assets/k_1_images/move_blocks/r3_SE.png"
+        /script_assets/k_1_images/move_blocks/r3_S.png: /script_assets/k_1_images/move_blocks/r3_S.png
+        /script_assets/k_1_images/move_blocks/r3_ES.png: /script_assets/k_1_images/move_blocks/r3_ES.png
+        /script_assets/k_1_images/move_blocks/r3_SE.png: /script_assets/k_1_images/move_blocks/r3_SE.png
       K-1 Digital Footprint Multi 1:
         Multiple Choice: Meerkeuze
-        "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png"
+        /script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png
         Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: Welk
           dier heeft de grootste digitale voetafdruk wat hem of haar de <strong>meest
           onveilige</strong> maakt?
-        "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png"
-        "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png"
-        "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png"
+        /script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png
+        /script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png
+        /script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png
       K-1 Getting Loopy Multi 1:
         Multiple Choice: Meerkeuze
-        "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png"
+        /script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png
         How would you simplify this sequence with loops?: Hoe zou je deze reeks vereenvoudigen
           met lussen?
-        "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png"
-        "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png"
-        "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png"
+        /script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png
+        /script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png
+        /script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png
       K-1 Happy Maps Multi 1:
         Multiple Choice: Meerkeuze
-        "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png": "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
+        /script_assets/k_1_images/unplugged_images/happy_maps_1q.png: /script_assets/k_1_images/unplugged_images/happy_maps_1q.png
         Which arrow gets the Flurb to the treasure?: Welke pijl brengt de Flurb bij
           de schat?
-        "/script_assets/k_1_images/unplugged_images/up.png": "/script_assets/k_1_images/unplugged_images/up.png"
-        "/script_assets/k_1_images/unplugged_images/down.png": "/script_assets/k_1_images/unplugged_images/down.png"
-        "/script_assets/k_1_images/unplugged_images/left.png": "/script_assets/k_1_images/unplugged_images/left.png"
-        "/script_assets/k_1_images/unplugged_images/right.png": "/script_assets/k_1_images/unplugged_images/right.png"
+        /script_assets/k_1_images/unplugged_images/up.png: /script_assets/k_1_images/unplugged_images/up.png
+        /script_assets/k_1_images/unplugged_images/down.png: /script_assets/k_1_images/unplugged_images/down.png
+        /script_assets/k_1_images/unplugged_images/left.png: /script_assets/k_1_images/unplugged_images/left.png
+        /script_assets/k_1_images/unplugged_images/right.png: /script_assets/k_1_images/unplugged_images/right.png
       K-1 Keep it Private Multi 1:
         Multiple Choice: Meerkeuze
         Which information should you <strong>not</strong> share online?: Welke informatie
           kun je beter <strong>niet</strong> on-line delen ?
-        "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png": "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png"
-        "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png": "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png"
-        "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png": "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png"
+        /script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png: /script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png
+        /script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png: /script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png
+        /script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png: /script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png
       K-1 Move It Multi 1:
         Multiple Choice: Meerkeuze
-        "/script_assets/k_1_images/unplugged_images/move_it_1_q.png": "/script_assets/k_1_images/unplugged_images/move_it_1_q.png"
+        /script_assets/k_1_images/unplugged_images/move_it_1_q.png: /script_assets/k_1_images/unplugged_images/move_it_1_q.png
         Which algorithm gets the Flurb to the flowers?: Welke algoritme leidt de Flurb
           naar de bloemen?
-        "/script_assets/k_1_images/unplugged_images/rightright.png": "/script_assets/k_1_images/unplugged_images/rightright.png"
-        "/script_assets/k_1_images/unplugged_images/leftleft.png": "/script_assets/k_1_images/unplugged_images/leftleft.png"
-        "/script_assets/k_1_images/unplugged_images/upleft.png": "/script_assets/k_1_images/unplugged_images/upleft.png"
-        "/script_assets/k_1_images/unplugged_images/leftdown.png": "/script_assets/k_1_images/unplugged_images/leftdown.png"
+        /script_assets/k_1_images/unplugged_images/rightright.png: /script_assets/k_1_images/unplugged_images/rightright.png
+        /script_assets/k_1_images/unplugged_images/leftleft.png: /script_assets/k_1_images/unplugged_images/leftleft.png
+        /script_assets/k_1_images/unplugged_images/upleft.png: /script_assets/k_1_images/unplugged_images/upleft.png
+        /script_assets/k_1_images/unplugged_images/leftdown.png: /script_assets/k_1_images/unplugged_images/leftdown.png
       K-1 Plant a Seed Multi 1:
         Multiple Choice: Meerkeuze
-        "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png": "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png"
+        /script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png: /script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png
         Which step should go at the beginning of this algorithm?: Welke stap moet
           aan het begin van dit algoritme staan?
-        "/script_assets/k_1_images/unplugged_images/poke-hole.png": "/script_assets/k_1_images/unplugged_images/poke-hole.png"
-        "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png": "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png"
-        "/script_assets/k_1_images/unplugged_images/dirty-teeth.png": "/script_assets/k_1_images/unplugged_images/dirty-teeth.png"
+        /script_assets/k_1_images/unplugged_images/poke-hole.png: /script_assets/k_1_images/unplugged_images/poke-hole.png
+        /script_assets/k_1_images/unplugged_images/foot-in-shoe.png: /script_assets/k_1_images/unplugged_images/foot-in-shoe.png
+        /script_assets/k_1_images/unplugged_images/dirty-teeth.png: /script_assets/k_1_images/unplugged_images/dirty-teeth.png
       K-1 Plant a Seed Multi 2:
         Multiple Choice: Meerkeuze
-        "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png": "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png"
+        /script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png: /script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png
         Which step should fill in the blank for this algorithm?: Welke stap moet op
           de lege plaats in dit algoritme?
-        "/script_assets/k_1_images/unplugged_images/brush-teeth.png": "/script_assets/k_1_images/unplugged_images/brush-teeth.png"
-        "/script_assets/k_1_images/unplugged_images/cover-seed.png": "/script_assets/k_1_images/unplugged_images/cover-seed.png"
-        "/script_assets/k_1_images/unplugged_images/water-pot.png": "/script_assets/k_1_images/unplugged_images/water-pot.png"
+        /script_assets/k_1_images/unplugged_images/brush-teeth.png: /script_assets/k_1_images/unplugged_images/brush-teeth.png
+        /script_assets/k_1_images/unplugged_images/cover-seed.png: /script_assets/k_1_images/unplugged_images/cover-seed.png
+        /script_assets/k_1_images/unplugged_images/water-pot.png: /script_assets/k_1_images/unplugged_images/water-pot.png
       K-1 Word Search Multi 1:
         Multiple Choice: Meerkeuze
-        "/script_assets/k_1_images/search_images/move.png, 450": "/script_assets/k_1_images/search_images/move.png,
-          450"
+        /script_assets/k_1_images/search_images/move.png, 450: /script_assets/k_1_images/search_images/move.png,
+          450
         Which blocks spell "MOVE"?: Welke blokken spellen "BEWEEG"?
-        "/script_assets/k_1_images/move_blocks/EEES.png": "/script_assets/k_1_images/move_blocks/EEES.png"
-        "/script_assets/k_1_images/move_blocks/EESS.png": "/script_assets/k_1_images/move_blocks/EESS.png"
-        "/script_assets/k_1_images/move_blocks/ESSS.png": "/script_assets/k_1_images/move_blocks/ESSS.png"
+        /script_assets/k_1_images/move_blocks/EEES.png: /script_assets/k_1_images/move_blocks/EEES.png
+        /script_assets/k_1_images/move_blocks/EESS.png: /script_assets/k_1_images/move_blocks/EESS.png
+        /script_assets/k_1_images/move_blocks/ESSS.png: /script_assets/k_1_images/move_blocks/ESSS.png
       K-1 Word Search Multi 2:
         Multiple Choice: Meerkeuze
-        "/script_assets/k_1_images/search_images/jump.png, 450": "/script_assets/k_1_images/search_images/jump.png,
-          450"
+        /script_assets/k_1_images/search_images/jump.png, 450: /script_assets/k_1_images/search_images/jump.png,
+          450
         Which blocks spell "JUMP"?: Welke blokken spellen "SPRING"?
-        "/script_assets/k_1_images/move_blocks/NNEE.png": "/script_assets/k_1_images/move_blocks/NNEE.png"
-        "/script_assets/k_1_images/move_blocks/NENE.png": "/script_assets/k_1_images/move_blocks/NENE.png"
-        "/script_assets/k_1_images/move_blocks/EENN.png": "/script_assets/k_1_images/move_blocks/EENN.png"
+        /script_assets/k_1_images/move_blocks/NNEE.png: /script_assets/k_1_images/move_blocks/NNEE.png
+        /script_assets/k_1_images/move_blocks/NENE.png: /script_assets/k_1_images/move_blocks/NENE.png
+        /script_assets/k_1_images/move_blocks/EENN.png: /script_assets/k_1_images/move_blocks/EENN.png
       K-1 Word Search Multi 3:
         Multiple Choice: Meerkeuze
-        "/script_assets/k_1_images/search_images/square.png, 700": "/script_assets/k_1_images/search_images/square.png,
-          700"
+        /script_assets/k_1_images/search_images/square.png, 700: /script_assets/k_1_images/search_images/square.png,
+          700
         Which word is spelled?: Welk woord wordt gespeld?
         SET: ZET
         SQUARE: VIERKANT
         SOUTH: ZUID
       K-1 multi 4:
         Driver and Helper: Chauffeur en Helper
-        "/script_assets/multis/driver_helper.jpg": "/script_assets/multis/driver_helper.jpg"
-        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: "Één
-          van deze jongens is de <b>chauffeur</b>.  En één is de <b>helper</b>."
+        /script_assets/multis/driver_helper.jpg: /script_assets/multis/driver_helper.jpg
+        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: Één
+          van deze jongens is de <b>chauffeur</b>.  En één is de <b>helper</b>.
         Which boy is the <large>helper</large>?: Welke jongen is het <large>hulpje</large>?
-        "/script_assets/multis/helper.jpg": "/script_assets/multis/helper.jpg"
-        "/script_assets/multis/driver.jpg": "/script_assets/multis/driver.jpg"
+        /script_assets/multis/helper.jpg: /script_assets/multis/helper.jpg
+        /script_assets/multis/driver.jpg: /script_assets/multis/driver.jpg
       K-1 multi 5:
         Driver and Helper: Chauffeur en Helper
-        "/script_assets/multis/driver_helper.jpg": "/script_assets/multis/driver_helper.jpg"
-        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: "Één
-          van deze jongens is de <b>chauffeur</b>.  En één is de <b>helper</b>."
+        /script_assets/multis/driver_helper.jpg: /script_assets/multis/driver_helper.jpg
+        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: Één
+          van deze jongens is de <b>chauffeur</b>.  En één is de <b>helper</b>.
         This time, which boy is the <large>driver</large>?: Welke jongen is dit keer
           de <large>chauffeur</large>?
-        "/script_assets/multis/helper.jpg": "/script_assets/multis/helper.jpg"
-        "/script_assets/multis/driver.jpg": "/script_assets/multis/driver.jpg"
+        /script_assets/multis/helper.jpg: /script_assets/multis/helper.jpg
+        /script_assets/multis/driver.jpg: /script_assets/multis/driver.jpg
       Math to Code 1:
         Racket Code for Math Expressions: Raketcode voor berekeningen
-        0: "? Kies de Raketcode die hoort bij de gegeven berekening. Teken een evaluatiecirkel
-          om je te helpen het juiste antwoord te vinden!"
-        1: ": Kies de Raketcode die hoort bij met de berekening. Teken een evaluatiecirkel
-          om je te helpen het juiste antwoord te vinden!"
-        "(5 + 6) * 8 / 2": "(5 + 6) * 8 / 2"
-        "(/ (* 8 2) (+ 5 6))": "(/ (* 8 2) (+ 5 6))"
-        "(* (+ 5 6) (/ 8 2))": "(* (+ 5 6) (/ 8 2))"
-        "(/ (* (+ 5 6) 8) 2)": "(/ (* (+ 5 6) 8) 2)"
-        "(/ (+ 5 6) (* 8 2))": "(/ (+ 5 6) (* 8 2))"
+        0: '? Kies de Raketcode die hoort bij de gegeven berekening. Teken een evaluatiecirkel
+          om je te helpen het juiste antwoord te vinden!'
+        1: ': Kies de Raketcode die hoort bij met de berekening. Teken een evaluatiecirkel
+          om je te helpen het juiste antwoord te vinden!'
+        (5 + 6) * 8 / 2: (5 + 6) * 8 / 2
+        (/ (* 8 2) (+ 5 6)): (/ (* 8 2) (+ 5 6))
+        (* (+ 5 6) (/ 8 2)): (* (+ 5 6) (/ 8 2))
+        (/ (* (+ 5 6) 8) 2): (/ (* (+ 5 6) 8) 2)
+        (/ (+ 5 6) (* 8 2)): (/ (+ 5 6) (* 8 2))
       Math to Code 2:
         Racket Code for Math Expressions: Raketcode voor Berekeningen
-        0: "? Kies de Raketcode die bij de berekening hoort. Teken een evaluatiecirkel
-          om je te helpen het juiste antwoord te vinden!"
-        1: ": Kies de Racketcode bij de som hoort. Teken een evaluatiecirkel om je
-          te helpen het juiste antwoord te vinden!"
+        0: '? Kies de Raketcode die bij de berekening hoort. Teken een evaluatiecirkel
+          om je te helpen het juiste antwoord te vinden!'
+        1: ': Kies de Racketcode bij de som hoort. Teken een evaluatiecirkel om je
+          te helpen het juiste antwoord te vinden!'
         4 + 6 + 20 / 2 x 3 x 7 + 2: 4 + 6 + 20 / 2 x 3 x 7 + 2
-        "(+ (+ (+ 4 6) (* (* (/ 20 2) 3) 7)) 2)": "(+ (+ (+ 4 6) (* (* (/ 20 2) 3)
-          7)) 2)"
-        "(+ (+ (* (* (/ 20 2) 3) 7) 2) (+ 4 6))": "(+ (+ (* (* (/ 20 2) 3) 7) 2) (+
-          4 6))"
-        "(+ (+ (+ 4 6) (* (* (/ 2 20) 7) 3) 2)": "(+ (+ (+ 4 6) (* (* (/ 2 20) 7)
-          3) 2)"
-        "(+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2))))))": "(+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7
-          2))))))"
+        (+ (+ (+ 4 6) (* (* (/ 20 2) 3) 7)) 2): (+ (+ (+ 4 6) (* (* (/ 20 2) 3) 7))
+          2)
+        (+ (+ (* (* (/ 20 2) 3) 7) 2) (+ 4 6)): (+ (+ (* (* (/ 20 2) 3) 7) 2) (+ 4
+          6))
+        (+ (+ (+ 4 6) (* (* (/ 2 20) 7) 3) 2): (+ (+ (+ 4 6) (* (* (/ 2 20) 7) 3)
+          2)
+        (+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2)))))): (+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2))))))
       Warmup questions:
         Coding in Racket: Programmeren in Racket
         Select the best answer to the question.: Kies het beste antwoord bij de vraag.
@@ -590,13 +589,13 @@
         left top right: links boven rechts
       Circle to code:
         Code from Circle: Code van Cirkel
-        "/script_assets/msm/Unit%202/exercise_1.png": "/script_assets/msm/Unit%202/exercise_1.png"
+        /script_assets/msm/Unit%202/exercise_1.png: /script_assets/msm/Unit%202/exercise_1.png
         Pick the Racket code that comes from the circle of evaluation!: Kies de Racketcode
           die uit de evaluatiecirkel komt!
-        "(+ 5 (* (- 6 8) 4))": "(+ 5 (* (- 6 8) 4))"
-        "(+ 5 (* 4 (- 8 6)))": "(+ 5 (* 4 (- 8 6)))"
-        "(+ (* (- 8 6) 4) 5)": "(+ (* (- 8 6) 4) 5) "
-        "(+ 5 (* (- 8 6) 4))": "(+ 5 (* (- 8 6) 4))"
+        (+ 5 (* (- 6 8) 4)): (+ 5 (* (- 6 8) 4))
+        (+ 5 (* 4 (- 8 6))): (+ 5 (* 4 (- 8 6)))
+        (+ (* (- 8 6) 4) 5): '(+ (* (- 8 6) 4) 5) '
+        (+ 5 (* (- 8 6) 4)): (+ 5 (* (- 8 6) 4))
       valid contracts multi:
         Valid Contracts: Geldige contracten
         Pick the best answer to the question.: Kies het beste antwoord op de vraag.
@@ -608,18 +607,18 @@
         'circle: 5 solid blue -> circle ': 'cirkel: 5 geheel blauw ->cirkel '
       image code from circle:
         Code from Circle: Code van Cirkel
-        "/script_assets/msm/Unit%202/exercise_5.png": "/script_assets/msm/Unit%202/exercise_5.png"
+        /script_assets/msm/Unit%202/exercise_5.png: /script_assets/msm/Unit%202/exercise_5.png
         Pick the Racket code that comes from the circle of evaluation!: Kies de Racketcode
           die uit de evaluatiekring komt!
         (rectangle (10) (2) "solid" "red"): (rechthoek (10) (2) "geheel" "rood")
         (rectangle 10 2 "solid" "red"): (rechthoek 10 2 "geheel" "rood")
         (rectangle (+ 8 2) (- 7 5) "solid" "red"): (rechthoek (+ 8 2) (-7 5) "geheel"
           "rood")
-        "(rectangle (+ 8 2) (- 7 5) solid red)": (rechthoek (+ 8 2) (-7 5) "geheel"
+        (rectangle (+ 8 2) (- 7 5) solid red): (rechthoek (+ 8 2) (-7 5) "geheel"
           "rood")
       test multi image:
         Maze Multiple Choice Two: Doolhof Meerkeuze Twee
-        "/script_assets/matches/images/head.jpg,400": "/script_assets/matches/images/head.jpg,400"
+        /script_assets/matches/images/head.jpg,400: /script_assets/matches/images/head.jpg,400
         This puzzle is all about selecting the correct flowers.: Deze puzzel gaat
           helemaal over het kiezen van de juiste bloemen.
         Instructions: Instructies
@@ -627,12 +626,12 @@
           op het juiste antwoord en dien het vervolgens in. En hier zijn enkele langere
           instructies, alleen om dingen beter uit te testen. Hoe gaat het woord naar
           de volgende regel?
-        "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
+        /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         Which flowers are yellow?: Welke bloemen zijn geel?
-        "/script_assets/matches/images/a1.jpg": "/script_assets/matches/images/a1.jpg"
-        "/script_assets/matches/images/a2.jpg": "/script_assets/matches/images/a2.jpg"
-        "/script_assets/matches/images/a3.jpg": "/script_assets/matches/images/a3.jpg"
-        "/script_assets/matches/images/a4.jpg": "/script_assets/matches/images/a4.jpg"
+        /script_assets/matches/images/a1.jpg: /script_assets/matches/images/a1.jpg
+        /script_assets/matches/images/a2.jpg: /script_assets/matches/images/a2.jpg
+        /script_assets/matches/images/a3.jpg: /script_assets/matches/images/a3.jpg
+        /script_assets/matches/images/a4.jpg: /script_assets/matches/images/a4.jpg
       test multi text:
         Presidents: presidenten
         This multiple choice is all about the presidents of the United States.: Deze

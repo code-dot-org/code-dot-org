@@ -48,9 +48,9 @@
         course2:
           The Maze: The Maze
           Suzi: Suzi
-          The Artist: "វិចិត្រករ"
+          The Artist: វិចិត្រករ
           Artist Debugging: Artist Debugging
-          Bounce: "បាល់​លោត"
+          Bounce: បាល់​លោត
           'Studio: Create a Story': 'Studio: Create a Story'
           Artist Loops: Artist Loops
           Bee Conditionals: Bee Conditionals
@@ -66,7 +66,7 @@
           'Real-life Algorithms: Paper Planes': 'Real-life Algorithms: Paper Planes'
           Getting Loopy: Getting Loopy
           Relay programming: Relay programming
-          Conditionals: "លក្ខខណ្ឌ"
+          Conditionals: លក្ខខណ្ឌ
           Binary Bracelets: Binary Bracelets
           The Big Event: The Big Event
           Your Digital Footprint: Your Digital Footprint
@@ -90,7 +90,7 @@
         course3:
           The Maze: The Maze
           'Studio: Create a Story': 'Studio: Create a Story'
-          The Artist: "វិចិត្រករ"
+          The Artist: វិចិត្រករ
           title: Course 3
           Artist Functions: Artist Functions
           Artist For Loops: Artist For Loops
@@ -101,10 +101,10 @@
           Bee Debugging: Bee Debugging
           Bee Functions: Bee Functions
           Artist Functions with Params: Artist Functions with Params
-          Bounce: "បាល់​លោត"
+          Bounce: បាល់​លោត
           Maze Conditionals: Maze Conditionals
           Artist Functions with Parameters: Artist Functions with Parameters
-          Computational Thinking: "ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ"
+          Computational Thinking: ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ
           Functional Suncatchers: Functional Suncatchers
           Songwriting Parameters: Songwriting Parameters
           Dice Race: Dice Race
@@ -170,7 +170,7 @@
           'Bee: For Loops': 'Bee: For Loops'
           title: Course 4
           'Algorithms: Tangrams': 'Algorithms: Tangrams'
-          Variables: "អថេរ"
+          Variables: អថេរ
           'Play Lab: Variables': 'Play Lab: Variables'
           'Play Lab: Functions with Parameters': 'Play Lab: Functions with Parameters'
           'Bee: Functions with Parameters': 'Bee: Functions with Parameters'

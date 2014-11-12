@@ -2,7 +2,7 @@
   data:
     unplugged:
       Unplug1:
-        title: "İnformatikaya giriş"
+        title: İnformatikaya giriş
         desc: This lesson will introduce the concept of Computer Science and explain
           what a Computer Scientist does.  It will also give students an opportunity
           to assume the role of a computer scientist.  By the end of the activity,
@@ -65,7 +65,7 @@
         - unplug5
         video: Unplug5
       Unplug6:
-        title: "Şərti ifadələr"
+        title: Şərti ifadələr
         desc: This is a class game.  After introducing the idea of conditionals, if-statements,
           and loops, the class can practice together using a pre-written program,
           a deck of cards, and luck of the draw.
@@ -104,7 +104,7 @@
         - unplug9
         video: Unplug9
       Unplug10:
-        title: "İnternet"
+        title: İnternet
         desc: In this lesson, students will pretend to flow through the Internet,
           all the while learning about web addresses, IPs and the DNS.
         pdfs:
@@ -155,7 +155,7 @@
           erase everything back to that point.
         video: C2_relay_programming
       Conditionals:
-        title: "Şərti ifadələr"
+        title: Şərti ifadələr
         desc: To learn about conditional statements, students play a card game and
           create rules like "If I draw a red card, I get a point" and "If I draw a
           black card, you get a point."

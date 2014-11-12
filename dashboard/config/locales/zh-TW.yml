@@ -5,120 +5,120 @@
         blank: is required
     attributes:
       user:
-        name: "你的名字"
-        email: "電子郵件"
-        username: "使用者名稱 "
-        password: "密碼"
-        password_confirmation: "密碼確認"
-        current_password: "目前的密碼："
-        locale: "語言"
-        age: "年齡"
-        gender: "性別"
-        edit_header: "編輯帳戶的詳細資訊"
+        name: 你的名字
+        email: 電子郵件
+        username: '使用者名稱 '
+        password: 密碼
+        password_confirmation: 密碼確認
+        current_password: 目前的密碼：
+        locale: 語言
+        age: 年齡
+        gender: 性別
+        edit_header: 編輯帳戶的詳細資訊
         error:
-          future: "不能在未來"
-  hello: "世界您好"
-  welcome_back: "歡迎回來，%{name}"
+          future: 不能在未來
+  hello: 世界您好
+  welcome_back: 歡迎回來，%{name}
   add_teacher_form:
     code_or_email:
-      label: "通過代碼或電子郵件指定一個教師："
-      placeholder: "代碼 (ABCDEF) 或電子郵件 (teacher@school.edu)"
+      label: 通過代碼或電子郵件指定一個教師：
+      placeholder: 代碼 (ABCDEF) 或電子郵件 (teacher@school.edu)
     code:
-      label: "透過班級代碼增加一位教師"
+      label: 透過班級代碼增加一位教師
       placeholder: Code (ABCDEF)
-    submit: "指定教師"
+    submit: 指定教師
   add_hint_form:
-    placeholder: "請在此處輸入您的提示"
-    submit: "添加提示"
+    placeholder: 請在此處輸入您的提示
+    submit: 添加提示
   appname: Code.org
-  stage: "階段"
-  stage_number: "階段 %{number}"
-  puzzle: "關卡"
-  trophies: "獎盃"
-  courses: "課程"
-  of: "的"
-  more: "更多"
-  less: "更少"
-  try_hoc: "試試看一小時的程式設計課程，請按一下這裡 >>"
-  try_k8intro: "或試試我們提供給 K-8 的電腦科學簡介課程 (15-25 小時)"
+  stage: 階段
+  stage_number: 階段 %{number}
+  puzzle: 關卡
+  trophies: 獎盃
+  courses: 課程
+  of: 的
+  more: 更多
+  less: 更少
+  try_hoc: 試試看一小時的程式設計課程，請按一下這裡 >>
+  try_k8intro: 或試試我們提供給 K-8 的電腦科學簡介課程 (15-25 小時)
   k8intro: 'K 8 簡介電腦科學課程 （15-25 小時） '
-  already_started: "已經開始了嗎？從這裡繼續 >>"
-  demos: "管理者：範例展示"
-  continue: "繼續 "
+  already_started: 已經開始了嗎？從這裡繼續 >>
+  demos: 管理者：範例展示
+  continue: '繼續 '
   prize: prize
-  more_info: "更多的資訊"
+  more_info: 更多的資訊
   auth:
-    sign_in_with: "以 %{provider}帳號登入"
-    signed_in: "登入!"
+    sign_in_with: 以 %{provider}帳號登入
+    signed_in: 登入!
     signed_out: You have signed out of <a href="%{url}">Code.org</a>.
     sign_out_of: You used %{provider} to sign in. <a href="%{url}">Click here</a>
       to sign out of %{provider}.
-    already_signedup: "已經註冊了嗎？"
-    notyet_signedup: "還未註冊嗎？"
+    already_signedup: 已經註冊了嗎？
+    notyet_signedup: 還未註冊嗎？
     google_oauth2: Google帳戶
     twitter: Twitter
     facebook: Facebook
-    windowslive: "微軟帳戶"
-    forgot_password: "忘記了您的密碼嗎？"
-    need_confirmation: "沒有收到確認說明嗎？"
-    need_unlock: "沒有收到解鎖說明嗎？"
+    windowslive: 微軟帳戶
+    forgot_password: 忘記了您的密碼嗎？
+    need_confirmation: 沒有收到確認說明嗎？
+    need_unlock: 沒有收到解鎖說明嗎？
   signup_form:
     overview_student: Sign up for an account to track your progress.
     overview_teacher: Teach computer science in your classroom by signing up for an
       account.<p/> You'll be able to track your students' progress and get rewards.
     no_signup_message: 您可以從 <a target="_blank"href="HTTP://learn.code.org"> 瀏覽各個階段和關卡</a>，但您需要註冊一個帳號來保存您的進度。
-    teacher_educator_guide: "請參閱教育者指南"
-    teacher_pitch: "教師註冊Code.org"
-    teacher_title: "教師註冊"
-    student_pitch: "學生註冊Code.org"
-    student_title: "學生註冊"
-    school_name: "學校名稱 （選填）"
-    school_address: "學校地址 （選填）"
-    address_placeholder: "地址、 城市、 州、 郵遞區號"
-    gender: "性別 （選填）"
-    birthday: "生日 （選填）"
-    age: "年齡"
+    teacher_educator_guide: 請參閱教育者指南
+    teacher_pitch: 教師註冊Code.org
+    teacher_title: 教師註冊
+    student_pitch: 學生註冊Code.org
+    student_title: 學生註冊
+    school_name: 學校名稱 （選填）
+    school_address: 學校地址 （選填）
+    address_placeholder: 地址、 城市、 州、 郵遞區號
+    gender: 性別 （選填）
+    birthday: 生日 （選填）
+    age: 年齡
     user_type: Are you a student or teacher?
-    submit: "登錄"
-    teacher: "你是老師嗎？"
-    valid_username: "可以使用!"
-    invalid_username: "使用者名稱須 5 個字元以上"
-    taken_username: "使用者名稱已被使用"
-    valid_password: "有效的密碼 ！"
-    invalid_password: "密碼必須要 6 個字元以上"
-    mismatch_password: "您輸入的兩次密碼不一樣"
-    student_terms: "我同意遵守Code.org的服務條款。如果我的年齡小於13歲，當我按下確認鈕送出此表單的同時，表示我已經取得父母或法定監護人的允許來使用
-      Code.org 的服務。"
-    teacher_terms: "我同意接受 Code.org服務條款的約束。"
-    additional_information: "我們還需要一些其他資訊來完成你的註冊"
+    submit: 登錄
+    teacher: 你是老師嗎？
+    valid_username: 可以使用!
+    invalid_username: 使用者名稱須 5 個字元以上
+    taken_username: 使用者名稱已被使用
+    valid_password: 有效的密碼 ！
+    invalid_password: 密碼必須要 6 個字元以上
+    mismatch_password: 您輸入的兩次密碼不一樣
+    student_terms: 我同意遵守Code.org的服務條款。如果我的年齡小於13歲，當我按下確認鈕送出此表單的同時，表示我已經取得父母或法定監護人的允許來使用
+      Code.org 的服務。
+    teacher_terms: 我同意接受 Code.org服務條款的約束。
+    additional_information: 我們還需要一些其他資訊來完成你的註冊
   signin_form:
-    title: "你已經有一個帳號了嗎？請登入"
-    login: "電子郵件或使用者名稱"
-    password: "密碼"
-    remember: "記住密碼"
-    submit: "登入"
+    title: 你已經有一個帳號了嗎？請登入
+    login: 電子郵件或使用者名稱
+    password: 密碼
+    remember: 記住密碼
+    submit: 登入
   signin:
-    try_heading: "想要在還沒註冊之前就先試試寫程式嗎？"
-    try_hoc: "第一次嘗試一小時編程"
-    try_20hours: "試試看我們的 20 小時簡介電腦科學"
+    try_heading: 想要在還沒註冊之前就先試試寫程式嗎？
+    try_hoc: 第一次嘗試一小時編程
+    try_20hours: 試試看我們的 20 小時簡介電腦科學
   signinsection:
-    welcome: "歡迎來到%{section_name}"
-    name: "選取你的名字"
-    picture: "現在找出你的秘密圖片"
-    words: "現在輸入你的通關密語"
-    login: "登入"
+    welcome: 歡迎來到%{section_name}
+    name: 選取你的名字
+    picture: 現在找出你的秘密圖片
+    words: 現在輸入你的通關密語
+    login: 登入
   password:
     reset_form:
-      title: "忘記了您的密碼嗎？"
-      email: "電子郵件地址"
-      submit: "將重設密碼的操作說明寄送給我"
+      title: 忘記了您的密碼嗎？
+      email: 電子郵件地址
+      submit: 將重設密碼的操作說明寄送給我
     change_form:
-      title: "更改您的密碼"
-      new_password: "新密碼"
-      confirm_password: "確認新密碼"
-      submit: "更改我的密碼"
+      title: 更改您的密碼
+      new_password: 新密碼
+      confirm_password: 確認新密碼
+      submit: 更改我的密碼
   welcome_email:
-    subject: "加入我(在 Code.org)的班級"
+    subject: 加入我(在 Code.org)的班級
     body: |
       點選下方的超連結來報名參加在 Code.org 的電腦科學課程(我將成為你的"老師")：
 
@@ -128,27 +128,27 @@
 
       %{name}
   follower:
-    invite_sent: "邀請已發送"
-    added_teacher: "%{name} 已新增為你的老師"
-    registered: "你已經用 %{section_name}註冊。"
+    invite_sent: 邀請已發送
+    added_teacher: '%{name} 已新增為你的老師'
+    registered: 你已經用 %{section_name}註冊。
     error:
-      signed_in: "請在登出後在進行操作"
-      username_not_found: "使用者名稱 %{username}找不到"
-      username_in_use: "%{username} 已經被使用了，請重新挑選一個。"
-      no_teacher: "找不到以 %{teacher_email_or_code}註冊的使用者。請邀請他們到這註冊，然後再嘗試新增他們。"
-      section_not_found: "找不到代碼是 %{section_code} 的班級。"
-      blank_code: "請輸入班級代碼"
-      cant_join_own_section: "抱歉, 你不能加入你自己創建的班級"
+      signed_in: 請在登出後在進行操作
+      username_not_found: 使用者名稱 %{username}找不到
+      username_in_use: '%{username} 已經被使用了，請重新挑選一個。'
+      no_teacher: 找不到以 %{teacher_email_or_code}註冊的使用者。請邀請他們到這註冊，然後再嘗試新增他們。
+      section_not_found: 找不到代碼是 %{section_code} 的班級。
+      blank_code: 請輸入班級代碼
+      cant_join_own_section: 抱歉, 你不能加入你自己創建的班級
     mail:
       invite_student:
-        subject: "加入%{teacher_name}老師在Code.org的班級。"
+        subject: 加入%{teacher_name}老師在Code.org的班級。
       student_disassociated:
         subject: Code.org 通知： %{student_name} 將你從教師名單中移除。
       teacher_disassociated:
         subject: Code.org 通知： %{teacher_name} 與您不再是師生關係了。
   reports:
     error:
-      access_denied: "您不能讀取此人的統計資訊"
+      access_denied: 您不能讀取此人的統計資訊
   redeem_prizes:
     title: 'Redeem Prizes: %{name}'
     provider: 'Provider:'
@@ -156,25 +156,25 @@
     redeem_header: 'To redeem:'
     donorschoose_register: Register as a teacher on DonorsChoose.org
     donorschoose_project: Post a project
-    donorschoose_how_to: "如何使用你的程式碼"
+    donorschoose_how_to: 如何使用你的程式碼
     success: Your prize was succesfully redeemed, see code below.
     error: Your prize could not be redeemed, please try again.
-    error_us_only: "這個獎項只提供給美國使用者。"
-    error_not_earned: "你還沒有獲得這一個獎項。"
-    error_already_redeemed: "您獲得的獎項已經兌現。"
-    no_prizes_available: "很抱歉，目前我們無法提供獎品。"
-    teacher_info_required: "教師的獎勵需要學校名稱跟地址:"
-    teacher_email_required: "老師獎需要一個已確認電子郵件地址："
+    error_us_only: 這個獎項只提供給美國使用者。
+    error_not_earned: 你還沒有獲得這一個獎項。
+    error_already_redeemed: 您獲得的獎項已經兌現。
+    no_prizes_available: 很抱歉，目前我們無法提供獎品。
+    teacher_info_required: '教師的獎勵需要學校名稱跟地址:'
+    teacher_email_required: 老師獎需要一個已確認電子郵件地址：
     confirm:
-      title: "請確認"
-      'no': "否"
-      'yes': "確定"
+      title: 請確認
+      'no': 否
+      'yes': 確定
       msg: Are you sure you want to claim the %{prize_name} prize?
       msg_student: 'NOTE: You can only choose one type of prize.'
-      msg_publicschool: "請確認您是美國公立學校的老師。"
-      msg_visit_website: "訪問網站"
+      msg_publicschool: 請確認您是美國公立學校的老師。
+      msg_visit_website: 訪問網站
     providers:
-      apple_itunes: "$10 iTunes Gift Card"
+      apple_itunes: $10 iTunes Gift Card
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10 GB 的 Dropbox 空間
@@ -183,14 +183,14 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: "$10 Skype credit"
+      skype: $10 Skype credit
     msg:
       choose: 'Choose a prize:'
       choose_teacher: 'Click on the logo below to claim your prize:'
-      earned: "你贏得了獎品！（僅適用於美國學生）"
+      earned: 你贏得了獎品！（僅適用於美國學生）
       not_earned_title: Finish the tutorial, earn rewards (U.S. students only)
-      not_earned: "學習所有的電腦科學概念，並收集完所有 %{num_trophies}個獎盃，就能獲得真實世界的獎品。您可以選擇 10 GB 的
-        Dropbox 空間，10美元的Skype儲值或是免費遊戲下載。注意：獎項僅適用於美國學生，並僅有在獎品供應持續的情況下適用。"
+      not_earned: 學習所有的電腦科學概念，並收集完所有 %{num_trophies}個獎盃，就能獲得真實世界的獎品。您可以選擇 10 GB 的
+        Dropbox 空間，10美元的Skype儲值或是免費遊戲下載。注意：獎項僅適用於美國學生，並僅有在獎品供應持續的情況下適用。
       teacher:
         earned: 15 個以上的學生已經收集完所有 %{num_trophies} 個獎盃。您贏得了教師獎章！(僅限美國教師)
         not_earned_title: Teach the class, earn up to $1,000 in <a target="_blank"
@@ -207,75 +207,75 @@
             href="http://DonorsChoose.org">DonorsChoose.org</a>儲值。<a target="_blank"
             href="http://DonorsChoose.org">DonorsChoose.org</a>儲值僅限美國公立學校教師使用。
   crud:
-    new_model: "新 %{model}"
-    show: "顯示 "
-    edit: "编辑"
-    edit_model: "編輯 %{model}"
-    update: "更新 "
-    destroy: "銷毀"
-    back: "返回"
-    confirm: "是否確定？"
-    created: "%{model} 已建立。"
-    updated: "%{model} 已更新。"
-    destroyed: "%{model} 已成功刪除。"
-    access_denied: "你沒有使用 %{model}的權限。"
+    new_model: 新 %{model}
+    show: '顯示 '
+    edit: 编辑
+    edit_model: 編輯 %{model}
+    update: '更新 '
+    destroy: 銷毀
+    back: 返回
+    confirm: 是否確定？
+    created: '%{model} 已建立。'
+    updated: '%{model} 已更新。'
+    destroyed: '%{model} 已成功刪除。'
+    access_denied: 你沒有使用 %{model}的權限。
   nav:
     header:
       finished_hoc: 我已經完成我的"一小時程式設計"課程。
-      sign_in_to_save: "登入以儲存進度"
+      sign_in_to_save: 登入以儲存進度
       free_play:
-        playlab: "製作一個App"
-        artist: "畫些什麼東西"
+        playlab: 製作一個App
+        artist: 畫些什麼東西
     user:
-      classroom: "我的學生"
-      label: "嗨 %{username}"
-      stats: "我的進度"
-      settings: "我的帳號"
-      prizes: "獎項"
-      logout: "登出"
-      signin: "登入"
-      signup: "註冊帳號"
-      already_registered: "已經註冊了嗎？"
+      classroom: 我的學生
+      label: 嗨 %{username}
+      stats: 我的進度
+      settings: 我的帳號
+      prizes: 獎項
+      logout: 登出
+      signin: 登入
+      signup: 註冊帳號
+      already_registered: 已經註冊了嗎？
     popup:
-      progress: "您的進度"
-      lines: "全部程式碼行數: %{lines}"
-      close: "關閉"
-      mastery: "觀念"
-      puzzle_map: "階段"
-      prizes: "收集所有 %{total_trophies} 個獎盃，並贏取獎品 ！"
-      prize_earned: "所有%{total_trophies}個獎盃都收集完成。恭喜你贏得獎品！（僅限美國公立學校學生）"
-      prize_us_only: "（僅適用于美國學生）"
-      prizes_link: "更多的資訊"
+      progress: 您的進度
+      lines: '全部程式碼行數: %{lines}'
+      close: 關閉
+      mastery: 觀念
+      puzzle_map: 階段
+      prizes: 收集所有 %{total_trophies} 個獎盃，並贏取獎品 ！
+      prize_earned: 所有%{total_trophies}個獎盃都收集完成。恭喜你贏得獎品！（僅限美國公立學校學生）
+      prize_us_only: （僅適用于美國學生）
+      prizes_link: 更多的資訊
   teacher:
     title:
-      one: "你的老師："
-      other: "你的老師："
-    remove: "（將教師移除）"
+      one: 你的老師：
+      other: 你的老師：
+    remove: （將教師移除）
     confirm:
-      remove: "你確認要刪除這個老師嗎？"
-    tools: "教師工具"
+      remove: 你確認要刪除這個老師嗎？
+    tools: 教師工具
     followers:
-      section: "班别："
-      stages: "要顯示的階段:"
+      section: 班别：
+      stages: '要顯示的階段:'
       show_past: 'Show student activity (%{bullet_html}) in the past:'
       levels_key: Levels key
       perfect: Completed, perfect
-      completed: "完成了，但是用到太多程式積木"
+      completed: 完成了，但是用到太多程式積木
       tried: Tried, but not completed
-      not_tried: "還沒試過"
+      not_tried: 還沒試過
       activity: Indicates student activity in the last %{hours} %{plural}
-      no_section: "沒有指定班級"
-      trophies: "獎盃"
+      no_section: 沒有指定班級
+      trophies: 獎盃
     students:
-      name: "你的名字"
-      username: "使用者名稱 "
-      password: "密碼"
-      manage: "學生管理"
-      dashboard: "到教師主控台"
-      add: "新增學生"
-      remove: "刪除學生"
-      confirm_remove: "你確定要刪除這個學生嗎？"
-      help_reassign: "要將你的學生分成不同班級，請選取要指派到新班級的學生"
+      name: 你的名字
+      username: '使用者名稱 '
+      password: 密碼
+      manage: 學生管理
+      dashboard: 到教師主控台
+      add: 新增學生
+      remove: 刪除學生
+      confirm_remove: 你確定要刪除這個學生嗎？
+      help_reassign: 要將你的學生分成不同班級，請選取要指派到新班級的學生
       help_register: Instead of making you spend a lot of time individually importing
         student data, you can set up your class quickly by asking them to signup.
         Your students will need to choose usernames and passwords, but they WILL NOT
@@ -283,90 +283,90 @@
         you will be able to reset it for them.
       register: Ask your students to register themselves
       vist: Ask your students to visit
-      section_code: "並輸入他們的班級代碼:"
-      first_please: "首先，請 %{add_section}"
+      section_code: '並輸入他們的班級代碼:'
+      first_please: 首先，請 %{add_section}
       for: For
       enter: 'enter:'
     sections:
-      add: "增加班級"
-      manage: "管理班級"
-      section: "班級"
-      students: "學生"
-      section_code: "班級代碼"
-      add_section_code: "增加學生班級代碼"
-      secret: "密碼類型"
-      grade: "年級"
-      course: "課程"
-      rename: "重新命名"
-      edit: "編輯"
-      delete: "刪除"
-      confirm_delete: "你確定要刪除這個班級嗎？"
-      email: "在電子郵件中發送"
-    rollup: "進度表"
-    activity: "最近的班級活動"
-    user_not_found: "無法找到該名老師或學生"
-    cant_remove_student_no_email: "因為 %{student_name} 並未註冊電子郵件，所以無法將 %{student_name}
-      從你的學生中移除"
-    cant_remove_teacher_no_email: "因為您尚未註冊電子郵件，所以無法移除你的老師 %{teacher_name}"
-    student_teacher_disassociated: "%{student_name}的老師%{teacher_name}已經被移除"
+      add: 增加班級
+      manage: 管理班級
+      section: 班級
+      students: 學生
+      section_code: 班級代碼
+      add_section_code: 增加學生班級代碼
+      secret: 密碼類型
+      grade: 年級
+      course: 課程
+      rename: 重新命名
+      edit: 編輯
+      delete: 刪除
+      confirm_delete: 你確定要刪除這個班級嗎？
+      email: 在電子郵件中發送
+    rollup: 進度表
+    activity: 最近的班級活動
+    user_not_found: 無法找到該名老師或學生
+    cant_remove_student_no_email: 因為 %{student_name} 並未註冊電子郵件，所以無法將 %{student_name}
+      從你的學生中移除
+    cant_remove_teacher_no_email: 因為您尚未註冊電子郵件，所以無法移除你的老師 %{teacher_name}
+    student_teacher_disassociated: '%{student_name}的老師%{teacher_name}已經被移除'
   user:
-    email_confirm_needed: "電子郵件地址尚未被確認："
-    email_resend_confirm: "重新發送確認指令"
-    new_password_hint: "（如果你不想變更它就保留空白）"
-    current_password_hint: "（我們需要您現在的密碼以確認您的更改）"
+    email_confirm_needed: 電子郵件地址尚未被確認：
+    email_resend_confirm: 重新發送確認指令
+    new_password_hint: （如果你不想變更它就保留空白）
+    current_password_hint: （我們需要您現在的密碼以確認您的更改）
     cancel:
-      title: "取消我的帳戶"
-      hint: "不開心嗎？"
-      button: "取消我的帳戶"
+      title: 取消我的帳戶
+      hint: 不開心嗎？
+      button: 取消我的帳戶
   user_level:
-    completed: "已完成"
-    tried: "已試過"
+    completed: 已完成
+    tried: 已試過
   user_stats:
-    recent_activity: "最近的活動"
-    show_more: "顯示更多"
-    classroom_activity: "不用電腦的活動"
+    recent_activity: 最近的活動
+    show_more: 顯示更多
+    classroom_activity: 不用電腦的活動
   home:
     title: Code Studio
     all_courses: Overview of Courses 1, 2, and 3
     lesson_plans: Lesson plans
-    signin_message: "已經註冊了? %{link}"
-    student_reg_link: "學生登入"
-    teacher_reg_link: "教師登入"
-    signin_directions: "使用一個帳戶來追蹤進度和獲取獎勵。 <br/>教師們，追蹤您所有課程。"
-    teacher_dashboard: "瀏覽進度表"
-    teacher_student_count_one: "您有 %{count} 位學生."
-    teacher_student_count: "您有 %{count} 位學生."
+    signin_message: 已經註冊了? %{link}
+    student_reg_link: 學生登入
+    teacher_reg_link: 教師登入
+    signin_directions: 使用一個帳戶來追蹤進度和獲取獎勵。 <br/>教師們，追蹤您所有課程。
+    teacher_dashboard: 瀏覽進度表
+    teacher_student_count_one: 您有 %{count} 位學生.
+    teacher_student_count: 您有 %{count} 位學生.
     teacher_averages: '你的學生平均下來獲得了 %{trophy_average}/%{trophy_max} "概念通達"獎盃。 '
-    teacher_print_certificates: "為完成此課程的學生列印證書"
-    teacher_read_blog: "在Educator Blog閱讀我們的最新資訊"
-    classroom: "您的教室"
-    student_progress: "您的學習進度"
+    teacher_print_certificates: 為完成此課程的學生列印證書
+    teacher_read_blog: 在Educator Blog閱讀我們的最新資訊
+    classroom: 您的教室
+    student_progress: 您的學習進度
     student_stats: 你已經獲得 %{trophy_count}/%{trophy_max} "概念通達"獎盃
-    student_left_off: "你離開的地方："
-    student_finished: "你已經完成所有練習課程，挑戰另外的 %{online_link} 或到% {local_school_link} "
-    local_school: "當地的學校"
-    online: "在線上"
-    see_details: "查看詳細資訊"
-    prize_info: "（僅限於美國） 參與獎：完成的學生給予 10 元禮品卡以及公立學校教師最高 1000 元的課堂獎勵。"
-    tryfirst: "或者，你也可以先試試，之後再 註冊："
-    trynow: "快來試試"
+    student_left_off: 你離開的地方：
+    student_finished: '你已經完成所有練習課程，挑戰另外的 %{online_link} 或到% {local_school_link} '
+    local_school: 當地的學校
+    online: 在線上
+    see_details: 查看詳細資訊
+    prize_info: （僅限於美國） 參與獎：完成的學生給予 10 元禮品卡以及公立學校教師最高 1000 元的課堂獎勵。
+    tryfirst: 或者，你也可以先試試，之後再 註冊：
+    trynow: 快來試試
     add_hint_help: Please help us to add smart hints to Code.org tutorials
-    20hour_overview: "這 20 小時課程將介紹電腦科學和程式設計的核心概念。本課程是設計給 K-8 年級的學生在教室內使用，但對所有年齡的人來說，也能把本課程當成興趣來學習。"
+    20hour_overview: 這 20 小時課程將介紹電腦科學和程式設計的核心概念。本課程是設計給 K-8 年級的學生在教室內使用，但對所有年齡的人來說，也能把本課程當成興趣來學習。
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
-    heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
-    heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
-    heading_legacy: "<h2>Our previous course for</h2><h1>Existing Students</h1>"
+    heading_elementary: <h2>20 hour courses for</h2><h1>Elementary Students</h1>
+    heading_apps: <h2>Fun for</h2><h1>Everybody</h1>
+    heading_legacy: <h2>Our previous course for</h2><h1>Existing Students</h1>
     gallery:
       your_turtle: My Art
       your_studio: My Apps
   gender:
-    male: "男性"
-    female: "女性"
-    none: "不願回答"
+    male: 男性
+    female: 女性
+    none: 不願回答
   user_type:
-    student: "學生 "
+    student: '學生 '
     teacher: Teacher
   footer:
     help_from_html: 本課程由來自 <a href="http://www.google.com">Google</a>, <a href="http://www.microsoft.com">Microsoft</a>,
@@ -374,29 +374,29 @@
     art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 <a href="http://www.rovio.com">Rovio
       Entertainment Ltd</a>. 版權所有.<br/> Plants vs. Zombies&trade; & &copy; 2013 <a
       href="http://www.ea.com">Electronic Arts Inc.</a>.版權所有.
-    feedback: "提供回饋"
-    translate: "幫我們翻譯成您國家的語言"
+    feedback: 提供回饋
+    translate: 幫我們翻譯成您國家的語言
     support: Support
     support_url: http://support.code.org
-    tos: "服務條款"
-    privacy: "隱私權政策"
+    tos: 服務條款
+    privacy: 隱私權政策
     secure: Secure Version
   reference_area:
-    title: "需要幫忙嗎？"
-    subtitle: "看看這些影片和提示"
-    teacher: "參考解決方案"
-    auth_error: "您無權查看該解決方案。"
+    title: 需要幫忙嗎？
+    subtitle: 看看這些影片和提示
+    teacher: 參考解決方案
+    auth_error: 您無權查看該解決方案。
     submit: Update Artist Location
     direction: Start Direction
   video:
-    tab: "影片"
-    notes: "看不到影片嗎？顯示文字說明。"
+    tab: 影片
+    notes: 看不到影片嗎？顯示文字說明。
     notes_coming_soon: Notes for this video coming soon.
-    autoplay_option: "自動播放影片"
-    download: "下載影片"
+    autoplay_option: 自動播放影片
+    download: 下載影片
   compatability:
     working:
-      header: "我們正在設法支援您的瀏覽器。"
+      header: 我們正在設法支援您的瀏覽器。
       message: Code.org uses modern web technology. This makes the site faster to
         use. Your browser doesn't support all the features required, and you may experience
         issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting
@@ -404,25 +404,25 @@
         your browser to a supported version</a>.
       hide_this_warning: Hide this warning
     upgrade:
-      header: "請升級您的瀏覽器。"
+      header: 請升級您的瀏覽器。
       message: Code.org uses modern web technology. This makes the site faster to
         use. Unfortunately your browser doesn't support all the features required
         to run this part of the site.<br/><br/>Install a browser on our supported
         browsers list to continue. You can <a href='#'>try viewing the page</a>, but
         expect functionality to be broken.
       button: Take me to the list of supported browsers
-  slow_loading: "請在等等，這次讀取的時間比較久一點......."
-  try_reloading: "請嘗試重新載入網頁"
-  next_stage: "完成 ！繼續邁向下一個階段"
-  download_pdf: "開啟教學計畫"
+  slow_loading: 請在等等，這次讀取的時間比較久一點.......
+  try_reloading: 請嘗試重新載入網頁
+  next_stage: 完成 ！繼續邁向下一個階段
+  download_pdf: 開啟教學計畫
   view_lesson_plan: View Lesson Plan
   pdf_download: Download PDF
   share_code:
-    title: "按一下'執行程式'來看看程式執行結果"
+    title: 按一下'執行程式'來看看程式執行結果
     bounce_og_title: Check out my Bounce Game
-    flappy_og_title: "快來嘗試我設計的Flappy Game"
+    flappy_og_title: 快來嘗試我設計的Flappy Game
     studio_og_title: Check out my story
-    og_description: "我用 Code.org寫了自己的程式碼"
+    og_description: 我用 Code.org寫了自己的程式碼
     phone_number_not_allowed: It looks like there is a phone number in it. Try changing
       the text.
     address_not_allowed: It looks like there is an address in it. Try changing the
@@ -431,19 +431,19 @@
     profanity_not_allowed: It looks like there is profanity in it. Try changing the
       text.
   builder:
-    created: "您創建了一個新的腳本。"
-    destroyed: "你毀了一個腳本。"
-    manage: "管理腳本"
-    view: "檢視"
-    back: "返回腳本"
+    created: 您創建了一個新的腳本。
+    destroyed: 你毀了一個腳本。
+    manage: 管理腳本
+    view: 檢視
+    back: 返回腳本
     success: You successfully edited the blocks.
     level:
-      create: "建立新水準"
-      current: "當前水平"
-      unused: "未使用狀態"
+      create: 建立新水準
+      current: 當前水平
+      unused: 未使用狀態
   upsell:
     hoc:
-      title: "一小時的程式設計課程"
+      title: 一小時的程式設計課程
       body: Try the basics of computer science. Millions have given it a shot.
     flappy:
       title: Flappy遊戲設計
@@ -463,13 +463,13 @@
     want_to_make_your_own: Want to make your own?
     more: More &rarr;
     caption_by_name_age: by %{name}, age %{age}
-    caption_time_ago: "%{time_ago} ago"
+    caption_time_ago: '%{time_ago} ago'
   landing:
     prerelease: This page is still under development.
     feedback: Give Feedback
     report_bug: Report Bug
     support: Get Help
-    support_url: "//support.code.org"
+    support_url: //support.code.org
   multi:
     wrong_title: Incorrect answer
     wrong_body: The answer you've entered is not correct.  Please try again!
@@ -480,8 +480,10 @@
     wrong_body: The solution you've entered is not correct.  Please try again!
     correct_title: Correct
     correct_body: That is the correct answer.
+  text_match:
+    placeholder: Enter your answer here
   dialog:
-    ok: "確定"
+    ok: 確定
   time:
     hour: 1 hour
     day: day
@@ -491,15 +493,15 @@
       name:
         20-hour:
           title: 'K 8 簡介電腦科學課程 （15-25 小時） '
-          description: "這 20 小時課程將介紹電腦科學和程式設計的核心概念。本課程是設計給 K-8 年級的學生在教室內使用，但對所有年齡的人來說，也能把本課程當成興趣來學習。"
+          description: 這 20 小時課程將介紹電腦科學和程式設計的核心概念。本課程是設計給 K-8 年級的學生在教室內使用，但對所有年齡的人來說，也能把本課程當成興趣來學習。
         Hour of Code:
-          title: "一小時的程式設計課程"
+          title: 一小時的程式設計課程
           description: ''
         edit-code:
-          title: "編輯程式碼"
+          title: 編輯程式碼
           description: ''
         events:
-          title: "事件類別"
+          title: 事件類別
           description: ''
         builder:
           title: Builder
@@ -511,7 +513,7 @@
           title: Jigsaw
           description: ''
         step:
-          title: "步驟"
+          title: 步驟
           description: ''
         sample_level_builder:
           title: Sample Level Builder
@@ -528,3 +530,8 @@
   zendesk_too_young_message: Sorry, younger users may not sign in to our support site.
     You may browse <a href="http://support.code.org">support.code.org</a> without
     signing in or ask your parent or teacher to contact us for you.
+  progress:
+    not_completed: not completed
+    completed_too_many_blocks: completed, too many blocks
+    completed_perfect: completed, perfect
+    furthest_level_attempted: furthest level attempted

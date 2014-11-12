@@ -1,0 +1,8 @@
+:css
+  textarea { width: 100% }
+- if @filename
+  = "Filename: #{@filename}"
+.script_text
+  - cols = @dsl_file ? @dsl_file.lines.max_by(&:length).length : 20
+  - rows = @dsl_file ? @dsl_file.lines.count + 1 : 10
+  = text_area_tag('level[dsl_text]', @dsl_file || (@level.dsl_default), rows: rows, cols: cols, style: 'width:500px')

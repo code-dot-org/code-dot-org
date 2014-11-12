@@ -1,38 +1,38 @@
-nl:
+"nl":
   data:
     script:
       name:
         test:
           "Jigsaw: Learn to drag and drop": 'Puzzel: Leer hoe je kan knippen en plakken'
-          The Maze: Het Doolhof
-          Multi: meerdere
-          Match: Overeenkomst
-          Math Image: Wiskunde plaatje
-          title: Test Cursus
-          description: Een interne test cursus.
+          The Maze: "Het Doolhof"
+          Multi: "meerdere"
+          Match: "Overeenkomst"
+          Math Image: "Wiskunde plaatje"
+          title: "Test Cursus"
+          description: "Een interne test cursus."
         course1:
           "Jigsaw: Learn to drag and drop": 'Puzzel: Leer hoe je kan knippen en plakken'
           "Maze: Sequence": 'Doolhof: Nummering'
           "Maze: Debugging": 'Doolhof: foutopsporing'
           "Artist 1: Intro": 'Kunstenaar 1: Intro'
-          Artists 2: Kunstenaars 2
-          Spelling Bee: Spellingswedstrijd
-          Spelling Bee not blockly: Spelwedstrijd niet blockly
+          Artists 2: "Kunstenaars 2"
+          Spelling Bee: "Spellingswedstrijd"
+          Spelling Bee not blockly: "Spelwedstrijd niet blockly"
           "Bee 1: Intro": 'Bij 1: Intro'
           "Maze 2: Loops": 'Doolhof 2: Loops'
           "Bee 2: Loops": 'Bij 2: Loops'
           Multi & Match: 'Multi & Match'
           K-1 Flappy: K-1 Flappy
-          Flappy non blockly: Flappy niet blockly
-          title: Course 1
-          Artist 2: Kunstenaar 2
-          Happy Maps: Vrolijke Routes
+          Flappy non blockly: "Flappy niet blockly"
+          title: "Course 1"
+          Artist 2: "Kunstenaar 2"
+          Happy Maps: "Vrolijke Routes"
           Move it, Move it: Beweeg, Beweeg
           "Real-life Algorithms: Plant a Seed": 'Algoritmen in het echte leven: Plant een zaadje'
-          Building a Foundation: Een Basis Bouwen
-          Getting Loopy: Mooie linten
-          The Big Event: De grote gebeurtenis
-          Going Places Safely: Veilig Reizen
+          Building a Foundation: "Een Basis Bouwen"
+          Getting Loopy: "Mooie linten"
+          The Big Event: "De grote gebeurtenis"
+          Going Places Safely: "Veilig Reizen"
           description: "Cursus 1 is ontwikkeld om voor vroege lezers het mogelijk te maken om computerprogramma's te maken die ze helpen met het omgaan met anderen, met het ontwikkelen van probleemoplossende vaardigheden en vol te houden in moeilijke taken. Aan het eind van de cursus maakt de student een zelfgemaakte spel of verhaal die ze kunnen delen. aanbevolen voor groep 1 - groep 3."
           "Bee: Sequence": 'Bij: volgorde'
           "Artist: Sequence": 'Kunstenaar: volgorde'
@@ -40,33 +40,33 @@ nl:
           "Maze: Loops": 'Doolhof: lussen'
           "Bee: Loops": 'Bij: lussen'
           "Studio: Create a Story": 'Speel Lab: Maak een Verhaal'
-          description_short: Course 1 is designed for early readers. Recommended for grades K-1.
+          description_short: "Course 1 is designed for early readers. Recommended for grades K-1."
           "Artist: Loops": 'Kustenaar: lussen'
         course2:
-          The Maze: Het Doolhof
-          Suzi: Suzi
-          The Artist: De Artiest
-          Artist Debugging: Kunstenaar foutopsporing
-          Bounce: Stuiter
+          The Maze: "Het Doolhof"
+          Suzi: "Suzi"
+          The Artist: "De Artiest"
+          Artist Debugging: "Kunstenaar foutopsporing"
+          Bounce: "Stuiter"
           "Studio: Create a Story": 'Speel Lab: Maak een Verhaal'
-          Artist Loops: Kustenaar lussen
-          Bee Conditionals: Bij voorwaardelijke instructies
-          Flappy: Flappy
-          title: Cursus 2
-          Bee Loops: Bij lussen
-          Artist Functions: Kunstenaar functies
-          The Artist Debugging: De kunstenaar foutopsporing
-          Bee Debugging: Bij foutopsporing
-          Bee Functions: Bij functies
-          Maze Loops: Doolhof lussen
-          Graph Paper Programming: Programmeren op Ruitjespapier
+          Artist Loops: "Kustenaar lussen"
+          Bee Conditionals: "Bij voorwaardelijke instructies"
+          Flappy: "Flappy"
+          title: "Cursus 2"
+          Bee Loops: "Bij lussen"
+          Artist Functions: "Kunstenaar functies"
+          The Artist Debugging: "De kunstenaar foutopsporing"
+          Bee Debugging: "Bij foutopsporing"
+          Bee Functions: "Bij functies"
+          Maze Loops: "Doolhof lussen"
+          Graph Paper Programming: "Programmeren op Ruitjespapier"
           "Real-life Algorithms: Paper Planes": 'Real-life Algoritmes: Papieren Vliegtuigjes'
-          Getting Loopy: Mooie linten
-          Relay programming: Estafette Programmeren
-          Conditionals: Voorwaardelijke instructies
-          Binary Bracelets: Binaire armbanden
-          The Big Event: De grote gebeurtenis
-          Your Digital Footprint: Je Digitale Voetafdruk
+          Getting Loopy: "Mooie linten"
+          Relay programming: "Estafette Programmeren"
+          Conditionals: "Voorwaardelijke instructies"
+          Binary Bracelets: "Binaire armbanden"
+          The Big Event: "De grote gebeurtenis"
+          Your Digital Footprint: "Je Digitale Voetafdruk"
           description: "Les 2 is ontwikkeld voor studenten die kunnen lezen en geen eerdere programeerervaring hebben. In deze les maken studenten programma's om problemen op te lossen en ontwikkelen ze interactieve spellen en verhalen die ze kunnen delen. Aanbevolen voor graad 2-5."
           "Maze: Sequence": 'Doolhof: Nummering'
           "Artist: Sequence": 'Kunstenaar: volgorde'
@@ -81,34 +81,34 @@ nl:
           "Maze: Sequence2": 'Doolhof: Volgorde2'
           "Artist: Nested Loops": 'Kunstenaar: geneste lussen'
         course3:
-          The Maze: Het Doolhof
+          The Maze: "Het Doolhof"
           "Studio: Create a Story": 'Speel Lab: Maak een Verhaal'
-          The Artist: De Artiest
-          title: Cursus 3
-          Artist Functions: Kunstenaar functies
-          Artist For Loops: Kunstenaar wanneer lussen
-          Artist Nested Loops: Kunstenaar geneste lussen
-          Bee Conditionals: Bij voorwaardelijke instructies
-          Bee Nested Loops: Bij geneste lussen
-          Bee Debuggin: Bij foutopsporing
-          Bee Debugging: Bij foutopsporing
-          Bee Functions: Bij functies
-          Artist Functions with Params: Kunstenaar functies met parameters
-          Bounce: Stuiter
-          Maze Conditionals: Doolhof voorwaardelijke instructies
-          Artist Functions with Parameters: Kunstenaar functies met parameters
-          Computational Thinking: Rekenend Denken
-          Functional Suncatchers: Functionele Zonnevangers
-          Songwriting Parameters: Songwriting Parameters
-          Dice Race: Dobbelstenen Race
-          Internet: Internet
-          Crowdsourcing: Crowdsourcing
-          Digital Citizenship: Digitale Burgerschap
+          The Artist: "De Artiest"
+          title: "Cursus 3"
+          Artist Functions: "Kunstenaar functies"
+          Artist For Loops: "Kunstenaar wanneer lussen"
+          Artist Nested Loops: "Kunstenaar geneste lussen"
+          Bee Conditionals: "Bij voorwaardelijke instructies"
+          Bee Nested Loops: "Bij geneste lussen"
+          Bee Debuggin: "Bij foutopsporing"
+          Bee Debugging: "Bij foutopsporing"
+          Bee Functions: "Bij functies"
+          Artist Functions with Params: "Kunstenaar functies met parameters"
+          Bounce: "Stuiter"
+          Maze Conditionals: "Doolhof voorwaardelijke instructies"
+          Artist Functions with Parameters: "Kunstenaar functies met parameters"
+          Computational Thinking: "Rekenend Denken"
+          Functional Suncatchers: "Functionele Zonnevangers"
+          Songwriting Parameters: "Songwriting Parameters"
+          Dice Race: "Dobbelstenen Race"
+          Internet: "Internet"
+          Crowdsourcing: "Crowdsourcing"
+          Digital Citizenship: "Digitale Burgerschap"
           Farmer - While Loops: 'Boer - Terwijl Lussen'
-          description: Cursus 3 is ontwikkeld voor leerlingen die cursus 2 hebben gevolgd. Leerlingen zullen dieper ingaan op de programmeeronderwerpen die zijn geïntroduceerd in de vorige cursussen om flexibelere oplossingen voor complexere problemen te vinden. Aan het eind van deze cursus maken studenten interactieve verhalen en spellen, die ze met iedereen kunnen delen.
+          description: "Cursus 3 is ontwikkeld voor leerlingen die cursus 2 hebben gevolgd. Leerlingen zullen dieper ingaan op de programmeeronderwerpen die zijn geïntroduceerd in de vorige cursussen om flexibelere oplossingen voor complexere problemen te vinden. Aan het eind van deze cursus maken studenten interactieve verhalen en spellen, die ze met iedereen kunnen delen."
           "Studio: Create a Game": 'Speel Lab - Maak een Spel'
-          Maze: Doolhof
-          Artist: Kunstenaar
+          Maze: "Doolhof"
+          Artist: "Kunstenaar"
           "Artist: Functions": 'Kunstenaar: Functies'
           "Bee: Functions": 'Bij: functies'
           "Bee: Conditionals": 'Bij: voorwaardelijke instructies'
@@ -118,8 +118,8 @@ nl:
           "Bee: Nested Loops": 'Bij: geneste lussen'
           "Bee: Debugging": 'Bij: Foutopsporing'
           description_short: 'Course 3 is a follow-up to Course 2.  Recommended for grades 4-5.'
-          Maze2: Doolhof2
-          Artist2: Kunstenaar2
+          Maze2: "Doolhof2"
+          Artist2: "Kunstenaar2"
           "Artist: Functions2": 'Kunstenaar: Functies2'
           "Bee: Functions2": 'Bij: Functies2'
           "Bee: Conditionals2": 'Bij: voorwaardelijke instructies2'
@@ -129,32 +129,32 @@ nl:
           "Bee: Nested Loops2": 'Bij: geneste lussen2'
           "Bee: Debugging2": 'Bij: Foutopsporing2'
           "Artist: Patterns": 'Kunstenaar: Patronen'
-          Songwriting: Songwriting
+          Songwriting: "Songwriting"
         msm:
-          title: Middelbare School Wiskunde
-          description: Particuliere werk in uitvoering voor Middelbare School Wiskunde.
-          Graph Paper Programming: Programmeren op Ruitjespapier
-          Assessments: Toetsen
-          Unit 1: Eenheid 1
-          Unit 2: Eenheid 2
+          title: "Middelbare School Wiskunde"
+          description: "Particuliere werk in uitvoering voor Middelbare School Wiskunde."
+          Graph Paper Programming: "Programmeren op Ruitjespapier"
+          Assessments: "Toetsen"
+          Unit 1: "Eenheid 1"
+          Unit 2: "Eenheid 2"
         playlab:
-          title: Speel Lab
-          description: Maak een verhaal of een spel met Speel Lab!
-          Play Lab: Speel Lab
-          description_short: Maak een verhaal of een spel met Speel Lab!
+          title: "Speel Lab"
+          description: "Maak een verhaal of een spel met Speel Lab!"
+          Play Lab: "Speel Lab"
+          description_short: "Maak een verhaal of een spel met Speel Lab!"
         artist:
-          title: Kunstenaar
-          description: Teken coole plaatjes en ontwerpen met de Kunstenaar!
-          Artist: Kunstenaar
-          description_short: Teken coole plaatjes en ontwerpen met de Kunstenaar!
+          title: "Kunstenaar"
+          description: "Teken coole plaatjes en ontwerpen met de Kunstenaar!"
+          Artist: "Kunstenaar"
+          description_short: "Teken coole plaatjes en ontwerpen met de Kunstenaar!"
         course4:
-          description_short: Students taking Course 4 should have already taken Courses 2 and 3.
-          description: Course 4 is designed for students who have taken Course 2 and 3. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8.
+          description_short: "Students taking Course 4 should have already taken Courses 2 and 3."
+          description: "Course 4 is designed for students who have taken Course 2 and 3. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8."
           "Artist: Variables": 'Artist: Variables'
           "Bee: For Loops": 'Bee: For Loops'
-          title: Course 4
+          title: "Course 4"
           "Algorithms: Tangrams": 'Algorithms: Tangrams'
-          Variables: Variabelen
+          Variables: "Variabelen"
           "Play Lab: Variables": 'Play Lab: Variables'
           "Play Lab: Functions with Parameters": 'Play Lab: Functions with Parameters'
           "Bee: Functions with Parameters": 'Bee: Functions with Parameters'

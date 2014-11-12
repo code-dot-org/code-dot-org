@@ -24,7 +24,7 @@
           Multi & Match: Multi & Match
           K-1 Flappy: K-1 Flakse
           Flappy non blockly: Flappy non blockly
-          title: Kurs 1 - For tidlige lesere
+          title: Kurs 1
           Artist 2: Artist 2
           Happy Maps: Happy Maps
           Move it, Move it: Flytte den, flytte den
@@ -72,10 +72,10 @@
           Binary Bracelets: Binær armbånd
           The Big Event: Den store begivenheten
           Your Digital Footprint: Dine digitale fotavtrykk
-          description: Course 2 is designed for students who can read and have no
-            prior programming experience. In this course students will create programs
-            to solve problems and develop interactive games or stories they can share.
-            Recommended for grades 2-5.
+          description: Kurs 2 er laget for elever som kan lese, men ikke har tidligere
+            erfaring med programmering. I dette kurset vil elevene lage programmer
+            for å løse problemer, og utvikle interaktive spill eller historier de
+            kan dele. Anbefalt for andre til femte klasse.
           'Maze: Sequence': 'Labyrint: sekvens'
           'Artist: Sequence': 'Artist: Sequence'
           'Maze: Loops': 'Maze: Loops'
@@ -93,7 +93,7 @@
           The Maze: Labyrinten
           'Studio: Create a Story': 'Play Lab: Create a Story'
           The Artist: Kunstneren
-          title: Course 3
+          title: Kurs 3
           Artist Functions: Kunstner funksjoner
           Artist For Loops: Artist For Loops
           Artist Nested Loops: Artist Nested Loops
@@ -119,7 +119,7 @@
             courses to flexible solutions to more complex problems. By the end of
             this course, students create interactive stories and games they can share
             with anyone. Recommended for grades 4-5.
-          'Studio: Create a Game': 'Play Lab: Create a Game'
+          'Studio: Create a Game': 'Spill Lab: Lag et spill'
           Maze: Labyrint
           Artist: Artist
           'Artist: Functions': 'Artist: Functions'
@@ -148,14 +148,35 @@
           title: Middle School Math
           description: Private work in progress for Middle School Math.
           Graph Paper Programming: Millimeterpapirprogrammering
-          Assessments: Assessments
-          Unit 1: Unit 1
-          Unit 2: Unit 2
+          Assessments: Vurderinger
+          Unit 1: Enhet 1
+          Unit 2: Enhet 2
+          Ninja Cat and the Coordinate Plane: Ninja Cat and the Coordinate Plane
+          'Calc: Circles of Evaluation': 'Calc: Circles of Evaluation'
+          'Artist: Strings and Images': 'Artist: Strings and Images'
+          Contracts: Contracts
+          'Artist: Writing Contracts': 'Artist: Writing Contracts'
+          'Calc: Defining Variables': 'Calc: Defining Variables'
+          'Play Lab: Defining Variables': 'Play Lab: Defining Variables'
+          The Design Recipe: The Design Recipe
+          'Artist: Defining Functions': 'Artist: Defining Functions'
+          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          'Artist: Functions': 'Artist: Functions'
+          'Play Lab: Animation': 'Play Lab: Animation'
+          Booleans: Booleans
+          'Play Lab: Booleans': 'Play Lab: Booleans'
+          'Calc: Boolean Operators': 'Calc: Boolean Operators'
+          'Play Lab: Boolean Operators': 'Play Lab: Boolean Operators'
+          Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
+          'Artist: Conditionals': 'Artist: Conditionals'
+          Collision Detection and the Distance Formula: Collision Detection and the
+            Distance Formula
+          'Play Lab: Collision Detection': 'Play Lab: Collision Detection'
         playlab:
           title: Play Lab
-          description: Create a story or make a game with Play Lab!
+          description: Lag en historie eller spill med Spill Labben!
           Play Lab: Play Lab
-          description_short: Create a story or make a game with Play Lab!
+          description_short: Lag en historie eller spill med Spill Labben!
         artist:
           title: Artist
           description: Draw cool pictures and designs with the Artist!
@@ -164,20 +185,45 @@
         course4:
           description_short: Students taking Course 4 should have already taken Courses
             2 and 3.
-          description: Course 4 is designed for students who have taken Course 2 and
-            3. Students will delve deeper into programming topics introduced in previous
-            courses to flexible solutions to more complex problems. By the end of
-            this course, students create interactive stories and games they can share
-            with anyone. Recommended for grades 4-8.
+          description: Kurs 4 er laget for elever som har fullført kurs 2 og 3. Elevene
+            vil gå nærmere innpå temaer som ble presentert i tidligere kurs, og de
+            vil lære mer fleksible løsninger på mer komplekse problemer. Ved slutten
+            av dette kurset vil elevene lage interaktive historier og spill som de
+            kan dele med andre. Anbefalt for fjerde til syvende klasse.
           'Artist: Variables': 'Artist: Variables'
           'Bee: For Loops': 'Bee: For Loops'
-          title: Course 4
+          title: Kurs 4
           'Algorithms: Tangrams': 'Algorithms: Tangrams'
           Variables: Variabler
-          'Play Lab: Variables': 'Play Lab: Variables'
-          'Play Lab: Functions with Parameters': 'Play Lab: Functions with Parameters'
+          'Play Lab: Variables': 'Spill Lab: Variabler'
+          'Play Lab: Functions with Parameters': 'Spill Lab: Funksjoner med parametere'
           'Bee: Functions with Parameters': 'Bee: Functions with Parameters'
           'Artist: For Loops': 'Artist: For Loops'
           'Play Lab: For Loops': 'Play Lab: For Loops'
           'Artist: Functions': 'Artist: Functions'
           'Artist: Functions with Paraqmeters': 'Artist: Functions with Paraqmeters'
+          'Unplugged: Tangrams': 'Unplugged: Tangrams'
+          Artist: Artist
+          Bee: Bee
+          'Unplugged: Envelope Variables': 'Unplugged: Envelope Variables'
+          'Unplugged: Madlibs': 'Unplugged: Madlibs'
+          'Unplugged: For Loop Fun': 'Unplugged: For Loop Fun'
+          'Unplugged: Songwriting with Parameters': 'Unplugged: Songwriting with Parameters'
+          'Artist: Functions with Parameters': 'Artist: Functions with Parameters'
+          'Unplugged: Binary': 'Unplugged: Binary'
+          Bee Binary: Bee Binary
+          Farmer Binary: Farmer Binary
+          Maze and Bee: Maze and Bee
+        Course4pre:
+          description_short: A brief rampup of concepts for students who have not
+            taken Course 2 and 3.
+          Course 4 Prerequisite: Course 4 Prerequisite
+          'Maze: Sequence': 'Labyrint: sekvens'
+          'Artist: Sequence': 'Artist: Sequence'
+          'Artist: Loops': 'Artist: Loops'
+          'Bee: Conditionals': 'Bee: Conditionals'
+          'Artist: Nested Loops': 'Artist: Nested Loops'
+          'Farmer: While Loops': 'Farmer: While Loops'
+          'Bee: Nested Loops': 'Bee: Nested Loops'
+          'Artist: Functions': 'Artist: Functions'
+          'Bee: Debugging': 'Bee: Debugging'

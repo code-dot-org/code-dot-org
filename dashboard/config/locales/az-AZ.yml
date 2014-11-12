@@ -36,7 +36,7 @@
   puzzle: Tapmaca
   trophies: kuboklar
   courses: marşrutlar
-  of: "/"
+  of: /
   more: DAHA ÇOX
   less: DAHA AZ
   try_hoc: Kod Saatında özünüzü sınayın, buraya klikləyin >> 
@@ -48,7 +48,7 @@
   prize: mükafat
   more_info: Daha geniş məlumat
   auth:
-    sign_in_with: "%{provider} ilə daxil olun"
+    sign_in_with: '%{provider} ilə daxil olun'
     signed_in: Daxil oldunuz!
     signed_out: You have signed out of <a href="%{url}">Code.org</a>.
     sign_out_of: You used %{provider} to sign in. <a href="%{url}">Click here</a>
@@ -70,14 +70,14 @@
       mərhələ və tapmacalar</a>ı nəzərdən keçirə bilərsiniz, lakin nəticələrinizi
       yadda saxlamaq üçün qeydiyyatdan keçməyiniz lazım olacaq.
     teacher_educator_guide: Təhsil işçisi üçün göstərişlərə baxın
-    teacher_pitch: "Öz sinfinizdə K-8 İnformatikaya Giriş kursunu tədris edin"
+    teacher_pitch: Öz sinfinizdə K-8 İnformatikaya Giriş kursunu tədris edin
     teacher_title: Müəllim kimi qeydiyyatdan keçin
     student_pitch: '1 saat bitəndən sonra: K-8 İnformatikaya Giriş kursumuzu sınaqdan
       keçirin'
     student_title: Qeydiyyatdan keçin
     school_name: Məktəbin Adı (vacib deyil)
     school_address: Məktəbin ünvanı (vacib deyil)
-    address_placeholder: "ünvan, şəhər, vilayət, poçt indeksi"
+    address_placeholder: ünvan, şəhər, vilayət, poçt indeksi
     gender: Cins (vacib deyil)
     birthday: Ad günü (vacib deyil)
     age: Yaşınız
@@ -85,7 +85,7 @@
     submit: Qeydiyyatdan keçin
     teacher: Müəllimsiniz?
     valid_username: Olar!
-    invalid_username: "İstifadəçi adı ən azı 5 simvoldan ibarət olmalıdır"
+    invalid_username: İstifadəçi adı ən azı 5 simvoldan ibarət olmalıdır
     taken_username: Bu istifadəçi adı artıq götürülüb
     valid_password: Düzgün parol!
     invalid_password: Parol ən azı 6 simvol olmalıdır
@@ -134,16 +134,16 @@
       %{name}
   follower:
     invite_sent: Dəvətnamə göndərildi
-    added_teacher: "%{name} müəlliminiz kimi əlavə olundu"
+    added_teacher: '%{name} müəlliminiz kimi əlavə olundu'
     registered: Siz %{section_name} üçün qeydiyyatdan keçdiniz.
     error:
       signed_in: Zəhmət olmasa, davam etməzdən öncə sistemdən çıxın
-      username_not_found: "%{username} istifadəçi adı tapılmadı"
-      username_in_use: "%{username} artıq istifadə olunur, zəhmət olmasa, digərini
-        seçin"
-      no_teacher: "'%{teacher_email_or_code}' ilə daxil olan heç kim tapılmadı. Zəhmət
-        olmasa, onlardan burada qeydiyyatdan keçməyi xahiş edin və sonra onları yenidən
-        əlavə etməyə çalışın"
+      username_not_found: '%{username} istifadəçi adı tapılmadı'
+      username_in_use: '%{username} artıq istifadə olunur, zəhmət olmasa, digərini
+        seçin'
+      no_teacher: '''%{teacher_email_or_code}'' ilə daxil olan heç kim tapılmadı.
+        Zəhmət olmasa, onlardan burada qeydiyyatdan keçməyi xahiş edin və sonra onları
+        yenidən əlavə etməyə çalışın'
       section_not_found: Could not find a section with code '%{section_code}'.
       blank_code: Lütfən, kodu və ya müəlliminizin e-poçt ünvanını daxil edin
       cant_join_own_section: Sorry, you can't join your own section.
@@ -172,20 +172,20 @@
     error_us_only: Mükafat almaq imkanı ancaq ABŞ-dan olan istifadəçilər üçün etibarlıdır.
     error_not_earned: Siz hələ bu mükafatı qazanmamısınız.
     error_already_redeemed: Mükafatınız artıq xərclənib.
-    no_prizes_available: "Üzr istəyirik, hazırda mükafatlar qalmayıb."
+    no_prizes_available: Üzr istəyirik, hazırda mükafatlar qalmayıb.
     teacher_info_required: 'Teacher prizes require school name and address information:'
     teacher_email_required: 'Teacher prizes require a confirmed email address:'
     confirm:
       title: Zəhmət olmazsa, təsdiq edin
       'no': Xeyr
       'yes': Bəli
-      msg: "%{prize_name} mükafatını tələb emək istədiyinizə əminsiniz?"
+      msg: '%{prize_name} mükafatını tələb emək istədiyinizə əminsiniz?'
       msg_student: 'QEYD: Ancaq bir növ mükafat seçə bilərsiniz.'
       msg_publicschool: Zəhmət olmasa, ABŞ dövlət məktəbinin müəllimi olduğunuzu təsdiq
         edin.
       msg_visit_website: Visit website
     providers:
-      apple_itunes: "$10 iTunes Gift Card"
+      apple_itunes: $10 iTunes Gift Card
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10GB "Dropbox" yaddaş sahəsi
@@ -194,7 +194,7 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: "$10 Skype credit"
+      skype: $10 Skype credit
     msg:
       choose: 'Mükafat seçin:'
       choose_teacher: 'Click on the logo below to claim your prize:'
@@ -227,9 +227,9 @@
           not_earned_title: You can still earn an additional $250 in <a target="_blank"
             href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers
             only)
-          earned: "%{num_trophies} kubokun hamısını toplamış şagirdlərinizdən 7 və
+          earned: '%{num_trophies} kubokun hamısını toplamış şagirdlərinizdən 7 və
             ya daha çoxu qızlardır. Siz bir bonus mükafat qazandınız! (yalnız ABŞ-dan
-            olan müəllimlər)"
+            olan müəllimlər)'
           not_earned: Əgər %{num_trophies} kubokun hamısını toplamış şagirdlərinizdən
             ən azı 7-si qızlardırsa, sizin mükafatınız <a target="_blank" href="http://DonorsChoose.org">"DonorsChoose.org"</a>
             kreditləri ilə əlavə 250 dollardır. <a target="_blank" href="http://DonorsChoose.org">"DonorsChoose.org"</a>
@@ -239,14 +239,14 @@
     new_model: Yeni %{model}
     show: Göstər
     edit: Düzəliş et
-    edit_model: "%{model} düzəliş et"
+    edit_model: '%{model} düzəliş et'
     update: Yenilə
     destroy: Məhv et
     back: Geri
-    confirm: "Əminsiniz?"
-    created: "%{model} müvəffəqiyyətlə yaradıldı."
-    updated: "%{model} müvəffəqiyyətlə yeniləndi."
-    destroyed: "%{model} was successfully deleted."
+    confirm: Əminsiniz?
+    created: '%{model} müvəffəqiyyətlə yaradıldı.'
+    updated: '%{model} müvəffəqiyyətlə yeniləndi.'
+    destroyed: '%{model} was successfully deleted.'
     access_denied: You do not have access to this %{model}.
   nav:
     header:
@@ -261,7 +261,7 @@
       stats: Mənim nəticələrim
       settings: Mənim hesabım
       prizes: Mükafatlar
-      logout: "Çıxın"
+      logout: Çıxın
       signin: Daxil olun
       signup: Qeydiyyatdan keç
       already_registered: Already registered?
@@ -271,15 +271,15 @@
       close: BAĞLA
       mastery: Anlayışlar
       puzzle_map: Mərhələlər
-      prizes: "%{total_trophies} kubokun hamısını yığ və hədiyyələr qazan!"
+      prizes: '%{total_trophies} kubokun hamısını yığ və hədiyyələr qazan!'
       prize_earned: Siz %{total_trophies} kubokun hamısımı topladınız. Mükafatı qazandınız!
-      prize_us_only: "(Yalnız ABŞ-dan olan şagirdlər)"
+      prize_us_only: (Yalnız ABŞ-dan olan şagirdlər)
       prizes_link: Daha geniş məlumat
   teacher:
     title:
-      one: "%{name} sizin müəlliminizdir"
+      one: '%{name} sizin müəlliminizdir'
       other: 'Müəllimləriniz:'
-    remove: "(remove teacher)"
+    remove: (remove teacher)
     confirm:
       remove: Are you sure you want to remove this teacher?
     tools: Müəllim üçün alətlər
@@ -299,9 +299,9 @@
       name: Ad
       username: istifadəçi adı
       password: parol
-      manage: "Şagirdlərə nəzarət edin"
+      manage: Şagirdlərə nəzarət edin
       dashboard: Go to Teacher Dashboard
-      add: "Şagirdləri əlavə edin"
+      add: Şagirdləri əlavə edin
       remove: remove student
       confirm_remove: Are you sure you want to remove this student?
       help_reassign: To divide your class into multiple sections, select students
@@ -321,7 +321,7 @@
       add: Add section
       manage: Manage sections
       section: Section
-      students: "Şagirdlər"
+      students: Şagirdlər
       section_code: Section Code
       add_section_code: Add Students Section-Code
       secret: Secret type
@@ -333,19 +333,19 @@
       confirm_delete: Are you sure you want to delete this section?
       email: Send in email
     rollup: Gedişat paneli
-    activity: "Ən son sinif işləri"
+    activity: Ən son sinif işləri
     user_not_found: The teacher or student could not be found
-    cant_remove_student_no_email: "%{student_name} cannot be removed as your student
-      because %{student_name} has not registered an e-mail address"
-    cant_remove_teacher_no_email: "%{teacher_name} cannot be removed as your teacher
-      because you have not registered an e-mail address"
-    student_teacher_disassociated: "%{teacher_name} has been removed as a teacher
-      for %{student_name}"
+    cant_remove_student_no_email: '%{student_name} cannot be removed as your student
+      because %{student_name} has not registered an e-mail address'
+    cant_remove_teacher_no_email: '%{teacher_name} cannot be removed as your teacher
+      because you have not registered an e-mail address'
+    student_teacher_disassociated: '%{teacher_name} has been removed as a teacher
+      for %{student_name}'
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
     email_resend_confirm: Resend confirmation instructions
-    new_password_hint: "(dəyişmək istəmirsinizsə, boş buraxın)"
-    current_password_hint: "(dəyişikliklərinizi təsdiq etmək üçün cari parolunuz lazımdır)"
+    new_password_hint: (dəyişmək istəmirsinizsə, boş buraxın)
+    current_password_hint: (dəyişikliklərinizi təsdiq etmək üçün cari parolunuz lazımdır)
     cancel:
       title: Hesabımı ləğv et
       hint: Narazısiniz?
@@ -362,7 +362,7 @@
     all_courses: Overview of Courses 1, 2, and 3
     lesson_plans: Lesson plans
     signin_message: və ya əgər siz artıq qeydiyyatdan keçmisinizsə, %{link}
-    student_reg_link: "Şagird"
+    student_reg_link: Şagird
     teacher_reg_link: Müəllim
     signin_directions: Use an account to track progress and get rewards.<br/> Teachers,
       track your entire class.
@@ -395,9 +395,9 @@
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
-    heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
-    heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
-    heading_legacy: "<h2>Our previous course for</h2><h1>Existing Students</h1>"
+    heading_elementary: <h2>20 hour courses for</h2><h1>Elementary Students</h1>
+    heading_apps: <h2>Fun for</h2><h1>Everybody</h1>
+    heading_legacy: <h2>Our previous course for</h2><h1>Existing Students</h1>
     gallery:
       your_turtle: My Art
       your_studio: My Apps
@@ -406,7 +406,7 @@
     female: Qadın
     none: Cavab verməməyə üstünlük verirəm
   user_type:
-    student: "şagird"
+    student: şagird
     teacher: Teacher
   footer:
     help_from_html: <a href="http://www.google.com">"Google"</a>, <a href="http://www.microsoft.com">"Microsoft"</a>,
@@ -506,13 +506,13 @@
     want_to_make_your_own: Want to make your own?
     more: More &rarr;
     caption_by_name_age: by %{name}, age %{age}
-    caption_time_ago: "%{time_ago} ago"
+    caption_time_ago: '%{time_ago} ago'
   landing:
     prerelease: This page is still under development.
     feedback: Give Feedback
     report_bug: Report Bug
     support: Get Help
-    support_url: "//support.code.org"
+    support_url: //support.code.org
   multi:
     wrong_title: Incorrect answer
     wrong_body: The answer you've entered is not correct.  Please try again!

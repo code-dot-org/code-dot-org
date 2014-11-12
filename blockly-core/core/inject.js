@@ -64,7 +64,12 @@ Blockly.inject = function(container, opt_options) {
   Blockly.mainBlockSpace = Blockly.mainBlockSpaceEditor.blockSpace;
 
   if (Blockly.useModalFunctionEditor) {
+    /** @type {Blockly.FunctionEditor} */
     Blockly.functionEditor = new Blockly.FunctionEditor();
+  } else if (Blockly.useContractEditor) {
+    Blockly.functionEditor = new Blockly.ContractEditor();
+    /** @type {Blockly.ContractEditor} */
+    Blockly.contractEditor = Blockly.functionEditor;
   }
 };
 
@@ -147,7 +152,9 @@ Blockly.parseOptions_ = function(options) {
     disableParamEditing: options['disableParamEditing'] || false,
     disableVariableEditing: options['disableVariableEditing'] || false,
     useModalFunctionEditor: options['useModalFunctionEditor'] || false,
-    grayOutUndeletableBlocks: grayOutUndeletableBlocks
+    useContractEditor: options['useContractEditor'] || false,
+    grayOutUndeletableBlocks: grayOutUndeletableBlocks,
+    editBlocks: options['editBlocks'] || false
   };
 };
 

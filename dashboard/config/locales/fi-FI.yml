@@ -36,7 +36,7 @@
   puzzle: Pulma
   trophies: pokaalit
   courses: kurssit
-  of: "/"
+  of: /
   more: LISÄÄ
   less: VÄHEMMÄN
   try_hoc: 'Kokeile Koodaustuntia, napsauta tästä >> '
@@ -136,7 +136,7 @@
       %{name}
   follower:
     invite_sent: Kutsu lähetetty
-    added_teacher: "%{name} lisätty opettajaksesi"
+    added_teacher: '%{name} lisätty opettajaksesi'
     registered: Olet registeröitynyt ryhmään %{section_name}.
     error:
       signed_in: Ole hyvä ja kirjaudu ensin sisään
@@ -185,7 +185,7 @@
         opettaja.
       msg_visit_website: Käy websivulla
     providers:
-      apple_itunes: "$10 iTunes Gift Card"
+      apple_itunes: $10 iTunes Gift Card
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10 Gt Dropbox-tilaa
@@ -194,7 +194,7 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: "$10 Skype credit"
+      skype: $10 Skype credit
     msg:
       choose: 'Valitse palkinto:'
       choose_teacher: 'Click on the logo below to claim your prize:'
@@ -211,17 +211,17 @@
         not_earned_title: Opeta kurssia, ansaitse jopa 1000 dollaria <a target="_blank"
           href="http://DonorsChoose.org">DonorsChoose.org</a> krediitteinä (vain USA:n
           opettajat)
-        not_earned: "(sivustolla mainitut raha- ja tavarapalkinnot ovat voimassa vain
-          USA:ssa)"
+        not_earned: (sivustolla mainitut raha- ja tavarapalkinnot ovat voimassa vain
+          USA:ssa)
         bonus:
           not_earned_title: You can still earn an additional $250 in <a target="_blank"
             href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers
             only)
           earned: "Hieno suoritus! 7 tai useampi oppilaistasi, jotka keräsivät kaikki
-            %{num_trophies} ovat tyttöjä. \n\nHuom: sivustolla mainitut raha- ja tavarapalkinnot
-            ovat voimassa vain USA:ssa\n"
-          not_earned: "(sivustolla mainitut raha- ja tavarapalkinnot ovat voimassa
-            vain USA:ssa)"
+            %{num_trophies} ovat tyttöjä. \n\nHuom: \"sivustolla mainitut raha- ja
+            tavarapalkinnot ovat voimassa vain USA:ssa\"\n"
+          not_earned: (sivustolla mainitut raha- ja tavarapalkinnot ovat voimassa
+            vain USA:ssa)
   crud:
     new_model: Uusi %{model}
     show: Näytä
@@ -231,9 +231,9 @@
     destroy: Tuhoa
     back: Takaisin
     confirm: Oletko varma?
-    created: "%{model} luotiin onnistuneesti."
-    updated: "%{model} päivitettiin onnistuneesti."
-    destroyed: "%{model} poistaminen onnistui."
+    created: '%{model} luotiin onnistuneesti.'
+    updated: '%{model} päivitettiin onnistuneesti.'
+    destroyed: '%{model} poistaminen onnistui.'
     access_denied: Sinulla ei ole pääsyä tähän %{model}.
   nav:
     header:
@@ -264,13 +264,13 @@
         Hienoa! Keräsit kaikki %{total_trophies} pokaalia.
 
         (sivustolla mainitut raha- ja tavarapalkinnot ovat voimassa vain USA:ssa)
-      prize_us_only: "(vain oppilaille USA:ssa)"
+      prize_us_only: (vain oppilaille USA:ssa)
       prizes_link: Lisätietoja
   teacher:
     title:
       one: 'Opettajasi:'
       other: 'Opettajasi:'
-    remove: "(poista opettaja)"
+    remove: (poista opettaja)
     confirm:
       remove: Oletko varma, että haluat poistaa tämän opettajan?
     tools: Opettajan työkalut
@@ -326,17 +326,17 @@
     rollup: Edistymistaulu
     activity: Luokan tapahtumat
     user_not_found: Opettajaa tai oppilasta ei löytynyt
-    cant_remove_student_no_email: "%{student_name} ei voida poistaa oppilaistasi koska
-      %{student_name} ei ole rekisteröinyt sähköpostiosoitetta"
-    cant_remove_teacher_no_email: "%{teacher_name} ei voida poistaa opettajastasi
-      sillä et ole rekisteröinyt sähköpostiosoitetta"
+    cant_remove_student_no_email: '%{student_name} ei voida poistaa oppilaistasi koska
+      %{student_name} ei ole rekisteröinyt sähköpostiosoitetta'
+    cant_remove_teacher_no_email: '%{teacher_name} ei voida poistaa opettajastasi
+      sillä et ole rekisteröinyt sähköpostiosoitetta'
     student_teacher_disassociated: Opettaja %{teacher_name} on poistettu oppilaalta
       %{student_name}
   user:
     email_confirm_needed: 'Sähköpostiosoitetta ei ole vahvistettu:'
     email_resend_confirm: Lähetä vahvistusohjeet uudestaan
-    new_password_hint: "(jätä tyhjäksi jos et halua vaihtaa)"
-    current_password_hint: "(anna nykyinen salasanasi, jotta voimme vahvistaa muutokset)"
+    new_password_hint: (jätä tyhjäksi jos et halua vaihtaa)
+    current_password_hint: (anna nykyinen salasanasi, jotta voimme vahvistaa muutokset)
     cancel:
       title: Poista tili
       hint: Onneton?
@@ -385,9 +385,9 @@
     test_videos_help: Testaa uutta videosoitintamme koulussasi
     try_beta_courses: Uutta! Kokeile beta-kurssejamme K-5 oppilaille
     use_as_teacher: Käytä sivustoa opettajana
-    heading_elementary: "<h2>20 hour kurssit</h2><h1>alkeisoppilaille</h1>"
-    heading_apps: "<h2>Hauskaa</h2><h1>kaikille</h1>"
-    heading_legacy: "<h2>Yleinen kurssimme</h2><h1>kaiken ikäisille</h1>"
+    heading_elementary: <h2>20 hour kurssit</h2><h1>alkeisoppilaille</h1>
+    heading_apps: <h2>Hauskaa</h2><h1>kaikille</h1>
+    heading_legacy: <h2>Yleinen kurssimme</h2><h1>kaiken ikäisille</h1>
     gallery:
       your_turtle: Minun taiteeni
       your_studio: Sovellukseni
@@ -492,8 +492,8 @@
       Napsauta kuvia ja kuvaruutukaappauksia nähdäksesi kunkin ohjelman toiminnassa.
     want_to_make_your_own: Haluatko tehdä omasi?
     more: Lisää &rarr;
-    caption_by_name_age: "%{name} tekemä, ikä %{age}"
-    caption_time_ago: "%{time_ago} sitten"
+    caption_by_name_age: '%{name} tekemä, ikä %{age}'
+    caption_time_ago: '%{time_ago} sitten'
   landing:
     prerelease: Tämä kurssi on <span class='betatext'>beta</span>.  Tämä tarkoittaa,
       että kurssin verso ei ole lopullinen ja siitä saattaa tulla uusia paranneltuja
@@ -501,7 +501,7 @@
     feedback: Anna palautetta
     report_bug: Raportoi ongelma
     support: Tarkastele ohjeita
-    support_url: "//support.code.org"
+    support_url: //support.code.org
   multi:
     wrong_title: Väärä vastaus
     wrong_body: Antamasi vastaus ei ole oikein. Yritä uudelleen!

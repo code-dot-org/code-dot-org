@@ -31,9 +31,9 @@
     placeholder: Veuillez entrer votre astuce ici
     submit: Ajouter l'astuce
   appname: Code.org
-  stage: "étape"
+  stage: étape
   stage_number: pourcentage %{number}
-  puzzle: "Énigme"
+  puzzle: Énigme
   trophies: trophées
   courses: cours
   of: de
@@ -83,7 +83,7 @@
     address_placeholder: adresse, ville, état, code postal
     gender: Sexe (facultatif)
     birthday: Date de naissance (optionnel)
-    age: "Âge (facultatif)"
+    age: Âge (facultatif)
     user_type: Es-tu un élève ou un professeur?
     submit: S’inscrire
     teacher: Etes-vous un professeur?
@@ -141,7 +141,7 @@
       %{name}
   follower:
     invite_sent: Invitation envoyée
-    added_teacher: "%{name} ajouté en tant qu'enseignant"
+    added_teacher: '%{name} ajouté en tant qu''enseignant'
     registered: Vous vous êtes inscrit à %{section_name}.
     error:
       signed_in: Veuillez vous déconnecter avant de procéder
@@ -188,13 +188,13 @@
       title: Merci de confirmer
       'no': Non
       'yes': Oui
-      msg: "Êtes-vous certain de vouloir attribuer le prix de %{prize_name} ?"
+      msg: Êtes-vous certain de vouloir attribuer le prix de %{prize_name} ?
       msg_student: 'Remarque : Vous ne pouvez choisir qu''un type de prix.'
       msg_publicschool: Veuillez confirmer que vous êtes enseignant dans une école
         publique aux États-Unis.
       msg_visit_website: Visiter le site web
     providers:
-      apple_itunes: "$10 iTunes Gift Card"
+      apple_itunes: $10 iTunes Gift Card
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10 Go de stockage sur Dropbox
@@ -203,7 +203,7 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: "$10 Skype credit"
+      skype: $10 Skype credit
     msg:
       choose: 'Choisis un prix :'
       choose_teacher: 'Click on the logo below to claim your prize:'
@@ -254,10 +254,10 @@
     update: Mise à jour
     destroy: Détruire
     back: Retour
-    confirm: "Êtes-vous sûr ?"
-    created: "%{model} a été créé avec succès."
-    updated: "%{model} a été mis à jour avec succès."
-    destroyed: "%{model} a été supprimé avec succès."
+    confirm: Êtes-vous sûr ?
+    created: '%{model} a été créé avec succès.'
+    updated: '%{model} a été mis à jour avec succès.'
+    destroyed: '%{model} a été supprimé avec succès.'
     access_denied: Vous n'avez pas accès à ce %{model}.
   nav:
     header:
@@ -281,19 +281,19 @@
       lines: 'Nombre de lignes de code : %{lines}'
       close: FERMER
       mastery: Conceptes
-      puzzle_map: "Étapes"
+      puzzle_map: Étapes
       prizes: Remportez les %{total_trophies} trophées et gagnez des prix !
       prize_earned: Les %{total_trophies} trophées ont été remportés. Vous avez gagné
         un prix !
-      prize_us_only: "(Elèves états-uniens seulement)"
+      prize_us_only: (Elèves états-uniens seulement)
       prizes_link: Plus d'informations
   teacher:
     title:
       one: 'Votre enseignant :'
       other: 'Vos professeurs:'
-    remove: "(supprimer l'enseignant)"
+    remove: (supprimer l'enseignant)
     confirm:
-      remove: "Êtes-vous sûr de vouloir supprimer cet enseignant ?"
+      remove: Êtes-vous sûr de vouloir supprimer cet enseignant ?
     tools: Outils de gestion des enseignants
     followers:
       section: 'Section:'
@@ -315,7 +315,7 @@
       dashboard: Aller au tableau de bord enseignant
       add: Ajouter des élèves
       remove: Supprimer un élève
-      confirm_remove: "Êtes-vous sûr de que vouloir supprimer cet élève ?"
+      confirm_remove: Êtes-vous sûr de que vouloir supprimer cet élève ?
       help_reassign: Divisez votre classe en plusieurs sections, afin de sélectionner
         les élèves pour assigner une nouvelle section.
       help_register: Au lieu de passer beaucoup de temps à importer individuellement
@@ -334,7 +334,7 @@
       add: Ajouter une section
       manage: Gérer les sections
       section: Section
-      students: "Élèves"
+      students: Élèves
       section_code: Section de code
       add_section_code: Add Students Section-Code
       secret: Type de secret
@@ -343,23 +343,23 @@
       rename: renommer
       edit: modifier
       delete: supprimer
-      confirm_delete: "Êtes-vous sûr de que vouloir supprimer cette section ?"
+      confirm_delete: Êtes-vous sûr de que vouloir supprimer cette section ?
       email: Envoyer par email
     rollup: Tableau de bord de progression
     activity: Activité récente de la classe
     user_not_found: L'enseignant ou l'élève n'a pas été trouvé
-    cant_remove_student_no_email: "%{student_name} ne peut être retiré de votre liste
-      d'étudiants car %{student_name} n'a pas enregistré d'adresse de messagerie"
-    cant_remove_teacher_no_email: "%{teacher_name} ne peut être retiré de votre liste
-      d'enseignants car vous n'avez pas enregistré d'adresse de messagerie"
-    student_teacher_disassociated: "%{teacher_name} n'est plus considéré comme l'enseignant
-      de %{student_name}"
+    cant_remove_student_no_email: '%{student_name} ne peut être retiré de votre liste
+      d''étudiants car %{student_name} n''a pas enregistré d''adresse de messagerie'
+    cant_remove_teacher_no_email: '%{teacher_name} ne peut être retiré de votre liste
+      d''enseignants car vous n''avez pas enregistré d''adresse de messagerie'
+    student_teacher_disassociated: '%{teacher_name} n''est plus considéré comme l''enseignant
+      de %{student_name}'
   user:
     email_confirm_needed: 'L''adresse de messagerie n''a pas été confirmée :'
     email_resend_confirm: Envoyer à nouveau les instructions de confirmation
-    new_password_hint: "(laissez vide pour conserver)"
-    current_password_hint: "(nous avons besoin de votre mot de passe actuel pour confirmer
-      vos modifications)"
+    new_password_hint: (laissez vide pour conserver)
+    current_password_hint: (nous avons besoin de votre mot de passe actuel pour confirmer
+      vos modifications)
     cancel:
       title: Annuler mon compte
       hint: Insatisfait ?
@@ -396,7 +396,7 @@
     student_left_off: 'Vous vous êtes arrêté sur :'
     student_finished: Vous avez terminé tous les tutoriels, choisissez une autre classe
       %{online_link} ou à une %{local_school_link}
-    local_school: "école locale"
+    local_school: école locale
     online: en ligne
     see_details: Afficher les détails
     prize_info: 'Prix pour la participation (enseignants des écoles publiques des
@@ -411,9 +411,9 @@
     try_beta_courses: Nouveau ! Essayez nos cours bêta pour les élèves de l'école
       primaire
     use_as_teacher: Utiliser ce site en tant qu'enseignant
-    heading_elementary: "<h2>de 20 heures de cours pour</h2><h1>Élèves du primaire</h1>"
-    heading_apps: "<h2>Amusant pour</h2><h1>Tout le monde</h1>"
-    heading_legacy: "<h2>Nos cours pour</h2><h1>Tous les âges</h1>"
+    heading_elementary: <h2>de 20 heures de cours pour</h2><h1>Élèves du primaire</h1>
+    heading_apps: <h2>Amusant pour</h2><h1>Tout le monde</h1>
+    heading_legacy: <h2>Nos cours pour</h2><h1>Tous les âges</h1>
     gallery:
       your_turtle: Mes graphiques
       your_studio: Mes applications
@@ -422,7 +422,7 @@
     female: Féminin
     none: Je ne souhaite pas l'indiquer
   user_type:
-    student: "étudiant"
+    student: étudiant
     teacher: Professeur
   footer:
     help_from_html: Les ingénieurs de Google, Microsoft, Facebook et Twitter ont contribué
@@ -529,7 +529,7 @@
     feedback: Envoyer un commentaire
     report_bug: Signaler un bogue
     support: Obtenir de l'aide
-    support_url: "//support.code.org"
+    support_url: //support.code.org
   multi:
     wrong_title: Réponse incorrecte
     wrong_body: La réponse que vous avez entrée n'est pas correcte. Veuillez réessayer !
@@ -562,7 +562,7 @@
           title: Modifier le Code
           description: ''
         events:
-          title: "Événements"
+          title: Événements
           description: ''
         builder:
           title: Générateur
@@ -575,7 +575,7 @@
           title: Pièces de Puzzle
           description: ''
         step:
-          title: "Étape"
+          title: Étape
           description: ''
         sample_level_builder:
           title: Exemple de générateur de niveau

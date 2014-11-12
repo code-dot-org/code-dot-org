@@ -133,12 +133,12 @@
       %{name}
   follower:
     invite_sent: Ftesa u dergua
-    added_teacher: "%{name} u shtua si mesuesi juaj"
+    added_teacher: '%{name} u shtua si mesuesi juaj'
     registered: Ju u regjistruat per %{section_name}.
     error:
       signed_in: Ju lutemi dilni nga llogaria perpara se te vazhdoni
       username_not_found: Emri i perdoruesit %{username} nuk u gjend
-      username_in_use: "%{username} eshte i zene, ju lutemi zgjidhni nje tjeter"
+      username_in_use: '%{username} eshte i zene, ju lutemi zgjidhni nje tjeter'
       no_teacher: Nuk mund te gjenim ndonje te loguar me '%{teacher_email_or_code}'.
         Kerkojuni atyre te regjistrohen ketu dhe provo ti shtosh ato perseri
       section_not_found: Could not find a section with code '%{section_code}'.
@@ -181,7 +181,7 @@
       msg_publicschool: Please confirm that you are a U.S. public school teacher.
       msg_visit_website: Visit website
     providers:
-      apple_itunes: "$10 iTunes Gift Card"
+      apple_itunes: $10 iTunes Gift Card
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10GB of Dropbox Space
@@ -190,7 +190,7 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: "$10 Skype credit"
+      skype: $10 Skype credit
     msg:
       choose: 'Choose a prize:'
       choose_teacher: 'Click on the logo below to claim your prize:'
@@ -237,9 +237,9 @@
     destroy: Destroy
     back: Back
     confirm: Are you sure?
-    created: "%{model} was successfully created."
-    updated: "%{model} was successfully updated."
-    destroyed: "%{model} was successfully deleted."
+    created: '%{model} was successfully created.'
+    updated: '%{model} was successfully updated.'
+    destroyed: '%{model} was successfully deleted.'
     access_denied: You do not have access to this %{model}.
   nav:
     header:
@@ -266,13 +266,13 @@
       puzzle_map: Fazat
       prizes: Collect all %{total_trophies} trophies and win prizes!
       prize_earned: All %{total_trophies} trophies collected. Prize won!
-      prize_us_only: "(U.S. students only)"
+      prize_us_only: (U.S. students only)
       prizes_link: Me shume informacion
   teacher:
     title:
       one: Your teacher is %{name}
       other: 'Your teachers:'
-    remove: "(remove teacher)"
+    remove: (remove teacher)
     confirm:
       remove: Are you sure you want to remove this teacher?
     tools: Teacher Tools
@@ -328,17 +328,17 @@
     rollup: Progress Dashboard
     activity: Recent class activity
     user_not_found: The teacher or student could not be found
-    cant_remove_student_no_email: "%{student_name} cannot be removed as your student
-      because %{student_name} has not registered an e-mail address"
-    cant_remove_teacher_no_email: "%{teacher_name} cannot be removed as your teacher
-      because you have not registered an e-mail address"
-    student_teacher_disassociated: "%{teacher_name} has been removed as a teacher
-      for %{student_name}"
+    cant_remove_student_no_email: '%{student_name} cannot be removed as your student
+      because %{student_name} has not registered an e-mail address'
+    cant_remove_teacher_no_email: '%{teacher_name} cannot be removed as your teacher
+      because you have not registered an e-mail address'
+    student_teacher_disassociated: '%{teacher_name} has been removed as a teacher
+      for %{student_name}'
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
     email_resend_confirm: Resend confirmation instructions
-    new_password_hint: "(leave blank if you don't want to change it)"
-    current_password_hint: "(we need your current password to confirm your changes)"
+    new_password_hint: (leave blank if you don't want to change it)
+    current_password_hint: (we need your current password to confirm your changes)
     cancel:
       title: Cancel my account
       hint: Unhappy?
@@ -388,9 +388,9 @@
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
-    heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
-    heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
-    heading_legacy: "<h2>Our previous course for</h2><h1>Existing Students</h1>"
+    heading_elementary: <h2>20 hour courses for</h2><h1>Elementary Students</h1>
+    heading_apps: <h2>Fun for</h2><h1>Everybody</h1>
+    heading_legacy: <h2>Our previous course for</h2><h1>Existing Students</h1>
     gallery:
       your_turtle: My Art
       your_studio: My Apps
@@ -499,13 +499,13 @@
     want_to_make_your_own: Want to make your own?
     more: More &rarr;
     caption_by_name_age: by %{name}, age %{age}
-    caption_time_ago: "%{time_ago} ago"
+    caption_time_ago: '%{time_ago} ago'
   landing:
     prerelease: This page is still under development.
     feedback: Give Feedback
     report_bug: Report Bug
     support: Get Help
-    support_url: "//support.code.org"
+    support_url: //support.code.org
   multi:
     wrong_title: Incorrect answer
     wrong_body: The answer you've entered is not correct.  Please try again!

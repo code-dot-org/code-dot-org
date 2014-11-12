@@ -46,7 +46,7 @@
         course2:
           The Maze: The Maze
           Suzi: Suzi
-          The Artist: "শিল্পী"
+          The Artist: শিল্পী
           Artist Debugging: Artist Debugging
           Bounce: Bounce
           'Studio: Create a Story': 'Studio: Create a Story'
@@ -85,7 +85,7 @@
         course3:
           The Maze: The Maze
           'Studio: Create a Story': 'Studio: Create a Story'
-          The Artist: "শিল্পী"
+          The Artist: শিল্পী
           title: Course 3
           Artist Functions: Artist Functions
           Artist For Loops: Artist For Loops
@@ -162,7 +162,7 @@
           'Bee: For Loops': 'Bee: For Loops'
           title: Course 4
           'Algorithms: Tangrams': 'Algorithms: Tangrams'
-          Variables: "চলকগুলো"
+          Variables: চলকগুলো
           'Play Lab: Variables': 'Play Lab: Variables'
           'Play Lab: Functions with Parameters': 'Play Lab: Functions with Parameters'
           'Bee: Functions with Parameters': 'Bee: Functions with Parameters'

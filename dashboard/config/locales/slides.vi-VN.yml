@@ -36,9 +36,9 @@
           dụng chúng để xây dựng đoạn code của bạn.
       9:
         image: notes/hoc1_9.jpg
-        text: "Ở bên phải là chỗ làm việc nơi mà bạn sẽ kéo từng khối từ hộp công
-          cụ để xây dựng chương trình của bạn. Để xóa một khối, kéo nó vào thùng rác
-          ở trong góc."
+        text: Ở bên phải là chỗ làm việc nơi mà bạn sẽ kéo từng khối từ hộp công cụ
+          để xây dựng chương trình của bạn. Để xóa một khối, kéo nó vào thùng rác
+          ở trong góc.
       10:
         image: notes/hoc1_10.jpg
         text: Mỗi khối là một chỉ dẫn. Nếu bạn kéo một khối "tiến lên" vào trong không
@@ -46,9 +46,9 @@
           trong mê cung.
       11:
         image: notes/hoc1_11.jpg
-        text: "Để làm nhiều hơn một hành động, bạn có thể kéo nhiều khối vào không
+        text: Để làm nhiều hơn một hành động, bạn có thể kéo nhiều khối vào không
           gian làm việc và gắn chúng với nhau. Con chim sẽ thực hiện những dòng lệnh
-          từ trên đến dưới."
+          từ trên đến dưới.
       12:
         image: notes/hoc1_12.jpg
         text: Nếu bạn chạy một chương trình và muốn sửa nó và thử lại, ấn nút "Khởi

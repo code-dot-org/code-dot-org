@@ -6,7 +6,7 @@
           'Jigsaw: Learn to drag and drop': 'Yapboz: Nasıl sürükleyip bırakacağınızı
             öğrenin'
           The Maze: Labirent
-          Multi: "Çoklu"
+          Multi: Çoklu
           Match: Eşleştir
           Math Image: Matematik Görseli
           title: Deneme Kursu
@@ -23,7 +23,7 @@
           'Bee 1: Intro': 'Arı 1: Giriş'
           'Maze 2: Loops': 'Labirent 2: Döngüler'
           'Bee 2: Loops': 'Arı 2: Döngüler'
-          Multi & Match: "Çoklu & Eşleştirme"
+          Multi & Match: Çoklu & Eşleştirme
           K-1 Flappy: K-1 Salınım
           Flappy non blockly: Bloksuz salınma
           title: Ders 1
@@ -72,7 +72,7 @@
           Getting Loopy: Döngüselleşme
           Relay programming: Röle Programlama
           Conditionals: Koşullar
-          Binary Bracelets: "İkilik Bileklikler"
+          Binary Bracelets: İkilik Bileklikler
           The Big Event: Büyük Olay
           Your Digital Footprint: Dijital İziniz
           description: Kurs 2 alt ve orta sınıf ilköğretim öğrencileri için tasarlanmıştır.
@@ -111,12 +111,12 @@
           Artist Functions with Parameters: Parametreli Aktör Fonksiyonları
           Computational Thinking: Sayısal Düşünme
           Functional Suncatchers: Fonksiyonel Güneş Avcıları
-          Songwriting Parameters: "Şarkı yazma"
+          Songwriting Parameters: Şarkı yazma
           Dice Race: Zar Yarışı
-          Internet: "İnternet"
+          Internet: İnternet
           Crowdsourcing: Kalabalık Kaynaklandırma 'Crowdsourcing'
           Digital Citizenship: Sayısal Vatandaşlık
-          Farmer - While Loops: "Çiftçi - While Döngüleri"
+          Farmer - While Loops: Çiftçi - While Döngüleri
           description: Kurs 3 öğrencilerinin Kurs 2'yi almış olmaları gerekmektedir.
             Öğrenciler farklı tipteki döngüler, olaylar, fonksiyonlar, ve koşullandırıcılarla
             programlar oluşturur. Kursun sonunda kendine özel bir oyun, çizim ve paylaşabileceğin
@@ -129,7 +129,7 @@
           'Bee: Conditionals': 'Arı: Koşullandırıcılar'
           'Maze: Conditionals': 'Labirent: Koşullandırıcılar'
           'Artist: Nested Loops': 'Aktör: Yerleştirilmiş Döngüler'
-          'Farmer: While Loops': "Çiftçi: While Döngüleri"
+          'Farmer: While Loops': 'Çiftçi: While Döngüleri'
           'Bee: Nested Loops': 'Arı: Yerleştirilmiş Döngüler'
           'Bee: Debugging': 'Arı: Ayıklama'
           description_short: Students taking Course 3 should have already taken Course
@@ -141,18 +141,18 @@
           'Bee: Conditionals2': 'Arı: Koşullandırıcılar2'
           'Maze: Conditionals2': 'Labirent: Koşullandırıcılar2'
           'Artist: Nested Loops2': 'Aktör: Yerleştirilmiş Döngüler2'
-          'Farmer: While Loops2': "Çiftçi: While Döngüleri2"
+          'Farmer: While Loops2': 'Çiftçi: While Döngüleri2'
           'Bee: Nested Loops2': 'Arı: Yerleştirilmiş Döngüler2'
           'Bee: Debugging2': 'Arı: Ayıklama2'
           'Artist: Patterns': 'Artist: Patterns'
-          Songwriting: "Şarkı yazma"
+          Songwriting: Şarkı yazma
         msm:
           title: Ortaokul Matematiği
           description: Ortaokul Matematiği için özel çalışma sürüyor.
           Graph Paper Programming: Grafik kağıdı programlama
           Assessments: Değerlendirmeler
-          Unit 1: "Ünite 1"
-          Unit 2: "İkinci Ünite"
+          Unit 1: Ünite 1
+          Unit 2: İkinci Ünite
         playlab:
           title: Play Lab
           description: Create a story or make a game with Play Lab!

@@ -141,12 +141,12 @@
       %{name}
   follower:
     invite_sent: Uitnodiging verstuurd
-    added_teacher: "%{name} toegevoegd als je leraar"
+    added_teacher: '%{name} toegevoegd als je leraar'
     registered: Je hebt je aangemeld voor %{section_name}.
     error:
       signed_in: Log uit om verder te gaan
       username_not_found: Gebruikersnaam %{username} niet gevonden
-      username_in_use: "%{username} wordt al gebruikt, kies een andere"
+      username_in_use: '%{username} wordt al gebruikt, kies een andere'
       no_teacher: Er is niemand ingelogd met '%{teacher_email_or_code}'. Vraag ze
         hier aan te melden en probeer ze dan nog eens toe te voegen
       section_not_found: Kan geen onderdeel vinden met code '%{section_code}'.
@@ -191,7 +191,7 @@
       msg_publicschool: Bevestig dat u een Amerikaanse openbare-schoolleerkracht bent.
       msg_visit_website: Website bezoeken
     providers:
-      apple_itunes: "$10 iTunes Gift Card"
+      apple_itunes: $10 iTunes Gift Card
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10GB Dropbox ruimte
@@ -200,7 +200,7 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: "$10 Skype credit"
+      skype: $10 Skype credit
     msg:
       choose: 'Kies een prijs:'
       choose_teacher: 'Click on the logo below to claim your prize:'
@@ -252,9 +252,9 @@
     destroy: Verwijderen
     back: Terug
     confirm: Weet je het zeker?
-    created: "%{model} aangemaakt."
-    updated: "%{model} bijgewerkt."
-    destroyed: "%{model} is succesvol verwijderd."
+    created: '%{model} aangemaakt.'
+    updated: '%{model} bijgewerkt.'
+    destroyed: '%{model} is succesvol verwijderd.'
     access_denied: Je hebt geen toegang tot dit %{model}.
   nav:
     header:
@@ -281,13 +281,13 @@
       puzzle_map: Niveaus
       prizes: Verzamel alle %{total_trophies} trofeeën en win prijzen!
       prize_earned: Alle %{total_trophies} bekers verzameld!
-      prize_us_only: "(alleen voor leerlingen in de Verenigde Staten)"
+      prize_us_only: (alleen voor leerlingen in de Verenigde Staten)
       prizes_link: Meer info
   teacher:
     title:
       one: 'Je leraar:'
       other: 'Je leraren:'
-    remove: "(verwijder leraar)"
+    remove: (verwijder leraar)
     confirm:
       remove: Weet je zeker dat je deze leraar wilt verwijderen?
     tools: Hulpmiddelen voor Leraren
@@ -344,18 +344,18 @@
     rollup: Overzicht vooruitgang
     activity: Recente klasactiviteiten
     user_not_found: De leraar of leerling kan niet worden gevonden
-    cant_remove_student_no_email: "%{student_name} kan niet worden verwijderd als
-      je leerling omdat %{student_name} geen emailadres heeft opgegeven"
-    cant_remove_teacher_no_email: "%{teacher_name} kan niet worden verwijderd als
-      je leraar omdat je geen emailadres hebt opgegeven"
-    student_teacher_disassociated: "%{teacher_name} is verwijderd als een leraar voor
-      %{student_name}"
+    cant_remove_student_no_email: '%{student_name} kan niet worden verwijderd als
+      je leerling omdat %{student_name} geen emailadres heeft opgegeven'
+    cant_remove_teacher_no_email: '%{teacher_name} kan niet worden verwijderd als
+      je leraar omdat je geen emailadres hebt opgegeven'
+    student_teacher_disassociated: '%{teacher_name} is verwijderd als een leraar voor
+      %{student_name}'
   user:
     email_confirm_needed: 'Emailadres is niet bevestigd:'
     email_resend_confirm: Verstuur de bevestigingsinstructie nog een keer
-    new_password_hint: "(laat leeg als je het niet wilt veranderen)"
-    current_password_hint: "(we hebben je huidige wachtwoord nodig om je veranderingen
-      te bevestigen)"
+    new_password_hint: (laat leeg als je het niet wilt veranderen)
+    current_password_hint: (we hebben je huidige wachtwoord nodig om je veranderingen
+      te bevestigen)
     cancel:
       title: Annuleer mijn account
       hint: Ontevreden?
@@ -406,9 +406,9 @@
     test_videos_help: Test de nieuwe video-speler op uw school
     try_beta_courses: Nieuw! Probeer cursussen die nog in ontwikkeling zijn voor basisschoolleerlingen
     use_as_teacher: Gebruik de site als leerkracht
-    heading_elementary: "<h2>Cursussen van 20 uur voor</h2><h2>Basisschoolleerlingen</h1>"
-    heading_apps: "<h2>Leuk voor</h2><h1>Iedereen</h1>"
-    heading_legacy: "<h2>Onze algemene cursus voor</h2><h1>Alle Leeftijden</h1>"
+    heading_elementary: <h2>Cursussen van 20 uur voor</h2><h2>Basisschoolleerlingen</h1>
+    heading_apps: <h2>Leuk voor</h2><h1>Iedereen</h1>
+    heading_legacy: <h2>Onze algemene cursus voor</h2><h1>Alle Leeftijden</h1>
     gallery:
       your_turtle: Mijn Kunst
       your_studio: Mijn Apps
@@ -517,7 +517,7 @@
     want_to_make_your_own: Wil je dit zelf doen?
     more: Meer &rarr;
     caption_by_name_age: door %{name}, %{age} jaar
-    caption_time_ago: "%{time_ago} geleden"
+    caption_time_ago: '%{time_ago} geleden'
   landing:
     prerelease: Deze cursus is in <span class='betatext'>beta</span>. Dat betekent
       dat het nog niet de uiteindelijke versie van de cursus is, en nog zal worden
@@ -525,7 +525,7 @@
     feedback: Geef Feedback
     report_bug: Meld Bug
     support: Help
-    support_url: "//support.code.org"
+    support_url: //support.code.org
   multi:
     wrong_title: Onjuist antwoord
     wrong_body: Het antwoord dat je hebt ingevoerd is niet correct.  Probeer het opnieuw!

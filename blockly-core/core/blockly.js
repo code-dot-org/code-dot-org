@@ -41,6 +41,7 @@ goog.require('Blockly.FieldTextInput');
 goog.require('Blockly.FieldVariable');
 goog.require('Blockly.FieldParameter');
 goog.require('Blockly.FunctionEditor');
+goog.require('Blockly.ContractEditor');
 goog.require('Blockly.Generator');
 goog.require('Blockly.ImageDimensionCache');
 goog.require('Blockly.Msg');

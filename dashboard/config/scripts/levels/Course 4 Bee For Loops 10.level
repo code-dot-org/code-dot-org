@@ -12,13 +12,15 @@
     "instructions": "If your loop is counting down, the increment is subtracted from your counter variable each loop. What should your increment be to collect 9, then 6, and then 3 nectar?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "ideal": "18",
+    "ideal": "9",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "start_direction": "1",
     "step_mode": "0",
     "nectar_goal": "18",
-    "flower_type": "redWithNectar"
+    "flower_type": "redWithNectar",
+    "use_modal_function_editor": "false",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
@@ -30,23 +32,26 @@
           <title name="VAR">counter</title>
           <value name="FROM">
             <block type="math_number">
-              <title name="NUM">???</title>
+              <title name="NUM">1</title>
             </block>
           </value>
           <value name="TO">
             <block type="math_number">
-              <title name="NUM">???</title>
+              <title name="NUM">100</title>
             </block>
           </value>
           <value name="BY">
             <block type="math_number">
-              <title name="NUM">???</title>
+              <title name="NUM">10</title>
             </block>
           </value>
         </block>
-        <block type="controls_repeat_ext" inline="true"/>
-        <block type="math_number">
-          <title name="NUM">???</title>
+        <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+            <block type="math_number">
+              <title name="NUM">3</title>
+            </block>
+          </value>
         </block>
         <block type="variables_get">
           <title name="VAR">counter</title>

@@ -3,13 +3,13 @@
     unplugged:
       Unplug1:
         title: Kynning á tölvunarfræði
-        desc: "Þessi kennslustund mun kynna hugtakið tölvunarfræði og útskýra hvað
+        desc: Þessi kennslustund mun kynna hugtakið tölvunarfræði og útskýra hvað
           tölvunarfræðingur gerir. Hún mun einnig gefa nemendum kost á að setja sig
           í spor tölvunarfræðings. Við lok stundarinnar mun hver nemandi vera kominn
           með hlut til að eiga og til að minna á það sem hún eða hann hefur lært.
           Það gæti verið freistandi að sleppa því að kenna ungum börnum orðfærið sem
           tengist þessu námi, en það er mun árangursríkara að kynna það núna á skemmtilegan
-          og leikrænan hátt heldur en að bíða með það þar til efnið er flóknara."
+          og leikrænan hátt heldur en að bíða með það þar til efnið er flóknara.
         pdfs:
         - unplug1
         video: Unplug1
@@ -40,17 +40,17 @@
         video: Unplug3
       Unplug4:
         title: Algrím
-        desc: "Þessi kennslustund fjallar um algrím. Með því að nota tangram form
-          og rúðublöð mun fyrsta æfingin sýna hve mikilvægt það er að hafa öll fyrirmæli
+        desc: Þessi kennslustund fjallar um algrím. Með því að nota tangram form og
+          rúðublöð mun fyrsta æfingin sýna hve mikilvægt það er að hafa öll fyrirmæli
           eins skír og ótvíræð og hægt er. Á eftir mun bekkurinn kanna á hve marga
           vegu er hægt að brjóta saman pappír til að mynda ferning og athygli er dregin
-          að því að sumar aðferðir nota færri brot en aðrar."
+          að því að sumar aðferðir nota færri brot en aðrar.
         pdfs:
         - unplug4
         video: Unplug4
       Unplug5:
         title: Föll
-        desc: "Í þessari kennslustund munu nemendur búa til sólarskraut (suncatcher)
+        desc: Í þessari kennslustund munu nemendur búa til sólarskraut (suncatcher)
           úr bandi, perlum og sérstökum skrautmun. Við gerð skrautsins endurtaka nemendur
           sömu aðgerðirnar nokkrum sinnum og á eftir eru þeir beðnir að koma auga
           á hvaða aðgerðir það eru. Þegar búið er að greina þessar aðgerðir verður
@@ -58,15 +58,15 @@
           pappírsblað. Lokaforritið verður miðað við allan bekkinn óháð gerð bands,
           perla eða skrautmuna. Til að þetta takist verða nemendur að greina sameiginleg
           einkenni ólíkra efna og nota almenn orð yfir þau. Þessi notkun almennra
-          heita er fínn inngangur að breytum (variables)."
+          heita er fínn inngangur að breytum (variables).
         pdfs:
         - unplug5
         video: Unplug5
       Unplug6:
         title: Skilyrði
-        desc: "Þetta er bekkjarleikur. Eftir kynningu á skilyrðum, ef-setningum og
+        desc: Þetta er bekkjarleikur. Eftir kynningu á skilyrðum, ef-setningum og
           lykkjum, getur bekkurinn æft saman með forskrifuðu forriti og spilum dregnum
-          úr spilastokk."
+          úr spilastokk.
         pdfs:
         - unplug6
         video: Unplug6
@@ -82,24 +82,23 @@
         video: Unplug7
       Unplug8:
         title: Kjarni
-        desc: "Í þessu verkefni er blandað saman hversdagslegri rútínu nemenda og
-          eyðufyllingarleik til að hjálpa nemendum að skilja hve árangursrík greining
-          aðalatriða er."
+        desc: Í þessu verkefni er blandað saman hversdagslegri rútínu nemenda og eyðufyllingarleik
+          til að hjálpa nemendum að skilja hve árangursrík greining aðalatriða er.
         pdfs:
         - unplug8
         video: Unplug8
       Unplug9:
         title: Boðhlaupsforritun
-        desc: "Þessi kennslustund notar hugmynd úr fyrra verkefni (forritun á rúðublöðr)
+        desc: Þessi kennslustund notar hugmynd úr fyrra verkefni (forritun á rúðublöðr)
           og notar færnina sem vannst þá til að undirstrika mikilvægi þess að ljúka
-          forritum sem byggjast á röð aðgerða og að prófa forrit oft í leit að göllum."
+          forritum sem byggjast á röð aðgerða og að prófa forrit oft í leit að göllum.
         pdfs:
         - unplug9
         video: Unplug9
       Unplug10:
         title: Internetið
-        desc: "Í þessari kennslustund munu nemendur þykjast fara í gegnum internetið
-          og læra í leiðinni um vefslóðir, IP tölur og DNS kerfið."
+        desc: Í þessari kennslustund munu nemendur þykjast fara í gegnum internetið
+          og læra í leiðinni um vefslóðir, IP tölur og DNS kerfið.
         pdfs:
         - unplug10
         video: Unplug10
@@ -124,9 +123,9 @@
         video: C1_moveitmoveit_unplugged
       PlantASeed:
         title: 'Algrím úr raunheimi: Sá fræi'
-        desc: "Þessi kennslustund dregur fram hvernig við notum algrím í daglegu lífi
+        desc: Þessi kennslustund dregur fram hvernig við notum algrím í daglegu lífi
           og notar fræsáningu sem dæmi. Einnig er horft almennar til tölvunarfræði
-          og hvernig algrím gegna nauðsynlegu hlutverki."
+          og hvernig algrím gegna nauðsynlegu hlutverki.
         video: C1_planting_seed
       BuildingAFoundation:
         title: Að byggja grunn
@@ -136,9 +135,9 @@
         video: C1_building_foundation
       GettingLoopy:
         title: Lykkjulæti
-        desc: "Þessi kennslustund kynnir forritunarhugtakið lykkju (endurteknar skipanir)
+        desc: Þessi kennslustund kynnir forritunarhugtakið lykkju (endurteknar skipanir)
           með dansi. Nemendur læra einföld dansspor og fá síðan fyrirmæli um að endurtaka
-          þau."
+          þau.
         video: C1_getting_loopy
       RelayProgramming:
         title: Boðhlaupsforritun
@@ -170,9 +169,9 @@
         video: C2_graph_paper
       PaperPlanes:
         title: 'Algrím úr raunheimi: Pappírsskutlur'
-        desc: "Þessi kennslustund dregur fram hvernig við notum algrím í daglegu lífi
+        desc: Þessi kennslustund dregur fram hvernig við notum algrím í daglegu lífi
           og tekur sem dæmi að búa til pappírsskutlu. Einnig er horft almennar til
-          tölvunarfræði og hvernig algrím gegna nauðsynlegu hlutverki."
+          tölvunarfræði og hvernig algrím gegna nauðsynlegu hlutverki.
         video: C2_paper_airplanes
       BinaryBracelets:
         title: Stafræn armbönd
@@ -203,9 +202,9 @@
         video: C3_songwriting_with_parameters
       DiceRace:
         title: 'Algrím úr raunheimi: Teningakapp'
-        desc: "Þessi kennslustund dregur fram hvernig við notum algrím í daglegu lífi.
+        desc: Þessi kennslustund dregur fram hvernig við notum algrím í daglegu lífi.
           Meðal annars munu nemendur greina og skrifa niður algrím fyrir kappleik
-          sem notar teningakast."
+          sem notar teningakast.
         video: C3_dice_race
       Internet:
         title: Internet

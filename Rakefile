@@ -23,9 +23,16 @@ end
 namespace :build do
 
   task :configure do
+    if CDO.chef_managed && !(rack_env?(:production) && CDO.name =='daemon')
+      HipChat.log 'Applying <b>chef</b> profile...'
+      RakeUtils.sudo 'chef-client'
+    end
+
     Dir.chdir(aws_dir) do
-      HipChat.log 'Installing <b>aws</b> bundle...'
-      RakeUtils.bundle_install
+      unless CDO.chef_managed
+        HipChat.log 'Installing <b>aws</b> bundle...'
+        RakeUtils.bundle_install 
+      end
 
       HipChat.log 'Configuring <b>aws</b>...'
       RakeUtils.rake
@@ -52,6 +59,15 @@ namespace :build do
         RakeUtils.system 'MOOC_LOCALIZE=1', 'grunt'
       else
         RakeUtils.system 'grunt'
+      end
+    end
+  end
+
+  task :stop_varnish do
+    Dir.chdir(aws_dir) do
+      unless rack_env?(:development) || (RakeUtils.system_('ps aux | grep -v grep | grep varnishd -q') != 0)
+        HipChat.log 'Stopping <b>varnish</b>...'
+        RakeUtils.stop_service 'varnish'
       end
     end
   end
@@ -113,11 +129,10 @@ namespace :build do
     end
   end
 
-  task :varnish do
+  task :start_varnish do
     Dir.chdir(aws_dir) do
-      unless rack_env?(:development)
-        HipChat.log 'Restarting <b>varnish</b>...'
-        RakeUtils.stop_service 'varnish'
+      unless rack_env?(:development) || (RakeUtils.system_('ps aux | grep -v grep | grep varnishd -q') == 0)
+        HipChat.log 'Starting <b>varnish</b>...'
         RakeUtils.start_service 'varnish'
       end
     end
@@ -127,61 +142,14 @@ namespace :build do
   tasks << :configure
   tasks << :blockly_core if CDO.build_blockly_core
   tasks << :blockly if CDO.build_blockly
+  tasks << :stop_varnish if CDO.build_dashboard || CDO.build_pegasus
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
-  tasks << :varnish
+  tasks << :start_varnish if CDO.build_dashboard || CDO.build_pegasus
   task :all => tasks
 
 end
 task :build => ['build:all']
-
-
-
-
-##################################################################################################
-##
-##
-## production - tasks related to the production instances
-##
-##
-##################################################################################################
-
-namespace :production do
-
-  namespace :varnish do
-
-    task :upgrade do
-      CDO.varnish_instances.each do |host|
-        begin
-          remote_command = [
-            'cd production/aws',
-            'git pull',
-            'bundle',
-            'touch Rakefile',
-            'rake',
-            'cd ..',
-            'rake build:varnish',
-          ].join('; ')
-          RakeUtils.system 'ssh', host, "'#{remote_command} 2>&1'"
-        rescue
-          puts "Unable to update #{host}!"
-        end
-      end
-    end
-
-    task :restart do
-      CDO.varnish_instances.each do |host|
-        remote_command = [
-          'sudo service varnish stop',
-          'sudo service varnish start',
-        ].join('; ')
-        RakeUtils.system 'ssh', host, "'#{remote_command} 2>&1'"
-      end
-    end
-
-  end
-
-end
 
 
 
@@ -197,32 +165,36 @@ end
 namespace :install do
 
   task :dashboard do
-    Dir.chdir(aws_dir) { RakeUtils.rake }
-    Dir.chdir(dashboard_dir) do
-      RakeUtils.bundle_install
-      unless rack_env?(:production)
-        RakeUtils.rake 'db:create'
-        RakeUtils.rake 'db:schema:load'
+    unless CDO.chef_managed
+      Dir.chdir(aws_dir) { RakeUtils.rake }
+      Dir.chdir(dashboard_dir) do
+        RakeUtils.bundle_install
+        unless rack_env?(:production)
+          RakeUtils.rake 'db:create'
+          RakeUtils.rake 'db:schema:load'
+        end
+        RakeUtils.sudo_ln_s dashboard_dir('config/init.d'), File.join('/etc/init.d', CDO.dashboard_unicorn_name)
+        RakeUtils.sudo 'update-rc.d', CDO.dashboard_unicorn_name, 'defaults'
+        RakeUtils.sudo_ln_s dashboard_dir('config/logrotate'), File.join('/etc/logrotate.d', CDO.dashboard_unicorn_name)
+        RakeUtils.sudo 'service', CDO.dashboard_unicorn_name, 'start'
       end
-      RakeUtils.sudo_ln_s dashboard_dir('config/init.d'), File.join('/etc/init.d', CDO.dashboard_unicorn_name)
-      RakeUtils.sudo 'update-rc.d', CDO.dashboard_unicorn_name, 'defaults'
-      RakeUtils.sudo_ln_s dashboard_dir('config/logrotate'), File.join('/etc/logrotate.d', CDO.dashboard_unicorn_name)
-      RakeUtils.sudo 'service', CDO.dashboard_unicorn_name, 'start'
     end
   end
 
   task :pegasus do
-    Dir.chdir(aws_dir) { RakeUtils.rake }
-    Dir.chdir(pegasus_dir) do
-      RakeUtils.bundle_install
-      unless rack_env?(:production)
-        RakeUtils.system 'echo', "'CREATE DATABASE IF NOT EXISTS #{CDO.pegasus_db_name}'", '|', 'mysql', '-uroot'
-        RakeUtils.rake 'db:migrate'
-        RakeUtils.rake 'seed:migrate'
+    unless CDO.chef_managed
+      Dir.chdir(aws_dir) { RakeUtils.rake }
+      Dir.chdir(pegasus_dir) do
+        RakeUtils.bundle_install
+        unless rack_env?(:production)
+          RakeUtils.system 'echo', "'CREATE DATABASE IF NOT EXISTS #{CDO.pegasus_db_name}'", '|', 'mysql', '-uroot'
+          RakeUtils.rake 'db:migrate'
+          RakeUtils.rake 'seed:migrate'
+        end
+        RakeUtils.sudo_ln_s dashboard_dir('config/init.d'), File.join('/etc/init.d', CDO.pegasus_unicorn_name)
+        RakeUtils.sudo 'update-rc.d', CDO.pegasus_unicorn_name, 'defaults'
+        RakeUtils.sudo 'service', CDO.pegasus_unicorn_name, 'start'
       end
-      RakeUtils.sudo_ln_s dashboard_dir('config/init.d'), File.join('/etc/init.d', CDO.pegasus_unicorn_name)
-      RakeUtils.sudo 'update-rc.d', CDO.pegasus_unicorn_name, 'defaults'
-      RakeUtils.sudo 'service', CDO.pegasus_unicorn_name, 'start'
     end
   end
 

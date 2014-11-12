@@ -7,8 +7,8 @@ In addition to the Hour of Code, here are some things you can do to celebrate CS
 NOTE: Please celebrate CS Education throughout the year, with highlighted activities whenever it’s convenient for you, your students, your school.
 
 # What are you doing for CSEdWeek?
-<br />
-[<button>Tell us</button>](http://csedweek.cs10kcommunity.org/submission)    [<button>Map of events</button>](https://mapsengine.google.com/16135125564646265347-05414812628978701557-4/mapview/?authuser=0)    [<button>Calendar of events</button>](http://csedweek.cs10kcommunity.org)
+<br/>
+[<button>Tell Us</button>](http://csedweek.cs10kcommunity.org/submission)    [<button>See Calendar</button>](http://csedweek.cs10kcommunity.org)      [<button>See Map</button>](https://mapsengine.google.com/16135125564646265347-05414812628978701557-4/mapview/?authuser=0)
 <br />
 <br />
 
@@ -43,7 +43,7 @@ NOTE: Please celebrate CS Education throughout the year, with highlighted activi
 ## 4) Garner Support 
 - Pitch CS education to your local school board, superintendent, or principal. Start with [these PowerPoint slides](/files/CS-pitch-basic-stats.pptx), [this video](http://www.youtube.com/watch?v=MwLXrN0Yguk&feature=c4-overview-vl&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q), or [these talking points](http://www.ncwit.org/resources/moving-beyond-computer-literacy-why-schools-should-teach-computer-science)
 - Ask your local Congressman to support the Computer Science Education Act
-- Ask your governor (or other local official) for a [CSEdWeek proclamation](/public/csteacher/proclamationinstructions.pdf). 
+- Ask your governor (or other local official) for a [CSEdWeek proclamation](/csteacher/proclamationinstructions.pdf). 
 <br/>
 <br/>
 

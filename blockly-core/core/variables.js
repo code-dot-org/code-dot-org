@@ -49,8 +49,10 @@ Blockly.Variables.allVariables = function(opt_block) {
   var blocks;
   if (opt_block) {
     blocks = opt_block.getDescendants();
-  } else {
+  } else if (Blockly.mainBlockSpace) {
     blocks = Blockly.mainBlockSpace.getAllBlocks();
+  } else {
+    return [];
   }
   var variableHash = {};
   // Iterate through every block and add each variable to the hash.

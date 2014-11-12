@@ -131,12 +131,12 @@
       dan Plants vs Zombie! :-) % {nama}'
   follower:
     invite_sent: Jemputan dihantar
-    added_teacher: "%{name} ditambah sebagai guru anda"
+    added_teacher: '%{name} ditambah sebagai guru anda'
     registered: Anda telah berdaftar untuk %{section_name}.
     error:
       signed_in: Sila daftar keluar sebelum teruskan
       username_not_found: Pengguna %{username} tidak dijumpai
-      username_in_use: "%{username} telah dipilih, silih pilih yang lain"
+      username_in_use: '%{username} telah dipilih, silih pilih yang lain'
       no_teacher: Tidak dapat menemui sesiapa yang mendaftar masuk  dengan '%{teacher_email_or_code}'.
         Sila minta mereka untuk mendaftar di sini dan cuba tambah mereka lagi
       section_not_found: Tidak dapat mencari bahagian dengan kod '%{section_code}'.
@@ -182,7 +182,7 @@
         Syarikat.
       msg_visit_website: Visit website
     providers:
-      apple_itunes: "$10 iTunes Gift Card"
+      apple_itunes: $10 iTunes Gift Card
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10GB ruang Dropbox
@@ -191,7 +191,7 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: "$10 Skype credit"
+      skype: $10 Skype credit
     msg:
       choose: 'Choose a prize:'
       choose_teacher: 'Click on the logo below to claim your prize:'
@@ -238,9 +238,9 @@
     destroy: Hapuskan
     back: Belakang
     confirm: Adakah anda pasti?
-    created: "%{model} telah berjaya dicipta."
-    updated: "%{model} telah berjaya diperbaharui."
-    destroyed: "%{model} telah berjaya dihapuskan."
+    created: '%{model} telah berjaya dicipta.'
+    updated: '%{model} telah berjaya diperbaharui.'
+    destroyed: '%{model} telah berjaya dihapuskan.'
     access_denied: Anda tidak mempunyai akses kepada %{model} ini.
   nav:
     header:
@@ -267,13 +267,13 @@
       puzzle_map: Peringkat
       prizes: Kumpul semua %{total_trophies} trofi dan menangi hadiah-hadiah!
       prize_earned: Semua %{total_trophies} Piala telah dikumpul. Menang Hadiah!
-      prize_us_only: "(Pelajar dari  A.S. sahaja)"
+      prize_us_only: (Pelajar dari  A.S. sahaja)
       prizes_link: maklumat lanjut
   teacher:
     title:
       one: 'Guru anda:'
       other: 'Guru anda:'
-    remove: "(keluarkan guru)"
+    remove: (keluarkan guru)
     confirm:
       remove: Adakah anda pasti anda mahu keluarkan guru ini?
     tools: Peralatan Guru
@@ -329,18 +329,18 @@
     rollup: Dasbor Perkembangan
     activity: Aktiviti kelas terkini
     user_not_found: Guru atau pelajar tidak dapat dijumpai
-    cant_remove_student_no_email: "%{student_name} tidak dapat dikeluarkan sebagai
-      pelajar anda kerana %{student_name} belum mendaftar alamat e-mel"
-    cant_remove_teacher_no_email: "%{teacher_name} tidak dapat dikeluarkan sebagai
-      guru anda kerana anda belum mendaftarkan alamat e-mel"
-    student_teacher_disassociated: "%{teacher_name} telah dikeluarkan sebagai guru
-      %{student_name}"
+    cant_remove_student_no_email: '%{student_name} tidak dapat dikeluarkan sebagai
+      pelajar anda kerana %{student_name} belum mendaftar alamat e-mel'
+    cant_remove_teacher_no_email: '%{teacher_name} tidak dapat dikeluarkan sebagai
+      guru anda kerana anda belum mendaftarkan alamat e-mel'
+    student_teacher_disassociated: '%{teacher_name} telah dikeluarkan sebagai guru
+      %{student_name}'
   user:
     email_confirm_needed: 'Alamat e-mel belum disahkan:'
     email_resend_confirm: Hantar semula arahan pengesahan
-    new_password_hint: "(biarkan kosong jika anda tidak mahu mengubahnya)"
-    current_password_hint: "(kami memerlukan kata laluan semasa anda untuk mengesahkan
-      perubahan anda)"
+    new_password_hint: (biarkan kosong jika anda tidak mahu mengubahnya)
+    current_password_hint: (kami memerlukan kata laluan semasa anda untuk mengesahkan
+      perubahan anda)
     cancel:
       title: Batalkan akaun saya
       hint: Tidak berpuas hati?
@@ -390,9 +390,9 @@
     test_videos_help: Uji pemain video baru kami di sekolah anda
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
-    heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
-    heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
-    heading_legacy: "<h2>Our previous course for</h2><h1>Existing Students</h1>"
+    heading_elementary: <h2>20 hour courses for</h2><h1>Elementary Students</h1>
+    heading_apps: <h2>Fun for</h2><h1>Everybody</h1>
+    heading_legacy: <h2>Our previous course for</h2><h1>Existing Students</h1>
     gallery:
       your_turtle: My Art
       your_studio: My Apps
@@ -502,13 +502,13 @@
     want_to_make_your_own: Ingin buat anda punya sendiri?
     more: Lagi &rarr;
     caption_by_name_age: by %{name}, age %{age}
-    caption_time_ago: "%{time_ago} ago"
+    caption_time_ago: '%{time_ago} ago'
   landing:
     prerelease: This page is still under development.
     feedback: Give Feedback
     report_bug: Report Bug
     support: Get Help
-    support_url: "//support.code.org"
+    support_url: //support.code.org
   multi:
     wrong_title: Jawapan yang salah
     wrong_body: Jawapan yang telah anda masukkan adalah tidak betul.  Sila cuba lagi!

@@ -141,7 +141,6 @@ var TITLE_SCREEN_TEXT_HEIGHT =
 var TITLE_SPRITE_X_POS = 3;
 var TITLE_SPRITE_Y_POS = 6;
 
-var SPEECH_BUBBLE_TIMEOUT = 3000;
 var SPEECH_BUBBLE_RADIUS = 20;
 var SPEECH_BUBBLE_H_OFFSET = 50;
 var SPEECH_BUBBLE_PADDING = 5;
@@ -909,27 +908,25 @@ Studio.initReadonly = function(config) {
 var arrangeStartBlocks = function (config) {
   var xml = parseXmlElement(config.level.startBlocks);
   var numUnplacedElementNodes = 0;
-  //
-  // two passes through, one to count the nodes:
-  //
-  for (var x = 0, xmlChild; xml.childNodes && x < xml.childNodes.length; x++) {
-    xmlChild = xml.childNodes[x];
+  // sort the blocks by visibility
+  var xmlChildNodes = BlocklyApps.sortBlocksByVisibility(xml.childNodes);
+  // do a first pass to count the nodes
+  for (var x = 0, xmlChild; xmlChildNodes && x < xmlChildNodes.length; x++) {
+    xmlChild = xmlChildNodes[x];
 
     // Only look at element nodes without a y coordinate:
     if (xmlChild.nodeType === 1 && !xmlChild.getAttribute('y')) {
       numUnplacedElementNodes++;
     }
   }
-  //
-  // and one to place the nodes:
-  //
+  // do a second pass to place the nodes
   if (numUnplacedElementNodes) {
     var numberOfPlacedBlocks = 0;
     var totalHeightAvail =
-        (config.level.minWorkspaceHeight || 1000) - Studio.BLOCK_Y_COORDINATE;
+        (config.level.minWorkspaceHeight || 800) - Studio.BLOCK_Y_COORDINATE;
     var yCoordInterval = totalHeightAvail / numUnplacedElementNodes;
-    for (x = 0, xmlChild; xml.childNodes && x < xml.childNodes.length; x++) {
-      xmlChild = xml.childNodes[x];
+    for (x = 0, xmlChild; xmlChildNodes && x < xmlChildNodes.length; x++) {
+      xmlChild = xmlChildNodes[x];
 
       // Only look at element nodes without a y coordinate:
       if (xmlChild.nodeType === 1 && !xmlChild.getAttribute('y')) {
@@ -1150,7 +1147,11 @@ BlocklyApps.reset = function(first) {
     .setAttribute('visibility', 'hidden');
 
   // Reset configurable variables
-  Studio.setBackground({'value': 'cave'});
+  if (level.coordinateGridBackground) {
+    Studio.setBackground({value: 'grid'});
+  } else {
+    Studio.setBackground({value: 'cave'});
+  }
 
   // Reset currentCmdQueue and various counts:
   Studio.gesturesObserved = {};
@@ -1229,7 +1230,7 @@ BlocklyApps.runButtonClick = function() {
   BlocklyApps.attempts++;
   Studio.execute();
 
-  if (level.freePlay) {
+  if (level.freePlay && !BlocklyApps.hideSource) {
     var shareCell = document.getElementById('share-cell');
     shareCell.className = 'share-cell-enabled';
   }
@@ -1657,6 +1658,16 @@ Studio.displayScore = function() {
   score.setAttribute('visibility', 'visible');
 };
 
+Studio.showCoordinates = function() {
+  var sprite = Studio.sprite[Studio.protaganistSpriteIndex];
+  // convert to math coordinates, with the origin at the bottom left
+  // corner of the grid, and distances measured from the center of the
+  // sprite.
+  var x = sprite.x + 50;
+  var y = 350 - sprite.y;
+  Studio.setScoreText({text: 'x: ' + x + ' y: ' + y});
+};
+
 Studio.queueCmd = function (id, name, opts) {
   var cmd = {
     'id': id,
@@ -1766,6 +1777,10 @@ Studio.callCmd = function (cmd) {
       BlocklyApps.highlight(cmd.id);
       Studio.setScoreText(cmd.opts);
       break;
+    case 'showCoordinates':
+      BlocklyApps.highlight(cmd.id);
+      Studio.showCoordinates();
+      break;
     case 'wait':
       if (!cmd.opts.started) {
         BlocklyApps.highlight(cmd.id);
@@ -1873,6 +1888,9 @@ Studio.setSprite = function (opts) {
   var spriteValue = opts.value;
 
   var spriteIcon = document.getElementById('sprite' + spriteIndex);
+  if (!spriteIcon) {
+    return;
+  }
   sprite.visible = (spriteValue !== 'hidden' && !opts.forceHidden);
   spriteIcon.setAttribute('visibility', sprite.visible ? 'visible' : 'hidden');
   if (spriteValue === 'hidden' || spriteValue === 'visible') {
@@ -2053,6 +2071,9 @@ Studio.saySprite = function (opts) {
 
   var spriteIndex = opts.spriteIndex;
   var sprite = Studio.sprite[spriteIndex];
+  if (!sprite) {
+    return;
+  }
 
   opts.started = true;
 
@@ -2093,7 +2114,7 @@ Studio.saySprite = function (opts) {
 
   sprite.bubbleTimeoutFunc = delegate(this, Studio.hideSpeechBubble, opts);
   sprite.bubbleTimeout = window.setTimeout(sprite.bubbleTimeoutFunc,
-    SPEECH_BUBBLE_TIMEOUT);
+    opts.seconds * 1000);
 
   return opts.complete;
 };
@@ -2107,7 +2128,11 @@ Studio.stop = function (opts) {
     // event against the same sprite if needed. This makes it easier to write code
     // that says "when sprite X touches Y" => "stop sprite X", and have it do what
     // you expect it to do...
-    Studio.sprite[opts.spriteIndex].clearCollisions();
+    var sprite = Studio.sprite[opts.spriteIndex];
+    if (!sprite) {
+      return;
+    }
+    sprite.clearCollisions();
     for (var i = 0; i < Studio.spriteCount; i++) {
       if (i === opts.spriteIndex) {
         continue;

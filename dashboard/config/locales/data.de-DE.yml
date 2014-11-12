@@ -357,8 +357,8 @@
           das Loch zu füllen?
         maze_karel_debug_if: Hilfe! Repariere das Programm, damit mein Feld komplett
           flach wird.
-        maze_karel_debug_if_else: "Überprüfe dieses Programm auf Fehler und beseitige
-          sie, damit ich alle Löcher auffüllen und alle Erdhaufen entfernen kann."
+        maze_karel_debug_if_else: Überprüfe dieses Programm auf Fehler und beseitige
+          sie, damit ich alle Löcher auffüllen und alle Erdhaufen entfernen kann.
         maze_karel_debug_function_1: Was musst du am Programm ändern, damit es mir
           hilft alle Erdhaufen zu entfernen?
         maze_karel_debug_function_2: Kannst du dieses Programm für mich auf Fehler

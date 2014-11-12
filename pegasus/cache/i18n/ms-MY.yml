@@ -4,7 +4,7 @@
   computer_science: Sains Komputer
   computer_science_edweek: Minggu Pendidikan Sains Komputer
   csedweek_dates: 9-15 Disember 2013
-  n_have_learned_an_hoc: "<h1>#</h1><h3>telah mencuba</h3><h2>HOUR of CODE&trade;</h2>"
+  n_have_learned_an_hoc: <h1>#</h1><h3>telah mencuba</h3><h2>HOUR of CODE&trade;</h2>
   anybody_can_learn: Sesiapapun boleh belajar.
   learn_now: Pelajari Sekarang
   petition_message: Setiap pelajar di setiap sekolah perlu diberi peluang untuk mempelajari
@@ -46,7 +46,7 @@
     ulang-gelung, penyata jika-kemudian, dan algoritma asas.
   all_ages: Semua peringkat umur
   beginner: Pemula
-  n_participants: "# peserta"
+  n_participants: '# peserta'
   go: Pergi
   thank_you_: Terima kasih!
   congratulations: Tahniah!
@@ -82,7 +82,7 @@
   beyond_an_hour: Melepasi Satu Jam Kod >
   get_started: Mula
   i_agree: saya setuju
-  participant_select: "-Pilih-"
+  participant_select: -Pilih-
   participant_student: pelajar
   participant_parent: Ibu bapa
   participant_educator: Pendidik
@@ -101,7 +101,7 @@
   learn_next_level: Teruskan ke tahap seterusnya
   learn_online: Cuba kursus-kursus lain secara online
   learn_classes: cari kelas tempatan
-  hoc_is_here: "#SatuJamKod ada di sini - Jom tengok! @codeorg"
+  hoc_is_here: '#SatuJamKod ada di sini - Jom tengok! @codeorg'
   just_did_hoc: 'Saya baru buat #SatuJamKod - Jom tengok! @codeorg'
   learn_hoc: Belajar Hour of Code
   beyond_hoc: Melepasi Satu Jam
@@ -111,11 +111,11 @@
   help_recruit_coders: bantu kami merekrut lebih banyak coders ke pasukan anda!
   help_recruit: bantu kami merekrut lebih banyak coders!
   lines_of_code: LEBIH <b># BARIS KOD</b> DITULIS HINGGA KINI.
-  lines_of_code_alt: "<b>#</b> BARIS KOD YANG DITULIS OLEH PARA PELAJAR"
+  lines_of_code_alt: <b>#</b> BARIS KOD YANG DITULIS OLEH PARA PELAJAR
   who_has_done_hoc: 'Siapa yang dah buat #SatuJamKod? @codeorg'
   hoc_leaderboards: Papan Carta Satu Jam Kod
-  students_and_lines: "%{students} pelajar telah selesaikan Satu Jam Kod dan telah
-    menulis %{lines} baris kod."
+  students_and_lines: '%{students} pelajar telah selesaikan Satu Jam Kod dan telah
+    menulis %{lines} baris kod.'
   start_hoc: Mulakan Satu Jam Kod sekarang
   contact_form_topic_press: Akhbar/media (temu bual atau penglibatan perbualan)
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>

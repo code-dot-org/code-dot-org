@@ -1,121 +1,121 @@
-ro:
+"ro":
   activerecord:
     errors:
       messages:
-        blank: este necesar
+        blank: "este necesar"
     attributes:
       user:
-        name: Numele afișat
-        email: E-mail
-        username: nume de utilizator
-        password: parolă
-        password_confirmation: Confirmarea parolei
-        current_password: Parolă curentă
-        locale: Limbă
-        age: Vârsta
-        gender: Sex
-        edit_header: Editează detaliile contului
+        name: "Numele afișat"
+        email: "E-mail"
+        username: "nume de utilizator"
+        password: "parolă"
+        password_confirmation: "Confirmarea parolei"
+        current_password: "Parolă curentă"
+        locale: "Limbă"
+        age: "Vârsta"
+        gender: "Sex"
+        edit_header: "Editează detaliile contului"
         error:
-          future: nu poate fi în viitor
-  hello: Salutare lume
+          future: "nu poate fi în viitor"
+  hello: "Salutare lume"
   welcome_back: 'Bine ai revenit, %{name}'
   add_teacher_form:
     code_or_email:
       label: 'Adaugă un profesor prin cod sau adresă de email:'
-      placeholder: Cod (ABCDEF) sau e-mail (profesor@școală.edu)
+      placeholder: "Cod (ABCDEF) sau e-mail (profesor@școală.edu)"
     code:
       label: 'Adaugă un profesor în funcţie de secţiunea codului:'
-      placeholder: Cod (ABCDEF)
-    submit: Adaugă profesor
+      placeholder: "Cod (ABCDEF)"
+    submit: "Adaugă profesor"
   add_hint_form:
-    placeholder: Te rugăm să introduci indiciul tău aici
-    submit: Adaugă sugestie
-  appname: Code.org
-  stage: etapă
+    placeholder: "Te rugăm să introduci indiciul tău aici"
+    submit: "Adaugă sugestie"
+  appname: "Code.org"
+  stage: "etapă"
   stage_number: 'Stage %{number}'
-  puzzle: Puzzle
-  trophies: trofee
-  courses: cursuri
-  of: de
-  more: MAI MULT
-  less: MAI PUŢIN
+  puzzle: "Puzzle"
+  trophies: "trofee"
+  courses: "cursuri"
+  of: "de"
+  more: "MAI MULT"
+  less: "MAI PUŢIN"
   try_hoc: 'Încearcă Ora de Cod, faceți clic aici >> '
-  try_k8intro: Încearcă Cursul nostru K-8 de introducere în Informatică (15-25 ore)
-  k8intro: Cursul Introducere K-8 in Programare (15-25 ore)
+  try_k8intro: "Încearcă Cursul nostru K-8 de introducere în Informatică (15-25 ore)"
+  k8intro: "Cursul Introducere K-8 in Programare (15-25 ore)"
   already_started: 'Ai început deja? Rezumă aici >>'
   demos: 'Admin: Toate demo-urile'
-  continue: Continuă
-  prize: premiu
-  more_info: Mai multe informaţii
+  continue: "Continuă"
+  prize: "premiu"
+  more_info: "Mai multe informaţii"
   auth:
     sign_in_with: 'Loghează-te cu %{provider}'
-    signed_in: Înregistrat!
+    signed_in: "Înregistrat!"
     signed_out: 'Aţi ieşit de pe <a href="%{url}">Code.org</a>.'
     sign_out_of: 'Ai folosit %{provider} pentru a intra. <a href="%{url}">Fă clic aici</a> pentru a ieşi de pe %{provider}.'
-    already_signedup: Te-ai înscris deja?
-    notyet_signedup: Nu te-ai alăturat încă?
-    google_oauth2: Cont Google
-    twitter: Twitter
-    facebook: Facebook
-    windowslive: Cont Microsoft
-    forgot_password: Ai uitat parola?
-    need_confirmation: Nu ai primit instrucţiuni de confirmare?
-    need_unlock: Nu ai primit instrucţiuni de deblocare?
+    already_signedup: "Te-ai înscris deja?"
+    notyet_signedup: "Nu te-ai alăturat încă?"
+    google_oauth2: "Cont Google"
+    twitter: "Twitter"
+    facebook: "Facebook"
+    windowslive: "Cont Microsoft"
+    forgot_password: "Ai uitat parola?"
+    need_confirmation: "Nu ai primit instrucţiuni de confirmare?"
+    need_unlock: "Nu ai primit instrucţiuni de deblocare?"
   signup_form:
     overview_student: 'Sign up for an account to track your progress. Your email is primarily used to allow you to log in and for password recovery. For more information, see our <a href="http://code.org/privacy">Privacy Policy</a>.'
     overview_teacher: "Teach computer science in your classroom by signing up for an account.<p/> You'll be able to add your students and track their progress."
     no_signup_message: 'Poţi <a target="_blank" href="http://learn.code.org"> parcurge diverse stadii şi puzzle-uri</a>, dar va trebui să te înregistrezi pentru a-ți salva progresul.'
-    teacher_educator_guide: Consultă ghidul educatorului
-    teacher_pitch: Profesor înscriere Code.org
-    teacher_title: Înregistrare Profesor
-    student_pitch: Student înscriere Code.org
-    student_title: Înscriere student
-    school_name: Numele şcolii (opţional)
-    school_address: Adresa şcolii (opţional)
-    address_placeholder: adresă, oraş, județ, cod poștal
-    gender: Sex (opţional)
-    birthday: Ziua de naştere (opţional)
-    age: Vârsta
-    user_type: Are you a student or teacher?
-    submit: Inregistrează-te
-    teacher: Ești profesor?
-    valid_username: Disponibil!
-    invalid_username: Numele de utilizator trebuie să aibe cel puțin 5 caractere
-    taken_username: Numele de utilizator este deja luat
-    valid_password: Parolă validă!
-    invalid_password: Parola trebuie să conţină cel puțin 6 caractere
-    mismatch_password: Cele două parole introduse nu se potrivesc
+    teacher_educator_guide: "Consultă ghidul educatorului"
+    teacher_pitch: "Profesor înscriere Code.org"
+    teacher_title: "Înregistrare Profesor"
+    student_pitch: "Student înscriere Code.org"
+    student_title: "Înscriere student"
+    school_name: "Numele şcolii (opţional)"
+    school_address: "Adresa şcolii (opţional)"
+    address_placeholder: "adresă, oraş, județ, cod poștal"
+    gender: "Sex (opţional)"
+    birthday: "Ziua de naştere (opţional)"
+    age: "Vârsta"
+    user_type: "Are you a student or teacher?"
+    submit: "Inregistrează-te"
+    teacher: "Ești profesor?"
+    valid_username: "Disponibil!"
+    invalid_username: "Numele de utilizator trebuie să aibe cel puțin 5 caractere"
+    taken_username: "Numele de utilizator este deja luat"
+    valid_password: "Parolă validă!"
+    invalid_password: "Parola trebuie să conţină cel puțin 6 caractere"
+    mismatch_password: "Cele două parole introduse nu se potrivesc"
     student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/>For users under 13, email addresses are not stored in a form that allows us to contact them."
     teacher_terms: "Sunt de acord cu <a href='http://code.org/tos'>termenii de serviciu</a> de pe Code.org."
-    additional_information: Mai avem nevoie de nişte informaţii pentru a te putea înscrie.
+    additional_information: "Mai avem nevoie de nişte informaţii pentru a te putea înscrie."
   signin_form:
-    title: Ai deja un cont? Conectează-te
-    login: Email sau nume de utilizator
-    password: Parolă
-    remember: Ține-mă minte
-    submit: Loghează-te
+    title: "Ai deja un cont? Conectează-te"
+    login: "Email sau nume de utilizator"
+    password: "Parolă"
+    remember: "Ține-mă minte"
+    submit: "Loghează-te"
   signin:
-    try_heading: Dorești să încerci să programezi fără înscriere?
-    try_hoc: Încearcă prima dată o Oră de Cod
-    try_20hours: Încearcă cele 20 de ore ale noastre de Introducere în Informatică
+    try_heading: "Dorești să încerci să programezi fără înscriere?"
+    try_hoc: "Încearcă prima dată o Oră de Cod"
+    try_20hours: "Încearcă cele 20 de ore ale noastre de Introducere în Informatică"
   signinsection:
     welcome: 'Bine ai venit pe %{section_name}'
-    name: Alege-ţi numele
-    picture: Acum găseşte-ţi poza secretă
-    words: Acum scrie-ţi cuvintele secrete
-    login: Loghează-te
+    name: "Alege-ţi numele"
+    picture: "Acum găseşte-ţi poza secretă"
+    words: "Acum scrie-ţi cuvintele secrete"
+    login: "Loghează-te"
   password:
     reset_form:
-      title: Ai uitat parola?
-      email: Adresă de email
-      submit: Trimite-mi instrucțiuni de resetare a parolei
+      title: "Ai uitat parola?"
+      email: "Adresă de email"
+      submit: "Trimite-mi instrucțiuni de resetare a parolei"
     change_form:
-      title: Schimbă-ți parola
-      new_password: Parolă nouă
-      confirm_password: Confirmă noua parolă
-      submit: Schimbă-mi parola
+      title: "Schimbă-ți parola"
+      new_password: "Parolă nouă"
+      confirm_password: "Confirmă noua parolă"
+      submit: "Schimbă-mi parola"
   welcome_email:
-    subject: Alătură-te clasei mele (pe Code.org)
+    subject: "Alătură-te clasei mele (pe Code.org)"
     body: |2
       Dă clic pe linkul de mai jos pentru a te înscrie la tutorialele de informatică pe Code.org (cu mine ca "Profesorul" tău):
       
@@ -125,17 +125,17 @@ ro:
       
       %{name}
   follower:
-    invite_sent: Invitație trimisă
+    invite_sent: "Invitație trimisă"
     added_teacher: '%{name} adăugat(ă) ca și profesorul tău'
     registered: 'Te-ai înregistrat pentru %{section_name}.'
     error:
-      signed_in: Te rugăm să te deloghezi înainte de a continua
+      signed_in: "Te rugăm să te deloghezi înainte de a continua"
       username_not_found: 'Utilizatorul %{username} nu a fost găsit'
       username_in_use: '%{username} este deja luat, te rugăm să alegi altul'
       no_teacher: "Nu am găsit pe nimeni logat cu '%{teacher_email_or_code}'. Te rugăm să le ceri să se înregistreze aici și apoi încearcă să-i mai adăugi o dată"
       section_not_found: "Nu s-a putut găsi o secţiune conţinând codul '%{section_code}'."
-      blank_code: Vă rugăm să introduceţi un cod de secţiune
-      cant_join_own_section: Ne pare rău, dar nu poţi intra în propria secţiune.
+      blank_code: "Vă rugăm să introduceţi un cod de secţiune"
+      cant_join_own_section: "Ne pare rău, dar nu poţi intra în propria secţiune."
     mail:
       invite_student:
         subject: 'Alătură-te clasei cu %{teacher_name} la Code.org!'
@@ -145,47 +145,47 @@ ro:
         subject: 'Notificare Code.org: %{teacher_name} nu mai este asociat ca profesorul tău.'
   reports:
     error:
-      access_denied: Nu ai acces la statisticile de progress ale acestei persoane
+      access_denied: "Nu ai acces la statisticile de progress ale acestei persoane"
   redeem_prizes:
     title: 'Revendică Premii: %{name}'
     provider: 'Furnizor:'
     code: 'Cod:'
     redeem_header: 'De revendicat:'
-    donorschoose_register: Înregistrează-te ca profesor pe DonorsChoose.org
-    donorschoose_project: Postează un proiect
-    donorschoose_how_to: Cum să-ți utilizezi codul
-    success: Ți-ai revendicat cu succes premiul, vezi codul de mai jos.
-    error: Premiul tău nu a putut fi revendicat, te rugăm să încerci din nou.
-    error_us_only: Oferta de premii este valabilă doar pentru utilizatorii din Statele Unite.
-    error_not_earned: Nu ai câștigat încă acest premiu.
-    error_already_redeemed: Premiul tău a fost deja revendicat.
-    no_prizes_available: Ne pare rău, dar nu avem niciun premiu disponibil în prezent.
+    donorschoose_register: "Înregistrează-te ca profesor pe DonorsChoose.org"
+    donorschoose_project: "Postează un proiect"
+    donorschoose_how_to: "Cum să-ți utilizezi codul"
+    success: "Ți-ai revendicat cu succes premiul, vezi codul de mai jos."
+    error: "Premiul tău nu a putut fi revendicat, te rugăm să încerci din nou."
+    error_us_only: "Oferta de premii este valabilă doar pentru utilizatorii din Statele Unite."
+    error_not_earned: "Nu ai câștigat încă acest premiu."
+    error_already_redeemed: "Premiul tău a fost deja revendicat."
+    no_prizes_available: "Ne pare rău, dar nu avem niciun premiu disponibil în prezent."
     teacher_info_required: 'Premiile pentru profesori necesită informații despre numele  și adresa școlii:'
     teacher_email_required: 'Premiile profesorilor necesită o adresă de email confirmată:'
     confirm:
-      title: Te rugăm să confirmi
+      title: "Te rugăm să confirmi"
       "no": Nu
       "yes": Da
       msg: 'Ești sigur(ă) ca vrei să revendici premiul %{prize_name}?'
       msg_student: 'NOTĂ: Poți să alegi doar unul din aceste premii.'
-      msg_publicschool: Te rugăm să confirmi că ești un profesor la o școală publică din SUA.
-      msg_visit_website: Vizitaţi site-ul
+      msg_publicschool: "Te rugăm să confirmi că ești un profesor la o școală publică din SUA."
+      msg_visit_website: "Vizitaţi site-ul"
     providers:
-      apple_itunes: $10 iTunes Gift Card
-      donors_choose: DonorsChoose.org $750 credit
-      donors_choose_bonus: DonorsChoose.org $250 credit
-      dropbox: 10GB de spațiu pe Dropbox
-      valve: Portal 2 (PC or Mac game download)
-      ea_bejeweled: Bejeweled 3 (PC game download)
-      ea_fifa: FIFA Soccer 13 (PC game download)
-      ea_simcity: SimCity 4 Deluxe Edition (PC game download)
-      ea_pvz: Plants vs. Zombies (PC game download)
-      skype: $10 Skype credit
+      apple_itunes: "$10 iTunes Gift Card"
+      donors_choose: "DonorsChoose.org $750 credit"
+      donors_choose_bonus: "DonorsChoose.org $250 credit"
+      dropbox: "10GB de spațiu pe Dropbox"
+      valve: "Portal 2 (PC or Mac game download)"
+      ea_bejeweled: "Bejeweled 3 (PC game download)"
+      ea_fifa: "FIFA Soccer 13 (PC game download)"
+      ea_simcity: "SimCity 4 Deluxe Edition (PC game download)"
+      ea_pvz: "Plants vs. Zombies (PC game download)"
+      skype: "$10 Skype credit"
     msg:
       choose: 'Alege un premiu:'
       choose_teacher: 'Click on the logo below to claim your prize:'
-      earned: Ai câştigat un premiu! (Numai pentru studenţii din SUA)
-      not_earned_title: Dacă termini tutorial-ul o să câştigi premii (valabil doar pentru studenţii din SUA)
+      earned: "Ai câştigat un premiu! (Numai pentru studenţii din SUA)"
+      not_earned_title: "Dacă termini tutorial-ul o să câştigi premii (valabil doar pentru studenţii din SUA)"
       not_earned: 'Învață toate conceptele de informatică, colectează toate %{num_trophies} trofee, şi câştigă premii reale. Poţi alege între 10GB de spaţiu gratuit pe Dropbox, $10 în credit pe Skype, şi descărcări gratuite de jocuri. Notă: Ofertă valabilă numai pentru studenţii din SUA, şi numai atât timp cât încă mai sunt pe stoc.'
       teacher:
         earned: '15 sau mai mulți studenţii au colectat toate %{num_trophies} trofee. Ai câștigat un premiu pentru profesor! (Numai pentru profesorii din SUA)'
@@ -197,294 +197,294 @@ ro:
           not_earned: 'Dacă cel puțin 7 dintre studenții care câștigă toate %{num_trophies} trofee sunt fete, atunci recompensa ta este suplimentată cu $250 în credite la <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a>. Creditele de pe <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> pot fi utilizate numai de profesori din școlile de stat din SUA.'
   crud:
     new_model: '%{model} nou'
-    show: Arată
-    edit: Editează
+    show: "Arată"
+    edit: "Editează"
     edit_model: 'Editează %{model}'
-    update: Actualizează
-    destroy: Distruge
-    back: Înapoi
-    confirm: Eşti sigur(ă)?
+    update: "Actualizează"
+    destroy: "Distruge"
+    back: "Înapoi"
+    confirm: "Eşti sigur(ă)?"
     created: '%{model} a fost creat cu succes.'
     updated: '%{model} a fost actualizat cu succes.'
     destroyed: '%{model} a fost şters cu succes.'
     access_denied: 'Nu ai acces la această %{model}.'
   nav:
     header:
-      finished_hoc: Am terminat Ora mea de Cod
-      sign_in_to_save: Loghează-te pentru a salva progresul
+      finished_hoc: "Am terminat Ora mea de Cod"
+      sign_in_to_save: "Loghează-te pentru a salva progresul"
       free_play:
-        playlab: Make an App
-        artist: Desenează ceva
+        playlab: "Make an App"
+        artist: "Desenează ceva"
     user:
-      classroom: Elevii mei
+      classroom: "Elevii mei"
       label: 'Salut %{username}'
-      stats: Progresul meu
-      settings: Contul meu
-      prizes: Premii
-      logout: Deloghează-te
-      signin: Loghează-te
-      signup: Inregistrează-te
-      already_registered: Eşti deja înregistrat?
+      stats: "Progresul meu"
+      settings: "Contul meu"
+      prizes: "Premii"
+      logout: "Deloghează-te"
+      signin: "Loghează-te"
+      signup: "Inregistrează-te"
+      already_registered: "Eşti deja înregistrat?"
     popup:
-      progress: Progresul tău
+      progress: "Progresul tău"
       lines: 'Total linii de cod: %{lines}'
-      close: ÎNCHIDE
-      mastery: Concepte
-      puzzle_map: Etape
+      close: "ÎNCHIDE"
+      mastery: "Concepte"
+      puzzle_map: "Etape"
       prizes: 'Colectează toate cele %{total_trophies} trofee și câștigă premii!'
       prize_earned: 'Toate cele %{total_trophies} trofee au fost colectate. Premiu câștigat!'
-      prize_us_only: (Numai pentru studenţii din SUA)
-      prizes_link: Mai multe informaţii
+      prize_us_only: "(Numai pentru studenţii din SUA)"
+      prizes_link: "Mai multe informaţii"
   teacher:
     title:
       one: 'Profesorul tău:'
       other: 'Profesorii tăi:'
-    remove: (elimină profesor)
+    remove: "(elimină profesor)"
     confirm:
-      remove: Ești sigur(ă) că vrei să elimini acest profesor?
-    tools: Instrumente pentru profesor
+      remove: "Ești sigur(ă) că vrei să elimini acest profesor?"
+    tools: "Instrumente pentru profesor"
     followers:
       section: 'Secţiunea:'
       stages: 'Pasul(Paşii) de afişat:'
       show_past: 'Arată activitatea de studen (%{bullet_html}) din trecut:'
-      levels_key: Cheia nivelurilor
-      perfect: Terminat, perfect
-      completed: Terminat, dar ai folosit prea multe blocuri
-      tried: Încercat, dar neterminat
-      not_tried: Nu a fost încercat incă
+      levels_key: "Cheia nivelurilor"
+      perfect: "Terminat, perfect"
+      completed: "Terminat, dar ai folosit prea multe blocuri"
+      tried: "Încercat, dar neterminat"
+      not_tried: "Nu a fost încercat incă"
       activity: 'Indică activitatea elevului din ultimele %{hours} %{plural}'
-      no_section: Nici o secţiune atribuită
-      trophies: trofee
+      no_section: "Nici o secţiune atribuită"
+      trophies: "trofee"
     students:
-      name: Nume
-      username: nume de utilizator
-      password: parolă
-      manage: Gestionează elevi
-      dashboard: Du-te la Tabloul de Bord al Profesorilor
-      add: Adaugă elevi
-      remove: elimină elev
-      confirm_remove: Sunteţi sigur că vreţi să eliminaţi acest elev?
-      help_reassign: Pentru a-ţi împărţi clasa în mai multe secţiuni, alege elevii atribuiţi unei secţiuni noi.
-      help_register: În loc de a petrece mult timp importând datele studenţilor, îţi poţi configura clasa foarte repede rugându-i să se înregistreze. Elevii tăi vor fi nevoiţi să îşi aleagă nume de utilizator şi parole, dar NU va trebui să introducă o adresă de e-mail. Dacă un elev şi-a uitat parola, vei putea să o resetezi pentru el/ea.
-      register: Roagă-i pe elevii tăi să se înregistreze
-      vist: Cere elevilor să viziteze
+      name: "Nume"
+      username: "nume de utilizator"
+      password: "parolă"
+      manage: "Gestionează elevi"
+      dashboard: "Du-te la Tabloul de Bord al Profesorilor"
+      add: "Adaugă elevi"
+      remove: "elimină elev"
+      confirm_remove: "Sunteţi sigur că vreţi să eliminaţi acest elev?"
+      help_reassign: "Pentru a-ţi împărţi clasa în mai multe secţiuni, alege elevii atribuiţi unei secţiuni noi."
+      help_register: "În loc de a petrece mult timp importând datele studenţilor, îţi poţi configura clasa foarte repede rugându-i să se înregistreze. Elevii tăi vor fi nevoiţi să îşi aleagă nume de utilizator şi parole, dar NU va trebui să introducă o adresă de e-mail. Dacă un elev şi-a uitat parola, vei putea să o resetezi pentru el/ea."
+      register: "Roagă-i pe elevii tăi să se înregistreze"
+      vist: "Cere elevilor să viziteze"
       section_code: 'şi să îşi introducă codul lor de secţiune:'
       first_please: 'În primul rând, vă rugăm să %{add_section}'
-      for: Pentru
+      for: "Pentru"
       enter: 'introdu:'
     sections:
-      add: Adaugă secţiune
-      manage: Gestionează secţiuni
-      section: Secţiune
-      students: Elevi
-      section_code: Cod de Secţiune
-      add_section_code: Adaugă Cod de Secţiune al Elevilor
-      secret: Tip secret
-      grade: Notă
-      course: Curs
-      rename: redenumește
-      edit: editează
-      delete: şterge
-      confirm_delete: Eşti sigur că vrei să ştergi această secţiune?
-      email: Trimite e-mail
-    rollup: Grilă de progress
-    activity: Activitatea recentă a clasei
-    user_not_found: Profesorul sau studentul nu poate fi găsit
+      add: "Adaugă secţiune"
+      manage: "Gestionează secţiuni"
+      section: "Secţiune"
+      students: "Elevi"
+      section_code: "Cod de Secţiune"
+      add_section_code: "Adaugă Cod de Secţiune al Elevilor"
+      secret: "Tip secret"
+      grade: "Notă"
+      course: "Curs"
+      rename: "redenumește"
+      edit: "editează"
+      delete: "şterge"
+      confirm_delete: "Eşti sigur că vrei să ştergi această secţiune?"
+      email: "Trimite e-mail"
+    rollup: "Grilă de progress"
+    activity: "Activitatea recentă a clasei"
+    user_not_found: "Profesorul sau studentul nu poate fi găsit"
     cant_remove_student_no_email: '%{student_name} nu se poate elimina ca student, deoarece %{student_name} nu a înregistrat o adresă de e-mail'
     cant_remove_teacher_no_email: '%{teacher_name} nu poate fi eliminat ca profesor al tău pentru că nu ai înregistrat o adresă de e-mail'
     student_teacher_disassociated: '%{teacher_name} a fost eliminat(ă) ca profesor pentru %{student_name}'
   user:
     email_confirm_needed: 'Adresa de email nu a fost confirmată:'
-    email_resend_confirm: Retrimite instrucțiunile de confirmare
-    new_password_hint: (lasă necompletat dacă nu dorești să schimbi)
-    current_password_hint: (avem nevoie de parola ta curentă pentru a confirma modificările)
+    email_resend_confirm: "Retrimite instrucțiunile de confirmare"
+    new_password_hint: "(lasă necompletat dacă nu dorești să schimbi)"
+    current_password_hint: "(avem nevoie de parola ta curentă pentru a confirma modificările)"
     cancel:
-      title: Anulează-mi contul
-      hint: Nefericit?
-      button: Anulează-mi contul
+      title: "Anulează-mi contul"
+      hint: "Nefericit?"
+      button: "Anulează-mi contul"
   user_level:
-    completed: Finalizat
-    tried: Încercat
+    completed: "Finalizat"
+    tried: "Încercat"
   user_stats:
-    recent_activity: Activitate recentă
-    show_more: Arată mai multe
-    classroom_activity: Activitate Unplugged
+    recent_activity: "Activitate recentă"
+    show_more: "Arată mai multe"
+    classroom_activity: "Activitate Unplugged"
   home:
-    title: Studio de Cod
-    all_courses: Overview of Courses 1, 2, and 3
-    lesson_plans: Lesson plans
+    title: "Studio de Cod"
+    all_courses: "Overview of Courses 1, 2, and 3"
+    lesson_plans: "Lesson plans"
     signin_message: 'Deja înregistrat? %{link}'
-    student_reg_link: Înregistrare student
-    teacher_reg_link: Înregistrare profesor
+    student_reg_link: "Înregistrare student"
+    teacher_reg_link: "Înregistrare profesor"
     signin_directions: 'Folosește un cont pentru a urmări progresul. <br/> Profesori, urmăriţi întreaga clasă.'
-    teacher_dashboard: Vezi grila de progres
+    teacher_dashboard: "Vezi grila de progres"
     teacher_student_count_one: 'Ai %{count} elevi.'
     teacher_student_count: 'Ai %{count} elevi.'
     teacher_averages: 'În medie, elevii tăi au câștigat %{trophy_average} din cele %{trophy_max} trofee de "Concept de Măestrie"'
-    teacher_print_certificates: Tipărește certificate pentru studenţii care termină acest curs
-    teacher_read_blog: Citeşte despre ştiri şi actualizări referitoare la materialele noastre pe Blog-ul nostru de Educator
-    classroom: Clasa ta
-    student_progress: Progresul tău de învățare
+    teacher_print_certificates: "Tipărește certificate pentru studenţii care termină acest curs"
+    teacher_read_blog: "Citeşte despre ştiri şi actualizări referitoare la materialele noastre pe Blog-ul nostru de Educator"
+    classroom: "Clasa ta"
+    student_progress: "Progresul tău de învățare"
     student_stats: 'Ai câştigat %{trophy_count} din cele %{trophy_max} trofee de "Concept de Măestrie"'
     student_left_off: 'Unde ai rămas:'
     student_finished: 'Ai completat toate tutoriale, alege o altă clasă %{online_link} sau la o altă școală %{local_school_link}'
-    local_school: şcoală locală
-    online: online
-    see_details: Vezi detalii
+    local_school: "şcoală locală"
+    online: "online"
+    see_details: "Vezi detalii"
     prize_info: 'Premii pentru participarea (doar pentru profesorii americani din sistemul public de învățământ): până la 1.000 dolari în recompense pentru clasă.'
     tryfirst: 'Sau, poţi încerca prima dată, urmând să te înscrii mai târziu:'
-    trynow: Încearcă acum
-    add_hint_help: Ajută-ne să adăugăm sugestii inteligente pentru tutorialele Code.org
-    20hour_overview: Acest curs de 20 de ore prezintă concepte de bază din informatică şi programare. Cursul este creat pentru utilizarea în săli de clasă pentru clasele K-8, dar este distractiv de învăţat la toate vârstele.
-    test_videos_help: Încearcă noul nostru video player la şcoala ta
-    try_beta_courses: Nou! Încearcă cursele noastre beta pentru elevi K-5
-    use_as_teacher: Foloseşte acest site drept profesor
+    trynow: "Încearcă acum"
+    add_hint_help: "Ajută-ne să adăugăm sugestii inteligente pentru tutorialele Code.org"
+    20hour_overview: "Acest curs de 20 de ore prezintă concepte de bază din informatică şi programare. Cursul este creat pentru utilizarea în săli de clasă pentru clasele K-8, dar este distractiv de învăţat la toate vârstele."
+    test_videos_help: "Încearcă noul nostru video player la şcoala ta"
+    try_beta_courses: "Nou! Încearcă cursele noastre beta pentru elevi K-5"
+    use_as_teacher: "Foloseşte acest site drept profesor"
     heading_elementary: '<h2>curse de 20 de ore pentru</h2><h1>Elevi Primari</h1>'
     heading_apps: '<h2>Distracţie pentru</h2><h1>Toată lumea</h1>'
     heading_legacy: '<h2>Cursul nostru general pentru</h2><h1>Toate vârstele</h1>'
     gallery:
-      your_turtle: My Art
-      your_studio: My Apps
+      your_turtle: "My Art"
+      your_studio: "My Apps"
   gender:
-    male: De sex masculin
-    female: De sex feminin
-    none: Prefer să nu răspund
+    male: "De sex masculin"
+    female: "De sex feminin"
+    none: "Prefer să nu răspund"
   user_type:
-    student: elev
-    teacher: Teacher
+    student: "elev"
+    teacher: "Teacher"
   footer:
-    help_from_html: Ingineri de la Google, Microsoft, Facebook şi Twitter au ajutat la creearea acestui tutorial.
+    help_from_html: "Ingineri de la Google, Microsoft, Facebook şi Twitter au ajutat la creearea acestui tutorial."
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. Toate Drepturile Rezervate.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. Toate Drepturile Rezervate.'
-    feedback: Oferă feedback
+    feedback: "Oferă feedback"
     translate: 'Ajută-ne să  traducem în limba ta'
-    support: Suport
-    support_url: http://support.code.org
-    tos: Termeni
-    privacy: Politică de confidențialitate
-    secure: Versiunea Securizată
+    support: "Suport"
+    support_url: "http://support.code.org"
+    tos: "Termeni"
+    privacy: "Politică de confidențialitate"
+    secure: "Versiunea Securizată"
   reference_area:
-    title: Ai nevoie de ajutor?
-    subtitle: Vezi aceste clipuri video şi sugestii
-    teacher: Vezi soluția
-    auth_error: Nu ești autorizat pentru a vedea soluția.
-    submit: Actualizează locaţia Artistului
-    direction: Start Direction (in degrees)
+    title: "Ai nevoie de ajutor?"
+    subtitle: "Vezi aceste clipuri video şi sugestii"
+    teacher: "Vezi soluția"
+    auth_error: "Nu ești autorizat pentru a vedea soluția."
+    submit: "Actualizează locaţia Artistului"
+    direction: "Start Direction (in degrees)"
   video:
-    tab: Video.
-    notes: Nici un video? Arată note.
-    notes_coming_soon: Notiţe pentru acest filmuleţ vin în curând.
-    autoplay_option: Redare Automată clipuri video
-    download: Descarcă Video
+    tab: "Video."
+    notes: "Nici un video? Arată note."
+    notes_coming_soon: "Notiţe pentru acest filmuleţ vin în curând."
+    autoplay_option: "Redare Automată clipuri video"
+    download: "Descarcă Video"
   compatability:
     working:
-      header: Momentan efectuăm lucrări de susținere a browser-ului tău.
+      header: "Momentan efectuăm lucrări de susținere a browser-ului tău."
       message: "Code.org uses modern web technology. This makes the site faster to use. Your browser doesn't support all the features required, and you may experience issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade your browser to a supported version</a>."
-      hide_this_warning: Hide this warning
+      hide_this_warning: "Hide this warning"
     upgrade:
-      header: Te rugăm să-ți actualizezi browser-ul.
+      header: "Te rugăm să-ți actualizezi browser-ul."
       message: "Code.org uses modern web technology. This makes the site faster to use. Unfortunately your browser doesn't support all the features required to run this part of the site.<br/><br/>Install a browser on our supported browsers list to continue. You can <a href='#'>try viewing the page</a>, but expect functionality to be broken."
-      button: Take me to the list of supported browsers
-  slow_loading: Aceasta durează mai mult decât de obicei...
-  try_reloading: Încearcă să reîncarci pagina
-  next_stage: Ai terminat! Continuă cu următoarea etapă
-  download_pdf: Plan de lecţie deschisă
-  view_lesson_plan: Vezi Planul de Lecţii
-  pdf_download: Descarcă PDF
+      button: "Take me to the list of supported browsers"
+  slow_loading: "Aceasta durează mai mult decât de obicei..."
+  try_reloading: "Încearcă să reîncarci pagina"
+  next_stage: "Ai terminat! Continuă cu următoarea etapă"
+  download_pdf: "Plan de lecţie deschisă"
+  view_lesson_plan: "Vezi Planul de Lecţii"
+  pdf_download: "Descarcă PDF"
   share_code:
     title: "Faceţi clic pe 'Run' pentru a vedea programul meu în acţiune"
-    bounce_og_title: Verifică jocul meu Bounce
-    flappy_og_title: Aruncă-ți o privire asupra jocului meu Flappy
-    studio_og_title: Check out my Play Lab App
-    og_description: Am scris codul chiar eu cu Code.org
-    phone_number_not_allowed: It looks like there is a phone number in it. Try changing the text.
-    address_not_allowed: It looks like there is an address in it. Try changing the text.
-    email_not_allowed: It looks like there is an email in it. Try changing the text.
-    profanity_not_allowed: It looks like there is profanity in it. Try changing the text.
+    bounce_og_title: "Verifică jocul meu Bounce"
+    flappy_og_title: "Aruncă-ți o privire asupra jocului meu Flappy"
+    studio_og_title: "Check out my Play Lab App"
+    og_description: "Am scris codul chiar eu cu Code.org"
+    phone_number_not_allowed: "It looks like there is a phone number in it. Try changing the text."
+    address_not_allowed: "It looks like there is an address in it. Try changing the text."
+    email_not_allowed: "It looks like there is an email in it. Try changing the text."
+    profanity_not_allowed: "It looks like there is profanity in it. Try changing the text."
   builder:
-    created: Ai creat un nou script.
-    destroyed: Ai distrus un script.
-    manage: Construiește nivelurile
-    view: Vizualizare
-    back: Înapoi la script-uri
-    success: Ai editat cu succes blocurile.
+    created: "Ai creat un nou script."
+    destroyed: "Ai distrus un script."
+    manage: "Construiește nivelurile"
+    view: "Vizualizare"
+    back: "Înapoi la script-uri"
+    success: "Ai editat cu succes blocurile."
     level:
-      create: Crează nivel nou
-      current: Niveluri curente
-      unused: Niveluri neutilizate
+      create: "Crează nivel nou"
+      current: "Niveluri curente"
+      unused: "Niveluri neutilizate"
   upsell:
     hoc:
-      title: Oră de Cod
-      body: Încercaţi elementele de bază ale științei calculatoarelor. Milioane de oameni au încercat.
+      title: "Oră de Cod"
+      body: "Încercaţi elementele de bază ale științei calculatoarelor. Milioane de oameni au încercat."
     flappy:
-      title: Codul Flappy
-      body: Vrei să programezi propriul joc în mai puţin de 10 minute? Încearcă lecția noastră Codul Floppy!
+      title: "Codul Flappy"
+      body: "Vrei să programezi propriul joc în mai puţin de 10 minute? Încearcă lecția noastră Codul Floppy!"
     20hour:
-      title: Curs Introductiv
-      body: Încearcă cursul nostru de 20 de ore Introducere în Știința Calculatorului.
+      title: "Curs Introductiv"
+      body: "Încearcă cursul nostru de 20 de ore Introducere în Știința Calculatorului."
   gallery:
-    students_drew_these_with_code: Elevii au realizat aceste desene prin programare!
-    students_made_these_with_code: Students made these with code!
+    students_drew_these_with_code: "Elevii au realizat aceste desene prin programare!"
+    students_made_these_with_code: "Students made these with code!"
     picture_count: 'In ultimele  <b>%{days}</b> zile, studenții au desenat<b>%{count}</b> imagini prin propriile programe pe calculator. Selectează imaginile pentru a vedea fiecare program în acțiune.'
     activity_count: 'In the past <b>%{days}</b> days, students have made <b>%{count}</b> apps and pictures by writing their own computer programs. Click on the pictures and screenshots to see each program in action.'
-    want_to_make_your_own: Vrei să realizezi propriul tău program?
+    want_to_make_your_own: "Vrei să realizezi propriul tău program?"
     more: 'Mai mult &rarr;'
     caption_by_name_age: 'by %{name}, age %{age}'
     caption_time_ago: '%{time_ago} ago'
   landing:
     prerelease: "Acest curs este în <span class='betatext'>beta</span>. Asta înseamnă că aceasta nu este versiunea finală a cursului, şi poate fii revizuit din moment ce orice critică este bine venită şi cursul este îmbunătăţit."
-    feedback: Trimiteți feedback
-    report_bug: Raporteazã eroare
-    support: Obţine ajutor
-    support_url: //support.code.org
+    feedback: "Trimiteți feedback"
+    report_bug: "Raporteazã eroare"
+    support: "Obţine ajutor"
+    support_url: "//support.code.org"
   multi:
-    wrong_title: Răspuns incorect
+    wrong_title: "Răspuns incorect"
     wrong_body: 'Răspunsul introdus nu este corect.  Te rugăm să încerci din nou!'
-    correct_title: Corect
-    correct_body: Acela este răspunsul corect.
+    correct_title: "Corect"
+    correct_body: "Acela este răspunsul corect."
   match:
-    wrong_title: Soluţie incorectă
+    wrong_title: "Soluţie incorectă"
     wrong_body: 'Soluţia introdusă nu este corectă.  Te rugăm să încerci din nou!'
-    correct_title: Corect
-    correct_body: Acela este răspunsul corect.
+    correct_title: "Corect"
+    correct_body: "Acela este răspunsul corect."
   dialog:
-    ok: OK
+    ok: "OK"
   time:
-    hour: O oră
-    day: zi
-    week: săptămână
+    hour: "O oră"
+    day: "zi"
+    week: "săptămână"
   data:
     script:
       name:
         20-hour:
-          title: Cursul Introducere K-8 in Programare (15-25 ore)
-          description: Acest curs de 20 de ore prezintă concepte de bază din informatică şi programare. Cursul este creat pentru utilizarea în săli de clasă pentru clasele K-8, dar este distractiv de învăţat la toate vârstele.
+          title: "Cursul Introducere K-8 in Programare (15-25 ore)"
+          description: "Acest curs de 20 de ore prezintă concepte de bază din informatică şi programare. Cursul este creat pentru utilizarea în săli de clasă pentru clasele K-8, dar este distractiv de învăţat la toate vârstele."
         Hour of Code:
-          title: Oră de Cod
+          title: "Oră de Cod"
           description: '[șir gol]'
         edit-code:
-          title: Editează Codul
+          title: "Editează Codul"
           description: '[șir gol]'
         events:
-          title: Evenimente
+          title: "Evenimente"
           description: '[șir gol]'
         builder:
-          title: Constructor
+          title: "Constructor"
           description: '[șir gol]'
         flappy:
-          title: Codul Flappy
-          description: Vrei să programezi propriul joc în mai puţin de 10 minute? Încearcă lecția noastră Codul Floppy!
+          title: "Codul Flappy"
+          description: "Vrei să programezi propriul joc în mai puţin de 10 minute? Încearcă lecția noastră Codul Floppy!"
         jigsaw:
-          title: Puzzle
+          title: "Puzzle"
           description: '[șir gol]'
         step:
-          title: Pas
+          title: "Pas"
           description: '[șir gol]'
         sample_level_builder:
-          title: Constructor de niveluri de probă
+          title: "Constructor de niveluri de probă"
           description: '[șir gol]'
   age_interstitial:
-    age: Varsta ta
-    header: Actualizarea Informaţiilor Contului
+    age: "Varsta ta"
+    header: "Actualizarea Informaţiilor Contului"
     message: 'Suntem pe cale de a ne actualiza experienţa pentru a vă oferi o protecţie a informaţiilor private şi mai puternică. Pentru a face aceasta, îi vom ruga pe utilizatorii existenţi să îşi scrie vârsta aici. <br/>Ca întotdeauna, code.org nu va închiria, vinde sau împărtăşi aceste informaţii cu nimeni din exterior.'
     sign_out: 'Dacă nu doreşti să îţi scrii vârsta, poţi <a href="%{url}">să ieşi</a>.'
   zendesk_too_young_message: 'Ne pare rău, însă utilizatorii tineri nu ai voie să intre pe site-ul nostru de sprijin. Te poţi uita prin <a href="http://support.code.org">support.code.org</a> fără să te loghezi, sau poţi cere ajutorul unui părinte sau profesor.'

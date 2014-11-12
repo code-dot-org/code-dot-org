@@ -5,6 +5,5 @@ exports.compute = function (expr, blockId) {
 };
 
 exports.expression = function (operator, arg1, arg2, blockId) {
-  // todo (brent) - make use of blockId
-  return new ExpressionNode(operator, arg1, arg2);
+  return new ExpressionNode(operator, arg1, arg2, blockId);
 };

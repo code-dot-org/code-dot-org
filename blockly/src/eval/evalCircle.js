@@ -1,20 +1,18 @@
-var EvalObject = require('./evalObject');
-var EvalString = require('./evalString');
+var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
 var EvalCircle = function (radius, style, color) {
-  evalUtils.ensureType(style, EvalString);
-  evalUtils.ensureType(color, EvalString);
+  evalUtils.ensureNumber(radius);
+  evalUtils.ensureString(style);
+  evalUtils.ensureString(color);
 
-  EvalObject.apply(this);
+  EvalImage.apply(this, [style, color]);
 
   this.radius_ = radius;
-  this.color_ = color.getValue();
-  this.style_ = style.getValue();
 
   this.element_ = null;
 };
-EvalCircle.inherits(EvalObject);
+EvalCircle.inherits(EvalImage);
 module.exports = EvalCircle;
 
 EvalCircle.prototype.draw = function (parent) {
@@ -26,5 +24,10 @@ EvalCircle.prototype.draw = function (parent) {
   this.element_.setAttribute('cy', 0);
   this.element_.setAttribute('r', this.radius_);
 
-  EvalObject.prototype.draw.apply(this, arguments);
+  EvalImage.prototype.draw.apply(this, arguments);
+};
+
+EvalCircle.prototype.rotate = function () {
+  // No-op. Rotating the circle svg gives us some problems when we convert to
+  // a bitmap.
 };

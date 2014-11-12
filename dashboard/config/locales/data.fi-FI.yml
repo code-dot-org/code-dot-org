@@ -165,7 +165,7 @@
         turtle_1_3: Tee neliö käyttäen vain kolme lohkoa.
         turtle_1_4: |
           Piirrä kolmio, jonka sivut ovat kaikki eri värisiä. Käytä "satunnainen väri" -toimintoa valitsemaan kunkin sivun väri.
-          Vihje: sinun täytyy keksiä, kuinka paljon kääntyä ja valita oikea luku "käänny"-lohkoon.
+          Vihje: "sinun täytyy keksiä, kuinka paljon kääntyä ja valita oikea luku \"käänny\"-lohkoon."
         turtle_1_5: Harjoituksen vuoksi voisit nyt piirtää kirjekuoren käyttäen kolmiota
           ja neliötä.
         turtle_1_6: 'Keksitkö miten piirtää tämä kolmio ja neliö? Vihje: piirrä kolmio

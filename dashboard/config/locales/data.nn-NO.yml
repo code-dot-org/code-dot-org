@@ -100,6 +100,7 @@
         Wordsearch: Tekstsøk
         Webapp: Nettapp
         ArtistEC: Kunstneren
+        TextMatch: Text Match
     trophy:
       name:
         Bronze: Bronse
@@ -543,6 +544,9 @@
         webapp_ec_simple: Create your web app by using createHtmlBlock.
         turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
           it in the new "penColour" block.'
+        turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas:
+          a stick figure, snowflake, or spiral. Also try the new "penWidth" block.
+          Have fun!'
     video:
       name:
         maze_intro: Labyrint intro
@@ -558,7 +562,6 @@
         loop_for: Gjenta med Teller-blokk
         parameters: Funksjoner med parametre
         hoc_wrapup: Slutt på Kodetimen
-        20_wrapup: Slutt etter 20 timer
         Unplug1: Hva er CS?
         Unplug2: Programmeringstenkning
         Unplug3: Millimeterpapirprogrammering
@@ -573,7 +576,7 @@
         C1_happy_maps_unplugged: Happy Maps
         C1_moveitmoveit_unplugged: Flytt den, flytt den
         C1_bigevent_unplugged: Den store begivenheten
-        C1_getting_loop: Getting Loopy
+        C1_getting_loopy: Getting Loopy
         C1_pair_programming: Par Programmering
         C1_maze_intro_sequencing: Labyrint sekvensering Intro
         C1_maze_debugging: Labyrint feilsøking
@@ -585,19 +588,22 @@
         C1_maze_loops: Labyrint løkker
         C1_playlab_storytelling: Spill Lab - lage en historie
         C1_planting_seed: Plante et frø
-        C1_building_foundating: Bygg ett grunnlag
+        C1_building_foundation: Bygg ett grunnlag
         C2_maze_intro: Labyrint intro
         C2_artist_intro: Kunstner intro
         C2_zuck_repeat_loop: Labyrint løkker
         C2_artist_loops: Kunstner løkker
+        C2_artist_debugging: Artist Debugging
+        C2_bee_loops: Bie løkker
+        C2_bee_debugging: Bie feilsøking
         C2_bee_conditionals: Bee Conditionals
         C2_playlab_createstory: Spill Lab - lage en historie
         C2_graph_paper: Millimeterpapirprogrammering
         C2_conditionals_with_cards: Betingelser
         C2_binary_bracelets: Binær armbånd
-        C2_replay_programming: Relé-programmering
+        C2_relay_programming: Relé-programmering
         C2_paper_airplanes: Papir fly
-        C3_maze_intro: Labyrint intro
+        C3_maze_level_4: Labyrint løkker
         C3_artist_intro: Kunstner intro
         C3_artist_functions: Kunstner funksjoner
         C3_bee_functions: Bie funksjoner

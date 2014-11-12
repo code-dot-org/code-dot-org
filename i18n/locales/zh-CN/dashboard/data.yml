@@ -104,6 +104,7 @@
         Wordsearch: "Wordsearch"
         Webapp: "Webapp"
         ArtistEC: "艺术家"
+        TextMatch: "Text Match"
     trophy:
       name:
         Bronze: "铜色"
@@ -330,6 +331,7 @@
         maze_wordsearch_k_20: "This is a test! Move me one way, then another to spell the word STORY"
         webapp_ec_simple: "Create your web app by using createHtmlBlock."
         turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColour" block.'
+        turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new "penWidth" block. Have fun!'
     video:
       name:
         maze_intro: "迷宫简介"
@@ -345,7 +347,6 @@
         loop_for: "“计数”循环块"
         parameters: "有参数的函数"
         hoc_wrapup: "编程一小时总结"
-        20_wrapup: "20小时教程总结"
         Unplug1: "What is CS?"
         Unplug2: "计算性思维"
         Unplug3: "方格纸编程"
@@ -360,7 +361,7 @@
         C1_happy_maps_unplugged: "Happy Maps"
         C1_moveitmoveit_unplugged: "Move It, Move It"
         C1_bigevent_unplugged: "The Big Event"
-        C1_getting_loop: "Getting Loopy"
+        C1_getting_loopy: "Getting Loopy"
         C1_pair_programming: "Pair Programming"
         C1_maze_intro_sequencing: "Maze Sequencing Intro"
         C1_maze_debugging: "Maze Debugging"
@@ -372,19 +373,22 @@
         C1_maze_loops: "Maze Loops"
         C1_playlab_storytelling: 'Play Lab - Create a Story'
         C1_planting_seed: "Planting a Seed"
-        C1_building_foundating: "Building a Foundation"
+        C1_building_foundation: "Building a Foundation"
         C2_maze_intro: "迷宫简介"
         C2_artist_intro: "艺术家简介"
         C2_zuck_repeat_loop: "Maze Loops"
         C2_artist_loops: "Artist Loops"
+        C2_artist_debugging: "Artist Debugging"
+        C2_bee_loops: "Bee Loops"
+        C2_bee_debugging: "Bee Debugging"
         C2_bee_conditionals: "Bee Conditionals"
         C2_playlab_createstory: 'Play Lab - Create a Story'
         C2_graph_paper: "方格纸编程"
         C2_conditionals_with_cards: "条件语句"
         C2_binary_bracelets: "Binary Bracelets"
-        C2_replay_programming: "编程接力"
+        C2_relay_programming: "编程接力"
         C2_paper_airplanes: "Paper Airplanes"
-        C3_maze_intro: "迷宫简介"
+        C3_maze_level_4: "Maze Loops"
         C3_artist_intro: "艺术家简介"
         C3_artist_functions: "Artist Functions"
         C3_bee_functions: "Bee Functions"

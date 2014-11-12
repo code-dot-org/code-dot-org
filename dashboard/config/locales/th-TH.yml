@@ -5,89 +5,89 @@
         blank: is required
     attributes:
       user:
-        name: "ชื่อ"
-        email: "อีเมล"
-        username: "ชื่อผู้ใช้"
-        password: "รหัสผ่าน"
-        password_confirmation: "ยืนยันรหัสผ่าน"
-        current_password: "รหัสผ่านปัจจุบัน"
-        locale: "ภาษา"
+        name: ชื่อ
+        email: อีเมล
+        username: ชื่อผู้ใช้
+        password: รหัสผ่าน
+        password_confirmation: ยืนยันรหัสผ่าน
+        current_password: รหัสผ่านปัจจุบัน
+        locale: ภาษา
         age: Age
-        gender: "เพศ"
-        edit_header: "แก้ไขรายละเอียดบัญชี"
+        gender: เพศ
+        edit_header: แก้ไขรายละเอียดบัญชี
         error:
-          future: "ไม่สามารถทำได้ในอนาคต"
-  hello: "สวัสดีชาวโลก"
-  welcome_back: "ยินดีต้อนรับอีกครั้ง, % {name}"
+          future: ไม่สามารถทำได้ในอนาคต
+  hello: สวัสดีชาวโลก
+  welcome_back: ยินดีต้อนรับอีกครั้ง, % {name}
   add_teacher_form:
     code_or_email:
-      label: "เพิ่มครู โดยรหัสหรืออีเมล์:"
-      placeholder: "โค้ด(ABCDEF) หรือ อีเมล์(อาจารย์@school.edu)"
+      label: 'เพิ่มครู โดยรหัสหรืออีเมล์:'
+      placeholder: โค้ด(ABCDEF) หรือ อีเมล์(อาจารย์@school.edu)
     code:
       label: 'Add a teacher by section code:'
       placeholder: Code (ABCDEF)
-    submit: "เพิ่มครู"
+    submit: เพิ่มครู
   add_hint_form:
-    placeholder: "กรุณาป้อนคำแนะนำของคุณที่นี่"
-    submit: "เพิ่มคำแนะนำ"
+    placeholder: กรุณาป้อนคำแนะนำของคุณที่นี่
+    submit: เพิ่มคำแนะนำ
   appname: Code.org
-  stage: "ขั้นตอน"
+  stage: ขั้นตอน
   stage_number: Stage %{number}
-  puzzle: "ปริศนา"
-  trophies: "ถ้วยรางวัล"
-  courses: "คอร์ส"
-  of: "ของ"
-  more: "เพิ่มเติม"
-  less: "น้อย"
+  puzzle: ปริศนา
+  trophies: ถ้วยรางวัล
+  courses: คอร์ส
+  of: ของ
+  more: เพิ่มเติม
+  less: น้อย
   try_hoc: ลอง "ชั่วโมงแห่งการโค้ด" คลิกที่นี่ >>
-  try_k8intro: "ทดลอง K-8 ของพวกเราเพื่อเริ่มต้นศึกษาคอมพิวเตอร์  (15-25 ชั่วโมง)"
+  try_k8intro: ทดลอง K-8 ของพวกเราเพื่อเริ่มต้นศึกษาคอมพิวเตอร์  (15-25 ชั่วโมง)
   k8intro: K-8 เพื่อเริ่มต้นกับวิชาวิทยาศาสตร์คอมพิวเตอร์(15-25 ชั่วโมง)
-  already_started: "พร้อมที่จะเริ่มแล้วหรือยัง.  ต่อทางนี้"
+  already_started: พร้อมที่จะเริ่มแล้วหรือยัง.  ต่อทางนี้
   demos: 'Admin: ตัวสาธิตทั้งหมด'
-  continue: "ต่อไป"
+  continue: ต่อไป
   prize: prize
-  more_info: "ข้อมูลเพิ่มเติม"
+  more_info: ข้อมูลเพิ่มเติม
   auth:
-    sign_in_with: "ลงทะเบียนด้วย %{provider}"
-    signed_in: "ลงชื่อเข้าใช้"
+    sign_in_with: ลงทะเบียนด้วย %{provider}
+    signed_in: ลงชื่อเข้าใช้
     signed_out: You have signed out of <a href="%{url}">Code.org</a>.
     sign_out_of: You used %{provider} to sign in. <a href="%{url}">Click here</a>
       to sign out of %{provider}.
-    already_signedup: "พร้อมที่จะสมัครแล้วหรือยัง."
-    notyet_signedup: "สมัครใช้งานหรือยัง?"
+    already_signedup: พร้อมที่จะสมัครแล้วหรือยัง.
+    notyet_signedup: สมัครใช้งานหรือยัง?
     google_oauth2: Google Account
-    twitter: "ทวิตเตอร์"
-    facebook: "เฟซบุค"
-    windowslive: "ฮอตเมล์"
-    forgot_password: "ลืมรหัสผ่าน?"
-    need_confirmation: "ไม่ได้รับการยืนยันคำแนะนำ?"
-    need_unlock: "ไม่ได้รับคำแนะนำในการปลดล็อค?"
+    twitter: ทวิตเตอร์
+    facebook: เฟซบุค
+    windowslive: ฮอตเมล์
+    forgot_password: ลืมรหัสผ่าน?
+    need_confirmation: ไม่ได้รับการยืนยันคำแนะนำ?
+    need_unlock: ไม่ได้รับคำแนะนำในการปลดล็อค?
   signup_form:
-    overview_student: "สมัครเป็นสมาชิกเพื่อติดตามความคืบหน้าของคุณ"
-    overview_teacher: "สอนวิทยาศาสตร์คอมพิวเตอร์ในชั้นเรียน โดยสมัครใช้งาน. <p/> คุณจะสามารถติดตามความคืบหน้าของนักเรียน
-      และได้รับรางวัล"
+    overview_student: สมัครเป็นสมาชิกเพื่อติดตามความคืบหน้าของคุณ
+    overview_teacher: สอนวิทยาศาสตร์คอมพิวเตอร์ในชั้นเรียน โดยสมัครใช้งาน. <p/> คุณจะสามารถติดตามความคืบหน้าของนักเรียน
+      และได้รับรางวัล
     no_signup_message: คุณสามารถ<a target="_blank" href="http://learn.code.org">เรียกดูระยะและปริศนาต่าง
       ๆ</a> แต่คุณจะต้องลงทะเบียนเพื่อบันทึกความคืบหน้าของคุณ
-    teacher_educator_guide: "ดูคำแนะนำสำหรับผู้ฝึกสอน"
+    teacher_educator_guide: ดูคำแนะนำสำหรับผู้ฝึกสอน
     teacher_pitch: Teach the K-8 Intro to Computer Science in your classroom
-    teacher_title: "สมัครเป็นครู"
-    student_pitch: "สมัครเป็นนักเรียนสำหรับ code.org"
-    student_title: "สมัครเป็นนักเรียน"
-    school_name: "ชื่อโรงเรียน (ถ้ามี)"
+    teacher_title: สมัครเป็นครู
+    student_pitch: สมัครเป็นนักเรียนสำหรับ code.org
+    student_title: สมัครเป็นนักเรียน
+    school_name: ชื่อโรงเรียน (ถ้ามี)
     school_address: School Address (optional)
     address_placeholder: address, city, state, zip
     gender: Gender (optional)
     birthday: Birthday (optional)
     age: Age (optional)
     user_type: Are you a student or teacher?
-    submit: "สมัครสมาชิก"
-    teacher: "คุณเป็นครูหรือ"
-    valid_username: "อนุญาต"
-    invalid_username: "ชื่อผู้ใช้ต้องมีอย่างน้อย 5 ตัวอักษร"
-    taken_username: "ชื่อผู้ใช้นี้ถูกใช้ไปแล้ว"
+    submit: สมัครสมาชิก
+    teacher: คุณเป็นครูหรือ
+    valid_username: อนุญาต
+    invalid_username: ชื่อผู้ใช้ต้องมีอย่างน้อย 5 ตัวอักษร
+    taken_username: ชื่อผู้ใช้นี้ถูกใช้ไปแล้ว
     valid_password: Valid password!
-    invalid_password: "รหัสผ่านต้องมีอย่างน้อย 6 ตัวอักษร"
-    mismatch_password: "รหัสผ่านที่คุณป้อนไม่ตรงกัน"
+    invalid_password: รหัสผ่านต้องมีอย่างน้อย 6 ตัวอักษร
+    mismatch_password: รหัสผ่านที่คุณป้อนไม่ตรงกัน
     student_terms: I agree to be bound by the Code.org terms of service. If I am under
       13 years of age, I confirm by submitting this form that I have my parent or
       legal guardian's permission to use the Code.org services.
@@ -96,32 +96,32 @@
       you up.
   signin_form:
     title: Sign in
-    login: "อีเมล หรือ ชื่อผู้ใช้งาน"
-    password: "รหัสผ่าน"
-    remember: "จำฉัน"
-    submit: "เข้าสู่ระบบ"
+    login: อีเมล หรือ ชื่อผู้ใช้งาน
+    password: รหัสผ่าน
+    remember: จำฉัน
+    submit: เข้าสู่ระบบ
   signin:
-    try_heading: "อยากลองเขียนโค้ด โดยไม่มีการลงทะเบียนหรือไม่?"
-    try_hoc: "ลอง  Hour of Code ก่อนเป็นอันดับแรก"
-    try_20hours: "ทดลอง  ๒๐  ชั่วโมงของเราเพื่อเริ่มต้นกับวิทยาศาสตร์คอมพิวเตอร์"
+    try_heading: อยากลองเขียนโค้ด โดยไม่มีการลงทะเบียนหรือไม่?
+    try_hoc: ลอง  Hour of Code ก่อนเป็นอันดับแรก
+    try_20hours: ทดลอง  ๒๐  ชั่วโมงของเราเพื่อเริ่มต้นกับวิทยาศาสตร์คอมพิวเตอร์
   signinsection:
     welcome: Welcome to %{section_name}
     name: Choose your name
     picture: Now find your secret picture
     words: Now enter your secret words
-    login: "เข้าสู่ระบบ"
+    login: เข้าสู่ระบบ
   password:
     reset_form:
-      title: "ลืมรหัสผ่าน?"
-      email: "ที่อยู่อีเมล"
-      submit: "ส่งคำแนะนำการเปลี่ยนรหัสผ่านมาให้ฉัน"
+      title: ลืมรหัสผ่าน?
+      email: ที่อยู่อีเมล
+      submit: ส่งคำแนะนำการเปลี่ยนรหัสผ่านมาให้ฉัน
     change_form:
-      title: "เปลี่ยนรหัสผ่านของคุณ"
-      new_password: "รหัสผ่านใหม่"
-      confirm_password: "ยืนยันรหัสผ่านใหม่"
-      submit: "เปลี่ยนรหัสผ่านของฉัน"
+      title: เปลี่ยนรหัสผ่านของคุณ
+      new_password: รหัสผ่านใหม่
+      confirm_password: ยืนยันรหัสผ่านใหม่
+      submit: เปลี่ยนรหัสผ่านของฉัน
   welcome_email:
-    subject: "เข้าร่วมชั้นเรียนของฉัน (ใน Code.org)"
+    subject: เข้าร่วมชั้นเรียนของฉัน (ใน Code.org)
     body: |
       คลิกลิงค์ด้านล่างเพื่อลงทะเบียนสำหรับบทวิทยาการคอมพิวเตอร์ Code.org (กับฉันเป็น "ครู" ของคุณ):
 
@@ -131,13 +131,13 @@
 
       %{name}
   follower:
-    invite_sent: "ส่งคำเชิญ"
-    added_teacher: "%{name} เพิ่มเป็นครูของคุณ"
-    registered: "คุณได้ลงทะเบียนสำหรับ %{section_name}."
+    invite_sent: ส่งคำเชิญ
+    added_teacher: '%{name} เพิ่มเป็นครูของคุณ'
+    registered: คุณได้ลงทะเบียนสำหรับ %{section_name}.
     error:
-      signed_in: "กรุณาออกจากระบบก่อนดำเนินการ"
-      username_not_found: "ไม่พบ %{username} ในชื่อผู้ใช้งาน"
-      username_in_use: "%{username} ถูกใช้ไปแล้วกรุณาเลือกชื่ออื่น"
+      signed_in: กรุณาออกจากระบบก่อนดำเนินการ
+      username_not_found: ไม่พบ %{username} ในชื่อผู้ใช้งาน
+      username_in_use: '%{username} ถูกใช้ไปแล้วกรุณาเลือกชื่ออื่น'
       no_teacher: Could not find anyone signed in with '%{teacher_email_or_code}'.
         Please ask them to sign up here and then try adding them again
       section_not_found: Could not find a section with code '%{section_code}'.
@@ -162,7 +162,7 @@
     redeem_header: 'To redeem:'
     donorschoose_register: Register as a teacher on DonorsChoose.org
     donorschoose_project: Post a project
-    donorschoose_how_to: "วิธีการใช้โค้ดของคุณ"
+    donorschoose_how_to: วิธีการใช้โค้ดของคุณ
     success: Your prize was succesfully redeemed, see code below.
     error: Your prize could not be redeemed, please try again.
     error_us_only: The prize offer is only valid for U.S. users.
@@ -173,14 +173,14 @@
     teacher_email_required: 'Teacher prizes require a confirmed email address:'
     confirm:
       title: Please Confirm
-      'no': "ไม่ใช่"
-      'yes': "ใช่"
+      'no': ไม่ใช่
+      'yes': ใช่
       msg: Are you sure you want to claim the %{prize_name} prize?
       msg_student: 'NOTE: You can only choose one type of prize.'
       msg_publicschool: Please confirm that you are a U.S. public school teacher.
       msg_visit_website: Visit website
     providers:
-      apple_itunes: "$10 iTunes Gift Card"
+      apple_itunes: $10 iTunes Gift Card
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10GB of Dropbox Space
@@ -189,7 +189,7 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: "$10 Skype credit"
+      skype: $10 Skype credit
     msg:
       choose: 'Choose a prize:'
       choose_teacher: 'Click on the logo below to claim your prize:'
@@ -236,9 +236,9 @@
     destroy: Destroy
     back: Back
     confirm: Are you sure?
-    created: "%{model} was successfully created."
-    updated: "%{model} was successfully updated."
-    destroyed: "%{model} was successfully deleted."
+    created: '%{model} was successfully created.'
+    updated: '%{model} was successfully updated.'
+    destroyed: '%{model} was successfully deleted.'
     access_denied: You do not have access to this %{model}.
   nav:
     header:
@@ -248,30 +248,30 @@
         playlab: Make an App
         artist: Draw Something
     user:
-      classroom: "นักเรียนของฉัน"
+      classroom: นักเรียนของฉัน
       label: Hi %{username}
       stats: My progress
       settings: My account
-      prizes: "รางวัล"
-      logout: "ออกจากระบบ"
-      signin: "เข้าสู่ระบบ"
-      signup: "สมัครสมาชิก"
+      prizes: รางวัล
+      logout: ออกจากระบบ
+      signin: เข้าสู่ระบบ
+      signup: สมัครสมาชิก
       already_registered: Already registered?
     popup:
-      progress: "ความคืบหน้าของคุณ"
+      progress: ความคืบหน้าของคุณ
       lines: 'Total lines of code: %{lines}'
-      close: "ปิด"
-      mastery: "แนวคิด"
-      puzzle_map: "ขั้นตอน"
+      close: ปิด
+      mastery: แนวคิด
+      puzzle_map: ขั้นตอน
       prizes: Collect all %{total_trophies} trophies and win prizes!
       prize_earned: All %{total_trophies} trophies collected. Prize won!
-      prize_us_only: "(U.S. students only)"
-      prizes_link: "ข้อมูลเพิ่มเติม"
+      prize_us_only: (U.S. students only)
+      prizes_link: ข้อมูลเพิ่มเติม
   teacher:
     title:
       one: Your teacher is %{name}
       other: 'Your teachers:'
-    remove: "(remove teacher)"
+    remove: (remove teacher)
     confirm:
       remove: Are you sure you want to remove this teacher?
     tools: Teacher Tools
@@ -286,11 +286,11 @@
       not_tried: Not tried yet
       activity: Indicates student activity in the last %{hours} %{plural}
       no_section: No assigned section
-      trophies: "ถ้วยรางวัล"
+      trophies: ถ้วยรางวัล
     students:
-      name: "ชื่อ"
-      username: "ชื่อผู้ใช้"
-      password: "รหัสผ่าน"
+      name: ชื่อ
+      username: ชื่อผู้ใช้
+      password: รหัสผ่าน
       manage: Manage students
       dashboard: Go to Teacher Dashboard
       add: Add students
@@ -327,17 +327,17 @@
     rollup: Progress Dashboard
     activity: Recent class activity
     user_not_found: The teacher or student could not be found
-    cant_remove_student_no_email: "%{student_name} cannot be removed as your student
-      because %{student_name} has not registered an e-mail address"
-    cant_remove_teacher_no_email: "%{teacher_name} cannot be removed as your teacher
-      because you have not registered an e-mail address"
-    student_teacher_disassociated: "%{teacher_name} has been removed as a teacher
-      for %{student_name}"
+    cant_remove_student_no_email: '%{student_name} cannot be removed as your student
+      because %{student_name} has not registered an e-mail address'
+    cant_remove_teacher_no_email: '%{teacher_name} cannot be removed as your teacher
+      because you have not registered an e-mail address'
+    student_teacher_disassociated: '%{teacher_name} has been removed as a teacher
+      for %{student_name}'
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
     email_resend_confirm: Resend confirmation instructions
-    new_password_hint: "(leave blank if you don't want to change it)"
-    current_password_hint: "(we need your current password to confirm your changes)"
+    new_password_hint: (leave blank if you don't want to change it)
+    current_password_hint: (we need your current password to confirm your changes)
     cancel:
       title: Cancel my account
       hint: Unhappy?
@@ -379,7 +379,7 @@
     prize_info: 'Prizes for participation (U.S. only): $10 gift cards for student
       completion and up to $1,000 in classroom rewards for public school teachers'
     tryfirst: 'Or, you can try it first, and sign up later:'
-    trynow: "ลองตอนนี้"
+    trynow: ลองตอนนี้
     add_hint_help: Please help us to add smart hints to Code.org tutorials
     20hour_overview: This 20-hour course introduces core computer science and programming
       concepts. The course is designed for use in classrooms for grades K-8, but it
@@ -387,9 +387,9 @@
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
-    heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
-    heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
-    heading_legacy: "<h2>Our previous course for</h2><h1>Existing Students</h1>"
+    heading_elementary: <h2>20 hour courses for</h2><h1>Elementary Students</h1>
+    heading_apps: <h2>Fun for</h2><h1>Everybody</h1>
+    heading_legacy: <h2>Our previous course for</h2><h1>Existing Students</h1>
     gallery:
       your_turtle: My Art
       your_studio: My Apps
@@ -398,7 +398,7 @@
     female: Female
     none: Prefer not to answer
   user_type:
-    student: "นักเรียน"
+    student: นักเรียน
     teacher: Teacher
   footer:
     help_from_html: Engineers from <a href="http://www.google.com">Google</a>, <a
@@ -477,7 +477,7 @@
       unused: Unused Levels
   upsell:
     hoc:
-      title: "ช่วงเวลาของ Code"
+      title: ช่วงเวลาของ Code
       body: Try the basics of computer science. Millions have given it a shot.
     flappy:
       title: Flappy Code
@@ -498,13 +498,13 @@
     want_to_make_your_own: Want to make your own?
     more: More &rarr;
     caption_by_name_age: by %{name}, age %{age}
-    caption_time_ago: "%{time_ago} ago"
+    caption_time_ago: '%{time_ago} ago'
   landing:
     prerelease: This page is still under development.
     feedback: Give Feedback
     report_bug: Report Bug
     support: Get Help
-    support_url: "//support.code.org"
+    support_url: //support.code.org
   multi:
     wrong_title: Incorrect answer
     wrong_body: The answer you've entered is not correct.  Please try again!
@@ -516,7 +516,7 @@
     correct_title: Correct
     correct_body: That is the correct answer.
   dialog:
-    ok: "ตกลง"
+    ok: ตกลง
   time:
     hour: 1 hour
     day: day
@@ -530,10 +530,10 @@
             concepts. The course is designed for use in classrooms for grades K-8,
             but it is fun to learn at all ages.
         Hour of Code:
-          title: "ช่วงเวลาของ Code"
+          title: ช่วงเวลาของ Code
           description: ''
         edit-code:
-          title: "แก้ไข Code"
+          title: แก้ไข Code
           description: ''
         events:
           title: Events

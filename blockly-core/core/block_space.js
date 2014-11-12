@@ -105,14 +105,10 @@ Blockly.BlockSpace.prototype.fireChangeEventPid_ = null;
 Blockly.BlockSpace.prototype.scrollbar = null;
 
 Blockly.BlockSpace.prototype.findFunction = function(functionName) {
-  var blocks = this.getTopBlocks();
-  for (var x = 0, block; block = blocks[x]; x++) {
-    if ((block.type === 'procedures_defnoreturn' || block.type === 'procedures_defreturn')
-      && Blockly.Names.equals(functionName, block.getTitleValue('NAME'))) {
-      return block;
-    }
-  }
-  return null;
+  return goog.array.find(this.getTopBlocks(), function(block) {
+    return goog.array.contains(Blockly.Procedures.DEFINITION_BLOCK_TYPES, block.type) &&
+      Blockly.Names.equals(functionName, block.getTitleValue('NAME'))
+  });
 };
 
 /**

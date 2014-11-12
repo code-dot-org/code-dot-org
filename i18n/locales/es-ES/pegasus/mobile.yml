@@ -192,10 +192,11 @@
   dashboard_action_done: "Hecho"
   dashboard_action_required: "obligatorio"
   dashboard_navigation_home_page: "Página de inicio del maestro"
-  dashboard_navigation_all_sections: "Todas las secciones"
+  dashboard_navigation_all_sections: "Student Accounts and Progress"
   dashboard_navigation_view_progress: "Ver progreso"
   dashboard_navigation_add_students: "Añadir alumnos"
   dashboard_navigation_manage_students: "Administrar alumnos"
+  dashboard_navigation_lesson_plans_resources: "Lesson Plans and Resources"
   dashboard_navigation_view_stats: "Ver estadísticas"
   dashboard_navigation_section: 'Sección: %{section_name}'
   dashboard_navigation_student: 'Alumno: %{student_name}'

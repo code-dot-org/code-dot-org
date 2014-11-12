@@ -1,172 +1,172 @@
-cs:
+"cs":
   data:
     script:
       name:
         20-hour:
-          desc: 5-13 Kurz úvodu do informatiky
-          Unplug1: Fáze 1
-          Maze: Fáze 2
-          Unplug2: Fáze 3
-          Unplug3: Fáze 4
-          Artist: Fáze 5
-          Unplug4: Fáze 6
-          Artist2: Fáze 7
-          Unplug5: Fáze 8
-          Farmer: Fáze 9
-          Unplug6: Fáze 10
-          Artist3: Fáze 11
-          Unplug7: Fáze 12
-          Farmer2: Fáze 13
-          Unplug8: Fáze 14
-          Artist4: Fáze 15
-          Unplug9: Fáze 16
-          Farmer3: Fáze 17
-          Unplug10: Fáze 18
-          Artist5: Fáze 19
-          Unplug11: Fáze 20
+          desc: "5-13 Kurz úvodu do informatiky"
+          Unplug1: "Fáze 1"
+          Maze: "Fáze 2"
+          Unplug2: "Fáze 3"
+          Unplug3: "Fáze 4"
+          Artist: "Fáze 5"
+          Unplug4: "Fáze 6"
+          Artist2: "Fáze 7"
+          Unplug5: "Fáze 8"
+          Farmer: "Fáze 9"
+          Unplug6: "Fáze 10"
+          Artist3: "Fáze 11"
+          Unplug7: "Fáze 12"
+          Farmer2: "Fáze 13"
+          Unplug8: "Fáze 14"
+          Artist4: "Fáze 15"
+          Unplug9: "Fáze 16"
+          Farmer3: "Fáze 17"
+          Unplug10: "Fáze 18"
+          Artist5: "Fáze 19"
+          Unplug11: "Fáze 20"
         Hour of Code:
-          desc: Hodina kódu
-          Maze: Fáze 1
+          desc: "Hodina kódu"
+          Maze: "Fáze 1"
         Edit Code:
-          desc: Edit Code (beta)
-          MazeEC: Fáze 1
+          desc: "Edit Code (beta)"
+          MazeEC: "Fáze 1"
         2014 Levels:
-          desc: Bounce (beta)
-          Bounce: Fáze 1
+          desc: "Bounce (beta)"
+          Bounce: "Fáze 1"
         Builder Levels:
-          desc: User-Created Puzzles (beta)
-          Custom: Fáze 1
+          desc: "User-Created Puzzles (beta)"
+          Custom: "Fáze 1"
         Flappy Levels:
-          desc: Flappy Bird
-          Flappy: Fáze 1
+          desc: "Flappy Bird"
+          Flappy: "Fáze 1"
         Jigsaw Levels:
-          desc: Jigsaw (beta)
-          Jigsaw: Fáze 1
+          desc: "Jigsaw (beta)"
+          Jigsaw: "Fáze 1"
         Step Levels:
-          desc: Maze (beta)
-          MazeStep: Stage Step
+          desc: "Maze (beta)"
+          MazeStep: "Stage Step"
         edit-code:
-          desc: Edit Code (beta)
-          MazeEC: Fáze 1
-          Webapp: Fáze 2
-          ArtistEC: Fáze 3
+          desc: "Edit Code (beta)"
+          MazeEC: "Fáze 1"
+          Webapp: "Fáze 2"
+          ArtistEC: "Fáze 3"
         events:
-          desc: Bounce (beta)
-          Bounce: Fáze 1
-          Studio: Fáze 2
+          desc: "Bounce (beta)"
+          Bounce: "Fáze 1"
+          Studio: "Fáze 2"
         builder:
-          desc: User-Created Puzzles (beta)
-          Custom: Fáze 1
+          desc: "User-Created Puzzles (beta)"
+          Custom: "Fáze 1"
         flappy:
-          desc: Flappy Bird
-          Flappy: Fáze 1
+          desc: "Flappy Bird"
+          Flappy: "Fáze 1"
         jigsaw:
-          desc: Jigsaw (beta)
-          Jigsaw: Fáze 1
+          desc: "Jigsaw (beta)"
+          Jigsaw: "Fáze 1"
         step:
-          desc: Maze (beta)
-          MazeStep: Stage Step
+          desc: "Maze (beta)"
+          MazeStep: "Stage Step"
         wordsearch:
-          desc: Spelling Bee (beta)
-          WordSearch: Fáze 1
+          desc: "Spelling Bee (beta)"
+          WordSearch: "Fáze 1"
     game:
       name:
-        Unplug1: Úvod do počítačové vědy
-        Maze: Bludiště
-        Multi: Multiple Choice Stuffs
-        Unplug2: Aritmetické Myšlení
-        Unplug3: Programování Na Milimetrovém Papíru
-        Artist: Umělec
-        Unplug4: Algoritmy
-        Artist2: Malíř 2
-        Unplug5: Funkce
-        Farmer: Farmářka
-        Unplug6: Podmínky
-        Artist3: Malíř 3
-        Unplug7: Psaní Písně
-        Farmer2: Farmářka 2
-        Unplug8: Abstrakce
-        Artist4: Malíř 4
-        Unplug9: Štafetové Programování
-        Farmer3: Farmářka 3
-        Unplug10: Internet
-        Artist5: Malíř 5
-        Unplug11: Shrnutí
-        MazeEC: Bludiště
-        Bounce: Odraz
-        Flappy: Flappy Bird
-        Jigsaw: Jigsaw
-        MazeStep: Maze Step Mode
-        Wordsearch: Wordsearch
-        Webapp: Webapp
-        ArtistEC: Umělec
+        Unplug1: "Úvod do počítačové vědy"
+        Maze: "Bludiště"
+        Multi: "Multiple Choice Stuffs"
+        Unplug2: "Aritmetické Myšlení"
+        Unplug3: "Programování Na Milimetrovém Papíru"
+        Artist: "Umělec"
+        Unplug4: "Algoritmy"
+        Artist2: "Malíř 2"
+        Unplug5: "Funkce"
+        Farmer: "Farmářka"
+        Unplug6: "Podmínky"
+        Artist3: "Malíř 3"
+        Unplug7: "Psaní Písně"
+        Farmer2: "Farmářka 2"
+        Unplug8: "Abstrakce"
+        Artist4: "Malíř 4"
+        Unplug9: "Štafetové Programování"
+        Farmer3: "Farmářka 3"
+        Unplug10: "Internet"
+        Artist5: "Malíř 5"
+        Unplug11: "Shrnutí"
+        MazeEC: "Bludiště"
+        Bounce: "Odraz"
+        Flappy: "Flappy Bird"
+        Jigsaw: "Jigsaw"
+        MazeStep: "Maze Step Mode"
+        Wordsearch: "Wordsearch"
+        Webapp: "Webapp"
+        ArtistEC: "Umělec"
     trophy:
       name:
-        Bronze: Bronzová
-        Silver: Stříbrná
-        Gold: Zlatá
+        Bronze: "Bronzová"
+        Silver: "Stříbrná"
+        Gold: "Zlatá"
     concept:
       description:
-        sequence: Sekvence
-        if: Blok Pokud
-        if_else: blok pokud-jinak
-        loop_times: Blok Opakovat n-krát
-        loop_until: Blok Opakovat Dokud
-        loop_while: Blok Dokud
-        loop_for: blok Čítač
-        function: Funkce
-        parameters: Funkce s Parametry
+        sequence: "Sekvence"
+        if: "Blok Pokud"
+        if_else: "blok pokud-jinak"
+        loop_times: "Blok Opakovat n-krát"
+        loop_until: "Blok Opakovat Dokud"
+        loop_while: "Blok Dokud"
+        loop_for: "blok Čítač"
+        function: "Funkce"
+        parameters: "Funkce s Parametry"
     level:
       instructions:
         maze_2_2: 'Can you help me to catch the naughty pig? Stack a couple of "move forward" blocks together and press "Run" to help me get there. '
-        maze_2_1: To prase mi pije krev. Pomoz mi ho najít!
-        maze_2_2_5: Najdi cestu a veď mě k tomu pošetilému praseti. Vyhni se TNT, nebo bude létat peří!
-        maze_2_3: Naveď mě k zelenému zlu! (Pozor na TNT)
-        maze_2_4: Zachovej klid a pomoz mi najít to zlé prasátko. Jinak bych se mohlo rozzlobit!
-        maze_2_5: Existuje způsob, jak se mohu dostat k zelenému prasátku za použití pouze 2 bloků. Přijdeš na něj?
-        maze_2_6: Pokus se mě dostat k zelenému vetřelci za použití třech bloků.
+        maze_2_1: "To prase mi pije krev. Pomoz mi ho najít!"
+        maze_2_2_5: "Najdi cestu a veď mě k tomu pošetilému praseti. Vyhni se TNT, nebo bude létat peří!"
+        maze_2_3: "Naveď mě k zelenému zlu! (Pozor na TNT)"
+        maze_2_4: "Zachovej klid a pomoz mi najít to zlé prasátko. Jinak bych se mohlo rozzlobit!"
+        maze_2_5: "Existuje způsob, jak se mohu dostat k zelenému prasátku za použití pouze 2 bloků. Přijdeš na něj?"
+        maze_2_6: "Pokus se mě dostat k zelenému vetřelci za použití třech bloků."
         maze_2_7: 'Pomoz mi zbavit se toho zlobivého prasátka pomocí nejmenšího počtu bloků. Zkus použít více jak jeden blok "opakovat n-krát".'
         maze_2_8: 'Když je blok šedý, tak to znamená, že ho nemůžeš smazat. Vyřeš tuto hádanku použitím šedého bloku "opakuj". Zkus do něj vložit 3 bloky: posun vpřed, posun vpřed a otoč a nastavit blok "opakuj", aby to zopakoval třikrát.'
         maze_2_9: 'Dobře, zkus nový blok "opakovat dokud" - bude se opakovat, dokud nechytím to otravné prase.'
         maze_2_10: 'Dobře, ještě jednou pro procvičení - dokážeš vyřešit tento úkol za použití pouze 4 bloků?'
-        maze_2_11: Drahý živý. Já zombie. Já hladový. Muset...se dostat...k té slunečnici... Dostaneš mě tam za použití jen 5 bloků?
-        maze_2_12: Dobře, toto je podobné, jen trošičku odlišné. Zvládneš to vyřešit jen s 5-ti bloky?
+        maze_2_11: "Drahý živý. Já zombie. Já hladový. Muset...se dostat...k té slunečnici... Dostaneš mě tam za použití jen 5 bloků?"
+        maze_2_12: "Dobře, toto je podobné, jen trošičku odlišné. Zvládneš to vyřešit jen s 5-ti bloky?"
         maze_2_13: 'Použij nový blok "pokud" abych se rozhodoval, kdy se otočit. Tip: stačí ti pouze jeden další blok, ale naučit se, jak jsme to nachystali, aby jsi to příště dokázal sám.'
         maze_2_14: 'Dobře, tohle je stejné jako předchozí hádanka, ale musíš si pamatovat, jak jsi použil blok "pokud" a blok "opakovat" dohromady.'
         maze_2_15: 'Já chtít slunečnici! Použij blok "pokud" a dostaň mě tam s co nejmenším počtem bloků.'
         maze_2_16: 'Dobře, pojďme to udělat znovu pro procvičení - není to příliš jiné, ale dávej pozor na masožravky!'
         maze_2_17: 'Blok "pokud-jinak" ověřuje podmínku a poté udělá jednu NEBO druhou věc. Zkus použít tento blok, aby jsi mě dostal ke slunečnici.'
         maze_2_18: 'Další cvičení pro blok "pokud-jinak". Zvládneš to na první pokus?'
-        maze_2_19: Dokážeš přidat jen 3 bloky a vyřešit složitější bludiště? Pokud to uděláš správně, mohu jít všemi křivolakými cestami bez ohledu na délku.
+        maze_2_19: "Dokážeš přidat jen 3 bloky a vyřešit složitější bludiště? Pokud to uděláš správně, mohu jít všemi křivolakými cestami bez ohledu na délku."
         turtle_1_1: "Hi, I'm an artist. You can write code to make me draw almost anything. Use a few blocks to make me draw over the grey lines in the picture."
         turtle_1_2: 'Teď nakresli čtverec. Poznámka: použij svou oblíbenou barvu vybranou v novém bloku "nastavení barev".'
-        turtle_1_3: Udělej čtverec použitím pouze 3 bloků.
+        turtle_1_3: "Udělej čtverec použitím pouze 3 bloků."
         turtle_1_4: 'Namaluj trojúhelník, jehož strany mají každá jinou barvu. Použij možnost "náhodná barva", která vybere pokaždé jinou barvu. Tip: budeš muset přijít na to jak moc se otočit tím, že klikneš na číslo v bloku otočit.'
-        turtle_1_5: Teď pro procvičení, nakresli trojúhelník a čtverec tak aby vznikla poštovní obálka.
+        turtle_1_5: "Teď pro procvičení, nakresli trojúhelník a čtverec tak aby vznikla poštovní obálka."
         turtle_1_6: 'Přijdeš na to, jak nakreslit tento trojúhelník a čtverec? Tip: Nejdříve udělej trojúhelník, poté zjisti, o kolik se musíš otočit, než namaluješ čtverec.'
         turtle_1_7: 'Dobře, pojďme na něco složitějšího - zjisti, jestli dokážeš nakreslit tyto zelené brýle. Čtverce na obou stranách mají po 100 pixelech a jsou od sebe vzdáleny 50 pixelů. Nezapomeň kreslit zelenou!'
         turtle_1_8: 'Dobře, zkus přijít na to, co se stane, když spustíš tento kód (nebo zmáčkni "Spustit", aby jsi to vyzkoušel/a). Poté to zopakuj tolikrát, aby jsi domaloval/a celý obrázek. Barvy budou pokaždé jiné.'
-        turtle_1_9: Přijdeš na to, jakým číslem by se měly nahradit otazníky, aby jsi nakreslil/a kružnici?
+        turtle_1_9: "Přijdeš na to, jakým číslem by se měly nahradit otazníky, aby jsi nakreslil/a kružnici?"
         turtle_1_10: 'Podařilo se ti to! Teď nakresli cokoliv chceš. Pár zábavných nápadů: panáček, vločka nebo spirála. Také můžeš vyzkoušet nový blok "nastav tloušťku". Bav se!'
         turtle_4_1: 'Dokážeš nakreslit trojúhelník (všechny strany 100 pixelů) pouze pomocí 3 bloků? Tip: použij blok "opakovat".'
         turtle_4_2: 'Add a "turn right by 90 degrees" block somewhere in the middle of the program already out on the workspace to draw these triangles.'
         turtle_4_3: 'Dobře, tady je kód, který jsi napsal/a pro nakreslení jednoho trojúhelníku. Můžeš přidat blok "opakovat", aby jsi vytvořil/a pěknou květinu?'
         turtle_4_4: 'Zde je stejný kód jako v předešlém rébusu, ale s otočením pouhých 36 stupňů po nakreslení každého trojúhelníku. Kolikrát musíme toto zopakovat? (Tip: po otočení o 360 stupňů kresba vytvoří celou kružnici)'
         turtle_4_5: 'Zde je stejný kód jako v předešlém rébusu, ale opakuje otočení 36 krát. Kolik stupňů by měly otočení mít? (Tip: po otočení o 360 stupňů kresba vytvoří celou kružnici)'
-        turtle_4_6: Dokážeš namalovat čtverec se stranou dlouhou 20 pixelů za použití pouze tří bloků?
+        turtle_4_6: "Dokážeš namalovat čtverec se stranou dlouhou 20 pixelů za použití pouze tří bloků?"
         turtle_4_7: 'Zde je kód pro nakreslení čtverce z posledního rébusu. Můžeš ho zopakovat pro namalování 10 sousedících čtverců jako žebřík? Tip: stačí ti další 2 bloky.'
-        turtle_4_8: Zde je řešení předchozího rébusu. Můžeš přidat pouze 2 další bloky, aby jsi dokreslil obrázek?
-        turtle_4_9: Zde je řešení předchozího rébusu. O kolik stupňů by se mělo točit, abychom dokreslili obrázek? (Asi si budeš muset párkrát tipnout)
-        turtle_4_10: Zde je řešení předchozího rébusu. Kolikrát bychom měli opakovat, aby byl obrázek dokreslený?
+        turtle_4_8: "Zde je řešení předchozího rébusu. Můžeš přidat pouze 2 další bloky, aby jsi dokreslil obrázek?"
+        turtle_4_9: "Zde je řešení předchozího rébusu. O kolik stupňů by se mělo točit, abychom dokreslili obrázek? (Asi si budeš muset párkrát tipnout)"
+        turtle_4_10: "Zde je řešení předchozího rébusu. Kolikrát bychom měli opakovat, aby byl obrázek dokreslený?"
         turtle_4_11: 'Zkus změnit čísla v blocích "otočit" a "opakovat" aby vznikly různé vzory. Nebo vyzkoušej změnit zbytek kódu a nakresli cokoliv chceš.'
         maze_karel_1_1: 'Ahoj! Já jsem farmář. Pomůžeš mi zarovnat pole na mojí farmě, aby bylo vše připraveno pro sazeničky? Přesuň mne ke hromádce hlíny a použij blok "odstranit".'
         maze_karel_1_2: 'Teď mě posuň do díry a vyplň ji DVĚMA lopatami za použití bloku "vyplnit".'
-        maze_karel_1_3: Posuň mě na hromádku hlíny a řekni mi, kolik lopat mám odstranit. Použij co nejméně bloků.
+        maze_karel_1_3: "Posuň mě na hromádku hlíny a řekni mi, kolik lopat mám odstranit. Použij co nejméně bloků."
         maze_karel_1_4: 'Pomůžeš mi odstranit všechny čtyři hromádky hlíny? Tip: pokud to jde, použij blok opakovat.'
         maze_karel_1_5: 'Pomoz mi vyplnit všechny tyto díry pěti lopatami hlíny. Tip: můžeš vložit blok "opakovat" dovnitř bloku "dokud".'
         maze_karel_1_6: 'Odstraň všechny hromádky hlíny použitím co nejmenšího počtu bloků. Nová možnost v rozbalovacím menu bloku "dokud" mi řekne, stojím-li na hromádce nebo v díře.'
-        maze_karel_1_7: Páni, našla jsem opravdu hlubokou díru! Nevím, kolik lopat hlíny na ni bude potřeba. Můžeš napsat program, který ji bude plnit dokud nebude země rovná?
-        maze_karel_1_8: Pomoz mi vyplnit díru na konci pole za použití co nejmenšího počtu bloků.
+        maze_karel_1_7: "Páni, našla jsem opravdu hlubokou díru! Nevím, kolik lopat hlíny na ni bude potřeba. Můžeš napsat program, který ji bude plnit dokud nebude země rovná?"
+        maze_karel_1_8: "Pomoz mi vyplnit díru na konci pole za použití co nejmenšího počtu bloků."
         maze_karel_1_9: 'Pošli mě odstranit všechny tyto hromádky hlíny. Snaž se použít co nejméně bloků. Tip: zkus použít blok "dokud".'
         maze_karel_1_10: 'Už pracuji pozdě, takže je venku tma a nedokážu říct, jak velké hromádky jsou. Nemám teď ani všechny možnosti, které jsem u bloku "dokud" míval. Posouvej mě po poli a pokud narazím na hromádku, odstraň ji.'
         maze_karel_1_11: 'Venku je pořád tma. Posouvej mě po poli. Pokud narazím na hromádku, odstraň ji a pokud na díru, vyplň ji. Tip: použij rozbalovací menu možností bloku "pokud".'
@@ -177,20 +177,20 @@ cs:
         turtle_2_5: 'Nakresli čtverce o stranách 50, 60, 70, 80 a 90 pixelů. Budeš potřebovat použít funkci "nakreslit čtverec" pětkrát.'
         turtle_2_6: 'Dobře, tento program použije čítač, aby nakreslil stejné čtverce jako minule. Chceš, aby měl čtverec tu samou velikost jako čítač, takže použij blok "čítač". Tip: Je v kategorii Proměnné.'
         turtle_2_7: 'Zde je program k nakreslení spirály, ale bloky jsou neaktivní, takže se neprovedou. Udělej nový program za použití bloku "počítat s" (v kategorii Cykly) a bloku "čítač" (v kategorii Proměnné) k nakreslení té samé spirály.'
-        turtle_2_7_5: Upravit Kód
+        turtle_2_7_5: "Upravit Kód"
         turtle_2_8: 'Tohle bude záludné. Použij funkci "nakreslit sněhuláka" a nový blok "skočit vpřed" (v kategorii Akce). Nakresli 3 sněhuláky v různých barvách, 100 pixelů od sebe.'
         turtle_2_9: 'Použij cyklus "počítat s" k nakreslení rodinky sněhuláků o výšce 110, 100, 90, 80 a 70. Všichni sněhuláci by měli být 60 pixelů od sebe.'
-        turtle_2_10: V tomto kódu můžeš experimentovat s různými spirálami. Co se stane, když změníš hodnotu otočení? Nebo nastavíš náhodnou barvu v cyklu? Nakresli cokoliv chceš.
+        turtle_2_10: "V tomto kódu můžeš experimentovat s různými spirálami. Co se stane, když změníš hodnotu otočení? Nebo nastavíš náhodnou barvu v cyklu? Nakresli cokoliv chceš."
         maze_karel_2_1: 'Zkus použít bloky, abych odstranil všechny hromádky a vyplnil všechny díry v zemi. Místo velkého množství bloků, zkus použít cykly. Tip: můžeš vložit cyklus dovnitř jiného cyklu.'
         maze_karel_2_2: 'Vytvořili jsme náš vlastní blok se jménem "vyplnit 5", který najdeš v kategorii Funkce. Použij ji, abych vyplnil tuto díru.'
         maze_karel_2_3: 'Použij nový funkční blok "vyplnit 5", abych vyplnil všechny díry. Budeš muset vytáhnout blok "vyplnit 5" z kategorie Funkce.'
-        maze_karel_2_4: Vytvoř novou funkci, která odstraní 7 lopat. Poté ji použij k napsání programu, díky kterému odstraním všechny hromádky.
-        maze_karel_2_5: Vytvoř novou funkci, která odstraní 6 lopat z hromádky a použij ji, abych srovnal všechny hromádky.
+        maze_karel_2_4: "Vytvoř novou funkci, která odstraní 7 lopat. Poté ji použij k napsání programu, díky kterému odstraním všechny hromádky."
+        maze_karel_2_5: "Vytvoř novou funkci, která odstraní 6 lopat z hromádky a použij ji, abych srovnal všechny hromádky."
         maze_karel_2_6: 'Použij nové funkce, "vyplnit 8" a "odstranit 8", abych srovnal všechny hromádky a vyplnil všechny díry.'
-        maze_karel_2_7: Na mém poli je kráva! Napiš novou funkci, která mi pomůže vyhnout se krávě a odstranit hromádku. Vlož všechny své bloky dovnitř nové funkce.
+        maze_karel_2_7: "Na mém poli je kráva! Napiš novou funkci, která mi pomůže vyhnout se krávě a odstranit hromádku. Vlož všechny své bloky dovnitř nové funkce."
         maze_karel_2_8: 'Použij tuto novou funkci, "vyhnout se krávě a odstranit 1", abych odstranil všechny hromádky.'
-        maze_karel_2_9: Dobře, tady je funkce, která odstraní 4 různé hromádky ve svislém sloupci. Vyzkoušej dát tuto funkci do cyklu, takže odstraníš všechny hromádky hlíny pouze pomocí pár dalších bloků.
-        maze_karel_2_10: Přesuň mě přes pole a použij dvě nové funkce, abych odstranil všechny hromádky a vyplnil všechny díry.
+        maze_karel_2_9: "Dobře, tady je funkce, která odstraní 4 různé hromádky ve svislém sloupci. Vyzkoušej dát tuto funkci do cyklu, takže odstraníš všechny hromádky hlíny pouze pomocí pár dalších bloků."
+        maze_karel_2_10: "Přesuň mě přes pole a použij dvě nové funkce, abych odstranil všechny hromádky a vyplnil všechny díry."
         turtle_3_1: 'Tento rébus ukazuje, jak jsou sestaveny funkce "nakreslit čtverec" a "nakreslit kružnici". Sestavení funkce neznamená, že se její bloky spustí. Aby jsi doopravdy nakreslil čtverec, musíš blok "nakreslit čtverec" nejdřív vytáhnout na plochu.'
         turtle_3_2: 'Použij funkci "nakreslit čtverec" jako předlohu, vytvoř funkci "nakreslit trojúhelník" a použij ji.'
         turtle_3_3: 'Nakresli trojúhelníkový plot kolem koček a čtvercový plot kolem krávy. Tip: testuj program v průběhu psaní.'
@@ -200,30 +200,30 @@ cs:
         turtle_3_7: 'Přidej vstup s názvem "délka" do "nakreslit dům" a postav veliký dům pro slona (se stranami dlouhými 150 pixelů)'
         turtle_3_8: 'Zde jsou všechny bloky z předchozí hádanky.  Změň "nakreslit dům" tak, aby jsem po nakreslení nového domu skončil v pravém dolním rohu. Použijte tuto upravenou funkci k nakreslení tří domků.'
         turtle_3_9: 'Zvládneš znovu vytvořit funkci "nakreslit dům" bez pomoci? Zkus to a potom nakresli řadu domů.'
-        turtle_3_10: Hodně jsi se toho naučil! Teď to využij a nakresli cokoliv si přeješ. Zkus nakreslit hvězdu, nebo spirálu, nebo fajnovou sněhovou vločku.
-        maze_karel_debug_seq_1: Vítej v ladícím módu! Můj kód nefunguje dobře. Rozpoznáš problém a opravíš ho tak, abych pole srovnal a připravil na výsadbu?
-        maze_karel_debug_seq_2: Co je špatně s tímto programem? Jak by jsi ho mohl opravit, abych dokázal odstranit tu hromádku?
-        maze_karel_debug_repeat: Vylaď pro mě tento program tak, aby mé pole bylo srovnané.
-        maze_karel_debug_while: Jak by jsi změnil tento program, aby jsi mi pomohl vyplnit tu díru?
-        maze_karel_debug_if: Pomoc! Oprav program, aby moje pole bylo zcela rovné.
-        maze_karel_debug_if_else: Vylaď tento program, abych mohl vyplnit všechny díry a odstranit veškeré hromádky.
-        maze_karel_debug_function_1: Co by jsi změnil na tomto programu, aby mi to pomohlo v odstranění všech těch hromádek?
-        maze_karel_debug_function_2: Můžeš pro mě vyladit tento program, abych mohl zarovnat své pole?
-        maze_karel_debug_function_3: Uprav tento program tak, abych odstranil všechny hromádky ze svého pole.
-        turtle_5_1: Zkus spouštět tento program, provádět změny a sledovat, co se stane. Dokážeš zjistit, jak funguje? (Nebo jej odstraň a nahraď něčím naprosto jiným)
-        turtle_5_2: Zkus spouštět tento program, provádět změny a sledovat, co se stane. Dokážeš zjistit, jak funguje? (Nebo jej odstraň a nahraď něčím naprosto jiným)
-        turtle_5_3: Zkus spouštět tento program, provádět změny a sledovat, co se stane. Dokážeš zjistit, jak funguje? (Nebo jej odstraň a nahraď něčím naprosto jiným)
-        turtle_5_4: Zkus spouštět tento program, provádět změny a sledovat, co se stane. Dokážeš zjistit, jak funguje? (Nebo jej odstraň a nahraď něčím naprosto jiným)
-        turtle_5_5: Zkus spouštět tento program, provádět změny a sledovat, co se stane. Dokážeš zjistit, jak funguje? (Nebo jej odstraň a nahraď něčím naprosto jiným)
-        turtle_5_6: Zkus spouštět tento program, provádět změny a sledovat, co se stane. Dokážeš zjistit, jak funguje? (Nebo jej odstraň a nahraď něčím naprosto jiným)
-        maze_3_1: Potřebuji dostat to prase! Zadej několik volání pohyb(); abych dostal zpět svá vejce.
-        maze_3_2: Napiš mi program tak, abych se dostal až k tomu prasátku.
-        maze_3_3: Jak se jen dostanu k tomu prasátku? Ujisti se, že nenarazím do krabice s TNT!
-        maze_3_4: Grrr! Napiš mi program, který mě dostane kolem TNT k tomu praseti.
+        turtle_3_10: "Hodně jsi se toho naučil! Teď to využij a nakresli cokoliv si přeješ. Zkus nakreslit hvězdu, nebo spirálu, nebo fajnovou sněhovou vločku."
+        maze_karel_debug_seq_1: "Vítej v ladícím módu! Můj kód nefunguje dobře. Rozpoznáš problém a opravíš ho tak, abych pole srovnal a připravil na výsadbu?"
+        maze_karel_debug_seq_2: "Co je špatně s tímto programem? Jak by jsi ho mohl opravit, abych dokázal odstranit tu hromádku?"
+        maze_karel_debug_repeat: "Vylaď pro mě tento program tak, aby mé pole bylo srovnané."
+        maze_karel_debug_while: "Jak by jsi změnil tento program, aby jsi mi pomohl vyplnit tu díru?"
+        maze_karel_debug_if: "Pomoc! Oprav program, aby moje pole bylo zcela rovné."
+        maze_karel_debug_if_else: "Vylaď tento program, abych mohl vyplnit všechny díry a odstranit veškeré hromádky."
+        maze_karel_debug_function_1: "Co by jsi změnil na tomto programu, aby mi to pomohlo v odstranění všech těch hromádek?"
+        maze_karel_debug_function_2: "Můžeš pro mě vyladit tento program, abych mohl zarovnat své pole?"
+        maze_karel_debug_function_3: "Uprav tento program tak, abych odstranil všechny hromádky ze svého pole."
+        turtle_5_1: "Zkus spouštět tento program, provádět změny a sledovat, co se stane. Dokážeš zjistit, jak funguje? (Nebo jej odstraň a nahraď něčím naprosto jiným)"
+        turtle_5_2: "Zkus spouštět tento program, provádět změny a sledovat, co se stane. Dokážeš zjistit, jak funguje? (Nebo jej odstraň a nahraď něčím naprosto jiným)"
+        turtle_5_3: "Zkus spouštět tento program, provádět změny a sledovat, co se stane. Dokážeš zjistit, jak funguje? (Nebo jej odstraň a nahraď něčím naprosto jiným)"
+        turtle_5_4: "Zkus spouštět tento program, provádět změny a sledovat, co se stane. Dokážeš zjistit, jak funguje? (Nebo jej odstraň a nahraď něčím naprosto jiným)"
+        turtle_5_5: "Zkus spouštět tento program, provádět změny a sledovat, co se stane. Dokážeš zjistit, jak funguje? (Nebo jej odstraň a nahraď něčím naprosto jiným)"
+        turtle_5_6: "Zkus spouštět tento program, provádět změny a sledovat, co se stane. Dokážeš zjistit, jak funguje? (Nebo jej odstraň a nahraď něčím naprosto jiným)"
+        maze_3_1: "Potřebuji dostat to prase! Zadej několik volání pohyb(); abych dostal zpět svá vejce."
+        maze_3_2: "Napiš mi program tak, abych se dostal až k tomu prasátku."
+        maze_3_3: "Jak se jen dostanu k tomu prasátku? Ujisti se, že nenarazím do krabice s TNT!"
+        maze_3_4: "Grrr! Napiš mi program, který mě dostane kolem TNT k tomu praseti."
         bounce_1: 'Attach a block to the "when left arrow" block and press "Run". Move the paddle using the left arrow to reach the finish target.'
         bounce_2: 'Připoj blok k blokům "šipka vpravo" a "šipka vpravo". Přesunuj pálku k dosažení obou cílů.'
         bounce_3: 'Teď zkus něco podobného s blokem "šipka nahoru". Přesunuj pálku k dokončení úkolu nahoře.'
-        bounce_4: Tentokrát, je třeba přidat čtyři bloky. Přesunuj pálku k dokončení všech čtyř úkolů a dokončení hádanky.
+        bounce_4: "Tentokrát, je třeba přidat čtyři bloky. Přesunuj pálku k dokončení všech čtyř úkolů a dokončení hádanky."
         bounce_5: 'Pošleme míč směrem dolů k pálce. Přidej blok k bloku "když míč dopadne na pálku", abys zajistil, že se míč dostane ke konečnému terči.'
         bounce_6: 'Teď je splněný úkol nahoře. Potřebuješ spojit oba bloky "když se míč dotkne", abys dokončil hádanku.'
         bounce_7: 'Připoj bloky ke každému bloku "když". Odrážej míč dokud nenarazí do konečného terče.'
@@ -238,12 +238,12 @@ cs:
         flappy_4: |-
           Flappy proletí skrz překážky, pokud nenapíšeš kód, aby naboural. Připoj blok k bloku "když vrazí do překážky". Tvůj kód musí 'UKONČIT HRU', když Flappy narazí do první sady trubek.
         flappy_5: 'Přidej tabulku s přehledem skóre a počítej body, když Flappy proletí překážkama. Přidej to k bloku "když proletí překážkami" a potom získej body, když Flappy proletí první sadou trubek.'
-        flappy_6: Podívejme se, jestli můžeš pořád získat body i potom, co Flappy uletí menší či větší vzdálenost.
+        flappy_6: "Podívejme se, jestli můžeš pořád získat body i potom, co Flappy uletí menší či větší vzdálenost."
         flappy_7: 'Next, try changing the scene by attaching another block to the "when run" block.'
-        flappy_8: Obraz můžeš nastavit kdykoliv, ne jen při začátku hry. Vyzkoušej anstavení NÁHODNÉ scény, když dojde k jiným událostem, například, když proletí překážkou.
-        flappy_9: Aby se to ještě zkomplikovalo, když Flappy vrazí do překážky nebo do země, zkus místo ukončení hry nastavit skóre na 0.
+        flappy_8: "Obraz můžeš nastavit kdykoliv, ne jen při začátku hry. Vyzkoušej anstavení NÁHODNÉ scény, když dojde k jiným událostem, například, když proletí překážkou."
+        flappy_9: "Aby se to ještě zkomplikovalo, když Flappy vrazí do překážky nebo do země, zkus místo ukončení hry nastavit skóre na 0."
         flappy_11: "Create your own Flappy game. You can change all the visuals and all the rules, even the gravity. When you're done, click Finish to let friends try your game on their phones."
-        flappy_k1_1: Play Flappy
+        flappy_k1_1: "Play Flappy"
         flappy_k1_2: 'Attach a block to the "when click" block, then press "Run". Click or tap the screen to move Flappy to the target.'
         flappy_k1_3: |-
           Teď jsme přidali terén. Připoj blok k bloku "když se dotkne země". Tvůj kód musí 'UKONČIT HRU', když Flappy narazí.
@@ -251,161 +251,161 @@ cs:
         flappy_k1_5: |-
           Flappy proletí skrz překážky, pokud nenapíšeš kód, aby naboural. Připoj blok k bloku "když vrazí do překážky". Tvůj kód musí 'UKONČIT HRU', když Flappy narazí do první sady trubek.
         flappy_k1_6: 'Přidej tabulku s přehledem skóre a počítej body, když Flappy proletí překážkama. Přidej to k bloku "když proletí překážkami" a potom získej body, když Flappy proletí první sadou trubek.'
-        flappy_k1_7: See if you can score multiple points for making it past an obstacle
+        flappy_k1_7: "See if you can score multiple points for making it past an obstacle"
         flappy_k1_8: 'Next, try changing the scene by attaching another block to the "when run" block.'
         flappy_k1_9: 'Try changing the player by attaching a "set player" block to the "when run" block.'
-        jigsaw_1: Click the block
-        jigsaw_2: Drag the block to the target
-        jigsaw_3: Arrange the blocks to form the image
-        jigsaw_4: Arrange the blocks to form the image
-        jigsaw_5: Arrange the blocks to form the image
-        jigsaw_6: Arrange the blocks to form the image
-        jigsaw_7: Arrange the blocks to form the image
-        jigsaw_8: Arrange the blocks to form the image
-        jigsaw_9: Arrange the blocks to form the image
-        jigsaw_10: Arrange the blocks to form the image
-        jigsaw_11: Arrange the blocks to form the image
-        jigsaw_12: Arrange the blocks to form the image
-        jigsaw_13: Fix the puzzle!
-        mazestep_1: Maze step description here
-        mazestep_2: Maze step description here
-        mazestep_3: Maze step description here
-        mazestep_4: Maze step description here
-        mazestep_5: Maze step description here
+        jigsaw_1: "Click the block"
+        jigsaw_2: "Drag the block to the target"
+        jigsaw_3: "Arrange the blocks to form the image"
+        jigsaw_4: "Arrange the blocks to form the image"
+        jigsaw_5: "Arrange the blocks to form the image"
+        jigsaw_6: "Arrange the blocks to form the image"
+        jigsaw_7: "Arrange the blocks to form the image"
+        jigsaw_8: "Arrange the blocks to form the image"
+        jigsaw_9: "Arrange the blocks to form the image"
+        jigsaw_10: "Arrange the blocks to form the image"
+        jigsaw_11: "Arrange the blocks to form the image"
+        jigsaw_12: "Arrange the blocks to form the image"
+        jigsaw_13: "Fix the puzzle!"
+        mazestep_1: "Maze step description here"
+        mazestep_2: "Maze step description here"
+        mazestep_3: "Maze step description here"
+        mazestep_4: "Maze step description here"
+        mazestep_5: "Maze step description here"
         studio_c2_1: 'Can you make this dog say "hello world"?'
-        studio_c2_2: Can you make the dog say something and then have the cat say something afterwards?
-        studio_c2_3: Can you write a program to make this dog move to the cat?
+        studio_c2_2: "Can you make the dog say something and then have the cat say something afterwards?"
+        studio_c2_3: "Can you write a program to make this dog move to the cat?"
         studio_c2_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
         studio_c2_5: 'Can you write a program to make the octopus say "hello" when it is clicked?'
-        studio_c2_6: Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?
+        studio_c2_6: "Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?"
         studio_c2_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
         studio_c2_8: 'Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
-        studio_c2_9: Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?
-        studio_c2_10: Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?
+        studio_c2_9: "Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?"
+        studio_c2_10: "Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?"
         studio_c2_11: "Create your own story. When you're done, click Finish to let friends try your story on their phones."
         studio_c3_story_1: 'Can you make this dog say "hello world"?'
-        studio_c3_story_2: Can you make the dog say something and then have the cat say something afterwards?
-        studio_c3_story_3: Can you write a program to make this dog move to the cat?
+        studio_c3_story_2: "Can you make the dog say something and then have the cat say something afterwards?"
+        studio_c3_story_3: "Can you write a program to make this dog move to the cat?"
         studio_c3_story_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
-        studio_c3_story_5: Can you add a block to make the octopus happy?
+        studio_c3_story_5: "Can you add a block to make the octopus happy?"
         studio_c3_story_6: "Create your own story. When you're done, click Finish to let friends try your story on their phones."
         studio_c3_game_1: 'Can you write a program to make the octopus say "hello" when it is clicked?'
-        studio_c3_game_2: Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?
+        studio_c3_game_2: "Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?"
         studio_c3_game_3: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
         studio_c3_game_4: 'Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
-        studio_c3_game_5: Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?
-        studio_c3_game_6: Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?
+        studio_c3_game_5: "Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?"
+        studio_c3_game_6: "Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?"
         studio_c3_game_7: "Create your own game. When you're done, click Finish to let friends try your story on their phones."
         studio_playlab_1: 'Can you make this dog say "hello world"?'
-        studio_playlab_2: Can you make the dog say something and then have the cat say something afterwards?
-        studio_playlab_3: Can you write a program to make this dog move to the cat?
+        studio_playlab_2: "Can you make the dog say something and then have the cat say something afterwards?"
+        studio_playlab_3: "Can you write a program to make this dog move to the cat?"
         studio_playlab_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
         studio_playlab_5: 'Can you write a program to make the octopus say "hello" when it is clicked?'
-        studio_playlab_6: Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?
+        studio_playlab_6: "Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?"
         studio_playlab_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
-        studio_playlab_8: Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?
-        studio_playlab_9: Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?
+        studio_playlab_8: "Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?"
+        studio_playlab_9: "Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?"
         studio_playlab_10: "Create your own game. When you're done, click Finish to let friends try your story on their phones."
         studio_full_sandbox: "Create your own game. When you're done, click Finish to let friends try your story on their phones."
         studio_k1_1: 'Can you make this dog say "hello world"?'
-        studio_k1_2: Can you make the dog say something and then have the cat say something afterwards?
-        studio_k1_3: Can you write a program to make this dog move to the cat?
+        studio_k1_2: "Can you make the dog say something and then have the cat say something afterwards?"
+        studio_k1_3: "Can you write a program to make this dog move to the cat?"
         studio_k1_4: 'Make the dog move to the cat and the cat say "hello" when he gets there.'
-        studio_k1_5: Can you add a block to make the octopus happy?
-        studio_k1_6: Create your own story! Move around the cat and dog, and make them say things.
-        maze_wordsearch_k_1: Move me to spell the word EAST
-        maze_wordsearch_k_2: Move me to spell the word SOUTH
-        maze_wordsearch_k_3: Move me to spell the word WEST
-        maze_wordsearch_k_4: Move me to spell the word NORTH
-        maze_wordsearch_k_6: Move me East and then South to spell the word JUMP
-        maze_wordsearch_k_9: Move me one way, then another to spell the word CODE
-        maze_wordsearch_k_13: Move me one way, then another to spell the word DEBUG
-        maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
-        maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
-        maze_wordsearch_k_20: This is a test! Move me one way, then another to spell the word STORY
-        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        studio_k1_5: "Can you add a block to make the octopus happy?"
+        studio_k1_6: "Create your own story! Move around the cat and dog, and make them say things."
+        maze_wordsearch_k_1: "Move me to spell the word EAST"
+        maze_wordsearch_k_2: "Move me to spell the word SOUTH"
+        maze_wordsearch_k_3: "Move me to spell the word WEST"
+        maze_wordsearch_k_4: "Move me to spell the word NORTH"
+        maze_wordsearch_k_6: "Move me East and then South to spell the word JUMP"
+        maze_wordsearch_k_9: "Move me one way, then another to spell the word CODE"
+        maze_wordsearch_k_13: "Move me one way, then another to spell the word DEBUG"
+        maze_wordsearch_k_15: "Move me one way, then another to spell the word ABOVE"
+        maze_wordsearch_k_16: "Move me one way, then another to spell the word BELOW"
+        maze_wordsearch_k_20: "This is a test! Move me one way, then another to spell the word STORY"
+        webapp_ec_simple: "Create your web app by using createHtmlBlock."
         turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColour" block.'
     video:
       name:
-        maze_intro: Úvod Bludiště
-        artist_intro: Úvod Malíř
-        farmer_intro: Úvod Farmářka
-        flappy_intro: Úvod do Flappy
-        loop_times: Blok Opakovat n-krát
-        loop_until: Blok Opakovat Dokud
-        if: Blok Pokud
-        if_else: Blok Pokud/jinak
-        function: Funkce
-        loop_while: Blok Dokud
-        loop_for: blok Čítač
-        parameters: Funkce s Parametry
-        hoc_wrapup: Shrnutí Hodiny Kódu
-        20_wrapup: Shrnutí 20 Hodin
-        Unplug1: What is CS?
-        Unplug2: Aritmetické Myšlení
-        Unplug3: Programování Na Milimetrovém Papíru
-        Unplug4: Algoritmy
-        Unplug5: Funkce
-        Unplug6: Podmínky
-        Unplug7: Songwriting
-        Unplug8: Abstrakce
-        Unplug9: Relay programming
-        Unplug10: Internet
-        Unplug11: Shrnutí
-        C1_happy_maps_unplugged: Happy Maps
-        C1_moveitmoveit_unplugged: Move It, Move It
-        C1_bigevent_unplugged: The Big Event
-        C1_getting_loop: Getting Loopy
-        C1_pair_programming: Pair Programming
-        C1_maze_intro_sequencing: Maze Sequencing Intro
-        C1_maze_debugging: Maze Debugging
+        maze_intro: "Úvod Bludiště"
+        artist_intro: "Úvod Malíř"
+        farmer_intro: "Úvod Farmářka"
+        flappy_intro: "Úvod do Flappy"
+        loop_times: "Blok Opakovat n-krát"
+        loop_until: "Blok Opakovat Dokud"
+        if: "Blok Pokud"
+        if_else: "Blok Pokud/jinak"
+        function: "Funkce"
+        loop_while: "Blok Dokud"
+        loop_for: "blok Čítač"
+        parameters: "Funkce s Parametry"
+        hoc_wrapup: "Shrnutí Hodiny Kódu"
+        20_wrapup: "Shrnutí 20 Hodin"
+        Unplug1: "What is CS?"
+        Unplug2: "Aritmetické Myšlení"
+        Unplug3: "Programování Na Milimetrovém Papíru"
+        Unplug4: "Algoritmy"
+        Unplug5: "Funkce"
+        Unplug6: "Podmínky"
+        Unplug7: "Songwriting"
+        Unplug8: "Abstrakce"
+        Unplug9: "Relay programming"
+        Unplug10: "Internet"
+        Unplug11: "Shrnutí"
+        C1_happy_maps_unplugged: "Happy Maps"
+        C1_moveitmoveit_unplugged: "Move It, Move It"
+        C1_bigevent_unplugged: "The Big Event"
+        C1_getting_loop: "Getting Loopy"
+        C1_pair_programming: "Pair Programming"
+        C1_maze_intro_sequencing: "Maze Sequencing Intro"
+        C1_maze_debugging: "Maze Debugging"
         C1_bee_level_intro: 'Bee Level - Intro'
-        C1_artist_intro: Úvod Malíř
-        C1_spelling_bee_intro: Spelling Bee Intro
-        C1_zuck_repeat_loop: Maze Loops
-        C1_bee_loops: Bee Loops
-        C1_maze_loops: Maze Loops
+        C1_artist_intro: "Úvod Malíř"
+        C1_spelling_bee_intro: "Spelling Bee Intro"
+        C1_zuck_repeat_loop: "Maze Loops"
+        C1_bee_loops: "Bee Loops"
+        C1_maze_loops: "Maze Loops"
         C1_playlab_storytelling: 'Play Lab - Create a Story'
-        C1_planting_seed: Planting a Seed
-        C1_building_foundating: Building a Foundation
-        C2_maze_intro: Úvod Bludiště
-        C2_artist_intro: Úvod Malíř
-        C2_zuck_repeat_loop: Maze Loops
-        C2_artist_loops: Artist Loops
-        C2_bee_conditionals: Bee Conditionals
+        C1_planting_seed: "Planting a Seed"
+        C1_building_foundating: "Building a Foundation"
+        C2_maze_intro: "Úvod Bludiště"
+        C2_artist_intro: "Úvod Malíř"
+        C2_zuck_repeat_loop: "Maze Loops"
+        C2_artist_loops: "Artist Loops"
+        C2_bee_conditionals: "Bee Conditionals"
         C2_playlab_createstory: 'Play Lab - Create a Story'
-        C2_graph_paper: Programování Na Milimetrovém Papíru
-        C2_conditionals_with_cards: Podmínky
-        C2_binary_bracelets: Binary Bracelets
-        C2_replay_programming: Štafetové Programování
-        C2_paper_airplanes: Paper Airplanes
-        C3_maze_intro: Úvod Bludiště
-        C3_artist_intro: Úvod Malíř
-        C3_artist_functions: Artist Functions
-        C3_bee_functions: Bee Functions
-        C3_bee_conditionals: Bee Conditionals
-        C3_maze_conditionals: Maze Conditionals
-        C3_artist_nested_loops: Nested Loops
-        C3_farmer_while: While Loops
-        C3_bee_nested_loops: Nested Loops
-        C3_bee_debugging: Bee Debugging
-        C3_bounce: Odraz
+        C2_graph_paper: "Programování Na Milimetrovém Papíru"
+        C2_conditionals_with_cards: "Podmínky"
+        C2_binary_bracelets: "Binary Bracelets"
+        C2_replay_programming: "Štafetové Programování"
+        C2_paper_airplanes: "Paper Airplanes"
+        C3_maze_intro: "Úvod Bludiště"
+        C3_artist_intro: "Úvod Malíř"
+        C3_artist_functions: "Artist Functions"
+        C3_bee_functions: "Bee Functions"
+        C3_bee_conditionals: "Bee Conditionals"
+        C3_maze_conditionals: "Maze Conditionals"
+        C3_artist_nested_loops: "Nested Loops"
+        C3_farmer_while: "While Loops"
+        C3_bee_nested_loops: "Nested Loops"
+        C3_bee_debugging: "Bee Debugging"
+        C3_bounce: "Odraz"
         C3_playlab_create_game: 'Play Lab - Create a Game'
-        C3_computational_thinking: Aritmetické Myšlení
-        C3_dice_race: Dice Race
-        C3_internet: Internet
-        C3_crowdsourcing: Crowdsourcing
-        C3_functional_suncatchers: Functional Suncatchers
-        C3_songwriting_with_parameters: Songwriting With Parameters
+        C3_computational_thinking: "Aritmetické Myšlení"
+        C3_dice_race: "Dice Race"
+        C3_internet: "Internet"
+        C3_crowdsourcing: "Crowdsourcing"
+        C3_functional_suncatchers: "Functional Suncatchers"
+        C3_songwriting_with_parameters: "Songwriting With Parameters"
     callout:
       text:
         drag_blocks: 'Přetáhněte blok "posun vpřed" pod ten druhý blok'
         run: 'Stisknutím tlačítka "Spustit" vyzkoušíš svůj program'
-        watch_again: Klikněte sem, pokud chcete vidět video znova
-        gray_block_explanation: Bloky, které jsou šedé, nejde smazat, ani je přesunout nikam jinam. Dokážeš vyřešit hádanku i tak?
-        show_code_explanation: Klikněte sem, pokud chcete vidět kód programu, který tvoříte
-        instructions_repeat_explanation: Instrukce pro každou hádanku jsou zopakované tady
+        watch_again: "Klikněte sem, pokud chcete vidět video znova"
+        gray_block_explanation: "Bloky, které jsou šedé, nejde smazat, ani je přesunout nikam jinam. Dokážeš vyřešit hádanku i tak?"
+        show_code_explanation: "Klikněte sem, pokud chcete vidět kód programu, který tvoříte"
+        instructions_repeat_explanation: "Instrukce pro každou hádanku jsou zopakované tady"
         category_explanation: "You have all the same blocks but they've now been arranged in categories"
         set_sprite_image: 'Attach a "set actor to image" block to the "when story starts" block to enable an actor for this story'
-        studio_say_text: Type what you want your actor to say within these quotes
-        jigsaw_click: Click this block!
+        studio_say_text: "Type what you want your actor to say within these quotes"
+        jigsaw_click: "Click this block!"

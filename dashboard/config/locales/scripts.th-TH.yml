@@ -4,10 +4,10 @@
       name:
         test:
           'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
-          The Maze: "เขาวงกต"
+          The Maze: เขาวงกต
           Multi: Multi
-          Match: "จับคู่"
-          Math Image: "ภาพคณิตศาสตร์"
+          Match: จับคู่
+          Math Image: ภาพคณิตศาสตร์
           title: Test Course
           description: Just an internal test course.
         course1:
@@ -46,9 +46,9 @@
             grades.
           'Artist: Loops': 'Artist: Loops'
         course2:
-          The Maze: "เขาวงกต"
+          The Maze: เขาวงกต
           Suzi: Suzi
-          The Artist: "ศิลปิน"
+          The Artist: ศิลปิน
           Artist Debugging: Artist Debugging
           Bounce: Bounce
           'Studio: Create a Story': 'Studio: Create a Story'
@@ -62,11 +62,11 @@
           Bee Debugging: Bee Debugging
           Bee Functions: Bee Functions
           Maze Loops: Maze Loops
-          Graph Paper Programming: "การเขียนกระดาษกราฟ"
+          Graph Paper Programming: การเขียนกระดาษกราฟ
           'Real-life Algorithms: Paper Planes': 'Real-life Algorithms: Paper Planes'
           Getting Loopy: Getting Loopy
           Relay programming: Relay programming
-          Conditionals: "เงื่อนไข "
+          Conditionals: 'เงื่อนไข '
           Binary Bracelets: Binary Bracelets
           The Big Event: The Big Event
           Your Digital Footprint: Your Digital Footprint
@@ -88,9 +88,9 @@
           'Maze: Sequence2': 'Maze: Sequence2'
           'Artist: Nested Loops': 'Artist: Nested Loops'
         course3:
-          The Maze: "เขาวงกต"
+          The Maze: เขาวงกต
           'Studio: Create a Story': 'Studio: Create a Story'
-          The Artist: "ศิลปิน"
+          The Artist: ศิลปิน
           title: Course 3
           Artist Functions: Artist Functions
           Artist For Loops: Artist For Loops
@@ -104,7 +104,7 @@
           Bounce: Bounce
           Maze Conditionals: Maze Conditionals
           Artist Functions with Parameters: Artist Functions with Parameters
-          Computational Thinking: "คิดคำนวณ"
+          Computational Thinking: คิดคำนวณ
           Functional Suncatchers: Functional Suncatchers
           Songwriting Parameters: Songwriting Parameters
           Dice Race: Dice Race
@@ -144,7 +144,7 @@
         msm:
           title: Middle School Math
           description: Private work in progress for Middle School Math.
-          Graph Paper Programming: "การเขียนกระดาษกราฟ"
+          Graph Paper Programming: การเขียนกระดาษกราฟ
           Assessments: Assessments
           Unit 1: Unit 1
           Unit 2: Unit 2
@@ -170,7 +170,7 @@
           'Bee: For Loops': 'Bee: For Loops'
           title: Course 4
           'Algorithms: Tangrams': 'Algorithms: Tangrams'
-          Variables: "ตัวแปร"
+          Variables: ตัวแปร
           'Play Lab: Variables': 'Play Lab: Variables'
           'Play Lab: Functions with Parameters': 'Play Lab: Functions with Parameters'
           'Bee: Functions with Parameters': 'Bee: Functions with Parameters'

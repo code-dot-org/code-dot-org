@@ -13,17 +13,17 @@
           Artist2: Processus 7
           Unplug5: Processus 8
           Farmer: Processus 9
-          Unplug6: "Étape 10 "
-          Artist3: "Étape 11 "
-          Unplug7: "Étape 12 "
-          Farmer2: "Étape 13 "
-          Unplug8: "Étape 14 "
-          Artist4: "Étape 15 "
-          Unplug9: "Étape 16 "
-          Farmer3: "Étape 17 "
-          Unplug10: "Étape 18 "
-          Artist5: "Étape 19 "
-          Unplug11: "Étape 20 "
+          Unplug6: Étape 10 
+          Artist3: Étape 11 
+          Unplug7: Étape 12 
+          Farmer2: Étape 13 
+          Unplug8: Étape 14 
+          Artist4: Étape 15 
+          Unplug9: Étape 16 
+          Farmer3: Étape 17 
+          Unplug10: Étape 18 
+          Artist5: Étape 19 
+          Unplug11: Étape 20 
         Hour of Code:
           desc: Heure de Code
           Maze: Processus 1
@@ -34,7 +34,7 @@
           desc: Rebond (bêta)
           Bounce: Processus 1
         Builder Levels:
-          desc: "Énigmes créées par l'utilisateur (bêta)"
+          desc: Énigmes créées par l'utilisateur (bêta)
           Custom: Processus 1
         Flappy Levels:
           desc: Flappy Bird
@@ -55,7 +55,7 @@
           Bounce: Processus 1
           Studio: Processus 2
         builder:
-          desc: "Énigmes créées par l'utilisateur (bêta)"
+          desc: Énigmes créées par l'utilisateur (bêta)
           Custom: Processus 1
         flappy:
           desc: Flappy Bird
@@ -358,8 +358,8 @@
           soit beau et plat.
         maze_karel_debug_while: Comment pouvez-vous modifier ce programme pour m'aider
           à combler le trou ?
-        maze_karel_debug_if: "À l'aide ! Corrigez ce programme afin que je puisse
-          aplanir complètement mon champ."
+        maze_karel_debug_if: À l'aide ! Corrigez ce programme afin que je puisse aplanir
+          complètement mon champ.
         maze_karel_debug_if_else: Déboguez ce programme afin que je remplisse tous
           les trous et rase toutes les mottes.
         maze_karel_debug_function_1: Quelle modification pouvez-vous effectuer dans
@@ -394,7 +394,7 @@
           différent à la place.)
         maze_3_1: Je dois atteindre ce cochon ! Écrivez deux appels à move(); pour
           que je puisse retrouver mes œufs.
-        maze_3_2: "Écrivez-moi un programme pour que je puisse aller jusqu'à ce cochon."
+        maze_3_2: Écrivez-moi un programme pour que je puisse aller jusqu'à ce cochon.
         maze_3_3: Comment puis-je atteindre le cochon ? Assurez-vous que je ne trébuche
           pas sur la caisse pleine d'explosifs !
         maze_3_4: Argh ! Écrivez-moi un programme qui me permette d'éviter les explosifs
@@ -435,9 +435,9 @@
           sur « Démarrer » quand vous êtes prêt.
         flappy_1: Attachez un bloc au bloc « lors d'un clic », puis cliquez sur « Démarrer ».
           Cliquez sur l'écran ou tapotez-le pour déplacer Flappy vers la cible.
-        flappy_2: "À présent, nous avons ajouté du sol. Attachez un bloc au bloc « lorsque
+        flappy_2: À présent, nous avons ajouté du sol. Attachez un bloc au bloc « lorsque
           le sol est touché ». Votre code doit « terminer le jeu » lorsque Flappy
-          s'écrase."
+          s'écrase.
         flappy_3: Le bloc « lors du lancement » vous permet d'exécuter du code au
           démarrage de votre jeu.  Essayez de régler la vitesse du niveau et le battement
           d'ailes.
@@ -468,9 +468,9 @@
         flappy_k1_2: Attaches un bloc au bloc « lors d'un clic », puis cliques sur
           « Lancer ». Cliques sur l'écran ou tapotes-le pour déplacer Flappy vers
           la cible.
-        flappy_k1_3: "À présent, nous avons ajouté du sol. Attachez un bloc au bloc
+        flappy_k1_3: À présent, nous avons ajouté du sol. Attachez un bloc au bloc
           « lorsque le sol est touché ». Votre code doit « terminer le jeu » lorsque
-          Flappy s'écrase."
+          Flappy s'écrase.
         flappy_k1_4: Le bloc « lors du lancement » vous permet d'exécuter du code
           au démarrage de votre jeu.  Essayez de régler la vitesse du niveau et le
           battement d'ailes.

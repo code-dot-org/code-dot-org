@@ -33,8 +33,8 @@
           - unplug5
         video: "Unplug5"
       Unplug6:
-        title: "Conditions"
-        desc: 'This is a class game.  After introducing the idea of conditionals, if-statements, and loops, the class can practice together using a pre-written program, a deck of cards, and luck of the draw.'
+        title: "Betingelser"
+        desc: "Dette er et spill for hele klassen. Etter en innføring av betingelser, hvis-setninger og løkker, kan klassen øve sammen med et forhåndsskrevet program, en kortstokk, og litt flaks."
         pdfs:
           - unplug6
         video: "Unplug6"
@@ -58,7 +58,7 @@
         video: "Unplug9"
       Unplug10:
         title: "Internett"
-        desc: "In this lesson, students will pretend to flow through the Internet, all the while learning about web addresses, IPs and the DNS."
+        desc: "I denne leksjonen vil elevene late som de strømmer gjennom Internett, og samtidig lære om web-adresser, IP-adresser og DNS."
         pdfs:
           - unplug10
         video: "Unplug10"
@@ -104,6 +104,7 @@
       GoingPlacesSafely:
         title: "Going Places Safely"
         desc: "Internett er en kraftig, men noen ganger farlig sted. Lærere presentere hvordan å være trygg når du navigerer på Internett."
+        video: "C1_going_places_safely"
       GraphPaperProgramming:
         title: "Millimeterpapirprogrammering"
         desc: "Students write an algorithm (a set of instructions) using a set of predefined commands to direct their classmates to reproduce a drawing."
@@ -119,6 +120,7 @@
       DigitalFootprint:
         title: "Dine digitale fotavtrykk"
         desc: 'Lærere introdusere studenter ideen at sette informasjon om seg selv online skaper en digitale fotavtrykk eller "sti" som har konsekvenser.'
+        video: "C2_digital_footprint"
       ComputationalThinking:
         title: "Programmeringstenkning"
         desc: "Students use the steps of computational thinking (decompose, pattern match, abstract, algorithm) to figure out how to play a game that comes with no instructions."
@@ -146,3 +148,21 @@
       DigitalCitizenship:
         title: "Digital Citizenship"
         desc: "Students explore the difference between private information and personal information, distinguishing what is safe and unsafe to share online."
+      TangramAlgorithms:
+        title: "Tangram Algorithms"
+        desc: "This lesson shows us something important about algorithms. If you keep an algorithm simple there are lots of ways to use it. If you want to make sure everyone ends up with the same thing, then your algorithm needs more detail."
+      EnvelopeVariables:
+        title: "Envelope Variables"
+        desc: 'Variables allow for a lot of freedom in computer science.  This lesson helps to explain what variables are and how we can use them in many different ways. Use this activity before (or in conjunction with) the lesson on abstraction to really hit the idea home.'
+      MadGlibs:
+        title: "Mad Glibs"
+        desc: 'Abstraction is one of the most important skills for a computer scientist to understand.  This activity will have your students analyzing stories for differences so that they can abstract them away. Those abstracted stories become templates for fun and crazy new ones.'
+      ForLoopFun:
+        title: "For Loop Fun"
+        desc: "We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops with extra structure built right in."
+      SongwritingWithParameters:
+        title: "Låtskriving med parametere"
+        desc: 'One of the most magnificent structures in the computer science world is the function.  Functions (sometimes called procedures) are mini programs that you can use over and over inside of your bigger program. This lesson will help students intuitively understand why combining chunks of code into functions is such a helpful practice.  '
+      BinaryImages:
+        title: "Binary Images"
+        desc: 'Though many people think of binary as strictly zeros and ones, our previous courses taught students that information can be represented in a variety of binary options.  This lesson takes that concept one step further as it illustrates how a computer can store even more complex information (such as images and colors) in binary, as well.'

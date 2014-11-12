@@ -1,0 +1,177 @@
+.text-match
+  - data = @level.properties
+  .mainblock
+    %h2= string_or_image('text_match', data['title'])
+    %p.content1!= string_or_image('text_match', data['content1']) unless data['content1'].blank?
+    %p.content2!= string_or_image('text_match', data['content2']) unless data['content2'].blank?
+    %p.content3!= string_or_image('text_match', data['content3']) unless data['content3'].blank?
+    %textarea.response{placeholder: data['placeholder'] ? string_or_image('text_match', data['placeholder']) : t('text_match.placeholder'), style: 'width: 700px'}
+    .buttons
+      %a.btn.btn-large.btn-primary.next-stage.submitButton
+        Submit
+  .clear
+
+  %div{:style=>'display:none'}
+    #error-dialogcontent
+      .modal-content
+        %p.dialog-title
+          =t("multi.wrong_title")
+        %p
+          =t("multi.wrong_body")
+        .farSide
+          %button#ok-button.secondary
+            =t("dialog.ok")
+
+    #pre-dialogcontent
+      - if data['pre_image']
+        .modal-image{style: "margin-top: 0px"}
+          != string_or_image('text_match', data['pre_image'])
+      .modal-content
+        - if data['pre_image'].blank?
+          - adjustLayoutClass = "unindentContent"
+        - else
+          - adjustLayoutClass = ""
+        %p.dialog-title{class: adjustLayoutClass}
+          != string_or_image('text_match', data['pre_title']) if data['pre_title']
+        %p{class: adjustLayoutClass}
+          != string_or_image('text_match', data['pre_body']) if data['pre_body']
+        - if data['pre_ani']
+          .aniGif.example-image{style: "overflow:hidden"}
+            != string_or_image('text_match', data['pre_ani'])
+        .farSide
+          %button#ok-button.secondary
+            =t("dialog.ok")
+
+    #success-dialogcontent
+      .modal-content
+        %p.dialog-title
+          =t("multi.correct_title")
+        %p
+          =t("multi.correct_body")
+        .farSide
+          %button#ok-button.secondary
+            =t("dialog.ok")
+
+= render partial: 'levels/common_audio'
+
+:javascript
+  var buttonEnabled = true;  // avoid multiple simultaneous submissions
+  var dialogType = null;
+  var adjustedScroll = false;
+
+  $(function()
+  {
+    if ("#{data['pre_title']}" != "")
+    {
+      setTimeout(function() {
+        showDialog("pre");
+        }, 1000);
+    }
+  });
+
+  function enableButton(enable)
+  {
+    buttonEnabled = enable;
+
+    if (enable)
+      $('.submitButton').removeClass("disabled");
+    else
+      $('.submitButton').addClass("disabled");
+  }
+
+  function dialogHidden()
+  {
+    if (dialogType == "success" && lastServerResponse.nextRedirect)
+    {
+      window.location.href = lastServerResponse.nextRedirect;
+    }
+
+    if (dialogType == "error")
+    {
+      adjustScroll();
+    }
+  }
+
+  function showDialog(type)
+  {
+    dialogType = type;
+
+    var dialog = new Dialog({ body: "", onHidden: dialogHidden });
+
+    // use our prefabricated dialog content
+    $(".modal-body").append($("#" + type + "-dialogcontent").clone(true));
+
+    // clicking the okay button in the dialog box dismisses it
+    $(".modal-body #ok-button").click(function() {
+      dialog.hide();
+    });
+
+    dialog.show();
+  }
+
+  function adjustScroll()
+  {
+    if (adjustedScroll)
+      return;
+
+    var win = $(window);
+    var el = $('.mainblock');
+    var winPos = win.scrollTop() + win.height();
+    var elPos = el.offset().top + el.height() - 10;
+
+    //console.log(winPos, elPos);
+
+    if (winPos < elPos)
+    {
+      //console.log("scroll into view!");
+      $('html, body').animate({
+        scrollTop: $(".submitButton:first").offset().top - 10
+      }, 1000);
+    }
+
+    adjustedScroll = true;
+  }
+
+
+  $('.submitButton').click(function()
+  {
+    var response = $('textarea.response').val().replace(/\s+/g, '');
+    if (buttonEnabled)
+    {
+      enableButton(false);
+      var result = #{data['answers'].to_json}.some(function(element) {
+        return response == element.replace(/\s+/g, '');
+      });
+
+      if (!result)
+      {
+        showDialog("error");
+        CDOSounds.play('failure');
+      } else {
+        CDOSounds.play('success');
+      }
+
+      sendReport({
+        program: response,
+        fallbackResponse: '#{@fallback_response.to_json}',
+        callback: '#{@callback}',
+        app: 'text_match',
+        level: '#{@level.level_num}',
+        result: result,
+        testResult: result ? 100 : 0,
+        onComplete: function() {
+          if (!lastServerResponse.nextRedirect)
+          {
+            enableButton(true);
+          }
+          if (lastServerResponse.videoInfo)
+          {
+            showVideoDialog(lastServerResponse.videoInfo);
+          } else if (lastServerResponse.nextRedirect)
+          {
+            showDialog("success");
+          }
+        }
+      });
+    }
+  });

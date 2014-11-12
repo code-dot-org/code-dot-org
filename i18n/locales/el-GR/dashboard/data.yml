@@ -1,173 +1,173 @@
-el:
+"el":
   data:
     script:
       name:
         20-hour:
-          desc: Εισαγωγή στην Επιστήμη Υπολογιστών Δημοτικού
-          Unplug1: Στάδιο 1
-          Maze: Στάδιο 2
-          Unplug2: Στάδιο 3
-          Unplug3: Στάδιο 4
-          Artist: Στάδιο 5
-          Unplug4: Στάδιο 6
-          Artist2: Στάδιο 7
-          Unplug5: Στάδιο 8
-          Farmer: Στάδιο 9
-          Unplug6: Στάδιο 10
-          Artist3: Στάδιο 11
-          Unplug7: Στάδιο 12
-          Farmer2: Στάδιο 13
-          Unplug8: Στάδιο 14
-          Artist4: Στάδιο 15
-          Unplug9: Στάδιο 16
-          Farmer3: Στάδιο 17
-          Unplug10: Στάδιο 18
-          Artist5: Στάδιο 19
-          Unplug11: Στάδιο 20
+          desc: "Εισαγωγή στην Επιστήμη Υπολογιστών Δημοτικού"
+          Unplug1: "Στάδιο 1"
+          Maze: "Στάδιο 2"
+          Unplug2: "Στάδιο 3"
+          Unplug3: "Στάδιο 4"
+          Artist: "Στάδιο 5"
+          Unplug4: "Στάδιο 6"
+          Artist2: "Στάδιο 7"
+          Unplug5: "Στάδιο 8"
+          Farmer: "Στάδιο 9"
+          Unplug6: "Στάδιο 10"
+          Artist3: "Στάδιο 11"
+          Unplug7: "Στάδιο 12"
+          Farmer2: "Στάδιο 13"
+          Unplug8: "Στάδιο 14"
+          Artist4: "Στάδιο 15"
+          Unplug9: "Στάδιο 16"
+          Farmer3: "Στάδιο 17"
+          Unplug10: "Στάδιο 18"
+          Artist5: "Στάδιο 19"
+          Unplug11: "Στάδιο 20"
         Hour of Code:
-          desc: Η Ώρα του Κώδικα
-          Maze: Στάδιο 1
+          desc: "Η Ώρα του Κώδικα"
+          Maze: "Στάδιο 1"
         Edit Code:
-          desc: Edit Code (beta)
-          MazeEC: Στάδιο 1
+          desc: "Edit Code (beta)"
+          MazeEC: "Στάδιο 1"
         2014 Levels:
-          desc: Bounce (beta)
-          Bounce: Στάδιο 1
+          desc: "Bounce (beta)"
+          Bounce: "Στάδιο 1"
         Builder Levels:
-          desc: User-Created Puzzles (beta)
-          Custom: Στάδιο 1
+          desc: "User-Created Puzzles (beta)"
+          Custom: "Στάδιο 1"
         Flappy Levels:
-          desc: Flappy Bird
-          Flappy: Στάδιο 1
+          desc: "Flappy Bird"
+          Flappy: "Στάδιο 1"
         Jigsaw Levels:
-          desc: Jigsaw (beta)
-          Jigsaw: Στάδιο 1
+          desc: "Jigsaw (beta)"
+          Jigsaw: "Στάδιο 1"
         Step Levels:
-          desc: Maze (beta)
-          MazeStep: Stage Step
+          desc: "Maze (beta)"
+          MazeStep: "Stage Step"
         edit-code:
-          desc: Edit Code (beta)
-          MazeEC: Στάδιο 1
-          Webapp: Στάδιο 2
-          ArtistEC: Στάδιο 3
+          desc: "Edit Code (beta)"
+          MazeEC: "Στάδιο 1"
+          Webapp: "Στάδιο 2"
+          ArtistEC: "Στάδιο 3"
         events:
-          desc: Bounce (beta)
-          Bounce: Στάδιο 1
-          Studio: Στάδιο 2
+          desc: "Bounce (beta)"
+          Bounce: "Στάδιο 1"
+          Studio: "Στάδιο 2"
         builder:
-          desc: User-Created Puzzles (beta)
-          Custom: Στάδιο 1
+          desc: "User-Created Puzzles (beta)"
+          Custom: "Στάδιο 1"
         flappy:
-          desc: Flappy Bird
-          Flappy: Στάδιο 1
+          desc: "Flappy Bird"
+          Flappy: "Στάδιο 1"
         jigsaw:
-          desc: Jigsaw (beta)
-          Jigsaw: Στάδιο 1
+          desc: "Jigsaw (beta)"
+          Jigsaw: "Στάδιο 1"
         step:
-          desc: Maze (beta)
-          MazeStep: Stage Step
+          desc: "Maze (beta)"
+          MazeStep: "Stage Step"
         wordsearch:
-          desc: Spelling Bee (beta)
-          WordSearch: Στάδιο 1
+          desc: "Spelling Bee (beta)"
+          WordSearch: "Στάδιο 1"
     game:
       name:
-        Unplug1: Εισαγωγή στην Επιστήμη των Υπολογιστών
-        Maze: Ο Λαβύρινθος
-        Multi: Multiple Choice Stuffs
-        Unplug2: Αλγοριθμική Σκέψη
-        Unplug3: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
-        Artist: Ο Καλλιτέχνης
-        Unplug4: Αλγόριθμοι
-        Artist2: Ο Καλλιτέχνης 2
-        Unplug5: Συναρτήσεις
-        Farmer: Ο Αγρότης
-        Unplug6: Έλεγχοι
-        Artist3: Ο Καλλιτέχνης 3
-        Unplug7: Συγγραφή τραγουδιού
-        Farmer2: Ο Γεωργός 2
-        Unplug8: Αφαίρεση
-        Artist4: Ο Καλλιτέχνης 4
-        Unplug9: Προγραμματισμός Ρελέ
-        Farmer3: Ο Γεωργός 3
-        Unplug10: Το Διαδίκτυο
-        Artist5: Ο Καλλιτέχνης 5
-        Unplug11: συνοψίζω
-        MazeEC: Ο Λαβύρινθος
-        Bounce: Bounce
-        Flappy: Flappy Bird
-        Jigsaw: Jigsaw
-        MazeStep: Maze Step Mode
-        Wordsearch: Wordsearch
-        Webapp: Webapp
-        ArtistEC: Ο Καλλιτέχνης
+        Unplug1: "Εισαγωγή στην Επιστήμη των Υπολογιστών"
+        Maze: "Ο Λαβύρινθος"
+        Multi: "Multiple Choice Stuffs"
+        Unplug2: "Αλγοριθμική Σκέψη"
+        Unplug3: "Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων"
+        Artist: "Ο Καλλιτέχνης"
+        Unplug4: "Αλγόριθμοι"
+        Artist2: "Ο Καλλιτέχνης 2"
+        Unplug5: "Συναρτήσεις"
+        Farmer: "Ο Αγρότης"
+        Unplug6: "Έλεγχοι"
+        Artist3: "Ο Καλλιτέχνης 3"
+        Unplug7: "Συγγραφή τραγουδιού"
+        Farmer2: "Ο Γεωργός 2"
+        Unplug8: "Αφαίρεση"
+        Artist4: "Ο Καλλιτέχνης 4"
+        Unplug9: "Προγραμματισμός Ρελέ"
+        Farmer3: "Ο Γεωργός 3"
+        Unplug10: "Το Διαδίκτυο"
+        Artist5: "Ο Καλλιτέχνης 5"
+        Unplug11: "συνοψίζω"
+        MazeEC: "Ο Λαβύρινθος"
+        Bounce: "Bounce"
+        Flappy: "Flappy Bird"
+        Jigsaw: "Jigsaw"
+        MazeStep: "Maze Step Mode"
+        Wordsearch: "Wordsearch"
+        Webapp: "Webapp"
+        ArtistEC: "Ο Καλλιτέχνης"
     trophy:
       name:
-        Bronze: Χάλκινο
-        Silver: Ασημένιο
-        Gold: Χρυσό
+        Bronze: "Χάλκινο"
+        Silver: "Ασημένιο"
+        Gold: "Χρυσό"
     concept:
       description:
-        sequence: Ακολουθία
-        if: Πλακίδιο Εάν
-        if_else: Πλακίδιο Αν-Αλλιώς
-        loop_times: Πλακίδιο Επανάλαβε για
-        loop_until: Πλακίδιο Επανάλαβε μέχρι
-        loop_while: Πλακίδιο όσο
-        loop_for: Πλακίδιο Μετρητής
-        function: Συναρτήσεις
-        parameters: Συναρτήσεις με παραμέτρους
+        sequence: "Ακολουθία"
+        if: "Πλακίδιο Εάν"
+        if_else: "Πλακίδιο Αν-Αλλιώς"
+        loop_times: "Πλακίδιο Επανάλαβε για"
+        loop_until: "Πλακίδιο Επανάλαβε μέχρι"
+        loop_while: "Πλακίδιο όσο"
+        loop_for: "Πλακίδιο Μετρητής"
+        function: "Συναρτήσεις"
+        parameters: "Συναρτήσεις με παραμέτρους"
     level:
       instructions:
         maze_2_2: 'Can you help me to catch the naughty pig? Stack a couple of "move forward" blocks together and press "Run" to help me get there. '
-        maze_2_1: Αυτό το γουρούνι τσαλακώνει τα φτερά μου. Βοηθήστε με να τον βρω!
-        maze_2_2_5: Ακολούθησε τη διαδρομή και οδήγησε με στο ανόητο γουρούνι. Απόφυγε τη δυναμίτιδα αλλιώς τα φτερά μου θα πετάξουν!
-        maze_2_3: Οδήγησε με στην πράσινη κακία! (Πρόσεξε τη δυναμίτιδα)
-        maze_2_4: Ηρέμησε και βοήθησε με να βρω το κακό γουρούνι. Διαφορετικά μπορεί να θυμώσω!
-        maze_2_5: Υπάρχει ένας τρόπος για να φτάσω στο ανόητο γουρούνι χρησιμοποιώντας μόνο 2 πλακίδια. Μπορείς να τον βρεις;
-        maze_2_6: Προσπάθησε να με πας στον πράσινο εισβολέα χρησιμοποιώντας μόνο τρία πλακίδια.
+        maze_2_1: "Αυτό το γουρούνι τσαλακώνει τα φτερά μου. Βοηθήστε με να τον βρω!"
+        maze_2_2_5: "Ακολούθησε τη διαδρομή και οδήγησε με στο ανόητο γουρούνι. Απόφυγε τη δυναμίτιδα αλλιώς τα φτερά μου θα πετάξουν!"
+        maze_2_3: "Οδήγησε με στην πράσινη κακία! (Πρόσεξε τη δυναμίτιδα)"
+        maze_2_4: "Ηρέμησε και βοήθησε με να βρω το κακό γουρούνι. Διαφορετικά μπορεί να θυμώσω!"
+        maze_2_5: "Υπάρχει ένας τρόπος για να φτάσω στο ανόητο γουρούνι χρησιμοποιώντας μόνο 2 πλακίδια. Μπορείς να τον βρεις;"
+        maze_2_6: "Προσπάθησε να με πας στον πράσινο εισβολέα χρησιμοποιώντας μόνο τρία πλακίδια."
         maze_2_7: 'Βοήθησέ με να εξορίσω το κακό γουρούνι χρησιμοποιώντας το μικρότερο αριθμό από μπλοκ. Προσπάθησε χρησιμοποιώντας περισσότερα από ένα "επανάλαβε φορές" μπλοκ.'
         maze_2_8: |-
           When a block is grey, that means you can't delete it. Solve this puzzle using the "repeat" block that repeats 3 times. Try putting these 3 blocks inside the grey "repeat" block: move, move, turn.
         maze_2_9: 'Εντάξει, χρησιμοποίησε το νέο μπλοκ "επανάλαβε έως" - θα επαναλαμβάνεται μέχρι να φτάσω το ενοχλητικό γουρούνι.'
         maze_2_10: 'Εντάξει, μια τελευταία άσκηση - μπορείς να τη λύσεις, χρησιμοποιώντας μόνο 4 πλακίδια;'
         maze_2_11: 'Αγαπητό άτομο.  Εγώ ζόμπι. Εγώ πεινάει. Πρέπει... πάω.. στο ηλιοτρόπιο... Μπορείς να πας εκεί με 5 μόνο πλακίδια;'
-        maze_2_12: Εντάξει, αυτό είναι παρόμοιο, αλλά ελαφρώς διαφορετικό. Μπορείς να το κάνεις σε 5 πλακίδια μόνο;
+        maze_2_12: "Εντάξει, αυτό είναι παρόμοιο, αλλά ελαφρώς διαφορετικό. Μπορείς να το κάνεις σε 5 πλακίδια μόνο;"
         maze_2_13: 'Χρησιμοποίησε το νέο πλακίδιο "Αν" για να αποφασίζω πότε να στρίβω. Υπόδειξη: το μόνο που χρειάζεται είναι ακόμα ένα πλακίδιο, αλλά μάθε πώς το τοποθετούμε ώστε να μπορείς να το κάνεις μόνος σου την επόμενη φορά.'
         maze_2_14: 'Εντάξει, αυτό είναι ακριβώς όπως το προηγούμενο παζλ, αλλά θα πρέπει να θυμάσαι πώς χρησιμοποίησες τα πλακίδια "Εάν" και "Επανάλαβε» μαζί.'
         maze_2_15: 'Εγώ θέλει ηλιοτρόπιο! Χρησιμοποίησε ένα πλακίδιο "Εάν" για με οδηγήσεις σε αυτό με το μικρότερο αριθμό πλακιδίων.'
         maze_2_16: 'Εντάξει, ας το ξανακάνουμε για εξάσκηση - αυτό δεν διαφέρει και πολύ, αλλά πρόσεξε τα σαρκοφάγα φυτά!'
         maze_2_17: 'Το πλακίδιο "Εάν - Αλλιώς" ελέγχει μια συνθήκη, και στη συνέχεια κάνει Ή το ένα πράγμα Ή το άλλο. Για να με οδηγήσεις στον ηλιοτρόπιο δοκίμασε να χρησιμοποιήσεις αυτό το νέο μπλοκ.'
         maze_2_18: 'Μια ακόμη άσκηση για το πλακίδιο "Εάν-Αλλιώς", μπορείς να τα καταφέρεις με την πρώτη προσπάθεια;'
-        maze_2_19: Μπορείς να προσθέσεις 3 ακόμα πλακίδια για να με βοηθήσεις σε έναν πιο πολύπλοκο λαβύρινθο; Αν το κάνεις σωστά, θα μπορώ να περπατάω σε οποιαδήποτε διαδρομή ασχέτως του πόσο μεγάλη είναι.
+        maze_2_19: "Μπορείς να προσθέσεις 3 ακόμα πλακίδια για να με βοηθήσεις σε έναν πιο πολύπλοκο λαβύρινθο; Αν το κάνεις σωστά, θα μπορώ να περπατάω σε οποιαδήποτε διαδρομή ασχέτως του πόσο μεγάλη είναι."
         turtle_1_1: "Hi, I'm an artist. You can write code to make me draw almost anything. Use a few blocks to make me draw over the grey lines in the picture."
         turtle_1_2: 'Τώρα, σχεδίασε ένα τετράγωνο. Σημείωση: Χρησιμοποίησε το αγαπημένο σου χρώμα επιλέγοντάς το στο νέο μπλοκ "ορισμός χρώματος".'
-        turtle_1_3: Κάνε ένα τετράγωνο χρησιμοποιώντας μόνο 3 μπλοκ .
+        turtle_1_3: "Κάνε ένα τετράγωνο χρησιμοποιώντας μόνο 3 μπλοκ ."
         turtle_1_4: 'Σχεδίασε ένα τρίγωνο του οποίου οι πλευρές έχουν όλες διαφορετικά χρώματα, χρησιμοποιώντας την επιλογή "τυχαίο χρώμα" που επιλέγει ένα διαφορετικό χρώμα κάθε φορά. Συμβουλή: θα πρέπει να καταλάβεις πόσο μακριά να στρίψεις κάνοντας κλικ στον αριθμό που βρίσκεται στο μπλοκ της στροφής.'
-        turtle_1_5: Τώρα, για εξάσκηση, σχεδιάστε ένα τρίγωνο και στη συνέχεια ένα τετράγωνο ώστε να σχεδιάσετε ένα φάκελο.
+        turtle_1_5: "Τώρα, για εξάσκηση, σχεδιάστε ένα τρίγωνο και στη συνέχεια ένα τετράγωνο ώστε να σχεδιάσετε ένα φάκελο."
         turtle_1_6: 'Μπορείς να καταλάβεις πώς να σχεδιάσεις το τρίγωνο και το τετράγωνο; Υπόδειξη: Κάνε το τρίγωνο πρώτα, τότε θα καταλάβεις πόσο πρέπει να στρίψεις προτού ζωγραφίσεις το τετράγωνο.'
         turtle_1_7: 'Εντάξει, ας το κάνουμε λίγο πιο δύσκολο - δες αν μπορείς να σχεδιάσεις αυτά τα πράσινα γυαλιά. Τα τετράγωνα είναι 100 pixels σε κάθε πλευρά, και είναι 50 pixels χωριστά. Μην ξεχάσεις να σχεδιάσεις με πράσινο!'
         turtle_1_8: 'Εντάξει,προσπάθησε να καταλάβεις τι συμβαίνει εάν εκτελέσεις αυτόν τον κώδικα (ή πάτησε "Εκτέλεση", για να το δοκιμάσεις). Στη συνέχεια, επανάλαβέ το αρκετές φορές για να ολοκληρώσεις το σχέδιο. Τα χρώματα θα είναι διαφορετικά κάθε φορά.'
-        turtle_1_9: Μπορείς να υπολογίσεις με ποιο αριθμό πρέπει να αντικαταστήσεις τα ερωτηματικά για να σχεδιάσεις έναν κύκλο;
+        turtle_1_9: "Μπορείς να υπολογίσεις με ποιο αριθμό πρέπει να αντικαταστήσεις τα ερωτηματικά για να σχεδιάσεις έναν κύκλο;"
         turtle_1_10: 'Τα κατάφερες! Τώρα, ζωγράφισε ό, τι θέλεις. Κάποιες διασκεδαστικές ιδέες: ένα ραβδί, νιφάδα χιονιού ή σπείρα. Επίσης δοκίμασε το νέο μπλοκ "ορισμός πλάτους" . Να περάσεις καλά!'
         turtle_4_1: 'Μπορείτε να σχεδιάσετε ένα τρίγωνο (με πλευρές 100 pixels);Υπόδειξη:Χρησιμοποίησε το μπλοκ "επανάληψης".'
         turtle_4_2: 'Add a "turn right by 90 degrees" block somewhere in the middle of the program already out on the workspace to draw these triangles.'
         turtle_4_3: 'Εντάξει, εδώ είναι ο κώδικας που έγραψες για να ζωγραφίσεις μόνο ένα τρίγωνο. Μπορείς να προσθέσεις ένα μπλοκ "επανάλαβε" και μια "στροφή" για να φτιάξεις ένα όμορφο λουλούδι.'
         turtle_4_4: 'Αυτός είναι ο ίδιος κώδικας από το προηγούμενο παζλ,  αλλά στρίβοντας μόνο 36 μοίρες, αφότου σχεδιάσει κάθε τρίγωνο. Πόσες επαναλήψεις χρειάζονται; (Υπόδειξη: μετά από στροφή 360 μοιρών θα πραγματοποιηθεί ένας πλήρης κύκλος.)'
         turtle_4_5: 'Αυτός είναι ο ίδιος κώδικας από το προηγούμενο παζλ,  αλλά επαναλαμβάνοντας τις στροφές 36 φορές. Πόσες μοίρες πρέπει να στρίβει κάθε φορά; (Υπόδειξη: μετά από στροφή 360 μοιρών θα πραγματοποιηθεί ένας πλήρης κύκλος.)'
-        turtle_4_6: Χρησιμοποιώντας 3 μόνο πλακίδια, μπορείτε να σχεδιάσετε ένα τετράγωνο με πλευρά 20 pixels;
+        turtle_4_6: "Χρησιμοποιώντας 3 μόνο πλακίδια, μπορείτε να σχεδιάσετε ένα τετράγωνο με πλευρά 20 pixels;"
         turtle_4_7: 'Αυτός είναι ο κώδικας για τη σχεδίαση τετραγώνου από το τελευταίο παζλ. Μπορείτε να τον επαναλάβετε, ώστε να σχεδιάζει 10 γειτονικά τετράγωνα, σαν σκάλα; Υπόδειξη: Χρειάζεστε μόνο 2 ακόμη πλακίδια.'
-        turtle_4_8: Αυτή είναι η λύση στο προηγούμενο παζλ. Μπορείτε να προσθέσετε 2 ακόμη πλακίδια για να ολοκληρώσετε το σχέδιο;
-        turtle_4_9: Αυτή είναι η λύση στο προηγούμενο παζλ. Πόσες μοίρες πρέπει να στρίψετε για να ολοκληρωθεί το σχέδιο; (Πιθανόν να χρειαστεί να μαντέψετε μερικές φορές)
-        turtle_4_10: Αυτή είναι η λύση στο προηγούμενο παζλ. Πόσες επαναλήψεις χρειάζονται για να ολοκληρωθεί το σχέδιο;
+        turtle_4_8: "Αυτή είναι η λύση στο προηγούμενο παζλ. Μπορείτε να προσθέσετε 2 ακόμη πλακίδια για να ολοκληρώσετε το σχέδιο;"
+        turtle_4_9: "Αυτή είναι η λύση στο προηγούμενο παζλ. Πόσες μοίρες πρέπει να στρίψετε για να ολοκληρωθεί το σχέδιο; (Πιθανόν να χρειαστεί να μαντέψετε μερικές φορές)"
+        turtle_4_10: "Αυτή είναι η λύση στο προηγούμενο παζλ. Πόσες επαναλήψεις χρειάζονται για να ολοκληρωθεί το σχέδιο;"
         turtle_4_11: 'Προσπαθήστε να αλλάξετε τις τιμές στα πλακίδια "στρίψε" και "επανάλαβε" για να πραγματοποιήσετε διαφορετικά σχέδια ή πειραματιστείτε αλλάζοντας τον υπόλοιπο κώδικα, ώστε να σχεδιαστεί ο,τιδήποτε επιθυμείτε.'
         maze_karel_1_1: 'Γεια σου, είμαι ένας αγρότης. Χρειάζομαι τη βοήθειά σου για να ισιώσω το χωράφι στο αγρόκτημά μου, έτσι ώστε να είναι έτοιμο για τη φύτευση. Μετακίνησέ με στο σωρό από χώμα και χρησιμοποίησε το μπλοκ "Αφαίρεσε" για να το αφαιρέσεις.'
         maze_karel_1_2: 'Στη συνέχεια, μετακίνησέ με στην τρύπα και γέμισέ τη με ΔΥΟ φτυαριές χώμα, χρησιμοποιώντας το μπλοκ "Γέμισε".'
-        maze_karel_1_3: Μετακίνησέ με στο σωρό με το χώμα και πες μου με πόσες φτυαριές να την απομακρύνω χρησιμοποιώντας όσο το δυνατό λιγότερα πλακίδια.
+        maze_karel_1_3: "Μετακίνησέ με στο σωρό με το χώμα και πες μου με πόσες φτυαριές να την απομακρύνω χρησιμοποιώντας όσο το δυνατό λιγότερα πλακίδια."
         maze_karel_1_4: 'Μπορείς να με βοηθήσεις να απομακρύνω όλους τους σωρούς από χώμα; Υπόδειξη: εάν μπορείς, χρησιμοποίησε ένα πλακίδιο επανάληψης.'
         maze_karel_1_5: 'Βοήθησέ με να γεμίσω όλες τις τρύπες με 5 φτυαριές χώμα. Υπόδειξη: μπορείς να τοποθετήσεις ένα πλακίδιο "επανάλαβε" μέσα στο πλακίδια "όσο".'
         maze_karel_1_6: 'Απομάκρυνε όλους τους σωρούς από χώμα, χρησιμοποιώντας όσο το δυνατό λιγότερα πλακίδια. Οι νέες επιλογές στο πλακίδιο "όσο" μου λένε εάν βρίσκομαι σε σωρό ή σε τρύπα.'
-        maze_karel_1_7: Πω πω, βρήκα μια πραγματικά βαθιά τρυπα! Δεν ξέρω πόσες φτυαριές χώμα χωράει. Μπορείς να γράψεις ένα πρόγραμμα που τη γεμίζει μέχρι πάνω;
-        maze_karel_1_8: Βοήθησέ με να γεμίσω την τρύπα στο τέλος του χωραφιού, χρησιμοποιώντας όσο το δυνατό λιγότερα πλακίδια.
+        maze_karel_1_7: "Πω πω, βρήκα μια πραγματικά βαθιά τρυπα! Δεν ξέρω πόσες φτυαριές χώμα χωράει. Μπορείς να γράψεις ένα πρόγραμμα που τη γεμίζει μέχρι πάνω;"
+        maze_karel_1_8: "Βοήθησέ με να γεμίσω την τρύπα στο τέλος του χωραφιού, χρησιμοποιώντας όσο το δυνατό λιγότερα πλακίδια."
         maze_karel_1_9: 'Βοήθησε με να αφαιρέσω όλους αυτούς τους σωρούς βρωμιάς. Προσπάθησε να χρησιμοποιήσεις όσο το δυνατό λιγότερα πλακίδια. Συμβουλή: δοκίμασε να χρησιμοποιήσεις ένα πλακίδιο "όσο".'
         maze_karel_1_10: 'Εργάζομαι ως αργά, είναι σκοτεινά και δεν μπορώ δω να πόσο μεγάλοι είναι οι σωροί. Τώρα δεν έχω όλες τις επιλογές στο πλακίδιο "όσο" όπως πριν. Μετακίνησέ με κατα μήκος του χωραφιού, και εάν υπάρχει σωρός, απομάκρυνέ τον.'
         maze_karel_1_11: 'Είναι ακόμα σκοτεινά. Μετακίνησέ με κατά μήκος του χωραφιού. Εάν υπάρχει σωρός, απομάκρυνέ τον, και εάν υπάρχει τρύπα, γέμισέ τη. Υπόδειξη: χρησιμοποίησε τη λίστα επιλογών στο πλακίδιο "εάν".'
@@ -186,46 +186,46 @@ el:
         maze_karel_2_1: 'Δοκίμασε να χρησιμοποιήσεις πλακίδια που θα με βοηθήσουν να απομακρύνω όλους τους σωρούς και να γεμίσω όλες τις λακκούβες στο έδαφος. Προσπάθησε να χρησιμοποιήσεις βρόχους, αντί να χρησιμοποιήσεις πάρα πολλά πλακίδια. Υπόδειξη: μπορείς να βάλεις ένα βρόχο μέσα σε ένα άλλο βρόχο.'
         maze_karel_2_2: 'Έχουμε ορίσει το δικό μας μπλοκ που ονομάζεται "γέμισε 5" και είναι τώρα στην κατηγορία Συναρτήσεις. Χρησιμοποίησε αυτό για να με βοηθήσεις να γεμίσω αυτή την τρύπα.'
         maze_karel_2_3: 'Χρησιμοποίησε το νέο μπλοκ συνάρτησης "γέμισε 5" για να με κάνεις να γεμίσω όλες τις τρύπες. Θα πρέπει να σύρεις έξω από την κατηγορία Συναρτήσεις, το «γέμισε 5» μπλοκ.'
-        maze_karel_2_4: Όρισε μια νέα συνάρτηση που να αφαιρεί 7 φτυαριές. Στη συνέχεια χρησιμοποίησέ την για να γράψεις ένα πρόγραμμα που να με βοηθάει να αφαιρέσω όλους τους σωρούς.
-        maze_karel_2_5: Δημιούργησε μια νέα συνάρτηση που να αφαιρεί 6 φτυαριές από ένα σωρό και χρησιμοποίησέ την για να με βοηθήσεις να ισιώσω όλους τους σωρούς.
+        maze_karel_2_4: "Όρισε μια νέα συνάρτηση που να αφαιρεί 7 φτυαριές. Στη συνέχεια χρησιμοποίησέ την για να γράψεις ένα πρόγραμμα που να με βοηθάει να αφαιρέσω όλους τους σωρούς."
+        maze_karel_2_5: "Δημιούργησε μια νέα συνάρτηση που να αφαιρεί 6 φτυαριές από ένα σωρό και χρησιμοποίησέ την για να με βοηθήσεις να ισιώσω όλους τους σωρούς."
         maze_karel_2_6: 'Χρησιμοποίησε δύο νέες συναρτήσεις, «γέμισε 8» και "απομάκρυνε 8", για να με βοηθήσεις να ισιώσω τους σωρούς και να γεμίσω την τρύπα.'
-        maze_karel_2_7: Υπάρχει μια αγελάδα στο χωράφι μου! Γράψε μια νέα συνάρτηση που να με βοηθά να αποφύγω την αγελάδα και να αφαιρέσω το σωρό. Βάλε όλα τα πλακίδιά σου μέσα στη νέα συνάρτηση.
+        maze_karel_2_7: "Υπάρχει μια αγελάδα στο χωράφι μου! Γράψε μια νέα συνάρτηση που να με βοηθά να αποφύγω την αγελάδα και να αφαιρέσω το σωρό. Βάλε όλα τα πλακίδιά σου μέσα στη νέα συνάρτηση."
         maze_karel_2_8: 'Χρησιμοποίησε αυτή τη νέα συνάρτηση, "απόφυγε την αγελάδα και αφαίρεσε 1", για να με βοηθήσεις να αφαιρέσω όλους τους σωρούς.'
-        maze_karel_2_9: Λοιπόν, εδώ είναι μια συνάρτηση που απομακρύνει 4 διαφορετικές σωρούς από χώμα σε μια κατακόρυφη στήλη. Προσπάθησε να τοποθετήσεις αυτήν την συνάρτηση μέσα σε έναν βρόχο, ώστε να μπορέσεις να αφαιρέσεις όλους τους σωρούς από χώματα, χρησιμοποιώντας μόνο μερικά νέα πλακίδια.
-        maze_karel_2_10: Μετακίνησέ με στο χωράφι και χρησιμοποίησε αυτές τις δύο συναρτήσεις για να με βοηθήσεις να αφαιρέσω όλους τους σωρούς και να γεμίσω όλες τις τρύπες.
+        maze_karel_2_9: "Λοιπόν, εδώ είναι μια συνάρτηση που απομακρύνει 4 διαφορετικές σωρούς από χώμα σε μια κατακόρυφη στήλη. Προσπάθησε να τοποθετήσεις αυτήν την συνάρτηση μέσα σε έναν βρόχο, ώστε να μπορέσεις να αφαιρέσεις όλους τους σωρούς από χώματα, χρησιμοποιώντας μόνο μερικά νέα πλακίδια."
+        maze_karel_2_10: "Μετακίνησέ με στο χωράφι και χρησιμοποίησε αυτές τις δύο συναρτήσεις για να με βοηθήσεις να αφαιρέσω όλους τους σωρούς και να γεμίσω όλες τις τρύπες."
         turtle_3_1: 'Αυτό το παζλ σου δείχνει πώς ορίζονται οι συναρτήσεις "σχεδίασε ένα τετράγωνο" και "σχεδίασε έναν κύκλο". Ο ορισμός μιας συνάρτησης δεν προκαλεί την εκτέλεση των πλακιδίων της. Πρέπει να σύρεις το πλακίδιο "σχεδίασε ένα τετράγωνο" ώστε πραγματικά να σχεδιάσεις ένα τετράγωνο.'
         turtle_3_2: 'Χρησιμοποιώντας τη συνάρτηση "σχεδίασε ένα τετράγωνο" ως παράδειγμα, δημιούργησε μια συνάρτηση "σχεδίασε ένα τρίγωνο" και χρησιμοποίησέ την.'
         turtle_3_3: 'Σχεδίασε τριγωνικούς φράκτες γύρω από τις γάτες και ένα τετραγωνικό φράκτη γύρω από την αγελάδα.  Συμβουλή: έλεγξε το πρόγραμμα καθώς προχωράς.'
-        turtle_3_4: Δες αν μπορείς να σκεφτείς πώς να χρησιμοποιήσεις το «σχεδίασε ένα τετράγωνο» και «σχεδίασε ένα τρίγωνο» (και κάποια άλλα πλακίδια) για να δημιουργήσεις ένα σπίτι γύρω από το λιοντάρι.
+        turtle_3_4: "Δες αν μπορείς να σκεφτείς πώς να χρησιμοποιήσεις το «σχεδίασε ένα τετράγωνο» και «σχεδίασε ένα τρίγωνο» (και κάποια άλλα πλακίδια) για να δημιουργήσεις ένα σπίτι γύρω από το λιοντάρι."
         turtle_3_5: 'Τώρα δημιούργησε μια νέα συνάρτηση "σχεδίασε ένα σπίτι" και χρησιμοποίησέ την για να στεγάσεις δύο γάτες. Υπόδειξη: δημιούργησε μια καινούρια συνάρτηση χρησιμοποιώντας το  "κάνε κάτι" πλακίδιο και πληκτρολογήστε το δικό σου κείμενο για να ονομάσεις το πλακίδιο αυτό.'
         turtle_3_6: 'Χρησιμοποιώντας το "σχεδίασε ένα τετράγωνο" σαν παράδειγμα, πρόσθεσε ένα δεδομένο εισόδου με το όνομα "μήκος" στο "σχεδίασε ένα τρίγωνο". Στη συνέχεια, σχεδίασε τρίγωνα με διαφορετικά μεγέθη. (Συμβουλή: κάνε κλικ στο αστέρι για να προσθέσεις ένα δεδομένο εισόδου σε μια συνάρτηση)'
         turtle_3_7: 'Πρόσθεσε ένα δεδομένο εισόδου με όνομα "μήκος" ώστε να "σχεδιαστεί ένα σπίτι" και δημιούργησε ένα μεγάλο σπίτι για τον ελέφαντα (με πλευρές μήκους 150 εικονοστοιχεία)'
         turtle_3_8: 'Εδώ είναι όλα τα πλακίδια από το προηγούμενο παζλ.  Τροποποίησε το "σχεδίασε ένα σπίτι" έτσι ώστε να καταλήξω στην κάτω δεξιά γωνία, μετά την σχεδίαση ενός νέου σπιτιού. Χρησιμοποίησε αυτή την τροποποιημένη συνάρτηση ώστε να σχεδιάσεις τρία σπίτια.'
         turtle_3_9: 'Μπορείς να δημιουργήσεις εκ νέου τη συνάρτηση "σχεδίασε ένα σπίτι" χωρίς βοήθεια; Δοκίμασέ το, και στη συνέχεια να σχεδιάσεις μια σειρά από σπίτια.'
-        turtle_3_10: Έχεις μάθει πολλά! Αξιοποίησε τις γνώσεις σου ώστε να σχεδιάσεις οτιδήποτε θέλεις. Προσπάθησε να ζωγραφίσεις ένα αστέρι, ή μια σπείρα, ή μια φανταχτερή νιφάδα χιονιού.
-        maze_karel_debug_seq_1: Καλωσόρισες στον εντοπισμό και στη διόρθωση σφαλμάτων (debugging)! Ο κώδικάς μου δεν λειτουργεί σωστά. Μπορείς να εντοπίσεις το πρόβλημα και να το διορθώσεις έτσι ώστε να μπορώ να κάνω το χωράφι μου επίπεδο και έτοιμο για φύτευση;
-        maze_karel_debug_seq_2: Ποιο είναι το λάθος σε αυτό το πρόγραμμα; Πώς θα έπρεπε να το διορθώσεις έτσι ώστε να μπορώ να απομακρύνω εκείνη τη στοίβα;
-        maze_karel_debug_repeat: Εντόπισε και εξάλειψε τα λάθη σε αυτό το πρόγραμμα για μένα, έτσι ώστε το χωράφι μου να γίνει ωραίο και επίπεδο.
-        maze_karel_debug_while: Πώς θα πρέπει να αλλάξεις αυτό το πρόγραμμα για να με βοηθήσεις να γεμίσω την τρύπα;
-        maze_karel_debug_if: Βοήθεια! Διόρθωσε το πρόγραμμα, έτσι ώστε το χωράφι μου να είναι εντελώς επίπεδο.
+        turtle_3_10: "Έχεις μάθει πολλά! Αξιοποίησε τις γνώσεις σου ώστε να σχεδιάσεις οτιδήποτε θέλεις. Προσπάθησε να ζωγραφίσεις ένα αστέρι, ή μια σπείρα, ή μια φανταχτερή νιφάδα χιονιού."
+        maze_karel_debug_seq_1: "Καλωσόρισες στον εντοπισμό και στη διόρθωση σφαλμάτων (debugging)! Ο κώδικάς μου δεν λειτουργεί σωστά. Μπορείς να εντοπίσεις το πρόβλημα και να το διορθώσεις έτσι ώστε να μπορώ να κάνω το χωράφι μου επίπεδο και έτοιμο για φύτευση;"
+        maze_karel_debug_seq_2: "Ποιο είναι το λάθος σε αυτό το πρόγραμμα; Πώς θα έπρεπε να το διορθώσεις έτσι ώστε να μπορώ να απομακρύνω εκείνη τη στοίβα;"
+        maze_karel_debug_repeat: "Εντόπισε και εξάλειψε τα λάθη σε αυτό το πρόγραμμα για μένα, έτσι ώστε το χωράφι μου να γίνει ωραίο και επίπεδο."
+        maze_karel_debug_while: "Πώς θα πρέπει να αλλάξεις αυτό το πρόγραμμα για να με βοηθήσεις να γεμίσω την τρύπα;"
+        maze_karel_debug_if: "Βοήθεια! Διόρθωσε το πρόγραμμα, έτσι ώστε το χωράφι μου να είναι εντελώς επίπεδο."
         maze_karel_debug_if_else: 'Εντόπισε και εξάλειψε τα λάθη σε αυτό το πρόγραμμα έτσι ώστε να  μπορώ να γεμίσω τις  λακκούβες και να απομακρύνω όλους τους σωρούς.'
-        maze_karel_debug_function_1: Τι πρέπει να αλλάξει σε αυτό το πρόγραμμα ώστε να με βοηθήσει να απομακρύνω όλους τους σωρούς;
+        maze_karel_debug_function_1: "Τι πρέπει να αλλάξει σε αυτό το πρόγραμμα ώστε να με βοηθήσει να απομακρύνω όλους τους σωρούς;"
         maze_karel_debug_function_2: 'Μπορείς να εντοπίσεις και να εξαλείψεις τα λάθη σε αυτό το πρόγραμμα έτσι ώστε να  μπορώ να κάνω επίπεδο το χωράφι μου;'
         maze_karel_debug_function_3: 'Τροποποίησε αυτό το πρόγραμμα, έτσι ώστε να απομακρύνω όλους τους σωρούς από χώμα από το χωράφι μου. '
-        turtle_5_1: Προσπάθησε να εκτελέσεις αυτό το πρόγραμμα, και κάνε αλλαγές για να δεις τι θα συμβεί. Μπορείς να καταλάβεις πώς λειτουργεί; (Ή διέγραψε το και αντικατέστησε το με κάτι εντελώς διαφορετικό)
-        turtle_5_2: Προσπάθησε να εκτελέσεις αυτό το πρόγραμμα, και κάνε αλλαγές για να δεις τι θα συμβεί. Μπορείς να καταλάβεις πώς λειτουργεί; (Ή διέγραψε το και αντικατέστησε το με κάτι εντελώς διαφορετικό)
-        turtle_5_3: Προσπάθησε να εκτελέσεις αυτό το πρόγραμμα, και κάνε αλλαγές για να δεις τι θα συμβεί. Μπορείς να καταλάβεις πώς λειτουργεί; (Ή διέγραψε το και αντικατέστησε το με κάτι εντελώς διαφορετικό)
-        turtle_5_4: Προσπάθησε να εκτελέσεις αυτό το πρόγραμμα, και κάνε αλλαγές για να δεις τι θα συμβεί. Μπορείς να καταλάβεις πώς λειτουργεί; (Ή διέγραψε το και αντικατέστησε το με κάτι εντελώς διαφορετικό)
-        turtle_5_5: Προσπάθησε να εκτελέσεις αυτό το πρόγραμμα, και κάνε αλλαγές για να δεις τι θα συμβεί. Μπορείς να καταλάβεις πώς λειτουργεί; (Ή διέγραψε το και αντικατέστησε το με κάτι εντελώς διαφορετικό)
-        turtle_5_6: Προσπάθησε να εκτελέσεις αυτό το πρόγραμμα, και κάνε αλλαγές για να δεις τι θα συμβεί. Μπορείς να καταλάβεις πώς λειτουργεί; (Ή διέγραψε το και αντικατέστησε το με κάτι εντελώς διαφορετικό)
-        maze_3_1: Πρέπει να πάω σε αυτό το γουρούνι! Πληκτρολόγησε μερικές εντολές κινήσου() ώστε να πάρω πίσω τα αυγά μου.
-        maze_3_2: Γράψε μου ένα πρόγραμμα, έτσι ώστε να μπορέσω να κάνω όλη τη διαδρομή μέχρι το γουρούνι.
-        maze_3_3: Πώς να φτάσω στο γουρούνι; Βεβαιώσου ότι δεν θα πέσω πάνω στο κουτί με τον δυναμίτη!
-        maze_3_4: Αααα! Γράψε μου ένα πρόγραμμα που να με πηγαίνει γύρω από το δυναμίτη και να φτάνω στο γουρούνι.
+        turtle_5_1: "Προσπάθησε να εκτελέσεις αυτό το πρόγραμμα, και κάνε αλλαγές για να δεις τι θα συμβεί. Μπορείς να καταλάβεις πώς λειτουργεί; (Ή διέγραψε το και αντικατέστησε το με κάτι εντελώς διαφορετικό)"
+        turtle_5_2: "Προσπάθησε να εκτελέσεις αυτό το πρόγραμμα, και κάνε αλλαγές για να δεις τι θα συμβεί. Μπορείς να καταλάβεις πώς λειτουργεί; (Ή διέγραψε το και αντικατέστησε το με κάτι εντελώς διαφορετικό)"
+        turtle_5_3: "Προσπάθησε να εκτελέσεις αυτό το πρόγραμμα, και κάνε αλλαγές για να δεις τι θα συμβεί. Μπορείς να καταλάβεις πώς λειτουργεί; (Ή διέγραψε το και αντικατέστησε το με κάτι εντελώς διαφορετικό)"
+        turtle_5_4: "Προσπάθησε να εκτελέσεις αυτό το πρόγραμμα, και κάνε αλλαγές για να δεις τι θα συμβεί. Μπορείς να καταλάβεις πώς λειτουργεί; (Ή διέγραψε το και αντικατέστησε το με κάτι εντελώς διαφορετικό)"
+        turtle_5_5: "Προσπάθησε να εκτελέσεις αυτό το πρόγραμμα, και κάνε αλλαγές για να δεις τι θα συμβεί. Μπορείς να καταλάβεις πώς λειτουργεί; (Ή διέγραψε το και αντικατέστησε το με κάτι εντελώς διαφορετικό)"
+        turtle_5_6: "Προσπάθησε να εκτελέσεις αυτό το πρόγραμμα, και κάνε αλλαγές για να δεις τι θα συμβεί. Μπορείς να καταλάβεις πώς λειτουργεί; (Ή διέγραψε το και αντικατέστησε το με κάτι εντελώς διαφορετικό)"
+        maze_3_1: "Πρέπει να πάω σε αυτό το γουρούνι! Πληκτρολόγησε μερικές εντολές κινήσου() ώστε να πάρω πίσω τα αυγά μου."
+        maze_3_2: "Γράψε μου ένα πρόγραμμα, έτσι ώστε να μπορέσω να κάνω όλη τη διαδρομή μέχρι το γουρούνι."
+        maze_3_3: "Πώς να φτάσω στο γουρούνι; Βεβαιώσου ότι δεν θα πέσω πάνω στο κουτί με τον δυναμίτη!"
+        maze_3_4: "Αααα! Γράψε μου ένα πρόγραμμα που να με πηγαίνει γύρω από το δυναμίτη και να φτάνω στο γουρούνι."
         bounce_1: 'Attach a block to the "when left arrow" block and press "Run". Move the paddle using the left arrow to reach the finish target.'
         bounce_2: 'Attach a block to the "when right arrow" and "when left arrow" blocks. Move the paddle to reach both finish targets.'
         bounce_3: 'Now try something similar with the "when up arrow" block. Move the paddle to the finish target at the top.'
-        bounce_4: This time you need to add four blocks. Move the paddle to all four finish targets to complete this puzzle.
+        bounce_4: "This time you need to add four blocks. Move the paddle to all four finish targets to complete this puzzle."
         bounce_5: |-
           We're going to send a ball flying down towards the paddle. Attach a block to the "when ball hits paddle" block to ensure the ball reaches the finish target.
         bounce_6: 'Now the finish target is on the top. You need to attach blocks to both of the "when ball hits" blocks to solve this puzzle.'
@@ -242,12 +242,12 @@ el:
           Flappy will fly through obstacles unless you write code to make him crash. Attach a block to the "when hit an obstacle" block. Your code needs to 'END GAME' when Flappy crashes into the first set of pipes.
         flappy_5: |-
           Let's add a scoreboard, and count points when Flappy makes it past obstacles. Add to the "when pass an obstacle" block, and then score a point by flying Flappy through the first set of pipes.
-        flappy_6: See if you can still score a point after making Flappy flap either a smaller or larger amount.
+        flappy_6: "See if you can still score a point after making Flappy flap either a smaller or larger amount."
         flappy_7: 'Next, try changing the scene by attaching another block to the "when run" block.'
-        flappy_8: You can set visuals anytime, not just when the game starts. Try setting a RANDOM scene when other events happen, for example, when passing an obstacle.
-        flappy_9: To mix things up, when hitting an obstacle or the ground, instead of ending the game try setting the score back to 0.
+        flappy_8: "You can set visuals anytime, not just when the game starts. Try setting a RANDOM scene when other events happen, for example, when passing an obstacle."
+        flappy_9: "To mix things up, when hitting an obstacle or the ground, instead of ending the game try setting the score back to 0."
         flappy_11: "Create your own Flappy game. You can change all the visuals and all the rules, even the gravity. When you're done, click Finish to let friends try your game on their phones."
-        flappy_k1_1: Play Flappy
+        flappy_k1_1: "Play Flappy"
         flappy_k1_2: 'Attach a block to the "when click" block, then press "Run". Click or tap the screen to move Flappy to the target.'
         flappy_k1_3: |-
           Now we've added some ground.  Attach a block to the "when hit the ground" block.  Your code needs to 'END GAME' when Flappy crashes.
@@ -256,161 +256,161 @@ el:
           Flappy will fly through obstacles unless you write code to make him crash. Attach a block to the "when hit an obstacle" block. Your code needs to 'END GAME' when Flappy crashes into the first set of pipes.
         flappy_k1_6: |-
           Let's add a scoreboard, and count points when Flappy makes it past obstacles. Add to the "when pass an obstacle" block, and then score a point by flying Flappy through the first set of pipes.
-        flappy_k1_7: See if you can score multiple points for making it past an obstacle
+        flappy_k1_7: "See if you can score multiple points for making it past an obstacle"
         flappy_k1_8: 'Next, try changing the scene by attaching another block to the "when run" block.'
         flappy_k1_9: 'Try changing the player by attaching a "set player" block to the "when run" block.'
-        jigsaw_1: Click the block
-        jigsaw_2: Drag the block to the target
-        jigsaw_3: Arrange the blocks to form the image
-        jigsaw_4: Arrange the blocks to form the image
-        jigsaw_5: Arrange the blocks to form the image
-        jigsaw_6: Arrange the blocks to form the image
-        jigsaw_7: Arrange the blocks to form the image
-        jigsaw_8: Arrange the blocks to form the image
-        jigsaw_9: Arrange the blocks to form the image
-        jigsaw_10: Arrange the blocks to form the image
-        jigsaw_11: Arrange the blocks to form the image
-        jigsaw_12: Arrange the blocks to form the image
-        jigsaw_13: Fix the puzzle!
-        mazestep_1: Maze step description here
-        mazestep_2: Maze step description here
-        mazestep_3: Maze step description here
-        mazestep_4: Maze step description here
-        mazestep_5: Maze step description here
+        jigsaw_1: "Click the block"
+        jigsaw_2: "Drag the block to the target"
+        jigsaw_3: "Arrange the blocks to form the image"
+        jigsaw_4: "Arrange the blocks to form the image"
+        jigsaw_5: "Arrange the blocks to form the image"
+        jigsaw_6: "Arrange the blocks to form the image"
+        jigsaw_7: "Arrange the blocks to form the image"
+        jigsaw_8: "Arrange the blocks to form the image"
+        jigsaw_9: "Arrange the blocks to form the image"
+        jigsaw_10: "Arrange the blocks to form the image"
+        jigsaw_11: "Arrange the blocks to form the image"
+        jigsaw_12: "Arrange the blocks to form the image"
+        jigsaw_13: "Fix the puzzle!"
+        mazestep_1: "Maze step description here"
+        mazestep_2: "Maze step description here"
+        mazestep_3: "Maze step description here"
+        mazestep_4: "Maze step description here"
+        mazestep_5: "Maze step description here"
         studio_c2_1: 'Can you make this dog say "hello world"?'
-        studio_c2_2: Can you make the dog say something and then have the cat say something afterwards?
-        studio_c2_3: Can you write a program to make this dog move to the cat?
+        studio_c2_2: "Can you make the dog say something and then have the cat say something afterwards?"
+        studio_c2_3: "Can you write a program to make this dog move to the cat?"
         studio_c2_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
         studio_c2_5: 'Can you write a program to make the octopus say "hello" when it is clicked?'
-        studio_c2_6: Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?
+        studio_c2_6: "Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?"
         studio_c2_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
         studio_c2_8: 'Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
-        studio_c2_9: Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?
-        studio_c2_10: Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?
+        studio_c2_9: "Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?"
+        studio_c2_10: "Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?"
         studio_c2_11: "Create your own story. When you're done, click Finish to let friends try your story on their phones."
         studio_c3_story_1: 'Can you make this dog say "hello world"?'
-        studio_c3_story_2: Can you make the dog say something and then have the cat say something afterwards?
-        studio_c3_story_3: Can you write a program to make this dog move to the cat?
+        studio_c3_story_2: "Can you make the dog say something and then have the cat say something afterwards?"
+        studio_c3_story_3: "Can you write a program to make this dog move to the cat?"
         studio_c3_story_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
-        studio_c3_story_5: Can you add a block to make the octopus happy?
+        studio_c3_story_5: "Can you add a block to make the octopus happy?"
         studio_c3_story_6: "Create your own story. When you're done, click Finish to let friends try your story on their phones."
         studio_c3_game_1: 'Can you write a program to make the octopus say "hello" when it is clicked?'
-        studio_c3_game_2: Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?
+        studio_c3_game_2: "Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?"
         studio_c3_game_3: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
         studio_c3_game_4: 'Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
-        studio_c3_game_5: Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?
-        studio_c3_game_6: Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?
+        studio_c3_game_5: "Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?"
+        studio_c3_game_6: "Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?"
         studio_c3_game_7: "Create your own game. When you're done, click Finish to let friends try your story on their phones."
         studio_playlab_1: 'Can you make this dog say "hello world"?'
-        studio_playlab_2: Can you make the dog say something and then have the cat say something afterwards?
-        studio_playlab_3: Can you write a program to make this dog move to the cat?
+        studio_playlab_2: "Can you make the dog say something and then have the cat say something afterwards?"
+        studio_playlab_3: "Can you write a program to make this dog move to the cat?"
         studio_playlab_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
         studio_playlab_5: 'Can you write a program to make the octopus say "hello" when it is clicked?'
-        studio_playlab_6: Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?
+        studio_playlab_6: "Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?"
         studio_playlab_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
-        studio_playlab_8: Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?
-        studio_playlab_9: Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?
+        studio_playlab_8: "Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?"
+        studio_playlab_9: "Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?"
         studio_playlab_10: "Create your own game. When you're done, click Finish to let friends try your story on their phones."
         studio_full_sandbox: "Create your own game. When you're done, click Finish to let friends try your story on their phones."
         studio_k1_1: 'Can you make this dog say "hello world"?'
-        studio_k1_2: Can you make the dog say something and then have the cat say something afterwards?
-        studio_k1_3: Can you write a program to make this dog move to the cat?
+        studio_k1_2: "Can you make the dog say something and then have the cat say something afterwards?"
+        studio_k1_3: "Can you write a program to make this dog move to the cat?"
         studio_k1_4: 'Make the dog move to the cat and the cat say "hello" when he gets there.'
-        studio_k1_5: Can you add a block to make the octopus happy?
-        studio_k1_6: Create your own story! Move around the cat and dog, and make them say things.
-        maze_wordsearch_k_1: Move me to spell the word EAST
-        maze_wordsearch_k_2: Move me to spell the word SOUTH
-        maze_wordsearch_k_3: Move me to spell the word WEST
-        maze_wordsearch_k_4: Move me to spell the word NORTH
-        maze_wordsearch_k_6: Move me East and then South to spell the word JUMP
-        maze_wordsearch_k_9: Move me one way, then another to spell the word CODE
-        maze_wordsearch_k_13: Move me one way, then another to spell the word DEBUG
-        maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
-        maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
-        maze_wordsearch_k_20: This is a test! Move me one way, then another to spell the word STORY
-        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        studio_k1_5: "Can you add a block to make the octopus happy?"
+        studio_k1_6: "Create your own story! Move around the cat and dog, and make them say things."
+        maze_wordsearch_k_1: "Move me to spell the word EAST"
+        maze_wordsearch_k_2: "Move me to spell the word SOUTH"
+        maze_wordsearch_k_3: "Move me to spell the word WEST"
+        maze_wordsearch_k_4: "Move me to spell the word NORTH"
+        maze_wordsearch_k_6: "Move me East and then South to spell the word JUMP"
+        maze_wordsearch_k_9: "Move me one way, then another to spell the word CODE"
+        maze_wordsearch_k_13: "Move me one way, then another to spell the word DEBUG"
+        maze_wordsearch_k_15: "Move me one way, then another to spell the word ABOVE"
+        maze_wordsearch_k_16: "Move me one way, then another to spell the word BELOW"
+        maze_wordsearch_k_20: "This is a test! Move me one way, then another to spell the word STORY"
+        webapp_ec_simple: "Create your web app by using createHtmlBlock."
         turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColour" block.'
     video:
       name:
-        maze_intro: Πρόλογος λαβυρίνθου
-        artist_intro: Πρόλογος καλλιτέχνη
-        farmer_intro: Πρόλογος γεωργού
-        flappy_intro: Flappy Intro
-        loop_times: Πλακίδιο Επανάλαβε για
-        loop_until: Πλακίδιο Επανάλαβε μέχρι
-        if: Πλακίδιο Εάν
-        if_else: Πλακίδιο εάν/αλλιώς
-        function: Συναρτήσεις
-        loop_while: Πλακίδιο όσο
-        loop_for: Πλακίδιο Μετρητής
-        parameters: Συναρτήσεις με παραμέτρους
-        hoc_wrapup: Ώρα του κώδικα
-        20_wrapup: Η σύνοψη των 20-ωρών
-        Unplug1: What is CS?
-        Unplug2: Αλγοριθμική Σκέψη
-        Unplug3: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
-        Unplug4: Αλγόριθμοι
-        Unplug5: Συναρτήσεις
-        Unplug6: Έλεγχοι
-        Unplug7: Songwriting
-        Unplug8: Αφαίρεση
-        Unplug9: Relay programming
-        Unplug10: Internet
-        Unplug11: συνοψίζω
-        C1_happy_maps_unplugged: Happy Maps
-        C1_moveitmoveit_unplugged: Move It, Move It
-        C1_bigevent_unplugged: The Big Event
-        C1_getting_loop: Getting Loopy
-        C1_pair_programming: Pair Programming
-        C1_maze_intro_sequencing: Maze Sequencing Intro
-        C1_maze_debugging: Maze Debugging
+        maze_intro: "Πρόλογος λαβυρίνθου"
+        artist_intro: "Πρόλογος καλλιτέχνη"
+        farmer_intro: "Πρόλογος γεωργού"
+        flappy_intro: "Flappy Intro"
+        loop_times: "Πλακίδιο Επανάλαβε για"
+        loop_until: "Πλακίδιο Επανάλαβε μέχρι"
+        if: "Πλακίδιο Εάν"
+        if_else: "Πλακίδιο εάν/αλλιώς"
+        function: "Συναρτήσεις"
+        loop_while: "Πλακίδιο όσο"
+        loop_for: "Πλακίδιο Μετρητής"
+        parameters: "Συναρτήσεις με παραμέτρους"
+        hoc_wrapup: "Ώρα του κώδικα"
+        20_wrapup: "Η σύνοψη των 20-ωρών"
+        Unplug1: "What is CS?"
+        Unplug2: "Αλγοριθμική Σκέψη"
+        Unplug3: "Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων"
+        Unplug4: "Αλγόριθμοι"
+        Unplug5: "Συναρτήσεις"
+        Unplug6: "Έλεγχοι"
+        Unplug7: "Songwriting"
+        Unplug8: "Αφαίρεση"
+        Unplug9: "Relay programming"
+        Unplug10: "Internet"
+        Unplug11: "συνοψίζω"
+        C1_happy_maps_unplugged: "Happy Maps"
+        C1_moveitmoveit_unplugged: "Move It, Move It"
+        C1_bigevent_unplugged: "The Big Event"
+        C1_getting_loop: "Getting Loopy"
+        C1_pair_programming: "Pair Programming"
+        C1_maze_intro_sequencing: "Maze Sequencing Intro"
+        C1_maze_debugging: "Maze Debugging"
         C1_bee_level_intro: 'Bee Level - Intro'
-        C1_artist_intro: Πρόλογος καλλιτέχνη
-        C1_spelling_bee_intro: Spelling Bee Intro
-        C1_zuck_repeat_loop: Maze Loops
-        C1_bee_loops: Bee Loops
-        C1_maze_loops: Maze Loops
+        C1_artist_intro: "Πρόλογος καλλιτέχνη"
+        C1_spelling_bee_intro: "Spelling Bee Intro"
+        C1_zuck_repeat_loop: "Maze Loops"
+        C1_bee_loops: "Bee Loops"
+        C1_maze_loops: "Maze Loops"
         C1_playlab_storytelling: 'Play Lab - Create a Story'
-        C1_planting_seed: Planting a Seed
-        C1_building_foundating: Building a Foundation
-        C2_maze_intro: Πρόλογος λαβυρίνθου
-        C2_artist_intro: Πρόλογος καλλιτέχνη
-        C2_zuck_repeat_loop: Maze Loops
-        C2_artist_loops: Artist Loops
-        C2_bee_conditionals: Bee Conditionals
+        C1_planting_seed: "Planting a Seed"
+        C1_building_foundating: "Building a Foundation"
+        C2_maze_intro: "Πρόλογος λαβυρίνθου"
+        C2_artist_intro: "Πρόλογος καλλιτέχνη"
+        C2_zuck_repeat_loop: "Maze Loops"
+        C2_artist_loops: "Artist Loops"
+        C2_bee_conditionals: "Bee Conditionals"
         C2_playlab_createstory: 'Play Lab - Create a Story'
-        C2_graph_paper: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
-        C2_conditionals_with_cards: Έλεγχοι
-        C2_binary_bracelets: Binary Bracelets
-        C2_replay_programming: Προγραμματισμός Ρελέ
-        C2_paper_airplanes: Paper Airplanes
-        C3_maze_intro: Πρόλογος λαβυρίνθου
-        C3_artist_intro: Πρόλογος καλλιτέχνη
-        C3_artist_functions: Artist Functions
-        C3_bee_functions: Bee Functions
-        C3_bee_conditionals: Bee Conditionals
-        C3_maze_conditionals: Maze Conditionals
-        C3_artist_nested_loops: Nested Loops
-        C3_farmer_while: While Loops
-        C3_bee_nested_loops: Nested Loops
-        C3_bee_debugging: Bee Debugging
-        C3_bounce: Bounce
+        C2_graph_paper: "Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων"
+        C2_conditionals_with_cards: "Έλεγχοι"
+        C2_binary_bracelets: "Binary Bracelets"
+        C2_replay_programming: "Προγραμματισμός Ρελέ"
+        C2_paper_airplanes: "Paper Airplanes"
+        C3_maze_intro: "Πρόλογος λαβυρίνθου"
+        C3_artist_intro: "Πρόλογος καλλιτέχνη"
+        C3_artist_functions: "Artist Functions"
+        C3_bee_functions: "Bee Functions"
+        C3_bee_conditionals: "Bee Conditionals"
+        C3_maze_conditionals: "Maze Conditionals"
+        C3_artist_nested_loops: "Nested Loops"
+        C3_farmer_while: "While Loops"
+        C3_bee_nested_loops: "Nested Loops"
+        C3_bee_debugging: "Bee Debugging"
+        C3_bounce: "Bounce"
         C3_playlab_create_game: 'Play Lab - Create a Game'
-        C3_computational_thinking: Αλγοριθμική Σκέψη
-        C3_dice_race: Dice Race
-        C3_internet: Internet
-        C3_crowdsourcing: Crowdsourcing
-        C3_functional_suncatchers: Functional Suncatchers
-        C3_songwriting_with_parameters: Songwriting With Parameters
+        C3_computational_thinking: "Αλγοριθμική Σκέψη"
+        C3_dice_race: "Dice Race"
+        C3_internet: "Internet"
+        C3_crowdsourcing: "Crowdsourcing"
+        C3_functional_suncatchers: "Functional Suncatchers"
+        C3_songwriting_with_parameters: "Songwriting With Parameters"
     callout:
       text:
         drag_blocks: 'Drag a "move" block and snap it below the other block'
         run: 'Hit "Run" to try your program'
-        watch_again: Click here to watch the video again
+        watch_again: "Click here to watch the video again"
         gray_block_explanation: "Blocks that are grey can't be deleted. Can you solve the puzzle anyway?"
         show_code_explanation: "Click here to see the code for the program you're making"
-        instructions_repeat_explanation: The instructions for each puzzle are repeated here
+        instructions_repeat_explanation: "The instructions for each puzzle are repeated here"
         category_explanation: "You have all the same blocks but they've now been arranged in categories"
         set_sprite_image: 'Attach a "set actor to image" block to the "when story starts" block to enable an actor for this story'
-        studio_say_text: Type what you want your actor to say within these quotes
-        jigsaw_click: Click this block!
+        studio_say_text: "Type what you want your actor to say within these quotes"
+        jigsaw_click: "Click this block!"

@@ -56,13 +56,14 @@ Blockly.BlockSpaceEditor = function(container, opt_getMetrics, opt_setMetrics) {
  * @private
  */
 Blockly.BlockSpaceEditor.prototype.populateSVGEffects_ = function(container) {
-  if (goog.dom.getElement('blocklySvgDefs')) {
+  if (goog.dom.getElement('blocklySvgDefsGlobal')) {
     return;
   }
   var svg = Blockly.createSvgElement('svg', {
     id: 'blocklyFilters',
     width: 0,
-    height: 0
+    height: 0,
+    style: 'display: block'
   }, container);
   /*
    <defs>
@@ -70,7 +71,7 @@ Blockly.BlockSpaceEditor.prototype.populateSVGEffects_ = function(container) {
    </defs>
    */
   var defs = Blockly.createSvgElement('defs', {
-    id: 'blocklySvgDefs'
+    id: 'blocklySvgDefsGlobal'
   }, svg);
   var filter, feSpecularLighting, feMerge, pattern;
   /*
@@ -156,6 +157,8 @@ Blockly.BlockSpaceEditor.prototype.createDom_ = function(container) {
   // then manually positions content in RTL as needed.
   container.setAttribute('dir', 'LTR');
 
+  this.populateSVGEffects_(container);
+
   // Build the SVG DOM.
   /*
    <svg
@@ -177,7 +180,9 @@ Blockly.BlockSpaceEditor.prototype.createDom_ = function(container) {
   this.svg_ = svg;
   container.appendChild(svg);
   goog.events.listen(svg, 'selectstart', function() { return false; });
-  this.populateSVGEffects_(container);
+  var defs = Blockly.createSvgElement('defs', {
+    id: 'blocklySvgDefs'
+  }, svg);
   this.blockSpace.maxBlocks = Blockly.maxBlocks;
 
   svg.appendChild(this.blockSpace.createDom());

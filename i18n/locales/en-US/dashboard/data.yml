@@ -109,6 +109,7 @@ en:
         'Wordsearch': 'Wordsearch'
         'Webapp': 'Webapp'
         'ArtistEC': 'The Artist'
+        'TextMatch': 'Text Match'
     trophy:
       name:
         'Bronze': 'Bronze'
@@ -332,9 +333,15 @@ en:
         'maze_wordsearch_k_20': "This is a test! Move me one way, then another to spell the word STORY"
         'webapp_ec_simple': "Create your web app by using createHtmlBlock."
         'turtle_ec_1_2': "Now, draw a square. NOTE: use your favorite color by picking it in the new \"penColour\" block."
+        'turtle_ec_1_10': "You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new \"penWidth\" block. Have fun!"
     video:
       name:
         # Keyed by video.key
+        # How to check that this is file is up to date:
+        # irb> file_keys = YAML.load(File.read('config/locales/data.en.yml'))['en']['data']['video']['name'].keys
+        # irb> db_keys = Video.all.collect(&:key)
+        # irb> file_keys - db_keys
+        # irb> db_keys - file_keys
         'maze_intro': "Maze Intro"
         'artist_intro': "Artist Intro"
         'farmer_intro': "Farmer Intro"
@@ -348,7 +355,6 @@ en:
         'loop_for': "Counter Block"
         'parameters': "Functions with Parameters"
         'hoc_wrapup': "Hour of Code Wrapup"
-        '20_wrapup': "20-Hour Wrapup"
         'Unplug1': 'What is CS?'
         'Unplug2': 'Computational Thinking'
         'Unplug3': 'Graph Paper Programming'
@@ -363,7 +369,7 @@ en:
         'C1_happy_maps_unplugged': 'Happy Maps'
         'C1_moveitmoveit_unplugged': 'Move It, Move It'
         'C1_bigevent_unplugged': 'The Big Event'
-        'C1_getting_loop': 'Getting Loopy'
+        'C1_getting_loopy': 'Getting Loopy'
         'C1_pair_programming': 'Pair Programming'
         'C1_maze_intro_sequencing': 'Maze Sequencing Intro'
         'C1_maze_debugging': 'Maze Debugging'
@@ -375,19 +381,22 @@ en:
         'C1_maze_loops': 'Maze Loops'
         'C1_playlab_storytelling': 'Play Lab - Create a Story'
         'C1_planting_seed': 'Planting a Seed'
-        'C1_building_foundating': 'Building a Foundation'
+        'C1_building_foundation': 'Building a Foundation'
         'C2_maze_intro': 'Maze Intro'
         'C2_artist_intro': 'Artist Intro'
         'C2_zuck_repeat_loop': 'Maze Loops'
         'C2_artist_loops': 'Artist Loops'
+        'C2_artist_debugging': 'Artist Debugging'
+        'C2_bee_loops': 'Bee Loops'
+        'C2_bee_debugging': 'Bee Debugging'
         'C2_bee_conditionals': 'Bee Conditionals'
         'C2_playlab_createstory': 'Play Lab - Create a Story'
         'C2_graph_paper': 'Graph Paper Programming'
         'C2_conditionals_with_cards' : 'Conditionals'
         'C2_binary_bracelets': 'Binary Bracelets'
-        'C2_replay_programming': 'Relay Programming'
+        'C2_relay_programming': 'Relay Programming'
         'C2_paper_airplanes': 'Paper Airplanes'
-        'C3_maze_intro': 'Maze Intro'
+        'C3_maze_level_4': 'Maze Loops'
         'C3_artist_intro': 'Artist Intro'
         'C3_artist_functions': 'Artist Functions'
         'C3_bee_functions': 'Bee Functions'

@@ -42,26 +42,26 @@
   try_hoc: 'Prueba la Hora del Código, haz clic aquí >> '
   try_k8intro: Prueba nuestro curso de Introducción a la informática K-8 (15-25 horas)
   k8intro: Curso de Introducción a las Ciencias de la Computación K-8 (15-25 horas)
-  already_started: "¿Ya empezaste? Reanudar aquí >> "
+  already_started: '¿Ya empezaste? Reanudar aquí >> '
   demos: 'Administrador: Todas las Demostraciones'
   continue: Continuar
   prize: Premio
   more_info: 'Más información '
   auth:
     sign_in_with: Iniciar sesión con %{provider}
-    signed_in: "¡Sesión iniciada!"
+    signed_in: ¡Sesión iniciada!
     signed_out: Haz finalizado tu sesión en <a href="%{url}">Code.org</a>.
     sign_out_of: Has utilizado %{provider} para ingresar. <a href="%{url}">Toca aqui</a>para
       salir de %{provider}.
-    already_signedup: "¿Ya estás registrado?"
-    notyet_signedup: "¿Aún no te has unido?"
+    already_signedup: ¿Ya estás registrado?
+    notyet_signedup: ¿Aún no te has unido?
     google_oauth2: Cuenta de Google
     twitter: Twitter
     facebook: Facebook
     windowslive: Cuenta de Microsoft
-    forgot_password: "¿Olvidaste tu contraseña?"
-    need_confirmation: "¿No recibiste las instrucciones de confirmación?"
-    need_unlock: "¿No recibiste las instrucciones de desbloqueo?"
+    forgot_password: ¿Olvidaste tu contraseña?
+    need_confirmation: ¿No recibiste las instrucciones de confirmación?
+    need_unlock: ¿No recibiste las instrucciones de desbloqueo?
   signup_form:
     overview_student: Regístrese en una cuenta para poder seguir su progreso. Su correo
       se utiliza principalmente para permitirle iniciar sesión y para la recuperación
@@ -85,8 +85,8 @@
     age: Edad
     user_type: Are you a student or teacher?
     submit: Registrarse
-    teacher: "¿Eres un maestro/a?"
-    valid_username: "¡ Disponible!"
+    teacher: ¿Eres un maestro/a?
+    valid_username: ¡ Disponible!
     invalid_username: El Nombre de usuario debe tener al menos 5 caracteres
     taken_username: El Nombre de usuario ya fue asignado
     valid_password: Contraseña válida!
@@ -103,13 +103,13 @@
     additional_information: Necesitamos alguna información adicional para continuar
       con su registro.
   signin_form:
-    title: "¿Ya tienes una cuenta? Inicia sesión"
+    title: ¿Ya tienes una cuenta? Inicia sesión
     login: Correo electrónico o nombre de usuario
     password: Contraseña
     remember: Recordarme
     submit: Iniciar Sesión
   signin:
-    try_heading: "¿Desea intentar codificar sin registrarse?"
+    try_heading: ¿Desea intentar codificar sin registrarse?
     try_hoc: Prueba primero Una Hora de Código
     try_20hours: Prueba ahora Introducción a la informática en 20 horas
   signinsection:
@@ -120,7 +120,7 @@
     login: Iniciar Sesión
   password:
     reset_form:
-      title: "¿Olvidaste tu contraseña?"
+      title: ¿Olvidaste tu contraseña?
       email: Dirección de correo electrónico
       submit: Enviarme las instrucciones para reestablecer la contraseña
     change_form:
@@ -140,12 +140,12 @@
       %{name}
   follower:
     invite_sent: Invitación enviada
-    added_teacher: "%{name} añadido como tu maestro"
+    added_teacher: '%{name} añadido como tu maestro'
     registered: Se/te ha/has inscrito para % {section_name}.
     error:
       signed_in: Por favor cierra la sesión antes de proceder
       username_not_found: Usuario %{username} no encontrado
-      username_in_use: "%{username} ya está ocupado, por favor elije otro"
+      username_in_use: '%{username} ya está ocupado, por favor elije otro'
       no_teacher: No se pudo encontrar a nadie que haya iniciado sesión con '%{teacher_email_or_code}'.
         Por favor pídeles que se registren aquí e intenta agregarlos otra vez
       section_not_found: No pudimos encontrar una sección con el código '%{section_code}'.
@@ -153,7 +153,7 @@
       cant_join_own_section: Lo sentimos, no te puedes unir a tu propia sección.
     mail:
       invite_student:
-        subject: "Únete a una clase con %{teacher_name} en Code.org!"
+        subject: Únete a una clase con %{teacher_name} en Code.org!
       student_disassociated:
         subject: 'Notificación Code.org: %{student_name} ya no está asociado como
           tu estudiante.'
@@ -186,7 +186,7 @@
       title: Confirme por favor
       'no': false
       'yes': Sí
-      msg: "¿Seguro que desea reclamar el premio %{prize_name} ?"
+      msg: ¿Seguro que desea reclamar el premio %{prize_name} ?
       msg_student: 'Nota: Sólo se puede elegir un tipo de premio.'
       msg_publicschool: Por favor confirme que usted es un maestro de escuela pública
         de Estados Unidos.
@@ -201,7 +201,7 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: "$10 Skype credit"
+      skype: $10 Skype credit
     msg:
       choose: 'Escoje un premio:'
       choose_teacher: 'Click on the logo below to claim your prize:'
@@ -250,10 +250,10 @@
     update: Actualizar
     destroy: Destruir
     back: Atrás
-    confirm: "¿Estás seguro?"
-    created: "%{model} se ha creado correctamente."
-    updated: "%{model} se actualizó correctamente."
-    destroyed: "%{model} fue eliminado satisfactoriamente."
+    confirm: ¿Estás seguro?
+    created: '%{model} se ha creado correctamente.'
+    updated: '%{model} se actualizó correctamente.'
+    destroyed: '%{model} fue eliminado satisfactoriamente.'
     access_denied: No tienes acceso a este %{model}.
   nav:
     header:
@@ -263,7 +263,7 @@
         playlab: Hacer una aplicación
         artist: Dibujar algo
     user:
-      classroom: Mis alumnos
+      classroom: Página de inicio del maestro
       label: Hola %{username}
       stats: Mi progreso
       settings: Mi cuenta
@@ -271,7 +271,7 @@
       logout: Cerrar sesión
       signin: Iniciar Sesión
       signup: Registrarse
-      already_registered: "¿Ya estás registrado?"
+      already_registered: ¿Ya estás registrado?
     popup:
       progress: Tu progreso
       lines: 'Total de líneas de código: %{lines}'
@@ -281,15 +281,15 @@
       prizes: Recoger todos los %{total_trophies} trofeos y ganar premios!
       prize_earned: Todos los trofeos %{total_trophies} han sido recogidos. ¡Premio
         ganado!
-      prize_us_only: "(Sólo estudiantes de Estados Unidos)"
+      prize_us_only: (Sólo estudiantes de Estados Unidos)
       prizes_link: 'Más información '
   teacher:
     title:
       one: 'Tu profesor:'
       other: 'Tus maestros:'
-    remove: "(eliminar profesor)"
+    remove: (eliminar profesor)
     confirm:
-      remove: "¿Estás seguro que quieres eliminar este profesor?"
+      remove: ¿Estás seguro que quieres eliminar este profesor?
     tools: Herramientas del maestro/a
     followers:
       section: 'Sección:'
@@ -311,7 +311,7 @@
       dashboard: Ir a el panel del maestro
       add: Añadir alumnos/as
       remove: eliminar alumno
-      confirm_remove: "¿Está seguro de que desea eliminar a este alumno?"
+      confirm_remove: ¿Está seguro de que desea eliminar a este alumno?
       help_reassign: Para dividir la clase en multiples secciones, seleccione algunos
         alumnos para asignarlos a una nueva sección.
       help_register: En lugar de hacerle perder el tiempo importando datos de alumnos
@@ -338,25 +338,25 @@
       rename: renombrar
       edit: Editar
       delete: Borrar
-      confirm_delete: "¿Estás seguro de que quieres borrar esta sección?"
+      confirm_delete: ¿Estás seguro de que quieres borrar esta sección?
       email: Manda un correo electrónico
     rollup: Panel de progreso
     activity: Actividad reciente de la clase
     user_not_found: El profesor o el estudiante no se encontró
-    cant_remove_student_no_email: "%{student_name} no puede eliminarse como su estudiante
-      porque % {student_name} no ha registrado una dirección de correo electrónico"
-    cant_remove_teacher_no_email: "%{teacher_name} no puede eliminarse como tu maestro,
-      porque no has registrado una dirección de correo electrónico"
-    student_teacher_disassociated: "%{teacher_name} ha sido eliminado como profesor
-      de %{student_name}"
+    cant_remove_student_no_email: '%{student_name} no puede eliminarse como su estudiante
+      porque % {student_name} no ha registrado una dirección de correo electrónico'
+    cant_remove_teacher_no_email: '%{teacher_name} no puede eliminarse como tu maestro,
+      porque no has registrado una dirección de correo electrónico'
+    student_teacher_disassociated: '%{teacher_name} ha sido eliminado como profesor
+      de %{student_name}'
   user:
     email_confirm_needed: 'La dirección de correo electrónico no ha sido confirmada:'
     email_resend_confirm: Reenviar las instrucciones de confirmación
-    new_password_hint: "(déjalo en blanco si no quieres cambiarlo)"
-    current_password_hint: "(necesitamos tu contraseña actual para confirmar los cambios)"
+    new_password_hint: (déjalo en blanco si no quieres cambiarlo)
+    current_password_hint: (necesitamos tu contraseña actual para confirmar los cambios)
     cancel:
       title: Cancelar mi cuenta
-      hint: "¿No estás contento?"
+      hint: ¿No estás contento?
       button: Cancelar mi cuenta
   user_level:
     completed: Completada
@@ -369,7 +369,7 @@
     title: Code Studio
     all_courses: Resumen de los cursos 1, 2 y 3
     lesson_plans: Plan de estudio
-    signin_message: "¿Ya estás registrado? %{link}"
+    signin_message: ¿Ya estás registrado? %{link}
     student_reg_link: Registro de alumno
     teacher_reg_link: Registración de maestros
     signin_directions: Usa una cuenta para seguir tu progreso.<br/>Maestros, lleven
@@ -403,12 +403,12 @@
       y conceptos de programación. El curso está diseñado para su uso en aulas para
       los grados K-8, pero es divertido aprender en todas las edades.  '
     test_videos_help: Pruebe nuestro nuevo reproductor de vídeo en su escuela
-    try_beta_courses: "¡Nuevo! Prueba nuestros cursos en beta para estudiantes de
-      6 a 11 años K-5"
+    try_beta_courses: ¡Nuevo! Prueba nuestros cursos en beta para estudiantes de 6
+      a 11 años K-5
     use_as_teacher: Usa este sitio como un maestro
-    heading_elementary: "<h2>Cursos de 20 horas para</h2><h1>alumnos de primaria</h1>"
-    heading_apps: "<h2>Diversión para</h2><h1>Todos</h1>"
-    heading_legacy: "<h2>Nuestro curso general para</h2><h1>Todas las edades</h1>"
+    heading_elementary: <h2>Cursos de 20 horas para</h2><h1>alumnos de primaria</h1>
+    heading_apps: <h2>Diversión para</h2><h1>Todos</h1>
+    heading_legacy: <h2>Nuestro curso general para</h2><h1>Todas las edades</h1>
     gallery:
       your_turtle: Mi arte
       your_studio: Mis aplicaciones
@@ -433,7 +433,7 @@
     privacy: Política de Privacidad
     secure: Versión Segura
   reference_area:
-    title: "¿Necesitas ayuda?"
+    title: ¿Necesitas ayuda?
     subtitle: Ver estos videos y sugerencias
     teacher: Ver la solución
     auth_error: No estás autorizado para ver la solución.
@@ -441,7 +441,7 @@
     direction: Comienzo de Indicaciones
   video:
     tab: Video.
-    notes: "¿No hay video? Mostrar notas."
+    notes: ¿No hay video? Mostrar notas.
     notes_coming_soon: Notas para este vídeo, próximamente.
     autoplay_option: Reproducir videos automáticamente
     download: Descargar video
@@ -466,7 +466,7 @@
       button: Llévame a la lista de navegadores soportados
   slow_loading: Esto está tardando más tiempo de lo habitual...
   try_reloading: Intente recargar la página
-  next_stage: "¡Acabado! Sigue a la siguiente etapa"
+  next_stage: ¡Acabado! Sigue a la siguiente etapa
   download_pdf: Abrir la planificación de la lección
   view_lesson_plan: Ver el plan de estudios
   pdf_download: Descargar PDF
@@ -474,7 +474,7 @@
     title: Haz clic en "Ejecutar" para ver el programa en acción
     bounce_og_title: Revisa mi juego Bounce
     flappy_og_title: Echale un vistazo a mi juego Flappy Bird
-    studio_og_title: "Échale un vistazo a mi aplicación Play Lab"
+    studio_og_title: Échale un vistazo a mi aplicación Play Lab
     og_description: Yo escribí el código con Code.org
     phone_number_not_allowed: Parece que hay un número de telefono en el texto. Trata
       de cambiarlo.
@@ -500,22 +500,22 @@
         intentado.
     flappy:
       title: Código Flappy
-      body: "¿Quieres crear tu propio juego en menos de 10 minutos? ¡Prueba nuestro
-        tutorial de Código Flappy!"
+      body: ¿Quieres crear tu propio juego en menos de 10 minutos? ¡Prueba nuestro
+        tutorial de Código Flappy!
     20hour:
       title: Curso introductorio
       body: Prueba nuestro curso de 20 horas de introducción a las ciencias de la
         computación.
   gallery:
-    students_drew_these_with_code: "¡Los estudiantes dibujaron esto con código!"
-    students_made_these_with_code: "¡Los estudiantes hicieron éstos con código!"
+    students_drew_these_with_code: ¡Los estudiantes dibujaron esto con código!
+    students_made_these_with_code: ¡Los estudiantes hicieron éstos con código!
     picture_count: En los pasados <b>%{days}</b> días, los estudiantes han dibujado
       <b>%{count}</b> imágenes con programas escritos por ellos mismos.  Haz clic
       en las imágenes para ver cada programa en acción.
     activity_count: En los últimos <b>%{days}</b> días, los estudiantes han hecho
       <b>%{count}</b> aplicaciones y fotos escribiendo sus propios programas de computadora.
       Haga clic en las fotos y capturas de pantalla para ver cada programa en acción.
-    want_to_make_your_own: "¿Quieres hacer el tuyo?"
+    want_to_make_your_own: ¿Quieres hacer el tuyo?
     more: Más &rarr;
     caption_by_name_age: por %{name}, edad %{age}
     caption_time_ago: hace %{time_ago}
@@ -526,7 +526,7 @@
     feedback: Envía comentarios
     report_bug: Informar sobre un error
     support: Obtener ayuda
-    support_url: "//support.code.org"
+    support_url: //support.code.org
   multi:
     wrong_title: Respuesta incorrecta
     wrong_body: La respuesta no es correcta. Por favor ¡intenta de nuevo!
@@ -537,6 +537,8 @@
     wrong_body: La solución ingresada no es la correcta.  ¡Intenta nuevamente!
     correct_title: Correcto
     correct_body: Esa respuesta es la correcta.
+  text_match:
+    placeholder: Enter your answer here
   dialog:
     ok: OK
   time:
@@ -565,8 +567,8 @@
           description: ''
         flappy:
           title: Código de Flappy
-          description: "¿Quieres crear tu propio juego en menos de 10 minutos? ¡Prueba
-            nuestro tutorial de Código Flappy!"
+          description: ¿Quieres crear tu propio juego en menos de 10 minutos? ¡Prueba
+            nuestro tutorial de Código Flappy!
         jigsaw:
           title: Rompecabezas
           description: ''
@@ -588,3 +590,8 @@
   zendesk_too_young_message: Lo sentimos, los usuarios más jóvenes no pueden registrarse
     en nuestro sitio de soporte. Puedes navegar <a href="http://support.code.org">support.code.org</a>
     sin registrarte o pedir a tus padres o maestros que nos contacten en tu nombre.
+  progress:
+    not_completed: not completed
+    completed_too_many_blocks: completed, too many blocks
+    completed_perfect: completed, perfect
+    furthest_level_attempted: furthest level attempted

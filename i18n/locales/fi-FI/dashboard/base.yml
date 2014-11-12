@@ -1,121 +1,121 @@
-fi:
+"fi":
   activerecord:
     errors:
       messages:
-        blank: vaaditaan
+        blank: "vaaditaan"
     attributes:
       user:
-        name: Nimimerkki
-        email: Sähköposti
-        username: käyttäjätunnus
-        password: salasana
-        password_confirmation: Salasanan vahvistus
-        current_password: Nykyinen salasana
-        locale: Kieli
-        age: Ikä
-        gender: Sukupuoli
-        edit_header: Muokkaa tiliä
+        name: "Nimimerkki"
+        email: "Sähköposti"
+        username: "käyttäjätunnus"
+        password: "salasana"
+        password_confirmation: "Salasanan vahvistus"
+        current_password: "Nykyinen salasana"
+        locale: "Kieli"
+        age: "Ikä"
+        gender: "Sukupuoli"
+        edit_header: "Muokkaa tiliä"
         error:
-          future: ei voi olla tulevaisuudessa
-  hello: Hei maailma
+          future: "ei voi olla tulevaisuudessa"
+  hello: "Hei maailma"
   welcome_back: 'Tervetuloa takaisin, %{name}'
   add_teacher_form:
     code_or_email:
       label: 'Lisää opettaja käyttäen pääsykoodia tai sähköpostiosoitetta:'
-      placeholder: Koodi (ABCDEF) tai sähköpostiosoite (ope@koulu.fi)
+      placeholder: "Koodi (ABCDEF) tai sähköpostiosoite (ope@koulu.fi)"
     code:
       label: 'Lisää opettaja ryhmän tunnuksella:'
-      placeholder: Koodi (ABCDEF)
-    submit: Lisää opettaja
+      placeholder: "Koodi (ABCDEF)"
+    submit: "Lisää opettaja"
   add_hint_form:
-    placeholder: Syötä vihjeesi tähän
-    submit: Lisää vihje
-  appname: Code.org
-  stage: vaihe
+    placeholder: "Syötä vihjeesi tähän"
+    submit: "Lisää vihje"
+  appname: "Code.org"
+  stage: "vaihe"
   stage_number: 'Taso %{number}'
-  puzzle: Pulma
-  trophies: pokaalit
-  courses: kurssit
-  of: /
-  more: LISÄÄ
-  less: VÄHEMMÄN
+  puzzle: "Pulma"
+  trophies: "pokaalit"
+  courses: "kurssit"
+  of: "/"
+  more: "LISÄÄ"
+  less: "VÄHEMMÄN"
   try_hoc: 'Kokeile Koodaustuntia, napsauta tästä >> '
-  try_k8intro: Tai kokeile ala-asteen johdantoa tietojenkäsittelyyn (15-25 tuntia)
-  k8intro: Johdanto tietotekniikkaan -kurssi 5–14-vuotiaille (15–25 tuntia)
+  try_k8intro: "Tai kokeile ala-asteen johdantoa tietojenkäsittelyyn (15-25 tuntia)"
+  k8intro: "Johdanto tietotekniikkaan -kurssi 5–14-vuotiaille (15–25 tuntia)"
   already_started: 'Aloititko jo? Jatka tästä >> '
   demos: 'Ylläpitäjä: Kaikki demot'
-  continue: Jatka
-  prize: palkinto
-  more_info: Lisätietoja
+  continue: "Jatka"
+  prize: "palkinto"
+  more_info: "Lisätietoja"
   auth:
     sign_in_with: 'Kirjaudu %{provider} -tunnuksella'
-    signed_in: Kirjautunut!
+    signed_in: "Kirjautunut!"
     signed_out: 'Olet kirjautunut ulos palvelusta <a href="%{url}">Code.org</a>.'
     sign_out_of: 'Olet kirjautuneena sisään palvelun %{provider} kautta. <a href="%{url}">Kirjaudu ulos</a> palvelusta %{provider}.'
-    already_signedup: Joko rekisteröidyit?
-    notyet_signedup: Etkö ole vielä rekisteröitynyt?
-    google_oauth2: Google-tili
-    twitter: Twitter
-    facebook: Facebook
-    windowslive: Microsoft-tili
-    forgot_password: Unohditko salasanasi?
-    need_confirmation: Etkö saanut vahvistusviestiä?
-    need_unlock: Etkö saanut avausohjeita?
+    already_signedup: "Joko rekisteröidyit?"
+    notyet_signedup: "Etkö ole vielä rekisteröitynyt?"
+    google_oauth2: "Google-tili"
+    twitter: "Twitter"
+    facebook: "Facebook"
+    windowslive: "Microsoft-tili"
+    forgot_password: "Unohditko salasanasi?"
+    need_confirmation: "Etkö saanut vahvistusviestiä?"
+    need_unlock: "Etkö saanut avausohjeita?"
   signup_form:
     overview_student: 'Rekisteröidy niin voit seurata edistymistäsi. Sähköpostiosoitettasi käytetään pääasiassa sisäänkirjautumiseen ja salasanan palauttamiseen. Katso lisätietoja <a href="http://code.org/privacy">Yksityisyyskäytännöstämme</a>.'
     overview_teacher: 'Rekisteröidy niin saat apua tietojenkäsittelyn opettamiseen.<p/>Voit lisätä oppilaita ja seurata heidän edistymistään.'
     no_signup_message: 'Voit <a target="_blank" href="http://learn.code.org">selata eri tasoja ja pulmia</a>, mutta sinun pitää rekistöröityä, jotta voit tallentaa edistymisesi.'
-    teacher_educator_guide: Katso opettajan opas
-    teacher_pitch: Code.org:iin liittyminen opettajana
-    teacher_title: Opettajien rekisteröityminen
-    student_pitch: Code.org:iin liittyminen oppilaana
-    student_title: Oppilaan liittyminen
-    school_name: Koulun nimi (vapaaehtoinen)
-    school_address: Koulun osoite (vapaaehtoinen)
-    address_placeholder: osoite, postinumero, postitoimipaikka
-    gender: Sukupuoli (vapaaehtoinen)
-    birthday: Syntymäpäivä (vapaaehtoinen)
-    age: Ikä
-    user_type: Are you a student or teacher?
-    submit: Rekisteröidy
-    teacher: Oletko opettaja?
-    valid_username: Vapaa!
-    invalid_username: Käyttäjätunnuksen tulee olla vähintään 5 merkkiä pitkä
-    taken_username: Käyttäjätunnus on jo varattu
-    valid_password: Salasana kelpaa!
-    invalid_password: Salasanan tulee olla vähintään 6 merkkiä pitkä
-    mismatch_password: Antamasi salasanat eivät täsmää
+    teacher_educator_guide: "Katso opettajan opas"
+    teacher_pitch: "Code.org:iin liittyminen opettajana"
+    teacher_title: "Opettajien rekisteröityminen"
+    student_pitch: "Code.org:iin liittyminen oppilaana"
+    student_title: "Oppilaan liittyminen"
+    school_name: "Koulun nimi (vapaaehtoinen)"
+    school_address: "Koulun osoite (vapaaehtoinen)"
+    address_placeholder: "osoite, postinumero, postitoimipaikka"
+    gender: "Sukupuoli (vapaaehtoinen)"
+    birthday: "Syntymäpäivä (vapaaehtoinen)"
+    age: "Ikä"
+    user_type: "Are you a student or teacher?"
+    submit: "Rekisteröidy"
+    teacher: "Oletko opettaja?"
+    valid_username: "Vapaa!"
+    invalid_username: "Käyttäjätunnuksen tulee olla vähintään 5 merkkiä pitkä"
+    taken_username: "Käyttäjätunnus on jo varattu"
+    valid_password: "Salasana kelpaa!"
+    invalid_password: "Salasanan tulee olla vähintään 6 merkkiä pitkä"
+    mismatch_password: "Antamasi salasanat eivät täsmää"
     student_terms: "Sitoudun noudattamaan Code.org <a href='http://code.org/tos'>käyttöehtoja</a>. Jos olen alle 13-vuotias, vahvistan tämän lomakkeen kuittauksella että minulla on vanhempieni tai huoltajani lupa käyttää Code.org palveluita.<br/>Alle 13-vuotiaiden käyttäjien sähköpostiosoitteita ei tallenneta muodossa, jossa heihin voi ottaa yhteyttä."
     teacher_terms: "Sitoudun noudattamaan Code.org <a href='http://code.org/tos'>käyttöehtoja</a>."
-    additional_information: Tarvitsemme joitakin lisätietoja voidaksesi jatkaa kirjautumista.
+    additional_information: "Tarvitsemme joitakin lisätietoja voidaksesi jatkaa kirjautumista."
   signin_form:
-    title: Oletko jo liittynyt? Kirjaudu sisään
-    login: Sähköpostiosoite tai käyttäjätunnus
-    password: Salasana
-    remember: Muista minut
-    submit: Kirjaudu
+    title: "Oletko jo liittynyt? Kirjaudu sisään"
+    login: "Sähköpostiosoite tai käyttäjätunnus"
+    password: "Salasana"
+    remember: "Muista minut"
+    submit: "Kirjaudu"
   signin:
-    try_heading: Haluatko kokeilla koodausta ilman kirjautumista?
-    try_hoc: Kokeile yhtä koodituntia ensin
-    try_20hours: Kokeile 20 tunnin Johdantoamme tietojenkäsittelytieteeseen
+    try_heading: "Haluatko kokeilla koodausta ilman kirjautumista?"
+    try_hoc: "Kokeile yhtä koodituntia ensin"
+    try_20hours: "Kokeile 20 tunnin Johdantoamme tietojenkäsittelytieteeseen"
   signinsection:
     welcome: 'Tervetuloa osioon %{section_name}'
-    name: Valitse nimesi
-    picture: Nyt etsi salainen kuvasi
-    words: Nyt anna salaiset sanasi
-    login: Kirjaudu
+    name: "Valitse nimesi"
+    picture: "Nyt etsi salainen kuvasi"
+    words: "Nyt anna salaiset sanasi"
+    login: "Kirjaudu"
   password:
     reset_form:
-      title: Unohditko salasanasi?
-      email: Sähköpostiosoite
-      submit: Lähetä minulle salasananvaihto-ohjeet
+      title: "Unohditko salasanasi?"
+      email: "Sähköpostiosoite"
+      submit: "Lähetä minulle salasananvaihto-ohjeet"
     change_form:
-      title: Salasanan vaihtaminen
-      new_password: Uusi salasana
-      confirm_password: Vahvista uusi salasana
-      submit: Vaihda salasana
+      title: "Salasanan vaihtaminen"
+      new_password: "Uusi salasana"
+      confirm_password: "Vahvista uusi salasana"
+      submit: "Vaihda salasana"
   welcome_email:
-    subject: Liity luokkaani (Code.org palvelussa)
+    subject: "Liity luokkaani (Code.org palvelussa)"
     body: |
       Klikkaa alla olevaa linkkiä rekisteröityäksesi Code.org tietojenkäsittelyn peruskursille (jossa minä olen "opettajasi"):
       
@@ -125,17 +125,17 @@ fi:
       
       %{name}
   follower:
-    invite_sent: Kutsu lähetetty
+    invite_sent: "Kutsu lähetetty"
     added_teacher: '%{name} lisätty opettajaksesi'
     registered: 'Olet registeröitynyt ryhmään %{section_name}.'
     error:
-      signed_in: Ole hyvä ja kirjaudu ensin sisään
+      signed_in: "Ole hyvä ja kirjaudu ensin sisään"
       username_not_found: 'Käyttäjätunnusta %{username} ei löydy'
       username_in_use: 'Käyttäjätunnus %{username} on jo käytössä, valitse jokin toinen'
       no_teacher: "Käyttäjää '%{teacher_email_or_code}' ei löytynyt. Pyydä häntä ensin luomaan tunnus ja kokeile sitten uudestaan"
       section_not_found: "Ryhmää tunnuksella '%{section_code}' ei löytynyt."
-      blank_code: Anna ryhmän tunnus
-      cant_join_own_section: Et voi liittyä omaan ryhmääsi.
+      blank_code: "Anna ryhmän tunnus"
+      cant_join_own_section: "Et voi liittyä omaan ryhmääsi."
     mail:
       invite_student:
         subject: 'Liity opettajan %{teacher_name} luokkaan Code.org:ssa!'
@@ -145,47 +145,47 @@ fi:
         subject: 'Code.org ilmoitus: %{teacher_name} ei ole enää liitetty opettajaksesi.'
   reports:
     error:
-      access_denied: Sinulla ei ole oikeutta katsella tämän henkilön tietoja
+      access_denied: "Sinulla ei ole oikeutta katsella tämän henkilön tietoja"
   redeem_prizes:
     title: 'Lunasta palkinnot: %{name}'
     provider: 'Tarjoaja:'
     code: 'Koodi:'
     redeem_header: 'Lunastaaksesi:'
-    donorschoose_register: Rekisteröidy opettajana DonorsChoose.org:ssa
-    donorschoose_project: Lähetä projekti
-    donorschoose_how_to: Kuinka käytät koodiasi
-    success: Palkinnon lunastaminen onnistui, katso koodi alta.
-    error: Palkinnon lunastaminen epäonnistui, yritä uudelleen.
-    error_us_only: Palkintotarjous on voimassa vain USA:ssa.
-    error_not_earned: Et ole vielä ansainnut tätä palkintoa.
-    error_already_redeemed: Palkintosi on jo lunastettu.
-    no_prizes_available: Pahoittelemme, mutta tällä hetkellä ei ole palkintoja saatavilla.
+    donorschoose_register: "Rekisteröidy opettajana DonorsChoose.org:ssa"
+    donorschoose_project: "Lähetä projekti"
+    donorschoose_how_to: "Kuinka käytät koodiasi"
+    success: "Palkinnon lunastaminen onnistui, katso koodi alta."
+    error: "Palkinnon lunastaminen epäonnistui, yritä uudelleen."
+    error_us_only: "Palkintotarjous on voimassa vain USA:ssa."
+    error_not_earned: "Et ole vielä ansainnut tätä palkintoa."
+    error_already_redeemed: "Palkintosi on jo lunastettu."
+    no_prizes_available: "Pahoittelemme, mutta tällä hetkellä ei ole palkintoja saatavilla."
     teacher_info_required: 'Koulun nimi ja osoite palkintoja varten (vain USA:ssa): '
     teacher_email_required: 'Opettajapalkintoja varten (voimassa vain USA:ssa) tarvitaan vahvistettu sähköpostiosoite:'
     confirm:
-      title: Vahvista
+      title: "Vahvista"
       "no": Ei
       "yes": Kyllä
       msg: 'Haluatko varmasti lunastaa palkinnon %{prize_name}?'
       msg_student: 'Huomaa: voit valita vain yhden palkinnon.'
-      msg_publicschool: Ole hyvä ja vahvista, että olet yhdysvaltalaisen valtionkoulun opettaja.
-      msg_visit_website: Käy websivulla
+      msg_publicschool: "Ole hyvä ja vahvista, että olet yhdysvaltalaisen valtionkoulun opettaja."
+      msg_visit_website: "Käy websivulla"
     providers:
-      apple_itunes: $10 iTunes Gift Card
-      donors_choose: DonorsChoose.org $750 credit
-      donors_choose_bonus: DonorsChoose.org $250 credit
-      dropbox: 10 Gt Dropbox-tilaa
-      valve: Portal 2 (PC or Mac game download)
-      ea_bejeweled: Bejeweled 3 (PC game download)
-      ea_fifa: FIFA Soccer 13 (PC game download)
-      ea_simcity: SimCity 4 Deluxe Edition (PC game download)
-      ea_pvz: Plants vs. Zombies (PC game download)
-      skype: $10 Skype credit
+      apple_itunes: "$10 iTunes Gift Card"
+      donors_choose: "DonorsChoose.org $750 credit"
+      donors_choose_bonus: "DonorsChoose.org $250 credit"
+      dropbox: "10 Gt Dropbox-tilaa"
+      valve: "Portal 2 (PC or Mac game download)"
+      ea_bejeweled: "Bejeweled 3 (PC game download)"
+      ea_fifa: "FIFA Soccer 13 (PC game download)"
+      ea_simcity: "SimCity 4 Deluxe Edition (PC game download)"
+      ea_pvz: "Plants vs. Zombies (PC game download)"
+      skype: "$10 Skype credit"
     msg:
       choose: 'Valitse palkinto:'
       choose_teacher: 'Click on the logo below to claim your prize:'
       earned: 'Hieno suoritus! (raha- ja tavarapalkinnot voimassa vain USA:ssa)'
-      not_earned_title: Tee oppitunti loppuun, saa palkintoja (vain USA:n oppilaat)
+      not_earned_title: "Tee oppitunti loppuun, saa palkintoja (vain USA:n oppilaat)"
       not_earned: 'Opi kaikki tietotekniikan käsitteet, kerää kaikki %{num_trophies} pokaalia ja ansaitse oikeita palkintoja. Voit valita 10 Gt ilmaista Dropbox-tilaa, 10 dollaria Skype-saldoa tai ilmaisia ladattavia pelejä. Huomio: tarjous on voimassa vain yhdysvaltalaisille oppilaille ja vain niin kauan kuin palkintoja riittää.'
       teacher:
         earned: 'vähintään 15 oppilasta keräsi kaikki %{num_trophies} palkinnot. Olet voittanut opettajan palkinnon! (Vain USA:ssa)'
@@ -196,44 +196,44 @@ fi:
           earned: |
             Hieno suoritus! 7 tai useampi oppilaistasi, jotka keräsivät kaikki %{num_trophies} ovat tyttöjä. 
             
-            Huom: sivustolla mainitut raha- ja tavarapalkinnot ovat voimassa vain USA:ssa
+            Huom: "sivustolla mainitut raha- ja tavarapalkinnot ovat voimassa vain USA:ssa"
           not_earned: '(sivustolla mainitut raha- ja tavarapalkinnot ovat voimassa vain USA:ssa)'
   crud:
     new_model: 'Uusi %{model}'
-    show: Näytä
-    edit: Muokkaa
+    show: "Näytä"
+    edit: "Muokkaa"
     edit_model: 'Muokkaa %{model}'
-    update: Päivitä
-    destroy: Tuhoa
-    back: Takaisin
-    confirm: Oletko varma?
+    update: "Päivitä"
+    destroy: "Tuhoa"
+    back: "Takaisin"
+    confirm: "Oletko varma?"
     created: '%{model} luotiin onnistuneesti.'
     updated: '%{model} päivitettiin onnistuneesti.'
     destroyed: '%{model} poistaminen onnistui.'
     access_denied: 'Sinulla ei ole pääsyä tähän %{model}.'
   nav:
     header:
-      finished_hoc: Olen suorittanut Koodituntini
-      sign_in_to_save: Kirjaudu, jos haluat tallentaa edistymisesi
+      finished_hoc: "Olen suorittanut Koodituntini"
+      sign_in_to_save: "Kirjaudu, jos haluat tallentaa edistymisesi"
       free_play:
-        playlab: Tee sovellus
-        artist: Piirrä jotakin
+        playlab: "Tee sovellus"
+        artist: "Piirrä jotakin"
     user:
-      classroom: Oppilaani
+      classroom: "Oppilaani"
       label: 'Hei %{username}'
-      stats: Minun edistymiseni
-      settings: Tilini
-      prizes: Palkinnot
-      logout: Kirjaudu ulos
-      signin: Kirjaudu
-      signup: Rekisteröidy
-      already_registered: Jo rekisteröitynyt?
+      stats: "Minun edistymiseni"
+      settings: "Tilini"
+      prizes: "Palkinnot"
+      logout: "Kirjaudu ulos"
+      signin: "Kirjaudu"
+      signup: "Rekisteröidy"
+      already_registered: "Jo rekisteröitynyt?"
     popup:
-      progress: Sinun edistymisesi
+      progress: "Sinun edistymisesi"
       lines: 'Koodirivien yhteismäärä: %{lines}'
-      close: SULJE
-      mastery: Käsitteitä
-      puzzle_map: Vaiheet
+      close: "SULJE"
+      mastery: "Käsitteitä"
+      puzzle_map: "Vaiheet"
       prizes: |
         Kerää kaikki %{total_trophies} pokaalia! 
         
@@ -242,258 +242,258 @@ fi:
         Hienoa! Keräsit kaikki %{total_trophies} pokaalia.
         
         (sivustolla mainitut raha- ja tavarapalkinnot ovat voimassa vain USA:ssa)
-      prize_us_only: (vain oppilaille USA:ssa)
-      prizes_link: Lisätietoja
+      prize_us_only: "(vain oppilaille USA:ssa)"
+      prizes_link: "Lisätietoja"
   teacher:
     title:
       one: 'Opettajasi:'
       other: 'Opettajasi:'
-    remove: (poista opettaja)
+    remove: "(poista opettaja)"
     confirm:
-      remove: Oletko varma, että haluat poistaa tämän opettajan?
-    tools: Opettajan työkalut
+      remove: "Oletko varma, että haluat poistaa tämän opettajan?"
+    tools: "Opettajan työkalut"
     followers:
       section: 'Ryhmä:'
       stages: 'Stage(s) to display:'
       show_past: 'Show student activity (%{bullet_html}) in the past:'
-      levels_key: Levels key
-      perfect: Valmis, täydellistä
-      completed: Valmis, mutta käytit liian montaa lohkoa
-      tried: Kokeiltu, mutta ei valmis
-      not_tried: Ei kokeiltu
+      levels_key: "Levels key"
+      perfect: "Valmis, täydellistä"
+      completed: "Valmis, mutta käytit liian montaa lohkoa"
+      tried: "Kokeiltu, mutta ei valmis"
+      not_tried: "Ei kokeiltu"
       activity: 'Indicates student activity in the last %{hours} %{plural}'
-      no_section: Ei valittuja ryhmiä
-      trophies: pokaalit
+      no_section: "Ei valittuja ryhmiä"
+      trophies: "pokaalit"
     students:
-      name: Nimi
-      username: käyttäjätunnus
-      password: salasana
-      manage: Hallinnoi oppilaita
-      dashboard: Siirry opettajan päänäytölle
-      add: Lisää opiskelijoita
-      remove: poista oppilas
-      confirm_remove: Oletko varma että haluat poistaa tämän oppilaan?
-      help_reassign: Jakaaksesi luokkasi useisiin ryhmiin, valitse oppilaat jotka siirretään uuteen ryhmään.
-      help_register: Sen sijaan että käytät paljon aikaa tuodaksesi yksittäisten oppilaiden tiedot, voit perustaa luokkasi nopeasti pyytäen heitä rekisteröitymään. Oppilaidesi tulee valita käyttäjänimet ja salasanat, mutta heitä EI VAADITA antaamaan sähköpostiosoitetta. Jos oppilas unohtaa salasanansa, voit nollata sen heidän puolestaan.
-      register: Pyydä oppilaitasi rekisteröimään itsensä
-      vist: Pyydä oppilaitasi käymään
+      name: "Nimi"
+      username: "käyttäjätunnus"
+      password: "salasana"
+      manage: "Hallinnoi oppilaita"
+      dashboard: "Siirry opettajan päänäytölle"
+      add: "Lisää opiskelijoita"
+      remove: "poista oppilas"
+      confirm_remove: "Oletko varma että haluat poistaa tämän oppilaan?"
+      help_reassign: "Jakaaksesi luokkasi useisiin ryhmiin, valitse oppilaat jotka siirretään uuteen ryhmään."
+      help_register: "Sen sijaan että käytät paljon aikaa tuodaksesi yksittäisten oppilaiden tiedot, voit perustaa luokkasi nopeasti pyytäen heitä rekisteröitymään. Oppilaidesi tulee valita käyttäjänimet ja salasanat, mutta heitä EI VAADITA antaamaan sähköpostiosoitetta. Jos oppilas unohtaa salasanansa, voit nollata sen heidän puolestaan."
+      register: "Pyydä oppilaitasi rekisteröimään itsensä"
+      vist: "Pyydä oppilaitasi käymään"
       section_code: 'ja anna heidän ryhmän tunnuksensa:'
       first_please: 'Lisää ensin %{add_section}'
-      for: For
+      for: "For"
       enter: 'anna:'
     sections:
-      add: Lisää ryhmä
-      manage: Hallinnoi ryhmiä
-      section: Ryhmä
-      students: Oppilaat
-      section_code: Ryhmän tunnus
-      add_section_code: Lisää oppilaiden ryhmän tunnus
-      secret: Salainen tyyppi
-      grade: Arvosana
-      course: Kurssi
-      rename: nimeä uudelleen
-      edit: muokkaa
-      delete: poista
-      confirm_delete: Oletko varma että haluat poistaa tämän ryhmän?
-      email: Lähetä sähköpostilla
-    rollup: Edistymistaulu
-    activity: Luokan tapahtumat
-    user_not_found: Opettajaa tai oppilasta ei löytynyt
+      add: "Lisää ryhmä"
+      manage: "Hallinnoi ryhmiä"
+      section: "Ryhmä"
+      students: "Oppilaat"
+      section_code: "Ryhmän tunnus"
+      add_section_code: "Lisää oppilaiden ryhmän tunnus"
+      secret: "Salainen tyyppi"
+      grade: "Arvosana"
+      course: "Kurssi"
+      rename: "nimeä uudelleen"
+      edit: "muokkaa"
+      delete: "poista"
+      confirm_delete: "Oletko varma että haluat poistaa tämän ryhmän?"
+      email: "Lähetä sähköpostilla"
+    rollup: "Edistymistaulu"
+    activity: "Luokan tapahtumat"
+    user_not_found: "Opettajaa tai oppilasta ei löytynyt"
     cant_remove_student_no_email: '%{student_name} ei voida poistaa oppilaistasi koska %{student_name} ei ole rekisteröinyt sähköpostiosoitetta'
     cant_remove_teacher_no_email: '%{teacher_name} ei voida poistaa opettajastasi sillä et ole rekisteröinyt sähköpostiosoitetta'
     student_teacher_disassociated: 'Opettaja %{teacher_name} on poistettu oppilaalta %{student_name}'
   user:
     email_confirm_needed: 'Sähköpostiosoitetta ei ole vahvistettu:'
-    email_resend_confirm: Lähetä vahvistusohjeet uudestaan
-    new_password_hint: (jätä tyhjäksi jos et halua vaihtaa)
-    current_password_hint: (anna nykyinen salasanasi, jotta voimme vahvistaa muutokset)
+    email_resend_confirm: "Lähetä vahvistusohjeet uudestaan"
+    new_password_hint: "(jätä tyhjäksi jos et halua vaihtaa)"
+    current_password_hint: "(anna nykyinen salasanasi, jotta voimme vahvistaa muutokset)"
     cancel:
-      title: Poista tili
-      hint: Onneton?
-      button: Tilin poistaminen
+      title: "Poista tili"
+      hint: "Onneton?"
+      button: "Tilin poistaminen"
   user_level:
-    completed: Valmis
-    tried: Kokeili
+    completed: "Valmis"
+    tried: "Kokeili"
   user_stats:
-    recent_activity: Tapahtumat
-    show_more: Näytä lisää
-    classroom_activity: Tietokoneeton tekeminen
+    recent_activity: "Tapahtumat"
+    show_more: "Näytä lisää"
+    classroom_activity: "Tietokoneeton tekeminen"
   home:
-    title: Code Studio
-    all_courses: Katsaus kursseihin 1, 2 ja 3
-    lesson_plans: Oppituntien suunnitelmat
+    title: "Code Studio"
+    all_courses: "Katsaus kursseihin 1, 2 ja 3"
+    lesson_plans: "Oppituntien suunnitelmat"
     signin_message: 'Jo rekisteröitynyt? %{link}'
-    student_reg_link: Oppilaan rekisteröityminen
-    teacher_reg_link: Opettajan rekisteröityminen
+    student_reg_link: "Oppilaan rekisteröityminen"
+    teacher_reg_link: "Opettajan rekisteröityminen"
     signin_directions: 'Use an account to track progress.<br/> Teachers, track your entire class.'
-    teacher_dashboard: Näytä edistysminen
+    teacher_dashboard: "Näytä edistysminen"
     teacher_student_count_one: 'Sinulla on %{count} oppilasta.'
     teacher_student_count: 'Sinulla on %{count} oppilasta.'
     teacher_averages: 'Keskimäärin oppilaasi ovat ansainneet %{trophy_average}/%{trophy_max} "käsitteiden hallinta" pokaaleista.'
-    teacher_print_certificates: Tulosta sertifikaatit kurssin loppuun suorittaneille oppilaille
-    teacher_read_blog: Lue uutiset ja päivitykset materiaaleihimme Educator -blogistamme
-    classroom: Luokkasi
-    student_progress: Edistymisesi
+    teacher_print_certificates: "Tulosta sertifikaatit kurssin loppuun suorittaneille oppilaille"
+    teacher_read_blog: "Lue uutiset ja päivitykset materiaaleihimme Educator -blogistamme"
+    classroom: "Luokkasi"
+    student_progress: "Edistymisesi"
     student_stats: 'Olet ansainnut %{trophy_count}/%{trophy_max} "käsitteiden hallinta" pokaalia.'
     student_left_off: 'Jäit tähän:'
     student_finished: 'Olet suorittanut johdannon. Valitse toinen luokka täältä %{online_link} tai %{local_school_link}'
-    local_school: koulu
-    online: online
-    see_details: Lisätietoja
+    local_school: "koulu"
+    online: "online"
+    see_details: "Lisätietoja"
     prize_info: 'Palkinnot osallistumisesta (vain USA): Jopa 1000 dollaria luokkahuonepalkintoja.'
     tryfirst: 'Tai, voit kokeilla ensin ja rekisteröityä myöhemmin:'
-    trynow: Kokeile nyt
-    add_hint_help: Auta meitä lisäämään järkeviä vinkkejä Code.org oppitunteihin
-    20hour_overview: Tämä 20 tunnin kurssi esittelee keskeiset tietotekniikan ja ohjelmoinnin käsitteet. Kurssi on suunniteltu käytettäväksi peruskouluissa, mutta siinä on hauskaa opittavaa kaiken ikäisille.
-    test_videos_help: Testaa uutta videosoitintamme koulussasi
-    try_beta_courses: Uutta! Kokeile beta-kurssejamme K-5 oppilaille
-    use_as_teacher: Käytä sivustoa opettajana
+    trynow: "Kokeile nyt"
+    add_hint_help: "Auta meitä lisäämään järkeviä vinkkejä Code.org oppitunteihin"
+    20hour_overview: "Tämä 20 tunnin kurssi esittelee keskeiset tietotekniikan ja ohjelmoinnin käsitteet. Kurssi on suunniteltu käytettäväksi peruskouluissa, mutta siinä on hauskaa opittavaa kaiken ikäisille."
+    test_videos_help: "Testaa uutta videosoitintamme koulussasi"
+    try_beta_courses: "Uutta! Kokeile beta-kurssejamme K-5 oppilaille"
+    use_as_teacher: "Käytä sivustoa opettajana"
     heading_elementary: '<h2>20 hour kurssit</h2><h1>alkeisoppilaille</h1>'
     heading_apps: '<h2>Hauskaa</h2><h1>kaikille</h1>'
     heading_legacy: '<h2>Yleinen kurssimme</h2><h1>kaiken ikäisille</h1>'
     gallery:
-      your_turtle: Minun taiteeni
-      your_studio: Sovellukseni
+      your_turtle: "Minun taiteeni"
+      your_studio: "Sovellukseni"
   gender:
-    male: Mies
-    female: Nainen
-    none: En halua vastata
+    male: "Mies"
+    female: "Nainen"
+    none: "En halua vastata"
   user_type:
-    student: Oppilas
-    teacher: Opettaja
+    student: "Oppilas"
+    teacher: "Opettaja"
   footer:
-    help_from_html: Insinöörit Googlelta, Microsoftilta, Facebookilta ja Twitterilta auttoivat luomaan tämän opetusohjelman.
+    help_from_html: "Insinöörit Googlelta, Microsoftilta, Facebookilta ja Twitterilta auttoivat luomaan tämän opetusohjelman."
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. Kaikki oikeudet pidätetään.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. Kaikki oikeudet pidätetään.'
-    feedback: Anna palautetta
-    translate: Auta meitä kääntämään palvelu omalle kielellesi
-    support: Tuki
-    support_url: http://support.code.org
-    tos: Ehdot
-    privacy: Yksityisyyskäytäntö
-    secure: Turvallinen versio
+    feedback: "Anna palautetta"
+    translate: "Auta meitä kääntämään palvelu omalle kielellesi"
+    support: "Tuki"
+    support_url: "http://support.code.org"
+    tos: "Ehdot"
+    privacy: "Yksityisyyskäytäntö"
+    secure: "Turvallinen versio"
   reference_area:
-    title: Tarvitsetko apua?
-    subtitle: Katso nämä videot ja vihjeet
-    teacher: Katso ratkaisu
-    auth_error: Sinulla ei ole oikeutta katsoa ratkaisua.
-    submit: Päivitä taitelijan sijainti
-    direction: Aloitussuunta (asteina)
+    title: "Tarvitsetko apua?"
+    subtitle: "Katso nämä videot ja vihjeet"
+    teacher: "Katso ratkaisu"
+    auth_error: "Sinulla ei ole oikeutta katsoa ratkaisua."
+    submit: "Päivitä taitelijan sijainti"
+    direction: "Aloitussuunta (asteina)"
   video:
-    tab: Video.
-    notes: Ei videota? Näytä muistiinpanot.
-    notes_coming_soon: Muistiinpanot tälle videolle tulossa pian.
-    autoplay_option: Toista videot automaattisesti
-    download: Lataa video
+    tab: "Video."
+    notes: "Ei videota? Näytä muistiinpanot."
+    notes_coming_soon: "Muistiinpanot tälle videolle tulossa pian."
+    autoplay_option: "Toista videot automaattisesti"
+    download: "Lataa video"
   compatability:
     working:
-      header: Emme juuri nyt tue käyttämääsi selainta.
+      header: "Emme juuri nyt tue käyttämääsi selainta."
       message: "Code.org käyttää modernia webteknologiaa. Tämä tekee sivustosta nopeamman käyttää. Selaimesi ei tue kaikkia vaadittavia ominaisuuksia, ja saatat kokea ongelmia käyttäessäsi sivuston tätä osaa. Auta meitä <a href='%{report_issue_url}'>raportoimalla löytämäsi ongelmat</a>. Voit myös <a href='%{supported_browsers_url}'>päivittää selaimesi tuettuun versioon</a>."
-      hide_this_warning: Piilota varoitus
+      hide_this_warning: "Piilota varoitus"
     upgrade:
-      header: Ole hyvä ja päivitä selaimesi.
+      header: "Ole hyvä ja päivitä selaimesi."
       message: "Code.org käyttää modernia webteknologiaa. Tämä tekee sivustosta nopeamman käyttää. Valitettavasti selaimesi ei tue kaikkia sivuston tähän osaan vaadittavia ominaisuuksia.<br/><br/>Asenna selain tuettujen selainten listalta jatkaaksesi. Voit <a href='#'>yrittää katsella sivua</a>, mutta toiminnallisuus on rikki."
-      button: Siirry tuettujen selainten listaan
-  slow_loading: Tämä kestää kauemmin kuin tavallisesti...
-  try_reloading: Yritä ladata sivu uudelleen
-  next_stage: Valmis! Siirry seuraavalle tasolle
-  download_pdf: Avaa oppituntisuunnitelma
-  view_lesson_plan: Katso oppitunnin suunnitelmaa
-  pdf_download: Lataa PDF
+      button: "Siirry tuettujen selainten listaan"
+  slow_loading: "Tämä kestää kauemmin kuin tavallisesti..."
+  try_reloading: "Yritä ladata sivu uudelleen"
+  next_stage: "Valmis! Siirry seuraavalle tasolle"
+  download_pdf: "Avaa oppituntisuunnitelma"
+  view_lesson_plan: "Katso oppitunnin suunnitelmaa"
+  pdf_download: "Lataa PDF"
   share_code:
     title: "Napsauta 'Aja' nähdäksesi ohjelmani toiminnassa"
-    bounce_og_title: Tutustu Bounce-peliini
-    flappy_og_title: Tutustu Flappy-peliini
-    studio_og_title: Tutustu Play Lab -sovellukseeni
-    og_description: Kirjoitin koodin itse Code.org:illa
-    phone_number_not_allowed: Näyttää että olet syöttänyt puhelinnumeron. Koita muuttaa tekstiä.
-    address_not_allowed: Näyttää että olet syöttänyt osoitteen. Koita muuttaa tekstiä.
-    email_not_allowed: Näyttää että olet syöttänyt sähköpostin. Koita muuttaa tekstiä.
-    profanity_not_allowed: Näyttää että olet syöttänyt asiatonta tekstiä. Koita muuttaa tekstiä.
+    bounce_og_title: "Tutustu Bounce-peliini"
+    flappy_og_title: "Tutustu Flappy-peliini"
+    studio_og_title: "Tutustu Play Lab -sovellukseeni"
+    og_description: "Kirjoitin koodin itse Code.org:illa"
+    phone_number_not_allowed: "Näyttää että olet syöttänyt puhelinnumeron. Koita muuttaa tekstiä."
+    address_not_allowed: "Näyttää että olet syöttänyt osoitteen. Koita muuttaa tekstiä."
+    email_not_allowed: "Näyttää että olet syöttänyt sähköpostin. Koita muuttaa tekstiä."
+    profanity_not_allowed: "Näyttää että olet syöttänyt asiatonta tekstiä. Koita muuttaa tekstiä."
   builder:
-    created: Loit uuden komentosarjan.
-    destroyed: Tuhosit komentosarjan.
-    manage: Build Levels
-    view: View
-    back: Takaisin komentosarjoihin
-    success: Muokkasit lohkoja onnistuneesti.
+    created: "Loit uuden komentosarjan."
+    destroyed: "Tuhosit komentosarjan."
+    manage: "Build Levels"
+    view: "View"
+    back: "Takaisin komentosarjoihin"
+    success: "Muokkasit lohkoja onnistuneesti."
     level:
-      create: Luo uusi taso
-      current: Nykyiset tasot
-      unused: Käyttämättömät tasot
+      create: "Luo uusi taso"
+      current: "Nykyiset tasot"
+      unused: "Käyttämättömät tasot"
   upsell:
     hoc:
-      title: Kooditunti
-      body: Kokeile tietojenkäsittelytieteen perusteita. Miljoonat ovat antaneet sille tilaisuuden.
+      title: "Kooditunti"
+      body: "Kokeile tietojenkäsittelytieteen perusteita. Miljoonat ovat antaneet sille tilaisuuden."
     flappy:
-      title: Flappy Code
-      body: Haluatko kirjoittaa oman pelin alle 10 minuutissa? Kokeile Flappy Code -oppituntia!
+      title: "Flappy Code"
+      body: "Haluatko kirjoittaa oman pelin alle 10 minuutissa? Kokeile Flappy Code -oppituntia!"
     20hour:
-      title: Johdantokurssi
-      body: Kokeile 20 tunnin kurssia Johdanto tietojenkäsittelytieteeseen.
+      title: "Johdantokurssi"
+      body: "Kokeile 20 tunnin kurssia Johdanto tietojenkäsittelytieteeseen."
   gallery:
-    students_drew_these_with_code: Oppilaat piirsivät nämä koodilla!
-    students_made_these_with_code: Oppilaat tekivät nämä koodilla!
+    students_drew_these_with_code: "Oppilaat piirsivät nämä koodilla!"
+    students_made_these_with_code: "Oppilaat tekivät nämä koodilla!"
     picture_count: 'Viimeisen <b>%{days}</b> päivän aikana, oppilaat ovate piirtäneet <b>%{count}</b> kuvaa kirjoittamalla omia tietokoneohjelmiaan. Napsauta kuvia nähdäksesi kunkin ohjelman toiminnassa.'
     activity_count: 'Viimeisen <b>%{days}</b> päivän aikana, oppilaat ovat tehneet <b>%{count}</b> sovellusta ja kuvaa kirjoittamalla omia tietokoneohjelmiaan. Napsauta kuvia ja kuvaruutukaappauksia nähdäksesi kunkin ohjelman toiminnassa.'
-    want_to_make_your_own: Haluatko tehdä omasi?
+    want_to_make_your_own: "Haluatko tehdä omasi?"
     more: 'Lisää &rarr;'
     caption_by_name_age: '%{name} tekemä, ikä %{age}'
     caption_time_ago: '%{time_ago} sitten'
   landing:
     prerelease: "Tämä kurssi on <span class='betatext'>beta</span>.  Tämä tarkoittaa, että kurssin verso ei ole lopullinen ja siitä saattaa tulla uusia paranneltuja versioita reaktiona saatuun palautteeseen."
-    feedback: Anna palautetta
-    report_bug: Raportoi ongelma
-    support: Tarkastele ohjeita
-    support_url: //support.code.org
+    feedback: "Anna palautetta"
+    report_bug: "Raportoi ongelma"
+    support: "Tarkastele ohjeita"
+    support_url: "//support.code.org"
   multi:
-    wrong_title: Väärä vastaus
-    wrong_body: Antamasi vastaus ei ole oikein. Yritä uudelleen!
-    correct_title: Oikein
-    correct_body: Tämä on oikea vastaus.
+    wrong_title: "Väärä vastaus"
+    wrong_body: "Antamasi vastaus ei ole oikein. Yritä uudelleen!"
+    correct_title: "Oikein"
+    correct_body: "Tämä on oikea vastaus."
   match:
-    wrong_title: Väärä vastaus
-    wrong_body: Antamasi ratkaisu ei ole oikea. Yritä uudestaan!
-    correct_title: Oikein
-    correct_body: Tämä on oikea vastaus.
+    wrong_title: "Väärä vastaus"
+    wrong_body: "Antamasi ratkaisu ei ole oikea. Yritä uudestaan!"
+    correct_title: "Oikein"
+    correct_body: "Tämä on oikea vastaus."
   dialog:
-    ok: OK
+    ok: "OK"
   time:
-    hour: 1 tunti
-    day: päivä
-    week: viikko
+    hour: "1 tunti"
+    day: "päivä"
+    week: "viikko"
   data:
     script:
       name:
         20-hour:
-          title: Johdanto tietotekniikkaan -kurssi 5–14-vuotiaille (15–25 tuntia)
-          description: Tämä 20 tunnin kurssi esittelee keskeiset tietotekniikan ja ohjelmoinnin käsitteet. Kurssi on suunniteltu käytettäväksi peruskouluissa, mutta siinä on hauskaa opittavaa kaiken ikäisille.
+          title: "Johdanto tietotekniikkaan -kurssi 5–14-vuotiaille (15–25 tuntia)"
+          description: "Tämä 20 tunnin kurssi esittelee keskeiset tietotekniikan ja ohjelmoinnin käsitteet. Kurssi on suunniteltu käytettäväksi peruskouluissa, mutta siinä on hauskaa opittavaa kaiken ikäisille."
         Hour of Code:
-          title: Kooditunti
+          title: "Kooditunti"
           description: ""
         edit-code:
-          title: Muokkaa koodia
+          title: "Muokkaa koodia"
           description: ""
         events:
-          title: Tapahtumat
+          title: "Tapahtumat"
           description: ""
         builder:
-          title: Rakentaja
+          title: "Rakentaja"
           description: ""
         flappy:
-          title: Flappy Code
-          description: Haluatko kirjoittaa oman pelin alle 10 minuutissa? Kokeile Flappy Code -oppituntia!
+          title: "Flappy Code"
+          description: "Haluatko kirjoittaa oman pelin alle 10 minuutissa? Kokeile Flappy Code -oppituntia!"
         jigsaw:
-          title: Palapeli
+          title: "Palapeli"
           description: ""
         step:
-          title: Askel
+          title: "Askel"
           description: ""
         sample_level_builder:
-          title: Esimerkkitason rakentaja
+          title: "Esimerkkitason rakentaja"
           description: ""
   age_interstitial:
-    age: Ikäsi
-    header: Käyttäjätilin tietojen päivitys
+    age: "Ikäsi"
+    header: "Käyttäjätilin tietojen päivitys"
     message: 'Olemme päivittämässä käyttökokemustamme luodaksemme sinulle vahvemman yksityisyyden suojan. Tämän vuoksi nykyisten käyttäjien tulee antaa ikänsä.<br/>Kuten aina, code.org ei koskaan vuokraa, myy tai jaa tätä tietoa kolmansille osapuolille.'
     sign_out: 'Jos et halua kertoa ikääsi voit <a href="%{url}">kirjautua ulos</a>.'
   zendesk_too_young_message: 'Pahoittelut, nuoremmat käyttäjät eivät voi kirjautua tukisivustollemme. Voit selailla <a href="http://support.code.org">support.code.org</a> -sivuja ilman kirjautumista tai pyytää vanhempiasi tai opettajaasi ottamaan yhteyttä meihin puolestasi.'

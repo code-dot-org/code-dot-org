@@ -2,23 +2,23 @@
   devise:
     confirmations:
       confirmed: Tókst að staðfesta netfang þitt.
-      send_instructions: "Þú færð á næstu mínútum tölvupóst með leiðbeiningum um hvernig
-        á að staðfesta reikning þinn."
+      send_instructions: Þú færð á næstu mínútum tölvupóst með leiðbeiningum um hvernig
+        á að staðfesta reikning þinn.
       send_paranoid_instructions: Ef netfang þitt er skráð í gagnagrunn okkar, munt
         þú á næstu mínútum fá tölvupóst með leiðbeiningum um hvernig á að staðfesta
         reikning þinn.
     failure:
-      already_authenticated: "Þú ert þegar skráð(ur) inn."
+      already_authenticated: Þú ert þegar skráð(ur) inn.
       inactive: Reikningurinn þinn hefur enn ekki verið virkjaður.
-      invalid: "Ótækt netfang eða lykilorð."
-      invalid_token: "Ógild sannvottunargögn."
+      invalid: Ótækt netfang eða lykilorð.
+      invalid_token: Ógild sannvottunargögn.
       locked: Reikningur þinn er læstur.
-      not_found_in_database: "Ótækt netfang eða lykilorð."
+      not_found_in_database: Ótækt netfang eða lykilorð.
       timeout: Lota þín rann út á tíma, vinsamlegast skráðu þig inn aftur til að halda
         áfram.
-      unauthenticated: "Þú verður að skrá þig inn eða ganga frá skráningu áður en
-        lengra er haldið."
-      unconfirmed: "Þú verður að staðfesta reikning þinn áður en lengra er haldið."
+      unauthenticated: Þú verður að skrá þig inn eða ganga frá skráningu áður en lengra
+        er haldið.
+      unconfirmed: Þú verður að staðfesta reikning þinn áður en lengra er haldið.
     mailer:
       confirmation_instructions:
         subject: Leiðbeiningar Code.org um staðfestingu
@@ -30,11 +30,11 @@
       failure: Tókst ekki að fá sannvottun frá %{kind}, ástæða "%{reason}".
       success: Tókst að fá sannvottun frá %{kind} reikningi.
     passwords:
-      no_token: "Þú færð ekki aðgang að þessari síðu nema þú notir krækju í tölvupósti
+      no_token: Þú færð ekki aðgang að þessari síðu nema þú notir krækju í tölvupósti
         um endurstillingu lykilorðs. Ef þú kemur frá slíkum pósti, gættu þess þá að
-        þú sért að nota alla slóðina í póstinum."
-      send_instructions: "Þú munt fá tölvupóst á næstu mínútum  með leiðbeiningum
-        um hvernig á að endurstilla lykilorðið þitt."
+        þú sért að nota alla slóðina í póstinum.
+      send_instructions: Þú munt fá tölvupóst á næstu mínútum  með leiðbeiningum um
+        hvernig á að endurstilla lykilorðið þitt.
       send_paranoid_instructions: Ef netfang þitt er skráð í gagnagrunn okkar, munt
         þú á næstu mínútum fá tölvupóst með leiðbeiningum um hvernig á að endurstilla
         lykilorðið þitt.
@@ -56,14 +56,14 @@
       updated: Breytingin á reikningi þínum tókst.
     sessions:
       signed_in: Innskráning tókst.
-      signed_out: "Útskráning tókst."
+      signed_out: Útskráning tókst.
     unlocks:
-      send_instructions: "Þú færð tölvupóst innan nokkurra mínútna með leiðbeiningum
-        um hvernig á að aflæsa reikningum þínum."
+      send_instructions: Þú færð tölvupóst innan nokkurra mínútna með leiðbeiningum
+        um hvernig á að aflæsa reikningum þínum.
       send_paranoid_instructions: Ef reikningurinn þinn er til, færð þú tölvupóst
         eftir nokkrar mínútur með leiðbeiningum um hvernig á að aflæsa honum.
-      unlocked: "Það tókst að aflæsa reikningnum þínum. Vinsamlegast skráðu þig inn
-        til að halda áfram."
+      unlocked: Það tókst að aflæsa reikningnum þínum. Vinsamlegast skráðu þig inn
+        til að halda áfram.
   errors:
     messages:
       already_confirmed: var þegar staðfestur, reyndu að skrá þig inn
@@ -74,4 +74,4 @@
       not_locked: var ekki læstur
       not_saved:
         one: '1 villa kom í veg fyrir vistun %{resource}:'
-        other: "%{count} villur komu í veg fyrir vistun %{resource}:"
+        other: '%{count} villur komu í veg fyrir vistun %{resource}:'

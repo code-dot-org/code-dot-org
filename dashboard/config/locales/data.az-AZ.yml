@@ -71,7 +71,7 @@
           WordSearch: Mərhələ 1
     game:
       name:
-        Unplug1: "İnformatikaya giriş"
+        Unplug1: İnformatikaya giriş
         Maze: Labirint
         Multi: Multiple Choice Stuffs
         Unplug2: Hesablama təfəkkürü
@@ -81,7 +81,7 @@
         Artist2: Rəssam 2
         Unplug5: Funksiyalar
         Farmer: Fermer
-        Unplug6: "Şərti ifadələr"
+        Unplug6: Şərti ifadələr
         Artist3: Rəssam 3
         Unplug7: Mahnı bəstələmə
         Farmer2: Fermer 2
@@ -89,7 +89,7 @@
         Artist4: Rəssam 4
         Unplug9: Estafet proqramlaşdırması
         Farmer3: Fermer 3
-        Unplug10: "İnternet"
+        Unplug10: İnternet
         Artist5: Rəssam 5
         Unplug11: Yekun
         MazeEC: Labirint
@@ -174,8 +174,8 @@
           etməklə bütün tərəfləri fərqli rənglərdə olan üçbucaq çəkin. İpucu: dönmək
           blokunu üzərindəki rəqəmi klikləməklə nə qədər dönməli olduğunuzu tapmalı
           olacaqsınız.'
-        turtle_1_5: "İndi, məşq üçün, zərf çəkməkdən ötrü bir üçbucaq və sonra bir
-          kvadrat çəkin."
+        turtle_1_5: İndi, məşq üçün, zərf çəkməkdən ötrü bir üçbucaq və sonra bir
+          kvadrat çəkin.
         turtle_1_6: 'Bu üçbucağı və kvadratı necə çəkmək olar? İpucu: Əvvəl üçbucağı
           çəkin, sonra kvadratı çəkməzdən öncə nə qədər dönmək lazım olduğunu hesablayın.'
         turtle_1_7: Yaxşı, gəlin məsələni bir az çətinləşdirək - görün bu yaşıl eynəyi
@@ -184,8 +184,8 @@
         turtle_1_8: Yaxşı, bu kodu çalışdırsanız nə baş verəcəyini tapmağa çalışın
           (və ya yoxlamaq üçün "İcra et" düyməsini basın). Sonra rəsmi bitirmək üçün
           onu kifayət qədər çalışdırın. Rənglər hər dəfə fərqli olacaq.
-        turtle_1_9: "Çevrə çəkmək üçün sual işarəsini hansı rəqəmlə əvəz etmək lazım
-          olduğunu tapa bilərsinizmi?"
+        turtle_1_9: Çevrə çəkmək üçün sual işarəsini hansı rəqəmlə əvəz etmək lazım
+          olduğunu tapa bilərsinizmi?
         turtle_1_10: 'Siz bunu bacardınız! İndi nə istəsəniz çəkə bilərsiniz. Bir
           neçə maraqlı ideya: çubuq adam, qar dənəciyi ve ya spiral. Həm də yeni "enini
           təyin et" blokunu sınaqdan keçirin. Əylənin!'
@@ -259,9 +259,9 @@
         turtle_2_3: '"Təkrar et" ("Dövrlər" kateqoriyasında) blokundan istifadə etməklə
           bir birindən 120 dərəcə aralı olan və ölçüsü 100-ə bərabər 3 kvadrat çəkiniz.
           Və bunu edərkən, 3 fərqli, təsadüfi rənglərdən istifadə edin.'
-        turtle_2_4: "İndi daha bəzəkli olacağıq. Hər birini 10 dərəcə çevirməklə eni
+        turtle_2_4: 'İndi daha bəzəkli olacağıq. Hər birini 10 dərəcə çevirməklə eni
           100 pixel olan 36 kvadrat çəkmək üçün kodu dəyişin. Məsləhət: məni daha
-          sürətlə hərəkət etdirmək üçün sürüngəcdən istifadə edə bilərsiniz."
+          sürətlə hərəkət etdirmək üçün sürüngəcdən istifadə edə bilərsiniz.'
         turtle_2_5: Kənarları 50, 60, 70, 80 və 90 piksel olan kvadratlar çəkin. Sizə
           "kvadrat çək" funksiyasından beş dəfə istifadə etmək lazım gələcək.
         turtle_2_6: 'Yaxşı, bu proqram axırıncı dəfəki kimi kvadratları çəkmək üçün
@@ -573,7 +573,7 @@
         Unplug3: Millimetrlik kağızda proqramlaşdırma
         Unplug4: Alqoritmlər
         Unplug5: Funksiyalar
-        Unplug6: "Şərti ifadələr"
+        Unplug6: Şərti ifadələr
         Unplug7: Songwriting
         Unplug8: Mücərrədlik
         Unplug9: Relay programming
@@ -602,7 +602,7 @@
         C2_bee_conditionals: Bee Conditionals
         C2_playlab_createstory: Play Lab - Create a Story
         C2_graph_paper: Millimetrlik kağızda proqramlaşdırma
-        C2_conditionals_with_cards: "Şərti ifadələr"
+        C2_conditionals_with_cards: Şərti ifadələr
         C2_binary_bracelets: Binary Bracelets
         C2_replay_programming: Estafet proqramlaşdırması
         C2_paper_airplanes: Paper Airplanes
