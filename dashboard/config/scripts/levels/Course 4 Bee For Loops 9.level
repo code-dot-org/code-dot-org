@@ -19,8 +19,7 @@
     "nectar_goal": "16",
     "instructions": "The last number in your for loop is called the \"increment,\"  and each time the loop is run the counter variable goes up by the increment. Try collecting these flowers using an increment of 2.",
     "ideal": "9",
-    "use_modal_function_editor": "false",
-    "maze_data": null
+    "use_modal_function_editor": "false"
   }
 }]]></config>
   <blocks>
@@ -36,7 +35,7 @@
           </value>
         </block>
         <block type="controls_for" inline="true">
-          <title name="VAR">Counter</title>
+          <title name="VAR">counter</title>
           <value name="FROM">
             <block type="math_number">
               <title name="NUM">1</title>
@@ -54,14 +53,14 @@
           </value>
         </block>
         <block type="variables_get">
-          <title name="VAR">Counter</title>
+          <title name="VAR">counter</title>
         </block>
       </xml>
     </toolbox_blocks>
     <required_blocks>
       <xml>
         <block type="controls_for" inline="true">
-          <title name="VAR">Counter</title>
+          <title name="VAR">counter</title>
           <value name="FROM">
             <block type="math_number">
               <title name="NUM">1</title>
@@ -80,7 +79,7 @@
         </block>
         <block type="maze_moveForward"/>
         <block type="variables_get">
-          <title name="VAR">Counter</title>
+          <title name="VAR">counter</title>
         </block>
         <block type="maze_nectar"/>
       </xml>

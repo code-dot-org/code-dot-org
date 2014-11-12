@@ -6,205 +6,37 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Hmmm, those shapes are getting bigger every time! Didn't we already solve this problem with variables? How can we use the counter variable to make the sides smaller as there are more of them?",
+    "instructions": "Hmmm, those shapes are getting bigger every time! Didn't we already solve this problem with variables? How can we use the counter variable to make the sides smaller as there are more of them? Instead of moving forward by a set amount, try moving forward (100 / counter) pixels.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
-    "disable_variable_editing": "false",
+    "disable_variable_editing": "true",
     "start_direction": "90",
     "x": "50",
-    "y": "250",
+    "y": "210",
     "free_play": "false",
-    "slider_speed": ".5",
+    "slider_speed": ".8",
     "impressive": "false",
-    "ideal": "15",
-    "use_modal_function_editor": "false"
+    "ideal": "16",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false"
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" movable="false" deletable="false">
+        <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="controls_for_counter" inline="true">
               <mutation counter="counter"/>
               <value name="FROM">
                 <block type="math_number">
-                  <title name="NUM">8</title>
+                  <title name="NUM">3</title>
                 </block>
               </value>
               <value name="TO">
                 <block type="math_number">
-                  <title name="NUM">3</title>
-                </block>
-              </value>
-              <value name="BY">
-                <block type="math_number">
-                  <title name="NUM">1</title>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-      </xml>
-    </start_blocks>
-    <toolbox_blocks>
-      <xml>
-        <block type="draw_move" inline="true">
-          <title name="DIR">moveForward</title>
-          <value name="VALUE">
-            <block type="math_number">
-              <title name="NUM">100</title>
-            </block>
-          </value>
-        </block>
-        <block type="draw_turn" inline="true">
-          <title name="DIR">turnRight</title>
-          <value name="VALUE">
-            <block type="math_number">
-              <title name="NUM">90</title>
-            </block>
-          </value>
-        </block>
-        <block type="draw_turn" inline="true">
-          <title name="DIR">turnLeft</title>
-          <value name="VALUE">
-            <block type="math_number">
-              <title name="NUM">90</title>
-            </block>
-          </value>
-        </block>
-        <block type="jump" inline="true">
-          <title name="DIR">jumpForward</title>
-          <value name="VALUE">
-            <block type="math_number">
-              <title name="NUM">100</title>
-            </block>
-          </value>
-        </block>
-        <block type="controls_for_counter" inline="true">
-          <mutation counter="counter"/>
-          <value name="FROM">
-            <block type="math_number">
-              <title name="NUM">1</title>
-            </block>
-          </value>
-          <value name="TO">
-            <block type="math_number">
-              <title name="NUM">100</title>
-            </block>
-          </value>
-          <value name="BY">
-            <block type="math_number">
-              <title name="NUM">10</title>
-            </block>
-          </value>
-        </block>
-        <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-            <block type="math_number">
-              <title name="NUM">3</title>
-            </block>
-          </value>
-        </block>
-        <block type="variables_get">
-          <title name="VAR">counter</title>
-        </block>
-        <block type="math_arithmetic" inline="true">
-          <title name="OP">DIVIDE</title>
-          <value name="A">
-            <block type="math_number">
-              <title name="NUM">0</title>
-            </block>
-          </value>
-          <value name="B">
-            <block type="math_number">
-              <title name="NUM">0</title>
-            </block>
-          </value>
-        </block>
-        <block type="math_number">
-          <title name="NUM">0</title>
-        </block>
-      </xml>
-    </toolbox_blocks>
-    <required_blocks>
-      <xml>
-        <block type="draw_move" inline="true">
-          <title name="DIR">moveForward</title>
-          <value name="VALUE">
-            <block type="math_number">
-              <title name="NUM">20</title>
-            </block>
-          </value>
-        </block>
-        <block type="jump" inline="true">
-          <title name="DIR">jumpForward</title>
-          <value name="VALUE">
-            <block type="math_number">
-              <title name="NUM">55</title>
-            </block>
-          </value>
-        </block>
-        <block type="draw_turn" inline="true">
-          <title name="DIR">turnLeft</title>
-          <value name="VALUE">
-            <block type="math_arithmetic" inline="true">
-              <title name="OP">DIVIDE</title>
-              <value name="A">
-                <block type="math_number">
-                  <title name="NUM">360</title>
-                </block>
-              </value>
-              <value name="B">
-                <block type="variables_get">
-                  <title name="VAR">counter</title>
-                </block>
-              </value>
-            </block>
-          </value>
-        </block>
-        <block type="controls_for_counter" inline="true">
-          <mutation counter="counter"/>
-          <value name="FROM">
-            <block type="math_number">
-              <title name="NUM">8</title>
-            </block>
-          </value>
-          <value name="TO">
-            <block type="math_number">
-              <title name="NUM">3</title>
-            </block>
-          </value>
-          <value name="BY">
-            <block type="math_number">
-              <title name="NUM">1</title>
-            </block>
-          </value>
-        </block>
-        <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-            <block type="variables_get">
-              <title name="VAR">counter</title>
-            </block>
-          </value>
-        </block>
-      </xml>
-    </required_blocks>
-    <solution_blocks>
-      <xml>
-        <block type="when_run" movable="false" deletable="false">
-          <next>
-            <block type="controls_for_counter" inline="true">
-              <mutation counter="counter"/>
-              <value name="FROM">
-                <block type="math_number">
-                  <title name="NUM">8</title>
-                </block>
-              </value>
-              <value name="TO">
-                <block type="math_number">
-                  <title name="NUM">3</title>
+                  <title name="NUM">10</title>
                 </block>
               </value>
               <value name="BY">
@@ -250,11 +82,208 @@
                     </block>
                   </statement>
                   <next>
+                    <block type="jump_by_constant">
+                      <title name="DIR">jumpForward</title>
+                      <title name="VALUE">40</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <category name="Actions">
+          <block type="draw_move" inline="true">
+            <title name="DIR">moveForward</title>
+            <value name="VALUE">
+              <block type="math_number">
+                <title name="NUM">100</title>
+              </block>
+            </value>
+          </block>
+          <block type="jump" inline="true">
+            <title name="DIR">jumpForward</title>
+            <value name="VALUE">
+              <block type="math_number">
+                <title name="NUM">100</title>
+              </block>
+            </value>
+          </block>
+          <block type="draw_turn" inline="true">
+            <title name="DIR">turnRight</title>
+            <value name="VALUE">
+              <block type="math_number">
+                <title name="NUM">90</title>
+              </block>
+            </value>
+          </block>
+          <block type="draw_turn" inline="true">
+            <title name="DIR">turnLeft</title>
+            <value name="VALUE">
+              <block type="math_number">
+                <title name="NUM">90</title>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Loops">
+          <block type="controls_for_counter" inline="true">
+            <mutation counter="counter"/>
+            <value name="FROM">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+            <value name="TO">
+              <block type="math_number">
+                <title name="NUM">100</title>
+              </block>
+            </value>
+            <value name="BY">
+              <block type="math_number">
+                <title name="NUM">10</title>
+              </block>
+            </value>
+          </block>
+          <block type="controls_repeat_ext" inline="true">
+            <value name="TIMES">
+              <block type="math_number">
+                <title name="NUM">3</title>
+              </block>
+            </value>
+          </block>
+          <block type="variables_get">
+            <title name="VAR">counter</title>
+          </block>
+        </category>
+        <category name="Math">
+          <block type="math_number">
+            <title name="NUM">0</title>
+          </block>
+          <block type="math_arithmetic" inline="true">
+            <title name="OP">DIVIDE</title>
+            <value name="A">
+              <block type="math_number">
+                <title name="NUM">0</title>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number">
+                <title name="NUM">0</title>
+              </block>
+            </value>
+          </block>
+        </category>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="math_arithmetic" inline="true">
+          <title name="OP">DIVIDE</title>
+          <value name="A">
+            <block type="math_number">
+              <title name="NUM">100</title>
+            </block>
+          </value>
+          <value name="B">
+            <block type="variables_get">
+              <title name="VAR">counter</title>
+            </block>
+          </value>
+        </block>
+        <block type="math_arithmetic" inline="true">
+          <title name="OP">DIVIDE</title>
+          <value name="A">
+            <block type="math_number">
+              <title name="NUM">360</title>
+            </block>
+          </value>
+          <value name="B">
+            <block type="variables_get">
+              <title name="VAR">counter</title>
+            </block>
+          </value>
+        </block>
+      </xml>
+    </required_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_for_counter" inline="true">
+              <mutation counter="counter"/>
+              <value name="FROM">
+                <block type="math_number">
+                  <title name="NUM">3</title>
+                </block>
+              </value>
+              <value name="TO">
+                <block type="math_number">
+                  <title name="NUM">10</title>
+                </block>
+              </value>
+              <value name="BY">
+                <block type="math_number">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="controls_repeat_ext" inline="true">
+                  <value name="TIMES">
+                    <block type="variables_get">
+                      <title name="VAR">counter</title>
+                    </block>
+                  </value>
+                  <statement name="DO">
+                    <block type="draw_move" inline="true">
+                      <title name="DIR">moveForward</title>
+                      <value name="VALUE">
+                        <block type="math_arithmetic" inline="true">
+                          <title name="OP">DIVIDE</title>
+                          <value name="A">
+                            <block type="math_number">
+                              <title name="NUM">100</title>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="variables_get">
+                              <title name="VAR">counter</title>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="draw_turn" inline="true">
+                          <title name="DIR">turnLeft</title>
+                          <value name="VALUE">
+                            <block type="math_arithmetic" inline="true">
+                              <title name="OP">DIVIDE</title>
+                              <value name="A">
+                                <block type="math_number">
+                                  <title name="NUM">360</title>
+                                </block>
+                              </value>
+                              <value name="B">
+                                <block type="variables_get">
+                                  <title name="VAR">counter</title>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
                     <block type="jump" inline="true">
                       <title name="DIR">jumpForward</title>
                       <value name="VALUE">
                         <block type="math_number">
-                          <title name="NUM">55</title>
+                          <title name="NUM">40</title>
                         </block>
                       </value>
                     </block>

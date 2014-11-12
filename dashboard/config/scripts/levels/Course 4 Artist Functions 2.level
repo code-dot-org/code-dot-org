@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "That square loop is great, and it would be nice to be able to just say \"draw a square\" whenever I want one. Functions allow us to do just that! Any time you write some code that you want to use over and over again you can put it into a function.\r\n\r\nEdit the existing \"draw a square\" function so that it draws a square with side length 100.",
+    "instructions": "Let's take that square loop and turn it into a function, so anytime you want to draw a square you only have to call the function. Click \"edit\" on the existing \"draw a square\" function and make it draw a 100 pixel square.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -18,7 +18,8 @@
     "slider_speed": ".5",
     "impressive": "false",
     "use_modal_function_editor": "true",
-    "ideal": "9"
+    "ideal": "9",
+    "use_contract_editor": "false"
   }
 }]]></config>
   <blocks>
@@ -113,17 +114,8 @@
     </required_blocks>
     <solution_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
+        <block type="when_run" movable="false" deletable="false">
           <next>
-            <block type="procedures_callnoreturn">
-              <mutation name="Draw a square"/>
-            </block>
-          </next>
-        </block>
-        <block type="procedures_defnoreturn">
-          <mutation/>
-          <title name="NAME">Draw a square</title>
-          <statement name="STACK">
             <block type="controls_repeat_ext" inline="true">
               <value name="TIMES">
                 <block type="math_number">
@@ -151,7 +143,7 @@
                 </block>
               </statement>
             </block>
-          </statement>
+          </next>
         </block>
       </xml>
     </solution_blocks>

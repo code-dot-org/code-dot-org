@@ -174,10 +174,12 @@ Turtle.init = function(config) {
   };
 
   config.afterInject = function() {
-    // Add to reserved word list: API, local variables in execution evironment
-    // (execute) and the infinite loop detection function.
-    //XXX Not sure if this is still right.
-    Blockly.JavaScript.addReservedWords('Turtle,code');
+    if (BlocklyApps.usingBlockly) {
+      // Add to reserved word list: API, local variables in execution evironment
+      // (execute) and the infinite loop detection function.
+      //XXX Not sure if this is still right.
+      Blockly.JavaScript.addReservedWords('Turtle,code');
+    }
 
     // Helper for creating canvas elements.
     var createCanvas = function(id, width, height) {
@@ -247,7 +249,7 @@ Turtle.init = function(config) {
     // pre-load image for line pattern block. Creating the image object and setting source doesn't seem to be
     // enough in this case, so we're actually creating and reusing the object within the document body.
 
-    if (config.level.edit_blocks || skin.id == "anna" || skin.id == "elsa")
+    if (BlocklyApps.usingBlockly && config.level.edit_blocks)
     {
       var imageContainer = document.createElement('div');
       imageContainer.style.display='none';
@@ -294,11 +296,18 @@ Turtle.drawLogOnCanvas = function(log, canvas) {
 };
 
 Turtle.drawBlocksOnCanvas = function(blocks, canvas) {
-  var domBlocks = Blockly.Xml.textToDom(blocks);
-  Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, domBlocks);
-  var code = Blockly.Generator.blockSpaceToCode('JavaScript');
+  var code;
+  if (BlocklyApps.usingBlockly) {
+    var domBlocks = Blockly.Xml.textToDom(blocks);
+    Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, domBlocks);
+    code = Blockly.Generator.blockSpaceToCode('JavaScript');
+  } else {
+    code = blocks;
+  }
   Turtle.evalCode(code);
-  Blockly.mainBlockSpace.clear();
+  if (BlocklyApps.usingBlockly) {
+    Blockly.mainBlockSpace.clear();
+  }
   Turtle.drawCurrentBlocksOnCanvas(canvas);
 };
 
@@ -608,7 +617,9 @@ Turtle.display = function() {
 BlocklyApps.runButtonClick = function() {
   BlocklyApps.toggleRunReset('reset');
   document.getElementById('spinner').style.visibility = 'visible';
-  Blockly.mainBlockSpace.traceOn(true);
+  if (BlocklyApps.usingBlockly) {
+    Blockly.mainBlockSpace.traceOn(true);
+  }
   BlocklyApps.attempts++;
   Turtle.execute();
 };
@@ -682,8 +693,10 @@ Turtle.execute = function() {
   // animate the transcript.
   Turtle.pid = window.setTimeout(Turtle.animate, 100);
 
-  // Disable toolbox while running
-  Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
+  if (BlocklyApps.usingBlockly) {
+    // Disable toolbox while running
+    Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
+  }
 };
 
 // Divide each jump into substeps so that we can animate every movement.
@@ -725,7 +738,9 @@ function executeTuple () {
  */
 function finishExecution () {
   document.getElementById('spinner').style.visibility = 'hidden';
-  Blockly.mainBlockSpace.highlightBlock(null);
+  if (BlocklyApps.usingBlockly) {
+    Blockly.mainBlockSpace.highlightBlock(null);
+  }
   Turtle.checkAnswer();
 }
 
@@ -1200,11 +1215,12 @@ Turtle.checkAnswer = function() {
 
   // Test whether the current level is a free play level, or the level has
   // been completed
-  var levelComplete = level.freePlay || isCorrect(delta, permittedErrors);
+  var levelComplete = (level.freePlay || isCorrect(delta, permittedErrors)) &&
+                        (!level.editCode || !Turtle.executionError);
   Turtle.testResults = BlocklyApps.getTestResults(levelComplete);
 
   var program;
-  if (!level.editCode) {
+  if (BlocklyApps.usingBlockly) {
     var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
     program = Blockly.Xml.domToText(xml);
   }
@@ -1233,7 +1249,7 @@ Turtle.checkAnswer = function() {
     // Check that they didn't use a crazy large repeat value when drawing a
     // circle.  This complains if the limit doesn't start with 3.
     // Note that this level does not use colour, so no need to check for that.
-    if (level.failForCircleRepeatValue) {
+    if (level.failForCircleRepeatValue && BlocklyApps.usingBlockly) {
       var code = Blockly.Generator.blockSpaceToCode('JavaScript');
       if (code.indexOf('count < 3') == -1) {
         Turtle.testResults =
@@ -1244,13 +1260,6 @@ Turtle.checkAnswer = function() {
   }
 
   if (level.editCode) {
-    if (Turtle.executionError) {
-      levelComplete = false;
-    }
-    Turtle.testResults = levelComplete ?
-      BlocklyApps.TestResults.ALL_PASS :
-      BlocklyApps.TestResults.TOO_FEW_BLOCKS_FAIL;
-
     // If we want to "normalize" the JavaScript to avoid proliferation of nearly
     // identical versions of the code on the service, we could do either of these:
 
@@ -1293,8 +1302,10 @@ Turtle.checkAnswer = function() {
 
   BlocklyApps.report(reportData);
 
-  // reenable toolbox
-  Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
+  if (BlocklyApps.usingBlockly) {
+    // reenable toolbox
+    Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
+  }
 
   // The call to displayFeedback() will happen later in onReportComplete()
 };

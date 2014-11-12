@@ -67,4 +67,4 @@ Show students an inspirational video to kick off the Hour of Code. Examples:
 
 **Hour of Code पछि के आउँछ?**
 
-कसरी प्रविधिले काम गर्छ र कसरी सफ्टवेयरको एप्लिकेसनहरूको सिर्जना गर्ने भन्ने थप कुराको बारेमा सिक्न Hour of Code केबल पहिलो चरण मात्र हो। < % यदि @country 'ब्रिटेन' = = %> कसरी प्रविधिले काम गर्छ र कसरी सफ्टवेयरको एप्लिकेसनहरूको सिर्जना गर्ने भन्ने थप कुराको बारेमा सिक्न Hour of Code केबल पहिलो चरण मात्र हो। यो यात्रालाई जारी राख्न, [अनलाइन सिक्न तपाइँको बालकलाई प्रोत्साहन गर्नुहोस्](http://uk.code.org/learn/beyond)। <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %>
+कसरी प्रविधिले काम गर्छ र कसरी सफ्टवेयरको एप्लिकेसनहरूको सिर्जना गर्ने भन्ने थप कुराको बारेमा सिक्न Hour of Code केबल पहिलो चरण मात्र हो। कसरी प्रविधिले काम गर्छ र कसरी सफ्टवेयरको एप्लिकेसनहरूको सिर्जना गर्ने भन्ने थप कुराको बारेमा सिक्न Hour of Code केबल पहिलो चरण मात्र हो। यो यात्रालाई जारी राख्न, [अनलाइन सिक्न तपाइँको बालकलाई प्रोत्साहन गर्नुहोस्](http://code.org/learn/beyond)
