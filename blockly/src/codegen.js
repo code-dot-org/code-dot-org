@@ -211,6 +211,7 @@ exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
         var style = {color: '#FFFF22'};
         var line = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
         editor.clearLineMarks();
+        // editor.mark(line, start - cumulativeLength[line], style);
         editor.markLine(line, style);
       } else {
         var selection = editor.aceEditor.getSelection();
