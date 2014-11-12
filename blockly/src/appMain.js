@@ -48,6 +48,8 @@ module.exports = function(app, levels, options) {
   BlocklyApps.BASE_URL = options.baseUrl;
   BlocklyApps.CACHE_BUST = options.cacheBust;
   BlocklyApps.LOCALE = options.locale || BlocklyApps.LOCALE;
+  // NOTE: editCode (which currently implies droplet) and usingBlockly are
+  // currently mutually exclusive.
   BlocklyApps.editCode = options.level && options.level.editCode;
   BlocklyApps.usingBlockly = !BlocklyApps.editCode;
 
