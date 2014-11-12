@@ -7,7 +7,6 @@ var DIRT_COUNT = DIRT_MAX * 2 + 2;
 // Duplicated from maze.js so that I don't need a dependency
 var SQUARE_SIZE = 50;
 
-// Duplicated from Blockly, so that I don't have to take a depency on it
 var SVG_NS = "http://www.w3.org/2000/svg";
 
 var DirtDrawer = module.exports = function (dirtMap, dirtAsset) {
@@ -60,9 +59,9 @@ function createImage (prefix, row, col, imageInfo) {
   var imgId = cellId(prefix, row, col);
 
   // Create clip path.
-  var clip = document.createElementNS(Blockly.SVG_NS, 'clipPath');
+  var clip = document.createElementNS(SVG_NS, 'clipPath');
   clip.setAttribute('id', clipId);
-  var rect = document.createElementNS(Blockly.SVG_NS, 'rect');
+  var rect = document.createElementNS(SVG_NS, 'rect');
   rect.setAttribute('x', col * SQUARE_SIZE);
   rect.setAttribute('y', row * SQUARE_SIZE);
   rect.setAttribute('width', SQUARE_SIZE);
@@ -70,7 +69,7 @@ function createImage (prefix, row, col, imageInfo) {
   clip.appendChild(rect);
   svg.insertBefore(clip, pegmanElement);
   // Create image.
-  var img = document.createElementNS(Blockly.SVG_NS, 'image');
+  var img = document.createElementNS(SVG_NS, 'image');
   img.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', imageInfo.href);
   img.setAttribute('height', SQUARE_SIZE);
   img.setAttribute('width', imageInfo.unclippedWidth);
