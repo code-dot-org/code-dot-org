@@ -43,6 +43,10 @@
     "full_name": "Germany",
     "default_language": "de"
   },
+  "eg": {
+    "full_name": "Egypt",
+    "default_language": "ar"
+  },
   "es": {
     "full_name": "Latin America",
     "default_language": "es"
