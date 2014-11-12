@@ -132,6 +132,12 @@ class Artist < Blockly
       <block type="draw_a_rhombus"></block>
       <block type="draw_upper_wave"></block>
       <block type="draw_lower_wave"></block>
+      <block type="create_square_snowflake"></block>
+      <block type="create_lined_snowflake"></block>
+      <block type="create_parallelogram_snowflake"></block>
+      <block type="create_spiral_snowflake"></block>
+      <block type="create_fractal_snowflake"></block>
+
     </category>
     <category name="Loops">
       <block type="controls_for_counter">
