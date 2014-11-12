@@ -15,7 +15,11 @@
     "ideal": "10",
     "slider_speed": ".5",
     "disable_param_editing": "true",
-    "free_play": "false"
+    "free_play": "false",
+    "disable_variable_editing": "true",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "impressive": "false"
   }
 }]]></config>
   <blocks>
@@ -23,7 +27,7 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="variables_set" inline="false" editable="false">
+            <block type="variables_set" inline="false">
               <title name="VAR">sides</title>
               <value name="VALUE">
                 <block type="math_number">
@@ -33,7 +37,7 @@
               <next>
                 <block type="controls_repeat_ext" inline="true">
                   <value name="TIMES">
-                    <block type="variables_get" editable="false">
+                    <block type="variables_get">
                       <title name="VAR">sides</title>
                     </block>
                   </value>
@@ -62,7 +66,7 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="variables_get" editable="false">
+        <block type="variables_get">
           <title name="VAR">sides</title>
         </block>
         <block type="math_arithmetic" inline="true">

@@ -24,13 +24,13 @@ Get your [whole school to participate](<%= hoc_uri('/prizes') %>) for a chance f
 
 ## 2. Hour of Codeを主催するよう学校と交渉しましょう。
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](<%= hoc_uri('/files/schools-handout.pdf') %>). あなたの学校が参加したならば, [10,000ドル分の価値があるテクノロジーがあなたの学校に当選するチャンスがあります ](/prizes)そして、あなたの住まいの地域にある学校にも参加するよう誘ってください。
+[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](http://hourofcode.com/files/schools-handout.pdf). あなたの学校が参加したならば, [10,000ドル分の価値があるテクノロジーがあなたの学校に当選するチャンスがあります ](/prizes)そして、あなたの住まいの地域にある学校にも参加するよう誘ってください。
 
 <% else %>
 
 ## 2. Hour of Codeを主催するよう学校と交渉しましょう。
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or give [this handout](<%= hoc_uri('/files/schools-handout.pdf') %>) to your principal.
+[Send this email](<%= hoc_uri('/resources#email') %>) or give [this handout](http://hourofcode.com/files/schools-handout.pdf) to your principal.
 
 <% end %>
 
@@ -40,7 +40,7 @@ Get your [whole school to participate](<%= hoc_uri('/prizes') %>) for a chance f
 
 ## 4. Ask your employer to get involved
 
-[Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](<%= hoc_uri('/resources/hoc-one-pager.pdf') %>).
+[Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](http://hourofcode.com/resources/hoc-one-pager.pdf).
 
 ## 5. Promote Hour of Code within your community
 
@@ -48,6 +48,6 @@ Get your [whole school to participate](<%= hoc_uri('/prizes') %>) for a chance f
 
 ## 6. Ask a local elected official to support the Hour of Code
 
-[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board. Or [give them this handout](<%= hoc_uri('/resources/hoc-one-pager.pdf') %>) and invite them to visit your school.
+[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board. Or [give them this handout](http://hourofcode.com/resources/hoc-one-pager.pdf) and invite them to visit your school.
 
 <%= view 'popup_window.js' %>

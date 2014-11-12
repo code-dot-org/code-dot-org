@@ -179,15 +179,17 @@ Webapp.init = function(config) {
   };
 
   config.afterInject = function() {
-    /**
-     * The richness of block colours, regardless of the hue.
-     * MOOC blocks should be brighter (target audience is younger).
-     * Must be in the range of 0 (inclusive) to 1 (exclusive).
-     * Blockly's default is 0.45.
-     */
-    Blockly.HSV_SATURATION = 0.6;
+    if (BlocklyApps.usingBlockly) {
+      /**
+       * The richness of block colours, regardless of the hue.
+       * MOOC blocks should be brighter (target audience is younger).
+       * Must be in the range of 0 (inclusive) to 1 (exclusive).
+       * Blockly's default is 0.45.
+       */
+      Blockly.HSV_SATURATION = 0.6;
 
-    Blockly.SNAP_RADIUS *= Webapp.scale.snapRadius;
+      Blockly.SNAP_RADIUS *= Webapp.scale.snapRadius;
+    }
 
     drawDiv();
   };
@@ -311,7 +313,9 @@ BlocklyApps.runButtonClick = function() {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
   BlocklyApps.toggleRunReset('reset');
-  Blockly.mainBlockSpace.traceOn(true);
+  if (BlocklyApps.usingBlockly) {
+    Blockly.mainBlockSpace.traceOn(true);
+  }
   BlocklyApps.reset(false);
   BlocklyApps.attempts++;
   Webapp.execute();
@@ -498,15 +502,11 @@ Webapp.onPuzzleComplete = function() {
   // Stop everything on screen
   Webapp.clearEventHandlersKillTickLoop();
 
-  // If we know they succeeded, mark levelComplete true
-  // Note that we have not yet animated the succesful run
-  var levelComplete = (Webapp.result === BlocklyApps.ResultType.SUCCESS);
-
-  // If the current level is a free play, always return the free play
-  // result type
+  // If the current level is a free play, always return the free play result
   if (level.freePlay) {
     Webapp.testResults = BlocklyApps.TestResults.FREE_PLAY;
   } else {
+    var levelComplete = (Webapp.result === BlocklyApps.ResultType.SUCCESS);
     Webapp.testResults = BlocklyApps.getTestResults(levelComplete);
   }
 
@@ -519,10 +519,6 @@ Webapp.onPuzzleComplete = function() {
   var program;
 
   if (level.editCode) {
-    Webapp.testResults = levelComplete ?
-      BlocklyApps.TestResults.ALL_PASS :
-      BlocklyApps.TestResults.TOO_FEW_BLOCKS_FAIL;
-
     // If we want to "normalize" the JavaScript to avoid proliferation of nearly
     // identical versions of the code on the service, we could do either of these:
 

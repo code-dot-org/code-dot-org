@@ -32,6 +32,9 @@
           <title name="DIR">moveForward</title>
         </block>
         <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="maze_turn">
           <title name="DIR">turnLeft</title>
         </block>
         <block type="maze_nectar"/>

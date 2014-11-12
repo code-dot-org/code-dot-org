@@ -16,7 +16,10 @@
     "slider_speed": ".5",
     "disable_param_editing": "true",
     "free_play": "false",
-    "disable_variable_editing": "false"
+    "disable_variable_editing": "true",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "impressive": "false"
   }
 }]]></config>
   <blocks>
@@ -24,7 +27,7 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="variables_set" inline="false" deletable="false" movable="false" editable="false">
+            <block type="variables_set" inline="false" deletable="false" movable="false">
               <title name="VAR">length</title>
               <next>
                 <block type="controls_repeat" deletable="false" movable="false" editable="false">
@@ -33,7 +36,7 @@
                     <block type="draw_move" inline="true" deletable="false" movable="false" editable="false">
                       <title name="DIR">moveForward</title>
                       <value name="VALUE">
-                        <block type="variables_get" deletable="false" movable="false" editable="false">
+                        <block type="variables_get" deletable="false" movable="false">
                           <title name="VAR">length</title>
                         </block>
                       </value>

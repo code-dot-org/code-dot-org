@@ -66,7 +66,6 @@ class LevelsHelperTest < ActionView::TestCase
     Video.all.each{|video| assert_includes(choices_cached, video.key)}
   end
 
-
   test "blockly options converts 'impressive' => 'false' to 'impressive => false'" do
     @level = create :artist
     @script_level = create :script_level, level: @level
@@ -79,4 +78,16 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal false, level['freePlay']
   end
 
+  test "custom callouts" do
+    @level.level_num = 'custom'
+    @level.callout_json = '[{"localization_key": "run", "element_id": "#runButton"}]'
+
+    select_and_remember_callouts
+    assert_equal 1, @callouts.count
+    assert_equal '#runButton', @callouts[0]['element_id']
+    assert_equal 'Hit "Run" to try your program', @callouts[0]['localized_text']
+
+    select_and_remember_callouts
+    assert_equal 0, @callouts.count
+  end
 end
