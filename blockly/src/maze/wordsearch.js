@@ -4,6 +4,8 @@ var cellId = require('./mazeUtils').cellId;
 
 var SquareType = require('./tiles').SquareType;
 
+var SVG_NS = "http://www.w3.org/2000/svg";
+
 /**
  * Create a new WordSearch.
  */
@@ -113,8 +115,8 @@ WordSearch.prototype.drawTile_ = function (svg, letter, row, col) {
   var backgroundId = cellId('backgroundLetter', row, col);
   var textId = cellId('letter', row, col);
 
-  var group = document.createElementNS(Blockly.SVG_NS, 'g');
-  var background = document.createElementNS(Blockly.SVG_NS, 'rect');
+  var group = document.createElementNS(SVG_NS, 'g');
+  var background = document.createElementNS(SVG_NS, 'rect');
   background.setAttribute('id', backgroundId);
   background.setAttribute('width', SQUARE_SIZE);
   background.setAttribute('height', SQUARE_SIZE);
@@ -124,7 +126,7 @@ WordSearch.prototype.drawTile_ = function (svg, letter, row, col) {
   background.setAttribute('stroke-width', 3);
   group.appendChild(background);
 
-  var text = document.createElementNS(Blockly.SVG_NS, 'text');
+  var text = document.createElementNS(SVG_NS, 'text');
   text.setAttribute('id', textId);
   text.setAttribute('class', 'search-letter');
   text.setAttribute('width', SQUARE_SIZE);
