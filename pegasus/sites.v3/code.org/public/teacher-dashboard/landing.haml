@@ -5,7 +5,7 @@ theme: none
  
 %div{"ng-controller" => "LandingController"}
 
-  %div{style: "float:left; width:60%"}
+  %div{style: "float:left; width:100%"}
     %h1{style: "margin-bottom:10px"}= I18n.t('dashboard_landing_title')
 
     %p
@@ -14,13 +14,22 @@ theme: none
       = I18n.t('dashboard_landing_watch_video')
     %br/
 
-  %div{style: "float:right; width:40%; margin-top:50px; text-align:right"}
-    %a{href: "http://#{canonical_hostname('studio.code.org')}", target: "_blank"}
-      %button.btn.btn-info= I18n.t('dashboard_landing_view_as_student')
+%div.tile
+  = view :light_tile, url:"/teacher-dashboard#/sections", target:"", img_src:"/images/fit-606/logo_student_accounts_progress.png", title:"Student Accounts and Progress", text:""
+%div.tile
+  = view :light_tile, url:"http://studio.code.org", target:"", img_src:"/images/fit-606/logo_your_course_progress.png", title:"Your Course Progress", text:""
+%div.tile{:style=>"margin-right: 0px"}
+  = view :light_tile, url:"/teacher-dashboard#/plan", img_src:"/images/fit-606/logo_lesson_plans_resources.png", target:"", title:"Lesson Plans and Resources", text:""
 
-  %div{style: "clear:both"}
+%div.tile{:style=>"margin-top: 26px;"}
+  = view :light_tile, url:"http://support.code.org/hc/communities/public/topics", target:"_blank", img_src:"/images/fit-606/logo_community.jpg", title:"Help and Community", text:""
+%div.tile{:style=>"margin-top: 26px"}
+  = view :light_tile, url:"/professional-development-workshops", target:"_blank", img_src:"/images/fit-606/logo_us_map.png", title:"Professional Development", text:""
+%div.tile{:style=>"margin-top: 26px; margin-right: 0px"}
+  = view :light_tile, url:"https://education.skype.com/computerscience", target:"_blank", img_src:"/images/fit-606/logo_skype_classroom.jpg", title:"Computer Science <br/> Guest Speakers", text:""
 
-  = view :teacher_notices
+
+%div{style: "clear:both; margin-top: 20px"}
 
   .biggestClassProgress{"ng-show" => "sectionProgressUrl"}
     %h2= I18n.t('dashboard_landing_progress_title')
@@ -34,8 +43,17 @@ theme: none
     %p= I18n.t('dashboard_landing_available_courses')
     %br/
     %div{"ng-include"=>"", src: "'/dashboardapi/courses/'"}
-
   -#.debug
     %h2 DEBUG
     %pre
       {{student | json}}
+
+:css
+  .tile {
+    margin-right: 26px;
+    display: inline-block;
+    width: 31.2%;
+  }
+  .title {
+    height: 64px;
+  }

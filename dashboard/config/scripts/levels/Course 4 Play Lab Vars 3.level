@@ -1,0 +1,68 @@
+<Studio>
+  <config><![CDATA[{
+  "game_id": 26,
+  "created_at": "2014-10-08T22:53:18.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "studio",
+    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
+    "failure_condition": "function () {\r\n}",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,1,0,1,0,1,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[16,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "soft_buttons": [
+      "leftButton",
+      "rightButton",
+      "upButton"
+    ],
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "false",
+    "free_play": "false",
+    "edge_collisions": "true",
+    "projectile_collisions": "true",
+    "allow_sprites_outside_playspace": "false",
+    "sprites_hidden_to_start": "false",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "maze_data": null,
+    "instructions": "Here's a new kind of game! Use the left and right arrows to move, and the up arrow to jump. See if you can collect all of the flags."
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="studio_whenArrow" editable="false" deletable="false" movable="false">
+          <title name="VALUE">left</title>
+          <next>
+            <block type="studio_move" editable="false" deletable="false" movable="false">
+              <title name="DIR">8</title>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenArrow" editable="false" deletable="false" movable="false">
+          <title name="VALUE">up</title>
+          <next>
+            <block type="studio_moveDistance" editable="false" deletable="false" movable="false">
+              <title name="DIR">1</title>
+              <title name="DISTANCE">100</title>
+              <next>
+                <block type="studio_moveDistance" editable="false" deletable="false" movable="false">
+                  <title name="DIR">4</title>
+                  <title name="DISTANCE">100</title>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenArrow" editable="false" deletable="false" movable="false">
+          <title name="VALUE">right</title>
+          <next>
+            <block type="studio_move" editable="false" deletable="false" movable="false">
+              <title name="DIR">2</title>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+  </blocks>
+</Studio>

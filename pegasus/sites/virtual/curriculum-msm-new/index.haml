@@ -1,0 +1,11 @@
+---
+title: Curriculum for MSM
+---
+
+%h1 Curriculum for MSM
+
+-content = Course.new("msm-new")
+-content.get_lessons.each do |lesson|
+  %a{:href=>lesson.url}
+    Lesson #{lesson.number}: #{lesson.title}
+    %br

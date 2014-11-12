@@ -55,6 +55,12 @@ Blockly.Css.CONTENT = [
   '#blockly .userHidden {',
   '  display: none;',
   '}',
+  '#blockly.readonly .userHidden {',
+  '  display: inline;',
+  '}',
+  '#blockly.readonly {',
+  '  border: 0;',
+  '}',
   '#blockly.edit .userHidden {',
   '  display: inline;',
   '  fill-opacity: 0.5;',
@@ -169,7 +175,7 @@ Blockly.Css.CONTENT = [
   '  user-select: none;',
   '  cursor: inherit;',
   '}',
-  '',
+
   '.blocklyHidden {',
   '  display: none;',
   '}',
@@ -192,7 +198,7 @@ Blockly.Css.CONTENT = [
   '  font-size: 9pt;',
   '  fill: #000;',
   '}',
-  '',
+
   '.blocklyIconShield {',
   '  cursor: default;',
   '  fill: #00c;',
@@ -460,16 +466,16 @@ Blockly.Css.CONTENT = [
   '#modalContainer > svg * {',
   '  pointer-events: visiblePainted;',
   '}',
-  '',
+
   '/*',
   ' * Copyright 2007 The Closure Library Authors. All Rights Reserved.',
   ' *',
   ' * Use of this source code is governed by the Apache License, Version 2.0.',
   ' * See the COPYING file for details.',
   ' */',
-  '',
+
   '/* Author: pupius@google.com (Daniel Pupius) */',
-  '',
+
   '/*',
   ' Styles to make the colorpicker look like the old gmail color picker',
   ' NOTE: without CSS scoping this will override styles defined in palette.css',
@@ -478,12 +484,12 @@ Blockly.Css.CONTENT = [
   '  outline: none;',
   '  cursor: default;',
   '}',
-  '',
+
   '.goog-palette-table {',
   '  border: 1px solid #666;',
   '  border-collapse: collapse;',
   '}',
-  '',
+
   '.goog-palette-cell {',
   '  height: 25px;',
   '  width: 25px;',
@@ -494,18 +500,18 @@ Blockly.Css.CONTENT = [
   '  border-right: 1px solid #666;',
   '  font-size: 1px;',
   '}',
-  '',
+
   '.goog-palette-colorswatch {',
   '  position: relative;',
   '  height: 25px;',
   '  width: 25px;',
   '  border: 1px solid #666;',
   '}',
-  '',
+
   '.goog-palette-cell-hover .goog-palette-colorswatch {',
   '  border: 1px solid #FFF;',
   '}',
-  '',
+
   '.goog-palette-cell-selected .goog-palette-colorswatch {',
   '  border: 1px solid #000;',
   '  color: #fff;',
@@ -709,5 +715,64 @@ Blockly.Css.CONTENT = [
   '  margin: 4px 0;',
   '  padding: 0;',
   '}',
+
+  /**
+   * Standard styling for select menus
+   */
+  '.goog-flat-menu-button {',
+  '  background-color: #fff;',
+  '  border: 1px solid #c9c9c9;',
+  '  color: #333;',
+  '  cursor: pointer;',
+  '  font: normal 95%;',
+  '  list-style: none;',
+  '  margin: 0 2px;',
+  '  outline: none;',
+  '  padding: 1px 4px;',
+  '  position: relative;',
+  '  text-decoration: none;',
+  '  vertical-align: middle;',
+  '}',
+
+  '.goog-flat-menu-button-disabled * {',
+  '  border-color: #ccc;',
+  '  color: #999;',
+  '  cursor: default;',
+  '}',
+
+  '.goog-flat-menu-button-hover {',
+  '  border-color: #9cf #69e #69e #7af !important; /* Hover border wins. */',
+  '}',
+
+  '.goog-flat-menu-button-active {',
+  '  background-color: #bbb;',
+  '  background-position: bottom left;',
+  '}',
+
+  '.goog-flat-menu-button-focused {',
+  '  border-color: #bbb;',
+  '}',
+
+  '.goog-flat-menu-button-caption {',
+  '  padding-right: 10px;',
+  '  vertical-align: top;',
+  '}',
+
+  '.goog-flat-menu-button-dropdown {',
+  '  /* Client apps may override the URL at which they serve the sprite. */',
+  '  background: url(https://ssl.gstatic.com/editor/editortoolbar.png) no-repeat -388px 0;',
+  '  position: absolute;',
+  '  right: 2px;',
+  '  top: 0;',
+  '  vertical-align: top;',
+  '  width: 7px;',
+  '}',
+
+  '.goog-inline-block {',
+  '  position: relative;',
+  '  display: -moz-inline-box; /* Ignored by FF3 and later. */',
+  '  display: inline-block;',
+  '}',
+
   ''
 ];

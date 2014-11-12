@@ -6,8 +6,8 @@
   "user_id": 1,
   "properties": {
     "skin": "studio",
-    "success_condition": "function () {\r\n  return Studio.sprite[0].isCollidingWith(1);\r\n}",
-    "failure_condition": "function () {\r\n  return Studio.sprite[2].isCollidingWith(1);\r\n}",
+    "success_condition": "function () {\r\n  return Studio.sprite[2].isCollidingWith(1);\r\n}",
+    "failure_condition": "function () {\r\n  return Studio.sprite[1].isCollidingWith(1);\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[16,0,0,0,0,0,0,0],[0,0,0,0,0,0,16,0],[16,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -21,40 +21,15 @@
       "rightButton"
     ],
     "instructions": "This race seems a bit unfair, try to get to the cat before the penguin does!",
-    "predraw_blocks": "<xml><block type=\"studio_whenArrow\" movable=\"false\"><title name=\"VALUE\">right</title><next><block type=\"studio_moveDistance\" movable=\"false\" editable=\"false\"><title name=\"SPRITE\">0</title><title name=\"DIR\">2</title><title name=\"DISTANCE\">25</title></block></next></block><block type=\"studio_repeatForever\"><statement name=\"DO\"><block type=\"studio_moveDistance\"><title name=\"SPRITE\">1</title><title name=\"DIR\">1</title><title name=\"DISTANCE\">25</title><next><block type=\"studio_moveDistance\"><title name=\"SPRITE\">1</title><title name=\"DIR\">4</title><title name=\"DISTANCE\">25</title></block></next></block></statement></block></xml>"
+    "predraw_blocks": "<xml><block type=\"studio_whenArrow\" movable=\"false\"><title name=\"VALUE\">right</title><next><block type=\"studio_moveDistance\" movable=\"false\" editable=\"false\"><title name=\"SPRITE\">0</title><title name=\"DIR\">2</title><title name=\"DISTANCE\">25</title></block></next></block><block type=\"studio_repeatForever\"><statement name=\"DO\"><block type=\"studio_moveDistance\"><title name=\"SPRITE\">1</title><title name=\"DIR\">1</title><title name=\"DISTANCE\">25</title><next><block type=\"studio_moveDistance\"><title name=\"SPRITE\">1</title><title name=\"DIR\">4</title><title name=\"DISTANCE\">25</title></block></next></block></statement></block></xml>",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run">
-          <next>
-            <block type="studio_showTitleScreen">
-              <title name="TITLE">The Big Race</title>
-              <title name="TEXT">Get to the Cat first!</title>
-              <next>
-                <block type="studio_setSpriteSpeed">
-                  <title name="SPRITE">0</title>
-                  <title name="VALUE">Studio.SpriteSpeed.SLOW</title>
-                  <next>
-                    <block type="studio_setSpriteSpeed">
-                      <title name="SPRITE">2</title>
-                      <title name="VALUE">Studio.SpriteSpeed.NORMAL</title>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
-        <block type="studio_repeatForever">
-          <statement name="DO">
-            <block type="studio_move">
-              <title name="SPRITE">2</title>
-              <title name="DIR">2</title>
-            </block>
-          </statement>
-        </block>
         <block type="studio_whenArrow">
           <title name="VALUE">right</title>
           <next>
@@ -63,6 +38,28 @@
               <title name="DIR">2</title>
             </block>
           </next>
+        </block>
+        <block type="when_run" uservisible="false">
+          <next>
+            <block type="studio_setSpriteSpeed" uservisible="false">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Studio.SpriteSpeed.SLOW</title>
+              <next>
+                <block type="studio_setSpriteSpeed" uservisible="false">
+                  <title name="SPRITE">2</title>
+                  <title name="VALUE">Studio.SpriteSpeed.NORMAL</title>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="studio_repeatForever" uservisible="false">
+          <statement name="DO">
+            <block type="studio_move" uservisible="false">
+              <title name="SPRITE">2</title>
+              <title name="DIR">2</title>
+            </block>
+          </statement>
         </block>
       </xml>
     </start_blocks>

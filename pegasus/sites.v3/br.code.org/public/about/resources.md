@@ -1,8 +1,8 @@
 ---
-title: Recursos da Hora do Código do Brasil
+title: Recursos da Hora do Código no Brasil
 nav: about_nav
 social:
-  'og:title' : 'A Hora do Código do Brasil está chegando'
+  'og:title' : 'A Hora do Código no Brasil está chegando'
   'og:description' : "A Hora do Código é um movimento global que atinge dezenas de milhões de estudantes em mais de 180 países e mais de 30 idiomas. Podem participar pessoas com idades entre 4 e 104 anos."
   'og:image' : "http://br.code.org/images/ogimage.png"
   'og:image:width' : "1200"
@@ -11,7 +11,7 @@ social:
   "og:video": ""
   "og:video:width": ""
   "og:video:height": ""
-  "og:video:type": "" 
+  "og:video:type": ""
 ---
 
 # Recursos para o educador

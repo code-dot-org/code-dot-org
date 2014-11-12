@@ -4,7 +4,7 @@
   computer_science: Computer Science
   computer_science_edweek: Computer Science Education Week
   csedweek_dates: December 9-15, 2013
-  n_have_learned_an_hoc: "<h1>#</h1><h3>have tried an</h3><h2>HOUR of CODE</h2>"
+  n_have_learned_an_hoc: <h1>#</h1><h3>have tried an</h3><h2>HOUR of CODE</h2>
   anybody_can_learn: Anybody can learn.
   learn_now: Learn Now
   petition_message: Sign your name if you think every student in every school should
@@ -45,7 +45,7 @@
     statements, and basic algorithms.
   all_ages: All ages
   beginner: Beginner
-  n_participants: "# participants"
+  n_participants: '# participants'
   go: Go
   thank_you_: Thank you!
   congratulations: Congratulations!
@@ -81,7 +81,7 @@
   beyond_an_hour: Beyond an HOUR OF CODE >
   get_started: Get Started
   i_agree: I agree
-  participant_select: "- Select -"
+  participant_select: '- Select -'
   participant_student: Student
   participant_parent: Parent
   participant_educator: Educator
@@ -110,11 +110,11 @@
   help_recruit_coders: Help us recruit more coders to your team!
   help_recruit: Help us recruit more coders!
   lines_of_code: OVER <b># LINES OF CODE</b> WRITTEN TO DATE.
-  lines_of_code_alt: "<b>#</b> LINES OF CODE WRITTEN BY STUDENTS"
+  lines_of_code_alt: <b>#</b> LINES OF CODE WRITTEN BY STUDENTS
   who_has_done_hoc: 'Who has done the #HourOfCode? @codeorg'
   hoc_leaderboards: The Hour of Code Leaderboards
-  students_and_lines: "%{students} students have done the Hour of Code and written
-    %{lines} lines of code."
+  students_and_lines: '%{students} students have done the Hour of Code and written
+    %{lines} lines of code.'
   start_hoc: Start the Hour of Code now
   contact_form_topic_press: Press/media (interview or speaking engagement)
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
@@ -209,7 +209,7 @@
   dashboard_action_edit: Edit
   dashboard_action_save: Save
   dashboard_action_save_all: Save all
-  dashboard_action_cancel: "रद्द करें"
+  dashboard_action_cancel: रद्द करें
   dashboard_action_delete: Delete
   dashboard_action_confirm: Delete?
   dashboard_action_delete_yes: 'Yes'
@@ -345,7 +345,7 @@
   makegameswithus_name: Build an iPhone game in your browser!
   appinventor_name: AppInventor Hour of Code
   touchdevelop_name: TouchDevelop
-  blockly_name: "ब्लॉक्ली"
+  blockly_name: ब्लॉक्ली
   thinkersmith2_name: Binary Baubles
   codehs_name: Learn to Code With Karel the Dog
   codeavengers_name: Build a Game with JavaScript

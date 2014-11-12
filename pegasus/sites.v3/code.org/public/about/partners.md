@@ -8,6 +8,12 @@ nav: about_nav
 
 <HR>
 
+# International Partners
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'international') %>
+
+<HR>
+
 # Hour of Code Promotional partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'promotional') %>

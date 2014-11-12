@@ -41,9 +41,29 @@ Blockly.BlockSvgFunctional.prototype.initChildren = function () {
     'clip-path': 'url(#blockClip' + this.block_.id + ')',
     visibility: this.headerHeight > 0 ? 'visible' : 'hidden'
   }, this.svgGroup_);
+  this.createFunctionalMarkers_();
+};
 
+Blockly.BlockSvgFunctional.prototype.renderDraw_ = function(iconWidth, inputRows) {
+  this.createFunctionalMarkers_();
+  goog.base(this, 'renderDraw_', iconWidth, inputRows);
+
+  this.blockClipRect_.setAttribute('d', this.svgPath_.getAttribute('d'));
+
+  var rect = this.svgPath_.getBBox();
+  this.divider_.setAttribute('width', rect.width - 2);
+};
+
+/**
+ * Ensures functional markers exist for each input
+ * @private
+ */
+Blockly.BlockSvgFunctional.prototype.createFunctionalMarkers_ = function () {
   for (var i = 0; i < this.block_.inputList.length; i++) {
     var input = this.block_.inputList[i];
+    if (this.inputMarkers_[input.name]) {
+      continue;
+    }
     if (input.type !== Blockly.FUNCTIONAL_INPUT) {
       continue;
     }
@@ -51,15 +71,6 @@ Blockly.BlockSvgFunctional.prototype.initChildren = function () {
       fill: 'red' // todo
     }, this.svgGroup_);
   }
-};
-
-Blockly.BlockSvgFunctional.prototype.renderDraw_ = function(iconWidth, inputRows) {
-  goog.base(this, 'renderDraw_', iconWidth, inputRows);
-
-  this.blockClipRect_.setAttribute('d', this.svgPath_.getAttribute('d'));
-
-  var rect = this.svgPath_.getBBox();
-  this.divider_.setAttribute('width', rect.width - 2);
 };
 
 Blockly.BlockSvgFunctional.prototype.renderDrawRight_ = function(renderInfo,

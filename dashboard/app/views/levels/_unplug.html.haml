@@ -29,20 +29,20 @@
             = t('download_pdf', :pdf => i + 1)
       - elsif no_lesson_plans
         %a.btn.pull-right.pdf-button{disabled: 'disabled'}
-          Downloadable activity coming soon.
+          = t('download_coming_soon')
 
     - if video
       .clear
       .video-container
     - else
-      %p.coming-soon Video Coming Soon!
+      %p.coming-soon= t('video_coming_soon')
 
   .clear
 
   - if show_lesson_plans && has_pegasus_lesson_plan
     .lesson-plan
       %h2
-        Lesson Plan
+        = t('lesson_plan')
       %a.btn.pdf-button{href: lesson_plan_html_url(@script_level.stage), target: '_blank'}
         = t('view_lesson_plan')
       %a.btn.pdf-button{href: lesson_plan_pdf_url(@script_level.stage), target: '_blank'}

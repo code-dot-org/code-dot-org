@@ -1,16 +1,16 @@
 "km-KH":
-  hello: "សួស្ដី​ពិភពលោក"
+  hello: សួស្ដី​ពិភពលោក
   select_language: Please select your language
-  computer_science: "វិទ្យាសាស្ត្រ​កុំព្យូទ័រ"
-  computer_science_edweek: "សប្ដាហ៍​នៃ​ការ​សិក្សា​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ"
+  computer_science: វិទ្យាសាស្ត្រ​កុំព្យូទ័រ
+  computer_science_edweek: សប្ដាហ៍​នៃ​ការ​សិក្សា​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ
   csedweek_dates: December 9-15, 2013
-  n_have_learned_an_hoc: "<h1>#</h1><h3>have tried an</h3><h2>HOUR of CODE&trade;</h2>"
+  n_have_learned_an_hoc: <h1>#</h1><h3>have tried an</h3><h2>HOUR of CODE&trade;</h2>
   anybody_can_learn: Anybody can learn.
-  learn_now: "ចាប់ផ្ដើមរៀននៅពេលនេះ"
-  petition_message: "សិស្សទាំងអស់ដែលរៀននៅសាលារៀន គួរតែមានឱកាសបានរៀនអំពីវិទ្យាសាស្រ្តកុំព្យូទ័រ"
+  learn_now: ចាប់ផ្ដើមរៀននៅពេលនេះ
+  petition_message: សិស្សទាំងអស់ដែលរៀននៅសាលារៀន គួរតែមានឱកាសបានរៀនអំពីវិទ្យាសាស្រ្តកុំព្យូទ័រ
   petition_sign_message: 'If you agree, sign your name.  Join # others.'
-  name: "ឈ្មោះ"
-  email: "អ៊ីមែល"
+  name: ឈ្មោះ
+  email: អ៊ីមែល
   zipcode: ZIP code or country
   submit: Submit
   twentyhours_heading: Try our Intro to Computer Science Course
@@ -31,7 +31,7 @@
     intro course</a>.  Any elementary school can <a href='http://code.org/educate/k5'>teach
     computer science</a>. Ask high schools to <a href='http://code.org/educate/districts'>partner
     with us.
-  california_button: "រៀនបន្ថែមទៀត"
+  california_button: រៀនបន្ថែមទៀត
   flappy_heading: Flappy Birthday to Code.org
   flappy_text: Code.org just turned 1 year old.<br/><br/> Celebrate with us by making
     your own custom <b>Flappy</b> game. Code your own rules, and share it with friends!
@@ -44,7 +44,7 @@
     statements, and basic algorithms.
   all_ages: All ages
   beginner: Beginner
-  n_participants: "# participants"
+  n_participants: '# participants'
   go: Go
   thank_you_: Thank you!
   congratulations: Congratulations!
@@ -67,20 +67,20 @@
   support_url: http://support.code.org/
   country: Country
   city: City
-  gender: "ភេទ"
-  boys: "ប្រុស"
+  gender: ភេទ
+  boys: ប្រុស
   girls: Girls
   give_my_hour: 'Give my Hour to:'
   girls_team: Girls' Team
   boys_team: Boys' Team
   tell_the_world: Tell the world!
   thanks_for_voting: Thanks for voting!
-  share_on_facebook: "ចែករំលែកទៅកាន់Facebook"
+  share_on_facebook: ចែករំលែកទៅកាន់Facebook
   share_on_twitter: Share on Twitter
   beyond_an_hour: Beyond an HOUR OF CODE >
   get_started: Start
   i_agree: I agree
-  participant_select: "- Select -"
+  participant_select: '- Select -'
   participant_student: Student
   participant_parent: Parent
   participant_educator: Educator
@@ -104,34 +104,34 @@
   learn_hoc: Learn an Hour of Code
   beyond_hoc: Beyond One Hour
   what_gender: What gender are you?
-  girl: "ស្រី"
-  boy: "ប្រុស"
+  girl: ស្រី
+  boy: ប្រុស
   help_recruit_coders: Help us recruit more coders to your team!
   help_recruit: Help us recruit more coders!
   lines_of_code: OVER <b># LINES OF CODE</b> WRITTEN TO DATE.
-  lines_of_code_alt: "<b>#</b> LINES OF CODE WRITTEN BY STUDENTS"
+  lines_of_code_alt: <b>#</b> LINES OF CODE WRITTEN BY STUDENTS
   who_has_done_hoc: 'Who has done the #HourOfCode? @codeorg'
   hoc_leaderboards: The Hour of Code Leaderboards
-  students_and_lines: "%{students} students have done the Hour of Code and written
-    %{lines} lines of code."
+  students_and_lines: '%{students} students have done the Hour of Code and written
+    %{lines} lines of code.'
   start_hoc: Start the Hour of Code now
   contact_form_topic_press: Press/media (interview or speaking engagement)
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
   studiobar_elementary_title: Elementary courses
   studiobar_elementary_body: Our three new courses for K&#8209;5
-  studiobar_hoc_title: "ពេលវេលា​នៃ​កូដ"
+  studiobar_hoc_title: ពេលវេលា​នៃ​កូដ
   studiobar_hoc_body: Learn to code with Angry Birds
   studiobar_flappy_title: Flappy កូដ
   studiobar_flappy_body: Make and share your own Flappy game
   studiobar_teacher_title: Teacher dashboard
   studiobar_teacher_body: 'For teachers: view your students'' progress'
-  contact_form_topic_student: "ខ្ញុំគឺជាសិស្ស"
+  contact_form_topic_student: ខ្ញុំគឺជាសិស្ស
   contact_form_topic_parent: I'm a parent
-  contact_form_topic_teacher: "ខ្ញុំគឺជាគ្រូបង្រៀន"
+  contact_form_topic_teacher: ខ្ញុំគឺជាគ្រូបង្រៀន
   contact_form_topic_outside_us: I'm outside the U.S.
   contact_form_topic_contribution: Charitable contribution
   contact_form_topic_partner: I'd like to partner
-  contact_form_topic_other: "ផ្សេងៗ"
+  contact_form_topic_other: ផ្សេងៗ
   contact_form_label_topic: Topic
   contact_form_label_email: Your email address
   contact_form_label_message: Message
@@ -208,11 +208,11 @@
   dashboard_action_edit: Edit
   dashboard_action_save: Save
   dashboard_action_save_all: Save all
-  dashboard_action_cancel: "បោះបង់"
+  dashboard_action_cancel: បោះបង់
   dashboard_action_delete: Delete
   dashboard_action_confirm: Delete?
-  dashboard_action_delete_yes: "យល់ព្រម"
-  dashboard_action_delete_no: "ទេ"
+  dashboard_action_delete_yes: យល់ព្រម
+  dashboard_action_delete_no: ទេ
   dashboard_action_done: Done
   dashboard_action_required: required
   dashboard_navigation_home_page: Teacher home page
@@ -253,13 +253,13 @@
   dashboard_students_new_section: You've created a new section! Now add your students
     using the <b>Add student</b> and <b>Add multiple students</b> buttons above.
   dashboard_students_placeholder_name: Student Name
-  dashboard_students_name: "ឈ្មោះ"
+  dashboard_students_name: ឈ្មោះ
   dashboard_students_age: Age
-  dashboard_students_gender: "ភេទ"
+  dashboard_students_gender: ភេទ
   dashboard_students_male: Male
   dashboard_students_female: Female
   dashboard_students_secret: Secret
-  dashboard_students_password: "ពាក្យ​សម្ងាត់"
+  dashboard_students_password: ពាក្យ​សម្ងាត់
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
   dashboard_students_completed_levels: Completed Levels
@@ -304,10 +304,10 @@
   dashboard_student_worksheet: student worksheet
   dashboard_teacher_worksheet: teacher worksheet
   dashboard_grade_k: K
-  dashboard_grade_other: "ផ្សេងៗ"
+  dashboard_grade_other: ផ្សេងៗ
   dashboard_login_word: word
   dashboard_login_picture: picture
-  dashboard_login_none: "អ៊ីមែល"
+  dashboard_login_none: អ៊ីមែល
   dashboard_new_password: new password
   stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
     week alone:'

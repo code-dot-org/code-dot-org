@@ -4,7 +4,7 @@
   computer_science: Informatyka
   computer_science_edweek: Tydzień Edukacji Informatycznej
   csedweek_dates: 9-15 Grudnia 2013
-  n_have_learned_an_hoc: "<h1>#</h1><h3>próbowali</h3><h2>Godzina Kodowania</h2>"
+  n_have_learned_an_hoc: <h1>#</h1><h3>próbowali</h3><h2>Godzina Kodowania</h2>
   anybody_can_learn: Każdy może się uczyć.
   learn_now: Rozpocznij naukę teraz
   petition_message: Każdy uczeń w każdej szkole, powinien mieć możliwość nauki informatyki
@@ -46,7 +46,7 @@
     powtarzania, instrukcje warunkowe i podstawowe algorytmy.
   all_ages: Wszystkie grupy wiekowe
   beginner: Początkujący
-  n_participants: "# uczestników"
+  n_participants: '# uczestników'
   go: Idź
   thank_you_: Dziękujemy!
   congratulations: Gratulacje!
@@ -84,12 +84,12 @@
   beyond_an_hour: Po zakończeniu Godziny Programowania (HOUR OF CODE) >
   get_started: Rozpocznij
   i_agree: Zgadzam się
-  participant_select: "-Wybierz-"
+  participant_select: -Wybierz-
   participant_student: uczeń
   participant_parent: Rodzic
   participant_educator: Nauczyciel
   participant_engineer: Programista
-  participant_other: "Żaden z powyższych"
+  participant_other: Żaden z powyższych
   i_am_a: Jestem
   never_spam: Nigdy nie wysyłamy spamu
   enter_country: Podaj kraj, jeśli inny niż Stany Zjednoczone
@@ -103,7 +103,7 @@
   learn_next_level: Przejdź na następny poziom
   learn_online: Wypróbuj inne kursy online
   learn_classes: Znajdź grupę w swoim otoczeniu
-  hoc_is_here: "#HourOfCode jest tutaj - Sprawdź to! @codeorg"
+  hoc_is_here: '#HourOfCode jest tutaj - Sprawdź to! @codeorg'
   just_did_hoc: 'Właśnie wykonałem #HourOfCode - Sprawdź to! @codeorg'
   learn_hoc: Ucz się Hour of Code
   beyond_hoc: Poza One Hour
@@ -113,11 +113,11 @@
   help_recruit_coders: Pomóż nam przyjąć więcej programistów do Twojego zespołu!
   help_recruit: Pomóż nam przyjąć więcej programistów!
   lines_of_code: PONAD <b># LINII KODU</b> NAPISANYCH DO TEJ PORY.
-  lines_of_code_alt: "<b>#</b>LINIE KODU NAPISANE PRZEZ UCZNIÓW"
+  lines_of_code_alt: <b>#</b>LINIE KODU NAPISANE PRZEZ UCZNIÓW
   who_has_done_hoc: 'Kto wykonał #HourOfCode? @codeorg'
   hoc_leaderboards: Panel godziny programowania (Hour of Code)
-  students_and_lines: "%{students} uczniów ukończyło godzinę programowania (Hour of
-    Code)  i napisało %{lines} linii kodu."
+  students_and_lines: '%{students} uczniów ukończyło godzinę programowania (Hour of
+    Code)  i napisało %{lines} linii kodu.'
   start_hoc: Rozpocznij teraz godzinę programowania (One Hour of Code)
   contact_form_topic_press: Prasa/media (wywiad lub wypowiedź)
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>

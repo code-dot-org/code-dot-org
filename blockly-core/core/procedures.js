@@ -37,6 +37,10 @@ goog.require('Blockly.BlockSpace');
  */
 Blockly.Procedures.NAME_TYPE = 'PROCEDURE';
 
+Blockly.Procedures.DEFINITION_BLOCK_TYPES = [
+  'procedures_defnoreturn', 'procedures_defreturn', 'functional_definition'
+];
+
 /**
  * Find all user-created procedure definitions.
  * @return {!Array.<!Array.<!Array>>} Pair of arrays, the
@@ -48,15 +52,22 @@ Blockly.Procedures.allProcedures = function() {
   var blocks = Blockly.mainBlockSpace.getAllBlocks();
   var proceduresReturn = [];
   var proceduresNoReturn = [];
+  var proceduresFunctional = [];
   for (var x = 0; x < blocks.length; x++) {
     var func = blocks[x].getProcedureDef;
     if (func) {
       var tuple = func.call(blocks[x]);
       if (tuple) {
-        if (tuple[2]) {
-          proceduresReturn.push(tuple);
-        } else {
-          proceduresNoReturn.push(tuple);
+        switch(blocks[x].type) {
+          case 'functional_definition':
+            proceduresFunctional.push(tuple);
+            break;
+          case 'procedures_defreturn':
+            proceduresReturn.push(tuple);
+            break;
+          case 'procedures_defnoreturn':
+            proceduresNoReturn.push(tuple);
+            break;
         }
       }
     }
@@ -64,7 +75,8 @@ Blockly.Procedures.allProcedures = function() {
 
   proceduresNoReturn.sort(Blockly.Procedures.procTupleComparator_);
   proceduresReturn.sort(Blockly.Procedures.procTupleComparator_);
-  return [proceduresNoReturn, proceduresReturn];
+  proceduresFunctional.sort(Blockly.Procedures.procTupleComparator_);
+  return [proceduresNoReturn, proceduresReturn, proceduresFunctional];
 };
 
 /**
@@ -168,7 +180,7 @@ Blockly.Procedures.rename = function(text) {
  * @param {!Blockly.BlockSpace} blockSpace The flyout's blockSpace.
  */
 Blockly.Procedures.flyoutCategory = function(blocks, gaps, margin, blockSpace) {
-  if (!Blockly.useModalFunctionEditor) {
+  if (!Blockly.functionEditor) {
     if (Blockly.Blocks.procedures_defnoreturn) {
       var block = new Blockly.Block(blockSpace, 'procedures_defnoreturn');
       block.initSvg();
@@ -211,6 +223,7 @@ Blockly.Procedures.flyoutCategory = function(blocks, gaps, margin, blockSpace) {
   var tuple = Blockly.Procedures.allProcedures();
   populateProcedures(tuple[0], 'procedures_callnoreturn');
   populateProcedures(tuple[1], 'procedures_callreturn');
+  populateProcedures(tuple[2], 'functional_call');
 };
 
 /**

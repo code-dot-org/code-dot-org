@@ -15,7 +15,10 @@
     "disable_param_editing": "true",
     "disable_variable_editing": "true",
     "free_play": "false",
-    "slider_speed": ".5"
+    "slider_speed": ".5",
+    "ideal": "9",
+    "use_modal_function_editor": "false",
+    "impressive": "false"
   }
 }]]></config>
   <blocks>
@@ -31,6 +34,14 @@
         </block>
         <block type="draw_turn" inline="true">
           <title name="DIR">turnRight</title>
+          <value name="VALUE">
+            <block type="math_number">
+              <title name="NUM">90</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_turn" inline="true">
+          <title name="DIR">turnLeft</title>
           <value name="VALUE">
             <block type="math_number">
               <title name="NUM">90</title>

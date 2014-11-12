@@ -16,6 +16,13 @@
 license_key=<%= node['cdo-newrelic']['license-key'] %>
 
 #
+# Option : hostname
+# Value  : Name of the instance displayed on NewRelic
+# Default: OS-level hostname
+#
+hostname=<%= node.name %>
+
+#
 # Option : loglevel
 # Value  : Level of detail you want in the log file (as defined by the logfile
 #          setting below. Valid values are (in increasing levels of verbosity):

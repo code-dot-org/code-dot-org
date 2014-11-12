@@ -27,20 +27,10 @@ def src_dir(*paths)
 end
 
 def create_pegasus_log()
-  if le_token = CDO.pegasus_logentries_token
-    if rack_env?(:development)
-      return Le.new(le_token, true)
-    else
-      return Le.new(le_token)
-    end
+  if rack_env?(:development)
+    return Logger.new STDOUT
   else
-    if rack_env?(:development)
-      return Logger.new(STDOUT)
-    else
-      log_retain_count = 5
-      log_max_size = 104857600
-      return Logger.new(pegasus_dir('log', "#{rack_env}.log"), log_retain_count, log_max_size)
-    end
+    return Logger.new pegasus_dir('log', "#{rack_env}.log")
   end
 end
 

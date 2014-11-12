@@ -1,0 +1,15 @@
+---
+en:
+  data:
+    text_match:
+      text match test:
+        Mathematical Expression Assessment: Mathematical Expression Assessment
+        script_assets/msm/Unit 1/Exercise_5_question_2.png: script_assets/msm/Unit 1/Exercise_5_question_2.png
+        xyz: xyz
+        '123': '123'
+        /script_assets/msm/Unit 1/Exercise_5_question_2.png: /script_assets/msm/Unit 1/Exercise_5_question_2.png
+        Type out the arithmetic expression that this circle of evaluation evaluates to: Type out the arithmetic expression that this circle of evaluation evaluates to
+        (9-3)+(4*7): (9-3)+(4*7)
+        (9-3)+4*7: (9-3)+4*7
+        9-3+4*7: 9-3+4*7
+        Type the arithmetic expression here: Type the arithmetic expression here

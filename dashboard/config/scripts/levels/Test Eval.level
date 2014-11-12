@@ -1,0 +1,38 @@
+<Eval>
+  <config><![CDATA[{
+  "game_id": 36,
+  "created_at": "2014-11-06T17:32:44.401Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "eval"
+  }
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="functional_plus"/>
+        <block type="functional_minus"/>
+        <block type="functional_times"/>
+        <block type="functional_dividedby"/>
+        <block type="functional_math_number"/>
+        <block type="functional_string"/>
+        <block type="functional_style"/>
+        <block type="functional_circle"/>
+        <block type="functional_triangle"/>
+        <block type="functional_square"/>
+        <block type="functional_rectangle"/>
+        <block type="functional_ellipse"/>
+        <block type="functional_star"/>
+        <block type="place_image"/>
+        <block type="overlay"/>
+        <block type="underlay"/>
+        <block type="rotate"/>
+        <block type="scale"/>
+        <block type="functional_text"/>
+        <block type="string_append"/>
+        <block type="string_length"/>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Eval>

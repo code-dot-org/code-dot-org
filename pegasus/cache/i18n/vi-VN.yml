@@ -4,12 +4,12 @@
   computer_science: Khoa học máy tính
   computer_science_edweek: Tuần giáo dục khoa học máy tính
   csedweek_dates: Ngày 9-15 tháng 8 năm 2013
-  n_have_learned_an_hoc: "<h1>#</h1><h3>đã học xong khóa học</h3><h2>MỘT TIẾNG LẬP
-    TRÌNH</h2>"
+  n_have_learned_an_hoc: <h1>#</h1><h3>đã học xong khóa học</h3><h2>MỘT TIẾNG LẬP
+    TRÌNH</h2>
   anybody_can_learn: Tất cả mọi người điều có thể học.
   learn_now: Học ngay
-  petition_message: "Đăng ký tên của bạn nếu bạn nghĩ rằng mọi học sinh trong mọi
-    trường học nên có được cơ hội tìm hiểu về khoa học máy tính"
+  petition_message: Đăng ký tên của bạn nếu bạn nghĩ rằng mọi học sinh trong mọi trường
+    học nên có được cơ hội tìm hiểu về khoa học máy tính
   petition_sign_message: 'Nếu bạn đồng ý, điền tên của bạn.  Tham gia # những người
     khác.'
   name: Tên
@@ -58,10 +58,10 @@
   enter_valid_email: Vui lòng nhập một địa chỉ email hợp lệ
   get_a_certificate_message: Chúng tôi sẽ gửi cho bạn một Giấy Chứng Nhận và Thông
     Tin về việc làm thế nào để <a href='/learn/beyond'>Học Trong Vòng Một Giờ</a>
-  get_a_certificate_message_after: " Chứng chỉ của bạn được hoàn thành (Bạn đã học
+  get_a_certificate_message_after: ' Chứng chỉ của bạn được hoàn thành (Bạn đã học
     xong và lấy được Chứng Nhận). Nào, bây giờ xin hãy Tiếp tục với Khóa Học khác
-    của chúng ta  <a href='http://learn.code.org'>Khóa học 20 giờ</a>, hoặc xem thêm
-    những tùy chọn khác cho Khóa học  <a href='/learn/beyond'>Học Trong 1 Giờ</a>"
+    của chúng ta  <a href=''http://learn.code.org''>Khóa học 20 giờ</a>, hoặc xem
+    thêm những tùy chọn khác cho Khóa học  <a href=''/learn/beyond''>Học Trong 1 Giờ</a>'
   thanks_for_submitting: Cảm ơn bạn vì đã chấp nhận!
   if_you_enjoyed: Nếu bạn cảm thấy việc học Code thật thú vị thì hãy rủ bạn bè cùng
     tham gia nhé! Chúng tớ mong muốn cả thế giới có thể học về nó.
@@ -78,8 +78,8 @@
   boys: Nam
   girls: Nữ
   give_my_hour: 'Cho tôi giờ để:'
-  girls_team: "Đội nữ"
-  boys_team: "Đội nam"
+  girls_team: Đội nữ
+  boys_team: Đội nam
   tell_the_world: Nói với thê giới!
   thanks_for_voting: Cảm ơn bạn đã bỏ phiếu!
   share_on_facebook: Chia sẻ lên Facebook
@@ -87,7 +87,7 @@
   beyond_an_hour: Ngoài Một Giờ Lập Trình >
   get_started: Bắt đầu
   i_agree: Tôi đồng ý
-  participant_select: "-Chọn-"
+  participant_select: -Chọn-
   participant_student: học sinh
   participant_parent: Phụ Huynh
   participant_educator: Giáo viên
@@ -106,7 +106,7 @@
   learn_next_level: Tiếp tục đến cấp độ tiếp theo
   learn_online: Thử các khóa học trực tuyến khác
   learn_classes: Tìm một lớp học tại địa phương
-  hoc_is_here: "#HourOfCode là ở đây - kiểm tra nó xem! @codeorg"
+  hoc_is_here: '#HourOfCode là ở đây - kiểm tra nó xem! @codeorg'
   just_did_hoc: 'Tôi chỉ cần làm #HourOfCode - kiểm tra nó xem! @codeorg'
   learn_hoc: Học một Giờ lập trình
   beyond_hoc: Ngoài một giờ
@@ -117,11 +117,11 @@
     của bạn!
   help_recruit: Giúp chúng tôi tuyển dụng thêm lập trình viên!
   lines_of_code: OVER <b># NHỮNG DÒNG MÃ</b> VIẾT ĐẾN NAY.
-  lines_of_code_alt: "<b> # </b> NHỮNG DÒNG MÃ ĐƯỢC VIẾT BỞI SINH VIÊN"
+  lines_of_code_alt: '<b> # </b> NHỮNG DÒNG MÃ ĐƯỢC VIẾT BỞI SINH VIÊN'
   who_has_done_hoc: 'Những người đã hoàn thành #HourOfCode? @codeorg'
   hoc_leaderboards: Một Giờ Lập Trình Leaderboards
-  students_and_lines: "%{students} sinh viên có hoàn thành Một Giờ Lập Trình và viết%{lines}
-    những dòng lập trình."
+  students_and_lines: '%{students} sinh viên có hoàn thành Một Giờ Lập Trình và viết%{lines}
+    những dòng lập trình.'
   start_hoc: Bắt đầu một giờ lập trình ngay bây giờ
   contact_form_topic_press: Báo chí / truyền thông (phỏng vấn hoặc tham gia nói)
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
@@ -137,11 +137,11 @@
   contact_form_topic_parent: Tôi là một phụ huynh
   contact_form_topic_teacher: Tôi là một giáo viên/giáo dục
   contact_form_topic_outside_us: Tôi đang ở ngoài nước Mỹ.
-  contact_form_topic_contribution: "Đóng góp từ thiện"
+  contact_form_topic_contribution: Đóng góp từ thiện
   contact_form_topic_partner: Tôi muốn là đối tác
   contact_form_topic_other: Khác
   contact_form_label_topic: Chủ đề
-  contact_form_label_email: "Địa chỉ email của bạn"
+  contact_form_label_email: Địa chỉ email của bạn
   contact_form_label_message: Tin nhắn
   contact_form_label_submit: Gửi thư
   class_submission_in_school: In school
@@ -202,8 +202,8 @@
     office hours.
   dashboard_landing_print_certificates: In giấy chứng nhận cho học sinh hoàn thành
     khóa học này
-  dashboard_landing_educator_blog: "Đọc về tin tức và cập nhật của chúng tôi tại tài
-    liệu blog giáo dục của chúng tôi"
+  dashboard_landing_educator_blog: Đọc về tin tức và cập nhật của chúng tôi tại tài
+    liệu blog giáo dục của chúng tôi
   dashboard_landing_smart_hints: Please help us to add smart hints to Code.org tutorials
   dashboard_landing_video_player: Test our new video player at your school
   dashboard_landing_progress_title: Main class progress
@@ -219,7 +219,7 @@
   dashboard_action_cancel: Huỷ
   dashboard_action_delete: Delete
   dashboard_action_confirm: Delete?
-  dashboard_action_delete_yes: "Đồng ý"
+  dashboard_action_delete_yes: Đồng ý
   dashboard_action_delete_no: Không
   dashboard_action_done: Done
   dashboard_action_required: required
@@ -315,7 +315,7 @@
   dashboard_grade_other: Khác
   dashboard_login_word: word
   dashboard_login_picture: picture
-  dashboard_login_none: "Địa chỉ email"
+  dashboard_login_none: Địa chỉ email
   dashboard_new_password: new password
   stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
     week alone:'
