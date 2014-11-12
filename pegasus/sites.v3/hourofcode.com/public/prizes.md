@@ -3,8 +3,8 @@ title: Prizes
 layout: wide
 ---
 <div class="row">
-    <h1 class="col-sm-6">The Hour of Code — prizes for every organizer</h1>
-    <div class="col-sm-6 button-container centered">
+    <h1 class="col-sm-9">The Hour of Code — prizes for every organizer</h1>
+    <div class="col-sm-3 button-container centered">
         <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Sign up for a chance to win</button></a>
     </div>
 </div>
