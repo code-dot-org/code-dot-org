@@ -14,7 +14,11 @@
     "disable_param_editing": "true",
     "free_play": "false",
     "instructions": "Here's an algorithm that draws a triangle out of triangles. Can you modify it so that uses the \"sides\" variable to draw each triangle? Look through the code, and every time you see the number 3, replace it with your \"sides\" variable.",
-    "disable_variable_editing": "true"
+    "disable_variable_editing": "true",
+    "slider_speed": ".7",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "impressive": "false"
   }
 }]]></config>
   <blocks>

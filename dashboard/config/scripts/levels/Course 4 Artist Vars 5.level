@@ -15,7 +15,11 @@
     "ideal": "7",
     "slider_speed": ".5",
     "disable_param_editing": "true",
-    "free_play": "false"
+    "free_play": "false",
+    "disable_variable_editing": "true",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "impressive": "false"
   }
 }]]></config>
   <blocks>
@@ -23,7 +27,7 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="variables_set" inline="false" movable="false" editable="false">
+            <block type="variables_set" inline="false" movable="false">
               <title name="VAR">sides</title>
               <value name="VALUE">
                 <block type="math_number" movable="false">
