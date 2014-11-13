@@ -11,7 +11,7 @@ Code.org's Code Studio developed an elementary school curriculum that allows eve
 
 For information about our Elementary school computer science courses, see [this page](http://code.org/educate/k5).
 
-[<button>Code Studio</button>](http://code.org/k5)
+[<button>K-5 Courses in Code Studio</button>](http://code.org/k5)
 
 # Middle School #
 

@@ -261,7 +261,7 @@ Calc.execute = function() {
   BlocklyApps.report(reportData);
 
   window.setTimeout(function () {
-    Calc.step();
+    Calc.step(false);
   }, 1000);
 };
 
@@ -296,7 +296,7 @@ Calc.step = function (ignoreFailures) {
     continueButton.className += " hide";
 
     window.setTimeout(function () {
-      Calc.step();
+      Calc.step(false);
     }, 1000);
   }
 };
@@ -324,6 +324,8 @@ Calc.drawExpressions = function () {
       user.applyExpectation(expected);
     }
     drawSvgExpression('userExpression', user, true);
+    var deepest = user.getDeepestOperation();
+    BlocklyApps.highlight(deepest ? deepest.blockId : null);
   } else {
     clearSvgExpression('userExpression');
   }

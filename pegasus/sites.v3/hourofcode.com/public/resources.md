@@ -55,7 +55,6 @@ nav: resources_nav
 <a id="posters">
 ## Hang these posters in your school
 
-<br />
 [![image](/images/fit-280/mark-zuckerberg.png)](/resources/mark-zuckerberg-poster.pdf)
 [![image](/images/fit-280/marissa-mayer.png)](/resources/marissa-mayer-poster.pdf)
 [![image](/images/fit-280/chris-bosh.png)](/resources/chris-bosh-poster.pdf)
@@ -77,10 +76,10 @@ nav: resources_nav
 
 [![image](/images/fit-250/mark.jpg)](/images/mark.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 [![image](/images/fit-250/susan.jpg)](/images/susan.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
-[![image](/images/fit-250/ashton.jpg)](/images/ashton.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
-[![image](/images/fit-250/marissa.jpg)](/images/marissa.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 [![image](/images/fit-250/chris.jpg)](/images/chris.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
-
+[![image](/images/fit-250/marissa.jpg)](/images/marissa.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/fit-250/ashton.jpg)](/images/ashton.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/fit-250/barack.jpg)](/image/barack.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="sample-emails"></a>
 ## Send these emails to help promote the Hour of Code
