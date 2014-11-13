@@ -44,6 +44,10 @@
   %h2= hoc_s(:hoc_faq_why_cs_q)
   %div= hoc_s(:hoc_faq_why_cs_a).gsub(/http:\/\/code.org/, "http://#{codeorg_url()}")
 
+  -if @country == 'ie'
+    %h2 I am in Ireland. How do I participate?
+    %div Anyone can organise an Hour of Code event in Ireland. Find out more <a href="#{hoc_uri('/resources')}">here</a>.
+
   %h2= hoc_s(:hoc_faq_how_participate_q)
   %div= hoc_s(:hoc_faq_how_participate_a).gsub(/target-resources-how-to/, hoc_uri('/resources/how-to'))
 
@@ -56,7 +60,7 @@
   %h2= hoc_s(:hoc_faq_need_computers_q)
   %div= hoc_s(:hoc_faq_need_computers_a)
 
-  -if @country != 'us'
+  -if @country != 'us' && @country != 'ie'
     %h2= hoc_s(:hoc_faq_international_q).gsub(/<country>/, HOC_COUNTRIES[@country]['full_name'])
     %div= hoc_s(:hoc_faq_international_a).gsub(/target-resources/, hoc_uri('/resources'))
 
