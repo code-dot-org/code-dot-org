@@ -41,18 +41,30 @@ exports.install = function(blockly, blockInstallOptions) {
     return generator.variableDB_.getDistinctName(name, NAME_TYPE);
   };
 
-  // Create a smaller palette.
-  blockly.FieldColour.COLOURS = [
-    // Row 1.
-    Colours.BLACK, Colours.GREY,
-    Colours.KHAKI, Colours.WHITE,
-    // Row 2.
-    Colours.RED, Colours.PINK,
-    Colours.ORANGE, Colours.YELLOW,
-    // Row 3.
-    Colours.GREEN, Colours.BLUE,
-    Colours.AQUAMARINE, Colours.PLUM];
-  blockly.FieldColour.COLUMNS = 4;
+  if (skin.id == "anna" || skin.id == "elsa")
+  {
+    // Create a smaller palette.
+    blockly.FieldColour.COLOURS = [
+      Colours.FROZEN1, Colours.FROZEN2, Colours.FROZEN3,
+      Colours.FROZEN4, Colours.FROZEN5, Colours.FROZEN6,
+      Colours.FROZEN7, Colours.FROZEN8, Colours.FROZEN9];
+    blockly.FieldColour.COLUMNS = 3;
+
+  } else {
+
+    // Create a smaller palette.
+    blockly.FieldColour.COLOURS = [
+      // Row 1.
+      Colours.BLACK, Colours.GREY,
+      Colours.KHAKI, Colours.WHITE,
+      // Row 2.
+      Colours.RED, Colours.PINK,
+      Colours.ORANGE, Colours.YELLOW,
+      // Row 3.
+      Colours.GREEN, Colours.BLUE,
+      Colours.AQUAMARINE, Colours.PLUM];
+    blockly.FieldColour.COLUMNS = 4;
+  }
 
   // Block definitions.
   blockly.Blocks.draw_move_by_constant = {

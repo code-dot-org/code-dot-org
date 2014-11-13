@@ -221,7 +221,7 @@ Turtle.init = function(config) {
           Blockly.JavaScript.colour_random.functionName = functionName;
           var func = [];
           func.push('function ' + functionName + '() {');
-          func.push('  var colors = [ "#e8ebed", "#bbd1e4", "#e8ebed", "#1e618f", "#212b62", "#40808f", "#a9d0dd", "#a9d0dd", "#56a7b5", "#3d839c", "#7eb3a8", "#ebddd8", "#82849e", "#3f7799", "#59a3bd", "#64c2c7", "#bbd9d9", "#e8e7ef"];');
+          func.push('   var colors = ' + JSON.stringify(Blockly.FieldColour.COLOURS) + ';');
           func.push('  return colors[Math.floor(Math.random()*colors.length)];');
           func.push('}');
           Blockly.JavaScript.definitions_.colour_random = func.join('\n');
