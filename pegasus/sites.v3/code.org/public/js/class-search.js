@@ -307,6 +307,10 @@ function compileDetails(index, location, lines) {
   var html = '<h2 style="margin-top: 0; margin-bottom: .5em; padding-top: 0;">' + location.school_name_s + '</h2>';
 
   if (location.school_website_s) {
+    if (!location.school_website_s.match(/^https?:\/\//i)) {
+      location.school_website_s = 'http://' + location.school_website_s;
+    }
+
     line = '<strong>Website: </strong><a href="' + location.school_website_s + '" target="_blank">' + location.school_website_s + '</a>';
     lines.push(line);
   }

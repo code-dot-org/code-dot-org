@@ -13,7 +13,12 @@
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
     "free_play": "false",
-    "instructions": "Here's the same algorithm that we came up with last time - what should you set the \"sides\" variable to in order to draw this square of squares?"
+    "instructions": "Here's the same algorithm that we came up with last time - what should you set the \"sides\" variable to in order to draw this square of squares?",
+    "slider_speed": ".7",
+    "disable_variable_editing": "true",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "impressive": "false"
   }
 }]]></config>
   <blocks>

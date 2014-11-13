@@ -854,7 +854,8 @@ Blockly.Blocks.procedures_callnoreturn = {init:function() {
   this.setTooltip(Blockly.Msg.PROCEDURES_CALLNORETURN_TOOLTIP);
   this.arguments_ = [];
   this.quarkArguments_ = this.quarkConnections_ = null
-}, openEditor:function() {
+}, openEditor:function(a) {
+  a.stopPropagation();
   Blockly.functionEditor.openAndEditFunction(this.getTitleValue("NAME"))
 }, getProcedureCall:function() {
   return this.getTitleValue("NAME")

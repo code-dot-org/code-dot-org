@@ -39,6 +39,9 @@ class Eval < Blockly
         <block type="functional_times"></block>
         <block type="functional_dividedby"></block>
         <block type="functional_math_number"></block>
+        <block type="functional_math_number_dropdown">
+          <title name="NUM" config="0,1,2,3,4,5,6,7,8,9,10">???</title>
+        </block>
       </category>
       <category name="String">
         <block type="functional_string"></block>
@@ -59,6 +62,15 @@ class Eval < Blockly
         <block type="rotate"></block>
         <block type="scale"></block>
         <block type="functional_text"></block>
+      </category>
+      <category name="Boolean">
+        <block type="functional_greater_than" />
+        <block type="functional_less_than" />
+        <block type="functional_number_equals" />
+        <block type="functional_logical_and" />
+        <block type="functional_logical_or" />
+        <block type="functional_logical_not" />
+        <block type="functional_boolean" />
       </category>
       <category name="Functions" custom="PROCEDURE" />
     XML

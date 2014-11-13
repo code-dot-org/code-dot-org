@@ -14,16 +14,19 @@
   header_menu_prizes: 'Prizes'
   header_menu_uk_code_org: 'uk.code.org'
 
-  company_4-H: '4-H Youth Development'
-  company_bgca: 'Boys and Girls Club of America'
-  company_cgcs: 'Council of the Great City Schools'
-  company_gsusa: 'Girl Scouts of America'
-  company_bsusa: 'Boy Scouts of America'
-  company_napcs: 'National Alliance of Public Charter Schools'
-  company_tfa: 'Teachers for America'
-  company_tntp: 'TNTP'
-  company_asa: 'Afterschool Alliance'
-  company_ngcp: 'National Girls Collaborative Project'
+  company_4-H: 4-H Youth Development
+  company_asa: Afterschool Alliance
+  company_bgca: Boys and Girls Club of America
+  company_bsusa: Boy Scouts of America
+  company_cgcs: Council of the Great City Schools
+  company_gsusa: Girl Scouts of America
+  company_khanacademy: Khan Academy
+  company_mesa: Mathematics Engineering Science Achievement
+  company_napcs: National Alliance of Public Charter Schools
+  company_ngcp: National Girls Collaborative Project
+  company_teachforamerica: Teach for America
+  company_tfa: Teach for All
+  company_tntp: TNTP
 
   prizes_all: 'Prizes for every organizer'
   prizes_every_organizer: 'Every Hour of Code organizer will receive Dropbox or Skype credit as a thank you'

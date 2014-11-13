@@ -21,6 +21,27 @@
   }
 }]]></config>
   <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" movable="false" deletable="false">
+          <next>
+            <block type="procedures_callnoreturn" inline="false">
+              <mutation name="draw a triangle">
+                <arg name="sides"/>
+                <arg name="length"/>
+              </mutation>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn" uservisible="false">
+          <mutation>
+            <arg name="sides"/>
+            <arg name="length"/>
+          </mutation>
+          <title name="NAME">draw a triangle</title>
+        </block>
+      </xml>
+    </start_blocks>
     <toolbox_blocks>
       <xml>
         <category name="Actions">

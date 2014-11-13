@@ -67,4 +67,4 @@ Hver elev får en sjanse til å få et sertifikat via e-post når de er ferdige 
 
 **Hva kommer etter Kodetimen?**
 
-Kodetimen er bare det første skrittet på en reise for å lære mer om hvordan teknologien virker og hvordan programmer lages. < % if @country == 'uk' %> Time av koden er bare første skritt på en reise for å lære mer om hvordan teknologien virker og hvordan å lage programmer. For å fortsette den reisen, må [barna oppmuntres til å lære mer på nettet](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %>
+Kodetimen er bare det første skrittet på en reise for å lære mer om hvordan teknologien virker og hvordan programmer lages. Time av koden er bare første skritt på en reise for å lære mer om hvordan teknologien virker og hvordan å lage programmer. For å fortsette den reisen, må [barna oppmuntres til å lære mer på nettet](http://code.org/learn/beyond).
