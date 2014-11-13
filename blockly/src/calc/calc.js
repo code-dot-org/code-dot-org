@@ -46,9 +46,12 @@ BlocklyApps.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
 
-var locals = {
+var appState = {
   animating: false,
-  response: null
+  response: null,
+  message: null,
+  result: null,
+  testResults: null
 };
 
 /**
@@ -142,9 +145,9 @@ BlocklyApps.runButtonClick = function() {
 Calc.resetButtonClick = function () {
   Calc.expressions.user = null;
   Calc.expressions.current = null;
-  Calc.message = null;
+  appState.message = null;
 
-  locals.animating = false;
+  appState.animating = false;
 
   Calc.drawExpressions();
 };
@@ -207,9 +210,9 @@ function getExpressionFromBlocks(blockXml) {
  * Execute the user's code.  Heaven help us...
  */
 Calc.execute = function() {
-  Calc.result = BlocklyApps.ResultType.UNSET;
-  Calc.testResults = BlocklyApps.TestResults.NO_TESTS_RUN;
-  Calc.message = undefined;
+  appState.result = BlocklyApps.ResultType.UNSET;
+  appState.testResults = BlocklyApps.TestResults.NO_TESTS_RUN;
+  appState.message = undefined;
 
   var userExpression = getExpressionFromBlocks();
   if (userExpression) {
@@ -223,20 +226,19 @@ Calc.execute = function() {
     Calc.expressions.user.applyExpectation(Calc.expressions.target);
   }
 
-  Calc.result = !Calc.expressions.user.failedExpectation(true);
-  Calc.testResults = BlocklyApps.getTestResults(Calc.result);
-
+  // todo - should this be using ResultType.* instead?
+  appState.result = !Calc.expressions.user.failedExpectation(true);
+  appState.testResults = BlocklyApps.getTestResults(appState.result);
 
   // equivalence means the expressions are the same if we ignore the ordering
   // of inputs
-  // todo - check for particular testResult instead of result
-  if (!Calc.result && Calc.expressions.user.isEquivalent(Calc.expressions.target)) {
-    Calc.testResults = TestResults.APP_SPECIFIC_FAIL;
-    Calc.message = calcMsg.equivalentExpression();
+  if (!appState.result && Calc.expressions.user.isEquivalent(Calc.expressions.target)) {
+    appState.testResults = TestResults.APP_SPECIFIC_FAIL;
+    appState.message = calcMsg.equivalentExpression();
   }
 
   if (level.freePlay) {
-    Calc.testResults = BlocklyApps.TestResults.FREE_PLAY;
+    appState.testResults = BlocklyApps.TestResults.FREE_PLAY;
   }
 
   Calc.drawExpressions();
@@ -248,19 +250,24 @@ Calc.execute = function() {
     app: 'calc',
     level: level.id,
     builder: level.builder,
-    result: Calc.result,
-    testResult: Calc.testResults,
+    result: appState.result,
+    testResult: appState.testResults,
     program: encodeURIComponent(textBlocks),
     onComplete: onReportComplete
   };
 
   BlocklyApps.report(reportData);
-  locals.animating = true;
+  appState.animating = true;
 
   window.setTimeout(function () {
     Calc.step(false);
   }, 1000);
 };
+
+function stopAnimatingAndDisplayFeedback() {
+  appState.animating = false;
+  displayFeedback();
+}
 
 /**
  * Perform a step in our expression evaluation animation. This consists of
@@ -274,15 +281,13 @@ Calc.step = function (ignoreFailures) {
 
   // If we've fully collapsed our expression, display feedback
   if (!Calc.expressions.user.isOperation()) {
-    locals.animating = false;
-    displayFeedback();
+    stopAnimatingAndDisplayFeedback();
     return;
   }
 
   var collapsed = Calc.expressions.user.collapse(ignoreFailures);
   if (!collapsed) {
-    locals.animating = false;
-    displayFeedback();
+    stopAnimatingAndDisplayFeedback();
     return;
   } else {
     if (Calc.expressions.current) {
@@ -398,7 +403,7 @@ function cloneNodeWithoutIds(elementId) {
  * BlocklyApps.displayFeedback when appropriate
  */
 var displayFeedback = function() {
-  if (!locals.response || locals.animating) {
+  if (!appState.response || appState.animating) {
     return;
   }
 
@@ -406,22 +411,22 @@ var displayFeedback = function() {
   level.extraTopBlocks = calcMsg.extraTopBlocks();
   var appDiv = null;
   // Show svg in feedback dialog
-  if (Calc.testResults === TestResults.LEVEL_INCOMPLETE_FAIL) {
+  if (appState.testResults === TestResults.LEVEL_INCOMPLETE_FAIL) {
     appDiv = cloneNodeWithoutIds('svgCalc');
   }
   var options = {
     app: 'Calc',
     skin: skin.id,
-    response: locals.response,
+    response: appState.response,
     level: level,
-    feedbackType: Calc.testResults,
+    feedbackType: appState.testResults,
     appStrings: {
       reinfFeedbackMsg: calcMsg.reinfFeedbackMsg()
     },
     appDiv: appDiv
   };
-  if (Calc.message) {
-    options.message = Calc.message;
+  if (appState.message) {
+    options.message = appState.message;
   }
 
   BlocklyApps.displayFeedback(options);
@@ -435,6 +440,6 @@ function onReportComplete(response) {
   // Disable the run button until onReportComplete is called.
   var runButton = document.getElementById('runButton');
   runButton.disabled = false;
-  locals.response = response;
+  appState.response = response;
   displayFeedback();
 }
