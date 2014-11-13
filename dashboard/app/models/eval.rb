@@ -63,6 +63,15 @@ class Eval < Blockly
         <block type="scale"></block>
         <block type="functional_text"></block>
       </category>
+      <category name="Boolean">
+        <block type="functional_greater_than" />
+        <block type="functional_less_than" />
+        <block type="functional_number_equals" />
+        <block type="functional_logical_and" />
+        <block type="functional_logical_or" />
+        <block type="functional_logical_not" />
+        <block type="functional_boolean" />
+      </category>
       <category name="Functions" custom="PROCEDURE" />
     XML
   end
