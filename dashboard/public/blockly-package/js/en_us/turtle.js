@@ -8165,7 +8165,6 @@ var msg = require('../../locale/en_us/turtle');
 exports.install = function(blockly, generator, gensym) {
  installDrawASquare(blockly, generator, gensym);
  installCreateACircle(blockly, generator, gensym);
- installCreateASnowflower(blockly, generator, gensym);
  installCreateASnowflakeBranch(blockly, generator, gensym);
  installDrawATriangle(blockly, generator, gensym);
  installDrawAHouse(blockly, generator, gensym);
@@ -8180,12 +8179,7 @@ exports.install = function(blockly, generator, gensym) {
  installDrawUpperWave(blockly, generator, gensym);
  installDrawLowerWave(blockly, generator, gensym);
 
- installCreateASquareSnowflake(blockly, generator, gensym);
- installCreateASnowflakeWithLines(blockly, generator, gensym);
- installCreateASnowflakeWithLines(blockly, generator, gensym);
- installCreateAParallelogramSnowflake(blockly, generator, gensym);
- installCreateASpiralSnowflake(blockly, generator, gensym);
- installCreateAFractalSnowflake(blockly, generator, gensym);
+ installCreateASnowflakeDropdown(blockly, generator, gensym);
 };
 
 function createACircleCode (size, gensym, indent) {
@@ -8278,34 +8272,6 @@ function installCreateACircle(blockly, generator, gensym) {
   generator.create_a_circle_size = function() {
     var size = generator.valueToCode(this, 'VALUE', generator.ORDER_ATOMIC);
     return createACircleCode(size, gensym);
-  };
-}
-
-/**
- * create_a_snowflower
- */
-function installCreateASnowflower(blockly, generator, gensym) {
-  blockly.Blocks.create_a_snowflower = {
-    // Draw a square.
-    init: function() {
-      this.setHSV(94, 0.84, 0.60);
-      this.appendDummyInput()
-          .appendTitle(msg.createASnowflower());
-      this.setPreviousStatement(true);
-      this.setNextStatement(true);
-      this.setTooltip('');
-    }
-  };
-
-  generator.create_a_snowflower = function() {
-    var loopVar = gensym('count');
-    return [
-      '// create_a_snowflower',
-      'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 5; ' + loopVar + '++) {',
-      createACircleCode(2, gensym, '  '),
-      createACircleCode(4, gensym, '  '),
-      '  Turtle.turnRight(72);',
-      '}\n'].join('\n');
   };
 }
 
@@ -8847,170 +8813,101 @@ function installDrawLowerWave(blockly, generator, gensym) {
   };
 }
 
-/**
- * Create a square snowflake
- */
-function installCreateASquareSnowflake(blockly, generator, gensym) {
-  // Create a fake "draw a square" function so it can be made available to users
-  // without being shown in the workspace.
-  blockly.Blocks.create_square_snowflake = {
-    // Draw a square.
-    init: function() {
+function installCreateASnowflakeDropdown(blockly, generator, gensym) {
+  var snowflakes = [
+    [msg.createSnowflakeSquare(), 'square'],
+    [msg.createSnowflakeParallelogram(), 'parallelogram'],
+    [msg.createSnowflakeLine(), 'line'],
+    [msg.createSnowflakeSpiral(), 'spiral'],
+    [msg.createSnowflakeFlower(), 'flower'],
+    [msg.createSnowflakeFractal(), 'fractal']
+  ];
+
+  blockly.Blocks.create_snowflake_dropdown = {
+    init: function () {
       this.setHSV(94, 0.84, 0.60);
       this.appendDummyInput()
-          .appendTitle(msg.createSquareSnowflake());
+          .appendTitle(new blockly.FieldDropdown(snowflakes), 'TYPE');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip('');
     }
   };
 
-  generator.create_square_snowflake = function() {
-    var loopVar = gensym('count');
-    var loopVar2 = gensym('count');
-    return [
-        'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 10; ' + loopVar + '++) {',
-        '  for (var ' + loopVar2 + ' = 0; ' + loopVar2 + ' < 4; ' + loopVar2 + '++) {',
-        '    Turtle.moveForward(50);',
-        '    Turtle.turnRight(90);',
-        '  }',
-        '  Turtle.turnRight(36);',
-        '}\n'].join('\n');
-  };
-}
-
-/**
- * Create a snowflake with lines
- */
-function installCreateASnowflakeWithLines(blockly, generator, gensym) {
-  // Create a fake "draw a square" function so it can be made available to users
-  // without being shown in the workspace.
-  blockly.Blocks.create_lined_snowflake = {
-    // Draw a square.
-    init: function() {
-      this.setHSV(94, 0.84, 0.60);
-      this.appendDummyInput()
-          .appendTitle(msg.createLinedSnowflake());
-      this.setPreviousStatement(true);
-      this.setNextStatement(true);
-      this.setTooltip('');
-    }
-  };
-
-  generator.create_lined_snowflake = function() {
-    var loopVar = gensym('count');
-    var color_random = generator.colour_random()[0];
-    return [
-        'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 90; ' + loopVar + '++) {',
-        '  Turtle.penColour(' + color_random + ');',
-        '  Turtle.moveForward(50);',
-        '  Turtle.moveBackward(50);',
-        '  Turtle.turnRight(4);',
-        '}\n'].join('\n');
-  };
-}
-
-/**
- * Create a parallelogram snowflake
- */
-function installCreateAParallelogramSnowflake(blockly, generator, gensym) {
-  // Create a fake "draw a square" function so it can be made available to users
-  // without being shown in the workspace.
-  blockly.Blocks.create_parallelogram_snowflake = {
-    // Draw a square.
-    init: function() {
-      this.setHSV(94, 0.84, 0.60);
-      this.appendDummyInput()
-          .appendTitle(msg.createParallelogramSnowflake());
-      this.setPreviousStatement(true);
-      this.setNextStatement(true);
-      this.setTooltip('');
-    }
-  };
-
-  generator.create_parallelogram_snowflake = function() {
-    var loopVar = gensym('count');
-    var loopVar2 = gensym('count');
-    return [
-        'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 10; ' + loopVar + '++) {',
-        '  for (var ' + loopVar2 + ' = 0; ' + loopVar2 + ' < 2; ' + loopVar2 + '++) {',
-        '    Turtle.moveForward(50);',
-        '    Turtle.turnRight(60);',
-        '    Turtle.moveForward(50);',
-        '    Turtle.turnRight(120);',
-        '  }',
-        '  Turtle.turnRight(36);',
-        '}\n'].join('\n');
-  };
-}
-
-/**
- * Create a spiral snowflake
- */
-function installCreateASpiralSnowflake(blockly, generator, gensym) {
-  // Create a fake "draw a square" function so it can be made available to users
-  // without being shown in the workspace.
-  blockly.Blocks.create_spiral_snowflake = {
-    // Draw a square.
-    init: function() {
-      this.setHSV(94, 0.84, 0.60);
-      this.appendDummyInput()
-          .appendTitle(msg.createSpiralSnowflake());
-      this.setPreviousStatement(true);
-      this.setNextStatement(true);
-      this.setTooltip('');
-    }
-  };
-
-  generator.create_spiral_snowflake = function() {
-    var loopVar = gensym('count');
-    return [
-        'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 20; ' + loopVar + '++) {',
-        createACircleCode(3, gensym, '  '),
-        '  Turtle.moveForward(20);',
-        '  Turtle.turnRight(18);',
-        '}\n'].join('\n');
-  };
-}
-
-/**
- * Create a fractal snowflake
- */
-function installCreateAFractalSnowflake(blockly, generator, gensym) {
-  // Create a fake "draw a square" function so it can be made available to users
-  // without being shown in the workspace.
-  blockly.Blocks.create_fractal_snowflake = {
-    // Draw a square.
-    init: function() {
-      this.setHSV(94, 0.84, 0.60);
-      this.appendDummyInput()
-          .appendTitle(msg.createFractalSnowflake());
-      this.setPreviousStatement(true);
-      this.setNextStatement(true);
-      this.setTooltip('');
-    }
-  };
-
-  generator.create_fractal_snowflake = function() {
+  generator.create_snowflake_dropdown = function () {
     var loopVar = gensym('count');
     var loopVar2 = gensym('count');
     var loopVar3 = gensym('count');
-    return [
-        'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 8; ' + loopVar + '++) {',
-        '  Turtle.jumpForward(45);',
-        '  Turtle.turnLeft(45);',
-        '  for (var ' + loopVar2 + ' = 0; ' + loopVar2 + ' < 3; ' + loopVar2 + '++) {',
-        '    for (var ' + loopVar3 + ' = 0; ' + loopVar3 + ' < 3; ' + loopVar3 + '++) {',
-        '      Turtle.moveForward(15);',
-        '      Turtle.moveBackward(15);',
-        '      Turtle.turnRight(45);',
-        '    }',
-        '    Turtle.turnLeft(90);',
-        '    Turtle.moveBackward(15);',
-        '    Turtle.turnLeft(45);',
-        '  }',
-        '  Turtle.turnRight(90);',
-        '}\n'].join('\n');
+    var color_random = generator.colour_random()[0];
+
+    var type = this.getTitleValue('TYPE');
+    switch (type) {
+      case 'fractal':
+        return [
+          'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 8; ' + loopVar + '++) {',
+          '  Turtle.jumpForward(45);',
+          '  Turtle.turnLeft(45);',
+          '  for (var ' + loopVar2 + ' = 0; ' + loopVar2 + ' < 3; ' + loopVar2 + '++) {',
+          '    for (var ' + loopVar3 + ' = 0; ' + loopVar3 + ' < 3; ' + loopVar3 + '++) {',
+          '      Turtle.moveForward(15);',
+          '      Turtle.moveBackward(15);',
+          '      Turtle.turnRight(45);',
+          '    }',
+          '    Turtle.turnLeft(90);',
+          '    Turtle.moveBackward(15);',
+          '    Turtle.turnLeft(45);',
+          '  }',
+          '  Turtle.turnRight(90);',
+          '}\n'].join('\n');
+
+      case 'flower':
+        return [
+          'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 5; ' + loopVar + '++) {',
+          createACircleCode(2, gensym, '  '),
+          createACircleCode(4, gensym, '  '),
+          '  Turtle.turnRight(72);',
+          '}\n'].join('\n');
+
+      case 'spiral':
+        return [
+          'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 20; ' + loopVar + '++) {',
+          createACircleCode(3, gensym, '  '),
+          '  Turtle.moveForward(20);',
+          '  Turtle.turnRight(18);',
+          '}\n'].join('\n');
+
+      case 'line':
+        return [
+          'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 90; ' + loopVar + '++) {',
+          '  Turtle.penColour(' + color_random + ');',
+          '  Turtle.moveForward(50);',
+          '  Turtle.moveBackward(50);',
+          '  Turtle.turnRight(4);',
+          '}',
+          'Turtle.penColour("#FFFFFF");\n'].join('\n');
+
+      case 'parallelogram':
+        return [
+          'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 10; ' + loopVar + '++) {',
+          '  for (var ' + loopVar2 + ' = 0; ' + loopVar2 + ' < 2; ' + loopVar2 + '++) {',
+          '    Turtle.moveForward(50);',
+          '    Turtle.turnRight(60);',
+          '    Turtle.moveForward(50);',
+          '    Turtle.turnRight(120);',
+          '  }',
+          '  Turtle.turnRight(36);',
+          '}\n'].join('\n');
+
+      case 'square':
+        return [
+          'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 10; ' + loopVar + '++) {',
+          '  for (var ' + loopVar2 + ' = 0; ' + loopVar2 + ' < 4; ' + loopVar2 + '++) {',
+          '    Turtle.moveForward(50);',
+          '    Turtle.turnRight(90);',
+          '  }',
+          '  Turtle.turnRight(36);',
+          '}\n'].join('\n');
+    }
   };
 }
 
@@ -10551,7 +10448,6 @@ Turtle.init = function(config) {
           var func = [];
           func.push('function ' + functionName + '() {');
           func.push('  var colors = [ "#e8ebed", "#bbd1e4", "#e8ebed", "#1e618f", "#212b62", "#40808f", "#a9d0dd", "#a9d0dd", "#56a7b5", "#3d839c", "#7eb3a8", "#ebddd8", "#82849e", "#3f7799", "#59a3bd", "#64c2c7", "#bbd9d9", "#e8e7ef"];');
-          //func.push('  return "rgb(" + Math.floor(Math.random()*255) + ",0,0);"');
           func.push('  return colors[Math.floor(Math.random()*colors.length)];');
           func.push('}');
           Blockly.JavaScript.definitions_.colour_random = func.join('\n');
@@ -10578,7 +10474,7 @@ Turtle.init = function(config) {
     // pre-load image for line pattern block. Creating the image object and setting source doesn't seem to be
     // enough in this case, so we're actually creating and reusing the object within the document body.
 
-    if (BlocklyApps.usingBlockly && config.level.edit_blocks)
+    if ((BlocklyApps.usingBlockly && config.level.edit_blocks) || skin.id == "anna" || skin.id == "elsa")
     {
       var imageContainer = document.createElement('div');
       imageContainer.style.display='none';
@@ -10835,12 +10731,12 @@ BlocklyApps.reset = function(ignore) {
   Turtle.ctxScratch.canvas.width = Turtle.ctxScratch.canvas.width;
   Turtle.ctxPattern.canvas.width = Turtle.ctxPattern.canvas.width;
   if (skin.id == "anna") {
-    Turtle.ctxScratch.strokeStyle = 'rgb(255,255,238)';
-    Turtle.ctxScratch.fillStyle = 'rgb(255,255,238)';
+    Turtle.ctxScratch.strokeStyle = 'rgb(255,255,255)';
+    Turtle.ctxScratch.fillStyle = 'rgb(255,255,255)';
     Turtle.ctxScratch.lineWidth = 2 * retina;
   } else if (skin.id == "elsa") {
-    Turtle.ctxScratch.strokeStyle = 'rgb(255,255,238)';
-    Turtle.ctxScratch.fillStyle = 'rgb(255,255,238)';
+    Turtle.ctxScratch.strokeStyle = 'rgb(255,255,255)';
+    Turtle.ctxScratch.fillStyle = 'rgb(255,255,255)';
     Turtle.ctxScratch.lineWidth = 2 * retina;
   } else {
     Turtle.ctxScratch.strokeStyle = '#000000';
@@ -12190,19 +12086,19 @@ exports.colourTooltip = function(d){return "Changes the color of the pencil."};
 
 exports.createACircle = function(d){return "create a circle"};
 
-exports.createASnowflower = function(d){return "create a snowflower"};
+exports.createSnowflakeSquare = function(d){return "create a snowflake of type square"};
+
+exports.createSnowflakeParallelogram = function(d){return "create a snowflake of type parallelogram"};
+
+exports.createSnowflakeLine = function(d){return "create a snowflake of type line"};
+
+exports.createSnowflakeSpiral = function(d){return "create a snowflake of type spiral"};
+
+exports.createSnowflakeFlower = function(d){return "create a snowflake of type flower"};
+
+exports.createSnowflakeFractal = function(d){return "create a snowflake of type fractal"};
 
 exports.createASnowflakeBranch = function(d){return "create a snowflake branch"};
-
-exports.createFractalSnowflake = function(d){return "create a fractal snowflake"};
-
-exports.createLinedSnowflake = function(d){return "create a snowflake with lines"};
-
-exports.createParallelogramSnowflake = function(d){return "create a parallelogram snowflake"};
-
-exports.createSpiralSnowflake = function(d){return "create a spiral snowflake"};
-
-exports.createSquareSnowflake = function(d){return "create a square snowflake"};
 
 exports.degrees = function(d){return "degrees"};
 
