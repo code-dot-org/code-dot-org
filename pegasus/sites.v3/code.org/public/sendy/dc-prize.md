@@ -1,20 +1,20 @@
 ---
 layout: sendy
 theme: none
-subject: A mystery Hour of Code in Washington DC: whose classroom is going?
+subject: "A mystery Hour of Code in Washington DC: whose classroom is going?"
 ---
 
 <%
   tracking_pixel = '/images/1x1.png'
   unsubscribe_link = '#'
-  domestic = params['domestic'].nil? || params['domestic'] == 'true'
+  header = @header
 %>
 
-### <%= @header['subject'] %>
+### <%= header['subject'] %>
 
 The Hour of Code just got a lot more *historic*. As [the Hour of Code nears](http://hourofcode.com) in the next few weeks, one lucky classroom will be selected to attend a very special, very exciting Hour of Code event in the nation’s capital — so special that the details are under wraps!
 
-[![image](/images/fit-400/hoc-dc.png)](http://codeorg.tumblr.com/post/102312733238/dc)
+[![image](http://code.org/images/fit-400/hoc-dc.png)](http://codeorg.tumblr.com/post/102312733238/dc)
 
 The winning students (and chaperones) will get an all-expenses-covered trip to Washington, D.C. to participate in a full day of mystery activities on Monday, December 8, to kick off Computer Science Education Week, when millions worldwide will try computer science for the first time.
 

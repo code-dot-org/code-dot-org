@@ -346,7 +346,8 @@ Blockly.Blocks.procedures_callnoreturn = {
     this.quarkConnections_ = null;
     this.quarkArguments_ = null;
   },
-  openEditor: function() {
+  openEditor: function(e) {
+    e.stopPropagation();
     Blockly.functionEditor.openAndEditFunction(this.getTitleValue('NAME'));
   },
   getProcedureCall: function() {

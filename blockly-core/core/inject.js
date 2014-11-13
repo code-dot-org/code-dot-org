@@ -58,6 +58,7 @@ Blockly.inject = function(container, opt_options) {
    * @type {Blockly.BlockSpaceEditor}
    */
   Blockly.mainBlockSpaceEditor = new Blockly.BlockSpaceEditor(container);
+
   /**
    * @type {Blockly.BlockSpace}
    */
@@ -71,6 +72,11 @@ Blockly.inject = function(container, opt_options) {
     /** @type {Blockly.ContractEditor} */
     Blockly.contractEditor = Blockly.functionEditor;
   }
+
+  /**
+   * @type {Blockly.BlockSpace}
+   */
+  Blockly.focusedBlockSpace = Blockly.mainBlockSpace;
 };
 
 /**

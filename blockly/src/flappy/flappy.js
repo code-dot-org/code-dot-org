@@ -487,24 +487,24 @@ Flappy.init = function(config) {
   });
 
   config.loadAudio = function() {
-    Blockly.loadAudio_(skin.winSound, 'win');
-    Blockly.loadAudio_(skin.startSound, 'start');
-    Blockly.loadAudio_(skin.failureSound, 'failure');
-    Blockly.loadAudio_(skin.obstacleSound, 'obstacle');
+    BlocklyApps.loadAudio(skin.winSound, 'win');
+    BlocklyApps.loadAudio(skin.startSound, 'start');
+    BlocklyApps.loadAudio(skin.failureSound, 'failure');
+    BlocklyApps.loadAudio(skin.obstacleSound, 'obstacle');
 
-    Blockly.loadAudio_(skin.dieSound, 'sfx_die');
-    Blockly.loadAudio_(skin.hitSound, 'sfx_hit');
-    Blockly.loadAudio_(skin.pointSound, 'sfx_point');
-    Blockly.loadAudio_(skin.swooshingSound, 'sfx_swooshing');
-    Blockly.loadAudio_(skin.wingSound, 'sfx_wing');
-    Blockly.loadAudio_(skin.winGoalSound, 'winGoal');
-    Blockly.loadAudio_(skin.jetSound, 'jet');
-    Blockly.loadAudio_(skin.jingleSound, 'jingle');
-    Blockly.loadAudio_(skin.crashSound, 'crash');
-    Blockly.loadAudio_(skin.laserSound, 'laser');
-    Blockly.loadAudio_(skin.splashSound, 'splash');
-    Blockly.loadAudio_(skin.wallSound, 'wall');
-    Blockly.loadAudio_(skin.wall0Sound, 'wall0');
+    BlocklyApps.loadAudio(skin.dieSound, 'sfx_die');
+    BlocklyApps.loadAudio(skin.hitSound, 'sfx_hit');
+    BlocklyApps.loadAudio(skin.pointSound, 'sfx_point');
+    BlocklyApps.loadAudio(skin.swooshingSound, 'sfx_swooshing');
+    BlocklyApps.loadAudio(skin.wingSound, 'sfx_wing');
+    BlocklyApps.loadAudio(skin.winGoalSound, 'winGoal');
+    BlocklyApps.loadAudio(skin.jetSound, 'jet');
+    BlocklyApps.loadAudio(skin.jingleSound, 'jingle');
+    BlocklyApps.loadAudio(skin.crashSound, 'crash');
+    BlocklyApps.loadAudio(skin.laserSound, 'laser');
+    BlocklyApps.loadAudio(skin.splashSound, 'splash');
+    BlocklyApps.loadAudio(skin.wallSound, 'wall');
+    BlocklyApps.loadAudio(skin.wall0Sound, 'wall0');
   };
 
   config.afterInject = function() {
