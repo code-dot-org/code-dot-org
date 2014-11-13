@@ -22,14 +22,14 @@ var TILE_SHAPES = {
   'empty': [4, 0]
 };
 
-// Returns true if the tile at x,y is either a wall or out of bounds
-function isWallOrOutOfBounds (x, y) {
+// Returns true if the tile at x,y is either a water tile or out of bounds
+function isWaterOrOutOfBounds (x, y) {
   return Maze.map[y] === undefined || Maze.map[y][x] === undefined ||
     Maze.map[y][x] === SquareType.WALL;
 }
 
-// Returns true if the tile at x,y is a wall that is in bounds.
-function isWall (x, y) {
+// Returns true if the tile at x,y is a water tile that is in bounds.
+function isWater (x, y) {
   return Maze.map[y] !== undefined && Maze.map[y][x] === SquareType.WALL;
 }
 
@@ -37,40 +37,48 @@ function isWall (x, y) {
  * Override maze's drawMapTiles
  */
 module.exports.drawMapTiles = function (svg) {
-  var island = null;
+  var row, col;
+
+  // first figure out where we want to put the island
+  var possibleIslandLocations = [];
+  for (row = 0; row < Maze.ROWS; row++) {
+    for (col = 0; col < Maze.COLS; col++) {
+      if (!isWater(col, row) || !isWater(col + 1, row) ||
+        !isWater(col, row + 1) || !isWater(col + 1, row + 1)) {
+        continue;
+      }
+      possibleIslandLocations.push({row: row, col: col});
+    }
+  }
+  var island = _.sample(possibleIslandLocations);
+  var preFilled = {};
+  if (island) {
+    preFilled[(island.row + 0) + "_" + (island.col + 0)] = 'island_start';
+    preFilled[(island.row + 1) + "_" + (island.col + 0)] = 'island_botLeft';
+    preFilled[(island.row + 0) + "_" + (island.col + 1)] = 'island_topRight';
+    preFilled[(island.row + 1) + "_" + (island.col + 1)] = 'island_botRight';
+  }
 
   var tileId = 0;
   var tile;
-  for (var row = 0; row < Maze.ROWS; row++) {
-    for (var col = 0; col < Maze.COLS; col++) {
-      if (!isWallOrOutOfBounds(col, row)) {
+  for (row = 0; row < Maze.ROWS; row++) {
+    for (col = 0; col < Maze.COLS; col++) {
+      if (!isWaterOrOutOfBounds(col, row)) {
         tile = 'ice';
       } else {
-        var adjacentToPath = !isWallOrOutOfBounds(col, row - 1) ||
-          !isWallOrOutOfBounds(col + 1, row) ||
-          !isWallOrOutOfBounds(col, row + 1) ||
-          !isWallOrOutOfBounds(col - 1, row);
+        var adjacentToPath = !isWaterOrOutOfBounds(col, row - 1) ||
+          !isWaterOrOutOfBounds(col + 1, row) ||
+          !isWaterOrOutOfBounds(col, row + 1) ||
+          !isWaterOrOutOfBounds(col - 1, row);
 
         // if next to the path, always just have water. otherwise, there's
         // a chance of one of our other tiles
         tile = 'water';
-        tile = _.sample(['empty', 'empty', 'empty', 'empty', 'empty', 'lily2',
-          'lily3', 'lily4', 'lily5', 'lily1', 'log', 'lily1', 'land1']);
 
-        if (island !== null) {
-          if (island.col === col - 1 && island.row === row) {
-            tile = 'island_topRight';
-          } else  if (island.col === col && island.row === row - 1) {
-            tile = 'island_botLeft';
-          } else  if (island.col === col - 1 && island.row === row - 1) {
-            tile = 'island_botRight';
-          }
-        } else if (Math.random() < 1/20 &&
-            isWall(col + 1, row + 0) && isWallOrOutOfBounds(col + 2, row) &&
-            isWall(col + 0, row + 1) && isWallOrOutOfBounds(col, row + 2) &&
-            isWall(col + 1, row + 1)) {
-          island = { col: col, row: row};
-          tile = 'island_start';
+        tile = preFilled[row + "_" + col];
+        if (!tile) {
+          tile = _.sample(['empty', 'empty', 'empty', 'empty', 'empty', 'lily2',
+            'lily3', 'lily4', 'lily5', 'lily1', 'log', 'lily1', 'land1']);
         }
 
         if (adjacentToPath && tile === 'land1') {
