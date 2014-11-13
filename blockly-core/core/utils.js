@@ -97,10 +97,13 @@ Blockly.bindEvent_ = function(element, name, thisObject, func) {
   wrapFunc = function(e) {
     func.apply(thisObject, arguments);
   };
-  element.addEventListener(name, wrapFunc, false);
-  bindData.push([element, name, wrapFunc]);
   // Add equivalent touch event.
   if (name in Blockly.bindEvent_.TOUCH_MAP) {
+    // Also bind the mouse event, unless pointer events are supported.
+    if (!window.navigator.pointerEnabled && !window.navigator.msPointerEnabled) {
+      element.addEventListener(name, wrapFunc, false);
+      bindData.push([element, name, wrapFunc]);
+    }
     wrapFunc = function (e) {
       if (e.target && e.target.style) {
         var targetStyle = e.target.style;
@@ -121,10 +124,12 @@ Blockly.bindEvent_ = function(element, name, thisObject, func) {
         func.apply(thisObject, arguments);
       }
     };
-    element.addEventListener(Blockly.bindEvent_.TOUCH_MAP[name],
-                             wrapFunc,
-                             false);
+    element.addEventListener(Blockly.bindEvent_.TOUCH_MAP[name], wrapFunc,
+        false);
     bindData.push([element, Blockly.bindEvent_.TOUCH_MAP[name], wrapFunc]);
+  } else {
+    element.addEventListener(name, wrapFunc, false);
+    bindData.push([element, name, wrapFunc]);
   }
   return bindData;
 };
