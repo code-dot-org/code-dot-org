@@ -279,7 +279,7 @@ class Studio < Grid
     <title name="NUM" config="2,3,4,5,6,7,8,9,10,11,12">???</title>
   </block>
 </category>
-<category name="Funcational logic">
+<category name="Functional logic">
   <block type="functional_greater_than" />
   <block type="functional_less_than" />
   <block type="functional_number_equals" />
