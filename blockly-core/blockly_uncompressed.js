@@ -4311,7 +4311,18 @@ Blockly.BlockSpace.prototype.fireChangeEvent = function() {
     }, 0)
   }
 };
-Blockly.BlockSpace.prototype.paste = function(xmlBlock) {
+Blockly.BlockSpace.prototype.paste = function(clipboard) {
+  var xmlBlock = clipboard.dom;
+  if(this !== clipboard.sourceBlockSpace) {
+    if(xmlBlock.getAttribute("type") === "parameters_get") {
+      return
+    }
+    goog.array.forEach(xmlBlock.getElementsByTagName("block"), function(block) {
+      if(block.getAttribute("type") === "parameters_get") {
+        goog.dom.removeNode(block)
+      }
+    })
+  }
   if(xmlBlock.getElementsByTagName("block").length >= this.remainingCapacity()) {
     return
   }
@@ -14245,6 +14256,7 @@ Blockly.Block.prototype.getHeightWidth = function() {
 };
 Blockly.Block.prototype.onMouseDown_ = function(e) {
   e.preventDefault();
+  document.activeElement && (document.activeElement.blur && document.activeElement.blur());
   if(this.isInFlyout) {
     return
   }
@@ -18671,7 +18683,11 @@ Blockly.FunctionEditor.prototype.refreshParamsOnFunction_ = function() {
 Blockly.FunctionEditor.prototype.show = function() {
   this.ensureCreated_();
   goog.style.showElement(this.container_, true);
-  goog.style.showElement(this.modalBackground_, true)
+  goog.style.showElement(this.modalBackground_, true);
+  Blockly.focusedBlockSpace = Blockly.modalBlockSpace;
+  if(Blockly.selected) {
+    Blockly.selected.unselect()
+  }
 };
 Blockly.FunctionEditor.prototype.isOpen = function() {
   return this.isCreated() && goog.style.isElementShown(this.container_)
@@ -18694,8 +18710,11 @@ Blockly.FunctionEditor.prototype.hide = function() {
   goog.style.showElement(this.modalBackground_, false);
   goog.dom.getElement("functionNameText").value = "";
   goog.dom.getElement("functionDescriptionText").value = "";
-  goog.dom.getElement("paramAddText").value = "";
-  Blockly.modalBlockSpace.clear()
+  if(goog.dom.getElement("paramAddText")) {
+    goog.dom.getElement("paramAddText").value = ""
+  }
+  Blockly.modalBlockSpace.clear();
+  Blockly.focusedBlockSpace = Blockly.mainBlockSpace
 };
 Blockly.FunctionEditor.prototype.create_ = function() {
   if(this.created_) {
@@ -18726,8 +18745,11 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   Blockly.modalBlockSpaceEditor.appendSVGChild(this.closeButton_);
   this.createContractDom_();
   Blockly.bindEvent_(goog.dom.getElement("modalContainer"), "mousedown", null, function(e) {
-    if(Blockly.selected && e.target === e.currentTarget) {
-      Blockly.selected.unselect()
+    if(e.target === e.currentTarget) {
+      Blockly.modalBlockSpaceEditor.hideChaff();
+      if(Blockly.selected) {
+        Blockly.selected.unselect()
+      }
     }
   });
   Blockly.bindEvent_(goog.dom.getElement("modalEditorClose"), "mousedown", this, this.hide);
@@ -22407,7 +22429,7 @@ Blockly.BlockSpaceEditor.prototype.onKeyDown_ = function(e) {
       }
     }else {
       if(e.altKey || (e.ctrlKey || e.metaKey)) {
-        if(Blockly.selected && (Blockly.selected.isDeletable() && Blockly.selected.blockSpace === this.blockSpace)) {
+        if(Blockly.selected && Blockly.selected.isDeletable()) {
           this.hideChaff();
           if(e.keyCode == 67) {
             Blockly.BlockSpaceEditor.copy_(Blockly.selected)
@@ -22420,7 +22442,7 @@ Blockly.BlockSpaceEditor.prototype.onKeyDown_ = function(e) {
         }
         if(e.keyCode == 86) {
           if(Blockly.clipboard_) {
-            this.blockSpace.paste(Blockly.clipboard_)
+            Blockly.focusedBlockSpace.paste(Blockly.clipboard_)
           }
         }
       }
@@ -22437,7 +22459,7 @@ Blockly.BlockSpaceEditor.copy_ = function(block) {
   var xy = block.getRelativeToSurfaceXY();
   xmlBlock.setAttribute("x", Blockly.RTL ? -xy.x : xy.x);
   xmlBlock.setAttribute("y", xy.y);
-  Blockly.clipboard_ = xmlBlock
+  Blockly.clipboard_ = {dom:xmlBlock, sourceBlockSpace:block.blockSpace}
 };
 Blockly.BlockSpaceEditor.showContextMenu_ = function(e) {
   if(Blockly.readOnly) {
@@ -22812,6 +22834,7 @@ Blockly.inject = function(container, opt_options) {
       Blockly.contractEditor = Blockly.functionEditor
     }
   }
+  Blockly.focusedBlockSpace = Blockly.mainBlockSpace
 };
 Blockly.parseOptions_ = function(options) {
   var readOnly = !!options["readOnly"];
