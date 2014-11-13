@@ -41,18 +41,23 @@ def generate_professional_development_workshop_teachers_report
       next unless teacher_user_id
       
       students = DASHBOARD_DB[:followers].
-        where(section_id: section_id).
+        where(user_id: teacher_user_id).
         join(:users, id: :student_user_id).
         select(:users__id___id, :users__created_at___created_at)
 
-      lifetime = students.map{|s| (Time.now - s[:created_at]) / (60 * 60 * 24)}.reduce(:+) / students.count.to_f
+      if students.count > 0
+        lifetime = students.map{|s| (Time.now - s[:created_at]) / (60 * 60 * 24)}.reduce(:+) / students.count.to_f
 
-      levels = students.map do |s|
-        DASHBOARD_DB[:user_levels].
-          where(user_id: s[:id]).
-          and("best_result >= #{ActivityConstants::MINIMUM_PASS_RESULT}").
-          count
-      end.reduce(:+) / students.count.to_f
+        levels = students.map do |s|
+          DASHBOARD_DB[:user_levels].
+            where(user_id: s[:id]).
+            and("best_result >= #{ActivityConstants::MINIMUM_PASS_RESULT}").
+            count
+        end.reduce(:+) / students.count.to_f
+      else
+        lifetime = 0
+        levels = 0
+      end
 
       {
         teacher_name: teacher[:name],
