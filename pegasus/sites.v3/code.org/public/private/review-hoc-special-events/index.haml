@@ -23,12 +23,19 @@ title: Review Hour of Code special events
 
 %h1 Review Hour of Code special events
 
+-results = []
 -events = []
--DB[:forms].where(kind:'HocSignup2014', review:nil).limit(1000).each do |i|
-  -events << JSON.parse(i[:data]).merge(secret: i[:secret])
+-DB[:forms].where(kind:'HocSignup2014', review:nil).each do |i|
+  -results << JSON.parse(i[:data]).merge(secret: i[:secret])
+
+-results.each do |result|
+  -events << result if (result['special_event_flag_b'] == "1" && !result['special_event_details_s'].nil_or_empty? && events.count < 100)
+
+%h2= results.count
+%h2= events.count
 
 -if events.nil_or_empty?
-  %p There are no Hour of Code spelcial events available for review
+  %p There are no Hour of Code special events available for review
 
 -else
   %table#hoc-events-review-table
@@ -40,16 +47,15 @@ title: Review Hour of Code special events
       %th &nbsp;
 
     -events.each do |event|
-      -unless event['special_event_flag_b'].nil_or_empty?
-        %tr
-          %td= event['name_s']
-          %td= event['organization_name_s']
-          %td= event['event_location_s']
-          %td= event['special_event_details_s']
-          %td{style: "white-space: nowrap;"}
-            %span{class: "event-secret", style: "display: none;"}= event[:secret]
-            %button.btn.btn-success.btn-sm.btn-approve Approve
-            %button.btn.btn-danger.btn-sm.btn-reject Reject
+      %tr
+        %td= event['name_s']
+        %td= event['organization_name_s']
+        %td= event['event_location_s']
+        %td= event['special_event_details_s']
+        %td{style: "white-space: nowrap;"}
+          %span{class: "event-secret", style: "display: none;"}= event[:secret]
+          %button.btn.btn-success.btn-sm.btn-approve Approve
+          %button.btn.btn-danger.btn-sm.btn-reject Reject
 
 :javascript
   $(function() {
