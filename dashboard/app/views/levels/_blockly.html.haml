@@ -194,7 +194,8 @@
       hide_source: #{local[:hide_source]},
       share: #{local[:share]},
       no_padding: #{local[:no_padding]},
-      position: { blockYCoordinateInterval: 25 }
+      position: { blockYCoordinateInterval: 25 },
+      cdoSounds: CDOSounds
     };
     $.extend(appOptions, #{app_options.to_json});
     #{'console.log(appOptions)' unless Rails.env.production?};

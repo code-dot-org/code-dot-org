@@ -493,30 +493,30 @@ Maze.init = function(config) {
   });
 
   config.loadAudio = function() {
-    Blockly.loadAudio_(skin.winSound, 'win');
-    Blockly.loadAudio_(skin.startSound, 'start');
-    Blockly.loadAudio_(skin.failureSound, 'failure');
-    Blockly.loadAudio_(skin.obstacleSound, 'obstacle');
+    BlocklyApps.loadAudio(skin.winSound, 'win');
+    BlocklyApps.loadAudio(skin.startSound, 'start');
+    BlocklyApps.loadAudio(skin.failureSound, 'failure');
+    BlocklyApps.loadAudio(skin.obstacleSound, 'obstacle');
     // Load wall sounds.
-    Blockly.loadAudio_(skin.wallSound, 'wall');
+    BlocklyApps.loadAudio(skin.wallSound, 'wall');
 
     // todo - longterm, instead of having sound related flags we should just
     // have the skin tell us the set of sounds it needs
     if (skin.additionalSound) {
-      Blockly.loadAudio_(skin.wall0Sound, 'wall0');
-      Blockly.loadAudio_(skin.wall1Sound, 'wall1');
-      Blockly.loadAudio_(skin.wall2Sound, 'wall2');
-      Blockly.loadAudio_(skin.wall3Sound, 'wall3');
-      Blockly.loadAudio_(skin.wall4Sound, 'wall4');
-      Blockly.loadAudio_(skin.winGoalSound, 'winGoal');
+      BlocklyApps.loadAudio(skin.wall0Sound, 'wall0');
+      BlocklyApps.loadAudio(skin.wall1Sound, 'wall1');
+      BlocklyApps.loadAudio(skin.wall2Sound, 'wall2');
+      BlocklyApps.loadAudio(skin.wall3Sound, 'wall3');
+      BlocklyApps.loadAudio(skin.wall4Sound, 'wall4');
+      BlocklyApps.loadAudio(skin.winGoalSound, 'winGoal');
     }
     if (skin.dirtSound) {
-      Blockly.loadAudio_(skin.fillSound, 'fill');
-      Blockly.loadAudio_(skin.digSound, 'dig');
+      BlocklyApps.loadAudio(skin.fillSound, 'fill');
+      BlocklyApps.loadAudio(skin.digSound, 'dig');
     }
     if (skin.beeSound) {
-      Blockly.loadAudio_(skin.nectarSound, 'nectar');
-      Blockly.loadAudio_(skin.honeySound, 'honey');
+      BlocklyApps.loadAudio(skin.nectarSound, 'nectar');
+      BlocklyApps.loadAudio(skin.honeySound, 'honey');
     }
   };
 
