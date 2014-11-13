@@ -4,7 +4,7 @@ title: Educator Overview
 
 # Resources for educators
 
-Whether you're a school teacher, an administrator, an after school teacher, or a volunteer, Code.org provides educational resources for all ages, free of cost. Below is a summary of our curriculum and other programs. Our online courses on [Code Studio](http://studio.code.org) are meant for use in all settings - in-school, home-schooling, after-school, and can be taught by teachers, parents or volunteers. If you're a parent, you can guide your child to [learn online](/learn/beyond) or [at a local workshop or camp](/learn/local), or [help us in other ways](/help). 
+Whether you're a school teacher, an administrator, an after-school teacher, or a volunteer, Code.org provides educational resources for all ages, free of cost. Below is a summary of our curriculum and other programs. Our online courses on [Code Studio](http://studio.code.org) are meant for use in all settings, in-school, home-schooling, after-school, and can be taught by teachers, parents or volunteers. If you're a parent, you can guide your child to [learn online](/learn/beyond) or [at a local workshop or camp](/learn/local), or [help us in other ways](/help). 
 
 ---
 
@@ -25,7 +25,7 @@ The first step to introduce children to computer science is to participate in th
 
 [Courses for elementary school](/educate/k5/)
 <br/>
-Our 20-hour  courses help even the youngest students try computer science. 
+Our 20-hour courses help even the youngest students try computer science 
 
 ---
 

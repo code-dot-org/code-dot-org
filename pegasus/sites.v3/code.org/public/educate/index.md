@@ -1,48 +1,115 @@
 ---
-title: Educator resources
-nav: educate_nav
+title: Educator Overview
 ---
 
-# Educator resources
+# Resources for educators
 
-## Start with an Hour of Code
-More than 44 million people of all ages have learned an [Hour of Code](http://hourofcode.com), a one-hour introductory course designed to demystify computer science and show that anybody can learn the basics. Participate this December 8-14 during Computer Science Education Week and help reach 100 million students by the end of 2014. 
+Whether you're a school teacher, an administrator, an after-school teacher, or a volunteer, Code.org provides educational resources for all ages, free of cost. Below is a summary of our curriculum and other programs. Our online courses on [Code Studio](http://studio.code.org) are meant for use in all settings - in-school, home-schooling, after-school - and can be taught by teachers, parents or volunteers. If you're a parent, you can guide your child to [learn online](/learn/beyond) or [at a local workshop or camp](/learn/local), or [help us in other ways](/help). 
 
-[<button>Join us</button>](http://hourofcode.com)
+---
+
+## The Hour of Code
+The first step to introduce children to computer science is to participate in the Hour of Code, the largest learning campaign in history. In one hour, students (and teachers) can learn that computer science is fun, easy, and accessible at all ages.
+
+[<button>Host an Hour of Code</button>](http://hourofcode.com) &nbsp;&nbsp; [How-to guide for educators](http://hourofcode.com/us/resources/how-to)
+
+---
+
+[col-50]
+
+[desktop-pad-right]
+
+## Computer science curriculum
+
+### Elementary school (Grades K-5)
+
+[Courses for elementary school](/educate/k5/)
+<br/>
+Our 20-hour courses help even the youngest students try computer science 
+
+---
+
+### Middle school (Grades 6-8)
+
+[CS in Middle School Math](/curriculum/msm/)
+<br/>
+Learn how computer programmers use algebra and geometry to develop video games 
+
+[CS in Middle School Science](/curriculum/mss/)
+<br/>
+Explore and develop complex scientific models through agent-based programming 
+
+---
+
+### High school (Grades 9-12)
+<a href="http://www.exploringcs.org" target="_blank">Exploring Computer Science</a>
+<br/>
+A high school course designed to broaden participation in computer science
+
+[AP Computer Science Principles](/educate/csp)
+<br/>
+An AP course covering a wide range of computer science topics
+
+---
+
+### Online resources
+
+[Code Studio](http://studio.code.org)
+<br/>
+Our online learning platform for students of all ages.
+
+[Curriculum video library](/educate/videos)
+<br/>
+An open library of our educational videos for use in any classroom.
+
+[/desktop-pad-right]
+
+[/col-50]
+
+[col-50]
+
+[desktop-pad-left]
+
+## Professional Development
+
+[Workshops for elementary school teachers](/educate/k5)
+<br/>
+Sign up now for computer science professional development for K-5 educators
+
+[<button>Learn more</button>](/educate/k5/) &nbsp;&nbsp;[<button>Find a workshop</button>](/professional-development-workshops)
+<br/>
+
+Our workshops for teachers in grades 6-12 are available as part of a district-wide partnership.
+
+## District partnership
+
+Partner with Code.org to bring computer science to your entire school district. We will provide all curriculum and prepare your existing teachers and administrators, free of charge.
+
+[<button>Learn more</button>](/educate/districts)
 
 
-## Teach our online courses for grades K-8
-Code.org's online platform [Code Studio](http://studio.code.org) enables students to learn the basic concepts of computer science as early as kindergarten. Within Code Studio, a new Play Lab has been developed where elementary students can create and send apps or animations directly to a cell phone, just by typing in the phone number. Or try our general course designed for any educator to host in a classroom, after-school program, or even in a club outside of school. 
-
-[<button>Learn more</button>](http://studio.code.org)
-
-
-**Professional development workshops - at no cost (US teachers only):**  Code.org is offering amazing, zero-cost, 1-day workshops to prepare educators and content-area teachers (librarians, tech-ed specialists, etc.) to introduce computer science basics in a format that's fun and accessible to the youngest learners (grades K-5).  The workshop will cover content for all three courses and teachers will receive the supplies they need to teach the course- at no cost. These workshops will be led by experienced Code.org K-5 Facilitators in over 60 cities across the United States.
-
-[<button>Learn more</button>](/k5)&nbsp;&nbsp;[<button>Find a workshop (for teachers only)</button>](/professional-development-workshops)
-
-## Partner with us to bring computer science to your district (US public schools)
-Bring permanent computer science courses to your entire district. Code.org will provide everything you need, from professional development to curriculum, **including stipends for teachers**. If you are a private or international school, know that all of our curriculum and professional development resources will be publicly available under a [Creative Commons License](http://creativecommons.org/licenses/by-nc-sa/3.0/).
-
-[<button>Learn How</button>](/educate/districts)&nbsp;&nbsp;[<button>See Partners</button>](/educate/partner-districts)
-
-## K-12 computer science curriculum
-
-We aim to provide curriculum resources for a full K-12 pathway in computer science. This is a work in progress, in collaboration with educators throughout the computer science community. All of our curriculum resources will be publicly available under a [Creative Commons License](http://creativecommons.org/licenses/by-nc-sa/3.0/).
-
-## Inspire students (especially women) to try computer science
-
-Here's a collection of videos, posters, and how-to resources to help inspire students to try computer science. Also, use our [educational video library](/educate/videos) and [nominate a student](/sotw) or [teacher](/totm) you know for a Code.org award.
+## Inspire students
+Use these videos, posters, and how-to resources to inspire students to try computer science. You can also [nominate a student](/sotw) or [teacher](/totm) for a Code.org award.
 
 [<button>Start Inspiring</button>](/educate/inspire)
 
-## Third-party resources for educators
+
+
+## 3rd party resources
+
 Click below for links to other resources for educators interested in teaching computer science.
 
 [<button>Get Tools</button>](/educate/3rdparty)
 
+[/desktop-pad-left]
+
+[/col-50]
 
 
-<br />
-<br />
+<div style="clear:both"/>
 
+<br/>
+<br/>
+
+---
+If you like to geek out on education philosophy, we've published our [curriculum philosophy](/educate/curriculum-philosophy) and [professional development philosophy](/educate/professional-development-philosophy). We use these documents to inspire our own team's work and to help guide our work with our curriculum partners. 
