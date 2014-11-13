@@ -117,7 +117,6 @@ class Artist < Blockly
       <block type="draw_a_triangle"></block>
       <block type="create_a_circle"></block>
       <block type="create_a_circle_size"></block>
-      <block type="create_a_snowflower"></block>
       <block type="create_a_snowflake_branch"></block>
       <block type="draw_a_square_custom"></block>
       <block type="draw_a_house"></block>
@@ -132,11 +131,7 @@ class Artist < Blockly
       <block type="draw_a_rhombus"></block>
       <block type="draw_upper_wave"></block>
       <block type="draw_lower_wave"></block>
-      <block type="create_square_snowflake"></block>
-      <block type="create_lined_snowflake"></block>
-      <block type="create_parallelogram_snowflake"></block>
-      <block type="create_spiral_snowflake"></block>
-      <block type="create_fractal_snowflake"></block>
+      <block type="create_snowflake_dropdown"></block>
 
     </category>
     <category name="Loops">
