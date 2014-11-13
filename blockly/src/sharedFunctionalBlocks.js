@@ -107,6 +107,23 @@ function installMathNumber(blockly, generator, gensym) {
   generator.functional_math_number = function() {
     return this.getTitleValue('NUM');
   };
+
+  blockly.Blocks.functional_math_number_dropdown = {
+    // Numeric value.
+    init: function() {
+      this.setFunctional(true, {
+        headerHeight: 0,
+        rowBuffer: 3
+      });
+      this.setHSV.apply(this, functionalBlockUtils.colors.Number);
+      this.appendDummyInput()
+          .appendTitle(new Blockly.FieldDropdown(), 'NUM')
+          .setAlign(Blockly.ALIGN_CENTRE);
+      this.setFunctionalOutput(true, 'Number');
+    }
+  };
+
+  generator.functional_math_number_dropdown = generator.functional_math_number;
 }
 
 function installString(blockly, generator) {
@@ -130,4 +147,3 @@ function installString(blockly, generator) {
     return blockly.JavaScript.quote_(this.getTitleValue('VAL'));
   };
 }
-

@@ -2,10 +2,12 @@
  * A node consisting of a value, and if that value is an operator, two operands.
  * Operands will always be stored internally as ExpressionNodes.
  */
-var ExpressionNode = function (val, left, right) {
+var ExpressionNode = function (val, left, right, blockId) {
   this.val = val;
   this.left = null;
   this.right = null;
+  this.blockId = blockId;
+
   if (this.isOperation()) {
     this.left = left instanceof ExpressionNode ? left : new ExpressionNode(left);
     this.right = right instanceof ExpressionNode ? right : new ExpressionNode(right);
@@ -38,8 +40,10 @@ ExpressionNode.prototype.toString = function  () {
  * Create a deep clone of this node
  */
 ExpressionNode.prototype.clone = function () {
-  return new ExpressionNode(this.val, this.left ? this.left.clone() : null,
-    this.right ? this.right.clone() : null);
+  return new ExpressionNode(this.val,
+    this.left ? this.left.clone() : null,
+    this.right ? this.right.clone() : null,
+    this.blockId);
 };
 
 /**
@@ -103,14 +107,13 @@ ExpressionNode.prototype.depth = function () {
  *   not met.
  */
 ExpressionNode.prototype.collapse = function (ignoreFailures) {
-  if (!this.isOperation()) {
+  var deepest = this.getDeepestOperation();
+  if (deepest === null) {
     return false;
   }
 
-  var leftDepth = this.left.depth();
-  var rightDepth = this.right.depth();
-
-  if (leftDepth === 0 && rightDepth === 0) {
+  // We're the depest operation, implying both sides are numbers
+  if (this === deepest) {
     if (this.failedExpectation(true) && !ignoreFailures) {
       // dont allow collapsing if we're a leaf operation with a mistake
       return false;
@@ -118,12 +121,8 @@ ExpressionNode.prototype.collapse = function (ignoreFailures) {
     this.val = this.evaluate();
     this.left = null;
     this.right = null;
-    return true;
   } else {
-    if (rightDepth > leftDepth) {
-      return this.right.collapse(ignoreFailures);
-    }
-    return this.left.collapse(ignoreFailures);
+    return deepest.collapse(ignoreFailures);
   }
 
   return true;
@@ -186,6 +185,23 @@ ExpressionNode.prototype.getTokenList = function (markNextParens) {
   list = list.concat(this.right.getTokenList(markNextParens && rightDeeper));
   list = list.concat(token(")", markNextParens === true && leafOperation));
   return list;
+};
+
+/**
+ * Gets the deepest descendant operation ExpressionNode in the tree (i.e. the
+ * next node to collapse
+ */
+ExpressionNode.prototype.getDeepestOperation = function () {
+  if (!this.isOperation()) {
+    return null;
+  }
+  if (!this.left.isOperation() && !this.right.isOperation()) {
+    return this;
+  }
+
+  var rightDeeper = this.right.depth() > this.left.depth();
+  return rightDeeper ? this.right.getDeepestOperation() :
+    this.left.getDeepestOperation();
 };
 
 /**

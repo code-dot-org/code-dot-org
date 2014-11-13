@@ -11,7 +11,7 @@ social:
   "og:video:height": ""
   "og:video:type": ""
 ---
-# Partner with Code.org to bring computer science in grades K-12 to your district
+# Partner with Code.org to bring professional development to your district
 
 ## Existing partners
 
@@ -26,12 +26,12 @@ social:
 - [See all 30+ partner districts](/educate/partner-districts)
 
 
-## Code.org provides (at no charge): 
+## Code.org professional development program provides (at no charge): 
 
-1. Professional development for teachers (*including stipends*)
+1. Computer science professional development for teachers (*including stipends for 6-12 teachers*)
 2. Nationally-recognized courses and curriculum in a blended-learning environment
 3. Materials to promote computer science to parents/students
-4. Support for all grade K-12
+4. Curriculum to support a full K-12 pathway
 <br />
 	
 

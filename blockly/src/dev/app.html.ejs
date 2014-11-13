@@ -9,8 +9,6 @@
   <link rel="stylesheet" type="text/css" href="../css/common.css">
   <link rel="stylesheet" type="text/css" href="../css/<%= app %>.css">
 
-  <script type="text/javascript" src="../js/<%= options.locale %>/vendor.js"></script>
-
 <% if ((app === "maze" && options.levelId.indexOf('3_') === 0) ||
        (app === "webapp" && options.levelId.indexOf('ec_') === 0) ||
        (app === "turtle" && options.levelId.indexOf('ec_') === 0)) { -%>
@@ -20,6 +18,8 @@
   <script type="text/javascript" src="../js/ace/ext-language_tools.js"></script>
   <script type="text/javascript" src="../js/droplet/droplet-full.min.js"></script>
   <link rel="stylesheet" type="text/css" href="../css/droplet/droplet.min.css">
+<% } else { -%>
+  <script type="text/javascript" src="../js/<%= options.locale %>/vendor.js"></script>
 <% } -%>
 
   <script type="text/javascript" src="../js/<%= options.locale %>/<%= app %>.js"></script>

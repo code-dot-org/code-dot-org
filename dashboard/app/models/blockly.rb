@@ -20,6 +20,7 @@ class Blockly < Level
     use_modal_function_editor
     use_contract_editor
     open_function_definition
+    callout_json
   )
 
   before_validation {
