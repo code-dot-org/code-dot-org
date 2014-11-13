@@ -33,7 +33,14 @@ module.exports = {
       blockUtils.blockOfType('scale') +
       blockUtils.blockOfType('functional_text') +
       blockUtils.blockOfType('string_append') +
-      blockUtils.blockOfType('string_length')
+      blockUtils.blockOfType('string_length') +
+      blockUtils.blockOfType('functional_greater_than') +
+      blockUtils.blockOfType('functional_less_than') +
+      blockUtils.blockOfType('functional_number_equals') +
+      blockUtils.blockOfType('functional_logical_and') +
+      blockUtils.blockOfType('functional_logical_or') +
+      blockUtils.blockOfType('functional_logical_not') +
+      blockUtils.blockOfType('functional_boolean')
     ),
     startBlocks: blockUtils.mathBlockXml('functional_star', {
       'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'black' } ),
