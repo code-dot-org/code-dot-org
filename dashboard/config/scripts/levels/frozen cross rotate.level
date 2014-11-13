@@ -16,7 +16,10 @@
     "free_play": "false",
     "slider_speed": "0.5",
     "instructions": "Now try repeating it 10 times. How many degrees do you need to turn between each line?",
-    "impressive": "false"
+    "impressive": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "callout_json": "[\r\n  {\"localization_key\": \"repeat_blocks\", \"element_id\": \"[block-id='1']\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"center right\", \"at\": \"bottom right\", \"adjust\": {\"x\": 22, \"y\":320}},\r\n    \"style\": { \"classes\": \"no-tip\" }}\r\n  }\r\n]"
   }
 }]]></config>
   <blocks>
