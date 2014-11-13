@@ -222,7 +222,6 @@ Turtle.init = function(config) {
           var func = [];
           func.push('function ' + functionName + '() {');
           func.push('  var colors = [ "#e8ebed", "#bbd1e4", "#e8ebed", "#1e618f", "#212b62", "#40808f", "#a9d0dd", "#a9d0dd", "#56a7b5", "#3d839c", "#7eb3a8", "#ebddd8", "#82849e", "#3f7799", "#59a3bd", "#64c2c7", "#bbd9d9", "#e8e7ef"];');
-          //func.push('  return "rgb(" + Math.floor(Math.random()*255) + ",0,0);"');
           func.push('  return colors[Math.floor(Math.random()*colors.length)];');
           func.push('}');
           Blockly.JavaScript.definitions_.colour_random = func.join('\n');
@@ -249,7 +248,7 @@ Turtle.init = function(config) {
     // pre-load image for line pattern block. Creating the image object and setting source doesn't seem to be
     // enough in this case, so we're actually creating and reusing the object within the document body.
 
-    if (BlocklyApps.usingBlockly && config.level.edit_blocks)
+    if ((BlocklyApps.usingBlockly && config.level.edit_blocks) || skin.id == "anna" || skin.id == "elsa")
     {
       var imageContainer = document.createElement('div');
       imageContainer.style.display='none';
@@ -506,12 +505,12 @@ BlocklyApps.reset = function(ignore) {
   Turtle.ctxScratch.canvas.width = Turtle.ctxScratch.canvas.width;
   Turtle.ctxPattern.canvas.width = Turtle.ctxPattern.canvas.width;
   if (skin.id == "anna") {
-    Turtle.ctxScratch.strokeStyle = 'rgb(255,255,238)';
-    Turtle.ctxScratch.fillStyle = 'rgb(255,255,238)';
+    Turtle.ctxScratch.strokeStyle = 'rgb(255,255,255)';
+    Turtle.ctxScratch.fillStyle = 'rgb(255,255,255)';
     Turtle.ctxScratch.lineWidth = 2 * retina;
   } else if (skin.id == "elsa") {
-    Turtle.ctxScratch.strokeStyle = 'rgb(255,255,238)';
-    Turtle.ctxScratch.fillStyle = 'rgb(255,255,238)';
+    Turtle.ctxScratch.strokeStyle = 'rgb(255,255,255)';
+    Turtle.ctxScratch.fillStyle = 'rgb(255,255,255)';
     Turtle.ctxScratch.lineWidth = 2 * retina;
   } else {
     Turtle.ctxScratch.strokeStyle = '#000000';
