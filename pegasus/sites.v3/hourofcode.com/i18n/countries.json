@@ -3,9 +3,17 @@
     "full_name": "Andorra",
     "default_language": "ca"
   },
+  "af": {
+    "full_name": "Africa",
+    "default_language": "en"
+  },
   "al": {
     "full_name": "Albania",
     "default_language": "sq"
+  },
+  "ap": {
+    "full_name": "Asia Pacific",
+    "default_language": "en"
   },
   "ar": {
     "full_name": "Argentina",
@@ -48,7 +56,7 @@
     "default_language": "ar"
   },
   "es": {
-    "full_name": "Latin America",
+    "full_name": "Spain and Latin America",
     "default_language": "es"
   },
   "eu": {
@@ -100,7 +108,7 @@
     "default_language": "ko"
   },
   "me": {
-    "full_name": "Middle East and North Africa",
+    "full_name": "Middle East",
     "default_language": "ar"
   },
   "my": {
@@ -130,6 +138,10 @@
   "pe": {
     "full_name": "Peru",
     "default_language": "es"
+  },
+  "ps": {
+    "full_name": "Palestine",
+    "default_language": "ar"
   },
   "pt": {
     "full_name": "Portugal",

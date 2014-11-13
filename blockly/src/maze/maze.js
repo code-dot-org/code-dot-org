@@ -47,6 +47,8 @@ var Direction = tiles.Direction;
 var SquareType = tiles.SquareType;
 var TurnDirection = tiles.TurnDirection;
 
+var SVG_NS = "http://www.w3.org/2000/svg";
+
 /**
  * Create a namespace for the application.
  */
@@ -165,7 +167,7 @@ function drawMap () {
   var x, y, k, tile;
 
   // Draw the outer square.
-  var square = document.createElementNS(Blockly.SVG_NS, 'rect');
+  var square = document.createElementNS(SVG_NS, 'rect');
   square.setAttribute('width', Maze.MAZE_WIDTH);
   square.setAttribute('height', Maze.MAZE_HEIGHT);
   square.setAttribute('fill', '#F1EEE7');
@@ -182,7 +184,7 @@ function drawMap () {
   visualizationColumn.style.width = Maze.MAZE_WIDTH + 'px';
 
   if (skin.background) {
-    tile = document.createElementNS(Blockly.SVG_NS, 'image');
+    tile = document.createElementNS(SVG_NS, 'image');
     tile.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
                         skin.background);
     tile.setAttribute('height', Maze.MAZE_HEIGHT);
@@ -195,9 +197,9 @@ function drawMap () {
   drawMapTiles(svg);
 
   // Pegman's clipPath element, whose (x, y) is reset by Maze.displayPegman
-  var pegmanClip = document.createElementNS(Blockly.SVG_NS, 'clipPath');
+  var pegmanClip = document.createElementNS(SVG_NS, 'clipPath');
   pegmanClip.setAttribute('id', 'pegmanClipPath');
-  var clipRect = document.createElementNS(Blockly.SVG_NS, 'rect');
+  var clipRect = document.createElementNS(SVG_NS, 'rect');
   clipRect.setAttribute('id', 'clipRect');
   clipRect.setAttribute('width', Maze.PEGMAN_WIDTH);
   clipRect.setAttribute('height', Maze.PEGMAN_HEIGHT);
@@ -205,7 +207,7 @@ function drawMap () {
   svg.appendChild(pegmanClip);
 
   // Add pegman.
-  var pegmanIcon = document.createElementNS(Blockly.SVG_NS, 'image');
+  var pegmanIcon = document.createElementNS(SVG_NS, 'image');
   pegmanIcon.setAttribute('id', 'pegman');
   pegmanIcon.setAttribute('class', 'pegman-location');
   pegmanIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
@@ -215,7 +217,7 @@ function drawMap () {
   pegmanIcon.setAttribute('clip-path', 'url(#pegmanClipPath)');
   svg.appendChild(pegmanIcon);
 
-  var pegmanFadeoutAnimation = document.createElementNS(Blockly.SVG_NS, 'animate');
+  var pegmanFadeoutAnimation = document.createElementNS(SVG_NS, 'animate');
   pegmanFadeoutAnimation.setAttribute('id', 'pegmanFadeoutAnimation');
   pegmanFadeoutAnimation.setAttribute('attributeType', 'CSS');
   pegmanFadeoutAnimation.setAttribute('attributeName', 'opacity');
@@ -227,7 +229,7 @@ function drawMap () {
 
   if (Maze.finish_ && skin.goal) {
     // Add finish marker.
-    var finishMarker = document.createElementNS(Blockly.SVG_NS, 'image');
+    var finishMarker = document.createElementNS(SVG_NS, 'image');
     finishMarker.setAttribute('id', 'finish');
     finishMarker.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
                                 skin.goal);
@@ -238,7 +240,7 @@ function drawMap () {
 
   // Add wall hitting animation
   if (skin.hittingWallAnimation) {
-    var wallAnimationIcon = document.createElementNS(Blockly.SVG_NS, 'image');
+    var wallAnimationIcon = document.createElementNS(SVG_NS, 'image');
     wallAnimationIcon.setAttribute('id', 'wallAnimation');
     wallAnimationIcon.setAttribute('height', Maze.SQUARE_SIZE);
     wallAnimationIcon.setAttribute('width', Maze.SQUARE_SIZE);
@@ -251,7 +253,7 @@ function drawMap () {
   for (y = 0; y < Maze.ROWS; y++) {
     for (x = 0; x < Maze.COLS; x++) {
       if (Maze.map[y][x] == SquareType.OBSTACLE) {
-        var obsIcon = document.createElementNS(Blockly.SVG_NS, 'image');
+        var obsIcon = document.createElementNS(SVG_NS, 'image');
         obsIcon.setAttribute('id', 'obstacle' + obsId);
         obsIcon.setAttribute('height', Maze.MARKER_HEIGHT * skin.obstacleScale);
         obsIcon.setAttribute('width', Maze.MARKER_WIDTH * skin.obstacleScale);
@@ -383,9 +385,9 @@ Maze.drawTile = function (svg, tileSheetLocation, row, col, tileId) {
   var tileSheetHeight = Maze.SQUARE_SIZE * 4;
 
   // Tile's clipPath element.
-  var tileClip = document.createElementNS(Blockly.SVG_NS, 'clipPath');
+  var tileClip = document.createElementNS(SVG_NS, 'clipPath');
   tileClip.setAttribute('id', 'tileClipPath' + tileId);
-  var tileClipRect = document.createElementNS(Blockly.SVG_NS, 'rect');
+  var tileClipRect = document.createElementNS(SVG_NS, 'rect');
   tileClipRect.setAttribute('width', Maze.SQUARE_SIZE);
   tileClipRect.setAttribute('height', Maze.SQUARE_SIZE);
 
@@ -395,7 +397,7 @@ Maze.drawTile = function (svg, tileSheetLocation, row, col, tileId) {
   svg.appendChild(tileClip);
 
   // Tile sprite.
-  var tileElement = document.createElementNS(Blockly.SVG_NS, 'image');
+  var tileElement = document.createElementNS(SVG_NS, 'image');
   tileElement.setAttribute('id', 'tileElement' + tileId);
   tileElement.setAttributeNS('http://www.w3.org/1999/xlink',
                              'xlink:href',
@@ -408,8 +410,7 @@ Maze.drawTile = function (svg, tileSheetLocation, row, col, tileId) {
   tileElement.setAttribute('y', (row - top) * Maze.SQUARE_SIZE);
   svg.appendChild(tileElement);
   // Tile animation
-  var tileAnimation = document.createElementNS(Blockly.SVG_NS,
-                                               'animate');
+  var tileAnimation = document.createElementNS(SVG_NS, 'animate');
   tileAnimation.setAttribute('id', 'tileAnimation' + tileId);
   tileAnimation.setAttribute('attributeType', 'CSS');
   tileAnimation.setAttribute('attributeName', 'opacity');
@@ -520,16 +521,18 @@ Maze.init = function(config) {
   };
 
   config.afterInject = function() {
-    /**
-     * The richness of block colours, regardless of the hue.
-     * MOOC blocks should be brighter (target audience is younger).
-     * Must be in the range of 0 (inclusive) to 1 (exclusive).
-     * Blockly's default is 0.45.
-     */
-    Blockly.HSV_SATURATION = 0.6;
+    if (BlocklyApps.usingBlockly) {
+      /**
+       * The richness of block colours, regardless of the hue.
+       * MOOC blocks should be brighter (target audience is younger).
+       * Must be in the range of 0 (inclusive) to 1 (exclusive).
+       * Blockly's default is 0.45.
+       */
+      Blockly.HSV_SATURATION = 0.6;
 
-    Blockly.SNAP_RADIUS *= Maze.scale.snapRadius;
-    Blockly.JavaScript.INFINITE_LOOP_TRAP = codegen.loopHighlight("Maze");
+      Blockly.SNAP_RADIUS *= Maze.scale.snapRadius;
+      Blockly.JavaScript.INFINITE_LOOP_TRAP = codegen.loopHighlight("Maze");
+    }
 
     Maze.start_ = undefined;
     Maze.finish_ = undefined;
@@ -621,9 +624,9 @@ var getPegmanFrameOffsetY = function (animationRow) {
 var createPegmanAnimation = function(options) {
   var svg = document.getElementById('svgMaze');
   // Create clip path.
-  var clip = document.createElementNS(Blockly.SVG_NS, 'clipPath');
+  var clip = document.createElementNS(SVG_NS, 'clipPath');
   clip.setAttribute('id', options.idStr + 'PegmanClip');
-  var rect = document.createElementNS(Blockly.SVG_NS, 'rect');
+  var rect = document.createElementNS(SVG_NS, 'rect');
   rect.setAttribute('id', options.idStr + 'PegmanClipRect');
   if (options.col !== undefined) {
     rect.setAttribute('x', options.col * Maze.SQUARE_SIZE + 1);
@@ -638,7 +641,7 @@ var createPegmanAnimation = function(options) {
   // Create image.
   // Add a random number to force it to reload everytime.
   var imgSrc = options.pegmanImage + '?time=' + (new Date()).getTime();
-  var img = document.createElementNS(Blockly.SVG_NS, 'image');
+  var img = document.createElementNS(SVG_NS, 'image');
   img.setAttributeNS(
       'http://www.w3.org/1999/xlink', 'xlink:href', imgSrc);
   img.setAttribute('height', Maze.PEGMAN_HEIGHT * (options.numRowPegman || 1));
@@ -822,7 +825,9 @@ function beginAttempt () {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
   BlocklyApps.toggleRunReset('reset');
-  Blockly.mainBlockSpace.traceOn(true);
+  if (BlocklyApps.usingBlockly) {
+    Blockly.mainBlockSpace.traceOn(true);
+  }
   BlocklyApps.reset(false);
   BlocklyApps.attempts++;
 }
@@ -894,14 +899,16 @@ Maze.execute = function(stepMode) {
   beginAttempt();
 
   Maze.executionInfo = new ExecutionInfo({ticks: 100});
-  var code = Blockly.Generator.blockSpaceToCode('JavaScript');
   Maze.result = BlocklyApps.ResultType.UNSET;
   Maze.testResults = BlocklyApps.TestResults.NO_TESTS_RUN;
   Maze.waitingForReport = false;
   Maze.animating_ = false;
   Maze.response = null;
 
-  if (level.editCode) {
+  var code;
+  if (BlocklyApps.usingBlockly) {
+    code = Blockly.Generator.blockSpaceToCode('JavaScript');
+  } else {
     code = utils.generateCodeAliases(level.codeFunctions, 'Maze');
     code += BlocklyApps.editor.getValue();
   }
@@ -989,10 +996,6 @@ Maze.execute = function(stepMode) {
 
   var program;
   if (level.editCode) {
-    Maze.testResults = levelComplete ?
-      BlocklyApps.TestResults.ALL_PASS :
-      BlocklyApps.TestResults.TOO_FEW_BLOCKS_FAIL;
-
     // If we want to "normalize" the JavaScript to avoid proliferation of nearly
     // identical versions of the code on the service, we could do either of these:
 
@@ -1031,25 +1034,27 @@ Maze.execute = function(stepMode) {
 
   Maze.animating_ = true;
 
-  // Disable toolbox while running
-  Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
+  if (BlocklyApps.usingBlockly) {
+    // Disable toolbox while running
+    Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
 
-  if (stepMode) {
-    if (Maze.cachedBlockStates.length !== 0) {
-      throw new Error('Unexpected cachedBlockStates');
-    }
-    // Disable all blocks, caching their state first
-    Blockly.mainBlockSpace.getAllBlocks().forEach(function (block) {
-      Maze.cachedBlockStates.push({
-        block: block,
-        movable: block.isMovable(),
-        deletable: block.isDeletable(),
-        editable: block.isEditable()
+    if (stepMode) {
+      if (Maze.cachedBlockStates.length !== 0) {
+        throw new Error('Unexpected cachedBlockStates');
+      }
+      // Disable all blocks, caching their state first
+      Blockly.mainBlockSpace.getAllBlocks().forEach(function (block) {
+        Maze.cachedBlockStates.push({
+          block: block,
+          movable: block.isMovable(),
+          deletable: block.isDeletable(),
+          editable: block.isEditable()
+        });
+        block.setMovable(false);
+        block.setDeletable(false);
+        block.setEditable(false);
       });
-      block.setMovable(false);
-      block.setDeletable(false);
-      block.setEditable(false);
-    });
+    }
   }
 
   // Removing the idle animation and replace with pegman sprite
@@ -1115,8 +1120,10 @@ Maze.scheduleAnimations = function (singleStep) {
         stepButton.removeAttribute('disabled');
       } else {
         Maze.animating_ = false;
-        // reenable toolbox
-        Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
+        if (BlocklyApps.usingBlockly) {
+          // reenable toolbox
+          Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
+        }
         // If stepping and we failed, we want to retain highlighting until
         // clicking reset.  Otherwise we can clear highlighting/disabled
         // blocks now
