@@ -17,12 +17,12 @@ Contracts provide a way for students to better understand and discuss functions.
 [summary]
 
 ## Teaching Summary
-### **Getting Started** - 15 minutes
+### **What's in a Contract**
  
 1) [Vocabulary](#Vocab)
 2) [Figuring it Out](#GetStarted)  
 
-### **Activity: Videogames and the Coordinate Plane** - 25  minutes  
+### **Activity: Contract Writing**  
 
 3) [Dissecting a Demo](#Activity1)  
 4) [Coordinate Planes](#Activity2)  
@@ -74,6 +74,11 @@ By keeping a list of all the functions in a language, and their Domains, program
 
 **The Range of a function is the data that the function produces.**
 
+Domains and Ranges help programmers write better code, by preventing silly mistakes and giving themselves hints about what to do next. A programmer who wants to use "star" can look up the Domain and immediately know that the first input has to be a Number (like 100), without having to remember it each time. Instead of writing a single value there, a programmer could write a whole expression, like (* 25 4). We know this code will return an appropriate value (Number) by looking at the Range for *; therefore, the result of * can be used in place of any Number value.
+
+When programmers write down the Domains and Ranges of each function, they write what are called **contracts**, to keep track of what each function needs. 
+
+**A Contract has three parts: the Name, Domain and Range of a function.**
 
 [/together]
 
@@ -82,40 +87,46 @@ By keeping a list of all the functions in a language, and their Domains, program
 ## Activities: (25 min)
 ### <a name="Activity1"></a> 3) Dissecting a Demo
 
-Let’s begin by exploring a simple videogame, and then figuring out how it works. Open this link to play the game, and spend a minute or two exploring it. You can use the arrow keys to move the cat left, right and jump - try to catch the ruby and avoid the dog!
+Let's see if we can come up with contracts for some of the functions you've already seen. You'll want to make sure that you've got your [contracts sheet](needacontractsheet.pdf), as this is where you'll keep a running document of all contracts you write - both for existing functions and ones of your own creation.
 
-This game is made up of characters, each of which has its own behavior. The Ruby moves from the right to the left, as does the Dog. NinjaCat only moves when you hit the arrow keys, and she can move left, right, up and down. We can figure out how the game works by first understanding how each character works.
+The contract for star is:  
 
-**Directions:**
-
-> 1) Divide students into groups of 2-4.
-
-> 2) Provide each student with a copy of the reverse-engineering table.
-
-> 3) As students demo the game, ask them to fill in the "Thing in the game..." column with every object they see in the game.
-
-> 4)  Discuss whith the whole group which things they came up with. All for characters? Background? Score?
-
-> 5)  Next, for each of the things in the game, fill in the column describing what changes. Size? Movement? Value?
-
-> 6)  Ask students to share back with the whole group. Note how students described changes - how detailed were they? What words did they use to describe movement?
-
-
-### <a name="Activity2"></a> 4) Coordinate Planes
-
-Computers use numbers to represent a character’s position onscreen, using number lines as rulers to measure the distance from the bottom-left corner of the screen. For our videogame, we will place the numberline so that the screen runs from 0 (on the left) to 640 (on the right). We can take the image of the Dog, stick it anywhere on the line, and measure the distance back to the lefthand edge. Anyone else who knows about our number line will be able to duplicate the exact position of the Dog, knowing only the number. What is the coordinate of the Dog on the righthand side of the screen? The center? What coordinate would place the Dog beyond the lefthand edge of the screen?
-
-The key point for students here is precision and objectivity. There are many possible correct answers, but students should understand why any solution should be accurate and unambiguous. This requires students to propose solutions that share a common "zero" (the starting point of their number line) and direction (literally, the direction from which a character’s position is measured).
-
-By adding a second number line, we can locate a character anywhere on the screen in either dimension. The first line is called the x-axis, which runs from left to right. The second line, which runs up and down, is called the y-axis. A 2-dimensional coordinate consists of both the x- and y-locations on the axes. Suppose we wanted to locate NinjaCat’s position on the screen. We can find the x-coordinate by dropping a line down from NinjaCat and read the position on the number line. The y-coordinate is found by running a line to the y-axis.
-
-A coordinate represents a single point, and an image is (by definition) many points. Some students will ask whether a character’s coordinate refers to the center of the image, or one of the corners. In this particular program, the center serves as the coordinate - but other programs may use another location. The important point in discussion with students is that there is flexibility here, as long as the convention is used consistently.
-
-When we write down these coordinates, we always put the x before the y (just like in the alphabet!). Most of the time, you’ll see coordinates written like this: (200, 50) meaning that the x-coordinate is 200 and the y-coordinate is 50.
-
-Depending on how a character moves, their position might change only along the x-axis, only along the y-axis, or both. Look back to the table you wrote in the workbook (Page 2). Can NinjaCat move up and down in the game? Can she move left and right? So what’s changing: her x-coordinate, her y-coordinate, or both? What about the clouds? Do they move up and down? Left and right? Both?
+; star: Number String String -> Image
  
-Fill in the rest of the table, identifying what is changing for each of your characters.
+This means that the Name of the function is star, that it takes in a Number and two Strings as its Domain, and produces an Image as the Range. We use types instead of values when we write a Contract, because we want to be more general: a star could be of any size, so the Domain for star specifies that the first argument could be any Number. If we think of a language as a collection of lego pieces, the Contracts are like the tabs and slots that tell us how each piece can connect.
+Contracts are sufficiently important and useful that we should keep a list of them somewhere. The back pages of your workbook contain a sheet labeled "Contracts". Write the contract for star in the first row of your contracts table.
+Common mistakes when students first write down contracts include: writing values (such as "red") instead of types (such as "String") and forgetting arguments. Read your students’ contracts carefully, as they often indicate misconceptions that will persist and affect them later on.
+Here is the contract for a new function:  
+
+; rectangle: Number Number String String -> Image
+ 
+What is the Name of this function?
+How many things are the Domain of this function?
+What is the type of each thing in the Domain?
+What is the Range of this function?
+A Contract tells you exactly how to use the function, by writing its Name and then using values for each of the arguments in the Domain. Here is an example of an expression, written to use rectangle:  
+
+(rectangle 100 50 "solid" "blue")
+ 
+What do you think this code will produce?
+Have students experiment with changing the argument values, always drawing attention back to the Domain.
+By writing down the Contracts for our functions, we can easily look back to see how they are used.
+The Contract for + is shown below.  
+
+; +: Number Number -> Number
+ 
+Can you write the Contract for *, -, / and sqrt?
+
+
+### <a name="Activity2"></a> 4) What Can Contracts Tell Us
+
+Now that you know how to use a Contract to write an expression, here are the Contracts for several new functions that produce Images:  
+
+; ellipse:  Number Number String String -> Image
+; triangle: Number String String        -> Image
+; circle:   Number String String        -> Image
+ 
+See if you can figure out how to use these new functions to draw other shapes! Here's an example to get you started
 
 [/together]
 
@@ -124,21 +135,8 @@ Fill in the rest of the table, identifying what is changing for each of your cha
 ## Wrap-up (5 min)
 ### <a name="WrapUp"></a> 5) Brainstorming for a Game
 
-Use the [game planning template](needatemplate.pdf) for you to make your own game. Just like we made a list of everything in the NinjaCat game, we’re going to start with a list of everything in your game.
-To start, your game will have with four things in it:
-
-- A Background, such as a forest, a city, space, etc.
-- A Player, who can move when the user hits a key.
-- A Target, which flies from the right to the left, and gives the player points for hitting it.
-- A Danger, which flies from the right to the left, which the player must avoid.
-
-[tip]
-
-# Lesson Tip  
-
-The structure of your students' games will very closely resemble the demo they've just played. Many students will want to reach for the stars and design the next Halo. Remind them that major games like that take massive teams many years to build. Some of the most fun and enduring games are built on very simple mechanics (think Pacman, Tetris, or even Flappy Bird).
-
-[/tip]
+This lesson expanded Circles of Evaluations, expressions, and code to include Strings and Images (as well as Numbers). You learned that everything you knew about functions on Numbers also works on Strings and Images (which will make your programs more interesting). You also learned how to use the Image functions to create your own images, and how to use existing Images in your programs (through bitmap/url).
+In the next unit, you’ll learn how to create your own functions to save work in writing expressions (this will turn out to be an essential part of writing a game). You’ll also start customizing your game with images for the elements in your game design.
 
 [/together]
 
