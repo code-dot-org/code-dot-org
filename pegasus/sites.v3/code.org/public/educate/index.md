@@ -11,7 +11,7 @@ Whether you're a school teacher, an administrator, an after-school teacher, or a
 ## The Hour of Code
 The first step to introduce children to computer science is to participate in the Hour of Code, the largest learning campaign in history. In one hour, students (and teachers) can learn that computer science is fun, easy, and accessible at all ages.
 
-[<button>Host an Hour of Code</button>](http://hourofcode.com) &nbsp;&nbsp; [How-to guide for educators](http://hourofcode.com/us/resources/how-to)
+[<button>Host an Hour of Code</button>](http://hourofcode.com) &nbsp;&nbsp; [How-to guide for educators](http://hourofcode.com/resources/how-to)
 
 ---
 
