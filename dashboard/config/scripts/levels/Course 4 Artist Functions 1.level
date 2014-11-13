@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Can you draw a square that is 100 pixel's in length, using a loop?",
+    "instructions": "Can you draw a square that is 100 pixels in length, using a loop?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "false",

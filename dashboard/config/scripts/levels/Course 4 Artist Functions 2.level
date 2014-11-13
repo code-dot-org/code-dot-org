@@ -87,7 +87,7 @@
     </toolbox_blocks>
     <required_blocks>
       <xml>
-        <block type="draw_move" inline="true" uservisible="false">
+        <block type="draw_move" inline="true">
           <title name="DIR">moveForward</title>
           <value name="VALUE">
             <block type="math_number" uservisible="false">
@@ -95,7 +95,7 @@
             </block>
           </value>
         </block>
-        <block type="draw_turn" inline="true" uservisible="false">
+        <block type="draw_turn" inline="true">
           <title name="DIR">turnLeft</title>
           <value name="VALUE">
             <block type="math_number" uservisible="false">
@@ -103,7 +103,7 @@
             </block>
           </value>
         </block>
-        <block type="controls_repeat_ext" inline="true" uservisible="false">
+        <block type="controls_repeat_ext" inline="true">
           <value name="TIMES">
             <block type="math_number" uservisible="false">
               <title name="NUM">4</title>
