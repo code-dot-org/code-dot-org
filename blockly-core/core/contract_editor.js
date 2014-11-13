@@ -78,19 +78,31 @@ Blockly.ContractEditor.prototype.createContractDom_ = function() {
 
 /**
  * Add a new parameter block to the toolbox (and set an output type mutation on it)
- * @param newParameterName
+ * @param {String} newParameterName
+ * @param {?String} opt_newParameterType
  * @override
  */
-Blockly.ContractEditor.prototype.addParameter = function(newParameterName) {
-  var newParameterOutputType = this.inputTypeSelector.getValue();
-  // TODO(bjordan): Q: use e.g. document.createElement / .innerHTML / appendChild() instead?
-  var param = Blockly.createSvgElement('block', {type: this.parameterBlockType});
-  var title = Blockly.createSvgElement('title', {name: 'VAR'}, param);
+Blockly.ContractEditor.prototype.addParameter = function(newParameterName, opt_newParameterType) {
+  opt_newParameterType = opt_newParameterType || this.inputTypeSelector.getValue();
+  var newParamBlockDOM = Blockly.createSvgElement('block', {type: this.parameterBlockType});
+  var title = Blockly.createSvgElement('title', {name: 'VAR'}, newParamBlockDOM);
   title.textContent = newParameterName;
-  var mutation = Blockly.createSvgElement('mutation', {}, param);
-  var outputType = Blockly.createSvgElement('outputType', {}, mutation);
-  outputType.textContent = newParameterOutputType;
-  this.paramToolboxBlocks_.push(param);
+  if (opt_newParameterType) {
+    var mutation = Blockly.createSvgElement('mutation', {}, newParamBlockDOM);
+    var outputType = Blockly.createSvgElement('outputtype', {}, mutation);
+    outputType.textContent = opt_newParameterType;
+  }
+  this.paramToolboxBlocks_.push(newParamBlockDOM);
+};
+
+Blockly.ContractEditor.prototype.populateParamToolbox_ = function() {
+  this.paramToolboxBlocks_ = [];
+  var self = this;
+  var procedureInfo = this.functionDefinitionBlock.getProcedureInfo();
+  for (var i = 0; i < procedureInfo.parameterNames.length; i++) {
+    self.addParameter(procedureInfo.parameterNames[i], procedureInfo.parameterTypes[i]);
+  }
+  this.refreshParamsEverywhere();
 };
 
 Blockly.ContractEditor.prototype.initializeOutputTypeDropdown = function() {

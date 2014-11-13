@@ -42,17 +42,14 @@ Blockly.Blocks.functional_definition = {
     var name = Blockly.Procedures.findLegalName(Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE, this);
     this.appendDummyInput()
         .appendTitle('Define' /**TODO(bjordan): i18n*/)
-        .appendTitle(new Blockly.FieldTextInput('My New Function', Blockly.Procedures.rename), 'NAME')
+        .appendTitle(new Blockly.FieldTextInput(name, Blockly.Procedures.rename), 'NAME')
         .appendTitle('', 'PARAMS');
     this.appendFunctionalInput('STACK');
     this.setFunctional(true);
     this.setTooltip('Define a functional method' /**TODO(bjordan): i18n*/);
-    /**
-     * TODO(bjordan): make these name/type pairs or data-objects
-     * @type {Array<String>}
-     * @private
-     */
     this.parameterNames = [];
+    this.paramIds_ = [];
+    this.parameterTypes = [];
   },
   mutationToDom: function() {
     var container = document.createElement('mutation');
@@ -60,6 +57,7 @@ Blockly.Blocks.functional_definition = {
     for (var x = 0; x < this.parameterNames.length; x++) {
       var parameter = document.createElement('arg');
       parameter.setAttribute('name', this.parameterNames[x]);
+      parameter.setAttribute('type', this.parameterTypes[x]);
       container.appendChild(parameter);
     }
     // Add description mutation
@@ -72,7 +70,7 @@ Blockly.Blocks.functional_definition = {
       var outputTypeMutation = document.createElement('outputType');
       outputTypeMutation.innerHTML = this.outputType_;
       container.appendChild(outputTypeMutation);
-    }return
+    }
     return container;
   },
   domToMutation: function(xmlElement) {
@@ -81,6 +79,7 @@ Blockly.Blocks.functional_definition = {
       var nodeName = childNode.nodeName.toLowerCase();
       if (nodeName === 'arg') {
         this.parameterNames.push(childNode.getAttribute('name'));
+        this.parameterTypes.push(childNode.getAttribute('type'));
       } else if (nodeName === 'description') {
         this.description_ = childNode.innerHTML;
       } else if (nodeName === 'outputtype') {
@@ -95,10 +94,12 @@ Blockly.Blocks.functional_definition = {
    * @param {Array.<String>} paramNames ordered names of parameters for this procedure
    * @param {Array.<String>} paramIDs unique IDs for each parameter, used to update existing
    *     references to parameters across renames
+   * @param {Array.<String>} paramTypes ordered types of parameters for this procedure
    */
-  updateParamsFromArrays: function(paramNames, paramIDs) {
+  updateParamsFromArrays: function(paramNames, paramIDs, paramTypes) {
     this.parameterNames = goog.array.clone(paramNames);
     this.paramIds_ = goog.array.clone(paramIDs);
+    this.parameterTypes = goog.array.clone(paramTypes);
     this.updateParams_();
     this.updateCallerParams_();
   },
@@ -128,7 +129,11 @@ Blockly.Blocks.functional_definition = {
   },
   updateCallerParams_: function() {
     Blockly.Procedures.mutateCallers(this.getTitleValue('NAME'),
-        this.blockSpace, this.parameterNames, this.paramIds_);
+      this.blockSpace,
+      this.parameterNames,
+      this.paramIds_,
+      this.parameterTypes
+    );
   },
   updateOutputType: function(outputType) {
     this.outputType_ = outputType;
@@ -151,8 +156,15 @@ Blockly.Blocks.functional_definition = {
     // Call parent's destructor.
     Blockly.Block.prototype.dispose.apply(this, arguments);
   },
-  getProcedureDef: function() {
-    return [this.getTitleValue('NAME'), this.parameterNames, false];
+  getProcedureInfo: function() {
+    return {
+      name: this.getTitleValue('NAME'),
+      type: this.type,
+      callType: this.callType_,
+      parameterNames: this.parameterNames,
+      parameterTypes: this.parameterTypes,
+      hasReturnValue: true // TODO(bjordan): unused?
+    }
   },
   getVars: function() {
     return this.parameterNames;
@@ -219,24 +231,20 @@ Blockly.Blocks.functional_call = {
     this.setFunctionalOutput(true); // TODO(bjordan): set based on dropdown type change
 
     /**
-     * Argument names for this function call
+     * Used to detect changes in nad update parameter names & argument connections
      * @type {Array}
      * @private
      */
     this.currentParameterNames = [];
-
-    this.parameterIDsToArgumentConnections = null;
-    this.currentParameterIDs = null;
+    this.parameterIDsToArgumentConnections = {};
+    this.currentParameterIDs = [];
+    this.currentParameterTypes = [];
 
     /**
-     * Used to detect changes in parent function definition
-     * (in lieu of an MVVM framework)
-     * @private
+     * Used to sync with changes in parent function definition
      */
     /** @type {string} @private */
     this.currentOutputType_ = null;
-    /** @type {Array.<string>} @private */
-    this.currentArguments_ = null;
     /** @type {string} @private */
     this.currentDescription_ = null;
 
@@ -260,12 +268,6 @@ Blockly.Blocks.functional_call = {
       this.currentDescription_ = procedureDefinition.description_;
       this.setTooltip(procedureDefinition.description_);
     }
-    var argumentsChanged = procedureDefinition.arguments_.length &&
-      (!procedureDefinition.arguments_ || !goog.array.equals(procedureDefinition.arguments_, this.currentArguments_));
-    if (argumentsChanged) {
-      this.currentArguments_ = procedureDefinition.arguments_;
-      this.setTitleValue(' (' + this.currentParameterNames.join(', ') + ')', 'PARAM_TEXT');
-    }
   },
   beforeDispose: function() {
     this.blockSpace.events.unlisten(Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE,
@@ -274,7 +276,7 @@ Blockly.Blocks.functional_call = {
   openEditor: function() {
     Blockly.functionEditor.openAndEditFunction(this.getTitleValue('NAME'));
   },
-  getProcedureCall: function() {
+  getCallName: function() {
     return this.getTitleValue('NAME');
   },
   renameProcedure: function(oldName, newName) {
@@ -287,8 +289,7 @@ Blockly.Blocks.functional_call = {
           .replace('%1', newName));
     }
   },
-  setProcedureParameters: function(paramNames, paramIds) {
-    // TODO(bjordan): remove or clarify
+  setProcedureParameters: function(paramNames, paramIds, opt_paramTypes) {
     // Data structures for parameters on each call block:
     // this.arguments = ['x', 'y']
     //     Existing param names.
@@ -326,7 +327,7 @@ Blockly.Blocks.functional_call = {
     // Switch off rendering while the block is rebuilt.
     var savedRendered = this.rendered;
     this.rendered = false;
-    // Update the quarkConnections_ with existing connections.
+    // Update the parameterIDsToArgumentConnections with existing connections.
     for (var x = this.currentParameterNames.length - 1; x >= 0; x--) {
       var input = this.getInput('ARG' + x);
       if (input) {
@@ -339,25 +340,30 @@ Blockly.Blocks.functional_call = {
     // Rebuild the block's arguments.
     this.currentParameterNames = [].concat(paramNames);
     this.currentParameterIDs = paramIds;
+    this.currentParameterTypes = [].concat(opt_paramTypes);
     for (var x = 0; x < this.currentParameterNames.length; x++) {
       var input = this.appendFunctionalInput('ARG' + x)
         .setAlign(Blockly.ALIGN_CENTRE)
         .setInline(x > 0);
+      var currentParameterType = this.currentParameterTypes[x];
+      input.setHSV.apply(input, Blockly.ContractEditor.typesToColors[currentParameterType]);
+      input.setCheck(currentParameterType);
       if (this.currentParameterIDs) {
         // Reconnect any child blocks.
-        var quarkName = this.currentParameterIDs[x];
-        if (quarkName in this.parameterIDsToArgumentConnections) {
-          var connection = this.parameterIDsToArgumentConnections[quarkName];
+        var paramID = this.currentParameterIDs[x];
+        if (paramID in this.parameterIDsToArgumentConnections) {
+          var connection = this.parameterIDsToArgumentConnections[paramID];
           if (!connection || connection.targetConnection ||
             connection.sourceBlock_.blockSpace != this.blockSpace) {
             // Block no longer exists or has been attached elsewhere.
-            delete this.parameterIDsToArgumentConnections[quarkName];
+            delete this.parameterIDsToArgumentConnections[paramID];
           } else {
             input.connection.connect(connection);
           }
         }
       }
     }
+    this.setTitleValue(' (' + this.currentParameterNames.join(', ') + ')', 'PARAM_TEXT');
     // Restore rendering and show the changes.
     this.rendered = savedRendered;
     if (this.rendered) {
@@ -371,6 +377,7 @@ Blockly.Blocks.functional_call = {
     for (var x = 0; x < this.currentParameterNames.length; x++) {
       var parameter = document.createElement('arg');
       parameter.setAttribute('name', this.currentParameterNames[x]);
+      parameter.setAttribute('type', this.currentParameterTypes[x]);
       container.appendChild(parameter);
     }
     return container;
@@ -384,12 +391,19 @@ Blockly.Blocks.functional_call = {
         : Blockly.Msg.PROCEDURES_CALLNORETURN_TOOLTIP).replace('%1', name));
 
     this.currentParameterNames = [];
+    this.currentParameterIDs = [];
+    this.currentParameterTypes = [];
     for (var x = 0, childNode; childNode = xmlElement.childNodes[x]; x++) {
       if (childNode.nodeName.toLowerCase() == 'arg') {
         this.currentParameterNames.push(childNode.getAttribute('name'));
+        this.currentParameterTypes.push(childNode.getAttribute('type'));
+        this.currentParameterIDs.push(Blockly.getUID());
       }
     }
-    this.setProcedureParameters(this.currentParameterNames, this.currentParameterNames);
+    this.setProcedureParameters(
+      this.currentParameterNames,
+      this.currentParameterIDs,
+      this.currentParameterTypes);
     this.updateAttributesFromDefinition_();
   },
   renameVar: function(oldName, newName) {

@@ -174,11 +174,14 @@ Blockly.Blocks.procedures_defnoreturn = {
     // Call parent's destructor.
     Blockly.Block.prototype.dispose.apply(this, arguments);
   },
-  getProcedureDef: function() {
-    // Return the name of the defined procedure,
-    // a list of all its arguments,
-    // and that it DOES NOT have a return value.
-    return [this.getTitleValue('NAME'), this.parameterNames_, false];
+  getProcedureInfo: function() {
+    return {
+      name: this.getTitleValue('NAME'),
+      parameterNames: this.parameterNames_,
+      hasReturnValue: false,
+      type: this.type,
+      callType: this.callType_
+    };
   },
   getVars: function() {
     return this.parameterNames_;
@@ -278,11 +281,14 @@ Blockly.Blocks.procedures_defreturn = {
   decompose: Blockly.Blocks.procedures_defnoreturn.decompose,
   compose: Blockly.Blocks.procedures_defnoreturn.compose,
   dispose: Blockly.Blocks.procedures_defnoreturn.dispose,
-  getProcedureDef: function() {
-    // Return the name of the defined procedure,
-    // a list of all its arguments,
-    // and that it DOES have a return value.
-    return [this.getTitleValue('NAME'), this.parameterNames_, true];
+  getProcedureInfo: function() {
+    return {
+      name: this.getTitleValue('NAME'),
+      parameterNames: this.parameterNames_,
+      hasReturnValue: true,
+      type: this.type,
+      callType: this.callType_
+    };
   },
   getVars: Blockly.Blocks.procedures_defnoreturn.getVars,
   renameVar: Blockly.Blocks.procedures_defnoreturn.renameVar,
@@ -349,7 +355,7 @@ Blockly.Blocks.procedures_callnoreturn = {
   openEditor: function() {
     Blockly.functionEditor.openAndEditFunction(this.getTitleValue('NAME'));
   },
-  getProcedureCall: function() {
+  getCallName: function() {
     return this.getTitleValue('NAME');
   },
   renameProcedure: function(oldName, newName) {
@@ -512,7 +518,7 @@ Blockly.Blocks.procedures_callreturn = {
     this.currentParameterIDs = null;
   },
   openEditor: Blockly.Blocks.procedures_callnoreturn.openEditor,
-  getProcedureCall: Blockly.Blocks.procedures_callnoreturn.getProcedureCall,
+  getCallName: Blockly.Blocks.procedures_callnoreturn.getCallName,
   renameProcedure: Blockly.Blocks.procedures_callnoreturn.renameProcedure,
   setProcedureParameters:
       Blockly.Blocks.procedures_callnoreturn.setProcedureParameters,
