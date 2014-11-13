@@ -99,9 +99,10 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
 Blockly.FunctionEditor.prototype.populateParamToolbox_ = function() {
   this.paramToolboxBlocks_ = [];
   var self = this;
-  this.functionDefinitionBlock.getVars().forEach(function(varName) {
-    self.addParameter(varName);
-  });
+  var procedureInfo = this.functionDefinitionBlock.getProcedureInfo();
+  for (var i = 0; i < procedureInfo.parameterNames.length; i++) {
+    self.addParameter(procedureInfo.parameterNames[i]);
+  }
   this.refreshParamsEverywhere();
 };
 
@@ -177,11 +178,16 @@ Blockly.FunctionEditor.prototype.refreshParamsInFlyout_ = function() {
 Blockly.FunctionEditor.prototype.refreshParamsOnFunction_ = function() {
   var paramNames = [];
   var paramIDs = [];
+  var paramTypes = [];
   goog.array.forEach(this.paramToolboxBlocks_, function(blockXML, index) {
+    // <mutation><name></name><outputtype></outputtype></mutation>
     paramNames.push(blockXML.firstElementChild.textContent);
-    paramIDs.push(index);
+    paramIDs.push("ARG" + index);
+    if (blockXML.children.length > 1) {
+      paramTypes.push(blockXML.children[1].textContent);
+    }
   }, this);
-  this.functionDefinitionBlock.updateParamsFromArrays(paramNames, paramIDs);
+  this.functionDefinitionBlock.updateParamsFromArrays(paramNames, paramIDs, paramTypes);
 };
 
 Blockly.FunctionEditor.prototype.show = function() {

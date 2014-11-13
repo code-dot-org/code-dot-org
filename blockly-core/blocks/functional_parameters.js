@@ -68,7 +68,7 @@ Blockly.Blocks.functional_parameters_get = {
       container.appendChild(desc);
     }
     if (this.outputType_) {
-      var outputType = document.createElement('outputType');
+      var outputType = document.createElement('outputtype');
       outputType.innerHTML = this.outputType_;
       container.appendChild(outputType);
     }
