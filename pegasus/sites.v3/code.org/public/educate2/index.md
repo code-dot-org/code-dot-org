@@ -17,6 +17,8 @@ The first step to introduce children to computer science is to participate in th
 
 [col-50]
 
+[desktop-pad-right]
+
 ## Computer science curriculum
 
 ### Elementary school (Grades K-5)
@@ -60,9 +62,13 @@ Our online learning platform for students of all ages.
 <br/>
 An open library of our educational videos for use in any classroom.
 
+[/desktop-pad-right]
+
 [/col-50]
 
 [col-50]
+
+[desktop-pad-left]
 
 ## Professional Development
 
@@ -95,6 +101,7 @@ Click below for links to other resources for educators interested in teaching co
 
 [<button>Get Tools</button>](/educate/3rdparty)
 
+[/desktop-pad-left]
 
 [/col-50]
 
