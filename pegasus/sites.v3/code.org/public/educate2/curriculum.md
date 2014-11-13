@@ -18,7 +18,7 @@ Code.org has two interdisciplinary modules at the middle school level. Code.org 
 [<button>CS in Science</button>](/curriculum/mss) &nbsp;&nbsp;[<button>CS in Math</button>](/curriculum/msm)
 
 <br/>
-In addition, the online courses in our [Code Studio](http://studio.code.org) platform may be used at all grade levels, and could be worked into a middle school afterschool program or as a semester-long computer-programming course.
+In addition, the online courses in our [Code Studio](http://studio.code.org) platform may be used at all grade levels, and could be worked into a middle school after-school program or as a semester-long computer-programming course.
 
 # High School 
 

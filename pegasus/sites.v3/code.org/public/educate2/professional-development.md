@@ -12,7 +12,7 @@ Code.org has worked with partners and experts in the field to develop and suppor
 ## Nationwide workshops for elementary school educators, free of charge
 Code.org is offering 1-day workshops to prepare educators and content-area teachers (librarians, tech-ed specialists, etc.) to introduce computer science basics in a format that's fun and accessible to the youngest learners (grades K-5). The workshops will cover content for our elementary school curriculum, and teachers will receive the supplies they need to teach the courses - at no cost. Not only is this an opportunity to increase your knowledge and confidence in facilitating an engaged computer science classroom, it's also a chance to connect with other educators in your area who are working to bring computer science to their schools.
 
-These workshops will be faciliated by experienced computer science educators in over 60 cities across the United States.
+These workshops will be facilitated by experienced computer science educators in over 60 cities across the United States.
 
 [<button>Learn more</button>](/k5) &nbsp;&nbsp;[<button>Find a workshop (for K-5 teachers)</button>](/professional-development-workshops)
 
@@ -29,7 +29,7 @@ Multi-hour (approximately 10) online component focused on both pedagogy and comp
 
 Multi-day in person professional development workshop.
 
-- Articulate the alignment of key computer science concepts to commonly used math and science curricula aligned to Common Core and Next Gen Science Standards.
+- Articulate the alignment of key computer science concepts to commonly used math and science curricula aligned to Common Core and Next Generation Science Standards.
 - Exploration of specific curricular tools.
 - Creating a professional learning community that will extend beyond the Code.org partnership.
 
@@ -45,7 +45,7 @@ One day in-person and/or online professional development workshops combined with
 ---
 ## Professional development for high school teachers to teach computer science
 
-Our high school program helps school districts offer full-year computer science classes by preparing existing teaching staff to offer this new fied. This multi-phased professional development programs is only available in the context of a full school district partnership with Code.org.
+Our high school program helps school districts offer full-year computer science classes by preparing existing teaching staff to offer this new field. This multi-phased professional development programs is only available in the context of a full school district partnership with Code.org.
 
 ### Phase 1
 Multi-hour (approximately 10hr) online course focused on exploring the impact of computer science and reflecting on pedagogical techniques to broaden participation in computing.
