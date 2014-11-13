@@ -4,7 +4,7 @@ layout: wide
 <% if @country ==  'us' || @country == 'ca' %>nav: prizes_nav<% end %>
 ---
 <div class="row">
-    <h1 class="col-sm-9">The Hour of Code: <br/> Prizes for every organizer</h1>
+    <h1 class="col-sm-9">Prizes for every organizer</h1>
     <div class="col-sm-3 button-container centered">
         <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Sign up for a chance to win</button></a>
     </div>
