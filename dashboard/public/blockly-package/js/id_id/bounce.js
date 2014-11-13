@@ -12147,6 +12147,10 @@ exports.yes = function(d){return "Ya"};
 var MessageFormat = require("messageformat");MessageFormat.locale.id=function(n){return "other"}
 exports.and = function(d){return "dan"};
 
+exports.booleanTrue = function(d){return "true"};
+
+exports.booleanFalse = function(d){return "false"};
+
 exports.blocklyMessage = function(d){return "Blockly"};
 
 exports.catActions = function(d){return "Aksi"};

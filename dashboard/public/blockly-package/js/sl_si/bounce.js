@@ -12169,6 +12169,10 @@ var MessageFormat = require("messageformat");MessageFormat.locale.sl = function 
 };
 exports.and = function(d){return "in"};
 
+exports.booleanTrue = function(d){return "true"};
+
+exports.booleanFalse = function(d){return "false"};
+
 exports.blocklyMessage = function(d){return "Blockly"};
 
 exports.catActions = function(d){return "Dejanja"};

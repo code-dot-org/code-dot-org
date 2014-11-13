@@ -12147,6 +12147,10 @@ exports.yes = function(d){return "Kyllä"};
 var MessageFormat = require("messageformat");MessageFormat.locale.fi=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "ja"};
 
+exports.booleanTrue = function(d){return "true"};
+
+exports.booleanFalse = function(d){return "false"};
+
 exports.blocklyMessage = function(d){return "Blocky"};
 
 exports.catActions = function(d){return "Toiminnot"};

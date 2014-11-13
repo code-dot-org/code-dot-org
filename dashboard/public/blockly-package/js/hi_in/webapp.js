@@ -8179,6 +8179,10 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.hi=function(n){return n===0||n==1?"one":"other"}
 exports.and = function(d){return "and"};
 
+exports.booleanTrue = function(d){return "true"};
+
+exports.booleanFalse = function(d){return "false"};
+
 exports.blocklyMessage = function(d){return "ब्लॉक्ली"};
 
 exports.catActions = function(d){return "क्रियाएँ"};

@@ -12147,6 +12147,10 @@ exports.yes = function(d){return "\"হ্যাঁ\""};
 var MessageFormat = require("messageformat");MessageFormat.locale.bn=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "এবং"};
 
+exports.booleanTrue = function(d){return "true"};
+
+exports.booleanFalse = function(d){return "false"};
+
 exports.blocklyMessage = function(d){return "Blockly"};
 
 exports.catActions = function(d){return "ক্রিয়া"};
