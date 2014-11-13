@@ -377,7 +377,19 @@ Blockly.BlockSpace.prototype.fireChangeEvent = function() {
  * Paste the provided block onto the blockSpace.
  * @param {!Element} xmlBlock XML block element.
  */
-Blockly.BlockSpace.prototype.paste = function(xmlBlock) {
+Blockly.BlockSpace.prototype.paste = function(clipboard) {
+  var xmlBlock = clipboard.dom;
+  // When pasting into a different block spaces, remove parameter blocks
+  if (this !== clipboard.src) {
+    if (xmlBlock.getAttribute('type') === 'parameters_get') {
+      return;
+    }
+    goog.array.forEach(xmlBlock.getElementsByTagName('block'), function(block) {
+      if (block.getAttribute('type') === 'parameters_get') {
+        goog.dom.removeNode(block);
+      }
+    });
+  }
   if (xmlBlock.getElementsByTagName('block').length >=
       this.remainingCapacity()) {
     return;

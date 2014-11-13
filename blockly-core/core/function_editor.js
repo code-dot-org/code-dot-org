@@ -188,6 +188,8 @@ Blockly.FunctionEditor.prototype.show = function() {
   this.ensureCreated_();
   goog.style.showElement(this.container_, true);
   goog.style.showElement(this.modalBackground_, true);
+  Blockly.selected = null;
+  Blockly.focusedBlockSpace = Blockly.modalBlockSpace;
 };
 
 /**
@@ -224,6 +226,7 @@ Blockly.FunctionEditor.prototype.hide = function() {
   }
 
   Blockly.modalBlockSpace.clear();
+  Blockly.focusedBlockSpace = Blockly.mainBlockSpace;
 };
 
 Blockly.FunctionEditor.prototype.create_ = function() {
@@ -281,10 +284,14 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   // pointer-events:none, so register the unselect handler on lower elements
   Blockly.bindEvent_(goog.dom.getElement('modalContainer'), 'mousedown', null,
       function(e) {
-        if (Blockly.selected && e.target === e.currentTarget) {
-          Blockly.selected.unselect();
-        }
-      });
+    // Only handle clicks on modalContainer, not a descendant
+    if (e.target === e.currentTarget) {
+      Blockly.modalBlockSpaceEditor.hideChaff();
+      if (Blockly.selected) {
+        Blockly.selected.unselect();
+      }
+    }
+  });
 
   Blockly.bindEvent_(goog.dom.getElement('modalEditorClose'), 'mousedown', this,
       this.hide);
