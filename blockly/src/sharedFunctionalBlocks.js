@@ -10,6 +10,7 @@ exports.install = function(blockly, generator, gensym) {
   installMinus(blockly, generator, gensym);
   installTimes(blockly, generator, gensym);
   installDividedBy(blockly, generator, gensym);
+  installGreaterThan(blockly, generator, gensym);
   installMathNumber(blockly, generator, gensym);
   installString(blockly, generator, gensym);
 };
@@ -84,6 +85,24 @@ function installDividedBy(blockly, generator, gensym) {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
     return arg1 + " / " + arg2;
+  };
+}
+
+function installGreaterThan(blockly, generator, gensym) {
+  blockly.Blocks.functional_greater_than = {
+    helpUrl: '',
+    init: function() {
+      initTitledFunctionalBlock(this, '>', 'boolean', [
+        { name: 'ARG1', type: 'Number' },
+        { name: 'ARG2', type: 'Number' }
+      ]);
+    }
+  };
+
+  generator.functional_greater_than = function() {
+    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
+    var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
+    return arg1 + " > " + arg2;
   };
 }
 

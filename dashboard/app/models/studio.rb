@@ -278,6 +278,7 @@ class Studio < Grid
   <block type="functional_math_number_dropdown">
     <title name="NUM" config="2,3,4,5,6,7,8,9,10,11,12">???</title>
   </block>
+  <block type="functional_greater_than" />
 </category>
 #{k1_blocks(type) if is_k1 == 'true'}
     XML
