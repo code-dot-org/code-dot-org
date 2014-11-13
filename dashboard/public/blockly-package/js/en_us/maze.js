@@ -54,6 +54,7 @@ module.exports = function(app, levels, options) {
   // currently mutually exclusive.
   BlocklyApps.editCode = options.level && options.level.editCode;
   BlocklyApps.usingBlockly = !BlocklyApps.editCode;
+  BlocklyApps.cdoSounds = options.cdoSounds;
 
   BlocklyApps.assetUrl = function(path) {
     var url = options.baseUrl + path;
@@ -470,8 +471,7 @@ BlocklyApps.init = function(config) {
   window.addEventListener('orientationchange', orientationHandler);
   orientationHandler();
 
-  // TODO (cpirich): implement audio without requiring Blockly (for now, skip)
-  if (BlocklyApps.usingBlockly && config.loadAudio) {
+  if (config.loadAudio) {
     config.loadAudio();
   }
 
@@ -627,17 +627,39 @@ BlocklyApps.init = function(config) {
   }
 };
 
-exports.playAudio = function(name, options) {
+exports.loadAudio = function(filenames, name) {
   if (BlocklyApps.usingBlockly) {
-    options = options || {};
-    var defaultOptions = {volume: 0.5};
-    Blockly.playAudio(name, utils.extend(defaultOptions, options));
+    Blockly.loadAudio_(filenames, name);
+  } else if (BlocklyApps.cdoSounds) {
+    var regOpts = { id: name };
+    for (var i = 0; i < filenames.length; i++) {
+      var filename = filenames[i];
+      var ext = filename.match(/\.(\w+)(\?.*)?$/);
+      if (ext) {
+        // Extend regOpts so regOpts.mp3 = 'file.mp3'
+        regOpts[ext[1]] = filename;
+      }
+    }
+    BlocklyApps.cdoSounds.register(regOpts);
+  }
+};
+
+exports.playAudio = function(name, options) {
+  options = options || {};
+  var defaultOptions = {volume: 0.5};
+  var newOptions = utils.extend(defaultOptions, options);
+  if (BlocklyApps.usingBlockly) {
+    Blockly.playAudio(name, newOptions);
+  } else if (BlocklyApps.cdoSounds) {
+    BlocklyApps.cdoSounds.play(name, newOptions);
   }
 };
 
 exports.stopLoopingAudio = function(name) {
   if (BlocklyApps.usingBlockly) {
     Blockly.stopLoopingAudio(name);
+  } else if (BlocklyApps.cdoSounds) {
+    BlocklyApps.cdoSounds.stopLoopingAudio(name);
   }
 };
 
@@ -2047,6 +2069,9 @@ exports.displayFeedback = function(options) {
   }
   if (options.level.isK1) {
     feedback.className += " k1";
+  }
+  if (options.appDiv) {
+    feedback.appendChild(options.appDiv);
   }
 
   feedback.appendChild(
@@ -10274,30 +10299,30 @@ Maze.init = function(config) {
   });
 
   config.loadAudio = function() {
-    Blockly.loadAudio_(skin.winSound, 'win');
-    Blockly.loadAudio_(skin.startSound, 'start');
-    Blockly.loadAudio_(skin.failureSound, 'failure');
-    Blockly.loadAudio_(skin.obstacleSound, 'obstacle');
+    BlocklyApps.loadAudio(skin.winSound, 'win');
+    BlocklyApps.loadAudio(skin.startSound, 'start');
+    BlocklyApps.loadAudio(skin.failureSound, 'failure');
+    BlocklyApps.loadAudio(skin.obstacleSound, 'obstacle');
     // Load wall sounds.
-    Blockly.loadAudio_(skin.wallSound, 'wall');
+    BlocklyApps.loadAudio(skin.wallSound, 'wall');
 
     // todo - longterm, instead of having sound related flags we should just
     // have the skin tell us the set of sounds it needs
     if (skin.additionalSound) {
-      Blockly.loadAudio_(skin.wall0Sound, 'wall0');
-      Blockly.loadAudio_(skin.wall1Sound, 'wall1');
-      Blockly.loadAudio_(skin.wall2Sound, 'wall2');
-      Blockly.loadAudio_(skin.wall3Sound, 'wall3');
-      Blockly.loadAudio_(skin.wall4Sound, 'wall4');
-      Blockly.loadAudio_(skin.winGoalSound, 'winGoal');
+      BlocklyApps.loadAudio(skin.wall0Sound, 'wall0');
+      BlocklyApps.loadAudio(skin.wall1Sound, 'wall1');
+      BlocklyApps.loadAudio(skin.wall2Sound, 'wall2');
+      BlocklyApps.loadAudio(skin.wall3Sound, 'wall3');
+      BlocklyApps.loadAudio(skin.wall4Sound, 'wall4');
+      BlocklyApps.loadAudio(skin.winGoalSound, 'winGoal');
     }
     if (skin.dirtSound) {
-      Blockly.loadAudio_(skin.fillSound, 'fill');
-      Blockly.loadAudio_(skin.digSound, 'dig');
+      BlocklyApps.loadAudio(skin.fillSound, 'fill');
+      BlocklyApps.loadAudio(skin.digSound, 'dig');
     }
     if (skin.beeSound) {
-      Blockly.loadAudio_(skin.nectarSound, 'nectar');
-      Blockly.loadAudio_(skin.honeySound, 'honey');
+      BlocklyApps.loadAudio(skin.nectarSound, 'nectar');
+      BlocklyApps.loadAudio(skin.honeySound, 'honey');
     }
   };
 
@@ -13561,7 +13586,7 @@ exports.blocklyMessage = function(d){return "Blockly"};
 
 exports.catActions = function(d){return "Actions"};
 
-exports.catColour = function(d){return "Colour"};
+exports.catColour = function(d){return "Color"};
 
 exports.catLogic = function(d){return "Logic"};
 
