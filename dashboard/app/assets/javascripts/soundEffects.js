@@ -98,8 +98,7 @@ Sound.prototype.stop = function () {
       } else if (this.playableBuffer.noteOff) {  // Older web audio.
         this.playableBuffer.noteOff(0);
       }
-    }
-    else if (this.audioElement) {
+    } else if (this.audioElement) {
       // html 5 audio.
       this.audioElement.pause();
     }
