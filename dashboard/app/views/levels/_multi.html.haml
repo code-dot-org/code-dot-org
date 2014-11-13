@@ -4,12 +4,15 @@
 
   %h2!= multi_t(data['title'])
 
-  - if ! data['content1'].blank? || ! data['content2'].blank? || ! data['content3'].blank?
+  - if ! data['content1'].blank? || ! data['content2'].blank? || ! data['content3'].blank? || ! data['iframe'].blank?
     .question
 
       %p!= multi_t(data['content1']) if ! data['content1'].blank?
       %p!= multi_t(data['content2']) if ! data['content2'].blank?
       %p!= multi_t(data['content3']) if ! data['content3'].blank?
+
+      - if data['iframe']
+        %iframe{src: data['iframe'], width: 400, height: 500, scrolling: 'no', seamless: 'seamless', style: 'border: none;'}
 
   .answers
 
