@@ -5,21 +5,20 @@ nav: educate2_nav
 
 # Elementary School 
 
-## Code Studio
+Code.org offers an elementary school curriculum that allows even the youngest students to explore the limitless world of computing. Each of our 20-lesson courses blend online, self-guided and self-paced tutorials with “unplugged” activities that require no computer at all. By the end of each course, students can create interactive games, stories, and art that they can share with anyone. Built on our online [Code Studio](http://studio.code.org) learning platform, these courses are available in dozens of languages, and already used by millions of students in tens of thousands of classrooms. 98% of participating teachers recommend the program.
 
-Code.org's Code Studio developed an elementary school curriculum that allows even the youngest students to explore the limitless world of computing. The courses blend online, self-guided and self-paced tutorials with “unplugged” activities that require no computer at all. By the end of each course, students can create interactive games, stories, and art that they can share with anyone. 
+For teachers in the United States, Code.org offers high quality, 1-day professional development workshops free of charge to in-service teachers to prepare to offer our curriculum in elementary school classrooms. 
 
-For information about our Elementary school computer science courses, see [this page](http://code.org/educate/k5).
-
-[<button>Code Studio</button>](http://code.org/k5)
+[<button>Learn more</button>](/k5) &nbsp;&nbsp;[Find a professional development workshop (for US teachers, grades K-5)](/professional-development-workshops)
 
 # Middle School #
 
 Code.org has two interdisciplinary modules at the middle school level. Code.org has partnered with the award-winning Project GUTS (Growing Up Thinking Scientifically) to create [CS in Science](http://code.org/curriculum/mss), and Code.org has partnered with Bootstrap to offer [CS in Math](http://code.org/curriculum/msm). Each module exists as multiple sets of topical lessons that are able to be integrated into pre-existing Science and Math classes.
 
-[<button>CS in Science</button>](http://code.org/curriculum/mss)
+[<button>CS in Science</button>](/curriculum/mss) &nbsp;&nbsp;[<button>CS in Math</button>](/curriculum/msm)
 
-[<button>CS in Math</button>](http://code.org/curriculum/msm)
+<br/>
+In addition, the online courses in our [Code Studio](http://studio.code.org) platform may be used at all grade levels, and could be worked into a middle school afterschool program or as a semester-long computer-programming course.
 
 # High School 
 
@@ -37,25 +36,19 @@ The College Board has proposed a new AP® course called AP® Computer Science: P
 
 AP® is a registered trademark of the College Board.
 
-[<button>Computer Science Principles</button>](http://code.org/educate2/csp)
+[<button>Computer Science Principles</button>](/educate2/csp)
 
 
-# Code.org's Curriculum Philosophy #
+# Curriculum Video Library (in progress)
 
-Click below for curriculum philosophy and goals.
-
-[<button>Curriculum Philosophy</button>](http://code.org/educate2/curriculum-philosphy)
-
-# Educational Videos #
-
-Click below for educational videos that can be used in any computer science course.
+As we recruit role models and celebrities to record educational content, we hope to build a growing library of educational videos available for reuse by educators worldwide, online or in classrooms. Click below for educational videos that can be used in any computer science course.
 
 [<button>Get Videos</button>](/educate/videos)
 
-# Third-party resources for educators #
-Click below for links to other resources for educators interested in teaching computer science.
+# Other links
 
-[<button>Get Tools</button>](/educate/3rdparty)
+- [Code.org Curriculum Philosophy](/educate2/curriculum-philosophy)
+- [Third-party resources for educators](/educate/3rdparty)
 
 <br />
 <br />
