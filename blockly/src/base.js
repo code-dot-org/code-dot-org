@@ -370,8 +370,7 @@ BlocklyApps.init = function(config) {
   window.addEventListener('orientationchange', orientationHandler);
   orientationHandler();
 
-  // TODO (cpirich): implement audio without requiring Blockly (for now, skip)
-  if (BlocklyApps.usingBlockly && config.loadAudio) {
+  if (config.loadAudio) {
     config.loadAudio();
   }
 
@@ -527,17 +526,39 @@ BlocklyApps.init = function(config) {
   }
 };
 
-exports.playAudio = function(name, options) {
+exports.loadAudio = function(filenames, name) {
   if (BlocklyApps.usingBlockly) {
-    options = options || {};
-    var defaultOptions = {volume: 0.5};
-    Blockly.playAudio(name, utils.extend(defaultOptions, options));
+    Blockly.loadAudio_(filenames, name);
+  } else if (BlocklyApps.cdoSounds) {
+    var regOpts = { id: name };
+    for (var i = 0; i < filenames.length; i++) {
+      var filename = filenames[i];
+      var ext = filename.match(/\.(\w+)(\?.*)?$/);
+      if (ext) {
+        // Extend regOpts so regOpts.mp3 = 'file.mp3'
+        regOpts[ext[1]] = filename;
+      }
+    }
+    BlocklyApps.cdoSounds.register(regOpts);
+  }
+};
+
+exports.playAudio = function(name, options) {
+  options = options || {};
+  var defaultOptions = {volume: 0.5};
+  var newOptions = utils.extend(defaultOptions, options);
+  if (BlocklyApps.usingBlockly) {
+    Blockly.playAudio(name, newOptions);
+  } else if (BlocklyApps.cdoSounds) {
+    BlocklyApps.cdoSounds.play(name, newOptions);
   }
 };
 
 exports.stopLoopingAudio = function(name) {
   if (BlocklyApps.usingBlockly) {
     Blockly.stopLoopingAudio(name);
+  } else if (BlocklyApps.cdoSounds) {
+    BlocklyApps.cdoSounds.stopLoopingAudio(name);
   }
 };
 
