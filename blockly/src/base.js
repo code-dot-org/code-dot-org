@@ -192,7 +192,7 @@ BlocklyApps.init = function(config) {
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
   }
 
-  if (!BlocklyApps.share) {
+  if (!config.embed && !BlocklyApps.share) {
     // Make the visualization responsive to screen size, except on share page.
     var visualization = document.getElementById('visualization');
     visualization.className += " responsive";
@@ -207,7 +207,7 @@ BlocklyApps.init = function(config) {
     container.className = 'hide-source';
     workspaceDiv.style.display = 'none';
     // For share page on mobile, do not show this part.
-    if (!BlocklyApps.share || !dom.isMobile()) {
+    if ((!config.embed) && (!BlocklyApps.share || !dom.isMobile())) {
       var buttonRow = runButton.parentElement;
       var openWorkspace = document.createElement('button');
       openWorkspace.setAttribute('id', 'open-workspace');
@@ -355,13 +355,33 @@ BlocklyApps.init = function(config) {
     });
   }
 
-  // The share page does not show the rotateContainer.
-  if (BlocklyApps.share) {
+  // The share and embed pages do not show the rotateContainer.
+  if (BlocklyApps.share || config.embed) {
     var rotateContainer = document.getElementById('rotateContainer');
     if (rotateContainer) {
       rotateContainer.style.display = 'none';
     }
   }
+
+  // In embed mode, the display scales down when the width of the visualizationColumn goes below the min width
+  if(config.embed) {
+    // Depends on ResizeSensor.js
+    new ResizeSensor(document.getElementById('visualizationColumn'), function(){
+      var vizCol = document.getElementById('visualizationColumn');
+      var width = vizCol.offsetWidth;
+      var height = vizCol.offsetHeight;
+      var displayWidth = BlocklyApps.MIN_MOBILE_NO_PADDING_SHARE_WIDTH;
+      var scale = Math.min(width/displayWidth, height/displayWidth);
+      var viz = document.getElementById('visualization');
+      viz.style['transform-origin'] = 'left top';
+      viz.style['-webkit-transform'] = 'scale(' + scale + ')';
+      viz.style['max-height'] = (displayWidth*scale)+'px';
+      viz.style['display'] = 'block';
+      vizCol.style['width'] = '';
+      document.getElementById('visualizationColumn').style['max-width'] = displayWidth + 'px';
+    });
+  }
+
   var orientationHandler = function() {
     window.scrollTo(0, 0);  // Browsers like to mess with scroll on rotate.
     var rotateContainer = document.getElementById('rotateContainer');
