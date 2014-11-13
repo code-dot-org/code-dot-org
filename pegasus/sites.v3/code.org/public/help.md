@@ -41,7 +41,7 @@ If you're already a software engineer, there are many opportunities to get invol
 
 
 ## Teach an online course to your child, or in any classroom
-Code.org's online platform [Code Studio](studio.code.org) enables students to learn the basic concepts of computer science as early as kindergarten. Within Code Studio, a new Play Lab has been developed where elementary students can create and send apps or animations directly to a cell phone, just by typing in the phone number. 
+Code.org's online platform [Code Studio](http://studio.code.org) enables students to learn the basic concepts of computer science as early as kindergarten. Within Code Studio, a new Play Lab has been developed where elementary students can create and send apps or animations directly to a cell phone, just by typing in the phone number. 
 
 [<button>Learn more</button>](http://studio.code.org)
 

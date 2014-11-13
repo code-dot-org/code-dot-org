@@ -36,15 +36,6 @@ Office hours will be available bi-weekly from 5:00pm-6:00pm in both Eastern and 
 
 The virtual meetings will be hosted via Blue Jeans Video Conference. If this is your first time using Blue Jeans, we recommend clicking on the meeting link 5 minutes prior to the start time as you will be prompted to download a plugin, which is required to access the virtual meeting. No login or account is required to join the virtual meeting.
 
-### October Office Hours
-
-Wednesday, October 22nd
-<br/>
-- Eastern Time: 5:00 PM - 6:00 PM - [Click here](https://bluejeans.com/952592269) to join virtual meeting. To join via phone, dial: 408-740-7256 and enter Conference ID: 952592269.
-<br/>
-- Pacific Time: 5:00 PM - 6:00 PM - [Click here](https://bluejeans.com/955682651) to join virtual meeting. To join via phone, dial: 408-740-7256 and enter Conference ID: 955682651.
-<br/>
-
 ### November Office Hours
 
 Tuesday, November 4th

@@ -198,18 +198,20 @@ social:
         %a{:href=>'/about/news', :style=>'float:right'} See all
 
     #column3{:style=>'float:left; width: 33.33%;'}
-      %h2 Thank You to Our Donors
-      %div{:style=>'background-color: lightgrey; padding: 10px;'}
-        %div{:style=>'background-color: white; padding: 10px;'}
-          = view :indiegogo_progress_bar
-        %div{:style=>'background-color: white; padding: 10px; margin-top: 10px; height: 490px; overflow: hidden'}
-          %h3{:style=>'margin-top: 10px'}
-            %strong{:style=>'font-size: 18px'} Thank you for contributing:
-          = view :indiegogo_contributors_ticker
-      %a{:href=>'https://www.indiegogo.com/projects/an-hour-of-code-for-every-student', :style=>'float: right'}
-        Donate now on Indiegogo
-      /%h2 From the Community
-      /= view :index_twitter
+      -if request.site == 'csedweek.org'
+        %h2 From the Community
+        = view :index_twitter
+      -else
+        %h2 Thank You to Our Donors
+        %div{:style=>'background-color: lightgrey; padding: 10px;'}
+          %div{:style=>'background-color: white; padding: 10px;'}
+            = view :indiegogo_progress_bar
+          %div{:style=>'background-color: white; padding: 10px; margin-top: 10px; height: 490px; overflow: hidden'}
+            %h3{:style=>'margin-top: 10px'}
+              %strong{:style=>'font-size: 18px'} Thank you for contributing:
+            = view :indiegogo_contributors_ticker
+        %a{:href=>'https://www.indiegogo.com/projects/an-hour-of-code-for-every-student', :style=>'float: right'}
+          Donate now on Indiegogo
   #gap
 
   -if request.site != 'csedweek.org'

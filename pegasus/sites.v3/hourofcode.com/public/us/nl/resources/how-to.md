@@ -67,4 +67,4 @@ Iedere leerling krijgt de kans een certificaat te ontvangen via e-mail wanneer z
 
 **Wat komt er na het Uur Code?**
 
-Het Uur Code is nog maar de eerste stap in het leren over hoe technologie werkt en hoe je software kunt maken. < % als @country == 'uk' %> Het uur van Code is slechts de eerste stap op een reis naar meer informatie over hoe technologie werkt en hoe softwaretoepassingen gemaakt worden. [Moedig je kinderen aan online te leren](http://uk.code.org/learn/beyond) om de reis te vervolgen. <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %>
+Het Uur Code is nog maar de eerste stap in het leren over hoe technologie werkt en hoe je software kunt maken. Het uur van Code is slechts de eerste stap op een reis naar meer informatie over hoe technologie werkt en hoe softwaretoepassingen gemaakt worden. [Moedig je kinderen aan online te leren](http://code.org/learn/beyond) om de reis te vervolgen. 
