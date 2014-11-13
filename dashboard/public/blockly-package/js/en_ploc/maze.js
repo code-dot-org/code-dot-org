@@ -10107,9 +10107,17 @@ function drawMap () {
   if (skin.wallPegmanAnimation) {
     createPegmanAnimation({
       idStr: 'wall',
-      pegmanImage: skin.wallPegmanAnimation,
-      numColPegman: skin.wallPegmanCol,
-      numRowPegman: skin.wallPegmanRow
+      pegmanImage: skin.wallPegmanAnimation
+    });
+  }
+
+  // create element for our hitting wall spritesheet
+  if (skin.hittingWallAnimation && skin.hittingWallAnimationFrameNumber) {
+    createPegmanAnimation({
+      idStr: 'wall',
+      pegmanImage: skin.hittingWallAnimation,
+      numColPegman: skin.hittingWallPegmanCol,
+      numRowPegman: skin.hittingWallPegmanRow
     });
   }
 
@@ -11233,9 +11241,22 @@ Maze.scheduleFail = function(forward) {
       var numFrames = skin.hittingWallAnimationFrameNumber || 0;
 
       if (numFrames > 1) {
+
+        // The Scrat "wall" animation has him falling backwards into the water.
+        // This looks great when he falls into the water above him, but looks a
+        // little off when falling to the side/forward. Tune that by bumping the
+        // deltaY by one. Hacky, but looks much better
+        if (deltaY >= 0) {
+          deltaY += 1;
+        }
         // animate our sprite sheet
+        var timePerFrame = 100;
         scheduleSheetedMovement({x: Maze.pegmanX, y: Maze.pegmanY},
-          {x: deltaX, y: deltaY }, numFrames, 100, 'wall', Direction.NORTH, true);
+          {x: deltaX, y: deltaY }, numFrames, timePerFrame, 'wall',
+          Direction.NORTH, true);
+        setTimeout(function () {
+          document.getElementById('wallPegman').setAttribute('visibility', 'hidden');
+        }, numFrames * timePerFrame);
       } else {
         // active our gif
         timeoutList.setTimeout(function() {
@@ -11253,19 +11274,17 @@ Maze.scheduleFail = function(forward) {
       }
     }
     timeoutList.setTimeout(function() {
-      Maze.displayPegman(Maze.pegmanX,
-                         Maze.pegmanY,
-                         frame);
+      Maze.displayPegman(Maze.pegmanX, Maze.pegmanY, frame);
     }, stepSpeed);
     timeoutList.setTimeout(function() {
-      Maze.displayPegman(Maze.pegmanX + deltaX / 4,
-                         Maze.pegmanY + deltaY / 4,
-                         frame);
+      Maze.displayPegman(Maze.pegmanX + deltaX / 4, Maze.pegmanY + deltaY / 4,
+       frame);
       BlocklyApps.playAudio('failure');
     }, stepSpeed * 2);
     timeoutList.setTimeout(function() {
       Maze.displayPegman(Maze.pegmanX, Maze.pegmanY, frame);
     }, stepSpeed * 3);
+
     if (skin.wallPegmanAnimation) {
       timeoutList.setTimeout(function() {
         var pegmanIcon = document.getElementById('pegman');
@@ -11644,14 +11663,14 @@ var TILE_SHAPES = {
   'empty': [4, 0]
 };
 
-// Returns true if the tile at x,y is either a wall or out of bounds
-function isWallOrOutOfBounds (x, y) {
+// Returns true if the tile at x,y is either a water tile or out of bounds
+function isWaterOrOutOfBounds (x, y) {
   return Maze.map[y] === undefined || Maze.map[y][x] === undefined ||
     Maze.map[y][x] === SquareType.WALL;
 }
 
-// Returns true if the tile at x,y is a wall that is in bounds.
-function isWall (x, y) {
+// Returns true if the tile at x,y is a water tile that is in bounds.
+function isWater (x, y) {
   return Maze.map[y] !== undefined && Maze.map[y][x] === SquareType.WALL;
 }
 
@@ -11659,40 +11678,48 @@ function isWall (x, y) {
  * Override maze's drawMapTiles
  */
 module.exports.drawMapTiles = function (svg) {
-  var island = null;
+  var row, col;
+
+  // first figure out where we want to put the island
+  var possibleIslandLocations = [];
+  for (row = 0; row < Maze.ROWS; row++) {
+    for (col = 0; col < Maze.COLS; col++) {
+      if (!isWater(col, row) || !isWater(col + 1, row) ||
+        !isWater(col, row + 1) || !isWater(col + 1, row + 1)) {
+        continue;
+      }
+      possibleIslandLocations.push({row: row, col: col});
+    }
+  }
+  var island = _.sample(possibleIslandLocations);
+  var preFilled = {};
+  if (island) {
+    preFilled[(island.row + 0) + "_" + (island.col + 0)] = 'island_start';
+    preFilled[(island.row + 1) + "_" + (island.col + 0)] = 'island_botLeft';
+    preFilled[(island.row + 0) + "_" + (island.col + 1)] = 'island_topRight';
+    preFilled[(island.row + 1) + "_" + (island.col + 1)] = 'island_botRight';
+  }
 
   var tileId = 0;
   var tile;
-  for (var row = 0; row < Maze.ROWS; row++) {
-    for (var col = 0; col < Maze.COLS; col++) {
-      if (!isWallOrOutOfBounds(col, row)) {
+  for (row = 0; row < Maze.ROWS; row++) {
+    for (col = 0; col < Maze.COLS; col++) {
+      if (!isWaterOrOutOfBounds(col, row)) {
         tile = 'ice';
       } else {
-        var adjacentToPath = !isWallOrOutOfBounds(col, row - 1) ||
-          !isWallOrOutOfBounds(col + 1, row) ||
-          !isWallOrOutOfBounds(col, row + 1) ||
-          !isWallOrOutOfBounds(col - 1, row);
+        var adjacentToPath = !isWaterOrOutOfBounds(col, row - 1) ||
+          !isWaterOrOutOfBounds(col + 1, row) ||
+          !isWaterOrOutOfBounds(col, row + 1) ||
+          !isWaterOrOutOfBounds(col - 1, row);
 
         // if next to the path, always just have water. otherwise, there's
         // a chance of one of our other tiles
         tile = 'water';
-        tile = _.sample(['empty', 'empty', 'empty', 'empty', 'empty', 'lily2',
-          'lily3', 'lily4', 'lily5', 'lily1', 'log', 'lily1', 'land1']);
 
-        if (island !== null) {
-          if (island.col === col - 1 && island.row === row) {
-            tile = 'island_topRight';
-          } else  if (island.col === col && island.row === row - 1) {
-            tile = 'island_botLeft';
-          } else  if (island.col === col - 1 && island.row === row - 1) {
-            tile = 'island_botRight';
-          }
-        } else if (Math.random() < 1/20 &&
-            isWall(col + 1, row + 0) && isWallOrOutOfBounds(col + 2, row) &&
-            isWall(col + 0, row + 1) && isWallOrOutOfBounds(col, row + 2) &&
-            isWall(col + 1, row + 1)) {
-          island = { col: col, row: row};
-          tile = 'island_start';
+        tile = preFilled[row + "_" + col];
+        if (!tile) {
+          tile = _.sample(['empty', 'empty', 'empty', 'empty', 'empty', 'lily2',
+            'lily3', 'lily4', 'lily5', 'lily1', 'log', 'lily1', 'land1']);
         }
 
         if (adjacentToPath && tile === 'land1') {
@@ -11834,12 +11861,11 @@ var CONFIGS = {
     idlePegmanCol: 4,
     idlePegmanRow: 11,
 
-    wallPegmanAnimation: 'wall_avatar_sheet.png',
     hittingWallAnimation: 'wall_avatar_sheet.png',
     hittingWallAnimationFrameNumber: 20,
     hittingWallAnimationSpeedScale: 1.5,
-    wallPegmanCol: 1,
-    wallPegmanRow: 20,
+    hittingWallPegmanCol: 1,
+    hittingWallPegmanRow: 20,
 
     celebrateAnimation: 'jump_acorn_sheet.png',
     celebratePegmanCol: 1,

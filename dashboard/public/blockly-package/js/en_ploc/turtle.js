@@ -7199,18 +7199,30 @@ exports.install = function(blockly, blockInstallOptions) {
     return generator.variableDB_.getDistinctName(name, NAME_TYPE);
   };
 
-  // Create a smaller palette.
-  blockly.FieldColour.COLOURS = [
-    // Row 1.
-    Colours.BLACK, Colours.GREY,
-    Colours.KHAKI, Colours.WHITE,
-    // Row 2.
-    Colours.RED, Colours.PINK,
-    Colours.ORANGE, Colours.YELLOW,
-    // Row 3.
-    Colours.GREEN, Colours.BLUE,
-    Colours.AQUAMARINE, Colours.PLUM];
-  blockly.FieldColour.COLUMNS = 4;
+  if (skin.id == "anna" || skin.id == "elsa")
+  {
+    // Create a smaller palette.
+    blockly.FieldColour.COLOURS = [
+      Colours.FROZEN1, Colours.FROZEN2, Colours.FROZEN3,
+      Colours.FROZEN4, Colours.FROZEN5, Colours.FROZEN6,
+      Colours.FROZEN7, Colours.FROZEN8, Colours.FROZEN9];
+    blockly.FieldColour.COLUMNS = 3;
+
+  } else {
+
+    // Create a smaller palette.
+    blockly.FieldColour.COLOURS = [
+      // Row 1.
+      Colours.BLACK, Colours.GREY,
+      Colours.KHAKI, Colours.WHITE,
+      // Row 2.
+      Colours.RED, Colours.PINK,
+      Colours.ORANGE, Colours.YELLOW,
+      // Row 3.
+      Colours.GREEN, Colours.BLUE,
+      Colours.AQUAMARINE, Colours.PLUM];
+    blockly.FieldColour.COLUMNS = 4;
+  }
 
   // Block definitions.
   blockly.Blocks.draw_move_by_constant = {
@@ -8152,7 +8164,17 @@ exports.Colours = {
   GREEN: '#228b22',
   BLUE: '#0000cd',
   AQUAMARINE: '#7fffd4',
-  PLUM: '#843179'
+  PLUM: '#843179',
+
+  FROZEN1: "#d0fdfd",
+  FROZEN2: "#d0fdd0",
+  FROZEN3: "#d0d0fd",
+  FROZEN4: "#e0e0e0",
+  FROZEN5: '#ffffff',
+  FROZEN6: "#e8e8e8",
+  FROZEN7: "#bbd1e4",
+  FROZEN8: "#fdd0fd",
+  FROZEN9: "#aea4ff"
 };
 
 },{}],32:[function(require,module,exports){
@@ -10447,7 +10469,7 @@ Turtle.init = function(config) {
           Blockly.JavaScript.colour_random.functionName = functionName;
           var func = [];
           func.push('function ' + functionName + '() {');
-          func.push('  var colors = [ "#e8ebed", "#bbd1e4", "#e8ebed", "#1e618f", "#212b62", "#40808f", "#a9d0dd", "#a9d0dd", "#56a7b5", "#3d839c", "#7eb3a8", "#ebddd8", "#82849e", "#3f7799", "#59a3bd", "#64c2c7", "#bbd9d9", "#e8e7ef"];');
+          func.push('   var colors = ' + JSON.stringify(Blockly.FieldColour.COLOURS) + ';');
           func.push('  return colors[Math.floor(Math.random()*colors.length)];');
           func.push('}');
           Blockly.JavaScript.definitions_.colour_random = func.join('\n');
