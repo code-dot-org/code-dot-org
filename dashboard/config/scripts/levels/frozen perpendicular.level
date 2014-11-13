@@ -16,7 +16,10 @@
     "disable_variable_editing": "false",
     "free_play": "false",
     "slider_speed": "0.1",
-    "impressive": "false"
+    "impressive": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "callout_json": "[\r\n  {\"localization_key\": \"turn_elsa\", \"element_id\": \"[block-id='1']\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"top left\", \"at\": \"bottom right\", \"adjust\": {\"x\": 22, \"y\":60}},\r\n    \"style\": { \"classes\": \"no-tip\" }}\r\n  }\r\n]"
   }
 }]]></config>
   <blocks>
