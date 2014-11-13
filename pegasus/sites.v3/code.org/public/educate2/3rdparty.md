@@ -1,6 +1,6 @@
 ---
 title: 3rd Party Educator Resources
-nav: educate_nav
+nav: educate2_nav
 ---
 
 
