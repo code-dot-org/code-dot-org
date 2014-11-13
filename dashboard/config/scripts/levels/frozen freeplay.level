@@ -17,7 +17,8 @@
     "free_play": "true",
     "impressive": "false",
     "use_modal_function_editor": "false",
-    "use_contract_editor": "false"
+    "use_contract_editor": "false",
+    "callout_json": "[\r\n  {\"localization_key\": \"snowflake_dropdown\", \"element_id\": \"[block-id='1']\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"center right\", \"at\": \"bottom right\", \"adjust\": {\"x\": 70, \"y\":360}},\r\n    \"style\": { \"classes\": \"no-tip\" }}\r\n  }\r\n]"
   }
 }]]></config>
   <blocks>
@@ -36,6 +37,10 @@
           <title name="DIR">turnRight</title>
           <title name="VALUE">90</title>
         </block>
+        <block type="draw_turn_by_constant">
+          <title name="DIR">turnLeft</title>
+          <title name="VALUE">90</title>
+        </block>
         <block type="jump_by_constant">
           <title name="DIR">jumpForward</title>
           <title name="VALUE">100</title>
@@ -47,12 +52,9 @@
             </block>
           </value>
         </block>
-        <block type="create_square_snowflake"/>
-        <block type="create_parallelogram_snowflake"/>
-        <block type="create_lined_snowflake"/>
-        <block type="create_spiral_snowflake"/>
-        <block type="create_a_snowflower"/>
-        <block type="create_fractal_snowflake"/>
+        <block type="create_snowflake_dropdown">
+          <title name="TYPE">square</title>
+        </block>
         <block type="controls_repeat">
           <title name="TIMES">3</title>
         </block>
