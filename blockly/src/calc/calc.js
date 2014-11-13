@@ -46,6 +46,11 @@ BlocklyApps.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
 
+var locals = {
+  animating: false,
+  response: null
+};
+
 /**
  * Initialize Blockly and the Calc.  Called on page load.
  */
@@ -59,8 +64,6 @@ Calc.init = function(config) {
     user: null, // the current state of the user expression
     current: null // the current state of the target expression
   };
-
-  Calc.shownFeedback_ = false;
 
   config.grayOutUndeletableBlocks = true;
   config.forceInsertTopBlock = 'functional_compute';
@@ -114,10 +117,6 @@ Calc.init = function(config) {
     var visualizationColumn = document.getElementById('visualizationColumn');
     visualizationColumn.style.width = '400px';
 
-    dom.addClickTouchEvent(document.getElementById("continueButton"), function () {
-      Calc.step(true);
-    });
-
     // base's BlocklyApps.resetButtonClick will be called first
     var resetButton = document.getElementById('resetButton');
     dom.addClickTouchEvent(resetButton, Calc.resetButtonClick);
@@ -141,14 +140,11 @@ BlocklyApps.runButtonClick = function() {
  * called first.
  */
 Calc.resetButtonClick = function () {
-  var continueButton = document.getElementById('continueButton');
-  // todo - single location for toggling hide state?
-  continueButton.className += " hide";
-
   Calc.expressions.user = null;
   Calc.expressions.current = null;
-  Calc.shownFeedback_ = false;
   Calc.message = null;
+
+  locals.animating = false;
 
   Calc.drawExpressions();
 };
@@ -259,6 +255,7 @@ Calc.execute = function() {
   };
 
   BlocklyApps.report(reportData);
+  locals.animating = true;
 
   window.setTimeout(function () {
     Calc.step(false);
@@ -268,8 +265,7 @@ Calc.execute = function() {
 /**
  * Perform a step in our expression evaluation animation. This consists of
  * collapsing the next node in our tree. If that node failed expectations, we
- * will instead bring up a continue button, and refrain from further
- * collapses/animations until continue is pressed.
+ * will stop further evaluation.
  */
 Calc.step = function (ignoreFailures) {
   if (!Calc.expressions.user) {
@@ -278,22 +274,21 @@ Calc.step = function (ignoreFailures) {
 
   // If we've fully collapsed our expression, display feedback
   if (!Calc.expressions.user.isOperation()) {
+    locals.animating = false;
     displayFeedback();
     return;
   }
 
-  var continueButton = document.getElementById('continueButton');
-
   var collapsed = Calc.expressions.user.collapse(ignoreFailures);
   if (!collapsed) {
-    continueButton.className = continueButton.className.replace(/hide/g, "");
+    locals.animating = false;
+    displayFeedback();
+    return;
   } else {
     if (Calc.expressions.current) {
       Calc.expressions.current.collapse();
     }
     Calc.drawExpressions();
-
-    continueButton.className += " hide";
 
     window.setTimeout(function () {
       Calc.step(false);
@@ -384,30 +379,52 @@ function drawSvgExpression(elementId, expr, styleMarks) {
 }
 
 /**
+ * Deep clone a node, then removing any ids from the clone so that we don't have
+ * duplicated ids.
+ */
+function cloneNodeWithoutIds(elementId) {
+  var clone = document.getElementById(elementId).cloneNode(true);
+  var descendants = clone.getElementsByTagName("*");
+  for (var i = 0; i < descendants.length; i++) {
+    var element = descendants[i];
+    element.removeAttribute("id");
+  }
+
+  return clone;
+}
+
+/**
  * App specific displayFeedback function that calls into
  * BlocklyApps.displayFeedback when appropriate
  */
-var displayFeedback = function(response) {
-  if (!Calc.expressions.user.isOperation() && !Calc.shownFeedback_) {
-    Calc.shownFeedback_ = true;
-    // override extra top blocks message
-    level.extraTopBlocks = calcMsg.extraTopBlocks();
-    var options = {
-      app: 'Calc',
-      skin: skin.id,
-      response: response,
-      level: level,
-      feedbackType: Calc.testResults,
-      appStrings: {
-        reinfFeedbackMsg: calcMsg.reinfFeedbackMsg()
-      }
-    };
-    if (Calc.message) {
-      options.message = Calc.message;
-    }
-
-    BlocklyApps.displayFeedback(options);
+var displayFeedback = function() {
+  if (!locals.response || locals.animating) {
+    return;
   }
+
+  // override extra top blocks message
+  level.extraTopBlocks = calcMsg.extraTopBlocks();
+  var appDiv = null;
+  // Show svg in feedback dialog
+  if (Calc.testResults === TestResults.LEVEL_INCOMPLETE_FAIL) {
+    appDiv = cloneNodeWithoutIds('svgCalc');
+  }
+  var options = {
+    app: 'Calc',
+    skin: skin.id,
+    response: locals.response,
+    level: level,
+    feedbackType: Calc.testResults,
+    appStrings: {
+      reinfFeedbackMsg: calcMsg.reinfFeedbackMsg()
+    },
+    appDiv: appDiv
+  };
+  if (Calc.message) {
+    options.message = Calc.message;
+  }
+
+  BlocklyApps.displayFeedback(options);
 };
 
 /**
@@ -418,5 +435,6 @@ function onReportComplete(response) {
   // Disable the run button until onReportComplete is called.
   var runButton = document.getElementById('runButton');
   runButton.disabled = false;
-  displayFeedback(response);
+  locals.response = response;
+  displayFeedback();
 }
