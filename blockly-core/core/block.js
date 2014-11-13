@@ -484,7 +484,8 @@ Blockly.Block.prototype.onMouseDown_ = function(e) {
   // Stop the browser from scrolling/zooming the page
   e.preventDefault();
   // ...but this prevents blurring of inputs, so do it manually
-  document.activeElement.blur();
+  document.activeElement && document.activeElement.blur
+    && document.activeElement.blur();
 
   if (this.isInFlyout) {
     return;
