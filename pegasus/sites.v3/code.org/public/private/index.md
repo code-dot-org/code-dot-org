@@ -14,4 +14,5 @@
 
 ## Affiliate Workshops
 
-- [Report](/private/professional-development-workshop-report)
+- [Payment Report](/private/professional-development-workshop-report)
+- [Trained Teachers Report](/private/professional-development-workshop-teachers-report)

@@ -26,6 +26,17 @@ template "/etc/logrotate.d/dashboard" do
   })
 end
 
+template "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard/config/newrelic.yml" do
+  source 'newrelic.yml.erb'
+  user node[:current_user]
+  group node[:current_user]
+  variables ({
+    app_name:'Dashboard',
+    log_dir:"/home/#{node[:current_user]}/#{node.chef_environment}/dashboard/log",
+    auto_instrument:false,
+  })
+end
+
 execute "bundle-install-dashboard" do
   command "sudo bundle install"
   cwd "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard"
