@@ -2070,6 +2070,9 @@ exports.displayFeedback = function(options) {
   if (options.level.isK1) {
     feedback.className += " k1";
   }
+  if (options.appDiv) {
+    feedback.appendChild(options.appDiv);
+  }
 
   feedback.appendChild(
     getFeedbackButtons({

@@ -6161,6 +6161,9 @@ exports.displayFeedback = function(options) {
   if (options.level.isK1) {
     feedback.className += " k1";
   }
+  if (options.appDiv) {
+    feedback.appendChild(options.appDiv);
+  }
 
   feedback.appendChild(
     getFeedbackButtons({
@@ -19716,7 +19719,7 @@ exports.blocklyMessage = function(d){return "!!-Blockly-!!"};
 
 exports.catActions = function(d){return "!!-Actions-!!"};
 
-exports.catColour = function(d){return "!!-Colour-!!"};
+exports.catColour = function(d){return "!!-Color-!!"};
 
 exports.catLogic = function(d){return "!!-Logic-!!"};
 
