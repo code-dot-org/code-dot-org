@@ -602,7 +602,7 @@ Blockly.BlockSpaceEditor.copy_ = function(block) {
   xmlBlock.setAttribute('y', xy.y);
   Blockly.clipboard_ = {
     dom: xmlBlock,
-    src: block.blockSpace
+    sourceBlockSpace: block.blockSpace
   };
 };
 

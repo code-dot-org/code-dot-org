@@ -380,7 +380,7 @@ Blockly.BlockSpace.prototype.fireChangeEvent = function() {
 Blockly.BlockSpace.prototype.paste = function(clipboard) {
   var xmlBlock = clipboard.dom;
   // When pasting into a different block spaces, remove parameter blocks
-  if (this !== clipboard.src) {
+  if (this !== clipboard.sourceBlockSpace) {
     if (xmlBlock.getAttribute('type') === 'parameters_get') {
       return;
     }

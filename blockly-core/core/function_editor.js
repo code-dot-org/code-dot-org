@@ -188,8 +188,10 @@ Blockly.FunctionEditor.prototype.show = function() {
   this.ensureCreated_();
   goog.style.showElement(this.container_, true);
   goog.style.showElement(this.modalBackground_, true);
-  Blockly.selected = null;
   Blockly.focusedBlockSpace = Blockly.modalBlockSpace;
+  if (Blockly.selected) {
+    Blockly.selected.unselect();
+  }
 };
 
 /**
