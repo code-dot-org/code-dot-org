@@ -15,9 +15,10 @@
     "start_direction": "90",
     "x": "150",
     "y": "250",
-    "free_play": "false",
+    "free_play": "true",
     "impressive": "false",
-    "slider_speed": ".5"
+    "slider_speed": ".5",
+    "use_contract_editor": "false"
   }
 }]]></config>
   <blocks>

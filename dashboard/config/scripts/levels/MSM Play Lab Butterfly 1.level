@@ -22,11 +22,12 @@
     "edge_collisions": "false",
     "projectile_collisions": "false",
     "allow_sprites_outside_playspace": "true",
-    "sprites_hidden_to_start": "true",
+    "sprites_hidden_to_start": "false",
     "use_contract_editor": "false",
     "coordinate_grid_background": "true",
     "maze_data": null,
-    "instructions": "Help Sam stay on the screen so that you can always see at least a little piece of him. Using the arrow keys, see how far Sam can go to the left while still staying onscreen. You’ll find that Sam is onscreen as long as his x-coordinate is greater than -50. Then, fill in the code to make Sam stay on the screen."
+    "instructions": "Help Sam stay on the screen so that you can always see at least a little piece of him. Using the arrow keys, see how far Sam can go to the left while still staying onscreen. You’ll find that Sam is onscreen as long as his x-coordinate is greater than -50. Then, fill in the code to make Sam stay on the screen.",
+    "first_sprite_index": "1"
   }
 }]]></config>
   <blocks>
