@@ -108,12 +108,11 @@ var CONFIGS = {
     idlePegmanCol: 4,
     idlePegmanRow: 11,
 
-    wallPegmanAnimation: 'wall_avatar_sheet.png',
     hittingWallAnimation: 'wall_avatar_sheet.png',
     hittingWallAnimationFrameNumber: 20,
     hittingWallAnimationSpeedScale: 1.5,
-    wallPegmanCol: 1,
-    wallPegmanRow: 20,
+    hittingWallPegmanCol: 1,
+    hittingWallPegmanRow: 20,
 
     celebrateAnimation: 'jump_acorn_sheet.png',
     celebratePegmanCol: 1,

@@ -326,9 +326,17 @@ function drawMap () {
   if (skin.wallPegmanAnimation) {
     createPegmanAnimation({
       idStr: 'wall',
-      pegmanImage: skin.wallPegmanAnimation,
-      numColPegman: skin.wallPegmanCol,
-      numRowPegman: skin.wallPegmanRow
+      pegmanImage: skin.wallPegmanAnimation
+    });
+  }
+
+  // create element for our hitting wall spritesheet
+  if (skin.hittingWallAnimation && skin.hittingWallAnimationFrameNumber) {
+    createPegmanAnimation({
+      idStr: 'wall',
+      pegmanImage: skin.hittingWallAnimation,
+      numColPegman: skin.hittingWallPegmanCol,
+      numRowPegman: skin.hittingWallPegmanRow
     });
   }
 
@@ -1452,9 +1460,22 @@ Maze.scheduleFail = function(forward) {
       var numFrames = skin.hittingWallAnimationFrameNumber || 0;
 
       if (numFrames > 1) {
+
+        // The Scrat "wall" animation has him falling backwards into the water.
+        // This looks great when he falls into the water above him, but looks a
+        // little off when falling to the side/forward. Tune that by bumping the
+        // deltaY by one. Hacky, but looks much better
+        if (deltaY >= 0) {
+          deltaY += 1;
+        }
         // animate our sprite sheet
+        var timePerFrame = 100;
         scheduleSheetedMovement({x: Maze.pegmanX, y: Maze.pegmanY},
-          {x: deltaX, y: deltaY }, numFrames, 100, 'wall', Direction.NORTH, true);
+          {x: deltaX, y: deltaY }, numFrames, timePerFrame, 'wall',
+          Direction.NORTH, true);
+        setTimeout(function () {
+          document.getElementById('wallPegman').setAttribute('visibility', 'hidden');
+        }, numFrames * timePerFrame);
       } else {
         // active our gif
         timeoutList.setTimeout(function() {
@@ -1472,19 +1493,17 @@ Maze.scheduleFail = function(forward) {
       }
     }
     timeoutList.setTimeout(function() {
-      Maze.displayPegman(Maze.pegmanX,
-                         Maze.pegmanY,
-                         frame);
+      Maze.displayPegman(Maze.pegmanX, Maze.pegmanY, frame);
     }, stepSpeed);
     timeoutList.setTimeout(function() {
-      Maze.displayPegman(Maze.pegmanX + deltaX / 4,
-                         Maze.pegmanY + deltaY / 4,
-                         frame);
+      Maze.displayPegman(Maze.pegmanX + deltaX / 4, Maze.pegmanY + deltaY / 4,
+       frame);
       BlocklyApps.playAudio('failure');
     }, stepSpeed * 2);
     timeoutList.setTimeout(function() {
       Maze.displayPegman(Maze.pegmanX, Maze.pegmanY, frame);
     }, stepSpeed * 3);
+
     if (skin.wallPegmanAnimation) {
       timeoutList.setTimeout(function() {
         var pegmanIcon = document.getElementById('pegman');
