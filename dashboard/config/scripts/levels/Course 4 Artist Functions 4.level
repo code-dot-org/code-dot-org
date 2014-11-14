@@ -78,43 +78,28 @@
     </toolbox_blocks>
     <required_blocks>
       <xml>
-        <block type="procedures_callnoreturn">
-          <mutation name="draw a triangle"/>
-        </block>
-        <block type="procedures_defnoreturn" uservisible="false">
-          <mutation>
-            <description>draw a triangle</description>
-          </mutation>
-          <title name="NAME">draw a triangle</title>
-          <statement name="STACK">
-            <block type="controls_repeat_ext" inline="true">
-              <value name="TIMES">
-                <block type="math_number">
-                  <title name="NUM">3</title>
-                </block>
-              </value>
-              <statement name="DO">
-                <block type="draw_move" inline="true">
-                  <title name="DIR">moveForward</title>
-                  <value name="VALUE">
-                    <block type="math_number">
-                      <title name="NUM">100</title>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="draw_turn" inline="true">
-                      <title name="DIR">turnRight</title>
-                      <value name="VALUE">
-                        <block type="math_number">
-                          <title name="NUM">120</title>
-                        </block>
-                      </value>
-                    </block>
-                  </next>
-                </block>
-              </statement>
+        <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+            <block type="math_number">
+              <title name="NUM">3</title>
             </block>
-          </statement>
+          </value>
+        </block>
+        <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+            <block type="math_number">
+              <title name="NUM">100</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_turn" inline="true">
+          <title name="DIR">turnLeft</title>
+          <value name="VALUE">
+            <block type="math_number">
+              <title name="NUM">120</title>
+            </block>
+          </value>
         </block>
       </xml>
     </required_blocks>
