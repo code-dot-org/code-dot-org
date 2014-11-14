@@ -11,3 +11,10 @@ exports.cellId = function (prefix, row, col) {
 exports.isBeeSkin = function (skinId) {
   return (/bee(_night)?/).test(skinId);
 };
+
+/**
+ * Is skin scrat
+ */
+exports.isScratSkin = function (skinId) {
+  return (/scrat/).test(skinId);
+};
