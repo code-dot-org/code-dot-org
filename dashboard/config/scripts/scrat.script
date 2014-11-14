@@ -1,9 +1,0 @@
-title 'Scrat'
-description_short "Scrat short description."
-description "Scrat long description"
-hidden 'false'
-
-stage 'Maze: Sequence'
-skin 'scrat'
-level 'hoc2014 Scrat 1'
-
