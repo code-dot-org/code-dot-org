@@ -4,6 +4,26 @@ nav: about_nav
 ---
 # Job Openings at Code.org
 
+## Foundation & Corporate Partnerships Manager ##
+
+**Job Summary:**
+The Foundation & Corporate Partnerships Manager plays an important role in increasing revenue for Code.org, with a focus on building new Foundation partnerships, grant writing, and growing existing Corporate partnerships. The Manager will establish long-term partnerships and strengthen existing relationships with the corporate and foundation sector and develop compelling proposals that will result in funding for the immediate and long-term goals of Code.org. Full-time, salaried.
+
+**Qualifications:**
+
+- A Bachelor’s degree and a minimum of 5 years of relevant experience are required
+- Demonstrated ability to develop funding proposals in a clear and compelling manner and have a proven track record of success in writing six and seven figure foundation and/or corporate grants 
+- An incredible passion for our mission and an ability to inspire others to get involved
+- Thrive in a collaborative, team environment and also work independently. 
+- Outstanding communication and highly developed interpersonal skills with ability to be persuasive in both written and verbal communications. 
+- Experience using online databases (Foundation Center and others) and other sources to conduct research on potential funding prospects. 
+- A solid understanding of budgets as they relate to proposals and grants is required.
+- Proficiency in working with Microsoft Office and Google Docs 
+
+
+A high level of computer literacy is required; experience in fundraising for educational programs strongly preferred. Experience in writing successful non-profit grant proposals is a must.
+
+Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 ## Regional Program Manager (Los Angeles, NYC, Ft. Lauderdale/Miami area)
 
@@ -42,8 +62,11 @@ Code.org is recruiting for an experienced Program Coordinator, an event planning
 - Minimum of 1-2 years of experience as an event planner
 - Strong administrative and event planning skills
 - Excellent customer service attitude
-- Tech-savvy; proficiency in working with Google Docs and Microsoft Office a must
+- Tech-savvy; proficiency in working with Google Docs and Microsoft Office
+- Must be extremely detail-oriented, possess exceptional writing and communications
+- Candidate should be flexible and willing to work in a fast-paced, start-up environment
 
+Must also be a self-starter, able to multi-task cheerfully, excel under pressure, and work independently with a geographically dispersed team.
 Minimal travel (0-5% of the time) is required.
 
 Email cover letter and resume to <a href="mailto:jobs@code.org">jobs@code.org</a>.
