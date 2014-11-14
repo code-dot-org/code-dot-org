@@ -144,6 +144,9 @@ class HomeControllerTest < ActionController::TestCase
     Script.find(Script::TWENTY_HOUR_ID).script_levels.each do |script_level|
       UserLevel.create(user: user, level: script_level.level, attempts: 1, best_result: Activity::MINIMUM_PASS_RESULT)
     end
+    Script.find_by(name: 'hourofcode').script_levels.each do |script_level|
+      UserLevel.find_or_create_by(user: user, level: script_level.level, attempts: 1, best_result: Activity::MINIMUM_PASS_RESULT)
+    end
     user.backfill_user_scripts
 
     assert_equal [], user.working_on_scripts # if you finish a script you are not working on it!
