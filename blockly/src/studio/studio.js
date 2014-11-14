@@ -1433,6 +1433,7 @@ Studio.execute = function() {
   // (must be after reset(), which resets the Studio.Globals namespace)
   defineProcedures('procedures_defreturn');
   defineProcedures('procedures_defnoreturn');
+  defineProcedures('functional_definition');
 
   // Set event handlers and start the onTick timer
   Studio.eventHandlers = handlers;
