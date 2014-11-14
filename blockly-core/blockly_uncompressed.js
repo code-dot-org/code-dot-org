@@ -18701,6 +18701,9 @@ Blockly.FunctionEditor.prototype.ensureCreated_ = function() {
   }
 };
 Blockly.FunctionEditor.prototype.hide = function() {
+  if(!this.isOpen()) {
+    return
+  }
   this.functionDefinitionBlock.setUserVisible(false);
   this.functionDefinitionBlock.setMovable(true);
   var dom = Blockly.Xml.blockToDom_(this.functionDefinitionBlock);
