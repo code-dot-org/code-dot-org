@@ -18472,7 +18472,10 @@ Blockly.Procedures.flyoutCategory = function(blocks, gaps, margin, blockSpace) {
   var tuple = Blockly.Procedures.allProcedures();
   populateProcedures(tuple[0], "procedures_callnoreturn");
   populateProcedures(tuple[1], "procedures_callreturn");
-  populateProcedures(tuple[2], "functional_call")
+  populateProcedures(tuple[2], "functional_call");
+  if(Blockly.editBlocks === "start_blocks") {
+    populateProcedures(tuple[2], "procedural_to_functional_call")
+  }
 };
 Blockly.Procedures.getCallers = function(name, blockSpace) {
   var callers = [];
@@ -18701,6 +18704,9 @@ Blockly.FunctionEditor.prototype.ensureCreated_ = function() {
   }
 };
 Blockly.FunctionEditor.prototype.hide = function() {
+  if(!this.isOpen()) {
+    return
+  }
   this.functionDefinitionBlock.setUserVisible(false);
   this.functionDefinitionBlock.setMovable(true);
   var dom = Blockly.Xml.blockToDom_(this.functionDefinitionBlock);
@@ -20792,9 +20798,12 @@ Blockly.bindEvent_ = function(element, name, thisObject, func) {
   wrapFunc = function(e) {
     func.apply(thisObject, arguments)
   };
-  element.addEventListener(name, wrapFunc, false);
-  bindData.push([element, name, wrapFunc]);
-  if(name in Blockly.bindEvent_.TOUCH_MAP) {
+  var equivTouchEvent = Blockly.bindEvent_.TOUCH_MAP[name];
+  if(equivTouchEvent) {
+    if(!window.navigator.pointerEnabled && !window.navigator.msPointerEnabled) {
+      element.addEventListener(name, wrapFunc, false);
+      bindData.push([element, name, wrapFunc])
+    }
     wrapFunc = function(e) {
       if(e.target && e.target.style) {
         var targetStyle = e.target.style;
@@ -20813,8 +20822,11 @@ Blockly.bindEvent_ = function(element, name, thisObject, func) {
         func.apply(thisObject, arguments)
       }
     };
-    element.addEventListener(Blockly.bindEvent_.TOUCH_MAP[name], wrapFunc, false);
-    bindData.push([element, Blockly.bindEvent_.TOUCH_MAP[name], wrapFunc])
+    element.addEventListener(equivTouchEvent, wrapFunc, false);
+    bindData.push([element, equivTouchEvent, wrapFunc])
+  }else {
+    element.addEventListener(name, wrapFunc, false);
+    bindData.push([element, name, wrapFunc])
   }
   return bindData
 };

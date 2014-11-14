@@ -386,7 +386,7 @@ Blockly.JavaScript.logic_ternary = function() {
 };
 Blockly.JavaScript.loops = {};
 Blockly.JavaScript.controls_repeat = function() {
-  var a = Number(this.getTitleValue("TIMES")), b = Blockly.JavaScript.statementToCode(this, "DO");
+  var a = Number(this.getTitleValue("TIMES")) || 0, b = Blockly.JavaScript.statementToCode(this, "DO");
   Blockly.JavaScript.INFINITE_LOOP_TRAP && (b = Blockly.JavaScript.INFINITE_LOOP_TRAP.replace(/%1/g, "'" + this.id + "'") + b);
   var c = Blockly.JavaScript.variableDB_.getDistinctName("count", Blockly.Variables.NAME_TYPE);
   return"for (var " + c + " = 0; " + c + " < " + a + "; " + c + "++) {\n" + b + "}\n"
@@ -695,6 +695,13 @@ Blockly.JavaScript.functional_call = function() {
     b[c] = Blockly.JavaScript.statementToCode(this, "ARG" + c, Blockly.JavaScript.ORDER_COMMA) || "null"
   }
   return(Blockly.varsInGlobals ? "Globals." : "") + a + "(" + b.join(", ") + ")"
+};
+Blockly.JavaScript.procedural_to_functional_call = function() {
+  for(var a = Blockly.JavaScript.variableDB_.getName(this.getTitleValue("NAME"), Blockly.Procedures.NAME_TYPE), b = [], c = 0;c < this.arguments_.length;c++) {
+    var d = Blockly.JavaScript.valueToCode(this, "ARG" + c, Blockly.JavaScript.ORDER_COMMA);
+    b[c] = d || "null"
+  }
+  return[(Blockly.varsInGlobals ? "Globals." : "") + a + "(" + b.join(", ") + ")", Blockly.JavaScript.ORDER_NONE]
 };
 Blockly.JavaScript.functionalParameters = {};
 Blockly.JavaScript.functional_parameters_get = function() {
