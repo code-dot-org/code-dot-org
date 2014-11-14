@@ -15,7 +15,7 @@ On 19th November Microsoft will run a training session for people hosting events
 
 This will run through the curriculum which can be delivered for Hour of Code on 8th December. If you would like to register to attend this event please email cillian@q4pr.ie.  Places are on a first come first served basis.
 </font>
-## Details of the curriculum can be found here:  https://www.touchdevelop.com/
+## Details of the curriculum can be found [here](https://www.touchdevelop.com/hourofcode2)
 
 
 ## 1) Try the tutorials:
