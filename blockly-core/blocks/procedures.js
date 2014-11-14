@@ -178,7 +178,6 @@ Blockly.Blocks.procedures_defnoreturn = {
     return {
       name: this.getTitleValue('NAME'),
       parameterNames: this.parameterNames_,
-      hasReturnValue: false,
       type: this.type,
       callType: this.callType_
     };
@@ -285,7 +284,6 @@ Blockly.Blocks.procedures_defreturn = {
     return {
       name: this.getTitleValue('NAME'),
       parameterNames: this.parameterNames_,
-      hasReturnValue: true,
       type: this.type,
       callType: this.callType_
     };
