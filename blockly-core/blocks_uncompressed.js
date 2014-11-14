@@ -1397,6 +1397,7 @@ Blockly.Blocks.functional_call = {init:function() {
     Blockly.Names.equals(a, this.arguments_[c]) && (this.arguments_[c] = b, this.getInput("ARG" + c).titleRow[0].setText(b))
   }
 }};
+Blockly.Blocks.procedural_to_functional_call = Blockly.Blocks.procedures_callreturn;
 Blockly.Blocks.functionalParameters = {};
 Blockly.Blocks.functional_parameters_get = {init:function() {
   var a = new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);
