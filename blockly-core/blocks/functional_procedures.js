@@ -41,7 +41,7 @@ Blockly.Blocks.functional_definition = {
     this.setFunctionalOutput(true, 'Number');
     var name = Blockly.Procedures.findLegalName(Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE, this);
     this.appendDummyInput()
-        .appendTitle('Define' /**TODO(bjordan): i18n*/)
+        .appendTitle(Blockly.Msg.DEFINE_FUNCTION_DEFINE)
         .appendTitle(new Blockly.FieldTextInput(name, Blockly.Procedures.rename), 'NAME')
         .appendTitle('', 'PARAMS');
     this.appendFunctionalInput('STACK');
