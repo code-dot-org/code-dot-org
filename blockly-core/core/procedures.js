@@ -139,11 +139,12 @@ Blockly.Procedures.isLegalName = function(name, blockSpace, opt_exclude) {
 
 /**
  * Rename a procedure.  Called by the editable field.
+ * NOTE: Requires `this` scope to be a blockly field
  * @param {string} text The proposed new name.
  * @return {string} The accepted name.
  * @this {!Blockly.FieldVariable}
  */
-Blockly.Procedures.rename = function(text) { /** todo(bjordan): maybe take a block here rather than rely on scope? */
+Blockly.Procedures.rename = function(text) {
   // Strip leading and trailing whitespace.  Beyond this, all names are legal.
   text = text.replace(/^[\s\xa0]+|[\s\xa0]+$/g, '');
 
