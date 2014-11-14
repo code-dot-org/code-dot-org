@@ -696,6 +696,13 @@ Blockly.JavaScript.functional_call = function() {
   }
   return(Blockly.varsInGlobals ? "Globals." : "") + a + "(" + b.join(", ") + ")"
 };
+Blockly.JavaScript.procedural_to_functional_call = function() {
+  for(var a = Blockly.JavaScript.variableDB_.getName(this.getTitleValue("NAME"), Blockly.Procedures.NAME_TYPE), b = [], c = 0;c < this.arguments_.length;c++) {
+    var d = Blockly.JavaScript.valueToCode(this, "ARG" + c, Blockly.JavaScript.ORDER_COMMA);
+    b[c] = d || "null"
+  }
+  return[(Blockly.varsInGlobals ? "Globals." : "") + a + "(" + b.join(", ") + ")", Blockly.JavaScript.ORDER_NONE]
+};
 Blockly.JavaScript.functionalParameters = {};
 Blockly.JavaScript.functional_parameters_get = function() {
   return Blockly.JavaScript.translateVarName(this.getTitleValue("VAR"))
