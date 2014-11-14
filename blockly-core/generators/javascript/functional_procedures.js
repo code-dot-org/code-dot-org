@@ -74,3 +74,19 @@ Blockly.JavaScript.functional_call = function() {
               funcName + '(' + args.join(', ') + ')';
   return code;
 };
+
+Blockly.JavaScript.procedural_to_functional_call = function() {
+  // Call a functional procedure with a return value.
+  var funcName = Blockly.JavaScript.variableDB_.getName(
+      this.getTitleValue('NAME'), Blockly.Procedures.NAME_TYPE);
+  var args = [];
+  for (var x = 0; x < this.arguments_.length; x++) {
+    var value = Blockly.JavaScript.valueToCode(this, 'ARG' + x,
+        Blockly.JavaScript.ORDER_COMMA);
+    args[x] = value || 'null';
+  }
+  var code = (Blockly.varsInGlobals ? 'Globals.' : '') +
+              funcName + '(' + args.join(', ') + ')';
+  // convert functional output to procedural output.
+  return [code, Blockly.JavaScript.ORDER_NONE];
+};

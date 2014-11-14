@@ -26,7 +26,8 @@ class Eval < Blockly
         level_num: 'custom',
         properties: {
           solution_blocks: params[:program] || '',
-          toolbox_blocks: "<xml>#{toolbox}</xml>"
+          toolbox_blocks: "<xml>#{toolbox}</xml>",
+          use_contract_editor: true
         }
     ))
   end
@@ -72,7 +73,7 @@ class Eval < Blockly
         <block type="functional_logical_not" />
         <block type="functional_boolean" />
       </category>
-      <category name="Functions" custom="PROCEDURE" />
+      <category name="Functions" custom="PROCEDURE"/>
     XML
   end
 
