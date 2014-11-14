@@ -348,7 +348,10 @@ Blockly.Blocks.procedures_callnoreturn = {
   },
   openEditor: function(e) {
     e.stopPropagation();
-    Blockly.functionEditor.openAndEditFunction(this.getTitleValue('NAME'));
+    var functionName = this.getTitleValue('NAME');
+    this.blockSpace.blockSpaceEditor.hideChaff();
+    Blockly.functionEditor.hide();
+    Blockly.functionEditor.openAndEditFunction(functionName);
   },
   getProcedureCall: function() {
     return this.getTitleValue('NAME');

@@ -12506,6 +12506,7 @@ var titlesMatch = function(titleA, titleB) {
  * A set of functional blocks
  */
 
+var msg = require('../locale/ro_ro/common');
 var functionalBlockUtils = require('./functionalBlockUtils');
 var initTitledFunctionalBlock = functionalBlockUtils.initTitledFunctionalBlock;
 
@@ -12514,6 +12515,13 @@ exports.install = function(blockly, generator, gensym) {
   installMinus(blockly, generator, gensym);
   installTimes(blockly, generator, gensym);
   installDividedBy(blockly, generator, gensym);
+  installGreaterThan(blockly, generator, gensym);
+  installLessThan(blockly, generator, gensym);
+  installNumberEquals(blockly, generator, gensym);
+  installLogicalAnd(blockly, generator, gensym);
+  installLogicalOr(blockly, generator, gensym);
+  installLogicalNot(blockly, generator, gensym);
+  installBoolean(blockly, generator, gensym);
   installMathNumber(blockly, generator, gensym);
   installString(blockly, generator, gensym);
 };
@@ -12591,6 +12599,142 @@ function installDividedBy(blockly, generator, gensym) {
   };
 }
 
+// Install comparators
+
+function installGreaterThan(blockly, generator, gensym) {
+  blockly.Blocks.functional_greater_than = {
+    helpUrl: '',
+    init: function() {
+      initTitledFunctionalBlock(this, '>', 'boolean', [
+        { name: 'ARG1', type: 'Number' },
+        { name: 'ARG2', type: 'Number' }
+      ]);
+    }
+  };
+
+  generator.functional_greater_than = function() {
+    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
+    var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
+    return '(' + arg1 + " > " + arg2 + ')';
+  };
+}
+
+function installLessThan(blockly, generator, gensym) {
+  blockly.Blocks.functional_less_than = {
+    helpUrl: '',
+    init: function() {
+      initTitledFunctionalBlock(this, '<', 'boolean', [
+        { name: 'ARG1', type: 'Number' },
+        { name: 'ARG2', type: 'Number' }
+      ]);
+    }
+  };
+
+  generator.functional_less_than = function() {
+    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
+    var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
+    return '(' + arg1 + " < " + arg2 + ')';
+  };
+}
+
+function installNumberEquals(blockly, generator, gensym) {
+  blockly.Blocks.functional_number_equals = {
+    helpUrl: '',
+    init: function() {
+      initTitledFunctionalBlock(this, '=', 'boolean', [
+        { name: 'ARG1', type: 'Number' },
+        { name: 'ARG2', type: 'Number' }
+      ]);
+    }
+  };
+
+  generator.functional_number_equals = function() {
+    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
+    var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
+    return '(' + arg1 + " == " + arg2 + ')';
+  };
+}
+
+// Install boolean operators
+
+function installLogicalAnd(blockly, generator, gensym) {
+  blockly.Blocks.functional_logical_and = {
+    helpUrl: '',
+    init: function() {
+      initTitledFunctionalBlock(this, 'and', 'boolean', [
+        { name: 'ARG1', type: 'boolean' },
+        { name: 'ARG2', type: 'boolean' }
+      ]);
+    }
+  };
+
+  generator.functional_logical_and = function() {
+    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
+    var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
+    return '(' + arg1 + " && " + arg2 + ')';
+  };
+}
+
+function installLogicalOr(blockly, generator, gensym) {
+  blockly.Blocks.functional_logical_or = {
+    helpUrl: '',
+    init: function() {
+      initTitledFunctionalBlock(this, 'or', 'boolean', [
+        { name: 'ARG1', type: 'boolean' },
+        { name: 'ARG2', type: 'boolean' }
+      ]);
+    }
+  };
+
+  generator.functional_logical_or = function() {
+    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
+    var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
+    return '(' + arg1 + " || " + arg2 + ')';
+  };
+}
+
+function installLogicalNot(blockly, generator, gensym) {
+  blockly.Blocks.functional_logical_not = {
+    helpUrl: '',
+    init: function() {
+      initTitledFunctionalBlock(this, 'not', 'boolean', [
+        { name: 'ARG1', type: 'boolean' }
+      ]);
+    }
+  };
+
+  generator.functional_logical_not = function() {
+    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
+    return '!(' + arg1 + ')';
+  };
+}
+
+function installBoolean(blockly, generator, gensym) {
+  blockly.Blocks.functional_boolean = {
+    // Boolean value.
+    init: function() {
+      this.setFunctional(true, {
+        headerHeight: 0,
+        rowBuffer: 3
+      });
+      this.setHSV.apply(this, functionalBlockUtils.colors.boolean);
+      var values = blockly.Blocks.functional_boolean.VALUES;
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldDropdown(values), 'VAL')
+          .setAlign(Blockly.ALIGN_CENTRE);
+      this.setFunctionalOutput(true, 'boolean');
+    }
+  };
+
+  blockly.Blocks.functional_boolean.VALUES = [
+        [msg.booleanTrue(), 'true'],
+        [msg.booleanFalse(), 'false']];
+
+  generator.functional_boolean = function() {
+    return this.getTitleValue('VAL');
+  };
+}
+
 function installMathNumber(blockly, generator, gensym) {
   blockly.Blocks.functional_math_number = {
     // Numeric value.
@@ -12652,7 +12796,7 @@ function installString(blockly, generator) {
   };
 }
 
-},{"./functionalBlockUtils":14}],19:[function(require,module,exports){
+},{"../locale/ro_ro/common":47,"./functionalBlockUtils":14}],19:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -12668,6 +12812,7 @@ exports.load = function(assetUrl, id) {
     assetUrl: skinUrl,
     // Images
     avatar: skinUrl('avatar.png'),
+    avatar_2x: skinUrl('avatar_2x.png'),
     tiles: skinUrl('tiles.png'),
     goal: skinUrl('goal.png'),
     obstacle: skinUrl('obstacle.png'),
@@ -12675,6 +12820,8 @@ exports.load = function(assetUrl, id) {
     staticAvatar: skinUrl('static_avatar.png'),
     winAvatar: skinUrl('win_avatar.png'),
     failureAvatar: skinUrl('failure_avatar.png'),
+    decorationAnimation: skinUrl('decoration_animation.png'),
+    decorationAnimation_2x: skinUrl('decoration_animation_2x.png'),
     repeatImage: assetUrl('media/common_images/repeat-arrows.png'),
     leftArrow: assetUrl('media/common_images/moveleft.png'),
     downArrow: assetUrl('media/common_images/movedown.png'),
@@ -12713,6 +12860,11 @@ exports.load = function(assetUrl, id) {
     squigglyLine: assetUrl('media/common_images/squiggly.png'),
     swirlyLine: assetUrl('media/common_images/swirlyline.png'),
     randomPurpleIcon: assetUrl('media/common_images/random-purple.png'),
+    annaLine: assetUrl('media/common_images/annaline.png'),
+    elsaLine: assetUrl('media/common_images/elsaline.png'),
+    annaLine_2x: assetUrl('media/common_images/annaline_2x.png'),
+    elsaLine_2x: assetUrl('media/common_images/elsaline_2x.png'),
+
     // Sounds
     startSound: [skinUrl('start.mp3'), skinUrl('start.ogg')],
     winSound: [skinUrl('win.mp3'), skinUrl('win.ogg')],
@@ -16055,7 +16207,15 @@ levels.full_sandbox =  {
            blockOfType('functional_math_number') +
            '<block type="functional_math_number_dropdown">' +
              '<title name="NUM" config="2,3,4,5,6,7,8,9,10,11,12">???</title>' +
-           '</block>')),
+           '</block>') +
+       createCategory('Functional logic',
+           blockOfType('functional_greater_than') +
+           blockOfType('functional_less_than') +
+           blockOfType('functional_number_equals') +
+           blockOfType('functional_logical_and') +
+           blockOfType('functional_logical_or') +
+           blockOfType('functional_logical_not') +
+           blockOfType('functional_boolean'))),
   'startBlocks':
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
@@ -17829,6 +17989,7 @@ Studio.execute = function() {
   // (must be after reset(), which resets the Studio.Globals namespace)
   defineProcedures('procedures_defreturn');
   defineProcedures('procedures_defnoreturn');
+  defineProcedures('functional_definition');
 
   // Set event handlers and start the onTick timer
   Studio.eventHandlers = handlers;
@@ -19723,6 +19884,10 @@ var MessageFormat = require("messageformat");MessageFormat.locale.ro = function 
   return 'other';
 };
 exports.and = function(d){return "şi"};
+
+exports.booleanTrue = function(d){return "true"};
+
+exports.booleanFalse = function(d){return "false"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 

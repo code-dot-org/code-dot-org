@@ -3,7 +3,7 @@ class Maze < Grid
 
   # List of possible skins, the first is used as a default.
   def self.skins
-    ['birds', 'pvz']
+    ['birds', 'pvz', 'scrat']
   end
 
   # An array of [name, value] pairs where the value is a start direction.

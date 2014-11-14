@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+require 'sequel'
+require_relative '../../../src/env'
+require src_dir 'database'
+require_relative '../../../helpers/professional_development_workshop_helpers'
+
+require 'cdo/csv'
+
+puts CSV.generate_from_dataset(generate_professional_development_workshop_teachers_report)

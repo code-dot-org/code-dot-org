@@ -15,5 +15,15 @@ exports.Colours = {
   GREEN: '#228b22',
   BLUE: '#0000cd',
   AQUAMARINE: '#7fffd4',
-  PLUM: '#843179'
+  PLUM: '#843179',
+
+  FROZEN1: "#d0fdfd",
+  FROZEN2: "#d0fdd0",
+  FROZEN3: "#d0d0fd",
+  FROZEN4: "#e0e0e0",
+  FROZEN5: '#ffffff',
+  FROZEN6: "#e8e8e8",
+  FROZEN7: "#bbd1e4",
+  FROZEN8: "#fdd0fd",
+  FROZEN9: "#aea4ff"
 };
