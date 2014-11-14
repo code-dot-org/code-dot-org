@@ -20,7 +20,7 @@ Students discuss the components of their favorite videogames, and discover that 
 ### **Getting Started** - 15 minutes
  
 1) [Vocabulary](#Vocab)
-2) [Figuring it Out](#GetStarted)  
+2) [Learning a Language](#GetStarted)  
 
 ### **Activity: Videogames and the Coordinate Plane** - 25  minutes  
 
@@ -67,7 +67,7 @@ This lesson has two new and important words:<br/>
 - **Apply** - use a given function on some inputs
 - **Arguments** - the inputs to a function; expressions for arguments follow the name of a function
 
-### <a name="GetStarted"></a> 2) Figuring it Out
+### <a name="GetStarted"></a> 2) Learning a Language
 Welcome to CS in Middle School Math! In this course, you’ll be learning a new programming language - a way to tell computers exactly what you want them to do. Just like English, Spanish or French, a programming language has its own vocabulary and grammar that you’ll have to learn. Fortunately, the language you’ll be using here has a lot in common with simple math that you already know!
 
 Connect the material that’s to come with things students already know:

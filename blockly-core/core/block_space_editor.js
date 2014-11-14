@@ -559,8 +559,7 @@ Blockly.BlockSpaceEditor.prototype.onKeyDown_ = function(e) {
       e.preventDefault();
     }
   } else if (e.altKey || e.ctrlKey || e.metaKey) {
-    if (Blockly.selected && Blockly.selected.isDeletable() &&
-      Blockly.selected.blockSpace === this.blockSpace) {
+    if (Blockly.selected && Blockly.selected.isDeletable()) {
       this.hideChaff();
       if (e.keyCode == 67) {
         // 'c' for copy.
@@ -574,7 +573,7 @@ Blockly.BlockSpaceEditor.prototype.onKeyDown_ = function(e) {
     if (e.keyCode == 86) {
       // 'v' for paste.
       if (Blockly.clipboard_) {
-        this.blockSpace.paste(Blockly.clipboard_);
+        Blockly.focusedBlockSpace.paste(Blockly.clipboard_);
       }
     }
   }
@@ -601,7 +600,10 @@ Blockly.BlockSpaceEditor.copy_ = function(block) {
   var xy = block.getRelativeToSurfaceXY();
   xmlBlock.setAttribute('x', Blockly.RTL ? -xy.x : xy.x);
   xmlBlock.setAttribute('y', xy.y);
-  Blockly.clipboard_ = xmlBlock;
+  Blockly.clipboard_ = {
+    dom: xmlBlock,
+    sourceBlockSpace: block.blockSpace
+  };
 };
 
 /**
