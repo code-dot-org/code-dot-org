@@ -13599,6 +13599,10 @@ var MessageFormat = require("messageformat");MessageFormat.locale.ar = function(
 };
 exports.and = function(d){return "و"};
 
+exports.booleanTrue = function(d){return "true"};
+
+exports.booleanFalse = function(d){return "false"};
+
 exports.blocklyMessage = function(d){return "بلوكلي"};
 
 exports.catActions = function(d){return "الاجراءات"};

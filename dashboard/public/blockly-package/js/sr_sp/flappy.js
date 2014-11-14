@@ -9585,6 +9585,10 @@ var MessageFormat = require("messageformat");MessageFormat.locale.sr = function 
 };
 exports.and = function(d){return "И"};
 
+exports.booleanTrue = function(d){return "true"};
+
+exports.booleanFalse = function(d){return "false"};
+
 exports.blocklyMessage = function(d){return "Blockly"};
 
 exports.catActions = function(d){return "Акције"};

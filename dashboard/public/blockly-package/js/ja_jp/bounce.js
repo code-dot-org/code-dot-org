@@ -12147,6 +12147,10 @@ exports.yes = function(d){return "はい"};
 var MessageFormat = require("messageformat");MessageFormat.locale.ja=function(n){return "other"}
 exports.and = function(d){return "そして"};
 
+exports.booleanTrue = function(d){return "true"};
+
+exports.booleanFalse = function(d){return "false"};
+
 exports.blocklyMessage = function(d){return "ブロッキー"};
 
 exports.catActions = function(d){return "操作"};

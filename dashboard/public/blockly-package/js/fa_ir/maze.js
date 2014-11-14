@@ -13582,6 +13582,10 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.fa=function(n){return "other"}
 exports.and = function(d){return "و"};
 
+exports.booleanTrue = function(d){return "true"};
+
+exports.booleanFalse = function(d){return "false"};
+
 exports.blocklyMessage = function(d){return "بلاکلی"};
 
 exports.catActions = function(d){return "اقدامات"};

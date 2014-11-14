@@ -12173,6 +12173,10 @@ var MessageFormat = require("messageformat");MessageFormat.locale.uk = function 
 };
 exports.and = function(d){return "та"};
 
+exports.booleanTrue = function(d){return "true"};
+
+exports.booleanFalse = function(d){return "false"};
+
 exports.blocklyMessage = function(d){return "Блоклі"};
 
 exports.catActions = function(d){return "Дії"};

@@ -8192,6 +8192,10 @@ var MessageFormat = require("messageformat");MessageFormat.locale.ru = function 
 };
 exports.and = function(d){return "и"};
 
+exports.booleanTrue = function(d){return "true"};
+
+exports.booleanFalse = function(d){return "false"};
+
 exports.blocklyMessage = function(d){return "Блокли"};
 
 exports.catActions = function(d){return "Действия"};

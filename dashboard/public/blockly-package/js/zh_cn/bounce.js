@@ -12147,6 +12147,10 @@ exports.yes = function(d){return "是"};
 var MessageFormat = require("messageformat");MessageFormat.locale.zh=function(n){return "other"}
 exports.and = function(d){return "和"};
 
+exports.booleanTrue = function(d){return "true"};
+
+exports.booleanFalse = function(d){return "false"};
+
 exports.blocklyMessage = function(d){return "布洛克里"};
 
 exports.catActions = function(d){return "操作"};

@@ -6070,7 +6070,14 @@ module.exports = {
       blockUtils.blockOfType('scale') +
       blockUtils.blockOfType('functional_text') +
       blockUtils.blockOfType('string_append') +
-      blockUtils.blockOfType('string_length')
+      blockUtils.blockOfType('string_length') +
+      blockUtils.blockOfType('functional_greater_than') +
+      blockUtils.blockOfType('functional_less_than') +
+      blockUtils.blockOfType('functional_number_equals') +
+      blockUtils.blockOfType('functional_logical_and') +
+      blockUtils.blockOfType('functional_logical_or') +
+      blockUtils.blockOfType('functional_logical_not') +
+      blockUtils.blockOfType('functional_boolean')
     ),
     startBlocks: blockUtils.mathBlockXml('functional_star', {
       'COLOR': blockUtils.mathBlockXml('functional_string', null, { VAL: 'black' } ),
@@ -10390,6 +10397,7 @@ var titlesMatch = function(titleA, titleB) {
  * A set of functional blocks
  */
 
+var msg = require('../locale/ru_ru/common');
 var functionalBlockUtils = require('./functionalBlockUtils');
 var initTitledFunctionalBlock = functionalBlockUtils.initTitledFunctionalBlock;
 
@@ -10398,6 +10406,13 @@ exports.install = function(blockly, generator, gensym) {
   installMinus(blockly, generator, gensym);
   installTimes(blockly, generator, gensym);
   installDividedBy(blockly, generator, gensym);
+  installGreaterThan(blockly, generator, gensym);
+  installLessThan(blockly, generator, gensym);
+  installNumberEquals(blockly, generator, gensym);
+  installLogicalAnd(blockly, generator, gensym);
+  installLogicalOr(blockly, generator, gensym);
+  installLogicalNot(blockly, generator, gensym);
+  installBoolean(blockly, generator, gensym);
   installMathNumber(blockly, generator, gensym);
   installString(blockly, generator, gensym);
 };
@@ -10475,6 +10490,142 @@ function installDividedBy(blockly, generator, gensym) {
   };
 }
 
+// Install comparators
+
+function installGreaterThan(blockly, generator, gensym) {
+  blockly.Blocks.functional_greater_than = {
+    helpUrl: '',
+    init: function() {
+      initTitledFunctionalBlock(this, '>', 'boolean', [
+        { name: 'ARG1', type: 'Number' },
+        { name: 'ARG2', type: 'Number' }
+      ]);
+    }
+  };
+
+  generator.functional_greater_than = function() {
+    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
+    var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
+    return '(' + arg1 + " > " + arg2 + ')';
+  };
+}
+
+function installLessThan(blockly, generator, gensym) {
+  blockly.Blocks.functional_less_than = {
+    helpUrl: '',
+    init: function() {
+      initTitledFunctionalBlock(this, '<', 'boolean', [
+        { name: 'ARG1', type: 'Number' },
+        { name: 'ARG2', type: 'Number' }
+      ]);
+    }
+  };
+
+  generator.functional_less_than = function() {
+    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
+    var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
+    return '(' + arg1 + " < " + arg2 + ')';
+  };
+}
+
+function installNumberEquals(blockly, generator, gensym) {
+  blockly.Blocks.functional_number_equals = {
+    helpUrl: '',
+    init: function() {
+      initTitledFunctionalBlock(this, '=', 'boolean', [
+        { name: 'ARG1', type: 'Number' },
+        { name: 'ARG2', type: 'Number' }
+      ]);
+    }
+  };
+
+  generator.functional_number_equals = function() {
+    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
+    var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
+    return '(' + arg1 + " == " + arg2 + ')';
+  };
+}
+
+// Install boolean operators
+
+function installLogicalAnd(blockly, generator, gensym) {
+  blockly.Blocks.functional_logical_and = {
+    helpUrl: '',
+    init: function() {
+      initTitledFunctionalBlock(this, 'and', 'boolean', [
+        { name: 'ARG1', type: 'boolean' },
+        { name: 'ARG2', type: 'boolean' }
+      ]);
+    }
+  };
+
+  generator.functional_logical_and = function() {
+    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
+    var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
+    return '(' + arg1 + " && " + arg2 + ')';
+  };
+}
+
+function installLogicalOr(blockly, generator, gensym) {
+  blockly.Blocks.functional_logical_or = {
+    helpUrl: '',
+    init: function() {
+      initTitledFunctionalBlock(this, 'or', 'boolean', [
+        { name: 'ARG1', type: 'boolean' },
+        { name: 'ARG2', type: 'boolean' }
+      ]);
+    }
+  };
+
+  generator.functional_logical_or = function() {
+    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
+    var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
+    return '(' + arg1 + " || " + arg2 + ')';
+  };
+}
+
+function installLogicalNot(blockly, generator, gensym) {
+  blockly.Blocks.functional_logical_not = {
+    helpUrl: '',
+    init: function() {
+      initTitledFunctionalBlock(this, 'not', 'boolean', [
+        { name: 'ARG1', type: 'boolean' }
+      ]);
+    }
+  };
+
+  generator.functional_logical_not = function() {
+    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
+    return '!(' + arg1 + ')';
+  };
+}
+
+function installBoolean(blockly, generator, gensym) {
+  blockly.Blocks.functional_boolean = {
+    // Boolean value.
+    init: function() {
+      this.setFunctional(true, {
+        headerHeight: 0,
+        rowBuffer: 3
+      });
+      this.setHSV.apply(this, functionalBlockUtils.colors.boolean);
+      var values = blockly.Blocks.functional_boolean.VALUES;
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldDropdown(values), 'VAL')
+          .setAlign(Blockly.ALIGN_CENTRE);
+      this.setFunctionalOutput(true, 'boolean');
+    }
+  };
+
+  blockly.Blocks.functional_boolean.VALUES = [
+        [msg.booleanTrue(), 'true'],
+        [msg.booleanFalse(), 'false']];
+
+  generator.functional_boolean = function() {
+    return this.getTitleValue('VAL');
+  };
+}
+
 function installMathNumber(blockly, generator, gensym) {
   blockly.Blocks.functional_math_number = {
     // Numeric value.
@@ -10536,7 +10687,7 @@ function installString(blockly, generator) {
   };
 }
 
-},{"./functionalBlockUtils":27}],31:[function(require,module,exports){
+},{"../locale/ru_ru/common":47,"./functionalBlockUtils":27}],31:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -11454,6 +11605,10 @@ var MessageFormat = require("messageformat");MessageFormat.locale.ru = function 
   return 'other';
 };
 exports.and = function(d){return "и"};
+
+exports.booleanTrue = function(d){return "true"};
+
+exports.booleanFalse = function(d){return "false"};
 
 exports.blocklyMessage = function(d){return "Блокли"};
 

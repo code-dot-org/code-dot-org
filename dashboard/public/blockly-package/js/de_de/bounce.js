@@ -12147,6 +12147,10 @@ exports.yes = function(d){return "Ja"};
 var MessageFormat = require("messageformat");MessageFormat.locale.de=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "und"};
 
+exports.booleanTrue = function(d){return "true"};
+
+exports.booleanFalse = function(d){return "false"};
+
 exports.blocklyMessage = function(d){return "Blockly"};
 
 exports.catActions = function(d){return "Aktionen"};

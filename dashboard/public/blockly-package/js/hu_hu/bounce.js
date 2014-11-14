@@ -12147,6 +12147,10 @@ exports.yes = function(d){return "Igen"};
 var MessageFormat = require("messageformat");MessageFormat.locale.hu=function(n){return "other"}
 exports.and = function(d){return "és"};
 
+exports.booleanTrue = function(d){return "true"};
+
+exports.booleanFalse = function(d){return "false"};
+
 exports.blocklyMessage = function(d){return "Blockly"};
 
 exports.catActions = function(d){return "Műveletek"};

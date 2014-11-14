@@ -8179,6 +8179,10 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.ko=function(n){return "other"}
 exports.and = function(d){return "이면서"};
 
+exports.booleanTrue = function(d){return "true"};
+
+exports.booleanFalse = function(d){return "false"};
+
 exports.blocklyMessage = function(d){return "Blockly(블러클리)"};
 
 exports.catActions = function(d){return "동작"};

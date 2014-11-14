@@ -8179,6 +8179,10 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.zh=function(n){return "other"}
 exports.and = function(d){return "且"};
 
+exports.booleanTrue = function(d){return "true"};
+
+exports.booleanFalse = function(d){return "false"};
+
 exports.blocklyMessage = function(d){return "模組化"};
 
 exports.catActions = function(d){return "動作類別"};

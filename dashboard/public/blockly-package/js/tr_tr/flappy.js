@@ -9572,6 +9572,10 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.tr=function(n){return "other"}
 exports.and = function(d){return "ve"};
 
+exports.booleanTrue = function(d){return "true"};
+
+exports.booleanFalse = function(d){return "false"};
+
 exports.blocklyMessage = function(d){return "Parçalı"};
 
 exports.catActions = function(d){return "Eylemler"};
