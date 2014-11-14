@@ -48,6 +48,8 @@ stage 'Eval: Defining Functions'
 level 'Eval Define Funcs 1'
 level 'Eval Define Funcs 2'
 level 'Eval Define Funcs 3'
+level 'Eval Define Funcs 4'
+level 'Calc Define Funcs 1'
 
 stage 'Play Lab: Defining Functions'
 level 'Eval Placeholder'
@@ -56,12 +58,13 @@ stage 'Eval: Functions'
 level 'Eval Placeholder'
 
 stage 'Play Lab: Animation'
-level 'Eval Placeholder'
+level 'Play Lab Rocket 1'
 
 stage 'Unplugged: Booleans'
 level 'Eval Placeholder'
 
 stage 'Play Lab: Booleans'
+level 'Sam the Butterfly 1'
 level 'MSM Play Lab Butterfly 1'
 level 'MSM Play Lab Butterfly 2'
 level 'MSM Play Lab Butterfly 3'
