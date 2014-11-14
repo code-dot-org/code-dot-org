@@ -2473,9 +2473,13 @@ Studio.allGoalsVisited = function() {
       if (protaganistSprite) {
         goal.finished = spriteAtGoal(protaganistSprite, goal);
       } else {
-        goal.finished = Studio.sprite.some(function(sprite) {
-          return spriteAtGoal(sprite, goal);
-        });
+        goal.finished = false;
+        for (var j = 0; j < Studio.sprite.length; j++) {
+          if (spriteAtGoal(Studio.sprite[j], goal)) {
+            goal.finished = true;
+            break;
+          }
+        }
       }
       playSound = goal.finished;
     }
