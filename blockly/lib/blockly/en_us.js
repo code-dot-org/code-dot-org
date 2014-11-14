@@ -60,6 +60,7 @@ Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_UNTIL = "repeat until";
 Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_WHILE = "repeat while";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL = "While a value is false, then do some statements.";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_WHILE = "While a value is true, then do some statements.";
+Blockly.Msg.DEFINE_FUNCTION_DEFINE = "Define";
 Blockly.Msg.DELETE_BLOCK = "Delete Block";
 Blockly.Msg.DELETE_PARAMETER = "Delete parameter...";
 Blockly.Msg.DELETE_PARAMETER_TITLE = "This will delete all '%1' parameter occurrences. Are you sure?";
