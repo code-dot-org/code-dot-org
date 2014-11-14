@@ -149,7 +149,7 @@ Blockly.Blocks.procedures_defnoreturn = {
    */
   updateParamsFromArrays: function(paramNames, paramIDs) {
     this.parameterNames_ = goog.array.clone(paramNames);
-    this.paramIds_ = goog.array.clone(paramIDs);
+    this.paramIds_ = paramIDs ? goog.array.clone(paramIDs) : null;
     this.updateParams_();
     this.updateCallerParams_();
   },
