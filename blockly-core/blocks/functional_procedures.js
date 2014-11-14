@@ -46,7 +46,7 @@ Blockly.Blocks.functional_definition = {
         .appendTitle('', 'PARAMS');
     this.appendFunctionalInput('STACK');
     this.setFunctional(true);
-    this.setTooltip('Define a functional method' /**TODO(bjordan): i18n*/);
+    this.setTooltip(Blockly.Msg.FUNCTIONAL_PROCEDURE_DEFINE_TOOLTIP);
     this.parameterNames = [];
     this.paramIds_ = [];
     this.parameterTypes = [];
