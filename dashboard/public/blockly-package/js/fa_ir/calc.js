@@ -1844,7 +1844,7 @@ function getExpressionFromBlocks(blockXml) {
     BlocklyApps.loadBlocks(blockXml);
   }
 
-  var code = Blockly.Generator.blockSpaceToCode('JavaScript', 'functional_compute');
+  var code = Blockly.Generator.blockSpaceToCode('JavaScript', ['functional_compute', 'functional_definition']);
   evalCode(code);
   var object = Calc.computedExpression;
   Calc.computedExpression = null;
