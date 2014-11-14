@@ -81,6 +81,7 @@
     "FUNCTIONAL_TYPE_LABEL": "Choose type...",
     "FUNCTIONAL_DESCRIPTION_LABEL": "Description",
     "FUNCTIONAL_DOMAIN_LABEL": "Domain",
+    "FUNCTIONAL_PROCEDURE_DEFINE_TOOLTIP": "Define a functional method",
     "FUNCTIONAL_RANGE_LABEL": "Range",
     "HELP": "Help",
     "INLINE_INPUTS": "Inline Inputs",
@@ -269,7 +270,7 @@
     "NEW_VARIABLE_TITLE": "New variable name:",
     "ORDINAL_NUMBER_SUFFIX": "",
     "PROCEDURES_BEFORE_PARAMS": "with:",
-    "PROCEDURES_CALLNORETURN_CALL": "",
+    "PROCEDURES_CALLNORETURN_CALL": "",8
     "PROCEDURES_CALLNORETURN_HELPURL": "http://en.wikipedia.org/wiki/Procedure_%28computer_science%29",
     "PROCEDURES_CALLNORETURN_TOOLTIP": "Run the user-defined function '%1'.",
     "PROCEDURES_CALLRETURN_HELPURL": "http://en.wikipedia.org/wiki/Procedure_%28computer_science%29",
