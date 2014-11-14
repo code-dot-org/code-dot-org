@@ -209,7 +209,9 @@ Eval.execute = function() {
   Eval.message = undefined;
 
   var userObject = getDrawableFromBlocks(null);
-  userObject.draw(document.getElementById("user"));
+  if (userObject) {
+    userObject.draw(document.getElementById("user"));
+  }
 
   Eval.result = evaluateAnswer();
   Eval.testResults = BlocklyApps.getTestResults(Eval.result);
