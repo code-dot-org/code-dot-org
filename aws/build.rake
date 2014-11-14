@@ -140,6 +140,7 @@ $websites_test = build_task('websites-test', [deploy_dir('rebuild')]) do
     rescue
       HipChat.log 'Unit tests for <b>dashboard</b> failed.', color:'red'
       HipChat.developers 'Unit tests for <b>dashboard</b> failed.', color:'red', notify:1
+      raise
     end
     HipChat.log "Resetting <b>dashboard</b> database..."
     RakeUtils.rake 'db:schema:load'
