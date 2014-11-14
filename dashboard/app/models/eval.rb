@@ -26,7 +26,7 @@ class Eval < Blockly
         level_num: 'custom',
         properties: {
           solution_blocks: params[:program] || '',
-          toolbox_blocks: "<xml>#{toolbox}</xml>"
+          toolbox_blocks: "<xml>#{toolbox}</xml>",
           use_contract_editor: true
         }
     ))
