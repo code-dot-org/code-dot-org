@@ -66,7 +66,7 @@ Blockly.BlockSpace = function(blockSpaceEditor, getMetrics, setMetrics) {
   }
 };
 
-Blockly.BlockSpace.DEBUG_EVENTS = true; // TODO(bjordan): false
+Blockly.BlockSpace.DEBUG_EVENTS = false;
 
 Blockly.BlockSpace.EVENTS = {};
 

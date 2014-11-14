@@ -544,5 +544,5 @@ Blockly.printerRangeToNumbers = function(rangeString) {
  * @returns {string|*}
  */
 Blockly.getUID = function() {
-  return goog.events.getUniqueId();
+  return goog.events.getUniqueId('blocklyUID');
 };

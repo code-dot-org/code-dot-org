@@ -98,7 +98,7 @@ Blockly.Blocks.functional_definition = {
    */
   updateParamsFromArrays: function(paramNames, paramIDs, paramTypes) {
     this.parameterNames = goog.array.clone(paramNames);
-    this.paramIds_ = goog.array.clone(paramIDs);
+    this.paramIds_ = paramIDs ? goog.array.clone(paramIDs) : null;
     this.parameterTypes = goog.array.clone(paramTypes);
     this.updateParams_();
     this.updateCallerParams_();
@@ -290,22 +290,8 @@ Blockly.Blocks.functional_call = {
     }
   },
   setProcedureParameters: function(paramNames, paramIds, opt_paramTypes) {
-    // Data structures for parameters on each call block:
-    // this.arguments = ['x', 'y']
-    //     Existing param names.
-    // paramNames = ['x', 'y', 'z']
-    //     New param names.
-    // paramIds = ['piua', 'f8b_', 'oi.o']
-    //     IDs of params (consistent for each parameter through the life of a
-    //     mutator, regardless of param renaming).
-    // this.parameterIDsToArgumentConnections {piua: null, f8b_: Blockly.Connection}
-    //     Look-up of paramIds to connections plugged into the call block.
-    // this.currentParameterIDs = ['piua', 'f8b_']
-    //     Existing param IDs.
-    // Note that quarkConnections_ may include IDs that no longer exist, but
-    // which might reappear if a param is reattached in the mutator.
     if (!paramIds) {
-      // Reset the quarks (a mutator is about to open).
+      // Get in to a state where parameter ID tracking can be reset next call
       this.parameterIDsToArgumentConnections = {};
       this.currentParameterIDs = null;
       return;
