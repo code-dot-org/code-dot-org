@@ -219,7 +219,6 @@ Blockly.Blocks.functional_call = {
     var mainTitle = this.appendDummyInput()
         .appendTitle(new Blockly.FieldLabel('Function Call', options), 'NAME')
         .appendTitle('', 'PARAM_TEXT');
-        // .setAlign(Blockly.ALIGN_CENTRE); TODO(bjordan): re-add
 
     if (Blockly.functionEditor) {
       var editLabel = new Blockly.FieldLabel(Blockly.Msg.FUNCTION_EDIT);
