@@ -224,6 +224,9 @@ Blockly.Procedures.flyoutCategory = function(blocks, gaps, margin, blockSpace) {
   populateProcedures(tuple[0], 'procedures_callnoreturn');
   populateProcedures(tuple[1], 'procedures_callreturn');
   populateProcedures(tuple[2], 'functional_call');
+  if (Blockly.editBlocks === 'start_blocks') {
+    populateProcedures(tuple[2], 'procedural_to_functional_call');
+  }
 };
 
 /**

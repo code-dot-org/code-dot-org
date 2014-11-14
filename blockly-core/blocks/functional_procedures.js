@@ -364,3 +364,5 @@ Blockly.Blocks.functional_call = {
     }
   }
 };
+
+Blockly.Blocks.procedural_to_functional_call = Blockly.Blocks.procedures_callreturn;
