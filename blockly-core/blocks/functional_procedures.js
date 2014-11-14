@@ -228,7 +228,6 @@ Blockly.Blocks.functional_call = {
     }
 
     this.setFunctional(true);
-    this.setFunctionalOutput(true); // TODO(bjordan): set based on dropdown type change
 
     /**
      * Used to detect changes in nad update parameter names & argument connections
