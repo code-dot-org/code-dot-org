@@ -198,7 +198,7 @@ Blockly.Blocks.functional_definition = {
       this.updateParams_();
     }
   },
-  callType_: 'functional_call' /**TODO(bjordan): this becomes a funcitonal block type */
+  callType_: 'functional_call'
 };
 
 /**
@@ -282,11 +282,6 @@ Blockly.Blocks.functional_call = {
   renameProcedure: function(oldName, newName) {
     if (Blockly.Names.equals(oldName, this.getTitleValue('NAME'))) {
       this.setTitleValue(newName, 'NAME');
-      this.setTooltip(
-        /** TODO(bjordan): use user-defined description? */
-        (this.outputConnection ? Blockly.Msg.PROCEDURES_CALLRETURN_TOOLTIP
-          : Blockly.Msg.PROCEDURES_CALLNORETURN_TOOLTIP)
-          .replace('%1', newName));
     }
   },
   setProcedureParameters: function(paramNames, paramIds, opt_paramTypes) {
