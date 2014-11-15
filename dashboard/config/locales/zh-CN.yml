@@ -414,8 +414,11 @@
   try_reloading: 请重新刷新页面
   next_stage: 完成 ！继续下一个阶段
   download_pdf: 开放课程
+  lesson_plan: Lesson Plan
   view_lesson_plan: View Lesson Plan
   pdf_download: 下载 PDF
+  download_coming_soon: Downloadable activity coming soon.
+  video_coming_soon: Video Coming Soon!
   share_code:
     title: 点击运行程序来观看程序的运行情况
     bounce_og_title: 看看我的弹球游戏

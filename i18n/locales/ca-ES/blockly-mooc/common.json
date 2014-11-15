@@ -1,5 +1,7 @@
 {
   "and":"i",
+  "booleanTrue":"cert",
+  "booleanFalse":"fals",
   "blocklyMessage":"Blockly",
   "catActions":"Accions",
   "catColour":"Color",

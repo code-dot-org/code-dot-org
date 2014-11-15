@@ -246,7 +246,7 @@
         playlab: Создать приложение
         artist: Draw Something
     user:
-      classroom: Мои ученики
+      classroom: Домашняя страница Преподавателя
       label: Привет, %{username}
       stats: Мои результаты
       settings: Моя регистрация
@@ -448,8 +448,11 @@
   try_reloading: Попробуйте перезагрузить страницу
   next_stage: Закончил! Перейти к следующему этапу
   download_pdf: Показать план урока
+  lesson_plan: Lesson Plan
   view_lesson_plan: Посмотреть план урока
   pdf_download: Скачать PDF
+  download_coming_soon: Downloadable activity coming soon.
+  video_coming_soon: Video Coming Soon!
   share_code:
     title: Нажмите кнопку «Run», чтобы увидеть мою программу в действии
     bounce_og_title: Check out my Bounce Game
@@ -517,6 +520,8 @@
     wrong_body: Твоё решение неверно.  Пожалуйста, попробуй еще раз!
     correct_title: Верно
     correct_body: Это правильный ответ.
+  text_match:
+    placeholder: Enter your answer here
   dialog:
     ok: Продолжить
   time:
@@ -568,3 +573,8 @@
   zendesk_too_young_message: Sorry, younger users may not sign in to our support site.
     You may browse <a href="http://support.code.org">support.code.org</a> without
     signing in or ask your parent or teacher to contact us for you.
+  progress:
+    not_completed: not completed
+    completed_too_many_blocks: completed, too many blocks
+    completed_perfect: completed, perfect
+    furthest_level_attempted: furthest level attempted

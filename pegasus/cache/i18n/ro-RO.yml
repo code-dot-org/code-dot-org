@@ -96,7 +96,6 @@
   used_infrequent_updates: Only used for infrequent updates
   privacy_practices_children: See our privacy practices for children
   petition_thankyou: Îți mulțumim pentru semnarea petiției
-  carousel_heading_international: Tutoriale în limba ta
   continue_learning_header: Continuă să înveți peste O Oră
   continue_learning_body: Există o mulţime de opţiuni.  Poţi învăța online, sau la
     o şcoală locală, sau în tabăra de vară.
@@ -228,6 +227,7 @@
   dashboard_navigation_view_progress: View Progress
   dashboard_navigation_add_students: Add Students
   dashboard_navigation_manage_students: Manage Students
+  dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
   dashboard_navigation_view_stats: View Stats
   dashboard_navigation_section: 'Section: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
@@ -333,64 +333,94 @@
   dashboard_sections_password_account_creation: Student-created text password
   dashboard_sections_login_type_explanation: This table helps explain which of these
     login types, <b>picture, word, or email</b>, you'll want to choose for a section.
+  dashboard_faq: Frequently Asked Questions
+  code_hoc_coming: The Hour of Code is coming - December 8-14!
+  code_sign_up: Sign up to participate during CS Education Week
+  learn_more: Află mai mult
+  carousel_heading_international: Tutoriale în limba ta
+  carousel_heading_beginners: Tutorials for Beginners
+  carousel_heading_javascript: Tutorials that teach Javascript
+  carousel_heading_unplugged: No device or internet? Try 'unplugged' computer science
+  carousel_heading_devices: Tutorial apps for phones and tablets
+  carousel_heading_languages: Tutorials in other programming languages
+  carousel_heading_apps_games: Make your own apps or games
+  carousel_heading_university: Cursuri universitare online
+  carousel_heading_webpages: Learn to make web pages
+  carousel_heading_robots: Learn to program with robots
+  carousel_heading_ide: Platforms popular among teachers
+  educator_notes: Educator Notes
+  more_resources_educators: More resources for teachers and educators
+  participants: participants
+  teachers_notes: Teacher's Notes
+  previous: Previous
+  next: Next
+  older_systems: Tutorials that work on older systems
+  older_systems_subheading: These should work on older Web browsers. To access all
+    tutorials, upgrade to a <a href="http://browsehappy.com/" target="_blank">modern
+    Web browser.</a>
+  mobile_devices: Tutorials for mobile devices
   codeorg_name: Scrie primul tău program de calculator
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: O introducere în JavaScript
   khanes_name: O introducere în JavaScript
   tynker_name: Costruiește propriul tău joc
   scratch_name: Creează o felicitare
-  thinkersmith_name: Amicii mei roboți
   lightbot_name: Lightbot
+  thinkersmith_name: Amicii mei roboți
+  condcards_name: Conditionals with Cards
   lightbotintl_name: Lightbot
+  codehs_name: Învață programare cu Karel câinele
   codecademy_name: Codecademy
-  kodable_name: Kodable
-  hopscotch_name: 'Hopscotch: Programează pe iPad'
-  groklearning_name: Puțină programare Python
+  codecombat_name: CodeCombat
+  codeavengers_name: Construiește un joc cu JavaScript
   processing_name: Desenează programând
   robomind_name: Programează un robot virtual
+  groklearning_name: Puțină programare Python
+  quorum_name: Accessible programming (with screenreader support)
+  codespark_name: The Foos (pre-readers welcome)
+  kodable_name: Kodable
+  tynkerapp_name: Tynker - on tablets
+  hopscotch_name: 'Hopscotch: Programează pe iPad'
   robomindnl_name: Programează un robot virtual
+  bitsbox_name: Bitsbox - make a game
   makegameswithus_name: Construiește un joc pentru iPhone în browser
-  appinventor_name: AppInventor Hour of Code
   touchdevelop_name: TouchDevelop
+  appinventor_name: AppInventor Hour of Code
   blockly_name: Blockly
   thinkersmith2_name: Binary Baubles
-  codehs_name: Învață programare cu Karel câinele
-  codeavengers_name: Construiește un joc cu JavaScript
-  codecombat_name: CodeCombat
-  agentcubes_name: Construiește un joc 3D Frogger într-o oră
-  alice_name: Intro în programare cu Alice 2
-  livecode_name: Oricine poate să programeze cu LiveCode
-  lookingglass_name: Looking Glass
   kodableunplugged_name: fuzzFamily Frenzy
+  projguts_name: Rock, Paper, Scissors
   codeorg_gradelevel: Vârste între 4-104 ani
   thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: Gimnaziu
   khanes_gradelevel: Gimnaziu
   tynker_gradelevel: Vârste între 5-13 ani
   scratch_gradelevel: Vârstă 8+
-  thinkersmith_gradelevel: Toate vârstele
   lightbot_gradelevel: Toate vârstele
+  thinkersmith_gradelevel: Toate vârstele
+  condcards_gradelevel: Ages 8-12
   lightbotintl_gradelevel: Toate vârstele
+  codehs_gradelevel: Liceu
   codecademy_gradelevel: Liceu
-  kodable_gradelevel: Învățământ primar
-  hopscotch_gradelevel: Gimnaziu
-  groklearning_gradelevel: Gimnaziu
+  codecombat_gradelevel: Gimnaziu
+  codeavengers_gradelevel: Gimnaziu
   processing_gradelevel: Liceu
   robomind_gradelevel: Vârste între 8-13 ani
+  groklearning_gradelevel: Gimnaziu
+  quorum_gradelevel: Gimnaziu
+  codespark_gradelevel: Învățământ primar
+  kodable_gradelevel: Învățământ primar
+  tynkerapp_gradelevel: Vârste între 5-13 ani
+  hopscotch_gradelevel: Gimnaziu
   robomindnl_gradelevel: Vârste între 8-13 ani
+  bitsbox_gradelevel: Învățământ primar
   makegameswithus_gradelevel: Liceu
-  appinventor_gradelevel: Gimnaziu
   touchdevelop_gradelevel: Liceu
+  appinventor_gradelevel: Gimnaziu
   blockly_gradelevel: Toate vârstele
   thinkersmith2_gradelevel: Vârstă 8+
-  codehs_gradelevel: Liceu
-  codeavengers_gradelevel: Gimnaziu
-  codecombat_gradelevel: Gimnaziu
-  agentcubes_gradelevel: Gimnaziu
-  alice_gradelevel: Gimnaziu
-  livecode_gradelevel: Liceu
-  lookingglass_gradelevel: Gimnaziu
   kodableunplugged_gradelevel: Vârste între 8-13 ani
+  projguts_gradelevel: Ages 10-13
   codeorg_platformtext: Browsere web moderne, smartphone-uri, tablete
   thinkersmithspanish_platformtext: Mediante el uso de un "Vocabulario Robot" predefinido,
     los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
@@ -401,75 +431,80 @@
   khanes_platformtext: Browsere web moderne
   tynker_platformtext: Browsere web moderne
   scratch_platformtext: Orice browser
+  lightbot_platformtext: iOS, Android (sau browser web)
   thinkersmith_platformtext: Using a pre-defined "Robot Vocabulary" students will
     figure out how to guide each other to accomplish specific tasks without discussing
     them first. This lesson teaches children the connection between symbols and actions,
     as well as the invaluable skill of debugging. "My Robotic Friends" works best
     as a group activity and includes a teacher workbook for classroom use.
-  lightbot_platformtext: iOS, Android (sau browser web)
+  condcards_platformtext: Unuplugged
   lightbotintl_platformtext: iOS, Android (sau browser web)
+  codehs_platformtext: Browsere web moderne
   codecademy_platformtext: Browsere web moderne, iOS, Aplicații Android
+  codecombat_platformtext: Browsere web moderne
+  codeavengers_platformtext: Browsere web moderne
+  processing_platformtext: Browsere web moderne
+  robomind_platformtext: Browsere web moderne, Mobile web
+  groklearning_platformtext: Browsere web moderne
+  quorum_platformtext: Modern web browsers. Screen-readers supported
+  codespark_platformtext: iOS, Android (sau browser web)
   kodable_platformtext: Kodable is a self-guided iPad game that introduces kids 5+
     to programming basics. Having a teacher or parent nearby is optimal, but not necessary.
+  tynkerapp_platformtext: iPad, Android tablets
   hopscotch_platformtext: Student-guided tutorial on the iPad using the Hopscotch
     programming language. Students will build games and apps for their iPad on their
     iPad. Students can work individually or with friends (up to 3 per iPad).
-  groklearning_platformtext: Browsere web moderne
-  processing_platformtext: Browsere web moderne
-  robomind_platformtext: Browsere web moderne, Mobile web
   robomindnl_platformtext: Browsere web moderne, Mobile web
+  bitsbox_platformtext: Browsere web moderne
   makegameswithus_platformtext: Browsere web moderne
-  appinventor_platformtext: Browsere web moderne, Android
   touchdevelop_platformtext: Browsere web moderne, smartphone-uri, toate device-urile
+  appinventor_platformtext: Browsere web moderne, Android
   blockly_platformtext: Browsere web moderne
   thinkersmith2_platformtext: Students learn about representing and storing letters
     in binary, as functions of on and off. At the end, the class gets to encode their
     own initials to take home with them.
-  codehs_platformtext: Browsere web moderne
-  codeavengers_platformtext: Browsere web moderne
-  codecombat_platformtext: Play as a Wizard using code (spells) to control your heroes,
-    navigate mazes, defeat ogres, trick enemies, and rescue allies! Learn JavaScript
-    in this HTML 5 web game for complete beginners.
-  agentcubes_platformtext: Browsere web moderne
-  alice_platformtext: Windows sau Mac (instalare necesară)
-  livecode_platformtext: Windows sau Mac (instalare necesară)
-  lookingglass_platformtext: Consolă de joc sau Desktop
   kodableunplugged_platformtext: 'Designed for use with plain paper, the fuzzFamily
     Frenzy is an introduction to programming logic for kids 5 and up. A teacher should
     explain the game, then students program a partner to complete a simple obstacle
     course. '
+  projguts_platformtext: Unplugged
   codeorg_shortdescription: Învață să programezi cu Mark Zuckerberg si Angry Birds!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Învață sa desenezi în JavaScript
   khanes_shortdescription: Învață sa desenezi în JavaScript
   tynker_shortdescription: Învață bazele programării într-un mediu vizual, distractiv
   scratch_shortdescription: Creează o felicitare interactivă
-  thinkersmith_shortdescription: Tutorial pentru grupuri fără computere sau dispozitive
   lightbot_shortdescription: Un joc pentru învățarea conceptelor programării
+  thinkersmith_shortdescription: Tutorial pentru grupuri fără computere sau dispozitive
+  condcards_shortdescription: Learn algorithms with a deck of cards
   lightbotintl_shortdescription: Un joc pentru învățarea conceptelor programării
+  codehs_shortdescription: Învață JavaScript într-un mediu vizual, distractiv
   codecademy_shortdescription: Învață programare JavaScript într-un browser web
-  kodable_shortdescription: Un joc distractiv pentru iPad, pentru învățarea conceptelor
-    de bază în programare
-  hopscotch_shortdescription: Învață programare vizuală pe un iPad
-  groklearning_shortdescription: Intro pentru bazele programării Python
+  codecombat_shortdescription: Joacă un joc și învață JavaScript să caștigi
+  codeavengers_shortdescription: Învață programare JavaScript într-un browser web
   processing_shortdescription: Un tutorial de o oră pentru programare Processing
   robomind_shortdescription: Programează pentru un robot virtual
+  groklearning_shortdescription: Intro pentru bazele programării Python
+  quorum_shortdescription: Join Mary on a guided tour as she learns the Quorum programming
+    language.
+  codespark_shortdescription: The Foos is a fun, kid-friendly game to learn about
+    programming.
+  kodable_shortdescription: Un joc distractiv pentru iPad, pentru învățarea conceptelor
+    de bază în programare
+  tynkerapp_shortdescription: Learn to code by solving fun puzzles and build your
+    own mobile games.
+  hopscotch_shortdescription: Învață programare vizuală pe un iPad
   robomindnl_shortdescription: Programează pentru un robot virtual
+  bitsbox_shortdescription: Code a series of apps to play and share, using real Javascript.
   makegameswithus_shortdescription: Învață să faci un joc pentru iPhone într-o oră
-  appinventor_shortdescription: Construiește-ți propria aplicație! (Doar pentru Android)
   touchdevelop_shortdescription: Programează aplicații de mobil direct de pe telefon,
     tabletă sau laptop
+  appinventor_shortdescription: Construiește-ți propria aplicație! (Doar pentru Android)
   blockly_shortdescription: Descarcă arhiva ZIP ca să înveți offline
   thinkersmith2_shortdescription: Învață cum folosesc computerele 1 și 0 pentru a
     reprezenta informația
-  codehs_shortdescription: Învață JavaScript într-un mediu vizual, distractiv
-  codeavengers_shortdescription: Învață programare JavaScript într-un browser web
-  codecombat_shortdescription: Joacă un joc și învață JavaScript să caștigi
-  agentcubes_shortdescription: Creează un joc 3D utilizând AgentCubes Online
-  alice_shortdescription: Creează o animație 3D
-  livecode_shortdescription: Învață programare cu LiveCode
-  lookingglass_shortdescription: Creează o poveste animată
   kodableunplugged_shortdescription: Un exercițiu distractiv, unplugged
+  projguts_shortdescription: Try modeling and simulation using rock/paper/scissors
   codeorg_longdescription: Învață conceptele de bază ale programării cu o metodă simplă,
     distractivă, drag&drop. Este un tutorial ca un joc, simplu de realizat ce conține
     clipuri video cu Bil Gates, Mark Zukerberg Angry Birds and Plants vs. Zombies.
@@ -492,59 +527,90 @@
   scratch_longdescription: Cu Scratch, poți sa programezi propriile jocuri interactive,
     povești, animații și altele. Cu această activitate, vei putea crea o felicitare
     interactivă pe care o vei putea trimite familiei sau prietenilor.
+  lightbot_longdescription: Învață bazele logice ale programării, începând de la 4
+    ani pe iOS, Android sau browser web. Învață secvențialitatea comenzilor, identificarea
+    pattern-urilor, utilizarea procedurilor si a LOOP-urilor!
   thinkersmith_longdescription: Folosind un "Robot Vocabulary" predefinit elevii vor
     învăța să se ghideze în rezolvarea unor taskuri predefinite fară a le discuta
     prealabil. Această lecție, învață copiii conexiunea dintre simboluri si acțiuni,
     alături de abilitatea testării. "My Robotic Friends" funcționează cel mai bine
     în cadrul unui grup și conține un workbook pentru profesor, ce poate fi folosit
     la clasă.
-  lightbot_longdescription: Învață bazele logice ale programării, începând de la 4
-    ani pe iOS, Android sau browser web. Învață secvențialitatea comenzilor, identificarea
-    pattern-urilor, utilizarea procedurilor si a LOOP-urilor!
+  condcards_longdescription: Learn about algorithms and conditional statements in
+    this "unplugged" activity using a deck of cards. Students do this activity in
+    teams, and need one deck of cards per team.
   lightbotintl_longdescription: Învață bazele logice ale programării, începând de
     la 4 ani pe iOS, Android sau browser web. Învață secvențialitatea comenzilor,
     identificarea pattern-urilor, utilizarea procedurilor si a LOOP-urilor!
+  codehs_longdescription: Învață bazele programării cu Karel, câinele, o introducere
+    distractivă și vizuală în programare, unde a da comenzi unui computer e ca și
+    cum ai da comenzi unui câine. Acest tutorial este ideal daca este ghidat de un
+    profesor dar poate fi realizat și individual.
   codecademy_longdescription: Codeacademy este o platformă interactivă. ce oferă o
     introducere în bazele programării cu ajutorul JavaScript, ce se pretează studiului
     individual fiind utilizată de zeci de milioane de elevi din întreaga lume. Am
     pregatit o adevărată experiență Hour of Code cu teste si slide-uri și un proiect
     complet pentru elevi la final.
-  kodable_longdescription: Kodable este un joc pentru iPad intuitiv, ce introduce
-    copiii de peste 5 ani în bazele programarii. A avea un parinte sau profesor în
-    preajma este optim dar nu neaparat necesar.
-  hopscotch_longdescription: Tutoriale pentru elevi pentru iPad utilizând limbajul
-    de programare Hopscotch. Elevii vor construi jocuri si aplicații pentru iPad,
-    de pe iPad. Ei pot lucra individual sau în perechi de 3 la un iPad.
-  groklearning_longdescription: Alege din 3 activități realizate să îți ofere o prima
-    experiență a programării. De exemplu utilizează limbajul de programare Python,
-    pentru a construi ub chatbot pe nume "Eliza". Crezi ca poate sa îți pacalească
-    prietenii să creada ca este om și nu un computer? Activitățile pot fi realizate
-    individual de elevi sau cu ajutorul profesorului și vine cu toate notele și soluțiile
-    necesare.
+  codecombat_longdescription: Joacă rolul unui Vrăjitor utilizând programarea pentru
+    vrăji prin care controlezi eroii, navighezi prin labirinturi, învingi ogres, păcălești
+    inamici și salvezi extratereștri! Învață JavaScript pentru începători în acest
+    joc web în HTML 5.
+  codeavengers_longdescription: Construiește în întregime un joc 2D pentru 2 jucatori,
+    cu JavaScript, în 10 pași simpli. Apoi continua studiul unor elemente de bază
+    ale programării (variabile și if statements) cât realizezi un Quiz pe care îl
+    poți share-ui prietenilor. Pe tot parcursul activității caștigă puncte și insigne,
+    concurând la ocuparea primului loc al clasamentului în clasă.
   processing_longdescription: O introducere în programare în contextul artelor vizuale
     utilizând limbajul de programare Processing. Lecții video scurte, prezinta exerciții
     de programare ce conduc la realizarea unui program de desenare interactiv.
   robomind_longdescription: Elevii învață bazele programării controlând robotul lor
     virtual. Cursul online conține prezentări scurte, filme, teste si recomandări
     automate/ indicii, pentru a ajuta la rezolvarea exercițiilor de programare.
+  groklearning_longdescription: Alege din 3 activități realizate să îți ofere o prima
+    experiență a programării. De exemplu utilizează limbajul de programare Python,
+    pentru a construi ub chatbot pe nume "Eliza". Crezi ca poate sa îți pacalească
+    prietenii să creada ca este om și nu un computer? Activitățile pot fi realizate
+    individual de elevi sau cu ajutorul profesorului și vine cu toate notele și soluțiile
+    necesare.
+  quorum_longdescription: This tutorial is accessible for the visually-impaired, and
+    works with screenreaders. Join Mary on a tour as she joins a biology lab as a
+    programmer and learns the Quorum programming language. This tutorial is student-guided
+    with online example activities.
+  codespark_longdescription: The Foos is a fun and kid-friendly way to learn about
+    computer programming.  Program cute characters to solve puzzles and bring a virtual
+    world to life.  The game is "word free" so all can play!
+  kodable_longdescription: Kodable este un joc pentru iPad intuitiv, ce introduce
+    copiii de peste 5 ani în bazele programarii. A avea un parinte sau profesor în
+    preajma este optim dar nu neaparat necesar.
+  tynkerapp_longdescription: Build your own games and share with friends! Solve fun
+    coding puzzles and learn programming concepts in each level. Personalize games
+    with animated characters, multiple levels and rich props. Lots of fun activities
+    to choose from!
+  hopscotch_longdescription: Tutoriale pentru elevi pentru iPad utilizând limbajul
+    de programare Hopscotch. Elevii vor construi jocuri si aplicații pentru iPad,
+    de pe iPad. Ei pot lucra individual sau în perechi de 3 la un iPad.
   robomindnl_longdescription: Elevii învață bazele programării controlând robotul
     lor virtual. Cursul online conține prezentări scurte, filme, teste si recomandări
     automate/ indicii, pentru a ajuta la rezolvarea exercițiilor de programare.
+  bitsbox_longdescription: Customize your very own virtual tablet, then code a series
+    of apps to play and share. Simple walkthroughs make it possible for even young
+    kids to program real Javascript, and the more advanced you are the further you'll
+    go.
   makegameswithus_longdescription: Știi ceva programare deja? Învață să construiești
     un joc pentru iPhone într-o oră. Noi te ghidăm în acest timp să programezi, să
     testezi, și să joci jocul tău utilizănd un browser, ca mai apoi să îl distribui
     și prietenilor de pe Facebook sa îl încerce. Nu este necesară experiență anterioară,
     trebuie doar să întelegi ce reprezintă variabilele, metodele și obiectele.
+  touchdevelop_longdescription: 'Desene ciudate, monștri zburători, Crazy drawings,
+    flying monsters, flori cățărătoare… creează-ți propriile aplicații pe device-ul
+    tău cu TouchDevelop, un mediu prietenos de programare a aplicațiilor. Merge pe
+    iPhone, iPad, Android, Windows, Windows Phone, Linux, Mac. '
   appinventor_longdescription: Clipuri video interactive te ajută să creezi 3 aplicații
     simple pentru tableta sau telefonul tău Android. Create pentru începători și avansați
     deopotrivă, aceasta oră de programare te va ajuta să creezi propriile tale aplicații
     mai repede decât crezi. Imaginează-ți cum ar fi să arăți prietenilor aplicații
     programate de tine. Aceste activități se pretează lucrului individual dar si lecțiilor
     la clasă.
-  touchdevelop_longdescription: 'Desene ciudate, monștri zburători, Crazy drawings,
-    flying monsters, flori cățărătoare… creează-ți propriile aplicații pe device-ul
-    tău cu TouchDevelop, un mediu prietenos de programare a aplicațiilor. Merge pe
-    iPhone, iPad, Android, Windows, Windows Phone, Linux, Mac. '
   blockly_longdescription: Ai un calculator fără internet sau cu internet cu viteză
     mică? Descarcă tutorialele Blockly care sunt precursoarele tutorialelor Code.org
     - un fișier arhivat de 3MB poate fi încărcat de pe computer sau de pe un stick
@@ -552,45 +618,13 @@
   thinkersmith2_longdescription: Elevii învață despre reprezentarea și salvarea literelor
     în sistem binar ca funcție on si off. La final elevii pot sa decodeze propriile
     inițiale pentru a le lua acasă.
-  codehs_longdescription: Învață bazele programării cu Karel, câinele, o introducere
-    distractivă și vizuală în programare, unde a da comenzi unui computer e ca și
-    cum ai da comenzi unui câine. Acest tutorial este ideal daca este ghidat de un
-    profesor dar poate fi realizat și individual.
-  codeavengers_longdescription: Construiește în întregime un joc 2D pentru 2 jucatori,
-    cu JavaScript, în 10 pași simpli. Apoi continua studiul unor elemente de bază
-    ale programării (variabile și if statements) cât realizezi un Quiz pe care îl
-    poți share-ui prietenilor. Pe tot parcursul activității caștigă puncte și insigne,
-    concurând la ocuparea primului loc al clasamentului în clasă.
-  codecombat_longdescription: Joacă rolul unui Vrăjitor utilizând programarea pentru
-    vrăji prin care controlezi eroii, navighezi prin labirinturi, învingi ogres, păcălești
-    inamici și salvezi extratereștri! Învață JavaScript pentru începători în acest
-    joc web în HTML 5.
-  agentcubes_longdescription: Imaginează-ți un instrument cere îți dă posibilitatea
-    să transformi imagini 2D în forme 3D. Utilizează AgentCubes online, primul instrument
-    de programare si modelare 3D web din lume, pentru a învăța să programezi creând
-    și share-uind jocuri 3D. Fii stăpânul propriei tale lumi!
-  alice_longdescription: 'Elevii vor stabili o scenă și vor crea o animație simplă
-    cu minime resurse ajutătoare din partea profesorului, utilizând obiecte 3D si
-    o interfață drag-and-drop într-un mediu de programare interactiv și suportiv.
-    [NOTĂ: Instalare aplicație Desktop necesară]'
-  livecode_longdescription: 'Oricine poate să programeze cu LiveCode. Activitatea
-    conține 6 lecții video ce includ o introducere în mediul LiveCode. Îți arată cum
-    să creezi jocul popular "Sheepherder" prezentat și pe YouTube. Urmarește fiecare
-    scurt videoclip și urmează pas cu pas instrucțiunile din documentație. Tot codul
-    jocului este disponibil pentru copy/ paste cu explicații clare despre cum și de
-    ce funcționează. Vei avea la dispoziție pentru download imaginile și mostrele
-    necesare. [NOTĂ: Instalare aplicație Desktop necesară]'
-  lookingglass_longdescription: 'În această activitate elevii vor fi introduși în
-    învățarea unui limbaj de programare construind o poveste animată. Activitatea
-    introduce gândirea computațională și punând accent pe creativitatea necesară în
-    programare. Mai departe, încorporează acțiuni (animații ale altor utilizatori
-    Looking Glass), evidențiază reutilizabilitatea codului fapt întâlnit frecvent
-    printre programatorii de toate nivelele de la hobby pana la professional. Aceasta
-    activitate poate fi realizată individual. [NOTĂ: Instalare aplicație Desktop necesară]'
   kodableunplugged_longdescription: Creată pentru utilizarea pe hârtie, fuzzFamily
     Frenzy este o introducere în programare logică pentru copii de la 5 ani. Un profesor
     ar trebui să explice jocul, apoi elevii provoacă un partener să concureze într-o
     simplă cursă cu obstacole.
+  projguts_longdescription: This "unplugged" activity helps students learn how modeling
+    and simulation works by having a group of students play different versions of
+    the Rock / Paper / Scissors game, and see the results as different modeling experiments.
   codeorg_beyond_name: Introducere K-8 în Tehnologia Computerelor
   khan_beyond_name: Învață programare
   tynker_beyond_name: Învață programare acasă
@@ -625,6 +659,7 @@
   arduino_beyond_name: Arduino
   processing_beyond_name: Programează cu Processing
   alice_beyond_name: Alice
+  sphero_beyond_name: SPRK
   codeorg_beyond_gradelevel: Vârste între 4-104 ani
   khan_beyond_gradelevel: Gimnaziu
   tynker_beyond_gradelevel: Vârste între 5-13 ani
@@ -659,6 +694,7 @@
   arduino_beyond_gradelevel: Liceu
   processing_beyond_gradelevel: Liceu
   alice_beyond_gradelevel: Gimnaziu
+  sphero_beyond_gradelevel: Vârstă 8+
   codeorg_beyond_platformtext: Browsere web moderne, tablete
   khan_beyond_platformtext: Browsere web moderne
   tynker_beyond_platformtext: Browsere web moderne
@@ -693,6 +729,7 @@
   arduino_beyond_platformtext: Kit purchase
   processing_beyond_platformtext: Browsere web moderne
   alice_beyond_platformtext: Windows sau Mac (instalare necesară)
+  sphero_beyond_platformtext: Robot purchase
   codeorg_beyond_shortdescription: Învață să programezi cu Mark Zuckerberg si Angry
     Birds!
   khan_beyond_shortdescription: Învață sa desenezi în JavaScript
@@ -734,6 +771,10 @@
   arduino_beyond_shortdescription: Prototipeaza-ți aparatura
   processing_beyond_shortdescription: Învață limbajele Processing
   alice_beyond_shortdescription: Predă programare într-un mediu 3D
+  sphero_beyond_shortdescription: Schools, Parents, Robots & Kids. We created the
+    SPRK program because we believe play is a powerful teacher. Whether you're an
+    educator or a parent, SPRK lessons give kids a fun crash course in programming
+    robots while sharpening their skills in math and science.
   codeorg_beyond_longdescription: Învață conceptele de bază ale Tehnologiei Computerelor
     cu programarea de tip "drag and drop". 15-25 de ore de activități fără computer,
     presărate printre jocuri-tutoriale în care apar lecții video semnate Bill Gates,
@@ -897,3 +938,7 @@
     sprijini crearea de animații 3D, Alice Project asigură instrumentele și materialele
     necesare pentru predarea și învățarea gândirii numerice, a rezolvării de probleme
     și a programării, pentru o gamă diversă de vârste și experiențe.
+  sphero_beyond_longdescription: Schools, Parents, Robots & Kids. We created the SPRK
+    program because we believe play is a powerful teacher. Whether you're an educator
+    or a parent, SPRK lessons give kids a fun crash course in programming robots while
+    sharpening their skills in math and science.

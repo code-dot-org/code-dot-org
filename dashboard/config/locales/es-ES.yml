@@ -83,7 +83,7 @@
     gender: Sexo (opcional)
     birthday: Cumpleaños (opcional)
     age: Edad
-    user_type: Are you a student or teacher?
+    user_type: ¿Eres estudiante o profesor?
     submit: Registrarse
     teacher: ¿Eres un maestro/a?
     valid_username: ¡ Disponible!
@@ -468,8 +468,11 @@
   try_reloading: Intente recargar la página
   next_stage: ¡Acabado! Sigue a la siguiente etapa
   download_pdf: Abrir la planificación de la lección
+  lesson_plan: Lesson Plan
   view_lesson_plan: Ver el plan de estudios
   pdf_download: Descargar PDF
+  download_coming_soon: Downloadable activity coming soon.
+  video_coming_soon: Video Coming Soon!
   share_code:
     title: Haz clic en "Ejecutar" para ver el programa en acción
     bounce_og_title: Revisa mi juego Bounce
@@ -538,7 +541,7 @@
     correct_title: Correcto
     correct_body: Esa respuesta es la correcta.
   text_match:
-    placeholder: Enter your answer here
+    placeholder: Escribe aquí tu respuesta
   dialog:
     ok: OK
   time:
@@ -591,7 +594,7 @@
     en nuestro sitio de soporte. Puedes navegar <a href="http://support.code.org">support.code.org</a>
     sin registrarte o pedir a tus padres o maestros que nos contacten en tu nombre.
   progress:
-    not_completed: not completed
-    completed_too_many_blocks: completed, too many blocks
-    completed_perfect: completed, perfect
+    not_completed: No completado
+    completed_too_many_blocks: completado, pero tiene demasiados bloques
+    completed_perfect: completado, perfecto
     furthest_level_attempted: furthest level attempted

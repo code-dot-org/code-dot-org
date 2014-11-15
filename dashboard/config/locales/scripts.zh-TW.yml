@@ -3,20 +3,20 @@
     script:
       name:
         test:
-          'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
+          'Jigsaw: Learn to drag and drop': '拼圖: 學會拖放'
           The Maze: 迷宮
           Multi: Multi
-          Match: Match
-          Math Image: Math Image
-          title: Test Course
-          description: Just an internal test course.
+          Match: 配對
+          Math Image: 數學圖像
+          title: 測試課程
+          description: 只是一個內部測試的課程。
         course1:
           'Jigsaw: Learn to drag and drop': '拼圖: 學會拖放'
           'Maze: Sequence': '迷宮: 序列'
           'Maze: Debugging': '迷宮: 除錯'
           'Artist 1: Intro': '藝術家1: 簡介'
-          Artists 2: Artists 2
-          Spelling Bee: Spelling Bee
+          Artists 2: 畫家 2
+          Spelling Bee: 拼字比賽
           Spelling Bee not blockly: Spelling Bee not blockly
           'Bee 1: Intro': 'Bee 1: Intro'
           'Maze 2: Loops': 'Maze 2: Loops'
@@ -179,6 +179,29 @@
           description: Draw cool pictures and designs with the Artist!
           Artist: Artist
           description_short: Draw cool pictures and designs with the Artist!
+        scrat:
+          title: Scrat
+          description_short: Scrat short description.
+          description: Scrat long description
+          'Maze: Sequence': '迷宮: 序列'
+        hourofcode:
+          Maze: Maze
+          title: 一小時的程式設計課程
+          description_short: Try the basics of computer science with characters from
+            Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
+          description: Try the basics of computer science with characters from Angry
+            Birds, Plants vs. Zombies, and Scrat from Ice Age!
+        frozen:
+          title: Frozen
+          description_short: Join the Royal Sisters of Arendelle, Anna and Elsa, as
+            they explore the magic and beauty of ice. You will write code to create
+            snowflakes and patterns as you ice-skate and make a winter wonderland
+            that you can then share with your friends!
+          description: Join the Royal Sisters of Arendelle, Anna and Elsa, as they
+            explore the magic and beauty of ice. You will write code to create snowflakes
+            and patterns as you ice-skate and make a winter wonderland that you can
+            then share with your friends!
+          Artist: Artist
         course4:
           description_short: Students taking Course 4 should have already taken Courses
             2 and 3.
@@ -211,6 +234,7 @@
           Bee Binary: Bee Binary
           Farmer Binary: Farmer Binary
           Maze and Bee: Maze and Bee
+          Artist Binary: Artist Binary
         Course4pre:
           description_short: A brief rampup of concepts for students who have not
             taken Course 2 and 3.

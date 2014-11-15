@@ -453,8 +453,11 @@
   try_reloading: Cuba memuat semula halaman
   next_stage: Selesai! Teruskan ke tahap seterusnya
   download_pdf: Bukan Plan Pembelajaran
+  lesson_plan: Lesson Plan
   view_lesson_plan: View Lesson Plan
   pdf_download: Download PDF
+  download_coming_soon: Downloadable activity coming soon.
+  video_coming_soon: Video Coming Soon!
   share_code:
     title: Klik 'Mainkan' untuk lihat program saya berfungsi
     bounce_og_title: Semak permainan Lantun saya
@@ -519,6 +522,8 @@
     wrong_body: Penyelesaian yang anda masukkan tidak betul.  Sila cuba lagi!
     correct_title: Betul
     correct_body: Itulah jawapan yang betul.
+  text_match:
+    placeholder: Enter your answer here
   dialog:
     ok: OK
   time:
@@ -570,3 +575,8 @@
   zendesk_too_young_message: Sorry, younger users may not sign in to our support site.
     You may browse <a href="http://support.code.org">support.code.org</a> without
     signing in or ask your parent or teacher to contact us for you.
+  progress:
+    not_completed: not completed
+    completed_too_many_blocks: completed, too many blocks
+    completed_perfect: completed, perfect
+    furthest_level_attempted: furthest level attempted

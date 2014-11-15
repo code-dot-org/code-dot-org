@@ -105,7 +105,7 @@
         - unplug10
         video: Unplug10
       Unplug11:
-        title: Wrap-Up
+        title: Oppsummering
         desc: The final wrap-up in the first 20-hour series will help the class relive
           all of their favorite moments, while giving them next steps that they can
           take on their own if they are interested in continuing their computer science
@@ -258,7 +258,7 @@
           will help students intuitively understand why combining chunks of code into
           functions is such a helpful practice.  '
       BinaryImages:
-        title: Binary Images
+        title: Binære Bilder
         desc: Though many people think of binary as strictly zeros and ones, our previous
           courses taught students that information can be represented in a variety
           of binary options.  This lesson takes that concept one step further as it

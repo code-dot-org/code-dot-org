@@ -100,6 +100,7 @@
         Wordsearch: البحث
         Webapp: Webapp
         ArtistEC: الاعب
+        TextMatch: Text Match
     trophy:
       name:
         Bronze: برونزية
@@ -514,6 +515,9 @@
         webapp_ec_simple: Create your web app by using createHtmlBlock.
         turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
           it in the new "penColour" block.'
+        turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas:
+          a stick figure, snowflake, or spiral. Also try the new "penWidth" block.
+          Have fun!'
     video:
       name:
         maze_intro: مقدمة حول المتاهة
@@ -529,7 +533,6 @@
         loop_for: قطعة " العداد "
         parameters: الدوال والمعاملات
         hoc_wrapup: انتهاء ساعة من البرمجة
-        20_wrapup: انتهاء 20 ساعة
         Unplug1: ما هي خدمة العملاء ؟
         Unplug2: التفكير الحاسوبي
         Unplug3: برمجة ورقة الرسم البياني
@@ -544,7 +547,7 @@
         C1_happy_maps_unplugged: الخرائط السعيدة
         C1_moveitmoveit_unplugged: حركها , حركها
         C1_bigevent_unplugged: الحدث الكبير
-        C1_getting_loop: القبض على المعتوهون
+        C1_getting_loopy: القبض على المعتوهون
         C1_pair_programming: البرمجة الزوجية
         C1_maze_intro_sequencing: مقدمة تسلسل المتاهة
         C1_maze_debugging: تصحيح أخطاء المتاهة
@@ -556,19 +559,22 @@
         C1_maze_loops: حلقات المتاهة
         C1_playlab_storytelling: مختبر اللعب - أنشئ قصة
         C1_planting_seed: زراعة بذرة
-        C1_building_foundating: بناء قاعدة
+        C1_building_foundation: بناء قاعدة
         C2_maze_intro: مقدمة حول المتاهة
         C2_artist_intro: مقدمة حول الرسام
         C2_zuck_repeat_loop: حلقات المتاهة
         C2_artist_loops: حلقات الفنان
+        C2_artist_debugging: تصحيح الأخطاء للرسام
+        C2_bee_loops: حلقات النحلة
+        C2_bee_debugging: تصحيح الأخطاء للنحلة
         C2_bee_conditionals: النحل الشرطية
         C2_playlab_createstory: مختبر اللعب - أنشئ قصة
         C2_graph_paper: برمجة ورقة الرسم البياني
         C2_conditionals_with_cards: الجمل الشرطية
         C2_binary_bracelets: أساور الثنائية
-        C2_replay_programming: برمجة السباق
+        C2_relay_programming: برمجة السباق
         C2_paper_airplanes: الطائرات الورقية
-        C3_maze_intro: مقدمة حول المتاهة
+        C3_maze_level_4: حلقات المتاهة
         C3_artist_intro: مقدمة حول الرسام
         C3_artist_functions: وظائف الرسام
         C3_bee_functions: مهام النحلة
@@ -601,3 +607,13 @@
           لتمكين عنصر فاعل لهذه القصة
         studio_say_text: اكتب ما تريد الممثل الخاص بك أن أقول داخل هذه الأقوال
         jigsaw_click: انقر فوق هذه الكتلة!
+        move_elsa_forward: Drag a "Move Forward" block and snap it below the "When
+          Run" block to make Elsa move forward
+        turn_elsa: Use the "Turn" block to make Elsa turn. The number in the drop-down
+          determines how much Elsa turns
+        replace_questions: Use the drop-down to replace "???" with a number
+        replace_questions_degree: Use the drop-down to replace "???" with the correct
+          degree to turn
+        repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
+          workspace
+        snowflake_dropdown: Use this drop-down to create different snowflakes!

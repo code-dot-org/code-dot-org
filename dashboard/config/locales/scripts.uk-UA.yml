@@ -24,7 +24,7 @@
           Multi & Match: Множинний вибір та відповідність
           K-1 Flappy: Kлас 1. Пурх
           Flappy non blockly: Пурх без блоків
-          title: Курс 1 - для початківців у читанні
+          title: Курс 1
           Artist 2: Художник 2
           Happy Maps: Щасливі карти
           Move it, Move it: Рухайся, рухайся
@@ -44,8 +44,8 @@
           'Maze: Loops': 'Лабіринт: цикли'
           'Bee: Loops': 'Бджола: цикли'
           'Studio: Create a Story': 'Ігрова студія: Створення історії'
-          description_short: Курс 1 розроблено для учнів молодших класів, початківців
-            у читанні.
+          description_short: Курс 1 розроблено для початківців у читанні. Рекомендовано
+            для 1 класу.
           'Artist: Loops': 'Художник: цикли'
         course2:
           The Maze: Лабіринт
@@ -84,8 +84,8 @@
           'Bee: Debugging': Бджола - відлагодження
           'Artist: Debugging': 'Художник: відлагодження'
           'Bee: Conditionals': Бджола - умови
-          description_short: Курс 2 створено для учнів початкової школи, котрі вміють
-            читати .
+          description_short: Курс 2 розроблено для учнів, котрі вміють читати. Рекомендується
+            для 2-5 класів.
           'Artist: Sequence2': 'Художник: послідовність 2'
           'Maze: Sequence2': 'Лабіринт: послідовність 2'
           'Artist: Nested Loops': Художник - вкладені цикли
@@ -130,8 +130,8 @@
           'Farmer: While Loops': Фермерка - цикли "поки"
           'Bee: Nested Loops': Бджола - вкладені цикли
           'Bee: Debugging': 'Бджола: відлагодження'
-          description_short: Учні, які приступають до курсу 3, повинні спочатку пройти
-            курс 2.
+          description_short: Курс 3 є продовженням Курсу 2. Рекомендується для 4-5
+            класу.
           Maze2: Лабіринт 2
           Artist2: Художник 2
           'Artist: Functions2': Художник - функції
@@ -152,6 +152,27 @@
           Assessments: Завдання
           Unit 1: Розділ 1
           Unit 2: Розділ 2
+          Ninja Cat and the Coordinate Plane: Кіт-ніндзя та координатна площина
+          'Calc: Circles of Evaluation': 'Калькулятор: кола обчислень'
+          'Artist: Strings and Images': 'Художник: рядки та картинки'
+          Contracts: Визначення
+          'Artist: Writing Contracts': 'Художник: написання визначень'
+          'Calc: Defining Variables': 'Калькулятор: визначення змінних'
+          'Play Lab: Defining Variables': 'Ігрова лабораторія: визначення змінних'
+          The Design Recipe: Рецепт дизайну
+          'Artist: Defining Functions': 'Художник: визначення функцій'
+          'Play Lab: Defining Functions': 'Ігрова лабораторія: визначення функцій'
+          'Artist: Functions': Художник - функції
+          'Play Lab: Animation': 'Ігрова лабораторія: анімація'
+          Booleans: Логічні вирази
+          'Play Lab: Booleans': 'Ігрова лабораторія: логічні вирази'
+          'Calc: Boolean Operators': 'Калькулятор: логічні вирази'
+          'Play Lab: Boolean Operators': 'Ігрова лабораторія: логічні вирази'
+          Conditionals and Piecewise Functions: Умови та складні функції
+          'Artist: Conditionals': 'Художник: умови'
+          Collision Detection and the Distance Formula: Виявлення зіткнень та формула
+            відстані
+          'Play Lab: Collision Detection': 'Ігрова лабораторія: виявлення зіткнень'
         playlab:
           title: Ігрова студія
           description: Складіть історію або створіть гру в Ігровій студії!
@@ -162,23 +183,73 @@
           description: Малюйте картини та узори разом з Художником!
           Artist: Художник
           description_short: Малюйте картини та узори разом з Художником!
+        scrat:
+          title: Scrat
+          description_short: Scrat short description.
+          description: Scrat long description
+          'Maze: Sequence': 'Лабіринт: послідовність'
+        hourofcode:
+          Maze: Лабіринт
+          title: Година Коду
+          description_short: Try the basics of computer science with characters from
+            Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
+          description: Try the basics of computer science with characters from Angry
+            Birds, Plants vs. Zombies, and Scrat from Ice Age!
+        frozen:
+          title: Frozen
+          description_short: Join the Royal Sisters of Arendelle, Anna and Elsa, as
+            they explore the magic and beauty of ice. You will write code to create
+            snowflakes and patterns as you ice-skate and make a winter wonderland
+            that you can then share with your friends!
+          description: Join the Royal Sisters of Arendelle, Anna and Elsa, as they
+            explore the magic and beauty of ice. You will write code to create snowflakes
+            and patterns as you ice-skate and make a winter wonderland that you can
+            then share with your friends!
+          Artist: Художник
         course4:
-          description_short: Students taking Course 4 should have already taken Courses
-            2 and 3.
-          description: Course 4 is designed for students who have taken Course 2 and
-            3. Students will delve deeper into programming topics introduced in previous
-            courses to flexible solutions to more complex problems. By the end of
-            this course, students create interactive stories and games they can share
-            with anyone. Recommended for grades 4-8.
-          'Artist: Variables': 'Artist: Variables'
-          'Bee: For Loops': 'Bee: For Loops'
-          title: Course 4
-          'Algorithms: Tangrams': 'Algorithms: Tangrams'
+          description_short: Учні, котрі приступають до Курсу 4, повинні попередньо
+            пройти Курси 2 та 3.
+          description: Курс 4 розроблено для учнів, котрі опанували Курси 2 та 3.
+            Учні глибше розглянуть деякі розділи програмування, з якими ознайомились
+            раніше, розроблятимуть гнучкіші рішення складніших задач. Протягом навчання
+            учні створюватимуть інтерактивні ігри чи історії, якими зможуть поділитися
+            з іншими. Рекомендується для 4-8 класу.
+          'Artist: Variables': 'Художник: змінні'
+          'Bee: For Loops': Бджола - цикли з параметром
+          title: Курс 4
+          'Algorithms: Tangrams': 'Алгоритми: Танграми'
           Variables: Змінні
-          'Play Lab: Variables': 'Play Lab: Variables'
-          'Play Lab: Functions with Parameters': 'Play Lab: Functions with Parameters'
-          'Bee: Functions with Parameters': 'Bee: Functions with Parameters'
-          'Artist: For Loops': 'Artist: For Loops'
-          'Play Lab: For Loops': 'Play Lab: For Loops'
+          'Play Lab: Variables': 'Ігрова лабораторія: змінні'
+          'Play Lab: Functions with Parameters': 'Ігрова лабораторія: Функції з параметрами'
+          'Bee: Functions with Parameters': 'Бджола: Функції з параметрами'
+          'Artist: For Loops': Художник - цикли з параметром
+          'Play Lab: For Loops': Ігрова лабораторія - цикли з параметром
           'Artist: Functions': Художник - функції
-          'Artist: Functions with Paraqmeters': 'Artist: Functions with Paraqmeters'
+          'Artist: Functions with Paraqmeters': Художник - функції з параметрами
+          'Unplugged: Tangrams': 'Безмашинні вправи: танграм'
+          Artist: Художник
+          Bee: Бджола
+          'Unplugged: Envelope Variables': 'Безмашинні вправи: конвертні змінні'
+          'Unplugged: Madlibs': 'Безмашинні вправи: пропуски'
+          'Unplugged: For Loop Fun': 'Безмашинні вправи: ігри з циклами'
+          'Unplugged: Songwriting with Parameters': 'Безмашинні вправи: написання
+            пісень з параметрами'
+          'Artist: Functions with Parameters': 'Художник: функції з параметрами'
+          'Unplugged: Binary': 'Безмашинні вправи: двійкова система'
+          Bee Binary: 'Бджола: двійкова система'
+          Farmer Binary: 'Фермер: двійкова система'
+          Maze and Bee: Лабіринт і бджола
+          Artist Binary: Artist Binary
+        Course4pre:
+          description_short: Коротке узагальнення понять для учнів, котрі не проходили
+            курси 2 та 3.
+          Course 4 Prerequisite: Знання, необхідні для курсу 4
+          'Maze: Sequence': 'Лабіринт: послідовність'
+          'Artist: Sequence': 'Художник: послідовність'
+          'Artist: Loops': 'Художник: цикли'
+          'Bee: Conditionals': Бджола - умови
+          'Artist: Nested Loops': Художник - вкладені цикли
+          'Farmer: While Loops': Фермерка - цикли "поки"
+          'Bee: Nested Loops': Бджола - вкладені цикли
+          'Artist: Functions': Художник - функції
+          'Bee: Debugging': Бджола - відлагодження

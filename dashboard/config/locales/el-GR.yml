@@ -474,8 +474,11 @@
   try_reloading: Δοκίμασε να φορτώσεις ξανά τη σελίδα
   next_stage: Τελείωσε! Συνέχισε στο επόμενο στάδιο
   download_pdf: Σχέδιο ανοικτού μαθήματος
+  lesson_plan: Lesson Plan
   view_lesson_plan: View Lesson Plan
   pdf_download: Κατεβάστε το PDF
+  download_coming_soon: Downloadable activity coming soon.
+  video_coming_soon: Video Coming Soon!
   share_code:
     title: Κάντε κλικ στο κουμπί «Εκτέλεση προγράμματος» για να δείτε το πρόγραμμα
       μου να εκτελείται
@@ -541,6 +544,8 @@
     wrong_body: The solution you've entered is not correct.  Please try again!
     correct_title: Correct
     correct_body: That is the correct answer.
+  text_match:
+    placeholder: Enter your answer here
   dialog:
     ok: OΚ
   time:
@@ -592,3 +597,8 @@
   zendesk_too_young_message: Sorry, younger users may not sign in to our support site.
     You may browse <a href="http://support.code.org">support.code.org</a> without
     signing in or ask your parent or teacher to contact us for you.
+  progress:
+    not_completed: not completed
+    completed_too_many_blocks: completed, too many blocks
+    completed_perfect: completed, perfect
+    furthest_level_attempted: furthest level attempted
