@@ -1,5 +1,7 @@
 {
   "and": "en",
+  "booleanTrue": "waar",
+  "booleanFalse": "onwaar",
   "blocklyMessage": "Blockly",
   "catActions": "Acties",
   "catColour": "Kleur",

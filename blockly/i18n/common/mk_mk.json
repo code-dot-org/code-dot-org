@@ -1,5 +1,7 @@
 {
   "and": "и",
+  "booleanTrue": "точно",
+  "booleanFalse": "погрешно",
   "blocklyMessage": "Blockly",
   "catActions": "Actions",
   "catColour": "Colour",

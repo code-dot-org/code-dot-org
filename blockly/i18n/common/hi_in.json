@@ -1,5 +1,7 @@
 {
   "and": "and",
+  "booleanTrue": "सही ",
+  "booleanFalse": "गलत ",
   "blocklyMessage": "ब्लॉक्ली",
   "catActions": "क्रियाएँ",
   "catColour": "रंग",

@@ -2,7 +2,7 @@
   "compute": "compute",
   "equivalentExpression": "Try reordering your arguments to get exactly the same expression.",
   "extraTopBlocks": "You have unattached blocks. Did you mean to attach these to the \"compute\" block?",
-  "goal": "Goal:",
+  "goal": "Cél:",
   "reinfFeedbackMsg": "Ez úgy néz ki amit akartál? Nyomd meg a \"Próbáld újra\" gombot ,hogy lásd a rajzod.",
-  "yourExpression": "Your expression:"
+  "yourExpression": "A kifejezésed:"
 }
