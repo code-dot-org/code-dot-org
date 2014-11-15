@@ -228,7 +228,7 @@ Blockly.Blocks.functional_call = {
     this.setFunctional(true);
 
     /**
-     * Used to detect changes in nad update parameter names & argument connections
+     * Used to detect changes in and update parameter names & argument connections
      * @type {Array}
      * @private
      */
