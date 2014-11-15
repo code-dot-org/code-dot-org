@@ -193,7 +193,7 @@ Blockly.Blocks.functional_definition = {
   removeVar: function(oldName) {
     var index = this.parameterNames.indexOf(oldName);
     if (index > -1) {
-      this.currentParameterNames.splice(index, 1);
+      this.parameterNames.splice(index, 1);
       this.updateParams_();
     }
   },
