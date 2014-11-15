@@ -60,3 +60,6 @@ Programming language that makes it easy to create your own interactive stories, 
 
 ### [ScratchJr](http://www.scratchjr.org/)
 With ScratchJr, young children (ages 5-7) can program their own interactive stories and games on the iPad. In the process, they learn to solve problems, design projects, and express themselves creatively on the computer.
+
+### [AgentCubes](http://sgda.cs.colorado.edu/arcade/?q=hour_of_code)
+Imagine a tool that allows you to turn 2D images into 3D shapes. Use AgentCubes online, the world's first 3D web-based programming & modeling tool, to learn to program by creating and sharing exciting 3D games. Rule your world!
