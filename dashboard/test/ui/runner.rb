@@ -8,6 +8,7 @@ require 'yaml'
 require 'optparse'
 require 'ostruct'
 require 'colorize'
+require 'open3'
 
 $options = OpenStruct.new
 $options.config = nil
@@ -21,6 +22,7 @@ $options.tunnel = nil
 $options.local = nil
 $options.html = nil
 $options.maximize = nil
+$options.parallel_limit = 1
 
 # start supporting some basic command line filtering of which browsers we run against
 opt_parser = OptionParser.new do |opts|
@@ -67,6 +69,9 @@ opt_parser = OptionParser.new do |opts|
   opts.on("--html", "Use html reporter") do
     $options.html = true
   end
+  opts.on("-p", "--parallel ParallelLimit", String, "Maximum number of browsers to run in parallel (default is 1)") do |p|
+    $options.parallel_limit = p.to_i
+  end
   opts.on("-V", "--verbose", "Verbose") do
     $options.verbose = true
   end
@@ -78,23 +83,24 @@ end
 
 opt_parser.parse!(ARGV)
 
-browsers = JSON.load(open("browsers.json"))
+$browsers = JSON.load(open("browsers.json"))
 
-suiteStartTime = Time.now
-suiteSuccessCount = 0
-suiteFailCount = 0
+$lock = Mutex.new
+$suite_start_time = Time.now
+$suite_success_count = 0
+$suite_fail_count = 0
 
 if $options.local
-  browsers = [{:browser => "local"}]
+  $browsers = [{:browser => "local"}]
 end
 
 if $options.config
-  namedBrowser = browsers.detect {|b| b['name'] == $options.config }
+  namedBrowser = $browsers.detect {|b| b['name'] == $options.config }
   if !namedBrowser
     puts "No config exists with name #{$options.config}"
     exit
   end
-  browsers = [namedBrowser]
+  $browsers = [namedBrowser]
 end
 
 $logfile = File.open("success.log", "w")
@@ -129,9 +135,12 @@ elsif Rails.env.test?
   $options.dashboard_db_access = true if $options.dashboard_domain =~ /test/
 end
 
-browsers.each do |browser|
+Parallel.each($browsers, :in_threads => $options.parallel_limit) do |browser|
+  browser_name = browser['name'] || 'UnknownBrowser'
+  test_start_time = Time.now
+
   if $options.pegasus_domain =~ /test/ && !Rails.env.development? && RakeUtils.git_updates_available?
-    message = "Skipped <b>dashboard</b> UI tests for <b>#{browser['name'] || browser.inspect}</b> (changes detected)"
+    message = "Skipped <b>dashboard</b> UI tests for <b>#{browser_name}</b> (changes detected)"
     HipChat.log message, color:'yellow'
     HipChat.developers message, color:'yellow' if CDO.hip_chat_logging
     next
@@ -146,9 +155,9 @@ browsers.each do |browser|
   if $options.browser_version and browser['browser_version'] and $options.browser_version.casecmp(browser['browser_version']) != 0
     next
   end
-  testStartTime = Time.now
-  HipChat.log "Testing <b>dashboard</b> UI with <b>#{browser['name'] || browser.inspect}</b>..."
-  puts "Running with: #{browser["description"] ? browser["description"] : browser.inspect}"
+
+  HipChat.log "Testing <b>dashboard</b> UI with <b>#{browser_name}</b>..."
+  puts "Starting UI tests for #{browser_name}"
 
   ENV['SELENIUM_BROWSER'] = browser['browser']
   ENV['SELENIUM_VERSION'] = browser['browser_version']
@@ -163,8 +172,8 @@ browsers.each do |browser|
   ENV['MAXIMIZE_LOCAL'] = $options.maximize ? "true" : "false"
   ENV['MOBILE'] = browser['mobile'] ? "true" : "false"
   ENV['TEST_REALMOBILE'] = ($options.realmobile && browser['mobile'] && browser['realMobile'] != false) ? "true" : "false"
-  arguments = '';
 
+  arguments = ''
   arguments += "#{$options.feature}" if $options.feature
   arguments += " -t ~@local_only" unless $options.local
   arguments += " -t ~@no_mobile" if browser['mobile']
@@ -177,50 +186,52 @@ browsers.each do |browser|
   arguments += " -S" # strict mode, so that we fail on undefined steps
   arguments += " -f html -o #{browser['name']}_output.html" if $options.html
 
-  puts "  Running: cucumber #{arguments}"
+  Open3.popen2("cucumber #{arguments}") do |stdin, stdout, wait_thr|
+    stdin.close
+    return_value = stdout.read
+    succeeded = wait_thr.value.exitstatus == 0
 
-  returnValue = `cucumber #{arguments}`
-  succeeded = $?.exitstatus == 0
+    $lock.synchronize do
+      if succeeded
+        $suite_success_count += 1
+        log_success Time.now
+        log_success browser.to_yaml
+        log_success return_value
+      else
+        $suite_fail_count += 1
+        log_error Time.now
+        log_error browser.to_yaml
+        log_error return_value
+        log_browser_error browser.to_yaml
+      end
+    end
 
-  if not succeeded
-    log_error Time.now
-    log_error browser.to_yaml
-    log_error returnValue
-    log_browser_error browser.to_yaml
-  else
-    log_success Time.now
-    log_success browser.to_yaml
-    log_success returnValue
+    test_duration = Time.now - test_start_time
+    minutes = (test_duration / 60).to_i
+    seconds = test_duration - (minutes * 60)
+    elapsed = "%.1d:%.2d minutes" % [minutes, seconds]
+    if succeeded
+      HipChat.log "<b>dashboard</b> UI tests passed with <b>#{browser_name}</b> (#{elapsed})"
+    else
+      message = "<b>dashboard</b> UI tests failed with <b>#{browser_name}</b> (#{elapsed})"
+      HipChat.log message, color:'red'
+      HipChat.developers message, color:'red' if CDO.hip_chat_logging
+    end
+    result_string = succeeded ? "succeeded".green : "failed".red
+    puts "UI tests for #{browser_name} #{result_string} (#{elapsed})"
   end
-
-  suiteSuccessCount += 1 unless not succeeded
-  suiteFailCount += 1 if not succeeded
-  suiteResultString = succeeded ? "succeeded".green : "failed".red
-  testDuration = Time.now - testStartTime
-
-  minutes = (testDuration / 60).to_i
-  seconds = testDuration - (minutes * 60)
-  elapsed = "%.1d:%.2d minutes" % [minutes, seconds]
-  if succeeded
-    HipChat.log "<b>dashboard</b> UI tests passed with <b>#{browser['name'] || browser.inspect}</b> (#{elapsed})"
-  else
-    message = "<b>dashboard</b> UI tests failed with <b>#{browser['name'] || browser.inspect}</b> (#{elapsed})"
-    HipChat.log message, color:'red'
-    HipChat.developers message, color:'red' if CDO.hip_chat_logging
-  end
-  puts "  Result: " + suiteResultString + ".  Duration: " + testDuration.round(2).to_s + " seconds"
 end
 
 $logfile.close
 $errfile.close
 $errbrowserfile.close
 
-suiteDuration = Time.now - suiteStartTime
-averageTestDuration = suiteDuration / (suiteSuccessCount + suiteFailCount)
+$suite_duration = Time.now - $suite_start_time
+$average_test_duration = $suite_duration / ($suite_success_count + $suite_fail_count)
 
-puts suiteSuccessCount.to_s + " succeeded.  " + suiteFailCount.to_s +
-  " failed.  Test count: " + (suiteSuccessCount + suiteFailCount).to_s +
-  ".  Total duration: " + suiteDuration.round(2).to_s +
-  " seconds.  Average test duration: " + averageTestDuration.round(2).to_s + " seconds."
+puts "#{$suite_success_count.to_s} succeeded.  #{$suite_fail_count.to_s} failed.  " +
+  "Test count: #{($suite_success_count + $suite_fail_count).to_s}.  " +
+  "Total duration: #{$suite_duration.round(2).to_s} seconds.  " +
+  "Average test duration: #{$average_test_duration.round(2).to_s} seconds."
 
-exit suiteFailCount
+exit $suite_fail_count
