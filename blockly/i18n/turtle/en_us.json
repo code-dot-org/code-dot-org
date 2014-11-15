@@ -16,6 +16,7 @@
   "createSnowflakeSpiral": "create a snowflake of type spiral",
   "createSnowflakeFlower": "create a snowflake of type flower",
   "createSnowflakeFractal": "create a snowflake of type fractal",
+  "createSnowflakeRandom": "create a snowflake of type random",
   "createASnowflakeBranch": "create a snowflake branch",
   "degrees": "degrees",
   "depth": "depth",
