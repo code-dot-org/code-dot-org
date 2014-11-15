@@ -1,8 +1,8 @@
 {
-  "compute": "compute",
+  "compute": "計算",
   "equivalentExpression": "Try reordering your arguments to get exactly the same expression.",
   "extraTopBlocks": "You have unattached blocks. Did you mean to attach these to the \"compute\" block?",
-  "goal": "Goal:",
+  "goal": "目標",
   "reinfFeedbackMsg": "これは自分が描こうとしていた画でしょうか？「もう一度」ボタンで自分で描いた画を確認する事ができます。",
   "yourExpression": "Your expression:"
 }

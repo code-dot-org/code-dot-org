@@ -1,8 +1,8 @@
 {
-  "compute": "compute",
-  "equivalentExpression": "Try reordering your arguments to get exactly the same expression.",
-  "extraTopBlocks": "You have unattached blocks. Did you mean to attach these to the \"compute\" block?",
-  "goal": "Goal:",
-  "reinfFeedbackMsg": "Näyttääkö tämä siltä, mitä halusit? Voit painaa \"Yritä uudelleen\" -painiketta nähdäksesi piirustuksesi.",
-  "yourExpression": "Your expression:"
+  "compute": "laskea",
+  "equivalentExpression": "Kokeile vaihtaa komentojesi järjestystä saadaksesi täsmälleen saman lausekkeen.",
+  "extraTopBlocks": "Sinulla on liittämättömiä lohkoja. Tarkoititko liittää nämä \"laske\" lohkoon?",
+  "goal": "Tavoite:",
+  "reinfFeedbackMsg": "Voit painaa \"yritä uudelleen\" muokataksesi lausekettasi.",
+  "yourExpression": "Lausekkeesi:"
 }

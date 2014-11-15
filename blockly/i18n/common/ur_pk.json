@@ -1,5 +1,7 @@
 {
   "and": "اور",
+  "booleanTrue": "سچا",
+  "booleanFalse": "غلط",
   "blocklyMessage": "Blockly",
   "catActions": "Actions",
   "catColour": "Colour",
