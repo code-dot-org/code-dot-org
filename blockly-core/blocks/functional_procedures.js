@@ -162,8 +162,7 @@ Blockly.Blocks.functional_definition = {
       type: this.type,
       callType: this.callType_,
       parameterNames: this.parameterNames,
-      parameterTypes: this.parameterTypes,
-      hasReturnValue: true // TODO(bjordan): unused?
+      parameterTypes: this.parameterTypes
     }
   },
   getVars: function() {
