@@ -5,6 +5,7 @@ var canvas = require('canvas');
 
 // Some of our feedback tests need to use Image
 global.Image = canvas.Image;
+global.Turtle = {};
 
 // needed for Hammerjs in studio
 global.navigator = {};
@@ -292,7 +293,9 @@ describe("getMissingRequiredBlocks tests", function () {
         var appSkins = testUtils.requireWithGlobalsCheckSrcFolder(collection.app + '/skins');
         skinForTests = appSkins.load(BlocklyApps.assetUrl, collection.skinId);
       } else {
-        skinForTests = {};
+        skinForTests = {
+          assetUrl: function (str) { return str; }
+        };
       }
 
       var blockInstallOptions = { skin: skinForTests, isK1: false };

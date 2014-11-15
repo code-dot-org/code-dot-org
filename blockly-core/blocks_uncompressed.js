@@ -854,8 +854,12 @@ Blockly.Blocks.procedures_callnoreturn = {init:function() {
   this.setTooltip(Blockly.Msg.PROCEDURES_CALLNORETURN_TOOLTIP);
   this.arguments_ = [];
   this.quarkArguments_ = this.quarkConnections_ = null
-}, openEditor:function() {
-  Blockly.functionEditor.openAndEditFunction(this.getTitleValue("NAME"))
+}, openEditor:function(a) {
+  a.stopPropagation();
+  a = this.getTitleValue("NAME");
+  this.blockSpace.blockSpaceEditor.hideChaff();
+  Blockly.functionEditor.hide();
+  Blockly.functionEditor.openAndEditFunction(a)
 }, getProcedureCall:function() {
   return this.getTitleValue("NAME")
 }, renameProcedure:function(a, b) {

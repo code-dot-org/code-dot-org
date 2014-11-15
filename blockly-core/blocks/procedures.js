@@ -350,8 +350,12 @@ Blockly.Blocks.procedures_callnoreturn = {
     this.parameterIDsToArgumentConnections = null;
     this.currentParameterIDs = null;
   },
-  openEditor: function() {
-    Blockly.functionEditor.openAndEditFunction(this.getTitleValue('NAME'));
+  openEditor: function(e) {
+    e.stopPropagation();
+    var functionName = this.getTitleValue('NAME');
+    this.blockSpace.blockSpaceEditor.hideChaff();
+    Blockly.functionEditor.hide();
+    Blockly.functionEditor.openAndEditFunction(functionName);
   },
   getCallName: function() {
     return this.getTitleValue('NAME');

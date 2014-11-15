@@ -62,7 +62,8 @@ Blockly.BlockSpaceEditor.prototype.populateSVGEffects_ = function(container) {
   var svg = Blockly.createSvgElement('svg', {
     id: 'blocklyFilters',
     width: 0,
-    height: 0
+    height: 0,
+    style: 'display: block'
   }, container);
   /*
    <defs>
@@ -156,6 +157,8 @@ Blockly.BlockSpaceEditor.prototype.createDom_ = function(container) {
   // then manually positions content in RTL as needed.
   container.setAttribute('dir', 'LTR');
 
+  this.populateSVGEffects_(container);
+
   // Build the SVG DOM.
   /*
    <svg
@@ -180,7 +183,6 @@ Blockly.BlockSpaceEditor.prototype.createDom_ = function(container) {
   var defs = Blockly.createSvgElement('defs', {
     id: 'blocklySvgDefs'
   }, svg);
-  this.populateSVGEffects_(container);
   this.blockSpace.maxBlocks = Blockly.maxBlocks;
 
   svg.appendChild(this.blockSpace.createDom());
@@ -557,8 +559,7 @@ Blockly.BlockSpaceEditor.prototype.onKeyDown_ = function(e) {
       e.preventDefault();
     }
   } else if (e.altKey || e.ctrlKey || e.metaKey) {
-    if (Blockly.selected && Blockly.selected.isDeletable() &&
-      Blockly.selected.blockSpace === this.blockSpace) {
+    if (Blockly.selected && Blockly.selected.isDeletable()) {
       this.hideChaff();
       if (e.keyCode == 67) {
         // 'c' for copy.
@@ -572,7 +573,7 @@ Blockly.BlockSpaceEditor.prototype.onKeyDown_ = function(e) {
     if (e.keyCode == 86) {
       // 'v' for paste.
       if (Blockly.clipboard_) {
-        this.blockSpace.paste(Blockly.clipboard_);
+        Blockly.focusedBlockSpace.paste(Blockly.clipboard_);
       }
     }
   }
@@ -599,7 +600,10 @@ Blockly.BlockSpaceEditor.copy_ = function(block) {
   var xy = block.getRelativeToSurfaceXY();
   xmlBlock.setAttribute('x', Blockly.RTL ? -xy.x : xy.x);
   xmlBlock.setAttribute('y', xy.y);
-  Blockly.clipboard_ = xmlBlock;
+  Blockly.clipboard_ = {
+    dom: xmlBlock,
+    sourceBlockSpace: block.blockSpace
+  };
 };
 
 /**

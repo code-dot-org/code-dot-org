@@ -19,8 +19,11 @@
     "projectile_collisions": "false",
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
-    "ideal": "7",
-    "use_modal_function_editor": "false"
+    "ideal": "9",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "maze_data": null,
+    "coordinate_grid_background": "false"
   }
 }]]></config>
   <blocks>
@@ -31,15 +34,20 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="studio_saySpriteParams" inline="true">
-          <value name="TEXT">
-            <block type="text">
-              <title name="TEXT">???</title>
+        <block type="studio_saySpriteParamsTime" inline="true">
+          <value name="SPRITE">
+            <block type="math_number">
+              <title name="NUM">1</title>
+            </block>
+          </value>
+          <value name="TIME">
+            <block type="math_number">
+              <title name="NUM">0.2</title>
             </block>
           </value>
         </block>
         <block type="controls_for" inline="true">
-          <title name="VAR">Counter</title>
+          <title name="VAR">counter</title>
           <value name="FROM">
             <block type="math_number">
               <title name="NUM">1</title>
@@ -57,21 +65,31 @@
           </value>
         </block>
         <block type="variables_get">
-          <title name="VAR">Counter</title>
+          <title name="VAR">counter</title>
         </block>
       </xml>
     </toolbox_blocks>
     <required_blocks>
       <xml>
-        <block type="studio_saySpriteParams" inline="true">
+        <block type="studio_saySpriteParamsTime" inline="true">
+          <value name="SPRITE">
+            <block type="math_number">
+              <title name="NUM">1</title>
+            </block>
+          </value>
           <value name="TEXT">
             <block type="variables_get">
-              <title name="VAR">Counter</title>
+              <title name="VAR">counter</title>
+            </block>
+          </value>
+          <value name="TIME">
+            <block type="math_number">
+              <title name="NUM">???</title>
             </block>
           </value>
         </block>
         <block type="controls_for" inline="true">
-          <title name="VAR">Counter</title>
+          <title name="VAR">counter</title>
           <value name="FROM">
             <block type="math_number">
               <title name="NUM">1</title>

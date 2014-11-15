@@ -50,6 +50,11 @@ module.exports = function(app, levels, options) {
   BlocklyApps.BASE_URL = options.baseUrl;
   BlocklyApps.CACHE_BUST = options.cacheBust;
   BlocklyApps.LOCALE = options.locale || BlocklyApps.LOCALE;
+  // NOTE: editCode (which currently implies droplet) and usingBlockly are
+  // currently mutually exclusive.
+  BlocklyApps.editCode = options.level && options.level.editCode;
+  BlocklyApps.usingBlockly = !BlocklyApps.editCode;
+  BlocklyApps.cdoSounds = options.cdoSounds;
 
   BlocklyApps.assetUrl = function(path) {
     var url = options.baseUrl + path;
@@ -61,17 +66,20 @@ module.exports = function(app, levels, options) {
   };
 
   options.skin = options.skinsModule.load(BlocklyApps.assetUrl, options.skinId);
-  var blockInstallOptions = {
-    skin: options.skin,
-    isK1: options.level && options.level.isK1
-  };
 
-  if (options.level && options.level.edit_blocks) {
-    utils.wrapNumberValidatorsForLevelBuilder();
+  if (BlocklyApps.usingBlockly) {
+    var blockInstallOptions = {
+      skin: options.skin,
+      isK1: options.level && options.level.isK1
+    };
+
+    if (options.level && options.level.edit_blocks) {
+      utils.wrapNumberValidatorsForLevelBuilder();
+    }
+
+    blocksCommon.install(Blockly, blockInstallOptions);
+    options.blocksModule.install(Blockly, blockInstallOptions);
   }
-
-  blocksCommon.install(Blockly, blockInstallOptions);
-  options.blocksModule.install(Blockly, blockInstallOptions);
 
   addReadyListener(function() {
     if (options.readonly) {
@@ -215,6 +223,7 @@ BlocklyApps.init = function(config) {
   }
 
   BlocklyApps.share = config.share;
+
   // if true, dont provide links to share on fb/twitter
   BlocklyApps.disableSocialShare = config.disableSocialShare;
   BlocklyApps.sendToPhone = config.sendToPhone;
@@ -265,7 +274,7 @@ BlocklyApps.init = function(config) {
   }
 
   var visualizationColumn = document.getElementById('visualizationColumn');
-  if (config.level.edit_blocks) {
+  if (BlocklyApps.usingBlockly && config.level.edit_blocks) {
     // Set a class on the main blockly div so CSS can style blocks differently
     Blockly.addClass_(container.querySelector('#blockly'), 'edit');
     // If in level builder editing blocks, make workspace extra tall
@@ -292,7 +301,7 @@ BlocklyApps.init = function(config) {
 
   if (config.hide_source) {
     BlocklyApps.hideSource = true;
-    var workspaceDiv = config.level.editCode ?
+    var workspaceDiv = BlocklyApps.editCode ?
                         document.getElementById('codeWorkspace') :
                         container.querySelector('#blockly');
     container.className = 'hide-source';
@@ -410,43 +419,6 @@ BlocklyApps.init = function(config) {
     viewport.setAttribute('content', content.join(', '));
   }
 
-  if (config.level.editCode) {
-    BlocklyApps.editCode = true;
-    /*
-    BlocklyApps.editor = window.ace.edit('codeTextbox');
-    BlocklyApps.editor.getSession().setMode("ace/mode/javascript");
-    BlocklyApps.editor.setOptions({
-      enableBasicAutocompletion: true,
-      enableLiveAutocompletion: true
-    });
-    */
-    // using window.require forces us to use requirejs version of require
-    window.require(['droplet'], function(droplet) {
-      var displayMessage, examplePrograms, messageElement, onChange, startingText;
-      BlocklyApps.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
-        mode: 'javascript',
-        modeOptions: utils.generateDropletModeOptions(config.level.codeFunctions),
-        palette: utils.generateDropletPalette(config.level.codeFunctions)
-      });
-
-      if (config.level.startBlocks) {
-        BlocklyApps.editor.setValue(config.level.startBlocks);
-      } else {
-        var startText = '// ' + msg.typeHint() + '\n';
-        var codeFunctions = config.level.codeFunctions;
-        // Insert hint text from level codeFunctions into editCode area
-        if (codeFunctions) {
-          var hintText = '';
-          for (var i = 0; i < codeFunctions.length; i++) {
-            hintText += " " + codeFunctions[i].func + "();";
-          }
-          startText += '// ' + msg.typeFuncs().replace('%1', hintText) + '\n';
-        }
-        BlocklyApps.editor.setValue(startText);
-      }
-    });
-  }
-
   BlocklyApps.Dialog = config.Dialog;
 
   var showCode = document.getElementById('show-code-header');
@@ -526,40 +498,84 @@ BlocklyApps.init = function(config) {
     wrapper.style.display = 'none';
   }
 
-  // Allow empty blocks if editing blocks.
-  if (config.level.edit_blocks) {
-    BlocklyApps.CHECK_FOR_EMPTY_BLOCKS = false;
-    if (config.level.edit_blocks === 'required_blocks' ||
-      config.level.edit_blocks === 'toolbox_blocks') {
-      // Don't show when run block for toolbox/required block editing
-      config.forceInsertTopBlock = null;
-    }
-  }
+  if (BlocklyApps.editCode) {
+    // using window.require forces us to use requirejs version of require
+    window.require(['droplet'], function(droplet) {
+      var displayMessage, examplePrograms, messageElement, onChange, startingText;
+      BlocklyApps.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
+        mode: 'javascript',
+        modeOptions: utils.generateDropletModeOptions(config.level.codeFunctions),
+        palette: utils.generateDropletPalette(config.level.codeFunctions)
+      });
 
-  var div = document.getElementById('blockly');
-  var options = {
-    toolbox: config.level.toolbox,
-    disableParamEditing: config.level.disableParamEditing === undefined ?
-        true : config.level.disableParamEditing,
-    disableVariableEditing: config.level.disableVariableEditing === undefined ?
-        false : config.level.disableVariableEditing,
-    useModalFunctionEditor: config.level.useModalFunctionEditor === undefined ?
-        false : config.level.useModalFunctionEditor,
-    useContractEditor: config.level.useContractEditor === undefined ?
-        false : config.level.useContractEditor,
-    scrollbars: config.level.scrollbars
-  };
-  ['trashcan', 'concreteBlocks', 'varsInGlobals',
-    'grayOutUndeletableBlocks', 'disableParamEditing'].forEach(
-    function (prop) {
-      if (config[prop] !== undefined) {
-        options[prop] = config[prop];
+      if (config.afterInject) {
+        config.afterInject();
+      }
+
+      if (config.level.startBlocks) {
+        BlocklyApps.editor.setValue(config.level.startBlocks);
+      } else {
+        var startText = '// ' + msg.typeHint() + '\n';
+        var codeFunctions = config.level.codeFunctions;
+        // Insert hint text from level codeFunctions into editCode area
+        if (codeFunctions) {
+          var hintText = '';
+          for (var i = 0; i < codeFunctions.length; i++) {
+            hintText += " " + codeFunctions[i].func + "();";
+          }
+          startText += '// ' + msg.typeFuncs().replace('%1', hintText) + '\n';
+        }
+        BlocklyApps.editor.setValue(startText);
       }
     });
-  BlocklyApps.inject(div, options);
+  }
 
-  if (config.afterInject) {
-    config.afterInject();
+  if (BlocklyApps.usingBlockly) {
+    // Allow empty blocks if editing blocks.
+    if (config.level.edit_blocks) {
+      BlocklyApps.CHECK_FOR_EMPTY_BLOCKS = false;
+      if (config.level.edit_blocks === 'required_blocks' ||
+        config.level.edit_blocks === 'toolbox_blocks') {
+        // Don't show when run block for toolbox/required block editing
+        config.forceInsertTopBlock = null;
+      }
+    }
+
+    var div = document.getElementById('blockly');
+    var options = {
+      toolbox: config.level.toolbox,
+      disableParamEditing: config.level.disableParamEditing === undefined ?
+          true : config.level.disableParamEditing,
+      disableVariableEditing: config.level.disableVariableEditing === undefined ?
+          false : config.level.disableVariableEditing,
+      useModalFunctionEditor: config.level.useModalFunctionEditor === undefined ?
+          false : config.level.useModalFunctionEditor,
+      useContractEditor: config.level.useContractEditor === undefined ?
+          false : config.level.useContractEditor,
+      scrollbars: config.level.scrollbars,
+      editBlocks: config.level.edit_blocks === undefined ?
+          false : config.level.edit_blocks
+    };
+    ['trashcan', 'concreteBlocks', 'varsInGlobals',
+      'grayOutUndeletableBlocks', 'disableParamEditing'].forEach(
+      function (prop) {
+        if (config[prop] !== undefined) {
+          options[prop] = config[prop];
+        }
+      });
+    BlocklyApps.inject(div, options);
+
+    if (config.afterInject) {
+      config.afterInject();
+    }
+
+    // Add the starting block(s).
+    var startBlocks = config.level.startBlocks || '';
+    if (config.forceInsertTopBlock) {
+      startBlocks = blockUtils.forceInsertTopBlock(startBlocks, config.forceInsertTopBlock);
+    }
+    startBlocks = BlocklyApps.arrangeBlockPosition(startBlocks, config.blockArrangement);
+    BlocklyApps.loadBlocks(startBlocks);
   }
 
   // Initialize the slider.
@@ -574,20 +590,12 @@ BlocklyApps.init = function(config) {
     }
   }
 
-  if (!BlocklyApps.editCode) {
-    // Add the starting block(s).
-    var startBlocks = config.level.startBlocks || '';
-    if (config.forceInsertTopBlock) {
-      startBlocks = blockUtils.forceInsertTopBlock(startBlocks, config.forceInsertTopBlock);
-    }
-    startBlocks = BlocklyApps.arrangeBlockPosition(startBlocks, config.blockArrangement);
-    BlocklyApps.loadBlocks(startBlocks);
-  }
-
   // listen for scroll and resize to ensure onResize() is called
   window.addEventListener('scroll', function() {
     BlocklyApps.onResize();
-    Blockly.fireUiEvent(window, 'resize');
+    var event = document.createEvent('UIEvents');
+    event.initEvent('resize', true, true);  // event type, bubbling, cancelable
+    window.dispatchEvent(event);
   });
   window.addEventListener('resize', BlocklyApps.onResize);
 
@@ -596,7 +604,9 @@ BlocklyApps.init = function(config) {
   // value
   window.setTimeout(function() {
       BlocklyApps.onResize();
-      Blockly.fireUiEvent(window, 'resize');
+      var event = document.createEvent('UIEvents');
+      event.initEvent('resize', true, true);  // event type, bubbling, cancelable
+      window.dispatchEvent(event);
     },
     100);
 
@@ -604,19 +614,53 @@ BlocklyApps.init = function(config) {
 
   // Add display of blocks used.
   setIdealBlockNumber();
-  Blockly.mainBlockSpaceEditor.addChangeListener(function() {
-    BlocklyApps.updateBlockCount();
-  });
+
+  // TODO (cpirich): implement block count for droplet (for now, blockly only)
+  if (BlocklyApps.usingBlockly) {
+    Blockly.mainBlockSpaceEditor.addChangeListener(function() {
+      BlocklyApps.updateBlockCount();
+    });
+
+    if (config.level.openFunctionDefinition) {
+      Blockly.functionEditor.openAndEditFunction(config.level.openFunctionDefinition);
+    }
+  }
+};
+
+exports.loadAudio = function(filenames, name) {
+  if (BlocklyApps.usingBlockly) {
+    Blockly.loadAudio_(filenames, name);
+  } else if (BlocklyApps.cdoSounds) {
+    var regOpts = { id: name };
+    for (var i = 0; i < filenames.length; i++) {
+      var filename = filenames[i];
+      var ext = filename.match(/\.(\w+)(\?.*)?$/);
+      if (ext) {
+        // Extend regOpts so regOpts.mp3 = 'file.mp3'
+        regOpts[ext[1]] = filename;
+      }
+    }
+    BlocklyApps.cdoSounds.register(regOpts);
+  }
 };
 
 exports.playAudio = function(name, options) {
   options = options || {};
   var defaultOptions = {volume: 0.5};
-  Blockly.playAudio(name, utils.extend(defaultOptions, options));
+  var newOptions = utils.extend(defaultOptions, options);
+  if (BlocklyApps.usingBlockly) {
+    Blockly.playAudio(name, newOptions);
+  } else if (BlocklyApps.cdoSounds) {
+    BlocklyApps.cdoSounds.play(name, newOptions);
+  }
 };
 
 exports.stopLoopingAudio = function(name) {
-  Blockly.stopLoopingAudio(name);
+  if (BlocklyApps.usingBlockly) {
+    Blockly.stopLoopingAudio(name);
+  } else if (BlocklyApps.cdoSounds) {
+    BlocklyApps.cdoSounds.stopLoopingAudio(name);
+  }
 };
 
 /**
@@ -688,13 +732,18 @@ BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 200;
 
 /**
  * Spreading out the top blocks in workspace if it is not already set.
+ * @param {string} startBlocks String representation of start blocks xml.
+ * @param {Object.<Object>} arrangement A map from block type to position.
+ * @return {string} String representation of start blocks xml, including
+ *    block position.
  */
 BlocklyApps.arrangeBlockPosition = function(startBlocks, arrangement) {
   var type, arrangeX, arrangeY;
   var xml = parseXmlElement(startBlocks);
+  var xmlChildNodes = BlocklyApps.sortBlocksByVisibility(xml.childNodes);
   var numberOfPlacedBlocks = 0;
-  for (var x = 0, xmlChild; xml.childNodes && x < xml.childNodes.length; x++) {
-    xmlChild = xml.childNodes[x];
+  for (var x = 0, xmlChild; xmlChildNodes && x < xmlChildNodes.length; x++) {
+    xmlChild = xmlChildNodes[x];
 
     // Only look at element nodes
     if (xmlChild.nodeType === 1) {
@@ -712,6 +761,27 @@ BlocklyApps.arrangeBlockPosition = function(startBlocks, arrangement) {
     }
   }
   return Blockly.Xml.domToText(xml);
+};
+
+/**
+ * Sorts the array of xml blocks, moving visible blocks to the front.
+ * @param {Array.<Element>} xmlBlocks An array of xml blocks.
+ * @return {Array.<Element>} A sorted array of xml blocks, with all
+ *     visible blocks preceding all hidden blocks.
+ */
+BlocklyApps.sortBlocksByVisibility = function(xmlBlocks) {
+  var visibleXmlBlocks = [];
+  var hiddenXmlBlocks = [];
+  for (var x = 0, xmlBlock; xmlBlocks && x < xmlBlocks.length; x++) {  
+    xmlBlock = xmlBlocks[x];
+    if (xmlBlock.getAttribute &&
+        xmlBlock.getAttribute('uservisible') === 'false') {
+      hiddenXmlBlocks.push(xmlBlock);
+    } else {
+      visibleXmlBlocks.push(xmlBlock);
+    }
+  }
+  return visibleXmlBlocks.concat(hiddenXmlBlocks);
 };
 
 var showInstructions = function(level, autoClose) {
@@ -821,10 +891,13 @@ BlocklyApps.resizeHeaders = function (fullWorkspaceWidth) {
     }
   }
 
-  var workspaceWidth = Blockly.mainBlockSpaceEditor.getBlockSpaceWidth();
-  var toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
-
-  if (BlocklyApps.editCode) {
+  var workspaceWidth;
+  var toolboxWidth;
+  if (BlocklyApps.usingBlockly) {
+    workspaceWidth = Blockly.mainBlockSpaceEditor.getBlockSpaceWidth();
+    toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
+  }
+  else {
     workspaceWidth = fullWorkspaceWidth - categoriesWidth;
     toolboxWidth = 0;
   }
@@ -859,14 +932,16 @@ BlocklyApps.resizeHeaders = function (fullWorkspaceWidth) {
  * @param {boolean} spotlight Optional.  Highlight entire block if true
  */
 BlocklyApps.highlight = function(id, spotlight) {
-  if (id) {
-    var m = id.match(/^block_id_(\d+)$/);
-    if (m) {
-      id = m[1];
+  if (BlocklyApps.usingBlockly) {
+    if (id) {
+      var m = id.match(/^block_id_(\d+)$/);
+      if (m) {
+        id = m[1];
+      }
     }
-  }
 
-  Blockly.mainBlockSpace.highlightBlock(id, spotlight);
+    Blockly.mainBlockSpace.highlightBlock(id, spotlight);
+  }
 };
 
 /**
@@ -1025,8 +1100,10 @@ BlocklyApps.resetButtonClick = function() {
   onResetPressed();
   BlocklyApps.toggleRunReset('run');
   BlocklyApps.clearHighlighting();
-  Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
-  Blockly.mainBlockSpace.traceOn(false);
+  if (BlocklyApps.usingBlockly) {
+    Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
+    Blockly.mainBlockSpace.traceOn(false);
+  }
   BlocklyApps.reset(false);
 };
 
@@ -1167,7 +1244,9 @@ exports.domStringToBlock = function(blockDOMString) {
  * this block, does nothing.
  */
 exports.forceInsertTopBlock = function (input, blockType) {
-  if (input.indexOf(blockType) !== -1) {
+  input = input || '';
+
+  if (blockType === null || input.indexOf(blockType) !== -1) {
     return input;
   }
 
@@ -1504,51 +1583,62 @@ exports.workspaceCode = function(blockly) {
   return exports.strip(code);
 };
 
+exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativeParentObj, maxDepth) {
+  var retVal;
+  if (typeof maxDepth === "undefined") {
+    maxDepth = 4; // default to 4 levels of depth
+  }
+  if (maxDepth === 0) {
+    return interpreter.createPrimitive(undefined);
+  }
+  if (nativeVar instanceof Array) {
+    retVal = interpreter.createObject(interpreter.ARRAY);
+    for (var i = 0; i < nativeVar.length; i++) {
+      retVal.properties[i] = exports.marshalNativeToInterpreter(interpreter,
+                                                                nativeVar[i],
+                                                                null,
+                                                                maxDepth - 1);
+    }
+    retVal.length = nativeVar.length;
+  } else if (nativeVar instanceof Function) {
+    wrapper = exports.makeNativeMemberFunction(interpreter, nativeVar, nativeParentObj);
+    retVal = interpreter.createNativeFunction(wrapper);
+  } else if (nativeVar instanceof Object) {
+    // note Object must be checked after Function and Array (since they are also Objects)
+    if (interpreter.isa(nativeVar, interpreter.FUNCTION)) {
+      // Special case to see if we are trying to marshal an interpreter object
+      // (this currently happens when we store interpreter function objects in native
+      //  and return them back in nativeGetCallback)
+
+      // NOTE: this check could be expanded to check for other interpreter object types
+      // if we have reason to believe that we may be passing those back
+
+      retVal = nativeVar;
+    } else {
+      retVal = interpreter.createObject(interpreter.OBJECT);
+      for (var prop in nativeVar) {
+        interpreter.setProperty(retVal,
+                                prop,
+                                exports.marshalNativeToInterpreter(interpreter,
+                                                                   nativeVar[prop],
+                                                                   nativeVar,
+                                                                   maxDepth - 1));
+      }
+    }
+  } else {
+    retVal = interpreter.createPrimitive(nativeVar);
+  }
+  return retVal;
+};
+
 /**
  * Generate a native function wrapper for use with the JS interpreter.
  */
-exports.makeNativeMemberFunction = function (interpreter, nativeFunc, parentObj) {
+exports.makeNativeMemberFunction = function (interpreter, nativeFunc, nativeParentObj) {
   return function() {
     // Call the native function:
-    var retVal = nativeFunc.apply(parentObj, arguments);
-
-    // Now figure out what to do with the return value...
-
-    if (retVal instanceof Function) {
-      // Don't call createPrimitive() for functions
-      return retVal;
-    } else if (retVal instanceof Object) {
-      var newObj = interpreter.createObject(interpreter.OBJECT);
-      // Limited attempt to marshal back complex return values
-      // Special case: only one-level deep, only handling
-      // primitives and arrays of primitives
-      for (var prop in retVal) {
-        var isFuncOrObj = retVal[prop] instanceof Function ||
-                          retVal[prop] instanceof Object;
-        // replace properties with wrapped properties
-        if (retVal[prop] instanceof Array) {
-          var newArray = interpreter.createObject(interpreter.ARRAY);
-          for (var i = 0; i < retVal[prop].length; i++) {
-            newArray.properties[i] = interpreter.createPrimitive(retVal[prop][i]);
-          }
-          newArray.length = retVal[prop].length;
-          interpreter.setProperty(newObj, prop, newArray);
-        } else if (isFuncOrObj) {
-          // skipping over these - they could be objects that should
-          // be converted into interpreter objects. they could be native
-          // functions that should be converted. Or they could be objects
-          // that are already interpreter objects, which is what we assume
-          // for now:
-          interpreter.setProperty(newObj, prop, retVal[prop]);
-        } else {
-          // wrap as a primitive if it is not a function or object:
-          interpreter.setProperty(newObj, prop, interpreter.createPrimitive(retVal[prop]));
-        }
-      }
-      return newObj;
-    } else {
-      return interpreter.createPrimitive(retVal);
-    }
+    var nativeRetVal = nativeFunc.apply(nativeParentObj, arguments);
+    return exports.marshalNativeToInterpreter(interpreter, nativeRetVal, null);
   };
 };
 
@@ -1653,6 +1743,10 @@ exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
         var style = {color: '#FFFF22'};
         var line = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
         editor.clearLineMarks();
+        // NOTE: replace markLine with this new mark() call once we have a new
+        // version of droplet
+        
+        // editor.mark(line, start - cumulativeLength[line], style);
         editor.markLine(line, style);
       } else {
         var selection = editor.aceEditor.getSelection();
@@ -1975,6 +2069,9 @@ exports.displayFeedback = function(options) {
   }
   if (options.level.isK1) {
     feedback.className += " k1";
+  }
+  if (options.appDiv) {
+    feedback.appendChild(options.appDiv);
   }
 
   feedback.appendChild(
@@ -2700,6 +2797,9 @@ var getMissingRequiredBlocks = function () {
  * Do we have any floating blocks not attached to an event block or function block?
  */
 exports.hasExtraTopBlocks = function () {
+  if (BlocklyApps.editCode) {
+    return false;
+  }
   var topBlocks = Blockly.mainBlockSpace.getTopBlocks();
   for (var i = 0; i < topBlocks.length; i++) {
     // ignore disabled top blocks. we have a level turtle:2_7 that depends on
@@ -2722,6 +2822,12 @@ exports.hasExtraTopBlocks = function () {
  */
 exports.getTestResults = function(levelComplete, options) {
   options = options || {};
+  if (BlocklyApps.editCode) {
+    // TODO (cpirich): implement better test results for editCode
+    return levelComplete ?
+      BlocklyApps.TestResults.ALL_PASS :
+      BlocklyApps.TestResults.TOO_FEW_BLOCKS_FAIL;
+  }
   if (BlocklyApps.CHECK_FOR_EMPTY_BLOCKS && hasEmptyContainerBlocks()) {
     var type = getEmptyContainerBlock().type;
     if (type === 'procedures_defnoreturn' || type === 'procedures_defreturn') {
@@ -5974,10 +6080,16 @@ function elementsEquivalent(expected, given) {
 }
 
 /**
- * A list of attributes we want to ignore when comparing atributes, and a
+ * A list of attributes we want to ignore when comparing attributes, and a
  * function for easily determining whether an attribute is in the list.
  */
-var ignorableAttributes = ['deletable', 'movable', 'editable', 'inline'];
+var ignorableAttributes = [
+  'deletable',
+  'movable',
+  'editable',
+  'inline',
+  'uservisible'
+];
 ignorableAttributes.contains = function (attr) {
   return ignorableAttributes.indexOf(attr.name) !== -1;
 };
@@ -6079,6 +6191,7 @@ exports.load = function(assetUrl, id) {
     assetUrl: skinUrl,
     // Images
     avatar: skinUrl('avatar.png'),
+    avatar_2x: skinUrl('avatar_2x.png'),
     tiles: skinUrl('tiles.png'),
     goal: skinUrl('goal.png'),
     obstacle: skinUrl('obstacle.png'),
@@ -6086,6 +6199,8 @@ exports.load = function(assetUrl, id) {
     staticAvatar: skinUrl('static_avatar.png'),
     winAvatar: skinUrl('win_avatar.png'),
     failureAvatar: skinUrl('failure_avatar.png'),
+    decorationAnimation: skinUrl('decoration_animation.png'),
+    decorationAnimation_2x: skinUrl('decoration_animation_2x.png'),
     repeatImage: assetUrl('media/common_images/repeat-arrows.png'),
     leftArrow: assetUrl('media/common_images/moveleft.png'),
     downArrow: assetUrl('media/common_images/movedown.png'),
@@ -6124,6 +6239,11 @@ exports.load = function(assetUrl, id) {
     squigglyLine: assetUrl('media/common_images/squiggly.png'),
     swirlyLine: assetUrl('media/common_images/swirlyline.png'),
     randomPurpleIcon: assetUrl('media/common_images/random-purple.png'),
+    annaLine: assetUrl('media/common_images/annaline.png'),
+    elsaLine: assetUrl('media/common_images/elsaline.png'),
+    annaLine_2x: assetUrl('media/common_images/annaline_2x.png'),
+    elsaLine_2x: assetUrl('media/common_images/elsaline_2x.png'),
+
     // Sounds
     startSound: [skinUrl('start.mp3'), skinUrl('start.ogg')],
     winSound: [skinUrl('win.mp3'), skinUrl('win.ogg')],
@@ -6503,7 +6623,7 @@ with (locals || {}) { (function(){
   var msg = require('../../locale/fil_ph/common');
   var hideRunButton = locals.hideRunButton || false;
 ; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var instructions = function() {; buf.push('  <div id="bubble" class="clearfix">\n    <table id="prompt-table">\n      <tr>\n        <td id="prompt-icon-cell">\n          <img id="prompt-icon"/>\n        </td>\n        <td id="prompt-cell">\n          <p id="prompt">\n          </p>\n        </td>\n      </tr>\n    </table>\n    <div id="ani-gif-preview-wrapper">\n      <div id="ani-gif-preview">\n        <img id="play-button" src="', escape((26,  assetUrl('media/play-circle.png') )), '"/>\n      </div>\n    </div>\n  </div>\n');30; };; buf.push('\n');31; // A spot for the server to inject some HTML for help content.
-var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (38,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((44,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((45,  msg.runProgram() )), '</div>\n        <img src="', escape((46,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((49,  msg.resetProgram() )), '</div>\n        <img src="', escape((50,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');52; if (data.controls) { ; buf.push('\n      ', (53,  data.controls ), '\n      ');54; } ; buf.push('\n      ');55; if (data.extraControlRows) { ; buf.push('\n      ', (56,  data.extraControlRows ), '\n      ');57; } ; buf.push('\n    </div>\n\n    ');60; instructions() ; buf.push('\n    ');61; helpArea(data.helpHtml) ; buf.push('\n\n  </div>\n</div>\n\n');66; if (data.editCode) { ; buf.push('\n  <div id="blockly" style="display:none"></div>\n  <div id="codeWorkspace">\n');69; } else { ; buf.push('\n  <div id="blockly">\n');71; } ; buf.push('\n  <div id="headers" dir="', escape((72,  data.localeDirection )), '">\n    <div id="toolbox-header" class="blockly-header"><span>', escape((73,  msg.toolboxHeader() )), '</span></div>\n    <div id="workspace-header" class="blockly-header">\n      <span id="workspace-header-span">', escape((75,  msg.workspaceHeader())), ' </span>\n      <div id="blockCounter">\n        <div id="blockUsed" class=', escape((77,  data.blockCounterClass )), '>\n          ', escape((78,  data.blockUsed )), '\n        </div>\n        <span>&nbsp;/</span>\n        <span id="idealBlockNumber">', escape((81,  data.idealBlockNumber )), '</span>\n      </div>\n    </div>\n    <div id="show-code-header" class="blockly-header"><span>', escape((84,  msg.showCodeHeader() )), '</span></div>\n  </div>\n  ');86; if (data.editCode) { ; buf.push('\n    <div id="codeTextbox" contenteditable spellcheck=false></div>\n  ');88; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
+var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (38,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((44,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((45,  msg.runProgram() )), '</div>\n        <img src="', escape((46,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((49,  msg.resetProgram() )), '</div>\n        <img src="', escape((50,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');52; if (data.controls) { ; buf.push('\n      ', (53,  data.controls ), '\n      ');54; } ; buf.push('\n      ');55; if (data.extraControlRows) { ; buf.push('\n      ', (56,  data.extraControlRows ), '\n      ');57; } ; buf.push('\n    </div>\n\n    ');60; instructions() ; buf.push('\n    ');61; helpArea(data.helpHtml) ; buf.push('\n\n  </div>\n</div>\n\n');66; if (data.editCode) { ; buf.push('\n  <div id="codeWorkspace">\n');68; } else { ; buf.push('\n  <div id="blockly">\n');70; } ; buf.push('\n  <div id="headers" dir="', escape((71,  data.localeDirection )), '">\n    <div id="toolbox-header" class="blockly-header"><span>', escape((72,  msg.toolboxHeader() )), '</span></div>\n    <div id="workspace-header" class="blockly-header">\n      <span id="workspace-header-span">', escape((74,  msg.workspaceHeader())), ' </span>\n      <div id="blockCounter">\n        <div id="blockUsed" class=', escape((76,  data.blockCounterClass )), '>\n          ', escape((77,  data.blockUsed )), '\n        </div>\n        <span>&nbsp;/</span>\n        <span id="idealBlockNumber">', escape((80,  data.idealBlockNumber )), '</span>\n      </div>\n    </div>\n    <div id="show-code-header" class="blockly-header"><span>', escape((83,  msg.showCodeHeader() )), '</span></div>\n  </div>\n  ');85; if (data.editCode) { ; buf.push('\n    <div id="codeTextbox" contenteditable spellcheck=false></div>\n  ');87; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
 } 
 return buf.join('');
 };
@@ -7056,6 +7176,10 @@ exports.showTurtle = function(id) {
   this.log.push(['ST', id]);
 };
 
+exports.drawStamp = function(stamp, id) {
+  this.log.push(['stamp', stamp, id]);
+};
+
 },{"../base":2}],29:[function(require,module,exports){
 /**
  * Blockly Demo: Turtle Graphics
@@ -7100,18 +7224,30 @@ exports.install = function(blockly, blockInstallOptions) {
     return generator.variableDB_.getDistinctName(name, NAME_TYPE);
   };
 
-  // Create a smaller palette.
-  blockly.FieldColour.COLOURS = [
-    // Row 1.
-    Colours.BLACK, Colours.GREY,
-    Colours.KHAKI, Colours.WHITE,
-    // Row 2.
-    Colours.RED, Colours.PINK,
-    Colours.ORANGE, Colours.YELLOW,
-    // Row 3.
-    Colours.GREEN, Colours.BLUE,
-    Colours.AQUAMARINE, Colours.PLUM];
-  blockly.FieldColour.COLUMNS = 4;
+  if (skin.id == "anna" || skin.id == "elsa")
+  {
+    // Create a smaller palette.
+    blockly.FieldColour.COLOURS = [
+      Colours.FROZEN1, Colours.FROZEN2, Colours.FROZEN3,
+      Colours.FROZEN4, Colours.FROZEN5, Colours.FROZEN6,
+      Colours.FROZEN7, Colours.FROZEN8, Colours.FROZEN9];
+    blockly.FieldColour.COLUMNS = 3;
+
+  } else {
+
+    // Create a smaller palette.
+    blockly.FieldColour.COLOURS = [
+      // Row 1.
+      Colours.BLACK, Colours.GREY,
+      Colours.KHAKI, Colours.WHITE,
+      // Row 2.
+      Colours.RED, Colours.PINK,
+      Colours.ORANGE, Colours.YELLOW,
+      // Row 3.
+      Colours.GREEN, Colours.BLUE,
+      Colours.AQUAMARINE, Colours.PLUM];
+    blockly.FieldColour.COLUMNS = 4;
+  }
 
   // Block definitions.
   blockly.Blocks.draw_move_by_constant = {
@@ -7154,7 +7290,7 @@ exports.install = function(blockly, blockInstallOptions) {
   generator.draw_move_by_constant = function() {
     // Generate JavaScript for moving forward or backward the internal number of
     // pixels.
-    var value = window.parseFloat(this.getTitleValue('VALUE'));
+    var value = window.parseFloat(this.getTitleValue('VALUE')) || 0;
     return 'Turtle.' + this.getTitleValue('DIR') +
         '(' + value + ', \'block_id_' + this.id + '\');\n';
   };
@@ -7229,7 +7365,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
   generator.draw_turn_by_constant = function() {
     // Generate JavaScript for turning left or right.
-    var value = window.parseFloat(this.getTitleValue('VALUE'));
+    var value = window.parseFloat(this.getTitleValue('VALUE')) || 0;
     return 'Turtle.' + this.getTitleValue('DIR') +
         '(' + value + ', \'block_id_' + this.id + '\');\n';
   };
@@ -7894,7 +8030,6 @@ exports.install = function(blockly, blockInstallOptions) {
         this.id + '\');\n';
   };
 
-
   blockly.Blocks.draw_line_style_pattern = {
     // Block to handle event when an arrow button is pressed.
     helpUrl: '',
@@ -7916,7 +8051,12 @@ exports.install = function(blockly, blockInstallOptions) {
      [skin.rainbowMenu, 'rainbowLine'],  // set to property name for image within skin
      [skin.ropeMenu, 'ropeLine'],  // referenced as skin[pattern];
      [skin.squigglyMenu, 'squigglyLine'],
-     [skin.swirlyMenu, 'swirlyLine']];
+     [skin.swirlyMenu, 'swirlyLine'],
+     [skin.annaLine, 'annaLine'],
+     [skin.elsaLine, 'elsaLine'],
+     [skin.annaLine_2x, 'annaLine_2x'],
+     [skin.elsaLine_2x, 'elsaLine_2x'],
+     ];
 
   generator.draw_line_style_pattern = function() {
     // Generate JavaScript for setting the image for a patterned line.
@@ -7968,6 +8108,45 @@ exports.install = function(blockly, blockInstallOptions) {
         '(\'block_id_' + this.id + '\');\n';
   };
 
+  blockly.Blocks.turtle_stamp = {
+    helpUrl: '',
+    init: function() {
+      this.setHSV(312, 0.32, 0.62);
+      var dropdown;
+      var input = this.appendDummyInput();
+      input.appendTitle(msg.drawStamp());
+      dropdown = new blockly.FieldImageDropdown(this.VALUES, 50, 30);
+
+      input.appendTitle(dropdown, 'VALUE');
+
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.drawStamp());
+    }
+  };
+
+  blockly.Blocks.turtle_stamp.VALUES = [
+    [skin.assetUrl('snowflake.png'), 'snowflake1'],
+    [skin.assetUrl('snowflake.png'), 'snowflake2'],
+    [skin.assetUrl('snowflake.png'), 'snowflake3'],
+  ];
+
+  // Preload stamp images
+  Turtle.stamps = [];
+  for (var i = 0; i < blockly.Blocks.turtle_stamp.VALUES.length; i++) {
+    var url = blockly.Blocks.turtle_stamp.VALUES[i][0];
+    var key = blockly.Blocks.turtle_stamp.VALUES[i][1];
+    var img = new Image();
+    img.src = url;
+    Turtle.stamps[key] = img;
+  }
+
+  generator.turtle_stamp = function () {
+    return 'Turtle.drawStamp("' + this.getTitleValue('VALUE') +
+        '", \'block_id_' + this.id + '\');\n';
+  };
+
   customLevelBlocks.install(blockly, generator, gensym);
 };
 
@@ -8010,7 +8189,17 @@ exports.Colours = {
   GREEN: '#228b22',
   BLUE: '#0000cd',
   AQUAMARINE: '#7fffd4',
-  PLUM: '#843179'
+  PLUM: '#843179',
+
+  FROZEN1: "#d0fdfd",
+  FROZEN2: "#d0fdd0",
+  FROZEN3: "#d0d0fd",
+  FROZEN4: "#e0e0e0",
+  FROZEN5: '#ffffff',
+  FROZEN6: "#e8e8e8",
+  FROZEN7: "#bbd1e4",
+  FROZEN8: "#fdd0fd",
+  FROZEN9: "#aea4ff"
 };
 
 },{}],32:[function(require,module,exports){
@@ -8022,6 +8211,8 @@ var msg = require('../../locale/fil_ph/turtle');
 
 exports.install = function(blockly, generator, gensym) {
  installDrawASquare(blockly, generator, gensym);
+ installCreateACircle(blockly, generator, gensym);
+ installCreateASnowflakeBranch(blockly, generator, gensym);
  installDrawATriangle(blockly, generator, gensym);
  installDrawAHouse(blockly, generator, gensym);
  installDrawAFlower(blockly, generator, gensym);
@@ -8034,7 +8225,22 @@ exports.install = function(blockly, generator, gensym) {
  installDrawARhombus(blockly, generator, gensym);
  installDrawUpperWave(blockly, generator, gensym);
  installDrawLowerWave(blockly, generator, gensym);
+
+ installCreateASnowflakeDropdown(blockly, generator, gensym);
 };
+
+function createACircleCode (size, gensym, indent) {
+  var loopVar = gensym('count');
+  indent = indent || '';
+  return [
+    indent + '// create_a_circle',
+    indent + 'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 36; ' +
+    indent +       loopVar + '++) {',
+    indent + '  Turtle.moveForward(' + size + ');',
+    indent + '  Turtle.turnRight(10);',
+    indent + '}\n'].join('\n');
+}
+
 
 /**
  * Same as draw_a_square, except inputs are not inlined
@@ -8065,13 +8271,94 @@ function installDrawASquare(blockly, generator, gensym) {
     var loopVar = gensym('count');
     return [
         '// draw_a_square',
-        'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 4; ' +
+        'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 5; ' +
               loopVar + '++) {',
         '  Turtle.moveForward(' + value_length + ');',
         '  Turtle.turnRight(90);',
         '}\n'].join('\n');
   };
 }
+
+/**
+ * create_a_circle and create_a_circle_size
+ * first defaults to size 10, second provides a size param
+ */
+function installCreateACircle(blockly, generator, gensym) {
+  blockly.Blocks.create_a_circle = {
+    // Draw a square.
+    init: function() {
+      this.setHSV(94, 0.84, 0.60);
+      this.appendDummyInput()
+          .appendTitle(msg.createACircle());
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip('');
+    }
+  };
+
+  blockly.Blocks.create_a_circle_size = {
+    // Draw a square.
+    init: function() {
+      this.setHSV(94, 0.84, 0.60);
+      this.appendDummyInput()
+          .appendTitle(msg.createACircle());
+      this.appendValueInput('VALUE')
+          .setAlign(blockly.ALIGN_RIGHT)
+          .setCheck('Number')
+              .appendTitle(msg.sizeParameter() + ':');
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip('');
+    }
+  };
+
+  generator.create_a_circle = function() {
+    return createACircleCode(10, gensym);
+  };
+
+  generator.create_a_circle_size = function() {
+    var size = generator.valueToCode(this, 'VALUE', generator.ORDER_ATOMIC);
+    return createACircleCode(size, gensym);
+  };
+}
+
+/**
+ * create_a_snowflower
+ */
+function installCreateASnowflakeBranch(blockly, generator, gensym) {
+  blockly.Blocks.create_a_snowflake_branch = {
+    // Draw a square.
+    init: function() {
+      this.setHSV(94, 0.84, 0.60);
+      this.appendDummyInput()
+          .appendTitle(msg.createASnowflakeBranch());
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip('');
+    }
+  };
+
+  generator.create_a_snowflake_branch = function() {
+    var loopVar = gensym('count');
+    var loopVar2 = gensym('count');
+    return [
+      '// create_a_snowflake_branch',
+      'Turtle.jumpForward(90);',
+      'Turtle.turnLeft(45);',
+      'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 3; ' + loopVar + '++) {',
+      '  for (var ' + loopVar2 + ' = 0; ' + loopVar2 + ' < 3; ' + loopVar2 + '++) {',
+      '    Turtle.moveForward(30);',
+      '    Turtle.moveBackward(30);',
+      '    Turtle.turnRight(45);',
+      '  }',
+      '  Turtle.turnLeft(90);',
+      '  Turtle.moveBackward(30);',
+      '  Turtle.turnLeft(45);',
+      '}',
+      'Turtle.turnRight(45);\n'].join('\n');
+  };
+}
+
 
 /**
  * Draw a rhombus function call block
@@ -8570,6 +8857,104 @@ function installDrawLowerWave(blockly, generator, gensym) {
       '  Turtle.moveForward(' + value_length + ');',
       '  Turtle.turnLeft(18);',
       '}\n'].join('\n');
+  };
+}
+
+function installCreateASnowflakeDropdown(blockly, generator, gensym) {
+  var snowflakes = [
+    [msg.createSnowflakeSquare(), 'square'],
+    [msg.createSnowflakeParallelogram(), 'parallelogram'],
+    [msg.createSnowflakeLine(), 'line'],
+    [msg.createSnowflakeSpiral(), 'spiral'],
+    [msg.createSnowflakeFlower(), 'flower'],
+    [msg.createSnowflakeFractal(), 'fractal']
+  ];
+
+  blockly.Blocks.create_snowflake_dropdown = {
+    init: function () {
+      this.setHSV(94, 0.84, 0.60);
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldDropdown(snowflakes), 'TYPE');
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip('');
+    }
+  };
+
+  generator.create_snowflake_dropdown = function () {
+    var loopVar = gensym('count');
+    var loopVar2 = gensym('count');
+    var loopVar3 = gensym('count');
+    var color_random = generator.colour_random()[0];
+
+    var type = this.getTitleValue('TYPE');
+    switch (type) {
+      case 'fractal':
+        return [
+          'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 8; ' + loopVar + '++) {',
+          '  Turtle.jumpForward(45);',
+          '  Turtle.turnLeft(45);',
+          '  for (var ' + loopVar2 + ' = 0; ' + loopVar2 + ' < 3; ' + loopVar2 + '++) {',
+          '    for (var ' + loopVar3 + ' = 0; ' + loopVar3 + ' < 3; ' + loopVar3 + '++) {',
+          '      Turtle.moveForward(15);',
+          '      Turtle.moveBackward(15);',
+          '      Turtle.turnRight(45);',
+          '    }',
+          '    Turtle.turnLeft(90);',
+          '    Turtle.moveBackward(15);',
+          '    Turtle.turnLeft(45);',
+          '  }',
+          '  Turtle.turnRight(90);',
+          '}\n'].join('\n');
+
+      case 'flower':
+        return [
+          'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 5; ' + loopVar + '++) {',
+          createACircleCode(2, gensym, '  '),
+          createACircleCode(4, gensym, '  '),
+          '  Turtle.turnRight(72);',
+          '}\n'].join('\n');
+
+      case 'spiral':
+        return [
+          'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 20; ' + loopVar + '++) {',
+          createACircleCode(3, gensym, '  '),
+          '  Turtle.moveForward(20);',
+          '  Turtle.turnRight(18);',
+          '}\n'].join('\n');
+
+      case 'line':
+        return [
+          'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 90; ' + loopVar + '++) {',
+          '  Turtle.penColour(' + color_random + ');',
+          '  Turtle.moveForward(50);',
+          '  Turtle.moveBackward(50);',
+          '  Turtle.turnRight(4);',
+          '}',
+          'Turtle.penColour("#FFFFFF");\n'].join('\n');
+
+      case 'parallelogram':
+        return [
+          'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 10; ' + loopVar + '++) {',
+          '  for (var ' + loopVar2 + ' = 0; ' + loopVar2 + ' < 2; ' + loopVar2 + '++) {',
+          '    Turtle.moveForward(50);',
+          '    Turtle.turnRight(60);',
+          '    Turtle.moveForward(50);',
+          '    Turtle.turnRight(120);',
+          '  }',
+          '  Turtle.turnRight(36);',
+          '}\n'].join('\n');
+
+      case 'square':
+        return [
+          'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 10; ' + loopVar + '++) {',
+          '  for (var ' + loopVar2 + ' = 0; ' + loopVar2 + ' < 4; ' + loopVar2 + '++) {',
+          '    Turtle.moveForward(50);',
+          '    Turtle.turnRight(90);',
+          '  }',
+          '  Turtle.turnRight(36);',
+          '}\n'].join('\n');
+    }
   };
 }
 
@@ -9962,11 +10347,27 @@ Turtle.avatarImage = new Image();
 Turtle.numberAvatarHeadings = undefined;
 
 /**
+ * The avatar animation decoration image
+ */
+Turtle.decorationAnimationImage = new Image();
+
+/**
  * Drawing with a pattern
  */
 
 Turtle.patternForPaths = new Image();
 Turtle.isDrawingWithPattern = false;
+
+function backingScale(context) {
+  if ('devicePixelRatio' in window) {
+    if (window.devicePixelRatio > 1) {
+      return window.devicePixelRatio;
+    }
+  }
+  return 1;
+}
+
+var retina = 1;
 
 /**
  * Initialize Blockly and the turtle.  Called on page load.
@@ -9976,11 +10377,56 @@ Turtle.init = function(config) {
   skin = config.skin;
   level = config.level;
 
+  if (skin.id == "anna" || skin.id == "elsa")
+  {
+    retina = backingScale();
+
+    // We don't support ratios other than 2 right now (sorry!) so fall back to 1.
+    if (retina != 2)
+      retina = 1;
+
+    if (skin.id == "elsa")
+    {
+      turtleNumFrames = 20;
+    }
+    else if (skin.id == "anna")
+    {
+      turtleNumFrames = 10;
+    }
+
+    // let's try adding a background image
+    level.images = [{}];
+    if (retina > 1) {
+      level.images[0].filename = 'background_2x.jpg';
+    }
+    else {
+      level.images[0].filename = 'background.jpg';
+    }
+
+    level.images[0].position = [ 0, 0 ];
+    level.images[0].scale = 1;
+  }
+
   config.grayOutUndeletableBlocks = true;
   config.forceInsertTopBlock = 'when_run';
 
-  Turtle.AVATAR_HEIGHT = 51;
-  Turtle.AVATAR_WIDTH = 70;
+  if (skin.id == "anna")
+  {
+    Turtle.AVATAR_WIDTH = 73;
+    Turtle.AVATAR_HEIGHT = 100;
+  }
+  else if (skin.id == "elsa")
+  {
+    Turtle.AVATAR_WIDTH = 73;
+    Turtle.AVATAR_HEIGHT = 100;
+    Turtle.DECORATIONANIMATION_WIDTH = 85;
+    Turtle.DECORATIONANIMATION_HEIGHT = 85;
+  }
+  else
+  {
+    Turtle.AVATAR_WIDTH = 70;
+    Turtle.AVATAR_HEIGHT = 51;
+  }
 
   config.html = page({
     assetUrl: BlocklyApps.assetUrl,
@@ -9995,16 +10441,18 @@ Turtle.init = function(config) {
   });
 
   config.loadAudio = function() {
-    Blockly.loadAudio_(skin.winSound, 'win');
-    Blockly.loadAudio_(skin.startSound, 'start');
-    Blockly.loadAudio_(skin.failureSound, 'failure');
+    BlocklyApps.loadAudio(skin.winSound, 'win');
+    BlocklyApps.loadAudio(skin.startSound, 'start');
+    BlocklyApps.loadAudio(skin.failureSound, 'failure');
   };
 
   config.afterInject = function() {
-    // Add to reserved word list: API, local variables in execution evironment
-    // (execute) and the infinite loop detection function.
-    //XXX Not sure if this is still right.
-    Blockly.JavaScript.addReservedWords('Turtle,code');
+    if (BlocklyApps.usingBlockly) {
+      // Add to reserved word list: API, local variables in execution evironment
+      // (execute) and the infinite loop detection function.
+      //XXX Not sure if this is still right.
+      Blockly.JavaScript.addReservedWords('Turtle,code');
+    }
 
     // Helper for creating canvas elements.
     var createCanvas = function(id, width, height) {
@@ -10016,32 +10464,64 @@ Turtle.init = function(config) {
     };
 
     // Create hidden canvases.
-    Turtle.ctxAnswer = createCanvas('answer', 400, 400).getContext('2d');
-    Turtle.ctxImages = createCanvas('images', 400, 400).getContext('2d');
-    Turtle.ctxPredraw = createCanvas('predraw', 400, 400).getContext('2d');
-    Turtle.ctxScratch = createCanvas('scratch', 400, 400).getContext('2d');
-    Turtle.ctxFeedback = createCanvas('feedback', 154, 154).getContext('2d');
+    Turtle.ctxAnswer = createCanvas('answer', 400 * retina, 400 * retina).getContext('2d');
+    Turtle.ctxImages = createCanvas('images', 400 * retina, 400 * retina).getContext('2d');
+    Turtle.ctxPredraw = createCanvas('predraw', 400 * retina, 400 * retina).getContext('2d');
+    Turtle.ctxScratch = createCanvas('scratch', 400 * retina, 400 * retina).getContext('2d');
+    Turtle.ctxPattern = createCanvas('pattern', 400 * retina, 400 * retina).getContext('2d');
+    Turtle.ctxFeedback = createCanvas('feedback', 154 * retina, 154 * retina).getContext('2d');
 
     // Create display canvas.
-    var display = createCanvas('display', 400, 400);
+    var display = createCanvas('display', 400 * retina, 400 * retina);
+
+    if (retina > 1)
+    {
+      display.style.width = '400px';
+      display.style.height = '400px';
+    }
+
     var visualization = document.getElementById('visualization');
     visualization.appendChild(display);
     Turtle.ctxDisplay = display.getContext('2d');
 
+
+    if (skin.id == "anna" || skin.id == "elsa") {
+      Blockly.JavaScript.colour_random = function() {
+        // Generate a random colour.
+        if (!Blockly.JavaScript.definitions_.colour_random) {
+          var functionName = Blockly.JavaScript.variableDB_.getDistinctName(
+              'colour_random', Blockly.Generator.NAME_TYPE);
+          Blockly.JavaScript.colour_random.functionName = functionName;
+          var func = [];
+          func.push('function ' + functionName + '() {');
+          func.push('   var colors = ' + JSON.stringify(Blockly.FieldColour.COLOURS) + ';');
+          func.push('  return colors[Math.floor(Math.random()*colors.length)];');
+          func.push('}');
+          Blockly.JavaScript.definitions_.colour_random = func.join('\n');
+        }
+        var code = Blockly.JavaScript.colour_random.functionName + '()';
+        return [code, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+      };
+    }
+
     // Set their initial contents.
     Turtle.loadTurtle();
     Turtle.drawImages();
+    Turtle.isDrawingAnswer_ = true;
     Turtle.drawAnswer();
+    Turtle.isDrawingAnswer_ = false;
     if (level.predraw_blocks) {
       Turtle.isPredrawing_ = true;
       Turtle.drawBlocksOnCanvas(level.predraw_blocks, Turtle.ctxPredraw);
       Turtle.isPredrawing_ = false;
     }
 
+    Turtle.loadDecorationAnimation();
+
     // pre-load image for line pattern block. Creating the image object and setting source doesn't seem to be
     // enough in this case, so we're actually creating and reusing the object within the document body.
 
-    if (config.level.edit_blocks)
+    if ((BlocklyApps.usingBlockly && config.level.edit_blocks) || skin.id == "anna" || skin.id == "elsa")
     {
       var imageContainer = document.createElement('div');
       imageContainer.style.display='none';
@@ -10079,7 +10559,8 @@ Turtle.drawLogOnCanvas = function(log, canvas) {
   BlocklyApps.reset();
   while (log.length) {
     var tuple = log.shift();
-    Turtle.step(tuple[0], tuple.splice(1));
+    Turtle.step(tuple[0], tuple.splice(1), {smoothAnimate: false});
+    clearTuple();
   }
   canvas.globalCompositeOperation = 'copy';
   canvas.drawImage(Turtle.ctxScratch.canvas, 0, 0);
@@ -10087,11 +10568,18 @@ Turtle.drawLogOnCanvas = function(log, canvas) {
 };
 
 Turtle.drawBlocksOnCanvas = function(blocks, canvas) {
-  var domBlocks = Blockly.Xml.textToDom(blocks);
-  Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, domBlocks);
-  var code = Blockly.Generator.blockSpaceToCode('JavaScript');
+  var code;
+  if (BlocklyApps.usingBlockly) {
+    var domBlocks = Blockly.Xml.textToDom(blocks);
+    Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, domBlocks);
+    code = Blockly.Generator.blockSpaceToCode('JavaScript');
+  } else {
+    code = blocks;
+  }
   Turtle.evalCode(code);
-  Blockly.mainBlockSpace.clear();
+  if (BlocklyApps.usingBlockly) {
+    Blockly.mainBlockSpace.clear();
+  }
   Turtle.drawCurrentBlocksOnCanvas(canvas);
 };
 
@@ -10104,14 +10592,26 @@ Turtle.drawCurrentBlocksOnCanvas = function(canvas) {
  * Code from http://stackoverflow.com/questions/5495952. Thanks, Phrogz.
  * @param {string} filename Relative path to image.
  * @param {!Array} position An x-y pair.
+ * @param {number} optional scale at which image is drawn
  */
-Turtle.placeImage = function(filename, position) {
+Turtle.placeImage = function(filename, position, scale) {
   var img = new Image();
   img.onload = function() {
-    Turtle.ctxImages.drawImage(img, position[0], position[1]);
+    if (scale) {
+      Turtle.ctxImages.drawImage(img, position[0] * retina, position[1] * retina, img.width, img.height, 0, 0, img.width * scale, img.height * scale);
+    } else {
+      Turtle.ctxImages.drawImage(img, position[0] * retina, position[1] * retina);
+    }
     Turtle.display();
   };
-  img.src = BlocklyApps.assetUrl('media/turtle/' + filename);
+  if (skin.id == "anna" || skin.id == "elsa")
+  {
+    img.src = skin.assetUrl(filename);
+  }
+  else
+  {
+    img.src = BlocklyApps.assetUrl('media/turtle/' + filename);
+  }
 };
 
 /**
@@ -10123,7 +10623,7 @@ Turtle.drawImages = function() {
   }
   for (var i = 0; i < level.images.length; i++) {
     var image = level.images[i];
-    Turtle.placeImage(image.filename, image.position);
+    Turtle.placeImage(image.filename, image.position, image.scale);
   }
   Turtle.ctxImages.globalCompositeOperation = 'copy';
   Turtle.ctxImages.drawImage(Turtle.ctxScratch.canvas, 0, 0);
@@ -10137,31 +10637,120 @@ Turtle.loadTurtle = function() {
   Turtle.avatarImage.onload = function() {
     Turtle.display();
   };
-  Turtle.avatarImage.src = skin.avatar;
-  Turtle.numberAvatarHeadings = 180;
-  Turtle.avatarImage.height = Turtle.AVATAR_HEIGHT;
-  Turtle.avatarImage.width = Turtle.AVATAR_WIDTH;
+  if ((skin.id == "anna" || skin.id == "elsa") && retina > 1)
+    Turtle.avatarImage.src = skin.avatar_2x;
+  else
+    Turtle.avatarImage.src = skin.avatar;
+  if (skin.id == "anna")
+    Turtle.numberAvatarHeadings = 36;
+  else if (skin.id == "elsa")
+    Turtle.numberAvatarHeadings = 18;
+  else
+    Turtle.numberAvatarHeadings = 180;
+  Turtle.avatarImage.spriteHeight = Turtle.AVATAR_HEIGHT;
+  Turtle.avatarImage.spriteWidth = Turtle.AVATAR_WIDTH;
 };
+
+/**
+ * Initial the turtle animation deocration on load.
+ */
+Turtle.loadDecorationAnimation = function() {
+  if (skin.id == "elsa")
+  {
+    if (retina > 1)
+      Turtle.decorationAnimationImage.src = skin.decorationAnimation_2x;
+    else
+      Turtle.decorationAnimationImage.src = skin.decorationAnimation;
+    Turtle.decorationAnimationImage.height = Turtle.DECORATIONANIMATION_HEIGHT;
+    Turtle.decorationAnimationImage.width = Turtle.DECORATIONANIMATION_WIDTH;
+  }
+};
+
+var turtleNumFrames;
+var turtleFrame = 0;
+
 
 /**
  * Draw the turtle image based on Turtle.x, Turtle.y, and Turtle.heading.
  */
 Turtle.drawTurtle = function() {
+  var sourceY;
   // Computes the index of the image in the sprite.
   var index = Math.floor(Turtle.heading * Turtle.numberAvatarHeadings / 360);
-  var sourceX = Turtle.avatarImage.width * index;
-  var sourceY = 0;
-  var sourceWidth = Turtle.avatarImage.width;
-  var sourceHeight = Turtle.avatarImage.height;
-  var destWidth = Turtle.avatarImage.width;
-  var destHeight = Turtle.avatarImage.height;
+  if (skin.id == "anna" || skin.id == "elsa") {
+    // the rotations in the sprite sheet go in the opposite direction.
+    index = Turtle.numberAvatarHeadings - index;
+
+    // and they are 180 degrees out of phase.
+    index = (index + Turtle.numberAvatarHeadings/2) % Turtle.numberAvatarHeadings;
+  }
+  var sourceX = Turtle.avatarImage.spriteWidth * index;
+  if (skin.id == "anna" || skin.id == "elsa") {
+    sourceY = Turtle.avatarImage.spriteHeight * turtleFrame;
+    turtleFrame = (turtleFrame + 1) % turtleNumFrames;
+  } else {
+    sourceY = 0;
+  }
+  var sourceWidth = Turtle.avatarImage.spriteWidth;
+  var sourceHeight = Turtle.avatarImage.spriteHeight;
+  var destWidth = Turtle.avatarImage.spriteWidth;
+  var destHeight = Turtle.avatarImage.spriteHeight;
   var destX = Turtle.x - destWidth / 2;
   var destY = Turtle.y - destHeight + 7;
 
-  Turtle.ctxDisplay.drawImage(Turtle.avatarImage, sourceX, sourceY,
-                              sourceWidth, sourceHeight, destX, destY,
-                              destWidth, destHeight);
+  if (Turtle.avatarImage.width === 0 || Turtle.avatarImage.height === 0)
+    return;
+
+  if (sourceX * retina < 0 || 
+      sourceY * retina < 0 ||
+      sourceX * retina + sourceWidth  * retina -0 > Turtle.avatarImage.width ||
+      sourceY * retina + sourceHeight * retina > Turtle.avatarImage.height)
+  {
+    if (console.log) {
+      console.log("drawImage is out of source bounds!");
+    }
+    return;
+  }
+
+  Turtle.ctxDisplay.drawImage(
+    Turtle.avatarImage, 
+    Math.round(sourceX * retina), Math.round(sourceY * retina),
+    sourceWidth * retina - 0, sourceHeight * retina, 
+    Math.round(destX * retina), Math.round(destY * retina),
+    destWidth * retina - 0, destHeight * retina);
+
+  /* console.log(Math.round(sourceX * retina), Math.round(sourceY * retina),
+                              sourceWidth * retina, sourceHeight * retina, Math.round(destX * retina), Math.round(destY * retina),
+                              destWidth * retina, destHeight * retina); */
 };
+
+var turtleNumFrames = 19;
+var turtleFrame = 0;
+
+Turtle.drawDecorationAnimation = function() {
+  if (skin.id == "elsa") {
+    var index = (turtleFrame + 10) % turtleNumFrames;
+    var sourceX = Turtle.decorationAnimationImage.width * index;
+    var sourceY = 0;
+    var sourceWidth = Turtle.decorationAnimationImage.width;
+    var sourceHeight = Turtle.decorationAnimationImage.height;
+    var destWidth = sourceWidth;
+    var destHeight = sourceHeight;
+    var destX = Turtle.x - destWidth / 2 - 15;
+    var destY = Turtle.y - destHeight / 2 - 100;
+
+    Turtle.ctxDisplay.drawImage(
+      Turtle.decorationAnimationImage, 
+      Math.round(sourceX * retina), Math.round(sourceY * retina),
+      sourceWidth * retina, sourceHeight * retina, 
+      Math.round(destX * retina), Math.round(destY * retina),
+      destWidth * retina, destHeight * retina);
+
+    //turtleFrame = (turtleFrame + 1) % turtleNumFrames;
+  }
+
+};
+
 
 /**
  * Reset the turtle to the start position, clear the display, and kill any
@@ -10187,9 +10776,21 @@ BlocklyApps.reset = function(ignore) {
   }
   // Clear the display.
   Turtle.ctxScratch.canvas.width = Turtle.ctxScratch.canvas.width;
-  Turtle.ctxScratch.strokeStyle = '#000000';
-  Turtle.ctxScratch.fillStyle = '#000000';
-  Turtle.ctxScratch.lineWidth = 5;
+  Turtle.ctxPattern.canvas.width = Turtle.ctxPattern.canvas.width;
+  if (skin.id == "anna") {
+    Turtle.ctxScratch.strokeStyle = 'rgb(255,255,255)';
+    Turtle.ctxScratch.fillStyle = 'rgb(255,255,255)';
+    Turtle.ctxScratch.lineWidth = 2 * retina;
+  } else if (skin.id == "elsa") {
+    Turtle.ctxScratch.strokeStyle = 'rgb(255,255,255)';
+    Turtle.ctxScratch.fillStyle = 'rgb(255,255,255)';
+    Turtle.ctxScratch.lineWidth = 2 * retina;
+  } else {
+    Turtle.ctxScratch.strokeStyle = '#000000';
+    Turtle.ctxScratch.fillStyle = '#000000';
+    Turtle.ctxScratch.lineWidth = 5;
+  }
+
   Turtle.ctxScratch.lineCap = 'round';
   Turtle.ctxScratch.font = 'normal 18pt Arial';
   Turtle.display();
@@ -10198,8 +10799,20 @@ BlocklyApps.reset = function(ignore) {
   Turtle.ctxFeedback.clearRect(
       0, 0, Turtle.ctxFeedback.canvas.width, Turtle.ctxFeedback.canvas.height);
 
-  // Reset to empty pattern
-  Turtle.setPattern(null);
+  if (skin.id == "anna") {
+    if (retina > 1)
+      Turtle.setPattern(document.getElementById("annaLine_2x"));
+    else
+      Turtle.setPattern(document.getElementById("annaLine"));
+  } else if (skin.id == "elsa") {
+    if (retina > 1)
+      Turtle.setPattern(document.getElementById("elsaLine_2x"));
+    else
+      Turtle.setPattern(document.getElementById("elsaLine"));
+  } else {
+    // Reset to empty pattern
+    Turtle.setPattern(null);
+  }
 
   // Kill any task.
   if (Turtle.pid) {
@@ -10213,7 +10826,17 @@ BlocklyApps.reset = function(ignore) {
 
   // Stop the looping sound.
   BlocklyApps.stopLoopingAudio('start');
+
+  clearTuple();
 };
+
+function clearTuple()
+{
+  Turtle.stepStartX = Turtle.x;
+  Turtle.stepStartY = Turtle.y;
+  jumpDistanceCovered = 0;
+}
+
 
 /**
  * Copy the scratch canvas to the display canvas. Add a turtle marker.
@@ -10228,18 +10851,26 @@ Turtle.display = function() {
   Turtle.ctxDisplay.fillStyle = style;
 
   Turtle.ctxDisplay.globalCompositeOperation = 'copy';
-  // Draw the answer layer.
-  Turtle.ctxDisplay.globalAlpha = 0.15;
-  Turtle.ctxDisplay.drawImage(Turtle.ctxAnswer.canvas, 0, 0);
-  Turtle.ctxDisplay.globalAlpha = 1;
-
   // Draw the images layer.
   Turtle.ctxDisplay.globalCompositeOperation = 'source-over';
   Turtle.ctxDisplay.drawImage(Turtle.ctxImages.canvas, 0, 0);
 
+  // Draw the answer layer.
+  if (skin.id == "anna" || skin.id == "elsa") {
+    Turtle.ctxDisplay.globalAlpha = 0.4;
+  } else {
+    Turtle.ctxDisplay.globalAlpha = 0.15;
+  }
+  Turtle.ctxDisplay.drawImage(Turtle.ctxAnswer.canvas, 0, 0);
+  Turtle.ctxDisplay.globalAlpha = 1;
+
   // Draw the predraw layer.
   Turtle.ctxDisplay.globalCompositeOperation = 'source-over';
   Turtle.ctxDisplay.drawImage(Turtle.ctxPredraw.canvas, 0, 0);
+
+  // Draw the pattern layer.
+  Turtle.ctxDisplay.globalCompositeOperation = 'source-over';
+  Turtle.ctxDisplay.drawImage(Turtle.ctxPattern.canvas, 0, 0);
 
   // Draw the user layer.
   Turtle.ctxDisplay.globalCompositeOperation = 'source-over';
@@ -10248,6 +10879,7 @@ Turtle.display = function() {
   // Draw the turtle.
   if (Turtle.visible) {
     Turtle.drawTurtle();
+    Turtle.drawDecorationAnimation();
   }
 };
 
@@ -10257,7 +10889,9 @@ Turtle.display = function() {
 BlocklyApps.runButtonClick = function() {
   BlocklyApps.toggleRunReset('reset');
   document.getElementById('spinner').style.visibility = 'visible';
-  Blockly.mainBlockSpace.traceOn(true);
+  if (BlocklyApps.usingBlockly) {
+    Blockly.mainBlockSpace.traceOn(true);
+  }
   BlocklyApps.attempts++;
   Turtle.execute();
 };
@@ -10331,22 +10965,44 @@ Turtle.execute = function() {
   // animate the transcript.
   Turtle.pid = window.setTimeout(Turtle.animate, 100);
 
-  // Disable toolbox while running
-  Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
+  if (BlocklyApps.usingBlockly) {
+    // Disable toolbox while running
+    Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
+  }
 };
+
+// Divide each jump into substeps so that we can animate every movement.
+var jumpDistance = 5;
+var jumpDistanceCovered;
 
 /**
  * Attempt to execute one command from the log of API commands.
  */
 function executeTuple () {
-  var tuple = api.log.shift();
-  if (tuple) {
-    var command = tuple.shift();
-    BlocklyApps.highlight(String(tuple.pop()));
-    Turtle.step(command, tuple);
+
+  if (api.log.length > 0)
+  {
+    var tuple = api.log[0];
+    var command = tuple[0];
+    var id = tuple[tuple.length-1];
+
+    BlocklyApps.highlight(String(id));
+    var smoothAnimate = skin.id == "anna" || skin.id == "elsa";
+    var tupleDone = Turtle.step(command, tuple.slice(1), {smoothAnimate: smoothAnimate});
     Turtle.display();
+
+    if (tupleDone)
+    {
+      api.log.shift();
+      clearTuple();
+    }
+
+    return true;
   }
-  return Boolean(tuple);
+  else
+  {
+    return false;
+  }
 }
 
 /**
@@ -10354,7 +11010,9 @@ function executeTuple () {
  */
 function finishExecution () {
   document.getElementById('spinner').style.visibility = 'hidden';
-  Blockly.mainBlockSpace.highlightBlock(null);
+  if (BlocklyApps.usingBlockly) {
+    Blockly.mainBlockSpace.highlightBlock(null);
+  }
   Turtle.checkAnswer();
 }
 
@@ -10379,6 +11037,7 @@ Turtle.animate = function() {
       catch(err) {
         Turtle.executionError = err;
         finishExecution();
+        return;
       }
       stepped = Turtle.interpreter.step();
 
@@ -10401,36 +11060,95 @@ Turtle.animate = function() {
 
   // Scale the speed non-linearly, to give better precision at the fast end.
   var stepSpeed = 1000 * Math.pow(1 - Turtle.speedSlider.getValue(), 2);
+  if (skin.id == "anna" || skin.id == "elsa")
+  {
+    stepSpeed /= 10;
+  }
   Turtle.pid = window.setTimeout(Turtle.animate, stepSpeed);
+};
+
+
+Turtle.doSmoothAnimate = function(options, distance)
+{
+  var tupleDone = true;
+
+  if (options && options.smoothAnimate)
+  {
+    var fullDistance = distance;
+
+    if (fullDistance < 0) {
+      // Going backward.
+      if (jumpDistanceCovered - jumpDistance <= fullDistance) {
+        // clamp at maximum
+        distance = fullDistance - jumpDistanceCovered;
+        jumpDistanceCovered = fullDistance;
+      } else {
+        distance = -jumpDistance;
+        jumpDistanceCovered -= jumpDistance;
+        tupleDone = false;
+      }
+
+    } else {
+      // Going foward.
+      if (jumpDistanceCovered + jumpDistance >= fullDistance) {
+        // clamp at maximum
+        distance = fullDistance - jumpDistanceCovered;
+        jumpDistanceCovered = fullDistance;
+      } else {
+        distance = jumpDistance;
+        jumpDistanceCovered += jumpDistance;
+        tupleDone = false;
+      }
+    }
+  }
+
+  return { tupleDone: tupleDone, distance: distance };
 };
 
 /**
  * Execute one step.
  * @param {string} command Logo-style command (e.g. 'FD' or 'RT').
  * @param {!Array} values List of arguments for the command.
+ * @param {number} fraction How much of this step's distance do we draw?
+ * @param {object} single option for now: smoothAnimate (true/false)
  */
-Turtle.step = function(command, values) {
+Turtle.step = function(command, values, options) {
+  var tupleDone = true;
+  var result;
+
   switch (command) {
     case 'FD':  // Forward
-      Turtle.moveForward_(values[0]);
+      distance = values[0];
+      result = Turtle.doSmoothAnimate(options, distance);
+      tupleDone = result.tupleDone;
+      Turtle.moveForward_(result.distance);
       break;
     case 'JF':  // Jump forward
-      Turtle.jumpForward_(values[0]);
+      distance = values[0];
+      result = Turtle.doSmoothAnimate(options, distance);
+      tupleDone = result.tupleDone;
+      Turtle.jumpForward_(result.distance);
       break;
     case 'MV':  // Move (direction)
       var distance = values[0];
       var heading = values[1];
+      result = Turtle.doSmoothAnimate(options, distance);
+      tupleDone = result.tupleDone;
       Turtle.setHeading_(heading);
-      Turtle.moveForward_(distance);
+      Turtle.moveForward_(result.distance);
       break;
     case 'JD':  // Jump (direction)
       distance = values[0];
-      heading = values[1];
+      result = Turtle.doSmoothAnimate(options, distance);
+      tupleDone = result.tupleDone;
       Turtle.setHeading_(heading);
-      Turtle.jumpForward_(distance);
+      Turtle.jumpForward_(result.distance);
       break;
     case 'RT':  // Right Turn
-      Turtle.turnByDegrees_(values[0]);
+      distance = values[0];
+      result = Turtle.doSmoothAnimate(options, distance);
+      tupleDone = result.tupleDone;
+      Turtle.turnByDegrees_(result.distance);
       break;
     case 'DP':  // Draw Print
       Turtle.ctxScratch.save();
@@ -10454,7 +11172,9 @@ Turtle.step = function(command, values) {
     case 'PC':  // Pen Colour
       Turtle.ctxScratch.strokeStyle = values[0];
       Turtle.ctxScratch.fillStyle = values[0];
-      Turtle.isDrawingWithPattern = false;
+      if (skin.id != "anna" && skin.id != "elsa") {
+        Turtle.isDrawingWithPattern = false;
+      }
       break;
     case 'PS':  // Pen style with image
       if (!values[0] || values[0] == 'DEFAULT') {
@@ -10469,7 +11189,17 @@ Turtle.step = function(command, values) {
     case 'ST':  // Show Turtle
       Turtle.visible = true;
       break;
+    case 'stamp':
+      var img = Turtle.stamps[values[0]];
+      var width = img.width / 2;
+      var height = img.height / 2;
+      var x = Turtle.x - width / 2;
+      var y = Turtle.y - height / 2;
+      Turtle.ctxScratch.drawImage(img, x, y, width, height);
+      break;
   }
+
+  return tupleDone;
 };
 
 Turtle.setPattern = function (pattern) {
@@ -10507,7 +11237,7 @@ Turtle.drawToTurtle_ = function (distance) {
   if (isDot) {
     Turtle.dotAt_(Turtle.x, Turtle.y);
   } else {
-    Turtle.ctxScratch.lineTo(Turtle.x, Turtle.y);
+    Turtle.ctxScratch.lineTo(Turtle.x * retina, Turtle.y * retina);
   }
 };
 
@@ -10535,7 +11265,11 @@ Turtle.moveForward_ = function (distance) {
   }
   if (Turtle.isDrawingWithPattern) {
     Turtle.drawForwardWithPattern_(distance);
-    return;
+
+    // Frozen gets both a pattern and a line over the top of it.
+    if (skin.id != "elsa" && skin.id != "anna") {
+      return;
+    }
   }
 
   Turtle.drawForward_(distance);
@@ -10580,32 +11314,71 @@ Turtle.drawForwardWithJoints_ = function (distance) {
 };
 
 Turtle.drawForwardLine_ = function (distance) {
-  Turtle.ctxScratch.beginPath();
-  Turtle.ctxScratch.moveTo(Turtle.x, Turtle.y);
-  Turtle.jumpForward_(distance);
-  Turtle.drawToTurtle_(distance);
-  Turtle.ctxScratch.stroke();
+
+  if (skin.id == "anna" || skin.id == "elsa") {
+    Turtle.ctxScratch.beginPath();
+    Turtle.ctxScratch.moveTo(Turtle.stepStartX * retina, Turtle.stepStartY * retina);
+    Turtle.jumpForward_(distance);
+    Turtle.drawToTurtle_(distance);
+    Turtle.ctxScratch.stroke(); 
+  } else {
+    Turtle.ctxScratch.beginPath();
+    Turtle.ctxScratch.moveTo(Turtle.x, Turtle.y);
+    Turtle.jumpForward_(distance);
+    Turtle.drawToTurtle_(distance);
+    Turtle.ctxScratch.stroke();
+  }
+
 };
 
 Turtle.drawForwardLineWithPattern_ = function (distance) {
-  Turtle.ctxScratch.moveTo(Turtle.x, Turtle.y);
-  var img = Turtle.patternForPaths;
-  var startX = Turtle.x;
-  var startY = Turtle.y;
+  var img;
+  var startX;
+  var startY;
 
-  Turtle.jumpForward_(distance);
-  Turtle.ctxScratch.save();
-  Turtle.ctxScratch.translate(startX, startY);
-  Turtle.ctxScratch.rotate(Math.PI * (Turtle.heading - 90) / 180); // increment the angle and rotate the image.
-                                                                 // Need to subtract 90 to accomodate difference in canvas
-                                                                 // vs. Turtle direction
-  Turtle.ctxScratch.drawImage(img,
-    0, 0,                                 // Start point for clipping image
-    distance+img.height / 2, img.height,  // clip region size
-    -img.height / 4, -img.height / 2,      // draw location relative to the ctx.translate point pre-rotation
-    distance+img.height / 2, img.height);
+  if (skin.id == "anna" || skin.id == "elsa") {
+    Turtle.ctxPattern.moveTo(Turtle.stepStartX * retina, Turtle.stepStartY * retina);
+    img = Turtle.patternForPaths;
+    startX = Turtle.stepStartX;
+    startY = Turtle.stepStartY;
 
-  Turtle.ctxScratch.restore();
+    var lineDistance = jumpDistanceCovered;
+
+    Turtle.ctxPattern.save();
+    Turtle.ctxPattern.translate(startX * retina, startY * retina);
+    Turtle.ctxPattern.rotate(Math.PI * (Turtle.heading - 90) / 180); // increment the angle and rotate the image.
+                                                                     // Need to subtract 90 to accomodate difference in canvas
+                                                                     // vs. Turtle direction
+
+    Turtle.ctxPattern.drawImage(img,
+      Math.round(jumpDistanceCovered * retina), 0,             // Start point for clipping image
+      jumpDistance * retina, img.height,           // clip region size
+      Math.round((jumpDistanceCovered - 7) * retina), Math.round((- 18) * retina),      // draw location relative to the ctx.translate point pre-rotation
+      jumpDistance * retina, img.height);
+
+    Turtle.ctxPattern.restore();
+
+  } else {
+
+    Turtle.ctxScratch.moveTo(Turtle.x, Turtle.y);
+    img = Turtle.patternForPaths;
+    startX = Turtle.x;
+    startY = Turtle.y;
+
+    Turtle.jumpForward_(distance);
+    Turtle.ctxScratch.save();
+    Turtle.ctxScratch.translate(startX, startY);
+    Turtle.ctxScratch.rotate(Math.PI * (Turtle.heading - 90) / 180); // increment the angle and rotate the image.
+                                                                     // Need to subtract 90 to accomodate difference in canvas
+                                                                     // vs. Turtle direction
+    Turtle.ctxScratch.drawImage(img,
+      0, 0,                                 // Start point for clipping image
+      distance+img.height / 2, img.height,  // clip region size
+      -img.height / 4, -img.height / 2,     // draw location relative to the ctx.translate point pre-rotation
+      distance+img.height / 2, img.height);
+
+    Turtle.ctxScratch.restore();
+  }
 };
 
 Turtle.shouldDrawJoints_ = function () {
@@ -10634,6 +11407,13 @@ var isCorrect = function(pixelErrors, permittedErrors) {
  * BlocklyApps.displayFeedback when appropriate
  */
 var displayFeedback = function() {
+  var feedbackImageCanvas;
+  if (skin.id == "anna" || skin.id == "elsa") {
+    feedbackImageCanvas = Turtle.ctxDisplay;
+  } else {
+    feedbackImageCanvas = Turtle.ctxScratch;
+  }
+
   BlocklyApps.displayFeedback({
     app: 'turtle', //XXX
     skin: skin.id,
@@ -10641,7 +11421,7 @@ var displayFeedback = function() {
     message: Turtle.message,
     response: Turtle.response,
     level: level,
-    feedbackImage: Turtle.ctxScratch.canvas.toDataURL("image/png"),
+    feedbackImage: feedbackImageCanvas.canvas.toDataURL("image/png"),
     // add 'impressive':true to non-freeplay levels that we deem are relatively impressive (see #66990480)
     showingSharing: level.freePlay || level.impressive,
     // impressive levels are already saved
@@ -10707,11 +11487,12 @@ Turtle.checkAnswer = function() {
 
   // Test whether the current level is a free play level, or the level has
   // been completed
-  var levelComplete = level.freePlay || isCorrect(delta, permittedErrors);
+  var levelComplete = (level.freePlay || isCorrect(delta, permittedErrors)) &&
+                        (!level.editCode || !Turtle.executionError);
   Turtle.testResults = BlocklyApps.getTestResults(levelComplete);
 
   var program;
-  if (!level.editCode) {
+  if (BlocklyApps.usingBlockly) {
     var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
     program = Blockly.Xml.domToText(xml);
   }
@@ -10740,7 +11521,7 @@ Turtle.checkAnswer = function() {
     // Check that they didn't use a crazy large repeat value when drawing a
     // circle.  This complains if the limit doesn't start with 3.
     // Note that this level does not use colour, so no need to check for that.
-    if (level.failForCircleRepeatValue) {
+    if (level.failForCircleRepeatValue && BlocklyApps.usingBlockly) {
       var code = Blockly.Generator.blockSpaceToCode('JavaScript');
       if (code.indexOf('count < 3') == -1) {
         Turtle.testResults =
@@ -10751,13 +11532,6 @@ Turtle.checkAnswer = function() {
   }
 
   if (level.editCode) {
-    if (Turtle.executionError) {
-      levelComplete = false;
-    }
-    Turtle.testResults = levelComplete ?
-      BlocklyApps.TestResults.ALL_PASS :
-      BlocklyApps.TestResults.TOO_FEW_BLOCKS_FAIL;
-
     // If we want to "normalize" the JavaScript to avoid proliferation of nearly
     // identical versions of the code on the service, we could do either of these:
 
@@ -10800,16 +11574,25 @@ Turtle.checkAnswer = function() {
 
   BlocklyApps.report(reportData);
 
-  // reenable toolbox
-  Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
+  if (BlocklyApps.usingBlockly) {
+    // reenable toolbox
+    Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
+  }
 
   // The call to displayFeedback() will happen later in onReportComplete()
 };
 
 var getFeedbackImage = function() {
+  var feedbackImageCanvas;
+  if (skin.id == "anna" || skin.id == "elsa") {
+    feedbackImageCanvas = Turtle.ctxDisplay;
+  } else {
+    feedbackImageCanvas = Turtle.ctxScratch;
+  }
+
   // Copy the user layer
   Turtle.ctxFeedback.globalCompositeOperation = 'copy';
-  Turtle.ctxFeedback.drawImage(Turtle.ctxScratch.canvas, 0, 0, 154, 154);
+  Turtle.ctxFeedback.drawImage(feedbackImageCanvas.canvas, 0, 0, 154, 154);
   var feedbackCanvas = Turtle.ctxFeedback.canvas;
   return encodeURIComponent(
       feedbackCanvas.toDataURL("image/png").split(',')[1]);
@@ -11167,6 +11950,10 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.fil=function(n){return n===0||n==1?"one":"other"}
 exports.and = function(d){return "at"};
 
+exports.booleanTrue = function(d){return "true"};
+
+exports.booleanFalse = function(d){return "false"};
+
 exports.blocklyMessage = function(d){return "Blockly"};
 
 exports.catActions = function(d){return "Mga aksyon"};
@@ -11348,6 +12135,22 @@ exports.catLogic = function(d){return "Lohika"};
 
 exports.colourTooltip = function(d){return "Napalitan ang kulay ng lapis."};
 
+exports.createACircle = function(d){return "create a circle"};
+
+exports.createSnowflakeSquare = function(d){return "create a snowflake of type square"};
+
+exports.createSnowflakeParallelogram = function(d){return "create a snowflake of type parallelogram"};
+
+exports.createSnowflakeLine = function(d){return "create a snowflake of type line"};
+
+exports.createSnowflakeSpiral = function(d){return "create a snowflake of type spiral"};
+
+exports.createSnowflakeFlower = function(d){return "create a snowflake of type flower"};
+
+exports.createSnowflakeFractal = function(d){return "create a snowflake of type fractal"};
+
+exports.createASnowflakeBranch = function(d){return "create a snowflake branch"};
+
 exports.degrees = function(d){return "degrees"};
 
 exports.depth = function(d){return "kalalim"};
@@ -11385,6 +12188,8 @@ exports.drawATree = function(d){return "gumuhit ng puno"};
 exports.drawUpperWave = function(d){return "gumuhit ng upper wave"};
 
 exports.drawLowerWave = function(d){return "gumuhit ng lower wave"};
+
+exports.drawStamp = function(d){return "draw stamp"};
 
 exports.heightParameter = function(d){return "taas"};
 
@@ -11451,6 +12256,8 @@ exports.shareDrawing = function(d){return "Ibahagi ang iyong iginuhit:"};
 exports.showMe = function(d){return "Ipakita sa akin"};
 
 exports.showTurtle = function(d){return "Ipakita ang tagalikha"};
+
+exports.sizeParameter = function(d){return "size"};
 
 exports.step = function(d){return "hakbang"};
 

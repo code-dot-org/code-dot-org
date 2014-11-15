@@ -80,6 +80,10 @@
       %a{href: "http://learn.code.org/videos/test"}
         = I18n.t('dashboard_landing_video_player')
 
+  .section.section-light
+    %h2= I18n.t('dashboard_faq')
+    %iframe{:allowscriptaccess => "always", :allowFullScreen => "true", :frameborder => "0", :height => "500", :src => "http://www.youtube.com/embed/videoseries?list=PLzdnOPI1iJNdSi1R-QTs-iQ-HUURR5FsL", :title => "YouTube video player", :width => "100%"}
+
   %form#printcertificatesform{:action=>"http://code.org/certificates", :method=>"POST"}
     %input{:type=>'hidden', :name=>'course', :value=>'20hours'}
 

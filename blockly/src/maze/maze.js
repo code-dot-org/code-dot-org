@@ -38,6 +38,8 @@ var _ = utils.getLodash();
 
 var Bee = require('./bee');
 var WordSearch = require('./wordsearch');
+var scrat = require('./scrat');
+
 var DirtDrawer = require('./dirtDrawer');
 var BeeItemDrawer = require('./beeItemDrawer');
 
@@ -46,6 +48,8 @@ var ExecutionInfo = require('./executionInfo');
 var Direction = tiles.Direction;
 var SquareType = tiles.SquareType;
 var TurnDirection = tiles.TurnDirection;
+
+var SVG_NS = "http://www.w3.org/2000/svg";
 
 /**
  * Create a namespace for the application.
@@ -102,6 +106,7 @@ var loadLevel = function() {
   Maze.SQUARE_SIZE = 50;
   Maze.PEGMAN_HEIGHT = skin.pegmanHeight;
   Maze.PEGMAN_WIDTH = skin.pegmanWidth;
+  Maze.PEGMAN_X_OFFSET = skin.pegmanXOffset || 0;
   Maze.PEGMAN_Y_OFFSET = skin.pegmanYOffset;
   // Height and width of the goal and obstacles.
   Maze.MARKER_HEIGHT = 43;
@@ -157,7 +162,7 @@ var TILE_SHAPES = {
   'null1': [3, 0],
   'null2': [3, 1],
   'null3': [0, 3],
-  'null4': [1, 3]
+  'null4': [1, 3],
 };
 
 function drawMap () {
@@ -165,7 +170,7 @@ function drawMap () {
   var x, y, k, tile;
 
   // Draw the outer square.
-  var square = document.createElementNS(Blockly.SVG_NS, 'rect');
+  var square = document.createElementNS(SVG_NS, 'rect');
   square.setAttribute('width', Maze.MAZE_WIDTH);
   square.setAttribute('height', Maze.MAZE_HEIGHT);
   square.setAttribute('fill', '#F1EEE7');
@@ -182,7 +187,7 @@ function drawMap () {
   visualizationColumn.style.width = Maze.MAZE_WIDTH + 'px';
 
   if (skin.background) {
-    tile = document.createElementNS(Blockly.SVG_NS, 'image');
+    tile = document.createElementNS(SVG_NS, 'image');
     tile.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
                         skin.background);
     tile.setAttribute('height', Maze.MAZE_HEIGHT);
@@ -195,9 +200,9 @@ function drawMap () {
   drawMapTiles(svg);
 
   // Pegman's clipPath element, whose (x, y) is reset by Maze.displayPegman
-  var pegmanClip = document.createElementNS(Blockly.SVG_NS, 'clipPath');
+  var pegmanClip = document.createElementNS(SVG_NS, 'clipPath');
   pegmanClip.setAttribute('id', 'pegmanClipPath');
-  var clipRect = document.createElementNS(Blockly.SVG_NS, 'rect');
+  var clipRect = document.createElementNS(SVG_NS, 'rect');
   clipRect.setAttribute('id', 'clipRect');
   clipRect.setAttribute('width', Maze.PEGMAN_WIDTH);
   clipRect.setAttribute('height', Maze.PEGMAN_HEIGHT);
@@ -205,7 +210,7 @@ function drawMap () {
   svg.appendChild(pegmanClip);
 
   // Add pegman.
-  var pegmanIcon = document.createElementNS(Blockly.SVG_NS, 'image');
+  var pegmanIcon = document.createElementNS(SVG_NS, 'image');
   pegmanIcon.setAttribute('id', 'pegman');
   pegmanIcon.setAttribute('class', 'pegman-location');
   pegmanIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
@@ -215,7 +220,7 @@ function drawMap () {
   pegmanIcon.setAttribute('clip-path', 'url(#pegmanClipPath)');
   svg.appendChild(pegmanIcon);
 
-  var pegmanFadeoutAnimation = document.createElementNS(Blockly.SVG_NS, 'animate');
+  var pegmanFadeoutAnimation = document.createElementNS(SVG_NS, 'animate');
   pegmanFadeoutAnimation.setAttribute('id', 'pegmanFadeoutAnimation');
   pegmanFadeoutAnimation.setAttribute('attributeType', 'CSS');
   pegmanFadeoutAnimation.setAttribute('attributeName', 'opacity');
@@ -227,7 +232,7 @@ function drawMap () {
 
   if (Maze.finish_ && skin.goal) {
     // Add finish marker.
-    var finishMarker = document.createElementNS(Blockly.SVG_NS, 'image');
+    var finishMarker = document.createElementNS(SVG_NS, 'image');
     finishMarker.setAttribute('id', 'finish');
     finishMarker.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
                                 skin.goal);
@@ -238,7 +243,7 @@ function drawMap () {
 
   // Add wall hitting animation
   if (skin.hittingWallAnimation) {
-    var wallAnimationIcon = document.createElementNS(Blockly.SVG_NS, 'image');
+    var wallAnimationIcon = document.createElementNS(SVG_NS, 'image');
     wallAnimationIcon.setAttribute('id', 'wallAnimation');
     wallAnimationIcon.setAttribute('height', Maze.SQUARE_SIZE);
     wallAnimationIcon.setAttribute('width', Maze.SQUARE_SIZE);
@@ -251,7 +256,7 @@ function drawMap () {
   for (y = 0; y < Maze.ROWS; y++) {
     for (x = 0; x < Maze.COLS; x++) {
       if (Maze.map[y][x] == SquareType.OBSTACLE) {
-        var obsIcon = document.createElementNS(Blockly.SVG_NS, 'image');
+        var obsIcon = document.createElementNS(SVG_NS, 'image');
         obsIcon.setAttribute('id', 'obstacle' + obsId);
         obsIcon.setAttribute('height', Maze.MARKER_HEIGHT * skin.obstacleScale);
         obsIcon.setAttribute('width', Maze.MARKER_WIDTH * skin.obstacleScale);
@@ -276,7 +281,44 @@ function drawMap () {
       pegmanImage: skin.idlePegmanAnimation,
       row: Maze.start_.y,
       col: Maze.start_.x,
-      direction: Maze.startDirection
+      direction: Maze.startDirection,
+      numColPegman: skin.idlePegmanCol,
+      numRowPegman: skin.idlePegmanRow
+    });
+
+
+    if (skin.idlePegmanCol > 1 || skin.idlePegmanRow > 1) {
+      // our idle is a sprite sheet instead of a gif. schedule cycling through
+      // the frames
+      var numFrames = skin.idlePegmanRow;
+      var idlePegmanIcon = document.getElementById('idlePegman');
+      var timePerFrame = 600; // timeForAnimation / numFrames;
+      var idleAnimationFrame = 0;
+
+      setInterval(function() {
+        if (idlePegmanIcon.getAttribute('visibility') === 'visible') {
+          updatePegmanAnimation({
+            idStr: 'idle',
+            row: Maze.start_.y,
+            col: Maze.start_.x,
+            direction: Maze.startDirection,
+            animationRow: idleAnimationFrame
+          });
+          idleAnimationFrame = (idleAnimationFrame + 1) % numFrames;
+        }
+      }, timePerFrame);
+    }
+  }
+
+  if (skin.celebrateAnimation) {
+    createPegmanAnimation({
+      idStr: 'celebrate',
+      pegmanImage: skin.celebrateAnimation,
+      row: Maze.start_.y,
+      col: Maze.start_.x,
+      direction: Direction.NORTH,
+      numColPegman: skin.celebratePegmanCol,
+      numRowPegman: skin.celebratePegmanRow
     });
   }
 
@@ -285,6 +327,16 @@ function drawMap () {
     createPegmanAnimation({
       idStr: 'wall',
       pegmanImage: skin.wallPegmanAnimation
+    });
+  }
+
+  // create element for our hitting wall spritesheet
+  if (skin.hittingWallAnimation && skin.hittingWallAnimationFrameNumber) {
+    createPegmanAnimation({
+      idStr: 'wall',
+      pegmanImage: skin.hittingWallAnimation,
+      numColPegman: skin.hittingWallPegmanCol,
+      numRowPegman: skin.hittingWallPegmanRow
     });
   }
 
@@ -299,20 +351,25 @@ function drawMap () {
   }
 }
 
+// Returns true if the tile at x,y is either a wall or out of bounds
+function isWallOrOutOfBounds (x, y) {
+  return Maze.map[y] === undefined || Maze.map[y][x] === undefined ||
+    Maze.map[y][x] === SquareType.WALL;
+}
+
+// Return a value of '0' if the specified square is wall or out of bounds '1'
+// otherwise (empty, obstacle, start, finish).
+function isOnPathStr (x, y) {
+  return isWallOrOutOfBounds(x, y) ? "0" : "1";
+}
+
+// Draw the tiles making up the maze map.
 function drawMapTiles(svg) {
   if (Maze.wordSearch) {
     return Maze.wordSearch.drawMapTiles(svg);
+  } else if (mazeUtils.isScratSkin(skin.id)) {
+    return scrat.drawMapTiles(svg);
   }
-
-  // Draw the tiles making up the maze map.
-
-  // Return a value of '0' if the specified square is wall or out of bounds '1'
-  // otherwise (empty, obstacle, start, finish).
-  var normalize = function(x, y) {
-    return ((Maze.map[y] === undefined) ||
-            (Maze.map[y][x] === undefined) ||
-            (Maze.map[y][x] == SquareType.WALL)) ? '0' : '1';
-  };
 
   // Compute and draw the tile for each square.
   var tileId = 0;
@@ -320,31 +377,17 @@ function drawMapTiles(svg) {
   for (var y = 0; y < Maze.ROWS; y++) {
     for (var x = 0; x < Maze.COLS; x++) {
       // Compute the tile index.
-      tile = normalize(x, y) +
-        normalize(x, y - 1) +  // North.
-        normalize(x + 1, y) +  // West.
-        normalize(x, y + 1) +  // South.
-        normalize(x - 1, y);   // East.
+      tile = isOnPathStr(x, y) +
+        isOnPathStr(x, y - 1) +  // North.
+        isOnPathStr(x + 1, y) +  // West.
+        isOnPathStr(x, y + 1) +  // South.
+        isOnPathStr(x - 1, y);   // East.
+
       var adjacentToPath = (tile !== '00000');
 
       // Draw the tile.
       if (!TILE_SHAPES[tile]) {
-        // Empty square.  Use null0 for large areas, with null1-4 for borders.
-        if (!adjacentToPath && Math.random() > 0.3) {
-          Maze.wallMap[y][x] = 0;
-          tile = 'null0';
-        } else {
-          var wallIdx = Math.floor(1 + Math.random() * 4);
-          Maze.wallMap[y][x] = wallIdx;
-          tile = 'null' + wallIdx;
-        }
-
-        // For the first 3 levels in maze, only show the null0 image.
-        if (level.id == '2_1' || level.id == '2_2' || level.id == '2_3') {
-          Maze.wallMap[y][x] = 0;
-          tile = 'null0';
-        }
-
+        // We have an empty square. Handle it differently based on skin.
         if (mazeUtils.isBeeSkin(skin.id)) {
           // begin with three trees
           var tileChoices = ['null3', 'null4', 'null0'];
@@ -356,6 +399,22 @@ function drawMapTiles(svg) {
           }
 
           tile = _.sample(tileChoices);
+        } else {
+          // Empty square.  Use null0 for large areas, with null1-4 for borders.
+          if (!adjacentToPath && Math.random() > 0.3) {
+            Maze.wallMap[y][x] = 0;
+            tile = 'null0';
+          } else {
+            var wallIdx = Math.floor(1 + Math.random() * 4);
+            Maze.wallMap[y][x] = wallIdx;
+            tile = 'null' + wallIdx;
+          }
+
+          // For the first 3 levels in maze, only show the null0 image.
+          if (level.id == '2_1' || level.id == '2_2' || level.id == '2_3') {
+            Maze.wallMap[y][x] = 0;
+            tile = 'null0';
+          }
         }
       }
 
@@ -383,9 +442,9 @@ Maze.drawTile = function (svg, tileSheetLocation, row, col, tileId) {
   var tileSheetHeight = Maze.SQUARE_SIZE * 4;
 
   // Tile's clipPath element.
-  var tileClip = document.createElementNS(Blockly.SVG_NS, 'clipPath');
+  var tileClip = document.createElementNS(SVG_NS, 'clipPath');
   tileClip.setAttribute('id', 'tileClipPath' + tileId);
-  var tileClipRect = document.createElementNS(Blockly.SVG_NS, 'rect');
+  var tileClipRect = document.createElementNS(SVG_NS, 'rect');
   tileClipRect.setAttribute('width', Maze.SQUARE_SIZE);
   tileClipRect.setAttribute('height', Maze.SQUARE_SIZE);
 
@@ -395,7 +454,7 @@ Maze.drawTile = function (svg, tileSheetLocation, row, col, tileId) {
   svg.appendChild(tileClip);
 
   // Tile sprite.
-  var tileElement = document.createElementNS(Blockly.SVG_NS, 'image');
+  var tileElement = document.createElementNS(SVG_NS, 'image');
   tileElement.setAttribute('id', 'tileElement' + tileId);
   tileElement.setAttributeNS('http://www.w3.org/1999/xlink',
                              'xlink:href',
@@ -408,8 +467,7 @@ Maze.drawTile = function (svg, tileSheetLocation, row, col, tileId) {
   tileElement.setAttribute('y', (row - top) * Maze.SQUARE_SIZE);
   svg.appendChild(tileElement);
   // Tile animation
-  var tileAnimation = document.createElementNS(Blockly.SVG_NS,
-                                               'animate');
+  var tileAnimation = document.createElementNS(SVG_NS, 'animate');
   tileAnimation.setAttribute('id', 'tileAnimation' + tileId);
   tileAnimation.setAttribute('attributeType', 'CSS');
   tileAnimation.setAttribute('attributeName', 'opacity');
@@ -492,44 +550,46 @@ Maze.init = function(config) {
   });
 
   config.loadAudio = function() {
-    Blockly.loadAudio_(skin.winSound, 'win');
-    Blockly.loadAudio_(skin.startSound, 'start');
-    Blockly.loadAudio_(skin.failureSound, 'failure');
-    Blockly.loadAudio_(skin.obstacleSound, 'obstacle');
+    BlocklyApps.loadAudio(skin.winSound, 'win');
+    BlocklyApps.loadAudio(skin.startSound, 'start');
+    BlocklyApps.loadAudio(skin.failureSound, 'failure');
+    BlocklyApps.loadAudio(skin.obstacleSound, 'obstacle');
     // Load wall sounds.
-    Blockly.loadAudio_(skin.wallSound, 'wall');
+    BlocklyApps.loadAudio(skin.wallSound, 'wall');
 
     // todo - longterm, instead of having sound related flags we should just
     // have the skin tell us the set of sounds it needs
     if (skin.additionalSound) {
-      Blockly.loadAudio_(skin.wall0Sound, 'wall0');
-      Blockly.loadAudio_(skin.wall1Sound, 'wall1');
-      Blockly.loadAudio_(skin.wall2Sound, 'wall2');
-      Blockly.loadAudio_(skin.wall3Sound, 'wall3');
-      Blockly.loadAudio_(skin.wall4Sound, 'wall4');
-      Blockly.loadAudio_(skin.winGoalSound, 'winGoal');
+      BlocklyApps.loadAudio(skin.wall0Sound, 'wall0');
+      BlocklyApps.loadAudio(skin.wall1Sound, 'wall1');
+      BlocklyApps.loadAudio(skin.wall2Sound, 'wall2');
+      BlocklyApps.loadAudio(skin.wall3Sound, 'wall3');
+      BlocklyApps.loadAudio(skin.wall4Sound, 'wall4');
+      BlocklyApps.loadAudio(skin.winGoalSound, 'winGoal');
     }
     if (skin.dirtSound) {
-      Blockly.loadAudio_(skin.fillSound, 'fill');
-      Blockly.loadAudio_(skin.digSound, 'dig');
+      BlocklyApps.loadAudio(skin.fillSound, 'fill');
+      BlocklyApps.loadAudio(skin.digSound, 'dig');
     }
     if (skin.beeSound) {
-      Blockly.loadAudio_(skin.nectarSound, 'nectar');
-      Blockly.loadAudio_(skin.honeySound, 'honey');
+      BlocklyApps.loadAudio(skin.nectarSound, 'nectar');
+      BlocklyApps.loadAudio(skin.honeySound, 'honey');
     }
   };
 
   config.afterInject = function() {
-    /**
-     * The richness of block colours, regardless of the hue.
-     * MOOC blocks should be brighter (target audience is younger).
-     * Must be in the range of 0 (inclusive) to 1 (exclusive).
-     * Blockly's default is 0.45.
-     */
-    Blockly.HSV_SATURATION = 0.6;
+    if (BlocklyApps.usingBlockly) {
+      /**
+       * The richness of block colours, regardless of the hue.
+       * MOOC blocks should be brighter (target audience is younger).
+       * Must be in the range of 0 (inclusive) to 1 (exclusive).
+       * Blockly's default is 0.45.
+       */
+      Blockly.HSV_SATURATION = 0.6;
 
-    Blockly.SNAP_RADIUS *= Maze.scale.snapRadius;
-    Blockly.JavaScript.INFINITE_LOOP_TRAP = codegen.loopHighlight("Maze");
+      Blockly.SNAP_RADIUS *= Maze.scale.snapRadius;
+      Blockly.JavaScript.INFINITE_LOOP_TRAP = codegen.loopHighlight("Maze");
+    }
 
     Maze.start_ = undefined;
     Maze.finish_ = undefined;
@@ -621,12 +681,12 @@ var getPegmanFrameOffsetY = function (animationRow) {
 var createPegmanAnimation = function(options) {
   var svg = document.getElementById('svgMaze');
   // Create clip path.
-  var clip = document.createElementNS(Blockly.SVG_NS, 'clipPath');
+  var clip = document.createElementNS(SVG_NS, 'clipPath');
   clip.setAttribute('id', options.idStr + 'PegmanClip');
-  var rect = document.createElementNS(Blockly.SVG_NS, 'rect');
+  var rect = document.createElementNS(SVG_NS, 'rect');
   rect.setAttribute('id', options.idStr + 'PegmanClipRect');
   if (options.col !== undefined) {
-    rect.setAttribute('x', options.col * Maze.SQUARE_SIZE + 1);
+    rect.setAttribute('x', options.col * Maze.SQUARE_SIZE + 1 + Maze.PEGMAN_X_OFFSET);
   }
   if (options.row !== undefined) {
     rect.setAttribute('y', getPegmanYForRow(options.row));
@@ -638,7 +698,7 @@ var createPegmanAnimation = function(options) {
   // Create image.
   // Add a random number to force it to reload everytime.
   var imgSrc = options.pegmanImage + '?time=' + (new Date()).getTime();
-  var img = document.createElementNS(Blockly.SVG_NS, 'image');
+  var img = document.createElementNS(SVG_NS, 'image');
   img.setAttributeNS(
       'http://www.w3.org/1999/xlink', 'xlink:href', imgSrc);
   img.setAttribute('height', Maze.PEGMAN_HEIGHT * (options.numRowPegman || 1));
@@ -649,7 +709,7 @@ var createPegmanAnimation = function(options) {
   // Update pegman icon & clip path.
   if (options.col !== undefined && options.direction !== undefined) {
     var x = Maze.SQUARE_SIZE * options.col -
-        options.direction * Maze.PEGMAN_WIDTH + 1;
+      options.direction * Maze.PEGMAN_WIDTH + 1  + Maze.PEGMAN_X_OFFSET;
     img.setAttribute('x', x);
   }
   if (options.row !== undefined) {
@@ -668,11 +728,11 @@ var createPegmanAnimation = function(options) {
   */
 var updatePegmanAnimation = function(options) {
   var rect = document.getElementById(options.idStr + 'PegmanClipRect');
-  rect.setAttribute('x', options.col * Maze.SQUARE_SIZE + 1);
+  rect.setAttribute('x', options.col * Maze.SQUARE_SIZE + 1 + Maze.PEGMAN_X_OFFSET);
   rect.setAttribute('y', getPegmanYForRow(options.row));
   var img = document.getElementById(options.idStr + 'Pegman');
   var x = Maze.SQUARE_SIZE * options.col -
-      options.direction * Maze.PEGMAN_WIDTH + 1;
+      options.direction * Maze.PEGMAN_WIDTH + 1 + Maze.PEGMAN_X_OFFSET;
   img.setAttribute('x', x);
   var y = getPegmanYForRow(options.row) - getPegmanFrameOffsetY(options.animationRow);
   img.setAttribute('y', y);
@@ -704,7 +764,7 @@ BlocklyApps.reset = function(first) {
     // Dance consists of 5 animations, each of which get 150ms
     var danceTime = 150 * 5;
     if (skin.danceOnLoad) {
-      Maze.scheduleDance(false, danceTime);
+      scheduleDance(false, danceTime);
     }
     timeoutList.setTimeout(function() {
       stepSpeed = 100;
@@ -724,7 +784,8 @@ BlocklyApps.reset = function(first) {
     finishIcon.setAttribute('y', Maze.SQUARE_SIZE * (Maze.finish_.y + 0.9) -
       finishIcon.getAttribute('height'));
     finishIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-                              skin.goal);
+      skin.goal);
+    finishIcon.setAttribute('visibility', 'visible');
   }
 
   // Make 'look' icon invisible and promote to top.
@@ -757,6 +818,11 @@ BlocklyApps.reset = function(first) {
   if (skin.movePegmanAnimation) {
     var movePegmanIcon = document.getElementById('movePegman');
     movePegmanIcon.setAttribute('visibility', 'hidden');
+  }
+
+  if (skin.celebrateAnimation) {
+    var celebrateAnimation = document.getElementById('celebratePegman');
+    celebrateAnimation.setAttribute('visibility', 'hidden');
   }
 
   // Move the init dirt marker icons into position.
@@ -822,7 +888,9 @@ function beginAttempt () {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
   BlocklyApps.toggleRunReset('reset');
-  Blockly.mainBlockSpace.traceOn(true);
+  if (BlocklyApps.usingBlockly) {
+    Blockly.mainBlockSpace.traceOn(true);
+  }
   BlocklyApps.reset(false);
   BlocklyApps.attempts++;
 }
@@ -894,14 +962,16 @@ Maze.execute = function(stepMode) {
   beginAttempt();
 
   Maze.executionInfo = new ExecutionInfo({ticks: 100});
-  var code = Blockly.Generator.blockSpaceToCode('JavaScript');
   Maze.result = BlocklyApps.ResultType.UNSET;
   Maze.testResults = BlocklyApps.TestResults.NO_TESTS_RUN;
   Maze.waitingForReport = false;
   Maze.animating_ = false;
   Maze.response = null;
 
-  if (level.editCode) {
+  var code;
+  if (BlocklyApps.usingBlockly) {
+    code = Blockly.Generator.blockSpaceToCode('JavaScript');
+  } else {
     code = utils.generateCodeAliases(level.codeFunctions, 'Maze');
     code += BlocklyApps.editor.getValue();
   }
@@ -989,10 +1059,6 @@ Maze.execute = function(stepMode) {
 
   var program;
   if (level.editCode) {
-    Maze.testResults = levelComplete ?
-      BlocklyApps.TestResults.ALL_PASS :
-      BlocklyApps.TestResults.TOO_FEW_BLOCKS_FAIL;
-
     // If we want to "normalize" the JavaScript to avoid proliferation of nearly
     // identical versions of the code on the service, we could do either of these:
 
@@ -1031,25 +1097,27 @@ Maze.execute = function(stepMode) {
 
   Maze.animating_ = true;
 
-  // Disable toolbox while running
-  Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
+  if (BlocklyApps.usingBlockly) {
+    // Disable toolbox while running
+    Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
 
-  if (stepMode) {
-    if (Maze.cachedBlockStates.length !== 0) {
-      throw new Error('Unexpected cachedBlockStates');
-    }
-    // Disable all blocks, caching their state first
-    Blockly.mainBlockSpace.getAllBlocks().forEach(function (block) {
-      Maze.cachedBlockStates.push({
-        block: block,
-        movable: block.isMovable(),
-        deletable: block.isDeletable(),
-        editable: block.isEditable()
+    if (stepMode) {
+      if (Maze.cachedBlockStates.length !== 0) {
+        throw new Error('Unexpected cachedBlockStates');
+      }
+      // Disable all blocks, caching their state first
+      Blockly.mainBlockSpace.getAllBlocks().forEach(function (block) {
+        Maze.cachedBlockStates.push({
+          block: block,
+          movable: block.isMovable(),
+          deletable: block.isDeletable(),
+          editable: block.isEditable()
+        });
+        block.setMovable(false);
+        block.setDeletable(false);
+        block.setEditable(false);
       });
-      block.setMovable(false);
-      block.setDeletable(false);
-      block.setEditable(false);
-    });
+    }
   }
 
   // Removing the idle animation and replace with pegman sprite
@@ -1115,8 +1183,10 @@ Maze.scheduleAnimations = function (singleStep) {
         stepButton.removeAttribute('disabled');
       } else {
         Maze.animating_ = false;
-        // reenable toolbox
-        Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
+        if (BlocklyApps.usingBlockly) {
+          // reenable toolbox
+          Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
+        }
         // If stepping and we failed, we want to retain highlighting until
         // clicking reset.  Otherwise we can clear highlighting/disabled
         // blocks now
@@ -1188,7 +1258,7 @@ function animateAction (action, spotlightBlocks, timePerStep) {
         case BlocklyApps.TestResults.FREE_PLAY:
         case BlocklyApps.TestResults.TOO_MANY_BLOCKS_FAIL:
         case BlocklyApps.TestResults.ALL_PASS:
-          Maze.scheduleDance(true, timePerStep);
+          scheduleDance(true, timePerStep);
           break;
         default:
           timeoutList.setTimeout(function() {
@@ -1225,6 +1295,28 @@ function animatedMove (direction, timeForMove) {
 }
 
 /**
+ * Schedule a movement animating using a spritesheet.
+ */
+function scheduleSheetedMovement(start, delta, numFrames, timePerFrame,
+    idStr, direction, hidePegman) {
+  var pegmanIcon = document.getElementById('pegman');
+  utils.range(0, numFrames - 1).forEach(function (frame) {
+    timeoutList.setTimeout(function() {
+      if (hidePegman) {
+        pegmanIcon.setAttribute('visibility', 'hidden');
+      }
+      updatePegmanAnimation({
+        idStr: idStr,
+        col: start.x + delta.x * frame / numFrames,
+        row: start.y + delta.y * frame / numFrames,
+        direction: direction,
+        animationRow: frame
+      });
+    }, timePerFrame * frame);
+  });
+}
+
+/**
  * Schedule the animations for a move from the current position
  * @param {number} endX X coordinate of the target position
  * @param {number} endY Y coordinate of the target position
@@ -1247,18 +1339,8 @@ function animatedMove (direction, timeForMove) {
     var movePegmanIcon = document.getElementById('movePegman');
     timePerFrame = timeForAnimation / numFrames;
 
-    utils.range(0, numFrames - 1).forEach(function (frame) {
-      timeoutList.setTimeout(function() {
-        pegmanIcon.setAttribute('visibility', 'hidden');
-        updatePegmanAnimation({
-          idStr: 'move',
-          col: startX + deltaX * frame / numFrames,
-          row: startY + deltaY * frame / numFrames,
-          direction: direction,
-          animationRow: frame
-        });
-      }, timePerFrame * frame);
-    });
+    scheduleSheetedMovement({x: startX, y: startY}, {x: deltaX, y: deltaY },
+      numFrames, timePerFrame, 'move', direction, true);
 
     // Hide movePegman and set pegman to the end position.
     timeoutList.setTimeout(function() {
@@ -1374,36 +1456,54 @@ Maze.scheduleFail = function(forward) {
 
     // Play the animation of hitting the wall
     if (skin.hittingWallAnimation) {
-      timeoutList.setTimeout(function() {
-        var wallAnimationIcon = document.getElementById('wallAnimation');
-        wallAnimationIcon.setAttribute(
-            'x',
+      var wallAnimationIcon = document.getElementById('wallAnimation');
+      var numFrames = skin.hittingWallAnimationFrameNumber || 0;
+
+      if (numFrames > 1) {
+
+        // The Scrat "wall" animation has him falling backwards into the water.
+        // This looks great when he falls into the water above him, but looks a
+        // little off when falling to the side/forward. Tune that by bumping the
+        // deltaY by one. Hacky, but looks much better
+        if (deltaY >= 0) {
+          deltaY += 1;
+        }
+        // animate our sprite sheet
+        var timePerFrame = 100;
+        scheduleSheetedMovement({x: Maze.pegmanX, y: Maze.pegmanY},
+          {x: deltaX, y: deltaY }, numFrames, timePerFrame, 'wall',
+          Direction.NORTH, true);
+        setTimeout(function () {
+          document.getElementById('wallPegman').setAttribute('visibility', 'hidden');
+        }, numFrames * timePerFrame);
+      } else {
+        // active our gif
+        timeoutList.setTimeout(function() {
+          wallAnimationIcon.setAttribute('x',
             Maze.SQUARE_SIZE * (Maze.pegmanX + 0.5 + deltaX * 0.5) -
             wallAnimationIcon.getAttribute('width') / 2);
-        wallAnimationIcon.setAttribute(
-            'y',
+          wallAnimationIcon.setAttribute('y',
             Maze.SQUARE_SIZE * (Maze.pegmanY + 1 + deltaY * 0.5) -
             wallAnimationIcon.getAttribute('height'));
-        wallAnimationIcon.setAttribute('visibility', 'visible');
-        wallAnimationIcon.setAttributeNS(
-          'http://www.w3.org/1999/xlink', 'xlink:href',
-          skin.hittingWallAnimation);
-      }, stepSpeed / 2);
+          wallAnimationIcon.setAttribute('visibility', 'visible');
+          wallAnimationIcon.setAttributeNS(
+            'http://www.w3.org/1999/xlink', 'xlink:href',
+            skin.hittingWallAnimation);
+        }, stepSpeed / 2);
+      }
     }
     timeoutList.setTimeout(function() {
-      Maze.displayPegman(Maze.pegmanX,
-                         Maze.pegmanY,
-                         frame);
+      Maze.displayPegman(Maze.pegmanX, Maze.pegmanY, frame);
     }, stepSpeed);
     timeoutList.setTimeout(function() {
-      Maze.displayPegman(Maze.pegmanX + deltaX / 4,
-                         Maze.pegmanY + deltaY / 4,
-                         frame);
+      Maze.displayPegman(Maze.pegmanX + deltaX / 4, Maze.pegmanY + deltaY / 4,
+       frame);
       BlocklyApps.playAudio('failure');
     }, stepSpeed * 2);
     timeoutList.setTimeout(function() {
       Maze.displayPegman(Maze.pegmanX, Maze.pegmanY, frame);
     }, stepSpeed * 3);
+
     if (skin.wallPegmanAnimation) {
       timeoutList.setTimeout(function() {
         var pegmanIcon = document.getElementById('pegman');
@@ -1489,13 +1589,22 @@ function setPegmanTransparent() {
   }
 }
 
+
+
+
+
 /**
  * Schedule the animations and sound for a dance.
  * @param {boolean} victoryDance This is a victory dance after completing the
  *   puzzle (vs. dancing on load).
  * @param {integer} timeAlloted How much time we have for our animations
  */
-Maze.scheduleDance = function(victoryDance, timeAlloted) {
+function scheduleDance(victoryDance, timeAlloted) {
+  if (mazeUtils.isScratSkin()) {
+    scrat.scheduleDance(victoryDance, timeAlloted);
+    return;
+  }
+
   var originalFrame = tiles.directionToFrame(Maze.pegmanD);
   Maze.displayPegman(Maze.pegmanX, Maze.pegmanY, 16);
 
@@ -1504,7 +1613,7 @@ Maze.scheduleDance = function(victoryDance, timeAlloted) {
   if (victoryDance && finishIcon) {
     BlocklyApps.playAudio('winGoal');
     finishIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-                              skin.goalAnimation);
+      skin.goalAnimation);
   }
 
   if (victoryDance) {
@@ -1538,7 +1647,7 @@ Maze.scheduleDance = function(victoryDance, timeAlloted) {
       setPegmanTransparent();
     }
   }, danceSpeed * 5);
-};
+}
 
 /**
  * Display Pegman at the specified location, facing the specified direction.
@@ -1549,11 +1658,11 @@ Maze.scheduleDance = function(victoryDance, timeAlloted) {
 Maze.displayPegman = function(x, y, frame) {
   var pegmanIcon = document.getElementById('pegman');
   pegmanIcon.setAttribute('x',
-      x * Maze.SQUARE_SIZE - frame * Maze.PEGMAN_WIDTH + 1);
+    x * Maze.SQUARE_SIZE - frame * Maze.PEGMAN_WIDTH + 1 + Maze.PEGMAN_X_OFFSET);
   pegmanIcon.setAttribute('y', getPegmanYForRow(y));
 
   var clipRect = document.getElementById('clipRect');
-  clipRect.setAttribute('x', x * Maze.SQUARE_SIZE + 1);
+  clipRect.setAttribute('x', x * Maze.SQUARE_SIZE + 1 + Maze.PEGMAN_X_OFFSET);
   clipRect.setAttribute('y', pegmanIcon.getAttribute('y'));
 };
 

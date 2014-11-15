@@ -50,6 +50,11 @@ module.exports = function(app, levels, options) {
   BlocklyApps.BASE_URL = options.baseUrl;
   BlocklyApps.CACHE_BUST = options.cacheBust;
   BlocklyApps.LOCALE = options.locale || BlocklyApps.LOCALE;
+  // NOTE: editCode (which currently implies droplet) and usingBlockly are
+  // currently mutually exclusive.
+  BlocklyApps.editCode = options.level && options.level.editCode;
+  BlocklyApps.usingBlockly = !BlocklyApps.editCode;
+  BlocklyApps.cdoSounds = options.cdoSounds;
 
   BlocklyApps.assetUrl = function(path) {
     var url = options.baseUrl + path;
@@ -61,17 +66,20 @@ module.exports = function(app, levels, options) {
   };
 
   options.skin = options.skinsModule.load(BlocklyApps.assetUrl, options.skinId);
-  var blockInstallOptions = {
-    skin: options.skin,
-    isK1: options.level && options.level.isK1
-  };
 
-  if (options.level && options.level.edit_blocks) {
-    utils.wrapNumberValidatorsForLevelBuilder();
+  if (BlocklyApps.usingBlockly) {
+    var blockInstallOptions = {
+      skin: options.skin,
+      isK1: options.level && options.level.isK1
+    };
+
+    if (options.level && options.level.edit_blocks) {
+      utils.wrapNumberValidatorsForLevelBuilder();
+    }
+
+    blocksCommon.install(Blockly, blockInstallOptions);
+    options.blocksModule.install(Blockly, blockInstallOptions);
   }
-
-  blocksCommon.install(Blockly, blockInstallOptions);
-  options.blocksModule.install(Blockly, blockInstallOptions);
 
   addReadyListener(function() {
     if (options.readonly) {
@@ -215,6 +223,7 @@ BlocklyApps.init = function(config) {
   }
 
   BlocklyApps.share = config.share;
+
   // if true, dont provide links to share on fb/twitter
   BlocklyApps.disableSocialShare = config.disableSocialShare;
   BlocklyApps.sendToPhone = config.sendToPhone;
@@ -265,7 +274,7 @@ BlocklyApps.init = function(config) {
   }
 
   var visualizationColumn = document.getElementById('visualizationColumn');
-  if (config.level.edit_blocks) {
+  if (BlocklyApps.usingBlockly && config.level.edit_blocks) {
     // Set a class on the main blockly div so CSS can style blocks differently
     Blockly.addClass_(container.querySelector('#blockly'), 'edit');
     // If in level builder editing blocks, make workspace extra tall
@@ -292,7 +301,7 @@ BlocklyApps.init = function(config) {
 
   if (config.hide_source) {
     BlocklyApps.hideSource = true;
-    var workspaceDiv = config.level.editCode ?
+    var workspaceDiv = BlocklyApps.editCode ?
                         document.getElementById('codeWorkspace') :
                         container.querySelector('#blockly');
     container.className = 'hide-source';
@@ -410,43 +419,6 @@ BlocklyApps.init = function(config) {
     viewport.setAttribute('content', content.join(', '));
   }
 
-  if (config.level.editCode) {
-    BlocklyApps.editCode = true;
-    /*
-    BlocklyApps.editor = window.ace.edit('codeTextbox');
-    BlocklyApps.editor.getSession().setMode("ace/mode/javascript");
-    BlocklyApps.editor.setOptions({
-      enableBasicAutocompletion: true,
-      enableLiveAutocompletion: true
-    });
-    */
-    // using window.require forces us to use requirejs version of require
-    window.require(['droplet'], function(droplet) {
-      var displayMessage, examplePrograms, messageElement, onChange, startingText;
-      BlocklyApps.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
-        mode: 'javascript',
-        modeOptions: utils.generateDropletModeOptions(config.level.codeFunctions),
-        palette: utils.generateDropletPalette(config.level.codeFunctions)
-      });
-
-      if (config.level.startBlocks) {
-        BlocklyApps.editor.setValue(config.level.startBlocks);
-      } else {
-        var startText = '// ' + msg.typeHint() + '\n';
-        var codeFunctions = config.level.codeFunctions;
-        // Insert hint text from level codeFunctions into editCode area
-        if (codeFunctions) {
-          var hintText = '';
-          for (var i = 0; i < codeFunctions.length; i++) {
-            hintText += " " + codeFunctions[i].func + "();";
-          }
-          startText += '// ' + msg.typeFuncs().replace('%1', hintText) + '\n';
-        }
-        BlocklyApps.editor.setValue(startText);
-      }
-    });
-  }
-
   BlocklyApps.Dialog = config.Dialog;
 
   var showCode = document.getElementById('show-code-header');
@@ -526,40 +498,84 @@ BlocklyApps.init = function(config) {
     wrapper.style.display = 'none';
   }
 
-  // Allow empty blocks if editing blocks.
-  if (config.level.edit_blocks) {
-    BlocklyApps.CHECK_FOR_EMPTY_BLOCKS = false;
-    if (config.level.edit_blocks === 'required_blocks' ||
-      config.level.edit_blocks === 'toolbox_blocks') {
-      // Don't show when run block for toolbox/required block editing
-      config.forceInsertTopBlock = null;
-    }
-  }
+  if (BlocklyApps.editCode) {
+    // using window.require forces us to use requirejs version of require
+    window.require(['droplet'], function(droplet) {
+      var displayMessage, examplePrograms, messageElement, onChange, startingText;
+      BlocklyApps.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
+        mode: 'javascript',
+        modeOptions: utils.generateDropletModeOptions(config.level.codeFunctions),
+        palette: utils.generateDropletPalette(config.level.codeFunctions)
+      });
 
-  var div = document.getElementById('blockly');
-  var options = {
-    toolbox: config.level.toolbox,
-    disableParamEditing: config.level.disableParamEditing === undefined ?
-        true : config.level.disableParamEditing,
-    disableVariableEditing: config.level.disableVariableEditing === undefined ?
-        false : config.level.disableVariableEditing,
-    useModalFunctionEditor: config.level.useModalFunctionEditor === undefined ?
-        false : config.level.useModalFunctionEditor,
-    useContractEditor: config.level.useContractEditor === undefined ?
-        false : config.level.useContractEditor,
-    scrollbars: config.level.scrollbars
-  };
-  ['trashcan', 'concreteBlocks', 'varsInGlobals',
-    'grayOutUndeletableBlocks', 'disableParamEditing'].forEach(
-    function (prop) {
-      if (config[prop] !== undefined) {
-        options[prop] = config[prop];
+      if (config.afterInject) {
+        config.afterInject();
+      }
+
+      if (config.level.startBlocks) {
+        BlocklyApps.editor.setValue(config.level.startBlocks);
+      } else {
+        var startText = '// ' + msg.typeHint() + '\n';
+        var codeFunctions = config.level.codeFunctions;
+        // Insert hint text from level codeFunctions into editCode area
+        if (codeFunctions) {
+          var hintText = '';
+          for (var i = 0; i < codeFunctions.length; i++) {
+            hintText += " " + codeFunctions[i].func + "();";
+          }
+          startText += '// ' + msg.typeFuncs().replace('%1', hintText) + '\n';
+        }
+        BlocklyApps.editor.setValue(startText);
       }
     });
-  BlocklyApps.inject(div, options);
+  }
 
-  if (config.afterInject) {
-    config.afterInject();
+  if (BlocklyApps.usingBlockly) {
+    // Allow empty blocks if editing blocks.
+    if (config.level.edit_blocks) {
+      BlocklyApps.CHECK_FOR_EMPTY_BLOCKS = false;
+      if (config.level.edit_blocks === 'required_blocks' ||
+        config.level.edit_blocks === 'toolbox_blocks') {
+        // Don't show when run block for toolbox/required block editing
+        config.forceInsertTopBlock = null;
+      }
+    }
+
+    var div = document.getElementById('blockly');
+    var options = {
+      toolbox: config.level.toolbox,
+      disableParamEditing: config.level.disableParamEditing === undefined ?
+          true : config.level.disableParamEditing,
+      disableVariableEditing: config.level.disableVariableEditing === undefined ?
+          false : config.level.disableVariableEditing,
+      useModalFunctionEditor: config.level.useModalFunctionEditor === undefined ?
+          false : config.level.useModalFunctionEditor,
+      useContractEditor: config.level.useContractEditor === undefined ?
+          false : config.level.useContractEditor,
+      scrollbars: config.level.scrollbars,
+      editBlocks: config.level.edit_blocks === undefined ?
+          false : config.level.edit_blocks
+    };
+    ['trashcan', 'concreteBlocks', 'varsInGlobals',
+      'grayOutUndeletableBlocks', 'disableParamEditing'].forEach(
+      function (prop) {
+        if (config[prop] !== undefined) {
+          options[prop] = config[prop];
+        }
+      });
+    BlocklyApps.inject(div, options);
+
+    if (config.afterInject) {
+      config.afterInject();
+    }
+
+    // Add the starting block(s).
+    var startBlocks = config.level.startBlocks || '';
+    if (config.forceInsertTopBlock) {
+      startBlocks = blockUtils.forceInsertTopBlock(startBlocks, config.forceInsertTopBlock);
+    }
+    startBlocks = BlocklyApps.arrangeBlockPosition(startBlocks, config.blockArrangement);
+    BlocklyApps.loadBlocks(startBlocks);
   }
 
   // Initialize the slider.
@@ -574,20 +590,12 @@ BlocklyApps.init = function(config) {
     }
   }
 
-  if (!BlocklyApps.editCode) {
-    // Add the starting block(s).
-    var startBlocks = config.level.startBlocks || '';
-    if (config.forceInsertTopBlock) {
-      startBlocks = blockUtils.forceInsertTopBlock(startBlocks, config.forceInsertTopBlock);
-    }
-    startBlocks = BlocklyApps.arrangeBlockPosition(startBlocks, config.blockArrangement);
-    BlocklyApps.loadBlocks(startBlocks);
-  }
-
   // listen for scroll and resize to ensure onResize() is called
   window.addEventListener('scroll', function() {
     BlocklyApps.onResize();
-    Blockly.fireUiEvent(window, 'resize');
+    var event = document.createEvent('UIEvents');
+    event.initEvent('resize', true, true);  // event type, bubbling, cancelable
+    window.dispatchEvent(event);
   });
   window.addEventListener('resize', BlocklyApps.onResize);
 
@@ -596,7 +604,9 @@ BlocklyApps.init = function(config) {
   // value
   window.setTimeout(function() {
       BlocklyApps.onResize();
-      Blockly.fireUiEvent(window, 'resize');
+      var event = document.createEvent('UIEvents');
+      event.initEvent('resize', true, true);  // event type, bubbling, cancelable
+      window.dispatchEvent(event);
     },
     100);
 
@@ -604,19 +614,53 @@ BlocklyApps.init = function(config) {
 
   // Add display of blocks used.
   setIdealBlockNumber();
-  Blockly.mainBlockSpaceEditor.addChangeListener(function() {
-    BlocklyApps.updateBlockCount();
-  });
+
+  // TODO (cpirich): implement block count for droplet (for now, blockly only)
+  if (BlocklyApps.usingBlockly) {
+    Blockly.mainBlockSpaceEditor.addChangeListener(function() {
+      BlocklyApps.updateBlockCount();
+    });
+
+    if (config.level.openFunctionDefinition) {
+      Blockly.functionEditor.openAndEditFunction(config.level.openFunctionDefinition);
+    }
+  }
+};
+
+exports.loadAudio = function(filenames, name) {
+  if (BlocklyApps.usingBlockly) {
+    Blockly.loadAudio_(filenames, name);
+  } else if (BlocklyApps.cdoSounds) {
+    var regOpts = { id: name };
+    for (var i = 0; i < filenames.length; i++) {
+      var filename = filenames[i];
+      var ext = filename.match(/\.(\w+)(\?.*)?$/);
+      if (ext) {
+        // Extend regOpts so regOpts.mp3 = 'file.mp3'
+        regOpts[ext[1]] = filename;
+      }
+    }
+    BlocklyApps.cdoSounds.register(regOpts);
+  }
 };
 
 exports.playAudio = function(name, options) {
   options = options || {};
   var defaultOptions = {volume: 0.5};
-  Blockly.playAudio(name, utils.extend(defaultOptions, options));
+  var newOptions = utils.extend(defaultOptions, options);
+  if (BlocklyApps.usingBlockly) {
+    Blockly.playAudio(name, newOptions);
+  } else if (BlocklyApps.cdoSounds) {
+    BlocklyApps.cdoSounds.play(name, newOptions);
+  }
 };
 
 exports.stopLoopingAudio = function(name) {
-  Blockly.stopLoopingAudio(name);
+  if (BlocklyApps.usingBlockly) {
+    Blockly.stopLoopingAudio(name);
+  } else if (BlocklyApps.cdoSounds) {
+    BlocklyApps.cdoSounds.stopLoopingAudio(name);
+  }
 };
 
 /**
@@ -688,13 +732,18 @@ BlocklyApps.BLOCK_Y_COORDINATE_INTERVAL = 200;
 
 /**
  * Spreading out the top blocks in workspace if it is not already set.
+ * @param {string} startBlocks String representation of start blocks xml.
+ * @param {Object.<Object>} arrangement A map from block type to position.
+ * @return {string} String representation of start blocks xml, including
+ *    block position.
  */
 BlocklyApps.arrangeBlockPosition = function(startBlocks, arrangement) {
   var type, arrangeX, arrangeY;
   var xml = parseXmlElement(startBlocks);
+  var xmlChildNodes = BlocklyApps.sortBlocksByVisibility(xml.childNodes);
   var numberOfPlacedBlocks = 0;
-  for (var x = 0, xmlChild; xml.childNodes && x < xml.childNodes.length; x++) {
-    xmlChild = xml.childNodes[x];
+  for (var x = 0, xmlChild; xmlChildNodes && x < xmlChildNodes.length; x++) {
+    xmlChild = xmlChildNodes[x];
 
     // Only look at element nodes
     if (xmlChild.nodeType === 1) {
@@ -712,6 +761,27 @@ BlocklyApps.arrangeBlockPosition = function(startBlocks, arrangement) {
     }
   }
   return Blockly.Xml.domToText(xml);
+};
+
+/**
+ * Sorts the array of xml blocks, moving visible blocks to the front.
+ * @param {Array.<Element>} xmlBlocks An array of xml blocks.
+ * @return {Array.<Element>} A sorted array of xml blocks, with all
+ *     visible blocks preceding all hidden blocks.
+ */
+BlocklyApps.sortBlocksByVisibility = function(xmlBlocks) {
+  var visibleXmlBlocks = [];
+  var hiddenXmlBlocks = [];
+  for (var x = 0, xmlBlock; xmlBlocks && x < xmlBlocks.length; x++) {  
+    xmlBlock = xmlBlocks[x];
+    if (xmlBlock.getAttribute &&
+        xmlBlock.getAttribute('uservisible') === 'false') {
+      hiddenXmlBlocks.push(xmlBlock);
+    } else {
+      visibleXmlBlocks.push(xmlBlock);
+    }
+  }
+  return visibleXmlBlocks.concat(hiddenXmlBlocks);
 };
 
 var showInstructions = function(level, autoClose) {
@@ -821,10 +891,13 @@ BlocklyApps.resizeHeaders = function (fullWorkspaceWidth) {
     }
   }
 
-  var workspaceWidth = Blockly.mainBlockSpaceEditor.getBlockSpaceWidth();
-  var toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
-
-  if (BlocklyApps.editCode) {
+  var workspaceWidth;
+  var toolboxWidth;
+  if (BlocklyApps.usingBlockly) {
+    workspaceWidth = Blockly.mainBlockSpaceEditor.getBlockSpaceWidth();
+    toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
+  }
+  else {
     workspaceWidth = fullWorkspaceWidth - categoriesWidth;
     toolboxWidth = 0;
   }
@@ -859,14 +932,16 @@ BlocklyApps.resizeHeaders = function (fullWorkspaceWidth) {
  * @param {boolean} spotlight Optional.  Highlight entire block if true
  */
 BlocklyApps.highlight = function(id, spotlight) {
-  if (id) {
-    var m = id.match(/^block_id_(\d+)$/);
-    if (m) {
-      id = m[1];
+  if (BlocklyApps.usingBlockly) {
+    if (id) {
+      var m = id.match(/^block_id_(\d+)$/);
+      if (m) {
+        id = m[1];
+      }
     }
-  }
 
-  Blockly.mainBlockSpace.highlightBlock(id, spotlight);
+    Blockly.mainBlockSpace.highlightBlock(id, spotlight);
+  }
 };
 
 /**
@@ -1025,8 +1100,10 @@ BlocklyApps.resetButtonClick = function() {
   onResetPressed();
   BlocklyApps.toggleRunReset('run');
   BlocklyApps.clearHighlighting();
-  Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
-  Blockly.mainBlockSpace.traceOn(false);
+  if (BlocklyApps.usingBlockly) {
+    Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
+    Blockly.mainBlockSpace.traceOn(false);
+  }
   BlocklyApps.reset(false);
 };
 
@@ -1167,7 +1244,9 @@ exports.domStringToBlock = function(blockDOMString) {
  * this block, does nothing.
  */
 exports.forceInsertTopBlock = function (input, blockType) {
-  if (input.indexOf(blockType) !== -1) {
+  input = input || '';
+
+  if (blockType === null || input.indexOf(blockType) !== -1) {
     return input;
   }
 
@@ -1504,51 +1583,62 @@ exports.workspaceCode = function(blockly) {
   return exports.strip(code);
 };
 
+exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativeParentObj, maxDepth) {
+  var retVal;
+  if (typeof maxDepth === "undefined") {
+    maxDepth = 4; // default to 4 levels of depth
+  }
+  if (maxDepth === 0) {
+    return interpreter.createPrimitive(undefined);
+  }
+  if (nativeVar instanceof Array) {
+    retVal = interpreter.createObject(interpreter.ARRAY);
+    for (var i = 0; i < nativeVar.length; i++) {
+      retVal.properties[i] = exports.marshalNativeToInterpreter(interpreter,
+                                                                nativeVar[i],
+                                                                null,
+                                                                maxDepth - 1);
+    }
+    retVal.length = nativeVar.length;
+  } else if (nativeVar instanceof Function) {
+    wrapper = exports.makeNativeMemberFunction(interpreter, nativeVar, nativeParentObj);
+    retVal = interpreter.createNativeFunction(wrapper);
+  } else if (nativeVar instanceof Object) {
+    // note Object must be checked after Function and Array (since they are also Objects)
+    if (interpreter.isa(nativeVar, interpreter.FUNCTION)) {
+      // Special case to see if we are trying to marshal an interpreter object
+      // (this currently happens when we store interpreter function objects in native
+      //  and return them back in nativeGetCallback)
+
+      // NOTE: this check could be expanded to check for other interpreter object types
+      // if we have reason to believe that we may be passing those back
+
+      retVal = nativeVar;
+    } else {
+      retVal = interpreter.createObject(interpreter.OBJECT);
+      for (var prop in nativeVar) {
+        interpreter.setProperty(retVal,
+                                prop,
+                                exports.marshalNativeToInterpreter(interpreter,
+                                                                   nativeVar[prop],
+                                                                   nativeVar,
+                                                                   maxDepth - 1));
+      }
+    }
+  } else {
+    retVal = interpreter.createPrimitive(nativeVar);
+  }
+  return retVal;
+};
+
 /**
  * Generate a native function wrapper for use with the JS interpreter.
  */
-exports.makeNativeMemberFunction = function (interpreter, nativeFunc, parentObj) {
+exports.makeNativeMemberFunction = function (interpreter, nativeFunc, nativeParentObj) {
   return function() {
     // Call the native function:
-    var retVal = nativeFunc.apply(parentObj, arguments);
-
-    // Now figure out what to do with the return value...
-
-    if (retVal instanceof Function) {
-      // Don't call createPrimitive() for functions
-      return retVal;
-    } else if (retVal instanceof Object) {
-      var newObj = interpreter.createObject(interpreter.OBJECT);
-      // Limited attempt to marshal back complex return values
-      // Special case: only one-level deep, only handling
-      // primitives and arrays of primitives
-      for (var prop in retVal) {
-        var isFuncOrObj = retVal[prop] instanceof Function ||
-                          retVal[prop] instanceof Object;
-        // replace properties with wrapped properties
-        if (retVal[prop] instanceof Array) {
-          var newArray = interpreter.createObject(interpreter.ARRAY);
-          for (var i = 0; i < retVal[prop].length; i++) {
-            newArray.properties[i] = interpreter.createPrimitive(retVal[prop][i]);
-          }
-          newArray.length = retVal[prop].length;
-          interpreter.setProperty(newObj, prop, newArray);
-        } else if (isFuncOrObj) {
-          // skipping over these - they could be objects that should
-          // be converted into interpreter objects. they could be native
-          // functions that should be converted. Or they could be objects
-          // that are already interpreter objects, which is what we assume
-          // for now:
-          interpreter.setProperty(newObj, prop, retVal[prop]);
-        } else {
-          // wrap as a primitive if it is not a function or object:
-          interpreter.setProperty(newObj, prop, interpreter.createPrimitive(retVal[prop]));
-        }
-      }
-      return newObj;
-    } else {
-      return interpreter.createPrimitive(retVal);
-    }
+    var nativeRetVal = nativeFunc.apply(nativeParentObj, arguments);
+    return exports.marshalNativeToInterpreter(interpreter, nativeRetVal, null);
   };
 };
 
@@ -1653,6 +1743,10 @@ exports.selectCurrentCode = function (interpreter, editor, cumulativeLength,
         var style = {color: '#FFFF22'};
         var line = aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
         editor.clearLineMarks();
+        // NOTE: replace markLine with this new mark() call once we have a new
+        // version of droplet
+        
+        // editor.mark(line, start - cumulativeLength[line], style);
         editor.markLine(line, style);
       } else {
         var selection = editor.aceEditor.getSelection();
@@ -1975,6 +2069,9 @@ exports.displayFeedback = function(options) {
   }
   if (options.level.isK1) {
     feedback.className += " k1";
+  }
+  if (options.appDiv) {
+    feedback.appendChild(options.appDiv);
   }
 
   feedback.appendChild(
@@ -2700,6 +2797,9 @@ var getMissingRequiredBlocks = function () {
  * Do we have any floating blocks not attached to an event block or function block?
  */
 exports.hasExtraTopBlocks = function () {
+  if (BlocklyApps.editCode) {
+    return false;
+  }
   var topBlocks = Blockly.mainBlockSpace.getTopBlocks();
   for (var i = 0; i < topBlocks.length; i++) {
     // ignore disabled top blocks. we have a level turtle:2_7 that depends on
@@ -2722,6 +2822,12 @@ exports.hasExtraTopBlocks = function () {
  */
 exports.getTestResults = function(levelComplete, options) {
   options = options || {};
+  if (BlocklyApps.editCode) {
+    // TODO (cpirich): implement better test results for editCode
+    return levelComplete ?
+      BlocklyApps.TestResults.ALL_PASS :
+      BlocklyApps.TestResults.TOO_FEW_BLOCKS_FAIL;
+  }
   if (BlocklyApps.CHECK_FOR_EMPTY_BLOCKS && hasEmptyContainerBlocks()) {
     var type = getEmptyContainerBlock().type;
     if (type === 'procedures_defnoreturn' || type === 'procedures_defreturn') {
@@ -5915,10 +6021,16 @@ function elementsEquivalent(expected, given) {
 }
 
 /**
- * A list of attributes we want to ignore when comparing atributes, and a
+ * A list of attributes we want to ignore when comparing attributes, and a
  * function for easily determining whether an attribute is in the list.
  */
-var ignorableAttributes = ['deletable', 'movable', 'editable', 'inline'];
+var ignorableAttributes = [
+  'deletable',
+  'movable',
+  'editable',
+  'inline',
+  'uservisible'
+];
 ignorableAttributes.contains = function (attr) {
   return ignorableAttributes.indexOf(attr.name) !== -1;
 };
@@ -6020,6 +6132,7 @@ exports.load = function(assetUrl, id) {
     assetUrl: skinUrl,
     // Images
     avatar: skinUrl('avatar.png'),
+    avatar_2x: skinUrl('avatar_2x.png'),
     tiles: skinUrl('tiles.png'),
     goal: skinUrl('goal.png'),
     obstacle: skinUrl('obstacle.png'),
@@ -6027,6 +6140,8 @@ exports.load = function(assetUrl, id) {
     staticAvatar: skinUrl('static_avatar.png'),
     winAvatar: skinUrl('win_avatar.png'),
     failureAvatar: skinUrl('failure_avatar.png'),
+    decorationAnimation: skinUrl('decoration_animation.png'),
+    decorationAnimation_2x: skinUrl('decoration_animation_2x.png'),
     repeatImage: assetUrl('media/common_images/repeat-arrows.png'),
     leftArrow: assetUrl('media/common_images/moveleft.png'),
     downArrow: assetUrl('media/common_images/movedown.png'),
@@ -6065,6 +6180,11 @@ exports.load = function(assetUrl, id) {
     squigglyLine: assetUrl('media/common_images/squiggly.png'),
     swirlyLine: assetUrl('media/common_images/swirlyline.png'),
     randomPurpleIcon: assetUrl('media/common_images/random-purple.png'),
+    annaLine: assetUrl('media/common_images/annaline.png'),
+    elsaLine: assetUrl('media/common_images/elsaline.png'),
+    annaLine_2x: assetUrl('media/common_images/annaline_2x.png'),
+    elsaLine_2x: assetUrl('media/common_images/elsaline_2x.png'),
+
     // Sounds
     startSound: [skinUrl('start.mp3'), skinUrl('start.ogg')],
     winSound: [skinUrl('win.mp3'), skinUrl('win.ogg')],
@@ -6444,7 +6564,7 @@ with (locals || {}) { (function(){
   var msg = require('../../locale/ru_ru/common');
   var hideRunButton = locals.hideRunButton || false;
 ; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/mobile_tutorial_turnphone.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var instructions = function() {; buf.push('  <div id="bubble" class="clearfix">\n    <table id="prompt-table">\n      <tr>\n        <td id="prompt-icon-cell">\n          <img id="prompt-icon"/>\n        </td>\n        <td id="prompt-cell">\n          <p id="prompt">\n          </p>\n        </td>\n      </tr>\n    </table>\n    <div id="ani-gif-preview-wrapper">\n      <div id="ani-gif-preview">\n        <img id="play-button" src="', escape((26,  assetUrl('media/play-circle.png') )), '"/>\n      </div>\n    </div>\n  </div>\n');30; };; buf.push('\n');31; // A spot for the server to inject some HTML for help content.
-var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (38,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((44,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((45,  msg.runProgram() )), '</div>\n        <img src="', escape((46,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((49,  msg.resetProgram() )), '</div>\n        <img src="', escape((50,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');52; if (data.controls) { ; buf.push('\n      ', (53,  data.controls ), '\n      ');54; } ; buf.push('\n      ');55; if (data.extraControlRows) { ; buf.push('\n      ', (56,  data.extraControlRows ), '\n      ');57; } ; buf.push('\n    </div>\n\n    ');60; instructions() ; buf.push('\n    ');61; helpArea(data.helpHtml) ; buf.push('\n\n  </div>\n</div>\n\n');66; if (data.editCode) { ; buf.push('\n  <div id="blockly" style="display:none"></div>\n  <div id="codeWorkspace">\n');69; } else { ; buf.push('\n  <div id="blockly">\n');71; } ; buf.push('\n  <div id="headers" dir="', escape((72,  data.localeDirection )), '">\n    <div id="toolbox-header" class="blockly-header"><span>', escape((73,  msg.toolboxHeader() )), '</span></div>\n    <div id="workspace-header" class="blockly-header">\n      <span id="workspace-header-span">', escape((75,  msg.workspaceHeader())), ' </span>\n      <div id="blockCounter">\n        <div id="blockUsed" class=', escape((77,  data.blockCounterClass )), '>\n          ', escape((78,  data.blockUsed )), '\n        </div>\n        <span>&nbsp;/</span>\n        <span id="idealBlockNumber">', escape((81,  data.idealBlockNumber )), '</span>\n      </div>\n    </div>\n    <div id="show-code-header" class="blockly-header"><span>', escape((84,  msg.showCodeHeader() )), '</span></div>\n  </div>\n  ');86; if (data.editCode) { ; buf.push('\n    <div id="codeTextbox" contenteditable spellcheck=false></div>\n  ');88; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
+var helpArea = function(html) {; buf.push('  ');32; if (html) {; buf.push('    <div id="helpArea">\n      ', (33,  html ), '\n    </div>\n  ');35; }; buf.push('');35; };; buf.push('\n<div id="visualizationColumn">\n  <div id="visualization">\n    ', (38,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    <div id="gameButtons">\n      <button id="runButton" class="launch blocklyLaunch ', escape((44,  hideRunButton ? 'invisible' : '')), '">\n        <div>', escape((45,  msg.runProgram() )), '</div>\n        <img src="', escape((46,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n      </button>\n      <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n        <div>', escape((49,  msg.resetProgram() )), '</div>\n        <img src="', escape((50,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n      </button>\n      ');52; if (data.controls) { ; buf.push('\n      ', (53,  data.controls ), '\n      ');54; } ; buf.push('\n      ');55; if (data.extraControlRows) { ; buf.push('\n      ', (56,  data.extraControlRows ), '\n      ');57; } ; buf.push('\n    </div>\n\n    ');60; instructions() ; buf.push('\n    ');61; helpArea(data.helpHtml) ; buf.push('\n\n  </div>\n</div>\n\n');66; if (data.editCode) { ; buf.push('\n  <div id="codeWorkspace">\n');68; } else { ; buf.push('\n  <div id="blockly">\n');70; } ; buf.push('\n  <div id="headers" dir="', escape((71,  data.localeDirection )), '">\n    <div id="toolbox-header" class="blockly-header"><span>', escape((72,  msg.toolboxHeader() )), '</span></div>\n    <div id="workspace-header" class="blockly-header">\n      <span id="workspace-header-span">', escape((74,  msg.workspaceHeader())), ' </span>\n      <div id="blockCounter">\n        <div id="blockUsed" class=', escape((76,  data.blockCounterClass )), '>\n          ', escape((77,  data.blockUsed )), '\n        </div>\n        <span>&nbsp;/</span>\n        <span id="idealBlockNumber">', escape((80,  data.idealBlockNumber )), '</span>\n      </div>\n    </div>\n    <div id="show-code-header" class="blockly-header"><span>', escape((83,  msg.showCodeHeader() )), '</span></div>\n  </div>\n  ');85; if (data.editCode) { ; buf.push('\n    <div id="codeTextbox" contenteditable spellcheck=false></div>\n  ');87; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
 } 
 return buf.join('');
 };
@@ -7376,6 +7496,7 @@ Webapp.onTick = function() {
       catch(err) {
         Webapp.executionError = err;
         Webapp.onPuzzleComplete();
+        return;
       }
     }
   } else {
@@ -7436,21 +7557,23 @@ Webapp.init = function(config) {
   });
 
   config.loadAudio = function() {
-    Blockly.loadAudio_(skin.winSound, 'win');
-    Blockly.loadAudio_(skin.startSound, 'start');
-    Blockly.loadAudio_(skin.failureSound, 'failure');
+    BlocklyApps.loadAudio(skin.winSound, 'win');
+    BlocklyApps.loadAudio(skin.startSound, 'start');
+    BlocklyApps.loadAudio(skin.failureSound, 'failure');
   };
 
   config.afterInject = function() {
-    /**
-     * The richness of block colours, regardless of the hue.
-     * MOOC blocks should be brighter (target audience is younger).
-     * Must be in the range of 0 (inclusive) to 1 (exclusive).
-     * Blockly's default is 0.45.
-     */
-    Blockly.HSV_SATURATION = 0.6;
+    if (BlocklyApps.usingBlockly) {
+      /**
+       * The richness of block colours, regardless of the hue.
+       * MOOC blocks should be brighter (target audience is younger).
+       * Must be in the range of 0 (inclusive) to 1 (exclusive).
+       * Blockly's default is 0.45.
+       */
+      Blockly.HSV_SATURATION = 0.6;
 
-    Blockly.SNAP_RADIUS *= Webapp.scale.snapRadius;
+      Blockly.SNAP_RADIUS *= Webapp.scale.snapRadius;
+    }
 
     drawDiv();
   };
@@ -7574,7 +7697,9 @@ BlocklyApps.runButtonClick = function() {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
   BlocklyApps.toggleRunReset('reset');
-  Blockly.mainBlockSpace.traceOn(true);
+  if (BlocklyApps.usingBlockly) {
+    Blockly.mainBlockSpace.traceOn(true);
+  }
   BlocklyApps.reset(false);
   BlocklyApps.attempts++;
   Webapp.execute();
@@ -7601,7 +7726,7 @@ var displayFeedback = function() {
       feedbackImage: Webapp.feedbackImage,
       twitter: twitterOptions,
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
-      saveToGalleryUrl: level.freePlay && Webapp.response.save_to_gallery_url,
+      saveToGalleryUrl: level.freePlay && Webapp.response && Webapp.response.save_to_gallery_url,
       appStrings: {
         reinfFeedbackMsg: webappMsg.reinfFeedbackMsg(),
         sharingText: webappMsg.shareGame()
@@ -7761,15 +7886,11 @@ Webapp.onPuzzleComplete = function() {
   // Stop everything on screen
   Webapp.clearEventHandlersKillTickLoop();
 
-  // If we know they succeeded, mark levelComplete true
-  // Note that we have not yet animated the succesful run
-  var levelComplete = (Webapp.result === BlocklyApps.ResultType.SUCCESS);
-
-  // If the current level is a free play, always return the free play
-  // result type
+  // If the current level is a free play, always return the free play result
   if (level.freePlay) {
     Webapp.testResults = BlocklyApps.TestResults.FREE_PLAY;
   } else {
+    var levelComplete = (Webapp.result === BlocklyApps.ResultType.SUCCESS);
     Webapp.testResults = BlocklyApps.getTestResults(levelComplete);
   }
 
@@ -7782,10 +7903,6 @@ Webapp.onPuzzleComplete = function() {
   var program;
 
   if (level.editCode) {
-    Webapp.testResults = levelComplete ?
-      BlocklyApps.TestResults.ALL_PASS :
-      BlocklyApps.TestResults.TOO_FEW_BLOCKS_FAIL;
-
     // If we want to "normalize" the JavaScript to avoid proliferation of nearly
     // identical versions of the code on the service, we could do either of these:
 
@@ -7952,7 +8069,16 @@ Webapp.setStyle = function (opts) {
 };
 
 Webapp.onEventFired = function (opts, e) {
-  Webapp.eventQueue.push({'fn': opts.func});
+  if (typeof e != 'undefined') {
+    // Push a function call on the queue with an array of arguments consisting
+    // of just the 'e' parameter
+    Webapp.eventQueue.push({
+      'fn': opts.func,
+      'arguments': [e]
+    });
+  } else {
+    Webapp.eventQueue.push({'fn': opts.func});
+  }
 };
 
 Webapp.attachEventHandler = function (opts) {
@@ -8073,6 +8199,10 @@ var MessageFormat = require("messageformat");MessageFormat.locale.ru = function 
   return 'other';
 };
 exports.and = function(d){return "и"};
+
+exports.booleanTrue = function(d){return "true"};
+
+exports.booleanFalse = function(d){return "false"};
 
 exports.blocklyMessage = function(d){return "Блокли"};
 
