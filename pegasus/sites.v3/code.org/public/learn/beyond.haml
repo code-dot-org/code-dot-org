@@ -6,11 +6,11 @@ theme: responsive
 %link{href: "/css/learn_tabs.css", rel: "stylesheet"}
 
 %h1{:style=>"margin-bottom: 0px;"}
-  The Hour of Code is coming - December 8-14!
+  = I18n.t(:code_hoc_coming)
 %h2{:style=>"margin-top: 10px;"}
-  Sign up to participate during CS Education Week
+  = I18n.t(:code_sign_up)
   %a{:href=>'http://www.hourofcode.com'}
     %button
-      Learn More
+      = I18n.t(:learn_more)
 
 = view :learn_carousels, variation:'beyond'
