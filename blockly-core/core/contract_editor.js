@@ -101,16 +101,13 @@ Blockly.ContractEditor.prototype.newParameterBlock = function(newParameterName, 
   return newParamBlockDOM;
 };
 
-Blockly.ContractEditor.prototype.populateParamToolbox_ = function() {
-  this.orderedParamIDsToBlocks_.clear();
-  var self = this;
+/** @override */
+Blockly.ContractEditor.prototype.addParamsFromProcedure_ = function() {
   var procedureInfo = this.functionDefinitionBlock.getProcedureInfo();
   for (var i = 0; i < procedureInfo.parameterNames.length; i++) {
-    self.addParameter(procedureInfo.parameterNames[i], procedureInfo.parameterTypes[i]);
+    this.addParameter(procedureInfo.parameterNames[i], procedureInfo.parameterTypes[i]);
   }
-  this.refreshParamsEverywhere();
 };
-
 Blockly.ContractEditor.prototype.initializeOutputTypeDropdown = function() {
   this.outputTypeSelector = new goog.ui.Select(null, null,
     goog.ui.FlatMenuButtonRenderer.getInstance());

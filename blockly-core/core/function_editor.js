@@ -100,13 +100,17 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
 
 Blockly.FunctionEditor.prototype.populateParamToolbox_ = function() {
   this.orderedParamIDsToBlocks_.clear();
-  var self = this;
-  var procedureInfo = this.functionDefinitionBlock.getProcedureInfo();
-  for (var i = 0; i < procedureInfo.parameterNames.length; i++) {
-    self.addParameter(procedureInfo.parameterNames[i]);
-  }
+  this.addParamsFromProcedure_();
   this.resetParamIDs();
   this.refreshParamsEverywhere();
+};
+
+/** @protected */
+Blockly.FunctionEditor.prototype.addParamsFromProcedure_ = function() {
+  var procedureInfo = this.functionDefinitionBlock.getProcedureInfo();
+  for (var i = 0; i < procedureInfo.parameterNames.length; i++) {
+    this.addParameter(procedureInfo.parameterNames[i]);
+  }
 };
 
 Blockly.FunctionEditor.prototype.openWithNewFunction = function() {
