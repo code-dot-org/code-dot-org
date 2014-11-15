@@ -19896,9 +19896,9 @@ var MessageFormat = require("messageformat");MessageFormat.locale.lt = function 
 };
 exports.and = function(d){return "ir"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "Taip"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "klaida"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -19914,7 +19914,7 @@ exports.catLoops = function(d){return "Kartojimas"};
 
 exports.catMath = function(d){return "Matematika"};
 
-exports.catProcedures = function(d){return "Sudėtinės komandos"};
+exports.catProcedures = function(d){return "Komandų kūrimas"};
 
 exports.catText = function(d){return "Tekstas"};
 
@@ -19996,7 +19996,7 @@ exports.score = function(d){return "rezultatas"};
 
 exports.showCodeHeader = function(d){return "Rodyti kodą"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Rodyti blokus"};
 
 exports.showGeneratedCode = function(d){return "Rodyti kodą"};
 
@@ -20034,7 +20034,7 @@ exports.typeHint = function(d){return "Įsidėmėk, kad skliausteliai ir kabliat
 
 exports.workspaceHeader = function(d){return "Iš viso panaudojai blokelių: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Čia rašykite savo JavaScript kodą."};
 
 exports.infinity = function(d){return "Begalybė"};
 
@@ -20072,31 +20072,31 @@ var MessageFormat = require("messageformat");MessageFormat.locale.lt = function 
 };
 exports.actor = function(d){return "veikėjas"};
 
-exports.backgroundBlack = function(d){return "black"};
+exports.backgroundBlack = function(d){return "juoda"};
 
-exports.backgroundCave = function(d){return "cave"};
+exports.backgroundCave = function(d){return "uola"};
 
-exports.backgroundCloudy = function(d){return "cloudy"};
+exports.backgroundCloudy = function(d){return "debesuota"};
 
-exports.backgroundHardcourt = function(d){return "hardcourt"};
+exports.backgroundHardcourt = function(d){return "sporto aikštelė"};
 
-exports.backgroundNight = function(d){return "night"};
+exports.backgroundNight = function(d){return "naktis"};
 
-exports.backgroundUnderwater = function(d){return "underwater"};
+exports.backgroundUnderwater = function(d){return "po vandeniu"};
 
-exports.backgroundCity = function(d){return "city"};
+exports.backgroundCity = function(d){return "miestas"};
 
-exports.backgroundDesert = function(d){return "desert"};
+exports.backgroundDesert = function(d){return "dykuma"};
 
-exports.backgroundRainbow = function(d){return "rainbow"};
+exports.backgroundRainbow = function(d){return "vaivorykštė"};
 
-exports.backgroundSoccer = function(d){return "soccer"};
+exports.backgroundSoccer = function(d){return "futbolas"};
 
-exports.backgroundSpace = function(d){return "space"};
+exports.backgroundSpace = function(d){return "kosmosas"};
 
-exports.backgroundTennis = function(d){return "tennis"};
+exports.backgroundTennis = function(d){return "tenisas"};
 
-exports.backgroundWinter = function(d){return "winter"};
+exports.backgroundWinter = function(d){return "žiema"};
 
 exports.catActions = function(d){return "Komandos"};
 
@@ -20108,7 +20108,7 @@ exports.catLogic = function(d){return "Logika"};
 
 exports.catMath = function(d){return "Matematika"};
 
-exports.catProcedures = function(d){return "Sudėtinės komandos"};
+exports.catProcedures = function(d){return "Komandų kūrimas"};
 
 exports.catText = function(d){return "Tekstas"};
 
@@ -20336,9 +20336,9 @@ exports.setBackgroundWinter = function(d){return "fonas = žiema"};
 
 exports.setBackgroundTooltip = function(d){return "Nustato fono paveikslėlį"};
 
-exports.setEnemySpeed = function(d){return "set enemy speed"};
+exports.setEnemySpeed = function(d){return "priešo greitis = "};
 
-exports.setPlayerSpeed = function(d){return "set player speed"};
+exports.setPlayerSpeed = function(d){return "mano greitis = "};
 
 exports.setScoreText = function(d){return "taškai ="};
 
@@ -20458,9 +20458,9 @@ exports.shareStudioTwitter = function(d){return "Pažiūrėk, kokią istoriją s
 
 exports.shareGame = function(d){return "Pasidalink savo istorija:"};
 
-exports.showCoordinates = function(d){return "show coordinates"};
+exports.showCoordinates = function(d){return "rodyti koordinates"};
 
-exports.showCoordinatesTooltip = function(d){return "show the protagonist's coordinates on the screen"};
+exports.showCoordinatesTooltip = function(d){return "rodyti \"geriečio\" koordinates ekrane"};
 
 exports.showTitleScreen = function(d){return "parodyk ekrano pavadinimą"};
 
@@ -20474,7 +20474,7 @@ exports.showTSDefText = function(d){return "įrašykite tekstą"};
 
 exports.showTitleScreenTooltip = function(d){return "Parodyti pradinį ekraną su pavadinimu ir tekstu."};
 
-exports.size = function(d){return "size"};
+exports.size = function(d){return "dydis"};
 
 exports.setSprite = function(d){return " "};
 

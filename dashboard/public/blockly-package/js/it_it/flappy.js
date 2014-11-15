@@ -9580,9 +9580,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.it=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "e"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "vero"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "falso"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -9600,7 +9600,7 @@ exports.catMath = function(d){return "Matematica"};
 
 exports.catProcedures = function(d){return "Funzioni"};
 
-exports.catText = function(d){return "testo"};
+exports.catText = function(d){return "Testo"};
 
 exports.catVariables = function(d){return "Variabili"};
 
@@ -9632,7 +9632,7 @@ exports.finalStage = function(d){return "Complimenti! Hai completato l'ultima le
 
 exports.finalStageTrophies = function(d){return "Complimenti! Hai completato l'ultima lezione e vinto "+p(d,"numTrophies",0,"it",{"one":"un trofeo","other":n(d,"numTrophies")+" trofei"})+"."};
 
-exports.finish = function(d){return "Fine"};
+exports.finish = function(d){return "Condividi"};
 
 exports.generatedCodeInfo = function(d){return "Anche le migliori università (p.es., "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+") insegnano la programmazione visuale con i blocchi. Ma i blocchi che metti insieme possono essere rappresentati anche in JavaScript, uno dei linguaggi di programmazione più usati al mondo:"};
 
@@ -9646,7 +9646,7 @@ exports.jump = function(d){return "salta"};
 
 exports.levelIncompleteError = function(d){return "Stai usando tutti i tipi di blocchi necessari, ma non nel modo giusto."};
 
-exports.listVariable = function(d){return "elenco"};
+exports.listVariable = function(d){return "lista"};
 
 exports.makeYourOwnFlappy = function(d){return "Costruisci la tua versione del gioco Flappy"};
 
@@ -9678,9 +9678,9 @@ exports.runTooltip = function(d){return "Esegui il programma definito dai blocch
 
 exports.score = function(d){return "punteggio"};
 
-exports.showCodeHeader = function(d){return "Visualizza codice"};
+exports.showCodeHeader = function(d){return "Mostra il codice"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Mostra i blocchi"};
 
 exports.showGeneratedCode = function(d){return "Mostra il codice"};
 
@@ -9694,7 +9694,7 @@ exports.tooManyBlocksMsg = function(d){return "Questo esercizio può essere riso
 
 exports.tooMuchWork = function(d){return "Mi hai fatto fare un sacco di lavoro!  Puoi provare a farmi fare meno ripetizioni?"};
 
-exports.toolboxHeader = function(d){return "blocchi"};
+exports.toolboxHeader = function(d){return "Blocchi"};
 
 exports.openWorkspace = function(d){return "Come funziona"};
 
@@ -9718,7 +9718,7 @@ exports.typeHint = function(d){return "Sono necessarie le parentesi e i punto e 
 
 exports.workspaceHeader = function(d){return "Assembla i tuoi blocchi qui: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Scrivi qua il tuo codice JavaScript"};
 
 exports.infinity = function(d){return "Infinito"};
 
@@ -9773,7 +9773,7 @@ exports.flapVeryLarge = function(d){return "sbatti le ali per un numero di volte
 
 exports.flapTooltip = function(d){return "fai volare Flappy verso l'alto."};
 
-exports.flappySpecificFail = function(d){return "Il tuo codice sembra buono: Flappy sbatte le ali ad ogni clic. Ma devi cliccare molte volte per volare fino al bersaglio disegnato."};
+exports.flappySpecificFail = function(d){return "Il tuo codice sembra buono - Flappy sbatte le ali ad ogni clic. Ma devi cliccare molte volte per volare fino al bersaglio."};
 
 exports.incrementPlayerScore = function(d){return "aggiungi un punto"};
 
@@ -9787,7 +9787,7 @@ exports.numBlocksNeeded = function(d){return "Questo esercizio può essere risol
 
 exports.playSoundRandom = function(d){return "riproduci un suono scelto a caso"};
 
-exports.playSoundBounce = function(d){return "Fai il rumore di un rimbalzo"};
+exports.playSoundBounce = function(d){return "riproduci il suono di un rimbalzo"};
 
 exports.playSoundCrunch = function(d){return "riproduci il suono di uno sgranocchiamento"};
 
@@ -9813,7 +9813,7 @@ exports.playSoundLaser = function(d){return "riproduci il suono di un raggio las
 
 exports.playSoundTooltip = function(d){return "Riproduci il suono scelto."};
 
-exports.reinfFeedbackMsg = function(d){return "Puoi premere \"Gioca di nuovo\" per ricominciare a giocare con il tuo gioco."};
+exports.reinfFeedbackMsg = function(d){return "Premi \"Ricomincia\" per ricominciare a giocare la tua partita."};
 
 exports.scoreText = function(d){return "Punteggio: "+v(d,"playerScore")};
 
@@ -9833,7 +9833,7 @@ exports.setBackgroundCave = function(d){return "imposta la scena Grotta"};
 
 exports.setBackgroundSanta = function(d){return "imposta la scena Natale"};
 
-exports.setBackgroundTooltip = function(d){return "Imposta l'immagine di sfondo"};
+exports.setBackgroundTooltip = function(d){return "Imposta l'immagine per lo sfondo"};
 
 exports.setGapRandom = function(d){return "imposta una distanza scelta a caso"};
 
@@ -9941,7 +9941,7 @@ exports.setSpeed = function(d){return "Imposta la velocità"};
 
 exports.setSpeedTooltip = function(d){return "Imposta la velocità con cui Flappy sbatte le ali"};
 
-exports.shareFlappyTwitter = function(d){return "Guarda il gioco Flappy che ho creato io. L'ho fatto per conto mio @codeorg"};
+exports.shareFlappyTwitter = function(d){return "Guarda il gioco Flappy che ho creato io. L'ho fatto per conto mio @codeorg @programmafuturo"};
 
 exports.shareGame = function(d){return "Condividi il tuo gioco:"};
 
@@ -9999,9 +9999,9 @@ exports.whenEnterObstacle = function(d){return "quando supera un ostacolo"};
 
 exports.whenEnterObstacleTooltip = function(d){return "Esegue le azioni qua sotto quando Flappy incontra un ostacolo."};
 
-exports.whenRunButtonClick = function(d){return "quando inizia il gioco"};
+exports.whenRunButtonClick = function(d){return "quando si clicca su \"Esegui\""};
 
-exports.whenRunButtonClickTooltip = function(d){return "Esegue le azioni qua sotto quando il gioco inizia."};
+exports.whenRunButtonClickTooltip = function(d){return "Esegue le azioni qua sotto quando si clicca su \"Esegui\"."};
 
 exports.yes = function(d){return "Sì"};
 

@@ -19887,15 +19887,15 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.zh=function(n){return "other"}
 exports.and = function(d){return "且"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "真"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "否"};
 
 exports.blocklyMessage = function(d){return "模組化"};
 
 exports.catActions = function(d){return "動作類別"};
 
-exports.catColour = function(d){return "顏色類別"};
+exports.catColour = function(d){return "顏色"};
 
 exports.catLogic = function(d){return "邏輯類別"};
 
@@ -19987,7 +19987,7 @@ exports.score = function(d){return "分數"};
 
 exports.showCodeHeader = function(d){return "顯示程式碼"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "顯示積木"};
 
 exports.showGeneratedCode = function(d){return "顯示程式碼"};
 
@@ -20025,7 +20025,7 @@ exports.typeHint = function(d){return "請注意\"括弧\"和\"分號\"都是必
 
 exports.workspaceHeader = function(d){return "在此組合您的區塊"};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "在此輸入您的 JavaScript 代碼"};
 
 exports.infinity = function(d){return "無窮"};
 
@@ -20054,31 +20054,31 @@ exports.genericFeedback = function(d){return "看看你的成果如何, 並試�
 var MessageFormat = require("messageformat");MessageFormat.locale.zh=function(n){return "other"}
 exports.actor = function(d){return "演員"};
 
-exports.backgroundBlack = function(d){return "black"};
+exports.backgroundBlack = function(d){return "黑"};
 
-exports.backgroundCave = function(d){return "cave"};
+exports.backgroundCave = function(d){return "洞穴"};
 
-exports.backgroundCloudy = function(d){return "cloudy"};
+exports.backgroundCloudy = function(d){return "多雲"};
 
 exports.backgroundHardcourt = function(d){return "hardcourt"};
 
-exports.backgroundNight = function(d){return "night"};
+exports.backgroundNight = function(d){return "夜"};
 
-exports.backgroundUnderwater = function(d){return "underwater"};
+exports.backgroundUnderwater = function(d){return "水底"};
 
-exports.backgroundCity = function(d){return "city"};
+exports.backgroundCity = function(d){return "城市"};
 
-exports.backgroundDesert = function(d){return "desert"};
+exports.backgroundDesert = function(d){return "沙漠"};
 
-exports.backgroundRainbow = function(d){return "rainbow"};
+exports.backgroundRainbow = function(d){return "彩虹"};
 
-exports.backgroundSoccer = function(d){return "soccer"};
+exports.backgroundSoccer = function(d){return "足球"};
 
-exports.backgroundSpace = function(d){return "space"};
+exports.backgroundSpace = function(d){return "太空"};
 
-exports.backgroundTennis = function(d){return "tennis"};
+exports.backgroundTennis = function(d){return "網球"};
 
-exports.backgroundWinter = function(d){return "winter"};
+exports.backgroundWinter = function(d){return "冬天"};
 
 exports.catActions = function(d){return "動作類別"};
 
@@ -20134,9 +20134,9 @@ exports.makeProjectilePurpleHearts = function(d){return "make purple hearts"};
 
 exports.makeProjectileRedHearts = function(d){return "make red hearts"};
 
-exports.makeProjectileTooltip = function(d){return "完成這個專案，讓互相碰撞的球消失或反彈。"};
+exports.makeProjectileTooltip = function(d){return "讓撞擊的導彈消失或反彈。"};
 
-exports.makeYourOwn = function(d){return "完成你自己的故事"};
+exports.makeYourOwn = function(d){return "創作你自己的Play Lab程式"};
 
 exports.moveDirectionDown = function(d){return "向下"};
 
@@ -20466,45 +20466,45 @@ exports.soundCrunch = function(d){return "收緊"};
 
 exports.soundGoal1 = function(d){return "goal 1"};
 
-exports.soundGoal2 = function(d){return "goal 2"};
+exports.soundGoal2 = function(d){return "目標 2"};
 
 exports.soundHit = function(d){return "敲擊聲"};
 
-exports.soundLosePoint = function(d){return "lose point"};
+exports.soundLosePoint = function(d){return "失分"};
 
-exports.soundLosePoint2 = function(d){return "lose point 2"};
+exports.soundLosePoint2 = function(d){return "失2分"};
 
 exports.soundRetro = function(d){return "retro"};
 
 exports.soundRubber = function(d){return "橡皮聲"};
 
-exports.soundSlap = function(d){return "slap"};
+exports.soundSlap = function(d){return "拍手"};
 
-exports.soundWinPoint = function(d){return "win point"};
+exports.soundWinPoint = function(d){return "得分"};
 
-exports.soundWinPoint2 = function(d){return "win point 2"};
+exports.soundWinPoint2 = function(d){return "得2分"};
 
-exports.soundWood = function(d){return "wood"};
+exports.soundWood = function(d){return "木"};
 
-exports.speed = function(d){return "speed"};
+exports.speed = function(d){return "速度"};
 
 exports.stopSprite = function(d){return "停止"};
 
-exports.stopSpriteN = function(d){return "stop actor "+v(d,"spriteIndex")};
+exports.stopSpriteN = function(d){return "讓演員 "+v(d,"spriteIndex")+" 停止"};
 
 exports.stopTooltip = function(d){return "停止移動角色。"};
 
-exports.throwSprite = function(d){return "throw"};
+exports.throwSprite = function(d){return "發射"};
 
-exports.throwSpriteN = function(d){return "actor "+v(d,"spriteIndex")+" throw"};
+exports.throwSpriteN = function(d){return "演員 "+v(d,"spriteIndex")+" 發射"};
 
-exports.throwTooltip = function(d){return "Throws a projectile from the specified actor."};
+exports.throwTooltip = function(d){return "由指定的主角發射導彈。"};
 
-exports.vanish = function(d){return "vanish"};
+exports.vanish = function(d){return "消失"};
 
-exports.vanishActorN = function(d){return "vanish actor "+v(d,"spriteIndex")};
+exports.vanishActorN = function(d){return "讓演員 "+v(d,"spriteIndex")+" 消失"};
 
-exports.vanishTooltip = function(d){return "Vanishes the actor."};
+exports.vanishTooltip = function(d){return "讓演員消失。"};
 
 exports.waitFor = function(d){return "等待"};
 
@@ -20566,27 +20566,27 @@ exports.whenSpriteCollidedTooltip = function(d){return "當兩個演員接觸時
 
 exports.whenSpriteCollidedWith = function(d){return "接觸"};
 
-exports.whenSpriteCollidedWithAnyActor = function(d){return "touches any actor"};
+exports.whenSpriteCollidedWithAnyActor = function(d){return "碰到任何一個演員"};
 
-exports.whenSpriteCollidedWithAnyEdge = function(d){return "touches any edge"};
+exports.whenSpriteCollidedWithAnyEdge = function(d){return "碰到任何邊緣"};
 
-exports.whenSpriteCollidedWithAnyProjectile = function(d){return "touches any projectile"};
+exports.whenSpriteCollidedWithAnyProjectile = function(d){return "碰到任何導彈"};
 
-exports.whenSpriteCollidedWithAnything = function(d){return "touches anything"};
+exports.whenSpriteCollidedWithAnything = function(d){return "碰到任何東西"};
 
 exports.whenSpriteCollidedWithN = function(d){return "接觸演員"+v(d,"spriteIndex")};
 
-exports.whenSpriteCollidedWithBlueFireball = function(d){return "touches blue fireball"};
+exports.whenSpriteCollidedWithBlueFireball = function(d){return "碰到藍色火球"};
 
-exports.whenSpriteCollidedWithPurpleFireball = function(d){return "touches purple fireball"};
+exports.whenSpriteCollidedWithPurpleFireball = function(d){return "碰到紫色火球"};
 
-exports.whenSpriteCollidedWithRedFireball = function(d){return "touches red fireball"};
+exports.whenSpriteCollidedWithRedFireball = function(d){return "碰到紅色火球"};
 
-exports.whenSpriteCollidedWithYellowHearts = function(d){return "touches yellow hearts"};
+exports.whenSpriteCollidedWithYellowHearts = function(d){return "碰到黃色心"};
 
-exports.whenSpriteCollidedWithPurpleHearts = function(d){return "touches purple hearts"};
+exports.whenSpriteCollidedWithPurpleHearts = function(d){return "碰到紫色心"};
 
-exports.whenSpriteCollidedWithRedHearts = function(d){return "touches red hearts"};
+exports.whenSpriteCollidedWithRedHearts = function(d){return "碰到紅色心"};
 
 exports.whenSpriteCollidedWithBottomEdge = function(d){return "接觸底部邊緣"};
 

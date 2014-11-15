@@ -13856,9 +13856,9 @@ var MessageFormat = require("messageformat");MessageFormat.locale.lt = function 
 };
 exports.and = function(d){return "ir"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "Taip"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "klaida"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -13874,7 +13874,7 @@ exports.catLoops = function(d){return "Kartojimas"};
 
 exports.catMath = function(d){return "Matematika"};
 
-exports.catProcedures = function(d){return "Sudėtinės komandos"};
+exports.catProcedures = function(d){return "Komandų kūrimas"};
 
 exports.catText = function(d){return "Tekstas"};
 
@@ -13956,7 +13956,7 @@ exports.score = function(d){return "rezultatas"};
 
 exports.showCodeHeader = function(d){return "Rodyti kodą"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Rodyti blokus"};
 
 exports.showGeneratedCode = function(d){return "Rodyti kodą"};
 
@@ -13994,7 +13994,7 @@ exports.typeHint = function(d){return "Įsidėmėk, kad skliausteliai ir kabliat
 
 exports.workspaceHeader = function(d){return "Iš viso panaudojai blokelių: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Čia rašykite savo JavaScript kodą."};
 
 exports.infinity = function(d){return "Begalybė"};
 
@@ -14134,9 +14134,9 @@ exports.noPathLeft = function(d){return "nėra kelio į kairę"};
 
 exports.noPathRight = function(d){return "nėra kelio į dešinę"};
 
-exports.notAtFlowerError = function(d){return "Iš gėlės galima gauti tik nektaro."};
+exports.notAtFlowerError = function(d){return "Tik iš gėlės galima gauti nektaro. Turbūt bitė yra ne tame langelyje..."};
 
-exports.notAtHoneycombError = function(d){return "Koryje galima gaminti tik medų."};
+exports.notAtHoneycombError = function(d){return "Tik koryje galima gaminti medų. Turbūt bitė yra netinkamame langelyje..."};
 
 exports.numBlocksNeeded = function(d){return "Ši užduotis gali būti išspręsta su %1 blokų(-ais)."};
 

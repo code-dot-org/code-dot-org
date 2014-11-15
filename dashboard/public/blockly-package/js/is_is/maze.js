@@ -13847,9 +13847,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.is=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "og"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "satt"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "ósatt"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -13947,7 +13947,7 @@ exports.score = function(d){return "stig"};
 
 exports.showCodeHeader = function(d){return "Sýna kóða"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Sýna kubba"};
 
 exports.showGeneratedCode = function(d){return "Sýna kóða"};
 
@@ -13985,7 +13985,7 @@ exports.typeHint = function(d){return "Athugaðu að svigarnir og semikommurnar 
 
 exports.workspaceHeader = function(d){return "Settu kubbana saman hér: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Skrifaðu JavaScript kóða þinn hér"};
 
 exports.infinity = function(d){return "Óendanleiki"};
 

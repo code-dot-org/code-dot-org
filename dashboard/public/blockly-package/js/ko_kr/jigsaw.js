@@ -8175,7 +8175,7 @@ exports.score = function(d){return "점수"};
 
 exports.showCodeHeader = function(d){return "코드 보기"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "블럭 보이기"};
 
 exports.showGeneratedCode = function(d){return "코드 보기"};
 
@@ -8213,7 +8213,7 @@ exports.typeHint = function(d){return "괄호 \"( )\" 와 세미콜론 \";\" 이
 
 exports.workspaceHeader = function(d){return "블럭들을 이곳에서 조립하세요:"};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "자바스크립트 코드 작성"};
 
 exports.infinity = function(d){return "무한"};
 

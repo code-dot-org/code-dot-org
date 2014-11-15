@@ -11603,9 +11603,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.it=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "e"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "vero"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "falso"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -11623,7 +11623,7 @@ exports.catMath = function(d){return "Matematica"};
 
 exports.catProcedures = function(d){return "Funzioni"};
 
-exports.catText = function(d){return "testo"};
+exports.catText = function(d){return "Testo"};
 
 exports.catVariables = function(d){return "Variabili"};
 
@@ -11655,7 +11655,7 @@ exports.finalStage = function(d){return "Complimenti! Hai completato l'ultima le
 
 exports.finalStageTrophies = function(d){return "Complimenti! Hai completato l'ultima lezione e vinto "+p(d,"numTrophies",0,"it",{"one":"un trofeo","other":n(d,"numTrophies")+" trofei"})+"."};
 
-exports.finish = function(d){return "Fine"};
+exports.finish = function(d){return "Condividi"};
 
 exports.generatedCodeInfo = function(d){return "Anche le migliori università (p.es., "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+") insegnano la programmazione visuale con i blocchi. Ma i blocchi che metti insieme possono essere rappresentati anche in JavaScript, uno dei linguaggi di programmazione più usati al mondo:"};
 
@@ -11669,7 +11669,7 @@ exports.jump = function(d){return "salta"};
 
 exports.levelIncompleteError = function(d){return "Stai usando tutti i tipi di blocchi necessari, ma non nel modo giusto."};
 
-exports.listVariable = function(d){return "elenco"};
+exports.listVariable = function(d){return "lista"};
 
 exports.makeYourOwnFlappy = function(d){return "Costruisci la tua versione del gioco Flappy"};
 
@@ -11701,9 +11701,9 @@ exports.runTooltip = function(d){return "Esegui il programma definito dai blocch
 
 exports.score = function(d){return "punteggio"};
 
-exports.showCodeHeader = function(d){return "Visualizza codice"};
+exports.showCodeHeader = function(d){return "Mostra il codice"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Mostra i blocchi"};
 
 exports.showGeneratedCode = function(d){return "Mostra il codice"};
 
@@ -11717,7 +11717,7 @@ exports.tooManyBlocksMsg = function(d){return "Questo esercizio può essere riso
 
 exports.tooMuchWork = function(d){return "Mi hai fatto fare un sacco di lavoro!  Puoi provare a farmi fare meno ripetizioni?"};
 
-exports.toolboxHeader = function(d){return "blocchi"};
+exports.toolboxHeader = function(d){return "Blocchi"};
 
 exports.openWorkspace = function(d){return "Come funziona"};
 
@@ -11741,7 +11741,7 @@ exports.typeHint = function(d){return "Sono necessarie le parentesi e i punto e 
 
 exports.workspaceHeader = function(d){return "Assembla i tuoi blocchi qui: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Scrivi qua il tuo codice JavaScript"};
 
 exports.infinity = function(d){return "Infinito"};
 
@@ -11768,43 +11768,43 @@ exports.genericFeedback = function(d){return "Verifica il risultato e prova a co
 
 },{"messageformat":60}],48:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.it=function(n){return n===1?"one":"other"}
-exports.circleBlockTitle = function(d){return "circle (radius, style, color)"};
+exports.circleBlockTitle = function(d){return "cerchio (raggio, stile, colore)"};
 
-exports.displayBlockTitle = function(d){return "display"};
+exports.displayBlockTitle = function(d){return "visualizza"};
 
-exports.ellipseBlockTitle = function(d){return "ellipse (width, height, style, color)"};
+exports.ellipseBlockTitle = function(d){return "ellisse (larghezza, altezza, stile, colore)"};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"display\" block?"};
+exports.extraTopBlocks = function(d){return "Ci sono dei blocchi scollegati. Volevi forse attaccarli al blocco 'visualizza'?"};
 
-exports.overlayBlockTitle = function(d){return "overlay (top, bottom)"};
+exports.overlayBlockTitle = function(d){return "metti-sopra (superiore, inferiore)"};
 
-exports.placeImageBlockTitle = function(d){return "place-image (x, y, image)"};
+exports.placeImageBlockTitle = function(d){return "posiziona-immagine (x, y, immagine)"};
 
-exports.rectangleBlockTitle = function(d){return "rectangle (width, height, style, color)"};
+exports.rectangleBlockTitle = function(d){return "rettangolo (larghezza, altezza, stile, colore)"};
 
-exports.rotateImageBlockTitle = function(d){return "rotate (degrees, image)"};
+exports.rotateImageBlockTitle = function(d){return "ruota (gradi, immagine)"};
 
-exports.scaleImageBlockTitle = function(d){return "scale (factor)"};
+exports.scaleImageBlockTitle = function(d){return "scala (fattore)"};
 
-exports.squareBlockTitle = function(d){return "square (size, style, color)"};
+exports.squareBlockTitle = function(d){return "quadrato (dimensione, stile, colore)"};
 
-exports.starBlockTitle = function(d){return "star (radius, style, color)"};
+exports.starBlockTitle = function(d){return "stella (raggio, stile, colore)"};
 
-exports.stringAppendBlockTitle = function(d){return "string-append (first, second)"};
+exports.stringAppendBlockTitle = function(d){return "concatena-stringa (prima, seconda)"};
 
-exports.stringLengthBlockTitle = function(d){return "string-length (string)"};
+exports.stringLengthBlockTitle = function(d){return "lunghezza-stringa (stringa)"};
 
-exports.textBlockTitle = function(d){return "text (string, size, color)"};
+exports.textBlockTitle = function(d){return "testo (stringa, dimensione, colore)"};
 
-exports.triangleBlockTitle = function(d){return "triangle (size, style, color)"};
+exports.triangleBlockTitle = function(d){return "triangolo (dimensione, stile, colore)"};
 
-exports.underlayBlockTitle = function(d){return "underlay (bottom, top)"};
+exports.underlayBlockTitle = function(d){return "metti-sotto (inferiore, superiore)"};
 
-exports.outline = function(d){return "outline"};
+exports.outline = function(d){return "contorno"};
 
-exports.solid = function(d){return "solid"};
+exports.solid = function(d){return "solido"};
 
-exports.string = function(d){return "string"};
+exports.string = function(d){return "stringa"};
 
 
 },{"messageformat":60}],49:[function(require,module,exports){

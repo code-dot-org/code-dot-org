@@ -13847,9 +13847,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.it=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "e"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "vero"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "falso"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -13867,7 +13867,7 @@ exports.catMath = function(d){return "Matematica"};
 
 exports.catProcedures = function(d){return "Funzioni"};
 
-exports.catText = function(d){return "testo"};
+exports.catText = function(d){return "Testo"};
 
 exports.catVariables = function(d){return "Variabili"};
 
@@ -13899,7 +13899,7 @@ exports.finalStage = function(d){return "Complimenti! Hai completato l'ultima le
 
 exports.finalStageTrophies = function(d){return "Complimenti! Hai completato l'ultima lezione e vinto "+p(d,"numTrophies",0,"it",{"one":"un trofeo","other":n(d,"numTrophies")+" trofei"})+"."};
 
-exports.finish = function(d){return "Fine"};
+exports.finish = function(d){return "Condividi"};
 
 exports.generatedCodeInfo = function(d){return "Anche le migliori università (p.es., "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+") insegnano la programmazione visuale con i blocchi. Ma i blocchi che metti insieme possono essere rappresentati anche in JavaScript, uno dei linguaggi di programmazione più usati al mondo:"};
 
@@ -13913,7 +13913,7 @@ exports.jump = function(d){return "salta"};
 
 exports.levelIncompleteError = function(d){return "Stai usando tutti i tipi di blocchi necessari, ma non nel modo giusto."};
 
-exports.listVariable = function(d){return "elenco"};
+exports.listVariable = function(d){return "lista"};
 
 exports.makeYourOwnFlappy = function(d){return "Costruisci la tua versione del gioco Flappy"};
 
@@ -13945,9 +13945,9 @@ exports.runTooltip = function(d){return "Esegui il programma definito dai blocch
 
 exports.score = function(d){return "punteggio"};
 
-exports.showCodeHeader = function(d){return "Visualizza codice"};
+exports.showCodeHeader = function(d){return "Mostra il codice"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Mostra i blocchi"};
 
 exports.showGeneratedCode = function(d){return "Mostra il codice"};
 
@@ -13961,7 +13961,7 @@ exports.tooManyBlocksMsg = function(d){return "Questo esercizio può essere riso
 
 exports.tooMuchWork = function(d){return "Mi hai fatto fare un sacco di lavoro!  Puoi provare a farmi fare meno ripetizioni?"};
 
-exports.toolboxHeader = function(d){return "blocchi"};
+exports.toolboxHeader = function(d){return "Blocchi"};
 
 exports.openWorkspace = function(d){return "Come funziona"};
 
@@ -13985,7 +13985,7 @@ exports.typeHint = function(d){return "Sono necessarie le parentesi e i punto e 
 
 exports.workspaceHeader = function(d){return "Assembla i tuoi blocchi qui: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Scrivi qua il tuo codice JavaScript"};
 
 exports.infinity = function(d){return "Infinito"};
 
@@ -14066,13 +14066,13 @@ exports.honeycombFullError = function(d){return "Il favo non ha più spazio per 
 
 exports.ifCode = function(d){return "se"};
 
-exports.ifInRepeatError = function(d){return "Hai bisogno di un blocco \"se\" all'interno di un blocco \"ripeti\". Se hai problemi, prova di nuovo il livello precedente per vedere come funzionava."};
+exports.ifInRepeatError = function(d){return "Hai bisogno di un blocco \"se\" all'interno di un blocco \"ripeti\". Se non ci riesci, prova di nuovo il livello precedente per vedere come funzionava."};
 
 exports.ifPathAhead = function(d){return "se c'è strada in avanti"};
 
 exports.ifTooltip = function(d){return "Se c'è strada nella direzione specificata, allora fai alcune azioni."};
 
-exports.ifelseTooltip = function(d){return "Se c'è strada nella direzione specificata, effettua il primo blocco di azioni. Altrimenti, effettua il secondo."};
+exports.ifelseTooltip = function(d){return "Se c'è strada nella direzione specificata, allora effettua il primo blocco di azioni. Altrimenti, effettua il secondo."};
 
 exports.ifFlowerTooltip = function(d){return "Se c'è un fiore o un favo nella direzione specificata, allora fai alcune azioni."};
 
@@ -14088,7 +14088,7 @@ exports.moveBackward = function(d){return "vai indietro"};
 
 exports.moveEastTooltip = function(d){return "Vai una casella verso est."};
 
-exports.moveForward = function(d){return "Vai avanti"};
+exports.moveForward = function(d){return "vai avanti"};
 
 exports.moveForwardTooltip = function(d){return "Vai avanti di una casella."};
 
@@ -14114,7 +14114,7 @@ exports.noPathAhead = function(d){return "la strada è bloccata"};
 
 exports.noPathLeft = function(d){return "nessuna strada a sinistra"};
 
-exports.noPathRight = function(d){return "nessun percorso a destra"};
+exports.noPathRight = function(d){return "nessuna strada a destra"};
 
 exports.notAtFlowerError = function(d){return "Puoi prendere solo il nettare dal fiore."};
 
@@ -14122,7 +14122,7 @@ exports.notAtHoneycombError = function(d){return "Puoi fare il miele solo in un 
 
 exports.numBlocksNeeded = function(d){return "Questo esercizio può essere risolto con %1 blocchi."};
 
-exports.pathAhead = function(d){return "la strada davanti"};
+exports.pathAhead = function(d){return "c'è strada in avanti"};
 
 exports.pathLeft = function(d){return "se c'è strada a sinistra"};
 

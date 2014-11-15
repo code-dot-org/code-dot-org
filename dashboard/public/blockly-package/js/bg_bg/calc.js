@@ -8337,26 +8337,26 @@ exports.parseElement = function(text) {
 
 },{}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.bg=function(n){return n===1?"one":"other"}
-exports.compute = function(d){return "compute"};
+exports.compute = function(d){return "изчисляване"};
 
-exports.equivalentExpression = function(d){return "Try reordering your arguments to get exactly the same expression."};
+exports.equivalentExpression = function(d){return "Опитайте пренареждане на аргументите, за да получите точно един и същи израз."};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"compute\" block?"};
+exports.extraTopBlocks = function(d){return "Имате незакачени блокове. Имате ли намерение да ги закачите към изчислителния блок?"};
 
-exports.goal = function(d){return "Goal:"};
+exports.goal = function(d){return "Цел:"};
 
-exports.reinfFeedbackMsg = function(d){return "Това изглежда ли както желаете? Можете да натиснете бутона \"Опитайте отново\", за да видите вашата рисунка.\n"};
+exports.reinfFeedbackMsg = function(d){return "Можете да натиснете бутона \"Опитай отново\", за да редактирате вашия израз."};
 
-exports.yourExpression = function(d){return "Your expression:"};
+exports.yourExpression = function(d){return "Вашият израз:"};
 
 
 },{"messageformat":51}],39:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.bg=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "и"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "вярно"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "грешно"};
 
 exports.blocklyMessage = function(d){return "Блокли"};
 
@@ -8454,7 +8454,7 @@ exports.score = function(d){return "резултат"};
 
 exports.showCodeHeader = function(d){return "Покажи код"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Покажи блоковете"};
 
 exports.showGeneratedCode = function(d){return "Покажи кода"};
 
@@ -8492,7 +8492,7 @@ exports.typeHint = function(d){return "Обърнете внимание, че �
 
 exports.workspaceHeader = function(d){return "Сглобете вашите блокове тук: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Въведете вашия JavaScript код тук"};
 
 exports.infinity = function(d){return "Безкрайност"};
 

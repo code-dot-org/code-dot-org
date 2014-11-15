@@ -19887,15 +19887,15 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.vi=function(n){return "other"}
 exports.and = function(d){return "và"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "đúng"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "sai"};
 
 exports.blocklyMessage = function(d){return "Mảnh ghép"};
 
 exports.catActions = function(d){return "Các hành động"};
 
-exports.catColour = function(d){return "màu sắc"};
+exports.catColour = function(d){return "Màu sắc"};
 
 exports.catLogic = function(d){return "Logic"};
 

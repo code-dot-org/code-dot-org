@@ -11603,9 +11603,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.es=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "y"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "verdadero"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "falso"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -11703,7 +11703,7 @@ exports.score = function(d){return "puntuación"};
 
 exports.showCodeHeader = function(d){return "Mostrar el código"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Mostrar bloques"};
 
 exports.showGeneratedCode = function(d){return "Mostrar el código"};
 
@@ -11741,7 +11741,7 @@ exports.typeHint = function(d){return "Ten en cuenta que los paréntesis y los p
 
 exports.workspaceHeader = function(d){return "Coloca tus bloques aquí:"};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Escribe tu código JavaScript aquí"};
 
 exports.infinity = function(d){return "Infinito"};
 
@@ -11768,43 +11768,43 @@ exports.genericFeedback = function(d){return "Mira como terminaste, y trata de r
 
 },{"messageformat":60}],48:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.es=function(n){return n===1?"one":"other"}
-exports.circleBlockTitle = function(d){return "circle (radius, style, color)"};
+exports.circleBlockTitle = function(d){return "círculo (radio, estilo, color)"};
 
-exports.displayBlockTitle = function(d){return "display"};
+exports.displayBlockTitle = function(d){return "mostrar"};
 
-exports.ellipseBlockTitle = function(d){return "ellipse (width, height, style, color)"};
+exports.ellipseBlockTitle = function(d){return "elipse (anchura, altura, estilo, color)"};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"display\" block?"};
+exports.extraTopBlocks = function(d){return "Tienes bloques sin ataduras. ¿Quisiste decir fijar éstos al bloque de \"pantalla\"?"};
 
-exports.overlayBlockTitle = function(d){return "overlay (top, bottom)"};
+exports.overlayBlockTitle = function(d){return "superposición (arriba, abajo)"};
 
-exports.placeImageBlockTitle = function(d){return "place-image (x, y, image)"};
+exports.placeImageBlockTitle = function(d){return "lugar-imagen (x, y, imagen)"};
 
-exports.rectangleBlockTitle = function(d){return "rectangle (width, height, style, color)"};
+exports.rectangleBlockTitle = function(d){return "rectángulo (anchura, altura, estilo, color)"};
 
-exports.rotateImageBlockTitle = function(d){return "rotate (degrees, image)"};
+exports.rotateImageBlockTitle = function(d){return "Girar (grados, imagen)"};
 
-exports.scaleImageBlockTitle = function(d){return "scale (factor)"};
+exports.scaleImageBlockTitle = function(d){return "escala (factor)"};
 
-exports.squareBlockTitle = function(d){return "square (size, style, color)"};
+exports.squareBlockTitle = function(d){return "cuadrado (tamaño, estilo, color)"};
 
-exports.starBlockTitle = function(d){return "star (radius, style, color)"};
+exports.starBlockTitle = function(d){return "estrella (radio, estilo, color)"};
 
-exports.stringAppendBlockTitle = function(d){return "string-append (first, second)"};
+exports.stringAppendBlockTitle = function(d){return "anexar-cadena (primera, segunda)"};
 
-exports.stringLengthBlockTitle = function(d){return "string-length (string)"};
+exports.stringLengthBlockTitle = function(d){return "longitud de cadena (string)"};
 
-exports.textBlockTitle = function(d){return "text (string, size, color)"};
+exports.textBlockTitle = function(d){return "texto (cadena, tamaño, color)"};
 
-exports.triangleBlockTitle = function(d){return "triangle (size, style, color)"};
+exports.triangleBlockTitle = function(d){return "triángulo (tamaño, estilo, color)"};
 
-exports.underlayBlockTitle = function(d){return "underlay (bottom, top)"};
+exports.underlayBlockTitle = function(d){return "poner debajo (inferior, superior)"};
 
-exports.outline = function(d){return "outline"};
+exports.outline = function(d){return "trazar"};
 
-exports.solid = function(d){return "solid"};
+exports.solid = function(d){return "sólido"};
 
-exports.string = function(d){return "string"};
+exports.string = function(d){return "cadena"};
 
 
 },{"messageformat":60}],49:[function(require,module,exports){

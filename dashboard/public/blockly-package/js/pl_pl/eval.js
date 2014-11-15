@@ -11617,9 +11617,9 @@ var MessageFormat = require("messageformat");MessageFormat.locale.pl = function 
 };
 exports.and = function(d){return "i"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "prawda"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "fałsz"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -11663,7 +11663,7 @@ exports.emptyBlocksErrorMsg = function(d){return "Blok powtórz lub blok jeśli 
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Funkcja blokowania musi mieć inne bloki wewnątrz do pracy."};
 
-exports.extraTopBlocks = function(d){return "Pozostały Ci jeszcze bloki, które nie zostały połączone z blokiem zdarzenia."};
+exports.extraTopBlocks = function(d){return "Posiadasz niezałączone bloki. Czy chciałeś je załączyć do bloku \"po uruchomieniu\"?"};
 
 exports.finalStage = function(d){return "Gratulacje! Ukończyłeś ostatni etap."};
 
@@ -11717,7 +11717,7 @@ exports.score = function(d){return "wynik"};
 
 exports.showCodeHeader = function(d){return "Pokaż kod"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Pokaż Bloki"};
 
 exports.showGeneratedCode = function(d){return "Pokaż kod"};
 
@@ -11747,7 +11747,7 @@ exports.saveToGallery = function(d){return "Zapisz do swojej galerii"};
 
 exports.savedToGallery = function(d){return "Zapisane w twojej galerii!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Przepraszamy, nie możemy udostępnić tego programu."};
 
 exports.typeFuncs = function(d){return "Dostępne funkcje:%1"};
 
@@ -11755,7 +11755,7 @@ exports.typeHint = function(d){return "Zauważ, że nawiasy i średniki są wyma
 
 exports.workspaceHeader = function(d){return "Połącz swoje bloki tutaj: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Wpisz swój kod JavaScript tutaj"};
 
 exports.infinity = function(d){return "Nieskończoność"};
 
@@ -11796,43 +11796,43 @@ var MessageFormat = require("messageformat");MessageFormat.locale.pl = function 
   }
   return 'other';
 };
-exports.circleBlockTitle = function(d){return "circle (radius, style, color)"};
+exports.circleBlockTitle = function(d){return "koło (promień, styl, kolor)"};
 
-exports.displayBlockTitle = function(d){return "display"};
+exports.displayBlockTitle = function(d){return "Wyświetl"};
 
-exports.ellipseBlockTitle = function(d){return "ellipse (width, height, style, color)"};
+exports.ellipseBlockTitle = function(d){return "Elipsa (szerokość, wysokość, styl, kolor)"};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"display\" block?"};
+exports.extraTopBlocks = function(d){return "Posiadasz niezałączone bloki. Czy chcesz je załączyć do bloku \"wyświetl\"?"};
 
-exports.overlayBlockTitle = function(d){return "overlay (top, bottom)"};
+exports.overlayBlockTitle = function(d){return "nakładki (góra, dół)"};
 
-exports.placeImageBlockTitle = function(d){return "place-image (x, y, image)"};
+exports.placeImageBlockTitle = function(d){return "położenie-obraz (x, y, obraz)"};
 
-exports.rectangleBlockTitle = function(d){return "rectangle (width, height, style, color)"};
+exports.rectangleBlockTitle = function(d){return "prostokąt (szerokość, wysokość, styl, kolor)"};
 
-exports.rotateImageBlockTitle = function(d){return "rotate (degrees, image)"};
+exports.rotateImageBlockTitle = function(d){return "obróć  (stopnie, obraz)"};
 
-exports.scaleImageBlockTitle = function(d){return "scale (factor)"};
+exports.scaleImageBlockTitle = function(d){return "Skala (czynnik)"};
 
-exports.squareBlockTitle = function(d){return "square (size, style, color)"};
+exports.squareBlockTitle = function(d){return "kwadrat (rozmiar, styl, kolor)"};
 
-exports.starBlockTitle = function(d){return "star (radius, style, color)"};
+exports.starBlockTitle = function(d){return "gwiazda (promień, styl, kolor)"};
 
-exports.stringAppendBlockTitle = function(d){return "string-append (first, second)"};
+exports.stringAppendBlockTitle = function(d){return "ciąg-dołącz (pierwszy, drugi)"};
 
-exports.stringLengthBlockTitle = function(d){return "string-length (string)"};
+exports.stringLengthBlockTitle = function(d){return "ciąg-długość (ciągu)"};
 
-exports.textBlockTitle = function(d){return "text (string, size, color)"};
+exports.textBlockTitle = function(d){return "tekst (ciag, rozmiar, kolor)"};
 
-exports.triangleBlockTitle = function(d){return "triangle (size, style, color)"};
+exports.triangleBlockTitle = function(d){return "trójkąt (rozmiar, styl, kolor)"};
 
-exports.underlayBlockTitle = function(d){return "underlay (bottom, top)"};
+exports.underlayBlockTitle = function(d){return "podłożenie (na dół, na górę)"};
 
-exports.outline = function(d){return "outline"};
+exports.outline = function(d){return "zarys"};
 
-exports.solid = function(d){return "solid"};
+exports.solid = function(d){return "stała"};
 
-exports.string = function(d){return "string"};
+exports.string = function(d){return "ciąg"};
 
 
 },{"messageformat":60}],49:[function(require,module,exports){

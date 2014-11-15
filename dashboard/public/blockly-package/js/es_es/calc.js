@@ -8337,26 +8337,26 @@ exports.parseElement = function(text) {
 
 },{}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.es=function(n){return n===1?"one":"other"}
-exports.compute = function(d){return "compute"};
+exports.compute = function(d){return "calcular"};
 
-exports.equivalentExpression = function(d){return "Try reordering your arguments to get exactly the same expression."};
+exports.equivalentExpression = function(d){return "Intenta reorganizar tus argumentos para obtener exactamente la misma expresión."};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"compute\" block?"};
+exports.extraTopBlocks = function(d){return "Tienes bloques disponibles. ¿Quisiste unirlos al bloque \"calcular\"?"};
 
-exports.goal = function(d){return "Goal:"};
+exports.goal = function(d){return "objetivo:"};
 
-exports.reinfFeedbackMsg = function(d){return "¿Parece esto lo que quieres? Puedes presionar el botón \"Intentar nuevamente\" para ver tu dibujo."};
+exports.reinfFeedbackMsg = function(d){return "Puedes usar el botón \"Intentar de nuevo\" para modificar tu expresión."};
 
-exports.yourExpression = function(d){return "Your expression:"};
+exports.yourExpression = function(d){return "Tu expresión:"};
 
 
 },{"messageformat":51}],39:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.es=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "y"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "verdadero"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "falso"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -8454,7 +8454,7 @@ exports.score = function(d){return "puntuación"};
 
 exports.showCodeHeader = function(d){return "Mostrar el código"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Mostrar bloques"};
 
 exports.showGeneratedCode = function(d){return "Mostrar el código"};
 
@@ -8492,7 +8492,7 @@ exports.typeHint = function(d){return "Ten en cuenta que los paréntesis y los p
 
 exports.workspaceHeader = function(d){return "Coloca tus bloques aquí:"};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Escribe tu código JavaScript aquí"};
 
 exports.infinity = function(d){return "Infinito"};
 

@@ -8287,7 +8287,7 @@ exports.score = function(d){return "점수"};
 
 exports.showCodeHeader = function(d){return "코드 보기"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "블럭 보이기"};
 
 exports.showGeneratedCode = function(d){return "코드 보기"};
 
@@ -8325,7 +8325,7 @@ exports.typeHint = function(d){return "괄호 \"( )\" 와 세미콜론 \";\" 이
 
 exports.workspaceHeader = function(d){return "블럭들을 이곳에서 조립하세요:"};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "자바스크립트 코드 작성"};
 
 exports.infinity = function(d){return "무한"};
 
@@ -8384,7 +8384,7 @@ exports.no = function(d){return "아니요"};
 
 exports.numBlocksNeeded = function(d){return "%1 개의 블럭으로 퍼즐을 해결할 수 있습니다."};
 
-exports.pause = function(d){return "Pause"};
+exports.pause = function(d){return "일시정지"};
 
 exports.reinfFeedbackMsg = function(d){return "\"다시 시도하기\" 버튼을 눌러 앱으로 돌아갈 수 있습니다."};
 

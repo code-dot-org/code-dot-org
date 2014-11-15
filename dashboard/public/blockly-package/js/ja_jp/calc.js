@@ -8337,13 +8337,13 @@ exports.parseElement = function(text) {
 
 },{}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.ja=function(n){return "other"}
-exports.compute = function(d){return "compute"};
+exports.compute = function(d){return "計算"};
 
 exports.equivalentExpression = function(d){return "Try reordering your arguments to get exactly the same expression."};
 
 exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"compute\" block?"};
 
-exports.goal = function(d){return "Goal:"};
+exports.goal = function(d){return "目標"};
 
 exports.reinfFeedbackMsg = function(d){return "これは自分が描こうとしていた画でしょうか？「もう一度」ボタンで自分で描いた画を確認する事ができます。"};
 
@@ -8454,7 +8454,7 @@ exports.score = function(d){return "スコア"};
 
 exports.showCodeHeader = function(d){return "コードの表示"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "ブロックを表示"};
 
 exports.showGeneratedCode = function(d){return "コードの表示"};
 
@@ -8492,7 +8492,7 @@ exports.typeHint = function(d){return "カッコとセミコロンが必要な�
 
 exports.workspaceHeader = function(d){return "ここでブロックを組み立てよう:"};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "ここにJavascriptのコードを入力してください。"};
 
 exports.infinity = function(d){return "無限\n"};
 

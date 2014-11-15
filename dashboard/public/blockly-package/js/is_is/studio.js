@@ -19887,9 +19887,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.is=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "og"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "satt"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "ósatt"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -19987,7 +19987,7 @@ exports.score = function(d){return "stig"};
 
 exports.showCodeHeader = function(d){return "Sýna kóða"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Sýna kubba"};
 
 exports.showGeneratedCode = function(d){return "Sýna kóða"};
 
@@ -20025,7 +20025,7 @@ exports.typeHint = function(d){return "Athugaðu að svigarnir og semikommurnar 
 
 exports.workspaceHeader = function(d){return "Settu kubbana saman hér: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Skrifaðu JavaScript kóða þinn hér"};
 
 exports.infinity = function(d){return "Óendanleiki"};
 
@@ -20054,31 +20054,31 @@ exports.genericFeedback = function(d){return "Athugaðu hvernig þetta fór og r
 var MessageFormat = require("messageformat");MessageFormat.locale.is=function(n){return n===1?"one":"other"}
 exports.actor = function(d){return "leikmaður"};
 
-exports.backgroundBlack = function(d){return "black"};
+exports.backgroundBlack = function(d){return "svart"};
 
-exports.backgroundCave = function(d){return "cave"};
+exports.backgroundCave = function(d){return "hellir"};
 
-exports.backgroundCloudy = function(d){return "cloudy"};
+exports.backgroundCloudy = function(d){return "skýjað"};
 
-exports.backgroundHardcourt = function(d){return "hardcourt"};
+exports.backgroundHardcourt = function(d){return "völlur"};
 
-exports.backgroundNight = function(d){return "night"};
+exports.backgroundNight = function(d){return "nótt"};
 
-exports.backgroundUnderwater = function(d){return "underwater"};
+exports.backgroundUnderwater = function(d){return "neðansjávar"};
 
-exports.backgroundCity = function(d){return "city"};
+exports.backgroundCity = function(d){return "borg"};
 
-exports.backgroundDesert = function(d){return "desert"};
+exports.backgroundDesert = function(d){return "eyðimörk"};
 
-exports.backgroundRainbow = function(d){return "rainbow"};
+exports.backgroundRainbow = function(d){return "regnbogi"};
 
-exports.backgroundSoccer = function(d){return "soccer"};
+exports.backgroundSoccer = function(d){return "fótbolti"};
 
-exports.backgroundSpace = function(d){return "space"};
+exports.backgroundSpace = function(d){return "geimur"};
 
 exports.backgroundTennis = function(d){return "tennis"};
 
-exports.backgroundWinter = function(d){return "winter"};
+exports.backgroundWinter = function(d){return "vetur"};
 
 exports.catActions = function(d){return "Aðgerðir"};
 
@@ -20318,9 +20318,9 @@ exports.setBackgroundWinter = function(d){return "hafa vetrarbakgrunn"};
 
 exports.setBackgroundTooltip = function(d){return "Stillir bakgrunnsmynd"};
 
-exports.setEnemySpeed = function(d){return "set enemy speed"};
+exports.setEnemySpeed = function(d){return "stilla hraða óvinar"};
 
-exports.setPlayerSpeed = function(d){return "set player speed"};
+exports.setPlayerSpeed = function(d){return "stilla hraða leikmanns"};
 
 exports.setScoreText = function(d){return "setja stig á"};
 
@@ -20440,9 +20440,9 @@ exports.shareStudioTwitter = function(d){return "Kíktu á söguna sem ég bjó 
 
 exports.shareGame = function(d){return "Deila sögunni þinni:"};
 
-exports.showCoordinates = function(d){return "show coordinates"};
+exports.showCoordinates = function(d){return "sýna hnit"};
 
-exports.showCoordinatesTooltip = function(d){return "show the protagonist's coordinates on the screen"};
+exports.showCoordinatesTooltip = function(d){return "sýna hnit leikmanns á skjánum"};
 
 exports.showTitleScreen = function(d){return "sýna titilskjá"};
 
@@ -20456,7 +20456,7 @@ exports.showTSDefText = function(d){return "skrifaðu texta hér"};
 
 exports.showTitleScreenTooltip = function(d){return "Sýna titilskjá með viðkomandi titli og texta."};
 
-exports.size = function(d){return "size"};
+exports.size = function(d){return "stærð"};
 
 exports.setSprite = function(d){return "setja"};
 

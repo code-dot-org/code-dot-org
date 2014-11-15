@@ -11975,9 +11975,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.en=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "və"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "doğru"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "yalan"};
 
 exports.blocklyMessage = function(d){return "\"Blockly\""};
 
@@ -12015,7 +12015,7 @@ exports.directionEastLetter = function(d){return "Şərq"};
 
 exports.directionWestLetter = function(d){return "Qərb"};
 
-exports.end = function(d){return "end"};
+exports.end = function(d){return "son"};
 
 exports.emptyBlocksErrorMsg = function(d){return "\"Təkrar\" və ya \"Əgər\" blokları işləsin deyə içərisində başqa blokların olmağı lazımdır. Əmin olun ki, daxili blokun konteyner blokun içərisinə düz yerləşir."};
 
@@ -12284,7 +12284,7 @@ exports.showMe = function(d){return "Mənə göstər"};
 
 exports.showTurtle = function(d){return "rəssamı göstər"};
 
-exports.sizeParameter = function(d){return "size"};
+exports.sizeParameter = function(d){return "ölçü"};
 
 exports.step = function(d){return "addım"};
 

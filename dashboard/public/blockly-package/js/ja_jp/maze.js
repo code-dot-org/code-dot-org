@@ -13947,7 +13947,7 @@ exports.score = function(d){return "スコア"};
 
 exports.showCodeHeader = function(d){return "コードの表示"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "ブロックを表示"};
 
 exports.showGeneratedCode = function(d){return "コードの表示"};
 
@@ -13985,7 +13985,7 @@ exports.typeHint = function(d){return "カッコとセミコロンが必要な�
 
 exports.workspaceHeader = function(d){return "ここでブロックを組み立てよう:"};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "ここにJavascriptのコードを入力してください。"};
 
 exports.infinity = function(d){return "無限\n"};
 
@@ -14012,9 +14012,9 @@ exports.genericFeedback = function(d){return "どうなったかよく見て、�
 
 },{"messageformat":70}],58:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.ja=function(n){return "other"}
-exports.atHoneycomb = function(d){return "at honeycomb"};
+exports.atHoneycomb = function(d){return "ハニカムで"};
 
-exports.atFlower = function(d){return "at flower"};
+exports.atFlower = function(d){return "はなで"};
 
 exports.avoidCowAndRemove = function(d){return "牛を回避し、1 つ取り除く"};
 
@@ -14102,9 +14102,9 @@ exports.moveWestTooltip = function(d){return "ひだりに1つうごかしてく
 
 exports.nectar = function(d){return "get nectar"};
 
-exports.nectarRemaining = function(d){return "nectar"};
+exports.nectarRemaining = function(d){return "花のみつ"};
 
-exports.nectarTooltip = function(d){return "Get nectar from a flower"};
+exports.nectarTooltip = function(d){return "花からみつをとります。"};
 
 exports.nextLevel = function(d){return "おめでとうございます ！このパズルを完了しました。"};
 

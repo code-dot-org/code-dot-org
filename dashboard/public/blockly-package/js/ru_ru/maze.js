@@ -13860,9 +13860,9 @@ var MessageFormat = require("messageformat");MessageFormat.locale.ru = function 
 };
 exports.and = function(d){return "и"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "истина"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "ложь"};
 
 exports.blocklyMessage = function(d){return "Блокли"};
 
@@ -13960,7 +13960,7 @@ exports.score = function(d){return "очки"};
 
 exports.showCodeHeader = function(d){return "Показать код"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Показать блоки"};
 
 exports.showGeneratedCode = function(d){return "Показать код"};
 
@@ -13998,7 +13998,7 @@ exports.typeHint = function(d){return "Обратите внимание на т
 
 exports.workspaceHeader = function(d){return "Место сбора блоков: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Введите Ваш код JavaScript здесь"};
 
 exports.infinity = function(d){return "Бесконечность"};
 

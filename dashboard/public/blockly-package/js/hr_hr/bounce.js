@@ -11931,9 +11931,9 @@ var MessageFormat = require("messageformat");MessageFormat.locale.hr = function 
   }
   return 'other';
 };
-exports.bounceBall = function(d){return "bounce ball"};
+exports.bounceBall = function(d){return "odbijanje loptice"};
 
-exports.bounceBallTooltip = function(d){return "Bounce a ball off of an object."};
+exports.bounceBallTooltip = function(d){return "Odbijanje loptice od objekta."};
 
 exports.continue = function(d){return "Nastavi"};
 
@@ -11961,7 +11961,7 @@ exports.ifTooltip = function(d){return "Ako staza ide u zadanom smjeru, onda nap
 
 exports.ifelseTooltip = function(d){return "Ako staza vodi u zadanom smjeru, onda napravi prvi grupu radnji, a inače napravi drugu grupu radnji."};
 
-exports.incrementOpponentScore = function(d){return "increment opponent score"};
+exports.incrementOpponentScore = function(d){return "dodaj bod protivniku"};
 
 exports.incrementOpponentScoreTooltip = function(d){return "Dodaj jedan protivničkim bodovima."};
 
@@ -11981,7 +11981,7 @@ exports.makeYourOwn = function(d){return "Napravi svoju vlastitu igru Odbijanca"
 
 exports.moveDown = function(d){return "pomakni dolje"};
 
-exports.moveDownTooltip = function(d){return "Move the paddle down."};
+exports.moveDownTooltip = function(d){return "Pomakni reket dolje."};
 
 exports.moveForward = function(d){return "idi naprijed"};
 
@@ -12057,7 +12057,7 @@ exports.repeatUntilBlocked = function(d){return "dok je put ispred"};
 
 exports.repeatUntilFinish = function(d){return "ponavljaj dok ne završiš"};
 
-exports.scoreText = function(d){return "Score: "+v(d,"playerScore")+" : "+v(d,"opponentScore")};
+exports.scoreText = function(d){return "Bodovi: "+v(d,"playerScore")+" : "+v(d,"opponentScore")};
 
 exports.setBackgroundRandom = function(d){return "postavi nasumičnu scenu"};
 
@@ -12121,13 +12121,13 @@ exports.turnRight = function(d){return "okreni udesno"};
 
 exports.turnTooltip = function(d){return "Okreće me ulijevo ili udesno za 90 stupnjeva."};
 
-exports.whenBallInGoal = function(d){return "when ball in goal"};
+exports.whenBallInGoal = function(d){return "kad je lopta u golu"};
 
-exports.whenBallInGoalTooltip = function(d){return "Execute the actions below when a ball enters the goal."};
+exports.whenBallInGoalTooltip = function(d){return "Kad lopta uđe u gol, izvršava dolje navedene akcije."};
 
-exports.whenBallMissesPaddle = function(d){return "when ball misses paddle"};
+exports.whenBallMissesPaddle = function(d){return "kada lopta promaši reket"};
 
-exports.whenBallMissesPaddleTooltip = function(d){return "Execute the actions below when a ball misses the paddle."};
+exports.whenBallMissesPaddleTooltip = function(d){return "Kad lopta promaši reket, izvršava dolje navedene akcije."};
 
 exports.whenDown = function(d){return "kad strelica dolje"};
 
@@ -12141,9 +12141,9 @@ exports.whenLeft = function(d){return "kad lijeva strelica"};
 
 exports.whenLeftTooltip = function(d){return "Izvrši sljedeće akcije kad se pritisne lijeva strelica."};
 
-exports.whenPaddleCollided = function(d){return "when ball hits paddle"};
+exports.whenPaddleCollided = function(d){return "kada lopta udari u reket"};
 
-exports.whenPaddleCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a paddle."};
+exports.whenPaddleCollidedTooltip = function(d){return "Kad lopta pogodi reket, izvršava dolje navedene akcije."};
 
 exports.whenRight = function(d){return "kad desna strelica"};
 
@@ -12153,9 +12153,9 @@ exports.whenUp = function(d){return "kad strelica gore"};
 
 exports.whenUpTooltip = function(d){return "Izvrši sljedeće akcije kad se pritisne strelica gore."};
 
-exports.whenWallCollided = function(d){return "when ball hits wall"};
+exports.whenWallCollided = function(d){return "kada lopta udari u zid"};
 
-exports.whenWallCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a wall."};
+exports.whenWallCollidedTooltip = function(d){return "Kad lopta udari u zid, izvršava dolje navedene akcije."};
 
 exports.whileMsg = function(d){return "dok"};
 
@@ -12181,9 +12181,9 @@ var MessageFormat = require("messageformat");MessageFormat.locale.hr = function 
 };
 exports.and = function(d){return "i"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "točno"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "netočno"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -12225,9 +12225,9 @@ exports.end = function(d){return "kraj"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Da bi blok \"Ponovi\" ili \"Ako\" radio, u njega treba ugraditi druge blokove. Provjeri uklapa li se unutarnji blok pravilno u vanjski blok."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "The function block needs to have other blocks inside it to work."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Funkcijski blok treba unutra imati druge blokove da bi mogao raditi."};
 
-exports.extraTopBlocks = function(d){return "Imaš viška blokova koji nisu povezani za \"događaj\" blokom."};
+exports.extraTopBlocks = function(d){return "Postoje nespojeni blokovi. Želiš li ih dodati u blok \"pri izvršavanju\"?"};
 
 exports.finalStage = function(d){return "Čestitamo! Posljednja etapa je završena."};
 
@@ -12281,7 +12281,7 @@ exports.score = function(d){return "bodovi"};
 
 exports.showCodeHeader = function(d){return "Pokaži kôd"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Pokaži Blokove"};
 
 exports.showGeneratedCode = function(d){return "Pokaži kôd"};
 
@@ -12303,7 +12303,7 @@ exports.totalNumLinesOfCodeWritten = function(d){return "Ukupno: "+p(d,"numLines
 
 exports.tryAgain = function(d){return "Pokušaj ponovno"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "Pogledaj naputak"};
 
 exports.backToPreviousLevel = function(d){return "Povratak na prethodni nivo"};
 
@@ -12311,7 +12311,7 @@ exports.saveToGallery = function(d){return "Spremi u svoju galeriju"};
 
 exports.savedToGallery = function(d){return "Spremljeno u tvoju galeriju!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Žalim, ne možemo dijeliti ovaj program."};
 
 exports.typeFuncs = function(d){return "Dostupne funkcije:%1"};
 
@@ -12319,7 +12319,7 @@ exports.typeHint = function(d){return "Uoči da su neophodne zagrade i znak \";\
 
 exports.workspaceHeader = function(d){return "Svoje blokove sastavi ovdje: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Napiši svoj JavaScript kôd ovdje"};
 
 exports.infinity = function(d){return "Beskonačnost"};
 
@@ -12333,7 +12333,7 @@ exports.watchVideo = function(d){return "Pogledaj filmić"};
 
 exports.when = function(d){return "kada"};
 
-exports.whenRun = function(d){return "when run"};
+exports.whenRun = function(d){return "pri izvršavanju"};
 
 exports.tryHOC = function(d){return "Isprobaj Hour of Code"};
 
@@ -12341,7 +12341,7 @@ exports.signup = function(d){return "Upis na početni tečaj"};
 
 exports.hintHeader = function(d){return "Evo savjeta:"};
 
-exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+exports.genericFeedback = function(d){return "Pogledaj kako si završio i pokušaj popraviti svoj program."};
 
 
 },{"messageformat":52}],41:[function(require,module,exports){

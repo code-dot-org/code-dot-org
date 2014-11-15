@@ -8187,9 +8187,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.fi=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "ja"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "tosi"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "epätosi"};
 
 exports.blocklyMessage = function(d){return "Blocky"};
 
@@ -8241,7 +8241,7 @@ exports.finalStageTrophies = function(d){return "Onneksi olkoon! Olet suorittanu
 
 exports.finish = function(d){return "Valmis"};
 
-exports.generatedCodeInfo = function(d){return "Jopa huippuyliopistot opettavat lohkopohjaista ohjelmointia (esim., "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"), mutta konepellin alla kokoamasi lohkot voidaan näyttää myös esim. JavaScript-kielellä. JavaScript on maailman eniten käytetty ohjelmointikieli:"};
+exports.generatedCodeInfo = function(d){return "Jopa huippuyliopistot opettavat lohkopohjaista ohjelmointia (esim. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"), mutta konepellin alla kokoamasi lohkot voidaan näyttää myös esim. JavaScript-kielellä. JavaScript on maailman eniten käytetty ohjelmointikieli:"};
 
 exports.hashError = function(d){return "Valitan, '%1' ei vastaa mitään tallennettua ohjelmaa."};
 
@@ -8287,7 +8287,7 @@ exports.score = function(d){return "pisteet"};
 
 exports.showCodeHeader = function(d){return "Näytä koodi"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Näytä lohkot"};
 
 exports.showGeneratedCode = function(d){return "Näytä koodi"};
 
@@ -8325,7 +8325,7 @@ exports.typeHint = function(d){return "Sulkeet ja puolipisteet ovat pakollisia."
 
 exports.workspaceHeader = function(d){return "Kokoa lohkosi täällä: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Kirjoita JavaScript koodi tähän"};
 
 exports.infinity = function(d){return "Ääretön"};
 
@@ -8339,7 +8339,7 @@ exports.watchVideo = function(d){return "Katso video"};
 
 exports.when = function(d){return "kun"};
 
-exports.whenRun = function(d){return "ajettaessa"};
+exports.whenRun = function(d){return "kun suoritetaan"};
 
 exports.tryHOC = function(d){return "Kokeile koodituntia"};
 
@@ -8370,13 +8370,13 @@ exports.catVariables = function(d){return "Muuttujat"};
 
 exports.continue = function(d){return "Jatka"};
 
-exports.createHtmlBlock = function(d){return "create html block"};
+exports.createHtmlBlock = function(d){return "Luo html lohko"};
 
-exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
+exports.createHtmlBlockTooltip = function(d){return "Luo HTML lohkon sovelluksessa."};
 
-exports.finalLevel = function(d){return "Onneksi olkoon! Olet suorittanut viimeisen ongelman."};
+exports.finalLevel = function(d){return "Onneksi olkoon! Olet suorittanut viimeisen pulman."};
 
-exports.makeYourOwn = function(d){return "Make Your Own App"};
+exports.makeYourOwn = function(d){return "Tee oma sovellus"};
 
 exports.nextLevel = function(d){return "Onneksi olkoon! Olet suorittanut tämän pulman."};
 
@@ -8384,23 +8384,23 @@ exports.no = function(d){return "Ei"};
 
 exports.numBlocksNeeded = function(d){return "Pulman voi ratkaista %1 lohkolla."};
 
-exports.pause = function(d){return "Pause"};
+exports.pause = function(d){return "Tauko"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
+exports.reinfFeedbackMsg = function(d){return "Voit painaa \"Yritä uudelleen\"-painiketta jos haluat käynnistää sovelluksesi."};
 
 exports.repeatForever = function(d){return "toista jatkuvasti"};
 
 exports.repeatDo = function(d){return "tee"};
 
-exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
+exports.repeatForeverTooltip = function(d){return "Suorita toimet tässä lohkossa toistuvasti sovelluksen ollessa käynnissä."};
 
-exports.shareWebappTwitter = function(d){return "Check out the app I made. I wrote it myself with @codeorg"};
+exports.shareWebappTwitter = function(d){return "Katso tekemäni sovellus. Tein sen itse @codeorg:ssa"};
 
-exports.shareGame = function(d){return "Share your app:"};
+exports.shareGame = function(d){return "Jaa sovellus:"};
 
-exports.turnBlack = function(d){return "turn black"};
+exports.turnBlack = function(d){return "muuttuu mustaksi"};
 
-exports.turnBlackTooltip = function(d){return "Turns the screen black."};
+exports.turnBlackTooltip = function(d){return "Muuttaa näytön mustaksi."};
 
 exports.yes = function(d){return "Kyllä"};
 

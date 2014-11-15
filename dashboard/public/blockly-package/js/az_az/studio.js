@@ -19887,9 +19887,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.en=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "və"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "doğru"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "yalan"};
 
 exports.blocklyMessage = function(d){return "\"Blockly\""};
 
@@ -19927,7 +19927,7 @@ exports.directionEastLetter = function(d){return "Şərq"};
 
 exports.directionWestLetter = function(d){return "Qərb"};
 
-exports.end = function(d){return "end"};
+exports.end = function(d){return "son"};
 
 exports.emptyBlocksErrorMsg = function(d){return "\"Təkrar\" və ya \"Əgər\" blokları işləsin deyə içərisində başqa blokların olmağı lazımdır. Əmin olun ki, daxili blokun konteyner blokun içərisinə düz yerləşir."};
 
@@ -20054,37 +20054,37 @@ exports.genericFeedback = function(d){return "See how you ended up, and try to f
 var MessageFormat = require("messageformat");MessageFormat.locale.en=function(n){return n===1?"one":"other"}
 exports.actor = function(d){return "actor"};
 
-exports.backgroundBlack = function(d){return "black"};
+exports.backgroundBlack = function(d){return "qara"};
 
-exports.backgroundCave = function(d){return "cave"};
+exports.backgroundCave = function(d){return "mağara"};
 
-exports.backgroundCloudy = function(d){return "cloudy"};
+exports.backgroundCloudy = function(d){return "buludlu"};
 
 exports.backgroundHardcourt = function(d){return "hardcourt"};
 
-exports.backgroundNight = function(d){return "night"};
+exports.backgroundNight = function(d){return "gecə"};
 
 exports.backgroundUnderwater = function(d){return "underwater"};
 
-exports.backgroundCity = function(d){return "city"};
+exports.backgroundCity = function(d){return "şəhər"};
 
-exports.backgroundDesert = function(d){return "desert"};
+exports.backgroundDesert = function(d){return "səhra"};
 
-exports.backgroundRainbow = function(d){return "rainbow"};
+exports.backgroundRainbow = function(d){return "göy qurşağı"};
 
-exports.backgroundSoccer = function(d){return "soccer"};
+exports.backgroundSoccer = function(d){return "futbol"};
 
 exports.backgroundSpace = function(d){return "space"};
 
 exports.backgroundTennis = function(d){return "tennis"};
 
-exports.backgroundWinter = function(d){return "winter"};
+exports.backgroundWinter = function(d){return "qış"};
 
 exports.catActions = function(d){return "Əmrlər"};
 
 exports.catControl = function(d){return "dövrlər"};
 
-exports.catEvents = function(d){return "Events"};
+exports.catEvents = function(d){return "Hadisələr"};
 
 exports.catLogic = function(d){return "Məntiq"};
 
@@ -20110,7 +20110,7 @@ exports.emotion = function(d){return "emotion"};
 
 exports.finalLevel = function(d){return "Təbriklər! Axırıncı tapmacanı da tapdınız."};
 
-exports.for = function(d){return "for"};
+exports.for = function(d){return "üçün"};
 
 exports.hello = function(d){return "salam"};
 
@@ -20138,13 +20138,13 @@ exports.makeProjectileTooltip = function(d){return "Make the projectile that jus
 
 exports.makeYourOwn = function(d){return "Make Your Own Story"};
 
-exports.moveDirectionDown = function(d){return "down"};
+exports.moveDirectionDown = function(d){return "aşağı"};
 
-exports.moveDirectionLeft = function(d){return "left"};
+exports.moveDirectionLeft = function(d){return "sola"};
 
-exports.moveDirectionRight = function(d){return "right"};
+exports.moveDirectionRight = function(d){return "sağa"};
 
-exports.moveDirectionUp = function(d){return "up"};
+exports.moveDirectionUp = function(d){return "yuxarı"};
 
 exports.moveDirectionRandom = function(d){return "təsadüfi"};
 
@@ -20160,7 +20160,7 @@ exports.moveDistance400 = function(d){return "400 piksel"};
 
 exports.moveDistancePixels = function(d){return "piksellər"};
 
-exports.moveDistanceRandom = function(d){return "random pixels"};
+exports.moveDistanceRandom = function(d){return "təsadüfi piksellər"};
 
 exports.moveDistanceTooltip = function(d){return "Move a character a specific distance in the specified direction."};
 
@@ -20446,7 +20446,7 @@ exports.showCoordinatesTooltip = function(d){return "show the protagonist's coor
 
 exports.showTitleScreen = function(d){return "show title screen"};
 
-exports.showTitleScreenTitle = function(d){return "title"};
+exports.showTitleScreenTitle = function(d){return "başlıq"};
 
 exports.showTitleScreenText = function(d){return "mətn"};
 
@@ -20456,7 +20456,7 @@ exports.showTSDefText = function(d){return "type text here"};
 
 exports.showTitleScreenTooltip = function(d){return "Show a title screen with the associated title and text."};
 
-exports.size = function(d){return "size"};
+exports.size = function(d){return "ölçü"};
 
 exports.setSprite = function(d){return "təyin et"};
 
@@ -20464,9 +20464,9 @@ exports.setSpriteN = function(d){return "set actor "+v(d,"spriteIndex")};
 
 exports.soundCrunch = function(d){return "crunch"};
 
-exports.soundGoal1 = function(d){return "goal 1"};
+exports.soundGoal1 = function(d){return "məqsəd 1"};
 
-exports.soundGoal2 = function(d){return "goal 2"};
+exports.soundGoal2 = function(d){return "məqsəd 2"};
 
 exports.soundHit = function(d){return "hit"};
 

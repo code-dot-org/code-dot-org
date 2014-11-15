@@ -19887,9 +19887,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.fi=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "ja"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "tosi"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "epätosi"};
 
 exports.blocklyMessage = function(d){return "Blocky"};
 
@@ -19941,7 +19941,7 @@ exports.finalStageTrophies = function(d){return "Onneksi olkoon! Olet suorittanu
 
 exports.finish = function(d){return "Valmis"};
 
-exports.generatedCodeInfo = function(d){return "Jopa huippuyliopistot opettavat lohkopohjaista ohjelmointia (esim., "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"), mutta konepellin alla kokoamasi lohkot voidaan näyttää myös esim. JavaScript-kielellä. JavaScript on maailman eniten käytetty ohjelmointikieli:"};
+exports.generatedCodeInfo = function(d){return "Jopa huippuyliopistot opettavat lohkopohjaista ohjelmointia (esim. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"), mutta konepellin alla kokoamasi lohkot voidaan näyttää myös esim. JavaScript-kielellä. JavaScript on maailman eniten käytetty ohjelmointikieli:"};
 
 exports.hashError = function(d){return "Valitan, '%1' ei vastaa mitään tallennettua ohjelmaa."};
 
@@ -19987,7 +19987,7 @@ exports.score = function(d){return "pisteet"};
 
 exports.showCodeHeader = function(d){return "Näytä koodi"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Näytä lohkot"};
 
 exports.showGeneratedCode = function(d){return "Näytä koodi"};
 
@@ -20025,7 +20025,7 @@ exports.typeHint = function(d){return "Sulkeet ja puolipisteet ovat pakollisia."
 
 exports.workspaceHeader = function(d){return "Kokoa lohkosi täällä: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Kirjoita JavaScript koodi tähän"};
 
 exports.infinity = function(d){return "Ääretön"};
 
@@ -20039,7 +20039,7 @@ exports.watchVideo = function(d){return "Katso video"};
 
 exports.when = function(d){return "kun"};
 
-exports.whenRun = function(d){return "ajettaessa"};
+exports.whenRun = function(d){return "kun suoritetaan"};
 
 exports.tryHOC = function(d){return "Kokeile koodituntia"};
 
@@ -20054,31 +20054,31 @@ exports.genericFeedback = function(d){return "Katso miten päädyit tähän, ja 
 var MessageFormat = require("messageformat");MessageFormat.locale.fi=function(n){return n===1?"one":"other"}
 exports.actor = function(d){return "toimija"};
 
-exports.backgroundBlack = function(d){return "black"};
+exports.backgroundBlack = function(d){return "musta"};
 
-exports.backgroundCave = function(d){return "cave"};
+exports.backgroundCave = function(d){return "luola"};
 
-exports.backgroundCloudy = function(d){return "cloudy"};
+exports.backgroundCloudy = function(d){return "pilvinen"};
 
-exports.backgroundHardcourt = function(d){return "hardcourt"};
+exports.backgroundHardcourt = function(d){return "massakenttä"};
 
-exports.backgroundNight = function(d){return "night"};
+exports.backgroundNight = function(d){return "yö"};
 
-exports.backgroundUnderwater = function(d){return "underwater"};
+exports.backgroundUnderwater = function(d){return "vedenalainen"};
 
-exports.backgroundCity = function(d){return "city"};
+exports.backgroundCity = function(d){return "kaupunki"};
 
-exports.backgroundDesert = function(d){return "desert"};
+exports.backgroundDesert = function(d){return "aavikko"};
 
-exports.backgroundRainbow = function(d){return "rainbow"};
+exports.backgroundRainbow = function(d){return "sateenkaari"};
 
-exports.backgroundSoccer = function(d){return "soccer"};
+exports.backgroundSoccer = function(d){return "Jalkapallo"};
 
-exports.backgroundSpace = function(d){return "space"};
+exports.backgroundSpace = function(d){return "avaruus"};
 
 exports.backgroundTennis = function(d){return "tennis"};
 
-exports.backgroundWinter = function(d){return "winter"};
+exports.backgroundWinter = function(d){return "talvi"};
 
 exports.catActions = function(d){return "Toiminnot"};
 
@@ -20110,7 +20110,7 @@ exports.emotion = function(d){return "mieliala"};
 
 exports.finalLevel = function(d){return "Onneksi olkoon! Olet suorittanut viimeisen pulman."};
 
-exports.for = function(d){return "for"};
+exports.for = function(d){return "varten"};
 
 exports.hello = function(d){return "hei"};
 
@@ -20234,25 +20234,25 @@ exports.positionTopRight = function(d){return "oikeaan yläreunaan"};
 
 exports.positionTopOutRight = function(d){return "oikealle yläreunan ulkopuolelle"};
 
-exports.positionMiddleLeft = function(d){return "to the middle left position"};
+exports.positionMiddleLeft = function(d){return "keskelle vasempaan reunaan"};
 
-exports.positionMiddleCenter = function(d){return "to the middle center position"};
+exports.positionMiddleCenter = function(d){return "keskelle keskitetysti"};
 
-exports.positionMiddleRight = function(d){return "to the middle right position"};
+exports.positionMiddleRight = function(d){return "keskelle oikeaan reunaan"};
 
 exports.positionBottomOutLeft = function(d){return "to the bottom outside left position"};
 
-exports.positionBottomLeft = function(d){return "to the bottom left position"};
+exports.positionBottomLeft = function(d){return "alapuolelle vasempaan reunaan"};
 
 exports.positionBottomCenter = function(d){return "to the bottom center position"};
 
-exports.positionBottomRight = function(d){return "to the bottom right position"};
+exports.positionBottomRight = function(d){return "alapuolelle oikeaan reunaan"};
 
 exports.positionBottomOutRight = function(d){return "to the bottom outside right position"};
 
-exports.positionOutBottomLeft = function(d){return "to the below bottom left position"};
+exports.positionOutBottomLeft = function(d){return "alapuolelle vasempaan alareunaan"};
 
-exports.positionOutBottomRight = function(d){return "to the below bottom right position"};
+exports.positionOutBottomRight = function(d){return "alapuolelle oikeaan alareunaan"};
 
 exports.positionRandom = function(d){return "satunnaiseen sijaintiin"};
 
@@ -20318,9 +20318,9 @@ exports.setBackgroundWinter = function(d){return "aseta talvitausta"};
 
 exports.setBackgroundTooltip = function(d){return "Aseta taustakuva"};
 
-exports.setEnemySpeed = function(d){return "set enemy speed"};
+exports.setEnemySpeed = function(d){return "aseta vihollisen nopeus"};
 
-exports.setPlayerSpeed = function(d){return "set player speed"};
+exports.setPlayerSpeed = function(d){return "aseta pelaajan nopeus"};
 
 exports.setScoreText = function(d){return "aseta pisteet"};
 
@@ -20440,7 +20440,7 @@ exports.shareStudioTwitter = function(d){return "Katso tekemääni tarinaa. Kirj
 
 exports.shareGame = function(d){return "Jaa tarinasi:"};
 
-exports.showCoordinates = function(d){return "show coordinates"};
+exports.showCoordinates = function(d){return "Näytä koordinaatit"};
 
 exports.showCoordinatesTooltip = function(d){return "show the protagonist's coordinates on the screen"};
 
@@ -20456,7 +20456,7 @@ exports.showTSDefText = function(d){return "Kirjoita tekstiä tähän"};
 
 exports.showTitleScreenTooltip = function(d){return "Näytä otsikkosivu liitetyllä otsikolla ja tekstillä."};
 
-exports.size = function(d){return "size"};
+exports.size = function(d){return "koko"};
 
 exports.setSprite = function(d){return "aseta"};
 
@@ -20568,7 +20568,7 @@ exports.whenSpriteCollidedWith = function(d){return "koskee"};
 
 exports.whenSpriteCollidedWithAnyActor = function(d){return "koskee mitä tahansa hahmoa"};
 
-exports.whenSpriteCollidedWithAnyEdge = function(d){return "koskee mitä tahansa seuraa"};
+exports.whenSpriteCollidedWithAnyEdge = function(d){return "koskee mitä tahansa reunaa"};
 
 exports.whenSpriteCollidedWithAnyProjectile = function(d){return "koskee mitä tahansa ammusta"};
 

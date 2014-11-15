@@ -8354,9 +8354,9 @@ exports.yourExpression = function(d){return "Your expression:"};
 var MessageFormat = require("messageformat");MessageFormat.locale.id=function(n){return "other"}
 exports.and = function(d){return "dan"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "Benar"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "Salah"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 

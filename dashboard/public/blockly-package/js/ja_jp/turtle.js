@@ -12075,7 +12075,7 @@ exports.score = function(d){return "スコア"};
 
 exports.showCodeHeader = function(d){return "コードの表示"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "ブロックを表示"};
 
 exports.showGeneratedCode = function(d){return "コードの表示"};
 
@@ -12113,7 +12113,7 @@ exports.typeHint = function(d){return "カッコとセミコロンが必要な�
 
 exports.workspaceHeader = function(d){return "ここでブロックを組み立てよう:"};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "ここにJavascriptのコードを入力してください。"};
 
 exports.infinity = function(d){return "無限\n"};
 

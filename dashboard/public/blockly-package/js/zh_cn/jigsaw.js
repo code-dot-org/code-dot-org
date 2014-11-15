@@ -8075,9 +8075,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.zh=function(n){return "other"}
 exports.and = function(d){return "和"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "真"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "错"};
 
 exports.blocklyMessage = function(d){return "布洛克里"};
 

@@ -8187,9 +8187,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.en=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "və"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "doğru"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "yalan"};
 
 exports.blocklyMessage = function(d){return "\"Blockly\""};
 
@@ -8227,7 +8227,7 @@ exports.directionEastLetter = function(d){return "Şərq"};
 
 exports.directionWestLetter = function(d){return "Qərb"};
 
-exports.end = function(d){return "end"};
+exports.end = function(d){return "son"};
 
 exports.emptyBlocksErrorMsg = function(d){return "\"Təkrar\" və ya \"Əgər\" blokları işləsin deyə içərisində başqa blokların olmağı lazımdır. Əmin olun ki, daxili blokun konteyner blokun içərisinə düz yerləşir."};
 
@@ -8356,7 +8356,7 @@ exports.catActions = function(d){return "Əmrlər"};
 
 exports.catControl = function(d){return "Dövlər"};
 
-exports.catEvents = function(d){return "Events"};
+exports.catEvents = function(d){return "Hadisələr"};
 
 exports.catLogic = function(d){return "Məntiq"};
 
@@ -8372,7 +8372,7 @@ exports.continue = function(d){return "Davam et"};
 
 exports.createHtmlBlock = function(d){return "create html block"};
 
-exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
+exports.createHtmlBlockTooltip = function(d){return "Proqramda HTML bloku yaradır."};
 
 exports.finalLevel = function(d){return "Təbriklər! Axırıncı tapmacanı da tapdınız."};
 
@@ -8394,13 +8394,13 @@ exports.repeatDo = function(d){return "et"};
 
 exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
 
-exports.shareWebappTwitter = function(d){return "Check out the app I made. I wrote it myself with @codeorg"};
+exports.shareWebappTwitter = function(d){return "Düzəltdiyim proqrama nəzər yetirin. Onu @codeorg ilə özüm yazmışam"};
 
-exports.shareGame = function(d){return "Share your app:"};
+exports.shareGame = function(d){return "Proqramınızı bölüşün:"};
 
 exports.turnBlack = function(d){return "turn black"};
 
-exports.turnBlackTooltip = function(d){return "Turns the screen black."};
+exports.turnBlackTooltip = function(d){return "Ekranı qaraldır."};
 
 exports.yes = function(d){return "Bəli"};
 

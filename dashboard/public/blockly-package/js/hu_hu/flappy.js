@@ -9580,9 +9580,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.hu=function(n){return "other"}
 exports.and = function(d){return "és"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "igaz"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "hamis"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -9680,7 +9680,7 @@ exports.score = function(d){return "pontszám"};
 
 exports.showCodeHeader = function(d){return "Kód megjelenítése"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Blokkok megjelenítése"};
 
 exports.showGeneratedCode = function(d){return "Kód megjelenítése"};
 
@@ -9718,7 +9718,7 @@ exports.typeHint = function(d){return "Vedd figyelembe, hogy a zárójelek és a
 
 exports.workspaceHeader = function(d){return "Építsd össze a blokkokat itt: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Ide írd a JavaScript kódodat"};
 
 exports.infinity = function(d){return "Végtelen"};
 
@@ -9759,7 +9759,7 @@ exports.finalLevel = function(d){return "Gratulálok! A megoldottad az utolsó f
 
 exports.flap = function(d){return "Csap"};
 
-exports.flapRandom = function(d){return "Véletlen számút szárnycsapás"};
+exports.flapRandom = function(d){return "Véletlen számút csap"};
 
 exports.flapVerySmall = function(d){return "Nagyon keveset csap"};
 
@@ -9847,7 +9847,7 @@ exports.setGapLarge = function(d){return "rés beállítása : Nagy"};
 
 exports.setGapVeryLarge = function(d){return "rés beállítása : Nagyon nagy"};
 
-exports.setGapHeightTooltip = function(d){return "Sets the vertical gap in an obstacle"};
+exports.setGapHeightTooltip = function(d){return "Függőleges akadály beállítása akadályban"};
 
 exports.setGravityRandom = function(d){return "Véletlenszerű gravitáció beállítása"};
 
@@ -9881,7 +9881,7 @@ exports.setGroundLava = function(d){return "Talaj típusa: Láva"};
 
 exports.setGroundTooltip = function(d){return "Beállítja a talaj típusát"};
 
-exports.setObstacle = function(d){return "set obstacle"};
+exports.setObstacle = function(d){return "akadály beállítása"};
 
 exports.setObstacleRandom = function(d){return "set obstacle Random"};
 
@@ -9897,7 +9897,7 @@ exports.setObstacleSanta = function(d){return "Akadály beállítása: Kémény"
 
 exports.setObstacleLaser = function(d){return "Akadály beállítása: Lézer"};
 
-exports.setObstacleTooltip = function(d){return "Sets the obstacle image"};
+exports.setObstacleTooltip = function(d){return "Akadály képének beállítása"};
 
 exports.setPlayer = function(d){return "játékos típusa"};
 
@@ -9931,7 +9931,7 @@ exports.setPlayerSuperman = function(d){return "Karakter beállítása: Madárem
 
 exports.setPlayerTurkey = function(d){return "Karakter beállítása: Pulyka"};
 
-exports.setPlayerTooltip = function(d){return "Sets the player image"};
+exports.setPlayerTooltip = function(d){return "Játékos képének beállítása"};
 
 exports.setScore = function(d){return "Pontszám beállítása"};
 
@@ -9951,7 +9951,7 @@ exports.soundBounce = function(d){return "ugrál"};
 
 exports.soundCrunch = function(d){return "crunch"};
 
-exports.soundDie = function(d){return "sad"};
+exports.soundDie = function(d){return "szomorú"};
 
 exports.soundHit = function(d){return "smash"};
 
@@ -9959,7 +9959,7 @@ exports.soundPoint = function(d){return "point"};
 
 exports.soundSwoosh = function(d){return "swoosh"};
 
-exports.soundWing = function(d){return "wing"};
+exports.soundWing = function(d){return "szárny"};
 
 exports.soundJet = function(d){return "jet"};
 
@@ -9969,7 +9969,7 @@ exports.soundJingle = function(d){return "jingle"};
 
 exports.soundSplash = function(d){return "splash"};
 
-exports.soundLaser = function(d){return "laser"};
+exports.soundLaser = function(d){return "lézer"};
 
 exports.speedRandom = function(d){return "Véletlenszerű sebesség beállítása"};
 

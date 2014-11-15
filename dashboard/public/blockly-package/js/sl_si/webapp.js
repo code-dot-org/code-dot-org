@@ -8198,9 +8198,9 @@ var MessageFormat = require("messageformat");MessageFormat.locale.sl = function 
 };
 exports.and = function(d){return "in"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "velja"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "ne velja"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 

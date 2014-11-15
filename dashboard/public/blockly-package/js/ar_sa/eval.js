@@ -11620,9 +11620,9 @@ var MessageFormat = require("messageformat");MessageFormat.locale.ar = function(
 };
 exports.and = function(d){return "و"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "صحيح"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "خطأ"};
 
 exports.blocklyMessage = function(d){return "بلوكلي"};
 
@@ -11804,7 +11804,7 @@ var MessageFormat = require("messageformat");MessageFormat.locale.ar = function(
 };
 exports.circleBlockTitle = function(d){return "circle (radius, style, color)"};
 
-exports.displayBlockTitle = function(d){return "display"};
+exports.displayBlockTitle = function(d){return "عرض"};
 
 exports.ellipseBlockTitle = function(d){return "ellipse (width, height, style, color)"};
 
@@ -11812,33 +11812,33 @@ exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you
 
 exports.overlayBlockTitle = function(d){return "overlay (top, bottom)"};
 
-exports.placeImageBlockTitle = function(d){return "place-image (x, y, image)"};
+exports.placeImageBlockTitle = function(d){return "وضع الصورة (س، ص، صورة)"};
 
-exports.rectangleBlockTitle = function(d){return "rectangle (width, height, style, color)"};
+exports.rectangleBlockTitle = function(d){return "المستطيل (العرض والارتفاع، ونمط ولون)"};
 
-exports.rotateImageBlockTitle = function(d){return "rotate (degrees, image)"};
+exports.rotateImageBlockTitle = function(d){return "تدوير (درجات، الصورة)"};
 
-exports.scaleImageBlockTitle = function(d){return "scale (factor)"};
+exports.scaleImageBlockTitle = function(d){return "مقياس (عامل)"};
 
-exports.squareBlockTitle = function(d){return "square (size, style, color)"};
+exports.squareBlockTitle = function(d){return "مربع (حجم، نمط، لون)"};
 
-exports.starBlockTitle = function(d){return "star (radius, style, color)"};
+exports.starBlockTitle = function(d){return "نجمة (نصف القطر، نمط، لون)"};
 
 exports.stringAppendBlockTitle = function(d){return "string-append (first, second)"};
 
 exports.stringLengthBlockTitle = function(d){return "string-length (string)"};
 
-exports.textBlockTitle = function(d){return "text (string, size, color)"};
+exports.textBlockTitle = function(d){return "نص (سلسلة، والحجم، واللون)"};
 
-exports.triangleBlockTitle = function(d){return "triangle (size, style, color)"};
+exports.triangleBlockTitle = function(d){return "المثلث (حجم ونمط ولون)"};
 
 exports.underlayBlockTitle = function(d){return "underlay (bottom, top)"};
 
-exports.outline = function(d){return "outline"};
+exports.outline = function(d){return "مخطط تفصيلي"};
 
-exports.solid = function(d){return "solid"};
+exports.solid = function(d){return "صلب"};
 
-exports.string = function(d){return "string"};
+exports.string = function(d){return "السلسلة"};
 
 
 },{"messageformat":60}],49:[function(require,module,exports){

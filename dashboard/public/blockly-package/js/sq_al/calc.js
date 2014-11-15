@@ -8354,15 +8354,15 @@ exports.yourExpression = function(d){return "Your expression:"};
 var MessageFormat = require("messageformat");MessageFormat.locale.sq=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "dhe"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "e saktë"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "e pasaktë"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
 exports.catActions = function(d){return "Veprimet"};
 
-exports.catColour = function(d){return "Colour"};
+exports.catColour = function(d){return "Ngjyra"};
 
 exports.catLogic = function(d){return "Logic"};
 

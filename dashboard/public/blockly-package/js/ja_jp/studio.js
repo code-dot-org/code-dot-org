@@ -19987,7 +19987,7 @@ exports.score = function(d){return "スコア"};
 
 exports.showCodeHeader = function(d){return "コードの表示"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "ブロックを表示"};
 
 exports.showGeneratedCode = function(d){return "コードの表示"};
 
@@ -20025,7 +20025,7 @@ exports.typeHint = function(d){return "カッコとセミコロンが必要な�
 
 exports.workspaceHeader = function(d){return "ここでブロックを組み立てよう:"};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "ここにJavascriptのコードを入力してください。"};
 
 exports.infinity = function(d){return "無限\n"};
 
@@ -20054,31 +20054,31 @@ exports.genericFeedback = function(d){return "どうなったかよく見て、�
 var MessageFormat = require("messageformat");MessageFormat.locale.ja=function(n){return "other"}
 exports.actor = function(d){return "キャラクター"};
 
-exports.backgroundBlack = function(d){return "black"};
+exports.backgroundBlack = function(d){return "まっくろ"};
 
-exports.backgroundCave = function(d){return "cave"};
+exports.backgroundCave = function(d){return "どうくつ"};
 
-exports.backgroundCloudy = function(d){return "cloudy"};
+exports.backgroundCloudy = function(d){return "くもり"};
 
-exports.backgroundHardcourt = function(d){return "hardcourt"};
+exports.backgroundHardcourt = function(d){return "木のもよう"};
 
-exports.backgroundNight = function(d){return "night"};
+exports.backgroundNight = function(d){return "よる"};
 
-exports.backgroundUnderwater = function(d){return "underwater"};
+exports.backgroundUnderwater = function(d){return "みずのなか"};
 
-exports.backgroundCity = function(d){return "city"};
+exports.backgroundCity = function(d){return "まち"};
 
-exports.backgroundDesert = function(d){return "desert"};
+exports.backgroundDesert = function(d){return "さばく"};
 
-exports.backgroundRainbow = function(d){return "rainbow"};
+exports.backgroundRainbow = function(d){return "にじ"};
 
-exports.backgroundSoccer = function(d){return "soccer"};
+exports.backgroundSoccer = function(d){return "サッカー"};
 
-exports.backgroundSpace = function(d){return "space"};
+exports.backgroundSpace = function(d){return "うちゅう"};
 
-exports.backgroundTennis = function(d){return "tennis"};
+exports.backgroundTennis = function(d){return "テニス"};
 
-exports.backgroundWinter = function(d){return "winter"};
+exports.backgroundWinter = function(d){return "ふゆ"};
 
 exports.catActions = function(d){return "操作"};
 
@@ -20254,7 +20254,7 @@ exports.positionOutBottomLeft = function(d){return "to the below bottom left pos
 
 exports.positionOutBottomRight = function(d){return "to the below bottom right position"};
 
-exports.positionRandom = function(d){return "to the random position"};
+exports.positionRandom = function(d){return "ランダムな位置に"};
 
 exports.projectileBlueFireball = function(d){return "青い火の玉"};
 
@@ -20288,7 +20288,7 @@ exports.scoreText = function(d){return "得点："};
 
 exports.setBackground = function(d){return "背景をセット"};
 
-exports.setBackgroundRandom = function(d){return "set random scene"};
+exports.setBackgroundRandom = function(d){return "背景をランダムにセット"};
 
 exports.setBackgroundBlack = function(d){return "背景を黒くする"};
 
@@ -20318,13 +20318,13 @@ exports.setBackgroundWinter = function(d){return "背景を冬に"};
 
 exports.setBackgroundTooltip = function(d){return "背景画像を設定"};
 
-exports.setEnemySpeed = function(d){return "set enemy speed"};
+exports.setEnemySpeed = function(d){return "てきのうごくはやさをえらぶ"};
 
-exports.setPlayerSpeed = function(d){return "set player speed"};
+exports.setPlayerSpeed = function(d){return "プレイヤーのうごくはやさをえらぶ"};
 
 exports.setScoreText = function(d){return "得点を設定"};
 
-exports.setScoreTextTooltip = function(d){return "Sets the text to be displayed in the score area."};
+exports.setScoreTextTooltip = function(d){return "ポイント欄に表示される文章を設定します。"};
 
 exports.setSpriteEmotionAngry = function(d){return "おこったかおに"};
 
@@ -20588,7 +20588,7 @@ exports.whenSpriteCollidedWithPurpleHearts = function(d){return "むらさきの
 
 exports.whenSpriteCollidedWithRedHearts = function(d){return "赤のハートにさわる"};
 
-exports.whenSpriteCollidedWithBottomEdge = function(d){return "touches bottom edge"};
+exports.whenSpriteCollidedWithBottomEdge = function(d){return "下のはしにさわる"};
 
 exports.whenSpriteCollidedWithLeftEdge = function(d){return "ひだりはしにさわる"};
 

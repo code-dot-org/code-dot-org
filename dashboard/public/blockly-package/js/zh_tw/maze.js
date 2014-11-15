@@ -13847,15 +13847,15 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.zh=function(n){return "other"}
 exports.and = function(d){return "且"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "真"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "否"};
 
 exports.blocklyMessage = function(d){return "模組化"};
 
 exports.catActions = function(d){return "動作類別"};
 
-exports.catColour = function(d){return "顏色類別"};
+exports.catColour = function(d){return "顏色"};
 
 exports.catLogic = function(d){return "邏輯類別"};
 
@@ -13947,7 +13947,7 @@ exports.score = function(d){return "分數"};
 
 exports.showCodeHeader = function(d){return "顯示程式碼"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "顯示積木"};
 
 exports.showGeneratedCode = function(d){return "顯示程式碼"};
 
@@ -13985,7 +13985,7 @@ exports.typeHint = function(d){return "請注意\"括弧\"和\"分號\"都是必
 
 exports.workspaceHeader = function(d){return "在此組合您的區塊"};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "在此輸入您的 JavaScript 代碼"};
 
 exports.infinity = function(d){return "無窮"};
 
@@ -14012,7 +14012,7 @@ exports.genericFeedback = function(d){return "看看你的成果如何, 並試�
 
 },{"messageformat":70}],58:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.zh=function(n){return "other"}
-exports.atHoneycomb = function(d){return "在蜂巢裡"};
+exports.atHoneycomb = function(d){return "在蜂巢"};
 
 exports.atFlower = function(d){return "在花叢中"};
 
@@ -14074,7 +14074,7 @@ exports.ifTooltip = function(d){return "如果在指定的方向有路的話，�
 
 exports.ifelseTooltip = function(d){return "如果在指定的方向有路的話，就執行第一個程式積木的動作，否則就執行第二個程式積木的動作。"};
 
-exports.ifFlowerTooltip = function(d){return "If there is a flower/honeycomb in the specified direction, then do some actions."};
+exports.ifFlowerTooltip = function(d){return "如果指定的方向有花或蜂巢，則作出一些行動。"};
 
 exports.ifelseFlowerTooltip = function(d){return "If there is a flower/honeycomb in the specified direction, then do the first block of actions. Otherwise, do the second block of actions."};
 

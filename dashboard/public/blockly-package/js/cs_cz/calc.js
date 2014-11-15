@@ -8370,9 +8370,9 @@ var MessageFormat = require("messageformat");MessageFormat.locale.cs = function 
 };
 exports.and = function(d){return "a"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "pravda"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "záporné"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 

@@ -8354,9 +8354,9 @@ exports.yourExpression = function(d){return "Your expression:"};
 var MessageFormat = require("messageformat");MessageFormat.locale.fil=function(n){return n===0||n==1?"one":"other"}
 exports.and = function(d){return "at"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "tama"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "mali"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 

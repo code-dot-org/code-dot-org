@@ -11975,9 +11975,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.es=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "y"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "verdadero"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "falso"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -12075,7 +12075,7 @@ exports.score = function(d){return "puntuación"};
 
 exports.showCodeHeader = function(d){return "Mostrar el código"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Mostrar bloques"};
 
 exports.showGeneratedCode = function(d){return "Mostrar el código"};
 
@@ -12113,7 +12113,7 @@ exports.typeHint = function(d){return "Ten en cuenta que los paréntesis y los p
 
 exports.workspaceHeader = function(d){return "Coloca tus bloques aquí:"};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Escribe tu código JavaScript aquí"};
 
 exports.infinity = function(d){return "Infinito"};
 
@@ -12274,7 +12274,7 @@ exports.reinfFeedbackMsg = function(d){return "¿Parece esto lo que quieres? Pue
 
 exports.setColour = function(d){return "definir color"};
 
-exports.setPattern = function(d){return "set pattern"};
+exports.setPattern = function(d){return "establecer patrón"};
 
 exports.setWidth = function(d){return "definir ancho"};
 
@@ -12284,7 +12284,7 @@ exports.showMe = function(d){return "Muéstrame"};
 
 exports.showTurtle = function(d){return "mostrar artista"};
 
-exports.sizeParameter = function(d){return "size"};
+exports.sizeParameter = function(d){return "tamaño"};
 
 exports.step = function(d){return "paso"};
 
