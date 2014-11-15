@@ -103,7 +103,7 @@ var levels = module.exports = {};
 
 // Base config for levels created via levelbuilder
 levels.custom = {
-  'ideal': 2,
+  'ideal': Infinity,
   'requiredBlocks': [],
   'scale': {
     'snapRadius': 2
