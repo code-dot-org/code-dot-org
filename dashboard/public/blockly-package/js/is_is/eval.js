@@ -11603,9 +11603,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.is=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "og"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "satt"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "ósatt"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -11703,7 +11703,7 @@ exports.score = function(d){return "stig"};
 
 exports.showCodeHeader = function(d){return "Sýna kóða"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Sýna kubba"};
 
 exports.showGeneratedCode = function(d){return "Sýna kóða"};
 
@@ -11741,7 +11741,7 @@ exports.typeHint = function(d){return "Athugaðu að svigarnir og semikommurnar 
 
 exports.workspaceHeader = function(d){return "Settu kubbana saman hér: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Skrifaðu JavaScript kóða þinn hér"};
 
 exports.infinity = function(d){return "Óendanleiki"};
 
@@ -11768,43 +11768,43 @@ exports.genericFeedback = function(d){return "Athugaðu hvernig þetta fór og r
 
 },{"messageformat":60}],48:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.is=function(n){return n===1?"one":"other"}
-exports.circleBlockTitle = function(d){return "circle (radius, style, color)"};
+exports.circleBlockTitle = function(d){return "hringur (radíus, gerð, litur)"};
 
-exports.displayBlockTitle = function(d){return "display"};
+exports.displayBlockTitle = function(d){return "sýna"};
 
-exports.ellipseBlockTitle = function(d){return "ellipse (width, height, style, color)"};
+exports.ellipseBlockTitle = function(d){return "ellipsa (breidd, hæð, gerð, litur)"};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"display\" block?"};
+exports.extraTopBlocks = function(d){return "Þú ert með ótengda kubba. Var það ætlun þín að tengja þá við \"sýna\" kubbinn?"};
 
-exports.overlayBlockTitle = function(d){return "overlay (top, bottom)"};
+exports.overlayBlockTitle = function(d){return "yfirlag (efst, neðst)"};
 
-exports.placeImageBlockTitle = function(d){return "place-image (x, y, image)"};
+exports.placeImageBlockTitle = function(d){return "setja-mynd (x, y, mynd)"};
 
-exports.rectangleBlockTitle = function(d){return "rectangle (width, height, style, color)"};
+exports.rectangleBlockTitle = function(d){return "rétthyrningur (breidd, hæð, gerð, litur)"};
 
-exports.rotateImageBlockTitle = function(d){return "rotate (degrees, image)"};
+exports.rotateImageBlockTitle = function(d){return "snúa (gráður, mynd)"};
 
-exports.scaleImageBlockTitle = function(d){return "scale (factor)"};
+exports.scaleImageBlockTitle = function(d){return "kvarða (stuðull)"};
 
-exports.squareBlockTitle = function(d){return "square (size, style, color)"};
+exports.squareBlockTitle = function(d){return "ferningur (hlið, gerð, litur)"};
 
-exports.starBlockTitle = function(d){return "star (radius, style, color)"};
+exports.starBlockTitle = function(d){return "stjarna (radíus, gerð, litur)"};
 
-exports.stringAppendBlockTitle = function(d){return "string-append (first, second)"};
+exports.stringAppendBlockTitle = function(d){return "textatengja (texti1, texti2)"};
 
-exports.stringLengthBlockTitle = function(d){return "string-length (string)"};
+exports.stringLengthBlockTitle = function(d){return "textalengd (texti)"};
 
-exports.textBlockTitle = function(d){return "text (string, size, color)"};
+exports.textBlockTitle = function(d){return "texti (strengur, lengd, litur)"};
 
-exports.triangleBlockTitle = function(d){return "triangle (size, style, color)"};
+exports.triangleBlockTitle = function(d){return "þríhyrningur (hlið, gerð, litur)"};
 
-exports.underlayBlockTitle = function(d){return "underlay (bottom, top)"};
+exports.underlayBlockTitle = function(d){return "undirlag (neðst, efst)"};
 
-exports.outline = function(d){return "outline"};
+exports.outline = function(d){return "útlína"};
 
-exports.solid = function(d){return "solid"};
+exports.solid = function(d){return "gegnheilt"};
 
-exports.string = function(d){return "string"};
+exports.string = function(d){return "textastrengur"};
 
 
 },{"messageformat":60}],49:[function(require,module,exports){

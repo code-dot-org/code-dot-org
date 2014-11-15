@@ -11616,9 +11616,9 @@ var MessageFormat = require("messageformat");MessageFormat.locale.uk = function 
 };
 exports.and = function(d){return "та"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "Істина"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "Хибність"};
 
 exports.blocklyMessage = function(d){return "Блоклі"};
 
@@ -11716,7 +11716,7 @@ exports.score = function(d){return "рахунок"};
 
 exports.showCodeHeader = function(d){return "Показати код"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Показати блоки"};
 
 exports.showGeneratedCode = function(d){return "Показати код"};
 
@@ -11754,7 +11754,7 @@ exports.typeHint = function(d){return "Зверніть увагу: потріб
 
 exports.workspaceHeader = function(d){return "Збирайте свої блоки тут: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Введіть свій код JavaScript тут"};
 
 exports.infinity = function(d){return "Нескінченність"};
 
@@ -11794,43 +11794,43 @@ var MessageFormat = require("messageformat");MessageFormat.locale.uk = function 
   }
   return 'other';
 };
-exports.circleBlockTitle = function(d){return "circle (radius, style, color)"};
+exports.circleBlockTitle = function(d){return "коло (радіус, стиль, колір)"};
 
-exports.displayBlockTitle = function(d){return "display"};
+exports.displayBlockTitle = function(d){return "показати"};
 
-exports.ellipseBlockTitle = function(d){return "ellipse (width, height, style, color)"};
+exports.ellipseBlockTitle = function(d){return "еліпс (ширина, висота, стиль, колір)"};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"display\" block?"};
+exports.extraTopBlocks = function(d){return "У вас залишились зайві блоки. Ви збирались їх прикріпити до блоку \"показати\"?"};
 
-exports.overlayBlockTitle = function(d){return "overlay (top, bottom)"};
+exports.overlayBlockTitle = function(d){return "накладання (верхнє, нижнє)"};
 
-exports.placeImageBlockTitle = function(d){return "place-image (x, y, image)"};
+exports.placeImageBlockTitle = function(d){return "розмістити-зображення (x, y, зображення)"};
 
-exports.rectangleBlockTitle = function(d){return "rectangle (width, height, style, color)"};
+exports.rectangleBlockTitle = function(d){return "прямокутник (ширина, висота, стиль, колір)"};
 
-exports.rotateImageBlockTitle = function(d){return "rotate (degrees, image)"};
+exports.rotateImageBlockTitle = function(d){return "обертати (градуси, зображення)"};
 
-exports.scaleImageBlockTitle = function(d){return "scale (factor)"};
+exports.scaleImageBlockTitle = function(d){return "масштаб (множник)"};
 
-exports.squareBlockTitle = function(d){return "square (size, style, color)"};
+exports.squareBlockTitle = function(d){return "квадрат (розмір, стиль, колір)"};
 
-exports.starBlockTitle = function(d){return "star (radius, style, color)"};
+exports.starBlockTitle = function(d){return "зірка (радіус, стиль, колір)"};
 
-exports.stringAppendBlockTitle = function(d){return "string-append (first, second)"};
+exports.stringAppendBlockTitle = function(d){return "з'єднати-рядки (перший, другий)"};
 
-exports.stringLengthBlockTitle = function(d){return "string-length (string)"};
+exports.stringLengthBlockTitle = function(d){return "довжина-рядка (рядок)"};
 
-exports.textBlockTitle = function(d){return "text (string, size, color)"};
+exports.textBlockTitle = function(d){return "текст (рядок, розмір, колір)"};
 
-exports.triangleBlockTitle = function(d){return "triangle (size, style, color)"};
+exports.triangleBlockTitle = function(d){return "трикутник (розмір, стиль, колір)"};
 
-exports.underlayBlockTitle = function(d){return "underlay (bottom, top)"};
+exports.underlayBlockTitle = function(d){return "підкладання (верхнє, нижнє)"};
 
-exports.outline = function(d){return "outline"};
+exports.outline = function(d){return "контур"};
 
-exports.solid = function(d){return "solid"};
+exports.solid = function(d){return "суцільний"};
 
-exports.string = function(d){return "string"};
+exports.string = function(d){return "рядок"};
 
 
 },{"messageformat":60}],49:[function(require,module,exports){

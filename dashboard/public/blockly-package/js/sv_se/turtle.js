@@ -11975,9 +11975,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.sv=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "och"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "sant"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "falskt"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 

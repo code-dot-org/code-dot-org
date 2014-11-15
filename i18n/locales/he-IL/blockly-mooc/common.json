@@ -1,5 +1,7 @@
 {
   "and":"ו",
+  "booleanTrue":"נכון",
+  "booleanFalse":"שגוי",
   "blocklyMessage":"בלוקלי",
   "catActions":"פעולות",
   "catColour":"צבע",

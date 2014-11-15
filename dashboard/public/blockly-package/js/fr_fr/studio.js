@@ -19887,9 +19887,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.fr=function(n){return n===0||n==1?"one":"other"}
 exports.and = function(d){return "et"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "vrai"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "faux"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -20054,11 +20054,11 @@ exports.genericFeedback = function(d){return "Observez le résultat et essayez d
 var MessageFormat = require("messageformat");MessageFormat.locale.fr=function(n){return n===0||n==1?"one":"other"}
 exports.actor = function(d){return "acteur"};
 
-exports.backgroundBlack = function(d){return "black"};
+exports.backgroundBlack = function(d){return "noir"};
 
-exports.backgroundCave = function(d){return "cave"};
+exports.backgroundCave = function(d){return "grotte"};
 
-exports.backgroundCloudy = function(d){return "cloudy"};
+exports.backgroundCloudy = function(d){return "nuageux"};
 
 exports.backgroundHardcourt = function(d){return "hardcourt"};
 
@@ -20160,7 +20160,7 @@ exports.moveDistance400 = function(d){return "400 pixels"};
 
 exports.moveDistancePixels = function(d){return "pixels"};
 
-exports.moveDistanceRandom = function(d){return "d'un nombre de pixels aléatoire"};
+exports.moveDistanceRandom = function(d){return "pointilles au hasard"};
 
 exports.moveDistanceTooltip = function(d){return "Déplacer un acteur sur une certaine distance dans la direction spécifiée."};
 
@@ -20262,11 +20262,11 @@ exports.projectilePurpleFireball = function(d){return "une boule de feu violette
 
 exports.projectileRedFireball = function(d){return "une boule de feu rouge"};
 
-exports.projectileYellowHearts = function(d){return "des coeurs jaunes"};
+exports.projectileYellowHearts = function(d){return "cœurs jaunes"};
 
-exports.projectilePurpleHearts = function(d){return "des coeurs violets"};
+exports.projectilePurpleHearts = function(d){return "cœurs violets"};
 
-exports.projectileRedHearts = function(d){return "des coeurs rouges"};
+exports.projectileRedHearts = function(d){return "cœurs rouges"};
 
 exports.projectileRandom = function(d){return "aléatoire"};
 
@@ -20318,9 +20318,9 @@ exports.setBackgroundWinter = function(d){return "définir l'arrière plan hiver
 
 exports.setBackgroundTooltip = function(d){return "Définit l'image d'arrière-plan"};
 
-exports.setEnemySpeed = function(d){return "set enemy speed"};
+exports.setEnemySpeed = function(d){return "définir la vitesse de l'ennemi"};
 
-exports.setPlayerSpeed = function(d){return "set player speed"};
+exports.setPlayerSpeed = function(d){return "définir la vitesse du joueur"};
 
 exports.setScoreText = function(d){return "mettre le score à"};
 
@@ -20406,17 +20406,17 @@ exports.setSpriteK1Tooltip = function(d){return "Affiche ou masque l'acteur spé
 
 exports.setSpriteTooltip = function(d){return "Définit l'image de l'acteur"};
 
-exports.setSpriteSizeRandom = function(d){return "une taille aléatoire"};
+exports.setSpriteSizeRandom = function(d){return "à une taille au hasard"};
 
-exports.setSpriteSizeVerySmall = function(d){return "une très petite taille"};
+exports.setSpriteSizeVerySmall = function(d){return "à une très petite taille"};
 
-exports.setSpriteSizeSmall = function(d){return "une petite taille"};
+exports.setSpriteSizeSmall = function(d){return "à une petite taille"};
 
-exports.setSpriteSizeNormal = function(d){return "une taille normale"};
+exports.setSpriteSizeNormal = function(d){return "à une taille normale"};
 
-exports.setSpriteSizeLarge = function(d){return "une grande taille"};
+exports.setSpriteSizeLarge = function(d){return "à une grande taille"};
 
-exports.setSpriteSizeVeryLarge = function(d){return "une très grande taille"};
+exports.setSpriteSizeVeryLarge = function(d){return "à une très grande taille"};
 
 exports.setSpriteSizeTooltip = function(d){return "Définit la taille d'un acteur"};
 
@@ -20440,7 +20440,7 @@ exports.shareStudioTwitter = function(d){return "Découvrez l'histoire que j'ai 
 
 exports.shareGame = function(d){return "Partagez votre histoire :"};
 
-exports.showCoordinates = function(d){return "show coordinates"};
+exports.showCoordinates = function(d){return "afficher coordonnées"};
 
 exports.showCoordinatesTooltip = function(d){return "show the protagonist's coordinates on the screen"};
 
@@ -20456,7 +20456,7 @@ exports.showTSDefText = function(d){return "taper le texte ici"};
 
 exports.showTitleScreenTooltip = function(d){return "Afficher un écran titre avec le titre et le texte correspondants."};
 
-exports.size = function(d){return "size"};
+exports.size = function(d){return "taille"};
 
 exports.setSprite = function(d){return "définir"};
 
@@ -20524,9 +20524,9 @@ exports.waitFor5Seconds = function(d){return "attendre 5 secondes"};
 
 exports.waitFor10Seconds = function(d){return "attendre 10 secondes"};
 
-exports.waitParamsTooltip = function(d){return "Attendez le nombre de secondes indiqué ou utilisez 0 pour attendre jusqu'au clic."};
+exports.waitParamsTooltip = function(d){return "Attendez un nombre de secondes donné ou utilisez 0 pour attendre jusqu'au clic."};
 
-exports.waitTooltip = function(d){return "Attendez le temps indiqué ou jusqu'au clic."};
+exports.waitTooltip = function(d){return "Attendez un temps donné ou jusqu'au clic."};
 
 exports.whenArrowDown = function(d){return "flèche vers le bas"};
 

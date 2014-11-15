@@ -9580,9 +9580,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.fi=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "ja"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "tosi"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "epätosi"};
 
 exports.blocklyMessage = function(d){return "Blocky"};
 
@@ -9634,7 +9634,7 @@ exports.finalStageTrophies = function(d){return "Onneksi olkoon! Olet suorittanu
 
 exports.finish = function(d){return "Valmis"};
 
-exports.generatedCodeInfo = function(d){return "Jopa huippuyliopistot opettavat lohkopohjaista ohjelmointia (esim., "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"), mutta konepellin alla kokoamasi lohkot voidaan näyttää myös esim. JavaScript-kielellä. JavaScript on maailman eniten käytetty ohjelmointikieli:"};
+exports.generatedCodeInfo = function(d){return "Jopa huippuyliopistot opettavat lohkopohjaista ohjelmointia (esim. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"), mutta konepellin alla kokoamasi lohkot voidaan näyttää myös esim. JavaScript-kielellä. JavaScript on maailman eniten käytetty ohjelmointikieli:"};
 
 exports.hashError = function(d){return "Valitan, '%1' ei vastaa mitään tallennettua ohjelmaa."};
 
@@ -9680,7 +9680,7 @@ exports.score = function(d){return "pisteet"};
 
 exports.showCodeHeader = function(d){return "Näytä koodi"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Näytä lohkot"};
 
 exports.showGeneratedCode = function(d){return "Näytä koodi"};
 
@@ -9718,7 +9718,7 @@ exports.typeHint = function(d){return "Sulkeet ja puolipisteet ovat pakollisia."
 
 exports.workspaceHeader = function(d){return "Kokoa lohkosi täällä: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Kirjoita JavaScript koodi tähän"};
 
 exports.infinity = function(d){return "Ääretön"};
 
@@ -9732,7 +9732,7 @@ exports.watchVideo = function(d){return "Katso video"};
 
 exports.when = function(d){return "kun"};
 
-exports.whenRun = function(d){return "ajettaessa"};
+exports.whenRun = function(d){return "kun suoritetaan"};
 
 exports.tryHOC = function(d){return "Kokeile koodituntia"};
 
@@ -9757,7 +9757,7 @@ exports.endGameTooltip = function(d){return "Päättää pelin."};
 
 exports.finalLevel = function(d){return "Onneksi olkoon! Olet suorittanut viimeisen pulman."};
 
-exports.flap = function(d){return "räpytellä"};
+exports.flap = function(d){return "räpyttele"};
 
 exports.flapRandom = function(d){return "räpyttele satunnainen määrä"};
 
@@ -9949,25 +9949,25 @@ exports.soundRandom = function(d){return "satunnainen"};
 
 exports.soundBounce = function(d){return "hyppää"};
 
-exports.soundCrunch = function(d){return "crunch"};
+exports.soundCrunch = function(d){return "murskaus"};
 
 exports.soundDie = function(d){return "surullinen"};
 
-exports.soundHit = function(d){return "smash"};
+exports.soundHit = function(d){return "rusahdus"};
 
-exports.soundPoint = function(d){return "point"};
+exports.soundPoint = function(d){return "piste"};
 
-exports.soundSwoosh = function(d){return "swoosh"};
+exports.soundSwoosh = function(d){return "humahdus"};
 
 exports.soundWing = function(d){return "siipi"};
 
-exports.soundJet = function(d){return "jet"};
+exports.soundJet = function(d){return "suihkumoottori"};
 
-exports.soundCrash = function(d){return "crash"};
+exports.soundCrash = function(d){return "rysähdys"};
 
-exports.soundJingle = function(d){return "jingle"};
+exports.soundJingle = function(d){return "kilinä"};
 
-exports.soundSplash = function(d){return "splash"};
+exports.soundSplash = function(d){return "läiskähdys"};
 
 exports.soundLaser = function(d){return "laser"};
 

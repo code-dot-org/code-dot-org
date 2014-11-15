@@ -19900,9 +19900,9 @@ var MessageFormat = require("messageformat");MessageFormat.locale.sr = function 
 };
 exports.and = function(d){return "И"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "тачно"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "нетачно"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 

@@ -11988,9 +11988,9 @@ var MessageFormat = require("messageformat");MessageFormat.locale.hr = function 
 };
 exports.and = function(d){return "i"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "točno"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "netočno"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -12032,9 +12032,9 @@ exports.end = function(d){return "kraj"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Da bi blok \"Ponovi\" ili \"Ako\" radio, u njega treba ugraditi druge blokove. Provjeri uklapa li se unutarnji blok pravilno u vanjski blok."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "The function block needs to have other blocks inside it to work."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Funkcijski blok treba unutra imati druge blokove da bi mogao raditi."};
 
-exports.extraTopBlocks = function(d){return "Imaš viška blokova koji nisu povezani za \"događaj\" blokom."};
+exports.extraTopBlocks = function(d){return "Postoje nespojeni blokovi. Želiš li ih dodati u blok \"pri izvršavanju\"?"};
 
 exports.finalStage = function(d){return "Čestitamo! Posljednja etapa je završena."};
 
@@ -12088,7 +12088,7 @@ exports.score = function(d){return "bodovi"};
 
 exports.showCodeHeader = function(d){return "Pokaži kôd"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Pokaži Blokove"};
 
 exports.showGeneratedCode = function(d){return "Pokaži kôd"};
 
@@ -12110,7 +12110,7 @@ exports.totalNumLinesOfCodeWritten = function(d){return "Ukupno: "+p(d,"numLines
 
 exports.tryAgain = function(d){return "Pokušaj ponovno"};
 
-exports.hintRequest = function(d){return "See hint"};
+exports.hintRequest = function(d){return "Pogledaj naputak"};
 
 exports.backToPreviousLevel = function(d){return "Povratak na prethodni nivo"};
 
@@ -12118,7 +12118,7 @@ exports.saveToGallery = function(d){return "Spremi u svoju galeriju"};
 
 exports.savedToGallery = function(d){return "Spremljeno u tvoju galeriju!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Žalim, ne možemo dijeliti ovaj program."};
 
 exports.typeFuncs = function(d){return "Dostupne funkcije:%1"};
 
@@ -12126,7 +12126,7 @@ exports.typeHint = function(d){return "Uoči da su neophodne zagrade i znak \";\
 
 exports.workspaceHeader = function(d){return "Svoje blokove sastavi ovdje: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Napiši svoj JavaScript kôd ovdje"};
 
 exports.infinity = function(d){return "Beskonačnost"};
 
@@ -12140,7 +12140,7 @@ exports.watchVideo = function(d){return "Pogledaj filmić"};
 
 exports.when = function(d){return "kada"};
 
-exports.whenRun = function(d){return "when run"};
+exports.whenRun = function(d){return "pri izvršavanju"};
 
 exports.tryHOC = function(d){return "Isprobaj Hour of Code"};
 
@@ -12148,7 +12148,7 @@ exports.signup = function(d){return "Upis na početni tečaj"};
 
 exports.hintHeader = function(d){return "Evo savjeta:"};
 
-exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+exports.genericFeedback = function(d){return "Pogledaj kako si završio i pokušaj popraviti svoj program."};
 
 
 },{"messageformat":54}],42:[function(require,module,exports){

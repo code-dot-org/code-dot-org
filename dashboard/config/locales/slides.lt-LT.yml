@@ -4,7 +4,7 @@
       1:
         image: notes/hoc1_1.jpg
         text: Sveiki atvykę į savo pirmąją „Programavimo valandą“ (Hour of Code)!
-          Pamėginkime pažiūrėti, kaip atrodo programavimas.
+          Pažiūrėkime, kaip atrodo programavimas.
       2:
         image: notes/hoc1_2.jpg
         text: Naudosime Blockly, vizualią programavimo kalbą, kurioje reikia vilkti
@@ -40,7 +40,7 @@
       10:
         image: notes/hoc1_10.jpg
         text: Kiekvienas blokelis yra viena instrukcija. Jeigu baltame lauke bus vienas
-          blokelis „judėk į priekį“ ir nuspausite mygtuką „Paleisti programą“, paukštis
+          blokelis „ženk į priekį“ ir nuspausite mygtuką „Paleisti programą“, paukštis
           pajudės per vieną laukelį į priekį.
       11:
         image: notes/hoc1_11.jpg
@@ -66,7 +66,7 @@
           jis eina.
       3:
         image: notes/stage5_3.jpg
-        text: Šis blokelis yra pavadintas „Judėk į priekį per 100 pikselių.“ Pikselis
+        text: Šis blokelis yra pavadintas „eik į priekį per 100 pikselių.“ Pikselis
           yra mažytis taškelis tavo ekrane.
       4:
         image: notes/stage5_4.jpg
@@ -153,12 +153,12 @@
         text: Panaudokime naują blokelį „Kartok“.
       4:
         image: notes/hoc2_4.jpg
-        text: Užduot sulipdę 5 blokelius „judėk į priekį“...
+        text: Užduot sulipdę 5 blokelius „ženk į priekį“...
       5:
         image: notes/hoc2_5.jpg
-        text: Mes galime įdėti blokelį „judėk į priekį“ į blokelio „kartok“ vidų.
-          Taip pat reikia nurodyti skaičių kartojimo blokelyje, kad paukštis žinotų,
-          kiek kartų kartoti šį veiksmą.
+        text: Mes galime įdėti blokelį „ženk į priekį“ į blokelio „kartok“ vidų. Taip
+          pat reikia nurodyti skaičių kartojimo blokelyje, kad paukštis žinotų, kiek
+          kartų kartoti šį veiksmą.
       6:
         image: notes/hoc2_6.jpg
         text: 'Dar vienas svarbus dalykas: į blokelio „kartok“ vidų galima įdėti daugiau
@@ -177,7 +177,7 @@
           pasiektų kiaulę?
       3:
         image: notes/hoc3_3.jpg
-        text: Jeigu į „kartok, kol“ blokelio vidų įdėsime blokelį „judėk į priekį“,
+        text: Jeigu į „kartok, kol“ blokelio vidų įdėsime blokelį „ženk į priekį“,
           paukštis eis į priekį TOL, KOL pasieks kiaulę (arba atsitrenks į sieną).
       4:
         image: notes/hoc3_4.jpg
@@ -202,10 +202,10 @@
           blokelį „pasisuk į kairę“.
       5:
         image: notes/hoc4_5.jpg
-        text: Jeigu mes padėsime blokelį „judėk į priekį“ virš jo bei kartojimo blokelį
-          aplinkui viską, kiekvieną kartą, kai zombis norės pajudėti, jis tikrins,
-          ar egzistuoja kelias į kairę, ir jei jis egzistuoja, jis pasisuks. Kartojimo
-          komanda yra būtina, kad būtų tikrinamas kelias kiekviename žingsnyje.
+        text: 'Jeigu mes padėsime blokelį „ženk į priekį“ virš jo ir viską įdėsime
+          į kartojimą:  zombis visada paėjęs patikrins, ar yra kelias į kairę (ir
+          pasisuks, jei yra). Kartojimo komanda yra būtina, kad tikrintų kiekviename
+          žingsnyje.'
       6:
         image: notes/hoc4_6.jpg
         text: 'Sakinai su žodžiu „jei“ yra labai svarbūs informatikoje. Viena iš pirmųjų
@@ -225,11 +225,10 @@
           sako, kas įvyks „priešingu atveju“.
       2:
         image: notes/hoc5_2.jpg
-        text: 'Jeigu įdėsime blokelį „judėk į priekį“ į vietą, kurioje yra parašyta
-          „daryk“ bei blokelį „pasisuk į kairę“ į vietą, kurioje yra parašyta „priešingu
-          atveju“, tai reikš, kad zombis rinksis vieną iš dviejų dalykų: jeigu kelias
-          bus priekyje, zombis pajudės į priekį; PRIEŠINGU ATVEJU (jeigu kelio priekyje
-          nebus), zombis pasisuks į kairę.'
+        text: Jeigu įdėsi  „judėk į priekį“ į pirmą vietą, o  „pasisuk į kairę“ prie
+          „kito atvejo“, tai zombis rinksis vieną iš dviejų dalykų. Kai kelias bus
+          priekyje, zombis žengs į priekį; KITU ATVEJU (jei kelio priekyje nebus)
+          zombis pasisuks į kairę.
       3:
         image: notes/hoc5_3.jpg
         text: Panašiai kaip ir su „jei“ blokeliu, aplink šį blokelį galima apgaubti
@@ -321,8 +320,8 @@
         image: notes/stage15_6.jpg
         text: Kai viską atliksi, nuspausk ant žvaigždės, kad parametrai pasislėptų.
           Dabar galima pasirinkti kategoriją „Kintamieji“ - ten bus atsiradęs tavo
-          sukurtas blokelis „ilgis“. Jį galima įdėti į blokelį „judėk į priekį“, vietoj
-          duotojo skaičiaus.
+          sukurtas blokelis „ilgis“. Jį galima įdėti į blokelį „eik į priekį“, vietoj
+          skaičiaus.
       7:
         image: notes/stage15_7.jpg
         text: Kad būtų galima panaudoti funkciją su parametru, pasirink kategoriją

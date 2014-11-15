@@ -1,5 +1,7 @@
 {
   "and": "و",
+  "booleanTrue": "صحيح",
+  "booleanFalse": "خطأ",
   "blocklyMessage": "بلوكلي",
   "catActions": "الاجراءات",
   "catColour": "لون",

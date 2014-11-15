@@ -8337,32 +8337,32 @@ exports.parseElement = function(text) {
 
 },{}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.da=function(n){return n===1?"one":"other"}
-exports.compute = function(d){return "compute"};
+exports.compute = function(d){return "beregn"};
 
-exports.equivalentExpression = function(d){return "Try reordering your arguments to get exactly the same expression."};
+exports.equivalentExpression = function(d){return "Prøv at ændre rækkefølgen på dine argumenter for at få præcis det samme udtryk."};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"compute\" block?"};
+exports.extraTopBlocks = function(d){return "Du har blokke, som ikke er knyttet til andre. Ville du fastgøre dem  til \"beregn\" blokken?"};
 
-exports.goal = function(d){return "Goal:"};
+exports.goal = function(d){return "Mål:"};
 
-exports.reinfFeedbackMsg = function(d){return "Ser dette se ud, som det du ønsker? Du kan trykke på \"Prøv igen\" knappen for at se din tegning."};
+exports.reinfFeedbackMsg = function(d){return "Du kan trykke \"Prøv Igen\"-knappen for at redigere udtrykket."};
 
-exports.yourExpression = function(d){return "Your expression:"};
+exports.yourExpression = function(d){return "Dit udtryk:"};
 
 
 },{"messageformat":51}],39:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.da=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "og"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "sandt"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "falsk"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
 exports.catActions = function(d){return "Handlinger"};
 
-exports.catColour = function(d){return "Farver"};
+exports.catColour = function(d){return "Farve"};
 
 exports.catLogic = function(d){return "Logik"};
 
@@ -8454,7 +8454,7 @@ exports.score = function(d){return "score"};
 
 exports.showCodeHeader = function(d){return "Vis kode"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Vis blokke"};
 
 exports.showGeneratedCode = function(d){return "Vis kode"};
 
@@ -8492,7 +8492,7 @@ exports.typeHint = function(d){return "Bemærk, at parenteser og semikoloner er 
 
 exports.workspaceHeader = function(d){return "Saml dine blokke her: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Skriv din JavaScript-kode her"};
 
 exports.infinity = function(d){return "Uendelig"};
 

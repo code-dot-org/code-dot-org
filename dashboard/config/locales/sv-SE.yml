@@ -452,8 +452,11 @@
   try_reloading: Försök ladda sidan igen
   next_stage: Klar! Fortsätt till nästa nivå
   download_pdf: Öppen kursplan
+  lesson_plan: Lesson Plan
   view_lesson_plan: View Lesson Plan
   pdf_download: Ladda ner PDF
+  download_coming_soon: Downloadable activity coming soon.
+  video_coming_soon: Video Coming Soon!
   share_code:
     title: Klicka "Kör program" för att se vad mitt program gör
     bounce_og_title: Check out my Bounce Game

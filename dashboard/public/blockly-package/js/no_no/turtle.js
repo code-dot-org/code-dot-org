@@ -11975,9 +11975,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.no=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "og"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "sann"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "usann"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -12075,7 +12075,7 @@ exports.score = function(d){return "poengsum"};
 
 exports.showCodeHeader = function(d){return "Vis kode"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Vis blokker"};
 
 exports.showGeneratedCode = function(d){return "Vis kode"};
 
@@ -12113,7 +12113,7 @@ exports.typeHint = function(d){return "Legg merke til at paranteser og semikolon
 
 exports.workspaceHeader = function(d){return "Sett sammen blokkene dine her: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Skriv inn JavaScript-koden din her"};
 
 exports.infinity = function(d){return "Uendelig"};
 
@@ -12274,7 +12274,7 @@ exports.reinfFeedbackMsg = function(d){return "Ser dette ut slik du ønsker? Du 
 
 exports.setColour = function(d){return "angi farge"};
 
-exports.setPattern = function(d){return "set pattern"};
+exports.setPattern = function(d){return "angi mønster"};
 
 exports.setWidth = function(d){return "angi bredde"};
 
@@ -12284,7 +12284,7 @@ exports.showMe = function(d){return "Vis meg"};
 
 exports.showTurtle = function(d){return "vis kunstner"};
 
-exports.sizeParameter = function(d){return "size"};
+exports.sizeParameter = function(d){return "størrelse"};
 
 exports.step = function(d){return "Trinn"};
 

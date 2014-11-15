@@ -12155,9 +12155,9 @@ exports.yes = function(d){return "Ja"};
 var MessageFormat = require("messageformat");MessageFormat.locale.de=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "und"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "wahr"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "falsch"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -12255,7 +12255,7 @@ exports.score = function(d){return "Punktestand"};
 
 exports.showCodeHeader = function(d){return "Programm anzeigen"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Zeige Blöcke"};
 
 exports.showGeneratedCode = function(d){return "Programm anzeigen"};
 
@@ -12293,7 +12293,7 @@ exports.typeHint = function(d){return "Beachte, dass die runden Klammern und Sem
 
 exports.workspaceHeader = function(d){return "Setze die Bausteine hier zusammen: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Geben Sie hier Ihren JavaScript-code ein"};
 
 exports.infinity = function(d){return "Unendlichkeit"};
 

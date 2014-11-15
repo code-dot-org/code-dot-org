@@ -11975,9 +11975,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.fi=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "ja"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "tosi"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "epätosi"};
 
 exports.blocklyMessage = function(d){return "Blocky"};
 
@@ -12029,7 +12029,7 @@ exports.finalStageTrophies = function(d){return "Onneksi olkoon! Olet suorittanu
 
 exports.finish = function(d){return "Valmis"};
 
-exports.generatedCodeInfo = function(d){return "Jopa huippuyliopistot opettavat lohkopohjaista ohjelmointia (esim., "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"), mutta konepellin alla kokoamasi lohkot voidaan näyttää myös esim. JavaScript-kielellä. JavaScript on maailman eniten käytetty ohjelmointikieli:"};
+exports.generatedCodeInfo = function(d){return "Jopa huippuyliopistot opettavat lohkopohjaista ohjelmointia (esim. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"), mutta konepellin alla kokoamasi lohkot voidaan näyttää myös esim. JavaScript-kielellä. JavaScript on maailman eniten käytetty ohjelmointikieli:"};
 
 exports.hashError = function(d){return "Valitan, '%1' ei vastaa mitään tallennettua ohjelmaa."};
 
@@ -12075,7 +12075,7 @@ exports.score = function(d){return "pisteet"};
 
 exports.showCodeHeader = function(d){return "Näytä koodi"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Näytä lohkot"};
 
 exports.showGeneratedCode = function(d){return "Näytä koodi"};
 
@@ -12113,7 +12113,7 @@ exports.typeHint = function(d){return "Sulkeet ja puolipisteet ovat pakollisia."
 
 exports.workspaceHeader = function(d){return "Kokoa lohkosi täällä: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Kirjoita JavaScript koodi tähän"};
 
 exports.infinity = function(d){return "Ääretön"};
 
@@ -12127,7 +12127,7 @@ exports.watchVideo = function(d){return "Katso video"};
 
 exports.when = function(d){return "kun"};
 
-exports.whenRun = function(d){return "ajettaessa"};
+exports.whenRun = function(d){return "kun suoritetaan"};
 
 exports.tryHOC = function(d){return "Kokeile koodituntia"};
 
@@ -12142,7 +12142,7 @@ exports.genericFeedback = function(d){return "Katso miten päädyit tähän, ja 
 var MessageFormat = require("messageformat");MessageFormat.locale.fi=function(n){return n===1?"one":"other"}
 exports.blocksUsed = function(d){return "Lohkoja käytetty: %1"};
 
-exports.branches = function(d){return "branches"};
+exports.branches = function(d){return "haarat"};
 
 exports.catColour = function(d){return "Väri"};
 
@@ -12180,7 +12180,7 @@ exports.createASnowflakeBranch = function(d){return "create a snowflake branch"}
 
 exports.degrees = function(d){return "astetta"};
 
-exports.depth = function(d){return "depth"};
+exports.depth = function(d){return "syvyys"};
 
 exports.dots = function(d){return "kuvapisteet"};
 
@@ -12190,31 +12190,31 @@ exports.drawATriangle = function(d){return "piirrä kolmio"};
 
 exports.drawACircle = function(d){return "piirrä ympyrä"};
 
-exports.drawAFlower = function(d){return "draw a flower"};
+exports.drawAFlower = function(d){return "piirrä kukka"};
 
-exports.drawAHexagon = function(d){return "draw a hexagon"};
+exports.drawAHexagon = function(d){return "piirrä kuusikulmio"};
 
 exports.drawAHouse = function(d){return "piirrä talo"};
 
-exports.drawAPlanet = function(d){return "draw a planet"};
+exports.drawAPlanet = function(d){return "piirrä planeetta"};
 
-exports.drawARhombus = function(d){return "draw a rhombus"};
+exports.drawARhombus = function(d){return "piirrä vinoneliö"};
 
-exports.drawARobot = function(d){return "draw a robot"};
+exports.drawARobot = function(d){return "piirrä robotti"};
 
-exports.drawARocket = function(d){return "draw a rocket"};
+exports.drawARocket = function(d){return "piirrä raketti"};
 
-exports.drawASnowflake = function(d){return "draw a snowflake"};
+exports.drawASnowflake = function(d){return "piirrä lumihiutale"};
 
 exports.drawASnowman = function(d){return "piirrä lumiukko"};
 
-exports.drawAStar = function(d){return "draw a star"};
+exports.drawAStar = function(d){return "piirrä tähti"};
 
 exports.drawATree = function(d){return "piirrä puu"};
 
-exports.drawUpperWave = function(d){return "draw upper wave"};
+exports.drawUpperWave = function(d){return "piirrä ylempi aalto"};
 
-exports.drawLowerWave = function(d){return "draw lower wave"};
+exports.drawLowerWave = function(d){return "piirrä alempi aalto"};
 
 exports.drawStamp = function(d){return "draw stamp"};
 
@@ -12230,15 +12230,15 @@ exports.jumpForward = function(d){return "hyppää eteenpäin"};
 
 exports.jumpTooltip = function(d){return "Siirtää taiteilijaa piirtämättä jälkeä."};
 
-exports.jumpEastTooltip = function(d){return "Moves the artist east without leaving any marks."};
+exports.jumpEastTooltip = function(d){return "Siirtää taiteilijaa itään piirtämättä jälkeä."};
 
-exports.jumpNorthTooltip = function(d){return "Moves the artist north without leaving any marks."};
+exports.jumpNorthTooltip = function(d){return "Siirtää taiteilijaa pohjoiseen piirtämättä jälkeä."};
 
-exports.jumpSouthTooltip = function(d){return "Moves the artist south without leaving any marks."};
+exports.jumpSouthTooltip = function(d){return "Siirtää taiteilijaa etelään piirtämättä jälkeä."};
 
-exports.jumpWestTooltip = function(d){return "Moves the artist west without leaving any marks."};
+exports.jumpWestTooltip = function(d){return "Siirtää taiteilijaa länteen piirtämättä jälkeä."};
 
-exports.lengthFeedback = function(d){return "You got it right except for the lengths to move."};
+exports.lengthFeedback = function(d){return "Sait tämän oikein lukuunottamatta siirtojen pituuksia."};
 
 exports.lengthParameter = function(d){return "pituus"};
 
@@ -12246,17 +12246,17 @@ exports.loopVariable = function(d){return "laskuri"};
 
 exports.moveBackward = function(d){return "siirry taaksepäin"};
 
-exports.moveEastTooltip = function(d){return "Moves the artist east."};
+exports.moveEastTooltip = function(d){return "Siirtää taiteilijaa itään."};
 
 exports.moveForward = function(d){return "siirry eteenpäin"};
 
 exports.moveForwardTooltip = function(d){return "Siirtää taiteilijaa eteenpäin."};
 
-exports.moveNorthTooltip = function(d){return "Moves the artist north."};
+exports.moveNorthTooltip = function(d){return "Siirtää taitelijaa pohjoiseen."};
 
-exports.moveSouthTooltip = function(d){return "Moves the artist south."};
+exports.moveSouthTooltip = function(d){return "Siirtää taitelijaa etelään."};
 
-exports.moveWestTooltip = function(d){return "Moves the artist west."};
+exports.moveWestTooltip = function(d){return "Siirtää taitelijaa länteen."};
 
 exports.moveTooltip = function(d){return "Siirtää taiteilijaa eteenpäin tai taaksepäin annetun etäisyyden."};
 
@@ -12274,7 +12274,7 @@ exports.reinfFeedbackMsg = function(d){return "Näyttääkö tämä siltä, mit�
 
 exports.setColour = function(d){return "aseta väri"};
 
-exports.setPattern = function(d){return "set pattern"};
+exports.setPattern = function(d){return "määritä malli"};
 
 exports.setWidth = function(d){return "aseta leveys"};
 
@@ -12284,9 +12284,9 @@ exports.showMe = function(d){return "Näytä minulle"};
 
 exports.showTurtle = function(d){return "näytä taiteilija"};
 
-exports.sizeParameter = function(d){return "size"};
+exports.sizeParameter = function(d){return "koko"};
 
-exports.step = function(d){return "step"};
+exports.step = function(d){return "askel"};
 
 exports.tooFewColours = function(d){return "Tässä pulmassa pitää käyttää ainakin %1 väriä. Käytit vain %2 väriä."};
 

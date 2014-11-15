@@ -11603,9 +11603,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.no=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "og"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "sann"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "usann"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -11703,7 +11703,7 @@ exports.score = function(d){return "poengsum"};
 
 exports.showCodeHeader = function(d){return "Vis kode"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Vis blokker"};
 
 exports.showGeneratedCode = function(d){return "Vis kode"};
 
@@ -11741,7 +11741,7 @@ exports.typeHint = function(d){return "Legg merke til at paranteser og semikolon
 
 exports.workspaceHeader = function(d){return "Sett sammen blokkene dine her: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Skriv inn JavaScript-koden din her"};
 
 exports.infinity = function(d){return "Uendelig"};
 
@@ -11768,11 +11768,11 @@ exports.genericFeedback = function(d){return "Se hvordan du endte opp, og prøv 
 
 },{"messageformat":60}],48:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.no=function(n){return n===1?"one":"other"}
-exports.circleBlockTitle = function(d){return "circle (radius, style, color)"};
+exports.circleBlockTitle = function(d){return "sirkel (radius, stil, farge)"};
 
 exports.displayBlockTitle = function(d){return "display"};
 
-exports.ellipseBlockTitle = function(d){return "ellipse (width, height, style, color)"};
+exports.ellipseBlockTitle = function(d){return "ellipse (bredde, høyde, stil, farge)"};
 
 exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"display\" block?"};
 
@@ -11780,15 +11780,15 @@ exports.overlayBlockTitle = function(d){return "overlay (top, bottom)"};
 
 exports.placeImageBlockTitle = function(d){return "place-image (x, y, image)"};
 
-exports.rectangleBlockTitle = function(d){return "rectangle (width, height, style, color)"};
+exports.rectangleBlockTitle = function(d){return "rektangel (bredde, høyde, stil, farge)"};
 
-exports.rotateImageBlockTitle = function(d){return "rotate (degrees, image)"};
+exports.rotateImageBlockTitle = function(d){return "roter (grader, bilde)"};
 
-exports.scaleImageBlockTitle = function(d){return "scale (factor)"};
+exports.scaleImageBlockTitle = function(d){return "skaler (faktor)"};
 
-exports.squareBlockTitle = function(d){return "square (size, style, color)"};
+exports.squareBlockTitle = function(d){return "kvadrat (størrelse, stil, farge)"};
 
-exports.starBlockTitle = function(d){return "star (radius, style, color)"};
+exports.starBlockTitle = function(d){return "stjerne (radius, stil, farge)"};
 
 exports.stringAppendBlockTitle = function(d){return "string-append (first, second)"};
 
@@ -11796,7 +11796,7 @@ exports.stringLengthBlockTitle = function(d){return "string-length (string)"};
 
 exports.textBlockTitle = function(d){return "text (string, size, color)"};
 
-exports.triangleBlockTitle = function(d){return "triangle (size, style, color)"};
+exports.triangleBlockTitle = function(d){return "trekant (størrelse, stil, farge)"};
 
 exports.underlayBlockTitle = function(d){return "underlay (bottom, top)"};
 

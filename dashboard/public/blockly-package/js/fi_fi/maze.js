@@ -13847,9 +13847,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.fi=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "ja"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "tosi"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "epätosi"};
 
 exports.blocklyMessage = function(d){return "Blocky"};
 
@@ -13901,7 +13901,7 @@ exports.finalStageTrophies = function(d){return "Onneksi olkoon! Olet suorittanu
 
 exports.finish = function(d){return "Valmis"};
 
-exports.generatedCodeInfo = function(d){return "Jopa huippuyliopistot opettavat lohkopohjaista ohjelmointia (esim., "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"), mutta konepellin alla kokoamasi lohkot voidaan näyttää myös esim. JavaScript-kielellä. JavaScript on maailman eniten käytetty ohjelmointikieli:"};
+exports.generatedCodeInfo = function(d){return "Jopa huippuyliopistot opettavat lohkopohjaista ohjelmointia (esim. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"), mutta konepellin alla kokoamasi lohkot voidaan näyttää myös esim. JavaScript-kielellä. JavaScript on maailman eniten käytetty ohjelmointikieli:"};
 
 exports.hashError = function(d){return "Valitan, '%1' ei vastaa mitään tallennettua ohjelmaa."};
 
@@ -13947,7 +13947,7 @@ exports.score = function(d){return "pisteet"};
 
 exports.showCodeHeader = function(d){return "Näytä koodi"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Näytä lohkot"};
 
 exports.showGeneratedCode = function(d){return "Näytä koodi"};
 
@@ -13985,7 +13985,7 @@ exports.typeHint = function(d){return "Sulkeet ja puolipisteet ovat pakollisia."
 
 exports.workspaceHeader = function(d){return "Kokoa lohkosi täällä: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Kirjoita JavaScript koodi tähän"};
 
 exports.infinity = function(d){return "Ääretön"};
 
@@ -13999,7 +13999,7 @@ exports.watchVideo = function(d){return "Katso video"};
 
 exports.when = function(d){return "kun"};
 
-exports.whenRun = function(d){return "ajettaessa"};
+exports.whenRun = function(d){return "kun suoritetaan"};
 
 exports.tryHOC = function(d){return "Kokeile koodituntia"};
 
@@ -14012,7 +14012,7 @@ exports.genericFeedback = function(d){return "Katso miten päädyit tähän, ja 
 
 },{"messageformat":70}],58:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.fi=function(n){return n===1?"one":"other"}
-exports.atHoneycomb = function(d){return "mehiläispesän luona"};
+exports.atHoneycomb = function(d){return "hunajakennossa"};
 
 exports.atFlower = function(d){return "kukan luona"};
 
@@ -14046,9 +14046,9 @@ exports.fillSquare = function(d){return "täytä neliö"};
 
 exports.fillTooltip = function(d){return "aseta yksi yksikkö maata"};
 
-exports.finalLevel = function(d){return "Onneksi olkoon! Olet suorittanut viimeisen ongelman."};
+exports.finalLevel = function(d){return "Onneksi olkoon! Olet suorittanut viimeisen pulman."};
 
-exports.flowerEmptyError = function(d){return "The flower you're on has no more nectar."};
+exports.flowerEmptyError = function(d){return "Kukkassa jonka päällä olet ei ole enään mettä."};
 
 exports.get = function(d){return "hae"};
 
@@ -14058,11 +14058,11 @@ exports.holePresent = function(d){return "tässä on kuoppa"};
 
 exports.honey = function(d){return "tee hunajaa"};
 
-exports.honeyAvailable = function(d){return "honey"};
+exports.honeyAvailable = function(d){return "hunaja"};
 
 exports.honeyTooltip = function(d){return "Tee medestä hunajaa"};
 
-exports.honeycombFullError = function(d){return "This honeycomb does not have room for more honey."};
+exports.honeycombFullError = function(d){return "Hunajakennossa ei ole enempää tilaa hunajalle."};
 
 exports.ifCode = function(d){return "jos"};
 
@@ -14074,17 +14074,17 @@ exports.ifTooltip = function(d){return "Jos määrätyssä suunnassa on polku, n
 
 exports.ifelseTooltip = function(d){return "Jos määrätyssä suunnassa on polku, niin suorita ensimmäinen lohko toimintoja. Muuten suorita toinen lohko toimintoja."};
 
-exports.ifFlowerTooltip = function(d){return "If there is a flower/honeycomb in the specified direction, then do some actions."};
+exports.ifFlowerTooltip = function(d){return "Jos määritellyssä suunnassa on kukka/hunajakenno, tee joitain toimintoja."};
 
-exports.ifelseFlowerTooltip = function(d){return "If there is a flower/honeycomb in the specified direction, then do the first block of actions. Otherwise, do the second block of actions."};
+exports.ifelseFlowerTooltip = function(d){return "Jos määritellyssä suunnassa on kukka/hunajakenno, tee ensimmäiset toiminnot. Muutoin tee toiset toiminnot."};
 
-exports.insufficientHoney = function(d){return "You're using all the right blocks, but you need to make the right amount of honey."};
+exports.insufficientHoney = function(d){return "Käytät oikeita lohkoja, mutta sinun täytyy tehdä oikea määrä hunajaa."};
 
-exports.insufficientNectar = function(d){return "You're using all the right blocks, but you need to collect the right amount of nectar."};
+exports.insufficientNectar = function(d){return "Käytät oikeita lohkoja, mutta sinun täytyy kerätä oikea määrä nektariiniä."};
 
-exports.make = function(d){return "make"};
+exports.make = function(d){return "tehdä"};
 
-exports.moveBackward = function(d){return "move backward"};
+exports.moveBackward = function(d){return "Siirry taaksepäin"};
 
 exports.moveEastTooltip = function(d){return "Siirrä minua yksi askel itään."};
 
@@ -14096,13 +14096,13 @@ exports.moveNorthTooltip = function(d){return "Siirrä minua yksi askel pohjoise
 
 exports.moveSouthTooltip = function(d){return "Siirrä minua yksi askel etelään."};
 
-exports.moveTooltip = function(d){return "Move me forward/backward one space"};
+exports.moveTooltip = function(d){return "Liikuta minua eteen- tai taaksepäin yksi askel"};
 
 exports.moveWestTooltip = function(d){return "Siirrä minua yksi askel länteen."};
 
 exports.nectar = function(d){return "hae mesi"};
 
-exports.nectarRemaining = function(d){return "nectar"};
+exports.nectarRemaining = function(d){return "mesi"};
 
 exports.nectarTooltip = function(d){return "Hae mesi kukasta"};
 
@@ -14116,9 +14116,9 @@ exports.noPathLeft = function(d){return "ei polkua vasemmalle"};
 
 exports.noPathRight = function(d){return "ei polkua oikealle"};
 
-exports.notAtFlowerError = function(d){return "You can only get nectar from a flower."};
+exports.notAtFlowerError = function(d){return "Voit saada mettä vain kukasta."};
 
-exports.notAtHoneycombError = function(d){return "You can only make honey at a honeycomb."};
+exports.notAtHoneycombError = function(d){return "Voit tehdä hunajaa vain hunajakennossa."};
 
 exports.numBlocksNeeded = function(d){return "Pulman voi ratkaista %1 lohkolla."};
 
@@ -14142,7 +14142,7 @@ exports.removeStack = function(d){return "poista "+v(d,"shovelfuls")+" kasaa"};
 
 exports.removeSquare = function(d){return "poista neliö"};
 
-exports.repeatCarefullyError = function(d){return "Tätä tehtävää varten sinun tulee ensin löytää toistuva kaava. Käytä sitten \"toista\"-lohkoa näiden 3 lohkon kanssa: siirry, siirry, käänny oikeaan."};
+exports.repeatCarefullyError = function(d){return "Ratkaistaksesi tämän, mieti tarkkaan kahden siirron ja yhden käännöksen laittamista \"toista\" lohkoon.  Voit myös jättää yhden lisäsiirto loppuun."};
 
 exports.repeatUntil = function(d){return "toista kunnes"};
 
@@ -14152,9 +14152,9 @@ exports.repeatUntilFinish = function(d){return "toista kunnes lopussa"};
 
 exports.step = function(d){return "Askel"};
 
-exports.totalHoney = function(d){return "total honey"};
+exports.totalHoney = function(d){return "yhteensä hunajaa"};
 
-exports.totalNectar = function(d){return "total nectar"};
+exports.totalNectar = function(d){return "yhteensä mettä"};
 
 exports.turnLeft = function(d){return "käänny vasempaan"};
 
@@ -14162,19 +14162,19 @@ exports.turnRight = function(d){return "käänny oikeaan"};
 
 exports.turnTooltip = function(d){return "Kääntää minua vasempaan tai oikeaan 90 astetta."};
 
-exports.uncheckedCloudError = function(d){return "Make sure to check all clouds to see if they're flowers or honeycombs."};
+exports.uncheckedCloudError = function(d){return "Muista tarkistaa kaikki pilvet nähdäksesi, ovatko ne kukkia tai hunajakennoja."};
 
-exports.uncheckedPurpleError = function(d){return "Make sure to check all purple flowers to see if they have nectar"};
+exports.uncheckedPurpleError = function(d){return "Tarkista kaikista violeteista kukista, onko niissä mettä"};
 
 exports.whileMsg = function(d){return "niin kauan kuin"};
 
 exports.whileTooltip = function(d){return "Toista sisällä oleva toiminto kunnes saavutetaan loppupiste."};
 
-exports.word = function(d){return "Find the word"};
+exports.word = function(d){return "Etsi sana"};
 
 exports.yes = function(d){return "Kyllä"};
 
-exports.youSpelled = function(d){return "You spelled"};
+exports.youSpelled = function(d){return "Kirjoitit"};
 
 
 },{"messageformat":70}],59:[function(require,module,exports){

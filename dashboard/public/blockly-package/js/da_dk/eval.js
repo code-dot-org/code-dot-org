@@ -11603,15 +11603,15 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.da=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "og"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "sandt"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "falsk"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
 exports.catActions = function(d){return "Handlinger"};
 
-exports.catColour = function(d){return "Farver"};
+exports.catColour = function(d){return "Farve"};
 
 exports.catLogic = function(d){return "Logik"};
 
@@ -11703,7 +11703,7 @@ exports.score = function(d){return "score"};
 
 exports.showCodeHeader = function(d){return "Vis kode"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Vis blokke"};
 
 exports.showGeneratedCode = function(d){return "Vis kode"};
 
@@ -11741,7 +11741,7 @@ exports.typeHint = function(d){return "Bemærk, at parenteser og semikoloner er 
 
 exports.workspaceHeader = function(d){return "Saml dine blokke her: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Skriv din JavaScript-kode her"};
 
 exports.infinity = function(d){return "Uendelig"};
 
@@ -11768,39 +11768,39 @@ exports.genericFeedback = function(d){return "Se hvordan du endte, og prøve at 
 
 },{"messageformat":60}],48:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.da=function(n){return n===1?"one":"other"}
-exports.circleBlockTitle = function(d){return "circle (radius, style, color)"};
+exports.circleBlockTitle = function(d){return "cirkel (radius, stil, farve)"};
 
 exports.displayBlockTitle = function(d){return "display"};
 
-exports.ellipseBlockTitle = function(d){return "ellipse (width, height, style, color)"};
+exports.ellipseBlockTitle = function(d){return "ellipse (bredde, højde, stil, farve)"};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"display\" block?"};
+exports.extraTopBlocks = function(d){return "Du har separate blokke. Mente du fastgøre disse til \"display\" blokken?"};
 
-exports.overlayBlockTitle = function(d){return "overlay (top, bottom)"};
+exports.overlayBlockTitle = function(d){return "overlay (top, bund)"};
 
-exports.placeImageBlockTitle = function(d){return "place-image (x, y, image)"};
+exports.placeImageBlockTitle = function(d){return "plaser-billede (x, y, billede)"};
 
-exports.rectangleBlockTitle = function(d){return "rectangle (width, height, style, color)"};
+exports.rectangleBlockTitle = function(d){return "rektangel (bredde, højde, stil, farve)"};
 
-exports.rotateImageBlockTitle = function(d){return "rotate (degrees, image)"};
+exports.rotateImageBlockTitle = function(d){return "roter (grader, billede)"};
 
-exports.scaleImageBlockTitle = function(d){return "scale (factor)"};
+exports.scaleImageBlockTitle = function(d){return "skaler (faktor)"};
 
-exports.squareBlockTitle = function(d){return "square (size, style, color)"};
+exports.squareBlockTitle = function(d){return "Firkant (størrelse, stil, farve)"};
 
-exports.starBlockTitle = function(d){return "star (radius, style, color)"};
+exports.starBlockTitle = function(d){return "Stjerne (radius, stil, farve)"};
 
-exports.stringAppendBlockTitle = function(d){return "string-append (first, second)"};
+exports.stringAppendBlockTitle = function(d){return "string-append (første, anden)"};
 
-exports.stringLengthBlockTitle = function(d){return "string-length (string)"};
+exports.stringLengthBlockTitle = function(d){return "strenglængden (string)"};
 
-exports.textBlockTitle = function(d){return "text (string, size, color)"};
+exports.textBlockTitle = function(d){return "tekst (string, størrelse, farve)"};
 
-exports.triangleBlockTitle = function(d){return "triangle (size, style, color)"};
+exports.triangleBlockTitle = function(d){return "trekant (størrelse, stil, farve)"};
 
-exports.underlayBlockTitle = function(d){return "underlay (bottom, top)"};
+exports.underlayBlockTitle = function(d){return "underlag (bottom, top)"};
 
-exports.outline = function(d){return "outline"};
+exports.outline = function(d){return "skitse"};
 
 exports.solid = function(d){return "solid"};
 

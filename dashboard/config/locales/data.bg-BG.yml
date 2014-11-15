@@ -100,6 +100,7 @@
         Wordsearch: Търсачка на думи
         Webapp: WebApp
         ArtistEC: Художникът
+        TextMatch: Съвпадение на текст
     trophy:
       name:
         Bronze: Бронз
@@ -564,6 +565,9 @@
         webapp_ec_simple: Създайте  ваше уеб приложение с помощта на createHtmlBlock.
         turtle_ec_1_2: 'Сега начертайте квадрат. Забележка: Използвайте вашия любим
           цвят като го вмъкнете в новия блок  "цвят на молива".'
+        turtle_ec_1_10: 'Ти го направи! Сега нарисувай каквото пожелаеш. Ето няколко
+          забавни идеи: фигура от стиклетки, снежинка или спирала. Също опитай новия
+          блок  "дебелина на молива". Забавлявай се!'
     video:
       name:
         maze_intro: Лабиринт - въведение
@@ -579,7 +583,6 @@
         loop_for: Блок "Брояч"
         parameters: Функции с параметри
         hoc_wrapup: Резултати от "Час на кодиране"
-        20_wrapup: Резултати от 20-часовият курс
         Unplug1: Какво е CS?
         Unplug2: Изчислително мислене
         Unplug3: Програмиране на милиметрова хартия
@@ -594,7 +597,7 @@
         C1_happy_maps_unplugged: Щастливи карти
         C1_moveitmoveit_unplugged: Преместете го, преместете го
         C1_bigevent_unplugged: Голямото събитие
-        C1_getting_loop: Да повтаряме
+        C1_getting_loopy: Да повтаряме
         C1_pair_programming: Програмиране по двойки
         C1_maze_intro_sequencing: 'Лабиринт:  Последователност -представяне'
         C1_maze_debugging: 'Лабиринт: отстраняване на грешки'
@@ -606,19 +609,22 @@
         C1_maze_loops: Лабиринт- повторения
         C1_playlab_storytelling: 'Театрална лаборатория: Създаване на история'
         C1_planting_seed: Засаждане на семена
-        C1_building_foundating: Изграждане на база
+        C1_building_foundation: Изграждане на база
         C2_maze_intro: Лабиринт - въведение
         C2_artist_intro: Художник - въведение
         C2_zuck_repeat_loop: Лабиринт- повторения
         C2_artist_loops: Художник - цикли
+        C2_artist_debugging: 'Художник: отстраняване на грешки'
+        C2_bee_loops: Пчела - цикли
+        C2_bee_debugging: Пчела - отстраняване на грешки
         C2_bee_conditionals: Пчела - условия
         C2_playlab_createstory: 'Театрална лаборатория: Създаване на история'
         C2_graph_paper: Програмиране на милиметрова хартия
         C2_conditionals_with_cards: Условия
         C2_binary_bracelets: Двоични гривни
-        C2_replay_programming: Щафетно програмиране
+        C2_relay_programming: Щафетно програмиране
         C2_paper_airplanes: Хартиени самолети
-        C3_maze_intro: Лабиринт - въведение
+        C3_maze_level_4: Лабиринт- повторения
         C3_artist_intro: Художник - въведение
         C3_artist_functions: 'Художник: функции'
         C3_bee_functions: Пчела - функции
@@ -651,3 +657,13 @@
           "когато историята започва", за да използвате актьор за тази история
         studio_say_text: Въведете какво искате вашият актьор да каже в  тези кавички
         jigsaw_click: Щракнете върху този блок!
+        move_elsa_forward: Drag a "Move Forward" block and snap it below the "When
+          Run" block to make Elsa move forward
+        turn_elsa: Use the "Turn" block to make Elsa turn. The number in the drop-down
+          determines how much Elsa turns
+        replace_questions: Use the drop-down to replace "???" with a number
+        replace_questions_degree: Use the drop-down to replace "???" with the correct
+          degree to turn
+        repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
+          workspace
+        snowflake_dropdown: Use this drop-down to create different snowflakes!

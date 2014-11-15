@@ -11918,7 +11918,7 @@ exports.parseElement = function(text) {
 
 },{}],39:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.zh=function(n){return "other"}
-exports.bounceBall = function(d){return "bounce ball"};
+exports.bounceBall = function(d){return "反彈球"};
 
 exports.bounceBallTooltip = function(d){return "Bounce a ball off of an object."};
 
@@ -11956,9 +11956,9 @@ exports.incrementPlayerScore = function(d){return "得分"};
 
 exports.incrementPlayerScoreTooltip = function(d){return "替玩家加一分"};
 
-exports.isWall = function(d){return "is this a wall"};
+exports.isWall = function(d){return "這是牆嗎"};
 
-exports.isWallTooltip = function(d){return "Returns true if there is a wall here"};
+exports.isWallTooltip = function(d){return "如果這裡有牆，則返回 ｢真｣ （true）"};
 
 exports.launchBall = function(d){return "重新發球"};
 
@@ -12112,9 +12112,9 @@ exports.whenBallInGoal = function(d){return "when ball in goal"};
 
 exports.whenBallInGoalTooltip = function(d){return "Execute the actions below when a ball enters the goal."};
 
-exports.whenBallMissesPaddle = function(d){return "when ball misses paddle"};
+exports.whenBallMissesPaddle = function(d){return "當球拍未擊中球"};
 
-exports.whenBallMissesPaddleTooltip = function(d){return "Execute the actions below when a ball misses the paddle."};
+exports.whenBallMissesPaddleTooltip = function(d){return "當球拍未能擊中球，執行以下行動。"};
 
 exports.whenDown = function(d){return "當按下＂下方向鍵＂"};
 
@@ -12128,9 +12128,9 @@ exports.whenLeft = function(d){return "當按下＂左方向鍵＂"};
 
 exports.whenLeftTooltip = function(d){return "當按下＂左方向鍵＂，就會執行動作"};
 
-exports.whenPaddleCollided = function(d){return "when ball hits paddle"};
+exports.whenPaddleCollided = function(d){return "當球拍擊中球"};
 
-exports.whenPaddleCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a paddle."};
+exports.whenPaddleCollidedTooltip = function(d){return "當球撞到球拍時，執行以下的行動。"};
 
 exports.whenRight = function(d){return "當按下＂右方向鍵＂"};
 
@@ -12140,9 +12140,9 @@ exports.whenUp = function(d){return "當＂上方向鍵＂"};
 
 exports.whenUpTooltip = function(d){return "當按下＂上方向鍵＂，就會執行動作"};
 
-exports.whenWallCollided = function(d){return "when ball hits wall"};
+exports.whenWallCollided = function(d){return "當球打在牆上"};
 
-exports.whenWallCollidedTooltip = function(d){return "Execute the actions below when a ball collides with a wall."};
+exports.whenWallCollidedTooltip = function(d){return "當球撞到牆時，執行以下的行動。"};
 
 exports.whileMsg = function(d){return "當"};
 
@@ -12155,15 +12155,15 @@ exports.yes = function(d){return "是"};
 var MessageFormat = require("messageformat");MessageFormat.locale.zh=function(n){return "other"}
 exports.and = function(d){return "且"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "真"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "否"};
 
 exports.blocklyMessage = function(d){return "模組化"};
 
 exports.catActions = function(d){return "動作類別"};
 
-exports.catColour = function(d){return "顏色類別"};
+exports.catColour = function(d){return "顏色"};
 
 exports.catLogic = function(d){return "邏輯類別"};
 
@@ -12255,7 +12255,7 @@ exports.score = function(d){return "分數"};
 
 exports.showCodeHeader = function(d){return "顯示程式碼"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "顯示積木"};
 
 exports.showGeneratedCode = function(d){return "顯示程式碼"};
 
@@ -12293,7 +12293,7 @@ exports.typeHint = function(d){return "請注意\"括弧\"和\"分號\"都是必
 
 exports.workspaceHeader = function(d){return "在此組合您的區塊"};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "在此輸入您的 JavaScript 代碼"};
 
 exports.infinity = function(d){return "無窮"};
 

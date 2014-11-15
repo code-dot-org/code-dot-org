@@ -12155,9 +12155,9 @@ exports.yes = function(d){return "Ja"};
 var MessageFormat = require("messageformat");MessageFormat.locale.nl=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "en"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "waar"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "onwaar"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 

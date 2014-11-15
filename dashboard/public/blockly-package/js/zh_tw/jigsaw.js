@@ -8075,15 +8075,15 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.zh=function(n){return "other"}
 exports.and = function(d){return "且"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "真"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "否"};
 
 exports.blocklyMessage = function(d){return "模組化"};
 
 exports.catActions = function(d){return "動作類別"};
 
-exports.catColour = function(d){return "顏色類別"};
+exports.catColour = function(d){return "顏色"};
 
 exports.catLogic = function(d){return "邏輯類別"};
 
@@ -8175,7 +8175,7 @@ exports.score = function(d){return "分數"};
 
 exports.showCodeHeader = function(d){return "顯示程式碼"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "顯示積木"};
 
 exports.showGeneratedCode = function(d){return "顯示程式碼"};
 
@@ -8213,7 +8213,7 @@ exports.typeHint = function(d){return "請注意\"括弧\"和\"分號\"都是必
 
 exports.workspaceHeader = function(d){return "在此組合您的區塊"};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "在此輸入您的 JavaScript 代碼"};
 
 exports.infinity = function(d){return "無窮"};
 

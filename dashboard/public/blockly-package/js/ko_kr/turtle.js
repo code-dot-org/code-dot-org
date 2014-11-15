@@ -12075,7 +12075,7 @@ exports.score = function(d){return "점수"};
 
 exports.showCodeHeader = function(d){return "코드 보기"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "블럭 보이기"};
 
 exports.showGeneratedCode = function(d){return "코드 보기"};
 
@@ -12113,7 +12113,7 @@ exports.typeHint = function(d){return "괄호 \"( )\" 와 세미콜론 \";\" 이
 
 exports.workspaceHeader = function(d){return "블럭들을 이곳에서 조립하세요:"};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "자바스크립트 코드 작성"};
 
 exports.infinity = function(d){return "무한"};
 
@@ -12274,7 +12274,7 @@ exports.reinfFeedbackMsg = function(d){return "원하는 그림이 만들어지�
 
 exports.setColour = function(d){return "색 설정:"};
 
-exports.setPattern = function(d){return "set pattern"};
+exports.setPattern = function(d){return "패턴 설정"};
 
 exports.setWidth = function(d){return "두께 설정:"};
 
@@ -12284,7 +12284,7 @@ exports.showMe = function(d){return "보이기"};
 
 exports.showTurtle = function(d){return "예술가 보이기"};
 
-exports.sizeParameter = function(d){return "size"};
+exports.sizeParameter = function(d){return "크기"};
 
 exports.step = function(d){return "단계"};
 

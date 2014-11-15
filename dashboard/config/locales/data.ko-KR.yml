@@ -100,6 +100,7 @@
         Wordsearch: 단어 탐색
         Webapp: 웹 앱
         ArtistEC: The Artist
+        TextMatch: 글자 맞추기
     trophy:
       name:
         Bronze: 동
@@ -393,9 +394,11 @@
         maze_wordsearch_k_15: 어떤 방향으로 움직인 후에 "위"로 이동시켜주세요.
         maze_wordsearch_k_16: 어떤 방향으로 움직인 후에 "아래"로 이동시켜주세요.
         maze_wordsearch_k_20: 테스트입니다! 어떤 방향으로 움직인 후에 "스토리"로 이동시켜주세요.
-        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        webapp_ec_simple: HtmlBlock 을 사용해 웹 앱 만들기
         turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
           it in the new "penColour" block.'
+        turtle_ec_1_10: '잘했습니다! 이제 그리고 싶은 것을 마음대로 그려보세요. 몇 가지 재미있는 예시: 막대기 모양, 눈꽃모양,
+          나선모양. 그리고 새로운 "펜 두께" 블럭을 이용해 보세요!'
     video:
       name:
         maze_intro: 미로 퍼즐 소개
@@ -411,7 +414,6 @@
         loop_for: 카운터
         parameters: 함수(값 전달)
         hoc_wrapup: Hour of Code 마무리
-        20_wrapup: 20-Hour 마무리
         Unplug1: 컴퓨터과학(CS, 정보과학)이란?
         Unplug2: 컴퓨터과학적(정보과학적)사고
         Unplug3: 모눈종이 프로그래밍
@@ -426,7 +428,7 @@
         C1_happy_maps_unplugged: 즐거운 맵
         C1_moveitmoveit_unplugged: 빨리 빨리 움직이자!
         C1_bigevent_unplugged: 큰 이벤트
-        C1_getting_loop: 반복시키기
+        C1_getting_loopy: 반복적으로 하기
         C1_pair_programming: 페어 프로그래밍
         C1_maze_intro_sequencing: 미로 탐색 소개
         C1_maze_debugging: 미로 퍼즐 디버깅
@@ -438,19 +440,22 @@
         C1_maze_loops: 미로 퍼즐 반복
         C1_playlab_storytelling: Play Lab - 스토리 만들기
         C1_planting_seed: 씨앗 심기
-        C1_building_foundating: 건물 기초 만들기
+        C1_building_foundation: 건물 기초 만들기
         C2_maze_intro: 미로 퍼즐 소개
         C2_artist_intro: 예술가 퍼즐 소개
         C2_zuck_repeat_loop: 미로 퍼즐 반복
         C2_artist_loops: 아티스트 반복
+        C2_artist_debugging: 예술가 디버깅
+        C2_bee_loops: 꿀벌 반복
+        C2_bee_debugging: 꿀벌 디버깅
         C2_bee_conditionals: 꿀벌 조건선택
         C2_playlab_createstory: Play Lab - 스토리 만들기
         C2_graph_paper: 모눈종이 프로그래밍
         C2_conditionals_with_cards: 조건
         C2_binary_bracelets: 2진 팔찌
-        C2_replay_programming: 릴레이 프로그래밍
+        C2_relay_programming: 릴레이 프로그래밍
         C2_paper_airplanes: 종이 비행기
-        C3_maze_intro: 미로 퍼즐 소개
+        C3_maze_level_4: 미로 퍼즐 반복
         C3_artist_intro: 예술가 퍼즐 소개
         C3_artist_functions: 예술가 함수
         C3_bee_functions: 꿀벌 함수
@@ -480,3 +485,13 @@
         set_sprite_image: '"케릭터 사용하기" 블럭을 "이야기가 시작되면" 블럭에 붙여 스토리가 가능하게 해 보세요. '
         studio_say_text: 큰 따옴표 사이에 케릭터가 해야하는 말을 입력하세요.
         jigsaw_click: 이 블럭을 클릭하세요!
+        move_elsa_forward: Drag a "Move Forward" block and snap it below the "When
+          Run" block to make Elsa move forward
+        turn_elsa: Use the "Turn" block to make Elsa turn. The number in the drop-down
+          determines how much Elsa turns
+        replace_questions: Use the drop-down to replace "???" with a number
+        replace_questions_degree: Use the drop-down to replace "???" with the correct
+          degree to turn
+        repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
+          workspace
+        snowflake_dropdown: Use this drop-down to create different snowflakes!

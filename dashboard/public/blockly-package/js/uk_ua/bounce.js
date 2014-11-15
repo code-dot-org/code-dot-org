@@ -12181,9 +12181,9 @@ var MessageFormat = require("messageformat");MessageFormat.locale.uk = function 
 };
 exports.and = function(d){return "та"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "Істина"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "Хибність"};
 
 exports.blocklyMessage = function(d){return "Блоклі"};
 
@@ -12281,7 +12281,7 @@ exports.score = function(d){return "рахунок"};
 
 exports.showCodeHeader = function(d){return "Показати код"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Показати блоки"};
 
 exports.showGeneratedCode = function(d){return "Показати код"};
 
@@ -12319,7 +12319,7 @@ exports.typeHint = function(d){return "Зверніть увагу: потріб
 
 exports.workspaceHeader = function(d){return "Збирайте свої блоки тут: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Введіть свій код JavaScript тут"};
 
 exports.infinity = function(d){return "Нескінченність"};
 

@@ -8204,9 +8204,9 @@ var MessageFormat = require("messageformat");MessageFormat.locale.ar = function(
 };
 exports.and = function(d){return "و"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "صحيح"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "خطأ"};
 
 exports.blocklyMessage = function(d){return "بلوكلي"};
 
@@ -8404,13 +8404,13 @@ exports.catVariables = function(d){return "المتغيرات"};
 
 exports.continue = function(d){return "أستمر"};
 
-exports.createHtmlBlock = function(d){return "create html block"};
+exports.createHtmlBlock = function(d){return "إنشاء كتلة html"};
 
-exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
+exports.createHtmlBlockTooltip = function(d){return "إنشاء كتلة من HTML في التطبيق."};
 
 exports.finalLevel = function(d){return "تهانينا ! لقد قمت بحل اللغز الاخير."};
 
-exports.makeYourOwn = function(d){return "Make Your Own App"};
+exports.makeYourOwn = function(d){return "إنشاء تطبيقك الخاص بك"};
 
 exports.nextLevel = function(d){return "تهانينا! لقد قمت بإكمال هذا اللغز."};
 
@@ -8418,15 +8418,15 @@ exports.no = function(d){return "لا"};
 
 exports.numBlocksNeeded = function(d){return "يمكن حل هذا الغز ب  %1 من القطع."};
 
-exports.pause = function(d){return "Pause"};
+exports.pause = function(d){return "إيقاف مؤقت"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
+exports.reinfFeedbackMsg = function(d){return "يمكنك الضغط على زر \"حاول مرة أخرى\" للعودة إلى تشغيل التطبيق الخاص بك."};
 
 exports.repeatForever = function(d){return "تكرار إلى الأبد"};
 
 exports.repeatDo = function(d){return "نفّذ"};
 
-exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
+exports.repeatForeverTooltip = function(d){return "تنفيذ الإجراءات في هذه الكتلة مرارا وتكرارا أثناء تشغيل التطبيق."};
 
 exports.shareWebappTwitter = function(d){return "Check out the app I made. I wrote it myself with @codeorg"};
 

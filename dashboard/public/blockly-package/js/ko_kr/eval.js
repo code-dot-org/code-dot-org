@@ -11703,7 +11703,7 @@ exports.score = function(d){return "점수"};
 
 exports.showCodeHeader = function(d){return "코드 보기"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "블럭 보이기"};
 
 exports.showGeneratedCode = function(d){return "코드 보기"};
 
@@ -11741,7 +11741,7 @@ exports.typeHint = function(d){return "괄호 \"( )\" 와 세미콜론 \";\" 이
 
 exports.workspaceHeader = function(d){return "블럭들을 이곳에서 조립하세요:"};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "자바스크립트 코드 작성"};
 
 exports.infinity = function(d){return "무한"};
 
@@ -11768,43 +11768,43 @@ exports.genericFeedback = function(d){return "어떻게 종료되는지 살펴�
 
 },{"messageformat":60}],48:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.ko=function(n){return "other"}
-exports.circleBlockTitle = function(d){return "circle (radius, style, color)"};
+exports.circleBlockTitle = function(d){return "원(반지름, 형태, 색)"};
 
-exports.displayBlockTitle = function(d){return "display"};
+exports.displayBlockTitle = function(d){return "보이기"};
 
-exports.ellipseBlockTitle = function(d){return "ellipse (width, height, style, color)"};
+exports.ellipseBlockTitle = function(d){return "타원(가로길이, 세로높이, 형태, 색)"};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"display\" block?"};
+exports.extraTopBlocks = function(d){return "붙이지 않은 블럭들이 있습니다. 이 블럭들을 \"그리기\"블럭에 붙이려고 했나요?"};
 
-exports.overlayBlockTitle = function(d){return "overlay (top, bottom)"};
+exports.overlayBlockTitle = function(d){return "위에그리기(맨위, 아래)"};
 
-exports.placeImageBlockTitle = function(d){return "place-image (x, y, image)"};
+exports.placeImageBlockTitle = function(d){return "이미지배치(x, y, 이미지)"};
 
-exports.rectangleBlockTitle = function(d){return "rectangle (width, height, style, color)"};
+exports.rectangleBlockTitle = function(d){return "사각형(가로길이, 세로높이, 형태, 색)"};
 
-exports.rotateImageBlockTitle = function(d){return "rotate (degrees, image)"};
+exports.rotateImageBlockTitle = function(d){return "회전(각도, 이미지)"};
 
-exports.scaleImageBlockTitle = function(d){return "scale (factor)"};
+exports.scaleImageBlockTitle = function(d){return "확대(비율)"};
 
-exports.squareBlockTitle = function(d){return "square (size, style, color)"};
+exports.squareBlockTitle = function(d){return "정사각형(한변의길이, 형태, 색)"};
 
-exports.starBlockTitle = function(d){return "star (radius, style, color)"};
+exports.starBlockTitle = function(d){return "별(반지름, 형태, 색)"};
 
-exports.stringAppendBlockTitle = function(d){return "string-append (first, second)"};
+exports.stringAppendBlockTitle = function(d){return "문장-추가(첫번째위치, 두번째위치)"};
 
-exports.stringLengthBlockTitle = function(d){return "string-length (string)"};
+exports.stringLengthBlockTitle = function(d){return "문장-글자수출력(문장)"};
 
-exports.textBlockTitle = function(d){return "text (string, size, color)"};
+exports.textBlockTitle = function(d){return "텍스트(문장, 크기, 색)"};
 
-exports.triangleBlockTitle = function(d){return "triangle (size, style, color)"};
+exports.triangleBlockTitle = function(d){return "삼각형(한변의길이, 형태, 색)"};
 
-exports.underlayBlockTitle = function(d){return "underlay (bottom, top)"};
+exports.underlayBlockTitle = function(d){return "아래에그리기(아래, 맨위)"};
 
-exports.outline = function(d){return "outline"};
+exports.outline = function(d){return "윤곽선"};
 
-exports.solid = function(d){return "solid"};
+exports.solid = function(d){return "채우기"};
 
-exports.string = function(d){return "string"};
+exports.string = function(d){return "문장"};
 
 
 },{"messageformat":60}],49:[function(require,module,exports){

@@ -8084,9 +8084,9 @@ var MessageFormat = require("messageformat");MessageFormat.locale.ro = function 
 };
 exports.and = function(d){return "şi"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "adevărat"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "fals"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 

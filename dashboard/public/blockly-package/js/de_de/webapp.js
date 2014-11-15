@@ -8187,9 +8187,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.de=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "und"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "wahr"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "falsch"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -8287,7 +8287,7 @@ exports.score = function(d){return "Punktestand"};
 
 exports.showCodeHeader = function(d){return "Programm anzeigen"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Zeige Blöcke"};
 
 exports.showGeneratedCode = function(d){return "Programm anzeigen"};
 
@@ -8325,7 +8325,7 @@ exports.typeHint = function(d){return "Beachte, dass die runden Klammern und Sem
 
 exports.workspaceHeader = function(d){return "Setze die Bausteine hier zusammen: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Geben Sie hier Ihren JavaScript-code ein"};
 
 exports.infinity = function(d){return "Unendlichkeit"};
 
@@ -8386,13 +8386,13 @@ exports.numBlocksNeeded = function(d){return "Dieses Puzzle kann mit  %1 Baustei
 
 exports.pause = function(d){return "Pause"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
+exports.reinfFeedbackMsg = function(d){return "Sie können die \"Versuchs nochmal\" Taste Drücken um zurück zur laufenden App zukommen."};
 
 exports.repeatForever = function(d){return "ewig wiederholen"};
 
 exports.repeatDo = function(d){return "mache"};
 
-exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
+exports.repeatForeverTooltip = function(d){return "Führen Sie die Aktionen in diesem Block wiederholt aus, während die Anwendung ausgeführt wird."};
 
 exports.shareWebappTwitter = function(d){return "Schau Dir die App an, die ich gemacht habe. Ich habe sie selbst mit @codeorg geschrieben"};
 

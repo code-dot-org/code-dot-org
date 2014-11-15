@@ -12155,9 +12155,9 @@ exports.yes = function(d){return "Igen"};
 var MessageFormat = require("messageformat");MessageFormat.locale.hu=function(n){return "other"}
 exports.and = function(d){return "és"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "igaz"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "hamis"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -12255,7 +12255,7 @@ exports.score = function(d){return "pontszám"};
 
 exports.showCodeHeader = function(d){return "Kód megjelenítése"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Blokkok megjelenítése"};
 
 exports.showGeneratedCode = function(d){return "Kód megjelenítése"};
 
@@ -12293,7 +12293,7 @@ exports.typeHint = function(d){return "Vedd figyelembe, hogy a zárójelek és a
 
 exports.workspaceHeader = function(d){return "Építsd össze a blokkokat itt: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Ide írd a JavaScript kódodat"};
 
 exports.infinity = function(d){return "Végtelen"};
 

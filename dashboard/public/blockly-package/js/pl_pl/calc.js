@@ -8351,17 +8351,17 @@ var MessageFormat = require("messageformat");MessageFormat.locale.pl = function 
   }
   return 'other';
 };
-exports.compute = function(d){return "compute"};
+exports.compute = function(d){return "Oblicz"};
 
-exports.equivalentExpression = function(d){return "Try reordering your arguments to get exactly the same expression."};
+exports.equivalentExpression = function(d){return "Spróbuj zmienić kolejność argumentów, aby dostać dokładnie to samo wyrażenie."};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"compute\" block?"};
+exports.extraTopBlocks = function(d){return "Posiadasz niezałączone bloki. Czy chciałeś je załączyć do bloków obliczeniowych?"};
 
 exports.goal = function(d){return "Goal:"};
 
-exports.reinfFeedbackMsg = function(d){return "Czy to wygląda tak, jak chciałeś? Możesz nacisnąć przycisk Spróbuj ponownie, aby zobaczyć swój rysunek."};
+exports.reinfFeedbackMsg = function(d){return "Możesz wcisnąć przycisk \"Spróbuj ponownie\" aby edytować swoje wyrażenie."};
 
-exports.yourExpression = function(d){return "Your expression:"};
+exports.yourExpression = function(d){return "Twoje wyrażenie:"};
 
 
 },{"messageformat":51}],39:[function(require,module,exports){
@@ -8382,9 +8382,9 @@ var MessageFormat = require("messageformat");MessageFormat.locale.pl = function 
 };
 exports.and = function(d){return "i"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "prawda"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "fałsz"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -8428,7 +8428,7 @@ exports.emptyBlocksErrorMsg = function(d){return "Blok powtórz lub blok jeśli 
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Funkcja blokowania musi mieć inne bloki wewnątrz do pracy."};
 
-exports.extraTopBlocks = function(d){return "Pozostały Ci jeszcze bloki, które nie zostały połączone z blokiem zdarzenia."};
+exports.extraTopBlocks = function(d){return "Posiadasz niezałączone bloki. Czy chciałeś je załączyć do bloku \"po uruchomieniu\"?"};
 
 exports.finalStage = function(d){return "Gratulacje! Ukończyłeś ostatni etap."};
 
@@ -8482,7 +8482,7 @@ exports.score = function(d){return "wynik"};
 
 exports.showCodeHeader = function(d){return "Pokaż kod"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Pokaż Bloki"};
 
 exports.showGeneratedCode = function(d){return "Pokaż kod"};
 
@@ -8512,7 +8512,7 @@ exports.saveToGallery = function(d){return "Zapisz do swojej galerii"};
 
 exports.savedToGallery = function(d){return "Zapisane w twojej galerii!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Przepraszamy, nie możemy udostępnić tego programu."};
 
 exports.typeFuncs = function(d){return "Dostępne funkcje:%1"};
 
@@ -8520,7 +8520,7 @@ exports.typeHint = function(d){return "Zauważ, że nawiasy i średniki są wyma
 
 exports.workspaceHeader = function(d){return "Połącz swoje bloki tutaj: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Wpisz swój kod JavaScript tutaj"};
 
 exports.infinity = function(d){return "Nieskończoność"};
 

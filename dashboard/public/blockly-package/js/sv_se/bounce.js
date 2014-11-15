@@ -11964,7 +11964,7 @@ exports.launchBall = function(d){return "ny boll"};
 
 exports.launchBallTooltip = function(d){return "Sätt en ny boll i spel."};
 
-exports.makeYourOwn = function(d){return "Gör ditt eget Studsa-spel"};
+exports.makeYourOwn = function(d){return "Gör ditt eget Studs-spel"};
 
 exports.moveDown = function(d){return "flytta neråt"};
 
@@ -12155,9 +12155,9 @@ exports.yes = function(d){return "Ja"};
 var MessageFormat = require("messageformat");MessageFormat.locale.sv=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "och"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "sant"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "falskt"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 

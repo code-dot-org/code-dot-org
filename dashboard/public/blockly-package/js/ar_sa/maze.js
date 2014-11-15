@@ -13864,9 +13864,9 @@ var MessageFormat = require("messageformat");MessageFormat.locale.ar = function(
 };
 exports.and = function(d){return "و"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "صحيح"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "خطأ"};
 
 exports.blocklyMessage = function(d){return "بلوكلي"};
 

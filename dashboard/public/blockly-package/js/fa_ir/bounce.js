@@ -12155,9 +12155,9 @@ exports.yes = function(d){return "بله"};
 var MessageFormat = require("messageformat");MessageFormat.locale.fa=function(n){return "other"}
 exports.and = function(d){return "و"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "درست"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "نادرست\nغلط"};
 
 exports.blocklyMessage = function(d){return "بلاکلی"};
 

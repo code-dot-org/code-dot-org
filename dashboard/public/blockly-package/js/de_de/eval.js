@@ -11603,9 +11603,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.de=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "und"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "wahr"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "falsch"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -11703,7 +11703,7 @@ exports.score = function(d){return "Punktestand"};
 
 exports.showCodeHeader = function(d){return "Programm anzeigen"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Zeige Blöcke"};
 
 exports.showGeneratedCode = function(d){return "Programm anzeigen"};
 
@@ -11741,7 +11741,7 @@ exports.typeHint = function(d){return "Beachte, dass die runden Klammern und Sem
 
 exports.workspaceHeader = function(d){return "Setze die Bausteine hier zusammen: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Geben Sie hier Ihren JavaScript-code ein"};
 
 exports.infinity = function(d){return "Unendlichkeit"};
 
@@ -11768,43 +11768,43 @@ exports.genericFeedback = function(d){return "Schau dir an, was du gemacht hast 
 
 },{"messageformat":60}],48:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.de=function(n){return n===1?"one":"other"}
-exports.circleBlockTitle = function(d){return "circle (radius, style, color)"};
+exports.circleBlockTitle = function(d){return "Kreis (Radius, Stil, Farbe)"};
 
-exports.displayBlockTitle = function(d){return "display"};
+exports.displayBlockTitle = function(d){return "Display"};
 
-exports.ellipseBlockTitle = function(d){return "ellipse (width, height, style, color)"};
+exports.ellipseBlockTitle = function(d){return "Ellipse (Breite, Höhe, Stil, Farbe)"};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"display\" block?"};
+exports.extraTopBlocks = function(d){return "Sie haben freie Blöcke. Möchtest du diese an den \"Anzeige\" Block anfügen?"};
 
-exports.overlayBlockTitle = function(d){return "overlay (top, bottom)"};
+exports.overlayBlockTitle = function(d){return "Overlay (oben, unten)"};
 
-exports.placeImageBlockTitle = function(d){return "place-image (x, y, image)"};
+exports.placeImageBlockTitle = function(d){return "Ort-Bild (X, y, Bild)"};
 
-exports.rectangleBlockTitle = function(d){return "rectangle (width, height, style, color)"};
+exports.rectangleBlockTitle = function(d){return "Rechteck (Breite, Höhe, Stil, Farbe)"};
 
-exports.rotateImageBlockTitle = function(d){return "rotate (degrees, image)"};
+exports.rotateImageBlockTitle = function(d){return "Drehen (Grad, Bild)"};
 
-exports.scaleImageBlockTitle = function(d){return "scale (factor)"};
+exports.scaleImageBlockTitle = function(d){return "Skala (Faktor)"};
 
-exports.squareBlockTitle = function(d){return "square (size, style, color)"};
+exports.squareBlockTitle = function(d){return "Quadrat (Größe, Stil, Farbe)"};
 
-exports.starBlockTitle = function(d){return "star (radius, style, color)"};
+exports.starBlockTitle = function(d){return "Stern (Radius, Stil, Farbe)"};
 
-exports.stringAppendBlockTitle = function(d){return "string-append (first, second)"};
+exports.stringAppendBlockTitle = function(d){return "String anhängen (erster, zweiter)"};
 
-exports.stringLengthBlockTitle = function(d){return "string-length (string)"};
+exports.stringLengthBlockTitle = function(d){return "Länge der Zeichenfolge (String)"};
 
-exports.textBlockTitle = function(d){return "text (string, size, color)"};
+exports.textBlockTitle = function(d){return "Text (String, Größe, Farbe)"};
 
-exports.triangleBlockTitle = function(d){return "triangle (size, style, color)"};
+exports.triangleBlockTitle = function(d){return "Dreieck (Größe, Stil, Farbe)"};
 
-exports.underlayBlockTitle = function(d){return "underlay (bottom, top)"};
+exports.underlayBlockTitle = function(d){return "Unterlage (unten, oben)"};
 
-exports.outline = function(d){return "outline"};
+exports.outline = function(d){return "Gliederung"};
 
-exports.solid = function(d){return "solid"};
+exports.solid = function(d){return "fest"};
 
-exports.string = function(d){return "string"};
+exports.string = function(d){return "String"};
 
 
 },{"messageformat":60}],49:[function(require,module,exports){

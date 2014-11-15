@@ -1,8 +1,10 @@
 {
   "and":"اور",
+  "booleanTrue":"سچا",
+  "booleanFalse":"غلط",
   "blocklyMessage":"Blockly",
   "catActions":"Actions",
-  "catColour":"Colour",
+  "catColour":"Color",
   "catLogic":"Logic",
   "catLists":"Lists",
   "catLoops":"Loops",

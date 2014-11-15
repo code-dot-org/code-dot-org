@@ -11603,9 +11603,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.fi=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "ja"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "tosi"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "epätosi"};
 
 exports.blocklyMessage = function(d){return "Blocky"};
 
@@ -11657,7 +11657,7 @@ exports.finalStageTrophies = function(d){return "Onneksi olkoon! Olet suorittanu
 
 exports.finish = function(d){return "Valmis"};
 
-exports.generatedCodeInfo = function(d){return "Jopa huippuyliopistot opettavat lohkopohjaista ohjelmointia (esim., "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"), mutta konepellin alla kokoamasi lohkot voidaan näyttää myös esim. JavaScript-kielellä. JavaScript on maailman eniten käytetty ohjelmointikieli:"};
+exports.generatedCodeInfo = function(d){return "Jopa huippuyliopistot opettavat lohkopohjaista ohjelmointia (esim. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"), mutta konepellin alla kokoamasi lohkot voidaan näyttää myös esim. JavaScript-kielellä. JavaScript on maailman eniten käytetty ohjelmointikieli:"};
 
 exports.hashError = function(d){return "Valitan, '%1' ei vastaa mitään tallennettua ohjelmaa."};
 
@@ -11703,7 +11703,7 @@ exports.score = function(d){return "pisteet"};
 
 exports.showCodeHeader = function(d){return "Näytä koodi"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Näytä lohkot"};
 
 exports.showGeneratedCode = function(d){return "Näytä koodi"};
 
@@ -11741,7 +11741,7 @@ exports.typeHint = function(d){return "Sulkeet ja puolipisteet ovat pakollisia."
 
 exports.workspaceHeader = function(d){return "Kokoa lohkosi täällä: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Kirjoita JavaScript koodi tähän"};
 
 exports.infinity = function(d){return "Ääretön"};
 
@@ -11755,7 +11755,7 @@ exports.watchVideo = function(d){return "Katso video"};
 
 exports.when = function(d){return "kun"};
 
-exports.whenRun = function(d){return "ajettaessa"};
+exports.whenRun = function(d){return "kun suoritetaan"};
 
 exports.tryHOC = function(d){return "Kokeile koodituntia"};
 
@@ -11768,43 +11768,43 @@ exports.genericFeedback = function(d){return "Katso miten päädyit tähän, ja 
 
 },{"messageformat":60}],48:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.fi=function(n){return n===1?"one":"other"}
-exports.circleBlockTitle = function(d){return "circle (radius, style, color)"};
+exports.circleBlockTitle = function(d){return "ympyrä(säde, tyyli, väri)"};
 
-exports.displayBlockTitle = function(d){return "display"};
+exports.displayBlockTitle = function(d){return "näyttö"};
 
-exports.ellipseBlockTitle = function(d){return "ellipse (width, height, style, color)"};
+exports.ellipseBlockTitle = function(d){return "ellipsi (leveys, korkeus, tyyli, väri)"};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"display\" block?"};
+exports.extraTopBlocks = function(d){return "Sinulla on vapaita lohkoja. Oliko tarkoituksesi liittää nämä \"näyttö\" lohkoon?"};
 
-exports.overlayBlockTitle = function(d){return "overlay (top, bottom)"};
+exports.overlayBlockTitle = function(d){return "peitto (ylhäältä, alhaalta)"};
 
-exports.placeImageBlockTitle = function(d){return "place-image (x, y, image)"};
+exports.placeImageBlockTitle = function(d){return "paikka-kuva (x, y, kuva)"};
 
-exports.rectangleBlockTitle = function(d){return "rectangle (width, height, style, color)"};
+exports.rectangleBlockTitle = function(d){return "suorakulmio (leveys, korkeus, tyyli, väri)"};
 
-exports.rotateImageBlockTitle = function(d){return "rotate (degrees, image)"};
+exports.rotateImageBlockTitle = function(d){return "kierrä (astetta, kuva)"};
 
-exports.scaleImageBlockTitle = function(d){return "scale (factor)"};
+exports.scaleImageBlockTitle = function(d){return "suhde (tekijä)"};
 
-exports.squareBlockTitle = function(d){return "square (size, style, color)"};
+exports.squareBlockTitle = function(d){return "neliö (koko, tyyli, väri)"};
 
-exports.starBlockTitle = function(d){return "star (radius, style, color)"};
+exports.starBlockTitle = function(d){return "tähti (säde, tyyli, väri)"};
 
-exports.stringAppendBlockTitle = function(d){return "string-append (first, second)"};
+exports.stringAppendBlockTitle = function(d){return "merkkijono liitä (ensimmäinen, toinen)"};
 
-exports.stringLengthBlockTitle = function(d){return "string-length (string)"};
+exports.stringLengthBlockTitle = function(d){return "merkkijonon pituus (merkkijono)"};
 
-exports.textBlockTitle = function(d){return "text (string, size, color)"};
+exports.textBlockTitle = function(d){return "teksti (merkkijono, koko, väri)"};
 
-exports.triangleBlockTitle = function(d){return "triangle (size, style, color)"};
+exports.triangleBlockTitle = function(d){return "kolmio (koko, tyyli, väri)"};
 
-exports.underlayBlockTitle = function(d){return "underlay (bottom, top)"};
+exports.underlayBlockTitle = function(d){return "aluste (alaosa, yläosa)"};
 
-exports.outline = function(d){return "outline"};
+exports.outline = function(d){return "jäsennys"};
 
-exports.solid = function(d){return "solid"};
+exports.solid = function(d){return "kiinteä"};
 
-exports.string = function(d){return "string"};
+exports.string = function(d){return "merkkijono"};
 
 
 },{"messageformat":60}],49:[function(require,module,exports){

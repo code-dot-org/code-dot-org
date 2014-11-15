@@ -12155,9 +12155,9 @@ exports.yes = function(d){return "כן"};
 var MessageFormat = require("messageformat");MessageFormat.locale.he=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "ו"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "נכון"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "שגוי"};
 
 exports.blocklyMessage = function(d){return "בלוקלי"};
 

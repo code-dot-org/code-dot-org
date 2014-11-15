@@ -11603,15 +11603,15 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.zh=function(n){return "other"}
 exports.and = function(d){return "且"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "真"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "否"};
 
 exports.blocklyMessage = function(d){return "模組化"};
 
 exports.catActions = function(d){return "動作類別"};
 
-exports.catColour = function(d){return "顏色類別"};
+exports.catColour = function(d){return "顏色"};
 
 exports.catLogic = function(d){return "邏輯類別"};
 
@@ -11703,7 +11703,7 @@ exports.score = function(d){return "分數"};
 
 exports.showCodeHeader = function(d){return "顯示程式碼"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "顯示積木"};
 
 exports.showGeneratedCode = function(d){return "顯示程式碼"};
 
@@ -11741,7 +11741,7 @@ exports.typeHint = function(d){return "請注意\"括弧\"和\"分號\"都是必
 
 exports.workspaceHeader = function(d){return "在此組合您的區塊"};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "在此輸入您的 JavaScript 代碼"};
 
 exports.infinity = function(d){return "無窮"};
 
@@ -11768,9 +11768,9 @@ exports.genericFeedback = function(d){return "看看你的成果如何, 並試�
 
 },{"messageformat":60}],48:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.zh=function(n){return "other"}
-exports.circleBlockTitle = function(d){return "circle (radius, style, color)"};
+exports.circleBlockTitle = function(d){return "圓(半徑、 樣式、 顏色)"};
 
-exports.displayBlockTitle = function(d){return "display"};
+exports.displayBlockTitle = function(d){return "顯示"};
 
 exports.ellipseBlockTitle = function(d){return "ellipse (width, height, style, color)"};
 
@@ -11802,9 +11802,9 @@ exports.underlayBlockTitle = function(d){return "underlay (bottom, top)"};
 
 exports.outline = function(d){return "outline"};
 
-exports.solid = function(d){return "solid"};
+exports.solid = function(d){return "實心"};
 
-exports.string = function(d){return "string"};
+exports.string = function(d){return "字串"};
 
 
 },{"messageformat":60}],49:[function(require,module,exports){

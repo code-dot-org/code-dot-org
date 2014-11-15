@@ -1,5 +1,7 @@
 {
   "and":"at",
+  "booleanTrue":"tama",
+  "booleanFalse":"mali",
   "blocklyMessage":"Blockly",
   "catActions":"Mga aksyon",
   "catColour":"Kulay",

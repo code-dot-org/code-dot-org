@@ -8075,15 +8075,15 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.da=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "og"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "sandt"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "falsk"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
 exports.catActions = function(d){return "Handlinger"};
 
-exports.catColour = function(d){return "Farver"};
+exports.catColour = function(d){return "Farve"};
 
 exports.catLogic = function(d){return "Logik"};
 
@@ -8175,7 +8175,7 @@ exports.score = function(d){return "score"};
 
 exports.showCodeHeader = function(d){return "Vis kode"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Vis blokke"};
 
 exports.showGeneratedCode = function(d){return "Vis kode"};
 
@@ -8213,7 +8213,7 @@ exports.typeHint = function(d){return "Bemærk, at parenteser og semikoloner er 
 
 exports.workspaceHeader = function(d){return "Saml dine blokke her: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Skriv din JavaScript-kode her"};
 
 exports.infinity = function(d){return "Uendelig"};
 

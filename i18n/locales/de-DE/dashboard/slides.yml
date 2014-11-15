@@ -1,254 +1,254 @@
-"de":
+de:
   slides:
     maze_intro:
       1:
-        image: "notes/hoc1_1.jpg"
-        text: "Willkommen zu deiner ersten Programmierstunde! Fangen wir gleich mit der ersten Übung an."
+        image: notes/hoc1_1.jpg
+        text: Willkommen zu deiner ersten Programmierstunde! Fangen wir gleich mit der ersten Übung an.
       2:
-        image: "notes/hoc1_2.jpg"
+        image: notes/hoc1_2.jpg
         text: 'Wir werden Blocky, eine Grafische Programmiersprache in der du mit Drag&Drop Bausteine setzt, benutzen um Programme zu schreiben.'
       3:
-        image: "notes/hoc1_3.jpg"
+        image: notes/hoc1_3.jpg
         text: 'Meistens werden Programme geschrieben, aber Blockly ist grafisch. Jeder Baustein entspricht einer Zeile "echten" Codes.'
       4:
-        image: "notes/hoc1_4.jpg"
-        text: "Du wirst die Grundlagen der Informatik lernen. Konzepte die überall genutzt werden, von erstellen von Apps bis zum Kontrollieren des Mars Rovers."
+        image: notes/hoc1_4.jpg
+        text: Du wirst die Grundlagen der Informatik lernen. Konzepte die überall genutzt werden, von erstellen von Apps bis zum Kontrollieren des Mars Rovers.
       5:
-        image: "notes/hoc1_5.jpg"
-        text: "Ein Programm ist eine Ansammlung von Anweisungen, die dein Computer befolgt."
+        image: notes/hoc1_5.jpg
+        text: Ein Programm ist eine Ansammlung von Anweisungen, die dein Computer befolgt.
       6:
-        image: "notes/hoc1_6.jpg"
-        text: "Das Ziel deines ersten Programmes ist es Angry Bird durch ein Laybrinth zum grünen Schwein zu führen."
+        image: notes/hoc1_6.jpg
+        text: Das Ziel deines ersten Programmes ist es Angry Bird durch ein Laybrinth zum grünen Schwein zu führen.
       7:
-        image: "notes/hoc1_7.jpg"
-        text: "Die linke Seite ist das Labybrinth wo dein Programm ausgeführt wird. Die Anweisungen für jedes Puzzle findest du unter dem Laybrinth."
+        image: notes/hoc1_7.jpg
+        text: Die linke Seite ist das Labybrinth wo dein Programm ausgeführt wird. Die Anweisungen für jedes Puzzle findest du unter dem Laybrinth.
       8:
-        image: "notes/hoc1_8.jpg"
-        text: "Der mittlere Werkzeugkasten enthält die Befehlsbausteine für den Vogel. Verwende sie, um das Programm zu erstellen."
+        image: notes/hoc1_8.jpg
+        text: Der mittlere Werkzeugkasten enthält die Befehlsbausteine für den Vogel. Verwende sie, um das Programm zu erstellen.
       9:
-        image: "notes/hoc1_9.jpg"
-        text: "Rechts ist der Arbeitsbereich, wo die Bausteine aus dem Werkzeugkasten zum Programm zusammengesteckt werden. Um einen Block zu löschen, ziehe ihn in den Papierkorb in der Ecke."
+        image: notes/hoc1_9.jpg
+        text: Rechts ist der Arbeitsbereich, wo die Bausteine aus dem Werkzeugkasten zum Programm zusammengesteckt werden. Um einen Block zu löschen, ziehe ihn in den Papierkorb in der Ecke.
       10:
-        image: "notes/hoc1_10.jpg"
+        image: notes/hoc1_10.jpg
         text: 'Jeder Baustein ist eine Anweisung. Wenn du einen "vorwärts bewegen"-Baustein auf deinen Arbeitsbereich ziehst und anschließend "Programm Starten" drückst, dann bewegt sich der Vogel im Labyrinth einen Schritt nach vorne.'
       11:
-        image: "notes/hoc1_11.jpg"
-        text: "Um mehr als eine Aktion zu auszuführen, kannst du viele Bausteine in den Arbeitsbereich ziehen und sie zusammenstecken. Der Vogel wird die Befehle von oben nach unten abarbeiten."
+        image: notes/hoc1_11.jpg
+        text: Um mehr als eine Aktion zu auszuführen, kannst du viele Bausteine in den Arbeitsbereich ziehen und sie zusammenstecken. Der Vogel wird die Befehle von oben nach unten abarbeiten.
       12:
-        image: "notes/hoc1_12.jpg"
+        image: notes/hoc1_12.jpg
         text: 'Wenn Du ein Programm reparieren und es nochmals versuchen möchtest, dann drücke den "Zurücksetzen" Knopf.'
       13:
-        image: "notes/hoc1_13.jpg"
-        text: "Holen wir die Schweine!"
+        image: notes/hoc1_13.jpg
+        text: Holen wir die Schweine!
     artist_intro:
       1:
-        image: "notes/stage5_1.jpg"
-        text: "Hallo, ich heiße JR! Jedes Autorennteam braucht ComputerspezialistInnen, um erfolgreich zu sein. Sie analysieren Messdaten des Autos, um es noch schneller zu machen."
+        image: notes/stage5_1.jpg
+        text: Hallo, ich heiße JR! Jedes Autorennteam braucht ComputerspezialistInnen, um erfolgreich zu sein. Sie analysieren Messdaten des Autos, um es noch schneller zu machen.
       2:
-        image: "notes/stage5_2.jpg"
-        text: "In diesen Rätseln sind Sie ein Künstler, der eine Linie hinter sich zeichnet, überall da, wo er hin geht."
+        image: notes/stage5_2.jpg
+        text: In diesen Rätseln sind Sie ein Künstler, der eine Linie hinter sich zeichnet, überall da, wo er hin geht.
       3:
-        image: "notes/stage5_3.jpg"
+        image: notes/stage5_3.jpg
         text: 'Dieser Baustein sagt "Bewege dich 100 Pixel nach vorne". Pixel sind sehr kleine Punkte auf dem Bildschirm.'
       4:
-        image: "notes/stage5_4.jpg"
-        text: "Dieser Block bedeutet „um 90 Grad nach rechts drehen.“ Damit dreht sich die Künstlerfigur, genau wie beim „Drehen“-Baustein in den Labyrinth-Puzzles."
+        image: notes/stage5_4.jpg
+        text: Dieser Block bedeutet „um 90 Grad nach rechts drehen.“ Damit dreht sich die Künstlerfigur, genau wie beim „Drehen“-Baustein in den Labyrinth-Puzzles.
       5:
-        image: "notes/stage5_5.jpg"
-        text: "Klicke auf den Pfeil in den Bausteinen, um zu verändern, wie weit sich die Künstlerfigur nach vorne läuft oder in welche Richtung sie sich dreht. Spiele etwas mit diesen Bausteinen herum, um mit ihnen vertraut zu werden."
+        image: notes/stage5_5.jpg
+        text: Klicke auf den Pfeil in den Bausteinen, um zu verändern, wie weit sich die Künstlerfigur nach vorne läuft oder in welche Richtung sie sich dreht. Spiele etwas mit diesen Bausteinen herum, um mit ihnen vertraut zu werden.
     farmer_intro:
       1:
-        image: "notes/stage9_1.jpg"
-        text: "Hallo, bin ich Paola! In diesen Rätseln sind Sie ein Bauer, der sein Feld völlig flach bekommen muss, um mit dem Anpflanzen zu beginnen."
+        image: notes/stage9_1.jpg
+        text: Hallo, bin ich Paola! In diesen Rätseln sind Sie ein Bauer, der sein Feld völlig flach bekommen muss, um mit dem Anpflanzen zu beginnen.
       2:
-        image: "notes/stage9_2.jpg"
-        text: "Du musst ihr helfen alle Erdhaufen zu entfernen und alle Löcher zu füllen."
+        image: notes/stage9_2.jpg
+        text: Du musst ihr helfen alle Erdhaufen zu entfernen und alle Löcher zu füllen.
       3:
-        image: "notes/stage9_3.jpg"
-        text: "Die neuen Bausteine entferne eine Schauel voll Erde von einem Haufen und fülle eine Schaufel voll Erde in ein Loch."
+        image: notes/stage9_3.jpg
+        text: Die neuen Bausteine entferne eine Schauel voll Erde von einem Haufen und fülle eine Schaufel voll Erde in ein Loch.
       4:
-        image: "notes/stage9_4.jpg"
-        text: "Die Haufen und Löcher sind unterschiedlich groß, weshalb du dem Bauer sagen musst, wie viele Schaufeln er benutzen muss."
+        image: notes/stage9_4.jpg
+        text: Die Haufen und Löcher sind unterschiedlich groß, weshalb du dem Bauer sagen musst, wie viele Schaufeln er benutzen muss.
     flappy_intro:
       1:
-        image: "notes/flappy01.jpg"
-        text: "Hallo, ich bin Katie! Etwas vom Interessantesten an der Informatik ist, dass ein Computerprogramm interaktiv sein kann."
+        image: notes/flappy01.jpg
+        text: Hallo, ich bin Katie! Etwas vom Interessantesten an der Informatik ist, dass ein Computerprogramm interaktiv sein kann.
       2:
-        image: "notes/flappy02.jpg"
-        text: "Jedes Mal, wenn jemand auf einem Computer oder Smartphone klickt, den Bildschirm berührt oder tippt, wird ein Event erzeugt und Code wird ausgeführt, der entscheidet was bei diesem Event zu tun ist."
+        image: notes/flappy02.jpg
+        text: Jedes Mal, wenn jemand auf einem Computer oder Smartphone klickt, den Bildschirm berührt oder tippt, wird ein Event erzeugt und Code wird ausgeführt, der entscheidet was bei diesem Event zu tun ist.
       3:
-        image: "notes/flappy03.jpg"
+        image: notes/flappy03.jpg
         text: 'Zum Beispiel könntest du einen Event-Handler haben, der sagt: "Wenn mit der Maus geklickt wird, spiele einen Ton" '
       4:
-        image: "notes/flappy04.jpg"
-        text: "Hast du schon von FlappyBird gehört? Durch Benutzen von Event-Handlern werden wir eine eigene Version von FlappyBird programmieren!"
+        image: notes/flappy04.jpg
+        text: Hast du schon von FlappyBird gehört? Durch Benutzen von Event-Handlern werden wir eine eigene Version von FlappyBird programmieren!
       5:
-        image: "notes/flappy05.jpg"
-        text: "Den Code wirst du durch Drag-and-drop von Blöcken schreiben, die Kommandos für den Computer sind. Unter der Haube steht jeder dieser Blöcke für wirklichen Code."
+        image: notes/flappy05.jpg
+        text: Den Code wirst du durch Drag-and-drop von Blöcken schreiben, die Kommandos für den Computer sind. Unter der Haube steht jeder dieser Blöcke für wirklichen Code.
       6:
-        image: "notes/flappy06.jpg"
+        image: notes/flappy06.jpg
         text: 'Wenn du einen Blick auf den Arbeitsbereich wirfst, siehst du einige grüne Blöcke, die für dich eingefügt wurden - das sind "Event-Handler" '
       7:
-        image: "notes/flappy07.jpg"
+        image: notes/flappy07.jpg
         text: 'Wenn du den Vogel beim Mausklick mit den Flügeln schlagen lassen willst, kannst du das durch Anhängen des "FLAP"-Blocks an den passenden Event-Handler erreichen. Nun wird der Vogel jedes Mal seine Flügel bewegen, wenn mit der Maus geklickt wird.'
       8:
-        image: "notes/flappy08.jpg"
-        text: "In jedem Puzzle dieser Übung werden wir neue Typen von Events als grüne Blocks im Arbeitsbereich einfügen und du kannst die passenden Blöcke für Events auswählen."
+        image: notes/flappy08.jpg
+        text: In jedem Puzzle dieser Übung werden wir neue Typen von Events als grüne Blocks im Arbeitsbereich einfügen und du kannst die passenden Blöcke für Events auswählen.
       9:
-        image: "notes/flappy09.jpg"
+        image: notes/flappy09.jpg
         text: 'Wenn du einen Dropdown-Pfeil wie diesen siehst, kannst du die Einstellungen ändern - zum Beispiel, was für ein Ton abgespielt werden soll, wenn der Vogel den Boden berührt.'
       10:
-        image: "notes/flappy10.jpg"
-        text: "Im letzten Puzzle wirst du dein eigenes Spiel erstellen und deinen Freunden zeigen können. Viel Spass!"
+        image: notes/flappy10.jpg
+        text: Im letzten Puzzle wirst du dein eigenes Spiel erstellen und deinen Freunden zeigen können. Viel Spass!
     loop_times:
       1:
-        image: "notes/hoc2_1.jpg"
-        text: "Hi, ich bin Mark! Lass uns etwas über Schleifen lernen. Wenn Du Schleifen verwendest, kannst du dem Computer befehlen, dass er jede beliebige Anweisung wieder und wieder, tausendmal oder sogar milliardenmal, wiederholen soll."
+        image: notes/hoc2_1.jpg
+        text: Hi, ich bin Mark! Lass uns etwas über Schleifen lernen. Wenn Du Schleifen verwendest, kannst du dem Computer befehlen, dass er jede beliebige Anweisung wieder und wieder, tausendmal oder sogar milliardenmal, wiederholen soll.
       2:
-        image: "notes/hoc2_2.jpg"
-        text: "In diesem Puzzle möchten wir, dass sich der Vogel 5 Schritte nach vorne zum Schwein bewegt."
+        image: notes/hoc2_2.jpg
+        text: In diesem Puzzle möchten wir, dass sich der Vogel 5 Schritte nach vorne zum Schwein bewegt.
       3:
-        image: "notes/hoc2_3.jpg"
+        image: notes/hoc2_3.jpg
         text: 'Wir können den neuen "Wiederholen"-Block verwenden, um uns zu helfen.'
       4:
-        image: "notes/hoc2_4.jpg"
+        image: notes/hoc2_4.jpg
         text: 'Anstatt 5 "vorwärts gehen"-Bausteine zu stapeln...'
       5:
-        image: "notes/hoc2_5.jpg"
+        image: notes/hoc2_5.jpg
         text: 'Wir können den "vorwärts bewegen"-Baustein in einen "Wiederholen"-Baustein ziehen und eine Zahl im Baustein angeben, wie oft es wiederholt werden soll.'
       6:
-        image: "notes/hoc2_6.jpg"
+        image: notes/hoc2_6.jpg
         text: 'Und wichtig: Man kann mehr als einen Baustein in einen "Wiederholen"-Baustein ziehen.'
       7:
-        image: "notes/hoc2_7.jpg"
+        image: notes/hoc2_7.jpg
         text: 'Viel Spaß mit deinem neuen "Wiederholen" Baustein!'
     loop_until:
       1:
-        image: "notes/hoc3_1.jpg"
+        image: notes/hoc3_1.jpg
         text: 'Hi, ich bin Chris. Bevor ich angefangen habe Basketball für das Team "Miami Heat" zu spielen, habe ich an der "Georgia Tech"-Universität Informatik studiert. Lass uns den neuen "Wiederholen bis"-Baustein ausprobieren.'
       2:
-        image: "notes/hoc3_2.jpg"
-        text: "Was wäre wenn wir nicht wüssten, wie weit sich der Vogel bewegen muss, um zum Schwein zu kommen?"
+        image: notes/hoc3_2.jpg
+        text: Was wäre wenn wir nicht wüssten, wie weit sich der Vogel bewegen muss, um zum Schwein zu kommen?
       3:
-        image: "notes/hoc3_3.jpg"
+        image: notes/hoc3_3.jpg
         text: 'Wenn wir einen "vorwärts bewegen"-Baustein in den "Wiederholen bis"-Baustein setzen, wird sich der Vogel nach vorne bewegen BIS er bei einem Schwein ankommt (oder in eine Wand kracht).'
       4:
-        image: "notes/hoc3_4.jpg"
+        image: notes/hoc3_4.jpg
         text: 'Und das ist wichtig: wie zuvor auch, können wir in den "wiederhole bis"-Baustein mehrere Bausteine setzten, die dann alle wiederholt werden.'
     if:
       1:
-        image: "notes/hoc4_1.jpg"
+        image: notes/hoc4_1.jpg
         text: 'Hi, ich bin Bill! Lass uns ein neues, fundamentales Konzept lernen: Die "Wenn"-Anweisungen. Damit trifft der Computer Entscheidungen.'
       2:
-        image: "notes/hoc4_2.jpg"
+        image: notes/hoc4_2.jpg
         text: 'Du benutzt "Wenn"-Anweisungen tagtäglich selbst. Zum Beispiel überlegst Du jeden Morgen bevor du aus dem Haus gehst: "Wenn" es regnet, muss ich meinen Regenmantel anziehen.'
       3:
-        image: "notes/hoc4_3.jpg"
-        text: "Wir können den Zombie anweisen zu überprüfen WENN es einen Weg nach links gibt und wenn er einen Weg nach links findet, dass er sich in diese Richtung drehen soll."
+        image: notes/hoc4_3.jpg
+        text: Wir können den Zombie anweisen zu überprüfen WENN es einen Weg nach links gibt und wenn er einen Weg nach links findet, dass er sich in diese Richtung drehen soll.
       4:
-        image: "notes/hoc4_4.jpg"
+        image: notes/hoc4_4.jpg
         text: 'Um ein Programm dafür zu schreiben, ziehe zuerst unseren "Wenn"-Baustein heraus und setze danach einen "nach links drehen"-Baustein hinein.'
       5:
-        image: "notes/hoc4_5.jpg"
+        image: notes/hoc4_5.jpg
         text: 'Wenn wir jetzt einen "gehe vorwärts"-Baustein darüber stapeln und um alles einen "Wiederholen"-Baustein legen, wird der Zombie bei jeder Bewegung prüfen, ob es einen Weg nach links gibt und sich in dem Fall drehen. Der "Wiederholen" Befehl ist wichtig, um bei jedem Schritt auf eine Drehmöglichkeit zu prüfen.'
       6:
-        image: "notes/hoc4_6.jpg"
-        text: "Wenn Anweisung sind in der Informatik wirklich wichtig. Eines meiner ersten Programme war Tic Tac Toe, und es gab eine Wenn Anweisung, die sagte, wenn die andere Person gewinnen sollte, blockiere das Feld, mit dem sie gewinnen kann."
+        image: notes/hoc4_6.jpg
+        text: Wenn Anweisung sind in der Informatik wirklich wichtig. Eines meiner ersten Programme war Tic Tac Toe, und es gab eine Wenn Anweisung, die sagte, wenn die andere Person gewinnen sollte, blockiere das Feld, mit dem sie gewinnen kann.
       7:
-        image: "notes/hoc4_7.jpg"
+        image: notes/hoc4_7.jpg
         text: 'Viel Spaß mit dem "Wenn"-Baustein!'
     if_else:
       1:
-        image: "notes/hoc5_1.jpg"
+        image: notes/hoc5_1.jpg
         text: 'Hi, ich heiße Saloni. Ich verwende Informatik um Probleme im Gesundheits- und Medizinbereich zu lösen. Lass uns etwas über den "Wenn-Ansonsten"-Baustein lernen. Er sieht ähnlich wie ein "Wenn"-Baustein aus, aber er hat einen Zusatzteil am Ende der "Ansonsten" heißt.'
       2:
-        image: "notes/hoc5_2.jpg"
+        image: notes/hoc5_2.jpg
         text: 'Wenn ich einen "gehe vorwärts"-Baustein, an der Stelle, wo es heißt "tun", und einen "drehe links"-Baustein, wo es heißt "sonst", setzte, kann der Zombie zwischen 2 Optionen wählen. Gibt es einen Weg geradeaus, bewegt sich der Zombie vorwärts. Gibt es ist keinen Weg geradeaus, dreht sich der Zombie nach links.'
       3:
-        image: "notes/hoc5_3.jpg"
+        image: notes/hoc5_3.jpg
         text: 'Genau wie einen "Wenn"-Baustein, können wir einen "Wenn-Ansonsten"-Baustein in einen "Wiederholen"-Baustein setzen, so dass der Zombie sich weiter bewegt und der "Wenn-Ansonsten"-Baustein prüft, ob es einen Weg zum Drehen gibt.'
       4:
-        image: "notes/hoc5_4.jpg"
-        text: "Jetzt bewege die Zombies dahin, wo sie hingehören!"
+        image: notes/hoc5_4.jpg
+        text: Jetzt bewege die Zombies dahin, wo sie hingehören!
     function:
       1:
-        image: "notes/stage13_1.jpg"
-        text: "Hi, bin ich Brina, Ingenieur bei Instagram. Eine Funktion ist eine Zusammenfassung bestimmter Codezeilen, die Du immer und immer wieder verwenden möchtest, statt den Code jedesmal auszuschreiben, kannst du einfach einen Baustein verwenden."
+        image: notes/stage13_1.jpg
+        text: Hi, bin ich Brina, Ingenieur bei Instagram. Eine Funktion ist eine Zusammenfassung bestimmter Codezeilen, die Du immer und immer wieder verwenden möchtest, statt den Code jedesmal auszuschreiben, kannst du einfach einen Baustein verwenden.
       2:
-        image: "notes/stage13_2.jpg"
-        text: "Wir lernen jetzt, wie man Funktionen definiert. Funktionsdefinitionen haben einen Stern in der Ecke. Der Name der Funktion ist in der obersten Zeile geschrieben."
+        image: notes/stage13_2.jpg
+        text: Wir lernen jetzt, wie man Funktionen definiert. Funktionsdefinitionen haben einen Stern in der Ecke. Der Name der Funktion ist in der obersten Zeile geschrieben.
       3:
-        image: "notes/stage13_3.jpg"
+        image: notes/stage13_3.jpg
         text: 'Die Bausteine, die in der Definition liegen, sagen uns, was sie tut. Daher heißt diese Funktionsdefinition "5 hinzufügen" und ist aus einem "wiederhole"-Baustein und einem "hinzufügen"-Baustein aufgebaut.'
       4:
-        image: "notes/stage13_4.jpg"
+        image: notes/stage13_4.jpg
         text: 'Die Definition ist auf dem Arbeitsplatz, aber unserer Bauer wird die Funktion nicht ausführen, bis wir unseren "5 hinzufügen"-Baustein aus der Funktionen-Kategorie hinzufügen.'
       5:
-        image: "notes/stage13_5.jpg"
+        image: notes/stage13_5.jpg
         text: |-
           Let's put the "fun" back in "FUNction!"
     loop_while:
       1:
-        image: "notes/stage9_5.jpg"
+        image: notes/stage9_5.jpg
         text: 'Hi, Ich bin Makinde! Lernen wir was über den "solange" Baustein. '
       2:
-        image: "notes/stage9_6.jpg"
+        image: notes/stage9_6.jpg
         text: 'Der "solange"-Baustein wird alles, was du hereintust, ausführen, SOLANGE die Anweisung darüber WAHR ist.'
       3:
-        image: "notes/stage9_7.jpg"
-        text: "Zum Beispiel, wenn der Bauer auf einem Haufen steht, wird sie immer wieder einen Haufen entfernen, SOLANGE sie immernoch auf einem Haufen steht."
+        image: notes/stage9_7.jpg
+        text: Zum Beispiel, wenn der Bauer auf einem Haufen steht, wird sie immer wieder einen Haufen entfernen, SOLANGE sie immernoch auf einem Haufen steht.
     loop_for:
       1:
-        image: "notes/stage11_1.jpg"
-        text: "Hi, ich bin Trina und ich arbeite für Pixar. Ich habe an vielen Filmen, einschließlich Shrek mitgearbeitet."
+        image: notes/stage11_1.jpg
+        text: Hi, ich bin Trina und ich arbeite für Pixar. Ich habe an vielen Filmen, einschließlich Shrek mitgearbeitet.
       2:
-        image: "notes/stage11_2.jpg"
+        image: notes/stage11_2.jpg
         text: 'Dies ist unsere neue "Zähler"-Schleife. Sie wiederholt Befehle immer und immer wieder und du kannst die Befehle jedes mal leicht verändern lassen.'
       3:
-        image: "notes/stage11_3.jpg"
+        image: notes/stage11_3.jpg
         text: 'In diesem Beispiel sagt die "Zähler"-Schleife "Zähle mit Zähler von 50 bis 90 mit 10" und in der Schleife gibt es einen "Zeichne ein Quadrat"-Baustein. Ziehe den "Zähler"-Baustein aus dem "Variablen"-Abschnitt auf die Stelle, wo der "Länge"-Baustein ist.'
       4:
-        image: "notes/stage11_4.jpg"
-        text: "Dies bedeutet, dass unser Künstler ein Quadrat zeichnen wird, das eine Seitenlänge von 50 Pixeln hat, dann wird er 10 hinzufügen und ein Quadrat mit einer Seitenlänge von 60 Pixeln zeichnen. Er wird immer 10 hinzufügen und Quadrate malen, bis er 90 erreicht hat. Also gibt es Quadrate mit Seitenlängen von 50, 60, 70, 80 und 90."
+        image: notes/stage11_4.jpg
+        text: Dies bedeutet, dass unser Künstler ein Quadrat zeichnen wird, das eine Seitenlänge von 50 Pixeln hat, dann wird er 10 hinzufügen und ein Quadrat mit einer Seitenlänge von 60 Pixeln zeichnen. Er wird immer 10 hinzufügen und Quadrate malen, bis er 90 erreicht hat. Also gibt es Quadrate mit Seitenlängen von 50, 60, 70, 80 und 90.
     parameters:
       1:
-        image: "notes/stage15_1.jpg"
-        text: "Hi, ich bin Janete und ich bin Ingenieurin bei Zynga."
+        image: notes/stage15_1.jpg
+        text: Hi, ich bin Janete und ich bin Ingenieurin bei Zynga.
       2:
-        image: "notes/stage15_2.jpg"
-        text: "Was, wenn wir ein paar Dreiecke mit verschiedenen Längen malen wollen?"
+        image: notes/stage15_2.jpg
+        text: Was, wenn wir ein paar Dreiecke mit verschiedenen Längen malen wollen?
       3:
-        image: "notes/stage15_3.jpg"
-        text: "Wir könnten den ganzen Code per Hand schreiben, oder wir benutzen eine Funktion mit Parametern."
+        image: notes/stage15_3.jpg
+        text: Wir könnten den ganzen Code per Hand schreiben, oder wir benutzen eine Funktion mit Parametern.
       4:
-        image: "notes/stage15_4.jpg"
+        image: notes/stage15_4.jpg
         text: 'Um dies zu tun, klicke auf den blauen Stern der "Zeichne ein Dreieck"-Funktionsdefinition. Ziehe dann "Name eingeben" in den "Eingeben"-Baustein.'
       5:
-        image: "notes/stage15_5.jpg"
+        image: notes/stage15_5.jpg
         text: 'Schreibe dann "Länge" and sie Stelle, wo "x" steht, drücke "Enter" und du erstellst eine Längeneingabe für deine Funktion.'
       6:
-        image: "notes/stage15_6.jpg"
+        image: notes/stage15_6.jpg
         text: 'Dann klicke auf den Stern. Jetzt klickst du auf die "Variablen"-Kategorie und ziehst den "Länge"-Baustein in den "vorwärts bewegen"-Baustein deiner Funktionsdefinition. Ziehe den alten Nummernblock weg.'
       7:
-        image: "notes/stage15_7.jpg"
+        image: notes/stage15_7.jpg
         text: 'Um deine Funktion mit Parametern zu benutzen, klicke auf die "Funktionen"-Kategorie und ziehe deine "Zeichne ein Dreieck mit Länge"-Funktion heruas.'
       8:
-        image: "notes/stage15_8.jpg"
-        text: "Jetzt kannst du den Mathe-Baustein verändern, um Dreiecke in verschiedenen Größen zu zeichnen."
+        image: notes/stage15_8.jpg
+        text: Jetzt kannst du den Mathe-Baustein verändern, um Dreiecke in verschiedenen Größen zu zeichnen.
     hoc_wrapup:
       1:
-        image: "notes/hoc6_1.jpg"
-        text: "Herzlichen Glückwunsch! Mit dem letzten Rätsel, das du gerade gelöst hast, hast du ein Prgramm geschrieben, das JEDER Roboter dazu verwenden kann, um seinen Weg durch nicht-verzweigte Labyrinthe oder Tunnel aller Längen zu finden. Ganz egal ob es ein Zombie, ein Vogel, ein Mars-Rover, oder sogar ein selbstfahrendes Auto ist."
+        image: notes/hoc6_1.jpg
+        text: Herzlichen Glückwunsch! Mit dem letzten Rätsel, das du gerade gelöst hast, hast du ein Prgramm geschrieben, das JEDER Roboter dazu verwenden kann, um seinen Weg durch nicht-verzweigte Labyrinthe oder Tunnel aller Längen zu finden. Ganz egal ob es ein Zombie, ein Vogel, ein Mars-Rover, oder sogar ein selbstfahrendes Auto ist.
       2:
-        image: "notes/hoc6_2.jpg"
-        text: "Die grundlegenden Konzepte, die du verwendet hast, sind das Herzstück jedes Programms. Wir haben etwas über Schleifen, Wiederholungen, Wenn-Dann-Befehle und Wenn-Ansonsten gelernt."
+        image: notes/hoc6_2.jpg
+        text: Die grundlegenden Konzepte, die du verwendet hast, sind das Herzstück jedes Programms. Wir haben etwas über Schleifen, Wiederholungen, Wenn-Dann-Befehle und Wenn-Ansonsten gelernt.
       3:
-        image: "notes/hoc6_3.jpg"
-        text: "Wenn Dir die ersten Stunden Programmieren gefallen haben, dann besuche code.org, um Deine Ausbildung in der Informatik fortzuführen! Sobald Du unseren 20 Stunden-Kurs abgeschlossen hast, hast Du die Grundlagen des Programmieren gemeistert und kannst anfangen zu lernen wie man Handy-Apps, Roboter-Anweisungen, Spiele, oder was immer Du möchtest, programmiert."
+        image: notes/hoc6_3.jpg
+        text: Wenn Dir die ersten Stunden Programmieren gefallen haben, dann besuche code.org, um Deine Ausbildung in der Informatik fortzuführen! Sobald Du unseren 20 Stunden-Kurs abgeschlossen hast, hast Du die Grundlagen des Programmieren gemeistert und kannst anfangen zu lernen wie man Handy-Apps, Roboter-Anweisungen, Spiele, oder was immer Du möchtest, programmiert.
       4:
-        image: "notes/hoc6_4.jpg"
+        image: notes/hoc6_4.jpg
         text: 'Technologie verändert alles was wir tun und es ist egal ob du jung oder alt bist: Programmieren macht Spaß, es ist kreativ, und jeder kann es lernen!'
     20_wrapup:
       1:
-        image: "notes/bird.png"
-        text: "In Text Form anzeigen kommt bald!"
+        image: notes/bird.png
+        text: In Text Form anzeigen kommt bald!

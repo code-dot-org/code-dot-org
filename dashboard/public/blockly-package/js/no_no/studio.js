@@ -19887,9 +19887,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.no=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "og"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "sann"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "usann"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -19987,7 +19987,7 @@ exports.score = function(d){return "poengsum"};
 
 exports.showCodeHeader = function(d){return "Vis kode"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Vis blokker"};
 
 exports.showGeneratedCode = function(d){return "Vis kode"};
 
@@ -20025,7 +20025,7 @@ exports.typeHint = function(d){return "Legg merke til at paranteser og semikolon
 
 exports.workspaceHeader = function(d){return "Sett sammen blokkene dine her: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Skriv inn JavaScript-koden din her"};
 
 exports.infinity = function(d){return "Uendelig"};
 
@@ -20052,33 +20052,33 @@ exports.genericFeedback = function(d){return "Se hvordan du endte opp, og prøv 
 
 },{"messageformat":60}],48:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.no=function(n){return n===1?"one":"other"}
-exports.actor = function(d){return "skuespiller"};
+exports.actor = function(d){return "figur"};
 
-exports.backgroundBlack = function(d){return "black"};
+exports.backgroundBlack = function(d){return "svart"};
 
-exports.backgroundCave = function(d){return "cave"};
+exports.backgroundCave = function(d){return "hule"};
 
-exports.backgroundCloudy = function(d){return "cloudy"};
+exports.backgroundCloudy = function(d){return "skyet"};
 
 exports.backgroundHardcourt = function(d){return "hardcourt"};
 
-exports.backgroundNight = function(d){return "night"};
+exports.backgroundNight = function(d){return "natt"};
 
 exports.backgroundUnderwater = function(d){return "underwater"};
 
-exports.backgroundCity = function(d){return "city"};
+exports.backgroundCity = function(d){return "by"};
 
-exports.backgroundDesert = function(d){return "desert"};
+exports.backgroundDesert = function(d){return "ørken"};
 
-exports.backgroundRainbow = function(d){return "rainbow"};
+exports.backgroundRainbow = function(d){return "regnbue"};
 
-exports.backgroundSoccer = function(d){return "soccer"};
+exports.backgroundSoccer = function(d){return "fotball"};
 
-exports.backgroundSpace = function(d){return "space"};
+exports.backgroundSpace = function(d){return "verdensrommmet"};
 
 exports.backgroundTennis = function(d){return "tennis"};
 
-exports.backgroundWinter = function(d){return "winter"};
+exports.backgroundWinter = function(d){return "vinter"};
 
 exports.catActions = function(d){return "Handlinger"};
 
@@ -20318,9 +20318,9 @@ exports.setBackgroundWinter = function(d){return "set vinter bakgrunn"};
 
 exports.setBackgroundTooltip = function(d){return "Angir bakgrunnsbilde"};
 
-exports.setEnemySpeed = function(d){return "set enemy speed"};
+exports.setEnemySpeed = function(d){return "angi fiende hastighet"};
 
-exports.setPlayerSpeed = function(d){return "set player speed"};
+exports.setPlayerSpeed = function(d){return "angi spiller hastighet"};
 
 exports.setScoreText = function(d){return "Angi poengsum"};
 
@@ -20440,7 +20440,7 @@ exports.shareStudioTwitter = function(d){return "Sjekk ut historien jeg lagde. J
 
 exports.shareGame = function(d){return "Del din historie:"};
 
-exports.showCoordinates = function(d){return "show coordinates"};
+exports.showCoordinates = function(d){return "vis koordinater"};
 
 exports.showCoordinatesTooltip = function(d){return "show the protagonist's coordinates on the screen"};
 
@@ -20456,7 +20456,7 @@ exports.showTSDefText = function(d){return "skriv teksten her"};
 
 exports.showTitleScreenTooltip = function(d){return "Vis en tittelskjerm med tilhørende tittel og tekst."};
 
-exports.size = function(d){return "size"};
+exports.size = function(d){return "størrelse"};
 
 exports.setSprite = function(d){return "sett"};
 

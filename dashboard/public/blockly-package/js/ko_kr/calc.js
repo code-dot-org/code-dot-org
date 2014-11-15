@@ -8337,17 +8337,17 @@ exports.parseElement = function(text) {
 
 },{}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.ko=function(n){return "other"}
-exports.compute = function(d){return "compute"};
+exports.compute = function(d){return "계산"};
 
-exports.equivalentExpression = function(d){return "Try reordering your arguments to get exactly the same expression."};
+exports.equivalentExpression = function(d){return "같은 계산결과가 나올 수 있도록 다시 배치하세요."};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"compute\" block?"};
+exports.extraTopBlocks = function(d){return "붙이지 않은 블럭들이 있습니다. 이 블럭들을 \"계산하기\"블럭에 붙이려고 했나요?"};
 
-exports.goal = function(d){return "Goal:"};
+exports.goal = function(d){return "목표값:"};
 
-exports.reinfFeedbackMsg = function(d){return "원하는 그림이 만들어지나요? \"다시 시도\" 를 눌러 그림을 확인해 보세요."};
+exports.reinfFeedbackMsg = function(d){return "\"다시 시도\"를 눌러 계산식을 고칠 수 있습니다."};
 
-exports.yourExpression = function(d){return "Your expression:"};
+exports.yourExpression = function(d){return "계산식:"};
 
 
 },{"messageformat":51}],39:[function(require,module,exports){
@@ -8454,7 +8454,7 @@ exports.score = function(d){return "점수"};
 
 exports.showCodeHeader = function(d){return "코드 보기"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "블럭 보이기"};
 
 exports.showGeneratedCode = function(d){return "코드 보기"};
 
@@ -8492,7 +8492,7 @@ exports.typeHint = function(d){return "괄호 \"( )\" 와 세미콜론 \";\" 이
 
 exports.workspaceHeader = function(d){return "블럭들을 이곳에서 조립하세요:"};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "자바스크립트 코드 작성"};
 
 exports.infinity = function(d){return "무한"};
 

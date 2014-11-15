@@ -411,8 +411,11 @@ en:
   try_reloading: 'Try reloading the page'
   next_stage: 'Finished! Continue to next stage'
   download_pdf: 'Open Lesson Plan'
+  lesson_plan: 'Lesson Plan'
   view_lesson_plan: 'View Lesson Plan'
   pdf_download: 'Download PDF'
+  download_coming_soon: 'Downloadable activity coming soon.'
+  video_coming_soon: 'Video Coming Soon!'
   share_code:
     title: "Click 'Run' to see my program in action"
     bounce_og_title: "Check out my Bounce Game"

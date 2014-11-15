@@ -8337,26 +8337,26 @@ exports.parseElement = function(text) {
 
 },{}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.de=function(n){return n===1?"one":"other"}
-exports.compute = function(d){return "compute"};
+exports.compute = function(d){return "berechnen"};
 
-exports.equivalentExpression = function(d){return "Try reordering your arguments to get exactly the same expression."};
+exports.equivalentExpression = function(d){return "Versuchen Sie eine Neuanordnung ihrer Argumente um das exakt gleiche Ergebnis zubekommen."};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"compute\" block?"};
+exports.extraTopBlocks = function(d){return "Sie haben unverbundene Blöcke. Wollten sie diese an den \"berechnen\" Block knüpfen?"};
 
-exports.goal = function(d){return "Goal:"};
+exports.goal = function(d){return "Ziel:"};
 
-exports.reinfFeedbackMsg = function(d){return "Sieht das so aus, wie du es möchtest? Drücke die \"Neuer Versuch\"-Taste, um deine Zeichnung zu sehen."};
+exports.reinfFeedbackMsg = function(d){return "Du kannst den \"Nochmal Versuchen\"Knopf Drücken um deinen Ausdruck zu bearbeiten."};
 
-exports.yourExpression = function(d){return "Your expression:"};
+exports.yourExpression = function(d){return "Dein Ausdruck:"};
 
 
 },{"messageformat":51}],39:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.de=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "und"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "wahr"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "falsch"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -8454,7 +8454,7 @@ exports.score = function(d){return "Punktestand"};
 
 exports.showCodeHeader = function(d){return "Programm anzeigen"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Zeige Blöcke"};
 
 exports.showGeneratedCode = function(d){return "Programm anzeigen"};
 
@@ -8492,7 +8492,7 @@ exports.typeHint = function(d){return "Beachte, dass die runden Klammern und Sem
 
 exports.workspaceHeader = function(d){return "Setze die Bausteine hier zusammen: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Geben Sie hier Ihren JavaScript-code ein"};
 
 exports.infinity = function(d){return "Unendlichkeit"};
 

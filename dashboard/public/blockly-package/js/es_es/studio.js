@@ -19887,9 +19887,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.es=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "y"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "verdadero"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "falso"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -19987,7 +19987,7 @@ exports.score = function(d){return "puntuación"};
 
 exports.showCodeHeader = function(d){return "Mostrar el código"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Mostrar bloques"};
 
 exports.showGeneratedCode = function(d){return "Mostrar el código"};
 
@@ -20025,7 +20025,7 @@ exports.typeHint = function(d){return "Ten en cuenta que los paréntesis y los p
 
 exports.workspaceHeader = function(d){return "Coloca tus bloques aquí:"};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Escribe tu código JavaScript aquí"};
 
 exports.infinity = function(d){return "Infinito"};
 
@@ -20054,31 +20054,31 @@ exports.genericFeedback = function(d){return "Mira como terminaste, y trata de r
 var MessageFormat = require("messageformat");MessageFormat.locale.es=function(n){return n===1?"one":"other"}
 exports.actor = function(d){return "actor"};
 
-exports.backgroundBlack = function(d){return "black"};
+exports.backgroundBlack = function(d){return "negro"};
 
-exports.backgroundCave = function(d){return "cave"};
+exports.backgroundCave = function(d){return "cueva"};
 
-exports.backgroundCloudy = function(d){return "cloudy"};
+exports.backgroundCloudy = function(d){return "nublado"};
 
-exports.backgroundHardcourt = function(d){return "hardcourt"};
+exports.backgroundHardcourt = function(d){return "pista dura"};
 
-exports.backgroundNight = function(d){return "night"};
+exports.backgroundNight = function(d){return "noche"};
 
-exports.backgroundUnderwater = function(d){return "underwater"};
+exports.backgroundUnderwater = function(d){return "bajo el agua"};
 
-exports.backgroundCity = function(d){return "city"};
+exports.backgroundCity = function(d){return "ciudad"};
 
-exports.backgroundDesert = function(d){return "desert"};
+exports.backgroundDesert = function(d){return "desierto"};
 
-exports.backgroundRainbow = function(d){return "rainbow"};
+exports.backgroundRainbow = function(d){return "arco iris"};
 
-exports.backgroundSoccer = function(d){return "soccer"};
+exports.backgroundSoccer = function(d){return "fútbol"};
 
-exports.backgroundSpace = function(d){return "space"};
+exports.backgroundSpace = function(d){return "espacio"};
 
-exports.backgroundTennis = function(d){return "tennis"};
+exports.backgroundTennis = function(d){return "tenis"};
 
-exports.backgroundWinter = function(d){return "winter"};
+exports.backgroundWinter = function(d){return "invierno"};
 
 exports.catActions = function(d){return "Acciones"};
 
@@ -20110,7 +20110,7 @@ exports.emotion = function(d){return "estado de ánimo"};
 
 exports.finalLevel = function(d){return "¡Felicidades! Has resuelto el puzzle final."};
 
-exports.for = function(d){return "for"};
+exports.for = function(d){return "para"};
 
 exports.hello = function(d){return "hola"};
 
@@ -20318,9 +20318,9 @@ exports.setBackgroundWinter = function(d){return "establecer fondo de invierno"}
 
 exports.setBackgroundTooltip = function(d){return "Establece la imagen de fondo"};
 
-exports.setEnemySpeed = function(d){return "set enemy speed"};
+exports.setEnemySpeed = function(d){return "establecer velocidad del enemigo"};
 
-exports.setPlayerSpeed = function(d){return "set player speed"};
+exports.setPlayerSpeed = function(d){return "establecer la velocidad del jugador"};
 
 exports.setScoreText = function(d){return "Establece el puntaje"};
 
@@ -20440,9 +20440,9 @@ exports.shareStudioTwitter = function(d){return "Checa la historia que hice. La 
 
 exports.shareGame = function(d){return "Comparte tu historia:"};
 
-exports.showCoordinates = function(d){return "show coordinates"};
+exports.showCoordinates = function(d){return "mostrar coordenadas"};
 
-exports.showCoordinatesTooltip = function(d){return "show the protagonist's coordinates on the screen"};
+exports.showCoordinatesTooltip = function(d){return "Mostrar las coordenadas del protagonista en la pantalla"};
 
 exports.showTitleScreen = function(d){return "Mostrar la pantalla de título"};
 
@@ -20456,7 +20456,7 @@ exports.showTSDefText = function(d){return "escribe el texto aquí"};
 
 exports.showTitleScreenTooltip = function(d){return "Muestra una pantalla de título con el título y texto asociados."};
 
-exports.size = function(d){return "size"};
+exports.size = function(d){return "tamaño"};
 
 exports.setSprite = function(d){return "establecer"};
 

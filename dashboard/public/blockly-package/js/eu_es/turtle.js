@@ -11975,9 +11975,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.eu=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "eta"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "egia"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "gezurra"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 

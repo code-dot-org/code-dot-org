@@ -7,7 +7,7 @@
       user:
         name: Nome da visualizzare
         email: Indirizzo di posta elettronica
-        username: nome utente
+        username: Nome utente
         password: password
         password_confirmation: Conferma della password
         current_password: Password attuale
@@ -33,11 +33,11 @@
     placeholder: Scrivi qui il tuo suggerimento
     submit: Aggiungi un suggerimento
   appname: Code.org
-  stage: fase
+  stage: Lezione
   stage_number: Lezione %{number}
   puzzle: Esercizio
-  trophies: trofei
-  courses: corsi
+  trophies: Trofei
+  courses: Corsi
   of: di
   more: DI PIÙ
   less: DI MENO
@@ -91,8 +91,8 @@
     gender: Sesso (facoltativo)
     birthday: Data di nascita (facoltativo)
     age: Età
-    user_type: Are you a student or teacher?
-    submit: Registrati
+    user_type: Sei uno studente o un insegnante?
+    submit: Iscriviti
     teacher: Sei un insegnante?
     valid_username: Disponibile!
     invalid_username: Il Nome utente deve essere di almeno 5 caratteri
@@ -182,8 +182,7 @@
     error_us_only: L'offerta del premio vale solo per gli utenti degli Stati Uniti.
     error_not_earned: Non hai ancora ottenuto questo premio.
     error_already_redeemed: Il tuo premio è stato già richiesto.
-    no_prizes_available: Siamo spiacenti, ma non abbiamo attualmente nessun premi
-      disponibili.
+    no_prizes_available: Siamo spiacenti, ma attualmente non abbiamo premi disponibili.
     teacher_info_required: 'I premi per l''insegnante richiedono nome ed indirizzo
       della scuola:'
     teacher_email_required: 'I premi per l''insegnante richiedono un indirizzo di
@@ -273,19 +272,19 @@
         playlab: Costruisci una App
         artist: Disegna qualcosa
     user:
-      classroom: I miei studenti
+      classroom: Cruscotto di Controllo dell'insegnante
       label: Ciao %{username}
       stats: I miei progressi
       settings: Il mio account
       prizes: Premi
       logout: Esci
       signin: Accedi
-      signup: Registrati
+      signup: Iscriviti
       already_registered: Sei già iscritto?
     popup:
       progress: I tuoi progressi
       lines: 'Totale delle linee di codice:  %{lines}'
-      close: CHIUDERE
+      close: CHIUDI
       mastery: Concetti
       puzzle_map: Fasi
       prizes: Ottieni tutti i %{total_trophies} trofei e vinci premi!
@@ -311,10 +310,10 @@
       not_tried: Non ancora provato
       activity: Indica le attività degli studenti nelle ultime %{hours} %{plural}
       no_section: Non hai creato alcuna classe
-      trophies: trofei
+      trophies: Trofei
     students:
       name: Nome
-      username: nome utente
+      username: Nome utente
       password: password
       manage: Gestisci i tuoi studenti
       dashboard: Vai al Cruscotto di controllo dell'insegnante
@@ -340,7 +339,7 @@
       manage: Gestisci le classi
       section: Classe
       students: Studenti
-      section_code: Codice Classe
+      section_code: Codice-Classe
       add_section_code: Aggiungere il codice-classe degli studenti
       secret: Tipo di password
       grade: Livello
@@ -390,10 +389,10 @@
     teacher_student_count: Hai %{count} studenti.
     teacher_averages: In media i tuoi studenti hanno guadagnato %{trophy_average}
       trofei su %{trophy_max} in "Padronanza dei concetti".
-    teacher_print_certificates: Stampa i certificati per gli studenti che completano
+    teacher_print_certificates: Stampa il certificato per gli studenti che completano
       questo corso
     teacher_read_blog: Leggi notizie e aggiornamenti relativi al nostro materiale
-      didattico sul nostro Blog dell'Insegnante
+      didattico su <a href="http://programmailfuturo.it">programmailfuturo.it</a>
     classroom: La tua classe
     student_progress: I tuoi progressi di apprendimento
     student_stats: Hai guadagnato %{trophy_count} trofei su %{trophy_max} in "Padronanza
@@ -409,12 +408,12 @@
     tryfirst: 'Oppure, puoi prima provarlo e successivamente iscriverti:'
     trynow: Prova adesso
     add_hint_help: Per favore aiutaci ad aggiungere suggerimenti intelligenti ai corsi
-      di Code.org (per il momento possibile solo in inglese)
-    20hour_overview: Questo corso in 20 lezioni introduce l'informatica di base e
-      i concetti della programmazione. Il corso è progettato per l'uso nella scuola
-      elementare e media inferiore, ma è divertente per imparare l'informatica a qualunque
+      di Code.org (solo in inglese, al momento)
+    20hour_overview: Questo corso in 20 lezioni introduce i concetti fondamentali
+      dell'informatica e della programmazione. Il corso è progettato per l'uso nelle
+      scuole elementari e medie inferiori, ma è divertente per imparare a qualunque
       età.
-    test_videos_help: Prova il nostro nuovo visualizzatore di video nella tua scuola
+    test_videos_help: Prova nella tua scuola  il nostro nuovo visualizzatore di video
     try_beta_courses: Novità! Prova i nostri corsi specifici per studenti delle scuole
       elementari (in versione provvisoria)
     use_as_teacher: Guarda questo sito come insegnante
@@ -430,8 +429,8 @@
     female: Femminile
     none: Preferisco non rispondere
   user_type:
-    student: studente
-    teacher: Teacher
+    student: Studente
+    teacher: Insegnante
   footer:
     help_from_html: Gli ingegneri di Google, Microsoft, Facebook e Twitter hanno contribuito
       a creare questo corso.
@@ -451,7 +450,7 @@
     teacher: Vedi la soluzione
     auth_error: Non sei autorizzato a vedere la soluzione.
     submit: Aggiorna la posizione dell'Artista
-    direction: Avvia la direzione
+    direction: Direzione di inizio (in gradi)
   video:
     tab: Video.
     notes: Mostra le spiegazioni.
@@ -481,8 +480,11 @@
   try_reloading: Prova a ricaricare la pagina
   next_stage: Finito! Prosegui con la lezione successiva
   download_pdf: Apri il piano di lavoro di questa lezione
+  lesson_plan: Lesson Plan
   view_lesson_plan: Leggi il piano di lavoro di questa lezione
   pdf_download: Scarica il PDF
+  download_coming_soon: Downloadable activity coming soon.
+  video_coming_soon: Video Coming Soon!
   share_code:
     title: Clicca su "Esegui" per vedere il mio programma in azione
     bounce_og_title: Prova la mia versione del gioco Rimbalzo
@@ -510,13 +512,13 @@
       unused: LIvelli non usati
   upsell:
     hoc:
-      title: Ora di programmazione
+      title: L'Ora del Codice
       body: Impara i concetti base dell'informatica. Milioni di persone l'hanno già
         fatto.
     flappy:
-      title: Codice di Flappy
-      body: Vuoi creare il tuo gioco in meno di 10 minuti? Prova il nostro corso sul
-        Codice di "Flappy"!
+      title: Codice di "Flappy"
+      body: Vuoi creare il tuo gioco in meno di 10 minuti? Prova il corso sul Codice
+        di "Flappy"!
     20hour:
       title: Corso Introduttivo
       body: Prova il nostro corso introduttivo di informatica in 20 lezioni.
@@ -551,6 +553,8 @@
     wrong_body: La soluzione che hai inserito non è corretta.  Per favore riprova!
     correct_title: Corretto
     correct_body: Quella è la risposta corretta.
+  text_match:
+    placeholder: Inserisci qui la tua risposta
   dialog:
     ok: Ok
   time:
@@ -563,15 +567,15 @@
         20-hour:
           title: Corso introduttivo di informatica per scuole elementari e medie inferiori
             (in 20 lezioni)
-          description: Questo corso in 20 lezioni introduce l'informatica di base
-            e i concetti della programmazione. Il corso è progettato per l'uso nella
-            scuola elementare e media inferiore, ma è divertente per imparare l'informatica
+          description: Questo corso in 20 lezioni introduce i concetti fondamentali
+            dell'informatica e della programmazione. Il corso è progettato per l'uso
+            nelle scuole elementari e medie inferiori, ma è divertente per imparare
             a qualunque età.
         Hour of Code:
-          title: Ora di programmazione
+          title: L'Ora del Codice
           description: ''
         edit-code:
-          title: Modifica il codice
+          title: Modifica il Codice
           description: ''
         events:
           title: Eventi
@@ -580,7 +584,7 @@
           title: Costruttore
           description: ''
         flappy:
-          title: Codice "Flappy"
+          title: Codice di Flappy
           description: Vuoi creare il tuo gioco in meno di 10 minuti? Prova il corso
             sul Codice di "Flappy"!
         jigsaw:
@@ -604,3 +608,8 @@
     al nostro sito di supporto.<a href="http://support.code.org"></a> Contattaci su
     <a href="http://programmailfuturo.it">programmailfuturo.it</a> oppure chiedi ai
     tuoi genitori o insegnanti di contattarci al posto tuo.
+  progress:
+    not_completed: non completato
+    completed_too_many_blocks: completato, ma usando troppi blocchi
+    completed_perfect: completato in modo perfetto
+    furthest_level_attempted: livello più avanzato che è stato provato

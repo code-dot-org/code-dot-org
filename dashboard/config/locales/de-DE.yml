@@ -84,7 +84,7 @@
     gender: Geschlecht (optional)
     birthday: Geburtstag (optional)
     age: Alter
-    user_type: Are you a student or teacher?
+    user_type: Bist du Schüler oder Lehrer?
     submit: Registrieren
     teacher: Sind Sie ein Lehrer?
     valid_username: Verfügbar!
@@ -261,10 +261,10 @@
       finished_hoc: Ich habe meine Programmierstunde beendet.
       sign_in_to_save: Melden Sie sich an um Ihren Fortschritt zu speichern
       free_play:
-        playlab: Make an App
-        artist: Draw Something
+        playlab: Eine App machen
+        artist: Zeichne etwas
     user:
-      classroom: Meine Schüler
+      classroom: Lehrer-Homepage
       label: Hallo %{username}
       stats: Mein Fortschritt
       settings: Mein Account
@@ -409,8 +409,8 @@
     heading_apps: <h2>Spass für</h2><h1>Alle</h1>
     heading_legacy: <h2>Unser allgemeiner Kurs für</h2><h1>Alle Altersstufen</h1>
     gallery:
-      your_turtle: My Art
-      your_studio: My Apps
+      your_turtle: Meine Kunst
+      your_studio: Meine Apps
   gender:
     male: Männlich
     female: Weiblich
@@ -437,7 +437,7 @@
     teacher: Lösung sehen
     auth_error: Du bist nicht berechtigt, die Lösung zu sehen.
     submit: Position des Künstler aktualisieren
-    direction: Startrichtung
+    direction: Start Richtung (in Grad)
   video:
     tab: Video.
     notes: Kein Video? Im Text Format anzeigen.
@@ -465,21 +465,25 @@
   try_reloading: Versuchen Sie die Seite neu zu laden
   next_stage: Geschafft! Fahre mit dem nächsten Level fort.
   download_pdf: Unterrichtsplan öffnen
+  lesson_plan: Lesson Plan
   view_lesson_plan: Überblick des Unterrichtsplans
   pdf_download: PDF herunterladen
+  download_coming_soon: Downloadable activity coming soon.
+  video_coming_soon: Video Coming Soon!
   share_code:
     title: Klicken Sie auf "Ausführen", um das Programm in Aktion zu sehen
     bounce_og_title: Schau dir mein Sprung-Spiel an
     flappy_og_title: Schau dir mein Flappy Spiel an
     studio_og_title: Teste meinen Labor-App
     og_description: Ich habe meinen Code selbst mit Code.org erstellt
-    phone_number_not_allowed: It looks like there is a phone number in it. Try changing
-      the text.
-    address_not_allowed: It looks like there is an address in it. Try changing the
-      text.
-    email_not_allowed: It looks like there is an email in it. Try changing the text.
-    profanity_not_allowed: It looks like there is profanity in it. Try changing the
-      text.
+    phone_number_not_allowed: Es sieht aus als wäre eine Telefonnummer darin. Versuche
+      den Text zu verändern.
+    address_not_allowed: Es sieht aus als wäre eine Adresse darin. Versuche den Text
+      zu ändern.
+    email_not_allowed: Es sieht aus als wäre eine Email darin. Versuche den Text zu
+      ändern.
+    profanity_not_allowed: Es sieht aus als wäre eine Obszönität darin. Versuche den
+      Text zu ändern.
   builder:
     created: Du hast ein neues Script erstellt.
     destroyed: Du hast ein Script zerstört.
@@ -505,17 +509,18 @@
       body: Versuche unseren 20-Stunden Informatik-Einführungskurs.
   gallery:
     students_drew_these_with_code: Schüler haben folgendes mit Code gezeichnet!
-    students_made_these_with_code: Students made these with code!
+    students_made_these_with_code: Schüler haben diesen Code gemacht!
     picture_count: In den vergangenen <b>%{days}</b> Tagen, haben Schüler durch das
       Schreiben eigener Computerprogramme <b>%{count}</b> Bilder gezeichnet. Klicke
       auf die Bilder um das jeweilige Programm in Aktion zu sehen.
-    activity_count: In the past <b>%{days}</b> days, students have made <b>%{count}</b>
-      apps and pictures by writing their own computer programs. Click on the pictures
-      and screenshots to see each program in action.
+    activity_count: In den vergangenen <b>%{days}</b> Tage, haben Schüler durch das
+      Schreiben eigener Computerprogramme <b>%{count}</b> apps und Bilder gemacht.
+      Klicken Sie auf die Bilder und Screenshots, jedes Programm um es in Aktion zu
+      sehen.
     want_to_make_your_own: Möchtest du dein eigenes machen?
     more: Mehr &rarr;
-    caption_by_name_age: by %{name}, age %{age}
-    caption_time_ago: '%{time_ago} ago'
+    caption_by_name_age: Von%{name}, Alter %{age}
+    caption_time_ago: '%{time_ago} früher'
   landing:
     prerelease: Dieser Kurs ist als <span class='betatext'> Beta</span> eingestuft.  Das
       bedeutet, dies ist nicht die endgültige Fassung des Kurses und er unterliegt
@@ -536,6 +541,8 @@
       es erneut!
     correct_title: Richtig
     correct_body: Das ist die richtige Antwort.
+  text_match:
+    placeholder: Gebe hier deine Antwort ein
   dialog:
     ok: OK
   time:
@@ -587,3 +594,8 @@
   zendesk_too_young_message: Tut uns leid, jüngere Benutzer dürfen sich für unsere
     Hilfeseite nicht anmelden. Du kannst <a href="http://support.code.org">support.code.org</a>
     durchsuchen ohne dich anzumelden oder frag deine Eltern oder Lehrer uns zu kontaktieren.
+  progress:
+    not_completed: Nicht erfüllt
+    completed_too_many_blocks: abgeschlossen, zu viele Blöcke
+    completed_perfect: Abgeschlossen, perfekt
+    furthest_level_attempted: Höchste Ebene versucht

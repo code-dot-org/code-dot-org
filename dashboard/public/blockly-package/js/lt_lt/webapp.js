@@ -8196,9 +8196,9 @@ var MessageFormat = require("messageformat");MessageFormat.locale.lt = function 
 };
 exports.and = function(d){return "ir"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "Taip"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "klaida"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -8214,7 +8214,7 @@ exports.catLoops = function(d){return "Kartojimas"};
 
 exports.catMath = function(d){return "Matematika"};
 
-exports.catProcedures = function(d){return "Sudėtinės komandos"};
+exports.catProcedures = function(d){return "Komandų kūrimas"};
 
 exports.catText = function(d){return "Tekstas"};
 
@@ -8296,7 +8296,7 @@ exports.score = function(d){return "rezultatas"};
 
 exports.showCodeHeader = function(d){return "Rodyti kodą"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Rodyti blokus"};
 
 exports.showGeneratedCode = function(d){return "Rodyti kodą"};
 
@@ -8334,7 +8334,7 @@ exports.typeHint = function(d){return "Įsidėmėk, kad skliausteliai ir kabliat
 
 exports.workspaceHeader = function(d){return "Iš viso panaudojai blokelių: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Čia rašykite savo JavaScript kodą."};
 
 exports.infinity = function(d){return "Begalybė"};
 
@@ -8380,7 +8380,7 @@ exports.catLogic = function(d){return "Logika"};
 
 exports.catMath = function(d){return "Matematika"};
 
-exports.catProcedures = function(d){return "Sudėtinės komandos"};
+exports.catProcedures = function(d){return "Komandų kūrimas"};
 
 exports.catText = function(d){return "Tekstas"};
 
@@ -8388,13 +8388,13 @@ exports.catVariables = function(d){return "Kintamieji"};
 
 exports.continue = function(d){return "Tęsti"};
 
-exports.createHtmlBlock = function(d){return "create html block"};
+exports.createHtmlBlock = function(d){return "sukurti html bloką"};
 
-exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
+exports.createHtmlBlockTooltip = function(d){return "Sukuria HTML bloką programėlėje."};
 
 exports.finalLevel = function(d){return "Sveikinu! Tu išsprendei paskutinį galvosūkį."};
 
-exports.makeYourOwn = function(d){return "Make Your Own App"};
+exports.makeYourOwn = function(d){return "Sukurk savo programėlę"};
 
 exports.nextLevel = function(d){return "Sveikinu! Išsprendei šią užduotį."};
 
@@ -8402,23 +8402,23 @@ exports.no = function(d){return "Ne"};
 
 exports.numBlocksNeeded = function(d){return "Ši užduotis gali būti išspręsta su %1 blokų(-ais)."};
 
-exports.pause = function(d){return "Pause"};
+exports.pause = function(d){return "Pauzė"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
+exports.reinfFeedbackMsg = function(d){return "Gali paspaust \"Bandyti dar kartą\""};
 
 exports.repeatForever = function(d){return "kartok visada"};
 
 exports.repeatDo = function(d){return " "};
 
-exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
+exports.repeatForeverTooltip = function(d){return "Kartok veiksmus šiame bloke, kol vyksta programa."};
 
-exports.shareWebappTwitter = function(d){return "Check out the app I made. I wrote it myself with @codeorg"};
+exports.shareWebappTwitter = function(d){return "Šią programą sukūriau su @codeorg"};
 
-exports.shareGame = function(d){return "Share your app:"};
+exports.shareGame = function(d){return "Dalintis savo programėle:"};
 
-exports.turnBlack = function(d){return "turn black"};
+exports.turnBlack = function(d){return "pajuoduok"};
 
-exports.turnBlackTooltip = function(d){return "Turns the screen black."};
+exports.turnBlackTooltip = function(d){return "Ekranas patampa juodas."};
 
 exports.yes = function(d){return "Taip"};
 
