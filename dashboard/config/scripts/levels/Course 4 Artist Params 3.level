@@ -9,19 +9,68 @@
     "instructions": "Awesome, can you draw each of these triangles with that new function? The first is 25 pixels long, the second is 50, and the third is 75. (If you're really clever, you could use a for loop for this!)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "ideal": "7",
+    "ideal": "14",
     "slider_speed": ".5",
-    "disable_param_editing": "true",
+    "disable_param_editing": "false",
     "disable_variable_editing": "false",
-    "use_modal_function_editor": "false",
+    "use_modal_function_editor": "true",
     "free_play": "false",
     "start_direction": "90",
     "x": "150",
     "y": "250",
-    "impressive": "false"
+    "impressive": "false",
+    "use_contract_editor": "false"
   }
 }]]></config>
   <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="procedures_callnoreturn" inline="false">
+              <mutation name="draw a triangle">
+                <arg name="length"/>
+              </mutation>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn" uservisible="false">
+          <mutation>
+            <arg name="length"/>
+          </mutation>
+          <title name="NAME">draw a triangle</title>
+          <statement name="STACK">
+            <block type="controls_repeat_ext" inline="true" uservisible="false">
+              <value name="TIMES">
+                <block type="math_number" uservisible="false">
+                  <title name="NUM">3</title>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="draw_move" inline="true" uservisible="false">
+                  <title name="DIR">moveForward</title>
+                  <value name="VALUE">
+                    <block type="math_number" uservisible="false">
+                      <title name="NUM">???</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="draw_turn" inline="true" uservisible="false">
+                      <title name="DIR">turnLeft</title>
+                      <value name="VALUE">
+                        <block type="math_number" uservisible="false">
+                          <title name="NUM">120</title>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </start_blocks>
     <toolbox_blocks>
       <xml>
         <block type="draw_move" inline="true">

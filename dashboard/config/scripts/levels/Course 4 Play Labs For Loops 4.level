@@ -9,10 +9,10 @@
     "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  return Studio.sayComplete > 10;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
     "failure_condition": "function () {\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "instructions": "Changing the increment can be helpful, but we're still counting linearly (each number is the same distance from the last) What if I wanted to count exponentially? Without changing the settings in this for loop, can you count (counter * 2)?",
+    "instructions": "Changing the increment can be helpful, but we're still counting linearly (each number is the same distance from the last) What if I wanted to count exponentially? Without changing the settings in this for loop, can you count 1, 4, 9 , 16, 25... (counter squared)?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "ideal": "9",
+    "ideal": "11",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "free_play": "false",
@@ -21,16 +21,19 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "use_modal_function_editor": "false",
-    "predraw_blocks": "<xml><block type=\"when_run\"><next><block type=\"controls_for\" inline=\"true\"><title name=\"VAR\">Counter</title><value name=\"FROM\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value><value name=\"TO\"><block type=\"math_number\"><title name=\"NUM\">10</title></block></value><value name=\"BY\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value><statement name=\"DO\"><block type=\"studio_saySpriteParams\" inline=\"true\"><value name=\"TEXT\"><block type=\"math_arithmetic\" inline=\"true\"><title name=\"OP\">POWER</title><value name=\"A\"><block type=\"variables_get\"><title name=\"VAR\">Counter</title></block></value><value name=\"B\"><block type=\"math_number\"><title name=\"NUM\">2</title></block></value></block></value></block></statement></block></next></block></xml>"
+    "predraw_blocks": "<xml><block type=\"when_run\"><next><block type=\"controls_for\" inline=\"true\"><title name=\"VAR\">Counter</title><value name=\"FROM\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value><value name=\"TO\"><block type=\"math_number\"><title name=\"NUM\">10</title></block></value><value name=\"BY\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value><statement name=\"DO\"><block type=\"studio_saySpriteParams\" inline=\"true\"><value name=\"TEXT\"><block type=\"math_arithmetic\" inline=\"true\"><title name=\"OP\">POWER</title><value name=\"A\"><block type=\"variables_get\"><title name=\"VAR\">Counter</title></block></value><value name=\"B\"><block type=\"math_number\"><title name=\"NUM\">2</title></block></value></block></value></block></statement></block></next></block></xml>",
+    "use_contract_editor": "false",
+    "coordinate_grid_background": "false",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run">
+        <block type="when_run" editable="false" movable="false">
           <next>
-            <block type="controls_for" inline="true">
-              <title name="VAR">Counter</title>
+            <block type="controls_for" inline="true" editable="false" movable="false">
+              <title name="VAR">counter</title>
               <value name="FROM">
                 <block type="math_number">
                   <title name="NUM">1</title>
@@ -53,52 +56,28 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="when_run"/>
-        <block type="studio_saySpriteParams" inline="true">
-          <value name="TEXT">
-            <block type="text">
-              <title name="TEXT">???</title>
-            </block>
-          </value>
-        </block>
-        <block type="controls_for" inline="true">
-          <title name="VAR">Counter</title>
-          <value name="FROM">
+        <block type="studio_saySpriteParamsTime" inline="true">
+          <value name="SPRITE">
             <block type="math_number">
               <title name="NUM">1</title>
             </block>
           </value>
-          <value name="TO">
+          <value name="TIME">
             <block type="math_number">
-              <title name="NUM">100</title>
+              <title name="NUM">0.5</title>
             </block>
           </value>
-          <value name="BY">
-            <block type="math_number">
-              <title name="NUM">10</title>
-            </block>
-          </value>
-        </block>
-        <block type="variables_get">
-          <title name="VAR">Counter</title>
         </block>
         <block type="math_arithmetic" inline="true">
-          <title name="OP">ADD</title>
+          <title name="OP">POWER</title>
           <value name="A">
-            <block type="math_number">
-              <title name="NUM">0</title>
+            <block type="variables_get">
+              <title name="VAR">counter</title>
             </block>
           </value>
           <value name="B">
             <block type="math_number">
-              <title name="NUM">0</title>
-            </block>
-          </value>
-        </block>
-        <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-            <block type="math_number">
-              <title name="NUM">3</title>
+              <title name="NUM">2</title>
             </block>
           </value>
         </block>

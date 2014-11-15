@@ -24,13 +24,13 @@ Get your [whole school to participate](<%= hoc_uri('/prizes') %>) for a chance f
 
 ## 2. 여러분의 모든 학교에 Hour of Code 이벤트 행사를 요청하세요.
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](<%= hoc_uri('/files/schools-handout.pdf') %>). 여러분의 학교가 등록되면, [$10,000 상당의 학교 상품](/prizes)을 얻을 수 있는 기회를 얻게됩니다. 같은 지역의 학교들과 경쟁해 보세요.
+[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](http://hourofcode.com/files/schools-handout.pdf). 여러분의 학교가 등록되면, [$10,000 상당의 학교 상품](/prizes)을 얻을 수 있는 기회를 얻게됩니다. 같은 지역의 학교들과 경쟁해 보세요.
 
 <% else %>
 
 ## 2. 여러분의 모든 학교에 Hour of Code 이벤트 행사를 열어달라고 요청하세요.
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or give [this handout](<%= hoc_uri('/files/schools-handout.pdf') %>) to your principal.
+[Send this email](<%= hoc_uri('/resources#email') %>) or give [this handout](http://hourofcode.com/files/schools-handout.pdf) to your principal.
 
 <% end %>
 
@@ -40,7 +40,7 @@ Get your [whole school to participate](<%= hoc_uri('/prizes') %>) for a chance f
 
 ## 3. 여러분의 직장 상사에게 함께 참여하도록 요청해 보세요.
 
-[Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](<%= hoc_uri('/resources/hoc-one-pager.pdf') %>).
+[Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](http://hourofcode.com/resources/hoc-one-pager.pdf).
 
 ## 4. Hour of Code를 소속 단체나 조직에 안내해 주세요.
 
@@ -48,6 +48,6 @@ Get your [whole school to participate](<%= hoc_uri('/prizes') %>) for a chance f
 
 ## 6. 지역 의원 등에게 Hour of Code 를 지원해달라고 요청하세요.
 
-[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board. Or [give them this handout](<%= hoc_uri('/resources/hoc-one-pager.pdf') %>) and invite them to visit your school.
+[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board. Or [give them this handout](http://hourofcode.com/resources/hoc-one-pager.pdf) and invite them to visit your school.
 
 <%= view 'popup_window.js' %>

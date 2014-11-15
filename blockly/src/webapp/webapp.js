@@ -112,6 +112,7 @@ Webapp.onTick = function() {
       catch(err) {
         Webapp.executionError = err;
         Webapp.onPuzzleComplete();
+        return;
       }
     }
   } else {
@@ -172,21 +173,23 @@ Webapp.init = function(config) {
   });
 
   config.loadAudio = function() {
-    Blockly.loadAudio_(skin.winSound, 'win');
-    Blockly.loadAudio_(skin.startSound, 'start');
-    Blockly.loadAudio_(skin.failureSound, 'failure');
+    BlocklyApps.loadAudio(skin.winSound, 'win');
+    BlocklyApps.loadAudio(skin.startSound, 'start');
+    BlocklyApps.loadAudio(skin.failureSound, 'failure');
   };
 
   config.afterInject = function() {
-    /**
-     * The richness of block colours, regardless of the hue.
-     * MOOC blocks should be brighter (target audience is younger).
-     * Must be in the range of 0 (inclusive) to 1 (exclusive).
-     * Blockly's default is 0.45.
-     */
-    Blockly.HSV_SATURATION = 0.6;
+    if (BlocklyApps.usingBlockly) {
+      /**
+       * The richness of block colours, regardless of the hue.
+       * MOOC blocks should be brighter (target audience is younger).
+       * Must be in the range of 0 (inclusive) to 1 (exclusive).
+       * Blockly's default is 0.45.
+       */
+      Blockly.HSV_SATURATION = 0.6;
 
-    Blockly.SNAP_RADIUS *= Webapp.scale.snapRadius;
+      Blockly.SNAP_RADIUS *= Webapp.scale.snapRadius;
+    }
 
     drawDiv();
   };
@@ -310,7 +313,9 @@ BlocklyApps.runButtonClick = function() {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
   BlocklyApps.toggleRunReset('reset');
-  Blockly.mainBlockSpace.traceOn(true);
+  if (BlocklyApps.usingBlockly) {
+    Blockly.mainBlockSpace.traceOn(true);
+  }
   BlocklyApps.reset(false);
   BlocklyApps.attempts++;
   Webapp.execute();
@@ -337,7 +342,7 @@ var displayFeedback = function() {
       feedbackImage: Webapp.feedbackImage,
       twitter: twitterOptions,
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
-      saveToGalleryUrl: level.freePlay && Webapp.response.save_to_gallery_url,
+      saveToGalleryUrl: level.freePlay && Webapp.response && Webapp.response.save_to_gallery_url,
       appStrings: {
         reinfFeedbackMsg: webappMsg.reinfFeedbackMsg(),
         sharingText: webappMsg.shareGame()
@@ -497,15 +502,11 @@ Webapp.onPuzzleComplete = function() {
   // Stop everything on screen
   Webapp.clearEventHandlersKillTickLoop();
 
-  // If we know they succeeded, mark levelComplete true
-  // Note that we have not yet animated the succesful run
-  var levelComplete = (Webapp.result === BlocklyApps.ResultType.SUCCESS);
-
-  // If the current level is a free play, always return the free play
-  // result type
+  // If the current level is a free play, always return the free play result
   if (level.freePlay) {
     Webapp.testResults = BlocklyApps.TestResults.FREE_PLAY;
   } else {
+    var levelComplete = (Webapp.result === BlocklyApps.ResultType.SUCCESS);
     Webapp.testResults = BlocklyApps.getTestResults(levelComplete);
   }
 
@@ -518,10 +519,6 @@ Webapp.onPuzzleComplete = function() {
   var program;
 
   if (level.editCode) {
-    Webapp.testResults = levelComplete ?
-      BlocklyApps.TestResults.ALL_PASS :
-      BlocklyApps.TestResults.TOO_FEW_BLOCKS_FAIL;
-
     // If we want to "normalize" the JavaScript to avoid proliferation of nearly
     // identical versions of the code on the service, we could do either of these:
 
@@ -688,7 +685,16 @@ Webapp.setStyle = function (opts) {
 };
 
 Webapp.onEventFired = function (opts, e) {
-  Webapp.eventQueue.push({'fn': opts.func});
+  if (typeof e != 'undefined') {
+    // Push a function call on the queue with an array of arguments consisting
+    // of just the 'e' parameter
+    Webapp.eventQueue.push({
+      'fn': opts.func,
+      'arguments': [e]
+    });
+  } else {
+    Webapp.eventQueue.push({'fn': opts.func});
+  }
 };
 
 Webapp.attachEventHandler = function (opts) {

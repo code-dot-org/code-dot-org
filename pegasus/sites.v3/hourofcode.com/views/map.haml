@@ -1,8 +1,18 @@
 .row
   .col-xs-12
     -total_count = DB[:forms].where(kind:'HocSignup2014').count
-    %a{href: hoc_uri("/events")}
-      %h2= hoc_s(:map_header).gsub('#', format_integer_with_commas(total_count))
+    -if @company
+      %h2= "<a href='#{hoc_uri('/events')}'>#{hoc_s(:map_header).gsub('#', format_integer_with_commas(total_count))}</a>" + ", " + "#{hoc_s(:map_header_company).gsub('#', format_integer_with_commas(company_count(@company))).gsub('company', hoc_s("company_" + @company))}"
+      %a{:href=>hoc_uri("/events")}
+        %button{:class=>"signup-button", :style=>"margin-right: 116px; margin-bottom: 25px"}
+          See all events
+    -else
+      %div{:class=>"row"}
+        %a{href: hoc_uri("/events")}
+          %h2= hoc_s(:map_header).gsub('#', format_integer_with_commas(total_count))
+        %a{:href=>hoc_uri("/events")}
+          %button{:class=>"signup-button", :style=>"margin-right: 116px; margin-bottom: 25px"}
+            See all events
 .row
   .col-xs-10.col-sm-12
     #gmap{style: 'width: 100%; max-width: 1024px;'}
@@ -10,6 +20,8 @@
 :javascript
   var gmap;
   var resizeZoom;
+  var scrollwheelOption = false;
+  var draggableOption = false;
 
   $(document).ready(function() {
     initializeMap();
@@ -23,8 +35,8 @@
     var mapOptions = {
       center: new google.maps.LatLng(22.2116,4.5775),
       zoom: 2,
-      scrollwheel: false,
-      draggable: false,
+      scrollwheel: scrollwheelOption,
+      draggable: draggableOption,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
 
@@ -55,9 +67,12 @@
   }
 
   function enableDrag() {
+    scrollwheelOption = true;
+    draggableOption = true;
+
     var map_options = {
-      scrollwheel: true,
-      draggable: true,
+      scrollwheel: scrollwheelOption,
+      draggable: draggableOption
     }
     gmap.setOptions(map_options);
   }
@@ -87,6 +102,8 @@
       center: map_center,
       zoom: map_zoom,
       minZoom: map_zoom,
+      scrollwheel: scrollwheelOption,
+      draggable: draggableOption
     }
 
     gmap.setOptions(map_options);

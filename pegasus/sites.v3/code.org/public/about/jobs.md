@@ -9,15 +9,23 @@ nav: about_nav
 
 **Job Summary:** 
 
-Code.org is recruiting for Regional Program Managers in Los Angeles, New York City, and Ft. Lauderdale/Miami areas to support Code.org’s Education team through the development, implementation, and maintenance of Code.org’s partnership model with school districts. Responsibilities of the position include recruiting school districts for potential Code.org educational partnerships, managing all partnership implementation activities with  district personnel, managing the regional teacher professional development process (including facilitating workshops for high school teachers), and marketing and supporting Code.org's program in the region. Full-time, salaried.
+Code.org is recruiting for Regional Program Managers in Los Angeles, New York City, and Ft. Lauderdale/Miami areas to support Code.org’s Education team through the development, implementation, and maintenance of Code.org’s partnership model with school districts. Responsibilities of the position include recruiting school districts for potential Code.org educational partnerships, managing all partnership implementation activities with  district personnel, and marketing and supporting Code.org's program in the region. Full-time, salaried.
 
 **Qualifications:**
 
-- At least a Bachelor's degree in Education or Computer Science
-- Recent experience teaching computer science in a K-12 school setting
-- **Experience in teaching and/or facilitating Exploring Computer Science (ECS) highly desired, but not required**
-- Strong existing connections to the computer science community
-- Must be a self-starter, multi-tasker, excel under pressure, and work independently with a geographically dispersed team
+- At least a Bachelor's degree, preferably in Education or Computer Science
+- Demonstrated ability to pitch the Code.org educational model to individuals across the full school district spectrum (superintendent to teacher) and close the agreement 
+- Experience and aptitude for managing complex projects and relationships to realize successful project outcomes throughout the pitching and implementation life cycle
+- Advanced organization and problem solving skills
+- Understanding of and passion for equity in computer science and K-12 education
+ 
+Additional desired strengths include:
+
+- Experience working with school districts in a project implementation capacity
+- Recent computer science teaching experience in a K-12 school setting
+- Strong existing connections to the computer science community 
+
+Must be a self-starter, multi-tasker, excel under pressure, and work independently with a geographically dispersed team. Proficiency in working with Microsoft Office and Google Docs a must.
 
 Ability and willingness to travel up to 25% of the time is required.
 

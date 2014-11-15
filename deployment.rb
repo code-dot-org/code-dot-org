@@ -125,8 +125,7 @@ class CDOImpl < OpenStruct
 
   def canonical_hostname(domain)
     return "localhost.#{domain}" if rack_env?(:development)
-    return "#{self.name}.#{domain}" if ['console', 'hoc-levels'].include?(self.name)
-    return domain if rack_env?(:production)
+    return "hoc-levels.#{domain}" if CDO.name == 'hoc-levels'
     "#{rack_env}.#{domain}"
   end
 

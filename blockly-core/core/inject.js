@@ -58,6 +58,7 @@ Blockly.inject = function(container, opt_options) {
    * @type {Blockly.BlockSpaceEditor}
    */
   Blockly.mainBlockSpaceEditor = new Blockly.BlockSpaceEditor(container);
+
   /**
    * @type {Blockly.BlockSpace}
    */
@@ -71,6 +72,11 @@ Blockly.inject = function(container, opt_options) {
     /** @type {Blockly.ContractEditor} */
     Blockly.contractEditor = Blockly.functionEditor;
   }
+
+  /**
+   * @type {Blockly.BlockSpace}
+   */
+  Blockly.focusedBlockSpace = Blockly.mainBlockSpace;
 };
 
 /**
@@ -153,7 +159,8 @@ Blockly.parseOptions_ = function(options) {
     disableVariableEditing: options['disableVariableEditing'] || false,
     useModalFunctionEditor: options['useModalFunctionEditor'] || false,
     useContractEditor: options['useContractEditor'] || false,
-    grayOutUndeletableBlocks: grayOutUndeletableBlocks
+    grayOutUndeletableBlocks: grayOutUndeletableBlocks,
+    editBlocks: options['editBlocks'] || false
   };
 };
 

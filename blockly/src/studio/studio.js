@@ -908,27 +908,25 @@ Studio.initReadonly = function(config) {
 var arrangeStartBlocks = function (config) {
   var xml = parseXmlElement(config.level.startBlocks);
   var numUnplacedElementNodes = 0;
-  //
-  // two passes through, one to count the nodes:
-  //
-  for (var x = 0, xmlChild; xml.childNodes && x < xml.childNodes.length; x++) {
-    xmlChild = xml.childNodes[x];
+  // sort the blocks by visibility
+  var xmlChildNodes = BlocklyApps.sortBlocksByVisibility(xml.childNodes);
+  // do a first pass to count the nodes
+  for (var x = 0, xmlChild; xmlChildNodes && x < xmlChildNodes.length; x++) {
+    xmlChild = xmlChildNodes[x];
 
     // Only look at element nodes without a y coordinate:
     if (xmlChild.nodeType === 1 && !xmlChild.getAttribute('y')) {
       numUnplacedElementNodes++;
     }
   }
-  //
-  // and one to place the nodes:
-  //
+  // do a second pass to place the nodes
   if (numUnplacedElementNodes) {
     var numberOfPlacedBlocks = 0;
     var totalHeightAvail =
-        (config.level.minWorkspaceHeight || 1000) - Studio.BLOCK_Y_COORDINATE;
+        (config.level.minWorkspaceHeight || 800) - Studio.BLOCK_Y_COORDINATE;
     var yCoordInterval = totalHeightAvail / numUnplacedElementNodes;
-    for (x = 0, xmlChild; xml.childNodes && x < xml.childNodes.length; x++) {
-      xmlChild = xml.childNodes[x];
+    for (x = 0, xmlChild; xmlChildNodes && x < xmlChildNodes.length; x++) {
+      xmlChild = xmlChildNodes[x];
 
       // Only look at element nodes without a y coordinate:
       if (xmlChild.nodeType === 1 && !xmlChild.getAttribute('y')) {
@@ -978,22 +976,22 @@ Studio.init = function(config) {
   });
 
   config.loadAudio = function() {
-    Blockly.loadAudio_(skin.winSound, 'win');
-    Blockly.loadAudio_(skin.startSound, 'start');
-    Blockly.loadAudio_(skin.failureSound, 'failure');
-    Blockly.loadAudio_(skin.rubberSound, 'rubber');
-    Blockly.loadAudio_(skin.crunchSound, 'crunch');
-    Blockly.loadAudio_(skin.flagSound, 'flag');
-    Blockly.loadAudio_(skin.winPointSound, 'winpoint');
-    Blockly.loadAudio_(skin.winPoint2Sound, 'winpoint2');
-    Blockly.loadAudio_(skin.losePointSound, 'losepoint');
-    Blockly.loadAudio_(skin.losePoint2Sound, 'losepoint2');
-    Blockly.loadAudio_(skin.goal1Sound, 'goal1');
-    Blockly.loadAudio_(skin.goal2Sound, 'goal2');
-    Blockly.loadAudio_(skin.woodSound, 'wood');
-    Blockly.loadAudio_(skin.retroSound, 'retro');
-    Blockly.loadAudio_(skin.slapSound, 'slap');
-    Blockly.loadAudio_(skin.hitSound, 'hit');
+    BlocklyApps.loadAudio(skin.winSound, 'win');
+    BlocklyApps.loadAudio(skin.startSound, 'start');
+    BlocklyApps.loadAudio(skin.failureSound, 'failure');
+    BlocklyApps.loadAudio(skin.rubberSound, 'rubber');
+    BlocklyApps.loadAudio(skin.crunchSound, 'crunch');
+    BlocklyApps.loadAudio(skin.flagSound, 'flag');
+    BlocklyApps.loadAudio(skin.winPointSound, 'winpoint');
+    BlocklyApps.loadAudio(skin.winPoint2Sound, 'winpoint2');
+    BlocklyApps.loadAudio(skin.losePointSound, 'losepoint');
+    BlocklyApps.loadAudio(skin.losePoint2Sound, 'losepoint2');
+    BlocklyApps.loadAudio(skin.goal1Sound, 'goal1');
+    BlocklyApps.loadAudio(skin.goal2Sound, 'goal2');
+    BlocklyApps.loadAudio(skin.woodSound, 'wood');
+    BlocklyApps.loadAudio(skin.retroSound, 'retro');
+    BlocklyApps.loadAudio(skin.slapSound, 'slap');
+    BlocklyApps.loadAudio(skin.hitSound, 'hit');
   };
 
   config.afterInject = function() {
@@ -1435,6 +1433,7 @@ Studio.execute = function() {
   // (must be after reset(), which resets the Studio.Globals namespace)
   defineProcedures('procedures_defreturn');
   defineProcedures('procedures_defnoreturn');
+  defineProcedures('functional_definition');
 
   // Set event handlers and start the onTick timer
   Studio.eventHandlers = handlers;
