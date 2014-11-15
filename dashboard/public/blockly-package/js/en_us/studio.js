@@ -15255,7 +15255,7 @@ var levels = module.exports = {};
 
 // Base config for levels created via levelbuilder
 levels.custom = {
-  'ideal': 2,
+  'ideal': Infinity,
   'requiredBlocks': [],
   'scale': {
     'snapRadius': 2
@@ -16723,7 +16723,7 @@ function loadLevel() {
   Studio.timeoutFailureTick = level.timeoutFailureTick || Infinity;
   Studio.minWorkspaceHeight = level.minWorkspaceHeight;
   Studio.softButtons_ = level.softButtons || {};
-  Studio.protaganistSpriteIndex = level.protaganistSpriteIndex || 0;
+  Studio.protaganistSpriteIndex = level.protaganistSpriteIndex;
 
   Studio.startAvatars = reorderedStartAvatars(skin.avatarList,
     level.firstSpriteIndex);
@@ -18217,6 +18217,9 @@ Studio.displayScore = function() {
 
 Studio.showCoordinates = function() {
   var sprite = Studio.sprite[Studio.protaganistSpriteIndex];
+  if (!sprite) {
+    return;
+  }
   // convert to math coordinates, with the origin at the bottom left
   // corner of the grid, and distances measured from the center of the
   // sprite.
@@ -19010,10 +19013,8 @@ function spriteAtGoal(sprite, goal) {
 
 Studio.allGoalsVisited = function() {
   var i, playSound;
-  // Currently the way things work is only one sprite can navigate to the goals.
-  // I'm calling this protaganistSprite, and it's defined by protaganistSpriteIndex on
-  // the level (or 0 otherwise).  Could alternatively allow all sprites to hit
-  // goals
+  // If protaganistSpriteIndex is set, the sprite with this index must navigate
+  // to the goals.  Otherwise any sprite can navigate to each goal.
   var protaganistSprite = Studio.sprite[Studio.protaganistSpriteIndex];
   var finishedGoals = 0;
 
@@ -19025,7 +19026,17 @@ Studio.allGoalsVisited = function() {
   for (i = 0; i < Studio.spriteGoals_.length; i++) {
     var goal = Studio.spriteGoals_[i];
     if (!goal.finished) {
-      goal.finished = spriteAtGoal(protaganistSprite, goal);
+      if (protaganistSprite) {
+        goal.finished = spriteAtGoal(protaganistSprite, goal);
+      } else {
+        goal.finished = false;
+        for (var j = 0; j < Studio.sprite.length; j++) {
+          if (spriteAtGoal(Studio.sprite[j], goal)) {
+            goal.finished = true;
+            break;
+          }
+        }
+      }
       playSound = goal.finished;
     }
 
