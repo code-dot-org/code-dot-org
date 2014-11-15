@@ -101,7 +101,7 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
 Blockly.FunctionEditor.prototype.populateParamToolbox_ = function() {
   this.orderedParamIDsToBlocks_.clear();
   this.addParamsFromProcedure_();
-  this.resetParamIDs();
+  this.resetParamIDs_();
   this.refreshParamsEverywhere();
 };
 
@@ -188,8 +188,8 @@ Blockly.FunctionEditor.prototype.refreshParamsInFlyout_ = function() {
   this.flyout_.show(this.orderedParamIDsToBlocks_.getValues());
 };
 
-Blockly.FunctionEditor.prototype.resetParamIDs = function() {
-  var paramArrays = this.paramsAsParallelArrays();
+Blockly.FunctionEditor.prototype.resetParamIDs_ = function() {
+  var paramArrays = this.paramsAsParallelArrays_();
   paramArrays[1] = null; // No IDs causes next update to initialize IDs
   this.functionDefinitionBlock.updateParamsFromArrays
     .apply(this.functionDefinitionBlock, paramArrays);
@@ -197,13 +197,13 @@ Blockly.FunctionEditor.prototype.resetParamIDs = function() {
 
 Blockly.FunctionEditor.prototype.refreshParamsOnFunction_ = function() {
   this.functionDefinitionBlock.updateParamsFromArrays
-    .apply(this.functionDefinitionBlock, this.paramsAsParallelArrays());
+    .apply(this.functionDefinitionBlock, this.paramsAsParallelArrays_());
 };
 
 /**
  * @returns {Array.<Array.<string>>} parallel arrays of parameter names, IDs, types
  */
-Blockly.FunctionEditor.prototype.paramsAsParallelArrays = function() {
+Blockly.FunctionEditor.prototype.paramsAsParallelArrays_ = function() {
   var paramNames = [];
   var paramIDs = [];
   var paramTypes = [];

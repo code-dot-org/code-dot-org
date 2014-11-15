@@ -72,8 +72,8 @@ Blockly.ContractEditor.prototype.createContractDom_ = function() {
   this.contractDiv_.style.display = 'block';
   this.container_.insertBefore(this.contractDiv_, this.container_.firstChild);
 
-  this.initializeInputTypeDropdown();
-  this.initializeOutputTypeDropdown();
+  this.initializeInputTypeDropdown_();
+  this.initializeOutputTypeDropdown_();
 };
 
 /**
@@ -108,7 +108,7 @@ Blockly.ContractEditor.prototype.addParamsFromProcedure_ = function() {
     this.addParameter(procedureInfo.parameterNames[i], procedureInfo.parameterTypes[i]);
   }
 };
-Blockly.ContractEditor.prototype.initializeOutputTypeDropdown = function() {
+Blockly.ContractEditor.prototype.initializeOutputTypeDropdown_ = function() {
   this.outputTypeSelector = new goog.ui.Select(null, null,
     goog.ui.FlatMenuButtonRenderer.getInstance());
 
@@ -128,7 +128,7 @@ Blockly.ContractEditor.prototype.outputTypeDropdownChange = function(comboBoxEve
   this.functionDefinitionBlock.updateOutputType(newType);
 };
 
-Blockly.ContractEditor.prototype.initializeInputTypeDropdown = function() {
+Blockly.ContractEditor.prototype.initializeInputTypeDropdown_ = function() {
   this.inputTypeSelector = new goog.ui.Select(null, null,
     goog.ui.FlatMenuButtonRenderer.getInstance());
 
