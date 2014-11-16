@@ -2,11 +2,14 @@
 require_relative '../deployment'
 require 'cdo/only_one'
 
+def solr_dir()
+  deploy_dir '..', 'solr-4.8.1', 'example'
+end
+
 def main()
-  Dir.chdir(aws_dir('solr', 'example')) do
+  Dir.chdir(solr_dir) do
     system 'java', '-jar', 'start.jar'
   end
 end
 
 main() if only_one_running?(__FILE__)
-
