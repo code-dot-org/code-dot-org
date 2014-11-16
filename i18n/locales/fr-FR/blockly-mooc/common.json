@@ -1,5 +1,7 @@
 {
   "and":"et",
+  "booleanTrue":"vrai",
+  "booleanFalse":"faux",
   "blocklyMessage":"Blockly",
   "catActions":"Actions",
   "catColour":"Couleur",

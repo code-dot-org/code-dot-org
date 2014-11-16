@@ -9594,9 +9594,9 @@ var MessageFormat = require("messageformat");MessageFormat.locale.pl = function 
 };
 exports.and = function(d){return "i"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "prawda"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "fałsz"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -9640,7 +9640,7 @@ exports.emptyBlocksErrorMsg = function(d){return "Blok powtórz lub blok jeśli 
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Funkcja blokowania musi mieć inne bloki wewnątrz do pracy."};
 
-exports.extraTopBlocks = function(d){return "Pozostały Ci jeszcze bloki, które nie zostały połączone z blokiem zdarzenia."};
+exports.extraTopBlocks = function(d){return "Posiadasz niezałączone bloki. Czy chciałeś je załączyć do bloku \"po uruchomieniu\"?"};
 
 exports.finalStage = function(d){return "Gratulacje! Ukończyłeś ostatni etap."};
 
@@ -9694,7 +9694,7 @@ exports.score = function(d){return "wynik"};
 
 exports.showCodeHeader = function(d){return "Pokaż kod"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Pokaż Bloki"};
 
 exports.showGeneratedCode = function(d){return "Pokaż kod"};
 
@@ -9724,7 +9724,7 @@ exports.saveToGallery = function(d){return "Zapisz do swojej galerii"};
 
 exports.savedToGallery = function(d){return "Zapisane w twojej galerii!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Przepraszamy, nie możemy udostępnić tego programu."};
 
 exports.typeFuncs = function(d){return "Dostępne funkcje:%1"};
 
@@ -9732,7 +9732,7 @@ exports.typeHint = function(d){return "Zauważ, że nawiasy i średniki są wyma
 
 exports.workspaceHeader = function(d){return "Połącz swoje bloki tutaj: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Wpisz swój kod JavaScript tutaj"};
 
 exports.infinity = function(d){return "Nieskończoność"};
 
@@ -9909,7 +9909,7 @@ exports.setGroundLava = function(d){return "ustaw podłoże Lawa"};
 
 exports.setGroundTooltip = function(d){return "Ustaw obrazek tła"};
 
-exports.setObstacle = function(d){return "set obstacle"};
+exports.setObstacle = function(d){return "ustaw przeszkodę"};
 
 exports.setObstacleRandom = function(d){return "ustaw losową przęszkodę"};
 
@@ -9985,7 +9985,7 @@ exports.soundHit = function(d){return "zgnieć"};
 
 exports.soundPoint = function(d){return "punkt"};
 
-exports.soundSwoosh = function(d){return "swoosh"};
+exports.soundSwoosh = function(d){return "szum"};
 
 exports.soundWing = function(d){return "skrzydło"};
 

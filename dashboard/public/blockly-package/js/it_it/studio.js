@@ -19887,9 +19887,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.it=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "e"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "vero"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "falso"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -19907,7 +19907,7 @@ exports.catMath = function(d){return "Matematica"};
 
 exports.catProcedures = function(d){return "Funzioni"};
 
-exports.catText = function(d){return "testo"};
+exports.catText = function(d){return "Testo"};
 
 exports.catVariables = function(d){return "Variabili"};
 
@@ -19939,7 +19939,7 @@ exports.finalStage = function(d){return "Complimenti! Hai completato l'ultima le
 
 exports.finalStageTrophies = function(d){return "Complimenti! Hai completato l'ultima lezione e vinto "+p(d,"numTrophies",0,"it",{"one":"un trofeo","other":n(d,"numTrophies")+" trofei"})+"."};
 
-exports.finish = function(d){return "Fine"};
+exports.finish = function(d){return "Condividi"};
 
 exports.generatedCodeInfo = function(d){return "Anche le migliori università (p.es., "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+") insegnano la programmazione visuale con i blocchi. Ma i blocchi che metti insieme possono essere rappresentati anche in JavaScript, uno dei linguaggi di programmazione più usati al mondo:"};
 
@@ -19953,7 +19953,7 @@ exports.jump = function(d){return "salta"};
 
 exports.levelIncompleteError = function(d){return "Stai usando tutti i tipi di blocchi necessari, ma non nel modo giusto."};
 
-exports.listVariable = function(d){return "elenco"};
+exports.listVariable = function(d){return "lista"};
 
 exports.makeYourOwnFlappy = function(d){return "Costruisci la tua versione del gioco Flappy"};
 
@@ -19985,9 +19985,9 @@ exports.runTooltip = function(d){return "Esegui il programma definito dai blocch
 
 exports.score = function(d){return "punteggio"};
 
-exports.showCodeHeader = function(d){return "Visualizza codice"};
+exports.showCodeHeader = function(d){return "Mostra il codice"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Mostra i blocchi"};
 
 exports.showGeneratedCode = function(d){return "Mostra il codice"};
 
@@ -20001,7 +20001,7 @@ exports.tooManyBlocksMsg = function(d){return "Questo esercizio può essere riso
 
 exports.tooMuchWork = function(d){return "Mi hai fatto fare un sacco di lavoro!  Puoi provare a farmi fare meno ripetizioni?"};
 
-exports.toolboxHeader = function(d){return "blocchi"};
+exports.toolboxHeader = function(d){return "Blocchi"};
 
 exports.openWorkspace = function(d){return "Come funziona"};
 
@@ -20025,7 +20025,7 @@ exports.typeHint = function(d){return "Sono necessarie le parentesi e i punto e 
 
 exports.workspaceHeader = function(d){return "Assembla i tuoi blocchi qui: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Scrivi qua il tuo codice JavaScript"};
 
 exports.infinity = function(d){return "Infinito"};
 
@@ -20054,31 +20054,31 @@ exports.genericFeedback = function(d){return "Verifica il risultato e prova a co
 var MessageFormat = require("messageformat");MessageFormat.locale.it=function(n){return n===1?"one":"other"}
 exports.actor = function(d){return "personaggio"};
 
-exports.backgroundBlack = function(d){return "black"};
+exports.backgroundBlack = function(d){return "nero"};
 
-exports.backgroundCave = function(d){return "cave"};
+exports.backgroundCave = function(d){return "grotta"};
 
-exports.backgroundCloudy = function(d){return "cloudy"};
+exports.backgroundCloudy = function(d){return "nuvoloso"};
 
-exports.backgroundHardcourt = function(d){return "hardcourt"};
+exports.backgroundHardcourt = function(d){return "polo"};
 
-exports.backgroundNight = function(d){return "night"};
+exports.backgroundNight = function(d){return "notte"};
 
-exports.backgroundUnderwater = function(d){return "underwater"};
+exports.backgroundUnderwater = function(d){return "sottomarino"};
 
-exports.backgroundCity = function(d){return "city"};
+exports.backgroundCity = function(d){return "città"};
 
-exports.backgroundDesert = function(d){return "desert"};
+exports.backgroundDesert = function(d){return "deserto"};
 
-exports.backgroundRainbow = function(d){return "rainbow"};
+exports.backgroundRainbow = function(d){return "arcobaleno"};
 
-exports.backgroundSoccer = function(d){return "soccer"};
+exports.backgroundSoccer = function(d){return "calcio"};
 
-exports.backgroundSpace = function(d){return "space"};
+exports.backgroundSpace = function(d){return "spaziale"};
 
-exports.backgroundTennis = function(d){return "tennis"};
+exports.backgroundTennis = function(d){return "campo da tennis"};
 
-exports.backgroundWinter = function(d){return "winter"};
+exports.backgroundWinter = function(d){return "inverno"};
 
 exports.catActions = function(d){return "Azioni"};
 
@@ -20110,7 +20110,7 @@ exports.emotion = function(d){return "umore"};
 
 exports.finalLevel = function(d){return "Complimenti! Hai risolto l'esercizio finale."};
 
-exports.for = function(d){return "for"};
+exports.for = function(d){return "per"};
 
 exports.hello = function(d){return "ciao"};
 
@@ -20146,7 +20146,7 @@ exports.moveDirectionRight = function(d){return "destra"};
 
 exports.moveDirectionUp = function(d){return "alto"};
 
-exports.moveDirectionRandom = function(d){return "casuale"};
+exports.moveDirectionRandom = function(d){return "scelta a caso"};
 
 exports.moveDistance25 = function(d){return "25 pixel"};
 
@@ -20190,7 +20190,7 @@ exports.nextLevel = function(d){return "Complimenti! Hai completato questo eserc
 
 exports.no = function(d){return "No"};
 
-exports.numBlocksNeeded = function(d){return "Questo esercizio può essere risolto con %1 blocchi ."};
+exports.numBlocksNeeded = function(d){return "Questo esercizio può essere risolto con %1 blocchi."};
 
 exports.ouchExclamation = function(d){return "Ahi!"};
 
@@ -20316,11 +20316,11 @@ exports.setBackgroundTennis = function(d){return "imposta lo sfondo Campo da Ten
 
 exports.setBackgroundWinter = function(d){return "imposta lo sfondo Inverno"};
 
-exports.setBackgroundTooltip = function(d){return "Imposta l'immagine per lo sfondo"};
+exports.setBackgroundTooltip = function(d){return "Imposta l'immagine di sfondo"};
 
-exports.setEnemySpeed = function(d){return "set enemy speed"};
+exports.setEnemySpeed = function(d){return "imposta la velocità del nemico"};
 
-exports.setPlayerSpeed = function(d){return "set player speed"};
+exports.setPlayerSpeed = function(d){return "imposta la velocità del giocatore"};
 
 exports.setScoreText = function(d){return "imposta il punteggio"};
 
@@ -20436,13 +20436,13 @@ exports.setSpriteSpeedTooltip = function(d){return "Imposta la velocità di un p
 
 exports.setSpriteZombie = function(d){return "all'immagine di uno zombie"};
 
-exports.shareStudioTwitter = function(d){return "Guarda la storia che ho creato io. L'ho fatta per conto mio @codeorg"};
+exports.shareStudioTwitter = function(d){return "Guarda la storia che ho creato io. L'ho fatta per conto mio @codeorg @programmafuturo"};
 
 exports.shareGame = function(d){return "Condividi la tua storia:"};
 
-exports.showCoordinates = function(d){return "show coordinates"};
+exports.showCoordinates = function(d){return "mostra le coordinate"};
 
-exports.showCoordinatesTooltip = function(d){return "show the protagonist's coordinates on the screen"};
+exports.showCoordinatesTooltip = function(d){return "Mostra le coordinate del protagonista sullo schermo"};
 
 exports.showTitleScreen = function(d){return "mostra la schermata del titolo"};
 
@@ -20456,7 +20456,7 @@ exports.showTSDefText = function(d){return "scrivi qua il testo"};
 
 exports.showTitleScreenTooltip = function(d){return "Mostra la schermata iniziale con titolo e testo."};
 
-exports.size = function(d){return "size"};
+exports.size = function(d){return "dimensione"};
 
 exports.setSprite = function(d){return "imposta"};
 

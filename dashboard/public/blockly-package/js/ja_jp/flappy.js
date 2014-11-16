@@ -9680,7 +9680,7 @@ exports.score = function(d){return "スコア"};
 
 exports.showCodeHeader = function(d){return "コードの表示"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "ブロックを表示"};
 
 exports.showGeneratedCode = function(d){return "コードの表示"};
 
@@ -9718,7 +9718,7 @@ exports.typeHint = function(d){return "カッコとセミコロンが必要な�
 
 exports.workspaceHeader = function(d){return "ここでブロックを組み立てよう:"};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "ここにJavascriptのコードを入力してください。"};
 
 exports.infinity = function(d){return "無限\n"};
 
@@ -9815,11 +9815,11 @@ exports.playSoundTooltip = function(d){return "選択音を再生"};
 
 exports.reinfFeedbackMsg = function(d){return "\"Try again\" ボタンを押すと、ゲームに戻ります。"};
 
-exports.scoreText = function(d){return "得点："};
+exports.scoreText = function(d){return "ポイント： "+v(d,"playerScore")};
 
 exports.setBackground = function(d){return "背景をセット"};
 
-exports.setBackgroundRandom = function(d){return "状況をランダム に設定"};
+exports.setBackgroundRandom = function(d){return "背景をランダムに設定"};
 
 exports.setBackgroundFlappy = function(d){return "状況を街（昼）に設定"};
 
@@ -9835,19 +9835,19 @@ exports.setBackgroundSanta = function(d){return "状況をクリスマスに設�
 
 exports.setBackgroundTooltip = function(d){return "背景画像を設定"};
 
-exports.setGapRandom = function(d){return "ギャップをランダムに設定"};
+exports.setGapRandom = function(d){return "障害物のすきまをランダムに設定"};
 
-exports.setGapVerySmall = function(d){return "ギャップを非常に小さいに設定"};
+exports.setGapVerySmall = function(d){return "障害物のすきまを非常に小さいに設定"};
 
-exports.setGapSmall = function(d){return "ギャップを小さいに設定"};
+exports.setGapSmall = function(d){return "障害物のすきまを小さいに設定"};
 
-exports.setGapNormal = function(d){return "ギャップを通常に設定"};
+exports.setGapNormal = function(d){return "障害物のすきまを通常に設定"};
 
-exports.setGapLarge = function(d){return "ギャップを大きいに設定"};
+exports.setGapLarge = function(d){return "障害物のすきまを大きいに設定"};
 
-exports.setGapVeryLarge = function(d){return "ギャップを非常に大きいに設定"};
+exports.setGapVeryLarge = function(d){return "障害物のすきまを非常に大きいに設定"};
 
-exports.setGapHeightTooltip = function(d){return "障害物の垂直方向のギャップを設定"};
+exports.setGapHeightTooltip = function(d){return "障害物の上下のすきまを設定"};
 
 exports.setGravityRandom = function(d){return "重力をランダムに設定"};
 
@@ -9989,11 +9989,11 @@ exports.whenClickTooltip = function(d){return "クリックしたイベント発
 
 exports.whenCollideGround = function(d){return "地面をヒットしたとき"};
 
-exports.whenCollideGroundTooltip = function(d){return "フラッピーが地面にヒットしたとき、次のアクションを実行"};
+exports.whenCollideGroundTooltip = function(d){return "フラッピーが地面にぶつかったとき、次のアクションを実行"};
 
 exports.whenCollideObstacle = function(d){return "障害物をヒットしたとき"};
 
-exports.whenCollideObstacleTooltip = function(d){return "フラッピーが障害物にヒットしたとき、次のアクションを実行"};
+exports.whenCollideObstacleTooltip = function(d){return "フラッピーがどかんにぶつかったとき、次のアクションを実行"};
 
 exports.whenEnterObstacle = function(d){return "障害物を通過したとき"};
 

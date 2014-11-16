@@ -1,8 +1,8 @@
 {
-  "compute":"beregn",
-  "equivalentExpression":"Prøv å endre rekkefølgen på argumentene dine for å få nøyaktig samme uttrykk.",
-  "extraTopBlocks":"Du har ledige blokker. Mente du å knytte disse til \"beregn\" blokken?",
+  "compute":"rekn ut",
+  "equivalentExpression":"Prøv å endre rekkjefylga på argumenta dine for å få nøyaktig same uttrykk.",
+  "extraTopBlocks":"Du har ledige blokker. Meinte du knyte desse til \"regn ut\"-blokka?",
   "goal":"Mål:",
-  "reinfFeedbackMsg":"Du kan trykke \"Prøv Igjen\"-knappen for å redigere uttrykket.",
-  "yourExpression":"Ditt uttrykk:"
+  "reinfFeedbackMsg":"Du kan trykkje knappen \"Prøv igjen\" for å redigere uttrykket.",
+  "yourExpression":"Uttrykket ditt:"
 }

@@ -19987,7 +19987,7 @@ exports.score = function(d){return "점수"};
 
 exports.showCodeHeader = function(d){return "코드 보기"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "블럭 보이기"};
 
 exports.showGeneratedCode = function(d){return "코드 보기"};
 
@@ -20025,7 +20025,7 @@ exports.typeHint = function(d){return "괄호 \"( )\" 와 세미콜론 \";\" 이
 
 exports.workspaceHeader = function(d){return "블럭들을 이곳에서 조립하세요:"};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "자바스크립트 코드 작성"};
 
 exports.infinity = function(d){return "무한"};
 
@@ -20054,31 +20054,31 @@ exports.genericFeedback = function(d){return "어떻게 종료되는지 살펴�
 var MessageFormat = require("messageformat");MessageFormat.locale.ko=function(n){return "other"}
 exports.actor = function(d){return "케릭터"};
 
-exports.backgroundBlack = function(d){return "black"};
+exports.backgroundBlack = function(d){return "검정"};
 
-exports.backgroundCave = function(d){return "cave"};
+exports.backgroundCave = function(d){return "동굴"};
 
-exports.backgroundCloudy = function(d){return "cloudy"};
+exports.backgroundCloudy = function(d){return "구름"};
 
-exports.backgroundHardcourt = function(d){return "hardcourt"};
+exports.backgroundHardcourt = function(d){return "하드코트"};
 
-exports.backgroundNight = function(d){return "night"};
+exports.backgroundNight = function(d){return "밤"};
 
-exports.backgroundUnderwater = function(d){return "underwater"};
+exports.backgroundUnderwater = function(d){return "물속"};
 
-exports.backgroundCity = function(d){return "city"};
+exports.backgroundCity = function(d){return "도시"};
 
-exports.backgroundDesert = function(d){return "desert"};
+exports.backgroundDesert = function(d){return "사막"};
 
-exports.backgroundRainbow = function(d){return "rainbow"};
+exports.backgroundRainbow = function(d){return "비"};
 
-exports.backgroundSoccer = function(d){return "soccer"};
+exports.backgroundSoccer = function(d){return "축구"};
 
-exports.backgroundSpace = function(d){return "space"};
+exports.backgroundSpace = function(d){return "우주"};
 
-exports.backgroundTennis = function(d){return "tennis"};
+exports.backgroundTennis = function(d){return "테니스"};
 
-exports.backgroundWinter = function(d){return "winter"};
+exports.backgroundWinter = function(d){return "겨울"};
 
 exports.catActions = function(d){return "동작"};
 
@@ -20110,7 +20110,7 @@ exports.emotion = function(d){return "감정"};
 
 exports.finalLevel = function(d){return "축하합니다! 마지막 퍼즐을 해결했습니다."};
 
-exports.for = function(d){return "for"};
+exports.for = function(d){return "다음에 대해"};
 
 exports.hello = function(d){return "안녕하세요."};
 
@@ -20318,9 +20318,9 @@ exports.setBackgroundWinter = function(d){return "겨울 배경 설정"};
 
 exports.setBackgroundTooltip = function(d){return "배경 이미지 설정"};
 
-exports.setEnemySpeed = function(d){return "set enemy speed"};
+exports.setEnemySpeed = function(d){return "상대방 스피드 설정"};
 
-exports.setPlayerSpeed = function(d){return "set player speed"};
+exports.setPlayerSpeed = function(d){return "플레이어 속도 설정"};
 
 exports.setScoreText = function(d){return "점수 등록"};
 
@@ -20440,9 +20440,9 @@ exports.shareStudioTwitter = function(d){return "@codeorg 에서 만든 내 스�
 
 exports.shareGame = function(d){return "스토리 공유하기:"};
 
-exports.showCoordinates = function(d){return "show coordinates"};
+exports.showCoordinates = function(d){return "좌표 보이기"};
 
-exports.showCoordinatesTooltip = function(d){return "show the protagonist's coordinates on the screen"};
+exports.showCoordinatesTooltip = function(d){return "화면의 중점 좌표 보이기"};
 
 exports.showTitleScreen = function(d){return "제목 화면 보이기"};
 
@@ -20456,7 +20456,7 @@ exports.showTSDefText = function(d){return "문장을 넣으세요."};
 
 exports.showTitleScreenTooltip = function(d){return "제목과 내용을 보여주는 제목 스크린을 나타냅니다."};
 
-exports.size = function(d){return "size"};
+exports.size = function(d){return "크기"};
 
 exports.setSprite = function(d){return "케릭터 설정"};
 

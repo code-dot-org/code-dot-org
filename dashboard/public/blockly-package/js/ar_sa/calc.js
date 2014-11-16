@@ -8354,17 +8354,17 @@ var MessageFormat = require("messageformat");MessageFormat.locale.ar = function(
   }
   return 'other';
 };
-exports.compute = function(d){return "compute"};
+exports.compute = function(d){return "يحسب"};
 
-exports.equivalentExpression = function(d){return "Try reordering your arguments to get exactly the same expression."};
+exports.equivalentExpression = function(d){return "حاول إعادة ترتيب حجتك للحصول على نفس التعبير."};
 
 exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"compute\" block?"};
 
-exports.goal = function(d){return "Goal:"};
+exports.goal = function(d){return "الهدف:"};
 
-exports.reinfFeedbackMsg = function(d){return "هل هذا يشبه ماتريده؟ يمكنك الضغط على زر \"حاول مرة اخرى\" لمشاهدة الرسم الخاص بك."};
+exports.reinfFeedbackMsg = function(d){return "يمكنك الضغط على زر \"حاول مرة أخرى\" لتحرير التعبير الخاص بك."};
 
-exports.yourExpression = function(d){return "Your expression:"};
+exports.yourExpression = function(d){return "التعبير الخاص بك:"};
 
 
 },{"messageformat":51}],39:[function(require,module,exports){
@@ -8388,9 +8388,9 @@ var MessageFormat = require("messageformat");MessageFormat.locale.ar = function(
 };
 exports.and = function(d){return "و"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "صحيح"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "خطأ"};
 
 exports.blocklyMessage = function(d){return "بلوكلي"};
 

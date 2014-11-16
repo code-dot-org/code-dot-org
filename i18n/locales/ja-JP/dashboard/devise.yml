@@ -1,57 +1,57 @@
-"ja":
+ja:
   devise:
     confirmations:
-      confirmed: "あなたのメール アドレスを確認しました。"
-      send_instructions: "数分であなたのアカウントを確認する方法が書かれたメールが届きます。"
-      send_paranoid_instructions: "当社のデータベースにあなたのメールアドレスが存在する場合、数分であなたのアカウントを確認する方法について書かれたメールが届きます。"
+      confirmed: あなたのメール アドレスを確認しました。
+      send_instructions: 数分であなたのアカウントを確認する方法が書かれたメールが届きます。
+      send_paranoid_instructions: 当社のデータベースにあなたのメールアドレスが存在する場合、数分であなたのアカウントを確認する方法について書かれたメールが届きます。
     failure:
-      already_authenticated: "既にサインインしています。"
-      inactive: "あなたのアカウントはまだ有効ではありませんでした。"
-      invalid: "メールアドレスまたはパスワードが無効です。"
-      invalid_token: "認証トークンが無効です。"
-      locked: "あなたのアカウントはロックされています。"
-      not_found_in_database: "メールアドレスまたはパスワードが無効です。"
-      timeout: "あなたのセッションの有効期限が切れているので、続けるためにはもう一度サインインしてください。"
-      unauthenticated: "続行する前にサインインまたは入会する必要があります。"
-      unconfirmed: "続ける前にあなたのアカウントを確認してください。"
+      already_authenticated: 既にサインインしています。
+      inactive: あなたのアカウントはまだ有効ではありませんでした。
+      invalid: メールアドレスまたはパスワードが無効です。
+      invalid_token: 認証トークンが無効です。
+      locked: あなたのアカウントはロックされています。
+      not_found_in_database: メールアドレスまたはパスワードが無効です。
+      timeout: あなたのセッションの有効期限が切れているので、続けるためにはもう一度サインインしてください。
+      unauthenticated: 続行する前にサインインまたは入会する必要があります。
+      unconfirmed: 続ける前にあなたのアカウントを確認してください。
     mailer:
       confirmation_instructions:
-        subject: "Code.org 確認手順"
+        subject: Code.org 確認手順
       reset_password_instructions:
-        subject: "Code.org パスワードのリセット手順"
+        subject: Code.org パスワードのリセット手順
       unlock_instructions:
-        subject: "ロックを解除する方法"
+        subject: ロックを解除する方法
     omniauth_callbacks:
       failure: '「%{reason}」という理由で%{kind}から認証できませんでした。'
       success: '%{kind} アカウントから正しく認証されました。'
     passwords:
-      no_token: "パスワード再設定メールからでないとこのページにアクセスできません。もしパスワード再設定メールから来たのであれば、与えられたURLが完全に使用できているか確認してください。"
-      send_instructions: "数分であなたのパスワードをリセットする方法が書かれたメールが届きます。"
-      send_paranoid_instructions: "当社のデータベースにあなたのメールアドレスが存在する場合、数分であなたのメールアドレスにパスワード回復リンクが届きます。"
-      updated: "あなたのパスワードは変更されました。今サインインしています。"
-      updated_not_active: "あなたのパスワードは変更されました。"
+      no_token: パスワード再設定メールからでないとこのページにアクセスできません。もしパスワード再設定メールから来たのであれば、与えられたURLが完全に使用できているか確認してください。
+      send_instructions: 数分であなたのパスワードをリセットする方法が書かれたメールが届きます。
+      send_paranoid_instructions: 当社のデータベースにあなたのメールアドレスが存在する場合、数分であなたのメールアドレスにパスワード回復リンクが届きます。
+      updated: あなたのパスワードは変更されました。今サインインしています。
+      updated_not_active: あなたのパスワードは変更されました。
     registrations:
-      destroyed: "さようなら！あなたのアカウントは正しく削除されました。またお会いしましょう。"
-      signed_up: "ようこそ！正しく入会しました。"
-      signed_up_but_inactive: "正しく入会しました。しかし、あなたのアカウントはまだ有効ではないのでサインインできませんでした。"
-      signed_up_but_locked: "正しく入会しました。ただし、あなたのアカウントはロックされているのでサインインできませんでした。"
-      signed_up_but_unconfirmed: "あなたのメールアドレスに確認のリンクを持つメッセージが送信されています。あなたのアカウントを有効にするためにリンクを開いてください。"
-      update_needs_confirmation: "あなたのアカウントは更新されましたが、新しいメールアドレスを照合する必要があります。あなたのメールをチェックして、新しいメールアドレスの確認を完了するリンクをクリックしてください。"
-      updated: "あなたのアカウントを更新しました。"
+      destroyed: さようなら！あなたのアカウントは正しく削除されました。またお会いしましょう。
+      signed_up: ようこそ！正しく入会しました。
+      signed_up_but_inactive: 正しく入会しました。しかし、あなたのアカウントはまだ有効ではないのでサインインできませんでした。
+      signed_up_but_locked: 正しく入会しました。ただし、あなたのアカウントはロックされているのでサインインできませんでした。
+      signed_up_but_unconfirmed: あなたのメールアドレスに確認のリンクを持つメッセージが送信されています。あなたのアカウントを有効にするためにリンクを開いてください。
+      update_needs_confirmation: あなたのアカウントは更新されましたが、新しいメールアドレスを照合する必要があります。あなたのメールをチェックして、新しいメールアドレスの確認を完了するリンクをクリックしてください。
+      updated: あなたのアカウントを更新しました。
     sessions:
-      signed_in: "正しくサインインしました。"
-      signed_out: "正しくサインアウトしました。"
+      signed_in: 正しくサインインしました。
+      signed_out: 正しくサインアウトしました。
     unlocks:
-      send_instructions: "数分であなたのアカウントのロックを解除する方法が書かれたメールが届きます。"
-      send_paranoid_instructions: "あなたのアカウントが存在するなら、数分でロックを解除する方法が書かれたメールが届きます。"
-      unlocked: "あなたのアカウントが正しくロック解除されました。続けるにはサインインしてください。"
+      send_instructions: 数分であなたのアカウントのロックを解除する方法が書かれたメールが届きます。
+      send_paranoid_instructions: あなたのアカウントが存在するなら、数分でロックを解除する方法が書かれたメールが届きます。
+      unlocked: あなたのアカウントが正しくロック解除されました。続けるにはサインインしてください。
   errors:
     messages:
-      already_confirmed: "もう確認されたので、サインインしてください"
+      already_confirmed: もう確認されたので、サインインしてください
       confirmation_period_expired: '%{period}以内に確認される必要があるので、新しいものをリクエストしてください'
-      expired: "期限が切れたので、新しいものをリクエストしてください"
-      not_found: "見つかりませんでした"
-      not_locked: "ロックされていませんでした"
+      expired: 期限が切れたので、新しいものをリクエストしてください
+      not_found: 見つかりませんでした
+      not_locked: ロックされていませんでした
       not_saved:
         one: '1エラーのためにこの%{resource}が保存されるのを止めました：'
         other: '%{count}エラーのためにこの%{resource}が保存されるのを止めました：'

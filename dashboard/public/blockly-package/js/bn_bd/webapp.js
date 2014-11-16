@@ -8187,9 +8187,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.bn=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "এবং"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "সত্যি"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "মিথ্যা"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 

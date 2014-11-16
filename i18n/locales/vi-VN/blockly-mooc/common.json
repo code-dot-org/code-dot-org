@@ -1,8 +1,10 @@
 {
   "and":"và",
+  "booleanTrue":"đúng",
+  "booleanFalse":"sai",
   "blocklyMessage":"Blockly",
   "catActions":"Các hành động",
-  "catColour":"màu sắc",
+  "catColour":"Màu sắc",
   "catLogic":"Logic",
   "catLists":"Danh sách",
   "catLoops":"Vòng lặp",

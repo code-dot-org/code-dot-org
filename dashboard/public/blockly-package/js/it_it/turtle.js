@@ -7089,8 +7089,100 @@ exports.answer = function(page, level) {
 
 },{"../base":2,"./api":28}],28:[function(require,module,exports){
 var BlocklyApps = require('../base');
+var utils = require('../utils');
+var _ = utils.getLodash();
 
 exports.log = [];
+
+exports.drawCircle = function (size, id) {
+  for (var i = 0; i < 36; i++) {
+    exports.moveForward(size, id);
+    exports.turnRight(10, id);
+  }
+};
+
+exports.drawSnowflake = function (type, id) {
+  var i, j, k;
+
+  // mirors Blockly.JavaScript.colour_random.
+  var random_colour = function () {
+    var colors = Blockly.FieldColour.COLOURS;
+    return colors[Math.floor(Math.random()*colors.length)];
+  };
+
+  if (type === 'random') {
+    type = _.sample(['fractal', 'flower', 'spiral', 'line', 'parallelogram', 'square']);
+  }
+
+  switch(type) {
+    case 'fractal':
+      for (i = 0; i < 8; i++) {
+        exports.jumpForward(45, id);
+        exports.turnLeft(45, id);
+        for (j = 0; j < 3; j++) {
+          for (k = 0; k < 3; k++) {
+            exports.moveForward(15, id);
+            exports.moveBackward(15, id);
+            exports.turnRight(45, id);
+          }
+          exports.turnLeft(90, id);
+          exports.moveBackward(15, id);
+          exports.turnLeft(45, id);
+        }
+        exports.turnRight(90, id);
+      }
+      break;
+
+    case 'flower':
+      for (i = 0; i < 5; i++) {
+        exports.drawCircle(2, id);
+        exports.drawCircle(4, id);
+        exports.turnRight(72, id);
+      }
+      break;
+
+    case 'spiral':
+      for (i = 0; i < 20; i++) {
+        exports.drawCircle(3, id);
+        exports.moveForward(20, id);
+        exports.turnRight(18, id);
+      }
+      break;
+
+    case 'line':
+      for (i = 0; i < 90; i++) {
+        exports.penColour(random_colour());
+        exports.moveForward(50, id);
+        exports.moveBackward(50, id);
+        exports.turnRight(4, id);
+      }
+      exports.penColour("#FFFFFF", id);
+      break;
+
+    case 'parallelogram':
+      for (i = 0; i < 10; i++) {
+        for (j = 0; j < 2; j++) {
+          exports.moveForward(50, id);
+          exports.turnRight(60, id);
+          exports.moveForward(50, id);
+          exports.turnRight(120, id);
+        }
+        exports.turnRight(36, id);
+      }
+      break;
+
+    case 'square':
+      for (i = 0; i < 10; i++) {
+        for (j = 0; j < 4; j++) {
+          exports.moveForward(50, id);
+          exports.turnRight(90, id);
+        }
+        exports.turnRight(36, id);
+      }
+      break;
+  }
+};
+
 
 exports.moveForward = function(distance, id) {
   this.log.push(['FD', distance, id]);
@@ -7180,7 +7272,7 @@ exports.drawStamp = function(stamp, id) {
   this.log.push(['stamp', stamp, id]);
 };
 
-},{"../base":2}],29:[function(require,module,exports){
+},{"../base":2,"../utils":39}],29:[function(require,module,exports){
 /**
  * Blockly Demo: Turtle Graphics
  *
@@ -8208,6 +8300,9 @@ exports.Colours = {
  */
 
 var msg = require('../../locale/it_it/turtle');
+var utils = require('../utils');
+var _ = utils.getLodash();
+
 
 exports.install = function(blockly, generator, gensym) {
  installDrawASquare(blockly, generator, gensym);
@@ -8867,7 +8962,8 @@ function installCreateASnowflakeDropdown(blockly, generator, gensym) {
     [msg.createSnowflakeLine(), 'line'],
     [msg.createSnowflakeSpiral(), 'spiral'],
     [msg.createSnowflakeFlower(), 'flower'],
-    [msg.createSnowflakeFractal(), 'fractal']
+    [msg.createSnowflakeFractal(), 'fractal'],
+    [msg.createSnowflakeRandom(), 'random']
   ];
 
   blockly.Blocks.create_snowflake_dropdown = {
@@ -8882,83 +8978,12 @@ function installCreateASnowflakeDropdown(blockly, generator, gensym) {
   };
 
   generator.create_snowflake_dropdown = function () {
-    var loopVar = gensym('count');
-    var loopVar2 = gensym('count');
-    var loopVar3 = gensym('count');
-    var color_random = generator.colour_random()[0];
-
     var type = this.getTitleValue('TYPE');
-    switch (type) {
-      case 'fractal':
-        return [
-          'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 8; ' + loopVar + '++) {',
-          '  Turtle.jumpForward(45);',
-          '  Turtle.turnLeft(45);',
-          '  for (var ' + loopVar2 + ' = 0; ' + loopVar2 + ' < 3; ' + loopVar2 + '++) {',
-          '    for (var ' + loopVar3 + ' = 0; ' + loopVar3 + ' < 3; ' + loopVar3 + '++) {',
-          '      Turtle.moveForward(15);',
-          '      Turtle.moveBackward(15);',
-          '      Turtle.turnRight(45);',
-          '    }',
-          '    Turtle.turnLeft(90);',
-          '    Turtle.moveBackward(15);',
-          '    Turtle.turnLeft(45);',
-          '  }',
-          '  Turtle.turnRight(90);',
-          '}\n'].join('\n');
-
-      case 'flower':
-        return [
-          'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 5; ' + loopVar + '++) {',
-          createACircleCode(2, gensym, '  '),
-          createACircleCode(4, gensym, '  '),
-          '  Turtle.turnRight(72);',
-          '}\n'].join('\n');
-
-      case 'spiral':
-        return [
-          'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 20; ' + loopVar + '++) {',
-          createACircleCode(3, gensym, '  '),
-          '  Turtle.moveForward(20);',
-          '  Turtle.turnRight(18);',
-          '}\n'].join('\n');
-
-      case 'line':
-        return [
-          'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 90; ' + loopVar + '++) {',
-          '  Turtle.penColour(' + color_random + ');',
-          '  Turtle.moveForward(50);',
-          '  Turtle.moveBackward(50);',
-          '  Turtle.turnRight(4);',
-          '}',
-          'Turtle.penColour("#FFFFFF");\n'].join('\n');
-
-      case 'parallelogram':
-        return [
-          'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 10; ' + loopVar + '++) {',
-          '  for (var ' + loopVar2 + ' = 0; ' + loopVar2 + ' < 2; ' + loopVar2 + '++) {',
-          '    Turtle.moveForward(50);',
-          '    Turtle.turnRight(60);',
-          '    Turtle.moveForward(50);',
-          '    Turtle.turnRight(120);',
-          '  }',
-          '  Turtle.turnRight(36);',
-          '}\n'].join('\n');
-
-      case 'square':
-        return [
-          'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 10; ' + loopVar + '++) {',
-          '  for (var ' + loopVar2 + ' = 0; ' + loopVar2 + ' < 4; ' + loopVar2 + '++) {',
-          '    Turtle.moveForward(50);',
-          '    Turtle.turnRight(90);',
-          '  }',
-          '  Turtle.turnRight(36);',
-          '}\n'].join('\n');
-    }
+    return "Turtle.drawSnowflake('" + type + "', 'block_id_" + this.id + "');";
   };
 }
 
-},{"../../locale/it_it/turtle":42}],33:[function(require,module,exports){
+},{"../../locale/it_it/turtle":42,"../utils":39}],33:[function(require,module,exports){
 var levelBase = require('../level_base');
 var Colours = require('./core').Colours;
 var answer = require('./answers').answer;
@@ -11950,9 +11975,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.it=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "e"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "vero"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "falso"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -11970,7 +11995,7 @@ exports.catMath = function(d){return "Matematica"};
 
 exports.catProcedures = function(d){return "Funzioni"};
 
-exports.catText = function(d){return "testo"};
+exports.catText = function(d){return "Testo"};
 
 exports.catVariables = function(d){return "Variabili"};
 
@@ -12002,7 +12027,7 @@ exports.finalStage = function(d){return "Complimenti! Hai completato l'ultima le
 
 exports.finalStageTrophies = function(d){return "Complimenti! Hai completato l'ultima lezione e vinto "+p(d,"numTrophies",0,"it",{"one":"un trofeo","other":n(d,"numTrophies")+" trofei"})+"."};
 
-exports.finish = function(d){return "Fine"};
+exports.finish = function(d){return "Condividi"};
 
 exports.generatedCodeInfo = function(d){return "Anche le migliori università (p.es., "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+") insegnano la programmazione visuale con i blocchi. Ma i blocchi che metti insieme possono essere rappresentati anche in JavaScript, uno dei linguaggi di programmazione più usati al mondo:"};
 
@@ -12016,7 +12041,7 @@ exports.jump = function(d){return "salta"};
 
 exports.levelIncompleteError = function(d){return "Stai usando tutti i tipi di blocchi necessari, ma non nel modo giusto."};
 
-exports.listVariable = function(d){return "elenco"};
+exports.listVariable = function(d){return "lista"};
 
 exports.makeYourOwnFlappy = function(d){return "Costruisci la tua versione del gioco Flappy"};
 
@@ -12048,9 +12073,9 @@ exports.runTooltip = function(d){return "Esegui il programma definito dai blocch
 
 exports.score = function(d){return "punteggio"};
 
-exports.showCodeHeader = function(d){return "Visualizza codice"};
+exports.showCodeHeader = function(d){return "Mostra il codice"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Mostra i blocchi"};
 
 exports.showGeneratedCode = function(d){return "Mostra il codice"};
 
@@ -12064,7 +12089,7 @@ exports.tooManyBlocksMsg = function(d){return "Questo esercizio può essere riso
 
 exports.tooMuchWork = function(d){return "Mi hai fatto fare un sacco di lavoro!  Puoi provare a farmi fare meno ripetizioni?"};
 
-exports.toolboxHeader = function(d){return "blocchi"};
+exports.toolboxHeader = function(d){return "Blocchi"};
 
 exports.openWorkspace = function(d){return "Come funziona"};
 
@@ -12088,7 +12113,7 @@ exports.typeHint = function(d){return "Sono necessarie le parentesi e i punto e 
 
 exports.workspaceHeader = function(d){return "Assembla i tuoi blocchi qui: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Scrivi qua il tuo codice JavaScript"};
 
 exports.infinity = function(d){return "Infinito"};
 
@@ -12148,6 +12173,8 @@ exports.createSnowflakeSpiral = function(d){return "create a snowflake of type s
 exports.createSnowflakeFlower = function(d){return "create a snowflake of type flower"};
 
 exports.createSnowflakeFractal = function(d){return "create a snowflake of type fractal"};
+
+exports.createSnowflakeRandom = function(d){return "create a snowflake of type random"};
 
 exports.createASnowflakeBranch = function(d){return "create a snowflake branch"};
 
@@ -12243,11 +12270,11 @@ exports.penTooltip = function(d){return "Alza o abbassa la matita, per avviare o
 
 exports.penUp = function(d){return "Alza la matita"};
 
-exports.reinfFeedbackMsg = function(d){return "Somiglia a quello che volevi? Puoi premere il pulsante \"Riprova\" per rivedere il tuo disegno."};
+exports.reinfFeedbackMsg = function(d){return "Somiglia a quello che volevi? Se premi il pulsante \"Riprova\" puoi tornare indietro per modificare il tuo disegno."};
 
 exports.setColour = function(d){return "Imposta il colore"};
 
-exports.setPattern = function(d){return "set pattern"};
+exports.setPattern = function(d){return "imposta lo schema"};
 
 exports.setWidth = function(d){return "imposta la larghezza"};
 
@@ -12257,7 +12284,7 @@ exports.showMe = function(d){return "Mostrami"};
 
 exports.showTurtle = function(d){return "Mostra l'artista"};
 
-exports.sizeParameter = function(d){return "size"};
+exports.sizeParameter = function(d){return "dimensione"};
 
 exports.step = function(d){return "passo"};
 

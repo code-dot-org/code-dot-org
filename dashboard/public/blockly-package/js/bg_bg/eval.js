@@ -11603,9 +11603,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.bg=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "и"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "вярно"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "грешно"};
 
 exports.blocklyMessage = function(d){return "Блокли"};
 
@@ -11703,7 +11703,7 @@ exports.score = function(d){return "резултат"};
 
 exports.showCodeHeader = function(d){return "Покажи код"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Покажи блоковете"};
 
 exports.showGeneratedCode = function(d){return "Покажи кода"};
 
@@ -11741,7 +11741,7 @@ exports.typeHint = function(d){return "Обърнете внимание, че �
 
 exports.workspaceHeader = function(d){return "Сглобете вашите блокове тук: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Въведете вашия JavaScript код тук"};
 
 exports.infinity = function(d){return "Безкрайност"};
 
@@ -11768,43 +11768,43 @@ exports.genericFeedback = function(d){return "Вижте какво сте въ�
 
 },{"messageformat":60}],48:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.bg=function(n){return n===1?"one":"other"}
-exports.circleBlockTitle = function(d){return "circle (radius, style, color)"};
+exports.circleBlockTitle = function(d){return "кръг (радиус, стил, цвят)"};
 
-exports.displayBlockTitle = function(d){return "display"};
+exports.displayBlockTitle = function(d){return "дисплей"};
 
-exports.ellipseBlockTitle = function(d){return "ellipse (width, height, style, color)"};
+exports.ellipseBlockTitle = function(d){return "елипса (ширина, височина, стил, цвят)"};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"display\" block?"};
+exports.extraTopBlocks = function(d){return "Имате не закачени блокове. Искате ли да ги прикачите към \"дисплей\" блока?"};
 
-exports.overlayBlockTitle = function(d){return "overlay (top, bottom)"};
+exports.overlayBlockTitle = function(d){return "наслагване (отгоре, отдолу)"};
 
-exports.placeImageBlockTitle = function(d){return "place-image (x, y, image)"};
+exports.placeImageBlockTitle = function(d){return "място-изображение (x, y, изображение)"};
 
-exports.rectangleBlockTitle = function(d){return "rectangle (width, height, style, color)"};
+exports.rectangleBlockTitle = function(d){return "правоъгълник (ширина, височина, стил, цвят)"};
 
-exports.rotateImageBlockTitle = function(d){return "rotate (degrees, image)"};
+exports.rotateImageBlockTitle = function(d){return "завъртане (градуси, изображение)"};
 
-exports.scaleImageBlockTitle = function(d){return "scale (factor)"};
+exports.scaleImageBlockTitle = function(d){return "мащаб (фактор)"};
 
-exports.squareBlockTitle = function(d){return "square (size, style, color)"};
+exports.squareBlockTitle = function(d){return "квадрат (размер, стил, цвят)"};
 
-exports.starBlockTitle = function(d){return "star (radius, style, color)"};
+exports.starBlockTitle = function(d){return "звезда (радиус, стил, цвят)"};
 
-exports.stringAppendBlockTitle = function(d){return "string-append (first, second)"};
+exports.stringAppendBlockTitle = function(d){return "Добавяне на поредица (първо, второ)"};
 
-exports.stringLengthBlockTitle = function(d){return "string-length (string)"};
+exports.stringLengthBlockTitle = function(d){return "дължина на поредицата (поредно)"};
 
-exports.textBlockTitle = function(d){return "text (string, size, color)"};
+exports.textBlockTitle = function(d){return "текст (поредност, размер, цвят)"};
 
-exports.triangleBlockTitle = function(d){return "triangle (size, style, color)"};
+exports.triangleBlockTitle = function(d){return "триъгълник (размер, стил, цвят)"};
 
-exports.underlayBlockTitle = function(d){return "underlay (bottom, top)"};
+exports.underlayBlockTitle = function(d){return "подложка (отдолу, отгоре)"};
 
-exports.outline = function(d){return "outline"};
+exports.outline = function(d){return "контур"};
 
-exports.solid = function(d){return "solid"};
+exports.solid = function(d){return "твърд"};
 
-exports.string = function(d){return "string"};
+exports.string = function(d){return "поредица"};
 
 
 },{"messageformat":60}],49:[function(require,module,exports){

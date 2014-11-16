@@ -9580,9 +9580,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.bg=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "и"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "вярно"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "грешно"};
 
 exports.blocklyMessage = function(d){return "Блокли"};
 
@@ -9680,7 +9680,7 @@ exports.score = function(d){return "резултат"};
 
 exports.showCodeHeader = function(d){return "Покажи код"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Покажи блоковете"};
 
 exports.showGeneratedCode = function(d){return "Покажи кода"};
 
@@ -9718,7 +9718,7 @@ exports.typeHint = function(d){return "Обърнете внимание, че �
 
 exports.workspaceHeader = function(d){return "Сглобете вашите блокове тук: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Въведете вашия JavaScript код тук"};
 
 exports.infinity = function(d){return "Безкрайност"};
 

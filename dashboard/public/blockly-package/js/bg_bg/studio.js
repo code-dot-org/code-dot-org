@@ -19887,9 +19887,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.bg=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "и"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "вярно"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "грешно"};
 
 exports.blocklyMessage = function(d){return "Блокли"};
 
@@ -19987,7 +19987,7 @@ exports.score = function(d){return "резултат"};
 
 exports.showCodeHeader = function(d){return "Покажи код"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Покажи блоковете"};
 
 exports.showGeneratedCode = function(d){return "Покажи кода"};
 
@@ -20025,7 +20025,7 @@ exports.typeHint = function(d){return "Обърнете внимание, че �
 
 exports.workspaceHeader = function(d){return "Сглобете вашите блокове тук: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Въведете вашия JavaScript код тук"};
 
 exports.infinity = function(d){return "Безкрайност"};
 
@@ -20054,31 +20054,31 @@ exports.genericFeedback = function(d){return "Вижте какво сте въ�
 var MessageFormat = require("messageformat");MessageFormat.locale.bg=function(n){return n===1?"one":"other"}
 exports.actor = function(d){return "актьор"};
 
-exports.backgroundBlack = function(d){return "black"};
+exports.backgroundBlack = function(d){return "черно"};
 
-exports.backgroundCave = function(d){return "cave"};
+exports.backgroundCave = function(d){return "пещера"};
 
-exports.backgroundCloudy = function(d){return "cloudy"};
+exports.backgroundCloudy = function(d){return "облачен"};
 
-exports.backgroundHardcourt = function(d){return "hardcourt"};
+exports.backgroundHardcourt = function(d){return "твърда настилка"};
 
-exports.backgroundNight = function(d){return "night"};
+exports.backgroundNight = function(d){return "нощ"};
 
-exports.backgroundUnderwater = function(d){return "underwater"};
+exports.backgroundUnderwater = function(d){return "подводен"};
 
-exports.backgroundCity = function(d){return "city"};
+exports.backgroundCity = function(d){return "град"};
 
-exports.backgroundDesert = function(d){return "desert"};
+exports.backgroundDesert = function(d){return "пустиня"};
 
-exports.backgroundRainbow = function(d){return "rainbow"};
+exports.backgroundRainbow = function(d){return "дъга"};
 
-exports.backgroundSoccer = function(d){return "soccer"};
+exports.backgroundSoccer = function(d){return "футбол"};
 
-exports.backgroundSpace = function(d){return "space"};
+exports.backgroundSpace = function(d){return "космос"};
 
-exports.backgroundTennis = function(d){return "tennis"};
+exports.backgroundTennis = function(d){return "тенис"};
 
-exports.backgroundWinter = function(d){return "winter"};
+exports.backgroundWinter = function(d){return "зима"};
 
 exports.catActions = function(d){return "Действия"};
 
@@ -20110,7 +20110,7 @@ exports.emotion = function(d){return "настроение"};
 
 exports.finalLevel = function(d){return "Поздравления! Ти реши последния пъзел."};
 
-exports.for = function(d){return "for"};
+exports.for = function(d){return "за"};
 
 exports.hello = function(d){return "Здравейте"};
 
@@ -20318,9 +20318,9 @@ exports.setBackgroundWinter = function(d){return "задава фон зима"}
 
 exports.setBackgroundTooltip = function(d){return "Задава фоновото изображение"};
 
-exports.setEnemySpeed = function(d){return "set enemy speed"};
+exports.setEnemySpeed = function(d){return "задайте скоростта на врага"};
 
-exports.setPlayerSpeed = function(d){return "set player speed"};
+exports.setPlayerSpeed = function(d){return "задайте скоростта на героя"};
 
 exports.setScoreText = function(d){return "постави резултат"};
 
@@ -20440,9 +20440,9 @@ exports.shareStudioTwitter = function(d){return "Вижте историята, 
 
 exports.shareGame = function(d){return "Споделете вашата история:"};
 
-exports.showCoordinates = function(d){return "show coordinates"};
+exports.showCoordinates = function(d){return "покажи координати"};
 
-exports.showCoordinatesTooltip = function(d){return "show the protagonist's coordinates on the screen"};
+exports.showCoordinatesTooltip = function(d){return "покажи координатите на главният герой на екрана"};
 
 exports.showTitleScreen = function(d){return "показва заглавния екран"};
 
@@ -20456,7 +20456,7 @@ exports.showTSDefText = function(d){return "въведи текст тук"};
 
 exports.showTitleScreenTooltip = function(d){return "Показва заглавието на екрана."};
 
-exports.size = function(d){return "size"};
+exports.size = function(d){return "размер"};
 
 exports.setSprite = function(d){return "задаване"};
 

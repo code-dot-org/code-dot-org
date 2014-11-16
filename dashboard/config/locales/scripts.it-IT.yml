@@ -28,7 +28,7 @@
           Flappy non blockly: Flappy senza blocchi
           title: Corso 1
           Artist 2: Artista 2
-          Happy Maps: Le Mappe Felici
+          Happy Maps: Mappe Felici
           Move it, Move it: Muovilo, Muovilo
           'Real-life Algorithms: Plant a Seed': 'Algoritmi della Vita Reale: Piantare
             un Seme'
@@ -48,13 +48,13 @@
           'Maze: Loops': 'Labirinto: Cicli'
           'Bee: Loops': 'Ape: Cicli'
           'Studio: Create a Story': 'Laboratorio: Crea una Storia'
-          description_short: Il Corso 1 è per studenti di prima elementare che stanno
-            iniziando a leggere.
+          description_short: Il Corso 1 è progettato per studenti che stanno iniziando
+            a leggere. Consigliato per la prima elementare.
           'Artist: Loops': 'Artista: Cicli'
         course2:
           The Maze: Il Labirinto
           Suzi: Suzi
-          The Artist: L'artista
+          The Artist: L'Artista
           Artist Debugging: 'Artista: Correzione di Errori'
           Bounce: Rimbalzo
           'Studio: Create a Story': 'Laboratorio: Crea una Storia'
@@ -73,7 +73,7 @@
             di Carta'
           Getting Loopy: Diventare Ripetitivi
           Relay programming: Programmazione a Staffetta
-          Conditionals: Condizionali
+          Conditionals: Istruzioni condizionali
           Binary Bracelets: Braccialetti Binari
           The Big Event: Il Grande Evento
           Your Digital Footprint: La tua Impronta Digitale
@@ -90,15 +90,15 @@
           'Bee: Debugging': 'Ape: Correzione di Errori'
           'Artist: Debugging': 'Artista: Correzione di Errori'
           'Bee: Conditionals': 'Ape: Istruzioni Condizionali'
-          description_short: Il Corso 2 è per studenti delle scuole elementari che
-            sanno già leggere.
+          description_short: Il Corso 2 è progettato per studenti che hanno già imparato
+            a leggere.  Consigliato dalla seconda alla quinta elementare.
           'Artist: Sequence2': 'Artista: Sequenza 2'
           'Maze: Sequence2': 'Labirinto: Sequenza 2'
           'Artist: Nested Loops': 'Artista: Cicli Annidati'
         course3:
           The Maze: Il Labirinto
           'Studio: Create a Story': 'Laboratorio: Crea una Storia'
-          The Artist: L'artista
+          The Artist: L'Artista
           title: Corso 3
           Artist Functions: 'Artista: Funzioni'
           Artist For Loops: 'Artista: Cicli con Contatore'
@@ -113,7 +113,7 @@
           Maze Conditionals: 'Labirinto: Istruzioni Condizionali'
           Artist Functions with Parameters: 'Artista: Funzioni con Parametri'
           Computational Thinking: Pensiero computazionale
-          Functional Suncatchers: Acchiappa-Sole Funzionale
+          Functional Suncatchers: Acchiappa-sole Funzionale
           Songwriting Parameters: Parametri per la Composizione di Canzoni
           Dice Race: Gara con i Dadi
           Internet: Internet
@@ -123,7 +123,7 @@
           description: Il Corso 3 è progettato per studenti che hanno già svolto il
             Corso 2. Gli studenti approfondiscono i concetti della programmazione
             introdotti nei corsi precedenti e imparano a definire soluzioni flessibili
-            per problemi più complessi. Alla fine del corso gli studenti creano giochi
+            per problemi complessi. Alla fine del corso gli studenti creano giochi
             interattivi e storie da condividere con tutti. Il corso è raccomandato
             per la quarta e quinta elementare.
           'Studio: Create a Game': 'Laboratorio: Crea un Gioco'
@@ -137,8 +137,8 @@
           'Farmer: While Loops': 'Agricoltore: Cicli "Mentre"'
           'Bee: Nested Loops': 'Ape: Cicli Annidati'
           'Bee: Debugging': 'Ape: Correzione di Errori'
-          description_short: Gli studenti che seguono il Corso 3 dovrebbero aver già
-            svolto il Corso 2.
+          description_short: Il Corso 3 è progettato come il seguito del corso 2.  Consigliato
+            per la quarta e quinta elementare.
           Maze2: Labirinto 2
           Artist2: Artista 2
           'Artist: Functions2': 'Artista: Funzioni 2'
@@ -158,6 +158,28 @@
           Assessments: Valutazioni
           Unit 1: Unità 1
           Unit 2: Unità 2
+          Ninja Cat and the Coordinate Plane: Il Gatto Ninja e il Piano Cartesiano
+          'Calc: Circles of Evaluation': 'Calcolo: Circoli di Valutazione'
+          'Artist: Strings and Images': 'Artista: Stringhe e Immagini'
+          Contracts: Contratti
+          'Artist: Writing Contracts': 'Artista: Scrivere Contratti'
+          'Calc: Defining Variables': 'Calcolo: Definizione di Variabili'
+          'Play Lab: Defining Variables': 'Laboratorio: Definizione di Variabili'
+          The Design Recipe: La Ricetta della Progettazione
+          'Artist: Defining Functions': 'Artista: Definizione di Funzioni'
+          'Play Lab: Defining Functions': 'Laboratorio: Definizione di Funzioni'
+          'Artist: Functions': 'Artista: Funzioni'
+          'Play Lab: Animation': 'Laboratorio: Animazione'
+          Booleans: Valori booleani
+          'Play Lab: Booleans': 'Laboratorio: Valori Booleani'
+          'Calc: Boolean Operators': 'Calcolo: Operatori Booleani'
+          'Play Lab: Boolean Operators': 'Laboratorio: Operatori Booleani'
+          Conditionals and Piecewise Functions: Istruzioni Condizionali e Funzioni
+            a Tratti
+          'Artist: Conditionals': 'Artista: Istruzioni Condizionali'
+          Collision Detection and the Distance Formula: Rilevamento delle Collisioni
+            e Formula per la Distanza
+          'Play Lab: Collision Detection': 'Laboratorio: Rilevamento delle Collisioni'
         playlab:
           title: Laboratorio
           description: Crea una storia o inventa un gioco col Laboratorio!
@@ -168,23 +190,74 @@
           description: Disegna fantastiche immagini e decorazioni con l'artista!
           Artist: Artista
           description_short: Disegna fantastiche immagini e decorazioni con l'artista!
+        scrat:
+          title: Scrat
+          description_short: Scrat short description.
+          description: Scrat long description
+          'Maze: Sequence': 'Labirinto: Sequenza'
+        hourofcode:
+          Maze: Labirinto
+          title: L'Ora del Codice
+          description_short: Try the basics of computer science with characters from
+            Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
+          description: Try the basics of computer science with characters from Angry
+            Birds, Plants vs. Zombies, and Scrat from Ice Age!
+        frozen:
+          title: Frozen
+          description_short: Join the Royal Sisters of Arendelle, Anna and Elsa, as
+            they explore the magic and beauty of ice. You will write code to create
+            snowflakes and patterns as you ice-skate and make a winter wonderland
+            that you can then share with your friends!
+          description: Join the Royal Sisters of Arendelle, Anna and Elsa, as they
+            explore the magic and beauty of ice. You will write code to create snowflakes
+            and patterns as you ice-skate and make a winter wonderland that you can
+            then share with your friends!
+          Artist: Artista
         course4:
-          description_short: Students taking Course 4 should have already taken Courses
-            2 and 3.
-          description: Course 4 is designed for students who have taken Course 2 and
-            3. Students will delve deeper into programming topics introduced in previous
-            courses to flexible solutions to more complex problems. By the end of
-            this course, students create interactive stories and games they can share
-            with anyone. Recommended for grades 4-8.
-          'Artist: Variables': 'Artist: Variables'
-          'Bee: For Loops': 'Bee: For Loops'
-          title: Course 4
-          'Algorithms: Tangrams': 'Algorithms: Tangrams'
+          description_short: Gli studenti che seguono il Corso 4 dovrebbero aver già
+            svolto i Corsi 2 e 3.
+          description: Il Corso 4 è progettato per studenti che hanno già svolto i
+            Corsi 2 e 3. Gli studenti approfondiscono ancora di più i concetti della
+            programmazione introdotti nei corsi precedenti e imparano a definire soluzioni
+            flessibili per problemi molto complessi. Alla fine del corso gli studenti
+            creano giochi interattivi e storie da condividere con tutti. Il corso
+            è raccomandato per studenti dalla quarta elementare alla terza media.
+          'Artist: Variables': 'Artista: Variabili'
+          'Bee: For Loops': 'Ape: Cicli con Contatore'
+          title: Corso 4
+          'Algorithms: Tangrams': 'Algoritmi: Tangram'
           Variables: Variabili
-          'Play Lab: Variables': 'Play Lab: Variables'
-          'Play Lab: Functions with Parameters': 'Play Lab: Functions with Parameters'
-          'Bee: Functions with Parameters': 'Bee: Functions with Parameters'
-          'Artist: For Loops': 'Artist: For Loops'
-          'Play Lab: For Loops': 'Play Lab: For Loops'
+          'Play Lab: Variables': 'Laboratorio: Variabili'
+          'Play Lab: Functions with Parameters': 'Laboratorio: Funzioni con Parametri'
+          'Bee: Functions with Parameters': 'Ape: Funzioni con Parametri'
+          'Artist: For Loops': 'Artista: Cicli con Contatore'
+          'Play Lab: For Loops': 'Laboratorio: Cicli con Contatore'
           'Artist: Functions': 'Artista: Funzioni'
-          'Artist: Functions with Paraqmeters': 'Artist: Functions with Paraqmeters'
+          'Artist: Functions with Paraqmeters': 'Artista: Funzioni con Parametri'
+          'Unplugged: Tangrams': 'Senza Rete: Tangram'
+          Artist: Artista
+          Bee: Ape
+          'Unplugged: Envelope Variables': 'Senza Rete: Variabili della Busta'
+          'Unplugged: Madlibs': 'Senza Rete: Mad-Libs'
+          'Unplugged: For Loop Fun': 'Senza Rete: Divertiti usando i Cicli con Contatore'
+          'Unplugged: Songwriting with Parameters': 'Senza Rete: Composizione di Canzoni
+            con Parametri'
+          'Artist: Functions with Parameters': 'Artista: Funzioni con Parametri'
+          'Unplugged: Binary': 'Senza Rete: Binario'
+          Bee Binary: 'Ape: Binario'
+          Farmer Binary: 'Agricoltore: Binario'
+          Maze and Bee: Il Labirinto e l'Ape
+          Artist Binary: Artist Binary
+        Course4pre:
+          description_short: Una breve presentazione dei concetti importanti per gli
+            studenti che non hanno svolto i Corsi 2 e 3.
+          Course 4 Prerequisite: Prerequisiti del Corso 4
+          'Maze: Sequence': 'Labirinto: Sequenza'
+          'Artist: Sequence': 'Artista: Sequenza'
+          'Artist: Loops': 'Artista: Cicli'
+          'Bee: Conditionals': 'Ape: Istruzioni Condizionali'
+          'Artist: Nested Loops': 'Artista: Cicli Annidati'
+          'Farmer: While Loops': 'Agricoltore: Cicli "Mentre"'
+          'Bee: Nested Loops': 'Ape: Cicli Annidati'
+          'Artist: Functions': 'Artista: Funzioni'
+          'Bee: Debugging': 'Ape: Correzione di Errori'

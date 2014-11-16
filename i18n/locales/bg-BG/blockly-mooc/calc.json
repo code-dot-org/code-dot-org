@@ -1,8 +1,8 @@
 {
-  "compute":"compute",
-  "equivalentExpression":"Try reordering your arguments to get exactly the same expression.",
-  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"compute\" block?",
-  "goal":"Goal:",
-  "reinfFeedbackMsg":"You can press the \"Try again\" button to edit your expression.",
-  "yourExpression":"Your expression:"
+  "compute":"изчисляване",
+  "equivalentExpression":"Опитайте пренареждане на аргументите, за да получите точно един и същи израз.",
+  "extraTopBlocks":"Имате незакачени блокове. Имате ли намерение да ги закачите към изчислителния блок?",
+  "goal":"Цел:",
+  "reinfFeedbackMsg":"Можете да натиснете бутона \"Опитай отново\", за да редактирате вашия израз.",
+  "yourExpression":"Вашият израз:"
 }

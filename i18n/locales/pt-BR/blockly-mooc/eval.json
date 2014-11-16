@@ -1,8 +1,8 @@
 {
   "circleBlockTitle":"círculo (raio, estilo, cor)",
-  "displayBlockTitle":"display",
+  "displayBlockTitle":"exibir",
   "ellipseBlockTitle":"elipse (largura, altura, estilo, cor)",
-  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"display\" block?",
+  "extraTopBlocks":"Alguns dos seus blocos estão soltos. Você pretendia conectá-los ao bloco \"exibir\"?",
   "overlayBlockTitle":"sobreposição (superior, inferior)",
   "placeImageBlockTitle":"lugar-imagem (x, y, imagem)",
   "rectangleBlockTitle":"retângulo (largura, altura, estilo, cor)",

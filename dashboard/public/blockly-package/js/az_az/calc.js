@@ -8337,26 +8337,26 @@ exports.parseElement = function(text) {
 
 },{}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.en=function(n){return n===1?"one":"other"}
-exports.compute = function(d){return "compute"};
+exports.compute = function(d){return "hesablamalı"};
 
-exports.equivalentExpression = function(d){return "Try reordering your arguments to get exactly the same expression."};
+exports.equivalentExpression = function(d){return "Eyni ifadəni almaq üçün arqumentlərinizin yerini dəyişməyə çalışın."};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"compute\" block?"};
+exports.extraTopBlocks = function(d){return "Sizin qoşulmamış bloklarınız var. Bunları \"hesablamalı\" blokuna qoşmaq istərdinizmi?"};
 
-exports.goal = function(d){return "Goal:"};
+exports.goal = function(d){return "Məqsəd:"};
 
-exports.reinfFeedbackMsg = function(d){return "Bu siz istəyən kimi görünürmü? Öz çəkdiyiniz rəsmi görmək üçün \"Bir daha cəhd edin\" düyməsini basın."};
+exports.reinfFeedbackMsg = function(d){return "İfadənizi redaktə etmək üçün \"Yenidən cəhd edin\" düyməsini basa bilərsiniz."};
 
-exports.yourExpression = function(d){return "Your expression:"};
+exports.yourExpression = function(d){return "Sizin ifadəniz:"};
 
 
 },{"messageformat":51}],39:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.en=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "və"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "doğru"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "yalan"};
 
 exports.blocklyMessage = function(d){return "\"Blockly\""};
 
@@ -8394,7 +8394,7 @@ exports.directionEastLetter = function(d){return "Şərq"};
 
 exports.directionWestLetter = function(d){return "Qərb"};
 
-exports.end = function(d){return "end"};
+exports.end = function(d){return "son"};
 
 exports.emptyBlocksErrorMsg = function(d){return "\"Təkrar\" və ya \"Əgər\" blokları işləsin deyə içərisində başqa blokların olmağı lazımdır. Əmin olun ki, daxili blokun konteyner blokun içərisinə düz yerləşir."};
 

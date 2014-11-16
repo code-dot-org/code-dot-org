@@ -1,5 +1,7 @@
 {
   "and": "και",
+  "booleanTrue": "Αληθές",
+  "booleanFalse": "ψευδές",
   "blocklyMessage": "Blockly",
   "catActions": "Ενέργειες",
   "catColour": "Χρώμα",

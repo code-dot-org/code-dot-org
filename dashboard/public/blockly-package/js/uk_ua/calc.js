@@ -8350,17 +8350,17 @@ var MessageFormat = require("messageformat");MessageFormat.locale.uk = function 
   }
   return 'other';
 };
-exports.compute = function(d){return "compute"};
+exports.compute = function(d){return "обчислити"};
 
-exports.equivalentExpression = function(d){return "Try reordering your arguments to get exactly the same expression."};
+exports.equivalentExpression = function(d){return "Спробуйте переставити аргументи, щоб отримати такий же вираз."};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"compute\" block?"};
+exports.extraTopBlocks = function(d){return "Залишились невикористані блоки. Ви збирались їх приєднувати до блоку \"обчислити\"?"};
 
-exports.goal = function(d){return "Goal:"};
+exports.goal = function(d){return "Мета:"};
 
-exports.reinfFeedbackMsg = function(d){return "Це виглядає так, як ви хочете? Можна клацнути кнопку \"Повторити спробу\", щоб побачити свій малюнок."};
+exports.reinfFeedbackMsg = function(d){return "Можете натиснути кнопку \"Повторити спробу\" і відредагувати свій вираз."};
 
-exports.yourExpression = function(d){return "Your expression:"};
+exports.yourExpression = function(d){return "Ваш вираз:"};
 
 
 },{"messageformat":51}],39:[function(require,module,exports){
@@ -8380,9 +8380,9 @@ var MessageFormat = require("messageformat");MessageFormat.locale.uk = function 
 };
 exports.and = function(d){return "та"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "Істина"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "Хибність"};
 
 exports.blocklyMessage = function(d){return "Блоклі"};
 
@@ -8480,7 +8480,7 @@ exports.score = function(d){return "рахунок"};
 
 exports.showCodeHeader = function(d){return "Показати код"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Показати блоки"};
 
 exports.showGeneratedCode = function(d){return "Показати код"};
 
@@ -8518,7 +8518,7 @@ exports.typeHint = function(d){return "Зверніть увагу: потріб
 
 exports.workspaceHeader = function(d){return "Збирайте свої блоки тут: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Введіть свій код JavaScript тут"};
 
 exports.infinity = function(d){return "Нескінченність"};
 

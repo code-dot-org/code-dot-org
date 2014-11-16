@@ -100,6 +100,7 @@
         Wordsearch: Cautare de cuvinte
         Webapp: Webapp
         ArtistEC: Artistul
+        TextMatch: Text Match
     trophy:
       name:
         Bronze: Bronz
@@ -561,6 +562,9 @@
         webapp_ec_simple: Create your web app by using createHtmlBlock.
         turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
           it in the new "penColour" block.'
+        turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas:
+          a stick figure, snowflake, or spiral. Also try the new "penWidth" block.
+          Have fun!'
     video:
       name:
         maze_intro: Intro Labirint
@@ -576,7 +580,6 @@
         loop_for: Bloc Contor
         parameters: Funcții cu Parametrii
         hoc_wrapup: Încheierea Orei de Cod
-        20_wrapup: 'Încheirea celor 20 de ore '
         Unplug1: What is CS?
         Unplug2: Gândire de Calcul
         Unplug3: Programare pe Hârtie Milimetrică
@@ -591,7 +594,7 @@
         C1_happy_maps_unplugged: Hărţi Fericite
         C1_moveitmoveit_unplugged: Move It, Move It
         C1_bigevent_unplugged: Marele eveniment
-        C1_getting_loop: Transformând în Buclă
+        C1_getting_loopy: Transformând în Buclă
         C1_pair_programming: Pair Programming
         C1_maze_intro_sequencing: Maze Sequencing Intro
         C1_maze_debugging: Maze Debugging
@@ -603,19 +606,22 @@
         C1_maze_loops: Bucle de Labirint
         C1_playlab_storytelling: Play Lab - Create a Story
         C1_planting_seed: Planting a Seed
-        C1_building_foundating: Construirea unei Fundaţii
+        C1_building_foundation: Construirea unei Fundaţii
         C2_maze_intro: Intro Labirint
         C2_artist_intro: 'Intro Artist '
         C2_zuck_repeat_loop: Bucle de Labirint
         C2_artist_loops: Bucle de Artist
+        C2_artist_debugging: Depanare Artist
+        C2_bee_loops: Bucle de Ortografie
+        C2_bee_debugging: Depanarea Ortografiei
         C2_bee_conditionals: Condiţii de Ortografie
         C2_playlab_createstory: Play Lab - Create a Story
         C2_graph_paper: Programare pe Hârtie Milimetrică
         C2_conditionals_with_cards: Condiţionale
         C2_binary_bracelets: Brăţări Binare
-        C2_replay_programming: Programare de releu
+        C2_relay_programming: Programare de releu
         C2_paper_airplanes: Paper Airplanes
-        C3_maze_intro: Intro Labirint
+        C3_maze_level_4: Bucle de Labirint
         C3_artist_intro: 'Intro Artist '
         C3_artist_functions: Funcţii de Artist
         C3_bee_functions: Funcţii de Ortografie
@@ -650,3 +656,13 @@
           povestea începe" pentru a seta un actor pentru această poveste
         studio_say_text: Tastează ceea ce dorești să spună actorul în aceste citate
         jigsaw_click: Faceţi clic pe acest bloc!
+        move_elsa_forward: Drag a "Move Forward" block and snap it below the "When
+          Run" block to make Elsa move forward
+        turn_elsa: Use the "Turn" block to make Elsa turn. The number in the drop-down
+          determines how much Elsa turns
+        replace_questions: Use the drop-down to replace "???" with a number
+        replace_questions_degree: Use the drop-down to replace "???" with the correct
+          degree to turn
+        repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
+          workspace
+        snowflake_dropdown: Use this drop-down to create different snowflakes!

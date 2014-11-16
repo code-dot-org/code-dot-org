@@ -264,7 +264,7 @@
         playlab: Maak een App
         artist: Teken iets
     user:
-      classroom: Mijn leerlingen
+      classroom: Leerkracht Home Page
       label: Hallo %{username}
       stats: Mijn vooruitgang
       settings: Mijn account
@@ -467,8 +467,11 @@
   try_reloading: Probeer de pagina opnieuw te laden
   next_stage: Klaar! Verder naar het volgende niveau
   download_pdf: Open lesplan
+  lesson_plan: Lesson Plan
   view_lesson_plan: Lesplan bekijken
   pdf_download: PDF downloaden
+  download_coming_soon: Downloadable activity coming soon.
+  video_coming_soon: Video Coming Soon!
   share_code:
     title: Klik op 'Uitvoeren' om mijn programma te draaien
     bounce_og_title: Bekijk mijn Stuiterspel
@@ -536,6 +539,8 @@
     wrong_body: De oplossing die je hebt ingevoerd is niet juist.  Probeer het opnieuw!
     correct_title: Juist
     correct_body: Dat is het juiste antwoord.
+  text_match:
+    placeholder: Voer uw antwoord hier in
   dialog:
     ok: OK
   time:
@@ -587,3 +592,8 @@
     ondersteuningssite. Je mag <a href="http://support.code.org">support.code.org</a>
     wel bekijken zonder in te loggen of je ouder of leraar vragen met ons contact
     op te nemen.
+  progress:
+    not_completed: niet voltooid
+    completed_too_many_blocks: voltooid, teveel blokken
+    completed_perfect: voltooid, perfect
+    furthest_level_attempted: verste niveau geprobeerd

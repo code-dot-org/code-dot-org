@@ -8337,26 +8337,26 @@ exports.parseElement = function(text) {
 
 },{}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.is=function(n){return n===1?"one":"other"}
-exports.compute = function(d){return "compute"};
+exports.compute = function(d){return "reikna"};
 
-exports.equivalentExpression = function(d){return "Try reordering your arguments to get exactly the same expression."};
+exports.equivalentExpression = function(d){return "Prófaðu að umraða stikunum til að fá nákvæmlega sömu setningu."};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"compute\" block?"};
+exports.extraTopBlocks = function(d){return "Það eru ótengdir kubbar. Var meiningin að tengja þá við \"reikna\" kubbinn?"};
 
-exports.goal = function(d){return "Goal:"};
+exports.goal = function(d){return "Markmið:"};
 
-exports.reinfFeedbackMsg = function(d){return "Lítur þetta út eins og þú vilt? Þú getur valið takkann „Reyna aftur“ til að sjá teikninguna þína."};
+exports.reinfFeedbackMsg = function(d){return "Þú getur smellt á \"Reyna aftur\" hnappinn til að breyta setningunni."};
 
-exports.yourExpression = function(d){return "Your expression:"};
+exports.yourExpression = function(d){return "Setningin þín:"};
 
 
 },{"messageformat":51}],39:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.is=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "og"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "satt"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "ósatt"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -8454,7 +8454,7 @@ exports.score = function(d){return "stig"};
 
 exports.showCodeHeader = function(d){return "Sýna kóða"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Sýna kubba"};
 
 exports.showGeneratedCode = function(d){return "Sýna kóða"};
 
@@ -8492,7 +8492,7 @@ exports.typeHint = function(d){return "Athugaðu að svigarnir og semikommurnar 
 
 exports.workspaceHeader = function(d){return "Settu kubbana saman hér: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Skrifaðu JavaScript kóða þinn hér"};
 
 exports.infinity = function(d){return "Óendanleiki"};
 

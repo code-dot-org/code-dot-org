@@ -8075,9 +8075,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.el=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "και"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "Αληθές"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "ψευδές"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 

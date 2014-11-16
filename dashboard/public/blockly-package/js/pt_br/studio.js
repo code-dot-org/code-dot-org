@@ -19887,9 +19887,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.pt=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "e"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "verdadeiro"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "falso"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -20054,31 +20054,31 @@ exports.genericFeedback = function(d){return "Veja como você terminou e tente c
 var MessageFormat = require("messageformat");MessageFormat.locale.pt=function(n){return n===1?"one":"other"}
 exports.actor = function(d){return "personagem"};
 
-exports.backgroundBlack = function(d){return "black"};
+exports.backgroundBlack = function(d){return "preto"};
 
-exports.backgroundCave = function(d){return "cave"};
+exports.backgroundCave = function(d){return "caverna"};
 
-exports.backgroundCloudy = function(d){return "cloudy"};
+exports.backgroundCloudy = function(d){return "nublado"};
 
-exports.backgroundHardcourt = function(d){return "hardcourt"};
+exports.backgroundHardcourt = function(d){return "quadra esportiva"};
 
-exports.backgroundNight = function(d){return "night"};
+exports.backgroundNight = function(d){return "noite"};
 
-exports.backgroundUnderwater = function(d){return "underwater"};
+exports.backgroundUnderwater = function(d){return "debaixo d'água"};
 
-exports.backgroundCity = function(d){return "city"};
+exports.backgroundCity = function(d){return "cidade"};
 
-exports.backgroundDesert = function(d){return "desert"};
+exports.backgroundDesert = function(d){return "deserto"};
 
-exports.backgroundRainbow = function(d){return "rainbow"};
+exports.backgroundRainbow = function(d){return "arco-íris"};
 
-exports.backgroundSoccer = function(d){return "soccer"};
+exports.backgroundSoccer = function(d){return "futebol"};
 
-exports.backgroundSpace = function(d){return "space"};
+exports.backgroundSpace = function(d){return "espaço"};
 
-exports.backgroundTennis = function(d){return "tennis"};
+exports.backgroundTennis = function(d){return "tênis"};
 
-exports.backgroundWinter = function(d){return "winter"};
+exports.backgroundWinter = function(d){return "inverno"};
 
 exports.catActions = function(d){return "Ações"};
 
@@ -20110,7 +20110,7 @@ exports.emotion = function(d){return "humor"};
 
 exports.finalLevel = function(d){return "Parabéns! Você resolveu o desafio final."};
 
-exports.for = function(d){return "for"};
+exports.for = function(d){return "para"};
 
 exports.hello = function(d){return "olá"};
 
@@ -20440,9 +20440,9 @@ exports.shareStudioTwitter = function(d){return "Dê uma na olhada na história 
 
 exports.shareGame = function(d){return "Compartilhe sua história:"};
 
-exports.showCoordinates = function(d){return "show coordinates"};
+exports.showCoordinates = function(d){return "mostrar coordenadas"};
 
-exports.showCoordinatesTooltip = function(d){return "show the protagonist's coordinates on the screen"};
+exports.showCoordinatesTooltip = function(d){return "mostrar as coordenadas do protagonista na tela"};
 
 exports.showTitleScreen = function(d){return "mostre a tela principal"};
 
@@ -20456,7 +20456,7 @@ exports.showTSDefText = function(d){return "digite o texto aqui"};
 
 exports.showTitleScreenTooltip = function(d){return "Mostrar um tela de título com o título e o texto associados."};
 
-exports.size = function(d){return "size"};
+exports.size = function(d){return "tamanho"};
 
 exports.setSprite = function(d){return "definir"};
 

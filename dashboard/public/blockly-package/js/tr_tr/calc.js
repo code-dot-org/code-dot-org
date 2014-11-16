@@ -8354,7 +8354,7 @@ exports.yourExpression = function(d){return "Your expression:"};
 var MessageFormat = require("messageformat");MessageFormat.locale.tr=function(n){return "other"}
 exports.and = function(d){return "ve"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "doğru"};
 
 exports.booleanFalse = function(d){return "false"};
 

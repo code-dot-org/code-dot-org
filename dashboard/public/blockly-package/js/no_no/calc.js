@@ -8337,26 +8337,26 @@ exports.parseElement = function(text) {
 
 },{}],38:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.no=function(n){return n===1?"one":"other"}
-exports.compute = function(d){return "compute"};
+exports.compute = function(d){return "beregn"};
 
-exports.equivalentExpression = function(d){return "Try reordering your arguments to get exactly the same expression."};
+exports.equivalentExpression = function(d){return "Prøv å endre rekkefølgen på argumentene dine for å få nøyaktig samme uttrykk."};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"compute\" block?"};
+exports.extraTopBlocks = function(d){return "Du har ledige blokker. Mente du å knytte disse til \"beregn\" blokken?"};
 
-exports.goal = function(d){return "Goal:"};
+exports.goal = function(d){return "Mål:"};
 
-exports.reinfFeedbackMsg = function(d){return "Ser dette ut slik du ønsker? Du kan trykke \"Forsøk igjen\"-knappen for å se tegningen din."};
+exports.reinfFeedbackMsg = function(d){return "Du kan trykke \"Prøv Igjen\"-knappen for å redigere uttrykket."};
 
-exports.yourExpression = function(d){return "Your expression:"};
+exports.yourExpression = function(d){return "Ditt uttrykk:"};
 
 
 },{"messageformat":51}],39:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.no=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "og"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "sann"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "usann"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -8454,7 +8454,7 @@ exports.score = function(d){return "poengsum"};
 
 exports.showCodeHeader = function(d){return "Vis kode"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Vis blokker"};
 
 exports.showGeneratedCode = function(d){return "Vis kode"};
 
@@ -8492,7 +8492,7 @@ exports.typeHint = function(d){return "Legg merke til at paranteser og semikolon
 
 exports.workspaceHeader = function(d){return "Sett sammen blokkene dine her: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Skriv inn JavaScript-koden din her"};
 
 exports.infinity = function(d){return "Uendelig"};
 

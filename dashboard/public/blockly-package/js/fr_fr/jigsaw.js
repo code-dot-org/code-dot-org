@@ -8075,9 +8075,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.fr=function(n){return n===0||n==1?"one":"other"}
 exports.and = function(d){return "et"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "vrai"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "faux"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 

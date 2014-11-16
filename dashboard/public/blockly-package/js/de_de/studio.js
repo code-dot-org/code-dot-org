@@ -19887,9 +19887,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.de=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "und"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "wahr"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "falsch"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -19987,7 +19987,7 @@ exports.score = function(d){return "Punktestand"};
 
 exports.showCodeHeader = function(d){return "Programm anzeigen"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Zeige Blöcke"};
 
 exports.showGeneratedCode = function(d){return "Programm anzeigen"};
 
@@ -20025,7 +20025,7 @@ exports.typeHint = function(d){return "Beachte, dass die runden Klammern und Sem
 
 exports.workspaceHeader = function(d){return "Setze die Bausteine hier zusammen: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Geben Sie hier Ihren JavaScript-code ein"};
 
 exports.infinity = function(d){return "Unendlichkeit"};
 
@@ -20052,33 +20052,33 @@ exports.genericFeedback = function(d){return "Schau dir an, was du gemacht hast 
 
 },{"messageformat":60}],48:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.de=function(n){return n===1?"one":"other"}
-exports.actor = function(d){return "Element"};
+exports.actor = function(d){return "Schauspieler"};
 
-exports.backgroundBlack = function(d){return "black"};
+exports.backgroundBlack = function(d){return "schwarz"};
 
-exports.backgroundCave = function(d){return "cave"};
+exports.backgroundCave = function(d){return "Höhle"};
 
-exports.backgroundCloudy = function(d){return "cloudy"};
+exports.backgroundCloudy = function(d){return "bewölkt"};
 
-exports.backgroundHardcourt = function(d){return "hardcourt"};
+exports.backgroundHardcourt = function(d){return "Hardplatz"};
 
-exports.backgroundNight = function(d){return "night"};
+exports.backgroundNight = function(d){return "Nacht"};
 
-exports.backgroundUnderwater = function(d){return "underwater"};
+exports.backgroundUnderwater = function(d){return "Unterwasser"};
 
-exports.backgroundCity = function(d){return "city"};
+exports.backgroundCity = function(d){return "Stadt"};
 
-exports.backgroundDesert = function(d){return "desert"};
+exports.backgroundDesert = function(d){return "Wüste"};
 
-exports.backgroundRainbow = function(d){return "rainbow"};
+exports.backgroundRainbow = function(d){return "Regenbogen"};
 
-exports.backgroundSoccer = function(d){return "soccer"};
+exports.backgroundSoccer = function(d){return "Fußball"};
 
-exports.backgroundSpace = function(d){return "space"};
+exports.backgroundSpace = function(d){return "Leerzeichen"};
 
-exports.backgroundTennis = function(d){return "tennis"};
+exports.backgroundTennis = function(d){return "Tennis"};
 
-exports.backgroundWinter = function(d){return "winter"};
+exports.backgroundWinter = function(d){return "Winter"};
 
 exports.catActions = function(d){return "Aktionen"};
 
@@ -20110,7 +20110,7 @@ exports.emotion = function(d){return "Stimmung"};
 
 exports.finalLevel = function(d){return "Glückwunsch! Sie haben das letzte Puzzle gelöst."};
 
-exports.for = function(d){return "for"};
+exports.for = function(d){return "für"};
 
 exports.hello = function(d){return "Hallo"};
 
@@ -20250,9 +20250,9 @@ exports.positionBottomRight = function(d){return "nach unten rechts"};
 
 exports.positionBottomOutRight = function(d){return "nach unten rechts außen"};
 
-exports.positionOutBottomLeft = function(d){return "to the below bottom left position"};
+exports.positionOutBottomLeft = function(d){return "In der unteren linken Ecke"};
 
-exports.positionOutBottomRight = function(d){return "to the below bottom right position"};
+exports.positionOutBottomRight = function(d){return "In der unteren rechten Ecke"};
 
 exports.positionRandom = function(d){return "Zu zufälliger Position"};
 
@@ -20318,9 +20318,9 @@ exports.setBackgroundWinter = function(d){return "Setze Hintergrund Winter"};
 
 exports.setBackgroundTooltip = function(d){return "Hintergrundbild setzen"};
 
-exports.setEnemySpeed = function(d){return "set enemy speed"};
+exports.setEnemySpeed = function(d){return "Feindliche Geschwindigkeits Einstellung"};
 
-exports.setPlayerSpeed = function(d){return "set player speed"};
+exports.setPlayerSpeed = function(d){return "Spieler Geschwindigkeit einstellen"};
 
 exports.setScoreText = function(d){return "Punktestand setzen"};
 
@@ -20402,7 +20402,7 @@ exports.setSpriteWizard = function(d){return "zeige Zauberer-Bild"};
 
 exports.setSpritePositionTooltip = function(d){return "Bewegt das Element sofort an die angegebene Position."};
 
-exports.setSpriteK1Tooltip = function(d){return "Shows or hides the specified actor."};
+exports.setSpriteK1Tooltip = function(d){return "Zeigt oder verbirgt den angegebenen Schauspieler."};
 
 exports.setSpriteTooltip = function(d){return "Legt das Aussehen der Figur fest"};
 
@@ -20440,9 +20440,9 @@ exports.shareStudioTwitter = function(d){return "Schau Dir das Spiel an, das ich
 
 exports.shareGame = function(d){return "Teile dein Spiel:"};
 
-exports.showCoordinates = function(d){return "show coordinates"};
+exports.showCoordinates = function(d){return "Koordinaten anzeigen"};
 
-exports.showCoordinatesTooltip = function(d){return "show the protagonist's coordinates on the screen"};
+exports.showCoordinatesTooltip = function(d){return "Die Koordinaten des Protagonisten anzeigen"};
 
 exports.showTitleScreen = function(d){return "Titelbildschirm anzeigen"};
 
@@ -20456,7 +20456,7 @@ exports.showTSDefText = function(d){return "Text hier eingeben"};
 
 exports.showTitleScreenTooltip = function(d){return "Zeigt einen Titelbildschirm mit dem dazugehörigen Titel und Text."};
 
-exports.size = function(d){return "size"};
+exports.size = function(d){return "Größe"};
 
 exports.setSprite = function(d){return "setze"};
 
@@ -20474,11 +20474,11 @@ exports.soundLosePoint = function(d){return "Punkt verloren"};
 
 exports.soundLosePoint2 = function(d){return "Punkt verloren 2"};
 
-exports.soundRetro = function(d){return "retro"};
+exports.soundRetro = function(d){return "Retro"};
 
-exports.soundRubber = function(d){return "rubber"};
+exports.soundRubber = function(d){return "Radiergummi"};
 
-exports.soundSlap = function(d){return "slap"};
+exports.soundSlap = function(d){return "Schlag"};
 
 exports.soundWinPoint = function(d){return "Punkt gewonnen"};
 
@@ -20494,15 +20494,15 @@ exports.stopSpriteN = function(d){return "stoppe Figur "+v(d,"spriteIndex")};
 
 exports.stopTooltip = function(d){return "Stoppt die Bewegung einer Figur."};
 
-exports.throwSprite = function(d){return "throw"};
+exports.throwSprite = function(d){return "werfen"};
 
-exports.throwSpriteN = function(d){return "actor "+v(d,"spriteIndex")+" throw"};
+exports.throwSpriteN = function(d){return "Schauspieler "+v(d,"spriteIndex")+"-Wurf"};
 
 exports.throwTooltip = function(d){return "Lässt die angegebene Figur ein Geschoss werfen."};
 
 exports.vanish = function(d){return "verschwinden"};
 
-exports.vanishActorN = function(d){return "vanish actor "+v(d,"spriteIndex")};
+exports.vanishActorN = function(d){return "verschwundener Schauspieler "+v(d,"spriteIndex")};
 
 exports.vanishTooltip = function(d){return "Lässt die Figur verschwinden."};
 
@@ -20566,7 +20566,7 @@ exports.whenSpriteCollidedTooltip = function(d){return "Führe die unterstehende
 
 exports.whenSpriteCollidedWith = function(d){return "berührt"};
 
-exports.whenSpriteCollidedWithAnyActor = function(d){return "touches any actor"};
+exports.whenSpriteCollidedWithAnyActor = function(d){return "Berührt jeden Schauspieler"};
 
 exports.whenSpriteCollidedWithAnyEdge = function(d){return "berührt einen beliebigen Rand"};
 
@@ -20574,7 +20574,7 @@ exports.whenSpriteCollidedWithAnyProjectile = function(d){return "berührt ein b
 
 exports.whenSpriteCollidedWithAnything = function(d){return "berührt irgendetwas"};
 
-exports.whenSpriteCollidedWithN = function(d){return "touches actor "+v(d,"spriteIndex")};
+exports.whenSpriteCollidedWithN = function(d){return "berührt Schauspieler "+v(d,"spriteIndex")};
 
 exports.whenSpriteCollidedWithBlueFireball = function(d){return "berührt blauen Feuerball"};
 

@@ -13847,9 +13847,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.de=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "und"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "wahr"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "falsch"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -13947,7 +13947,7 @@ exports.score = function(d){return "Punktestand"};
 
 exports.showCodeHeader = function(d){return "Programm anzeigen"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Zeige Blöcke"};
 
 exports.showGeneratedCode = function(d){return "Programm anzeigen"};
 
@@ -13985,7 +13985,7 @@ exports.typeHint = function(d){return "Beachte, dass die runden Klammern und Sem
 
 exports.workspaceHeader = function(d){return "Setze die Bausteine hier zusammen: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Geben Sie hier Ihren JavaScript-code ein"};
 
 exports.infinity = function(d){return "Unendlichkeit"};
 
@@ -14012,7 +14012,7 @@ exports.genericFeedback = function(d){return "Schau dir an, was du gemacht hast 
 
 },{"messageformat":70}],58:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.de=function(n){return n===1?"one":"other"}
-exports.atHoneycomb = function(d){return "an Honigwabe"};
+exports.atHoneycomb = function(d){return "an der Honigwabe"};
 
 exports.atFlower = function(d){return "an der Blume"};
 
@@ -14074,9 +14074,9 @@ exports.ifTooltip = function(d){return "Wenn ein Weg in die benannte Richtung ex
 
 exports.ifelseTooltip = function(d){return "Wenn ein Weg in die benannte Richtung existiert, beginne mit dem ersten Block, ansonsten den zweiten Block vor."};
 
-exports.ifFlowerTooltip = function(d){return "If there is a flower/honeycomb in the specified direction, then do some actions."};
+exports.ifFlowerTooltip = function(d){return "Wenn es eine Blume/Waben in der angegebenen Richtung gibt, dann tue einige Aktionen."};
 
-exports.ifelseFlowerTooltip = function(d){return "If there is a flower/honeycomb in the specified direction, then do the first block of actions. Otherwise, do the second block of actions."};
+exports.ifelseFlowerTooltip = function(d){return "Ist eine Blume/Waben in der angegebenen Richtung, dann tun Sie den ersten Block der Aktionen. Andernfalls machen Sie den zweiten Block von Aktionen."};
 
 exports.insufficientHoney = function(d){return "Du benutzt die richtigten Bausteine, aber du hast nicht die richtige Menge an Honig."};
 
@@ -14162,7 +14162,7 @@ exports.turnRight = function(d){return "nach rechts drehen"};
 
 exports.turnTooltip = function(d){return "Dreht mich nach links oder rechts um 90 Grad."};
 
-exports.uncheckedCloudError = function(d){return "Make sure to check all clouds to see if they're flowers or honeycombs."};
+exports.uncheckedCloudError = function(d){return "Stellen Sie sicher,dass Sie alle Wolken auf Blumen oder Bienenwaben überprüfen."};
 
 exports.uncheckedPurpleError = function(d){return "Stelle sicher, dass du alle lila Blumen nach Nektar durchsucht hast"};
 
@@ -14174,7 +14174,7 @@ exports.word = function(d){return "Finde das Wort"};
 
 exports.yes = function(d){return "Ja"};
 
-exports.youSpelled = function(d){return "You spelled"};
+exports.youSpelled = function(d){return "Sie haben geschrieben"};
 
 
 },{"messageformat":70}],59:[function(require,module,exports){

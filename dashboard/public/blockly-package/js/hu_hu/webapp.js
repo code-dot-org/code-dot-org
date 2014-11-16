@@ -8187,9 +8187,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.hu=function(n){return "other"}
 exports.and = function(d){return "és"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "igaz"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "hamis"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -8287,7 +8287,7 @@ exports.score = function(d){return "pontszám"};
 
 exports.showCodeHeader = function(d){return "Kód megjelenítése"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Blokkok megjelenítése"};
 
 exports.showGeneratedCode = function(d){return "Kód megjelenítése"};
 
@@ -8325,7 +8325,7 @@ exports.typeHint = function(d){return "Vedd figyelembe, hogy a zárójelek és a
 
 exports.workspaceHeader = function(d){return "Építsd össze a blokkokat itt: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Ide írd a JavaScript kódodat"};
 
 exports.infinity = function(d){return "Végtelen"};
 
@@ -8370,13 +8370,13 @@ exports.catVariables = function(d){return "Változók"};
 
 exports.continue = function(d){return "Tovább"};
 
-exports.createHtmlBlock = function(d){return "create html block"};
+exports.createHtmlBlock = function(d){return "html blokk készítése"};
 
-exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
+exports.createHtmlBlockTooltip = function(d){return "HTML-ből álló blokkot készít az app-ban."};
 
 exports.finalLevel = function(d){return "Gratulálok, megoldottad az utolsó feladatot."};
 
-exports.makeYourOwn = function(d){return "Make Your Own App"};
+exports.makeYourOwn = function(d){return "Készíts saját App-ot"};
 
 exports.nextLevel = function(d){return "Gratulálok! Ezt a feladatot megoldottad."};
 
@@ -8384,23 +8384,23 @@ exports.no = function(d){return "Nem"};
 
 exports.numBlocksNeeded = function(d){return "Ez a feladat a(z) %1 blokkal megoldható."};
 
-exports.pause = function(d){return "Pause"};
+exports.pause = function(d){return "Szünet"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
+exports.reinfFeedbackMsg = function(d){return "Megnyomhatod az \"Újrapróbálás\" gombot hogy ismét futtasd az appod."};
 
 exports.repeatForever = function(d){return "végtelen ismétlés"};
 
 exports.repeatDo = function(d){return "csináld"};
 
-exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
+exports.repeatForeverTooltip = function(d){return "A műveletek ismételt végrehajtása ebben a blokkban amíg az app fut."};
 
-exports.shareWebappTwitter = function(d){return "Check out the app I made. I wrote it myself with @codeorg"};
+exports.shareWebappTwitter = function(d){return "Nézd meg az appot amit csináltam. Magam írtam a code.org felületén"};
 
-exports.shareGame = function(d){return "Share your app:"};
+exports.shareGame = function(d){return "App megosztása:"};
 
-exports.turnBlack = function(d){return "turn black"};
+exports.turnBlack = function(d){return "elsötétít"};
 
-exports.turnBlackTooltip = function(d){return "Turns the screen black."};
+exports.turnBlackTooltip = function(d){return "Elsötétíti a képernyőt."};
 
 exports.yes = function(d){return "Igen"};
 

@@ -7089,8 +7089,100 @@ exports.answer = function(page, level) {
 
 },{"../base":2,"./api":28}],28:[function(require,module,exports){
 var BlocklyApps = require('../base');
+var utils = require('../utils');
+var _ = utils.getLodash();
 
 exports.log = [];
+
+exports.drawCircle = function (size, id) {
+  for (var i = 0; i < 36; i++) {
+    exports.moveForward(size, id);
+    exports.turnRight(10, id);
+  }
+};
+
+exports.drawSnowflake = function (type, id) {
+  var i, j, k;
+
+  // mirors Blockly.JavaScript.colour_random.
+  var random_colour = function () {
+    var colors = Blockly.FieldColour.COLOURS;
+    return colors[Math.floor(Math.random()*colors.length)];
+  };
+
+  if (type === 'random') {
+    type = _.sample(['fractal', 'flower', 'spiral', 'line', 'parallelogram', 'square']);
+  }
+
+  switch(type) {
+    case 'fractal':
+      for (i = 0; i < 8; i++) {
+        exports.jumpForward(45, id);
+        exports.turnLeft(45, id);
+        for (j = 0; j < 3; j++) {
+          for (k = 0; k < 3; k++) {
+            exports.moveForward(15, id);
+            exports.moveBackward(15, id);
+            exports.turnRight(45, id);
+          }
+          exports.turnLeft(90, id);
+          exports.moveBackward(15, id);
+          exports.turnLeft(45, id);
+        }
+        exports.turnRight(90, id);
+      }
+      break;
+
+    case 'flower':
+      for (i = 0; i < 5; i++) {
+        exports.drawCircle(2, id);
+        exports.drawCircle(4, id);
+        exports.turnRight(72, id);
+      }
+      break;
+
+    case 'spiral':
+      for (i = 0; i < 20; i++) {
+        exports.drawCircle(3, id);
+        exports.moveForward(20, id);
+        exports.turnRight(18, id);
+      }
+      break;
+
+    case 'line':
+      for (i = 0; i < 90; i++) {
+        exports.penColour(random_colour());
+        exports.moveForward(50, id);
+        exports.moveBackward(50, id);
+        exports.turnRight(4, id);
+      }
+      exports.penColour("#FFFFFF", id);
+      break;
+
+    case 'parallelogram':
+      for (i = 0; i < 10; i++) {
+        for (j = 0; j < 2; j++) {
+          exports.moveForward(50, id);
+          exports.turnRight(60, id);
+          exports.moveForward(50, id);
+          exports.turnRight(120, id);
+        }
+        exports.turnRight(36, id);
+      }
+      break;
+
+    case 'square':
+      for (i = 0; i < 10; i++) {
+        for (j = 0; j < 4; j++) {
+          exports.moveForward(50, id);
+          exports.turnRight(90, id);
+        }
+        exports.turnRight(36, id);
+      }
+      break;
+  }
+};
+
 
 exports.moveForward = function(distance, id) {
   this.log.push(['FD', distance, id]);
@@ -7180,7 +7272,7 @@ exports.drawStamp = function(stamp, id) {
   this.log.push(['stamp', stamp, id]);
 };
 
-},{"../base":2}],29:[function(require,module,exports){
+},{"../base":2,"../utils":39}],29:[function(require,module,exports){
 /**
  * Blockly Demo: Turtle Graphics
  *
@@ -8208,6 +8300,9 @@ exports.Colours = {
  */
 
 var msg = require('../../locale/fi_fi/turtle');
+var utils = require('../utils');
+var _ = utils.getLodash();
+
 
 exports.install = function(blockly, generator, gensym) {
  installDrawASquare(blockly, generator, gensym);
@@ -8867,7 +8962,8 @@ function installCreateASnowflakeDropdown(blockly, generator, gensym) {
     [msg.createSnowflakeLine(), 'line'],
     [msg.createSnowflakeSpiral(), 'spiral'],
     [msg.createSnowflakeFlower(), 'flower'],
-    [msg.createSnowflakeFractal(), 'fractal']
+    [msg.createSnowflakeFractal(), 'fractal'],
+    [msg.createSnowflakeRandom(), 'random']
   ];
 
   blockly.Blocks.create_snowflake_dropdown = {
@@ -8882,83 +8978,12 @@ function installCreateASnowflakeDropdown(blockly, generator, gensym) {
   };
 
   generator.create_snowflake_dropdown = function () {
-    var loopVar = gensym('count');
-    var loopVar2 = gensym('count');
-    var loopVar3 = gensym('count');
-    var color_random = generator.colour_random()[0];
-
     var type = this.getTitleValue('TYPE');
-    switch (type) {
-      case 'fractal':
-        return [
-          'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 8; ' + loopVar + '++) {',
-          '  Turtle.jumpForward(45);',
-          '  Turtle.turnLeft(45);',
-          '  for (var ' + loopVar2 + ' = 0; ' + loopVar2 + ' < 3; ' + loopVar2 + '++) {',
-          '    for (var ' + loopVar3 + ' = 0; ' + loopVar3 + ' < 3; ' + loopVar3 + '++) {',
-          '      Turtle.moveForward(15);',
-          '      Turtle.moveBackward(15);',
-          '      Turtle.turnRight(45);',
-          '    }',
-          '    Turtle.turnLeft(90);',
-          '    Turtle.moveBackward(15);',
-          '    Turtle.turnLeft(45);',
-          '  }',
-          '  Turtle.turnRight(90);',
-          '}\n'].join('\n');
-
-      case 'flower':
-        return [
-          'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 5; ' + loopVar + '++) {',
-          createACircleCode(2, gensym, '  '),
-          createACircleCode(4, gensym, '  '),
-          '  Turtle.turnRight(72);',
-          '}\n'].join('\n');
-
-      case 'spiral':
-        return [
-          'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 20; ' + loopVar + '++) {',
-          createACircleCode(3, gensym, '  '),
-          '  Turtle.moveForward(20);',
-          '  Turtle.turnRight(18);',
-          '}\n'].join('\n');
-
-      case 'line':
-        return [
-          'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 90; ' + loopVar + '++) {',
-          '  Turtle.penColour(' + color_random + ');',
-          '  Turtle.moveForward(50);',
-          '  Turtle.moveBackward(50);',
-          '  Turtle.turnRight(4);',
-          '}',
-          'Turtle.penColour("#FFFFFF");\n'].join('\n');
-
-      case 'parallelogram':
-        return [
-          'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 10; ' + loopVar + '++) {',
-          '  for (var ' + loopVar2 + ' = 0; ' + loopVar2 + ' < 2; ' + loopVar2 + '++) {',
-          '    Turtle.moveForward(50);',
-          '    Turtle.turnRight(60);',
-          '    Turtle.moveForward(50);',
-          '    Turtle.turnRight(120);',
-          '  }',
-          '  Turtle.turnRight(36);',
-          '}\n'].join('\n');
-
-      case 'square':
-        return [
-          'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 10; ' + loopVar + '++) {',
-          '  for (var ' + loopVar2 + ' = 0; ' + loopVar2 + ' < 4; ' + loopVar2 + '++) {',
-          '    Turtle.moveForward(50);',
-          '    Turtle.turnRight(90);',
-          '  }',
-          '  Turtle.turnRight(36);',
-          '}\n'].join('\n');
-    }
+    return "Turtle.drawSnowflake('" + type + "', 'block_id_" + this.id + "');";
   };
 }
 
-},{"../../locale/fi_fi/turtle":42}],33:[function(require,module,exports){
+},{"../../locale/fi_fi/turtle":42,"../utils":39}],33:[function(require,module,exports){
 var levelBase = require('../level_base');
 var Colours = require('./core').Colours;
 var answer = require('./answers').answer;
@@ -11950,9 +11975,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.fi=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "ja"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "tosi"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "epätosi"};
 
 exports.blocklyMessage = function(d){return "Blocky"};
 
@@ -12004,7 +12029,7 @@ exports.finalStageTrophies = function(d){return "Onneksi olkoon! Olet suorittanu
 
 exports.finish = function(d){return "Valmis"};
 
-exports.generatedCodeInfo = function(d){return "Jopa huippuyliopistot opettavat lohkopohjaista ohjelmointia (esim., "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"), mutta konepellin alla kokoamasi lohkot voidaan näyttää myös esim. JavaScript-kielellä. JavaScript on maailman eniten käytetty ohjelmointikieli:"};
+exports.generatedCodeInfo = function(d){return "Jopa huippuyliopistot opettavat lohkopohjaista ohjelmointia (esim. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"), mutta konepellin alla kokoamasi lohkot voidaan näyttää myös esim. JavaScript-kielellä. JavaScript on maailman eniten käytetty ohjelmointikieli:"};
 
 exports.hashError = function(d){return "Valitan, '%1' ei vastaa mitään tallennettua ohjelmaa."};
 
@@ -12050,7 +12075,7 @@ exports.score = function(d){return "pisteet"};
 
 exports.showCodeHeader = function(d){return "Näytä koodi"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Näytä lohkot"};
 
 exports.showGeneratedCode = function(d){return "Näytä koodi"};
 
@@ -12088,7 +12113,7 @@ exports.typeHint = function(d){return "Sulkeet ja puolipisteet ovat pakollisia."
 
 exports.workspaceHeader = function(d){return "Kokoa lohkosi täällä: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Kirjoita JavaScript koodi tähän"};
 
 exports.infinity = function(d){return "Ääretön"};
 
@@ -12102,7 +12127,7 @@ exports.watchVideo = function(d){return "Katso video"};
 
 exports.when = function(d){return "kun"};
 
-exports.whenRun = function(d){return "ajettaessa"};
+exports.whenRun = function(d){return "kun suoritetaan"};
 
 exports.tryHOC = function(d){return "Kokeile koodituntia"};
 
@@ -12117,7 +12142,7 @@ exports.genericFeedback = function(d){return "Katso miten päädyit tähän, ja 
 var MessageFormat = require("messageformat");MessageFormat.locale.fi=function(n){return n===1?"one":"other"}
 exports.blocksUsed = function(d){return "Lohkoja käytetty: %1"};
 
-exports.branches = function(d){return "branches"};
+exports.branches = function(d){return "haarat"};
 
 exports.catColour = function(d){return "Väri"};
 
@@ -12149,11 +12174,13 @@ exports.createSnowflakeFlower = function(d){return "create a snowflake of type f
 
 exports.createSnowflakeFractal = function(d){return "create a snowflake of type fractal"};
 
+exports.createSnowflakeRandom = function(d){return "create a snowflake of type random"};
+
 exports.createASnowflakeBranch = function(d){return "create a snowflake branch"};
 
 exports.degrees = function(d){return "astetta"};
 
-exports.depth = function(d){return "depth"};
+exports.depth = function(d){return "syvyys"};
 
 exports.dots = function(d){return "kuvapisteet"};
 
@@ -12163,31 +12190,31 @@ exports.drawATriangle = function(d){return "piirrä kolmio"};
 
 exports.drawACircle = function(d){return "piirrä ympyrä"};
 
-exports.drawAFlower = function(d){return "draw a flower"};
+exports.drawAFlower = function(d){return "piirrä kukka"};
 
-exports.drawAHexagon = function(d){return "draw a hexagon"};
+exports.drawAHexagon = function(d){return "piirrä kuusikulmio"};
 
 exports.drawAHouse = function(d){return "piirrä talo"};
 
-exports.drawAPlanet = function(d){return "draw a planet"};
+exports.drawAPlanet = function(d){return "piirrä planeetta"};
 
-exports.drawARhombus = function(d){return "draw a rhombus"};
+exports.drawARhombus = function(d){return "piirrä vinoneliö"};
 
-exports.drawARobot = function(d){return "draw a robot"};
+exports.drawARobot = function(d){return "piirrä robotti"};
 
-exports.drawARocket = function(d){return "draw a rocket"};
+exports.drawARocket = function(d){return "piirrä raketti"};
 
-exports.drawASnowflake = function(d){return "draw a snowflake"};
+exports.drawASnowflake = function(d){return "piirrä lumihiutale"};
 
 exports.drawASnowman = function(d){return "piirrä lumiukko"};
 
-exports.drawAStar = function(d){return "draw a star"};
+exports.drawAStar = function(d){return "piirrä tähti"};
 
 exports.drawATree = function(d){return "piirrä puu"};
 
-exports.drawUpperWave = function(d){return "draw upper wave"};
+exports.drawUpperWave = function(d){return "piirrä ylempi aalto"};
 
-exports.drawLowerWave = function(d){return "draw lower wave"};
+exports.drawLowerWave = function(d){return "piirrä alempi aalto"};
 
 exports.drawStamp = function(d){return "draw stamp"};
 
@@ -12203,15 +12230,15 @@ exports.jumpForward = function(d){return "hyppää eteenpäin"};
 
 exports.jumpTooltip = function(d){return "Siirtää taiteilijaa piirtämättä jälkeä."};
 
-exports.jumpEastTooltip = function(d){return "Moves the artist east without leaving any marks."};
+exports.jumpEastTooltip = function(d){return "Siirtää taiteilijaa itään piirtämättä jälkeä."};
 
-exports.jumpNorthTooltip = function(d){return "Moves the artist north without leaving any marks."};
+exports.jumpNorthTooltip = function(d){return "Siirtää taiteilijaa pohjoiseen piirtämättä jälkeä."};
 
-exports.jumpSouthTooltip = function(d){return "Moves the artist south without leaving any marks."};
+exports.jumpSouthTooltip = function(d){return "Siirtää taiteilijaa etelään piirtämättä jälkeä."};
 
-exports.jumpWestTooltip = function(d){return "Moves the artist west without leaving any marks."};
+exports.jumpWestTooltip = function(d){return "Siirtää taiteilijaa länteen piirtämättä jälkeä."};
 
-exports.lengthFeedback = function(d){return "You got it right except for the lengths to move."};
+exports.lengthFeedback = function(d){return "Sait tämän oikein lukuunottamatta siirtojen pituuksia."};
 
 exports.lengthParameter = function(d){return "pituus"};
 
@@ -12219,17 +12246,17 @@ exports.loopVariable = function(d){return "laskuri"};
 
 exports.moveBackward = function(d){return "siirry taaksepäin"};
 
-exports.moveEastTooltip = function(d){return "Moves the artist east."};
+exports.moveEastTooltip = function(d){return "Siirtää taiteilijaa itään."};
 
 exports.moveForward = function(d){return "siirry eteenpäin"};
 
 exports.moveForwardTooltip = function(d){return "Siirtää taiteilijaa eteenpäin."};
 
-exports.moveNorthTooltip = function(d){return "Moves the artist north."};
+exports.moveNorthTooltip = function(d){return "Siirtää taitelijaa pohjoiseen."};
 
-exports.moveSouthTooltip = function(d){return "Moves the artist south."};
+exports.moveSouthTooltip = function(d){return "Siirtää taitelijaa etelään."};
 
-exports.moveWestTooltip = function(d){return "Moves the artist west."};
+exports.moveWestTooltip = function(d){return "Siirtää taitelijaa länteen."};
 
 exports.moveTooltip = function(d){return "Siirtää taiteilijaa eteenpäin tai taaksepäin annetun etäisyyden."};
 
@@ -12247,7 +12274,7 @@ exports.reinfFeedbackMsg = function(d){return "Näyttääkö tämä siltä, mit�
 
 exports.setColour = function(d){return "aseta väri"};
 
-exports.setPattern = function(d){return "set pattern"};
+exports.setPattern = function(d){return "määritä malli"};
 
 exports.setWidth = function(d){return "aseta leveys"};
 
@@ -12257,9 +12284,9 @@ exports.showMe = function(d){return "Näytä minulle"};
 
 exports.showTurtle = function(d){return "näytä taiteilija"};
 
-exports.sizeParameter = function(d){return "size"};
+exports.sizeParameter = function(d){return "koko"};
 
-exports.step = function(d){return "step"};
+exports.step = function(d){return "askel"};
 
 exports.tooFewColours = function(d){return "Tässä pulmassa pitää käyttää ainakin %1 väriä. Käytit vain %2 väriä."};
 

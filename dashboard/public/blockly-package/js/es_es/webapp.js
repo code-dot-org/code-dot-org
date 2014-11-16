@@ -8187,9 +8187,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.es=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "y"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "verdadero"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "falso"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -8287,7 +8287,7 @@ exports.score = function(d){return "puntuación"};
 
 exports.showCodeHeader = function(d){return "Mostrar el código"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Mostrar bloques"};
 
 exports.showGeneratedCode = function(d){return "Mostrar el código"};
 
@@ -8325,7 +8325,7 @@ exports.typeHint = function(d){return "Ten en cuenta que los paréntesis y los p
 
 exports.workspaceHeader = function(d){return "Coloca tus bloques aquí:"};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Escribe tu código JavaScript aquí"};
 
 exports.infinity = function(d){return "Infinito"};
 
@@ -8370,13 +8370,13 @@ exports.catVariables = function(d){return "Variables"};
 
 exports.continue = function(d){return "Continuar"};
 
-exports.createHtmlBlock = function(d){return "create html block"};
+exports.createHtmlBlock = function(d){return "crear un bloque html"};
 
-exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
+exports.createHtmlBlockTooltip = function(d){return "Crea un bloque HTML en la aplicación."};
 
 exports.finalLevel = function(d){return "¡ Felicidades! Ha resuelto el rompecabezas final."};
 
-exports.makeYourOwn = function(d){return "Make Your Own App"};
+exports.makeYourOwn = function(d){return "Haz tu propia aplicación"};
 
 exports.nextLevel = function(d){return "¡Felicidades! Has completado este puzzle."};
 
@@ -8384,19 +8384,19 @@ exports.no = function(d){return "No"};
 
 exports.numBlocksNeeded = function(d){return "Este puzzle puede resolverse con %1 bloques."};
 
-exports.pause = function(d){return "Pause"};
+exports.pause = function(d){return "Pausa"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
+exports.reinfFeedbackMsg = function(d){return "Puedes presionar el botón \"Intentar de nuevo\" para volver a ejecutar tu aplicación."};
 
 exports.repeatForever = function(d){return "Repetir para siempre"};
 
 exports.repeatDo = function(d){return "haz"};
 
-exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
+exports.repeatForeverTooltip = function(d){return "Ejecuta repetidamente las acciones en este bloque mientras la aplicación está ejecutando."};
 
-exports.shareWebappTwitter = function(d){return "Check out the app I made. I wrote it myself with @codeorg"};
+exports.shareWebappTwitter = function(d){return "Échale un vistazo a la aplicación que hice. Yo mismo la escribí con @codeorg"};
 
-exports.shareGame = function(d){return "Share your app:"};
+exports.shareGame = function(d){return "Coparte tu aplicación:"};
 
 exports.turnBlack = function(d){return "turn black"};
 

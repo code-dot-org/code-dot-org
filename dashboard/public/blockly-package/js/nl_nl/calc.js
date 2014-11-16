@@ -8339,11 +8339,11 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.nl=function(n){return n===1?"one":"other"}
 exports.compute = function(d){return "compute"};
 
-exports.equivalentExpression = function(d){return "Try reordering your arguments to get exactly the same expression."};
+exports.equivalentExpression = function(d){return "Probeer uw argumenten te ordenen om precies dezelfde expressie te krijgen."};
 
 exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"compute\" block?"};
 
-exports.goal = function(d){return "Goal:"};
+exports.goal = function(d){return "Doel:"};
 
 exports.reinfFeedbackMsg = function(d){return "Ziet dit eruit als het gene wat je wilt? Je kunt op de 'Probeer opnieuw' knop drukken om jouw tekening te zien."};
 
@@ -8354,9 +8354,9 @@ exports.yourExpression = function(d){return "Your expression:"};
 var MessageFormat = require("messageformat");MessageFormat.locale.nl=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "en"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "waar"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "onwaar"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 

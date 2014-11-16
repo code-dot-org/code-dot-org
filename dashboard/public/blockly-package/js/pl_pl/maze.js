@@ -13861,9 +13861,9 @@ var MessageFormat = require("messageformat");MessageFormat.locale.pl = function 
 };
 exports.and = function(d){return "i"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "prawda"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "fałsz"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -13907,7 +13907,7 @@ exports.emptyBlocksErrorMsg = function(d){return "Blok powtórz lub blok jeśli 
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Funkcja blokowania musi mieć inne bloki wewnątrz do pracy."};
 
-exports.extraTopBlocks = function(d){return "Pozostały Ci jeszcze bloki, które nie zostały połączone z blokiem zdarzenia."};
+exports.extraTopBlocks = function(d){return "Posiadasz niezałączone bloki. Czy chciałeś je załączyć do bloku \"po uruchomieniu\"?"};
 
 exports.finalStage = function(d){return "Gratulacje! Ukończyłeś ostatni etap."};
 
@@ -13961,7 +13961,7 @@ exports.score = function(d){return "wynik"};
 
 exports.showCodeHeader = function(d){return "Pokaż kod"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Pokaż Bloki"};
 
 exports.showGeneratedCode = function(d){return "Pokaż kod"};
 
@@ -13991,7 +13991,7 @@ exports.saveToGallery = function(d){return "Zapisz do swojej galerii"};
 
 exports.savedToGallery = function(d){return "Zapisane w twojej galerii!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Przepraszamy, nie możemy udostępnić tego programu."};
 
 exports.typeFuncs = function(d){return "Dostępne funkcje:%1"};
 
@@ -13999,7 +13999,7 @@ exports.typeHint = function(d){return "Zauważ, że nawiasy i średniki są wyma
 
 exports.workspaceHeader = function(d){return "Połącz swoje bloki tutaj: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Wpisz swój kod JavaScript tutaj"};
 
 exports.infinity = function(d){return "Nieskończoność"};
 
@@ -14040,9 +14040,9 @@ var MessageFormat = require("messageformat");MessageFormat.locale.pl = function 
   }
   return 'other';
 };
-exports.atHoneycomb = function(d){return "at honeycomb"};
+exports.atHoneycomb = function(d){return "w plastrze miodu"};
 
-exports.atFlower = function(d){return "at flower"};
+exports.atFlower = function(d){return "w kwiat"};
 
 exports.avoidCowAndRemove = function(d){return "uniknij krowy i usuń 1"};
 
@@ -14076,7 +14076,7 @@ exports.fillTooltip = function(d){return "umieść 1 jednostkę śmieci"};
 
 exports.finalLevel = function(d){return "Gratulacje! Rozwiązałeś końcową łamigłówkę."};
 
-exports.flowerEmptyError = function(d){return "The flower you're on has no more nectar."};
+exports.flowerEmptyError = function(d){return "Kwiat, na którym jesteś nie ma już nektaru."};
 
 exports.get = function(d){return "pobierz"};
 
@@ -14084,13 +14084,13 @@ exports.heightParameter = function(d){return "wysokość"};
 
 exports.holePresent = function(d){return "tam jest otwór"};
 
-exports.honey = function(d){return "make honey"};
+exports.honey = function(d){return "Rób miód"};
 
-exports.honeyAvailable = function(d){return "honey"};
+exports.honeyAvailable = function(d){return "miód"};
 
-exports.honeyTooltip = function(d){return "Make honey from nectar"};
+exports.honeyTooltip = function(d){return "Rób miód z nektaru"};
 
-exports.honeycombFullError = function(d){return "This honeycomb does not have room for more honey."};
+exports.honeycombFullError = function(d){return "Ten plaster miodu nie ma miejsca na więcej miodu."};
 
 exports.ifCode = function(d){return "jeśli"};
 
@@ -14102,7 +14102,7 @@ exports.ifTooltip = function(d){return "Jeśli jest ścieżka w określonym kier
 
 exports.ifelseTooltip = function(d){return "Jeśli jest ścieżka w określonym kierunku, to wykonaj pierwszy blok działań. W przeciwnym razie, wykonaj drugi blok działań."};
 
-exports.ifFlowerTooltip = function(d){return "If there is a flower/honeycomb in the specified direction, then do some actions."};
+exports.ifFlowerTooltip = function(d){return "Jeśli kwiat/plaster miodu jest w zwrócony w określony kierunek, wykonaj akcję."};
 
 exports.ifelseFlowerTooltip = function(d){return "If there is a flower/honeycomb in the specified direction, then do the first block of actions. Otherwise, do the second block of actions."};
 
@@ -14110,9 +14110,9 @@ exports.insufficientHoney = function(d){return "You're using all the right block
 
 exports.insufficientNectar = function(d){return "You're using all the right blocks, but you need to collect the right amount of nectar."};
 
-exports.make = function(d){return "make"};
+exports.make = function(d){return "rób"};
 
-exports.moveBackward = function(d){return "move backward"};
+exports.moveBackward = function(d){return "przesuń do tyłu"};
 
 exports.moveEastTooltip = function(d){return "Przenieś mnie o jedno miejsce na wschód."};
 
@@ -14124,15 +14124,15 @@ exports.moveNorthTooltip = function(d){return "Przenieś mnie o jedno miejsce na
 
 exports.moveSouthTooltip = function(d){return "Przenieś mnie o jedno miejsce na południe."};
 
-exports.moveTooltip = function(d){return "Move me forward/backward one space"};
+exports.moveTooltip = function(d){return "Przenieś mnie do przodu/do tyłu o jedno miejsce"};
 
 exports.moveWestTooltip = function(d){return "Przenieś mnie o jedno miejsce na zachód."};
 
-exports.nectar = function(d){return "get nectar"};
+exports.nectar = function(d){return "pobierz nektar"};
 
-exports.nectarRemaining = function(d){return "nectar"};
+exports.nectarRemaining = function(d){return "nektar"};
 
-exports.nectarTooltip = function(d){return "Get nectar from a flower"};
+exports.nectarTooltip = function(d){return "Pobierz nektar z kwiatu"};
 
 exports.nextLevel = function(d){return "Gratulacje! Ukończyłeś tę łamigłówkę."};
 
@@ -14144,9 +14144,9 @@ exports.noPathLeft = function(d){return "nie ma ścieżki w lewo"};
 
 exports.noPathRight = function(d){return "nie ma ścieżki w prawo"};
 
-exports.notAtFlowerError = function(d){return "You can only get nectar from a flower."};
+exports.notAtFlowerError = function(d){return "Możesz pobrać nektar tylko z kwiatu."};
 
-exports.notAtHoneycombError = function(d){return "You can only make honey at a honeycomb."};
+exports.notAtHoneycombError = function(d){return "Możesz zrobić miód tylko w plastrze miodu."};
 
 exports.numBlocksNeeded = function(d){return "Ta łamigłówka może być rozwiązana z użyciem %1 bloków."};
 
@@ -14170,7 +14170,7 @@ exports.removeStack = function(d){return "usuń stos "+v(d,"shovelfuls")+" stos�
 
 exports.removeSquare = function(d){return "usuń kwadrat"};
 
-exports.repeatCarefullyError = function(d){return "Aby rozwiązać ten problem, znajdź wzór (układ), który się powtarza.  Użyj bloku powtórz z trzema blokami w nim: idź, idź, skręć w prawo."};
+exports.repeatCarefullyError = function(d){return "Aby to rozwiązać, pomyśl dokładnie o wzorze na dwa ruchy i jedną kolejkę umieszczając ją w bloku \"powtórz\". Spokojnie, możesz dostać dodatkową kolejkę pod koniec :)"};
 
 exports.repeatUntil = function(d){return "powtarzaj aż"};
 
@@ -14180,9 +14180,9 @@ exports.repeatUntilFinish = function(d){return "powtarzaj aż będzie koniec"};
 
 exports.step = function(d){return "Krok"};
 
-exports.totalHoney = function(d){return "total honey"};
+exports.totalHoney = function(d){return "Cały miód"};
 
-exports.totalNectar = function(d){return "total nectar"};
+exports.totalNectar = function(d){return "Cały nektar"};
 
 exports.turnLeft = function(d){return "skręć w lewo"};
 
@@ -14190,9 +14190,9 @@ exports.turnRight = function(d){return "skręć w prawo"};
 
 exports.turnTooltip = function(d){return "Obraca mnie w lewo lub w prawo o 90 stopni."};
 
-exports.uncheckedCloudError = function(d){return "Make sure to check all clouds to see if they're flowers or honeycombs."};
+exports.uncheckedCloudError = function(d){return "Upewnij się, że sprawdziłeś wszystkie chmury aby sprawdzić, czy kwiaty są na plastrach miodu."};
 
-exports.uncheckedPurpleError = function(d){return "Make sure to check all purple flowers to see if they have nectar"};
+exports.uncheckedPurpleError = function(d){return "Nie zapomnij sprawdzić wszystkich fioletowych kwiatów, czy mają nektar"};
 
 exports.whileMsg = function(d){return "dopóki"};
 
@@ -14202,7 +14202,7 @@ exports.word = function(d){return "Znajdź słowa"};
 
 exports.yes = function(d){return "Tak"};
 
-exports.youSpelled = function(d){return "You spelled"};
+exports.youSpelled = function(d){return "Wpisałeś"};
 
 
 },{"messageformat":70}],59:[function(require,module,exports){

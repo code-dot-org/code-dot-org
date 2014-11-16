@@ -19887,15 +19887,15 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.da=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "og"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "sandt"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "falsk"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
 exports.catActions = function(d){return "Handlinger"};
 
-exports.catColour = function(d){return "Farver"};
+exports.catColour = function(d){return "Farve"};
 
 exports.catLogic = function(d){return "Logik"};
 
@@ -19987,7 +19987,7 @@ exports.score = function(d){return "score"};
 
 exports.showCodeHeader = function(d){return "Vis kode"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Vis blokke"};
 
 exports.showGeneratedCode = function(d){return "Vis kode"};
 
@@ -20025,7 +20025,7 @@ exports.typeHint = function(d){return "Bemærk, at parenteser og semikoloner er 
 
 exports.workspaceHeader = function(d){return "Saml dine blokke her: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Skriv din JavaScript-kode her"};
 
 exports.infinity = function(d){return "Uendelig"};
 
@@ -20054,31 +20054,31 @@ exports.genericFeedback = function(d){return "Se hvordan du endte, og prøve at 
 var MessageFormat = require("messageformat");MessageFormat.locale.da=function(n){return n===1?"one":"other"}
 exports.actor = function(d){return "skuespiller"};
 
-exports.backgroundBlack = function(d){return "black"};
+exports.backgroundBlack = function(d){return "sort"};
 
-exports.backgroundCave = function(d){return "cave"};
+exports.backgroundCave = function(d){return "hule"};
 
-exports.backgroundCloudy = function(d){return "cloudy"};
+exports.backgroundCloudy = function(d){return "overskyet"};
 
 exports.backgroundHardcourt = function(d){return "hardcourt"};
 
-exports.backgroundNight = function(d){return "night"};
+exports.backgroundNight = function(d){return "nat"};
 
-exports.backgroundUnderwater = function(d){return "underwater"};
+exports.backgroundUnderwater = function(d){return "undervands"};
 
-exports.backgroundCity = function(d){return "city"};
+exports.backgroundCity = function(d){return "City"};
 
-exports.backgroundDesert = function(d){return "desert"};
+exports.backgroundDesert = function(d){return "ørken"};
 
-exports.backgroundRainbow = function(d){return "rainbow"};
+exports.backgroundRainbow = function(d){return "regnbue"};
 
-exports.backgroundSoccer = function(d){return "soccer"};
+exports.backgroundSoccer = function(d){return "fodbold"};
 
-exports.backgroundSpace = function(d){return "space"};
+exports.backgroundSpace = function(d){return "plads"};
 
 exports.backgroundTennis = function(d){return "tennis"};
 
-exports.backgroundWinter = function(d){return "winter"};
+exports.backgroundWinter = function(d){return "vinter"};
 
 exports.catActions = function(d){return "Handlinger"};
 
@@ -20318,9 +20318,9 @@ exports.setBackgroundWinter = function(d){return "sæt vinter baggrund"};
 
 exports.setBackgroundTooltip = function(d){return "Indstiller baggrundsbilledet"};
 
-exports.setEnemySpeed = function(d){return "set enemy speed"};
+exports.setEnemySpeed = function(d){return "indstil fjendens hastighed"};
 
-exports.setPlayerSpeed = function(d){return "set player speed"};
+exports.setPlayerSpeed = function(d){return "indstil spillerens hastighed"};
 
 exports.setScoreText = function(d){return "sæt score"};
 
@@ -20440,9 +20440,9 @@ exports.shareStudioTwitter = function(d){return "Tjek historien jeg lavede. Jeg 
 
 exports.shareGame = function(d){return "Del din historie:"};
 
-exports.showCoordinates = function(d){return "show coordinates"};
+exports.showCoordinates = function(d){return "Vis koordinater"};
 
-exports.showCoordinatesTooltip = function(d){return "show the protagonist's coordinates on the screen"};
+exports.showCoordinatesTooltip = function(d){return "Vis hovedpersonens koordinater på skærmen"};
 
 exports.showTitleScreen = function(d){return "Vis titelskærm"};
 
@@ -20456,7 +20456,7 @@ exports.showTSDefText = function(d){return "Skriv tekst her"};
 
 exports.showTitleScreenTooltip = function(d){return "Vis en titel skærm med tilhørende titel og tekst."};
 
-exports.size = function(d){return "size"};
+exports.size = function(d){return "størrelse"};
 
 exports.setSprite = function(d){return "sæt"};
 

@@ -7,8 +7,8 @@
       user:
         name: Nimimerkki
         email: Sähköposti
-        username: käyttäjätunnus
-        password: salasana
+        username: Käyttäjätunnus
+        password: Salasana
         password_confirmation: Salasanan vahvistus
         current_password: Nykyinen salasana
         locale: Kieli
@@ -31,11 +31,11 @@
     placeholder: Syötä vihjeesi tähän
     submit: Lisää vihje
   appname: Code.org
-  stage: vaihe
+  stage: Taso
   stage_number: Taso %{number}
   puzzle: Pulma
-  trophies: pokaalit
-  courses: kurssit
+  trophies: Pokaalit
+  courses: Kurssit
   of: /
   more: LISÄÄ
   less: VÄHEMMÄN
@@ -53,7 +53,7 @@
     signed_out: Olet kirjautunut ulos palvelusta <a href="%{url}">Code.org</a>.
     sign_out_of: Olet kirjautuneena sisään palvelun %{provider} kautta. <a href="%{url}">Kirjaudu
       ulos</a> palvelusta %{provider}.
-    already_signedup: Joko rekisteröidyit?
+    already_signedup: Jo rekisteröitynyt?
     notyet_signedup: Etkö ole vielä rekisteröitynyt?
     google_oauth2: Google-tili
     twitter: Twitter
@@ -82,7 +82,7 @@
     gender: Sukupuoli (vapaaehtoinen)
     birthday: Syntymäpäivä (vapaaehtoinen)
     age: Ikä
-    user_type: Are you a student or teacher?
+    user_type: Oletko opiskelija tai opettaja?
     submit: Rekisteröidy
     teacher: Oletko opettaja?
     valid_username: Vapaa!
@@ -113,7 +113,7 @@
     name: Valitse nimesi
     picture: Nyt etsi salainen kuvasi
     words: Nyt anna salaiset sanasi
-    login: Kirjaudu
+    login: Kirjaudu sisään
   password:
     reset_form:
       title: Unohditko salasanasi?
@@ -214,12 +214,11 @@
         not_earned: (sivustolla mainitut raha- ja tavarapalkinnot ovat voimassa vain
           USA:ssa)
         bonus:
-          not_earned_title: You can still earn an additional $250 in <a target="_blank"
-            href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers
-            only)
+          not_earned_title: Voit edelleen ansaita 250 dollaria <a target="_blank"
+            href="http://DonorsChoose.org"> DonorsChoose.org</a> palveluun (vain USA)
           earned: "Hieno suoritus! 7 tai useampi oppilaistasi, jotka keräsivät kaikki
-            %{num_trophies} ovat tyttöjä. \n\nHuom: \"sivustolla mainitut raha- ja
-            tavarapalkinnot ovat voimassa vain USA:ssa\"\n"
+            %{num_trophies} ovat tyttöjä. \n\nHuom: sivustolla mainitut raha- ja tavarapalkinnot
+            ovat voimassa vain USA:ssa\n"
           not_earned: (sivustolla mainitut raha- ja tavarapalkinnot ovat voimassa
             vain USA:ssa)
   crud:
@@ -243,21 +242,21 @@
         playlab: Tee sovellus
         artist: Piirrä jotakin
     user:
-      classroom: Oppilaani
+      classroom: Opettajan kotisivu
       label: Hei %{username}
       stats: Minun edistymiseni
       settings: Tilini
       prizes: Palkinnot
       logout: Kirjaudu ulos
-      signin: Kirjaudu
-      signup: Rekisteröidy
+      signin: Kirjaudu sisään
+      signup: Luo käyttäjätunnus
       already_registered: Jo rekisteröitynyt?
     popup:
       progress: Sinun edistymisesi
       lines: 'Koodirivien yhteismäärä: %{lines}'
       close: SULJE
       mastery: Käsitteitä
-      puzzle_map: Vaiheet
+      puzzle_map: Tasot
       prizes: "Kerää kaikki %{total_trophies} pokaalia! \n\n(sivustolla mainitut raha-
         ja tavarapalkinnot ovat voimassa vain USA:ssa)\n"
       prize_earned: |
@@ -265,7 +264,7 @@
 
         (sivustolla mainitut raha- ja tavarapalkinnot ovat voimassa vain USA:ssa)
       prize_us_only: (vain oppilaille USA:ssa)
-      prizes_link: Lisätietoja
+      prizes_link: lisätietoja
   teacher:
     title:
       one: 'Opettajasi:'
@@ -276,20 +275,20 @@
     tools: Opettajan työkalut
     followers:
       section: 'Ryhmä:'
-      stages: 'Stage(s) to display:'
-      show_past: 'Show student activity (%{bullet_html}) in the past:'
-      levels_key: Levels key
+      stages: 'Taso(ja) esitettäväksi:'
+      show_past: 'Näytä opiskelijoiden toimintahistoria (%{bullet_html}):'
+      levels_key: Tasojen avain
       perfect: Valmis, täydellistä
       completed: Valmis, mutta käytit liian montaa lohkoa
       tried: Kokeiltu, mutta ei valmis
       not_tried: Ei kokeiltu
-      activity: Indicates student activity in the last %{hours} %{plural}
+      activity: Ilmaisee opiskelijan aktiivisuutta viimeisen %{hours} %{plural} aikana
       no_section: Ei valittuja ryhmiä
       trophies: pokaalit
     students:
       name: Nimi
       username: käyttäjätunnus
-      password: salasana
+      password: Salasana
       manage: Hallinnoi oppilaita
       dashboard: Siirry opettajan päänäytölle
       add: Lisää opiskelijoita
@@ -306,7 +305,7 @@
       vist: Pyydä oppilaitasi käymään
       section_code: 'ja anna heidän ryhmän tunnuksensa:'
       first_please: Lisää ensin %{add_section}
-      for: For
+      for: Varten
       enter: 'anna:'
     sections:
       add: Lisää ryhmä
@@ -338,9 +337,9 @@
     new_password_hint: (jätä tyhjäksi jos et halua vaihtaa)
     current_password_hint: (anna nykyinen salasanasi, jotta voimme vahvistaa muutokset)
     cancel:
-      title: Poista tili
+      title: Tilin poistaminen
       hint: Onneton?
-      button: Tilin poistaminen
+      button: Poista tili
   user_level:
     completed: Valmis
     tried: Kokeili
@@ -355,8 +354,8 @@
     signin_message: Jo rekisteröitynyt? %{link}
     student_reg_link: Oppilaan rekisteröityminen
     teacher_reg_link: Opettajan rekisteröityminen
-    signin_directions: Use an account to track progress and get rewards.<br/> Teachers,
-      track your entire class.
+    signin_directions: Käytä tiliä, jos haluat seurata edistymistäsi.<br/> Opettaja,
+      seuraa koko luokkaasi.
     teacher_dashboard: Näytä edistysminen
     teacher_student_count_one: Sinulla on %{count} oppilasta.
     teacher_student_count: Sinulla on %{count} oppilasta.
@@ -385,7 +384,7 @@
     test_videos_help: Testaa uutta videosoitintamme koulussasi
     try_beta_courses: Uutta! Kokeile beta-kurssejamme K-5 oppilaille
     use_as_teacher: Käytä sivustoa opettajana
-    heading_elementary: <h2>20 hour kurssit</h2><h1>alkeisoppilaille</h1>
+    heading_elementary: <h2>20 tunnin kurssit</h2><h1>alkeisopiskeluun</h1>
     heading_apps: <h2>Hauskaa</h2><h1>kaikille</h1>
     heading_legacy: <h2>Yleinen kurssimme</h2><h1>kaiken ikäisille</h1>
     gallery:
@@ -444,8 +443,11 @@
   try_reloading: Yritä ladata sivu uudelleen
   next_stage: Valmis! Siirry seuraavalle tasolle
   download_pdf: Avaa oppituntisuunnitelma
+  lesson_plan: Lesson Plan
   view_lesson_plan: Katso oppitunnin suunnitelmaa
   pdf_download: Lataa PDF
+  download_coming_soon: Downloadable activity coming soon.
+  video_coming_soon: Video Coming Soon!
   share_code:
     title: Napsauta 'Aja' nähdäksesi ohjelmani toiminnassa
     bounce_og_title: Tutustu Bounce-peliini
@@ -461,8 +463,8 @@
   builder:
     created: Loit uuden komentosarjan.
     destroyed: Tuhosit komentosarjan.
-    manage: Manage Scripts
-    view: View
+    manage: Rakenna tasoja
+    view: Näkymä
     back: Takaisin komentosarjoihin
     success: Muokkasit lohkoja onnistuneesti.
     level:
@@ -472,8 +474,7 @@
   upsell:
     hoc:
       title: Kooditunti
-      body: Kokeile tietojenkäsittelytieteen perusteita. Miljoonat ovat antaneet sille
-        tilaisuuden.
+      body: Kokeile tietojenkäsittelytieteen perusteita. Jo miljoonat ovat kokeilleet.
     flappy:
       title: Flappy Code
       body: Haluatko kirjoittaa oman pelin alle 10 minuutissa? Kokeile Flappy Code
@@ -500,7 +501,7 @@
       versioita reaktiona saatuun palautteeseen.
     feedback: Anna palautetta
     report_bug: Raportoi ongelma
-    support: Tarkastele ohjeita
+    support: Katso ohjeet
     support_url: //support.code.org
   multi:
     wrong_title: Väärä vastaus
@@ -512,6 +513,8 @@
     wrong_body: Antamasi ratkaisu ei ole oikea. Yritä uudestaan!
     correct_title: Oikein
     correct_body: Tämä on oikea vastaus.
+  text_match:
+    placeholder: Kirjoita vastauksesi tähän
   dialog:
     ok: OK
   time:
@@ -549,7 +552,7 @@
           title: Askel
           description: ''
         sample_level_builder:
-          title: Esimerkkitason rakentaja
+          title: Tasorakentaja esimerkki
           description: ''
   age_interstitial:
     age: Ikäsi
@@ -562,3 +565,8 @@
     tukisivustollemme. Voit selailla <a href="http://support.code.org">support.code.org</a>
     -sivuja ilman kirjautumista tai pyytää vanhempiasi tai opettajaasi ottamaan yhteyttä
     meihin puolestasi.
+  progress:
+    not_completed: kesken
+    completed_too_many_blocks: valmis, liian monta lohkoa
+    completed_perfect: valmis, täydellinen
+    furthest_level_attempted: vaikein taso jota yritetty

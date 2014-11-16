@@ -11603,9 +11603,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.en=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "və"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "doğru"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "yalan"};
 
 exports.blocklyMessage = function(d){return "\"Blockly\""};
 
@@ -11643,7 +11643,7 @@ exports.directionEastLetter = function(d){return "Şərq"};
 
 exports.directionWestLetter = function(d){return "Qərb"};
 
-exports.end = function(d){return "end"};
+exports.end = function(d){return "son"};
 
 exports.emptyBlocksErrorMsg = function(d){return "\"Təkrar\" və ya \"Əgər\" blokları işləsin deyə içərisində başqa blokların olmağı lazımdır. Əmin olun ki, daxili blokun konteyner blokun içərisinə düz yerləşir."};
 
@@ -11768,11 +11768,11 @@ exports.genericFeedback = function(d){return "See how you ended up, and try to f
 
 },{"messageformat":60}],48:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.en=function(n){return n===1?"one":"other"}
-exports.circleBlockTitle = function(d){return "circle (radius, style, color)"};
+exports.circleBlockTitle = function(d){return "çevrə (radius, stil, rəng)"};
 
 exports.displayBlockTitle = function(d){return "display"};
 
-exports.ellipseBlockTitle = function(d){return "ellipse (width, height, style, color)"};
+exports.ellipseBlockTitle = function(d){return "ellips (en, hündürlük, stil, rəng)"};
 
 exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"display\" block?"};
 
@@ -11780,31 +11780,31 @@ exports.overlayBlockTitle = function(d){return "overlay (top, bottom)"};
 
 exports.placeImageBlockTitle = function(d){return "place-image (x, y, image)"};
 
-exports.rectangleBlockTitle = function(d){return "rectangle (width, height, style, color)"};
+exports.rectangleBlockTitle = function(d){return "düzbucaqlı (en, hündürlük, stil, rəng)"};
 
-exports.rotateImageBlockTitle = function(d){return "rotate (degrees, image)"};
+exports.rotateImageBlockTitle = function(d){return "fırlat (dərəcə, şəkil)"};
 
-exports.scaleImageBlockTitle = function(d){return "scale (factor)"};
+exports.scaleImageBlockTitle = function(d){return "miqyas (vuruq)"};
 
-exports.squareBlockTitle = function(d){return "square (size, style, color)"};
+exports.squareBlockTitle = function(d){return "kvadrat (ölçü, stil, rəng)"};
 
-exports.starBlockTitle = function(d){return "star (radius, style, color)"};
+exports.starBlockTitle = function(d){return "ulduz (radius, stil, rəng)"};
 
 exports.stringAppendBlockTitle = function(d){return "string-append (first, second)"};
 
 exports.stringLengthBlockTitle = function(d){return "string-length (string)"};
 
-exports.textBlockTitle = function(d){return "text (string, size, color)"};
+exports.textBlockTitle = function(d){return "mətn (sətir, ölçü, rəng)"};
 
-exports.triangleBlockTitle = function(d){return "triangle (size, style, color)"};
+exports.triangleBlockTitle = function(d){return "üçbucaq (ölçü, stil, rəng)"};
 
 exports.underlayBlockTitle = function(d){return "underlay (bottom, top)"};
 
-exports.outline = function(d){return "outline"};
+exports.outline = function(d){return "kontur"};
 
-exports.solid = function(d){return "solid"};
+exports.solid = function(d){return "bərk"};
 
-exports.string = function(d){return "string"};
+exports.string = function(d){return "sətir"};
 
 
 },{"messageformat":60}],49:[function(require,module,exports){

@@ -255,7 +255,7 @@
         playlab: Створити програму
         artist: Намалювати
     user:
-      classroom: Мої учні
+      classroom: Домашня сторінка вчителя
       label: Привіт %{username}
       stats: Мій прогрес
       settings: Мій профіль
@@ -452,8 +452,11 @@
   try_reloading: Спробуйте перезавантажити сторінку
   next_stage: Завершено! Перейти до наступного етапу
   download_pdf: Відкрити план уроку
+  lesson_plan: Lesson Plan
   view_lesson_plan: Переглянути план уроку
   pdf_download: Завантажити PDF
+  download_coming_soon: Downloadable activity coming soon.
+  video_coming_soon: Video Coming Soon!
   share_code:
     title: Натисніть кнопку "Виконати", щоб побачити мою програму в дії
     bounce_og_title: Подивіться на мою гру Арканоід
@@ -517,6 +520,8 @@
     wrong_body: Подане рішення не є правильним.  Будь ласка, спробуйте ще раз!
     correct_title: Правильно
     correct_body: Це правильна відповідь.
+  text_match:
+    placeholder: Введіть свою відповідь тут
   dialog:
     ok: Гаразд
   time:
@@ -569,3 +574,8 @@
     сайт підтримки. Ви можете користуватись <a href="http://support.code.org">support.code.org</a>
     не входячи в обліковий запис, або попросіть своїх батьків чи вчителя зв'язатися
     з нами.
+  progress:
+    not_completed: не завершено
+    completed_too_many_blocks: завершено, забагато блоків
+    completed_perfect: виконано, ідеально
+    furthest_level_attempted: останній відкритий рівень

@@ -133,8 +133,8 @@
       2-3 Conditionals Multi 1:
         Multiple Choice: Multiple-Choice
         /script_assets/2-3_images/unplugged/conditionals_1_q.png: /script_assets/2-3_images/unplugged/conditionals_1_q.png
-        According to the rules of the game, which set of cards is scored correctly?: According
-          to the rules of the game, which set of cards is scored correctly?
+        According to the rules of the game, which set of cards is scored correctly?: Nach
+          den Regeln des Spiels, ist welcher Satz der Karten korrekt ausgewertet?
         /script_assets/2-3_images/unplugged/conditionals_1_a1.png: /script_assets/2-3_images/unplugged/conditionals_1_a1.png
         /script_assets/2-3_images/unplugged/conditionals_1_a2.png: /script_assets/2-3_images/unplugged/conditionals_1_a2.png
         /script_assets/2-3_images/unplugged/conditionals_1_a3.png: /script_assets/2-3_images/unplugged/conditionals_1_a3.png
@@ -273,52 +273,55 @@
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png
       4-5 Algorithms Multi 1:
         Multiple Choice: Multiple-Choice
-        Which one of these items is hardest to describe an algorithm for?: Which one
-          of these items is hardest to describe an algorithm for?
-        <h4>Brushing your teeth</h4>: <h4>Brushing your teeth</h4>
-        <h4>Baking cookies</h4>: <h4>Baking cookies</h4>
-        <h4>Shopping from a grocery list</h4>: <h4>Shopping from a grocery list</h4>
-        <h4>Banana</h4>: <h4>Banana</h4>
+        Which one of these items is hardest to describe an algorithm for?: Welche
+          dieser Elemente ist am schwersten mit einem Algorithmus zu beschreiben?
+        <h4>Brushing your teeth</h4>: <h4>Zähneputzen</h4>
+        <h4>Baking cookies</h4>: <h4>Kekse backen</h4>
+        <h4>Shopping from a grocery list</h4>: <h4>Shopping mit einer Einkaufsliste</h4>
+        <h4>Banana</h4>: <h4>Banane</h4>
       4-5 Computational Thinking Multi 1:
         Multiple Choice: Multiple-Choice
-        0: '? Here are three sentences. Which of the templates below correctly abstracts
-          so that all three match the same pattern as the template?'
-        1: ': Here are three sentences. Which of the templates below correctly abstracts
-          so that all three match the same pattern as the template?'
+        0: '? Hier sind drei Sätze. Welche der  Vorlagen unten abstrahiert richtig,
+          so dass alle drei das gleiche Muster als Vorlage benutzen?'
+        1: ': Hier sind drei Sätze. Welcher der Vorlagen unten abstrahiert richtig,
+          so dass alle drei mit dem Muster der Vorlage übereinstimmen?'
         <h4>Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.</h4>: <h4>Seattle
-          is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.</h4>
-        <h4>Seattle _____ a _____ _____.</h4>: <h4>Seattle _____ a _____ _____.</h4>
-        <h4>_____ is a _____ city.</h4>: <h4>_____ is a _____ city.</h4>
-        <h4>_____ is _____ a _____.</h4>: <h4>_____ is _____ a _____.</h4>
-        <h4>Eugene is a _____ city.</h4>: <h4>Eugene is a _____ city.</h4>
+          ist eine Grossstadt. <br/>Eugene ist eine mittlere Stadt <br/> Hillview
+          ist eine kleine Stadt.</h4>
+        <h4>Seattle _____ a _____ _____.</h4>: <h4>Seattle ___ ein ______.</h4>
+        <h4>_____ is a _____ city.</h4>: |2
+
+          <h4>_____ ist eine _____ stadt.</h4>
+        <h4>_____ is _____ a _____.</h4>: <h4>_____ ist _____ eine _____.</h4>
+        <h4>Eugene is a _____ city.</h4>: <h4>Eugene ist eine ___ Stadt.</h4>
       4-5 Crowdsourcing Multi 1:
         Multiple Choice: Multiple-Choice
-        Which of these pictures best represents crowdsourcing?: Which of these pictures
-          best represents crowdsourcing?
+        Which of these pictures best represents crowdsourcing?: Welches dieser Bilder
+          representiert Crowdsourcing am besten?
         /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png
         /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png
       4-5 Crowdsourcing Multi 2:
         Multiple Choice: Multiple-Choice
-        Which one of these activities would be best for practicing crowdsourcing?: Which
-          one of these activities would be best for practicing crowdsourcing?
-        <h4>Cleaning your room</h4>: <h4>Cleaning your room</h4>
-        <h4>Eating your dessert</h4>: <h4>Eating your dessert</h4>
-        <h4>Brushing your hair</h4>: <h4>Brushing your hair</h4>
-        <h4>Washing your face</h4>: <h4>Washing your face</h4>
+        Which one of these activities would be best for practicing crowdsourcing?: Welche
+          dieser Aktivitäten wäre die Beste um crowdsourcing zu üben?
+        <h4>Cleaning your room</h4>: <h4>Reinigung Ihres Zimmers</h4>
+        <h4>Eating your dessert</h4>: <h4>Nachtisch essen</h4>
+        <h4>Brushing your hair</h4>: <h4>Haare bürsten</h4>
+        <h4>Washing your face</h4>: <h4>Ihr Gesicht waschen</h4>
       4-5 Digital Footprint Multi 1:
         Multiple Choice: Multiple-Choice
-        Which piece of information listed below is okay to share on the internet?: Which
-          piece of information listed below is okay to share on the internet?
-        <h4>Your birthday</h4>: <h4>Your birthday</h4>
-        <h4>Your favorite food</h4>: <h4>Your favorite food</h4>
-        <h4>Your address</h4>: <h4>Your address</h4>
-        <h4>Your parent's credit card number</h4>: <h4>Your parent's credit card number</h4>
+        Which piece of information listed below is okay to share on the internet?: Welche
+          der unten genannten Informationen können sie gefahrlos im Internet Teilen?
+        <h4>Your birthday</h4>: <h4>Dein Geburtstag</h4>
+        <h4>Your favorite food</h4>: <h4>Dein Lieblingsessen</h4>
+        <h4>Your address</h4>: <h4>Deine Adresse</h4>
+        <h4>Your parent's credit card number</h4>: <h4>Kreditkarten-Nummer Ihres Elternteils</h4>
       4-5 Internet Multi 1:
         Multiple Choice: Multiple-Choice
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
-        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: When
-          you try to log on to code.org, which IP address is the DNS most likely to
-          take you to?
+        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Wenn
+          Sie versuchen, sich bei code.org anzumelden, welcher IP-Adresse ordnet der
+          DNS sie am wahrscheinlichsten zu?
         <h4>23.23.224.106</h4>: <h4>23.23.224.106</h4>
         <h4>54.209.61.132</h4>: <h4>54.209.61.132</h4>
         <h4>64.14.68.10</h4>: <h4>64.14.68.10</h4>
@@ -326,42 +329,42 @@
       4-5 Internet Multi 2:
         Multiple Choice: Multiple-Choice
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
-        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: If
-          the DNS has sent you to the page at the IP address 100.42.50.110, which
-          website are you on?
-        <h4>code.org</h4>: <h4>code.org</h4>
+        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Wenn
+          der DNS sie zu der Seite mit der IP-Adresse 100.42.50.110 geleitet hat,
+          auf welcher Seite sind sie?
+        <h4>code.org</h4>: <h4>Code.org</h4>
         <h4>csisfun.com</h4>: <h4>csisfun.com</h4>
         <h4>thinkersmith.org</h4>: <h4>thinkersmith.org</h4>
         <h4>khanacademy.org</h4>: <h4>khanacademy.org</h4>
       4-5 Songwriting Multi 1:
         Multiple Choice: Multiple-Choice
         /script_assets/4-5_images/unplugged/songwriting_1_q.png: /script_assets/4-5_images/unplugged/songwriting_1_q.png
-        0: '? What is the largest chunk of this song that you can define as the chorus
-          so that the chorus repeats exactly each time it is called?'
-        1: ': What is the largest chunk of this song that you can define as the chorus
-          so that the chorus repeats exactly each time it is called?'
-        Lou, Lou, skip to my Lou,: Lou, Lou, skip to my Lou,
+        0: '? Was ist der größte Brocken dieses Liedes, den Sie als Refrain definieren
+          können, so dass der REfrain genau jedes Mal gleich ist?'
+        1: ': Was ist der größte Brocken dieses Liedes, den Sie als Refrain definieren
+          können, so dass er sich exakt so jedes mal wiederhohlt?'
+        Lou, Lou, skip to my Lou,: Lou, Lou, spring zu my Lou,
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Lou,
-          Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip
-          to my Lou, <br/>Skip to my Lou, my darlin.
-        2: '? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
-          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the
-          buttermilk, <br/>Shoo, fly, shoo,'
-        3: ': Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
-          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the
-          buttermilk, <br/>Shoo, fly, shoo,'
-        4: '? Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk,
-          <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,
-          <br/>Skip to my Lou, my darlin.'
-        5: ': Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk,
-          <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,
-          <br/>Skip to my Lou, my darlin.'
+          Lou, spring zu my Lou <br/> Lou, Lou, spring zu my Lou <br/> Lou, Lou, sspring
+          zu Lou <br/> spring zu my Lou, mein Liebling.
+        2: '? Lou, Lou, spring zu my Lou <br/> Lou, Lou, spring zu Lou <br/> Lou,
+          Lou, spring zu my Lou <br/> spring zu my Lou, mein Schätzchen. <br/> <br/><p>Fly
+          in der Buttermilch, <br/>Fliege Husch, Husch,'
+        3: ': Lou, Lou, spring zu my Lou <br/> Lou, Lou, spring zu my Lou <br/> Lou,
+          Lou, spring zu my Lou <br/> spring zu my Lou, mein Schätzchen. <br/> <br/><p>Flige
+          in der Buttermilch, <br/>Flieg Husch, Husch,'
+        4: '? Fliegen in der Buttermilch, <br/> Husch, fliege, Husch, <br/> Fliege
+          in der Buttermilch, <br/> Husch, fliege, Husch, <br/> Fliege in der Buttermilch,
+          <br/> Husch, fliege, Husch, <br/> spring zu my Lou, mein Liebling.'
+        5: ': Fly in der Buttermilch, <br/> Husch, fliegen, Husch, <br/> Fly in der
+          Buttermilch, <br/> Husch, fliegen, Husch, <br/> Fly in der Buttermilch,
+          <br/> Husch, fliegen, Husch, <br/> Skip to my Lou, mein Liebling.'
       4-5 Suncatchers Multi 1:
         Multiple Choice: Multiple-Choice
         /script_assets/4-5_images/unplugged/suncatchers_2_q.png: /script_assets/4-5_images/unplugged/suncatchers_2_q.png
-        Which of the programs below <em>does not</em> make the exact same sequence as Program 1: Which
-          of the programs below <em>does not</em> make the exact same sequence as
-          Program 1
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1: Welches
+          der Programme unten<em>macht nicht</em>die genau gleiche Sequenz wie Programm
+          1
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
@@ -639,7 +642,7 @@
         George Jetson: George Jetson
       unique level name here:
         title: Titel
-        description here: description here
-        Question: Question
-        wrong answer: wrong answer
-        right answer: right answer
+        description here: hier die Beschreibung
+        Question: Frage
+        wrong answer: falsche Antwort
+        right answer: richtige Antwort

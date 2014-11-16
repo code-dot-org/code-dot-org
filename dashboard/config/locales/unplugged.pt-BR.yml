@@ -233,38 +233,39 @@
         desc: Os alunos exploram a diferença entre informações privadas e pessoais,
           distinguindo o que é seguro e o que não é seguro para compartilhar online.
       TangramAlgorithms:
-        title: Tangram Algorithms
-        desc: This lesson shows us something important about algorithms. If you keep
-          an algorithm simple there are lots of ways to use it. If you want to make
-          sure everyone ends up with the same thing, then your algorithm needs more
-          detail.
+        title: Algoritmos do tangram
+        desc: Esta aula nos mostra algo importante sobre os algoritmos, isto é, se
+          mantiver sua simplicidade, será possível fazer muitas coisas com eles. Se
+          quiser garantir que todos terminarão com o mesmo resultado, seu algoritmo
+          precisará de mais detalhes.
       EnvelopeVariables:
-        title: Envelope Variables
-        desc: Variables allow for a lot of freedom in computer science.  This lesson
-          helps to explain what variables are and how we can use them in many different
-          ways. Use this activity before (or in conjunction with) the lesson on abstraction
-          to really hit the idea home.
+        title: Variáveis do envelope
+        desc: As variáveis permitem muita liberdade na ciência da computação. Esta
+          aula ajuda a explicar o que são variáveis e como podemos usá-las de diversas
+          maneiras diferentes. Faça esta atividade antes ou junto com a lição sobre
+          abstração, para que a ideia realmente faça sentido.
       MadGlibs:
         title: Mad Glibs
-        desc: Abstraction is one of the most important skills for a computer scientist
-          to understand.  This activity will have your students analyzing stories
-          for differences so that they can abstract them away. Those abstracted stories
-          become templates for fun and crazy new ones.
+        desc: A abstração é uma das habilidades mais importantes para o entendimento
+          de um cientista da computação. Esta atividade fará com que seus alunos analisem
+          as diferenças entre histórias para que possam, então, abstraí-las. Essas
+          histórias abstraídas se tornam modelos para novas histórias doidas e divertidas.
       ForLoopFun:
-        title: For Loop Fun
-        desc: We know that loops allow us to do things over and over again, but now
-          we’re going to learn how to use loops with extra structure built right in.
+        title: Para diversão com laços
+        desc: Sabemos que os laços nos permitem fazer algo repetidas vezes, mas, agora,
+          vamos aprender como usá-los com estruturas adicionais embutidas.
       SongwritingWithParameters:
         title: Escrevendo uma canção com parâmetros
-        desc: 'One of the most magnificent structures in the computer science world
-          is the function.  Functions (sometimes called procedures) are mini programs
-          that you can use over and over inside of your bigger program. This lesson
-          will help students intuitively understand why combining chunks of code into
-          functions is such a helpful practice.  '
+        desc: 'Uma das estruturas mais incríveis do mundo da ciência da computação
+          é a função. As funções (chamadas às vezes de procedimentos) são miniprogramas
+          que podem ser usados repetidas vezes dentro do seu programa maior. Esta
+          aula ajudará os alunos a entender, de maneira intuitiva, por que combinar
+          blocos de códigos em funções é uma prática útil.  '
       BinaryImages:
-        title: Binary Images
-        desc: Though many people think of binary as strictly zeros and ones, our previous
-          courses taught students that information can be represented in a variety
-          of binary options.  This lesson takes that concept one step further as it
-          illustrates how a computer can store even more complex information (such
-          as images and colors) in binary, as well.
+        title: Imagens binárias
+        desc: Embora muitas pessoas vejam o binário estritamente como zeros e unidades,
+          nossos cursos anteriores ensinaram os alunos que as informações podem ser
+          representadas por uma grande variedade de opções binárias. Esta aula leva
+          esse conceito um passo adiante, uma vez que demonstra como um computador
+          também pode armazenar informações ainda mais complexas (como imagens e cores)
+          em binário.

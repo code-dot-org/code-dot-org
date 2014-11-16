@@ -11603,15 +11603,15 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.ta=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "மற்றும்"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "மெய்"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "தவறு"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
 exports.catActions = function(d){return "செயல்கள்"};
 
-exports.catColour = function(d){return "வண்ணம்"};
+exports.catColour = function(d){return "நிறம்"};
 
 exports.catLogic = function(d){return "தர்க்கம்"};
 

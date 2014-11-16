@@ -8354,9 +8354,9 @@ exports.yourExpression = function(d){return "Your expression:"};
 var MessageFormat = require("messageformat");MessageFormat.locale.ur=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "اور"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "سچا"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "غلط"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 

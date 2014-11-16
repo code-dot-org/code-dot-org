@@ -11612,9 +11612,9 @@ var MessageFormat = require("messageformat");MessageFormat.locale.lt = function 
 };
 exports.and = function(d){return "ir"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "Taip"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "klaida"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -11630,7 +11630,7 @@ exports.catLoops = function(d){return "Kartojimas"};
 
 exports.catMath = function(d){return "Matematika"};
 
-exports.catProcedures = function(d){return "Sudėtinės komandos"};
+exports.catProcedures = function(d){return "Komandų kūrimas"};
 
 exports.catText = function(d){return "Tekstas"};
 
@@ -11712,7 +11712,7 @@ exports.score = function(d){return "rezultatas"};
 
 exports.showCodeHeader = function(d){return "Rodyti kodą"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Rodyti blokus"};
 
 exports.showGeneratedCode = function(d){return "Rodyti kodą"};
 
@@ -11750,7 +11750,7 @@ exports.typeHint = function(d){return "Įsidėmėk, kad skliausteliai ir kabliat
 
 exports.workspaceHeader = function(d){return "Iš viso panaudojai blokelių: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Čia rašykite savo JavaScript kodą."};
 
 exports.infinity = function(d){return "Begalybė"};
 
@@ -11786,43 +11786,43 @@ var MessageFormat = require("messageformat");MessageFormat.locale.lt = function 
   }
   return 'other';
 };
-exports.circleBlockTitle = function(d){return "circle (radius, style, color)"};
+exports.circleBlockTitle = function(d){return "apskritimas(spindulys, stilius, spalva)"};
 
-exports.displayBlockTitle = function(d){return "display"};
+exports.displayBlockTitle = function(d){return "parodyk"};
 
-exports.ellipseBlockTitle = function(d){return "ellipse (width, height, style, color)"};
+exports.ellipseBlockTitle = function(d){return "elipsė(plotis, aukštis, stilius, spalva)"};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"display\" block?"};
+exports.extraTopBlocks = function(d){return "Yra neprijungtų blokelių. Ar norėjai juos prijungti prie \"parodyk\"?"};
 
-exports.overlayBlockTitle = function(d){return "overlay (top, bottom)"};
+exports.overlayBlockTitle = function(d){return "padėk-aukščiau(viršutinis, apatinis)"};
 
-exports.placeImageBlockTitle = function(d){return "place-image (x, y, image)"};
+exports.placeImageBlockTitle = function(d){return "padėk-vaizdą(x, y, vaizdas)"};
 
-exports.rectangleBlockTitle = function(d){return "rectangle (width, height, style, color)"};
+exports.rectangleBlockTitle = function(d){return "kvadratas(plotis, aukštis, stilius, spalva)"};
 
-exports.rotateImageBlockTitle = function(d){return "rotate (degrees, image)"};
+exports.rotateImageBlockTitle = function(d){return "pasuk(laipsniai, vaizdas)"};
 
-exports.scaleImageBlockTitle = function(d){return "scale (factor)"};
+exports.scaleImageBlockTitle = function(d){return "keis-mastelį(proporcija)"};
 
-exports.squareBlockTitle = function(d){return "square (size, style, color)"};
+exports.squareBlockTitle = function(d){return "kvadratas(dydis, stilius, spalva)"};
 
-exports.starBlockTitle = function(d){return "star (radius, style, color)"};
+exports.starBlockTitle = function(d){return "žvaigždė(spindulys, stilius, spalva)"};
 
-exports.stringAppendBlockTitle = function(d){return "string-append (first, second)"};
+exports.stringAppendBlockTitle = function(d){return "sujunk-tekstą(pirmas, antras)"};
 
-exports.stringLengthBlockTitle = function(d){return "string-length (string)"};
+exports.stringLengthBlockTitle = function(d){return "teksto-ilgis(tekstas)"};
 
-exports.textBlockTitle = function(d){return "text (string, size, color)"};
+exports.textBlockTitle = function(d){return "užrašyk(tekstas, dydis, spalva)"};
 
-exports.triangleBlockTitle = function(d){return "triangle (size, style, color)"};
+exports.triangleBlockTitle = function(d){return "trikampis(dydis, stilius, spalva)"};
 
-exports.underlayBlockTitle = function(d){return "underlay (bottom, top)"};
+exports.underlayBlockTitle = function(d){return "padėk-žemiau(apatinis, viršutinis)"};
 
-exports.outline = function(d){return "outline"};
+exports.outline = function(d){return "plonai"};
 
-exports.solid = function(d){return "solid"};
+exports.solid = function(d){return "storai"};
 
-exports.string = function(d){return "string"};
+exports.string = function(d){return "tekstas"};
 
 
 },{"messageformat":60}],49:[function(require,module,exports){

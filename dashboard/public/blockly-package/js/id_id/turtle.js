@@ -7089,8 +7089,100 @@ exports.answer = function(page, level) {
 
 },{"../base":2,"./api":28}],28:[function(require,module,exports){
 var BlocklyApps = require('../base');
+var utils = require('../utils');
+var _ = utils.getLodash();
 
 exports.log = [];
+
+exports.drawCircle = function (size, id) {
+  for (var i = 0; i < 36; i++) {
+    exports.moveForward(size, id);
+    exports.turnRight(10, id);
+  }
+};
+
+exports.drawSnowflake = function (type, id) {
+  var i, j, k;
+
+  // mirors Blockly.JavaScript.colour_random.
+  var random_colour = function () {
+    var colors = Blockly.FieldColour.COLOURS;
+    return colors[Math.floor(Math.random()*colors.length)];
+  };
+
+  if (type === 'random') {
+    type = _.sample(['fractal', 'flower', 'spiral', 'line', 'parallelogram', 'square']);
+  }
+
+  switch(type) {
+    case 'fractal':
+      for (i = 0; i < 8; i++) {
+        exports.jumpForward(45, id);
+        exports.turnLeft(45, id);
+        for (j = 0; j < 3; j++) {
+          for (k = 0; k < 3; k++) {
+            exports.moveForward(15, id);
+            exports.moveBackward(15, id);
+            exports.turnRight(45, id);
+          }
+          exports.turnLeft(90, id);
+          exports.moveBackward(15, id);
+          exports.turnLeft(45, id);
+        }
+        exports.turnRight(90, id);
+      }
+      break;
+
+    case 'flower':
+      for (i = 0; i < 5; i++) {
+        exports.drawCircle(2, id);
+        exports.drawCircle(4, id);
+        exports.turnRight(72, id);
+      }
+      break;
+
+    case 'spiral':
+      for (i = 0; i < 20; i++) {
+        exports.drawCircle(3, id);
+        exports.moveForward(20, id);
+        exports.turnRight(18, id);
+      }
+      break;
+
+    case 'line':
+      for (i = 0; i < 90; i++) {
+        exports.penColour(random_colour());
+        exports.moveForward(50, id);
+        exports.moveBackward(50, id);
+        exports.turnRight(4, id);
+      }
+      exports.penColour("#FFFFFF", id);
+      break;
+
+    case 'parallelogram':
+      for (i = 0; i < 10; i++) {
+        for (j = 0; j < 2; j++) {
+          exports.moveForward(50, id);
+          exports.turnRight(60, id);
+          exports.moveForward(50, id);
+          exports.turnRight(120, id);
+        }
+        exports.turnRight(36, id);
+      }
+      break;
+
+    case 'square':
+      for (i = 0; i < 10; i++) {
+        for (j = 0; j < 4; j++) {
+          exports.moveForward(50, id);
+          exports.turnRight(90, id);
+        }
+        exports.turnRight(36, id);
+      }
+      break;
+  }
+};
+
 
 exports.moveForward = function(distance, id) {
   this.log.push(['FD', distance, id]);
@@ -7180,7 +7272,7 @@ exports.drawStamp = function(stamp, id) {
   this.log.push(['stamp', stamp, id]);
 };
 
-},{"../base":2}],29:[function(require,module,exports){
+},{"../base":2,"../utils":39}],29:[function(require,module,exports){
 /**
  * Blockly Demo: Turtle Graphics
  *
@@ -8208,6 +8300,9 @@ exports.Colours = {
  */
 
 var msg = require('../../locale/id_id/turtle');
+var utils = require('../utils');
+var _ = utils.getLodash();
+
 
 exports.install = function(blockly, generator, gensym) {
  installDrawASquare(blockly, generator, gensym);
@@ -8867,7 +8962,8 @@ function installCreateASnowflakeDropdown(blockly, generator, gensym) {
     [msg.createSnowflakeLine(), 'line'],
     [msg.createSnowflakeSpiral(), 'spiral'],
     [msg.createSnowflakeFlower(), 'flower'],
-    [msg.createSnowflakeFractal(), 'fractal']
+    [msg.createSnowflakeFractal(), 'fractal'],
+    [msg.createSnowflakeRandom(), 'random']
   ];
 
   blockly.Blocks.create_snowflake_dropdown = {
@@ -8882,83 +8978,12 @@ function installCreateASnowflakeDropdown(blockly, generator, gensym) {
   };
 
   generator.create_snowflake_dropdown = function () {
-    var loopVar = gensym('count');
-    var loopVar2 = gensym('count');
-    var loopVar3 = gensym('count');
-    var color_random = generator.colour_random()[0];
-
     var type = this.getTitleValue('TYPE');
-    switch (type) {
-      case 'fractal':
-        return [
-          'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 8; ' + loopVar + '++) {',
-          '  Turtle.jumpForward(45);',
-          '  Turtle.turnLeft(45);',
-          '  for (var ' + loopVar2 + ' = 0; ' + loopVar2 + ' < 3; ' + loopVar2 + '++) {',
-          '    for (var ' + loopVar3 + ' = 0; ' + loopVar3 + ' < 3; ' + loopVar3 + '++) {',
-          '      Turtle.moveForward(15);',
-          '      Turtle.moveBackward(15);',
-          '      Turtle.turnRight(45);',
-          '    }',
-          '    Turtle.turnLeft(90);',
-          '    Turtle.moveBackward(15);',
-          '    Turtle.turnLeft(45);',
-          '  }',
-          '  Turtle.turnRight(90);',
-          '}\n'].join('\n');
-
-      case 'flower':
-        return [
-          'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 5; ' + loopVar + '++) {',
-          createACircleCode(2, gensym, '  '),
-          createACircleCode(4, gensym, '  '),
-          '  Turtle.turnRight(72);',
-          '}\n'].join('\n');
-
-      case 'spiral':
-        return [
-          'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 20; ' + loopVar + '++) {',
-          createACircleCode(3, gensym, '  '),
-          '  Turtle.moveForward(20);',
-          '  Turtle.turnRight(18);',
-          '}\n'].join('\n');
-
-      case 'line':
-        return [
-          'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 90; ' + loopVar + '++) {',
-          '  Turtle.penColour(' + color_random + ');',
-          '  Turtle.moveForward(50);',
-          '  Turtle.moveBackward(50);',
-          '  Turtle.turnRight(4);',
-          '}',
-          'Turtle.penColour("#FFFFFF");\n'].join('\n');
-
-      case 'parallelogram':
-        return [
-          'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 10; ' + loopVar + '++) {',
-          '  for (var ' + loopVar2 + ' = 0; ' + loopVar2 + ' < 2; ' + loopVar2 + '++) {',
-          '    Turtle.moveForward(50);',
-          '    Turtle.turnRight(60);',
-          '    Turtle.moveForward(50);',
-          '    Turtle.turnRight(120);',
-          '  }',
-          '  Turtle.turnRight(36);',
-          '}\n'].join('\n');
-
-      case 'square':
-        return [
-          'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 10; ' + loopVar + '++) {',
-          '  for (var ' + loopVar2 + ' = 0; ' + loopVar2 + ' < 4; ' + loopVar2 + '++) {',
-          '    Turtle.moveForward(50);',
-          '    Turtle.turnRight(90);',
-          '  }',
-          '  Turtle.turnRight(36);',
-          '}\n'].join('\n');
-    }
+    return "Turtle.drawSnowflake('" + type + "', 'block_id_" + this.id + "');";
   };
 }
 
-},{"../../locale/id_id/turtle":42}],33:[function(require,module,exports){
+},{"../../locale/id_id/turtle":42,"../utils":39}],33:[function(require,module,exports){
 var levelBase = require('../level_base');
 var Colours = require('./core').Colours;
 var answer = require('./answers').answer;
@@ -11950,9 +11975,9 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.id=function(n){return "other"}
 exports.and = function(d){return "dan"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "Benar"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "Salah"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -12148,6 +12173,8 @@ exports.createSnowflakeSpiral = function(d){return "create a snowflake of type s
 exports.createSnowflakeFlower = function(d){return "create a snowflake of type flower"};
 
 exports.createSnowflakeFractal = function(d){return "create a snowflake of type fractal"};
+
+exports.createSnowflakeRandom = function(d){return "create a snowflake of type random"};
 
 exports.createASnowflakeBranch = function(d){return "create a snowflake branch"};
 
