@@ -1,5 +1,7 @@
 {
   "and": "و",
+  "booleanTrue": "درست",
+  "booleanFalse": "نادرست\nغلط",
   "blocklyMessage": "بلاکلی",
   "catActions": "اقدامات",
   "catColour": "رنگ",

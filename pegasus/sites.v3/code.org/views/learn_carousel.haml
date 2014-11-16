@@ -41,7 +41,7 @@
                     %b{:class=>"participants_string_#{key}", :style=>'display: none'}
                       %span{:class=>"participants_value_#{key}"}
                         3
-                      participants
+                      = I18n.t(:participants)
                   -unless short_url.nil_or_empty?
                     .slide-shorturl-link
                       %a{:href=>url, :target=>'_blank'}
@@ -49,16 +49,16 @@
                   -unless tutorial[:teachers_notes].nil_or_empty?
                     .slide-teachers-notes-link<
                       %a{:href=>tutorial[:teachers_notes], :target=>'blank'}<
-                        Teacher’s Notes
+                        = I18n.t(:teachers_notes)
               %a{:href=>url, :target=>'_blank'}<
                 .btn-carousel-slide=I18n.t(:go)
             -count += 1
 
         %a.slide-prev{:href=>'#'}<
           %span<
-            %span.label Previous
+            %span.label= I18n.t(:previous)
         %a.slide-next{:href=>'#'}<
           %span<
-            %span.label Next
+            %span.label= I18n.t(:next)
       .pagination
         %div{:id => "pagination-#{id}"}

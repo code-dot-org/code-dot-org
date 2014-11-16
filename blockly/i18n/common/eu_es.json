@@ -1,5 +1,7 @@
 {
   "and": "eta",
+  "booleanTrue": "egia",
+  "booleanFalse": "gezurra",
   "blocklyMessage": "Blockly",
   "catActions": "Ekintzak",
   "catColour": "Kolorea",
