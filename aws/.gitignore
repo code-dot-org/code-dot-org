@@ -21,6 +21,3 @@
 /postfix/sasl_password
 /postfix/sasl_password.db
 /profile
-/varnish.config
-/varnish.secret
-/varnish.vcl
