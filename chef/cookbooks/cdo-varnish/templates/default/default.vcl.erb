@@ -237,7 +237,7 @@ director dashboard round-robin {
 <% end %>
 }
 
-<% if node['cdo-apps']['levelbuilder']['enabled'] %>
+<% if rack_env?(:staging) %>
 # levelbuilder
 backend levelbuilder {
   .host = "127.0.0.1";
