@@ -23,7 +23,7 @@ end
 namespace :build do
 
   task :configure do
-    if CDO.chef_managed && !(rack_env?(:production) && CDO.name =='daemon') && !rack_env?(:test)
+    if CDO.chef_managed && !(rack_env?(:production) && CDO.name =='daemon') && !rack_env?(:test) && !rack_env?(:staging)
       HipChat.log 'Applying <b>chef</b> profile...'
       RakeUtils.sudo 'chef-client'
     end
