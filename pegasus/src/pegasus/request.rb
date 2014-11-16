@@ -21,7 +21,7 @@ module Rack; class Request
   end
 
   def self.locales_supported()
-    @@locales_supported ||= Dir.glob(cache_dir('i18n/*.yml')).map{|i| ::File.basename(i, '.yml').downcase}
+    @@locales_supported ||= Dir.glob(cache_dir('i18n/*.yml')).map{|i| ::File.basename(i, '.yml').downcase}.sort
   end
 
   def language()
