@@ -41,50 +41,6 @@ file home_dir('.profile') => [aws_dir('profile')] + DEPENDENCIES do |t|
   cp t.prerequisites[0], t.name
 end
 
-file dashboard_dir('config/logrotate') => [dashboard_dir('config/logrotate.erb')] + DEPENDENCIES do |t|
-  RakeUtils.erb t.prerequisites[0], t.name, task:t
-end
-
-LOGROTATE_DASHBOARD = "/etc/logrotate.d/#{CDO.dashboard_unicorn_name}"
-task LOGROTATE_DASHBOARD => [dashboard_dir('config/logrotate')] do |t|
-  RakeUtils.sudo_ln_s t.prerequisites[0], t.name
-end
-
-file dashboard_dir('config/init.d') => [dashboard_dir('config/init.d.erb')] + DEPENDENCIES do |t|
-  RakeUtils.erb t.prerequisites[0], t.name, task:t
-end
-
-ETC_INIT_D_DASHBOARD = "/etc/init.d/#{CDO.dashboard_unicorn_name}"
-task ETC_INIT_D_DASHBOARD => [dashboard_dir('config/init.d')] do |t|
-  RakeUtils.sudo_ln_s t.prerequisites[0], t.name
-end
-
-file pegasus_dir('config/init.d') => [pegasus_dir('config/init.d.erb')] + DEPENDENCIES do |t|
-  RakeUtils.erb t.prerequisites[0], t.name, task:t
-end
-
-ETC_INIT_D_PEGASUS = "/etc/init.d/#{CDO.pegasus_unicorn_name}"
-task ETC_INIT_D_PEGASUS => [pegasus_dir('config/init.d')] do |t|
-  RakeUtils.sudo_ln_s t.prerequisites[0], t.name
-end
-
-file pegasus_dir('config/newrelic.yml') => [pegasus_dir('config/newrelic.yml.erb')] + DEPENDENCIES do |t|
-  RakeUtils.erb t.prerequisites[0], t.name, task:t
-end
-
-file aws_dir('varnish.config') => [aws_dir('varnish.config.erb')] + DEPENDENCIES do |t|
-  RakeUtils.erb t.prerequisites[0], t.name, task:t
-end
-
-file aws_dir('varnish.secret') => DEPENDENCIES do |t|
-  puts t.name
-  IO.write t.name, "#{CDO.varnish_secret}\n"
-end
-
-file aws_dir('varnish.vcl') => [aws_dir('varnish.vcl.erb')] + DEPENDENCIES do |t|
-  RakeUtils.erb t.prerequisites[0], t.name, task:t
-end
-
 file deploy_dir('i18n/code.org/crowdin.yaml') => [deploy_dir('i18n/code.org/crowdin.yaml.erb')] + DEPENDENCIES do |t|
   RakeUtils.erb t.prerequisites[0], t.name, task:t
 end
@@ -105,17 +61,10 @@ task :default => [
   (INSTALL || DAEMON) ? aws_dir('crontab.installed')        : aws_dir('crontab'),
   INSTALL ? home_dir('.bashrc')                 : aws_dir('bashrc'),
   INSTALL ? home_dir('.profile')                : aws_dir('profile'),
-  INSTALL ? ETC_INIT_D_DASHBOARD                : dashboard_dir('config/init.d'),
-  INSTALL ? ETC_INIT_D_PEGASUS                  : pegasus_dir('config/init.d'),
-  INSTALL ? LOGROTATE_DASHBOARD                 : dashboard_dir('config/logrotate'),
-  aws_dir('varnish.config'),
-  aws_dir('varnish.secret'),
-  aws_dir('varnish.vcl'),
 
   deploy_dir('i18n/code.org/crowdin.yaml'),
   deploy_dir('i18n/hourofcode.com/crowdin.yaml'),
   deploy_dir('i18n/curriculum/crowdin.yaml'),
-  pegasus_dir('config/newrelic.yml'),
 ].select{|i|i}
 
 task :clean do
@@ -124,14 +73,7 @@ task :clean do
     aws_dir('crontab'),
     aws_dir('crontab.installed'),
     aws_dir('profile'),
-    aws_dir('varnish.config'),
-    aws_dir('varnish.secret'),
-    aws_dir('varnish.vcl'),
-    dashboard_dir('config/init.d'),
-    pegasus_dir('config/init.d'),
-    dashboard_dir('config/logrotate'),
     deploy_dir('i18n/crowdin.yaml'),
-    pegasus_dir('config/newrelic.yml'),
   ].each do |path|
     rm path if File.file?(path)
   end

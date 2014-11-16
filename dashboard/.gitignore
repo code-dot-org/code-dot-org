@@ -1,8 +1,6 @@
 .sass-cache
 /.bundle
 /config/application.yml
-/config/init.d
-/config/logrotate
 /config/locales/*en-PLOC.yml
 /config/scripts/.dropbox
 /config/scripts/.hints_imported
