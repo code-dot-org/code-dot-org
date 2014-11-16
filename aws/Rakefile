@@ -16,14 +16,6 @@ DEPENDENCIES = [
   secrets_dir('config.yml'),
 ].select{|i| File.file?(i)}
 
-file aws_dir('bashrc') => [aws_dir('bashrc.erb')] + DEPENDENCIES do |t|
-  RakeUtils.erb t.prerequisites[0], t.name, task:t
-end
-
-file home_dir('.bashrc') => [aws_dir('bashrc')] + DEPENDENCIES do |t|
-  cp t.prerequisites[0], t.name
-end
-
 file aws_dir('crontab') => [aws_dir('crontab.erb'), aws_dir('crontab.rb')] + DEPENDENCIES do |t|
   RakeUtils.erb t.prerequisites[0], t.name, task:t
 end
@@ -31,14 +23,6 @@ end
 file aws_dir('crontab.installed') => [aws_dir('crontab')] do |t|
   system "cat #{aws_dir('crontab')} | crontab -"
   touch t.name
-end
-
-file aws_dir('profile') => [aws_dir('profile.erb')] + DEPENDENCIES do |t|
-  RakeUtils.erb t.prerequisites[0], t.name, task:t
-end
-
-file home_dir('.profile') => [aws_dir('profile')] + DEPENDENCIES do |t|
-  cp t.prerequisites[0], t.name
 end
 
 file deploy_dir('i18n/code.org/crowdin.yaml') => [deploy_dir('i18n/code.org/crowdin.yaml.erb')] + DEPENDENCIES do |t|
@@ -57,8 +41,6 @@ INSTALL = [:production, :staging, :test].include?(rack_env)
 
 task :default => [
   INSTALL ? aws_dir('crontab.installed')        : aws_dir('crontab'),
-  INSTALL ? home_dir('.bashrc')                 : aws_dir('bashrc'),
-  INSTALL ? home_dir('.profile')                : aws_dir('profile'),
 
   deploy_dir('i18n/code.org/crowdin.yaml'),
   deploy_dir('i18n/hourofcode.com/crowdin.yaml'),
@@ -67,10 +49,8 @@ task :default => [
 
 task :clean do
   [
-    aws_dir('bashrc'),
     aws_dir('crontab'),
     aws_dir('crontab.installed'),
-    aws_dir('profile'),
     deploy_dir('i18n/crowdin.yaml'),
   ].each do |path|
     rm path if File.file?(path)
