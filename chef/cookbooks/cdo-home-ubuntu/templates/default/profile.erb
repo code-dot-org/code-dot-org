@@ -20,5 +20,7 @@ fi
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
-PATH="<%= deploy_dir('bin') %>:$PATH"
 
+if [ -d "$HOME/<%= node.chef_environment %>" ] ; then
+    PATH="$HOME/<%= node.chef_environment %>/bin:$PATH"
+fi
