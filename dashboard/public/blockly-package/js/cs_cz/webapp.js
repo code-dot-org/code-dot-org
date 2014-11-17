@@ -9210,6 +9210,37 @@ exports.createButton = function (blockId, elementId, text) {
                            'text': text });
 };
 
+exports.createCanvas = function (blockId, elementId) {
+  return Webapp.executeCmd(String(blockId),
+                          'createCanvas',
+                          {'elementId': elementId });
+};
+
+exports.canvasDrawLine = function (blockId, elementId, x1, y1, x2, y2) {
+  return Webapp.executeCmd(String(blockId),
+                          'canvasDrawLine',
+                          {'elementId': elementId,
+                           'x1': Number(x1),
+                           'y1': Number(y1),
+                           'x2': Number(x2),
+                           'y2': Number(y2) });
+};
+
+exports.canvasDrawCircle = function (blockId, elementId, x, y, radius) {
+  return Webapp.executeCmd(String(blockId),
+                          'canvasDrawCircle',
+                          {'elementId': elementId,
+                           'x': Number(x),
+                           'y': Number(y),
+                           'radius': Number(radius) });
+};
+
+exports.canvasClear = function (blockId, elementId) {
+  return Webapp.executeCmd(String(blockId),
+                          'canvasClear',
+                          {'elementId': elementId });
+};
+
 exports.createTextInput = function (blockId, elementId, text) {
   return Webapp.executeCmd(String(blockId),
                           'createTextInput',
@@ -9405,6 +9436,10 @@ levels.ec_simple = {
     {'func': 'createHtmlBlock', 'params': ["'id'", "'html'"] },
     {'func': 'replaceHtmlBlock', 'params': ["'id'", "'html'"] },
     {'func': 'deleteHtmlBlock', 'params': ["'id'"] },
+    {'func': 'createCanvas', 'params': ["'id'"] },
+    {'func': 'canvasDrawLine', 'params': ["'id'", "0", "0", "400", "400"] },
+    {'func': 'canvasDrawCircle', 'params': ["'id'", "200", "200", "100"] },
+    {'func': 'canvasClear', 'params': ["'id'"] },
     {'func': 'attachEventHandler', 'params': ["'id'", "'click'", "function() {\n  \n}"] },
   ],
 };
@@ -9647,20 +9682,23 @@ Webapp.onTick = function() {
   }
 
   if (Webapp.interpreter) {
-    var inUserCode = false;
+    var doneUserCodeStep = false;
     // In each tick, we will step the interpreter multiple times in a tight
     // loop as long as we are interpreting code that the user can't see
     // (function aliases at the beginning, getCallback event loop at the end)
     for (var stepsThisTick = 0;
-         stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK && !inUserCode;
+         stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK && !doneUserCodeStep;
          stepsThisTick++) {
-      inUserCode = codegen.selectCurrentCode(Webapp.interpreter,
-                                             BlocklyApps.editor,
-                                             Webapp.cumulativeLength,
-                                             Webapp.userCodeStartOffset,
-                                             Webapp.userCodeLength);
+      var inUserCode = codegen.selectCurrentCode(Webapp.interpreter,
+                                                 BlocklyApps.editor,
+                                                 Webapp.cumulativeLength,
+                                                 Webapp.userCodeStartOffset,
+                                                 Webapp.userCodeLength);
       try {
         Webapp.interpreter.step();
+        doneUserCodeStep = inUserCode &&
+                            Webapp.interpreter.stateStack[0] &&
+                            Webapp.interpreter.stateStack[0].done;
       }
       catch(err) {
         Webapp.executionError = err;
@@ -9704,6 +9742,8 @@ Webapp.init = function(config) {
   level = config.level;
 
   loadLevel();
+
+  Webapp.canvasScale = (window.devicePixelRatio > 1) ? window.devicePixelRatio : 1;
 
   var showSlider = !config.hide_source && config.level.editCode;
   var showDebugButtons = !config.hide_source && config.level.editCode;
@@ -10144,6 +10184,10 @@ Webapp.callCmd = function (cmd) {
     case 'replaceHtmlBlock':
     case 'deleteHtmlBlock':
     case 'createButton':
+    case 'createCanvas':
+    case 'canvasDrawLine':
+    case 'canvasDrawCircle':
+    case 'canvasClear':
     case 'createTextInput':
     case 'getText':
     case 'setText':
@@ -10175,6 +10219,57 @@ Webapp.createButton = function (opts) {
 
   return Boolean(newButton.appendChild(textNode) &&
                  divWebapp.appendChild(newButton));
+};
+
+Webapp.createCanvas = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+
+  var newElement = document.createElement("canvas");
+  newElement.id = opts.elementId;
+  // TODO: support creating canvas elements of different sizes
+  newElement.width = 400 * Webapp.canvasScale;
+  newElement.height = 400 * Webapp.canvasScale;
+
+  return Boolean(divWebapp.appendChild(newElement));
+};
+
+Webapp.canvasDrawLine = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var div = document.getElementById(opts.elementId);
+  var ctx = div.getContext("2d");
+  if (ctx && divWebapp.contains(div)) {
+    ctx.beginPath();
+    ctx.moveTo(opts.x1 * Webapp.canvasScale, opts.y1 * Webapp.canvasScale);
+    ctx.lineTo(opts.x2 * Webapp.canvasScale, opts.y2 * Webapp.canvasScale);
+    ctx.stroke();
+  }
+  return false;
+};
+
+Webapp.canvasDrawCircle = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var div = document.getElementById(opts.elementId);
+  var ctx = div.getContext("2d");
+  if (ctx && divWebapp.contains(div)) {
+    ctx.beginPath();
+    ctx.arc(opts.x * Webapp.canvasScale,
+            opts.y * Webapp.canvasScale,
+            opts.radius * Webapp.canvasScale,
+            0,
+            2 * Math.PI);
+    ctx.stroke();
+  }
+  return false;
+};
+
+Webapp.canvasClear = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var div = document.getElementById(opts.elementId);
+  var ctx = div.getContext("2d");
+  if (ctx && divWebapp.contains(div)) {
+    ctx.clearRect(0, 0, div.width, div.height);
+  }
+  return false;
 };
 
 Webapp.createTextInput = function (opts) {
