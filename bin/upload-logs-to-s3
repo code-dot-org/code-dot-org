@@ -5,7 +5,7 @@ require 'cdo/aws/s3'
 def upload_log(application, logfile, options={})
   AWS::S3::connect!
   path = "hosts/#{CDO.name}/#{application}/#{File.basename(logfile)}"
-  next if AWS::S3::S3Object.exists? path, 'cdo-logs'
+  return if AWS::S3::S3Object.exists? path, 'cdo-logs'
   AWS::S3::S3Object.store(path, open(logfile), 'cdo-logs', options)
 end
 
