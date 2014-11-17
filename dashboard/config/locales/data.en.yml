@@ -59,6 +59,7 @@ en:
           'MazeEC': 'Stage 1'
           'Webapp': 'Stage 2'
           'ArtistEC': 'Stage 3'
+          'StudioEC': 'Stage 4'
         'events':
           desc: 'Bounce (beta)'
           'Bounce': 'Stage 1'
@@ -110,6 +111,7 @@ en:
         'Webapp': 'Webapp'
         'ArtistEC': 'The Artist'
         'TextMatch': 'Text Match'
+        'StudioEC': 'Play Lab'
     trophy:
       name:
         'Bronze': 'Bronze'
@@ -303,7 +305,7 @@ en:
         'studio_c3_game_4': "Can you have the penguin say \"Ouch!\" and play a \"hit\" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?"
         'studio_c3_game_5': "Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?"
         'studio_c3_game_6': "Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?"
-        'studio_c3_game_7': "Create your own game. When you're done, click Finish to let friends try your story on their phones."
+        'studio_c3_game_7': "Create your own game. When you're done, click Finish to let friends try your game on their phones."
         'studio_playlab_1': "Can you make this dog say \"hello world\"?"
         'studio_playlab_2': "Can you make the dog say something and then have the cat say something afterwards?"
         'studio_playlab_3': "Can you write a program to make this dog move to the cat?"
@@ -313,8 +315,8 @@ en:
         'studio_playlab_7': "The \"repeat forever\" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?"
         'studio_playlab_8': "Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?"
         'studio_playlab_9': "Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?"
-        'studio_playlab_10': "Create your own game. When you're done, click Finish to let friends try your story on their phones."
-        'studio_full_sandbox': "Create your own game. When you're done, click Finish to let friends try your story on their phones."
+        'studio_playlab_10': "Create your own game. When you're done, click Finish to let friends try your game on their phones."
+        'studio_full_sandbox': "Create your own game. When you're done, click Finish to let friends try your game on their phones."
         'studio_k1_1': "Can you make this dog say \"hello world\"?"
         'studio_k1_2': "Can you make the dog say something and then have the cat say something afterwards?"
         'studio_k1_3': "Can you write a program to make this dog move to the cat?"
@@ -334,6 +336,7 @@ en:
         'webapp_ec_simple': "Create your web app by using createHtmlBlock."
         'turtle_ec_1_2': "Now, draw a square. NOTE: use your favorite color by picking it in the new \"penColor\" block."
         'turtle_ec_1_10': "You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new \"penWidth\" block. Have fun!"
+        'studio_ec_sandbox': "Create your own game. When you're done, click Finish to let friends try your game on their phones."
     video:
       name:
         # Keyed by video.key

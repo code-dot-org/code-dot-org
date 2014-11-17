@@ -1,0 +1,22 @@
+- unless current_user
+  .row
+    = render partial: '/shared/course_big_block', locals: {id: "hoc" }
+  %br/
+.row
+  .span12.twolineheader!= t('home.heading_elementary')
+  = render partial: 'shared/course_tall_block', locals: { id: "course1" }
+  = render partial: 'shared/course_tall_block', locals: { id: "course2" }
+  = render partial: 'shared/course_tall_block', locals: { id: "course3" }
+%br/
+.row
+  .span12.twolineheader!= t('home.heading_apps')
+.row
+  = render partial: 'shared/course_tall_block', locals: { id: "playlab" }
+  = render partial: 'shared/course_tall_block', locals: { id: "flappy" }
+  = render partial: 'shared/course_tall_block', locals: { id: "artist" }
+  = render partial: 'shared/course_tall_block', locals: { id: "hoc" } if current_user
+%br/
+.row
+  .span12.twolineheader!= t('home.heading_legacy')
+.row
+  = render partial: 'shared/course_wide_block', locals: { id: "20hour" }

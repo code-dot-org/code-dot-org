@@ -1,12 +1,16 @@
-#last
+- if current_user
+  - script = current_user.primary_script
   - script_level = current_user.next_unpassed_progression_level(script)
-  - if script_level
-    #left_off #{t('home.student_left_off')}
-    - stage_or_game = script_level.stage ? script_level.stage : script_level.level.game
-    %em= data_t_suffix('script.name', script.name, stage_or_game.name)
-    #{t('puzzle')} #{script_level.game_chapter}
-    &nbsp;
-    = form_tag(build_script_level_url(script_level), method: 'get', style: "display:inline;") do
-      = submit_tag t('continue'), name: nil, class: 'btn btn-primary button-continue', id: 'continue_button'
-  - elsif include_finished
-    = render partial: 'shared/student_finished'
+- else # TODO progress for non-logged in user
+  - script_level = nil
+
+
+- if script_level
+  %span#left_off #{t('home.student_left_off')}
+  %span#puzzle
+    = stage_title(script, script_level.stage_or_game)
+    #{t('puzzle')} #{script_level.stage_or_game_position}
+  = link_to build_script_level_url(script_level) do
+    %button.btn.btn-primary.button-continue#continue_button= t('continue')
+- elsif include_finished
+  = render partial: 'shared/student_finished'
