@@ -3,7 +3,7 @@
     script:
       name:
         test:
-          'Jigsaw: Learn to drag and drop': 'Palapeli: Opettele vedä ja pudota -toiminto'
+          'Jigsaw: Learn to drag and drop': 'Palapeli: Opettele "vedä ja pudota"'
           The Maze: Sokkelo
           Multi: Multi
           Match: Match
@@ -11,13 +11,13 @@
           title: Kokeilukurssi
           description: Just an internal test course.
         course1:
-          'Jigsaw: Learn to drag and drop': 'Palapeli: Opettele vedä ja pudota -toiminto'
+          'Jigsaw: Learn to drag and drop': 'Palapeli: Opettele "vedä ja pudota"'
           'Maze: Sequence': 'Sokkelo: sekvenssi'
-          'Maze: Debugging': 'Sokkelo: virheenetsintä'
+          'Maze: Debugging': 'Sokkelo: virheenkorjaus'
           'Artist 1: Intro': 'Taiteilija 1: Intro'
           Artists 2: Taiteilijat 2
-          Spelling Bee: Oikeinkirjoitus mehiläinen
-          Spelling Bee not blockly: Spelling Bee not blockly
+          Spelling Bee: Kirjurimehiläinen
+          Spelling Bee not blockly: Kirjurimehiläinen (ei blocky)
           'Bee 1: Intro': 'Mehiläinen 1: Intro'
           'Maze 2: Loops': 'Sokkelo 2: silmukoita'
           'Bee 2: Loops': 'Mehiläinen 2: silmukat'
@@ -37,15 +37,15 @@
             luoda omia tietokoneohjelmia, jotka auttavat heitä oppimaan yhteistyötä,
             kehittämään ongelmanratkaisutaitoja ja viemään läpi vaikeita tehtäviä.
             Kurssin loppuun mennessä oppilaat luovat oman pelin tai tarinan, jota
-            he voivat jakaa. Suositeltavaa 3-vuotiaiden ikäryhmälle.
+            he voivat jakaa. Suositellaan eskikoululaisille ja ekaluokkalaisille.
           'Bee: Sequence': 'Mehiläinen: sekvenssi'
           'Artist: Sequence': 'Taiteilija: sekvenssi'
           'Artist: Shapes': 'Taiteilija: muodot'
           'Maze: Loops': 'Sokkelo: silmukoita'
           'Bee: Loops': 'Mehiläinen: silmukoita'
           'Studio: Create a Story': 'Studio: Create a Story'
-          description_short: Course 1 is designed for early readers in the lower elementary
-            grades.
+          description_short: Kurssi 1 on tarkoitettu lukeemaan opiskeleville. Suositellaan
+            esikoululaisille ja ekaluokkalaisille.
           'Artist: Loops': 'Taiteilija: silmukoita'
         course2:
           The Maze: Sokkelo
@@ -72,10 +72,10 @@
           Binary Bracelets: Binary Bracelets
           The Big Event: Suuri tapahtuma
           Your Digital Footprint: Digitaalinen jalanjälkesi
-          description: Course 2 is designed for students who can read in the lower
-            and middle elementary grades.  Create programs with loops, events, and
-            conditionals.  By the end of the course, create your very own interactive
-            game or story that you can share.
+          description: Kurssi 2 on tarkoitettu oppilaille, jotka osaavat jo lukea
+            ja joilla on jo aiempaa ohjelmointikokemusta. Tällä kurssilla oppilaat
+            luovat ohjelmia, jotka ratkaisevat pulmia, ja kehittävät vuorovaikutteisia
+            pelejä ja tarinoita, joita he voivat jakaa. Suositellaan luokille 2-5.
           'Maze: Sequence': 'Sokkelo: sekvenssi'
           'Artist: Sequence': 'Taiteilija: sekvenssi'
           'Maze: Loops': 'Sokkelo: silmukoita'
@@ -85,7 +85,7 @@
           'Artist: Debugging': 'Taiteilija: virheenkorjaus'
           'Bee: Conditionals': 'Mehiläinen: ehtolohkot'
           description_short: Kurssi 2 on suunniteltu oppilaille jotka osaavat jo lukea.
-            Suositeltu luokkataso 0-3.
+            Suositeltu luokkataso 2-5.
           'Artist: Sequence2': 'Taiteilija: sekvenssi2'
           'Maze: Sequence2': 'Sokkelo: sekvenssi2'
           'Artist: Nested Loops': 'Taiteilija: sisäkkäisiä silmukoita'
@@ -147,7 +147,7 @@
           title: Alakoulun matematiikkaa
           description: Private work in progress for Middle School Math.
           Graph Paper Programming: Ruutupaperiohjelmointi
-          Assessments: Assessments
+          Assessments: Osaamisen arviointi
           Unit 1: Unit 1
           Unit 2: Unit 2
           Ninja Cat and the Coordinate Plane: Ninja Cat and the Coordinate Plane
@@ -188,7 +188,7 @@
           'Maze: Sequence': 'Sokkelo: sekvenssi'
         hourofcode:
           Maze: Sokkelo
-          title: Kooditunti
+          title: Koodaustunti
           description_short: Try the basics of computer science with characters from
             Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
           description: Try the basics of computer science with characters from Angry

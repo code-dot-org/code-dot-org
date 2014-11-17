@@ -564,7 +564,7 @@
         maze_wordsearch_k_20: Това е тест! Премести ме така, че да изпиша думата "STORY"
         webapp_ec_simple: Създайте  ваше уеб приложение с помощта на createHtmlBlock.
         turtle_ec_1_2: 'Сега начертайте квадрат. Забележка: Използвайте вашия любим
-          цвят като го вмъкнете в новия блок  "цвят на молива".'
+          цвят като го изберете от новия блок на "моливЦвят".'
         turtle_ec_1_10: 'Ти го направи! Сега нарисувай каквото пожелаеш. Ето няколко
           забавни идеи: фигура от стиклетки, снежинка или спирала. Също опитай новия
           блок  "дебелина на молива". Забавлявай се!'
@@ -657,13 +657,14 @@
           "когато историята започва", за да използвате актьор за тази история
         studio_say_text: Въведете какво искате вашият актьор да каже в  тези кавички
         jigsaw_click: Щракнете върху този блок!
-        move_elsa_forward: Drag a "Move Forward" block and snap it below the "When
-          Run" block to make Elsa move forward
-        turn_elsa: Use the "Turn" block to make Elsa turn. The number in the drop-down
-          determines how much Elsa turns
-        replace_questions: Use the drop-down to replace "???" with a number
-        replace_questions_degree: Use the drop-down to replace "???" with the correct
-          degree to turn
-        repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
-          workspace
-        snowflake_dropdown: Use this drop-down to create different snowflakes!
+        move_elsa_forward: Плъзнете "върви напред" блок и го поставете под блока "При
+          стартиране", за  да накарате Елза да се движи напред
+        turn_elsa: Използвайте "завърта" блок за да се завърти Елза. Числото в падащото
+          меню определя колко Елза ще се завърти
+        replace_questions: Използвайте падащото меню, за да замените "???" с номер
+        replace_questions_degree: Използвайте падащото меню, за да замените "???"
+          с правилната степен на завъртане
+        repeat_blocks: Използвайте блок за повторение и поставете в него блоковете
+          от работната област
+        snowflake_dropdown: Използвайте това падащо меню, за да създадете различни
+          снежинки!

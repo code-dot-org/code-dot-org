@@ -11576,11 +11576,12 @@ var savedAmd;
 // via require js
 if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) {
   savedAmd = define.amd;
-  define.amd = 'dont_call_requirejs_define';
+  define.amd = false;
 }
 
 // get lodash
 var _ = require('./lodash');
+var Hammer = require('./hammer');
 
 // undo hackery
 if (typeof define == 'function' && savedAmd) {
@@ -11590,6 +11591,10 @@ if (typeof define == 'function' && savedAmd) {
 
 exports.getLodash = function () {
   return _;
+};
+
+exports.getHammer = function () {
+  return Hammer;
 };
 
 exports.shallowCopy = function(source) {
@@ -11888,7 +11893,7 @@ exports.generateDropletModeOptions = function (codeFunctions) {
   return modeOptions;
 };
 
-},{"./lodash":20,"./xml":38}],38:[function(require,module,exports){
+},{"./hammer":19,"./lodash":20,"./xml":38}],38:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
@@ -12233,7 +12238,7 @@ exports.nextLevelTrophies = function(d){return "Gratulerer! Du har fullført opp
 
 exports.nextStage = function(d){return "Gratulerer! Du fullførte "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "Congratulations! You completed "+v(d,"stageName")+" and won "+p(d,"numTrophies",0,"no",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
+exports.nextStageTrophies = function(d){return "Gratulerer! Du har fullført "+v(d,"stageName")+" og vunnet "+p(d,"numTrophies",0,"no",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
 exports.numBlocksNeeded = function(d){return "Gratulerer! Du har fullført oppgave "+v(d,"puzzleNumber")+". (Men, du kunne ha brukt kun "+p(d,"numBlocks",0,"no",{"one":"1 blokk","other":n(d,"numBlocks")+" blokker"})+".)"};
 

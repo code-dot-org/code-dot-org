@@ -11576,11 +11576,12 @@ var savedAmd;
 // via require js
 if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) {
   savedAmd = define.amd;
-  define.amd = 'dont_call_requirejs_define';
+  define.amd = false;
 }
 
 // get lodash
 var _ = require('./lodash');
+var Hammer = require('./hammer');
 
 // undo hackery
 if (typeof define == 'function' && savedAmd) {
@@ -11590,6 +11591,10 @@ if (typeof define == 'function' && savedAmd) {
 
 exports.getLodash = function () {
   return _;
+};
+
+exports.getHammer = function () {
+  return Hammer;
 };
 
 exports.shallowCopy = function(source) {
@@ -11888,7 +11893,7 @@ exports.generateDropletModeOptions = function (codeFunctions) {
   return modeOptions;
 };
 
-},{"./lodash":20,"./xml":38}],38:[function(require,module,exports){
+},{"./hammer":19,"./lodash":20,"./xml":38}],38:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
@@ -12235,7 +12240,7 @@ exports.nextStage = function(d){return "Tahniah! Anda tamatkan "+v(d,"stageName"
 
 exports.nextStageTrophies = function(d){return "Tahniah! Anda telah menyelesaikan "+v(d,"stageName")+" dan memenangi "+p(d,"numTrophies",0,"ms",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
-exports.numBlocksNeeded = function(d){return "Congratulations! You completed Puzzle "+v(d,"puzzleNumber")+". (However, you could have used only "+p(d,"numBlocks",0,"ms",{"one":"1 block","other":n(d,"numBlocks")+" blocks"})+".)"};
+exports.numBlocksNeeded = function(d){return "Tahniah! Anda melengkapkan Puzzle "+v(d,"puzzleNumber")+". (Walau bagaimanapun, anda hanya boleh menggunakan "+p(d,"numBlocks",0,"ms",{"one":"1 block","other":n(d,"numBlocks")+" blocks"})+".)"};
 
 exports.numLinesOfCodeWritten = function(d){return "Anda baru sahaja menulis "+p(d,"numLines",0,"ms",{"one":"1 line","other":n(d,"numLines")+" lines"})+" kod!"};
 

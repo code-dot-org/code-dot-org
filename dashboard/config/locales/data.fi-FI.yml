@@ -25,7 +25,7 @@
           Artist5: Vaihe 19
           Unplug11: Vaihe 20
         Hour of Code:
-          desc: Kooditunti
+          desc: Koodaustunti
           Maze: Vaihe 1
         Edit Code:
           desc: Muokkaa koodia (beta)
@@ -67,7 +67,7 @@
           desc: Sokkelo (beta)
           MazeStep: Vaiheen askel
         wordsearch:
-          desc: Oikeinkirjoituskilpailu (beta)
+          desc: Kirjurimehiläinen (beta)
           WordSearch: Vaihe 1
     game:
       name:
@@ -156,8 +156,8 @@
           tätä uutta lohkoa.'
         maze_2_18: Vielä yksi harjoitus "Jos - muuten" -lohkolla. Saatko sen oikein
           heti ensimmäisellä yrityksellä?
-        maze_2_19: Pystytkö lisäämään vain kolme uutta lohkoa ratkaistaksesi tämän
-          monimutkaisemman sokkelon? Jos teet sen oikein, pystyn kulkemaan kiemurtelevan
+        maze_2_19: Pystytkö ratkaisemaan tämän monimutkaisen sokkelon lisäämällä vain
+          kolme uutta lohkoa? Jos teet sen oikein, pystyn kulkemaan kiemurtelevan
           polun riippumatta sen pituudesta.
         turtle_1_1: Hei, olen taiteilija. Voit kirjoittaa koodia saadaksesi minut
           piirtämään melkein mitä tahansa. Käytä muutamaa lohkoa saadaksesi minut
@@ -167,7 +167,7 @@
         turtle_1_3: Tee neliö käyttäen vain kolme lohkoa.
         turtle_1_4: |
           Piirrä kolmio, jonka sivut ovat kaikki eri värisiä. Käytä "satunnainen väri" -toimintoa valitsemaan kunkin sivun väri.
-          Vihje: sinun täytyy keksiä, kuinka paljon kääntyä ja valita oikea luku "käänny"-lohkoon.
+          Vihje: "sinun täytyy keksiä, kuinka paljon kääntyä ja valita oikea luku \"käänny\"-lohkoon."
         turtle_1_5: Harjoituksen vuoksi voisit nyt piirtää kirjekuoren käyttäen kolmiota
           ja neliötä.
         turtle_1_6: 'Keksitkö miten piirtää tämä kolmio ja neliö? Vihje: piirrä kolmio
@@ -429,28 +429,28 @@
           the "when run" block.
         jigsaw_1: Klikkaa lohkoa
         jigsaw_2: Vedä lohko kohteeseen
-        jigsaw_3: Arrange the blocks to form the image
-        jigsaw_4: Arrange the blocks to form the image
-        jigsaw_5: Arrange the blocks to form the image
-        jigsaw_6: Arrange the blocks to form the image
-        jigsaw_7: Arrange the blocks to form the image
-        jigsaw_8: Arrange the blocks to form the image
-        jigsaw_9: Arrange the blocks to form the image
-        jigsaw_10: Arrange the blocks to form the image
-        jigsaw_11: Arrange the blocks to form the image
-        jigsaw_12: Arrange the blocks to form the image
-        jigsaw_13: Korjaa pulma!
+        jigsaw_3: Asettele lohkot kuvaksi
+        jigsaw_4: Asettele lohkot kuvaksi
+        jigsaw_5: Asettele lohkot kuvaksi
+        jigsaw_6: Asettele lohkot kuvaksi
+        jigsaw_7: Asettele lohkot kuvaksi
+        jigsaw_8: Asettele lohkot kuvaksi
+        jigsaw_9: Asettele lohkot kuvaksi
+        jigsaw_10: Asettele lohkot kuvaksi
+        jigsaw_11: Asettele lohkot kuvaksi
+        jigsaw_12: Asettele lohkot kuvaksi
+        jigsaw_13: Korjaa palapeli!
         mazestep_1: Maze step description here
         mazestep_2: Maze step description here
         mazestep_3: Maze step description here
         mazestep_4: Maze step description here
         mazestep_5: Maze step description here
-        studio_c2_1: Osaatko laittaa koiran sanomaan "hei"?
+        studio_c2_1: Osaatko laittaa koiran sanomaan "hei maailma"?
         studio_c2_2: Can you make the dog say something and then have the cat say
           something afterwards?
         studio_c2_3: Can you write a program to make this dog move to the cat?
         studio_c2_4: Osaatko kirjoittaa ohjelman, jossa koira liikkuu kissan luo ja
-          kissa sanoo "hello", kun koira saapuu tämän luokse?
+          kissa sanoo "hei", kun koira saapuu tämän luokse?
         studio_c2_5: Can you write a program to make the octopus say "hello" when
           it is clicked?
         studio_c2_6: Can you write a program to make this penguin move around using
@@ -466,13 +466,13 @@
           the penguin, and then move him with the arrows until you score?
         studio_c2_11: Create your own story. When you're done, click Finish to let
           friends try your story on their phones.
-        studio_c3_story_1: Osaatko laittaa koiran sanomaan "hei"?
+        studio_c3_story_1: Osaatko laittaa koiran sanomaan "hei maailma"?
         studio_c3_story_2: Can you make the dog say something and then have the cat
           say something afterwards?
         studio_c3_story_3: Can you write a program to make this dog move to the cat?
         studio_c3_story_4: Osaatko kirjoittaa ohjelman, jossa koira liikkuu kissan
-          luo ja kissa sanoo "hello", kun koira saapuu tämän luokse?
-        studio_c3_story_5: Osaatko lisätä lohkon jotta mustekala olisi onnellinen?
+          luo ja kissa sanoo "hei", kun koira saapuu tämän luokse?
+        studio_c3_story_5: Osaatko lisätä lohkon, joka tekee mustekalan onnelliseksi?
         studio_c3_story_6: Create your own story. When you're done, click Finish to
           let friends try your story on their phones.
         studio_c3_game_1: Can you write a program to make the octopus say "hello"
@@ -490,12 +490,12 @@
           of the penguin, and then move him with the arrows until you score?
         studio_c3_game_7: Create your own game. When you're done, click Finish to
           let friends try your story on their phones.
-        studio_playlab_1: Osaatko laittaa koiran sanomaan "hei"?
+        studio_playlab_1: Osaatko laittaa koiran sanomaan "hei maailma"?
         studio_playlab_2: Can you make the dog say something and then have the cat
           say something afterwards?
         studio_playlab_3: Can you write a program to make this dog move to the cat?
         studio_playlab_4: Osaatko kirjoittaa ohjelman, jossa koira liikkuu kissan
-          luo ja kissa sanoo "hello", kun koira saapuu tämän luokse?
+          luo ja kissa sanoo "hei", kun koira saapuu tämän luokse?
         studio_playlab_5: Can you write a program to make the octopus say "hello"
           when it is clicked?
         studio_playlab_6: Can you write a program to make this penguin move around
@@ -510,13 +510,13 @@
           let friends try your story on their phones.
         studio_full_sandbox: Create your own game. When you're done, click Finish
           to let friends try your story on their phones.
-        studio_k1_1: Osaatko laittaa koiran sanomaan "hei"?
+        studio_k1_1: Osaatko laittaa koiran sanomaan "hei maailma"?
         studio_k1_2: Can you make the dog say something and then have the cat say
           something afterwards?
         studio_k1_3: Can you write a program to make this dog move to the target?
         studio_k1_4: Laita koira siirtymään kissan luo ja kissan sanomaan "hei" kun
           koira on perillä.
-        studio_k1_5: Osaatko lisätä lohkon jotta mustekala olisi onnellinen?
+        studio_k1_5: Osaatko lisätä lohkon, joka tekee mustekalan onnelliseksi?
         studio_k1_6: Luo oma tarinasi! Liikuta kissaa ja koiraa ja laita ne puhumaan.
         maze_wordsearch_k_1: Liikuta minua ja tavaa sana EAST (itään suomeksi)
         maze_wordsearch_k_2: Liikuta minua ja tavaa sana SOUTH (etelään suomeksi)
@@ -575,7 +575,7 @@
         C1_maze_debugging: Sokkelo virheenkorjaus
         C1_bee_level_intro: Bee Level - Intro
         C1_artist_intro: Taiteilijan johdanto
-        C1_spelling_bee_intro: Spelling Bee Intro
+        C1_spelling_bee_intro: Kirjurimehiläinen johdanto
         C1_zuck_repeat_loop: Sokkelo silmukoita
         C1_bee_loops: Mehiläinen silmukoita
         C1_maze_loops: Sokkelo silmukoita
@@ -595,7 +595,7 @@
         C2_conditionals_with_cards: Ehtolausekkeet
         C2_binary_bracelets: Binary Bracelets
         C2_relay_programming: Releohjelmointi
-        C2_paper_airplanes: Paperilentokoneita
+        C2_paper_airplanes: Paperilentokoneet
         C3_maze_level_4: Sokkelo silmukoita
         C3_artist_intro: Taiteilijan johdanto
         C3_artist_functions: Taiteilija toiminnot
@@ -619,16 +619,16 @@
         drag_blocks: Raahaa "siirrä" lohko ja napsauta se kiinni toisen lohkon alalaitaan
         run: Paina "Suorita" kokeillaksesi ohjelmaa
         watch_again: Klikkaa tästä jos haluat katsella videon uudelleen
-        gray_block_explanation: Lohkoja, jotka ovat harmaina, ei voi poistaa. Pystytkö
-          silti ratkaisemaan pulman?
+        gray_block_explanation: Harmaita lohkoja ei voi poistaa. Pystytkö silti ratkaisemaan
+          pulman?
         show_code_explanation: Klikkaa tästä, jos haluat nähdä koodin ohjelmalle,
           jota teet
         instructions_repeat_explanation: Tehtävän ohjeet voit kerrata täältä
-        category_explanation: You have all the same blocks but they've now been arranged
-          in categories
+        category_explanation: Sinulla on nyt käytössä kaikki samat lohkot, mutta ne
+          on järjestetty luokittain
         set_sprite_image: Attach a "set actor to image" block to the "when story starts"
           block to enable an actor for this story
-        studio_say_text: Kirjoita mitä haluat hahmon sanovan lainausmerkkien väliin
+        studio_say_text: Kirjoita lainausmerkkien väliin se, mitä haluat hahmon sanovan
         jigsaw_click: Klikkaa tätä lohkoa!
         move_elsa_forward: Drag a "Move Forward" block and snap it below the "When
           Run" block to make Elsa move forward

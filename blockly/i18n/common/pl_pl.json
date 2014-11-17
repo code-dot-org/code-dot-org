@@ -39,7 +39,7 @@
   "nextLevel": "Gratulacje! Rozwiązałeś Łamigłówkę nr {puzzleNumber}.",
   "nextLevelTrophies": "Gratulacje! Rozwiązałeś Łamigłówkę nr {puzzleNumber} i wygrałeś {numTrophies, plural, one {trofeum} other {# trofea}}.",
   "nextStage": "Gratulacje! Ukonczyłeś etap {stageName}.",
-  "nextStageTrophies": "Gratulacje! Ukończyłeś etap {stageName} i wygrałeś {numTrophies, trofea, trofeum {a trophy} other {# trophies}}.",
+  "nextStageTrophies": "Gratulacje! Ukończyłeś etap {stageName} i wygrałeś {numTrophies, plural, one {a trophy} other {# trophies}}.",
   "numBlocksNeeded": "Gratulacje! Rozwiązałeś Łamigłówkę nr {puzzleNumber}. (Jednakże, mogłeś użyć jedynie {numBlocks, plural, one {1 blok} other {# bloków}})",
   "numLinesOfCodeWritten": "Właśnie napisałeś {numLines, plural, one {1 linię} other {# linii}} kodu!",
   "play": "Zagraj",

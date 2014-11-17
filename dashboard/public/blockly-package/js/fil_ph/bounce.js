@@ -11576,11 +11576,12 @@ var savedAmd;
 // via require js
 if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) {
   savedAmd = define.amd;
-  define.amd = 'dont_call_requirejs_define';
+  define.amd = false;
 }
 
 // get lodash
 var _ = require('./lodash');
+var Hammer = require('./hammer');
 
 // undo hackery
 if (typeof define == 'function' && savedAmd) {
@@ -11590,6 +11591,10 @@ if (typeof define == 'function' && savedAmd) {
 
 exports.getLodash = function () {
   return _;
+};
+
+exports.getHammer = function () {
+  return Hammer;
 };
 
 exports.shallowCopy = function(source) {
@@ -11888,7 +11893,7 @@ exports.generateDropletModeOptions = function (codeFunctions) {
   return modeOptions;
 };
 
-},{"./lodash":20,"./xml":38}],38:[function(require,module,exports){
+},{"./hammer":19,"./lodash":20,"./xml":38}],38:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
@@ -12237,7 +12242,7 @@ exports.nextStageTrophies = function(d){return "Maligayang bati! Natapos mo ang 
 
 exports.numBlocksNeeded = function(d){return "Maligayang bati! Nakumpleto mo ang Puzzle "+v(d,"puzzleNumber")+". (Subalit, maaari mo sanang gamitin lamang ang "+p(d,"numBlocks",0,"fil",{"one":"1 block","other":n(d,"numBlocks")+" blocks"})+".)"};
 
-exports.numLinesOfCodeWritten = function(d){return "You just wrote "+p(d,"numLines",0,"fil",{"one":"1 line","other":n(d,"numLines")+" lines"})+" of code!"};
+exports.numLinesOfCodeWritten = function(d){return "Ikaw ang nagsulat ng "+p(d,"numLines",0,"fil",{"one":"1 line","other":n(d,"numLines")+" lines"})+" ng code!"};
 
 exports.play = function(d){return "play"};
 
@@ -12273,7 +12278,7 @@ exports.toolboxHeader = function(d){return "Mga block"};
 
 exports.openWorkspace = function(d){return "Kung Paano Ito Gumagana"};
 
-exports.totalNumLinesOfCodeWritten = function(d){return "All-time total: "+p(d,"numLines",0,"fil",{"one":"1 line","other":n(d,"numLines")+" lines"})+" of code."};
+exports.totalNumLinesOfCodeWritten = function(d){return "Kinabuohan: "+p(d,"numLines",0,"fil",{"one":"1 line","other":n(d,"numLines")+" lines"})+" ng code."};
 
 exports.tryAgain = function(d){return "Subukang muli"};
 

@@ -11576,11 +11576,12 @@ var savedAmd;
 // via require js
 if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) {
   savedAmd = define.amd;
-  define.amd = 'dont_call_requirejs_define';
+  define.amd = false;
 }
 
 // get lodash
 var _ = require('./lodash');
+var Hammer = require('./hammer');
 
 // undo hackery
 if (typeof define == 'function' && savedAmd) {
@@ -11590,6 +11591,10 @@ if (typeof define == 'function' && savedAmd) {
 
 exports.getLodash = function () {
   return _;
+};
+
+exports.getHammer = function () {
+  return Hammer;
 };
 
 exports.shallowCopy = function(source) {
@@ -11888,7 +11893,7 @@ exports.generateDropletModeOptions = function (codeFunctions) {
   return modeOptions;
 };
 
-},{"./lodash":20,"./xml":38}],38:[function(require,module,exports){
+},{"./hammer":19,"./lodash":20,"./xml":38}],38:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
@@ -11918,7 +11923,7 @@ exports.parseElement = function(text) {
 
 },{}],39:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.fi=function(n){return n===1?"one":"other"}
-exports.bounceBall = function(d){return "pompauta palloa"};
+exports.bounceBall = function(d){return "pomputa palloa"};
 
 exports.bounceBallTooltip = function(d){return "Pompauta pallo toisesta esineestä."};
 
@@ -12006,7 +12011,7 @@ exports.pathRight = function(d){return "jos polku oikealle"};
 
 exports.pilePresent = function(d){return "tässä on kasa"};
 
-exports.playSoundCrunch = function(d){return "soita räsähdyksen ääni"};
+exports.playSoundCrunch = function(d){return "soita rusahdus"};
 
 exports.playSoundGoal1 = function(d){return "soita maalin ääni"};
 
@@ -12231,9 +12236,9 @@ exports.nextLevel = function(d){return "Onneksi olkoon! Olet suorittanut "+v(d,"
 
 exports.nextLevelTrophies = function(d){return "Onneksi olkoon! Olet suorittanut "+v(d,"puzzleNumber")+". pulman ja voittanut "+p(d,"numTrophies",0,"fi",{"one":"pokaalin","other":n(d,"numTrophies")+" pokaalia"})+"."};
 
-exports.nextStage = function(d){return "Onnittelut! Olet suorittanut "+v(d,"stageName")+"."};
+exports.nextStage = function(d){return "Onnittelut! Olet suorittanut tason "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "Onnittelut! Olet suorittanut "+v(d,"stageName")+" ja voitit "+p(d,"numTrophies",0,"fi",{"one":"pokaalin","other":n(d,"numTrophies")+" pokaalia"})+"."};
+exports.nextStageTrophies = function(d){return "Onnittelut! Olet suorittanut tason "+v(d,"stageName")+" ja voitit "+p(d,"numTrophies",0,"fi",{"one":"pokaalin","other":n(d,"numTrophies")+" pokaalia"})+"."};
 
 exports.numBlocksNeeded = function(d){return "Onneksi olkoon! Olet suorittanut "+v(d,"puzzleNumber")+". pulman (olisit tosin voinut käyttää vain "+p(d,"numBlocks",0,"fi",{"one":"yhden lohkon","other":n(d,"numBlocks")+" lohkoa"})+")."};
 
@@ -12309,7 +12314,7 @@ exports.when = function(d){return "kun"};
 
 exports.whenRun = function(d){return "kun suoritetaan"};
 
-exports.tryHOC = function(d){return "Kokeile koodituntia"};
+exports.tryHOC = function(d){return "Kokeile koodaustuntia"};
 
 exports.signup = function(d){return "Rekisteröidy johdantokurssille"};
 
