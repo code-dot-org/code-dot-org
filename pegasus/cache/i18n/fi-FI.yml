@@ -4,7 +4,7 @@
   computer_science: Tietojenkäsittelytiede
   computer_science_edweek: Tietojenkäsittelyn koulutusviikko
   csedweek_dates: 9.-15. joulukuuta 2013
-  n_have_learned_an_hoc: <h1>#</h1><h3>on kokeillut</h3><h2>Koodituntia</h2>
+  n_have_learned_an_hoc: <h1>#</h1><h3>on kokeillut</h3><h2>Koodaustuntia</h2>
   anybody_can_learn: Kuka tahansa voi oppia.
   learn_now: Opettele nyt
   petition_message: Jokaisen oppilaan jokaisessa koulussa pitää saada mahdollisuus
@@ -13,11 +13,11 @@
   name: Nimi
   email: Sähköposti
   zipcode: Maa (tai postinumero Yhdysvalloissa)
-  submit: Lähetä
+  submit: Jatka
   twentyhours_heading: Kokeile kurssiamme Johdanto tietojenkäsittelytieteeseen
   twentyhours_text: Ensimmäinen Koodaustunti tehtynä? Opi lisää tietojenkäsittelytieteestä
     ja ohjelmoinnin käsitteistä tällä jatkokurssilla.
-  hoc2014_heading: Tule mukaan <a href="http://hourofcode.com">Koodituntiin</a><br/>joulukuun
+  hoc2014_heading: Tule mukaan <a href="http://hourofcode.com">Koodaustuntiin</a><br/>joulukuun
     8 - 14, 2014<br/>
   hoc2014_students: Oppilaat
   hoc2014_try: Kokeile
@@ -25,7 +25,7 @@
   hoc2014_host: Järjestä
   hoc2014_everyone: Kaikki
   hoc2014_support: Tue
-  hoc2014_whatishoc: Mikä on kooditunti?
+  hoc2014_whatishoc: Mikä on koodaustunti?
   twentyhours_trynow: Kokeile nyt
   california_heading: Pyydä kouluasi opettamaan tietojenkäsittelytiedettä
   california_text: Kuka tahansa opettaja voi tarjota <a href='http://studio.code.org/'>ilmaisia
@@ -49,7 +49,7 @@
   go: Mene
   thank_you_: Kiitos!
   congratulations: Onneksi olkoon!
-  congratulations_on_completing_hoc: Onnittelut Kooditunnin suorittamisesta.
+  congratulations_on_completing_hoc: Onnittelut Koodaustunnin suorittamisesta.
   get_a_certificate_of_achievement: Hanki todistus suorittamisesta
   enter_valid_email: Ole hyvä ja syötä toimiva sähköpostiosoite
   get_a_certificate_message: Me lähetämme sinulle todistuksen ja lisätietoa miten
@@ -65,7 +65,7 @@
   share_achievement: Jaa saavutuksesi
   beyond_hour_message: Jatka <a href='http://studio.code.org'>muilla kursseillamme</a>,
     tai katso <a href='/learn/beyond'>Mitä voit oppia ensimmäisen tunnin jälkeen</a>.
-  leaderboards_for_hoc: Kooditunnin pistetaulukot.
+  leaderboards_for_hoc: Koodaustunnin pistetaulukot.
   support_url: http://support.code.org/
   country: Maa
   city: Kaupunki
@@ -94,7 +94,7 @@
   used_infrequent_updates: Käytetään ainoastaan harvoin tuleviin päivityksiin
   privacy_practices_children: Tarkastele lapsiin kohdistuvan yksityisyyden käytäntöjämme
   petition_thankyou: Kiitos, kun allekirjoitit adressin
-  continue_learning_header: Jatka opiskelua Kooditunnin jälkeen
+  continue_learning_header: Jatka opiskelua Koodaustunnin jälkeen
   continue_learning_body: Vaihtoehtoja on paljon. Voit opiskella verkossa tai paikallisessa
     oppilaitoksessa tai kesäleirillä.
   learn_next_level: Jatka seuraavalle tasolle
@@ -103,7 +103,7 @@
   hoc_is_here: '#Koodaustunti on täällä - Tsekkaa! @codeorg'
   just_did_hoc: 'Suoritin juuri #Koodaustunti - tsekkaa tämä! @codeorg'
   learn_hoc: Opiskele Koodaustunnilla
-  beyond_hoc: Kooditunnin jälkeen
+  beyond_hoc: Koodaustunnin jälkeen
   what_gender: Mikä on sukupuolesi?
   girl: Tyttö
   boy: Poika
@@ -112,15 +112,15 @@
   lines_of_code: TÄHÄN MENNESSÄ KIRJOITETTU YLI <b># RIVIÄ KOODIA</b>.
   lines_of_code_alt: <b>#</b> RIVIÄ OPISKELIJOIDEN KIRJOITTAMAA KOODIA
   who_has_done_hoc: 'Kuka on suorittanut #Koodaustunti? @codeorg'
-  hoc_leaderboards: Kooditunnin pistetaulukot
-  students_and_lines: '%{students} opiskelijaa on suorittanut Kooditunnin ja kirjoittanut
+  hoc_leaderboards: Koodaustunnin pistetaulukot
+  students_and_lines: '%{students} opiskelijaa on suorittanut koodaustunnin ja kirjoittanut
     %{lines} riviä koodia.'
   start_hoc: Aloita Koodaustunti nyt
   contact_form_topic_press: Lehdistö/media (haastattelu- tai luentopyyntö)
   studiobar_title: Tutustu <a href='http://studio.code.org'>Code Studio</a>:on
   studiobar_elementary_title: Alkeiskurssit
   studiobar_elementary_body: Kolme kurssiamme K&#8209;5-ryhmälle
-  studiobar_hoc_title: Kooditunti
+  studiobar_hoc_title: Koodaustunti
   studiobar_hoc_body: Opi koodaamaan Angry Birds -lintujen kanssa
   studiobar_flappy_title: Flappy Code
   studiobar_flappy_body: Tee ja jaa oma Flappy-pelisi
@@ -223,7 +223,7 @@
   dashboard_navigation_view_progress: Tarkastele etenemistä
   dashboard_navigation_add_students: Lisää oppilaita
   dashboard_navigation_manage_students: Hallinnoi oppilaita
-  dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
+  dashboard_navigation_lesson_plans_resources: Tuntisuunnitelmat ja resurssit
   dashboard_navigation_view_stats: Tarkastele tilastoja
   dashboard_navigation_section: 'Ryhmä: %{section_name}'
   dashboard_navigation_student: 'Oppilas: %{student_name}'
@@ -293,7 +293,7 @@
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Napsauta
     tästä</a> nähdäksesi yksityisyysasiakirjan oppilaille jaettavaksi tai tulostettavaksi.
   dashboard_curriculum_overview: K-5 opetussuunnitelman yleiskatsaus
-  dashboard_view_all_lesson_plans: Tarkastele kaikkia oppitunteja
+  dashboard_view_all_lesson_plans: Katso kaikkia tuntisuunnitelmia
   dashboard_course1: 'Kurssi 1:'
   dashboard_course2: 'Kurssi 2:'
   dashboard_course3: 'Kurssi 3:'
@@ -335,11 +335,11 @@
   code_sign_up: Sign up to participate during CS Education Week
   learn_more: Lisätietoja
   carousel_heading_international: Oppitunnit omalla kielelläsi
-  carousel_heading_beginners: Tutorials for Beginners
-  carousel_heading_javascript: Tutorials that teach Javascript
+  carousel_heading_beginners: Aloittelijoiden oppaat
+  carousel_heading_javascript: Oppaat, jotka käsittelevät JavaScript kieltä
   carousel_heading_unplugged: No device or internet? Try 'unplugged' computer science
-  carousel_heading_devices: Tutorial apps for phones and tablets
-  carousel_heading_languages: Tutorials in other programming languages
+  carousel_heading_devices: Opasohjelmat puhelimille ja tablettitietokoneille
+  carousel_heading_languages: Oppaat muista ohjelmointikielistä
   carousel_heading_apps_games: Make your own apps or games
   carousel_heading_university: University courses online
   carousel_heading_webpages: Learn to make web pages
@@ -347,10 +347,10 @@
   carousel_heading_ide: Platforms popular among teachers
   educator_notes: Educator Notes
   more_resources_educators: More resources for teachers and educators
-  participants: participants
-  teachers_notes: Teacher's Notes
-  previous: Previous
-  next: Next
+  participants: osallistujat
+  teachers_notes: Opettajan muistiinpanot
+  previous: Edellinen
+  next: Seuraava
   older_systems: Tutorials that work on older systems
   older_systems_subheading: These should work on older Web browsers. To access all
     tutorials, upgrade to a <a href="http://browsehappy.com/" target="_blank">modern
@@ -395,7 +395,7 @@
   scratch_gradelevel: Ikä 8+
   lightbot_gradelevel: Kaikenikäiset
   thinkersmith_gradelevel: Kaikenikäiset
-  condcards_gradelevel: Ages 8-12
+  condcards_gradelevel: 8-12 v
   lightbotintl_gradelevel: Kaikenikäiset
   codehs_gradelevel: lukio
   codecademy_gradelevel: lukio
@@ -417,7 +417,7 @@
   blockly_gradelevel: Kaikenikäiset
   thinkersmith2_gradelevel: Ikä 8+
   kodableunplugged_gradelevel: 8-13 vuotiaille
-  projguts_gradelevel: Ages 10-13
+  projguts_gradelevel: 10-13 v
   codeorg_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
   thinkersmithspanish_platformtext: Mediante el uso de un "Vocabulario Robot" predefinido,
     los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
