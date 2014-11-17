@@ -65,7 +65,7 @@
         - unplug5
         video: Unplug5
       Unplug6:
-        title: Conditions
+        title: Ehdot
         desc: This is a class game.  After introducing the idea of conditionals, if-statements,
           and loops, the class can practice together using a pre-written program,
           a deck of cards, and luck of the draw.
@@ -111,7 +111,7 @@
         - unplug10
         video: Unplug10
       Unplug11:
-        title: Wrap-Up
+        title: Yhteenveto
         desc: The final wrap-up in the first 20-hour series will help the class relive
           all of their favorite moments, while giving them next steps that they can
           take on their own if they are interested in continuing their computer science
@@ -121,13 +121,13 @@
         video: Unplug11
       UnplugHappyMaps:
         title: Iloiset kartat
-        desc: Students create simple algorithms (sets of instructions) to move a character
-          through a maze using a single command.
+        desc: Oppilaat ohjaavat hahmon labyrintin läpi luomalla yksinkertaisia algoritmeja
+          (sarja ohjeita).
         video: C1_happy_maps_unplugged
       MoveIt:
         title: Siirrä, siirrä se
-        desc: Students create simple algorithms (sets of instructions) to move a character
-          through a maze using a single command.
+        desc: Oppilaat ohjaavat hahmon labyrintin läpi luomalla yksinkertaisia algoritmeja
+          (sarja ohjeita).
         video: C1_moveitmoveit_unplugged
       PlantASeed:
         title: 'Tosielämän algoritmit: Kylvä siemen'
@@ -234,7 +234,7 @@
         desc: Students explore the difference between private information and personal
           information, distinguishing what is safe and unsafe to share online.
       TangramAlgorithms:
-        title: Tangram Algorithms
+        title: Tangram-algoritmit
         desc: This lesson shows us something important about algorithms. If you keep
           an algorithm simple there are lots of ways to use it. If you want to make
           sure everyone ends up with the same thing, then your algorithm needs more
@@ -263,7 +263,7 @@
           will help students intuitively understand why combining chunks of code into
           functions is such a helpful practice.  '
       BinaryImages:
-        title: Binary Images
+        title: Binäärikuvat
         desc: Though many people think of binary as strictly zeros and ones, our previous
           courses taught students that information can be represented in a variety
           of binary options.  This lesson takes that concept one step further as it

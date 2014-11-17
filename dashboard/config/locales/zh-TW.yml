@@ -385,8 +385,8 @@
     subtitle: 看看這些影片和提示
     teacher: 參考解決方案
     auth_error: 您無權查看該解決方案。
-    submit: Update Artist Location
-    direction: Start Direction
+    submit: 更新畫家的位置
+    direction: 開始方向(以度為單位)
   video:
     tab: 影片
     notes: 看不到影片嗎？顯示文字說明。
@@ -414,11 +414,11 @@
   try_reloading: 請嘗試重新載入網頁
   next_stage: 完成 ！繼續邁向下一個階段
   download_pdf: 開啟教學計畫
-  lesson_plan: Lesson Plan
-  view_lesson_plan: View Lesson Plan
+  lesson_plan: 教案
+  view_lesson_plan: 檢視教案
   pdf_download: 下載 PDF
   download_coming_soon: Downloadable activity coming soon.
-  video_coming_soon: Video Coming Soon!
+  video_coming_soon: 視頻快將推出 ！
   share_code:
     title: 按一下'執行程式'來看看程式執行結果
     bounce_og_title: Check out my Bounce Game
@@ -463,33 +463,33 @@
       apps and pictures by writing their own computer programs. Click on the pictures
       and screenshots to see each program in action.
     want_to_make_your_own: Want to make your own?
-    more: More &rarr;
-    caption_by_name_age: by %{name}, age %{age}
-    caption_time_ago: '%{time_ago} ago'
+    more: 更多 &rarr;
+    caption_by_name_age: '%{name}, %{age} 歲'
+    caption_time_ago: '%{time_ago} 前'
   landing:
     prerelease: This page is still under development.
-    feedback: Give Feedback
-    report_bug: Report Bug
-    support: Get Help
+    feedback: 提供意見
+    report_bug: 報告錯誤
+    support: 請求幫助
     support_url: //support.code.org
   multi:
-    wrong_title: Incorrect answer
-    wrong_body: The answer you've entered is not correct.  Please try again!
-    correct_title: Correct
-    correct_body: That is the correct answer.
+    wrong_title: 不正確的答案
+    wrong_body: 你的答案不正確。請再試一次 ！
+    correct_title: 正確
+    correct_body: 這是正確的答案。
   match:
-    wrong_title: Incorrect solution
-    wrong_body: The solution you've entered is not correct.  Please try again!
-    correct_title: Correct
-    correct_body: That is the correct answer.
+    wrong_title: 不正確的解決方案
+    wrong_body: 您的解決方案不正確。請再試一次 ！
+    correct_title: 正確
+    correct_body: 這是正確的答案。
   text_match:
-    placeholder: Enter your answer here
+    placeholder: 在這裡輸入你的答案
   dialog:
     ok: 確定
   time:
-    hour: 1 hour
-    day: day
-    week: week
+    hour: 一小時
+    day: 天
+    week: 週
   data:
     script:
       name:
@@ -533,7 +533,7 @@
     You may browse <a href="http://support.code.org">support.code.org</a> without
     signing in or ask your parent or teacher to contact us for you.
   progress:
-    not_completed: not completed
-    completed_too_many_blocks: completed, too many blocks
-    completed_perfect: completed, perfect
+    not_completed: 未完成
+    completed_too_many_blocks: 完成，但使用過多積木
+    completed_perfect: 完美完成
     furthest_level_attempted: furthest level attempted

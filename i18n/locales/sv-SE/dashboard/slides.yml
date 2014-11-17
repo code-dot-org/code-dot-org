@@ -1,255 +1,255 @@
-sv:
+"sv":
   slides:
     maze_intro:
       1:
-        image: notes/hoc1_1.jpg
-        text: Välkommen till din första timme med kod! Låt oss börja direkt med din första träff med programmering.
+        image: "notes/hoc1_1.jpg"
+        text: "Välkommen till din första timme med kod! Låt oss börja direkt med din första träff med programmering."
       2:
-        image: notes/hoc1_2.jpg
-        text: Vi kommer använda Blocky, ett visuellt programmeringsspråk där du drar ut block och sätter ihop för att skriva kod.
+        image: "notes/hoc1_2.jpg"
+        text: "Vi kommer använda Blocky, ett visuellt programmeringsspråk där du drar ut block och sätter ihop för att skriva kod."
       3:
-        image: notes/hoc1_3.jpg
+        image: "notes/hoc1_3.jpg"
         text: 'Kod är mestadels skriven med Blocky är visuellt. Varje block representerar en rad med "riktig" kod.'
       4:
-        image: notes/hoc1_4.jpg
-        text: Du kommer lära dig grunderna för datavetenskap, grunder som används för att göra allt från appar till instruktioner till marslandare.
+        image: "notes/hoc1_4.jpg"
+        text: "Du kommer lära dig grunderna för datavetenskap, grunder som används för att göra allt från appar till instruktioner till marslandare."
       5:
-        image: notes/hoc1_5.jpg
-        text: Ett program är en grupp instruktioner som din dator kommer följa.
+        image: "notes/hoc1_5.jpg"
+        text: "Ett program är en grupp instruktioner som din dator kommer följa."
       6:
-        image: notes/hoc1_6.jpg
-        text: Målet för ditt första program är att få en Angry Bird genom en labyrint för att träffa en Grön Gris.
+        image: "notes/hoc1_6.jpg"
+        text: "Målet för ditt första program är att få en Angry Bird genom en labyrint för att träffa en Grön Gris."
       7:
-        image: notes/hoc1_7.jpg
-        text: Till vänster är labyrinten där ditt program kommer köra. Instruktionerna för varje puzzel kommer vara nedanför labyrinten.
+        image: "notes/hoc1_7.jpg"
+        text: "Till vänster är labyrinten där ditt program kommer köra. Instruktionerna för varje puzzel kommer vara nedanför labyrinten."
       8:
-        image: notes/hoc1_8.jpg
-        text: I mitten finns verktygslådan där alla kommandon för den Röda Fågeln finns. Du kommer använda de här för att sätta ihop din kod.
+        image: "notes/hoc1_8.jpg"
+        text: "I mitten finns verktygslådan där alla kommandon för den Röda Fågeln finns. Du kommer använda de här för att sätta ihop din kod."
       9:
-        image: notes/hoc1_9.jpg
-        text: Till höger är arbetsytan dit du ska dra block från verktygslådan för att sätta ihop ditt program. För att ta bort ett block, dra det till papperskorgen i hörnet.
+        image: "notes/hoc1_9.jpg"
+        text: "Till höger är arbetsytan dit du ska dra block från verktygslådan för att sätta ihop ditt program. För att ta bort ett block, dra det till papperskorgen i hörnet."
       10:
-        image: notes/hoc1_10.jpg
+        image: "notes/hoc1_10.jpg"
         text: 'Varje block är en instruktion. Om du drar ett "gå framåt"-block till arbetsytan och trycker på "Kör programmet" så kommer fågeln gå ett steg fram i labyrinten.'
       11:
-        image: notes/hoc1_11.jpg
+        image: "notes/hoc1_11.jpg"
         text: 'För att göra mer än en handling: dra mer än ett block till arbetsytan och sätta ihop dem. Då kommer fågeln göra uppgifterna från toppen till botten.'
       12:
-        image: notes/hoc1_12.jpg
+        image: "notes/hoc1_12.jpg"
         text: 'Om du kör ett program men vill fixa det och försöka igen, tryck på knappen "Återställ".'
       13:
-        image: notes/hoc1_13.jpg
-        text: Låt oss gå och få tag på grisarna!
+        image: "notes/hoc1_13.jpg"
+        text: "Låt oss gå och få tag på grisarna!"
     artist_intro:
       1:
-        image: notes/stage5_1.jpg
-        text: Hej, jag heter JR! Varje racerbilslag behöver datavetare för att vinna. De analyserar data från bilen för att få den att bli snabbare.
+        image: "notes/stage5_1.jpg"
+        text: "Hej, jag heter JR! Varje racerbilslag behöver datavetare för att vinna. De analyserar data från bilen för att få den att bli snabbare."
       2:
-        image: notes/stage5_2.jpg
-        text: I dessa pussel, kommer du vara en konstnär som ritar en linje bakom sig varän hen går.
+        image: "notes/stage5_2.jpg"
+        text: "I dessa pussel, kommer du vara en konstnär som ritar en linje bakom sig varän hen går."
       3:
-        image: notes/stage5_3.jpg
+        image: "notes/stage5_3.jpg"
         text: 'Detta block säger "gå framåt 100 pixlar." Pixlar är riktigt små prickar på skärmen.'
       4:
-        image: notes/stage5_4.jpg
+        image: "notes/stage5_4.jpg"
         text: 'Detta block säger "sväng åt höger 90 grader." Detta vänder din konstnär lika mycket som "sväng"-blocken i labyrintpusslen.'
       5:
-        image: notes/stage5_5.jpg
-        text: Klicka på pilen i något av dessa block för att ändra hur mycket konstnären rör sig framåt eller svänger. Testa för att bekanta dig med dessa nya block.
+        image: "notes/stage5_5.jpg"
+        text: "Klicka på pilen i något av dessa block för att ändra hur mycket konstnären rör sig framåt eller svänger. Testa för att bekanta dig med dessa nya block."
     farmer_intro:
       1:
-        image: notes/stage9_1.jpg
-        text: Hej, jag är Paola! I dessa pussel är du en bonde som måste få sitt område helt platt för att börja plantera grödor.
+        image: "notes/stage9_1.jpg"
+        text: "Hej, jag är Paola! I dessa pussel är du en bonde som måste få sitt område helt platt för att börja plantera grödor."
       2:
-        image: notes/stage9_2.jpg
-        text: Du måste hjälpa henne ta bort alla smutshögar och fylla i alla hål.
+        image: "notes/stage9_2.jpg"
+        text: "Du måste hjälpa henne ta bort alla smutshögar och fylla i alla hål."
       3:
-        image: notes/stage9_3.jpg
-        text: De nya kuberna tar bort 1 skopa jord från en hög och fyller ett hål med en skopa jord.
+        image: "notes/stage9_3.jpg"
+        text: "De nya kuberna tar bort 1 skopa jord från en hög och fyller ett hål med en skopa jord."
       4:
-        image: notes/stage9_4.jpg
-        text: Högarna och hålen har olika storlekar, så du måste fråga bonden hur många skopor jord du behöver använda.
+        image: "notes/stage9_4.jpg"
+        text: "Högarna och hålen har olika storlekar, så du måste fråga bonden hur många skopor jord du behöver använda."
     flappy_intro:
       1:
-        image: notes/flappy01.jpg
-        text: Hej, jag heter Katie! En av de mest spännande sakerna med datavetenskap är att ett dataprogram kan vara interaktivt.
+        image: "notes/flappy01.jpg"
+        text: "Hej, jag heter Katie! En av de mest spännande sakerna med datavetenskap är att ett dataprogram kan vara interaktivt."
       2:
-        image: notes/flappy02.jpg
-        text: Varje gång nån klickar, pekar eller skriver på en dator eller telefon så skapas en HÄNDELSE och det finns kod som bestämmer vad som ska göras när en HÄNDELSE inträffar.
+        image: "notes/flappy02.jpg"
+        text: "Varje gång nån klickar, pekar eller skriver på en dator eller telefon så skapas en HÄNDELSE och det finns kod som bestämmer vad som ska göras när en HÄNDELSE inträffar."
       3:
-        image: notes/flappy03.jpg
+        image: "notes/flappy03.jpg"
         text: 'Till exempel skulle du kunna ha en HÄNDELSE-HANTERARE som säger "när det klickas med musen, spela upp ett ljud" '
       4:
-        image: notes/flappy04.jpg
-        text: Har du hört talas om spelet FlappyBird? Genom att använda händelse-hanterare ska vi lära oss att programmera vår egen version av FlappyBird!
+        image: "notes/flappy04.jpg"
+        text: "Har du hört talas om spelet FlappyBird? Genom att använda händelse-hanterare ska vi lära oss att programmera vår egen version av FlappyBird!"
       5:
-        image: notes/flappy05.jpg
-        text: Koden som du ska skriva innebär att dra och släppa block som representerar kommandon för datorn. Under huven representeras vart och ett av dessa block verklig kod.
+        image: "notes/flappy05.jpg"
+        text: "Koden som du ska skriva innebär att dra och släppa block som representerar kommandon för datorn. Under huven representeras vart och ett av dessa block verklig kod."
       6:
-        image: notes/flappy06.jpg
+        image: "notes/flappy06.jpg"
         text: 'Om du tar en titt på arbetsytan finns det några gröna block som fyllts i för dig - de är "händelse-hanterare" '
       7:
-        image: notes/flappy07.jpg
+        image: "notes/flappy07.jpg"
         text: 'Om du vill att fågeln FLAXAR när du KLICKAR med musen, kan du göra det genom att fästa "FLAXA" blocket till händelse-hanteraren och när du nu, i ditt spel, klickar med musen, kommer fågeln att flaxa.'
       8:
-        image: notes/flappy08.jpg
-        text: I varje uppgiften av denna aktivitet kommer vi att introducera nya typer av händelser som gröna block på arbetsytan, och du kan bestämma lämpliga block för att lägga till som hanterare på dessa händelser.
+        image: "notes/flappy08.jpg"
+        text: "I varje uppgiften av denna aktivitet kommer vi att introducera nya typer av händelser som gröna block på arbetsytan, och du kan bestämma lämpliga block för att lägga till som hanterare på dessa händelser."
       9:
-        image: notes/flappy09.jpg
+        image: "notes/flappy09.jpg"
         text: 'När du ser en listrutepil såhär, innebär det att du kan ändra inställningar - som vilket ljud som ska spela när flappy träffar marken.'
       10:
-        image: notes/flappy10.jpg
-        text: I den sista uppgiften kommer du att kunna skapa ditt eget spel och dela det med dina vänner. Ha det så kul!
+        image: "notes/flappy10.jpg"
+        text: "I den sista uppgiften kommer du att kunna skapa ditt eget spel och dela det med dina vänner. Ha det så kul!"
     loop_times:
       1:
-        image: notes/hoc2_1.jpg
-        text: Hej, är jag Mark! Låt oss lära oss om loopar. Med loopar kan du berätta för en dator att den ska upprepa en grupp med handlingar om och om igen, tusentals eller till och med miljarder gånger.
+        image: "notes/hoc2_1.jpg"
+        text: "Hej, är jag Mark! Låt oss lära oss om loopar. Med loopar kan du berätta för en dator att den ska upprepa en grupp med handlingar om och om igen, tusentals eller till och med miljarder gånger."
       2:
-        image: notes/hoc2_2.jpg
-        text: I detta pussel vill vi få fågeln att gå 5 steg framåt för att komma till grisen.
+        image: "notes/hoc2_2.jpg"
+        text: "I detta pussel vill vi få fågeln att gå 5 steg framåt för att komma till grisen."
       3:
-        image: notes/hoc2_3.jpg
+        image: "notes/hoc2_3.jpg"
         text: 'Vi kan använda det nya "Upprepa"-blocket för att klara det.'
       4:
-        image: notes/hoc2_4.jpg
+        image: "notes/hoc2_4.jpg"
         text: 'Istället för att dra ut 5 "gå framåt"-block...'
       5:
-        image: notes/hoc2_5.jpg
+        image: "notes/hoc2_5.jpg"
         text: 'Så kan vi sätta "gå framåt"-blocket inuti "upprepa"-blocket och skriva det nummer på blocket som representerar hur många gånger vi vill att handlingen ska upprepas.'
       6:
-        image: notes/hoc2_6.jpg
+        image: "notes/hoc2_6.jpg"
         text: 'Och detta är viktigt: du kan sätta mer än en handling i ett "Upprepa"-block.'
       7:
-        image: notes/hoc2_7.jpg
+        image: "notes/hoc2_7.jpg"
         text: 'Lycka till med att använda ditt nya "upprepa"-block!'
     loop_until:
       1:
-        image: notes/hoc3_1.jpg
+        image: "notes/hoc3_1.jpg"
         text: 'Hej, är jag Chris. Innan jag gick med i Miami Heat, gick jag på Georgia Tech för att studera datavetenskap. Låt oss prova vårt nya block, "upprepa tills"-blocket.'
       2:
-        image: notes/hoc3_2.jpg
-        text: Vad skulle hända om vi inte visste hur långt fågeln var tvungen att gå för att komma till grisen?
+        image: "notes/hoc3_2.jpg"
+        text: "Vad skulle hända om vi inte visste hur långt fågeln var tvungen att gå för att komma till grisen?"
       3:
-        image: notes/hoc3_3.jpg
+        image: "notes/hoc3_3.jpg"
         text: 'Om vi sätter ett "gå framåt"-block inuti "upprepa tills"-blocket så kommer fågeln att gå framåt TILLS den når grisen (eller kraschar in i väggen).'
       4:
-        image: notes/hoc3_4.jpg
+        image: "notes/hoc3_4.jpg"
         text: 'Och detta är viktigt: precis som tidigare, kan vi sätta flera block inuti blocket "upprepa tills", och de kommer alla att upprepas.'
     if:
       1:
-        image: notes/hoc4_1.jpg
+        image: "notes/hoc4_1.jpg"
         text: 'Hej, är jag Bill! Låt oss lära oss ett nytt grundläggande koncept: "Om"-satser. Detta är hur datorer fatta beslut.'
       2:
-        image: notes/hoc4_2.jpg
+        image: "notes/hoc4_2.jpg"
         text: 'Du använder "Om" uttalanden själv varje dag. Innan du går ut varje morgon, säger du OM det regnar ute,  behöver använda min jacka.'
       3:
-        image: notes/hoc4_3.jpg
-        text: Vi kan säga till zombien att kolla om det finns väg till vänster, och om han hittar en väg till vänster så ska han vända i den riktningen.
+        image: "notes/hoc4_3.jpg"
+        text: "Vi kan säga till zombien att kolla om det finns väg till vänster, och om han hittar en väg till vänster så ska han vända i den riktningen."
       4:
-        image: notes/hoc4_4.jpg
+        image: "notes/hoc4_4.jpg"
         text: 'För att skriva koden till detta: dra ut "om"-blocket och sätt ett "sväng vänster"-block inuti det.'
       5:
-        image: notes/hoc4_5.jpg
+        image: "notes/hoc4_5.jpg"
         text: 'Om vi nu sätter en "gå framåt"-block ovanför det och en "upprepa"-block runt allt så kommer zombien varje gång den går kolla om det finns en väg till vänster och i så fall svänga. "Upprepa"-blocket är viktigt för annars skulle zombien bara ta ett steg.'
       6:
-        image: notes/hoc4_6.jpg
+        image: "notes/hoc4_6.jpg"
         text: '"Om"-satser är väldigt viktigt i programmering. Ett av det första spelen jag skrev var ett tre i rad spela, och i det fanns en "Om"-sats som sa OM den andra spelaren håller på att vinna, stoppa honom.'
       7:
-        image: notes/hoc4_7.jpg
+        image: "notes/hoc4_7.jpg"
         text: 'Ha kul med "om"-blocket!'
     if_else:
       1:
-        image: notes/hoc5_1.jpg
+        image: "notes/hoc5_1.jpg"
         text: 'Hej, jag heter Saloni. Jag använder programmering för att lösa problem inom hälsa och medicin. Låt oss lära oss om "om/annars"-blocket. Det ser ut som "om"-blocket men den har en extra del i slutet som kallas "annars".'
       2:
-        image: notes/hoc5_2.jpg
+        image: "notes/hoc5_2.jpg"
         text: 'Om jag sätter ett "gå framåt"-block på platsen där det står "gör" och ett "sväng vänster"-block där det står "annars" innebär det att zombien kommer att välja mellan 2 alternativ. OM det finns en väg framåt så kommer zombien att gå framåt, och annars (det finns inte en väg framåt) kommer zombien svänga vänster.'
       3:
-        image: notes/hoc5_3.jpg
+        image: "notes/hoc5_3.jpg"
         text: 'Precis som med "om"-block kan vi sätta in "om/annars"-block inuti ett "upprepa"-block så att zombien fortsätter gå samtidigt som "om/annars"-blocket kollar om det går att svänga.'
       4:
-        image: notes/hoc5_4.jpg
-        text: Nu, få de här zombien dit de hör hemma!
+        image: "notes/hoc5_4.jpg"
+        text: "Nu, få de här zombien dit de hör hemma!"
     function:
       1:
-        image: notes/stage13_1.jpg
-        text: Hej, jag är Brian, en av Instagrams ingenjörer. En funktion är en kodrad med olika koder som du vill använda om och om igen, så istället för att skriva ner var kod för sig så kan du istället använda en kub.
+        image: "notes/stage13_1.jpg"
+        text: "Hej, jag är Brian, en av Instagrams ingenjörer. En funktion är en kodrad med olika koder som du vill använda om och om igen, så istället för att skriva ner var kod för sig så kan du istället använda en kub."
       2:
-        image: notes/stage13_2.jpg
-        text: Vi kommer att lära dig att definiera funktioner. Funktionsdefinitioner har en stjärna i hörnet. Namnet på funktionen är skriven på den översta raden.
+        image: "notes/stage13_2.jpg"
+        text: "Vi kommer att lära dig att definiera funktioner. Funktionsdefinitioner har en stjärna i hörnet. Namnet på funktionen är skriven på den översta raden."
       3:
-        image: notes/stage13_3.jpg
+        image: "notes/stage13_3.jpg"
         text: 'De block som är inuti definitionen berättar vad den gör. Så den här funktionsdefinitionen kallas "fyll 5" och den består av ett "upprepa" och ett "fyll" block.'
       4:
-        image: notes/stage13_4.jpg
+        image: "notes/stage13_4.jpg"
         text: 'Definitionen finns i arbetsytan, men våra bönder kommer inte köra funktionen tills vi drar ut vårt "fyll 5"-funktionsblock från funktions-kategorin.'
       5:
-        image: notes/stage13_5.jpg
+        image: "notes/stage13_5.jpg"
         text: |-
           Let's put the "fun" back in "FUNction!"
     loop_while:
       1:
-        image: notes/stage9_5.jpg
+        image: "notes/stage9_5.jpg"
         text: |-
           Hi, I'm Makinde! Let's learn about the "while block."
       2:
-        image: notes/stage9_6.jpg
+        image: "notes/stage9_6.jpg"
         text: '"Medan" blocket kommer att göra det du sätter inne i det SÅ LÄNGE uttrycket i toppen är SANT.'
       3:
-        image: notes/stage9_7.jpg
-        text: Till exempel, om bonden står på en hög, fortsätter hon att ta bort 1 spadtag MEDAN det finns en hög under henne.
+        image: "notes/stage9_7.jpg"
+        text: "Till exempel, om bonden står på en hög, fortsätter hon att ta bort 1 spadtag MEDAN det finns en hög under henne."
     loop_for:
       1:
-        image: notes/stage11_1.jpg
-        text: Hej, jag heter Trina, och jag arbetar för Pixar. Jag har arbetat med en massa filmer, bland annat Shrek.
+        image: "notes/stage11_1.jpg"
+        text: "Hej, jag heter Trina, och jag arbetar för Pixar. Jag har arbetat med en massa filmer, bland annat Shrek."
       2:
-        image: notes/stage11_2.jpg
+        image: "notes/stage11_2.jpg"
         text: 'Det här är vår nya "räknare" loop. Den kommer att utföra kommandon om och om igen och du kan göra så att kommandona ändrar sig lite för varje gång.'
       3:
-        image: notes/stage11_3.jpg
+        image: "notes/stage11_3.jpg"
         text: 'I det här exemplet säger vår "räknare"-loop "räkna med räknare från 50 till 90 med 10-steg" och inuti den, har vi våra "Rita en fyrkant" block. Dra blocket "räknare" från avsnittet "Variabler" till "längd"-platsen.'
       4:
-        image: notes/stage11_4.jpg
-        text: Detta innebär att vår konstnär kommer att rita en kvadrat som har 50 pixlar långa sidor, sen lägger den till 10 till det och ritar en kvadrat med 60 pixlar långa sidor. Sen kommer den att hålla på att lägga till 10 och rita kvadrater tills den når 90. Då har vi kvadrater som är 50, 60, 70, 80 och 90.
+        image: "notes/stage11_4.jpg"
+        text: "Detta innebär att vår konstnär kommer att rita en kvadrat som har 50 pixlar långa sidor, sen lägger den till 10 till det och ritar en kvadrat med 60 pixlar långa sidor. Sen kommer den att hålla på att lägga till 10 och rita kvadrater tills den når 90. Då har vi kvadrater som är 50, 60, 70, 80 och 90."
     parameters:
       1:
-        image: notes/stage15_1.jpg
-        text: Hej, jag heter Janete, och jag är ingenjör på Zynga.
+        image: "notes/stage15_1.jpg"
+        text: "Hej, jag heter Janete, och jag är ingenjör på Zynga."
       2:
-        image: notes/stage15_2.jpg
-        text: Tänk om vi vill rita en massa trianglar och att de ska ha olika längder på sidorna?
+        image: "notes/stage15_2.jpg"
+        text: "Tänk om vi vill rita en massa trianglar och att de ska ha olika längder på sidorna?"
       3:
-        image: notes/stage15_3.jpg
-        text: Vi skulle kunna skriva all den koden för hand eller så kan vi använda en funktion med parametrar.
+        image: "notes/stage15_3.jpg"
+        text: "Vi skulle kunna skriva all den koden för hand eller så kan vi använda en funktion med parametrar."
       4:
-        image: notes/stage15_4.jpg
+        image: "notes/stage15_4.jpg"
         text: 'För att göra det, klicka på den blå stjärnan på "rita en triangel"s funktionsdefinition. Dra sen "fyll i namn" in i "input" blocket.'
       5:
-        image: notes/stage15_5.jpg
+        image: "notes/stage15_5.jpg"
         text: 'Sen om du skriver "längd" där det står "x" och trycker "Enter" så skapar du en längd inmatning till din funktion.'
       6:
-        image: notes/stage15_6.jpg
+        image: "notes/stage15_6.jpg"
         text: 'Sen klicka på stjärnan. Nu, klicka på kategorin variabler och dra blocket "längd" in i "gå framåt" blocket i din funktionsdefinition. Och dra bort det gamla nummerblocket.'
       7:
-        image: notes/stage15_7.jpg
+        image: "notes/stage15_7.jpg"
         text: 'För att använda din funktion med parametrar, klicka på kategorin funktioner och dra ut din "Rita en triangel med längd" funktion.'
       8:
-        image: notes/stage15_8.jpg
-        text: Nu kan du använda matematikblocket för att mata in olika siffror för att rita trianglar i olika storlekar.
+        image: "notes/stage15_8.jpg"
+        text: "Nu kan du använda matematikblocket för att mata in olika siffror för att rita trianglar i olika storlekar."
     hoc_wrapup:
       1:
-        image: notes/hoc6_1.jpg
-        text: Grattis! Med senaste pusslet du löste skrev du kod som kan du få vilken robot som helst att hitta sin väg genom en labyrint eller tunnel utan förgreningar och oberoende längd. Oavsett om det är en zombie, en fågel, en marslandare eller även en självkörande bil.
+        image: "notes/hoc6_1.jpg"
+        text: "Grattis! Med senaste pusslet du löste skrev du kod som kan du få vilken robot som helst att hitta sin väg genom en labyrint eller tunnel utan förgreningar och oberoende längd. Oavsett om det är en zombie, en fågel, en marslandare eller även en självkörande bil."
       2:
-        image: notes/hoc6_2.jpg
+        image: "notes/hoc6_2.jpg"
         text: 'De grundläggande koncept du använt är kärnan i varje program eller app som du någonsin kommer använda.  Vi lärt oss om "upprepa"-loopar, "upprepa tills"-loopar, "om"-satser, och om "om/annars"-satser.'
       3:
-        image: notes/hoc6_3.jpg
-        text: Om du gillade din första Timme med Kod, besök code.org för att fortsätta din utbildning i programmering! När du är klar med våran 20 timmars kurs så kommer du ha behärskat grunderna i programmering. Då kan du börja lära dig skriva telefon appar, robot instruktioner, spel eller vad du än vill.
+        image: "notes/hoc6_3.jpg"
+        text: "Om du gillade din första Timme med Kod, besök code.org för att fortsätta din utbildning i programmering! När du är klar med våran 20 timmars kurs så kommer du ha behärskat grunderna i programmering. Då kan du börja lära dig skriva telefon appar, robot instruktioner, spel eller vad du än vill."
       4:
-        image: notes/hoc6_4.jpg
+        image: "notes/hoc6_4.jpg"
         text: 'Tekniken förändras allt vi gör och det spelar ingen roll om du är ung eller gammal: programmering är kul, kreativt och alla kan lära sig!'
     20_wrapup:
       1:
-        image: notes/bird.png
-        text: Visa textning kommer snart!
+        image: "notes/bird.png"
+        text: "Visa textning kommer snart!"
