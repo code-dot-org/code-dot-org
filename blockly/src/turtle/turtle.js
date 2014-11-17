@@ -883,6 +883,8 @@ Turtle.doSmoothAnimate = function(options, distance)
 Turtle.step = function(command, values, options) {
   var tupleDone = true;
   var result;
+  var distance;
+  var heading;
 
   switch (command) {
     case 'FD':  // Forward
@@ -898,8 +900,8 @@ Turtle.step = function(command, values, options) {
       Turtle.jumpForward_(result.distance);
       break;
     case 'MV':  // Move (direction)
-      var distance = values[0];
-      var heading = values[1];
+      distance = values[0];
+      heading = values[1];
       result = Turtle.doSmoothAnimate(options, distance);
       tupleDone = result.tupleDone;
       Turtle.setHeading_(heading);
@@ -907,6 +909,7 @@ Turtle.step = function(command, values, options) {
       break;
     case 'JD':  // Jump (direction)
       distance = values[0];
+      heading = values[1];
       result = Turtle.doSmoothAnimate(options, distance);
       tupleDone = result.tupleDone;
       Turtle.setHeading_(heading);
