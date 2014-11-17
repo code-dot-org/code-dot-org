@@ -19963,9 +19963,9 @@ exports.nextLevel = function(d){return "Onneksi olkoon! Olet suorittanut "+v(d,"
 
 exports.nextLevelTrophies = function(d){return "Onneksi olkoon! Olet suorittanut "+v(d,"puzzleNumber")+". pulman ja voittanut "+p(d,"numTrophies",0,"fi",{"one":"pokaalin","other":n(d,"numTrophies")+" pokaalia"})+"."};
 
-exports.nextStage = function(d){return "Onnittelut! Olet suorittanut "+v(d,"stageName")+"."};
+exports.nextStage = function(d){return "Onnittelut! Olet suorittanut tason "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "Onnittelut! Olet suorittanut "+v(d,"stageName")+" ja voitit "+p(d,"numTrophies",0,"fi",{"one":"pokaalin","other":n(d,"numTrophies")+" pokaalia"})+"."};
+exports.nextStageTrophies = function(d){return "Onnittelut! Olet suorittanut tason "+v(d,"stageName")+" ja voitit "+p(d,"numTrophies",0,"fi",{"one":"pokaalin","other":n(d,"numTrophies")+" pokaalia"})+"."};
 
 exports.numBlocksNeeded = function(d){return "Onneksi olkoon! Olet suorittanut "+v(d,"puzzleNumber")+". pulman (olisit tosin voinut käyttää vain "+p(d,"numBlocks",0,"fi",{"one":"yhden lohkon","other":n(d,"numBlocks")+" lohkoa"})+")."};
 
@@ -20041,7 +20041,7 @@ exports.when = function(d){return "kun"};
 
 exports.whenRun = function(d){return "kun suoritetaan"};
 
-exports.tryHOC = function(d){return "Kokeile koodituntia"};
+exports.tryHOC = function(d){return "Kokeile koodaustuntia"};
 
 exports.signup = function(d){return "Rekisteröidy johdantokurssille"};
 
@@ -20240,15 +20240,15 @@ exports.positionMiddleCenter = function(d){return "keskelle keskitetysti"};
 
 exports.positionMiddleRight = function(d){return "keskelle oikeaan reunaan"};
 
-exports.positionBottomOutLeft = function(d){return "to the bottom outside left position"};
+exports.positionBottomOutLeft = function(d){return "ulkopuolelle, vasempaan alakulmaan"};
 
 exports.positionBottomLeft = function(d){return "alapuolelle vasempaan reunaan"};
 
-exports.positionBottomCenter = function(d){return "to the bottom center position"};
+exports.positionBottomCenter = function(d){return "keskelle alareunaa"};
 
 exports.positionBottomRight = function(d){return "alapuolelle oikeaan reunaan"};
 
-exports.positionBottomOutRight = function(d){return "to the bottom outside right position"};
+exports.positionBottomOutRight = function(d){return "alapuolelle oikean reunan ulkopuolelle"};
 
 exports.positionOutBottomLeft = function(d){return "alapuolelle vasempaan alareunaan"};
 
@@ -20282,7 +20282,7 @@ exports.saySprite = function(d){return "sano"};
 
 exports.saySpriteN = function(d){return "hahmo "+v(d,"spriteIndex")+" sanoo"};
 
-exports.saySpriteTooltip = function(d){return "Näytä puhekupla liitetyllä tekstillä määritellylle hahmolle."};
+exports.saySpriteTooltip = function(d){return "Näytä hahmolle puhekupla, jossa oheinen teksti."};
 
 exports.scoreText = function(d){return "Pisteet: "+v(d,"playerScore")};
 
@@ -20442,7 +20442,7 @@ exports.shareGame = function(d){return "Jaa tarinasi:"};
 
 exports.showCoordinates = function(d){return "Näytä koordinaatit"};
 
-exports.showCoordinatesTooltip = function(d){return "show the protagonist's coordinates on the screen"};
+exports.showCoordinatesTooltip = function(d){return "näyttää päähenkilön koordinaatit ruudulla"};
 
 exports.showTitleScreen = function(d){return "näytä otsikkonäyttö"};
 
@@ -20510,7 +20510,7 @@ exports.waitFor = function(d){return "odota kunnes"};
 
 exports.waitSeconds = function(d){return "sekuntia"};
 
-exports.waitForClick = function(d){return "odota kunnes napsautetaan"};
+exports.waitForClick = function(d){return "odota klikkausta"};
 
 exports.waitForRandom = function(d){return "odota kunnes satunnainen"};
 
@@ -20518,7 +20518,7 @@ exports.waitForHalfSecond = function(d){return "odota kunnes puoli sekuntia on k
 
 exports.waitFor1Second = function(d){return "odota kunnes 1 sekunti on kulunut"};
 
-exports.waitFor2Seconds = function(d){return "odota kunnes kaksi sekuntia on kulunut"};
+exports.waitFor2Seconds = function(d){return "odota kunnes 2 sekuntia on kulunut"};
 
 exports.waitFor5Seconds = function(d){return "odota kunnes 5 sekuntia on kulunut"};
 

@@ -65,7 +65,7 @@
         - unplug5
         video: Unplug5
       Unplug6:
-        title: Conditions
+        title: 條件
         desc: This is a class game.  After introducing the idea of conditionals, if-statements,
           and loops, the class can practice together using a pre-written program,
           a deck of cards, and luck of the draw.
@@ -217,7 +217,7 @@
           dice race game.
         video: C3_dice_race
       Internet:
-        title: Internet
+        title: 互聯網
         desc: Students send messages representing various Internet transmission methods
           using pieces of paper.
         video: C3_internet

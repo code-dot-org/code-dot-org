@@ -39,7 +39,7 @@
   "nextLevel": "Til hamingju! Þú hefur leyst þraut {puzzleNumber}.",
   "nextLevelTrophies": "Til hamingju! Þú hefur leyst þraut {puzzleNumber} og unnið {numTrophies, plural, one {bikar} other {# bikara}}.",
   "nextStage": "Til hamingju! Þú kláraðir {stageName}.",
-  "nextStageTrophies": "Til hamingju! Þú kláraðir {stageName} og vannst {numTrophies, plural, einn {a trophy} fleiri {# trophies}}.",
+  "nextStageTrophies": "Til hamingju! Þú kláraðir {stageName} og vannst {numTrophies, plural, one {a trophy} other {# trophies}}.",
   "numBlocksNeeded": "Til hamingju! Þú kláraðir þraut {puzzleNumber}. (En þú hefðir getað notað bara  {numBlocks, plural, one {1 kubb} other {# kubba}}.)",
   "numLinesOfCodeWritten": "Þú náðir að skrifa {numLines, plural, one {1 línu} other {# línur}} af kóða!",
   "play": "spila",

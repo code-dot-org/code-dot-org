@@ -8366,7 +8366,7 @@ function installDrawASquare(blockly, generator, gensym) {
     var loopVar = gensym('count');
     return [
         '// draw_a_square',
-        'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 5; ' +
+        'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 4; ' +
               loopVar + '++) {',
         '  Turtle.moveForward(' + value_length + ');',
         '  Turtle.turnRight(90);',
@@ -10750,30 +10750,68 @@ Turtle.drawTurtle = function() {
 };
 
 var turtleNumFrames = 19;
-var turtleFrame = 0;
 
-Turtle.drawDecorationAnimation = function() {
+// An x offset against the sprite edge where the decoration should be drawn,
+// along with whether it should be drawn before or after the turtle sprite itself.
+
+var decorationImageDetails = [
+  { x: 15, when: "after" },
+  { x: 26, when: "after" },
+  { x: 37, when: "after" },
+  { x: 46, when: "after" },
+  { x: 60, when: "after" },
+  { x: 65, when: "after" },
+  { x: 66, when: "after" },
+  { x: 64, when: "after" },
+  { x: 62, when: "before" },
+  { x: 55, when: "before" },
+  { x: 48, when: "before" },
+  { x: 33, when: "before" },
+  { x: 31, when: "before" },
+  { x: 22, when: "before" },
+  { x: 17, when: "before" },
+  { x: 12, when: "before" },
+  { x:  8, when: "after" }, 
+  { x: 10, when: "after" }
+];
+
+/**
+  * This is called twice, once with "before" and once with "after", referring to before or after
+  * the sprite is drawn.  For some angles it should be drawn before, and for some after.
+  */
+
+Turtle.drawDecorationAnimation = function(when) {
   if (skin.id == "elsa") {
     var index = (turtleFrame + 10) % turtleNumFrames;
-    var sourceX = Turtle.decorationAnimationImage.width * index;
-    var sourceY = 0;
-    var sourceWidth = Turtle.decorationAnimationImage.width;
-    var sourceHeight = Turtle.decorationAnimationImage.height;
-    var destWidth = sourceWidth;
-    var destHeight = sourceHeight;
-    var destX = Turtle.x - destWidth / 2 - 15;
-    var destY = Turtle.y - destHeight / 2 - 100;
 
-    Turtle.ctxDisplay.drawImage(
-      Turtle.decorationAnimationImage, 
-      Math.round(sourceX * retina), Math.round(sourceY * retina),
-      sourceWidth * retina, sourceHeight * retina, 
-      Math.round(destX * retina), Math.round(destY * retina),
-      destWidth * retina, destHeight * retina);
+    var angleIndex = Math.floor(Turtle.heading * Turtle.numberAvatarHeadings / 360);
+    if (skin.id == "anna" || skin.id == "elsa") {
+      // the rotations in the sprite sheet go in the opposite direction.
+      angleIndex = Turtle.numberAvatarHeadings - angleIndex;
 
-    //turtleFrame = (turtleFrame + 1) % turtleNumFrames;
+      // and they are 180 degrees out of phase.
+      angleIndex = (angleIndex + Turtle.numberAvatarHeadings/2) % Turtle.numberAvatarHeadings;
+    }
+
+    if (decorationImageDetails[angleIndex].when == when)
+    {
+      var sourceX = Turtle.decorationAnimationImage.width * index;
+      var sourceY = 0;
+      var sourceWidth = Turtle.decorationAnimationImage.width;
+      var sourceHeight = Turtle.decorationAnimationImage.height;
+      var destWidth = sourceWidth;
+      var destHeight = sourceHeight;
+      var destX = Turtle.x - destWidth / 2 - 15 - 15 + decorationImageDetails[angleIndex].x;
+      var destY = Turtle.y - destHeight / 2 - 100;
+
+      Turtle.ctxDisplay.drawImage(
+        Turtle.decorationAnimationImage, 
+        Math.round(sourceX * retina), Math.round(sourceY * retina),
+        sourceWidth * retina, sourceHeight * retina, 
+        Math.round(destX * retina), Math.round(destY * retina),
+        destWidth * retina, destHeight * retina);
+    }
   }
-
 };
 
 
@@ -10903,8 +10941,9 @@ Turtle.display = function() {
 
   // Draw the turtle.
   if (Turtle.visible) {
+    Turtle.drawDecorationAnimation("before");
     Turtle.drawTurtle();
-    Turtle.drawDecorationAnimation();
+    Turtle.drawDecorationAnimation("after");
   }
 };
 
@@ -12053,7 +12092,7 @@ exports.nextLevelTrophies = function(d){return "Til hamingju! Þú hefur leyst �
 
 exports.nextStage = function(d){return "Til hamingju! Þú kláraðir "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "Congratulations! You completed "+v(d,"stageName")+" and won "+p(d,"numTrophies",0,"is",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
+exports.nextStageTrophies = function(d){return "Til hamingju! Þú kláraðir "+v(d,"stageName")+" og vannst "+p(d,"numTrophies",0,"is",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
 exports.numBlocksNeeded = function(d){return "Til hamingju! Þú kláraðir þraut "+v(d,"puzzleNumber")+". (En þú hefðir getað notað bara  "+p(d,"numBlocks",0,"is",{"one":"1 kubb","other":n(d,"numBlocks")+" kubba"})+".)"};
 
@@ -12160,23 +12199,23 @@ exports.catLogic = function(d){return "Rökvísi"};
 
 exports.colourTooltip = function(d){return "Breytir litnum á penslinum."};
 
-exports.createACircle = function(d){return "create a circle"};
+exports.createACircle = function(d){return "búa til hring"};
 
-exports.createSnowflakeSquare = function(d){return "create a snowflake of type square"};
+exports.createSnowflakeSquare = function(d){return "búa til snjókorn af gerð ferningur"};
 
-exports.createSnowflakeParallelogram = function(d){return "create a snowflake of type parallelogram"};
+exports.createSnowflakeParallelogram = function(d){return "búa til snjókorn af gerð samsíðungur"};
 
-exports.createSnowflakeLine = function(d){return "create a snowflake of type line"};
+exports.createSnowflakeLine = function(d){return "búa til snjókorn af gerð lína"};
 
-exports.createSnowflakeSpiral = function(d){return "create a snowflake of type spiral"};
+exports.createSnowflakeSpiral = function(d){return "búa til snjókorn af gerð spírall"};
 
-exports.createSnowflakeFlower = function(d){return "create a snowflake of type flower"};
+exports.createSnowflakeFlower = function(d){return "búa til snjókorn af gerð blóm"};
 
-exports.createSnowflakeFractal = function(d){return "create a snowflake of type fractal"};
+exports.createSnowflakeFractal = function(d){return "búa til snjókorn af gerð brotamynd"};
 
-exports.createSnowflakeRandom = function(d){return "create a snowflake of type random"};
+exports.createSnowflakeRandom = function(d){return "búa til snjókorn af gerð handahóf"};
 
-exports.createASnowflakeBranch = function(d){return "create a snowflake branch"};
+exports.createASnowflakeBranch = function(d){return "búa til grein snjókorna"};
 
 exports.degrees = function(d){return "gráður"};
 
@@ -12216,7 +12255,7 @@ exports.drawUpperWave = function(d){return "teikna efri bylgju"};
 
 exports.drawLowerWave = function(d){return "teikna neðri bylgju"};
 
-exports.drawStamp = function(d){return "draw stamp"};
+exports.drawStamp = function(d){return "teikna stimpil"};
 
 exports.heightParameter = function(d){return "hæð"};
 

@@ -9660,7 +9660,7 @@ exports.nextStage = function(d){return "Tahniah! Anda tamatkan "+v(d,"stageName"
 
 exports.nextStageTrophies = function(d){return "Tahniah! Anda telah menyelesaikan "+v(d,"stageName")+" dan memenangi "+p(d,"numTrophies",0,"ms",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
-exports.numBlocksNeeded = function(d){return "Congratulations! You completed Puzzle "+v(d,"puzzleNumber")+". (However, you could have used only "+p(d,"numBlocks",0,"ms",{"one":"1 block","other":n(d,"numBlocks")+" blocks"})+".)"};
+exports.numBlocksNeeded = function(d){return "Tahniah! Anda melengkapkan Puzzle "+v(d,"puzzleNumber")+". (Walau bagaimanapun, anda hanya boleh menggunakan "+p(d,"numBlocks",0,"ms",{"one":"1 block","other":n(d,"numBlocks")+" blocks"})+".)"};
 
 exports.numLinesOfCodeWritten = function(d){return "Anda baru sahaja menulis "+p(d,"numLines",0,"ms",{"one":"1 line","other":n(d,"numLines")+" lines"})+" kod!"};
 

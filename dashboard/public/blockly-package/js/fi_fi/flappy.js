@@ -9656,9 +9656,9 @@ exports.nextLevel = function(d){return "Onneksi olkoon! Olet suorittanut "+v(d,"
 
 exports.nextLevelTrophies = function(d){return "Onneksi olkoon! Olet suorittanut "+v(d,"puzzleNumber")+". pulman ja voittanut "+p(d,"numTrophies",0,"fi",{"one":"pokaalin","other":n(d,"numTrophies")+" pokaalia"})+"."};
 
-exports.nextStage = function(d){return "Onnittelut! Olet suorittanut "+v(d,"stageName")+"."};
+exports.nextStage = function(d){return "Onnittelut! Olet suorittanut tason "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "Onnittelut! Olet suorittanut "+v(d,"stageName")+" ja voitit "+p(d,"numTrophies",0,"fi",{"one":"pokaalin","other":n(d,"numTrophies")+" pokaalia"})+"."};
+exports.nextStageTrophies = function(d){return "Onnittelut! Olet suorittanut tason "+v(d,"stageName")+" ja voitit "+p(d,"numTrophies",0,"fi",{"one":"pokaalin","other":n(d,"numTrophies")+" pokaalia"})+"."};
 
 exports.numBlocksNeeded = function(d){return "Onneksi olkoon! Olet suorittanut "+v(d,"puzzleNumber")+". pulman (olisit tosin voinut käyttää vain "+p(d,"numBlocks",0,"fi",{"one":"yhden lohkon","other":n(d,"numBlocks")+" lohkoa"})+")."};
 
@@ -9734,7 +9734,7 @@ exports.when = function(d){return "kun"};
 
 exports.whenRun = function(d){return "kun suoritetaan"};
 
-exports.tryHOC = function(d){return "Kokeile koodituntia"};
+exports.tryHOC = function(d){return "Kokeile koodaustuntia"};
 
 exports.signup = function(d){return "Rekisteröidy johdantokurssille"};
 
@@ -9777,7 +9777,7 @@ exports.flappySpecificFail = function(d){return "Koodisi näyttää hyvältä - 
 
 exports.incrementPlayerScore = function(d){return "anna piste"};
 
-exports.incrementPlayerScoreTooltip = function(d){return "Lisää yksi tämänhetkisen pelaajan pisteisiin."};
+exports.incrementPlayerScoreTooltip = function(d){return "Lisää yksi piste pelaajan pisteisiin."};
 
 exports.nextLevel = function(d){return "Onneksi olkoon! Olet suorittanut tämän pulman."};
 
@@ -9787,27 +9787,27 @@ exports.numBlocksNeeded = function(d){return "Pulman voi ratkaista %1 lohkolla."
 
 exports.playSoundRandom = function(d){return "soita satunnainen ääni"};
 
-exports.playSoundBounce = function(d){return "soita pomppimisen ääni"};
+exports.playSoundBounce = function(d){return "soita pompun ääni"};
 
-exports.playSoundCrunch = function(d){return "soita räsähdyksen ääni"};
+exports.playSoundCrunch = function(d){return "soita rusahduksen ääni"};
 
 exports.playSoundDie = function(d){return "soita surullinen ääni"};
 
-exports.playSoundHit = function(d){return "soita murskautumisen ääni"};
+exports.playSoundHit = function(d){return "soita mäiskähdyksen ääni"};
 
 exports.playSoundPoint = function(d){return "soita pisteen saamisen ääni"};
 
-exports.playSoundSwoosh = function(d){return "soita suhinan ääni"};
+exports.playSoundSwoosh = function(d){return "soita humahduksen ääni"};
 
 exports.playSoundWing = function(d){return "soita siiven ääni"};
 
-exports.playSoundJet = function(d){return "soita suihkukoneen ääni"};
+exports.playSoundJet = function(d){return "soita suihkumoottorin ääni"};
 
-exports.playSoundCrash = function(d){return "soita rysähdyksen ääni"};
+exports.playSoundCrash = function(d){return "soita törmäyksen ääni"};
 
 exports.playSoundJingle = function(d){return "soita kilisevä ääni"};
 
-exports.playSoundSplash = function(d){return "soita loiskahduksen ääni"};
+exports.playSoundSplash = function(d){return "soita läiskähdyksen ääni"};
 
 exports.playSoundLaser = function(d){return "soita laserin ääni"};
 
@@ -9817,21 +9817,21 @@ exports.reinfFeedbackMsg = function(d){return "Voit painaa \"Yritä uudelleen\" 
 
 exports.scoreText = function(d){return "Pisteet: "+v(d,"playerScore")};
 
-exports.setBackground = function(d){return "aseta näyttämö"};
+exports.setBackground = function(d){return "aseta tausta"};
 
-exports.setBackgroundRandom = function(d){return "aseta näyttämö Random"};
+exports.setBackgroundRandom = function(d){return "aseta tausta Satunnainen"};
 
-exports.setBackgroundFlappy = function(d){return "aseta näyttämö City(day)"};
+exports.setBackgroundFlappy = function(d){return "aseta tausta Kaupunki (päivä)"};
 
-exports.setBackgroundNight = function(d){return "aseta näyttämö City (night)"};
+exports.setBackgroundNight = function(d){return "aseta tausta Kaupunki (yö)"};
 
-exports.setBackgroundSciFi = function(d){return "aseta näyttämö Sci-Fi"};
+exports.setBackgroundSciFi = function(d){return "aseta tausta Sci-Fi"};
 
-exports.setBackgroundUnderwater = function(d){return "aseta näyttämö Underwater"};
+exports.setBackgroundUnderwater = function(d){return "aseta tausta Vedenalainen"};
 
-exports.setBackgroundCave = function(d){return "aseta näyttämö Cave"};
+exports.setBackgroundCave = function(d){return "aseta tausta Luola"};
 
-exports.setBackgroundSanta = function(d){return "aseta näyttämö Santa"};
+exports.setBackgroundSanta = function(d){return "aseta tausta Joulupukki"};
 
 exports.setBackgroundTooltip = function(d){return "Aseta taustakuva"};
 
@@ -9861,7 +9861,7 @@ exports.setGravityHigh = function(d){return "aseta painovoima korkeaksi"};
 
 exports.setGravityVeryHigh = function(d){return "aseta painovoima hyvin korkeaksi"};
 
-exports.setGravityTooltip = function(d){return "Aseta painovoiman asteet"};
+exports.setGravityTooltip = function(d){return "Aseta tason painovoima"};
 
 exports.setGround = function(d){return "aseta pohja"};
 
@@ -9879,7 +9879,7 @@ exports.setGroundSanta = function(d){return "aseta pohja Joulu"};
 
 exports.setGroundLava = function(d){return "aseta pohja Laava"};
 
-exports.setGroundTooltip = function(d){return "Asettaa maaperässä käytettävän kuvan"};
+exports.setGroundTooltip = function(d){return "Asettaa pohjassa käytettävän kuvan"};
 
 exports.setObstacle = function(d){return "aseta este"};
 
@@ -9947,13 +9947,13 @@ exports.shareGame = function(d){return "Jaa pelisi:"};
 
 exports.soundRandom = function(d){return "satunnainen"};
 
-exports.soundBounce = function(d){return "hyppää"};
+exports.soundBounce = function(d){return "pomppu"};
 
-exports.soundCrunch = function(d){return "murskaus"};
+exports.soundCrunch = function(d){return "rusahdus"};
 
 exports.soundDie = function(d){return "surullinen"};
 
-exports.soundHit = function(d){return "rusahdus"};
+exports.soundHit = function(d){return "mäiskähdys"};
 
 exports.soundPoint = function(d){return "piste"};
 
@@ -9963,7 +9963,7 @@ exports.soundWing = function(d){return "siipi"};
 
 exports.soundJet = function(d){return "suihkumoottori"};
 
-exports.soundCrash = function(d){return "rysähdys"};
+exports.soundCrash = function(d){return "törmäys"};
 
 exports.soundJingle = function(d){return "kilinä"};
 
@@ -9987,9 +9987,9 @@ exports.whenClick = function(d){return "klikattaessa"};
 
 exports.whenClickTooltip = function(d){return "Suorita alla olevat toiminnot kun hiirtä klikataan."};
 
-exports.whenCollideGround = function(d){return "kun osuu maahan"};
+exports.whenCollideGround = function(d){return "kun osuu pohjaan"};
 
-exports.whenCollideGroundTooltip = function(d){return "Suorita alla olevat toiminnot kun Flappy osuu maahan."};
+exports.whenCollideGroundTooltip = function(d){return "Suorita alla olevat toiminnot kun Flappy osuu pohjaan."};
 
 exports.whenCollideObstacle = function(d){return "kun osuu esteeseen"};
 

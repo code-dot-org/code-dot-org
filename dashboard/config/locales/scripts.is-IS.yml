@@ -152,11 +152,11 @@
           Unit 1: 1. eining
           Unit 2: 2. eining
           Ninja Cat and the Coordinate Plane: Ninjuköttur og hnitakerfið
-          'Calc: Circles of Evaluation': 'Calc: Circles of Evaluation'
+          'Calc: Circles of Evaluation': 'Reiknir: Matshringir'
           'Artist: Strings and Images': 'Listamaðurinn: Strengir og myndir'
-          Contracts: Contracts
-          'Artist: Writing Contracts': 'Artist: Writing Contracts'
-          'Calc: Defining Variables': 'Calc: Defining Variables'
+          Contracts: Samningar
+          'Artist: Writing Contracts': 'Listamaður: Ritun samninga'
+          'Calc: Defining Variables': 'Reiknir: Skilgreining breytna'
           'Play Lab: Defining Variables': 'Leikjasmiðjan: Skilgreining á breytum'
           The Design Recipe: Hönnunaruppskriftin
           'Artist: Defining Functions': 'Listamaðurinn: Skilgreining á föllum'
@@ -165,9 +165,9 @@
           'Play Lab: Animation': 'Leikjasmiðjan: Hreyfing'
           Booleans: Boolean gildi
           'Play Lab: Booleans': 'Leikjasmiðjan: Boolean gildi'
-          'Calc: Boolean Operators': 'Calc: Boolean Operators'
+          'Calc: Boolean Operators': 'Reiknir: Boolean virkjar'
           'Play Lab: Boolean Operators': 'Leikjasmiðjan: Booelan aðgerðir'
-          Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
+          Conditionals and Piecewise Functions: Skilyrði og Piecewise föll
           'Artist: Conditionals': 'Listamaðurinn: Skilyrði'
           Collision Detection and the Distance Formula: Skynjun árekstra og fjarlægðarformúlan
           'Play Lab: Collision Detection': 'Leikjasmiðjan: Skynjun árekstra'
@@ -183,26 +183,26 @@
           description_short: Teiknaðu flottar myndir og mynstur með listamanninum!
         scrat:
           title: Scrat
-          description_short: Scrat short description.
-          description: Scrat long description
+          description_short: Scrat stutt lýsing.
+          description: Scrat löng lýsing
           'Maze: Sequence': 'Völundarhús: Röð'
         hourofcode:
           Maze: Völundarhús
           title: Klukkustund kóðunar
-          description_short: Try the basics of computer science with characters from
-            Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
-          description: Try the basics of computer science with characters from Angry
-            Birds, Plants vs. Zombies, and Scrat from Ice Age!
+          description_short: Prófaðu undirstöðuatriði í tölvunarfræði með persónum
+            úr Angry Birds, Plants vs. Zombies og Scrat úr Ísaldarmyndunum!
+          description: Prófaðu undirstöðuatriði í tölvunarfræði með persónum úr Angry
+            Birds, Plants vs. Zombies og Scrat úr Ísaldarmyndunum!
         frozen:
           title: Frozen
-          description_short: Join the Royal Sisters of Arendelle, Anna and Elsa, as
-            they explore the magic and beauty of ice. You will write code to create
-            snowflakes and patterns as you ice-skate and make a winter wonderland
-            that you can then share with your friends!
-          description: Join the Royal Sisters of Arendelle, Anna and Elsa, as they
-            explore the magic and beauty of ice. You will write code to create snowflakes
-            and patterns as you ice-skate and make a winter wonderland that you can
-            then share with your friends!
+          description_short: Vertu með konunglegu systrunum Arendelle, Önnu og Elsu
+            þegar þær kanna töfra og fegurð íss. Þú munt skrifa kóða til að búa til
+            snjókorn og mynstur um leið og þú skautar og býrð til vetrarveröld sem
+            þú getur svo deilt með vinum þínum!
+          description: Vertu með konunglegu systrunum Arendelle, Önnu og Elsu þegar
+            þær kanna töfra og fegurð íss. Þú munt skrifa kóða til að búa til snjókorn
+            og mynstur um leið og þú skautar og býrð til vetrarveröld sem þú getur
+            svo deilt með vinum þínum!
           Artist: Listamaður
         course4:
           description_short: Nemendur sem taka Námskeið 4 ættu að hafa lokið námskeiðum
@@ -224,19 +224,20 @@
           'Play Lab: For Loops': 'Leikjasmiðja: For lykkjur'
           'Artist: Functions': 'Listamaður: Föll'
           'Artist: Functions with Paraqmeters': 'Listamaður: Föll með stikum'
-          'Unplugged: Tangrams': 'Unplugged: Tangrams'
+          'Unplugged: Tangrams': 'Verkefni án tölvu: Tangram'
           Artist: Listamaður
           Bee: Býflugan
-          'Unplugged: Envelope Variables': 'Unplugged: Envelope Variables'
-          'Unplugged: Madlibs': 'Unplugged: Madlibs'
-          'Unplugged: For Loop Fun': 'Unplugged: For Loop Fun'
-          'Unplugged: Songwriting with Parameters': 'Unplugged: Songwriting with Parameters'
+          'Unplugged: Envelope Variables': 'Verkefni án tölvu: Umslagabreytur'
+          'Unplugged: Madlibs': 'Verkefni án tölvu: Fyllt í eyður'
+          'Unplugged: For Loop Fun': 'Verkefni án tölvu: Fyndnar For lykkjur'
+          'Unplugged: Songwriting with Parameters': 'Verkefni án tölvu: Lagasmíð með
+            stikum'
           'Artist: Functions with Parameters': 'Listamaðurinn: Föllum með stikum'
           'Unplugged: Binary': 'Verkefni án tölvu: Tvíundir'
           Bee Binary: 'Býflugan: Tvíundir'
           Farmer Binary: 'Bóndinn: Tvíundir'
           Maze and Bee: Völundarhús og býfluga
-          Artist Binary: Artist Binary
+          Artist Binary: 'Listamaður: Tvíundir'
         Course4pre:
           description_short: Stutt yfirferð á hugtökum fyrir nemendur sem hafa ekki
             farið á Námskeið 2 og 3.

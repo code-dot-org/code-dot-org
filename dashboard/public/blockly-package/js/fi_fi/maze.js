@@ -13923,9 +13923,9 @@ exports.nextLevel = function(d){return "Onneksi olkoon! Olet suorittanut "+v(d,"
 
 exports.nextLevelTrophies = function(d){return "Onneksi olkoon! Olet suorittanut "+v(d,"puzzleNumber")+". pulman ja voittanut "+p(d,"numTrophies",0,"fi",{"one":"pokaalin","other":n(d,"numTrophies")+" pokaalia"})+"."};
 
-exports.nextStage = function(d){return "Onnittelut! Olet suorittanut "+v(d,"stageName")+"."};
+exports.nextStage = function(d){return "Onnittelut! Olet suorittanut tason "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "Onnittelut! Olet suorittanut "+v(d,"stageName")+" ja voitit "+p(d,"numTrophies",0,"fi",{"one":"pokaalin","other":n(d,"numTrophies")+" pokaalia"})+"."};
+exports.nextStageTrophies = function(d){return "Onnittelut! Olet suorittanut tason "+v(d,"stageName")+" ja voitit "+p(d,"numTrophies",0,"fi",{"one":"pokaalin","other":n(d,"numTrophies")+" pokaalia"})+"."};
 
 exports.numBlocksNeeded = function(d){return "Onneksi olkoon! Olet suorittanut "+v(d,"puzzleNumber")+". pulman (olisit tosin voinut käyttää vain "+p(d,"numBlocks",0,"fi",{"one":"yhden lohkon","other":n(d,"numBlocks")+" lohkoa"})+")."};
 
@@ -14001,7 +14001,7 @@ exports.when = function(d){return "kun"};
 
 exports.whenRun = function(d){return "kun suoritetaan"};
 
-exports.tryHOC = function(d){return "Kokeile koodituntia"};
+exports.tryHOC = function(d){return "Kokeile koodaustuntia"};
 
 exports.signup = function(d){return "Rekisteröidy johdantokurssille"};
 
@@ -14050,7 +14050,7 @@ exports.finalLevel = function(d){return "Onneksi olkoon! Olet suorittanut viimei
 
 exports.flowerEmptyError = function(d){return "Kukkassa jonka päällä olet ei ole enään mettä."};
 
-exports.get = function(d){return "hae"};
+exports.get = function(d){return "kerää"};
 
 exports.heightParameter = function(d){return "korkeus"};
 
@@ -14082,7 +14082,7 @@ exports.insufficientHoney = function(d){return "Käytät oikeita lohkoja, mutta 
 
 exports.insufficientNectar = function(d){return "Käytät oikeita lohkoja, mutta sinun täytyy kerätä oikea määrä nektariiniä."};
 
-exports.make = function(d){return "tehdä"};
+exports.make = function(d){return "tee"};
 
 exports.moveBackward = function(d){return "Siirry taaksepäin"};
 
@@ -14100,11 +14100,11 @@ exports.moveTooltip = function(d){return "Liikuta minua eteen- tai taaksepäin y
 
 exports.moveWestTooltip = function(d){return "Siirrä minua yksi askel länteen."};
 
-exports.nectar = function(d){return "hae mesi"};
+exports.nectar = function(d){return "kerää mesi"};
 
 exports.nectarRemaining = function(d){return "mesi"};
 
-exports.nectarTooltip = function(d){return "Hae mesi kukasta"};
+exports.nectarTooltip = function(d){return "Kerää mesi kukasta"};
 
 exports.nextLevel = function(d){return "Onneksi olkoon! Olet suorittanut tämän pulman."};
 

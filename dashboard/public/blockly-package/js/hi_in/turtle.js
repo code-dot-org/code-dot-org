@@ -8366,7 +8366,7 @@ function installDrawASquare(blockly, generator, gensym) {
     var loopVar = gensym('count');
     return [
         '// draw_a_square',
-        'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 5; ' +
+        'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 4; ' +
               loopVar + '++) {',
         '  Turtle.moveForward(' + value_length + ');',
         '  Turtle.turnRight(90);',
@@ -10750,30 +10750,68 @@ Turtle.drawTurtle = function() {
 };
 
 var turtleNumFrames = 19;
-var turtleFrame = 0;
 
-Turtle.drawDecorationAnimation = function() {
+// An x offset against the sprite edge where the decoration should be drawn,
+// along with whether it should be drawn before or after the turtle sprite itself.
+
+var decorationImageDetails = [
+  { x: 15, when: "after" },
+  { x: 26, when: "after" },
+  { x: 37, when: "after" },
+  { x: 46, when: "after" },
+  { x: 60, when: "after" },
+  { x: 65, when: "after" },
+  { x: 66, when: "after" },
+  { x: 64, when: "after" },
+  { x: 62, when: "before" },
+  { x: 55, when: "before" },
+  { x: 48, when: "before" },
+  { x: 33, when: "before" },
+  { x: 31, when: "before" },
+  { x: 22, when: "before" },
+  { x: 17, when: "before" },
+  { x: 12, when: "before" },
+  { x:  8, when: "after" }, 
+  { x: 10, when: "after" }
+];
+
+/**
+  * This is called twice, once with "before" and once with "after", referring to before or after
+  * the sprite is drawn.  For some angles it should be drawn before, and for some after.
+  */
+
+Turtle.drawDecorationAnimation = function(when) {
   if (skin.id == "elsa") {
     var index = (turtleFrame + 10) % turtleNumFrames;
-    var sourceX = Turtle.decorationAnimationImage.width * index;
-    var sourceY = 0;
-    var sourceWidth = Turtle.decorationAnimationImage.width;
-    var sourceHeight = Turtle.decorationAnimationImage.height;
-    var destWidth = sourceWidth;
-    var destHeight = sourceHeight;
-    var destX = Turtle.x - destWidth / 2 - 15;
-    var destY = Turtle.y - destHeight / 2 - 100;
 
-    Turtle.ctxDisplay.drawImage(
-      Turtle.decorationAnimationImage, 
-      Math.round(sourceX * retina), Math.round(sourceY * retina),
-      sourceWidth * retina, sourceHeight * retina, 
-      Math.round(destX * retina), Math.round(destY * retina),
-      destWidth * retina, destHeight * retina);
+    var angleIndex = Math.floor(Turtle.heading * Turtle.numberAvatarHeadings / 360);
+    if (skin.id == "anna" || skin.id == "elsa") {
+      // the rotations in the sprite sheet go in the opposite direction.
+      angleIndex = Turtle.numberAvatarHeadings - angleIndex;
 
-    //turtleFrame = (turtleFrame + 1) % turtleNumFrames;
+      // and they are 180 degrees out of phase.
+      angleIndex = (angleIndex + Turtle.numberAvatarHeadings/2) % Turtle.numberAvatarHeadings;
+    }
+
+    if (decorationImageDetails[angleIndex].when == when)
+    {
+      var sourceX = Turtle.decorationAnimationImage.width * index;
+      var sourceY = 0;
+      var sourceWidth = Turtle.decorationAnimationImage.width;
+      var sourceHeight = Turtle.decorationAnimationImage.height;
+      var destWidth = sourceWidth;
+      var destHeight = sourceHeight;
+      var destX = Turtle.x - destWidth / 2 - 15 - 15 + decorationImageDetails[angleIndex].x;
+      var destY = Turtle.y - destHeight / 2 - 100;
+
+      Turtle.ctxDisplay.drawImage(
+        Turtle.decorationAnimationImage, 
+        Math.round(sourceX * retina), Math.round(sourceY * retina),
+        sourceWidth * retina, sourceHeight * retina, 
+        Math.round(destX * retina), Math.round(destY * retina),
+        destWidth * retina, destHeight * retina);
+    }
   }
-
 };
 
 
@@ -10903,8 +10941,9 @@ Turtle.display = function() {
 
   // Draw the turtle.
   if (Turtle.visible) {
+    Turtle.drawDecorationAnimation("before");
     Turtle.drawTurtle();
-    Turtle.drawDecorationAnimation();
+    Turtle.drawDecorationAnimation("after");
   }
 };
 
@@ -12025,7 +12064,7 @@ exports.extraTopBlocks = function(d){return "You have extra blocks that aren't a
 
 exports.finalStage = function(d){return "बधाई हो! आपने अंतिम चरण पूरा कर लिया है।"};
 
-exports.finalStageTrophies = function(d){return "Congratulations! You have completed the final stage and won "+p(d,"numTrophies",0,"hi",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
+exports.finalStageTrophies = function(d){return "बधाइयाँ! आप अंतिम चरण पूरा कर लिया है और जीता "+p(d,"numTrophies",0,"hi",{"one":"एक ट्राफी","other":n(d,"numTrophies")+" ट्राफियां"})+"।"};
 
 exports.finish = function(d){return "Finish"};
 

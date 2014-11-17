@@ -8153,7 +8153,7 @@ exports.nextLevelTrophies = function(d){return "祝贺你 ！完成了谜题 "+v
 
 exports.nextStage = function(d){return "祝贺你 ！您完成了 "+v(d,"stageName")+"。"};
 
-exports.nextStageTrophies = function(d){return "Congratulations! You completed "+v(d,"stageName")+" and won "+p(d,"numTrophies",0,"zh",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
+exports.nextStageTrophies = function(d){return "祝贺你 ！您完成 "+v(d,"stageName")+"，赢取了 "+p(d,"numTrophies",0,"zh",{"one":"一个奖杯","other":n(d,"numTrophies")+" 很多奖杯"})+"。"};
 
 exports.numBlocksNeeded = function(d){return "祝贺你 ！完成了谜题 "+v(d,"puzzleNumber")+"。(然而，你其实可以只使用"+p(d,"numBlocks",0,"zh",{"one":"1个模块","other":n(d,"numBlocks")+" 模块"})+"。)"};
 

@@ -13897,7 +13897,7 @@ exports.extraTopBlocks = function(d){return "You have extra blocks that aren't a
 
 exports.finalStage = function(d){return "बधाई हो! आपने अंतिम चरण पूरा कर लिया है।"};
 
-exports.finalStageTrophies = function(d){return "Congratulations! You have completed the final stage and won "+p(d,"numTrophies",0,"hi",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
+exports.finalStageTrophies = function(d){return "बधाइयाँ! आप अंतिम चरण पूरा कर लिया है और जीता "+p(d,"numTrophies",0,"hi",{"one":"एक ट्राफी","other":n(d,"numTrophies")+" ट्राफियां"})+"।"};
 
 exports.finish = function(d){return "Finish"};
 

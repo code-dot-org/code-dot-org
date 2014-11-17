@@ -19965,7 +19965,7 @@ exports.nextLevelTrophies = function(d){return "축하합니다! "+v(d,"puzzleNu
 
 exports.nextStage = function(d){return "축하드립니다! "+v(d,"stageName")+"을(를) 완료하셨습니다."};
 
-exports.nextStageTrophies = function(d){return "Congratulations! You completed "+v(d,"stageName")+" and won "+p(d,"numTrophies",0,"ko",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
+exports.nextStageTrophies = function(d){return "축하합니다. "+v(d,"stageName")+" 를 완료하였습니다. "+p(d,"numTrophies",0,"ko",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
 exports.numBlocksNeeded = function(d){return "축하합니다! "+v(d,"puzzleNumber")+" 번 퍼즐을 해결했습니다. (하지만, "+p(d,"numBlocks",0,"ko",{"one":"1 block","other":n(d,"numBlocks")+" blocks"})+" 만 사용해야 합니다.)"};
 
