@@ -159,8 +159,6 @@ class ActivitiesController < ApplicationController
   end
 
   def track_progress_in_session
-    # TODO: this doesn't work for multiple scripts, especially if scripts share levels
-
     # hash of level_id => test_result
     test_result = params[:testResult].to_i
     session[:progress] ||= {}
@@ -177,6 +175,12 @@ class ActivitiesController < ApplicationController
     end
 
     @new_level_completed = true if !Activity.passing?(old_result) && Activity.passing?(test_result)
+
+    # track scripts
+    if @script_level.try(:script).try(:id)
+      session[:scripts] ||= []
+      session[:scripts] = session[:scripts].unshift(@script_level.script_id).uniq
+    end
   end
 
   def trophy_check(user)
