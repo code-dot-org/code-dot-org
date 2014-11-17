@@ -75,12 +75,9 @@ Blockly.Blocks.functional_parameters_get = {
     return container;
   },
   domToMutation: function(xmlElement) {
-    this.arguments_ = [];
     for (var x = 0, childNode; childNode = xmlElement.childNodes[x]; x++) {
       var nodeName = childNode.nodeName.toLowerCase();
-      if (nodeName === 'arg') {
-        this.arguments_.push(childNode.getAttribute('name'));
-      } else if (nodeName === 'description') {
+      if (nodeName === 'description') {
         this.description_ = childNode.innerHTML;
       } else if (nodeName === 'outputtype') {
         this.outputType_ = childNode.innerHTML;
