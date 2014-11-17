@@ -135,7 +135,7 @@ elsif Rails.env.test?
   $options.dashboard_db_access = true if $options.dashboard_domain =~ /test/
 end
 
-Parallel.each($browsers, :in_threads => $options.parallel_limit) do |browser|
+Parallel.map($browsers, :in_processes => $options.parallel_limit) do |browser|
   browser_name = browser['name'] || 'UnknownBrowser'
   test_start_time = Time.now
 
@@ -157,7 +157,7 @@ Parallel.each($browsers, :in_threads => $options.parallel_limit) do |browser|
   end
 
   HipChat.log "Testing <b>dashboard</b> UI with <b>#{browser_name}</b>..."
-  puts "Starting UI tests for #{browser_name}"
+  print "Starting UI tests for #{browser_name}\n"
 
   ENV['SELENIUM_BROWSER'] = browser['browser']
   ENV['SELENIUM_VERSION'] = browser['browser_version']
@@ -186,6 +186,7 @@ Parallel.each($browsers, :in_threads => $options.parallel_limit) do |browser|
   arguments += " -S" # strict mode, so that we fail on undefined steps
   arguments += " -f html -o #{browser['name']}_output.html" if $options.html
 
+  succeeded = false
   Open3.popen2("cucumber #{arguments}") do |stdin, stdout, wait_thr|
     stdin.close
     return_value = stdout.read
@@ -193,12 +194,10 @@ Parallel.each($browsers, :in_threads => $options.parallel_limit) do |browser|
 
     $lock.synchronize do
       if succeeded
-        $suite_success_count += 1
         log_success Time.now
         log_success browser.to_yaml
         log_success return_value
       else
-        $suite_fail_count += 1
         log_error Time.now
         log_error browser.to_yaml
         log_error return_value
@@ -218,9 +217,10 @@ Parallel.each($browsers, :in_threads => $options.parallel_limit) do |browser|
       HipChat.developers message, color:'red' if CDO.hip_chat_logging
     end
     result_string = succeeded ? "succeeded".green : "failed".red
-    puts "UI tests for #{browser_name} #{result_string} (#{elapsed})"
+    print "UI tests for #{browser_name} #{result_string} (#{elapsed})\n"
   end
-end
+  succeeded
+end.each { |result| result ? $suite_success_count += 1 : $suite_fail_count += 1 }
 
 $logfile.close
 $errfile.close
