@@ -338,32 +338,32 @@
   dashboard_sections_password_account_creation: Текстовый пароль, созданный учеником
   dashboard_sections_login_type_explanation: This table helps explain which of these
     login types, <b>picture, word, or email</b>, you'll want to choose for a section.
-  dashboard_faq: Frequently Asked Questions
+  dashboard_faq: ЧАсто задаваемые ВОпросы
   code_hoc_coming: The Hour of Code is coming - December 8-14!
   code_sign_up: Sign up to participate during CS Education Week
   learn_more: Подробнее
   carousel_heading_international: Обучающее руководство на Вашем языке
-  carousel_heading_beginners: Tutorials for Beginners
+  carousel_heading_beginners: Учебники для начинающих
   carousel_heading_javascript: Tutorials that teach Javascript
   carousel_heading_unplugged: No device or internet? Try 'unplugged' computer science
-  carousel_heading_devices: Tutorial apps for phones and tablets
+  carousel_heading_devices: Учебник приложений для телефонов и планшетов
   carousel_heading_languages: Tutorials in other programming languages
   carousel_heading_apps_games: Make your own apps or games
-  carousel_heading_university: University courses online
+  carousel_heading_university: Университетские курсы онлайн
   carousel_heading_webpages: Learn to make web pages
   carousel_heading_robots: Learn to program with robots
   carousel_heading_ide: Platforms popular among teachers
   educator_notes: Educator Notes
   more_resources_educators: More resources for teachers and educators
   participants: participants
-  teachers_notes: Teacher's Notes
+  teachers_notes: Заметки учителя
   previous: Previous
   next: Next
   older_systems: Tutorials that work on older systems
   older_systems_subheading: These should work on older Web browsers. To access all
     tutorials, upgrade to a <a href="http://browsehappy.com/" target="_blank">modern
     Web browser.</a>
-  mobile_devices: Tutorials for mobile devices
+  mobile_devices: Учебники для мобильных устройств
   codeorg_name: Написать первую компьютерную программу
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Введение в JavaScript
@@ -395,12 +395,12 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Rock, Paper, Scissors
-  codeorg_gradelevel: Ages 4-104
+  codeorg_gradelevel: Возраст 4-104
   thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: Middle school +
   khanes_gradelevel: Middle school +
-  tynker_gradelevel: Ages 5-13
-  scratch_gradelevel: Ages 8+
+  tynker_gradelevel: Возраст 5-13
+  scratch_gradelevel: Возраст 8 +
   lightbot_gradelevel: Для любого возраста
   thinkersmith_gradelevel: Для любого возраста
   condcards_gradelevel: Ages 8-12
@@ -410,22 +410,22 @@
   codecombat_gradelevel: Middle school +
   codeavengers_gradelevel: Middle school +
   processing_gradelevel: Старшие классы
-  robomind_gradelevel: Ages 8-13
+  robomind_gradelevel: Возраст 8-13
   groklearning_gradelevel: Middle school +
   quorum_gradelevel: Middle school +
   codespark_gradelevel: Младшие классы
   kodable_gradelevel: Младшие классы
-  tynkerapp_gradelevel: Ages 5-13
+  tynkerapp_gradelevel: Возраст 5-13
   hopscotch_gradelevel: Middle school +
-  robomindnl_gradelevel: Ages 8-13
+  robomindnl_gradelevel: Возраст 8-13
   bitsbox_gradelevel: Младшие классы
   makegameswithus_gradelevel: Старшие классы
   touchdevelop_gradelevel: Старшие классы
   appinventor_gradelevel: Middle school +
   blockly_gradelevel: Для любого возраста
-  thinkersmith2_gradelevel: Ages 8+
-  kodableunplugged_gradelevel: Ages 8-13
-  projguts_gradelevel: Ages 10-13
+  thinkersmith2_gradelevel: Возраст 8 +
+  kodableunplugged_gradelevel: Возраст 8-13
+  projguts_gradelevel: Возраст 10-13
   codeorg_platformtext: Learn the basic concepts of Computer Science with drag and
     drop programming. This is a game-like, self-directed tutorial starring video lectures
     by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops,
@@ -444,9 +444,7 @@
     home, and Biff the spaceman reach his moon base. Build the Space Zombies game
     or create Math Art using our fun and easy visual approach to programming.  The
     session can be teacher facilitated or self-paced.
-  scratch_platformtext: With Scratch, you can code your own interactive games, stories,
-    animations, and more. In this activity, you'll create an interactive holiday card
-    that you can share with friends and family.
+  scratch_platformtext: ВСЕ браузеры
   lightbot_platformtext: Learn core programming logic, starting from super-basic programming,
     for ages 4+, on iOS or Android (or Web browser) . Learn how to sequence commands,
     identify patterns, use procedures, and utilize loops!
@@ -691,7 +689,7 @@
   edx_beyond_name: Harvard CS50 class
   coursera_beyond_name: Stanford CS 101 class
   udacity_beyond_name: CS 101
-  teachingtree_beyond_name: University courses online
+  teachingtree_beyond_name: Университетские курсы онлайн
   kodu_beyond_name: Kodu
   cargobot_beyond_name: Cargobot
   kidsruby_beyond_name: KidsRuby
@@ -706,29 +704,29 @@
   processing_beyond_name: Program with Processing
   alice_beyond_name: Alice
   sphero_beyond_name: SPRK
-  codeorg_beyond_gradelevel: Ages 4-104
+  codeorg_beyond_gradelevel: Возраст 4-104
   khan_beyond_gradelevel: Middle school +
-  tynker_beyond_gradelevel: Ages 5-13
-  scratch_beyond_gradelevel: Ages 8+
+  tynker_beyond_gradelevel: Возраст 5-13
+  scratch_beyond_gradelevel: Возраст 8 +
   lightbot_beyond_gradelevel: Для любого возраста
   codecademy_beyond_gradelevel: Старшие классы
   kodable_beyond_gradelevel: Младшие классы
   hopscotch_beyond_gradelevel: Middle school +
   groklearning_beyond_gradelevel: Middle school +
   hacketyhack_beyond_gradelevel: Старшие классы
-  robomind_beyond_gradelevel: Ages 8-13
+  robomind_beyond_gradelevel: Возраст 8-13
   makegameswithus_beyond_gradelevel: Старшие классы
   appinventor_beyond_gradelevel: Middle school +
   touchdevelop_beyond_gradelevel: Старшие классы
   codehs_beyond_gradelevel: Старшие классы
   udemy_beyond_gradelevel: High school +
   lynda_beyond_gradelevel: High school +
-  edx_beyond_gradelevel: University
-  coursera_beyond_gradelevel: University
-  udacity_beyond_gradelevel: University
-  teachingtree_beyond_gradelevel: University
-  kodu_beyond_gradelevel: Ages 8+
-  cargobot_beyond_gradelevel: Ages 8+
+  edx_beyond_gradelevel: Университет
+  coursera_beyond_gradelevel: Университет
+  udacity_beyond_gradelevel: Университет
+  teachingtree_beyond_gradelevel: Университет
+  kodu_beyond_gradelevel: Возраст 8 +
+  cargobot_beyond_gradelevel: Возраст 8 +
   kidsruby_beyond_gradelevel: Возраст 12+
   w3schools_beyond_gradelevel: Возраст 12+
   codeavengers_beyond_gradelevel: Middle school +
@@ -736,15 +734,15 @@
   codecombat_beyond_gradelevel: Middle school +
   codea_beyond_gradelevel: High school +
   lego_beyond_gradelevel: Middle school +
-  finch_beyond_gradelevel: Ages 8+
+  finch_beyond_gradelevel: Возраст 8 +
   arduino_beyond_gradelevel: High school +
   processing_beyond_gradelevel: Старшие классы
   alice_beyond_gradelevel: Middle school +
-  sphero_beyond_gradelevel: Ages 8+
+  sphero_beyond_gradelevel: Возраст 8 +
   codeorg_beyond_platformtext: Modern browsers, tablets
   khan_beyond_platformtext: Modern Web browsers
   tynker_beyond_platformtext: Modern web browsers
-  scratch_beyond_platformtext: Any browser
+  scratch_beyond_platformtext: Любой браузер
   lightbot_beyond_platformtext: iOS, Android (or web browser)
   codecademy_beyond_platformtext: Modern web browsers. iOS, Android apps
   kodable_beyond_platformtext: iPad
@@ -794,8 +792,8 @@
     or laptop
   codehs_beyond_shortdescription: Познакомьтесь с программированием на JavaScript
     в занимательной визуальной среде
-  udemy_beyond_shortdescription: Dozens of online programming courses
-  lynda_beyond_shortdescription: Dozens of online programming courses
+  udemy_beyond_shortdescription: Десятки онлайн-курсов программирования
+  lynda_beyond_shortdescription: Десятки онлайн-курсов программирования
   edx_beyond_shortdescription: The most popular class at Harvard
   coursera_beyond_shortdescription: Start with CS101
   udacity_beyond_shortdescription: Start with CS101
