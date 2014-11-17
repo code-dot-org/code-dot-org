@@ -1,0 +1,13 @@
+- active ||= nil
+%a{name: active}
+.row.navcontainer
+  .span12{style: 'margin-left: 0'}
+    %ul.nav.nav-pills{style: 'margin: 0'}
+      - if current_user && !current_user.working_on_user_scripts.empty?
+        %li{class: active == :working ? 'active' : ''}
+          %a{href: '#working'} Courses you're working on
+      - if current_user && !current_user.completed_user_scripts.empty?
+        %li{class: active == :completed ? 'active' : ''}
+          %a{href: '#completed'} Completed courses
+      %li{class: active == :all ? 'active' : ''}
+        %a{href: '#all'} All courses
