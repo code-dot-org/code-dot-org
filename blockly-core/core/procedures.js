@@ -52,20 +52,22 @@ Blockly.Procedures.allProcedures = function() {
   var proceduresNoReturn = [];
   var proceduresFunctional = [];
 
-  Blockly.mainBlockSpace.getAllBlocks().forEach(function (block) {
-    if (block.getProcedureInfo) {
-      var procedureInfo = block.getProcedureInfo();
-      switch (block.type) {
-        case 'functional_definition':
-          proceduresFunctional.push(procedureInfo);
-          break;
-        case 'procedures_defreturn':
-          proceduresReturn.push(procedureInfo);
-          break;
-        case 'procedures_defnoreturn':
-          proceduresNoReturn.push(procedureInfo);
-          break;
-      }
+  Blockly.mainBlockSpace.getAllBlocks().forEach(function(block) {
+    if (!block.getProcedureInfo) {
+      return;
+    }
+
+    var procedureInfo = block.getProcedureInfo();
+    switch (block.type) {
+      case 'functional_definition':
+        proceduresFunctional.push(procedureInfo);
+        break;
+      case 'procedures_defreturn':
+        proceduresReturn.push(procedureInfo);
+        break;
+      case 'procedures_defnoreturn':
+        proceduresNoReturn.push(procedureInfo);
+        break;
     }
   });
 
