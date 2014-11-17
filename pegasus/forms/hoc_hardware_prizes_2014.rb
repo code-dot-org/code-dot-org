@@ -21,9 +21,10 @@ class HocHardwarePrizes2014
   end
 
   def self.process(data)
-    result = {}
-    result['location_p'] = geocode_address(data['school_address_s']) unless data['school_address_s'].nil_or_empty?
-    result
+    {}.tap do |results|
+      location = search_for_address(data['school_address_s']) unless data['school_address_s'].nil_or_empty?
+      results.merge! location.to_solr('school_') if location
+    end
   end
 
   def self.solr_query(params)
