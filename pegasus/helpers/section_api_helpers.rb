@@ -174,7 +174,7 @@ class DashboardSection
   def self.load_valid_courses
     Hash[
          DASHBOARD_DB[:scripts].
-           where("hidden = 0 or name like 'course%'").
+           where("hidden = 0").
            select(:id, :name).
            all.
            map { |c| [c[:id], c[:name]]}
