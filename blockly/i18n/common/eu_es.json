@@ -25,7 +25,7 @@
   "emptyFunctionBlocksErrorMsg": "The function block needs to have other blocks inside it to work.",
   "extraTopBlocks": "Ekintza blokeei lotu gabeko blokeak soberan daude.",
   "finalStage": "Zorionak! Azkeneko eszenatokia osatu duzu.",
-  "finalStageTrophies": "Zorionak! Azkeneko eszenatokia osatu duzu eta {numTrophies, plural,  {a trophy} bat beste {# trophies}}.",
+  "finalStageTrophies": "Zorionak! Azkeneko eszenatokia osatu duzu eta {numTrophies, plural, one {a trophy} other {# trophies}}.",
   "finish": "Finish",
   "generatedCodeInfo": "Goi mailako unibertsitateek (adib., {berkeleyLink}, {harvardLink} ) ere blokeetan oinarritutako kodeketa irakasten dute. Baina zuk erabilitako blokeen azpian munduan zehar erabilera zabalen duen kode hizkuntza dago, JavaScript:",
   "hashError": "Barkatu. %1 ez dator bat inongo gordetako programarekin.",
