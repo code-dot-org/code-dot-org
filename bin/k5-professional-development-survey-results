@@ -39,6 +39,7 @@ def main()
 
     data['satisfaction_s'] = satisfaction_s_to_i(data['satisfaction_s'])
     data['teacher_years_s'] = "'#{data['teacher_years_s']}"
+    data['send_materials_zip_s'] = "'#{data['send_materials_zip_s']}"
     
     unless keys
       keys = data.keys
