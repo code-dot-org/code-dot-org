@@ -196,7 +196,7 @@ Blockly.FunctionEditor.prototype.resetParamIDs_ = function() {
 };
 
 Blockly.FunctionEditor.prototype.refreshParamsOnFunction_ = function() {
-  var paramArrays = this.paramsAsParallelArrays_()
+  var paramArrays = this.paramsAsParallelArrays_();
   this.functionDefinitionBlock.updateParamsFromArrays(
     paramArrays.paramNames, paramArrays.paramIDs, paramArrays.paramTypes);
 };
