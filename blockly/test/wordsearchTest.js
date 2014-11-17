@@ -1,4 +1,10 @@
 var testUtils = require('./util/testUtils');
+
+// needed for Hammerjs
+global.navigator = {};
+global.window = {};
+global.document = {};
+
 var WordSearch = testUtils.requireWithGlobalsCheckSrcFolder('maze/wordsearch');
 var assert = testUtils.assert;
 var jsdom = require('jsdom').jsdom;

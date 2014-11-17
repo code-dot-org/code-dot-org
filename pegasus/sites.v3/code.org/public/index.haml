@@ -1,6 +1,6 @@
 ---
 theme: responsive
-banner: <%= request.site == 'csedweek.org' ? :index_hoc : nil %>
+banner: null
 <%
   if request.site == 'csedweek.org'
     twitter_meta = {
@@ -30,6 +30,10 @@ social:
   "twitter:player:height": 1080
 
 ---
+- if request.site == 'csedweek.org'
+  %div
+    = view :index_hoc
+
 -facebook = {:u=>"http://#{request.site}/"}
 
 -if request.site == 'csedweek.org'

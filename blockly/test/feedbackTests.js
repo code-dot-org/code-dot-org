@@ -7,8 +7,10 @@ var canvas = require('canvas');
 global.Image = canvas.Image;
 global.Turtle = {};
 
-// needed for Hammerjs in studio
+// needed for Hammerjs
 global.navigator = {};
+global.window = {};
+global.document = {};
 
 /**
  * Loads options.startBlocks into the workspace, then calls
