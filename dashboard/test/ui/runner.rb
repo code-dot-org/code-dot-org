@@ -21,6 +21,7 @@ $options.tunnel = nil
 $options.local = nil
 $options.html = nil
 $options.maximize = nil
+$options.auto_retry = false
 
 # start supporting some basic command line filtering of which browsers we run against
 opt_parser = OptionParser.new do |opts|
@@ -66,6 +67,9 @@ opt_parser = OptionParser.new do |opts|
   end
   opts.on("--html", "Use html reporter") do
     $options.html = true
+  end
+  opts.on("-a", "--auto_retry", "Retry tests that fail once") do
+    $options.auto_retry = true
   end
   opts.on("-V", "--verbose", "Verbose") do
     $options.verbose = true
@@ -182,8 +186,7 @@ browsers.each do |browser|
   returnValue = `cucumber #{arguments}`
   succeeded = $?.exitstatus == 0
 
-  if !succeeded #&& $options.pegasus_domain =~ /test/ && !Rails.env.development?
-    # if in the test environment, rerun failures
+  if !succeeded && $options.auto_retry
     puts "  Failed, rerunning"
     HipChat.log "Rerunning <b>dashboard</b> UI with <b>#{browser['name'] || browser.inspect}</b>..."
     returnValue = `cucumber #{arguments}`
