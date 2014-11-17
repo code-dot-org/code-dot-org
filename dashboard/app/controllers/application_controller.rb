@@ -93,6 +93,7 @@ class ApplicationController < ActionController::Base
     if options[:level_source]
       response[:level_source] = level_source_url(options[:level_source])
       response[:phone_share_url] = send_to_phone_url
+      response[:shapeways_upload_endpoint] = upload_to_shapeways_url
       response[:level_source_id] = options[:level_source].id
     end
 

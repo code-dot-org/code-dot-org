@@ -496,8 +496,46 @@ exports.createSharingDiv = function(options) {
     });
   }
 
+  setUpForShapewaysSharing(sharingDiv, options.response);
+
   return sharingDiv;
 };
+
+function setUpForShapewaysSharing(sharingDiv, response) {
+  var printShapeways = sharingDiv.querySelector('#sharing-shapeways');
+  if (printShapeways && Turtle && true /** options.printAtShapeways */ ) {
+
+    dom.addClickTouchEvent(printShapeways, function() {
+
+      $("#shapeways-status").text('Sending your drawing to Shapeways...');
+
+      var shapewaysDiv = sharingDiv.querySelector('#print-at-shapeways');
+
+      if (!$(shapewaysDiv).is(':hidden')) {
+        return;
+      }
+      $("#shapeways-status").text('Uploading your drawing to Shapeways...');
+      shapewaysDiv.setAttribute('style', 'display:inline-block');
+
+      var params = jQuery.param({
+        level_source_id: response.level_source_id,
+        stl_data: Turtle.lastDrawingAsSTLString()
+      });
+
+      jQuery.post(response.shapeways_upload_endpoint, params)
+        .done(function (response) {
+          $("#shapeways-status").html('<a target="_blank" href="' + response.public_model_url + '">Click to go to your model!</a>');
+          trackEvent("Shapeways", "success");
+        })
+        .fail(function (xhr) {
+          $("#shapeways-status").text('Sorry, there was an issue uploading your drawing to ' +
+            'Shapeways. Please close this dialog and try again, or change your drawing.');
+          console.log(xhr);
+          trackEvent("Shapeways", "error");
+        });
+    });
+  }
+}
 
 
 var numTrophiesEarned = function(options) {

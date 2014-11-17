@@ -638,9 +638,8 @@ Turtle.drawToTurtle_ = function (distance) {
   }
 };
 
-Turtle.getSTLFile = function() {
-  console.log((new CSG.Path2D(Turtle.shapewaysPrintablePathPoints)).rectangularExtrude(3, 4, 16, true).toStlString());
-  console.log('Copy above into an .stl file, import into Shapeways');
+Turtle.lastDrawingAsSTLString = function() {
+  return (new CSG.Path2D(Turtle.shapewaysPrintablePathPoints)).rectangularExtrude(3, 4, 16, true).toStlString();
 };
 
 Turtle.turnByDegrees_ = function (degreesRight) {
