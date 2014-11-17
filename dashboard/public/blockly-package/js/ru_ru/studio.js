@@ -13178,7 +13178,7 @@ exports.setSpriteSize = function (id, spriteIndex, value) {
 exports.setSpritePosition = function (id, spriteIndex, value) {
   Studio.queueCmd(id, 'setSpritePosition', {
     'spriteIndex': spriteIndex,
-    'value': value
+    'value': Number(value)
   });
 };
 
@@ -13193,8 +13193,8 @@ exports.stop = function(id, spriteIndex) {
 exports.throwProjectile = function(id, spriteIndex, dir, className) {
   Studio.queueCmd(id, 'throwProjectile', {
     'spriteIndex': spriteIndex,
-    'dir': dir,
-    'className': className
+    'dir': Number(dir),
+    'className': String(className)
   });
 };
 
@@ -13208,7 +13208,7 @@ exports.makeProjectile = function(id, className, action) {
 exports.move = function(id, spriteIndex, dir) {
   Studio.queueCmd(id, 'move', {
     'spriteIndex': spriteIndex,
-    'dir': dir
+    'dir': Number(dir)
   });
 };
 
@@ -13238,6 +13238,13 @@ exports.wait = function(id, value) {
 
 exports.vanish = function (id, spriteIndex) {
   Studio.queueCmd(id, 'vanish', {spriteIndex: spriteIndex});
+};
+
+exports.attachEventHandler = function (id, eventName, func) {
+  Studio.queueCmd(id, 'attachEventHandler', {
+    'eventName': String(eventName),
+    'func': func
+  });
 };
 
 },{"./tiles":31}],22:[function(require,module,exports){
@@ -16220,6 +16227,24 @@ levels.full_sandbox =  {
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
 
+levels.ec_sandbox = utils.extend(levels.sandbox, {
+  'editCode': true,
+  'codeFunctions': [
+    {'func': 'setSprite', 'params': ["0", "'cat'"] },
+    {'func': 'setBackground', 'params': ["'night'"] },
+    {'func': 'move', 'params': ["0", "1"] },
+    {'func': 'playSound', 'params': ["'slap'"] },
+    {'func': 'changeScore', 'params': ["1"] },
+    {'func': 'setSpritePosition', 'params': ["0", "7"] },
+    {'func': 'setSpriteSpeed', 'params': ["0", "8"] },
+    {'func': 'setSpriteEmotion', 'params': ["0", "1"] },
+    {'func': 'throwProjectile', 'params': ["0", "1", "'blue_fireball'"] },
+    {'func': 'vanish', 'params': ["0"] },
+    {'func': 'attachEventHandler', 'params': ["'when-left'", "function() {\n  \n}"] },
+  ],
+  'startBlocks': "",
+});
+
 },{"../../locale/ru_ru/studio":48,"../block_utils":3,"../utils":45,"./tiles":31}],27:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
@@ -16242,6 +16267,8 @@ window.studioMain = function(options) {
 var Collidable = require('./collidable');
 var Direction = require('./tiles').Direction;
 var tiles = require('./tiles');
+
+var SVG_NS = "http://www.w3.org/2000/svg";
 
 // uniqueId that increments by 1 each time an element is created
 var uniqueId = 0;
@@ -16334,17 +16361,17 @@ module.exports = Projectile;
  */
 Projectile.prototype.createElement = function (parentElement) {
   // create our clipping path/rect
-  this.clipPath = document.createElementNS(Blockly.SVG_NS, 'clipPath');
+  this.clipPath = document.createElementNS(SVG_NS, 'clipPath');
   var clipId = 'projectile_clippath_' + (uniqueId++);
   this.clipPath.setAttribute('id', clipId);
-  var rect = document.createElementNS(Blockly.SVG_NS, 'rect');
+  var rect = document.createElementNS(SVG_NS, 'rect');
   rect.setAttribute('width', this.width);
   rect.setAttribute('height', this.height);
   this.clipPath.appendChild(rect);
 
   parentElement.appendChild(this.clipPath);
 
-  this.element = document.createElementNS(Blockly.SVG_NS, 'image');
+  this.element = document.createElementNS(SVG_NS, 'image');
   this.element.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
     this.image);
   this.element.setAttribute('height', this.height);
@@ -16576,10 +16603,10 @@ var feedback = require('../feedback.js');
 var dom = require('../dom');
 var Collidable = require('./collidable');
 var Projectile = require('./projectile');
-var Hammer = require('../hammer');
 var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
 var _ = utils.getLodash();
+var Hammer = utils.getHammer();
 
 if (typeof SVGElement !== 'undefined') { // tests don't have svgelement??
   var rgbcolor = require('../canvg/rgbcolor.js');
@@ -16592,6 +16619,8 @@ var Direction = tiles.Direction;
 var NextTurn = tiles.NextTurn;
 var SquareType = tiles.SquareType;
 var Emotions = tiles.Emotions;
+
+var SVG_NS = "http://www.w3.org/2000/svg";
 
 /**
  * Create a namespace for the application.
@@ -16674,6 +16703,8 @@ BlocklyApps.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 
 Studio.BLOCK_X_COORDINATE = 20;
 Studio.BLOCK_Y_COORDINATE = 20;
+
+var MAX_INTERPRETER_STEPS_PER_TICK = 200;
 
 // Default Scalings
 Studio.scale = {
@@ -16780,7 +16811,7 @@ var drawMap = function () {
   visualizationColumn.style.width = Studio.MAZE_WIDTH + 'px';
 
   if (skin.background) {
-    var tile = document.createElementNS(Blockly.SVG_NS, 'image');
+    var tile = document.createElementNS(SVG_NS, 'image');
     tile.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
                         skin.background);
     tile.setAttribute('id', 'background');
@@ -16795,15 +16826,15 @@ var drawMap = function () {
     for (i = 0; i < Studio.spriteCount; i++) {
       // Sprite clipPath element
       // (not setting x, y, height, or width until displaySprite)
-      var spriteClip = document.createElementNS(Blockly.SVG_NS, 'clipPath');
+      var spriteClip = document.createElementNS(SVG_NS, 'clipPath');
       spriteClip.setAttribute('id', 'spriteClipPath' + i);
-      var spriteClipRect = document.createElementNS(Blockly.SVG_NS, 'rect');
+      var spriteClipRect = document.createElementNS(SVG_NS, 'rect');
       spriteClipRect.setAttribute('id', 'spriteClipRect' + i);
       spriteClip.appendChild(spriteClipRect);
       svg.appendChild(spriteClip);
 
       // Add sprite (not setting href, height, or width until displaySprite).
-      var spriteIcon = document.createElementNS(Blockly.SVG_NS, 'image');
+      var spriteIcon = document.createElementNS(SVG_NS, 'image');
       spriteIcon.setAttribute('id', 'sprite' + i);
       spriteIcon.setAttribute('clip-path', 'url(#spriteClipPath' + i + ')');
       svg.appendChild(spriteIcon);
@@ -16812,15 +16843,15 @@ var drawMap = function () {
         delegate(this, Studio.onSpriteClicked, i));
     }
     for (i = 0; i < Studio.spriteCount; i++) {
-      var spriteSpeechBubble = document.createElementNS(Blockly.SVG_NS, 'g');
+      var spriteSpeechBubble = document.createElementNS(SVG_NS, 'g');
       spriteSpeechBubble.setAttribute('id', 'speechBubble' + i);
       spriteSpeechBubble.setAttribute('visibility', 'hidden');
 
-      var speechRect = document.createElementNS(Blockly.SVG_NS, 'path');
+      var speechRect = document.createElementNS(SVG_NS, 'path');
       speechRect.setAttribute('id', 'speechBubblePath' + i);
       speechRect.setAttribute('class', 'studio-speech-bubble-path');
 
-      var speechText = document.createElementNS(Blockly.SVG_NS, 'text');
+      var speechText = document.createElementNS(SVG_NS, 'text');
       speechText.setAttribute('id', 'speechBubbleText' + i);
       speechText.setAttribute('class', 'studio-speech-bubble');
 
@@ -16833,9 +16864,7 @@ var drawMap = function () {
   if (Studio.spriteGoals_) {
     for (i = 0; i < Studio.spriteGoals_.length; i++) {
       // Add finish markers.
-      var spriteFinishMarker = document.createElementNS(
-          Blockly.SVG_NS,
-          'image');
+      var spriteFinishMarker = document.createElementNS(SVG_NS, 'image');
       spriteFinishMarker.setAttribute('id', 'spriteFinish' + i);
       spriteFinishMarker.setAttributeNS('http://www.w3.org/1999/xlink',
                                         'xlink:href',
@@ -16846,7 +16875,7 @@ var drawMap = function () {
     }
   }
 
-  var score = document.createElementNS(Blockly.SVG_NS, 'text');
+  var score = document.createElementNS(SVG_NS, 'text');
   score.setAttribute('id', 'score');
   score.setAttribute('class', 'studio-score');
   score.setAttribute('x', Studio.MAZE_WIDTH / 2);
@@ -16855,7 +16884,7 @@ var drawMap = function () {
   score.setAttribute('visibility', 'hidden');
   svg.appendChild(score);
 
-  var titleScreenTitle = document.createElementNS(Blockly.SVG_NS, 'text');
+  var titleScreenTitle = document.createElementNS(SVG_NS, 'text');
   titleScreenTitle.setAttribute('id', 'titleScreenTitle');
   titleScreenTitle.setAttribute('class', 'studio-ts-title');
   titleScreenTitle.setAttribute('x', Studio.MAZE_WIDTH / 2);
@@ -16864,7 +16893,7 @@ var drawMap = function () {
   titleScreenTitle.setAttribute('visibility', 'hidden');
   svg.appendChild(titleScreenTitle);
 
-  var titleScreenTextGroup = document.createElementNS(Blockly.SVG_NS, 'g');
+  var titleScreenTextGroup = document.createElementNS(SVG_NS, 'g');
   var xPosTextGroup = (Studio.MAZE_WIDTH - TITLE_SCREEN_TEXT_WIDTH) / 2;
   titleScreenTextGroup.setAttribute('id', 'titleScreenTextGroup');
   titleScreenTextGroup.setAttribute('x', xPosTextGroup);
@@ -16874,14 +16903,14 @@ var drawMap = function () {
       'translate(' + xPosTextGroup + ',' + TITLE_SCREEN_TEXT_Y_POSITION + ')');
   titleScreenTextGroup.setAttribute('visibility', 'hidden');
 
-  var titleScreenTextRect = document.createElementNS(Blockly.SVG_NS, 'rect');
+  var titleScreenTextRect = document.createElementNS(SVG_NS, 'rect');
   titleScreenTextRect.setAttribute('id', 'titleScreenTextRect');
   titleScreenTextRect.setAttribute('x', 0);
   titleScreenTextRect.setAttribute('y', 0);
   titleScreenTextRect.setAttribute('width', TITLE_SCREEN_TEXT_WIDTH);
   titleScreenTextRect.setAttribute('class', 'studio-ts-text-rect');
 
-  var titleScreenText = document.createElementNS(Blockly.SVG_NS, 'text');
+  var titleScreenText = document.createElementNS(SVG_NS, 'text');
   titleScreenText.setAttribute('id', 'titleScreenText');
   titleScreenText.setAttribute('class', 'studio-ts-text');
   titleScreenText.setAttribute('x', TITLE_SCREEN_TEXT_WIDTH / 2);
@@ -17083,13 +17112,20 @@ var setSvgText = function(opts) {
  */
 function callHandler (name, allowQueueExtension) {
   Studio.eventHandlers.forEach(function (handler) {
-    // Note: we skip executing the code if we have not completed executing
-    // the cmdQueue on this handler (checking for non-zero length)
-    if (handler.name === name &&
-        (allowQueueExtension || (0 === handler.cmdQueue.length))) {
-      Studio.currentCmdQueue = handler.cmdQueue;
-      try { handler.func(BlocklyApps, api, Studio.Globals); } catch (e) { }
-      Studio.currentCmdQueue = null;
+    if (BlocklyApps.usingBlockly) {
+      // Note: we skip executing the code if we have not completed executing
+      // the cmdQueue on this handler (checking for non-zero length)
+      if (handler.name === name &&
+          (allowQueueExtension || (0 === handler.cmdQueue.length))) {
+        Studio.currentCmdQueue = handler.cmdQueue;
+        try { handler.func(BlocklyApps, api, Studio.Globals); } catch (e) { }
+        Studio.currentCmdQueue = null;
+      }
+    } else {
+      // TODO (cpirich): support events with parameters
+      if (handler.name === name) {
+        Studio.eventQueue.push({'fn': handler.func});
+      }
     }
   });
 }
@@ -17097,10 +17133,37 @@ function callHandler (name, allowQueueExtension) {
 Studio.onTick = function() {
   Studio.tickCount++;
 
-  if (Studio.tickCount === 1) {
-    callHandler('whenGameStarts');
+  if (Studio.interpreter) {
+    var doneUserCodeStep = false;
+    // In each tick, we will step the interpreter multiple times in a tight
+    // loop as long as we are interpreting code that the user can't see
+    // (function aliases at the beginning, getCallback event loop at the end)
+    for (var stepsThisTick = 0;
+         stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK && !doneUserCodeStep;
+         stepsThisTick++) {
+      var inUserCode = codegen.selectCurrentCode(Studio.interpreter,
+                                                 BlocklyApps.editor,
+                                                 Studio.cumulativeLength,
+                                                 Studio.userCodeStartOffset,
+                                                 Studio.userCodeLength);
+      try {
+        Studio.interpreter.step();
+        doneUserCodeStep = inUserCode &&
+                            Studio.interpreter.stateStack[0] &&
+                            Studio.interpreter.stateStack[0].done;
+      }
+      catch(err) {
+        Studio.executionError = err;
+        Studio.onPuzzleComplete();
+        return;
+      }
+    }
+  } else {
+    if (Studio.tickCount === 1) {
+      callHandler('whenGameStarts');
+    }
+    Studio.executeQueue('whenGameStarts');
   }
-  Studio.executeQueue('whenGameStarts');
 
   callHandler('repeatForever');
   Studio.executeQueue('repeatForever');
@@ -17423,20 +17486,22 @@ Studio.initSprites = function () {
     }
   }
 
-  // Update the sprite count in the blocks:
-  blocks.setSpriteCount(Blockly, Studio.spriteCount);
-  blocks.setStartAvatars(Studio.startAvatars);
+  if (BlocklyApps.usingBlockly) {
+    // Update the sprite count in the blocks:
+    blocks.setSpriteCount(Blockly, Studio.spriteCount);
+    blocks.setStartAvatars(Studio.startAvatars);
 
-  if (level.projectileCollisions) {
-    blocks.enableProjectileCollisions(Blockly);
-  }
+    if (level.projectileCollisions) {
+      blocks.enableProjectileCollisions(Blockly);
+    }
 
-  if (level.edgeCollisions) {
-    blocks.enableEdgeCollisions(Blockly);
-  }
+    if (level.edgeCollisions) {
+      blocks.enableEdgeCollisions(Blockly);
+    }
 
-  if (level.allowSpritesOutsidePlayspace) {
-    blocks.enableSpritesOutsidePlayspace(Blockly);
+    if (level.allowSpritesOutsidePlayspace) {
+      blocks.enableSpritesOutsidePlayspace(Blockly);
+    }
   }
 };
 
@@ -17564,20 +17629,22 @@ Studio.init = function(config) {
     }
     document.addEventListener('mouseup', Studio.onMouseUp, false);
 
-    /**
-     * The richness of block colours, regardless of the hue.
-     * MOOC blocks should be brighter (target audience is younger).
-     * Must be in the range of 0 (inclusive) to 1 (exclusive).
-     * Blockly's default is 0.45.
-     */
-    Blockly.HSV_SATURATION = 0.6;
+    if (BlocklyApps.usingBlockly) {
+      /**
+       * The richness of block colours, regardless of the hue.
+       * MOOC blocks should be brighter (target audience is younger).
+       * Must be in the range of 0 (inclusive) to 1 (exclusive).
+       * Blockly's default is 0.45.
+       */
+      Blockly.HSV_SATURATION = 0.6;
 
-    Blockly.SNAP_RADIUS *= Studio.scale.snapRadius;
+      Blockly.SNAP_RADIUS *= Studio.scale.snapRadius;
+    }
 
     drawMap();
   };
 
-  if (config.level.edit_blocks != 'toolbox_blocks') {
+  if (BlocklyApps.usingBlockly && config.level.edit_blocks != 'toolbox_blocks') {
     arrangeStartBlocks(config);
   }
 
@@ -17590,7 +17657,7 @@ Studio.init = function(config) {
   config.makeUrl = "http://code.org/studio";
   config.makeImage = BlocklyApps.assetUrl('media/promo.png');
 
-  config.enableShowCode = false;
+  config.enableShowCode = BlocklyApps.editCode;
   config.varsInGlobals = true;
 
   Studio.initSprites();
@@ -17614,9 +17681,12 @@ var preloadImage = function(url) {
 };
 
 var preloadBackgroundImages = function() {
-  var imageChoices = Blockly.Blocks.studio_setBackground.IMAGE_CHOICES;
-  for (var i = 0; i < imageChoices.length; i++) {
-    preloadImage(imageChoices[i][0]);
+  // TODO (cpirich): preload for non-blockly
+  if (BlocklyApps.usingBlockly) {
+    var imageChoices = Blockly.Blocks.studio_setBackground.IMAGE_CHOICES;
+    for (var i = 0; i < imageChoices.length; i++) {
+      preloadImage(imageChoices[i][0]);
+    }
   }
 };
 
@@ -17723,6 +17793,11 @@ BlocklyApps.reset = function(first) {
 
   // Reset the Globals object used to contain program variables:
   Studio.Globals = {};
+  if (BlocklyApps.editCode) {
+    Studio.eventQueue = [];
+    Studio.executionError = null;
+    Studio.interpreter = null;
+  }
 
   // Move sprites into position.
   for (i = 0; i < Studio.spriteCount; i++) {
@@ -17753,7 +17828,6 @@ BlocklyApps.reset = function(first) {
 
   var svg = document.getElementById('svgStudio');
 
-
   for (i = 0; i < Studio.spriteGoals_.length; i++) {
     // Mark each finish as incomplete.
     Studio.spriteGoals_[i].finished = false;
@@ -17781,7 +17855,9 @@ BlocklyApps.runButtonClick = function() {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
   BlocklyApps.toggleRunReset('reset');
-  Blockly.mainBlockSpace.traceOn(true);
+  if (BlocklyApps.usingBlockly) {
+    Blockly.mainBlockSpace.traceOn(true);
+  }
   BlocklyApps.reset(false);
   BlocklyApps.attempts++;
   Studio.execute();
@@ -17940,6 +18016,17 @@ var defineProcedures = function (blockType) {
 };
 
 /**
+ * A miniature runtime in the interpreted world calls this function repeatedly
+ * to check to see if it should invoke any callbacks from within the
+ * interpreted world. If the eventQueue is not empty, we will return an object
+ * that contains an interpreted callback function (stored in "fn") and,
+ * optionally, callback arguments (stored in "arguments")
+ */
+var nativeGetCallback = function () {
+  return Studio.eventQueue.shift();
+};
+
+/**
  * Execute the story
  */
 Studio.execute = function() {
@@ -17956,43 +18043,77 @@ Studio.execute = function() {
   }
 
   var handlers = [];
-  registerHandlers(handlers, 'when_run', 'whenGameStarts');
-  registerHandlers(handlers, 'functional_setBackground', 'whenGameStarts');
-  registerHandlers(handlers, 'functional_setPlayerSpeed', 'whenGameStarts');
-  registerHandlers(handlers, 'functional_setEnemySpeed', 'whenGameStarts');
-  registerHandlers(handlers, 'functional_showTitleScreen', 'whenGameStarts');
-  registerHandlers(handlers, 'studio_whenLeft', 'when-left');
-  registerHandlers(handlers, 'studio_whenRight', 'when-right');
-  registerHandlers(handlers, 'studio_whenUp', 'when-up');
-  registerHandlers(handlers, 'studio_whenDown', 'when-down');
-  registerHandlersWithTitleParam(handlers,
-                                  'studio_whenArrow',
-                                  'when',
-                                  'VALUE',
-                                  ['left', 'right', 'up', 'down']);
-  registerHandlers(handlers, 'studio_repeatForever', 'repeatForever');
-  registerHandlersWithSingleSpriteParam(handlers,
-                                  'studio_whenSpriteClicked',
-                                  'whenSpriteClicked',
-                                  'SPRITE');
-  registerHandlersWithMultipleSpriteParams(handlers,
-                                   'studio_whenSpriteCollided',
-                                   'whenSpriteCollided',
-                                   'SPRITE1',
-                                   'SPRITE2');
+  if (BlocklyApps.usingBlockly) {
+    registerHandlers(handlers, 'when_run', 'whenGameStarts');
+    registerHandlers(handlers, 'functional_setBackground', 'whenGameStarts');
+    registerHandlers(handlers, 'functional_setPlayerSpeed', 'whenGameStarts');
+    registerHandlers(handlers, 'functional_setEnemySpeed', 'whenGameStarts');
+    registerHandlers(handlers, 'functional_showTitleScreen', 'whenGameStarts');
+    registerHandlers(handlers, 'studio_whenLeft', 'when-left');
+    registerHandlers(handlers, 'studio_whenRight', 'when-right');
+    registerHandlers(handlers, 'studio_whenUp', 'when-up');
+    registerHandlers(handlers, 'studio_whenDown', 'when-down');
+    registerHandlersWithTitleParam(handlers,
+                                    'studio_whenArrow',
+                                    'when',
+                                    'VALUE',
+                                    ['left', 'right', 'up', 'down']);
+    registerHandlers(handlers, 'studio_repeatForever', 'repeatForever');
+    registerHandlersWithSingleSpriteParam(handlers,
+                                    'studio_whenSpriteClicked',
+                                    'whenSpriteClicked',
+                                    'SPRITE');
+    registerHandlersWithMultipleSpriteParams(handlers,
+                                     'studio_whenSpriteCollided',
+                                     'whenSpriteCollided',
+                                     'SPRITE1',
+                                     'SPRITE2');
+  }
 
   BlocklyApps.playAudio('start');
 
   BlocklyApps.reset(false);
 
-  // Define any top-level procedures the user may have created
-  // (must be after reset(), which resets the Studio.Globals namespace)
-  defineProcedures('procedures_defreturn');
-  defineProcedures('procedures_defnoreturn');
-  defineProcedures('functional_definition');
+  if (level.editCode) {
+    var codeWhenRun = utils.generateCodeAliases(level.codeFunctions, 'Studio');
+    Studio.userCodeStartOffset = codeWhenRun.length;
+    codeWhenRun += BlocklyApps.editor.getValue();
+    Studio.userCodeLength = codeWhenRun.length - Studio.userCodeStartOffset;
+    // Append our mini-runtime after the user's code. This will spin and process
+    // callback functions:
+    codeWhenRun += '\nwhile (true) { var obj = getCallback(); ' +
+      'if (obj) { obj.fn.apply(null, obj.arguments ? obj.arguments : null); }}';
+    var session = BlocklyApps.editor.aceEditor.getSession();
+    Studio.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
 
-  // Set event handlers and start the onTick timer
-  Studio.eventHandlers = handlers;
+    // Use JS interpreter on editCode levels
+    var initFunc = function(interpreter, scope) {
+      codegen.initJSInterpreter(interpreter, scope, {
+                                        BlocklyApps: BlocklyApps,
+                                        Studio: api,
+                                        Globals: Studio.Globals } );
+
+
+      var getCallbackObj = interpreter.createObject(interpreter.FUNCTION);
+      var wrapper = codegen.makeNativeMemberFunction(interpreter,
+                                                     nativeGetCallback,
+                                                     null);
+      interpreter.setProperty(scope,
+                              'getCallback',
+                              interpreter.createNativeFunction(wrapper));
+    };
+    Studio.interpreter = new window.Interpreter(codeWhenRun, initFunc);
+  } else {
+    // Define any top-level procedures the user may have created
+    // (must be after reset(), which resets the Studio.Globals namespace)
+    defineProcedures('procedures_defreturn');
+    defineProcedures('procedures_defnoreturn');
+    defineProcedures('functional_definition');
+
+    // Set event handlers and start the onTick timer
+    Studio.eventHandlers = handlers;
+  }
+
   Studio.intervalId = window.setInterval(Studio.onTick, Studio.scale.stepSpeed);
 };
 
@@ -18000,7 +18121,9 @@ Studio.feedbackImage = '';
 Studio.encodedFeedbackImage = '';
 
 Studio.onPuzzleComplete = function() {
-  if (level.freePlay) {
+  if (Studio.executionError) {
+    Studio.result = BlocklyApps.ResultType.ERROR;
+  } else if (level.freePlay) {
     Studio.result = BlocklyApps.ResultType.SUCCESS;
   }
 
@@ -18008,7 +18131,6 @@ Studio.onPuzzleComplete = function() {
   Studio.clearEventHandlersKillTickLoop();
 
   // If we know they succeeded, mark levelComplete true
-  // Note that we have not yet animated the succesful run
   var levelComplete = (Studio.result === BlocklyApps.ResultType.SUCCESS);
 
   // If the current level is a free play, always return the free play
@@ -18025,14 +18147,19 @@ Studio.onPuzzleComplete = function() {
     BlocklyApps.playAudio('failure');
   }
 
+  var program;
   if (level.editCode) {
-    Studio.testResults = levelComplete ?
-      BlocklyApps.TestResults.ALL_PASS :
-      BlocklyApps.TestResults.TOO_FEW_BLOCKS_FAIL;
-  }
+    // If we want to "normalize" the JavaScript to avoid proliferation of nearly
+    // identical versions of the code on the service, we could do either of these:
 
-  var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
-  var textBlocks = Blockly.Xml.domToText(xml);
+    // do an acorn.parse and then use escodegen to generate back a "clean" version
+    // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
+
+    program = BlocklyApps.editor.getValue();
+  } else {
+    var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+    program = Blockly.Xml.domToText(xml);
+  }
 
   Studio.waitingForReport = true;
 
@@ -18042,7 +18169,7 @@ Studio.onPuzzleComplete = function() {
       level: level.id,
       result: Studio.result === BlocklyApps.ResultType.SUCCESS,
       testResult: Studio.testResults,
-      program: encodeURIComponent(textBlocks),
+      program: encodeURIComponent(program),
       image: Studio.encodedFeedbackImage,
       onComplete: Studio.onReportComplete
     });
@@ -18234,12 +18361,17 @@ Studio.queueCmd = function (id, name, opts) {
     'name': name,
     'opts': opts
   };
-  if (Studio.currentEventParams) {
-    for (var prop in Studio.currentEventParams) {
-      cmd.opts[prop] = Studio.currentEventParams[prop];
+  if (BlocklyApps.usingBlockly) {
+    if (Studio.currentEventParams) {
+      for (var prop in Studio.currentEventParams) {
+        cmd.opts[prop] = Studio.currentEventParams[prop];
+      }
     }
+    Studio.currentCmdQueue.push(cmd);
+  } else {
+    // in editCode/interpreter mode, all commands are executed immediately:
+    Studio.callCmd(cmd);
   }
-  Studio.currentCmdQueue.push(cmd);
 };
 
 Studio.executeQueue = function (name) {
@@ -18350,6 +18482,10 @@ Studio.callCmd = function (cmd) {
       BlocklyApps.highlight(cmd.id);
       Studio.vanishActor(cmd.opts);
       break;
+    case 'attachEventHandler':
+      BlocklyApps.highlight(cmd.id);
+      Studio.attachEventHandler(cmd.opts);
+      break;
   }
   return true;
 };
@@ -18363,7 +18499,7 @@ Studio.vanishActor = function (opts) {
 
   var explosion = document.getElementById('explosion' + opts.spriteIndex);
   if (!explosion) {
-    explosion = document.createElementNS(Blockly.SVG_NS, 'image');
+    explosion = document.createElementNS(SVG_NS, 'image');
     explosion.setAttribute('id', 'explosion' + opts.spriteIndex);
     explosion.setAttribute('visibility', 'hidden');
     svg.appendChild(explosion, sprite);
@@ -18984,6 +19120,10 @@ Studio.moveDistance = function (opts) {
   return (0 === opts.queuedDistance);
 };
 
+Studio.attachEventHandler = function (opts) {
+  registerEventHandler(Studio.eventHandlers, opts.eventName, opts.func);
+};
+
 Studio.timedOut = function() {
   return Studio.tickCount > Studio.timeoutFailureTick;
 };
@@ -19084,7 +19224,7 @@ var checkFinished = function () {
   return false;
 };
 
-},{"../../locale/ru_ru/common":47,"../../locale/ru_ru/studio":48,"../base":2,"../canvg/StackBlur.js":6,"../canvg/canvg.js":7,"../canvg/rgbcolor.js":8,"../canvg/svg_todataurl":9,"../codegen":10,"../dom":12,"../feedback.js":13,"../hammer":15,"../skins":19,"../templates/page.html":39,"../utils":45,"../xml":46,"./api":21,"./blocks":22,"./collidable":23,"./controls.html":24,"./extraControlRows.html":25,"./projectile":28,"./tiles":31,"./visualization.html":32}],31:[function(require,module,exports){
+},{"../../locale/ru_ru/common":47,"../../locale/ru_ru/studio":48,"../base":2,"../canvg/StackBlur.js":6,"../canvg/canvg.js":7,"../canvg/rgbcolor.js":8,"../canvg/svg_todataurl":9,"../codegen":10,"../dom":12,"../feedback.js":13,"../skins":19,"../templates/page.html":39,"../utils":45,"../xml":46,"./api":21,"./blocks":22,"./collidable":23,"./controls.html":24,"./extraControlRows.html":25,"./projectile":28,"./tiles":31,"./visualization.html":32}],31:[function(require,module,exports){
 'use strict';
 
 exports.Direction = {
@@ -19543,11 +19683,12 @@ var savedAmd;
 // via require js
 if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) {
   savedAmd = define.amd;
-  define.amd = 'dont_call_requirejs_define';
+  define.amd = false;
 }
 
 // get lodash
 var _ = require('./lodash');
+var Hammer = require('./hammer');
 
 // undo hackery
 if (typeof define == 'function' && savedAmd) {
@@ -19557,6 +19698,10 @@ if (typeof define == 'function' && savedAmd) {
 
 exports.getLodash = function () {
   return _;
+};
+
+exports.getHammer = function () {
+  return Hammer;
 };
 
 exports.shallowCopy = function(source) {
@@ -19855,7 +20000,7 @@ exports.generateDropletModeOptions = function (codeFunctions) {
   return modeOptions;
 };
 
-},{"./lodash":16,"./xml":46}],46:[function(require,module,exports){
+},{"./hammer":15,"./lodash":16,"./xml":46}],46:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
