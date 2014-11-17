@@ -12092,7 +12092,7 @@ exports.nextLevelTrophies = function(d){return "Til hamingju! Þú hefur leyst �
 
 exports.nextStage = function(d){return "Til hamingju! Þú kláraðir "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "Congratulations! You completed "+v(d,"stageName")+" and won "+p(d,"numTrophies",0,"is",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
+exports.nextStageTrophies = function(d){return "Til hamingju! Þú kláraðir "+v(d,"stageName")+" og vannst "+p(d,"numTrophies",0,"is",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
 exports.numBlocksNeeded = function(d){return "Til hamingju! Þú kláraðir þraut "+v(d,"puzzleNumber")+". (En þú hefðir getað notað bara  "+p(d,"numBlocks",0,"is",{"one":"1 kubb","other":n(d,"numBlocks")+" kubba"})+".)"};
 
@@ -12199,23 +12199,23 @@ exports.catLogic = function(d){return "Rökvísi"};
 
 exports.colourTooltip = function(d){return "Breytir litnum á penslinum."};
 
-exports.createACircle = function(d){return "create a circle"};
+exports.createACircle = function(d){return "búa til hring"};
 
-exports.createSnowflakeSquare = function(d){return "create a snowflake of type square"};
+exports.createSnowflakeSquare = function(d){return "búa til snjókorn af gerð ferningur"};
 
-exports.createSnowflakeParallelogram = function(d){return "create a snowflake of type parallelogram"};
+exports.createSnowflakeParallelogram = function(d){return "búa til snjókorn af gerð samsíðungur"};
 
-exports.createSnowflakeLine = function(d){return "create a snowflake of type line"};
+exports.createSnowflakeLine = function(d){return "búa til snjókorn af gerð lína"};
 
-exports.createSnowflakeSpiral = function(d){return "create a snowflake of type spiral"};
+exports.createSnowflakeSpiral = function(d){return "búa til snjókorn af gerð spírall"};
 
-exports.createSnowflakeFlower = function(d){return "create a snowflake of type flower"};
+exports.createSnowflakeFlower = function(d){return "búa til snjókorn af gerð blóm"};
 
-exports.createSnowflakeFractal = function(d){return "create a snowflake of type fractal"};
+exports.createSnowflakeFractal = function(d){return "búa til snjókorn af gerð brotamynd"};
 
-exports.createSnowflakeRandom = function(d){return "create a snowflake of type random"};
+exports.createSnowflakeRandom = function(d){return "búa til snjókorn af gerð handahóf"};
 
-exports.createASnowflakeBranch = function(d){return "create a snowflake branch"};
+exports.createASnowflakeBranch = function(d){return "búa til grein snjókorna"};
 
 exports.degrees = function(d){return "gráður"};
 
@@ -12255,7 +12255,7 @@ exports.drawUpperWave = function(d){return "teikna efri bylgju"};
 
 exports.drawLowerWave = function(d){return "teikna neðri bylgju"};
 
-exports.drawStamp = function(d){return "draw stamp"};
+exports.drawStamp = function(d){return "teikna stimpil"};
 
 exports.heightParameter = function(d){return "hæð"};
 

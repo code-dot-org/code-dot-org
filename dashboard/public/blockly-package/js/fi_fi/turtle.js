@@ -12090,9 +12090,9 @@ exports.nextLevel = function(d){return "Onneksi olkoon! Olet suorittanut "+v(d,"
 
 exports.nextLevelTrophies = function(d){return "Onneksi olkoon! Olet suorittanut "+v(d,"puzzleNumber")+". pulman ja voittanut "+p(d,"numTrophies",0,"fi",{"one":"pokaalin","other":n(d,"numTrophies")+" pokaalia"})+"."};
 
-exports.nextStage = function(d){return "Onnittelut! Olet suorittanut "+v(d,"stageName")+"."};
+exports.nextStage = function(d){return "Onnittelut! Olet suorittanut tason "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "Onnittelut! Olet suorittanut "+v(d,"stageName")+" ja voitit "+p(d,"numTrophies",0,"fi",{"one":"pokaalin","other":n(d,"numTrophies")+" pokaalia"})+"."};
+exports.nextStageTrophies = function(d){return "Onnittelut! Olet suorittanut tason "+v(d,"stageName")+" ja voitit "+p(d,"numTrophies",0,"fi",{"one":"pokaalin","other":n(d,"numTrophies")+" pokaalia"})+"."};
 
 exports.numBlocksNeeded = function(d){return "Onneksi olkoon! Olet suorittanut "+v(d,"puzzleNumber")+". pulman (olisit tosin voinut käyttää vain "+p(d,"numBlocks",0,"fi",{"one":"yhden lohkon","other":n(d,"numBlocks")+" lohkoa"})+")."};
 
@@ -12168,7 +12168,7 @@ exports.when = function(d){return "kun"};
 
 exports.whenRun = function(d){return "kun suoritetaan"};
 
-exports.tryHOC = function(d){return "Kokeile koodituntia"};
+exports.tryHOC = function(d){return "Kokeile koodaustuntia"};
 
 exports.signup = function(d){return "Rekisteröidy johdantokurssille"};
 
@@ -12199,7 +12199,7 @@ exports.catLogic = function(d){return "Logiikka"};
 
 exports.colourTooltip = function(d){return "Muuttaa kynän väriä."};
 
-exports.createACircle = function(d){return "create a circle"};
+exports.createACircle = function(d){return "Luo ympyrä"};
 
 exports.createSnowflakeSquare = function(d){return "create a snowflake of type square"};
 
@@ -12221,7 +12221,7 @@ exports.degrees = function(d){return "astetta"};
 
 exports.depth = function(d){return "syvyys"};
 
-exports.dots = function(d){return "kuvapisteet"};
+exports.dots = function(d){return "kuvapistettä"};
 
 exports.drawASquare = function(d){return "piirrä neliö"};
 
@@ -12255,7 +12255,7 @@ exports.drawUpperWave = function(d){return "piirrä ylempi aalto"};
 
 exports.drawLowerWave = function(d){return "piirrä alempi aalto"};
 
-exports.drawStamp = function(d){return "draw stamp"};
+exports.drawStamp = function(d){return "Piirrä leima"};
 
 exports.heightParameter = function(d){return "korkeus"};
 

@@ -11830,7 +11830,7 @@ exports.outline = function(d){return "outline"};
 
 exports.solid = function(d){return "solid"};
 
-exports.string = function(d){return "string"};
+exports.string = function(d){return "строка"};
 
 
 },{"messageformat":60}],49:[function(require,module,exports){

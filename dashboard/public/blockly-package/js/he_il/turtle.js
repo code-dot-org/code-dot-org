@@ -12269,13 +12269,13 @@ exports.jumpForward = function(d){return "קפוץ קדימה"};
 
 exports.jumpTooltip = function(d){return "הזז את האמן בלי להשאיר סימנים."};
 
-exports.jumpEastTooltip = function(d){return "Moves the artist east without leaving any marks."};
+exports.jumpEastTooltip = function(d){return "הזז/י את האומן מזרחה בלי להשאיר אף סימן."};
 
-exports.jumpNorthTooltip = function(d){return "Moves the artist north without leaving any marks."};
+exports.jumpNorthTooltip = function(d){return "הזז/י את האומן צפונה בלי להשאיר אף סימן."};
 
-exports.jumpSouthTooltip = function(d){return "Moves the artist south without leaving any marks."};
+exports.jumpSouthTooltip = function(d){return "הזז/י את האומן דרומה בלי להשאיר אף סימן."};
 
-exports.jumpWestTooltip = function(d){return "Moves the artist west without leaving any marks."};
+exports.jumpWestTooltip = function(d){return "הזז/י את האומן מערבה בלי להשאיר אף סימן."};
 
 exports.lengthFeedback = function(d){return "You got it right except for the lengths to move."};
 

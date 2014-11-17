@@ -20092,19 +20092,19 @@ exports.backgroundNight = function(d){return "night"};
 
 exports.backgroundUnderwater = function(d){return "underwater"};
 
-exports.backgroundCity = function(d){return "city"};
+exports.backgroundCity = function(d){return "город"};
 
-exports.backgroundDesert = function(d){return "desert"};
+exports.backgroundDesert = function(d){return "пустыня"};
 
-exports.backgroundRainbow = function(d){return "rainbow"};
+exports.backgroundRainbow = function(d){return "радуга"};
 
-exports.backgroundSoccer = function(d){return "soccer"};
+exports.backgroundSoccer = function(d){return "футбол"};
 
 exports.backgroundSpace = function(d){return "space"};
 
-exports.backgroundTennis = function(d){return "tennis"};
+exports.backgroundTennis = function(d){return "теннис"};
 
-exports.backgroundWinter = function(d){return "winter"};
+exports.backgroundWinter = function(d){return "зима"};
 
 exports.catActions = function(d){return "Действия"};
 
@@ -20466,7 +20466,7 @@ exports.shareStudioTwitter = function(d){return "Проверьте истори
 
 exports.shareGame = function(d){return "Поделиться своей историей:"};
 
-exports.showCoordinates = function(d){return "show coordinates"};
+exports.showCoordinates = function(d){return "Показать координаты"};
 
 exports.showCoordinatesTooltip = function(d){return "show the protagonist's coordinates on the screen"};
 

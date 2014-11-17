@@ -9630,7 +9630,7 @@ exports.extraTopBlocks = function(d){return "Bạn có các khối tự do. Ý c
 
 exports.finalStage = function(d){return "Chúc mừng. Bạn vừa hoàn thành xong bước cuối cùng."};
 
-exports.finalStageTrophies = function(d){return "Congratulations! You have completed the final stage and won "+p(d,"numTrophies",0,"vi",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
+exports.finalStageTrophies = function(d){return "Chúc mừng! Bạn vừa hoàn thành bước cuối cùng và dành danh hiệu "+p(d,"numTrophies",0,"vi",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
 exports.finish = function(d){return "Hoàn Thành"};
 

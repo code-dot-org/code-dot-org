@@ -12132,7 +12132,7 @@ exports.toolboxHeader = function(d){return "Блокове"};
 
 exports.openWorkspace = function(d){return "Как работи"};
 
-exports.totalNumLinesOfCodeWritten = function(d){return "All-time total: "+p(d,"numLines",0,"bg",{"one":"1 line","other":n(d,"numLines")+" lines"})+" of code."};
+exports.totalNumLinesOfCodeWritten = function(d){return "Общо: "+p(d,"numLines",0,"bg",{"one":"1 line","other":n(d,"numLines")+" lines"})+" код."};
 
 exports.tryAgain = function(d){return "Опитайте отново"};
 
@@ -12199,23 +12199,23 @@ exports.catLogic = function(d){return "Логика"};
 
 exports.colourTooltip = function(d){return "Променя цвета на молива."};
 
-exports.createACircle = function(d){return "create a circle"};
+exports.createACircle = function(d){return "създайте кръг"};
 
-exports.createSnowflakeSquare = function(d){return "create a snowflake of type square"};
+exports.createSnowflakeSquare = function(d){return "създаване на снежинка с основа квадрат"};
 
-exports.createSnowflakeParallelogram = function(d){return "create a snowflake of type parallelogram"};
+exports.createSnowflakeParallelogram = function(d){return "създаване на снежинка с основа успоредник"};
 
-exports.createSnowflakeLine = function(d){return "create a snowflake of type line"};
+exports.createSnowflakeLine = function(d){return "създаване на снежинка на основата на линия"};
 
-exports.createSnowflakeSpiral = function(d){return "create a snowflake of type spiral"};
+exports.createSnowflakeSpiral = function(d){return "създаване на снежинка от тип спирала"};
 
-exports.createSnowflakeFlower = function(d){return "create a snowflake of type flower"};
+exports.createSnowflakeFlower = function(d){return "създаване на снежинка от тип цвете"};
 
-exports.createSnowflakeFractal = function(d){return "create a snowflake of type fractal"};
+exports.createSnowflakeFractal = function(d){return "създаване на снежинка от тип фрактали"};
 
-exports.createSnowflakeRandom = function(d){return "create a snowflake of type random"};
+exports.createSnowflakeRandom = function(d){return "Създайте снежинка от случаен тип"};
 
-exports.createASnowflakeBranch = function(d){return "create a snowflake branch"};
+exports.createASnowflakeBranch = function(d){return "създаване копие на снежинка"};
 
 exports.degrees = function(d){return "градуса"};
 
@@ -12255,7 +12255,7 @@ exports.drawUpperWave = function(d){return "рисува горната вълн
 
 exports.drawLowerWave = function(d){return "рисува долна вълна"};
 
-exports.drawStamp = function(d){return "draw stamp"};
+exports.drawStamp = function(d){return "начертайте щампа"};
 
 exports.heightParameter = function(d){return "височина"};
 

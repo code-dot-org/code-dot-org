@@ -8404,7 +8404,7 @@ exports.extraTopBlocks = function(d){return "Ekintza blokeei lotu gabeko blokeak
 
 exports.finalStage = function(d){return "Zorionak! Azkeneko eszenatokia osatu duzu."};
 
-exports.finalStageTrophies = function(d){return "Congratulations! You have completed the final stage and won "+p(d,"numTrophies",0,"eu",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
+exports.finalStageTrophies = function(d){return "Zorionak! Azkeneko eszenatokia osatu duzu eta "+p(d,"numTrophies",0,"eu",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
 exports.finish = function(d){return "Finish"};
 
