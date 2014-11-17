@@ -146,8 +146,7 @@ class ActivitiesController < ApplicationController
     end
 
     # blockly could send us 'undefined' when things are not defined...
-    if params[:save_to_gallery] && params[:save_to_gallery] != 'undefined' &&
-        @level_source_image && solved
+    if params[:save_to_gallery] == 'true' && @level_source_image && solved
       @gallery_activity = GalleryActivity.create!(user: current_user, activity: @activity, autosaved: true)
     end
 
