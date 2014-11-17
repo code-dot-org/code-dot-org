@@ -22,6 +22,7 @@ template "/etc/logrotate.d/dashboard" do
   group 'root'
   mode '0644'
   variables ({
+    app_name:'dashboard',
     log_dir:"/home/#{node[:current_user]}/#{node.chef_environment}/dashboard/log",
   })
 end
