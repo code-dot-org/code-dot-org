@@ -59,7 +59,7 @@
   "tooMuchWork": "Накара ме да се изпотя! Може ли да пробваме, но с по-малко повторения?",
   "toolboxHeader": "Блокове",
   "openWorkspace": "Как работи",
-  "totalNumLinesOfCodeWritten": "Общо: {numLines, plural, one {numLines, plural, one {1 line} other {# lines}} код.",
+  "totalNumLinesOfCodeWritten": "Общо: {numLines, plural, one {1 line} other {# lines}} код.",
   "tryAgain": "Опитайте отново",
   "hintRequest": "Вижте съвета",
   "backToPreviousLevel": "Обратно към предишното ниво",
