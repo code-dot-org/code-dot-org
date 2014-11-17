@@ -1,119 +1,105 @@
+:scss
 #landingpage
   - flash.delete(:notice)
-  %h1= t('home.title')
   - if current_user
-    .row
-      .span10
+    .row#welcome
+      .span9
         %h2= t('welcome_back', name: current_user.name)
 
-      .span2
-        - if current_user.students.length > 0 || current_user.teacher?
+      .span3{style: 'text-align: right'}
+        - if current_user.teacher?
           %br/
-          = button_to t('home.use_as_teacher'), teacher_dashboard_url, :class=>"btn btn-info biggerbutton"
+          = button_to t('nav.user.classroom'), teacher_dashboard_url, class: "btn btn-info", style: 'background: #428bca; border-color: #357ebd;'
 
-    .row
-      .span12
-        - if current_user.primary_script
-          %h4 #{t('home.student_progress')}:
-          - if current_user.primary_script.trophies?
-            = t('home.student_stats', trophy_count: current_user.trophy_count, trophy_max: Trophy::TROPHY_MAX)
-            %br/
+    - if current_user.primary_script
+      .row#continue
+        .span12
+          .padtopbottom{style: 'line-height: 1.5em'}
+            = render partial: 'shared/student_continue', locals: { include_finished: true }
 
-          %div.padtopbottom
-            = render partial: 'shared/student_continue', locals: { include_finished: true, script: current_user.primary_script }
-            - if !current_user.teacher? && current_user.teachers.length == 0
-              = link_to t('add_teacher_form.submit'), "#section_code"
-        - unless current_user.gallery_activities.empty?
-          = render partial: 'home/gallery'
-    %br/
+    - unless @gallery_activities.empty?
+      = render partial: 'home/gallery'
 
-    - if current_user && current_user.primary_script
-      = render partial: 'shared/course_progress_block', locals: { script: current_user.primary_script }
-  - else
+    - unless current_user.working_on_user_scripts.empty?
+      = render partial: 'home/nav', locals: {active: :working}
+      - current_user.working_on_user_scripts.each do |user_script|
+        = render partial: 'shared/course_progress_block', locals: { script: user_script.script, user_script: user_script }
+
+    - unless current_user.completed_user_scripts.empty?
+      = render partial: 'home/nav', locals: {active: :completed}
+      - current_user.completed_user_scripts.each do |user_script|
+        = render partial: 'shared/course_progress_block', locals: { script: user_script.script, user_script: user_script }
+          
+  - else # no logged in user
     - unless Rails.configuration.minimal_mode
+      = render partial: 'home/sign_in_buttons'
 
-      .row#signup
-        .span6
-          %a{style: "text-decoration:none", href: new_user_registration_path}
-            %button.btn= t('home.student_reg_link')
 
-          %a{href: new_user_registration_path('user[user_type]' => User::TYPE_TEACHER)}
-            %button.btn= t('home.teacher_reg_link')
+  = render partial: 'home/nav', locals: {active: :all}
+  = render partial: 'home/all_courses'
 
-        .span6{style: "text-align:right"}
-          %div{style: "float:right"}
-            %a{href: new_user_session_path}
-              %button.btn= t('nav.user.signin')
-          %div{style: "float:right"}
-            .registertext= t('nav.user.already_registered')
-
-      %br/
-
-    .row
-      = render partial: '/shared/course_big_block', locals: {id: "hoc" }
-    %br/
-    .row
-      .span12.twolineheader!= t('home.heading_elementary')
-      = render partial: 'shared/course_tall_block', locals: { id: "course1" }
-      = render partial: 'shared/course_tall_block', locals: { id: "course2" }
-      = render partial: 'shared/course_tall_block', locals: { id: "course3" }
-    %br/
-    .row
-      .span12.twolineheader!= t('home.heading_apps')
-    .row
-      = render partial: 'shared/course_tall_block', locals: { id: "playlab" }
-      = render partial: 'shared/course_tall_block', locals: { id: "flappy" }
-      = render partial: 'shared/course_tall_block', locals: { id: "artist" }
-    %br/
-    .row
-      .span12.twolineheader!= t('home.heading_legacy')
-    .row
-      = render partial: 'shared/course_wide_block', locals: { id: "20hour" }
-
-  %br/
   - if current_user && !current_user.teacher?
-    - if current_user.teachers.length >= 1
-      = t('teacher.title', count: current_user.teachers.length, name: '')
-      = raw current_user.teachers.map{|t| t[:name] + ' ' + link_to(t('teacher.remove'), remove_follower_path(teacher_user_id: t[:id], student_user_id: current_user.id), confirm: t('teacher.confirm.remove'), method: :post)}.join(', ')
-    - else
-      %h4= t('add_teacher_form.code.label')
-      = form_for([Follower.new]) do |f|
-        .field
-          = text_field_tag :section_code, nil, class: 'input-xxlarge', placeholder: t('add_teacher_form.code.placeholder'), :required => true
-          = hidden_field_tag :redirect, root_path
-        .actions
-          = f.submit t('add_teacher_form.submit')
-    %br/
-    %br/
-  %br/
+    .row#edit_teachers
+      .span12
+        .padtopbottom
+          - if current_user.teachers.empty?
+            = form_for([Follower.new], html: {class: 'form-inline'}) do |f|
+              %label= t('add_teacher_form.code.label')
+              = text_field_tag :section_code, nil, class: 'form-control', placeholder: t('add_teacher_form.code.placeholder'), :required => true
+              = hidden_field_tag :redirect, root_path
+              %button.btn.btn-default{type: 'submit', style: 'margin-top:0'}= t('add_teacher_form.submit')
+          - else
+            = t('teacher.title', count: current_user.teachers.length, name: '')
+            = raw current_user.teachers.map{|t| t[:name] + ' ' + link_to(t('teacher.remove'), remove_follower_path(teacher_user_id: t[:id], student_user_id: current_user.id), confirm: t('teacher.confirm.remove'), method: :post)}.join(', ')
 
-  - if current_user && current_user.admin?
-    = render partial: 'home/admin'
+- if current_user && current_user.admin?
+  = render partial: 'home/admin'
 
-  - if current_user
-    .row
-      .span12.twolineheader!= t('home.heading_elementary')
-      = render partial: 'shared/course_tall_block', locals: { id: "course1" }
-      = render partial: 'shared/course_tall_block', locals: { id: "course2" }
-      = render partial: 'shared/course_tall_block', locals: { id: "course3" }
-    %br/
-    .row
-      .span12.twolineheader!= t('home.heading_apps')
-    .row
-      = render partial: 'shared/course_tall_block', locals: { id: "playlab" }
-      = render partial: 'shared/course_tall_block', locals: { id: "flappy" }
-      = render partial: 'shared/course_tall_block', locals: { id: "artist" }
-      = render partial: 'shared/course_tall_block', locals: { id: "hoc" }
-    %br/
-    .row
-      .span12.twolineheader!= t('home.heading_legacy')
-    .row
-      = render partial: 'shared/course_wide_block', locals: { id: "20hour" }
+:javascript
+  $( "#section_code" ).placeholder();
 
+:javascript
+  $(document).ready(function() {
+    // set up course progress show/hide 
+    var toggleProgress = function() {
+      var stats = $(this).parents('.course_progress').children('#stats');
+      $(this).children('i').toggleClass('fa-minus-square').toggleClass('fa-plus-square'); // flip state of +/-
 
-  %br/
-  %br/
-  %br/
+      stats.toggle(); // hide/show stats area
 
-  :javascript
-    $( "#section_code" ).placeholder();
+      // load the stats from the server if necessary
+      if (!stats.attr('data-loaded')) {
+        $.ajax({url:'#{header_stats_path}',
+                data: { script_id: stats.attr('data-script-id')},
+                success: function(result) {
+                  stats.children('.content').html(result);
+                  stats.attr('data-loaded', 'true');
+                }
+        });
+      }
+      return false;
+    }
+    
+    $('.course_progress .expando').click(toggleProgress);
+
+    // expand the first course progress
+    if ($('.course_progress .expando').first()) {
+      $('.course_progress .expando').first().click();
+    }
+
+    // set up gallery pagination
+    $('#gallery').on('click', '.pagination a', function() {
+        $.ajax({url: $(this).attr('href'),
+                data: { },
+                success: function(result) {
+                  $('#gallery').animate({opacity: '25%'},
+                    500,
+                    function() {
+                      $('#gallery').html(result);
+                    });
+                }
+        });
+        return false;
+    });
+    
+  });

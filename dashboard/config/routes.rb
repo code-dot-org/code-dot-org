@@ -61,6 +61,7 @@ Dashboard::Application.routes.draw do
   get '/home_insert', to: 'home#home_insert'
   get '/health_check', to: 'home#health_check'
   get '/admin/debug', to: 'home#debug'
+  get '/home/gallery_activites', to: 'home#gallery_activities'
 
   post '/locale', to: 'home#set_locale', as: 'locale'
 
