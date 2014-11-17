@@ -19,6 +19,7 @@
     "honey_goal": "1",
     "ideal": "6",
     "video_key": "C1_bee_level_intro",
+    "disable_param_editing": "true",
     "maze_data": null
   }
 }]]></config>

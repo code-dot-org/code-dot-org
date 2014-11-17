@@ -17,8 +17,12 @@ require 'rails/test_help'
 
 require "mocha/test_unit"
 
+# Raise exceptions instead of rendering exception templates.
+Dashboard::Application.config.action_dispatch.show_exceptions = false#
+
 class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!
+
 
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   #

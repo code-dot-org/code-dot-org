@@ -47,7 +47,7 @@ var validateSimplePuzzle = function (types, options) {
     }
   }
 
-  var roots = Blockly.mainWorkspace.getTopBlocks();
+  var roots = Blockly.mainBlockSpace.getTopBlocks();
   if (roots.length !== 1) {
     return false;
   }
@@ -122,10 +122,10 @@ module.exports = {
     goal: {
       successCondition: function () {
         // need to be finished drag
-        if (Blockly.mainWorkspace.dragMode) {
+        if (Blockly.mainBlockSpace.dragMode) {
           return false;
         }
-        var pos = Blockly.mainWorkspace.getAllBlocks()[0].getRelativeToSurfaceXY();
+        var pos = Blockly.mainBlockSpace.getAllBlocks()[0].getRelativeToSurfaceXY();
         // how close to ghost?
         var dx = Math.abs(400 - pos.x);
         var dy = Math.abs(100 - pos.y);

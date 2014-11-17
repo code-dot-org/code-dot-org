@@ -186,3 +186,23 @@ function test_printerRangeToNumbers() {
   assert('Single numbers and a range', goog.array.equals([1,2,3,4,5], Blockly.printerRangeToNumbers('1,2-4,5')));
   assert('Spaces in list', goog.array.equals([1,2,3,4,5], Blockly.printerRangeToNumbers('1, 2-4, 5')));
 }
+
+function test_initializeBlockSpace() {
+  var container = document.createElement('div');
+  document.body.appendChild(container);
+  Blockly.assetUrl = function(){return ''};
+  Blockly.Css.inject();
+  Blockly.mainBlockSpaceEditor = new Blockly.BlockSpaceEditor(container);
+  Blockly.mainBlockSpace = Blockly.mainBlockSpaceEditor.blockSpace;
+  goog.dom.removeNode(container);
+}
+
+function test_initializeBlockSpace() {
+  var container = document.createElement('div');
+  document.body.appendChild(container);
+  Blockly.assetUrl = function(){return ''};
+  Blockly.Css.inject();
+  Blockly.mainBlockSpaceEditor = new Blockly.BlockSpaceEditor(container);
+  Blockly.mainBlockSpace = Blockly.mainBlockSpaceEditor.blockSpace;
+  goog.dom.removeNode(container);
+}

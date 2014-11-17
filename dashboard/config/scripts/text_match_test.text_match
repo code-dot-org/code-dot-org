@@ -1,0 +1,8 @@
+name 'text match test'
+title 'Mathematical Expression Assessment'
+placeholder 'Type the arithmetic expression here'
+content1 'Type out the arithmetic expression that this circle of evaluation evaluates to'
+content2 '/script_assets/msm/Unit 1/Exercise_5_question_2.png'
+answer '(9-3)+(4*7)'
+answer '(9-3)+4*7'
+answer '9-3+4*7'

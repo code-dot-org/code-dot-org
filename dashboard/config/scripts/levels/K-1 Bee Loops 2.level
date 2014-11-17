@@ -18,8 +18,7 @@
     "flower_type": "redWithNectar",
     "skip_instructions_popup": "false",
     "ideal": "6",
-    "video_key": "C1_bee_loops",
-    "maze_data": null
+    "video_key": "C1_bee_loops"
   }
 }]]></config>
   <blocks>

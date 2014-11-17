@@ -3,11 +3,10 @@
   "game_id": 23,
   "created_at": "2014-10-30T22:10:00.000Z",
   "level_num": "custom",
-  "ideal_level_source_id": 510,
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "That square loop is great, and it would be nice to be able to just say \"draw a square\" whenever I want one. Functions allow us to do just that! Any time you write some code that you want to use over and over again you can put it into a function",
+    "instructions": "Let's take that square loop and turn it into a function, so anytime you want to draw a square you only have to call the function. Click \"edit\" on the existing \"draw a square\" function and make it draw a 100 pixel square.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -15,87 +14,136 @@
     "free_play": "false",
     "start_direction": "90",
     "x": "150",
-    "y": "250"
+    "y": "250",
+    "slider_speed": ".5",
+    "impressive": "false",
+    "use_modal_function_editor": "true",
+    "ideal": "9",
+    "use_contract_editor": "false"
   }
 }]]></config>
   <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="procedures_callnoreturn" movable="false">
+              <mutation name="draw a square"/>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn" uservisible="false">
+          <mutation/>
+          <title name="NAME">draw a square</title>
+        </block>
+      </xml>
+    </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="draw_move_by_constant">
-          <title name="DIR">moveForward</title>
-          <title name="VALUE">100</title>
-        </block>
-        <block type="draw_turn_by_constant">
-          <title name="DIR">turnLeft</title>
-          <title name="VALUE">90</title>
-        </block>
-        <block type="draw_turn_by_constant">
-          <title name="DIR">turnRight</title>
-          <title name="VALUE">90</title>
-        </block>
-        <block type="procedures_defnoreturn">
-          <mutation/>
-          <title name="NAME">do something</title>
-        </block>
-        <block type="procedures_callnoreturn">
-          <mutation name="do something"/>
-        </block>
-        <block type="controls_repeat">
-          <title name="TIMES">4</title>
-        </block>
+        <category name="Actions">
+          <block type="draw_move" inline="true">
+            <title name="DIR">moveForward</title>
+            <value name="VALUE">
+              <block type="math_number">
+                <title name="NUM">100</title>
+              </block>
+            </value>
+          </block>
+          <block type="draw_turn" inline="true">
+            <title name="DIR">turnRight</title>
+            <value name="VALUE">
+              <block type="math_number">
+                <title name="NUM">90</title>
+              </block>
+            </value>
+          </block>
+          <block type="draw_turn" inline="true">
+            <title name="DIR">turnLeft</title>
+            <value name="VALUE">
+              <block type="math_number">
+                <title name="NUM">90</title>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Loops">
+          <block type="controls_repeat_ext" inline="true">
+            <value name="TIMES">
+              <block type="math_number">
+                <title name="NUM">3</title>
+              </block>
+            </value>
+          </block>
+          <block type="procedures_defnoreturn" uservisible="false">
+            <mutation>
+              <arg name="Draw a Square"/>
+              <arg name=""/>
+              <description>Draw a Square</description>
+            </mutation>
+            <title name="NAME">Draw a Square</title>
+          </block>
+        </category>
       </xml>
     </toolbox_blocks>
     <required_blocks>
       <xml>
-        <block type="draw_move_by_constant">
+        <block type="draw_move" inline="true" uservisible="false">
           <title name="DIR">moveForward</title>
-          <title name="VALUE">100</title>
+          <value name="VALUE">
+            <block type="math_number" uservisible="false">
+              <title name="NUM">100</title>
+            </block>
+          </value>
         </block>
-        <block type="draw_turn_by_constant">
+        <block type="draw_turn" inline="true" uservisible="false">
           <title name="DIR">turnLeft</title>
-          <title name="VALUE">90</title>
+          <value name="VALUE">
+            <block type="math_number" uservisible="false">
+              <title name="NUM">90</title>
+            </block>
+          </value>
         </block>
-        <block type="procedures_defnoreturn">
-          <mutation/>
-          <title name="NAME">Draw a square</title>
-        </block>
-        <block type="procedures_callnoreturn">
-          <mutation name="Draw a square"/>
-        </block>
-        <block type="controls_repeat">
-          <title name="TIMES">4</title>
+        <block type="controls_repeat_ext" inline="true" uservisible="false">
+          <value name="TIMES">
+            <block type="math_number" uservisible="false">
+              <title name="NUM">4</title>
+            </block>
+          </value>
         </block>
       </xml>
     </required_blocks>
     <solution_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
+        <block type="when_run" movable="false" deletable="false">
           <next>
-            <block type="procedures_callnoreturn">
-              <mutation name="Draw a square"/>
-            </block>
-          </next>
-        </block>
-        <block type="procedures_defnoreturn">
-          <mutation/>
-          <title name="NAME">Draw a square</title>
-          <statement name="STACK">
-            <block type="controls_repeat">
-              <title name="TIMES">4</title>
+            <block type="controls_repeat_ext" inline="true">
+              <value name="TIMES">
+                <block type="math_number">
+                  <title name="NUM">4</title>
+                </block>
+              </value>
               <statement name="DO">
-                <block type="draw_move_by_constant">
+                <block type="draw_move" inline="true">
                   <title name="DIR">moveForward</title>
-                  <title name="VALUE">100</title>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <title name="NUM">100</title>
+                    </block>
+                  </value>
                   <next>
-                    <block type="draw_turn_by_constant">
+                    <block type="draw_turn" inline="true">
                       <title name="DIR">turnLeft</title>
-                      <title name="VALUE">90</title>
+                      <value name="VALUE">
+                        <block type="math_number">
+                          <title name="NUM">90</title>
+                        </block>
+                      </value>
                     </block>
                   </next>
                 </block>
               </statement>
             </block>
-          </statement>
+          </next>
         </block>
       </xml>
     </solution_blocks>

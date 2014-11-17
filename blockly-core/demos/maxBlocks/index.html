@@ -83,10 +83,10 @@
         {path: '../../', maxBlocks: 5, toolbox: document.getElementById('toolbox')});
 
     function onchange() {
-      document.getElementById('capacity').innerHTML = Blockly.mainWorkspace.remainingCapacity();
+      document.getElementById('capacity').innerHTML = Blockly.mainBlockSpace.remainingCapacity();
     }
 
-    Blockly.addChangeListener(onchange);
+    Blockly.mainBlockSpaceEditor.addChangeListener(onchange);
 
   </script>
 

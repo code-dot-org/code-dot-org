@@ -18,8 +18,7 @@
     "flower_type": "redWithNectar",
     "skip_instructions_popup": "true",
     "scrollbars": "true",
-    "ideal": "6",
-    "maze_data": null
+    "ideal": "6"
   }
 }]]></config>
   <blocks>

@@ -1,8 +1,10 @@
 {
   "and": "dhe",
+  "booleanTrue": "e saktë",
+  "booleanFalse": "e pasaktë",
   "blocklyMessage": "Blockly",
   "catActions": "Veprimet",
-  "catColour": "Colour",
+  "catColour": "Ngjyra",
   "catLogic": "Logic",
   "catLists": "Listat",
   "catLoops": "perseritje",

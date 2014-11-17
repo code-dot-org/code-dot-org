@@ -18,7 +18,6 @@
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "predraw_blocks": "<xml><block type=\"maze_moveForward\"><next><block type=\"maze_moveForward\"><next><block type=\"maze_turn\"><title name=\"DIR\">turnRight</title><next><block type=\"maze_moveForward\"><next><block type=\"controls_repeat\"><title name=\"TIMES\">3</title><statement name=\"DO\"><block type=\"bee_ifNectarAmount\" inline=\"true\"><title name=\"ARG1\">nectarRemaining</title><title name=\"OP\">&gt;</title><value name=\"ARG2\"><block type=\"math_number\"><title name=\"NUM\">0</title></block></value><statement name=\"DO\"><block type=\"maze_nectar\"></block></statement></block></statement></block></next></block></next></block></next></block></next></block></xml>",
     "ideal": "5",
-    "maze_data": null,
     "step_speed": "1"
   }
 }]]></config>

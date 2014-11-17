@@ -83,12 +83,12 @@ def send_message(template, item)
   begin
     ip_address = '127.0.0.1'
 
-    recipient_id = @contacts_cache[item['email']]
+    recipient_id = @contacts_cache[item['email']] if @contacts_cache
     if recipient_id
       recipient = {id:recipient_id, email:item['email'], name:item['name'].to_s, ip_address:ip_address}
     else
       recipient = Poste2.ensure_recipient(item['email'], name:item['name'].to_s, ip_address:ip_address)
-      @contacts_cache[item['email']] = recipient[:id]
+      @contacts_cache[item['email']] = recipient[:id] if @contacts_cache
     end
     
     Poste2.send_message template, recipient, item.to_hash.except('email', 'name')

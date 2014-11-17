@@ -25,20 +25,26 @@ class Calc < Blockly
         game: Game.calc,
         level_num: 'custom',
         properties: {
-          solution_blocks: params[:program] || '<block type="functional_plus"></block>',
-          toolbox_blocks: "<xml>#{toolbox}</xml>"
+          solution_blocks: params[:program] || '',
+          toolbox_blocks: "<xml>#{toolbox}</xml>",
+          use_contract_editor: true
         }
     ))
   end
 
   def self.toolbox
     <<-XML.strip_heredoc.chomp
-      <block type="functional_compute"></block>
-      <block type="functional_plus"></block>
-      <block type="functional_minus"></block>
-      <block type="functional_times"></block>
-      <block type="functional_dividedby"></block>
-      <block type="functional_math_number"></block>
+      <category name="Number">
+        <block type="functional_plus"></block>
+        <block type="functional_minus"></block>
+        <block type="functional_times"></block>
+        <block type="functional_dividedby"></block>
+        <block type="functional_math_number"></block>
+        <block type="functional_math_number_dropdown">
+          <title name="NUM" config="0,1,2,3,4,5,6,7,8,9,10">???</title>
+        </block>
+      </category>
+      <category name="Functions" custom="PROCEDURE" />
     XML
   end
 

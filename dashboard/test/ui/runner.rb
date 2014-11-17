@@ -182,6 +182,14 @@ browsers.each do |browser|
   returnValue = `cucumber #{arguments}`
   succeeded = $?.exitstatus == 0
 
+  if !succeeded #&& $options.pegasus_domain =~ /test/ && !Rails.env.development?
+    # if in the test environment, rerun failures
+    puts "  Failed, rerunning"
+    HipChat.log "Rerunning <b>dashboard</b> UI with <b>#{browser['name'] || browser.inspect}</b>..."
+    returnValue = `cucumber #{arguments}`
+    succeeded = $?.exitstatus == 0
+  end
+
   if not succeeded
     log_error Time.now
     log_error browser.to_yaml

@@ -41,3 +41,6 @@ Blockly.JavaScript.variables_set = function() {
   var varName = Blockly.JavaScript.translateVarName(this.getTitleValue('VAR'));
   return varName + ' = ' + argument0 + ';\n';
 };
+
+Blockly.JavaScript.parameters_get = Blockly.JavaScript.variables_get;
+Blockly.JavaScript.parameters_set = Blockly.JavaScript.variables_set;

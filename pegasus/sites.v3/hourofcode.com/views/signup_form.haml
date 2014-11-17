@@ -1,3 +1,5 @@
+%script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=true&libraries=places,geometry&v=3.7"}
+
 %a#hocsignupform{name: 'signup'}
 #signupform
   %h2= hoc_s(:signup_header)
@@ -30,25 +32,13 @@
     .form-group
       %label.control-label{for: "hoc-event-location"}= hoc_s(:signup_event_location_label)
       %div
-        %textarea#hoc-event-location.form-control{name: "event_location_s", placeholder: hoc_s(:signup_event_location_placeholder), style: "height: 5em;"}
+        %textarea#hoc-event-location.form-control{name: "event_location_s", placeholder: hoc_s(:signup_event_location_placeholder), style: "height: 4em;"}
 
     .form-group{style: "display: none;"}
       .checkbox
         %label
           %input#hoc-entire-school-flag{name: "entire_school_flag_b", type: "checkbox", value: "1"}/
           =hoc_s(:signup_event_entire_school_label)
-
-    - if @country == 'us'
-      .form-group
-        .checkbox
-          %label
-            %input#hoc-send-posters-flag{name: "send_posters_flag_b", type: "checkbox", value: "1"}/
-            =hoc_s(:signup_send_posters_flag_label)
-
-      .form-group{style: "display: none;"}
-        %label.control-label{for: "hoc-send-posters-address"}= hoc_s(:signup_send_posters_address_label)
-        %div
-          %textarea#hoc-send-posters-address.form-control{name: "send_posters_address_s", placeholder: hoc_s(:signup_send_posters_address_placeholder), style: "height: 5em;"}
 
     .form-group
       .checkbox
@@ -70,6 +60,8 @@
 
 :javascript
   $(document).ready(function() {
+    new google.maps.places.SearchBox(document.getElementById('hoc-event-location'));
+
     $('#hoc-signup-form select').selectize({
       plugins: ['fast_click']
     });

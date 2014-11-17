@@ -1,5 +1,7 @@
 {
   "and": "och",
+  "booleanTrue": "sant",
+  "booleanFalse": "falskt",
   "blocklyMessage": "Blockly",
   "catActions": "Handlingar",
   "catColour": "Färg",

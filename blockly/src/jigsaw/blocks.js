@@ -123,7 +123,7 @@ var addPattern = function (id, imagePath, width, height, offsetX, offsetY) {
  * @param {string} type The type of the block to search for
  */
 var blockOfType = function (type) {
-  var blocks = Blockly.mainWorkspace.getAllBlocks();
+  var blocks = Blockly.mainBlockSpace.getAllBlocks();
   for (var i = 0; i < blocks.length; i++) {
     if (blocks[i].type === type) {
       return blocks[i];

@@ -81,14 +81,14 @@ function fetchFile(xmlUrl) {
 function fromXml(xmlText) {
   var output = document.getElementById('importExport');
   output.value = xmlText;
-  Blockly.mainWorkspace.clear();
+  Blockly.mainBlockSpace.clear();
   try {
     var xmlDoc = Blockly.Xml.textToDom(xmlText);
   } catch (e) {
     alert('Error parsing XML:\n' + e);
     return;
   }
-  Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, xmlDoc);
+  Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, xmlDoc);
 }
 
 function setOutput(text) {
@@ -99,19 +99,19 @@ function setOutput(text) {
 }
 
 function toXml() {
-  var xmlDom = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
+  var xmlDom = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   var xmlText = Blockly.Xml.domToPrettyText(xmlDom);
   setOutput(xmlText);
 }
 
 function toJavaScript() {
   var code = '\'use strict\';\n\n'
-  code += Blockly.Generator.workspaceToCode('JavaScript');
+  code += Blockly.Generator.blockSpaceToCode('JavaScript');
   setOutput(code);
 }
 
 function toPython() {
-  var code = Blockly.Generator.workspaceToCode('Python');
+  var code = Blockly.Generator.blockSpaceToCode('Python');
   setOutput(code);
 }
 </script>

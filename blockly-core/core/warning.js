@@ -103,7 +103,7 @@ Blockly.Warning.prototype.setVisible = function(visible) {
     // Create the bubble.
     var paragraph = this.textToDom_(this.text_);
     this.bubble_ = new Blockly.Bubble(
-        /** @type {!Blockly.Workspace} */ (this.block_.workspace),
+        /** @type {!Blockly.BlockSpace} */ (this.block_.blockSpace),
         paragraph, this.block_.svg_.svgGroup_,
         this.iconX_, this.iconY_, null, null);
     if (Blockly.RTL) {

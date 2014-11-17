@@ -63,7 +63,7 @@ Blockly.Msg.ENABLE_BLOCK = 'Enable Block';
 ///context menu - Provide helpful information about the selected block.
 Blockly.Msg.HELP = 'Help';
 
-// Variable renaming.
+// Variable/Parameter modification.
 ///prompt - This message is only seen in the Opera browser.  With most browsers, users can edit numeric values in blocks by just clicking and typing.  Opera does not allows this, so we have to open a new window and prompt users with this message to chanage a value.
 Blockly.Msg.CHANGE_VALUE_TITLE = 'Change value:';
 ///dropdown choice - When the user clicks on a variable block, this is one of the dropdown menu choices.  It is used to define a new variable.  See [https://code.google.com/p/blockly/wiki/Variables#Dropdown_menu https://code.google.com/p/blockly/wiki/Variables#Dropdown_menu].
@@ -74,6 +74,14 @@ Blockly.Msg.NEW_VARIABLE_TITLE = 'New variable name:';
 Blockly.Msg.RENAME_VARIABLE = 'Rename variable...';
 ///prompt - Prompts the user to enter the new name for the selected variable.  See [https://code.google.com/p/blockly/wiki/Variables#Dropdown_menu https://code.google.com/p/blockly/wiki/Variables#Dropdown_menu].\n\nParameters:\n* %1 - the name of the variable to be renamed.
 Blockly.Msg.RENAME_VARIABLE_TITLE = 'Rename all "%1" variables to:';
+///dropdown choice - When the user clicks on a parameter block, this is one of the dropdown menu choices.  It is used to rename the current parameter.
+Blockly.Msg.RENAME_PARAMETER = 'Rename parameter...';
+///prompt - Prompts the user to enter the new name for the selected parameter.
+Blockly.Msg.RENAME_PARAMETER_TITLE = 'Rename all "%1" parameters to:';
+///dropdown choice - When the user clicks on a parameter block, this is one of the dropdown menu choices.  It is used to delete the current parameter.
+Blockly.Msg.DELETE_PARAMETER = 'Delete parameter...';
+///prompt - Prompts the user to delete selected parameter and all occurrences.
+Blockly.Msg.DELETE_PARAMETER_TITLE = 'This will delete all "%1" parameter occurrences. Are you sure?';
 
 // Colour Blocks.
 ///url - Information about colour.

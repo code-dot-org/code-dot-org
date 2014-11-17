@@ -32,7 +32,7 @@ var BlocklyStorage = {};
  */
 BlocklyStorage.backupBlocks_ = function() {
   if ('localStorage' in window) {
-    var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
+    var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
     // Gets the current URL, not including the hash.
     var url = window.location.href.split('#')[0];
     window.localStorage.setItem(url, Blockly.Xml.domToText(xml));
@@ -53,7 +53,7 @@ BlocklyStorage.restoreBlocks = function() {
   var url = window.location.href.split('#')[0];
   if ('localStorage' in window && window.localStorage[url]) {
     var xml = Blockly.Xml.textToDom(window.localStorage[url]);
-    Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, xml);
+    Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, xml);
   }
 };
 
@@ -61,7 +61,7 @@ BlocklyStorage.restoreBlocks = function() {
  * Save blocks to database and return a link containing key to XML.
  */
 BlocklyStorage.link = function() {
-  var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
+  var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   var data = Blockly.Xml.domToText(xml);
   BlocklyStorage.makeRequest_('/storage', 'xml', data);
 };
@@ -71,7 +71,7 @@ BlocklyStorage.link = function() {
  * @param {string} key Key to XML, obtained from href.
  */
 BlocklyStorage.retrieveXml = function(key) {
-  var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
+  var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   BlocklyStorage.makeRequest_('/storage', 'key', key);
 };
 
@@ -134,24 +134,24 @@ BlocklyStorage.handleRequest_ = function() {
 };
 
 /**
- * Start monitoring the workspace.  If a change is made that changes the XML,
- * clear the key from the URL.  Stop monitoring the workspace once such a
+ * Start monitoring the blockSpace.  If a change is made that changes the XML,
+ * clear the key from the URL.  Stop monitoring the blockSpace once such a
  * change is detected.
  * @private
  */
 BlocklyStorage.monitorChanges_ = function() {
-  var startXmlDom = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
+  var startXmlDom = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   var startXmlText = Blockly.Xml.domToText(startXmlDom);
-  var canvas = Blockly.mainWorkspace.getCanvas();
+  var canvas = Blockly.mainBlockSpace.getCanvas();
   function change() {
-    var xmlDom = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
+    var xmlDom = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
     var xmlText = Blockly.Xml.domToText(xmlDom);
     if (startXmlText != xmlText) {
       window.location.hash = '';
       Blockly.removeChangeListener(bindData);
     }
   }
-  var bindData = Blockly.addChangeListener(change);
+  var bindData = Blockly.mainBlockSpaceEditor.addChangeListener(change);
 };
 
 /**
@@ -166,9 +166,9 @@ BlocklyStorage.loadXml_ = function(xml) {
     BlocklyStorage.alert(BlocklyStorage.XML_ERROR + '\nXML: ' + xml);
     return;
   }
-  // Clear the workspace to avoid merge.
-  Blockly.mainWorkspace.clear();
-  Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, xml);
+  // Clear the blockSpace to avoid merge.
+  Blockly.mainBlockSpace.clear();
+  Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, xml);
 };
 
 /**

@@ -50,6 +50,28 @@ module.exports = {
         return true;
       },
       xml: '<xml>' + solutionXml + '</xml>'
+    },
+    {
+      description: "correct answer, rotated an extra 360 degrees",
+      expected: {
+        result: true,
+        testResult: TestResults.ALL_PASS
+      },
+      customValidator: function (assert) {
+        var user = document.getElementById('user');
+        var rect = user.querySelector('rect');
+
+        var fill = rect.getAttribute('fill');
+        var stroke = rect.getAttribute('stroke');
+        assert(fill === 'none', 'fill: ' + fill);
+        assert(stroke === 'red', 'stroke: ' + stroke);
+        assert(rect.getAttribute('transform') === ' translate(200 200) rotate(405)',
+          'actual: ' + rect.getAttribute('transform'));
+        assert(rect.getAttribute('width', 50));
+        assert(rect.getAttribute('height', 100));
+        return true;
+      },
+      xml: '<xml>' + solutionXml.replace('45', '405') + '</xml>'
     }
   ]
 };

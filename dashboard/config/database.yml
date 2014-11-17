@@ -22,7 +22,7 @@ mysql_defaults: &mysql_defaults
     password: <%= writer.password || '' %>
     host: <%= writer.host || 'localhost' %>
     database: <%= writer.path.sub(%r{^/},"") || "dashboard_#{Rails.env}" %>
-  <% if reader %>
+  <% if reader && reader.host != writer.host %>
   read_pool:
    - username: <%= reader.user %>
      password: <%= reader.password %>

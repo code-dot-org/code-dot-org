@@ -264,7 +264,7 @@ Blockly.FieldRectangularDropdown.prototype.addPositionAndShowMenu = function (me
  * @private
  */
 Blockly.FieldRectangularDropdown.prototype.calculateMenuPosition_ = function (dropdownTargetElement, positionBelow) {
-  var previewTopLeft = Blockly.getAbsoluteXY_(dropdownTargetElement);
+  var previewTopLeft = Blockly.getAbsoluteXY_(dropdownTargetElement, this.getRootSVGElement_());
   var menuTopLeft = {
     x: previewTopLeft.x - Blockly.FieldRectangularDropdown.DROPDOWN_MENU_BORDER,
     y: previewTopLeft.y - Blockly.FieldRectangularDropdown.DROPDOWN_MENU_BORDER

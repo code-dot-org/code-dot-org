@@ -4,6 +4,10 @@ class LevelSourcesController < ApplicationController
   before_filter :load_level_source
 
   def show
+    if @level.skin =='elsa' or @level.skin == 'anna'
+      head 404
+      return
+    end
     @hide_source = true
   end
 
@@ -14,7 +18,7 @@ class LevelSourcesController < ApplicationController
   end
 
   def generate_image
-    if @game.app == Game::ARTIST
+    if @game.app == Game::ARTIST && ! ['anna', 'elsa'].include?(@level.skin) then
       framed_image
     else
       original_image
@@ -26,7 +30,7 @@ class LevelSourcesController < ApplicationController
                                                     :foreground_blob => @level_source.level_source_image.image)
     send_data drawing_on_background.to_blob, :stream => 'false', :type => 'image/png', :disposition => 'inline'
   end
-  
+
   def original_image
     send_data @level_source.level_source_image.image, :stream => 'false', :type => 'image/png', :disposition => 'inline'
   end

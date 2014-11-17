@@ -1,5 +1,7 @@
 {
   "and": "şi",
+  "booleanTrue": "adevărat",
+  "booleanFalse": "fals",
   "blocklyMessage": "Blockly",
   "catActions": "Acţiuni",
   "catColour": "Culoare",

@@ -67,8 +67,20 @@ module LevelsHelper
 
   def select_and_remember_callouts
     session[:callouts_seen] ||= Set.new()
-    @callouts_to_show = Callout.where(script_level: @script_level)
-      .select(:id, :element_id, :qtip_config, :localization_key)
+    available_callouts = []
+    if @level.custom?
+      unless @level.try(:callout_json).blank?
+        available_callouts = JSON.parse(@level.callout_json).map do |callout_definition|
+          Callout.new(element_id: callout_definition['element_id'],
+              localization_key: callout_definition['localization_key'],
+              qtip_config: callout_definition['qtip_config'].to_json)
+        end
+      end
+    else
+      available_callouts = Callout.where(script_level: @script_level)
+        .select(:id, :element_id, :qtip_config, :localization_key)
+    end
+    @callouts_to_show = available_callouts
       .reject { |c| session[:callouts_seen].include?(c.localization_key) }
       .each { |c| session[:callouts_seen].add(c.localization_key) }
     @callouts = make_localized_hash_of_callouts(@callouts_to_show)
@@ -207,7 +219,12 @@ module LevelsHelper
       projectile_collisions
       allow_sprites_outside_playspace
       sprites_hidden_to_start
+      coordinate_grid_background
+      use_modal_function_editor
+      use_contract_editor
       impressive
+      open_function_definition
+      callout_json
     ).map{ |x| x.include?(':') ? x.split(':') : [x,x.camelize(:lower)]}]
     .each do |dashboard, blockly|
       # Select first valid value from 1. local_assigns, 2. property of @level object, 3. named instance variable, 4. properties json
@@ -216,7 +233,8 @@ module LevelsHelper
         @level[dashboard].presence ||
         instance_variable_get("@#{dashboard}").presence ||
         level[dashboard.to_s].presence
-      level[blockly.to_s] ||= blockly_value(property) if property.present?
+      value = blockly_value(level[blockly.to_s] || property)
+      level[blockly.to_s] = value unless value.nil? # make sure we convert false
     end
 
     level['images'] = JSON.parse(level['images']) if level['images'].present?

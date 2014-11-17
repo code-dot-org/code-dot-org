@@ -18,9 +18,9 @@ levels.simple = {
   'scale': {
     'snapRadius': 2
   },
+  'freePlay': true,
   'toolbox':
-    tb(blockOfType('webapp_turnBlack') +
-      '<block type="webapp_createHtmlBlock" inline="true"> \
+      tb('<block type="webapp_createHtmlBlock" inline="true"> \
         <value name="ID"><block type="text"><title name="TEXT">id</title></block></value> \
         <value name="HTML"><block type="text"><title name="TEXT">html</title></block></value></block>'),
   'startBlocks':
@@ -28,11 +28,19 @@ levels.simple = {
 };
 
 levels.ec_simple = {
+  'freePlay': true,
   'editCode': true,
   'sliderSpeed': 0.7,
   'codeFunctions': [
-    {'func': 'turnBlack' },
+    {'func': 'random', 'params': ["1", "100"], 'category': 'hidden', 'idArgNone': true },
+    {'func': 'createButton', 'params': ["'id'", "'text'"] },
+    {'func': 'createTextInput', 'params': ["'id'", "'text'"] },
+    {'func': 'getText', 'params': ["'id'"], 'category': 'value' },
+    {'func': 'setText', 'params': ["'id'", "'text'"] },
+    {'func': 'setStyle', 'params': ["'id'", "'color:red;'"] },
     {'func': 'createHtmlBlock', 'params': ["'id'", "'html'"] },
+    {'func': 'replaceHtmlBlock', 'params': ["'id'", "'html'"] },
+    {'func': 'deleteHtmlBlock', 'params': ["'id'"] },
     {'func': 'attachEventHandler', 'params': ["'id'", "'click'", "function() {\n  \n}"] },
   ],
 };
@@ -55,7 +63,6 @@ levels.full_sandbox =  {
   'toolbox':
     tb(createCategory(
         msg.catActions(),
-        blockOfType('webapp_turnBlack') +
         '<block type="webapp_createHtmlBlock" inline="true"> \
           <value name="ID"><block type="text"><title name="TEXT">id</title></block></value> \
           <value name="HTML"><block type="text"><title name="TEXT">html</title></block></value></block>') +

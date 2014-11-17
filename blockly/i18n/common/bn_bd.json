@@ -1,5 +1,7 @@
 {
   "and": "এবং",
+  "booleanTrue": "সত্যি",
+  "booleanFalse": "মিথ্যা",
   "blocklyMessage": "Blockly",
   "catActions": "ক্রিয়া",
   "catColour": "রং",
