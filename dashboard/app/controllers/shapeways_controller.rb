@@ -20,7 +20,7 @@ class ShapewaysController < ApplicationController
     access = OAuth::AccessToken.new(consumer, OAUTH_TOKEN, OAUTH_SECRET)
 
     query_data = {
-        :fileName => 'my_unique_drawing_encode64.stl',
+        :fileName => 'my_artist_drawing.stl',
         :file => Base64.encode64(stl_data),
         :isPublic => true,
         :isForSale => 1,
