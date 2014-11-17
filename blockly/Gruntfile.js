@@ -22,7 +22,7 @@ var DEV = (process.env.MOOC_DEV === '1');
 
 var LOCALES = (LOCALIZE ? [
   'ar_sa',
-  //'az_az', no such file or directory './node_modules/messageformat/locale/az.js'
+  'az_az',
   'bg_bg',
   'bn_bd',
   'ca_es',
