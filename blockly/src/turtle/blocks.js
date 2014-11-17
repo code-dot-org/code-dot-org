@@ -28,6 +28,7 @@ var msg = require('../../locale/current/turtle');
 var commonMsg = require('../../locale/current/common');
 
 var customLevelBlocks = require('./customLevelBlocks');
+var Turtle = require('./turtle');
 
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function(blockly, blockInstallOptions) {
@@ -857,23 +858,10 @@ exports.install = function(blockly, blockInstallOptions) {
       this.appendDummyInput()
            .appendTitle(msg.setPattern())
            .appendTitle( new blockly.FieldImageDropdown(
-              blockly.Blocks.draw_line_style_pattern.Options, 150, 20 ), 'VALUE' );
+              Turtle.lineStylePatternOptions, 150, 20 ), 'VALUE' );
       this.setTooltip(msg.setPattern());
     }
   };
-
-  // image icons and image paths for the 'set pattern block'
-  blockly.Blocks.draw_line_style_pattern.Options =
-    [[skin.patternDefault, 'DEFAULT'], //  signals return to default path drawing
-     [skin.rainbowMenu, 'rainbowLine'],  // set to property name for image within skin
-     [skin.ropeMenu, 'ropeLine'],  // referenced as skin[pattern];
-     [skin.squigglyMenu, 'squigglyLine'],
-     [skin.swirlyMenu, 'swirlyLine'],
-     [skin.annaLine, 'annaLine'],
-     [skin.elsaLine, 'elsaLine'],
-     [skin.annaLine_2x, 'annaLine_2x'],
-     [skin.elsaLine_2x, 'elsaLine_2x'],
-     ];
 
   generator.draw_line_style_pattern = function() {
     // Generate JavaScript for setting the image for a patterned line.
