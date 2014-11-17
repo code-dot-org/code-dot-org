@@ -294,7 +294,7 @@ Blockly.Blocks.functional_call = {
     if (!this.currentParameterIDs_) {
       // Initialize tracking for this block.
       this.parameterIDsToArgumentConnections_ = {};
-      if (paramNames.join('\n') == this.currentParameterNames_.join('\n')) {
+      if (paramNames.join('\n') === this.currentParameterNames_.join('\n')) {
         // No change to the parameters, allow quarkConnections_ to be
         // populated with the existing connections.
         this.currentParameterIDs_ = paramIds;
@@ -316,9 +316,9 @@ Blockly.Blocks.functional_call = {
       }
     }
     // Rebuild the block's arguments.
-    this.currentParameterNames_ = [].concat(paramNames);
-    this.currentParameterIDs_ = paramIds;
-    this.currentParameterTypes_ = [].concat(opt_paramTypes);
+    this.currentParameterNames_ = goog.array.clone(paramNames);
+    this.currentParameterIDs_ = goog.array.clone(paramIds);
+    this.currentParameterTypes_ = goog.array.clone(opt_paramTypes);
     for (var x = 0; x < this.currentParameterNames_.length; x++) {
       var input = this.appendFunctionalInput('ARG' + x)
         .setAlign(Blockly.ALIGN_CENTRE)
