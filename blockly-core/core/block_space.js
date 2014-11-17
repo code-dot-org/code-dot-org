@@ -60,9 +60,7 @@ Blockly.BlockSpace = function(blockSpaceEditor, getMetrics, setMetrics) {
 
   Blockly.ConnectionDB.init(this);
   if (Blockly.BlockSpace.DEBUG_EVENTS) {
-    goog.object.forEach(Blockly.BlockSpace.EVENTS, function(v, k) {
-      this.events.listen(v, function(e) {console.log(e);console.log(k);console.log(v);}, false, this)
-    }, this);
+    this.debugLogOnEvents();
   }
 };
 
@@ -128,6 +126,19 @@ Blockly.BlockSpace.prototype.fireChangeEventPid_ = null;
  * @type {Blockly.ScrollbarPair}
  */
 Blockly.BlockSpace.prototype.scrollbar = null;
+
+/**
+ * Sets up debug console logging for events
+ */
+Blockly.BlockSpace.prototype.debugLogOnEvents = function() {
+  goog.object.forEach(Blockly.BlockSpace.EVENTS, function(eventIdentifier, eventConstant) {
+    this.events.listen(eventIdentifier, function(eventObject) {
+      console.log(eventObject);
+      console.log(eventConstant);
+      console.log(eventIdentifier);
+    }, false, this);
+  }, this);
+};
 
 Blockly.BlockSpace.prototype.findFunction = function(functionName) {
   return goog.array.find(this.getTopBlocks(), function(block) {
