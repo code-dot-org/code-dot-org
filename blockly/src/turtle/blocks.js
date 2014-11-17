@@ -943,11 +943,15 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  blockly.Blocks.turtle_stamp.VALUES = [
-    [skin.assetUrl('snowflake.png'), 'snowflake1'],
-    [skin.assetUrl('snowflake.png'), 'snowflake2'],
-    [skin.assetUrl('snowflake.png'), 'snowflake3'],
-  ];
+  if (skin.id == "anna" || skin.id == "elsa") {
+    blockly.Blocks.turtle_stamp.VALUES = [
+      [skin.assetUrl('snowflake.png'), 'snowflake1'],
+      [skin.assetUrl('snowflake.png'), 'snowflake2'],
+      [skin.assetUrl('snowflake.png'), 'snowflake3'],
+    ];
+  } else {
+    blockly.Blocks.turtle_stamp.VALUES = [];
+  }
 
   // Preload stamp images
   Turtle.stamps = [];
