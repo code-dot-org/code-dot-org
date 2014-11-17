@@ -37,7 +37,7 @@
   - send_to_phone = request.location.try(:country_code) == 'US' ||              |
       (!Rails.env.production? && request.location.try(:country_code) == 'RD') |
 
-  %div{visible: false}= render partial: 'levels/reference_area'
+  %div{style: "display:none"}= render partial: 'levels/reference_area'
 
   :javascript
     var script_path = "#{@script_level && build_script_level_path(@script_level)}";
