@@ -1,5 +1,5 @@
 {
-  "bounceBall":"pompauta palloa",
+  "bounceBall":"pomputa palloa",
   "bounceBallTooltip":"Pompauta pallo toisesta esineestä.",
   "continue":"Jatka",
   "dirE":"I",
@@ -43,7 +43,7 @@
   "pathLeft":"jos polku vasemmalle",
   "pathRight":"jos polku oikealle",
   "pilePresent":"tässä on kasa",
-  "playSoundCrunch":"soita räsähdyksen ääni",
+  "playSoundCrunch":"soita rusahdus",
   "playSoundGoal1":"soita maalin ääni",
   "playSoundGoal2":"soita maalin toinen ääni",
   "playSoundHit":"soita osuman ääni",

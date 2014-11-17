@@ -309,8 +309,8 @@
         turtle_3_4: Sugalvok, kaip panaudoti funkcijas „nubrėžk trikampį“ ir „nubrėžk
           kvadratą“ (bei keletą kitų blokelių), kad nupieštum namą aplink liūtą.
         turtle_3_5: "Sukurk komandą „nupiešk namą“ ir panaudok ją, kad nupieštum namą
-          aplink dvi kates. \nSufleris: tiks blokelis „nauja komandą“, tik įrašyk
-          norimą komandos pavadinimą.\n"
+          aplink dvi kates. \nSufleris: \"tiks blokelis „nauja komandą“, tik įrašyk
+          norimą komandos pavadinimą.\"\n"
         turtle_3_6: 'Naudodamas pavyzdį, komandai „nubrėžk trikampį“  leisk gauti
           informaciją „dydis“. Tada nupiešk du skirtingo dydžio trikampius. (Sufleris:
           kad komandai pridėtum informacijos laukus (parametrus), nuspausk ant žvaigždės)'

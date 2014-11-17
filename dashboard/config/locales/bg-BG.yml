@@ -456,11 +456,11 @@
   try_reloading: Опитайте да презаредите страницата
   next_stage: Завършено! Продължете към следващия етап
   download_pdf: урочен план
-  lesson_plan: Lesson Plan
+  lesson_plan: План на урок
   view_lesson_plan: Преглед на урочния план
   pdf_download: Изтегляне на PDF
-  download_coming_soon: Downloadable activity coming soon.
-  video_coming_soon: Video Coming Soon!
+  download_coming_soon: Очаквайте скоро възможност за сваляне.
+  video_coming_soon: Очаквайте скоро видео!
   share_code:
     title: Щракнете върху бутона "Пусни" за да видите моята програма в действие
     bounce_og_title: Вижте моята Bounce игра
