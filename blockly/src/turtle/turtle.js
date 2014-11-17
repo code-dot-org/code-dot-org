@@ -57,6 +57,9 @@ var JOINT_RADIUS = 4;
  */
 var JOINT_SEGMENT_LENGTH = 50;
 
+// image icons and image paths for the 'set pattern block'
+exports.lineStylePatternOptions = [];
+
 /**
  * PID of animation task currently executing.
  */
@@ -106,6 +109,18 @@ Turtle.init = function(config) {
 
   if (skin.id == "anna" || skin.id == "elsa")
   {
+    exports.lineStylePatternOptions = [
+      [skin.patternDefault, 'DEFAULT'], //  signals return to default path drawing
+      [skin.rainbowMenu, 'rainbowLine'],  // set to property name for image within skin
+      [skin.ropeMenu, 'ropeLine'],  // referenced as skin[pattern];
+      [skin.squigglyMenu, 'squigglyLine'],
+      [skin.swirlyMenu, 'swirlyLine'],
+      [skin.annaLine, 'annaLine'],
+      [skin.elsaLine, 'elsaLine'],
+      [skin.annaLine_2x, 'annaLine_2x'],
+      [skin.elsaLine_2x, 'elsaLine_2x'],
+    ];
+
     retina = backingScale();
 
     // We don't support ratios other than 2 right now (sorry!) so fall back to 1.
@@ -212,7 +227,7 @@ Turtle.init = function(config) {
     Turtle.ctxDisplay = display.getContext('2d');
 
 
-    if (skin.id == "anna" || skin.id == "elsa") {
+    if (BlocklyApps.usingBlockly && (skin.id == "anna" || skin.id == "elsa")) {
       Blockly.JavaScript.colour_random = function() {
         // Generate a random colour.
         if (!Blockly.JavaScript.definitions_.colour_random) {
@@ -248,14 +263,14 @@ Turtle.init = function(config) {
     // pre-load image for line pattern block. Creating the image object and setting source doesn't seem to be
     // enough in this case, so we're actually creating and reusing the object within the document body.
 
-    if ((BlocklyApps.usingBlockly && config.level.edit_blocks) || skin.id == "anna" || skin.id == "elsa")
+    if (skin.id == "anna" || skin.id == "elsa")
     {
       var imageContainer = document.createElement('div');
       imageContainer.style.display='none';
       document.body.appendChild(imageContainer);
 
-      for( var i = 0; i <  Blockly.Blocks.draw_line_style_pattern.Options.length; i++) {
-        var pattern = Blockly.Blocks.draw_line_style_pattern.Options[i][1];
+      for( var i = 0; i < exports.lineStylePatternOptions.length; i++) {
+        var pattern = exports.lineStylePatternOptions[i][1];
         if (skin[pattern]) {
           var img = new Image();
           img.src = skin[pattern];
@@ -814,7 +829,7 @@ Turtle.animate = function() {
         break;
       }
     }
-    if (!stepped) {
+    if (!stepped && !executeTuple()) {
       // We dropped out of the step loop because we ran out of code, all done:
       finishExecution();
       return;
@@ -1180,6 +1195,7 @@ var isCorrect = function(pixelErrors, permittedErrors) {
 var displayFeedback = function() {
   var feedbackImageCanvas;
   if (skin.id == "anna" || skin.id == "elsa") {
+    // For frozen skins, show background and characters along with drawing
     feedbackImageCanvas = Turtle.ctxDisplay;
   } else {
     feedbackImageCanvas = Turtle.ctxScratch;
@@ -1198,7 +1214,7 @@ var displayFeedback = function() {
     // impressive levels are already saved
     alreadySaved: level.impressive,
     // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
-    saveToGalleryUrl: level.freePlay && Turtle.response.save_to_gallery_url,
+    saveToGalleryUrl: level.freePlay && Turtle.response && Turtle.response.save_to_gallery_url,
     appStrings: {
       reinfFeedbackMsg: turtleMsg.reinfFeedbackMsg(),
       sharingText: turtleMsg.shareDrawing()
