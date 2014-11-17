@@ -1,133 +1,133 @@
-ja:
-  site_name: Hour of Code
-  language: 日本語
-  front_title: 2014 年 12 月 8日ー14 日、歴史上最大の学習のイベントに参加しよう。
-  coming_soon: 近日公開
-  front_header_banner: 2014 年 12 月 8日ー14 日、歴史上最大の学習のイベントに参加しよう。
+"ja":
+  site_name: "Hour of Code"
+  language: "日本語"
+  front_title: "2014 年 12 月 8日ー14 日、歴史上最大の学習のイベントに参加しよう。"
+  coming_soon: "近日公開"
+  front_header_banner: "2014 年 12 月 8日ー14 日、歴史上最大の学習のイベントに参加しよう。"
   front_intro_default: 'Hour of Codeは、180カ国以上の生徒数千万人が参加する世界的な運動です。誰でもどこでもHour of Codeのイベントを主催する事が出来ます。1時間のチュートリアルは 30 以上の言語で利用可能です。<strong>経験は必要ありません。4歳から104歳が対象です。</strong>。'
   front_intro_default_uk: "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone can organize an Hour of Code event. Over 3M students did the first Hour of Code in the UK. Let's double that in December! <strong>No experience needed. Ages 4 to 104.</strong>"
-  front_watch_video: 新しいビデオを見る
-  header_menu_resources: リソース
-  header_menu_faq: FAQ
-  header_menu_prizes: 賞品
-  header_menu_uk_code_org: uk.code.org
+  front_watch_video: "新しいビデオを見る"
+  header_menu_resources: "リソース"
+  header_menu_faq: "FAQ"
+  header_menu_prizes: "賞品"
+  header_menu_uk_code_org: "uk.code.org"
   company_4-H: 4-H Youth Development
-  company_bgca: Boys and Girls Club of America
-  company_cgcs: Council of the Great City Schools
-  company_gsusa: Girl Scouts of America
-  company_bsusa: Boy Scouts of America
-  company_napcs: National Alliance of Public Charter Schools
-  company_tfa: Teachers for America
-  company_tntp: TNTP
-  company_asa: Afterschool Alliance
-  company_ngcp: National Girls Collaborative Project
-  prizes_all: 各主催者に送られる賞
-  prizes_every_organizer: Hour of Codeの各主催者にはDropboxもしくは、 Skypeのクレジットが感謝の気持ちとして送られます。
-  prizes_technology: ワシントンD.C.を含めるアメリカの各州から公共学校を１つ選んで、テクノロジー分野に使える10,000ドル分が当たります。
-  prizes_tech_chats: 96 classrooms will win video chats with very special guests
-  prizes_details: 詳細
+  company_bgca: "Boys and Girls Club of America"
+  company_cgcs: "Council of the Great City Schools"
+  company_gsusa: "Girl Scouts of America"
+  company_bsusa: "Boy Scouts of America"
+  company_napcs: "National Alliance of Public Charter Schools"
+  company_tfa: "Teachers for America"
+  company_tntp: "TNTP"
+  company_asa: "Afterschool Alliance"
+  company_ngcp: "National Girls Collaborative Project"
+  prizes_all: "各主催者に送られる賞"
+  prizes_every_organizer: "Hour of Codeの各主催者にはDropboxもしくは、 Skypeのクレジットが感謝の気持ちとして送られます。"
+  prizes_technology: "ワシントンD.C.を含めるアメリカの各州から公共学校を１つ選んで、テクノロジー分野に使える10,000ドル分が当たります。"
+  prizes_tech_chats: "96 classrooms will win video chats with very special guests"
+  prizes_details: "詳細"
   n_have_learned_an_hoc: '<h1>#</h1><h3>を試してみました、</h3><h2>Hour of Code</h2>'
-  anybody_can_learn: 誰もが学べます。
-  register_now: 今すぐ登録！
-  front_join_us_heading: Hour of Codeをすべての学生へ。
-  front_join_us_description: コンピュータ ・ サイエンスはすべての学生のための基盤です。1 億人のひとにをそれを紹介するのを助けてください。
-  front_join_us_button: 私たちと参加しようよ。
-  front_what_is_hoc: Hour of Codeとは何でしょう？
-  front_join_us_header: 12月 8日-14日 コンピューター科学教育週間の間のどの日でも、Hour of Codeのイベント主催者は、 基本的なコードの勉強の仕方を楽しみながら教えてくれます。
-  front_join_us_header_uk: 12月 8日-14日 コンピューター科学教育週間の間のどの日でも、Hour of Codeのイベント主催者は、 基本的なコードの勉強の仕方を楽しみながら教えてくれます。
-  front_join_us_teacher: 先生ですか？
-  front_join_us_inspire: であなたの生徒をインスパイアさせてください。
-  front_join_us_inspire_link: Hour of Codeをあなたの教室で
-  front_join_us_parent: あなたは親ですか？
-  front_join_us_ask_link: あなたの地元の学校に問いかけてください。
-  front_join_us_ask: Hour of Codeを主催する。
-  front_join_us_computer_science: コンピューター科学が好きですか？
-  front_join_us_spread: あなたの地域に広めてください。
-  front_join_us_organize: もしくは、Hour of Codeのイベントを主催する。
-  front_join_us_how_to_run: Hour of Codeをどう主催するか。
-  front_join_us_help_promote: Hour of Codeを宣伝するのを助けてください。
-  front_join_us_students: 生徒
-  front_join_us_teachers: 先生方
-  front_join_us_everyone: みんな
-  front_join_us_try: 試す
-  front_join_us_host: 主催する。
-  front_join_us_support: 支援する。
-  signup_header: Hour of Codeを提供したら私たちに教えてください。
-  signup_name_label: お名前
-  signup_email_label: あなたのメール アドレス
-  signup_organization_name_label: 学校や組織の名前
+  anybody_can_learn: "誰もが学べます。"
+  register_now: "今すぐ登録！"
+  front_join_us_heading: "Hour of Codeをすべての学生へ。"
+  front_join_us_description: "コンピュータ ・ サイエンスはすべての学生のための基盤です。1 億人のひとにをそれを紹介するのを助けてください。"
+  front_join_us_button: "私たちと参加しようよ。"
+  front_what_is_hoc: "Hour of Codeとは何でしょう？"
+  front_join_us_header: "12月 8日-14日 コンピューター科学教育週間の間のどの日でも、Hour of Codeのイベント主催者は、 基本的なコードの勉強の仕方を楽しみながら教えてくれます。"
+  front_join_us_header_uk: "12月 8日-14日 コンピューター科学教育週間の間のどの日でも、Hour of Codeのイベント主催者は、 基本的なコードの勉強の仕方を楽しみながら教えてくれます。"
+  front_join_us_teacher: "先生ですか？"
+  front_join_us_inspire: "であなたの生徒をインスパイアさせてください。"
+  front_join_us_inspire_link: "Hour of Codeをあなたの教室で"
+  front_join_us_parent: "あなたは親ですか？"
+  front_join_us_ask_link: "あなたの地元の学校に問いかけてください。"
+  front_join_us_ask: "Hour of Codeを主催する。"
+  front_join_us_computer_science: "コンピューター科学が好きですか？"
+  front_join_us_spread: "あなたの地域に広めてください。"
+  front_join_us_organize: "もしくは、Hour of Codeのイベントを主催する。"
+  front_join_us_how_to_run: "Hour of Codeをどう主催するか。"
+  front_join_us_help_promote: "Hour of Codeを宣伝するのを助けてください。"
+  front_join_us_students: "生徒"
+  front_join_us_teachers: "先生方"
+  front_join_us_everyone: "みんな"
+  front_join_us_try: "試す"
+  front_join_us_host: "主催する。"
+  front_join_us_support: "支援する。"
+  signup_header: "Hour of Codeを提供したら私たちに教えてください。"
+  signup_name_label: "お名前"
+  signup_email_label: "あなたのメール アドレス"
+  signup_organization_name_label: "学校や組織の名前"
   signup_event_type_label: 'イベントのタイプ:'
-  signup_event_entire_school_label: うちの学校全体で参加しています。
-  signup_event_location_label: (省略可能) イベントの場所
-  signup_special_event_flag_label: 私の特別なイベントのハイライト
-  signup_special_event_details_label: 特別イベントの詳細
+  signup_event_entire_school_label: "うちの学校全体で参加しています。"
+  signup_event_location_label: "(省略可能) イベントの場所"
+  signup_special_event_flag_label: "私の特別なイベントのハイライト"
+  signup_special_event_details_label: "特別イベントの詳細"
   signup_send_posters_flag_label: '<a href= "/resources#posters">ポスター</a>私の学校もしくは組織に送って下さい。 '
-  signup_send_posters_address_label: 学校や組織の住所
-  signup_whole_school_flag_label: このイベントは、学校全体のためのものです。
+  signup_send_posters_address_label: "学校や組織の住所"
+  signup_whole_school_flag_label: "このイベントは、学校全体のためのものです。"
   signup_name_placeholder: |
     お名前
     
-  signup_email_placeholder: you@example.com
-  signup_organization_name_placeholder: 例えば、リンカーン ・ ハイスクール
+  signup_email_placeholder: "you@example.com"
+  signup_organization_name_placeholder: "例えば、リンカーン ・ ハイスクール"
   signup_event_location_placeholder: "郵便番号と国名または住所。 \r (地図上にあなたの位置情報をピンで表示するのに使います。)"
-  signup_special_event_details_placeholder: どうすればこのイベントが特別な物になるか説明します。
-  signup_send_posters_address_placeholder: この住所は私たちの地図上には共有されません。
-  signup_event_type_in_school: 学校で
-  signup_event_type_out_of_school: 学校の外で
-  signup_submit_label: サインアップ
-  signup_submit_error_message: エラーが発生しました。必須箇所が全て正しく記入されていることを確認ください。
-  signup_thank_you_header: Hour of Codeのイベントを主催していただきありがとうございます。
+  signup_special_event_details_placeholder: "どうすればこのイベントが特別な物になるか説明します。"
+  signup_send_posters_address_placeholder: "この住所は私たちの地図上には共有されません。"
+  signup_event_type_in_school: "学校で"
+  signup_event_type_out_of_school: "学校の外で"
+  signup_submit_label: "サインアップ"
+  signup_submit_error_message: "エラーが発生しました。必須箇所が全て正しく記入されていることを確認ください。"
+  signup_thank_you_header: "Hour of Codeのイベントを主催していただきありがとうございます。"
   signup_thank_you_message: |
     始める前に知っておくと役立つ情報が入った確認メールを送りました。
     
   map_header: '# Hour of Code events around the world'
   map_header_company: '# Hour of Code events organized by company'
-  meta_tag_og_title: Hour of Code がやってきます。
-  meta_tag_og_description: Hour of Codeは、180 以上の国々で 30 以上の言語で 4 歳から 104 歳まで数千万人の学生に届く世界的な運動です。
-  meta_tag_twitter_title: Hour of Code がやってきます。
-  meta_tag_twitter_description: Hour of Codeは、180 以上の国々で 30 以上の言語で 4 歳から 104 歳まで数千万人の学生に届く世界的な運動です。
+  meta_tag_og_title: "Hour of Code がやってきます。"
+  meta_tag_og_description: "Hour of Codeは、180 以上の国々で 30 以上の言語で 4 歳から 104 歳まで数千万人の学生に届く世界的な運動です。"
+  meta_tag_twitter_title: "Hour of Code がやってきます。"
+  meta_tag_twitter_description: "Hour of Codeは、180 以上の国々で 30 以上の言語で 4 歳から 104 歳まで数千万人の学生に届く世界的な運動です。"
   twitter_default_text: '私は今年#HourOfCodeに参加しています、あなたは? @codeorg'
-  hardware_prizes_form_name_label: お名前
-  hardware_prizes_form_name_placeholder: お名前
-  hardware_prizes_form_email_label: あなたのメール アドレス
-  hardware_prizes_form_email_placeholder: あなたのメール アドレス
-  hardware_prizes_form_school_name_label: 学校名
-  hardware_prizes_form_school_name_placeholder: 学校名
-  hardware_prizes_form_school_address_label: 学校の所在地
-  hardware_prizes_form_school_address_placeholder: 学校の所在地
-  hardware_prizes_form_school_type_label: 学校の種類
-  hardware_prizes_form_school_type_option_elementary: 小学校
-  hardware_prizes_form_school_type_option_middle_school: 中学生
-  hardware_prizes_form_school_type_option_high_school: 高校
-  hardware_prizes_form_qualifying_school_label: これは K 12 アメリカの公立学校です。
-  hardware_prizes_form_number_students_label: 参加した生徒数
-  hardware_prizes_form_number_students_placeholder: 生徒数
-  hardware_prizes_form_plan_file_label: Hour of Codeの物流計画をアップロードします。
+  hardware_prizes_form_name_label: "お名前"
+  hardware_prizes_form_name_placeholder: "お名前"
+  hardware_prizes_form_email_label: "あなたのメール アドレス"
+  hardware_prizes_form_email_placeholder: "あなたのメール アドレス"
+  hardware_prizes_form_school_name_label: "学校名"
+  hardware_prizes_form_school_name_placeholder: "学校名"
+  hardware_prizes_form_school_address_label: "学校の所在地"
+  hardware_prizes_form_school_address_placeholder: "学校の所在地"
+  hardware_prizes_form_school_type_label: "学校の種類"
+  hardware_prizes_form_school_type_option_elementary: "小学校"
+  hardware_prizes_form_school_type_option_middle_school: "中学生"
+  hardware_prizes_form_school_type_option_high_school: "高校"
+  hardware_prizes_form_qualifying_school_label: "これは K 12 アメリカの公立学校です。"
+  hardware_prizes_form_number_students_label: "参加した生徒数"
+  hardware_prizes_form_number_students_placeholder: "生徒数"
+  hardware_prizes_form_plan_file_label: "Hour of Codeの物流計画をアップロードします。"
   hardware_prizes_form_plan_file_description: 'あなたの学校において、Hour of Codeを行う為にどのように生徒達をまとめるか計画している簡単なスケジュールを提出してください。サンプルプランの参照： #PDF ＃ |#Word ＃'
-  hardware_prizes_form_submit_label: 提出
-  hoc_faq_title: よくあるご質問
-  hoc_faq_what_is_hoc_q: Hour of Codeとは何でしょう？
+  hardware_prizes_form_submit_label: "提出"
+  hoc_faq_title: "よくあるご質問"
+  hoc_faq_what_is_hoc_q: "Hour of Codeとは何でしょう？"
   hoc_faq_what_is_hoc_a: "Hour of Codeは、コンピューター科学を1時間で紹介し、コードをわかりやすく説明するようデザインされており、そして誰もが基本的なコードを学ぶことができるよう作られています。。<a href='http://code.org/learn'>チュートリアルを見る</a>,、そして Hour of Code 2014のために出来た新しい項目にも注目してください。"
-  hoc_faq_last_year: 昨年のチュートリアルを試してください。
-  hoc_faq_when_is_hoc_q: Hour of Codeはいつですか？
+  hoc_faq_last_year: "昨年のチュートリアルを試してください。"
+  hoc_faq_when_is_hoc_q: "Hour of Codeはいつですか？"
   hoc_faq_when_is_hoc_a: "誰でも、いつでも、Hour of Codeを主催できますが草の根キャンペーンの目標は <a href='http://csedweek.org'> コンピューター科学の教育週間</a> の祭典 2014 年 12 月 8-14 日の間に、数千万人の生徒に試してもらうことです。それには 特定の <i>時間</i> があるのですか？いいえHour of Codeはこの週にいつでも行うことができます。（もしその週の間に行うことができない場合は、前の週もしく後の週に試してください）。"
-  hoc_faq_why_cs_q: なぜコンピューター科学なのですか？
+  hoc_faq_why_cs_q: "なぜコンピューター科学なのですか？"
   hoc_faq_why_cs_a: "<i>どの</i> 学生にもコンピューター科学を学ぶ機会があるべきです。それは問題解決のスキルや、ロジック、そして創造性の育成に役立つからです。早く始める事により、受講生には、21 世紀のキャリアへの道で成功するための基礎が備われます。<a href='http://code.org'> Code.org</a> ここにてもっと詳しい統計を参照してください。"
-  hoc_faq_how_participate_q: どうやって Hour of Codeに参加すればいいのか?
+  hoc_faq_how_participate_q: "どうやって Hour of Codeに参加すればいいのか?"
   hoc_faq_how_participate_a: "Hour of Codeのイベントを主催するには  <a href='http://hourofcode.org'>ここで</a>サインアップしてください、そして  <a href='/resources/how-to'>計画を開始してください</a>。Hour of Codeイベントをあなたの学校、もしくはあなたのコミュニティー &mdash; 課外クラブや、非営利団体や、会社など &mdash; で計画できます。もしくは12月8日が来たら自分で試してください。"
-  hoc_faq_behind_hoc_q: Hour of Codeは誰が運営しているのですか?
+  hoc_faq_behind_hoc_q: "Hour of Codeは誰が運営しているのですか?"
   hoc_faq_behind_hoc_a: "Hour of Codeは<a href='http://code.org'>Code.org</a>により運営されています。公共 501c3 非営利団体は、より多くの学校が参加する事、女性の参加を増やす事そして、マイノリティーの学生にコンピューター科学への参加を拡大させることに専念しています。 <a href='http://code.org/about/partners'>前例にないパートナー達</a>が一緒になってHour of Codeを支援してくれています。 &mdash; マイクロソフト, アップル、アマゾン Boys and Girls Clubs of America そして、大学の理事会などを含みます。"
-  hoc_faq_host_q: コーディングについて知らなくても、イベントを主催できますか？
+  hoc_faq_host_q: "コーディングについて知らなくても、イベントを主催できますか？"
   hoc_faq_host_a: "もちろんです。Hour of Codeの活動は、自分からです。やることは <a href='http://code.org/learn'> 現在のチュートリアルを試してみる</a>ことだけです、あなたが試したいチュートリアルを選択して、時間を1 時間作る事だけです &mdash; 後は私たちに任せてください。すべての年齢と経験レベル、幼稚園から、それ以上のオプションを用意しています。あなた自身で<a href='/resources/how-to'> 指導書</a> を読んでイベントを計画してください。"
-  hoc_faq_need_computers_q: すべての参加者はコンピューターが必要ですか？
+  hoc_faq_need_computers_q: "すべての参加者はコンピューターが必要ですか？"
   hoc_faq_need_computers_a: "いいえ、Hour of CodeのチュートリアルではPC、スマートフォン、タブレットで、そしていくつかの項目ではコンピューターが不要でも大丈夫な環境を用意しております。どこに居ても、何を持っていても参加できます。<p><i>ここではいくつかのオプションを紹介します：</i> <br><ul><li><b>ペアでの作業</b>。研究によると、コンピューターを共有して一緒に学生が勉強する <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'> ペア ・ プログラミング</a>事が一番最良だという報告があります。受講生を 2 倍にもします。<li><b>投影画面を使用する</b>。ウェブに接続されたコンピューター用にプロジェクターとスクリーンがあればグループ全体で一緒にHour of Codeを行うことができます。ビデオの部分を一緒に見ることができるし、交代でパズルを解いたり質問に答えられたりします。<li><b>アンプラグドで行こう</b>。コンピューターが一切なくても出来るチュートリアルを用意しています。</ul>"
-  hoc_faq_international_q: アメリカ国外にいます。国外からどうやって参加できますか？
-  hoc_faq_international_a: 誰でも、世界のどこに居ようとも、Hour of Codeのイベントを開催できます。昨年、世界中の生徒がHour of Codeに一緒に参加しました。
-  hoc_faq_tutorial_q: Hour of Codeのチュートリアルをどうやって作ることができますか？
+  hoc_faq_international_q: "アメリカ国外にいます。国外からどうやって参加できますか？"
+  hoc_faq_international_a: "誰でも、世界のどこに居ようとも、Hour of Codeのイベントを開催できます。昨年、世界中の生徒がHour of Codeに一緒に参加しました。"
+  hoc_faq_tutorial_q: "Hour of Codeのチュートリアルをどうやって作ることができますか？"
   hoc_faq_tutorial_a: "もしチュートリアルのパートナーになる事に興味がありましたら、<a href='/tutorial-guidelines'> 当社のガイドラインと手順を参照してください</a> 。魅力的で様々なオプションを主催したいと思っていますが、主な目的は、コンピューター科学が初めてな生徒達や先生方に出来る限り経験してもらうことです。"
-  hoc_faq_more_questions_q: それでもまだ疑問がありますか?
+  hoc_faq_more_questions_q: "それでもまだ疑問がありますか?"
   hoc_faq_more_questions_a: "<a href='http://support.code.org'>サポート フォーラム</a> で回答を探してみてください。"
-  hoc_faq_more_questions_br_q: Outras dúvidas?
+  hoc_faq_more_questions_br_q: "Outras dúvidas?"
   hoc_faq_more_questions_br_a: "Por favor visite nosso <a href='http://support.code.org'>forum de suporte</a> disponível apenas em inglês."
   hoc_faq_what_is_hoc_uk_a: "Hour of Codeは、コンピューター科学を1時間で紹介し、コードをわかりやすく説明するようデザインされており、そして誰もが基本的なコードを学ぶことができるよう作られています。<a href='http://uk.code.org/learn'>チュートリアルを見る</a>,、そして Hour of Code 2014のために出来た新しい項目にも注目してください。"
   hoc_faq_when_is_hoc_uk_a: "Hour of Codeは12月8-14日の間に行われます。限定的に一 <i>時間</i>だけ? いいえ。この週の間何時間でもHour of Codeを行う事が出来ます。イギリスで行われるHour of Codeはアメリカでも You can do the Hour of Code anytime during this week. 年に一度の<a href='http://csedweek.org'>コンピューター科学週間</a>を祝っているアメリカと同じ時間に Hour of Code はイギリスでも行われます。 "
@@ -135,45 +135,45 @@ ja:
   hoc_faq_how_participate_uk_a: " Hour of Codeのイベントを主催するには  <a href='http://hourofcode.org'>ここで</a>サインアップしてください、そして  <a href='/resources/how-to'>計画を開始してください</a>。Hour of Codeイベントの主催をあなたの学校、もしくはあなたの地域でオーガナイズ出来ます。 &mdash; 課外クラブや、非営利団体や、会社。もしくは12月8日が来たら自分で試してください。"
   hoc_faq_behind_hoc_uk_a: "Hour of Codeは <a href='http://uk.code.org'>Code.org</a>、により運営されています。公共 501c3 非営利団体は、より多くの学校が参加する事、女性の参加を増やす事そして、マイノリティーの学生にコンピューター科学への参加を拡大させることに専念しています。  <a href='http://uk.code.org/about/partners'>前例にないパートナー達</a>が一緒になってHour of Codeを支援してくれています。 &mdash; マイクロソフト, グーグル、ケンブリッジ大学プレス、テックシティーそして、教育省を含みます。"
   hoc_faq_host_uk_a: "もちろんです。Hour of Codeは、自己誘導です。やることは <a href='http://code.org/learn'> 現在のチュートリアルを試してみる</a>ことだけです、あなたが試したいチュートリアルを選択して、時間を1 時間作る事だけです。 &mdash; 後は私たちに任せてください。すべての年齢と経験レベル、幼稚園から、それ以上のオプションを用意しています。あなた自身で<a href='/resources/how-to'> 指導書</a> を読んでイベントを計画してください。"
-  stats_hoc_2013_heading: 昨年のHour of Codeから信じられないほどの統計情報があります。1 週間だけで：
-  stats_hoc_2013_image_alt: Hour of Codeの 2013 の統計情報
-  stats_growth: 1500 万ユーザーに到達する最速記録でした。
-  stats_tumblr: Tumblr： 3.5 年
+  stats_hoc_2013_heading: "昨年のHour of Codeから信じられないほどの統計情報があります。1 週間だけで："
+  stats_hoc_2013_image_alt: "Hour of Codeの 2013 の統計情報"
+  stats_growth: "1500 万ユーザーに到達する最速記録でした。"
+  stats_tumblr: "Tumblr： 3.5 年"
   stats_facebook: 'Facebook: 3 年'
   stats_twitter: 'Twitter: 2.5 年'
   stats_pinterest: 'Pinterest: 2 年'
   stats_instagram: 'Instagram: 14 ヶ月'
   stats_hoc: 'Hour of Code: 5 日'
-  stats_global: 世界の1500 万人がHour of Codeを学びました。
-  stats_girls_more: 過去70年で女の子が一番多くコンピューター科学を試しました。
-  stats_girls_million: 2013 年に 1000 万人以上の女の子
+  stats_global: "世界の1500 万人がHour of Codeを学びました。"
+  stats_girls_more: "過去70年で女の子が一番多くコンピューター科学を試しました。"
+  stats_girls_million: "2013 年に 1000 万人以上の女の子"
   stats_nina: '"毎日、同じ結果が得られました&mdash; 100 ％ の取り組み。"-ニーナ ・ ニコルズ ピーリー、教師。'
   stats_student: '"<b>一生に一度</b> のチャンスだと思っていました。"-マリアナ 　アルザテ、小学 5 年生。'
   stats_michael: '私は <b>決して、これまで</b> 生徒達がこんなに興奮して学習しているのをみたことがありません。"-Michael クラーク、教師'
-  resources_how_to: 教師用手引き
-  resources_handouts: Handouts to spread the word
-  resources_videos: ビデオ
-  resources_posters: ポスター
-  resources_social: ソーシャル
-  resources_banners: バナー
-  resources_emails: サンプルメール
-  resources_stats: 有用なコンピューター科学の統計
-  resources_press_kit: プレスキット
-  events_title: All Hour of Code Events
-  events_nav_all: All Events
-  events_nav_classrooms: Classrooms
-  events_nav_whole_schools: Whole Schools
-  events_nav_special: Special Events
-  events_all_title: All Hour of Code events
-  events_classroom_title: Classroom Hour of Code events
-  events_whole_school_title: Whole-school Hour of Code events
-  events_special_title: Special Hour of Code events
-  event: event
-  events: events
-  footer_copyright_message: Copyright 2014 Code.org. All rights reserved.
-  footer_trademark_message: Hour of Code™ は Code.orgの商標です。
-  footer_menu_partners: パートナー
-  footer_menu_contact: お問い合わせ
-  footer_menu_support: サポート
-  footer_menu_terms: 利用規約
-  footer_menu_privacy: プライバシーポリシー
+  resources_how_to: "教師用手引き"
+  resources_handouts: "Handouts to spread the word"
+  resources_videos: "ビデオ"
+  resources_posters: "ポスター"
+  resources_social: "ソーシャル"
+  resources_banners: "バナー"
+  resources_emails: "サンプルメール"
+  resources_stats: "有用なコンピューター科学の統計"
+  resources_press_kit: "プレスキット"
+  events_title: "All Hour of Code Events"
+  events_nav_all: "All Events"
+  events_nav_classrooms: "Classrooms"
+  events_nav_whole_schools: "Whole Schools"
+  events_nav_special: "Special Events"
+  events_all_title: "All Hour of Code events"
+  events_classroom_title: "Classroom Hour of Code events"
+  events_whole_school_title: "Whole-school Hour of Code events"
+  events_special_title: "Special Hour of Code events"
+  event: "event"
+  events: "events"
+  footer_copyright_message: "Copyright 2014 Code.org. All rights reserved."
+  footer_trademark_message: "Hour of Code™ は Code.orgの商標です。"
+  footer_menu_partners: "パートナー"
+  footer_menu_contact: "お問い合わせ"
+  footer_menu_support: "サポート"
+  footer_menu_terms: "利用規約"
+  footer_menu_privacy: "プライバシーポリシー"

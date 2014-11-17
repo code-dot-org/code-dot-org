@@ -10,7 +10,7 @@ class Ability
 
       # Only custom levels and match/multi are editable
       cannot [:update, :destroy], Level do |level|
-        !(level.custom? || level.is_a?(Match))
+        !(level.custom? || level.is_a?(DSLDefined))
       end
     else
       can :read, :all

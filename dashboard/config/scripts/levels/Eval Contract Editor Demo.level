@@ -1,0 +1,52 @@
+<Eval>
+  <config><![CDATA[{
+  "game_id": 36,
+  "created_at": "2014-11-07T08:21:14.000Z",
+  "level_num": "custom",
+  "user_id": 15,
+  "properties": {
+    "skin": "eval",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "true",
+    "free_play": "false"
+  }
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <category name="Number">
+          <block type="functional_plus"/>
+          <block type="functional_minus"/>
+          <block type="functional_times"/>
+          <block type="functional_dividedby"/>
+          <block type="functional_math_number"/>
+        </category>
+        <category name="String">
+          <block type="functional_string"/>
+          <block type="functional_style"/>
+          <block type="string_append"/>
+          <block type="string_length"/>
+        </category>
+        <category name="Image">
+          <block type="functional_circle"/>
+          <block type="functional_triangle"/>
+          <block type="functional_square"/>
+          <block type="functional_rectangle"/>
+          <block type="functional_ellipse"/>
+          <block type="functional_star"/>
+          <block type="place_image"/>
+          <block type="overlay"/>
+          <block type="underlay"/>
+          <block type="rotate"/>
+          <block type="scale"/>
+          <block type="functional_text"/>
+        </category>
+        <category name="Functions" custom="PROCEDURE"/>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Eval>

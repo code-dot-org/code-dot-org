@@ -217,7 +217,7 @@ id:
         playlab: Buat App
         artist: Gambarlah Sesuatu
     user:
-      classroom: Murid-murid saya
+      classroom: Teacher Home Page
       label: 'Halo %{username}'
       stats: Kemajuan saya
       settings: Akun saya
@@ -389,8 +389,11 @@ id:
   try_reloading: Coba tampilkan halaman lagi
   next_stage: Selesai! Lanjutkan untuk tahap berikutnya
   download_pdf: Rencana pelajaran terbuka
+  lesson_plan: Lesson Plan
   view_lesson_plan: Lihat Rencana Belajar
   pdf_download: Unduh PDF
+  download_coming_soon: Downloadable activity coming soon.
+  video_coming_soon: Video Coming Soon!
   share_code:
     title: "klik 'Jalankan' untuk melihat program saya berjalan"
     bounce_og_title: Check out permainan Bouncing ku
@@ -447,6 +450,8 @@ id:
     wrong_body: Solusi yang anda masukkan salah, Coba Lagi!
     correct_title: Benar
     correct_body: Itu jawaban yang benar.
+  text_match:
+    placeholder: Enter your answer here
   dialog:
     ok: Oke!
   time:
@@ -489,3 +494,8 @@ id:
     message: 'Kami dalam proses updating pengalaman kami untuk memberikan anda proteksi privasi yang lebih aman. Untuk melakukan ini, kami membutuhkan pengguna yang ada untuk memasukkan umur mereka di sini.<br/>Seperti biasanya, code.org tidak pernah menyewa, menjual dan membagi informasi ini terhadap pihak lain. '
     sign_out: 'Jika Anda tidak ingin memasukkan umur kamu bisa<a href="%{url}">sign out</a>.'
   zendesk_too_young_message: 'Maaf Pengguna lebih muda tidak bisa masuk ke dalam situs pendukung kami. Anda dapat mengakses  <a href="http://support.code.org">support.code.org</a> tanpa masuk atau minta orang tua anda  atau guru anda untuk menghubungi kami. u.'
+  progress:
+    not_completed: not completed
+    completed_too_many_blocks: completed, too many blocks
+    completed_perfect: completed, perfect
+    furthest_level_attempted: furthest level attempted

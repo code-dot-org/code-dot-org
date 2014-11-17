@@ -105,11 +105,12 @@ ja:
         MazeEC: 迷路
         Bounce: バウンド
         Flappy: フラッピーバード
-        Jigsaw: Jigsaw
+        Jigsaw: ジグソーパズル
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
         Webapp: Webapp
         ArtistEC: アーティスト
+        TextMatch: Text Match
     trophy:
       name:
         Bronze: 銅
@@ -136,10 +137,9 @@ ja:
         maze_2_5: ブロックを2つだけ使って、緑のブタにたどり着ける方法があります。分かりますか？
         maze_2_6: ブロックを３つだけ使って私を緑の侵入者のところへ行かせてください。
         maze_2_7: 一番少ない数のブロックを使ってこの悪いブタを追放するのを手伝ってください。1 つ以上の「繰り返し」ブロックを使用してください。
-        maze_2_8: |-
-          When a block is grey, that means you can't delete it. Solve this puzzle using the "repeat" block that repeats 3 times. Try putting these 3 blocks inside the grey "repeat" block: move, move, turn.
+        maze_2_8: はいいろのブロックをけすことはできません。「くりかえし」ブロックをつかって3かいくりかえして、このパズルをといてください。「うごく」「うごく」「まがる」の3つのブロックをはいいろの「くりかえし」ブロックの中に入れてみましょう。
         maze_2_9: Ok, 新しい「まで繰り返し(Repeat until)」ブロックを試してください。私がムカつくブタに着くまで繰り返されます。
-        maze_2_10: 'Ok、では 最後の１つになった練習です - これを 4 ブロックをだけ使って解決できますか？'
+        maze_2_10: ではさいごのもんだいです。4つのブロックだけをつかってパズルをとけますか？
         maze_2_11: 親愛なる人。私ゾンビ。私は空腹。。。ヒマワリを取らないといけない。5つの ブロックだけで私をそこまで連れて行ける事ができますか？
         maze_2_12: Ok、 これは似ていますが、ちょっと違います。5つの ブロックだけでできますか？
         maze_2_13: '新しい"if"ブロックを使っていつ曲がるかを私に決めさせてください。ヒント: あともう１つのブロックが必要です、でも私たちがどう設定しているかを学んでください、そうしたら次回はあなたができるようになります。'
@@ -149,7 +149,7 @@ ja:
         maze_2_17: '"If-else"ブロックは条件をチェックし、そして１つの事もしくは別の事をします。サンフラワーを私にゲットさせるためにこの新しいブロックを試してください。'
         maze_2_18: '"if-else"ブロックをもう一度練習するよ、 最初のトライでそれを正しくゲットできる？'
         maze_2_19: ブロックをあと3つ追加してこの難しい迷路を解決する手助けをしてくれますか？もしそれができれば、長さに関係なくどんなカーブした道でも歩く事ができるようになります。
-        turtle_1_1: "Hi, I'm an artist. You can write code to make me draw almost anything. Use a few blocks to make me draw over the grey lines in the picture."
+        turtle_1_1: こんにちは、私はアーティストです。プログラムを作ってくれれば、私がどんな形でもかいてあげましょう。ブロックをいくつかつかって、私にはいいろのせんをなぞらせてください。
         turtle_1_2: '正方形を描きます。注: 新しい「色の設定」ブロックで選択することにより好きな色を使用してください。'
         turtle_1_3: ブロックを３つだけ使用して正方形を作成します。
         turtle_1_4: '毎回違う色を選択してくれる"random color"オプションをつかって、色の異なる側面をもつ三角形を描きましょう。ヒント：回転ブロックの回数をクリックして、どのくらいの距離で曲がるかを考慮して解決するひつようがあります。'
@@ -227,24 +227,15 @@ ja:
         turtle_3_8: パズルからのブロック、すべてがあります。「家を描画する」を変更して新しい家を描画した後の右下隅で終了するようにしてください。この変更された関数を使用して、3 つの家を描画します。
         turtle_3_9: 自分だけで「家を描画する」機能を作成できますか。それを試して、住宅の行を描画します。
         turtle_3_10: あなたは多くのことを学んだ ！星、スパイイラル、または派手なスノーフレークなど自由に描画してください。
-        maze_karel_debug_seq_1: |
-          デバッグの世界へようこそ ！私のコードは正しく動作されません。植物を植える準備するのに私が自分の土地を平らにできるよう、問題を発見してそれを修正してくれませんか？
-          
-          
-        maze_karel_debug_seq_2: |
-          このプログラムで何が間違ですか？私が積山を除去できるようにするにはどう修正すればいいですか？
-          
-          
-        maze_karel_debug_repeat: 私の土地がすてきに平らになるようこのプログラムをデバグしてください。
-        maze_karel_debug_while: どういうふうに、このプログラムを変化したら穴を埋めることができるでしょうか。
-        maze_karel_debug_if: ヘルプ！私の土地が完璧に平らになるようこのプログラムを修正してください。
-        maze_karel_debug_if_else: |
-          すべての積山を除去して穴を埋めルコとができるようこのプログラムをデバグしてください。
-          
-          
-        maze_karel_debug_function_1: どんな変更をすればプログラムに杭を削除できるでしょうか。
-        maze_karel_debug_function_2: プログラムデバグしてもらえませんか。私のフィールドをひらっぺたくしたいんです。
-        maze_karel_debug_function_3: このプログラムを編集して、フィールドのすべての杭を削除するようにしてください。
+        maze_karel_debug_seq_1: デバッグのせかいへようこそ ！プログラムがただしくうごいてくれません。じめんをたいらにしてたねまきができるように、まちがっているところをみつけて、なおしてもらえませんか？
+        maze_karel_debug_seq_2: このプログラムのどこがまちがっていますか？山をなくすにはどこをなおせばいいでしょうか？
+        maze_karel_debug_repeat: じめんがたいらになるように、このプログラムのまちがいをなおしてください。
+        maze_karel_debug_while: このプログラムのどこをかえれば、あなをうめることができるでしょうか？
+        maze_karel_debug_if: たすけて！じめんがぜんぶたいらになるように、このプログラムをなおしてください。
+        maze_karel_debug_if_else: やまをぜんぶなくすのと穴をうめることができるように、このプログラムをなおしてください。
+        maze_karel_debug_function_1: プログラムのどこをなおせば、やまをぜんぶなくすことができるでしょうか？
+        maze_karel_debug_function_2: プログラムのまちがいをなおしてもらえませんか。じめんをたいらにしたいんです。
+        maze_karel_debug_function_3: 'このプログラムをすこしかえて、じめんからやまをぜんぶなくしてください。 '
         turtle_5_1: このプログラムを実行してみてください、そして何が起こるかを参照し変更をしてください。それがどのように動作するかを理解できますか？(または削除し、完全に別の何かと交換)
         turtle_5_2: このプログラムを実行してみてください、そして何が起こるかを参照し変更をしてください。それがどのように動作するかを理解できますか？(または削除し、完全に別の何かと交換)
         turtle_5_3: このプログラムを実行してみてください、そして何が起こるかを参照し変更をしてください。それがどのように動作するかを理解できますか？(または削除し、完全に別の何かと交換)
@@ -266,27 +257,27 @@ ja:
         bounce_11: 'You can now attach blocks to the "when run" block. You have to attach the new "launch new ball" block in more than one place. Also, try changing the scene or the speed of the paddle and the ball and see how many points you can score before your opponent scores twice.'
         bounce_12: "Create your own Bounce game. You can change all the visuals and the rules. When you're done, click Finish to let friends try your game on their phones."
         Custom_builder: 'Drag blocks from the toolbox to the workspace to draw the level you wish to create. Press "Run" when you are ready.'
-        flappy_1: 'Attach a block to the "when click" block, then press "Run". Click or tap the screen to move Flappy to the target.'
+        flappy_1: 「クリックされたとき」のブロックにほかのブロックを1つくっつけて、「実行」ボタンをおしてください。クリック（またはがめんをタップ）すると、Flappyはもくひょうにむかってうごきます。
         flappy_2: いくつかの地面を追加します。「地面にヒットしたとき」ブロックに接続します。フラッピーがクラッシュしたとき「ゲームオーバー」のコードが必要です。
-        flappy_3: 'The "when run" block allows you to run code when your game starts.  Try setting the level speed and flapping to the target.'
+        flappy_3: 「実行時」ブロックにブロックをくっつけておくと、ゲームがはじまったときにそのブロックのとおりにうごきます。スピードとはねのうごきのレベルをセットしてみてください。
         flappy_4: もしクラッシュさせるためのコードを書かない場合、フラッピーは障害物を通り抜けて飛びます。「障害物にヒットしたとき」ブロックにブロックを接続します。フラッピーが最初に設置されtパイプにクラッシュするときに「ゲームエンド」のコードが必要になります。
-        flappy_5: スコアボード（得点表）を追加してフラッピーが障害物を過ぎたときの得点を数えましょう。「障害物と過ぎたとき」ブロックを追加して、飛んでいるフラッピーが最初の設定したパイプを過ぎるたびに得点をさせてください。
+        flappy_5: とくてんひょうをつくり、Flappyがどかんをとおりぬけたときのてんすうをかぞえましょう。「どかんをとおりぬけたとき」のブロックにぶろっくをくっつけて、とんでいるFlappyがどかんのあいだをとおりぬけたときにてんすうがふえるようにしてください。
         flappy_6: フラッピーのふらふら飛ぶ量を小さくや大きくした後、まだ得点しているかどうか見てください。
         flappy_7: 次に、「実行時」ブロックにもう1つのブロックをくっつけて背景を変えてみてください。
         flappy_8: |
           ゲームが開始したときだけでなく、いつでもビジュアルを設定できます。例えば、障害物を過ぎたとき、などのイベントが発生時にランダムな状況を設定するようにしてください。
           
         flappy_9: 物事をミックスするため、障害物や地面にヒットした時に、ゲーム終了の代わりに得点を０に戻してください。
-        flappy_11: "Create your own Flappy game. You can change all the visuals and all the rules, even the gravity. When you're done, click Finish to let friends try your game on their phones."
-        flappy_k1_1: Play Flappy
-        flappy_k1_2: 'Attach a block to the "when click" block, then press "Run". Click or tap the screen to move Flappy to the target.'
+        flappy_11: じぶんのFlappyゲームを作ってみましょう。みためやルール、じゅうりょくもすきなようにかえられます。作りおわったら、「完了」ボタンをクリックしてともだちにおしえましょう。ともだちはけいたいでんわをつかって、あなたのゲームであそぶことができます。
+        flappy_k1_1: Flappyであそぶ
+        flappy_k1_2: 「クリックされたとき」のブロックにほかのブロックを1つくっつけて、「実行」ボタンをおしてください。クリック（またはがめんをタップ）すると、Flappyはもくひょうにむかってうごきます。
         flappy_k1_3: いくつかの地面を追加します。「地面にヒットしたとき」ブロックに接続します。フラッピーがクラッシュしたとき「ゲームオーバー」のコードが必要です。
-        flappy_k1_4: 'The "when run" block allows you to run code when your game starts.  Try setting the level speed and flapping to the target.'
+        flappy_k1_4: 「実行時」ブロックにブロックをくっつけておくと、ゲームがはじまったときにそのブロックのとおりにうごきます。スピードとはねのうごきのレベルをセットしてみてください。
         flappy_k1_5: もしクラッシュさせるためのコードを書かない場合、フラッピーは障害物を通り抜けて飛びます。「障害物にヒットしたとき」ブロックにブロックを接続します。フラッピーが最初に設置されtパイプにクラッシュするときに「ゲームエンド」のコードが必要になります。
         flappy_k1_6: スコアボード（得点表）を追加してフラッピーが障害物を過ぎたときの得点を数えましょう。「障害物と過ぎたとき」ブロックを追加して、飛んでいるフラッピーが最初の設定したパイプを過ぎるたびに得点をさせてください。
-        flappy_k1_7: See if you can score multiple points for making it past an obstacle
+        flappy_k1_7: どかんをとおりぬけるたびになんかいもてんすうがふえるかどうか、かくにんしてください。
         flappy_k1_8: 次に、「実行時」ブロックにもう1つのブロックをくっつけて背景を変えてみてください。
-        flappy_k1_9: 'Try changing the player by attaching a "set player" block to the "when run" block.'
+        flappy_k1_9: 「実行時」ブロックに「プレイヤーをセット」のブロックをくっつけて、プレイヤーのみためをかえてみてください。
         jigsaw_1: Click the block
         jigsaw_2: Drag the block to the target
         jigsaw_3: Arrange the blocks to form the image
@@ -299,50 +290,50 @@ ja:
         jigsaw_10: Arrange the blocks to form the image
         jigsaw_11: Arrange the blocks to form the image
         jigsaw_12: Arrange the blocks to form the image
-        jigsaw_13: Fix the puzzle!
+        jigsaw_13: パズルをといて！
         mazestep_1: Maze step description here
         mazestep_2: Maze step description here
         mazestep_3: Maze step description here
         mazestep_4: Maze step description here
         mazestep_5: Maze step description here
-        studio_c2_1: 'Can you make this dog say "hello world"?'
-        studio_c2_2: Can you make the dog say something and then have the cat say something afterwards?
-        studio_c2_3: Can you write a program to make this dog move to the cat?
-        studio_c2_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
-        studio_c2_5: 'Can you write a program to make the octopus say "hello" when it is clicked?'
-        studio_c2_6: Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?
-        studio_c2_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
+        studio_c2_1: いぬに「こんにちは」といわせてみましょう。
+        studio_c2_2: いぬがなにかはなしてから、ねこもなにかをはなすようにしてみましょう。
+        studio_c2_3: いぬがねこのところに行くプログラムを作ってみてください。
+        studio_c2_4: 犬がねこのところに行き、ねこのところに犬が来たらねこが犬に「こんにちは」というプログラムを作ってみてください。
+        studio_c2_5: タコをクリックしたら「こんにちは」と言うプログラムを作ってみてください。
+        studio_c2_6: 上向き矢印・下向き矢印・左向き矢印・右向き矢印を使ってペンギンを動かして、ぜんぶのはたにさわらせるプログラムをつくってみましょう。
+        studio_c2_7: 「ずっと」にくっつけたブロックは、プログラムがうごいているあいだずっとくりかえされます。きょうりゅうが上と下をずっといったりきたりするように、ブロックをくっつけてください。
         studio_c2_8: 'Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
-        studio_c2_9: Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?
-        studio_c2_10: Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?
+        studio_c2_9: ペンギンがタコにさわったらポイントがもらえるようにブロックをくみたててから、矢印をつかってポイントがもらえるまでタコを動かしましょう。
+        studio_c2_10: このゲームのはいけいと、ペンギンのうごくはやさをかえるブロックをついかしてから、ポイントがもらえるまで矢印をつかってペンギンをうごかしましょう。
         studio_c2_11: "Create your own story. When you're done, click Finish to let friends try your story on their phones."
-        studio_c3_story_1: 'Can you make this dog say "hello world"?'
-        studio_c3_story_2: Can you make the dog say something and then have the cat say something afterwards?
-        studio_c3_story_3: Can you write a program to make this dog move to the cat?
-        studio_c3_story_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
+        studio_c3_story_1: いぬに「こんにちは」といわせてみましょう。
+        studio_c3_story_2: いぬがなにかはなしてから、ねこもなにかをはなすようにしてみましょう。
+        studio_c3_story_3: いぬがねこのところに行くプログラムを作ってみてください。
+        studio_c3_story_4: 犬がねこのところに行き、ねこのところに犬が来たらねこが犬に「こんにちは」というプログラムを作ってみてください。
         studio_c3_story_5: Can you add a block to make the octopus happy?
         studio_c3_story_6: "Create your own story. When you're done, click Finish to let friends try your story on their phones."
-        studio_c3_game_1: 'Can you write a program to make the octopus say "hello" when it is clicked?'
-        studio_c3_game_2: Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?
-        studio_c3_game_3: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
+        studio_c3_game_1: タコをクリックしたら「こんにちは」と言うプログラムを作ってみてください。
+        studio_c3_game_2: 上向き矢印・下向き矢印・左向き矢印・右向き矢印を使ってペンギンを動かして、ぜんぶのはたにさわらせるプログラムをつくってみましょう。
+        studio_c3_game_3: 「ずっと」にくっつけたブロックは、プログラムがうごいているあいだずっとくりかえされます。きょうりゅうが上と下をずっといったりきたりするように、ブロックをくっつけてください。
         studio_c3_game_4: 'Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
-        studio_c3_game_5: Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?
-        studio_c3_game_6: Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?
-        studio_c3_game_7: "Create your own game. When you're done, click Finish to let friends try your story on their phones."
-        studio_playlab_1: 'Can you make this dog say "hello world"?'
-        studio_playlab_2: Can you make the dog say something and then have the cat say something afterwards?
-        studio_playlab_3: Can you write a program to make this dog move to the cat?
-        studio_playlab_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
-        studio_playlab_5: 'Can you write a program to make the octopus say "hello" when it is clicked?'
-        studio_playlab_6: Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?
-        studio_playlab_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
-        studio_playlab_8: Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?
-        studio_playlab_9: Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?
-        studio_playlab_10: "Create your own game. When you're done, click Finish to let friends try your story on their phones."
-        studio_full_sandbox: "Create your own game. When you're done, click Finish to let friends try your story on their phones."
-        studio_k1_1: 'Can you make this dog say "hello world"?'
-        studio_k1_2: Can you make the dog say something and then have the cat say something afterwards?
-        studio_k1_3: Can you write a program to make this dog move to the cat?
+        studio_c3_game_5: ペンギンがタコにさわったらポイントがもらえるようにブロックをくみたててから、矢印をつかってポイントがもらえるまでタコを動かしましょう。
+        studio_c3_game_6: このゲームのはいけいと、ペンギンのうごくはやさをかえるブロックをついかしてから、ポイントがもらえるまで矢印をつかってペンギンをうごかしましょう。
+        studio_c3_game_7: じぶんのすきなゲームを作りましょう。ゲームがかんせいしたら「完了」をクリックして、ともだちのパソコンやけいたいでんわでもあそばせてあげましょう。
+        studio_playlab_1: いぬに「こんにちは」といわせてみましょう。
+        studio_playlab_2: いぬがなにかはなしてから、ねこもなにかをはなすようにしてみましょう。
+        studio_playlab_3: いぬがねこのところに行くプログラムを作ってみてください。
+        studio_playlab_4: 犬がねこのところに行き、ねこのところに犬が来たらねこが犬に「こんにちは」というプログラムを作ってみてください。
+        studio_playlab_5: タコをクリックしたら「こんにちは」と言うプログラムを作ってみてください。
+        studio_playlab_6: 上向き矢印・下向き矢印・左向き矢印・右向き矢印を使ってペンギンを動かして、ぜんぶのはたにさわらせるプログラムをつくってみましょう。
+        studio_playlab_7: 「ずっと」にくっつけたブロックは、プログラムがうごいているあいだずっとくりかえされます。きょうりゅうが上と下をずっといったりきたりするように、ブロックをくっつけてください。
+        studio_playlab_8: ペンギンがタコにさわったらポイントがもらえるようにブロックをくみたててから、矢印をつかってポイントがもらえるまでタコを動かしましょう。
+        studio_playlab_9: このゲームのはいけいと、ペンギンのうごくはやさをかえるブロックをついかしてから、ポイントがもらえるまで矢印をつかってペンギンをうごかしましょう。
+        studio_playlab_10: じぶんのすきなゲームを作りましょう。ゲームがかんせいしたら「完了」をクリックして、ともだちのパソコンやけいたいでんわでもあそばせてあげましょう。
+        studio_full_sandbox: じぶんのすきなゲームを作りましょう。ゲームがかんせいしたら「完了」をクリックして、ともだちのパソコンやけいたいでんわでもあそばせてあげましょう。
+        studio_k1_1: いぬに「こんにちは」といわせてみましょう。
+        studio_k1_2: いぬがなにかはなしてから、ねこもなにかをはなすようにしてみましょう。
+        studio_k1_3: いぬがねこのところに行くプログラムを作ってみてください。
         studio_k1_4: 'Make the dog move to the cat and the cat say "hello" when he gets there.'
         studio_k1_5: Can you add a block to make the octopus happy?
         studio_k1_6: Create your own story! Move around the cat and dog, and make them say things.
@@ -357,7 +348,8 @@ ja:
         maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
         maze_wordsearch_k_20: This is a test! Move me one way, then another to spell the word STORY
         webapp_ec_simple: Create your web app by using createHtmlBlock.
-        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColour" block.'
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColor" block.'
+        turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new "penWidth" block. Have fun!'
     video:
       name:
         maze_intro: 迷路入門
@@ -373,9 +365,6 @@ ja:
         loop_for: 数える ブロック
         parameters: パラメーター付き関数
         hoc_wrapup: コードの時間終了
-        20_wrapup: |
-          20 時間ラップアップ
-          
         Unplug1: What is CS?
         Unplug2: コンピュテーショナル・シンキング（コンピューターの様に考える）
         Unplug3: グラフ用紙のプログラミング
@@ -390,7 +379,7 @@ ja:
         C1_happy_maps_unplugged: Happy Maps
         C1_moveitmoveit_unplugged: Move It, Move It
         C1_bigevent_unplugged: The Big Event
-        C1_getting_loop: Getting Loopy
+        C1_getting_loopy: Getting Loopy
         C1_pair_programming: Pair Programming
         C1_maze_intro_sequencing: Maze Sequencing Intro
         C1_maze_debugging: Maze Debugging
@@ -402,19 +391,22 @@ ja:
         C1_maze_loops: Maze Loops
         C1_playlab_storytelling: 'Play Lab - Create a Story'
         C1_planting_seed: Planting a Seed
-        C1_building_foundating: Building a Foundation
+        C1_building_foundation: Building a Foundation
         C2_maze_intro: 迷路入門
         C2_artist_intro: アーティスト紹介
         C2_zuck_repeat_loop: Maze Loops
         C2_artist_loops: Artist Loops
+        C2_artist_debugging: Artist Debugging
+        C2_bee_loops: Bee Loops
+        C2_bee_debugging: Bee Debugging
         C2_bee_conditionals: Bee Conditionals
         C2_playlab_createstory: 'Play Lab - Create a Story'
         C2_graph_paper: グラフ用紙のプログラミング
         C2_conditionals_with_cards: 条件
         C2_binary_bracelets: Binary Bracelets
-        C2_replay_programming: プログラミングをリレーします。
+        C2_relay_programming: プログラミングをリレーします。
         C2_paper_airplanes: Paper Airplanes
-        C3_maze_intro: 迷路入門
+        C3_maze_level_4: Maze Loops
         C3_artist_intro: アーティスト紹介
         C3_artist_functions: Artist Functions
         C3_bee_functions: Bee Functions
@@ -435,7 +427,7 @@ ja:
     callout:
       text:
         drag_blocks: 'Drag a "move" block and snap it below the other block'
-        run: 'Hit "Run" to try your program'
+        run: 「実行」ボタンをおして、プログラムをうごかしてみてください。
         watch_again: Click here to watch the video again
         gray_block_explanation: "Blocks that are grey can't be deleted. Can you solve the puzzle anyway?"
         show_code_explanation: "Click here to see the code for the program you're making"
@@ -443,4 +435,10 @@ ja:
         category_explanation: "You have all the same blocks but they've now been arranged in categories"
         set_sprite_image: 'Attach a "set actor to image" block to the "when story starts" block to enable an actor for this story'
         studio_say_text: Type what you want your actor to say within these quotes
-        jigsaw_click: Click this block!
+        jigsaw_click: このブロックをクリックして！
+        move_elsa_forward: 'Drag a "Move Forward" block and snap it below the "When Run" block to make Elsa move forward'
+        turn_elsa: 'Use the "Turn" block to make Elsa turn. The number in the drop-down determines how much Elsa turns'
+        replace_questions: 'Use the drop-down to replace "???" with a number'
+        replace_questions_degree: 'Use the drop-down to replace "???" with the correct degree to turn'
+        repeat_blocks: 'Use the "Repeat" block and wrap it around the blocks in the workspace'
+        snowflake_dropdown: Use this drop-down to create different snowflakes!

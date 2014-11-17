@@ -5,6 +5,7 @@ var canvas = require('canvas');
 
 // Some of our feedback tests need to use Image
 global.Image = canvas.Image;
+global.Turtle = {};
 
 // needed for Hammerjs in studio
 global.navigator = {};
@@ -78,7 +79,7 @@ describe("getMissingRequiredBlocks tests", function () {
 
     // make sure we loaded correctly. text wont match exactly, but make sure if
     // we had xml, we loaded something
-    var loaded = Blockly.Xml.domToText(Blockly.Xml.workspaceToDom(Blockly.mainWorkspace));
+    var loaded = Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
     assert(!options.userBlockXml || loaded, "either we didnt have  input xml" +
       "or we did, and we loaded something");
 
@@ -292,7 +293,9 @@ describe("getMissingRequiredBlocks tests", function () {
         var appSkins = testUtils.requireWithGlobalsCheckSrcFolder(collection.app + '/skins');
         skinForTests = appSkins.load(BlocklyApps.assetUrl, collection.skinId);
       } else {
-        skinForTests = {};
+        skinForTests = {
+          assetUrl: function (str) { return str; }
+        };
       }
 
       var blockInstallOptions = { skin: skinForTests, isK1: false };

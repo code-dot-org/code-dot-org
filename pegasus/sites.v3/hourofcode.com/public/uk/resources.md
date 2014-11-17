@@ -15,6 +15,9 @@ nav: resources_nav
 ## Give this handout to teachers and schools
 [![image](/images/fit-250/schools-handout.png)](/files/schools-handout-uk.pdf)
 
+## Use this handout to host an Hour of Code at your company
+[![image](/images/fit-250/corporations-uk.png)](/files/corporations-uk.pdf)
+
 <a id="videos">
 ## Show these videos to inspire students
 

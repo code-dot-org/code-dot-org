@@ -1,5 +1,7 @@
 {
   "and": "ja",
+  "booleanTrue": "tõene",
+  "booleanFalse": "väär",
   "blocklyMessage": "Blockly",
   "catActions": "Tegevused",
   "catColour": "Värv",

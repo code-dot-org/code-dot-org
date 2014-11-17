@@ -1,5 +1,7 @@
 {
   "and":"ve",
+  "booleanTrue":"doğru",
+  "booleanFalse":"false",
   "blocklyMessage":"Parçalı",
   "catActions":"Eylemler",
   "catColour":"Renk",

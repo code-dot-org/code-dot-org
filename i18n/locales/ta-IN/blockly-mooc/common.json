@@ -1,8 +1,10 @@
 {
   "and":"மற்றும்",
+  "booleanTrue":"மெய்",
+  "booleanFalse":"தவறு",
   "blocklyMessage":"Blockly",
   "catActions":"செயல்கள்",
-  "catColour":"வண்ணம்",
+  "catColour":"நிறம்",
   "catLogic":"தர்க்கம்",
   "catLists":"பட்டியல்கள்",
   "catLoops":"சுழற்சிகள்",

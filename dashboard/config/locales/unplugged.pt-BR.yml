@@ -171,6 +171,7 @@
         title: Navegando com segurança
         desc: A Internet é poderosa, mas às vezes perigosa. Os professores mostram
           como navegar em segurança pela Internet.
+        video: C1_going_places_safely
       GraphPaperProgramming:
         title: Programação em papel quadriculado
         desc: Os alunos escrevem um algoritmo (um conjunto de instruções) usando um
@@ -193,6 +194,7 @@
         title: Seu rastro digital
         desc: Os professores informam aos alunos que colocar informações pessoais
           online cria um rastro digital, ou uma "trilha" que tem consequências.
+        video: C2_digital_footprint
       ComputationalThinking:
         title: Pensamento computacional
         desc: Os alunos usam as etapas do pensamento computacional (decomposição,
@@ -230,3 +232,40 @@
         title: Cidadania digital
         desc: Os alunos exploram a diferença entre informações privadas e pessoais,
           distinguindo o que é seguro e o que não é seguro para compartilhar online.
+      TangramAlgorithms:
+        title: Algoritmos do tangram
+        desc: Esta aula nos mostra algo importante sobre os algoritmos, isto é, se
+          mantiver sua simplicidade, será possível fazer muitas coisas com eles. Se
+          quiser garantir que todos terminarão com o mesmo resultado, seu algoritmo
+          precisará de mais detalhes.
+      EnvelopeVariables:
+        title: Variáveis do envelope
+        desc: As variáveis permitem muita liberdade na ciência da computação. Esta
+          aula ajuda a explicar o que são variáveis e como podemos usá-las de diversas
+          maneiras diferentes. Faça esta atividade antes ou junto com a lição sobre
+          abstração, para que a ideia realmente faça sentido.
+      MadGlibs:
+        title: Mad Glibs
+        desc: A abstração é uma das habilidades mais importantes para o entendimento
+          de um cientista da computação. Esta atividade fará com que seus alunos analisem
+          as diferenças entre histórias para que possam, então, abstraí-las. Essas
+          histórias abstraídas se tornam modelos para novas histórias doidas e divertidas.
+      ForLoopFun:
+        title: Para diversão com laços
+        desc: Sabemos que os laços nos permitem fazer algo repetidas vezes, mas, agora,
+          vamos aprender como usá-los com estruturas adicionais embutidas.
+      SongwritingWithParameters:
+        title: Escrevendo uma canção com parâmetros
+        desc: 'Uma das estruturas mais incríveis do mundo da ciência da computação
+          é a função. As funções (chamadas às vezes de procedimentos) são miniprogramas
+          que podem ser usados repetidas vezes dentro do seu programa maior. Esta
+          aula ajudará os alunos a entender, de maneira intuitiva, por que combinar
+          blocos de códigos em funções é uma prática útil.  '
+      BinaryImages:
+        title: Imagens binárias
+        desc: Embora muitas pessoas vejam o binário estritamente como zeros e unidades,
+          nossos cursos anteriores ensinaram os alunos que as informações podem ser
+          representadas por uma grande variedade de opções binárias. Esta aula leva
+          esse conceito um passo adiante, uma vez que demonstra como um computador
+          também pode armazenar informações ainda mais complexas (como imagens e cores)
+          em binário.

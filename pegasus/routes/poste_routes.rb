@@ -37,3 +37,12 @@ get '/u/:id' do |id|
   Contact.unsubscribe(delivery.contact.email, ip_address:request.ip) if delivery
   halt(200, "You're unsubscribed.\n")
 end
+
+get '/unsubscribe/:email' do |email|
+  only_for 'code.org'
+  dont_cache
+  email = email.to_s.strip.downcase
+  Contact.unsubscribe(email, ip_address:request.ip)
+  halt(200, "#{email} unsubscribed.\n")
+end
+

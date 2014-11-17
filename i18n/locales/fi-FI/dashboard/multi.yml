@@ -42,7 +42,7 @@ fi:
       2-3 bee conditionals multi 2:
         Bee Conditionals Multiple Choice Two: Bee Conditionals Multiple Choice Two
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png, 500: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png, 500
-        Choose the best blocks.: Choose the best blocks.
+        Choose the best blocks.: Valitse parhaat lohkot.
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a2.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a3.png
@@ -50,7 +50,7 @@ fi:
       2-3 bee conditionals multi 3:
         Bee Conditionals Multiple Choice Two: Bee Conditionals Multiple Choice Two
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500
-        Choose the best blocks: Choose the best blocks
+        Choose the best blocks: Valitse parhaat lohkot
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png
@@ -67,7 +67,7 @@ fi:
         Maze Multiple Choice One: Maze Multiple Choice One
         /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500
         Choose the best answer.: Valitse paras vastaus.
-        Which blocks work?: Which blocks work?
+        Which blocks work?: Mitkä lohkot toimivat?
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png
@@ -75,7 +75,7 @@ fi:
       2-3 Maze Multi 2:
         Maze Multiple Choice: Maze Multiple Choice
         /script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500
-        Which blocks work?: Which blocks work?
+        Which blocks work?: Mitkä lohkot toimivat?
         /script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png
         /script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png
         /script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png
@@ -181,7 +181,7 @@ fi:
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png
         0: "? A purple flower may have either 3, 2 or 1 nectars, but you don't know how many. Which blocks correctly check and collect all of the nectar from a purple flower?"
         1: ": A purple flower may have either 3, 2 or 1 nectars, but you don't know how many. Which blocks correctly check and collect all of the nectar from a purple flower?"
-        Choose the best blocks.: Choose the best blocks.
+        Choose the best blocks.: Valitse parhaat lohkot.
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png
@@ -354,7 +354,7 @@ fi:
       K-1 Maze Multiple Choice 2:
         Maze: Sokkelo
         /script_assets/k_1_images/maze_images/maze_WS.png, 500: /script_assets/k_1_images/maze_images/maze_WS.png, 500
-        Which answer solves this level?: Which answer solves this level?
+        Which answer solves this level?: Mikä vastaus ratkaisee tämän tason?
         /script_assets/k_1_images/move_blocks/EN.png: /script_assets/k_1_images/move_blocks/EN.png
         /script_assets/k_1_images/move_blocks/ES.png: /script_assets/k_1_images/move_blocks/ES.png
         /script_assets/k_1_images/move_blocks/WS.png: /script_assets/k_1_images/move_blocks/WS.png
@@ -369,7 +369,7 @@ fi:
       K-1 Maze Loops Multi 2:
         Multiple Choice: Multiple Choice
         /script_assets/k_1_images/move_blocks/SESESEequals.png, 240: /script_assets/k_1_images/move_blocks/SESESEequals.png, 240
-        Pick the correct repeat block.: Pick the correct repeat block.
+        Pick the correct repeat block.: Valitse oikea toisto lohko.
         /script_assets/k_1_images/move_blocks/r3_S.png: /script_assets/k_1_images/move_blocks/r3_S.png
         /script_assets/k_1_images/move_blocks/r3_ES.png: /script_assets/k_1_images/move_blocks/r3_ES.png
         /script_assets/k_1_images/move_blocks/r3_SE.png: /script_assets/k_1_images/move_blocks/r3_SE.png
@@ -494,7 +494,7 @@ fi:
         (+ 5 (* (- 8 6) 4)): '(+ 5 (* (- 8 6) 4))'
       valid contracts multi:
         Valid Contracts: Valid Contracts
-        Pick the best answer to the question.: Pick the best answer to the question.
+        Pick the best answer to the question.: Valitse paras vastaus kysymykseen.
         Which of these is a valid contract for the function circle?: Which of these is a valid contract for the function circle?
         "circle: size style color -> image": 'circle: size style color -> image'
         "circle: number string string -> image": 'circle: number string string -> image'
@@ -522,7 +522,7 @@ fi:
         /script_assets/matches/images/a4.jpg: /script_assets/matches/images/a4.jpg
       test multi text:
         Presidents: Presidentit
-        This multiple choice is all about the presidents of the United States.: This multiple choice is all about the presidents of the United States.
+        This multiple choice is all about the presidents of the United States.: Tässä monivalintakysymyksessä on kyse Yhdysvaltain presidentesteistä.
         Who was the first president of the USA?: Kuka oli ensimmäinen presidentti Yhdysvalloissa?
         Fred Flintstone: Fred Flintstone
         Martha Washington: Martha Washington
@@ -530,7 +530,7 @@ fi:
         George Jetson: George Jetson
       unique level name here:
         title: otsikko
-        description here: description here
-        Question: Question
-        wrong answer: wrong answer
-        right answer: right answer
+        description here: Kuvaus tähän
+        Question: Kysymys
+        wrong answer: väärä vastaus
+        right answer: oikea vastaus

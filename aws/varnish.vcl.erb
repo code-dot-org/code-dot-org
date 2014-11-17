@@ -269,35 +269,25 @@ sub vcl_recv
   if (req.request == "GET" && req.url ~ "^/health_check.php$") {
     error 200 "Varnish is healthy.";
   }
-
-  /*
-  ** Normalize our domain names to the short (non www.) form.
-  */
+  
+  if(req.http.host ~ "\.$")
+  {
+    /* Don't allow domain names that end in "." */
+    error 751 "http://" + regsub(req.http.host, "\.$","") + req.url;
+  }
+  else if(req.http.host ~ "^www\.")
+  {
+    /* Normalize domain names to the short (non www.) form. */
+    error 751 "http://" + regsub(req.http.host, "^www\.","") + req.url;
+  }
+  else if(req.http.Host == "forums.code.org")
+  {
+    /* forums.code.org redirects to support */
+    error 751 "http://support.code.org/";
+  }
   <%
-    [
-      'code.org',
-      'csedweek.org',
-      'hourofcode.com',
-      'uk.code.org',
-    ].each do |domain|
-  %>if(req.http.Host == "www.<%= domain %>") { error 751 "http://<%= domain %>" + req.url; }
-  <% end%>
-
-  /*
-  ** forums.code.org redirects to support
-  */
-  if(req.http.Host == "forums.code.org") { error 751 "http://support.code.org/"; }
-
-  /*
-  ** Alias the following domains to one of our primary ones.
-  */
-  <%
+    # Alias the following domains to one of our primary ones.
     {
-      'code.org.'         => 'code.org',
-      'csedweek.org.'     => 'csedweek.org',
-      'hourofcode.com.'   => 'hourofcode.com',
-      'learn.code.org.'   => 'learn.code.org',
-
       'aws.code.org'      => 'code.org',
       'blockly.com'       => 'learn.code.org',
 
@@ -321,7 +311,11 @@ sub vcl_recv
       'cseducationweek.com' => 'csedweek.org',
       'cseducationweek.org' => 'csedweek.org',
     }.each_pair do |domain,site|
-  %>if(req.http.Host == "<%= domain %>" || req.http.Host == "www.<%= domain %>") { error 751 "http://<%= site %>" + req.url; }
+  %>else if(req.http.Host == "<%= domain %>")
+  {
+    /* <%= domain %> redirects to <%= site %> */
+    error 751 "http://<%= site %>" + req.url;
+  }
   <% end%>
 
   C{

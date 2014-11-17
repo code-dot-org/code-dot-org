@@ -480,10 +480,10 @@ ru:
         Coding in Racket: Coding in Racket
         Select the best answer to the question.: Select the best answer to the question.
         When converting a circle to code, the correct order is: When converting a circle to code, the correct order is
-        top, left, right: top, left, right
-        left, right, top: left, right, top
+        top, left, right: сверху, слева, справа
+        left, right, top: слева, справа, сверху
         random: случайный
-        left top right: left top right
+        left top right: слева сверху справа
       Circle to code:
         Code from Circle: Code from Circle
         /script_assets/msm/Unit%202/exercise_1.png: '/script_assets/msm/Unit%202/exercise_1.png'
@@ -531,6 +531,6 @@ ru:
       unique level name here:
         title: название
         description here: description here
-        Question: Question
-        wrong answer: wrong answer
-        right answer: right answer
+        Question: Вопрос
+        wrong answer: неправильный ответ
+        right answer: правильный ответ

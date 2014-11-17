@@ -13,17 +13,17 @@
           Artist2: Processus 7
           Unplug5: Processus 8
           Farmer: Processus 9
-          Unplug6: "Étape 10 "
-          Artist3: "Étape 11 "
-          Unplug7: "Étape 12 "
-          Farmer2: "Étape 13 "
-          Unplug8: "Étape 14 "
-          Artist4: "Étape 15 "
-          Unplug9: "Étape 16 "
-          Farmer3: "Étape 17 "
-          Unplug10: "Étape 18 "
-          Artist5: "Étape 19 "
-          Unplug11: "Étape 20 "
+          Unplug6: Étape 10 
+          Artist3: Étape 11 
+          Unplug7: Étape 12 
+          Farmer2: Étape 13 
+          Unplug8: Étape 14 
+          Artist4: Étape 15 
+          Unplug9: Étape 16 
+          Farmer3: Étape 17 
+          Unplug10: Étape 18 
+          Artist5: Étape 19 
+          Unplug11: Étape 20 
         Hour of Code:
           desc: Heure de Code
           Maze: Processus 1
@@ -34,7 +34,7 @@
           desc: Rebond (bêta)
           Bounce: Processus 1
         Builder Levels:
-          desc: "Énigmes créées par l'utilisateur (bêta)"
+          desc: Énigmes créées par l'utilisateur (bêta)
           Custom: Processus 1
         Flappy Levels:
           desc: Flappy Bird
@@ -55,7 +55,7 @@
           Bounce: Processus 1
           Studio: Processus 2
         builder:
-          desc: "Énigmes créées par l'utilisateur (bêta)"
+          desc: Énigmes créées par l'utilisateur (bêta)
           Custom: Processus 1
         flappy:
           desc: Flappy Bird
@@ -73,7 +73,7 @@
       name:
         Unplug1: Introduction à l'Informatique
         Maze: Le labyrinthe
-        Multi: Choix Multiples
+        Multi: Les choix multiples
         Unplug2: L'algorithmique
         Unplug3: Programmation sur papier quadrillé
         Artist: L'Artiste
@@ -89,17 +89,18 @@
         Artist4: L'Artiste 4
         Unplug9: Relayer la programmation
         Farmer3: Le Fermier 3
-        Unplug10: Internet et les réseaux connectés
+        Unplug10: La Toile
         Artist5: L'Artiste 5
-        Unplug11: Résumé et ouverture
+        Unplug11: Résumé
         MazeEC: Le labyrinthe
         Bounce: Rebond
         Flappy: Flappy Bird
         Jigsaw: Pièces de Puzzle
         MazeStep: Mode pas à pas du labyrinthe
         Wordsearch: Mots mêlés
-        Webapp: Webapp
+        Webapp: Appli en ligne
         ArtistEC: L'Artiste
+        TextMatch: Correspondance de texte
     trophy:
       name:
         Bronze: Bronze
@@ -167,10 +168,10 @@
           de repasser les lignes grises de l'image.
         turtle_1_2: 'Maintenant, tracez un carré. Note : utilisez votre couleur préférée
           en la choisissant dans le nouveau bloc « choisir la couleur ».'
-        turtle_1_3: Dessinez un carré en utilisant seulement 3 blocs.
-        turtle_1_4: 'Dessinez un triangle dont les côtés sont tous de couleurs différentes,
-          en utilisant l''option « couleur aléatoire » qui choisit une couleur différente
-          à chaque fois. Remarque : vous devrez déterminer jusqu’où tourner en cliquant
+        turtle_1_3: Faire un carré à l'aide de seulement 3 blocs.
+        turtle_1_4: 'Tracer un triangle dont les côtés sont tous de couleurs différentes,
+          en utilisant l''option « couleur au hasard » qui choisit une couleur différente
+          à chaque fois. Astuce: vous devrez déterminer jusqu’où tourner en cliquant
           sur le numéro du bloc « tourner ».'
         turtle_1_5: Maintenant, pour vous entraîner, tracez un triangle puis un carré
           pour dessiner une enveloppe.
@@ -358,8 +359,8 @@
           soit beau et plat.
         maze_karel_debug_while: Comment pouvez-vous modifier ce programme pour m'aider
           à combler le trou ?
-        maze_karel_debug_if: "À l'aide ! Corrigez ce programme afin que je puisse
-          aplanir complètement mon champ."
+        maze_karel_debug_if: À l'aide ! Corrigez ce programme afin que je puisse aplanir
+          complètement mon champ.
         maze_karel_debug_if_else: Déboguez ce programme afin que je remplisse tous
           les trous et rase toutes les mottes.
         maze_karel_debug_function_1: Quelle modification pouvez-vous effectuer dans
@@ -394,7 +395,7 @@
           différent à la place.)
         maze_3_1: Je dois atteindre ce cochon ! Écrivez deux appels à move(); pour
           que je puisse retrouver mes œufs.
-        maze_3_2: "Écrivez-moi un programme pour que je puisse aller jusqu'à ce cochon."
+        maze_3_2: Écrivez-moi un programme pour que je puisse aller jusqu'à ce cochon.
         maze_3_3: Comment puis-je atteindre le cochon ? Assurez-vous que je ne trébuche
           pas sur la caisse pleine d'explosifs !
         maze_3_4: Argh ! Écrivez-moi un programme qui me permette d'éviter les explosifs
@@ -435,9 +436,9 @@
           sur « Démarrer » quand vous êtes prêt.
         flappy_1: Attachez un bloc au bloc « lors d'un clic », puis cliquez sur « Démarrer ».
           Cliquez sur l'écran ou tapotez-le pour déplacer Flappy vers la cible.
-        flappy_2: "À présent, nous avons ajouté du sol. Attachez un bloc au bloc « lorsque
+        flappy_2: À présent, nous avons ajouté du sol. Attachez un bloc au bloc « lorsque
           le sol est touché ». Votre code doit « terminer le jeu » lorsque Flappy
-          s'écrase."
+          s'écrase.
         flappy_3: Le bloc « lors du lancement » vous permet d'exécuter du code au
           démarrage de votre jeu.  Essayez de régler la vitesse du niveau et le battement
           d'ailes.
@@ -468,9 +469,9 @@
         flappy_k1_2: Attaches un bloc au bloc « lors d'un clic », puis cliques sur
           « Lancer ». Cliques sur l'écran ou tapotes-le pour déplacer Flappy vers
           la cible.
-        flappy_k1_3: "À présent, nous avons ajouté du sol. Attachez un bloc au bloc
+        flappy_k1_3: À présent, nous avons ajouté du sol. Attachez un bloc au bloc
           « lorsque le sol est touché ». Votre code doit « terminer le jeu » lorsque
-          Flappy s'écrase."
+          Flappy s'écrase.
         flappy_k1_4: Le bloc « lors du lancement » vous permet d'exécuter du code
           au démarrage de votre jeu.  Essayez de régler la vitesse du niveau et le
           battement d'ailes.
@@ -614,9 +615,12 @@
           épeler le terme EN DESSOUS
         maze_wordsearch_k_20: C'est un test ! Déplace-moi dans une direction, puis
           une autre, pour épeler le mot HISTOIRE
-        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        webapp_ec_simple: Créer votre appli en ligne grâce à createHtmlBlock.
         turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
           it in the new "penColour" block.'
+        turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas:
+          a stick figure, snowflake, or spiral. Also try the new "penWidth" block.
+          Have fun!'
     video:
       name:
         maze_intro: Intro au Labyrinthe
@@ -632,14 +636,13 @@
         loop_for: Bloc Compteur
         parameters: Fonctions avec Paramètres
         hoc_wrapup: Conclusion de l'heure de programmation
-        20_wrapup: Conclusion du cours de 20 heures
         Unplug1: Qu'est-ce que CS?
         Unplug2: L'algorithmique
         Unplug3: Programmation sur papier quadrillé
         Unplug4: Algorithmes
         Unplug5: Fonctions
         Unplug6: Instructions conditionnelles
-        Unplug7: Songwriting
+        Unplug7: Écriture de chansons
         Unplug8: Abstraction
         Unplug9: Relay programming
         Unplug10: Internet
@@ -647,7 +650,7 @@
         C1_happy_maps_unplugged: Happy Maps
         C1_moveitmoveit_unplugged: Move It, Move It
         C1_bigevent_unplugged: Le Grand Evénement
-        C1_getting_loop: Getting Loopy
+        C1_getting_loopy: Getting Loopy
         C1_pair_programming: Programmation à deux
         C1_maze_intro_sequencing: Maze Sequencing Intro
         C1_maze_debugging: Maze Debugging
@@ -659,19 +662,22 @@
         C1_maze_loops: Labyrinthe et boucles
         C1_playlab_storytelling: Jouer au Labo - Créer une Histoire
         C1_planting_seed: Planter une Graine
-        C1_building_foundating: Créer une Fondation
+        C1_building_foundation: Building a Foundation
         C2_maze_intro: Introduction au Dédale
         C2_artist_intro: Introduction à l'Artiste
         C2_zuck_repeat_loop: Labyrinthe et boucles
         C2_artist_loops: Boucles d'artiste
+        C2_artist_debugging: Artist Debugging
+        C2_bee_loops: Abeilles et boucles
+        C2_bee_debugging: Abeilles et debugging
         C2_bee_conditionals: Abeilles et instructions conditionnelles
         C2_playlab_createstory: Jouer au Labo - Créer une Histoire
         C2_graph_paper: Programmation sur papier quadrillé
         C2_conditionals_with_cards: Instructions conditionnelles
         C2_binary_bracelets: Bracelets binaires
-        C2_replay_programming: Relayer la programmation
+        C2_relay_programming: Relayer la programmation
         C2_paper_airplanes: Avions en papier
-        C3_maze_intro: Introduction au Dédale
+        C3_maze_level_4: Labyrinthe et boucles
         C3_artist_intro: Introduction à l'Artiste
         C3_artist_functions: 'Artiste : les fonctions'
         C3_bee_functions: Abeilles et fonctions
@@ -688,7 +694,7 @@
         C3_internet: Internet
         C3_crowdsourcing: Financement participatif
         C3_functional_suncatchers: Functional Suncatchers
-        C3_songwriting_with_parameters: Songwriting With Parameters
+        C3_songwriting_with_parameters: Composition de chansons avec réglages
     callout:
       text:
         drag_blocks: Attrape un bloc « avancer » et attache-le sous l'autre bloc
@@ -707,3 +713,13 @@
         studio_say_text: Entrez ce que vous souhaitez que votre personnage dise dans
           ces guillemets
         jigsaw_click: Clique sur ce bloc !
+        move_elsa_forward: Drag a "Move Forward" block and snap it below the "When
+          Run" block to make Elsa move forward
+        turn_elsa: Use the "Turn" block to make Elsa turn. The number in the drop-down
+          determines how much Elsa turns
+        replace_questions: Use the drop-down to replace "???" with a number
+        replace_questions_degree: Use the drop-down to replace "???" with the correct
+          degree to turn
+        repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
+          workspace
+        snowflake_dropdown: Use this drop-down to create different snowflakes!

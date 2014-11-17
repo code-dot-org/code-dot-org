@@ -1,5 +1,7 @@
 {
   "and":"和",
+  "booleanTrue":"真",
+  "booleanFalse":"错",
   "blocklyMessage":"布洛克里",
   "catActions":"操作",
   "catColour":"颜色",

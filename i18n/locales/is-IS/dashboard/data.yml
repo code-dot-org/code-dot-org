@@ -100,6 +100,7 @@ is:
         Wordsearch: Orðaleit
         Webapp: Vefapp
         ArtistEC: Listamaðurinn
+        TextMatch: Textaleikur
     trophy:
       name:
         Bronze: Brons
@@ -320,7 +321,8 @@ is:
         maze_wordsearch_k_16: Færðu mig í eina átt svo aðra til að stafa orðið BELOW
         maze_wordsearch_k_20: Þetta er próf! Færðu mig í eina átt svo aðra til að stafa orðið STORY
         webapp_ec_simple: Búa til vefapp með því að nota createHtmlBlock.
-        turtle_ec_1_2: 'Teiknaðu nú ferning. ATHUGAÐU: notaðu uppáhaldslitinn þinn með því að velja hann í nýja kubbnum "pennalitur".'
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColor" block.'
+        turtle_ec_1_10: 'Þér tókst þetta! Teiknaðu nú hvað sem þú vilt. Nokkrar hugmyndir: Óli prik, snjókorn eða spírall. Prófaðu líka nýja "pennaBreidd" kubbinn. Góða skemmtun!'
     video:
       name:
         maze_intro: Kynning á Völundarhúsi
@@ -336,7 +338,6 @@ is:
         loop_for: Teljarakubbur
         parameters: Föll með stikum
         hoc_wrapup: Samantekt á Kóðun í klukkustund
-        20_wrapup: Samantekt 20 klukkustunda
         Unplug1: Hvað er tölvunarfræði?
         Unplug2: Tölvunarmiðuð hugsun
         Unplug3: Forritun rúðublaða
@@ -351,7 +352,7 @@ is:
         C1_happy_maps_unplugged: Krúttleg kort
         C1_moveitmoveit_unplugged: Hreyfa sig, hreyfa sig
         C1_bigevent_unplugged: Stórviðburður
-        C1_getting_loop: Lykkjulæti
+        C1_getting_loopy: Lykkjulæti
         C1_pair_programming: Félagaforritun
         C1_maze_intro_sequencing: 'Röð í völundarhúsi - kynning'
         C1_maze_debugging: Villuleit í völundarhúsi
@@ -363,19 +364,22 @@ is:
         C1_maze_loops: Lykkjur völundarhúss
         C1_playlab_storytelling: 'Leikjasmiðja - Búa til sögu'
         C1_planting_seed: Fræsáning
-        C1_building_foundating: Að byggja grunn
+        C1_building_foundation: Að byggja grunn
         C2_maze_intro: Kynning á Völundarhúsi
         C2_artist_intro: Kynning á listamanni
         C2_zuck_repeat_loop: Lykkjur völundarhúss
         C2_artist_loops: 'Listamaður - lykkjur'
+        C2_artist_debugging: 'Listamaður - Villuleit'
+        C2_bee_loops: Lykkjur býflugu
+        C2_bee_debugging: 'Býfluga - villuleit'
         C2_bee_conditionals: Skilyrði býflugu
         C2_playlab_createstory: 'Leikjasmiðja - búa til sögu'
         C2_graph_paper: Forritun rúðublaða
         C2_conditionals_with_cards: Skilyrði
         C2_binary_bracelets: Stafræn armbönd
-        C2_replay_programming: Boðhlaupsforritun
+        C2_relay_programming: Boðhlaupsforritun
         C2_paper_airplanes: Pappírsflaugar
-        C3_maze_intro: Kynning á Völundarhúsi
+        C3_maze_level_4: Lykkjur völundarhúss
         C3_artist_intro: Kynning á listamanni
         C3_artist_functions: 'Listamaður - föll'
         C3_bee_functions: 'Býfluga - föll'
@@ -405,3 +409,9 @@ is:
         set_sprite_image: 'Tengdu "hafa leikmann" kubb við "þegar sagan byrjar" kubb til að virkja leikmann fyrir þessa sögu'
         studio_say_text: Skrifaðu það sem leikmaðurinn á að segja innan þessara gæsalappa
         jigsaw_click: Smelltu á þennan kubb!
+        move_elsa_forward: 'Drag a "Move Forward" block and snap it below the "When Run" block to make Elsa move forward'
+        turn_elsa: 'Use the "Turn" block to make Elsa turn. The number in the drop-down determines how much Elsa turns'
+        replace_questions: 'Use the drop-down to replace "???" with a number'
+        replace_questions_degree: 'Use the drop-down to replace "???" with the correct degree to turn'
+        repeat_blocks: 'Use the "Repeat" block and wrap it around the blocks in the workspace'
+        snowflake_dropdown: Use this drop-down to create different snowflakes!

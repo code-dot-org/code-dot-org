@@ -216,7 +216,7 @@ is:
         playlab: Búa til forrit
         artist: Teikna eitthvað
     user:
-      classroom: Mínir nemendur
+      classroom: Heimasíða kennara
       label: 'Hæ %{username}'
       stats: Framvindan mín
       settings: Reikningurinn minn
@@ -388,8 +388,11 @@ is:
   try_reloading: Reyndu að endurhlaða síðunni
   next_stage: Búið! Halda áfram í næsta áfanga
   download_pdf: Opin kennsluáætlun
+  lesson_plan: Lesson Plan
   view_lesson_plan: Skoða kennsluáætlun
   pdf_download: Hala niður PDF
+  download_coming_soon: Downloadable activity coming soon.
+  video_coming_soon: Video Coming Soon!
   share_code:
     title: 'Smelltu á "Keyra" til að prófa forritið mitt'
     bounce_og_title: Kíktu á skoppleikinn minn
@@ -446,6 +449,8 @@ is:
     wrong_body: Lausnin sem þú gafst er ekki fullnægjandi. Vinsamlegast reyndu aftur!
     correct_title: Rétt
     correct_body: Þetta svar er rétt.
+  text_match:
+    placeholder: Skráðu nafn þitt hér
   dialog:
     ok: Í lagi
   time:
@@ -488,3 +493,8 @@ is:
     message: 'Við erum að uppfæra gögn okkar til að geta veitt þér enn betri persónuvernd. Til að geta það þurfum við að biðja núverandi notendur að gefa upp aldur sinn hér.<br/>Sem fyrr mun code.org aldrei leigja, selja eða deila þessum upplýsingum með nokkrum þriðja aðila.'
     sign_out: 'Viljir þú ekki gefa upp aldur getur þú <a href="%{url}">skráð þig út</a>.'
   zendesk_too_young_message: 'Því miður mega yngri notendur ekki skrá sig á hjálparvefinn. Þú getur skoðað <a href="http://support.code.org">support.code.org</a> án þess að skrá þig inn eða beðið foreldri eða kennara að hafa samband við okkur fyrir þig.'
+  progress:
+    not_completed: ólokið
+    completed_too_many_blocks: lokið, of margir kubbar
+    completed_perfect: lokið, fullkomið
+    furthest_level_attempted: hæsti unninn áfangi

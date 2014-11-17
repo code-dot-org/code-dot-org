@@ -3,9 +3,17 @@
     "full_name": "Andorra",
     "default_language": "ca"
   },
+  "af": {
+    "full_name": "Africa",
+    "default_language": "en"
+  },
   "al": {
     "full_name": "Albania",
     "default_language": "sq"
+  },
+  "ap": {
+    "full_name": "Asia Pacific",
+    "default_language": "en"
   },
   "ar": {
     "full_name": "Argentina",
@@ -31,6 +39,10 @@
     "full_name": "China",
     "default_language": "cn"
   },
+  "co": {
+    "full_name": "Colombia",
+    "default_language": "es"
+  },
   "cz": {
     "full_name": "Czech Republic",
     "default_language": "cs"
@@ -39,8 +51,12 @@
     "full_name": "Germany",
     "default_language": "de"
   },
+  "eg": {
+    "full_name": "Egypt",
+    "default_language": "ar"
+  },
   "es": {
-    "full_name": "Latin America",
+    "full_name": "Spain and Latin America",
     "default_language": "es"
   },
   "eu": {
@@ -80,7 +96,7 @@
     "default_language": "fa"
   },
   "it": {
-    "full_name": "Itally",
+    "full_name": "Italy",
     "default_language": "it"
   },
   "jp": {
@@ -92,12 +108,16 @@
     "default_language": "ko"
   },
   "me": {
-    "full_name": "Middle East and North Africa",
+    "full_name": "Middle East",
     "default_language": "ar"
   },
   "my": {
     "full_name": "Malaysia",
     "default_language": "ms"
+  },
+  "mz": {
+    "full_name": "Mozambique",
+    "default_language": "po"
   },
   "nl": {
     "full_name": "Netherlands",
@@ -114,6 +134,14 @@
   "nz": {
     "full_name": "New Zealand",
     "default_language": "en"
+  },
+  "pe": {
+    "full_name": "Peru",
+    "default_language": "es"
+  },
+  "ps": {
+    "full_name": "Palestine",
+    "default_language": "ar"
   },
   "pt": {
     "full_name": "Portugal",

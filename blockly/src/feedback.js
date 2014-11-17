@@ -81,6 +81,9 @@ exports.displayFeedback = function(options) {
   if (options.level.isK1) {
     feedback.className += " k1";
   }
+  if (options.appDiv) {
+    feedback.appendChild(options.appDiv);
+  }
 
   feedback.appendChild(
     getFeedbackButtons({
@@ -698,7 +701,7 @@ var hasEmptyContainerBlocks = function() {
  * @return {Blockly.Block} an empty container block, or null if none exist.
  */
 var getEmptyContainerBlock = function() {
-  var blocks = Blockly.mainWorkspace.getAllBlocks();
+  var blocks = Blockly.mainBlockSpace.getAllBlocks();
   for (var i = 0; i < blocks.length; i++) {
     var block = blocks[i];
     for (var j = 0; j < block.inputList.length; j++) {
@@ -727,7 +730,7 @@ var hasAllRequiredBlocks = function() {
  * @return {Array<Object>} The blocks.
  */
 var getUserBlocks = function() {
-  var allBlocks = Blockly.mainWorkspace.getAllBlocks();
+  var allBlocks = Blockly.mainBlockSpace.getAllBlocks();
   var blocks = allBlocks.filter(function(block) {
     return !block.disabled && block.isEditable() && block.type !== 'when_run';
   });
@@ -741,7 +744,7 @@ var getUserBlocks = function() {
  * @return {Array<Object>} The blocks.
  */
 var getCountableBlocks = function() {
-  var allBlocks = Blockly.mainWorkspace.getAllBlocks();
+  var allBlocks = Blockly.mainBlockSpace.getAllBlocks();
   var blocks = allBlocks.filter(function(block) {
     return !block.disabled;
   });
@@ -776,7 +779,7 @@ var getMissingRequiredBlocks = function () {
       for (var testId = 0; testId < requiredBlock.length; testId++) {
         var test = requiredBlock[testId].test;
         if (typeof test === 'string') {
-          code = code || Blockly.Generator.workspaceToCode('JavaScript');
+          code = code || Blockly.Generator.blockSpaceToCode('JavaScript');
           if (code.indexOf(test) !== -1) {
             // Succeeded, moving to the next list of tests
             usedRequiredBlock = true;
@@ -805,7 +808,10 @@ var getMissingRequiredBlocks = function () {
  * Do we have any floating blocks not attached to an event block or function block?
  */
 exports.hasExtraTopBlocks = function () {
-  var topBlocks = Blockly.mainWorkspace.getTopBlocks();
+  if (BlocklyApps.editCode) {
+    return false;
+  }
+  var topBlocks = Blockly.mainBlockSpace.getTopBlocks();
   for (var i = 0; i < topBlocks.length; i++) {
     // ignore disabled top blocks. we have a level turtle:2_7 that depends on
     // having disabled top level blocks
@@ -827,6 +833,12 @@ exports.hasExtraTopBlocks = function () {
  */
 exports.getTestResults = function(levelComplete, options) {
   options = options || {};
+  if (BlocklyApps.editCode) {
+    // TODO (cpirich): implement better test results for editCode
+    return levelComplete ?
+      BlocklyApps.TestResults.ALL_PASS :
+      BlocklyApps.TestResults.TOO_FEW_BLOCKS_FAIL;
+  }
   if (BlocklyApps.CHECK_FOR_EMPTY_BLOCKS && hasEmptyContainerBlocks()) {
     var type = getEmptyContainerBlock().type;
     if (type === 'procedures_defnoreturn' || type === 'procedures_defreturn') {

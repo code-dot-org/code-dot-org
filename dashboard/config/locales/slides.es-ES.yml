@@ -3,8 +3,8 @@
     maze_intro:
       1:
         image: notes/hoc1_1.jpg
-        text: "¡Bienvenido a tu primera hora de código! Vamos a sumergirnos bien en
-          tu primera experiencia de programación."
+        text: ¡Bienvenido a tu primera hora de código! Vamos a sumergirnos bien en
+          tu primera experiencia de programación.
       2:
         image: notes/hoc1_2.jpg
         text: Usaremos Blockly, un lenguaje de programación visual donde puedes arrastrar
@@ -52,7 +52,7 @@
           el botón "Reiniciar".
       13:
         image: notes/hoc1_13.jpg
-        text: "¡Vamos por esos cerdos!"
+        text: ¡Vamos por esos cerdos!
     artist_intro:
       1:
         image: notes/stage5_1.jpg
@@ -109,9 +109,9 @@
           clic en el ratón, reproduce un sonido" '
       4:
         image: notes/flappy04.jpg
-        text: "¿Has oído del juego FlappyBird? Mediante el uso de controladores de
+        text: ¿Has oído del juego FlappyBird? Mediante el uso de controladores de
           eventos, vamos a aprender a programar nuestra propia versión personalizada
-          de FlappyBird!"
+          de FlappyBird!
       5:
         image: notes/flappy05.jpg
         text: El código que escribirás consiste de arrastrar y soltar bloques que
@@ -174,8 +174,8 @@
           el bloque "repetir hasta".
       2:
         image: notes/hoc3_2.jpg
-        text: "¿Qué sucedería si no supiéramos cuanto debería moverse el pájaro para
-          llegar al cerdo?"
+        text: ¿Qué sucedería si no supiéramos cuanto debería moverse el pájaro para
+          llegar al cerdo?
       3:
         image: notes/hoc3_3.jpg
         text: Si ponemos un bloque "avanzar" dentro del bloque "repetir hasta" , el
@@ -240,9 +240,9 @@
     function:
       1:
         image: notes/stage13_1.jpg
-        text: "!Hola! soy Brina, una ingeniera de Instagram. Una función es un conjunto
+        text: '!Hola! soy Brina, una ingeniera de Instagram. Una función es un conjunto
           de líneas de código que quieres usar una y otra vez, así que en vez de escribir
-          ese código cada vez, puedes usar solo un bloque."
+          ese código cada vez, puedes usar solo un bloque.'
       2:
         image: notes/stage13_2.jpg
         text: Vamos a aprender cómo definir funciones. Las definiciones de funciones
@@ -260,7 +260,7 @@
           la categoría de funciones.
       5:
         image: notes/stage13_5.jpg
-        text: "¡Volvamos a hacer divertidas las funciones! "
+        text: '¡Volvamos a hacer divertidas las funciones! '
     loop_while:
       1:
         image: notes/stage9_5.jpg
@@ -276,8 +276,8 @@
     loop_for:
       1:
         image: notes/stage11_1.jpg
-        text: "!Hola! soy Trina y trabajo para Pixar. He trabajado en un montón de
-          películas incluyendo Shrek."
+        text: '!Hola! soy Trina y trabajo para Pixar. He trabajado en un montón de
+          películas incluyendo Shrek.'
       2:
         image: notes/stage11_2.jpg
         text: Esta es nuestra nueva iteración "contador". Realizará acciones una y
@@ -297,11 +297,11 @@
     parameters:
       1:
         image: notes/stage15_1.jpg
-        text: "¡Hola! soy Janete y soy ingeniera en Zynga."
+        text: ¡Hola! soy Janete y soy ingeniera en Zynga.
       2:
         image: notes/stage15_2.jpg
-        text: "¿Qué pasa si queremos dibujar un montón de triángulos y sus lados tienen
-          que ser de longitudes diferentes?"
+        text: ¿Qué pasa si queremos dibujar un montón de triángulos y sus lados tienen
+          que ser de longitudes diferentes?
       3:
         image: notes/stage15_3.jpg
         text: Podemos escribir a mano ese código o podemos usar una función con parámetros.
@@ -331,10 +331,10 @@
     hoc_wrapup:
       1:
         image: notes/hoc6_1.jpg
-        text: "¡Felicidades! Con el último puzzle resuelto, acabas de escribir código
+        text: ¡Felicidades! Con el último puzzle resuelto, acabas de escribir código
           que puede decir a cualquier robot cómo encontrar su camino a través de un
           laberinto sin ramificación o túnel de cualquier longitud, no importa si
-          es un zombie, un pájaro, un rover de Marte o incluso un coche sin conductor."
+          es un zombie, un pájaro, un rover de Marte o incluso un coche sin conductor.
       2:
         image: notes/hoc6_2.jpg
         text: Los conceptos básicos que utilizaste son el corazón de cualquier programa
@@ -355,4 +355,4 @@
     20_wrapup:
       1:
         image: notes/bird.png
-        text: "¡Mostrar notas estará disponible pronto!"
+        text: ¡Mostrar notas estará disponible pronto!

@@ -67,7 +67,7 @@ da:
           desc: Labyrint (beta)
           MazeStep: Fase trin
         wordsearch:
-          desc: Stave bien (beta)
+          desc: Stavebien (beta)
           WordSearch: Trin 1
     game:
       name:
@@ -98,8 +98,9 @@ da:
         Jigsaw: Puslespil
         MazeStep: Labyrint trin Mode
         Wordsearch: Ordsøgning
-        Webapp: Webapp
+        Webapp: WebApp
         ArtistEC: Kunstneren
+        TextMatch: Tekst Match
     trophy:
       name:
         Bronze: Bronze
@@ -126,7 +127,7 @@ da:
         maze_2_5: Der er en måde at få ram på den fjollede gris, ved brug af kun to blokke. Kan du regne det ud?
         maze_2_6: Forsøg at få mig til den grønne ubudne gæst ved hjælp af kun tre blokke.
         maze_2_7: 'Hjælp mig med at fjerne denne slemme gris, ved hjælp af færrest mulige blokke. Prøv at bruge mere end én "Gentag" blok.'
-        maze_2_8: 'Når en blok er grå, det betyder du ikke kan slette den. Løse dette puslespil, ved hjælp af den "gentag" blok, der gentages 3 gange. Prøv at sætte disse 3 blokke indeni den grå "gentag" blok: flytte, flytte, drej.'
+        maze_2_8: 'Når en blok er grå, betyder det at du ikke kan slette den. Løs denne opgave, ved hjælp af den "gentag"-blok, der gentages 3 gange. Prøv at sætte disse 3 blokke indeni den grå "gentag" blok: flyt, flyt, drej.'
         maze_2_9: 'OK, prøv den nye "Gentag indtil" blok - den vil blive gentaget indtil jeg når den grønne gris.'
         maze_2_10: 'Ok, en sidste gang for øvelsens skyld - kan du løse denne opgave med kun 4 blokke?'
         maze_2_11: 'Kære person.  Mig zombie. Mig sulten. Må... nå... til... solsikke... Kan du få mig der med kun 5 blokke?'
@@ -138,7 +139,7 @@ da:
         maze_2_17: '"Hvis-Ellers" blokken kontrollerer en betingelse, og gør derefter enten den ene ting eller den anden. Prøv at bruge denne nye blok for at få mig til solsikken.'
         maze_2_18: 'En mere øvelse med "Hvis-Ellers" blokken, kan du løse den i første forsøg?'
         maze_2_19: Kan du nøjes med at tilføje 3 blokke til at hjælpe mig med at løse en mere kompleks labyrint? Hvis du gør det rigtigt, kan jeg gå en vilkårlig kurvet vej, uanset længde.
-        turtle_1_1: Hej, er jeg en kunstner. Du kan skrive kode der får mig til at tegne næsten hvad som helst. Brug et par blokke for at få mig til at tegne over de grå streger i billedet.
+        turtle_1_1: Hej, jeg er en kunstner. Du kan skrive kode, der får mig til at tegne næsten hvad som helst. Brug et par blokke for at få mig til at tegne over de grå streger i billedet.
         turtle_1_2: 'Tegn nu en firkant. Bemærk: Brug din foretrukne farve ved at vælge den i den nye "vælg farve" blok.'
         turtle_1_3: Lav en firkant ved brug af kun 3 blokke.
         turtle_1_4: 'Tegn en trekant, hvis sider alle er i forskellige farver, ved hjælp af indstillingen "tilfældig farve", der henter en forskellig farve hver gang. Tip: du bliver nødt til at finde ud af hvor langt der skal drejes ved at klikke på tallet i "drej" blokken.'
@@ -149,7 +150,7 @@ da:
         turtle_1_9: Kan du finde ud af, hvilket nummer du skal erstatte spørgsmålstegnet med, for at tegne en cirkel?
         turtle_1_10: 'Du gjorde det! Tegn nu lige hvad du har lyst til. Nogle sjove ideer: en tændstikmand, snefnug en eller spiral. Prøv også den nye "sæt bredde" blok. Hav det sjovt!'
         turtle_4_1: 'Kan du tegne en trekant (med 100 pixels kanter) med kun 3 blokke? Tip: Brug en "gentag" blok.'
-        turtle_4_2: 'Tilføje en "Drej til højre ved 90 grader" blok et sted midt i programmet allerede ud på arbejdsområdet for at trække disse trekanter.'
+        turtle_4_2: 'Tilføj en "drej til højre med 90 grader" blok et sted midt i programmet, som allerede er i arbejdsområdet for at tegne disse trekanter.'
         turtle_4_3: 'OK, her er den kode du skrev for at tegne en enkelt trekant. Kan du tilføje en "gentag" og "drej" blok, for at lave en smuk blomst?'
         turtle_4_4: 'Her er den samme kode fra den tidligere gåde, men kun drejende 36 grader efter hver trekant. Hvor mange gange skal det gentages? (Tip: efter 360 grader vil tegningen komme fuld cirkel)'
         turtle_4_5: 'Her er den samme kode fra den tidligere gåde, med drejene gentaget 36 gange. Hvor mange grader skal der drejes? (Tip: efter 360 grader kommer tegningen i fuld cirkel)'
@@ -172,7 +173,7 @@ da:
         maze_karel_1_11: 'Det er stadig mørkt udenfor. Flyt mig hen ad marken. Hvis der er en bunke så fjern den, og hvis der er et hul så fyld det op. Tip: Brug rullemenuen med indstillinger på "hvis"-blokken.'
         turtle_2_1: 'Hej. Mig zombie kunstner. Mig elsker at tegne! Hjælp mig med at tegne en firkant i en særlig farve. Vigtig note: du har de samme blokke, men de er nu blevet sat i kategorier.'
         turtle_2_2: 'Velkommen til brug af funktioner, der lader dig definere nye blokke! Brug den nye "tegn et kvadrat" blok (som du kan finde i "Funktioner" kategorien) til at tegne et lille kvadrat på 50x50 pixels.'
-        turtle_2_3: 'Brug "gentag" blokken (i kategorien "Sløjfer") til at tegne 3 kvadrater med størrelse 100 og 120 grader imellem. Og gør det i tre forskellige, tilfældige farver.'
+        turtle_2_3: 'Brug "gentag"-blokken (i kategorien "Sløjfer") til at tegne 3 kvadrater med en sidelængde på 100 og roteret 120 grader i forhold til hinanden. Og gør det i tre forskellige, tilfældige farver.'
         turtle_2_4: 'Nu skal vi lave noget smart. Ændre koden til at tegne 36 firkanter, 100 pixel brede og hver 10 grader fra hinanden. Tip: Du kan bruge skyderen til at gøre mig hurtigere.'
         turtle_2_5: 'Tegn firkanter med sider på 50, 60, 70, 80 og 90 pixel. Du skal bruge funktionen "tegn en firkant" fem gange.'
         turtle_2_6: 'OK, vil dette program bruge en tæller, for at tegne de samme pladser som sidste gang. Du vil have firkanten til at være samme størrelse som tælleren, så brug "tæller" blok. Tip: Det er i kategorien variabler.'
@@ -200,13 +201,13 @@ da:
         turtle_3_7: 'Tilføj et input kaldet "længde" til "tegne et hus" og byg et stort hus til elefanterne (med kanter, der er 150 pixels lange)'
         turtle_3_8: 'Her er alle blokkene fra den tidligere puslespil.  Ændre funktionen "tegne et hus", så du ender på nederste højre hjørne efter at have tegnet et nyt hus. Brug denne modificerede funktion til at tegne tre huse.'
         turtle_3_9: 'Kan du genoprette funktionen "tegne et hus" uden hjælp? Prøv det, og derefter tegn en række huse.'
-        turtle_3_10: Du har lært en masse! Brug det nu til at tegne noget du synes er sjovt. Prøv at tegne en stjerne eller en spiral eller et smart snefnug.
+        turtle_3_10: Du har lært en masse! Brug det nu til at tegne noget du synes er sjovt. Prøv at tegne en stjerne eller en spiral eller et flot snefnug.
         maze_karel_debug_seq_1: Velkommen til fejlfinding! Min kode virker ikke. Kan du få øje på problemet og løse det, så jeg kan få min jord flad og klar til beplantning?
         maze_karel_debug_seq_2: Hvad er der galt med dette program? Hvordan kan du ordne det, så jeg kan fjerne den bunke?
         maze_karel_debug_repeat: Fejlfind dette program for mig, så min jord bliver pæn og flad.
         maze_karel_debug_while: Hvordan skal du ændre dette program for at hjælpe mig med at udfylde hullet?
-        maze_karel_debug_if: Hjælp! Lav programmet, så mit felt vil være helt fladt.
-        maze_karel_debug_if_else: Fejlfind dette program så jeg kan udfylde hullerne og fjerne alle bunker.
+        maze_karel_debug_if: Hjælp! Lav programmet, så min jord bliver helt flad.
+        maze_karel_debug_if_else: Fejlfind dette program så jeg kan fylde hullerne og fjerne alle bunker.
         maze_karel_debug_function_1: Hvad skal du ændre i dette program for at hjælpe mig til at fjerne alle bunkerne?
         maze_karel_debug_function_2: Kan du fejlfinde dette program for mig så jeg kan gøre min jord flad?
         maze_karel_debug_function_3: 'Rediger dette program, så jeg vil fjerne alle bunker på min jord. '
@@ -323,8 +324,9 @@ da:
         maze_wordsearch_k_15: Flytte mig en vej, så en anden til at stave ordet ABOVE
         maze_wordsearch_k_16: Flytte mig en vej, så en anden til at stave ordet BELOW
         maze_wordsearch_k_20: Dette er en test! Flytte mig en måde, så en anden til at stave ordet STORY
-        webapp_ec_simple: Create your web app by using createHtmlBlock.
-        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColour" block.'
+        webapp_ec_simple: Opret din WebApp ved hjælp af createHtmlBlock.
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColor" block.'
+        turtle_ec_1_10: 'Du har du klaret det! Tegn nu noget som du ønsker. Her er nogle ideer: en tændstikmand, et snefnug eller en spiral. Prøv også den nye "penWidth" blok. Hav det sjovt!'
     video:
       name:
         maze_intro: Labyrint Intro
@@ -340,7 +342,6 @@ da:
         loop_for: Tæller blok
         parameters: Funktioner med parametre
         hoc_wrapup: En Times Kodning afslutning
-        20_wrapup: 20 Timers afslutning
         Unplug1: Hvad er CS?
         Unplug2: Data-Tænkning
         Unplug3: Programmering på millimeterpapir
@@ -355,7 +356,7 @@ da:
         C1_happy_maps_unplugged: Glade Kort
         C1_moveitmoveit_unplugged: Flyt det, flyt det
         C1_bigevent_unplugged: Den store begivenhed
-        C1_getting_loop: Blive Svimmel
+        C1_getting_loopy: Blive Svimmel
         C1_pair_programming: Par programmering
         C1_maze_intro_sequencing: Labyrint sekventering Intro
         C1_maze_debugging: Labyrint fejlfinding
@@ -367,19 +368,22 @@ da:
         C1_maze_loops: Labyrint sløjfer
         C1_playlab_storytelling: 'Spil Lab - Opret en historie'
         C1_planting_seed: Plante et frø
-        C1_building_foundating: Opbygge et fundament
+        C1_building_foundation: Opbygge et fundament
         C2_maze_intro: Labyrint Intro
         C2_artist_intro: Kunstner Intro
         C2_zuck_repeat_loop: Labyrint sløjfer
         C2_artist_loops: Kunstner sløjfer
+        C2_artist_debugging: Kunstner-fejlfinding
+        C2_bee_loops: Bi sløjfer
+        C2_bee_debugging: Bi fejlfinding
         C2_bee_conditionals: Bi betingelser
         C2_playlab_createstory: 'Spil Lab - Opret en historie'
         C2_graph_paper: Programmering på millimeterpapir
         C2_conditionals_with_cards: Betingelser
         C2_binary_bracelets: Binære armbånd
-        C2_replay_programming: Stafet-programmering
+        C2_relay_programming: Stafet-programmering
         C2_paper_airplanes: Papir fly
-        C3_maze_intro: Labyrint Intro
+        C3_maze_level_4: Labyrint sløjfer
         C3_artist_intro: Kunstner Intro
         C3_artist_functions: Kunstner funktioner
         C3_bee_functions: 'Bi: Funktioner'
@@ -409,3 +413,9 @@ da:
         set_sprite_image: 'Vedhæft en "Indstil spiller til billede"-blok til "når historien starter"-blokken for at aktivere en spiller for denne historie'
         studio_say_text: Skriv hvad du vil have din spiller til at sige i dette citat
         jigsaw_click: Klik på denne blok!
+        move_elsa_forward: 'Drag a "Move Forward" block and snap it below the "When Run" block to make Elsa move forward'
+        turn_elsa: 'Use the "Turn" block to make Elsa turn. The number in the drop-down determines how much Elsa turns'
+        replace_questions: 'Use the drop-down to replace "???" with a number'
+        replace_questions_degree: 'Use the drop-down to replace "???" with the correct degree to turn'
+        repeat_blocks: 'Use the "Repeat" block and wrap it around the blocks in the workspace'
+        snowflake_dropdown: Use this drop-down to create different snowflakes!

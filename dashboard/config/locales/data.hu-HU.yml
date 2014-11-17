@@ -91,7 +91,7 @@
         Farmer3: A Farmer 3
         Unplug10: Az internet
         Artist5: A művész 5
-        Unplug11: "Összefoglaló"
+        Unplug11: Összefoglaló
         MazeEC: A labirintus
         Bounce: Ugrál
         Flappy: Flappy madár
@@ -100,6 +100,7 @@
         Wordsearch: Wordsearch
         Webapp: Webapp
         ArtistEC: A művész
+        TextMatch: Text Match
     trophy:
       name:
         Bronze: Bronz
@@ -124,8 +125,8 @@
         maze_2_2_5: Tervezd meg az utat a malacig. A TNT-t viszont kerüld el mindenképp,
           vagy repülsz!
         maze_2_3: Vezess el a zöld förtelemig! (Vigyázz a TNT-vel)
-        maze_2_4: "Őrizd meg nyugalmad, és segíts megkeresni rossz disznót. Egyébként
-          lehet, hogy dühös!"
+        maze_2_4: Őrizd meg nyugalmad, és segíts megkeresni rossz disznót. Egyébként
+          lehet, hogy dühös!
         maze_2_5: Van egy 2 utasításból álló út a malachoz. Kitalálod?
         maze_2_6: Próbálj meg elvezetni a zöld behatolóhoz nem több mint 3 utasítás
           használatával.
@@ -322,9 +323,9 @@
         turtle_3_10: Már sokmindent megtanult! Most használhatja mindezt, és azt rajzolhat,
           amit csak akar. Megpróbálhat  csillag, spirál, vagy akár egy izgalmas hópehely
           megrajzolásával.
-        maze_karel_debug_seq_1: "Üdvözöljük hibakeresés földjén! A kódom nem fut helyesen.
+        maze_karel_debug_seq_1: Üdvözöljük hibakeresés földjén! A kódom nem fut helyesen.
           Látod már a problémát, és ki tudod javítani, hogy előkészíthessem a földet
-          az ültetéshez?"
+          az ültetéshez?
         maze_karel_debug_seq_2: Mi a baj ezzel a programmal? Hogyan lehet kijavítani,
           hogy eltávolíthassam a földhányásokat?
         maze_karel_debug_repeat: Irtsd ki a programhibákat (ezt hívjuk debuggolásnak),
@@ -361,7 +362,7 @@
           az egészet, és írhat helyette valami teljesen mást)
         maze_3_1: El kell kapnom a malacot. Gépelj be néhány move(); (mozgás()) utasítást,
           hogy visszakapjam a tojásaimat.
-        maze_3_2: "Írj egy programot, hogy megtehessem az egész utat a malachoz."
+        maze_3_2: Írj egy programot, hogy megtehessem az egész utat a malachoz.
         maze_3_3: Hogy jussak el a malachoz? Vigyázz, nehogy belefussak egy doboz
           TNT-be!
         maze_3_4: Ahh! Írj nekem egy programot amivel megkerülhetem a TNT-t és eljuthatok
@@ -549,9 +550,12 @@
         webapp_ec_simple: Create your web app by using createHtmlBlock.
         turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
           it in the new "penColour" block.'
+        turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas:
+          a stick figure, snowflake, or spiral. Also try the new "penWidth" block.
+          Have fun!'
     video:
       name:
-        maze_intro: "Útvesztő ismertető"
+        maze_intro: Útvesztő ismertető
         artist_intro: Művész Intro
         farmer_intro: Farmer Intro
         flappy_intro: Flappy intró
@@ -564,7 +568,6 @@
         loop_for: Számláló blokk
         parameters: Paraméterezett függvények
         hoc_wrapup: A kódolás órája összefoglaló
-        20_wrapup: 20 órás összefoglaló
         Unplug1: What is CS?
         Unplug2: Számítógépes gondolkodás
         Unplug3: Grafikus programozás
@@ -575,11 +578,11 @@
         Unplug8: Absztrakció
         Unplug9: Relay programming
         Unplug10: Internet
-        Unplug11: "Összefoglaló"
+        Unplug11: Összefoglaló
         C1_happy_maps_unplugged: Happy Maps
         C1_moveitmoveit_unplugged: Move It, Move It
         C1_bigevent_unplugged: The Big Event
-        C1_getting_loop: Getting Loopy
+        C1_getting_loopy: Getting Loopy
         C1_pair_programming: Pair Programming
         C1_maze_intro_sequencing: Maze Sequencing Intro
         C1_maze_debugging: Maze Debugging
@@ -591,19 +594,22 @@
         C1_maze_loops: Maze Loops
         C1_playlab_storytelling: Play Lab - Create a Story
         C1_planting_seed: Planting a Seed
-        C1_building_foundating: Building a Foundation
+        C1_building_foundation: Building a Foundation
         C2_maze_intro: Labirintus Intro
         C2_artist_intro: Művész Intro
         C2_zuck_repeat_loop: Maze Loops
         C2_artist_loops: Artist Loops
+        C2_artist_debugging: Artist Debugging
+        C2_bee_loops: Bee Loops
+        C2_bee_debugging: Bee Debugging
         C2_bee_conditionals: Bee Conditionals
         C2_playlab_createstory: Play Lab - Create a Story
         C2_graph_paper: Grafikus programozás
         C2_conditionals_with_cards: Feltételek
         C2_binary_bracelets: Binary Bracelets
-        C2_replay_programming: Váltó programozás
+        C2_relay_programming: Váltó programozás
         C2_paper_airplanes: Paper Airplanes
-        C3_maze_intro: Labirintus Intro
+        C3_maze_level_4: Maze Loops
         C3_artist_intro: Művész Intro
         C3_artist_functions: Artist Functions
         C3_bee_functions: Bee Functions
@@ -637,3 +643,13 @@
           block to enable an actor for this story
         studio_say_text: Type what you want your actor to say within these quotes
         jigsaw_click: Click this block!
+        move_elsa_forward: Drag a "Move Forward" block and snap it below the "When
+          Run" block to make Elsa move forward
+        turn_elsa: Use the "Turn" block to make Elsa turn. The number in the drop-down
+          determines how much Elsa turns
+        replace_questions: Use the drop-down to replace "???" with a number
+        replace_questions_degree: Use the drop-down to replace "???" with the correct
+          degree to turn
+        repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
+          workspace
+        snowflake_dropdown: Use this drop-down to create different snowflakes!

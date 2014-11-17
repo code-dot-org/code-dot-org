@@ -1,5 +1,7 @@
 {
   "and":"a",
+  "booleanTrue":"pravda",
+  "booleanFalse":"nepravda",
   "blocklyMessage":"Blockly",
   "catActions":"Akcie",
   "catColour":"Farba",

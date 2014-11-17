@@ -112,6 +112,7 @@ Webapp.onTick = function() {
       catch(err) {
         Webapp.executionError = err;
         Webapp.onPuzzleComplete();
+        return;
       }
     }
   } else {
@@ -151,9 +152,11 @@ Webapp.init = function(config) {
 
   loadLevel();
 
-  var finishButtonFirstLine = _.isEmpty(level.softButtons);
-  var firstControlsRow = require('./controls.html')({assetUrl: BlocklyApps.assetUrl, showSlider: config.level.editCode, finishButton: finishButtonFirstLine});
-  var extraControlsRow = require('./extraControlRows.html')({assetUrl: BlocklyApps.assetUrl, finishButton: !finishButtonFirstLine, debugButtons: config.level.editCode});
+  var showSlider = !config.hide_source && config.level.editCode;
+  var showDebugButtons = !config.hide_source && config.level.editCode;
+  var finishButtonFirstLine = _.isEmpty(level.softButtons) && !showSlider;
+  var firstControlsRow = require('./controls.html')({assetUrl: BlocklyApps.assetUrl, showSlider: showSlider, finishButton: finishButtonFirstLine});
+  var extraControlsRow = require('./extraControlRows.html')({assetUrl: BlocklyApps.assetUrl, finishButton: !finishButtonFirstLine, debugButtons: showDebugButtons});
 
   config.html = page({
     assetUrl: BlocklyApps.assetUrl,
@@ -170,21 +173,23 @@ Webapp.init = function(config) {
   });
 
   config.loadAudio = function() {
-    Blockly.loadAudio_(skin.winSound, 'win');
-    Blockly.loadAudio_(skin.startSound, 'start');
-    Blockly.loadAudio_(skin.failureSound, 'failure');
+    BlocklyApps.loadAudio(skin.winSound, 'win');
+    BlocklyApps.loadAudio(skin.startSound, 'start');
+    BlocklyApps.loadAudio(skin.failureSound, 'failure');
   };
 
   config.afterInject = function() {
-    /**
-     * The richness of block colours, regardless of the hue.
-     * MOOC blocks should be brighter (target audience is younger).
-     * Must be in the range of 0 (inclusive) to 1 (exclusive).
-     * Blockly's default is 0.45.
-     */
-    Blockly.HSV_SATURATION = 0.6;
+    if (BlocklyApps.usingBlockly) {
+      /**
+       * The richness of block colours, regardless of the hue.
+       * MOOC blocks should be brighter (target audience is younger).
+       * Must be in the range of 0 (inclusive) to 1 (exclusive).
+       * Blockly's default is 0.45.
+       */
+      Blockly.HSV_SATURATION = 0.6;
 
-    Blockly.SNAP_RADIUS *= Webapp.scale.snapRadius;
+      Blockly.SNAP_RADIUS *= Webapp.scale.snapRadius;
+    }
 
     drawDiv();
   };
@@ -224,7 +229,9 @@ Webapp.init = function(config) {
 
   if (level.editCode) {
     var pauseButton = document.getElementById('pauseButton');
-    dom.addClickTouchEvent(pauseButton, Webapp.onPauseButton);
+    if (pauseButton) {
+      dom.addClickTouchEvent(pauseButton, Webapp.onPauseButton);
+    }
   }
 };
 
@@ -259,7 +266,6 @@ BlocklyApps.reset = function(first) {
 
   // Reset configurable variables
   var divWebapp = document.getElementById('divWebapp');
-  divWebapp.style.backgroundColor = 'white';
 
   while (divWebapp.firstChild) {
     divWebapp.removeChild(divWebapp.firstChild);
@@ -275,12 +281,17 @@ BlocklyApps.reset = function(first) {
   }
 
   if (level.editCode) {
+    Webapp.paused = false;
     // Reset the pause button:
     var pauseButton = document.getElementById('pauseButton');
-    pauseButton.textContent = webappMsg.pause();
-    pauseButton.disabled = true;
-    Webapp.paused = false;
-    document.getElementById('spinner').style.visibility = 'hidden';
+    if (pauseButton) {
+      pauseButton.textContent = webappMsg.pause();
+      pauseButton.disabled = true;
+    }
+    var spinner = document.getElementById('spinner');
+    if (spinner) {
+      spinner.style.visibility = 'hidden';
+    }
   }
 
   // Reset the Globals object used to contain program variables:
@@ -302,12 +313,14 @@ BlocklyApps.runButtonClick = function() {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
   BlocklyApps.toggleRunReset('reset');
-  Blockly.mainWorkspace.traceOn(true);
+  if (BlocklyApps.usingBlockly) {
+    Blockly.mainBlockSpace.traceOn(true);
+  }
   BlocklyApps.reset(false);
   BlocklyApps.attempts++;
   Webapp.execute();
 
-  if (level.freePlay) {
+  if (level.freePlay && !BlocklyApps.hideSource) {
     var shareCell = document.getElementById('share-cell');
     shareCell.className = 'share-cell-enabled';
   }
@@ -329,7 +342,7 @@ var displayFeedback = function() {
       feedbackImage: Webapp.feedbackImage,
       twitter: twitterOptions,
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
-      saveToGalleryUrl: level.freePlay && Webapp.response.save_to_gallery_url,
+      saveToGalleryUrl: level.freePlay && Webapp.response && Webapp.response.save_to_gallery_url,
       appStrings: {
         reinfFeedbackMsg: webappMsg.reinfFeedbackMsg(),
         sharingText: webappMsg.shareGame()
@@ -355,7 +368,7 @@ Webapp.onReportComplete = function(response) {
 //
 
 var defineProcedures = function (blockType) {
-  var code = Blockly.Generator.workspaceToCode('JavaScript', blockType);
+  var code = Blockly.Generator.blockSpaceToCode('JavaScript', blockType);
   // TODO: handle editCode JS interpreter
   try { codegen.evalWith(code, {
                          codeFunctions: level.codeFunctions,
@@ -409,7 +422,7 @@ Webapp.execute = function() {
     defineProcedures('procedures_defreturn');
     defineProcedures('procedures_defnoreturn');
 
-    var blocks = Blockly.mainWorkspace.getTopBlocks();
+    var blocks = Blockly.mainBlockSpace.getTopBlocks();
     for (var x = 0; blocks[x]; x++) {
       var block = blocks[x];
       if (block.type === 'when_run') {
@@ -447,8 +460,13 @@ Webapp.execute = function() {
 
   if (level.editCode) {
     var pauseButton = document.getElementById('pauseButton');
-    pauseButton.disabled = false;
-    document.getElementById('spinner').style.visibility = 'visible';
+    if (pauseButton) {
+      pauseButton.disabled = false;
+    }
+    var spinner = document.getElementById('spinner');
+    if (spinner) {
+      spinner.style.visibility = 'visible';
+    }
   }
 
   Webapp.running = true;
@@ -484,15 +502,11 @@ Webapp.onPuzzleComplete = function() {
   // Stop everything on screen
   Webapp.clearEventHandlersKillTickLoop();
 
-  // If we know they succeeded, mark levelComplete true
-  // Note that we have not yet animated the succesful run
-  var levelComplete = (Webapp.result === BlocklyApps.ResultType.SUCCESS);
-
-  // If the current level is a free play, always return the free play
-  // result type
+  // If the current level is a free play, always return the free play result
   if (level.freePlay) {
     Webapp.testResults = BlocklyApps.TestResults.FREE_PLAY;
   } else {
+    var levelComplete = (Webapp.result === BlocklyApps.ResultType.SUCCESS);
     Webapp.testResults = BlocklyApps.getTestResults(levelComplete);
   }
 
@@ -502,14 +516,20 @@ Webapp.onPuzzleComplete = function() {
     BlocklyApps.playAudio('failure');
   }
 
-  if (level.editCode) {
-    Webapp.testResults = levelComplete ?
-      BlocklyApps.TestResults.ALL_PASS :
-      BlocklyApps.TestResults.TOO_FEW_BLOCKS_FAIL;
-  }
+  var program;
 
-  var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
-  var textBlocks = Blockly.Xml.domToText(xml);
+  if (level.editCode) {
+    // If we want to "normalize" the JavaScript to avoid proliferation of nearly
+    // identical versions of the code on the service, we could do either of these:
+
+    // do an acorn.parse and then use escodegen to generate back a "clean" version
+    // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
+
+    program = BlocklyApps.editor.getValue();
+  } else {
+    var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+    program = Blockly.Xml.domToText(xml);
+  }
 
   Webapp.waitingForReport = true;
 
@@ -519,7 +539,7 @@ Webapp.onPuzzleComplete = function() {
       level: level.id,
       result: Webapp.result === BlocklyApps.ResultType.SUCCESS,
       testResult: Webapp.testResults,
-      program: encodeURIComponent(textBlocks),
+      program: encodeURIComponent(program),
       image: Webapp.encodedFeedbackImage,
       onComplete: Webapp.onReportComplete
     });
@@ -532,7 +552,7 @@ Webapp.onPuzzleComplete = function() {
       callback: function(pngDataUrl) {
         Webapp.feedbackImage = pngDataUrl;
         Webapp.encodedFeedbackImage = encodeURIComponent(Webapp.feedbackImage.split(',')[1]);
-        
+
         sendReport();
       }
     });
@@ -560,36 +580,27 @@ Webapp.executeCmd = function (id, name, opts) {
 Webapp.callCmd = function (cmd) {
   var retVal = true;
   switch (cmd.name) {
-    /* 
+    /*
     case 'wait':
       if (!cmd.opts.started) {
         BlocklyApps.highlight(cmd.id);
       }
       return Studio.wait(cmd.opts);
     */
-    case 'turnBlack':
-      BlocklyApps.highlight(cmd.id);
-      retVal = Webapp.turnBlack(cmd.opts);
-      break;
     case 'createHtmlBlock':
-      BlocklyApps.highlight(cmd.id);
-      retVal = Webapp.createHtmlBlock(cmd.opts);
-      break;
+    case 'replaceHtmlBlock':
+    case 'deleteHtmlBlock':
+    case 'createButton':
+    case 'createTextInput':
+    case 'getText':
+    case 'setText':
+    case 'setStyle':
     case 'attachEventHandler':
       BlocklyApps.highlight(cmd.id);
-      retVal = Webapp.attachEventHandler(cmd.opts);
+      retVal = Webapp[cmd.name](cmd.opts);
       break;
   }
   return retVal;
-};
-
-Webapp.turnBlack = function (opts) {
-  var divWebapp = document.getElementById('divWebapp');
-
-  // sample
-  divWebapp.style.backgroundColor = 'black';
-
-  return true;
 };
 
 Webapp.createHtmlBlock = function (opts) {
@@ -599,22 +610,104 @@ Webapp.createHtmlBlock = function (opts) {
   newDiv.id = opts.elementId;
   newDiv.innerHTML = opts.html;
 
-  divWebapp.appendChild(newDiv);
+  return Boolean(divWebapp.appendChild(newDiv));
+};
 
-  return newDiv;
+Webapp.createButton = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+
+  var newButton = document.createElement("button");
+  var textNode = document.createTextNode(opts.text);
+  newButton.id = opts.elementId;
+
+  return Boolean(newButton.appendChild(textNode) &&
+                 divWebapp.appendChild(newButton));
+};
+
+Webapp.createTextInput = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+
+  var newInput = document.createElement("input");
+  newInput.value = opts.text;
+  newInput.id = opts.elementId;
+
+  return Boolean(divWebapp.appendChild(newInput));
+};
+
+Webapp.getText = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var div = document.getElementById(opts.elementId);
+  if (divWebapp.contains(div)) {
+    return String(div.value);
+  }
+  return false;
+};
+
+Webapp.setText = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var div = document.getElementById(opts.elementId);
+  if (divWebapp.contains(div)) {
+    div.value = opts.text;
+  }
+  return false;
+};
+
+Webapp.replaceHtmlBlock = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var oldDiv = document.getElementById(opts.elementId);
+  if (divWebapp.contains(oldDiv)) {
+    var newDiv = document.createElement("div");
+    newDiv.id = opts.elementId;
+    newDiv.innerHTML = opts.html;
+
+    return Boolean(divWebapp.replaceChild(newDiv, oldDiv));
+  }
+  return false;
+};
+
+Webapp.deleteHtmlBlock = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var div = document.getElementById(opts.elementId);
+  if (divWebapp.contains(div)) {
+    return Boolean(divWebapp.removeChild(div));
+  }
+  return false;
+};
+
+Webapp.setStyle = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var div = document.getElementById(opts.elementId);
+  if (divWebapp.contains(div)) {
+    div.style.cssText = opts.style;
+    return true;
+  }
+  return false;
 };
 
 Webapp.onEventFired = function (opts, e) {
-  Webapp.eventQueue.push({'fn': opts.func});
+  if (typeof e != 'undefined') {
+    // Push a function call on the queue with an array of arguments consisting
+    // of just the 'e' parameter
+    Webapp.eventQueue.push({
+      'fn': opts.func,
+      'arguments': [e]
+    });
+  } else {
+    Webapp.eventQueue.push({'fn': opts.func});
+  }
 };
 
 Webapp.attachEventHandler = function (opts) {
-  // For now, we're not tracking how many of these we add and we don't allow
-  // the user to detach the handler. We detach all listeners by cloning the
-  // divWebapp DOM node inside of reset()
-  document.getElementById(opts.elementId).addEventListener(
-      opts.eventName,
-      Webapp.onEventFired.bind(this, opts));
+  var divWebapp = document.getElementById('divWebapp');
+  var divElement = document.getElementById(opts.elementId);
+  if (divWebapp.contains(divElement)) {
+    // For now, we're not tracking how many of these we add and we don't allow
+    // the user to detach the handler. We detach all listeners by cloning the
+    // divWebapp DOM node inside of reset()
+    divElement.addEventListener(
+        opts.eventName,
+        Webapp.onEventFired.bind(this, opts));
+  }
 };
 
 /*

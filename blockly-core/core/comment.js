@@ -140,7 +140,7 @@ Blockly.Comment.prototype.setVisible = function(visible) {
   if (visible) {
     // Create the bubble.
     this.bubble_ = new Blockly.Bubble(
-        /** @type {!Blockly.Workspace} */ (this.block_.workspace),
+        /** @type {!Blockly.BlockSpace} */ (this.block_.blockSpace),
         this.createEditor_(), this.block_.svg_.svgGroup_,
         this.iconX_, this.iconY_,
         this.width_, this.height_);

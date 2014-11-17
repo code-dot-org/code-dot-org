@@ -1,8 +1,8 @@
 {
-  "compute": "compute",
-  "equivalentExpression": "Try reordering your arguments to get exactly the same expression.",
-  "extraTopBlocks": "You have unattached blocks. Did you mean to attach these to the \"compute\" block?",
-  "goal": "Goal:",
-  "reinfFeedbackMsg": "Izgleda li ovo onako kako želiš? Za prikaz svoje slike klikni na gumb \"Pokušaj ponovno\".",
-  "yourExpression": "Your expression:"
+  "compute": "izračunati",
+  "equivalentExpression": "Pokušaj presložiti svoje argumente da dobiješ posve jednak izraz.",
+  "extraTopBlocks": "Postoje nespojeni blokovi. Želiš li da budu spojeni u blok \"izračunati\"?",
+  "goal": "Cilj:",
+  "reinfFeedbackMsg": "Možeš pritisnuti gumb \"Ponovno\" da bi uredio svoj izraz.",
+  "yourExpression": "Tvoj izraz:"
 }

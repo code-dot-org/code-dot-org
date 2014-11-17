@@ -16,10 +16,8 @@
 
 - if @game.unplugged?
   = render partial: "levels/unplug", locals: { app: @game.app }
-- elsif @game.multi?
-  = render partial: "levels/multi", locals: { app: @game.app }
-- elsif @game.match?
-  = render partial: "levels/match", locals: { app: @game.app }
+- elsif @level.is_a?(DSLDefined)
+  = render partial: "levels/#{@level.class.to_s.underscore}"
 - else
   -# Solution and start blocks may be nil if they don't exist for this level.
   - @solution_blocks = '' if ! defined? @solution_blocks

@@ -87,7 +87,7 @@ var drawMap = function() {
   visualizationColumn.style.display = 'none';
 
   // account for toolbox if there
-  var toolboxWidth = -Blockly.mainWorkspace.getMetrics().viewLeft;
+  var toolboxWidth = -Blockly.mainBlockSpace.getMetrics().viewLeft;
 
   if (level.ghost) {
     var svg = document.querySelectorAll(".blocklySvg")[0];
@@ -129,9 +129,9 @@ Jigsaw.init = function(config) {
   });
 
   config.loadAudio = function() {
-    Blockly.loadAudio_(skin.winSound, 'win');
-    Blockly.loadAudio_(skin.startSound, 'start');
-    Blockly.loadAudio_(skin.failureSound, 'failure');
+    BlocklyApps.loadAudio(skin.winSound, 'win');
+    BlocklyApps.loadAudio(skin.startSound, 'start');
+    BlocklyApps.loadAudio(skin.failureSound, 'failure');
   };
 
   config.afterInject = function() {
@@ -156,7 +156,7 @@ Jigsaw.init = function(config) {
   BlocklyApps.init(config);
 
   document.getElementById('runButton').style.display = 'none';
-  Jigsaw.successListener = Blockly.addChangeListener(function(evt) {
+  Jigsaw.successListener = Blockly.mainBlockSpaceEditor.addChangeListener(function(evt) {
     checkForSuccess();
   });
 
@@ -226,7 +226,7 @@ Jigsaw.onPuzzleComplete = function() {
     BlocklyApps.playAudio('failure');
   }
 
-  var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
+  var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   var textBlocks = Blockly.Xml.domToText(xml);
 
   Jigsaw.waitingForReport = true;

@@ -1,5 +1,7 @@
 {
   "and": "dan",
+  "booleanTrue": "benar",
+  "booleanFalse": "palsu",
   "blocklyMessage": "Blockly",
   "catActions": "Tindakan",
   "catColour": "Warna",

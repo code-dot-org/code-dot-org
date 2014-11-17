@@ -386,7 +386,7 @@ Blockly.JavaScript.logic_ternary = function() {
 };
 Blockly.JavaScript.loops = {};
 Blockly.JavaScript.controls_repeat = function() {
-  var a = Number(this.getTitleValue("TIMES")), b = Blockly.JavaScript.statementToCode(this, "DO");
+  var a = Number(this.getTitleValue("TIMES")) || 0, b = Blockly.JavaScript.statementToCode(this, "DO");
   Blockly.JavaScript.INFINITE_LOOP_TRAP && (b = Blockly.JavaScript.INFINITE_LOOP_TRAP.replace(/%1/g, "'" + this.id + "'") + b);
   var c = Blockly.JavaScript.variableDB_.getDistinctName("count", Blockly.Variables.NAME_TYPE);
   return"for (var " + c + " = 0; " + c + " < " + a + "; " + c + "++) {\n" + b + "}\n"
@@ -676,6 +676,37 @@ Blockly.JavaScript.procedures_ifreturn = function() {
   }
   return a + "}\n"
 };
+Blockly.JavaScript.functionalProcedures = {};
+Blockly.JavaScript.functional_definition = function() {
+  for(var a = Blockly.JavaScript.variableDB_.getName(this.getTitleValue("NAME"), Blockly.Procedures.NAME_TYPE), b = [], c = 0;c < this.arguments_.length;c++) {
+    b[c] = Blockly.JavaScript.variableDB_.getName(this.arguments_[c], Blockly.Variables.NAME_TYPE, Blockly.Variables.NAME_TYPE_LOCAL)
+  }
+  c = Blockly.JavaScript.statementToCode(this, "STACK");
+  Blockly.JavaScript.INFINITE_LOOP_TRAP && (c = Blockly.JavaScript.INFINITE_LOOP_TRAP.replace(/%1/g, "'" + this.id + "'") + c);
+  var d = Blockly.JavaScript.statementToCode(this, "RETURN", Blockly.JavaScript.ORDER_NONE) || "";
+  d && (d = "  return " + d + ";\n");
+  b = (Blockly.varsInGlobals ? "Globals." + a + " = function" : "function " + a) + "(" + b.join(", ") + ") {\nreturn " + c + d + "\n}";
+  b = Blockly.JavaScript.scrub_(this, b);
+  Blockly.JavaScript.definitions_[a] = b;
+  return null
+};
+Blockly.JavaScript.functional_call = function() {
+  for(var a = Blockly.JavaScript.variableDB_.getName(this.getTitleValue("NAME"), Blockly.Procedures.NAME_TYPE), b = [], c = 0;c < this.arguments_.length;c++) {
+    b[c] = Blockly.JavaScript.statementToCode(this, "ARG" + c, Blockly.JavaScript.ORDER_COMMA) || "null"
+  }
+  return(Blockly.varsInGlobals ? "Globals." : "") + a + "(" + b.join(", ") + ")"
+};
+Blockly.JavaScript.procedural_to_functional_call = function() {
+  for(var a = Blockly.JavaScript.variableDB_.getName(this.getTitleValue("NAME"), Blockly.Procedures.NAME_TYPE), b = [], c = 0;c < this.arguments_.length;c++) {
+    var d = Blockly.JavaScript.valueToCode(this, "ARG" + c, Blockly.JavaScript.ORDER_COMMA);
+    b[c] = d || "null"
+  }
+  return[(Blockly.varsInGlobals ? "Globals." : "") + a + "(" + b.join(", ") + ")", Blockly.JavaScript.ORDER_NONE]
+};
+Blockly.JavaScript.functionalParameters = {};
+Blockly.JavaScript.functional_parameters_get = function() {
+  return Blockly.JavaScript.translateVarName(this.getTitleValue("VAR"))
+};
 Blockly.JavaScript.text = function() {
   return[Blockly.JavaScript.quote_(this.getTitleValue("TEXT")), Blockly.JavaScript.ORDER_ATOMIC]
 };
@@ -794,4 +825,6 @@ Blockly.JavaScript.variables_set = function() {
   var a = Blockly.JavaScript.valueToCode(this, "VALUE", Blockly.JavaScript.ORDER_ASSIGNMENT) || "0";
   return Blockly.JavaScript.translateVarName(this.getTitleValue("VAR")) + " = " + a + ";\n"
 };
+Blockly.JavaScript.parameters_get = Blockly.JavaScript.variables_get;
+Blockly.JavaScript.parameters_set = Blockly.JavaScript.variables_set;
 

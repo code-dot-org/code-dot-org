@@ -308,7 +308,7 @@ lt:
         string numer: eilutės numeris
         image: vaizdas
         (yearbook-picture "Sally" 1992): '(yearbook-picture "Sally" 1992)'
-        function name: sudėtinės komandos pavadinimas
+        function name: komandos pavadinimas
         domain: domenas
         range: diapazonas
         example: pavyzdys

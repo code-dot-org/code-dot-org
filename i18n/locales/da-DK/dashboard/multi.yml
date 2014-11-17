@@ -283,8 +283,8 @@ da:
         /script_assets/4-5_images/unplugged/songwriting_1_q.png: /script_assets/4-5_images/unplugged/songwriting_1_q.png
         0: '? Hvad er den største del af denne sang, som du kan definere som omkvædet, så koret gentager præcis hver gang det er sunget?'
         1: ': Hvad er den største del af denne sang, som du kan definere som omkvædet, så koret gentager præcis hver gang det er kaldet?'
-        Lou, Lou, skip to my Lou,: Lou, Lou, skip to my Lou,
-        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: 'Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.'
+        Lou, Lou, skip to my Lou,: Lou, Lou, springe til min Lou
+        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: 'Lou, Lou, springe til min Lou <br/> Lou, Lou, springe til min Lou <br/> Lou, Lou, springe til min Lou <br/> Spring til min Lou, min ulv.'
         2: "? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,"
         3: ": Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,"
         4: "? Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin."
@@ -504,10 +504,10 @@ da:
         Code from Circle: Kode fra cirkel
         /script_assets/msm/Unit%202/exercise_5.png: '/script_assets/msm/Unit%202/exercise_5.png'
         Pick the Racket code that comes from the circle of evaluation!: Vælg koden ketcher, der kommer fra kredsen af evaluering!
-        (rectangle (10) (2) "solid" "red"): '(rectangle (10) (2) "solid" "red")'
-        (rectangle 10 2 "solid" "red"): '(rectangle 10 2 "solid" "red")'
-        (rectangle (+ 8 2) (- 7 5) "solid" "red"): '(rectangle (+ 8 2) (- 7 5) "solid" "red")'
-        (rectangle (+ 8 2) (- 7 5) solid red): '(rectangle (+ 8 2) (- 7 5) solid red)'
+        (rectangle (10) (2) "solid" "red"): '(rektangel (10) (2) "tæt" "rød")'
+        (rectangle 10 2 "solid" "red"): '(rektangel 10 2 "tæt" "rød")'
+        (rectangle (+ 8 2) (- 7 5) "solid" "red"): '(rektangel (+ 8 2) (-7 5) "tæt" "rød")'
+        (rectangle (+ 8 2) (- 7 5) solid red): (rektangel (+ 8 2) (-7 5) tæt rødt)
       test multi image:
         Maze Multiple Choice Two: Labyrint Multiple Choice 2
         /script_assets/matches/images/head.jpg,400: /script_assets/matches/images/head.jpg,400
@@ -530,7 +530,7 @@ da:
         George Jetson: George Jetson
       unique level name here:
         title: titel
-        description here: description here
-        Question: Question
-        wrong answer: wrong answer
-        right answer: right answer
+        description here: Beskrivelse her
+        Question: Spørgsmål
+        wrong answer: forkert svar
+        right answer: rigtigt svar

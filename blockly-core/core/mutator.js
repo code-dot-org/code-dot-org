@@ -48,16 +48,16 @@ Blockly.Mutator = function(quarkNames) {
 goog.inherits(Blockly.Mutator, Blockly.Icon);
 
 /**
- * Width of workspace.
+ * Width of blockSpace.
  * @private
  */
-Blockly.Mutator.prototype.workspaceWidth_ = 0;
+Blockly.Mutator.prototype.blockSpaceWidth_ = 0;
 
 /**
- * Height of workspace.
+ * Height of blockSpace.
  * @private
  */
-Blockly.Mutator.prototype.workspaceHeight_ = 0;
+Blockly.Mutator.prototype.blockSpaceHeight_ = 0;
 
 /**
  * Create the icon on the block.
@@ -92,7 +92,7 @@ Blockly.Mutator.prototype.createEditor_ = function() {
   <svg>
     <rect class="blocklyMutatorBackground" />
     [Flyout]
-    [Workspace]
+    [BlockSpace]
   </svg>
   */
   this.svgDialog_ = Blockly.createSvgElement('svg',
@@ -103,50 +103,51 @@ Blockly.Mutator.prototype.createEditor_ = function() {
        'height': '100%', 'width': '100%'}, this.svgDialog_);
 
   var mutator = this;
-  this.workspace_ = new Blockly.Workspace(
+  var blockSpaceEditor = this.block_.blockSpace.blockSpaceEditor;
+  this.blockSpace_ = new Blockly.BlockSpace(blockSpaceEditor,
       function() {return mutator.getFlyoutMetrics_();}, null);
-  this.flyout_ = new Blockly.Flyout();
+  this.flyout_ = new Blockly.Flyout(blockSpaceEditor, true);
   this.flyout_.autoClose = false;
   this.svgDialog_.appendChild(this.flyout_.createDom());
-  this.svgDialog_.appendChild(this.workspace_.createDom());
+  this.svgDialog_.appendChild(this.blockSpace_.createDom());
   return this.svgDialog_;
 };
 
 /**
  * Callback function triggered when the bubble has resized.
- * Resize the workspace accordingly.
+ * Resize the blockSpace accordingly.
  * @private
  */
 Blockly.Mutator.prototype.resizeBubble_ = function() {
   var doubleBorderWidth = 2 * Blockly.Bubble.BORDER_WIDTH;
-  var workspaceSize = this.workspace_.getCanvas().getBBox();
+  var blockSpaceSize = this.blockSpace_.getCanvas().getBBox();
   var flyoutMetrics = this.flyout_.getMetrics_();
   var width;
   if (Blockly.RTL) {
-    width = -workspaceSize.x;
+    width = -blockSpaceSize.x;
   } else {
-    width = workspaceSize.width + workspaceSize.x;
+    width = blockSpaceSize.width + blockSpaceSize.x;
   }
-  var height = Math.max(workspaceSize.height + doubleBorderWidth * 3,
+  var height = Math.max(blockSpaceSize.height + doubleBorderWidth * 3,
                         flyoutMetrics.contentHeight + 20);
   width += doubleBorderWidth * 3;
   // Only resize if the size difference is significant.  Eliminates shuddering.
-  if (Math.abs(this.workspaceWidth_ - width) > doubleBorderWidth ||
-      Math.abs(this.workspaceHeight_ - height) > doubleBorderWidth) {
+  if (Math.abs(this.blockSpaceWidth_ - width) > doubleBorderWidth ||
+      Math.abs(this.blockSpaceHeight_ - height) > doubleBorderWidth) {
     // Record some layout information for getFlyoutMetrics_.
-    this.workspaceWidth_ = width;
-    this.workspaceHeight_ = height;
+    this.blockSpaceWidth_ = width;
+    this.blockSpaceHeight_ = height;
     // Resize the bubble.
     this.bubble_.setBubbleSize(width + doubleBorderWidth,
                                height + doubleBorderWidth);
-    this.svgDialog_.setAttribute('width', this.workspaceWidth_);
-    this.svgDialog_.setAttribute('height', this.workspaceHeight_);
+    this.svgDialog_.setAttribute('width', this.blockSpaceWidth_);
+    this.svgDialog_.setAttribute('height', this.blockSpaceHeight_);
   }
 
   if (Blockly.RTL) {
-    // Scroll the workspace to always left-align.
-    var translation = 'translate(' + this.workspaceWidth_ + ',0)';
-    this.workspace_.getCanvas().setAttribute('transform', translation);
+    // Scroll the blockSpace to always left-align.
+    var translation = 'translate(' + this.blockSpaceWidth_ + ',0)';
+    this.blockSpace_.getCanvas().setAttribute('transform', translation);
   }
 };
 
@@ -161,14 +162,14 @@ Blockly.Mutator.prototype.setVisible = function(visible) {
   }
   if (visible) {
     // Create the bubble.
-    this.bubble_ = new Blockly.Bubble(this.block_.workspace,
+    this.bubble_ = new Blockly.Bubble(this.block_.blockSpace,
         this.createEditor_(), this.block_.svg_.svgGroup_,
         this.iconX_, this.iconY_, null, null);
     var thisObj = this;
-    this.flyout_.init(this.workspace_, false);
+    this.flyout_.init(this.blockSpace_, false);
     this.flyout_.show(this.quarkXml_);
 
-    this.rootBlock_ = this.block_.decompose(this.workspace_);
+    this.rootBlock_ = this.block_.decompose(this.blockSpace_);
     var blocks = this.rootBlock_.getDescendants();
     for (var i = 0, child; child = blocks[i]; i++) {
       child.render();
@@ -186,14 +187,14 @@ Blockly.Mutator.prototype.setVisible = function(visible) {
     if (this.block_.saveConnections) {
       this.block_.saveConnections(this.rootBlock_);
       this.sourceListener_ = Blockly.bindEvent_(
-          this.block_.workspace.getCanvas(),
-          'blocklyWorkspaceChange', this.block_,
+          this.block_.blockSpace.getCanvas(),
+          'blocklyBlockSpaceChange', this.block_,
           function() {thisObj.block_.saveConnections(thisObj.rootBlock_)});
     }
     this.resizeBubble_();
-    // When the mutator's workspace changes, update the source block.
-    Blockly.bindEvent_(this.workspace_.getCanvas(), 'blocklyWorkspaceChange',
-        this.block_, function() {thisObj.workspaceChanged_();});
+    // When the mutator's blockSpace changes, update the source block.
+    Blockly.bindEvent_(this.blockSpace_.getCanvas(), 'blocklyBlockSpaceChange',
+        this.block_, function() {thisObj.blockSpaceChanged_();});
     this.updateColour();
   } else {
     // Dispose of the bubble.
@@ -201,13 +202,13 @@ Blockly.Mutator.prototype.setVisible = function(visible) {
     this.svgBackground_ = null;
     this.flyout_.dispose();
     this.flyout_ = null;
-    this.workspace_.dispose();
-    this.workspace_ = null;
+    this.blockSpace_.dispose();
+    this.blockSpace_ = null;
     this.rootBlock_ = null;
     this.bubble_.dispose();
     this.bubble_ = null;
-    this.workspaceWidth_ = 0;
-    this.workspaceHeight_ = 0;
+    this.blockSpaceWidth_ = 0;
+    this.blockSpaceHeight_ = 0;
     if (this.sourceListener_) {
       Blockly.unbindEvent_(this.sourceListener_);
       this.sourceListener_ = null;
@@ -218,17 +219,17 @@ Blockly.Mutator.prototype.setVisible = function(visible) {
 /**
  * Update the source block when the mutator's blocks are changed.
  * Delete or bump any block that's out of bounds.
- * Fired whenever a change is made to the mutator's workspace.
+ * Fired whenever a change is made to the mutator's blockSpace.
  * @private
  */
-Blockly.Mutator.prototype.workspaceChanged_ = function() {
+Blockly.Mutator.prototype.blockSpaceChanged_ = function() {
   // When dragging a function block to the trash by it's icon, we would end up
-  // calling this with no workspace and throwing an exception.
-  if (!this.workspace_) {
+  // calling this with no blockSpace and throwing an exception.
+  if (!this.blockSpace_) {
     return;
   }
   if (!Blockly.Block.isDragging()) {
-    var blocks = this.workspace_.getTopBlocks(false);
+    var blocks = this.blockSpace_.getTopBlocks(false);
     var MARGIN = 20;
     for (var b = 0, block; block = blocks[b]; b++) {
       var blockXY = block.getRelativeToSurfaceXY();
@@ -244,8 +245,8 @@ Blockly.Mutator.prototype.workspaceChanged_ = function() {
     }
   }
 
-  // When the mutator's workspace changes, update the source block.
-  if (this.rootBlock_.workspace == this.workspace_) {
+  // When the mutator's blockSpace changes, update the source block.
+  if (this.rootBlock_.blockSpace == this.blockSpace_) {
     // Switch off rendering while the source block is rebuilt.
     var savedRendered = this.block_.rendered;
     this.block_.rendered = false;
@@ -257,8 +258,8 @@ Blockly.Mutator.prototype.workspaceChanged_ = function() {
       this.block_.render();
     }
     this.resizeBubble_();
-    // The source block may have changed, notify its workspace.
-    this.block_.workspace.fireChangeEvent();
+    // The source block may have changed, notify its blockSpace.
+    this.block_.blockSpace.fireChangeEvent();
   }
 };
 
@@ -269,16 +270,16 @@ Blockly.Mutator.prototype.workspaceChanged_ = function() {
  * .absoluteTop: Top-edge of view.
  * .absoluteLeft: Left-edge of view.
  * @return {!Object} Contains size and position metrics of mutator dialog's
- *     workspace.
+ *     blockSpace.
  * @private
  */
 Blockly.Mutator.prototype.getFlyoutMetrics_ = function() {
   var left = 0;
   if (Blockly.RTL) {
-    left += this.workspaceWidth_;
+    left += this.blockSpaceWidth_;
   }
   return {
-    viewHeight: this.workspaceHeight_,
+    viewHeight: this.blockSpaceHeight_,
     viewWidth: 0,  // This seem wrong, but results in correct RTL layout.
     absoluteTop: 0,
     absoluteLeft: left

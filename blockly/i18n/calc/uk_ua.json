@@ -1,8 +1,8 @@
 {
-  "compute": "compute",
-  "equivalentExpression": "Try reordering your arguments to get exactly the same expression.",
-  "extraTopBlocks": "You have unattached blocks. Did you mean to attach these to the \"compute\" block?",
-  "goal": "Goal:",
-  "reinfFeedbackMsg": "Це виглядає так, як ви хочете? Можна клацнути кнопку \"Повторити спробу\", щоб побачити свій малюнок.",
-  "yourExpression": "Your expression:"
+  "compute": "обчислити",
+  "equivalentExpression": "Спробуйте переставити аргументи, щоб отримати такий же вираз.",
+  "extraTopBlocks": "Залишились невикористані блоки. Ви збирались їх приєднувати до блоку \"обчислити\"?",
+  "goal": "Мета:",
+  "reinfFeedbackMsg": "Можете натиснути кнопку \"Повторити спробу\" і відредагувати свій вираз.",
+  "yourExpression": "Ваш вираз:"
 }

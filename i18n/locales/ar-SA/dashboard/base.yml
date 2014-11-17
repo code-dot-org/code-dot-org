@@ -217,7 +217,7 @@ ar:
         playlab: Make an App
         artist: Draw Something
     user:
-      classroom: طلابي
+      classroom: الصفحة الرئيسية المعلم
       label: 'مرحباً %{username}'
       stats: انجازاتي
       settings: حسابي
@@ -389,8 +389,11 @@ ar:
   try_reloading: حاول اعادة تحميل الصفحة
   next_stage: انتهى! استمر في المرحلة القادمة
   download_pdf: افتح خطة الدرس
+  lesson_plan: Lesson Plan
   view_lesson_plan: عرض خطة الدرس
   pdf_download: تحميل ملف بي دي اف
+  download_coming_soon: Downloadable activity coming soon.
+  video_coming_soon: Video Coming Soon!
   share_code:
     title: "انقر فوق 'تشغيل' لرؤية البرنامج الخاص بي في العمل"
     bounce_og_title: تحقق من لعبة الارتداد الخاصة بي
@@ -447,6 +450,8 @@ ar:
     wrong_body: 'الحل الذي قمت بإدخاله غير صحيح.  الرجاء المحاولة مرة أخرى!'
     correct_title: صحيح
     correct_body: هذا هو الجواب الصحيح.
+  text_match:
+    placeholder: Enter your answer here
   dialog:
     ok: موافق
   time:
@@ -489,3 +494,8 @@ ar:
     message: 'نحن في طور ترقية خبراتنا لنقدم لك حماية خصوصية أفضل حتى من ما سبق، لنقوم بذلك نحتاج أن يدخل المستخدمون الحاليون عمرهم هنا <br/> ولن يقوم Code.org على الإطلاق بإعارة أو بيع أو مشاركة هذة المعلومات مع أي طرف ثالث آخر.'
     sign_out: 'إذا كنت لاترغب بالإدلاء بعمرك يمكن <a href="%{url}"> تسجيل الخروج</a>.'
   zendesk_too_young_message: 'عذرا ، المستخدمين الصغار لايمكنهم تسجيل الدخول إلى موقع دعمنا، يمكنك تصفح <a href="http://support.code.org">صفحة الدعم</a> بدون تسجيل الدخول أو أطلب من والديك أو معلمك لتواصل معنا نيابة عنك.'
+  progress:
+    not_completed: not completed
+    completed_too_many_blocks: completed, too many blocks
+    completed_perfect: completed, perfect
+    furthest_level_attempted: furthest level attempted

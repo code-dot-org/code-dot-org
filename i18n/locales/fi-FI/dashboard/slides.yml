@@ -72,7 +72,7 @@ fi:
     flappy_intro:
       1:
         image: notes/flappy01.jpg
-        text: "Hi, I'm Katie! One of the most exciting things about computer science is that a computer program can be interactive."
+        text: Hei olen Katie! Yksi mielenkiintoisimmista asioista tietotekniikassa on, että tietokoneohjelma voi olla vuorovaikutteinen.
       2:
         image: notes/flappy02.jpg
         text: "Any time somebody clicks or taps or types on a computer or phone, that generates an EVENT, and there's some code that decides what to do when an EVENT occurs."
@@ -99,7 +99,7 @@ fi:
         text: 'When you see a drop down arrow like this, that means you can change the settings - like what sound to play when flappy hits the ground.'
       10:
         image: notes/flappy10.jpg
-        text: "In the final puzzle you'll be able to create your own game and share it with your friends. Have fun!"
+        text: Viimeisessä pulmassa voit luoda oman pelin ja jakaa sen ystäviesi kanssa. Pidä hauskaa!
     loop_times:
       1:
         image: notes/hoc2_1.jpg

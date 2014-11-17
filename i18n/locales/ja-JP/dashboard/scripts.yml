@@ -5,7 +5,7 @@ ja:
         test:
           "Jigsaw: Learn to drag and drop": ジグソーパズル：ドラッグ＆ドロップを学びましょう
           The Maze: 迷路
-          Multi: Multi
+          Multi: マルチ
           Match: Match
           Math Image: Math Image
           title: Test Course
@@ -23,8 +23,8 @@ ja:
           "Bee 2: Loops": 'Bee 2: Loops'
           Multi & Match: 'Multi & Match'
           K-1 Flappy: K-1 Flappy
-          Flappy non blockly: Flappy non blockly
-          title: Course 1
+          Flappy non blockly: blocklyを使わないFlappy
+          title: コース1
           Artist 2: Artist 2
           Happy Maps: Happy Maps
           Move it, Move it: Move it, Move it
@@ -76,7 +76,7 @@ ja:
           "Bee: Debugging": 'Bee: Debugging'
           "Artist: Debugging": 'Artist: Debugging'
           "Bee: Conditionals": 'Bee: Conditionals'
-          description_short: 'Course 2 is designed for students who can read.  Recommended for grades 2-5.'
+          description_short: コース2は、読み書きができる生徒向けになっています。2年生～5年生向けです。
           "Artist: Sequence2": 'Artist: Sequence2'
           "Maze: Sequence2": 'Maze: Sequence2'
           "Artist: Nested Loops": アーティスト：入れ子のループ
@@ -117,7 +117,7 @@ ja:
           "Farmer: While Loops": 'Farmer: While Loops'
           "Bee: Nested Loops": 'Bee: Nested Loops'
           "Bee: Debugging": 'Bee: Debugging'
-          description_short: 'Course 3 is a follow-up to Course 2.  Recommended for grades 4-5.'
+          description_short: コース3はコース2の応用編です。4年生～5年生向けです。
           Maze2: Maze2
           Artist2: アーティスト2
           "Artist: Functions2": 'Artist: Functions2'
@@ -137,6 +137,26 @@ ja:
           Assessments: Assessments
           Unit 1: Unit 1
           Unit 2: Unit 2
+          Ninja Cat and the Coordinate Plane: Ninja Cat and the Coordinate Plane
+          "Calc: Circles of Evaluation": 'Calc: Circles of Evaluation'
+          "Artist: Strings and Images": 'Artist: Strings and Images'
+          Contracts: Contracts
+          "Artist: Writing Contracts": 'Artist: Writing Contracts'
+          "Calc: Defining Variables": 'Calc: Defining Variables'
+          "Play Lab: Defining Variables": 'Play Lab: Defining Variables'
+          The Design Recipe: The Design Recipe
+          "Artist: Defining Functions": 'Artist: Defining Functions'
+          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
+          "Artist: Functions": アーティスト：関数
+          "Play Lab: Animation": 'Play Lab: Animation'
+          Booleans: Booleans
+          "Play Lab: Booleans": 'Play Lab: Booleans'
+          "Calc: Boolean Operators": 'Calc: Boolean Operators'
+          "Play Lab: Boolean Operators": 'Play Lab: Boolean Operators'
+          Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
+          "Artist: Conditionals": 'Artist: Conditionals'
+          Collision Detection and the Distance Formula: Collision Detection and the Distance Formula
+          "Play Lab: Collision Detection": 'Play Lab: Collision Detection'
         playlab:
           title: Play Lab
           description: プレイラボでお話やゲームを作りましょう！
@@ -147,12 +167,27 @@ ja:
           description: アーティストでかっこいい絵やデザインを描きましょう！
           Artist: アーティスト
           description_short: アーティストでかっこいい絵やデザインを描きましょう！
+        scrat:
+          title: Scrat
+          description_short: Scrat short description.
+          description: Scrat long description
+          "Maze: Sequence": 'Maze: Sequence'
+        hourofcode:
+          Maze: 迷路
+          title: コードの時間(Hour of code)
+          description_short: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
+          description: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
+        frozen:
+          title: Frozen
+          description_short: Join the Royal Sisters of Arendelle, Anna and Elsa, as they explore the magic and beauty of ice. You will write code to create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!
+          description: Join the Royal Sisters of Arendelle, Anna and Elsa, as they explore the magic and beauty of ice. You will write code to create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!
+          Artist: アーティスト
         course4:
-          description_short: Students taking Course 4 should have already taken Courses 2 and 3.
+          description_short: コース4を始める前に、コース2とコース3を終わらせてください。
           description: Course 4 is designed for students who have taken Course 2 and 3. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8.
           "Artist: Variables": 'Artist: Variables'
           "Bee: For Loops": 'Bee: For Loops'
-          title: Course 4
+          title: コース4
           "Algorithms: Tangrams": 'Algorithms: Tangrams'
           Variables: 変数
           "Play Lab: Variables": 'Play Lab: Variables'
@@ -162,3 +197,28 @@ ja:
           "Play Lab: For Loops": 'Play Lab: For Loops'
           "Artist: Functions": アーティスト：関数
           "Artist: Functions with Paraqmeters": 'Artist: Functions with Paraqmeters'
+          "Unplugged: Tangrams": 'Unplugged: Tangrams'
+          Artist: アーティスト
+          Bee: Bee
+          "Unplugged: Envelope Variables": 'Unplugged: Envelope Variables'
+          "Unplugged: Madlibs": 'Unplugged: Madlibs'
+          "Unplugged: For Loop Fun": 'Unplugged: For Loop Fun'
+          "Unplugged: Songwriting with Parameters": 'Unplugged: Songwriting with Parameters'
+          "Artist: Functions with Parameters": 'Artist: Functions with Parameters'
+          "Unplugged: Binary": 'Unplugged: Binary'
+          Bee Binary: Bee Binary
+          Farmer Binary: Farmer Binary
+          Maze and Bee: Maze and Bee
+          Artist Binary: Artist Binary
+        Course4pre:
+          description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
+          Course 4 Prerequisite: Course 4 Prerequisite
+          "Maze: Sequence": 'Maze: Sequence'
+          "Artist: Sequence": 'Artist: Sequence'
+          "Artist: Loops": 'Artist: Loops'
+          "Bee: Conditionals": 'Bee: Conditionals'
+          "Artist: Nested Loops": アーティスト：入れ子のループ
+          "Farmer: While Loops": 'Farmer: While Loops'
+          "Bee: Nested Loops": 'Bee: Nested Loops'
+          "Artist: Functions": アーティスト：関数
+          "Bee: Debugging": 'Bee: Debugging'

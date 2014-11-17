@@ -1,5 +1,5 @@
 {
-  "atHoneycomb": "在蜂巢裡",
+  "atHoneycomb": "在蜂巢",
   "atFlower": "在花叢中",
   "avoidCowAndRemove": "避開牛隻，並且移除1鏟泥土",
   "continue": "繼續",
@@ -30,7 +30,7 @@
   "ifPathAhead": "如果前面有路",
   "ifTooltip": "如果在指定的方向有路的話，就執行某些指定動作。",
   "ifelseTooltip": "如果在指定的方向有路的話，就執行第一個程式積木的動作，否則就執行第二個程式積木的動作。",
-  "ifFlowerTooltip": "If there is a flower/honeycomb in the specified direction, then do some actions.",
+  "ifFlowerTooltip": "如果指定的方向有花或蜂巢，則作出一些行動。",
   "ifelseFlowerTooltip": "If there is a flower/honeycomb in the specified direction, then do the first block of actions. Otherwise, do the second block of actions.",
   "insufficientHoney": "You're using all the right blocks, but you need to make the right amount of honey.",
   "insufficientNectar": "You're using all the right blocks, but you need to collect the right amount of nectar.",

@@ -100,6 +100,7 @@ id:
         Wordsearch: Carikata
         Webapp: Aplkasi Web
         ArtistEC: Artis
+        TextMatch: Text Match
     trophy:
       name:
         Bronze: Perunggu
@@ -326,7 +327,8 @@ id:
         maze_wordsearch_k_16: Gerakkan saya lurus, kemudian saya akan mengeja kata BELOW
         maze_wordsearch_k_20: Ini adalah tes! Gerakkan saya lurus, kemudian akan mengeja kata STORY
         webapp_ec_simple: Buatlah aplikasi web anda dengan memakai createHtmlBlock.
-        turtle_ec_1_2: 'Sekarang, gambarkan persegi. CATATAN: gunakan warna kesukaan anda dengan cara memilih itu dalam new "penColour" blok.'
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColor" block.'
+        turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new "penWidth" block. Have fun!'
     video:
       name:
         maze_intro: Introduksi labirin
@@ -342,7 +344,6 @@ id:
         loop_for: Blok konter (Counter)
         parameters: Fungsi dengan parameter
         hoc_wrapup: Penutupan Jam kode
-        20_wrapup: 'Penutupan 20 Jam '
         Unplug1: Apa itu CS?
         Unplug2: Berpikir secara komputasi
         Unplug3: Pemrograman grafis diatas kertas
@@ -357,7 +358,7 @@ id:
         C1_happy_maps_unplugged: Pemetaan bahagia
         C1_moveitmoveit_unplugged: Gerakkan itu, Gerakkan itu
         C1_bigevent_unplugged: Acara besar
-        C1_getting_loop: Dapat berulang-ulang
+        C1_getting_loopy: Getting Loopy
         C1_pair_programming: Pemrograman berpasangan
         C1_maze_intro_sequencing: Introduksi Sekuensi Labirin
         C1_maze_debugging: Labirin Debugging
@@ -369,19 +370,22 @@ id:
         C1_maze_loops: Pengulangan labirin
         C1_playlab_storytelling: 'Mainkan Lab - Buat sebuah Cerita'
         C1_planting_seed: Penanaman benih
-        C1_building_foundating: Membangun dasar
+        C1_building_foundation: Membangun dasar
         C2_maze_intro: Apa itu Labirin?
         C2_artist_intro: Introduksi Artis
         C2_zuck_repeat_loop: Pengulangan labirin
         C2_artist_loops: Perulangan Artis
+        C2_artist_debugging: Artist Debugging
+        C2_bee_loops: Pengulangan lebah
+        C2_bee_debugging: Bee Debugging
         C2_bee_conditionals: kondisi lebah
         C2_playlab_createstory: 'Mainkan Lab - Buat sebuah Cerita'
         C2_graph_paper: Pemrograman grafis diatas kertas
         C2_conditionals_with_cards: Kondisi
         C2_binary_bracelets: Gelang biner
-        C2_replay_programming: Pemrograman relay
+        C2_relay_programming: Pemrograman relay
         C2_paper_airplanes: Pesawat kertas
-        C3_maze_intro: Apa itu Labirin?
+        C3_maze_level_4: Pengulangan labirin
         C3_artist_intro: Introduksi Artis
         C3_artist_functions: Fungsi Artis
         C3_bee_functions: Fungsi lebah
@@ -411,3 +415,9 @@ id:
         set_sprite_image: 'Temaptkan "mengatur aktor gambar" blok ke dalam blok "ketika cerita mulai" untuk mengaktifkan aktor untuk cerita ini'
         studio_say_text: Tuliskan apa yang anda inginkan untuk aktor katakan dalam tanda kutip tersebut
         jigsaw_click: Klik blok ini!
+        move_elsa_forward: 'Drag a "Move Forward" block and snap it below the "When Run" block to make Elsa move forward'
+        turn_elsa: 'Use the "Turn" block to make Elsa turn. The number in the drop-down determines how much Elsa turns'
+        replace_questions: 'Use the drop-down to replace "???" with a number'
+        replace_questions_degree: 'Use the drop-down to replace "???" with the correct degree to turn'
+        repeat_blocks: 'Use the "Repeat" block and wrap it around the blocks in the workspace'
+        snowflake_dropdown: Use this drop-down to create different snowflakes!

@@ -25,12 +25,12 @@
 
 goog.provide('Blockly.Bubble');
 
-goog.require('Blockly.Workspace');
+goog.require('Blockly.BlockSpace');
 
 
 /**
  * Class for UI bubble.
- * @param {!Blockly.Workspace} workspace The workspace on which to draw the
+ * @param {!Blockly.BlockSpace} blockSpace The blockSpace on which to draw the
  *     bubble.
  * @param {!Element} content SVG content for the bubble.
  * @param {Element} shape SVG element to avoid eclipsing.
@@ -40,7 +40,7 @@ goog.require('Blockly.Workspace');
  * @param {?number} bubbleHeight Height of bubble, or null if not resizable.
  * @constructor
  */
-Blockly.Bubble = function(workspace, content, shape,
+Blockly.Bubble = function(blockSpace, content, shape,
                           anchorX, anchorY,
                           bubbleWidth, bubbleHeight) {
   var angle = Blockly.Bubble.ARROW_ANGLE;
@@ -49,10 +49,10 @@ Blockly.Bubble = function(workspace, content, shape,
   }
   this.arrow_radians_ = angle / 360 * Math.PI * 2;
 
-  this.workspace_ = workspace;
+  this.blockSpace_ = blockSpace;
   this.content_ = content;
   this.shape_ = shape;
-  var canvas = workspace.getBubbleCanvas();
+  var canvas = blockSpace.getBubbleCanvas();
   canvas.appendChild(this.createDom_(content, !!(bubbleWidth && bubbleHeight)));
 
   this.setAnchorLocation(anchorX, anchorY);
@@ -65,7 +65,7 @@ Blockly.Bubble = function(workspace, content, shape,
       // function inputs box, presumably because the content hasn't
       // been rendered yet. In this case, a later call to resizeBubble_
       // sets the size correctly.
-      bBox = this.workspace_.getCanvas().getBBox();
+      bBox = this.blockSpace_.getCanvas().getBBox();
     }
     bubbleWidth = bBox.width + 2 * Blockly.Bubble.BORDER_WIDTH;
     bubbleHeight = bBox.height + 2 * Blockly.Bubble.BORDER_WIDTH;
@@ -255,12 +255,12 @@ Blockly.Bubble.prototype.bubbleMouseDown_ = function(e) {
   if (Blockly.isRightButton(e)) {
     // Right-click.
     return;
-  } else if (Blockly.isTargetInput_(e)) {
+  } else if (Blockly.BlockSpaceEditor.isTargetInput_(e)) {
     // When focused on an HTML text input widget, don't trap any events.
     return;
   }
   // Left-click (or middle click)
-  Blockly.setCursorHand_(true);
+  this.blockSpace_.blockSpaceEditor.setCursorHand_(true);
   // Record the starting offset between the current location and the mouse.
   if (Blockly.RTL) {
     this.dragDeltaX = this.relativeLeft_ + e.clientX;
@@ -273,7 +273,7 @@ Blockly.Bubble.prototype.bubbleMouseDown_ = function(e) {
       'mouseup', this, Blockly.Bubble.unbindDragEvents_);
   Blockly.Bubble.onMouseMoveWrapper_ = Blockly.bindEvent_(document,
       'mousemove', this, this.bubbleMouseMove_);
-  Blockly.hideChaff();
+  this.blockSpace_.blockSpaceEditor.hideChaff();
   // This event has been handled.  No need to bubble up to the document.
   e.stopPropagation();
 };
@@ -308,7 +308,7 @@ Blockly.Bubble.prototype.resizeMouseDown_ = function(e) {
     return;
   }
   // Left-click (or middle click)
-  Blockly.setCursorHand_(true);
+  this.blockSpace_.blockSpaceEditor.setCursorHand_(true);
   // Record the starting offset between the current location and the mouse.
   if (Blockly.RTL) {
     this.resizeDeltaWidth = this.width_ + e.clientX;
@@ -321,7 +321,7 @@ Blockly.Bubble.prototype.resizeMouseDown_ = function(e) {
       'mouseup', this, Blockly.Bubble.unbindDragEvents_);
   Blockly.Bubble.onMouseMoveWrapper_ = Blockly.bindEvent_(document,
       'mousemove', this, this.resizeMouseMove_);
-  Blockly.hideChaff();
+  this.blockSpace_.blockSpaceEditor.hideChaff();
   // This event has been handled.  No need to bubble up to the document.
   e.stopPropagation();
 };
@@ -390,9 +390,9 @@ Blockly.Bubble.prototype.layoutBubble_ = function() {
   var relativeLeft = -this.width_ / 4;
   var relativeTop = -this.height_ - Blockly.BlockSvg.MIN_BLOCK_Y;
   // Prevent the bubble from being offscreen.
-  if (this.workspace_.scrollbar) {
-    // Fetch the workspace's metrics, if they exist.
-    var metrics = this.workspace_.getMetrics();
+  if (this.blockSpace_.scrollbar) {
+    // Fetch the blockSpace's metrics, if they exist.
+    var metrics = this.blockSpace_.getMetrics();
     if (this.anchorX_ + relativeLeft <
         Blockly.BlockSvg.SEP_SPACE_X + metrics.viewLeft) {
       // Slide the bubble right until it is onscreen.
@@ -583,7 +583,7 @@ Blockly.Bubble.prototype.dispose = function() {
   // Dispose of and unlink the bubble.
   goog.dom.removeNode(this.bubbleGroup_);
   this.bubbleGroup_ = null;
-  this.workspace_ = null;
+  this.blockSpace_ = null;
   this.content_ = null;
   this.shape_ = null;
 };

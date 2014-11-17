@@ -26,7 +26,7 @@ lt:
           - unplug4
         video: Unplug4
       Unplug5:
-        title: Sudėtinės komandos
+        title: Komandų kūrimas
         desc: |-
           In this lesson, students will make a suncatcher out of string, beads, and a special charm. The students will follow a series of repetitive steps, then be asked to identify certain sets of "skills" that are duplicated several times. Once those skills are defined, they will be called from a main program and the whole beautiful process of creation will be recorded on a single sheet of paper. The final program will be geared toward the entire class, whatever their type of string, beads, and charms. To effectively allow for this, students will need to "abstract out" the details of their specific materials and create vague terms for an individual's supplies.  This use of generic placeholders is a wonderful introduction to variables.
         pdfs:
@@ -40,7 +40,7 @@ lt:
         video: Unplug6
       Unplug7:
         title: Dainos ir funkcijos
-        desc: Skaityti dainos tekstą moka visi mokiniai. Mes paimsime šį visiems suprantamą dalyką ir pritaikysime jį mokydami sudėtinių komandų. Kai mokiniai supras, kaip iškviesti sudėtinę komandą (funckiją), pridėsime papildomų dalykų, t. y. parametrų, su kuriais yra iškviečiamos sudėtinės komandos.
+        desc: 'Skaityti dainos tekstą moka visi mokiniai. Mes šį  principą  pritaikysime  mokydami kurti savo komandas. Kai mokiniai supras, kaip iškviesti sukrutą komandą (funckiją), pridėsime papildomų parametrų, su kuriais yra iškviečiamos komandos.'
         pdfs:
           - unplug7
         video: Unplug7
@@ -103,6 +103,7 @@ lt:
       GoingPlacesSafely:
         title: Saugus naršymas internete
         desc: Internetas yra galina, bet kartais ir pavojinga vieta. Mokytojai moko, kaip būti saugiam naršant internete.
+        video: C1_going_places_safely
       GraphPaperProgramming:
         title: Programavimas ant languoto popieriaus
         desc: Mokiniai rašo algoritmus (instrukcijas) savo klasės draugams, kuriomis naudodamasis, kitas mokinys turės nupiešti piešinį.
@@ -118,12 +119,13 @@ lt:
       DigitalFootprint:
         title: Virtualūs pirštų antspaudai
         desc: Mokytojai supažindina mokinius su idėja, kad įdedant informaciją į internetą apie save, yra sukuriami virtualūs pirštų antspaudai, pagal kuriuos tą žmogų galima sekti ir tai gali turėti pasėkmių.
+        video: C2_digital_footprint
       ComputationalThinking:
         title: Skaičiuojamasis mąstymas
         desc: Students use the steps of computational thinking (decompose, pattern match, abstract, algorithm) to figure out how to play a game that comes with no instructions.
         video: C3_skaičiuojamasis_mąstymas
       FunctionalSuncatchers:
-        title: Functional Suncatchers
+        title: Sekų suvokimas
         desc: Students create an algorithm with variables and functions (pieces of code that you want to use over and over again) to create suncatchers using string and beads.
         video: C3_functional_suncatchers
       SongwritingParameters:
@@ -145,3 +147,21 @@ lt:
       DigitalCitizenship:
         title: Virtuali pilietybė
         desc: Mokiniai nagrinėja skirtumus tarp asmeninės informacijos ir privačios informacijos, mokosi atskirti, ką yra saugu, o ką nesaugu skelbti internete.
+      TangramAlgorithms:
+        title: Tangram Algorithms
+        desc: This lesson shows us something important about algorithms. If you keep an algorithm simple there are lots of ways to use it. If you want to make sure everyone ends up with the same thing, then your algorithm needs more detail.
+      EnvelopeVariables:
+        title: Envelope Variables
+        desc: 'Variables allow for a lot of freedom in computer science.  This lesson helps to explain what variables are and how we can use them in many different ways. Use this activity before (or in conjunction with) the lesson on abstraction to really hit the idea home.'
+      MadGlibs:
+        title: Mad Glibs
+        desc: 'Abstraction is one of the most important skills for a computer scientist to understand.  This activity will have your students analyzing stories for differences so that they can abstract them away. Those abstracted stories become templates for fun and crazy new ones.'
+      ForLoopFun:
+        title: For Loop Fun
+        desc: We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops with extra structure built right in.
+      SongwritingWithParameters:
+        title: Dainų rašymas su parametrais
+        desc: 'One of the most magnificent structures in the computer science world is the function.  Functions (sometimes called procedures) are mini programs that you can use over and over inside of your bigger program. This lesson will help students intuitively understand why combining chunks of code into functions is such a helpful practice.  '
+      BinaryImages:
+        title: Binary Images
+        desc: 'Though many people think of binary as strictly zeros and ones, our previous courses taught students that information can be represented in a variety of binary options.  This lesson takes that concept one step further as it illustrates how a computer can store even more complex information (such as images and colors) in binary, as well.'

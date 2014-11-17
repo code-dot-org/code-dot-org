@@ -24,7 +24,7 @@ ko:
           Multi & Match: 개관식과 맞추기
           K-1 Flappy: K-1(초등 1학년) 플래피 버드.
           Flappy non blockly: 플래피 버드로
-          title: Course 1
+          title: 과정1
           Artist 2: 예술가2
           Happy Maps: 즐거운 맵
           Move it, Move it: 움직여, 움직여
@@ -40,7 +40,7 @@ ko:
           "Maze: Loops": '미로 퍼즐: 반복'
           "Bee: Loops": '꿀벌: 반복'
           "Studio: Create a Story": 'Play Lab: 스토리 만들기'
-          description_short: Course 1 is designed for early readers. Recommended for grades K-1.
+          description_short: 과정1은 읽기에 익숙하지 않은 학생들을 위해 설계되었습니다. 초1 학생에게 권장합니다.
           "Artist: Loops": '예술가: 반복'
         course2:
           The Maze: 미로 퍼즐
@@ -76,7 +76,7 @@ ko:
           "Bee: Debugging": '꿀벌: 디버깅'
           "Artist: Debugging": '예술가: 디버깅'
           "Bee: Conditionals": '꿀벌: 조건선택'
-          description_short: 'Course 2 is designed for students who can read.  Recommended for grades 2-5.'
+          description_short: 과정2는 읽기가 가능한 학생들을 위해 설계되었습니다. 초등2~5 학생들에게 권장합니다.
           "Artist: Sequence2": '예술가: 순차2'
           "Maze: Sequence2": '미로: 순차2'
           "Artist: Nested Loops": '예술가: 중첩반복'
@@ -117,7 +117,7 @@ ko:
           "Farmer: While Loops": '농부: ~인동안 반복'
           "Bee: Nested Loops": '꿀벌: 중첩반복'
           "Bee: Debugging": '꿀벌: 디버깅'
-          description_short: 'Course 3 is a follow-up to Course 2.  Recommended for grades 4-5.'
+          description_short: 과정3은 과정2의 다음 과정입니다. 초등4~5 학생들에게 권장합니다.
           Maze2: 미로 퍼즐2
           Artist2: 예술가2
           "Artist: Functions2": '예술가: 함수2'
@@ -137,6 +137,26 @@ ko:
           Assessments: 평가 점수
           Unit 1: 유닛1
           Unit 2: 유닛2
+          Ninja Cat and the Coordinate Plane: 닌자 고양이와 비행기 움직이기
+          "Calc: Circles of Evaluation": '계산: O X 맞추기'
+          "Artist: Strings and Images": '예술가: 문장과 이미지'
+          Contracts: 제한하기
+          "Artist: Writing Contracts": '예술가: 제한요소 만들기'
+          "Calc: Defining Variables": '계산: 변수 정의하기'
+          "Play Lab: Defining Variables": '플레이 랩: 변수 정의하기'
+          The Design Recipe: 디자인 레시피
+          "Artist: Defining Functions": '예술가: 함수 정의하기'
+          "Play Lab: Defining Functions": '플레이 랩: 함수 정의하기'
+          "Artist: Functions": '예술가: 함수'
+          "Play Lab: Animation": '플레이 랩: 애니메이션'
+          Booleans: 불(참 또는 거짓)값들
+          "Play Lab: Booleans": '플레이 랩: 불(참 또는 거짓 값)'
+          "Calc: Boolean Operators": '계산 : 불(참, 거짓) 연산자'
+          "Play Lab: Boolean Operators": '플레이 랩: 불(참, 거짓) 연산자'
+          Conditionals and Piecewise Functions: 조건선택과 불연속 함수
+          "Artist: Conditionals": '예술가: 조건선택'
+          Collision Detection and the Distance Formula: 충돌 감지와 거리 공식
+          "Play Lab: Collision Detection": '플레이 랩: 충돌 감지'
         playlab:
           title: Play Lab
           description: Play Lab을 이용해 스토리나 게임을 만드세요!
@@ -147,18 +167,58 @@ ko:
           description: 예술가를 이용해 멋진 그림과 디자인을 만들어보세요!
           Artist: 예술가
           description_short: 예술가를 이용해 멋진 그림과 디자인을 만들어보세요!
+        scrat:
+          title: Scrat
+          description_short: Scrat short description.
+          description: Scrat long description
+          "Maze: Sequence": '미로 퍼즐: 순차'
+        hourofcode:
+          Maze: Maze
+          title: Hour of Code
+          description_short: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
+          description: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
+        frozen:
+          title: Frozen
+          description_short: Join the Royal Sisters of Arendelle, Anna and Elsa, as they explore the magic and beauty of ice. You will write code to create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!
+          description: Join the Royal Sisters of Arendelle, Anna and Elsa, as they explore the magic and beauty of ice. You will write code to create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!
+          Artist: 예술가
         course4:
-          description_short: Students taking Course 4 should have already taken Courses 2 and 3.
-          description: Course 4 is designed for students who have taken Course 2 and 3. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8.
-          "Artist: Variables": 'Artist: Variables'
-          "Bee: For Loops": 'Bee: For Loops'
-          title: Course 4
-          "Algorithms: Tangrams": 'Algorithms: Tangrams'
+          description_short: 과정4는 과정2와 과정3을 먼저 완료했어야 합니다.
+          description: 과정4는 과정2와 과정3을 이미 완료한 학생들을 위해 설계되었습니다. 학생들은 이전 과정에서 배운 프로그래밍 내용들을 좀 더 깊이 이해하고 보다 복잡한 문제들을 해결할 수 있게 될 것입니다. 이 과정을 완료하게 되면 학생들은 인터랙티브한 이야기와 게임을 스스로 만들고 다른 사람들과 공유할 수 있게 됩니다. 초4~8 학생들에게 권장합니다.
+          "Artist: Variables": '예술가: 변수'
+          "Bee: For Loops": '꿀벌: 반복'
+          title: 과정4
+          "Algorithms: Tangrams": '알고리즘: 탱그램'
           Variables: 변수
-          "Play Lab: Variables": 'Play Lab: Variables'
-          "Play Lab: Functions with Parameters": 'Play Lab: Functions with Parameters'
-          "Bee: Functions with Parameters": 'Bee: Functions with Parameters'
-          "Artist: For Loops": 'Artist: For Loops'
-          "Play Lab: For Loops": 'Play Lab: For Loops'
+          "Play Lab: Variables": '플레이 랩: 변수'
+          "Play Lab: Functions with Parameters": '플레이 랩: 매개변수를 사용하는 함수'
+          "Bee: Functions with Parameters": '꿀벌: 매개변수를 사용하는 함수'
+          "Artist: For Loops": '예술가: 반복'
+          "Play Lab: For Loops": '플레이 랩: 반복'
           "Artist: Functions": '예술가: 함수'
-          "Artist: Functions with Paraqmeters": 'Artist: Functions with Paraqmeters'
+          "Artist: Functions with Paraqmeters": '예술가: 매개변수를 사용하는 함수'
+          "Unplugged: Tangrams": '언플러그드: 탱그램'
+          Artist: 예술가
+          Bee: 꿀벌
+          "Unplugged: Envelope Variables": '언플러그드: 변수들 묶기'
+          "Unplugged: Madlibs": '언플러그드: Madlibs'
+          "Unplugged: For Loop Fun": '언플러그드: 재미있는 반복'
+          "Unplugged: Songwriting with Parameters": '언플러그드: 매개변수를 사용한 노래 만들기'
+          "Artist: Functions with Parameters": '예술가: 매개변수를 사용하는 함수'
+          "Unplugged: Binary": '언플러그드: 2진'
+          Bee Binary: 꿀벌 2진
+          Farmer Binary: 농부 2진
+          Maze and Bee: 미로와 꿀벌
+          Artist Binary: Artist Binary
+        Course4pre:
+          description_short: 과정2와 과정3을 이미 완료한 학생들을 위한 간단한 개념 확장
+          Course 4 Prerequisite: 과정4 준비조건
+          "Maze: Sequence": '미로 퍼즐: 순차'
+          "Artist: Sequence": '예술가: 순차'
+          "Artist: Loops": '예술가: 반복'
+          "Bee: Conditionals": '꿀벌: 조건선택'
+          "Artist: Nested Loops": '예술가: 중첩반복'
+          "Farmer: While Loops": '농부: ~인동안 반복'
+          "Bee: Nested Loops": '꿀벌: 중첩반복'
+          "Artist: Functions": '예술가: 함수'
+          "Bee: Debugging": '꿀벌: 디버깅'

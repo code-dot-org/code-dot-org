@@ -73,7 +73,7 @@ fr:
       name:
         Unplug1: "Introduction à l'Informatique"
         Maze: Le labyrinthe
-        Multi: Choix Multiples
+        Multi: Les choix multiples
         Unplug2: "L'algorithmique"
         Unplug3: Programmation sur papier quadrillé
         Artist: "L'Artiste"
@@ -89,17 +89,18 @@ fr:
         Artist4: "L'Artiste 4"
         Unplug9: Relayer la programmation
         Farmer3: Le Fermier 3
-        Unplug10: Internet et les réseaux connectés
+        Unplug10: La Toile
         Artist5: "L'Artiste 5"
-        Unplug11: Résumé et ouverture
+        Unplug11: Résumé
         MazeEC: Le labyrinthe
         Bounce: Rebond
         Flappy: Flappy Bird
         Jigsaw: Pièces de Puzzle
         MazeStep: Mode pas à pas du labyrinthe
         Wordsearch: Mots mêlés
-        Webapp: Webapp
+        Webapp: Appli en ligne
         ArtistEC: "L'Artiste"
+        TextMatch: Correspondance de texte
     trophy:
       name:
         Bronze: Bronze
@@ -140,8 +141,8 @@ fr:
         maze_2_19: "Peux-tu ajouter exactement 3 blocs pour m'aider à suivre une route encore plus complexe ? Si tu le fais bien, je suis prêt à suivre toute voie sinueuse, peu importe sa longueur."
         turtle_1_1: "Bonjour, je suis un artiste. Vous pouvez écrire du code pour me faire dessiner presque n'importe quoi. Utilisez quelques blocs pour me permettre de repasser les lignes grises de l'image."
         turtle_1_2: 'Maintenant, tracez un carré. Note : utilisez votre couleur préférée en la choisissant dans le nouveau bloc « choisir la couleur ».'
-        turtle_1_3: Dessinez un carré en utilisant seulement 3 blocs.
-        turtle_1_4: "Dessinez un triangle dont les côtés sont tous de couleurs différentes, en utilisant l'option « couleur aléatoire » qui choisit une couleur différente à chaque fois. Remarque : vous devrez déterminer jusqu’où tourner en cliquant sur le numéro du bloc « tourner »."
+        turtle_1_3: "Faire un carré à l'aide de seulement 3 blocs."
+        turtle_1_4: "Tracer un triangle dont les côtés sont tous de couleurs différentes, en utilisant l'option « couleur au hasard » qui choisit une couleur différente à chaque fois. Astuce: vous devrez déterminer jusqu’où tourner en cliquant sur le numéro du bloc « tourner »."
         turtle_1_5: Maintenant, pour vous entraîner, tracez un triangle puis un carré pour dessiner une enveloppe.
         turtle_1_6: "Voyez-vous comment dessiner ce triangle et ce carré ? Astuce : Faites d'abord le triangle, puis essayez de trouver de combien de degrés il faudra tourner avant de dessiner le carré."
         turtle_1_7: "OK, compliquons un peu les choses. Essayez de dessiner ces lunettes vertes. Les carrés font 100 pixels de côté, et ils sont reliés par une barre de 50 pixels. N'oubliez pas de dessiner en vert !"
@@ -319,8 +320,9 @@ fr:
         maze_wordsearch_k_15: Déplace-moi dans une direction, puis une autre, pour épeler le terme AU-DESSUS
         maze_wordsearch_k_16: Déplace-moi dans une direction, puis une autre, pour épeler le terme EN DESSOUS
         maze_wordsearch_k_20: "C'est un test ! Déplace-moi dans une direction, puis une autre, pour épeler le mot HISTOIRE"
-        webapp_ec_simple: Create your web app by using createHtmlBlock.
-        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColour" block.'
+        webapp_ec_simple: Créer votre appli en ligne grâce à createHtmlBlock.
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColor" block.'
+        turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new "penWidth" block. Have fun!'
     video:
       name:
         maze_intro: Intro au Labyrinthe
@@ -336,14 +338,13 @@ fr:
         loop_for: Bloc Compteur
         parameters: Fonctions avec Paramètres
         hoc_wrapup: "Conclusion de l'heure de programmation"
-        20_wrapup: Conclusion du cours de 20 heures
         Unplug1: "Qu'est-ce que CS?"
         Unplug2: "L'algorithmique"
         Unplug3: Programmation sur papier quadrillé
         Unplug4: Algorithmes
         Unplug5: Fonctions
         Unplug6: Instructions conditionnelles
-        Unplug7: Songwriting
+        Unplug7: Écriture de chansons
         Unplug8: Abstraction
         Unplug9: Relay programming
         Unplug10: Internet
@@ -351,7 +352,7 @@ fr:
         C1_happy_maps_unplugged: Happy Maps
         C1_moveitmoveit_unplugged: Move It, Move It
         C1_bigevent_unplugged: Le Grand Evénement
-        C1_getting_loop: Getting Loopy
+        C1_getting_loopy: Getting Loopy
         C1_pair_programming: Programmation à deux
         C1_maze_intro_sequencing: Maze Sequencing Intro
         C1_maze_debugging: Maze Debugging
@@ -363,19 +364,22 @@ fr:
         C1_maze_loops: Labyrinthe et boucles
         C1_playlab_storytelling: 'Jouer au Labo - Créer une Histoire'
         C1_planting_seed: Planter une Graine
-        C1_building_foundating: Créer une Fondation
+        C1_building_foundation: Building a Foundation
         C2_maze_intro: Introduction au Dédale
         C2_artist_intro: "Introduction à l'Artiste"
         C2_zuck_repeat_loop: Labyrinthe et boucles
         C2_artist_loops: "Boucles d'artiste"
+        C2_artist_debugging: Artist Debugging
+        C2_bee_loops: Abeilles et boucles
+        C2_bee_debugging: Abeilles et debugging
         C2_bee_conditionals: Abeilles et instructions conditionnelles
         C2_playlab_createstory: 'Jouer au Labo - Créer une Histoire'
         C2_graph_paper: Programmation sur papier quadrillé
         C2_conditionals_with_cards: Instructions conditionnelles
         C2_binary_bracelets: Bracelets binaires
-        C2_replay_programming: Relayer la programmation
+        C2_relay_programming: Relayer la programmation
         C2_paper_airplanes: Avions en papier
-        C3_maze_intro: Introduction au Dédale
+        C3_maze_level_4: Labyrinthe et boucles
         C3_artist_intro: "Introduction à l'Artiste"
         C3_artist_functions: 'Artiste : les fonctions'
         C3_bee_functions: Abeilles et fonctions
@@ -392,7 +396,7 @@ fr:
         C3_internet: Internet
         C3_crowdsourcing: Financement participatif
         C3_functional_suncatchers: Functional Suncatchers
-        C3_songwriting_with_parameters: Songwriting With Parameters
+        C3_songwriting_with_parameters: Composition de chansons avec réglages
     callout:
       text:
         drag_blocks: "Attrape un bloc « avancer » et attache-le sous l'autre bloc"
@@ -405,3 +409,9 @@ fr:
         set_sprite_image: "Attachez un bloc « choisir l'image pour le personnage » au bloc « lorsque l'histoire commence » pour ajouter un personnage à l'histoire"
         studio_say_text: Entrez ce que vous souhaitez que votre personnage dise dans ces guillemets
         jigsaw_click: Clique sur ce bloc !
+        move_elsa_forward: 'Drag a "Move Forward" block and snap it below the "When Run" block to make Elsa move forward'
+        turn_elsa: 'Use the "Turn" block to make Elsa turn. The number in the drop-down determines how much Elsa turns'
+        replace_questions: 'Use the drop-down to replace "???" with a number'
+        replace_questions_degree: 'Use the drop-down to replace "???" with the correct degree to turn'
+        repeat_blocks: 'Use the "Repeat" block and wrap it around the blocks in the workspace'
+        snowflake_dropdown: Use this drop-down to create different snowflakes!

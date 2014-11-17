@@ -1,20 +1,18 @@
-var EvalObject = require('./evalObject');
-var EvalString = require('./evalString');
+var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
 var EvalTriangle = function (edge, style, color) {
-  evalUtils.ensureType(style, EvalString);
-  evalUtils.ensureType(color, EvalString);
+  evalUtils.ensureNumber(edge);
+  evalUtils.ensureString(style);
+  evalUtils.ensureString(color);
 
-  EvalObject.apply(this);
+  EvalImage.apply(this, [style, color]);
 
   this.edge_ = edge;
-  this.color_ = color.getValue();
-  this.style_ = style.getValue();
 
   this.element_ = null;
 };
-EvalTriangle.inherits(EvalObject);
+EvalTriangle.inherits(EvalImage);
 module.exports = EvalTriangle;
 
 EvalTriangle.prototype.draw = function (parent) {
@@ -47,5 +45,5 @@ EvalTriangle.prototype.draw = function (parent) {
     bottomRight.x + ',' + bottomRight.y + ' ' +
     top.x + ',' + top.y);
 
-  EvalObject.prototype.draw.apply(this, arguments);
+  EvalImage.prototype.draw.apply(this, arguments);
 };

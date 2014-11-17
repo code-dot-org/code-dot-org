@@ -1,8 +1,8 @@
 ---
-title: Sobre a Hora do Código do Brasil
+title: Sobre a Hora do Código no Brasil
 nav: about_nav
 social:
-  'og:title' : 'A Hora do Código do Brasil está chegando'
+  'og:title' : 'A Hora do Código no Brasil está chegando'
   'og:description' : "A Hora do Código é um movimento global que atinge dezenas de milhões de estudantes em mais de 180 países e mais de 30 idiomas. Podem participar pessoas com idades entre 4 e 104 anos."
   'og:image' : "http://br.code.org/images/ogimage.png"
   'og:image:width' : "1200"
@@ -11,17 +11,17 @@ social:
   "og:video": ""
   "og:video:width": ""
   "og:video:height": ""
-  "og:video:type": "" 
+  "og:video:type": ""
 ---
 
 # Sobre nós
 
 A Code.org é uma organização sem fins lucrativos dedicada a expandir o ensino de ciência da computação, tornando-a disponível em mais escolas e aumentando a participação de mulheres e negros, os quais são sub-representados nessa área. Nossa visão é que todos os alunos, de todas as escolas, devem ter a oportunidade de aprender programação de computadores. Acreditamos que a ciência da computação deve fazer parte do currículo escolar, ao lado das áreas STEM (ciência, tecnologia, engenharia e matemática), como biologia, física, química e álgebra.
 
-## Hora do Código do Brasil
-Com a Hora do Código do Brasil, a Code.org pretende ajudar a desmistificar a ideia de que programação é algo difícil, e permitir que pais, professores e alunos de todo o país tenham uma introdução divertida à programação. Esperamos que esta iniciativa sirva como incentivo e mostre que todos são capazes de programar.
+## Hora do Código no Brasil
+Com a Hora do Código no Brasil, a Code.org pretende ajudar a desmistificar a ideia de que programação é algo difícil, e permitir que pais, professores e alunos de todo o país tenham uma introdução divertida à programação. Esperamos que esta iniciativa sirva como incentivo e mostre que todos são capazes de programar.
 
-A equipe da Hora do Código do Brasil é liderada pela Fundação Lemann.
+A equipe da Hora do Código no Brasil é liderada pela Fundação Lemann.
 
 
 

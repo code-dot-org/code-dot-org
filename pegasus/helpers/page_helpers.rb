@@ -26,5 +26,5 @@ def locale_chapter_partner?()
 end
 
 def not_partner_site?()
-  request.site != 'uk.code.org' && request.site != 'ar.code.org' && request.site != 'br.code.org' && request.site != 'eu.code.org' && request.site != 'italia.code.org' && request.site != 'ro.code.org'
+  request.site != 'uk.code.org' && request.site != 'al.code.org' && request.site != 'ar.code.org' && request.site != 'br.code.org' && request.site != 'eu.code.org' && request.site != 'italia.code.org' && request.site != 'ro.code.org'
 end

@@ -1,57 +1,57 @@
-"lv":
+lv:
   devise:
     confirmations:
-      confirmed: "Your email address was successfully confirmed."
-      send_instructions: "You will receive an email with instructions about how to confirm your account in a few minutes."
-      send_paranoid_instructions: "If your email address exists in our database, you will receive an email with instructions about how to confirm your account in a few minutes."
+      confirmed: Tava e-pasta adrese ir apstiprināta.
+      send_instructions: Pēc dažām minūtēm tu saņemsi e-pastu ar instrukcijām kā apstiprināt savu kontu.
+      send_paranoid_instructions: Ja tava e-pasta adrese eksistē mūsu datubāze, tu pēc dažām minūtēm saņemsi e-pastu ar instrukcijām kā apstiprināt savu kontu.
     failure:
-      already_authenticated: "You are already signed in."
-      inactive: "Your account was not activated yet."
-      invalid: "Invalid email or password."
-      invalid_token: "Invalid authentication token."
-      locked: "Your account is locked."
-      not_found_in_database: "Invalid email or password."
-      timeout: "Your session expired, please sign in again to continue."
-      unauthenticated: "You need to sign in or sign up before continuing."
-      unconfirmed: "You have to confirm your account before continuing."
+      already_authenticated: Tu esi jau pierakstījies.
+      inactive: Tavs konts vēl nav aktivizēts.
+      invalid: Nepareizs e-pasts vai parole.
+      invalid_token: Nekorekts autentifikācijas kods.
+      locked: Tavs konts ir bloķēts.
+      not_found_in_database: Nepareizs e-pasts vai parole.
+      timeout: Tava lietotāja sesija ir beigusies, pieraksties lai turpinātu.
+      unauthenticated: Lai turpinātu ir nepieciešams pierakstīties vai piereģistrēties.
+      unconfirmed: Lai turpinātu, tev ir jāapstiprina savs konts.
     mailer:
       confirmation_instructions:
-        subject: "Code.org confirmation instructions"
+        subject: Code.org apstiprinājuma instrukcijas
       reset_password_instructions:
-        subject: "Code.org reset password instructions"
+        subject: Code.org paroles atiestatīšana
       unlock_instructions:
-        subject: "Unlock Instructions"
+        subject: Atslēgšanas instrukcijas
     omniauth_callbacks:
-      failure: 'Could not authenticate you from %{kind} because "%{reason}".'
-      success: 'Successfully authenticated from %{kind} account.'
+      failure: 'Nevarējām tevi autentificēt no %{kind} jo "%{reason}".'
+      success: 'Veiksmīgi autentificēts no %{kind} konta.'
     passwords:
-      no_token: "You can't access this page without coming from a password reset email. If you do come from a password reset email, please make sure you used the full URL provided."
-      send_instructions: "You will receive an email with instructions about how to reset your password in a few minutes."
-      send_paranoid_instructions: "If your email address exists in our database, you will receive a password recovery link at your email address in a few minutes."
-      updated: "Your password was changed successfully. You are now signed in."
-      updated_not_active: "Your password was changed successfully."
+      no_token: Tu nevari piekļūt šai lapai, ja neizmanto paroles atiestatīšanas e-pastu. Ja izmanto paroles atiestatīšanas e-pastu, pārliecinies, ka izmantoju visu saiti.
+      send_instructions: Tu pēc dažām minūtēm saņemsi e-pastu ar instrukcijām kā atiestatīt paroli.
+      send_paranoid_instructions: Ja tavs e-pasts ir mūsu datubāze, tu saņemsi paroles atiestatīšanas saiti savā e-pastā pēc dažām minūtēm.
+      updated: Tava parole nomainīta veiksmīgi. Tagad tu esi pierakstījies.
+      updated_not_active: Tava parole nomainīta veiksmīgi.
     registrations:
-      destroyed: "Bye! Your account was successfully cancelled. We hope to see you again soon."
-      signed_up: "Welcome! You have signed up successfully."
-      signed_up_but_inactive: "You have signed up successfully. However, we could not sign you in because your account is not yet activated."
-      signed_up_but_locked: "You have signed up successfully. However, we could not sign you in because your account is locked."
-      signed_up_but_unconfirmed: "A message with a confirmation link has been sent to your email address. Please open the link to activate your account."
-      update_needs_confirmation: "You updated your account successfully, but we need to verify your new email address. Please check your email and click on the confirm link to finalize confirming your new email address."
-      updated: "You updated your account successfully."
+      destroyed: Atā! Tavs konts ir veiksmīgi noslēgts. Mēs ceram atkal tevi satikt drīzumā.
+      signed_up: Laipni lūdzu! Tu esi veiksmīgi piereģistrējies.
+      signed_up_but_inactive: Tu esi veiksmīgi piereģistrējies. Tomēr tu nevarēji pierakstīties, jo tavs konts nav aktivizēts.
+      signed_up_but_locked: Tu esi veiksmīgi piereģistrēties! Tomēr tu nevarēji pierakstīties, jo tavs konts ir bloķēts.
+      signed_up_but_unconfirmed: Ziņa ar apstiprinājuma saiti ir nosūtīta uz tavu e-pastu. Atver šo saiti, lai aktivizētu savu kontu.
+      update_needs_confirmation: Tu atjaunoji sava konta informāciju veiksmīgi, bet mums ir jāapstiprina tava jaunā e-pasta adrese. Lūdzu pārbaudi savu e-pastu un uzklikšķini uz apstiprinājuma saites, lai apstiprinātu tavu jauno e-pasta adresi.
+      updated: Tu atjaunoji sava konta informāciju veiksmīgi.
     sessions:
-      signed_in: "Signed in successfully."
-      signed_out: "Signed out successfully."
+      signed_in: Pierakstīšanās veiksmīga.
+      signed_out: Atrakstīšanās veiksmīga.
     unlocks:
-      send_instructions: "You will receive an email with instructions about how to unlock your account in a few minutes."
-      send_paranoid_instructions: "If your account exists, you will receive an email with instructions about how to unlock it in a few minutes."
-      unlocked: "Your account has been unlocked successfully. Please sign in to continue."
+      send_instructions: Tu pēc dažam minūtēm saņemsi e-pastu ar instrukciju kā atslēgt savu kontu.
+      send_paranoid_instructions: Ja tavs konts eksistē, tu pēc dažām minūtēm saņemsi e-pastu ar instrukcijām kā atslēgt savu kontu.
+      unlocked: Tavs konts ir atslēgts veiksmīgi. Lūdzu pieraksties lai turpinātu.
   errors:
     messages:
-      already_confirmed: "was already confirmed, please try signing in"
-      confirmation_period_expired: 'needs to be confirmed within %{period}, please request a new one'
-      expired: "has expired, please request a new one"
-      not_found: "not found"
-      not_locked: "was not locked"
+      already_confirmed: jau ir apstiprināts, lūdzu mēģini pierakstīties
+      confirmation_period_expired: 'ir jāapstiprina periodā: %{period}, lūdzu pieprasi jaunu'
+      expired: ir iztecējis, lūdzu pieprasi jaunu
+      not_found: nav atrasts
+      not_locked: nav slēgts
       not_saved:
-        one: '1 error prohibited this %{resource} from being saved:'
-        other: '%{count} errors prohibited this %{resource} from being saved:'
+        one: '%{resource} netika saglabāts šādas kļūdas dēļ:'
+        other: '%{resource} netika saglabāts %{count} kļūdu dēļ:'

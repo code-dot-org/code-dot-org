@@ -1,8 +1,8 @@
 {
-  "compute":"compute",
-  "equivalentExpression":"Try reordering your arguments to get exactly the same expression.",
-  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"compute\" block?",
-  "goal":"Goal:",
-  "reinfFeedbackMsg":"You can press the \"Try again\" button to edit your expression.",
-  "yourExpression":"Your expression:"
+  "compute":"calcular",
+  "equivalentExpression":"Intenta reorganizar tus argumentos para obtener exactamente la misma expresión.",
+  "extraTopBlocks":"Tienes bloques disponibles. ¿Quisiste unirlos al bloque \"calcular\"?",
+  "goal":"objetivo:",
+  "reinfFeedbackMsg":"Puedes usar el botón \"Intentar de nuevo\" para modificar tu expresión.",
+  "yourExpression":"Tu expresión:"
 }

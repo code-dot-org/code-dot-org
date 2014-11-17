@@ -1,12 +1,14 @@
 require 'geocoder'
+require 'redis'
 
 module Geocoder
+
   module Result
     class Base
       def to_solr(prefix='location_')
         {}.tap do |results|
           results['location_p'] = "#{latitude},#{longitude}" if latitude && longitude
-          ['street_number', 'route', 'city', 'state', 'country', 'postal_code'].each do |component_name|
+          ['street_number', 'route', 'city', 'state', 'state_code', 'country', 'country_code', 'postal_code'].each do |component_name|
             component = self.send component_name
             results["#{prefix}#{component_name}_s"] = component unless component.nil_or_empty?
           end
@@ -47,19 +49,19 @@ end
 Geocoder::Lookup::Freegeoip.send(:include,ReplaceFreegeoipHostModule) if CDO.freegeoip_host
 
 def geocoder_config
-  config = {
+  {
     cache: Hash.new,
     timeout: 10,
     units: :km,
-  }
+  }.tap do |config|
+    config[:cache] = Redis.connect(url:CDO.geocoder_redis_url) if CDO.geocoder_redis_url
 
-  client_id = CDO.google_maps_client_id
-  secret = CDO.google_maps_secret
-  if client_id && secret
-    config[:lookup] = :google_premier
-    config[:api_key] = [secret,client_id,'pegasus']
+    if CDO.google_maps_client_id && CDO.google_maps_secret
+      config[:lookup] = :google_premier
+      config[:api_key] = [CDO.google_maps_secret, CDO.google_maps_client_id, 'pegasus']
+    end
   end
-
-  config
 end
+
 Geocoder.configure(geocoder_config)
+

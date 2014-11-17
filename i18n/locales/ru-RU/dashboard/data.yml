@@ -100,6 +100,7 @@ ru:
         Wordsearch: Wordsearch
         Webapp: Webapp
         ArtistEC: Художник
+        TextMatch: Text Match
     trophy:
       name:
         Bronze: Бронзовый
@@ -323,7 +324,8 @@ ru:
         maze_wordsearch_k_16: Перемести меня в одном направлении, потом в другом, по буквам BELOW
         maze_wordsearch_k_20: Это проверка! Перемести меня в одном направлении, потом в другом, по буквам STORY
         webapp_ec_simple: Create your web app by using createHtmlBlock.
-        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColour" block.'
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColor" block.'
+        turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new "penWidth" block. Have fun!'
     video:
       name:
         maze_intro: 'Лабиринт - Введение'
@@ -339,7 +341,6 @@ ru:
         loop_for: 'Блок "цикл по счётчику"'
         parameters: Процедуры с параметрами
         hoc_wrapup: Итоги Часа кода
-        20_wrapup: Итоги 20-часового курса
         Unplug1: Что такое Информатика?
         Unplug2: Вычислительное мышление
         Unplug3: Программирование на бумаге в клеточку
@@ -354,7 +355,7 @@ ru:
         C1_happy_maps_unplugged: Happy Maps
         C1_moveitmoveit_unplugged: Move It, Move It
         C1_bigevent_unplugged: Большое Событие
-        C1_getting_loop: Зацикливание
+        C1_getting_loopy: Зацикливание
         C1_pair_programming: Pair Programming
         C1_maze_intro_sequencing: Maze Sequencing Intro
         C1_maze_debugging: 'Лабиринт: Отладка'
@@ -366,19 +367,22 @@ ru:
         C1_maze_loops: 'Лабиринт: Циклы'
         C1_playlab_storytelling: 'Лаборатория игр: Создай историю'
         C1_planting_seed: Planting a Seed
-        C1_building_foundating: Создание основы
+        C1_building_foundation: Создание основы
         C2_maze_intro: 'Лабиринт - Введение'
         C2_artist_intro: 'Художник - Введение'
         C2_zuck_repeat_loop: 'Лабиринт: Циклы'
         C2_artist_loops: 'Художник: Циклы'
+        C2_artist_debugging: 'Художник: Отладка'
+        C2_bee_loops: 'Пчела: Циклы'
+        C2_bee_debugging: 'Пчела: Отладка'
         C2_bee_conditionals: 'Пчела: Условные команды'
         C2_playlab_createstory: 'Лаборатория игр: Создай историю'
         C2_graph_paper: Программирование на бумаге в клеточку
         C2_conditionals_with_cards: Условные команды
         C2_binary_bracelets: Двоичные браслеты
-        C2_replay_programming: Эстафетное программирование
+        C2_relay_programming: Эстафетное программирование
         C2_paper_airplanes: Бумажные самолётики
-        C3_maze_intro: 'Лабиринт - Введение'
+        C3_maze_level_4: 'Лабиринт: Циклы'
         C3_artist_intro: 'Художник - Введение'
         C3_artist_functions: 'Художник: Процедуры'
         C3_bee_functions: 'Пчела: Процедуры'
@@ -408,3 +412,9 @@ ru:
         set_sprite_image: 'Attach a "set actor to image" block to the "when story starts" block to enable an actor for this story'
         studio_say_text: Type what you want your actor to say within these quotes
         jigsaw_click: Нажмите этот блок!
+        move_elsa_forward: 'Drag a "Move Forward" block and snap it below the "When Run" block to make Elsa move forward'
+        turn_elsa: 'Use the "Turn" block to make Elsa turn. The number in the drop-down determines how much Elsa turns'
+        replace_questions: 'Use the drop-down to replace "???" with a number'
+        replace_questions_degree: 'Use the drop-down to replace "???" with the correct degree to turn'
+        repeat_blocks: 'Use the "Repeat" block and wrap it around the blocks in the workspace'
+        snowflake_dropdown: Use this drop-down to create different snowflakes!

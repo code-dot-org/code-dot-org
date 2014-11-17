@@ -18,8 +18,9 @@
     "flower_type": "redWithNectar",
     "nectar_goal": "15",
     "ideal": "9",
-    "instructions": "Ah, the for loop could make this much easier! You can use the variable \"i\" to loop the \"get nectar\" block the same number of times as the loop has been run!",
-    "maze_data": null
+    "instructions": "Ah, the for loop could make this much easier! You can use the \"counter\" variable from the for loop to loop the \"get nectar\" block the same number of times as the loop has been run!",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false"
   }
 }]]></config>
   <blocks>
@@ -28,7 +29,7 @@
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="controls_for" inline="true" deletable="false" movable="false" editable="false">
-              <title name="VAR">i</title>
+              <title name="VAR">counter</title>
               <value name="FROM">
                 <block type="math_number" deletable="false" movable="false" editable="false">
                   <title name="NUM">1</title>
@@ -57,7 +58,7 @@
         <block type="controls_repeat_ext" inline="true">
           <value name="TIMES">
             <block type="variables_get">
-              <title name="VAR">i</title>
+              <title name="VAR">counter</title>
             </block>
           </value>
           <statement name="DO">
@@ -71,7 +72,7 @@
         <block type="controls_repeat_ext" inline="true">
           <value name="TIMES">
             <block type="variables_get">
-              <title name="VAR">i</title>
+              <title name="VAR">counter</title>
             </block>
           </value>
         </block>

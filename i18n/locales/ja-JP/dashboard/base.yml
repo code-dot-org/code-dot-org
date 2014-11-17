@@ -66,9 +66,9 @@ ja:
     overview_teacher: "Teach computer science in your classroom by signing up for an account.<p/> You'll be able to add your students and track their progress."
     no_signup_message: '<a target="_blank"href="http://learn.code.org"> いろいろなステージとパズルを見られます。</a>しかし、あなたの進捗状況を保存するために入会する必要があります。'
     teacher_educator_guide: 教育者のガイドを参照してください。
-    teacher_pitch: Teacher sign up for Code.org
+    teacher_pitch: 教師としてCode.orgに登録
     teacher_title: 教師入会
-    student_pitch: Student sign up for Code.org
+    student_pitch: 生徒としてCode.orgに登録
     student_title: 生徒のサインアップ（登録）
     school_name: 学校名 (省略可能)
     school_address: 学校の住所（オプションです）
@@ -76,7 +76,7 @@ ja:
     gender: 性別 （オプションです）
     birthday: 誕生日 (optionalです)
     age: 年齢
-    user_type: Are you a student or teacher?
+    user_type: あなたは教師ですか？生徒ですか？
     submit: 入会
     teacher: あなたは教師ですか？
     valid_username: 利用可能 ！
@@ -95,7 +95,7 @@ ja:
     remember: ログインを覚えてください。
     submit: ログイン
   signin:
-    try_heading: Want to try coding without signing up?
+    try_heading: 登録せずにコーディングに挑戦してみたいですか？
     try_hoc: 最初に 1 時間分のコード学習を試す
     try_20hours: 20 時間分のコンピュータ科学入門編を試してください。
   signinsection:
@@ -133,8 +133,8 @@ ja:
       username_not_found: 'ユーザー名 %{username} が見つかりません'
       username_in_use: '%{username} は既に取られています、別を選択してください。'
       no_teacher: "'%{teacher_email_or_code}'を使用してサインインした人を見つけられませんでした。ここで入会をしてもらって、もう一度追加してください。"
-      section_not_found: "Could not find a section with code '%{section_code}'."
-      blank_code: Please enter a section code
+      section_not_found: "'%{section_code}' というセクションはありません。"
+      blank_code: セクションのコードを入力してください。
       cant_join_own_section: "Sorry, you can't join your own section."
     mail:
       invite_student:
@@ -151,7 +151,7 @@ ja:
     provider: 'プロバイダー:'
     code: 'コード:'
     redeem_header: 'To redeem:'
-    donorschoose_register: Register as a teacher on DonorsChoose.org
+    donorschoose_register: DonorsChoose.orgに教師として登録
     donorschoose_project: Post a project
     donorschoose_how_to: あなたのコードを使用する方法
     success: あなたの賞金は獲得できました。下のコードを参照してください。
@@ -213,10 +213,10 @@ ja:
       finished_hoc: コーディングの時間を終わる
       sign_in_to_save: プログレスを保存するためにはサインインをしてください。
       free_play:
-        playlab: Make an App
-        artist: Draw Something
+        playlab: アプリを作る
+        artist: なにか絵を描く
     user:
-      classroom: 私の生徒
+      classroom: Teacher Home Page
       label: 'こんにちは  %{username}'
       stats: 私のプログレス
       settings: 私のアカウント
@@ -224,7 +224,7 @@ ja:
       logout: サインアウト
       signin: ログイン
       signup: 入会
-      already_registered: Already registered?
+      already_registered: 既にアカウントをお持ちですか?
     popup:
       progress: あなたの進捗状況
       lines: 'コードの行の合計:  %{lines}'
@@ -249,7 +249,7 @@ ja:
       show_past: 'Show student activity (%{bullet_html}) in the past:'
       levels_key: Levels key
       perfect: Completed, perfect
-      completed: Completed, but using too many blocks
+      completed: 完了ですが、ブロックをつかいすぎです。
       tried: Tried, but not completed
       not_tried: Not tried yet
       activity: 'Indicates student activity in the last %{hours} %{plural}'
@@ -281,7 +281,7 @@ ja:
       add_section_code: Add Students Section-Code
       secret: Secret type
       grade: Grade
-      course: Course
+      course: コース
       rename: 名前の変更
       edit: edit
       delete: delete
@@ -311,7 +311,7 @@ ja:
     classroom_activity: Unplugged Activity
   home:
     title: Code Studio
-    all_courses: Overview of Courses 1, 2, and 3
+    all_courses: コース1,2,3の概要
     lesson_plans: Lesson plans
     signin_message: '既に登録されていますか？% {リンク}'
     student_reg_link: 学生は、サインアップ（登録）
@@ -339,8 +339,8 @@ ja:
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
-    heading_elementary: '<h2>20 hour courses for</h2><h1>Elementary Students</h1>'
-    heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
+    heading_elementary: '<h2>20 時間コース</h2><h1>小学生向け</h1>'
+    heading_apps: '<h2>お楽しみ</h2><h1>誰でも</h1>'
     heading_legacy: '<h2>Our general course for</h2><h1>All Ages</h1>'
     gallery:
       your_turtle: My Art
@@ -353,13 +353,13 @@ ja:
     student: 生徒
     teacher: Teacher
   footer:
-    help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped create this tutorial.
+    help_from_html: このチュートリアルを作るにあたって、Google・Microsoft・Facebook・Twitterのエンジニアがサポートしました。
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. All Rights Reserved.'
     feedback: フィードバックを提供します。
     translate: あなたの言語に翻訳をお手伝い
     support: Support
     support_url: http://support.code.org
-    tos: Terms
+    tos: 利用規約
     privacy: プライバシー ポリシー
     secure: Secure Version
   reference_area:
@@ -372,28 +372,31 @@ ja:
   video:
     tab: 動画
     notes: 動画の代わりにノートを見る
-    notes_coming_soon: Notes for this video coming soon.
+    notes_coming_soon: このビデオのノートがもうすぐ公開されます。
     autoplay_option: 動画の自動再生
     download: ビデオのダウンロード
   compatability:
     working:
       header: お使いのブラウザーのサポートに取り組みちゅうです。
       message: "Code.org uses modern web technology. This makes the site faster to use. Your browser doesn't support all the features required, and you may experience issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade your browser to a supported version</a>."
-      hide_this_warning: Hide this warning
+      hide_this_warning: この警告を非表示にします。
     upgrade:
       header: お使いのブラウザーをアップグレードしてください。
       message: "Code.org uses modern web technology. This makes the site faster to use. Unfortunately your browser doesn't support all the features required to run this part of the site.<br/><br/>Install a browser on our supported browsers list to continue. You can <a href='#'>try viewing the page</a>, but expect functionality to be broken."
-      button: Take me to the list of supported browsers
+      button: サポートされているブラウザの一覧を見る
   slow_loading: 通常よりも長くかかっている...
   try_reloading: ページを再読み込みしてみてください。
   next_stage: 完成 ！次のステージに続きます。
   download_pdf: オープン レッスン ・ プラン
-  view_lesson_plan: View Lesson Plan
-  pdf_download: Download PDF
+  lesson_plan: Lesson Plan
+  view_lesson_plan: レッスン・プランを見る
+  pdf_download: PDF をダウンロード
+  download_coming_soon: Downloadable activity coming soon.
+  video_coming_soon: Video Coming Soon!
   share_code:
-    title: "Click 'Run' to see my program in action"
+    title: 「実行」をクリックして私のプログラムが動くところを見てください。
     bounce_og_title: Check out my Bounce Game
-    flappy_og_title: フラッピーゲームを調べる
+    flappy_og_title: わたしのFlappyゲームをみてください！
     studio_og_title: Check out my Play Lab App
     og_description: Code.org でコード（プログラム）を書きました。
     phone_number_not_allowed: It looks like there is a phone number in it. Try changing the text.
@@ -417,7 +420,7 @@ ja:
       body: コンピューター・サイエンスの基本に挑戦してみてください。もう何百万人も挑戦した人がいます。
     flappy:
       title: Flappy Code
-      body: Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!
+      body: 10分もしないうちにじぶんだけのゲームを作ってみませんか？Flappy Codeをやってみてください。
     20hour:
       title: 入門コース
       body: コンピューター科学コースの入門編（20時間）に挑戦してみてください。
@@ -446,6 +449,8 @@ ja:
     wrong_body: "The solution you've entered is not correct.  Please try again!"
     correct_title: 正解
     correct_body: That is the correct answer.
+  text_match:
+    placeholder: Enter your answer here
   dialog:
     ok: OK
   time:
@@ -472,7 +477,7 @@ ja:
           description: ""
         flappy:
           title: Flappy Code
-          description: Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!
+          description: 10分もしないうちにじぶんだけのゲームを作ってみませんか？Flappy Codeをやってみてください。
         jigsaw:
           title: ジグソーパズル
           description: ""
@@ -488,3 +493,8 @@ ja:
     message: "We're in the process of updating our experience to provide you with even stronger privacy protections. To do this, we need existing users to enter their age here.<br/>As always, code.org will never rent, sell or share this information with any third parties."
     sign_out: 'If you do not wish to provide your age you may <a href="%{url}">sign out</a>.'
   zendesk_too_young_message: 'Sorry, younger users may not sign in to our support site. You may browse <a href="http://support.code.org">support.code.org</a> without signing in or ask your parent or teacher to contact us for you.'
+  progress:
+    not_completed: not completed
+    completed_too_many_blocks: completed, too many blocks
+    completed_perfect: completed, perfect
+    furthest_level_attempted: furthest level attempted
