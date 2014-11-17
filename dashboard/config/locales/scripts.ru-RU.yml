@@ -154,13 +154,13 @@
           Ninja Cat and the Coordinate Plane: Ninja Cat and the Coordinate Plane
           'Calc: Circles of Evaluation': 'Calc: Circles of Evaluation'
           'Artist: Strings and Images': 'Artist: Strings and Images'
-          Contracts: Contracts
+          Contracts: Контракты
           'Artist: Writing Contracts': 'Artist: Writing Contracts'
           'Calc: Defining Variables': 'Calc: Defining Variables'
           'Play Lab: Defining Variables': 'Play Lab: Defining Variables'
           The Design Recipe: The Design Recipe
-          'Artist: Defining Functions': 'Artist: Defining Functions'
-          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          'Artist: Defining Functions': 'Художник: Определение процедур'
+          'Play Lab: Defining Functions': 'Лаборатория игр: Определение процедур'
           'Artist: Functions': 'Художник: Процедуры'
           'Play Lab: Animation': 'Play Lab: Animation'
           Booleans: Booleans
@@ -213,30 +213,30 @@
             courses to flexible solutions to more complex problems. By the end of
             this course, students create interactive stories and games they can share
             with anyone. Recommended for grades 4-8.
-          'Artist: Variables': 'Artist: Variables'
+          'Artist: Variables': 'Художник: Переменные'
           'Bee: For Loops': 'Bee: For Loops'
-          title: Course 4
+          title: Курс 4
           'Algorithms: Tangrams': 'Algorithms: Tangrams'
           Variables: Переменные
           'Play Lab: Variables': 'Play Lab: Variables'
           'Play Lab: Functions with Parameters': 'Play Lab: Functions with Parameters'
-          'Bee: Functions with Parameters': 'Bee: Functions with Parameters'
+          'Bee: Functions with Parameters': 'Пчела: Процедуры с параметрами'
           'Artist: For Loops': 'Artist: For Loops'
           'Play Lab: For Loops': 'Play Lab: For Loops'
           'Artist: Functions': 'Художник: Процедуры'
-          'Artist: Functions with Paraqmeters': 'Artist: Functions with Paraqmeters'
+          'Artist: Functions with Paraqmeters': 'Художник: Процедуры с параметрами'
           'Unplugged: Tangrams': 'Unplugged: Tangrams'
           Artist: Художник
-          Bee: Bee
+          Bee: Пчела
           'Unplugged: Envelope Variables': 'Unplugged: Envelope Variables'
           'Unplugged: Madlibs': 'Unplugged: Madlibs'
           'Unplugged: For Loop Fun': 'Unplugged: For Loop Fun'
           'Unplugged: Songwriting with Parameters': 'Unplugged: Songwriting with Parameters'
-          'Artist: Functions with Parameters': 'Artist: Functions with Parameters'
+          'Artist: Functions with Parameters': 'Художник: Процедуры с параметрами'
           'Unplugged: Binary': 'Unplugged: Binary'
           Bee Binary: Bee Binary
           Farmer Binary: Farmer Binary
-          Maze and Bee: Maze and Bee
+          Maze and Bee: Лабиринт и Пчела
           Artist Binary: Artist Binary
         Course4pre:
           description_short: A brief rampup of concepts for students who have not

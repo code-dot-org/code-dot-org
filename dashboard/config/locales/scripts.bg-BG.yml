@@ -188,26 +188,26 @@
           description_short: Начертайте готини картинки и дизайни с художникът!
         scrat:
           title: Scrat
-          description_short: Scrat short description.
-          description: Scrat long description
+          description_short: Scrat кратко описание.
+          description: Scrat дълго описание
           'Maze: Sequence': 'Лабиринт: последователност'
         hourofcode:
           Maze: Лабиринт
           title: Час на Кодирането
-          description_short: Try the basics of computer science with characters from
-            Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
-          description: Try the basics of computer science with characters from Angry
-            Birds, Plants vs. Zombies, and Scrat from Ice Age!
+          description_short: Опитайте основите на компютърните науки с герои отAngry
+            Birds, Plants vs. Zombies и Scrat от Ледена епоха!
+          description: Опитайте основите на компютърните науки с герои отAngry Birds,
+            Plants vs. Zombies и Scrat от Ледена епоха!
         frozen:
           title: Frozen
-          description_short: Join the Royal Sisters of Arendelle, Anna and Elsa, as
-            they explore the magic and beauty of ice. You will write code to create
-            snowflakes and patterns as you ice-skate and make a winter wonderland
-            that you can then share with your friends!
-          description: Join the Royal Sisters of Arendelle, Anna and Elsa, as they
-            explore the magic and beauty of ice. You will write code to create snowflakes
-            and patterns as you ice-skate and make a winter wonderland that you can
-            then share with your friends!
+          description_short: Присъединете се към кралските сестри Aрендел, Анна и
+            Елза, за да видите как те опознават магията и красотата на леда. Ще пишете
+            код за да създавате снежинки и модели в своята ледена градина и да създавате
+            зимна приказка, която след това можете да споделите с приятелите си!
+          description: Присъединете се към кралските сестри Aрендел, Анна и Елза,
+            за да видите как те опознават магията и красотата на леда. Ще пишете код
+            за да създавате снежинки и модели в своята ледена градина и да създавате
+            зимна приказка, която след това можете да споделите с приятелите си!
           Artist: Художник
         course4:
           description_short: Учениците, изучаващи курс 4 трябва да са взели вече курсове
@@ -242,7 +242,7 @@
           Bee Binary: Пчела двоичен код
           Farmer Binary: Фермер двоичен код
           Maze and Bee: Лабиринт и Пчела
-          Artist Binary: Artist Binary
+          Artist Binary: Художник Бинарен код
         Course4pre:
           description_short: Кратък курс за концепциите, предназначен за ученици,
             които не са взели курс 2 и 3.

@@ -11721,7 +11721,7 @@ exports.toolboxHeader = function(d){return "Блокове"};
 
 exports.openWorkspace = function(d){return "Как работи"};
 
-exports.totalNumLinesOfCodeWritten = function(d){return "All-time total: "+p(d,"numLines",0,"bg",{"one":"1 line","other":n(d,"numLines")+" lines"})+" of code."};
+exports.totalNumLinesOfCodeWritten = function(d){return "Общо: "+p(d,"numLines",0,"bg",{"one":"1 line","other":n(d,"numLines")+" lines"})+" код."};
 
 exports.tryAgain = function(d){return "Опитайте отново"};
 

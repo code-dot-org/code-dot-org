@@ -8432,7 +8432,7 @@ exports.nextLevelTrophies = function(d){return "Gratulerer! Du har fullført opp
 
 exports.nextStage = function(d){return "Gratulerer! Du fullførte "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "Congratulations! You completed "+v(d,"stageName")+" and won "+p(d,"numTrophies",0,"no",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
+exports.nextStageTrophies = function(d){return "Gratulerer! Du har fullført "+v(d,"stageName")+" og vunnet "+p(d,"numTrophies",0,"no",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
 exports.numBlocksNeeded = function(d){return "Gratulerer! Du har fullført oppgave "+v(d,"puzzleNumber")+". (Men, du kunne ha brukt kun "+p(d,"numBlocks",0,"no",{"one":"1 blokk","other":n(d,"numBlocks")+" blokker"})+".)"};
 

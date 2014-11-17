@@ -308,7 +308,7 @@
       for: Для
       enter: 'введите:'
     sections:
-      add: Add section
+      add: Добавить раздел
       manage: Управление классами
       section: Раздел
       students: Ученики
@@ -420,7 +420,7 @@
     teacher: Посмотреть решение
     auth_error: У Вас нет прав смотреть решение.
     submit: Обновите расположение художника
-    direction: начальное направление
+    direction: Начальное направление (в градусах)
   video:
     tab: Видео.
     notes: Не надо видео? Смотреть текстовый вариант.
@@ -448,7 +448,7 @@
   try_reloading: Попробуйте перезагрузить страницу
   next_stage: Закончил! Перейти к следующему этапу
   download_pdf: Показать план урока
-  lesson_plan: Lesson Plan
+  lesson_plan: План урока
   view_lesson_plan: Посмотреть план урока
   pdf_download: Скачать PDF
   download_coming_soon: Downloadable activity coming soon.

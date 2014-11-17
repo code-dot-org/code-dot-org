@@ -540,8 +540,8 @@
         maze_wordsearch_k_20: Þetta er próf! Færðu mig í eina átt svo aðra til að
           stafa orðið STORY
         webapp_ec_simple: Búa til vefapp með því að nota createHtmlBlock.
-        turtle_ec_1_2: 'Teiknaðu nú ferning. ATHUGAÐU: notaðu uppáhaldslitinn þinn
-          með því að velja hann í nýja kubbnum "pennalitur".'
+        turtle_ec_1_2: 'Teiknaðu nú ferning. ATH.: notaðu uppáhaldslitinn þinn með
+          því að velja hann í nýja "pennalitur" kubbnum.'
         turtle_ec_1_10: 'Þér tókst þetta! Teiknaðu nú hvað sem þú vilt. Nokkrar hugmyndir:
           Óli prik, snjókorn eða spírall. Prófaðu líka nýja "pennaBreidd" kubbinn.
           Góða skemmtun!'
@@ -636,13 +636,13 @@
           til að virkja leikmann fyrir þessa sögu
         studio_say_text: Skrifaðu það sem leikmaðurinn á að segja innan þessara gæsalappa
         jigsaw_click: Smelltu á þennan kubb!
-        move_elsa_forward: Drag a "Move Forward" block and snap it below the "When
-          Run" block to make Elsa move forward
-        turn_elsa: Use the "Turn" block to make Elsa turn. The number in the drop-down
-          determines how much Elsa turns
-        replace_questions: Use the drop-down to replace "???" with a number
-        replace_questions_degree: Use the drop-down to replace "???" with the correct
-          degree to turn
-        repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
-          workspace
-        snowflake_dropdown: Use this drop-down to create different snowflakes!
+        move_elsa_forward: Dragðu "Færa áfram" kubb og festu hann við "Þegar keyrt"
+          kubbinn til að láta Elsu fara áfram
+        turn_elsa: Notaðu "snúa" kubbinn til að láta Elsu snúa. Talan í fellilistanum
+          stjórnar því hve mikið Elsa snýr
+        replace_questions: Notaðu fellilistann til að skipta "???" út fyrir tölu
+        replace_questions_degree: Notaðu fellilistann til að skipta "???" út fyrir
+          þeirri gráðu sem á að snúa
+        repeat_blocks: Notaðu "endurtaka" kubbinn og settu hann utan um kubbana á
+          vinnusvæðinu
+        snowflake_dropdown: Notaðu þennan fellilista til að búa til mismunandi snjókorn!

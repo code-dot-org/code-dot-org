@@ -8436,7 +8436,7 @@ exports.nextStageTrophies = function(d){return "Maligayang bati! Natapos mo ang 
 
 exports.numBlocksNeeded = function(d){return "Maligayang bati! Nakumpleto mo ang Puzzle "+v(d,"puzzleNumber")+". (Subalit, maaari mo sanang gamitin lamang ang "+p(d,"numBlocks",0,"fil",{"one":"1 block","other":n(d,"numBlocks")+" blocks"})+".)"};
 
-exports.numLinesOfCodeWritten = function(d){return "You just wrote "+p(d,"numLines",0,"fil",{"one":"1 line","other":n(d,"numLines")+" lines"})+" of code!"};
+exports.numLinesOfCodeWritten = function(d){return "Ikaw ang nagsulat ng "+p(d,"numLines",0,"fil",{"one":"1 line","other":n(d,"numLines")+" lines"})+" ng code!"};
 
 exports.play = function(d){return "play"};
 
@@ -8472,7 +8472,7 @@ exports.toolboxHeader = function(d){return "Mga block"};
 
 exports.openWorkspace = function(d){return "Kung Paano Ito Gumagana"};
 
-exports.totalNumLinesOfCodeWritten = function(d){return "All-time total: "+p(d,"numLines",0,"fil",{"one":"1 line","other":n(d,"numLines")+" lines"})+" of code."};
+exports.totalNumLinesOfCodeWritten = function(d){return "Kinabuohan: "+p(d,"numLines",0,"fil",{"one":"1 line","other":n(d,"numLines")+" lines"})+" ng code."};
 
 exports.tryAgain = function(d){return "Subukang muli"};
 

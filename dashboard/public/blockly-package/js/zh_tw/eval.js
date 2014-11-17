@@ -11772,7 +11772,7 @@ exports.circleBlockTitle = function(d){return "圓(半徑、 樣式、 顏色)"}
 
 exports.displayBlockTitle = function(d){return "顯示"};
 
-exports.ellipseBlockTitle = function(d){return "ellipse (width, height, style, color)"};
+exports.ellipseBlockTitle = function(d){return "橢圓 （寬度、 高度、 風格、 顏色)"};
 
 exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"display\" block?"};
 
@@ -11780,23 +11780,23 @@ exports.overlayBlockTitle = function(d){return "overlay (top, bottom)"};
 
 exports.placeImageBlockTitle = function(d){return "place-image (x, y, image)"};
 
-exports.rectangleBlockTitle = function(d){return "rectangle (width, height, style, color)"};
+exports.rectangleBlockTitle = function(d){return "矩形 （寬度、 高度、 風格、 顏色)"};
 
 exports.rotateImageBlockTitle = function(d){return "rotate (degrees, image)"};
 
 exports.scaleImageBlockTitle = function(d){return "scale (factor)"};
 
-exports.squareBlockTitle = function(d){return "square (size, style, color)"};
+exports.squareBlockTitle = function(d){return "正方形 （大小、 樣式、 顏色）"};
 
-exports.starBlockTitle = function(d){return "star (radius, style, color)"};
+exports.starBlockTitle = function(d){return "星 （半徑、 樣式、 顏色）"};
 
 exports.stringAppendBlockTitle = function(d){return "string-append (first, second)"};
 
-exports.stringLengthBlockTitle = function(d){return "string-length (string)"};
+exports.stringLengthBlockTitle = function(d){return "字串長度 （字串）"};
 
-exports.textBlockTitle = function(d){return "text (string, size, color)"};
+exports.textBlockTitle = function(d){return "文本 （字串、 大小、 顏色）"};
 
-exports.triangleBlockTitle = function(d){return "triangle (size, style, color)"};
+exports.triangleBlockTitle = function(d){return "三角形 （大小、 樣式、 顏色）"};
 
 exports.underlayBlockTitle = function(d){return "underlay (bottom, top)"};
 

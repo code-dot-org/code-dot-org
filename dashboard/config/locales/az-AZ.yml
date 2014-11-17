@@ -16,7 +16,7 @@
         gender: Cins
         edit_header: Hesab Detallarına düzəliş edin
         error:
-          future: can't be in the future
+          future: gələcəkdə ola bilməz
   hello: Salam, dünya
   welcome_back: Bir daha xoş gəldiniz, %{name}
   add_teacher_form:
@@ -263,7 +263,7 @@
       prizes: Mükafatlar
       logout: Çıxın
       signin: Daxil olun
-      signup: Qeydiyyatdan keç
+      signup: Qeydiyyatdan keçin
       already_registered: Already registered?
     popup:
       progress: Sizin nəticələriniz

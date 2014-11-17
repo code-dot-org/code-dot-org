@@ -1,57 +1,57 @@
-pt-PT:
+"pt-PT":
   devise:
     confirmations:
-      confirmed: O teu endereço de e-mail foi confirmado com sucesso.
-      send_instructions: Vais receber um e-mail com as instruções sobre como confirmar a tua conta em poucos minutos.
-      send_paranoid_instructions: Se o teu endereço de e-mail existir na nossa base de dados, receberás um e-mail com instruções sobre como confirmar a tua conta em poucos minutos.
+      confirmed: "O teu endereço de e-mail foi confirmado com sucesso."
+      send_instructions: "Vais receber um e-mail com as instruções sobre como confirmar a tua conta em poucos minutos."
+      send_paranoid_instructions: "Se o teu endereço de e-mail existir na nossa base de dados, receberás um e-mail com instruções sobre como confirmar a tua conta em poucos minutos."
     failure:
-      already_authenticated: Já estás ligado.
-      inactive: A tua conta ainda não foi ativada.
-      invalid: Palavra-passe ou e-mail inválido.
-      invalid_token: Token de autenticação inválido.
-      locked: A tua conta está bloqueada.
-      not_found_in_database: Palavra-passe ou e-mail inválido.
-      timeout: A tua sessão expirou, por favor entra novamente para continuar.
-      unauthenticated: Precisas de entrar ou registar-te antes de continuar.
-      unconfirmed: Tens de confirmar a tua conta antes de continuar.
+      already_authenticated: "Já estás ligado."
+      inactive: "A tua conta ainda não foi ativada."
+      invalid: "Palavra-passe ou e-mail inválido."
+      invalid_token: "Token de autenticação inválido."
+      locked: "A tua conta está bloqueada."
+      not_found_in_database: "Palavra-passe ou e-mail inválido."
+      timeout: "A tua sessão expirou, por favor entra novamente para continuar."
+      unauthenticated: "Precisas de entrar ou registar-te antes de continuar."
+      unconfirmed: "Tens de confirmar a tua conta antes de continuar."
     mailer:
       confirmation_instructions:
-        subject: Code.org instruções de confirmação
+        subject: "Code.org instruções de confirmação"
       reset_password_instructions:
-        subject: Code.org redefinir instruções de palavra-passe
+        subject: "Code.org redefinir instruções de palavra-passe"
       unlock_instructions:
-        subject: Instruções de desbloqueio
+        subject: "Instruções de desbloqueio"
     omniauth_callbacks:
       failure: 'Não foi possível autenticá-lo como %{kind} porque "%{reason}".'
       success: 'Autenticado com êxito com a conta  %{kind}.'
     passwords:
-      no_token: Não podes aceder a esta página sem ter vindo de um e-mail para redefinição da senha. Se vens de um email de redefinição da senha, certifica-te que usaste o URL completo.
-      send_instructions: Vais receber um e-mail com instruções sobre como redefinir a tua senha em alguns minutos.
-      send_paranoid_instructions: Se o teu endereço de e-mail existir na nossa base de dados, receberás um link de recuperação de senha no teu endereço de e-mail em poucos minutos.
-      updated: A tua senha foi alterada com êxito. Estás agora ligado.
-      updated_not_active: A tua senha foi alterada com êxito.
+      no_token: "Não podes aceder a esta página sem ter vindo de um e-mail para redefinição da senha. Se vens de um email de redefinição da senha, certifica-te que usaste o URL completo."
+      send_instructions: "Vais receber um e-mail com instruções sobre como redefinir a tua senha em alguns minutos."
+      send_paranoid_instructions: "Se o teu endereço de e-mail existir na nossa base de dados, receberás um link de recuperação de senha no teu endereço de e-mail em poucos minutos."
+      updated: "A tua senha foi alterada com êxito. Estás agora ligado."
+      updated_not_active: "A tua senha foi alterada com êxito."
     registrations:
-      destroyed: Adeus! A tua conta foi cancelada com sucesso. Esperamos ver-te novamente em breve.
-      signed_up: Bem-vindo! Inscreveste-te com êxito.
-      signed_up_but_inactive: Inscreveste-te com êxito. No entanto não poderás ainda entrar porque a tua conta ainda não foi ativada.
-      signed_up_but_locked: Inscreveste-te com êxito. No entanto não poderás ainda entrar porque a tua conta está bloqueada.
-      signed_up_but_unconfirmed: Uma mensagem com um link de confirmação foi enviada para o teu endereço de e-mail. Por favor, abre o link para ativar a tua conta.
-      update_needs_confirmation: Atualizaste a tua conta com êxito, mas precisamos de verificar de novo o teu endereço de e-mail. Por favor verifica o teu e-mail e clica no link para finalizar a confirmação do teu novo endereço de e-mail.
-      updated: Atualizaste a tua conta com sucesso.
+      destroyed: "Adeus! A tua conta foi cancelada com sucesso. Esperamos ver-te novamente em breve."
+      signed_up: "Bem-vindo! Inscreveste-te com êxito."
+      signed_up_but_inactive: "Inscreveste-te com êxito. No entanto não poderás ainda entrar porque a tua conta ainda não foi ativada."
+      signed_up_but_locked: "Inscreveste-te com êxito. No entanto não poderás ainda entrar porque a tua conta está bloqueada."
+      signed_up_but_unconfirmed: "Uma mensagem com um link de confirmação foi enviada para o teu endereço de e-mail. Por favor, abre o link para ativar a tua conta."
+      update_needs_confirmation: "Atualizaste a tua conta com êxito, mas precisamos de verificar de novo o teu endereço de e-mail. Por favor verifica o teu e-mail e clica no link para finalizar a confirmação do teu novo endereço de e-mail."
+      updated: "Atualizaste a tua conta com sucesso."
     sessions:
-      signed_in: Ligou-se com sucesso.
-      signed_out: Desligou-se com sucesso.
+      signed_in: "Ligou-se com sucesso."
+      signed_out: "Desligou-se com sucesso."
     unlocks:
-      send_instructions: Vais receber um e-mail com as instruções sobre como desbloquear a tua conta dentro de poucos minutos.
-      send_paranoid_instructions: Se a tua conta existir, receberás um e-mail com instruções sobre como desbloqueá-la dentro de poucos minutos.
-      unlocked: A tua conta foi desbloqueada com sucesso. Por favor, Inscreve-te para continuar.
+      send_instructions: "Vais receber um e-mail com as instruções sobre como desbloquear a tua conta dentro de poucos minutos."
+      send_paranoid_instructions: "Se a tua conta existir, receberás um e-mail com instruções sobre como desbloqueá-la dentro de poucos minutos."
+      unlocked: "A tua conta foi desbloqueada com sucesso. Por favor, Inscreve-te para continuar."
   errors:
     messages:
-      already_confirmed: já foi confirmado, por favor, tenta entrar
+      already_confirmed: "já foi confirmado, por favor, tenta entrar"
       confirmation_period_expired: 'precisa de ser confirmado dentro de %{period}, por favor, solicita um novo'
-      expired: expirou, por favor solicita uma nova
-      not_found: não encontrado
-      not_locked: não foi bloqueado
+      expired: "expirou, por favor solicita uma nova"
+      not_found: "não encontrado"
+      not_locked: "não foi bloqueado"
       not_saved:
         one: '1 erro proibiu este %{resource} de ser salvo:'
         other: '%{count} erros não permite que este %{resource} seja salvo:'

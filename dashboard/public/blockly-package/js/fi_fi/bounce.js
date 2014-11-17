@@ -11918,7 +11918,7 @@ exports.parseElement = function(text) {
 
 },{}],39:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.fi=function(n){return n===1?"one":"other"}
-exports.bounceBall = function(d){return "pompauta palloa"};
+exports.bounceBall = function(d){return "pomputa palloa"};
 
 exports.bounceBallTooltip = function(d){return "Pompauta pallo toisesta esineestä."};
 
@@ -12006,7 +12006,7 @@ exports.pathRight = function(d){return "jos polku oikealle"};
 
 exports.pilePresent = function(d){return "tässä on kasa"};
 
-exports.playSoundCrunch = function(d){return "soita räsähdyksen ääni"};
+exports.playSoundCrunch = function(d){return "soita rusahdus"};
 
 exports.playSoundGoal1 = function(d){return "soita maalin ääni"};
 
@@ -12231,9 +12231,9 @@ exports.nextLevel = function(d){return "Onneksi olkoon! Olet suorittanut "+v(d,"
 
 exports.nextLevelTrophies = function(d){return "Onneksi olkoon! Olet suorittanut "+v(d,"puzzleNumber")+". pulman ja voittanut "+p(d,"numTrophies",0,"fi",{"one":"pokaalin","other":n(d,"numTrophies")+" pokaalia"})+"."};
 
-exports.nextStage = function(d){return "Onnittelut! Olet suorittanut "+v(d,"stageName")+"."};
+exports.nextStage = function(d){return "Onnittelut! Olet suorittanut tason "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "Onnittelut! Olet suorittanut "+v(d,"stageName")+" ja voitit "+p(d,"numTrophies",0,"fi",{"one":"pokaalin","other":n(d,"numTrophies")+" pokaalia"})+"."};
+exports.nextStageTrophies = function(d){return "Onnittelut! Olet suorittanut tason "+v(d,"stageName")+" ja voitit "+p(d,"numTrophies",0,"fi",{"one":"pokaalin","other":n(d,"numTrophies")+" pokaalia"})+"."};
 
 exports.numBlocksNeeded = function(d){return "Onneksi olkoon! Olet suorittanut "+v(d,"puzzleNumber")+". pulman (olisit tosin voinut käyttää vain "+p(d,"numBlocks",0,"fi",{"one":"yhden lohkon","other":n(d,"numBlocks")+" lohkoa"})+")."};
 
@@ -12309,7 +12309,7 @@ exports.when = function(d){return "kun"};
 
 exports.whenRun = function(d){return "kun suoritetaan"};
 
-exports.tryHOC = function(d){return "Kokeile koodituntia"};
+exports.tryHOC = function(d){return "Kokeile koodaustuntia"};
 
 exports.signup = function(d){return "Rekisteröidy johdantokurssille"};
 

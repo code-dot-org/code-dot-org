@@ -19965,7 +19965,7 @@ exports.nextLevelTrophies = function(d){return "Συγχαρητήρια! Τελ
 
 exports.nextStage = function(d){return "Συγχαρητήρια! Ολοκληρώσατε το "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "Congratulations! You completed "+v(d,"stageName")+" and won "+p(d,"numTrophies",0,"el",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
+exports.nextStageTrophies = function(d){return "Συγχαρητήρια! Ολοκλήρωσες  το στάδιο "+v(d,"stageName")+" και κέρδισες "+p(d,"numTrophies",0,"el",{"one":"a trophy","other":n(d,"numTrophies")+" τράπαια"})+"."};
 
 exports.numBlocksNeeded = function(d){return "Συγχαρητήρια! Τελείωσες το πάζλ "+v(d,"puzzleNumber")+". (Όμως, θα μπορούσες να βάλεις μόνο   "+p(d,"numBlocks",0,"el",{"one":"1 μπλοκ","other":n(d,"numBlocks")+" μπλοκ"})+".)"};
 

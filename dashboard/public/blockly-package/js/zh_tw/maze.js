@@ -14076,15 +14076,15 @@ exports.ifelseTooltip = function(d){return "如果在指定的方向有路的話
 
 exports.ifFlowerTooltip = function(d){return "如果指定的方向有花或蜂巢，則作出一些行動。"};
 
-exports.ifelseFlowerTooltip = function(d){return "If there is a flower/honeycomb in the specified direction, then do the first block of actions. Otherwise, do the second block of actions."};
+exports.ifelseFlowerTooltip = function(d){return "如果在指定方向有花朵或蜂窩，則做第一個積木的工作，否則，做第二積木的工作。\n。"};
 
-exports.insufficientHoney = function(d){return "You're using all the right blocks, but you need to make the right amount of honey."};
+exports.insufficientHoney = function(d){return "你所使用的積木都正確，但是你需要收集正確數量的蜂蜜。"};
 
-exports.insufficientNectar = function(d){return "You're using all the right blocks, but you need to collect the right amount of nectar."};
+exports.insufficientNectar = function(d){return "你所使用的積木都正確，但是你需要收集正確數量的花蜜。"};
 
 exports.make = function(d){return "製作"};
 
-exports.moveBackward = function(d){return "move backward"};
+exports.moveBackward = function(d){return "向後移動"};
 
 exports.moveEastTooltip = function(d){return "將我向東邊移動一步。"};
 
@@ -14116,9 +14116,9 @@ exports.noPathLeft = function(d){return "左邊沒有路"};
 
 exports.noPathRight = function(d){return "右邊沒有路"};
 
-exports.notAtFlowerError = function(d){return "You can only get nectar from a flower."};
+exports.notAtFlowerError = function(d){return "您只可以在花朵採集花蜜。"};
 
-exports.notAtHoneycombError = function(d){return "You can only make honey at a honeycomb."};
+exports.notAtHoneycombError = function(d){return "您只可以在蜂巢製做蜂蜜。"};
 
 exports.numBlocksNeeded = function(d){return "這個關卡可以使用 %1 個程式積木來完成。"};
 
@@ -14142,7 +14142,7 @@ exports.removeStack = function(d){return "移除由"+v(d,"shovelfuls")+"鏟土�
 
 exports.removeSquare = function(d){return "移除正方型內的土堆"};
 
-exports.repeatCarefullyError = function(d){return "要解決這個關卡，請找出重覆的片斷。使用\"重覆\"程式積木將: 前進，前進，右轉 這三個程式積木包在其中。"};
+exports.repeatCarefullyError = function(d){return "要解決這個問題，想清楚，把兩個移動和一個轉方向放在\"重複\"積木中。最後尾有一個額外的轉方向是接受的。"};
 
 exports.repeatUntil = function(d){return "重複 直到"};
 

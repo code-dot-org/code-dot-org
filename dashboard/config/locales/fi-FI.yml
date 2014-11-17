@@ -106,7 +106,7 @@
     submit: Kirjaudu
   signin:
     try_heading: Haluatko kokeilla koodausta ilman kirjautumista?
-    try_hoc: Kokeile yhtä koodituntia ensin
+    try_hoc: Kokeile yhtä koodaustuntia ensin
     try_20hours: Kokeile 20 tunnin Johdantoamme tietojenkäsittelytieteeseen
   signinsection:
     welcome: Tervetuloa osioon %{section_name}
@@ -217,8 +217,8 @@
           not_earned_title: Voit edelleen ansaita 250 dollaria <a target="_blank"
             href="http://DonorsChoose.org"> DonorsChoose.org</a> palveluun (vain USA)
           earned: "Hieno suoritus! 7 tai useampi oppilaistasi, jotka keräsivät kaikki
-            %{num_trophies} ovat tyttöjä. \n\nHuom: sivustolla mainitut raha- ja tavarapalkinnot
-            ovat voimassa vain USA:ssa\n"
+            %{num_trophies} ovat tyttöjä. \n\nHuom: \"sivustolla mainitut raha- ja
+            tavarapalkinnot ovat voimassa vain USA:ssa\"\n"
           not_earned: (sivustolla mainitut raha- ja tavarapalkinnot ovat voimassa
             vain USA:ssa)
   crud:
@@ -236,7 +236,7 @@
     access_denied: Sinulla ei ole pääsyä tähän %{model}.
   nav:
     header:
-      finished_hoc: Olen suorittanut Koodituntini
+      finished_hoc: Olen suorittanut Koodaustuntini
       sign_in_to_save: Kirjaudu, jos haluat tallentaa edistymisesi
       free_play:
         playlab: Tee sovellus
@@ -350,7 +350,7 @@
   home:
     title: Code Studio
     all_courses: Katsaus kursseihin 1, 2 ja 3
-    lesson_plans: Oppituntien suunnitelmat
+    lesson_plans: Tuntisuunnitelmat
     signin_message: Jo rekisteröitynyt? %{link}
     student_reg_link: Oppilaan rekisteröityminen
     teacher_reg_link: Opettajan rekisteröityminen
@@ -443,8 +443,8 @@
   try_reloading: Yritä ladata sivu uudelleen
   next_stage: Valmis! Siirry seuraavalle tasolle
   download_pdf: Avaa oppituntisuunnitelma
-  lesson_plan: Lesson Plan
-  view_lesson_plan: Katso oppitunnin suunnitelmaa
+  lesson_plan: Tuntisuunnitelma
+  view_lesson_plan: Katso tuntisuunnitelmia
   pdf_download: Lataa PDF
   download_coming_soon: Downloadable activity coming soon.
   video_coming_soon: Video Coming Soon!
@@ -473,7 +473,7 @@
       unused: Käyttämättömät tasot
   upsell:
     hoc:
-      title: Kooditunti
+      title: Koodaustunti
       body: Kokeile tietojenkäsittelytieteen perusteita. Jo miljoonat ovat kokeilleet.
     flappy:
       title: Flappy Code
@@ -530,7 +530,7 @@
             ohjelmoinnin käsitteet. Kurssi on suunniteltu käytettäväksi peruskouluissa,
             mutta siinä on hauskaa opittavaa kaiken ikäisille.
         Hour of Code:
-          title: Kooditunti
+          title: Koodaustunti
           description: ''
         edit-code:
           title: Muokkaa koodia
