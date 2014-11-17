@@ -5,5 +5,6 @@ require src_dir 'database'
 require_relative '../pegasus/helpers/professional_development_workshop_helpers'
 
 require 'cdo/csv'
+require 'cdo/activity_constants'
 
 puts CSV.generate_from_dataset(generate_professional_development_workshop_teachers_report)
