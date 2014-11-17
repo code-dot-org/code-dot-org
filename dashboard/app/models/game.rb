@@ -59,6 +59,10 @@ class Game < ActiveRecord::Base
     app == FLAPPY
   end
 
+  def uses_droplet?
+    name == "MazeEC" || name == "ArtistEC" || name == "Webapp" || name == "StudioEC"
+  end
+
   def self.setup
     transaction do
       # Format: name:app:intro_video
@@ -103,6 +107,7 @@ class Game < ActiveRecord::Base
         Eval:eval
         ArtistEC:turtle:artist_intro
         TextMatch
+        StudioEC:studio
       ).each_with_index do |game, id|
         name, app, intro_video = game.split ':'
         Game.create!(id: id + 1, name: name, app: app, intro_video: Video.find_by_key(intro_video))

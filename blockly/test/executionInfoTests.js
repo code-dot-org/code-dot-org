@@ -1,6 +1,11 @@
 var testUtils = require('./util/testUtils');
 var assert = testUtils.assert;
 
+// needed for Hammerjs
+global.navigator = {};
+global.window = {};
+global.document = {};
+
 var ExecutionInfo = testUtils.requireWithGlobalsCheckSrcFolder('maze/executionInfo');
 
 describe("ExecutionInfo tests", function () {
