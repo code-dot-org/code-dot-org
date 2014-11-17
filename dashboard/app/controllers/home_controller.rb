@@ -27,4 +27,20 @@ class HomeController < ApplicationController
   def health_check
     render text: 'healthy!'
   end
+
+  GALLERY_PER_PAGE = 5
+  def index
+    if current_user
+      @gallery_activities = 
+        current_user.gallery_activities.order(id: :desc).page(params[:page]).per(GALLERY_PER_PAGE)
+    end
+  end
+
+  def gallery_activities
+    if current_user
+      @gallery_activities = 
+        current_user.gallery_activities.order(id: :desc).page(params[:page]).per(GALLERY_PER_PAGE)
+    end
+    render partial: 'home/gallery_content'
+  end
 end

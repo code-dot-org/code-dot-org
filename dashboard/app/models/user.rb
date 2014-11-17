@@ -52,7 +52,8 @@ class User < ActiveRecord::Base
   belongs_to :secret_word_2, class_name: SecretWord
   before_create :generate_secret_words
 
-  has_many :user_scripts, -> {order "greatest(coalesce(started_at, 0), coalesce(assigned_at, 0), coalesce(last_progress_at, 0), coalesce(completed_at, 0)) desc, id asc"}
+  # a bit of trickery to sort most recently started/assigned/progressed scripts first and then completed
+  has_many :user_scripts, -> {order "-completed_at asc, greatest(coalesce(started_at, 0), coalesce(assigned_at, 0), coalesce(last_progress_at, 0)) desc, id asc"}
   has_many :scripts, -> {where hidden: false}, through: :user_scripts, source: :script
 
   validates :name, presence: true
@@ -473,6 +474,24 @@ SQL
     backfill_user_scripts if needs_to_backfill_user_scripts?
 
     scripts.where('user_scripts.completed_at is null')
+  end
+
+  def completed_scripts
+    backfill_user_scripts if needs_to_backfill_user_scripts?
+
+    scripts.where('user_scripts.completed_at is not null')
+  end
+
+  def working_on_user_scripts
+    backfill_user_scripts if needs_to_backfill_user_scripts?
+
+    user_scripts.where('user_scripts.completed_at is null')
+  end
+
+  def completed_user_scripts
+    backfill_user_scripts if needs_to_backfill_user_scripts?
+
+    user_scripts.where('user_scripts.completed_at is not null')
   end
 
   def primary_script

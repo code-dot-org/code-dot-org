@@ -42,12 +42,9 @@ en:
   hello: "Hello world"
   welcome_back: "Welcome back, %{name}"
   add_teacher_form:
-    code_or_email:
-      label: 'Add a teacher by code or email address:'
-      placeholder: "Code (ABCDEF) or email (teacher@school.edu)"
     code:
-      label: 'Add a teacher by section code:'
-      placeholder: "Code (ABCDEF)"
+      label: 'Add a teacher:'
+      placeholder: "Section Code (ABCDEF)"
     submit: 'Add teacher'
   add_hint_form:
     placeholder: 'Please enter your hint here'
@@ -365,9 +362,7 @@ en:
     heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
     heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
     heading_legacy: "<h2>Our general course for</h2><h1>All Ages</h1>"
-    gallery:
-      your_turtle: My Art
-      your_studio: My Apps
+    your_gallery: Gallery
   gender:
     male: 'Male'
     female: 'Female'
