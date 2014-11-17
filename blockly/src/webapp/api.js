@@ -40,6 +40,37 @@ exports.createButton = function (blockId, elementId, text) {
                            'text': text });
 };
 
+exports.createCanvas = function (blockId, elementId) {
+  return Webapp.executeCmd(String(blockId),
+                          'createCanvas',
+                          {'elementId': elementId });
+};
+
+exports.canvasDrawLine = function (blockId, elementId, x1, y1, x2, y2) {
+  return Webapp.executeCmd(String(blockId),
+                          'canvasDrawLine',
+                          {'elementId': elementId,
+                           'x1': Number(x1),
+                           'y1': Number(y1),
+                           'x2': Number(x2),
+                           'y2': Number(y2) });
+};
+
+exports.canvasDrawCircle = function (blockId, elementId, x, y, radius) {
+  return Webapp.executeCmd(String(blockId),
+                          'canvasDrawCircle',
+                          {'elementId': elementId,
+                           'x': Number(x),
+                           'y': Number(y),
+                           'radius': Number(radius) });
+};
+
+exports.canvasClear = function (blockId, elementId) {
+  return Webapp.executeCmd(String(blockId),
+                          'canvasClear',
+                          {'elementId': elementId });
+};
+
 exports.createTextInput = function (blockId, elementId, text) {
   return Webapp.executeCmd(String(blockId),
                           'createTextInput',
