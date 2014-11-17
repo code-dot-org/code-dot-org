@@ -33,6 +33,7 @@ group :development, :test do
   gem 'rspec'
   gem 'chromedriver-helper', '~> 0.0.7'
   gem 'colorize'
+  gem 'parallel'
 end
 
 group :doc do

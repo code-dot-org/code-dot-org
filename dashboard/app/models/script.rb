@@ -179,9 +179,11 @@ class Script < ActiveRecord::Base
       row.symbolize_keys!
 
       # Concepts are comma-separated, indexed by name
-      row[:concept_ids] = (concepts = row.delete(:concepts)) && concepts.split(',').map(&:strip).map do |concept_name|
-        (Concept.by_name(concept_name) || raise("missing concept '#{concept_name}'"))
-      end
+#      if row[:concepts]
+        row[:concept_ids] = (concepts = row.delete(:concepts)) && concepts.split(',').map(&:strip).map do |concept_name|
+          (Concept.by_name(concept_name) || raise("missing concept '#{concept_name}'"))
+        end
+#      end
 
       if row[:name].try(:start_with?, 'blockly:')
         row[:name], row[:game], row[:level_num] = row.delete(:name).split(':')

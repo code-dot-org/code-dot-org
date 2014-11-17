@@ -4,6 +4,11 @@ var assert = chai.assert;
 
 var testUtils = require('./util/testUtils');
 
+// needed for Hammerjs
+global.navigator = {};
+global.window = {};
+global.document = {};
+
 var Bee = testUtils.requireWithGlobalsCheckSrcFolder('maze/bee');
 var utils = testUtils.requireWithGlobalsCheckSrcFolder('utils');
 
