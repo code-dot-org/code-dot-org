@@ -190,23 +190,26 @@ Blockly.FunctionEditor.prototype.refreshParamsInFlyout_ = function() {
 
 Blockly.FunctionEditor.prototype.resetParamIDs_ = function() {
   var paramArrays = this.paramsAsParallelArrays_();
-  paramArrays[1] = null; // No IDs causes next update to initialize IDs
-  this.functionDefinitionBlock.updateParamsFromArrays
-    .apply(this.functionDefinitionBlock, paramArrays);
+  paramArrays.paramIDs = null; // No IDs causes next update to initialize IDs
+  this.functionDefinitionBlock.updateParamsFromArrays(
+    paramArrays.paramNames, paramArrays.paramIDs, paramArrays.paramTypes);
 };
 
 Blockly.FunctionEditor.prototype.refreshParamsOnFunction_ = function() {
-  this.functionDefinitionBlock.updateParamsFromArrays
-    .apply(this.functionDefinitionBlock, this.paramsAsParallelArrays_());
+  var paramArrays = this.paramsAsParallelArrays_()
+  this.functionDefinitionBlock.updateParamsFromArrays(
+    paramArrays.paramNames, paramArrays.paramIDs, paramArrays.paramTypes);
 };
 
 /**
- * @returns {Array.<Array.<string>>} parallel arrays of parameter names, IDs, types
+ * @returns {{paramNames: Array, paramIDs: Array, paramTypes: Array}}
+ *    parallel arrays of parameter names, IDs, types
  */
 Blockly.FunctionEditor.prototype.paramsAsParallelArrays_ = function() {
   var paramNames = [];
   var paramIDs = [];
   var paramTypes = [];
+
   this.orderedParamIDsToBlocks_.forEach(function(blockXML, paramID) {
     // <mutation><name></name><outputtype></outputtype></mutation>
     paramNames.push(blockXML.firstElementChild.textContent);
@@ -215,7 +218,7 @@ Blockly.FunctionEditor.prototype.paramsAsParallelArrays_ = function() {
       paramTypes.push(blockXML.children[1].textContent);
     }
   }, this);
-  return [paramNames, paramIDs, paramTypes];
+  return {paramNames: paramNames, paramIDs: paramIDs, paramTypes: paramTypes};
 };
 
 Blockly.FunctionEditor.prototype.show = function() {
