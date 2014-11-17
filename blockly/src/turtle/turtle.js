@@ -256,10 +256,12 @@ Turtle.init = function(config) {
 
       for( var i = 0; i <  Blockly.Blocks.draw_line_style_pattern.Options.length; i++) {
         var pattern = Blockly.Blocks.draw_line_style_pattern.Options[i][1];
-        var img = new Image();
-        img.src = skin[pattern];
-        img.id = pattern;
-        imageContainer.appendChild(img);
+        if (skin[pattern]) {
+          var img = new Image();
+          img.src = skin[pattern];
+          img.id = pattern;
+          imageContainer.appendChild(img);
+        }
       }
     }
 
