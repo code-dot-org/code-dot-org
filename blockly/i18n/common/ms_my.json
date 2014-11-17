@@ -40,7 +40,7 @@
   "nextLevelTrophies": "Tahniah! Anda telah menyelesaikan Puzzle {puzzleNumber} dan memenangi {numTrophies, plural, one {a trophy} other {# trophies}}.",
   "nextStage": "Tahniah! Anda tamatkan {stageName}.",
   "nextStageTrophies": "Tahniah! Anda telah menyelesaikan {stageName} dan memenangi {numTrophies, plural, one {a trophy} other {# trophies}}.",
-  "numBlocksNeeded": "Tahniah! Anda melengkapkan Puzzle {puzzleNumber}. (Walau bagaimanapun, anda hanya boleh menggunakan {numBlocks, plural, one {1 block} lain {# blocks}}.)",
+  "numBlocksNeeded": "Tahniah! Anda melengkapkan Puzzle {puzzleNumber}. (Walau bagaimanapun, anda hanya boleh menggunakan {numBlocks, plural, one {1 block} other {# blocks}}.)",
   "numLinesOfCodeWritten": "Anda baru sahaja menulis {numLines, plural, one {1 line} other {# lines}} kod!",
   "play": "Main",
   "puzzleTitle": "Puzzle {puzzle_number} dari {stage_total}",
