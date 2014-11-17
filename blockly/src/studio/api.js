@@ -76,7 +76,7 @@ exports.setSpriteSize = function (id, spriteIndex, value) {
 exports.setSpritePosition = function (id, spriteIndex, value) {
   Studio.queueCmd(id, 'setSpritePosition', {
     'spriteIndex': spriteIndex,
-    'value': value
+    'value': Number(value)
   });
 };
 
@@ -91,8 +91,8 @@ exports.stop = function(id, spriteIndex) {
 exports.throwProjectile = function(id, spriteIndex, dir, className) {
   Studio.queueCmd(id, 'throwProjectile', {
     'spriteIndex': spriteIndex,
-    'dir': dir,
-    'className': className
+    'dir': Number(dir),
+    'className': String(className)
   });
 };
 
@@ -106,7 +106,7 @@ exports.makeProjectile = function(id, className, action) {
 exports.move = function(id, spriteIndex, dir) {
   Studio.queueCmd(id, 'move', {
     'spriteIndex': spriteIndex,
-    'dir': dir
+    'dir': Number(dir)
   });
 };
 
@@ -136,4 +136,11 @@ exports.wait = function(id, value) {
 
 exports.vanish = function (id, spriteIndex) {
   Studio.queueCmd(id, 'vanish', {spriteIndex: spriteIndex});
+};
+
+exports.attachEventHandler = function (id, eventName, func) {
+  Studio.queueCmd(id, 'attachEventHandler', {
+    'eventName': String(eventName),
+    'func': func
+  });
 };

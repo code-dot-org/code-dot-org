@@ -1,6 +1,12 @@
 var testUtils = require('./util/testUtils');
 var buildDir = '../build';
 var xml = require(buildDir + '/js/xml');
+
+// needed for Hammerjs
+global.navigator = {};
+global.window = {};
+global.document = {};
+
 var utils = require(buildDir + '/js/utils');
 var requiredBlockUtils = require(buildDir + '/js/required_block_utils');
 var blockUtils = require(buildDir + '/js/block_utils');
