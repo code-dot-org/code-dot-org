@@ -416,6 +416,7 @@ en:
     bounce_og_title: "Check out my Bounce Game"
     flappy_og_title: "Check out my Flappy Game"
     studio_og_title: "Check out my Play Lab App"
+    check_out_what_i_made: "Check out what I made"
     og_description: "I wrote the code myself with Code.org"
     phone_number_not_allowed: "It looks like there is a phone number in it. Try changing the text."
     address_not_allowed: "It looks like there is an address in it. Try changing the text."
