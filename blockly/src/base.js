@@ -365,21 +365,28 @@ BlocklyApps.init = function(config) {
 
   // In embed mode, the display scales down when the width of the visualizationColumn goes below the min width
   if(config.embed) {
-    // Depends on ResizeSensor.js
-    new ResizeSensor(document.getElementById('visualizationColumn'), function(){
+    var resized = false;
+    var resize = function() {
       var vizCol = document.getElementById('visualizationColumn');
       var width = vizCol.offsetWidth;
       var height = vizCol.offsetHeight;
       var displayWidth = BlocklyApps.MIN_MOBILE_NO_PADDING_SHARE_WIDTH;
-      var scale = Math.min(width/displayWidth, height/displayWidth);
+      var scale = Math.min(width / displayWidth, height / displayWidth);
       var viz = document.getElementById('visualization');
       viz.style['transform-origin'] = 'left top';
       viz.style['-webkit-transform'] = 'scale(' + scale + ')';
-      viz.style['max-height'] = (displayWidth*scale)+'px';
+      viz.style['max-height'] = (displayWidth * scale) + 'px';
       viz.style['display'] = 'block';
       vizCol.style['width'] = '';
       document.getElementById('visualizationColumn').style['max-width'] = displayWidth + 'px';
-    });
+      // Needs to run twice on initialization
+      if(!resized) {
+        resized = true;
+        resize();
+      }
+    };
+    // Depends on ResizeSensor.js
+    new ResizeSensor(document.getElementById('visualizationColumn'), resize);
   }
 
   var orientationHandler = function() {
