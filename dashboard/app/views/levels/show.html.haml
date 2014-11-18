@@ -22,7 +22,7 @@
 - else
   -# Solution and start blocks may be nil if they don't exist for this level.
   - @solution_blocks = '' if ! defined? @solution_blocks
-  = render partial: "levels/blockly", locals: { start_blocks: @start_blocks, app: @game.app, solution_blocks: @solution_blocks, maze: @level[:maze]}
+  = render partial: "levels/blockly", locals: { start_blocks: @start_blocks, app: @game.app, solution_blocks: @solution_blocks, maze: @level[:maze], hide_source: @hide_source, no_padding: @no_padding}
 
 - if Rails.env.production? && request.path == hoc_chapter_path(chapter: 1)
   -# special tracking image to make sure a cookie is set when hoc starts (/hoc/1)
