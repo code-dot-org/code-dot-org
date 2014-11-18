@@ -4,6 +4,12 @@
   computer_science: Informatika
   computer_science_edweek: Programavimo švietimo savaitė
   csedweek_dates: Gruodžio 9-15, 2013
+  csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
+    font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers,
+    <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
+    font-weight:bold">plan your Hour of Code</a>'
+  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
+    none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
   n_have_learned_an_hoc: <h1>#</h1><h3>išbandė</h3><h2>„Programavimo valandą“</h2>
   anybody_can_learn: Išmokti gali kiekvienas.
   learn_now: Išmokite dabar
@@ -328,6 +334,7 @@
   code_sign_up: Sign up to participate during CS Education Week
   learn_more: Sužinokite daugiau
   carousel_heading_international: Pamokos Jūsų kalba
+  carousel_heading_domestic: Tutorials available in English
   carousel_heading_beginners: Tutorials for Beginners
   carousel_heading_javascript: Tutorials that teach Javascript
   carousel_heading_unplugged: No device or internet? Try 'unplugged' computer science
