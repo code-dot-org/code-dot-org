@@ -10,16 +10,6 @@ get '/forms/uploads/*' do |uri|
   send_file(cache_file)
 end
 
-post '/private/forms/mailing-list' do
-  content_type :csv, name:'mailing-list.csv'
-  response.headers['Content-Disposition'] = 'attachment; filename="mailing-list.csv"'
-  stream do |out|
-    Solr::Server.new(host:CDO.solr_server).query(q:params[:query], rows:10000).each do |i|
-      out << CSV.generate_line([i['name_s'], i['email_s']])
-    end
-  end
-end
-
 post '/forms/:kind' do |kind|
   halt 403 if settings.read_only
   begin
