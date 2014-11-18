@@ -6,14 +6,14 @@ nav: pd_nav
 
 # Professional Development FAQs
 
-- [What should I do if I have phase 1 registration issues?](#pd1)
-- [What should I do if I log-in issues with the online PD?](#login)
+- [What should I do if I have edx.code.org registration issues?](#pd1)
+- [What should I do if I have edx.code.org log-in issues?](#login)
+- [What if my question is not saving on edx.code.org? ](#question)
+- [What if I have a schedule conflict?](#sched)
 - [What if I miss a live Hangout?](#hangout)
 - [What is the payment process?](#pay)
 - [What if my bank account changes?](#acct)	
 - [Are parking fees reimbursable?](#park)
-- [What if I have a schedule conflict?](#sched)
-- [What if my question is not saving in Phase 1 on edX? ](#question)
 - [What if I am no longer teaching the course in the Fall, can I still attend PD?](#fall)
 
 
@@ -22,7 +22,7 @@ nav: pd_nav
 <a id="pd1"></a>
 ## What should I do if I have phase 1 registration issues?
 
-The registration e-mail was sent on May 1st at 3 pm ET. Please check your spam folder to see if you have an e-mail from register@code.org. Alternatively, if you go to http://edx.code.org/register, you can create an account with your school e-mail address. 
+The registration e-mail was sent on May 1st at 3 pm ET. Please check your spam folder to see if you have an e-mail from register@code.org. Alternatively, if you go to [http://edx.code.org/register](http://edx.code.org/register), you can create an account with your school e-mail address. 
 
 After registering, you will receive an email from registration@code.org to activate your account. Once you activate you account, the course should be automatically added to your dashboard. 
 
@@ -35,7 +35,7 @@ Please contact pd@code.org if you have further issues.
 <a id="login"></a>
 ## What should I do if I log-in issues with the online PD? ##
 
-Please first double check that you are at the correct log-in website: http://edx.code.org/login. You will not be able to access the Code.org course if you are attempting to log-in at https://www.edx.org/
+Please first double check that you are at the correct log-in website: [edx.code.org/login](http://edx.code.org/login). You will not be able to access the Code.org course if you are attempting to log-in at edx.org
 
 If you are still having issues, please reset your password by clicking on "forgot password?" and then click "reset password." You will receive an email with instructions for setting a new password.
 
@@ -43,14 +43,30 @@ If you continue to have log-in issues, please email pd@code.org.
 
 [**Back to the top**](#top)
 
-<a id="hangout"></a>
-## What if I miss a live Hangout?
+<a id="question"></a>
 
-If you were unable to attend a live Hangout, you can still get credit by watching the recording of the Hangout in the courseware section of your edX account.
+## What if my question is not saving on edx.code.org? ##
 
+The latest version of Internet Explorer is not compatible with [edx.code.org](http://edx.code.org/) and using Internet Explorer 11 prevents teachers from saving their work. Please download and use Firefox or Google Chrome when working on [edx.code.org](http://edx.code.org/) and your work will be saved.  
+ 	
+[**Back to the top**](#top)
+
+<a id="sched"></a>
+
+## Who do I inform if there is a schedule conflict? ###
+The Code.org policy on teacher attendance can be found [here](/files/TeacherAbsencePolicy.pdf).
+
+Please e-mail pd@code.org if you have a conflict with an in-person PD date.
 
 [**Back to the top**](#top)
 
+<a id="hangout"></a>
+## What if I miss a live Hangout?
+
+If you were unable to attend a live Hangout, you can still get credit by watching the recording of the Hangout in the courseware section of your [edx.code.org](http://edx.code.org/) account.
+
+
+[**Back to the top**](#top)
 
 <a id="pay"></a>
 ## What is the payment process?##
@@ -93,23 +109,6 @@ Please e-mail pd@code.org stating that you need to update your bank account info
 
 No, Code.org does not cover parking expenses and encourages participants to use public transit options in their city.
 
-[**Back to the top**](#top)
-
-<a id="sched"></a>
-
-## Who do I inform if there is a schedule conflict? ###
-The Code.org policy on teacher attendance can be found [here](/files/TeacherAbsencePolicy.pdf).
-
-Please e-mail pd@code.org if you have a conflict with an in-person PD date.
-
-[**Back to the top**](#top)
-
-<a id="question"></a>
-
-## What if my question is not saving in Phase 1 on edX? ##
-
-The latest version of Internet Explorer is not compatible with the Phase 1 courseware in edX and using Internet Explorer 11 prevents teachers from saving their work. Please download and use Firefox or Google Chrome when working on Phase 1 and your work will be saved.  
- 	
 [**Back to the top**](#top)
 
 <a id="fall"></a>
