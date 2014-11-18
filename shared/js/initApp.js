@@ -185,5 +185,8 @@ if (appOptions.droplet) {
 } else {
   promise = loadSource(appOptions.locale + '/vendor')();
 }
-promise.then(loadSource(appOptions.locale + '/' + appOptions.app + appOptions.pretty))
-    .then(initApp);
+promise.then(loadSource('common' + appOptions.pretty))
+  .then(loadSource(appOptions.locale + '/common_locale'))
+  .then(loadSource(appOptions.locale + '/' + appOptions.app + '_locale'))
+  .then(loadSource(appOptions.app + appOptions.pretty))
+  .then(initApp);
