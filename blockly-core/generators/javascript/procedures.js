@@ -70,7 +70,7 @@ Blockly.JavaScript.procedures_callreturn = function() {
   var funcName = Blockly.JavaScript.variableDB_.getName(
       this.getTitleValue('NAME'), Blockly.Procedures.NAME_TYPE);
   var args = [];
-  for (var x = 0; x < this.currentParameterNames.length; x++) {
+  for (var x = 0; x < this.currentParameterNames_.length; x++) {
     args[x] = Blockly.JavaScript.valueToCode(this, 'ARG' + x,
         Blockly.JavaScript.ORDER_COMMA) || 'null';
   }
@@ -84,7 +84,7 @@ Blockly.JavaScript.procedures_callnoreturn = function() {
   var funcName = Blockly.JavaScript.variableDB_.getName(
       this.getTitleValue('NAME'), Blockly.Procedures.NAME_TYPE);
   var args = [];
-  for (var x = 0; x < this.currentParameterNames.length; x++) {
+  for (var x = 0; x < this.currentParameterNames_.length; x++) {
     args[x] = Blockly.JavaScript.valueToCode(this, 'ARG' + x,
         Blockly.JavaScript.ORDER_COMMA) || 'null';
   }
