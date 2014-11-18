@@ -117,7 +117,50 @@
       </xml>
     </start_blocks>
     <toolbox_blocks>
-      <xml/>
+      <xml>
+        <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+            <block type="math_number">
+              <title name="NUM">100</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_turn" inline="true">
+          <title name="DIR">turnRight</title>
+          <value name="VALUE">
+            <block type="math_number">
+              <title name="NUM">90</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_turn" inline="true">
+          <title name="DIR">turnLeft</title>
+          <value name="VALUE">
+            <block type="math_number">
+              <title name="NUM">90</title>
+            </block>
+          </value>
+        </block>
+        <block type="controls_repeat_ext" inline="true"/>
+        <block type="math_number">
+          <title name="NUM">0</title>
+        </block>
+        <block type="math_arithmetic" inline="true">
+          <title name="OP">ADD</title>
+        </block>
+        <block type="variables_set" inline="false">
+          <title name="VAR">sides</title>
+          <value name="VALUE">
+            <block type="math_number">
+              <title name="NUM">???</title>
+            </block>
+          </value>
+        </block>
+        <block type="variables_get">
+          <title name="VAR">sides</title>
+        </block>
+      </xml>
     </toolbox_blocks>
     <required_blocks>
       <xml>

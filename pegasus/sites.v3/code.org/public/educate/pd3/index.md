@@ -3,73 +3,56 @@ title: Professional Development
 nav: pd3_nav
 ---
 
-<h1 style="margin-bottom:0px">Educator Overview</h1>
+# Professional Development Overview
 
-<br/> 
-<br/>
+## Professional development for middle school math or science teachers
 
-<img src="/images/k5pd.jpg" width="80%"/>
+Our middle school curriculum uses computer science and programming within the context of middle school math and science - as a tool to teach math and science concepts. The multi-phased professional development programs for this curriculum are only available in the context of a full school district partnership with Code.org.
 
-<br/>
-<br/>
+### Phase 1
 
-<table style="width:100%">
-  <tr>
-    <th>Grades K-5</th>
-    <th>Grades 6-8</th> 
-    <th>Grades 9-12</th>
-  </tr>
-  <tr>
-    <td valign="top" style="width:20%">One-day, professional development workshops offered to K-5 educators in the United States at no cost. These workshops are run by experienced computer science educators across the nation, and provide an introduction to the curricular materials in the k-5 courses.  Not only is it an opportunity to increase your knowledge and confidence in facilitating an engaged computer science classroom, but it's a chance to connect with other educators in your area who are working to bring computer science to their schools.</td>
-    <td valign="top" style="width:40%"><b>Phase 1</b>
-    	</br>
-		Multi-hour (approximately 10) online component focused on both pedagogy and computer science content in the context of middle school math and science.
-    	</br>
-    	</br>
-		<b>Phase 2</b>
-		</br>
-		Multi-day in person professional development workshop.
-		<ul>
-<li>Articulate the alignment of key computer science concepts to commonly used math and science curricula aligned to Common Core and Next Gen Science Standards.
-</li>
-			<li>Exploration of specific curricular tools.</li>
-			<li>Creating a professional learning community that will extend beyond the Code.org partnership.</li></ul>
-		</br>
-		<b>Phase 3</b>
-		</br>
-		One day in-person and/or online professional development workshops combined with optional participation in online support.
-		<ul>
-		<li>Provide just in time instructional supports to meet the needs of district teachers</li>
-		<li>Highlight possible extension activities</li></ul>
-		</td>
-    <td valign="top" style="width:40%"><b>Phase 1</b>
-		</br>
-		Multi-hour (approximately 10) online course focused on exploring the impact of computer science and reflecting on pedagogical techniques to broaden participation in computing.
-		</br>
-		</br>
-		<b>Phase 2</b>
-		</br>
-		Summer 5 day in person professional development workshop.
-		<ul>
-		<li>Focused on quality computer science pedagogy—Teaching content through inquiry and equity</li>
-		<ul> Explore lessons using Teacher/Learner/Observer Model</li>
-		<li>Creating a professional learning community that will extend beyond the Code.org partnership.</li></ul>
-		</br>
-		<b>Phase 3</b>
-		</br>
-		Quarterly in person and/or online professional development workshops combined with online support.
-		<ul>
-		<li>Provide content and pedagogical support for upcoming units</li>
-		<li>Continued use of the Teacher/Learner/Observer Model</li>
-		</br></ul>
-		<b>Phase 4</b>
-		<ul>
-		<li>Multi-day in person professional development workshop</li>
-		<li>Reflection and follow up on the academic year</li>
-		<li>Preparation for teachers to continue their own personal development as the structured PD model comes to a close.</li></ul></td>
-  </tr>
-</table>
+Multi-hour (approximately 10) online component focused on both pedagogy and computer science content in the context of middle school math and science.
 
+### Phase 2
+
+Multi-day in person professional development workshop.
+
+- Articulate the alignment of key computer science concepts to commonly used math and science curricula aligned to Common Core and Next Generation Science Standards.
+- Exploration of specific curricular tools.
+- Creating a professional learning community that will extend beyond the Code.org partnership.
+
+### Phase 3
+
+One day in-person and/or online professional development workshops combined with optional participation in online support.
+
+- Provide just in time instructional supports to meet the needs of district teachers
+- Highlight possible extension activities
+
+---
+## Professional development for high school teachers to teach computer science
+
+Our high school program helps school districts offer full-year computer science classes by preparing existing teaching staff to offer this new field. This multi-phased professional development programs is only available in the context of a full school district partnership with Code.org.
+
+### Phase 1
+Multi-hour (approximately 10hr) online course focused on exploring the impact of computer science and reflecting on pedagogical techniques to broaden participation in computing.
+
+### Phase 2
+Summer 5 day in person professional development workshop.
+
+- Focused on quality computer science pedagogy—Teaching content through inquiry and equity
+- Explore lessons using Teacher/Learner/Observer Model
+- Creating a professional learning community that will extend beyond the Code.org partnership.
+
+### Phase 3
+Quarterly in person and/or online professional development workshops combined with online support.
+
+- Provide content and pedagogical support for upcoming units
+- Continued use of the Teacher/Learner/Observer Model
+
+### Phase 4
+- Multi-day in person professional development workshop
+- Reflection and follow up on the academic year
+- Preparation for teachers to continue their own personal development as the structured PD model comes to a close.
 
 ----------
 Please visit [FAQs](/educate/pd/faq) for more information.<br /><br />

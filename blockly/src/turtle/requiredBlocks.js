@@ -169,8 +169,8 @@ var defineWithArg = function(func_name, arg_name) {
     test: function(block) {
       return block.type == 'procedures_defnoreturn' &&
           block.getTitleValue('NAME') == func_name &&
-          block.arguments_ && block.arguments_.length &&
-          block.arguments_[0] == arg_name;
+          block.parameterNames_ && block.parameterNames_.length &&
+          block.parameterNames_[0] == arg_name;
     },
     type: 'procedures_defnoreturn',
     titles: {'NAME': func_name},

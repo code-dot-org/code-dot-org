@@ -15,10 +15,11 @@
     "disable_variable_editing": "false",
     "free_play": "false",
     "slider_speed": "0.8",
-    "instructions": "Let's repeat it 90 times! How many times does 90 go into 360? It's a really small number.",
+    "instructions": "Let's repeat it 90 times! How many times does 90 go into 360? Hint: It's a really small number.",
     "impressive": "true",
     "use_modal_function_editor": "false",
-    "use_contract_editor": "false"
+    "use_contract_editor": "false",
+    "ideal": "7"
   }
 }]]></config>
   <blocks>

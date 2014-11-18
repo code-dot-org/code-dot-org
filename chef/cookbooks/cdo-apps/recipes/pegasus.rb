@@ -9,7 +9,7 @@ template "/etc/init.d/pegasus" do
   variables ({
     src_file:"/home/#{node[:current_user]}/#{node.chef_environment}/pegasus/config/unicorn.rb",
     app_root:"/home/#{node[:current_user]}/#{node.chef_environment}/pegasus",
-    pid_file:"/home/#{node[:current_user]}/#{node.chef_environment}/aws/pegasus_unicorn.rb.pid",
+    pid_file:"/home/#{node[:current_user]}/#{node.chef_environment}/pegasus/config/unicorn.rb.pid",
     user:node[:current_user],
     env:node.chef_environment,
   })
@@ -60,4 +60,13 @@ end
 
 service 'pegasus' do
   action [:enable, :start]
+end
+
+cron 'upload-pegasus-logs-to-s3' do
+  action :create
+  minute '5'
+  hour '1'
+  user node[:current_user]
+  home "/home/#{node[:current_user]}"
+  command "/home/#{node[:current_user]}/#{node.chef_environment}/aws/cronjob \"/home/#{node[:current_user]}/#{node.chef_environment}/bin/upload-logs-to-s3 pegasus\""
 end

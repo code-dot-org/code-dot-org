@@ -31,15 +31,15 @@ def create_course_certificate_image(name, course=nil, sponsor=nil)
   if course == '20hours' || course == 'hoc'
     # only need to fill in name
     image_file = (course == '20hours') ? '20hours_certificate.jpg' : 'hour_of_code_certificate.jpg'    
-    vertical_offset = opts[:course] == "20hours" ? 260 : 235
-    image = create_certificate_image2(image_file, name, y: vertical_offset)
+    vertical_offset = course == "20hours" ? -115 : -110
+    image = create_certificate_image2(pegasus_dir('sites.v3', 'code.org', 'public', 'images', image_file), name, y: vertical_offset)
   else # all other courses use a certificate image where the course name is also blank
     image_file = 'blank_certificate.png'
     image = Magick::Image.read(pegasus_dir('sites.v3', 'code.org', 'public', 'images', image_file)).first
 
     # student name
     name_vertical_offset = 612
-    Magick::Draw.new.annotate(image, 0, 0, 0, name_vertical_offset, opts[:name]) do
+    Magick::Draw.new.annotate(image, 0, 0, 0, name_vertical_offset, name) do
       self.gravity = Magick::NorthGravity
       self.pointsize = 96
       self.font_family = 'Helvetica'
@@ -50,7 +50,7 @@ def create_course_certificate_image(name, course=nil, sponsor=nil)
 
     # course name
     course_vertical_offset = 830
-    Magick::Draw.new.annotate(image, 0, 0, 0, course_vertical_offset, opts[:course]) do
+    Magick::Draw.new.annotate(image, 0, 0, 0, course_vertical_offset, course) do
       self.gravity = Magick::NorthGravity
       self.pointsize = 60
       self.font_family = 'Helvetica'

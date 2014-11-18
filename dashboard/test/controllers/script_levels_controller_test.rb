@@ -322,6 +322,22 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert session['warden.user.user.key'].first.first
   end
 
+  test "reset routing for custom scripts" do
+    assert_routing({method: "get", path: "/s/laurel/reset"},
+                   {controller: "script_levels", action: "show", script_id: 'laurel', reset: true})
+  end
+
+  test "show reset resets for custom scripts" do
+    sign_out(@admin)
+    session[:progress] = {5 => 10}
+
+    get :show, script_id: 'laurel', reset: true
+    assert_redirected_to "/s/laurel/stage/1/puzzle/1"
+
+    assert !session[:progress]
+    assert !session['warden.user.user.key']
+  end
+
   test "should select only callouts for current script level" do
     @controller.expects :slog
 

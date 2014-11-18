@@ -30,8 +30,6 @@ Phase 3 is designed to provide teachers with professional support, guidance, and
 
 #### Save The Dates ####
 
-11/15/2014
-<br />
 2/21/2015
 <br />
 4/11/2015
@@ -40,7 +38,7 @@ Phase 3 is designed to provide teachers with professional support, guidance, and
 <br />
 Breakfast and lunch will be served. 
 
-#### Location ####
+#### February 21st Location ####
 
 Nova Southeastern University (NSU)
 <br />
@@ -76,8 +74,6 @@ Milestone Complete!
 
 Milestone Complete!
 
-For information about the stipend payment process please go [here](http://code.org/educate/pd/faq#pay).
-
 ### Phase 3: Academic Year Development
 Phase 3 is designed to provide teachers with professional support, guidance, and feedback during the school year and experiences with an online community of practice.
 
@@ -89,7 +85,7 @@ Phase 3 is designed to provide teachers with professional support, guidance, and
 <br />
 Breakfast and lunch will be served. 
 
-#### Location ####
+#### February 21st Location ####
 
 Nova Southeastern University (NSU)
 <br />
@@ -113,8 +109,6 @@ Laptop
 <br />
 [**Back to the top**](#top)
 
-
-
 <a id="msm"></a>
 ## Middle School Math Professional Development
 
@@ -124,8 +118,6 @@ Milestone Complete!
 ### Phase 2: Teaching and Learning Studio
 
 Milestone Complete!
-
-For information about the stipend payment process please go [here](http://code.org/educate/pd/faq#pay).
 
 ### Phase 3: Academic Year Development
 Phase 3 is designed to provide teachers with professional support, guidance, and feedback during the school year and experiences with an online community of practice.
@@ -138,7 +130,7 @@ Phase 3 is designed to provide teachers with professional support, guidance, and
 <br />
 Breakfast and lunch will be served. 
 
-#### Location ####
+#### February 21st Location ####
 
 Nova Southeastern University (NSU)
 <br />
@@ -164,7 +156,8 @@ Laptop
 ## Administrator and Counselor Professional Development
 
 ### Phase 1: Preparation and Reflection
-The Administrator / Counselor Phase 1 Professional Development online course [edx.code.org](http://edx.code.org) launched June 1st. Enrolled Administrators and Counselors received an email on June 1st with registration information. Pre-registration with your district is required to access professional development courses. 
+
+Milestone Complete!
 
 ### Phase 2: Teaching and Learning Studio
 
