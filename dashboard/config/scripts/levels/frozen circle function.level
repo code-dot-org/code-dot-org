@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "elsa",
-    "instructions": "Use the new 'create a circle' block to create 10 overlapping circles. Don't forget to jump forward between circles",
+    "instructions": "Use the new “Create a circle” block to create 10 overlapping circles. Don't forget to jump forward between circles.",
     "x": "80",
     "y": "150",
     "start_direction": "90",
@@ -16,7 +16,10 @@
     "disable_variable_editing": "false",
     "free_play": "false",
     "slider_speed": "0.8",
-    "impressive": "false"
+    "impressive": "false",
+    "ideal": "4",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false"
   }
 }]]></config>
   <blocks>

@@ -31,7 +31,6 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 
 ### Ubuntu 14.04
 
-1. `sudo apt-get install -y aptitude`
 1. `sudo aptitude update`
 1. `sudo aptitude upgrade`
 1. `sudo aptitude install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev nodejs openjdk-7-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl`
@@ -57,6 +56,7 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 1. `rake seed:migrate`
 
 ## Organizational Structure
+
 Our code is segmented into four parts:
 
 * Blockly Core is the visual programming language platform used for the interactive tutorials.
@@ -70,16 +70,17 @@ Our code is segmented into four parts:
   * [Teacher Dashboard](http://code.org/teacher-dashboard)
 
 ## Running Dashboard
-1. `cd code-dot-org/dashboard`
-2. `bundle exec rails server`
-3.  Note: after major code updates (or if something seems broken), run `bundle exec rake db:migrate seed:all`
-4.  Visit [http://localhost.studio.code.org:3000/](http://localhost.studio.code.org:3000/)
+
+1. `cd code-dot-org`
+2. `rake build:dashboard`
+3. `bin/dashboard-server`
+4. Visit [http://localhost.studio.code.org:3000/](http://localhost.studio.code.org:3000/)
 
 ## Running Pegasus
 
-1. `cd code-dot-org/pegasus`
-2. `./up`
-3. Note: after major code updates (or if something seems broken), run `rake db:migrate seed:migrate`
+1. `cd code-dot-org`
+2. `rake build:pegasus`
+3. `bin/pegasus-server`
 4. Visit [http://localhost.code.org:9393/](http://localhost.code.org:9393/)
 
 ## Building Blockly and Blockly-core (optional)

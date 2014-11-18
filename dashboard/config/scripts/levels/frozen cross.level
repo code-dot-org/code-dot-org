@@ -15,9 +15,11 @@
     "disable_variable_editing": "false",
     "free_play": "false",
     "slider_speed": "0.2",
-    "instructions": "Use the Repeat block to create a cross. Did you notice Elsa can move forward and backwards?\r\n",
+    "instructions": "Use the “Repeat” block to create a plus sign. Did you notice Elsa can move forward and backward?",
     "impressive": "false",
-    "use_modal_function_editor": "false"
+    "use_modal_function_editor": "false",
+    "ideal": "5",
+    "use_contract_editor": "false"
   }
 }]]></config>
   <blocks>

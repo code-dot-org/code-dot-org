@@ -122,9 +122,6 @@
             </block>
           </value>
         </block>
-        <block type="procedures_callnoreturn">
-          <mutation name="draw a square"/>
-        </block>
       </xml>
     </required_blocks>
     <solution_blocks>
