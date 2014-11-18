@@ -5560,6 +5560,10 @@ Eval.execute = function() {
   Eval.result = evaluateAnswer();
   Eval.testResults = BlocklyApps.getTestResults(Eval.result);
 
+  if (level.freePlay) {
+    Eval.testResults = BlocklyApps.TestResults.FREE_PLAY;
+  }
+
   var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   var textBlocks = Blockly.Xml.domToText(xml);
 
@@ -5627,7 +5631,10 @@ var displayFeedback = function(response) {
     skin: skin.id,
     feedbackType: Eval.testResults,
     response: response,
-    level: level
+    level: level,
+    appStrings: {
+      reinfFeedbackMsg: evalMsg.reinfFeedbackMsg()
+    },
   });
 };
 
@@ -13951,6 +13958,8 @@ exports.overlayBlockTitle = function(d){return "위에그리기(맨위, 아래)"
 exports.placeImageBlockTitle = function(d){return "이미지배치(x, y, 이미지)"};
 
 exports.rectangleBlockTitle = function(d){return "사각형(가로길이, 세로높이, 형태, 색)"};
+
+exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to edit your drawing."};
 
 exports.rotateImageBlockTitle = function(d){return "회전(각도, 이미지)"};
 

@@ -5560,6 +5560,10 @@ Eval.execute = function() {
   Eval.result = evaluateAnswer();
   Eval.testResults = BlocklyApps.getTestResults(Eval.result);
 
+  if (level.freePlay) {
+    Eval.testResults = BlocklyApps.TestResults.FREE_PLAY;
+  }
+
   var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   var textBlocks = Blockly.Xml.domToText(xml);
 
@@ -5627,7 +5631,10 @@ var displayFeedback = function(response) {
     skin: skin.id,
     feedbackType: Eval.testResults,
     response: response,
-    level: level
+    level: level,
+    appStrings: {
+      reinfFeedbackMsg: evalMsg.reinfFeedbackMsg()
+    },
   });
 };
 
@@ -13979,6 +13986,8 @@ exports.overlayBlockTitle = function(d){return "nakładki (góra, dół)"};
 exports.placeImageBlockTitle = function(d){return "położenie-obraz (x, y, obraz)"};
 
 exports.rectangleBlockTitle = function(d){return "prostokąt (szerokość, wysokość, styl, kolor)"};
+
+exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to edit your drawing."};
 
 exports.rotateImageBlockTitle = function(d){return "obróć  (stopnie, obraz)"};
 
