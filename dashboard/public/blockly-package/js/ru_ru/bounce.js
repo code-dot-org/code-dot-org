@@ -269,8 +269,9 @@ BlocklyApps.init = function(config) {
   dom.addClickTouchEvent(resetButton, BlocklyApps.resetButtonClick);
 
   var belowViz = document.getElementById('belowVisualization');
-  if (config.referenceArea) {
-    belowViz.appendChild(config.referenceArea());
+  var referenceArea = document.getElementById('reference_area');
+  if (referenceArea) {
+    belowViz.appendChild(referenceArea);
   }
 
   var visualizationColumn = document.getElementById('visualizationColumn');
@@ -11576,11 +11577,12 @@ var savedAmd;
 // via require js
 if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) {
   savedAmd = define.amd;
-  define.amd = 'dont_call_requirejs_define';
+  define.amd = false;
 }
 
 // get lodash
 var _ = require('./lodash');
+var Hammer = require('./hammer');
 
 // undo hackery
 if (typeof define == 'function' && savedAmd) {
@@ -11590,6 +11592,10 @@ if (typeof define == 'function' && savedAmd) {
 
 exports.getLodash = function () {
   return _;
+};
+
+exports.getHammer = function () {
+  return Hammer;
 };
 
 exports.shallowCopy = function(source) {
@@ -11888,7 +11894,7 @@ exports.generateDropletModeOptions = function (codeFunctions) {
   return modeOptions;
 };
 
-},{"./lodash":20,"./xml":38}],38:[function(require,module,exports){
+},{"./hammer":19,"./lodash":20,"./xml":38}],38:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
@@ -12181,9 +12187,9 @@ var MessageFormat = require("messageformat");MessageFormat.locale.ru = function 
 };
 exports.and = function(d){return "и"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "истина"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "ложь"};
 
 exports.blocklyMessage = function(d){return "Блокли"};
 
@@ -12281,7 +12287,7 @@ exports.score = function(d){return "очки"};
 
 exports.showCodeHeader = function(d){return "Показать код"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Показать блоки"};
 
 exports.showGeneratedCode = function(d){return "Показать код"};
 
@@ -12319,7 +12325,7 @@ exports.typeHint = function(d){return "Обратите внимание на т
 
 exports.workspaceHeader = function(d){return "Место сбора блоков: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Введите Ваш код JavaScript здесь"};
 
 exports.infinity = function(d){return "Бесконечность"};
 

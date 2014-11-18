@@ -100,7 +100,7 @@
         Wordsearch: "Caça Palavras"
         Webapp: "Webapp"
         ArtistEC: "O Artista"
-        TextMatch: "Text Match"
+        TextMatch: "Correspondência de texto"
     trophy:
       name:
         Bronze: "Bronze"
@@ -325,8 +325,8 @@
         maze_wordsearch_k_16: "Movimente-me para um lado, e então para o outro, para formar a palavra BELOW"
         maze_wordsearch_k_20: "Isso é um teste! Movimente-me para um lado, e então para o outro, para formar a palavra STORY"
         webapp_ec_simple: "Crie seu aplicativo da Web com createHtmlBlock."
-        turtle_ec_1_2: 'Agora, desenhe um quadrado. OBSERVAÇÃO: para usar sua cor preferida, selecione-a no novo bloco "penColour".'
-        turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new "penWidth" block. Have fun!'
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColor" block.'
+        turtle_ec_1_10: 'Você conseguiu" Agora, desenhe o que quiser. Algumas ideias divertidas: um boneco, um floco de neve ou uma espiral. Use também o novo bloco "penWidth". Divirta-se!'
     video:
       name:
         maze_intro: "Introdução ao Labirinto"
@@ -413,3 +413,9 @@
         set_sprite_image: 'Anexe um bloco "defina personagem à imagem" ao bloco "quando a história começa" para definir um personagem para essa história'
         studio_say_text: "Digite, dentro das aspas, o que você quer que seu personagem diga"
         jigsaw_click: "Clique nesse bloco!"
+        move_elsa_forward: 'Drag a "Move Forward" block and snap it below the "When Run" block to make Elsa move forward'
+        turn_elsa: 'Use the "Turn" block to make Elsa turn. The number in the drop-down determines how much Elsa turns'
+        replace_questions: 'Use the drop-down to replace "???" with a number'
+        replace_questions_degree: 'Use the drop-down to replace "???" with the correct degree to turn'
+        repeat_blocks: 'Use the "Repeat" block and wrap it around the blocks in the workspace'
+        snowflake_dropdown: "Use this drop-down to create different snowflakes!"

@@ -1,13 +1,15 @@
 {
   "circleBlockTitle": "circle (radius, style, color)",
+  "displayBlockTitle": "display",
   "ellipseBlockTitle": "ellipse (width, height, style, color)",
+  "extraTopBlocks": "You have unattached blocks. Did you mean to attach these to the \"display\" block?",
   "overlayBlockTitle": "overlay (top, bottom)",
   "placeImageBlockTitle": "place-image (x, y, image)",
   "rectangleBlockTitle": "rectangle (width, height, style, color)",
   "rotateImageBlockTitle": "rotate (degrees, image)",
   "scaleImageBlockTitle": "scale (factor)",
   "squareBlockTitle": "square (size, style, color)",
-  "starBlockTitle": "star (radius, style, color)",
+  "starBlockTitle": "звезда (радиус, стиль, цвет)",
   "stringAppendBlockTitle": "string-append (first, second)",
   "stringLengthBlockTitle": "string-length (string)",
   "textBlockTitle": "text (string, size, color)",
@@ -15,5 +17,5 @@
   "underlayBlockTitle": "underlay (bottom, top)",
   "outline": "outline",
   "solid": "solid",
-  "string": "string"
+  "string": "строка"
 }

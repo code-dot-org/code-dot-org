@@ -5,8 +5,6 @@
 .idea/
 /.gdrive_session
 /.dropbox.cache
-/aws/secrets.key
-/aws/secrets.tgz
 /aws/secrets/
 /aws/solr/
 /build-started
@@ -17,3 +15,16 @@
 /i18n/code.org/crowdin.yaml
 /i18n/hourofcode.com/crowdin.yaml
 /i18n/curriculum/crowdin.yaml
+/dashboard/config/newrelic.yml
+/pegasus/config/newrelic.yml
+
+# THESE ARE ONLY HERE TO KEEP code-dot-private RUNNING UNTIL IT'S CONVERTED
+# TO CHEF.
+/aws/secrets.key
+/aws/secrets.tgz
+/aws/varnish.config
+/aws/varnish.secret
+/aws/varnish.vcl
+/dashboard/config/init.d
+/dashboard/config/logrotate
+/pegasus/config/init.d

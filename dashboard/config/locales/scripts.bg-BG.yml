@@ -24,7 +24,7 @@
           Multi & Match: Мулти & мач
           K-1 Flappy: К-1 Flappy
           Flappy non blockly: Flappy без blockly
-          title: Курс 1 - за малките читатели
+          title: Курс 1
           Artist 2: Художник 2
           Happy Maps: Щастливи карти
           Move it, Move it: Преместите го, преместете го
@@ -46,8 +46,8 @@
           'Maze: Loops': 'Лабиринт: цикли'
           'Bee: Loops': 'Пчела: цикли'
           'Studio: Create a Story': 'Театрална лаборатория: Създаване на история'
-          description_short: Курс 1 е предназначен за малките читатели в класовете
-            от начален етап на обучение.
+          description_short: Курс 1 е предназначен за малките читатели. Препоръчва
+            за клас K-1.
           'Artist: Loops': Художник - цикли
         course2:
           The Maze: Лабиринтът
@@ -86,8 +86,8 @@
           'Bee: Debugging': 'Пчела: отстраняване на грешки'
           'Artist: Debugging': 'Художник: отстраняване на грешки'
           'Bee: Conditionals': 'Пчела: условия'
-          description_short: Курс 2 е предназначен за ученици от начален етап на обучение,
-            които могат да четат.
+          description_short: Курс 2 е предназначен за ученици, които могат да четат.  Препоръчва
+            се за ученици от 2-5 клас.
           'Artist: Sequence2': 'Художник: последователност 2'
           'Maze: Sequence2': 'Лабиринт: последователност 2'
           'Artist: Nested Loops': 'Художник: въвеждане на цикли'
@@ -133,8 +133,8 @@
           'Farmer: While Loops': 'Фермер: повторения "докато"'
           'Bee: Nested Loops': 'Пчела:  въвеждане на цикли'
           'Bee: Debugging': 'Пчела: отстраняване на грешки'
-          description_short: Учениците, изучаващи курс 3 вече трябва да са преминали
-            курс 2.
+          description_short: Курс 3 е продължение на курс 2.  Препоръчва се за ученици
+            в 4-5 клас.
           Maze2: Лабиринт 2
           Artist2: Художник 2
           'Artist: Functions2': 'Художник: функции 2'
@@ -155,6 +155,27 @@
           Assessments: Оценки
           Unit 1: Част 1
           Unit 2: Част 2
+          Ninja Cat and the Coordinate Plane: Нинджа котката и координатната система
+          'Calc: Circles of Evaluation': 'Изчисление: Кръгове на оценка'
+          'Artist: Strings and Images': 'Художник: Последователности и изображения'
+          Contracts: Договори
+          'Artist: Writing Contracts': 'Художник: Писане на договори'
+          'Calc: Defining Variables': 'Изчисление: Определяне на променливите'
+          'Play Lab: Defining Variables': 'Театрална лаборатория: Определяне на променливите'
+          The Design Recipe: Рецепта за дизайн
+          'Artist: Defining Functions': 'Художник: Деиниране на функции'
+          'Play Lab: Defining Functions': 'Театрална лаборатория: Дефиниране на функции'
+          'Artist: Functions': 'Художник: функции'
+          'Play Lab: Animation': 'Театрална лаборатория: анимация'
+          Booleans: Booleans
+          'Play Lab: Booleans': 'Театрална лаборатория: Booleans'
+          'Calc: Boolean Operators': 'Изчисление: Булеви оператори'
+          'Play Lab: Boolean Operators': 'Театрална лаборатория: Булеви оператори'
+          Conditionals and Piecewise Functions: Условни и линейни функции
+          'Artist: Conditionals': 'Артист: Условия'
+          Collision Detection and the Distance Formula: Collision Detection и формула
+            за разстояние
+          'Play Lab: Collision Detection': 'Театрална лаборатория: Collision Detection'
         playlab:
           title: Театрална лаборатория
           description: Създайте история или направете игра с Театрална лаборатория!
@@ -165,23 +186,73 @@
           description: Начертайте готини картинки и дизайни с художникът!
           Artist: Художник
           description_short: Начертайте готини картинки и дизайни с художникът!
+        scrat:
+          title: Scrat
+          description_short: Scrat кратко описание.
+          description: Scrat дълго описание
+          'Maze: Sequence': 'Лабиринт: последователност'
+        hourofcode:
+          Maze: Лабиринт
+          title: Час на Кодирането
+          description_short: Опитайте основите на компютърните науки с герои отAngry
+            Birds, Plants vs. Zombies и Scrat от Ледена епоха!
+          description: Опитайте основите на компютърните науки с герои отAngry Birds,
+            Plants vs. Zombies и Scrat от Ледена епоха!
+        frozen:
+          title: Frozen
+          description_short: Присъединете се към кралските сестри Aрендел, Анна и
+            Елза, за да видите как те опознават магията и красотата на леда. Ще пишете
+            код за да създавате снежинки и модели в своята ледена градина и да създавате
+            зимна приказка, която след това можете да споделите с приятелите си!
+          description: Присъединете се към кралските сестри Aрендел, Анна и Елза,
+            за да видите как те опознават магията и красотата на леда. Ще пишете код
+            за да създавате снежинки и модели в своята ледена градина и да създавате
+            зимна приказка, която след това можете да споделите с приятелите си!
+          Artist: Художник
         course4:
-          description_short: Students taking Course 4 should have already taken Courses
-            2 and 3.
-          description: Course 4 is designed for students who have taken Course 2 and
-            3. Students will delve deeper into programming topics introduced in previous
-            courses to flexible solutions to more complex problems. By the end of
-            this course, students create interactive stories and games they can share
-            with anyone. Recommended for grades 4-8.
-          'Artist: Variables': 'Artist: Variables'
-          'Bee: For Loops': 'Bee: For Loops'
-          title: Course 4
-          'Algorithms: Tangrams': 'Algorithms: Tangrams'
+          description_short: Учениците, изучаващи курс 4 трябва да са взели вече курсове
+            2 и 3.
+          description: Курс 4 е предназначен за ученици, които са минали курс 2 и
+            3. Учениците ще задълбочат знанията си по програмиране, получени в предишни
+            курсове, за да вземат гъвкави решения при по-сложни проблеми. До края
+            на този курс учениците ще създават интерактивни истории и игри, които
+            да могат да споделят с приятели. Препоръчва се за ученици от 4-8 клас.
+          'Artist: Variables': 'Художник: променливи'
+          'Bee: For Loops': 'Пчела: За повторенията'
+          title: Курс 4
+          'Algorithms: Tangrams': 'Алгоритми: Танграми'
           Variables: Променливи
-          'Play Lab: Variables': 'Play Lab: Variables'
-          'Play Lab: Functions with Parameters': 'Play Lab: Functions with Parameters'
-          'Bee: Functions with Parameters': 'Bee: Functions with Parameters'
-          'Artist: For Loops': 'Artist: For Loops'
-          'Play Lab: For Loops': 'Play Lab: For Loops'
+          'Play Lab: Variables': 'Театрална лаборатория: променливи'
+          'Play Lab: Functions with Parameters': 'Театрална лаборатория: Функции с
+            параметри'
+          'Bee: Functions with Parameters': 'Пчела: Функции с параметри'
+          'Artist: For Loops': Художник - за циклите
+          'Play Lab: For Loops': 'Театрална лаборатория: За циклите'
           'Artist: Functions': 'Художник: функции'
-          'Artist: Functions with Paraqmeters': 'Artist: Functions with Paraqmeters'
+          'Artist: Functions with Paraqmeters': Художник - функции с параметри
+          'Unplugged: Tangrams': 'Ънплъгд: Танграмите'
+          Artist: Художник
+          Bee: Пчела
+          'Unplugged: Envelope Variables': 'Ънплъгд: Плик с променливи'
+          'Unplugged: Madlibs': 'Ънплъгд: Madlibs'
+          'Unplugged: For Loop Fun': 'Ънплъгд: Повторение за забавление'
+          'Unplugged: Songwriting with Parameters': 'Ънплъгд: Писане на песни с параметри'
+          'Artist: Functions with Parameters': Художник - Функции с Параметри
+          'Unplugged: Binary': 'Ънплъгд: двоичен код'
+          Bee Binary: Пчела двоичен код
+          Farmer Binary: Фермер двоичен код
+          Maze and Bee: Лабиринт и Пчела
+          Artist Binary: Художник Бинарен код
+        Course4pre:
+          description_short: Кратък курс за концепциите, предназначен за ученици,
+            които не са взели курс 2 и 3.
+          Course 4 Prerequisite: Курс 4 предпоставка (необходимо условие)
+          'Maze: Sequence': 'Лабиринт: последователност'
+          'Artist: Sequence': 'Художник: последователност'
+          'Artist: Loops': Художник - цикли
+          'Bee: Conditionals': 'Пчела: условия'
+          'Artist: Nested Loops': 'Художник: въвеждане на цикли'
+          'Farmer: While Loops': 'Фермер: повторения "докато"'
+          'Bee: Nested Loops': 'Пчела:  въвеждане на цикли'
+          'Artist: Functions': 'Художник: функции'
+          'Bee: Debugging': 'Пчела: отстраняване на грешки'

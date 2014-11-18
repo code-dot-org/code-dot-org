@@ -20,7 +20,7 @@
       2-3 artist loops multi 2:
         Artist Loops Multiple Choice: "Artist Loops Multiple Choice"
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png, 500: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png, 500
-        Which shape is made by this program?: Which shape is made by this program?
+        Which shape is made by this program?: 哪個形狀是這個程式所做的？
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png
@@ -66,7 +66,7 @@
       2-3 maze multi 1:
         Maze Multiple Choice One: "Maze Multiple Choice One"
         /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500
-        Choose the best answer.: Choose the best answer.
+        Choose the best answer.: 選擇最佳答案。
         Which blocks work?: Which blocks work?
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png

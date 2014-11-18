@@ -269,8 +269,9 @@ BlocklyApps.init = function(config) {
   dom.addClickTouchEvent(resetButton, BlocklyApps.resetButtonClick);
 
   var belowViz = document.getElementById('belowVisualization');
-  if (config.referenceArea) {
-    belowViz.appendChild(config.referenceArea());
+  var referenceArea = document.getElementById('reference_area');
+  if (referenceArea) {
+    belowViz.appendChild(referenceArea);
   }
 
   var visualizationColumn = document.getElementById('visualizationColumn');
@@ -11576,11 +11577,12 @@ var savedAmd;
 // via require js
 if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) {
   savedAmd = define.amd;
-  define.amd = 'dont_call_requirejs_define';
+  define.amd = false;
 }
 
 // get lodash
 var _ = require('./lodash');
+var Hammer = require('./hammer');
 
 // undo hackery
 if (typeof define == 'function' && savedAmd) {
@@ -11590,6 +11592,10 @@ if (typeof define == 'function' && savedAmd) {
 
 exports.getLodash = function () {
   return _;
+};
+
+exports.getHammer = function () {
+  return Hammer;
 };
 
 exports.shallowCopy = function(source) {
@@ -11888,7 +11894,7 @@ exports.generateDropletModeOptions = function (codeFunctions) {
   return modeOptions;
 };
 
-},{"./lodash":20,"./xml":38}],38:[function(require,module,exports){
+},{"./hammer":19,"./lodash":20,"./xml":38}],38:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
@@ -12173,9 +12179,9 @@ var MessageFormat = require("messageformat");MessageFormat.locale.lt = function 
 };
 exports.and = function(d){return "ir"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "Taip"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "klaida"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -12191,7 +12197,7 @@ exports.catLoops = function(d){return "Kartojimas"};
 
 exports.catMath = function(d){return "Matematika"};
 
-exports.catProcedures = function(d){return "Sudėtinės komandos"};
+exports.catProcedures = function(d){return "Komandų kūrimas"};
 
 exports.catText = function(d){return "Tekstas"};
 
@@ -12273,7 +12279,7 @@ exports.score = function(d){return "rezultatas"};
 
 exports.showCodeHeader = function(d){return "Rodyti kodą"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Rodyti blokus"};
 
 exports.showGeneratedCode = function(d){return "Rodyti kodą"};
 
@@ -12311,7 +12317,7 @@ exports.typeHint = function(d){return "Įsidėmėk, kad skliausteliai ir kabliat
 
 exports.workspaceHeader = function(d){return "Iš viso panaudojai blokelių: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Čia rašykite savo JavaScript kodą."};
 
 exports.infinity = function(d){return "Begalybė"};
 

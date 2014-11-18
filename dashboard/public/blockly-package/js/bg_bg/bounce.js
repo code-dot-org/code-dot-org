@@ -269,8 +269,9 @@ BlocklyApps.init = function(config) {
   dom.addClickTouchEvent(resetButton, BlocklyApps.resetButtonClick);
 
   var belowViz = document.getElementById('belowVisualization');
-  if (config.referenceArea) {
-    belowViz.appendChild(config.referenceArea());
+  var referenceArea = document.getElementById('reference_area');
+  if (referenceArea) {
+    belowViz.appendChild(referenceArea);
   }
 
   var visualizationColumn = document.getElementById('visualizationColumn');
@@ -11576,11 +11577,12 @@ var savedAmd;
 // via require js
 if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) {
   savedAmd = define.amd;
-  define.amd = 'dont_call_requirejs_define';
+  define.amd = false;
 }
 
 // get lodash
 var _ = require('./lodash');
+var Hammer = require('./hammer');
 
 // undo hackery
 if (typeof define == 'function' && savedAmd) {
@@ -11590,6 +11592,10 @@ if (typeof define == 'function' && savedAmd) {
 
 exports.getLodash = function () {
   return _;
+};
+
+exports.getHammer = function () {
+  return Hammer;
 };
 
 exports.shallowCopy = function(source) {
@@ -11888,7 +11894,7 @@ exports.generateDropletModeOptions = function (codeFunctions) {
   return modeOptions;
 };
 
-},{"./lodash":20,"./xml":38}],38:[function(require,module,exports){
+},{"./hammer":19,"./lodash":20,"./xml":38}],38:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
@@ -12078,9 +12084,9 @@ exports.setBallSpeedTooltip = function(d){return "Задава скоростт�
 
 exports.setPaddleRandom = function(d){return "задава произволна платформа"};
 
-exports.setPaddleHardcourt = function(d){return "Задава hardcourt платформа"};
+exports.setPaddleHardcourt = function(d){return "задава hardcourt платформа"};
 
-exports.setPaddleRetro = function(d){return "Задава ретро платформа"};
+exports.setPaddleRetro = function(d){return "задава ретро платформа"};
 
 exports.setPaddleTooltip = function(d){return "Задава картинката на платформата"};
 
@@ -12088,11 +12094,11 @@ exports.setPaddleSpeedRandom = function(d){return "Задава произвол
 
 exports.setPaddleSpeedVerySlow = function(d){return "задава много бавна скорост на платформата"};
 
-exports.setPaddleSpeedSlow = function(d){return "Задава бавна скорост на платформата"};
+exports.setPaddleSpeedSlow = function(d){return "задава бавна скорост на платформата"};
 
-exports.setPaddleSpeedNormal = function(d){return "Задава нормална скорост на платформата"};
+exports.setPaddleSpeedNormal = function(d){return "задава нормална скорост на платформата"};
 
-exports.setPaddleSpeedFast = function(d){return "Задава бърза скорост на платформата"};
+exports.setPaddleSpeedFast = function(d){return "задава бърза скорост на платформата"};
 
 exports.setPaddleSpeedVeryFast = function(d){return "задава много бърза скорост на платформата"};
 
@@ -12116,7 +12122,7 @@ exports.whenBallMissesPaddle = function(d){return "когато топката �
 
 exports.whenBallMissesPaddleTooltip = function(d){return "Изпълни действията по-долу когато топката пропусне платформата."};
 
-exports.whenDown = function(d){return "когато стрелка надолу"};
+exports.whenDown = function(d){return "когато е натисната стрелка надолу"};
 
 exports.whenDownTooltip = function(d){return "Следвайте действията по-долу когато е натисната стрелка надолу."};
 
@@ -12124,7 +12130,7 @@ exports.whenGameStarts = function(d){return "когато играта запо�
 
 exports.whenGameStartsTooltip = function(d){return "Изпълни действията по-долу при стартиране на играта."};
 
-exports.whenLeft = function(d){return "когато стрелка наляво "};
+exports.whenLeft = function(d){return "когато е натисната стрелка наляво"};
 
 exports.whenLeftTooltip = function(d){return "Изпълнява действията по-долу когато е натисната стрелка надолу."};
 
@@ -12132,21 +12138,21 @@ exports.whenPaddleCollided = function(d){return "когато топката у�
 
 exports.whenPaddleCollidedTooltip = function(d){return "Изпълни действията по-долу когато топката се сблъсква с платформата."};
 
-exports.whenRight = function(d){return "когато стрелка надясно"};
+exports.whenRight = function(d){return "когато е натисната стрелка надясно"};
 
 exports.whenRightTooltip = function(d){return "Изпълнява действията по-долу когато е натиснат клавиша стрелка надясно."};
 
-exports.whenUp = function(d){return "когато стрелка нагоре"};
+exports.whenUp = function(d){return "когато е натисната стрелка нагоре"};
 
 exports.whenUpTooltip = function(d){return "Изпълнява действията по-долу когато е натисната стрелка нагоре."};
 
 exports.whenWallCollided = function(d){return "когато топката удари стената"};
 
-exports.whenWallCollidedTooltip = function(d){return "Изпълни действията по-долу когато топката се сблъсква със стена."};
+exports.whenWallCollidedTooltip = function(d){return "Изпълнява действията по-долу когато топката се сблъсква със стена."};
 
 exports.whileMsg = function(d){return "докато"};
 
-exports.whileTooltip = function(d){return "Повтаряйте поставените в блока действия, докато целта не бъде достигната."};
+exports.whileTooltip = function(d){return "Повтаря поставените в блока действия, докато целта не бъде достигната."};
 
 exports.yes = function(d){return "Да"};
 
@@ -12155,9 +12161,9 @@ exports.yes = function(d){return "Да"};
 var MessageFormat = require("messageformat");MessageFormat.locale.bg=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "и"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "вярно"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "грешно"};
 
 exports.blocklyMessage = function(d){return "Блокли"};
 
@@ -12255,7 +12261,7 @@ exports.score = function(d){return "резултат"};
 
 exports.showCodeHeader = function(d){return "Покажи код"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Покажи блоковете"};
 
 exports.showGeneratedCode = function(d){return "Покажи кода"};
 
@@ -12273,7 +12279,7 @@ exports.toolboxHeader = function(d){return "Блокове"};
 
 exports.openWorkspace = function(d){return "Как работи"};
 
-exports.totalNumLinesOfCodeWritten = function(d){return "All-time total: "+p(d,"numLines",0,"bg",{"one":"1 line","other":n(d,"numLines")+" lines"})+" of code."};
+exports.totalNumLinesOfCodeWritten = function(d){return "Общо: "+p(d,"numLines",0,"bg",{"one":"1 line","other":n(d,"numLines")+" lines"})+" код."};
 
 exports.tryAgain = function(d){return "Опитайте отново"};
 
@@ -12293,7 +12299,7 @@ exports.typeHint = function(d){return "Обърнете внимание, че �
 
 exports.workspaceHeader = function(d){return "Сглобете вашите блокове тук: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Въведете вашия JavaScript код тук"};
 
 exports.infinity = function(d){return "Безкрайност"};
 

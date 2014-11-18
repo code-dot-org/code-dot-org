@@ -269,8 +269,9 @@ BlocklyApps.init = function(config) {
   dom.addClickTouchEvent(resetButton, BlocklyApps.resetButtonClick);
 
   var belowViz = document.getElementById('belowVisualization');
-  if (config.referenceArea) {
-    belowViz.appendChild(config.referenceArea());
+  var referenceArea = document.getElementById('reference_area');
+  if (referenceArea) {
+    belowViz.appendChild(referenceArea);
   }
 
   var visualizationColumn = document.getElementById('visualizationColumn');
@@ -11576,11 +11577,12 @@ var savedAmd;
 // via require js
 if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) {
   savedAmd = define.amd;
-  define.amd = 'dont_call_requirejs_define';
+  define.amd = false;
 }
 
 // get lodash
 var _ = require('./lodash');
+var Hammer = require('./hammer');
 
 // undo hackery
 if (typeof define == 'function' && savedAmd) {
@@ -11590,6 +11592,10 @@ if (typeof define == 'function' && savedAmd) {
 
 exports.getLodash = function () {
   return _;
+};
+
+exports.getHammer = function () {
+  return Hammer;
 };
 
 exports.shallowCopy = function(source) {
@@ -11888,7 +11894,7 @@ exports.generateDropletModeOptions = function (codeFunctions) {
   return modeOptions;
 };
 
-},{"./lodash":20,"./xml":38}],38:[function(require,module,exports){
+},{"./hammer":19,"./lodash":20,"./xml":38}],38:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
@@ -12044,7 +12050,7 @@ exports.repeatUntilBlocked = function(d){return "前に道がある間"};
 
 exports.repeatUntilFinish = function(d){return "完了するまで繰り返し行います"};
 
-exports.scoreText = function(d){return "スコア： "+v(d,"playerScore")+": "+v(d,"opponentScore")};
+exports.scoreText = function(d){return "ポイント： "+v(d,"playerScore")+": "+v(d,"opponentScore")};
 
 exports.setBackgroundRandom = function(d){return "ランダムな状況を設定"};
 
@@ -12116,7 +12122,7 @@ exports.whenBallMissesPaddle = function(d){return "ボールがパドルを逃�
 
 exports.whenBallMissesPaddleTooltip = function(d){return "ボールがパドルを逃したら下記のアクションを実行します。"};
 
-exports.whenDown = function(d){return "矢印が下のとき"};
+exports.whenDown = function(d){return "下向き矢印が押されたとき"};
 
 exports.whenDownTooltip = function(d){return "下向きの矢印キーが押されたとき次のアクションを実行します。"};
 
@@ -12124,7 +12130,7 @@ exports.whenGameStarts = function(d){return "ゲームの開始時"};
 
 exports.whenGameStartsTooltip = function(d){return "ゲーム開始時、次のアクションを実行"};
 
-exports.whenLeft = function(d){return "矢印が左のとき"};
+exports.whenLeft = function(d){return "左向き矢印が押されたとき"};
 
 exports.whenLeftTooltip = function(d){return "左向きの矢印キーが押されたとき以下のアクションを実行します。"};
 
@@ -12255,7 +12261,7 @@ exports.score = function(d){return "スコア"};
 
 exports.showCodeHeader = function(d){return "コードの表示"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "ブロックを表示"};
 
 exports.showGeneratedCode = function(d){return "コードの表示"};
 
@@ -12293,7 +12299,7 @@ exports.typeHint = function(d){return "カッコとセミコロンが必要な�
 
 exports.workspaceHeader = function(d){return "ここでブロックを組み立てよう:"};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "ここにJavascriptのコードを入力してください。"};
 
 exports.infinity = function(d){return "無限\n"};
 

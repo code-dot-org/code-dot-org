@@ -480,12 +480,12 @@
         Coding in Racket: "Coding in Racket"
         Select the best answer to the question.: Select the best answer to the question.
         When converting a circle to code, the correct order is: When converting a circle to code, the correct order is
-        top, left, right: top, left, right
-        left, right, top: left, right, top
+        top, left, right: сверху, слева, справа
+        left, right, top: слева, справа, сверху
         random: "случайный"
-        left top right: "left top right"
+        left top right: "слева сверху справа"
       Circle to code:
-        Code from Circle: "Code from Circle"
+        Code from Circle: "Код из круга"
         /script_assets/msm/Unit%202/exercise_1.png: '/script_assets/msm/Unit%202/exercise_1.png'
         Pick the Racket code that comes from the circle of evaluation!: Pick the Racket code that comes from the circle of evaluation!
         (+ 5 (* (- 6 8) 4)): '(+ 5 (* (- 6 8) 4))'
@@ -501,7 +501,7 @@
         "circle: number string string -> shape": 'circle: number string string -> shape'
         "circle: 5 solid blue -> circle ": 'circle: 5 solid blue -> circle '
       image code from circle:
-        Code from Circle: "Code from Circle"
+        Code from Circle: "Код из круга"
         /script_assets/msm/Unit%202/exercise_5.png: '/script_assets/msm/Unit%202/exercise_5.png'
         Pick the Racket code that comes from the circle of evaluation!: Pick the Racket code that comes from the circle of evaluation!
         (rectangle (10) (2) "solid" "red"): '(rectangle (10) (2) "solid" "red")'
@@ -515,7 +515,7 @@
         Instructions: "Instructions"
         Click the right answer, then submit. And here are some longer instructions just to test things more.  How's that word wrapping?: "Click the right answer, then submit. And here are some longer instructions just to test things more.  How's that word wrapping?"
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
-        Which flowers are yellow?: Which flowers are yellow?
+        Which flowers are yellow?: Какие цветы желтые?
         /script_assets/matches/images/a1.jpg: /script_assets/matches/images/a1.jpg
         /script_assets/matches/images/a2.jpg: /script_assets/matches/images/a2.jpg
         /script_assets/matches/images/a3.jpg: /script_assets/matches/images/a3.jpg
@@ -530,7 +530,7 @@
         George Jetson: "Джордж Джетсон"
       unique level name here:
         title: "название"
-        description here: "description here"
-        Question: "Question"
-        wrong answer: "wrong answer"
-        right answer: "right answer"
+        description here: "Описание здесь"
+        Question: "Вопрос"
+        wrong answer: "неправильный ответ"
+        right answer: "правильный ответ"

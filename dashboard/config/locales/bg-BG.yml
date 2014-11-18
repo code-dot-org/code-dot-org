@@ -256,7 +256,7 @@
         playlab: Направи приложение
         artist: Начертай нещо
     user:
-      classroom: Моите ученици
+      classroom: Начална страница на учителя
       label: Здравейте %{username}
       stats: Моят напредък
       settings: Моят акаунт
@@ -456,8 +456,11 @@
   try_reloading: Опитайте да презаредите страницата
   next_stage: Завършено! Продължете към следващия етап
   download_pdf: урочен план
+  lesson_plan: План на урок
   view_lesson_plan: Преглед на урочния план
   pdf_download: Изтегляне на PDF
+  download_coming_soon: Очаквайте скоро възможност за сваляне.
+  video_coming_soon: Очаквайте скоро видео!
   share_code:
     title: Щракнете върху бутона "Пусни" за да видите моята програма в действие
     bounce_og_title: Вижте моята Bounce игра
@@ -525,6 +528,8 @@
     wrong_body: Решението, което сте въвели не е правилно.  Моля опитайте отново!
     correct_title: Правилно
     correct_body: Това е верният отговор.
+  text_match:
+    placeholder: Въведете отговора си тук
   dialog:
     ok: OK
   time:
@@ -577,3 +582,8 @@
     нашия сайт за поддръжка. Може да разглеждате <a href="http://support.code.org">
     support.code.org</a> без регистрация или попитайте вашия родител или учител да
     се свърже с нас за вас.
+  progress:
+    not_completed: не е завършено
+    completed_too_many_blocks: завършено, но с повече блокове
+    completed_perfect: завършено, перфектно
+    furthest_level_attempted: последното пробвано ниво

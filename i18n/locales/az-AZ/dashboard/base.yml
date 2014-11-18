@@ -16,7 +16,7 @@
         gender: "Cins"
         edit_header: "Hesab Detallarına düzəliş edin"
         error:
-          future: "can't be in the future"
+          future: "gələcəkdə ola bilməz"
   hello: "Salam, dünya"
   welcome_back: 'Bir daha xoş gəldiniz, %{name}'
   add_teacher_form:
@@ -29,7 +29,7 @@
     submit: "Müəllim əlavə edin"
   add_hint_form:
     placeholder: "Please enter your hint here"
-    submit: "Add hint"
+    submit: "Məsləhət əlavə et"
   appname: "Code.org"
   stage: "mərhələ"
   stage_number: 'Mərhələ %{number}'
@@ -54,10 +54,10 @@
     sign_out_of: 'You used %{provider} to sign in. <a href="%{url}">Click here</a> to sign out of %{provider}.'
     already_signedup: "Artıq qeydiyyatdan keçmisiniz?"
     notyet_signedup: "Hələ qoşulmamısınız?"
-    google_oauth2: "Google Account"
+    google_oauth2: "Google Hesabı"
     twitter: "Twitter"
     facebook: "Facebook"
-    windowslive: "Microsoft Account"
+    windowslive: "Microsoft Hesabı"
     forgot_password: "Parolunuzu unutmusunuz?"
     need_confirmation: "Təsdiq göstərişlərini almamisiniz?"
     need_unlock: "Kilidaçma göstərişlərini almamisiniz?"
@@ -153,7 +153,7 @@
     redeem_header: 'To redeem:'
     donorschoose_register: "Register as a teacher on DonorsChoose.org"
     donorschoose_project: "Post a project"
-    donorschoose_how_to: "How to use your code"
+    donorschoose_how_to: "Kodunuzu necə istifadə etməli"
     success: "Mükafatınızı müvəffəqiyyətlə xərclədiniz, aşağıdakı koda baxın."
     error: "Mükafatınızı xərcləmək mümkün olmadı, lütfən bir də cəhd edin."
     error_us_only: "Mükafat almaq imkanı ancaq ABŞ-dan olan istifadəçilər üçün etibarlıdır."
@@ -216,14 +216,14 @@
         playlab: "Make an App"
         artist: "Draw Something"
     user:
-      classroom: "Mənim şagirdlərim"
+      classroom: "Teacher Home Page"
       label: 'Salam %{username}'
       stats: "Mənim nəticələrim"
       settings: "Mənim hesabım"
       prizes: "Mükafatlar"
       logout: "Çıxın"
       signin: "Daxil olun"
-      signup: "Qeydiyyatdan keç"
+      signup: "Qeydiyyatdan keçin"
       already_registered: "Already registered?"
     popup:
       progress: "Sizin nəticələriniz"
@@ -237,14 +237,14 @@
       prizes_link: "Daha geniş məlumat"
   teacher:
     title:
-      one: 'Your teacher:'
+      one: 'Müəlliminiz:'
       other: 'Müəllimləriniz:'
     remove: "(remove teacher)"
     confirm:
       remove: "Are you sure you want to remove this teacher?"
     tools: "Müəllim üçün alətlər"
     followers:
-      section: 'Section:'
+      section: 'Bölmə:'
       stages: 'Stage(s) to display:'
       show_past: 'Show student activity (%{bullet_html}) in the past:'
       levels_key: "Levels key"
@@ -294,8 +294,8 @@
     cant_remove_teacher_no_email: '%{teacher_name} cannot be removed as your teacher because you have not registered an e-mail address'
     student_teacher_disassociated: '%{teacher_name} has been removed as a teacher for %{student_name}'
   user:
-    email_confirm_needed: 'Email address has not been confirmed:'
-    email_resend_confirm: "Resend confirmation instructions"
+    email_confirm_needed: 'E-poçt ünvanı təsdiqlənməyib:'
+    email_resend_confirm: "Təsdiqləmə təlimatlarını yenidən göndər"
     new_password_hint: "(dəyişmək istəmirsinizsə, boş buraxın)"
     current_password_hint: "(dəyişikliklərinizi təsdiq etmək üçün cari parolunuz lazımdır)"
     cancel:
@@ -312,10 +312,10 @@
   home:
     title: "Code Studio"
     all_courses: "Overview of Courses 1, 2, and 3"
-    lesson_plans: "Lesson plans"
-    signin_message: 'Already registered? %{link}'
-    student_reg_link: "Student Sign Up"
-    teacher_reg_link: "Teacher Sign Up"
+    lesson_plans: "Dərs planları"
+    signin_message: 'Artıq qeydiyyatdan keçmisiniz? %{link}'
+    student_reg_link: "Şagird Qeydiyyatı"
+    teacher_reg_link: "Müəllim Qeydiyyatı"
     signin_directions: 'Use an account to track progress.<br/> Teachers, track your entire class.'
     teacher_dashboard: "Gedişat panelinə baxın"
     teacher_student_count_one: 'Sizin %{count} şagirdiniz var.'
@@ -338,7 +338,7 @@
     20hour_overview: "Bu 20 saatlıq kurs informatikanın əsasları və proqramlaşdırmanın əsas anlayışlarını təqdim edir. Kurs K-8 yaş qrupunda (12-13 yaşlılar) olan siniflərdə istifadə olunmaq üçün hazırlanıb, lakin öyrənmək hər yaşda əyləncəlidir."
     test_videos_help: "Test our new video player at your school"
     try_beta_courses: "New! Try our beta courses for K-5 students"
-    use_as_teacher: "Use this site as a teacher"
+    use_as_teacher: "Saytı müəllim olaraq istifadə edin"
     heading_elementary: '<h2>20 hour courses for</h2><h1>Elementary Students</h1>'
     heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
     heading_legacy: '<h2>Our general course for</h2><h1>All Ages</h1>'
@@ -357,9 +357,9 @@
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. All Rights Reserved.'
     feedback: "Rəy verin"
     translate: "Sizin dilinizə tərcümə etməkdə bizə kömək edin"
-    support: "Support"
+    support: "Dəstək"
     support_url: "http://support.code.org"
-    tos: "Terms"
+    tos: "Şərtlər"
     privacy: "Məxfilik siyasəti"
     secure: "Secure Version"
   reference_area:
@@ -379,7 +379,7 @@
     working:
       header: "Veb səyyahınızın dəstəklənməsi üzərində işləyirik."
       message: "Code.org uses modern web technology. This makes the site faster to use. Your browser doesn't support all the features required, and you may experience issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade your browser to a supported version</a>."
-      hide_this_warning: "Hide this warning"
+      hide_this_warning: "Bu xəbərdarlığı gizlət"
     upgrade:
       header: "Zəhmət olmasa, naviqatorunuzu yeniləyin."
       message: "Code.org uses modern web technology. This makes the site faster to use. Unfortunately your browser doesn't support all the features required to run this part of the site.<br/><br/>Install a browser on our supported browsers list to continue. You can <a href='#'>try viewing the page</a>, but expect functionality to be broken."
@@ -388,8 +388,11 @@
   try_reloading: "Səhifəni yenidən yükləməyə cəhd edin"
   next_stage: "Qurtardı! Növbəti mərhələyə keçin"
   download_pdf: "Dərs planını aç"
+  lesson_plan: "Lesson Plan"
   view_lesson_plan: "View Lesson Plan"
   pdf_download: "PDF faylını endir"
+  download_coming_soon: "Downloadable activity coming soon."
+  video_coming_soon: "Video Coming Soon!"
   share_code:
     title: "Click 'Run' to see my program in action"
     bounce_og_title: "Check out my Bounce Game"
@@ -408,8 +411,8 @@
     back: "Back to scripts"
     success: "You successfully edited the blocks."
     level:
-      create: "Create new level"
-      current: "Current Levels"
+      create: "Yeni səviyyə yarat"
+      current: "Cari Səviyyələr"
       unused: "Unused Levels"
   upsell:
     hoc:
@@ -437,21 +440,23 @@
     support: "Get Help"
     support_url: "//support.code.org"
   multi:
-    wrong_title: "Incorrect answer"
-    wrong_body: "The answer you've entered is not correct.  Please try again!"
-    correct_title: "Correct"
-    correct_body: "That is the correct answer."
+    wrong_title: "Yanlış cavab"
+    wrong_body: "Daxil etdiyiniz cavab yanlışdır. Lütfən, bir daha cəhd edin!"
+    correct_title: "Düzgün"
+    correct_body: "Bu düzgün cavabdır."
   match:
-    wrong_title: "Incorrect solution"
-    wrong_body: "The solution you've entered is not correct.  Please try again!"
-    correct_title: "Correct"
-    correct_body: "That is the correct answer."
+    wrong_title: "Yanlış həll"
+    wrong_body: "Daxil etdiyiniz həll yanlışdır. Lütfən, bir daha cəhd edin!"
+    correct_title: "Düzgün"
+    correct_body: "Bu düzgün cavabdır."
+  text_match:
+    placeholder: "Cavabınızı buraya daxil edin"
   dialog:
     ok: "Oldu"
   time:
-    hour: "1 hour"
-    day: "day"
-    week: "week"
+    hour: "1 saat"
+    day: "gün"
+    week: "həftə"
   data:
     script:
       name:
@@ -465,7 +470,7 @@
           title: "Koda düzəliş et"
           description: ""
         events:
-          title: "Events"
+          title: "Hadisələr"
           description: ""
         builder:
           title: "Builder"
@@ -483,8 +488,13 @@
           title: "Sample Level Builder"
           description: ""
   age_interstitial:
-    age: "Your age"
+    age: "Yaşınız"
     header: "Account Information Update"
     message: "We're in the process of updating our experience to provide you with even stronger privacy protections. To do this, we need existing users to enter their age here.<br/>As always, code.org will never rent, sell or share this information with any third parties."
     sign_out: 'If you do not wish to provide your age you may <a href="%{url}">sign out</a>.'
   zendesk_too_young_message: 'Sorry, younger users may not sign in to our support site. You may browse <a href="http://support.code.org">support.code.org</a> without signing in or ask your parent or teacher to contact us for you.'
+  progress:
+    not_completed: "tamamlanmayıb"
+    completed_too_many_blocks: "completed, too many blocks"
+    completed_perfect: "completed, perfect"
+    furthest_level_attempted: "furthest level attempted"

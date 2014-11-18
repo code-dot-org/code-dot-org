@@ -1,5 +1,7 @@
 {
   "and": "και",
+  "booleanTrue": "Αληθές",
+  "booleanFalse": "ψευδές",
   "blocklyMessage": "Blockly",
   "catActions": "Ενέργειες",
   "catColour": "Χρώμα",
@@ -37,7 +39,7 @@
   "nextLevel": "Συγχαρητήρια! Τελείωσες το παζλ {puzzleNumber}.",
   "nextLevelTrophies": "Συγχαρητήρια! Τελείωσες το παζλ {puzzleNumber} και κέρδισες {numTrophies, plural, one {τρόπαιο} other {# τρόπαια}}.",
   "nextStage": "Συγχαρητήρια! Ολοκληρώσατε το {stageName}.",
-  "nextStageTrophies": "Συγχαρητήρια! Ολοκλήρωσες  το στάδιο {stageName} και κέρδισες {numTrophies, πληθυντικός, ένα {a trophy} άλλα {# trophies}}.",
+  "nextStageTrophies": "Συγχαρητήρια! Ολοκλήρωσες  το στάδιο {stageName} και κέρδισες {numTrophies, plural, one {a trophy} other {# τράπαια}}.",
   "numBlocksNeeded": "Συγχαρητήρια! Τελείωσες το πάζλ {puzzleNumber}. (Όμως, θα μπορούσες να βάλεις μόνο   {numBlocks, plural, one {1 μπλοκ} other {# μπλοκ}}.)",
   "numLinesOfCodeWritten": "Μόλις έγραψες {numLines, plural, one {1 γραμμή} other {# γραμμές}} κώδικα!",
   "play": "παίξε",

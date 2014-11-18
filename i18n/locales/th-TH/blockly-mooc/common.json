@@ -1,8 +1,10 @@
 {
   "and":"และ",
+  "booleanTrue":"จริง",
+  "booleanFalse":"เท็จ",
   "blocklyMessage":"Blockly",
   "catActions":"การดำเนินการ",
-  "catColour":"สี",
+  "catColour":"Color",
   "catLogic":"ตรรกะ",
   "catLists":"ลิสต์",
   "catLoops":"ลูป",

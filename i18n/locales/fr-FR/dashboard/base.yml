@@ -148,14 +148,14 @@
     error:
       access_denied: "Vous n'avez pas accès aux statistiques de cette personne"
   redeem_prizes:
-    title: 'Obtenir les Prix: %{name}'
+    title: 'Recevoir les prix: %{name}'
     provider: 'Fournisseur :'
     code: 'Code :'
-    redeem_header: "racheter"
+    redeem_header: 'Pour recevoir:'
     donorschoose_register: "S'inscrire comme enseignant sur DonorsChoose.org"
-    donorschoose_project: "Publier un projet"
+    donorschoose_project: "Afficher un projet"
     donorschoose_how_to: "Comment utiliser votre code"
-    success: "Votre récompense a bien été attribuée, voir le code ci-dessous."
+    success: "Votre prix a bien été reçu, voir le code ci-dessous."
     error: "Votre récompense n'a pas pu être attribuée, veuillez essayer de nouveau."
     error_us_only: "Les prix ne sont disponibles que pour les utilisateurs états-uniens."
     error_not_earned: "Vous n'avez pas encore gagné ce prix."
@@ -170,12 +170,12 @@
       msg: 'Êtes-vous certain de vouloir attribuer le prix de %{prize_name} ?'
       msg_student: "Remarque : Vous ne pouvez choisir qu'un type de prix."
       msg_publicschool: "Veuillez confirmer que vous êtes enseignant dans une école publique aux États-Unis."
-      msg_visit_website: "Visiter le site web"
+      msg_visit_website: "Visiter le site"
     providers:
       apple_itunes: "$10 iTunes Gift Card"
       donors_choose: "DonorsChoose.org $750 credit"
       donors_choose_bonus: "DonorsChoose.org $250 credit"
-      dropbox: "10 Go de stockage sur Dropbox"
+      dropbox: "10Go d'espace Dropbox"
       valve: "Portal 2 (PC or Mac game download)"
       ea_bejeweled: "Bejeweled 3 (PC game download)"
       ea_fifa: "FIFA Soccer 13 (PC game download)"
@@ -219,7 +219,7 @@
         playlab: "Créer une application"
         artist: "Dessine quelque chose"
     user:
-      classroom: "Mes élèves"
+      classroom: "Teacher Home Page"
       label: 'Bonjour %{username}'
       stats: "Ma progression"
       settings: "Mon compte"
@@ -371,7 +371,7 @@
     teacher: "Afficher la solution"
     auth_error: "Vous n'êtes pas autorisé à voir la solution."
     submit: "Mettre à jour la Position de l'Artiste"
-    direction: "Start Direction (in degrees)"
+    direction: "Direction au début (en degrés)"
   video:
     tab: "Vidéo."
     notes: "Pas de vidéo ? Voir le texte de la vidéo."
@@ -391,8 +391,11 @@
   try_reloading: "Essayez de recharger la page"
   next_stage: "Terminé ! Passer à l'étape suivante"
   download_pdf: "Ouvrir le plan de la leçon"
+  lesson_plan: "Lesson Plan"
   view_lesson_plan: "Voir le plan de cours"
   pdf_download: "Télécharger le PDF"
+  download_coming_soon: "Downloadable activity coming soon."
+  video_coming_soon: "Video Coming Soon!"
   share_code:
     title: "Cliquez sur « Démarrer » pour voir mon programme en action"
     bounce_og_title: "Regardez mon jeu Rebond"
@@ -449,6 +452,8 @@
     wrong_body: "La solution que vous avez entrée est incorrecte. Veuillez réessayer !"
     correct_title: "Correct"
     correct_body: "C'est la bonne réponse."
+  text_match:
+    placeholder: "Enter your answer here"
   dialog:
     ok: "OK"
   time:
@@ -492,3 +497,8 @@
     sign_out: 'Si vous ne souhaitez pas fournir votre âge vous pouvez vous <a href="%{url}">déconnecter</a>.'
   zendesk_too_young_message: |-
     Désolé, les plus jeunes utilisateurs ne peuvent pas s'enregistrer sur notre site de support. Néanmoins, vous pouvez parcourir les <a href="http://support.code.org"> support.code.org</a> en ou demandez à votre parent ou enseignant à nous contacter pour vous.
+  progress:
+    not_completed: "not completed"
+    completed_too_many_blocks: "completed, too many blocks"
+    completed_perfect: "completed, perfect"
+    furthest_level_attempted: "le plus haut niveau tenté"

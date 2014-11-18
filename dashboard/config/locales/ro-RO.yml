@@ -258,7 +258,7 @@
         playlab: Make an App
         artist: Desenează ceva
     user:
-      classroom: Elevii mei
+      classroom: Pagina de Start a Profesorilor
       label: Salut %{username}
       stats: Progresul meu
       settings: Contul meu
@@ -459,8 +459,11 @@
   try_reloading: Încearcă să reîncarci pagina
   next_stage: Ai terminat! Continuă cu următoarea etapă
   download_pdf: Plan de lecţie deschisă
+  lesson_plan: Lesson Plan
   view_lesson_plan: Vezi Planul de Lecţii
   pdf_download: Descarcă PDF
+  download_coming_soon: Downloadable activity coming soon.
+  video_coming_soon: Video Coming Soon!
   share_code:
     title: Faceţi clic pe 'Run' pentru a vedea programul meu în acţiune
     bounce_og_title: Verifică jocul meu Bounce
@@ -528,6 +531,8 @@
     wrong_body: Soluţia introdusă nu este corectă.  Te rugăm să încerci din nou!
     correct_title: Corect
     correct_body: Acela este răspunsul corect.
+  text_match:
+    placeholder: Enter your answer here
   dialog:
     ok: OK
   time:
@@ -578,3 +583,8 @@
   zendesk_too_young_message: Ne pare rău, însă utilizatorii tineri nu ai voie să intre
     pe site-ul nostru de sprijin. Te poţi uita prin <a href="http://support.code.org">support.code.org</a>
     fără să te loghezi, sau poţi cere ajutorul unui părinte sau profesor.
+  progress:
+    not_completed: not completed
+    completed_too_many_blocks: completed, too many blocks
+    completed_perfect: completed, perfect
+    furthest_level_attempted: furthest level attempted

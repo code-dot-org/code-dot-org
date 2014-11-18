@@ -164,7 +164,7 @@
         turtle_4_9: 這是前一個關卡的解法。應該要轉幾度才能完成這件繪圖作品呢？(可能需要多猜幾次才能猜對喔！)
         turtle_4_10: 這是前一個關卡的解法。應該要重複幾次才能完成這件繪圖作品呢？
         turtle_4_11: 試著改變"轉彎"程式積木的角度，以及"重複"程式積木的次數來產生不同的圖案。或者實驗看看改變其它的程式碼來畫出你想畫的東西。
-        maze_karel_1_1: 嗨！我是一位農夫。我需要你協助我將農地整平好讓我可以種植農作物。將我移到土堆那，然後使用"移除"程式積木來移除土堆。
+        maze_karel_1_1: 你好！我是農夫。請你幫助我將農地整平，好讓我可以耕作。請將我移到土堆，然後使用｢移除｣積木來移除土堆。
         maze_karel_1_2: 接下來，將我移到坑洞那裡，使用"填充"程式積木往洞裡填入2鏟的泥土。
         maze_karel_1_3: 將我移到小土堆上，試著使用最少的程式積木來告訴我該移除多少鏟的泥土。
         maze_karel_1_4: 你能協助我將四個小土堆移除嗎？提示：盡可能使用"重複"程式積木來完成這個工作。
@@ -394,10 +394,10 @@
         Unplug7: Songwriting
         Unplug8: 抽象
         Unplug9: Relay programming
-        Unplug10: Internet
+        Unplug10: 互聯網
         Unplug11: 總結
         C1_happy_maps_unplugged: Happy Maps
-        C1_moveitmoveit_unplugged: Move It, Move It
+        C1_moveitmoveit_unplugged: 移動它，移動它
         C1_bigevent_unplugged: The Big Event
         C1_getting_loopy: Getting Loopy
         C1_pair_programming: Pair Programming
@@ -431,7 +431,7 @@
         C3_artist_functions: Artist Functions
         C3_bee_functions: Bee Functions
         C3_bee_conditionals: Bee Conditionals
-        C3_maze_conditionals: Maze Conditionals
+        C3_maze_conditionals: 迷宮： 條件
         C3_artist_nested_loops: Nested Loops
         C3_farmer_while: While Loops
         C3_bee_nested_loops: Nested Loops
@@ -440,7 +440,7 @@
         C3_playlab_create_game: Play Lab - Create a Game
         C3_computational_thinking: 電腦計算式思維
         C3_dice_race: Dice Race
-        C3_internet: Internet
+        C3_internet: 互聯網
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Songwriting With Parameters
@@ -458,3 +458,13 @@
           block to enable an actor for this story
         studio_say_text: Type what you want your actor to say within these quotes
         jigsaw_click: 按一下這個程式積木！
+        move_elsa_forward: Drag a "Move Forward" block and snap it below the "When
+          Run" block to make Elsa move forward
+        turn_elsa: Use the "Turn" block to make Elsa turn. The number in the drop-down
+          determines how much Elsa turns
+        replace_questions: Use the drop-down to replace "???" with a number
+        replace_questions_degree: Use the drop-down to replace "???" with the correct
+          degree to turn
+        repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
+          workspace
+        snowflake_dropdown: Use this drop-down to create different snowflakes!

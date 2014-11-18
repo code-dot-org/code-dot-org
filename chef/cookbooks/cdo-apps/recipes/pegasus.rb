@@ -22,6 +22,7 @@ template "/etc/logrotate.d/pegasus" do
   group 'root'
   mode '0644'
   variables ({
+    app_name:'pegasus',
     log_dir:"/home/#{node[:current_user]}/#{node.chef_environment}/pegasus/log",
   })
 end

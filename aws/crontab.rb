@@ -3,7 +3,7 @@ def bin_dir(*paths)
 end
 
 unless rack_env?(:production)
-  cronjob at:'@reboot', do:"#{aws_dir('solr_server')} 2>&1 > #{pegasus_dir('log','solr.log')}"
+  cronjob at:'@reboot', do:"#{deploy_dir('bin/solr-server')} 2>&1 > #{pegasus_dir('log','solr.log')}"
 end
 
 if rack_env?(:staging)

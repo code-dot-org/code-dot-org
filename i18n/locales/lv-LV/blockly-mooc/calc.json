@@ -1,0 +1,8 @@
+{
+  "compute":"skaitļot",
+  "equivalentExpression":"Mēģiniet pārkārtot ievadītos argumentus, lai panāktu to pašu izteiksmi.",
+  "extraTopBlocks":"Jums ir nepiesaistīti bloki. Vai jūs domājāt pievienot šos pie \"skaitļošanas\" bloka?",
+  "goal":"Mērķis:",
+  "reinfFeedbackMsg":"Jūs varat spiest \"Mēģināt vēlreiz\" pogu, lai labot jūsu izteiksmi.",
+  "yourExpression":"Jūsu izteiksme:"
+}

@@ -24,7 +24,7 @@
           Multi & Match: 'Multi & Match'
           K-1 Flappy: K-1 Flappy
           Flappy non blockly: "Flappy no blockly"
-          title: "Course 1"
+          title: "Curso 1"
           Artist 2: "Artista 2"
           Happy Maps: "Mapas Felices"
           Move it, Move it: Muévelo, muévelo
@@ -40,7 +40,7 @@
           "Maze: Loops": Bucle
           "Bee: Loops": 'Abeja: Bucle'
           "Studio: Create a Story": 'Laboratorio de Juego: Crea un Historia'
-          description_short: "Course 1 is designed for early readers. Recommended for grades K-1."
+          description_short: "El curso 1 está diseñado para los primeros lectores. Es recomendado para los grados K-1."
           "Artist: Loops": Bucles
         course2:
           The Maze: "El Laberinto"
@@ -76,7 +76,7 @@
           "Bee: Debugging": 'Abeja: Depuración'
           "Artist: Debugging": 'Artista: Depuración'
           "Bee: Conditionals": 'Abeja: Condicionales'
-          description_short: 'Course 2 is designed for students who can read.  Recommended for grades 2-5.'
+          description_short: "El curso 2 está diseñado para los estudiantes que pueden leer. Es recomendado para grados 2-5."
           "Artist: Sequence2": 'Artista: Secuencia2'
           "Maze: Sequence2": 'Laberinto: Secuencia2'
           "Artist: Nested Loops": 'Artista: Bucles Anidados'
@@ -117,7 +117,7 @@
           "Farmer: While Loops": 'Granjera: Bucles Mientras'
           "Bee: Nested Loops": 'Abeja: Bucles Anidados'
           "Bee: Debugging": 'Abeja: Depuración'
-          description_short: 'Course 3 is a follow-up to Course 2.  Recommended for grades 4-5.'
+          description_short: "El curso 3 es un seguimiento del curso 2. Es recomendado para grados 4-5."
           Maze2: "Laberinto2"
           Artist2: "Artista2"
           "Artist: Functions2": 'Artista: Funciones2'
@@ -138,9 +138,9 @@
           Unit 1: "Unidad 1"
           Unit 2: "Unidad 2"
           Ninja Cat and the Coordinate Plane: "Ninja Cat and the Coordinate Plane"
-          "Calc: Circles of Evaluation": 'Calc: Circles of Evaluation'
-          "Artist: Strings and Images": 'Artist: Strings and Images'
-          Contracts: "Contracts"
+          "Calc: Circles of Evaluation": 'Calc: Círculos de evaluación'
+          "Artist: Strings and Images": 'Artista: Cadenas e imágenes'
+          Contracts: "Contratos"
           "Artist: Writing Contracts": 'Artist: Writing Contracts'
           "Calc: Defining Variables": 'Calc: Defining Variables'
           "Play Lab: Defining Variables": 'Play Lab: Defining Variables'
@@ -167,6 +167,21 @@
           description: "¡Dibuja imagenes estupendas y diseños con el Artista!"
           Artist: "Artista"
           description_short: "¡Dibuja imagenes estupendas y diseños con el Artista!"
+        scrat:
+          title: "Scrat"
+          description_short: "Scrat short description."
+          description: "Scrat long description"
+          "Maze: Sequence": 'Laberinto: Secuencia'
+        hourofcode:
+          Maze: "Laberinto"
+          title: "Hora del código"
+          description_short: "Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!"
+          description: "Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!"
+        frozen:
+          title: "Frozen"
+          description_short: "Join the Royal Sisters of Arendelle, Anna and Elsa, as they explore the magic and beauty of ice. You will write code to create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
+          description: "Join the Royal Sisters of Arendelle, Anna and Elsa, as they explore the magic and beauty of ice. You will write code to create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
+          Artist: "Artista"
         course4:
           description_short: "Students taking Course 4 should have already taken Courses 2 and 3."
           description: "Course 4 is designed for students who have taken Course 2 and 3. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8."
@@ -194,6 +209,7 @@
           Bee Binary: "Bee Binary"
           Farmer Binary: "Farmer Binary"
           Maze and Bee: "Maze and Bee"
+          Artist Binary: "Artist Binary"
         Course4pre:
           description_short: "A brief rampup of concepts for students who have not taken Course 2 and 3."
           Course 4 Prerequisite: "Course 4 Prerequisite"

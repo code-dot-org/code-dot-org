@@ -61,7 +61,7 @@
         Maze Match: "Associazione per il Labirinto"
         Match the puzzles to the blocks: "Associa i puzzle con i blocchi"
         Instructions: "Istruzioni"
-        Drag the blocks to match.: Trascina i blocchi per associarli.
+        Drag the blocks to match.: Trascina i blocchi per associare.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/2-3_images/maze/2-3_maze_match_2_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q1.png
         /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png
@@ -220,7 +220,7 @@
         Matching: "Corrispondenza"
         Match the puzzles and blocks: "Associa i puzzle e i blocchi"
         Instructions: "Istruzioni"
-        Drag the blocks to match.: Trascina i blocchi per associare.
+        Drag the blocks to match.: Trascina i blocchi per associarli.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/k_1_images/maze_images/maze_EN.png: /script_assets/k_1_images/maze_images/maze_EN.png
         /script_assets/k_1_images/maze_images/maze_ENE.png: /script_assets/k_1_images/maze_images/maze_ENE.png

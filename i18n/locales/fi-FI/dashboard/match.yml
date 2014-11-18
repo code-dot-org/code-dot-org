@@ -15,7 +15,7 @@
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png
       2-3 artist match 1:
         Artist Matching: "Artist Matching"
-        Match the shape with the blocks that complete it.: Match the shape with the blocks that complete it.
+        Match the shape with the blocks that complete it.: Yhdistä muotoon lohko, joka täydentää sen.
         /script_assets/2-3_images/artist/2-3_artist_match_1_q1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q1.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_q2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q2.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_q3.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q3.png
@@ -50,7 +50,7 @@
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png
       2-3 maze match 1:
         Maze Match One: "Maze Match One"
-        Match the puzzles to the blocks: "Match the puzzles to the blocks"
+        Match the puzzles to the blocks: "Yhdistä pulmat lohkoihin"
         /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png
@@ -59,9 +59,9 @@
         /script_assets/2-3_images/maze/2-3_maze_match_1_a3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a3.png
       2-3 Maze Match 2:
         Maze Match: "Maze Match"
-        Match the puzzles to the blocks: "Match the puzzles to the blocks"
+        Match the puzzles to the blocks: "Yhdistä pulmat lohkoihin"
         Instructions: "Ohjeet"
-        Drag the blocks to match.: Drag the blocks to match.
+        Drag the blocks to match.: Raahaa lohkot oikeille paikoille.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/2-3_images/maze/2-3_maze_match_2_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q1.png
         /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png
@@ -112,9 +112,9 @@
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
       4-5 maze match 1:
         Maze Match: "Maze Match"
-        Match the puzzles to the blocks: "Match the puzzles to the blocks"
+        Match the puzzles to the blocks: "Yhdistä pulmat lohkoihin"
         Instructions: "Ohjeet"
-        Drag the blocks to match.: Drag the blocks to match.
+        Drag the blocks to match.: Raahaa lohkot oikeille paikoille.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/4-5_images/maze/4-5_maze_match_1_q1.png: /script_assets/4-5_images/maze/4-5_maze_match_1_q1.png
         /script_assets/4-5_images/maze/4-5_maze_match_1_q2.png: /script_assets/4-5_images/maze/4-5_maze_match_1_q2.png
@@ -167,7 +167,7 @@
         <br/><br/>next to: '<br/><br/>next to'
       K-1 Artist 2 Match 2:
         Matching: "Matching"
-        Match the shapes based on type.: Match the shapes based on type.
+        Match the shapes based on type.: Yhdistä samanlaiset muodot.
         /script_assets/k_1_images/artist_images/small_circle.png: /script_assets/k_1_images/artist_images/small_circle.png
         /script_assets/k_1_images/artist_images/large_square.png: /script_assets/k_1_images/artist_images/large_square.png
         /script_assets/k_1_images/artist_images/medium_rectangle.png: /script_assets/k_1_images/artist_images/medium_rectangle.png
@@ -178,7 +178,7 @@
         /script_assets/k_1_images/artist_images/large_triangle.png: /script_assets/k_1_images/artist_images/large_triangle.png
       K-1 Artist 2 Match 3:
         Matching: "Matching"
-        Match the shapes based on type.: Match the shapes based on type.
+        Match the shapes based on type.: Yhdistä samanlaiset muodot.
         /script_assets/k_1_images/artist_images/large_circle.png: /script_assets/k_1_images/artist_images/large_circle.png
         /script_assets/k_1_images/artist_images/small_square.png: /script_assets/k_1_images/artist_images/small_square.png
         /script_assets/k_1_images/artist_images/large_rectangle.png: /script_assets/k_1_images/artist_images/large_rectangle.png
@@ -198,7 +198,7 @@
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a3.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a3.png
       K-1 Bee Loops Match 1:
         Matching: "Matching"
-        Match the blocks: "Match the blocks"
+        Match the blocks: "Yhdistä oikeat lohkot"
         /script_assets/k_1_images/bee_images/r4_gnectar.png: /script_assets/k_1_images/bee_images/r4_gnectar.png
         /script_assets/k_1_images/move_blocks/r3_N.png: /script_assets/k_1_images/move_blocks/r3_N.png
         /script_assets/k_1_images/bee_images/r5_ghoney.png: /script_assets/k_1_images/bee_images/r5_ghoney.png
@@ -209,7 +209,7 @@
         /script_assets/k_1_images/move_blocks/EEEEE.png: /script_assets/k_1_images/move_blocks/EEEEE.png
       K-1 Flappy Match 1:
         Matching: "Matching"
-        Match the blocks: "Match the blocks"
+        Match the blocks: "Yhdistä oikeat lohkot"
         /script_assets/k_1_images/flappy_images/click.png: /script_assets/k_1_images/flappy_images/click.png
         /script_assets/k_1_images/flappy_images/hit_ground.png: /script_assets/k_1_images/flappy_images/hit_ground.png
         /script_assets/k_1_images/flappy_images/pass_obstacle.png: /script_assets/k_1_images/flappy_images/pass_obstacle.png
@@ -218,9 +218,9 @@
         /script_assets/k_1_images/flappy_images/score.png: /script_assets/k_1_images/flappy_images/score.png
       K-1 Maze Match 1:
         Matching: "Matching"
-        Match the puzzles and blocks: "Match the puzzles and blocks"
+        Match the puzzles and blocks: "Yhdistä oikeat pulmat ja lohkot"
         Instructions: "Ohjeet"
-        Drag the blocks to match.: Drag the blocks to match.
+        Drag the blocks to match.: Raahaa lohkot oikeille paikoille.
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/k_1_images/maze_images/maze_EN.png: /script_assets/k_1_images/maze_images/maze_EN.png
         /script_assets/k_1_images/maze_images/maze_ENE.png: /script_assets/k_1_images/maze_images/maze_ENE.png
@@ -308,7 +308,7 @@
         string numer: "string numer"
         image: "image"
         (yearbook-picture "Sally" 1992): '(yearbook-picture "Sally" 1992)'
-        function name: "function name"
+        function name: "funktion nimi"
         domain: "domain"
         range: "range"
         example: "example"

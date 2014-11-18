@@ -57,6 +57,9 @@ var JOINT_RADIUS = 4;
  */
 var JOINT_SEGMENT_LENGTH = 50;
 
+// image icons and image paths for the 'set pattern block'
+exports.lineStylePatternOptions = [];
+
 /**
  * PID of animation task currently executing.
  */
@@ -106,6 +109,18 @@ Turtle.init = function(config) {
 
   if (skin.id == "anna" || skin.id == "elsa")
   {
+    exports.lineStylePatternOptions = [
+      [skin.patternDefault, 'DEFAULT'], //  signals return to default path drawing
+      [skin.rainbowMenu, 'rainbowLine'],  // set to property name for image within skin
+      [skin.ropeMenu, 'ropeLine'],  // referenced as skin[pattern];
+      [skin.squigglyMenu, 'squigglyLine'],
+      [skin.swirlyMenu, 'swirlyLine'],
+      [skin.annaLine, 'annaLine'],
+      [skin.elsaLine, 'elsaLine'],
+      [skin.annaLine_2x, 'annaLine_2x'],
+      [skin.elsaLine_2x, 'elsaLine_2x'],
+    ];
+
     retina = backingScale();
 
     // We don't support ratios other than 2 right now (sorry!) so fall back to 1.
@@ -196,7 +211,7 @@ Turtle.init = function(config) {
     Turtle.ctxPredraw = createCanvas('predraw', 400 * retina, 400 * retina).getContext('2d');
     Turtle.ctxScratch = createCanvas('scratch', 400 * retina, 400 * retina).getContext('2d');
     Turtle.ctxPattern = createCanvas('pattern', 400 * retina, 400 * retina).getContext('2d');
-    Turtle.ctxFeedback = createCanvas('feedback', 154 * retina, 154 * retina).getContext('2d');
+    Turtle.ctxFeedback = createCanvas('feedback', 154, 154).getContext('2d');
 
     // Create display canvas.
     var display = createCanvas('display', 400 * retina, 400 * retina);
@@ -212,7 +227,7 @@ Turtle.init = function(config) {
     Turtle.ctxDisplay = display.getContext('2d');
 
 
-    if (skin.id == "anna" || skin.id == "elsa") {
+    if (BlocklyApps.usingBlockly && (skin.id == "anna" || skin.id == "elsa")) {
       Blockly.JavaScript.colour_random = function() {
         // Generate a random colour.
         if (!Blockly.JavaScript.definitions_.colour_random) {
@@ -248,18 +263,20 @@ Turtle.init = function(config) {
     // pre-load image for line pattern block. Creating the image object and setting source doesn't seem to be
     // enough in this case, so we're actually creating and reusing the object within the document body.
 
-    if ((BlocklyApps.usingBlockly && config.level.edit_blocks) || skin.id == "anna" || skin.id == "elsa")
+    if (skin.id == "anna" || skin.id == "elsa")
     {
       var imageContainer = document.createElement('div');
       imageContainer.style.display='none';
       document.body.appendChild(imageContainer);
 
-      for( var i = 0; i <  Blockly.Blocks.draw_line_style_pattern.Options.length; i++) {
-        var pattern = Blockly.Blocks.draw_line_style_pattern.Options[i][1];
-        var img = new Image();
-        img.src = skin[pattern];
-        img.id = pattern;
-        imageContainer.appendChild(img);
+      for( var i = 0; i < exports.lineStylePatternOptions.length; i++) {
+        var pattern = exports.lineStylePatternOptions[i][1];
+        if (skin[pattern]) {
+          var img = new Image();
+          img.src = skin[pattern];
+          img.id = pattern;
+          imageContainer.appendChild(img);
+        }
       }
     }
 
@@ -452,30 +469,68 @@ Turtle.drawTurtle = function() {
 };
 
 var turtleNumFrames = 19;
-var turtleFrame = 0;
 
-Turtle.drawDecorationAnimation = function() {
+// An x offset against the sprite edge where the decoration should be drawn,
+// along with whether it should be drawn before or after the turtle sprite itself.
+
+var decorationImageDetails = [
+  { x: 15, when: "after" },
+  { x: 26, when: "after" },
+  { x: 37, when: "after" },
+  { x: 46, when: "after" },
+  { x: 60, when: "after" },
+  { x: 65, when: "after" },
+  { x: 66, when: "after" },
+  { x: 64, when: "after" },
+  { x: 62, when: "before" },
+  { x: 55, when: "before" },
+  { x: 48, when: "before" },
+  { x: 33, when: "before" },
+  { x: 31, when: "before" },
+  { x: 22, when: "before" },
+  { x: 17, when: "before" },
+  { x: 12, when: "before" },
+  { x:  8, when: "after" }, 
+  { x: 10, when: "after" }
+];
+
+/**
+  * This is called twice, once with "before" and once with "after", referring to before or after
+  * the sprite is drawn.  For some angles it should be drawn before, and for some after.
+  */
+
+Turtle.drawDecorationAnimation = function(when) {
   if (skin.id == "elsa") {
     var index = (turtleFrame + 10) % turtleNumFrames;
-    var sourceX = Turtle.decorationAnimationImage.width * index;
-    var sourceY = 0;
-    var sourceWidth = Turtle.decorationAnimationImage.width;
-    var sourceHeight = Turtle.decorationAnimationImage.height;
-    var destWidth = sourceWidth;
-    var destHeight = sourceHeight;
-    var destX = Turtle.x - destWidth / 2 - 15;
-    var destY = Turtle.y - destHeight / 2 - 100;
 
-    Turtle.ctxDisplay.drawImage(
-      Turtle.decorationAnimationImage, 
-      Math.round(sourceX * retina), Math.round(sourceY * retina),
-      sourceWidth * retina, sourceHeight * retina, 
-      Math.round(destX * retina), Math.round(destY * retina),
-      destWidth * retina, destHeight * retina);
+    var angleIndex = Math.floor(Turtle.heading * Turtle.numberAvatarHeadings / 360);
+    if (skin.id == "anna" || skin.id == "elsa") {
+      // the rotations in the sprite sheet go in the opposite direction.
+      angleIndex = Turtle.numberAvatarHeadings - angleIndex;
 
-    //turtleFrame = (turtleFrame + 1) % turtleNumFrames;
+      // and they are 180 degrees out of phase.
+      angleIndex = (angleIndex + Turtle.numberAvatarHeadings/2) % Turtle.numberAvatarHeadings;
+    }
+
+    if (decorationImageDetails[angleIndex].when == when)
+    {
+      var sourceX = Turtle.decorationAnimationImage.width * index;
+      var sourceY = 0;
+      var sourceWidth = Turtle.decorationAnimationImage.width;
+      var sourceHeight = Turtle.decorationAnimationImage.height;
+      var destWidth = sourceWidth;
+      var destHeight = sourceHeight;
+      var destX = Turtle.x - destWidth / 2 - 15 - 15 + decorationImageDetails[angleIndex].x;
+      var destY = Turtle.y - destHeight / 2 - 100;
+
+      Turtle.ctxDisplay.drawImage(
+        Turtle.decorationAnimationImage, 
+        Math.round(sourceX * retina), Math.round(sourceY * retina),
+        sourceWidth * retina, sourceHeight * retina, 
+        Math.round(destX * retina), Math.round(destY * retina),
+        destWidth * retina, destHeight * retina);
+    }
   }
-
 };
 
 
@@ -605,8 +660,9 @@ Turtle.display = function() {
 
   // Draw the turtle.
   if (Turtle.visible) {
+    Turtle.drawDecorationAnimation("before");
     Turtle.drawTurtle();
-    Turtle.drawDecorationAnimation();
+    Turtle.drawDecorationAnimation("after");
   }
 };
 
@@ -773,7 +829,7 @@ Turtle.animate = function() {
         break;
       }
     }
-    if (!stepped) {
+    if (!stepped && !executeTuple()) {
       // We dropped out of the step loop because we ran out of code, all done:
       finishExecution();
       return;
@@ -842,6 +898,8 @@ Turtle.doSmoothAnimate = function(options, distance)
 Turtle.step = function(command, values, options) {
   var tupleDone = true;
   var result;
+  var distance;
+  var heading;
 
   switch (command) {
     case 'FD':  // Forward
@@ -857,8 +915,8 @@ Turtle.step = function(command, values, options) {
       Turtle.jumpForward_(result.distance);
       break;
     case 'MV':  // Move (direction)
-      var distance = values[0];
-      var heading = values[1];
+      distance = values[0];
+      heading = values[1];
       result = Turtle.doSmoothAnimate(options, distance);
       tupleDone = result.tupleDone;
       Turtle.setHeading_(heading);
@@ -866,6 +924,7 @@ Turtle.step = function(command, values, options) {
       break;
     case 'JD':  // Jump (direction)
       distance = values[0];
+      heading = values[1];
       result = Turtle.doSmoothAnimate(options, distance);
       tupleDone = result.tupleDone;
       Turtle.setHeading_(heading);
@@ -1136,6 +1195,7 @@ var isCorrect = function(pixelErrors, permittedErrors) {
 var displayFeedback = function() {
   var feedbackImageCanvas;
   if (skin.id == "anna" || skin.id == "elsa") {
+    // For frozen skins, show background and characters along with drawing
     feedbackImageCanvas = Turtle.ctxDisplay;
   } else {
     feedbackImageCanvas = Turtle.ctxScratch;
@@ -1154,7 +1214,7 @@ var displayFeedback = function() {
     // impressive levels are already saved
     alreadySaved: level.impressive,
     // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
-    saveToGalleryUrl: level.freePlay && Turtle.response.save_to_gallery_url,
+    saveToGalleryUrl: level.freePlay && Turtle.response && Turtle.response.save_to_gallery_url,
     appStrings: {
       reinfFeedbackMsg: turtleMsg.reinfFeedbackMsg(),
       sharingText: turtleMsg.shareDrawing()

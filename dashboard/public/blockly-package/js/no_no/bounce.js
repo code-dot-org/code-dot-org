@@ -269,8 +269,9 @@ BlocklyApps.init = function(config) {
   dom.addClickTouchEvent(resetButton, BlocklyApps.resetButtonClick);
 
   var belowViz = document.getElementById('belowVisualization');
-  if (config.referenceArea) {
-    belowViz.appendChild(config.referenceArea());
+  var referenceArea = document.getElementById('reference_area');
+  if (referenceArea) {
+    belowViz.appendChild(referenceArea);
   }
 
   var visualizationColumn = document.getElementById('visualizationColumn');
@@ -11576,11 +11577,12 @@ var savedAmd;
 // via require js
 if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) {
   savedAmd = define.amd;
-  define.amd = 'dont_call_requirejs_define';
+  define.amd = false;
 }
 
 // get lodash
 var _ = require('./lodash');
+var Hammer = require('./hammer');
 
 // undo hackery
 if (typeof define == 'function' && savedAmd) {
@@ -11590,6 +11592,10 @@ if (typeof define == 'function' && savedAmd) {
 
 exports.getLodash = function () {
   return _;
+};
+
+exports.getHammer = function () {
+  return Hammer;
 };
 
 exports.shallowCopy = function(source) {
@@ -11888,7 +11894,7 @@ exports.generateDropletModeOptions = function (codeFunctions) {
   return modeOptions;
 };
 
-},{"./lodash":20,"./xml":38}],38:[function(require,module,exports){
+},{"./hammer":19,"./lodash":20,"./xml":38}],38:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
@@ -12155,9 +12161,9 @@ exports.yes = function(d){return "Ja"};
 var MessageFormat = require("messageformat");MessageFormat.locale.no=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "og"};
 
-exports.booleanTrue = function(d){return "true"};
+exports.booleanTrue = function(d){return "sann"};
 
-exports.booleanFalse = function(d){return "false"};
+exports.booleanFalse = function(d){return "usann"};
 
 exports.blocklyMessage = function(d){return "Blockly"};
 
@@ -12233,7 +12239,7 @@ exports.nextLevelTrophies = function(d){return "Gratulerer! Du har fullført opp
 
 exports.nextStage = function(d){return "Gratulerer! Du fullførte "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "Congratulations! You completed "+v(d,"stageName")+" and won "+p(d,"numTrophies",0,"no",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
+exports.nextStageTrophies = function(d){return "Gratulerer! Du har fullført "+v(d,"stageName")+" og vunnet "+p(d,"numTrophies",0,"no",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
 
 exports.numBlocksNeeded = function(d){return "Gratulerer! Du har fullført oppgave "+v(d,"puzzleNumber")+". (Men, du kunne ha brukt kun "+p(d,"numBlocks",0,"no",{"one":"1 blokk","other":n(d,"numBlocks")+" blokker"})+".)"};
 
@@ -12255,7 +12261,7 @@ exports.score = function(d){return "poengsum"};
 
 exports.showCodeHeader = function(d){return "Vis kode"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Vis blokker"};
 
 exports.showGeneratedCode = function(d){return "Vis kode"};
 
@@ -12293,7 +12299,7 @@ exports.typeHint = function(d){return "Legg merke til at paranteser og semikolon
 
 exports.workspaceHeader = function(d){return "Sett sammen blokkene dine her: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Skriv inn JavaScript-koden din her"};
 
 exports.infinity = function(d){return "Uendelig"};
 

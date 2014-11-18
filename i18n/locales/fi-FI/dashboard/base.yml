@@ -7,8 +7,8 @@
       user:
         name: "Nimimerkki"
         email: "Sähköposti"
-        username: "käyttäjätunnus"
-        password: "salasana"
+        username: "Käyttäjätunnus"
+        password: "Salasana"
         password_confirmation: "Salasanan vahvistus"
         current_password: "Nykyinen salasana"
         locale: "Kieli"
@@ -31,11 +31,11 @@
     placeholder: "Syötä vihjeesi tähän"
     submit: "Lisää vihje"
   appname: "Code.org"
-  stage: "vaihe"
+  stage: "Taso"
   stage_number: 'Taso %{number}'
   puzzle: "Pulma"
-  trophies: "pokaalit"
-  courses: "kurssit"
+  trophies: "Pokaalit"
+  courses: "Kurssit"
   of: "/"
   more: "LISÄÄ"
   less: "VÄHEMMÄN"
@@ -52,7 +52,7 @@
     signed_in: "Kirjautunut!"
     signed_out: 'Olet kirjautunut ulos palvelusta <a href="%{url}">Code.org</a>.'
     sign_out_of: 'Olet kirjautuneena sisään palvelun %{provider} kautta. <a href="%{url}">Kirjaudu ulos</a> palvelusta %{provider}.'
-    already_signedup: "Joko rekisteröidyit?"
+    already_signedup: "Jo rekisteröitynyt?"
     notyet_signedup: "Etkö ole vielä rekisteröitynyt?"
     google_oauth2: "Google-tili"
     twitter: "Twitter"
@@ -76,7 +76,7 @@
     gender: "Sukupuoli (vapaaehtoinen)"
     birthday: "Syntymäpäivä (vapaaehtoinen)"
     age: "Ikä"
-    user_type: "Are you a student or teacher?"
+    user_type: "Oletko opiskelija tai opettaja?"
     submit: "Rekisteröidy"
     teacher: "Oletko opettaja?"
     valid_username: "Vapaa!"
@@ -96,14 +96,14 @@
     submit: "Kirjaudu"
   signin:
     try_heading: "Haluatko kokeilla koodausta ilman kirjautumista?"
-    try_hoc: "Kokeile yhtä koodituntia ensin"
+    try_hoc: "Kokeile yhtä koodaustuntia ensin"
     try_20hours: "Kokeile 20 tunnin Johdantoamme tietojenkäsittelytieteeseen"
   signinsection:
     welcome: 'Tervetuloa osioon %{section_name}'
     name: "Valitse nimesi"
     picture: "Nyt etsi salainen kuvasi"
     words: "Nyt anna salaiset sanasi"
-    login: "Kirjaudu"
+    login: "Kirjaudu sisään"
   password:
     reset_form:
       title: "Unohditko salasanasi?"
@@ -192,7 +192,7 @@
         not_earned_title: 'Opeta kurssia, ansaitse jopa 1000 dollaria <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> krediitteinä (vain USA:n opettajat)'
         not_earned: '(sivustolla mainitut raha- ja tavarapalkinnot ovat voimassa vain USA:ssa)'
         bonus:
-          not_earned_title: 'You can still earn an additional $250 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers only)'
+          not_earned_title: 'Voit edelleen ansaita 250 dollaria <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> palveluun (vain USA)'
           earned: |
             Hieno suoritus! 7 tai useampi oppilaistasi, jotka keräsivät kaikki %{num_trophies} ovat tyttöjä. 
             
@@ -213,27 +213,27 @@
     access_denied: 'Sinulla ei ole pääsyä tähän %{model}.'
   nav:
     header:
-      finished_hoc: "Olen suorittanut Koodituntini"
+      finished_hoc: "Olen suorittanut Koodaustuntini"
       sign_in_to_save: "Kirjaudu, jos haluat tallentaa edistymisesi"
       free_play:
         playlab: "Tee sovellus"
         artist: "Piirrä jotakin"
     user:
-      classroom: "Oppilaani"
+      classroom: "Opettajan kotisivu"
       label: 'Hei %{username}'
       stats: "Minun edistymiseni"
       settings: "Tilini"
       prizes: "Palkinnot"
       logout: "Kirjaudu ulos"
-      signin: "Kirjaudu"
-      signup: "Rekisteröidy"
+      signin: "Kirjaudu sisään"
+      signup: "Luo käyttäjätunnus"
       already_registered: "Jo rekisteröitynyt?"
     popup:
       progress: "Sinun edistymisesi"
       lines: 'Koodirivien yhteismäärä: %{lines}'
       close: "SULJE"
       mastery: "Käsitteitä"
-      puzzle_map: "Vaiheet"
+      puzzle_map: "Tasot"
       prizes: |
         Kerää kaikki %{total_trophies} pokaalia! 
         
@@ -243,7 +243,7 @@
         
         (sivustolla mainitut raha- ja tavarapalkinnot ovat voimassa vain USA:ssa)
       prize_us_only: "(vain oppilaille USA:ssa)"
-      prizes_link: "Lisätietoja"
+      prizes_link: "lisätietoja"
   teacher:
     title:
       one: 'Opettajasi:'
@@ -254,20 +254,20 @@
     tools: "Opettajan työkalut"
     followers:
       section: 'Ryhmä:'
-      stages: 'Stage(s) to display:'
-      show_past: 'Show student activity (%{bullet_html}) in the past:'
-      levels_key: "Levels key"
+      stages: 'Taso(ja) esitettäväksi:'
+      show_past: 'Näytä opiskelijoiden toimintahistoria (%{bullet_html}):'
+      levels_key: "Tasojen avain"
       perfect: "Valmis, täydellistä"
       completed: "Valmis, mutta käytit liian montaa lohkoa"
       tried: "Kokeiltu, mutta ei valmis"
       not_tried: "Ei kokeiltu"
-      activity: 'Indicates student activity in the last %{hours} %{plural}'
+      activity: 'Ilmaisee opiskelijan aktiivisuutta viimeisen %{hours} %{plural} aikana'
       no_section: "Ei valittuja ryhmiä"
       trophies: "pokaalit"
     students:
       name: "Nimi"
       username: "käyttäjätunnus"
-      password: "salasana"
+      password: "Salasana"
       manage: "Hallinnoi oppilaita"
       dashboard: "Siirry opettajan päänäytölle"
       add: "Lisää opiskelijoita"
@@ -279,7 +279,7 @@
       vist: "Pyydä oppilaitasi käymään"
       section_code: 'ja anna heidän ryhmän tunnuksensa:'
       first_please: 'Lisää ensin %{add_section}'
-      for: "For"
+      for: "Varten"
       enter: 'anna:'
     sections:
       add: "Lisää ryhmä"
@@ -308,9 +308,9 @@
     new_password_hint: "(jätä tyhjäksi jos et halua vaihtaa)"
     current_password_hint: "(anna nykyinen salasanasi, jotta voimme vahvistaa muutokset)"
     cancel:
-      title: "Poista tili"
+      title: "Tilin poistaminen"
       hint: "Onneton?"
-      button: "Tilin poistaminen"
+      button: "Poista tili"
   user_level:
     completed: "Valmis"
     tried: "Kokeili"
@@ -321,11 +321,11 @@
   home:
     title: "Code Studio"
     all_courses: "Katsaus kursseihin 1, 2 ja 3"
-    lesson_plans: "Oppituntien suunnitelmat"
+    lesson_plans: "Tuntisuunnitelmat"
     signin_message: 'Jo rekisteröitynyt? %{link}'
     student_reg_link: "Oppilaan rekisteröityminen"
     teacher_reg_link: "Opettajan rekisteröityminen"
-    signin_directions: 'Use an account to track progress.<br/> Teachers, track your entire class.'
+    signin_directions: 'Käytä tiliä, jos haluat seurata edistymistäsi.<br/> Opettaja, seuraa koko luokkaasi.'
     teacher_dashboard: "Näytä edistysminen"
     teacher_student_count_one: 'Sinulla on %{count} oppilasta.'
     teacher_student_count: 'Sinulla on %{count} oppilasta.'
@@ -348,7 +348,7 @@
     test_videos_help: "Testaa uutta videosoitintamme koulussasi"
     try_beta_courses: "Uutta! Kokeile beta-kurssejamme K-5 oppilaille"
     use_as_teacher: "Käytä sivustoa opettajana"
-    heading_elementary: '<h2>20 hour kurssit</h2><h1>alkeisoppilaille</h1>'
+    heading_elementary: '<h2>20 tunnin kurssit</h2><h1>alkeisopiskeluun</h1>'
     heading_apps: '<h2>Hauskaa</h2><h1>kaikille</h1>'
     heading_legacy: '<h2>Yleinen kurssimme</h2><h1>kaiken ikäisille</h1>'
     gallery:
@@ -397,8 +397,11 @@
   try_reloading: "Yritä ladata sivu uudelleen"
   next_stage: "Valmis! Siirry seuraavalle tasolle"
   download_pdf: "Avaa oppituntisuunnitelma"
-  view_lesson_plan: "Katso oppitunnin suunnitelmaa"
+  lesson_plan: "Tuntisuunnitelma"
+  view_lesson_plan: "Katso tuntisuunnitelmia"
   pdf_download: "Lataa PDF"
+  download_coming_soon: "Downloadable activity coming soon."
+  video_coming_soon: "Video Coming Soon!"
   share_code:
     title: "Napsauta 'Aja' nähdäksesi ohjelmani toiminnassa"
     bounce_og_title: "Tutustu Bounce-peliini"
@@ -412,8 +415,8 @@
   builder:
     created: "Loit uuden komentosarjan."
     destroyed: "Tuhosit komentosarjan."
-    manage: "Build Levels"
-    view: "View"
+    manage: "Rakenna tasoja"
+    view: "Näkymä"
     back: "Takaisin komentosarjoihin"
     success: "Muokkasit lohkoja onnistuneesti."
     level:
@@ -422,8 +425,8 @@
       unused: "Käyttämättömät tasot"
   upsell:
     hoc:
-      title: "Kooditunti"
-      body: "Kokeile tietojenkäsittelytieteen perusteita. Miljoonat ovat antaneet sille tilaisuuden."
+      title: "Koodaustunti"
+      body: "Kokeile tietojenkäsittelytieteen perusteita. Jo miljoonat ovat kokeilleet."
     flappy:
       title: "Flappy Code"
       body: "Haluatko kirjoittaa oman pelin alle 10 minuutissa? Kokeile Flappy Code -oppituntia!"
@@ -443,7 +446,7 @@
     prerelease: "Tämä kurssi on <span class='betatext'>beta</span>.  Tämä tarkoittaa, että kurssin verso ei ole lopullinen ja siitä saattaa tulla uusia paranneltuja versioita reaktiona saatuun palautteeseen."
     feedback: "Anna palautetta"
     report_bug: "Raportoi ongelma"
-    support: "Tarkastele ohjeita"
+    support: "Katso ohjeet"
     support_url: "//support.code.org"
   multi:
     wrong_title: "Väärä vastaus"
@@ -455,6 +458,8 @@
     wrong_body: "Antamasi ratkaisu ei ole oikea. Yritä uudestaan!"
     correct_title: "Oikein"
     correct_body: "Tämä on oikea vastaus."
+  text_match:
+    placeholder: "Kirjoita vastauksesi tähän"
   dialog:
     ok: "OK"
   time:
@@ -468,7 +473,7 @@
           title: "Johdanto tietotekniikkaan -kurssi 5–14-vuotiaille (15–25 tuntia)"
           description: "Tämä 20 tunnin kurssi esittelee keskeiset tietotekniikan ja ohjelmoinnin käsitteet. Kurssi on suunniteltu käytettäväksi peruskouluissa, mutta siinä on hauskaa opittavaa kaiken ikäisille."
         Hour of Code:
-          title: "Kooditunti"
+          title: "Koodaustunti"
           description: ""
         edit-code:
           title: "Muokkaa koodia"
@@ -489,7 +494,7 @@
           title: "Askel"
           description: ""
         sample_level_builder:
-          title: "Esimerkkitason rakentaja"
+          title: "Tasorakentaja esimerkki"
           description: ""
   age_interstitial:
     age: "Ikäsi"
@@ -497,3 +502,8 @@
     message: 'Olemme päivittämässä käyttökokemustamme luodaksemme sinulle vahvemman yksityisyyden suojan. Tämän vuoksi nykyisten käyttäjien tulee antaa ikänsä.<br/>Kuten aina, code.org ei koskaan vuokraa, myy tai jaa tätä tietoa kolmansille osapuolille.'
     sign_out: 'Jos et halua kertoa ikääsi voit <a href="%{url}">kirjautua ulos</a>.'
   zendesk_too_young_message: 'Pahoittelut, nuoremmat käyttäjät eivät voi kirjautua tukisivustollemme. Voit selailla <a href="http://support.code.org">support.code.org</a> -sivuja ilman kirjautumista tai pyytää vanhempiasi tai opettajaasi ottamaan yhteyttä meihin puolestasi.'
+  progress:
+    not_completed: "kesken"
+    completed_too_many_blocks: "valmis, liian monta lohkoa"
+    completed_perfect: "valmis, täydellinen"
+    furthest_level_attempted: "vaikein taso jota yritetty"

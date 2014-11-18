@@ -79,7 +79,7 @@
         Artist: Menininkas
         Unplug4: Algoritmai
         Artist2: Menininkas 2
-        Unplug5: Sudėtinės komandos
+        Unplug5: Komandų kūrimas
         Farmer: Ūkininkas
         Unplug6: Sąlyginiai sakiniai
         Artist3: Menininkas 3
@@ -98,8 +98,9 @@
         Jigsaw: Dėlionės
         MazeStep: Labirintas Žingsnio režimu
         Wordsearch: Žodžių paieška
-        Webapp: Webapp
+        Webapp: Web-programėlė
         ArtistEC: Menininkas
+        TextMatch: Text Match
     trophy:
       name:
         Bronze: Bronza
@@ -114,11 +115,11 @@
         loop_until: „Kartok kol įvyks“ blokas
         loop_while: „Kol“ blokas
         loop_for: Blokelis-skaitiklis
-        function: Sudėtinės komandos
+        function: Komandų kūrimas
         parameters: Komandų parametrai (gaunama informacija)
     level:
       instructions:
-        maze_2_2: 'Ar gali man padėti sugauti neklaužadą kiaulę? Sujunk keletą „judėk
+        maze_2_2: 'Ar gali man padėti sugauti neklaužadą kiaulę? Sujunk keletą „ženk
           į priekį“ blokų ir nuspausk „Paleisti“, kad aš ją sugaučiau. '
         maze_2_1: Ši kiaulė sutaršė mano plunksnas. Padėk man ją pasiekti!
         maze_2_2_5: Surask kelią ir nuvesk mane pas kvailą kiaulę. Tik neleisk man
@@ -132,8 +133,8 @@
         maze_2_7: Padėk man pasiekti šią kiaulę, panaudodamas kuo mažiau blokelių.
           Pamėgink panaudoti daugiau nei vieną „Kartojimo“ blokelį.
         maze_2_8: 'Kai blokelis yra pilkas, tai reiškia, kad negalima jo pašalinti.
-          Išspręsk šią užduotį panaudodamas kartojimo blokelį, kuris kartoja 3 kartus.
-          Pamėgink į jį įdėti šiuos blokelius: judėk į priekį, judėk į priekį, pasisuk.'
+          Išspręsk šią užduotį panaudodamas kartojimą 3 kartus. Į kartojimą įdėk šiuos
+          blokelius: „ženk į priekį“, „ženk į priekį“, „pasisuk“.'
         maze_2_9: Išmėgink naują „Kartok, kol“ blokelį – jis kartos veiksmus tol,
           kol aš pasieksiu kiaulę.
         maze_2_10: Ar išspręsi šią užduotį, panaudodamas tik 4 blokelius?
@@ -262,9 +263,9 @@
           yra pilki ir jų neįmanoma aktyvuoti. Sukurk naują programą, panaudodamas
           „skaičiuok su“ blokelį (kategorijoje „Kartojimas“) ir „skaitiklio“ blokelį
           (kategorijoje „Kintamieji“), kuri nubrėš tokią pat spiralę.
-        turtle_2_7_5: Yra duota nauja komanda, pavadinta „Nupiešk sniego senį“ (kategorijoje
-          „Sudėtinės komandos“). Nupiešk du sniego senius. Vieno dydis turi būti 250,
-          o kito – 100.
+        turtle_2_7_5: „Komandų kūrimas“ skyriuje yra aprašyta nauja komanda „Nupiešk
+          sniego senį“. Panaudok ją, kad nupieštum du sniego senius. Vieno dydis turi
+          būti 250, o kito – 100.
         turtle_2_8: Ši užduotis šiek tiek sudėtingesnė. Panaudok sudėtinę komandą  „Nupiešk
           sniego senį“ ir naują blokelį „Peršok į priekį“ (jis yra kategorijoje „Komandos“).
           Nupiešk 3 sniego senius skirtingomis spalvomis, tarp jų turi būti po 100
@@ -279,8 +280,8 @@
           duobes. Naudok kartojimo blokelius, kad būtų galima panaudoti kuo mažiau
           blokelių. Sufleris: į vieną kartojimo blokelį galima įdėti net ir kitą kartojimo
           blokelį.'
-        maze_karel_2_2: Kategorijoje „Sudėtinės komandos“ atsirado naujas blokelis,
-          pavadintas „užpildyk 5“. Panaudok jį ir užpildyk šią duobę.
+        maze_karel_2_2: „Komandų kūrimas“ skyriuje atsirado naujas blokelis, pavadintas
+          „užpildyk 5“. Panaudok jį ir užpildyk šią duobę.
         maze_karel_2_3: 'Panaudok blokelį „užpildyk 5“, kad užpildytum visas duobes. '
         maze_karel_2_4: Sukurk naują komandą, kuri pašalina 7 kastuvus žemių. Tada
           panaudok ją, kad galėčiau pašalinti visas krūvas.
@@ -308,8 +309,8 @@
         turtle_3_4: Sugalvok, kaip panaudoti funkcijas „nubrėžk trikampį“ ir „nubrėžk
           kvadratą“ (bei keletą kitų blokelių), kad nupieštum namą aplink liūtą.
         turtle_3_5: "Sukurk komandą „nupiešk namą“ ir panaudok ją, kad nupieštum namą
-          aplink dvi kates. \nSufleris: \"tiks blokelis „Komanda: daryk kažką“, tik
-          įrašyk norimą komandos pavadinimą.\"\n"
+          aplink dvi kates. \nSufleris: \"tiks blokelis „nauja komandą“, tik įrašyk
+          norimą komandos pavadinimą.\"\n"
         turtle_3_6: 'Naudodamas pavyzdį, komandai „nubrėžk trikampį“  leisk gauti
           informaciją „dydis“. Tada nupiešk du skirtingo dydžio trikampius. (Sufleris:
           kad komandai pridėtum informacijos laukus (parametrus), nuspausk ant žvaigždės)'
@@ -552,9 +553,12 @@
           žodį "BELOW"
         maze_wordsearch_k_20: Pajudink mane į vieną pusę, paskui - kitą, kad parašyčiau
           žodį "STORY"
-        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        webapp_ec_simple: Sukurk savo web-progrmėlę naudodamas "createHtmlBlock".
         turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
           it in the new "penColour" block.'
+        turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas:
+          a stick figure, snowflake, or spiral. Also try the new "penWidth" block.
+          Have fun!'
     video:
       name:
         maze_intro: Labirinto užduoties įvadas
@@ -565,17 +569,16 @@
         loop_until: „Kartoti, kol“ blokelis
         if: „Jei“ blokelis
         if_else: „Jei-priešingu atveju“ blokelis
-        function: Sudėtinės komandos
+        function: Komandų kūrimas
         loop_while: „Kol“ blokelis
         loop_for: Blokelis-skaitiklis
         parameters: Komandų parametrai (gaunama informacija)
         hoc_wrapup: „Programavimo valandos“ apibendrinimas
-        20_wrapup: 20-ties valandų įvado apibendrinimas
         Unplug1: Kas yra CS?
         Unplug2: Skaičiuojamasis mąstymas
         Unplug3: Programavimas ant languoto popieriaus
         Unplug4: Algoritmai
-        Unplug5: Sudėtinės komandos
+        Unplug5: Komandų kūrimas
         Unplug6: Sąlyginiai sakiniai
         Unplug7: Dainų rašymas
         Unplug8: Komandos su parametrais
@@ -585,7 +588,7 @@
         C1_happy_maps_unplugged: Laimingieji žemėlapiai
         C1_moveitmoveit_unplugged: Judėk, judėk
         C1_bigevent_unplugged: Didelis įvykis
-        C1_getting_loop: Kartojimo supratimas
+        C1_getting_loopy: Kartojimo supratimas
         C1_pair_programming: Programavimas poroje
         C1_maze_intro_sequencing: 'Labirintas: įvadas į sekas'
         C1_maze_debugging: 'Labirintas: klaidų ieškojimas'
@@ -597,21 +600,24 @@
         C1_maze_loops: 'Labirintas: kartojimas'
         C1_playlab_storytelling: 'Žaidimų laboratorija: sukurk istoriją'
         C1_planting_seed: Sėklos sodinimas
-        C1_building_foundating: Pamatų kūrimas
+        C1_building_foundation: Pamatų kūrimas
         C2_maze_intro: Labirinto užduoties įvadas
         C2_artist_intro: Menininko užduoties įvadas
         C2_zuck_repeat_loop: 'Labirintas: kartojimas'
         C2_artist_loops: 'Menininkas: kartojimas'
+        C2_artist_debugging: 'Menininkas: klaidų ieškojimas'
+        C2_bee_loops: 'Bitė: kartojimas'
+        C2_bee_debugging: 'Bitė: klaidų ieškojimas'
         C2_bee_conditionals: 'Bitė: sąlyginiai sakiniai'
         C2_playlab_createstory: 'Žaidimų laboratorija: sukurk istoriją'
         C2_graph_paper: Programavimas ant languoto popieriaus
         C2_conditionals_with_cards: Sąlyginiai sakiniai
         C2_binary_bracelets: Dvejetainės apyrankės
-        C2_replay_programming: Programavimas komandoje
+        C2_relay_programming: Programavimas komandoje
         C2_paper_airplanes: Popieriniai lėktuvėliai
-        C3_maze_intro: Įvadas į Labirintą
+        C3_maze_level_4: 'Labirintas: kartojimas'
         C3_artist_intro: Įvadas į Menininką
-        C3_artist_functions: 'Menininkas: funkcijos'
+        C3_artist_functions: 'Menininkas: komandos'
         C3_bee_functions: 'Bitė: sudėtinės komandos'
         C3_bee_conditionals: 'Bitė: sąlyginiai sakiniai'
         C3_maze_conditionals: 'Labirintas: sąlyginiai sakiniai'
@@ -625,11 +631,11 @@
         C3_dice_race: Kauliukų lenktynės
         C3_internet: Internetas
         C3_crowdsourcing: Komandinis programavimas
-        C3_functional_suncatchers: Functional Suncatchers
+        C3_functional_suncatchers: Sekų suvokimas
         C3_songwriting_with_parameters: Dainų rašymas su parametrais
     callout:
       text:
-        drag_blocks: Nutempk blokelį „judėk į priekį“ ir sujunk jį su kitu tokiu pat
+        drag_blocks: Nutempk blokelį „ženk į priekį“ ir sujunk jį su kitu tokiu pat
           blokeliu
         run: Nuspausk „Paleisti“, kad išmėgintum savo programą
         watch_again: Nuspausk čia, kad iš naujo galėtum peržiūrėti vaizdo įrašą
@@ -644,3 +650,13 @@
           kad jis dalyvautų šioje istorijoje.
         studio_say_text: Įvesk tai, ką nori, kad pasakytų tavo veikėjas
         jigsaw_click: Nuspausk ant šio blokelio!
+        move_elsa_forward: Drag a "Move Forward" block and snap it below the "When
+          Run" block to make Elsa move forward
+        turn_elsa: Use the "Turn" block to make Elsa turn. The number in the drop-down
+          determines how much Elsa turns
+        replace_questions: Use the drop-down to replace "???" with a number
+        replace_questions_degree: Use the drop-down to replace "???" with the correct
+          degree to turn
+        repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
+          workspace
+        snowflake_dropdown: Use this drop-down to create different snowflakes!

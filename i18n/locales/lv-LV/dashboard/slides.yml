@@ -1,0 +1,260 @@
+"lv":
+  slides:
+    maze_intro:
+      1:
+        image: "notes/hoc1_1.jpg"
+        text: 'Laipni lūgts tavā pirmajā "Programmēšanas stundā"! Sāksim ar pirmajiem soļiem programmēšanā.'
+      2:
+        image: "notes/hoc1_2.jpg"
+        text: "Izmantojot vizuālās programmēšanas valodu Blockly, kur tu velc un noliec blokus, lai uzrakstītu kodu."
+      3:
+        image: "notes/hoc1_3.jpg"
+        text: 'Liela koda daļa ir uzrakstīta, taču Blockly ir vizuāla programmēšanas valoda. Katrs bloks atbilst "īstā" koda rindiņai.'
+      4:
+        image: "notes/hoc1_4.jpg"
+        text: "Tu iemācīsies datorzinātnes pamatus, jēdzienus, ko izmanto jebkur, sākot ar lietotņu izstrādi līdz pat Marsa ceļotāja kontrolēšanai."
+      5:
+        image: "notes/hoc1_5.jpg"
+        text: "Programma ir instrukciju kopums, kuram seko tavs dators."
+      6:
+        image: "notes/hoc1_6.jpg"
+        text: "Tavas pirmās programmas mērķis ir izvadīt Dusmīgo putnu cauri labirintam līdz Zaļajai cūkai."
+      7:
+        image: "notes/hoc1_7.jpg"
+        text: "Kreisā puse ir labirints, kurā tava programma tiek darbināta. Instrukcijas katrai puzlei ir zem labirinta."
+      8:
+        image: "notes/hoc1_8.jpg"
+        text: "Vidējā rīku kastē atrodas Dusmīgā putna komandas. Tās tu izmantosi, lai uzrakstītu savu kodu."
+      9:
+        image: "notes/hoc1_9.jpg"
+        text: "Labajā pusē atrodas tava darbvirsma, uz kuras tu uzvilksi klucīšus no rīku kastes, lai izveidotu savu kodu. Lai izdzēstu klucīti, aizvelc to līdz miskastei, kas novietota stūrī."
+      10:
+        image: "notes/hoc1_10.jpg"
+        text: 'Katrs klucītis ir viena instrukcija. Ja tu savā darbvirsmā ievelc "pakusties uz priekšu" klucīti un nospied "Sākt programmu", putns pavirzīsies vienu vietu uz priekšu labirintā.'
+      11:
+        image: "notes/hoc1_11.jpg"
+        text: "Lai izpildītu vairāk kā vienu darbību, tu vari savā darbvirsmā ievilkt vairākus klucīšus un tos savienot. Putns izpildīs komandas no augšas uz leju."
+      12:
+        image: "notes/hoc1_12.jpg"
+        text: 'Ja esi sācis programmu un vēlies to izlabot un mēģināt vēlreiz, nospied "atsākšanas" pogu.'
+      13:
+        image: "notes/hoc1_13.jpg"
+        text: "Aiziet, laiks uzveikt tās cūkas!"
+    artist_intro:
+      1:
+        image: "notes/stage5_1.jpg"
+        text: "Sveiki, es esmu JR! Katrai sacīkšu komandai ir nepieciešams datorzinātņu speciālists, lai uzvarētu. Viņi analizē datus, kas iegūti no sacīkšu mašīna, lai palīdzētu tai uzvarēt."
+      2:
+        image: "notes/stage5_2.jpg"
+        text: "Šajā puzlē tu būsi mākslinieks, kas novelk līniju aiz viņiem, visur, kur tie iet."
+      3:
+        image: "notes/stage5_3.jpg"
+        text: 'Šis klucītis saka " pavirzies uz priekšu par 100 pikseļiem". Pikseļi patiesībā ir mazi punktiņi tavā ekrānā.'
+      4:
+        image: "notes/stage5_4.jpg"
+        text: 'Šis klucītis saka " pagriezies pa labi pa 90 grādiem". Šis pagriezīs tavu mākslinieku tā pat kā "pagriezt" klucītis labirintā.'
+      5:
+        image: "notes/stage5_5.jpg"
+        text: "Lai izmainītu apjomu par kādu mākslinieks pagriežas vai pavirzās uz priekšu, noklikšķini uz bultas jebkurā no klucīšiem. Lai iepazītu šos jaunos klucīšus, droši paspēlējies ar tiem."
+    farmer_intro:
+      1:
+        image: "notes/stage9_1.jpg"
+        text: "Sveiki, es esmu Paola! Šajā puzlē tu esi zemkopis, kuram ir jānolīdzina viņas lauks, lai sāktu stādīt augus."
+      2:
+        image: "notes/stage9_2.jpg"
+        text: "Tev ir jāpalīdz viņai atbrīvoties no netīrumu kaudzēm un jāaizpilda visas bedrītes."
+      3:
+        image: "notes/stage9_3.jpg"
+        text: "Jaunie klucīši noņem 1 lāpstu ar netīrumiem no kaudzes un vienu lāpstu ar netīrumiem ieber bedrītē."
+      4:
+        image: "notes/stage9_4.jpg"
+        text: "Kaudzes un bedrītes ir dažāda lieluma, tāpēc tev ir jāizstāsta zemkopim, cik lāpstas izmantot."
+    flappy_intro:
+      1:
+        image: "notes/flappy01.jpg"
+        text: "Sveiki, es esmu Katie! Viena no visaizraujošākajām lietām datorzinātnē ir tā, ka datorprogrammas spēj būt interaktīvas."
+      2:
+        image: "notes/flappy02.jpg"
+        text: "Katru reizi, kad kāds noklikšķina, pieskaras vai ievada tekstu datorā vai savā viedtālrunī, tas izraisa notikumu un kāds no kodiem izlemj, ko darīt, kad šis notikums parādās."
+      3:
+        image: "notes/flappy03.jpg"
+        text: 'Piemēram, tev varētu būt notikumu kopums, kas saka "kad tiek noklikšķināta pelīte, atskaņo skaņu" '
+      4:
+        image: "notes/flappy04.jpg"
+        text: "Vai tu kādreiz esi dzirdējis par spēli FlappyBird? Izmantojot notikumu kopumus, mēs iemācīsimies kā uzprogrammēt pielāgotu FlappyBird versiju!"
+      5:
+        image: "notes/flappy05.jpg"
+        text: "Kods, ko tu rakstīsi ietver sevī klucīšu, kas apzīmē komandas datoram, vilkšanu un nolikšanu. Zem pārsega katrs klucītis ir attēlots kā reāls kods."
+      6:
+        image: "notes/flappy06.jpg"
+        text: 'Ja tu paskaties uz darbvirsmu, tur ir redzami daži zaļi klucīši, kas jau ir aizpildīti priekš tevis - šie ir "notikumu kopumi" '
+      7:
+        image: "notes/flappy07.jpg"
+        text: 'Ja tu vēlies, lai putns pavicina spārnus, kad tu noklikšķini peli, tu to vari izdarīt pievienojot "pavicināt spārnus" klucīti attiecīgajam notikumu kopumam un tagad ikreiz, kad tu noklikšķināsi peli, putns savicinās spārnus.'
+      8:
+        image: "notes/flappy08.jpg"
+        text: "Katrā šīs aktivitātes puzlē mēs sniegsim arvien jaunus notikumu tipus kā zaļus klucīšus tavā darbvirsmā un tu varēsi izlemt, kuri klucīši ir piemērotākie, lai to pievienotu kā atbildi konkrētajiem notikumiem."
+      9:
+        image: "notes/flappy09.jpg"
+        text: "Kad redzi šādu nolaižamo bultiņu, tas nozīmē, ka tu vari mainīt iestatījumus, piemēram, to kādu skaņu atskaņo, kad Flapijs nokrīt uz zemes."
+      10:
+        image: "notes/flappy10.jpg"
+        text: "Pēdējā puzlē tu varēsi izveidot pats savu spēli un parādīt to saviem draugiem. Izpriecājies!"
+    loop_times:
+      1:
+        image: "notes/hoc2_1.jpg"
+        text: "Sveiki, es esmu Marks! Iemācīsimies ko jaunu par cikliem. Izmantojot ciklus tu vari likt datoram atkārtot jebkuru darbību kopu atkal un atkal, pat tūkstošiem vai miljoniem daudz reižu."
+      2:
+        image: "notes/hoc2_2.jpg"
+        text: "Šajā puzlē mēs vēlamies likt putnam pakustēties 5 lauciņus tālāk, lai sasniegtu cūku."
+      3:
+        image: "notes/hoc2_3.jpg"
+        text: 'Lai palīdzētu to izdarīt, mēs varam izmantot jauno "atkārtot" pogu.'
+      4:
+        image: "notes/hoc2_4.jpg"
+        text: 'Tā vietā, lai izmantotu 5 "pakusties uz priekšu" klucīšus...'
+      5:
+        image: "notes/hoc2_5.jpg"
+        text: 'Mēs varam ielikt "pakusties uz priekšu" klucīti iekšā "atkārtot" klucītī un ierakstīt tajā to ciparu, cik lauciņus uz priekšu ir jāpakustas.'
+      6:
+        image: "notes/hoc2_6.jpg"
+        text: 'Šis ir svarīgi: "atkārtot" klucītī tu vari likt vairāk kā vienu komandu.'
+      7:
+        image: "notes/hoc2_7.jpg"
+        text: 'Izbaudi visas "atkārtot" klucīša iespējas!'
+    loop_until:
+      1:
+        image: "notes/hoc3_1.jpg"
+        text: 'Sveiki, es esmu Kris! Pirms es pievienojos basketbola komandai "Miami Heat", es studēju datorzinātnes Džordžijas Tehniskajā universitātē. Laiks izmēģināt jauno "atkārtot līdz" klucīti.'
+      2:
+        image: "notes/hoc3_2.jpg"
+        text: "Kas būtu, ja mēs nezinātu, cik tālu putnam ir jāpakustas, lai nokļūtu pie cūkas?"
+      3:
+        image: "notes/hoc3_3.jpg"
+        text: 'Ja mēs ieliekam "pakustēties uz priekšu" klucīti iekšā "atkārtot līdz" klucītī, putns kustēsies uz priekšu LĪDZ tas sasniegs cūku (vai ietrieksies sienā).'
+      4:
+        image: "notes/hoc3_4.jpg"
+        text: 'Šis ir svarīgi: tieši tā pat kā pirms tam, mēs varam ielikt vairākus klucīšus iekšā "atkārtot līdz" klucītī un tie atkārtosies.'
+    if:
+      1:
+        image: "notes/hoc4_1.jpg"
+        text: 'Sveiki, es esmu Bils! Laiks iemācīties jaunu būtisku jēdzienu: "ja" apgalvojums. Šādi dators pieņem lēmumus.'
+      2:
+        image: "notes/hoc4_2.jpg"
+        text: 'Tu pats izmanto "ja" apgalvojumus katru dienu. Pirms tu izej no mājas katru rītu, tu saki - ja ārā līst, man ir jāuzvelk mana jaka.'
+      3:
+        image: "notes/hoc4_3.jpg"
+        text: "Mēs varam likt zombijam pārbaudīt, vai kreisajā pusē ir ceļš, un, ja viņš atrod šo ceļu kreisajā pusē, mēs varam viņam likt nogriezties šajā virzienā."
+      4:
+        image: "notes/hoc4_4.jpg"
+        text: 'Lai uzrakstītu kodu šim, jāizvelk "ja" klucītis un tajā jāieliek "pagriezties pa kreisi" klucītis.'
+      5:
+        image: "notes/hoc4_5.jpg"
+        text: 'Tagad, ja mēs ieliekam "pakustēties uz priekšu" klucīti virs tā un "atkārtot"klucīti apkārt visam, katru reizi, kad zombijs pakustas, tas pārbaudīs, vai kreisajā pusē ir ceļš un pagriezīsies. "Atkārtot" komanda ir būtiska, lai katrā solī pārbaudītu, vai ir pagrieziens.'
+      6:
+        image: "notes/hoc4_6.jpg"
+        text: '"Ja" apgalvojumi ir ļoti svarīgi datorzinātnē. Viena no pirmajām programmām, ko es uzrakstīju, bija spēle "Krustiņi un nullītes", kurā "ja" apgalvojums apgalvoja, JA otrs spēlētājs tūlīt uzvarēs, nobloķēt brīvo vietu, kas atļautu viņam to izdarīt.'
+      7:
+        image: "notes/hoc4_7.jpg"
+        text: 'Izpriecājies, pielietojot "ja" klucīti!'
+    if_else:
+      1:
+        image: "notes/hoc5_1.jpg"
+        text: |-
+          Hi, my name is Saloni. I use computer science to help solve problems in health and medicine. Let's learn about the "if else" block. It looks like the "if" block, but it has an extra part at the end that says "else".
+      2:
+        image: "notes/hoc5_2.jpg"
+        text: |-
+          If I put a "move forward" block in the spot where it says "do" and a "turn left" block where it says "else" that means that the zombie will choose between 2 options. IF there is a path ahead, the zombie will move forward, and OTHERWISE (there isn't a path ahead), the zombie will turn left.
+      3:
+        image: "notes/hoc5_3.jpg"
+        text: |-
+          Just like the "if" block, we can put "if else" blocks inside a "repeat" blocks so that the zombie keeps moving and the "if else" block will keep checking if there's somewhere to turn.
+      4:
+        image: "notes/hoc5_4.jpg"
+        text: "Now, get those zombies where they belong!"
+    function:
+      1:
+        image: "notes/stage13_1.jpg"
+        text: "Hi, I'm Brina, an engineer at Instagram. A function is certain lines of code that you want to use over and over again, so instead of writing that code out everytime, you can just use one block."
+      2:
+        image: "notes/stage13_2.jpg"
+        text: "We're going to learn how to define functions. Function definitions have a star in the corner. The name of the function is written on the top line."
+      3:
+        image: "notes/stage13_3.jpg"
+        text: |-
+          The blocks that go inside the definition tell us what it does. So this function definition is called "fill 5" and it's made up of a "repeat" block and a "fill" block.
+      4:
+        image: "notes/stage13_4.jpg"
+        text: |-
+          The definition sits on the workspace, but our farmer won't run the function until we drag out our "fill 5" function block from functions category.
+      5:
+        image: "notes/stage13_5.jpg"
+        text: |-
+          Let's put the "fun" back in "FUNction!" 
+    loop_while:
+      1:
+        image: "notes/stage9_5.jpg"
+        text: |-
+          Hi, I'm Makinde! Let's learn about the "while block." 
+      2:
+        image: "notes/stage9_6.jpg"
+        text: 'The "while block" will do whatever you put inside it AS LONG AS the statement on the top is TRUE.'
+      3:
+        image: "notes/stage9_7.jpg"
+        text: "For example, if the farmer is standing on a pile, she will continue to remove 1 shovelful WHILE there is still a pile beneath her."
+    loop_for:
+      1:
+        image: "notes/stage11_1.jpg"
+        text: "Hi, I'm Trina, and I work for Pixar. I've worked on a bunch of movies, including Shrek."
+      2:
+        image: "notes/stage11_2.jpg"
+        text: 'This is our new "counter" loop. It will perform actions over and over again and you can make the actions change slightly each time.'
+      3:
+        image: "notes/stage11_3.jpg"
+        text: 'In this example, our "counter" loop says "count with counter from 50 to 90 by 10" and inside it, we have our "draw a square" block. Drag the "counter" block from the "Variables" section into the "length" spot.'
+      4:
+        image: "notes/stage11_4.jpg"
+        text: "This means our artist is going to draw a square that has 50 pixel length sides, then it will add 10 to that and draw a square with 60 pixel length sides. Then it will keep adding 10 and drawing squares until it reaches 90. So we'll have squares of 50, 60, 70, 80, and 90."
+    parameters:
+      1:
+        image: "notes/stage15_1.jpg"
+        text: "Hi, I'm Janete, and I'm an engineer at Zynga."
+      2:
+        image: "notes/stage15_2.jpg"
+        text: "What if we want to draw a bunch of triangles and have their lengths be different sizes?"
+      3:
+        image: "notes/stage15_3.jpg"
+        text: "Mēs varam rakstīt šo visu kodu ar roku vai izmantot funkcijas ar parametriem."
+      4:
+        image: "notes/stage15_4.jpg"
+        text: 'Lai to izdarītu, noklikšķiniet zilo zvaigzni funkciju definēšanai "zīmēt trijstūri". Tad ievelciet "ievadiet vārdu" iekš "ievadiet" bloka.'
+      5:
+        image: "notes/stage15_5.jpg"
+        text: 'Tālāk ja tu rakstīsi "garums" vietās, kur teikts "x" un nospiedīsi "Enter", tad tu izveidosi garuma ievadi savai funkcijai.'
+      6:
+        image: "notes/stage15_6.jpg"
+        text: 'Then click on the star. Now, you want to click on the variables category and drag the "length" block into the "move forward" block of your function definition. And drag away the old number block.'
+      7:
+        image: "notes/stage15_7.jpg"
+        text: 'To use your function with parameters, click on the functions category and drag out your "draw a triangle with length" function.'
+      8:
+        image: "notes/stage15_8.jpg"
+        text: "Tagad tu vari izmantot matemātikas bloku, lai spētu ievadīt dažādus skaitļus un iespēju zīmēt dažāda izmēra trijstūrus."
+    hoc_wrapup:
+      1:
+        image: "notes/hoc6_1.jpg"
+        text: "Congratulations! With the last puzzle you solved, you just wrote code that can tell ANY robot how to find it's way through a non-branching maze or tunnel of any length, whether it's a zombie, a bird, a mars rover, or even a self-driving car."
+      2:
+        image: "notes/hoc6_2.jpg"
+        text: "Pamatkoncepcijas, ko tu izmantoji, ir pamats katrai programmai vai aplikācijai, kuru jebkad izmantosi. Mēs mācījāmies par atkārtotajiem cikliem, atkārtot līdz nosacījumiem, ja nosacījumiem un ja cits nosacījumiem."
+      3:
+        image: "notes/hoc6_3.jpg"
+        text: 'Ja tev patika tava pirmā "programmēšanas stunda" , apmeklē code.org, lai turpinātu savu izglītību datorzinātnē! Kad pabeigsi mūsu 20 stundu kursu, tu būsi apguvis programmēšanas pamatus un sāksi mācīties kā izveidot aplikācijas viedtālruņiem, instrukcijas robotiem, spēles un jebko citu, ko vēlies.'
+      4:
+        image: "notes/hoc6_4.jpg"
+        text: "Tehnoloģijas maina visu, ko mēs darām, un neatkarīgi no tā, vai esi jauns vai vecs programmēšana ir jautra, radoša un ikviens var to iemācīties!"
+    20_wrapup:
+      1:
+        image: "notes/bird.png"
+        text: "Raidījuma pieraksti būs drīzumā!"

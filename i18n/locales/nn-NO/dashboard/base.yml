@@ -44,7 +44,7 @@
   k8intro: "Barneskuleintroduksjon til informatikkurs (15-25 timar)"
   already_started: 'Allereie starta? Hald fram her >> '
   demos: 'Administrator: Alle demoar'
-  continue: "Fortsett"
+  continue: "Hald fram"
   prize: "premie"
   more_info: "Meir info"
   auth:
@@ -388,8 +388,11 @@
   try_reloading: "Last siden på nytt"
   next_stage: "Ferdig! Fortsett til neste nivå"
   download_pdf: "Åpne oppgavelisten"
+  lesson_plan: "Lesson Plan"
   view_lesson_plan: "Vis leksjonsplan"
   pdf_download: "Last ned PDF"
+  download_coming_soon: "Downloadable activity coming soon."
+  video_coming_soon: "Video Coming Soon!"
   share_code:
     title: 'Klikk "Kjør" for å se programmet mitt i aksjon'
     bounce_og_title: "Sjekk ut Bounce-spillet mitt"
@@ -447,7 +450,7 @@
     correct_title: "Riktig"
     correct_body: "Det er riktig svar."
   text_match:
-    placeholder: "Enter your answer here"
+    placeholder: "Angi svaret her"
   dialog:
     ok: "OK"
   time:
@@ -479,7 +482,7 @@
           title: "Puslespill"
           description: ""
         step:
-          title: "Trinn"
+          title: "Tren"
           description: ""
         sample_level_builder:
           title: "Eksempelkode for nivå"
@@ -491,7 +494,7 @@
     sign_out: 'Hvis du ikke ønsker å oppgi din alder, kan du <a href="%{url}"> avslutte</a>.'
   zendesk_too_young_message: 'Beklager, yngre brukere kan ikke logge på nettstedet for kundestøtte. Du kan bla gjennom <a href="http://support.code.org"> support.code.org</a> uten å logge på eller be en forelder eller lærer å kontakte oss for deg.'
   progress:
-    not_completed: "not completed"
-    completed_too_many_blocks: "completed, too many blocks"
-    completed_perfect: "completed, perfect"
+    not_completed: "ikke fullført"
+    completed_too_many_blocks: "fullført, for mange blokker"
+    completed_perfect: "Perfekt fulført"
     furthest_level_attempted: "furthest level attempted"

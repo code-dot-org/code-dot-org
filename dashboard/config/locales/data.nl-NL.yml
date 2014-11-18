@@ -100,6 +100,7 @@
         Wordsearch: Woordzoeken
         Webapp: Webapp
         ArtistEC: De Artiest
+        TextMatch: Text Match
     trophy:
       name:
         Bronze: Brons
@@ -564,6 +565,9 @@
         webapp_ec_simple: Maak je eigen web app met het maakHtmlBlok.
         turtle_ec_1_2: Teken nu een vierkant.  Gebruik je lievelingskleur door het
           te kiezen in het nieuwe blok "penKleur".
+        turtle_ec_1_10: 'Het is je gelukt! Teken nu alles wat je wilt. Wat leuke ideeën:
+          een stok poppetje, sneeuwvlok of spiraal. Probeer ook het nieuwe "penWidth"
+          block. Veel plezier!'
     video:
       name:
         maze_intro: Doolhof Intro
@@ -579,7 +583,6 @@
         loop_for: Teller Blok
         parameters: Functies met Parameters
         hoc_wrapup: CodeUur Samenvatting
-        20_wrapup: 20-Uur Samenvatting
         Unplug1: Wat is CS?
         Unplug2: Rekenend Denken
         Unplug3: Programmeren op Ruitjespapier
@@ -594,7 +597,7 @@
         C1_happy_maps_unplugged: Vrolijke Routes
         C1_moveitmoveit_unplugged: verplaats het, verplaats het
         C1_bigevent_unplugged: De grote gebeurtenis
-        C1_getting_loop: Mooie linten
+        C1_getting_loopy: Mooie linten
         C1_pair_programming: Programmeren in Tweetallen
         C1_maze_intro_sequencing: Doolhof volgorde introductie
         C1_maze_debugging: Doolhof Foutopsporing
@@ -606,19 +609,22 @@
         C1_maze_loops: Doolhof lussen
         C1_playlab_storytelling: Speel Lab - Maak een Verhaal
         C1_planting_seed: Poot een Zaadje
-        C1_building_foundating: Een Basis Bouwen
+        C1_building_foundation: Een Basis Bouwen
         C2_maze_intro: Doolhof Intro
         C2_artist_intro: Artiest Intro
         C2_zuck_repeat_loop: Doolhof lussen
         C2_artist_loops: Kustenaar lussen
+        C2_artist_debugging: Kunstenaar foutopsporing
+        C2_bee_loops: Bij lussen
+        C2_bee_debugging: Bij foutopsporing
         C2_bee_conditionals: Bij voorwaardelijke instructies
         C2_playlab_createstory: Speel Lab - Maak een Verhaal
         C2_graph_paper: Programmeren op Ruitjespapier
         C2_conditionals_with_cards: Voorwaardelijke instructies
         C2_binary_bracelets: Binaire armbanden
-        C2_replay_programming: Estafette Programmeren
+        C2_relay_programming: Estafette Programmeren
         C2_paper_airplanes: Papieren Vliegtuigjes
-        C3_maze_intro: Doolhof Intro
+        C3_maze_level_4: Doolhof lussen
         C3_artist_intro: Artiest Intro
         C3_artist_functions: Kunstenaar functies
         C3_bee_functions: Bij functies
@@ -652,3 +658,13 @@
           het verhaal begint" blok om het verhaal een speler te geven
         studio_say_text: Type wat je speler tussen deze aanhalingstekens moet zeggen
         jigsaw_click: Klik op dit blok!
+        move_elsa_forward: Drag a "Move Forward" block and snap it below the "When
+          Run" block to make Elsa move forward
+        turn_elsa: Use the "Turn" block to make Elsa turn. The number in the drop-down
+          determines how much Elsa turns
+        replace_questions: Use the drop-down to replace "???" with a number
+        replace_questions_degree: Use the drop-down to replace "???" with the correct
+          degree to turn
+        repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
+          workspace
+        snowflake_dropdown: Use this drop-down to create different snowflakes!

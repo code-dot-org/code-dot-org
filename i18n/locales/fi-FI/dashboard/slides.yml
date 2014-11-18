@@ -3,7 +3,7 @@
     maze_intro:
       1:
         image: "notes/hoc1_1.jpg"
-        text: "Tervetuloa ensimmäiselle koodaustunnille! Sukelletaanpa heti ohjelmoinnin maailmaan."
+        text: "Tervetuloa ensimmäiselle kooditunnille! Sukelletaanpa heti ohjelmoinnin maailmaan."
       2:
         image: "notes/hoc1_2.jpg"
         text: "Käytämme Blocklyä. Se on on visuaalinen ohjelmointikieli, jossa koodia kirjoitetaan vetämällä ja pudottamalla lohkoja."
@@ -12,7 +12,7 @@
         text: 'Yleensä koodi kirjoitetaan, mutta Blockly on visuaalinen. Jokainen lohko vastaa riviä "oikeaa" koodia.'
       4:
         image: "notes/hoc1_4.jpg"
-        text: "Opit kohta tietotekniikan perusteet. Näitä käsitteitä käytetään kaikkialla sovelluksista aina Mars-mönkijän ohjaamiseen."
+        text: "Opit kohta tietotekniikan perusteet. Näitä käsitteitä käytetään kaikkialla aina pienistä sovelluksista Mars-mönkijän ohjaamiseen saakka."
       5:
         image: "notes/hoc1_5.jpg"
         text: "Ohjelma on joukko ohjeita, joita tietokoneesi noudattaa."
@@ -27,10 +27,10 @@
         text: "Keskimmäinen työkalupakki sisältää komentoja Angry Bird -linnulle. Näitä käytetään koodisi rakentamiseen."
       9:
         image: "notes/hoc1_9.jpg"
-        text: "Oikealla on työtilasi, johon vedät lohkoja työkalupakista ja rakennat ohjelmasi. Jos haluat poistaa lohkon, vedä se nurkasta löytyvään roskakoriin."
+        text: "Oikealla on työtilasi, johon rakennat ohjelmasi raahamalla lohkoja työkalupakista. Jos haluat poistaa lohkon, vedä se nurkasta löytyvään roskakoriin."
       10:
         image: "notes/hoc1_10.jpg"
-        text: 'Jokainen lohko on ohje. Jos vedät "siirrä eteenpäin" -lohkon työtilaasi ja painat "suorita ohjelma" -nappia, lintu liikkuu yhden ruudun sokkelossa.'
+        text: 'Jokainen lohko on ohje. Jos vedät "siirry eteenpäin" -lohkon työtilaasi ja painat "suorita ohjelma" -nappia, lintu liikkuu yhden ruudun sokkelossa.'
       11:
         image: "notes/hoc1_11.jpg"
         text: "Suorittaaksesi enemmän kuin yhden toiminnon, voit vetää monta lohkoa työtilaasi ja kiinnittää ne toisiinsa. Lintu tekee toiminnot ylhäältä alaspäin."
@@ -72,7 +72,7 @@
     flappy_intro:
       1:
         image: "notes/flappy01.jpg"
-        text: "Hi, I'm Katie! One of the most exciting things about computer science is that a computer program can be interactive."
+        text: "Hei olen Katie! Yksi mielenkiintoisimmista asioista tietotekniikassa on, että tietokoneohjelma voi olla vuorovaikutteinen."
       2:
         image: "notes/flappy02.jpg"
         text: "Any time somebody clicks or taps or types on a computer or phone, that generates an EVENT, and there's some code that decides what to do when an EVENT occurs."
@@ -99,7 +99,7 @@
         text: 'When you see a drop down arrow like this, that means you can change the settings - like what sound to play when flappy hits the ground.'
       10:
         image: "notes/flappy10.jpg"
-        text: "In the final puzzle you'll be able to create your own game and share it with your friends. Have fun!"
+        text: "Viimeisessä pulmassa voit luoda oman pelin ja jakaa sen ystäviesi kanssa. Pidä hauskaa!"
     loop_times:
       1:
         image: "notes/hoc2_1.jpg"

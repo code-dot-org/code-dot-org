@@ -84,9 +84,9 @@
         Multiple Choice: "Questions à choix multiples"
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
         Choose an algorithm for the image provided: "Choose an algorithm for the image provided"
-        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 'Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square'
-        Start with a square<br/>Put a triangle right of square<br/>Put a rhombus below square<br/>Put triangle right of rhombus: 'Start with a square<br/>Put a triangle right of square<br/>Put a rhombus below square<br/>Put triangle right of rhombus'
-        Start with a square<br/>Put a rhombus above the square<br/>Put a triangle right of the rhombus: 'Start with a square<br/>Put a rhombus above the square<br/>Put a triangle right of the rhombus'
+        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 'Commencer par un carré<br/>Mettez un triangle au-dessus du carré<br/>Mettez un triangle au-dessous du carré'
+        Start with a square<br/>Put a triangle right of square<br/>Put a rhombus below square<br/>Put triangle right of rhombus: 'Commencez par un carré<br/>Mettez un triangle à droite du carré<br/> Mettez un losange au-dessous du carré<br/>Mettez un triangle à droite du losange'
+        Start with a square<br/>Put a rhombus above the square<br/>Put a triangle right of the rhombus: 'Commencer par un carré<br/>Mettez un losange au-dessus du carré<br/>Mettez un triangle à droite du losange'
         Start with a square<br/>Put a triangle below the square<br/>Put a rhombus right of the triangle: 'Start with a square<br/>Put a triangle below the square<br/>Put a rhombus right of the triangle'
       2-3 Algorithms Multi 2:
         Multiple Choice: "Questions à choix multiples"

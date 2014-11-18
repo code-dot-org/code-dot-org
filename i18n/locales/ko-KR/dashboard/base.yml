@@ -76,7 +76,7 @@
     gender: "성별 (옵션)"
     birthday: "생일 (옵션)"
     age: "나이"
-    user_type: "Are you a student or teacher?"
+    user_type: "학생 또는 선생님이신가요?"
     submit: "가입 신청하기"
     teacher: "선생님이신가요?"
     valid_username: "사용 가능!"
@@ -216,7 +216,7 @@
         playlab: "앱 만들기"
         artist: "아무거나 그리기"
     user:
-      classroom: "내 학생"
+      classroom: "선생님 홈페이지"
       label: '안녕하세요? %{username} 님'
       stats: "나의 진도"
       settings: "내 계정"
@@ -388,8 +388,11 @@
   try_reloading: "페이지를 새로고침 해보세요"
   next_stage: "모두 완료했습니다! 다음 단계를 계속하세요"
   download_pdf: "Open Lesson Plan"
+  lesson_plan: "Lesson Plan"
   view_lesson_plan: "강의 계획 살펴보기"
   pdf_download: "PDF 다운로드"
+  download_coming_soon: "Downloadable activity coming soon."
+  video_coming_soon: "Video Coming Soon!"
   share_code:
     title: '프로그램을 확인하기 위해 "실행하기"를 클릭하세요.'
     bounce_og_title: "내가 만든 바운스 게임 확인하기"
@@ -446,6 +449,8 @@
     wrong_body: "제출한 답안은 정답이 아닙니다. 다시 시도해 보세요."
     correct_title: "정답"
     correct_body: "정답입니다."
+  text_match:
+    placeholder: "이름을 입력하세요."
   dialog:
     ok: "확인"
   time:
@@ -488,3 +493,8 @@
     message: '개인 정보 보호 정책에 따라 서비스를 제공합니다. 나이를 입력해 주세요.<br/> code.org 는 제출한 정보를 제3자에게 대여/판매/공유하지 않습니다.'
     sign_out: '나이 정보를 제출하기 원하지 않으시면 <a href="%{url}">탈퇴</a>를 하실 수 있습니다.'
   zendesk_too_young_message: '어린 학생들은 도움 사이트에 가입할 수 없습니다. 대신 가입하거나 부모나 보호자의 동의 없이  <a href="http://support.code.org">support.code.org</a> 를 사용할 수 있습니다.'
+  progress:
+    not_completed: "완료되지 않음"
+    completed_too_many_blocks: "완료되었지만, 너무 많은 블럭들을 사용함"
+    completed_perfect: "완료"
+    furthest_level_attempted: "시도한 가장 높은 레벨"

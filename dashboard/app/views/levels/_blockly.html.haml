@@ -13,7 +13,7 @@
   %link{href: "#{blockly_path}css/common.css", rel: 'stylesheet', type: 'text/css'}
   %link{href: "#{blockly_path}css/#{app}.css", rel: 'stylesheet', type: 'text/css'}
 
-  - if @game.name == "MazeEC" || @game.name == "ArtistEC" || @game.name == "Webapp"
+  - if @game.uses_droplet?
     %script{src: "#{blockly_path}js/jsinterpreter/acorn_interpreter.js"}
     %script{src: "#{blockly_path}js/requirejs/require.js"}
     %script{src: "#{blockly_path}js/ace/ace.js"}
@@ -36,6 +36,8 @@
 
   - send_to_phone = request.location.try(:country_code) == 'US' ||              |
       (!Rails.env.production? && request.location.try(:country_code) == 'RD') |
+
+  %div{style: "display:none"}= render partial: 'levels/reference_area'
 
   :javascript
     var script_path = "#{@script_level && build_script_level_path(@script_level)}";
@@ -160,23 +162,6 @@
         }
       },
       Dialog: Dialog,
-      referenceArea: function() {
-        var referenceDiv = $('#{escape_javascript(render partial: "levels/reference_area")}');
-        referenceDiv.find('.video_link').each(function() {
-          addClickTouchEvent($(this), $.proxy(function() {
-            showVideoDialog({
-              src: $(this).attr('data-src'),
-              name: $(this).attr('data-name'),
-              key: $(this).attr('data-key'),
-              download: $(this).attr('data-download'),
-              thumbnail: $(this).attr('data-thumbnail'),
-              enable_fallback: true,
-              autoplay: true
-            });
-          }, this));
-        });
-        return referenceDiv[0];
-      },
       showInstructionsWrapper: function(showInstructions) {
         var hasInstructions = level.instructions || level.aniGifURL;
         if (!hasInstructions || this.share || level.skipInstructionsPopup) {

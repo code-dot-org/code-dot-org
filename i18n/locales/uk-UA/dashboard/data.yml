@@ -100,6 +100,7 @@
         Wordsearch: "Пошук слів"
         Webapp: "Webapp"
         ArtistEC: "Художник"
+        TextMatch: "Співставлення тексту"
     trophy:
       name:
         Bronze: "Бронза"
@@ -330,7 +331,8 @@
         maze_wordsearch_k_16: "Переміщуйте мене у різні сторони, щоб утворити слово BELOW (НИЖЧЕ)"
         maze_wordsearch_k_20: "Це перевірка! Переміщуйте мене в різні сторони, щоб написати слово STORY (ІСТОРІЯ)"
         webapp_ec_simple: "Створити свій веб-додаток за допомогою createHtmlBlock."
-        turtle_ec_1_2: 'Тепер намалюйте квадрат. Примітка: використайте свій улюблений колір, вибравши його у новому блоці "penColour".'
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColor" block.'
+        turtle_ec_1_10: 'Ви це зробили! Тепер можете малювати, що завгодно. Деякі ідеї для зацікавлення: фігурка, сніжинка або спіраль. Також спробуйте новий блок "ширина пера". Розважайтеся!'
     video:
       name:
         maze_intro: "Вступ до лабіринту"
@@ -346,7 +348,6 @@
         loop_for: "Блок лічильника"
         parameters: "Функції з параметрами"
         hoc_wrapup: "Підсумок години коду"
-        20_wrapup: "20-годинний підсумок"
         Unplug1: "Що таке інформатика?"
         Unplug2: "Обчислювальне мислення"
         Unplug3: "Програмування по клітинках"
@@ -361,7 +362,7 @@
         C1_happy_maps_unplugged: "Щасливі карти"
         C1_moveitmoveit_unplugged: "Рухайся, рухайся"
         C1_bigevent_unplugged: "Велика подія"
-        C1_getting_loop: "Економія на повторах"
+        C1_getting_loopy: "Економія на повторах"
         C1_pair_programming: "Парне програмування"
         C1_maze_intro_sequencing: 'Лабіринт: вступ у послідовність'
         C1_maze_debugging: 'Лабіринт: відлагодження'
@@ -373,19 +374,22 @@
         C1_maze_loops: 'Лабіринт - цикли'
         C1_playlab_storytelling: 'Ігрова студія: Створення історії'
         C1_planting_seed: "Висаджування насіння"
-        C1_building_foundating: "Закладання основ"
+        C1_building_foundation: "Закладання основ"
         C2_maze_intro: "Вступ до лабіринту"
         C2_artist_intro: "Вступ до художника"
         C2_zuck_repeat_loop: 'Лабіринт - цикли'
         C2_artist_loops: 'Художник - цикли'
+        C2_artist_debugging: 'Художник - відлагодження'
+        C2_bee_loops: 'Бджола: цикли'
+        C2_bee_debugging: 'Бджола - відлагодження'
         C2_bee_conditionals: 'Бджола - умови'
         C2_playlab_createstory: 'Ігрова студія: Створення історії'
         C2_graph_paper: "Програмування по клітинках"
         C2_conditionals_with_cards: "Умови"
         C2_binary_bracelets: "Двійкові браслети"
-        C2_replay_programming: "Релейне програмування"
+        C2_relay_programming: "Релейне програмування"
         C2_paper_airplanes: "Паперові літачки"
-        C3_maze_intro: "Вступ до лабіринту"
+        C3_maze_level_4: 'Лабіринт: цикли'
         C3_artist_intro: "Вступ до художника"
         C3_artist_functions: 'Художник - функції'
         C3_bee_functions: 'Бджола - функції'
@@ -415,3 +419,9 @@
         set_sprite_image: 'Прикріпіть блок "встановити зображення персонажа" до блоку "коли історія починається", щоб обрати персонажа своєї історії'
         studio_say_text: "Впишіть фразу персонажа всередину лапок"
         jigsaw_click: "Клацніть цей блок!"
+        move_elsa_forward: 'Drag a "Move Forward" block and snap it below the "When Run" block to make Elsa move forward'
+        turn_elsa: 'Use the "Turn" block to make Elsa turn. The number in the drop-down determines how much Elsa turns'
+        replace_questions: 'Use the drop-down to replace "???" with a number'
+        replace_questions_degree: 'Use the drop-down to replace "???" with the correct degree to turn'
+        repeat_blocks: 'Use the "Repeat" block and wrap it around the blocks in the workspace'
+        snowflake_dropdown: "Use this drop-down to create different snowflakes!"

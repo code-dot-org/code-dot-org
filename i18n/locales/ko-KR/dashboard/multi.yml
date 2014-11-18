@@ -530,7 +530,7 @@
         George Jetson: "George Jetson"
       unique level name here:
         title: "제목화면 주제"
-        description here: "description here"
-        Question: "Question"
-        wrong answer: "wrong answer"
-        right answer: "right answer"
+        description here: "설명 입력"
+        Question: "질문 입력"
+        wrong answer: "정답이 아닙니다."
+        right answer: "정답입니다."

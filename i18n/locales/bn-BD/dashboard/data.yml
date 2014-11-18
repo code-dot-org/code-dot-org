@@ -100,6 +100,7 @@
         Wordsearch: "Wordsearch"
         Webapp: "Webapp"
         ArtistEC: "শিল্পী"
+        TextMatch: "Text Match"
     trophy:
       name:
         Bronze: "ব্রোঞ্জ"
@@ -341,7 +342,8 @@
         maze_wordsearch_k_16: "Move me one way, then another to spell the word BELOW"
         maze_wordsearch_k_20: "This is a test! Move me one way, then another to spell the word STORY"
         webapp_ec_simple: "Create your web app by using createHtmlBlock."
-        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColour" block.'
+        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColor" block.'
+        turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new "penWidth" block. Have fun!'
     video:
       name:
         maze_intro: "Maze Intro"
@@ -357,7 +359,6 @@
         loop_for: "Counter Block"
         parameters: "Functions with Parameters"
         hoc_wrapup: "Hour of Code Wrapup"
-        20_wrapup: "20-Hour Wrapup"
         Unplug1: "What is CS?"
         Unplug2: "Computational Thinking"
         Unplug3: "Graph Paper Programming"
@@ -372,7 +373,7 @@
         C1_happy_maps_unplugged: "Happy Maps"
         C1_moveitmoveit_unplugged: "Move It, Move It"
         C1_bigevent_unplugged: "The Big Event"
-        C1_getting_loop: "Getting Loopy"
+        C1_getting_loopy: "Getting Loopy"
         C1_pair_programming: "Pair Programming"
         C1_maze_intro_sequencing: "Maze Sequencing Intro"
         C1_maze_debugging: "Maze Debugging"
@@ -384,19 +385,22 @@
         C1_maze_loops: "Maze Loops"
         C1_playlab_storytelling: 'Play Lab - Create a Story'
         C1_planting_seed: "Planting a Seed"
-        C1_building_foundating: "Building a Foundation"
+        C1_building_foundation: "Building a Foundation"
         C2_maze_intro: "Maze Intro"
         C2_artist_intro: "Artist Intro"
         C2_zuck_repeat_loop: "Maze Loops"
         C2_artist_loops: "Artist Loops"
+        C2_artist_debugging: "Artist Debugging"
+        C2_bee_loops: "Bee Loops"
+        C2_bee_debugging: "Bee Debugging"
         C2_bee_conditionals: "Bee Conditionals"
         C2_playlab_createstory: 'Play Lab - Create a Story'
         C2_graph_paper: "Graph Paper Programming"
         C2_conditionals_with_cards: "Conditionals"
         C2_binary_bracelets: "Binary Bracelets"
-        C2_replay_programming: "Relay Programming"
+        C2_relay_programming: "Relay Programming"
         C2_paper_airplanes: "Paper Airplanes"
-        C3_maze_intro: "Maze Intro"
+        C3_maze_level_4: "Maze Loops"
         C3_artist_intro: "Artist Intro"
         C3_artist_functions: "Artist Functions"
         C3_bee_functions: "Bee Functions"
@@ -426,3 +430,9 @@
         set_sprite_image: 'Attach a "set actor to image" block to the "when story starts" block to enable an actor for this story'
         studio_say_text: "Type what you want your actor to say within these quotes"
         jigsaw_click: "Click this block!"
+        move_elsa_forward: 'Drag a "Move Forward" block and snap it below the "When Run" block to make Elsa move forward'
+        turn_elsa: 'Use the "Turn" block to make Elsa turn. The number in the drop-down determines how much Elsa turns'
+        replace_questions: 'Use the drop-down to replace "???" with a number'
+        replace_questions_degree: 'Use the drop-down to replace "???" with the correct degree to turn'
+        repeat_blocks: 'Use the "Repeat" block and wrap it around the blocks in the workspace'
+        snowflake_dropdown: "Use this drop-down to create different snowflakes!"

@@ -2,7 +2,7 @@
   data:
     unplugged:
       Unplug1:
-        title: "Introduzione all'informatica"
+        title: "Cos'è l'informatica"
         desc: "Questa lezione introduce il concetto di “Informatica” e spiega cosa fa un “Informatico”. Fornisce anche agli allievi l’opportunità di assumere il ruolo di un informatico. Al termine dell’attività ogni allievo avrà un ricordo da portare a casa di ciò che ha imparato. Potresti esser tentato di non insegnare adesso ai tuoi allievi le parole complicate associate a queste lezioni, ma presentarle adesso in modo divertente e giocoso è molto più produttivo che aspettare opportunità più avanzate."
         pdfs:
           - unplug1
@@ -75,11 +75,11 @@
       UnplugHappyMaps:
         title: "Mappe Felici"
         desc: "Gli studenti creano semplici algoritmi (sequenze di istruzioni) per spostare un personaggio attraverso un labirinto utilizzando un solo comando."
-        video: 'Mappe Felici - "Senza Rete"'
+        video: "Mappe Felici"
       MoveIt:
         title: "Muovilo, Muovilo"
         desc: "Gli studenti creano semplici algoritmi (sequenze di istruzioni) per spostare un personaggio attraverso un labirinto utilizzando un solo comando."
-        video: 'Muovilo, Muovilo - "Senza Rete"'
+        video: "Muovilo, Muovilo"
       PlantASeed:
         title: 'Algoritmi della Vita Reale: Piantare un Seme'
         desc: "Questa lezione tratta degli algoritmi nella vita quotidiana, usando come esempio l'atto del piantare un seme. Viene discussa anche una visione più generale dell'informatica  e il fatto che gli algoritmi ne sono una parte essenziale."
@@ -95,18 +95,19 @@
       RelayProgramming:
         title: "Programmazione a Staffetta"
         desc: 'Gli studenti fanno una corsa a staffetta, nella quale uno alla volta corrono a scrivere un algoritmo basato su un disegno dalla lezione "Programmazione su carta a quadretti". Possono scrivere una sola istruzione alla volta, e se trovano un errore in qualche punto, devono cancellare tutto fino a quel punto.'
-        video: 'Programmazione a staffetta - "Senza Rete"'
+        video: "Programmazione a staffetta"
       Conditionals:
-        title: "Condizionali"
+        title: "Istruzioni condizionali"
         desc: 'Per imparare le istruzioni condizionali, gli studenti giocano con le carte e creano regole del tipo "SE estraggo una carta rossa ottengo un punto" e "SE estraggo una carta nera tu ottieni un punto".'
-        video: 'Istruzioni condizionali - "Senza Rete"'
+        video: "Istruzioni condizionali"
       BigEvent:
         title: "Il Grande Evento"
         desc: 'Gli studenti vengono introdotti al concetto di "eventi" nella programmazione. Gli eventi sono azioni che un calcolatore continuamente controlla se accadono o meno.'
-        video: 'Il Grande Evento - "Senza Rete"'
+        video: "Il Grande Evento"
       GoingPlacesSafely:
         title: "Visitare Luoghi in Modo Sicuro"
         desc: "Internet è un luogo potente, ma alle volte pericoloso. L'insegnante introduce come navigare su Internet in modo sicuro."
+        video: "Visitare Luoghi in Modo Sicuro"
       GraphPaperProgramming:
         title: "Programmazione su carta a quadretti"
         desc: "Gli studenti scrivono un algoritmo (una sequenza di istruzioni) usando un insieme di comandi predefiniti per guidare i loro compagni di classe nel riprodurre il disegno."
@@ -114,26 +115,27 @@
       PaperPlanes:
         title: 'Algoritmi della Vita Reale: Aeroplani di Carta'
         desc: "Questa lezione tratta degli algoritmi nella vita quotidiana, nel caso specifico costruire un aeroplano di carta. Viene discussa anche una visione più generale dell'informatica  e il fatto che gli algoritmi ne sono una parte essenziale."
-        video: 'Aeroplani di Carta - "Senza Rete"'
+        video: "Aeroplani di Carta"
       BinaryBracelets:
         title: "Braccialetti Binari"
         desc: "Gli studenti creano dei braccialetti che rappresentano con l'alfabeto binario la prima lettera del loro nome. Imparano quindi che i dati possono essere rappresentati e memorizzati in più di un modo."
-        video: 'Braccialetti Binari - "Senza Rete"'
+        video: "Braccialetti Binari"
       DigitalFootprint:
         title: "La tua Impronta Digitale"
         desc: "L'insegnante introduce agli studenti l'idea che mettere su Internet le loro informazioni personali crea un'impronta digitale che lascia tracce riconoscibili e sfruttabili."
+        video: "Impronta Digitale"
       ComputationalThinking:
         title: "Pensiero computazionale"
         desc: "Gli studenti usano i passi fondamentali del pensiero computazione (decomposizione, identificazione di schemi, astrazione, algoritmica) per capire come si svolge un gioco che non ha istruzioni."
-        video: 'Pensiero Computazionale - "Senza Rete"'
+        video: "Pensiero Computazionale"
       FunctionalSuncatchers:
-        title: "Acchiappa-sole Funzionale"
+        title: "Acchiappa-Sole Funzionale"
         desc: "Gli studenti creano un algoritmo con variabili e funzioni (porzioni di codice che si possono usare ripetutamente) per creare degli acchiappa-sole usando fili e perline."
         video: "Acchiappa-Sole Funzionale"
       SongwritingParameters:
         title: 'Composizione di Canzoni - Parametri'
         desc: "Gli studenti usano il concetto del ritornello di una canzone per imparare come passare dei parametri ad una funzione. Questo permette di personalizzare una funzione senza doverla riscrivere interamente."
-        video: 'Composizione di Canzoni - Parametri'
+        video: "Composizione di Canzoni con Parametri"
       DiceRace:
         title: 'Algoritmi della Vita Reale: Gara con i Dadi'
         desc: "Questa lezione tratta degli algoritmi nella vita quotidiana. In questo contesto, gli studenti devono identificare e scrivere l'algoritmo per un gioco con i dadi."
@@ -141,11 +143,29 @@
       Internet:
         title: "Internet"
         desc: "Gli studenti inviano messaggi che rappresentano i vari metodi di trasmissione su Internet, usando solo dei fogli di carta."
-        video: 'Internet - "Senza Rete"'
+        video: "Internet"
       Crowdsourcing:
         title: "Intelligenza Collettiva"
-        desc: "Students use crowdsourcing, a problem-solving technique common in computer science, to complete a task together as a classroom more efficiently than if a student attempted it alone."
+        desc: "Gli studenti utilizzano l'Intelligenza Collettiva (crowdsourcing), una tecnica per la risoluzione di problemi usata in informatica, per completare insieme un'attività in modo più efficiente rispetto a uno studente che ci prova da solo."
         video: "Intelligenza Collettiva"
       DigitalCitizenship:
         title: "Cittadinanza Digitale"
         desc: "Gli studenti esplorano la differenza tra informazioni private e informazioni personali, per distinguere cosa si può condividere su Internet in modo sicuro e cosa no."
+      TangramAlgorithms:
+        title: "Algoritmi per il Tangram"
+        desc: "Questa lezione ti mostra qualcosa di importante sugli algoritmi. Se un algoritmo è semplice ci sono molti modi per usarlo. Se vuoi essere sicuro che ognuno finisca con lo stesso risultato, allora l'algoritmo ha bisogno di essere maggiormente dettagliato."
+      EnvelopeVariables:
+        title: "Variabili della Busta"
+        desc: "Le variabili consentono molta libertà nell'informatica.  Questa lezione aiuta a spiegare quali sono le variabili e come possiamo utilizzarle in diversi modi. Svolgi questa attività prima di (o in concomitanza con) la lezione sull'astrazione per comprendere a fondo come usare le variabili."
+      MadGlibs:
+        title: "Mad G-Libs"
+        desc: "L'astrazione è una delle abilità più importanti che un informatico deve possedere.  In questa attività i tuoi studenti analizzano storie per capirne le differenze, così che possano astrarre gli elementi comuni. Gli schemi di storia così ottenuti diventano dei modelli per divertirsi ad inventare nuove storie."
+      ForLoopFun:
+        title: "Divertiti usando i Cicli con Contatore"
+        desc: "Sappiamo che che i cicli permettono di svolgere azioni più e più volte, ma ora impariamo come usare i cicli con strutture aggiuntive."
+      SongwritingWithParameters:
+        title: 'Composizione di Canzoni - Parametri'
+        desc: "Una delle strutture più belle nell'informatica è la funzione.  Le funzioni (a volte chiamate procedure) sono dei mini-programmi che è possibile utilizzare più e più volte all'interno di un programma più grande. Questa lezione aiuta gli studenti a comprendere intuitivamente perché raggruppare blocchi di codice all'interno di funzioni è un'utile pratica."
+      BinaryImages:
+        title: "Immagini binarie"
+        desc: 'Anche se molti pensano al sistema binario come costituito rigorosamente da zeri e uni, nelle precedenti lezioni gli studenti hanno visto che le informazioni possono essere rappresentate in una varietà di opzioni binarie.  Questa lezione sviluppa ulteriormente questo concetto illustrando come un computer possa memorizzare informazioni ancora più complesse (ad esempio immagini e colori) in formato binario.'

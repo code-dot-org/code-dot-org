@@ -1,0 +1,500 @@
+"lv":
+  activerecord:
+    errors:
+      messages:
+        blank: "ir nepieciešams"
+    attributes:
+      user:
+        name: "Attēlojamais vārds"
+        email: "E-pasts"
+        username: "Lietotājvārds"
+        password: "Parole"
+        password_confirmation: "Paroles apstiprinājums"
+        current_password: "Pašreizējā parole"
+        locale: "Valoda"
+        age: "Vecums"
+        gender: "Dzimums"
+        edit_header: "Rediģēt konta detaļas"
+        error:
+          future: "nevar būt nākotnē"
+  hello: "Sveika, pasaule"
+  welcome_back: 'Laipni lūgta atpakaļ, %{name}'
+  add_teacher_form:
+    code_or_email:
+      label: 'Pievieno skolotāju ar kodu vai e-pasta adresi:'
+      placeholder: "Kods (ABCDEF) vai e-pasts (teacher@school.edu)"
+    code:
+      label: 'Pievienojo skolotāju pēc sadaļu kodiem:'
+      placeholder: "Kods (ABCDEF)"
+    submit: "Pievieno skolotāju"
+  add_hint_form:
+    placeholder: "Lūdzu, ievadi šeit savu mājienu"
+    submit: "Pievieno mājienu"
+  appname: "Code.org"
+  stage: "Posms"
+  stage_number: 'Posms%{number}'
+  puzzle: "Puzle"
+  trophies: "Trofejas"
+  courses: "Kursi"
+  of: 'no'
+  more: "VAIRĀK"
+  less: "MAZĀK"
+  try_hoc: 'Izmēģini "Programmēšanas stundu", spied šeit >> '
+  try_k8intro: "Izmēģini mūsu K-8 Ievadu Datorzinātņu kursos (15-25 stundas)"
+  k8intro: "K-8 Ievads Datorzinātņu kursos (15-25stundas)"
+  already_started: 'Jau sāki? Atsākt šeit > '
+  demos: 'Administrators: Visas demonstrācijas'
+  continue: "Turpināt"
+  prize: "balva"
+  more_info: "Vairāk informācijas"
+  auth:
+    sign_in_with: 'Pieraksīties %{provider}'
+    signed_in: "Pierakstījies!"
+    signed_out: 'Izrakstījies <a href="%{url}">Code.org</a>.'
+    sign_out_of: 'Izmantoji %{provider} ,lai pierakstītos <a href="%{url}">Spied šeit</a> , lai izrakstītos %{provider}.'
+    already_signedup: "Jau pierakstījies?"
+    notyet_signedup: "Neesi pievienojies?"
+    google_oauth2: "Google konts"
+    twitter: "Twitter"
+    facebook: "Facebook"
+    windowslive: "Microsoft konts"
+    forgot_password: "Aizmirsi savu paroli?"
+    need_confirmation: "Nesaņēmi apstiprinājuma instrukcijas?"
+    need_unlock: "Nesaņēmi atslēgšanas norādijumus?"
+  signup_form:
+    overview_student: 'Pierakstaties, lai sekotu līdzi savam progresam, Jūsu e-pasts primāri tiek izmantots, lai pierakstītos un paroles atgūšanai. Lai iegūtu vairāk informāciju, apskatat mūsu <a href="http://code.org/privacy">konfidencialitātes politiku</a>.'
+    overview_teacher: 'Mācat datorzinātnes savā klasē, pierakstoties ar kontu.<p/> Jūs varēsiet pievienot savus skolēnus un sekot līdzi viņu progresam.'
+    no_signup_message: 'Jūs varat <a target="_blank" href="http://learn.code.org"> meklēt dažādas stadijas un puzles</a>, bet jums būš jāpierakstās, lai saglabātu savu procesu.'
+    teacher_educator_guide: "Skatīt pedagogu rokasgrāmatu"
+    teacher_pitch: "Pierakstīšanās kā skolotājam priekš Code.org"
+    teacher_title: "Pierakstīšanās kā skolotājam"
+    student_pitch: "Pierakstīšanās kā studentam priekš Code.org"
+    student_title: "Pierakstīšanās kā studentam"
+    school_name: "Skolas nosaukums (nav obligāts)"
+    school_address: "Skolas adrese (nav obligāta)"
+    address_placeholder: "Adrese, pilsēta, novads, pasta indekss"
+    gender: "Dzimums (nav obligāti)"
+    birthday: "Dzimšanas diena (nav obligāti)"
+    age: "Vecums"
+    user_type: "Jūs esat skolnieks vai skolotājs?"
+    submit: "Sign up"
+    teacher: "Vai jūs esat skolotājs?"
+    valid_username: "Pieejams!"
+    invalid_username: "Lietotājvārdā jābūt vismaz 5 rakstzīmēm"
+    taken_username: "Lietotājvārds jau ir aizņemts"
+    valid_password: "Derīga parole!"
+    invalid_password: "Parolē jābūt vismaz 6 rakstzīmēm"
+    mismatch_password: "Abas ievadītās paroles nesakrīt"
+    student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/>For users under 13, email addresses are not stored in a form that allows us to contact them."
+    teacher_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>."
+    additional_information: "We need some additional information to continue signing you up."
+  signin_form:
+    title: "Jau ir konts? Pieraksties"
+    login: "E-pasts vai lietotājvārds"
+    password: "Parole"
+    remember: "Atcerēties mani"
+    submit: "Pierakstīties"
+  signin:
+    try_heading: "Vēlaties izmēģināt kodēšanu bez pierakstīšanās?"
+    try_hoc: 'Sākumā izmēģināt vienu "Programmēšanas stundu"'
+    try_20hours: "Izmēģināt mūsu 20 stundu ievadu Datorzinātnēs"
+  signinsection:
+    welcome: 'Esi sveicināts %{section_name}'
+    name: "Izvēlies savu vārdu"
+    picture: "Atrodi savu slepeno attēlu"
+    words: "Tagad ievadi savus slepenos vārdus"
+    login: "Pierakstīties"
+  password:
+    reset_form:
+      title: "Aizmirsi savu paroli?"
+      email: "E-pasta adrese"
+      submit: "Sūtīt paroles atiestatīšanas instrukcijām"
+    change_form:
+      title: "Mainīt paroli"
+      new_password: "Jauna parole"
+      confirm_password: "Apstipriniet jauno paroli"
+      submit: "Mainīt paroli"
+  welcome_email:
+    subject: "Pievienoties manai klasei (code.org)"
+    body: |
+      Click the link below to sign up for computer science tutorials on Code.org (with me as your "teacher"):
+      
+      %{link}
+      
+      The tutorials are fun, visually engaging, and teach the basic concepts of computer science using a simple, guided, game-like experience. Learn to code from Bill Gates, Mark Zuckerberg, Angry Birds, and Plants vs. Zombies! :-)
+      
+      %{name}
+  follower:
+    invite_sent: "Uzaicinājums nosūtīts"
+    added_teacher: '%{name} pievienots kā jūsu skolotājs'
+    registered: 'Jūs esat reģistrēts %{section_name}.'
+    error:
+      signed_in: "Lūdzu izrakstaties pirms turpināšanas"
+      username_not_found: 'Lietotājvārds %{username} nav atrasts'
+      username_in_use: '%{username} ir jau aizņemts, lūdzu, izvēlieties citu'
+      no_teacher: "Nevarēja atrast, kurš būtu pierakstījies ar '%{teacher_email_or_code}'. Lūdzat viņiem piereģistrēties un mēģinat viņus pievienot vēlreiz"
+      section_not_found: "Could not find a section with code '%{section_code}'."
+      blank_code: "Please enter a section code"
+      cant_join_own_section: "Sorry, you can't join your own section."
+    mail:
+      invite_student:
+        subject: 'Join a class with %{teacher_name} at Code.org!'
+      student_disassociated:
+        subject: 'Code.org notification: %{student_name} is no longer associated as your student.'
+      teacher_disassociated:
+        subject: 'Code.org notification: %{teacher_name} is no longer associated as your teacher.'
+  reports:
+    error:
+      access_denied: "Jums nav pieejas šīs personas statistikai"
+  redeem_prizes:
+    title: 'Redeem Prizes: %{name}'
+    provider: 'Provider:'
+    code: 'Code:'
+    redeem_header: 'To redeem:'
+    donorschoose_register: "Register as a teacher on DonorsChoose.org"
+    donorschoose_project: "Post a project"
+    donorschoose_how_to: "How to use your code"
+    success: "Your prize was succesfully redeemed, see code below."
+    error: "Your prize could not be redeemed, please try again."
+    error_us_only: "The prize offer is only valid for U.S. users."
+    error_not_earned: "You have not yet earned this prize."
+    error_already_redeemed: "Your prize has already been redeemed."
+    no_prizes_available: "We're sorry, but we currently have no prizes available."
+    teacher_info_required: 'Teacher prizes require school name and address information:'
+    teacher_email_required: 'Teacher prizes require a confirmed email address:'
+    confirm:
+      title: "Please Confirm"
+      "no": Nē
+      "yes": Jā
+      msg: 'Are you sure you want to claim the %{prize_name} prize?'
+      msg_student: 'NOTE: You can only choose one type of prize.'
+      msg_publicschool: "Please confirm that you are a U.S. public school teacher."
+      msg_visit_website: "Visit website"
+    providers:
+      apple_itunes: "$10 iTunes Gift Card"
+      donors_choose: "DonorsChoose.org $750 credit"
+      donors_choose_bonus: "DonorsChoose.org $250 credit"
+      dropbox: "10GB of Dropbox Space"
+      valve: "Portal 2 (PC or Mac game download)"
+      ea_bejeweled: "Bejeweled 3 (PC game download)"
+      ea_fifa: "FIFA Soccer 13 (PC game download)"
+      ea_simcity: "SimCity 4 Deluxe Edition (PC game download)"
+      ea_pvz: "Plants vs. Zombies (PC game download)"
+      skype: "$10 Skype credit"
+    msg:
+      choose: 'Choose a prize:'
+      choose_teacher: 'Click on the logo below to claim your prize:'
+      earned: "You have earned a prize! (U.S. students only)"
+      not_earned_title: "Finish the tutorial, earn rewards (U.S. students only)"
+      not_earned: 'Learn all the computer science concepts, collect all %{num_trophies} trophies, and earn real-world prizes. You can choose between 10GB of free Dropbox space, $10 in Skype credits, and free game downloads. NOTE: offer only valid to U.S. students, and only as long as supplies last.'
+      teacher:
+        earned: '15 or more students collected all %{num_trophies} trophies. You have won a teacher prize! (U.S. teachers only)'
+        not_earned_title: 'Teach the class, earn up to $1,000 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers only)'
+        not_earned: 'To reward first-time computer science teachers, you can earn up to $1,000 in <a href="http://DonorsChoose.org">DonorsChoose.org</a> credits for guiding a classroom through the K-8 intro course. To qualify, you need to successfully host a classroom of at least 15 students through the entire K-8 intro course, with all 15 students (or more) completing all tutorials and earning all %{num_trophies} trophies. If 7 or more of the students who earn all of the trophies are girls, your reward is $1,000 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits. Otherwise, your reward is $750 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits.  <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits can only be used by teachers in U.S. public schools.'
+        bonus:
+          not_earned_title: 'You can still earn an additional $250 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers only)'
+          earned: '7 or more of the students who collected all %{num_trophies} trophies are girls. You have won a bonus prize! (U.S. teachers only)'
+          not_earned: 'If at least 7 of your students who earn all %{num_trophies} trophies are girls, your reward is an additional $250 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits. <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits can only be used by teachers in U.S. public schools.'
+  crud:
+    new_model: 'New %{model}'
+    show: "Show"
+    edit: "Edit"
+    edit_model: 'Edit %{model}'
+    update: "Update"
+    destroy: "Destroy"
+    back: "Atpakaļ"
+    confirm: "Vai esat pārliecināts?"
+    created: '%{model} ir veiksmīgi izveidots.'
+    updated: '%{model} was successfully updated.'
+    destroyed: '%{model} was successfully deleted.'
+    access_denied: 'You do not have access to this %{model}.'
+  nav:
+    header:
+      finished_hoc: "I've finished my Hour of Code"
+      sign_in_to_save: "Pierakstieties, lai saglabātu savus panākumus"
+      free_play:
+        playlab: "Izveidot aplikāciju"
+        artist: "Uzzīmēt kaut ko"
+    user:
+      classroom: "Teacher Home Page"
+      label: 'Sveiki, %{username}'
+      stats: "My progress"
+      settings: "Mans konts"
+      prizes: "Balvas"
+      logout: "Izrakstīties"
+      signin: "Pierakstīties"
+      signup: "Sign up"
+      already_registered: "Jau reģistrējies?"
+    popup:
+      progress: "Your progress"
+      lines: 'Total lines of code: %{lines}'
+      close: "AIZVĒRT"
+      mastery: "Concepts"
+      puzzle_map: "Stages"
+      prizes: 'Collect all %{total_trophies} trophies and win prizes!'
+      prize_earned: 'All %{total_trophies} trophies collected. Prize won!'
+      prize_us_only: "(U.S. students only)"
+      prizes_link: "more info"
+  teacher:
+    title:
+      one: 'Your teacher:'
+      other: 'Your teachers:'
+    remove: "(remove teacher)"
+    confirm:
+      remove: "Are you sure you want to remove this teacher?"
+    tools: "Teacher Tools"
+    followers:
+      section: 'Section:'
+      stages: 'Stage(s) to display:'
+      show_past: 'Show student activity (%{bullet_html}) in the past:'
+      levels_key: "Levels key"
+      perfect: "Completed, perfect"
+      completed: "Completed, but using too many blocks"
+      tried: "Tried, but not completed"
+      not_tried: "Not tried yet"
+      activity: 'Indicates student activity in the last %{hours} %{plural}'
+      no_section: "No assigned section"
+      trophies: "Trofejas"
+    students:
+      name: "Vārds"
+      username: "Lietotājvārds"
+      password: "Parole"
+      manage: "Manage students"
+      dashboard: "Go to Teacher Dashboard"
+      add: "Add students"
+      remove: "remove student"
+      confirm_remove: "Are you sure you want to remove this student?"
+      help_reassign: "To divide your class into multiple sections, select students to assign to a new section."
+      help_register: "Instead of making you spend a lot of time individually importing student data, you can set up your class quickly by asking them to signup. Your students will need to choose usernames and passwords, but they WILL NOT be required to provide an email address. If a student forgets their password, you will be able to reset it for them."
+      register: "Ask your students to register themselves"
+      vist: "Ask your students to visit"
+      section_code: 'and enter their section-code:'
+      first_please: 'First, please %{add_section}'
+      for: "For"
+      enter: 'enter:'
+    sections:
+      add: "Add section"
+      manage: "Manage sections"
+      section: "Section"
+      students: "Skolēni"
+      section_code: "Sadaļas kods"
+      add_section_code: "Pievienot studentu sekcijas kodu"
+      secret: "Slepenais tips"
+      grade: "Vērtējums"
+      course: "Kurss"
+      rename: "pārdēvēt"
+      edit: "rediģēt"
+      delete: "dzēst"
+      confirm_delete: "Vai tiešām vēlaties dzēst šo sadaļu?"
+      email: "Nosūtīt uz e-pastu"
+    rollup: "Progresa josla"
+    activity: "Nesenās klases aktivitātes"
+    user_not_found: "Skolotājs vai skolnieks netika atrasts"
+    cant_remove_student_no_email: '%{student_name} skolnieks nevar tikt dzēsts, jo %{student_name}, jo nav reģistrēta e-pasta adrese'
+    cant_remove_teacher_no_email: '%{teacher_name} nevarat noņemt savu pasniedzēju, jo jūs neesat reģistrējis e-pasta adresi'
+    student_teacher_disassociated: 'Pasniedzējs %{teacher_name} ir noņemts no skolēna %{student_name}'
+  user:
+    email_confirm_needed: 'E-pasta adrese nav apstiprināta:'
+    email_resend_confirm: "Atkārtoti nosūtīt apstiprinājumu instrukcijas"
+    new_password_hint: "(atstājiet tukšu, ja nevēlaties mainīt to)"
+    current_password_hint: "(nepieciešama jūsu pašreizējā parole, lai apstiprinātu izmaiņas)"
+    cancel:
+      title: "Atcelt savu kontu"
+      hint: "Nelaimīgs?"
+      button: "Atcelt savu kontu"
+  user_level:
+    completed: "Pabeigts"
+    tried: "Mēģināts"
+  user_stats:
+    recent_activity: "Pēdējā aktivitāte"
+    show_more: "Rādīt vairāk"
+    classroom_activity: "Atvienota aktivitāte"
+  home:
+    title: "Kodu studija"
+    all_courses: "Pārskats par kursiem, 1, 2 un 3"
+    lesson_plans: "Nodarbību plāni"
+    signin_message: 'Jau reģistrējies? %{link}'
+    student_reg_link: "Pierakstīšanās kā skolniekam"
+    teacher_reg_link: "Pierakstīšanās kā skolotājam"
+    signin_directions: 'Izmantot kontu, lai izsekotu progresu. <br/> Skolotāji pārbauda visu klasi.'
+    teacher_dashboard: "Redzēt progresa joslu"
+    teacher_student_count_one: 'Jums ir %{count} skolēns.'
+    teacher_student_count: 'Jums ir %{count} skolnieki.'
+    teacher_averages: 'Vidēji jūsu skolnieki ir ieguvuši %{trophy_average} no %{trophy_max} "Vispārēja meisterība" trofejas.'
+    teacher_print_certificates: "Drukāt sertifikātus skolniekiem, kas pabeiguši kursu"
+    teacher_read_blog: "Lasīt par jaunumiem un atjauninājumiem mūsu materiāliem pedagogu blogā"
+    classroom: "Mūsu klase"
+    student_progress: "Jūsu mācību process"
+    student_stats: 'Esat ieguvis %{trophy_count} no %{trophy_max} "Vispārēja meisterība" trofejas.'
+    student_left_off: 'Vieta, kur palikāt:'
+    student_finished: 'Esat pabeidzis visas apmācība, izvēlaties citu klasi %{online_link}vai %{local_school_link}'
+    local_school: "vietējā skola"
+    online: "tiešsaiste"
+    see_details: "Sīkāka informācija"
+    prize_info: 'Balvas par dalību (tikai ASV valsts skolu skolotājiem): līdz $1,000 savā klasē.'
+    tryfirst: 'Vai varat izmēģināt sākumā un pierakstīties vēlāk:'
+    trynow: "Izmēģiniet tūlīt"
+    add_hint_help: "Lūdzu palīdziet mums pievienot gudrus padomus Code.org pamācībās"
+    20hour_overview: "šis 20 stundu kurss iepazīstina datorzinātnes un programmēšanas kodolu. Kurss ir izveidots, lai to varēu izmantot klasēs un tas to būtu jautri mācīties visos vecumos."
+    test_videos_help: "Izmēģinat mūsu jauno video atskaņotāju savā skolā"
+    try_beta_courses: "Jaunums! Izmēģinat mūsu BETA kursus K-5 studentiem"
+    use_as_teacher: "Izmantojiet šo vietni, kā skolotājs"
+    heading_elementary: '<h2>20 stundu kursi</h2><h1>Pamatskolas skolēniem</h1>'
+    heading_apps: '<h2>Izklaide </h2><h1>visiem</h1>'
+    heading_legacy: '<h2>Mūsu galvenais kurss ir </h2><h1>visiem vecumiem</h1>'
+    gallery:
+      your_turtle: "Mana māksla"
+      your_studio: "Manas lietotnes"
+  gender:
+    male: "Vīrietis"
+    female: "Sieviete"
+    none: "Nēlos atbildēt"
+  user_type:
+    student: "Students"
+    teacher: "Teacher"
+  footer:
+    help_from_html: "Inžinieri no Google, Microsoft, Facebook un Twitter palīzēja radīt šo pamācību."
+    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. Visas tiesības paturēt.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. Visas tiesības paturēt.'
+    feedback: "nodrošināt atsauksmes"
+    translate: "Palīdzi mums tulkot savā valodā"
+    support: "Atbalsts"
+    support_url: "http://support.Code.org/"
+    tos: "Nosacījumi"
+    privacy: "Privātuma politika"
+    secure: "Droša versija"
+  reference_area:
+    title: "Vajadzīga palīdzība?"
+    subtitle: "Skatīt šos video un padomus"
+    teacher: "Redzēt atrisinājumu"
+    auth_error: "Jums nav atļauts skatīt risinājumu."
+    submit: "Atjaunināt izpildītāja atrašanās vietu"
+    direction: "Sākt virzienu (grādos)"
+  video:
+    tab: "Videoklips."
+    notes: "Nav video? Rādīt piezīmes."
+    notes_coming_soon: "Piezīmes šim video, drīzumā."
+    autoplay_option: "Automātiski atskaņot videoklipu"
+    download: "Lejupielādēt videoklipu"
+  compatability:
+    working:
+      header: "Mēs strādājam pie atbalsta jūsu pārlūkam."
+      message: "Code.org izmanto mūsdienu interneta tehnoloģijas. Tas palīdz saitei ātrāk darboties. Jūsu pārlūkprogramma neatbalsta visas nepieciešamās funkcijas un jums varētu būt nelieli traucējumi, kamēr izmantojat šo saites daļu. Lūdzu, palīdziet mums, <a href='%{report_issue_url}'> ziņojot visus traucējumus, ko jūs atrodat</a>. Jūs varat arī <a href='%{supported_browsers_url}'> nomainīt savu pārlūkprogrammu uz atbalstītu versiju</a>."
+      hide_this_warning: "Nerādīt šo brīdinājumu"
+    upgrade:
+      header: "Lūdzu, atjaunojiet savu pārlūkprogrammu."
+      message: "Code.org uses modern web technology. This makes the site faster to use. Unfortunately your browser doesn't support all the features required to run this part of the site.<br/><br/>Install a browser on our supported browsers list to continue. You can <a href='#'>try viewing the page</a>, but expect functionality to be broken."
+      button: "Take me to the list of supported browsers"
+  slow_loading: "This is taking longer than usual..."
+  try_reloading: "Try reloading the page"
+  next_stage: "Finished! Continue to next stage"
+  download_pdf: "Open Lesson Plan"
+  lesson_plan: "Lesson Plan"
+  view_lesson_plan: "View Lesson Plan"
+  pdf_download: "Download PDF"
+  download_coming_soon: "Downloadable activity coming soon."
+  video_coming_soon: "Video Coming Soon!"
+  share_code:
+    title: "Click 'Run' to see my program in action"
+    bounce_og_title: "Check out my Bounce Game"
+    flappy_og_title: "Check out my Flappy Game"
+    studio_og_title: "Check out my Play Lab App"
+    og_description: "Es uzrakstīju kodu pats ar Code.org"
+    phone_number_not_allowed: "Izskatās, ka tur atrodas tālruņa numuru. Mēģini mainīt tekstu."
+    address_not_allowed: "Izskatās, ka tā ir adrese. Mēģini mainīt tekstu."
+    email_not_allowed: "Izskatās, ka tur atrodas e-pasts. Mēģint mainīt tekstu."
+    profanity_not_allowed: "Izskatās, ka tur atrodas lādēšana. Mēģini mainīt tekstu."
+  builder:
+    created: "Esi izveidojis jaunu skriptu."
+    destroyed: "Esi iznīcinājis skriptu."
+    manage: "Veidot līmeņus"
+    view: "Skatīt"
+    back: "Atpakaļ uz skriptiem"
+    success: "Veiskmīgi izlaboji blokus."
+    level:
+      create: "Izveidot jaunu līmeni"
+      current: "Pašreizējie līmeņi"
+      unused: "Neizmantotie līmeņi"
+  upsell:
+    hoc:
+      title: "Programmēšanas stunda"
+      body: "Mēģini datorzinātņu pamatus. Miljoniem ir mēģinājuši."
+    flappy:
+      title: "Flappy kods"
+      body: "Vēlies izveidot pats savu spēli mazāk nekā 10 minūtēs? Izmēģini Flappy koda apmācību!"
+    20hour:
+      title: "Ievadkurss"
+      body: "Izmēģini mūsu 20 stundu ievadu Datorzinātņu kursā."
+  gallery:
+    students_drew_these_with_code: "Skolnieki uzzīmēja šos ar kodu!"
+    students_made_these_with_code: "Studenti izveidoja šos ar kodu!"
+    picture_count: 'Agrākās <b>%{days}</b> dienās, skolnieki zīmēja <b>%{count}</b> attēlus taisot paši savas datorprogrammas. Noklikšķini uz attēla, lai apskatītu katru programmu darbībā.'
+    activity_count: 'Agrākās <b>%{days}</b> dienās, veidoja <b>%{count}</b> attēlus un lietojamprogrammas  taisot paši savas datorprogrammas. Noklikšķini uz attēliem un ekrānšāviņiem, lai apskatītu katru programmu darbībā.'
+    want_to_make_your_own: "Vēlies uzveidot pats savu?"
+    more: 'Vēl &rarr;'
+    caption_by_name_age: '%{name}, vecums %{age}'
+    caption_time_ago: '%{time_ago} pirms'
+  landing:
+    prerelease: "Šis kurss ir <span class='betatext'>BETA stadijā</span>.  Tas nozīmē, ka tā nav kursa pēdējā versija un var tikt pakļauta pārskatam kā atsauksmes, jo informācija ir saņemta un uzlabojumi tiek veikti."
+    feedback: "Sniegt atsauksmes"
+    report_bug: "Kļūdas ziņojums"
+    support: "Saņemt palīdzību"
+    support_url: "//support.code.org"
+  multi:
+    wrong_title: "Nepareiza atbilde"
+    wrong_body: "Ievadītā atbilde ir nekorekta. Lūdzu mēģiniet vēlreiz!"
+    correct_title: "Pareizi"
+    correct_body: "Tā ir pareizā atbilde."
+  match:
+    wrong_title: "Nepareizs risinājums"
+    wrong_body: "Ievadītais risinājums nav pareizs. Lūdzu mēģinat vēl!"
+    correct_title: "Pareizi"
+    correct_body: "Tā ir pareizā atbilde."
+  text_match:
+    placeholder: "Ievadi savu atbildi šeit"
+  dialog:
+    ok: "OK"
+  time:
+    hour: "1 stunda"
+    day: "diena"
+    week: "nedēļa"
+  data:
+    script:
+      name:
+        20-hour:
+          title: "K-8 Ievads Datorzinātņu kursos (15-25stundas)"
+          description: "šis 20 stundu kurss iepazīstina datorzinātnes un programmēšanas kodolu. Kurss ir izveidots, lai to varēu izmantot klasēs un tas to būtu jautri mācīties visos vecumos."
+        Hour of Code:
+          title: "Programmēšanas stunda"
+          description: ""
+        edit-code:
+          title: "rediģēt kodu"
+          description: ""
+        events:
+          title: "Pasākumi"
+          description: ""
+        builder:
+          title: "Konstruktors"
+          description: ""
+        flappy:
+          title: "Flappy kods"
+          description: "Vēlies izveidot pats savu spēli mazāk nekā 10 minūtēs? Izmēģini Flappy koda apmācību!"
+        jigsaw:
+          title: "Puzle"
+          description: ""
+        step:
+          title: "Solis"
+          description: ""
+        sample_level_builder:
+          title: "Piemēru līmeņu konstruktors"
+          description: ""
+  age_interstitial:
+    age: "Jūsu vecums"
+    header: "Konta informācijas atjaunināšana"
+    message: 'Mēs esam procesā, kas atjaunina mūsu pieredzi, lai nodrošinātu jūs ar vēl lielāku konfidencialitātes aizsardzību. Lai to paveiktu, mums ir nepieciešams esošiem lietotājiem ievadīt šeit viņu vecumu. <br/>Kā vienmēr, code.org nekad iznomāt, pārdot vai koplietot šo informāciju ar trešajām pusēm.'
+    sign_out: 'Ja nevēlaties sniegt savu vecumu, jūs varat <a href="%{url}">izrakstīties</a>.'
+  zendesk_too_young_message: 'Atvainojiet, jaunākiem lietotājiem nav iespējas pierakstīties mūsu atbalsta lapā. Jūs varat pārlūkot <a href="http://support.code.org">support.code.org</a> bez pierakstīšanās vai varat prasīt savam vecākam vai skolotājam, lai sazinās ar mums jūsu vietā.'
+  progress:
+    not_completed: "Nav pabeigts"
+    completed_too_many_blocks: "Pabeigts, pārāk daudz bloki"
+    completed_perfect: "pabeigts, ideāli"
+    furthest_level_attempted: "tālākais līmenis mēģināts"

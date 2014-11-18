@@ -215,7 +215,7 @@
         playlab: "Uygulama oluşturun"
         artist: "Bir şeyler çizin"
     user:
-      classroom: "Öğrencilerim"
+      classroom: "Öğretmen ana sayfa"
       label: 'Merhaba %{username}'
       stats: "İlerlemem"
       settings: "Hesabım"
@@ -387,8 +387,11 @@
   try_reloading: "Sayfayı yeniden yüklemeyi deneyin"
   next_stage: "Bitti! Bir sonraki aşamaya geç"
   download_pdf: "Açık ders planı"
+  lesson_plan: "Lesson Plan"
   view_lesson_plan: "Ders Planını Görüntüle"
   pdf_download: "PDF İndir"
+  download_coming_soon: "Downloadable activity coming soon."
+  video_coming_soon: "Video Coming Soon!"
   share_code:
     title: "Benim programımın çalışırını görmek için, 'Çalıştır' seçeneğini tıklayın"
     bounce_og_title: "Benim Bounce oyunuma göz atın"
@@ -445,6 +448,8 @@
     wrong_body: 'Girdiğiniz çözüm doğru değil.  Lütfen tekrar deneyin!'
     correct_title: "Doğru"
     correct_body: "İşte bu doğru cevap."
+  text_match:
+    placeholder: "Enter your answer here"
   dialog:
     ok: "TAMAM"
   time:
@@ -487,3 +492,8 @@
     message: 'Size daha güçlü gizlilik koruması sağlamak konusunda güncellemelerimizi sürdürmekteyiz. Bunu yapabilmek için mevcut kullanıcıların buraya yaşlarını girmesi gerekmektedir.<br/>Herzaman olduğu gibi code.org özel bilgilerinizi asla kiralamaz, satmaz veya üçüncü partilerle paylaşmaz.'
     sign_out: 'Eğer yaşınızı girmek istemiyorsanız <a href="%{url}">buraya tıklayarak</a> çıkış yapabilirsiniz.'
   zendesk_too_young_message: 'Üzgünüz, genç kullanıcılarımız destek sitemize üye olamazlar. <a href="http://support.code.org">support.code.org</a> adresini giriş yapmadan kullanın ya da ebeveynlerinize veya öğretmeninize bizimle temasa geçmelerini söyleyin.'
+  progress:
+    not_completed: "not completed"
+    completed_too_many_blocks: "completed, too many blocks"
+    completed_perfect: "completed, perfect"
+    furthest_level_attempted: "furthest level attempted"

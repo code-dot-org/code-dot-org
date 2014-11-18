@@ -50,8 +50,8 @@
   auth:
     sign_in_with: '以 %{provider}帳號登入'
     signed_in: "登入!"
-    signed_out: 'You have signed out of <a href="%{url}">Code.org</a>.'
-    sign_out_of: 'You used %{provider} to sign in. <a href="%{url}">Click here</a> to sign out of %{provider}.'
+    signed_out: '您已登出 <a href="%{url}"> Code.org</a>。'
+    sign_out_of: '你正在使用 %{provider} 登入。 <a href="%{url}">按此登出 %{provider}。</a>'
     already_signedup: "已經註冊了嗎？"
     notyet_signedup: "還未註冊嗎？"
     google_oauth2: "Google帳戶"
@@ -76,7 +76,7 @@
     gender: "性別 （選填）"
     birthday: "生日 （選填）"
     age: "年齡"
-    user_type: "Are you a student or teacher?"
+    user_type: "你是學生還是老師呢？"
     submit: "登錄"
     teacher: "你是老師嗎？"
     valid_username: "可以使用!"
@@ -102,7 +102,7 @@
     welcome: '歡迎來到%{section_name}'
     name: "選取你的名字"
     picture: "現在找出你的秘密圖片"
-    words: "現在輸入你的通關密語"
+    words: "在這裡輸入你的通關密語"
     login: "登入"
   password:
     reset_form:
@@ -370,8 +370,8 @@
     subtitle: "看看這些影片和提示"
     teacher: "參考解決方案"
     auth_error: "您無權查看該解決方案。"
-    submit: "Update Artist Location"
-    direction: "Start Direction (in degrees)"
+    submit: "更新畫家的位置"
+    direction: "開始方向(以度為單位)"
   video:
     tab: "影片"
     notes: "看不到影片嗎？顯示文字說明。"
@@ -382,7 +382,7 @@
     working:
       header: "我們正在設法支援您的瀏覽器。"
       message: "Code.org uses modern web technology. This makes the site faster to use. Your browser doesn't support all the features required, and you may experience issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade your browser to a supported version</a>."
-      hide_this_warning: "Hide this warning"
+      hide_this_warning: "隱藏此警告"
     upgrade:
       header: "請升級您的瀏覽器。"
       message: "Code.org uses modern web technology. This makes the site faster to use. Unfortunately your browser doesn't support all the features required to run this part of the site.<br/><br/>Install a browser on our supported browsers list to continue. You can <a href='#'>try viewing the page</a>, but expect functionality to be broken."
@@ -391,8 +391,11 @@
   try_reloading: "請嘗試重新載入網頁"
   next_stage: "完成 ！繼續邁向下一個階段"
   download_pdf: "開啟教學計畫"
-  view_lesson_plan: "View Lesson Plan"
-  pdf_download: "Download PDF"
+  lesson_plan: "教案"
+  view_lesson_plan: "檢視教案"
+  pdf_download: "下載 PDF"
+  download_coming_soon: "Downloadable activity coming soon."
+  video_coming_soon: "視頻快將推出 ！"
   share_code:
     title: "Click 'Run' to see my program in action"
     bounce_og_title: "Check out my Bounce Game"
@@ -430,33 +433,33 @@
     picture_count: 'In the past <b>%{days}</b> days, students have drawn <b>%{count}</b> pictures by writing their own computer programs. Click on the pictures to see each program in action.'
     activity_count: 'In the past <b>%{days}</b> days, students have made <b>%{count}</b> apps and pictures by writing their own computer programs. Click on the pictures and screenshots to see each program in action.'
     want_to_make_your_own: "Want to make your own?"
-    more: 'More &rarr;'
-    caption_by_name_age: 'by %{name}, age %{age}'
-    caption_time_ago: '%{time_ago} ago'
+    more: '更多 &rarr;'
+    caption_by_name_age: '%{name}, %{age} 歲'
+    caption_time_ago: '%{time_ago} 前'
   landing:
     prerelease: "This course is in <span class='betatext'>beta</span>.  This means it is not the final version of the course, and is subject to revision as feedback is received and improvements are made."
-    feedback: "Give Feedback"
-    report_bug: "Report Bug"
-    support: "Get Help"
+    feedback: "提供意見"
+    report_bug: "報告錯誤"
+    support: "請求幫助"
     support_url: "//support.code.org"
   multi:
-    wrong_title: "Incorrect answer"
-    wrong_body: "The answer you've entered is not correct.  Please try again!"
-    correct_title: "Correct"
-    correct_body: "That is the correct answer."
+    wrong_title: "不正確的答案"
+    wrong_body: "你的答案不正確。請再試一次 ！"
+    correct_title: "正確"
+    correct_body: "這是正確的答案。"
   match:
-    wrong_title: "Incorrect solution"
-    wrong_body: "The solution you've entered is not correct.  Please try again!"
-    correct_title: "Correct"
-    correct_body: "That is the correct answer."
+    wrong_title: "不正確的解決方案"
+    wrong_body: "您的解決方案不正確。請再試一次 ！"
+    correct_title: "正確"
+    correct_body: "這是正確的答案。"
   text_match:
-    placeholder: "Enter your answer here"
+    placeholder: "在這裡輸入你的答案"
   dialog:
     ok: "確定"
   time:
-    hour: "1 hour"
-    day: "day"
-    week: "week"
+    hour: "一小時"
+    day: "天"
+    week: "週"
   data:
     script:
       name:
@@ -494,7 +497,7 @@
     sign_out: 'If you do not wish to provide your age you may <a href="%{url}">sign out</a>.'
   zendesk_too_young_message: 'Sorry, younger users may not sign in to our support site. You may browse <a href="http://support.code.org">support.code.org</a> without signing in or ask your parent or teacher to contact us for you.'
   progress:
-    not_completed: "not completed"
-    completed_too_many_blocks: "completed, too many blocks"
-    completed_perfect: "completed, perfect"
+    not_completed: "未完成"
+    completed_too_many_blocks: "完成，但使用過多積木"
+    completed_perfect: "完美完成"
     furthest_level_attempted: "furthest level attempted"

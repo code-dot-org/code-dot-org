@@ -40,8 +40,8 @@
   more: "MEIRA"
   less: "MINNA"
   try_hoc: 'Prófaðu Kóðun í klukkustund, smelltu hér >> '
-  try_k8intro: "Prófaðu námskeiðið okkar K-8 Inngangur að tölvunarfræði (11-25 klst.)"
-  k8intro: "Námskeiðið K-8 inngangur að tölvunarfræði (15-25 klst.)"
+  try_k8intro: 'Prófaðu Inngang að tölvunarfræði fyrir 13 - 14 ára (11-25 klst.)'
+  k8intro: 'Inngangur að tölvunarfræði fyrir 13 - 14 ára (15-25 klst.)'
   already_started: 'Ekki að byrja núna? Taktu upp þráðinn hér >> '
   demos: 'Umsjón: Öll sýnidæmi'
   continue: "Áfram"
@@ -190,7 +190,7 @@
       teacher:
         earned: '15 eða fleiri nemendur söfnuðu öllum %{num_trophies}bikurunum. Þú hefur unnið til kennaraverðlauna! (Aðeins bandarískir kennarar)'
         not_earned_title: 'Kenndu bekknum og fáðu allt að $1,000 inneign hjá <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> (aðeins kennarar í Bandaríkjunum)'
-        not_earned: 'Til að verðlauna kennara sem eru að byrja að kenna tölvunarfræði, er hægt að vinna allt að $1,000 í inneignum hjá <a href="http://DonorsChoose.org">DonorsChoose.org</a> fyrir að leiða bekk í gegnum K-8 inngangsnámskeiðið. Til að vera gjaldgeng(ur) þarft þú að leiða bekk a.m.k. 15 nemenda í gegnum allt K-8 námskeiðið og allir 15 (eða fleiri) nemendurnir þurfa að klára allt kennsluefnið og vinna alla %{num_trophies} bikarana. Ef 7 eða fleiri af þeim nemendum sem vinna alla bikarana eru stúlkur, eru verðlaunin $1,000 inneign hjá <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>. Annars eru verðlaunin $750 inneign hjá <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>. Aðeins kennarar í opinberum skólum í Bandaríkjunum geta nýtt sér inneign hjá <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>.'
+        not_earned: 'Til að verðlauna kennara sem eru að byrja að kenna tölvunarfræði, er hægt að vinna allt að $1,000 í inneignum hjá <a href="http://DonorsChoose.org">DonorsChoose.org</a> fyrir að leiða bekk í gegnum inngangsnámskeiðið fyrir 13 - 14 ára. Til að vera gjaldgeng(ur) þarft þú að leiða bekk a.m.k. 15 nemenda í gegnum allt K-8 námskeiðið og allir 15 (eða fleiri) nemendurnir þurfa að klára allt kennsluefnið og vinna alla %{num_trophies} bikarana. Ef 7 eða fleiri af þeim nemendum sem vinna alla bikarana eru stúlkur, eru verðlaunin $1,000 inneign hjá <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>. Annars eru verðlaunin $750 inneign hjá <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>. Aðeins kennarar í opinberum skólum í Bandaríkjunum geta nýtt sér inneign hjá <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>.'
         bonus:
           not_earned_title: 'Þú getur unnið $250 inneign til viðbótar hjá <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> (aðeins kennarar í Bandaríkjunum)'
           earned: '7 eða fleiri af þeim nemendum sem söfnuðu öllum %{num_trophies} bikurunum eru stúlkur. Þú hefur unnið til aukaverðlauna! (aðeins bandarískir kennarar)'
@@ -216,7 +216,7 @@
         playlab: "Búa til forrit"
         artist: "Teikna eitthvað"
     user:
-      classroom: "Mínir nemendur"
+      classroom: "Heimasíða kennara"
       label: 'Hæ %{username}'
       stats: "Framvindan mín"
       settings: "Reikningurinn minn"
@@ -335,7 +335,7 @@
     tryfirst: 'Eða þú getur prófað fyrst og skráð þig seinna:'
     trynow: "Prófa núna"
     add_hint_help: "Vinsamlegast hjálpaðu okkur að bæta gagnlegum vísbendingum við kennsluna á Code.org"
-    20hour_overview: "Þetta 20 klst. námskeið kynnir grundvallarhugtök í tölvunarfræði og forritun. Námskeiðið er hannað fyrir notkun í skólastofu með aldurshópi K-8, en er skemmtilegt fyrir alla aldurshópa."
+    20hour_overview: 'Þetta 20 klst. námskeið kynnir grundvallarhugtök í tölvunarfræði og forritun. Námskeiðið er hannað fyrir notkun í skólastofu með aldurshópi 13 - 14 ára, en er skemmtilegt fyrir alla aldurshópa.'
     test_videos_help: "Prófaðu nýja myndbandaspilarann okkar í skólanum þínum"
     try_beta_courses: 'Nýtt! Prófaðu beta námskeiðin okkar fyrir 10 - 11 ára nemendur'
     use_as_teacher: "Nota þennan vef sem kennari"
@@ -387,9 +387,12 @@
   slow_loading: "Þetta tekur lengur en venjulega..."
   try_reloading: "Reyndu að endurhlaða síðunni"
   next_stage: "Búið! Halda áfram í næsta áfanga"
-  download_pdf: "Opin kennsluáætlun"
+  download_pdf: "Opna kennsluáætlun"
+  lesson_plan: "Kennsluáætlun"
   view_lesson_plan: "Skoða kennsluáætlun"
   pdf_download: "Hala niður PDF"
+  download_coming_soon: "Niðurhal verkefnis verður brátt tiltækt."
+  video_coming_soon: "Myndskeið á leiðinni!"
   share_code:
     title: 'Smelltu á "Keyra" til að prófa forritið mitt'
     bounce_og_title: "Kíktu á skoppleikinn minn"
@@ -446,6 +449,8 @@
     wrong_body: "Lausnin sem þú gafst er ekki fullnægjandi. Vinsamlegast reyndu aftur!"
     correct_title: "Rétt"
     correct_body: "Þetta svar er rétt."
+  text_match:
+    placeholder: "Skráðu nafn þitt hér"
   dialog:
     ok: "Í lagi"
   time:
@@ -456,8 +461,8 @@
     script:
       name:
         20-hour:
-          title: "Námskeiðið K-8 inngangur að tölvunarfræði (15-25 klst.)"
-          description: "Þetta 20 klst. námskeið kynnir grundvallarhugtök í tölvunarfræði og forritun. Námskeiðið er hannað fyrir notkun í skólastofu með aldurshópi K-8, en er skemmtilegt fyrir alla aldurshópa."
+          title: 'Inngangur að tölvunarfræði fyrir 13 - 14 ára (15-25 klst.)'
+          description: 'Þetta 20 klst. námskeið kynnir grundvallarhugtök í tölvunarfræði og forritun. Námskeiðið er hannað fyrir notkun í skólastofu með aldurshópi 13 - 14 ára, en er skemmtilegt fyrir alla aldurshópa.'
         Hour of Code:
           title: "Klukkustund kóðunar"
           description: ""
@@ -488,3 +493,8 @@
     message: 'Við erum að uppfæra gögn okkar til að geta veitt þér enn betri persónuvernd. Til að geta það þurfum við að biðja núverandi notendur að gefa upp aldur sinn hér.<br/>Sem fyrr mun code.org aldrei leigja, selja eða deila þessum upplýsingum með nokkrum þriðja aðila.'
     sign_out: 'Viljir þú ekki gefa upp aldur getur þú <a href="%{url}">skráð þig út</a>.'
   zendesk_too_young_message: 'Því miður mega yngri notendur ekki skrá sig á hjálparvefinn. Þú getur skoðað <a href="http://support.code.org">support.code.org</a> án þess að skrá þig inn eða beðið foreldri eða kennara að hafa samband við okkur fyrir þig.'
+  progress:
+    not_completed: "ólokið"
+    completed_too_many_blocks: "lokið, of margir kubbar"
+    completed_perfect: "lokið, fullkomið"
+    furthest_level_attempted: "hæsti unninn áfangi"
