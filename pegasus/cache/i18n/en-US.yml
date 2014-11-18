@@ -1,11 +1,11 @@
-"en-US":
+en-US:
   hello: "Hello world"
   select_language: "Please select your language"
   computer_science: "Computer Science"
   computer_science_edweek: "Computer Science Education Week"
   csedweek_dates: "December 9-15, 2013"
-  csedweek_banner_hoc: "The <a href=\"http://hourofcode.com\" style=\"color: white; text-decoration:underline; font-weight:bold\">Hour of Code</a> is coming. Calling all teachers and organizers, <a href=\"http://hourofcode.com\" style=\"color: white; text-decoration:underline; font-weight:bold\">plan your Hour of Code</a>"
-  csedweek_banner_teachers: "<a href=\"/csteacher\" style=\"color: white; text-decoration: none; font-weight: 400\">Are you a CS teacher? See other CSEdWeek resources</a>"
+  csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">plan your Hour of Code</a>'
+  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
   n_have_learned_an_hoc: "<h1>#</h1><h3>have tried an</h3><h2>Hour of Code</h2>"
   anybody_can_learn: "Anybody can learn."
   learn_now: "Learn Now"
@@ -323,6 +323,7 @@
   codehs_name: "Learn to Code With Karel the Dog"
   codecademy_name: "Codecademy"
   codecombat_name: "CodeCombat"
+  codemonkey_name: "CodeMonkey"
   codeavengers_name: "Build a Game with JavaScript"
   processing_name: "Drawing with Code"
   robomind_name: "Program a virtual robot"
@@ -354,6 +355,7 @@
   codehs_gradelevel: "High school"
   codecademy_gradelevel: "High school"
   codecombat_gradelevel: "Middle school +"
+  codemonkey_gradelevel: "Middle school +"
   codeavengers_gradelevel: "Middle school +"
   processing_gradelevel: "High school"
   robomind_gradelevel: "Ages 8-13"
@@ -385,6 +387,7 @@
   codehs_platformtext: "Modern browsers"
   codecademy_platformtext: "Modern web browsers. iOS, Android apps"
   codecombat_platformtext: "Modern web browsers"
+  codemonkey_platformtext: "Modern web browsers"
   codeavengers_platformtext: "Modern web browsers"
   processing_platformtext: "Modern web browsers"
   robomind_platformtext: "Modern web browsers, Mobile web"
@@ -416,6 +419,7 @@
   codehs_shortdescription: "Start coding with Karel the Dog, a fun and visual intro to programming!"
   codecademy_shortdescription: "Learn JavaScript programming, in a web-browser"
   codecombat_shortdescription: "Defeat ogres to learn Python or JavaScript in this epic programming game!"
+  codemonkey_shortdescription: "Students program a monkey to catch bananas while it gets slightly more complicated on each level."
   codeavengers_shortdescription: "Learn JavaScript programming, in a web-browser"
   processing_shortdescription: "A one hour tutorial in the Processing languages"
   robomind_shortdescription: "Write code for a virtual robot"
@@ -447,6 +451,7 @@
   codehs_longdescription: "Giving commands to a computer, which is what programming is all about, is just like giving commands to a dog. Learn how to code with Karel the Dog&mdash;a fun, accessible, and visual introduction to programming that teaches fundamental concepts like commands and functions to absolute beginners. Tutorial is student-directed but teachers can sign up to access teacher tools and track student success!"
   codecademy_longdescription: "Codecademy is an interactive, student-guided introduction to the basics of CS through JavaScript that's used by tens of millions of students around the world. We've prepared a no-hassle Hour of Code experience with accompanying quizzes, slides, and a completed project for students at the end."
   codecombat_longdescription: "Defeat ogres to learn Python or JavaScript in this epic programming game!"
+  codemonkey_longdescription: 'CodeMonkey is an online game that teaches coding in a real programming language! Students program a monkey to catch bananas while it gets slightly more complicated on each level. They get star scores on each solution and can share it in a single click. '
   codeavengers_longdescription: "Build a 2 player 2D top-down game with JavaScript in 10 short tasks. Then continue learning some basics of programming (variables and if statements) as you create a Quiz to share with friends. Along the way  earn points and badges as you compete to reach the top of the class leaderboard."
   processing_longdescription: "An introduction to programming in the context of the visual arts using the Processing programming language. Short video lessons introduce coding exercises that lead to designing an interactive drawing program"
   robomind_longdescription: 'Students learn the basics of programming by controlling their own virtual robot. The online course is fully self-contained with short presentations, movies, quizzes and automatic guidance/hints to help with the programming exercises. '

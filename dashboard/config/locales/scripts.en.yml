@@ -280,3 +280,16 @@ en:
           'Bee: Nested Loops': 'Bee: Nested Loops'
           'Artist: Functions': 'Artist: Functions'
           'Bee: Debugging': 'Bee: Debugging'
+        Course4pre (Case Conflict):
+          description_short: A brief rampup of concepts for students who have not
+            taken Course 2 and 3.
+          Course 4 Prerequisite: Course 4 Prerequisite
+          'Maze: Sequence': 'Maze: Sequence'
+          'Artist: Sequence': 'Artist: Sequence'
+          'Artist: Loops': 'Artist: Loops'
+          'Bee: Conditionals': 'Bee: Conditionals'
+          'Artist: Nested Loops': 'Artist: Nested Loops'
+          'Farmer: While Loops': 'Farmer: While Loops'
+          'Bee: Nested Loops': 'Bee: Nested Loops'
+          'Artist: Functions': 'Artist: Functions'
+          'Bee: Debugging': 'Bee: Debugging'
