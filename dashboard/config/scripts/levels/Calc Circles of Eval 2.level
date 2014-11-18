@@ -13,7 +13,7 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "free_play": "false",
-    "instructions": "At the top of each rectangle of evaluation is the function, below that are places to put each argument needed by that function. Each of those arguments either a value (in this case a number) or another rectangle that evaluates to a number."
+    "instructions": "At the top of each Evaluation Block is the function, below that are places to put each argument needed by that function. Each of those arguments can take either a value (in this case a number) or another Block (or combination of Blocks) that evaluates to a number."
   }
 }]]></config>
   <blocks>

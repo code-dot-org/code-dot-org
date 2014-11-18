@@ -41,23 +41,27 @@
     </required_blocks>
     <solution_blocks>
       <xml>
-        <block type="simple_move_right_length">
-          <title name="length">SHORT_MOVE_LENGTH</title>
+        <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="simple_jump_right">
+            <block type="simple_move_right_length">
+              <title name="length">SHORT_MOVE_LENGTH</title>
               <next>
-                <block type="simple_move_right_length">
-                  <title name="length">SHORT_MOVE_LENGTH</title>
+                <block type="simple_jump_right">
                   <next>
-                    <block type="simple_jump_right">
+                    <block type="simple_move_right_length">
+                      <title name="length">SHORT_MOVE_LENGTH</title>
                       <next>
-                        <block type="simple_move_up_length">
-                          <title name="length">SHORT_MOVE_LENGTH</title>
+                        <block type="simple_jump_right">
                           <next>
-                            <block type="simple_jump_up">
+                            <block type="simple_move_up_length">
+                              <title name="length">SHORT_MOVE_LENGTH</title>
                               <next>
-                                <block type="simple_move_up_length">
-                                  <title name="length">SHORT_MOVE_LENGTH</title>
+                                <block type="simple_jump_up">
+                                  <next>
+                                    <block type="simple_move_up_length">
+                                      <title name="length">SHORT_MOVE_LENGTH</title>
+                                    </block>
+                                  </next>
                                 </block>
                               </next>
                             </block>

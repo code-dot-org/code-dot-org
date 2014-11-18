@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "eval",
-    "instructions": "Some functions can only take a specific set of strings, such as the second argument of this circle function, which controls its style. Use the special string block with a dropdown to make sure you only use valid styles.",
+    "instructions": "Some functions can only take a specific set of Strings, such as the second argument of this circle function, which controls its style. Use the special string block with a dropdown to make sure you only use valid styles.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

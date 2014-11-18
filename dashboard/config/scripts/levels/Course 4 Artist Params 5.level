@@ -25,42 +25,7 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="procedures_defnoreturn" uservisible="false">
-          <mutation>
-            <arg name="length"/>
-          </mutation>
-          <title name="NAME">draw a triangle</title>
-          <statement name="STACK">
-            <block type="controls_repeat_ext" inline="true" uservisible="false">
-              <value name="TIMES">
-                <block type="math_number" uservisible="false">
-                  <title name="NUM">3</title>
-                </block>
-              </value>
-              <statement name="DO">
-                <block type="draw_move" inline="true" uservisible="false">
-                  <title name="DIR">moveForward</title>
-                  <value name="VALUE">
-                    <block type="variables_get" uservisible="false">
-                      <title name="VAR">counter</title>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="draw_turn" inline="true" uservisible="false">
-                      <title name="DIR">turnLeft</title>
-                      <value name="VALUE">
-                        <block type="math_number" uservisible="false">
-                          <title name="NUM">120</title>
-                        </block>
-                      </value>
-                    </block>
-                  </next>
-                </block>
-              </statement>
-            </block>
-          </statement>
-        </block>
-        <block type="when_run" movable="false" deletable="false">
+        <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="controls_for_counter" inline="true">
               <mutation counter="counter"/>
@@ -84,6 +49,11 @@
                   <mutation name="draw a triangle">
                     <arg name="length"/>
                   </mutation>
+                  <value name="ARG0">
+                    <block type="variables_get">
+                      <title name="VAR">counter</title>
+                    </block>
+                  </value>
                 </block>
               </statement>
               <next>
@@ -145,6 +115,41 @@
           <mutation>
             <arg name="length"/>
           </mutation>
+          <title name="NAME">draw a triangle</title>
+          <statement name="STACK">
+            <block type="controls_repeat_ext" inline="true" uservisible="false">
+              <value name="TIMES">
+                <block type="math_number" uservisible="false">
+                  <title name="NUM">3</title>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="draw_move" inline="true" uservisible="false">
+                  <title name="DIR">moveForward</title>
+                  <value name="VALUE">
+                    <block type="variables_get" uservisible="false">
+                      <title name="VAR">counter</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="draw_turn" inline="true" uservisible="false">
+                      <title name="DIR">turnLeft</title>
+                      <value name="VALUE">
+                        <block type="math_number" uservisible="false">
+                          <title name="NUM">120</title>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn" uservisible="false">
+          <mutation>
+            <arg name="length"/>
+          </mutation>
           <title name="NAME">draw a square</title>
           <statement name="STACK">
             <block type="controls_repeat_ext" inline="true" uservisible="false">
@@ -175,9 +180,6 @@
               </statement>
             </block>
           </statement>
-        </block>
-        <block type="variables_get">
-          <title name="VAR">counter</title>
         </block>
       </xml>
     </start_blocks>

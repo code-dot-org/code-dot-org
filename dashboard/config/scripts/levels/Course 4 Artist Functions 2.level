@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Let's take that square loop and turn it into a function, so anytime you want to draw a square you only have to call the function. Click \"edit\" on the existing \"draw a square\" function and make it draw a 100 pixel square.",
+    "instructions": "Good job on the last puzzle, now let's take that square \"loop\" you just made and turn it into a \"function\", so anytime you want to draw a square you only have to call the \"function\". Follow these instructions:  Click \"edit\" on the existing \"draw a square\" function and make it draw a 100 pixel square. Then click on the Save and close option in the upper right hand corner. Hint: Use the square loop you just made in the last puzzle. ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -35,6 +35,15 @@
         <block type="procedures_defnoreturn" uservisible="false">
           <mutation/>
           <title name="NAME">draw a square</title>
+          <statement name="STACK">
+            <block type="controls_repeat_ext" inline="true">
+              <value name="TIMES">
+                <block type="math_number">
+                  <title name="NUM">4</title>
+                </block>
+              </value>
+            </block>
+          </statement>
         </block>
       </xml>
     </start_blocks>

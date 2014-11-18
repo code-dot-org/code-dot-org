@@ -13,7 +13,7 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "free_play": "false",
-    "instructions": "Every mathematical operator (+, -, *, /, and so on) can be represented by a rectangle of evaluation in code. Convert the rectangle of evaluation to match the expression."
+    "instructions": "Every mathematical operator (+, -, *, /, and so on) can be represented by an Evaluation Block in code. Convert the Evaluation Block to match the expression."
   }
 }]]></config>
   <blocks>

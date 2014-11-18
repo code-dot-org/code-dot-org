@@ -16,7 +16,10 @@
     "x": "200",
     "y": "200",
     "slider_speed": "0.8",
-    "impressive": "true"
+    "impressive": "true",
+    "ideal": "4",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false"
   }
 }]]></config>
   <blocks>

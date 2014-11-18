@@ -6,7 +6,7 @@
   "user_id": 4,
   "properties": {
     "skin": "elsa",
-    "instructions": "If you repeat the 3 line pattern 3 times, it starts to look like a branch of a snowflake. Try using the 'create a snowflake branch' block to create three branches.",
+    "instructions": "Try using the ”Create a snowflake branch” block to create three branches, which starts to look like a snowflake.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -16,7 +16,10 @@
     "x": "200",
     "y": "200",
     "slider_speed": "0.4",
-    "impressive": "false"
+    "impressive": "false",
+    "ideal": "4",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false"
   }
 }]]></config>
   <blocks>
