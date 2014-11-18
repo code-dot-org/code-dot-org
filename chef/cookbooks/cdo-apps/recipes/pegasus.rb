@@ -61,3 +61,12 @@ end
 service 'pegasus' do
   action [:enable, :start]
 end
+
+cron 'upload-pegasus-logs-to-s3' do
+  action :create
+  minute '5'
+  hour '1'
+  user node[:current_user]
+  home "/home/#{node[:current_user]}"
+  command "/home/#{node[:current_user]}/#{node.chef_environment}/aws/cronjob \"/home/#{node[:current_user]}/#{node.chef_environment}/bin/upload-logs-to-s3 pegasus\""
+end
