@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Now nest this loop inside another loop to draw 10 triangles. This is called a nested loop. Hint: All 10 triangles complete a 360 degree rotation. ",
+    "instructions": "Now nest this loop inside another loop to draw 6 triangles. This is called a nested loop. Hint: All 6 triangles complete a 60 degree rotation. ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "slider_speed": ".5",
@@ -22,6 +22,48 @@
   }
 }]]></config>
   <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" movable="false" deletable="false">
+          <next>
+            <block type="draw_colour" inline="true">
+              <value name="COLOUR">
+                <block type="colour_random"/>
+              </value>
+              <next>
+                <block type="controls_repeat_ext" inline="true">
+                  <value name="TIMES">
+                    <block type="math_number">
+                      <title name="NUM">3</title>
+                    </block>
+                  </value>
+                  <statement name="DO">
+                    <block type="draw_move" inline="true">
+                      <title name="DIR">moveForward</title>
+                      <value name="VALUE">
+                        <block type="math_number">
+                          <title name="NUM">100</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="draw_turn" inline="true">
+                          <title name="DIR">turnRight</title>
+                          <value name="VALUE">
+                            <block type="math_number">
+                              <title name="NUM">120</title>
+                            </block>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
     <toolbox_blocks>
       <xml>
         <category name="Actions">
@@ -114,14 +156,14 @@
           <title name="DIR">turnRight</title>
           <value name="VALUE">
             <block type="math_number">
-              <title name="NUM">36</title>
+              <title name="NUM">60</title>
             </block>
           </value>
         </block>
         <block type="controls_repeat_ext" inline="true">
           <value name="TIMES">
             <block type="math_number">
-              <title name="NUM">10</title>
+              <title name="NUM">6</title>
             </block>
           </value>
         </block>
@@ -129,12 +171,12 @@
     </required_blocks>
     <solution_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
+        <block type="when_run" movable="false" deletable="false">
           <next>
             <block type="controls_repeat_ext" inline="true">
               <value name="TIMES">
                 <block type="math_number">
-                  <title name="NUM">10</title>
+                  <title name="NUM">6</title>
                 </block>
               </value>
               <statement name="DO">
@@ -174,7 +216,7 @@
                           <title name="DIR">turnRight</title>
                           <value name="VALUE">
                             <block type="math_number">
-                              <title name="NUM">36</title>
+                              <title name="NUM">60</title>
                             </block>
                           </value>
                         </block>

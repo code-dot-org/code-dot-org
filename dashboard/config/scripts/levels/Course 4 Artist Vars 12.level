@@ -24,53 +24,53 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
+        <block type="when_run" movable="false" deletable="false">
           <next>
             <block type="variables_set" inline="false" movable="false">
               <title name="VAR">sides</title>
               <value name="VALUE">
                 <block type="math_number" movable="false">
-                  <title name="NUM">5</title>
+                  <title name="NUM">4</title>
                 </block>
               </value>
               <next>
                 <block type="variables_set" inline="false" movable="false">
                   <title name="VAR">length</title>
                   <next>
-                    <block type="controls_repeat_ext" inline="true" deletable="false" editable="false" movable="false">
+                    <block type="controls_repeat_ext" inline="true" movable="false" deletable="false" editable="false">
                       <value name="TIMES">
-                        <block type="variables_get" deletable="false" movable="false">
+                        <block type="variables_get" movable="false" deletable="false">
                           <title name="VAR">sides</title>
                         </block>
                       </value>
                       <statement name="DO">
-                        <block type="controls_repeat_ext" inline="true" deletable="false" editable="false" movable="false">
+                        <block type="controls_repeat_ext" inline="true" movable="false" deletable="false" editable="false">
                           <value name="TIMES">
-                            <block type="variables_get" deletable="false" movable="false">
+                            <block type="variables_get" movable="false" deletable="false">
                               <title name="VAR">sides</title>
                             </block>
                           </value>
                           <statement name="DO">
-                            <block type="draw_move" inline="true" deletable="false" editable="false" movable="false">
+                            <block type="draw_move" inline="true" movable="false" deletable="false" editable="false">
                               <title name="DIR">moveForward</title>
                               <value name="VALUE">
-                                <block type="variables_get" deletable="false" movable="false">
+                                <block type="variables_get" movable="false" deletable="false">
                                   <title name="VAR">length</title>
                                 </block>
                               </value>
                               <next>
-                                <block type="draw_turn" inline="true" deletable="false" editable="false" movable="false">
+                                <block type="draw_turn" inline="true" movable="false" deletable="false" editable="false">
                                   <title name="DIR">turnLeft</title>
                                   <value name="VALUE">
-                                    <block type="math_arithmetic" inline="true" deletable="false" editable="false" movable="false">
+                                    <block type="math_arithmetic" inline="true" movable="false" deletable="false" editable="false">
                                       <title name="OP">DIVIDE</title>
                                       <value name="A">
-                                        <block type="math_number" deletable="false" editable="false" movable="false">
+                                        <block type="math_number" movable="false" deletable="false" editable="false">
                                           <title name="NUM">360</title>
                                         </block>
                                       </value>
                                       <value name="B">
-                                        <block type="variables_get" deletable="false" movable="false">
+                                        <block type="variables_get" movable="false" deletable="false">
                                           <title name="VAR">sides</title>
                                         </block>
                                       </value>
@@ -81,26 +81,26 @@
                             </block>
                           </statement>
                           <next>
-                            <block type="draw_move" inline="true" deletable="false" editable="false" movable="false">
+                            <block type="draw_move" inline="true" movable="false" deletable="false" editable="false">
                               <title name="DIR">moveForward</title>
                               <value name="VALUE">
-                                <block type="variables_get" deletable="false" movable="false">
+                                <block type="variables_get" movable="false" deletable="false">
                                   <title name="VAR">length</title>
                                 </block>
                               </value>
                               <next>
-                                <block type="draw_turn" inline="true" deletable="false" editable="false" movable="false">
+                                <block type="draw_turn" inline="true" movable="false" deletable="false" editable="false">
                                   <title name="DIR">turnRight</title>
                                   <value name="VALUE">
-                                    <block type="math_arithmetic" inline="true" deletable="false" editable="false" movable="false">
+                                    <block type="math_arithmetic" inline="true" movable="false" deletable="false" editable="false">
                                       <title name="OP">DIVIDE</title>
                                       <value name="A">
-                                        <block type="math_number" deletable="false" editable="false" movable="false">
+                                        <block type="math_number" movable="false" deletable="false" editable="false">
                                           <title name="NUM">360</title>
                                         </block>
                                       </value>
                                       <value name="B">
-                                        <block type="variables_get" deletable="false" movable="false">
+                                        <block type="variables_get" movable="false" deletable="false">
                                           <title name="VAR">sides</title>
                                         </block>
                                       </value>
@@ -123,19 +123,6 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="math_arithmetic" inline="true">
-          <title name="OP">DIVIDE</title>
-          <value name="A">
-            <block type="math_number" movable="false">
-              <title name="NUM">300</title>
-            </block>
-          </value>
-          <value name="B">
-            <block type="variables_get" movable="false">
-              <title name="VAR">sides</title>
-            </block>
-          </value>
-        </block>
         <block type="math_arithmetic" inline="true">
           <title name="OP">DIVIDE</title>
           <value name="A">
@@ -167,6 +154,19 @@
           <value name="A">
             <block type="math_number" movable="false">
               <title name="NUM">2</title>
+            </block>
+          </value>
+          <value name="B">
+            <block type="variables_get" movable="false">
+              <title name="VAR">sides</title>
+            </block>
+          </value>
+        </block>
+        <block type="math_arithmetic" inline="true">
+          <title name="OP">DIVIDE</title>
+          <value name="A">
+            <block type="math_number" movable="false">
+              <title name="NUM">300</title>
             </block>
           </value>
           <value name="B">

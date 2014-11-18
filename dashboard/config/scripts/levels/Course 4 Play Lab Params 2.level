@@ -28,6 +28,7 @@
     ],
     "use_contract_editor": "false",
     "coordinate_grid_background": "false",
+    "open_function_definition": "jump",
     "maze_data": null
   }
 }]]></config>

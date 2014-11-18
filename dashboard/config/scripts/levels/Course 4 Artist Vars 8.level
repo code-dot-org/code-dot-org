@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Free play: Experiment with using feeding different values into that algorithm you've built. What happens to the size of the shape as you increase the number of sides? Could you modify the algorithm so that the overall size of the shape stays the same, no matter how many sides it has?",
+    "instructions": "Play around and see what happens to the size of the shape as you change the number of sides. Can you change the algorithm so that the overall size of the shape stays the same, no matter how many sides it has? Hint: You might have to use your math blocks (360 divided by sides in two places this time) ",
     "x": "150",
     "y": "350",
     "start_direction": "90",
@@ -95,12 +95,23 @@
             </block>
           </value>
         </block>
+        <block type="draw_turn" inline="true">
+          <title name="DIR">turnLeft</title>
+          <value name="VALUE">
+            <block type="math_number">
+              <title name="NUM">90</title>
+            </block>
+          </value>
+        </block>
         <block type="controls_repeat_ext" inline="true"/>
         <block type="math_number">
           <title name="NUM">???</title>
         </block>
         <block type="math_arithmetic" inline="true">
           <title name="OP">ADD</title>
+        </block>
+        <block type="variables_set" inline="false">
+          <title name="VAR">sides</title>
         </block>
         <block type="variables_get">
           <title name="VAR">sides</title>
