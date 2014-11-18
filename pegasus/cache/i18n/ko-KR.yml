@@ -4,6 +4,12 @@
   computer_science: 컴퓨터과학(Computer Science, 정보과학)
   computer_science_edweek: 컴퓨터과학(Computer Science, 정보과학) 교육 주간
   csedweek_dates: 2013년 12월 9일 부터 15일 까지
+  csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
+    font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers,
+    <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
+    font-weight:bold">plan your Hour of Code</a>'
+  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
+    none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
   n_have_learned_an_hoc: <h1>#</h1><h3>명이</h3><h2>Hour of Code</h2><h3>를 경험하였습니다</h3>
   anybody_can_learn: 누구나 배울 수 있습니다.
   learn_now: 지금 배워보세요.
@@ -305,6 +311,7 @@
   code_sign_up: Sign up to participate during CS Education Week
   learn_more: 더 알아보기
   carousel_heading_international: 다른 언어로 된 튜토리얼
+  carousel_heading_domestic: Tutorials available in English
   carousel_heading_beginners: Tutorials for Beginners
   carousel_heading_javascript: Tutorials that teach Javascript
   carousel_heading_unplugged: No device or internet? Try 'unplugged' computer science
