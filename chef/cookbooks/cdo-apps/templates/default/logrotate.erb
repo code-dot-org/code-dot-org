@@ -30,8 +30,4 @@ copytruncate
 
 # Set user/group permissions for archived log files.
 su <%= node[:current_user] %> <%= node[:current_user] %>
-
-postrotate
-  /home/<%= node[:current_user] %>/<%= node.chef_environment %>/bin/upload-logs-to-s3 <%= @app_name %>
-endscript
 }

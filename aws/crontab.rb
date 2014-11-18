@@ -21,6 +21,7 @@ if rack_env?(:production)
   cronjob at:'0 * * * *', do:bin_dir('import_sendy_unsubscribers')
 end
 
+cronjob at:'0 6 * * * *', do:bin_dir('upload-logs-to-s3 dashboard pegasus')
 cronjob at:'*/1 * * * *', do:bin_dir('process_forms')
 cronjob at:'*/5 * * * *', do:bin_dir('analyze_hoc_activity')
 cronjob at:'*/1 * * * *', do:bin_dir('deliver_poste_messages')
