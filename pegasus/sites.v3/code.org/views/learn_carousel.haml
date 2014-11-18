@@ -6,8 +6,7 @@
 -else
   -items = tutorials.find_with_tag(tag)
 -if items.count > 0
-  -unless international_layout
-    %h1{:class=>'course-carousel-title', :style=>"margin-bottom:8px"}=heading
+  %h1{:class=>'course-carousel-title', :style=>"margin-bottom:8px"}=heading
   -unless subheading.nil_or_empty?
     %p=subheading
 
@@ -29,7 +28,11 @@
                   %img{:src=>tutorial[:image].sub("/images/", "/images/fit-520/").sub(".png", ".jpg")}
               .slide-text
                 %a{:href=>url, :target=>'_blank'}<
-                  %h2=I18n.t "#{tutorial[:code]}_name"
+                  -if international_layout
+                    %h2= tutorial[:orgname]
+                  -else
+                    %h2=I18n.t "#{tutorial[:code]}_name"
+                -unless international_layout
                   %h3= tutorial[:orgname]
                   %p.slide-longdescription=I18n.t "#{tutorial[:code]}_longdescription"
                   %p.slide-shortdescription=I18n.t "#{tutorial[:code]}_shortdescription"

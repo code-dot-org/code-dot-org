@@ -13,30 +13,11 @@
   = view :learn_carousel, :heading=>I18n.t(:mobile_devices), :tag=>'Mobile', :tutorials=>tutorials, :id=>'collection-mobile'
 
 #carousel-international{:style=>'display:none'}
-  %br
-  %br
-  %div{:class=>"panel-group", :id=>"accordion", :role=>"tablist", :"aria-multiselectable"=>"true"}
-    %div{:class=>"panel panel-default", :style=>"width: 103%"}
-      %div{:class=>"panel-heading", :role=>"tab", :id=>"headingOne"}
-        %a{:"data-toggle"=>"collapse", :"data-parent"=>"#accordion", :href=>"#collapseOne", :"aria-expanded"=>"true", :"aria-controls"=>"collapseOne", :style=>"font-size: 30px;"}= I18n.t(:carousel_heading_international)
-      %div{:id=>"collapseOne", :class=>"panel-collapse collapse in", :role=>"tabpanel", :"aria-labelledby"=>"headingOne"}
-        %div{:class=>"panel-body"}
-          = view :learn_carousel, :tag=>'International', :tutorials=>tutorials, :id=>'collection-international', :international_layout=>true, :check_language=>true
-    %br
-    %br
-    %div{:class=>"panel panel-default", :style=>"width: 103%"}
-      %div{:class=>"panel-heading", :role=>"tab", :id=>"headingTwo"}
-        %a{:"data-toggle"=>"collapse", :"data-parent"=>"#accordion", :href=>"#collapseTwo", :"aria-expanded"=>"false", :"aria-controls"=>"collapseTwo"}= I18n.t(:carousel_heading_domestic)
-      %div{:id=>"collapseTwo", :class=>"panel-collapse collapse", :role=>"tabpanel", :"aria-labelledby"=>"headingTwo"}
-        %div{:class=>"panel-body"}
-          - categories.each do |category|
-            - id = "collection-" + category[:tag]
-            = view :learn_carousel, :heading=>category[:name], :tag=>category[:tag], :tutorials=>tutorials, :id=>id
+  = view :learn_carousel, :heading=>I18n.t(:carousel_heading_international), :tag=>'International', :tutorials=>tutorials, :id=>'collection-international', :international_layout=>true, :check_language=>true
 
-#carousel-all
-  - categories.each do |category|
-    - id = "collection-" + category[:tag]
-    = view :learn_carousel, :heading=>category[:name], :tag=>category[:tag], :tutorials=>tutorials, :id=>id
+- categories.each do |category|
+  - id = "collection-" + category[:tag]
+  = view :learn_carousel, :heading=>category[:name], :tag=>category[:tag], :tutorials=>tutorials, :id=>id
 
 %br
 %br
@@ -81,10 +62,8 @@
 
   // International
   var pegasusLocale = "#{request.locale}";
-  if (pegasusLocale.substring(0,2) != "en") {
+  if (pegasusLocale.substring(0,2) != "en")
     $('#carousel-international').show();
-    $('#carousel-all').hide();
-  }
 
 %script{:src=>'/js/jquery.carouFredSel-6.2.1-packed.js'}
 %script{:src=>'/js/jquery.touchSwipe.min.js'}
