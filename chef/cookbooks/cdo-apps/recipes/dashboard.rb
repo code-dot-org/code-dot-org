@@ -9,7 +9,7 @@ template "/etc/init.d/dashboard" do
   variables ({
     src_file:"/home/#{node[:current_user]}/#{node.chef_environment}/dashboard/config/unicorn.rb",
     app_root:"/home/#{node[:current_user]}/#{node.chef_environment}/dashboard",
-    pid_file:"/home/#{node[:current_user]}/#{node.chef_environment}/aws/dashboard_unicorn.rb.pid",
+    pid_file:"/home/#{node[:current_user]}/#{node.chef_environment}/dashboard/config/unicorn.rb.pid",
     user:node[:current_user],
     env:node.chef_environment,
   })
@@ -60,4 +60,13 @@ end
 
 service 'dashboard' do
   action [:enable, :start]
+end
+
+cron 'upload-dashboard-logs-to-s3' do
+  action :create
+  minute '0'
+  hour '1'
+  user node[:current_user]
+  home "/home/#{node[:current_user]}"
+  command "/home/#{node[:current_user]}/#{node.chef_environment}/aws/cronjob \"/home/#{node[:current_user]}/#{node.chef_environment}/bin/upload-logs-to-s3 dashboard\""
 end

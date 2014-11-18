@@ -4,7 +4,7 @@ require path
 
 listen CDO.dashboard_port
 worker_processes CDO.dashboard_workers
-pid CDO.dashboard_unicorn_pid
+pid "#{File.expand_path(__FILE__)}.pid"
 timeout 60
 preload_app true
 stderr_path dashboard_dir('log','unicorn_stderr.log')

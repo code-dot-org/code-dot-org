@@ -86,6 +86,9 @@ Dashboard::Application.routes.draw do
       get 'solution', to: 'script_levels#solution'
     end
 
+    # /s/xxx/reset
+    get 'reset', to: 'script_levels#show', reset: true
+
     # /s/xxx/puzzle/yyy
     get 'puzzle/:chapter', to: 'script_levels#show', as: 'puzzle', format: false
 
