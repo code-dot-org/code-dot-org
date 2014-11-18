@@ -18,6 +18,7 @@
   = render partial: "levels/unplug", locals: { app: @game.app }
 - elsif @level.is_a?(DSLDefined)
   = render partial: "levels/#{@level.class.to_s.underscore}"
+  %div{style: 'width: 400px'}= render partial: 'levels/reference_area'
 - else
   -# Solution and start blocks may be nil if they don't exist for this level.
   - @solution_blocks = '' if ! defined? @solution_blocks

@@ -46,32 +46,30 @@
             = f.password_field :password_confirmation, class: 'input-xlarge fieldblock'
           %span#password_message_confirmation
         %br/
-        .itemblock
-          .labelblock
-            = t('signup_form.age')
-          = f.select :age, User::AGE_DROPDOWN_OPTIONS, include_blank: true, class: 'fieldblock'
-        %br/
-
         - if resource.teacher?
-          -# %h4 Optional information
           .itemblock
             .labelblock
               = t('signup_form.school_name')
-            = f.text_field :school, class: 'input-xlarge', class: 'fieldblock'
+            = f.text_field :school, class: 'input-xlarge fieldblock'
           %br/
-          = t('signup_form.school_address')
+          .itemblock
+            .labelblock
+              = t('signup_form.school_address')
+            = f.text_area :full_address, class: 'input-xxlarge fieldblock', placeholder: t('signup_form.address_placeholder'), rows: 4
           %br/
-          = f.text_area :full_address, class: 'input-xxlarge', placeholder: t('signup_form.address_placeholder'), rows: 4
 
+          = f.hidden_field :age, value: '21'
         - if resource.student?
-          -# %h5 
-            Optional information
+          .itemblock
+            .labelblock
+              = t('signup_form.age')
+            = f.select :age, User::AGE_DROPDOWN_OPTIONS, include_blank: true, class: 'fieldblock'
+          %br/
           .itemblock
             .labelblock
               = t('signup_form.gender')
             = f.select :gender, gender_options
           %br/
-
         = f.submit t('signup_form.submit'), class: "btn btn-primary btn-large"
         %br/
         %br/
