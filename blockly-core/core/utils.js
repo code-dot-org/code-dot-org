@@ -28,6 +28,7 @@ goog.provide('Blockly.utils');
 
 goog.require('goog.array');
 goog.require('goog.memoize');
+goog.require('goog.events');
 
 /**
  * Add a CSS class to a element.
@@ -541,4 +542,12 @@ Blockly.printerRangeToNumbers = function(rangeString) {
     }
   }
   return fullNumberList;
+};
+
+/**
+ * Generates a globally unique ID
+ * @returns {string|*}
+ */
+Blockly.getUID = function() {
+  return goog.events.getUniqueId('blocklyUID');
 };
