@@ -269,8 +269,9 @@ BlocklyApps.init = function(config) {
   dom.addClickTouchEvent(resetButton, BlocklyApps.resetButtonClick);
 
   var belowViz = document.getElementById('belowVisualization');
-  if (config.referenceArea) {
-    belowViz.appendChild(config.referenceArea());
+  var referenceArea = document.getElementById('reference_area');
+  if (referenceArea) {
+    belowViz.appendChild(referenceArea);
   }
 
   var visualizationColumn = document.getElementById('visualizationColumn');
@@ -8851,7 +8852,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/ru_ru/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n');9; if (options.alreadySaved) { ; buf.push('\n  <div class="saved-to-gallery">\n    ', escape((11,  msg.savedToGallery() )), '\n  </div>\n');13; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <div class="social-buttons">\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((16,  msg.saveToGallery() )), '\n  </button>\n  </div>\n');19; } ; buf.push('\n\n');21; if (options.response && options.response.level_source) { ; buf.push('\n  ');22; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((23,  options.appStrings.sharingText )), '</div>\n  ');24; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((27,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');31; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((31,  options.facebookUrl )), '\' target="_blank">\n        <img src=\'', escape((32,  BlocklyApps.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');34; }; buf.push('\n    ');35; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((35,  options.twitterUrl )), '\' target="_blank">\n        <img src=\'', escape((36,  BlocklyApps.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');38; }; buf.push('    ');38; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((39,  BlocklyApps.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');41; }; buf.push('  </div>\n');42; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n'); })();
+ buf.push('');1; var msg = require('../../locale/ru_ru/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n');9; if (options.alreadySaved) { ; buf.push('\n  <div class="saved-to-gallery">\n    ', escape((11,  msg.savedToGallery() )), '\n  </div>\n');13; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <div class="social-buttons">\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((16,  msg.saveToGallery() )), '\n  </button>\n  </div>\n');19; } ; buf.push('\n\n');21; if (options.response && options.response.level_source) { ; buf.push('\n  ');22; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((23,  options.appStrings.sharingText )), '</div>\n  ');24; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((27,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');31; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((31,  options.facebookUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((32,  BlocklyApps.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');34; }; buf.push('\n    ');35; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((35,  options.twitterUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((36,  BlocklyApps.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');38; }; buf.push('    ');38; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((39,  BlocklyApps.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');41; }; buf.push('  </div>\n');42; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -9467,6 +9468,7 @@ var msg = require('../../locale/ru_ru/turtle');
 var commonMsg = require('../../locale/ru_ru/common');
 
 var customLevelBlocks = require('./customLevelBlocks');
+var Turtle = require('./turtle');
 
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function(blockly, blockInstallOptions) {
@@ -10296,23 +10298,10 @@ exports.install = function(blockly, blockInstallOptions) {
       this.appendDummyInput()
            .appendTitle(msg.setPattern())
            .appendTitle( new blockly.FieldImageDropdown(
-              blockly.Blocks.draw_line_style_pattern.Options, 150, 20 ), 'VALUE' );
+              Turtle.lineStylePatternOptions, 150, 20 ), 'VALUE' );
       this.setTooltip(msg.setPattern());
     }
   };
-
-  // image icons and image paths for the 'set pattern block'
-  blockly.Blocks.draw_line_style_pattern.Options =
-    [[skin.patternDefault, 'DEFAULT'], //  signals return to default path drawing
-     [skin.rainbowMenu, 'rainbowLine'],  // set to property name for image within skin
-     [skin.ropeMenu, 'ropeLine'],  // referenced as skin[pattern];
-     [skin.squigglyMenu, 'squigglyLine'],
-     [skin.swirlyMenu, 'swirlyLine'],
-     [skin.annaLine, 'annaLine'],
-     [skin.elsaLine, 'elsaLine'],
-     [skin.annaLine_2x, 'annaLine_2x'],
-     [skin.elsaLine_2x, 'elsaLine_2x'],
-     ];
 
   generator.draw_line_style_pattern = function() {
     // Generate JavaScript for setting the image for a patterned line.
@@ -10410,7 +10399,7 @@ exports.install = function(blockly, blockInstallOptions) {
   customLevelBlocks.install(blockly, generator, gensym);
 };
 
-},{"../../locale/ru_ru/common":42,"../../locale/ru_ru/turtle":43,"./core":32,"./customLevelBlocks":33}],31:[function(require,module,exports){
+},{"../../locale/ru_ru/common":42,"../../locale/ru_ru/turtle":43,"./core":32,"./customLevelBlocks":33,"./turtle":39}],31:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -12523,6 +12512,9 @@ var JOINT_RADIUS = 4;
  */
 var JOINT_SEGMENT_LENGTH = 50;
 
+// image icons and image paths for the 'set pattern block'
+exports.lineStylePatternOptions = [];
+
 /**
  * PID of animation task currently executing.
  */
@@ -12572,6 +12564,18 @@ Turtle.init = function(config) {
 
   if (skin.id == "anna" || skin.id == "elsa")
   {
+    exports.lineStylePatternOptions = [
+      [skin.patternDefault, 'DEFAULT'], //  signals return to default path drawing
+      [skin.rainbowMenu, 'rainbowLine'],  // set to property name for image within skin
+      [skin.ropeMenu, 'ropeLine'],  // referenced as skin[pattern];
+      [skin.squigglyMenu, 'squigglyLine'],
+      [skin.swirlyMenu, 'swirlyLine'],
+      [skin.annaLine, 'annaLine'],
+      [skin.elsaLine, 'elsaLine'],
+      [skin.annaLine_2x, 'annaLine_2x'],
+      [skin.elsaLine_2x, 'elsaLine_2x'],
+    ];
+
     retina = backingScale();
 
     // We don't support ratios other than 2 right now (sorry!) so fall back to 1.
@@ -12678,7 +12682,7 @@ Turtle.init = function(config) {
     Turtle.ctxDisplay = display.getContext('2d');
 
 
-    if (skin.id == "anna" || skin.id == "elsa") {
+    if (BlocklyApps.usingBlockly && (skin.id == "anna" || skin.id == "elsa")) {
       Blockly.JavaScript.colour_random = function() {
         // Generate a random colour.
         if (!Blockly.JavaScript.definitions_.colour_random) {
@@ -12714,14 +12718,14 @@ Turtle.init = function(config) {
     // pre-load image for line pattern block. Creating the image object and setting source doesn't seem to be
     // enough in this case, so we're actually creating and reusing the object within the document body.
 
-    if ((BlocklyApps.usingBlockly && config.level.edit_blocks) || skin.id == "anna" || skin.id == "elsa")
+    if (skin.id == "anna" || skin.id == "elsa")
     {
       var imageContainer = document.createElement('div');
       imageContainer.style.display='none';
       document.body.appendChild(imageContainer);
 
-      for( var i = 0; i <  Blockly.Blocks.draw_line_style_pattern.Options.length; i++) {
-        var pattern = Blockly.Blocks.draw_line_style_pattern.Options[i][1];
+      for( var i = 0; i < exports.lineStylePatternOptions.length; i++) {
+        var pattern = exports.lineStylePatternOptions[i][1];
         if (skin[pattern]) {
           var img = new Image();
           img.src = skin[pattern];
@@ -13280,7 +13284,7 @@ Turtle.animate = function() {
         break;
       }
     }
-    if (!stepped) {
+    if (!stepped && !executeTuple()) {
       // We dropped out of the step loop because we ran out of code, all done:
       finishExecution();
       return;
@@ -13646,6 +13650,7 @@ var isCorrect = function(pixelErrors, permittedErrors) {
 var displayFeedback = function() {
   var feedbackImageCanvas;
   if (skin.id == "anna" || skin.id == "elsa") {
+    // For frozen skins, show background and characters along with drawing
     feedbackImageCanvas = Turtle.ctxDisplay;
   } else {
     feedbackImageCanvas = Turtle.ctxScratch;
@@ -13664,7 +13669,7 @@ var displayFeedback = function() {
     // impressive levels are already saved
     alreadySaved: level.impressive,
     // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
-    saveToGalleryUrl: level.freePlay && Turtle.response.save_to_gallery_url,
+    saveToGalleryUrl: level.freePlay && Turtle.response && Turtle.response.save_to_gallery_url,
     appStrings: {
       reinfFeedbackMsg: turtleMsg.reinfFeedbackMsg(),
       sharingText: turtleMsg.shareDrawing()

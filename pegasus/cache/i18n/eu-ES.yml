@@ -4,6 +4,12 @@
   computer_science: Konputazio zientzia
   computer_science_edweek: Konputazio zientzien hezkuntza astea
   csedweek_dates: 2013ko Abenduaren 9-15
+  csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
+    font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers,
+    <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
+    font-weight:bold">plan your Hour of Code</a>'
+  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
+    none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
   n_have_learned_an_hoc: <h1>#</h1><h3>-ek </h3<h2>KODETZE ORDU BAT&trade;</h2><h3>frogatu
     dute</h3>
   anybody_can_learn: Edozeinek ikasi dezake.
@@ -334,6 +340,7 @@
   code_sign_up: Sign up to participate during CS Education Week
   learn_more: Gehiago ikasi
   carousel_heading_international: Tutorialak zure hizkuntzan
+  carousel_heading_domestic: Tutorials available in English
   carousel_heading_beginners: Tutorials for Beginners
   carousel_heading_javascript: Tutorials that teach Javascript
   carousel_heading_unplugged: No device or internet? Try 'unplugged' computer science

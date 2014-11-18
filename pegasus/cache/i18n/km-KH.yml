@@ -4,6 +4,12 @@
   computer_science: វិទ្យាសាស្ត្រ​កុំព្យូទ័រ
   computer_science_edweek: សប្ដាហ៍​នៃ​ការ​សិក្សា​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ
   csedweek_dates: December 9-15, 2013
+  csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
+    font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers,
+    <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
+    font-weight:bold">plan your Hour of Code</a>'
+  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
+    none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
   n_have_learned_an_hoc: <h1>#</h1><h3>have tried an</h3><h2>HOUR of CODE&trade;</h2>
   anybody_can_learn: Anybody can learn.
   learn_now: ចាប់ផ្ដើមរៀននៅពេលនេះ
@@ -330,6 +336,7 @@
   code_sign_up: Sign up to participate during CS Education Week
   learn_more: រៀនបន្ថែមទៀត
   carousel_heading_international: Tutorials in your language
+  carousel_heading_domestic: Tutorials available in English
   carousel_heading_beginners: Tutorials for Beginners
   carousel_heading_javascript: Tutorials that teach Javascript
   carousel_heading_unplugged: No device or internet? Try 'unplugged' computer science

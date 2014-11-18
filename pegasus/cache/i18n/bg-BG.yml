@@ -4,6 +4,12 @@
   computer_science: Компютърни науки
   computer_science_edweek: Седмица на Компютърните Науки
   csedweek_dates: 9-15 Декември 2013 г.
+  csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
+    font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers,
+    <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
+    font-weight:bold">plan your Hour of Code</a>'
+  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
+    none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
   n_have_learned_an_hoc: <h1>#</h1><h3>са се опитали</h3><h2>Часът на кодирането</h2>
   anybody_can_learn: Всеки може да се научи.
   learn_now: Научете сега
@@ -344,6 +350,7 @@
   code_sign_up: Регистрирайте се за участие по време на CS седмицата на образованието
   learn_more: Научете повече
   carousel_heading_international: Уроци на вашия език
+  carousel_heading_domestic: Tutorials available in English
   carousel_heading_beginners: Уроци за начинаещи
   carousel_heading_javascript: Уроци, които преподават Javascript
   carousel_heading_unplugged: Нямате устройство или интернет? Опитайте "ънплъгд" уроците

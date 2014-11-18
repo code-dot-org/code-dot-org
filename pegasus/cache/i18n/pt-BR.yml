@@ -4,6 +4,12 @@
   computer_science: Ciência da Computação
   computer_science_edweek: Semana de Educação em Ciência da Computação
   csedweek_dates: 9 a 15 de dezembro de 2013
+  csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
+    font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers,
+    <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
+    font-weight:bold">plan your Hour of Code</a>'
+  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
+    none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
   n_have_learned_an_hoc: <h1>#</h1><h3>participaram da</h3><h2>Hora do Código</h2>
   anybody_can_learn: Qualquer pessoa pode aprender.
   learn_now: Aprenda Agora
@@ -339,63 +345,69 @@
   dashboard_sections_login_type_explanation: Esta tabela ajuda a explicar qual desses
     tipos de login, <b>imagem, palavra ou e-mail</b>, você vai querer escolher para
     uma seção.
-  dashboard_faq: Frequently Asked Questions
-  code_hoc_coming: The Hour of Code is coming - December 8-14!
-  code_sign_up: Sign up to participate during CS Education Week
+  dashboard_faq: Tire suas dúvidas
+  code_hoc_coming: A Hora do Código está chegando - 8 a 14 de dezembro!
+  code_sign_up: Inscreva-se para participar durante a Semana da Educação Em Ciência
+    da Computação
   learn_more: Saiba Mais
+  hoc2014_try_new_tutorials: Try our new Hour of Code tutorials
+  hoc2014_try_scrat: Angry Birds, PvZ, and Scrat
+  hoc2014_try_frozen: Anna and Elsa from Frozen
   carousel_heading_international: Tutoriais no seu idioma
-  carousel_heading_beginners: Tutorials for Beginners
-  carousel_heading_javascript: Tutorials that teach Javascript
-  carousel_heading_unplugged: No device or internet? Try 'unplugged' computer science
-  carousel_heading_devices: Tutorial apps for phones and tablets
-  carousel_heading_languages: Tutorials in other programming languages
-  carousel_heading_apps_games: Make your own apps or games
+  carousel_heading_domestic: Tutorials available in English
+  carousel_heading_beginners: Tutoriais para iniciantes
+  carousel_heading_javascript: Tutoriais que ensinam Javascript
+  carousel_heading_unplugged: Não tem dispositivos, nem Internet? Conheça a ciência
+    da computação "desconectada"
+  carousel_heading_devices: Aplicativos de tutoriais para telefones e tablets
+  carousel_heading_languages: Tutoriais sobre outras linguagens de programação
+  carousel_heading_apps_games: Crie seus próprios aplicativos e jogos
   carousel_heading_university: Cursos universitários on-line
-  carousel_heading_webpages: Learn to make web pages
-  carousel_heading_robots: Learn to program with robots
-  carousel_heading_ide: Platforms popular among teachers
-  educator_notes: Educator Notes
-  more_resources_educators: More resources for teachers and educators
-  participants: participants
-  teachers_notes: Teacher's Notes
-  previous: Previous
-  next: Next
-  older_systems: Tutorials that work on older systems
-  older_systems_subheading: These should work on older Web browsers. To access all
-    tutorials, upgrade to a <a href="http://browsehappy.com/" target="_blank">modern
-    Web browser.</a>
-  mobile_devices: Tutorials for mobile devices
+  carousel_heading_webpages: Aprenda a fazer páginas da Web
+  carousel_heading_robots: Aprenda a programar com robôs
+  carousel_heading_ide: Plataformas populares entre professores
+  educator_notes: Observações do Educador
+  more_resources_educators: Mais recursos para professores e educadores
+  participants: participantes
+  teachers_notes: Observações do Professor
+  previous: Anterior
+  next: Próximo
+  older_systems: Tutoriais que funcionam em sistemas mais antigos
+  older_systems_subheading: Esses deverão funcionar em navegadores da Web mais antigos.
+    Para acessar todos os tutoriais, atualize para um <a href="http://browsehappy.com/"
+    target="_blank">navegador da Web moderno.</a>
+  mobile_devices: Tutoriais para dispositivos móveis
   codeorg_name: Escreva seu primeiro programa de computador
   thinkersmithspanish_name: Meus amigos robóticos
   khan_name: Uma introdução ao JavaScript
   khanes_name: Uma introdução ao JavaScript
   tynker_name: Desenvolva seu próprio jogo
-  scratch_name: Crie um cartão de natal
+  scratch_name: Crie cartões de natal ou jogos
   lightbot_name: Lightbot
   thinkersmith_name: Meus amigos robóticos
-  condcards_name: Conditionals with Cards
+  condcards_name: Condicionais com cartões
   lightbotintl_name: Lightbot
-  codehs_name: Aprenda a codificar com Karel, o cachorro
+  codehs_name: Aprenda a programar com Karel, o cachorro
   codecademy_name: Codecademy
   codecombat_name: CodeCombat
   codeavengers_name: Desenvolva um jogo com JavaScript
   processing_name: Desenhar com códigos
   robomind_name: Programe um robô virtual
-  groklearning_name: Um gostinho da programação Python
-  quorum_name: Accessible programming (with screenreader support)
-  codespark_name: The Foos (pre-readers welcome)
-  kodable_name: Kodable
-  tynkerapp_name: Tynker - on tablets
+  groklearning_name: Eliza, a Dra. Chatterbot
+  quorum_name: Programação acessível (com suporte para leitor de tela)
+  codespark_name: The Foos (boas-vindas pré-leitura)
+  kodable_name: Kodable (boas-vindas pré-leitura)
+  tynkerapp_name: Tynker - para tablets
   hopscotch_name: 'Hopscotch: codifique no seu iPad'
   robomindnl_name: Programe um robô virtual
-  bitsbox_name: Bitsbox - make a game
+  bitsbox_name: Bitsbox - crie um jogo
   makegameswithus_name: Desenvolva um jogo para iPhone no seu navegador!
   touchdevelop_name: TouchDevelop
   appinventor_name: Hora do Código para AppInventor
   blockly_name: Blockly
   thinkersmith2_name: Bugigangas binárias
   kodableunplugged_name: fuzzFamily Frenzy
-  projguts_name: Rock, Paper, Scissors
+  projguts_name: Pedra, papel, tesoura
   codeorg_gradelevel: De 4 a 104 anos
   thinkersmithspanish_gradelevel: Todas as idades
   khan_gradelevel: Ensino Fundamental II
@@ -404,7 +416,7 @@
   scratch_gradelevel: A partir de 8 anos
   lightbot_gradelevel: Todas as idades
   thinkersmith_gradelevel: Todas as idades
-  condcards_gradelevel: Ages 8-12
+  condcards_gradelevel: De 8 a 12 anos
   lightbotintl_gradelevel: Todas as idades
   codehs_gradelevel: Ensino Médio
   codecademy_gradelevel: Ensino Médio
@@ -426,16 +438,16 @@
   blockly_gradelevel: Todas as idades
   thinkersmith2_gradelevel: A partir de 8 anos
   kodableunplugged_gradelevel: De 8 a 13 anos
-  projguts_gradelevel: Ages 10-13
+  projguts_gradelevel: De 10 a 13 anos
   codeorg_platformtext: Navegadores Web modernos, smartphones, tablets
   thinkersmithspanish_platformtext: Offline
   khan_platformtext: Navegadores Web modernos
   khanes_platformtext: Navegadores Web modernos
   tynker_platformtext: Navegadores Web modernos
-  scratch_platformtext: Qualquer navegador
-  lightbot_platformtext: iOS, Android (ou navegador da web)
+  scratch_platformtext: TODOS os navegadores
+  lightbot_platformtext: TODOS os navegadores e iOS, Android ou console de jogos
   thinkersmith_platformtext: Offline
-  condcards_platformtext: Unuplugged
+  condcards_platformtext: Offline
   lightbotintl_platformtext: iOS, Android (ou navegador da web)
   codehs_platformtext: Navegadores modernos
   codecademy_platformtext: Navegadores da web modernos. Aplicativos para iOS, Android
@@ -444,11 +456,11 @@
   processing_platformtext: Navegadores Web modernos
   robomind_platformtext: Navegadores Web modernos, Web móvel
   groklearning_platformtext: Navegadores Web modernos
-  quorum_platformtext: Modern web browsers. Screen-readers supported
+  quorum_platformtext: Navegadores da Web modernos. Suporte para leitores de tela
   codespark_platformtext: iOS, Android (ou navegador da web)
   kodable_platformtext: Kodable is a self-guided iPad game that introduces kids 5+
     to programming basics. Having a teacher or parent nearby is optimal, but not necessary.
-  tynkerapp_platformtext: iPad, Android tablets
+  tynkerapp_platformtext: iPad, tablets Android
   hopscotch_platformtext: Student-guided tutorial on the iPad using the Hopscotch
     programming language. Students will build games and apps for their iPad on their
     iPad. Students can work individually or with friends (up to 3 per iPad).
@@ -461,39 +473,45 @@
   thinkersmith2_platformtext: Offline
   kodableunplugged_platformtext: Offline
   projguts_platformtext: Offline
-  codeorg_shortdescription: Aprenda a codificar com Mark Zuckerberg e Angry Birds!
+  codeorg_shortdescription: Aprenda a programar com Mark Zuckerberg e Angry Birds!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Aprenda a desenhar em JavaScript
   khanes_shortdescription: Aprenda a desenhar em JavaScript
-  tynker_shortdescription: Aprenda os conceitos básicos da programação em um ambiente
-    visual divertido
-  scratch_shortdescription: Crie um cartão interativo
-  lightbot_shortdescription: Um jogo para ensinar a codificar conceitos
+  tynker_shortdescription: Aprenda a programar solucionando desafios divertidos, além
+    de criar seus próprios jogos para dispositivos móveis.
+  scratch_shortdescription: Crie um cartão ou jogo interativo
+  lightbot_shortdescription: Programe o Lightbot para resolver desafios usando procedimentos
+    e laços!
   thinkersmith_shortdescription: Tutorial desconectado para grupos sem dispositivos
-  condcards_shortdescription: Learn algorithms with a deck of cards
-  lightbotintl_shortdescription: Um jogo para ensinar a codificar conceitos
-  codehs_shortdescription: Aprenda sobre a programação JavaScript com um ambiente
-    visual divertido
+  condcards_shortdescription: Aprenda sobre algoritmos com cartas de baralho
+  lightbotintl_shortdescription: Um jogo para ensinar a programar conceitos
+  codehs_shortdescription: Comece a programar com Karel, o cachorro, uma introdução
+    divertida e visual à programação!
   codecademy_shortdescription: Aprenda sobre a programação JavaScript em um navegador
     da Web
-  codecombat_shortdescription: Jogue e aprenda sobre JavaScript para vencer
+  codecombat_shortdescription: Lute contra ogros para aprender sobre Python ou JavaScript
+    neste épico jogo de programação!
   codeavengers_shortdescription: Aprenda sobre a programação JavaScript em um navegador
     da Web
   processing_shortdescription: Tutorial de uma hora sobre linguagens de processamento
-  robomind_shortdescription: Escreva códigos para um robô virtual
-  groklearning_shortdescription: Introdução básica à programação Python
-  quorum_shortdescription: Join Mary on a guided tour as she learns the Quorum programming
-    language.
-  codespark_shortdescription: The Foos is a fun, kid-friendly game to learn about
-    programming.
+  robomind_shortdescription: Programe um robô virtual
+  groklearning_shortdescription: Ensine "Eliza", o chatbot, a enganar seus amigos
+    e fazê-los acreditar que ela é humana!
+  quorum_shortdescription: Junte-se à Maria em uma visita guiada para aprender sobre
+    a linguagem de programação chamada Quorum.
+  codespark_shortdescription: The Foos é um jogo divertido para as crianças que querem
+    aprender sobre programação.
   kodable_shortdescription: Um jogo divertido para iPad que ensina conceitos de programação
     de computador
-  tynkerapp_shortdescription: Learn to code by solving fun puzzles and build your
-    own mobile games.
-  hopscotch_shortdescription: Aprenda sobre programação visual em um iPad
+  tynkerapp_shortdescription: Aprenda a programar solucionando desafios divertidos,
+    além de criar seus próprios jogos para dispositivos móveis.
+  hopscotch_shortdescription: Saiba como fazer os jogos Queimada culinária e Paredão,
+    usando Hopscotch!
   robomindnl_shortdescription: Escreva códigos para um robô virtual
-  bitsbox_shortdescription: Code a series of apps to play and share, using real Javascript.
-  makegameswithus_shortdescription: Aprenda a fazer um jogo para iPhone em uma hora
+  bitsbox_shortdescription: Programe uma série de aplicativos para jogar e compartilhar,
+    usando JavaScript de verdade.
+  makegameswithus_shortdescription: Crie um jogo para iPhone! Aprenda ao programar
+    para ensinar novos movimentos para a sua criatura!
   touchdevelop_shortdescription: Codifique aplicativos móveis diretamente no seu smartphone,
     tablet ou laptop
   appinventor_shortdescription: Faça seu próprio aplicativo! (Apenas para Android)
@@ -501,7 +519,7 @@
   thinkersmith2_shortdescription: Aprenda como os computadores utilizam 1s e 0s para
     representar informações
   kodableunplugged_shortdescription: Um divertido exercício desconectado
-  projguts_shortdescription: Try modeling and simulation using rock/paper/scissors
+  projguts_shortdescription: Conheça a modelagem e a simulação com pedra/papel/tesoura
   codeorg_longdescription: Aprenda os conceitos básicos de ciência da computação com
     a programação de arrastar e soltar. Este tutorial se parece com um jogo, é autoexplicativo
     e apresenta vídeo aulas das estrelas Bill Gates, Mark Zuckerberg, Angry Birds
@@ -518,46 +536,46 @@
   khanes_longdescription: Aprenda os conceitos básicos da programação JavaScript enquanto
     cria desenhos divertidos com seus códigos. Você pode fazer isso sozinho ou com
     sua turma!
-  tynker_longdescription: Uma coleção de oito atividades divertidas para que crianças
-    de todas as idades tentem programar. Resolva uma série de quebra-cabelas simples
-    para ajudar Pixel, o cãozinho, a voltar para casa, e Biff, o astronauta, a chegar
-    até sua base lunar. Desenvolva um jogo de zumbis espaciais ou crie arte matemática
-    usando nossa abordagem divertida e de fácil visualização para programar. A sessão
-    pode ser orientada pelo professor ou autoexplicativa.
-  scratch_longdescription: Com Scratch, você pode codificar seus próprios jogos interativos,
-    histórias, animações e muito mais. Nesta atividade, você vai criar um cartão de
-    natal interativo para compartilhar com amigos e familiares.
-  lightbot_longdescription: Aprenda a principal lógica da programação, começando pela
-    programação mais básica, destinada para crianças a partir de 4 anos, em sistemas
-    iOS ou Android (ou navegador da Web). Saiba como colocar comandos em sequência,
-    identificar padrões, usar procedimentos e laços!
+  tynker_longdescription: Crie seus próprios jogos e compartilhe-os com seus amigos!
+    Solucione desafios divertidos e aprenda os conceitos de programação de cada nível.
+    Personalize jogos com personagens animados, diversos níveis e propriedades valiosas.
+    Faça com que seus jogos sejam realistas usando a física. Veja os códigos na forma
+    de blocos visuais ou em JavaScript. Adapte seus jogos para iPads e tablets Android.
+    Mais de dezenas de atividades divertidas para escolher!
+  scratch_longdescription: Com Scratch, você pode programar seus próprios jogos, histórias,
+    animações interativas e muito mais. Nesta atividade, você vai criar um cartão
+    de natal ou jogo interativo para compartilhar com amigos e familiares.
+  lightbot_longdescription: Guie o Lightbot para acender todas as células azuis! Lightbot
+    é um jogo de quebra-cabeças que usa mecanismos de jogos de programação para permitir
+    que os jogadores obtenham uma compreensão prática sobre os conceitos básicos da
+    programação. Aprenda a colocar instruções em sequência, escrever procedimentos
+    e usar laços para passar de nível. Ideal para todas as idades.
   thinkersmith_longdescription: Usando um "Vocabulário-robô" pré-definido, os alunos
     vão descobrir como orientar uns aos outros a concluir tarefas específicas sem
     discuti-las primeiro. Esta aula ensina as crianças sobre a conexão entre símbolos
     e ações, bem como sobre a habilidade individual de depuração. "Meus amigos robóticos"
     funciona melhor como uma atividade em grupo, e também inclui um caderno de exercícios
     do professor para o uso da classe.
-  condcards_longdescription: Learn about algorithms and conditional statements in
-    this "unplugged" activity using a deck of cards. Students do this activity in
-    teams, and need one deck of cards per team.
+  condcards_longdescription: Aprenda sobre algoritmos e instruções condicionais nesta
+    atividade "desconectada" usando cartas de um baralho. Os alunos fazem esta atividade
+    em equipes, e precisam de um baralho para cada uma delas.
   lightbotintl_longdescription: Aprenda a principal lógica da programação, começando
     pela programação mais básica, destinada para crianças a partir de 4 anos, em sistemas
     iOS ou Android (ou navegador da Web). Saiba como colocar comandos em sequência,
     identificar padrões, usar procedimentos e laços!
-  codehs_longdescription: Aprenda os conceitos básicos da programação com Karel, o
-    cachorro. Uma introdução visual divertida e acessível à codificação, na qual dar
-    comandos a um computador é simples como dar comandos a um cachorro. Este tutorial
-    funciona muito bem se for orientado por um professor, mas também pode ser seguido
-    de maneira independente.
+  codehs_longdescription: Dar comandos a um computador, o que resume o conceito básico
+    da programação, é como dar comandos a um cachorro. Aprenda a programar com Karel,
+    o cachorro&mdash;uma introdução visual, acessível e divertida à programação, que
+    ensina os conceitos básicos, como comando e funções, para iniciantes. O tutorial
+    é autoexplicativo, mas os professores podem se inscrever para acessar ferramentas
+    de professores e acompanhar o sucesso dos alunos!
   codecademy_longdescription: A Codecademy é uma introdução interativa, que respeita
     o ritmo do aluno, aos conceitos básicos da CC por meio do JavaScript, linguagem
     utilizada por dezenas de milhões de alunos do mundo todo. Nós preparamos uma experiência
     prática e sem complicações da Hora do Código, que vem com testes, slides e um
     projeto completo para os alunos ao final da atividade.
-  codecombat_longdescription: Jogue como um Mago usando códigos (feitiços) para controlar
-    seus heróis, percorrer labirintos, derrotar ogros, enganar inimigos e resgatar
-    alienígenas! Aprenda sobre JavaScript com este jogo da Web em HTML5, destinado
-    a principiantes.
+  codecombat_longdescription: Lute contra ogros para aprender sobre Python ou JavaScript
+    neste épico jogo de programação!
   codeavengers_longdescription: Desenvolva um jogo de visão aérea em 2D para dois
     jogadores com o JavaScript em apenas 10 breves tarefas. Depois, continue aprendendo
     alguns conceitos básicos de programação (variáveis e instruções If), enquanto
@@ -572,50 +590,50 @@
     controlando seus próprios robôs virtuais. O curso on-line é totalmente completo,
     com breves apresentações, filmes, testes e orientação/dicas automáticas que ajudam
     com os exercícios de programação. '
-  groklearning_longdescription: Escolha uma das 3 atividades elaboradas para dar-lhe
-    sua primeira experiência em programação. Por exemplo, utilize a linguagem de programação
-    Python para construir um chatbot chamado "Eliza". Ela consegue enganar seus amigos
-    e fazê-los pensar que é um ser humano, e não um computador? Essa atividade pode
-    ser feita de forma autoexplicativa ou orientada pelo professor, e vem com todas
-    as observações e soluções.
-  quorum_longdescription: This tutorial is accessible for the visually-impaired, and
-    works with screenreaders. Join Mary on a tour as she joins a biology lab as a
-    programmer and learns the Quorum programming language. This tutorial is student-guided
-    with online example activities.
-  codespark_longdescription: The Foos is a fun and kid-friendly way to learn about
-    computer programming.  Program cute characters to solve puzzles and bring a virtual
-    world to life.  The game is "word free" so all can play!
+  groklearning_longdescription: Use a linguagem de programação Python para construir
+    um chatbot chamado "Eliza", que vai agir como um psicoterapeuta robô. Você vai
+    ensinar Eliza a falar e o que ela deve falar. Será que ela conseguirá enganar
+    seus amigos e fazê-los acreditar que é humana, e não um computador?
+  quorum_longdescription: Este tutorial pode ser acessado por deficientes visuais,
+    e funciona com leitores de tela. Junte-se à Maria em sua visita a um laboratório
+    de biologia como programadora, enquanto ela aprende a linguagem de programação
+    Quorum. Este tutorial é autoexplicativo e contém atividades on-line de exemplo.
+  codespark_longdescription: The Foos é uma maneira divertida para as crianças aprenderem
+    sobre programação. Programe personagens engraçadinhos para que eles solucionem
+    desafios e dar vida a um mundo virtual.  O jogo só tem imagens, assim, todos podem
+    brincar!
   kodable_longdescription: Kodable é um jogo autoexplicativo para iPad que apresenta
     os conceitos básicos da programação para crianças a partir de 5 anos. Ter um professor
     ou um dos pais por perto é o ideal, mas não necessário.
-  tynkerapp_longdescription: Build your own games and share with friends! Solve fun
-    coding puzzles and learn programming concepts in each level. Personalize games
-    with animated characters, multiple levels and rich props. Lots of fun activities
-    to choose from!
-  hopscotch_longdescription: Tutorial autoexplicativo para iPad que utiliza a linguagem
-    de programação Hopscotch. Os alunos desenvolverão jogos e aplicativos para iPads
-    em seus próprios dispositivos. Eles poderão trabalhar individualmente ou com os
-    amigos (até 3 por iPad).
+  tynkerapp_longdescription: Crie seus próprios jogos e compartilhe-os com amigos!
+    Solucione desafios de programação divertidos e aprenda os conceitos de programação
+    de cada nível. Personalize os jogos com personagens animados, diversos níveis
+    e propriedades valiosas. Muitas atividades divertidas para escolher!
+  hopscotch_longdescription: 'Construa e brinque com alguns jogos, como "Queimada
+    culinária" e "Paredão", usando a linguagem de programação de arrastar e soltar
+    do Hopscotch. Você aprenderá conceitos de computação como sequência, laços, variáveis
+    e funções. Quando terminar, você poderá compartilhar seu jogo com quem quiser
+    através do seu iPad ou iPhone. '
   robomindnl_longdescription: 'Os alunos aprendem os conceitos básicos da programação,
     controlando seus próprios robôs virtuais. O curso on-line é totalmente completo,
     com breves apresentações, filmes, testes e orientação/dicas automáticas que ajudam
     com os exercícios de programação. '
-  bitsbox_longdescription: Customize your very own virtual tablet, then code a series
-    of apps to play and share. Simple walkthroughs make it possible for even young
-    kids to program real Javascript, and the more advanced you are the further you'll
-    go.
-  makegameswithus_longdescription: Já sabe um pouco sobre programação? Aprenda a fazer
-    um jogo para iPhone em uma hora! Durante o processo, nós o ajudaremos a codificar,
-    testar e jogar seu jogo totalmente no navegador e, depois, a compartilhá-lo no
-    Facebook, para que seus amigos possam experimentá-lo! Não é necessário ter nenhum
-    experiência com iPhone. Você deve compreender o que são variáveis, métodos e objetos.
+  bitsbox_longdescription: Personalize seu próprio tablet virtual e programe uma série
+    de aplicativos para jogar e compartilhar. Orientações simples permitem que até
+    as crianças menores programem JavaScript de verdade, e quanto mais avançado você
+    estiver, mais longe irá.
+  makegameswithus_longdescription: Aprenda a programar ao fazer um jogo para iPhone
+    usando uma das mais recentes linguagens de programação, ideal para iniciantes,
+    a Swift! Crie um jogo de ação inspirado em Pok&eacute;mon e programe para ensinar
+    novos movimentos à sua criatura. Você aprenderá a usar variáveis, métodos e objetos
+    para ajudar sua criatura a vencer!
   touchdevelop_longdescription: Desenhos pirados, monstros voadores, flores giratórias...
     crie aplicativos no seu dispositivo com o TouchDevelop, o ambiente perfeito para
     criação de aplicativos móveis. Executável no iPhone, iPad, Android, Windows, Windows
     Phone, Linux e Mac.
   appinventor_longdescription: Vídeos rápidos e divertidos de tutoriais o ajudam a
     desenvolver três aplicativos simples para seu smartphone ou tablet Android. Elaborada
-    tanto para iniciantes como para experientes, esta hora do código vai prepará-lo
+    tanto para iniciantes como para experientes, esta Hora do Código vai prepará-lo
     para começar a desenvolver seus próprios aplicativos antes mesmo que você perceba.
     Imagine poder compartilhar suas próprias criações de aplicativos com seus amigos!
     Essas atividades são apropriadas para realização individual ou para aulas com
@@ -626,14 +644,15 @@
     ou usado com um cartão de memória
   thinkersmith2_longdescription: Os alunos vão aprender sobre representação e armazenamento
     de letras em binários, como funções de ligar e desligar. Ao final da atividade,
-    a turma poderá codificar suas próprias iniciais para levar para casa.
+    a turma poderá programar suas próprias iniciais para levar para casa.
   kodableunplugged_longdescription: 'Desenvolvido para ser usado com papel comum,
     o fuzzFamily Frenzy é uma introdução à lógica da programação para crianças a partir
     de 5 anos. Um professor explicará o jogo, então, os alunos vão programar um parceiro,
     para que ele complete um simples percurso de obstáculos. '
-  projguts_longdescription: This "unplugged" activity helps students learn how modeling
-    and simulation works by having a group of students play different versions of
-    the Rock / Paper / Scissors game, and see the results as different modeling experiments.
+  projguts_longdescription: Esta atividade "desconectada" ajuda os alunos a aprender
+    como a modelagem e a simulação funcionam com um grupo de alunos jogando diferentes
+    versões do jogo Pedra/Papel/Tesoura, e a ver os resultados como diferentes experiências
+    de modelagem.
   codeorg_beyond_name: 'Introdução à Ciências da computação (anos: pré até 8)'
   khan_beyond_name: Aprenda sobre a programação de computador
   tynker_beyond_name: Aprenda a programar em casa
@@ -645,10 +664,10 @@
   groklearning_beyond_name: Aprenda sobre a programação Python
   hacketyhack_beyond_name: Aprenda sobre a programação Ruby
   robomind_beyond_name: Programe um robô virtual
-  makegameswithus_beyond_name: Desenvolva um jogo para iPhone no seu navegador!
+  makegameswithus_beyond_name: Desenvolva um jogo para iPhone em seu navegador!
   appinventor_beyond_name: Hora do Código para AppInventor
   touchdevelop_beyond_name: TouchDevelop
-  codehs_beyond_name: Aprenda a codificar com Karel, o cachorro
+  codehs_beyond_name: Aprenda a programar com Karel, o cachorro
   udemy_beyond_name: Cursos de programação on-line
   lynda_beyond_name: Cursos de programação on-line
   edx_beyond_name: Turma Harvard CS50
@@ -676,12 +695,12 @@
   lightbot_beyond_gradelevel: Todas as idades
   codecademy_beyond_gradelevel: Ensino Médio
   kodable_beyond_gradelevel: Ensino Fundamental
-  hopscotch_beyond_gradelevel: Ensino Fundamental II
-  groklearning_beyond_gradelevel: Ensino Fundamental II
+  hopscotch_beyond_gradelevel: A partir do Ensino Fundamental II
+  groklearning_beyond_gradelevel: A partir do Ensino Fundamental II
   hacketyhack_beyond_gradelevel: Ensino Médio
   robomind_beyond_gradelevel: De 8 a 13 anos
   makegameswithus_beyond_gradelevel: Ensino Médio
-  appinventor_beyond_gradelevel: Ensino Fundamental II
+  appinventor_beyond_gradelevel: A partir do Ensino Fundamental II
   touchdevelop_beyond_gradelevel: Ensino Médio
   codehs_beyond_gradelevel: Ensino Médio
   udemy_beyond_gradelevel: Ensino Médio
@@ -694,15 +713,15 @@
   cargobot_beyond_gradelevel: A partir de 8 anos
   kidsruby_beyond_gradelevel: A partir de 12 anos
   w3schools_beyond_gradelevel: A partir de 12 anos
-  codeavengers_beyond_gradelevel: Ensino Fundamental II
+  codeavengers_beyond_gradelevel: A partir do Ensino Fundamental II
   mozilla_beyond_gradelevel: A partir de 12 anos
-  codecombat_beyond_gradelevel: Ensino Fundamental II
-  codea_beyond_gradelevel: Ensino Médio
+  codecombat_beyond_gradelevel: A partir do Ensino Fundamental II
+  codea_beyond_gradelevel: A partir do Ensino Médio
   lego_beyond_gradelevel: Ensino Fundamental II
   finch_beyond_gradelevel: A partir de 8 anos
-  arduino_beyond_gradelevel: Ensino Médio
+  arduino_beyond_gradelevel: A partir do Ensino Médio
   processing_beyond_gradelevel: Ensino Médio
-  alice_beyond_gradelevel: Ensino Fundamental II
+  alice_beyond_gradelevel: A partir do Ensino Fundamental II
   sphero_beyond_gradelevel: A partir de 8 anos
   codeorg_beyond_platformtext: Navegadores Web modernos, tablets
   khan_beyond_platformtext: Navegadores Web modernos
@@ -741,13 +760,13 @@
   processing_beyond_platformtext: Navegadores Web modernos
   alice_beyond_platformtext: Windows ou Mac (instalação obrigatória)
   sphero_beyond_platformtext: Kit de robótica
-  codeorg_beyond_shortdescription: Aprenda a codificar com Mark Zuckerberg e Angry
+  codeorg_beyond_shortdescription: Aprenda a programar com Mark Zuckerberg e Angry
     Birds!
   khan_beyond_shortdescription: Aprenda a desenhar em JavaScript
   tynker_beyond_shortdescription: Um curso divertido e interessante para crianças
     do 4º ao 8º ano
   scratch_beyond_shortdescription: Crie um jogo ou uma animação interativa
-  lightbot_beyond_shortdescription: Um jogo para ensinar a codificar conceitos
+  lightbot_beyond_shortdescription: Um jogo para ensinar a programar conceitos
   codecademy_beyond_shortdescription: Aprenda sobre a programação JavaScript em um
     navegador da Web
   kodable_beyond_shortdescription: Um jogo divertido para iPad que ensina conceitos
@@ -755,7 +774,7 @@
   hopscotch_beyond_shortdescription: Aprenda sobre programação visual em um iPad
   groklearning_beyond_shortdescription: Introdução básica à programação Python
   hacketyhack_beyond_shortdescription: Aprenda Ruby desde os conceitos básicos
-  robomind_beyond_shortdescription: Escreva códigos para um robô virtual
+  robomind_beyond_shortdescription: Programe um robô virtual
   makegameswithus_beyond_shortdescription: Aprenda a fazer um jogo para iPhone em
     uma hora
   appinventor_beyond_shortdescription: Faça seu próprio aplicativo! (Apenas para Android)
@@ -782,10 +801,11 @@
   arduino_beyond_shortdescription: Crie um protótipo do seu próprio hardware
   processing_beyond_shortdescription: Aprenda a linguagem Processing
   alice_beyond_shortdescription: Ensine programação em um ambiente 3D
-  sphero_beyond_shortdescription: Schools, Parents, Robots & Kids. We created the
-    SPRK program because we believe play is a powerful teacher. Whether you're an
-    educator or a parent, SPRK lessons give kids a fun crash course in programming
-    robots while sharpening their skills in math and science.
+  sphero_beyond_shortdescription: Escolas, Pais, Robôs e Crianças (SPRK, na sigla
+    em inglês). Nós criamos o programa SPRK, porque acreditamos que a brincadeira
+    é um professora poderosa. Seja você um educador, seja pai ou mãe, as aulas do
+    SPRK oferecem às crianças um curso divertido sobre programação de robôs, ao mesmo
+    tempo em que aprimoram suas habilidades em matemática e ciências.
   codeorg_beyond_longdescription: Aprenda os conceitos básicos de ciência da computação
     com a programação drag and drop. São 15-25 horas de atividades "offline" intercaladas
     com tutoriais em forma de jogo, com vídeos de Bill Gates, Mark Zuckerberg, Angry
@@ -846,7 +866,7 @@
     prévia em iPhone. Você precisa saber o que são variáveis, métodos e objetos.
   appinventor_beyond_longdescription: Vídeos rápidos e divertidos de tutoriais o ajudam
     a desenvolver três aplicativos simples para seu smartphone ou tablet Android.
-    Elaborada tanto para iniciantes como para experientes, esta hora do código vai
+    Elaborada tanto para iniciantes como para experientes, esta Hora do Código vai
     prepará-lo para começar a desenvolver seus próprios aplicativos antes mesmo que
     você perceba. Imagine poder compartilhar suas próprias criações de aplicativos
     com seus amigos! Essas atividades são apropriadas para realização individual ou
@@ -957,7 +977,8 @@
     para a criação de animações em 3D, o projeto Alice fornece ferramentas e materiais
     para ensinar e aprender pensamento computacional, resolução de problemas e programação
     para várias idades e níveis escolares.
-  sphero_beyond_longdescription: Schools, Parents, Robots & Kids. We created the SPRK
-    program because we believe play is a powerful teacher. Whether you're an educator
-    or a parent, SPRK lessons give kids a fun crash course in programming robots while
-    sharpening their skills in math and science.
+  sphero_beyond_longdescription: Escolas, Pais, Robôs e Crianças (SPRK, na sigla em
+    inglês). Nós criamos o programa SPRK, porque acreditamos que a brincadeira é um
+    professora poderosa. Seja você um educador, seja pai ou mãe, as aulas do SPRK
+    oferecem às crianças um curso divertido sobre programação de robôs, ao mesmo tempo
+    em que aprimoram suas habilidades em matemática e ciências.

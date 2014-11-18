@@ -4,6 +4,12 @@
   computer_science: 電腦科學
   computer_science_edweek: 電腦科學教育周
   csedweek_dates: 2013 年 12 月 9-15 日
+  csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
+    font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers,
+    <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
+    font-weight:bold">plan your Hour of Code</a>'
+  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
+    none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
   n_have_learned_an_hoc: <h1>#</h1><h3>嘗試過嗎</h3><h2>一小時的編程</h2>
   anybody_can_learn: 任何人都可以學習。
   learn_now: 現在就開始進行學習課程
@@ -315,7 +321,11 @@
   code_hoc_coming: The Hour of Code is coming - December 8-14!
   code_sign_up: Sign up to participate during CS Education Week
   learn_more: 瞭解更多資訊
+  hoc2014_try_new_tutorials: Try our new Hour of Code tutorials
+  hoc2014_try_scrat: Angry Birds, PvZ, and Scrat
+  hoc2014_try_frozen: Anna and Elsa from Frozen
   carousel_heading_international: 使用你語言的教程
+  carousel_heading_domestic: Tutorials available in English
   carousel_heading_beginners: Tutorials for Beginners
   carousel_heading_javascript: Tutorials that teach Javascript
   carousel_heading_unplugged: No device or internet? Try 'unplugged' computer science
