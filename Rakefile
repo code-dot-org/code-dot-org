@@ -98,8 +98,9 @@ namespace :build do
       HipChat.log 'Starting <b>dashboard</b>.'
       RakeUtils.start_service CDO.dashboard_unicorn_name unless rack_env?(:development)
 
-      # report deployment to honeybadger
-      RakeUtils.system 'rake', "honeybadger:deploy TO=#{rack_env} REVISION=`git rev-parse HEAD`"
+      unless rack_env?(:development)
+        RakeUtils.system 'rake', "honeybadger:deploy TO=#{rack_env} REVISION=`git rev-parse HEAD`"
+      end
     end
   end
 

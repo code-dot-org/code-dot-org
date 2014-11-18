@@ -70,16 +70,16 @@ Our code is segmented into four parts:
   * [Teacher Dashboard](http://code.org/teacher-dashboard)
 
 ## Running Dashboard
-1. `cd code-dot-org/dashboard`
-2. `bundle exec rails server`
-3.  Note: after major code updates (or if something seems broken), run `bundle exec rake db:migrate seed:all`
-4.  Visit [http://localhost.studio.code.org:3000/](http://localhost.studio.code.org:3000/)
+1. `cd code-dot-org`
+2. `rake build:dashboard`
+3. `bin/dashboard-server`
+4. Visit [http://localhost.studio.code.org:3000/](http://localhost.studio.code.org:3000/)
 
 ## Running Pegasus
 
-1. `cd code-dot-org/pegasus`
-2. `./up`
-3. Note: after major code updates (or if something seems broken), run `rake db:migrate seed:migrate`
+1. `cd code-dot-org`
+2. `rake build:pegasus`
+3. `bin/pegasus-server`
 4. Visit [http://localhost.code.org:9393/](http://localhost.code.org:9393/)
 
 ## Building Blockly and Blockly-core (optional)
