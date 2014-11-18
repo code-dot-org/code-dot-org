@@ -150,7 +150,7 @@ $websites_test = build_task('websites-test', [deploy_dir('rebuild')]) do
 
     Dir.chdir('test/ui') do
       HipChat.log 'Running <b>dashboard</b> UI tests...'
-      failed_browser_count = RakeUtils.system_ 'bundle', 'exec', './runner.rb', '-d', 'test.learn.code.org', '-p', '4'
+      failed_browser_count = RakeUtils.system_ 'bundle', 'exec', './runner.rb', '-d', 'test.learn.code.org', '-p', '6'
       if failed_browser_count == 0
         HipChat.log 'UI tests for <b>dashboard</b> succeeded.'
         HipChat.developers 'UI tests for <b>dashboard</b> succeeded.', color:'green'
