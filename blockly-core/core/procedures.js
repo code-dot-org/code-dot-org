@@ -42,6 +42,8 @@ Blockly.Procedures.DEFINITION_BLOCK_TYPES = [
   'procedures_defnoreturn', 'procedures_defreturn', 'functional_definition'
 ];
 
+Blockly.Procedures.PROCEDURAL_TO_FUNCTIONAL_CALL_TYPE = 'procedural_to_functional_call';
+
 /**
  * Find all user-created procedure definitions.
  * @return {!Array.<!Object>} Array of procedure definitions.
@@ -61,6 +63,12 @@ Blockly.Procedures.allProcedures = function() {
     switch (block.type) {
       case 'functional_definition':
         proceduresFunctional.push(procedureInfo);
+        if (Blockly.editBlocks === 'start_blocks') {
+          // Make extra procedural calls available for functional definitions in edit mode
+          var proceduralCallProcedureInfo = goog.object.clone(procedureInfo);
+          proceduralCallProcedureInfo.callType = Blockly.Procedures.PROCEDURAL_TO_FUNCTIONAL_CALL_TYPE;
+          proceduresFunctional.push(proceduralCallProcedureInfo);
+        }
         break;
       case 'procedures_defreturn':
         proceduresReturn.push(procedureInfo);
