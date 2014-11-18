@@ -9,7 +9,7 @@ template "/etc/init.d/dashboard" do
   variables ({
     src_file:"/home/#{node[:current_user]}/#{node.chef_environment}/dashboard/config/unicorn.rb",
     app_root:"/home/#{node[:current_user]}/#{node.chef_environment}/dashboard",
-    pid_file:"/home/#{node[:current_user]}/#{node.chef_environment}/aws/dashboard_unicorn.rb.pid",
+    pid_file:"/home/#{node[:current_user]}/#{node.chef_environment}/dashboard/config/unicorn.rb.pid",
     user:node[:current_user],
     env:node.chef_environment,
   })
