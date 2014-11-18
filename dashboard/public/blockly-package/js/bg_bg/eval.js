@@ -5560,6 +5560,10 @@ Eval.execute = function() {
   Eval.result = evaluateAnswer();
   Eval.testResults = BlocklyApps.getTestResults(Eval.result);
 
+  if (level.freePlay) {
+    Eval.testResults = BlocklyApps.TestResults.FREE_PLAY;
+  }
+
   var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   var textBlocks = Blockly.Xml.domToText(xml);
 
@@ -5627,7 +5631,10 @@ var displayFeedback = function(response) {
     skin: skin.id,
     feedbackType: Eval.testResults,
     response: response,
-    level: level
+    level: level,
+    appStrings: {
+      reinfFeedbackMsg: evalMsg.reinfFeedbackMsg()
+    },
   });
 };
 
@@ -13951,6 +13958,8 @@ exports.overlayBlockTitle = function(d){return "наслагване (отгор
 exports.placeImageBlockTitle = function(d){return "място-изображение (x, y, изображение)"};
 
 exports.rectangleBlockTitle = function(d){return "правоъгълник (ширина, височина, стил, цвят)"};
+
+exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to edit your drawing."};
 
 exports.rotateImageBlockTitle = function(d){return "завъртане (градуси, изображение)"};
 
