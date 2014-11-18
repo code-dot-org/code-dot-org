@@ -14,5 +14,3 @@
 /.websites-test-built
 /crontab
 /crontab.installed
-/dashboard_unicorn.rb.pid
-/pegasus_unicorn.rb.pid
