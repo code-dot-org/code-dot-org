@@ -237,7 +237,7 @@ director dashboard round-robin {
 <% end %>
 }
 
-<% if node['cdo-apps']['levelbuilder']['enabled'] %>
+<% if rack_env?(:staging) %>
 # levelbuilder
 backend levelbuilder {
   .host = "127.0.0.1";
@@ -352,6 +352,12 @@ end
       set req.backend = default;
       set req.http.host = "<%= canonical_hostname('code.org') %>";
     }
+<% if rack_env?(:production) %>
+    else if (req.url ~ "^/s/frozen" || req.url ~ "^/s/hourofcode")
+    {
+      error 751 "http://code.org/nothing-to-see-here";
+    }
+<% end %>
     else
     {
       set req.backend = dashboard;

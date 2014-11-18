@@ -1,5 +1,5 @@
 {
-  "atHoneycomb": "an Honigwabe",
+  "atHoneycomb": "an der Honigwabe",
   "atFlower": "an der Blume",
   "avoidCowAndRemove": "vermeide die Kuh und entferne 1",
   "continue": "Fortfahren",
@@ -30,8 +30,8 @@
   "ifPathAhead": "Wenn Weg voraus",
   "ifTooltip": "Wenn ein Weg in die benannte Richtung existiert, dann führe ein paar Aktionen aus.",
   "ifelseTooltip": "Wenn ein Weg in die benannte Richtung existiert, beginne mit dem ersten Block, ansonsten den zweiten Block vor.",
-  "ifFlowerTooltip": "If there is a flower/honeycomb in the specified direction, then do some actions.",
-  "ifelseFlowerTooltip": "If there is a flower/honeycomb in the specified direction, then do the first block of actions. Otherwise, do the second block of actions.",
+  "ifFlowerTooltip": "Wenn es eine Blume/Waben in der angegebenen Richtung gibt, dann tue einige Aktionen.",
+  "ifelseFlowerTooltip": "Ist eine Blume/Waben in der angegebenen Richtung, dann tun Sie den ersten Block der Aktionen. Andernfalls machen Sie den zweiten Block von Aktionen.",
   "insufficientHoney": "Du benutzt die richtigten Bausteine, aber du hast nicht die richtige Menge an Honig.",
   "insufficientNectar": "Du benutzt die richtigten Bausteine, aber du hast nicht die richtige Menge an Nektar.",
   "make": "machen",
@@ -74,11 +74,11 @@
   "turnLeft": "nach links drehen",
   "turnRight": "nach rechts drehen",
   "turnTooltip": "Dreht mich nach links oder rechts um 90 Grad.",
-  "uncheckedCloudError": "Make sure to check all clouds to see if they're flowers or honeycombs.",
+  "uncheckedCloudError": "Stellen Sie sicher,dass Sie alle Wolken auf Blumen oder Bienenwaben überprüfen.",
   "uncheckedPurpleError": "Stelle sicher, dass du alle lila Blumen nach Nektar durchsucht hast",
   "whileMsg": "solange",
   "whileTooltip": "Wiederhole die umschlossenen Aktionen bis der Endpunkt erreicht ist.",
   "word": "Finde das Wort",
   "yes": "Ja",
-  "youSpelled": "You spelled"
+  "youSpelled": "Sie haben geschrieben"
 }

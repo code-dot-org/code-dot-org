@@ -338,6 +338,7 @@ function drawMap () {
       numColPegman: skin.hittingWallPegmanCol,
       numRowPegman: skin.hittingWallPegmanRow
     });
+    document.getElementById('wallPegman').setAttribute('visibility', 'hidden');
   }
 
   // Add the hidden moving pegman animation.

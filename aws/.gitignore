@@ -12,15 +12,7 @@
 /.website-ci-built
 /.websites-built
 /.websites-test-built
-/bashrc
 /crontab
 /crontab.installed
 /dashboard_unicorn.rb.pid
 /pegasus_unicorn.rb.pid
-/postfix/main.cf
-/postfix/sasl_password
-/postfix/sasl_password.db
-/profile
-/varnish.config
-/varnish.secret
-/varnish.vcl

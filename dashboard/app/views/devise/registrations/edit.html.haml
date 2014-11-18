@@ -52,9 +52,9 @@
     .field
       = f.label t('signup_form.gender')
       = f.select :gender, gender_options
-  .field
-    = f.label t('signup_form.age')
-    = f.select :age, User::AGE_DROPDOWN_OPTIONS
+    .field
+      = f.label t('signup_form.age')
+      = f.select :age, User::AGE_DROPDOWN_OPTIONS
   - if resource.teacher?
     .field
       = f.label :school
@@ -62,6 +62,7 @@
     .field
       = f.label :full_address
       = f.text_area :full_address, class: 'input-xxlarge', rows: 4
+    = f.hidden_field :age, value: "21"
   .field
     = f.label t('signup_form.user_type')
     = f.select :user_type, user_type_options

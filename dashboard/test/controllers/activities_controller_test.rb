@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 require 'test_helper'
 
 class ActivitiesControllerTest < ActionController::TestCase
@@ -140,7 +141,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_creates(LevelSource, Activity, UserLevel, GalleryActivity) do
       assert_difference('@user.reload.total_lines', 20) do # update total lines
-        post :milestone, user_id: @user, script_level_id: @script_level, :lines => 20, :attempt => "1", :result => "true", :testResult => "100", :time => "1000", :app => "test", :program => "<hey>", :save_to_gallery => true, image: Base64.encode64(@good_image)
+        post :milestone, user_id: @user, script_level_id: @script_level, :lines => 20, :attempt => "1", :result => "true", :testResult => "100", :time => "1000", :app => "test", :program => "<hey>", :save_to_gallery => 'true', image: Base64.encode64(@good_image)
       end
     end
 
@@ -189,7 +190,37 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
 
-    # created gallery activity and activity for user
+    assert_equal @user, Activity.last.user
+  end
+
+  test "logged in milestone should not save to gallery when passing a level with false impressiveness" do
+    # insurance for weird things that happen in javascript.
+
+    # do all the logging
+    @controller.expects :log_milestone
+    @controller.expects :slog
+
+    @controller.expects(:trophy_check).with(@user)
+
+    assert_creates(LevelSource, Activity, UserLevel) do
+      assert_does_not_create(GalleryActivity) do
+        assert_difference('@user.reload.total_lines', 20) do # update total lines
+          post :milestone, user_id: @user, script_level_id: @script_level, :lines => 20, :attempt => "1", :result => "true", :testResult => "100", :time => "1000", :app => "test", :program => "<hey>", :save_to_gallery => 'false', image: Base64.encode64(@good_image)
+        end
+      end
+    end
+
+    assert_response :success
+
+    expected_response = {"previous_level"=>"/s/#{@script.id}/level/#{@script_level_prev.id}",
+                         "total_lines"=>35,
+                         "redirect"=>"/s/#{@script.id}/level/#{@script_level_next.id}",
+                         "level_source"=>"http://test.host/sh/#{assigns(:level_source).id}",
+                         "save_to_gallery_url"=>"/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}",
+                         "design"=>"white_background"}
+
+    assert_equal_expected_keys expected_response, JSON.parse(@response.body)
+
     assert_equal @user, Activity.last.user
   end
 
@@ -223,7 +254,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_creates(LevelSource, Activity, UserLevel, LevelSourceImage) do
       assert_does_not_create(GalleryActivity) do
         assert_no_difference('@user.reload.total_lines') do # don't update total lines
-          post :milestone, user_id: @user, script_level_id: @script_level, :lines => 20, :attempt => "1", :result => "false", :testResult => "10", :time => "1000", :app => "test", :program => "<hey>", image: Base64.encode64(@good_image), :save_to_gallery => true
+          post :milestone, user_id: @user, script_level_id: @script_level, :lines => 20, :attempt => "1", :result => "false", :testResult => "10", :time => "1000", :app => "test", :program => "<hey>", image: Base64.encode64(@good_image), :save_to_gallery => 'true'
         end
       end
     end
@@ -478,7 +509,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_creates(LevelSource) do
       assert_does_not_create(Activity, UserLevel, LevelSourceImage, GalleryActivity) do
-        post :milestone, user_id: 0, script_level_id: @script_level, :lines => "1", :attempt => "1", :result => "true", :testResult => "100", :time => "1000", :app => "test", :program => "<hey>", :save_to_gallery => true
+        post :milestone, user_id: 0, script_level_id: @script_level, :lines => "1", :attempt => "1", :result => "true", :testResult => "100", :time => "1000", :app => "test", :program => "<hey>", :save_to_gallery => 'true'
       end
     end
 
@@ -581,7 +612,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_creates(LevelSource, LevelSourceImage) do
       assert_does_not_create(Activity, UserLevel, GalleryActivity) do
-        post :milestone, user_id: 0, script_level_id: @script_level, :lines => "1", :attempt => "1", :result => "true", :testResult => "100", :time => "1000", :app => "test", :program => "<hey>", :save_to_gallery => true, image: Base64.encode64(@good_image)
+        post :milestone, user_id: 0, script_level_id: @script_level, :lines => "1", :attempt => "1", :result => "true", :testResult => "100", :time => "1000", :app => "test", :program => "<hey>", :save_to_gallery => 'true', image: Base64.encode64(@good_image)
       end
     end
 

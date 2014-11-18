@@ -103,7 +103,7 @@ var levels = module.exports = {};
 
 // Base config for levels created via levelbuilder
 levels.custom = {
-  'ideal': 2,
+  'ideal': Infinity,
   'requiredBlocks': [],
   'scale': {
     'snapRadius': 2
@@ -1067,3 +1067,21 @@ levels.full_sandbox =  {
   'startBlocks':
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
+
+levels.ec_sandbox = utils.extend(levels.sandbox, {
+  'editCode': true,
+  'codeFunctions': [
+    {'func': 'setSprite', 'params': ["0", "'cat'"] },
+    {'func': 'setBackground', 'params': ["'night'"] },
+    {'func': 'move', 'params': ["0", "1"] },
+    {'func': 'playSound', 'params': ["'slap'"] },
+    {'func': 'changeScore', 'params': ["1"] },
+    {'func': 'setSpritePosition', 'params': ["0", "7"] },
+    {'func': 'setSpriteSpeed', 'params': ["0", "8"] },
+    {'func': 'setSpriteEmotion', 'params': ["0", "1"] },
+    {'func': 'throwProjectile', 'params': ["0", "1", "'blue_fireball'"] },
+    {'func': 'vanish', 'params': ["0"] },
+    {'func': 'attachEventHandler', 'params': ["'when-left'", "function() {\n  \n}"] },
+  ],
+  'startBlocks': "",
+});

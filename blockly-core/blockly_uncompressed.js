@@ -18472,7 +18472,10 @@ Blockly.Procedures.flyoutCategory = function(blocks, gaps, margin, blockSpace) {
   var tuple = Blockly.Procedures.allProcedures();
   populateProcedures(tuple[0], "procedures_callnoreturn");
   populateProcedures(tuple[1], "procedures_callreturn");
-  populateProcedures(tuple[2], "functional_call")
+  populateProcedures(tuple[2], "functional_call");
+  if(Blockly.editBlocks === "start_blocks") {
+    populateProcedures(tuple[2], "procedural_to_functional_call")
+  }
 };
 Blockly.Procedures.getCallers = function(name, blockSpace) {
   var callers = [];

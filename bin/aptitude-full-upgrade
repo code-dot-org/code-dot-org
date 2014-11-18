@@ -1,0 +1,5 @@
+#!/bin/sh
+export DEBIAN_FRONTEND=noninteractive
+aptitude update
+aptitude -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" full-upgrade
+chef-client

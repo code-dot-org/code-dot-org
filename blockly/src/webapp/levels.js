@@ -41,6 +41,10 @@ levels.ec_simple = {
     {'func': 'createHtmlBlock', 'params': ["'id'", "'html'"] },
     {'func': 'replaceHtmlBlock', 'params': ["'id'", "'html'"] },
     {'func': 'deleteHtmlBlock', 'params': ["'id'"] },
+    {'func': 'createCanvas', 'params': ["'id'"] },
+    {'func': 'canvasDrawLine', 'params': ["'id'", "0", "0", "400", "400"] },
+    {'func': 'canvasDrawCircle', 'params': ["'id'", "200", "200", "100"] },
+    {'func': 'canvasClear', 'params': ["'id'"] },
     {'func': 'attachEventHandler', 'params': ["'id'", "'click'", "function() {\n  \n}"] },
   ],
 };

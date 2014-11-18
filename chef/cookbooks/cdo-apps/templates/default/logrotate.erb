@@ -1,7 +1,7 @@
 # See logrotate man page for configuration file format.
 <%= File.join(@log_dir, '*.log') %> {
 # Log files are rotated when they grow bigger than size bytes, but not before the additionally specified time interval.
-minsize 10M
+#minsize 10M
 
 # Log files are rotated every day.
 daily
@@ -30,4 +30,8 @@ copytruncate
 
 # Set user/group permissions for archived log files.
 su <%= node[:current_user] %> <%= node[:current_user] %>
+
+postrotate
+  /home/<%= node[:current_user] %>/<%= node.chef_environment %>/bin/upload-logs-to-s3 <%= @app_name %>
+endscript
 }

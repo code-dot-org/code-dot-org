@@ -70,11 +70,8 @@ class HomeControllerTest < ActionController::TestCase
 
     get :index
 
-    assert_select 'h4', "My Apps" # title of the gallery section
-    assert_select 'h4', "My Art" # title of the gallery section
-    assert_select '#turtle-gallery div.gallery_activity img', 3 # artist items
-    assert_select '#studio-gallery div.gallery_activity img', 1 # playlab item
-
+    assert_select 'h3', "Gallery" # title of the gallery section
+    assert_select '#gallery div.gallery_activity img', 4
   end
 
   test "logged in user without gallery activities does not show gallery" do
@@ -124,17 +121,16 @@ class HomeControllerTest < ActionController::TestCase
       get :index
       assert_response :success
 
-      if script.hoc? 
+      if script.hoc?
         url = "http://test.host/hoc"
       elsif script.flappy?
         url = "http://test.host/flappy"
       else
         url = "http://test.host/s/#{script.to_param}"
       end
-      assert_select '#left_off'
-      assert_select "form[action^=#{url}]" # continue link
+      assert_select "#continue a[href^=#{url}]" # continue link
       assert_select 'h3',  I18n.t("data.script.name.#{script.name}.title") # script title
-      assert_select "a.level_link[href^=#{url}]" # link to level in progress
+      assert_select "div[data-script-id=#{script.id}]" # div for loading script progress
     end
   end
     
@@ -143,6 +139,9 @@ class HomeControllerTest < ActionController::TestCase
     sign_in(user)
     Script.find(Script::TWENTY_HOUR_ID).script_levels.each do |script_level|
       UserLevel.create(user: user, level: script_level.level, attempts: 1, best_result: Activity::MINIMUM_PASS_RESULT)
+    end
+    Script.find_by(name: 'hourofcode').script_levels.each do |script_level|
+      UserLevel.find_or_create_by(user: user, level: script_level.level, attempts: 1, best_result: Activity::MINIMUM_PASS_RESULT)
     end
     user.backfill_user_scripts
 

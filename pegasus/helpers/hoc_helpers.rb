@@ -1,42 +1,5 @@
 require 'RMagick'
-
-def create_certificate_image(name, course=nil, sponsor=nil)
-  image_file = '20hours_certificate.jpg' if course == '20hours'
-  image_file ||= 'hour_of_code_certificate.jpg'
-  background = Magick::Image.read(pegasus_dir('sites.v3', 'code.org', 'public', 'images', image_file)).first
-
-  width = background.columns
-  height = background.rows
-
-  draw = Magick::Draw.new
-  name = name.gsub(/@/,'\@')
-  name = ' ' if name.empty?
-
-  vertical_offset = course == "20hours" ? 260 : 235
-  draw.annotate(background, width,height-vertical_offset,0,0, name.to_s) do
-    draw.gravity = Magick::CenterGravity
-    self.pointsize = 90
-    self.font_family = 'Times'
-    self.font_weight = Magick::BoldWeight
-    self.stroke = 'none'
-    self.fill = 'rgb(87,87,87)'
-  end
-
-  unless sponsor
-    weight = SecureRandom.random_number
-    donor = DB[:cdo_donors].where('((weight_f - ?) >= 0)', weight).first
-    sponsor = donor[:name_s]
-  end
-  draw.annotate(background, width,(height*2)-340,0,0, "#{sponsor} made the generous gift to sponsor your learning.") do
-    draw.gravity = Magick::CenterGravity
-    self.pointsize = 24
-    self.font_family = 'Times'
-    self.font_weight = Magick::BoldWeight
-    self.stroke = 'none'
-    self.fill = 'rgb(87,87,87)'
-  end
-  background
-end
+require 'cdo/graphics/certificate_image'
 
 def complete_tutorial(tutorial=nil)
   row = nil

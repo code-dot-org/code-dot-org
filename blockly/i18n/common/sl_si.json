@@ -1,5 +1,7 @@
 {
   "and": "in",
+  "booleanTrue": "velja",
+  "booleanFalse": "ne velja",
   "blocklyMessage": "Blockly",
   "catActions": "Dejanja",
   "catColour": "Barva",

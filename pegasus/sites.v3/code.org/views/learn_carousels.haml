@@ -1,23 +1,42 @@
-- categories = [{tag:"Beginner", name: "Tutorials for beginners"}, {tag:"JavaScript", name: "Tutorials that teach JavaScript"}, {tag:"Unplugged", name: "No device or internet? Try 'unplugged' computer science"}, {tag:"Apps", name: "Tutorial apps for any device"}, {tag:"OtherLang", name: "Other programming languages"}, {tag:"MakeApps", name:"Make your own apps"}, {tag: "Univ", name: "University courses online"}, {tag: "Web", name: "Learn to make web pages"}, {tag: "Robot", name: "Learn to program with robots"}, {tag:"Other", name: "Other learning options"}, {tag: "IDE", name: "Platforms popular among teachers"}]
+- categories = [{tag:"Beginner", name: I18n.t(:carousel_heading_beginners)}, {tag:"JavaScript", name: I18n.t(:carousel_heading_javascript)}, {tag:"Unplugged", name: I18n.t(:carousel_heading_unplugged)}, {tag:"Apps", name: I18n.t(:carousel_heading_devices)}, {tag:"OtherLang", name: I18n.t(:carousel_heading_languages)}, {tag:"MakeApps", name: I18n.t(:carousel_heading_apps_games)}, {tag: "Univ", name: I18n.t(:carousel_heading_university)}, {tag: "Web", name: I18n.t(:carousel_heading_webpages)}, {tag: "Robot", name: I18n.t(:carousel_heading_robots)}, {tag: "IDE", name: I18n.t(:carousel_heading_ide)}]
 
 -if variation == 'learn'
   #rightbox.desktop-feature{:style=>'float:right'}
-    %a{:href=>'#notes'} Educator Notes
+    %a{:href=>'#notes'}= I18n.t(:educator_notes)
 
 -tutorials = Tutorials.new(variation=='learn' ? :tutorials : :beyond_tutorials)
 
 #carousel-ie8{:style=>'display:none'}
-  = view :learn_carousel, :heading=>'Tutorials that work on older systems', :subheading=>'These should work on older Web browsers. To access all tutorials, upgrade to a <a href="http://browsehappy.com/" target="_blank">modern Web browser</a>.', :tag=>'IE8', :tutorials=>tutorials, :id=>'collection-ie8'
+  = view :learn_carousel, :heading=>I18n.t(:older_systems), :subheading=>I18n.t(:older_systems_subheading), :tag=>'IE8', :tutorials=>tutorials, :id=>'collection-ie8'
 
 #carousel-mobile{:style=>'display:none'}
-  = view :learn_carousel, :heading=>'Tutorials for mobile devices', :tag=>'Mobile', :tutorials=>tutorials, :id=>'collection-mobile'
+  = view :learn_carousel, :heading=>I18n.t(:mobile_devices), :tag=>'Mobile', :tutorials=>tutorials, :id=>'collection-mobile'
 
 #carousel-international{:style=>'display:none'}
-  = view :learn_carousel, :heading=>I18n.t(:carousel_heading_international), :tag=>'International', :tutorials=>tutorials, :id=>'collection-international', :international_layout=>true, :check_language=>true
+  %br
+  %br
+  %div{:class=>"panel-group", :id=>"accordion", :role=>"tablist", :"aria-multiselectable"=>"true"}
+    %div{:class=>"panel panel-default", :style=>"width: 103%"}
+      %div{:class=>"panel-heading", :role=>"tab", :id=>"headingOne"}
+        %a{:"data-toggle"=>"collapse", :"data-parent"=>"#accordion", :href=>"#collapseOne", :"aria-expanded"=>"true", :"aria-controls"=>"collapseOne", :style=>"font-size: 30px;"}= I18n.t(:carousel_heading_international)
+      %div{:id=>"collapseOne", :class=>"panel-collapse collapse in", :role=>"tabpanel", :"aria-labelledby"=>"headingOne"}
+        %div{:class=>"panel-body"}
+          = view :learn_carousel, :tag=>'International', :tutorials=>tutorials, :id=>'collection-international', :international_layout=>true, :check_language=>true
+    %br
+    %br
+    %div{:class=>"panel panel-default", :style=>"width: 103%"}
+      %div{:class=>"panel-heading", :role=>"tab", :id=>"headingTwo"}
+        %a{:"data-toggle"=>"collapse", :"data-parent"=>"#accordion", :href=>"#collapseTwo", :"aria-expanded"=>"false", :"aria-controls"=>"collapseTwo"}= I18n.t(:carousel_heading_domestic)
+      %div{:id=>"collapseTwo", :class=>"panel-collapse collapse", :role=>"tabpanel", :"aria-labelledby"=>"headingTwo"}
+        %div{:class=>"panel-body"}
+          - categories.each do |category|
+            - id = "collection-" + category[:tag]
+            = view :learn_carousel, :heading=>category[:name], :tag=>category[:tag], :tutorials=>tutorials, :id=>id
 
-- categories.each do |category|
-  - id = "collection-" + category[:tag]
-  = view :learn_carousel, :heading=>category[:name], :tag=>category[:tag], :tutorials=>tutorials, :id=>id
+#carousel-all
+  - categories.each do |category|
+    - id = "collection-" + category[:tag]
+    = view :learn_carousel, :heading=>category[:name], :tag=>category[:tag], :tutorials=>tutorials, :id=>id
 
 %br
 %br
@@ -30,7 +49,7 @@
 
 -if variation == 'beyond'
   %a{:href=>"/educate"}
-    More resources for teachers and educators
+    = I18n.t(:more_resources_educators)
 
 :javascript
 
@@ -62,8 +81,10 @@
 
   // International
   var pegasusLocale = "#{request.locale}";
-  if (pegasusLocale.substring(0,2) != "en")
+  if (pegasusLocale.substring(0,2) != "en") {
     $('#carousel-international').show();
+    $('#carousel-all').hide();
+  }
 
 %script{:src=>'/js/jquery.carouFredSel-6.2.1-packed.js'}
 %script{:src=>'/js/jquery.touchSwipe.min.js'}

@@ -1,8 +1,8 @@
 {
   "compute": "compute",
-  "equivalentExpression": "Try reordering your arguments to get exactly the same expression.",
+  "equivalentExpression": "Probeer uw argumenten te ordenen om precies dezelfde expressie te krijgen.",
   "extraTopBlocks": "You have unattached blocks. Did you mean to attach these to the \"compute\" block?",
-  "goal": "Goal:",
+  "goal": "Doel:",
   "reinfFeedbackMsg": "Ziet dit eruit als het gene wat je wilt? Je kunt op de 'Probeer opnieuw' knop drukken om jouw tekening te zien.",
   "yourExpression": "Your expression:"
 }

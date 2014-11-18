@@ -4,6 +4,10 @@ class LevelSourcesController < ApplicationController
   before_filter :load_level_source
 
   def show
+    if @level.skin =='elsa' or @level.skin == 'anna'
+      head 404
+      return
+    end
     @hide_source = true
   end
 
@@ -13,20 +17,27 @@ class LevelSourcesController < ApplicationController
     render "show"
   end
 
+
   def generate_image
-    if @game.app == Game::ARTIST && ! ['anna', 'elsa'].include?(@level.skin) then
-      framed_image
+    if @game.app == Game::ARTIST then
+      framed_image(@level.skin)
     else
       original_image
     end
   end
 
-  def framed_image
-    drawing_on_background = ImageLib::overlay_image(:background_url => Rails.root.join('app/assets/images/blank_sharing_drawing.png'),
+  def framed_image(skin)
+    if skin == 'anna' || skin == 'elsa'
+      image_filename = "app/assets/images/blank_sharing_drawing_#{skin}.png"
+    else
+      image_filename = "app/assets/images/blank_sharing_drawing.png"
+    end
+
+    drawing_on_background = ImageLib::overlay_image(:background_url => Rails.root.join(image_filename),
                                                     :foreground_blob => @level_source.level_source_image.image)
     send_data drawing_on_background.to_blob, :stream => 'false', :type => 'image/png', :disposition => 'inline'
   end
-  
+
   def original_image
     send_data @level_source.level_source_image.image, :stream => 'false', :type => 'image/png', :disposition => 'inline'
   end
