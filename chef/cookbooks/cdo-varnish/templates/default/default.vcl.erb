@@ -352,12 +352,6 @@ end
       set req.backend = default;
       set req.http.host = "<%= canonical_hostname('code.org') %>";
     }
-<% if rack_env?(:production) %>
-    else if (req.url ~ "^/s/frozen" || req.url ~ "^/s/hourofcode")
-    {
-      error 751 "http://code.org/nothing-to-see-here";
-    }
-<% end %>
     else
     {
       set req.backend = dashboard;
