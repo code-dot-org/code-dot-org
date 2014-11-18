@@ -178,6 +178,7 @@ Blockly.Blocks.procedures_defnoreturn = {
     return {
       name: this.getTitleValue('NAME'),
       parameterNames: this.parameterNames_,
+      parameterIDs: this.paramIds_,
       type: this.type,
       callType: this.callType_
     };
@@ -284,6 +285,7 @@ Blockly.Blocks.procedures_defreturn = {
     return {
       name: this.getTitleValue('NAME'),
       parameterNames: this.parameterNames_,
+      parameterIDs: this.paramIds_,
       type: this.type,
       callType: this.callType_
     };
@@ -463,10 +465,11 @@ Blockly.Blocks.procedures_callnoreturn = {
     this.setTooltip(
         (this.outputConnection ? Blockly.Msg.PROCEDURES_CALLRETURN_TOOLTIP
          : Blockly.Msg.PROCEDURES_CALLNORETURN_TOOLTIP).replace('%1', name));
-    var def = Blockly.Procedures.getDefinition(name, this.blockSpace);
-    if (def && def.mutator && def.mutator.isVisible()) {
+    var definitionBlock = Blockly.Procedures.getDefinition(name, this.blockSpace);
+    if (definitionBlock && definitionBlock.mutator && definitionBlock.mutator.isVisible()) {
       // Initialize caller with the mutator's IDs.
-      this.setProcedureParameters(def.arguments_, def.paramIds_);
+      var procedureInfo = definitionBlock.getProcedureInfo();
+      this.setProcedureParameters(procedureInfo.parameterNames, procedureInfo.parameterIDs);
     } else {
       this.currentParameterNames = [];
       for (var x = 0, childNode; childNode = xmlElement.childNodes[x]; x++) {
