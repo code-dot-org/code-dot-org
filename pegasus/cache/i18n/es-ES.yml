@@ -4,6 +4,12 @@
   computer_science: Ciencias de la computación
   computer_science_edweek: Semana de Educación en Ciencias de la Computación
   csedweek_dates: Diciembre 9-15, 2013
+  csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
+    font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers,
+    <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
+    font-weight:bold">plan your Hour of Code</a>'
+  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
+    none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
   n_have_learned_an_hoc: <h1>#</h1><h3>han probado la</h3><h2>Hora de Código</h2>
   anybody_can_learn: Cualquiera puede aprender.
   learn_now: Aprende Ahora
@@ -347,28 +353,33 @@
   code_hoc_coming: The Hour of Code is coming - December 8-14!
   code_sign_up: Sign up to participate during CS Education Week
   learn_more: Aprenda más
+  hoc2014_try_new_tutorials: Try our new Hour of Code tutorials
+  hoc2014_try_scrat: Angry Birds, PvZ, and Scrat
+  hoc2014_try_frozen: Anna and Elsa from Frozen
   carousel_heading_international: Tutoriales en tu idioma
-  carousel_heading_beginners: Tutorials for Beginners
-  carousel_heading_javascript: Tutorials that teach Javascript
-  carousel_heading_unplugged: No device or internet? Try 'unplugged' computer science
-  carousel_heading_devices: Tutorial apps for phones and tablets
-  carousel_heading_languages: Tutorials in other programming languages
-  carousel_heading_apps_games: Make your own apps or games
-  carousel_heading_university: University courses online
-  carousel_heading_webpages: Learn to make web pages
-  carousel_heading_robots: Learn to program with robots
-  carousel_heading_ide: Platforms popular among teachers
+  carousel_heading_domestic: Tutorials available in English
+  carousel_heading_beginners: Tutoriales para principiantes (en inglés)
+  carousel_heading_javascript: Tutoriales de JavaScript
+  carousel_heading_unplugged: ¿No tenés compu? ¿Estás sin conexión a Internet? Probá
+    nuestros ejercicios 'desenchufados'
+  carousel_heading_devices: Tutoriales para todo tipo de dispositivos
+  carousel_heading_languages: Otros lenguajes de programación
+  carousel_heading_apps_games: Hacé tus propias aplicaciones
+  carousel_heading_university: Cursos de universidades (online)
+  carousel_heading_webpages: Aprendé a hacer páginas web
+  carousel_heading_robots: Aprendé a programar con robots
+  carousel_heading_ide: Plataformas populares entre los docentes
   educator_notes: Educator Notes
   more_resources_educators: More resources for teachers and educators
   participants: participants
   teachers_notes: Teacher's Notes
   previous: Previous
   next: Next
-  older_systems: Tutorials that work on older systems
-  older_systems_subheading: These should work on older Web browsers. To access all
-    tutorials, upgrade to a <a href="http://browsehappy.com/" target="_blank">modern
-    Web browser.</a>
-  mobile_devices: Tutorials for mobile devices
+  older_systems: Tutoriales que funcionan en sistemas más viejos
+  older_systems_subheading: Estos deberían funcionar sin problemas en navegadores
+    no tan modernos. Para acceder al resto de los tutoriales vas a necesitar <a href="http://browsehappy.com/"
+    target="_blank">actualizar tu navegador</a>.
+  mobile_devices: Tutoriales para dispositivos móviles
   codeorg_name: Escribí tu primer programa
   thinkersmithspanish_name: Mis amigos robóticos
   khan_name: Introducción a JavaScript
