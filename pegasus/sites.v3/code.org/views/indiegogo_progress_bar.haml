@@ -10,10 +10,6 @@
     0%
 %br
 
-%a{:href=>'https://www.indiegogo.com/projects/an-hour-of-code-for-every-student/contributions/new'}
-  %button
-    Donate
-
 :javascript
   $.ajax({
     url: "/v2/indiegogo_campaigns",
@@ -50,7 +46,13 @@
       $("#current_bar").show();
     }
     $("#current_bar").animate({width: barWidth + "%"}, 2500, function () {
-      $('#percent').css("float", "left");
+      if (barWidth < 87) {
+        $('#percent').css("float", "left");
+      } else {
+        $('#percent').css("float", "right");
+        $('#percent').css("color", "#f5f5f5");
+        $('#current_bar');
+      }
       $('#percent').fadeIn("slow");
       if (Math.floor(collected / goal * 100) < 1) {
         $('#percent').text("Less than 1%");
@@ -62,3 +64,7 @@
   }).fail(function () {
 
   });
+
+    Donate
+  %button
+%a{:href=>'https://www.indiegogo.com/projects/an-hour-of-code-for-every-student/contributions/new'}
