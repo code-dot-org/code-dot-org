@@ -4,10 +4,6 @@ class LevelSourcesController < ApplicationController
   before_filter :load_level_source
 
   def show
-    if @level.skin =='elsa' or @level.skin == 'anna'
-      head 404
-      return
-    end
     @hide_source = true
   end
 
