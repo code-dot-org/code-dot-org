@@ -20,6 +20,8 @@ These steps will:
 
 # Did it break?
 
+## Record not found
+
 Did you get an error message like:
 
 ````
@@ -28,7 +30,7 @@ ActiveRecord::RecordNotFound: ActiveRecord::RecordNotFound, Level: {"name":"Cour
 
 If so, one of two things might have happened:
 
-## .seeded file is out of sync
+### .seeded file is out of sync
 
 Levelbuilder and staging only reseed scripts when script files have
 changed since the last time rake:seed was run. It keeps track of this
@@ -43,7 +45,7 @@ To fix:
 > rake seed:all
 ````
 
-## you just pulled .level and .script files that were created by a different levelbuilder
+### you just pulled .level and .script files that were created by a different levelbuilder
 
 Levelbuilders by default do not read levels from files into the
 database. If you just pulled files from git that were created by a
@@ -58,3 +60,26 @@ To fix:
 ````
 
 (you may have to remove the .seeded file as above also).
+
+## Master failed to start, check stderr log for details?
+
+Getting an error like:
+
+```
+RAILS_ENV=levelbuilder RACK_ENV=levelbuilder bundle exec rake assets:precompile
+sudo service levelbuilder start
+master failed to start, check stderr log for details
+rake aborted!
+'sudo service levelbuilder start' returned 1
+/home/ubuntu/levelbuilder/lib/cdo/rake_utils.rb:33:in `system'
+```
+
+View the contents of `levelbuilder/dashboard/log/unicorn_stderr.log`.
+
+### Already running?
+
+Does `unicorn_stderr.log` then say have something like `/var/lib/gems/2.0.0/gems/unicorn-4.8.2/lib/unicorn/http_server.rb:206:in 'pid=': Already running on PID:9070 (or pid=/home/ubuntu/levelbuilder/dashboard/config/unicorn.rb.pid is stale) (ArgumentError)`?
+
+`kill -EXIT 9070`
+`rm /home/ubuntu/levelbuilder/dashboard/config/unicorn.rb.pid`
+`sudo service levelbuilder start`
