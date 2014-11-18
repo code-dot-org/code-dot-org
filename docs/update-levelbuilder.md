@@ -80,6 +80,8 @@ View the contents of `levelbuilder/dashboard/log/unicorn_stderr.log`.
 
 Does `unicorn_stderr.log` then say have something like `/var/lib/gems/2.0.0/gems/unicorn-4.8.2/lib/unicorn/http_server.rb:206:in 'pid=': Already running on PID:9070 (or pid=/home/ubuntu/levelbuilder/dashboard/config/unicorn.rb.pid is stale) (ArgumentError)`?
 
-`kill -EXIT 9070`
-`rm /home/ubuntu/levelbuilder/dashboard/config/unicorn.rb.pid`
-`sudo service levelbuilder start`
+Try restarting unicorn:
+
+1. `kill -EXIT 9070`
+1. `rm /home/ubuntu/levelbuilder/dashboard/config/unicorn.rb.pid`
+1. `sudo service levelbuilder start`
