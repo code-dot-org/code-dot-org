@@ -18,7 +18,9 @@ def upload_logs(application)
 end
 
 def main
-  upload_logs ARGV[0]
+  ARGV.each do |application|
+    upload_logs application
+  end
 end
 
 main
