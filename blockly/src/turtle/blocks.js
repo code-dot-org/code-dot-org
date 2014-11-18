@@ -24,8 +24,8 @@
 'use strict';
 
 var Colours = require('./core').Colours;
-var msg = require('../../locale/current/turtle');
-var commonMsg = require('../../locale/current/common');
+var msg = window.blockly.appLocale;
+var commonMsg = window.blockly.locale;
 
 var customLevelBlocks = require('./customLevelBlocks');
 var Turtle = require('./turtle');

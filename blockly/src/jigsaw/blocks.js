@@ -6,7 +6,7 @@
  */
 'use strict';
 
-var msg = require('../../locale/current/jigsaw');
+var msg = window.blockly.appLocale;
 var dom = require('../dom');
 var levels = require('./levels');
 

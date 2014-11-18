@@ -2,7 +2,7 @@
  * A set of functional blocks
  */
 
-var msg = require('../locale/current/common');
+var msg = window.blockly.locale;
 var functionalBlockUtils = require('./functionalBlockUtils');
 var initTitledFunctionalBlock = functionalBlockUtils.initTitledFunctionalBlock;
 

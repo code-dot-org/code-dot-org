@@ -2,7 +2,7 @@ var trophy = require('./templates/trophy.html');
 var utils = require('./utils');
 var readonly = require('./templates/readonly.html');
 var codegen = require('./codegen');
-var msg = require('../locale/current/common');
+var msg = window.blockly.locale;
 var dom = require('./dom');
 
 var TestResults = require('./constants').TestResults;

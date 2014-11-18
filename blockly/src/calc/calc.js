@@ -23,8 +23,8 @@ var Calc = module.exports;
  */
 var BlocklyApps = require('../base');
 var Calc = module.exports;
-var commonMsg = require('../../locale/current/common');
-var calcMsg = require('../../locale/current/calc');
+var commonMsg = window.blockly.locale;
+var calcMsg = window.blockly.appLocale;
 var skins = require('../skins');
 var levels = require('./levels');
 var codegen = require('../codegen');

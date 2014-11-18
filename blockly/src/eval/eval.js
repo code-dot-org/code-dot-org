@@ -23,8 +23,8 @@ var Eval = module.exports;
  */
 var BlocklyApps = require('../base');
 var Eval = module.exports;
-var commonMsg = require('../../locale/current/common');
-var evalMsg = require('../../locale/current/eval');
+var commonMsg = window.blockly.locale;
+var evalMsg = window.blockly.appLocale;
 var skins = require('../skins');
 var levels = require('./levels');
 var codegen = require('../codegen');

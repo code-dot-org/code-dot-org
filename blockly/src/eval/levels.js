@@ -1,4 +1,4 @@
-var msg = require('../../locale/current/eval');
+var msg = window.blockly.appLocale;
 var blockUtils = require('../block_utils');
 
 /**

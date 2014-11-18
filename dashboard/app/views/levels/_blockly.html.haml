@@ -32,7 +32,10 @@
     %link{href: "#{blockly_path}css/droplet/droplet.min.css", rel: 'stylesheet', type: 'text/css'}
   - else
     %script{src: "#{blockly_path}js/#{js_locale}/vendor.js"}
-  %script{src: "#{blockly_path}js/#{js_locale}/#{app}#{pretty ? '' : '.min'}.js"}
+  %script{src: "#{blockly_path}js/common#{pretty ? '' : '.min'}.js"}
+  %script{src: "#{blockly_path}js/#{js_locale}/common_locale.js"}
+  %script{src: "#{blockly_path}js/#{js_locale}/#{app}_locale.js"}
+  %script{src: "#{blockly_path}js/#{app}#{pretty ? '' : '.min'}.js"}
 
   - if @autoplay_video_info
     :javascript

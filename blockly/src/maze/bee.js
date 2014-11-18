@@ -1,5 +1,5 @@
 var utils = require('../utils');
-var mazeMsg = require('../../locale/current/maze');
+var mazeMsg = window.blockly.appLocale;
 var TestResults = require('../constants.js').TestResults;
 var TerminationValue = require('../constants.js').BeeTerminationValue;
 

@@ -23,8 +23,8 @@
  */
 'use strict';
 
-var msg = require('../../locale/current/maze');
-var commonMsg = require('../../locale/current/common');
+var msg = window.blockly.appLocale;
+var commonMsg = window.blockly.locale;
 var codegen = require('../codegen');
 var blockUtils = require('../block_utils');
 var mazeUtils = require('./mazeUtils');

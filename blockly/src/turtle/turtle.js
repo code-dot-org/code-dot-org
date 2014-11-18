@@ -30,8 +30,8 @@ window.Turtle = module.exports;
  */
 var BlocklyApps = require('../base');
 var Turtle = module.exports;
-var commonMsg = require('../../locale/current/common');
-var turtleMsg = require('../../locale/current/turtle');
+var commonMsg = window.blockly.locale;
+var turtleMsg = window.blockly.appLocale;
 var levels = require('./levels');
 var Colours = require('./core').Colours;
 var codegen = require('../codegen');

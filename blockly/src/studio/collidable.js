@@ -7,7 +7,7 @@
 
 'use strict';
 
-var Studio = require('./studio');
+var BlocklyApps = require('../base');
 var Direction = require('./tiles').Direction;
 
 //
@@ -98,7 +98,7 @@ Collidable.prototype.bounce = function () {
  */
 Collidable.prototype.outOfBounds = function () {
   return (this.x < -(this.width / 2)) ||
-         (this.x > Studio.MAZE_WIDTH + (this.width / 2)) ||
+         (this.x > BlocklyApps.MAZE_WIDTH + (this.width / 2)) ||
          (this.y < -(this.height / 2)) ||
-         (this.y > Studio.MAZE_HEIGHT + (this.height / 2));
+         (this.y > BlocklyApps.MAZE_HEIGHT + (this.height / 2));
 };
