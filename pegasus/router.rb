@@ -234,7 +234,6 @@ class Documents < Sinatra::Base
   end
 
   not_found do
-    #slog(tag: :not_found, method: request.request_method, uri: request.path_info, site: request.site)
     status 404
     path = resolve_template('views', settings.template_extnames, '/404')
     document path
