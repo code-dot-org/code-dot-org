@@ -1,7 +1,7 @@
 title 'Hour of Code'
 description "Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!"
 description_short "Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!"
-hidden 'true'
+hidden false
 
 stage 'Maze'
 concepts 'sequence'

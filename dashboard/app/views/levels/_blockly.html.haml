@@ -40,6 +40,7 @@
   %div{style: "display:none"}= render partial: 'levels/reference_area'
 
   :javascript
+    //<![CDATA[
     var script_path = "#{@script_level && build_script_level_path(@script_level)}";
     startTiming('Puzzle', script_path, '');
     var level = #{level.to_json};
@@ -185,3 +186,4 @@
     $.extend(appOptions, #{app_options.to_json});
     #{'console.log(appOptions)' unless Rails.env.production?};
     #{app}Main(appOptions);
+    //]]>
