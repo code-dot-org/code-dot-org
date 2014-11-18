@@ -188,6 +188,7 @@ en:
           'Eval: Conditionals': 'Eval: Conditionals'
           'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision
             Detection and the Distance Formula'
+          'Calc: Evaluation Blocks': 'Calc: Evaluation Blocks'
         playlab:
           title: Play Lab
           description: Create a story or make a game with Play Lab!
@@ -254,6 +255,19 @@ en:
           Maze and Bee: Maze and Bee
           Artist Binary: Artist Binary
         Course4pre:
+          description_short: A brief rampup of concepts for students who have not
+            taken Course 2 and 3.
+          Course 4 Prerequisite: Course 4 Prerequisite
+          'Maze: Sequence': 'Maze: Sequence'
+          'Artist: Sequence': 'Artist: Sequence'
+          'Artist: Loops': 'Artist: Loops'
+          'Bee: Conditionals': 'Bee: Conditionals'
+          'Artist: Nested Loops': 'Artist: Nested Loops'
+          'Farmer: While Loops': 'Farmer: While Loops'
+          'Bee: Nested Loops': 'Bee: Nested Loops'
+          'Artist: Functions': 'Artist: Functions'
+          'Bee: Debugging': 'Bee: Debugging'
+        course4pre:
           description_short: A brief rampup of concepts for students who have not
             taken Course 2 and 3.
           Course 4 Prerequisite: Course 4 Prerequisite

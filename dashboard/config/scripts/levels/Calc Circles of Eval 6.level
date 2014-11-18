@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "calc",
-    "instructions": "Complete the code to match this expression.",
+    "instructions": "Complete the Evaluation Blocks to match this expression.",
     "is_k1": "false",
     "skip_instructions_popup": "true",
     "disable_param_editing": "true",

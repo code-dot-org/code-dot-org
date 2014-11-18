@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "calc",
-    "instructions": "This code is missing a couple of blocks - make sure you put everything in the right order.",
+    "instructions": "This code is missing a couple of Evaluation Blocks - make sure you put everything in the right order.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

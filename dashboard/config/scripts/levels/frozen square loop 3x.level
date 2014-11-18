@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "anna",
-    "instructions": "Let's create three squares, turning after each square. Be sure to turn Anna by 120 degrees before each square.",
+    "instructions": "Let's create three squares, turning after each square. Be sure to turn by 120 degrees before each new square.",
     "x": "200",
     "y": "200",
     "start_direction": "180",
@@ -19,7 +19,8 @@
     "impressive": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "callout_json": "[\r\n  {\"localization_key\": \"replace_questions_degree\", \"element_id\": \"[block-id='1']\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"top left\", \"at\": \"bottom right\", \"adjust\": {\"x\": 22, \"y\":175}},\r\n    \"style\": { \"classes\": \"no-tip\" }}\r\n  }\r\n]"
+    "callout_json": "[\r\n  {\"localization_key\": \"replace_questions_degree\", \"element_id\": \"[block-id='1']\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"top left\", \"at\": \"bottom right\", \"adjust\": {\"x\": 22, \"y\":175}},\r\n    \"style\": { \"classes\": \"no-tip\" }}\r\n  }\r\n]",
+    "ideal": "6"
   }
 }]]></config>
   <blocks>

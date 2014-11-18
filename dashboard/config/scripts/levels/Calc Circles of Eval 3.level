@@ -13,7 +13,7 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "free_play": "false",
-    "instructions": "Convert this statement to a rectangle of evaluation."
+    "instructions": "Complete the Evaluation Blocks to match this statement."
   }
 }]]></config>
   <blocks>
@@ -26,12 +26,12 @@
                 <block type="functional_plus" inline="false">
                   <functional_input name="ARG1">
                     <block type="functional_math_number">
-                      <title name="NUM">0</title>
+                      <title name="NUM">???</title>
                     </block>
                   </functional_input>
                   <functional_input name="ARG2">
                     <block type="functional_math_number">
-                      <title name="NUM">0</title>
+                      <title name="NUM">???</title>
                     </block>
                   </functional_input>
                 </block>
@@ -40,12 +40,12 @@
                 <block type="functional_times" inline="false">
                   <functional_input name="ARG1">
                     <block type="functional_math_number">
-                      <title name="NUM">0</title>
+                      <title name="NUM">???</title>
                     </block>
                   </functional_input>
                   <functional_input name="ARG2">
                     <block type="functional_math_number">
-                      <title name="NUM">0</title>
+                      <title name="NUM">???</title>
                     </block>
                   </functional_input>
                 </block>

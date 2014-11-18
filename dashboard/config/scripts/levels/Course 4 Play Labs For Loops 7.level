@@ -12,7 +12,7 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
-    "disable_variable_editing": "false",
+    "disable_variable_editing": "true",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "edge_collisions": "false",
@@ -22,8 +22,7 @@
     "coordinate_grid_background": "false",
     "free_play": "false",
     "instructions": "Could you use a for loop to help me speak the sequence 1, 4, 7, 10, 13, 16, 19, 22, 25?",
-    "ideal": "9",
-    "maze_data": null
+    "ideal": "9"
   }
 }]]></config>
   <blocks>
@@ -55,30 +54,6 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <category name="Default">
-          <block type="when_run">
-            <next>
-              <block type="controls_for" inline="true">
-                <title name="VAR">counter</title>
-                <value name="FROM">
-                  <block type="math_number">
-                    <title name="NUM">1</title>
-                  </block>
-                </value>
-                <value name="TO">
-                  <block type="math_number">
-                    <title name="NUM">10</title>
-                  </block>
-                </value>
-                <value name="BY">
-                  <block type="math_number">
-                    <title name="NUM">1</title>
-                  </block>
-                </value>
-              </block>
-            </next>
-          </block>
-        </category>
         <category name="Actions">
           <block type="studio_saySpriteParamsTime" inline="true">
             <value name="SPRITE">
@@ -86,16 +61,34 @@
                 <title name="NUM">1</title>
               </block>
             </value>
-            <value name="TEXT">
-              <block type="text">
-                <title name="TEXT"/>
-              </block>
-            </value>
             <value name="TIME">
               <block type="math_number">
                 <title name="NUM">1</title>
               </block>
             </value>
+          </block>
+        </category>
+        <category name="Loops">
+          <block type="controls_for" inline="true">
+            <title name="VAR">counter</title>
+            <value name="FROM">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+            <value name="TO">
+              <block type="math_number">
+                <title name="NUM">10</title>
+              </block>
+            </value>
+            <value name="BY">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+          </block>
+          <block type="variables_get">
+            <title name="VAR">counter</title>
           </block>
         </category>
         <category name="Math">
@@ -106,51 +99,25 @@
             <title name="OP">ADD</title>
           </block>
         </category>
-        <category name="Variables" custom="VARIABLE">
-          <block type="variables_get">
-            <title name="VAR">counter</title>
-          </block>
-        </category>
       </xml>
     </toolbox_blocks>
     <required_blocks>
       <xml>
-        <block type="when_run">
-          <next>
-            <block type="controls_for" inline="true">
-              <title name="VAR">counter</title>
-              <value name="FROM">
-                <block type="math_number">
-                  <title name="NUM">1</title>
-                </block>
-              </value>
-              <value name="TO">
-                <block type="math_number">
-                  <title name="NUM">25</title>
-                </block>
-              </value>
-              <value name="BY">
-                <block type="math_number">
-                  <title name="NUM">3</title>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-        <block type="studio_saySpriteParamsTime" inline="true">
-          <value name="SPRITE">
+        <block type="controls_for" inline="true">
+          <title name="VAR">counter</title>
+          <value name="FROM">
             <block type="math_number">
               <title name="NUM">1</title>
             </block>
           </value>
-          <value name="TEXT">
-            <block type="variables_get">
-              <title name="VAR">counter</title>
+          <value name="TO">
+            <block type="math_number">
+              <title name="NUM">25</title>
             </block>
           </value>
-          <value name="TIME">
+          <value name="BY">
             <block type="math_number">
-              <title name="NUM">1</title>
+              <title name="NUM">3</title>
             </block>
           </value>
         </block>
