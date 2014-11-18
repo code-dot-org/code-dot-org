@@ -31,7 +31,6 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 
 ### Ubuntu 14.04
 
-1. `sudo apt-get install -y aptitude`
 1. `sudo aptitude update`
 1. `sudo aptitude upgrade`
 1. `sudo aptitude install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev nodejs openjdk-7-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl`
@@ -57,6 +56,7 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 1. `rake seed:migrate`
 
 ## Organizational Structure
+
 Our code is segmented into four parts:
 
 * Blockly Core is the visual programming language platform used for the interactive tutorials.
@@ -70,6 +70,7 @@ Our code is segmented into four parts:
   * [Teacher Dashboard](http://code.org/teacher-dashboard)
 
 ## Running Dashboard
+
 1. `cd code-dot-org`
 2. `rake build:dashboard`
 3. `bin/dashboard-server`
