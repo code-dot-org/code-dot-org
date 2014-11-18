@@ -111,8 +111,11 @@ Calc.init = function(config) {
     // (execute) and the infinite loop detection function.
     Blockly.JavaScript.addReservedWords('Calc,code');
 
-    var solutionBlocks = blockUtils.forceInsertTopBlock(level.solutionBlocks,
-      config.forceInsertTopBlock);
+    var solutionBlocks = level.solutionBlocks;
+    if (level.solutionBlocks && level.solutionBlocks !== '') {
+      solutionBlocks = blockUtils.forceInsertTopBlock(level.solutionBlocks,
+        config.forceInsertTopBlock);
+    }
     Calc.expressions.target = getExpressionFromBlocks(solutionBlocks);
     Calc.drawExpressions();
 
