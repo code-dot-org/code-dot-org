@@ -10,6 +10,10 @@
     0%
 %br
 
+%a{:href=>'https://www.indiegogo.com/projects/an-hour-of-code-for-every-student/contributions/new'}
+  %button
+    Donate
+
 :javascript
   $.ajax({
     url: "/v2/indiegogo_campaigns",
@@ -64,7 +68,3 @@
   }).fail(function () {
 
   });
-
-    Donate
-  %button
-%a{:href=>'https://www.indiegogo.com/projects/an-hour-of-code-for-every-student/contributions/new'}
