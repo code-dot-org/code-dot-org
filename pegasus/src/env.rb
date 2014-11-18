@@ -26,17 +26,24 @@ def src_dir(*paths)
   pegasus_dir('src', *paths)
 end
 
-def create_pegasus_log()
-  if rack_env?(:development)
-    return Logger.new STDOUT
-  else
-    return Logger.new pegasus_dir('log', "#{rack_env}.log")
+module Pegasus
+  
+  def self.logger()
+    @@logger ||= create_logger
+  end
+
+  def self.create_logger()
+    logger = Logger.new STDOUT if rack_env?(:development)
+    logger ||= Logger.new pegasus_dir('log', "#{rack_env}.log")
+
+    logger.level = Logger::INFO if rack_env?(:production)
+    
+    logger
   end
 end
 
 def load_pegasus_settings()
-  $log = create_pegasus_log
-  $log.level = Logger::INFO if rack_env?(:production)
+  $log = Pegasus.logger
 
   I18n::Backend::Simple.send(:include, I18n::Backend::Fallbacks)
   I18n.load_path = Dir[cache_dir('i18n/*.yml')]
