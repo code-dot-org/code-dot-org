@@ -252,7 +252,8 @@ Blockly.Blocks.functional_call = {
     var procedureDefinition = Blockly.Procedures.getDefinition(
       this.getTitleValue('NAME'), this.blockSpace.blockSpaceEditor.blockSpace);
     if (!procedureDefinition) {
-      throw "No procedure definition when initializing functional call";
+      // will be updated on later blockSpace change (once definition de-serialized)
+      return;
     }
 
     var outputTypeChanged = procedureDefinition.outputType_ && procedureDefinition.outputType_ !== this.currentOutputType_;
