@@ -938,7 +938,9 @@ exports.install = function(blockly, blockInstallOptions) {
       [skin.assetUrl('snowflake.png'), 'snowflake3'],
     ];
   } else {
-    blockly.Blocks.turtle_stamp.VALUES = [];
+    blockly.Blocks.turtle_stamp.VALUES = [
+      [skin.patternDefault, 'DEFAULT']
+    ];
   }
 
   // Preload stamp images
