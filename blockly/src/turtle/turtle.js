@@ -86,6 +86,7 @@ Turtle.decorationAnimationImage = new Image();
  */
 
 Turtle.patternForPaths = new Image();
+Turtle.patternsForPaths = [];
 Turtle.isDrawingWithPattern = false;
 
 function backingScale(context) {
@@ -276,6 +277,7 @@ Turtle.init = function(config) {
           img.src = skin[pattern];
           img.id = pattern;
           imageContainer.appendChild(img);
+          Turtle.patternsForPaths[pattern] = img;
         }
       }
     }
@@ -583,14 +585,14 @@ BlocklyApps.reset = function(ignore) {
 
   if (skin.id == "anna") {
     if (retina > 1)
-      Turtle.setPattern(document.getElementById("annaLine_2x"));
+      Turtle.setPattern(Turtle.patternsForPaths["annaLine_2x"]);
     else
-      Turtle.setPattern(document.getElementById("annaLine"));
+      Turtle.setPattern(Turtle.patternsForPaths["annaLine"]);
   } else if (skin.id == "elsa") {
     if (retina > 1)
-      Turtle.setPattern(document.getElementById("elsaLine_2x"));
+      Turtle.setPattern(Turtle.patternsForPaths["elsaLine_2x"]);
     else
-      Turtle.setPattern(document.getElementById("elsaLine"));
+      Turtle.setPattern(Turtle.patternsForPaths["elsaLine"]);
   } else {
     // Reset to empty pattern
     Turtle.setPattern(null);
@@ -989,7 +991,7 @@ Turtle.step = function(command, values, options) {
 };
 
 Turtle.setPattern = function (pattern) {
-  if ( pattern === null ) {
+  if (pattern === null || pattern === undefined) {
     Turtle.patternForPaths = new Image();
     Turtle.isDrawingWithPattern = false;
   } else {
