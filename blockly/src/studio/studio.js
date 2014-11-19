@@ -2273,7 +2273,7 @@ Studio.throwProjectile = function (options) {
   }
 
   var projectileOptions = {
-    className: options.className,
+    frames: /.gif$/.test(skin[options.className]) ? 1 : skin.projectileFrames,
     dir: options.dir,
     image: skin[options.className],
     spriteX: sourceSprite.x,

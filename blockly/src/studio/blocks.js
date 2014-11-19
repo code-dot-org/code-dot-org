@@ -345,6 +345,7 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
+  // todo (brent) - per skin
   blockly.Blocks.studio_whenSpriteCollided.GROUPINGS =
       [[msg.whenSpriteCollidedWithAnything(), 'anything'],
        [msg.whenSpriteCollidedWithAnyActor(), 'any_actor'],
@@ -353,6 +354,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
   blockly.Blocks.studio_whenSpriteCollided.PROJECTILES =
       [[msg.whenSpriteCollidedWithBlueFireball(), 'blue_fireball'],
+       [msg.whenSpriteCollidedWithPurpleFireball(), 'purple_fireball'],
        [msg.whenSpriteCollidedWithPurpleFireball(), 'purple_fireball'],
        [msg.whenSpriteCollidedWithRedFireball(), 'red_fireball'],
        [msg.whenSpriteCollidedWithYellowHearts(), 'yellow_hearts'],
@@ -427,7 +429,7 @@ exports.install = function(blockly, blockInstallOptions) {
           .appendTitle(msg.throwSprite());
       }
       this.appendDummyInput()
-        .appendTitle(new blockly.FieldDropdown(this.VALUES), 'VALUE');
+        .appendTitle(new blockly.FieldDropdown(skin.projectileChoices), 'VALUE');
       this.appendDummyInput()
         .appendTitle('\t');
       this.appendDummyInput()
@@ -446,15 +448,6 @@ exports.install = function(blockly, blockInstallOptions) {
          [msg.moveDirectionRight(), Direction.EAST.toString()],
          [msg.moveDirectionRandom(), 'random']];
 
-  blockly.Blocks.studio_throw.VALUES =
-        [[msg.projectileBlueFireball(), '"blue_fireball"'],
-         [msg.projectilePurpleFireball(), '"purple_fireball"'],
-         [msg.projectileRedFireball(), '"red_fireball"'],
-         [msg.projectileYellowHearts(), '"yellow_hearts"'],
-         [msg.projectilePurpleHearts(), '"purple_hearts"'],
-         [msg.projectileRedHearts(), '"red_hearts"'],
-         [msg.projectileRandom(), 'random']];
-
   generator.studio_throw = function() {
     // Generate JavaScript for throwing a projectile from a sprite.
     var allDirections = this.DIR.slice(0, -1).map(function (item) {
@@ -464,7 +457,7 @@ exports.install = function(blockly, blockInstallOptions) {
     if (dirParam === 'random') {
       dirParam = 'Studio.random([' + allDirections + '])';
     }
-    var allValues = this.VALUES.slice(0, -1).map(function (item) {
+    var allValues = skin.projectileChoices.slice(0, -1).map(function (item) {
       return item[1];
     });
     var valParam = this.getTitleValue('VALUE');
