@@ -992,8 +992,7 @@ Turtle.setPattern = function (pattern) {
   if (Turtle.loadedPathPatterns[pattern]) {
     Turtle.currentPathPattern = Turtle.loadedPathPatterns[pattern];
     Turtle.isDrawingWithPattern = true; 
-  }
-  else if (pattern === null) {
+  } else if (pattern === null) {
     Turtle.currentPathPattern = new Image();
     Turtle.isDrawingWithPattern = false;
   }
