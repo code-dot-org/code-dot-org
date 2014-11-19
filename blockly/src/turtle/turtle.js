@@ -275,8 +275,6 @@ Turtle.init = function(config) {
         if (skin[pattern]) {
           var img = new Image();
           img.src = skin[pattern];
-          img.id = pattern;
-          imageContainer.appendChild(img);
           Turtle.patternsForPaths[pattern] = img;
         }
       }
