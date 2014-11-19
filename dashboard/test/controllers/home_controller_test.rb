@@ -121,7 +121,7 @@ class HomeControllerTest < ActionController::TestCase
       get :index
       assert_response :success
 
-      if script.hoc?
+      if script.name == 'hourofcode'
         url = "http://test.host/hoc"
       elsif script.flappy?
         url = "http://test.host/flappy"

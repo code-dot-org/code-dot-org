@@ -91,6 +91,12 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
   this.blockSvgClass_ = Blockly.BlockSvg;
   this.customOptions_ = {};
 
+  /**
+   * Optional method to run just prior to disposing this block
+   * @type {?Function}
+   */
+  this.beforeDispose = null;
+
   this.setRenderBlockSpace(blockSpace);
 
   // Copy the type-specific functions and data from the prototype.
@@ -312,6 +318,10 @@ Blockly.Block.prototype.unselect = function() {
  * @param {boolean} animate If true, show a disposal animation and sound.
  */
 Blockly.Block.prototype.dispose = function(healStack, animate) {
+  if (goog.isFunction(this.beforeDispose)) {
+    this.beforeDispose();
+  }
+
   // Switch off rerendering.
   this.rendered = false;
   this.unplug(healStack);

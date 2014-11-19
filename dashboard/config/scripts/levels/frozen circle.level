@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "anna",
-    "instructions": "A circle is a special shape. Can you figure out what number to replace the question marks with to draw a circle?\r\n",
+    "instructions": "A circle is a special shape. Can you figure out what number to replace the question marks with to draw a circle?",
     "x": "200",
     "y": "150",
     "start_direction": "90",
@@ -17,7 +17,9 @@
     "free_play": "false",
     "slider_speed": "1",
     "impressive": "false",
-    "use_modal_function_editor": "false"
+    "use_modal_function_editor": "false",
+    "ideal": "6",
+    "use_contract_editor": "false"
   }
 }]]></config>
   <blocks>

@@ -25,8 +25,21 @@ class Callout < ActiveRecord::Base
   end
 
   def self.first_or_create_from_tsv_row!(row_data)
+
+    id_or_name = row_data[CSV_HEADERS[:script_id]]
+
+    unless id_or_name.to_i != 0
+      script_record = Script.where({'name' => id_or_name})
+      id_or_name = script_record.first && script_record.first.id
+    end
+
+    unless id_or_name
+      puts "Error finding id_or_name: #{id_or_name}"
+      return nil
+    end
+
     script_level_search_conditions = {
-      'scripts.id' => row_data[CSV_HEADERS[:script_id]],
+      'scripts.id' => id_or_name,
       'levels.level_num' => row_data[CSV_HEADERS[:level_num]],
       'games.name' => row_data[CSV_HEADERS[:game_name]]
     }

@@ -72,28 +72,43 @@ Blockly.ContractEditor.prototype.createContractDom_ = function() {
   this.contractDiv_.style.display = 'block';
   this.container_.insertBefore(this.contractDiv_, this.container_.firstChild);
 
-  this.initializeInputTypeDropdown();
-  this.initializeOutputTypeDropdown();
+  this.initializeInputTypeDropdown_();
+  this.initializeOutputTypeDropdown_();
 };
 
 /**
  * Add a new parameter block to the toolbox (and set an output type mutation on it)
- * @param newParameterName
+ * @param {String} newParameterName
+ * @param {?String} opt_newParameterType
  * @override
  */
-Blockly.ContractEditor.prototype.addParameter = function(newParameterName) {
-  var newParameterOutputType = this.inputTypeSelector.getValue();
-  // TODO(bjordan): Q: use e.g. document.createElement / .innerHTML / appendChild() instead?
-  var param = Blockly.createSvgElement('block', {type: this.parameterBlockType});
-  var title = Blockly.createSvgElement('title', {name: 'VAR'}, param);
-  title.textContent = newParameterName;
-  var mutation = Blockly.createSvgElement('mutation', {}, param);
-  var outputType = Blockly.createSvgElement('outputType', {}, mutation);
-  outputType.textContent = newParameterOutputType;
-  this.paramToolboxBlocks_.push(param);
+Blockly.ContractEditor.prototype.addParameter = function(newParameterName, opt_newParameterType) {
+  this.orderedParamIDsToBlocks_.set(
+    goog.events.getUniqueId('parameter'),
+    this.newParameterBlock(newParameterName, opt_newParameterType));
 };
 
-Blockly.ContractEditor.prototype.initializeOutputTypeDropdown = function() {
+Blockly.ContractEditor.prototype.newParameterBlock = function(newParameterName, opt_newParameterType) {
+  opt_newParameterType = opt_newParameterType || this.inputTypeSelector.getValue();
+  var newParamBlockDOM = Blockly.createSvgElement('block', {type: this.parameterBlockType});
+  var title = Blockly.createSvgElement('title', {name: 'VAR'}, newParamBlockDOM);
+  title.textContent = newParameterName;
+  if (opt_newParameterType) {
+    var mutation = Blockly.createSvgElement('mutation', {}, newParamBlockDOM);
+    var outputType = Blockly.createSvgElement('outputtype', {}, mutation);
+    outputType.textContent = opt_newParameterType;
+  }
+  return newParamBlockDOM;
+};
+
+/** @override */
+Blockly.ContractEditor.prototype.addParamsFromProcedure_ = function() {
+  var procedureInfo = this.functionDefinitionBlock.getProcedureInfo();
+  for (var i = 0; i < procedureInfo.parameterNames.length; i++) {
+    this.addParameter(procedureInfo.parameterNames[i], procedureInfo.parameterTypes[i]);
+  }
+};
+Blockly.ContractEditor.prototype.initializeOutputTypeDropdown_ = function() {
   this.outputTypeSelector = new goog.ui.Select(null, null,
     goog.ui.FlatMenuButtonRenderer.getInstance());
 
@@ -113,7 +128,7 @@ Blockly.ContractEditor.prototype.outputTypeDropdownChange = function(comboBoxEve
   this.functionDefinitionBlock.updateOutputType(newType);
 };
 
-Blockly.ContractEditor.prototype.initializeInputTypeDropdown = function() {
+Blockly.ContractEditor.prototype.initializeInputTypeDropdown_ = function() {
   this.inputTypeSelector = new goog.ui.Select(null, null,
     goog.ui.FlatMenuButtonRenderer.getInstance());
 
