@@ -321,9 +321,10 @@
   code_hoc_coming: The Hour of Code is coming - December 8-14!
   code_sign_up: Sign up to participate during CS Education Week
   learn_more: 瞭解更多資訊
-  hoc2014_try_new_tutorials: Try our new Hour of Code tutorials
-  hoc2014_try_scrat: Angry Birds, PvZ, and Scrat
-  hoc2014_try_frozen: Anna and Elsa from Frozen
+  hoc2014_try_new_tutorials: "Try our new Hour of Code tutorials"
+  hoc2014_try_new_tutorial: "Try our new Hour of Code tutorial in beta"
+  hoc2014_try_scrat: "Angry Birds, PvZ, and Scrat"
+  hoc2014_try_frozen: "Artist with Anna and Elsa, from Frozen"
   carousel_heading_international: 使用你語言的教程
   carousel_heading_domestic: Tutorials available in English
   carousel_heading_beginners: Tutorials for Beginners
