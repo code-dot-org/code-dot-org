@@ -342,9 +342,13 @@ Turtle.placeImage = function(filename, position, scale) {
   var img = new Image();
   img.onload = function() {
     if (scale) {
-      Turtle.ctxImages.drawImage(img, position[0] * retina, position[1] * retina, img.width, img.height, 0, 0, img.width * scale, img.height * scale);
+      if (img.width !== 0) {
+        Turtle.ctxImages.drawImage(img, position[0] * retina, position[1] * retina, img.width, img.height, 0, 0, img.width * scale, img.height * scale);
+      }
     } else {
-      Turtle.ctxImages.drawImage(img, position[0] * retina, position[1] * retina);
+      if (img.width !== 0) {
+        Turtle.ctxImages.drawImage(img, position[0] * retina, position[1] * retina);
+      }
     }
     Turtle.display();
   };
@@ -456,12 +460,14 @@ Turtle.drawTurtle = function() {
     return;
   }
 
-  Turtle.ctxDisplay.drawImage(
-    Turtle.avatarImage,
-    Math.round(sourceX * retina), Math.round(sourceY * retina),
-    sourceWidth * retina - 0, sourceHeight * retina,
-    Math.round(destX * retina), Math.round(destY * retina),
-    destWidth * retina - 0, destHeight * retina);
+  if (Turtle.avatarImage.width !== 0) {
+    Turtle.ctxDisplay.drawImage(
+      Turtle.avatarImage,
+      Math.round(sourceX * retina), Math.round(sourceY * retina),
+      sourceWidth * retina - 0, sourceHeight * retina,
+      Math.round(destX * retina), Math.round(destY * retina),
+      destWidth * retina - 0, destHeight * retina);
+  }
 
   /* console.log(Math.round(sourceX * retina), Math.round(sourceY * retina),
                               sourceWidth * retina, sourceHeight * retina, Math.round(destX * retina), Math.round(destY * retina),
@@ -523,12 +529,14 @@ Turtle.drawDecorationAnimation = function(when) {
       var destX = Turtle.x - destWidth / 2 - 15 - 15 + decorationImageDetails[angleIndex].x;
       var destY = Turtle.y - destHeight / 2 - 100;
 
-      Turtle.ctxDisplay.drawImage(
-        Turtle.decorationAnimationImage,
-        Math.round(sourceX * retina), Math.round(sourceY * retina),
-        sourceWidth * retina, sourceHeight * retina,
-        Math.round(destX * retina), Math.round(destY * retina),
-        destWidth * retina, destHeight * retina);
+      if (Turtle.decorationAnimationImage.width !== 0) {
+        Turtle.ctxDisplay.drawImage(
+          Turtle.decorationAnimationImage,
+          Math.round(sourceX * retina), Math.round(sourceY * retina),
+          sourceWidth * retina, sourceHeight * retina,
+          Math.round(destX * retina), Math.round(destY * retina),
+          destWidth * retina, destHeight * retina);
+      }
     }
   }
 };
@@ -981,7 +989,9 @@ Turtle.step = function(command, values, options) {
       var height = img.height / 2;
       var x = Turtle.x - width / 2;
       var y = Turtle.y - height / 2;
-      Turtle.ctxScratch.drawImage(img, x, y, width, height);
+      if (img.width !== 0) {
+        Turtle.ctxScratch.drawImage(img, x, y, width, height);
+      }
       break;
   }
 
@@ -1136,11 +1146,13 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
                                                                      // Need to subtract 90 to accomodate difference in canvas
                                                                      // vs. Turtle direction
 
-    Turtle.ctxPattern.drawImage(img,
-      Math.round(jumpDistanceCovered * retina), 0,             // Start point for clipping image
-      jumpDistance * retina, img.height,           // clip region size
-      Math.round((jumpDistanceCovered - 7) * retina), Math.round((- 18) * retina),      // draw location relative to the ctx.translate point pre-rotation
-      jumpDistance * retina, img.height);
+    if (img.width !== 0) {
+      Turtle.ctxPattern.drawImage(img,
+        Math.round(jumpDistanceCovered * retina), 0,             // Start point for clipping image
+        jumpDistance * retina, img.height,           // clip region size
+        Math.round((jumpDistanceCovered - 7) * retina), Math.round((- 18) * retina),      // draw location relative to the ctx.translate point pre-rotation
+        jumpDistance * retina, img.height);
+    }
 
     Turtle.ctxPattern.restore();
 
@@ -1157,11 +1169,13 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
     Turtle.ctxScratch.rotate(Math.PI * (Turtle.heading - 90) / 180); // increment the angle and rotate the image.
                                                                      // Need to subtract 90 to accomodate difference in canvas
                                                                      // vs. Turtle direction
-    Turtle.ctxScratch.drawImage(img,
-      0, 0,                                 // Start point for clipping image
-      distance+img.height / 2, img.height,  // clip region size
-      -img.height / 4, -img.height / 2,     // draw location relative to the ctx.translate point pre-rotation
-      distance+img.height / 2, img.height);
+    if (img.width !== 0) {
+      Turtle.ctxScratch.drawImage(img,
+        0, 0,                                 // Start point for clipping image
+        distance+img.height / 2, img.height,  // clip region size
+        -img.height / 4, -img.height / 2,     // draw location relative to the ctx.translate point pre-rotation
+        distance+img.height / 2, img.height);
+    }
 
     Turtle.ctxScratch.restore();
   }
