@@ -22,11 +22,10 @@ var Direction = tiles.Direction;
 var Position = tiles.Position;
 var Emotions = tiles.Emotions;
 
-var RANDOM_VALUE = 'random';
-var HIDDEN_VALUE = '"hidden"';
-var CLICK_VALUE = '"click"';
-var VISIBLE_VALUE = '"visible"';
-var CAVE_VALUE = '"cave"';
+var RANDOM_VALUE = tiles.RANDOM_VALUE;
+var HIDDEN_VALUE = tiles.HIDDEN_VALUE;
+var CLICK_VALUE = tiles.CLICK_VALUE;
+var VISIBLE_VALUE = tiles.VISIBLE_VALUE;
 
 var generateSetterCode = function (opts) {
   var value = opts.ctx.getTitleValue('VALUE');
@@ -43,7 +42,7 @@ var generateSetterCode = function (opts) {
 };
 
 // These are set to the default values, but may be overridden
-var spriteCount = 6;
+var spriteCount;
 var projectileCollisions = false;
 var edgeCollisions = false;
 var allowSpritesOutsidePlayspace = false;
@@ -1181,56 +1180,23 @@ exports.install = function(blockly, blockInstallOptions) {
       var dropdown;
       if (isK1) {
         dropdown = new blockly.FieldImageDropdown(
-                                  this.IMAGE_CHOICES,
+                                  skin.backgroundChoicesK1,
                                   skin.dropdownThumbnailWidth,
                                   skin.dropdownThumbnailHeight);
         this.appendDummyInput()
           .appendTitle(msg.setBackground())
           .appendTitle(dropdown, 'VALUE');
       } else {
-        dropdown = new blockly.FieldDropdown(this.VALUES);
+        dropdown = new blockly.FieldDropdown(skin.backgroundChoices);
         this.appendDummyInput().appendTitle(dropdown, 'VALUE');
       }
-      dropdown.setValue(CAVE_VALUE);  // default to cave
+      dropdown.setValue(skin.defaultBackground);
       this.setInputsInline(true);
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.setBackgroundTooltip());
     }
   };
-
-  blockly.Blocks.studio_setBackground.VALUES =
-      [[msg.setBackgroundRandom(), RANDOM_VALUE],
-       [msg.setBackgroundCave(), CAVE_VALUE],
-       [msg.setBackgroundNight(), '"night"'],
-       [msg.setBackgroundCloudy(), '"cloudy"'],
-       [msg.setBackgroundUnderwater(), '"underwater"'],
-       [msg.setBackgroundHardcourt(), '"hardcourt"'],
-       [msg.setBackgroundBlack(), '"black"'],
-       [msg.setBackgroundCity(), '"city"'],
-       [msg.setBackgroundDesert(), '"desert"'],
-       [msg.setBackgroundRainbow(), '"rainbow"'],
-       [msg.setBackgroundSoccer(), '"soccer"'],
-       [msg.setBackgroundSpace(), '"space"'],
-       [msg.setBackgroundTennis(), '"tennis"'],
-       [msg.setBackgroundWinter(), '"winter"']
-       ];
-
-  blockly.Blocks.studio_setBackground.IMAGE_CHOICES =
-      [[skin.cave.background, CAVE_VALUE],
-       [skin.night.background, '"night"'],
-       [skin.cloudy.background, '"cloudy"'],
-       [skin.underwater.background, '"underwater"'],
-       [skin.hardcourt.background, '"hardcourt"'],
-       [skin.black.background, '"black"'],
-       [skin.city.background, '"city"'],
-       [skin.desert.background, '"desert"'],
-       [skin.rainbow.background, '"rainbow"'],
-       [skin.soccer.background, '"soccer"'],
-       [skin.space.background, '"space"'],
-       [skin.tennis.background, '"tennis"'],
-       [skin.winter.background, '"winter"'],
-       [skin.randomPurpleIcon, RANDOM_VALUE]];
 
   generator.studio_setBackground = function() {
     return generateSetterCode({ctx: this, name: 'setBackground'});
@@ -1336,8 +1302,9 @@ exports.install = function(blockly, blockInstallOptions) {
     blockly.Blocks.studio_setSprite = {
       helpUrl: '',
       init: function() {
-        var dropdown = new blockly.FieldDropdown(this.VALUES);
-        dropdown.setValue(this.VALUES[2][1]);  // default to witch
+        var dropdown = new blockly.FieldDropdown(skin.spriteChoices);
+        // default to first item after random/hidden
+        dropdown.setValue(skin.spriteChoices[2][1]);
 
         this.setHSV(312, 0.32, 0.62);
         if (spriteCount > 1) {
@@ -1359,8 +1326,9 @@ exports.install = function(blockly, blockInstallOptions) {
     blockly.Blocks.studio_setSpriteParams = {
       helpUrl: '',
       init: function() {
-        var dropdown = new blockly.FieldDropdown(this.VALUES);
-        dropdown.setValue(this.VALUES[2][1]);  // default to witch
+        var dropdown = new blockly.FieldDropdown(skin.spriteChoices);
+        // default to first item after random/hidden
+        dropdown.setValue(skin.spriteChoices[2][1]);
 
         this.setHSV(312, 0.32, 0.62);
         this.appendValueInput('SPRITE')
@@ -1374,39 +1342,6 @@ exports.install = function(blockly, blockInstallOptions) {
         this.setTooltip(msg.setSpriteTooltip());
       }
     };
-
-    blockly.Blocks.studio_setSpriteParams.VALUES =
-        blockly.Blocks.studio_setSprite.VALUES =
-        [[msg.setSpriteHidden(), HIDDEN_VALUE],
-         [msg.setSpriteRandom(), RANDOM_VALUE],
-         [msg.setSpriteWitch(), '"witch"'],
-         [msg.setSpriteCat(), '"cat"'],
-         [msg.setSpriteDinosaur(), '"dinosaur"'],
-         [msg.setSpriteDog(), '"dog"'],
-         [msg.setSpriteOctopus(), '"octopus"'],
-         [msg.setSpritePenguin(), '"penguin"'],
-         [msg.setSpriteBat(), '"bat"'],
-         [msg.setSpriteBird(), '"bird"'],
-         [msg.setSpriteDragon(), '"dragon"'],
-         [msg.setSpriteSquirrel(), '"squirrel"'],
-         [msg.setSpriteWizard(), '"wizard"'],
-         [msg.setSpriteAlien(), '"alien"'],
-         [msg.setSpriteGhost(), '"ghost"'],
-         [msg.setSpriteMonster(), '"monster"'],
-         [msg.setSpriteRobot(), '"robot"'],
-         [msg.setSpriteUnicorn(), '"unicorn"'],
-         [msg.setSpriteZombie(), '"zombie"'],
-         [msg.setSpriteKnight(), '"knight"'],
-         [msg.setSpriteNinja(), '"ninja"'],
-         [msg.setSpritePirate(), '"pirate"'],
-         [msg.setSpriteCaveBoy(), '"caveboy"'],
-         [msg.setSpriteCaveGirl(), '"cavegirl"'],
-         [msg.setSpritePrincess(), '"princess"'],
-         [msg.setSpriteSpacebot(), '"spacebot"'],
-         [msg.setSpriteSoccerGirl(), '"soccergirl"'],
-         [msg.setSpriteSoccerBoy(), '"soccerboy"'],
-         [msg.setSpriteTennisGirl(), '"tennisgirl"'],
-         [msg.setSpriteTennisBoy(), '"tennisboy"']];
   }
 
   generator.studio_setSprite = function() {
