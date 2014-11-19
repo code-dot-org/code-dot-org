@@ -758,34 +758,84 @@ Turtle.execute = function() {
 var jumpDistance = 5;
 var jumpDistanceCovered;
 
+
+/**
+ * Special case: if we have a turn, followed by a move forward, then we can just
+ * do the turn instantly and then begin the move forward in the same frame.
+ */
+function checkForFreeTurn(command, values)
+{
+  var nextIsForward = false;
+
+  // Check first for a small turn movement.
+  if (command == 'RT') {
+    var angle = values[0];
+    if (angle >= -10 && angle <= 10) {
+      // Check that next command is a move forward.
+      if (api.log.length > 1) {
+        var nextTuple = api.log[1];
+        var nextCommand = nextTuple[0];
+        if (nextCommand == 'FD') {
+          nextIsForward = true;
+        }
+      }
+    }
+  }
+
+  return nextIsForward;
+}
+
+
 /**
  * Attempt to execute one command from the log of API commands.
  */
 function executeTuple () {
 
-  if (api.log.length > 0)
-  {
+  var tupleExecuted = false;
+
+  var executeTuple = api.log.length > 0;
+
+  while (executeTuple) {
+    // Unless something special happens, we will just execute a single tuple.
+    executeTuple = false;
+
     var tuple = api.log[0];
     var command = tuple[0];
     var id = tuple[tuple.length-1];
 
     BlocklyApps.highlight(String(id));
-    var smoothAnimate = skin.id == "anna" || skin.id == "elsa";
+
+    var freeTurn = false;
+
+    if (skin.id == "anna" || skin.id == "elsa") {
+      // Should we execute another tuple in the same frame?
+      freeTurn = checkForFreeTurn(command, tuple.slice(1));
+    }
+
+    // We should execute another tuple in this frame.
+    executeTuple = freeTurn;
+
+    var smoothAnimate = false;
+
+    if (skin.id == "anna" || skin.id == "elsa") {
+      // Smooth animate only if this is not an additional tuple.
+      if (! freeTurn) {
+        smoothAnimate = true;
+      }
+    }
+
     var tupleDone = Turtle.step(command, tuple.slice(1), {smoothAnimate: smoothAnimate});
     Turtle.display();
 
-    if (tupleDone)
-    {
+    if (tupleDone) {
       api.log.shift();
       clearTuple();
     }
 
-    return true;
+    tupleExecuted = true;
   }
-  else
-  {
-    return false;
-  }
+
+  return tupleExecuted;
 }
 
 /**
