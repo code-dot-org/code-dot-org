@@ -598,9 +598,8 @@ class UserTest < ActiveSupport::TestCase
 
     user.backfill_user_scripts
     
-# uncomment when we unhide hourofcode
-#    assert_equal [Script.twenty_hour_script, Script.find_by(name: 'hourofcode')], user.working_on_scripts
-    assert_equal [Script.twenty_hour_script], user.working_on_scripts
+
+    assert_equal [Script.twenty_hour_script, Script.find_by(name: 'hourofcode')], user.working_on_scripts
   end
 
   test "user scripts backfills started_at and completed_at" do
