@@ -137,6 +137,10 @@ class Script < ActiveRecord::Base
     return ['course1', 'course2', 'course3', 'course4'].include? self.name
   end
 
+  def show_report_bug_link?
+    beta? || k5_course?
+  end
+
   def has_lesson_plan?
     k5_course?
   end
