@@ -4,6 +4,7 @@ require 'cdo/only_one'
 require 'fileutils'
 require 'open-uri'
 require 'sequel'
+require 'cdo/hip_chat'
 
 DASHBOARD_DB = Sequel.connect(CDO.dashboard_db_reader.sub('mysql:', 'mysql2:'))
 #DASHBOARD_DB.loggers << Logger.new(STDOUT) if rack_env?(:development)
