@@ -62,13 +62,6 @@ var SpriteFlags = {
 var SF_SKINS_MASK =
   SpriteFlags.EMOTIONS | SpriteFlags.ANIMATION | SpriteFlags.TURNS;
 
-var SpriteCounts = {
-  NORMAL: 1,
-  ANIMATION: 1,
-  TURNS: 7,
-  EMOTIONS: 3
-};
-
 var ArrowIds = {
   LEFT: 'leftButton',
   UP: 'upButton',
@@ -1100,7 +1093,7 @@ var preloadImage = function(url) {
 var preloadBackgroundImages = function() {
   // TODO (cpirich): preload for non-blockly
   if (BlocklyApps.usingBlockly) {
-    var imageChoices = Blockly.Blocks.studio_setBackground.IMAGE_CHOICES;
+    var imageChoices = skin.backgroundChoicesK1;
     for (var i = 0; i < imageChoices.length; i++) {
       preloadImage(imageChoices[i][0]);
     }
@@ -1193,7 +1186,7 @@ BlocklyApps.reset = function(first) {
   if (level.coordinateGridBackground) {
     Studio.setBackground({value: 'grid'});
   } else {
-    Studio.setBackground({value: 'cave'});
+    Studio.setBackground({value: skin.defaultBackground});
   }
 
   // Reset currentCmdQueue and various counts:
@@ -1631,7 +1624,7 @@ var spriteFrameNumber = function (index) {
       (sprite.displayDir !== Direction.SOUTH)) {
     return sprite.firstTurnFrameNum + frameDirTable[sprite.displayDir];
   }
-  if ((sprite.flags & SpriteFlags.ANIMATION) &&
+  if ((sprite.flags & SpriteFlags.ANIMATION) && skin.spriteCounts.animation &&
       Studio.tickCount &&
       (1 ===
        Math.round((Studio.tickCount + index * ANIM_OFFSET) / ANIM_RATE) %
@@ -1639,6 +1632,9 @@ var spriteFrameNumber = function (index) {
     // we only support two-frame animation for now, the 2nd frame is only up
     // for 1/8th of the time (since it is a blink of the eyes)
     showThisAnimFrame = sprite.firstAnimFrameNum;
+  }
+  if (skin.spriteCounts.normal > 1) {
+    showThisAnimFrame = Studio.tickCount % skin.spriteCounts.normal;
   }
   if (sprite.emotion !== Emotions.NORMAL &&
       sprite.flags & SpriteFlags.EMOTIONS) {
@@ -1650,15 +1646,15 @@ var spriteFrameNumber = function (index) {
 };
 
 var spriteTotalFrames = function (index) {
-  var frames = SpriteCounts.NORMAL;
+  var frames = skin.spriteCounts.normal;
   if (Studio.sprite[index].flags & SpriteFlags.ANIMATION) {
-    frames += SpriteCounts.ANIMATION;
+    frames += skin.spriteCounts.animation;
   }
   if (Studio.sprite[index].flags & SpriteFlags.TURNS) {
-    frames += SpriteCounts.TURNS;
+    frames += skin.spriteCounts.turns;
   }
   if (Studio.sprite[index].flags & SpriteFlags.EMOTIONS) {
-    frames += SpriteCounts.EMOTIONS;
+    frames += skin.spriteCounts.emotions;
   }
   return frames;
 };
@@ -1984,12 +1980,12 @@ Studio.setBackground = function (opts) {
 
 var computeSpriteFrameNums = function (index) {
   var flags = Studio.sprite[index].flags;
-  Studio.sprite[index].firstAnimFrameNum = SpriteCounts.NORMAL;
-  Studio.sprite[index].firstTurnFrameNum = SpriteCounts.NORMAL +
-      ((flags & SpriteFlags.ANIMATION) ? SpriteCounts.ANIMATION : 0);
+  Studio.sprite[index].firstAnimFrameNum = skin.spriteCounts.normal;
+  Studio.sprite[index].firstTurnFrameNum = skin.spriteCounts.normal +
+      ((flags & SpriteFlags.ANIMATION) ? skin.spriteCounts.animation : 0);
   Studio.sprite[index].firstEmotionFrameNum =
       Studio.sprite[index].firstTurnFrameNum +
-      ((flags & SpriteFlags.TURNS) ? SpriteCounts.TURNS : 0);
+      ((flags & SpriteFlags.TURNS) ? skin.spriteCounts.turns : 0);
 };
 
 /**
