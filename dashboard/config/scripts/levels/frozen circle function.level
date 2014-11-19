@@ -19,7 +19,8 @@
     "impressive": "false",
     "ideal": "6",
     "use_modal_function_editor": "false",
-    "use_contract_editor": "false"
+    "use_contract_editor": "false",
+    "video_key": "Frozen_functions "
   }
 }]]></config>
   <blocks>
