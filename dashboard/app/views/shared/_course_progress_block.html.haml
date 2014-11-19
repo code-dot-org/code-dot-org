@@ -7,13 +7,14 @@
 .course_progress
   .row#lesson
     .span9#heading
-      %h3.whitetext{style: 'margin: 0'}
+      %h3.whitetext{style: 'margin: 0; display: inline-block'}
         %a.expando{style: 'color: white'}
           %i.fa.fa-plus-square
         = data_t_suffix('script.name', script.name, "title")
-        - if script.beta?
-          %span.betatext
-            != "&nbsp; beta"
+      - if script.beta?
+        %span.betatext{style: 'font-size: 24.5px'}
+          != "&nbsp; beta"
+
     .span3#heading{style: 'text-align: right;'}
       - if user_script.try(:completed_at)
         %a{href: script_certificate_image_url(current_user, script)}
