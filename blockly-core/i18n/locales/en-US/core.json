@@ -84,6 +84,7 @@
     "FUNCTIONAL_DOMAIN_LABEL": "Domain",
     "FUNCTIONAL_PROCEDURE_DEFINE_TOOLTIP": "Define a functional method",
     "FUNCTIONAL_RANGE_LABEL": "Range",
+    "FUNCTIONAL_VARIABLE_CREATE": "Create a Variable",
     "HELP": "Help",
     "INLINE_INPUTS": "Inline Inputs",
     "LISTS_CREATE_EMPTY_HELPURL": "http://en.wikipedia.org/wiki/Linked_list#Empty_lists",
