@@ -2423,11 +2423,25 @@ exports.createSharingDiv = function(options) {
     if (options.twitter && options.twitter.text !== undefined) {
       twitterUrl += "&text=" + encodeURI(options.twitter.text);
     }
-    if (options.twitter  && options.twitter.hashtag !== undefined) {
-      twitterUrl += "&button_hashtag=" + options.twitter.hashtag;
+    else {
+      twitterUrl += "&text=" + encodeURI(msg.defaultTwitterText() + " @codeorg");
     }
-    options.twitterUrl = twitterUrl;
 
+    if (options.twitter  && options.twitter.hashtag !== undefined) {
+      twitterUrl += "&hashtags=" + options.twitter.hashtag;
+    }
+    else {
+      twitterUrl += "&hashtags=" + 'HourOfCode';
+    }
+
+    if (options.twitter && options.twitter.related !== undefined) {
+      twitterUrl += "&related=" + options.twitter.related;
+    }
+    else {
+      twitterUrl += "&related=codeorg";
+    }
+
+    options.twitterUrl = twitterUrl;
 
     // set up the facebook share url
     var facebookUrl = "https://www.facebook.com/sharer/sharer.php?u=" +
@@ -10613,6 +10627,8 @@ exports.signup = function(d){return "샘플 코스를 위해 가입하기"};
 exports.hintHeader = function(d){return "도움말:"};
 
 exports.genericFeedback = function(d){return "어떻게 종료되는지 살펴보고 프로그램을 수정해 보세요."};
+
+exports.defaultTwitterText = function(d){return "Check out what I made"};
 
 
 },{"messageformat":51}],39:[function(require,module,exports){

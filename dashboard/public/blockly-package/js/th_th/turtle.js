@@ -2423,11 +2423,25 @@ exports.createSharingDiv = function(options) {
     if (options.twitter && options.twitter.text !== undefined) {
       twitterUrl += "&text=" + encodeURI(options.twitter.text);
     }
-    if (options.twitter  && options.twitter.hashtag !== undefined) {
-      twitterUrl += "&button_hashtag=" + options.twitter.hashtag;
+    else {
+      twitterUrl += "&text=" + encodeURI(msg.defaultTwitterText() + " @codeorg");
     }
-    options.twitterUrl = twitterUrl;
 
+    if (options.twitter  && options.twitter.hashtag !== undefined) {
+      twitterUrl += "&hashtags=" + options.twitter.hashtag;
+    }
+    else {
+      twitterUrl += "&hashtags=" + 'HourOfCode';
+    }
+
+    if (options.twitter && options.twitter.related !== undefined) {
+      twitterUrl += "&related=" + options.twitter.related;
+    }
+    else {
+      twitterUrl += "&related=codeorg";
+    }
+
+    options.twitterUrl = twitterUrl;
 
     // set up the facebook share url
     var facebookUrl = "https://www.facebook.com/sharer/sharer.php?u=" +
@@ -14360,6 +14374,8 @@ exports.signup = function(d){return "ลงทะเบียนเพื่อ�
 exports.hintHeader = function(d){return "นี่คือเคล็ดลับ:"};
 
 exports.genericFeedback = function(d){return "See how you ended up, and try to fix your program."};
+
+exports.defaultTwitterText = function(d){return "Check out what I made"};
 
 
 },{"messageformat":55}],43:[function(require,module,exports){
