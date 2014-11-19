@@ -82,6 +82,5 @@ Does `unicorn_stderr.log` then say have something like `/var/lib/gems/2.0.0/gems
 
 Try restarting unicorn:
 
-1. `kill -EXIT 9070`
-1. `rm /home/ubuntu/levelbuilder/dashboard/config/unicorn.rb.pid`
-1. `sudo service levelbuilder start`
+1. `kill -9 9070` (or whichever `PID` showed up above)
+1. `rake build:dashboard`

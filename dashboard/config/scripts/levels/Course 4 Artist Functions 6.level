@@ -9,7 +9,7 @@
     "instructions": "Ahhh, we must need to add something between the square and the triangle. Which block do you need to add to get the triangle roof to sit on top of the square.",
     "is_k1": "false",
     "skip_instructions_popup": "true",
-    "disable_param_editing": "false",
+    "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "start_direction": "90",
     "x": "150",
