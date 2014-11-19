@@ -12556,15 +12556,17 @@ Turtle.decorationAnimationImage = new Image();
  * Drawing with a pattern
  */
 
-Turtle.patternForPaths = new Image();
+Turtle.currentPathPattern = new Image();
+Turtle.loadedPathPatterns = [];
 Turtle.isDrawingWithPattern = false;
 
 function backingScale(context) {
-  if ('devicePixelRatio' in window) {
-    if (window.devicePixelRatio > 1) {
-      return window.devicePixelRatio;
-    }
-  }
+  // disable retina for now
+  // if ('devicePixelRatio' in window) {
+  //   if (window.devicePixelRatio > 1) {
+  //     return window.devicePixelRatio;
+  //   }
+  // }
   return 1;
 }
 
@@ -12745,8 +12747,7 @@ Turtle.init = function(config) {
         if (skin[pattern]) {
           var img = new Image();
           img.src = skin[pattern];
-          img.id = pattern;
-          imageContainer.appendChild(img);
+          Turtle.loadedPathPatterns[pattern] = img;
         }
       }
     }
@@ -13062,14 +13063,14 @@ BlocklyApps.reset = function(ignore) {
 
   if (skin.id == "anna") {
     if (retina > 1)
-      Turtle.setPattern(document.getElementById("annaLine_2x"));
+      Turtle.setPattern("annaLine_2x");
     else
-      Turtle.setPattern(document.getElementById("annaLine"));
+      Turtle.setPattern("annaLine");
   } else if (skin.id == "elsa") {
     if (retina > 1)
-      Turtle.setPattern(document.getElementById("elsaLine_2x"));
+      Turtle.setPattern("elsaLine_2x");
     else
-      Turtle.setPattern(document.getElementById("elsaLine"));
+      Turtle.setPattern("elsaLine");
   } else {
     // Reset to empty pattern
     Turtle.setPattern(null);
@@ -13445,7 +13446,7 @@ Turtle.step = function(command, values, options) {
       if (!values[0] || values[0] == 'DEFAULT') {
           Turtle.setPattern(null);
       } else {
-        Turtle.setPattern(document.getElementById(values[0]));
+        Turtle.setPattern(values[0]);
       }
       break;
     case 'HT':  // Hide Turtle
@@ -13470,12 +13471,12 @@ Turtle.step = function(command, values, options) {
 };
 
 Turtle.setPattern = function (pattern) {
-  if ( pattern === null ) {
-    Turtle.patternForPaths = new Image();
+  if (Turtle.loadedPathPatterns[pattern]) {
+    Turtle.currentPathPattern = Turtle.loadedPathPatterns[pattern];
+    Turtle.isDrawingWithPattern = true; 
+  } else if (pattern === null) {
+    Turtle.currentPathPattern = new Image();
     Turtle.isDrawingWithPattern = false;
-  } else {
-    Turtle.patternForPaths = pattern;
-    Turtle.isDrawingWithPattern = true;
   }
 };
 
@@ -13605,7 +13606,7 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
 
   if (skin.id == "anna" || skin.id == "elsa") {
     Turtle.ctxPattern.moveTo(Turtle.stepStartX * retina, Turtle.stepStartY * retina);
-    img = Turtle.patternForPaths;
+    img = Turtle.currentPathPattern;
     startX = Turtle.stepStartX;
     startY = Turtle.stepStartY;
 
@@ -13630,7 +13631,7 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
   } else {
 
     Turtle.ctxScratch.moveTo(Turtle.x, Turtle.y);
-    img = Turtle.patternForPaths;
+    img = Turtle.currentPathPattern;
     startX = Turtle.x;
     startY = Turtle.y;
 
