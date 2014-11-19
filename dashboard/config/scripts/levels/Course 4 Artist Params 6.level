@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Remember how we used a variable to set the number of sides for a shape? Why have two separate functions for \"triangle\" and \"square\", when we could have one \"shape\" function that takes two parameters - \"sides\" and \"length\"? Let's create a new function called \"draw a shape\". Remember it should take two parameters - \"sides\" and \"length\". Here's a hint the triangle is 100 pixel's in length, the hexagon is 25 pixel's in length and the square is 50 pixel's in length. ",
+    "instructions": "Let's create a \"shape\" function that takes two parameters - \"sides\" and \"length\"? Let's name it \"draw a shape\". Hint: lengths for each shape are the triangle is 100 pixels, the hexagon is 25 pixels and the square is 50 pixels. ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "false",
