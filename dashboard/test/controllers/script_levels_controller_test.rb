@@ -430,18 +430,18 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test 'end of HoC for a user is HOC endpoint' do
     self.stubs(:current_user).returns(@admin)
-    assert_equal('http://code.org/api/hour/finish/hourofcode', script_completion_redirect(Script.find_by_name(Script::HOC_NAME)))
+    assert_equal('//test.code.org/api/hour/finish/hourofcode', script_completion_redirect(Script.find_by_name(Script::HOC_NAME)))
   end
 
   test 'post script redirect is HOC endpoint' do
     self.stubs(:current_user).returns(nil)
-    assert_equal('http://code.org/api/hour/finish/hourofcode', script_completion_redirect(Script.find_by_name(Script::HOC_NAME)))
+    assert_equal('//test.code.org/api/hour/finish/hourofcode', script_completion_redirect(Script.find_by_name(Script::HOC_NAME)))
   end
 
 
   test 'post script redirect is frozen endpoint' do
     self.stubs(:current_user).returns(nil)
-    assert_equal('http://code.org/api/hour/finish/frozen', script_completion_redirect(Script.find_by_name(Script::FROZEN_NAME)))
+    assert_equal('//test.code.org/api/hour/finish/frozen', script_completion_redirect(Script.find_by_name(Script::FROZEN_NAME)))
   end
 
   test 'end of HoC for logged in user works' do
@@ -480,18 +480,25 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     set_env :production
     get :show, script_id: Script::HOC_NAME, chapter: 1
 
-    assert_select 'img[src=http://code.org/api/hour/begin_hourofcode.png]'
+    assert_select 'img[src=//code.org/api/hour/begin_hourofcode.png]'
   end
 
   test 'should show tracking pixel for frozen chapter 1 in prod' do
     set_env :production
     get :show, script_id: Script::FROZEN_NAME, stage_id: 1, id: 1
-    assert_select 'img[src=http://code.org/api/hour/begin_frozen.png]'
+    assert_select 'img[src=//code.org/api/hour/begin_frozen.png]'
   end
 
   test 'should show tracking pixel for flappy chapter 1 in prod' do
     set_env :production
     get :show, script_id: Script::FLAPPY_ID, chapter: 1
-    assert_select 'img[src=http://code.org/api/hour/begin_flappy.png]'
+    assert_select 'img[src=//code.org/api/hour/begin_flappy.png]'
   end
+
+  test 'should show tracking pixel for playlab chapter 1 in prod' do
+    set_env :production
+    get :show, script_id: Script::PLAYLAB_NAME, stage_id: 1, id: 1
+    assert_select 'img[src=//code.org/api/hour/begin_playlab.png]'
+  end
+
 end
