@@ -20,7 +20,7 @@ function loadInfinity(skin, assetUrl) {
   skin.projectileFrames = 10;
   // todo - consolidate spriteCounts and spriteFlags?
   skin.spriteCounts = {
-    normal: 20,
+    normal: 19,
     animation: 0,
     turns: 0,
     emotions: 0
