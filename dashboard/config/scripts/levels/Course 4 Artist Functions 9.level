@@ -6,10 +6,10 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "You're doing great! Let's use your new \"Draw a Square Line\" function to draw a Square shape. Remember each square is 40 pixel's in length.",
+    "instructions": "You're doing great! Let's use your new \"Draw a Square Line\" function to draw a Square shape. Remember each square is 40 pixels in length.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "slider_speed": ".5",
+    "slider_speed": ".8",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "start_direction": "90",

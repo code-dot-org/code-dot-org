@@ -6,9 +6,9 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Now I want to make a rectangle that is twice as long as it is height. We've got a variable called \"height\" that is set to 100, can you use the math blocks to complete the code?",
-    "x": "100",
-    "y": "250",
+    "instructions": "Now I want to make a rectangle that is twice as tall as it is width. We've got a variable called \"height\" that is set to 100, can you use the math blocks to complete the code?",
+    "x": "150",
+    "y": "300",
     "start_direction": "90",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -107,24 +107,37 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_repeat">
-              <title name="TIMES">2</title>
-              <statement name="DO">
-                <block type="draw_move_by_constant">
-                  <title name="DIR">moveForward</title>
-                  <title name="VALUE">200</title>
+            <block type="draw_move_by_constant">
+              <title name="DIR">moveForward</title>
+              <title name="VALUE">100</title>
+              <next>
+                <block type="draw_turn_by_constant">
+                  <title name="DIR">turnLeft</title>
+                  <title name="VALUE">90</title>
                   <next>
-                    <block type="draw_turn_by_constant">
-                      <title name="DIR">turnLeft</title>
-                      <title name="VALUE">90</title>
+                    <block type="draw_move_by_constant">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">200</title>
                       <next>
-                        <block type="draw_move_by_constant">
-                          <title name="DIR">moveForward</title>
-                          <title name="VALUE">100</title>
+                        <block type="draw_turn_by_constant">
+                          <title name="DIR">turnLeft</title>
+                          <title name="VALUE">90</title>
                           <next>
-                            <block type="draw_turn_by_constant">
-                              <title name="DIR">turnLeft</title>
-                              <title name="VALUE">90</title>
+                            <block type="draw_move_by_constant">
+                              <title name="DIR">moveForward</title>
+                              <title name="VALUE">100</title>
+                              <next>
+                                <block type="draw_turn_by_constant">
+                                  <title name="DIR">turnLeft</title>
+                                  <title name="VALUE">90</title>
+                                  <next>
+                                    <block type="draw_move_by_constant">
+                                      <title name="DIR">moveForward</title>
+                                      <title name="VALUE">200</title>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
                             </block>
                           </next>
                         </block>
@@ -132,7 +145,7 @@
                     </block>
                   </next>
                 </block>
-              </statement>
+              </next>
             </block>
           </next>
         </block>

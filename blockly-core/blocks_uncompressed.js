@@ -715,46 +715,46 @@ Blockly.Blocks.procedures_defnoreturn = {init:function() {
   a && this.setMutator(new Blockly.Mutator(["procedures_mutatorarg"]));
   this.setTooltip(Blockly.Msg.PROCEDURES_DEFNORETURN_TOOLTIP);
   this.setFramed(this.blockSpace === Blockly.mainBlockSpace && !Blockly.readOnly);
-  this.arguments_ = []
+  this.parameterNames_ = []
 }, updateParams_:function() {
-  for(var a = !1, b = {}, c = 0;c < this.arguments_.length;c++) {
-    if(b["arg_" + this.arguments_[c].toLowerCase()]) {
+  for(var a = !1, b = {}, c = 0;c < this.parameterNames_.length;c++) {
+    if(b["arg_" + this.parameterNames_[c].toLowerCase()]) {
       a = !0;
       break
     }
-    b["arg_" + this.arguments_[c].toLowerCase()] = !0
+    b["arg_" + this.parameterNames_[c].toLowerCase()] = !0
   }
   a ? this.setWarningText(Blockly.Msg.PROCEDURES_DEF_DUPLICATE_WARNING) : this.setWarningText(null);
   a = "";
-  this.arguments_.length && (a = Blockly.Msg.PROCEDURES_BEFORE_PARAMS + " " + this.arguments_.join(", "));
+  this.parameterNames_.length && (a = Blockly.Msg.PROCEDURES_BEFORE_PARAMS + " " + this.parameterNames_.join(", "));
   this.setTitleValue(a, "PARAMS")
 }, mutationToDom:function() {
-  for(var a = document.createElement("mutation"), b = 0;b < this.arguments_.length;b++) {
+  for(var a = document.createElement("mutation"), b = 0;b < this.parameterNames_.length;b++) {
     var c = document.createElement("arg");
-    c.setAttribute("name", this.arguments_[b]);
+    c.setAttribute("name", this.parameterNames_[b]);
     a.appendChild(c)
   }
   this.description_ && (b = document.createElement("description"), b.innerHTML = this.description_, a.appendChild(b));
   return a
 }, domToMutation:function(a) {
-  this.arguments_ = [];
+  this.parameterNames_ = [];
   for(var b = 0, c;c = a.childNodes[b];b++) {
     var d = c.nodeName.toLowerCase();
-    "arg" === d ? this.arguments_.push(c.getAttribute("name")) : "description" === d && (this.description_ = c.innerHTML)
+    "arg" === d ? this.parameterNames_.push(c.getAttribute("name")) : "description" === d && (this.description_ = c.innerHTML)
   }
   this.updateParams_()
 }, decompose:function(a) {
   var b = new Blockly.Block(a, "procedures_mutatorcontainer");
   b.initSvg();
-  for(var c = b.getInput("STACK").connection, d = 0;d < this.arguments_.length;d++) {
+  for(var c = b.getInput("STACK").connection, d = 0;d < this.parameterNames_.length;d++) {
     var e = new Blockly.Block(a, "procedures_mutatorarg");
     e.initSvg();
-    e.setTitleValue(this.arguments_[d], "NAME");
+    e.setTitleValue(this.parameterNames_[d], "NAME");
     e.oldLocation = d;
     c.connect(e.previousConnection);
     c = e.nextConnection
   }
-  Blockly.Procedures.mutateCallers(this.getTitleValue("NAME"), this.blockSpace, this.arguments_, null);
+  Blockly.Procedures.mutateCallers(this.getTitleValue("NAME"), this.blockSpace, this.parameterNames_, null);
   return b
 }, compose:function(a) {
   a = a.getInputTargetBlock("STACK");
@@ -763,25 +763,25 @@ Blockly.Blocks.procedures_defnoreturn = {init:function() {
   }
   this.updateParamsFromArrays(b, c)
 }, updateParamsFromArrays:function(a, b) {
-  this.arguments_ = goog.array.clone(a);
-  this.paramIds_ = goog.array.clone(b);
+  this.parameterNames_ = goog.array.clone(a);
+  this.paramIds_ = b ? goog.array.clone(b) : null;
   this.updateParams_();
   this.updateCallerParams_()
 }, updateCallerParams_:function() {
-  Blockly.Procedures.mutateCallers(this.getTitleValue("NAME"), this.blockSpace, this.arguments_, this.paramIds_)
+  Blockly.Procedures.mutateCallers(this.getTitleValue("NAME"), this.blockSpace, this.parameterNames_, this.paramIds_)
 }, dispose:function(a, b, c) {
   if(!c) {
     var d = this.getTitleValue("NAME");
     Blockly.Procedures.disposeCallers(d, this.blockSpace)
   }
   Blockly.Block.prototype.dispose.apply(this, arguments)
-}, getProcedureDef:function() {
-  return[this.getTitleValue("NAME"), this.arguments_, !1]
+}, getProcedureInfo:function() {
+  return{name:this.getTitleValue("NAME"), parameterNames:this.parameterNames_, parameterIDs:this.paramIds_, type:this.type, callType:this.callType_}
 }, getVars:function() {
-  return this.arguments_
+  return this.parameterNames_
 }, renameVar:function(a, b) {
-  for(var c = !1, d = 0;d < this.arguments_.length;d++) {
-    Blockly.Names.equals(a, this.arguments_[d]) && (this.arguments_[d] = b, c = !0)
+  for(var c = !1, d = 0;d < this.parameterNames_.length;d++) {
+    Blockly.Names.equals(a, this.parameterNames_[d]) && (this.parameterNames_[d] = b, c = !0)
   }
   if(c && (this.updateParams_(), this.mutator && this.mutator.isVisible())) {
     for(var c = this.mutator.blockSpace_.getAllBlocks(), d = 0, e;e = c[d];d++) {
@@ -789,22 +789,22 @@ Blockly.Blocks.procedures_defnoreturn = {init:function() {
     }
   }
 }, removeVar:function(a) {
-  a = this.arguments_.indexOf(a);
-  -1 < a && (this.arguments_.splice(a, 1), this.updateParams_())
+  a = this.parameterNames_.indexOf(a);
+  -1 < a && (this.parameterNames_.splice(a, 1), this.updateParams_())
 }, customContextMenu:function(a) {
   var b = {enabled:!0}, c = this.getTitleValue("NAME");
   b.text = Blockly.Msg.PROCEDURES_CREATE_DO.replace("%1", c);
   var d = goog.dom.createDom("mutation");
   d.setAttribute("name", c);
-  for(var e = 0;e < this.arguments_.length;e++) {
-    c = goog.dom.createDom("arg"), c.setAttribute("name", this.arguments_[e]), d.appendChild(c)
+  for(var e = 0;e < this.parameterNames_.length;e++) {
+    c = goog.dom.createDom("arg"), c.setAttribute("name", this.parameterNames_[e]), d.appendChild(c)
   }
   d = goog.dom.createDom("block", null, d);
   d.setAttribute("type", this.callType_);
   b.callback = Blockly.ContextMenu.callbackFactory(this, d);
   a.push(b);
-  for(e = 0;e < this.arguments_.length;e++) {
-    b = {enabled:!0}, c = this.arguments_[e], b.text = Blockly.Msg.VARIABLES_SET_CREATE_GET.replace("%1", c), d = goog.dom.createDom("title", null, c), d.setAttribute("name", "VAR"), d = goog.dom.createDom("block", null, d), d.setAttribute("type", "variables_get"), b.callback = Blockly.ContextMenu.callbackFactory(this, d), a.push(b)
+  for(e = 0;e < this.parameterNames_.length;e++) {
+    b = {enabled:!0}, c = this.parameterNames_[e], b.text = Blockly.Msg.VARIABLES_SET_CREATE_GET.replace("%1", c), d = goog.dom.createDom("title", null, c), d.setAttribute("name", "VAR"), d = goog.dom.createDom("block", null, d), d.setAttribute("type", "variables_get"), b.callback = Blockly.ContextMenu.callbackFactory(this, d), a.push(b)
   }
 }, callType_:"procedures_callnoreturn"};
 Blockly.Blocks.procedures_defreturn = {init:function() {
@@ -817,10 +817,10 @@ Blockly.Blocks.procedures_defreturn = {init:function() {
   this.setMutator(new Blockly.Mutator(["procedures_mutatorarg"]));
   this.setTooltip(Blockly.Msg.PROCEDURES_DEFRETURN_TOOLTIP);
   this.setFramed(this.blockSpace === Blockly.mainBlockSpace && !Blockly.readOnly);
-  this.arguments_ = []
+  this.parameterNames_ = []
 }, updateParams_:Blockly.Blocks.procedures_defnoreturn.updateParams_, updateCallerParams_:Blockly.Blocks.procedures_defnoreturn.updateCallerParams_, updateParamsFromArrays:Blockly.Blocks.procedures_defnoreturn.updateParamsFromArrays, mutationToDom:Blockly.Blocks.procedures_defnoreturn.mutationToDom, domToMutation:Blockly.Blocks.procedures_defnoreturn.domToMutation, decompose:Blockly.Blocks.procedures_defnoreturn.decompose, compose:Blockly.Blocks.procedures_defnoreturn.compose, dispose:Blockly.Blocks.procedures_defnoreturn.dispose, 
-getProcedureDef:function() {
-  return[this.getTitleValue("NAME"), this.arguments_, !0]
+getProcedureInfo:function() {
+  return{name:this.getTitleValue("NAME"), parameterNames:this.parameterNames_, parameterIDs:this.paramIds_, type:this.type, callType:this.callType_}
 }, getVars:Blockly.Blocks.procedures_defnoreturn.getVars, renameVar:Blockly.Blocks.procedures_defnoreturn.renameVar, customContextMenu:Blockly.Blocks.procedures_defnoreturn.customContextMenu, callType_:"procedures_callreturn"};
 Blockly.Blocks.procedures_mutatorcontainer = {init:function() {
   this.setHSV(94, 0.84, 0.6);
@@ -852,15 +852,15 @@ Blockly.Blocks.procedures_callnoreturn = {init:function() {
   this.setPreviousStatement(!0);
   this.setNextStatement(!0);
   this.setTooltip(Blockly.Msg.PROCEDURES_CALLNORETURN_TOOLTIP);
-  this.arguments_ = [];
-  this.quarkArguments_ = this.quarkConnections_ = null
+  this.currentParameterNames_ = [];
+  this.currentParameterIDs = this.parameterIDsToArgumentConnections = null
 }, openEditor:function(a) {
   a.stopPropagation();
   a = this.getTitleValue("NAME");
   this.blockSpace.blockSpaceEditor.hideChaff();
   Blockly.functionEditor.hide();
   Blockly.functionEditor.openAndEditFunction(a)
-}, getProcedureCall:function() {
+}, getCallName:function() {
   return this.getTitleValue("NAME")
 }, renameProcedure:function(a, b) {
   Blockly.Names.equals(a, this.getTitleValue("NAME")) && (this.setTitleValue(b, "NAME"), this.setTooltip((this.outputConnection ? Blockly.Msg.PROCEDURES_CALLRETURN_TOOLTIP : Blockly.Msg.PROCEDURES_CALLNORETURN_TOOLTIP).replace("%1", b)))
@@ -869,35 +869,35 @@ Blockly.Blocks.procedures_callnoreturn = {init:function() {
     if(b.length != a.length) {
       throw"Error: paramNames and paramIds must be the same length.";
     }
-    this.quarkArguments_ || (this.quarkConnections_ = {}, a.join("\n") == this.arguments_.join("\n") ? this.quarkArguments_ = b : this.quarkArguments_ = []);
+    this.currentParameterIDs || (this.parameterIDsToArgumentConnections = {}, a.join("\n") == this.currentParameterNames_.join("\n") ? this.currentParameterIDs = b : this.currentParameterIDs = []);
     var c = this.rendered;
     this.rendered = !1;
-    for(var d = this.arguments_.length - 1;0 <= d;d--) {
+    for(var d = this.currentParameterNames_.length - 1;0 <= d;d--) {
       var e = this.getInput("ARG" + d);
       if(e) {
         var f = e.connection.targetConnection;
-        this.quarkConnections_[this.quarkArguments_[d]] = f;
+        this.parameterIDsToArgumentConnections[this.currentParameterIDs[d]] = f;
         this.removeInput("ARG" + d)
       }
     }
-    this.arguments_ = [].concat(a);
-    this.quarkArguments_ = b;
-    for(d = 0;d < this.arguments_.length;d++) {
-      if(e = this.appendValueInput("ARG" + d).setAlign(Blockly.ALIGN_RIGHT).appendTitle(this.arguments_[d]), this.quarkArguments_) {
-        var g = this.quarkArguments_[d];
-        g in this.quarkConnections_ && (f = this.quarkConnections_[g], !f || f.targetConnection || f.sourceBlock_.blockSpace != this.blockSpace ? delete this.quarkConnections_[g] : e.connection.connect(f))
+    this.currentParameterNames_ = [].concat(a);
+    this.currentParameterIDs = b;
+    for(d = 0;d < this.currentParameterNames_.length;d++) {
+      if(e = this.appendValueInput("ARG" + d).setAlign(Blockly.ALIGN_RIGHT).appendTitle(this.currentParameterNames_[d]), this.currentParameterIDs) {
+        var g = this.currentParameterIDs[d];
+        g in this.parameterIDsToArgumentConnections && (f = this.parameterIDsToArgumentConnections[g], !f || f.targetConnection || f.sourceBlock_.blockSpace != this.blockSpace ? delete this.parameterIDsToArgumentConnections[g] : e.connection.connect(f))
       }
     }
     (this.rendered = c) && this.render()
   }else {
-    this.quarkConnections_ = {}, this.quarkArguments_ = null
+    this.parameterIDsToArgumentConnections = {}, this.currentParameterIDs = null
   }
 }, mutationToDom:function() {
   var a = document.createElement("mutation");
   a.setAttribute("name", this.getTitleValue("NAME"));
-  for(var b = 0;b < this.arguments_.length;b++) {
+  for(var b = 0;b < this.currentParameterNames_.length;b++) {
     var c = document.createElement("arg");
-    c.setAttribute("name", this.arguments_[b]);
+    c.setAttribute("name", this.currentParameterNames_[b]);
     a.appendChild(c)
   }
   return a
@@ -906,17 +906,17 @@ Blockly.Blocks.procedures_callnoreturn = {init:function() {
   this.setTitleValue(b, "NAME");
   this.setTooltip((this.outputConnection ? Blockly.Msg.PROCEDURES_CALLRETURN_TOOLTIP : Blockly.Msg.PROCEDURES_CALLNORETURN_TOOLTIP).replace("%1", b));
   if((b = Blockly.Procedures.getDefinition(b, this.blockSpace)) && b.mutator && b.mutator.isVisible()) {
-    this.setProcedureParameters(b.arguments_, b.paramIds_)
+    a = b.getProcedureInfo(), this.setProcedureParameters(a.parameterNames, a.parameterIDs)
   }else {
-    this.arguments_ = [];
+    this.currentParameterNames_ = [];
     for(var b = 0, c;c = a.childNodes[b];b++) {
-      "arg" == c.nodeName.toLowerCase() && this.arguments_.push(c.getAttribute("name"))
+      "arg" == c.nodeName.toLowerCase() && this.currentParameterNames_.push(c.getAttribute("name"))
     }
-    this.setProcedureParameters(this.arguments_, this.arguments_)
+    this.setProcedureParameters(this.currentParameterNames_, this.currentParameterNames_)
   }
 }, renameVar:function(a, b) {
-  for(var c = 0;c < this.arguments_.length;c++) {
-    Blockly.Names.equals(a, this.arguments_[c]) && (this.arguments_[c] = b, this.getInput("ARG" + c).titleRow[0].setText(b))
+  for(var c = 0;c < this.currentParameterNames_.length;c++) {
+    Blockly.Names.equals(a, this.currentParameterNames_[c]) && (this.currentParameterNames_[c] = b, this.getInput("ARG" + c).titleRow[0].setText(b))
   }
 }, customContextMenu:function(a) {
   var b = {enabled:!0};
@@ -939,9 +939,9 @@ Blockly.Blocks.procedures_callreturn = {init:function() {
   }
   this.setOutput(!0);
   this.setTooltip(Blockly.Msg.PROCEDURES_CALLRETURN_TOOLTIP);
-  this.arguments_ = [];
-  this.quarkArguments_ = this.quarkConnections_ = null
-}, openEditor:Blockly.Blocks.procedures_callnoreturn.openEditor, getProcedureCall:Blockly.Blocks.procedures_callnoreturn.getProcedureCall, renameProcedure:Blockly.Blocks.procedures_callnoreturn.renameProcedure, setProcedureParameters:Blockly.Blocks.procedures_callnoreturn.setProcedureParameters, mutationToDom:Blockly.Blocks.procedures_callnoreturn.mutationToDom, domToMutation:Blockly.Blocks.procedures_callnoreturn.domToMutation, renameVar:Blockly.Blocks.procedures_callnoreturn.renameVar, customContextMenu:Blockly.Blocks.procedures_callnoreturn.customContextMenu};
+  this.currentParameterNames_ = [];
+  this.currentParameterIDs = this.parameterIDsToArgumentConnections = null
+}, openEditor:Blockly.Blocks.procedures_callnoreturn.openEditor, getCallName:Blockly.Blocks.procedures_callnoreturn.getCallName, renameProcedure:Blockly.Blocks.procedures_callnoreturn.renameProcedure, setProcedureParameters:Blockly.Blocks.procedures_callnoreturn.setProcedureParameters, mutationToDom:Blockly.Blocks.procedures_callnoreturn.mutationToDom, domToMutation:Blockly.Blocks.procedures_callnoreturn.domToMutation, renameVar:Blockly.Blocks.procedures_callnoreturn.renameVar, customContextMenu:Blockly.Blocks.procedures_callnoreturn.customContextMenu};
 Blockly.Blocks.procedures_ifreturn = {init:function() {
   this.setHelpUrl("http://c2.com/cgi/wiki?GuardClause");
   this.setHSV(94, 0.84, 0.6);
@@ -1257,47 +1257,51 @@ Blockly.Blocks.functional_definition = {init:function() {
   this.setHSV(94, 0.84, 0.6);
   this.setFunctional(!0, {headerHeight:0, rowBuffer:3});
   this.setFunctionalOutput(!0, "Number");
-  Blockly.Procedures.findLegalName(Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE, this);
-  this.appendDummyInput().appendTitle("Define").appendTitle(new Blockly.FieldTextInput("My New Function", Blockly.Procedures.rename), "NAME").appendTitle("", "PARAMS");
+  var a = Blockly.Procedures.findLegalName(Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE, this);
+  this.appendDummyInput().appendTitle(Blockly.Msg.DEFINE_FUNCTION_DEFINE).appendTitle(new Blockly.FieldTextInput(a, Blockly.Procedures.rename), "NAME").appendTitle("", "PARAMS");
   this.appendFunctionalInput("STACK");
   this.setFunctional(!0);
-  this.setTooltip("Define a functional method");
-  this.arguments_ = []
+  this.setTooltip(Blockly.Msg.FUNCTIONAL_PROCEDURE_DEFINE_TOOLTIP);
+  this.parameterNames_ = [];
+  this.paramIds_ = [];
+  this.parameterTypes_ = []
 }, mutationToDom:function() {
-  for(var a = document.createElement("mutation"), b = 0;b < this.arguments_.length;b++) {
+  for(var a = document.createElement("mutation"), b = 0;b < this.parameterNames_.length;b++) {
     var c = document.createElement("arg");
-    c.setAttribute("name", this.arguments_[b]);
+    c.setAttribute("name", this.parameterNames_[b]);
+    c.setAttribute("type", this.parameterTypes_[b]);
     a.appendChild(c)
   }
   this.description_ && (b = document.createElement("description"), b.innerHTML = this.description_, a.appendChild(b));
   this.outputType_ && (b = document.createElement("outputType"), b.innerHTML = this.outputType_, a.appendChild(b));
   return a
 }, domToMutation:function(a) {
-  this.arguments_ = [];
+  this.parameterNames_ = [];
   for(var b = 0, c;c = a.childNodes[b];b++) {
     var d = c.nodeName.toLowerCase();
-    "arg" === d ? this.arguments_.push(c.getAttribute("name")) : "description" === d ? this.description_ = c.innerHTML : "outputtype" === d && this.updateOutputType(c.innerHTML)
+    "arg" === d ? (this.parameterNames_.push(c.getAttribute("name")), this.parameterTypes_.push(c.getAttribute("type"))) : "description" === d ? this.description_ = c.innerHTML : "outputtype" === d && this.updateOutputType(c.innerHTML)
   }
   this.updateParams_()
-}, updateParamsFromArrays:function(a, b) {
-  this.arguments_ = goog.array.clone(a);
-  this.paramIds_ = goog.array.clone(b);
+}, updateParamsFromArrays:function(a, b, c) {
+  this.parameterNames_ = goog.array.clone(a);
+  this.paramIds_ = b ? goog.array.clone(b) : null;
+  this.parameterTypes_ = goog.array.clone(c);
   this.updateParams_();
   this.updateCallerParams_()
 }, updateParams_:function() {
-  for(var a = !1, b = {}, c = 0;c < this.arguments_.length;c++) {
-    if(b["arg_" + this.arguments_[c].toLowerCase()]) {
+  for(var a = !1, b = {}, c = 0;c < this.parameterNames_.length;c++) {
+    if(b["arg_" + this.parameterNames_[c].toLowerCase()]) {
       a = !0;
       break
     }
-    b["arg_" + this.arguments_[c].toLowerCase()] = !0
+    b["arg_" + this.parameterNames_[c].toLowerCase()] = !0
   }
   a ? this.setWarningText(Blockly.Msg.PROCEDURES_DEF_DUPLICATE_WARNING) : this.setWarningText(null);
   a = "";
-  this.arguments_.length && (a = Blockly.Msg.PROCEDURES_BEFORE_PARAMS + " " + this.arguments_.join(", "));
+  this.parameterNames_.length && (a = Blockly.Msg.PROCEDURES_BEFORE_PARAMS + " " + this.parameterNames_.join(", "));
   this.setTitleValue(a, "PARAMS")
 }, updateCallerParams_:function() {
-  Blockly.Procedures.mutateCallers(this.getTitleValue("NAME"), this.blockSpace, this.arguments_, this.paramIds_)
+  Blockly.Procedures.mutateCallers(this.getTitleValue("NAME"), this.blockSpace, this.parameterNames_, this.paramIds_, this.parameterTypes_)
 }, updateOutputType:function(a) {
   this.outputType_ = a;
   this.changeFunctionalOutput(this.outputType_)
@@ -1307,13 +1311,13 @@ Blockly.Blocks.functional_definition = {init:function() {
     Blockly.Procedures.disposeCallers(d, this.blockSpace)
   }
   Blockly.Block.prototype.dispose.apply(this, arguments)
-}, getProcedureDef:function() {
-  return[this.getTitleValue("NAME"), this.arguments_, !1]
+}, getProcedureInfo:function() {
+  return{name:this.getTitleValue("NAME"), type:this.type, callType:this.callType_, parameterNames:this.parameterNames_, parameterTypes:this.parameterTypes_}
 }, getVars:function() {
-  return this.arguments_
+  return this.parameterNames_
 }, renameVar:function(a, b) {
-  for(var c = !1, d = 0;d < this.arguments_.length;d++) {
-    Blockly.Names.equals(a, this.arguments_[d]) && (this.arguments_[d] = b, c = !0)
+  for(var c = !1, d = 0;d < this.parameterNames_.length;d++) {
+    Blockly.Names.equals(a, this.parameterNames_[d]) && (this.parameterNames_[d] = b, c = !0)
   }
   if(c && (this.updateParams_(), this.mutator && this.mutator.isVisible())) {
     for(var c = this.mutator.blockSpace_.getAllBlocks(), d = 0, e;e = c[d];d++) {
@@ -1321,8 +1325,8 @@ Blockly.Blocks.functional_definition = {init:function() {
     }
   }
 }, removeVar:function(a) {
-  a = this.arguments_.indexOf(a);
-  -1 < a && (this.arguments_.splice(a, 1), this.updateParams_())
+  a = this.parameterNames_.indexOf(a);
+  -1 < a && (this.parameterNames_.splice(a, 1), this.updateParams_())
 }, callType_:"functional_call"};
 Blockly.Blocks.functional_call = {init:function() {
   this.setHelpUrl(Blockly.Msg.PROCEDURES_CALLNORETURN_HELPURL);
@@ -1335,49 +1339,57 @@ Blockly.Blocks.functional_call = {init:function() {
     a.appendTitle(b)
   }
   this.setFunctional(!0);
-  this.setFunctionalOutput(!0);
-  this.arguments_ = [];
-  this.quarkArguments_ = this.quarkConnections_ = null
+  this.currentParameterNames_ = [];
+  this.parameterIDsToArgumentConnections_ = {};
+  this.currentParameterIDs_ = [];
+  this.currentParameterTypes_ = [];
+  this.currentDescription_ = this.currentOutputType_ = null;
+  this.blockSpace.events.listen(Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE, this.updateAttributesFromDefinition_, !1, this)
+}, updateAttributesFromDefinition_:function() {
+  var a = Blockly.Procedures.getDefinition(this.getTitleValue("NAME"), this.blockSpace.blockSpaceEditor.blockSpace);
+  a && (a.outputType_ && a.outputType_ !== this.currentOutputType_ && (this.currentOutputType_ = a.outputType_, this.changeFunctionalOutput(a.outputType_)), a.description_ && a.description_ !== this.currentDescription_ && (this.currentDescription_ = a.description_, this.setTooltip(a.description_)))
+}, beforeDispose:function() {
+  this.blockSpace.events.unlisten(Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE, this.updateAttributesFromDefinition_, !1, this)
 }, openEditor:function() {
   Blockly.functionEditor.openAndEditFunction(this.getTitleValue("NAME"))
-}, getProcedureCall:function() {
+}, getCallName:function() {
   return this.getTitleValue("NAME")
 }, renameProcedure:function(a, b) {
-  Blockly.Names.equals(a, this.getTitleValue("NAME")) && (this.setTitleValue(b, "NAME"), this.setTooltip((this.outputConnection ? Blockly.Msg.PROCEDURES_CALLRETURN_TOOLTIP : Blockly.Msg.PROCEDURES_CALLNORETURN_TOOLTIP).replace("%1", b)))
-}, setProcedureParameters:function(a, b) {
+  Blockly.Names.equals(a, this.getTitleValue("NAME")) && this.setTitleValue(b, "NAME")
+}, setProcedureParameters:function(a, b, c) {
   if(b) {
     if(b.length != a.length) {
       throw"Error: paramNames and paramIds must be the same length.";
     }
-    this.quarkArguments_ || (this.quarkConnections_ = {}, a.join("\n") == this.arguments_.join("\n") ? this.quarkArguments_ = b : this.quarkArguments_ = []);
-    var c = this.rendered;
+    this.currentParameterIDs_ || (this.parameterIDsToArgumentConnections_ = {}, a.join("\n") === this.currentParameterNames_.join("\n") ? this.currentParameterIDs_ = b : this.currentParameterIDs_ = []);
+    var d = this.rendered;
     this.rendered = !1;
-    for(var d = this.arguments_.length - 1;0 <= d;d--) {
-      var e = this.getInput("ARG" + d);
-      if(e) {
-        var f = e.connection.targetConnection;
-        this.quarkConnections_[this.quarkArguments_[d]] = f;
-        this.removeInput("ARG" + d)
+    for(var e = this.currentParameterNames_.length - 1;0 <= e;e--) {
+      var f = this.getInput("ARG" + e);
+      if(f) {
+        var g = f.connection.targetConnection;
+        this.parameterIDsToArgumentConnections_[this.currentParameterIDs_[e]] = g;
+        this.removeInput("ARG" + e)
       }
     }
-    this.arguments_ = [].concat(a);
-    this.quarkArguments_ = b;
-    for(d = 0;d < this.arguments_.length;d++) {
-      if(e = this.appendFunctionalInput("ARG" + d).setAlign(Blockly.ALIGN_CENTRE).setInline(0 < d), this.quarkArguments_) {
-        var g = this.quarkArguments_[d];
-        g in this.quarkConnections_ && (f = this.quarkConnections_[g], !f || f.targetConnection || f.sourceBlock_.blockSpace != this.blockSpace ? delete this.quarkConnections_[g] : e.connection.connect(f))
-      }
+    this.currentParameterNames_ = goog.array.clone(a);
+    this.currentParameterIDs_ = goog.array.clone(b);
+    this.currentParameterTypes_ = goog.array.clone(c);
+    for(e = 0;e < this.currentParameterNames_.length;e++) {
+      f = this.appendFunctionalInput("ARG" + e).setAlign(Blockly.ALIGN_CENTRE).setInline(0 < e), g = this.currentParameterTypes_[e], f.setHSV.apply(f, Blockly.ContractEditor.typesToColors[g]), f.setCheck(g), this.currentParameterIDs_ && (a = this.currentParameterIDs_[e], a in this.parameterIDsToArgumentConnections_ && (g = this.parameterIDsToArgumentConnections_[a], !g || g.targetConnection || g.sourceBlock_.blockSpace != this.blockSpace ? delete this.parameterIDsToArgumentConnections_[a] : f.connection.connect(g)))
     }
-    (this.rendered = c) && this.render()
+    this.setTitleValue(" (" + this.currentParameterNames_.join(", ") + ")", "PARAM_TEXT");
+    (this.rendered = d) && this.render()
   }else {
-    this.quarkConnections_ = {}, this.quarkArguments_ = null
+    this.parameterIDsToArgumentConnections_ = {}, this.currentParameterIDs_ = null
   }
 }, mutationToDom:function() {
   var a = document.createElement("mutation");
   a.setAttribute("name", this.getTitleValue("NAME"));
-  for(var b = 0;b < this.arguments_.length;b++) {
+  for(var b = 0;b < this.currentParameterNames_.length;b++) {
     var c = document.createElement("arg");
-    c.setAttribute("name", this.arguments_[b]);
+    c.setAttribute("name", this.currentParameterNames_[b]);
+    c.setAttribute("type", this.currentParameterTypes_[b]);
     a.appendChild(c)
   }
   return a
@@ -1385,16 +1397,17 @@ Blockly.Blocks.functional_call = {init:function() {
   var b = a.getAttribute("name");
   this.setTitleValue(b, "NAME");
   this.setTooltip((this.outputConnection ? Blockly.Msg.PROCEDURES_CALLRETURN_TOOLTIP : Blockly.Msg.PROCEDURES_CALLNORETURN_TOOLTIP).replace("%1", b));
-  b = Blockly.Procedures.getDefinition(b, this.blockSpace);
-  this.arguments_ = [];
-  for(var c = 0, d;d = a.childNodes[c];c++) {
-    "arg" == d.nodeName.toLowerCase() && this.arguments_.push(d.getAttribute("name"))
+  this.currentParameterNames_ = [];
+  this.currentParameterIDs_ = [];
+  this.currentParameterTypes_ = [];
+  for(var b = 0, c;c = a.childNodes[b];b++) {
+    "arg" == c.nodeName.toLowerCase() && (this.currentParameterNames_.push(c.getAttribute("name")), this.currentParameterTypes_.push(c.getAttribute("type")), this.currentParameterIDs_.push(Blockly.getUID()))
   }
-  this.setProcedureParameters(this.arguments_, this.arguments_);
-  b && (b.outputType_ && this.changeFunctionalOutput(b.outputType_), b.description_ && this.setTooltip(b.description_), b.arguments_.length && this.setTitleValue(" (" + this.arguments_.join(", ") + ")", "PARAM_TEXT"))
+  this.setProcedureParameters(this.currentParameterNames_, this.currentParameterIDs_, this.currentParameterTypes_);
+  this.updateAttributesFromDefinition_()
 }, renameVar:function(a, b) {
-  for(var c = 0;c < this.arguments_.length;c++) {
-    Blockly.Names.equals(a, this.arguments_[c]) && (this.arguments_[c] = b, this.getInput("ARG" + c).titleRow[0].setText(b))
+  for(var c = 0;c < this.currentParameterNames_.length;c++) {
+    Blockly.Names.equals(a, this.currentParameterNames_[c]) && (this.currentParameterNames_[c] = b, this.getInput("ARG" + c).titleRow[0].setText(b))
   }
 }};
 Blockly.Blocks.procedural_to_functional_call = Blockly.Blocks.procedures_callreturn;
@@ -1418,13 +1431,12 @@ Blockly.Blocks.functional_parameters_get = {init:function() {
     b.innerHTML = this.description_;
     a.appendChild(b)
   }
-  this.outputType_ && (b = document.createElement("outputType"), b.innerHTML = this.outputType_, a.appendChild(b));
+  this.outputType_ && (b = document.createElement("outputtype"), b.innerHTML = this.outputType_, a.appendChild(b));
   return a
 }, domToMutation:function(a) {
-  this.arguments_ = [];
   for(var b = 0, c;c = a.childNodes[b];b++) {
     var d = c.nodeName.toLowerCase();
-    "arg" === d ? this.arguments_.push(c.getAttribute("name")) : "description" === d ? this.description_ = c.innerHTML : "outputtype" === d && (this.outputType_ = c.innerHTML, this.changeFunctionalOutput(this.outputType_))
+    "description" === d ? this.description_ = c.innerHTML : "outputtype" === d && (this.outputType_ = c.innerHTML, this.changeFunctionalOutput(this.outputType_))
   }
 }};
 

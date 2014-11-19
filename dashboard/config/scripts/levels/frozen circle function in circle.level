@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "elsa",
-    "instructions": "Now let's create 20 overlapping circles, rotating 18 degrees between each circle. ",
+    "instructions": "Now let's create 20 overlapping circles, turning 18 degrees between each circle.",
     "x": "350",
     "y": "180",
     "start_direction": "180",
@@ -18,7 +18,8 @@
     "slider_speed": "0.8",
     "impressive": "true",
     "use_modal_function_editor": "false",
-    "use_contract_editor": "false"
+    "use_contract_editor": "false",
+    "ideal": "8"
   }
 }]]></config>
   <blocks>

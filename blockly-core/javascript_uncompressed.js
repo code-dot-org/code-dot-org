@@ -642,8 +642,8 @@ Blockly.JavaScript.math_random_float = function() {
 };
 Blockly.JavaScript.procedures = {};
 Blockly.JavaScript.procedures_defreturn = function() {
-  for(var a = Blockly.JavaScript.variableDB_.getName(this.getTitleValue("NAME"), Blockly.Procedures.NAME_TYPE), b = [], c = 0;c < this.arguments_.length;c++) {
-    b[c] = Blockly.JavaScript.variableDB_.getName(this.arguments_[c], Blockly.Variables.NAME_TYPE, Blockly.Variables.NAME_TYPE_LOCAL)
+  for(var a = Blockly.JavaScript.variableDB_.getName(this.getTitleValue("NAME"), Blockly.Procedures.NAME_TYPE), b = [], c = 0;c < this.parameterNames_.length;c++) {
+    b[c] = Blockly.JavaScript.variableDB_.getName(this.parameterNames_[c], Blockly.Variables.NAME_TYPE, Blockly.Variables.NAME_TYPE_LOCAL)
   }
   c = Blockly.JavaScript.statementToCode(this, "STACK");
   Blockly.JavaScript.INFINITE_LOOP_TRAP && (c = Blockly.JavaScript.INFINITE_LOOP_TRAP.replace(/%1/g, "'" + this.id + "'") + c);
@@ -656,13 +656,13 @@ Blockly.JavaScript.procedures_defreturn = function() {
 };
 Blockly.JavaScript.procedures_defnoreturn = Blockly.JavaScript.procedures_defreturn;
 Blockly.JavaScript.procedures_callreturn = function() {
-  for(var a = Blockly.JavaScript.variableDB_.getName(this.getTitleValue("NAME"), Blockly.Procedures.NAME_TYPE), b = [], c = 0;c < this.arguments_.length;c++) {
+  for(var a = Blockly.JavaScript.variableDB_.getName(this.getTitleValue("NAME"), Blockly.Procedures.NAME_TYPE), b = [], c = 0;c < this.currentParameterNames_.length;c++) {
     b[c] = Blockly.JavaScript.valueToCode(this, "ARG" + c, Blockly.JavaScript.ORDER_COMMA) || "null"
   }
   return[(Blockly.varsInGlobals ? "Globals." : "") + a + "(" + b.join(", ") + ")", Blockly.JavaScript.ORDER_FUNCTION_CALL]
 };
 Blockly.JavaScript.procedures_callnoreturn = function() {
-  for(var a = Blockly.JavaScript.variableDB_.getName(this.getTitleValue("NAME"), Blockly.Procedures.NAME_TYPE), b = [], c = 0;c < this.arguments_.length;c++) {
+  for(var a = Blockly.JavaScript.variableDB_.getName(this.getTitleValue("NAME"), Blockly.Procedures.NAME_TYPE), b = [], c = 0;c < this.currentParameterNames_.length;c++) {
     b[c] = Blockly.JavaScript.valueToCode(this, "ARG" + c, Blockly.JavaScript.ORDER_COMMA) || "null"
   }
   return(Blockly.varsInGlobals ? "Globals." : "") + a + "(" + b.join(", ") + ");\n"
@@ -678,8 +678,8 @@ Blockly.JavaScript.procedures_ifreturn = function() {
 };
 Blockly.JavaScript.functionalProcedures = {};
 Blockly.JavaScript.functional_definition = function() {
-  for(var a = Blockly.JavaScript.variableDB_.getName(this.getTitleValue("NAME"), Blockly.Procedures.NAME_TYPE), b = [], c = 0;c < this.arguments_.length;c++) {
-    b[c] = Blockly.JavaScript.variableDB_.getName(this.arguments_[c], Blockly.Variables.NAME_TYPE, Blockly.Variables.NAME_TYPE_LOCAL)
+  for(var a = Blockly.JavaScript.variableDB_.getName(this.getTitleValue("NAME"), Blockly.Procedures.NAME_TYPE), b = [], c = 0;c < this.parameterNames_.length;c++) {
+    b[c] = Blockly.JavaScript.variableDB_.getName(this.parameterNames_[c], Blockly.Variables.NAME_TYPE, Blockly.Variables.NAME_TYPE_LOCAL)
   }
   c = Blockly.JavaScript.statementToCode(this, "STACK");
   Blockly.JavaScript.INFINITE_LOOP_TRAP && (c = Blockly.JavaScript.INFINITE_LOOP_TRAP.replace(/%1/g, "'" + this.id + "'") + c);
@@ -691,13 +691,13 @@ Blockly.JavaScript.functional_definition = function() {
   return null
 };
 Blockly.JavaScript.functional_call = function() {
-  for(var a = Blockly.JavaScript.variableDB_.getName(this.getTitleValue("NAME"), Blockly.Procedures.NAME_TYPE), b = [], c = 0;c < this.arguments_.length;c++) {
+  for(var a = Blockly.JavaScript.variableDB_.getName(this.getTitleValue("NAME"), Blockly.Procedures.NAME_TYPE), b = [], c = 0;c < this.currentParameterNames_.length;c++) {
     b[c] = Blockly.JavaScript.statementToCode(this, "ARG" + c, Blockly.JavaScript.ORDER_COMMA) || "null"
   }
   return(Blockly.varsInGlobals ? "Globals." : "") + a + "(" + b.join(", ") + ")"
 };
 Blockly.JavaScript.procedural_to_functional_call = function() {
-  for(var a = Blockly.JavaScript.variableDB_.getName(this.getTitleValue("NAME"), Blockly.Procedures.NAME_TYPE), b = [], c = 0;c < this.arguments_.length;c++) {
+  for(var a = Blockly.JavaScript.variableDB_.getName(this.getTitleValue("NAME"), Blockly.Procedures.NAME_TYPE), b = [], c = 0;c < this.currentParameterNames_.length;c++) {
     var d = Blockly.JavaScript.valueToCode(this, "ARG" + c, Blockly.JavaScript.ORDER_COMMA);
     b[c] = d || "null"
   }

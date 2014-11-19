@@ -13,6 +13,7 @@ goog.require('goog.style');
 goog.require('goog.dom');
 goog.require('goog.array');
 goog.require('goog.events');
+goog.require('goog.structs.LinkedMap');
 
 /**
  * Class for a modal function editor.
@@ -28,9 +29,10 @@ Blockly.FunctionEditor = function() {
 
   /**
    * Current blocks in the editor's parameter toolbox
-   * @type {!Array.<!Blockly.Block>}
+   * @type {goog.structs.LinkedMap.<string,Blockly.Block>}
+   * @protected
    */
-  this.paramToolboxBlocks_ = [];
+  this.orderedParamIDsToBlocks_ = new goog.structs.LinkedMap();
 
   /**
    * Current block being edited
@@ -97,12 +99,18 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
 };
 
 Blockly.FunctionEditor.prototype.populateParamToolbox_ = function() {
-  this.paramToolboxBlocks_ = [];
-  var self = this;
-  this.functionDefinitionBlock.getVars().forEach(function(varName) {
-    self.addParameter(varName);
-  });
+  this.orderedParamIDsToBlocks_.clear();
+  this.addParamsFromProcedure_();
+  this.resetParamIDs_();
   this.refreshParamsEverywhere();
+};
+
+/** @protected */
+Blockly.FunctionEditor.prototype.addParamsFromProcedure_ = function() {
+  var procedureInfo = this.functionDefinitionBlock.getProcedureInfo();
+  for (var i = 0; i < procedureInfo.parameterNames.length; i++) {
+    this.addParameter(procedureInfo.parameterNames[i]);
+  }
 };
 
 Blockly.FunctionEditor.prototype.openWithNewFunction = function() {
@@ -136,15 +144,18 @@ Blockly.FunctionEditor.prototype.addParamFromInputField_ = function(
 };
 
 Blockly.FunctionEditor.prototype.addParameter = function(newParameterName) {
-  // Add the new param block to the local toolbox
+  this.orderedParamIDsToBlocks_.set(goog.events.getUniqueId('parameter'), this.newParameterBlock(newParameterName));
+};
+
+Blockly.FunctionEditor.prototype.newParameterBlock = function(newParameterName) {
   var param = Blockly.createSvgElement('block', {type: this.parameterBlockType});
   var v = Blockly.createSvgElement('title', {name: 'VAR'}, param);
   v.textContent = newParameterName;
-  this.paramToolboxBlocks_.push(param);
+  return param;
 };
 
 Blockly.FunctionEditor.prototype.renameParameter = function(oldName, newName) {
-  this.paramToolboxBlocks_.forEach(function(block) {
+  this.orderedParamIDsToBlocks_.forEach(function(block, paramID, linkedMap) {
     if (block.firstElementChild &&
         block.firstElementChild.textContent === oldName) {
       block.firstElementChild.textContent = newName;
@@ -157,10 +168,13 @@ Blockly.FunctionEditor.prototype.renameParameter = function(oldName, newName) {
  * @param {String} nameToRemove
  */
 Blockly.FunctionEditor.prototype.removeParameter = function(nameToRemove) {
-  goog.array.removeIf(this.paramToolboxBlocks_, function(block) {
-    return block.firstElementChild &&
-        block.firstElementChild.textContent === nameToRemove;
+  var keysToDelete = [];
+  this.orderedParamIDsToBlocks_.forEach(function(block, paramID) {
+    if (block.firstElementChild && block.firstElementChild.textContent === nameToRemove) {
+      keysToDelete.push(paramID);
+    }
   });
+  keysToDelete.forEach(function(key) { this.orderedParamIDsToBlocks_.remove(key); }, this);
   this.refreshParamsEverywhere();
 };
 
@@ -171,17 +185,40 @@ Blockly.FunctionEditor.prototype.refreshParamsEverywhere = function() {
 
 Blockly.FunctionEditor.prototype.refreshParamsInFlyout_ = function() {
   this.flyout_.hide();
-  this.flyout_.show(this.paramToolboxBlocks_);
+  this.flyout_.show(this.orderedParamIDsToBlocks_.getValues());
+};
+
+Blockly.FunctionEditor.prototype.resetParamIDs_ = function() {
+  var paramArrays = this.paramsAsParallelArrays_();
+  paramArrays.paramIDs = null; // No IDs causes next update to initialize IDs
+  this.functionDefinitionBlock.updateParamsFromArrays(
+    paramArrays.paramNames, paramArrays.paramIDs, paramArrays.paramTypes);
 };
 
 Blockly.FunctionEditor.prototype.refreshParamsOnFunction_ = function() {
+  var paramArrays = this.paramsAsParallelArrays_();
+  this.functionDefinitionBlock.updateParamsFromArrays(
+    paramArrays.paramNames, paramArrays.paramIDs, paramArrays.paramTypes);
+};
+
+/**
+ * @returns {{paramNames: Array, paramIDs: Array, paramTypes: Array}}
+ *    parallel arrays of parameter names, IDs, types
+ */
+Blockly.FunctionEditor.prototype.paramsAsParallelArrays_ = function() {
   var paramNames = [];
   var paramIDs = [];
-  goog.array.forEach(this.paramToolboxBlocks_, function(blockXML, index) {
+  var paramTypes = [];
+
+  this.orderedParamIDsToBlocks_.forEach(function(blockXML, paramID) {
+    // <mutation><name></name><outputtype></outputtype></mutation>
     paramNames.push(blockXML.firstElementChild.textContent);
-    paramIDs.push(index);
+    paramIDs.push(paramID);
+    if (blockXML.children.length > 1) {
+      paramTypes.push(blockXML.children[1].textContent);
+    }
   }, this);
-  this.functionDefinitionBlock.updateParamsFromArrays(paramNames, paramIDs);
+  return {paramNames: paramNames, paramIDs: paramIDs, paramTypes: paramTypes};
 };
 
 Blockly.FunctionEditor.prototype.show = function() {

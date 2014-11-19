@@ -1,7 +1,7 @@
 <Artist>
   <config><![CDATA[{
   "game_id": 23,
-  "created_at": "2014-11-10T23:10:26.278Z",
+  "created_at": "2014-11-10T23:10:26.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -10,38 +10,20 @@
     "y": "12",
     "start_direction": "90",
     "is_k1": "false",
-    "skip_instructions_popup": "false",
+    "skip_instructions_popup": "true",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
     "free_play": "false",
     "impressive": "false",
-    "instructions": "Can you draw this pattern by looping a single binary string?"
+    "instructions": "Use binary to draw this smiley face"
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
-          <next>
-            <block type="controls_repeat">
-              <title name="TIMES">21</title>
-              <statement name="DO">
-                <block type="procedures_callnoreturn" inline="true">
-                  <mutation name="draw">
-                    <arg name="binary"/>
-                  </mutation>
-                  <value name="ARG0">
-                    <block type="text">
-                      <title name="TEXT"/>
-                    </block>
-                  </value>
-                </block>
-              </statement>
-            </block>
-          </next>
-        </block>
+        <block type="when_run" deletable="false" movable="false"/>
         <block type="procedures_defnoreturn" uservisible="false">
           <mutation>
             <arg name="binary"/>
@@ -264,24 +246,110 @@
                 </block>
               </value>
               <next>
-                <block type="controls_repeat">
-                  <title name="TIMES">21</title>
-                  <statement name="DO">
-                    <block type="procedures_callnoreturn" inline="true">
-                      <mutation name="draw">
-                        <arg name="binary"/>
-                      </mutation>
-                      <value name="ARG0">
-                        <block type="text">
-                          <title name="TEXT">110</title>
+                <block type="procedures_callnoreturn" inline="true">
+                  <mutation name="draw">
+                    <arg name="binary"/>
+                  </mutation>
+                  <value name="ARG0">
+                    <block type="text">
+                      <title name="TEXT">11111111</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_repeat">
+                      <title name="TIMES">2</title>
+                      <statement name="DO">
+                        <block type="procedures_callnoreturn" inline="true">
+                          <mutation name="draw">
+                            <arg name="binary"/>
+                          </mutation>
+                          <value name="ARG0">
+                            <block type="text">
+                              <title name="TEXT">10011001</title>
+                            </block>
+                          </value>
                         </block>
-                      </value>
+                      </statement>
+                      <next>
+                        <block type="procedures_callnoreturn" inline="true">
+                          <mutation name="draw">
+                            <arg name="binary"/>
+                          </mutation>
+                          <value name="ARG0">
+                            <block type="text">
+                              <title name="TEXT">11111111</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="procedures_callnoreturn" inline="true">
+                              <mutation name="draw">
+                                <arg name="binary"/>
+                              </mutation>
+                              <value name="ARG0">
+                                <block type="text">
+                                  <title name="TEXT">01111110</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="procedures_callnoreturn" inline="true">
+                                  <mutation name="draw">
+                                    <arg name="binary"/>
+                                  </mutation>
+                                  <value name="ARG0">
+                                    <block type="text">
+                                      <title name="TEXT">10111101</title>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="procedures_callnoreturn" inline="true">
+                                      <mutation name="draw">
+                                        <arg name="binary"/>
+                                      </mutation>
+                                      <value name="ARG0">
+                                        <block type="text">
+                                          <title name="TEXT">11000011</title>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn" uservisible="false">
+          <mutation/>
+          <title name="NAME">draw bit</title>
+          <statement name="STACK">
+            <block type="draw_width_inline" uservisible="false">
+              <title name="WIDTH">25</title>
+              <next>
+                <block type="controls_repeat" uservisible="false">
+                  <title name="TIMES">4</title>
+                  <statement name="DO">
+                    <block type="draw_move_by_constant" uservisible="false">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">25</title>
+                      <next>
+                        <block type="draw_turn_by_constant" uservisible="false">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE">90</title>
+                        </block>
+                      </next>
                     </block>
                   </statement>
                 </block>
               </next>
             </block>
-          </next>
+          </statement>
         </block>
         <block type="procedures_defnoreturn" uservisible="false">
           <mutation>
@@ -441,32 +509,6 @@
                               </next>
                             </block>
                           </next>
-                        </block>
-                      </next>
-                    </block>
-                  </statement>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
-        <block type="procedures_defnoreturn" uservisible="false">
-          <mutation/>
-          <title name="NAME">draw bit</title>
-          <statement name="STACK">
-            <block type="draw_width_inline" uservisible="false">
-              <title name="WIDTH">25</title>
-              <next>
-                <block type="controls_repeat" uservisible="false">
-                  <title name="TIMES">4</title>
-                  <statement name="DO">
-                    <block type="draw_move_by_constant" uservisible="false">
-                      <title name="DIR">moveForward</title>
-                      <title name="VALUE">25</title>
-                      <next>
-                        <block type="draw_turn_by_constant" uservisible="false">
-                          <title name="DIR">turnRight</title>
-                          <title name="VALUE">90</title>
                         </block>
                       </next>
                     </block>
