@@ -69,9 +69,6 @@ var Projectile = function (options) {
   this.width = options.width || 50;
   this.speed = options.speed || tiles.DEFAULT_SPRITE_SPEED / 2;
 
-  this.isFireball_ = this.className.indexOf('fireball') !== -1;
-  this.frames = this.isFireball_ ? 8 : 1;
-
   this.currentFrame_ = 0;
   var self = this;
   this.animator_ = window.setInterval(function () {
@@ -152,7 +149,7 @@ Projectile.prototype.display = function () {
   clipRect.setAttribute('x', topLeft.x);
   clipRect.setAttribute('y', topLeft.y);
 
-  if (this.isFireball_) {
+  if (this.frames > 1) {
     this.element.setAttribute('transform', 'rotate(' + DIR_TO_ROTATION[this.dir] +
      ', ' + this.x + ', ' + this.y + ')');
   }

@@ -17,9 +17,10 @@ var VISIBLE_VALUE = constants.VISIBLE_VALUE;
 
 function loadInfinity(skin, assetUrl) {
   skin.defaultBackground = 'hardcourt';
+  skin.projectileFrames = 10;
   // todo - consolidate spriteCounts and spriteFlags?
   skin.spriteCounts = {
-    normal: 19,
+    normal: 20,
     animation: 0,
     turns: 0,
     emotions: 0
@@ -34,6 +35,12 @@ function loadInfinity(skin, assetUrl) {
       spriteFlags: 0 // none right now
     };
   });
+
+  skin.projectile_hiro = skin.assetUrl('projectile_hiro.png');
+  skin.projectile_anna = skin.assetUrl('projectile_anna.png');
+  skin.projectile_elsa = skin.assetUrl('projectile_elsa.png');
+  skin.projectile_baymax = skin.assetUrl('projectile_baymax.png');
+  skin.projectile_rapunzel = skin.assetUrl('projectile_rapunzel.png');
 
   // These are used by blocks.js to customize are dropdown blocks across skins
   skin.backgroundChoices = [
@@ -51,13 +58,21 @@ function loadInfinity(skin, assetUrl) {
     [msg.setSpriteElsa(), '"elsa"'],
     [msg.setSpriteHiro(), '"hiro"'],
     [msg.setSpriteBaymax(), '"baymax"'],
-    [msg.setSpriteRapunzel(), '"rapunzel"']]
+    [msg.setSpriteRapunzel(), '"rapunzel"']];
 
-
+  // todo - i18n
+  skin.projectileChoices = [
+    [msg.projectileHiro(), '"projectile_hiro"'],
+    [msg.projectileAnna(), '"projectile_anna"'],
+    [msg.projectileElsa(), '"projectile_elsa"'],
+    [msg.projectileBaymax(), '"projectile_baymax"'],
+    [msg.projectileRapunzel(), '"projectile_rapunzel"'],
+    [msg.projectileRandom(), RANDOM_VALUE]];
 }
 
 function loadStudio(skin, assetUrl) {
   skin.defaultBackground = 'cave';
+  skin.projectileFrames = 8;
   skin.spriteCounts = {
     normal: 1,
     animation: 1,
@@ -188,6 +203,15 @@ function loadStudio(skin, assetUrl) {
     [msg.setSpriteSoccerBoy(), '"soccerboy"'],
     [msg.setSpriteTennisGirl(), '"tennisgirl"'],
     [msg.setSpriteTennisBoy(), '"tennisboy"']];
+
+  skin.projectileChoices = [
+    [msg.projectileBlueFireball(), '"blue_fireball"'],
+    [msg.projectilePurpleFireball(), '"purple_fireball"'],
+    [msg.projectileRedFireball(), '"red_fireball"'],
+    [msg.projectileYellowHearts(), '"yellow_hearts"'],
+    [msg.projectilePurpleHearts(), '"purple_hearts"'],
+    [msg.projectileRedHearts(), '"red_hearts"'],
+    [msg.projectileRandom(), RANDOM_VALUE]];
 }
 
 
