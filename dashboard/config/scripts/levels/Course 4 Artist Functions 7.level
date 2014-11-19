@@ -10,7 +10,7 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "slider_speed": ".5",
-    "disable_param_editing": "false",
+    "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "start_direction": "90",
     "x": "75",

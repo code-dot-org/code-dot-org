@@ -28,7 +28,8 @@
     "allow_sprites_outside_playspace": "true",
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "true",
-    "free_play": "false"
+    "free_play": "false",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
@@ -37,9 +38,9 @@
         <block type="studio_whenArrow" uservisible="false">
           <title name="VALUE">up</title>
           <next>
-            <block type="studio_showCoordinates">
+            <block type="studio_showCoordinates" uservisible="false">
               <next>
-                <block type="studio_move">
+                <block type="studio_move" uservisible="false">
                   <title name="DIR">1</title>
                 </block>
               </next>
@@ -49,9 +50,9 @@
         <block type="studio_whenArrow" uservisible="false">
           <title name="VALUE">down</title>
           <next>
-            <block type="studio_showCoordinates">
+            <block type="studio_showCoordinates" uservisible="false">
               <next>
-                <block type="studio_move">
+                <block type="studio_move" uservisible="false">
                   <title name="DIR">4</title>
                 </block>
               </next>
@@ -61,9 +62,9 @@
         <block type="studio_whenArrow" uservisible="false">
           <title name="VALUE">left</title>
           <next>
-            <block type="studio_showCoordinates">
+            <block type="studio_showCoordinates" uservisible="false">
               <next>
-                <block type="studio_move">
+                <block type="studio_move" uservisible="false">
                   <title name="DIR">8</title>
                 </block>
               </next>
@@ -73,9 +74,9 @@
         <block type="studio_whenArrow" uservisible="false">
           <title name="VALUE">right</title>
           <next>
-            <block type="studio_showCoordinates">
+            <block type="studio_showCoordinates" uservisible="false">
               <next>
-                <block type="studio_move">
+                <block type="studio_move" uservisible="false">
                   <title name="DIR">2</title>
                 </block>
               </next>
