@@ -443,6 +443,9 @@ en:
     20hour:
       title: 'Intro Course'
       body: 'Try our 20-hour Intro to Computer Science course.'
+    hoc2014:
+      try_new_tutorial: 'Try our new Hour of Code tutorial'
+      try_frozen: 'Anna and Elsa from Frozen'
   gallery:
     students_drew_these_with_code: "Students drew these with code!"
     students_made_these_with_code: "Students made these with code!"
