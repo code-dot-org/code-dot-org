@@ -122,7 +122,7 @@ class Script < ActiveRecord::Base
   end
 
   def beta?
-    false
+    self.name == "frozen"
   end
 
   def is_k1?
