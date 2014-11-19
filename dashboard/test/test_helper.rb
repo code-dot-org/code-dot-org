@@ -23,6 +23,19 @@ Dashboard::Application.config.action_dispatch.show_exceptions = false#
 class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!
 
+  setup do
+    set_env :test
+  end
+
+  teardown do
+    set_env :test
+  end
+
+  def set_env(env)
+    Rails.env = env.to_s
+    CDO.rack_env = env
+  end
+
 
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   #

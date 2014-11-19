@@ -1,9 +1,13 @@
 module LevelsHelper
 
   def build_script_level_path(script_level)
+    if script_level.script.name == 'hourofcode'
+      return hoc_chapter_path(script_level.chapter)
+    end
+
     case script_level.script_id
     when Script::HOC_ID
-      hoc_chapter_path(script_level.chapter)
+      script_puzzle_path(script_level.script, script_level.chapter)
     when Script::TWENTY_HOUR_ID
       script_level_path(script_level.script, script_level)
     when Script::EDIT_CODE_ID

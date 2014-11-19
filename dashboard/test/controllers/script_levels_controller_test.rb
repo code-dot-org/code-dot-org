@@ -119,11 +119,11 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "chapter based routing" do
     assert_routing({method: "get", path: '/hoc/reset'},
-                   {controller: "script_levels", action: "show", script_id: Script::HOC_ID, reset: true})
+                   {controller: "script_levels", action: "show", script_id: Script::HOC_NAME, reset: true})
 
-    hoc_level = ScriptLevel.find_by(script_id: Script::HOC_ID, chapter: 1)
+    hoc_level = ScriptLevel.find_by(script_id: Script.find_by_name(Script::HOC_NAME).id, chapter: 1)
     assert_routing({method: "get", path: '/hoc/1'},
-                   {controller: "script_levels", action: "show", script_id: Script::HOC_ID, chapter: "1"})
+                   {controller: "script_levels", action: "show", script_id: Script::HOC_NAME, chapter: "1"})
     assert_equal '/hoc/1', build_script_level_path(hoc_level)
 
     builder_level = ScriptLevel.find_by(script_id: Script::BUILDER_ID, chapter: 1)
@@ -229,8 +229,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "show redirects to canonical url for hoc" do
-    hoc_level = Script.find(Script::HOC_ID).script_levels.second
-    get :show, script_id: Script::HOC_ID, id: hoc_level.id
+    hoc_level = Script.find_by_name(Script::HOC_NAME).script_levels.second
+    get :show, script_id: Script::HOC_NAME, id: hoc_level.id
 
     assert_response 301 # moved permanently
     assert_redirected_to '/hoc/2'
@@ -304,7 +304,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     sign_out(@admin)
     session[:progress] = {5 => 10}
 
-    get :show, script_id: Script::HOC_ID, reset: true
+    get :show, script_id: Script::HOC_NAME, reset: true
 
     assert_redirected_to hoc_chapter_path(chapter: 1)
 
@@ -314,7 +314,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "show with the reset param should not reset session when logged in" do
     sign_in(create(:user))
-    get :show, script_id: Script::HOC_ID, reset: true
+    get :show, script_id: Script::HOC_NAME, reset: true
 
     assert_redirected_to hoc_chapter_path(chapter: 1)
 
@@ -422,64 +422,83 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'script name instead of stage name in header for HOC' do
-    get :show, script_id: Script.find(Script::HOC_ID).id, chapter: 1
+    get :show, script_id: Script::HOC_NAME, chapter: 1
     assert_template partial: '_header'
     assert_equal 'Hour of Code',
       css('body div.header_level div.header_text')[0].text.strip
   end
 
-  test 'end of HoC for player goes to first unfinished chapter in 20 hour' do
-    Script.find(Script::HOC_ID).script_levels.each do |script_level|
-      UserLevel.create(user: @admin, level: script_level.level, attempts: 1, best_result: Activity::MINIMUM_PASS_RESULT)
-    end
-
-    last_hoc_level = Script.find(Script::HOC_ID).script_levels.last
-    unplugged_levels_skipped_starting_20_hour = 3
-    get :show, twenty_hour_path_params
-    expected_20_hour_chapter = last_hoc_level.chapter + 1 + unplugged_levels_skipped_starting_20_hour
-    assert_redirected_to "/s/#{Script::TWENTY_HOUR_ID}/level/#{expected_20_hour_chapter}"
-  end
-
-  test 'end of HoC for a user gets twenty hour next URL' do
+  test 'end of HoC for a user is HOC endpoint' do
     self.stubs(:current_user).returns(@admin)
-    post_script = script_completion_redirect(Script.find(Script::HOC_ID))
-    assert_equal twenty_hour_next_url, post_script
+    assert_equal('//test.code.org/api/hour/finish/hourofcode', script_completion_redirect(Script.find_by_name(Script::HOC_NAME)))
   end
 
   test 'post script redirect is HOC endpoint' do
     self.stubs(:current_user).returns(nil)
-    assert_equal(hoc_finish_url, script_completion_redirect(Script.find(Script::HOC_ID)))
+    assert_equal('//test.code.org/api/hour/finish/hourofcode', script_completion_redirect(Script.find_by_name(Script::HOC_NAME)))
+  end
+
+
+  test 'post script redirect is frozen endpoint' do
+    self.stubs(:current_user).returns(nil)
+    assert_equal('//test.code.org/api/hour/finish/frozen', script_completion_redirect(Script.find_by_name(Script::FROZEN_NAME)))
   end
 
   test 'end of HoC for logged in user works' do
     sign_in(create(:user))
-    get :show, {script_id: Script::HOC_ID, chapter: '20'}
+    get :show, {script_id: Script::HOC_NAME, chapter: '20'}
     assert_response :success
   end
 
   test 'end of HoC for anonymous visitor works' do
     sign_out(@admin)
-    get :show, {script_id: Script::HOC_ID, chapter: '20'}
+    get :show, {script_id: Script::HOC_NAME, chapter: '20'}
     assert_response :success
   end
 
-  test 'end of HoC has wrapup video in response' do
-    sign_out(@admin)
-    get :show, {script_id: Script::HOC_ID, chapter: '20'}
-    assert(@response.body.include?('hoc_wrapup'))
-  end
+  # test 'end of HoC has wrapup video in response' do
+  #   sign_out(@admin)
+  #   get :show, {script_id: Script::HOC_NAME, chapter: '20'}
+  #   assert(@response.body.include?('hoc_wrapup'))
+  # end
 
-  test 'end of HoC for signed-in users has no wrapup video, does have stage change info' do
-    get :show, {script_id: Script::HOC_ID, chapter: '20'}
-    assert(!@response.body.include?('hoc_wrapup'))
-    assert(@response.body.include?('/s/1/level/show?chapter=next'))
-  end
+  # test 'end of HoC for signed-in users has no wrapup video, does have stage change info' do
+  #   get :show, {script_id: Script::HOC_NAME, chapter: '20'}
+  #   assert(!@response.body.include?('hoc_wrapup'))
+  #   assert(@response.body.include?('/s/1/level/show?chapter=next'))
+  # end
 
   test 'next for non signed in user' do
     sign_out @admin
-    get :show, script_id: Script::HOC_ID, chapter: 'next'
+    get :show, script_id: Script::HOC_NAME, chapter: 'next'
 
     assert_response :redirect
     assert_redirected_to '/hoc/1'
   end
+
+  test 'should show tracking pixel for hoc chapter 1 in prod' do
+    set_env :production
+    get :show, script_id: Script::HOC_NAME, chapter: 1
+
+    assert_select 'img[src=//code.org/api/hour/begin_hourofcode.png]'
+  end
+
+  test 'should show tracking pixel for frozen chapter 1 in prod' do
+    set_env :production
+    get :show, script_id: Script::FROZEN_NAME, stage_id: 1, id: 1
+    assert_select 'img[src=//code.org/api/hour/begin_frozen.png]'
+  end
+
+  test 'should show tracking pixel for flappy chapter 1 in prod' do
+    set_env :production
+    get :show, script_id: Script::FLAPPY_ID, chapter: 1
+    assert_select 'img[src=//code.org/api/hour/begin_flappy.png]'
+  end
+
+  test 'should show tracking pixel for playlab chapter 1 in prod' do
+    set_env :production
+    get :show, script_id: Script::PLAYLAB_NAME, stage_id: 1, id: 1
+    assert_select 'img[src=//code.org/api/hour/begin_playlab.png]'
+  end
+
 end
