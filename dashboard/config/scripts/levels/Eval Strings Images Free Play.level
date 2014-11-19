@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "eval",
-    "instructions": "NOTE: FREE PLAY NOT WORKING ON THIS LEVEL\r\nFree Play: Explore the blocks available to draw something interesting. Make sure to save and share your favorite images.",
+    "instructions": "Free Play: Explore the blocks available to draw something interesting. Make sure to save and share your favorite images.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

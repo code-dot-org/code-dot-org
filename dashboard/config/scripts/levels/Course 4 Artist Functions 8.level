@@ -9,7 +9,7 @@
     "instructions": "Can you create a new function called \"Draw a Square Line\" function?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "disable_param_editing": "false",
+    "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "start_direction": "90",
     "x": "75",
