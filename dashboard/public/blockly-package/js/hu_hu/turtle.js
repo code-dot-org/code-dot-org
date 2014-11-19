@@ -12717,6 +12717,8 @@ Turtle.init = function(config) {
       };
     }
 
+    Turtle.loadDecorationAnimation();
+
     // Set their initial contents.
     Turtle.loadTurtle();
     Turtle.drawImages();
@@ -12728,8 +12730,6 @@ Turtle.init = function(config) {
       Turtle.drawBlocksOnCanvas(level.predraw_blocks, Turtle.ctxPredraw);
       Turtle.isPredrawing_ = false;
     }
-
-    Turtle.loadDecorationAnimation();
 
     // pre-load image for line pattern block. Creating the image object and setting source doesn't seem to be
     // enough in this case, so we're actually creating and reusing the object within the document body.
