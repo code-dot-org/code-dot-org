@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "anna",
-    "instructions": "Did you know every snowflake is a different shape?  Let's create a new snowflake by using the repeat block and repeating the diamond 10 times, turning right by 36 degrees between each diamond.",
+    "instructions": "Now, let's create a new snowflake by using the repeat block to repeat a parallelogram 10 times, turning right by 36 degrees between each one.",
     "x": "200",
     "y": "200",
     "start_direction": "180",
@@ -18,7 +18,8 @@
     "slider_speed": "1.0",
     "impressive": "true",
     "use_modal_function_editor": "false",
-    "use_contract_editor": "false"
+    "use_contract_editor": "false",
+    "ideal": "10"
   }
 }]]></config>
   <blocks>

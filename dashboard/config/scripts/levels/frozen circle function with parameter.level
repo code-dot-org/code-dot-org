@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "elsa",
-    "instructions": "Here's a create circle block that can draw circles of different sizes. Can you use this to draw a small circle of size 5 and a larger circle of size 10?",
+    "instructions": "Here's a ”Create circle” block that can make circles of different sizes. Can you use this to create a small circle of size 5 and a larger circle of size 10?",
     "x": "200",
     "y": "150",
     "start_direction": "90",
@@ -18,7 +18,8 @@
     "slider_speed": "1.0",
     "impressive": "false",
     "use_modal_function_editor": "false",
-    "use_contract_editor": "false"
+    "use_contract_editor": "false",
+    "ideal": "7"
   }
 }]]></config>
   <blocks>

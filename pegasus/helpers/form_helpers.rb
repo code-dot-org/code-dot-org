@@ -77,7 +77,7 @@ def validate_form(kind, data)
   data.each_pair do |key, value|
     errors[key] = [value.message] if value.class == FieldError
   end
-  raise FormError.new(errors) unless errors.empty?
+  raise FormError.new(kind, errors) unless errors.empty?
 
   data
 end

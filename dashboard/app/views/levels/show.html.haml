@@ -24,9 +24,10 @@
   - @solution_blocks = '' if ! defined? @solution_blocks
   = render partial: "levels/blockly", locals: { start_blocks: @start_blocks, app: @game.app, solution_blocks: @solution_blocks, maze: @level[:maze]}
 
-- if Rails.env.production? && request.path == hoc_chapter_path(chapter: 1)
+- if @script.try(:hoc?) && (@script_level.try(:chapter) == 1 || @script_level.try(:position) == 1)
   -# special tracking image to make sure a cookie is set when hoc starts (/hoc/1)
-  = image_tag('http://code.org/api/hour/begin_codeorg.png')
+  = image_tag(tracking_pixel_url(@script))
 
 - if current_user.try(:admin?)
   = render partial: 'levels/admin'
+

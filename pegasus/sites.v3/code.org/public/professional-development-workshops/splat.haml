@@ -87,7 +87,7 @@ rightbar: blank
             %input#workshop-signup-teacher-role-other.form-control{name: "teacher_role_other_ss", placeholder: "Other role(s)", type: "text"}/
 
       .form-group
-        %label.control-label{for: "workshop-signup-teacher-tech-experience-level"} Level of computer/tech experience
+        %label.control-label{for: "workshop-signup-teacher-tech-experience-level"} Level of computer science experience (all levels are welcome!)
         %span.form-required-field *
         %div
           %select#workshop-signup-teacher-tech-experience-level.form-control{name: "teacher_tech_experience_level_s", type: "select", required: true}
@@ -153,7 +153,7 @@ rightbar: blank
 -if (signup_count < data['capacity_s'].to_i) && (first_date >= Time.now)
   #thanks{:style=>"display: none;"}
     :markdown
-      Thank you for signing up to attend a Code.org K-5 workshop. Your workshop facilitator will be in touch soon with more information. In the meantime...
+      Thank you for signing up to attend a Code.org K-5 workshop.
 
       **To prepare for your workshop:**
 

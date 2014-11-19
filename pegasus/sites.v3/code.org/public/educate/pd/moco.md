@@ -25,10 +25,8 @@ Milestone Complete!
 
 Phase 3 is designed to provide teachers with professional support, guidance, and feedback during the school year and experiences with an online community of practice.
 
-#### Save The Dates: ####
+#### Save The Dates ####
 
-10/18/2014
-<br />
 1/24/2015
 <br />
 2/28/2015
@@ -37,7 +35,7 @@ Phase 3 is designed to provide teachers with professional support, guidance, and
 <br />
 Breakfast and lunch will be served. 
 
-#### Location ####
+#### January 24th Location ####
 Howard University
 <br />
 LK Downing Engineering Building 
@@ -65,7 +63,8 @@ Coming Summer 2015
 ## Administrator and Counselor Professional Development
 
 ### Phase 1: Preparation and Reflection
-The Administrator / Counselor Phase 1 Professional Development online course [edx.code.org](http://edx.code.org) launched June 1st. Enrolled Administrators and Counselors received an email on June 1st with registration information. Pre-registration with your district is required to access professional development courses.
+
+Milestone Complete!
  
 ### Phase 2: Teaching and Learning Studio
 

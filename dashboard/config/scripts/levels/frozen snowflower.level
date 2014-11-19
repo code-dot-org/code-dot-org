@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "elsa",
-    "instructions": "Intricate patterns can be created in the snow with just simple shapes like small and large circles. Can you create a pattern with a circle of size 5 and a circle of size 10, repeating them 5 times in a circle? ",
+    "instructions": "Intricate snow patterns can be created with very simple shapes. Can you make a pattern by repeating 5 circles of size 5 and 5 circles of size 10?",
     "x": "200",
     "y": "200",
     "start_direction": "180",
@@ -17,7 +17,8 @@
     "free_play": "false",
     "impressive": "true",
     "use_modal_function_editor": "false",
-    "use_contract_editor": "false"
+    "use_contract_editor": "false",
+    "ideal": "9"
   }
 }]]></config>
   <blocks>

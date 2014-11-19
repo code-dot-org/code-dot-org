@@ -62,9 +62,9 @@ class ProfessionalDevelopmentWorkshopSignup
 
   def self.teacher_tech_experience_levels()
     [
-      'Tech-novice',
-      'Tech-comfortable',
-      'Tech-expert',
+      'Beginner (Computer Science is brand new to me; I can’t wait to learn)',
+      'Intermediate (I’ve used Code.org or other computer science materials with my students)',
+      'Expert (I’ve studied computer science or have worked in the computer science field)',
     ]
   end
 
