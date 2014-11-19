@@ -12561,11 +12561,12 @@ Turtle.loadedPathPatterns = [];
 Turtle.isDrawingWithPattern = false;
 
 function backingScale(context) {
-  if ('devicePixelRatio' in window) {
-    if (window.devicePixelRatio > 1) {
-      return window.devicePixelRatio;
-    }
-  }
+  // disable retina for now
+  // if ('devicePixelRatio' in window) {
+  //   if (window.devicePixelRatio > 1) {
+  //     return window.devicePixelRatio;
+  //   }
+  // }
   return 1;
 }
 
