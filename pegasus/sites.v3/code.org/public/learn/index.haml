@@ -16,10 +16,20 @@ social:
 
 %h1{:style=>"margin-bottom: 0px;"}
   = I18n.t(:code_hoc_coming)
-%h2{:style=>"margin-top: 10px;"}
-  = I18n.t(:code_sign_up)
-  %a{:href=>'http://www.hourofcode.com'}
-    %button
-      = I18n.t(:learn_more)
+%br/
+
+%div{style: "background-color:#f8f8f8; padding-left:20px; padding-right:20px; padding-top:10px; padding-bottom:10px"}
+  %h3{:style=>"margin-top: 0px; font-size:16px; font-weight:600"}
+    = I18n.t(:code_sign_up)
+    &nbsp;
+    %a{:href=>'http://www.hourofcode.com'}
+      %button
+        = I18n.t(:learn_more)
+  %h3{:style=>"margin-top: 20px;"}
+    = I18n.t(:hoc2014_try_new_tutorial)
+    &mdash;
+    %a{:href=>"http://#{canonical_hostname('studio.code.org')}/s/frozen", target: "_blank"}
+      = I18n.t(:hoc2014_try_frozen)
+%br/
 
 = view :learn_carousels, variation:'learn'

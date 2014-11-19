@@ -82,5 +82,6 @@
   "signup": "Sign up for the intro course",
   "hintHeader": "Here's a tip:",
   "genericFeedback": "See how you ended up, and try to fix your program.",
-  "whenRun": "when run"
+  "whenRun": "when run",
+  "defaultTwitterText": "Check out what I made"
 }

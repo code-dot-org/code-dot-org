@@ -1,3 +1,12 @@
+
+%div{style: "background-color:#f8f8f8; padding-left:20px; padding-right:20px; padding-top:10px; padding-bottom:10px"}
+  %h3{:style=>"margin-top: 0px; margin-bottom: 0px; font-size:16px"}
+    = t('upsell.hoc2014.try_new_tutorial')
+    &mdash;
+    %a{:href=>"#{script_url('frozen')}"}
+      = t('upsell.hoc2014.try_frozen')
+%br/
+
 - unless current_user
   .row
     = render partial: '/shared/course_big_block', locals: {id: "hoc" }
