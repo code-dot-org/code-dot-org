@@ -17,7 +17,7 @@
     "free_play": "false",
     "slider_speed": "0.2",
     "impressive": "false",
-    "ideal": "6",
+    "ideal": "8",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false"
   }
@@ -87,9 +87,6 @@
               </next>
             </block>
           </statement>
-        </block>
-        <block type="controls_repeat_dropdown">
-          <title name="TIMES" config="2-10">2</title>
         </block>
       </xml>
     </required_blocks>
