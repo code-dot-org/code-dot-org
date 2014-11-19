@@ -14,7 +14,7 @@ nav: about_nav
 
 <HR>
 
-# Hour of Code Promotional partners
+# Major promotional partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'promotional') %>
 
@@ -23,6 +23,12 @@ nav: about_nav
 # Tutorial partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'tutorial') %>
+
+<HR>
+
+# Infrastructure partners and tools
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'infrastructure') %>
 
 <HR>
 

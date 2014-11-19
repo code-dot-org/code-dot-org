@@ -13,7 +13,7 @@ title: Partners
 
 <HR>
 
-# Hour of Code Promotional Partners
+# Major Promotional Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
 
@@ -22,6 +22,12 @@ title: Partners
 # Tutorial Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
+
+<HR>
+
+# Infrastructure partners and tools
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 
 <HR>
 
