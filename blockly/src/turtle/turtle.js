@@ -1138,7 +1138,7 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
     startX = Turtle.stepStartX;
     startY = Turtle.stepStartY;
 
-    var lineDistance = jumpDistanceCovered;
+    var lineDistance = Math.abs(jumpDistanceCovered);
 
     Turtle.ctxPattern.save();
     Turtle.ctxPattern.translate(startX * retina, startY * retina);
@@ -1148,7 +1148,7 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
 
     if (img.width !== 0) {
       Turtle.ctxPattern.drawImage(img,
-        Math.round(jumpDistanceCovered * retina), 0,             // Start point for clipping image
+        Math.round(lineDistance * retina), 0,        // Start point for clipping image
         jumpDistance * retina, img.height,           // clip region size
         Math.round((jumpDistanceCovered - 7) * retina), Math.round((- 18) * retina),      // draw location relative to the ctx.translate point pre-rotation
         jumpDistance * retina, img.height);
