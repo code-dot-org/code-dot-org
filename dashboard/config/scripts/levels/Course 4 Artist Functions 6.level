@@ -8,16 +8,16 @@
     "skin": "artist",
     "instructions": "Ahhh, we must need to add something between the square and the triangle. Which block do you need to add to get the triangle roof to sit on top of the square.",
     "is_k1": "false",
-    "skip_instructions_popup": "false",
-    "disable_param_editing": "false",
+    "skip_instructions_popup": "true",
+    "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "start_direction": "90",
     "x": "150",
     "y": "200",
     "free_play": "false",
     "impressive": "false",
-    "slider_speed": "0.5",
-    "ideal": "19",
+    "slider_speed": ".7",
+    "ideal": "25",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false"
   }
@@ -36,6 +36,39 @@
               </next>
             </block>
           </next>
+        </block>
+        <block type="procedures_defnoreturn" uservisible="false">
+          <mutation/>
+          <title name="NAME">draw a square</title>
+          <statement name="STACK">
+            <block type="controls_repeat_ext" inline="true" uservisible="false">
+              <value name="TIMES">
+                <block type="math_number" uservisible="false">
+                  <title name="NUM">4</title>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="draw_move" inline="true" uservisible="false">
+                  <title name="DIR">moveForward</title>
+                  <value name="VALUE">
+                    <block type="math_number" uservisible="false">
+                      <title name="NUM">100</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="draw_turn" inline="true" uservisible="false">
+                      <title name="DIR">turnLeft</title>
+                      <value name="VALUE">
+                        <block type="math_number" uservisible="false">
+                          <title name="NUM">90</title>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
         </block>
         <block type="procedures_defnoreturn" uservisible="false">
           <mutation/>
@@ -61,39 +94,6 @@
                       <value name="VALUE">
                         <block type="math_number" uservisible="false">
                           <title name="NUM">120</title>
-                        </block>
-                      </value>
-                    </block>
-                  </next>
-                </block>
-              </statement>
-            </block>
-          </statement>
-        </block>
-        <block type="procedures_defnoreturn" uservisible="false">
-          <mutation/>
-          <title name="NAME">draw a square</title>
-          <statement name="STACK">
-            <block type="controls_repeat_ext" inline="true" uservisible="false">
-              <value name="TIMES">
-                <block type="math_number" uservisible="false">
-                  <title name="NUM">4</title>
-                </block>
-              </value>
-              <statement name="DO">
-                <block type="draw_move" inline="true" uservisible="false">
-                  <title name="DIR">moveForward</title>
-                  <value name="VALUE">
-                    <block type="math_number" uservisible="false">
-                      <title name="NUM">100</title>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="draw_turn" inline="true" uservisible="false">
-                      <title name="DIR">turnRight</title>
-                      <value name="VALUE">
-                        <block type="math_number" uservisible="false">
-                          <title name="NUM">90</title>
                         </block>
                       </value>
                     </block>
@@ -237,7 +237,7 @@
     </required_blocks>
     <solution_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
+        <block type="when_run" movable="false" deletable="false">
           <next>
             <block type="procedures_callnoreturn">
               <mutation name="draw a triangle"/>

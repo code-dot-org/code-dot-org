@@ -1,4 +1,4 @@
-- Options: { id: 2, name: 'Hour of Code', wrapup_video: 'hoc_wrapup', trophies: false, hidden: false }
+- Options: { id: 2, name: 'Hour of Code', wrapup_video: 'hoc_wrapup', trophies: false, hidden: true }
 - TSV: |
     Game	Name	Level	Skin	Concepts	Url
     Maze	Level1	2_2	birds	sequence

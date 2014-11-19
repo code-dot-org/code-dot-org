@@ -10,7 +10,7 @@ class Script < ActiveRecord::Base
 
   # Hardcoded scriptID constants used throughout the code
   TWENTY_HOUR_ID = 1
-  HOC_ID = 2
+  HOC_ID = 2 # this is the old (2013) hour of code
   EDIT_CODE_ID = 3
   TWENTY_FOURTEEN_LEVELS_ID = 4
   BUILDER_ID = 5
@@ -19,12 +19,15 @@ class Script < ActiveRecord::Base
 
   MAX_DEFAULT_LEVEL_ID = 8
 
+  # name of the new (2014) hour of code script (which is a levelbuilder script, so does not have a deterministic id)
+  HOC_NAME = 'hourofcode'
+
+  # other scripts identified by names not ids
+  FROZEN_NAME = 'frozen'
+  PLAYLAB_NAME = 'playlab'
+
   def self.twenty_hour_script
     @@twenty_hour_script ||= Script.includes(script_levels: { level: [:game, :concepts] }).find(TWENTY_HOUR_ID)
-  end
-
-  def self.hoc_script
-    @@hoc_script ||= Script.includes(script_levels: { level: [:game, :concepts] }).find(HOC_ID)
   end
 
   def starting_level
@@ -37,7 +40,6 @@ class Script < ActiveRecord::Base
   def self.get_from_cache(id)
     case id
     when TWENTY_HOUR_ID then twenty_hour_script
-    when HOC_ID then hoc_script
     else
       # a bit of trickery so we support both ids which are numbers and
       # names which are strings that may contain numbers (eg. 2-3)
@@ -49,7 +51,7 @@ class Script < ActiveRecord::Base
   end
 
   def to_param
-    if self.twenty_hour? || self.hoc?
+    if self.twenty_hour? || self.id == HOC_ID
       super
     else
       name
@@ -67,7 +69,7 @@ class Script < ActiveRecord::Base
   end
 
   def legacy_curriculum?
-    twenty_hour? || hoc? || flappy?
+    default_script?
   end
 
   def twenty_hour?
@@ -75,7 +77,8 @@ class Script < ActiveRecord::Base
   end
 
   def hoc?
-    self.id == HOC_ID
+    # note that now multiple scripts can be an 'hour of code' script
+    self.id == HOC_ID || self.name == HOC_NAME || self.name == FROZEN_NAME || self.flappy? || self.name == PLAYLAB_NAME
   end
 
   def flappy?
@@ -109,7 +112,7 @@ class Script < ActiveRecord::Base
 
   def get_script_level_by_chapter(chapter)
     chapter = chapter.to_i
-    self.script_levels.select { |sl| sl.chapter == chapter }.first
+    self.script_levels[chapter - 1] # order is by chapter
   end
 
   def feedback_url

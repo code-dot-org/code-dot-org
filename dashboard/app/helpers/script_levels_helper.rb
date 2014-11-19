@@ -20,11 +20,7 @@ module ScriptLevelsHelper
   end
 
   def has_another_level_to_go_to(script_level)
-    script_level.next_progression_level || can_continue_twenty_hour?(script_level)
-  end
-
-  def can_continue_twenty_hour?(script_level)
-    (script_level.script.hoc? && current_user)
+    script_level.next_progression_level
   end
 
   def next_progression_level_or_redirect_path(script_level)
@@ -53,11 +49,7 @@ module ScriptLevelsHelper
 
   def script_completion_redirect(script)
     if script.hoc?
-      if current_user
-        twenty_hour_next_url
-      else
-        hoc_finish_url
-      end
+      hoc_finish_url(script)
     else
       root_path
     end
@@ -71,7 +63,19 @@ module ScriptLevelsHelper
     {script_id: Script.twenty_hour_script.id, chapter: 'next'}
   end
 
-  def hoc_finish_url
-    'http://code.org/api/hour/finish'
+  def tracking_pixel_url(script)
+    if script.id == Script::HOC_ID
+      "//#{CDO.canonical_hostname('code.org')}/api/hour/begin_codeorg.png"
+    else
+      "//#{CDO.canonical_hostname('code.org')}/api/hour/begin_#{script.name}.png"
+    end
+  end
+
+  def hoc_finish_url(script)
+    if script.id == Script::HOC_ID
+      "//#{CDO.canonical_hostname('code.org')}/api/hour/finish"
+    else
+      "//#{CDO.canonical_hostname('code.org')}/api/hour/finish/#{script.name}"
+    end
   end
 end

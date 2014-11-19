@@ -6,13 +6,13 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Let's Step it up a little, can you draw a Star shape using the \"Draw a Square Line\" function? Good luck!",
+    "instructions": "Let's Step it up a little, can you draw a Star shape using the \"Draw a Square Line\" function? Good luck! Hint: you may have to turn 144 degrees",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "disable_param_editing": "false",
+    "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "start_direction": "125",
-    "x": "125",
+    "x": "55",
     "y": "175",
     "free_play": "false",
     "impressive": "false",
@@ -153,7 +153,7 @@
           <title name="DIR">moveForward</title>
           <value name="VALUE">
             <block type="math_number">
-              <title name="NUM">20</title>
+              <title name="NUM">60</title>
             </block>
           </value>
         </block>
@@ -173,13 +173,27 @@
             </block>
           </value>
         </block>
-        <block type="draw_turn" inline="true">
-          <title name="DIR">turnLeft</title>
-          <value name="VALUE">
-            <block type="math_number">
-              <title name="NUM">144</title>
+        <block type="pick_one">
+          <statement name="PICK">
+            <block type="draw_turn" inline="true">
+              <title name="DIR">turnLeft</title>
+              <value name="VALUE">
+                <block type="math_number">
+                  <title name="NUM">144</title>
+                </block>
+              </value>
+              <next>
+                <block type="draw_turn" inline="true">
+                  <title name="DIR">turnRight</title>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <title name="NUM">216</title>
+                    </block>
+                  </value>
+                </block>
+              </next>
             </block>
-          </value>
+          </statement>
         </block>
         <block type="controls_repeat_ext" inline="true">
           <value name="TIMES">
@@ -192,7 +206,7 @@
     </required_blocks>
     <solution_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
+        <block type="when_run" movable="false" deletable="false">
           <next>
             <block type="controls_repeat_ext" inline="true">
               <value name="TIMES">
@@ -208,7 +222,7 @@
                       <title name="DIR">moveForward</title>
                       <value name="VALUE">
                         <block type="math_number">
-                          <title name="NUM">40</title>
+                          <title name="NUM">60</title>
                         </block>
                       </value>
                       <next>
@@ -250,7 +264,7 @@
                       <title name="DIR">moveForward</title>
                       <value name="VALUE">
                         <block type="math_number">
-                          <title name="NUM">20</title>
+                          <title name="NUM">40</title>
                         </block>
                       </value>
                       <next>
@@ -270,7 +284,7 @@
                       <title name="DIR">moveForward</title>
                       <value name="VALUE">
                         <block type="math_number">
-                          <title name="NUM">20</title>
+                          <title name="NUM">40</title>
                         </block>
                       </value>
                     </block>

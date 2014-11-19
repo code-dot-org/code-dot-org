@@ -14,19 +14,32 @@ fjs.parentNode.insertBefore(js, fjs);
   </script>
 - content_for :head do
   - if @game.supports_sharing?
-    = tag('meta', :name => 'twitter:card', :content => "photo")
+    = tag('meta', :property => 'fb:app_id', :content => '500177453358606')
+    = tag('meta', :property => 'og:site_name', :content => 'Code.org')
+    = tag('meta', :property => 'og:type', :content => 'article')
+    = tag('meta', :property => 'og:title', :content => t('share_code.check_out_what_i_made'))
     = tag('meta', :property => 'og:description', :content => t('share_code.og_description'))
     = tag('meta', :property => 'og:image', :content => show_image(:id => @level_source_id))
+    = tag('meta', :property => 'article:publisher', :content => 'https://www.facebook.com/Code.org')
+    = tag('meta', :property => 'og:url', :content => request.original_url)
+    = tag('meta', :name => 'twitter:title', :content => t('share_code.check_out_what_i_made'))
+    = tag('meta', :name => 'twitter:description', :content => t('share_code.og_description'))
+    = tag('meta', :name => 'twitter:site', :content => '@codeorg')
+    = tag('meta', :name => 'twitter:card', :content => "photo")
     = tag('meta', :name => 'twitter:image', :content => show_image(:id => @level_source_id))
+    = tag('meta', :name => 'twitter:url', :content => request.original_url)
 
-    - if @game.app == Game::FLAPPY
-      = tag('meta', :property => 'og:title', :content => t('share_code.flappy_og_title'))
+    - if @game.app == Game::ARTIST
+      - meta_image_width = 500
+      - meta_image_height = 261
+    - else
+      - meta_image_width = 400
+      - meta_image_height = 400
 
-    - if @game.app == Game::BOUNCE
-      = tag('meta', :property => 'og:title', :content => t('share_code.bounce_og_title'))
-
-    - if @game.app == Game::PLAYLAB
-      = tag('meta', :property => 'og:title', :content => t('share_code.studio_og_title'))
+    = tag('meta', :property => 'og:image:width', :content => meta_image_width)
+    = tag('meta', :property => 'og:image:height', :content => meta_image_height)
+    = tag('meta', :name => 'twitter:image:width', :content => meta_image_width)
+    = tag('meta', :name => 'twitter:image:height', :content => meta_image_height)
 
     - if @game.share_mobile_fullscreen?
       = tag :meta, name: "apple-mobile-web-app-capable", content: "yes"

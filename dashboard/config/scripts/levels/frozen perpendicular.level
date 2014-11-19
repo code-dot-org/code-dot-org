@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "elsa",
-    "instructions": "Now let's see if we can create two lines that are at a 90 degree angle to each other. You will need to use the Turn block in addition to the Move block.",
+    "instructions": "Now let's see if we can create two lines that are at a 90 degree angle to each other. You will need to use the “Turn” block as well as the “Move” block.",
     "x": "150",
     "y": "180",
     "start_direction": "90",
@@ -19,7 +19,8 @@
     "impressive": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "callout_json": "[\r\n  {\"localization_key\": \"turn_elsa\", \"element_id\": \"[block-id='1']\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"top left\", \"at\": \"bottom right\", \"adjust\": {\"x\": 22, \"y\":60}},\r\n    \"style\": { \"classes\": \"no-tip\" }}\r\n  }\r\n]"
+    "callout_json": "[\r\n  {\"localization_key\": \"turn_elsa\", \"element_id\": \"[block-id='1']\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"top left\", \"at\": \"bottom right\", \"adjust\": {\"x\": 22, \"y\":60}},\r\n    \"style\": { \"classes\": \"no-tip\" }}\r\n  }\r\n]",
+    "ideal": "4"
   }
 }]]></config>
   <blocks>
@@ -41,13 +42,13 @@
     </toolbox_blocks>
     <required_blocks>
       <xml>
-        <block type="draw_move_by_constant_dropdown">
-          <title name="DIR">moveForward</title>
-          <title name="VALUE" config="50,100,150,200,300">100</title>
-        </block>
         <block type="draw_turn_by_constant_dropdown">
           <title name="DIR">turnRight</title>
           <title name="VALUE" config="45,60,90,120,180">90</title>
+        </block>
+        <block type="draw_move_by_constant_dropdown">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE" config="50,100,150,200,300">100</title>
         </block>
       </xml>
     </required_blocks>

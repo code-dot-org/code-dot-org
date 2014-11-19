@@ -20,11 +20,13 @@
     "soft_buttons": [
       "rightButton"
     ],
-    "instructions": "Look at that, there's a variable called \"speed\" that controls how quickly the dog can move! 0 is the slowest speed and 4 is the fastest - update your \"speed\" variable so the dog can finally win this race!",
+    "instructions": "Look at that, there's a variable called \"dog_speed\" that controls how quickly the dog can move! 0 is the slowest speed and 4 is the fastest - update your \"dog_speed\" variable so the dog can finally win this race!",
     "predraw_blocks": "<xml><block type=\"studio_whenArrow\" movable=\"false\"><title name=\"VALUE\">right</title><next><block type=\"studio_moveDistance\" movable=\"false\" editable=\"false\"><title name=\"SPRITE\">0</title><title name=\"DIR\">2</title><title name=\"DISTANCE\">25</title></block></next></block><block type=\"studio_repeatForever\"><statement name=\"DO\"><block type=\"studio_moveDistance\"><title name=\"SPRITE\">1</title><title name=\"DIR\">1</title><title name=\"DISTANCE\">25</title><next><block type=\"studio_moveDistance\"><title name=\"SPRITE\">1</title><title name=\"DIR\">4</title><title name=\"DISTANCE\">25</title></block></next></block></statement></block></xml>",
     "disable_variable_editing": "true",
     "use_modal_function_editor": "false",
-    "maze_data": null
+    "use_contract_editor": "false",
+    "maze_data": null,
+    "coordinate_grid_background": "false"
   }
 }]]></config>
   <blocks>
@@ -33,7 +35,7 @@
         <block type="when_run">
           <next>
             <block type="variables_set" inline="false">
-              <title name="VAR">speed</title>
+              <title name="VAR">dog_speed</title>
               <value name="VALUE">
                 <block type="math_number">
                   <title name="NUM">1</title>
@@ -51,7 +53,7 @@
                           <title name="OP">EQ</title>
                           <value name="A">
                             <block type="variables_get" uservisible="false">
-                              <title name="VAR">speed</title>
+                              <title name="VAR">dog_speed</title>
                             </block>
                           </value>
                           <value name="B">
@@ -72,7 +74,7 @@
                           <title name="OP">EQ</title>
                           <value name="A">
                             <block type="variables_get" uservisible="false">
-                              <title name="VAR">speed</title>
+                              <title name="VAR">dog_speed</title>
                             </block>
                           </value>
                           <value name="B">
@@ -93,7 +95,7 @@
                           <title name="OP">EQ</title>
                           <value name="A">
                             <block type="variables_get" uservisible="false">
-                              <title name="VAR">speed</title>
+                              <title name="VAR">dog_speed</title>
                             </block>
                           </value>
                           <value name="B">
@@ -114,7 +116,7 @@
                           <title name="OP">EQ</title>
                           <value name="A">
                             <block type="variables_get" uservisible="false">
-                              <title name="VAR">speed</title>
+                              <title name="VAR">dog_speed</title>
                             </block>
                           </value>
                           <value name="B">
@@ -135,7 +137,7 @@
                           <title name="OP">EQ</title>
                           <value name="A">
                             <block type="variables_get" uservisible="false">
-                              <title name="VAR">speed</title>
+                              <title name="VAR">dog_speed</title>
                             </block>
                           </value>
                           <value name="B">

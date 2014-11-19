@@ -22,6 +22,411 @@
   }
 }]]></config>
   <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false"/>
+        <block type="procedures_defnoreturn" uservisible="false">
+          <mutation>
+            <arg name="points"/>
+            <arg name="length"/>
+            <description>draw a star with given points and sides of given length</description>
+          </mutation>
+          <title name="NAME">draw a star</title>
+          <statement name="STACK">
+            <block type="controls_repeat_ext" inline="true" uservisible="false">
+              <value name="TIMES">
+                <block type="parameters_get" uservisible="false">
+                  <title name="VAR">points</title>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="draw_move" inline="true" uservisible="false">
+                  <title name="DIR">moveForward</title>
+                  <value name="VALUE">
+                    <block type="parameters_get" uservisible="false">
+                      <title name="VAR">length</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="draw_turn" inline="true" uservisible="false">
+                      <title name="DIR">turnLeft</title>
+                      <value name="VALUE">
+                        <block type="math_arithmetic" inline="true" uservisible="false">
+                          <title name="OP">DIVIDE</title>
+                          <value name="A">
+                            <block type="math_number" uservisible="false">
+                              <title name="NUM">360</title>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="parameters_get" uservisible="false">
+                              <title name="VAR">points</title>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="draw_move" inline="true" uservisible="false">
+                          <title name="DIR">moveForward</title>
+                          <value name="VALUE">
+                            <block type="parameters_get" uservisible="false">
+                              <title name="VAR">length</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="draw_turn" inline="true" uservisible="false">
+                              <title name="DIR">turnRight</title>
+                              <value name="VALUE">
+                                <block type="math_arithmetic" inline="true" uservisible="false">
+                                  <title name="OP">DIVIDE</title>
+                                  <value name="A">
+                                    <block type="math_number" uservisible="false">
+                                      <title name="NUM">720</title>
+                                    </block>
+                                  </value>
+                                  <value name="B">
+                                    <block type="parameters_get" uservisible="false">
+                                      <title name="VAR">points</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn" uservisible="false">
+          <mutation>
+            <arg name="radius"/>
+            <description>draw a circle of given radius</description>
+          </mutation>
+          <title name="NAME">draw a circle</title>
+          <statement name="STACK">
+            <block type="variables_set" inline="false" uservisible="false">
+              <title name="VAR">circ</title>
+              <value name="VALUE">
+                <block type="math_arithmetic" inline="true" uservisible="false">
+                  <title name="OP">MULTIPLY</title>
+                  <value name="A">
+                    <block type="math_number" uservisible="false">
+                      <title name="NUM">2</title>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="math_arithmetic" inline="true" uservisible="false">
+                      <title name="OP">MULTIPLY</title>
+                      <value name="A">
+                        <block type="math_number" uservisible="false">
+                          <title name="NUM">3.14</title>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="parameters_get" uservisible="false">
+                          <title name="VAR">radius</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="controls_repeat_ext" inline="true" uservisible="false">
+                  <value name="TIMES">
+                    <block type="math_number" uservisible="false">
+                      <title name="NUM">180</title>
+                    </block>
+                  </value>
+                  <statement name="DO">
+                    <block type="draw_move" inline="true" uservisible="false">
+                      <title name="DIR">moveForward</title>
+                      <value name="VALUE">
+                        <block type="math_arithmetic" inline="true" uservisible="false">
+                          <title name="OP">DIVIDE</title>
+                          <value name="A">
+                            <block type="variables_get" uservisible="false">
+                              <title name="VAR">circ</title>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="math_number" uservisible="false">
+                              <title name="NUM">180</title>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="draw_turn" inline="true" uservisible="false">
+                          <title name="DIR">turnLeft</title>
+                          <value name="VALUE">
+                            <block type="math_number" uservisible="false">
+                              <title name="NUM">2</title>
+                            </block>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn" uservisible="false">
+          <mutation>
+            <arg name="sides"/>
+            <arg name="length"/>
+            <arg name="repeat"/>
+          </mutation>
+          <title name="NAME">draw a pinwheel</title>
+          <statement name="STACK">
+            <block type="controls_repeat_ext" inline="true" uservisible="false">
+              <value name="TIMES">
+                <block type="variables_get" uservisible="false">
+                  <title name="VAR">repeat</title>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="controls_repeat_ext" inline="true" uservisible="false">
+                  <value name="TIMES">
+                    <block type="variables_get" uservisible="false">
+                      <title name="VAR">sides</title>
+                    </block>
+                  </value>
+                  <statement name="DO">
+                    <block type="draw_move" inline="true" uservisible="false">
+                      <title name="DIR">moveForward</title>
+                      <value name="VALUE">
+                        <block type="variables_get" uservisible="false">
+                          <title name="VAR">length</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="draw_turn" inline="true" uservisible="false">
+                          <title name="DIR">turnRight</title>
+                          <value name="VALUE">
+                            <block type="math_arithmetic" inline="true" uservisible="false">
+                              <title name="OP">DIVIDE</title>
+                              <value name="A">
+                                <block type="math_number" uservisible="false">
+                                  <title name="NUM">360</title>
+                                </block>
+                              </value>
+                              <value name="B">
+                                <block type="variables_get" uservisible="false">
+                                  <title name="VAR">sides</title>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="draw_turn" inline="true" uservisible="false">
+                      <title name="DIR">turnRight</title>
+                      <value name="VALUE">
+                        <block type="math_number" uservisible="false">
+                          <title name="NUM">60</title>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn" uservisible="false">
+          <mutation>
+            <arg name="length"/>
+          </mutation>
+          <title name="NAME">draw a triangle</title>
+          <statement name="STACK">
+            <block type="controls_repeat_ext" inline="true" uservisible="false">
+              <value name="TIMES">
+                <block type="math_number" uservisible="false">
+                  <title name="NUM">3</title>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="draw_move" inline="true" uservisible="false">
+                  <title name="DIR">moveForward</title>
+                  <value name="VALUE">
+                    <block type="variables_get" uservisible="false">
+                      <title name="VAR">length</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="draw_turn" inline="true" uservisible="false">
+                      <title name="DIR">turnLeft</title>
+                      <value name="VALUE">
+                        <block type="math_number" uservisible="false">
+                          <title name="NUM">120</title>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn" uservisible="false">
+          <mutation>
+            <arg name="sides"/>
+            <arg name="length"/>
+          </mutation>
+          <title name="NAME">draw a shape</title>
+          <statement name="STACK">
+            <block type="controls_repeat_ext" inline="true" uservisible="false">
+              <value name="TIMES">
+                <block type="variables_get" uservisible="false">
+                  <title name="VAR">sides</title>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="draw_move" inline="true" uservisible="false">
+                  <title name="DIR">moveForward</title>
+                  <value name="VALUE">
+                    <block type="variables_get" uservisible="false">
+                      <title name="VAR">length</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="draw_turn" inline="true" uservisible="false">
+                      <title name="DIR">turnLeft</title>
+                      <value name="VALUE">
+                        <block type="math_arithmetic" inline="true" uservisible="false">
+                          <title name="OP">DIVIDE</title>
+                          <value name="A">
+                            <block type="math_number" uservisible="false">
+                              <title name="NUM">360</title>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="variables_get" uservisible="false">
+                              <title name="VAR">sides</title>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn" uservisible="false">
+          <mutation>
+            <arg name="length"/>
+          </mutation>
+          <title name="NAME">draw a house</title>
+          <statement name="STACK">
+            <block type="controls_repeat_ext" inline="true" uservisible="false">
+              <value name="TIMES">
+                <block type="math_number" uservisible="false">
+                  <title name="NUM">3</title>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="draw_move" inline="true" uservisible="false">
+                  <title name="DIR">moveForward</title>
+                  <value name="VALUE">
+                    <block type="variables_get" uservisible="false">
+                      <title name="VAR">length</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="draw_turn" inline="true" uservisible="false">
+                      <title name="DIR">turnLeft</title>
+                      <value name="VALUE">
+                        <block type="math_number" uservisible="false">
+                          <title name="NUM">120</title>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+              <next>
+                <block type="controls_repeat_ext" inline="true" uservisible="false">
+                  <value name="TIMES">
+                    <block type="math_number" uservisible="false">
+                      <title name="NUM">4</title>
+                    </block>
+                  </value>
+                  <statement name="DO">
+                    <block type="draw_move" inline="true" uservisible="false">
+                      <title name="DIR">moveForward</title>
+                      <value name="VALUE">
+                        <block type="variables_get" uservisible="false">
+                          <title name="VAR">length</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="draw_turn" inline="true" uservisible="false">
+                          <title name="DIR">turnRight</title>
+                          <value name="VALUE">
+                            <block type="math_number" uservisible="false">
+                              <title name="NUM">90</title>
+                            </block>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn" uservisible="false">
+          <mutation>
+            <arg name="length"/>
+            <arg name="sides"/>
+          </mutation>
+          <title name="NAME">draw a square</title>
+          <statement name="STACK">
+            <block type="controls_repeat_ext" inline="true" uservisible="false">
+              <value name="TIMES">
+                <block type="math_number" uservisible="false">
+                  <title name="NUM">4</title>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="draw_move" inline="true" uservisible="false">
+                  <title name="DIR">moveForward</title>
+                  <value name="VALUE">
+                    <block type="variables_get" uservisible="false">
+                      <title name="VAR">length</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="draw_turn" inline="true" uservisible="false">
+                      <title name="DIR">turnRight</title>
+                      <value name="VALUE">
+                        <block type="math_number" uservisible="false">
+                          <title name="NUM">90</title>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </start_blocks>
     <toolbox_blocks>
       <xml>
         <category name="Actions">
@@ -41,42 +446,6 @@
               </block>
             </value>
           </block>
-          <block type="procedures_defnoreturn" uservisible="false">
-            <mutation>
-              <arg name="length"/>
-              <arg name="sides"/>
-            </mutation>
-            <title name="NAME">draw a square</title>
-            <statement name="STACK">
-              <block type="controls_repeat_ext" inline="true" uservisible="false">
-                <value name="TIMES">
-                  <block type="math_number" uservisible="false">
-                    <title name="NUM">4</title>
-                  </block>
-                </value>
-                <statement name="DO">
-                  <block type="draw_move" inline="true" uservisible="false">
-                    <title name="DIR">moveForward</title>
-                    <value name="VALUE">
-                      <block type="variables_get" uservisible="false">
-                        <title name="VAR">length</title>
-                      </block>
-                    </value>
-                    <next>
-                      <block type="draw_turn" inline="true" uservisible="false">
-                        <title name="DIR">turnRight</title>
-                        <value name="VALUE">
-                          <block type="math_number" uservisible="false">
-                            <title name="NUM">90</title>
-                          </block>
-                        </value>
-                      </block>
-                    </next>
-                  </block>
-                </statement>
-              </block>
-            </statement>
-          </block>
           <block type="draw_turn" inline="true">
             <title name="DIR">turnLeft</title>
             <value name="VALUE">
@@ -95,41 +464,6 @@
           </block>
         </category>
         <category name="Functions" custom="PROCEDURE">
-          <block type="procedures_defnoreturn" uservisible="false">
-            <mutation>
-              <arg name="length"/>
-            </mutation>
-            <title name="NAME">draw a triangle</title>
-            <statement name="STACK">
-              <block type="controls_repeat_ext" inline="true" uservisible="false">
-                <value name="TIMES">
-                  <block type="math_number" uservisible="false">
-                    <title name="NUM">3</title>
-                  </block>
-                </value>
-                <statement name="DO">
-                  <block type="draw_move" inline="true" uservisible="false">
-                    <title name="DIR">moveForward</title>
-                    <value name="VALUE">
-                      <block type="variables_get" uservisible="false">
-                        <title name="VAR">length</title>
-                      </block>
-                    </value>
-                    <next>
-                      <block type="draw_turn" inline="true" uservisible="false">
-                        <title name="DIR">turnLeft</title>
-                        <value name="VALUE">
-                          <block type="math_number" uservisible="false">
-                            <title name="NUM">120</title>
-                          </block>
-                        </value>
-                      </block>
-                    </next>
-                  </block>
-                </statement>
-              </block>
-            </statement>
-          </block>
           <block type="procedures_callnoreturn" inline="false">
             <mutation name="draw a square">
               <arg name="length"/>
@@ -141,51 +475,10 @@
               <arg name="length"/>
             </mutation>
           </block>
-          <block type="procedures_defnoreturn" uservisible="false">
-            <mutation>
-              <arg name="sides"/>
-              <arg name="length"/>
+          <block type="procedures_callnoreturn" inline="false">
+            <mutation name="draw a circle">
+              <arg name="radius"/>
             </mutation>
-            <title name="NAME">draw a shape</title>
-            <statement name="STACK">
-              <block type="controls_repeat_ext" inline="true" uservisible="false">
-                <value name="TIMES">
-                  <block type="variables_get" uservisible="false">
-                    <title name="VAR">sides</title>
-                  </block>
-                </value>
-                <statement name="DO">
-                  <block type="draw_move" inline="true" uservisible="false">
-                    <title name="DIR">moveForward</title>
-                    <value name="VALUE">
-                      <block type="variables_get" uservisible="false">
-                        <title name="VAR">length</title>
-                      </block>
-                    </value>
-                    <next>
-                      <block type="draw_turn" inline="true" uservisible="false">
-                        <title name="DIR">turnLeft</title>
-                        <value name="VALUE">
-                          <block type="math_arithmetic" inline="true" uservisible="false">
-                            <title name="OP">DIVIDE</title>
-                            <value name="A">
-                              <block type="math_number" uservisible="false">
-                                <title name="NUM">360</title>
-                              </block>
-                            </value>
-                            <value name="B">
-                              <block type="variables_get" uservisible="false">
-                                <title name="VAR">sides</title>
-                              </block>
-                            </value>
-                          </block>
-                        </value>
-                      </block>
-                    </next>
-                  </block>
-                </statement>
-              </block>
-            </statement>
           </block>
           <block type="procedures_callnoreturn" inline="false">
             <mutation name="draw a shape">
@@ -198,72 +491,15 @@
               <arg name="length"/>
             </mutation>
           </block>
+          <block type="procedures_callnoreturn" inline="false">
+            <mutation name="draw a pinwheel">
+              <arg name="sides"/>
+              <arg name="length"/>
+              <arg name="repeat"/>
+            </mutation>
+          </block>
         </category>
         <category name="Loops">
-          <block type="procedures_defnoreturn" uservisible="false">
-            <mutation>
-              <arg name="length"/>
-            </mutation>
-            <title name="NAME">draw a house</title>
-            <statement name="STACK">
-              <block type="controls_repeat_ext" inline="true" uservisible="false">
-                <value name="TIMES">
-                  <block type="math_number" uservisible="false">
-                    <title name="NUM">3</title>
-                  </block>
-                </value>
-                <statement name="DO">
-                  <block type="draw_move" inline="true" uservisible="false">
-                    <title name="DIR">moveForward</title>
-                    <value name="VALUE">
-                      <block type="variables_get" uservisible="false">
-                        <title name="VAR">length</title>
-                      </block>
-                    </value>
-                    <next>
-                      <block type="draw_turn" inline="true" uservisible="false">
-                        <title name="DIR">turnLeft</title>
-                        <value name="VALUE">
-                          <block type="math_number" uservisible="false">
-                            <title name="NUM">120</title>
-                          </block>
-                        </value>
-                      </block>
-                    </next>
-                  </block>
-                </statement>
-                <next>
-                  <block type="controls_repeat_ext" inline="true" uservisible="false">
-                    <value name="TIMES">
-                      <block type="math_number" uservisible="false">
-                        <title name="NUM">4</title>
-                      </block>
-                    </value>
-                    <statement name="DO">
-                      <block type="draw_move" inline="true" uservisible="false">
-                        <title name="DIR">moveForward</title>
-                        <value name="VALUE">
-                          <block type="variables_get" uservisible="false">
-                            <title name="VAR">length</title>
-                          </block>
-                        </value>
-                        <next>
-                          <block type="draw_turn" inline="true" uservisible="false">
-                            <title name="DIR">turnRight</title>
-                            <value name="VALUE">
-                              <block type="math_number" uservisible="false">
-                                <title name="NUM">90</title>
-                              </block>
-                            </value>
-                          </block>
-                        </next>
-                      </block>
-                    </statement>
-                  </block>
-                </next>
-              </block>
-            </statement>
-          </block>
           <block type="controls_for_counter" inline="true">
             <mutation counter="counter"/>
             <value name="FROM">

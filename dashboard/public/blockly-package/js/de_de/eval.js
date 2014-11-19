@@ -5560,6 +5560,10 @@ Eval.execute = function() {
   Eval.result = evaluateAnswer();
   Eval.testResults = BlocklyApps.getTestResults(Eval.result);
 
+  if (level.freePlay) {
+    Eval.testResults = BlocklyApps.TestResults.FREE_PLAY;
+  }
+
   var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   var textBlocks = Blockly.Xml.domToText(xml);
 
@@ -5627,7 +5631,10 @@ var displayFeedback = function(response) {
     skin: skin.id,
     feedbackType: Eval.testResults,
     response: response,
-    level: level
+    level: level,
+    appStrings: {
+      reinfFeedbackMsg: evalMsg.reinfFeedbackMsg()
+    },
   });
 };
 
@@ -6571,11 +6578,25 @@ exports.createSharingDiv = function(options) {
     if (options.twitter && options.twitter.text !== undefined) {
       twitterUrl += "&text=" + encodeURI(options.twitter.text);
     }
-    if (options.twitter  && options.twitter.hashtag !== undefined) {
-      twitterUrl += "&button_hashtag=" + options.twitter.hashtag;
+    else {
+      twitterUrl += "&text=" + encodeURI(msg.defaultTwitterText() + " @codeorg");
     }
-    options.twitterUrl = twitterUrl;
 
+    if (options.twitter  && options.twitter.hashtag !== undefined) {
+      twitterUrl += "&hashtags=" + options.twitter.hashtag;
+    }
+    else {
+      twitterUrl += "&hashtags=" + 'HourOfCode';
+    }
+
+    if (options.twitter && options.twitter.related !== undefined) {
+      twitterUrl += "&related=" + options.twitter.related;
+    }
+    else {
+      twitterUrl += "&related=codeorg";
+    }
+
+    options.twitterUrl = twitterUrl;
 
     // set up the facebook share url
     var facebookUrl = "https://www.facebook.com/sharer/sharer.php?u=" +
@@ -13935,6 +13956,8 @@ exports.hintHeader = function(d){return "Hier ist ein Tipp:"};
 
 exports.genericFeedback = function(d){return "Schau dir an, was du gemacht hast und versuche Fehler im Programm zu beheben."};
 
+exports.defaultTwitterText = function(d){return "Check out what I made"};
+
 
 },{"messageformat":61}],49:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.de=function(n){return n===1?"one":"other"}
@@ -13951,6 +13974,8 @@ exports.overlayBlockTitle = function(d){return "Overlay (oben, unten)"};
 exports.placeImageBlockTitle = function(d){return "Ort-Bild (X, y, Bild)"};
 
 exports.rectangleBlockTitle = function(d){return "Rechteck (Breite, Höhe, Stil, Farbe)"};
+
+exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to edit your drawing."};
 
 exports.rotateImageBlockTitle = function(d){return "Drehen (Grad, Bild)"};
 
