@@ -15,7 +15,7 @@
       - if user_script.try(:completed_at)
         %a{href: script_certificate_image_url(current_user, script)}
           %button.btn{style: "background: #0ebe0e; color: white; text-shadow: none"} Print Certificate
-      - else 
+      - elsif current_user.next_unpassed_progression_level(script)
         = link_to build_script_level_url(current_user.next_unpassed_progression_level(script)) do
           %button.btn.btn-primary.button-continue#continue_button= t('continue')
 
