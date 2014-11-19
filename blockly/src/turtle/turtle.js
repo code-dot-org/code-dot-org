@@ -107,20 +107,20 @@ Turtle.init = function(config) {
   skin = config.skin;
   level = config.level;
 
+  exports.lineStylePatternOptions = [
+    [skin.patternDefault, 'DEFAULT'], //  signals return to default path drawing
+    [skin.rainbowMenu, 'rainbowLine'],  // set to property name for image within skin
+    [skin.ropeMenu, 'ropeLine'],  // referenced as skin[pattern];
+    [skin.squigglyMenu, 'squigglyLine'],
+    [skin.swirlyMenu, 'swirlyLine'],
+    [skin.annaLine, 'annaLine'],
+    [skin.elsaLine, 'elsaLine'],
+    [skin.annaLine_2x, 'annaLine_2x'],
+    [skin.elsaLine_2x, 'elsaLine_2x'],
+  ];
+
   if (skin.id == "anna" || skin.id == "elsa")
   {
-    exports.lineStylePatternOptions = [
-      [skin.patternDefault, 'DEFAULT'], //  signals return to default path drawing
-      [skin.rainbowMenu, 'rainbowLine'],  // set to property name for image within skin
-      [skin.ropeMenu, 'ropeLine'],  // referenced as skin[pattern];
-      [skin.squigglyMenu, 'squigglyLine'],
-      [skin.swirlyMenu, 'swirlyLine'],
-      [skin.annaLine, 'annaLine'],
-      [skin.elsaLine, 'elsaLine'],
-      [skin.annaLine_2x, 'annaLine_2x'],
-      [skin.elsaLine_2x, 'elsaLine_2x'],
-    ];
-
     retina = backingScale();
 
     // We don't support ratios other than 2 right now (sorry!) so fall back to 1.
@@ -445,7 +445,7 @@ Turtle.drawTurtle = function() {
   if (Turtle.avatarImage.width === 0 || Turtle.avatarImage.height === 0)
     return;
 
-  if (sourceX * retina < 0 || 
+  if (sourceX * retina < 0 ||
       sourceY * retina < 0 ||
       sourceX * retina + sourceWidth  * retina -0 > Turtle.avatarImage.width ||
       sourceY * retina + sourceHeight * retina > Turtle.avatarImage.height)
@@ -457,9 +457,9 @@ Turtle.drawTurtle = function() {
   }
 
   Turtle.ctxDisplay.drawImage(
-    Turtle.avatarImage, 
+    Turtle.avatarImage,
     Math.round(sourceX * retina), Math.round(sourceY * retina),
-    sourceWidth * retina - 0, sourceHeight * retina, 
+    sourceWidth * retina - 0, sourceHeight * retina,
     Math.round(destX * retina), Math.round(destY * retina),
     destWidth * retina - 0, destHeight * retina);
 
@@ -490,7 +490,7 @@ var decorationImageDetails = [
   { x: 22, when: "before" },
   { x: 17, when: "before" },
   { x: 12, when: "before" },
-  { x:  8, when: "after" }, 
+  { x:  8, when: "after" },
   { x: 10, when: "after" }
 ];
 
@@ -524,9 +524,9 @@ Turtle.drawDecorationAnimation = function(when) {
       var destY = Turtle.y - destHeight / 2 - 100;
 
       Turtle.ctxDisplay.drawImage(
-        Turtle.decorationAnimationImage, 
+        Turtle.decorationAnimationImage,
         Math.round(sourceX * retina), Math.round(sourceY * retina),
-        sourceWidth * retina, sourceHeight * retina, 
+        sourceWidth * retina, sourceHeight * retina,
         Math.round(destX * retina), Math.round(destY * retina),
         destWidth * retina, destHeight * retina);
     }
@@ -1106,7 +1106,7 @@ Turtle.drawForwardLine_ = function (distance) {
     Turtle.ctxScratch.moveTo(Turtle.stepStartX * retina, Turtle.stepStartY * retina);
     Turtle.jumpForward_(distance);
     Turtle.drawToTurtle_(distance);
-    Turtle.ctxScratch.stroke(); 
+    Turtle.ctxScratch.stroke();
   } else {
     Turtle.ctxScratch.beginPath();
     Turtle.ctxScratch.moveTo(Turtle.x, Turtle.y);

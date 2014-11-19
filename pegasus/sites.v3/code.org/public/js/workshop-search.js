@@ -81,7 +81,7 @@ function compileHtml(workshop, first) {
   html += '</div>';
 
   if (workshop.id) {
-    html += '<div class="workshop-link"><a style="" href="/professional-development-workshops/' + workshop.id + '">More Info</a></div>';
+    html += '<div class="workshop-link"><a style="" href="/professional-development-workshops/' + workshop.id + '">Info and Signup</a></div>';
   }
 
   html += '</div>';
