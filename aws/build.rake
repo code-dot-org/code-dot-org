@@ -21,6 +21,32 @@ def build_task(name, dependencies=[], params={})
   path
 end
 
+def create_threads(count)
+  [].tap do |threads|
+    (1..count).each do |i|
+      threads << Thread.new do
+        yield
+      end
+    end
+  end
+end
+
+def threaded_each(array, thread_count=2)
+  queue = Queue.new.tap do |queue|
+    array.each do |i|
+      queue << i
+    end
+  end
+
+  threads = create_threads(thread_count) do
+    until queue.empty?
+      next unless item = queue.pop(true) rescue nil
+      yield item if block_given?
+    end
+  end
+  threads.each(&:join)
+end
+
 if rack_env?(:staging)
   BLOCKLY_CORE_DEPENDENCIES = []#[aws_dir('build.rake')]
   BLOCKLY_CORE_PRODUCTS = [
@@ -91,35 +117,29 @@ $websites = build_task('websites', [deploy_dir('rebuild'), BLOCKLY_COMMIT_TASK])
     RakeUtils.system 'rake', 'build'
 
     if rack_env?(:production) && CDO.daemon
-      CDO.app_instances.each do |host|
-        #Process.fork do
-          remote_command = [
-            'cd production',
-            'git pull',
-            'rake build',
-          ].join('; ')
-          RakeUtils.system 'ssh', '-i', '~/.ssh/deploy-id_rsa', host, "'#{remote_command} 2>&1'"
-        #end
+      remote_command = [
+        'cd production',
+        'git pull',
+        'rake build',
+      ].join('; ')
+      threaded_each CDO.app_instances, 5 do |host|
+        HipChat.log "Upgrading <b>#{host}</b> front-end..."
+        RakeUtils.system 'ssh', '-i', '~/.ssh/deploy-id_rsa', host, "'#{remote_command} 2>&1'"
       end
-      #Process.waitall
 
-      CDO.varnish_instances.each do |host|
-        #Process.fork do
-          remote_command = [
-            'sudo chef-client',
-            'sudo service varnish stop',
-            'sudo service varnish start',
-          ].join('; ')
-          begin
-            HipChat.log "Upgrading <b>#{host}</b> varnish instance..."
-            sleep 0.1
-            RakeUtils.system 'ssh', '-i', '~/.ssh/deploy-id_rsa', host, "'#{remote_command} 2>&1'"
-          rescue
-            HipChat.log "Unable to upgrade <b>#{host}</b> varnish instance."
-          end
-        #end
+      remote_command = [
+        'sudo chef-client',
+        'sudo service varnish stop',
+        'sudo service varnish start',
+      ].join('; ')
+      threaded_each CDO.varnish_instances, 5 do |host|
+        begin
+          HipChat.log "Upgrading <b>#{host}</b> varnish instance..."
+          RakeUtils.system 'ssh', '-i', '~/.ssh/deploy-id_rsa', host, "'#{remote_command} 2>&1'"
+        rescue
+          HipChat.log "Unable to upgrade <b>#{host}</b> varnish instance."
+        end
       end
-      #Process.waitall
     end
   end
 end
@@ -162,3 +182,4 @@ $websites_test = build_task('websites-test', [deploy_dir('rebuild')]) do
   end
 end
 task 'test-websites' => [$websites_test] {}
+
