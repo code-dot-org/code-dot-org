@@ -1,4 +1,6 @@
 class HomeController < ApplicationController
+  before_filter :authenticate_user!, only: :gallery_activities
+
   def set_locale
     set_locale_cookie(params[:locale]) if params[:locale]
     redirect_to params[:return_to].to_s
