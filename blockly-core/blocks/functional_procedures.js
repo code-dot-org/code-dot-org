@@ -47,6 +47,13 @@ Blockly.Blocks.functional_definition = {
     this.appendFunctionalInput('STACK');
     this.setFunctional(true);
     this.setTooltip(Blockly.Msg.FUNCTIONAL_PROCEDURE_DEFINE_TOOLTIP);
+    /**
+     * Whether this block should be treated like a functional "variable"
+     * i.e., no domain, listed in variables category of functional app flyouts
+     * @type {boolean}
+     * @private
+     */
+    this.isFunctionalVariable_ = false;
     this.parameterNames_ = [];
     this.paramIds_ = [];
     this.parameterTypes_ = [];
@@ -71,6 +78,11 @@ Blockly.Blocks.functional_definition = {
       outputTypeMutation.innerHTML = this.outputType_;
       container.appendChild(outputTypeMutation);
     }
+    if (this.isFunctionalVariable_) {
+      var outputTypeMutation = document.createElement('isfunctionalvariable');
+      outputTypeMutation.innerHTML = 'true';
+      container.appendChild(outputTypeMutation);
+    }
     return container;
   },
   domToMutation: function(xmlElement) {
@@ -84,6 +96,8 @@ Blockly.Blocks.functional_definition = {
         this.description_ = childNode.innerHTML;
       } else if (nodeName === 'outputtype') {
         this.updateOutputType(childNode.innerHTML);
+      } else if (nodeName === 'isfunctionalvariable') {
+        this.isFunctionalVariable_ = true;
       }
     }
     this.updateParams_();
