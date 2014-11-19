@@ -366,6 +366,31 @@ Blockly.Flyout.prototype.layoutBlock_ = function(block, cursor, gap, initialX) {
   cursor.y += blockHW.height + gap;
 };
 
+Blockly.Flyout.prototype.addButtonToFlyout_ = function (cursor, buttonText, onMouseDown) {
+  var button = Blockly.createSvgElement('g', {'class': 'createFunction'},
+    this.blockSpace_.svgGroup_);
+  var padding = 5;
+  var r = Blockly.createSvgElement('rect', {
+    rx: 5,
+    ry: 5,
+    fill: 'orange',
+    stroke: 'white'
+  }, button);
+  var text = Blockly.createSvgElement('text', {
+    x: padding,
+    y: padding,
+    'class': 'blocklyText'
+  }, button);
+  text.textContent = buttonText;
+  var bounds = text.getBoundingClientRect();
+  this.minFlyoutWidth_ = bounds.width + 2 * padding;
+  r.setAttribute('width', bounds.width + 2 * padding);
+  r.setAttribute('height', bounds.height + 2 * padding);
+  r.setAttribute('y', -bounds.height + padding - 1);
+  button.setAttribute('transform', 'translate(17, 25)');
+  Blockly.bindEvent_(button, 'mousedown', this, onMouseDown);
+  cursor.y += 40;
+};
 /**
  * Show and populate the flyout.
  * @param {!Array|string} xmlList List of blocks to show.
@@ -394,29 +419,13 @@ Blockly.Flyout.prototype.show = function(xmlList) {
   } else if (firstBlock === Blockly.Procedures.NAME_TYPE) {
     // Special category for procedures.
     if (Blockly.functionEditor && !Blockly.functionEditor.isOpen()) {
-      var button = Blockly.createSvgElement('g', {'class': 'createFunction'},
-          this.blockSpace_.svgGroup_);
-      var padding = 5;
-      var r = Blockly.createSvgElement('rect', {
-        rx: 5,
-        ry: 5,
-        fill: 'orange',
-        stroke: 'white'
-      }, button);
-      var text = Blockly.createSvgElement('text', {
-        x: padding,
-        y: padding,
-        'class': 'blocklyText'
-      }, button);
-      text.textContent = Blockly.Msg.FUNCTION_CREATE;
-      var bounds = text.getBoundingClientRect();
-      this.minFlyoutWidth_ = bounds.width + 2 * padding;
-      r.setAttribute('width', bounds.width + 2 * padding);
-      r.setAttribute('height', bounds.height + 2 * padding);
-      r.setAttribute('y', -bounds.height + padding - 1);
-      button.setAttribute('transform', 'translate(17, 25)');
-      Blockly.bindEvent_(button, 'mousedown', this, this.createFunction_);
-      cursor.y += 40;
+      this.addButtonToFlyout_(cursor, Blockly.Msg.FUNCTION_CREATE, this.createFunction_);
+    }
+    Blockly.Procedures.flyoutCategory(blocks, gaps, margin, this.blockSpace_);
+  } else if (firstBlock === Blockly.Procedures.NAME_TYPE_FUNCTIONAL_VARIABLE) {
+    // Special category for functional variables.
+    if (Blockly.functionEditor && !Blockly.functionEditor.isOpen()) {
+      this.addButtonToFlyout_(cursor, Blockly.Msg.FUNCTIONAL_VARIABLE_CREATE, this.createFunction_);
     }
     Blockly.Procedures.flyoutCategory(blocks, gaps, margin, this.blockSpace_);
   } else {
