@@ -17,17 +17,17 @@
     "impressive": "false",
     "x": "200",
     "y": "200",
-    "instructions": "Can you figure out how to draw two triangles? Here's a hint create 2 new functions for each triangle.",
+    "instructions": "Can you figure out how to draw this shape? Here's a hint create a new function with 6 sides called a hexagon. ",
     "use_contract_editor": "false"
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" movable="false" deletable="false">
+        <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="procedures_callnoreturn" inline="false">
-              <mutation name="draw a triangle">
+              <mutation name="draw a hexagon">
                 <arg name="sides"/>
                 <arg name="length"/>
               </mutation>
@@ -54,7 +54,7 @@
             <arg name="sides"/>
             <arg name="length"/>
           </mutation>
-          <title name="NAME">draw a triangle</title>
+          <title name="NAME">draw a hexagon</title>
           <statement name="STACK">
             <block type="controls_repeat_ext" inline="true" uservisible="false">
               <value name="TIMES">
