@@ -72,8 +72,10 @@ var Projectile = function (options) {
   this.currentFrame_ = 0;
   var self = this;
   this.animator_ = window.setInterval(function () {
-    self.currentFrame_ = (self.currentFrame_ + 1) % self.frames;
-  }, 50);
+    if (self.currentFrame_ + 1 < self.frames) {
+      self.currentFrame_ = (self.currentFrame_ + 1) % self.frames;
+    }
+  }, 150);
 
   // origin is at an offset from sprite location
   this.x = options.spriteX + OFFSET_CENTER[options.dir].x +
