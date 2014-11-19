@@ -199,41 +199,17 @@ exports.displayFeedback = function(options) {
     });
   }
 
-  function makepage(src) {
-    // We break the closing script tag in half to prevent
-    // the HTML parser from seeing it as a part of
-    // the *main* page.
+  function createHiddenPrintWindow(src) {
 
-    return "<html>\n" +
-      "<head>\n" +
-      "<title>Temporary Printing Window</title>\n" +
-      "<script>\n" +
-      "function step1() {\n" +
-      "  setTimeout('step2()', 10);\n" +
-      "}\n" +
-      "function step2() {\n" +
-      "  window.print();\n" +
-      "  window.close();\n" +
-      "}\n" +
-      "</scr" + "ipt>\n" +
-      "</head>\n" +
-      "<body onLoad='step1()'>\n" +
-      "<img src='" + src + "'/>\n" +
-      "</body>\n" +
-      "</html>\n";
+    var iframe = $('<iframe id="print_frame" style="display: none"></iframe>');
+    iframe.appendTo("body");
+    iframe[0].contentWindow.document.write("<img src='" + src + "'/>");
+    iframe[0].contentWindow.document.write("<script>if (document.execCommand('print', false, null)) {  } else { window.print();  } </script>");
+    $("#print_frame").remove();
   }
 
-  function printme(evt) {
-    link = "about:blank";
-    var pw = window.open(link, "_new");
-    pw.document.open();
-    pw.document.write(makepage(evt));
-    pw.document.close();
-  }
-
-  var printButton = feedback.querySelector('#print-button');
-  dom.addClickTouchEvent(printButton, function() {
-    printme(options.feedbackImage);
+  $("#print-button").click(function(){
+    createHiddenPrintWindow(options.feedbackImage);
   });
 
   feedbackDialog.show({
