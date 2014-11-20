@@ -302,6 +302,7 @@
     "RENAME_PARAMETER_TITLE": "Rename all '%1' parameters to:",
     "RENAME_VARIABLE": "Rename variable...",
     "RENAME_VARIABLE_TITLE": "Rename all '%1' variables to:",
+    "SAVE_AND_CLOSE": "Save and Close",
     "TEXT_APPEND_APPENDTEXT": "append text",
     "TEXT_APPEND_HELPURL": "https://code.google.com/p/blockly/wiki/Text#Text_modification",
     "TEXT_APPEND_TO": "to",

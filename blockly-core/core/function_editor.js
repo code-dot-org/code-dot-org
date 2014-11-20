@@ -325,15 +325,29 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   this.modalBackground_ =
       Blockly.createSvgElement('g', {'class': 'modalBackground'});
   Blockly.mainBlockSpaceEditor.appendSVGChild(this.modalBackground_);
-  this.closeButton_ = Blockly.createSvgElement('image', {
+  this.closeButton_ = Blockly.createSvgElement('g', {
     'id': 'modalEditorClose',
-    'width': 50,
-    'height': 50,
-    'y': -2
+    'filter': 'url(#blocklyTrashcanShadowFilter)'
   });
-  this.closeButton_.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-      '/blockly/media/common_images/x-button.png');
+  var padding = 7;
+  var r = Blockly.createSvgElement('rect', {
+    'rx': 12,
+    'ry': 12,
+    'fill': '#7665a0',
+    'stroke': 'white',
+    'stroke-width': '2.5'
+  }, this.closeButton_);
+  var text = Blockly.createSvgElement('text', {
+    'x': padding,
+    'y': padding,
+    'class': 'blocklyText'
+  }, this.closeButton_);
+  text.textContent = Blockly.Msg.SAVE_AND_CLOSE;
   Blockly.modalBlockSpaceEditor.appendSVGChild(this.closeButton_);
+  var bounds = text.getBoundingClientRect();
+  r.setAttribute('width', bounds.width + 2 * padding);
+  r.setAttribute('height', bounds.height + padding);
+  r.setAttribute('y', -bounds.height + padding - 1);
 
   // Set up contract definition HTML section
   this.createContractDom_();
@@ -442,8 +456,10 @@ Blockly.FunctionEditor.prototype.position_ = function() {
   this.contractDiv_.style.width = metrics.viewWidth + 'px';
 
   // Move the close button
-  this.closeButton_.setAttribute('x',
-      Blockly.RTL ? 2 : metrics.absoluteLeft + metrics.viewWidth - 30 + 'px');
+  this.closeButton_.setAttribute('transform', 'translate(' +
+      (Blockly.RTL ? 5 : metrics.absoluteLeft + metrics.viewWidth + 14 -
+          this.closeButton_.firstElementChild.getAttribute('width')) +
+      ',19)');
 
   // Move workspace to account for horizontal flyout height
   Blockly.modalBlockSpaceEditor.svgResize();
