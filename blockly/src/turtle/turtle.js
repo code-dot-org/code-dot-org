@@ -812,11 +812,11 @@ function executeTuple () {
 
     var smoothAnimate = false;
 
-    if (skin.id === "anna" || skin.id === "elsa") {
-      // Should we execute another tuple in the same frame?
+    if (skin.consolidateTurnAndMove) {
+      // Should we execute another tuple in this frame of animation?
       var anotherTuple = checkforTurnAndMove();
 
-      // We go through the loop to process another tuple if there is another frame to be done.
+      // Whether we go through the loop again to process the next tuple in this frame.
       executeTuple = anotherTuple;
 
       // We only smooth animate for Anna & Elsa, and only if there is not another tuple to be done.
