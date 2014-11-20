@@ -388,7 +388,7 @@ BlocklyApps.init = function(config) {
       }
     };
     // Depends on ResizeSensor.js
-    var ResizeSensor = require('ResizeSensor');
+    var ResizeSensor = require('./ResizeSensor');
     new ResizeSensor(document.getElementById('visualizationColumn'), resize);
   }
 
