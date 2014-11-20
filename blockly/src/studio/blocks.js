@@ -1655,7 +1655,7 @@ exports.install = function(blockly, blockInstallOptions) {
   installFunctionalApiCallBlock(blockly, generator, {
     blockName: 'functional_start_dummyOnMove',
     blockTitle: 'on-move (on-screen)',
-    args: [{name: 'VAL', type: 'boolean', default:'false'}]
+    args: [{name: 'VAL', type: 'boolean', default: 'false'}]
   });
 
   installFunctionalApiCallBlock(blockly, generator, {
@@ -1681,10 +1681,12 @@ exports.install = function(blockly, blockInstallOptions) {
     var defaultSpeed = 7;
     var playerSpeed = Blockly.JavaScript.statementToCode(this, 'PLAYER_SPEED', false) || defaultSpeed;
     var enemySpeed = Blockly.JavaScript.statementToCode(this, 'ENEMY_SPEED', false) || defaultSpeed;
-    var code = 'Studio.setSpriteSpeed(\'block_id_' + this.id + '\',0' +
-        ',' + playerSpeed + ');\n';
-    code += 'Studio.setSpriteSpeed(\'block_id_' + this.id + '\',1' +
-        ',' + enemySpeed + ');\n';
+    var playerSpriteIndex = '0';
+    var enemySpriteIndex = '1';
+    var code = 'Studio.setSpriteSpeed(\'block_id_' + this.id + '\',' +
+        playerSpriteIndex + ',' + playerSpeed + ');\n';
+    code += 'Studio.setSpriteSpeed(\'block_id_' + this.id + '\',' +
+        enemySpriteIndex + ',' + enemySpeed + ');\n';
     return code;
   };
 
