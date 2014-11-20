@@ -198,7 +198,9 @@ Blockly.Css.CONTENT = [
   '  font-size: 9pt;',
   '  fill: #000;',
   '}',
-
+  '#modalEditorClose:hover>rect {',
+  '  fill: #0094ca;',
+  '}',
   '.blocklyIconShield {',
   '  cursor: default;',
   '  fill: #00c;',
