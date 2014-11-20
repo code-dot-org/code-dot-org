@@ -192,6 +192,7 @@ td {
   color: white;
 }
 
+
 #index .count h1 {
   color: white; font-size: 15px; line-height: 22px; font-weight: 500; margin: 0px;
   display: inline; margin-right: 6px; margin-top:0px; margin-bottom:0px;
@@ -235,6 +236,47 @@ td {
 
 #index #twentyhour #text {
   font-size: 18px
+}
+
+#oldindex #gap {
+  height: 20px
+}
+
+#oldindex #top {
+  background-color: rgb(0, 178, 192 ); padding: 20px
+}
+
+#oldindex #video {
+  float:left; 
+}
+
+#oldindex #start {
+  float:left; text-align: center
+}
+
+#oldindex .count {
+  color: white;
+  line-height: 1em;
+}
+
+#oldindex .beyond {
+  color: white;
+}
+
+#oldindex .count h1 {
+  color: white; font-size: 56px; line-height: 56px; font-weight: 500; margin: 0px;
+}
+
+#oldindex .count h2 {
+  color: white; font-size: 36px; line-height: 36px; font-weight: 600; margin-top:5px; margin-bottom: 0px;
+}
+
+#oldindex .count h3 {
+  color: white; font-size: 32px; line-height: 32px; font-weight: 400; margin-top:5px; margin-bottom:0px;
+}
+
+#oldindex .count h4 {
+  color: white; font-size: 26px; line-height: 26px; font-weight: 400; margin-top:15px;
 }
 
 .donor_column{

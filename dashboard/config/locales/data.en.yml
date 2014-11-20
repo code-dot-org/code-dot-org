@@ -417,6 +417,9 @@ en:
         'C3_crowdsourcing': 'Crowdsourcing'
         'C3_functional_suncatchers': 'Functional Suncatchers'
         'C3_songwriting_with_parameters': 'Songwriting With Parameters'
+        'Frozen_intro': 'Hour of Code Intro'
+        'Frozen_loops': 'Introduction to Loops'
+        'Frozen_functions': 'Introduction to Functions'
     callout:
       text:
         # Keyed by #{callout.localization_key}

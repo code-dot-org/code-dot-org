@@ -9,7 +9,7 @@
     "instructions": "Let's Step it up a little, can you draw a Star shape using the \"Draw a Square Line\" function? Good luck! Hint: you may have to turn 144 degrees",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "disable_param_editing": "false",
+    "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "start_direction": "125",
     "x": "55",

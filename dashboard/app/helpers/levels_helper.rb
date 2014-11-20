@@ -1,9 +1,13 @@
 module LevelsHelper
 
   def build_script_level_path(script_level)
+    if script_level.script.name == 'hourofcode'
+      return hoc_chapter_path(script_level.chapter)
+    end
+
     case script_level.script_id
     when Script::HOC_ID
-      hoc_chapter_path(script_level.chapter)
+      script_puzzle_path(script_level.script, script_level.chapter)
     when Script::TWENTY_HOUR_ID
       script_level_path(script_level.script, script_level)
     when Script::EDIT_CODE_ID
@@ -273,13 +277,14 @@ module LevelsHelper
   end
 
   def string_or_image(prefix, text)
-    path, width = text.split(',') if text
-    if ['.jpg', '.png', '.gif'].include? File.extname(path)
-      if width
-        "<img src='" + path.strip + "' width='" + width.strip + "'></img>"
-      else
-        "<img src='" + path.strip + "'></img>"
-      end
+    return unless text
+    path, width = text.split(',')
+    if %w(.jpg .png .gif).include? File.extname(path)
+      "<img src='#{path.strip}' #{"width='#{width.strip}'" if width}></img>"
+    elsif File.extname(path) == '.level'
+      base_level = File.basename(path, '.level')
+      level = Level.find_by(name: base_level)
+      "<div class='aspect-ratio'><iframe src='#{url_for(:id => level.id, :controller => 'levels', :action => 'show', :embed => true).strip}' width='#{width ? width.strip : '100%'}' scrolling='no' seamless='seamless' style='border: none;'></iframe></div>"
     else
       data_t(prefix + '.' + @level.name, text)
     end

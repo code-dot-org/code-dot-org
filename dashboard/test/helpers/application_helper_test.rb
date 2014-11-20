@@ -1,17 +1,6 @@
 require 'test_helper'
 
 class ApplicationHelperTest < ActionView::TestCase
-  setup do
-    set_env :test
-  end
-
-  teardown do
-    set_env :test
-  end
-
-  def set_env(env)
-    CDO.rack_env = env
-  end
 
   # Stub current_user
   def current_user
@@ -97,5 +86,17 @@ class ApplicationHelperTest < ActionView::TestCase
     end
     assert(browser.chrome?)
     assert(browser.version.to_s.to_i == 34)
+  end
+
+  test 'certificate images for hoc-type scripts are all hoc certificates' do
+    # old hoc, new hoc, frozen, playlab, and flappy are all the same certificate
+    user = create :user
+    assert_equal script_certificate_image_url(user, Script.find(Script::HOC_ID)), script_certificate_image_url(user, Script.find_by_name(Script::HOC_NAME))
+    assert_equal script_certificate_image_url(user, Script.find(Script::HOC_ID)), script_certificate_image_url(user, Script.find_by_name(Script::FROZEN_NAME))
+    assert_equal script_certificate_image_url(user, Script.find(Script::HOC_ID)), script_certificate_image_url(user, Script.find(Script::FLAPPY_ID))
+    assert_equal script_certificate_image_url(user, Script.find(Script::HOC_ID)), script_certificate_image_url(user, Script.find_by_name(Script::PLAYLAB_NAME))
+
+     # but course1 is a different certificate
+    assert_not_equal script_certificate_image_url(user, Script.find(Script::HOC_ID)), script_certificate_image_url(user, Script.find_by_name('course1'))
   end
 end

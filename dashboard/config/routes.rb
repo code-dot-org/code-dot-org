@@ -104,10 +104,8 @@ Dashboard::Application.routes.draw do
   get 'reset_session', to: 'application#reset_session_endpoint'
 
   # duplicate routes are for testing -- ActionController::TestCase calls to_s on all params
-  get '/hoc/reset', to: 'script_levels#show', script_id: Script::HOC_ID, reset:true, as: 'hoc_reset'
-  get '/hoc/reset', to: 'script_levels#show', script_id: Script::HOC_ID.to_s, reset:true
-  get '/hoc/:chapter', to: 'script_levels#show', script_id: Script::HOC_ID, as: 'hoc_chapter', format: false
-  get '/hoc/:chapter', to: 'script_levels#show', script_id: Script::HOC_ID.to_s, format: false
+  get '/hoc/reset', to: 'script_levels#show', script_id: Script::HOC_NAME, reset:true, as: 'hoc_reset'
+  get '/hoc/:chapter', to: 'script_levels#show', script_id: Script::HOC_NAME, as: 'hoc_chapter', format: false
 
   get '/k8intro/:chapter', to: 'script_levels#show', script_id: Script::TWENTY_HOUR_ID, as: 'k8intro_chapter', format: false
   get '/k8intro/:chapter', to: 'script_levels#show', script_id: Script::TWENTY_HOUR_ID.to_s, format: false
