@@ -4,8 +4,6 @@
  * https://github.com/marcj/css-element-queries/blob/master/LICENSE.
  */
 
-(function() {
-
     /**
      * Class for dimension change detection.
      *
@@ -14,7 +12,7 @@
      *
      * @constructor
      */
-    this.ResizeSensor = function(element, callback) {
+    module.exports = function(element, callback) {
         /**
          *
          * @constructor
@@ -140,5 +138,3 @@
             attachResizeEvent(element, callback);
         }
     };
-
-})();

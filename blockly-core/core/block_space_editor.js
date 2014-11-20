@@ -114,7 +114,7 @@ Blockly.BlockSpaceEditor.prototype.populateSVGEffects_ = function(container) {
    </filter>
    */
   filter = Blockly.createSvgElement('filter',
-      {'id': 'blocklyTrashcanShadowFilter'}, defs);
+      {'id': 'blocklyTrashcanShadowFilter', 'height': '150%', 'y': '-20%'}, defs);
   Blockly.createSvgElement('feGaussianBlur',
       {'in': 'SourceAlpha', 'stdDeviation': 2, 'result': 'blur'}, filter);
   Blockly.createSvgElement('feOffset',
