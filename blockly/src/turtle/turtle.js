@@ -763,7 +763,7 @@ var jumpDistanceCovered;
  * Special case: if we have a turn, followed by a move forward, then we can just
  * do the turn instantly and then begin the move forward in the same frame.
  */
-function checkforTurnAndMove(command, values) {
+function checkforTurnAndMove() {
   var nextIsForward = false;
 
   var currentTuple = api.log[0];
@@ -798,11 +798,11 @@ function executeTuple () {
     return false; 
   }
 
-  var executeTuple = true;
+  var executeSecondTuple;
 
-  while (executeTuple) {
+  do {
     // Unless something special happens, we will just execute a single tuple.
-    executeTuple = false;
+    executeSecondTuple = false;
 
     var tuple = api.log[0];
     var command = tuple[0];
@@ -812,25 +812,20 @@ function executeTuple () {
 
     var smoothAnimate = false;
 
-    if (skin.consolidateTurnAndMove) {
-      // Should we execute another tuple in this frame of animation?
-      var anotherTuple = checkforTurnAndMove();
-
-      // Whether we go through the loop again to process the next tuple in this frame.
-      executeTuple = anotherTuple;
-
-      // We only smooth animate for Anna & Elsa, and only if there is not another tuple to be done.
-      smoothAnimate = !anotherTuple;
+    // Should we execute another tuple in this frame of animation?
+    if (skin.consolidateTurnAndMove && checkforTurnAndMove()) {
+      executeSecondTuple = true;
     }
 
-    var tupleDone = Turtle.step(command, tuple.slice(1), {smoothAnimate: smoothAnimate});
+    // We only smooth animate for Anna & Elsa, and only if there is not another tuple to be done.
+    var tupleDone = Turtle.step(command, tuple.slice(1), {smoothAnimate: skin.smoothAnimate && !executeSecondTuple});
     Turtle.display();
 
     if (tupleDone) {
       api.log.shift();
       clearTuple();
     }
-  }
+  } while (executeSecondTuple);
 
   return true;
 }
