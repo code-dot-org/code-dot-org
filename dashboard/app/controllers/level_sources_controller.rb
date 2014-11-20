@@ -5,6 +5,12 @@ class LevelSourcesController < ApplicationController
 
   def show
     @hide_source = true
+    if request.query_parameters[:embed]
+      @embed = true
+      @share = false
+      @no_padding = true
+      @skip_instructions_popup = true
+    end
   end
 
   def edit

@@ -8,15 +8,15 @@ nav: about_nav
 
 <HR>
 
-# International Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'international') %>
-
-<HR>
-
 # Major promotional partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'promotional') %>
+
+<HR>
+
+# International Partners
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'international') %>
 
 <HR>
 
