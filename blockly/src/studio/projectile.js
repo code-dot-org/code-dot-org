@@ -75,7 +75,7 @@ var Projectile = function (options) {
     if (self.currentFrame_ + 1 < self.frames) {
       self.currentFrame_ = (self.currentFrame_ + 1) % self.frames;
     }
-  }, 150);
+  }, 50);
 
   // origin is at an offset from sprite location
   this.x = options.spriteX + OFFSET_CENTER[options.dir].x +

@@ -53,15 +53,6 @@ var ButtonState = {
   DOWN: 1
 };
 
-var SpriteFlags = {
-  EMOTIONS: 4,
-  ANIMATION: 8,
-  TURNS: 16
-};
-
-var SF_SKINS_MASK =
-  SpriteFlags.EMOTIONS | SpriteFlags.ANIMATION | SpriteFlags.TURNS;
-
 var ArrowIds = {
   LEFT: 'leftButton',
   UP: 'upButton',
@@ -181,8 +172,6 @@ function loadLevel() {
   Studio.COLS = Studio.map[0].length;
   // Pixel height and width of each maze square (i.e. tile).
   Studio.SQUARE_SIZE = 50;
-  Studio.DEFAULT_SPRITE_HEIGHT = skin.spriteHeight;
-  Studio.DEFAULT_SPRITE_WIDTH = skin.spriteWidth;
   // Height and width of the goal and obstacles.
   Studio.MARKER_HEIGHT = 100;
   Studio.MARKER_WIDTH = 100;
@@ -1617,50 +1606,46 @@ var ANIM_AFTER_NUM_NORMAL_FRAMES = 8;
 // to face south.
 var TICKS_BEFORE_FACE_SOUTH = 5;
 
-var spriteFrameNumber = function (index) {
+function spriteFrameNumber (index) {
   var sprite = Studio.sprite[index];
-  var showThisAnimFrame = 0;
-  if ((sprite.flags & SpriteFlags.TURNS) &&
-      (sprite.displayDir !== Direction.SOUTH)) {
-    return sprite.firstTurnFrameNum + frameDirTable[sprite.displayDir];
+  var frameNum = 0;
+  if (sprite.frameCounts.turns === 7 && sprite.displayDir !== Direction.SOUTH) {
+    // turn frames start after normal and animation frames
+    return sprite.frameCounts.normal + sprite.frameCounts.animation +
+      frameDirTable[sprite.displayDir];
   }
-  if ((sprite.flags & SpriteFlags.ANIMATION) && skin.spriteCounts.animation &&
-      Studio.tickCount &&
-      (1 ===
-       Math.round((Studio.tickCount + index * ANIM_OFFSET) / ANIM_RATE) %
-                  ANIM_AFTER_NUM_NORMAL_FRAMES)) {
-    // we only support two-frame animation for now, the 2nd frame is only up
-    // for 1/8th of the time (since it is a blink of the eyes)
-    showThisAnimFrame = sprite.firstAnimFrameNum;
+  if (sprite.frameCounts.animation === 1 && Studio.tickCount) {
+    // we only support two-frame animation for base playlab, the 2nd frame is
+    // only up for 1/8th of the time (since it is a blink of the eyes)
+    if (1 === Math.round((Studio.tickCount + index * ANIM_OFFSET) / ANIM_RATE) %
+        ANIM_AFTER_NUM_NORMAL_FRAMES) {
+      // animation frame is the first frame after all the normal frames
+      frameNum = sprite.frameCounts.normal;
+    }
   }
-  if (skin.spriteCounts.normal > 1) {
-    showThisAnimFrame = Studio.tickCount % skin.spriteCounts.normal;
+
+  // todo - do this differently
+  if (sprite.frameCounts.animation > 1) {
+    frameNum = Studio.tickCount % sprite.frameCounts.normal;
   }
-  if (sprite.emotion !== Emotions.NORMAL &&
-      sprite.flags & SpriteFlags.EMOTIONS) {
-    return showThisAnimFrame ?
-            showThisAnimFrame :
-            sprite.firstEmotionFrameNum + (sprite.emotion - 1);
+
+  if (!frameNum && sprite.emotion !== Emotions.NORMAL &&
+    sprite.frameCounts.emotion > 0) {
+    // emotion frames proceed normal, animation, turn frames
+    frameNum = prite.frameCounts.normal + sprite.frameCounts.animation +
+      sprite.frameCounts.turn + (sprite.emotion - 1);
   }
-  return showThisAnimFrame;
+  return frameNum;
 };
 
-var spriteTotalFrames = function (index) {
-  var frames = skin.spriteCounts.normal;
-  if (Studio.sprite[index].flags & SpriteFlags.ANIMATION) {
-    frames += skin.spriteCounts.animation;
-  }
-  if (Studio.sprite[index].flags & SpriteFlags.TURNS) {
-    frames += skin.spriteCounts.turns;
-  }
-  if (Studio.sprite[index].flags & SpriteFlags.EMOTIONS) {
-    frames += skin.spriteCounts.emotions;
-  }
-  return frames;
+function spriteTotalFrames (index) {
+  var sprite = Studio.sprite[index];
+  return sprite.frameCounts.normal + sprite.frameCounts.animation +
+    sprite.frameCounts.turns + sprite.frameCounts.emotions;
 };
 
 var updateSpeechBubblePath = function (element) {
-  var height = +element.getAttribute('height');
+  var height = element.getAttribute('height');
   var onTop = 'true' === element.getAttribute('onTop');
   var onRight = 'true' === element.getAttribute('onRight');
   element.setAttribute('d',
@@ -1978,16 +1963,6 @@ Studio.setBackground = function (opts) {
     skin[opts.value].background);
 };
 
-var computeSpriteFrameNums = function (index) {
-  var flags = Studio.sprite[index].flags;
-  Studio.sprite[index].firstAnimFrameNum = skin.spriteCounts.normal;
-  Studio.sprite[index].firstTurnFrameNum = skin.spriteCounts.normal +
-      ((flags & SpriteFlags.ANIMATION) ? skin.spriteCounts.animation : 0);
-  Studio.sprite[index].firstEmotionFrameNum =
-      Studio.sprite[index].firstTurnFrameNum +
-      ((flags & SpriteFlags.TURNS) ? skin.spriteCounts.turns : 0);
-};
-
 /**
  * Sets an actor to be a specific sprite, or alternatively to be hidden.
  * @param opts.value {string} Name of sprite, or 'hidden'
@@ -2008,14 +1983,10 @@ Studio.setSprite = function (opts) {
     return;
   }
 
-  // Inherit some flags from the skin:
-  sprite.flags &= ~SF_SKINS_MASK;
-  sprite.flags |= skin[spriteValue].spriteFlags;
+  sprite.frameCounts = skin[spriteValue].frameCounts;
   // Reset height and width:
-  sprite.height = sprite.size *
-    (skin[spriteValue].spriteHeight || Studio.DEFAULT_SPRITE_HEIGHT);
-  sprite.width = sprite.size *
-    (skin[spriteValue].spriteWidth || Studio.DEFAULT_SPRITE_WIDTH);
+  sprite.height = sprite.size * skin.spriteHeight;
+  sprite.width = sprite.size * skin.spriteWidth;
   sprite.value = opts.forceHidden ? 'hidden' : opts.value;
 
   var spriteClipRect = document.getElementById('spriteClipRect' + spriteIndex);
@@ -2026,7 +1997,6 @@ Studio.setSprite = function (opts) {
     skin[spriteValue].sprite);
   spriteIcon.setAttribute('width', sprite.width * spriteTotalFrames(spriteIndex));
   spriteIcon.setAttribute('height', sprite.height);
-  computeSpriteFrameNums(spriteIndex);
   // call display right away since the frame number may have changed:
   Studio.displaySprite(spriteIndex);
 };
@@ -2274,6 +2244,7 @@ Studio.throwProjectile = function (options) {
 
   var projectileOptions = {
     frames: /.gif$/.test(skin[options.className]) ? 1 : skin.projectileFrames,
+    className: options.className,
     dir: options.dir,
     image: skin[options.className],
     spriteX: sourceSprite.x,
