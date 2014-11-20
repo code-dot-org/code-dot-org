@@ -182,7 +182,8 @@ Blockly.Blocks.functional_definition = {
       type: this.type,
       callType: this.callType_,
       parameterNames: this.parameterNames_,
-      parameterTypes: this.parameterTypes_
+      parameterTypes: this.parameterTypes_,
+      isFunctionalVariable: this.isFunctionalVariable_
     }
   },
   getVars: function() {
