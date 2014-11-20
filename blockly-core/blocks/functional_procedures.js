@@ -268,6 +268,8 @@ Blockly.Blocks.functional_call = {
 
     this.blockSpace.events.listen(Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE,
       this.updateAttributesFromDefinition_, false, this);
+
+    this.changeFunctionalOutput('none');
   },
   updateAttributesFromDefinition_: function() {
     var procedureDefinition = Blockly.Procedures.getDefinition(
