@@ -204,7 +204,9 @@ BlocklyApps.init = function(config) {
     var workspaceDiv = BlocklyApps.editCode ?
                         document.getElementById('codeWorkspace') :
                         container.querySelector('#blockly');
-    container.className = 'hide-source';
+    if(!config.embed || config.level.skipInstructionsPopup) {
+      container.className = 'hide-source';
+    }
     workspaceDiv.style.display = 'none';
     // For share page on mobile, do not show this part.
     if ((!config.embed) && (!BlocklyApps.share || !dom.isMobile())) {
