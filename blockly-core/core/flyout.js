@@ -391,6 +391,7 @@ Blockly.Flyout.prototype.addButtonToFlyout_ = function (cursor, buttonText, onMo
   Blockly.bindEvent_(button, 'mousedown', this, onMouseDown);
   cursor.y += 40;
 };
+
 /**
  * Show and populate the flyout.
  * @param {!Array|string} xmlList List of blocks to show.
