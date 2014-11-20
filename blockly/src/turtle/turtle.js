@@ -810,8 +810,6 @@ function executeTuple () {
 
     BlocklyApps.highlight(String(id));
 
-    var smoothAnimate = false;
-
     // Should we execute another tuple in this frame of animation?
     if (skin.consolidateTurnAndMove && checkforTurnAndMove()) {
       executeSecondTuple = true;
