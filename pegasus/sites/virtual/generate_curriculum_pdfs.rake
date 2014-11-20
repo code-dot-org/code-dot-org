@@ -35,7 +35,7 @@ all_outfiles = [].tap do |all_outfiles|
     file fetchfile_for_pdf => pdf_conversion_info.src_files do
       url = "#{base_url}#{pdf_conversion_info.url_path}"
 
-      PDF.generate_from_url(url, pdf_conversion_info.output_pdf_path, verbose:rack_env?(:development))
+      PDF.generate_from_url(url, pdf_conversion_info.output_pdf_path, verbose:true)
 
       fetchable_url = RakeUtils.replace_file_with_s3_backed_fetch_file(pdf_conversion_info.output_pdf_path, fetchfile_for_pdf, bucket: 'cdo-fetch')
 
