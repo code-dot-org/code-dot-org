@@ -7,7 +7,6 @@ class ContentDSL < BaseDSL
   def banner(text) @hash[:content2] = text end
 
   # new
-  def iframe(text) @hash[:iframe] = text end
   def content1(text) @hash[:content1] = text end
   def content2(text) @hash[:content2] = text end
   def content3(text) @hash[:content3] = text end
@@ -24,7 +23,6 @@ class ContentDSL < BaseDSL
   def i18n_strings
     strings = {}
     strings[@hash[:title]] = @hash[:title]
-    strings[@hash[:iframe]] = @hash[:iframe] unless @hash[:iframe].blank?
     strings[@hash[:content1]] = @hash[:content1] unless @hash[:content1].blank?
     strings[@hash[:content2]] = @hash[:content2] unless @hash[:content2].blank?
     strings[@hash[:content3]] = @hash[:content3] unless @hash[:content3].blank?
