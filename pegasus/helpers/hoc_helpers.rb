@@ -61,7 +61,7 @@ def complete_tutorial_pixel(tutorial)
   end
 
   expires 0, :private, :must_revalidate
-  send_file sites_dir('all/images/1x1.png'), type:'image/png'
+  send_file pegasus_dir('sites.v3/code.org/public/images/1x1.png'), type:'image/png'
 end
 
 def launch_tutorial(tutorial,params={})
