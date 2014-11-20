@@ -134,15 +134,6 @@ Turtle.init = function(config) {
     if (retina != 2)
       retina = 1;
 
-    if (skin.id == "elsa")
-    {
-      turtleNumFrames = 20;
-    }
-    else if (skin.id == "anna")
-    {
-      turtleNumFrames = 10;
-    }
-
     // let's try adding a background image
     level.images = [{}];
     if (retina > 1) {
@@ -420,7 +411,6 @@ Turtle.loadDecorationAnimation = function() {
   }
 };
 
-var turtleNumFrames;
 var turtleFrame = 0;
 
 
@@ -441,7 +431,7 @@ Turtle.drawTurtle = function() {
   var sourceX = Turtle.avatarImage.spriteWidth * index;
   if (skin.id == "anna" || skin.id == "elsa") {
     sourceY = Turtle.avatarImage.spriteHeight * turtleFrame;
-    turtleFrame = (turtleFrame + 1) % turtleNumFrames;
+    turtleFrame = (turtleFrame + 1) % skin.turtleNumFrames;
   } else {
     sourceY = 0;
   }
@@ -480,8 +470,6 @@ Turtle.drawTurtle = function() {
                               destWidth * retina, destHeight * retina); */
 };
 
-var decorationAnimationNumFrames = 19;
-
 // An x offset against the sprite edge where the decoration should be drawn,
 // along with whether it should be drawn before or after the turtle sprite itself.
 
@@ -513,19 +501,17 @@ var decorationImageDetails = [
 
 Turtle.drawDecorationAnimation = function(when) {
   if (skin.id == "elsa") {
-    var frameIndex = (turtleFrame + 10) % decorationAnimationNumFrames;
+    var frameIndex = (turtleFrame + 10) % skin.decorationAnimationNumFrames;
 
     var angleIndex = Math.floor(Turtle.heading * Turtle.numberAvatarHeadings / 360);
-    if (skin.id == "anna" || skin.id == "elsa") {
-      // the rotations in the sprite sheet go in the opposite direction.
-      angleIndex = Turtle.numberAvatarHeadings - angleIndex;
 
-      // and they are 180 degrees out of phase.
-      angleIndex = (angleIndex + Turtle.numberAvatarHeadings/2) % Turtle.numberAvatarHeadings;
-    }
+    // the rotations in the Anna & Elsa sprite sheets go in the opposite direction.
+    angleIndex = Turtle.numberAvatarHeadings - angleIndex;
 
-    if (decorationImageDetails[angleIndex].when == when)
-    {
+    // and they are 180 degrees out of phase.
+    angleIndex = (angleIndex + Turtle.numberAvatarHeadings/2) % Turtle.numberAvatarHeadings;
+
+    if (decorationImageDetails[angleIndex].when == when) {
       var sourceX = Turtle.decorationAnimationImage.width * frameIndex;
       var sourceY = 0;
       var sourceWidth = Turtle.decorationAnimationImage.width;
