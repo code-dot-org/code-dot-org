@@ -16,7 +16,7 @@ class Level < ActiveRecord::Base
   include StiFactory
   include SerializedProperties
 
-  serialized_attrs %w(video_key)
+  serialized_attrs %w(video_key embed)
 
   # Fix STI routing http://stackoverflow.com/a/9463495
   def self.model_name
