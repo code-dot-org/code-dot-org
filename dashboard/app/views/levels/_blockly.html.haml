@@ -42,7 +42,6 @@
   - level['showFinish'] = local[:embed]
 
   :javascript
-    var embed = #{embed ? 'true' : 'false'};
     var script_path = "#{@script_level && build_script_level_path(@script_level)}";
     startTiming('Puzzle', script_path, '');
     var level = #{level.to_json};
