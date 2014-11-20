@@ -1462,10 +1462,12 @@ Studio.execute = function() {
   var handlers = [];
   if (BlocklyApps.usingBlockly) {
     registerHandlers(handlers, 'when_run', 'whenGameStarts');
-    registerHandlers(handlers, 'functional_setBackground', 'whenGameStarts');
-    registerHandlers(handlers, 'functional_setPlayerSpeed', 'whenGameStarts');
-    registerHandlers(handlers, 'functional_setEnemySpeed', 'whenGameStarts');
-    registerHandlers(handlers, 'functional_showTitleScreen', 'whenGameStarts');
+    registerHandlers(handlers, 'functional_start_setBackground', 'whenGameStarts');
+    registerHandlers(handlers, 'functional_start_setSpeeds', 'whenGameStarts');
+    registerHandlers(handlers, 'functional_start_setBackgroundAndSpeeds',
+        'whenGameStarts');
+    registerHandlers(handlers, 'functional_start_dummyOnMove',
+        'whenGameStarts');
     registerHandlers(handlers, 'studio_whenLeft', 'when-left');
     registerHandlers(handlers, 'studio_whenRight', 'when-right');
     registerHandlers(handlers, 'studio_whenUp', 'when-up');
