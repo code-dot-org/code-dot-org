@@ -365,7 +365,9 @@ Blockly.Blocks.functional_call = {
         }
       }
     }
-    this.setTitleValue(' (' + this.currentParameterNames_.join(', ') + ')', 'PARAM_TEXT');
+    var parameterListString = this.currentParameterNames_.length > 0 ?
+      ' (' + this.currentParameterNames_.join(', ') + ')' : '';
+    this.setTitleValue(parameterListString, 'PARAM_TEXT');
     // Restore rendering and show the changes.
     this.rendered = savedRendered;
     if (this.rendered) {
