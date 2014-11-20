@@ -66,17 +66,17 @@ module Poste
 
       header = @header.result(locals) unless @header.nil?
       html = replace_urls_with_click_trackers @html.result(locals), params if @html
-      html = inject_litmus_tracking html, header['litmus_tracking_id'] if html
+      html = inject_litmus_tracking html, header['litmus_tracking_id'], params[:encrypted_id] if html
       text = @text.result(locals) unless @text.nil?
 
       [header, html, text]
     end
 
-    def inject_litmus_tracking(html, tracking_id)
-      return html unless tracking_id
+    def inject_litmus_tracking(html, tracking_id, unique_id)
+      return html unless tracking_id && unique_id
       litmus_blob = <<-eos
-<style>@media print{ #_t { background-image: url('https://#{tracking_id}.emltrk.com/#{tracking_id}?p&d=[UNIQUE]');}} div.OutlookMessageHeader {background-image:url('https://#{tracking_id}.emltrk.com/#{tracking_id}?f&d=[UNIQUE]')} table.moz-email-headers-table {background-image:url('https://#{tracking_id}.emltrk.com/#{tracking_id}?f&d=[UNIQUE]')} blockquote #_t {background-image:url('https://#{tracking_id}.emltrk.com/#{tracking_id}?f&d=[UNIQUE]')} #MailContainerBody #_t {background-image:url('https://#{tracking_id}.emltrk.com/#{tracking_id}?f&d=[UNIQUE]')}</style><div id="_t"></div>
-<img src="https://#{tracking_id}.emltrk.com/#{tracking_id}?d=[UNIQUE]" width="1" height="1" border="0" />
+<style>@media print{ #_t { background-image: url('https://#{tracking_id}.emltrk.com/#{tracking_id}?p&d=#{unique_id}');}} div.OutlookMessageHeader {background-image:url('https://#{tracking_id}.emltrk.com/#{tracking_id}?f&d=#{unique_id}')} table.moz-email-headers-table {background-image:url('https://#{tracking_id}.emltrk.com/#{tracking_id}?f&d=#{unique_id}')} blockquote #_t {background-image:url('https://#{tracking_id}.emltrk.com/#{tracking_id}?f&d=#{unique_id}')} #MailContainerBody #_t {background-image:url('https://#{tracking_id}.emltrk.com/#{tracking_id}?f&d=#{unique_id}')}</style><div id="_t"></div>
+<img src="https://#{tracking_id}.emltrk.com/#{tracking_id}?d=#{unique_id}" width="1" height="1" border="0" />
 eos
       html.gsub("</body>", litmus_blob + "\n</body>")
     end
