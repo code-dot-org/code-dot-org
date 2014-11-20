@@ -303,6 +303,7 @@ Blockly.Msg.RENAME_PARAMETER = "Rename parameter...";
 Blockly.Msg.RENAME_PARAMETER_TITLE = "Rename all '%1' parameters to:";
 Blockly.Msg.RENAME_VARIABLE = "Rename variable...";
 Blockly.Msg.RENAME_VARIABLE_TITLE = "Rename all '%1' variables to:";
+Blockly.Msg.SAVE_AND_CLOSE = "Save and Close";
 Blockly.Msg.TEXT_APPEND_APPENDTEXT = "append text";
 Blockly.Msg.TEXT_APPEND_HELPURL = "https://code.google.com/p/blockly/wiki/Text#Text_modification";
 Blockly.Msg.TEXT_APPEND_TO = "to";
