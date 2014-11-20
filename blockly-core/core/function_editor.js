@@ -81,6 +81,7 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
   }
 
   this.show();
+  this.setupUIForBlock_(targetFunctionDefinitionBlock);
 
   targetFunctionDefinitionBlock.setUserVisible(true);
   var dom = Blockly.Xml.blockToDom_(targetFunctionDefinitionBlock);
@@ -98,6 +99,14 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
       this.functionDefinitionBlock.description_ || '';
 };
 
+/**
+ * Lets subclass tweak the UI based on the given target block
+ * @param targetFunctionDefinitionBlock
+ * @protected
+ */
+Blockly.FunctionEditor.prototype.setupUIForBlock_ = function(targetFunctionDefinitionBlock) {
+};
+
 Blockly.FunctionEditor.prototype.populateParamToolbox_ = function() {
   this.orderedParamIDsToBlocks_.clear();
   this.addParamsFromProcedure_();
@@ -113,11 +122,18 @@ Blockly.FunctionEditor.prototype.addParamsFromProcedure_ = function() {
   }
 };
 
-Blockly.FunctionEditor.prototype.openWithNewFunction = function() {
+/**
+ * @param {?Function} opt_blockCreationCallback function to call on newly created block
+ *  just before opening the editor
+ */
+Blockly.FunctionEditor.prototype.openWithNewFunction = function(opt_blockCreationCallback) {
   this.ensureCreated_();
 
   this.functionDefinitionBlock = Blockly.Xml.domToBlock_(Blockly.mainBlockSpace,
     Blockly.createSvgElement('block', {type: this.definitionBlockType}));
+  if (opt_blockCreationCallback) {
+    opt_blockCreationCallback(this.functionDefinitionBlock);
+  }
   this.openAndEditFunction(this.functionDefinitionBlock.getTitleValue('NAME'));
 };
 
