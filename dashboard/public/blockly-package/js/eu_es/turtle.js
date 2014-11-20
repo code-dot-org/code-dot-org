@@ -1,4 +1,149 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+/**
+ * Copyright Marc J. Schmidt. See the LICENSE file at the top-level
+ * directory of this distribution and at
+ * https://github.com/marcj/css-element-queries/blob/master/LICENSE.
+ */
+
+(function() {
+
+    /**
+     * Class for dimension change detection.
+     *
+     * @param {Element|Element[]|Elements|jQuery} element
+     * @param {Function} callback
+     *
+     * @constructor
+     */
+    this.ResizeSensor = function(element, callback) {
+        /**
+         *
+         * @constructor
+         */
+        function EventQueue() {
+            this.q = [];
+            this.add = function(ev) {
+                this.q.push(ev);
+            };
+
+            var i, j;
+            this.call = function() {
+                for (i = 0, j = this.q.length; i < j; i++) {
+                    this.q[i].call();
+                }
+            };
+        }
+
+        /**
+         * @param {HTMLElement} element
+         * @param {String}      prop
+         * @returns {String|Number}
+         */
+        function getComputedStyle(element, prop) {
+            if (element.currentStyle) {
+                return element.currentStyle[prop];
+            } else if (window.getComputedStyle) {
+                return window.getComputedStyle(element, null).getPropertyValue(prop);
+            } else {
+                return element.style[prop];
+            }
+        }
+
+        /**
+         *
+         * @param {HTMLElement} element
+         * @param {Function}    resized
+         */
+        function attachResizeEvent(element, resized) {
+            if (!element.resizedAttached) {
+                element.resizedAttached = new EventQueue();
+                element.resizedAttached.add(resized);
+            } else if (element.resizedAttached) {
+                element.resizedAttached.add(resized);
+                return;
+            }
+
+            element.resizeSensor = document.createElement('div');
+            element.resizeSensor.className = 'resize-sensor';
+            var style = 'position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: scroll; z-index: -1; visibility: hidden;';
+            var styleChild = 'position: absolute; left: 0; top: 0;';
+
+            element.resizeSensor.style.cssText = style;
+            element.resizeSensor.innerHTML =
+                '<div class="resize-sensor-expand" style="' + style + '">' +
+                    '<div style="' + styleChild + '"></div>' +
+                '</div>' +
+                '<div class="resize-sensor-shrink" style="' + style + '">' +
+                    '<div style="' + styleChild + ' width: 200%; height: 200%"></div>' +
+                '</div>';
+            element.appendChild(element.resizeSensor);
+
+            if ('absolute' !== getComputedStyle(element, 'position')) {
+                element.style.position = 'relative';
+            }
+
+            var expand = element.resizeSensor.childNodes[0];
+            var expandChild = expand.childNodes[0];
+            var shrink = element.resizeSensor.childNodes[1];
+            var shrinkChild = shrink.childNodes[0];
+
+            var lastWidth, lastHeight;
+
+            var reset = function() {
+                expandChild.style.width = expand.offsetWidth + 10 + 'px';
+                expandChild.style.height = expand.offsetHeight + 10 + 'px';
+                expand.scrollLeft = expand.scrollWidth;
+                expand.scrollTop = expand.scrollHeight;
+                shrink.scrollLeft = shrink.scrollWidth;
+                shrink.scrollTop = shrink.scrollHeight;
+                lastWidth = element.offsetWidth;
+                lastHeight = element.offsetHeight;
+            };
+
+            reset();
+
+            var changed = function() {
+                element.resizedAttached.call();
+            };
+
+            var addEvent = function(el, name, cb) {
+                if (el.attachEvent) {
+                    el.attachEvent('on' + name, cb);
+                } else {
+                    el.addEventListener(name, cb);
+                }
+            };
+
+            addEvent(expand, 'scroll', function() {
+                if (element.offsetWidth > lastWidth || element.offsetHeight > lastHeight) {
+                    changed();
+                }
+                reset();
+            });
+
+            addEvent(shrink, 'scroll',function() {
+                if (element.offsetWidth < lastWidth || element.offsetHeight < lastHeight) {
+                    changed();
+                }
+                reset();
+            });
+        }
+
+        if ('array' === typeof element ||
+          ('undefined' !== typeof jQuery && element instanceof jQuery) || //jquery
+          ('undefined' !== typeof Elements && element instanceof Elements) //mootools
+        ) {
+            var i = 0, j = element.length;
+            for (; i < j; i++) {
+                attachResizeEvent(element[i], callback);
+            }
+        } else {
+            attachResizeEvent(element, callback);
+        }
+    };
+
+})();
+},{}],2:[function(require,module,exports){
 (function (global){
 var utils = require('./utils');
 var requiredBlockUtils = require('./required_block_utils');
@@ -98,7 +243,7 @@ module.exports = function(app, levels, options) {
 };
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./base":2,"./blocksCommon":4,"./dom":8,"./required_block_utils":13,"./utils":40}],2:[function(require,module,exports){
+},{"./base":3,"./blocksCommon":5,"./dom":9,"./required_block_utils":14,"./utils":41}],3:[function(require,module,exports){
 /**
  * Blockly Apps: Common code
  *
@@ -293,7 +438,7 @@ BlocklyApps.init = function(config) {
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
   }
 
-  if (!BlocklyApps.share) {
+  if (!config.embed && !BlocklyApps.share) {
     // Make the visualization responsive to screen size, except on share page.
     var visualization = document.getElementById('visualization');
     visualization.className += " responsive";
@@ -305,10 +450,12 @@ BlocklyApps.init = function(config) {
     var workspaceDiv = BlocklyApps.editCode ?
                         document.getElementById('codeWorkspace') :
                         container.querySelector('#blockly');
-    container.className = 'hide-source';
+    if(!config.embed || config.level.skipInstructionsPopup) {
+      container.className = 'hide-source';
+    }
     workspaceDiv.style.display = 'none';
     // For share page on mobile, do not show this part.
-    if (!BlocklyApps.share || !dom.isMobile()) {
+    if ((!config.embed) && (!BlocklyApps.share || !dom.isMobile())) {
       var buttonRow = runButton.parentElement;
       var openWorkspace = document.createElement('button');
       openWorkspace.setAttribute('id', 'open-workspace');
@@ -456,13 +603,41 @@ BlocklyApps.init = function(config) {
     });
   }
 
-  // The share page does not show the rotateContainer.
-  if (BlocklyApps.share) {
+  // The share and embed pages do not show the rotateContainer.
+  if (BlocklyApps.share || config.embed) {
     var rotateContainer = document.getElementById('rotateContainer');
     if (rotateContainer) {
       rotateContainer.style.display = 'none';
     }
   }
+
+  // In embed mode, the display scales down when the width of the visualizationColumn goes below the min width
+  if(config.embed) {
+    var resized = false;
+    var resize = function() {
+      var vizCol = document.getElementById('visualizationColumn');
+      var width = vizCol.offsetWidth;
+      var height = vizCol.offsetHeight;
+      var displayWidth = BlocklyApps.MIN_MOBILE_NO_PADDING_SHARE_WIDTH;
+      var scale = Math.min(width / displayWidth, height / displayWidth);
+      var viz = document.getElementById('visualization');
+      viz.style['transform-origin'] = 'left top';
+      viz.style['-webkit-transform'] = 'scale(' + scale + ')';
+      viz.style['max-height'] = (displayWidth * scale) + 'px';
+      viz.style.display = 'block';
+      vizCol.style.width = '';
+      document.getElementById('visualizationColumn').style['max-width'] = displayWidth + 'px';
+      // Needs to run twice on initialization
+      if(!resized) {
+        resized = true;
+        resize();
+      }
+    };
+    // Depends on ResizeSensor.js
+    var ResizeSensor = require('./ResizeSensor');
+    new ResizeSensor(document.getElementById('visualizationColumn'), resize);
+  }
+
   var orientationHandler = function() {
     window.scrollTo(0, 0);  // Browsers like to mess with scroll on rotate.
     var rotateContainer = document.getElementById('rotateContainer');
@@ -1146,7 +1321,7 @@ var getIdealBlockNumberMsg = function() {
       msg.infinity() : BlocklyApps.IDEAL_BLOCK_NUM;
 };
 
-},{"../locale/eu_es/common":42,"./block_utils":3,"./builder":5,"./constants.js":7,"./dom":8,"./feedback.js":9,"./slider":15,"./templates/buttons.html":17,"./templates/instructions.html":19,"./templates/learn.html":20,"./templates/makeYourOwn.html":21,"./utils":40,"./xml":41}],3:[function(require,module,exports){
+},{"../locale/eu_es/common":43,"./ResizeSensor":1,"./block_utils":4,"./builder":6,"./constants.js":8,"./dom":9,"./feedback.js":10,"./slider":16,"./templates/buttons.html":18,"./templates/instructions.html":20,"./templates/learn.html":21,"./templates/makeYourOwn.html":22,"./utils":41,"./xml":42}],4:[function(require,module,exports){
 var xml = require('./xml');
 
 exports.createToolbox = function(blocks) {
@@ -1335,7 +1510,7 @@ exports.mathBlockXml = function (type, inputs, titles) {
   return str;
 };
 
-},{"./xml":41}],4:[function(require,module,exports){
+},{"./xml":42}],5:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -1500,7 +1675,7 @@ function installWhenRun(blockly, skin, isK1) {
   };
 }
 
-},{"../locale/eu_es/common":42}],5:[function(require,module,exports){
+},{"../locale/eu_es/common":43}],6:[function(require,module,exports){
 var feedback = require('./feedback.js');
 var dom = require('./dom.js');
 var utils = require('./utils.js');
@@ -1530,7 +1705,7 @@ exports.builderForm = function(onAttemptCallback) {
   dialog.show({ backdrop: 'static' });
 };
 
-},{"./dom.js":8,"./feedback.js":9,"./templates/builder.html":16,"./utils.js":40,"url":54}],6:[function(require,module,exports){
+},{"./dom.js":9,"./feedback.js":10,"./templates/builder.html":17,"./utils.js":41,"url":55}],7:[function(require,module,exports){
 var INFINITE_LOOP_TRAP = '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 
 var LOOP_HIGHLIGHT = 'loopHighlight();\n';
@@ -1818,7 +1993,7 @@ exports.functionFromCode = function(code, options) {
   }
 };
 
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 /**
  * @fileoverview Constants used in production code and tests.
  */
@@ -1880,7 +2055,7 @@ exports.BeeTerminationValue = {
   INSUFFICIENT_HONEY: 8  // Didn't make all honey by finish
 };
 
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 exports.addReadyListener = function(callback) {
   if (document.readyState === "complete") {
     setTimeout(callback, 1);
@@ -1987,7 +2162,7 @@ exports.isIOS = function() {
   return reg.test(window.navigator.userAgent);
 };
 
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 var trophy = require('./templates/trophy.html');
 var utils = require('./utils');
 var readonly = require('./templates/readonly.html');
@@ -2960,7 +3135,7 @@ var generateXMLForBlocks = function(blocks) {
 };
 
 
-},{"../locale/eu_es/common":42,"./codegen":6,"./constants":7,"./dom":8,"./templates/buttons.html":17,"./templates/code.html":18,"./templates/readonly.html":23,"./templates/shareFailure.html":24,"./templates/sharing.html":25,"./templates/showCode.html":26,"./templates/trophy.html":27,"./utils":40}],10:[function(require,module,exports){
+},{"../locale/eu_es/common":43,"./codegen":7,"./constants":8,"./dom":9,"./templates/buttons.html":18,"./templates/code.html":19,"./templates/readonly.html":24,"./templates/shareFailure.html":25,"./templates/sharing.html":26,"./templates/showCode.html":27,"./templates/trophy.html":28,"./utils":41}],11:[function(require,module,exports){
 /*! Hammer.JS - v1.1.3 - 2014-05-22
  * http://eightmedia.github.io/hammer.js
  *
@@ -5124,7 +5299,7 @@ if(typeof define == 'function' && define.amd) {
 }
 
 })(window);
-},{}],11:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 // Functions for checking required blocks.
 
 /**
@@ -5183,7 +5358,7 @@ exports.define = function(name) {
   };
 };
 
-},{}],12:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -8110,7 +8285,7 @@ exports.define = function(name) {
 }.call(this));
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],13:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
@@ -8354,7 +8529,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"./block_utils":3,"./utils":40,"./xml":41}],14:[function(require,module,exports){
+},{"./block_utils":4,"./utils":41,"./xml":42}],15:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -8431,7 +8606,7 @@ exports.load = function(assetUrl, id) {
   return skin;
 };
 
-},{}],15:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 /**
  * Blockly Apps: SVG Slider
  *
@@ -8657,7 +8832,7 @@ Slider.bindEvent_ = function(element, name, func) {
 
 module.exports = Slider;
 
-},{"./dom":8}],16:[function(require,module,exports){
+},{"./dom":9}],17:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -8678,7 +8853,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":44}],17:[function(require,module,exports){
+},{"ejs":45}],18:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -8699,7 +8874,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/eu_es/common":42,"ejs":44}],18:[function(require,module,exports){
+},{"../../locale/eu_es/common":43,"ejs":45}],19:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -8720,7 +8895,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":44}],19:[function(require,module,exports){
+},{"ejs":45}],20:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -8741,7 +8916,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/eu_es/common":42,"ejs":44}],20:[function(require,module,exports){
+},{"../../locale/eu_es/common":43,"ejs":45}],21:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -8764,7 +8939,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/eu_es/common":42,"ejs":44}],21:[function(require,module,exports){
+},{"../../locale/eu_es/common":43,"ejs":45}],22:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -8785,7 +8960,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/eu_es/common":42,"ejs":44}],22:[function(require,module,exports){
+},{"../../locale/eu_es/common":43,"ejs":45}],23:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -8810,7 +8985,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/eu_es/common":42,"ejs":44}],23:[function(require,module,exports){
+},{"../../locale/eu_es/common":43,"ejs":45}],24:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -8832,7 +9007,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":44}],24:[function(require,module,exports){
+},{"ejs":45}],25:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -8853,7 +9028,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":44}],25:[function(require,module,exports){
+},{"ejs":45}],26:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -8874,7 +9049,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/eu_es/common":42,"ejs":44}],26:[function(require,module,exports){
+},{"../../locale/eu_es/common":43,"ejs":45}],27:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -8895,7 +9070,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/eu_es/common":42,"ejs":44}],27:[function(require,module,exports){
+},{"../../locale/eu_es/common":43,"ejs":45}],28:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -8916,7 +9091,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":44}],28:[function(require,module,exports){
+},{"ejs":45}],29:[function(require,module,exports){
 /**
  * Blockly Demo: Turtle Graphics
  *
@@ -9266,7 +9441,7 @@ exports.answer = function(page, level) {
   return api.log;
 };
 
-},{"../base":2,"./api":29}],29:[function(require,module,exports){
+},{"../base":3,"./api":30}],30:[function(require,module,exports){
 var BlocklyApps = require('../base');
 var utils = require('../utils');
 var _ = utils.getLodash();
@@ -9451,7 +9626,7 @@ exports.drawStamp = function(stamp, id) {
   this.log.push(['stamp', stamp, id]);
 };
 
-},{"../base":2,"../utils":40}],30:[function(require,module,exports){
+},{"../base":3,"../utils":41}],31:[function(require,module,exports){
 /**
  * Blockly Demo: Turtle Graphics
  *
@@ -10415,7 +10590,7 @@ exports.install = function(blockly, blockInstallOptions) {
   customLevelBlocks.install(blockly, generator, gensym);
 };
 
-},{"../../locale/eu_es/common":42,"../../locale/eu_es/turtle":43,"./core":32,"./customLevelBlocks":33,"./turtle":39}],31:[function(require,module,exports){
+},{"../../locale/eu_es/common":43,"../../locale/eu_es/turtle":44,"./core":33,"./customLevelBlocks":34,"./turtle":40}],32:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -10436,7 +10611,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":44}],32:[function(require,module,exports){
+},{"ejs":45}],33:[function(require,module,exports){
 // Create a limited colour palette to avoid overwhelming new users
 // and to make colour checking easier.  These definitions cannot be
 // moved to blocks.js, which is loaded later, since they are used in
@@ -10467,7 +10642,7 @@ exports.Colours = {
   FROZEN9: "#aea4ff"
 };
 
-},{}],33:[function(require,module,exports){
+},{}],34:[function(require,module,exports){
 /**
  * A set of blocks used by some of our custom levels (i.e. built by level builder)
  */
@@ -11156,7 +11331,7 @@ function installCreateASnowflakeDropdown(blockly, generator, gensym) {
   };
 }
 
-},{"../../locale/eu_es/turtle":43,"../utils":40}],34:[function(require,module,exports){
+},{"../../locale/eu_es/turtle":44,"../utils":41}],35:[function(require,module,exports){
 var levelBase = require('../level_base');
 var Colours = require('./core').Colours;
 var answer = require('./answers').answer;
@@ -12055,7 +12230,7 @@ levels.ec_1_10 = utils.extend(levels['1_10'], {
   'startBlocks': "moveForward(100);\n",
 });
 
-},{"../../locale/eu_es/turtle":43,"../block_utils":3,"../level_base":11,"../utils":40,"./answers":28,"./core":32,"./requiredBlocks":36,"./startBlocks.xml":37,"./toolbox.xml":38}],35:[function(require,module,exports){
+},{"../../locale/eu_es/turtle":44,"../block_utils":4,"../level_base":12,"../utils":41,"./answers":29,"./core":33,"./requiredBlocks":37,"./startBlocks.xml":38,"./toolbox.xml":39}],36:[function(require,module,exports){
 var appMain = require('../appMain');
 window.Turtle = require('./turtle');
 var blocks = require('./blocks');
@@ -12068,7 +12243,7 @@ window.turtleMain = function(options) {
   appMain(window.Turtle, levels, options);
 };
 
-},{"../appMain":1,"../skins":14,"./blocks":30,"./levels":34,"./turtle":39}],36:[function(require,module,exports){
+},{"../appMain":2,"../skins":15,"./blocks":31,"./levels":35,"./turtle":40}],37:[function(require,module,exports){
 /**
  * Sets BlocklyApp constants that depend on the page and level.
  * This encapsulates many functions used for BlocklyApps.REQUIRED_BLOCKS.
@@ -12272,7 +12447,7 @@ module.exports = {
   defineWithArg: defineWithArg,
 };
 
-},{"../required_block_utils":13}],37:[function(require,module,exports){
+},{"../required_block_utils":14}],38:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -12339,7 +12514,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/eu_es/turtle":43,"ejs":44}],38:[function(require,module,exports){
+},{"../../locale/eu_es/turtle":44,"ejs":45}],39:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -12468,7 +12643,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/eu_es/turtle":43,"ejs":44}],39:[function(require,module,exports){
+},{"../../locale/eu_es/turtle":44,"ejs":45}],40:[function(require,module,exports){
 /**
  * Blockly Demo: Turtle Graphics
  *
@@ -12556,15 +12731,17 @@ Turtle.decorationAnimationImage = new Image();
  * Drawing with a pattern
  */
 
-Turtle.patternForPaths = new Image();
+Turtle.currentPathPattern = new Image();
+Turtle.loadedPathPatterns = [];
 Turtle.isDrawingWithPattern = false;
 
 function backingScale(context) {
-  if ('devicePixelRatio' in window) {
-    if (window.devicePixelRatio > 1) {
-      return window.devicePixelRatio;
-    }
-  }
+  // disable retina for now
+  // if ('devicePixelRatio' in window) {
+  //   if (window.devicePixelRatio > 1) {
+  //     return window.devicePixelRatio;
+  //   }
+  // }
   return 1;
 }
 
@@ -12745,8 +12922,7 @@ Turtle.init = function(config) {
         if (skin[pattern]) {
           var img = new Image();
           img.src = skin[pattern];
-          img.id = pattern;
-          imageContainer.appendChild(img);
+          Turtle.loadedPathPatterns[pattern] = img;
         }
       }
     }
@@ -13062,14 +13238,14 @@ BlocklyApps.reset = function(ignore) {
 
   if (skin.id == "anna") {
     if (retina > 1)
-      Turtle.setPattern(document.getElementById("annaLine_2x"));
+      Turtle.setPattern("annaLine_2x");
     else
-      Turtle.setPattern(document.getElementById("annaLine"));
+      Turtle.setPattern("annaLine");
   } else if (skin.id == "elsa") {
     if (retina > 1)
-      Turtle.setPattern(document.getElementById("elsaLine_2x"));
+      Turtle.setPattern("elsaLine_2x");
     else
-      Turtle.setPattern(document.getElementById("elsaLine"));
+      Turtle.setPattern("elsaLine");
   } else {
     // Reset to empty pattern
     Turtle.setPattern(null);
@@ -13445,7 +13621,7 @@ Turtle.step = function(command, values, options) {
       if (!values[0] || values[0] == 'DEFAULT') {
           Turtle.setPattern(null);
       } else {
-        Turtle.setPattern(document.getElementById(values[0]));
+        Turtle.setPattern(values[0]);
       }
       break;
     case 'HT':  // Hide Turtle
@@ -13470,12 +13646,12 @@ Turtle.step = function(command, values, options) {
 };
 
 Turtle.setPattern = function (pattern) {
-  if ( pattern === null ) {
-    Turtle.patternForPaths = new Image();
+  if (Turtle.loadedPathPatterns[pattern]) {
+    Turtle.currentPathPattern = Turtle.loadedPathPatterns[pattern];
+    Turtle.isDrawingWithPattern = true; 
+  } else if (pattern === null) {
+    Turtle.currentPathPattern = new Image();
     Turtle.isDrawingWithPattern = false;
-  } else {
-    Turtle.patternForPaths = pattern;
-    Turtle.isDrawingWithPattern = true;
   }
 };
 
@@ -13605,7 +13781,7 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
 
   if (skin.id == "anna" || skin.id == "elsa") {
     Turtle.ctxPattern.moveTo(Turtle.stepStartX * retina, Turtle.stepStartY * retina);
-    img = Turtle.patternForPaths;
+    img = Turtle.currentPathPattern;
     startX = Turtle.stepStartX;
     startY = Turtle.stepStartY;
 
@@ -13630,7 +13806,7 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
   } else {
 
     Turtle.ctxScratch.moveTo(Turtle.x, Turtle.y);
-    img = Turtle.patternForPaths;
+    img = Turtle.currentPathPattern;
     startX = Turtle.x;
     startY = Turtle.y;
 
@@ -13870,7 +14046,7 @@ var getFeedbackImage = function() {
       feedbackCanvas.toDataURL("image/png").split(',')[1]);
 };
 
-},{"../../locale/eu_es/common":42,"../../locale/eu_es/turtle":43,"../base":2,"../codegen":6,"../feedback.js":9,"../skins":14,"../templates/page.html":22,"../utils":40,"./api":29,"./controls.html":31,"./core":32,"./levels":34}],40:[function(require,module,exports){
+},{"../../locale/eu_es/common":43,"../../locale/eu_es/turtle":44,"../base":3,"../codegen":7,"../feedback.js":10,"../skins":15,"../templates/page.html":23,"../utils":41,"./api":30,"./controls.html":32,"./core":33,"./levels":35}],41:[function(require,module,exports){
 var xml = require('./xml');
 var savedAmd;
 
@@ -14195,7 +14371,7 @@ exports.generateDropletModeOptions = function (codeFunctions) {
   return modeOptions;
 };
 
-},{"./hammer":10,"./lodash":12,"./xml":41}],41:[function(require,module,exports){
+},{"./hammer":11,"./lodash":13,"./xml":42}],42:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
@@ -14223,7 +14399,7 @@ exports.parseElement = function(text) {
   return element;
 };
 
-},{}],42:[function(require,module,exports){
+},{}],43:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.eu=function(n){return n===1?"one":"other"}
 exports.and = function(d){return "eta"};
 
@@ -14392,7 +14568,7 @@ exports.genericFeedback = function(d){return "See how you ended up, and try to f
 exports.defaultTwitterText = function(d){return "Check out what I made"};
 
 
-},{"messageformat":55}],43:[function(require,module,exports){
+},{"messageformat":56}],44:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.eu=function(n){return n===1?"one":"other"}
 exports.blocksUsed = function(d){return "Erabilitako blokeak: %1"};
 
@@ -14559,7 +14735,7 @@ exports.widthTooltip = function(d){return "Arkatzaren lodiera aldatzen du."};
 exports.wrongColour = function(d){return "Zure irudia kolore okerrekoa da. Puzle hontarako %1 behar du izan."};
 
 
-},{"messageformat":55}],44:[function(require,module,exports){
+},{"messageformat":56}],45:[function(require,module,exports){
 
 /*!
  * EJS
@@ -14918,7 +15094,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":45,"./utils":46,"fs":47,"path":48}],45:[function(require,module,exports){
+},{"./filters":46,"./utils":47,"fs":48,"path":49}],46:[function(require,module,exports){
 /*!
  * EJS - Filters
  * Copyright(c) 2010 TJ Holowaychuk <tj@vision-media.ca>
@@ -15121,7 +15297,7 @@ exports.json = function(obj){
   return JSON.stringify(obj);
 };
 
-},{}],46:[function(require,module,exports){
+},{}],47:[function(require,module,exports){
 
 /*!
  * EJS
@@ -15147,9 +15323,9 @@ exports.escape = function(html){
 };
  
 
-},{}],47:[function(require,module,exports){
-
 },{}],48:[function(require,module,exports){
+
+},{}],49:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -15377,7 +15553,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require("JkpR2F"))
-},{"JkpR2F":49}],49:[function(require,module,exports){
+},{"JkpR2F":50}],50:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -15442,7 +15618,7 @@ process.chdir = function (dir) {
     throw new Error('process.chdir is not supported');
 };
 
-},{}],50:[function(require,module,exports){
+},{}],51:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -15953,7 +16129,7 @@ process.chdir = function (dir) {
 }(this));
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],51:[function(require,module,exports){
+},{}],52:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -16039,7 +16215,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],52:[function(require,module,exports){
+},{}],53:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -16126,13 +16302,13 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],53:[function(require,module,exports){
+},{}],54:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":51,"./encode":52}],54:[function(require,module,exports){
+},{"./decode":52,"./encode":53}],55:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -16841,7 +17017,7 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":50,"querystring":53}],55:[function(require,module,exports){
+},{"punycode":51,"querystring":54}],56:[function(require,module,exports){
 /**
  * messageformat.js
  *
@@ -18424,4 +18600,4 @@ function isNullOrUndefined(arg) {
 
 })( this );
 
-},{}]},{},[35])
+},{}]},{},[36])

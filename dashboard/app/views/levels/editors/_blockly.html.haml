@@ -76,3 +76,8 @@
     = f.label :free_play, "Free Play"
     %p Free Play levels are not checked for correctness (any solution is accepted), can be shared, and can be saved to the public and private gallery
     = boolean_check_box f, :free_play
+- if @level.respond_to? :free_play
+  .field
+    = f.label :embed, "Embed"
+    %p Embedded levels hide the Blockly workspace, only showing the visualization area (and the 'finish' button, if 'freeplay' is also set).
+    = boolean_check_box f, :embed

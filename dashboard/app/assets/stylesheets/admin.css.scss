@@ -15,5 +15,8 @@
 
   /* don't take over the whole window*/
   max-height: 50%;
-  overflow: scroll;
+  /* only display scrollbars when needed */
+  overflow: auto;
+  /* admin box appears in front of the rest of the level */
+  z-index: 1;
 }
