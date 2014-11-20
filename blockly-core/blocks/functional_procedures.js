@@ -102,6 +102,12 @@ Blockly.Blocks.functional_definition = {
     }
     this.updateParams_();
   },
+  isVariable: function() {
+    return this.isFunctionalVariable_;
+  },
+  convertToVariable: function() {
+    this.isFunctionalVariable_ = true;
+  },
   /**
    * Updates parameters (renaming, deleting, adding as appropriate)
    * on this procedure and its callers.

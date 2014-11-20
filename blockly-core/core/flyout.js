@@ -425,7 +425,8 @@ Blockly.Flyout.prototype.show = function(xmlList) {
   } else if (firstBlock === Blockly.Procedures.NAME_TYPE_FUNCTIONAL_VARIABLE) {
     // Special category for functional variables.
     if (Blockly.functionEditor && !Blockly.functionEditor.isOpen()) {
-      this.addButtonToFlyout_(cursor, Blockly.Msg.FUNCTIONAL_VARIABLE_CREATE, this.createFunction_);
+      this.addButtonToFlyout_(cursor, Blockly.Msg.FUNCTIONAL_VARIABLE_CREATE,
+        this.createFunctionalVariable_);
     }
     Blockly.Procedures.flyoutCategory(blocks, gaps, margin, this.blockSpace_);
   } else {
@@ -620,6 +621,16 @@ Blockly.Flyout.prototype.onMouseMove_ = function(e) {
  */
 Blockly.Flyout.prototype.createFunction_ = function() {
   Blockly.functionEditor.openWithNewFunction();
+};
+
+Blockly.Flyout.prototype.createFunctionalVariable_ = function() {
+  Blockly.functionEditor.openWithNewFunction(function(block) {
+    if (!block.type === 'functional_definition') {
+      throw "Non-functional definition block cannot be used as functional variable";
+    }
+
+    block.convertToVariable();
+  });
 };
 
 /**

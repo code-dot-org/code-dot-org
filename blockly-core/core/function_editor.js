@@ -113,11 +113,18 @@ Blockly.FunctionEditor.prototype.addParamsFromProcedure_ = function() {
   }
 };
 
-Blockly.FunctionEditor.prototype.openWithNewFunction = function() {
+/**
+ * @param {?Function} opt_blockCreationCallback function to call on newly created block
+ *  just before opening the editor
+ */
+Blockly.FunctionEditor.prototype.openWithNewFunction = function(opt_blockCreationCallback) {
   this.ensureCreated_();
 
   this.functionDefinitionBlock = Blockly.Xml.domToBlock_(Blockly.mainBlockSpace,
     Blockly.createSvgElement('block', {type: this.definitionBlockType}));
+  if (opt_blockCreationCallback) {
+    opt_blockCreationCallback(this.functionDefinitionBlock);
+  }
   this.openAndEditFunction(this.functionDefinitionBlock.getTitleValue('NAME'));
 };
 
