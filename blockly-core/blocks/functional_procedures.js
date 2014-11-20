@@ -79,9 +79,9 @@ Blockly.Blocks.functional_definition = {
       container.appendChild(outputTypeMutation);
     }
     if (this.isFunctionalVariable_) {
-      var outputTypeMutation = document.createElement('isfunctionalvariable');
-      outputTypeMutation.innerHTML = 'true';
-      container.appendChild(outputTypeMutation);
+      var functionalVariableMutation = document.createElement('isfunctionalvariable');
+      functionalVariableMutation.innerHTML = 'true';
+      container.appendChild(functionalVariableMutation);
     }
     return container;
   },
