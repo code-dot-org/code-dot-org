@@ -18,7 +18,6 @@
   = render partial: "levels/unplug", locals: { app: @game.app }
 - elsif @level.is_a?(Blockly) && @level.embed && !@edit_blocks
   - # Pass special parameters to Blockly partial for embedded level type.
-  - @share = false
   = render partial: "levels/blockly", locals: { embed: true, start_blocks: @start_blocks, app: @game.app, solution_blocks: @solution_blocks, maze: @level[:maze], hide_source: true, no_padding: true}
 - elsif @level.is_a?(DSLDefined)
   = render partial: "levels/#{@level.class.to_s.underscore}"
