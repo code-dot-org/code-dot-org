@@ -6,7 +6,7 @@
 
 #classroom a {
   color: white;
-  font-weight: 500;
+  font-family: 'Gotham 5r', sans-serif;
 }
 
 #classroom .section {
@@ -25,7 +25,7 @@
 }
 
 #classroom .section h2 {
-  font-weight: bold;
+  font-family: 'Gotham 7r', sans-serif;
   margin-top: 0px;
   margin-bottom:10px;
   color: white;
@@ -107,7 +107,7 @@
 }
 
 .game-group .stage .game-title {
-  font-weight: 500
+  font-family: 'Gotham 5r', sans-serif;
 }
 
 .game-group .single-game {
@@ -129,18 +129,18 @@
   background-color: #7665a0;
 }
 
-.game-group .single-game &.level-done {
+.game-group .single-game.level-done {
   background-color: #ffa400;
 }
 
-.game-group .single-game &:hover {
+.game-group .single-game:hover {
   background-color: black;
   text-decoration: none;
 }
 
 .game-group .single-game span {
   color: white;
-  font-weight: normal;
+  font-family: 'Gotham 4r', sans-serif;
 }
 
 .game-group .games {
@@ -161,7 +161,7 @@
 
 a.level_link:link, a.level_link:visited, a.level_link:hover, a.level_link:active {
   color: white;
-  font-weight: 400;
+  font-family: 'Gotham 4r', sans-serif;
 }
 
 .trophy_image {
@@ -203,7 +203,7 @@ a.level_link:link, a.level_link:visited, a.level_link:hover, a.level_link:active
   color: white;
   font-size: 13px;
   padding-right: 10px;
-  font-weight: normal;
+  font-family: 'Gotham 4r', sans-serif;
 }
 .miniblock .imgspan {
   margin-left: 0px;
@@ -219,7 +219,7 @@ a.level_link:link, a.level_link:visited, a.level_link:hover, a.level_link:active
 .miniblock .smalltext {
   font-size: 13px;
   padding-right: 10px;
-  font-weight: normal;
+  font-family: 'Gotham 4r', sans-serif;
 }
 
 .miniblock + .miniblock {
@@ -246,7 +246,7 @@ a.level_link:link, a.level_link:visited, a.level_link:hover, a.level_link:active
 
 .miniblock h3 {
   font-size: 24.5px;
-  font-weight: 400;
+  font-family: 'Gotham 5r', sans-serif;
 }
 
 .miniblock .betatext {
