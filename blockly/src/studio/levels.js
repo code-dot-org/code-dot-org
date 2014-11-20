@@ -1046,17 +1046,18 @@ levels.full_sandbox =  {
        createCategory(msg.catVariables(), '', 'VARIABLE') +
        createCategory(msg.catProcedures(), '', 'PROCEDURE') +
        createCategory('Functional',
-           blockOfType('functional_setBackground') +
-           blockOfType('functional_setPlayerSpeed') +
-           blockOfType('functional_setEnemySpeed') +
-           blockOfType('functional_showTitleScreen') +
            blockOfType('functional_string') +
            blockOfType('functional_background_string_picker') +
            blockOfType('functional_math_number') +
            '<block type="functional_math_number_dropdown">' +
              '<title name="NUM" config="2,3,4,5,6,7,8,9,10,11,12">???</title>' +
            '</block>') +
-       createCategory('Functional logic',
+       createCategory('Functional Start',
+           blockOfType('functional_start_setBackground') +
+           blockOfType('functional_start_setSpeeds') +
+           blockOfType('functional_start_setBackgroundAndSpeeds') +
+           blockOfType('functional_start_dummyOnMove')) +
+       createCategory('Functional Logic',
            blockOfType('functional_greater_than') +
            blockOfType('functional_less_than') +
            blockOfType('functional_number_equals') +
