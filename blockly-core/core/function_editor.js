@@ -81,6 +81,7 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
   }
 
   this.show();
+  this.setupUIForBlock_(targetFunctionDefinitionBlock);
 
   targetFunctionDefinitionBlock.setUserVisible(true);
   var dom = Blockly.Xml.blockToDom_(targetFunctionDefinitionBlock);
@@ -96,6 +97,14 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
   goog.dom.getElement('functionNameText').value = functionName;
   goog.dom.getElement('functionDescriptionText').value =
       this.functionDefinitionBlock.description_ || '';
+};
+
+/**
+ * Lets subclass tweak the UI based on the given target block
+ * @param targetFunctionDefinitionBlock
+ * @protected
+ */
+Blockly.FunctionEditor.prototype.setupUIForBlock_ = function(targetFunctionDefinitionBlock) {
 };
 
 Blockly.FunctionEditor.prototype.populateParamToolbox_ = function() {

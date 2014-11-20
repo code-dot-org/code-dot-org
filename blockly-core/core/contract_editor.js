@@ -54,9 +54,11 @@ Blockly.ContractEditor.prototype.createContractDom_ = function() {
   this.contractDiv_.innerHTML =
       '<div>' + Blockly.Msg.FUNCTIONAL_NAME_LABEL + '</div>'
         + '<div><input id="functionNameText" type="text"></div>'
-        + '<div>' + Blockly.Msg.FUNCTIONAL_DESCRIPTION_LABEL + '</div>'
-        + '<div><textarea id="functionDescriptionText" rows="2"></textarea></div>'
-        + '<div>' + Blockly.Msg.FUNCTIONAL_RANGE_LABEL + '</div>'
+        + '<div id="description-area" style="margin: 0px;">'
+          + '<div>' + Blockly.Msg.FUNCTIONAL_DESCRIPTION_LABEL + '</div>'
+          + '<div><textarea id="functionDescriptionText" rows="2"></textarea></div>'
+        + '</div>'
+        + '<div id="outputTypeTitle">' + Blockly.Msg.FUNCTIONAL_RANGE_LABEL + '</div>'
         + '<span id="outputTypeDropdown"></span>'
         + '<div id="domain-area" style="margin: 0px;">'
           + '<div>' + Blockly.Msg.FUNCTIONAL_DOMAIN_LABEL + '</div>'
@@ -81,15 +83,14 @@ Blockly.ContractEditor.prototype.createContractDom_ = function() {
 /**
  * @override
  */
-Blockly.ContractEditor.prototype.show = function() {
+Blockly.ContractEditor.prototype.setupUIForBlock_ = function(targetFunctionDefinitionBlock) {
+  var isEditingVariable = targetFunctionDefinitionBlock.isVariable();
+  this.frameText_.textContent = isEditingVariable ? Blockly.Msg.FUNCTIONAL_VARIABLE_HEADER : Blockly.Msg.FUNCTION_HEADER;
+  goog.dom.setTextContent(goog.dom.getElement('outputTypeTitle'),
+    isEditingVariable ? Blockly.Msg.FUNCTIONAL_VARIABLE_TYPE : Blockly.Msg.FUNCTIONAL_RANGE_LABEL);
+  goog.style.showElement(goog.dom.getElement('domain-area'), !isEditingVariable);
+  goog.style.showElement(goog.dom.getElement('description-area'), !isEditingVariable);
   Blockly.ContractEditor.superClass_.show.call(this);
-  if (this.functionDefinitionBlock.isVariable()) {
-    this.frameText_.textContent = Blockly.Msg.FUNCTIONAL_VARIABLE_HEADER;
-    goog.style.showElement(goog.dom.getElement('domain-area'), false);
-  } else {
-    this.frameText_.textContent = Blockly.Msg.FUNCTION_HEADER;
-    goog.style.showElement(goog.dom.getElement('domain-area'), true);
-  }
 };
 
 /**
