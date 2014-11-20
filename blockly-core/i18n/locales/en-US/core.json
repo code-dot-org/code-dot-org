@@ -86,6 +86,7 @@
     "FUNCTIONAL_RANGE_LABEL": "Range",
     "FUNCTIONAL_VARIABLE_CREATE": "Create a Variable",
     "FUNCTIONAL_VARIABLE_HEADER": "Variable",
+    "FUNCTIONAL_VARIABLE_TYPE": "Type",
     "HELP": "Help",
     "INLINE_INPUTS": "Inline Inputs",
     "LISTS_CREATE_EMPTY_HELPURL": "http://en.wikipedia.org/wiki/Linked_list#Empty_lists",

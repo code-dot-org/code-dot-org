@@ -87,6 +87,7 @@ Blockly.Msg.FUNCTIONAL_PROCEDURE_DEFINE_TOOLTIP = "Define a functional method";
 Blockly.Msg.FUNCTIONAL_RANGE_LABEL = "Range";
 Blockly.Msg.FUNCTIONAL_VARIABLE_CREATE = "Create a Variable";
 Blockly.Msg.FUNCTIONAL_VARIABLE_HEADER = "Variable";
+Blockly.Msg.FUNCTIONAL_VARIABLE_TYPE = "Type";
 Blockly.Msg.HELP = "Help";
 Blockly.Msg.INLINE_INPUTS = "Inline Inputs";
 Blockly.Msg.LISTS_CREATE_EMPTY_HELPURL = "http://en.wikipedia.org/wiki/Linked_list#Empty_lists";
