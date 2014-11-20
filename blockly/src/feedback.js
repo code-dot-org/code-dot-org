@@ -28,7 +28,7 @@ exports.displayFeedback = function(options) {
   var showingSharing = options.showingSharing && !hadShareFailure;
 
   var canContinue = exports.canContinueToNextLevel(options.feedbackType);
-  var displayShowCode = BlocklyApps.enableShowCode && canContinue;
+  var displayShowCode = BlocklyApps.enableShowCode && canContinue && !showingSharing;
   var feedback = document.createElement('div');
   var sharingDiv = (canContinue && showingSharing) ? exports.createSharingDiv(options) : null;
   var showCode = displayShowCode ? getShowCodeElement(options) : null;
