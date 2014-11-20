@@ -33,6 +33,11 @@ MESSAGE_TEMPLATES = {}.tap do |results|
   end
 end
 
+POSTE_BASE_URL = (rack_env?(:production) ? 'https://' : 'http://') + CDO.poste_host
+def poste_url(*parts)
+  File.join(POSTE_BASE_URL, *parts)
+end
+
 module Poste
 
   class Template
@@ -60,10 +65,20 @@ module Poste
       locals = OpenStruct.new(params).instance_eval{binding}
 
       header = @header.result(locals) unless @header.nil?
-      html = replace_urls_with_click_trackers @html.result(locals), params unless @html.nil?
+      html = replace_urls_with_click_trackers @html.result(locals), params if @html
+      html = inject_litmus_tracking html, header['litmus_tracking_id'] if html
       text = @text.result(locals) unless @text.nil?
 
       [header, html, text]
+    end
+
+    def inject_litmus_tracking(html, tracking_id)
+      return html unless tracking_id
+      litmus_blob = <<-eos
+<style>@media print{ #_t { background-image: url('https://#{tracking_id}.emltrk.com/#{tracking_id}?p&d=[UNIQUE]');}} div.OutlookMessageHeader {background-image:url('https://#{tracking_id}.emltrk.com/#{tracking_id}?f&d=[UNIQUE]')} table.moz-email-headers-table {background-image:url('https://#{tracking_id}.emltrk.com/#{tracking_id}?f&d=[UNIQUE]')} blockquote #_t {background-image:url('https://#{tracking_id}.emltrk.com/#{tracking_id}?f&d=[UNIQUE]')} #MailContainerBody #_t {background-image:url('https://#{tracking_id}.emltrk.com/#{tracking_id}?f&d=[UNIQUE]')}</style><div id="_t"></div>
+<img src="https://#{tracking_id}.emltrk.com/#{tracking_id}?d=[UNIQUE]" width="1" height="1" border="0" />
+eos
+      html.gsub("</body>", litmus_blob + "\n</body>")
     end
 
     def replace_urls_with_click_trackers(html, params)
@@ -74,7 +89,7 @@ module Poste
         next unless href =~ /^http:\/\// || href =~ /^https:\/\//
 
         url_id = Poste2::find_or_create_url(href)
-        link.attributes['href'].value = "http://#{CDO.poste_host}/l/#{params[:encrypted_id]}/#{Base64.urlsafe_encode64(url_id.to_s)}"
+        link.attributes['href'].value = poste_url("/l/#{params[:encrypted_id]}/#{Base64.urlsafe_encode64(url_id.to_s)}")
       end
       doc.to_html
     end
@@ -100,8 +115,8 @@ class Deliverer
     header, html, text = load_template(message[:name]).render(params.merge({
       recipient:OpenStruct.new(recipient),
       encrypted_id:encrypted_id,
-      unsubscribe_link:"http://#{CDO.poste_host}/u/#{encrypted_id}",
-      tracking_pixel:"http://#{CDO.poste_host}/o/#{encrypted_id}",
+      unsubscribe_link:poste_url("/u/#{encrypted_id}"),
+      tracking_pixel:poste_url("/o/#{encrypted_id}"),
     }))
     
     message = StringIO.new
@@ -124,13 +139,13 @@ class Deliverer
 
     attachments = header['attachments'] || {}
 
-    unless attachments.empty?
+    #unless attachments.empty?
       marker = "==_mimepart_#{SecureRandom.hex(17)}"
       message.puts "Content-Type: multipart/mixed; boundary=\"#{marker}\""
 
       message.puts ''
       message.puts "--#{marker}"
-    end
+    #end
 
     message.puts 'Content-Type: text/html; charset=UTF-8'
     message.puts 'Content-Transfer-Encoding: 8bit'
@@ -147,10 +162,10 @@ class Deliverer
         message.puts ''
         message.write content.scan(/.{61}/).join("\n")
       end
-
-      message.puts ''
-      message.puts "--#{marker}--"
     end
+
+    message.puts ''
+    message.puts "--#{marker}--"
 
     @smtp.send_message message.string, from_address[:email], to_address[:email]
   end
