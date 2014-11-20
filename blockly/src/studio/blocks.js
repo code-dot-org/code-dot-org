@@ -42,7 +42,7 @@ var generateSetterCode = function (opts) {
 };
 
 // These are set to the default values, but may be overridden
-var spriteCount;
+var spriteCount = 6;
 var projectileCollisions = false;
 var edgeCollisions = false;
 var allowSpritesOutsidePlayspace = false;
@@ -1183,7 +1183,7 @@ exports.install = function(blockly, blockInstallOptions) {
         dropdown = new blockly.FieldDropdown(skin.backgroundChoices);
         this.appendDummyInput().appendTitle(dropdown, 'VALUE');
       }
-      dropdown.setValue(skin.defaultBackground);
+      dropdown.setValue('"' + skin.defaultBackground + '"');
       this.setInputsInline(true);
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -1654,21 +1654,7 @@ exports.install = function(blockly, blockInstallOptions) {
   // english if not connected to the functional_setBackground block.
   // TODO(i18n): translate these strings in the Studio.setBackground
   // API instead of here.
-  var functional_background_values = [
-    [msg.backgroundCave(), 'cave'],
-    [msg.backgroundNight(), 'night'],
-    [msg.backgroundCloudy(), 'cloudy'],
-    [msg.backgroundUnderwater(), 'underwater'],
-    [msg.backgroundHardcourt(), 'hardcourt'],
-    [msg.backgroundBlack(), 'black'],
-    [msg.backgroundCity(), 'city'],
-    [msg.backgroundDesert(), 'desert'],
-    [msg.backgroundRainbow(), 'rainbow'],
-    [msg.backgroundSoccer(), 'soccer'],
-    [msg.backgroundSpace(), 'space'],
-    [msg.backgroundTennis(), 'tennis'],
-    [msg.backgroundWinter(), 'winter']
-  ];
+  var functional_background_values = skin.backgroundChoices.slice(1);
 
   functionalBlockUtils.installStringPicker(blockly, generator, {
     blockName: 'functional_background_string_picker',

@@ -18,13 +18,6 @@ var VISIBLE_VALUE = constants.VISIBLE_VALUE;
 function loadInfinity(skin, assetUrl) {
   skin.defaultBackground = 'hardcourt';
   skin.projectileFrames = 10;
-  // todo - consolidate spriteCounts and spriteFlags?
-  skin.spriteCounts = {
-    normal: 19,
-    animation: 0,
-    turns: 0,
-    emotions: 0
-  };
 
   // todo - remove filler
   skin.avatarList = ['anna', 'elsa', 'hiro', 'baymax', 'rapunzel', 'filler5'];
@@ -32,7 +25,12 @@ function loadInfinity(skin, assetUrl) {
     skin[name] = {
       sprite: skin.assetUrl('avatar_' + name + '.png'),
       dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
-      spriteFlags: 0 // none right now
+      frameCounts: {
+        normal: name === 'hiro' ? 19 : 20,
+        animation: 0,
+        turns: 0,
+        emotions: 0
+      }
     };
   });
 
@@ -73,12 +71,6 @@ function loadInfinity(skin, assetUrl) {
 function loadStudio(skin, assetUrl) {
   skin.defaultBackground = 'cave';
   skin.projectileFrames = 8;
-  skin.spriteCounts = {
-    normal: 1,
-    animation: 1,
-    turns: 7,
-    emotions: 3
-  };
 
   skin.black = {
     background: skin.assetUrl('retro_background.png'),
@@ -135,7 +127,12 @@ function loadStudio(skin, assetUrl) {
     skin[name] = {
       sprite: skin.assetUrl(name + '_spritesheet_200px.png'),
       dropdownThumbnail: skin.assetUrl(name + '_thumb.png'),
-      spriteFlags: 28  // flags: emotions, animation, turns
+      frameCounts: {
+        normal: 1,
+        animation: 1,
+        turns: 7,
+        emotions: 3
+      }
     };
   });
 
