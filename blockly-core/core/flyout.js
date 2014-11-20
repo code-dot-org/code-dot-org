@@ -366,32 +366,6 @@ Blockly.Flyout.prototype.layoutBlock_ = function(block, cursor, gap, initialX) {
   cursor.y += blockHW.height + gap;
 };
 
-Blockly.Flyout.prototype.addButtonToFlyout_ = function (cursor, buttonText, onMouseDown) {
-  var button = Blockly.createSvgElement('g', {'class': 'createFunction'},
-    this.blockSpace_.svgGroup_);
-  var padding = 5;
-  var r = Blockly.createSvgElement('rect', {
-    rx: 5,
-    ry: 5,
-    fill: 'orange',
-    stroke: 'white'
-  }, button);
-  var text = Blockly.createSvgElement('text', {
-    x: padding,
-    y: padding,
-    'class': 'blocklyText'
-  }, button);
-  text.textContent = buttonText;
-  var bounds = text.getBoundingClientRect();
-  this.minFlyoutWidth_ = bounds.width + 2 * padding;
-  r.setAttribute('width', bounds.width + 2 * padding);
-  r.setAttribute('height', bounds.height + 2 * padding);
-  r.setAttribute('y', -bounds.height + padding - 1);
-  button.setAttribute('transform', 'translate(17, 25)');
-  Blockly.bindEvent_(button, 'mousedown', this, onMouseDown);
-  cursor.y += 40;
-};
-
 /**
  * Show and populate the flyout.
  * @param {!Array|string} xmlList List of blocks to show.
@@ -497,6 +471,39 @@ Blockly.Flyout.prototype.show = function(xmlList) {
   this.reflowWrapper_ = Blockly.bindEvent_(this.blockSpace_.getCanvas(),
       'blocklyBlockSpaceChange', this, this.reflow);
   this.blockSpace_.fireChangeEvent();
+};
+
+/**
+ * Adds a rectangular SVG button to this flyout's blockSpace
+ * @param {{x: Number, y: Number}} cursor current drawing position in flyout
+ * @param {String} buttonText text to display on button
+ * @param {Function} onMouseDown callback for button press
+ * @private
+ */
+Blockly.Flyout.prototype.addButtonToFlyout_ = function(cursor, buttonText, onMouseDown) {
+  var button = Blockly.createSvgElement('g', {'class': 'createFunction'},
+    this.blockSpace_.svgGroup_);
+  var padding = 5;
+  var r = Blockly.createSvgElement('rect', {
+    rx: 5,
+    ry: 5,
+    fill: 'orange',
+    stroke: 'white'
+  }, button);
+  var text = Blockly.createSvgElement('text', {
+    x: padding,
+    y: padding,
+    'class': 'blocklyText'
+  }, button);
+  text.textContent = buttonText;
+  var bounds = text.getBoundingClientRect();
+  this.minFlyoutWidth_ = bounds.width + 2 * padding;
+  r.setAttribute('width', bounds.width + 2 * padding);
+  r.setAttribute('height', bounds.height + 2 * padding);
+  r.setAttribute('y', -bounds.height + padding - 1);
+  button.setAttribute('transform', 'translate(17, 25)');
+  Blockly.bindEvent_(button, 'mousedown', this, onMouseDown);
+  cursor.y += 40;
 };
 
 /**
