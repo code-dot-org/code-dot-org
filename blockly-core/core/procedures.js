@@ -178,8 +178,12 @@ Blockly.Procedures.rename = function(text) {
  * @param {!Array.<number>} gaps List of widths between blocks.
  * @param {number} margin Standard margin width for calculating gaps.
  * @param {!Blockly.BlockSpace} blockSpace The flyout's blockSpace.
+ * @param {?Function.<Object>} opt_definitionCallFilter Optional filter with which to restrict
+ *  the procedure definitions that get used to populate the call list. Takes one parameter
+ *  of procedureInfo. Returning "true" means calls of this procedure definition
+ *  will be included in the category.
  */
-Blockly.Procedures.flyoutCategory = function(blocks, gaps, margin, blockSpace) {
+Blockly.Procedures.flyoutCategory = function(blocks, gaps, margin, blockSpace, opt_procedureInfoFilter) {
   if (!Blockly.functionEditor) {
     if (Blockly.Blocks.procedures_defnoreturn) {
       var block = new Blockly.Block(blockSpace, 'procedures_defnoreturn');
@@ -206,14 +210,20 @@ Blockly.Procedures.flyoutCategory = function(blocks, gaps, margin, blockSpace) {
   }
 
   // Add available procedure call blocks
-  Blockly.Procedures.allProcedures().forEach(function(procedureDefinition) {
-    var newCallBlock = new Blockly.Block(blockSpace, procedureDefinition.callType);
-    newCallBlock.setTitleValue(procedureDefinition.name, 'NAME');
+  Blockly.Procedures.allProcedures().forEach(function(procedureDefinitionInfo) {
+    if (opt_procedureInfoFilter && !opt_procedureInfoFilter(procedureDefinitionInfo)) {
+      return;
+    }
+    var newCallBlock = new Blockly.Block(blockSpace, procedureDefinitionInfo.callType);
+    newCallBlock.setTitleValue(procedureDefinitionInfo.name, 'NAME');
     var tempIds = [];
-    for (var t = 0; t < procedureDefinition.parameterNames.length; t++) {
+    for (var t = 0; t < procedureDefinitionInfo.parameterNames.length; t++) {
       tempIds[t] = 'ARG' + t;
     }
-    newCallBlock.setProcedureParameters(procedureDefinition.parameterNames, tempIds, procedureDefinition.parameterTypes);
+    newCallBlock.setProcedureParameters(
+      procedureDefinitionInfo.parameterNames,
+      tempIds,
+      procedureDefinitionInfo.parameterTypes);
     newCallBlock.initSvg();
     blocks.push(newCallBlock);
     gaps.push(margin * 2);

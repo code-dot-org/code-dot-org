@@ -421,14 +421,20 @@ Blockly.Flyout.prototype.show = function(xmlList) {
     if (Blockly.functionEditor && !Blockly.functionEditor.isOpen()) {
       this.addButtonToFlyout_(cursor, Blockly.Msg.FUNCTION_CREATE, this.createFunction_);
     }
-    Blockly.Procedures.flyoutCategory(blocks, gaps, margin, this.blockSpace_);
+    Blockly.Procedures.flyoutCategory(blocks, gaps, margin,
+      this.blockSpace_,
+      function(procedureInfo) { return !procedureInfo.isFunctionalVariable; }
+    );
   } else if (firstBlock === Blockly.Procedures.NAME_TYPE_FUNCTIONAL_VARIABLE) {
     // Special category for functional variables.
     if (Blockly.functionEditor && !Blockly.functionEditor.isOpen()) {
       this.addButtonToFlyout_(cursor, Blockly.Msg.FUNCTIONAL_VARIABLE_CREATE,
         this.createFunctionalVariable_);
     }
-    Blockly.Procedures.flyoutCategory(blocks, gaps, margin, this.blockSpace_);
+    Blockly.Procedures.flyoutCategory(blocks, gaps, margin,
+      this.blockSpace_,
+      function(procedureInfo) { return procedureInfo.isFunctionalVariable; }
+    );
   } else {
     for (var i = 0, xml; xml = xmlList[i]; i++) {
       if (xml.tagName && xml.tagName.toUpperCase() == 'BLOCK') {
