@@ -71,6 +71,11 @@ Turtle.pid = 0;
 Turtle.visible = true;
 
 /**
+ * Set a turtle heading.
+ */
+Turtle.heading = 0;
+
+/**
  * The avatar image
  */
 Turtle.avatarImage = new Image();
@@ -475,7 +480,7 @@ Turtle.drawTurtle = function() {
                               destWidth * retina, destHeight * retina); */
 };
 
-var turtleNumFrames = 19;
+var decorationAnimationNumFrames = 19;
 
 // An x offset against the sprite edge where the decoration should be drawn,
 // along with whether it should be drawn before or after the turtle sprite itself.
@@ -508,7 +513,7 @@ var decorationImageDetails = [
 
 Turtle.drawDecorationAnimation = function(when) {
   if (skin.id == "elsa") {
-    var index = (turtleFrame + 10) % turtleNumFrames;
+    var frameIndex = (turtleFrame + 10) % decorationAnimationNumFrames;
 
     var angleIndex = Math.floor(Turtle.heading * Turtle.numberAvatarHeadings / 360);
     if (skin.id == "anna" || skin.id == "elsa") {
@@ -521,7 +526,7 @@ Turtle.drawDecorationAnimation = function(when) {
 
     if (decorationImageDetails[angleIndex].when == when)
     {
-      var sourceX = Turtle.decorationAnimationImage.width * index;
+      var sourceX = Turtle.decorationAnimationImage.width * frameIndex;
       var sourceY = 0;
       var sourceWidth = Turtle.decorationAnimationImage.width;
       var sourceHeight = Turtle.decorationAnimationImage.height;
