@@ -45,6 +45,7 @@ class Calc < Blockly
         </block>
       </category>
       <category name="Functions" custom="PROCEDURE" />
+      <category name="Variables" custom="FUNCTIONAL_VARIABLE" />
     XML
   end
 

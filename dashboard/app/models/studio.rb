@@ -267,6 +267,7 @@ class Studio < Grid
 </category>
 <category name="Variables" custom="VARIABLE" />
 <category name="Functions" custom="PROCEDURE" />
+<category name="Functional variables" custom="FUNCTIONAL_VARIABLE" />
 <category name="Functional">
   <block type="functional_setBackground" />
   <block type="functional_setPlayerSpeed" />

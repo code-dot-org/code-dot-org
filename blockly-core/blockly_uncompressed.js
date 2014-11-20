@@ -20567,6 +20567,18 @@ Blockly.ContractEditor.prototype.initializeInputTypeDropdown_ = function() {
   this.inputTypeSelector.setDefaultCaption(Blockly.Msg.FUNCTIONAL_TYPE_LABEL);
   this.inputTypeSelector.render(goog.dom.getElement("paramTypeDropdown"))
 };
+goog.provide("Blockly.FieldIcon");
+goog.require("Blockly.FieldLabel");
+Blockly.FieldIcon = function(text) {
+  Blockly.FieldIcon.superClass_.constructor.apply(this, arguments);
+  Blockly.addClass_(this.fieldGroup_, "blocklyIconGroup");
+  Blockly.addClass_(this.borderRect_, "blocklyIconShield");
+  this.textElement_.setAttribute("style", "font-size:9pt; cursor:default;")
+};
+goog.inherits(Blockly.FieldIcon, Blockly.Field);
+Blockly.FieldIcon.prototype.EDITABLE = false;
+Blockly.FieldIcon.prototype.showEditor_ = function() {
+};
 goog.provide("goog.color.names");
 goog.color.names = {"aliceblue":"#f0f8ff", "antiquewhite":"#faebd7", "aqua":"#00ffff", "aquamarine":"#7fffd4", "azure":"#f0ffff", "beige":"#f5f5dc", "bisque":"#ffe4c4", "black":"#000000", "blanchedalmond":"#ffebcd", "blue":"#0000ff", "blueviolet":"#8a2be2", "brown":"#a52a2a", "burlywood":"#deb887", "cadetblue":"#5f9ea0", "chartreuse":"#7fff00", "chocolate":"#d2691e", "coral":"#ff7f50", "cornflowerblue":"#6495ed", "cornsilk":"#fff8dc", "crimson":"#dc143c", "cyan":"#00ffff", "darkblue":"#00008b", "darkcyan":"#008b8b", 
 "darkgoldenrod":"#b8860b", "darkgray":"#a9a9a9", "darkgreen":"#006400", "darkgrey":"#a9a9a9", "darkkhaki":"#bdb76b", "darkmagenta":"#8b008b", "darkolivegreen":"#556b2f", "darkorange":"#ff8c00", "darkorchid":"#9932cc", "darkred":"#8b0000", "darksalmon":"#e9967a", "darkseagreen":"#8fbc8f", "darkslateblue":"#483d8b", "darkslategray":"#2f4f4f", "darkslategrey":"#2f4f4f", "darkturquoise":"#00ced1", "darkviolet":"#9400d3", "deeppink":"#ff1493", "deepskyblue":"#00bfff", "dimgray":"#696969", "dimgrey":"#696969", 
@@ -23339,6 +23351,7 @@ goog.require("Blockly.FieldCheckbox");
 goog.require("Blockly.FieldColour");
 goog.require("Blockly.FieldColourDropdown");
 goog.require("Blockly.FieldDropdown");
+goog.require("Blockly.FieldIcon");
 goog.require("Blockly.FieldImage");
 goog.require("Blockly.FieldImageDropdown");
 goog.require("Blockly.FieldRectangularDropdown");

@@ -81,6 +81,7 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
   }
 
   this.show();
+  this.setupUIForBlock_(targetFunctionDefinitionBlock);
 
   targetFunctionDefinitionBlock.setUserVisible(true);
   var dom = Blockly.Xml.blockToDom_(targetFunctionDefinitionBlock);
@@ -98,6 +99,14 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
       this.functionDefinitionBlock.description_ || '';
 };
 
+/**
+ * Lets subclass tweak the UI based on the given target block
+ * @param targetFunctionDefinitionBlock
+ * @protected
+ */
+Blockly.FunctionEditor.prototype.setupUIForBlock_ = function(targetFunctionDefinitionBlock) {
+};
+
 Blockly.FunctionEditor.prototype.populateParamToolbox_ = function() {
   this.orderedParamIDsToBlocks_.clear();
   this.addParamsFromProcedure_();
@@ -113,11 +122,18 @@ Blockly.FunctionEditor.prototype.addParamsFromProcedure_ = function() {
   }
 };
 
-Blockly.FunctionEditor.prototype.openWithNewFunction = function() {
+/**
+ * @param {?Function} opt_blockCreationCallback function to call on newly created block
+ *  just before opening the editor
+ */
+Blockly.FunctionEditor.prototype.openWithNewFunction = function(opt_blockCreationCallback) {
   this.ensureCreated_();
 
   this.functionDefinitionBlock = Blockly.Xml.domToBlock_(Blockly.mainBlockSpace,
     Blockly.createSvgElement('block', {type: this.definitionBlockType}));
+  if (opt_blockCreationCallback) {
+    opt_blockCreationCallback(this.functionDefinitionBlock);
+  }
   this.openAndEditFunction(this.functionDefinitionBlock.getTitleValue('NAME'));
 };
 
@@ -309,15 +325,29 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   this.modalBackground_ =
       Blockly.createSvgElement('g', {'class': 'modalBackground'});
   Blockly.mainBlockSpaceEditor.appendSVGChild(this.modalBackground_);
-  this.closeButton_ = Blockly.createSvgElement('image', {
+  this.closeButton_ = Blockly.createSvgElement('g', {
     'id': 'modalEditorClose',
-    'width': 50,
-    'height': 50,
-    'y': -2
+    'filter': 'url(#blocklyTrashcanShadowFilter)'
   });
-  this.closeButton_.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-      '/blockly/media/common_images/x-button.png');
+  var padding = 7;
+  var r = Blockly.createSvgElement('rect', {
+    'rx': 12,
+    'ry': 12,
+    'fill': '#7665a0',
+    'stroke': 'white',
+    'stroke-width': '2.5'
+  }, this.closeButton_);
+  var text = Blockly.createSvgElement('text', {
+    'x': padding,
+    'y': padding,
+    'class': 'blocklyText'
+  }, this.closeButton_);
+  text.textContent = Blockly.Msg.SAVE_AND_CLOSE;
   Blockly.modalBlockSpaceEditor.appendSVGChild(this.closeButton_);
+  var bounds = text.getBoundingClientRect();
+  r.setAttribute('width', bounds.width + 2 * padding);
+  r.setAttribute('height', bounds.height + padding);
+  r.setAttribute('y', -bounds.height + padding - 1);
 
   // Set up contract definition HTML section
   this.createContractDom_();
@@ -426,8 +456,10 @@ Blockly.FunctionEditor.prototype.position_ = function() {
   this.contractDiv_.style.width = metrics.viewWidth + 'px';
 
   // Move the close button
-  this.closeButton_.setAttribute('x',
-      Blockly.RTL ? 2 : metrics.absoluteLeft + metrics.viewWidth - 30 + 'px');
+  this.closeButton_.setAttribute('transform', 'translate(' +
+      (Blockly.RTL ? 5 : metrics.absoluteLeft + metrics.viewWidth + 14 -
+          this.closeButton_.firstElementChild.getAttribute('width')) +
+      ',19)');
 
   // Move workspace to account for horizontal flyout height
   Blockly.modalBlockSpaceEditor.svgResize();
