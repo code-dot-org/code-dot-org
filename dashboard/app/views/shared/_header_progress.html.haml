@@ -24,7 +24,7 @@
               = sl.level_display_text
     - if @script.hoc?
       .header_finished_link
-        %a{href: hoc_finish_url}
+        %a{href: hoc_finish_url(@script)}
           = t('nav.header.finished_hoc')
     - if @script.trophies
       - if current_user
@@ -45,7 +45,7 @@
         .header_popup_link_glyph
           &#x25BC;
         .header_popup_link_text= t(:more)
-  - if @script.k5_course?
+  - if @script.show_report_bug_link?
     #betainfo
       - if @script.feedback_url
         = link_to t('landing.feedback'), @script.feedback_url

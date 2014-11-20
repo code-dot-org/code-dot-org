@@ -4,11 +4,13 @@ class LevelSourcesController < ApplicationController
   before_filter :load_level_source
 
   def show
-    if @level.skin =='elsa' or @level.skin == 'anna'
-      head 404
-      return
-    end
     @hide_source = true
+    if request.query_parameters[:embed]
+      @embed = true
+      @share = false
+      @no_padding = true
+      @skip_instructions_popup = true
+    end
   end
 
   def edit
