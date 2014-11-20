@@ -69,10 +69,13 @@ var Projectile = function (options) {
   this.width = options.width || 50;
   this.speed = options.speed || tiles.DEFAULT_SPRITE_SPEED / 2;
 
+  // todo (brent) - cleaner
+  this.loop = options.className !== 'projectile_hiro';
+
   this.currentFrame_ = 0;
   var self = this;
   this.animator_ = window.setInterval(function () {
-    if (self.currentFrame_ + 1 < self.frames) {
+    if (self.loop || self.currentFrame_ + 1 < self.frames) {
       self.currentFrame_ = (self.currentFrame_ + 1) % self.frames;
     }
   }, 50);
