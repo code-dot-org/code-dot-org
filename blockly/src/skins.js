@@ -71,5 +71,14 @@ exports.load = function(assetUrl, id) {
     winSound: [skinUrl('win.mp3'), skinUrl('win.ogg')],
     failureSound: [skinUrl('failure.mp3'), skinUrl('failure.ogg')]
   };
+
+  if (skin.id == "elsa") {
+    skin.turtleNumFrames = 20;
+    skin.decorationAnimationNumFrames = 19;
+  }
+  else if (skin.id == "anna") {
+    skin.turtleNumFrames = 10;
+  }
+
   return skin;
 };
