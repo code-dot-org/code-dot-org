@@ -326,7 +326,7 @@ Blockly.FunctionEditor.prototype.create_ = function() {
     'y': padding,
     'class': 'blocklyText'
   }, this.closeButton_);
-  text.textContent = 'Save and Close'; // TODO: i18n
+  text.textContent = Blockly.Msg.SAVE_AND_CLOSE;
   Blockly.modalBlockSpaceEditor.appendSVGChild(this.closeButton_);
   var bounds = text.getBoundingClientRect();
   r.setAttribute('width', bounds.width + 2 * padding);
@@ -441,7 +441,7 @@ Blockly.FunctionEditor.prototype.position_ = function() {
 
   // Move the close button
   this.closeButton_.setAttribute('transform', 'translate(' +
-      (Blockly.RTL ? 2 : metrics.absoluteLeft + metrics.viewWidth + 14 -
+      (Blockly.RTL ? 5 : metrics.absoluteLeft + metrics.viewWidth + 14 -
           this.closeButton_.firstElementChild.getAttribute('width')) +
       ',19)');
 
