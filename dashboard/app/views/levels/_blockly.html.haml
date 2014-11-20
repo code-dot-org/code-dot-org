@@ -38,6 +38,8 @@
       (!Rails.env.production? && request.location.try(:country_code) == 'RD') |
 
   %div{style: "display:none"}= render partial: 'levels/reference_area'
+  - embed = local[:embed] || @embed
+  - level['showFinish'] = local[:embed]
 
   :javascript
     //<![CDATA[
@@ -64,7 +66,8 @@
       #{ "level_source_id: #{@level_source_id}," if @level_source_id }
       #{ "send_to_phone_url: '#{@phone_share_url}'," if @phone_share_url }
       #{ "sendToPhone: true," if send_to_phone}
-      #{ "disableSocialShare: true," if @current_user && @current_user.under_13? }
+      #{ "disableSocialShare: true," if (@current_user && @current_user.under_13?) || @embed}
+      #{ "embed: true," if embed}
       #{ "scriptId: '#{@script.id}'," if @script }
       #{ "levelGameName: '#{@level.game.name}'," if @level.game }
       level: level,

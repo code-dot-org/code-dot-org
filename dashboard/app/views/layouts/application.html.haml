@@ -1,5 +1,6 @@
 !!! 5
-- show_footer = !(@share && browser.mobile?)
+- show_footer = !(@share && browser.mobile?) && !@embed
+- show_header = !(@embed)
 %html{:dir => locale_dir}
   %head
     %title= @page_title ? "#{t(:appname)} - #{@page_title}" : t(:appname)
@@ -19,8 +20,8 @@
     - if current_user && current_user.age.nil?
       = render partial: 'layouts/age_interstitial'
 
-    .wrapper
-      = render partial: 'layouts/header'
+    .wrapper{style: @embed ? 'background-color: #ffffff' : ''}
+      = render partial: 'layouts/header' if show_header
       - page = yield
       - if @full_width
         .full_container{ style: @no_padding ? 'padding: 0px;' : '' }
