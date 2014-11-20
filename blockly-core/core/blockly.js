@@ -34,6 +34,7 @@ goog.require('Blockly.FieldCheckbox');
 goog.require('Blockly.FieldColour');
 goog.require('Blockly.FieldColourDropdown');
 goog.require('Blockly.FieldDropdown');
+goog.require('Blockly.FieldIcon');
 goog.require('Blockly.FieldImage');
 goog.require('Blockly.FieldImageDropdown');
 goog.require('Blockly.FieldRectangularDropdown');
