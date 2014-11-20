@@ -1,6 +1,6 @@
 .greybox
   #form
-    #petition_message{:style=>"font-size: 21px; line-height:28px; font-weight:500"}=I18n.t:petition_message
+    #petition_message{:style=>"font-size: 21px; line-height:28px; font-family: 'Gotham 5r', sans-serif;"}=I18n.t:petition_message
     #petition_sign_message.desktop-feature{:style=>"font-size: 18px; line-height:20px; font-weight:400; margin-top:10px"}=I18n.t(:petition_sign_message).gsub("#", format_integer_with_commas(fetch_metrics['petition_signatures']).to_s)
 
     %form#petition_form{:onsubmit=>"return petition.signPetition()"}
@@ -39,7 +39,7 @@
               %option{:value=>"engineer"}=I18n.t :participant_engineer
               %option{:value=>"other"}=I18n.t :participant_other
         .col-18.i-agree-button
-          %button#gobutton.button_enabled{:style=>'width:100px; margin-bottom:10px; font-weight:500'}=I18n.t :i_agree
+          %button#gobutton.button_enabled{:style=>"width:100px; margin-bottom:10px; font-family: 'Gotham 5r', sans-serif;"}=I18n.t :i_agree
 
   #thanks{:style=>"display:none"}
     %br
