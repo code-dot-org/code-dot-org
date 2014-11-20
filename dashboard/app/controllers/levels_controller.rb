@@ -29,6 +29,13 @@ class LevelsController < ApplicationController
     }
 
     @full_width = true
+    if request.query_parameters[:embed]
+      @hide_source = true
+      @embed = true
+      @share = false
+      @no_padding = true
+      @skip_instructions_popup = true
+    end
   end
 
   # GET /levels/1/edit
