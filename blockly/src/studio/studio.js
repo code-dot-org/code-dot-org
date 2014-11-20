@@ -864,6 +864,7 @@ Studio.initSprites = function () {
   Studio.spriteCount = 0;
   Studio.sprite = [];
   Studio.projectiles = [];
+  Studio.startTime = null;
 
   Studio.spriteGoals_ = [];
 
@@ -1216,7 +1217,7 @@ BlocklyApps.reset = function(first) {
 
     var opts = {
       spriteIndex: i,
-      value: Studio.startAvatars[i],
+      value: Studio.startAvatars[i % Studio.startAvatars.length],
       forceHidden: level.spritesHiddenToStart
     };
     Studio.setSprite(opts);
@@ -1259,6 +1260,7 @@ BlocklyApps.runButtonClick = function() {
   }
   BlocklyApps.reset(false);
   BlocklyApps.attempts++;
+  Studio.startTime = new Date();
   Studio.execute();
 
   if (level.freePlay && (!BlocklyApps.hideSource || level.showFinish)) {
@@ -1606,6 +1608,10 @@ var ANIM_AFTER_NUM_NORMAL_FRAMES = 8;
 // to face south.
 var TICKS_BEFORE_FACE_SOUTH = 5;
 
+/**
+ * Given direction/emotion/tickCount, calculate which frame number we should
+ * display for sprite.
+ */
 function spriteFrameNumber (index) {
   var sprite = Studio.sprite[index];
   var frameNum = 0;
@@ -1624,9 +1630,12 @@ function spriteFrameNumber (index) {
     }
   }
 
-  // todo - do this differently
-  if (sprite.frameCounts.animation > 1) {
-    frameNum = Studio.tickCount % sprite.frameCounts.normal;
+  if (sprite.frameCounts.normal > 1 && sprite.timePerFrame) {
+    var currentTime = new Date();
+    var ellapsed = currentTime - Studio.startTime;
+
+    // Use ellapsed time instead of tickCount
+    frameNum = Math.floor(ellapsed / sprite.timePerFrame) % sprite.frameCounts.normal;
   }
 
   if (!frameNum && sprite.emotion !== Emotions.NORMAL &&
@@ -1984,6 +1993,7 @@ Studio.setSprite = function (opts) {
   }
 
   sprite.frameCounts = skin[spriteValue].frameCounts;
+  sprite.timePerFrame = skin[spriteValue].timePerFrame;
   // Reset height and width:
   sprite.height = sprite.size * skin.spriteHeight;
   sprite.width = sprite.size * skin.spriteWidth;
