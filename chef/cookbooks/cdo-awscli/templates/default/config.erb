@@ -1,0 +1,4 @@
+[default]
+region = <%= node['cdo-awscli']['region'] || 'us-east-1' %>
+aws_access_key_id = <%= node['cdo-awscli']['access_key_id'] %>
+aws_secret_access_key = <%= node['cdo-awscli']['access_key_secret'] %>
