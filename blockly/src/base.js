@@ -378,8 +378,8 @@ BlocklyApps.init = function(config) {
       viz.style['transform-origin'] = 'left top';
       viz.style['-webkit-transform'] = 'scale(' + scale + ')';
       viz.style['max-height'] = (displayWidth * scale) + 'px';
-      viz.style['display'] = 'block';
-      vizCol.style['width'] = '';
+      viz.style.display = 'block';
+      vizCol.style.width = '';
       document.getElementById('visualizationColumn').style['max-width'] = displayWidth + 'px';
       // Needs to run twice on initialization
       if(!resized) {
@@ -388,6 +388,7 @@ BlocklyApps.init = function(config) {
       }
     };
     // Depends on ResizeSensor.js
+    var ResizeSensor = require('ResizeSensor');
     new ResizeSensor(document.getElementById('visualizationColumn'), resize);
   }
 
