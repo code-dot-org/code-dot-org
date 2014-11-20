@@ -15424,26 +15424,25 @@ Blockly.Flyout.prototype.show = function(xmlList) {
   }else {
     if(firstBlock === Blockly.Procedures.NAME_TYPE) {
       if(Blockly.functionEditor && !Blockly.functionEditor.isOpen()) {
-        var button = Blockly.createSvgElement("g", {"class":"createFunction"}, this.blockSpace_.svgGroup_);
-        var padding = 5;
-        var r = Blockly.createSvgElement("rect", {rx:5, ry:5, fill:"orange", stroke:"white"}, button);
-        var text = Blockly.createSvgElement("text", {x:padding, y:padding, "class":"blocklyText"}, button);
-        text.textContent = Blockly.Msg.FUNCTION_CREATE;
-        var bounds = text.getBoundingClientRect();
-        this.minFlyoutWidth_ = bounds.width + 2 * padding;
-        r.setAttribute("width", bounds.width + 2 * padding);
-        r.setAttribute("height", bounds.height + 2 * padding);
-        r.setAttribute("y", -bounds.height + padding - 1);
-        button.setAttribute("transform", "translate(17, 25)");
-        Blockly.bindEvent_(button, "mousedown", this, this.createFunction_);
-        cursor.y += 40
+        this.addButtonToFlyout_(cursor, Blockly.Msg.FUNCTION_CREATE, this.createFunction_)
       }
-      Blockly.Procedures.flyoutCategory(blocks, gaps, margin, this.blockSpace_)
+      Blockly.Procedures.flyoutCategory(blocks, gaps, margin, this.blockSpace_, function(procedureInfo) {
+        return!procedureInfo.isFunctionalVariable
+      })
     }else {
-      for(var i = 0, xml;xml = xmlList[i];i++) {
-        if(xml.tagName && xml.tagName.toUpperCase() == "BLOCK") {
-          blocks.push(Blockly.Xml.domToBlock_(this.blockSpace_, xml));
-          gaps.push(margin * 3)
+      if(firstBlock === Blockly.Procedures.NAME_TYPE_FUNCTIONAL_VARIABLE) {
+        if(Blockly.functionEditor && !Blockly.functionEditor.isOpen()) {
+          this.addButtonToFlyout_(cursor, Blockly.Msg.FUNCTIONAL_VARIABLE_CREATE, this.createFunctionalVariable_)
+        }
+        Blockly.Procedures.flyoutCategory(blocks, gaps, margin, this.blockSpace_, function(procedureInfo) {
+          return procedureInfo.isFunctionalVariable
+        })
+      }else {
+        for(var i = 0, xml;xml = xmlList[i];i++) {
+          if(xml.tagName && xml.tagName.toUpperCase() == "BLOCK") {
+            blocks.push(Blockly.Xml.domToBlock_(this.blockSpace_, xml));
+            gaps.push(margin * 3)
+          }
         }
       }
     }
@@ -15478,6 +15477,21 @@ Blockly.Flyout.prototype.show = function(xmlList) {
   Blockly.fireUiEvent(window, "resize");
   this.reflowWrapper_ = Blockly.bindEvent_(this.blockSpace_.getCanvas(), "blocklyBlockSpaceChange", this, this.reflow);
   this.blockSpace_.fireChangeEvent()
+};
+Blockly.Flyout.prototype.addButtonToFlyout_ = function(cursor, buttonText, onMouseDown) {
+  var button = Blockly.createSvgElement("g", {"class":"createFunction"}, this.blockSpace_.svgGroup_);
+  var padding = 5;
+  var r = Blockly.createSvgElement("rect", {rx:5, ry:5, fill:"orange", stroke:"white"}, button);
+  var text = Blockly.createSvgElement("text", {x:padding, y:padding, "class":"blocklyText"}, button);
+  text.textContent = buttonText;
+  var bounds = text.getBoundingClientRect();
+  this.minFlyoutWidth_ = bounds.width + 2 * padding;
+  r.setAttribute("width", bounds.width + 2 * padding);
+  r.setAttribute("height", bounds.height + 2 * padding);
+  r.setAttribute("y", -bounds.height + padding - 1);
+  button.setAttribute("transform", "translate(17, 25)");
+  Blockly.bindEvent_(button, "mousedown", this, onMouseDown);
+  cursor.y += 40
 };
 Blockly.Flyout.prototype.reflow = function() {
   var flyoutWidth = this.minFlyoutWidth_ || 0;
@@ -15552,6 +15566,14 @@ Blockly.Flyout.prototype.onMouseMove_ = function(e) {
 };
 Blockly.Flyout.prototype.createFunction_ = function() {
   Blockly.functionEditor.openWithNewFunction()
+};
+Blockly.Flyout.prototype.createFunctionalVariable_ = function() {
+  Blockly.functionEditor.openWithNewFunction(function(block) {
+    if(!block.type === "functional_definition") {
+      throw"Non-functional definition block cannot be used as functional variable";
+    }
+    block.convertToVariable()
+  })
 };
 Blockly.Flyout.prototype.createBlockFunc_ = function(originBlock) {
   var flyout = this;
@@ -18373,6 +18395,7 @@ goog.require("Blockly.Names");
 goog.require("Blockly.BlockSpace");
 goog.require("goog.events");
 Blockly.Procedures.NAME_TYPE = "PROCEDURE";
+Blockly.Procedures.NAME_TYPE_FUNCTIONAL_VARIABLE = "FUNCTIONAL_VARIABLE";
 Blockly.Procedures.DEFINITION_BLOCK_TYPES = ["procedures_defnoreturn", "procedures_defreturn", "functional_definition"];
 Blockly.Procedures.PROCEDURAL_TO_FUNCTIONAL_CALL_TYPE = "procedural_to_functional_call";
 Blockly.Procedures.allProcedures = function() {
@@ -18452,7 +18475,7 @@ Blockly.Procedures.rename = function(text) {
   }
   return text
 };
-Blockly.Procedures.flyoutCategory = function(blocks, gaps, margin, blockSpace) {
+Blockly.Procedures.flyoutCategory = function(blocks, gaps, margin, blockSpace, opt_procedureInfoFilter) {
   if(!Blockly.functionEditor) {
     if(Blockly.Blocks.procedures_defnoreturn) {
       var block = new Blockly.Block(blockSpace, "procedures_defnoreturn");
@@ -18476,14 +18499,17 @@ Blockly.Procedures.flyoutCategory = function(blocks, gaps, margin, blockSpace) {
       gaps[gaps.length - 1] = margin * 3
     }
   }
-  Blockly.Procedures.allProcedures().forEach(function(procedureDefinition) {
-    var newCallBlock = new Blockly.Block(blockSpace, procedureDefinition.callType);
-    newCallBlock.setTitleValue(procedureDefinition.name, "NAME");
+  Blockly.Procedures.allProcedures().forEach(function(procedureDefinitionInfo) {
+    if(opt_procedureInfoFilter && !opt_procedureInfoFilter(procedureDefinitionInfo)) {
+      return
+    }
+    var newCallBlock = new Blockly.Block(blockSpace, procedureDefinitionInfo.callType);
+    newCallBlock.setTitleValue(procedureDefinitionInfo.name, "NAME");
     var tempIds = [];
-    for(var t = 0;t < procedureDefinition.parameterNames.length;t++) {
+    for(var t = 0;t < procedureDefinitionInfo.parameterNames.length;t++) {
       tempIds[t] = "ARG" + t
     }
-    newCallBlock.setProcedureParameters(procedureDefinition.parameterNames, tempIds, procedureDefinition.parameterTypes);
+    newCallBlock.setProcedureParameters(procedureDefinitionInfo.parameterNames, tempIds, procedureDefinitionInfo.parameterTypes);
     newCallBlock.initSvg();
     blocks.push(newCallBlock);
     gaps.push(margin * 2)
@@ -18761,6 +18787,7 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
     throw new Error("Can't find definition block to edit");
   }
   this.show();
+  this.setupUIForBlock_(targetFunctionDefinitionBlock);
   targetFunctionDefinitionBlock.setUserVisible(true);
   var dom = Blockly.Xml.blockToDom_(targetFunctionDefinitionBlock);
   targetFunctionDefinitionBlock.dispose(false, false, true);
@@ -18770,6 +18797,8 @@ Blockly.FunctionEditor.prototype.openAndEditFunction = function(functionName) {
   this.populateParamToolbox_();
   goog.dom.getElement("functionNameText").value = functionName;
   goog.dom.getElement("functionDescriptionText").value = this.functionDefinitionBlock.description_ || ""
+};
+Blockly.FunctionEditor.prototype.setupUIForBlock_ = function(targetFunctionDefinitionBlock) {
 };
 Blockly.FunctionEditor.prototype.populateParamToolbox_ = function() {
   this.orderedParamIDsToBlocks_.clear();
@@ -18783,9 +18812,12 @@ Blockly.FunctionEditor.prototype.addParamsFromProcedure_ = function() {
     this.addParameter(procedureInfo.parameterNames[i])
   }
 };
-Blockly.FunctionEditor.prototype.openWithNewFunction = function() {
+Blockly.FunctionEditor.prototype.openWithNewFunction = function(opt_blockCreationCallback) {
   this.ensureCreated_();
   this.functionDefinitionBlock = Blockly.Xml.domToBlock_(Blockly.mainBlockSpace, Blockly.createSvgElement("block", {type:this.definitionBlockType}));
+  if(opt_blockCreationCallback) {
+    opt_blockCreationCallback(this.functionDefinitionBlock)
+  }
   this.openAndEditFunction(this.functionDefinitionBlock.getTitleValue("NAME"))
 };
 Blockly.FunctionEditor.prototype.bindToolboxHandlers_ = function() {
@@ -20514,8 +20546,8 @@ Blockly.ContractEditor.prototype.createContractDom_ = function() {
   if(Blockly.RTL) {
     this.contractDiv_.setAttribute("dir", "RTL")
   }
-  this.contractDiv_.innerHTML = "<div>" + Blockly.Msg.FUNCTIONAL_NAME_LABEL + "</div>" + '<div><input id="functionNameText" type="text"></div>' + "<div>" + Blockly.Msg.FUNCTIONAL_DESCRIPTION_LABEL + "</div>" + '<div><textarea id="functionDescriptionText" rows="2"></textarea></div>' + "<div>" + Blockly.Msg.FUNCTIONAL_RANGE_LABEL + "</div>" + '<span id="outputTypeDropdown"></span>' + "<div>" + Blockly.Msg.FUNCTIONAL_DOMAIN_LABEL + "</div>" + '<div><input id="paramAddText" type="text" style="width: 200px;" ' + 
-  'placeholder="' + Blockly.Msg.FUNCTIONAL_NAME_LABEL + '"> ' + '<span id="paramTypeDropdown"></span>' + '<button id="paramAddButton" class="btn">' + Blockly.Msg.ADD + "</button>" + "</div>";
+  this.contractDiv_.innerHTML = "<div>" + Blockly.Msg.FUNCTIONAL_NAME_LABEL + "</div>" + '<div><input id="functionNameText" type="text"></div>' + '<div id="description-area" style="margin: 0px;">' + "<div>" + Blockly.Msg.FUNCTIONAL_DESCRIPTION_LABEL + "</div>" + '<div><textarea id="functionDescriptionText" rows="2"></textarea></div>' + "</div>" + '<div id="outputTypeTitle">' + Blockly.Msg.FUNCTIONAL_RANGE_LABEL + "</div>" + '<span id="outputTypeDropdown"></span>' + '<div id="domain-area" style="margin: 0px;">' + 
+  "<div>" + Blockly.Msg.FUNCTIONAL_DOMAIN_LABEL + "</div>" + '<div><input id="paramAddText" type="text" style="width: 200px;" ' + 'placeholder="' + Blockly.Msg.FUNCTIONAL_NAME_LABEL + '"> ' + '<span id="paramTypeDropdown"></span>' + '<button id="paramAddButton" class="btn">' + Blockly.Msg.ADD + "</button>" + "</div>" + "</div>";
   var metrics = Blockly.modalBlockSpace.getMetrics();
   this.contractDiv_.style.left = metrics.absoluteLeft + "px";
   this.contractDiv_.style.top = metrics.absoluteTop + "px";
@@ -20524,6 +20556,14 @@ Blockly.ContractEditor.prototype.createContractDom_ = function() {
   this.container_.insertBefore(this.contractDiv_, this.container_.firstChild);
   this.initializeInputTypeDropdown_();
   this.initializeOutputTypeDropdown_()
+};
+Blockly.ContractEditor.prototype.setupUIForBlock_ = function(targetFunctionDefinitionBlock) {
+  var isEditingVariable = targetFunctionDefinitionBlock.isVariable();
+  this.frameText_.textContent = isEditingVariable ? Blockly.Msg.FUNCTIONAL_VARIABLE_HEADER : Blockly.Msg.FUNCTION_HEADER;
+  goog.dom.setTextContent(goog.dom.getElement("outputTypeTitle"), isEditingVariable ? Blockly.Msg.FUNCTIONAL_VARIABLE_TYPE : Blockly.Msg.FUNCTIONAL_RANGE_LABEL);
+  goog.style.showElement(goog.dom.getElement("domain-area"), !isEditingVariable);
+  goog.style.showElement(goog.dom.getElement("description-area"), !isEditingVariable);
+  Blockly.ContractEditor.superClass_.show.call(this)
 };
 Blockly.ContractEditor.prototype.addParameter = function(newParameterName, opt_newParameterType) {
   this.orderedParamIDsToBlocks_.set(goog.events.getUniqueId("parameter"), this.newParameterBlock(newParameterName, opt_newParameterType))
