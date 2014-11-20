@@ -141,6 +141,10 @@ td {
   padding: 15px;
 }
 
+th a:link, th a:visited, th a:hover, th a:active {
+  color: white;
+}
+
 .narrow_hr {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -413,7 +417,7 @@ a.about_list_item {
   padding: 0px; 
   padding-bottom: 5px; 
   margin-top: 26px; 
-  /* background-color: rgb(255, 128, 0); color:white */"
+  /* background-color: rgb(255, 128, 0); color:white */
 }
 
 #studiobar a:link, #studiobar a:visited, #studiobar a:hover, #studiobar a:active {
@@ -606,6 +610,19 @@ button {
   white-space: nowrap;
   word-spacing: 0px;
   writing-mode: lr-tb;
+}
+
+.btn-white:hover
+{
+  background-color:#E6E6F3;
+  border-color:#adadad;
+}
+
+.btn-white
+{
+  color: #333;
+  background-color:white;
+  border-color:#ccc;
 }
 
 .dropdown {
