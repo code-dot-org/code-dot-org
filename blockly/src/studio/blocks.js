@@ -11,7 +11,9 @@ var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
 var commonMsg = require('../../locale/current/common');
 var codegen = require('../codegen');
 var functionalBlockUtils = require('../functionalBlockUtils');
-var installFunctionalApiCallBlock = require('../functionalBlockUtils').installFunctionalApiCallBlock;
+var installFunctionalApiCallBlock =
+    functionalBlockUtils.installFunctionalApiCallBlock;
+var initTitledFunctionalBlock = functionalBlockUtils.initTitledFunctionalBlock;
 var tiles = require('./tiles');
 var utils = require('../utils');
 var _ = utils.getLodash();
@@ -1647,39 +1649,73 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   //
-  // Install functional blocks
+  // Install functional start blocks
   //
 
   installFunctionalApiCallBlock(blockly, generator, {
-    blockName: 'functional_setBackground',
-    blockTitle: msg.setBackground(),
+    blockName: 'functional_start_dummyOnMove',
+    blockTitle: 'on-move (on-screen)',
+    args: [{name: 'VAL', type: 'boolean', default: 'false'}]
+  });
+
+  installFunctionalApiCallBlock(blockly, generator, {
+    blockName: 'functional_start_setBackground',
+    blockTitle: 'start (background)',
     apiName: 'Studio.setBackground',
     args: [{ name: 'BACKGROUND', type: 'string', default: 'space'}]
   });
 
-  installFunctionalApiCallBlock(blockly, generator, {
-    blockName: 'functional_setPlayerSpeed',
-    blockTitle: msg.setPlayerSpeed(),
-    apiName: 'Studio.setSpriteSpeed',
-    args: [{constantValue: '0'}, // spriteIndex
-           {name: 'SPEED', type: 'Number', default:'7'}]
-  });
+  blockly.Blocks.functional_start_setSpeeds = {
+    init: function() {
+      var blockName = 'start (player-speed, enemy-speed)';
+      var blockType = 'none';
+      var blockArgs = [
+        {name: 'PLAYER_SPEED', type: 'Number'},
+        {name: 'ENEMY_SPEED', type: 'Number'}
+      ];
+      initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
+    }
+  };
 
-  installFunctionalApiCallBlock(blockly, generator, {
-    blockName: 'functional_setEnemySpeed',
-    blockTitle: msg.setEnemySpeed(),
-    apiName: 'Studio.setSpriteSpeed',
-    args: [{constantValue: '1'}, // spriteIndex
-           {name: 'SPEED', type: 'Number', default:'7'}]
-  });
+  generator.functional_start_setSpeeds = function() {
+    var defaultSpeed = 7;
+    var playerSpeed = Blockly.JavaScript.statementToCode(this, 'PLAYER_SPEED', false) || defaultSpeed;
+    var enemySpeed = Blockly.JavaScript.statementToCode(this, 'ENEMY_SPEED', false) || defaultSpeed;
+    var playerSpriteIndex = '0';
+    var enemySpriteIndex = '1';
+    var code = 'Studio.setSpriteSpeed(\'block_id_' + this.id + '\',' +
+        playerSpriteIndex + ',' + playerSpeed + ');\n';
+    code += 'Studio.setSpriteSpeed(\'block_id_' + this.id + '\',' +
+        enemySpriteIndex + ',' + enemySpeed + ');\n';
+    return code;
+  };
 
-  installFunctionalApiCallBlock(blockly, generator, {
-    blockName: 'functional_showTitleScreen',
-    blockTitle: msg.showTitleScreen(),
-    apiName: 'Studio.showTitleScreen',
-    args: [{name: 'TITLE', type: 'string', default:'\'\''},
-           {name: 'TEXT', type: 'string', default:'\'\''}]
-  });
+  blockly.Blocks.functional_start_setBackgroundAndSpeeds = {
+    init: function() {
+      var blockName = 'start (background, player-speed, enemy-speed)';
+      var blockType = 'none';
+      var blockArgs = [
+        {name: 'BACKGROUND', type: 'string'},
+        {name: 'PLAYER_SPEED', type: 'Number'},
+        {name: 'ENEMY_SPEED', type: 'Number'}
+      ];
+      initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
+    }
+  };
+
+  generator.functional_start_setBackgroundAndSpeeds = function() {
+    var background = Blockly.JavaScript.statementToCode(this, 'BACKGROUND', false) || 'cave';
+    var defaultSpeed = 7;
+    var playerSpeed = Blockly.JavaScript.statementToCode(this, 'PLAYER_SPEED', false) || defaultSpeed;
+    var enemySpeed = Blockly.JavaScript.statementToCode(this, 'ENEMY_SPEED', false) || defaultSpeed;
+    var code =  'Studio.setBackground(\'block_id_' + this.id + '\'' +
+        ',' + background + ');\n';
+    code += 'Studio.setSpriteSpeed(\'block_id_' + this.id + '\',0' +
+        ',' + playerSpeed + ');\n';
+    code += 'Studio.setSpriteSpeed(\'block_id_' + this.id + '\',1' +
+        ',' + enemySpeed + ');\n';
+    return code;
+  };
 
   // install number and string
   sharedFunctionalBlocks.install(blockly, generator);

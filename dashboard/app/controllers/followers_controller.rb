@@ -33,6 +33,7 @@ class FollowersController < ApplicationController
     retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       @follower = Follower.where(user: teacher, student_user: current_user, section: @section).first_or_create!
     end
+    current_user.assign_script(@section.script) if @section.script
 
     redirect_to redirect_url, notice: I18n.t('follower.added_teacher', name: teacher.name)
    end
@@ -74,6 +75,9 @@ class FollowersController < ApplicationController
       else
         Follower.create!(user_id: @section.user_id, student_user: current_user, section: @section)
       end
+
+      current_user.assign_script(@section.script) if @section.script
+
       redirect_to root_path, notice: I18n.t('follower.registered', section_name: @section.name) and return
     end
 
@@ -95,6 +99,7 @@ class FollowersController < ApplicationController
       retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
         if @user.save
           Follower.create!(user_id: @section.user_id, student_user: @user, section: @section)
+          @user.assign_script(@section.script) if @section.script
           sign_in(:user, @user)
           redirect_to root_path, notice: I18n.t('follower.registered', section_name: @section.name)
           return
