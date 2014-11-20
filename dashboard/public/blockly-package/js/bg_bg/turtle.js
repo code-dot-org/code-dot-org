@@ -5,8 +5,6 @@
  * https://github.com/marcj/css-element-queries/blob/master/LICENSE.
  */
 
-(function() {
-
     /**
      * Class for dimension change detection.
      *
@@ -15,7 +13,7 @@
      *
      * @constructor
      */
-    this.ResizeSensor = function(element, callback) {
+    module.exports = function(element, callback) {
         /**
          *
          * @constructor
@@ -142,7 +140,6 @@
         }
     };
 
-})();
 },{}],2:[function(require,module,exports){
 (function (global){
 var utils = require('./utils');
@@ -8603,6 +8600,14 @@ exports.load = function(assetUrl, id) {
     winSound: [skinUrl('win.mp3'), skinUrl('win.ogg')],
     failureSound: [skinUrl('failure.mp3'), skinUrl('failure.ogg')]
   };
+
+  if (skin.id === "elsa") {
+    skin.turtleNumFrames = 20;
+    skin.decorationAnimationNumFrames = 19;
+  } else if (skin.id === "anna") {
+    skin.turtleNumFrames = 10;
+  }
+
   return skin;
 };
 
@@ -12717,6 +12722,11 @@ Turtle.pid = 0;
 Turtle.visible = true;
 
 /**
+ * Set a turtle heading.
+ */
+Turtle.heading = 0;
+
+/**
  * The avatar image
  */
 Turtle.avatarImage = new Image();
@@ -12774,15 +12784,6 @@ Turtle.init = function(config) {
     // We don't support ratios other than 2 right now (sorry!) so fall back to 1.
     if (retina != 2)
       retina = 1;
-
-    if (skin.id == "elsa")
-    {
-      turtleNumFrames = 20;
-    }
-    else if (skin.id == "anna")
-    {
-      turtleNumFrames = 10;
-    }
 
     // let's try adding a background image
     level.images = [{}];
@@ -13061,7 +13062,6 @@ Turtle.loadDecorationAnimation = function() {
   }
 };
 
-var turtleNumFrames;
 var turtleFrame = 0;
 
 
@@ -13082,7 +13082,7 @@ Turtle.drawTurtle = function() {
   var sourceX = Turtle.avatarImage.spriteWidth * index;
   if (skin.id == "anna" || skin.id == "elsa") {
     sourceY = Turtle.avatarImage.spriteHeight * turtleFrame;
-    turtleFrame = (turtleFrame + 1) % turtleNumFrames;
+    turtleFrame = (turtleFrame + 1) % skin.turtleNumFrames;
   } else {
     sourceY = 0;
   }
@@ -13121,8 +13121,6 @@ Turtle.drawTurtle = function() {
                               destWidth * retina, destHeight * retina); */
 };
 
-var turtleNumFrames = 19;
-
 // An x offset against the sprite edge where the decoration should be drawn,
 // along with whether it should be drawn before or after the turtle sprite itself.
 
@@ -13154,20 +13152,18 @@ var decorationImageDetails = [
 
 Turtle.drawDecorationAnimation = function(when) {
   if (skin.id == "elsa") {
-    var index = (turtleFrame + 10) % turtleNumFrames;
+    var frameIndex = (turtleFrame + 10) % skin.decorationAnimationNumFrames;
 
     var angleIndex = Math.floor(Turtle.heading * Turtle.numberAvatarHeadings / 360);
-    if (skin.id == "anna" || skin.id == "elsa") {
-      // the rotations in the sprite sheet go in the opposite direction.
-      angleIndex = Turtle.numberAvatarHeadings - angleIndex;
 
-      // and they are 180 degrees out of phase.
-      angleIndex = (angleIndex + Turtle.numberAvatarHeadings/2) % Turtle.numberAvatarHeadings;
-    }
+    // the rotations in the Anna & Elsa sprite sheets go in the opposite direction.
+    angleIndex = Turtle.numberAvatarHeadings - angleIndex;
 
-    if (decorationImageDetails[angleIndex].when == when)
-    {
-      var sourceX = Turtle.decorationAnimationImage.width * index;
+    // and they are 180 degrees out of phase.
+    angleIndex = (angleIndex + Turtle.numberAvatarHeadings/2) % Turtle.numberAvatarHeadings;
+
+    if (decorationImageDetails[angleIndex].when == when) {
+      var sourceX = Turtle.decorationAnimationImage.width * frameIndex;
       var sourceY = 0;
       var sourceWidth = Turtle.decorationAnimationImage.width;
       var sourceHeight = Turtle.decorationAnimationImage.height;

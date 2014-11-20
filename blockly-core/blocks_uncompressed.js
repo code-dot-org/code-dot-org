@@ -845,8 +845,8 @@ Blockly.Blocks.procedures_callnoreturn = {init:function() {
   this.setHSV(94, 0.84, 0.6);
   var a = this.appendDummyInput().appendTitle(Blockly.Msg.PROCEDURES_CALLNORETURN_CALL).appendTitle("", "NAME");
   if(Blockly.functionEditor) {
-    var b = new Blockly.FieldLabel(Blockly.Msg.FUNCTION_EDIT);
-    Blockly.bindEvent_(b.textElement_, "mousedown", this, this.openEditor);
+    var b = new Blockly.FieldIcon(Blockly.Msg.FUNCTION_EDIT);
+    Blockly.bindEvent_(b.fieldGroup_, "mousedown", this, this.openEditor);
     a.appendTitle(b)
   }
   this.setPreviousStatement(!0);
@@ -933,8 +933,8 @@ Blockly.Blocks.procedures_callreturn = {init:function() {
   this.setHSV(94, 0.84, 0.6);
   var a = this.appendDummyInput().appendTitle(Blockly.Msg.PROCEDURES_CALLRETURN_CALL).appendTitle("", "NAME");
   if(Blockly.functionEditor) {
-    var b = new Blockly.FieldLabel(Blockly.Msg.FUNCTION_EDIT);
-    Blockly.bindEvent_(b.textElement_, "mousedown", this, this.openEditor);
+    var b = new Blockly.FieldIcon(Blockly.Msg.FUNCTION_EDIT);
+    Blockly.bindEvent_(b.fieldGroup_, "mousedown", this, this.openEditor);
     a.appendTitle(b)
   }
   this.setOutput(!0);
@@ -1334,8 +1334,8 @@ Blockly.Blocks.functional_call = {init:function() {
   this.setHSV(94, 0.84, 0.6);
   var a = this.appendDummyInput().appendTitle(new Blockly.FieldLabel("Function Call", {fixedSize:{height:35}}), "NAME").appendTitle("", "PARAM_TEXT");
   if(Blockly.functionEditor) {
-    var b = new Blockly.FieldLabel(Blockly.Msg.FUNCTION_EDIT);
-    Blockly.bindEvent_(b.textElement_, "mousedown", this, this.openEditor);
+    var b = new Blockly.FieldIcon(Blockly.Msg.FUNCTION_EDIT);
+    Blockly.bindEvent_(b.fieldGroup_, "mousedown", this, this.openEditor);
     a.appendTitle(b)
   }
   this.setFunctional(!0);
