@@ -20,7 +20,7 @@ function loadInfinity(skin, assetUrl) {
   skin.projectileFrames = 10;
 
   // todo - remove filler
-  skin.avatarList = ['anna', 'elsa', 'hiro', 'baymax', 'rapunzel', 'filler5'];
+  skin.avatarList = ['anna', 'elsa', 'hiro', 'baymax', 'rapunzel'];
   skin.avatarList.forEach(function (name) {
     skin[name] = {
       sprite: skin.assetUrl('avatar_' + name + '.png'),
@@ -30,7 +30,8 @@ function loadInfinity(skin, assetUrl) {
         animation: 0,
         turns: 0,
         emotions: 0
-      }
+      },
+      timePerFrame: 100
     };
   });
 
