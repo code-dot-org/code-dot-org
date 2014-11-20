@@ -562,6 +562,16 @@ SQL
     end
   end
 
+  def assign_script(script)
+    retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+      user_script = UserScript.where(user: self, script: script).first_or_create
+      user_script.assigned_at = Time.now
+
+      user_script.save!
+      return user_script
+    end
+  end
+
   def recent_activities(limit = 10)
     self.activities.order('id desc').limit(limit)
   end
