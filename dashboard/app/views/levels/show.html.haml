@@ -16,7 +16,7 @@
 
 - if @game.unplugged?
   = render partial: "levels/unplug", locals: { app: @game.app }
-- elsif @level.is_a?(Blockly) && @level.embed && !@edit_blocks
+- elsif @level.is_a?(Blockly) && @level.embed == 'true' && !@edit_blocks
   - # Pass special parameters to Blockly partial for embedded level type.
   = render partial: "levels/blockly", locals: { embed: true, start_blocks: @start_blocks, app: @game.app, solution_blocks: @solution_blocks, maze: @level[:maze], hide_source: true, no_padding: true}
 - elsif @level.is_a?(DSLDefined)
