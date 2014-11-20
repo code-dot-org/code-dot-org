@@ -16,7 +16,7 @@ var VISIBLE_VALUE = constants.VISIBLE_VALUE;
 
 
 function loadInfinity(skin, assetUrl) {
-  skin.defaultBackground = 'hardcourt';
+  skin.defaultBackground = 'leafy';
   skin.projectileFrames = 10;
 
   // todo - remove filler
@@ -41,14 +41,24 @@ function loadInfinity(skin, assetUrl) {
   skin.projectile_baymax = skin.assetUrl('projectile_baymax.png');
   skin.projectile_rapunzel = skin.assetUrl('projectile_rapunzel.png');
 
+  skin.leafy = {
+    background: skin.assetUrl('background1.png')
+  };
+  skin.grassy = {
+    background: skin.assetUrl('background2.png')
+  };
+
   // These are used by blocks.js to customize are dropdown blocks across skins
   skin.backgroundChoices = [
     [msg.setBackgroundRandom(), RANDOM_VALUE],
-    [msg.setBackgroundHardcourt(), '"hardcourt"']];
+    // todo - come up with better names and i18n
+    ["set leafy background", '"leafy"'],
+    ["set grassy background", '"grassy"']];
 
   skin.backgroundChoicesK1 = [
-    [skin.hardcourt.background, '"hardcourt"'],
-    [skin.randomPurpleIcon, RANDOM_VALUE]];
+    [skin.randomPurpleIcon, RANDOM_VALUE],
+    ["set leafy background", '"leafy"'],
+    ["set grassy background", '"grassy"']];
 
   skin.spriteChoices = [
     [msg.setSpriteHidden(), HIDDEN_VALUE],
@@ -73,6 +83,9 @@ function loadStudio(skin, assetUrl) {
   skin.defaultBackground = 'cave';
   skin.projectileFrames = 8;
 
+  skin.hardcourt = {
+    background: skin.assetUrl('background.png'),
+  };
   skin.black = {
     background: skin.assetUrl('retro_background.png'),
   };
@@ -215,12 +228,6 @@ function loadStudio(skin, assetUrl) {
 
 exports.load = function(assetUrl, id) {
   var skin = skinsBase.load(assetUrl, id);
-
-  skin.hardcourt = {
-    background: skin.assetUrl('background.png'),
-  };
-
-
 
   // Images
   skin.yellow_hearts = skin.assetUrl('yellow_hearts.gif');
