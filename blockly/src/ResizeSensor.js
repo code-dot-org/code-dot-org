@@ -3,7 +3,7 @@
  * directory of this distribution and at
  * https://github.com/marcj/css-element-queries/blob/master/LICENSE.
  */
-;
+
 (function() {
 
     /**
@@ -128,10 +128,10 @@
             });
         }
 
-        if ('array' === typeof element
-            || ('undefined' !== typeof jQuery && element instanceof jQuery) //jquery
-            || ('undefined' !== typeof Elements && element instanceof Elements) //mootools
-            ) {
+        if ('array' === typeof element ||
+          ('undefined' !== typeof jQuery && element instanceof jQuery) || //jquery
+          ('undefined' !== typeof Elements && element instanceof Elements) //mootools
+        ) {
             var i = 0, j = element.length;
             for (; i < j; i++) {
                 attachResizeEvent(element[i], callback);
@@ -139,6 +139,6 @@
         } else {
             attachResizeEvent(element, callback);
         }
-    }
+    };
 
 })();
