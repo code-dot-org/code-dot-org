@@ -38,8 +38,11 @@
       (!Rails.env.production? && request.location.try(:country_code) == 'RD') |
 
   %div{style: "display:none"}= render partial: 'levels/reference_area'
+  - embed = local[:embed] || @embed
+  - level['showFinish'] = local[:embed]
 
   :javascript
+    var embed = #{embed ? 'true' : 'false'};
     var script_path = "#{@script_level && build_script_level_path(@script_level)}";
     startTiming('Puzzle', script_path, '');
     var level = #{level.to_json};
@@ -64,7 +67,7 @@
       #{ "send_to_phone_url: '#{@phone_share_url}'," if @phone_share_url }
       #{ "sendToPhone: true," if send_to_phone}
       #{ "disableSocialShare: true," if (@current_user && @current_user.under_13?) || @embed}
-      #{ "embed: true," if @embed}
+      #{ "embed: true," if embed}
       #{ "scriptId: '#{@script.id}'," if @script }
       #{ "levelGameName: '#{@level.game.name}'," if @level.game }
       level: level,
