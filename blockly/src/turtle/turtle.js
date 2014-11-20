@@ -763,19 +763,22 @@ var jumpDistanceCovered;
  * Special case: if we have a turn, followed by a move forward, then we can just
  * do the turn instantly and then begin the move forward in the same frame.
  */
-function checkForFreeTurn(command, values)
-{
+function checkforTurnAndMove(command, values) {
   var nextIsForward = false;
 
+  var currentTuple = api.log[0];
+  var currentCommand = currentTuple[0];
+  var currentValues = currentTuple.slice(1);
+
   // Check first for a small turn movement.
-  if (command == 'RT') {
-    var angle = values[0];
-    if (angle >= -10 && angle <= 10) {
+  if (currentCommand === 'RT') {
+    var currentAngle = currentValues[0];
+    if (Math.abs(currentAngle) <= 10) {
       // Check that next command is a move forward.
       if (api.log.length > 1) {
         var nextTuple = api.log[1];
         var nextCommand = nextTuple[0];
-        if (nextCommand == 'FD') {
+        if (nextCommand === 'FD') {
           nextIsForward = true;
         }
       }
@@ -791,9 +794,11 @@ function checkForFreeTurn(command, values)
  */
 function executeTuple () {
 
-  var tupleExecuted = false;
+  if (api.log.length === 0) { 
+    return false; 
+  }
 
-  var executeTuple = api.log.length > 0;
+  var executeTuple = true;
 
   while (executeTuple) {
     // Unless something special happens, we will just execute a single tuple.
@@ -805,23 +810,17 @@ function executeTuple () {
 
     BlocklyApps.highlight(String(id));
 
-    var freeTurn = false;
-
-    if (skin.id == "anna" || skin.id == "elsa") {
-      // Should we execute another tuple in the same frame?
-      freeTurn = checkForFreeTurn(command, tuple.slice(1));
-    }
-
-    // We should execute another tuple in this frame.
-    executeTuple = freeTurn;
-
     var smoothAnimate = false;
 
-    if (skin.id == "anna" || skin.id == "elsa") {
-      // Smooth animate only if this is not an additional tuple.
-      if (! freeTurn) {
-        smoothAnimate = true;
-      }
+    if (skin.id === "anna" || skin.id === "elsa") {
+      // Should we execute another tuple in the same frame?
+      var anotherTuple = checkforTurnAndMove();
+
+      // We go through the loop to process another tuple if there is another frame to be done.
+      executeTuple = anotherTuple;
+
+      // We only smooth animate for Anna & Elsa, and only if there is not another tuple to be done.
+      smoothAnimate = !anotherTuple;
     }
 
     var tupleDone = Turtle.step(command, tuple.slice(1), {smoothAnimate: smoothAnimate});
@@ -831,11 +830,9 @@ function executeTuple () {
       api.log.shift();
       clearTuple();
     }
-
-    tupleExecuted = true;
   }
 
-  return tupleExecuted;
+  return true;
 }
 
 /**
