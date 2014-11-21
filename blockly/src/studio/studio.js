@@ -1638,11 +1638,12 @@ function spriteFrameNumber (index) {
     frameNum = Math.floor(ellapsed / sprite.timePerFrame) % sprite.frameCounts.normal;
   }
 
+  // todo (brent) - create a test for emotions
   if (!frameNum && sprite.emotion !== Emotions.NORMAL &&
-    sprite.frameCounts.emotion > 0) {
+    sprite.frameCounts.emotions > 0) {
     // emotion frames proceed normal, animation, turn frames
     frameNum = sprite.frameCounts.normal + sprite.frameCounts.animation +
-      sprite.frameCounts.turn + (sprite.emotion - 1);
+      sprite.frameCounts.turns + (sprite.emotion - 1);
   }
   return frameNum;
 }
