@@ -12,20 +12,20 @@ var commonMsg = require('../../locale/current/common');
 var codegen = require('../codegen');
 var functionalBlockUtils = require('../functionalBlockUtils');
 var installFunctionalApiCallBlock =
-    functionalBlockUtils.installFunctionalApiCallBlock;
+  functionalBlockUtils.installFunctionalApiCallBlock;
 var initTitledFunctionalBlock = functionalBlockUtils.initTitledFunctionalBlock;
-var tiles = require('./tiles');
+var constants = require('./constants');
 var utils = require('../utils');
 var _ = utils.getLodash();
 
-var Direction = tiles.Direction;
-var Position = tiles.Position;
-var Emotions = tiles.Emotions;
+var Direction = constants.Direction;
+var Position = constants.Position;
+var Emotions = constants.Emotions;
 
-var RANDOM_VALUE = tiles.RANDOM_VALUE;
-var HIDDEN_VALUE = tiles.HIDDEN_VALUE;
-var CLICK_VALUE = tiles.CLICK_VALUE;
-var VISIBLE_VALUE = tiles.VISIBLE_VALUE;
+var RANDOM_VALUE = constants.RANDOM_VALUE;
+var HIDDEN_VALUE = constants.HIDDEN_VALUE;
+var CLICK_VALUE = constants.CLICK_VALUE;
+var VISIBLE_VALUE = constants.VISIBLE_VALUE;
 
 var generateSetterCode = function (opts) {
   var value = opts.ctx.getTitleValue('VALUE');
@@ -323,7 +323,7 @@ exports.install = function(blockly, blockInstallOptions) {
         dropdownArray2.unshift(this.GROUPINGS[1]);
         if (projectileCollisions) {
           dropdownArray2 = dropdownArray2.concat([this.GROUPINGS[2]]);
-          dropdownArray2 = dropdownArray2.concat(this.PROJECTILES);
+          dropdownArray2 = dropdownArray2.concat(this.PROJECconstants);
         }
         if (edgeCollisions) {
           dropdownArray2 = dropdownArray2.concat([this.GROUPINGS[3]]);
@@ -352,7 +352,7 @@ exports.install = function(blockly, blockInstallOptions) {
        [msg.whenSpriteCollidedWithAnyProjectile(), 'any_projectile'],
        [msg.whenSpriteCollidedWithAnyEdge(), 'any_edge']];
 
-  blockly.Blocks.studio_whenSpriteCollided.PROJECTILES =
+  blockly.Blocks.studio_whenSpriteCollided.PROJECconstants =
       [[msg.whenSpriteCollidedWithBlueFireball(), 'blue_fireball'],
        [msg.whenSpriteCollidedWithPurpleFireball(), 'purple_fireball'],
        [msg.whenSpriteCollidedWithPurpleFireball(), 'purple_fireball'],

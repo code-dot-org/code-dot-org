@@ -1,7 +1,5 @@
 'use strict';
 
-// todo - rename this file to constants?
-
 exports.Direction = {
   NONE: 0,
   NORTH: 1,
