@@ -24,7 +24,8 @@
     "free_play": "false",
     "embed": "false",
     "maze_data": null,
-    "first_sprite_index": "0"
+    "first_sprite_index": "0",
+    "protaganist_sprite_index": "0"
   }
 }]]></config>
   <blocks>
