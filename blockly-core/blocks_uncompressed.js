@@ -1420,6 +1420,21 @@ Blockly.Blocks.functional_call = {init:function() {
   }
 }};
 Blockly.Blocks.procedural_to_functional_call = Blockly.Blocks.procedures_callreturn;
+Blockly.Blocks.functionalExamples = {};
+Blockly.Blocks.functional_example = {init:function() {
+  this.setHSV(94, 0.84, 0.6);
+  this.setFunctional(!0, {headerHeight:0, rowBuffer:3});
+  this.setFunctionalOutput(!1);
+  this.appendDummyInput().appendTitle(Blockly.Msg.EXAMPLE).appendTitle("(" + [Blockly.Msg.EXPECTED, Blockly.Msg.ACTUAL].join(", ") + ")");
+  this.appendFunctionalInput("EXPECTED").setAlign(Blockly.ALIGN_CENTRE);
+  this.appendFunctionalInput("ACTUAL").setAlign(Blockly.ALIGN_CENTRE).setInline(!0);
+  this.setTooltip(Blockly.Msg.EXAMPLE_DESCRIPTION)
+}, mutationToDom:function() {
+}, domToMutation:function(a) {
+}, updateOutputType:function(a) {
+  this.outputType_ = a;
+  this.changeFunctionalOutput(this.outputType_)
+}};
 Blockly.Blocks.functionalParameters = {};
 Blockly.Blocks.functional_parameters_get = {init:function() {
   var a = new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);
