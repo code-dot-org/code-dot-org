@@ -25,11 +25,10 @@ ActiveRecord::Schema.define(version: 20141119223233) do
     t.integer  "test_result"
     t.integer  "level_source_id"
     t.integer  "lines",           default: 0, null: false
-    t.integer  "script_id"
   end
 
   add_index "activities", ["level_source_id"], name: "index_activities_on_level_source_id", using: :btree
-  add_index "activities", ["user_id", "level_id", "script_id"], name: "index_activities_on_user_id_and_level_id_and_script_id", using: :btree
+  add_index "activities", ["user_id", "level_id"], name: "index_activities_on_user_id_and_level_id", using: :btree
 
   create_table "activity_hints", force: true do |t|
     t.integer  "activity_id",          null: false
