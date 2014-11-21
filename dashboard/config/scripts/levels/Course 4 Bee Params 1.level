@@ -17,7 +17,7 @@
     "step_mode": "0",
     "nectar_goal": "9",
     "flower_type": "redWithNectar",
-    "ideal": "19",
+    "ideal": "20",
     "instructions": "Here's a function \"get 3 nectar\" that turns, moves to collect the nectar, and then returns to the original location. Write a sequence to collect all of the nectar using \"get 3 nectar.\"",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",

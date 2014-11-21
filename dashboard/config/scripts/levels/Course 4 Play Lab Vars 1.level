@@ -20,7 +20,7 @@
     "soft_buttons": [
       "rightButton"
     ],
-    "instructions": "It's a race between the Dog and the Penguin to see who can get to the Cat first. Click on \"Run\" to see who win's this race. ",
+    "instructions": "You don't have to write any code for this one, but you do have to win the race! You're the Dog, and you're trying to win a race against the Penguin to see who can get to the Cat first. Use the right arrow to control the Dog. Press \"Run\" to start the race. ",
     "predraw_blocks": "<xml><block type=\"studio_whenArrow\" movable=\"false\"><title name=\"VALUE\">right</title><next><block type=\"studio_moveDistance\" movable=\"false\" editable=\"false\"><title name=\"SPRITE\">0</title><title name=\"DIR\">2</title><title name=\"DISTANCE\">25</title></block></next></block><block type=\"studio_repeatForever\"><statement name=\"DO\"><block type=\"studio_moveDistance\"><title name=\"SPRITE\">1</title><title name=\"DIR\">1</title><title name=\"DISTANCE\">25</title><next><block type=\"studio_moveDistance\"><title name=\"SPRITE\">1</title><title name=\"DIR\">4</title><title name=\"DISTANCE\">25</title></block></next></block></statement></block></xml>",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",

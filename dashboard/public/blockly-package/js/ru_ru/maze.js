@@ -2994,6 +2994,10 @@ exports.hasExtraTopBlocks = function () {
     if (topBlocks[i].disabled) {
       continue;
     }
+    // Ignore hidden blocks such as functional definitions.
+    if (!topBlocks[i].isUserVisible()) {
+      continue;
+    }
     // None of our top level blocks should have a previous connection.
     if (topBlocks[i].previousConnection) {
       return true;
@@ -12182,7 +12186,6 @@ window.mazeMain = function(options) {
 
 var BlocklyApps = require('../base');
 var commonMsg = require('../../locale/ru_ru/common');
-var skins = require('../skins');
 var tiles = require('./tiles');
 var codegen = require('../codegen');
 var api = require('./api');
@@ -13965,7 +13968,7 @@ Maze.onExecutionFinish = function () {
   }
 };
 
-},{"../../locale/ru_ru/common":59,"../base":3,"../codegen":7,"../dom":9,"../feedback.js":10,"../skins":42,"../templates/page.html":50,"../timeoutList":56,"../utils":57,"./api":14,"./bee":15,"./beeItemDrawer":17,"./controls.html":19,"./dirtDrawer":20,"./executionInfo":21,"./extraControlRows.html":22,"./mazeUtils":28,"./scrat":30,"./tiles":33,"./visualization.html":38,"./wordsearch":39}],28:[function(require,module,exports){
+},{"../../locale/ru_ru/common":59,"../base":3,"../codegen":7,"../dom":9,"../feedback.js":10,"../templates/page.html":50,"../timeoutList":56,"../utils":57,"./api":14,"./bee":15,"./beeItemDrawer":17,"./controls.html":19,"./dirtDrawer":20,"./executionInfo":21,"./extraControlRows.html":22,"./mazeUtils":28,"./scrat":30,"./tiles":33,"./visualization.html":38,"./wordsearch":39}],28:[function(require,module,exports){
 /**
  * Generalized function for generating ids for cells in a table
  */
@@ -15330,23 +15333,12 @@ exports.load = function(assetUrl, id) {
     squigglyLine: assetUrl('media/common_images/squiggly.png'),
     swirlyLine: assetUrl('media/common_images/swirlyline.png'),
     randomPurpleIcon: assetUrl('media/common_images/random-purple.png'),
-    annaLine: assetUrl('media/common_images/annaline.png'),
-    elsaLine: assetUrl('media/common_images/elsaline.png'),
-    annaLine_2x: assetUrl('media/common_images/annaline_2x.png'),
-    elsaLine_2x: assetUrl('media/common_images/elsaline_2x.png'),
 
     // Sounds
     startSound: [skinUrl('start.mp3'), skinUrl('start.ogg')],
     winSound: [skinUrl('win.mp3'), skinUrl('win.ogg')],
     failureSound: [skinUrl('failure.mp3'), skinUrl('failure.ogg')]
   };
-
-  if (skin.id === "elsa") {
-    skin.turtleNumFrames = 20;
-    skin.decorationAnimationNumFrames = 19;
-  } else if (skin.id === "anna") {
-    skin.turtleNumFrames = 10;
-  }
 
   return skin;
 };

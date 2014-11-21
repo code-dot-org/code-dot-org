@@ -3882,6 +3882,10 @@ exports.hasExtraTopBlocks = function () {
     if (topBlocks[i].disabled) {
       continue;
     }
+    // Ignore hidden blocks such as functional definitions.
+    if (!topBlocks[i].isUserVisible()) {
+      continue;
+    }
     // None of our top level blocks should have a previous connection.
     if (topBlocks[i].previousConnection) {
       return true;
@@ -4091,6 +4095,9 @@ module.exports.initTitledFunctionalBlock = function (block, title, type, args) {
  * generate the following code:
  *
  *     'Studio.setSpriteSpeed(block_id_43, 0, 12)'
+ *
+ * if no apiName is specified, a "dummy" block is generated which
+ * accepts arguments but generates no code.
  */
 module.exports.installFunctionalApiCallBlock = function(blockly, generator,
     options) {
@@ -4112,6 +4119,9 @@ module.exports.installFunctionalApiCallBlock = function(blockly, generator,
 
   // The generator function depends on "this" being the block object.
   generator[blockName] = function() {
+    if (!apiName) {
+      return '';
+    }
     var apiArgs = [];
     apiArgs.push('\'block_id_' + this.id + '\'');
     for (var i = 0; i < args.length; i++) {
@@ -9844,23 +9854,12 @@ exports.load = function(assetUrl, id) {
     squigglyLine: assetUrl('media/common_images/squiggly.png'),
     swirlyLine: assetUrl('media/common_images/swirlyline.png'),
     randomPurpleIcon: assetUrl('media/common_images/random-purple.png'),
-    annaLine: assetUrl('media/common_images/annaline.png'),
-    elsaLine: assetUrl('media/common_images/elsaline.png'),
-    annaLine_2x: assetUrl('media/common_images/annaline_2x.png'),
-    elsaLine_2x: assetUrl('media/common_images/elsaline_2x.png'),
 
     // Sounds
     startSound: [skinUrl('start.mp3'), skinUrl('start.ogg')],
     winSound: [skinUrl('win.mp3'), skinUrl('win.ogg')],
     failureSound: [skinUrl('failure.mp3'), skinUrl('failure.ogg')]
   };
-
-  if (skin.id === "elsa") {
-    skin.turtleNumFrames = 20;
-    skin.decorationAnimationNumFrames = 19;
-  } else if (skin.id === "anna") {
-    skin.turtleNumFrames = 10;
-  }
 
   return skin;
 };
