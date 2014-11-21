@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141017233919) do
+ActiveRecord::Schema.define(version: 20141119223233) do
 
   create_table "activities", force: true do |t|
     t.integer  "user_id"
@@ -25,10 +25,11 @@ ActiveRecord::Schema.define(version: 20141017233919) do
     t.integer  "test_result"
     t.integer  "level_source_id"
     t.integer  "lines",           default: 0, null: false
+    t.integer  "script_id"
   end
 
   add_index "activities", ["level_source_id"], name: "index_activities_on_level_source_id", using: :btree
-  add_index "activities", ["user_id", "level_id"], name: "index_activities_on_user_id_and_level_id", using: :btree
+  add_index "activities", ["user_id", "level_id", "script_id"], name: "index_activities_on_user_id_and_level_id_and_script_id", using: :btree
 
   create_table "activity_hints", force: true do |t|
     t.integer  "activity_id",          null: false
@@ -294,9 +295,10 @@ ActiveRecord::Schema.define(version: 20141017233919) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "best_result"
+    t.integer  "script_id"
   end
 
-  add_index "user_levels", ["user_id", "level_id"], name: "index_user_levels_on_user_id_and_level_id", unique: true, using: :btree
+  add_index "user_levels", ["user_id", "level_id", "script_id"], name: "index_user_levels_on_user_id_and_level_id_and_script_id", unique: true, using: :btree
 
   create_table "user_permissions", force: true do |t|
     t.integer  "user_id",    null: false
