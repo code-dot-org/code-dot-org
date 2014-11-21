@@ -12,7 +12,7 @@ theme: none
 [together]
 
 ## Lesson Overview
-Students will use the Eval app to learn about two new data types, strings (any string of alphanumeric characters) and images (... they're images).
+Students will use the Eval app to learn about two new data types, Strings (any string of alphanumeric characters) and Images (... they're images).
 
 [summary]
 
@@ -22,7 +22,7 @@ Students will use the Eval app to learn about two new data types, strings (any s
 1) [Vocabulary](#Vocab)
 2) [Introduction](#GetStarted)  
 
-### **Activity: Calc Rectangles of Evaluation**  
+### **Activity: Eval Strings and Images**  
 
 3) [Online Puzzles](#Activity1)
 
@@ -42,14 +42,12 @@ Students will use the Eval app to learn about two new data types, strings (any s
 
 
 ### <a name="Vocab"></a> 1) Vocabulary
-This lesson has two new and important words:<br/>
+This lesson has four new and important words:<br/>
 
-- **Retangle of Evaluation** - a diagram of the structure of an expression (arithmetic or code)
-- **Evaluate** - perform the computation in an expression, producing an answer
-- **Expression** - a computation written in the rules of some language (such as arithmetic, code, or a Rectangle of Evaluation)
-- **Function** - a mathematical object that takes in some inputs and produces an output
-- **Programming Language** - a set of rules for writing code that a computer can evaluate
-- **Value** - a specific piece of data, like 5 or "hello"
+- **String** - any sequence of characters between quotation marks (examples: "hello", "42", "this is a string!")
+- **Image** - a type of data for pictures
+- **Produce** - to compute a value from an expression
+- **Type** - refers to a general kind of data, like Number, String, Image, or Boolean
 
 ### <a name="GetStarted"></a> 2) Introduction
 Math is a language, just like English, Spanish, or any other language. We use nouns, like "bread", "tomato", "mustard" and "cheese" to describe physical objects. Math has values, like the numbers 1, 2 or 3, to describe quantities. Humans also use verbs like "toast", "slice", "spread" and "melt" to describe operations on these nouns. Mathematics has functions like addition and subtraction, which are operations performed on numbers. Just as you can "slice piece of bread", a person can also "add four and five".
@@ -73,10 +71,10 @@ Mathematicians didn’t always agree on the order of operations, but now we have
 
 [together]
 
-## Activity: Calc Rectangles of Evaluation
+## Activity: Eval Strings and Images
 ### <a name="Activity1"></a> 3) Online Puzzles
 
-The programming language you are going to learn uses Rectangles of Evaluation to visually represent mathematical functions. Each block of code is either a Function, or a Value - head to [MSM Stage 2](http://studio.code.org/s/msm/stage/2/puzzle/1) in Code Studio to get started programming.
+In this activity you'll use the new data types String and Image to compose art with Blocks of Evaluation - head to [MSM Stage 3](http://studio.code.org/s/msm/stage/3/puzzle/1) in Code Studio to get started programming.
 
 [/together]
 

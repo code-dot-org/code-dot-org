@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "studio",
-    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
+    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n  return (Studio.Globals.stopped_left && Studio.Globals.stopped_right && Studio.Globals.stopped_up && Studio.Globals.stopped_down);\r\n}",
     "failure_condition": "function () {\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "soft_buttons": [
@@ -29,6 +29,7 @@
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "true",
     "free_play": "false",
+    "embed": "false",
     "maze_data": null
   }
 }]]></config>
@@ -37,22 +38,91 @@
       <xml>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
-            <arg name="y"/>
-            <description>Return true if y is greater than 0</description>
+            <arg name="y" type="Number"/>
+            <description>Write a description for this function</description>
             <outputtype>boolean</outputtype>
           </mutation>
           <title name="NAME">safe-down?</title>
         </block>
-        <block type="functional_call" inline="false">
-          <mutation name="on-screen?">
-            <arg name="x"/>
-            <arg name="y"/>
+        <block type="functional_definition" inline="false" uservisible="false">
+          <mutation>
+            <arg name="y" type="Number"/>
+            <description>Return true if y is less than 400</description>
+            <outputtype>boolean</outputtype>
           </mutation>
+          <title name="NAME">safe-up?</title>
+          <functional_input name="STACK">
+            <block type="functional_less_than" inline="false" uservisible="false">
+              <functional_input name="ARG1">
+                <block type="functional_parameters_get" uservisible="false">
+                  <mutation>
+                    <outputtype>Number</outputtype>
+                  </mutation>
+                  <title name="VAR">y</title>
+                </block>
+              </functional_input>
+              <functional_input name="ARG2">
+                <block type="functional_math_number" uservisible="false">
+                  <title name="NUM">400</title>
+                </block>
+              </functional_input>
+            </block>
+          </functional_input>
         </block>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
-            <arg name="x"/>
-            <arg name="y"/>
+            <arg name="x" type="Number"/>
+            <description>Return true if x is greater than 0</description>
+            <outputtype>boolean</outputtype>
+          </mutation>
+          <title name="NAME">safe-left?</title>
+          <functional_input name="STACK">
+            <block type="functional_greater_than" inline="false" uservisible="false">
+              <functional_input name="ARG1">
+                <block type="functional_parameters_get" uservisible="false">
+                  <mutation>
+                    <outputtype>Number</outputtype>
+                  </mutation>
+                  <title name="VAR">x</title>
+                </block>
+              </functional_input>
+              <functional_input name="ARG2">
+                <block type="functional_math_number" uservisible="false">
+                  <title name="NUM">0</title>
+                </block>
+              </functional_input>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_definition" inline="false" uservisible="false">
+          <mutation>
+            <arg name="x" type="Number"/>
+            <description>Return true if x is less than 400.</description>
+            <outputtype>boolean</outputtype>
+          </mutation>
+          <title name="NAME">safe-right?</title>
+          <functional_input name="STACK">
+            <block type="functional_less_than" inline="false" uservisible="false">
+              <functional_input name="ARG1">
+                <block type="functional_parameters_get" uservisible="false">
+                  <mutation>
+                    <outputtype>Number</outputtype>
+                  </mutation>
+                  <title name="VAR">x</title>
+                </block>
+              </functional_input>
+              <functional_input name="ARG2">
+                <block type="functional_math_number" uservisible="false">
+                  <title name="NUM">400</title>
+                </block>
+              </functional_input>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_definition" inline="false" uservisible="false">
+          <mutation>
+            <arg name="x" type="Number"/>
+            <arg name="y" type="Number"/>
             <description>Check x against safe-left? and safe-right?, check y against safe-up? and safe-down?</description>
             <outputtype>boolean</outputtype>
           </mutation>
@@ -64,7 +134,7 @@
                   <functional_input name="ARG1">
                     <block type="functional_call" inline="false" uservisible="false">
                       <mutation name="safe-left?">
-                        <arg name="x"/>
+                        <arg name="x" type="Number"/>
                       </mutation>
                       <functional_input name="ARG0">
                         <block type="functional_parameters_get" uservisible="false">
@@ -79,7 +149,7 @@
                   <functional_input name="ARG2">
                     <block type="functional_call" inline="false" uservisible="false">
                       <mutation name="safe-right?">
-                        <arg name="x"/>
+                        <arg name="x" type="Number"/>
                       </mutation>
                       <functional_input name="ARG0">
                         <block type="functional_parameters_get" uservisible="false">
@@ -96,11 +166,13 @@
               <functional_input name="ARG2">
                 <block type="functional_call" inline="false" uservisible="false">
                   <mutation name="safe-up?">
-                    <arg name="y"/>
+                    <arg name="y" type="Number"/>
                   </mutation>
                   <functional_input name="ARG0">
                     <block type="functional_parameters_get" uservisible="false">
-                      <mutation/>
+                      <mutation>
+                        <outputtype>Number</outputtype>
+                      </mutation>
                       <title name="VAR">y</title>
                     </block>
                   </functional_input>
@@ -108,6 +180,68 @@
               </functional_input>
             </block>
           </functional_input>
+        </block>
+        <block type="when_run" uservisible="false">
+          <next>
+            <block type="variables_set" inline="false" uservisible="false">
+              <title name="VAR">sam-x</title>
+              <value name="VALUE">
+                <block type="math_number" uservisible="false">
+                  <title name="NUM">200</title>
+                </block>
+              </value>
+              <next>
+                <block type="variables_set" inline="false" uservisible="false">
+                  <title name="VAR">sam-y</title>
+                  <value name="VALUE">
+                    <block type="math_number" uservisible="false">
+                      <title name="NUM">200</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="variables_set" inline="false" uservisible="false">
+                      <title name="VAR">stopped-left</title>
+                      <value name="VALUE">
+                        <block type="logic_boolean" uservisible="false">
+                          <title name="BOOL">FALSE</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="variables_set" inline="false" uservisible="false">
+                          <title name="VAR">stopped-right</title>
+                          <value name="VALUE">
+                            <block type="logic_boolean" uservisible="false">
+                              <title name="BOOL">FALSE</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="variables_set" inline="false" uservisible="false">
+                              <title name="VAR">stopped-up</title>
+                              <value name="VALUE">
+                                <block type="logic_boolean" uservisible="false">
+                                  <title name="BOOL">FALSE</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="variables_set" inline="false" uservisible="false">
+                                  <title name="VAR">stopped-down</title>
+                                  <value name="VALUE">
+                                    <block type="logic_boolean" uservisible="false">
+                                      <title name="BOOL">FALSE</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
         </block>
         <block type="studio_whenArrow" uservisible="false">
           <title name="VALUE">up</title>
@@ -150,12 +284,12 @@
                                     <arg name="y"/>
                                   </mutation>
                                   <value name="ARG0">
-                                    <block type="variables_get">
+                                    <block type="variables_get" uservisible="false">
                                       <title name="VAR">sam-x</title>
                                     </block>
                                   </value>
                                   <value name="ARG1">
-                                    <block type="variables_get">
+                                    <block type="variables_get" uservisible="false">
                                       <title name="VAR">sam-y</title>
                                     </block>
                                   </value>
@@ -189,6 +323,16 @@
                                       </value>
                                     </block>
                                   </value>
+                                  <next>
+                                    <block type="variables_set" inline="false" uservisible="false">
+                                      <title name="VAR">stopped-up</title>
+                                      <value name="VALUE">
+                                        <block type="logic_boolean" uservisible="false">
+                                          <title name="BOOL">TRUE</title>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </next>
                                 </block>
                               </next>
                             </block>
@@ -201,76 +345,6 @@
               </next>
             </block>
           </next>
-        </block>
-        <block type="functional_definition" inline="false" uservisible="false">
-          <mutation>
-            <arg name="y"/>
-            <description>Returns true if y is less than 400</description>
-          </mutation>
-          <title name="NAME">safe-up?</title>
-          <functional_input name="STACK">
-            <block type="functional_less_than" inline="false" uservisible="false">
-              <functional_input name="ARG1">
-                <block type="functional_parameters_get" uservisible="false">
-                  <mutation>
-                    <outputtype>Number</outputtype>
-                  </mutation>
-                  <title name="VAR">y</title>
-                </block>
-              </functional_input>
-              <functional_input name="ARG2">
-                <block type="functional_math_number" uservisible="false">
-                  <title name="NUM">400</title>
-                </block>
-              </functional_input>
-            </block>
-          </functional_input>
-        </block>
-        <block type="when_run" uservisible="false">
-          <next>
-            <block type="variables_set" inline="false" uservisible="false">
-              <title name="VAR">sam-x</title>
-              <value name="VALUE">
-                <block type="math_number" uservisible="false">
-                  <title name="NUM">200</title>
-                </block>
-              </value>
-              <next>
-                <block type="variables_set" inline="false" uservisible="false">
-                  <title name="VAR">sam-y</title>
-                  <value name="VALUE">
-                    <block type="math_number" uservisible="false">
-                      <title name="NUM">200</title>
-                    </block>
-                  </value>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
-        <block type="functional_definition" inline="false" uservisible="false">
-          <mutation>
-            <arg name="x"/>
-            <description>Return true if x is greater than 0</description>
-          </mutation>
-          <title name="NAME">safe-left?</title>
-          <functional_input name="STACK">
-            <block type="functional_greater_than" inline="false" uservisible="false">
-              <functional_input name="ARG1">
-                <block type="functional_parameters_get" uservisible="false">
-                  <mutation>
-                    <outputtype>Number</outputtype>
-                  </mutation>
-                  <title name="VAR">x</title>
-                </block>
-              </functional_input>
-              <functional_input name="ARG2">
-                <block type="functional_math_number" uservisible="false">
-                  <title name="NUM">0</title>
-                </block>
-              </functional_input>
-            </block>
-          </functional_input>
         </block>
         <block type="studio_whenArrow" uservisible="false">
           <title name="VALUE">down</title>
@@ -313,12 +387,12 @@
                                     <arg name="y"/>
                                   </mutation>
                                   <value name="ARG0">
-                                    <block type="variables_get">
+                                    <block type="variables_get" uservisible="false">
                                       <title name="VAR">sam-x</title>
                                     </block>
                                   </value>
                                   <value name="ARG1">
-                                    <block type="variables_get">
+                                    <block type="variables_get" uservisible="false">
                                       <title name="VAR">sam-y</title>
                                     </block>
                                   </value>
@@ -352,6 +426,16 @@
                                       </value>
                                     </block>
                                   </value>
+                                  <next>
+                                    <block type="variables_set" inline="false" uservisible="false">
+                                      <title name="VAR">stopped-down</title>
+                                      <value name="VALUE">
+                                        <block type="logic_boolean" uservisible="false">
+                                          <title name="BOOL">TRUE</title>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </next>
                                 </block>
                               </next>
                             </block>
@@ -406,12 +490,12 @@
                                     <arg name="y"/>
                                   </mutation>
                                   <value name="ARG0">
-                                    <block type="variables_get">
+                                    <block type="variables_get" uservisible="false">
                                       <title name="VAR">sam-x</title>
                                     </block>
                                   </value>
                                   <value name="ARG1">
-                                    <block type="variables_get">
+                                    <block type="variables_get" uservisible="false">
                                       <title name="VAR">sam-y</title>
                                     </block>
                                   </value>
@@ -445,6 +529,16 @@
                                       </value>
                                     </block>
                                   </value>
+                                  <next>
+                                    <block type="variables_set" inline="false" uservisible="false">
+                                      <title name="VAR">stopped-left</title>
+                                      <value name="VALUE">
+                                        <block type="logic_boolean" uservisible="false">
+                                          <title name="BOOL">TRUE</title>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </next>
                                 </block>
                               </next>
                             </block>
@@ -457,29 +551,6 @@
               </next>
             </block>
           </next>
-        </block>
-        <block type="functional_definition" inline="false" uservisible="false">
-          <mutation>
-            <arg name="x"/>
-            <description>Return true if x is less than 400.</description>
-            <outputtype>boolean</outputtype>
-          </mutation>
-          <title name="NAME">safe-right?</title>
-          <functional_input name="STACK">
-            <block type="functional_less_than" inline="false" uservisible="false">
-              <functional_input name="ARG1">
-                <block type="functional_parameters_get" uservisible="false">
-                  <mutation/>
-                  <title name="VAR">x</title>
-                </block>
-              </functional_input>
-              <functional_input name="ARG2">
-                <block type="functional_math_number" uservisible="false">
-                  <title name="NUM">400</title>
-                </block>
-              </functional_input>
-            </block>
-          </functional_input>
         </block>
         <block type="studio_whenArrow" uservisible="false">
           <title name="VALUE">right</title>
@@ -522,12 +593,12 @@
                                     <arg name="y"/>
                                   </mutation>
                                   <value name="ARG0">
-                                    <block type="variables_get">
+                                    <block type="variables_get" uservisible="false">
                                       <title name="VAR">sam-x</title>
                                     </block>
                                   </value>
                                   <value name="ARG1">
-                                    <block type="variables_get">
+                                    <block type="variables_get" uservisible="false">
                                       <title name="VAR">sam-y</title>
                                     </block>
                                   </value>
@@ -561,6 +632,16 @@
                                       </value>
                                     </block>
                                   </value>
+                                  <next>
+                                    <block type="variables_set" inline="false" uservisible="false">
+                                      <title name="VAR">stopped-right</title>
+                                      <value name="VALUE">
+                                        <block type="logic_boolean" uservisible="false">
+                                          <title name="BOOL">TRUE</title>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </next>
                                 </block>
                               </next>
                             </block>
