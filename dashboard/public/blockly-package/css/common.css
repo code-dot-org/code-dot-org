@@ -642,7 +642,7 @@ input[type="radio"] {
   border: 1px solid #7665a0;
   color: white;
   width: 46%;
-  font-size: 15px;
+  font-size: 14px;
   text-align: center; }
   #save-to-gallery-button:disabled {
     color: #7665a0;
