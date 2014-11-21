@@ -8604,8 +8604,12 @@ exports.load = function(assetUrl, id) {
   if (skin.id === "elsa") {
     skin.turtleNumFrames = 20;
     skin.decorationAnimationNumFrames = 19;
+    skin.smoothAnimate = true;
+    skin.consolidateTurnAndMove = true;
   } else if (skin.id === "anna") {
     skin.turtleNumFrames = 10;
+    skin.smoothAnimate = true;
+    skin.consolidateTurnAndMove = true;
   }
 
   return skin;
@@ -13409,34 +13413,74 @@ Turtle.execute = function() {
 var jumpDistance = 5;
 var jumpDistanceCovered;
 
+
+/**
+ * Special case: if we have a turn, followed by a move forward, then we can just
+ * do the turn instantly and then begin the move forward in the same frame.
+ */
+function checkforTurnAndMove() {
+  var nextIsForward = false;
+
+  var currentTuple = api.log[0];
+  var currentCommand = currentTuple[0];
+  var currentValues = currentTuple.slice(1);
+
+  // Check first for a small turn movement.
+  if (currentCommand === 'RT') {
+    var currentAngle = currentValues[0];
+    if (Math.abs(currentAngle) <= 10) {
+      // Check that next command is a move forward.
+      if (api.log.length > 1) {
+        var nextTuple = api.log[1];
+        var nextCommand = nextTuple[0];
+        if (nextCommand === 'FD') {
+          nextIsForward = true;
+        }
+      }
+    }
+  }
+
+  return nextIsForward;
+}
+
+
 /**
  * Attempt to execute one command from the log of API commands.
  */
 function executeTuple () {
 
-  if (api.log.length > 0)
-  {
+  if (api.log.length === 0) { 
+    return false; 
+  }
+
+  var executeSecondTuple;
+
+  do {
+    // Unless something special happens, we will just execute a single tuple.
+    executeSecondTuple = false;
+
     var tuple = api.log[0];
     var command = tuple[0];
     var id = tuple[tuple.length-1];
 
     BlocklyApps.highlight(String(id));
-    var smoothAnimate = skin.id == "anna" || skin.id == "elsa";
-    var tupleDone = Turtle.step(command, tuple.slice(1), {smoothAnimate: smoothAnimate});
+
+    // Should we execute another tuple in this frame of animation?
+    if (skin.consolidateTurnAndMove && checkforTurnAndMove()) {
+      executeSecondTuple = true;
+    }
+
+    // We only smooth animate for Anna & Elsa, and only if there is not another tuple to be done.
+    var tupleDone = Turtle.step(command, tuple.slice(1), {smoothAnimate: skin.smoothAnimate && !executeSecondTuple});
     Turtle.display();
 
-    if (tupleDone)
-    {
+    if (tupleDone) {
       api.log.shift();
       clearTuple();
     }
+  } while (executeSecondTuple);
 
-    return true;
-  }
-  else
-  {
-    return false;
-  }
+  return true;
 }
 
 /**
