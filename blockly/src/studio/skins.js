@@ -7,7 +7,7 @@
 
 var skinsBase = require('../skins');
 var msg = require('../../locale/current/studio');
-var constants = require('./tiles');
+var constants = require('./constants');
 
 var RANDOM_VALUE = constants.RANDOM_VALUE;
 var HIDDEN_VALUE = constants.HIDDEN_VALUE;
@@ -19,7 +19,6 @@ function loadInfinity(skin, assetUrl) {
   skin.defaultBackground = 'leafy';
   skin.projectileFrames = 10;
 
-  // todo - remove filler
   skin.avatarList = ['anna', 'elsa', 'hiro', 'baymax', 'rapunzel'];
   skin.avatarList.forEach(function (name) {
     skin[name] = {
@@ -34,6 +33,10 @@ function loadInfinity(skin, assetUrl) {
       timePerFrame: 100
     };
   });
+
+  skin.preventProjectileLoop = function (className) {
+    return className === 'projectile_hiro';
+  };
 
   skin.projectile_hiro = skin.assetUrl('projectile_hiro.png');
   skin.projectile_anna = skin.assetUrl('projectile_anna.png');
