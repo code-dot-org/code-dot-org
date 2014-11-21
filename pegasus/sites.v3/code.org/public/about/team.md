@@ -10,3 +10,5 @@ nav: about_nav
 ## Extended Team
 
 <%= view :about_people, people:DB[:cdo_team].where(kind_s:'extended') %>
+
+### Thank you to our extended team of [Lead Translators](http://code.org/translators)!
