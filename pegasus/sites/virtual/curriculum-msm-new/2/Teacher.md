@@ -1,5 +1,5 @@
 ---
-title: Calc Rectangles of Evaluation
+title: Calc Evaluation Blocks
 view: page_curriculum
 theme: none
 ---
@@ -22,7 +22,7 @@ Students will use the Calc app to begin looking at math as a language, and more 
 1) [Vocabulary](#Vocab)
 2) [Introduction](#GetStarted)  
 
-### **Activity: Calc Rectangles of Evaluation**  
+### **Activity: Calc Evaluation Blocks**  
 
 3) [Online Puzzles](#Activity1)
 
@@ -31,7 +31,7 @@ Students will use the Calc app to begin looking at math as a language, and more 
 ## Lesson Objectives 
 ### Students will:
 - Convert arithmatic expressions to and from code
-- Use the rectangles of evaluation to reflect the proper order of operations for an expression
+- Use Evaluation Blocks to reflect the proper order of operations for an expression
 
 [/together]
 
@@ -43,11 +43,11 @@ Students will use the Calc app to begin looking at math as a language, and more 
 
 
 ### <a name="Vocab"></a> 1) Vocabulary
-This lesson has two new and important words:<br/>
+This lesson has six new and important words:<br/>
 
-- **Rectangle of Evaluation** - a diagram of the structure of an expression (arithmetic or code)
+- **Evaluation Block** - a block of code that represents the structure of an expression
 - **Evaluate** - perform the computation in an expression, producing an answer
-- **Expression** - a computation written in the rules of some language (such as arithmetic, code, or a Rectangle of Evaluation)
+- **Expression** - a computation written in the rules of some language (such as arithmetic, code, or an Evaluation Block)
 - **Function** - a mathematical object that takes in some inputs and produces an output
 - **Programming Language** - a set of rules for writing code that a computer can evaluate
 - **Value** - a specific piece of data, like 5 or "hello"
@@ -74,10 +74,10 @@ Mathematicians didn’t always agree on the order of operations, but now we have
 
 [together]
 
-## Activity: Calc Rectangles of Evaluation
+## Activity: Calc Evaluation Blocks
 ### <a name="Activity1"></a> 3) Online Puzzles
 
-The programming language you are going to learn uses Rectangles of Evaluation to visually represent mathematical functions. Each block of code is either a Function, or a Value - head to [MSM Stage 2](http://studio.code.org/s/msm/stage/2/puzzle/1) in Code Studio to get started programming.
+The programming language you are going to learn uses Evaluation Blocks to visually represent mathematical functions. Each Block of code is either a Function, or a Value - head to [MSM Stage 2](http://studio.code.org/s/msm/stage/2/puzzle/1) in Code Studio to get started programming.
 
 [/together]
 

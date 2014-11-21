@@ -506,6 +506,7 @@ $aniGifPreviewHeight: 60px;
 
 #headers {
   $height: 40px;
+  height: $height;
   background-color: $purple;
   div {
     display: inline-block;
