@@ -32,7 +32,6 @@ var BlocklyApps = require('../base');
 var Turtle = module.exports;
 var commonMsg = require('../../locale/current/common');
 var turtleMsg = require('../../locale/current/turtle');
-var skins = require('../skins');
 var levels = require('./levels');
 var Colours = require('./core').Colours;
 var codegen = require('../codegen');
@@ -794,8 +793,8 @@ function checkforTurnAndMove() {
  */
 function executeTuple () {
 
-  if (api.log.length === 0) { 
-    return false; 
+  if (api.log.length === 0) {
+    return false;
   }
 
   var executeSecondTuple;
@@ -1033,7 +1032,7 @@ Turtle.step = function(command, values, options) {
 Turtle.setPattern = function (pattern) {
   if (Turtle.loadedPathPatterns[pattern]) {
     Turtle.currentPathPattern = Turtle.loadedPathPatterns[pattern];
-    Turtle.isDrawingWithPattern = true; 
+    Turtle.isDrawingWithPattern = true;
   } else if (pattern === null) {
     Turtle.currentPathPattern = new Image();
     Turtle.isDrawingWithPattern = false;
