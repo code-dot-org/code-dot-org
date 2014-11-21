@@ -15,7 +15,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "Cool, now we've got our \"points\" variable, but how are we going to make it useful? How about adding to your \"points\" variable each time you hit the enemy with a fireball? Use the \"when actor 2 touches anything\" event to trigger an update to your score when your fireballs hit the cat. You can increment your variable by setting \"points = points + 1.\" Get your score up to 10 (going one at a time!) to pass the level.",
+    "instructions": "Make a game that adds to your \"points\" variable each time you hit the Cat with a fireball. Use the \"when actor 2 touches anything\" event to trigger an update to your score. You can increment your variable by setting \"points = points + 1.\" Get your score up to 10 (going one at a time!) to pass the level.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -39,7 +39,7 @@
             <block type="variables_set" inline="false">
               <title name="VAR">points</title>
               <value name="VALUE">
-                <block type="math_number">
+                <block type="math_number" editable="false">
                   <title name="NUM">0</title>
                 </block>
               </value>
