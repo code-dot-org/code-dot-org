@@ -7,7 +7,7 @@
   "properties": {
     "skin": "studio",
     "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n  return (Studio.Globals.stopped_left && Studio.Globals.stopped_right && Studio.Globals.stopped_up && Studio.Globals.stopped_down);\r\n}",
-    "failure_condition": "function () {\r\n}",
+    "failure_condition": "function () {\r\n  return ((Studio.Globals.sam_x < -50) || (Studio.Globals.sam_x > 450) || (Studio.Globals.sam_y < -50) || (Studio.Globals.sam_y > 450));\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "soft_buttons": [
       "leftButton",
@@ -30,95 +30,14 @@
     "coordinate_grid_background": "true",
     "free_play": "false",
     "embed": "false",
-    "maze_data": null
+    "open_function_definition": "safe-down?",
+    "maze_data": null,
+    "protaganist_sprite_index": "0"
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="functional_definition" inline="false" uservisible="false">
-          <mutation>
-            <arg name="y" type="Number"/>
-            <description>Write a description for this function</description>
-            <outputtype>boolean</outputtype>
-          </mutation>
-          <title name="NAME">safe-down?</title>
-        </block>
-        <block type="functional_definition" inline="false" uservisible="false">
-          <mutation>
-            <arg name="y" type="Number"/>
-            <description>Return true if y is less than 400</description>
-            <outputtype>boolean</outputtype>
-          </mutation>
-          <title name="NAME">safe-up?</title>
-          <functional_input name="STACK">
-            <block type="functional_less_than" inline="false" uservisible="false">
-              <functional_input name="ARG1">
-                <block type="functional_parameters_get" uservisible="false">
-                  <mutation>
-                    <outputtype>Number</outputtype>
-                  </mutation>
-                  <title name="VAR">y</title>
-                </block>
-              </functional_input>
-              <functional_input name="ARG2">
-                <block type="functional_math_number" uservisible="false">
-                  <title name="NUM">400</title>
-                </block>
-              </functional_input>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_definition" inline="false" uservisible="false">
-          <mutation>
-            <arg name="x" type="Number"/>
-            <description>Return true if x is greater than 0</description>
-            <outputtype>boolean</outputtype>
-          </mutation>
-          <title name="NAME">safe-left?</title>
-          <functional_input name="STACK">
-            <block type="functional_greater_than" inline="false" uservisible="false">
-              <functional_input name="ARG1">
-                <block type="functional_parameters_get" uservisible="false">
-                  <mutation>
-                    <outputtype>Number</outputtype>
-                  </mutation>
-                  <title name="VAR">x</title>
-                </block>
-              </functional_input>
-              <functional_input name="ARG2">
-                <block type="functional_math_number" uservisible="false">
-                  <title name="NUM">0</title>
-                </block>
-              </functional_input>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_definition" inline="false" uservisible="false">
-          <mutation>
-            <arg name="x" type="Number"/>
-            <description>Return true if x is less than 400.</description>
-            <outputtype>boolean</outputtype>
-          </mutation>
-          <title name="NAME">safe-right?</title>
-          <functional_input name="STACK">
-            <block type="functional_less_than" inline="false" uservisible="false">
-              <functional_input name="ARG1">
-                <block type="functional_parameters_get" uservisible="false">
-                  <mutation>
-                    <outputtype>Number</outputtype>
-                  </mutation>
-                  <title name="VAR">x</title>
-                </block>
-              </functional_input>
-              <functional_input name="ARG2">
-                <block type="functional_math_number" uservisible="false">
-                  <title name="NUM">400</title>
-                </block>
-              </functional_input>
-            </block>
-          </functional_input>
-        </block>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
             <arg name="x" type="Number"/>
@@ -176,6 +95,123 @@
                       <title name="VAR">y</title>
                     </block>
                   </functional_input>
+                </block>
+              </functional_input>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_start_dummyOnMove" inline="false">
+          <functional_input name="VAL">
+            <block type="functional_call" inline="false">
+              <mutation name="on-screen?">
+                <arg name="x" type="Number"/>
+                <arg name="y" type="Number"/>
+              </mutation>
+              <functional_input name="ARG0">
+                <block type="functional_call" editable="false">
+                  <mutation name="get-x"/>
+                </block>
+              </functional_input>
+              <functional_input name="ARG1">
+                <block type="functional_call" editable="false">
+                  <mutation name="get-y"/>
+                </block>
+              </functional_input>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_definition" inline="false" uservisible="false">
+          <mutation>
+            <arg name="y" type="Number"/>
+            <description>Return true if y is less than 400</description>
+            <outputtype>boolean</outputtype>
+          </mutation>
+          <title name="NAME">safe-up?</title>
+          <functional_input name="STACK">
+            <block type="functional_less_than" inline="false" uservisible="false">
+              <functional_input name="ARG1">
+                <block type="functional_parameters_get" uservisible="false">
+                  <mutation>
+                    <outputtype>Number</outputtype>
+                  </mutation>
+                  <title name="VAR">y</title>
+                </block>
+              </functional_input>
+              <functional_input name="ARG2">
+                <block type="functional_math_number" uservisible="false">
+                  <title name="NUM">400</title>
+                </block>
+              </functional_input>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_definition" inline="false" uservisible="false">
+          <mutation>
+            <arg name="y" type="Number"/>
+            <description>Write a description for this function</description>
+            <outputtype>boolean</outputtype>
+          </mutation>
+          <title name="NAME">safe-down?</title>
+        </block>
+        <block type="functional_definition" inline="false" uservisible="false">
+          <mutation>
+            <outputtype>Number</outputtype>
+            <isfunctionalvariable>true</isfunctionalvariable>
+          </mutation>
+          <title name="NAME">get-x</title>
+        </block>
+        <block type="functional_definition" inline="false" uservisible="false">
+          <mutation>
+            <arg name="x" type="Number"/>
+            <description>Return true if x is greater than 0</description>
+            <outputtype>boolean</outputtype>
+          </mutation>
+          <title name="NAME">safe-left?</title>
+          <functional_input name="STACK">
+            <block type="functional_greater_than" inline="false" uservisible="false">
+              <functional_input name="ARG1">
+                <block type="functional_parameters_get" uservisible="false">
+                  <mutation>
+                    <outputtype>Number</outputtype>
+                  </mutation>
+                  <title name="VAR">x</title>
+                </block>
+              </functional_input>
+              <functional_input name="ARG2">
+                <block type="functional_math_number" uservisible="false">
+                  <title name="NUM">0</title>
+                </block>
+              </functional_input>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_definition" inline="false" uservisible="false">
+          <mutation>
+            <outputtype>Number</outputtype>
+            <isfunctionalvariable>true</isfunctionalvariable>
+          </mutation>
+          <title name="NAME">get-y</title>
+        </block>
+        <block type="functional_definition" inline="false" uservisible="false">
+          <mutation>
+            <arg name="x" type="Number"/>
+            <description>Return true if x is less than 400.</description>
+            <outputtype>boolean</outputtype>
+          </mutation>
+          <title name="NAME">safe-right?</title>
+          <functional_input name="STACK">
+            <block type="functional_less_than" inline="false" uservisible="false">
+              <functional_input name="ARG1">
+                <block type="functional_parameters_get" uservisible="false">
+                  <mutation>
+                    <outputtype>Number</outputtype>
+                  </mutation>
+                  <title name="VAR">x</title>
+                </block>
+              </functional_input>
+              <functional_input name="ARG2">
+                <block type="functional_math_number" uservisible="false">
+                  <title name="NUM">400</title>
                 </block>
               </functional_input>
             </block>

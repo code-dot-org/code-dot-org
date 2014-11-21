@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "eval",
-    "instructions": "Here's a new function called \"gt\" that takes a single Number for size and produces a green triangle. Use the new function to create a 125 pixel green triangle",
+    "instructions": "Here's a new function called \"green-triangle\" that takes a single Number for size and produces a green triangle. Use the new function to create a 125 pixel green triangle",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -26,7 +26,7 @@
             <description>Produce a green triangle of given size</description>
             <outputtype>image</outputtype>
           </mutation>
-          <title name="NAME">gt</title>
+          <title name="NAME">green-triangle</title>
           <functional_input name="STACK">
             <block type="functional_triangle" inline="false" uservisible="false">
               <functional_input name="SIZE">
@@ -53,7 +53,7 @@
         <block type="functional_display" inline="false" deletable="false" movable="false">
           <functional_input name="ARG1">
             <block type="functional_call" inline="false">
-              <mutation name="gt">
+              <mutation name="green-triangle">
                 <arg name="size" type="Number"/>
               </mutation>
             </block>

@@ -22,7 +22,9 @@
     "instructions": "Let's add another parameter to the jump function so that we can use it with other actors. Each actor is represented by a number, starting from one. The \"actor\" parameter should take a number and pass that parameter to the \"move actor\" block.",
     "use_contract_editor": "false",
     "coordinate_grid_background": "false",
-    "maze_data": null
+    "maze_data": null,
+    "embed": "false",
+    "callout_json": "[{\r\n  \"localization_key\": \"edit_function\",\r\n  \"element_id\": \"[block-id='2']>.blocklyIconGroup\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"left center\", \"at\": \"right center\"}\r\n  }\r\n}]"
   }
 }]]></config>
   <blocks>
