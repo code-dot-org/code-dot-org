@@ -5,6 +5,7 @@ This .md file should only contain information which is specific to Code.org engi
 # How to update level builder
 * `ssh levelbuilder.code.org`
 * `cd levelbuilder`
+* `git branch -d levelbuilder`
 * `git checkout -b levelbuilder`
 * `git add .`
 * `git commit -m "level builder changes"`
