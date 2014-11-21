@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "studio",
-    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
+    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n  return (Studio.Globals.stopped_left && Studio.Globals.stopped_right);\r\n}",
     "failure_condition": "function () {\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "soft_buttons": [
@@ -28,46 +28,32 @@
     "allow_sprites_outside_playspace": "true",
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "true",
-    "free_play": "false"
+    "free_play": "false",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="functional_definition" inline="false" uservisible="false">
-          <mutation>
-            <arg name="x"/>
-            <description>Check x against both safe-left? and safe-right?</description>
+        <block type="functional_call" inline="false">
+          <mutation name="on-screen?">
+            <arg name="x" type="Number"/>
           </mutation>
-          <title name="NAME">on-screen?</title>
         </block>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
-            <arg name="x"/>
-            <description>Return true if x is greater than 0</description>
+            <arg name="x" type="Number"/>
+            <description>Check x against both safe-left? and safe-right?</description>
+            <outputtype>boolean</outputtype>
           </mutation>
-          <title name="NAME">safe-left?</title>
+          <title name="NAME">on-screen?</title>
           <functional_input name="STACK">
-            <block type="functional_greater_than" inline="false" uservisible="false">
-              <functional_input name="ARG1">
-                <block type="functional_parameters_get" uservisible="false">
-                  <mutation>
-                    <outputtype>Number</outputtype>
-                  </mutation>
-                  <title name="VAR">x</title>
-                </block>
-              </functional_input>
-              <functional_input name="ARG2">
-                <block type="functional_math_number" uservisible="false">
-                  <title name="NUM">0</title>
-                </block>
-              </functional_input>
-            </block>
+            <block type="functional_logical_and" inline="false" uservisible="false"/>
           </functional_input>
         </block>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
-            <arg name="x"/>
+            <arg name="x" type="Number"/>
             <description>Return true if x is less than 400.</description>
             <outputtype>boolean</outputtype>
           </mutation>
@@ -76,7 +62,9 @@
             <block type="functional_less_than" inline="false" uservisible="false">
               <functional_input name="ARG1">
                 <block type="functional_parameters_get" uservisible="false">
-                  <mutation/>
+                  <mutation>
+                    <outputtype>Number</outputtype>
+                  </mutation>
                   <title name="VAR">x</title>
                 </block>
               </functional_input>
@@ -105,10 +93,65 @@
                       <title name="NUM">200</title>
                     </block>
                   </value>
+                  <next>
+                    <block type="variables_set" inline="false" uservisible="false">
+                      <title name="VAR">stopped-left</title>
+                      <value name="VALUE">
+                        <block type="logic_boolean" uservisible="false">
+                          <title name="BOOL">FALSE</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="variables_set" inline="false" uservisible="false">
+                          <title name="VAR">stopped-right</title>
+                          <value name="VALUE">
+                            <block type="logic_boolean" uservisible="false">
+                              <title name="BOOL">FALSE</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="variables_set" inline="false">
+                              <title name="VAR">stopped-right</title>
+                              <value name="VALUE">
+                                <block type="logic_boolean">
+                                  <title name="BOOL">FALSE</title>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
                 </block>
               </next>
             </block>
           </next>
+        </block>
+        <block type="functional_definition" inline="false" uservisible="false">
+          <mutation>
+            <arg name="x" type="Number"/>
+            <description>Return true if x is greater than 0</description>
+            <outputtype>boolean</outputtype>
+          </mutation>
+          <title name="NAME">safe-left?</title>
+          <functional_input name="STACK">
+            <block type="functional_greater_than" inline="false" uservisible="false">
+              <functional_input name="ARG1">
+                <block type="functional_parameters_get" uservisible="false">
+                  <mutation>
+                    <outputtype>Number</outputtype>
+                  </mutation>
+                  <title name="VAR">x</title>
+                </block>
+              </functional_input>
+              <functional_input name="ARG2">
+                <block type="functional_math_number" uservisible="false">
+                  <title name="NUM">0</title>
+                </block>
+              </functional_input>
+            </block>
+          </functional_input>
         </block>
         <block type="studio_whenArrow" uservisible="false">
           <title name="VALUE">up</title>
@@ -189,42 +232,42 @@
           <next>
             <block type="studio_showCoordinates" uservisible="false">
               <next>
-                <block type="studio_moveDistanceParams" inline="true">
+                <block type="studio_moveDistanceParams" inline="true" uservisible="false">
                   <title name="DIR">8</title>
                   <value name="DISTANCE">
-                    <block type="math_number">
+                    <block type="math_number" uservisible="false">
                       <title name="NUM">10</title>
                     </block>
                   </value>
                   <next>
-                    <block type="variables_set" inline="false">
+                    <block type="variables_set" inline="false" uservisible="false">
                       <title name="VAR">sam-x</title>
                       <value name="VALUE">
-                        <block type="math_arithmetic" inline="true">
+                        <block type="math_arithmetic" inline="true" uservisible="false">
                           <title name="OP">MINUS</title>
                           <value name="A">
-                            <block type="variables_get">
+                            <block type="variables_get" uservisible="false">
                               <title name="VAR">sam-x</title>
                             </block>
                           </value>
                           <value name="B">
-                            <block type="math_number">
+                            <block type="math_number" uservisible="false">
                               <title name="NUM">10</title>
                             </block>
                           </value>
                         </block>
                       </value>
                       <next>
-                        <block type="controls_if" inline="false">
+                        <block type="controls_if" inline="false" uservisible="false">
                           <value name="IF0">
-                            <block type="logic_negate" inline="false">
+                            <block type="logic_negate" inline="false" uservisible="false">
                               <value name="BOOL">
-                                <block type="procedural_to_functional_call" inline="false">
+                                <block type="procedural_to_functional_call" inline="false" uservisible="false">
                                   <mutation name="on-screen?">
                                     <arg name="x"/>
                                   </mutation>
                                   <value name="ARG0">
-                                    <block type="variables_get">
+                                    <block type="variables_get" uservisible="false">
                                       <title name="VAR">sam-x</title>
                                     </block>
                                   </value>
@@ -233,31 +276,41 @@
                             </block>
                           </value>
                           <statement name="DO0">
-                            <block type="studio_moveDistanceParams" inline="true">
+                            <block type="studio_moveDistanceParams" inline="true" uservisible="false">
                               <title name="DIR">2</title>
                               <value name="DISTANCE">
-                                <block type="math_number">
+                                <block type="math_number" uservisible="false">
                                   <title name="NUM">10</title>
                                 </block>
                               </value>
                               <next>
-                                <block type="variables_set" inline="false">
+                                <block type="variables_set" inline="false" uservisible="false">
                                   <title name="VAR">sam-x</title>
                                   <value name="VALUE">
-                                    <block type="math_arithmetic" inline="true">
+                                    <block type="math_arithmetic" inline="true" uservisible="false">
                                       <title name="OP">ADD</title>
                                       <value name="A">
-                                        <block type="variables_get">
+                                        <block type="variables_get" uservisible="false">
                                           <title name="VAR">sam-x</title>
                                         </block>
                                       </value>
                                       <value name="B">
-                                        <block type="math_number">
+                                        <block type="math_number" uservisible="false">
                                           <title name="NUM">10</title>
                                         </block>
                                       </value>
                                     </block>
                                   </value>
+                                  <next>
+                                    <block type="variables_set" inline="false" uservisible="false">
+                                      <title name="VAR">stopped-left</title>
+                                      <value name="VALUE">
+                                        <block type="logic_boolean" uservisible="false">
+                                          <title name="BOOL">TRUE</title>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </next>
                                 </block>
                               </next>
                             </block>
@@ -276,42 +329,42 @@
           <next>
             <block type="studio_showCoordinates" uservisible="false">
               <next>
-                <block type="studio_moveDistanceParams" inline="true">
+                <block type="studio_moveDistanceParams" inline="true" uservisible="false">
                   <title name="DIR">2</title>
                   <value name="DISTANCE">
-                    <block type="math_number">
+                    <block type="math_number" uservisible="false">
                       <title name="NUM">10</title>
                     </block>
                   </value>
                   <next>
-                    <block type="variables_set" inline="false">
+                    <block type="variables_set" inline="false" uservisible="false">
                       <title name="VAR">sam-x</title>
                       <value name="VALUE">
-                        <block type="math_arithmetic" inline="true">
+                        <block type="math_arithmetic" inline="true" uservisible="false">
                           <title name="OP">ADD</title>
                           <value name="A">
-                            <block type="variables_get">
+                            <block type="variables_get" uservisible="false">
                               <title name="VAR">sam-x</title>
                             </block>
                           </value>
                           <value name="B">
-                            <block type="math_number">
+                            <block type="math_number" uservisible="false">
                               <title name="NUM">10</title>
                             </block>
                           </value>
                         </block>
                       </value>
                       <next>
-                        <block type="controls_if" inline="false">
+                        <block type="controls_if" inline="false" uservisible="false">
                           <value name="IF0">
-                            <block type="logic_negate" inline="false">
+                            <block type="logic_negate" inline="false" uservisible="false">
                               <value name="BOOL">
-                                <block type="procedural_to_functional_call" inline="false">
+                                <block type="procedural_to_functional_call" inline="false" uservisible="false">
                                   <mutation name="on-screen?">
                                     <arg name="x"/>
                                   </mutation>
                                   <value name="ARG0">
-                                    <block type="variables_get">
+                                    <block type="variables_get" uservisible="false">
                                       <title name="VAR">sam-x</title>
                                     </block>
                                   </value>
@@ -320,31 +373,41 @@
                             </block>
                           </value>
                           <statement name="DO0">
-                            <block type="studio_moveDistanceParams" inline="true">
+                            <block type="studio_moveDistanceParams" inline="true" uservisible="false">
                               <title name="DIR">8</title>
                               <value name="DISTANCE">
-                                <block type="math_number">
+                                <block type="math_number" uservisible="false">
                                   <title name="NUM">10</title>
                                 </block>
                               </value>
                               <next>
-                                <block type="variables_set" inline="false">
+                                <block type="variables_set" inline="false" uservisible="false">
                                   <title name="VAR">sam-x</title>
                                   <value name="VALUE">
-                                    <block type="math_arithmetic" inline="true">
+                                    <block type="math_arithmetic" inline="true" uservisible="false">
                                       <title name="OP">MINUS</title>
                                       <value name="A">
-                                        <block type="variables_get">
+                                        <block type="variables_get" uservisible="false">
                                           <title name="VAR">sam-x</title>
                                         </block>
                                       </value>
                                       <value name="B">
-                                        <block type="math_number">
+                                        <block type="math_number" uservisible="false">
                                           <title name="NUM">10</title>
                                         </block>
                                       </value>
                                     </block>
                                   </value>
+                                  <next>
+                                    <block type="variables_set" inline="false" uservisible="false">
+                                      <title name="VAR">stopped-right</title>
+                                      <value name="VALUE">
+                                        <block type="logic_boolean" uservisible="false">
+                                          <title name="BOOL">TRUE</title>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </next>
                                 </block>
                               </next>
                             </block>
