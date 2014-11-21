@@ -1,3 +1,13 @@
+-# Create level options object to pass to Blockly
+-# use local[:symbol] to access locals passed into this render partial (defaults to false if not present)
+- local = Hash.new(false).merge!(local_assigns.delete_if{|_,v|v.nil?})
+- level, app_options = blockly_options(local_assigns)
+- embed = local[:embed] || @embed
+- level['showFinish'] = local[:embed]
+
+-if local[:embed]
+  #title
+    %h3{style: 'margin: 0 auto; max-width: 800px;'}!= level['instructions']
 #blocklyApp
   .loading
   .slow_load
@@ -24,22 +34,14 @@
     %script{src: "#{blockly_path}js/#{js_locale}/vendor.js"}
   %script{src: "#{blockly_path}js/#{js_locale}/#{app}#{pretty ? '' : '.min'}.js"}
 
-  -# Create level options object to pass to Blockly
-  - level, app_options = blockly_options(local_assigns)
-
   - if @autoplay_video_info
     :javascript
       showVideoDialog(#{@autoplay_video_info.to_json})
-
-  -# use local[:symbol] to access locals passed into this render partial (defaults to false if not present)
-  - local = Hash.new(false).merge!(local_assigns.delete_if{|_,v|v.nil?})
 
   - send_to_phone = request.location.try(:country_code) == 'US' ||              |
       (!Rails.env.production? && request.location.try(:country_code) == 'RD') |
 
   %div{style: "display:none"}= render partial: 'levels/reference_area'
-  - embed = local[:embed] || @embed
-  - level['showFinish'] = local[:embed]
 
   :javascript
     //<![CDATA[
