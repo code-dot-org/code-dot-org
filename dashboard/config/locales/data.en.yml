@@ -452,4 +452,4 @@ en:
         edit_draw_square: 'Use this button to edit the function and add the loop.'
         edit_get_nectar: 'Use this button to edit the function and change the direction the Bee will turn to get the nectar.'
         logic_category: 'Open the "Logic" flyout to find the "if/else" block.'
-        length_parameter: 'Notice the "length" parameter on this function?'
+        length_parameter: 'Can you update this function so it uses the "length" parameter?'
