@@ -7,7 +7,7 @@
   "properties": {
     "skin": "studio",
     "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n  return (Studio.Globals.stopped_left && Studio.Globals.stopped_right && Studio.Globals.stopped_up);\r\n}",
-    "failure_condition": "function () {\r\n}",
+    "failure_condition": "function () {\r\n  return ((Studio.Globals.sam_x < -50) || (Studio.Globals.sam_x > 450) || (Studio.Globals.sam_y > 450));\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "soft_buttons": [
       "leftButton",
@@ -30,7 +30,9 @@
     "coordinate_grid_background": "true",
     "free_play": "false",
     "open_function_definition": "on-screen?",
-    "embed": "false"
+    "embed": "false",
+    "maze_data": null,
+    "protaganist_sprite_index": "0"
   }
 }]]></config>
   <blocks>
@@ -87,12 +89,12 @@
                 <arg name="y" type="Number"/>
               </mutation>
               <functional_input name="ARG0">
-                <block type="functional_call">
+                <block type="functional_call" editable="false">
                   <mutation name="get-x"/>
                 </block>
               </functional_input>
               <functional_input name="ARG1">
-                <block type="functional_call">
+                <block type="functional_call" editable="false">
                   <mutation name="get-y"/>
                 </block>
               </functional_input>

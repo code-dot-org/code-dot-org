@@ -1,25 +1,26 @@
 <Artist>
   <config><![CDATA[{
   "game_id": 23,
-  "created_at": "2014-10-16T23:19:30.000Z",
+  "created_at": "2014-11-21T18:26:39.000Z",
   "level_num": "custom",
-  "user_id": 1,
+  "user_id": 16,
   "properties": {
     "skin": "artist",
-    "x": "150",
-    "y": "175",
-    "start_direction": "90",
+    "instructions": "Modify this algorithm so it uses the \"sides\" variable instead of a fixed number to draw a triangle. Replace the number 3 with the \"sides\" variable. Hint: remember to use the \"set sides to\" block.",
+    "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
-    "free_play": "false",
-    "instructions": "Here's an algorithm that draws a triangle out of smaller triangles. Can you modify it so that it uses the \"sides\" variable to draw each triangle? Look through the code, and every time you see the number 3, replace it with your \"sides\" variable. Hint: In order to use the \"sides\" blocks you will need to use the \"set sides to\" block to tell it how many sides you want. ",
-    "disable_variable_editing": "true",
-    "slider_speed": ".5",
+    "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
+    "start_direction": "90",
+    "x": "100",
+    "y": "275",
+    "free_play": "false",
     "impressive": "false",
-    "embed": "false"
+    "slider_speed": ".5",
+    "ideal": "11"
   }
 }]]></config>
   <blocks>
@@ -34,70 +35,31 @@
                 </block>
               </value>
               <statement name="DO">
-                <block type="controls_repeat_ext" inline="true">
-                  <value name="TIMES">
+                <block type="draw_move" inline="true">
+                  <title name="DIR">moveForward</title>
+                  <value name="VALUE">
                     <block type="math_number">
-                      <title name="NUM">3</title>
+                      <title name="NUM">200</title>
                     </block>
                   </value>
-                  <statement name="DO">
-                    <block type="draw_move" inline="true">
-                      <title name="DIR">moveForward</title>
-                      <value name="VALUE">
-                        <block type="math_number">
-                          <title name="NUM">100</title>
-                        </block>
-                      </value>
-                      <next>
-                        <block type="draw_turn" inline="true">
-                          <title name="DIR">turnLeft</title>
-                          <value name="VALUE">
-                            <block type="math_arithmetic" inline="true">
-                              <title name="OP">DIVIDE</title>
-                              <value name="A">
-                                <block type="math_number">
-                                  <title name="NUM">360</title>
-                                </block>
-                              </value>
-                              <value name="B">
-                                <block type="math_number">
-                                  <title name="NUM">3</title>
-                                </block>
-                              </value>
-                            </block>
-                          </value>
-                        </block>
-                      </next>
-                    </block>
-                  </statement>
                   <next>
-                    <block type="draw_move" inline="true">
-                      <title name="DIR">moveForward</title>
+                    <block type="draw_turn" inline="true">
+                      <title name="DIR">turnLeft</title>
                       <value name="VALUE">
-                        <block type="math_number">
-                          <title name="NUM">100</title>
-                        </block>
-                      </value>
-                      <next>
-                        <block type="draw_turn" inline="true">
-                          <title name="DIR">turnRight</title>
-                          <value name="VALUE">
-                            <block type="math_arithmetic" inline="true">
-                              <title name="OP">DIVIDE</title>
-                              <value name="A">
-                                <block type="math_number">
-                                  <title name="NUM">360</title>
-                                </block>
-                              </value>
-                              <value name="B">
-                                <block type="math_number">
-                                  <title name="NUM">3</title>
-                                </block>
-                              </value>
+                        <block type="math_arithmetic" inline="true">
+                          <title name="OP">DIVIDE</title>
+                          <value name="A">
+                            <block type="math_number">
+                              <title name="NUM">360</title>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="math_number">
+                              <title name="NUM">3</title>
                             </block>
                           </value>
                         </block>
-                      </next>
+                      </value>
                     </block>
                   </next>
                 </block>
@@ -111,6 +73,14 @@
       <xml>
         <block type="draw_move" inline="true">
           <title name="DIR">moveForward</title>
+          <value name="VALUE">
+            <block type="math_number">
+              <title name="NUM">100</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_move" inline="true">
+          <title name="DIR">moveBackward</title>
           <value name="VALUE">
             <block type="math_number">
               <title name="NUM">100</title>
@@ -170,28 +140,11 @@
             </block>
           </value>
         </block>
-        <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-            <block type="variables_get">
-              <title name="VAR">sides</title>
-            </block>
-          </value>
-        </block>
-        <block type="draw_turn" inline="true">
-          <title name="DIR">turnLeft</title>
+        <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
           <value name="VALUE">
-            <block type="math_arithmetic" inline="true">
-              <title name="OP">DIVIDE</title>
-              <value name="A">
-                <block type="math_number">
-                  <title name="NUM">360</title>
-                </block>
-              </value>
-              <value name="B">
-                <block type="variables_get">
-                  <title name="VAR">sides</title>
-                </block>
-              </value>
+            <block type="math_number">
+              <title name="NUM">200</title>
             </block>
           </value>
         </block>
@@ -234,70 +187,31 @@
                     </block>
                   </value>
                   <statement name="DO">
-                    <block type="controls_repeat_ext" inline="true">
-                      <value name="TIMES">
-                        <block type="variables_get">
-                          <title name="VAR">sides</title>
+                    <block type="draw_move" inline="true">
+                      <title name="DIR">moveForward</title>
+                      <value name="VALUE">
+                        <block type="math_number">
+                          <title name="NUM">200</title>
                         </block>
                       </value>
-                      <statement name="DO">
-                        <block type="draw_move" inline="true">
-                          <title name="DIR">moveForward</title>
-                          <value name="VALUE">
-                            <block type="math_number">
-                              <title name="NUM">100</title>
-                            </block>
-                          </value>
-                          <next>
-                            <block type="draw_turn" inline="true">
-                              <title name="DIR">turnLeft</title>
-                              <value name="VALUE">
-                                <block type="math_arithmetic" inline="true">
-                                  <title name="OP">DIVIDE</title>
-                                  <value name="A">
-                                    <block type="math_number">
-                                      <title name="NUM">360</title>
-                                    </block>
-                                  </value>
-                                  <value name="B">
-                                    <block type="variables_get">
-                                      <title name="VAR">sides</title>
-                                    </block>
-                                  </value>
-                                </block>
-                              </value>
-                            </block>
-                          </next>
-                        </block>
-                      </statement>
                       <next>
-                        <block type="draw_move" inline="true">
-                          <title name="DIR">moveForward</title>
+                        <block type="draw_turn" inline="true">
+                          <title name="DIR">turnLeft</title>
                           <value name="VALUE">
-                            <block type="math_number">
-                              <title name="NUM">100</title>
-                            </block>
-                          </value>
-                          <next>
-                            <block type="draw_turn" inline="true">
-                              <title name="DIR">turnRight</title>
-                              <value name="VALUE">
-                                <block type="math_arithmetic" inline="true">
-                                  <title name="OP">DIVIDE</title>
-                                  <value name="A">
-                                    <block type="math_number">
-                                      <title name="NUM">360</title>
-                                    </block>
-                                  </value>
-                                  <value name="B">
-                                    <block type="variables_get">
-                                      <title name="VAR">sides</title>
-                                    </block>
-                                  </value>
+                            <block type="math_arithmetic" inline="true">
+                              <title name="OP">DIVIDE</title>
+                              <value name="A">
+                                <block type="math_number">
+                                  <title name="NUM">360</title>
+                                </block>
+                              </value>
+                              <value name="B">
+                                <block type="variables_get">
+                                  <title name="VAR">sides</title>
                                 </block>
                               </value>
                             </block>
-                          </next>
+                          </value>
                         </block>
                       </next>
                     </block>

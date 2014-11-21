@@ -24,18 +24,33 @@
     "projectile_collisions": "true",
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
-    "use_contract_editor": "false",
+    "use_contract_editor": "true",
     "coordinate_grid_background": "false",
     "instructions": "Variables can also be used to control the speed of players in a game. Set the player speed and the enemy speed and see how the movement changes. Speed can be between 2 and 12.",
     "ideal": "99",
     "timeout_failure_tick": "100",
     "first_sprite_index": "2",
-    "embed": "false"
+    "embed": "false",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
+        <block type="functional_definition" inline="false" uservisible="false">
+          <mutation>
+            <outputtype>Number</outputtype>
+            <isfunctionalvariable>true</isfunctionalvariable>
+          </mutation>
+          <title name="NAME">enemy-speed</title>
+        </block>
+        <block type="functional_definition" inline="false" uservisible="false">
+          <mutation>
+            <outputtype>Number</outputtype>
+            <isfunctionalvariable>true</isfunctionalvariable>
+          </mutation>
+          <title name="NAME">player-speed</title>
+        </block>
         <block type="when_run" deletable="false" uservisible="false"/>
         <block type="functional_start_setSpeeds" deletable="false" inline="false" x="20" y="20"/>
         <block type="studio_repeatForever" uservisible="false">
@@ -92,6 +107,12 @@
       <xml>
         <block type="functional_math_number_dropdown">
           <title name="NUM" config="2,3,4,5,6,7,8,9,10,11,12">???</title>
+        </block>
+        <block type="functional_call">
+          <mutation name="player-speed"/>
+        </block>
+        <block type="functional_call">
+          <mutation name="enemy-speed"/>
         </block>
       </xml>
     </toolbox_blocks>
