@@ -21,9 +21,10 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "false",
-    "instructions": "Let's add a player to this game! Use the arrow keys to collect all of the flags with the dog.",
+    "instructions": "Let's add the player to this game! Use the arrow keys to collect all of the flags with the dog.",
     "first_sprite_index": "0",
-    "maze_data": null
+    "maze_data": null,
+    "embed": "false"
   }
 }]]></config>
   <blocks>

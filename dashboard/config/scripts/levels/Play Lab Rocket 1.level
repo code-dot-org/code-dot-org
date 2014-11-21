@@ -22,7 +22,9 @@
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "true",
     "free_play": "false",
-    "maze_data": null
+    "embed": "false",
+    "maze_data": null,
+    "first_sprite_index": "0"
   }
 }]]></config>
   <blocks>
