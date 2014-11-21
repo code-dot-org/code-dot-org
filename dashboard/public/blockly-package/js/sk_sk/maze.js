@@ -15344,8 +15344,12 @@ exports.load = function(assetUrl, id) {
   if (skin.id === "elsa") {
     skin.turtleNumFrames = 20;
     skin.decorationAnimationNumFrames = 19;
+    skin.smoothAnimate = true;
+    skin.consolidateTurnAndMove = true;
   } else if (skin.id === "anna") {
     skin.turtleNumFrames = 10;
+    skin.smoothAnimate = true;
+    skin.consolidateTurnAndMove = true;
   }
 
   return skin;

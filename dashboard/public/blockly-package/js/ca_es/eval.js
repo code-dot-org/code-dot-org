@@ -7358,6 +7358,9 @@ module.exports.initTitledFunctionalBlock = function (block, title, type, args) {
  * generate the following code:
  *
  *     'Studio.setSpriteSpeed(block_id_43, 0, 12)'
+ *
+ * if no apiName is specified, a "dummy" block is generated which
+ * accepts arguments but generates no code.
  */
 module.exports.installFunctionalApiCallBlock = function(blockly, generator,
     options) {
@@ -7379,6 +7382,9 @@ module.exports.installFunctionalApiCallBlock = function(blockly, generator,
 
   // The generator function depends on "this" being the block object.
   generator[blockName] = function() {
+    if (!apiName) {
+      return '';
+    }
     var apiArgs = [];
     apiArgs.push('\'block_id_' + this.id + '\'');
     for (var i = 0; i < args.length; i++) {
@@ -13125,8 +13131,12 @@ exports.load = function(assetUrl, id) {
   if (skin.id === "elsa") {
     skin.turtleNumFrames = 20;
     skin.decorationAnimationNumFrames = 19;
+    skin.smoothAnimate = true;
+    skin.consolidateTurnAndMove = true;
   } else if (skin.id === "anna") {
     skin.turtleNumFrames = 10;
+    skin.smoothAnimate = true;
+    skin.consolidateTurnAndMove = true;
   }
 
   return skin;

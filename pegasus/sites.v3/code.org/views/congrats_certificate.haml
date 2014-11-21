@@ -70,9 +70,10 @@
 
     %form#request-certificate-form{:onsubmit=>"return requestCertificate()"}
 
-      #email_error{style: "color:red; font-weight:bold; display: none"}
+      #email_error{style: "color:red; font-family: 'Gotham 7r', sans-serif;
+ display: none"}
         =I18n.t :enter_valid_email
-      #email_okay{style: "color:red; font-weight:bold;"}
+      #email_okay{style: "color:red; font-family: 'Gotham 7r', sans-serif;"}
         &nbsp;
       %input#session{name: 'session_s', type: 'hidden', value: ''}
       %input#name.grey_input{:name=>"name_s", :placeholder=>'Name', :style=>'width: 167px'}
