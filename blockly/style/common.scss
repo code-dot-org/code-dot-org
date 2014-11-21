@@ -850,6 +850,12 @@ $modal-image-margin-gap: 10px;
   border: none;
 }
 
+#feedbackButtons:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+
 .hide {
   display: none;
 }
