@@ -29,7 +29,7 @@
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "true",
     "free_play": "false",
-    "maze_data": null
+    "embed": "false"
   }
 }]]></config>
   <blocks>
@@ -42,6 +42,31 @@
             <outputtype>boolean</outputtype>
           </mutation>
           <title name="NAME">safe-up?</title>
+        </block>
+        <block type="functional_start_dummyOnMove" inline="false">
+          <functional_input name="VAL">
+            <block type="functional_call" inline="false">
+              <mutation name="safe-up?">
+                <arg name="y" type="Number"/>
+              </mutation>
+              <functional_input name="ARG0">
+                <block type="functional_call">
+                  <mutation name="get-y"/>
+                </block>
+              </functional_input>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_definition" inline="false" uservisible="false">
+          <mutation>
+            <outputtype>Number</outputtype>
+          </mutation>
+          <title name="NAME">get-y</title>
+          <functional_input name="STACK">
+            <block type="functional_math_number" uservisible="false">
+              <title name="NUM">0</title>
+            </block>
+          </functional_input>
         </block>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
@@ -116,7 +141,7 @@
                             <block type="variables_set" inline="false" uservisible="false">
                               <title name="VAR">stopped-up</title>
                               <value name="VALUE">
-                                <block type="logic_boolean">
+                                <block type="logic_boolean" uservisible="false">
                                   <title name="BOOL">FALSE</title>
                                 </block>
                               </value>
@@ -187,16 +212,16 @@
                         </block>
                       </value>
                       <next>
-                        <block type="controls_if" inline="false">
+                        <block type="controls_if" inline="false" uservisible="false">
                           <value name="IF0">
-                            <block type="logic_negate" inline="false">
+                            <block type="logic_negate" inline="false" uservisible="false">
                               <value name="BOOL">
-                                <block type="procedural_to_functional_call" inline="false">
+                                <block type="procedural_to_functional_call" inline="false" uservisible="false">
                                   <mutation name="safe-up?">
                                     <arg name="y"/>
                                   </mutation>
                                   <value name="ARG0">
-                                    <block type="variables_get">
+                                    <block type="variables_get" uservisible="false">
                                       <title name="VAR">sam-y</title>
                                     </block>
                                   </value>
@@ -205,36 +230,36 @@
                             </block>
                           </value>
                           <statement name="DO0">
-                            <block type="studio_moveDistanceParams" inline="true">
+                            <block type="studio_moveDistanceParams" inline="true" uservisible="false">
                               <title name="DIR">4</title>
                               <value name="DISTANCE">
-                                <block type="math_number">
+                                <block type="math_number" uservisible="false">
                                   <title name="NUM">10</title>
                                 </block>
                               </value>
                               <next>
-                                <block type="variables_set" inline="false">
+                                <block type="variables_set" inline="false" uservisible="false">
                                   <title name="VAR">sam-y</title>
                                   <value name="VALUE">
-                                    <block type="math_arithmetic" inline="true">
+                                    <block type="math_arithmetic" inline="true" uservisible="false">
                                       <title name="OP">MINUS</title>
                                       <value name="A">
-                                        <block type="variables_get">
+                                        <block type="variables_get" uservisible="false">
                                           <title name="VAR">sam-y</title>
                                         </block>
                                       </value>
                                       <value name="B">
-                                        <block type="math_number">
+                                        <block type="math_number" uservisible="false">
                                           <title name="NUM">10</title>
                                         </block>
                                       </value>
                                     </block>
                                   </value>
                                   <next>
-                                    <block type="variables_set" inline="false">
+                                    <block type="variables_set" inline="false" uservisible="false">
                                       <title name="VAR">stopped-up</title>
                                       <value name="VALUE">
-                                        <block type="logic_boolean">
+                                        <block type="logic_boolean" uservisible="false">
                                           <title name="BOOL">TRUE</title>
                                         </block>
                                       </value>
