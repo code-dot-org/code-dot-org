@@ -1843,6 +1843,29 @@ exports.initJSInterpreter = function (interpreter, scope, options) {
   }
 };
 
+/**
+ * Check to see if it is safe to step the interpreter while we are unwinding.
+ * (Called repeatedly after completing a step where the node was marked 'done')
+ */
+exports.isNextStepSafeWhileUnwinding = function (interpreter) {
+  var state = interpreter.stateStack[0];
+  if (state.done) {
+    return true;
+  }
+  switch (state.node.type) {
+    case "VariableDeclaration":
+    case "BlockStatement":
+    case "ForStatement": // check for state.mode ?
+    case "UpdateExpression":
+    case "BinaryExpression":
+    case "CallExpression":
+    case "Identifier":
+    case "Literal":
+      return true;
+  }
+  return false;
+};
+
 // session is an instance of Ace editSession
 // Usage
 // var lengthArray = aceCalculateCumulativeLength(editor.getSession());
@@ -2994,8 +3017,8 @@ exports.hasExtraTopBlocks = function () {
     if (topBlocks[i].disabled) {
       continue;
     }
-    // Ignore hidden blocks such as functional definitions.
-    if (!topBlocks[i].isUserVisible()) {
+    // Ignore top blocks which are functional definitions.
+    if (topBlocks[i].type === 'functional_definition') {
       continue;
     }
     // None of our top level blocks should have a previous connection.
@@ -9572,7 +9595,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/pl_pl/common') ; buf.push('\n');2; var webappMsg = require('../../locale/pl_pl/webapp') ; buf.push('\n\n');4; if (debugButtons) { ; buf.push('\n<div>\n');6; } ; buf.push('\n\n');8; if (debugButtons) { ; buf.push('\n<div id="debug-buttons" style="display:inline;">\n    <button id="pauseButton" class="share">\n      <img src="', escape((11,  assetUrl('media/1x1.gif') )), '">', escape((11,  webappMsg.pause() )), '\n    </button>\n  </div>\n');14; } ; buf.push('\n\n');16; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((19,  assetUrl('media/1x1.gif') )), '">', escape((19,  msg.finish() )), '\n    </button>\n  </div>\n');22; } ; buf.push('\n\n');24; if (debugButtons) { ; buf.push('\n</div>\n');26; } ; buf.push('\n'); })();
+ buf.push('');1; var msg = require('../../locale/pl_pl/common') ; buf.push('\n');2; var webappMsg = require('../../locale/pl_pl/webapp') ; buf.push('\n\n');4; if (debugButtons) { ; buf.push('\n<div>\n');6; } ; buf.push('\n\n');8; if (debugButtons) { ; buf.push('\n<div id="debug-buttons" style="display:inline;">\n    <button id="pauseButton" class="share">\n      ', escape((11,  webappMsg.pause() )), '\n    </button>\n    <button id="stepInButton" class="share">\n      ', escape((14,  webappMsg.stepIn() )), '\n    </button>\n    <button id="stepOverButton" class="share">\n      ', escape((17,  webappMsg.stepOver() )), '\n    </button>\n    <button id="stepOutButton" class="share">\n      ', escape((20,  webappMsg.stepOut() )), '\n    </button>\n  </div>\n');23; } ; buf.push('\n\n');25; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((28,  assetUrl('media/1x1.gif') )), '">', escape((28,  msg.finish() )), '\n    </button>\n  </div>\n');31; } ; buf.push('\n\n');33; if (debugButtons) { ; buf.push('\n</div>\n');35; } ; buf.push('\n'); })();
 } 
 return buf.join('');
 };
@@ -9812,7 +9835,7 @@ BlocklyApps.CHECK_FOR_EMPTY_BLOCKS = true;
 //The number of blocks to show as feedback.
 BlocklyApps.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 
-var MAX_INTERPRETER_STEPS_PER_TICK = 50;
+var MAX_INTERPRETER_STEPS_PER_TICK = 200;
 
 // Default Scalings
 Webapp.scale = {
@@ -9823,6 +9846,13 @@ Webapp.scale = {
 var twitterOptions = {
   text: webappMsg.shareWebappTwitter(),
   hashtag: "WebappCode"
+};
+
+var StepType = {
+  RUN:  0,
+  IN:   1,
+  OVER: 2,
+  OUT:  3,
 };
 
 function loadLevel() {
@@ -9863,35 +9893,125 @@ Webapp.onTick = function() {
   Webapp.tickCount++;
   queueOnTick();
 
-  // Bail out here if paused (but make sure that we still have the next tick
-  // queued first, so we can resume after un-pausing):
+  var stepInToStart = Webapp.paused && Webapp.nextStep === StepType.IN && Webapp.tickCount === 1;
+
   if (Webapp.paused) {
-    return;
+    switch (Webapp.nextStep) {
+      case StepType.RUN:
+        // Bail out here if in a break state (paused), but make sure that we still
+        // have the next tick queued first, so we can resume after un-pausing):
+        return;
+      case StepType.OUT:
+        // If we haven't yet set stepOutToStackDepth, work backwards through the
+        // history of callExpressionSeenAtDepth until we find the one we want to
+        // step out to - and store that in stepOutToStackDepth:
+        if (Webapp.interpreter && typeof Webapp.stepOutToStackDepth === 'undefined') {
+          Webapp.stepOutToStackDepth = 0;
+          for (var i = Webapp.interpreter.stateStack.length - 1; i > 0; i--) {
+            if (Webapp.callExpressionSeenAtDepth[i]) {
+              Webapp.stepOutToStackDepth = i;
+              break;
+            }
+          }
+        }
+        break;
+    }
   }
 
   if (Webapp.interpreter) {
     var doneUserCodeStep = false;
+    var unwindingAfterStep = false;
+
     // In each tick, we will step the interpreter multiple times in a tight
     // loop as long as we are interpreting code that the user can't see
     // (function aliases at the beginning, getCallback event loop at the end)
     for (var stepsThisTick = 0;
-         stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK && !doneUserCodeStep;
+         stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK &&
+          (!doneUserCodeStep || unwindingAfterStep);
          stepsThisTick++) {
       var inUserCode = codegen.selectCurrentCode(Webapp.interpreter,
                                                  BlocklyApps.editor,
                                                  Webapp.cumulativeLength,
                                                  Webapp.userCodeStartOffset,
                                                  Webapp.userCodeLength);
+      if (inUserCode && stepInToStart) {
+        // Special case code when stepping in to start the program (break before 1st statement)
+        doneUserCodeStep = true;
+        unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(Webapp.interpreter);
+        continue;
+      }
       try {
         Webapp.interpreter.step();
-        doneUserCodeStep = inUserCode &&
-                            Webapp.interpreter.stateStack[0] &&
-                            Webapp.interpreter.stateStack[0].done;
+        doneUserCodeStep = doneUserCodeStep ||
+          (inUserCode && Webapp.interpreter.stateStack[0] && Webapp.interpreter.stateStack[0].done);
+
+        // Remember the stack depths of call expressions (so we can implement 'step out')
+
+        // Truncate any history of call expressions seen deeper than our current stack position:
+        Webapp.callExpressionSeenAtDepth.length = Webapp.interpreter.stateStack.length + 1;
+
+        if (inUserCode && Webapp.interpreter.stateStack[0].node.type === "CallExpression") {
+          // Store that we've seen a call expression at this depth in callExpressionSeenAtDepth:
+          Webapp.callExpressionSeenAtDepth[Webapp.interpreter.stateStack.length] = true;
+        }
+
+        if (Webapp.paused) {
+          // Store the first call expression stack depth seen while in this step operation:
+          if (inUserCode && Webapp.interpreter.stateStack[0].node.type === "CallExpression") {
+            if (typeof Webapp.firstCallStackDepthThisStep === 'undefined') {
+              Webapp.firstCallStackDepthThisStep = Webapp.interpreter.stateStack.length;
+            }
+          }
+          // For the step in case, we want to stop the interpreter as soon as we enter the callee:
+          if (!doneUserCodeStep &&
+              inUserCode &&
+              Webapp.nextStep === StepType.IN &&
+              Webapp.interpreter.stateStack.length > Webapp.firstCallStackDepthThisStep) {
+            doneUserCodeStep = true;
+          }
+          // After the interpreter says a node is "done" (meaning it is time to stop), we will
+          // advance a little further to the start of the next statement. We achieve this by
+          // continuing to set unwindingAfterStep to true to keep the loop going:
+          if (doneUserCodeStep) {
+            var wasUnwinding = unwindingAfterStep;
+            // step() additional times if we know it to be safe to get us to the next statement:
+            unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(Webapp.interpreter);
+            if (wasUnwinding && !unwindingAfterStep) {
+              // done unwinding.. select code that is next to execute:
+              inUserCode = codegen.selectCurrentCode(Webapp.interpreter,
+                                                     BlocklyApps.editor,
+                                                     Webapp.cumulativeLength,
+                                                     Webapp.userCodeStartOffset,
+                                                     Webapp.userCodeLength);
+              if (!inUserCode) {
+                // not in user code, so keep unwinding after all...
+                unwindingAfterStep = true;
+              }
+            }
+          }
+        }
       }
       catch(err) {
         Webapp.executionError = err;
         Webapp.onPuzzleComplete();
         return;
+      }
+    }
+    if (Webapp.paused) {
+      if (Webapp.nextStep === StepType.OUT &&
+          Webapp.interpreter.stateStack.length > Webapp.stepOutToStackDepth) {
+        // trying to step out, but we didn't get out yet... continue next onTick
+      } else if (Webapp.nextStep === StepType.OVER &&
+          typeof Webapp.firstCallStackDepthThisStep !== 'undefined' &&
+          Webapp.interpreter.stateStack.length > Webapp.firstCallStackDepthThisStep) {
+        // trying to step over, and we're in deeper inside a function call... continue next onTick
+      } else {
+        // Our step operation is complete, reset nextStep to StepType.RUN to
+        // return to a normal 'break' state:
+        Webapp.nextStep = StepType.RUN;
+        delete Webapp.stepOutToStackDepth;
+        delete Webapp.firstCallStackDepthThisStep;
+        document.getElementById('spinner').style.visibility = 'hidden';
       }
     }
   } else {
@@ -10010,8 +10130,14 @@ Webapp.init = function(config) {
 
   if (level.editCode) {
     var pauseButton = document.getElementById('pauseButton');
-    if (pauseButton) {
+    var stepInButton = document.getElementById('stepInButton');
+    var stepOverButton = document.getElementById('stepOverButton');
+    var stepOutButton = document.getElementById('stepOutButton');
+    if (pauseButton && stepInButton && stepOverButton && stepOutButton) {
       dom.addClickTouchEvent(pauseButton, Webapp.onPauseButton);
+      dom.addClickTouchEvent(stepInButton, Webapp.onStepInButton);
+      dom.addClickTouchEvent(stepOverButton, Webapp.onStepOverButton);
+      dom.addClickTouchEvent(stepOutButton, Webapp.onStepOutButton);
     }
   }
 };
@@ -10023,7 +10149,11 @@ Webapp.clearEventHandlersKillTickLoop = function() {
   Webapp.whenRunFunc = null;
   Webapp.running = false;
   Webapp.tickCount = 0;
-  Webapp.running = false;
+
+  var spinner = document.getElementById('spinner');
+  if (spinner) {
+    spinner.style.visibility = 'hidden';
+  }
 };
 
 /**
@@ -10063,11 +10193,21 @@ BlocklyApps.reset = function(first) {
 
   if (level.editCode) {
     Webapp.paused = false;
+    Webapp.nextStep = StepType.RUN;
+    delete Webapp.stepOutToStackDepth;
+    delete Webapp.firstCallStackDepthThisStep;
+    Webapp.callExpressionSeenAtDepth = [];
     // Reset the pause button:
     var pauseButton = document.getElementById('pauseButton');
-    if (pauseButton) {
+    var stepInButton = document.getElementById('stepInButton');
+    var stepOverButton = document.getElementById('stepOverButton');
+    var stepOutButton = document.getElementById('stepOutButton');
+    if (pauseButton && stepInButton && stepOverButton && stepOutButton) {
       pauseButton.textContent = webappMsg.pause();
       pauseButton.disabled = true;
+      stepInButton.disabled = false;
+      stepOverButton.disabled = true;
+      stepOutButton.disabled = true;
     }
     var spinner = document.getElementById('spinner');
     if (spinner) {
@@ -10241,8 +10381,14 @@ Webapp.execute = function() {
 
   if (level.editCode) {
     var pauseButton = document.getElementById('pauseButton');
-    if (pauseButton) {
+    var stepInButton = document.getElementById('stepInButton');
+    var stepOverButton = document.getElementById('stepOverButton');
+    var stepOutButton = document.getElementById('stepOutButton');
+    if (pauseButton && stepInButton && stepOverButton && stepOutButton) {
       pauseButton.disabled = false;
+      stepInButton.disabled = true;
+      stepOverButton.disabled = true;
+      stepOutButton.disabled = true;
     }
     var spinner = document.getElementById('spinner');
     if (spinner) {
@@ -10257,16 +10403,50 @@ Webapp.execute = function() {
 Webapp.onPauseButton = function() {
   if (Webapp.running) {
     var pauseButton = document.getElementById('pauseButton');
+    var stepInButton = document.getElementById('stepInButton');
+    var stepOverButton = document.getElementById('stepOverButton');
+    var stepOutButton = document.getElementById('stepOutButton');
     // We have code and are either running or paused
     if (Webapp.paused) {
       Webapp.paused = false;
+      Webapp.nextStep = StepType.RUN;
       pauseButton.textContent = webappMsg.pause();
     } else {
       Webapp.paused = true;
+      Webapp.nextStep = StepType.RUN;
       pauseButton.textContent = webappMsg.continue();
     }
+    stepInButton.disabled = !Webapp.paused;
+    stepOverButton.disabled = !Webapp.paused;
+    stepOutButton.disabled = !Webapp.paused;
     document.getElementById('spinner').style.visibility =
         Webapp.paused ? 'hidden' : 'visible';
+  }
+};
+
+Webapp.onStepOverButton = function() {
+  if (Webapp.running) {
+    Webapp.paused = true;
+    Webapp.nextStep = StepType.OVER;
+    document.getElementById('spinner').style.visibility = 'visible';
+  }
+};
+
+Webapp.onStepInButton = function() {
+  if (!Webapp.running) {
+    BlocklyApps.runButtonClick();
+    Webapp.onPauseButton();
+  }
+  Webapp.paused = true;
+  Webapp.nextStep = StepType.IN;
+  document.getElementById('spinner').style.visibility = 'visible';
+};
+
+Webapp.onStepOutButton = function() {
+  if (Webapp.running) {
+    Webapp.paused = true;
+    Webapp.nextStep = StepType.OUT;
+    document.getElementById('spinner').style.visibility = 'visible';
   }
 };
 
@@ -10879,6 +11059,12 @@ exports.repeatForeverTooltip = function(d){return "Execute the actions in this b
 exports.shareWebappTwitter = function(d){return "Check out the app I made. I wrote it myself with @codeorg"};
 
 exports.shareGame = function(d){return "Share your app:"};
+
+exports.stepIn = function(d){return "Step in"};
+
+exports.stepOver = function(d){return "Step over"};
+
+exports.stepOut = function(d){return "Step out"};
 
 exports.turnBlack = function(d){return "turn black"};
 
