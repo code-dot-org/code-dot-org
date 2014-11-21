@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Ok, try to figure out what happens if you run this code (or press \"Run\" to try it). Then, repeat it enough times to complete the drawing. The colors will (most likely) be different every time.",
+    "instructions": "Ok, try to figure out what happens if you run this code (or press \"Run\" to try it). Then, repeat it enough times to complete the drawing.",
     "x": "200",
     "y": "200",
     "start_direction": "90",
@@ -14,7 +14,12 @@
     "skip_instructions_popup": "false",
     "slider_speed": ".7",
     "free_play": "false",
-    "ideal": "7"
+    "ideal": "7",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "impressive": "false"
   }
 }]]></config>
   <blocks>

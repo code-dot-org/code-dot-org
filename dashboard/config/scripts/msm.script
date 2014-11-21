@@ -1,7 +1,7 @@
 title 'CS in Middle School Math'
 description "Learn functional programming through algebra"
 
-stage 'Unplugged: Ninja Cat and the Coordinate Plane'
+stage 'Unplugged: Video Games and Coordinate Planes'
 level 'Eval Placeholder'
 
 stage 'Calc: Evaluation Blocks'
@@ -41,22 +41,30 @@ level 'Eval Contracts 3'
 level 'Eval Contracts 4'
 
 stage 'Calc: Defining Variables'
-level 'Eval Placeholder'
+level 'Calc Vars 1'
+level 'Calc Vars 2'
+level 'Calc Vars 3'
+level 'Calc Vars 4'
+level 'MSM Defining Vars 1'
+level 'MSM Defining Vars 2'
+level 'MSM Defining Vars 3'
+level 'MSM Defining Vars 4'
 
 stage 'Play Lab: Defining Variables'
 level 'MSM Play Lab Game 1'
 level 'MSM Play Lab Game 2'
 level 'MSM Play Lab Game 3' 
 
-stage 'Unplugged: The Design Recipe'
-level 'Eval Placeholder'
-
 stage 'Eval: Defining Functions'
 level 'Eval Define Funcs 1'
 level 'Eval Define Funcs 2'
 level 'Eval Define Funcs 3'
 level 'Eval Define Funcs 4'
+level 'Eval Define Funcs 5'
 level 'Calc Define Funcs 1'
+
+stage 'Unplugged: The Design Recipe'
+level 'Eval Placeholder'
 
 stage 'Play Lab: Defining Functions'
 level 'Eval Placeholder'

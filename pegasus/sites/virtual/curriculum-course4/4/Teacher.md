@@ -1,5 +1,5 @@
 ---
-title: Envelope Variables
+title: Variables in Envelopes
 view: page_curriculum
 theme: none
 ---
@@ -8,7 +8,7 @@ theme: none
 Live preview (once saved to dropbox) is at http://staging.code.org/curriculum/course4 Don't share this URL!
 -->
 
-<%= partial('curriculum_header', :title=> 'Envelope Variables', :unplugged=>true,:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>20) %>
+<%= partial('curriculum_header', :title=> 'Variables in Envelopes', :unplugged=>true,:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>20) %>
 
 [content]
 
@@ -193,7 +193,7 @@ Use these activities to enhance student learning. They can be used as outside of
 
 ### What's in the box?
 
-- Draw boxes on a piece of paper with simple mathmatic operators between them.
+- Draw boxes on a piece of paper with simple mathematic operators between them.
   - For instance  |_ + _| = |_|
 - Have similar size squares with numbers between 1 & 20.
 - Ask one student to come create a true equation, using the numbers provided.

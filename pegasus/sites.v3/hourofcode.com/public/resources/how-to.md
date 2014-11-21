@@ -1,6 +1,7 @@
 ---
-title: Resources
+title: How-to Guide
 layout: wide
+nav: resources_nav
 ---
 <div class="row">
     <h1 class="col-sm-6">How to teach one Hour of Code</h1>

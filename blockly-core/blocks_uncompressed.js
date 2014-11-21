@@ -845,8 +845,8 @@ Blockly.Blocks.procedures_callnoreturn = {init:function() {
   this.setHSV(94, 0.84, 0.6);
   var a = this.appendDummyInput().appendTitle(Blockly.Msg.PROCEDURES_CALLNORETURN_CALL).appendTitle("", "NAME");
   if(Blockly.functionEditor) {
-    var b = new Blockly.FieldLabel(Blockly.Msg.FUNCTION_EDIT);
-    Blockly.bindEvent_(b.textElement_, "mousedown", this, this.openEditor);
+    var b = new Blockly.FieldIcon(Blockly.Msg.FUNCTION_EDIT);
+    Blockly.bindEvent_(b.fieldGroup_, "mousedown", this, this.openEditor);
     a.appendTitle(b)
   }
   this.setPreviousStatement(!0);
@@ -933,8 +933,8 @@ Blockly.Blocks.procedures_callreturn = {init:function() {
   this.setHSV(94, 0.84, 0.6);
   var a = this.appendDummyInput().appendTitle(Blockly.Msg.PROCEDURES_CALLRETURN_CALL).appendTitle("", "NAME");
   if(Blockly.functionEditor) {
-    var b = new Blockly.FieldLabel(Blockly.Msg.FUNCTION_EDIT);
-    Blockly.bindEvent_(b.textElement_, "mousedown", this, this.openEditor);
+    var b = new Blockly.FieldIcon(Blockly.Msg.FUNCTION_EDIT);
+    Blockly.bindEvent_(b.fieldGroup_, "mousedown", this, this.openEditor);
     a.appendTitle(b)
   }
   this.setOutput(!0);
@@ -1262,6 +1262,7 @@ Blockly.Blocks.functional_definition = {init:function() {
   this.appendFunctionalInput("STACK");
   this.setFunctional(!0);
   this.setTooltip(Blockly.Msg.FUNCTIONAL_PROCEDURE_DEFINE_TOOLTIP);
+  this.isFunctionalVariable_ = !1;
   this.parameterNames_ = [];
   this.paramIds_ = [];
   this.parameterTypes_ = []
@@ -1274,14 +1275,19 @@ Blockly.Blocks.functional_definition = {init:function() {
   }
   this.description_ && (b = document.createElement("description"), b.innerHTML = this.description_, a.appendChild(b));
   this.outputType_ && (b = document.createElement("outputType"), b.innerHTML = this.outputType_, a.appendChild(b));
+  this.isFunctionalVariable_ && (b = document.createElement("isfunctionalvariable"), b.innerHTML = "true", a.appendChild(b));
   return a
 }, domToMutation:function(a) {
   this.parameterNames_ = [];
   for(var b = 0, c;c = a.childNodes[b];b++) {
     var d = c.nodeName.toLowerCase();
-    "arg" === d ? (this.parameterNames_.push(c.getAttribute("name")), this.parameterTypes_.push(c.getAttribute("type"))) : "description" === d ? this.description_ = c.innerHTML : "outputtype" === d && this.updateOutputType(c.innerHTML)
+    "arg" === d ? (this.parameterNames_.push(c.getAttribute("name")), this.parameterTypes_.push(c.getAttribute("type"))) : "description" === d ? this.description_ = c.innerHTML : "outputtype" === d ? this.updateOutputType(c.innerHTML) : "isfunctionalvariable" === d && (this.isFunctionalVariable_ = !0)
   }
   this.updateParams_()
+}, isVariable:function() {
+  return this.isFunctionalVariable_
+}, convertToVariable:function() {
+  this.isFunctionalVariable_ = !0
 }, updateParamsFromArrays:function(a, b, c) {
   this.parameterNames_ = goog.array.clone(a);
   this.paramIds_ = b ? goog.array.clone(b) : null;
@@ -1312,7 +1318,7 @@ Blockly.Blocks.functional_definition = {init:function() {
   }
   Blockly.Block.prototype.dispose.apply(this, arguments)
 }, getProcedureInfo:function() {
-  return{name:this.getTitleValue("NAME"), type:this.type, callType:this.callType_, parameterNames:this.parameterNames_, parameterTypes:this.parameterTypes_}
+  return{name:this.getTitleValue("NAME"), type:this.type, callType:this.callType_, parameterNames:this.parameterNames_, parameterTypes:this.parameterTypes_, isFunctionalVariable:this.isFunctionalVariable_}
 }, getVars:function() {
   return this.parameterNames_
 }, renameVar:function(a, b) {
@@ -1333,10 +1339,11 @@ Blockly.Blocks.functional_call = {init:function() {
   this.setTooltip("Calls a user-defined function");
   this.setHSV(94, 0.84, 0.6);
   var a = this.appendDummyInput().appendTitle(new Blockly.FieldLabel("Function Call", {fixedSize:{height:35}}), "NAME").appendTitle("", "PARAM_TEXT");
-  if(Blockly.functionEditor) {
-    var b = new Blockly.FieldLabel(Blockly.Msg.FUNCTION_EDIT);
-    Blockly.bindEvent_(b.textElement_, "mousedown", this, this.openEditor);
-    a.appendTitle(b)
+  if(Blockly.functionEditor && this.blockSpace !== Blockly.modalBlockSpace) {
+    var b = new Blockly.FieldIcon(Blockly.Msg.FUNCTION_EDIT);
+    Blockly.bindEvent_(b.fieldGroup_, "mousedown", this, this.openEditor);
+    a.appendTitle(b);
+    this.editLabel_ = b
   }
   this.setFunctional(!0);
   this.currentParameterNames_ = [];
@@ -1344,7 +1351,8 @@ Blockly.Blocks.functional_call = {init:function() {
   this.currentParameterIDs_ = [];
   this.currentParameterTypes_ = [];
   this.currentDescription_ = this.currentOutputType_ = null;
-  this.blockSpace.events.listen(Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE, this.updateAttributesFromDefinition_, !1, this)
+  this.blockSpace.events.listen(Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE, this.updateAttributesFromDefinition_, !1, this);
+  this.changeFunctionalOutput("none")
 }, updateAttributesFromDefinition_:function() {
   var a = Blockly.Procedures.getDefinition(this.getTitleValue("NAME"), this.blockSpace.blockSpaceEditor.blockSpace);
   a && (a.outputType_ && a.outputType_ !== this.currentOutputType_ && (this.currentOutputType_ = a.outputType_, this.changeFunctionalOutput(a.outputType_)), a.description_ && a.description_ !== this.currentDescription_ && (this.currentDescription_ = a.description_, this.setTooltip(a.description_)))
@@ -1378,7 +1386,8 @@ Blockly.Blocks.functional_call = {init:function() {
     for(e = 0;e < this.currentParameterNames_.length;e++) {
       f = this.appendFunctionalInput("ARG" + e).setAlign(Blockly.ALIGN_CENTRE).setInline(0 < e), g = this.currentParameterTypes_[e], f.setHSV.apply(f, Blockly.ContractEditor.typesToColors[g]), f.setCheck(g), this.currentParameterIDs_ && (a = this.currentParameterIDs_[e], a in this.parameterIDsToArgumentConnections_ && (g = this.parameterIDsToArgumentConnections_[a], !g || g.targetConnection || g.sourceBlock_.blockSpace != this.blockSpace ? delete this.parameterIDsToArgumentConnections_[a] : f.connection.connect(g)))
     }
-    this.setTitleValue(" (" + this.currentParameterNames_.join(", ") + ")", "PARAM_TEXT");
+    e = 0 < this.currentParameterNames_.length ? " (" + this.currentParameterNames_.join(", ") + ")" : "";
+    this.setTitleValue(e, "PARAM_TEXT");
     (this.rendered = d) && this.render()
   }else {
     this.parameterIDsToArgumentConnections_ = {}, this.currentParameterIDs_ = null

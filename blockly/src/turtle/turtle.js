@@ -32,7 +32,6 @@ var BlocklyApps = require('../base');
 var Turtle = module.exports;
 var commonMsg = require('../../locale/current/common');
 var turtleMsg = require('../../locale/current/turtle');
-var skins = require('../skins');
 var levels = require('./levels');
 var Colours = require('./core').Colours;
 var codegen = require('../codegen');
@@ -69,6 +68,11 @@ Turtle.pid = 0;
  * Should the turtle be drawn?
  */
 Turtle.visible = true;
+
+/**
+ * Set a turtle heading.
+ */
+Turtle.heading = 0;
 
 /**
  * The avatar image
@@ -128,15 +132,6 @@ Turtle.init = function(config) {
     // We don't support ratios other than 2 right now (sorry!) so fall back to 1.
     if (retina != 2)
       retina = 1;
-
-    if (skin.id == "elsa")
-    {
-      turtleNumFrames = 20;
-    }
-    else if (skin.id == "anna")
-    {
-      turtleNumFrames = 10;
-    }
 
     // let's try adding a background image
     level.images = [{}];
@@ -415,7 +410,6 @@ Turtle.loadDecorationAnimation = function() {
   }
 };
 
-var turtleNumFrames;
 var turtleFrame = 0;
 
 
@@ -436,7 +430,7 @@ Turtle.drawTurtle = function() {
   var sourceX = Turtle.avatarImage.spriteWidth * index;
   if (skin.id == "anna" || skin.id == "elsa") {
     sourceY = Turtle.avatarImage.spriteHeight * turtleFrame;
-    turtleFrame = (turtleFrame + 1) % turtleNumFrames;
+    turtleFrame = (turtleFrame + 1) % skin.turtleNumFrames;
   } else {
     sourceY = 0;
   }
@@ -475,8 +469,6 @@ Turtle.drawTurtle = function() {
                               destWidth * retina, destHeight * retina); */
 };
 
-var turtleNumFrames = 19;
-
 // An x offset against the sprite edge where the decoration should be drawn,
 // along with whether it should be drawn before or after the turtle sprite itself.
 
@@ -508,20 +500,18 @@ var decorationImageDetails = [
 
 Turtle.drawDecorationAnimation = function(when) {
   if (skin.id == "elsa") {
-    var index = (turtleFrame + 10) % turtleNumFrames;
+    var frameIndex = (turtleFrame + 10) % skin.decorationAnimationNumFrames;
 
     var angleIndex = Math.floor(Turtle.heading * Turtle.numberAvatarHeadings / 360);
-    if (skin.id == "anna" || skin.id == "elsa") {
-      // the rotations in the sprite sheet go in the opposite direction.
-      angleIndex = Turtle.numberAvatarHeadings - angleIndex;
 
-      // and they are 180 degrees out of phase.
-      angleIndex = (angleIndex + Turtle.numberAvatarHeadings/2) % Turtle.numberAvatarHeadings;
-    }
+    // the rotations in the Anna & Elsa sprite sheets go in the opposite direction.
+    angleIndex = Turtle.numberAvatarHeadings - angleIndex;
 
-    if (decorationImageDetails[angleIndex].when == when)
-    {
-      var sourceX = Turtle.decorationAnimationImage.width * index;
+    // and they are 180 degrees out of phase.
+    angleIndex = (angleIndex + Turtle.numberAvatarHeadings/2) % Turtle.numberAvatarHeadings;
+
+    if (decorationImageDetails[angleIndex].when == when) {
+      var sourceX = Turtle.decorationAnimationImage.width * frameIndex;
       var sourceY = 0;
       var sourceWidth = Turtle.decorationAnimationImage.width;
       var sourceHeight = Turtle.decorationAnimationImage.height;
@@ -767,34 +757,74 @@ Turtle.execute = function() {
 var jumpDistance = 5;
 var jumpDistanceCovered;
 
+
+/**
+ * Special case: if we have a turn, followed by a move forward, then we can just
+ * do the turn instantly and then begin the move forward in the same frame.
+ */
+function checkforTurnAndMove() {
+  var nextIsForward = false;
+
+  var currentTuple = api.log[0];
+  var currentCommand = currentTuple[0];
+  var currentValues = currentTuple.slice(1);
+
+  // Check first for a small turn movement.
+  if (currentCommand === 'RT') {
+    var currentAngle = currentValues[0];
+    if (Math.abs(currentAngle) <= 10) {
+      // Check that next command is a move forward.
+      if (api.log.length > 1) {
+        var nextTuple = api.log[1];
+        var nextCommand = nextTuple[0];
+        if (nextCommand === 'FD') {
+          nextIsForward = true;
+        }
+      }
+    }
+  }
+
+  return nextIsForward;
+}
+
+
 /**
  * Attempt to execute one command from the log of API commands.
  */
 function executeTuple () {
 
-  if (api.log.length > 0)
-  {
+  if (api.log.length === 0) {
+    return false;
+  }
+
+  var executeSecondTuple;
+
+  do {
+    // Unless something special happens, we will just execute a single tuple.
+    executeSecondTuple = false;
+
     var tuple = api.log[0];
     var command = tuple[0];
     var id = tuple[tuple.length-1];
 
     BlocklyApps.highlight(String(id));
-    var smoothAnimate = skin.id == "anna" || skin.id == "elsa";
-    var tupleDone = Turtle.step(command, tuple.slice(1), {smoothAnimate: smoothAnimate});
+
+    // Should we execute another tuple in this frame of animation?
+    if (skin.consolidateTurnAndMove && checkforTurnAndMove()) {
+      executeSecondTuple = true;
+    }
+
+    // We only smooth animate for Anna & Elsa, and only if there is not another tuple to be done.
+    var tupleDone = Turtle.step(command, tuple.slice(1), {smoothAnimate: skin.smoothAnimate && !executeSecondTuple});
     Turtle.display();
 
-    if (tupleDone)
-    {
+    if (tupleDone) {
       api.log.shift();
       clearTuple();
     }
+  } while (executeSecondTuple);
 
-    return true;
-  }
-  else
-  {
-    return false;
-  }
+  return true;
 }
 
 /**
@@ -1002,7 +1032,7 @@ Turtle.step = function(command, values, options) {
 Turtle.setPattern = function (pattern) {
   if (Turtle.loadedPathPatterns[pattern]) {
     Turtle.currentPathPattern = Turtle.loadedPathPatterns[pattern];
-    Turtle.isDrawingWithPattern = true; 
+    Turtle.isDrawingWithPattern = true;
   } else if (pattern === null) {
     Turtle.currentPathPattern = new Image();
     Turtle.isDrawingWithPattern = false;

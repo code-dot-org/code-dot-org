@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Good job on the last puzzle, now let's take that square \"loop\" you just made and turn it into a \"function\", so anytime you want to draw a square you only have to call the \"function\". Follow these instructions:  Click \"edit\" on the existing \"draw a square\" function and make it draw a 100 pixel square. Then click on the Save and close option in the upper right hand corner. Hint: Use the square loop you just made in the last puzzle. ",
+    "instructions": "Anytime you want to draw a square you can call a \"function\" that will draw a square for you. Follow these instructions:  Click \"edit\" on the existing \"draw a square\" function and make it draw a 100 pixel square. Then click on the Save and close option in the upper right hand corner.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -19,7 +19,9 @@
     "impressive": "false",
     "use_modal_function_editor": "true",
     "ideal": "9",
-    "use_contract_editor": "false"
+    "use_contract_editor": "false",
+    "embed": "false",
+    "callout_json": "[{\r\n  \"localization_key\": \"edit_function\",\r\n  \"element_id\": \"[block-id='9']>.blocklyIconGroup:eq(-1)\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"top center\", \"at\": \"bottom center\"}\r\n  }\r\n}]"
   }
 }]]></config>
   <blocks>

@@ -19,17 +19,29 @@
     "sprites_hidden_to_start": "false",
     "free_play": "false",
     "use_modal_function_editor": "false",
-    "use_contract_editor": "false",
+    "use_contract_editor": "true",
     "coordinate_grid_background": "false",
     "timeout_failure_tick": "15",
     "instructions": "Variables can be used to change how a program behaves. Try changing the scene for the game by setting the background.",
-    "first_sprite_index": "2"
+    "first_sprite_index": "2",
+    "embed": "false",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="functional_setBackground" inline="false" deletable="false"/>
+        <block type="functional_definition" inline="false" uservisible="false">
+          <mutation>
+            <outputtype>string</outputtype>
+            <isfunctionalvariable>true</isfunctionalvariable>
+          </mutation>
+          <title name="NAME">background</title>
+        </block>
+        <block type="functional_start_setBackground" inline="false" deletable="false"/>
+        <block type="functional_call">
+          <mutation name="background"/>
+        </block>
       </xml>
     </start_blocks>
     <toolbox_blocks>
@@ -37,10 +49,10 @@
         <block type="functional_background_string_picker">
           <title name="VAL">winter</title>
         </block>
+        <block type="functional_call">
+          <mutation name="background"/>
+        </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
-      <xml/>
-    </required_blocks>
   </blocks>
 </Studio>

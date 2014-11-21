@@ -19,7 +19,9 @@
     "impressive": "false",
     "slider_speed": ".5",
     "ideal": "23",
-    "use_contract_editor": "false"
+    "use_contract_editor": "false",
+    "embed": "false",
+    "open_function_definition": "do something"
   }
 }]]></config>
   <blocks>
@@ -154,7 +156,7 @@
     </required_blocks>
     <solution_blocks>
       <xml>
-        <block type="when_run" movable="false" deletable="false">
+        <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="procedures_callnoreturn" inline="false">
               <mutation name="draw a shape">

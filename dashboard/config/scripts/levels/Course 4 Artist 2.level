@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist_zombie",
-    "instructions": "Can you loop this code to complete the square?",
+    "instructions": "Can you loop this code to draw the greyed out square?",
     "x": "350",
     "y": "50",
     "start_direction": "180",
@@ -14,7 +14,12 @@
     "skip_instructions_popup": "false",
     "free_play": "false",
     "ideal": "4",
-    "slider_speed": "0.4"
+    "slider_speed": "0.4",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "impressive": "false"
   }
 }]]></config>
   <blocks>

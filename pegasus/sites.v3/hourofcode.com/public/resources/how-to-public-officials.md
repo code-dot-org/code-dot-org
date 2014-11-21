@@ -1,5 +1,7 @@
 How-to guide for public officials
-====
+layout: wide
+nav: resources_nav
+----
 
 ## Bring the Hour of Code to your entire community. Get every school participating, every student learning!
 

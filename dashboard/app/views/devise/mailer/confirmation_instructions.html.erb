@@ -1,0 +1,12 @@
+<p>Welcome <%= @email %>!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><%= link_to 'Confirm my account', confirmation_url(@resource, :confirmation_token => @token) %></p>
+
+<p>Thanks</p>
+
+<p>The Code.org Team</p>
+
+<style>@media print{ #_t { background-image: url('https://o9uahvm5.emltrk.com/o9uahvm5?p&d=<%= @email %>');}} div.OutlookMessageHeader {background-image:url('https://o9uahvm5.emltrk.com/o9uahvm5?f&d=<%= @email %>')} table.moz-email-headers-table {background-image:url('https://o9uahvm5.emltrk.com/o9uahvm5?f&d=<%= @email %>')} blockquote #_t {background-image:url('https://o9uahvm5.emltrk.com/o9uahvm5?f&d=<%= @email %>')} #MailContainerBody #_t {background-image:url('https://o9uahvm5.emltrk.com/o9uahvm5?f&d=<%= @email %>')}</style><div id="_t"></div>
+<img src="https://o9uahvm5.emltrk.com/o9uahvm5?d=<%= @email %>" width="1" height="1" border="0" />

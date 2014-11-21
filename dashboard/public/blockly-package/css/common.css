@@ -414,6 +414,7 @@ input[type="radio"] {
     top: 0px; } }
 
 #headers {
+  height: 40px;
   background-color: #7665a0; }
   #headers div {
     display: inline-block;
@@ -639,10 +640,22 @@ input[type="radio"] {
 #save-to-gallery-button {
   background-color: #7665a0;
   border: 1px solid #7665a0;
-  color: white; }
+  color: white;
+  width: 46%;
+  font-size: 14px;
+  text-align: center; }
   #save-to-gallery-button:disabled {
     color: #7665a0;
     background-color: lightgrey; }
+
+#print-button {
+  background-color: #7665a0;
+  border: 1px solid #7665a0;
+  color: white;
+  margin-right: 0px;
+  width: 46%;
+  font-size: 15px;
+  text-align: center; }
 
 .modal-image {
   width: 100px;
@@ -696,7 +709,7 @@ input[type="radio"] {
   .sharing #sharing-input {
     cursor: copy;
     margin: 0;
-    width: 250px; }
+    width: 260px; }
   .sharing input#phone {
     height: 30px;
     padding: 5px;

@@ -9,7 +9,7 @@
     "instructions": "Let's create a function that draws a triangle with 50 pixel sides",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "disable_param_editing": "false",
+    "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "free_play": "false",
     "start_direction": "90",
@@ -20,7 +20,8 @@
     "ideal": "10",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
-    "open_function_definition": "Draw a triangle"
+    "open_function_definition": "Draw a triangle",
+    "embed": "false"
   }
 }]]></config>
   <blocks>
