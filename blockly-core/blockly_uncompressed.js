@@ -18890,8 +18890,8 @@ Blockly.FunctionEditor.prototype.paramsAsParallelArrays_ = function() {
   this.orderedParamIDsToBlocks_.forEach(function(blockXML, paramID) {
     paramNames.push(blockXML.firstElementChild.textContent);
     paramIDs.push(paramID);
-    if(blockXML.children.length > 1) {
-      paramTypes.push(blockXML.children[1].textContent)
+    if(blockXML.childNodes.length > 1) {
+      paramTypes.push(blockXML.childNodes[1].textContent)
     }
   }, this);
   return{paramNames:paramNames, paramIDs:paramIDs, paramTypes:paramTypes}
