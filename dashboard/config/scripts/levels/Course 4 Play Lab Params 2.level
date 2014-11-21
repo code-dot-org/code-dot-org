@@ -11,7 +11,7 @@
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,1,0,1,0],[0,0,0,0,0,0,0,0],[1,0,1,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,16,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "disable_param_editing": "true",
+    "disable_param_editing": "false",
     "disable_variable_editing": "false",
     "free_play": "false",
     "edge_collisions": "false",
@@ -29,7 +29,8 @@
     "use_contract_editor": "false",
     "coordinate_grid_background": "false",
     "open_function_definition": "jump",
-    "maze_data": null
+    "maze_data": null,
+    "embed": "false"
   }
 }]]></config>
   <blocks>
