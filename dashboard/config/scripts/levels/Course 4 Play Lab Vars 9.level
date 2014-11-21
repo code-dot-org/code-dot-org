@@ -29,7 +29,6 @@
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "false",
     "min_workspace_height": "2000",
-    "maze_data": null,
     "scrollbars": "true"
   }
 }]]></config>
@@ -191,7 +190,11 @@
             <title name="SOUND">hit</title>
           </block>
           <block type="studio_saySpriteParamsTime" inline="true">
-            <title name="SPRITE">0</title>
+            <value name="SPRITE">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
             <value name="TEXT">
               <block type="text">
                 <title name="TEXT"/>

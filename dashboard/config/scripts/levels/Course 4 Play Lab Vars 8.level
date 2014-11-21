@@ -15,7 +15,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "Alright, one last thing for this game - let's set it up so the player can win (or lose). Use a forever loop to check the value of score - if score is ever greater that 20, make the enemy vanish. If the score is every less than 0, make the player vanish. Click \"Finish\" when the game works like you'd like it to.",
+    "instructions": "Let's set up this game so the Dog can win (or lose). Use a forever loop to check the value of score - if score is ever greater that 20, make the enemy (the Cat) vanish. If the score is ever less than 0, make the player (the Dog) vanish. Click \"Finish\" when the game works like you'd like it to.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -28,7 +28,8 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "false",
-    "maze_data": null
+    "maze_data": null,
+    "embed": "false"
   }
 }]]></config>
   <blocks>

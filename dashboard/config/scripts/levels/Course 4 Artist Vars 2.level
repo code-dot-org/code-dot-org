@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Hey, look at that! Instead of moving forward 100, now my triangle loop is referencing the variable \"length.\" Can you set \"length\" to 150 to draw this new triangle?",
+    "instructions": "Hey, look at that! Instead of \"moving forward 100,\" now my \"move\" block is referencing the variable \"length.\" Can you set \"length\" to 150 to draw this new triangle?",
     "x": "125",
     "y": "250",
     "start_direction": "90",
@@ -19,7 +19,8 @@
     "disable_variable_editing": "true",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "impressive": "false"
+    "impressive": "false",
+    "embed": "false"
   }
 }]]></config>
   <blocks>

@@ -832,6 +832,10 @@ exports.hasExtraTopBlocks = function () {
     if (topBlocks[i].disabled) {
       continue;
     }
+    // Ignore hidden blocks such as functional definitions.
+    if (!topBlocks[i].isUserVisible()) {
+      continue;
+    }
     // None of our top level blocks should have a previous connection.
     if (topBlocks[i].previousConnection) {
       return true;

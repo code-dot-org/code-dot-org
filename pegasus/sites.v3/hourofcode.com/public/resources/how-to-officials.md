@@ -1,5 +1,8 @@
-How-to guide for public officials
-====
+---
+title: How-to Guide for Public Officials
+layout: wide
+nav: resources_nav
+---
 
 ## Bring the Hour of Code to your entire community. Get every school participating, every student learning!
 
