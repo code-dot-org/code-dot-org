@@ -58,10 +58,10 @@ and so on...
 
 [together]
 
-## Activity: Eval Writing Contracts
-### <a name="Activity1"></a> 3) Online Puzzles
+## Activity: Eval Defining Functions
+### <a name="Activity1"></a> 2) Online Puzzles
 
-In this stage you'll define and modify variables to changes how some games function. Head to [MSM stage 7](http://studio.code.org/s/msm/stage/7/puzzle/1) in Code Studio to get started programming.
+In this stage you'll define simple functions. Head to [MSM stage 8](http://studio.code.org/s/msm/stage/8/puzzle/1) in Code Studio to get started programming.
 
 [/together]
 
