@@ -677,6 +677,11 @@ input[type="radio"] {
   width: 400px;
   border: none; }
 
+#feedbackButtons:after {
+  content: '';
+  display: inline-block;
+  width: 100%; }
+
 .hide {
   display: none; }
 
