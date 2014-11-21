@@ -138,6 +138,29 @@ exports.initJSInterpreter = function (interpreter, scope, options) {
   }
 };
 
+/**
+ * Check to see if it is safe to step the interpreter while we are unwinding.
+ * (Called repeatedly after completing a step where the node was marked 'done')
+ */
+exports.isNextStepSafeWhileUnwinding = function (interpreter) {
+  var state = interpreter.stateStack[0];
+  if (state.done) {
+    return true;
+  }
+  switch (state.node.type) {
+    case "VariableDeclaration":
+    case "BlockStatement":
+    case "ForStatement": // check for state.mode ?
+    case "UpdateExpression":
+    case "BinaryExpression":
+    case "CallExpression":
+    case "Identifier":
+    case "Literal":
+      return true;
+  }
+  return false;
+};
+
 // session is an instance of Ace editSession
 // Usage
 // var lengthArray = aceCalculateCumulativeLength(editor.getSession());
