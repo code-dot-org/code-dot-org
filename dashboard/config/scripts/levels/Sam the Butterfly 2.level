@@ -7,7 +7,7 @@
   "properties": {
     "skin": "studio",
     "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n  return (Studio.Globals.stopped_left && (Studio.Globals.sam_x <= 10));\r\n}",
-    "failure_condition": "function () {\r\n}",
+    "failure_condition": "function () {\r\n  return (Studio.Globals.sam_x < -50);\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "soft_buttons": [
       "leftButton",
@@ -31,7 +31,8 @@
     "free_play": "false",
     "open_function_definition": "safe-left?",
     "embed": "false",
-    "maze_data": null
+    "maze_data": null,
+    "protaganist_sprite_index": "0"
   }
 }]]></config>
   <blocks>
@@ -39,9 +40,11 @@
       <xml>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
-            <outputtype>Number</outputtype>
+            <arg name="x" type="Number"/>
+            <description>Return true if x is greater than 0.</description>
+            <outputtype>boolean</outputtype>
           </mutation>
-          <title name="NAME">get-x</title>
+          <title name="NAME">safe-left?</title>
         </block>
         <block type="functional_start_dummyOnMove" inline="false">
           <functional_input name="VAL">
@@ -59,11 +62,9 @@
         </block>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
-            <arg name="x" type="Number"/>
-            <description>Return true if x is greater than 0.</description>
-            <outputtype>boolean</outputtype>
+            <outputtype>Number</outputtype>
           </mutation>
-          <title name="NAME">safe-left?</title>
+          <title name="NAME">get-x</title>
         </block>
         <block type="when_run" uservisible="false">
           <next>
