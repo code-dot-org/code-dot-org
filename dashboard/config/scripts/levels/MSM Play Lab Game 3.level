@@ -28,15 +28,14 @@
     "coordinate_grid_background": "false",
     "instructions": "Now it's time to play a game! Press the Run button, and use the arrows to move and shoot. Then change the background, or and change the player and enemy speeds to make the game easier or harder.",
     "first_sprite_index": "2",
+    "embed": "false",
     "maze_data": null
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="functional_setBackground" deletable="false" inline="false" x="20" y="20"/>
-        <block type="functional_setPlayerSpeed" deletable="false" inline="false" x="20" y="120"/>
-        <block type="functional_setEnemySpeed" deletable="false" inline="false" x="20" y="220"/>
+        <block type="functional_start_setBackgroundAndSpeeds" deletable="false" inline="false" x="20" y="20"/>
         <block type="studio_repeatForever" uservisible="false">
           <statement name="DO">
             <block type="studio_moveDistanceParams" inline="true" uservisible="false">

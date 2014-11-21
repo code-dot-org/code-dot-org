@@ -81,3 +81,9 @@
     = f.label :embed, "Embed"
     %p Embedded levels hide the Blockly workspace, only showing the visualization area (and the 'finish' button, if 'freeplay' is also set).
     = boolean_check_box f, :embed
+:javascript
+  CodeMirror.fromTextArea($('#level_callout_json').get(0), {
+    mode: 'javascript',
+    viewportMargin: Infinity,
+    matchBrackets: true
+  });

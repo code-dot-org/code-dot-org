@@ -64,8 +64,7 @@ end
 
 cron 'upload-dashboard-logs-to-s3' do
   action :create
-  minute '0'
-  hour '1'
+  minute '10'
   user node[:current_user]
   home "/home/#{node[:current_user]}"
   command "/home/#{node[:current_user]}/#{node.chef_environment}/aws/cronjob \"/home/#{node[:current_user]}/#{node.chef_environment}/bin/upload-logs-to-s3 dashboard\""

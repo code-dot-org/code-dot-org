@@ -21,7 +21,8 @@
     "instructions": "Here's the same \"get 3 nectar\" function - but now the flowers are to my right! Can you modify the function so it makes me turn right instead of left for the flowers?",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
-    "maze_data": null
+    "maze_data": null,
+    "callout_json": "[{\r\n  \"localization_key\": \"edit_get_nectar\",\r\n  \"element_id\": \"[block-id='4']>.blocklyIconGroup\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"left center\", \"at\": \"right center\"}\r\n  }\r\n}]"
   }
 }]]></config>
   <blocks>

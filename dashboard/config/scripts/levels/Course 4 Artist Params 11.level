@@ -25,10 +25,18 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
+        <block type="procedures_defnoreturn" movable="false">
+          <mutation>
+            <arg name="sides"/>
+            <arg name="length"/>
+            <arg name="repeat"/>
+          </mutation>
+          <title name="NAME">draw a shape</title>
+        </block>
+        <block type="when_run" movable="false" deletable="false">
           <next>
             <block type="procedures_callnoreturn" inline="false">
-              <mutation name="draw a pinwheel">
+              <mutation name="draw a shape">
                 <arg name="sides"/>
                 <arg name="length"/>
                 <arg name="repeat"/>
@@ -36,37 +44,31 @@
             </block>
           </next>
         </block>
-        <block type="procedures_defnoreturn" uservisible="false">
-          <mutation>
-            <arg name="sides"/>
-            <arg name="length"/>
-            <arg name="repeat"/>
-          </mutation>
-          <title name="NAME">draw a pinwheel</title>
-        </block>
       </xml>
     </start_blocks>
     <toolbox_blocks>
       <xml>
         <category name="Default">
-          <block type="when_run" movable="false" deletable="false">
-            <next>
-              <block type="procedures_callnoreturn" inline="false">
-                <mutation name="draw a pinwheel">
-                  <arg name="sides"/>
-                  <arg name="length"/>
-                  <arg name="repeat"/>
-                </mutation>
-              </block>
-            </next>
-          </block>
           <block type="procedures_defnoreturn" uservisible="false">
             <mutation>
               <arg name="sides"/>
               <arg name="length"/>
               <arg name="repeat"/>
             </mutation>
-            <title name="NAME">draw a pinwheel</title>
+            <title name="NAME">draw a shape</title>
+          </block>
+        </category>
+        <category name="Default">
+          <block type="when_run" deletable="false" movable="false">
+            <next>
+              <block type="procedures_callnoreturn" inline="false">
+                <mutation name="draw a shape">
+                  <arg name="sides"/>
+                  <arg name="length"/>
+                  <arg name="repeat"/>
+                </mutation>
+              </block>
+            </next>
           </block>
         </category>
         <category name="Actions">
@@ -105,7 +107,7 @@
         </category>
         <category name="Functions" custom="PROCEDURE">
           <block type="procedures_callnoreturn" inline="false">
-            <mutation name="draw a pinwheel">
+            <mutation name="draw a shape">
               <arg name="sides"/>
               <arg name="length"/>
               <arg name="repeat"/>
@@ -181,40 +183,68 @@
             </block>
           </value>
         </block>
-        <block type="draw_turn" inline="true">
-          <title name="DIR">turnRight</title>
-          <value name="VALUE">
-            <block type="math_number">
-              <title name="NUM">90</title>
-            </block>
-          </value>
-        </block>
-        <block type="draw_turn" inline="true">
-          <title name="DIR">turnLeft</title>
-          <value name="VALUE">
-            <block type="math_arithmetic" inline="true">
-              <title name="OP">DIVIDE</title>
-              <value name="A">
+        <block type="pick_one">
+          <statement name="PICK">
+            <block type="draw_turn" inline="true">
+              <title name="DIR">turnRight</title>
+              <value name="VALUE">
                 <block type="math_number">
-                  <title name="NUM">360</title>
+                  <title name="NUM">90</title>
                 </block>
               </value>
-              <value name="B">
-                <block type="variables_get">
-                  <title name="VAR">sides</title>
+              <next>
+                <block type="draw_turn" inline="true">
+                  <title name="DIR">turnLeft</title>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <title name="NUM">90</title>
+                    </block>
+                  </value>
                 </block>
-              </value>
+              </next>
             </block>
-          </value>
+          </statement>
+        </block>
+        <block type="pick_one">
+          <statement name="PICK">
+            <block type="draw_turn" inline="true">
+              <title name="DIR">turnLeft</title>
+              <value name="VALUE">
+                <block type="math_arithmetic" inline="true">
+                  <title name="OP">DIVIDE</title>
+                  <value name="A">
+                    <block type="math_number">
+                      <title name="NUM">360</title>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="variables_get">
+                      <title name="VAR">sides</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="draw_turn" inline="true">
+                  <title name="DIR">turnLeft</title>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <title name="NUM">120</title>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </statement>
         </block>
       </xml>
     </required_blocks>
     <solution_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
+        <block type="when_run" movable="false" deletable="false">
           <next>
             <block type="procedures_callnoreturn" inline="false">
-              <mutation name="draw a pinwheel">
+              <mutation name="draw a shape">
                 <arg name="sides"/>
                 <arg name="length"/>
                 <arg name="repeat"/>
@@ -243,7 +273,7 @@
             <arg name="length"/>
             <arg name="repeat"/>
           </mutation>
-          <title name="NAME">draw a pinwheel</title>
+          <title name="NAME">draw a shape</title>
           <statement name="STACK">
             <block type="controls_repeat_ext" inline="true" uservisible="false">
               <value name="TIMES">

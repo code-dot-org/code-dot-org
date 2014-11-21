@@ -417,6 +417,12 @@ BlocklyApps.init = function(config) {
   }
 
   var visualizationColumn = document.getElementById('visualizationColumn');
+
+  // center game screen in embed mode
+  if(config.embed) {
+    visualizationColumn.style.margin = "0 auto";
+  }
+
   if (BlocklyApps.usingBlockly && config.level.edit_blocks) {
     // Set a class on the main blockly div so CSS can style blocks differently
     Blockly.addClass_(container.querySelector('#blockly'), 'edit');
@@ -1246,7 +1252,7 @@ BlocklyApps.report = function(options) {
   // they cannot have modified. In that case, don't report it to the service
   // or call the onComplete() callback expected. The app will just sit
   // there with the Reset button as the only option.
-  if (!BlocklyApps.hideSource) {
+  if (!(BlocklyApps.hideSource && BlocklyApps.share)) {
     var onAttemptCallback = (function() {
       return function(builderDetails) {
         for (var option in builderDetails) {
@@ -1843,6 +1849,29 @@ exports.initJSInterpreter = function (interpreter, scope, options) {
   }
 };
 
+/**
+ * Check to see if it is safe to step the interpreter while we are unwinding.
+ * (Called repeatedly after completing a step where the node was marked 'done')
+ */
+exports.isNextStepSafeWhileUnwinding = function (interpreter) {
+  var state = interpreter.stateStack[0];
+  if (state.done) {
+    return true;
+  }
+  switch (state.node.type) {
+    case "VariableDeclaration":
+    case "BlockStatement":
+    case "ForStatement": // check for state.mode ?
+    case "UpdateExpression":
+    case "BinaryExpression":
+    case "CallExpression":
+    case "Identifier":
+    case "Literal":
+      return true;
+  }
+  return false;
+};
+
 // session is an instance of Ace editSession
 // Usage
 // var lengthArray = aceCalculateCumulativeLength(editor.getSession());
@@ -2190,7 +2219,7 @@ exports.displayFeedback = function(options) {
   var showingSharing = options.showingSharing && !hadShareFailure;
 
   var canContinue = exports.canContinueToNextLevel(options.feedbackType);
-  var displayShowCode = BlocklyApps.enableShowCode && canContinue;
+  var displayShowCode = BlocklyApps.enableShowCode && canContinue && !showingSharing;
   var feedback = document.createElement('div');
   var sharingDiv = (canContinue && showingSharing) ? exports.createSharingDiv(options) : null;
   var showCode = displayShowCode ? getShowCodeElement(options) : null;
@@ -2360,6 +2389,18 @@ exports.displayFeedback = function(options) {
              function() { $('#save-to-gallery-button').prop('disabled', true).text("Saved!"); });
     });
   }
+
+  function createHiddenPrintWindow(src) {
+    var iframe = $('<iframe id="print_frame" style="display: none"></iframe>'); // Created a hidden iframe with just the desired image as its contents
+    iframe.appendTo("body");
+    iframe[0].contentWindow.document.write("<img src='" + src + "'/>");
+    iframe[0].contentWindow.document.write("<script>if (document.execCommand('print', false, null)) {  } else { window.print();  } </script>");
+    $("#print_frame").remove(); // Remove the iframe when the print dialogue has been launched
+  }
+
+  $("#print-button").click(function() {
+    createHiddenPrintWindow(options.feedbackImage);
+  });
 
   feedbackDialog.show({
     backdrop: (options.app === 'flappy' ? 'static' : true)
@@ -2994,8 +3035,8 @@ exports.hasExtraTopBlocks = function () {
     if (topBlocks[i].disabled) {
       continue;
     }
-    // Ignore hidden blocks such as functional definitions.
-    if (!topBlocks[i].isUserVisible()) {
+    // Ignore top blocks which are functional definitions.
+    if (topBlocks[i].type === 'functional_definition') {
       continue;
     }
     // None of our top level blocks should have a previous connection.
@@ -8805,7 +8846,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/nl_nl/common'); ; buf.push('\n\n');3; if (data.ok) {; buf.push('  <div class="farSide" style="padding: 1ex 3ex 0">\n    <button id="ok-button" class="secondary">\n      ', escape((5,  msg.dialogOK() )), '\n    </button>\n  </div>\n');8; }; buf.push('\n');9; if (data.previousLevel) {; buf.push('  <button id="back-button" class="launch">\n    ', escape((10,  msg.backToPreviousLevel() )), '\n  </button>\n');12; }; buf.push('\n');13; if (data.tryAgain) {; buf.push('  ');13; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="again-button" class="launch arrow-container arrow-left">\n      <div class="arrow-head"><img src="', escape((14,  data.assetUrl('media/tryagain-arrow-head.png') )), '" alt="Arrowhead" width="67" height="130"/></div>\n      <div class="arrow-text">', escape((15,  msg.tryAgain() )), '</div>\n    </div>\n  ');17; } else {; buf.push('    ');17; if (data.hintRequestExperiment === "left") {; buf.push('      <button id="hint-request-button" class="launch">\n        ', escape((18,  msg.hintRequest() )), '\n      </button>\n      <button id="again-button" class="launch">\n        ', escape((21,  msg.tryAgain() )), '\n      </button>\n    ');23; } else if (data.hintRequestExperiment == "right") {; buf.push('      <button id="again-button" class="launch">\n        ', escape((24,  msg.tryAgain() )), '\n      </button>\n      <button id="hint-request-button" class="launch">\n        ', escape((27,  msg.hintRequest() )), '\n      </button>\n    ');29; } else {; buf.push('      <button id="again-button" class="launch">\n        ', escape((30,  msg.tryAgain() )), '\n      </button>\n    ');32; }; buf.push('  ');32; }; buf.push('');32; }; buf.push('\n');33; if (data.nextLevel) {; buf.push('  ');33; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="continue-button" class="launch arrow-container arrow-right">\n      <div class="arrow-head"><img src="', escape((34,  data.assetUrl('media/next-arrow-head.png') )), '" alt="Arrowhead" width="66" height="130"/></div>\n      <div class="arrow-text">', escape((35,  msg.continue() )), '</div>\n    </div>\n  ');37; } else {; buf.push('    <button id="continue-button" class="launch">\n      ', escape((38,  msg.continue() )), '\n    </button>\n  ');40; }; buf.push('');40; }; buf.push(''); })();
+ buf.push('');1; var msg = require('../../locale/nl_nl/common'); ; buf.push('\n\n');3; if (data.ok) {; buf.push('  <div class="farSide" style="padding: 1ex 3ex 0">\n    <button id="ok-button" class="secondary">\n      ', escape((5,  msg.dialogOK() )), '\n    </button>\n  </div>\n');8; }; buf.push('\n');9; if (data.previousLevel) {; buf.push('  <button id="back-button" class="launch">\n    ', escape((10,  msg.backToPreviousLevel() )), '\n  </button>\n');12; }; buf.push('\n');13; if (data.tryAgain) {; buf.push('  ');13; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="again-button" class="launch arrow-container arrow-left">\n      <div class="arrow-head"><img src="', escape((14,  data.assetUrl('media/tryagain-arrow-head.png') )), '" alt="Arrowhead" width="67" height="130"/></div>\n      <div class="arrow-text">', escape((15,  msg.tryAgain() )), '</div>\n    </div>\n  ');17; } else {; buf.push('    ');17; if (data.hintRequestExperiment === "left") {; buf.push('      <button id="hint-request-button" class="launch">\n        ', escape((18,  msg.hintRequest() )), '\n      </button>\n      <button id="again-button" class="launch">\n        ', escape((21,  msg.tryAgain() )), '\n      </button>\n    ');23; } else if (data.hintRequestExperiment == "right") {; buf.push('      <button id="again-button" class="launch">\n        ', escape((24,  msg.tryAgain() )), '\n      </button>\n      <button id="hint-request-button" class="launch">\n        ', escape((27,  msg.hintRequest() )), '\n      </button>\n    ');29; } else {; buf.push('      <button id="again-button" class="launch">\n        ', escape((30,  msg.continueWorking() )), '\n      </button>\n    ');32; }; buf.push('  ');32; }; buf.push('');32; }; buf.push('\n');33; if (data.nextLevel) {; buf.push('  ');33; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="continue-button" class="launch arrow-container arrow-right">\n      <div class="arrow-head"><img src="', escape((34,  data.assetUrl('media/next-arrow-head.png') )), '" alt="Arrowhead" width="66" height="130"/></div>\n      <div class="arrow-text">', escape((35,  msg.continue() )), '</div>\n    </div>\n  ');37; } else {; buf.push('    <button id="continue-button" class="launch" style="float: right">\n      ', escape((38,  msg.nextPuzzle() )), '\n    </button>\n  ');40; }; buf.push('');40; }; buf.push(''); })();
 } 
 return buf.join('');
 };
@@ -8980,7 +9021,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/nl_nl/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n');9; if (options.alreadySaved) { ; buf.push('\n  <div class="saved-to-gallery">\n    ', escape((11,  msg.savedToGallery() )), '\n  </div>\n');13; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <div class="social-buttons">\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((16,  msg.saveToGallery() )), '\n  </button>\n  </div>\n');19; } ; buf.push('\n\n');21; if (options.response && options.response.level_source) { ; buf.push('\n  ');22; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((23,  options.appStrings.sharingText )), '</div>\n  ');24; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((27,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');31; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((31,  options.facebookUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((32,  BlocklyApps.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');34; }; buf.push('\n    ');35; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((35,  options.twitterUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((36,  BlocklyApps.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');38; }; buf.push('    ');38; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((39,  BlocklyApps.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');41; }; buf.push('  </div>\n');42; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n'); })();
+ buf.push('');1; var msg = require('../../locale/nl_nl/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n');9; if (options.alreadySaved) { ; buf.push('\n  <div class="saved-to-gallery">\n    ', escape((11,  msg.savedToGallery() )), '\n  </div>\n');13; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <div class="social-buttons">\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((16,  msg.saveToGallery() )), '\n  </button>\n  <button id="print-button">\n    ', escape((19,  msg.print() )), '\n  </button>\n  </div>\n');22; } ; buf.push('\n\n');24; if (options.response && options.response.level_source) { ; buf.push('\n  ');25; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((26,  options.appStrings.sharingText )), '</div>\n  ');27; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((30,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');34; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((34,  options.facebookUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((35,  BlocklyApps.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');37; }; buf.push('\n    ');38; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((38,  options.twitterUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((39,  BlocklyApps.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');41; }; buf.push('    ');41; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((42,  BlocklyApps.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');44; }; buf.push('  </div>\n');45; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -9572,7 +9613,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/nl_nl/common') ; buf.push('\n');2; var webappMsg = require('../../locale/nl_nl/webapp') ; buf.push('\n\n');4; if (debugButtons) { ; buf.push('\n<div>\n');6; } ; buf.push('\n\n');8; if (debugButtons) { ; buf.push('\n<div id="debug-buttons" style="display:inline;">\n    <button id="pauseButton" class="share">\n      <img src="', escape((11,  assetUrl('media/1x1.gif') )), '">', escape((11,  webappMsg.pause() )), '\n    </button>\n  </div>\n');14; } ; buf.push('\n\n');16; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((19,  assetUrl('media/1x1.gif') )), '">', escape((19,  msg.finish() )), '\n    </button>\n  </div>\n');22; } ; buf.push('\n\n');24; if (debugButtons) { ; buf.push('\n</div>\n');26; } ; buf.push('\n'); })();
+ buf.push('');1; var msg = require('../../locale/nl_nl/common') ; buf.push('\n');2; var webappMsg = require('../../locale/nl_nl/webapp') ; buf.push('\n\n');4; if (debugButtons) { ; buf.push('\n<div>\n');6; } ; buf.push('\n\n');8; if (debugButtons) { ; buf.push('\n<div id="debug-buttons" style="display:inline;">\n    <button id="pauseButton" class="share">\n      ', escape((11,  webappMsg.pause() )), '\n    </button>\n    <button id="stepInButton" class="share">\n      ', escape((14,  webappMsg.stepIn() )), '\n    </button>\n    <button id="stepOverButton" class="share">\n      ', escape((17,  webappMsg.stepOver() )), '\n    </button>\n    <button id="stepOutButton" class="share">\n      ', escape((20,  webappMsg.stepOut() )), '\n    </button>\n  </div>\n');23; } ; buf.push('\n\n');25; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((28,  assetUrl('media/1x1.gif') )), '">', escape((28,  msg.finish() )), '\n    </button>\n  </div>\n');31; } ; buf.push('\n\n');33; if (debugButtons) { ; buf.push('\n</div>\n');35; } ; buf.push('\n'); })();
 } 
 return buf.join('');
 };
@@ -9812,7 +9853,7 @@ BlocklyApps.CHECK_FOR_EMPTY_BLOCKS = true;
 //The number of blocks to show as feedback.
 BlocklyApps.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 
-var MAX_INTERPRETER_STEPS_PER_TICK = 50;
+var MAX_INTERPRETER_STEPS_PER_TICK = 200;
 
 // Default Scalings
 Webapp.scale = {
@@ -9823,6 +9864,13 @@ Webapp.scale = {
 var twitterOptions = {
   text: webappMsg.shareWebappTwitter(),
   hashtag: "WebappCode"
+};
+
+var StepType = {
+  RUN:  0,
+  IN:   1,
+  OVER: 2,
+  OUT:  3,
 };
 
 function loadLevel() {
@@ -9863,35 +9911,125 @@ Webapp.onTick = function() {
   Webapp.tickCount++;
   queueOnTick();
 
-  // Bail out here if paused (but make sure that we still have the next tick
-  // queued first, so we can resume after un-pausing):
+  var stepInToStart = Webapp.paused && Webapp.nextStep === StepType.IN && Webapp.tickCount === 1;
+
   if (Webapp.paused) {
-    return;
+    switch (Webapp.nextStep) {
+      case StepType.RUN:
+        // Bail out here if in a break state (paused), but make sure that we still
+        // have the next tick queued first, so we can resume after un-pausing):
+        return;
+      case StepType.OUT:
+        // If we haven't yet set stepOutToStackDepth, work backwards through the
+        // history of callExpressionSeenAtDepth until we find the one we want to
+        // step out to - and store that in stepOutToStackDepth:
+        if (Webapp.interpreter && typeof Webapp.stepOutToStackDepth === 'undefined') {
+          Webapp.stepOutToStackDepth = 0;
+          for (var i = Webapp.interpreter.stateStack.length - 1; i > 0; i--) {
+            if (Webapp.callExpressionSeenAtDepth[i]) {
+              Webapp.stepOutToStackDepth = i;
+              break;
+            }
+          }
+        }
+        break;
+    }
   }
 
   if (Webapp.interpreter) {
     var doneUserCodeStep = false;
+    var unwindingAfterStep = false;
+
     // In each tick, we will step the interpreter multiple times in a tight
     // loop as long as we are interpreting code that the user can't see
     // (function aliases at the beginning, getCallback event loop at the end)
     for (var stepsThisTick = 0;
-         stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK && !doneUserCodeStep;
+         stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK &&
+          (!doneUserCodeStep || unwindingAfterStep);
          stepsThisTick++) {
       var inUserCode = codegen.selectCurrentCode(Webapp.interpreter,
                                                  BlocklyApps.editor,
                                                  Webapp.cumulativeLength,
                                                  Webapp.userCodeStartOffset,
                                                  Webapp.userCodeLength);
+      if (inUserCode && stepInToStart) {
+        // Special case code when stepping in to start the program (break before 1st statement)
+        doneUserCodeStep = true;
+        unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(Webapp.interpreter);
+        continue;
+      }
       try {
         Webapp.interpreter.step();
-        doneUserCodeStep = inUserCode &&
-                            Webapp.interpreter.stateStack[0] &&
-                            Webapp.interpreter.stateStack[0].done;
+        doneUserCodeStep = doneUserCodeStep ||
+          (inUserCode && Webapp.interpreter.stateStack[0] && Webapp.interpreter.stateStack[0].done);
+
+        // Remember the stack depths of call expressions (so we can implement 'step out')
+
+        // Truncate any history of call expressions seen deeper than our current stack position:
+        Webapp.callExpressionSeenAtDepth.length = Webapp.interpreter.stateStack.length + 1;
+
+        if (inUserCode && Webapp.interpreter.stateStack[0].node.type === "CallExpression") {
+          // Store that we've seen a call expression at this depth in callExpressionSeenAtDepth:
+          Webapp.callExpressionSeenAtDepth[Webapp.interpreter.stateStack.length] = true;
+        }
+
+        if (Webapp.paused) {
+          // Store the first call expression stack depth seen while in this step operation:
+          if (inUserCode && Webapp.interpreter.stateStack[0].node.type === "CallExpression") {
+            if (typeof Webapp.firstCallStackDepthThisStep === 'undefined') {
+              Webapp.firstCallStackDepthThisStep = Webapp.interpreter.stateStack.length;
+            }
+          }
+          // For the step in case, we want to stop the interpreter as soon as we enter the callee:
+          if (!doneUserCodeStep &&
+              inUserCode &&
+              Webapp.nextStep === StepType.IN &&
+              Webapp.interpreter.stateStack.length > Webapp.firstCallStackDepthThisStep) {
+            doneUserCodeStep = true;
+          }
+          // After the interpreter says a node is "done" (meaning it is time to stop), we will
+          // advance a little further to the start of the next statement. We achieve this by
+          // continuing to set unwindingAfterStep to true to keep the loop going:
+          if (doneUserCodeStep) {
+            var wasUnwinding = unwindingAfterStep;
+            // step() additional times if we know it to be safe to get us to the next statement:
+            unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(Webapp.interpreter);
+            if (wasUnwinding && !unwindingAfterStep) {
+              // done unwinding.. select code that is next to execute:
+              inUserCode = codegen.selectCurrentCode(Webapp.interpreter,
+                                                     BlocklyApps.editor,
+                                                     Webapp.cumulativeLength,
+                                                     Webapp.userCodeStartOffset,
+                                                     Webapp.userCodeLength);
+              if (!inUserCode) {
+                // not in user code, so keep unwinding after all...
+                unwindingAfterStep = true;
+              }
+            }
+          }
+        }
       }
       catch(err) {
         Webapp.executionError = err;
         Webapp.onPuzzleComplete();
         return;
+      }
+    }
+    if (Webapp.paused) {
+      if (Webapp.nextStep === StepType.OUT &&
+          Webapp.interpreter.stateStack.length > Webapp.stepOutToStackDepth) {
+        // trying to step out, but we didn't get out yet... continue next onTick
+      } else if (Webapp.nextStep === StepType.OVER &&
+          typeof Webapp.firstCallStackDepthThisStep !== 'undefined' &&
+          Webapp.interpreter.stateStack.length > Webapp.firstCallStackDepthThisStep) {
+        // trying to step over, and we're in deeper inside a function call... continue next onTick
+      } else {
+        // Our step operation is complete, reset nextStep to StepType.RUN to
+        // return to a normal 'break' state:
+        Webapp.nextStep = StepType.RUN;
+        delete Webapp.stepOutToStackDepth;
+        delete Webapp.firstCallStackDepthThisStep;
+        document.getElementById('spinner').style.visibility = 'hidden';
       }
     }
   } else {
@@ -10010,8 +10148,14 @@ Webapp.init = function(config) {
 
   if (level.editCode) {
     var pauseButton = document.getElementById('pauseButton');
-    if (pauseButton) {
+    var stepInButton = document.getElementById('stepInButton');
+    var stepOverButton = document.getElementById('stepOverButton');
+    var stepOutButton = document.getElementById('stepOutButton');
+    if (pauseButton && stepInButton && stepOverButton && stepOutButton) {
       dom.addClickTouchEvent(pauseButton, Webapp.onPauseButton);
+      dom.addClickTouchEvent(stepInButton, Webapp.onStepInButton);
+      dom.addClickTouchEvent(stepOverButton, Webapp.onStepOverButton);
+      dom.addClickTouchEvent(stepOutButton, Webapp.onStepOutButton);
     }
   }
 };
@@ -10023,7 +10167,11 @@ Webapp.clearEventHandlersKillTickLoop = function() {
   Webapp.whenRunFunc = null;
   Webapp.running = false;
   Webapp.tickCount = 0;
-  Webapp.running = false;
+
+  var spinner = document.getElementById('spinner');
+  if (spinner) {
+    spinner.style.visibility = 'hidden';
+  }
 };
 
 /**
@@ -10063,11 +10211,21 @@ BlocklyApps.reset = function(first) {
 
   if (level.editCode) {
     Webapp.paused = false;
+    Webapp.nextStep = StepType.RUN;
+    delete Webapp.stepOutToStackDepth;
+    delete Webapp.firstCallStackDepthThisStep;
+    Webapp.callExpressionSeenAtDepth = [];
     // Reset the pause button:
     var pauseButton = document.getElementById('pauseButton');
-    if (pauseButton) {
+    var stepInButton = document.getElementById('stepInButton');
+    var stepOverButton = document.getElementById('stepOverButton');
+    var stepOutButton = document.getElementById('stepOutButton');
+    if (pauseButton && stepInButton && stepOverButton && stepOutButton) {
       pauseButton.textContent = webappMsg.pause();
       pauseButton.disabled = true;
+      stepInButton.disabled = false;
+      stepOverButton.disabled = true;
+      stepOutButton.disabled = true;
     }
     var spinner = document.getElementById('spinner');
     if (spinner) {
@@ -10241,8 +10399,14 @@ Webapp.execute = function() {
 
   if (level.editCode) {
     var pauseButton = document.getElementById('pauseButton');
-    if (pauseButton) {
+    var stepInButton = document.getElementById('stepInButton');
+    var stepOverButton = document.getElementById('stepOverButton');
+    var stepOutButton = document.getElementById('stepOutButton');
+    if (pauseButton && stepInButton && stepOverButton && stepOutButton) {
       pauseButton.disabled = false;
+      stepInButton.disabled = true;
+      stepOverButton.disabled = true;
+      stepOutButton.disabled = true;
     }
     var spinner = document.getElementById('spinner');
     if (spinner) {
@@ -10257,16 +10421,50 @@ Webapp.execute = function() {
 Webapp.onPauseButton = function() {
   if (Webapp.running) {
     var pauseButton = document.getElementById('pauseButton');
+    var stepInButton = document.getElementById('stepInButton');
+    var stepOverButton = document.getElementById('stepOverButton');
+    var stepOutButton = document.getElementById('stepOutButton');
     // We have code and are either running or paused
     if (Webapp.paused) {
       Webapp.paused = false;
+      Webapp.nextStep = StepType.RUN;
       pauseButton.textContent = webappMsg.pause();
     } else {
       Webapp.paused = true;
+      Webapp.nextStep = StepType.RUN;
       pauseButton.textContent = webappMsg.continue();
     }
+    stepInButton.disabled = !Webapp.paused;
+    stepOverButton.disabled = !Webapp.paused;
+    stepOutButton.disabled = !Webapp.paused;
     document.getElementById('spinner').style.visibility =
         Webapp.paused ? 'hidden' : 'visible';
+  }
+};
+
+Webapp.onStepOverButton = function() {
+  if (Webapp.running) {
+    Webapp.paused = true;
+    Webapp.nextStep = StepType.OVER;
+    document.getElementById('spinner').style.visibility = 'visible';
+  }
+};
+
+Webapp.onStepInButton = function() {
+  if (!Webapp.running) {
+    BlocklyApps.runButtonClick();
+    Webapp.onPauseButton();
+  }
+  Webapp.paused = true;
+  Webapp.nextStep = StepType.IN;
+  document.getElementById('spinner').style.visibility = 'visible';
+};
+
+Webapp.onStepOutButton = function() {
+  if (Webapp.running) {
+    Webapp.paused = true;
+    Webapp.nextStep = StepType.OUT;
+    document.getElementById('spinner').style.visibility = 'visible';
   }
 };
 
@@ -10667,6 +10865,8 @@ exports.codeTooltip = function(d){return "Zie gegenereerde JavaScript-code."};
 
 exports.continue = function(d){return "Verder"};
 
+exports.continueWorking = function(d){return "Continue working"};
+
 exports.dialogCancel = function(d){return "Annuleren"};
 
 exports.dialogOK = function(d){return "OK"};
@@ -10715,6 +10915,8 @@ exports.nextLevel = function(d){return "Gefeliciteerd! U voltooide puzzel "+v(d,
 
 exports.nextLevelTrophies = function(d){return "Gefeliciteerd! U loste puzzel "+v(d,"puzzleNumber")+" op en won "+p(d,"numTrophies",0,"nl",{"one":"een trofee","other":n(d,"numTrophies")+" trofeeën"})+"."};
 
+exports.nextPuzzle = function(d){return "Next puzzle"};
+
 exports.nextStage = function(d){return "Gefeliciteerd! Je hebt "+v(d,"stageName")+" af."};
 
 exports.nextStageTrophies = function(d){return "Gefeliciteerd! Je hebt "+v(d,"stageName")+" af en je hebt "+p(d,"numTrophies",0,"nl",{"one":"een medaille","other":n(d,"numTrophies")+" medailles"})+" gewonnen."};
@@ -10724,6 +10926,8 @@ exports.numBlocksNeeded = function(d){return "Gefeliciteerd! U voltooide puzzel 
 exports.numLinesOfCodeWritten = function(d){return "Je schreef zojuist "+p(d,"numLines",0,"nl",{"one":"1 regel","other":n(d,"numLines")+" regels"})+" code!"};
 
 exports.play = function(d){return "spelen"};
+
+exports.print = function(d){return "Print"};
 
 exports.puzzleTitle = function(d){return "Puzzel "+v(d,"puzzle_number")+" van "+v(d,"stage_total")};
 
@@ -10851,6 +11055,12 @@ exports.repeatForeverTooltip = function(d){return "Herhaal de acties in dit blok
 exports.shareWebappTwitter = function(d){return "Bekijk de app die ik heb gemaakt. Ik heb het zelf geschreven met @codeorg"};
 
 exports.shareGame = function(d){return "Deel je app:"};
+
+exports.stepIn = function(d){return "Step in"};
+
+exports.stepOver = function(d){return "Step over"};
+
+exports.stepOut = function(d){return "Step out"};
 
 exports.turnBlack = function(d){return "verdonker blok"};
 

@@ -640,10 +640,22 @@ input[type="radio"] {
 #save-to-gallery-button {
   background-color: #7665a0;
   border: 1px solid #7665a0;
-  color: white; }
+  color: white;
+  width: 46%;
+  font-size: 15px;
+  text-align: center; }
   #save-to-gallery-button:disabled {
     color: #7665a0;
     background-color: lightgrey; }
+
+#print-button {
+  background-color: #7665a0;
+  border: 1px solid #7665a0;
+  color: white;
+  margin-right: 0px;
+  width: 46%;
+  font-size: 15px;
+  text-align: center; }
 
 .modal-image {
   width: 100px;
