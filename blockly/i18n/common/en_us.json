@@ -38,7 +38,7 @@
   "listVariable": "list",
   "makeYourOwnFlappy": "Make Your Own Flappy Game",
   "missingBlocksErrorMsg": "Try one or more of the blocks below to solve this puzzle.",
-  "nextLevel": "Congratulations! You completed Puzzle {puzzleNumber}build.",
+  "nextLevel": "Congratulations! You completed Puzzle {puzzleNumber}.",
   "nextLevelTrophies": "Congratulations! You completed Puzzle {puzzleNumber} and won {numTrophies, plural, one {a trophy} other {# trophies}}.",
   "nextPuzzle": "Next puzzle",
   "nextStage": "Congratulations! You completed {stageName}.",
