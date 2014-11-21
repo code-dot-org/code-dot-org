@@ -25,7 +25,6 @@
 
 var BlocklyApps = require('../base');
 var commonMsg = require('../../locale/current/common');
-var skins = require('../skins');
 var tiles = require('./tiles');
 var codegen = require('../codegen');
 var api = require('./api');
