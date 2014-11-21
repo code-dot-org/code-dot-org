@@ -1,6 +1,5 @@
 {
   "and": "and",
-  "backToDrawing": "Back to drawing",
   "booleanTrue": "true",
   "booleanFalse": "false",
   "blocklyMessage": "Blockly",
@@ -16,6 +15,7 @@
   "catVariables": "Variables",
   "codeTooltip": "See generated JavaScript code.",
   "continue": "Continue",
+  "continueWorking": "Continue working",
   "dialogCancel": "Cancel",
   "dialogOK": "OK",
   "directionNorthLetter": "N",
