@@ -29,7 +29,9 @@
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "true",
     "free_play": "false",
-    "open_function_definition": "safe-left?"
+    "open_function_definition": "safe-left?",
+    "embed": "false",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
@@ -37,17 +39,31 @@
       <xml>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
+            <outputtype>Number</outputtype>
+          </mutation>
+          <title name="NAME">get-x</title>
+        </block>
+        <block type="functional_start_dummyOnMove" inline="false">
+          <functional_input name="VAL">
+            <block type="functional_call" inline="false">
+              <mutation name="safe-left?">
+                <arg name="x" type="Number"/>
+              </mutation>
+              <functional_input name="ARG0">
+                <block type="functional_call" editable="false">
+                  <mutation name="get-x"/>
+                </block>
+              </functional_input>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_definition" inline="false" uservisible="false">
+          <mutation>
             <arg name="x" type="Number"/>
             <description>Return true if x is greater than 0.</description>
             <outputtype>boolean</outputtype>
           </mutation>
           <title name="NAME">safe-left?</title>
-        </block>
-        <block type="functional_setBackground" inline="false"/>
-        <block type="functional_call" inline="false">
-          <mutation name="safe-left?">
-            <arg name="x" type="Number"/>
-          </mutation>
         </block>
         <block type="when_run" uservisible="false">
           <next>
