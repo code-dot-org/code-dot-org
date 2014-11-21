@@ -28,7 +28,7 @@ exports.displayFeedback = function(options) {
   var showingSharing = options.showingSharing && !hadShareFailure;
 
   var canContinue = exports.canContinueToNextLevel(options.feedbackType);
-  var displayShowCode = BlocklyApps.enableShowCode && canContinue;
+  var displayShowCode = BlocklyApps.enableShowCode && canContinue && !showingSharing;
   var feedback = document.createElement('div');
   var sharingDiv = (canContinue && showingSharing) ? exports.createSharingDiv(options) : null;
   var showCode = displayShowCode ? getShowCodeElement(options) : null;
@@ -198,6 +198,18 @@ exports.displayFeedback = function(options) {
              function() { $('#save-to-gallery-button').prop('disabled', true).text("Saved!"); });
     });
   }
+
+  function createHiddenPrintWindow(src) {
+    var iframe = $('<iframe id="print_frame" style="display: none"></iframe>'); // Created a hidden iframe with just the desired image as its contents
+    iframe.appendTo("body");
+    iframe[0].contentWindow.document.write("<img src='" + src + "'/>");
+    iframe[0].contentWindow.document.write("<script>if (document.execCommand('print', false, null)) {  } else { window.print();  } </script>");
+    $("#print_frame").remove(); // Remove the iframe when the print dialogue has been launched
+  }
+
+  $("#print-button").click(function() {
+    createHiddenPrintWindow(options.feedbackImage);
+  });
 
   feedbackDialog.show({
     backdrop: (options.app === 'flappy' ? 'static' : true)
