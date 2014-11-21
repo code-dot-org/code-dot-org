@@ -17,67 +17,27 @@
     "y": "250",
     "free_play": "true",
     "impressive": "false",
-    "ideal": "16",
+    "ideal": "18",
     "slider_speed": ".5",
-    "use_contract_editor": "false"
+    "use_contract_editor": "false",
+    "embed": "false",
+    "callout_json": "[{\r\n  \"localization_key\": \"create_function\",\r\n  \"element_id\": \".blocklyTreeRow:eq(2)\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"left center\", \"at\": \"right center\"}\r\n  }\r\n}]"
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
+        <block type="when_run" movable="false" deletable="false">
           <next>
-            <block type="procedures_callnoreturn" inline="false">
-              <mutation name="draw a square">
-                <arg name="length"/>
-              </mutation>
-              <next>
-                <block type="jump" inline="true">
-                  <title name="DIR">jumpForward</title>
-                  <value name="VALUE">
-                    <block type="math_number_dropdown">
-                      <title name="NUM" config="25,50,75,100">100</title>
-                    </block>
-                  </value>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
-        <block type="procedures_defnoreturn" uservisible="false">
-          <mutation>
-            <arg name="length"/>
-          </mutation>
-          <title name="NAME">draw a square</title>
-          <statement name="STACK">
-            <block type="controls_repeat_ext" inline="true" uservisible="false">
-              <value name="TIMES">
-                <block type="math_number" uservisible="false">
-                  <title name="NUM">3</title>
+            <block type="jump" inline="true">
+              <title name="DIR">jumpForward</title>
+              <value name="VALUE">
+                <block type="math_number_dropdown">
+                  <title name="NUM" config="25,50,75,100">100</title>
                 </block>
               </value>
-              <statement name="DO">
-                <block type="draw_move" inline="true" uservisible="false">
-                  <title name="DIR">moveForward</title>
-                  <value name="VALUE">
-                    <block type="math_number" uservisible="false">
-                      <title name="NUM">???</title>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="draw_turn" inline="true" uservisible="false">
-                      <title name="DIR">turnLeft</title>
-                      <value name="VALUE">
-                        <block type="math_number" uservisible="false">
-                          <title name="NUM">90</title>
-                        </block>
-                      </value>
-                    </block>
-                  </next>
-                </block>
-              </statement>
             </block>
-          </statement>
+          </next>
         </block>
       </xml>
     </start_blocks>

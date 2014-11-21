@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Hmmm, I tried changing the variable \"sides\" to 4, but it's still drawing a triangle. Can you use the \"sides\" variable to make sure that I turn the right amount? Seems like I also need to use a math block to change my angle to turn as well. Hint: 360 divided by the number of sides will give you the number of sides to turn.",
+    "instructions": "Hmmm, I tried changing the variable \"sides\" to 4 from the code in the last puzzle, but it's still drawing a triangle. Can you use the \"sides\" variable (along with a math block) to make sure that I turn the right amount too? Hint: 360 divided by the number of sides will give you the number of degrees to turn.",
     "x": "125",
     "y": "275",
     "start_direction": "90",
@@ -19,7 +19,9 @@
     "disable_variable_editing": "true",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "impressive": "false"
+    "impressive": "false",
+    "embed": "false",
+    "callout_json": "[{\r\n  \"localization_key\": \"degrees_per_side\",\r\n  \"element_id\": \"[block-id='29']\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"top center\", \"at\": \"bottom center\"}\r\n  }\r\n}]"
   }
 }]]></config>
   <blocks>

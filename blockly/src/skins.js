@@ -61,15 +61,12 @@ exports.load = function(assetUrl, id) {
     squigglyLine: assetUrl('media/common_images/squiggly.png'),
     swirlyLine: assetUrl('media/common_images/swirlyline.png'),
     randomPurpleIcon: assetUrl('media/common_images/random-purple.png'),
-    annaLine: assetUrl('media/common_images/annaline.png'),
-    elsaLine: assetUrl('media/common_images/elsaline.png'),
-    annaLine_2x: assetUrl('media/common_images/annaline_2x.png'),
-    elsaLine_2x: assetUrl('media/common_images/elsaline_2x.png'),
 
     // Sounds
     startSound: [skinUrl('start.mp3'), skinUrl('start.ogg')],
     winSound: [skinUrl('win.mp3'), skinUrl('win.ogg')],
     failureSound: [skinUrl('failure.mp3'), skinUrl('failure.ogg')]
   };
+
   return skin;
 };

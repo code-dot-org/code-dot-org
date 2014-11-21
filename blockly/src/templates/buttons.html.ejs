@@ -37,7 +37,7 @@
       </button>
     <% } else { -%>
       <button id="again-button" class="launch">
-        <%= msg.tryAgain() %>
+        <%= msg.continueWorking() %>
       </button>
     <% } -%>
   <% } -%>
@@ -50,8 +50,8 @@
       <div class="arrow-text"><%= msg.continue() %></div>
     </div>
   <% } else { -%>
-    <button id="continue-button" class="launch">
-      <%= msg.continue() %>
+    <button id="continue-button" class="launch" style="float: right">
+      <%= msg.nextPuzzle() %>
     </button>
   <% } -%>
 <% } -%>

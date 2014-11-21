@@ -5,11 +5,13 @@ This .md file should only contain information which is specific to Code.org engi
 # How to update level builder
 * `ssh levelbuilder.code.org`
 * `cd levelbuilder`
+* `git branch -d levelbuilder`
 * `git checkout -b levelbuilder`
 * `git add .`
 * `git commit -m "level builder changes"`
 * `git push origin levelbuilder`
-* `# handle the merge via git hub UI`
+* handle the merge via GitHub UI ([create PR shortcut](https://github.com/code-dot-org/code-dot-org/compare/levelbuilder?expand=1))
+* (if necessary, alert anyone actively working on a level to save their work)
 * `git checkout staging`
 * `git pull`
 * `rake build:dashboard`

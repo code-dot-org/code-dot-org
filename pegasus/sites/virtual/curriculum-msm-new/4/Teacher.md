@@ -27,11 +27,11 @@ Contracts provide a way for students to better understand and discuss functions.
 3) [Dissecting a Demo](#Activity1)  
 4) [Coordinate Planes](#Activity2)  
 
-### **Wrap-up** - 10  minutes 
+### **Wrap-up**
 5) [Flash Chat](#WrapUp) - What did we learn?  
 
-### **Assessment** - 5  minutes 
-6) [Computational Thinking Assessment](#Assessment)
+### **Assessment**
+6) [Contract Writing](#Assessment)
 
 [/summary]
 
@@ -48,13 +48,13 @@ Contracts provide a way for students to better understand and discuss functions.
 
 ## Materials, Resources and Prep
 ### For the Student
-- Contract Sheet
+- Contract Log
 
 [/together]
 
 [together]
 
-## Getting Started (15 min)
+## Getting Started
 
 
 ### <a name="Vocab"></a> 1) Vocabulary
@@ -87,7 +87,7 @@ When programmers write down the Domains and Ranges of each function, they write 
 ## Activities: (25 min)
 ### <a name="Activity1"></a> 3) Dissecting a Demo
 
-Let's see if we can come up with contracts for some of the functions you've already seen. You'll want to make sure that you've got your [contracts sheet](needacontractsheet.pdf), as this is where you'll keep a running document of all contracts you write - both for existing functions and ones of your own creation.
+Let's see if we can come up with contracts for some of the functions you've already seen. You'll want to make sure that you've got your [contracts log](needacontractlog.pdf), as this is where you'll keep a running document of all contracts you write - both for existing functions and ones of your own creation.
 
 The contract for star is:  
 
@@ -132,18 +132,18 @@ See if you can figure out how to use these new functions to draw other shapes! H
 
 [together]
 
-## Wrap-up (5 min)
+## Wrap-up
 ### <a name="WrapUp"></a> 5) Brainstorming for a Game
 
-This lesson expanded Circles of Evaluations, expressions, and code to include Strings and Images (as well as Numbers). You learned that everything you knew about functions on Numbers also works on Strings and Images (which will make your programs more interesting). You also learned how to use the Image functions to create your own images, and how to use existing Images in your programs (through bitmap/url).
+This lesson expanded Evaluation Blocks, expressions, and code to include Strings and Images (as well as Numbers). You learned that everything you knew about functions on Numbers also works on Strings and Images (which will make your programs more interesting). You also learned how to use the Image functions to create your own images, and how to use existing Images in your programs (through bitmap/url).
 In the next unit, you’ll learn how to create your own functions to save work in writing expressions (this will turn out to be an essential part of writing a game). You’ll also start customizing your game with images for the elements in your game design.
 
 [/together]
 
 [together]
 
-## Assessment (5 min)
-### <a name="Assessment"></a>6) Videogames and Coordinate Planes Assessment
+## Assessment
+### <a name="Assessment"></a>6) Contract Writing Assessment
 
 Visit [MSM Stage 1](http://studio.code.org/s/msm/stage/1/puzzle/1) in Code Studio to complete the assessments.
 

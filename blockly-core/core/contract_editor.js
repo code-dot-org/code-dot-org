@@ -53,17 +53,21 @@ Blockly.ContractEditor.prototype.createContractDom_ = function() {
   }
   this.contractDiv_.innerHTML =
       '<div>' + Blockly.Msg.FUNCTIONAL_NAME_LABEL + '</div>'
-      + '<div><input id="functionNameText" type="text"></div>'
-      + '<div>' + Blockly.Msg.FUNCTIONAL_DESCRIPTION_LABEL + '</div>'
-      + '<div><textarea id="functionDescriptionText" rows="2"></textarea></div>'
-      + '<div>' + Blockly.Msg.FUNCTIONAL_RANGE_LABEL + '</div>'
-      + '<span id="outputTypeDropdown"></span>'
-      + '<div>' + Blockly.Msg.FUNCTIONAL_DOMAIN_LABEL + '</div>'
-      + '<div><input id="paramAddText" type="text" style="width: 200px;" '
-      + 'placeholder="' + Blockly.Msg.FUNCTIONAL_NAME_LABEL + '"> '
-      + '<span id="paramTypeDropdown"></span>'
-      + '<button id="paramAddButton" class="btn">' + Blockly.Msg.ADD
-      + '</button>'
+        + '<div><input id="functionNameText" type="text"></div>'
+        + '<div id="description-area" style="margin: 0px;">'
+          + '<div>' + Blockly.Msg.FUNCTIONAL_DESCRIPTION_LABEL + '</div>'
+          + '<div><textarea id="functionDescriptionText" rows="2"></textarea></div>'
+        + '</div>'
+        + '<div id="outputTypeTitle">' + Blockly.Msg.FUNCTIONAL_RANGE_LABEL + '</div>'
+        + '<span id="outputTypeDropdown"></span>'
+        + '<div id="domain-area" style="margin: 0px;">'
+          + '<div>' + Blockly.Msg.FUNCTIONAL_DOMAIN_LABEL + '</div>'
+          + '<div><input id="paramAddText" type="text" style="width: 200px;" '
+          + 'placeholder="' + Blockly.Msg.FUNCTIONAL_NAME_LABEL + '"> '
+          + '<span id="paramTypeDropdown"></span>'
+          + '<button id="paramAddButton" class="btn">' + Blockly.Msg.ADD
+          + '</button>'
+        + '</div>'
       + '</div>';
   var metrics = Blockly.modalBlockSpace.getMetrics();
   this.contractDiv_.style.left = metrics.absoluteLeft + 'px';
@@ -74,6 +78,19 @@ Blockly.ContractEditor.prototype.createContractDom_ = function() {
 
   this.initializeInputTypeDropdown_();
   this.initializeOutputTypeDropdown_();
+};
+
+/**
+ * @override
+ */
+Blockly.ContractEditor.prototype.setupUIForBlock_ = function(targetFunctionDefinitionBlock) {
+  var isEditingVariable = targetFunctionDefinitionBlock.isVariable();
+  this.frameText_.textContent = isEditingVariable ? Blockly.Msg.FUNCTIONAL_VARIABLE_HEADER : Blockly.Msg.FUNCTION_HEADER;
+  goog.dom.setTextContent(goog.dom.getElement('outputTypeTitle'),
+    isEditingVariable ? Blockly.Msg.FUNCTIONAL_VARIABLE_TYPE : Blockly.Msg.FUNCTIONAL_RANGE_LABEL);
+  goog.style.showElement(goog.dom.getElement('domain-area'), !isEditingVariable);
+  goog.style.showElement(goog.dom.getElement('description-area'), !isEditingVariable);
+  Blockly.ContractEditor.superClass_.show.call(this);
 };
 
 /**

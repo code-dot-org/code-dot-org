@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Are you ready to create your own \"Function Block\"? Click on the \"Function\" block in the tool box, name it \"draw a triangle\", then create a triangle as you have done before with the Action and Loops blocks. Then click on the Save and Close in the upper right hand corner. Don't forget to go back in to the tool box to grab your newly create \"draw a triangle\" function block. Hint: Create a triangle that is 100 pixels in length. Good luck!",
+    "instructions": "Are you ready to create your own \"Function Block\"? Click on the \"Functions\" block in the tool box, name it \"draw a triangle\", then create a triangle as you have done before with the Action and Loops blocks. Then click on the Save and Close in the upper right hand corner. Hint: Create a triangle that is 100 pixels in length. Good luck!",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -19,7 +19,9 @@
     "ideal": "9",
     "slider_speed": ".5",
     "use_modal_function_editor": "true",
-    "use_contract_editor": "false"
+    "use_contract_editor": "false",
+    "embed": "false",
+    "callout_json": "[{\r\n  \"localization_key\": \"create_function\",\r\n  \"element_id\": \".blocklyTreeRow:eq(4)\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"left center\", \"at\": \"right center\"}\r\n  }\r\n}]"
   }
 }]]></config>
   <blocks>
