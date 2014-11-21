@@ -13,12 +13,13 @@
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
     "free_play": "false",
-    "instructions": "This algorithm is pretty cool, you can plug in a number to the \"set sides to\" variable and it will make a pattern out of those shapes. We've got a bit of a problem though - the the more sides we add, the bigger this whole thing gets! Let's add a new variable called \"length\" and use that wherever you have a \"move forward.\" Set the \"length\" variable to 75 for this shape.",
+    "instructions": "Let's set the \"sides\" variable to 5. The more sides we add to this algorithm, the bigger this whole pattern gets! Let's add a new variable called \"length\" and use that wherever you have a \"move forward.\" Set the \"length\" variable to 75 for this shape.",
     "disable_variable_editing": "true",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "impressive": "false",
-    "slider_speed": ".50"
+    "slider_speed": ".50",
+    "embed": "false"
   }
 }]]></config>
   <blocks>

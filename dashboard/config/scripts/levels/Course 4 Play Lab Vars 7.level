@@ -15,7 +15,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "Nice, now let's make sure this game isn't too easy - any time you get hit by a fireball, you should lose a point. Let's also start with 10 points so it's not too hard. Let your score drop down from 10 to 0 to pass the level.",
+    "instructions": "Nice, now let's make sure this game isn't too easy - any time you (the Dog) get hit by a fireball, you should lose a point. Let's also start with 10 points so it's not too hard. Let your score drop down from 10 to 0 to pass the level.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
