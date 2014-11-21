@@ -1,5 +1,8 @@
-How-to guide for school districts
-====
+---
+title: Hour of Code How-To for Districts
+layout: wide
+nav: resources_nav
+---
 
 ## Bring the Hour of Code to your entire school district. Get every school participating, every student learning!
 
