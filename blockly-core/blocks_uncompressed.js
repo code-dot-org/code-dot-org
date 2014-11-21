@@ -1339,10 +1339,11 @@ Blockly.Blocks.functional_call = {init:function() {
   this.setTooltip("Calls a user-defined function");
   this.setHSV(94, 0.84, 0.6);
   var a = this.appendDummyInput().appendTitle(new Blockly.FieldLabel("Function Call", {fixedSize:{height:35}}), "NAME").appendTitle("", "PARAM_TEXT");
-  if(Blockly.functionEditor) {
+  if(Blockly.functionEditor && this.blockSpace !== Blockly.modalBlockSpace) {
     var b = new Blockly.FieldIcon(Blockly.Msg.FUNCTION_EDIT);
     Blockly.bindEvent_(b.fieldGroup_, "mousedown", this, this.openEditor);
-    a.appendTitle(b)
+    a.appendTitle(b);
+    this.editLabel_ = b
   }
   this.setFunctional(!0);
   this.currentParameterNames_ = [];

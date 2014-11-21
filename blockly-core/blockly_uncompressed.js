@@ -14051,6 +14051,7 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
   this.userVisible_ = true;
   this.collapsed_ = false;
   this.dragging_ = false;
+  this.editLabel_ = null;
   this.blockSpace = blockSpace;
   this.isInFlyout = blockSpace.isFlyout;
   this.colourSaturation_ = 0.45;
@@ -14742,6 +14743,9 @@ Blockly.Block.prototype.setEditable = function(editable) {
   var icons = this.getIcons();
   for(var x = 0;x < icons.length;x++) {
     icons[x].updateEditable()
+  }
+  if(this.editLabel_) {
+    this.editLabel_.setVisible(editable)
   }
 };
 Blockly.Block.prototype.isUserVisible = function() {
