@@ -29,16 +29,36 @@
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "true",
     "free_play": "false",
-    "maze_data": null
+    "embed": "false"
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="functional_call" inline="false">
-          <mutation name="on-screen?">
-            <arg name="x" type="Number"/>
+        <block type="functional_start_dummyOnMove" inline="false">
+          <functional_input name="VAL">
+            <block type="functional_call" inline="false">
+              <mutation name="on-screen?">
+                <arg name="x" type="Number"/>
+              </mutation>
+              <functional_input name="ARG0">
+                <block type="functional_call">
+                  <mutation name="get-x"/>
+                </block>
+              </functional_input>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_definition" inline="false" uservisible="false">
+          <mutation>
+            <outputtype>Number</outputtype>
           </mutation>
+          <title name="NAME">get-x</title>
+          <functional_input name="STACK">
+            <block type="functional_math_number" uservisible="false">
+              <title name="NUM">0</title>
+            </block>
+          </functional_input>
         </block>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
@@ -110,10 +130,10 @@
                             </block>
                           </value>
                           <next>
-                            <block type="variables_set" inline="false">
+                            <block type="variables_set" inline="false" uservisible="false">
                               <title name="VAR">stopped-right</title>
                               <value name="VALUE">
-                                <block type="logic_boolean">
+                                <block type="logic_boolean" uservisible="false">
                                   <title name="BOOL">FALSE</title>
                                 </block>
                               </value>
