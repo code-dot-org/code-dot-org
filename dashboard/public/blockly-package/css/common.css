@@ -414,6 +414,7 @@ input[type="radio"] {
     top: 0px; } }
 
 #headers {
+  height: 40px;
   background-color: #7665a0; }
   #headers div {
     display: inline-block;

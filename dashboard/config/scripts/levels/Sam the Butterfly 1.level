@@ -15,7 +15,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "This butterfly is named Sam, and the game area is Sam’s yard. Sam's yard is 400 pixels wide by 400 pixels tall! As you can see, Sam is free to walk around the yard, and the coordinates at the top of the screen update to tell you his location. Use the arrow keys to move sam around his yard. Help Sam collect all of the flags to move on.",
+    "instructions": "This bat is named Sam, and the game area is Sam’s yard. Sam's yard is 400 pixels wide by 400 pixels tall! As you can see, Sam is free to walk around the yard, and the coordinates at the top of the screen update to tell you his location. Use the arrow keys to move sam around his yard. Help Sam collect all of the flags to move on.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

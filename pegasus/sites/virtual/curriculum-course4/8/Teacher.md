@@ -110,7 +110,7 @@ Loops that have a predetermined beginning, end, and increment (step interval)
   - Sometimes, you don't want to count by ones
   - For Loops give you a powerful way to keep a counter that starts when you want, ends when you want, and increases by whatever size step that you want
   
-Here, you can jump right in to a sample of the game
+Here, you can jump right into a sample of the game
 
 ![](sample.png)
 
