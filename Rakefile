@@ -171,6 +171,15 @@ task :build => ['build:all']
 ##################################################################################################
 
 namespace :install do
+  
+  task :blockly do
+    if rack_env?(:development) && !CDO.chef_managed
+      Dir.chdir(blockly_dir) do
+        blockly_build = CDO.use_my_blockly ? blockly_dir('build/package') : 'blockly-package'
+        RakeUtils.ln_s blockly_build, dashboard_dir('public','blockly')
+      end
+    end
+  end
 
   task :dashboard do
     if rack_env?(:development) && !CDO.chef_managed
@@ -195,7 +204,7 @@ namespace :install do
 
   tasks = []
   #tasks << :blockly_core if CDO.build_blockly_core
-  #tasks << :blockly if CDO.build_blockly
+  tasks << :blockly if CDO.build_blockly
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
   task :all => tasks
