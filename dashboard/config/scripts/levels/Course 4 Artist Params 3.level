@@ -9,7 +9,7 @@
     "instructions": "Awesome, can you draw each of these triangles with that new function? The first is 25 pixels long, the second is 50, and the third is 75. (If you're really clever, you could use a for loop for this!)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "ideal": "16",
+    "ideal": "18",
     "slider_speed": ".5",
     "disable_param_editing": "false",
     "disable_variable_editing": "false",
@@ -19,7 +19,8 @@
     "x": "75",
     "y": "250",
     "impressive": "false",
-    "use_contract_editor": "false"
+    "use_contract_editor": "false",
+    "embed": "false"
   }
 }]]></config>
   <blocks>
@@ -50,25 +51,25 @@
           </mutation>
           <title name="NAME">draw a triangle with length</title>
           <statement name="STACK">
-            <block type="controls_repeat_ext" inline="true">
+            <block type="controls_repeat_ext" inline="true" uservisible="false">
               <value name="TIMES">
-                <block type="math_number">
+                <block type="math_number" uservisible="false">
                   <title name="NUM">3</title>
                 </block>
               </value>
               <statement name="DO">
-                <block type="draw_move" inline="true">
+                <block type="draw_move" inline="true" uservisible="false">
                   <title name="DIR">moveForward</title>
                   <value name="VALUE">
-                    <block type="math_number">
-                      <title name="NUM">???</title>
+                    <block type="math_number" uservisible="false">
+                      <title name="NUM">100</title>
                     </block>
                   </value>
                   <next>
-                    <block type="draw_turn" inline="true">
+                    <block type="draw_turn" inline="true" uservisible="false">
                       <title name="DIR">turnLeft</title>
                       <value name="VALUE">
-                        <block type="math_number">
+                        <block type="math_number" uservisible="false">
                           <title name="NUM">120</title>
                         </block>
                       </value>
@@ -116,41 +117,6 @@
               </block>
             </value>
           </block>
-          <block type="procedures_defnoreturn" uservisible="false">
-            <mutation>
-              <arg name="length"/>
-            </mutation>
-            <title name="NAME">draw a triangle with length</title>
-            <statement name="STACK">
-              <block type="controls_repeat_ext" inline="true" uservisible="false">
-                <value name="TIMES">
-                  <block type="math_number" uservisible="false">
-                    <title name="NUM">3</title>
-                  </block>
-                </value>
-                <statement name="DO">
-                  <block type="draw_move" inline="true" uservisible="false">
-                    <title name="DIR">moveForward</title>
-                    <value name="VALUE">
-                      <block type="math_number" uservisible="false">
-                        <title name="NUM">100</title>
-                      </block>
-                    </value>
-                    <next>
-                      <block type="draw_turn" inline="true" uservisible="false">
-                        <title name="DIR">turnLeft</title>
-                        <value name="VALUE">
-                          <block type="math_number" uservisible="false">
-                            <title name="NUM">120</title>
-                          </block>
-                        </value>
-                      </block>
-                    </next>
-                  </block>
-                </statement>
-              </block>
-            </statement>
-          </block>
         </category>
         <category name="Functions" custom="PROCEDURE">
           <block type="procedures_callnoreturn" inline="false">
@@ -187,8 +153,8 @@
           </block>
         </category>
         <category name="Math">
-          <block type="math_number">
-            <title name="NUM">0</title>
+          <block type="math_number_dropdown">
+            <title name="NUM" config="25,50,75,100">25</title>
           </block>
         </category>
         <category name="Variables" custom="VARIABLE">
@@ -197,6 +163,41 @@
           </block>
           <block type="variables_get">
             <title name="VAR">length</title>
+          </block>
+          <block type="procedures_defnoreturn" uservisible="false">
+            <mutation>
+              <arg name="length"/>
+            </mutation>
+            <title name="NAME">draw a triangle with length</title>
+            <statement name="STACK">
+              <block type="controls_repeat_ext" inline="true" uservisible="false">
+                <value name="TIMES">
+                  <block type="math_number" uservisible="false">
+                    <title name="NUM">3</title>
+                  </block>
+                </value>
+                <statement name="DO">
+                  <block type="draw_move" inline="true" uservisible="false">
+                    <title name="DIR">moveForward</title>
+                    <value name="VALUE">
+                      <block type="math_number" uservisible="false">
+                        <title name="NUM">100</title>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="draw_turn" inline="true" uservisible="false">
+                        <title name="DIR">turnLeft</title>
+                        <value name="VALUE">
+                          <block type="math_number" uservisible="false">
+                            <title name="NUM">120</title>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </statement>
           </block>
         </category>
       </xml>

@@ -15,7 +15,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "Hey, this game looks pretty familiar, but how do we know when we've won (or lost)? Use the new variable \"points\" and set it to 10. Don't worry that it doesn't do anything (yet).",
+    "instructions": "What if we want our game to have a score? Use the \"set points to\" block to set the score to 10. ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -28,6 +28,7 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "false",
+    "embed": "false",
     "maze_data": null
   }
 }]]></config>
