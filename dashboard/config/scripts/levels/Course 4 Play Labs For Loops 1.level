@@ -22,7 +22,8 @@
     "ideal": "9",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "coordinate_grid_background": "false"
+    "coordinate_grid_background": "false",
+    "embed": "false"
   }
 }]]></config>
   <blocks>
@@ -54,14 +55,9 @@
                       <title name="NUM">1</title>
                     </block>
                   </value>
-                  <value name="TEXT">
-                    <block type="text">
-                      <title name="TEXT"/>
-                    </block>
-                  </value>
                   <value name="TIME">
                     <block type="math_number">
-                      <title name="NUM">0.5</title>
+                      <title name="NUM">0.1</title>
                     </block>
                   </value>
                 </block>

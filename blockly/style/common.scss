@@ -810,10 +810,23 @@ $modal-image-margin-gap: 10px;
   background-color: $purple;
   border: 1px solid $purple;
   color: white;
+  width: 46%;
+  font-size: 14px;
+  text-align: center;
   &:disabled {
     color: $purple;
     background-color: lightgrey;
   }
+}
+
+#print-button {
+  background-color: $purple;
+  border: 1px solid $purple;
+  color: white;
+  margin-right: 0px;
+  width: 46%;
+  font-size: 15px;
+  text-align: center;
 }
 
 .modal-image {
@@ -835,6 +848,12 @@ $modal-image-margin-gap: 10px;
   height: 100px;
   width: 400px;
   border: none;
+}
+
+#feedbackButtons:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
 }
 
 .hide {

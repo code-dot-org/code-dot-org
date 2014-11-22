@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "eval",
-    "instructions": "Let's look inside that green triangle function to see how it works. Can you modify it so that the \"green triangle\" function always draws outlined green triangles?",
+    "instructions": "Let's look inside that \"green-triangle\" function to see how it works. Can you modify it so that the \"green-triangle\" function always draws outlined green triangles?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

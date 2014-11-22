@@ -29,7 +29,9 @@
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "true",
     "free_play": "false",
-    "maze_data": null
+    "maze_data": null,
+    "embed": "false",
+    "protaganist_sprite_index": "0"
   }
 }]]></config>
   <blocks>

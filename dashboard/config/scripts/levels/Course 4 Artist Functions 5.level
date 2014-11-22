@@ -20,7 +20,8 @@
     "ideal": "19",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
-    "embed": "false"
+    "embed": "false",
+    "callout_json": "[{\r\n  \"localization_key\": \"house_hint\",\r\n  \"element_id\": \"[block-id='20']\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"top left\", \"at\": \"bottom left\"},\r\n    \"style\": { \"classes\": \"no-tip\" }\r\n  }\r\n}]"
   }
 }]]></config>
   <blocks>

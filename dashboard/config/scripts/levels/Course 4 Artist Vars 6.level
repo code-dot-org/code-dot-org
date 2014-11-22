@@ -20,7 +20,8 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "impressive": "false",
-    "embed": "false"
+    "embed": "false",
+    "callout_json": "[{\r\n  \"localization_key\": \"degrees_per_side\",\r\n  \"element_id\": \"[block-id='29']\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"top center\", \"at\": \"bottom center\"}\r\n  }\r\n}]"
   }
 }]]></config>
   <blocks>
