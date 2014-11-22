@@ -171,7 +171,7 @@ function loadLevel() {
   Studio.timeoutFailureTick = level.timeoutFailureTick || Infinity;
   Studio.minWorkspaceHeight = level.minWorkspaceHeight;
   Studio.softButtons_ = level.softButtons || {};
-  Studio.protaganistSpriteIndex = level.protaganistSpriteIndex;
+  Studio.protagonistSpriteIndex = level.protaganistSpriteIndex;  // SIC
 
   Studio.startAvatars = reorderedStartAvatars(skin.avatarList,
     level.firstSpriteIndex);
@@ -1762,7 +1762,7 @@ Studio.displayScore = function() {
 };
 
 Studio.showCoordinates = function() {
-  var sprite = Studio.sprite[Studio.protaganistSpriteIndex];
+  var sprite = Studio.sprite[Studio.protagonistSpriteIndex || 0];
   if (!sprite) {
     return;
   }
@@ -2572,9 +2572,9 @@ function spriteAtGoal(sprite, goal) {
 
 Studio.allGoalsVisited = function() {
   var i, playSound;
-  // If protaganistSpriteIndex is set, the sprite with this index must navigate
+  // If protagonistSpriteIndex is set, the sprite with this index must navigate
   // to the goals.  Otherwise any sprite can navigate to each goal.
-  var protaganistSprite = Studio.sprite[Studio.protaganistSpriteIndex];
+  var protagonistSprite = Studio.sprite[Studio.protagonistSpriteIndex];
   var finishedGoals = 0;
 
   // can't visit all goals if we don't have any
@@ -2585,8 +2585,8 @@ Studio.allGoalsVisited = function() {
   for (i = 0; i < Studio.spriteGoals_.length; i++) {
     var goal = Studio.spriteGoals_[i];
     if (!goal.finished) {
-      if (protaganistSprite) {
-        goal.finished = spriteAtGoal(protaganistSprite, goal);
+      if (protagonistSprite) {
+        goal.finished = spriteAtGoal(protagonistSprite, goal);
       } else {
         goal.finished = false;
         for (var j = 0; j < Studio.sprite.length; j++) {
