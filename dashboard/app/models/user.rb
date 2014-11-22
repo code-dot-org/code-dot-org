@@ -591,6 +591,7 @@ SQL
       if test_result > 10 # < 10 will be not attempted
         retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
           user_level = UserLevel.where(user: self, level: sl.level).first_or_create
+          user_level.script_id = script.id
           user_level.attempts += 1 unless user_level.best?
           user_level.best_result = test_result
           user_level.save!
