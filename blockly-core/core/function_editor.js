@@ -325,29 +325,8 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   this.modalBackground_ =
       Blockly.createSvgElement('g', {'class': 'modalBackground'});
   Blockly.mainBlockSpaceEditor.appendSVGChild(this.modalBackground_);
-  this.closeButton_ = Blockly.createSvgElement('g', {
-    'id': 'modalEditorClose',
-    'filter': 'url(#blocklyTrashcanShadowFilter)'
-  });
-  var padding = 7;
-  var r = Blockly.createSvgElement('rect', {
-    'rx': 12,
-    'ry': 12,
-    'fill': '#7665a0',
-    'stroke': 'white',
-    'stroke-width': '2.5'
-  }, this.closeButton_);
-  var text = Blockly.createSvgElement('text', {
-    'x': padding,
-    'y': padding,
-    'class': 'blocklyText'
-  }, this.closeButton_);
-  text.textContent = Blockly.Msg.SAVE_AND_CLOSE;
-  Blockly.modalBlockSpaceEditor.appendSVGChild(this.closeButton_);
-  var bounds = text.getBoundingClientRect();
-  r.setAttribute('width', bounds.width + 2 * padding);
-  r.setAttribute('height', bounds.height + padding);
-  r.setAttribute('y', -bounds.height + padding - 1);
+
+  this.addCloseButton_();
 
   // Set up contract definition HTML section
   this.createContractDom_();
@@ -391,17 +370,59 @@ Blockly.FunctionEditor.prototype.create_ = function() {
     this.functionDefinitionBlock.description_ = e.target.value;
   }
 
-  // Set up parameters toolbox
+  this.setupParametersToolbox_();
+  this.addEditorFrame_();
+  this.position_();
+
+  this.onResizeWrapper_ = Blockly.bindEvent_(window,
+      goog.events.EventType.RESIZE, this, this.position_);
+
+  Blockly.modalBlockSpaceEditor.svgResize();
+};
+
+/**
+ * Add close button to the top right of the modal dialog
+ * @private
+ */
+Blockly.FunctionEditor.prototype.addCloseButton_ = function () {
+  this.closeButton_ = Blockly.createSvgElement('g', {
+    'id': 'modalEditorClose',
+    'filter': 'url(#blocklyTrashcanShadowFilter)'
+  });
+  var padding = 7;
+  var r = Blockly.createSvgElement('rect', {
+    'rx': 12,
+    'ry': 12,
+    'fill': '#7665a0',
+    'stroke': 'white',
+    'stroke-width': '2.5'
+  }, this.closeButton_);
+  var text = Blockly.createSvgElement('text', {
+    'x': padding,
+    'y': padding,
+    'class': 'blocklyText'
+  }, this.closeButton_);
+  text.textContent = Blockly.Msg.SAVE_AND_CLOSE;
+  Blockly.modalBlockSpaceEditor.appendSVGChild(this.closeButton_);
+  var bounds = text.getBoundingClientRect();
+  r.setAttribute('width', bounds.width + 2 * padding);
+  r.setAttribute('height', bounds.height + padding);
+  r.setAttribute('y', -bounds.height + padding - 1);
+};
+
+Blockly.FunctionEditor.prototype.setupParametersToolbox_ = function () {
   this.flyout_ = new Blockly.HorizontalFlyout(Blockly.modalBlockSpaceEditor);
   var flyoutDom = this.flyout_.createDom();
   Blockly.modalBlockSpace.svgGroup_.insertBefore(flyoutDom,
-      Blockly.modalBlockSpace.svgBlockCanvas_);
+    Blockly.modalBlockSpace.svgBlockCanvas_);
   this.flyout_.init(Blockly.modalBlockSpace, false);
   this.bindToolboxHandlers_();
+};
 
+Blockly.FunctionEditor.prototype.addEditorFrame_ = function () {
   var left = goog.dom.getElementByClass(Blockly.hasCategories
-      ? 'blocklyToolboxDiv'
-      : 'blocklyFlyoutBackground').getBoundingClientRect().width;
+    ? 'blocklyToolboxDiv'
+    : 'blocklyFlyoutBackground').getBoundingClientRect().width;
   var top = 0;
   this.frameBase_ = Blockly.createSvgElement('rect', {
     x: left + FRAME_MARGIN_SIDE,
@@ -413,7 +434,7 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   this.frameInner_ = Blockly.createSvgElement('rect', {
     x: left + FRAME_MARGIN_SIDE + Blockly.Bubble.BORDER_WIDTH,
     y: top + FRAME_MARGIN_TOP + Blockly.Bubble.BORDER_WIDTH +
-        FRAME_HEADER_HEIGHT,
+      FRAME_HEADER_HEIGHT,
     fill: '#ffffff'
   }, this.modalBackground_);
   this.frameText_ = Blockly.createSvgElement('text', {
@@ -423,12 +444,6 @@ Blockly.FunctionEditor.prototype.create_ = function() {
     style: 'font-size: 12pt'
   }, this.modalBackground_);
   this.frameText_.textContent = Blockly.Msg.FUNCTION_HEADER;
-  this.position_();
-
-  this.onResizeWrapper_ = Blockly.bindEvent_(window,
-      goog.events.EventType.RESIZE, this, this.position_);
-
-  Blockly.modalBlockSpaceEditor.svgResize();
 };
 
 Blockly.FunctionEditor.prototype.position_ = function() {
