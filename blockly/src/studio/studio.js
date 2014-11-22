@@ -166,9 +166,9 @@ function loadLevel() {
   }
 
   // Measure maze dimensions and set sizes.
-  // ROWS: Number of constants down.
+  // ROWS: Number of tiles down.
   Studio.ROWS = Studio.map.length;
-  // COLS: Number of constants across.
+  // COLS: Number of tiles across.
   Studio.COLS = Studio.map[0].length;
   // Pixel height and width of each maze square (i.e. tile).
   Studio.SQUARE_SIZE = 50;
@@ -1638,7 +1638,6 @@ function spriteFrameNumber (index) {
     frameNum = Math.floor(ellapsed / sprite.timePerFrame) % sprite.frameCounts.normal;
   }
 
-  // todo (brent) - create a test for emotions
   if (!frameNum && sprite.emotion !== Emotions.NORMAL &&
     sprite.frameCounts.emotions > 0) {
     // emotion frames proceed normal, animation, turn frames
