@@ -1,7 +1,6 @@
 $:.unshift File.expand_path('../lib', __FILE__)
 require 'csv'
 require 'yaml'
-require 'os'
 require 'cdo/erb'
 require 'cdo/slog'
 
