@@ -323,7 +323,7 @@ exports.install = function(blockly, blockInstallOptions) {
         dropdownArray2.unshift(this.GROUPINGS[1]);
         if (projectileCollisions) {
           dropdownArray2 = dropdownArray2.concat([this.GROUPINGS[2]]);
-          dropdownArray2 = dropdownArray2.concat(this.PROJECconstants);
+          dropdownArray2 = dropdownArray2.concat(this.PROJECTILES);
         }
         if (edgeCollisions) {
           dropdownArray2 = dropdownArray2.concat([this.GROUPINGS[3]]);
@@ -352,9 +352,8 @@ exports.install = function(blockly, blockInstallOptions) {
        [msg.whenSpriteCollidedWithAnyProjectile(), 'any_projectile'],
        [msg.whenSpriteCollidedWithAnyEdge(), 'any_edge']];
 
-  blockly.Blocks.studio_whenSpriteCollided.PROJECconstants =
+  blockly.Blocks.studio_whenSpriteCollided.PROJECTILES =
       [[msg.whenSpriteCollidedWithBlueFireball(), 'blue_fireball'],
-       [msg.whenSpriteCollidedWithPurpleFireball(), 'purple_fireball'],
        [msg.whenSpriteCollidedWithPurpleFireball(), 'purple_fireball'],
        [msg.whenSpriteCollidedWithRedFireball(), 'red_fireball'],
        [msg.whenSpriteCollidedWithYellowHearts(), 'yellow_hearts'],
