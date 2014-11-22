@@ -184,10 +184,6 @@ def pegasus_dir(*paths)
   deploy_dir('pegasus', *paths)
 end
 
-def postfix_dir(*paths)
-  aws_dir('postfix', *paths)
-end
-
 def secrets_dir(*dirs)
   aws_dir('secrets', *dirs)
 end
