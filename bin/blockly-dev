@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+require_relative '../deployment'
+
+def main()
+  Dir.chdir(blockly_dir) do
+    system 'npm install --no-optional'
+    system 'MOOC_DEV=1 grunt dev'
+  end
+end
+
+main
