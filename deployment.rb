@@ -1,6 +1,7 @@
 $:.unshift File.expand_path('../lib', __FILE__)
 require 'csv'
 require 'yaml'
+require 'os'
 require 'cdo/erb'
 require 'cdo/slog'
 
@@ -68,6 +69,7 @@ def load_configuration()
     'rack_env'                    => rack_env,
     'rack_envs'                   => [:development, :production, :staging, :test, :levelbuilder],
     'read_only'                   => false,
+    'ruby_installer'              => rack_env == :development ? 'rbenv' : 'system',
     'root_dir'                    => root_dir,
     'sendy_db_reader'             => 'mysql://root@localhost/',
     'sendy_db_writer'             => 'mysql://root@localhost/',
@@ -76,6 +78,8 @@ def load_configuration()
     raise "'#{rack_env}' is not known environment." unless config['rack_envs'].include?(rack_env)
     ENV['RACK_ENV'] = rack_env.to_s unless ENV['RACK_ENV']
     raise "RACK_ENV ('#{ENV['RACK_ENV']}') does not match configuration ('#{rack_env}')" unless ENV['RACK_ENV'] == rack_env.to_s
+
+    config['bundler_use_sudo'] = config['ruby_installer'] == 'system'
 
     config.merge! default_config
     config.merge! env_config

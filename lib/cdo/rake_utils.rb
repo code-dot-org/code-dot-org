@@ -39,7 +39,7 @@ module RakeUtils
 
   def self.bundle_install(*args)
     without = CDO.rack_envs - [CDO.rack_env]
-    if OS.linux? && !CDO.rack_env?(:development)
+    if CDO.bundler_use_sudo
       sudo 'bundle', '--without', *without, '--quiet', *args
     else
       system 'bundle', '--without', *without, '--quiet', *args
