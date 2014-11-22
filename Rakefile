@@ -28,14 +28,11 @@ namespace :build do
       RakeUtils.sudo 'chef-client'
     end
 
-    Dir.chdir(aws_dir) do
-      unless CDO.chef_managed
+    unless CDO.chef_managed
+      Dir.chdir(aws_dir) do
         HipChat.log 'Installing <b>aws</b> bundle...'
         RakeUtils.bundle_install 
       end
-
-      HipChat.log 'Configuring <b>aws</b>...'
-      RakeUtils.rake
     end
   end
 
@@ -167,7 +164,6 @@ namespace :install do
 
   task :dashboard do
     unless CDO.chef_managed
-      Dir.chdir(aws_dir) { RakeUtils.rake }
       Dir.chdir(dashboard_dir) do
         RakeUtils.bundle_install
         unless rack_env?(:production)
@@ -184,7 +180,6 @@ namespace :install do
 
   task :pegasus do
     unless CDO.chef_managed
-      Dir.chdir(aws_dir) { RakeUtils.rake }
       Dir.chdir(pegasus_dir) do
         RakeUtils.bundle_install
         unless rack_env?(:production)
