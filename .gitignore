@@ -4,6 +4,7 @@
 .dropbox
 .idea/
 /.gdrive_session
+/.chef/
 /.dropbox.cache
 /aws/secrets/
 /aws/solr/
