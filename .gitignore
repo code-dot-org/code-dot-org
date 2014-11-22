@@ -5,6 +5,7 @@
 .idea/
 /.gdrive_session
 /chef/.chef/
+/crontab
 /.dropbox.cache
 /aws/secrets/
 /aws/solr/
