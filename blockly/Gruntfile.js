@@ -427,6 +427,7 @@ module.exports = function (grunt) {
     'prebuild',
     'exec:browserify',
     'postbuild',
+    'express:server',
     'watch'
   ]);
   grunt.registerTask('test', ['jshint', 'mochaTest']);
