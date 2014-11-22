@@ -95,7 +95,7 @@ module RakeUtils
   def self.npm_install(*args)
     commands = []
     commands << 'PKG_CONFIG_PATH=/usr/X11/lib/pkgconfig' if OS.mac?
-    commands << 'sudo' if OS.linux? && !CDO.rack_env?(:development)
+    commands << 'sudo' if CDO.npm_use_sudo
     commands << 'npm'
     commands << 'install'
     commands << '--quiet'
