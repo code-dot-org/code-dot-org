@@ -207,7 +207,6 @@ class LevelsController < ApplicationController
         baseUrl: "#{ActionController::Base.asset_host}/blockly/",
         blocks: @level.properties[@block_type]
     }
-    puts "blocks: #{@level[@block_type]}, block type=#{@block_type}"
     render :embed_blocks, layout: false
   end
 
