@@ -18963,16 +18963,7 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   Blockly.modalBlockSpaceEditor.addChangeListener(Blockly.mainBlockSpace.fireChangeEvent);
   this.modalBackground_ = Blockly.createSvgElement("g", {"class":"modalBackground"});
   Blockly.mainBlockSpaceEditor.appendSVGChild(this.modalBackground_);
-  this.closeButton_ = Blockly.createSvgElement("g", {"id":"modalEditorClose", "filter":"url(#blocklyTrashcanShadowFilter)"});
-  var padding = 7;
-  var r = Blockly.createSvgElement("rect", {"rx":12, "ry":12, "fill":"#7665a0", "stroke":"white", "stroke-width":"2.5"}, this.closeButton_);
-  var text = Blockly.createSvgElement("text", {"x":padding, "y":padding, "class":"blocklyText"}, this.closeButton_);
-  text.textContent = Blockly.Msg.SAVE_AND_CLOSE;
-  Blockly.modalBlockSpaceEditor.appendSVGChild(this.closeButton_);
-  var bounds = text.getBoundingClientRect();
-  r.setAttribute("width", bounds.width + 2 * padding);
-  r.setAttribute("height", bounds.height + padding);
-  r.setAttribute("y", -bounds.height + padding - 1);
+  this.addCloseButton_();
   this.createContractDom_();
   Blockly.bindEvent_(goog.dom.getElement("modalContainer"), "mousedown", null, function(e) {
     if(e.target === e.currentTarget) {
@@ -18998,20 +18989,38 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   function functionDescriptionChange(e) {
     this.functionDefinitionBlock.description_ = e.target.value
   }
+  this.setupParametersToolbox_();
+  this.addEditorFrame_();
+  this.position_();
+  this.onResizeWrapper_ = Blockly.bindEvent_(window, goog.events.EventType.RESIZE, this, this.position_);
+  Blockly.modalBlockSpaceEditor.svgResize()
+};
+Blockly.FunctionEditor.prototype.addCloseButton_ = function() {
+  this.closeButton_ = Blockly.createSvgElement("g", {"id":"modalEditorClose", "filter":"url(#blocklyTrashcanShadowFilter)"});
+  var padding = 7;
+  var r = Blockly.createSvgElement("rect", {"rx":12, "ry":12, "fill":"#7665a0", "stroke":"white", "stroke-width":"2.5"}, this.closeButton_);
+  var text = Blockly.createSvgElement("text", {"x":padding, "y":padding, "class":"blocklyText"}, this.closeButton_);
+  text.textContent = Blockly.Msg.SAVE_AND_CLOSE;
+  Blockly.modalBlockSpaceEditor.appendSVGChild(this.closeButton_);
+  var bounds = text.getBoundingClientRect();
+  r.setAttribute("width", bounds.width + 2 * padding);
+  r.setAttribute("height", bounds.height + padding);
+  r.setAttribute("y", -bounds.height + padding - 1)
+};
+Blockly.FunctionEditor.prototype.setupParametersToolbox_ = function() {
   this.flyout_ = new Blockly.HorizontalFlyout(Blockly.modalBlockSpaceEditor);
   var flyoutDom = this.flyout_.createDom();
   Blockly.modalBlockSpace.svgGroup_.insertBefore(flyoutDom, Blockly.modalBlockSpace.svgBlockCanvas_);
   this.flyout_.init(Blockly.modalBlockSpace, false);
-  this.bindToolboxHandlers_();
+  this.bindToolboxHandlers_()
+};
+Blockly.FunctionEditor.prototype.addEditorFrame_ = function() {
   var left = goog.dom.getElementByClass(Blockly.hasCategories ? "blocklyToolboxDiv" : "blocklyFlyoutBackground").getBoundingClientRect().width;
   var top = 0;
   this.frameBase_ = Blockly.createSvgElement("rect", {x:left + FRAME_MARGIN_SIDE, y:top + FRAME_MARGIN_TOP, fill:"hsl(94, 73%, 35%)", rx:Blockly.Bubble.BORDER_WIDTH, ry:Blockly.Bubble.BORDER_WIDTH}, this.modalBackground_);
   this.frameInner_ = Blockly.createSvgElement("rect", {x:left + FRAME_MARGIN_SIDE + Blockly.Bubble.BORDER_WIDTH, y:top + FRAME_MARGIN_TOP + Blockly.Bubble.BORDER_WIDTH + FRAME_HEADER_HEIGHT, fill:"#ffffff"}, this.modalBackground_);
   this.frameText_ = Blockly.createSvgElement("text", {x:left + FRAME_MARGIN_SIDE + 16, y:top + FRAME_MARGIN_TOP + 22, "class":"blocklyText", style:"font-size: 12pt"}, this.modalBackground_);
-  this.frameText_.textContent = Blockly.Msg.FUNCTION_HEADER;
-  this.position_();
-  this.onResizeWrapper_ = Blockly.bindEvent_(window, goog.events.EventType.RESIZE, this, this.position_);
-  Blockly.modalBlockSpaceEditor.svgResize()
+  this.frameText_.textContent = Blockly.Msg.FUNCTION_HEADER
 };
 Blockly.FunctionEditor.prototype.position_ = function() {
   var metrics = Blockly.modalBlockSpace.getMetrics();

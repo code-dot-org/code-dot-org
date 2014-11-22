@@ -20,15 +20,11 @@ Code.org will select one lucky classroom to attend a very special Hour of Code e
 <% if @country == 'us' %>
 
 <h2 id="hardware_prize" style="font-size: 18px">51 schools win a class-set of laptops (or $10,000 for other technology)</h2>
-One lucky school in ***every*** U.S. state (+ Washington D.C.) will win $10,000 worth of technology. Organize the Hour of Code for every student in your school to qualify. Fill out the form below to apply.
+One lucky school in ***every*** U.S. state (+ Washington D.C.) will win $10,000 worth of technology. Organize the Hour of Code for every student in your school to qualify. **The submission period has ended. Winners will be announced soon.**
 
 <% end %>
 
 <% if @country == 'us' %>
-### Hardware Prize application form:</h2>
-If you’ve signed up your entire school to participate in the Hour of Code, enter to win a class-set of laptops (or $10,000 for other technology) for your school! Only one teacher needs to apply for your entire school.
-
-<%= view :hardware_prizes_form %>
 
 ### What are your odds of winning?
 <a href="/events">See a list of all schools</a> signed up for the Hour of Code in your state. One public K-12 school in every U.S. state will win a class-set of laptops.
@@ -37,7 +33,7 @@ If you’ve signed up your entire school to participate in the Hour of Code, ent
 <% if @country == 'uk' %>
 
 <h2 id="video_chat">Lucky classrooms win a video chat with a guest speaker!</h2>
-20 lucky classrooms will be invited to join a video chat to celebrate the Hour of Code during December 8-14. Your students will be able to ask questions and chat with technology-industry leaders. [Check out last year’s chats](http://www.youtube.com/playlist?list=PLzdnOPI1iJNckJ81gRpJe5mR7imAHDl9a) with Bill Gates, Twitter founder Jack Dorsey, Susan Wojcicki of Google and Gabe Newell of Valve.
+20 lucky classrooms will be invited to join a video chat to celebrate the Hour of Code during December 8-14. Your students will be able to ask questions and chat with technology-industry leaders. **The submission period has ended. Winners will be announced soon.**
 
 <% end %>
 
@@ -47,7 +43,7 @@ If you’ve signed up your entire school to participate in the Hour of Code, ent
 
 100 lucky classrooms will be invited to participate in live video Q&As with tech titans and tech-loving celebrities. Students will be able to ask questions and chat with these exciting role models to kick off your Hour of Code.
 
-Any classroom (public or private) within the U.S. or Canada is eligible to win this prize. Your whole school does not need to apply.
+Any classroom (public or private) within the U.S. or Canada is eligible to win this prize. Your whole school does not need to apply. **The submission period has ended. Winners will be announced soon.**
 
 ### This year's celebrity video chat  participants:
 <%= view :video_chat_speakers %>
