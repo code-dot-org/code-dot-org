@@ -27,7 +27,7 @@
     "grunt-contrib-watch": "~0.6.1",
     "connect-livereload": "~0.3.0",
     "grunt-sass": "~0.6.1",
-    "messageformat": "~0.2.1",
+    "messageformat": "~0.1.6",
     "handlebars-runtime": "~1.0.12",
     "grunt-express": "~1.4.1",
     "express": "~4.1.1",
