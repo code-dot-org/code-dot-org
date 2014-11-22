@@ -230,30 +230,32 @@ module.exports = function (grunt) {
   config.browserify = {};
   var allFilesSrc = [];
   var allFilesDest = [];
+  var outputDir = 'build/package/js/';
   APPS.forEach(function (app) {
     allFilesSrc.push('build/js/' + app + '/main.js');
-    allFilesDest.push('build/browserified/'+app+'.js');
+    allFilesDest.push(outputDir+app+'.js');
   });
 
   // Use command-line tools to run browserify (faster/more stable this way)
   var browserifyExec = 'mkdir -p build/browserified && `npm bin`/browserify ' + allFilesSrc.join(' ') +
-    ' -p [ factor-bundle -o ' + allFilesDest.join(' -o ') + ' ] -o build/browserified/common.js' +
-    ' && `npm bin`/browserify -r messageformat --standalone messageformat >> build/browserified/common.js';
+    ' -p [ factor-bundle -o ' + allFilesDest.join(' -o ') + ' ] -o ' + outputDir + 'common.js';
 
   config.exec = {
-    browserify: browserifyExec
+    browserify: browserifyExec,
+    watchify: browserifyExec.replace('browserify', 'watchify') + ' -v'
   };
 
   var vendorFiles = {};
   LOCALES.forEach(function (locale) {
     var ext = DEV ? 'uncompressed' : 'compressed';
     var files = {};
-    var dest = 'build/package/js/' + locale + '/vendor.js';
+    var dest = outputDir + locale + '/vendor.js';
     files[dest] = [
         'lib/blockly/blockly_' + ext + '.js',
         'lib/blockly/blocks_' + ext + '.js',
         'lib/blockly/javascript_' + ext + '.js',
-        'lib/blockly/' + locale + '.js'
+        'lib/blockly/' + locale + '.js',
+        'lib/messageformat/messageformat' + (DEV ? '' : '.min') + '.js'
     ];
     vendorFiles = _.merge(vendorFiles,files);
   });
@@ -284,8 +286,8 @@ module.exports = function (grunt) {
   };
 
   ['common'].concat(APPS).forEach(function (app) {
-    var src = 'build/browserified/' + app + '.js';
-    var dest = 'build/package/js/' + app + '.min.js';
+    var src = outputDir + app + '.js';
+    var dest = outputDir + app + '.min.js';
     uglifiedFiles[dest] = [src];
     var appUglifiedFiles = {};
     appUglifiedFiles[dest] = [src];
@@ -306,7 +308,7 @@ module.exports = function (grunt) {
     },
     js: {
       files: ['src/**/*.js'],
-      tasks: ['newer:copy:src', 'exec:browserify', 'newer:copy:browserified']
+      tasks: ['newer:copy:src']
     },
     style: {
       files: ['style/**/*.scss', 'style/**/*.sass'],
@@ -322,7 +324,7 @@ module.exports = function (grunt) {
     },
     ejs: {
       files: ['src/**/*.ejs'],
-      tasks: ['ejs', 'exec:browserify', 'newer:copy:browserified']
+      tasks: ['ejs']
     },
     messages: {
       files: ['i18n/**/*.json'],
@@ -423,12 +425,18 @@ module.exports = function (grunt) {
 
   grunt.registerTask('rebuild', ['clean', 'build']);
 
+  config.concurrent['watch'] = {
+    tasks: ['exec:watchify', 'watch'],
+    options: {
+      logConcurrentOutput: true
+    }
+  };
+
   grunt.registerTask('dev', [
     'prebuild',
-    'exec:browserify',
     'postbuild',
     'express:server',
-    'watch'
+    'concurrent:watch'
   ]);
   grunt.registerTask('test', ['jshint', 'mochaTest']);
   grunt.registerTask('default', ['rebuild', 'test']);
