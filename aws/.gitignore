@@ -12,5 +12,3 @@
 /.website-ci-built
 /.websites-built
 /.websites-test-built
-/crontab
-/crontab.installed

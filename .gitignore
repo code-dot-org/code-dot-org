@@ -4,7 +4,7 @@
 .dropbox
 .idea/
 /.gdrive_session
-/.chef/
+/chef/.chef/
 /.dropbox.cache
 /aws/secrets/
 /aws/solr/
@@ -19,13 +19,3 @@
 /dashboard/config/newrelic.yml
 /pegasus/config/newrelic.yml
 
-# THESE ARE ONLY HERE TO KEEP code-dot-private RUNNING UNTIL IT'S CONVERTED
-# TO CHEF.
-/aws/secrets.key
-/aws/secrets.tgz
-/aws/varnish.config
-/aws/varnish.secret
-/aws/varnish.vcl
-/dashboard/config/init.d
-/dashboard/config/logrotate
-/pegasus/config/init.d
