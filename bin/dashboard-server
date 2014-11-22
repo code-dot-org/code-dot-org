@@ -3,10 +3,6 @@ require_relative '../deployment'
 
 def main()
   Dir.chdir(dashboard_dir) do
-    if CDO.rack_env? :development
-      system 'bundle install' unless system 'bundle check'
-      system "RAILS_ENV=#{CDO.rack_env} bundle exec rake db:migrate seed:all" unless ENV['SKIP_RAKE']
-    end
     system "RAILS_ENV=#{CDO.rack_env} bundle exec rails s -p #{CDO.dashboard_port}"
   end
 end

@@ -3,10 +3,6 @@ require_relative '../deployment'
 
 def main()
   Dir.chdir(pegasus_dir) do
-    if CDO.rack_env? :development
-      system 'bundle install' unless system 'bundle check'
-      system 'bundle exec rake db:migrate seed:migrate'
-    end
     system "bundle exec rerun -b -p '**/*.{rb,ru,yml}' -d'../lib,../pegasus' 'thin start -p #{CDO.pegasus_port}'"
   end
 end

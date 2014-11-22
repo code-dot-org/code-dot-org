@@ -2,9 +2,9 @@
 # Self-contained wrapper script to run foreman on our project's three processes.
 
 proc = <<Procfile
-dashboard: bin/dashboard-server
-pegasus: bin/pegasus-server
-blockly: bin/blockly-dev
+dashboard: rake build:dashboard && bin/dashboard-server
+pegasus: rake build:pegasus && bin/pegasus-server
+blockly: rake build:blockly && MOOC_DEV=1 bin/blockly-dev
 Procfile
 
 require 'tempfile'
