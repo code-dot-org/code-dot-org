@@ -58,6 +58,7 @@ def load_configuration()
     'languages'                   => load_languages(File.join(root_dir, 'pegasus', 'data', 'cdo-languages.csv')),
     'localize_apps'            => false,
     'name'                        => hostname,
+    'npm_use_sudo'                => ((rack_env != :development) && OS.linux?),
     'pegasus_db_name'             => rack_env == :production ? 'pegasus' : "pegasus_#{rack_env}",
     'pegasus_honeybadger_api_key' =>'00000000',
     'pegasus_port'                => 9393,
