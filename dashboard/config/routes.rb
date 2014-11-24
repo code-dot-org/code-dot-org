@@ -22,7 +22,7 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  resources :level_sources, path: '/sh/', only: [:show, :edit] do
+  resources :level_sources, path: '/sh/', only: [:show, :edit, :update] do
     member do
       get 'generate_image'
       get 'original_image'

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141017233919) do
+ActiveRecord::Schema.define(version: 20141124180534) do
 
   create_table "activities", force: true do |t|
     t.integer  "user_id"
@@ -143,10 +143,11 @@ ActiveRecord::Schema.define(version: 20141017233919) do
 
   create_table "level_sources", force: true do |t|
     t.integer  "level_id"
-    t.string   "md5",        limit: 32,    null: false
-    t.string   "data",       limit: 20000, null: false
+    t.string   "md5",        limit: 32,                    null: false
+    t.string   "data",       limit: 20000,                 null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "hidden",                   default: false
   end
 
   add_index "level_sources", ["level_id", "md5"], name: "index_level_sources_on_level_id_and_md5", using: :btree
