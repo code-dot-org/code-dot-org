@@ -295,12 +295,10 @@ Blockly.Flyout.prototype.position_ = function() {
 
   var x = metrics.absoluteLeft;
   var y = metrics.absoluteTop;
-  if (this.static_) {
-    x -= this.width_;
-  }
   if (Blockly.RTL) {
-    x = 0;
+    x = this.static_ ? 0 : -this.width_;
     x += metrics.viewWidth;
+  } else if (this.static_) {
     x -= this.width_;
   }
   this.svgGroup_.setAttribute('transform', 'translate(' + x + ',' + y + ')');

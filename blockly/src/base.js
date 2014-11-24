@@ -511,7 +511,6 @@ BlocklyApps.init = function(config) {
       startBlocks = blockUtils.forceInsertTopBlock(startBlocks, config.forceInsertTopBlock);
     }
     startBlocks = BlocklyApps.arrangeBlockPosition(startBlocks, config.blockArrangement);
-    BlocklyApps.loadBlocks(startBlocks);
   }
 
   // Initialize the slider.
@@ -539,12 +538,14 @@ BlocklyApps.init = function(config) {
   // around relayout which changes height on the left side to the proper
   // value
   window.setTimeout(function() {
-      BlocklyApps.onResize();
-      var event = document.createEvent('UIEvents');
-      event.initEvent('resize', true, true);  // event type, bubbling, cancelable
-      window.dispatchEvent(event);
-    },
-    100);
+    BlocklyApps.onResize();
+    var event = document.createEvent('UIEvents');
+    event.initEvent('resize', true, true);  // event type, bubbling, cancelable
+    window.dispatchEvent(event);
+    if (BlocklyApps.usingBlockly) {
+      BlocklyApps.loadBlocks(startBlocks);
+    }
+  }, 10);
 
   BlocklyApps.reset(true);
 
