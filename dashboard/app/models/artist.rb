@@ -8,6 +8,7 @@ class Artist < Blockly
     free_play
     permitted_errors
     impressive
+    disable_sharing
   )
 
   before_save :update_ideal_level_source
