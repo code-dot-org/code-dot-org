@@ -8,8 +8,8 @@
 'use strict';
 
 var BlocklyApps = require('../base');
-var commonMsg = require('../../locale/current/common');
-var flappyMsg = require('../../locale/current/flappy');
+var commonMsg = window.blockly.locale;
+var flappyMsg = window.blockly.appLocale;
 var skins = require('../skins');
 var codegen = require('../codegen');
 var api = require('./api');

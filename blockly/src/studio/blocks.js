@@ -6,9 +6,9 @@
  */
 'use strict';
 
-var msg = require('../../locale/current/studio');
+var msg = window.blockly.appLocale;
 var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
-var commonMsg = require('../../locale/current/common');
+var commonMsg = window.blockly.locale;
 var codegen = require('../codegen');
 var functionalBlockUtils = require('../functionalBlockUtils');
 var installFunctionalApiCallBlock =

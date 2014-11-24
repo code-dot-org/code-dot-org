@@ -1,6 +1,6 @@
 /*jshint multistr: true */
 
-var msg = require('../../locale/current/studio');
+var msg = window.blockly.appLocale;
 var utils = require('../utils');
 var blockUtils = require('../block_utils');
 var tiles = require('./tiles');

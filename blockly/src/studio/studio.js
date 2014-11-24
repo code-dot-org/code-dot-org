@@ -8,8 +8,8 @@
 'use strict';
 
 var BlocklyApps = require('../base');
-var commonMsg = require('../../locale/current/common');
-var studioMsg = require('../../locale/current/studio');
+var commonMsg = window.blockly.locale;
+var studioMsg = window.blockly.appLocale;
 var skins = require('../skins');
 var tiles = require('./tiles');
 var codegen = require('../codegen');
@@ -194,8 +194,8 @@ function loadLevel() {
   Studio.MARKER_HEIGHT = 100;
   Studio.MARKER_WIDTH = 100;
 
-  Studio.MAZE_WIDTH = Studio.SQUARE_SIZE * Studio.COLS;
-  Studio.MAZE_HEIGHT = Studio.SQUARE_SIZE * Studio.ROWS;
+  BlocklyApps.MAZE_WIDTH = Studio.MAZE_WIDTH = Studio.SQUARE_SIZE * Studio.COLS;
+  BlocklyApps.MAZE_HEIGHT = Studio.MAZE_HEIGHT = Studio.SQUARE_SIZE * Studio.ROWS;
 }
 
 /**

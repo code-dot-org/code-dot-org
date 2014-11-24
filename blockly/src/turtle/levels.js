@@ -1,7 +1,7 @@
 var levelBase = require('../level_base');
 var Colours = require('./core').Colours;
 var answer = require('./answers').answer;
-var msg = require('../../locale/current/turtle');
+var msg = window.blockly.appLocale;
 var blockUtils = require('../block_utils');
 var utils = require('../utils');
 
