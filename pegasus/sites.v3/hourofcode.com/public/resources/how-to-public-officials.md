@@ -22,9 +22,8 @@ nav: resources_nav
 	- Last year 15 million students tried one #HourOfCode. Half were girls. This year, let’s get to 100 million. #HourOfCode [http://hourofcode.com](http://hourofcode.com)
 	- Every student, boy or girl, should have the chance to learn computer science. Join us in starting with one #HourOfCode [http://hourofcode.com](http://hourofcode.com)
 	- Today, we're proud to join the Hour of Code movement. Are you in? #HourOfCode [http://hourofcode.com](http://hourofcode.com).
-<br/>
-<br/>
-Issue a press release, <a href="<%= hoc_uri('/resources/official-press-release') %>"use this sample"</a>.
-<br/>
+<br />
+<br />
+7. **Issue a press release.** <a href="<%= hoc_uri('/resources/official-press-release') %>">Use this sample</a> as a guide.
 
-7. **Connect locally.** Visit [http://code.org/promote](http://code.org/promote) to learn more about computer science education in your state. Sign the petition there and you’ll get updates from Code.org on their local, state and federal advocacy efforts.
+8. **Connect locally.** Visit [http://code.org/promote](http://code.org/promote) to learn more about computer science education in your state. Sign the petition there and you’ll get updates from Code.org on their local, state and federal advocacy efforts.
