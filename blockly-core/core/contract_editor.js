@@ -28,8 +28,19 @@ Blockly.ContractEditor = function() {
   this.inputTypeSelector = null;
   /** @type {goog.ui.Select} */
   this.outputTypeSelector = null;
+
+  /**
+   * Example blocks in this modal dialog
+   * @type {?Array.<Blockly.Block>}
+   * @private
+   */
+  this.exampleBlocks_ = [];
 };
 goog.inherits(Blockly.ContractEditor, Blockly.FunctionEditor);
+
+Blockly.ContractEditor.DEFAULT_NUM_EXAMPLES_TO_ADD = 0;
+Blockly.ContractEditor.EXAMPLE_BLOCK_TYPE = 'functional_example';
+Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME = 'ACTUAL';
 
 Blockly.ContractEditor.typesToColors = {
   'none': [0, 0, 0.6],
@@ -41,6 +52,29 @@ Blockly.ContractEditor.typesToColors = {
 
 Blockly.ContractEditor.prototype.definitionBlockType = 'functional_definition';
 Blockly.ContractEditor.prototype.parameterBlockType = 'functional_parameters_get';
+
+Blockly.ContractEditor.prototype.openWithNewFunction = function(opt_blockCreationCallback) {
+  Blockly.ContractEditor.superClass_.openWithNewFunction.call(this, opt_blockCreationCallback);
+
+  for (var i = 0; i < Blockly.ContractEditor.DEFAULT_NUM_EXAMPLES_TO_ADD; i++) {
+    this.exampleBlocks_.push(this.createAndAddExampleBlock_());
+  }
+};
+
+/**
+ * Creates a new example block in the modal BlockSpace
+ * @returns {Blockly.Block} the newly added block
+ * @private
+ */
+Blockly.ContractEditor.prototype.createAndAddExampleBlock_ = function () {
+  var temporaryExampleBlock = Blockly.Xml.domToBlock_(Blockly.mainBlockSpace,
+    Blockly.createSvgElement('block', {type: Blockly.ContractEditor.EXAMPLE_BLOCK_TYPE}));
+  var caller = Blockly.Procedures.createCallerFromDefinition(Blockly.mainBlockSpace,
+    this.functionDefinitionBlock);
+  temporaryExampleBlock.attachBlockToInputName(
+    caller, Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME);
+  return this.moveToModalBlockSpace_(temporaryExampleBlock);
+};
 
 /**
  * @override
