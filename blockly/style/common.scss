@@ -541,6 +541,21 @@ $aniGifPreviewHeight: 60px;
   }
 }
 
+#headers[dir=rtl] {
+  div {
+    margin-right: 0;
+    margin-left: -4px;
+  }
+  #toolbox-header {
+    border-right: 0;
+    border-left: 1px solid gray;
+  }
+  #show-code-header {
+    border-left: 0;
+    border-right: 1px solid gray;
+  }
+}
+
 #rotateContainer {
   position: fixed;
   z-index: 10001;
