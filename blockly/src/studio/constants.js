@@ -167,3 +167,9 @@ exports.SquareType = {
   SPRITEFINISH: 1,
   SPRITESTART: 16
 };
+
+
+exports.RANDOM_VALUE = 'random';
+exports.HIDDEN_VALUE = '"hidden"';
+exports.CLICK_VALUE = '"click"';
+exports.VISIBLE_VALUE = '"visible"';

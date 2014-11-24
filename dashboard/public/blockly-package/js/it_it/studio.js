@@ -13343,7 +13343,7 @@ Slider.bindEvent_ = function(element, name, func) {
 module.exports = Slider;
 
 },{"./dom":13}],22:[function(require,module,exports){
-var tiles = require('./tiles');
+var constants = require('./constants');
 
 exports.SpriteSpeed = {
   VERY_SLOW: 2,
@@ -13490,7 +13490,7 @@ exports.attachEventHandler = function (id, eventName, func) {
   });
 };
 
-},{"./tiles":32}],23:[function(require,module,exports){
+},{"./constants":25}],23:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -13505,21 +13505,20 @@ var commonMsg = require('../../locale/it_it/common');
 var codegen = require('../codegen');
 var functionalBlockUtils = require('../functionalBlockUtils');
 var installFunctionalApiCallBlock =
-    functionalBlockUtils.installFunctionalApiCallBlock;
+  functionalBlockUtils.installFunctionalApiCallBlock;
 var initTitledFunctionalBlock = functionalBlockUtils.initTitledFunctionalBlock;
-var tiles = require('./tiles');
+var constants = require('./constants');
 var utils = require('../utils');
 var _ = utils.getLodash();
 
-var Direction = tiles.Direction;
-var Position = tiles.Position;
-var Emotions = tiles.Emotions;
+var Direction = constants.Direction;
+var Position = constants.Position;
+var Emotions = constants.Emotions;
 
-var RANDOM_VALUE = 'random';
-var HIDDEN_VALUE = '"hidden"';
-var CLICK_VALUE = '"click"';
-var VISIBLE_VALUE = '"visible"';
-var CAVE_VALUE = '"cave"';
+var RANDOM_VALUE = constants.RANDOM_VALUE;
+var HIDDEN_VALUE = constants.HIDDEN_VALUE;
+var CLICK_VALUE = constants.CLICK_VALUE;
+var VISIBLE_VALUE = constants.VISIBLE_VALUE;
 
 var generateSetterCode = function (opts) {
   var value = opts.ctx.getTitleValue('VALUE');
@@ -13839,6 +13838,7 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
+  // todo (brent) - per skin
   blockly.Blocks.studio_whenSpriteCollided.GROUPINGS =
       [[msg.whenSpriteCollidedWithAnything(), 'anything'],
        [msg.whenSpriteCollidedWithAnyActor(), 'any_actor'],
@@ -13921,7 +13921,7 @@ exports.install = function(blockly, blockInstallOptions) {
           .appendTitle(msg.throwSprite());
       }
       this.appendDummyInput()
-        .appendTitle(new blockly.FieldDropdown(this.VALUES), 'VALUE');
+        .appendTitle(new blockly.FieldDropdown(skin.projectileChoices), 'VALUE');
       this.appendDummyInput()
         .appendTitle('\t');
       this.appendDummyInput()
@@ -13940,15 +13940,6 @@ exports.install = function(blockly, blockInstallOptions) {
          [msg.moveDirectionRight(), Direction.EAST.toString()],
          [msg.moveDirectionRandom(), 'random']];
 
-  blockly.Blocks.studio_throw.VALUES =
-        [[msg.projectileBlueFireball(), '"blue_fireball"'],
-         [msg.projectilePurpleFireball(), '"purple_fireball"'],
-         [msg.projectileRedFireball(), '"red_fireball"'],
-         [msg.projectileYellowHearts(), '"yellow_hearts"'],
-         [msg.projectilePurpleHearts(), '"purple_hearts"'],
-         [msg.projectileRedHearts(), '"red_hearts"'],
-         [msg.projectileRandom(), 'random']];
-
   generator.studio_throw = function() {
     // Generate JavaScript for throwing a projectile from a sprite.
     var allDirections = this.DIR.slice(0, -1).map(function (item) {
@@ -13958,7 +13949,7 @@ exports.install = function(blockly, blockInstallOptions) {
     if (dirParam === 'random') {
       dirParam = 'Studio.random([' + allDirections + '])';
     }
-    var allValues = this.VALUES.slice(0, -1).map(function (item) {
+    var allValues = skin.projectileChoices.slice(0, -1).map(function (item) {
       return item[1];
     });
     var valParam = this.getTitleValue('VALUE');
@@ -14674,56 +14665,23 @@ exports.install = function(blockly, blockInstallOptions) {
       var dropdown;
       if (isK1) {
         dropdown = new blockly.FieldImageDropdown(
-                                  this.IMAGE_CHOICES,
+                                  skin.backgroundChoicesK1,
                                   skin.dropdownThumbnailWidth,
                                   skin.dropdownThumbnailHeight);
         this.appendDummyInput()
           .appendTitle(msg.setBackground())
           .appendTitle(dropdown, 'VALUE');
       } else {
-        dropdown = new blockly.FieldDropdown(this.VALUES);
+        dropdown = new blockly.FieldDropdown(skin.backgroundChoices);
         this.appendDummyInput().appendTitle(dropdown, 'VALUE');
       }
-      dropdown.setValue(CAVE_VALUE);  // default to cave
+      dropdown.setValue('"' + skin.defaultBackground + '"');
       this.setInputsInline(true);
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.setBackgroundTooltip());
     }
   };
-
-  blockly.Blocks.studio_setBackground.VALUES =
-      [[msg.setBackgroundRandom(), RANDOM_VALUE],
-       [msg.setBackgroundCave(), CAVE_VALUE],
-       [msg.setBackgroundNight(), '"night"'],
-       [msg.setBackgroundCloudy(), '"cloudy"'],
-       [msg.setBackgroundUnderwater(), '"underwater"'],
-       [msg.setBackgroundHardcourt(), '"hardcourt"'],
-       [msg.setBackgroundBlack(), '"black"'],
-       [msg.setBackgroundCity(), '"city"'],
-       [msg.setBackgroundDesert(), '"desert"'],
-       [msg.setBackgroundRainbow(), '"rainbow"'],
-       [msg.setBackgroundSoccer(), '"soccer"'],
-       [msg.setBackgroundSpace(), '"space"'],
-       [msg.setBackgroundTennis(), '"tennis"'],
-       [msg.setBackgroundWinter(), '"winter"']
-       ];
-
-  blockly.Blocks.studio_setBackground.IMAGE_CHOICES =
-      [[skin.cave.background, CAVE_VALUE],
-       [skin.night.background, '"night"'],
-       [skin.cloudy.background, '"cloudy"'],
-       [skin.underwater.background, '"underwater"'],
-       [skin.hardcourt.background, '"hardcourt"'],
-       [skin.black.background, '"black"'],
-       [skin.city.background, '"city"'],
-       [skin.desert.background, '"desert"'],
-       [skin.rainbow.background, '"rainbow"'],
-       [skin.soccer.background, '"soccer"'],
-       [skin.space.background, '"space"'],
-       [skin.tennis.background, '"tennis"'],
-       [skin.winter.background, '"winter"'],
-       [skin.randomPurpleIcon, RANDOM_VALUE]];
 
   generator.studio_setBackground = function() {
     return generateSetterCode({ctx: this, name: 'setBackground'});
@@ -14829,8 +14787,9 @@ exports.install = function(blockly, blockInstallOptions) {
     blockly.Blocks.studio_setSprite = {
       helpUrl: '',
       init: function() {
-        var dropdown = new blockly.FieldDropdown(this.VALUES);
-        dropdown.setValue(this.VALUES[2][1]);  // default to witch
+        var dropdown = new blockly.FieldDropdown(skin.spriteChoices);
+        // default to first item after random/hidden
+        dropdown.setValue(skin.spriteChoices[2][1]);
 
         this.setHSV(312, 0.32, 0.62);
         if (spriteCount > 1) {
@@ -14852,8 +14811,9 @@ exports.install = function(blockly, blockInstallOptions) {
     blockly.Blocks.studio_setSpriteParams = {
       helpUrl: '',
       init: function() {
-        var dropdown = new blockly.FieldDropdown(this.VALUES);
-        dropdown.setValue(this.VALUES[2][1]);  // default to witch
+        var dropdown = new blockly.FieldDropdown(skin.spriteChoices);
+        // default to first item after random/hidden
+        dropdown.setValue(skin.spriteChoices[2][1]);
 
         this.setHSV(312, 0.32, 0.62);
         this.appendValueInput('SPRITE')
@@ -14867,39 +14827,6 @@ exports.install = function(blockly, blockInstallOptions) {
         this.setTooltip(msg.setSpriteTooltip());
       }
     };
-
-    blockly.Blocks.studio_setSpriteParams.VALUES =
-        blockly.Blocks.studio_setSprite.VALUES =
-        [[msg.setSpriteHidden(), HIDDEN_VALUE],
-         [msg.setSpriteRandom(), RANDOM_VALUE],
-         [msg.setSpriteWitch(), '"witch"'],
-         [msg.setSpriteCat(), '"cat"'],
-         [msg.setSpriteDinosaur(), '"dinosaur"'],
-         [msg.setSpriteDog(), '"dog"'],
-         [msg.setSpriteOctopus(), '"octopus"'],
-         [msg.setSpritePenguin(), '"penguin"'],
-         [msg.setSpriteBat(), '"bat"'],
-         [msg.setSpriteBird(), '"bird"'],
-         [msg.setSpriteDragon(), '"dragon"'],
-         [msg.setSpriteSquirrel(), '"squirrel"'],
-         [msg.setSpriteWizard(), '"wizard"'],
-         [msg.setSpriteAlien(), '"alien"'],
-         [msg.setSpriteGhost(), '"ghost"'],
-         [msg.setSpriteMonster(), '"monster"'],
-         [msg.setSpriteRobot(), '"robot"'],
-         [msg.setSpriteUnicorn(), '"unicorn"'],
-         [msg.setSpriteZombie(), '"zombie"'],
-         [msg.setSpriteKnight(), '"knight"'],
-         [msg.setSpriteNinja(), '"ninja"'],
-         [msg.setSpritePirate(), '"pirate"'],
-         [msg.setSpriteCaveBoy(), '"caveboy"'],
-         [msg.setSpriteCaveGirl(), '"cavegirl"'],
-         [msg.setSpritePrincess(), '"princess"'],
-         [msg.setSpriteSpacebot(), '"spacebot"'],
-         [msg.setSpriteSoccerGirl(), '"soccergirl"'],
-         [msg.setSpriteSoccerBoy(), '"soccerboy"'],
-         [msg.setSpriteTennisGirl(), '"tennisgirl"'],
-         [msg.setSpriteTennisBoy(), '"tennisboy"']];
   }
 
   generator.studio_setSprite = function() {
@@ -15219,21 +15146,7 @@ exports.install = function(blockly, blockInstallOptions) {
   // english if not connected to the functional_setBackground block.
   // TODO(i18n): translate these strings in the Studio.setBackground
   // API instead of here.
-  var functional_background_values = [
-    [msg.backgroundCave(), 'cave'],
-    [msg.backgroundNight(), 'night'],
-    [msg.backgroundCloudy(), 'cloudy'],
-    [msg.backgroundUnderwater(), 'underwater'],
-    [msg.backgroundHardcourt(), 'hardcourt'],
-    [msg.backgroundBlack(), 'black'],
-    [msg.backgroundCity(), 'city'],
-    [msg.backgroundDesert(), 'desert'],
-    [msg.backgroundRainbow(), 'rainbow'],
-    [msg.backgroundSoccer(), 'soccer'],
-    [msg.backgroundSpace(), 'space'],
-    [msg.backgroundTennis(), 'tennis'],
-    [msg.backgroundWinter(), 'winter']
-  ];
+  var functional_background_values = skin.backgroundChoices.slice(1);
 
   functionalBlockUtils.installStringPicker(blockly, generator, {
     blockName: 'functional_background_string_picker',
@@ -15287,7 +15200,7 @@ function installVanish(blockly, generator, spriteNumberTextDropdown, startingSpr
   };
 }
 
-},{"../../locale/it_it/common":48,"../../locale/it_it/studio":49,"../codegen":11,"../functionalBlockUtils":15,"../sharedFunctionalBlocks":19,"../utils":46,"./tiles":32}],24:[function(require,module,exports){
+},{"../../locale/it_it/common":48,"../../locale/it_it/studio":49,"../codegen":11,"../functionalBlockUtils":15,"../sharedFunctionalBlocks":19,"../utils":46,"./constants":25}],24:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -15298,7 +15211,7 @@ function installVanish(blockly, generator, spriteNumberTextDropdown, startingSpr
 'use strict';
 
 var Studio = require('./studio');
-var Direction = require('./tiles').Direction;
+var Direction = require('./constants').Direction;
 
 //
 // Collidable constructor
@@ -15393,7 +15306,184 @@ Collidable.prototype.outOfBounds = function () {
          (this.y > Studio.MAZE_HEIGHT + (this.height / 2));
 };
 
-},{"./studio":31,"./tiles":32}],25:[function(require,module,exports){
+},{"./constants":25,"./studio":32}],25:[function(require,module,exports){
+'use strict';
+
+exports.Direction = {
+  NONE: 0,
+  NORTH: 1,
+  EAST: 2,
+  SOUTH: 4,
+  WEST: 8,
+  NORTHEAST: 3,
+  SOUTHEAST: 6,
+  SOUTHWEST: 12,
+  NORTHWEST: 9
+};
+
+var Dir = exports.Direction;
+
+/**
+ * Given a direction, returns the unit vector for it. Currently only supports
+ * cardinal directions.
+ */
+var UNIT_VECTOR = {};
+UNIT_VECTOR[Dir.NORTH] = { x: 0, y:-1};
+UNIT_VECTOR[Dir.EAST]  = { x: 1, y: 0};
+UNIT_VECTOR[Dir.SOUTH] = { x: 0, y: 1};
+UNIT_VECTOR[Dir.WEST]  = { x:-1, y: 0};
+exports.Direction.getUnitVector = function (dir) {
+  return UNIT_VECTOR[dir];
+};
+
+
+exports.Position = {
+  OUTTOPOUTLEFT:    1,
+  OUTTOPLEFT:       2,
+  OUTTOPCENTER:     3,
+  OUTTOPRIGHT:      4,
+  OUTTOPOUTRIGHT:   5,
+  TOPOUTLEFT:       6,
+  TOPLEFT:          7,
+  TOPCENTER:        8,
+  TOPRIGHT:         9,
+  TOPOUTRIGHT:      10,
+  MIDDLEOUTLEFT:    11,
+  MIDDLELEFT:       12,
+  MIDDLECENTER:     13,
+  MIDDLERIGHT:      14,
+  MIDDLEOUTRIGHT:   15,
+  BOTTOMOUTLEFT:    16,
+  BOTTOMLEFT:       17,
+  BOTTOMCENTER:     18,
+  BOTTOMRIGHT:      19,
+  BOTTOMOUTRIGHT:   20,
+  OUTBOTTOMOUTLEFT: 21,
+  OUTBOTTOMLEFT:    22,
+  OUTBOTTOMCENTER:  23,
+  OUTBOTTOMRIGHT:   24,
+  OUTBOTTOMOUTRIGHT:25
+};
+
+//
+// Turn state machine, use as NextTurn[fromDir][toDir]
+//
+
+
+exports.NextTurn = {};
+
+exports.NextTurn[Dir.NORTH] = {};
+exports.NextTurn[Dir.NORTH][Dir.NORTH] = Dir.NORTH;
+exports.NextTurn[Dir.NORTH][Dir.EAST] = Dir.NORTHEAST;
+exports.NextTurn[Dir.NORTH][Dir.SOUTH] = Dir.NORTHEAST;
+exports.NextTurn[Dir.NORTH][Dir.WEST] = Dir.NORTHWEST;
+exports.NextTurn[Dir.NORTH][Dir.NORTHEAST] = Dir.NORTHEAST;
+exports.NextTurn[Dir.NORTH][Dir.SOUTHEAST] = Dir.NORTHEAST;
+exports.NextTurn[Dir.NORTH][Dir.SOUTHWEST] = Dir.NORTHWEST;
+exports.NextTurn[Dir.NORTH][Dir.NORTHWEST] = Dir.NORTHWEST;
+
+exports.NextTurn[Dir.EAST] = {};
+exports.NextTurn[Dir.EAST][Dir.NORTH] = Dir.NORTHEAST;
+exports.NextTurn[Dir.EAST][Dir.EAST] = Dir.EAST;
+exports.NextTurn[Dir.EAST][Dir.SOUTH] = Dir.SOUTHEAST;
+exports.NextTurn[Dir.EAST][Dir.WEST] = Dir.SOUTHEAST;
+exports.NextTurn[Dir.EAST][Dir.NORTHEAST] = Dir.NORTHEAST;
+exports.NextTurn[Dir.EAST][Dir.SOUTHEAST] = Dir.SOUTHEAST;
+exports.NextTurn[Dir.EAST][Dir.SOUTHWEST] = Dir.SOUTHEAST;
+exports.NextTurn[Dir.EAST][Dir.NORTHWEST] = Dir.NORTHEAST;
+
+exports.NextTurn[Dir.SOUTH] = {};
+exports.NextTurn[Dir.SOUTH][Dir.NORTH] = Dir.SOUTHEAST;
+exports.NextTurn[Dir.SOUTH][Dir.EAST] = Dir.SOUTHEAST;
+exports.NextTurn[Dir.SOUTH][Dir.SOUTH] = Dir.SOUTH;
+exports.NextTurn[Dir.SOUTH][Dir.WEST] = Dir.SOUTHWEST;
+exports.NextTurn[Dir.SOUTH][Dir.NORTHEAST] = Dir.SOUTHEAST;
+exports.NextTurn[Dir.SOUTH][Dir.SOUTHEAST] = Dir.SOUTHEAST;
+exports.NextTurn[Dir.SOUTH][Dir.SOUTHWEST] = Dir.SOUTHWEST;
+exports.NextTurn[Dir.SOUTH][Dir.NORTHWEST] = Dir.SOUTHWEST;
+
+exports.NextTurn[Dir.WEST] = {};
+exports.NextTurn[Dir.WEST][Dir.NORTH] = Dir.NORTHWEST;
+exports.NextTurn[Dir.WEST][Dir.EAST] = Dir.SOUTHWEST;
+exports.NextTurn[Dir.WEST][Dir.SOUTH] = Dir.SOUTHWEST;
+exports.NextTurn[Dir.WEST][Dir.WEST] = Dir.WEST;
+exports.NextTurn[Dir.WEST][Dir.NORTHEAST] = Dir.NORTHWEST;
+exports.NextTurn[Dir.WEST][Dir.SOUTHEAST] = Dir.SOUTHWEST;
+exports.NextTurn[Dir.WEST][Dir.SOUTHWEST] = Dir.SOUTHWEST;
+exports.NextTurn[Dir.WEST][Dir.NORTHWEST] = Dir.NORTHWEST;
+
+exports.NextTurn[Dir.NORTHEAST] = {};
+exports.NextTurn[Dir.NORTHEAST][Dir.NORTH] = Dir.NORTH;
+exports.NextTurn[Dir.NORTHEAST][Dir.EAST] = Dir.EAST;
+exports.NextTurn[Dir.NORTHEAST][Dir.SOUTH] = Dir.EAST;
+exports.NextTurn[Dir.NORTHEAST][Dir.WEST] = Dir.NORTH;
+exports.NextTurn[Dir.NORTHEAST][Dir.NORTHEAST] = Dir.NORTHEAST;
+exports.NextTurn[Dir.NORTHEAST][Dir.SOUTHEAST] = Dir.EAST;
+exports.NextTurn[Dir.NORTHEAST][Dir.SOUTHWEST] = Dir.EAST;
+exports.NextTurn[Dir.NORTHEAST][Dir.NORTHWEST] = Dir.NORTH;
+
+exports.NextTurn[Dir.SOUTHEAST] = {};
+exports.NextTurn[Dir.SOUTHEAST][Dir.NORTH] = Dir.EAST;
+exports.NextTurn[Dir.SOUTHEAST][Dir.EAST] = Dir.EAST;
+exports.NextTurn[Dir.SOUTHEAST][Dir.SOUTH] = Dir.SOUTH;
+exports.NextTurn[Dir.SOUTHEAST][Dir.WEST] = Dir.SOUTH;
+exports.NextTurn[Dir.SOUTHEAST][Dir.NORTHEAST] = Dir.EAST;
+exports.NextTurn[Dir.SOUTHEAST][Dir.SOUTHEAST] = Dir.SOUTHEAST;
+exports.NextTurn[Dir.SOUTHEAST][Dir.SOUTHWEST] = Dir.SOUTH;
+exports.NextTurn[Dir.SOUTHEAST][Dir.NORTHWEST] = Dir.SOUTH;
+
+exports.NextTurn[Dir.SOUTHWEST] = {};
+exports.NextTurn[Dir.SOUTHWEST][Dir.NORTH] = Dir.WEST;
+exports.NextTurn[Dir.SOUTHWEST][Dir.EAST] = Dir.SOUTH;
+exports.NextTurn[Dir.SOUTHWEST][Dir.SOUTH] = Dir.SOUTH;
+exports.NextTurn[Dir.SOUTHWEST][Dir.WEST] = Dir.WEST;
+exports.NextTurn[Dir.SOUTHWEST][Dir.NORTHEAST] = Dir.SOUTH;
+exports.NextTurn[Dir.SOUTHWEST][Dir.SOUTHEAST] = Dir.SOUTH;
+exports.NextTurn[Dir.SOUTHWEST][Dir.SOUTHWEST] = Dir.SOUTHWEST;
+exports.NextTurn[Dir.SOUTHWEST][Dir.NORTHWEST] = Dir.WEST;
+
+exports.NextTurn[Dir.NORTHWEST] = {};
+exports.NextTurn[Dir.NORTHWEST][Dir.NORTH] = Dir.NORTH;
+exports.NextTurn[Dir.NORTHWEST][Dir.EAST] = Dir.NORTH;
+exports.NextTurn[Dir.NORTHWEST][Dir.SOUTH] = Dir.WEST;
+exports.NextTurn[Dir.NORTHWEST][Dir.WEST] = Dir.WEST;
+exports.NextTurn[Dir.NORTHWEST][Dir.NORTHEAST] = Dir.NORTH;
+exports.NextTurn[Dir.NORTHWEST][Dir.SOUTHEAST] = Dir.WEST;
+exports.NextTurn[Dir.NORTHWEST][Dir.SOUTHWEST] = Dir.WEST;
+exports.NextTurn[Dir.NORTHWEST][Dir.NORTHWEST] = Dir.NORTHWEST;
+
+
+exports.Emotions = {
+  NORMAL: 0,
+  HAPPY: 1,
+  ANGRY: 2,
+  SAD: 3
+};
+
+// scale the collision bounding box to make it so they need to overlap a touch:
+exports.FINISH_COLLIDE_DISTANCE_SCALING = 0.75;
+exports.SPRITE_COLLIDE_DISTANCE_SCALING = 0.9;
+exports.DEFAULT_SPRITE_SPEED = 5;
+exports.DEFAULT_SPRITE_SIZE = 1;
+
+/**
+ * The types of squares in the maze, which is represented
+ * as a 2D array of SquareType values.
+ * @enum {number}
+ */
+exports.SquareType = {
+  OPEN: 0,
+  SPRITEFINISH: 1,
+  SPRITESTART: 16
+};
+
+
+exports.RANDOM_VALUE = 'random';
+exports.HIDDEN_VALUE = '"hidden"';
+exports.CLICK_VALUE = '"click"';
+exports.VISIBLE_VALUE = '"visible"';
+
+},{}],26:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -15414,7 +15504,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/it_it/common":48,"ejs":50}],26:[function(require,module,exports){
+},{"../../locale/it_it/common":48,"ejs":50}],27:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -15435,15 +15525,15 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale/it_it/common":48,"ejs":50}],27:[function(require,module,exports){
+},{"../../locale/it_it/common":48,"ejs":50}],28:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('../../locale/it_it/studio');
 var utils = require('../utils');
 var blockUtils = require('../block_utils');
-var tiles = require('./tiles');
-var Direction = tiles.Direction;
-var Emotions = tiles.Emotions;
+var constants = require('./constants');
+var Direction = constants.Direction;
+var Emotions = constants.Emotions;
 var tb = blockUtils.createToolbox;
 var blockOfType = blockUtils.blockOfType;
 var createCategory = blockUtils.createCategory;
@@ -16507,6 +16597,8 @@ levels.full_sandbox =  {
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
 
+levels.full_sandbox_infinity = utils.extend(levels.full_sandbox, {});
+
 levels.ec_sandbox = utils.extend(levels.sandbox, {
   'editCode': true,
   'codeFunctions': [
@@ -16525,7 +16617,7 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
   'startBlocks': "",
 });
 
-},{"../../locale/it_it/studio":49,"../block_utils":4,"../utils":46,"./tiles":32}],28:[function(require,module,exports){
+},{"../../locale/it_it/studio":49,"../block_utils":4,"../utils":46,"./constants":25}],29:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Studio = require('./studio');
@@ -16543,10 +16635,10 @@ window.studioMain = function(options) {
 };
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":2,"./blocks":23,"./levels":27,"./skins":30,"./studio":31}],29:[function(require,module,exports){
+},{"../appMain":2,"./blocks":23,"./levels":28,"./skins":31,"./studio":32}],30:[function(require,module,exports){
 var Collidable = require('./collidable');
-var Direction = require('./tiles').Direction;
-var tiles = require('./tiles');
+var Direction = require('./constants').Direction;
+var constants = require('./constants');
 
 var SVG_NS = "http://www.w3.org/2000/svg";
 
@@ -16613,15 +16705,14 @@ var Projectile = function (options) {
 
   this.height = options.height || 50;
   this.width = options.width || 50;
-  this.speed = options.speed || tiles.DEFAULT_SPRITE_SPEED / 2;
-
-  this.isFireball_ = this.className.indexOf('fireball') !== -1;
-  this.frames = this.isFireball_ ? 8 : 1;
+  this.speed = options.speed || constants.DEFAULT_SPRITE_SPEED / 2;
 
   this.currentFrame_ = 0;
   var self = this;
   this.animator_ = window.setInterval(function () {
-    self.currentFrame_ = (self.currentFrame_ + 1) % self.frames;
+    if (self.loop || self.currentFrame_ + 1 < self.frames) {
+      self.currentFrame_ = (self.currentFrame_ + 1) % self.frames;
+    }
   }, 50);
 
   // origin is at an offset from sprite location
@@ -16698,7 +16789,7 @@ Projectile.prototype.display = function () {
   clipRect.setAttribute('x', topLeft.x);
   clipRect.setAttribute('y', topLeft.y);
 
-  if (this.isFireball_) {
+  if (this.frames > 1) {
     this.element.setAttribute('transform', 'rotate(' + DIR_TO_ROTATION[this.dir] +
      ', ' + this.x + ', ' + this.y + ')');
   }
@@ -16718,7 +16809,7 @@ Projectile.prototype.moveToNextPosition = function () {
   this.y = next.y;
 };
 
-},{"./collidable":24,"./tiles":32}],30:[function(require,module,exports){
+},{"./collidable":24,"./constants":25}],31:[function(require,module,exports){
 /**
  * Load Skin for Studio.
  */
@@ -16727,15 +16818,85 @@ Projectile.prototype.moveToNextPosition = function () {
 // specified, otherwise, use background.png.
 
 var skinsBase = require('../skins');
+var msg = require('../../locale/it_it/studio');
+var constants = require('./constants');
 
-var CONFIGS = {
-  studio: {
-  }
-};
+var RANDOM_VALUE = constants.RANDOM_VALUE;
+var HIDDEN_VALUE = constants.HIDDEN_VALUE;
+var CLICK_VALUE = constants.CLICK_VALUE;
+var VISIBLE_VALUE = constants.VISIBLE_VALUE;
 
-exports.load = function(assetUrl, id) {
-  var skin = skinsBase.load(assetUrl, id);
-  var config = CONFIGS[skin.id];
+
+function loadInfinity(skin, assetUrl) {
+  skin.defaultBackground = 'leafy';
+  skin.projectileFrames = 10;
+
+  skin.avatarList = ['anna', 'elsa', 'hiro', 'baymax', 'rapunzel'];
+  skin.avatarList.forEach(function (name) {
+    skin[name] = {
+      sprite: skin.assetUrl('avatar_' + name + '.png'),
+      dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
+      frameCounts: {
+        normal: 20,
+        animation: 0,
+        turns: 7,
+        emotions: 0
+      },
+      timePerFrame: 100
+    };
+  });
+
+  skin.preventProjectileLoop = function (className) {
+    return className === 'projectile_hiro';
+  };
+
+  skin.projectile_hiro = skin.assetUrl('projectile_hiro.png');
+  skin.projectile_anna = skin.assetUrl('projectile_anna.png');
+  skin.projectile_elsa = skin.assetUrl('projectile_elsa.png');
+  skin.projectile_baymax = skin.assetUrl('projectile_baymax.png');
+  skin.projectile_rapunzel = skin.assetUrl('projectile_rapunzel.png');
+
+  skin.leafy = {
+    background: skin.assetUrl('background1.png')
+  };
+  skin.grassy = {
+    background: skin.assetUrl('background2.png')
+  };
+
+  // These are used by blocks.js to customize our dropdown blocks across skins
+  skin.backgroundChoices = [
+    [msg.setBackgroundRandom(), RANDOM_VALUE],
+    // todo - come up with better names and i18n
+    ["set leafy background", '"leafy"'],
+    ["set grassy background", '"grassy"']];
+
+  skin.backgroundChoicesK1 = [
+    [skin.randomPurpleIcon, RANDOM_VALUE],
+    ["set leafy background", '"leafy"'],
+    ["set grassy background", '"grassy"']];
+
+  skin.spriteChoices = [
+    [msg.setSpriteHidden(), HIDDEN_VALUE],
+    [msg.setSpriteRandom(), RANDOM_VALUE],
+    [msg.setSpriteAnna(), '"anna"'],
+    [msg.setSpriteElsa(), '"elsa"'],
+    [msg.setSpriteHiro(), '"hiro"'],
+    [msg.setSpriteBaymax(), '"baymax"'],
+    [msg.setSpriteRapunzel(), '"rapunzel"']];
+
+  // todo - i18n
+  skin.projectileChoices = [
+    [msg.projectileHiro(), '"projectile_hiro"'],
+    [msg.projectileAnna(), '"projectile_anna"'],
+    [msg.projectileElsa(), '"projectile_elsa"'],
+    [msg.projectileBaymax(), '"projectile_baymax"'],
+    [msg.projectileRapunzel(), '"projectile_rapunzel"'],
+    [msg.projectileRandom(), RANDOM_VALUE]];
+}
+
+function loadStudio(skin, assetUrl) {
+  skin.defaultBackground = 'cave';
+  skin.projectileFrames = 8;
 
   skin.hardcourt = {
     background: skin.assetUrl('background.png'),
@@ -16795,9 +16956,93 @@ exports.load = function(assetUrl, id) {
     skin[name] = {
       sprite: skin.assetUrl(name + '_spritesheet_200px.png'),
       dropdownThumbnail: skin.assetUrl(name + '_thumb.png'),
-      spriteFlags: 28  // flags: emotions, animation, turns
+      frameCounts: {
+        normal: 1,
+        animation: 1,
+        turns: 7,
+        emotions: 3
+      }
     };
   });
+
+
+  skin.backgroundChoices = [
+    [msg.setBackgroundRandom(), RANDOM_VALUE],
+    [msg.setBackgroundCave(), '"cave"'],
+    [msg.setBackgroundNight(), '"night"'],
+    [msg.setBackgroundCloudy(), '"cloudy"'],
+    [msg.setBackgroundUnderwater(), '"underwater"'],
+    [msg.setBackgroundHardcourt(), '"hardcourt"'],
+    [msg.setBackgroundBlack(), '"black"'],
+    [msg.setBackgroundCity(), '"city"'],
+    [msg.setBackgroundDesert(), '"desert"'],
+    [msg.setBackgroundRainbow(), '"rainbow"'],
+    [msg.setBackgroundSoccer(), '"soccer"'],
+    [msg.setBackgroundSpace(), '"space"'],
+    [msg.setBackgroundTennis(), '"tennis"'],
+    [msg.setBackgroundWinter(), '"winter"']];
+
+  skin.backgroundChoicesK1 = [
+    [skin.cave.background, '"cave"'],
+    [skin.night.background, '"night"'],
+    [skin.cloudy.background, '"cloudy"'],
+    [skin.underwater.background, '"underwater"'],
+    [skin.hardcourt.background, '"hardcourt"'],
+    [skin.black.background, '"black"'],
+    [skin.city.background, '"city"'],
+    [skin.desert.background, '"desert"'],
+    [skin.rainbow.background, '"rainbow"'],
+    [skin.soccer.background, '"soccer"'],
+    [skin.space.background, '"space"'],
+    [skin.tennis.background, '"tennis"'],
+    [skin.winter.background, '"winter"'],
+    [skin.randomPurpleIcon, RANDOM_VALUE]];
+
+  skin.spriteChoices = [
+    [msg.setSpriteHidden(), HIDDEN_VALUE],
+    [msg.setSpriteRandom(), RANDOM_VALUE],
+    [msg.setSpriteWitch(), '"witch"'],
+    [msg.setSpriteCat(), '"cat"'],
+    [msg.setSpriteDinosaur(), '"dinosaur"'],
+    [msg.setSpriteDog(), '"dog"'],
+    [msg.setSpriteOctopus(), '"octopus"'],
+    [msg.setSpritePenguin(), '"penguin"'],
+    [msg.setSpriteBat(), '"bat"'],
+    [msg.setSpriteBird(), '"bird"'],
+    [msg.setSpriteDragon(), '"dragon"'],
+    [msg.setSpriteSquirrel(), '"squirrel"'],
+    [msg.setSpriteWizard(), '"wizard"'],
+    [msg.setSpriteAlien(), '"alien"'],
+    [msg.setSpriteGhost(), '"ghost"'],
+    [msg.setSpriteMonster(), '"monster"'],
+    [msg.setSpriteRobot(), '"robot"'],
+    [msg.setSpriteUnicorn(), '"unicorn"'],
+    [msg.setSpriteZombie(), '"zombie"'],
+    [msg.setSpriteKnight(), '"knight"'],
+    [msg.setSpriteNinja(), '"ninja"'],
+    [msg.setSpritePirate(), '"pirate"'],
+    [msg.setSpriteCaveBoy(), '"caveboy"'],
+    [msg.setSpriteCaveGirl(), '"cavegirl"'],
+    [msg.setSpritePrincess(), '"princess"'],
+    [msg.setSpriteSpacebot(), '"spacebot"'],
+    [msg.setSpriteSoccerGirl(), '"soccergirl"'],
+    [msg.setSpriteSoccerBoy(), '"soccerboy"'],
+    [msg.setSpriteTennisGirl(), '"tennisgirl"'],
+    [msg.setSpriteTennisBoy(), '"tennisboy"']];
+
+  skin.projectileChoices = [
+    [msg.projectileBlueFireball(), '"blue_fireball"'],
+    [msg.projectilePurpleFireball(), '"purple_fireball"'],
+    [msg.projectileRedFireball(), '"red_fireball"'],
+    [msg.projectileYellowHearts(), '"yellow_hearts"'],
+    [msg.projectilePurpleHearts(), '"purple_hearts"'],
+    [msg.projectileRedHearts(), '"red_hearts"'],
+    [msg.projectileRandom(), RANDOM_VALUE]];
+}
+
+
+exports.load = function(assetUrl, id) {
+  var skin = skinsBase.load(assetUrl, id);
 
   // Images
   skin.yellow_hearts = skin.assetUrl('yellow_hearts.gif');
@@ -16820,8 +17065,6 @@ exports.load = function(assetUrl, id) {
   skin.speechBubble = skin.assetUrl('say-sprite.png');
   skin.goal = skin.assetUrl('goal.png');
   skin.goalSuccess = skin.assetUrl('goal_success.png');
-  skin.approachingGoalAnimation =
-      skin.assetUrl(config.approachingGoalAnimation);
   // Sounds
   skin.rubberSound = [skin.assetUrl('wall.mp3'), skin.assetUrl('wall.ogg')];
   skin.flagSound = [skin.assetUrl('win_goal.mp3'),
@@ -16847,20 +17090,26 @@ exports.load = function(assetUrl, id) {
                    skin.assetUrl('2_wall_bounce.ogg')];
 
   // Settings
-  if (config.background !== undefined) {
-    var index = Math.floor(Math.random() * config.background);
-    skin.background = skin.assetUrl('background' + index + '.png');
-  } else {
-    skin.background = skin.assetUrl('background.png');
-  }
-  skin.spriteHeight = config.spriteHeight || 100;
-  skin.spriteWidth = config.spriteWidth || 100;
+  skin.background = skin.assetUrl('background.png');
+  skin.spriteHeight = 100;
+  skin.spriteWidth = 100;
   skin.dropdownThumbnailWidth = 50;
   skin.dropdownThumbnailHeight = 50;
+
+  // take care of items specific to skins
+  switch (skin.id) {
+    case 'infinity':
+      loadInfinity(skin, assetUrl);
+      break;
+    case 'studio':
+      loadStudio(skin, assetUrl);
+      break;
+  }
+
   return skin;
 };
 
-},{"../skins":20}],31:[function(require,module,exports){
+},{"../../locale/it_it/studio":49,"../skins":20,"./constants":25}],32:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *
@@ -16874,7 +17123,7 @@ var BlocklyApps = require('../base');
 var commonMsg = require('../../locale/it_it/common');
 var studioMsg = require('../../locale/it_it/studio');
 var skins = require('../skins');
-var tiles = require('./tiles');
+var constants = require('./constants');
 var codegen = require('../codegen');
 var api = require('./api');
 var blocks = require('./blocks');
@@ -16895,10 +17144,10 @@ if (typeof SVGElement !== 'undefined') { // tests don't have svgelement??
   var svgToDataUrl = require('../canvg/svg_todataurl');
 }
 
-var Direction = tiles.Direction;
-var NextTurn = tiles.NextTurn;
-var SquareType = tiles.SquareType;
-var Emotions = tiles.Emotions;
+var Direction = constants.Direction;
+var NextTurn = constants.NextTurn;
+var SquareType = constants.SquareType;
+var Emotions = constants.Emotions;
 
 var SVG_NS = "http://www.w3.org/2000/svg";
 
@@ -16914,22 +17163,6 @@ Studio.btnState = {};
 var ButtonState = {
   UP: 0,
   DOWN: 1
-};
-
-var SpriteFlags = {
-  EMOTIONS: 4,
-  ANIMATION: 8,
-  TURNS: 16
-};
-
-var SF_SKINS_MASK =
-  SpriteFlags.EMOTIONS | SpriteFlags.ANIMATION | SpriteFlags.TURNS;
-
-var SpriteCounts = {
-  NORMAL: 1,
-  ANIMATION: 1,
-  TURNS: 7,
-  EMOTIONS: 3
 };
 
 var ArrowIds = {
@@ -17051,8 +17284,6 @@ function loadLevel() {
   Studio.COLS = Studio.map[0].length;
   // Pixel height and width of each maze square (i.e. tile).
   Studio.SQUARE_SIZE = 50;
-  Studio.DEFAULT_SPRITE_HEIGHT = skin.spriteHeight;
-  Studio.DEFAULT_SPRITE_WIDTH = skin.spriteWidth;
   // Height and width of the goal and obstacles.
   Studio.MARKER_HEIGHT = 100;
   Studio.MARKER_WIDTH = 100;
@@ -17558,14 +17789,14 @@ function checkForCollisions() {
   var spriteCollisionDistance = function (i1, i2, yAxis) {
     var dim1 = yAxis ? Studio.sprite[i1].height : Studio.sprite[i1].width;
     var dim2 = yAxis ? Studio.sprite[i2].height : Studio.sprite[i2].width;
-    return tiles.SPRITE_COLLIDE_DISTANCE_SCALING * (dim1 + dim2) / 2;
+    return constants.SPRITE_COLLIDE_DISTANCE_SCALING * (dim1 + dim2) / 2;
   };
   var projectileCollisionDistance = function (iS, iP, yAxis) {
     var dim1 = yAxis ? Studio.sprite[iS].height : Studio.sprite[iS].width;
     var dim2 = yAxis ?
                   Studio.projectiles[iP].height :
                   Studio.projectiles[iP].width;
-    return tiles.SPRITE_COLLIDE_DISTANCE_SCALING * (dim1 + dim2) / 2;
+    return constants.SPRITE_COLLIDE_DISTANCE_SCALING * (dim1 + dim2) / 2;
   };
   var edgeCollisionDistance = function (iS, edgeName, yAxis) {
     var dim1 = yAxis ? Studio.sprite[iS].height : Studio.sprite[iS].width;
@@ -17745,6 +17976,7 @@ Studio.initSprites = function () {
   Studio.spriteCount = 0;
   Studio.sprite = [];
   Studio.projectiles = [];
+  Studio.startTime = null;
 
   Studio.spriteGoals_ = [];
 
@@ -17963,7 +18195,7 @@ var preloadImage = function(url) {
 var preloadBackgroundImages = function() {
   // TODO (cpirich): preload for non-blockly
   if (BlocklyApps.usingBlockly) {
-    var imageChoices = Blockly.Blocks.studio_setBackground.IMAGE_CHOICES;
+    var imageChoices = skin.backgroundChoicesK1;
     for (var i = 0; i < imageChoices.length; i++) {
       preloadImage(imageChoices[i][0]);
     }
@@ -18056,7 +18288,7 @@ BlocklyApps.reset = function(first) {
   if (level.coordinateGridBackground) {
     Studio.setBackground({value: 'grid'});
   } else {
-    Studio.setBackground({value: 'cave'});
+    Studio.setBackground({value: skin.defaultBackground});
   }
 
   // Reset currentCmdQueue and various counts:
@@ -18084,8 +18316,8 @@ BlocklyApps.reset = function(first) {
     Studio.sprite[i] = new Collidable({
       x: Studio.spriteStart_[i].x,
       y: Studio.spriteStart_[i].y,
-      speed: tiles.DEFAULT_SPRITE_SPEED,
-      size: tiles.DEFAULT_SPRITE_SIZE,
+      speed: constants.DEFAULT_SPRITE_SPEED,
+      size: constants.DEFAULT_SPRITE_SIZE,
       dir: Direction.NONE,
       displayDir: Direction.SOUTH,
       emotion: Emotions.NORMAL,
@@ -18097,7 +18329,7 @@ BlocklyApps.reset = function(first) {
 
     var opts = {
       spriteIndex: i,
-      value: Studio.startAvatars[i],
+      value: Studio.startAvatars[i % Studio.startAvatars.length],
       forceHidden: level.spritesHiddenToStart
     };
     Studio.setSprite(opts);
@@ -18140,6 +18372,7 @@ BlocklyApps.runButtonClick = function() {
   }
   BlocklyApps.reset(false);
   BlocklyApps.attempts++;
+  Studio.startTime = new Date();
   Studio.execute();
 
   if (level.freePlay && (!BlocklyApps.hideSource || level.showFinish)) {
@@ -18487,47 +18720,53 @@ var ANIM_AFTER_NUM_NORMAL_FRAMES = 8;
 // to face south.
 var TICKS_BEFORE_FACE_SOUTH = 5;
 
-var spriteFrameNumber = function (index) {
+/**
+ * Given direction/emotion/tickCount, calculate which frame number we should
+ * display for sprite.
+ */
+function spriteFrameNumber (index) {
   var sprite = Studio.sprite[index];
-  var showThisAnimFrame = 0;
-  if ((sprite.flags & SpriteFlags.TURNS) &&
-      (sprite.displayDir !== Direction.SOUTH)) {
-    return sprite.firstTurnFrameNum + frameDirTable[sprite.displayDir];
+  var frameNum = 0;
+  if (sprite.frameCounts.turns === 7 && sprite.displayDir !== Direction.SOUTH) {
+    // turn frames start after normal and animation frames
+    return sprite.frameCounts.normal + sprite.frameCounts.animation +
+      frameDirTable[sprite.displayDir];
   }
-  if ((sprite.flags & SpriteFlags.ANIMATION) &&
-      Studio.tickCount &&
-      (1 ===
-       Math.round((Studio.tickCount + index * ANIM_OFFSET) / ANIM_RATE) %
-                  ANIM_AFTER_NUM_NORMAL_FRAMES)) {
-    // we only support two-frame animation for now, the 2nd frame is only up
-    // for 1/8th of the time (since it is a blink of the eyes)
-    showThisAnimFrame = sprite.firstAnimFrameNum;
+  if (sprite.frameCounts.animation === 1 && Studio.tickCount) {
+    // we only support two-frame animation for base playlab, the 2nd frame is
+    // only up for 1/8th of the time (since it is a blink of the eyes)
+    if (1 === Math.round((Studio.tickCount + index * ANIM_OFFSET) / ANIM_RATE) %
+        ANIM_AFTER_NUM_NORMAL_FRAMES) {
+      // animation frame is the first frame after all the normal frames
+      frameNum = sprite.frameCounts.normal;
+    }
   }
-  if (sprite.emotion !== Emotions.NORMAL &&
-      sprite.flags & SpriteFlags.EMOTIONS) {
-    return showThisAnimFrame ?
-            showThisAnimFrame :
-            sprite.firstEmotionFrameNum + (sprite.emotion - 1);
-  }
-  return showThisAnimFrame;
-};
 
-var spriteTotalFrames = function (index) {
-  var frames = SpriteCounts.NORMAL;
-  if (Studio.sprite[index].flags & SpriteFlags.ANIMATION) {
-    frames += SpriteCounts.ANIMATION;
+  if (sprite.frameCounts.normal > 1 && sprite.timePerFrame) {
+    var currentTime = new Date();
+    var ellapsed = currentTime - Studio.startTime;
+
+    // Use ellapsed time instead of tickCount
+    frameNum = Math.floor(ellapsed / sprite.timePerFrame) % sprite.frameCounts.normal;
   }
-  if (Studio.sprite[index].flags & SpriteFlags.TURNS) {
-    frames += SpriteCounts.TURNS;
+
+  if (!frameNum && sprite.emotion !== Emotions.NORMAL &&
+    sprite.frameCounts.emotions > 0) {
+    // emotion frames proceed normal, animation, turn frames
+    frameNum = sprite.frameCounts.normal + sprite.frameCounts.animation +
+      sprite.frameCounts.turns + (sprite.emotion - 1);
   }
-  if (Studio.sprite[index].flags & SpriteFlags.EMOTIONS) {
-    frames += SpriteCounts.EMOTIONS;
-  }
-  return frames;
-};
+  return frameNum;
+}
+
+function spriteTotalFrames (index) {
+  var sprite = Studio.sprite[index];
+  return sprite.frameCounts.normal + sprite.frameCounts.animation +
+    sprite.frameCounts.turns + sprite.frameCounts.emotions;
+}
 
 var updateSpeechBubblePath = function (element) {
-  var height = +element.getAttribute('height');
+  var height = element.getAttribute('height');
   var onTop = 'true' === element.getAttribute('onTop');
   var onRight = 'true' === element.getAttribute('onRight');
   element.setAttribute('d',
@@ -18845,16 +19084,6 @@ Studio.setBackground = function (opts) {
     skin[opts.value].background);
 };
 
-var computeSpriteFrameNums = function (index) {
-  var flags = Studio.sprite[index].flags;
-  Studio.sprite[index].firstAnimFrameNum = SpriteCounts.NORMAL;
-  Studio.sprite[index].firstTurnFrameNum = SpriteCounts.NORMAL +
-      ((flags & SpriteFlags.ANIMATION) ? SpriteCounts.ANIMATION : 0);
-  Studio.sprite[index].firstEmotionFrameNum =
-      Studio.sprite[index].firstTurnFrameNum +
-      ((flags & SpriteFlags.TURNS) ? SpriteCounts.TURNS : 0);
-};
-
 /**
  * Sets an actor to be a specific sprite, or alternatively to be hidden.
  * @param opts.value {string} Name of sprite, or 'hidden'
@@ -18875,14 +19104,11 @@ Studio.setSprite = function (opts) {
     return;
   }
 
-  // Inherit some flags from the skin:
-  sprite.flags &= ~SF_SKINS_MASK;
-  sprite.flags |= skin[spriteValue].spriteFlags;
+  sprite.frameCounts = skin[spriteValue].frameCounts;
+  sprite.timePerFrame = skin[spriteValue].timePerFrame;
   // Reset height and width:
-  sprite.height = sprite.size *
-    (skin[spriteValue].spriteHeight || Studio.DEFAULT_SPRITE_HEIGHT);
-  sprite.width = sprite.size *
-    (skin[spriteValue].spriteWidth || Studio.DEFAULT_SPRITE_WIDTH);
+  sprite.height = sprite.size * skin.spriteHeight;
+  sprite.width = sprite.size * skin.spriteWidth;
   sprite.value = opts.forceHidden ? 'hidden' : opts.value;
 
   var spriteClipRect = document.getElementById('spriteClipRect' + spriteIndex);
@@ -18893,7 +19119,6 @@ Studio.setSprite = function (opts) {
     skin[spriteValue].sprite);
   spriteIcon.setAttribute('width', sprite.width * spriteTotalFrames(spriteIndex));
   spriteIcon.setAttribute('height', sprite.height);
-  computeSpriteFrameNums(spriteIndex);
   // call display right away since the frame number may have changed:
   Studio.displaySprite(spriteIndex);
 };
@@ -19139,10 +19364,14 @@ Studio.throwProjectile = function (options) {
     return;
   }
 
+  var preventLoop = skin.preventProjectileLoop && skin.preventProjectileLoop(options.className);
+
   var projectileOptions = {
+    frames: /.gif$/.test(skin[options.className]) ? 1 : skin.projectileFrames,
     className: options.className,
     dir: options.dir,
     image: skin[options.className],
+    loop: !preventLoop,
     spriteX: sourceSprite.x,
     spriteY: sourceSprite.y,
     spriteHeight: sourceSprite.height,
@@ -19202,35 +19431,35 @@ Studio.makeProjectile = function (opts) {
 
 var xFromPosition = function (sprite, position) {
   switch (position) {
-    case tiles.Position.OUTTOPOUTLEFT:
-    case tiles.Position.TOPOUTLEFT:
-    case tiles.Position.MIDDLEOUTLEFT:
-    case tiles.Position.BOTTOMOUTLEFT:
-    case tiles.Position.OUTBOTTOMOUTLEFT:
+    case constants.Position.OUTTOPOUTLEFT:
+    case constants.Position.TOPOUTLEFT:
+    case constants.Position.MIDDLEOUTLEFT:
+    case constants.Position.BOTTOMOUTLEFT:
+    case constants.Position.OUTBOTTOMOUTLEFT:
       return -sprite.width;
-    case tiles.Position.OUTTOPLEFT:
-    case tiles.Position.TOPLEFT:
-    case tiles.Position.MIDDLELEFT:
-    case tiles.Position.BOTTOMLEFT:
-    case tiles.Position.OUTBOTTOMLEFT:
+    case constants.Position.OUTTOPLEFT:
+    case constants.Position.TOPLEFT:
+    case constants.Position.MIDDLELEFT:
+    case constants.Position.BOTTOMLEFT:
+    case constants.Position.OUTBOTTOMLEFT:
       return 0;
-    case tiles.Position.OUTTOPCENTER:
-    case tiles.Position.TOPCENTER:
-    case tiles.Position.MIDDLECENTER:
-    case tiles.Position.BOTTOMCENTER:
-    case tiles.Position.OUTBOTTOMCENTER:
+    case constants.Position.OUTTOPCENTER:
+    case constants.Position.TOPCENTER:
+    case constants.Position.MIDDLECENTER:
+    case constants.Position.BOTTOMCENTER:
+    case constants.Position.OUTBOTTOMCENTER:
       return (Studio.MAZE_WIDTH - sprite.width) / 2;
-    case tiles.Position.OUTTOPRIGHT:
-    case tiles.Position.TOPRIGHT:
-    case tiles.Position.MIDDLERIGHT:
-    case tiles.Position.BOTTOMRIGHT:
-    case tiles.Position.OUTBOTTOMRIGHT:
+    case constants.Position.OUTTOPRIGHT:
+    case constants.Position.TOPRIGHT:
+    case constants.Position.MIDDLERIGHT:
+    case constants.Position.BOTTOMRIGHT:
+    case constants.Position.OUTBOTTOMRIGHT:
       return Studio.MAZE_WIDTH - sprite.width;
-    case tiles.Position.OUTTOPOUTRIGHT:
-    case tiles.Position.TOPOUTRIGHT:
-    case tiles.Position.MIDDLEOUTRIGHT:
-    case tiles.Position.BOTTOMOUTRIGHT:
-    case tiles.Position.OUTBOTTOMOUTRIGHT:
+    case constants.Position.OUTTOPOUTRIGHT:
+    case constants.Position.TOPOUTRIGHT:
+    case constants.Position.MIDDLEOUTRIGHT:
+    case constants.Position.BOTTOMOUTRIGHT:
+    case constants.Position.OUTBOTTOMOUTRIGHT:
       return Studio.MAZE_WIDTH;
   }
 };
@@ -19241,35 +19470,35 @@ var xFromPosition = function (sprite, position) {
 
 var yFromPosition = function (sprite, position) {
   switch (position) {
-    case tiles.Position.OUTTOPOUTLEFT:
-    case tiles.Position.OUTTOPLEFT:
-    case tiles.Position.OUTTOPCENTER:
-    case tiles.Position.OUTTOPRIGHT:
-    case tiles.Position.OUTTOPOUTRIGHT:
+    case constants.Position.OUTTOPOUTLEFT:
+    case constants.Position.OUTTOPLEFT:
+    case constants.Position.OUTTOPCENTER:
+    case constants.Position.OUTTOPRIGHT:
+    case constants.Position.OUTTOPOUTRIGHT:
       return -sprite.height;
-    case tiles.Position.TOPOUTLEFT:
-    case tiles.Position.TOPLEFT:
-    case tiles.Position.TOPCENTER:
-    case tiles.Position.TOPRIGHT:
-    case tiles.Position.TOPOUTRIGHT:
+    case constants.Position.TOPOUTLEFT:
+    case constants.Position.TOPLEFT:
+    case constants.Position.TOPCENTER:
+    case constants.Position.TOPRIGHT:
+    case constants.Position.TOPOUTRIGHT:
       return 0;
-    case tiles.Position.MIDDLEOUTLEFT:
-    case tiles.Position.MIDDLELEFT:
-    case tiles.Position.MIDDLECENTER:
-    case tiles.Position.MIDDLERIGHT:
-    case tiles.Position.MIDDLEOUTRIGHT:
+    case constants.Position.MIDDLEOUTLEFT:
+    case constants.Position.MIDDLELEFT:
+    case constants.Position.MIDDLECENTER:
+    case constants.Position.MIDDLERIGHT:
+    case constants.Position.MIDDLEOUTRIGHT:
       return (Studio.MAZE_HEIGHT - sprite.height) / 2;
-    case tiles.Position.BOTTOMOUTLEFT:
-    case tiles.Position.BOTTOMLEFT:
-    case tiles.Position.BOTTOMCENTER:
-    case tiles.Position.BOTTOMRIGHT:
-    case tiles.Position.BOTTOMOUTRIGHT:
+    case constants.Position.BOTTOMOUTLEFT:
+    case constants.Position.BOTTOMLEFT:
+    case constants.Position.BOTTOMCENTER:
+    case constants.Position.BOTTOMRIGHT:
+    case constants.Position.BOTTOMOUTRIGHT:
       return Studio.MAZE_HEIGHT - sprite.height;
-    case tiles.Position.OUTBOTTOMOUTLEFT:
-    case tiles.Position.OUTBOTTOMLEFT:
-    case tiles.Position.OUTBOTTOMCENTER:
-    case tiles.Position.OUTBOTTOMRIGHT:
-    case tiles.Position.OUTBOTTOMOUTRIGHT:
+    case constants.Position.OUTBOTTOMOUTLEFT:
+    case constants.Position.OUTBOTTOMLEFT:
+    case constants.Position.OUTBOTTOMCENTER:
+    case constants.Position.OUTBOTTOMRIGHT:
+    case constants.Position.OUTBOTTOMOUTRIGHT:
       return Studio.MAZE_HEIGHT;
   }
 };
@@ -19345,7 +19574,7 @@ Studio.collideSpriteWith = function (spriteIndex, target, allowQueueExtension) {
 Studio.setSpritePosition = function (opts) {
   var sprite = Studio.sprite[opts.spriteIndex];
   if (opts.value) {
-    // fill in .x and .y from the tiles.Position value in opts.value
+    // fill in .x and .y from the constants.Position value in opts.value
     opts.x = xFromPosition(sprite, opts.value);
     opts.y = yFromPosition(sprite, opts.value);
   }
@@ -19417,7 +19646,7 @@ function spriteAtGoal(sprite, goal) {
   var finishCollisionDistance = function (yAxis) {
     var dim1 = yAxis ? sprite.height : sprite.width;
     var dim2 = yAxis ? Studio.MARKER_HEIGHT : Studio.MARKER_WIDTH;
-    return tiles.FINISH_COLLIDE_DISTANCE_SCALING * (dim1 + dim2) / 2;
+    return constants.FINISH_COLLIDE_DISTANCE_SCALING * (dim1 + dim2) / 2;
   };
 
   var xSpriteCenter = sprite.x + sprite.width / 2;
@@ -19506,178 +19735,7 @@ var checkFinished = function () {
   return false;
 };
 
-},{"../../locale/it_it/common":48,"../../locale/it_it/studio":49,"../base":3,"../canvg/StackBlur.js":7,"../canvg/canvg.js":8,"../canvg/rgbcolor.js":9,"../canvg/svg_todataurl":10,"../codegen":11,"../dom":13,"../feedback.js":14,"../skins":20,"../templates/page.html":40,"../utils":46,"../xml":47,"./api":22,"./blocks":23,"./collidable":24,"./controls.html":25,"./extraControlRows.html":26,"./projectile":29,"./tiles":32,"./visualization.html":33}],32:[function(require,module,exports){
-'use strict';
-
-exports.Direction = {
-  NONE: 0,
-  NORTH: 1,
-  EAST: 2,
-  SOUTH: 4,
-  WEST: 8,
-  NORTHEAST: 3,
-  SOUTHEAST: 6,
-  SOUTHWEST: 12,
-  NORTHWEST: 9
-};
-
-var Dir = exports.Direction;
-
-/**
- * Given a direction, returns the unit vector for it. Currently only supports
- * cardinal directions.
- */
-var UNIT_VECTOR = {};
-UNIT_VECTOR[Dir.NORTH] = { x: 0, y:-1};
-UNIT_VECTOR[Dir.EAST]  = { x: 1, y: 0};
-UNIT_VECTOR[Dir.SOUTH] = { x: 0, y: 1};
-UNIT_VECTOR[Dir.WEST]  = { x:-1, y: 0};
-exports.Direction.getUnitVector = function (dir) {
-  return UNIT_VECTOR[dir];
-};
-
-
-exports.Position = {
-  OUTTOPOUTLEFT:    1,
-  OUTTOPLEFT:       2,
-  OUTTOPCENTER:     3,
-  OUTTOPRIGHT:      4,
-  OUTTOPOUTRIGHT:   5,
-  TOPOUTLEFT:       6,
-  TOPLEFT:          7,
-  TOPCENTER:        8,
-  TOPRIGHT:         9,
-  TOPOUTRIGHT:      10,
-  MIDDLEOUTLEFT:    11,
-  MIDDLELEFT:       12,
-  MIDDLECENTER:     13,
-  MIDDLERIGHT:      14,
-  MIDDLEOUTRIGHT:   15,
-  BOTTOMOUTLEFT:    16,
-  BOTTOMLEFT:       17,
-  BOTTOMCENTER:     18,
-  BOTTOMRIGHT:      19,
-  BOTTOMOUTRIGHT:   20,
-  OUTBOTTOMOUTLEFT: 21,
-  OUTBOTTOMLEFT:    22,
-  OUTBOTTOMCENTER:  23,
-  OUTBOTTOMRIGHT:   24,
-  OUTBOTTOMOUTRIGHT:25
-};
-
-//
-// Turn state machine, use as NextTurn[fromDir][toDir]
-//
-
-
-exports.NextTurn = {};
-
-exports.NextTurn[Dir.NORTH] = {};
-exports.NextTurn[Dir.NORTH][Dir.NORTH] = Dir.NORTH;
-exports.NextTurn[Dir.NORTH][Dir.EAST] = Dir.NORTHEAST;
-exports.NextTurn[Dir.NORTH][Dir.SOUTH] = Dir.NORTHEAST;
-exports.NextTurn[Dir.NORTH][Dir.WEST] = Dir.NORTHWEST;
-exports.NextTurn[Dir.NORTH][Dir.NORTHEAST] = Dir.NORTHEAST;
-exports.NextTurn[Dir.NORTH][Dir.SOUTHEAST] = Dir.NORTHEAST;
-exports.NextTurn[Dir.NORTH][Dir.SOUTHWEST] = Dir.NORTHWEST;
-exports.NextTurn[Dir.NORTH][Dir.NORTHWEST] = Dir.NORTHWEST;
-
-exports.NextTurn[Dir.EAST] = {};
-exports.NextTurn[Dir.EAST][Dir.NORTH] = Dir.NORTHEAST;
-exports.NextTurn[Dir.EAST][Dir.EAST] = Dir.EAST;
-exports.NextTurn[Dir.EAST][Dir.SOUTH] = Dir.SOUTHEAST;
-exports.NextTurn[Dir.EAST][Dir.WEST] = Dir.SOUTHEAST;
-exports.NextTurn[Dir.EAST][Dir.NORTHEAST] = Dir.NORTHEAST;
-exports.NextTurn[Dir.EAST][Dir.SOUTHEAST] = Dir.SOUTHEAST;
-exports.NextTurn[Dir.EAST][Dir.SOUTHWEST] = Dir.SOUTHEAST;
-exports.NextTurn[Dir.EAST][Dir.NORTHWEST] = Dir.NORTHEAST;
-
-exports.NextTurn[Dir.SOUTH] = {};
-exports.NextTurn[Dir.SOUTH][Dir.NORTH] = Dir.SOUTHEAST;
-exports.NextTurn[Dir.SOUTH][Dir.EAST] = Dir.SOUTHEAST;
-exports.NextTurn[Dir.SOUTH][Dir.SOUTH] = Dir.SOUTH;
-exports.NextTurn[Dir.SOUTH][Dir.WEST] = Dir.SOUTHWEST;
-exports.NextTurn[Dir.SOUTH][Dir.NORTHEAST] = Dir.SOUTHEAST;
-exports.NextTurn[Dir.SOUTH][Dir.SOUTHEAST] = Dir.SOUTHEAST;
-exports.NextTurn[Dir.SOUTH][Dir.SOUTHWEST] = Dir.SOUTHWEST;
-exports.NextTurn[Dir.SOUTH][Dir.NORTHWEST] = Dir.SOUTHWEST;
-
-exports.NextTurn[Dir.WEST] = {};
-exports.NextTurn[Dir.WEST][Dir.NORTH] = Dir.NORTHWEST;
-exports.NextTurn[Dir.WEST][Dir.EAST] = Dir.SOUTHWEST;
-exports.NextTurn[Dir.WEST][Dir.SOUTH] = Dir.SOUTHWEST;
-exports.NextTurn[Dir.WEST][Dir.WEST] = Dir.WEST;
-exports.NextTurn[Dir.WEST][Dir.NORTHEAST] = Dir.NORTHWEST;
-exports.NextTurn[Dir.WEST][Dir.SOUTHEAST] = Dir.SOUTHWEST;
-exports.NextTurn[Dir.WEST][Dir.SOUTHWEST] = Dir.SOUTHWEST;
-exports.NextTurn[Dir.WEST][Dir.NORTHWEST] = Dir.NORTHWEST;
-
-exports.NextTurn[Dir.NORTHEAST] = {};
-exports.NextTurn[Dir.NORTHEAST][Dir.NORTH] = Dir.NORTH;
-exports.NextTurn[Dir.NORTHEAST][Dir.EAST] = Dir.EAST;
-exports.NextTurn[Dir.NORTHEAST][Dir.SOUTH] = Dir.EAST;
-exports.NextTurn[Dir.NORTHEAST][Dir.WEST] = Dir.NORTH;
-exports.NextTurn[Dir.NORTHEAST][Dir.NORTHEAST] = Dir.NORTHEAST;
-exports.NextTurn[Dir.NORTHEAST][Dir.SOUTHEAST] = Dir.EAST;
-exports.NextTurn[Dir.NORTHEAST][Dir.SOUTHWEST] = Dir.EAST;
-exports.NextTurn[Dir.NORTHEAST][Dir.NORTHWEST] = Dir.NORTH;
-
-exports.NextTurn[Dir.SOUTHEAST] = {};
-exports.NextTurn[Dir.SOUTHEAST][Dir.NORTH] = Dir.EAST;
-exports.NextTurn[Dir.SOUTHEAST][Dir.EAST] = Dir.EAST;
-exports.NextTurn[Dir.SOUTHEAST][Dir.SOUTH] = Dir.SOUTH;
-exports.NextTurn[Dir.SOUTHEAST][Dir.WEST] = Dir.SOUTH;
-exports.NextTurn[Dir.SOUTHEAST][Dir.NORTHEAST] = Dir.EAST;
-exports.NextTurn[Dir.SOUTHEAST][Dir.SOUTHEAST] = Dir.SOUTHEAST;
-exports.NextTurn[Dir.SOUTHEAST][Dir.SOUTHWEST] = Dir.SOUTH;
-exports.NextTurn[Dir.SOUTHEAST][Dir.NORTHWEST] = Dir.SOUTH;
-
-exports.NextTurn[Dir.SOUTHWEST] = {};
-exports.NextTurn[Dir.SOUTHWEST][Dir.NORTH] = Dir.WEST;
-exports.NextTurn[Dir.SOUTHWEST][Dir.EAST] = Dir.SOUTH;
-exports.NextTurn[Dir.SOUTHWEST][Dir.SOUTH] = Dir.SOUTH;
-exports.NextTurn[Dir.SOUTHWEST][Dir.WEST] = Dir.WEST;
-exports.NextTurn[Dir.SOUTHWEST][Dir.NORTHEAST] = Dir.SOUTH;
-exports.NextTurn[Dir.SOUTHWEST][Dir.SOUTHEAST] = Dir.SOUTH;
-exports.NextTurn[Dir.SOUTHWEST][Dir.SOUTHWEST] = Dir.SOUTHWEST;
-exports.NextTurn[Dir.SOUTHWEST][Dir.NORTHWEST] = Dir.WEST;
-
-exports.NextTurn[Dir.NORTHWEST] = {};
-exports.NextTurn[Dir.NORTHWEST][Dir.NORTH] = Dir.NORTH;
-exports.NextTurn[Dir.NORTHWEST][Dir.EAST] = Dir.NORTH;
-exports.NextTurn[Dir.NORTHWEST][Dir.SOUTH] = Dir.WEST;
-exports.NextTurn[Dir.NORTHWEST][Dir.WEST] = Dir.WEST;
-exports.NextTurn[Dir.NORTHWEST][Dir.NORTHEAST] = Dir.NORTH;
-exports.NextTurn[Dir.NORTHWEST][Dir.SOUTHEAST] = Dir.WEST;
-exports.NextTurn[Dir.NORTHWEST][Dir.SOUTHWEST] = Dir.WEST;
-exports.NextTurn[Dir.NORTHWEST][Dir.NORTHWEST] = Dir.NORTHWEST;
-
-
-exports.Emotions = {
-  NORMAL: 0,
-  HAPPY: 1,
-  ANGRY: 2,
-  SAD: 3
-};
-
-// scale the collision bounding box to make it so they need to overlap a touch:
-exports.FINISH_COLLIDE_DISTANCE_SCALING = 0.75;
-exports.SPRITE_COLLIDE_DISTANCE_SCALING = 0.9;
-exports.DEFAULT_SPRITE_SPEED = 5;
-exports.DEFAULT_SPRITE_SIZE = 1;
-
-/**
- * The types of squares in the maze, which is represented
- * as a 2D array of SquareType values.
- * @enum {number}
- */
-exports.SquareType = {
-  OPEN: 0,
-  SPRITEFINISH: 1,
-  SPRITESTART: 16
-};
-
-},{}],33:[function(require,module,exports){
+},{"../../locale/it_it/common":48,"../../locale/it_it/studio":49,"../base":3,"../canvg/StackBlur.js":7,"../canvg/canvg.js":8,"../canvg/rgbcolor.js":9,"../canvg/svg_todataurl":10,"../codegen":11,"../dom":13,"../feedback.js":14,"../skins":20,"../templates/page.html":40,"../utils":46,"../xml":47,"./api":22,"./blocks":23,"./collidable":24,"./constants":25,"./controls.html":26,"./extraControlRows.html":27,"./projectile":30,"./visualization.html":33}],33:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape, rethrow) {
 escape = escape || function (html){
@@ -20705,6 +20763,16 @@ exports.projectileRedHearts = function(d){return "cuori rossi"};
 
 exports.projectileRandom = function(d){return "casuale"};
 
+exports.projectileAnna = function(d){return "Anna"};
+
+exports.projectileElsa = function(d){return "Elsa"};
+
+exports.projectileHiro = function(d){return "Hiro"};
+
+exports.projectileBaymax = function(d){return "Baymax"};
+
+exports.projectileRapunzel = function(d){return "Rapunzel"};
+
 exports.reinfFeedbackMsg = function(d){return "Premi \"Ricomincia\" per ricominciare a raccontare la tua storia."};
 
 exports.repeatForever = function(d){return "ripeti per sempre"};
@@ -20796,6 +20864,16 @@ exports.setSpriteGhost = function(d){return "all'immagine di un fantasma"};
 exports.setSpriteHidden = function(d){return "a un'immagine nascosta"};
 
 exports.setSpriteHideK1 = function(d){return "nascondi"};
+
+exports.setSpriteAnna = function(d){return "to a Anna image"};
+
+exports.setSpriteElsa = function(d){return "to a Elsa image"};
+
+exports.setSpriteHiro = function(d){return "to a Hiro image"};
+
+exports.setSpriteBaymax = function(d){return "to a Baymax image"};
+
+exports.setSpriteRapunzel = function(d){return "to a Rapunzel image"};
 
 exports.setSpriteKnight = function(d){return "all'immagine di un cavaliere"};
 
@@ -24903,4 +24981,4 @@ function isNullOrUndefined(arg) {
 
 })( this );
 
-},{}]},{},[28])
+},{}]},{},[29])
