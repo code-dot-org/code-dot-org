@@ -1,4 +1,4 @@
-var tiles = require('./tiles');
+var constants = require('./constants');
 
 exports.SpriteSpeed = {
   VERY_SLOW: 2,

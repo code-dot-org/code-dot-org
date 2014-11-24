@@ -1,6 +1,6 @@
 var Collidable = require('./collidable');
-var Direction = require('./tiles').Direction;
-var tiles = require('./tiles');
+var Direction = require('./constants').Direction;
+var constants = require('./constants');
 
 var SVG_NS = "http://www.w3.org/2000/svg";
 
@@ -67,15 +67,14 @@ var Projectile = function (options) {
 
   this.height = options.height || 50;
   this.width = options.width || 50;
-  this.speed = options.speed || tiles.DEFAULT_SPRITE_SPEED / 2;
-
-  this.isFireball_ = this.className.indexOf('fireball') !== -1;
-  this.frames = this.isFireball_ ? 8 : 1;
+  this.speed = options.speed || constants.DEFAULT_SPRITE_SPEED / 2;
 
   this.currentFrame_ = 0;
   var self = this;
   this.animator_ = window.setInterval(function () {
-    self.currentFrame_ = (self.currentFrame_ + 1) % self.frames;
+    if (self.loop || self.currentFrame_ + 1 < self.frames) {
+      self.currentFrame_ = (self.currentFrame_ + 1) % self.frames;
+    }
   }, 50);
 
   // origin is at an offset from sprite location
@@ -152,7 +151,7 @@ Projectile.prototype.display = function () {
   clipRect.setAttribute('x', topLeft.x);
   clipRect.setAttribute('y', topLeft.y);
 
-  if (this.isFireball_) {
+  if (this.frames > 1) {
     this.element.setAttribute('transform', 'rotate(' + DIR_TO_ROTATION[this.dir] +
      ', ' + this.x + ', ' + this.y + ')');
   }
