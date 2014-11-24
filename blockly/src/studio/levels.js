@@ -1069,6 +1069,8 @@ levels.full_sandbox =  {
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
 
+levels.full_sandbox_infinity = utils.extend(levels.full_sandbox, {});
+
 levels.ec_sandbox = utils.extend(levels.sandbox, {
   'editCode': true,
   'codeFunctions': [
