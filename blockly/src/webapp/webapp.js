@@ -86,6 +86,32 @@ function queueOnTick() {
   window.setTimeout(Webapp.onTick, stepSpeed);
 }
 
+var Keycodes = {
+  ENTER: 13,
+};
+
+function onDebugInputKeyDown(e) {
+  if (e.keyCode == Keycodes.ENTER) {
+    var input = event.target.textContent;
+    event.target.textContent = '';
+    var debugOutput = document.getElementById('debug-output');
+    if (debugOutput.value.length > 0) {
+      debugOutput.value += '\n> ' + input;
+    } else {
+      debugOutput.value = '> ' + input;
+    }
+    if (Webapp.interpreter) {
+      var evalInterpreter = new window.Interpreter(input);
+      evalInterpreter.stateStack[0].scope.parentScope = Webapp.interpreter.getScope();
+      evalInterpreter.run();
+      debugOutput.value += '\n< ' + String(evalInterpreter.value);
+    } else {
+      debugOutput.value += '\n< (not running)';
+    }
+    debugOutput.scrollTop = debugOutput.scrollHeight;
+  }
+}
+
 Webapp.onTick = function() {
   if (!Webapp.running) {
     return;
@@ -302,9 +328,19 @@ Webapp.init = function(config) {
 
   var showSlider = !config.hide_source && config.level.editCode;
   var showDebugButtons = !config.hide_source && config.level.editCode;
+  var showDebugConsole = !config.hide_source && config.level.editCode;
   var finishButtonFirstLine = _.isEmpty(level.softButtons) && !showSlider;
-  var firstControlsRow = require('./controls.html')({assetUrl: BlocklyApps.assetUrl, showSlider: showSlider, finishButton: finishButtonFirstLine});
-  var extraControlsRow = require('./extraControlRows.html')({assetUrl: BlocklyApps.assetUrl, finishButton: !finishButtonFirstLine, debugButtons: showDebugButtons});
+  var firstControlsRow = require('./controls.html')({
+    assetUrl: BlocklyApps.assetUrl,
+    showSlider: showSlider,
+    finishButton: finishButtonFirstLine
+  });
+  var extraControlsRow = require('./extraControlRows.html')({
+    assetUrl: BlocklyApps.assetUrl,
+    finishButton: !finishButtonFirstLine,
+    debugButtons: showDebugButtons,
+    debugConsole: showDebugConsole
+  });
 
   config.html = page({
     assetUrl: BlocklyApps.assetUrl,
@@ -373,20 +409,28 @@ Webapp.init = function(config) {
     // Set up an event handler to create breakpoints when clicking in the
     // ace gutter:
     var aceEditor = BlocklyApps.editor.aceEditor;
-    aceEditor.on("guttermousedown", function(e){
-      var target = e.domEvent.target;
-      if (target.className.indexOf("ace_gutter-cell") == -1) 
-          return; 
-
-      var row = e.getDocumentPosition().row;
-      var bps = e.editor.session.getBreakpoints();
-      if (bps[row]) {
-        e.editor.session.clearBreakpoint(row);
-      } else {
-        e.editor.session.setBreakpoint(row);
-      }
-      e.stop();
-    });
+    // TODO (cpirich): investigate timing issue that results in aceEditor
+    // not always being available at this stage during init...
+    if (aceEditor) {
+      aceEditor.on("guttermousedown", function(e) {
+        var target = e.domEvent.target;
+        if (target.className.indexOf("ace_gutter-cell") == -1) {
+          return;
+        }
+        var row = e.getDocumentPosition().row;
+        var bps = e.editor.session.getBreakpoints();
+        if (bps[row]) {
+          e.editor.session.clearBreakpoint(row);
+        } else {
+          e.editor.session.setBreakpoint(row);
+        }
+        e.stop();
+      });
+    }
+    var debugInput = document.getElementById('debug-input');
+    if (debugInput) {
+      debugInput.addEventListener('keydown', onDebugInputKeyDown);
+    }
   }
 
   var finishButton = document.getElementById('finishButton');
@@ -478,6 +522,14 @@ BlocklyApps.reset = function(first) {
     var spinner = document.getElementById('spinner');
     if (spinner) {
       spinner.style.visibility = 'hidden';
+    }
+    var debugOutput = document.getElementById('debug-output');
+    if (debugOutput) {
+      debugOutput.value = '';
+    }
+    var debugInput = document.getElementById('debug-input');
+    if (debugInput) {
+      debugInput.textContent = '';
     }
   }
 
