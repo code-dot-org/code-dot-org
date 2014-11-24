@@ -25,9 +25,9 @@ function loadInfinity(skin, assetUrl) {
       sprite: skin.assetUrl('avatar_' + name + '.png'),
       dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
       frameCounts: {
-        normal: name === 'hiro' ? 19 : 20,
+        normal: 20,
         animation: 0,
-        turns: 0,
+        turns: 7,
         emotions: 0
       },
       timePerFrame: 100
@@ -51,7 +51,7 @@ function loadInfinity(skin, assetUrl) {
     background: skin.assetUrl('background2.png')
   };
 
-  // These are used by blocks.js to customize are dropdown blocks across skins
+  // These are used by blocks.js to customize our dropdown blocks across skins
   skin.backgroundChoices = [
     [msg.setBackgroundRandom(), RANDOM_VALUE],
     // todo - come up with better names and i18n
