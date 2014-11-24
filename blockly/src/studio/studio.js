@@ -558,14 +558,14 @@ Studio.onTick = function() {
     for (var stepsThisTick = 0;
          stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK && !doneUserCodeStep;
          stepsThisTick++) {
-      var inUserCode = codegen.selectCurrentCode(Studio.interpreter,
-                                                 BlocklyApps.editor,
-                                                 Studio.cumulativeLength,
-                                                 Studio.userCodeStartOffset,
-                                                 Studio.userCodeLength);
+      var userCodeRow = codegen.selectCurrentCode(Studio.interpreter,
+                                                  BlocklyApps.editor,
+                                                  Studio.cumulativeLength,
+                                                  Studio.userCodeStartOffset,
+                                                  Studio.userCodeLength);
       try {
         Studio.interpreter.step();
-        doneUserCodeStep = inUserCode &&
+        doneUserCodeStep = (-1 !== userCodeRow) &&
                             Studio.interpreter.stateStack[0] &&
                             Studio.interpreter.stateStack[0].done;
       }
