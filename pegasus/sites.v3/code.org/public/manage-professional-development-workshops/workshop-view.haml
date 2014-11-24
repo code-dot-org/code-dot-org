@@ -38,23 +38,28 @@ theme: none
           %p
             %a.btn.btn-default{"ng-click" => "start_workshop()", 'ng-confirm-click' => 'Are you sure you want to start your workshop?'} Start Event
         .start-stop{'ng-show' => 'workshop.state() == "started"'}
-          %p
-            Please ask teachers at the workshop to:
+          %p Please ask teachers at the workshop to join your workshop section by doing the following:
+          %p If they already have a teacher account:
+          %ol
+            %li
+              Make sure they're logged into their account first and then have them type this URL (
+              %a{:href => "http://studio.code.org/join/XXXXXX"}> http://studio.code.org/join/XXXXXX
+              ) into their browser. Once they hit enter, they'll have joined the workshop section.
+          %p If they don't have a teacher account yet:
           %ol
             %li
               Create a teacher account at
-              %a{href: "http://#{canonical_hostname('studio.code.org')}"}
-                http://#{canonical_hostname('studio.code.org')}
+              %a{:href => "http://#{canonical_hostname('studio.code.org')}", :target => "_blank"} http://studio.code.org
             %li
-              Join your section using this URL:
-              %a{"ng-href" => "http://#{canonical_hostname('studio.code.org')}/join/{{section.code}}", target: "_blank"}
-                http://#{canonical_hostname('studio.code.org')}/join/{{section.code}}
+              Make sure they're logged into their account first and then have them type this URL (
+              %a{"ng-href" => "http://#{canonical_hostname('studio.code.org')}/join/{{section.code}}", target: "_blank"}> http://#{canonical_hostname('studio.code.org')}/join/{{section.code}}
+              ) into their browser. Once they hit enter, they'll have joined the workshop section.
           %p
             You can
             %a{"ng-href" => "/teacher-dashboard#/sections/{{section.id}}/manage", target: '_blank'}
               view this section in your Teacher Dashboard
             to make sure everyone has joined.
-          %p 
+          %p
             After your workshop is done, click the End Event button below to close the workshop.
           %p
             %a.btn.btn-default{"ng-click" => "stop_workshop()", 'ng-confirm-click' => 'Are you sure you want to end your workshop?'} End Event
