@@ -1255,7 +1255,7 @@ var displayFeedback = function() {
     level: level,
     feedbackImage: feedbackImageCanvas.canvas.toDataURL("image/png"),
     // add 'impressive':true to non-freeplay levels that we deem are relatively impressive (see #66990480)
-    showingSharing: level.freePlay || level.impressive,
+    showingSharing: !level.disableSharing && (level.freePlay || level.impressive),
     // impressive levels are already saved
     alreadySaved: level.impressive,
     // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
