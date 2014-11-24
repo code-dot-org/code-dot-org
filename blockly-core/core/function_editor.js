@@ -255,10 +255,19 @@ Blockly.FunctionEditor.prototype.ensureCreated_ = function() {
   }
 };
 
-Blockly.FunctionEditor.prototype.hide = function() {
+Blockly.FunctionEditor.prototype.hideIfOpen = function() {
   if (!this.isOpen()) {
     return;
   }
+  this.hideAndRestoreBlocks_();
+};
+
+/**
+ * Hides the function editor, moving existing blocks to the
+ * main BlockSpace
+ * @protected
+ */
+Blockly.FunctionEditor.prototype.hideAndRestoreBlocks_ = function() {
   this.moveToMainBlockSpace_(this.functionDefinitionBlock);
 
   goog.style.showElement(this.container_, false);
@@ -364,7 +373,7 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   });
 
   Blockly.bindEvent_(goog.dom.getElement('modalEditorClose'), 'mousedown', this,
-      this.hide);
+      this.hideIfOpen);
   Blockly.bindEvent_(goog.dom.getElement('functionNameText'), 'input', this,
       functionNameChange);
   // IE9 doesn't fire oninput when delete key is pressed, bind keydown also
