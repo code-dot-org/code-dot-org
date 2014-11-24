@@ -23,9 +23,10 @@
   = render partial: 'shared/course_tall_block', locals: { id: "playlab" }
   = render partial: 'shared/course_tall_block', locals: { id: "flappy" }
   = render partial: 'shared/course_tall_block', locals: { id: "artist" }
-  = render partial: 'shared/course_tall_block', locals: { id: "hoc" } if current_user
+  = render partial: 'shared/course_tall_block', locals: { id: "gallery" }
 %br/
 .row
   .span12.twolineheader!= t('home.heading_legacy')
 .row
   = render partial: 'shared/course_wide_block', locals: { id: "20hour" }
+  = render partial: 'shared/course_wide_block', locals: { id: "hoc" } if current_user
