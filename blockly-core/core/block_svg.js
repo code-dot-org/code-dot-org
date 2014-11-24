@@ -38,10 +38,16 @@ Blockly.BlockSvg = function(block) {
   var options = {
     "block-id": block.id
   };
-  // Create core elements for the block.
+  /**
+   * Root SVG element for this block
+   * @type {!SVGElement}
+   * @private
+   */
   this.svgGroup_ = Blockly.createSvgElement('g', options, null);
 
   this.initChildren();
+  Blockly.Tooltip.bindMouseEvents(this.svgPath_);
+  this.updateMovable();
 };
 
 Blockly.BlockSvg.prototype.initChildren = function () {
@@ -54,21 +60,18 @@ Blockly.BlockSvg.prototype.initChildren = function () {
     'class': 'blocklyPath',
     'fill-rule': 'evenodd'
   }, this.svgGroup_);
-  var pattern = this.block_.getFillPattern();
-  if (pattern) {
+  if (this.block_.getFillPattern()) {
     this.svgPathFill_ = Blockly.createSvgElement('path', {'class': 'blocklyPath'},
       this.svgGroup_);
   }
   this.svgPathLight_ = Blockly.createSvgElement('path',
       {'class': 'blocklyPathLight'}, this.svgGroup_);
   this.svgPath_.tooltip = this.block_;
-  Blockly.Tooltip.bindMouseEvents(this.svgPath_);
-  this.updateMovable();
 };
 
 /**
- * Constant for identifying rows that are to be rendered inline.
- * Don't collide with Blockly.INPUT_VALUE and friends.
+ * Input type constant for identifying rows that are to be rendered inline.
+ * Don't collide with blockly.js' Blockly.INPUT_VALUE and friends.
  * @const
  */
 Blockly.BlockSvg.INLINE = -1;

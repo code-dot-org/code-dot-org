@@ -60,6 +60,10 @@ Blockly.ContractEditor.prototype.openWithNewFunction = function(opt_blockCreatio
   }
 };
 
+Blockly.ContractEditor.prototype.repositionBlocks_ = function () {
+  this.functionDefinitionBlock
+};
+
 /**
  * Creates a new example block in the modal BlockSpace
  * @returns {Blockly.Block} the newly added block
