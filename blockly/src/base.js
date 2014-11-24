@@ -855,7 +855,7 @@ BlocklyApps.resizeHeaders = function (fullWorkspaceWidth) {
     showCodeHeader.style.display = "none";
   }
 
-  headers.style.width = (categoriesWidth + workspaceWidth) + 'px';
+  headers.style.width = (categoriesWidth + toolboxWidth + workspaceWidth) + 'px';
   toolboxHeader.style.width = (categoriesWidth + toolboxWidth) + 'px';
   workspaceHeader.style.width = (workspaceWidth -
                                  toolboxWidth -

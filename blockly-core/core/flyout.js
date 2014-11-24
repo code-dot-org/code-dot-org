@@ -35,7 +35,7 @@ goog.require('Blockly.Comment');
  * @param {boolean} opt_insideBubble Is the flyout rendered inside a bubble?
  * @constructor
  */
-Blockly.Flyout = function(blockSpaceEditor, opt_insideBubble) {
+Blockly.Flyout = function(blockSpaceEditor, opt_static) {
   var flyout = this;
 
   /**
@@ -57,7 +57,7 @@ Blockly.Flyout = function(blockSpaceEditor, opt_insideBubble) {
    * @type {boolean}
    * @private
    */
-  this.insideBubble_ = opt_insideBubble;
+  this.static_ = opt_static;
 
   /**
    * Opaque data that can be passed to removeChangeListener.
@@ -295,6 +295,9 @@ Blockly.Flyout.prototype.position_ = function() {
 
   var x = metrics.absoluteLeft;
   var y = metrics.absoluteTop;
+  if (this.static_) {
+    x -= this.width_;
+  }
   if (Blockly.RTL) {
     x = 0;
     x += metrics.viewWidth;
