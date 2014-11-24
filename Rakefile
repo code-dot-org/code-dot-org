@@ -40,6 +40,10 @@ namespace :build do
       RakeUtils.sudo 'chef-client'
     end
 
+    Dir.chdir(deploy_dir) do
+      RakeUtils.rake "install:blockly"
+    end
+
     unless CDO.chef_managed
       Dir.chdir(aws_dir) do
         HipChat.log 'Installing <b>aws</b> bundle...'
