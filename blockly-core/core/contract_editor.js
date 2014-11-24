@@ -40,6 +40,7 @@ goog.inherits(Blockly.ContractEditor, Blockly.FunctionEditor);
 
 Blockly.ContractEditor.EXAMPLE_BLOCK_TYPE = 'functional_example';
 Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME = 'ACTUAL';
+Blockly.ContractEditor.MARGIN_BELOW_EXAMPLES = 50; // in px
 
 Blockly.ContractEditor.typesToColors = {
   'none': [0, 0, 0.6],
@@ -52,16 +53,44 @@ Blockly.ContractEditor.typesToColors = {
 Blockly.ContractEditor.prototype.definitionBlockType = 'functional_definition';
 Blockly.ContractEditor.prototype.parameterBlockType = 'functional_parameters_get';
 
+Blockly.ContractEditor.prototype.create_ = function() {
+  Blockly.ContractEditor.superClass_.create_.call(this);
+  Blockly.modalBlockSpace.events.listen(
+    Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE, this.layOutBlocks_,
+    false, this);
+};
+
+Blockly.ContractEditor.prototype.hideAndRestoreBlocks_ = function() {
+  this.exampleBlocks_.forEach(function(block) {
+    this.moveToMainBlockSpace_(block);
+  }, this);
+  goog.array.clear(this.exampleBlocks_);
+
+  Blockly.ContractEditor.superClass_.hideAndRestoreBlocks_.call(this);
+};
+
 Blockly.ContractEditor.prototype.openWithNewFunction = function(opt_blockCreationCallback) {
   Blockly.ContractEditor.superClass_.openWithNewFunction.call(this, opt_blockCreationCallback);
 
   for (var i = 0; i < Blockly.defaultNumExampleBlocks; i++) {
     this.exampleBlocks_.push(this.createAndAddExampleBlock_());
   }
+  this.layOutBlocks_();
 };
 
-Blockly.ContractEditor.prototype.repositionBlocks_ = function () {
-  this.functionDefinitionBlock
+Blockly.ContractEditor.prototype.layOutBlocks_ = function () {
+  var currentX = Blockly.RTL ? Blockly.modalBlockSpace.getMetrics().viewWidth - FRAME_MARGIN_SIDE : FRAME_MARGIN_SIDE;
+  var currentY = FRAME_MARGIN_TOP;
+
+  this.exampleBlocks_.forEach(function(block) {
+    block.moveTo(currentX, currentY);
+    currentY += block.getHeightWidth().height;
+    currentY += Blockly.ContractEditor.MARGIN_BELOW_EXAMPLES;
+  }, this);
+
+  if (this.functionDefinitionBlock) {
+    this.functionDefinitionBlock.moveTo(currentX, currentY);
+  }
 };
 
 /**
