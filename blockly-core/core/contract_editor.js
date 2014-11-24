@@ -38,7 +38,6 @@ Blockly.ContractEditor = function() {
 };
 goog.inherits(Blockly.ContractEditor, Blockly.FunctionEditor);
 
-Blockly.ContractEditor.DEFAULT_NUM_EXAMPLES_TO_ADD = 0;
 Blockly.ContractEditor.EXAMPLE_BLOCK_TYPE = 'functional_example';
 Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME = 'ACTUAL';
 
@@ -56,7 +55,7 @@ Blockly.ContractEditor.prototype.parameterBlockType = 'functional_parameters_get
 Blockly.ContractEditor.prototype.openWithNewFunction = function(opt_blockCreationCallback) {
   Blockly.ContractEditor.superClass_.openWithNewFunction.call(this, opt_blockCreationCallback);
 
-  for (var i = 0; i < Blockly.ContractEditor.DEFAULT_NUM_EXAMPLES_TO_ADD; i++) {
+  for (var i = 0; i < Blockly.defaultNumExampleBlocks; i++) {
     this.exampleBlocks_.push(this.createAndAddExampleBlock_());
   }
 };
