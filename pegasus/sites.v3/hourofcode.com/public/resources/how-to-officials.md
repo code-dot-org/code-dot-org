@@ -4,7 +4,9 @@ layout: wide
 nav: resources_nav
 ---
 
-## Bring the Hour of Code to your entire community. Get every school participating, every student learning!
+# Bring the Hour of Code to your entire community.
+
+## Get every school participating, every student learning!
 
 1. **Recruit local schools and districts.** Use <a href="<%= hoc_uri('/resources#sample-emails') %>">this email</a> or <a href="<%= hoc_uri('/resources/stats') %>">this blurb</a> as a starting point, and take a look at this <a href="<%= hoc_uri('/resources/how-to') %>">how-to</a> for schools and districts. Let them know **every** participating educator will receive a <a href="<%= hoc_uri('/resources/how-to') %>">thank you gift</a>; that **100 classrooms** will win tech chats with **special guest speakers** (participants include Bill Gates, Sheryl Sandberg, Ashton Kutcher and more); and, in **each state**, one participating school will win **$10,000 in technology**!
 
