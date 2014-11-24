@@ -449,6 +449,18 @@ Blockly.Block.prototype.getRelativeToSurfaceXY = function() {
 };
 
 /**
+ * Move a block to a specific location on the drawing surface.
+ * @param {number} x Horizontal location.
+ * @param {number} y Vertical location.
+ */
+Blockly.Block.prototype.moveTo = function(x, y) {
+  var oldXY = this.getRelativeToSurfaceXY();
+  this.svg_.getRootElement().setAttribute('transform',
+      'translate(' + x + ', ' + y + ')');
+  this.moveConnections_(x - oldXY.x, y - oldXY.y);
+};
+
+/**
  * Move a block by a relative offset.
  * @param {number} dx Horizontal offset.
  * @param {number} dy Vertical offset.
