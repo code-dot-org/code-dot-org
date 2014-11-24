@@ -21,6 +21,9 @@
   = f.label :use_contract_editor, "Use MSM contract editor"
   = boolean_check_box f, :use_contract_editor
 .field
+  = f.label :default_num_example_blocks, "Default # of example blocks in contract editor"
+  = f.number_field :default_num_example_blocks
+.field
   = f.label :open_function_definition, "Auto-open function definition"
   = f.text_field :open_function_definition, placeholder: 'name of function to open'
 .field
