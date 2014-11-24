@@ -76,6 +76,11 @@
     = f.label :free_play, "Free Play"
     %p Free Play levels are not checked for correctness (any solution is accepted), can be shared, and can be saved to the public and private gallery
     = boolean_check_box f, :free_play
+- if @level.respond_to? :disable_sharing
+  .field
+    = f.label :disable_sharing, "Disable sharing"
+    %p If set, this level cannot be shared or saved to galleries even if it's free play.
+    = boolean_check_box f, :disable_sharing
 - if @level.respond_to? :free_play
   .field
     = f.label :embed, "Embed"
