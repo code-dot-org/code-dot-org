@@ -831,7 +831,7 @@ $modal-image-margin-gap: 10px;
   color: white;
   margin-right: 0px;
   width: 46%;
-  font-size: 15px;
+  font-size: 13px;
   text-align: center;
 }
 
@@ -898,7 +898,8 @@ $modal-image-margin-gap: 10px;
   }
 
   .saved-to-gallery {
-    color: $purple;
+    width: 46%;
+    font-size: 14px;
   }
   .social-buttons {
     a:hover {
