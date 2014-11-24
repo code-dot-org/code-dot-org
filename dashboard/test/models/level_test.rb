@@ -242,4 +242,25 @@ EOS
     assert_equal 'bar|image|color:string|radius:Number|style:string', cm.properties['answers'].first
     assert_equal 'Write a contract for the bar function', cm.properties['content1']
   end
+  
+  test 'delete removed level properties on import' do
+    level = Level.create(name: 'test delete properties', instructions: 'test', type: 'Studio', embed: true)
+
+    assert_equal true, level.embed
+
+    # Delete property from level XML
+    level_xml = level.to_xml
+    n = Nokogiri::XML(level_xml, &:noblanks)
+    level_config = n.xpath('//../config').first.child
+    level_hash = JSON.parse(level_config.text)
+    level_hash['properties'].delete 'embed'
+    level_config.content = level_hash.to_json
+    level_xml = n.to_xml
+
+    # Import level XML
+    level.load_level_xml level_xml
+
+    assert_nil level.embed
+  end
+
 end
