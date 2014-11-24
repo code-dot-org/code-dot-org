@@ -12,7 +12,7 @@
   </button>
 <% if (options.alreadySaved) { %>
   <button class="saved-to-gallery" disabled>
-    <%= "Saved in gallery" %>
+    <%= msg.savedToGallery() %>
   </button>
 <% } else if (options.saveToGalleryUrl) { %>
   <button id="save-to-gallery-button" class="launch">
