@@ -399,9 +399,9 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   this.flyout_.init(Blockly.modalBlockSpace, false);
   this.bindToolboxHandlers_();
 
-  var left = goog.dom.getElementByClass(Blockly.hasCategories
-      ? 'blocklyToolboxDiv'
-      : 'blocklyFlyoutBackground').getBoundingClientRect().width;
+  var left = Blockly.hasCategories ? goog.dom.getElementByClass('blocklyToolboxDiv')
+      .getBoundingClientRect().width : goog.dom.getElementByClass('blocklyFlyoutBackground')
+      .getBoundingClientRect().width;
   var top = 0;
   this.frameBase_ = Blockly.createSvgElement('rect', {
     x: left + FRAME_MARGIN_SIDE,
@@ -435,10 +435,6 @@ Blockly.FunctionEditor.prototype.position_ = function() {
   var metrics = Blockly.modalBlockSpace.getMetrics();
   var width = metrics.viewWidth;
   var height = metrics.viewHeight;
-  if (!Blockly.hasCategories) {
-    width -= goog.dom.getElementByClass('blocklyFlyoutBackground')
-        .getBoundingClientRect().width;
-  }
   this.frameBase_.setAttribute('width',
       width + 2 * Blockly.Bubble.BORDER_WIDTH);
   this.frameBase_.setAttribute('height',
@@ -453,7 +449,7 @@ Blockly.FunctionEditor.prototype.position_ = function() {
   }
 
   // Resize contract div width
-  this.contractDiv_.style.width = metrics.viewWidth + 'px';
+  this.contractDiv_.style.width = width + 'px';
 
   // Move the close button
   this.closeButton_.setAttribute('transform', 'translate(' +
@@ -484,7 +480,8 @@ Blockly.FunctionEditor.prototype.createContractDom_ = function() {
       + '</button>';
   }
   var metrics = Blockly.modalBlockSpace.getMetrics();
-  this.contractDiv_.style.left = metrics.absoluteLeft + 'px';
+  var left = metrics.absoluteLeft;
+  this.contractDiv_.style.left = left + 'px';
   this.contractDiv_.style.top = metrics.absoluteTop + 'px';
   this.contractDiv_.style.width = metrics.viewWidth + 'px';
   this.contractDiv_.style.display = 'block';
