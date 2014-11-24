@@ -447,12 +447,16 @@ Blockly.BlockSpaceEditor.prototype.getBlockSpaceWidth = function() {
 
 /**
  * @return {number} Return the width, in pixels, of the main blockSpace's toolbox.
- * Note, this only includes the 'flyout' part, not the categories tree.
+ * Note, this includes the categories tree (for levels with categories).
  */
 Blockly.BlockSpaceEditor.prototype.getToolboxWidth = function() {
   var flyout = this.flyout_ || this.toolbox.flyout_;
   var metrics = flyout.blockSpace_.getMetrics();
-  return metrics ? metrics.viewWidth : 0;
+  var width = metrics ? metrics.viewWidth : 0;
+  if (this.toolbox) {
+    width += this.toolbox.HtmlDiv.getBoundingClientRect().width;
+  }
+  return width;
 };
 
 /**
