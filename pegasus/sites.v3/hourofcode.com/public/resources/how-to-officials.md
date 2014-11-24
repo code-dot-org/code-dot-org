@@ -23,6 +23,7 @@ nav: resources_nav
 	- Every student, boy or girl, should have the chance to learn computer science. Join us in starting with one #HourOfCode [http://hourofcode.com](http://hourofcode.com)
 	- Today, we're proud to join the Hour of Code movement. Are you in? #HourOfCode [http://hourofcode.com](http://hourofcode.com).
 <br/>
+Issue a press release, <a href="<%= hoc_uri('/resources/official-press-release') %>"use this sample</a>.
 <br/>
 
 6. **Connect locally.** Visit [http://code.org/promote](http://code.org/promote) to learn more about computer science education in your state. Sign the petition there and you’ll get updates from Code.org on their local, state and federal advocacy efforts.
