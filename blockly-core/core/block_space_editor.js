@@ -266,6 +266,13 @@ Blockly.BlockSpaceEditor.prototype.flyoutBumpOrDeleteOutOfBoundsBlocks_ = functi
   for (var b = 0, block; block = blocks[b]; b++) {
     var blockXY = block.getRelativeToSurfaceXY();
     var blockHW = block.getHeightWidth();
+    // Have flyout handle any blocks that have been dropped on it
+    if (block.isDeletable() && (Blockly.RTL ?
+        blockXY.x - 2 * metrics.viewLeft - metrics.viewWidth :
+        -blockXY.x) > MARGIN * 2) {
+      this.flyout_.onBlockDropped(block);
+      return;
+    }
     // Bump any block that's above the top back inside.
     overflow = metrics.viewTop + MARGIN - blockHW.height -
       blockXY.y;
@@ -289,12 +296,6 @@ Blockly.BlockSpaceEditor.prototype.flyoutBumpOrDeleteOutOfBoundsBlocks_ = functi
       blockXY.x + (Blockly.RTL ? blockHW.width : 0);
     if (overflow < 0) {
       block.moveBy(overflow, 0);
-    }
-    // Have flyout handle any blocks that have been dropped on it
-    if (block.isDeletable() && (Blockly.RTL ?
-      blockXY.x - 2 * metrics.viewLeft - metrics.viewWidth :
-      -blockXY.x) > MARGIN * 2) {
-      this.flyout_.onBlockDropped(block);
     }
   }
 };
