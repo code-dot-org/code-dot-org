@@ -43,7 +43,7 @@ theme: none
           %ol
             %li
               Make sure they're logged into their account first and then have them type this URL (
-              %a{:href => "http://studio.code.org/join/XXXXXX"}> http://studio.code.org/join/XXXXXX
+              %a{"ng-href" => "http://#{canonical_hostname('studio.code.org')}/join/{{section.code}}", target: "_blank"}> http://#{canonical_hostname('studio.code.org')}/join/{{section.code}}
               ) into their browser. Once they hit enter, they'll have joined the workshop section.
           %p If they don't have a teacher account yet:
           %ol
