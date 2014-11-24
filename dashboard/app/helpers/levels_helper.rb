@@ -229,6 +229,7 @@ module LevelsHelper
       impressive
       open_function_definition
       callout_json
+      disable_sharing
     ).map{ |x| x.include?(':') ? x.split(':') : [x,x.camelize(:lower)]}]
     .each do |dashboard, blockly|
       # Select first valid value from 1. local_assigns, 2. property of @level object, 3. named instance variable, 4. properties json
