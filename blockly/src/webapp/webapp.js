@@ -122,6 +122,8 @@ Webapp.onTick = function() {
   if (Webapp.interpreter) {
     var doneUserCodeStep = false;
     var unwindingAfterStep = false;
+    var inUserCode;
+    var userCodeRow;
     var session = BlocklyApps.editor.aceEditor.getSession();
 
     // In each tick, we will step the interpreter multiple times in a tight
@@ -131,12 +133,12 @@ Webapp.onTick = function() {
          stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK &&
           (!doneUserCodeStep || unwindingAfterStep);
          stepsThisTick++) {
-      var userCodeRow = codegen.selectCurrentCode(Webapp.interpreter,
-                                                  BlocklyApps.editor,
-                                                  Webapp.cumulativeLength,
-                                                  Webapp.userCodeStartOffset,
-                                                  Webapp.userCodeLength);
-      var inUserCode = (-1 !== userCodeRow);
+      userCodeRow = codegen.selectCurrentCode(Webapp.interpreter,
+                                              BlocklyApps.editor,
+                                              Webapp.cumulativeLength,
+                                              Webapp.userCodeStartOffset,
+                                              Webapp.userCodeLength);
+      inUserCode = (-1 !== userCodeRow);
       // Check to see if we've arrived at a new breakpoint:
       //  (1) should be in user code
       //  (2) should never happen while unwinding
