@@ -1,0 +1,12 @@
+- if current_user.try(:admin?)
+  .admin
+    %h4
+      Admins:
+      %a{href: '#', onclick: '$(".admin .content").toggle(); return false;'} [hide/show]
+    .content
+      - if @level_source.hidden?
+        %h4 This level is hidden but you can see it because you are an admin. Everyone else gets a 404 page.
+      = form_for(@level_source, html: {class: 'form-inline'}) do |f|
+        = f.label :hidden, "Hide this solution and block sharing: "
+        = f.check_box :hidden
+        = f.submit 'Save'
