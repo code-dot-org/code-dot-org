@@ -32,7 +32,7 @@ theme: none
       %th.manage-th
         Current State
       %th.manage-th
-    %tr{"ng-repeat" => "workshop in workshops | orderBy:order", style: "vertical-align:top"}
+    %tr{"ng-repeat" => "workshop in workshops | orderBy:firstDate", style: "vertical-align:top"}
       %td
         %div{"ng-repeat" => "date in workshop.dates"}
           {{date.date_s}}, {{date.start_time_s}}-{{date.end_time_s}}
