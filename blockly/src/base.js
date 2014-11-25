@@ -780,11 +780,11 @@ BlocklyApps.onResize = function() {
 
   div.style.top = divParent.offsetTop + 'px';
   var fullWorkspaceWidth = parentWidth - (gameWidth + WORKSPACE_PLAYSPACE_GAP);
-  var oldWidth = parseInt(div.style.width) || div.getBoundingClientRect().width;
+  var oldWidth = parseInt(div.style.width, 10) || div.getBoundingClientRect().width;
   div.style.width = fullWorkspaceWidth + 'px';
 
   // Keep blocks static relative to the right edge in RTL mode
-  if (BlocklyApps.usingBlockly && Blockly.RTL) {
+  if (BlocklyApps.usingBlockly && Blockly.RTL && fullWorkspaceWidth - oldWidth !== 0) {
     Blockly.mainBlockSpace.getTopBlocks().forEach(function(topBlock) {
       topBlock.moveBy(fullWorkspaceWidth - oldWidth, 0);
     });
