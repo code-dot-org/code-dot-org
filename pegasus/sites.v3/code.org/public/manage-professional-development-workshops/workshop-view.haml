@@ -94,7 +94,7 @@ theme: none
         .panel-heading Signup URL
         .panel-body
           %a{href: "http://#{CDO.canonical_hostname('code.org')}/professional-development-workshops/{{ workshop.id }}"}
-            "http://#{CDO.canonical_hostname('code.org')}/professional-development-workshops/{{ workshop.id }}"
+            http://#{CDO.canonical_hostname('code.org')}/professional-development-workshops/{{ workshop.id }}
 %div
   %a.btn.btn-default{"ng-href" => "#/{{workshop.secret}}/edit"} Edit
   %a#btn-cancel.btn.btn-link{"ng-click" => "cancel_workshop()"} Cancel
