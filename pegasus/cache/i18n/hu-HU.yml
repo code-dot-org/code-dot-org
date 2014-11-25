@@ -4,13 +4,7 @@
   computer_science: Számítógép-tudomány
   computer_science_edweek: Számítógép Tudomány Oktatási Hét
   csedweek_dates: December 9-15, 2013
-  csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers,
-    <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">plan your Hour of Code</a>'
-  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
-    none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
-  n_have_learned_an_hoc: <h1>#</h1><h3> fő már kipróbálta a</h3><h2>Kódolás Óráját.</h2>
+  n_have_learned_an_hoc: "<h1>#</h1><h3> fő már kipróbálta a</h3><h2>Kódolás Óráját.</h2>"
   anybody_can_learn: Tanulni bárki tud.
   learn_now: Tanulj most
   petition_message: Minden diáknak, minden iskolában meg kellene adni a lehetőséget,
@@ -45,13 +39,13 @@
     barátaival!
   view_english_site: Az angol oldal megtekintése
   non_english_tutorials: 'Több nyelvre lefordított útmutatók:'
-  write_your_first_program: Írja meg az első számítógépes programját
+  write_your_first_program: "Írja meg az első számítógépes programját"
   learn_cs_concepts: Tanulja meg a Számítógép Tudomány alapvető fogalmait. A útmutatók
     játék szerűek ,a videók-előadások főszereplői Bill Gates, Mark Zuckerberg, Angry
     Birds és Plants vs. Zombies. Tanulj ciklusokról, if utasításról és alapvető algoritmusokról.
   all_ages: Minden korosztály számára
   beginner: Kezdő
-  n_participants: '# résztvevők'
+  n_participants: "# résztvevők"
   go: Menj
   thank_you_: Köszönjük!
   congratulations: Gratulálok!
@@ -87,13 +81,13 @@
   beyond_an_hour: Egy Óra Kódoláson Túl
   get_started: Kezdés
   i_agree: Egyetértek
-  participant_select: -Válasszon-
+  participant_select: "-Válasszon-"
   participant_student: Diák
   participant_parent: Szülő
   participant_educator: Pedagógus
   participant_engineer: Informatikus mérnök
   participant_other: A fentiek egyike sem
-  i_am_a: Én vagyok egy
+  i_am_a: "Én vagyok egy"
   never_spam: Mi soha sem fogjuk spammelni Önt
   enter_country: Adja meg az országát, ha az Egyesült Államok területén kívül él
   used_infrequent_updates: Csak ritka frissítéshez használatos
@@ -106,7 +100,7 @@
   learn_online: Megpróbáljon ki  más online tanfolyamokat
   learn_classes: Találjon helyi osztályokat
   hoc_is_here: 'Elérkezett a #HourOfCode - nézze meg! @codeorg'
-  just_did_hoc: 'Épp most csináltam végig a #HourOfCode -t - nézze meg! @codeorg'
+  just_did_hoc: "Épp most csináltam végig a #HourOfCode -t - nézze meg! @codeorg"
   learn_hoc: Ismerje meg a Kód Óráját
   beyond_hoc: Egy Órán Túl
   what_gender: Mi az Ön neme?
@@ -114,12 +108,12 @@
   boy: Fiú
   help_recruit_coders: Segítsen nekünk még több kódert a csapatjába toborozni!
   help_recruit: Segítsen nekünk további kódereket toborozni!
-  lines_of_code: <b># LINES OF CODE</b> SOR ALATT ÍRT A MAI NAPIG.
-  lines_of_code_alt: <b>#</b> SOR A KÓDBÓL MEGÍRVA TANULÓK ÁLTAL
+  lines_of_code: "<b># LINES OF CODE</b> SOR ALATT ÍRT A MAI NAPIG."
+  lines_of_code_alt: "<b>#</b> SOR A KÓDBÓL MEGÍRVA TANULÓK ÁLTAL"
   who_has_done_hoc: 'Ki végezte már le a #HourOfCode-t? @codeorg'
   hoc_leaderboards: A Kód Órája Helyezések
-  students_and_lines: '%{students} tanuló fejezte be a Kód Óráját, s írt %{lines}
-    sort a kódból.'
+  students_and_lines: "%{students} tanuló fejezte be a Kód Óráját, s írt %{lines}
+    sort a kódból."
   start_hoc: A Kód Órája elkezdése most
   contact_form_topic_press: Sajtó/média (interjú vagy igéret)
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
@@ -140,7 +134,7 @@
   contact_form_topic_other: Egyéb
   contact_form_label_topic: Témakör
   contact_form_label_email: E-mail címe
-  contact_form_label_message: Üzenet
+  contact_form_label_message: "Üzenet"
   contact_form_label_submit: Küldjön üzenetet
   class_submission_in_school: Az iskolában
   class_submission_in_school_daily_programming_course: Napi programozási tanfolyam
@@ -162,8 +156,8 @@
   class_submission_online_programming_class: Online programozási osztály
   class_submission_online_teacher_resource: Online tanári forrásanyag
   class_submission_online_other: Más online
-  class_submission_level_preschool: Óvodai
-  class_submission_level_elementary: Általános iskolai
+  class_submission_level_preschool: "Óvodai"
+  class_submission_level_elementary: "Általános iskolai"
   class_submission_level_middle_school: Középiskola
   class_submission_level_high_school: Gimnázium
   class_submission_level_college: Főiskola
@@ -214,7 +208,7 @@
   dashboard_landing_loading: Betöltés...
   dashboard_action_edit: Szerkeszt
   dashboard_action_save: Mentés
-  dashboard_action_save_all: Összes mentése
+  dashboard_action_save_all: "Összes mentése"
   dashboard_action_cancel: Mégsem
   dashboard_action_delete: Törlés
   dashboard_action_confirm: Biztos törölni akarod?
@@ -337,12 +331,7 @@
   code_hoc_coming: The Hour of Code is coming - December 8-14!
   code_sign_up: Sign up to participate during CS Education Week
   learn_more: Tudj meg többet
-  hoc2014_try_new_tutorials: "Try our new Hour of Code tutorials"
-  hoc2014_try_new_tutorial: "Try our new Hour of Code tutorial in beta"
-  hoc2014_try_scrat: "Angry Birds, PvZ, and Scrat"
-  hoc2014_try_frozen: "Artist with Anna and Elsa, from Frozen"
   carousel_heading_international: Oktatóanyagok az Ön nyelvén
-  carousel_heading_domestic: Tutorials available in English
   carousel_heading_beginners: Tutorials for Beginners
   carousel_heading_javascript: Tutorials that teach Javascript
   carousel_heading_unplugged: No device or internet? Try 'unplugged' computer science
@@ -364,7 +353,7 @@
     tutorials, upgrade to a <a href="http://browsehappy.com/" target="_blank">modern
     Web browser.</a>
   mobile_devices: Tutorials for mobile devices
-  codeorg_name: Írja meg az első számítógépes programját
+  codeorg_name: "Írja meg az első számítógépes programját"
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: An introduction to JavaScript
   khanes_name: An introduction to JavaScript
@@ -413,12 +402,12 @@
   robomind_gradelevel: Ages 8-13
   groklearning_gradelevel: Middle school +
   quorum_gradelevel: Middle school +
-  codespark_gradelevel: Általános iskolai
-  kodable_gradelevel: Általános iskolai
+  codespark_gradelevel: "Általános iskolai"
+  kodable_gradelevel: "Általános iskolai"
   tynkerapp_gradelevel: Ages 5-13
   hopscotch_gradelevel: Middle school +
   robomindnl_gradelevel: Ages 8-13
-  bitsbox_gradelevel: Általános iskolai
+  bitsbox_gradelevel: "Általános iskolai"
   makegameswithus_gradelevel: Gimnázium
   touchdevelop_gradelevel: Gimnázium
   appinventor_gradelevel: Middle school +
@@ -713,7 +702,7 @@
   scratch_beyond_gradelevel: Ages 8+
   lightbot_beyond_gradelevel: Minden korosztály számára
   codecademy_beyond_gradelevel: Gimnázium
-  kodable_beyond_gradelevel: Általános iskolai
+  kodable_beyond_gradelevel: "Általános iskolai"
   hopscotch_beyond_gradelevel: Middle school +
   groklearning_beyond_gradelevel: Middle school +
   hacketyhack_beyond_gradelevel: Gimnázium

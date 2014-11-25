@@ -4,12 +4,6 @@
   computer_science: Datorzinātne
   computer_science_edweek: Datorzinātnes Izglītības nedēļa
   csedweek_dates: 2013. gada 9. - 15. decembris
-  csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers,
-    <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">plan your Hour of Code</a>'
-  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
-    none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
   n_have_learned_an_hoc: <h1>#</h1><h3>esmu mēģinājis </h3><h2> "Programmēšanas stundu"</h2>
   anybody_can_learn: Jebkurš var iemācīties.
   learn_now: Mācīties tagad
@@ -52,7 +46,7 @@
     ciklus, ja-tad nosacījumus un pamatalgoritmus.
   all_ages: Visu vecumu
   beginner: Iesācējs
-  n_participants: '# dalībnieki'
+  n_participants: "# dalībnieki"
   go: Sākt
   thank_you_: Paldies!
   congratulations: Apsveicu!
@@ -90,7 +84,7 @@
   beyond_an_hour: Ārpus "Programmēšanas stundas"
   get_started: Sākt
   i_agree: es piekrītu
-  participant_select: -Izvēlēties-
+  participant_select: "-Izvēlēties-"
   participant_student: Students
   participant_parent: Vecāki
   participant_educator: Skolotājs
@@ -108,7 +102,7 @@
   learn_next_level: Turpināt nākamo līmeni
   learn_online: Izmēģiniet citus kursus tiešsaistē
   learn_classes: Atrast vietējās klases
-  hoc_is_here: '#Programmēšanas_stunda ir šeit - pārbaudi @codeorg'
+  hoc_is_here: "#Programmēšanas_stunda ir šeit - pārbaudi @codeorg"
   just_did_hoc: 'Es tikko izpildīju #Programmēšanas_stundu - pārbaudi! @codeorg'
   learn_hoc: Mācies "Programmēšanas skolu"
   beyond_hoc: Pārsniedz vienu stundu
@@ -118,11 +112,11 @@
   help_recruit_coders: Palīdzi mums papildnāt tavu sastāvu ar programmētājiem!
   help_recruit: Palīdzi mums papildināt sastāvu ar programmētājiem!
   lines_of_code: OVER <b># LINES OF CODE</b> WRITTEN TO DATE.
-  lines_of_code_alt: <b>#</b> LINES OF CODE WRITTEN BY STUDENTS
+  lines_of_code_alt: "<b>#</b> LINES OF CODE WRITTEN BY STUDENTS"
   who_has_done_hoc: 'Who has done the #HourOfCode? @codeorg'
   hoc_leaderboards: The Hour of Code Leaderboards
-  students_and_lines: '%{students} students have done the Hour of Code and written
-    %{lines} lines of code.'
+  students_and_lines: "%{students} students have done the Hour of Code and written
+    %{lines} lines of code."
   start_hoc: Start the Hour of Code now
   contact_form_topic_press: Press/media (interview or speaking engagement)
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
@@ -340,12 +334,7 @@
   code_hoc_coming: The Hour of Code is coming - December 8-14!
   code_sign_up: Sign up to participate during CS Education Week
   learn_more: Uzzini vairāk
-  hoc2014_try_new_tutorials: "Try our new Hour of Code tutorials"
-  hoc2014_try_new_tutorial: "Try our new Hour of Code tutorial in beta"
-  hoc2014_try_scrat: "Angry Birds, PvZ, and Scrat"
-  hoc2014_try_frozen: "Artist with Anna and Elsa, from Frozen"
   carousel_heading_international: Pamācības tavā valodā
-  carousel_heading_domestic: Tutorials available in English
   carousel_heading_beginners: Tutorials for Beginners
   carousel_heading_javascript: Tutorials that teach Javascript
   carousel_heading_unplugged: No device or internet? Try 'unplugged' computer science

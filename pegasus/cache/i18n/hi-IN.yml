@@ -4,13 +4,7 @@
   computer_science: Computer Science
   computer_science_edweek: Computer Science Education Week
   csedweek_dates: December 9-15, 2013
-  csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers,
-    <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">plan your Hour of Code</a>'
-  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
-    none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
-  n_have_learned_an_hoc: <h1>#</h1><h3>have tried an</h3><h2>HOUR of CODE</h2>
+  n_have_learned_an_hoc: "<h1>#</h1><h3>have tried an</h3><h2>HOUR of CODE</h2>"
   anybody_can_learn: Anybody can learn.
   learn_now: Learn Now
   petition_message: Sign your name if you think every student in every school should
@@ -51,7 +45,7 @@
     statements, and basic algorithms.
   all_ages: All ages
   beginner: Beginner
-  n_participants: '# participants'
+  n_participants: "# participants"
   go: Go
   thank_you_: Thank you!
   congratulations: Congratulations!
@@ -87,7 +81,7 @@
   beyond_an_hour: Beyond an HOUR OF CODE >
   get_started: Get Started
   i_agree: I agree
-  participant_select: '- Select -'
+  participant_select: "- Select -"
   participant_student: Student
   participant_parent: Parent
   participant_educator: Educator
@@ -115,11 +109,11 @@
   help_recruit_coders: Help us recruit more coders to your team!
   help_recruit: Help us recruit more coders!
   lines_of_code: OVER <b># LINES OF CODE</b> WRITTEN TO DATE.
-  lines_of_code_alt: <b>#</b> LINES OF CODE WRITTEN BY STUDENTS
+  lines_of_code_alt: "<b>#</b> LINES OF CODE WRITTEN BY STUDENTS"
   who_has_done_hoc: 'Who has done the #HourOfCode? @codeorg'
   hoc_leaderboards: The Hour of Code Leaderboards
-  students_and_lines: '%{students} students have done the Hour of Code and written
-    %{lines} lines of code.'
+  students_and_lines: "%{students} students have done the Hour of Code and written
+    %{lines} lines of code."
   start_hoc: Start the Hour of Code now
   contact_form_topic_press: Press/media (interview or speaking engagement)
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
@@ -214,7 +208,7 @@
   dashboard_action_edit: Edit
   dashboard_action_save: Save
   dashboard_action_save_all: Save all
-  dashboard_action_cancel: रद्द करें
+  dashboard_action_cancel: "रद्द करें"
   dashboard_action_delete: Delete
   dashboard_action_confirm: Delete?
   dashboard_action_delete_yes: 'Yes'
@@ -336,12 +330,7 @@
   code_hoc_coming: The Hour of Code is coming - December 8-14!
   code_sign_up: Sign up to participate during CS Education Week
   learn_more: Learn More
-  hoc2014_try_new_tutorials: "Try our new Hour of Code tutorials"
-  hoc2014_try_new_tutorial: "Try our new Hour of Code tutorial in beta"
-  hoc2014_try_scrat: "Angry Birds, PvZ, and Scrat"
-  hoc2014_try_frozen: "Artist with Anna and Elsa, from Frozen"
   carousel_heading_international: Tutorials in your language
-  carousel_heading_domestic: Tutorials available in English
   carousel_heading_beginners: Tutorials for Beginners
   carousel_heading_javascript: Tutorials that teach Javascript
   carousel_heading_unplugged: No device or internet? Try 'unplugged' computer science
@@ -390,7 +379,7 @@
   makegameswithus_name: Build an iPhone game in your browser!
   touchdevelop_name: TouchDevelop
   appinventor_name: AppInventor Hour of Code
-  blockly_name: ब्लॉक्ली
+  blockly_name: "ब्लॉक्ली"
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Rock, Paper, Scissors

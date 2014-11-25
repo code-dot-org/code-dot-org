@@ -4,13 +4,7 @@
   computer_science: Informatikk
   computer_science_edweek: Computer Science Education Week
   csedweek_dates: 9.–15. desember 2013
-  csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers,
-    <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">plan your Hour of Code</a>'
-  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
-    none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
-  n_have_learned_an_hoc: <h1>#</h1><h3>har prøvd en</h3><h2>Time med Kode</h2>
+  n_have_learned_an_hoc: "<h1>#</h1><h3>har prøvd en</h3><h2>Time med Kode</h2>"
   anybody_can_learn: Hvem som helst kan lære.
   learn_now: Lær nå
   petition_message: Alle skoleelever burde ha muligheten til å lære om IT
@@ -50,7 +44,7 @@
     hvis-så-setninger og grunnleggende algoritmer.
   all_ages: Alle aldre
   beginner: Nybegynner
-  n_participants: '# deltakere'
+  n_participants: "# deltakere"
   go: Gå
   thank_you_: Takk!
   congratulations: Gratulerer!
@@ -87,7 +81,7 @@
   beyond_an_hour: Utover Kodetimen >
   get_started: Set i gang
   i_agree: Jeg samtykker
-  participant_select: '- Velg -'
+  participant_select: "- Velg -"
   participant_student: student
   participant_parent: Forelder
   participant_educator: Lærer
@@ -105,7 +99,7 @@
   learn_next_level: Fortsett til neste nivå
   learn_online: Prøv andre kurs på nettet
   learn_classes: Finn lokale kodeklubber
-  hoc_is_here: '#Kodetimen er her - sjekk den ut! @kidsakoder'
+  hoc_is_here: "#Kodetimen er her - sjekk den ut! @kidsakoder"
   just_did_hoc: 'Jeg ble nettopp ferdig med #kodetimen! @kidsakoder'
   learn_hoc: Lær en Time med Kode
   beyond_hoc: Utover en time
@@ -115,11 +109,11 @@
   help_recruit_coders: Hjelp oss med å finne flere kodere til laget ditt!
   help_recruit: Hjelp oss med å rekruttere flere kodere!
   lines_of_code: OVER <b># KODELINJER</b> skrevet HITTIL.
-  lines_of_code_alt: <b>#</b> KODELINJER SKREVET AV ELEVER
+  lines_of_code_alt: "<b>#</b> KODELINJER SKREVET AV ELEVER"
   who_has_done_hoc: 'Hvem har vært med på #kodetimen? #HourOfCode? @codeorg'
   hoc_leaderboards: Kodetime oversikt
-  students_and_lines: '%{students}, elever har gjort kodentimen og skrevet %{lines}
-    kodelinjer.'
+  students_and_lines: "%{students}, elever har gjort kodentimen og skrevet %{lines}
+    kodelinjer."
   start_hoc: Start  kodetimen nå
   contact_form_topic_press: Media (Intervju eller taler)
   studiobar_title: Utforsk <a href='http://studio.code.org'>«Code Studio»</a>
@@ -336,12 +330,7 @@
   code_hoc_coming: The Hour of Code is coming - December 8-14!
   code_sign_up: Sign up to participate during CS Education Week
   learn_more: Lær mer
-  hoc2014_try_new_tutorials: "Try our new Hour of Code tutorials"
-  hoc2014_try_new_tutorial: "Try our new Hour of Code tutorial in beta"
-  hoc2014_try_scrat: "Angry Birds, PvZ, and Scrat"
-  hoc2014_try_frozen: "Artist with Anna and Elsa, from Frozen"
   carousel_heading_international: Gjennomganger på norsk
-  carousel_heading_domestic: Tutorials available in English
   carousel_heading_beginners: Tutorials for Beginners
   carousel_heading_javascript: Tutorials that teach Javascript
   carousel_heading_unplugged: No device or internet? Try 'unplugged' computer science
@@ -377,7 +366,7 @@
   codecademy_name: Codecademy
   codecombat_name: CodeCombat
   codeavengers_name: Bygg eit spel med JavaScript
-  processing_name: Å teikne med kode
+  processing_name: "Å teikne med kode"
   robomind_name: Programmer ein virtuell robot
   groklearning_name: A taste of Python programming
   quorum_name: Accessible programming (with screenreader support)
