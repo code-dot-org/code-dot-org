@@ -323,12 +323,13 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   this.container_ = document.createElement('div');
   this.container_.setAttribute('id', 'modalContainer');
   goog.dom.getElement('blockly').appendChild(this.container_);
+  var self = this;
   Blockly.modalBlockSpaceEditor =
       new Blockly.BlockSpaceEditor(this.container_, function() {
         // Define a special getMetrics function for our block space editor
         var metrics = Blockly.mainBlockSpace.getMetrics();
-        var contractDivHeight = this.contractDiv_
-            ? this.contractDiv_.getBoundingClientRect().height
+        var contractDivHeight = self.contractDiv_
+            ? self.contractDiv_.getBoundingClientRect().height
             : 0;
         var topOffset = FRAME_MARGIN_TOP + Blockly.Bubble.BORDER_WIDTH +
             FRAME_HEADER_HEIGHT;
@@ -339,8 +340,8 @@ Blockly.FunctionEditor.prototype.create_ = function() {
             (FRAME_MARGIN_SIDE + Blockly.Bubble.BORDER_WIDTH) * 2;
         metrics.viewHeight -=
             FRAME_MARGIN_TOP + Blockly.Bubble.BORDER_WIDTH + topOffset;
-        if (this.flyout_) {
-          metrics.absoluteTop += this.flyout_.getHeight();
+        if (self.flyout_) {
+          metrics.absoluteTop += self.flyout_.getHeight();
         }
         return metrics;
       });
