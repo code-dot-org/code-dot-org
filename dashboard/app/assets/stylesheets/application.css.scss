@@ -1395,16 +1395,6 @@ div.mini_gallery_activity {
     height: $img_size;
     border: $img_border_size groove lightgray;
   }
-  .caption {
-    color: #666;
-    margin: 0 auto;
-    clear: both;
-    max-width: $img_size;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-align: center;
-  }
 }
 
 .infobox {
