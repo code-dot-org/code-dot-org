@@ -591,9 +591,11 @@ html, body {
     padding-top: 10px;
   }
   background-color: rgb(255, 164, 0);
-  line-height: 25px;
   border-radius: 5px;
-  padding: 5px;
+  padding: 7px 14px;
+  font-size: 14px;
+  line-height: 20px;
+  box-sizing: border-box;
   a:hover {
     text-decoration: none;
     background-color: rgb(255, 164, 0);

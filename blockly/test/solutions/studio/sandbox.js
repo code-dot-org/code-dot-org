@@ -1,6 +1,6 @@
 var TestResults = require('../../../src/constants.js').TestResults;
 var _ = require('../../../build/js/lodash');
-var Direction = require('../../../src/studio/tiles.js').Direction;
+var Direction = require('../../../src/studio/constants.js').Direction;
 
 /**
  * Runs the given function at the provided tick count

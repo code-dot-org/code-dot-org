@@ -10,13 +10,13 @@
     font-weight:bold">plan your Hour of Code</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
-  n_have_learned_an_hoc: <h1>#</h1><h3>have tried an</h3><h2>HOUR of CODE</h2>
+  n_have_learned_an_hoc: "<h1>#</h1><h3>have tried an</h3><h2>HOUR of CODE</h2>"
   anybody_can_learn: 'Her koi seekh sakta hai. '
   learn_now: Abi sikhiye
   petition_message: Sign your name if you think every student in every school should
     have the opportunity to learn computer science
   petition_sign_message: 'If you agree, sign your name.  Join # others.'
-  name: نام
+  name: "نام"
   email: Email
   zipcode: ZIP code ya Mulk
   submit: Jama Kerwaein
@@ -51,7 +51,7 @@
     statements, and basic algorithms.
   all_ages: Her umer k log
   beginner: ibtydai
-  n_participants: '# participants'
+  n_participants: "# participants"
   go: jana
   thank_you_: Shukarya!
   congratulations: Mubarik ho!
@@ -118,8 +118,8 @@
   lines_of_code_alt: Talaba se likhi gae code ki lines#
   who_has_done_hoc: 'Who has done the #HourOfCode? @codeorg'
   hoc_leaderboards: The Hour of Code Leaderboards
-  students_and_lines: '%{students} students have done the Hour of Code and written
-    %{lines} lines of code.'
+  students_and_lines: "%{students} students have done the Hour of Code and written
+    %{lines} lines of code."
   start_hoc: Start the Hour of Code now
   contact_form_topic_press: Press/media (interview or speaking engagement)
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
@@ -184,7 +184,7 @@
   volunteer_engineer_submission_experience_university_student_or_researcher: Current
     university student (or researcher)
   volunteer_engineer_submission_experience_software_professional: Software professional
-  petition_age: عمر
+  petition_age: "عمر"
   dashboard_landing_title: Teacher Home Page
   dashboard_landing_welcome: Welcome to the new and improved teacher dashboard.
   dashboard_landing_video: Watch this video
@@ -260,13 +260,13 @@
   dashboard_students_new_section: You've created a new section! Now add your students
     using the <b>Add student</b> and <b>Add multiple students</b> buttons above.
   dashboard_students_placeholder_name: Student Name
-  dashboard_students_name: نام
-  dashboard_students_age: عمر
+  dashboard_students_name: "نام"
+  dashboard_students_age: "عمر"
   dashboard_students_gender: Jinss
   dashboard_students_male: Male
   dashboard_students_female: Female
   dashboard_students_secret: Secret
-  dashboard_students_password: پاس ورڈ
+  dashboard_students_password: "پاس ورڈ"
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
   dashboard_students_completed_levels: Completed Levels
@@ -336,10 +336,10 @@
   code_hoc_coming: The Hour of Code is coming - December 8-14!
   code_sign_up: Sign up to participate during CS Education Week
   learn_more: Learn More
-  hoc2014_try_new_tutorials: "Try our new Hour of Code tutorials"
-  hoc2014_try_new_tutorial: "Try our new Hour of Code tutorial in beta"
-  hoc2014_try_scrat: "Angry Birds, PvZ, and Scrat"
-  hoc2014_try_frozen: "Artist with Anna and Elsa, from Frozen"
+  hoc2014_try_new_tutorials: Try our new Hour of Code tutorials
+  hoc2014_try_new_tutorial: Try our new Hour of Code tutorial in beta
+  hoc2014_try_scrat: Angry Birds, PvZ, and Scrat
+  hoc2014_try_frozen: Artist with Anna and Elsa, from Frozen
   carousel_heading_international: Tutorials in your language
   carousel_heading_domestic: Tutorials available in English
   carousel_heading_beginners: Tutorials for Beginners
@@ -376,6 +376,7 @@
   codehs_name: Learn to Code With Karel the Dog
   codecademy_name: Codecademy
   codecombat_name: CodeCombat
+  codemonkey_name: CodeMonkey
   codeavengers_name: Build a Game with JavaScript
   processing_name: Drawing with Code
   robomind_name: Program a virtual robot
@@ -407,6 +408,7 @@
   codehs_gradelevel: High school
   codecademy_gradelevel: High school
   codecombat_gradelevel: Middle school +
+  codemonkey_gradelevel: Middle school +
   codeavengers_gradelevel: Middle school +
   processing_gradelevel: High school
   robomind_gradelevel: Ages 8-13
@@ -469,6 +471,7 @@
   codecombat_platformtext: Play as a Wizard using code (spells) to control your heroes,
     navigate mazes, defeat ogres, trick enemies, and rescue allies! Learn JavaScript
     in this HTML 5 web game for complete beginners.
+  codemonkey_platformtext: Modern web browsers
   codeavengers_platformtext: Build a 2 player 2D top-down game with JavaScript in
     10 short tasks. Then continue learning some basics of programming (variables and
     if statements) as you create a Quiz to share with friends. Along the way  earn
@@ -535,6 +538,8 @@
   codehs_shortdescription: Learn JavaScript programming with a fun visual environment
   codecademy_shortdescription: Learn JavaScript programming, in a web-browser
   codecombat_shortdescription: Play a game and learn JavaScript to win
+  codemonkey_shortdescription: Students program a monkey to catch bananas while it
+    gets slightly more complicated on each level.
   codeavengers_shortdescription: Learn JavaScript programming, in a web-browser
   processing_shortdescription: A one hour tutorial in the Processing languages
   robomind_shortdescription: Write code for a virtual robot
@@ -603,6 +608,10 @@
   codecombat_longdescription: Play as a Wizard using code (spells) to control your
     heroes, navigate mazes, defeat ogres, trick enemies, and rescue allies! Learn
     JavaScript in this HTML 5 web game for complete beginners.
+  codemonkey_longdescription: 'CodeMonkey is an online game that teaches coding in
+    a real programming language! Students program a monkey to catch bananas while
+    it gets slightly more complicated on each level. They get star scores on each
+    solution and can share it in a single click. '
   codeavengers_longdescription: Build a 2 player 2D top-down game with JavaScript
     in 10 short tasks. Then continue learning some basics of programming (variables
     and if statements) as you create a Quiz to share with friends. Along the way  earn
@@ -678,7 +687,9 @@
   lightbot_beyond_name: LightBot
   codecademy_beyond_name: Codecademy
   kodable_beyond_name: Kodable
+  scratchjr_beyond_name: ScratchJR for pre-readers
   hopscotch_beyond_name: 'Hopscotch: Programming On Your iPad'
+  pocketcode_beyond_name: Pocket Code
   groklearning_beyond_name: Learn Python programming
   hacketyhack_beyond_name: Learn Ruby
   robomind_beyond_name: Program a virtual robot
@@ -713,7 +724,9 @@
   lightbot_beyond_gradelevel: Her umer k log
   codecademy_beyond_gradelevel: High school
   kodable_beyond_gradelevel: Elementary
+  scratchjr_beyond_gradelevel: Elementary
   hopscotch_beyond_gradelevel: Middle school +
+  pocketcode_beyond_gradelevel: Middle school +
   groklearning_beyond_gradelevel: Middle school +
   hacketyhack_beyond_gradelevel: High school
   robomind_beyond_gradelevel: Ages 8-13
@@ -748,7 +761,9 @@
   lightbot_beyond_platformtext: iOS, Android (or web browser)
   codecademy_beyond_platformtext: Modern web browsers. iOS, Android apps
   kodable_beyond_platformtext: iPad
+  scratchjr_beyond_platformtext: iPad
   hopscotch_beyond_platformtext: iPad
+  pocketcode_beyond_platformtext: Mobile App
   groklearning_beyond_platformtext: Modern web browsers
   hacketyhack_beyond_platformtext: Desktop install
   robomind_beyond_platformtext: Modern web browsers, Mobile web
@@ -784,7 +799,10 @@
   lightbot_beyond_shortdescription: A game to teach coding concepts
   codecademy_beyond_shortdescription: Learn JavaScript programming, in a web-browser
   kodable_beyond_shortdescription: A fun iPad game to teach computer programming concepts
+  scratchjr_beyond_shortdescription: 'Create interactive stories and games using ScratchJr. '
   hopscotch_beyond_shortdescription: Learn visual programming on an iPad
+  pocketcode_beyond_shortdescription: Create a game on your smartphone and share with
+    friends to try!
   groklearning_beyond_shortdescription: Basic intro to python programming
   hacketyhack_beyond_shortdescription: Learn Ruby from the ground up
   robomind_beyond_shortdescription: Write code for a virtual robot
@@ -847,9 +865,16 @@
   kodable_beyond_longdescription: Kodable is a self-guided iPad game that introduces
     kids 5+ to programming basics. Having a teacher or parent nearby is optimal, but
     not necessary.
+  scratchjr_beyond_longdescription: ScratchJr is an introductory programming language
+    that enables young children to create their own interactive stories and games.
+    Children snap together graphical programming blocks to make characters move, jump,
+    dance, and sing
   hopscotch_beyond_longdescription: Student-guided tutorial on the iPad using the
     Hopscotch programming language. Students will build games and apps for their iPad
     on their iPad. Students can work individually or with friends (up to 3 per iPad).
+  pocketcode_beyond_longdescription: Create your own game on your smart phone with
+    Pocket Code! Help skydiver Steve to deliver his parcels. You can share it with
+    friends and other users to try!
   groklearning_beyond_longdescription: An introductory course using the programming
     language Python for people with no programming experience. Our unique mix of introductory
     content and challenges will bring you to a thorough understanding of Python and

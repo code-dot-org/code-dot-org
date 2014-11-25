@@ -4,7 +4,9 @@ layout: wide
 nav: resources_nav
 ---
 
-## Bring the Hour of Code to your entire school district. Get every school participating, every student learning!
+# Bring the Hour of Code to your entire school district.
+
+## Get every school participating, every student learning!
 
 1. **Recruit local schools.** Share <a href="<%= hoc_uri('/resources#sample-emails') %>">this email</a> and <a href="<%= hoc_uri('/resources/how-to') %>">teacher how to guide</a>, or include a <a href="<%= hoc_uri('/resources/stats') %>">short blurb</a> in newsletters/district communications. 
 
