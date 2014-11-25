@@ -1,7 +1,7 @@
 name '2-3 Binary Match 1'
 title 'Matching'
 
-banner 'Use the key to mach each code to its letter'
+banner 'Use the key to match each code to its letter'
 
 content1 '/script_assets/2-3_images/unplugged/binary_1_q.png, 250'
 height '20'
