@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Can you make a spiral? Move forward from 1 to 75 pixels, increasing by 1 pixel each time. Turn 25 degrees.",
+    "instructions": "Can you make a spiral? Move forward from 1 to 75 pixels, increasing by 1 pixel each time. Turn 25 degrees after each time you move forward.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -18,7 +18,8 @@
     "impressive": "false",
     "ideal": "9",
     "use_modal_function_editor": "false",
-    "use_contract_editor": "false"
+    "use_contract_editor": "false",
+    "embed": "false"
   }
 }]]></config>
   <blocks>
