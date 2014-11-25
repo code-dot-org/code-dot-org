@@ -1383,6 +1383,30 @@ div.gallery_activity {
   }
 }
 
+div.mini_gallery_activity {
+  $img_size: 54px;
+  $img_border_size: 4px;
+  $img_total_size: $img_size + 2 * $img_border_size;
+  float: left;
+  width: $img_total_size;
+  margin: 10px 5px;
+  img {
+    width: $img_size;
+    height: $img_size;
+    border: $img_border_size groove lightgray;
+  }
+  .caption {
+    color: #666;
+    margin: 0 auto;
+    clear: both;
+    max-width: $img_size;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+  }
+}
+
 .infobox {
   background-color: rgb(88, 103, 113);
   margin-left: 0px;

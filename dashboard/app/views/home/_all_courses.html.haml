@@ -23,10 +23,37 @@
   = render partial: 'shared/course_tall_block', locals: { id: "playlab" }
   = render partial: 'shared/course_tall_block', locals: { id: "flappy" }
   = render partial: 'shared/course_tall_block', locals: { id: "artist" }
-  = render partial: 'shared/course_tall_block', locals: { id: "gallery" }
+  = render partial: 'shared/course_tall_block', locals: { id: "hoc" } if current_user
 %br/
+
+.row
+  .span12.twolineheader
+    %h2
+      Gallery
+.row
+  .span6.twolineheader
+    %h1
+      Play Lab
+  .span6.twolineheader
+    %h1
+      Artist
+
+.row
+  .span6
+    - GalleryActivity.where(app: "studio").last(6).reverse().each do |gallery_activity|
+      - level_source = gallery_activity.try(:activity).try(:level_source)
+      - if level_source
+        %div.mini_gallery_activity
+          = link_to(image_tag(original_image_level_source_path(level_source)), gallery_activities_path)
+
+  .span6
+    - GalleryActivity.where(app: "turtle").last(6).reverse().each do |gallery_activity|
+      - level_source = gallery_activity.try(:activity).try(:level_source)
+      - if level_source
+        %div.mini_gallery_activity
+          = link_to(image_tag(original_image_level_source_path(level_source)), gallery_activities_path)
+
 .row
   .span12.twolineheader!= t('home.heading_legacy')
 .row
   = render partial: 'shared/course_wide_block', locals: { id: "20hour" }
-  = render partial: 'shared/course_wide_block', locals: { id: "hoc" } if current_user
