@@ -1,5 +1,5 @@
 %h1= @page_title = "Editing script #{@script.name}"
-%h3 Note: to rename stages, for now, ask an engineer to change the name in the localization file rather than changing it in this form
+%h4 Note: There are currently unsolved issues with renaming stages (see #<a href="https://www.pivotaltracker.com/story/show/76999866">76999866</a> #<a href="https://www.pivotaltracker.com/story/show/82514628">82514628</a>). For now, ask an engineer to adjust the value in the English localization file (config/locales/scripts.en.yml; use <a href="http://guides.rubyonrails.org/i18n.html">Rails I18n API</a> for reference) rather than changing it in this form.
 = render 'form'
 = link_to t('crud.show'), @script
 |
