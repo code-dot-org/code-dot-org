@@ -94,9 +94,16 @@ You'll need to do this once:
 
 This configures your system to build blockly (and blockly-core) whenever you run `rake build` and to use the version of blockly that you build yourself.
 
+### Building Blockly and Blockly-Core
+
+1. `cd code-dot-org`
+1. `rake build`
+
+This will build everything you have set to build in `locals.yml`.
+
 You can use `rake build:blockly` and `rake build:blockly_core` to build a specific project.
 
-You can also set `build_dashboard` and `build_pegasus` to `false` in `locals.yml` if you don't regularly need these to build.
+You can also set `build_dashboard: false` and/or `build_pegasus: false` in `locals.yml` if you don't need to build these frequently. They default to `true`.
 
 ## Contributing
 
