@@ -4,13 +4,7 @@
   computer_science: Informàtica
   computer_science_edweek: Setmana de l'Educació en Informàtica
   csedweek_dates: 9-15 de desembre de 2013
-  csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers,
-    <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">plan your Hour of Code</a>'
-  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
-    none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
-  n_have_learned_an_hoc: <h1>#</h1><h3>han tractat d'una</h3><h2>Hora de Codi</h2>
+  n_have_learned_an_hoc: "<h1>#</h1><h3>han tractat d'una</h3><h2>Hora de Codi</h2>"
   anybody_can_learn: Qualsevol persona pot aprendre.
   learn_now: Aprèn ara
   petition_message: Introdueix el teu nom si consideres que cada alumne de cada escola
@@ -52,7 +46,7 @@
     instruccions si-sino i algoritmes bàsics.
   all_ages: Totes les edats
   beginner: Principiant
-  n_participants: '# participants'
+  n_participants: "# participants"
   go: Anar
   thank_you_: Gràcies!
   congratulations: Felicitats!
@@ -116,11 +110,11 @@
   help_recruit_coders: Ajuda'ns reclutar més codificadors per al teu equip!
   help_recruit: Ajuda'ns reclutar més codificadors!
   lines_of_code: MÉS DE <b># LINES OF CODE</b> LÍNIES DE CODI ESCRITES FINS LA DATA.
-  lines_of_code_alt: <b>#</b> LÍNIES DE CODI ESCRIT PER ALUMNES
+  lines_of_code_alt: "<b>#</b> LÍNIES DE CODI ESCRIT PER ALUMNES"
   who_has_done_hoc: 'Qui ha fet la #HourOfCode? @codeorg'
   hoc_leaderboards: Les Classificacions de la Hora del codi
-  students_and_lines: '%{students} alumnes han fet l''hora de codi i han escrit %{lines}
-    línies de codi.'
+  students_and_lines: "%{students} alumnes han fet l'hora de codi i han escrit %{lines}
+    línies de codi."
   start_hoc: Comença la Hora de Codi ara
   contact_form_topic_press: Press/media (interview or speaking engagement)
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
@@ -337,12 +331,7 @@
   code_hoc_coming: The Hour of Code is coming - December 8-14!
   code_sign_up: Sign up to participate during CS Education Week
   learn_more: Learn More
-  hoc2014_try_new_tutorials: "Try our new Hour of Code tutorials"
-  hoc2014_try_new_tutorial: "Try our new Hour of Code tutorial in beta"
-  hoc2014_try_scrat: "Angry Birds, PvZ, and Scrat"
-  hoc2014_try_frozen: "Artist with Anna and Elsa, from Frozen"
   carousel_heading_international: Tutorials en el teu idioma
-  carousel_heading_domestic: Tutorials available in English
   carousel_heading_beginners: Tutorials for Beginners
   carousel_heading_javascript: Tutorials that teach Javascript
   carousel_heading_unplugged: No device or internet? Try 'unplugged' computer science
