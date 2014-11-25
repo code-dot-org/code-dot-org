@@ -85,7 +85,7 @@ Microsoft,http://www.microsoft.com,eu,TRUE,FALSE,FALSE,"Microsoft is the worldwi
 Rovio,http://www.funlearning.com,eu,TRUE,FALSE,FALSE,"Rovio Entertainment Ltd, the creator of Angry Birds™, is a global industry-changing entertainment media company headquartered in Finland that creatively combines digital with physical, breaking the boundaries of traditional content delivery. What started as a casual game in 2009 became an international phenomenon within a few months of its release. Today Angry Birds is not only the most downloaded game of all time, it is a worldwide known entertainment brand reaching out into publishing, licensing, animations, books and location-based entertainment, with an Angry Birds feature film due to be released in July 2016. "
 SAP,http://www.sap.com,eu,TRUE,FALSE,FALSE,"As market leader in enterprise application software, SAP (NYSE: SAP) helps companies of all sizes and industries run better. From back office to boardroom, warehouse to storefront, desktop to mobile device – SAP empowers people and organisations to work together more efficiently and use business insight more effectively to stay ahead of the competition. SAP applications and services enable more than 261,000 customers to operate profitably, adapt continuously, and grow sustainably. <p>At SAP, we believe that youth are the drivers of innovation and economic growth in their role as the future leaders, consumers, and entrepreneurs. No generation in history will have a greater impact on business, government, or the role of technology than today’s young people. SAP invests in and works with the brightest young minds to tackle big issues in the global economy and prepare youth for careers within SAP and our ecosystem to close the IT skills gap.
 "
-Anita Borg Institute,http://anitaborg.org/,founder,FALSE,TRUE,FALSE,
+Anita Borg Institute,http://anitaborg.org/,founder,TRUE,TRUE,TRUE,
 Association for Computing Machinery,http://www.acm.org/,founder,FALSE,TRUE,FALSE,
 College Board,http://www.collegeboard.org/,founder,FALSE,TRUE,FALSE,
 Computer Science Teachers Association,http://csta.acm.org/,founder,FALSE,TRUE,FALSE,
@@ -305,6 +305,7 @@ Wonder,http://wonderpl.com,uk,TRUE,FALSE,TRUE,
 Amazon Web Services,http://aws.amazon.com/,infrastructure,TRUE,FALSE,TRUE,
 Atlassian HipChat,https://www.hipchat.com/,infrastructure,TRUE,FALSE,TRUE,
 Chef,https://www.getchef.com/,infrastructure,TRUE,FALSE,TRUE,
+DataPRM,http://datarpm.com,infrastructure,TRUE,FALSE,TRUE,
 Dropbox,https://www.dropbox.com,infrastructure,TRUE,FALSE,TRUE,
 EdX,https://www.edx.org/,infrastructure,TRUE,FALSE,TRUE,
 GitHub,https://education.github.com,infrastructure,TRUE,FALSE,TRUE,
@@ -316,3 +317,4 @@ RelateIQ,https://www.relateiq.com/,infrastructure,TRUE,FALSE,TRUE,
 Typography.com,http://www.typography.com/cloud/welcome/,infrastructure,TRUE,FALSE,TRUE,
 WebPurify,http://www.webpurify.com/,infrastructure,TRUE,FALSE,TRUE,
 ZenDesk,https://www.zendesk.com/,infrastructure,TRUE,FALSE,TRUE,
+Koding,https://koding.com/,additional,TRUE,FALSE,TRUE,

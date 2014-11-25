@@ -4,13 +4,14 @@
   computer_science: Ciência da Computação
   computer_science_edweek: Semana de Educação em Ciência da Computação
   csedweek_dates: 9 a 15 de dezembro de 2013
-  csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers,
-    <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">plan your Hour of Code</a>'
+  csedweek_banner_hoc: 'A <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
+    font-weight:bold">Hora do Código</a> está chegando. Chamando todos os professores
+    e organizadores, <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
+    font-weight:bold">planeje sua Hora do Código</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
-    none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
-  n_have_learned_an_hoc: <h1>#</h1><h3>participaram da</h3><h2>Hora do Código</h2>
+    none; font-weight: 400">Você é professore de ciência da computação? Veja outros
+    recursos da Semana de Educação em Ciência da Computação</a>'
+  n_have_learned_an_hoc: "<h1>#</h1><h3>participaram da</h3><h2>Hora do Código</h2>"
   anybody_can_learn: Qualquer pessoa pode aprender.
   learn_now: Aprenda Agora
   petition_message: Todos os alunos, em todas as escolas, devem ter a oportunidade
@@ -52,7 +53,7 @@
     declarações se-então e algoritmos básicos.
   all_ages: Todas as idades
   beginner: Iniciante
-  n_participants: '# participantes'
+  n_participants: "# participantes"
   go: Ir
   thank_you_: Obrigado!
   congratulations: Parabéns!
@@ -88,7 +89,7 @@
   beyond_an_hour: Além da Hora do Código >
   get_started: Começar
   i_agree: Aceito
-  participant_select: '- Selecionar -'
+  participant_select: "- Selecionar -"
   participant_student: Estudante
   participant_parent: Pai / Mãe
   participant_educator: Educador
@@ -115,12 +116,12 @@
   boy: Menino
   help_recruit_coders: Ajude-nos a recrutar mais programadores para a sua equipe!
   help_recruit: Ajude-nos a recrutar mais programadores!
-  lines_of_code: <b>#</b> LINHAS DE CÓDIGO ESCRITAS ATÉ A DATA.
-  lines_of_code_alt: <b>#</b> LINHAS DE CÓDIGO ESCRITAS POR ESTUDANTES
+  lines_of_code: "<b>#</b> LINHAS DE CÓDIGO ESCRITAS ATÉ A DATA."
+  lines_of_code_alt: "<b>#</b> LINHAS DE CÓDIGO ESCRITAS POR ESTUDANTES"
   who_has_done_hoc: 'Quem participou da #HourOfCode? @codeorg'
   hoc_leaderboards: Classificações da Hora do Código
-  students_and_lines: '%{students} estudantes têm participado da Hora do Código e
-    escreveram %{lines} linhas de programação.'
+  students_and_lines: "%{students} estudantes têm participado da Hora do Código e
+    escreveram %{lines} linhas de programação."
   start_hoc: Comece a Hora do Código agora
   contact_form_topic_press: Imprensa/mídia (entrevista ou falando de compromisso)
   studiobar_title: Explore o <a href='http://studio.code.org'>Code Studio</a>
@@ -350,12 +351,12 @@
   code_sign_up: Inscreva-se para participar durante a Semana da Educação Em Ciência
     da Computação
   learn_more: Saiba Mais
-  hoc2014_try_new_tutorials: "Try our new Hour of Code tutorials"
-  hoc2014_try_new_tutorial: "Try our new Hour of Code tutorial in beta"
-  hoc2014_try_scrat: "Angry Birds, PvZ, and Scrat"
-  hoc2014_try_frozen: "Artist with Anna and Elsa, from Frozen"
+  hoc2014_try_new_tutorials: Experimente nossos novos tutoriais da Hora do Código
+  hoc2014_try_new_tutorial: Try our new Hour of Code tutorial in beta
+  hoc2014_try_scrat: Angry Birds, PvZ e Scrat
+  hoc2014_try_frozen: Artist with Anna and Elsa, from Frozen
   carousel_heading_international: Tutoriais no seu idioma
-  carousel_heading_domestic: Tutorials available in English
+  carousel_heading_domestic: Tutoriais disponíveis em inglês
   carousel_heading_beginners: Tutoriais para iniciantes
   carousel_heading_javascript: Tutoriais que ensinam Javascript
   carousel_heading_unplugged: Não tem dispositivos, nem Internet? Conheça a ciência
@@ -382,16 +383,17 @@
   thinkersmithspanish_name: Meus amigos robóticos
   khan_name: Uma introdução ao JavaScript
   khanes_name: Uma introdução ao JavaScript
-  tynker_name: Desenvolva seu próprio jogo
-  scratch_name: Crie cartões de natal ou jogos
+  tynker_name: Crie seu próprio jogo
+  scratch_name: Crie um cartão de natal ou um jogo
   lightbot_name: Lightbot
   thinkersmith_name: Meus amigos robóticos
-  condcards_name: Condicionais com cartões
+  condcards_name: Condicionais com cartas
   lightbotintl_name: Lightbot
   codehs_name: Aprenda a programar com Karel, o cachorro
   codecademy_name: Codecademy
   codecombat_name: CodeCombat
-  codeavengers_name: Desenvolva um jogo com JavaScript
+  codemonkey_name: CodeMonkey
+  codeavengers_name: Crie um jogo com JavaScript
   processing_name: Desenhar com códigos
   robomind_name: Programe um robô virtual
   groklearning_name: Eliza, a Dra. Chatterbot
@@ -422,6 +424,7 @@
   codehs_gradelevel: Ensino Médio
   codecademy_gradelevel: Ensino Médio
   codecombat_gradelevel: Ensino Fundamental II
+  codemonkey_gradelevel: Ensino Fundamental II
   codeavengers_gradelevel: Ensino Fundamental II
   processing_gradelevel: Ensino Médio
   robomind_gradelevel: De 8 a 13 anos
@@ -449,16 +452,17 @@
   lightbot_platformtext: TODOS os navegadores e iOS, Android ou console de jogos
   thinkersmith_platformtext: Offline
   condcards_platformtext: Offline
-  lightbotintl_platformtext: iOS, Android (ou navegador da web)
+  lightbotintl_platformtext: iOS, Android (ou navegador Web)
   codehs_platformtext: Navegadores modernos
-  codecademy_platformtext: Navegadores da web modernos. Aplicativos para iOS, Android
+  codecademy_platformtext: Navegadores Web modernos. Aplicativos para iOS, Android
   codecombat_platformtext: Navegadores Web modernos
+  codemonkey_platformtext: Navegadores Web modernos
   codeavengers_platformtext: Navegadores Web modernos
   processing_platformtext: Navegadores Web modernos
   robomind_platformtext: Navegadores Web modernos, Web móvel
   groklearning_platformtext: Navegadores Web modernos
-  quorum_platformtext: Navegadores da Web modernos. Suporte para leitores de tela
-  codespark_platformtext: iOS, Android (ou navegador da web)
+  quorum_platformtext: Navegadores Web modernos. Compatível com leitores de tela
+  codespark_platformtext: iOS, Android (ou navegador Web)
   kodable_platformtext: Kodable is a self-guided iPad game that introduces kids 5+
     to programming basics. Having a teacher or parent nearby is optimal, but not necessary.
   tynkerapp_platformtext: iPad, tablets Android
@@ -469,8 +473,8 @@
   bitsbox_platformtext: Navegadores Web modernos
   makegameswithus_platformtext: Navegadores Web modernos
   touchdevelop_platformtext: Navegadores Web modernos, smartphones, todos os dispositivos
-  appinventor_platformtext: Navegadores Web modernos, Android
-  blockly_platformtext: Navegadores Web modernos
+  appinventor_platformtext: Navegador Web moderno + Android
+  blockly_platformtext: Somente navegadores Web modernos
   thinkersmith2_platformtext: Offline
   kodableunplugged_platformtext: Offline
   projguts_platformtext: Offline
@@ -483,15 +487,18 @@
   scratch_shortdescription: Crie um cartão ou jogo interativo
   lightbot_shortdescription: Programe o Lightbot para resolver desafios usando procedimentos
     e laços!
-  thinkersmith_shortdescription: Tutorial desconectado para grupos sem dispositivos
+  thinkersmith_shortdescription: Tutorial de atividade offline para grupos sem dispositivos
+    eletrônicos
   condcards_shortdescription: Aprenda sobre algoritmos com cartas de baralho
-  lightbotintl_shortdescription: Um jogo para ensinar a programar conceitos
+  lightbotintl_shortdescription: Um jogo para ensinar conceitos de programação
   codehs_shortdescription: Comece a programar com Karel, o cachorro, uma introdução
     divertida e visual à programação!
   codecademy_shortdescription: Aprenda sobre a programação JavaScript em um navegador
     da Web
   codecombat_shortdescription: Lute contra ogros para aprender sobre Python ou JavaScript
     neste épico jogo de programação!
+  codemonkey_shortdescription: Students program a monkey to catch bananas while it
+    gets slightly more complicated on each level.
   codeavengers_shortdescription: Aprenda sobre a programação JavaScript em um navegador
     da Web
   processing_shortdescription: Tutorial de uma hora sobre linguagens de processamento
@@ -577,6 +584,10 @@
     projeto completo para os alunos ao final da atividade.
   codecombat_longdescription: Lute contra ogros para aprender sobre Python ou JavaScript
     neste épico jogo de programação!
+  codemonkey_longdescription: 'CodeMonkey is an online game that teaches coding in
+    a real programming language! Students program a monkey to catch bananas while
+    it gets slightly more complicated on each level. They get star scores on each
+    solution and can share it in a single click. '
   codeavengers_longdescription: Desenvolva um jogo de visão aérea em 2D para dois
     jogadores com o JavaScript em apenas 10 breves tarefas. Depois, continue aprendendo
     alguns conceitos básicos de programação (variáveis e instruções If), enquanto
@@ -661,7 +672,9 @@
   lightbot_beyond_name: LightBot
   codecademy_beyond_name: Codecademy
   kodable_beyond_name: Kodable
+  scratchjr_beyond_name: ScratchJR for pre-readers
   hopscotch_beyond_name: 'Hopscotch: programação no seu iPad'
+  pocketcode_beyond_name: Pocket Code
   groklearning_beyond_name: Aprenda sobre a programação Python
   hacketyhack_beyond_name: Aprenda sobre a programação Ruby
   robomind_beyond_name: Programe um robô virtual
@@ -679,7 +692,7 @@
   cargobot_beyond_name: Cargobot
   kidsruby_beyond_name: KidsRuby
   w3schools_beyond_name: Aprenda HTML
-  codeavengers_beyond_name: Aprenda a Codificar Sites
+  codeavengers_beyond_name: Aprenda a criar sites
   mozilla_beyond_name: Webmaker
   codecombat_beyond_name: CodeCombat
   codea_beyond_name: Codea
@@ -696,7 +709,9 @@
   lightbot_beyond_gradelevel: Todas as idades
   codecademy_beyond_gradelevel: Ensino Médio
   kodable_beyond_gradelevel: Ensino Fundamental
+  scratchjr_beyond_gradelevel: Ensino Fundamental
   hopscotch_beyond_gradelevel: A partir do Ensino Fundamental II
+  pocketcode_beyond_gradelevel: Ensino Fundamental II
   groklearning_beyond_gradelevel: A partir do Ensino Fundamental II
   hacketyhack_beyond_gradelevel: Ensino Médio
   robomind_beyond_gradelevel: De 8 a 13 anos
@@ -704,7 +719,7 @@
   appinventor_beyond_gradelevel: A partir do Ensino Fundamental II
   touchdevelop_beyond_gradelevel: Ensino Médio
   codehs_beyond_gradelevel: Ensino Médio
-  udemy_beyond_gradelevel: Ensino Médio
+  udemy_beyond_gradelevel: A partir do ensino médio
   lynda_beyond_gradelevel: A partir do ensino médio
   edx_beyond_gradelevel: Universidade
   coursera_beyond_gradelevel: Universidade
@@ -728,16 +743,18 @@
   khan_beyond_platformtext: Navegadores Web modernos
   tynker_beyond_platformtext: Navegadores Web modernos
   scratch_beyond_platformtext: Qualquer navegador
-  lightbot_beyond_platformtext: iOS, Android (ou navegador da web)
-  codecademy_beyond_platformtext: Navegadores da web modernos. Aplicativos para iOS,
+  lightbot_beyond_platformtext: iOS, Android (ou navegador Web)
+  codecademy_beyond_platformtext: Navegadores Web modernos. Aplicativos para iOS,
     Android
   kodable_beyond_platformtext: iPad
+  scratchjr_beyond_platformtext: iPad
   hopscotch_beyond_platformtext: iPad
+  pocketcode_beyond_platformtext: Mobile App
   groklearning_beyond_platformtext: Navegadores Web modernos
   hacketyhack_beyond_platformtext: Instalação em desktop
   robomind_beyond_platformtext: Navegadores Web modernos, Web móvel
   makegameswithus_beyond_platformtext: Navegadores Web modernos
-  appinventor_beyond_platformtext: Navegadores Web modernos, Android
+  appinventor_beyond_platformtext: Navegador Web moderno + Android
   touchdevelop_beyond_platformtext: Navegadores Web modernos, smartphones, todos os
     dispositivos
   codehs_beyond_platformtext: Navegadores modernos
@@ -767,12 +784,15 @@
   tynker_beyond_shortdescription: Um curso divertido e interessante para crianças
     do 4º ao 8º ano
   scratch_beyond_shortdescription: Crie um jogo ou uma animação interativa
-  lightbot_beyond_shortdescription: Um jogo para ensinar a programar conceitos
+  lightbot_beyond_shortdescription: Um jogo para ensinar conceitos de programação
   codecademy_beyond_shortdescription: Aprenda sobre a programação JavaScript em um
     navegador da Web
   kodable_beyond_shortdescription: Um jogo divertido para iPad que ensina conceitos
     de programação de computador
+  scratchjr_beyond_shortdescription: 'Create interactive stories and games using ScratchJr. '
   hopscotch_beyond_shortdescription: Aprenda sobre programação visual em um iPad
+  pocketcode_beyond_shortdescription: Create a game on your smartphone and share with
+    friends to try!
   groklearning_beyond_shortdescription: Introdução básica à programação Python
   hacketyhack_beyond_shortdescription: Aprenda Ruby desde os conceitos básicos
   robomind_beyond_shortdescription: Programe um robô virtual
@@ -841,10 +861,17 @@
   kodable_beyond_longdescription: Kodable é um jogo autoexplicativo para iPad que
     apresenta os conceitos básicos da programação para crianças a partir de 5 anos.
     Ter um professor ou um dos pais por perto é o ideal, mas não necessário.
+  scratchjr_beyond_longdescription: ScratchJr is an introductory programming language
+    that enables young children to create their own interactive stories and games.
+    Children snap together graphical programming blocks to make characters move, jump,
+    dance, and sing
   hopscotch_beyond_longdescription: Tutorial autoexplicativo para iPad que utiliza
     a linguagem de programação Hopscotch. Os alunos desenvolverão jogos e aplicativos
     para iPads em seus próprios dispositivos. Eles poderão trabalhar individualmente
     ou com os amigos (até 3 por iPad).
+  pocketcode_beyond_longdescription: Create your own game on your smart phone with
+    Pocket Code! Help skydiver Steve to deliver his parcels. You can share it with
+    friends and other users to try!
   groklearning_beyond_longdescription: Um curso introdutório com a linguagem de programação
     Python para pessoas sem qualquer experiência em programação. Nossa combinação
     de conteúdos introdutórios e desafios vai fazer com que você aprenda sobre Python

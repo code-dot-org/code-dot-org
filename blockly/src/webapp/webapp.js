@@ -86,6 +86,32 @@ function queueOnTick() {
   window.setTimeout(Webapp.onTick, stepSpeed);
 }
 
+var Keycodes = {
+  ENTER: 13,
+};
+
+function onDebugInputKeyDown(e) {
+  if (e.keyCode == Keycodes.ENTER) {
+    var input = event.target.textContent;
+    event.target.textContent = '';
+    var debugOutput = document.getElementById('debug-output');
+    if (debugOutput.value.length > 0) {
+      debugOutput.value += '\n> ' + input;
+    } else {
+      debugOutput.value = '> ' + input;
+    }
+    if (Webapp.interpreter) {
+      var evalInterpreter = new window.Interpreter(input);
+      evalInterpreter.stateStack[0].scope.parentScope = Webapp.interpreter.getScope();
+      evalInterpreter.run();
+      debugOutput.value += '\n< ' + String(evalInterpreter.value);
+    } else {
+      debugOutput.value += '\n< (not running)';
+    }
+    debugOutput.scrollTop = debugOutput.scrollHeight;
+  }
+}
+
 Webapp.onTick = function() {
   if (!Webapp.running) {
     return;
@@ -94,7 +120,7 @@ Webapp.onTick = function() {
   Webapp.tickCount++;
   queueOnTick();
 
-  var stepInToStart = Webapp.paused && Webapp.nextStep === StepType.IN && Webapp.tickCount === 1;
+  var atInitialBreakpoint = Webapp.paused && Webapp.nextStep === StepType.IN && Webapp.tickCount === 1;
 
   if (Webapp.paused) {
     switch (Webapp.nextStep) {
@@ -122,6 +148,9 @@ Webapp.onTick = function() {
   if (Webapp.interpreter) {
     var doneUserCodeStep = false;
     var unwindingAfterStep = false;
+    var inUserCode;
+    var userCodeRow;
+    var session = BlocklyApps.editor.aceEditor.getSession();
 
     // In each tick, we will step the interpreter multiple times in a tight
     // loop as long as we are interpreting code that the user can't see
@@ -130,16 +159,53 @@ Webapp.onTick = function() {
          stepsThisTick < MAX_INTERPRETER_STEPS_PER_TICK &&
           (!doneUserCodeStep || unwindingAfterStep);
          stepsThisTick++) {
-      var inUserCode = codegen.selectCurrentCode(Webapp.interpreter,
-                                                 BlocklyApps.editor,
-                                                 Webapp.cumulativeLength,
-                                                 Webapp.userCodeStartOffset,
-                                                 Webapp.userCodeLength);
-      if (inUserCode && stepInToStart) {
-        // Special case code when stepping in to start the program (break before 1st statement)
+      userCodeRow = codegen.selectCurrentCode(Webapp.interpreter,
+                                              BlocklyApps.editor,
+                                              Webapp.cumulativeLength,
+                                              Webapp.userCodeStartOffset,
+                                              Webapp.userCodeLength);
+      inUserCode = (-1 !== userCodeRow);
+      // Check to see if we've arrived at a new breakpoint:
+      //  (1) should be in user code
+      //  (2) should never happen while unwinding
+      //  (3) requires either
+      //   (a) atInitialBreakpoint OR
+      //   (b) isAceBreakpointRow() AND not still at the same line number where
+      //       we have already stopped from the last step/breakpoint
+      if (inUserCode && !unwindingAfterStep &&
+          (atInitialBreakpoint ||
+           (userCodeRow !== Webapp.stoppedAtBreakpointRow &&
+            codegen.isAceBreakpointRow(session, userCodeRow)))) {
+        // Yes, arrived at a new breakpoint:
+        if (Webapp.paused) {
+          // Overwrite the nextStep value. (If we hit a breakpoint during a step
+          // out or step over, this will cancel that step operation early)
+          Webapp.nextStep = StepType.RUN;
+        } else {
+          Webapp.onPauseButton();
+        }
+        // Store some properties about where we stopped:
+        Webapp.stoppedAtBreakpointRow = userCodeRow;
+        Webapp.stoppedAtBreakpointStackDepth = Webapp.interpreter.stateStack.length;
+
+        // Mark doneUserCodeStep to stop stepping, and start unwinding if needed:
         doneUserCodeStep = true;
         unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(Webapp.interpreter);
         continue;
+      }
+      // If we've moved past the place of the last breakpoint hit without being
+      // deeper in the stack, we will discard the stoppedAtBreakpoint properties:
+      if (inUserCode &&
+          userCodeRow !== Webapp.stoppedAtBreakpointRow &&
+          Webapp.interpreter.stateStack.length <= Webapp.stoppedAtBreakpointStackDepth) {
+        delete Webapp.stoppedAtBreakpointRow;
+        delete Webapp.stoppedAtBreakpointStackDepth;
+      }
+      // If we're unwinding, continue to update the stoppedAtBreakpoint properties
+      // to ensure that we have the right properties stored when the unwind completes:
+      if (inUserCode && unwindingAfterStep) {
+        Webapp.stoppedAtBreakpointRow = userCodeRow;
+        Webapp.stoppedAtBreakpointStackDepth = Webapp.interpreter.stateStack.length;
       }
       try {
         Webapp.interpreter.step();
@@ -179,11 +245,12 @@ Webapp.onTick = function() {
             unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(Webapp.interpreter);
             if (wasUnwinding && !unwindingAfterStep) {
               // done unwinding.. select code that is next to execute:
-              inUserCode = codegen.selectCurrentCode(Webapp.interpreter,
-                                                     BlocklyApps.editor,
-                                                     Webapp.cumulativeLength,
-                                                     Webapp.userCodeStartOffset,
-                                                     Webapp.userCodeLength);
+              userCodeRow = codegen.selectCurrentCode(Webapp.interpreter,
+                                                      BlocklyApps.editor,
+                                                      Webapp.cumulativeLength,
+                                                      Webapp.userCodeStartOffset,
+                                                      Webapp.userCodeLength);
+              inUserCode = (-1 !== userCodeRow);
               if (!inUserCode) {
                 // not in user code, so keep unwinding after all...
                 unwindingAfterStep = true;
@@ -210,6 +277,11 @@ Webapp.onTick = function() {
         // Our step operation is complete, reset nextStep to StepType.RUN to
         // return to a normal 'break' state:
         Webapp.nextStep = StepType.RUN;
+        if (inUserCode) {
+          // Store some properties about where we stopped:
+          Webapp.stoppedAtBreakpointRow = userCodeRow;
+          Webapp.stoppedAtBreakpointStackDepth = Webapp.interpreter.stateStack.length;
+        }
         delete Webapp.stepOutToStackDepth;
         delete Webapp.firstCallStackDepthThisStep;
         document.getElementById('spinner').style.visibility = 'hidden';
@@ -256,9 +328,19 @@ Webapp.init = function(config) {
 
   var showSlider = !config.hide_source && config.level.editCode;
   var showDebugButtons = !config.hide_source && config.level.editCode;
+  var showDebugConsole = !config.hide_source && config.level.editCode;
   var finishButtonFirstLine = _.isEmpty(level.softButtons) && !showSlider;
-  var firstControlsRow = require('./controls.html')({assetUrl: BlocklyApps.assetUrl, showSlider: showSlider, finishButton: finishButtonFirstLine});
-  var extraControlsRow = require('./extraControlRows.html')({assetUrl: BlocklyApps.assetUrl, finishButton: !finishButtonFirstLine, debugButtons: showDebugButtons});
+  var firstControlsRow = require('./controls.html')({
+    assetUrl: BlocklyApps.assetUrl,
+    showSlider: showSlider,
+    finishButton: finishButtonFirstLine
+  });
+  var extraControlsRow = require('./extraControlRows.html')({
+    assetUrl: BlocklyApps.assetUrl,
+    finishButton: !finishButtonFirstLine,
+    debugButtons: showDebugButtons,
+    debugConsole: showDebugConsole
+  });
 
   config.html = page({
     assetUrl: BlocklyApps.assetUrl,
@@ -323,6 +405,31 @@ Webapp.init = function(config) {
       if (config.level.sliderSpeed) {
         Webapp.speedSlider.setValue(config.level.sliderSpeed);
       }
+    }
+    // Set up an event handler to create breakpoints when clicking in the
+    // ace gutter:
+    var aceEditor = BlocklyApps.editor.aceEditor;
+    // TODO (cpirich): investigate timing issue that results in aceEditor
+    // not always being available at this stage during init...
+    if (aceEditor) {
+      aceEditor.on("guttermousedown", function(e) {
+        var target = e.domEvent.target;
+        if (target.className.indexOf("ace_gutter-cell") == -1) {
+          return;
+        }
+        var row = e.getDocumentPosition().row;
+        var bps = e.editor.session.getBreakpoints();
+        if (bps[row]) {
+          e.editor.session.clearBreakpoint(row);
+        } else {
+          e.editor.session.setBreakpoint(row);
+        }
+        e.stop();
+      });
+    }
+    var debugInput = document.getElementById('debug-input');
+    if (debugInput) {
+      debugInput.addEventListener('keydown', onDebugInputKeyDown);
     }
   }
 
@@ -397,6 +504,8 @@ BlocklyApps.reset = function(first) {
     Webapp.nextStep = StepType.RUN;
     delete Webapp.stepOutToStackDepth;
     delete Webapp.firstCallStackDepthThisStep;
+    delete Webapp.stoppedAtBreakpointRow;
+    delete Webapp.stoppedAtBreakpointStackDepth;
     Webapp.callExpressionSeenAtDepth = [];
     // Reset the pause button:
     var pauseButton = document.getElementById('pauseButton');
@@ -413,6 +522,14 @@ BlocklyApps.reset = function(first) {
     var spinner = document.getElementById('spinner');
     if (spinner) {
       spinner.style.visibility = 'hidden';
+    }
+    var debugOutput = document.getElementById('debug-output');
+    if (debugOutput) {
+      debugOutput.value = '';
+    }
+    var debugInput = document.getElementById('debug-input');
+    if (debugInput) {
+      debugInput.textContent = '';
     }
   }
 

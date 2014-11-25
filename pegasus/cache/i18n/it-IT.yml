@@ -4,13 +4,7 @@
   computer_science: Informatica
   computer_science_edweek: Settimana di Educazione all'Informatica
   csedweek_dates: 9-15 dicembre 2013
-  csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers,
-    <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">plan your Hour of Code</a>'
-  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
-    none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
-  n_have_learned_an_hoc: <h1>#</h1><h3>hanno completato la</h3><h2>Ora del Codice</h2>
+  n_have_learned_an_hoc: "<h1>#</h1><h3>hanno completato la</h3><h2>Ora del Codice</h2>"
   anybody_can_learn: Chiunque può imparare.
   learn_now: Impara Adesso
   petition_message: Ogni studente di ogni Scuola dovrebbe avere l'opportunità di imparare
@@ -53,7 +47,7 @@
     Impara le istruzioni di ripetizione, le istruzioni di scelta e gli algoritmi fondamentali.
   all_ages: Tutte le età
   beginner: Principiante
-  n_participants: '# partecipanti'
+  n_participants: "# partecipanti"
   go: Inizia
   thank_you_: Grazie!
   congratulations: Complimenti!
@@ -90,7 +84,7 @@
   beyond_an_hour: Dopo l'Ora del Codice >
   get_started: Inizia
   i_agree: Firmo
-  participant_select: '- Seleziona -'
+  participant_select: "- Seleziona -"
   participant_student: Studente
   participant_parent: Genitore
   participant_educator: Insegnante
@@ -119,11 +113,11 @@
   help_recruit_coders: Aiutaci a reclutare più scrittori di codice per la tua squadra!
   help_recruit: Aiutaci a reclutare più scrittori di codice!
   lines_of_code: OLTRE <b># LINEE DI CODICE</b> SCRITTE FINO AD ORA.
-  lines_of_code_alt: <b>#</b> LINEE DI CODICE SCRITTE DAGLI STUDENTI
+  lines_of_code_alt: "<b>#</b> LINEE DI CODICE SCRITTE DAGLI STUDENTI"
   who_has_done_hoc: 'Chi ha realizzato l''Ora del Codice #HourOfCode? @codeorg'
   hoc_leaderboards: Le classifiche dell'Ora del Codice
-  students_and_lines: '%{students} studenti hanno svolto l''Ora del Codice e scritto
-    %{lines} linee di codice.'
+  students_and_lines: "%{students} studenti hanno svolto l'Ora del Codice e scritto
+    %{lines} linee di codice."
   start_hoc: Inizia l'Ora del Codice adesso
   contact_form_topic_press: Stampa/media (appuntamento per un'intervista o per un
     intervento)
@@ -356,12 +350,7 @@
   code_hoc_coming: The Hour of Code is coming - December 8-14!
   code_sign_up: Sign up to participate during CS Education Week
   learn_more: Ulteriori informazioni
-  hoc2014_try_new_tutorials: "Try our new Hour of Code tutorials"
-  hoc2014_try_new_tutorial: "Try our new Hour of Code tutorial in beta"
-  hoc2014_try_scrat: "Angry Birds, PvZ, and Scrat"
-  hoc2014_try_frozen: "Artist with Anna and Elsa, from Frozen"
   carousel_heading_international: Corsi nella tua lingua
-  carousel_heading_domestic: Tutorials available in English
   carousel_heading_beginners: Tutorials for Beginners
   carousel_heading_javascript: Tutorials that teach Javascript
   carousel_heading_unplugged: No device or internet? Try 'unplugged' computer science
