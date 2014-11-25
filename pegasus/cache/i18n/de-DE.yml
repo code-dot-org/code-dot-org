@@ -4,13 +4,7 @@
   computer_science: Informatik
   computer_science_edweek: Computer Science Education Week
   csedweek_dates: 9. bis 15. Dezember 2013
-  csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers,
-    <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">plan your Hour of Code</a>'
-  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
-    none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
-  n_have_learned_an_hoc: <h1>#</h1><h3>absolvierten eine</h3><h2>Hour of Code</h2>
+  n_have_learned_an_hoc: "<h1>#</h1><h3>absolvierten eine</h3><h2>Hour of Code</h2>"
   anybody_can_learn: Jeder kann es lernen.
   learn_now: Jetzt lernen
   petition_message: Jeder Schüler in jeder Schule sollte die Möglichkeit haben, Informatik
@@ -52,7 +46,7 @@
     Wenn-Sonst-Befehle und einfache Programmabläufe.
   all_ages: Alle Altersgruppen
   beginner: Anfänger
-  n_participants: '# Teilnehmer'
+  n_participants: "# Teilnehmer"
   go: Start
   thank_you_: Vielen Dank!
   congratulations: Herzlichen Glückwunsch!
@@ -85,11 +79,11 @@
   tell_the_world: Sage es der Welt!
   thanks_for_voting: Vielen Dank für die Abstimmung!
   share_on_facebook: Auf Facebook teilen
-  share_on_twitter: Über Twitter teilen
+  share_on_twitter: "Über Twitter teilen"
   beyond_an_hour: Mehr als eine Stunde Programmieren >
   get_started: Erste Schritte
   i_agree: Ich stimme zu
-  participant_select: '- Auswählen -'
+  participant_select: "- Auswählen -"
   participant_student: Schüler
   participant_parent: Eltern
   participant_educator: Lehrer
@@ -116,12 +110,12 @@
   boy: Junge
   help_recruit_coders: Hilf uns weitere Programmierer für dein Team zu rekrutieren!
   help_recruit: Hilf uns weitere Programmierer zu rekrutieren!
-  lines_of_code: ÜBER <b># ZEILEN CODE</b> GESCHRIEBEN BIS JETZT.
-  lines_of_code_alt: <b>#</b> CODEZEILEN, VON SCHÜLERN GESCHRIEBEN
+  lines_of_code: "ÜBER <b># ZEILEN CODE</b> GESCHRIEBEN BIS JETZT."
+  lines_of_code_alt: "<b>#</b> CODEZEILEN, VON SCHÜLERN GESCHRIEBEN"
   who_has_done_hoc: 'Wer hat die #HourOfCode geschafft? @codeorg'
   hoc_leaderboards: Die Hour of Code-Ranglisten
-  students_and_lines: '%{students} Schüler haben die Hour of Code ggeschafft und %{lines}
-    Zeilen Code geschrieben.'
+  students_and_lines: "%{students} Schüler haben die Hour of Code ggeschafft und %{lines}
+    Zeilen Code geschrieben."
   start_hoc: Starte die Hour of Code jetzt
   contact_form_topic_press: Presse/Medien (Interview oder Sprecherauftrag)
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
@@ -342,12 +336,7 @@
   code_hoc_coming: The Hour of Code is coming - December 8-14!
   code_sign_up: Sign up to participate during CS Education Week
   learn_more: Erfahre mehr
-  hoc2014_try_new_tutorials: "Try our new Hour of Code tutorials"
-  hoc2014_try_new_tutorial: "Try our new Hour of Code tutorial in beta"
-  hoc2014_try_scrat: "Angry Birds, PvZ, and Scrat"
-  hoc2014_try_frozen: "Artist with Anna and Elsa, from Frozen"
   carousel_heading_international: Anleitungen in deiner Sprache
-  carousel_heading_domestic: Tutorials available in English
   carousel_heading_beginners: Tutorials for Beginners
   carousel_heading_javascript: Tutorials that teach Javascript
   carousel_heading_unplugged: No device or internet? Try 'unplugged' computer science

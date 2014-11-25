@@ -4,13 +4,7 @@
   computer_science: Računarska Nauka
   computer_science_edweek: Obrazovna nedjelja računarskih nauka
   csedweek_dates: 9-15. decembar 2013.
-  csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers,
-    <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">plan your Hour of Code</a>'
-  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
-    none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
-  n_have_learned_an_hoc: <h1>#</h1><h3>have tried an</h3><h2>Hour of Code</h2>
+  n_have_learned_an_hoc: "<h1>#</h1><h3>have tried an</h3><h2>Hour of Code</h2>"
   anybody_can_learn: Svi mogu naučiti.
   learn_now: Nauči sad
   petition_message: Svaki učenik u svakoj školi ima šansu da uči računarske nauke
@@ -50,7 +44,7 @@
     statements, and basic algorithms.
   all_ages: All ages
   beginner: Beginner
-  n_participants: '# participants'
+  n_participants: "# participants"
   go: Go
   thank_you_: Thank you!
   congratulations: Congratulations!
@@ -86,7 +80,7 @@
   beyond_an_hour: Beyond an Hour of Code >
   get_started: Start
   i_agree: I agree
-  participant_select: '- Select -'
+  participant_select: "- Select -"
   participant_student: Student
   participant_parent: Parent
   participant_educator: Educator
@@ -114,11 +108,11 @@
   help_recruit_coders: Help us recruit more coders to your team!
   help_recruit: Help us recruit more coders!
   lines_of_code: OVER <b># LINES OF CODE</b> WRITTEN TO DATE.
-  lines_of_code_alt: <b>#</b> LINES OF CODE WRITTEN BY STUDENTS
+  lines_of_code_alt: "<b>#</b> LINES OF CODE WRITTEN BY STUDENTS"
   who_has_done_hoc: 'Who has done the #HourOfCode? @codeorg'
   hoc_leaderboards: The Hour of Code Leaderboards
-  students_and_lines: '%{students} students have done the Hour of Code and written
-    %{lines} lines of code.'
+  students_and_lines: "%{students} students have done the Hour of Code and written
+    %{lines} lines of code."
   start_hoc: Start the Hour of Code now
   contact_form_topic_press: Press/media (interview or speaking engagement)
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
@@ -335,12 +329,7 @@
   code_hoc_coming: The Hour of Code is coming - December 8-14!
   code_sign_up: Sign up to participate during CS Education Week
   learn_more: 'Nauči još '
-  hoc2014_try_new_tutorials: "Try our new Hour of Code tutorials"
-  hoc2014_try_new_tutorial: "Try our new Hour of Code tutorial in beta"
-  hoc2014_try_scrat: "Angry Birds, PvZ, and Scrat"
-  hoc2014_try_frozen: "Artist with Anna and Elsa, from Frozen"
   carousel_heading_international: Tutorials in your language
-  carousel_heading_domestic: Tutorials available in English
   carousel_heading_beginners: Tutorials for Beginners
   carousel_heading_javascript: Tutorials that teach Javascript
   carousel_heading_unplugged: No device or internet? Try 'unplugged' computer science
