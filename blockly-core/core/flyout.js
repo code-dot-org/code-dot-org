@@ -32,10 +32,10 @@ goog.require('Blockly.Comment');
 /**
  * Class for a flyout.
  * @param {!Blockly.BlockSpaceEditor} blockSpaceEditor Parent editor.
- * @param {boolean} opt_static Is the flyout a static (always open) toolbox?
+ * @param {boolean} opt_insideBubble Is the flyout rendered inside a bubble?
  * @constructor
  */
-Blockly.Flyout = function(blockSpaceEditor, opt_static) {
+Blockly.Flyout = function(blockSpaceEditor, opt_insideBubble) {
   var flyout = this;
 
   /**
@@ -57,7 +57,7 @@ Blockly.Flyout = function(blockSpaceEditor, opt_static) {
    * @type {boolean}
    * @private
    */
-  this.static_ = opt_static;
+  this.insideBubble_ = opt_insideBubble;
 
   /**
    * Opaque data that can be passed to removeChangeListener.
@@ -296,9 +296,8 @@ Blockly.Flyout.prototype.position_ = function() {
   var x = metrics.absoluteLeft;
   var y = metrics.absoluteTop;
   if (Blockly.RTL) {
-    x = this.static_ ? 0 : -this.width_;
+    x = 0;
     x += metrics.viewWidth;
-  } else if (this.static_) {
     x -= this.width_;
   }
   this.svgGroup_.setAttribute('transform', 'translate(' + x + ',' + y + ')');

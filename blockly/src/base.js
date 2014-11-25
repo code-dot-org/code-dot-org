@@ -511,6 +511,7 @@ BlocklyApps.init = function(config) {
       startBlocks = blockUtils.forceInsertTopBlock(startBlocks, config.forceInsertTopBlock);
     }
     startBlocks = BlocklyApps.arrangeBlockPosition(startBlocks, config.blockArrangement);
+    BlocklyApps.loadBlocks(startBlocks);
   }
 
   // Initialize the slider.
@@ -538,14 +539,12 @@ BlocklyApps.init = function(config) {
   // around relayout which changes height on the left side to the proper
   // value
   window.setTimeout(function() {
-    BlocklyApps.onResize();
-    var event = document.createEvent('UIEvents');
-    event.initEvent('resize', true, true);  // event type, bubbling, cancelable
-    window.dispatchEvent(event);
-    if (BlocklyApps.usingBlockly) {
-      BlocklyApps.loadBlocks(startBlocks);
-    }
-  }, 10);
+      BlocklyApps.onResize();
+      var event = document.createEvent('UIEvents');
+      event.initEvent('resize', true, true);  // event type, bubbling, cancelable
+      window.dispatchEvent(event);
+    },
+    100);
 
   BlocklyApps.reset(true);
 
@@ -809,40 +808,58 @@ BlocklyApps.onResize = function() {
   BlocklyApps.resizeHeaders(fullWorkspaceWidth);
 };
 
-// |          toolbox-header          | workspace-header  | show-code-header |
+// |         toolbox-header           | workspace-header  | show-code-header |
 // |
-// |           toolboxWidth           |
+// | categoriesWidth |  toolboxWidth  |
 // |                 |         <--------- workspaceWidth ---------->         |
 // |         <---------------- fullWorkspaceWidth ----------------->         |
 BlocklyApps.resizeHeaders = function (fullWorkspaceWidth) {
-  var minWorkspaceWidthForShowCode = BlocklyApps.editCode ? 250 : 450;
-  var toolboxWidth = 0;
-  if (BlocklyApps.editCode) {
+  var categoriesWidth = 0;
+  var categories = BlocklyApps.editCode ?
+      document.querySelector('.droplet-palette-wrapper') :
+      Blockly.mainBlockSpaceEditor.toolbox &&
+      Blockly.mainBlockSpaceEditor.toolbox.HtmlDiv;
+  if (categories) {
     // If in the droplet editor, but not using blocks, keep categoryWidth at 0
     if (!BlocklyApps.editCode || BlocklyApps.editor.currentlyUsingBlocks) {
-      // Set toolboxWidth based on the block palette width:
-      var categories = document.querySelector('.droplet-palette-wrapper');
-      toolboxWidth = parseInt(window.getComputedStyle(categories).width, 10);
+      // set CategoryWidth based on the block toolbox/palette width:
+      categoriesWidth = parseInt(window.getComputedStyle(categories).width, 10);
     }
-  } else if (BlocklyApps.usingBlockly) {
-    toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
   }
 
+  var workspaceWidth;
+  var toolboxWidth;
+  if (BlocklyApps.usingBlockly) {
+    workspaceWidth = Blockly.mainBlockSpaceEditor.getBlockSpaceWidth();
+    toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
+  }
+  else {
+    workspaceWidth = fullWorkspaceWidth - categoriesWidth;
+    toolboxWidth = 0;
+  }
+
+  var headers = document.getElementById('headers');
+  var workspaceHeader = document.getElementById('workspace-header');
+  var toolboxHeader = document.getElementById('toolbox-header');
   var showCodeHeader = document.getElementById('show-code-header');
-  var showCodeWidth = 0;
+
+  var showCodeWidth;
+  var minWorkspaceWidthForShowCode = BlocklyApps.editCode ? 250 : 450;
   if (BlocklyApps.enableShowCode &&
-      (fullWorkspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
+      (workspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
     showCodeWidth = parseInt(window.getComputedStyle(showCodeHeader).width, 10);
     showCodeHeader.style.display = "";
   }
   else {
+    showCodeWidth = 0;
     showCodeHeader.style.display = "none";
   }
 
-  document.getElementById('headers').style.width = fullWorkspaceWidth + 'px';
-  document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
-  document.getElementById('workspace-header').style.width =
-      (fullWorkspaceWidth - toolboxWidth - showCodeWidth) + 'px';
+  headers.style.width = (categoriesWidth + workspaceWidth) + 'px';
+  toolboxHeader.style.width = (categoriesWidth + toolboxWidth) + 'px';
+  workspaceHeader.style.width = (workspaceWidth -
+                                 toolboxWidth -
+                                 showCodeWidth) + 'px';
 };
 
 /**
