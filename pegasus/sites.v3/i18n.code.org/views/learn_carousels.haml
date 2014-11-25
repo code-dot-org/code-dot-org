@@ -14,6 +14,10 @@
 
 #carousel-international{:style=>'display:none'}
   = view :learn_carousel, :heading=>I18n.t(:carousel_heading_international), :tag=>'International', :tutorials=>tutorials, :id=>'collection-international', :international_layout=>true, :check_language=>true
+  %br
+  %br
+  %h1= I18n.t(:carousel_heading_domestic)
+  %hr
 
 - categories.each do |category|
   - id = "collection-" + category[:tag]
@@ -23,10 +27,8 @@
 %br
 
 -if variation == 'learn'
-  %a{:id=>'notes'}
-  #guidelines{:style=>'padding:5px'}
-    = view :learn_notes
-    %br
+  %a{:href=>"http://hourofcode.com/resources/how-to"}
+    = I18n.t(:educator_notes)
 
 -if variation == 'beyond'
   %a{:href=>"/educate"}
@@ -64,6 +66,7 @@
   var pegasusLocale = "#{request.locale}";
   if (pegasusLocale.substring(0,2) != "en")
     $('#carousel-international').show();
+
 
 %script{:src=>'/js/jquery.carouFredSel-6.2.1-packed.js'}
 %script{:src=>'/js/jquery.touchSwipe.min.js'}
