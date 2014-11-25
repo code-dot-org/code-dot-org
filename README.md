@@ -83,13 +83,13 @@ The learn.code.org default dashboard install includes a static build of blockly,
 You'll need to do this once:
 
 1. OS X:
-  1. Install the [http://www.oracle.com/technetwork/java/javase/downloads/index.html](Java 8 JDK)
+  1. Install the [Java 8 JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
   1. Install [XQuartz](http://xquartz.macosforge.org/trac) (NOTE: This is required to build the Canvas dependency).
 1. `cd code-dot-org`
 1. Edit `locals.yml`
-  a. Add `build_blockly: true`
-  a. Add `build_blockly_core: true`
-  a. Add `use_my_blockly: true`
+  1. Add `build_blockly: true`
+  1. Add `build_blockly_core: true`
+  1. Add `use_my_blockly: true`
 1. `rake install`
 
 This configures your system to build blockly (and blockly-core) whenever you run `rake build` and to use the version of blockly that you build yourself.
