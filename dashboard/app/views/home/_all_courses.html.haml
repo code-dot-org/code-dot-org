@@ -37,14 +37,14 @@
 
 .row
   .span6
-    - GalleryActivity.where(app: "studio").last(6).reverse().each do |gallery_activity|
+    - GalleryActivity.where(app: "studio", autosaved: false).last(6).reverse().each do |gallery_activity|
       - level_source = gallery_activity.try(:activity).try(:level_source)
       - if level_source
         %div.mini_gallery_activity
           = link_to(image_tag(original_image_level_source_path(level_source)), gallery_activities_path)
 
   .span6
-    - GalleryActivity.where(app: "turtle").last(6).reverse().each do |gallery_activity|
+    - GalleryActivity.where(app: "turtle", autosaved: false).last(6).reverse().each do |gallery_activity|
       - level_source = gallery_activity.try(:activity).try(:level_source)
       - if level_source
         %div.mini_gallery_activity
