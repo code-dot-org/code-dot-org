@@ -1389,7 +1389,7 @@ div.mini_gallery_activity {
   $img_total_size: $img_size + 2 * $img_border_size;
   float: left;
   width: $img_total_size;
-  margin: 10px 5px;
+  margin: 0px 5px;
   img {
     width: $img_size;
     height: $img_size;
