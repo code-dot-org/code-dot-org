@@ -55,9 +55,6 @@ Blockly.ContractEditor.prototype.parameterBlockType = 'functional_parameters_get
 
 Blockly.ContractEditor.prototype.create_ = function() {
   Blockly.ContractEditor.superClass_.create_.call(this);
-  Blockly.modalBlockSpace.events.listen(
-    Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE, this.layOutBlocks_,
-    false, this);
 };
 
 Blockly.ContractEditor.prototype.hideAndRestoreBlocks_ = function() {
@@ -75,11 +72,16 @@ Blockly.ContractEditor.prototype.openWithNewFunction = function(opt_blockCreatio
   for (var i = 0; i < Blockly.defaultNumExampleBlocks; i++) {
     this.exampleBlocks_.push(this.createAndAddExampleBlock_());
   }
-  this.layOutBlocks_();
+  this.layOutBlockSpaceItems_();
 };
 
-Blockly.ContractEditor.prototype.layOutBlocks_ = function () {
-  var currentX = Blockly.RTL ? Blockly.modalBlockSpace.getMetrics().viewWidth - FRAME_MARGIN_SIDE : FRAME_MARGIN_SIDE;
+/**
+ * @override
+ */
+Blockly.ContractEditor.prototype.layOutBlockSpaceItems_ = function () {
+  var currentX = Blockly.RTL ?
+    Blockly.modalBlockSpace.getMetrics().viewWidth - FRAME_MARGIN_SIDE :
+    FRAME_MARGIN_SIDE;
   var currentY = FRAME_MARGIN_TOP;
 
   this.exampleBlocks_.forEach(function(block) {
@@ -87,6 +89,11 @@ Blockly.ContractEditor.prototype.layOutBlocks_ = function () {
     currentY += block.getHeightWidth().height;
     currentY += Blockly.ContractEditor.MARGIN_BELOW_EXAMPLES;
   }, this);
+
+  currentY += this.flyout_.getHeight();
+  this.flyout_.customYOffset = currentY;
+  this.flyout_.position_();
+  currentY += FRAME_MARGIN_TOP;
 
   if (this.functionDefinitionBlock) {
     this.functionDefinitionBlock.moveTo(currentX, currentY);
