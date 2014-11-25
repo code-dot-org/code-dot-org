@@ -32,7 +32,7 @@ goog.require('Blockly.Comment');
 /**
  * Class for a flyout.
  * @param {!Blockly.BlockSpaceEditor} blockSpaceEditor Parent editor.
- * @param {boolean} opt_insideBubble Is the flyout rendered inside a bubble?
+ * @param {boolean} opt_static Is the flyout a static (always open) toolbox?
  * @constructor
  */
 Blockly.Flyout = function(blockSpaceEditor, opt_static) {
