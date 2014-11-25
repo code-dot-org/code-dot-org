@@ -2557,8 +2557,13 @@ Studio.allGoalsVisited = function() {
   var protagonistSprite = Studio.sprite[Studio.protagonistSpriteIndex];
   var finishedGoals = 0;
 
-  // can't visit all goals if we don't have any
+  // Can't visit all goals if we don't have any
   if (Studio.spriteGoals_.length === 0) {
+    return false;
+  }
+
+  // Can't visit all the goals if the specified sprite doesn't exist
+  if (Studio.protagonistSpriteIndex && !protagonistSprite) {
     return false;
   }
 
