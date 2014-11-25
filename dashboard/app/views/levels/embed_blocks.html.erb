@@ -1,0 +1,48 @@
+<%- # Embedded Blockly block html template. Derived from /blockly/src/templates/readonly.html.ejs, converted to erb %>
+<%- blockly_path = "#{ActionController::Base.asset_host}/blockly/" %>
+<%- options = @options %>
+<%- app = @app %>
+<!DOCTYPE html>
+<html dir="<%= locale_dir %>">
+<head>
+  <meta charset="utf-8">
+  <title>Blockly</title>
+  <script type="text/javascript" src="<%= "#{blockly_path}js/#{options[:locale]}/vendor.js" %>"></script>
+  <script type="text/javascript" src="<%= "#{blockly_path}js/#{options[:locale]}/#{app}.js" %>"></script>
+  <script type="text/javascript">
+    <% # delay to onload to fix IE9. %>
+    window.onload = function() {
+      <%= app %>Main(<%=raw options.to_json %>);
+    };
+  </script>
+</head>
+<body>
+<div id="blockly" class="readonly"></div>
+<style>
+  html, body {
+    background-color: transparent;
+    margin: 0;
+    padding:0;
+    overflow: hidden;
+    height: 100%;
+    font-family: 'Gotham A', 'Gotham B', sans-serif;
+  }
+  .blocklyText, .blocklyMenuText, .blocklyTreeLabel, .blocklyHtmlInput,
+  .blocklyIconMark, .blocklyTooltipText, .goog-menuitem-content {
+    font-family: 'Gotham A', 'Gotham B', sans-serif;
+  }
+  #blockly>svg {
+    background-color: transparent;
+    border: none;
+  }
+  #blockly {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+  }
+</style>
+</body>
+</html>
