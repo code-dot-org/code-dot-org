@@ -24,7 +24,7 @@ We’ll host a variety of fun, hour-long tutorials for students of all ages, cre
 <a href="http://<%=codeorg_url() %>/learn"><img src="http://<%= codeorg_url() %>/images/tutorials.png"></a>
 
 ## 3) Register your Hour on the map
-[Make sure to sign up](). We'll send you helpful info as the Hour of Code nears, and you can see your Hour of Code on our map of worldwide events. 
+<a href="<%= hoc_uri('/') %>">Make sure to sign up</a>. We'll send you helpful info as the Hour of Code nears, and you'll see your Hour of Code on our map of worldwide events. 
 
 ## 4) Plan your hardware needs - computers are optional
 
