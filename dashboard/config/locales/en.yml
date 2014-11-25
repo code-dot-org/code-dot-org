@@ -458,6 +458,7 @@ en:
     more: "More &rarr;"
     caption_by_name_age: "by %{name}, age %{age}"
     caption_time_ago: "%{time_ago} ago"
+    header: "Gallery"
     header_playlab: "Play Lab"
     header_artist: "Artist"
   landing:
