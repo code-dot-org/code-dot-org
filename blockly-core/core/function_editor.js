@@ -340,9 +340,6 @@ Blockly.FunctionEditor.prototype.create_ = function() {
             (FRAME_MARGIN_SIDE + Blockly.Bubble.BORDER_WIDTH) * 2;
         metrics.viewHeight -=
             FRAME_MARGIN_TOP + Blockly.Bubble.BORDER_WIDTH + topOffset;
-        if (self.flyout_) {
-          metrics.absoluteTop += self.flyout_.getHeight();
-        }
         return metrics;
       });
   Blockly.modalBlockSpace = Blockly.modalBlockSpaceEditor.blockSpace;
@@ -407,6 +404,25 @@ Blockly.FunctionEditor.prototype.create_ = function() {
       goog.events.EventType.RESIZE, this, this.position_);
 
   Blockly.modalBlockSpaceEditor.svgResize();
+
+  Blockly.modalBlockSpace.events.listen(
+    Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE, this.layOutBlockSpaceItems_,
+    false, this);
+};
+
+Blockly.FunctionEditor.prototype.layOutBlockSpaceItems_ = function () {
+  if (!this.functionDefinitionBlock) {
+    return;
+  }
+  var currentX = Blockly.RTL ?
+    Blockly.modalBlockSpace.getMetrics().viewWidth - FRAME_MARGIN_SIDE :
+    FRAME_MARGIN_SIDE;
+  var currentY = 0;
+  currentY += this.flyout_.getHeight();
+  this.flyout_.customYOffset = currentY;
+  this.flyout_.position_();
+  currentY += FRAME_MARGIN_TOP;
+  this.functionDefinitionBlock.moveTo(currentX, currentY);
 };
 
 /**
