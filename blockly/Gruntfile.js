@@ -3,7 +3,7 @@ var localify = require('./src/dev/localify');
 
 var config = {};
 
-var APPS = process.env.MOOC_APP ? [process.env.MOOC_APP] : [
+var APPS = [
   'maze',
   'turtle',
   'bounce',
@@ -14,6 +14,14 @@ var APPS = process.env.MOOC_APP ? [process.env.MOOC_APP] : [
   'webapp',
   'eval'
 ];
+
+if (process.env.MOOC_APP) {
+  var app = process.env.MOOC_APP;
+  if (APPS.indexOf(app) === -1) {
+    throw new Error('Unknown app: ' + app);
+  }
+  APPS = [app];
+}
 
 // Parse options from environment.
 var MINIFY = (process.env.MOOC_MINIFY === '1');
