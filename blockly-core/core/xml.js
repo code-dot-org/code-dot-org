@@ -222,7 +222,7 @@ Blockly.Xml.textToDom = function(text) {
  * @param {!Element} xml XML DOM.
  */
 Blockly.Xml.domToBlockSpace = function(blockSpace, xml) {
-  var width = blockSpace.blockSpaceEditor.svgSize().width;
+  var width = blockSpace.getMetrics().viewWidth;
   for (var x = 0, xmlChild; xmlChild = xml.childNodes[x]; x++) {
     if (xmlChild.nodeName.toLowerCase() == 'block') {
       var block = Blockly.Xml.domToBlock_(blockSpace, xmlChild);
