@@ -15,6 +15,35 @@
   height: 400px;
   z-index: -1; }
 
+.debug-console {
+  dispay: block; }
+
+.debug-console * {
+  font-family: monospace;
+  font-size: 12px; }
+
+.debug-input-prompt {
+  max-height: 0px;
+  display: block; }
+
+.debug-input, .debug-output {
+  width: 100%;
+  border-width: 0px;
+  padding: 0px;
+  outline: none; }
+
+.debug-output {
+  height: 100px;
+  resize: none;
+  margin-bottom: -4px;
+  overflow: scroll; }
+
+.debug-input {
+  max-height: 14px;
+  background-color: white;
+  text-indent: 14.5px;
+  overflow: hidden; }
+
 /* Slider. */
 .sliderContainer {
   float: left; }

@@ -16,8 +16,8 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 
 ### OS X Mavericks
 
-1. Install Homebrew: `ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"`
-1. `brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb enscript gs mysql imagemagick rbenv ruby-build`
+1. Install Homebrew: `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+1. `brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb enscript gs mysql imagemagick rbenv ruby-build coreutils`
   1. If it complains about an old version of `X`, run `brew unlink X` and run `brew install X` again
 1. Set up MySQL
   1. Have launchd start mysql at login: `ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents`
@@ -33,7 +33,7 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 
 1. `sudo aptitude update`
 1. `sudo aptitude upgrade`
-1. `sudo aptitude install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev nodejs openjdk-7-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl`
+1. `sudo aptitude install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev nodejs openjdk-7-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk`
   * **Hit enter and select default options for any configuration popups**
 1. `sudo aptitude install npm`
 1. `sudo ln -s /usr/bin/nodejs /usr/bin/node`
@@ -44,16 +44,11 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 
 1. `git clone https://github.com/code-dot-org/code-dot-org.git`
 1. `gem install bundler`
+1. `rbenv rehash` (if using rbenv)
 1. `cd code-dot-org/aws`
 1. `bundle install`
-1. `cd ../dashboard`
-1. `bundle install`
-1. `bundle exec rake db:create db:schema:load seed:all`
-1. `cd ../pegasus`
-1. `bundle install`
-1. `echo CREATE DATABASE pegasus_development | mysql -uroot`
-1. `rake db:migrate`
-1. `rake seed:migrate`
+1. `cd ..`
+1. `rake install`
 
 ## Organizational Structure
 
@@ -72,25 +67,37 @@ Our code is segmented into four parts:
 ## Running Dashboard
 
 1. `cd code-dot-org`
-2. `rake build:dashboard`
+2. `rake build:dashboard` (Generally, do this after each pull)
 3. `bin/dashboard-server`
 4. Visit [http://localhost.studio.code.org:3000/](http://localhost.studio.code.org:3000/)
 
 ## Running Pegasus
 
 1. `cd code-dot-org`
-2. `rake build:pegasus`
+2. `rake build:pegasus` (Generally, do this after each pull)
 3. `bin/pegasus-server`
 4. Visit [http://localhost.code.org:9393/](http://localhost.code.org:9393/)
 
 ## Building Blockly and Blockly-core (optional)
 
-The learn.code.org default dashboard install includes a static build of blockly, but if you want to make modifications to blockly or blockly-core:
+The learn.code.org default dashboard install includes a static build of blockly, but if you want to make modifications to blockly or blockly-core you'll want to enable building them in the build:
 
-1. `cd code-dot-org/dashboard`
-1. `bundle exec rake 'blockly:dev[../blockly]'`
-  * This symlinks to dashboard reference the dev version of blockly
-1. Follow the blockly build instructions at `blockly/README` or blockly-core build instructions at `blockly-core/README`
+### Enabling Blockly Builds
+
+You'll need to do this once:
+
+1. `cd code-dot-org`
+1. Edit `locals.yml`
+  a. Add `build_blockly: true`
+  a. Add `build_blockly_core: true`
+  a. Add `use_my_blockly: true`
+1. `rake install`
+
+This configures your system to build blockly (and blockly-core) whenever you run `rake build` and to use the version of blockly that you build yourself.
+
+You can use `rake build:blockly` and `rake build:blockly_core` to build a specific project.
+
+You can also set `build_dashboard` and `build_pegasus` to `false` in `locals.yml` if you don't regularly need these to build.
 
 ## Contributing
 
