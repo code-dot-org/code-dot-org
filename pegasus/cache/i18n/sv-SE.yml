@@ -1,16 +1,16 @@
 "sv-SE":
   hello: Hej världen
-  select_language: Please select your language
+  select_language: Vänligen välj ditt språk
   computer_science: Datavetenskap
   computer_science_edweek: Utbildningsvecka för Dataveteskap
   csedweek_dates: Den 9-15 december 2013
-  csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers,
+  csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
+    font-weight:bold"> Kodtimmen</a> kommer. Kalla till dig alla lärare och arrangörer,
     <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">plan your Hour of Code</a>'
+    font-weight:bold"> planera din kodtimme</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
-    none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
-  n_have_learned_an_hoc: <h1>#</h1><h3>har provat en</h3><h2>Timme med Kod</h2>
+    none; font-weight: 400"> Är du en CS lärare? Se andra CSEdWeek resurser</a>'
+  n_have_learned_an_hoc: "<h1>#</h1><h3>har provat en</h3><h2>Timme med Kod</h2>"
   anybody_can_learn: Vem som helst kan lära sig.
   learn_now: Lär dig nu
   petition_message: Alla elever i alla skolor borde ha möjligheten att lära sig datavetenskap
@@ -22,22 +22,22 @@
   twentyhours_heading: Prova vår Introduktionskurs i Datavetenskap
   twentyhours_text: Avslutat din första Timme med Kod? Lär dig mer om grunderna i
     Datavetenskap och programmering i den här uppföljningskursen.
-  hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
-    8 - 14, 2014<br/>
+  hoc2014_heading: Gå med i <a href="http://hourofcode.com"> kodtimmen</a> <br/> 8-14
+    December 2014 <br/>
   hoc2014_students: Students
-  hoc2014_try: Try it
-  hoc2014_teachers: Teachers
-  hoc2014_host: Host it
-  hoc2014_everyone: Everyone
-  hoc2014_support: Support it
-  hoc2014_whatishoc: What is the Hour of Code?
+  hoc2014_try: Pröva
+  hoc2014_teachers: Lärare
+  hoc2014_host: Arrangera det
+  hoc2014_everyone: Alla
+  hoc2014_support: Stöd det
+  hoc2014_whatishoc: Vad är kodtimmen?
   twentyhours_trynow: Prova nu
-  california_heading: Ask your school to teach computer science
-  california_text: Any teacher can offer our <a href='http://learn.code.org/'>free
-    intro course</a>.  Any elementary school can <a href='http://code.org/educate/k5'>teach
-    computer science</a>. Ask high schools to <a href='http://code.org/educate/districts'>partner
-    with us.
-  california_button: Learn More
+  california_heading: Be din skola undervisa datavetenskap
+  california_text: Alla lärare kan erbjuda våra <a href='http://studio.code.org/'>
+    gratis kurser</a>.  Någon grundskola kan <a href='http://code.org/educate/k5'>
+    undervisa datavetenskap</a>. Be högstadieskolor till att bli en< en href = "http://code.org/educate/districts"
+    > partner med oss.
+  california_button: Lär dig mer
   flappy_heading: '"Flappy Birthday" till Code.org'
   flappy_text: Code.org har just fyllt 1 år.<br/><br/> Fira med oss genom att skapa
     ditt eget <b>Flappy</b>-spel. Programmera dina egna regler, och dela med vänner!
@@ -50,7 +50,7 @@
     "om"-satser och grundläggande algoritmer.
   all_ages: Alla åldrar
   beginner: Nybörjare
-  n_participants: '# deltagare'
+  n_participants: "# deltagare"
   go: Gå
   thank_you_: Tack!
   congratulations: Grattis!
@@ -59,19 +59,18 @@
   enter_valid_email: Ange en giltig e-postadress
   get_a_certificate_message: Vi skickar dig ett diplom och information om hur du <a
     href='/learn/beyond'>Lär dig mer efter denna timmen</a>
-  get_a_certificate_message_after: Ditt diplom är på väg. Fortsätt nu med vår <a href='http://learn.code.org'>20-timmarskurs</a>,
-    eller läs mer om fler möjligheter att <a href='/learn/beyond'>Lära dig mer efter
-    denna timmen</a>.
+  get_a_certificate_message_after: Klicka på certifikatet att ladda ner eller skriva
+    ut det. Nu, Fortsätt med våra <a href='http://studio.code.org'> andra kurser</a>,
+    eller se fler alternativ för att <a href='/learn/beyond'> lära sig mer än en timme</a>.
   thanks_for_submitting: Tack för att skicka!
   if_you_enjoyed: Om du gillade att lära dig detta, be dina vänner att prova också!
     Vi vill att hela världen ska lära sig.
   personalize_certificate: Anpassa ditt certifikat
   share_achievement: Dela din prestation
-  beyond_hour_message: Fortsätt nu med vår <a href='http://learn.code.org'>20-timmarskurs</a>,
-    eller läs mer om fler möjligheter att <a href='/learn/beyond'>Lära dig mer efter
-    denna timmen</a>.
+  beyond_hour_message: Fortsätt med våra <a href='http://studio.code.org'> andra kurser</a>,
+    eller se fler alternativ för att <a href='/learn/beyond'> lära sig mer än en timme</a>.
   leaderboards_for_hoc: Topplistor för Timmen med Kod.
-  support_url: http://support.code.org/
+  support_url: http://support.Code.org/
   country: Land
   city: Stad
   gender: Kön
@@ -84,10 +83,10 @@
   thanks_for_voting: Tack för din röst!
   share_on_facebook: Dela på Facebook
   share_on_twitter: Dela på Twitter
-  beyond_an_hour: Efter en TIMME MED KOD
+  beyond_an_hour: Mer än en timme av kod
   get_started: Sätt igång
   i_agree: Jag håller med
-  participant_select: '- Välj -'
+  participant_select: "- Välj -"
   participant_student: Student
   participant_parent: Förälder
   participant_educator: Utbildare
@@ -105,7 +104,7 @@
   learn_next_level: Fortsätt till nästa nivå
   learn_online: Prova andra kurser online
   learn_classes: Hitta lokala klasser
-  hoc_is_here: '#HourOfCode/Timmen med Kod är här - kolla! @codeorg'
+  hoc_is_here: "#HourOfCode/Timmen med Kod är här - kolla! @codeorg"
   just_did_hoc: 'Jag har precis gjort #HourOfCode/Timme med Kod - kolla! @codeorg'
   learn_hoc: Lär dig med en Timme av Kod
   beyond_hoc: Efter Timmen med Kod
@@ -114,12 +113,12 @@
   boy: Pojke
   help_recruit_coders: Hjälp oss att rekrytera fler kodare till vårt team!
   help_recruit: Hjälp oss att rekrytera fler kodare!
-  lines_of_code: ÖVER <b># RADER MED KOD</b> SKRIVET HITTILLS.
-  lines_of_code_alt: <b>#</b> RADER MED KOD SKRIVET AV ELEVER
+  lines_of_code: "ÖVER <b># RADER MED KOD</b> SKRIVET HITTILLS."
+  lines_of_code_alt: "<b>#</b> RADER MED KOD SKRIVET AV ELEVER"
   who_has_done_hoc: Vilka har gjort en Timme med Kod? @codeorg
   hoc_leaderboards: Timme med Kod Poängtavla
-  students_and_lines: '%{students} elever har gjort en Timme med Kod och skrivit %{lines}
-    rader med kod.'
+  students_and_lines: "%{students} elever har gjort en Timme med Kod och skrivit %{lines}
+    rader med kod."
   start_hoc: Starta en Timme med Kod nu
   contact_form_topic_press: Press/media (intervjuer eller föredrag)
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
@@ -138,7 +137,7 @@
   contact_form_topic_contribution: Bidrag/Välgörenhet
   contact_form_topic_partner: Jag vill jobba tillsammans med andra
   contact_form_topic_other: Annat
-  contact_form_label_topic: Ämne
+  contact_form_label_topic: "Ämne"
   contact_form_label_email: Din e-postadress
   contact_form_label_message: Meddelande
   contact_form_label_submit: Skicka meddelande
@@ -335,11 +334,11 @@
   dashboard_faq: Frequently Asked Questions
   code_hoc_coming: The Hour of Code is coming - December 8-14!
   code_sign_up: Sign up to participate during CS Education Week
-  learn_more: Learn More
-  hoc2014_try_new_tutorials: "Try our new Hour of Code tutorials"
-  hoc2014_try_new_tutorial: "Try our new Hour of Code tutorial in beta"
-  hoc2014_try_scrat: "Angry Birds, PvZ, and Scrat"
-  hoc2014_try_frozen: "Artist with Anna and Elsa, from Frozen"
+  learn_more: Lär dig mer
+  hoc2014_try_new_tutorials: Try our new Hour of Code tutorials
+  hoc2014_try_new_tutorial: Try our new Hour of Code tutorial in beta
+  hoc2014_try_scrat: Angry Birds, PvZ, and Scrat
+  hoc2014_try_frozen: Artist with Anna and Elsa, from Frozen
   carousel_heading_international: Handledning på ditt språk
   carousel_heading_domestic: Tutorials available in English
   carousel_heading_beginners: Tutorials for Beginners
@@ -376,6 +375,7 @@
   codehs_name: Learn to Code With Karel the Dog
   codecademy_name: Codecademy
   codecombat_name: CodeCombat
+  codemonkey_name: CodeMonkey
   codeavengers_name: Build a Game with JavaScript
   processing_name: Drawing with Code
   robomind_name: Program a virtual robot
@@ -407,6 +407,7 @@
   codehs_gradelevel: High school
   codecademy_gradelevel: High school
   codecombat_gradelevel: Middle school +
+  codemonkey_gradelevel: Middle school +
   codeavengers_gradelevel: Middle school +
   processing_gradelevel: High school
   robomind_gradelevel: Ages 8-13
@@ -469,6 +470,7 @@
   codecombat_platformtext: Play as a Wizard using code (spells) to control your heroes,
     navigate mazes, defeat ogres, trick enemies, and rescue allies! Learn JavaScript
     in this HTML 5 web game for complete beginners.
+  codemonkey_platformtext: Modern web browsers
   codeavengers_platformtext: Build a 2 player 2D top-down game with JavaScript in
     10 short tasks. Then continue learning some basics of programming (variables and
     if statements) as you create a Quiz to share with friends. Along the way  earn
@@ -535,6 +537,8 @@
   codehs_shortdescription: Learn JavaScript programming with a fun visual environment
   codecademy_shortdescription: Learn JavaScript programming, in a web-browser
   codecombat_shortdescription: Play a game and learn JavaScript to win
+  codemonkey_shortdescription: Students program a monkey to catch bananas while it
+    gets slightly more complicated on each level.
   codeavengers_shortdescription: Learn JavaScript programming, in a web-browser
   processing_shortdescription: A one hour tutorial in the Processing languages
   robomind_shortdescription: Write code for a virtual robot
@@ -603,6 +607,10 @@
   codecombat_longdescription: Play as a Wizard using code (spells) to control your
     heroes, navigate mazes, defeat ogres, trick enemies, and rescue allies! Learn
     JavaScript in this HTML 5 web game for complete beginners.
+  codemonkey_longdescription: 'CodeMonkey is an online game that teaches coding in
+    a real programming language! Students program a monkey to catch bananas while
+    it gets slightly more complicated on each level. They get star scores on each
+    solution and can share it in a single click. '
   codeavengers_longdescription: Build a 2 player 2D top-down game with JavaScript
     in 10 short tasks. Then continue learning some basics of programming (variables
     and if statements) as you create a Quiz to share with friends. Along the way  earn
@@ -678,7 +686,9 @@
   lightbot_beyond_name: LightBot
   codecademy_beyond_name: Codecademy
   kodable_beyond_name: Kodable
+  scratchjr_beyond_name: ScratchJR for pre-readers
   hopscotch_beyond_name: 'Hopscotch: Programming On Your iPad'
+  pocketcode_beyond_name: Pocket Code
   groklearning_beyond_name: Learn Python programming
   hacketyhack_beyond_name: Learn Ruby
   robomind_beyond_name: Program a virtual robot
@@ -713,7 +723,9 @@
   lightbot_beyond_gradelevel: Alla åldrar
   codecademy_beyond_gradelevel: High school
   kodable_beyond_gradelevel: Elementary
+  scratchjr_beyond_gradelevel: Elementary
   hopscotch_beyond_gradelevel: Middle school +
+  pocketcode_beyond_gradelevel: Middle school +
   groklearning_beyond_gradelevel: Middle school +
   hacketyhack_beyond_gradelevel: High school
   robomind_beyond_gradelevel: Ages 8-13
@@ -748,7 +760,9 @@
   lightbot_beyond_platformtext: iOS, Android (or web browser)
   codecademy_beyond_platformtext: Modern web browsers. iOS, Android apps
   kodable_beyond_platformtext: iPad
+  scratchjr_beyond_platformtext: iPad
   hopscotch_beyond_platformtext: iPad
+  pocketcode_beyond_platformtext: Mobile App
   groklearning_beyond_platformtext: Modern web browsers
   hacketyhack_beyond_platformtext: Desktop install
   robomind_beyond_platformtext: Modern web browsers, Mobile web
@@ -784,7 +798,10 @@
   lightbot_beyond_shortdescription: A game to teach coding concepts
   codecademy_beyond_shortdescription: Learn JavaScript programming, in a web-browser
   kodable_beyond_shortdescription: A fun iPad game to teach computer programming concepts
+  scratchjr_beyond_shortdescription: 'Create interactive stories and games using ScratchJr. '
   hopscotch_beyond_shortdescription: Learn visual programming on an iPad
+  pocketcode_beyond_shortdescription: Create a game on your smartphone and share with
+    friends to try!
   groklearning_beyond_shortdescription: Basic intro to python programming
   hacketyhack_beyond_shortdescription: Learn Ruby from the ground up
   robomind_beyond_shortdescription: Write code for a virtual robot
@@ -847,9 +864,16 @@
   kodable_beyond_longdescription: Kodable is a self-guided iPad game that introduces
     kids 5+ to programming basics. Having a teacher or parent nearby is optimal, but
     not necessary.
+  scratchjr_beyond_longdescription: ScratchJr is an introductory programming language
+    that enables young children to create their own interactive stories and games.
+    Children snap together graphical programming blocks to make characters move, jump,
+    dance, and sing
   hopscotch_beyond_longdescription: Student-guided tutorial on the iPad using the
     Hopscotch programming language. Students will build games and apps for their iPad
     on their iPad. Students can work individually or with friends (up to 3 per iPad).
+  pocketcode_beyond_longdescription: Create your own game on your smart phone with
+    Pocket Code! Help skydiver Steve to deliver his parcels. You can share it with
+    friends and other users to try!
   groklearning_beyond_longdescription: An introductory course using the programming
     language Python for people with no programming experience. Our unique mix of introductory
     content and challenges will bring you to a thorough understanding of Python and

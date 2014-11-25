@@ -4,13 +4,7 @@
   computer_science: Informatica
   computer_science_edweek: Week van het Informaticaonderwijs
   csedweek_dates: 9-15 december 2013
-  csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers,
-    <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">plan your Hour of Code</a>'
-  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
-    none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
-  n_have_learned_an_hoc: <h1>#</h1><h3>heeft een</h3><h2>Hour of Code</h2><h3>geprobeerd</h3>
+  n_have_learned_an_hoc: "<h1>#</h1><h3>heeft een</h3><h2>Hour of Code</h2><h3>geprobeerd</h3>"
   anybody_can_learn: Iedereen kan het leren.
   learn_now: Nu leren
   petition_message: Elke student in elke school moet de kans krijgen om computerkunde
@@ -53,7 +47,7 @@
     en eenvoudige algoritmen.
   all_ages: Alle leeftijden
   beginner: Beginner
-  n_participants: '# deelnemers'
+  n_participants: "# deelnemers"
   go: Verder
   thank_you_: Bedankt!
   congratulations: Gefeliciteerd!
@@ -91,7 +85,7 @@
   beyond_an_hour: verder dan een UUr Code >
   get_started: Beginnen
   i_agree: Ik ga akkoord
-  participant_select: '- Kiezen -'
+  participant_select: "- Kiezen -"
   participant_student: Leerling
   participant_parent: Ouder
   participant_educator: Leraar
@@ -119,11 +113,11 @@
   help_recruit_coders: Help ons meer programmeurs te vinden voor jouw team!
   help_recruit: Help ons meer programmeurs te vinden!
   lines_of_code: MEER DAN <b># REGELS CODE</b> GESCHREVEN TOT NU TOE.
-  lines_of_code_alt: <b>#</b> REGELS CODE GESCHREVEN DOOR LEERLINGEN
+  lines_of_code_alt: "<b>#</b> REGELS CODE GESCHREVEN DOOR LEERLINGEN"
   who_has_done_hoc: 'Wie heeft het #UurCode gedaan? @codeorg'
   hoc_leaderboards: De Uur Code Highscores
-  students_and_lines: '%{students} leerlingen hebben het Uur Code gedaan en %{lines}
-    regels code geschreven.'
+  students_and_lines: "%{students} leerlingen hebben het Uur Code gedaan en %{lines}
+    regels code geschreven."
   start_hoc: Start het Uur Code nu
   contact_form_topic_press: Pers/media (interview of met betrokkenen spreken)
   studiobar_title: ontdek <a href='http://studio.code.org'>Code Studio</a>
@@ -350,12 +344,7 @@
   code_hoc_coming: The Hour of Code is coming - December 8-14!
   code_sign_up: Sign up to participate during CS Education Week
   learn_more: Leer meer
-  hoc2014_try_new_tutorials: "Try our new Hour of Code tutorials"
-  hoc2014_try_new_tutorial: "Try our new Hour of Code tutorial in beta"
-  hoc2014_try_scrat: "Angry Birds, PvZ, and Scrat"
-  hoc2014_try_frozen: "Artist with Anna and Elsa, from Frozen"
   carousel_heading_international: Opdrachten in jouw taal
-  carousel_heading_domestic: Tutorials available in English
   carousel_heading_beginners: Tutorials for Beginners
   carousel_heading_javascript: Tutorials that teach Javascript
   carousel_heading_unplugged: No device or internet? Try 'unplugged' computer science
