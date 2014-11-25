@@ -191,6 +191,14 @@ en:
           'Calc: Evaluation Blocks': 'Calc: Evaluation Blocks'
           'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Games
             and Coordinate Planes'
+          'Eval: Boolean Operators': 'Eval: Boolean Operators'
+          Blocks to Math: Blocks to Math
+          'Play Lab: Defining Variables (Big Game)': 'Play Lab: Defining Variables
+            (Big Game)'
+          'Play Lab: Animation (Big Game)': 'Play Lab: Animation (Big Game)'
+          'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Big Game)'
+          'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
+            (Big Game)'
         playlab:
           title: Play Lab
           description: Create a story or make a game with Play Lab!

@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Remember when we used a variable to control the number of sides in a shape? Could you do the same thing using the counter variable from a for loop? This pattern starts with a triangle and adds one side at a time until it draws a decagon (10 sides). Each side should be 100 pixels long.",
+    "instructions": "Remember when we used a variable to control the number of sides in a shape? This pattern starts with a triangle and adds one side at a time until it draws a decagon (10 sides). Each side should be 100 pixels long. Hint: 360 divided by the number of sides a shape has is the number of degrees you'll need to turn.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -19,7 +19,8 @@
     "impressive": "true",
     "ideal": "13",
     "use_modal_function_editor": "false",
-    "use_contract_editor": "false"
+    "use_contract_editor": "false",
+    "embed": "false"
   }
 }]]></config>
   <blocks>
