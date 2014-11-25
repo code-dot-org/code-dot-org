@@ -18,8 +18,9 @@
     "slider_speed": ".7",
     "ideal": "9",
     "use_modal_function_editor": "false",
-    "instructions": "If you turn a little bit more, or a little bit less, than you normally would for a shape you can add some twist to your spiral. Try turning 89 degrees to create this twisted square spiral.",
-    "use_contract_editor": "false"
+    "instructions": "If you turn a little bit more or less than you normally would for a shape, it creates a neat effect. Try turning 89 degrees to create this twisted square spiral.",
+    "use_contract_editor": "false",
+    "embed": "false"
   }
 }]]></config>
   <blocks>
