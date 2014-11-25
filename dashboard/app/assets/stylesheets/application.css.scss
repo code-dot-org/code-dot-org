@@ -1385,6 +1385,20 @@ div.gallery_activity {
   }
 }
 
+div.mini_gallery_activity {
+  $img_size: 54px;
+  $img_border_size: 4px;
+  $img_total_size: $img_size + 2 * $img_border_size;
+  float: left;
+  width: $img_total_size;
+  margin: 0px 5px;
+  img {
+    width: $img_size;
+    height: $img_size;
+    border: $img_border_size groove lightgray;
+  }
+}
+
 .infobox {
   background-color: rgb(88, 103, 113);
   margin-left: 0px;
