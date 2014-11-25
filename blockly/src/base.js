@@ -841,8 +841,8 @@ BlocklyApps.resizeHeaders = function (fullWorkspaceWidth) {
 
   document.getElementById('headers').style.width = fullWorkspaceWidth + 'px';
   document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
-  document.getElementById('workspace-header').style.width = (fullWorkspaceWidth
-      - toolboxWidth - showCodeWidth) + 'px';
+  document.getElementById('workspace-header').style.width =
+      (fullWorkspaceWidth - toolboxWidth - showCodeWidth) + 'px';
 };
 
 /**
