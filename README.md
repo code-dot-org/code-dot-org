@@ -14,11 +14,11 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 
 ## Install OS-specific prerequisites
 
-### OS X Mavericks
+### OS X Mavericks / Yosemite
 
 1. Install Homebrew: `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 1. `brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb enscript gs mysql imagemagick rbenv ruby-build coreutils`
-  1. If it complains about an old version of `X`, run `brew unlink X` and run `brew install X` again
+  1. If it complains about an old version of `<package>`, run `brew unlink <package>` and run `brew install <package>` again
 1. Set up MySQL
   1. Have launchd start mysql at login: `ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents`
   1. Start mysql now: `launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist`
@@ -33,12 +33,8 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 
 1. `sudo aptitude update`
 1. `sudo aptitude upgrade`
-1. `sudo aptitude install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev nodejs openjdk-7-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk`
+1. `sudo aptitude install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev nodejs npm openjdk-7-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk`
   * **Hit enter and select default options for any configuration popups**
-1. `sudo aptitude install npm`
-1. `sudo ln -s /usr/bin/nodejs /usr/bin/node`
-1. `sudo npm update -g npm`
-1. `sudo npm install -g grunt-cli`
 
 ## Common setup
 
@@ -86,6 +82,9 @@ The learn.code.org default dashboard install includes a static build of blockly,
 
 You'll need to do this once:
 
+1. OS X:
+  1. Install the [http://www.oracle.com/technetwork/java/javase/downloads/index.html](Java 8 JDK)
+  1. Install [XQuartz](http://xquartz.macosforge.org/trac) (NOTE: This is required to build the Canvas dependency).
 1. `cd code-dot-org`
 1. Edit `locals.yml`
   a. Add `build_blockly: true`
