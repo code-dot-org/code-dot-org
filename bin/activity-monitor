@@ -37,7 +37,8 @@ HardLevelAttemptsPerHour = {
   1108 => 10,
   1110 => 10,
   1430 => 10,
-  1434 => 10
+  1434 => 10,
+  1441 => 10
 }
 
 MinimumAttemptsPerHour = 5
