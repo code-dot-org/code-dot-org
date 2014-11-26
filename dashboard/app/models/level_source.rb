@@ -89,7 +89,7 @@ class LevelSource < ActiveRecord::Base
 
   public
   def get_crowdsourced_hint
-    get_hint_from_source_internal(including: LevelSourceHint::CROWDSOURCED)
+    get_hint_from_source_internal(I18n.locale == :'en-us' ? {} : {excluding: LevelSourceHint::CROWDSOURCED})
   end
 
   def get_hint_from_any_source
