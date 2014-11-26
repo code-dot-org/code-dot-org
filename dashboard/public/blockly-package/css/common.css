@@ -445,6 +445,16 @@ input[type="radio"] {
   #headers .block-counter-overflow {
     color: #ffb81d; }
 
+#headers[dir=rtl] div {
+  margin-right: 0;
+  margin-left: -4px; }
+#headers[dir=rtl] #toolbox-header {
+  border-right: 0;
+  border-left: 1px solid gray; }
+#headers[dir=rtl] #show-code-header {
+  border-left: 0;
+  border-right: 1px solid gray; }
+
 #rotateContainer {
   position: fixed;
   z-index: 10001;
