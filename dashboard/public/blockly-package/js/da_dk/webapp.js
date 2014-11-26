@@ -2591,6 +2591,11 @@ var getFeedbackMessage = function(options) {
       // Free plays
       case TestResults.FREE_PLAY:
         message = options.appStrings.reinfFeedbackMsg;
+        // reinfFeedbackMsg talks about sharing. If sharing is disabled, use
+        // a more generic message
+        if (options.level.disableSharing) {
+          message = msg.finalStage();
+        }
         break;
     }
   }
@@ -8854,7 +8859,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/da_dk/common'); ; buf.push('\n\n');3; if (data.ok) {; buf.push('  <div class="farSide" style="padding: 1ex 3ex 0">\n    <button id="ok-button" class="secondary">\n      ', escape((5,  msg.dialogOK() )), '\n    </button>\n  </div>\n');8; }; buf.push('\n');9; if (data.previousLevel) {; buf.push('  <button id="back-button" class="launch">\n    ', escape((10,  msg.backToPreviousLevel() )), '\n  </button>\n');12; }; buf.push('\n');13; if (data.tryAgain) {; buf.push('  ');13; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="again-button" class="launch arrow-container arrow-left">\n      <div class="arrow-head"><img src="', escape((14,  data.assetUrl('media/tryagain-arrow-head.png') )), '" alt="Arrowhead" width="67" height="130"/></div>\n      <div class="arrow-text">', escape((15,  msg.tryAgain() )), '</div>\n    </div>\n  ');17; } else {; buf.push('    ');17; if (data.hintRequestExperiment === "left") {; buf.push('      <button id="hint-request-button" class="launch">\n        ', escape((18,  msg.hintRequest() )), '\n      </button>\n      <button id="again-button" class="launch">\n        ', escape((21,  msg.tryAgain() )), '\n      </button>\n    ');23; } else if (data.hintRequestExperiment == "right") {; buf.push('      <button id="again-button" class="launch">\n        ', escape((24,  msg.tryAgain() )), '\n      </button>\n      <button id="hint-request-button" class="launch">\n        ', escape((27,  msg.hintRequest() )), '\n      </button>\n    ');29; } else {; buf.push('      <button id="again-button" class="launch">\n        ', escape((30,  msg.continueWorking() )), '\n      </button>\n    ');32; }; buf.push('  ');32; }; buf.push('');32; }; buf.push('\n');33; if (data.nextLevel) {; buf.push('  ');33; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="continue-button" class="launch arrow-container arrow-right">\n      <div class="arrow-head"><img src="', escape((34,  data.assetUrl('media/next-arrow-head.png') )), '" alt="Arrowhead" width="66" height="130"/></div>\n      <div class="arrow-text">', escape((35,  msg.continue() )), '</div>\n    </div>\n  ');37; } else {; buf.push('    <button id="continue-button" class="launch" style="float: right">\n      ', escape((38,  msg.nextPuzzle() )), '\n    </button>\n  ');40; }; buf.push('');40; }; buf.push(''); })();
+ buf.push('');1; var msg = require('../../locale/da_dk/common'); ; buf.push('\n\n');3; if (data.ok) {; buf.push('  <div class="farSide" style="padding: 1ex 3ex 0">\n    <button id="ok-button" class="secondary">\n      ', escape((5,  msg.dialogOK() )), '\n    </button>\n  </div>\n');8; }; buf.push('\n');9; if (data.previousLevel) {; buf.push('  <button id="back-button" class="launch">\n    ', escape((10,  msg.backToPreviousLevel() )), '\n  </button>\n');12; }; buf.push('\n');13; if (data.tryAgain) {; buf.push('  ');13; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="again-button" class="launch arrow-container arrow-left">\n      <div class="arrow-head"><img src="', escape((14,  data.assetUrl('media/tryagain-arrow-head.png') )), '" alt="Arrowhead" width="67" height="130"/></div>\n      <div class="arrow-text">', escape((15,  msg.tryAgain() )), '</div>\n    </div>\n  ');17; } else {; buf.push('    ');17; if (data.hintRequestExperiment === "left") {; buf.push('      <button id="hint-request-button" class="launch">\n        ', escape((18,  msg.hintRequest() )), '\n      </button>\n      <button id="again-button" class="launch">\n        ', escape((21,  msg.tryAgain() )), '\n      </button>\n    ');23; } else if (data.hintRequestExperiment == "right") {; buf.push('      <button id="again-button" class="launch">\n        ', escape((24,  msg.tryAgain() )), '\n      </button>\n      <button id="hint-request-button" class="launch">\n        ', escape((27,  msg.hintRequest() )), '\n      </button>\n    ');29; } else {; buf.push('      <button id="again-button" class="launch">\n        ', escape((30,  msg.tryAgain() )), '\n      </button>\n    ');32; }; buf.push('  ');32; }; buf.push('');32; }; buf.push('\n');33; if (data.nextLevel) {; buf.push('  ');33; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="continue-button" class="launch arrow-container arrow-right">\n      <div class="arrow-head"><img src="', escape((34,  data.assetUrl('media/next-arrow-head.png') )), '" alt="Arrowhead" width="66" height="130"/></div>\n      <div class="arrow-text">', escape((35,  msg.continue() )), '</div>\n    </div>\n  ');37; } else {; buf.push('    <button id="continue-button" class="launch" style="float: right">\n      ', escape((38,  msg.continue() )), '\n    </button>\n  ');40; }; buf.push('');40; }; buf.push(''); })();
 } 
 return buf.join('');
 };
@@ -9029,7 +9034,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/da_dk/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n');9; if (options.alreadySaved) { ; buf.push('\n  <div class="saved-to-gallery">\n    ', escape((11,  msg.savedToGallery() )), '\n  </div>\n');13; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <div class="social-buttons">\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((16,  msg.saveToGallery() )), '\n  </button>\n  <button id="print-button">\n    ', escape((19,  msg.print() )), '\n  </button>\n  </div>\n');22; } ; buf.push('\n\n');24; if (options.response && options.response.level_source) { ; buf.push('\n  ');25; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((26,  options.appStrings.sharingText )), '</div>\n  ');27; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((30,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');34; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((34,  options.facebookUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((35,  BlocklyApps.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');37; }; buf.push('\n    ');38; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((38,  options.twitterUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((39,  BlocklyApps.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');41; }; buf.push('    ');41; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((42,  BlocklyApps.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');44; }; buf.push('  </div>\n');45; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n'); })();
+ buf.push('');1; var msg = require('../../locale/da_dk/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n  <div class="social-buttons">\n  <button id="print-button">\n    ', escape((11,  msg.print() )), '\n  </button>\n');13; if (options.alreadySaved) { ; buf.push('\n  <button class="saved-to-gallery" disabled>\n    ', escape((15,  msg.savedToGallery() )), '\n  </button>\n');17; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((19,  msg.saveToGallery() )), '\n  </button>\n');21; } ; buf.push('\n  </div>\n\n');24; if (options.response && options.response.level_source) { ; buf.push('\n  ');25; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((26,  options.appStrings.sharingText )), '</div>\n  ');27; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((30,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');34; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((34,  options.facebookUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((35,  BlocklyApps.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');37; }; buf.push('\n    ');38; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((38,  options.twitterUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((39,  BlocklyApps.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');41; }; buf.push('    ');41; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((42,  BlocklyApps.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');44; }; buf.push('  </div>\n');45; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -9621,7 +9626,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/da_dk/common') ; buf.push('\n');2; var webappMsg = require('../../locale/da_dk/webapp') ; buf.push('\n\n');4; if (debugButtons) { ; buf.push('\n<div>\n');6; } ; buf.push('\n\n');8; if (debugButtons) { ; buf.push('\n<div id="debug-buttons" style="display:inline;">\n    <button id="pauseButton" class="share">\n      ', escape((11,  webappMsg.pause() )), '\n    </button>\n    <button id="stepInButton" class="share">\n      ', escape((14,  webappMsg.stepIn() )), '\n    </button>\n    <button id="stepOverButton" class="share">\n      ', escape((17,  webappMsg.stepOver() )), '\n    </button>\n    <button id="stepOutButton" class="share">\n      ', escape((20,  webappMsg.stepOut() )), '\n    </button>\n  </div>\n');23; } ; buf.push('\n\n');25; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((28,  assetUrl('media/1x1.gif') )), '">', escape((28,  msg.finish() )), '\n    </button>\n  </div>\n');31; } ; buf.push('\n\n');33; if (debugButtons) { ; buf.push('\n</div>\n');35; } ; buf.push('\n'); })();
+ buf.push('');1; var msg = require('../../locale/da_dk/common') ; buf.push('\n');2; var webappMsg = require('../../locale/da_dk/webapp') ; buf.push('\n\n');4; if (debugButtons) { ; buf.push('\n<div>\n  <div id="debug-buttons" style="display:inline;">\n    <button id="pauseButton" class="share">\n      ', escape((8,  webappMsg.pause() )), '\n    </button>\n    <button id="stepInButton" class="share">\n      ', escape((11,  webappMsg.stepIn() )), '\n    </button>\n    <button id="stepOverButton" class="share">\n      ', escape((14,  webappMsg.stepOver() )), '\n    </button>\n    <button id="stepOutButton" class="share">\n      ', escape((17,  webappMsg.stepOut() )), '\n    </button>\n  </div>\n');20; } ; buf.push('\n\n');22; if (debugConsole) { ; buf.push('\n  <div id="debug-console" class="debug-console">\n    <textarea id="debug-output" readonly disabled tabindex=-1 class="debug-output"></textarea>\n    <span class="debug-input-prompt">\n      &gt;\n    </span>\n    <div contenteditable id="debug-input" class="debug-input"></div>\n  </div>\n');30; } ; buf.push('\n\n');32; if (finishButton) { ; buf.push('\n  <div id="share-cell" class="share-cell-none">\n    <button id="finishButton" class="share">\n      <img src="', escape((35,  assetUrl('media/1x1.gif') )), '">', escape((35,  msg.finish() )), '\n    </button>\n  </div>\n');38; } ; buf.push('\n\n');40; if (debugButtons) { ; buf.push('\n</div>\n');42; } ; buf.push('\n'); })();
 } 
 return buf.join('');
 };
@@ -9911,6 +9916,32 @@ function queueOnTick() {
   window.setTimeout(Webapp.onTick, stepSpeed);
 }
 
+var Keycodes = {
+  ENTER: 13,
+};
+
+function onDebugInputKeyDown(e) {
+  if (e.keyCode == Keycodes.ENTER) {
+    var input = event.target.textContent;
+    event.target.textContent = '';
+    var debugOutput = document.getElementById('debug-output');
+    if (debugOutput.value.length > 0) {
+      debugOutput.value += '\n> ' + input;
+    } else {
+      debugOutput.value = '> ' + input;
+    }
+    if (Webapp.interpreter) {
+      var evalInterpreter = new window.Interpreter(input);
+      evalInterpreter.stateStack[0].scope.parentScope = Webapp.interpreter.getScope();
+      evalInterpreter.run();
+      debugOutput.value += '\n< ' + String(evalInterpreter.value);
+    } else {
+      debugOutput.value += '\n< (not running)';
+    }
+    debugOutput.scrollTop = debugOutput.scrollHeight;
+  }
+}
+
 Webapp.onTick = function() {
   if (!Webapp.running) {
     return;
@@ -10127,9 +10158,19 @@ Webapp.init = function(config) {
 
   var showSlider = !config.hide_source && config.level.editCode;
   var showDebugButtons = !config.hide_source && config.level.editCode;
+  var showDebugConsole = !config.hide_source && config.level.editCode;
   var finishButtonFirstLine = _.isEmpty(level.softButtons) && !showSlider;
-  var firstControlsRow = require('./controls.html')({assetUrl: BlocklyApps.assetUrl, showSlider: showSlider, finishButton: finishButtonFirstLine});
-  var extraControlsRow = require('./extraControlRows.html')({assetUrl: BlocklyApps.assetUrl, finishButton: !finishButtonFirstLine, debugButtons: showDebugButtons});
+  var firstControlsRow = require('./controls.html')({
+    assetUrl: BlocklyApps.assetUrl,
+    showSlider: showSlider,
+    finishButton: finishButtonFirstLine
+  });
+  var extraControlsRow = require('./extraControlRows.html')({
+    assetUrl: BlocklyApps.assetUrl,
+    finishButton: !finishButtonFirstLine,
+    debugButtons: showDebugButtons,
+    debugConsole: showDebugConsole
+  });
 
   config.html = page({
     assetUrl: BlocklyApps.assetUrl,
@@ -10198,20 +10239,28 @@ Webapp.init = function(config) {
     // Set up an event handler to create breakpoints when clicking in the
     // ace gutter:
     var aceEditor = BlocklyApps.editor.aceEditor;
-    aceEditor.on("guttermousedown", function(e){
-      var target = e.domEvent.target;
-      if (target.className.indexOf("ace_gutter-cell") == -1) 
-          return; 
-
-      var row = e.getDocumentPosition().row;
-      var bps = e.editor.session.getBreakpoints();
-      if (bps[row]) {
-        e.editor.session.clearBreakpoint(row);
-      } else {
-        e.editor.session.setBreakpoint(row);
-      }
-      e.stop();
-    });
+    // TODO (cpirich): investigate timing issue that results in aceEditor
+    // not always being available at this stage during init...
+    if (aceEditor) {
+      aceEditor.on("guttermousedown", function(e) {
+        var target = e.domEvent.target;
+        if (target.className.indexOf("ace_gutter-cell") == -1) {
+          return;
+        }
+        var row = e.getDocumentPosition().row;
+        var bps = e.editor.session.getBreakpoints();
+        if (bps[row]) {
+          e.editor.session.clearBreakpoint(row);
+        } else {
+          e.editor.session.setBreakpoint(row);
+        }
+        e.stop();
+      });
+    }
+    var debugInput = document.getElementById('debug-input');
+    if (debugInput) {
+      debugInput.addEventListener('keydown', onDebugInputKeyDown);
+    }
   }
 
   var finishButton = document.getElementById('finishButton');
@@ -10303,6 +10352,14 @@ BlocklyApps.reset = function(first) {
     var spinner = document.getElementById('spinner');
     if (spinner) {
       spinner.style.visibility = 'hidden';
+    }
+    var debugOutput = document.getElementById('debug-output');
+    if (debugOutput) {
+      debugOutput.value = '';
+    }
+    var debugInput = document.getElementById('debug-input');
+    if (debugInput) {
+      debugInput.textContent = '';
     }
   }
 
@@ -10938,8 +10995,6 @@ exports.codeTooltip = function(d){return "Se genererede JavaScript-kode."};
 
 exports.continue = function(d){return "Fortsæt"};
 
-exports.continueWorking = function(d){return "Continue working"};
-
 exports.dialogCancel = function(d){return "Annuller"};
 
 exports.dialogOK = function(d){return "Ok"};
@@ -10987,8 +11042,6 @@ exports.missingBlocksErrorMsg = function(d){return "Prøv en eller flere af blok
 exports.nextLevel = function(d){return "Tillykke! Du fuldførte puslespillet "+v(d,"puzzleNumber")+"."};
 
 exports.nextLevelTrophies = function(d){return "Tillykke! Du fuldførte puslespillet "+v(d,"puzzleNumber")+" og vandt "+p(d,"numTrophies",0,"da",{"one":"et trofæ","other":n(d,"numTrophies")+" trofæer"})+"."};
-
-exports.nextPuzzle = function(d){return "Next puzzle"};
 
 exports.nextStage = function(d){return "Tillykke! Du gennemførte "+v(d,"stageName")+"."};
 

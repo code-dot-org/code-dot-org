@@ -18,7 +18,7 @@ get '/v2/forms/:kind' do |kind|
   results = []
   if dashboard_user
     DB[:forms].where(kind:kind, user_id:dashboard_user[:id]).each do |i|
-      results << JSON.parse(i[:data]).merge(secret: i[:secret])
+      results << JSON.parse(i[:data]).merge(secret: i[:secret], id: i[:id])
     end
   end
   content_type :json
@@ -29,7 +29,7 @@ get '/v2/forms/:kind/:secret' do |kind, secret|
   dont_cache
   forbidden! unless form = DB[:forms].where(kind:kind, secret:secret).first
   content_type :json
-  JSON.pretty_generate(JSON.parse(form[:data]).merge(secret: secret))
+  JSON.pretty_generate(JSON.parse(form[:data]).merge(secret: secret, id: form[:id]))
 end
 
 delete '/v2/forms/:kind/:secret' do |kind, secret|

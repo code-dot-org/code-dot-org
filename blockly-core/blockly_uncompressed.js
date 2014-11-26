@@ -14276,7 +14276,9 @@ Blockly.Block.prototype.getHeightWidth = function() {
       bBox.height += 4
     }
   }
-  bBox.height -= 1;
+  if(bBox.height > 0) {
+    bBox.height -= 1
+  }
   return bBox
 };
 Blockly.Block.prototype.onMouseDown_ = function(e) {
