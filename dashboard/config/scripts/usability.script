@@ -31,7 +31,7 @@ level 'Course 4 Play Labs For Loops 3'
 
 stage 'Functions and Functions with Parameters'
 level 'Course 4 Artist Functions 2'
-level 'Course 4 Artist Functions 3'
+#level 'Course 4 Artist Functions 3'
 level 'Course 4 Artist Functions 4'
 level 'Course 4 Artist Functions 5'
 level 'Course 4 Artist Params 1'
