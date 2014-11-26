@@ -43,6 +43,7 @@
   "numBlocksNeeded":"Čestitamo! Zadatak {puzzleNumber} je riješen. (Međutim, moglo se iskoristiti samo {numBlocks, plural, one {1 blok} other {# blokova}}.)",
   "numLinesOfCodeWritten":"Upravo si napisao {numLines, plural, one {1 liniju} other {# linija}} kôda!",
   "play":"igraj",
+  "print":"Piši",
   "puzzleTitle":"Zadatak {puzzle_number} od {stage_total}",
   "repeat":"ponovi",
   "resetProgram":"Ponovno",
@@ -63,8 +64,8 @@
   "tryAgain":"Pokušaj ponovno",
   "hintRequest":"Pogledaj naputak",
   "backToPreviousLevel":"Povratak na prethodni nivo",
-  "saveToGallery":"Spremi u svoju galeriju",
-  "savedToGallery":"Spremljeno u tvoju galeriju!",
+  "saveToGallery":"Spremi u galeriju",
+  "savedToGallery":"Spremljeno u galeriju!",
   "shareFailure":"Žalim, ne možemo dijeliti ovaj program.",
   "typeFuncs":"Dostupne funkcije:%1",
   "typeHint":"Uoči da su neophodne zagrade i znak \";\".",
@@ -80,5 +81,6 @@
   "tryHOC":"Isprobaj Hour of Code",
   "signup":"Upis na početni tečaj",
   "hintHeader":"Evo savjeta:",
-  "genericFeedback":"Pogledaj kako si završio i pokušaj popraviti svoj program."
+  "genericFeedback":"Pogledaj kako si završio i pokušaj popraviti svoj program.",
+  "defaultTwitterText":"Check out what I made"
 }

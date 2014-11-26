@@ -1,253 +1,253 @@
-"az":
+az:
   slides:
     maze_intro:
       1:
-        image: "notes/hoc1_1.jpg"
-        text: "İlk kod saatınıza xoş gəldiniz! Gəlin, birbaşa proqramlaşdırmanın ilk dadını çıxarmağa dalaq."
+        image: notes/hoc1_1.jpg
+        text: İlk kod saatınıza xoş gəldiniz! Gəlin, birbaşa proqramlaşdırmanın ilk dadını çıxarmağa dalaq.
       2:
-        image: "notes/hoc1_2.jpg"
+        image: notes/hoc1_2.jpg
         text: 'Kod yazmaq üçün blokları sürükləyib buraxacağınız bir vizual proqramlaşdırma dili olan "Blockly"dən ("Blokli") istifadə edəcəyik.'
       3:
-        image: "notes/hoc1_3.jpg"
+        image: notes/hoc1_3.jpg
         text: 'Proqram kodu çox vaxt yazılır, lakin "Blockly" vizualdır. Hər bir blok "həqiqi" kodun bir sətrinə uyğun gəlir.'
       4:
-        image: "notes/hoc1_4.jpg"
-        text: "Siz informatikanın əsaslarını, telefon üçün proqram yazmaqdan tutmuş Marsda özüyeriyən aparatları idarə etməyə qədər hər yerdə istifadə olunan anlayışları öyrənəcəksiniz."
+        image: notes/hoc1_4.jpg
+        text: Siz informatikanın əsaslarını, telefon üçün proqram yazmaqdan tutmuş Marsda özüyeriyən aparatları idarə etməyə qədər hər yerdə istifadə olunan anlayışları öyrənəcəksiniz.
       5:
-        image: "notes/hoc1_5.jpg"
-        text: "Proqram kompüterinizin əməl etməsi üçün əmrlər çoxluğudur."
+        image: notes/hoc1_5.jpg
+        text: Proqram kompüterinizin əməl etməsi üçün əmrlər çoxluğudur.
       6:
-        image: "notes/hoc1_6.jpg"
-        text: "İlk proqramınızın məqsədi Acıqlı Quşu labirintdən keçirməkdir ki, Yaşıl Donuzu vursun."
+        image: notes/hoc1_6.jpg
+        text: İlk proqramınızın məqsədi Acıqlı Quşu labirintdən keçirməkdir ki, Yaşıl Donuzu vursun.
       7:
-        image: "notes/hoc1_7.jpg"
-        text: "Ekranın sol tərəfində proqramınızın icra olunduğu labirint yerləşir. Hər tapmaca üçün təlimatlar labirintin aşağısında verilir."
+        image: notes/hoc1_7.jpg
+        text: Ekranın sol tərəfində proqramınızın icra olunduğu labirint yerləşir. Hər tapmaca üçün təlimatlar labirintin aşağısında verilir.
       8:
-        image: "notes/hoc1_8.jpg"
-        text: "Ekranın ortasındakı alətlər qutusunda Acıqlı Quş üçün əmrlər yerləşir. Öz kodunuzu qurmaq üçün onlardan istifadə edəcəksiniz."
+        image: notes/hoc1_8.jpg
+        text: Ekranın ortasındakı alətlər qutusunda Acıqlı Quş üçün əmrlər yerləşir. Öz kodunuzu qurmaq üçün onlardan istifadə edəcəksiniz.
       9:
-        image: "notes/hoc1_9.jpg"
-        text: "Sağınızda sizin iş sahənizdir. Burada siz alətlər qutusundan blokları seçməklə öz proqramınızı quracaqsınız. Bloku pozmaq üçün onu küncdəki zibil qutusuna sürükləyin."
+        image: notes/hoc1_9.jpg
+        text: Sağınızda sizin iş sahənizdir. Burada siz alətlər qutusundan blokları seçməklə öz proqramınızı quracaqsınız. Bloku pozmaq üçün onu küncdəki zibil qutusuna sürükləyin.
       10:
-        image: "notes/hoc1_10.jpg"
+        image: notes/hoc1_10.jpg
         text: 'Hər blok bir göstərişdir. "İrəli get" blokunu iş sahənizə sürükləyib "Proqramı icra et"i bassanız, quş labirintdə bir xana irəliləyər.'
       11:
-        image: "notes/hoc1_11.jpg"
-        text: "Birdən çox əməliyyatı yerinə yetirmək üçün siz bir neçə bloku öz iş sahənizə sürükləyə və bir-birinə qoşa bilərsiniz. Quş bu əmrləri yuxarıdan aşağıya ardıcıllıqla yerinə yetirəcək."
+        image: notes/hoc1_11.jpg
+        text: Birdən çox əməliyyatı yerinə yetirmək üçün siz bir neçə bloku öz iş sahənizə sürükləyə və bir-birinə qoşa bilərsiniz. Quş bu əmrləri yuxarıdan aşağıya ardıcıllıqla yerinə yetirəcək.
       12:
-        image: "notes/hoc1_12.jpg"
+        image: notes/hoc1_12.jpg
         text: 'Əgər bir proqramı icra edirsinizsə və onu düzəldib yenidən cəhd etmək istəyirsinizsə, "Yenidən başla" düyməsini basın.'
       13:
-        image: "notes/hoc1_13.jpg"
-        text: "Haydı, gedək, o donuzların dərsini verək!"
+        image: notes/hoc1_13.jpg
+        text: Haydı, gedək, o donuzların dərsini verək!
     artist_intro:
       1:
-        image: "notes/stage5_1.jpg"
-        text: "Salam, mənim adım Cey-Ardır. Avtomobil yarışlarında iştirak edən hər bir komandanın informatika üzrə mütəxəssisə ehtiyacı var. Onlar avtomobildən daxil olan məlumatları təhlil edərək onun daha sürətlə hərəkət etməyini təmin edirlər."
+        image: notes/stage5_1.jpg
+        text: Salam, mənim adım Cey-Ardır. Avtomobil yarışlarında iştirak edən hər bir komandanın informatika üzrə mütəxəssisə ehtiyacı var. Onlar avtomobildən daxil olan məlumatları təhlil edərək onun daha sürətlə hərəkət etməyini təmin edirlər.
       2:
-        image: "notes/stage5_2.jpg"
-        text: "Bu tampacalarda siz hara getsə arxasıyla xətt çəkən bir rəssam olacaqsınız."
+        image: notes/stage5_2.jpg
+        text: Bu tampacalarda siz hara getsə arxasıyla xətt çəkən bir rəssam olacaqsınız.
       3:
-        image: "notes/stage5_3.jpg"
+        image: notes/stage5_3.jpg
         text: 'Bu blok "100 piksel irəli get" deyir. Piksellər sadəcə ekranınızdakı çox kiçik nöqtələrdir.'
       4:
-        image: "notes/stage5_4.jpg"
+        image: notes/stage5_4.jpg
         text: 'Bu blok "90 dərəcə sağa dön" deyir. Bu, rəssamınızı labirint tapmacasındakı "dön" blokları qədər döndərəcək.'
       5:
-        image: "notes/stage5_5.jpg"
-        text: "Rəssamın nə qədər irəli getməyini və ya dönməyini dəyişmək üçün bu blokların hər ikisində oxu klikləyin. Oynaya-oynaya bu yeni bloklarla tanış olun."
+        image: notes/stage5_5.jpg
+        text: Rəssamın nə qədər irəli getməyini və ya dönməyini dəyişmək üçün bu blokların hər ikisində oxu klikləyin. Oynaya-oynaya bu yeni bloklarla tanış olun.
     farmer_intro:
       1:
-        image: "notes/stage9_1.jpg"
-        text: "Salam, mən Paolayam. Bu tapmacada siz taxıl əkmək üçün sahəsini tamamilə hamarlamalı olan bir fermersiniz."
+        image: notes/stage9_1.jpg
+        text: Salam, mən Paolayam. Bu tapmacada siz taxıl əkmək üçün sahəsini tamamilə hamarlamalı olan bir fermersiniz.
       2:
-        image: "notes/stage9_2.jpg"
-        text: "Siz ona bütün torpaq təpəciklərini yığışdıraraq çuxurları doldurmaqda kömək etməlisiniz."
+        image: notes/stage9_2.jpg
+        text: Siz ona bütün torpaq təpəciklərini yığışdıraraq çuxurları doldurmaqda kömək etməlisiniz.
       3:
-        image: "notes/stage9_3.jpg"
-        text: "Yeni bloklar təpəcikdən bir kürək torpağı götürür və çüxüra bir kürək torpaq doldurur."
+        image: notes/stage9_3.jpg
+        text: Yeni bloklar təpəcikdən bir kürək torpağı götürür və çüxüra bir kürək torpaq doldurur.
       4:
-        image: "notes/stage9_4.jpg"
-        text: "Çuxurlarin və təpəciklərin ölçüləri müxtəlifdir. Ona görə də siz fermerə neçə kürək istifadə etməli olduğunu deməlisiniz."
+        image: notes/stage9_4.jpg
+        text: Çuxurlarin və təpəciklərin ölçüləri müxtəlifdir. Ona görə də siz fermerə neçə kürək istifadə etməli olduğunu deməlisiniz.
     flappy_intro:
       1:
-        image: "notes/flappy01.jpg"
-        text: "Salam, mən Kətiyəm! İnformatikanın ən həyəcanlı cəhətlərindən biri odur ki, kompüter proqramı interaktiv ola bilər."
+        image: notes/flappy01.jpg
+        text: Salam, mən Kətiyəm! İnformatikanın ən həyəcanlı cəhətlərindən biri odur ki, kompüter proqramı interaktiv ola bilər.
       2:
-        image: "notes/flappy02.jpg"
+        image: notes/flappy02.jpg
         text: "Any time somebody clicks or taps or types on a computer or phone, that generates an EVENT, and there's some code that decides what to do when an EVENT occurs."
       3:
-        image: "notes/flappy03.jpg"
+        image: notes/flappy03.jpg
         text: 'For example, you could have an EVENT-HANDLER that says "when the mouse is clicked, play a sound" '
       4:
-        image: "notes/flappy04.jpg"
+        image: notes/flappy04.jpg
         text: "Have you ever heard of the game FlappyBird? By using Event handlers, we're going to learn to program our own custom version of FlappyBird!"
       5:
-        image: "notes/flappy05.jpg"
+        image: notes/flappy05.jpg
         text: "The code you'll write involves dragging and dropping blocks that represent commands for the computer. Under the hood, each of these blocks is represented by real code."
       6:
-        image: "notes/flappy06.jpg"
+        image: notes/flappy06.jpg
         text: 'If you take a look at the workspace, there are some green blocks that are filled in for you - these are "event handlers" '
       7:
-        image: "notes/flappy07.jpg"
+        image: notes/flappy07.jpg
         text: 'If you want the bird to FLAP when you CLICK the mouse, you can do that by attaching the "FLAP" block to the appropriate event handler, and now in your game whenever you click the mouse, the bird will flap.'
       8:
-        image: "notes/flappy08.jpg"
+        image: notes/flappy08.jpg
         text: "In each puzzle of this activity we'll introduce new types of events as green blocks on the workspace, and you can decide the appropriate blocks to add in response to those events."
       9:
-        image: "notes/flappy09.jpg"
+        image: notes/flappy09.jpg
         text: 'When you see a drop down arrow like this, that means you can change the settings - like what sound to play when flappy hits the ground.'
       10:
-        image: "notes/flappy10.jpg"
+        image: notes/flappy10.jpg
         text: "In the final puzzle you'll be able to create your own game and share it with your friends. Have fun!"
     loop_times:
       1:
-        image: "notes/hoc2_1.jpg"
-        text: "Salam, mən Markam! Gəlin, dövrləri öyrənək. Dövrlərdən istifadə edərək siz kompüterə tapşıra bilərsiniz ki, istənilən əmrlər çoxluğunu dəfələrlə, neçə min, hətta neçə milyard dəfə təkrar etsin."
+        image: notes/hoc2_1.jpg
+        text: Salam, mən Markam! Gəlin, dövrləri öyrənək. Dövrlərdən istifadə edərək siz kompüterə tapşıra bilərsiniz ki, istənilən əmrlər çoxluğunu dəfələrlə, neçə min, hətta neçə milyard dəfə təkrar etsin.
       2:
-        image: "notes/hoc2_2.jpg"
-        text: "Bu tapmacada quşu 5 mövqe irəli hərəkət etdirərək onun donuzu tutmağını istəyirik."
+        image: notes/hoc2_2.jpg
+        text: Bu tapmacada quşu 5 mövqe irəli hərəkət etdirərək onun donuzu tutmağını istəyirik.
       3:
-        image: "notes/hoc2_3.jpg"
+        image: notes/hoc2_3.jpg
         text: 'Biz köməklik üçün yeni "təkrar et" blokundan istifadə edə bilərik.'
       4:
-        image: "notes/hoc2_4.jpg"
+        image: notes/hoc2_4.jpg
         text: '5 dənə "irəli get" blokundan istifadə etməkdənsə...'
       5:
-        image: "notes/hoc2_5.jpg"
+        image: notes/hoc2_5.jpg
         text: 'Biz "irəli get" blokunu "təkrar et" blokunun içərisində yerləşdirə və bu blokda təkrarlanmaların sayını bildirmək üçün bir ədəd daxil edə bilərik.'
       6:
-        image: "notes/hoc2_6.jpg"
+        image: notes/hoc2_6.jpg
         text: 'Bunu bilmək vacibdir: siz "təkrar et" blokunun daxilində birdən çox əmr yerləşdirə bilərsiniz.'
       7:
-        image: "notes/hoc2_7.jpg"
+        image: notes/hoc2_7.jpg
         text: 'Yeni "təkrar et" blokunuzu istifadə etməyin dadını çıxardın!'
     loop_until:
       1:
-        image: "notes/hoc3_1.jpg"
+        image: notes/hoc3_1.jpg
         text: 'Salam, mənim adım Krisdir. "Miami Heat" komandasına qoşulmazdan əvvəl mən Corciya Texnologiya İnstitutunda İnformatika oxumuşam. Gəlin, yeni blokumuzu sınaqdan keçirək, "təkrar et, ta ki" blokunu.'
       2:
-        image: "notes/hoc3_2.jpg"
-        text: "Bəs əgər biz quşun donuza çatması üçün nə qədər yerdəyişmə etməli olduğunu bilməsək necə?"
+        image: notes/hoc3_2.jpg
+        text: Bəs əgər biz quşun donuza çatması üçün nə qədər yerdəyişmə etməli olduğunu bilməsək necə?
       3:
-        image: "notes/hoc3_3.jpg"
+        image: notes/hoc3_3.jpg
         text: 'Əgər biz "təkrar et, ta ki" blokunun daxilində "irəli get" blokunu yerləşdirsək, quş donuza çatana (və ya divara dəyənə) QƏDƏR irəli gedəcək.'
       4:
-        image: "notes/hoc3_4.jpg"
+        image: notes/hoc3_4.jpg
         text: 'Bunu bilmək vacibdir: daha əvvəldə olduğu kimi,  biz "təkrar et, ta ki" blokunun daxilində bir neçə blok yerləşdirə bilərik. Bu zaman onların hamısı təkrar olunacaq.'
     if:
       1:
-        image: "notes/hoc4_1.jpg"
+        image: notes/hoc4_1.jpg
         text: 'Salam, mən Billəm! Gəlin, yeni bir təməl anlayışı öyrənək: "əgər" ifadələri. Kompüterlər qərarları onların köməyi ilə verir.'
       2:
-        image: "notes/hoc4_2.jpg"
+        image: notes/hoc4_2.jpg
         text: 'Siz özünüz də hər gün "əgər" ifadəsindən istifadə edirsiniz. Hər səhər çölə çıxmazdan əvvəl siz deyirsiniz ki, ƏGƏR çöldə yağış yağırsa mən gödəkçəmi geyinməliyəm.'
       3:
-        image: "notes/hoc4_3.jpg"
-        text: "Biz zombiyə deyə bilərik ki, yoxlasın, sola yol varmı və ƏGƏR o sola yol tapsa, biz onu həmin tərəfə döndərə bilərik."
+        image: notes/hoc4_3.jpg
+        text: Biz zombiyə deyə bilərik ki, yoxlasın, sola yol varmı və ƏGƏR o sola yol tapsa, biz onu həmin tərəfə döndərə bilərik.
       4:
-        image: "notes/hoc4_4.jpg"
+        image: notes/hoc4_4.jpg
         text: 'Bunun kodunu yazmaq üçün gəlin "əgər" blokunu dartaq və onun daxilinə "sola dön" bloku yerləşdirək.'
       5:
-        image: "notes/hoc4_5.jpg"
+        image: notes/hoc4_5.jpg
         text: 'İndi biz bunun aşağısına "irəli get" bloku yerləşdirsək və hamısını "təkrar et" blokunun daxilinə atsaq, onda hər dəfə zombi yerdəyişmə etdikdə o, sol yolun olub-olmamasını yoxlayacaq və əgər varsa dönəcək. Burada "təkrar et" əmri hər addımda yoxlanış üçün vacibdir.'
       6:
-        image: "notes/hoc4_6.jpg"
+        image: notes/hoc4_6.jpg
         text: '"Əgər" ifadələri informatikada həqiqətən də vacib yer tutur. Yazdığım ilk proqramlardan biri "tik-tak-to" oyunu idi və orada bir "əgər" ifadəsi var idi ki, deyirdi: ƏGƏR rəqib oyunu udmağa yaxındrısa, ona qalib gəlmək imkanı verən xananı bağla.'
       7:
-        image: "notes/hoc4_7.jpg"
+        image: notes/hoc4_7.jpg
         text: '"Əgər" blokunu istifadə etməyin kefini çıxardın!'
     if_else:
       1:
-        image: "notes/hoc5_1.jpg"
+        image: notes/hoc5_1.jpg
         text: 'Salam, mənim adım Salonidir. İnformatikadan səhiyyə və tibbdəki məsələləri həll etmək üçün istifadə edirəm. Gəlin, "əgər, əks halda" blokunu öyrənək. Bu, "əgər" blokuna oxşayır, amma axırında "əks halda" deyə əlavə bir hissəsi var.'
       2:
-        image: "notes/hoc5_2.jpg"
+        image: notes/hoc5_2.jpg
         text: 'Əgər mən "irəli get" blokunu "et" deyilən yerə və "sola dön" blokunu "əks halda" deyən yerə qoysam, bu o deməkdir ki, zombi 2 seçimdən birini edəcək. Əgər zombinin qarşısında yol varsa, o zaman zombi irəliləyəcək, ƏKS HALDA isə (qarşısında irəliləməyə yol yoxdur), zombi sola dönəcək.'
       3:
-        image: "notes/hoc5_3.jpg"
+        image: notes/hoc5_3.jpg
         text: '"Əgər" bloku kimi, biz "təkrar et" bloklarının daxilinə "əgər əks halda" bloklarını elə qoya bilərik ki, zombi irəliləməkdə davam etsin və "əgər əks halda" bloku hərəkət etdikcə hər hansı bir yerə döngə olub olmadığını yoxlasın.'
       4:
-        image: "notes/hoc5_4.jpg"
-        text: "İndi bu zombiləri olmalı olduqları yerə aparın!"
+        image: notes/hoc5_4.jpg
+        text: İndi bu zombiləri olmalı olduqları yerə aparın!
     function:
       1:
-        image: "notes/stage13_1.jpg"
-        text: "Salam, mənim adım Brinadır, İnstaqramda mühəndisəm. Funsiya təkrar-təkrar istifadə etmək istədiyiniz müəyyən kod sətirləridir, beləliklə, hər dəfə eyni kodu yazmağın yerinə siz sadəcə bir blokdan istifadə edə bilərsiniz."
+        image: notes/stage13_1.jpg
+        text: Salam, mənim adım Brinadır, İnstaqramda mühəndisəm. Funsiya təkrar-təkrar istifadə etmək istədiyiniz müəyyən kod sətirləridir, beləliklə, hər dəfə eyni kodu yazmağın yerinə siz sadəcə bir blokdan istifadə edə bilərsiniz.
       2:
-        image: "notes/stage13_2.jpg"
-        text: "Biz funksiyanı necə yaratmağı öyrənəcəyik. Funksiyanın təyinatının küncündə ulduz olur. Funksiyanın adı ən yuxarı sətirdə yazılir."
+        image: notes/stage13_2.jpg
+        text: Biz funksiyanı necə yaratmağı öyrənəcəyik. Funksiyanın təyinatının küncündə ulduz olur. Funksiyanın adı ən yuxarı sətirdə yazılir.
       3:
-        image: "notes/stage13_3.jpg"
+        image: notes/stage13_3.jpg
         text: 'Təyinatın içərisindəki bloklar bizə onun nə etdiyini deyir. Bu funksiya təyinatı "doldur 5" adlanır və "təkrarla" və "doldur" bloklarından ibarətdir.'
       4:
-        image: "notes/stage13_4.jpg"
+        image: notes/stage13_4.jpg
         text: 'Təyinat iş sahəsində yerləşir, amma bizin fermer biz "doldur 5 funksiyası" blokunu funksiyalar kateqoriyasından çıxarmayınca funksiyanı işə salmayacaq.'
       5:
-        image: "notes/stage13_5.jpg"
+        image: notes/stage13_5.jpg
         text: 'Gəlin "FUNksiya"dakı "fun"-ı (ingiliscə: "əyləncə") yerinə qoyaq '
     loop_while:
       1:
-        image: "notes/stage9_5.jpg"
+        image: notes/stage9_5.jpg
         text: 'Salam, mənim adım Makindedir. Gəlin "nə qədər ki" bloku haqqında öyrənək '
       2:
-        image: "notes/stage9_6.jpg"
+        image: notes/stage9_6.jpg
         text: '"Hələ ki" bloku başlığında yazılan ifadə "doğru" OLDUĞU MÜDDƏTCƏ içərisinə yerləşdirdiklərinizi təkrarlayacaq.'
       3:
-        image: "notes/stage9_7.jpg"
-        text: "Məsələn, əgər fermer təpəciyin üzərində dayanırsa, o, altında təpəcik olduğu müddətcə bir kürək torpağı altından yığışdırır."
+        image: notes/stage9_7.jpg
+        text: Məsələn, əgər fermer təpəciyin üzərində dayanırsa, o, altında təpəcik olduğu müddətcə bir kürək torpağı altından yığışdırır.
     loop_for:
       1:
-        image: "notes/stage11_1.jpg"
+        image: notes/stage11_1.jpg
         text: 'Salam, mən Trinayam, "Pixar"da işləyirəm. Bir sürü filmin, o cümlədən "Şrek" filminin üzərində işləmişəm.'
       2:
-        image: "notes/stage11_2.jpg"
+        image: notes/stage11_2.jpg
         text: 'Bu bizim yeni "sayğac" dövrümüzdür. O əmrləri təkrar-təkrar yerinə yetirəcək və siz hər dəfə əmrlərə bir az dəyişiklik edə bilərsiniz.'
       3:
-        image: "notes/stage11_3.jpg"
+        image: notes/stage11_3.jpg
         text: 'Bu nümunədə bizim "sayğac" dövrümüz "sayğac ilə 50-dən 90-a qədər hər addım 10 olmaqla say" deyir və onun daxilində bizim "kvadrat çək" blokumuz yerləşir. "Dəyişənlər" bölməsindən "sayğac" blokunu götürüb "uzunluq" xanasına dartın.'
       4:
-        image: "notes/stage11_4.jpg"
-        text: "Bu o deməkdir ki, bizim rəssam ilk öncə kənarları 50 piksel olan kvadrat çəkəcək, sonra isə ölçüyə 10 əlavə edərək kənarları 60 piksel olan kvadrat çəkəcək. Sonra, rəssam kvadratın kənarlarının ölçüsünə ölçü 90-a çatmadığı müddətcə 10 əlavə etməkdə davam edəcək. Beləliklə, biz ölçüsü 50,60,70,80 və 90 olan kvadratlar əldə edəcəyik."
+        image: notes/stage11_4.jpg
+        text: Bu o deməkdir ki, bizim rəssam ilk öncə kənarları 50 piksel olan kvadrat çəkəcək, sonra isə ölçüyə 10 əlavə edərək kənarları 60 piksel olan kvadrat çəkəcək. Sonra, rəssam kvadratın kənarlarının ölçüsünə ölçü 90-a çatmadığı müddətcə 10 əlavə etməkdə davam edəcək. Beləliklə, biz ölçüsü 50,60,70,80 və 90 olan kvadratlar əldə edəcəyik.
     parameters:
       1:
-        image: "notes/stage15_1.jpg"
+        image: notes/stage15_1.jpg
         text: 'Salam, mən Janetəm, "Zynga"da mühəndisəm.'
       2:
-        image: "notes/stage15_2.jpg"
-        text: "Bəs əgər bir sürü üçbucaq çəkmək və tərəflərinin fərqli uzunluqda olmağını istəsək?"
+        image: notes/stage15_2.jpg
+        text: Bəs əgər bir sürü üçbucaq çəkmək və tərəflərinin fərqli uzunluqda olmağını istəsək?
       3:
-        image: "notes/stage15_3.jpg"
-        text: "Bütün bu kodu əlimizlə yaza bilərdik, amma biz həm də parametrli bir funksiyadan istifadə edə bilərik."
+        image: notes/stage15_3.jpg
+        text: Bütün bu kodu əlimizlə yaza bilərdik, amma biz həm də parametrli bir funksiyadan istifadə edə bilərik.
       4:
-        image: "notes/stage15_4.jpg"
+        image: notes/stage15_4.jpg
         text: 'Bunu etməkdən ötəri, "üçbucaq çək" funksiyasının təyinatındaki mavi ulduza klikləyin. Sonra "giriş adı" -nı "giriş" blokuna sürükləyiniz.'
       5:
-        image: "notes/stage15_5.jpg"
+        image: notes/stage15_5.jpg
         text: 'Sonra əgər "x" yazılan sahədə "uzunluq" yazaraq "Enter" düyməsini bassanız, funksiyanız üçün uzunluğu təyin edən giriş veriləni düzəltmiş olarsınız.'
       6:
-        image: "notes/stage15_6.jpg"
+        image: notes/stage15_6.jpg
         text: 'Sonra isə ulduza klikləyin. İndi, siz,  verilənlər kateqoriyasına klikləməyə bilər və "uzunluq" blokunu funksiya təyinatınızın "irəli get" blokuna sürükləyə bilərsiniz və köhnə rəqəm blokunu kənara çıxarda bilərsiniz.'
       7:
-        image: "notes/stage15_7.jpg"
+        image: notes/stage15_7.jpg
         text: 'Parametrli funksiyasınızdan istifadə etməkdən ötəri, funksiyalar kateqoriyasına klikləyin və "ölçülü üçbucaq çək" funksiyanızı sürükləyin.'
       8:
-        image: "notes/stage15_8.jpg"
+        image: notes/stage15_8.jpg
         text: 'İndi  girişə müxtəlif ədədlər verərək müxtəlif ölçüdə üçbucaqlar çəkmək üçün riyaziyyat blokundan istifadə edə bilərsiniz.'
     hoc_wrapup:
       1:
-        image: "notes/hoc6_1.jpg"
-        text: "Təbrik edirik! Axırıncı tapmacanı həll etməklə elə kod yazdınız ki, İSTƏNİLƏN robota budaqlanmayan istənilən uzunluqda bir labirint və ya tunneldə öz yolunu necə tapacağını söyləyə bilər, onun bir zombi, quş, Marsda özüyeriyən aparat, yaxud hətta bir sürücüsüz avtomatik minik maşını olmasından asılı olmayaraq."
+        image: notes/hoc6_1.jpg
+        text: Təbrik edirik! Axırıncı tapmacanı həll etməklə elə kod yazdınız ki, İSTƏNİLƏN robota budaqlanmayan istənilən uzunluqda bir labirint və ya tunneldə öz yolunu necə tapacağını söyləyə bilər, onun bir zombi, quş, Marsda özüyeriyən aparat, yaxud hətta bir sürücüsüz avtomatik minik maşını olmasından asılı olmayaraq.
       2:
-        image: "notes/hoc6_2.jpg"
+        image: notes/hoc6_2.jpg
         text: 'İstifadə etdiyiniz əsas anlayışlar nə vaxtsa sınaqdan keçirdiyiniz hər bir proqramın və ya mobil əlavənin ürəyidir. Biz "təkrar et", "təkrar et, ta ki", "əgər" və "əgər-əks halda" ifadələri barədə öyrəndik.'
       3:
-        image: "notes/hoc6_3.jpg"
-        text: "İlk kod saatınızı bəyəndinizsə, infromatika təhsilinizi davam etdirmək üçün code.org ünvanına baş çəkin! Bizim 20 saatlıq kursumuzu başa vurduqdan sonra proqramlaşdırmanın əsaslarını mənimsəyib, telefonlar üçün proqramlar, robotlar üçün əmrlər, oyunlar, ürəyiniz istəyən hər şeyi necə yazmağı öyrənməyə başlaya bilərsiniz."
+        image: notes/hoc6_3.jpg
+        text: İlk kod saatınızı bəyəndinizsə, infromatika təhsilinizi davam etdirmək üçün code.org ünvanına baş çəkin! Bizim 20 saatlıq kursumuzu başa vurduqdan sonra proqramlaşdırmanın əsaslarını mənimsəyib, telefonlar üçün proqramlar, robotlar üçün əmrlər, oyunlar, ürəyiniz istəyən hər şeyi necə yazmağı öyrənməyə başlaya bilərsiniz.
       4:
-        image: "notes/hoc6_4.jpg"
-        text: "Texnologiya bizim bütün hərəkətlərimizi dəyişir və fərqi yoxdur, siz cavan yaxud yaşlı olsanız da proqramlaşdırma əyləncəlidir, yaradıcılıqdır və hər kəs onu öyrənə bilər!"
+        image: notes/hoc6_4.jpg
+        text: Texnologiya bizim bütün hərəkətlərimizi dəyişir və fərqi yoxdur, siz cavan yaxud yaşlı olsanız da proqramlaşdırma əyləncəlidir, yaradıcılıqdır və hər kəs onu öyrənə bilər!
     20_wrapup:
       1:
-        image: "notes/bird.png"
-        text: "Qeydləri göstərmək imkanı tezliklə olacaq!"
+        image: notes/bird.png
+        text: Qeydləri göstərmək imkanı tezliklə olacaq!

@@ -1,6 +1,6 @@
 {
-  "compute": "compute",
-  "equivalentExpression": "Try reordering your arguments to get exactly the same expression.",
+  "compute": "izračunaj",
+  "equivalentExpression": "Poskusi preurediti argumente, tako da dobiš točno isti izraz.",
   "extraTopBlocks": "You have unattached blocks. Did you mean to attach these to the \"compute\" block?",
   "goal": "Goal:",
   "reinfFeedbackMsg": "Ali to zgleda tako, kot želiš? Lahko pritisneš gumb 'Poskusi ponovno', da vidiš tvojo sliko.",

@@ -2,7 +2,7 @@
   data:
     unplugged:
       Unplug1:
-        title: 電腦科學導論
+        title: "電腦科學導論"
         desc: This lesson will introduce the concept of Computer Science and explain
           what a Computer Scientist does.  It will also give students an opportunity
           to assume the role of a computer scientist.  By the end of the activity,
@@ -15,7 +15,7 @@
         - unplug1
         video: Unplug1
       Unplug2:
-        title: 電腦計算式思維
+        title: "電腦計算式思維"
         desc: With nothing but paper and markers, students will learn the four steps
           of computational thinking. After a brief introduction, students should be
           split into groups where they will have to create directions for other students
@@ -30,7 +30,7 @@
         - unplug2
         video: Unplug2
       Unplug3:
-        title: 圖畫紙程式設計
+        title: "圖畫紙程式設計"
         desc: By programming one another to draw pictures, students will begin to
           understand what programming is really about. The class will begin by students
           instructing each other to color squares in on graph paper in an effort to
@@ -40,7 +40,7 @@
         - unplug3
         video: Unplug3
       Unplug4:
-        title: 演算法
+        title: "演算法"
         desc: This lesson covers algorithms.  Using tangram shapes and graph paper,
           the first exercise will show how important it is to make each instruction
           as clear and unambiguous as possible.  Afterward, the class will explore
@@ -50,7 +50,7 @@
         - unplug4
         video: Unplug4
       Unplug5:
-        title: 函數類別
+        title: "函數類別"
         desc: In this lesson, students will make a suncatcher out of string, beads,
           and a special charm. The students will follow a series of repetitive steps,
           then be asked to identify certain sets of "skills" that are duplicated several
@@ -65,7 +65,7 @@
         - unplug5
         video: Unplug5
       Unplug6:
-        title: 條件
+        title: "條件"
         desc: This is a class game.  After introducing the idea of conditionals, if-statements,
           and loops, the class can practice together using a pre-written program,
           a deck of cards, and luck of the draw.
@@ -73,7 +73,7 @@
         - unplug6
         video: Unplug6
       Unplug7:
-        title: 歌曲創作
+        title: "歌曲創作"
         desc: Reading lyrics is a pretty intuitive venture for most students.  We'll
           take an activity that's already common knowledge and shift it into a solid
           education on defining and calling functions. Once students are familiar
@@ -83,7 +83,7 @@
         - unplug7
         video: Unplug7
       Unplug8:
-        title: 抽象
+        title: "抽象"
         desc: This lesson will introduce the concept of Computer Science and explain
           what a Computer Scientist does.  It will also give students an opportunity
           to assume the role of a computer scientist.  By the end of the activity,
@@ -96,7 +96,7 @@
         - unplug8
         video: Unplug8
       Unplug9:
-        title: 接力式程式設計
+        title: "接力式程式設計"
         desc: This lesson will take an idea from a previous activity (4. Graph Paper
           Programming) and use those skills to emphasize the importance of completing
           programs that operate in sequence and frequently checking programs for "bugs".
@@ -104,7 +104,7 @@
         - unplug9
         video: Unplug9
       Unplug10:
-        title: 網際網路
+        title: "網際網路"
         desc: In this lesson, students will pretend to flow through the Internet,
           all the while learning about web addresses, IPs and the DNS.
         pdfs:
@@ -121,11 +121,11 @@
         video: Unplug11
       UnplugHappyMaps:
         title: Happy Maps
-        desc: 學生創建簡單的算法（一連串的指令），透過一個指令便引導人物走出迷宮。
+        desc: "學生創建簡單的算法（一連串的指令），透過一個指令便引導人物走出迷宮。"
         video: C1_happy_maps_unplugged
       MoveIt:
         title: Move it, Move it
-        desc: 學生創建簡單的算法（一連串的指令），透過一個指令便引導人物走出迷宮。
+        desc: "學生創建簡單的算法（一連串的指令），透過一個指令便引導人物走出迷宮。"
         video: C1_moveitmoveit_unplugged
       PlantASeed:
         title: 'Real-life Algorithms: Plant a Seed'
@@ -153,7 +153,7 @@
           erase everything back to that point.
         video: C2_relay_programming
       Conditionals:
-        title: 流程類別
+        title: "流程類別"
         desc: To learn about conditional statements, students play a card game and
           create rules like "If I draw a red card, I get a point" and "If I draw a
           black card, you get a point."
@@ -171,7 +171,7 @@
           introduce how to stay safe while navigating the Internet.
         video: C1_going_places_safely
       GraphPaperProgramming:
-        title: 圖畫紙程式設計
+        title: "圖畫紙程式設計"
         desc: Students write an algorithm (a set of instructions) using a set of predefined
           commands to direct their classmates to reproduce a drawing.
         video: C2_graph_paper
@@ -193,7 +193,7 @@
           themselves online creates a digital footprint or "trail" that has consequences.
         video: C2_digital_footprint
       ComputationalThinking:
-        title: 電腦計算式思維
+        title: "電腦計算式思維"
         desc: Students use the steps of computational thinking (decompose, pattern
           match, abstract, algorithm) to figure out how to play a game that comes
           with no instructions.
@@ -217,7 +217,7 @@
           dice race game.
         video: C3_dice_race
       Internet:
-        title: 互聯網
+        title: "互聯網"
         desc: Students send messages representing various Internet transmission methods
           using pieces of paper.
         video: C3_internet
@@ -267,3 +267,21 @@
           of binary options.  This lesson takes that concept one step further as it
           illustrates how a computer can store even more complex information (such
           as images and colors) in binary, as well.
+      VideoGamesCoordinatePlanes:
+        title: Video Games and Coordinate Planes
+        desc: Video Games and Coordinate Planes lesson description
+      Contracts:
+        title: Contracts
+        desc: Contracts unplugged lesson description
+      DesignRecipe:
+        title: The Design Recipe
+        desc: Design Recipe lesson description
+      Booleans:
+        title: Booleans
+        desc: Booleans lesson description
+      ConditionalsPiecewiseFunctions:
+        title: Conditionals and Piecewise Functions
+        desc: Conditionals and Piecewise Functions lesson description
+      CollisionDetection:
+        title: Collision Detection
+        desc: Collision Detection lesson description

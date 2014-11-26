@@ -43,6 +43,7 @@
   "numBlocksNeeded":"Dobrá práce! Dokončil jsi Hádanku {puzzleNumber}. (Ale mohl jsi použít pouze {numBlocks, plural, one {1 blok} other {# bloků}}.)",
   "numLinesOfCodeWritten":"Už jsi napsal {numLines, plural, one {1 řádek} other {# řádků}} kódu!",
   "play":"play",
+  "print":"Print",
   "puzzleTitle":"Hádanka {puzzle_number} z {stage_total}",
   "repeat":"opakuj",
   "resetProgram":"Obnovit",
@@ -63,8 +64,8 @@
   "tryAgain":"Zkusit znovu",
   "hintRequest":"See hint",
   "backToPreviousLevel":"Zpět na předchozí úroveň",
-  "saveToGallery":"Uložit do tvé galerie",
-  "savedToGallery":"Uložit do tvé galerie!",
+  "saveToGallery":"Save to gallery",
+  "savedToGallery":"Saved in gallery!",
   "shareFailure":"Sorry, we can't share this program.",
   "typeFuncs":"Dostupné funkce:%1",
   "typeHint":"Všimni si, že závorky a středníky jsou vyžadovány.",
@@ -80,5 +81,6 @@
   "tryHOC":"Vyzkoušej Hodinu Programování",
   "signup":"Zaregistruj se do úvodního kurzu",
   "hintHeader":"Zde je rada:",
-  "genericFeedback":"See how you ended up, and try to fix your program."
+  "genericFeedback":"See how you ended up, and try to fix your program.",
+  "defaultTwitterText":"Check out what I made"
 }

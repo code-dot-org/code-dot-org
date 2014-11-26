@@ -43,6 +43,7 @@
   "numBlocksNeeded": "¡Felicidades! Completaste el puzzle {puzzleNumber}. (Sin embargo, podrías haber usado sólo {numBlocks, plural, one {1 bloque} other {# bloques}}.)",
   "numLinesOfCodeWritten": "¡Acabas de escribir {numLines, plural, one {una línea} other {# líneas}} de código!",
   "play": "jugar",
+  "print": "Imprimir",
   "puzzleTitle": "Puzzle {puzzle_number} de {stage_total}",
   "repeat": "repetir",
   "resetProgram": "Reiniciar",
@@ -63,8 +64,8 @@
   "tryAgain": "Vuelve a intentarlo",
   "hintRequest": "Ver pista",
   "backToPreviousLevel": "Volver al nivel anterior",
-  "saveToGallery": "Guardar en tu galería",
-  "savedToGallery": "¡Guardado en tu galería!",
+  "saveToGallery": "Guardar en Galería",
+  "savedToGallery": "¡Guardado en la Galería!",
   "shareFailure": "Perdón, no podemos compartir este programa.",
   "typeFuncs": "Funciones disponibles:%1",
   "typeHint": "Ten en cuenta que los paréntesis y los punto y coma son necesarios.",
@@ -80,5 +81,6 @@
   "tryHOC": "Prueba la Hora del Código",
   "signup": "Únete al curso de introducción",
   "hintHeader": "Aquí hay un consejo:",
-  "genericFeedback": "Mira como terminaste, y trata de reparar tu programa."
+  "genericFeedback": "Mira como terminaste, y trata de reparar tu programa.",
+  "defaultTwitterText": "Mira lo que hice"
 }

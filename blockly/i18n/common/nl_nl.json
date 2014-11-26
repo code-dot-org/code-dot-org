@@ -43,6 +43,7 @@
   "numBlocksNeeded": "Gefeliciteerd! U voltooide puzzel {puzzleNumber}. (Nochtans, u  kon alleen {numBlocks, plural, one {1 block} other {# blocks}}.)  gebruiken",
   "numLinesOfCodeWritten": "Je schreef zojuist {numLines, plural, one {1 regel} other {# regels}} code!",
   "play": "spelen",
+  "print": "Print",
   "puzzleTitle": "Puzzel {puzzle_number} van {stage_total}",
   "repeat": "herhaal",
   "resetProgram": "Herstellen",
@@ -50,7 +51,7 @@
   "runTooltip": "Voer het programma gedefinieerd door de blokken uit in de werkruimte.",
   "score": "score",
   "showCodeHeader": "Code weergeven",
-  "showBlocksHeader": "Show Blocks",
+  "showBlocksHeader": "Toon blokken",
   "showGeneratedCode": "Code weergeven",
   "subtitle": "een visuele programmeeromgeving",
   "textVariable": "tekst",
@@ -69,7 +70,7 @@
   "typeFuncs": "Beschikbare functies: %1",
   "typeHint": "Merk op dat de haakjes en puntkomma's vereist zijn.",
   "workspaceHeader": "Zet je blokken hier in elkaar:",
-  "workspaceHeaderJavaScript": "Type your JavaScript code here",
+  "workspaceHeaderJavaScript": "Typ hier uw JavaScript-code",
   "infinity": "Oneindig",
   "rotateText": "Draai je apparaat.",
   "orientationLock": "Schakel de orientatie blokkering uit in de instellingen van je apparaat.",
@@ -80,5 +81,6 @@
   "tryHOC": "Probeer \"Hour of Code\"",
   "signup": "Neem deel aan de introductie cursus",
   "hintHeader": "Een tip:",
-  "genericFeedback": "Kijk waar je uitkwam, en probeer je programma te verbeteren."
+  "genericFeedback": "Kijk waar je uitkwam, en probeer je programma te verbeteren.",
+  "defaultTwitterText": "Check out what I made"
 }

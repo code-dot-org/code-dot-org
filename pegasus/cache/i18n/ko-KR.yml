@@ -1,9 +1,15 @@
 "ko-KR":
   hello: Hello world
-  select_language: Please select your language
+  select_language: "언어를 선택하세요."
   computer_science: "컴퓨터과학(Computer Science, 정보과학)"
   computer_science_edweek: "컴퓨터과학(Computer Science, 정보과학) 교육 주간"
   csedweek_dates: 2013년 12월 9일 부터 15일 까지
+  csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
+    font-weight:bold">Hour of Code</a> 가 곧 시작됩니다. 모든 선생님들과 운영자들에게 알립니다.  <a href="http://hourofcode.com"
+    style="color: white; text-decoration:underline; font-weight:bold"> 여러분의 Hour of
+    Code 행사를 준비하세요.'
+  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
+    none; font-weight: 400">컴퓨터과학(정보(과학)) 선생님이시라면? CSEdWeek resources 를 살펴보세요.</a>'
   n_have_learned_an_hoc: "<h1>#</h1><h3>명이</h3><h2>Hour of Code</h2><h3>를 경험하였습니다</h3>"
   anybody_can_learn: "누구나 배울 수 있습니다."
   learn_now: "지금 배워보세요."
@@ -134,7 +140,8 @@
   class_submission_in_school_ap_computer_science: "대학 과목 선이수제 컴퓨터과학(정보과학)"
   class_submission_in_school_full_university_cs_curriculum: "대학 컴퓨터과학 교육과정 전체"
   class_submission_in_school_robotics_club: "로보틱스 클럽"
-  class_submission_in_school_programming_integrated_in_other_classes: "프로그래밍 활용 수업들"
+  class_submission_in_school_programming_integrated_in_other_classes: "다른 교과 수업에서의
+    프로그래밍 융합(수학, 과학 등)"
   class_submission_in_school_summer_school_cs_program: "여름 계절학기 컴퓨터과학(정보과학) 프로그램"
   class_submission_in_school_exploring_computer_science: "컴퓨터과학(정보과학) 살펴보기"
   class_submission_in_school_other: "학교내의 다른"
@@ -203,11 +210,11 @@
   dashboard_action_done: "완료"
   dashboard_action_required: "필수 항목"
   dashboard_navigation_home_page: "교사 홈페이지"
-  dashboard_navigation_all_sections: "모든 섹션"
+  dashboard_navigation_all_sections: "학생 계정 및 진도"
   dashboard_navigation_view_progress: "진도 보기"
   dashboard_navigation_add_students: "학생 추가"
   dashboard_navigation_manage_students: "학생 관리"
-  dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
+  dashboard_navigation_lesson_plans_resources: "수업 계획 및 자료"
   dashboard_navigation_view_stats: "상태보기"
   dashboard_navigation_section: "섹션: %{section_name}"
   dashboard_navigation_student: "학생: %{student_name}"
@@ -291,7 +298,7 @@
   dashboard_student: student
   dashboard_sections_email_question: "모든 학생들이 올바른 이메일 주소를 가지고 있나요?"
   dashboard_sections_account_creation_question: "학생들의 계정은 누가 만들었나요?"
-  dashboard_sections_password_question: What do students use as a "password"?
+  dashboard_sections_password_question: '"비밀번호"로서 학생들이 사용해야하는 것은?'
   dashboard_sections_picture_account_creation: Code.org 에 의해 부여된 그림
   dashboard_sections_word_account_creation: Code.org 에 의해 부여된 단어
   dashboard_sections_sign_in_question: "학생들이 어디서 가입을 하나요?"
@@ -300,103 +307,107 @@
   dashboard_sections_password_account_creation: "학생이 만든 텍스트 암호"
   dashboard_sections_login_type_explanation: "이 표는 로그인 유형, <b>그림, 문자, 이메일</b> 등에 대한
     내용입니다. 수업에 필요한 경우 선택적으로 사용할 수 있습니다."
-  dashboard_faq: Frequently Asked Questions
-  code_hoc_coming: The Hour of Code is coming - December 8-14!
-  code_sign_up: Sign up to participate during CS Education Week
+  dashboard_faq: "자주 묻는 질문"
+  code_hoc_coming: Hour of Code가 곧(12.08 - 14) 시작됩니다!
+  code_sign_up: CS Education Week 기간 동안의 활동을 신청하세요.
   learn_more: "더 알아보기"
+  hoc2014_try_new_tutorials: "새로운 Hour of Code 튜토리얼을 경험해 보세요."
+  hoc2014_try_new_tutorial: "새로운(beta) Hour of Code 튜토리얼 해보기"
+  hoc2014_try_scrat: "앵그리버드, 식물과좀비, 스크랫"
+  hoc2014_try_frozen: "프로즌 왕국에서온 안나와 엘사와 함께하는 예술가 퍼즐"
   carousel_heading_international: "다른 언어로 된 튜토리얼"
-  carousel_heading_beginners: Tutorials for Beginners
-  carousel_heading_javascript: Tutorials that teach Javascript
-  carousel_heading_unplugged: No device or internet? Try 'unplugged' computer science
-  carousel_heading_devices: Tutorial apps for phones and tablets
-  carousel_heading_languages: Tutorials in other programming languages
-  carousel_heading_apps_games: Make your own apps or games
-  carousel_heading_university: University courses online
-  carousel_heading_webpages: Learn to make web pages
-  carousel_heading_robots: Learn to program with robots
-  carousel_heading_ide: Platforms popular among teachers
-  educator_notes: Educator Notes
-  more_resources_educators: More resources for teachers and educators
-  participants: participants
-  teachers_notes: Teacher's Notes
-  previous: Previous
-  next: Next
-  older_systems: Tutorials that work on older systems
-  older_systems_subheading: These should work on older Web browsers. To access all
-    tutorials, upgrade to a <a href="http://browsehappy.com/" target="_blank">modern
-    Web browser.</a>
-  mobile_devices: Tutorials for mobile devices
+  carousel_heading_domestic: "영어 튜토리얼들"
+  carousel_heading_beginners: "처음하는 사람들을 위한 튜토리얼"
+  carousel_heading_javascript: Javascript 를 교육할 수 있는 튜토리얼들
+  carousel_heading_unplugged: "적당한 장비나 인터넷 연결이 없나요? 컴퓨터과학 언플러그드 활동을 해보세요."
+  carousel_heading_devices: "스마트폰과 패드를 위한 튜토리얼 앱"
+  carousel_heading_languages: "다른 프로그래밍 언어에 대한 튜토리얼들"
+  carousel_heading_apps_games: "앱이나 게임을 직접 만들어보세요."
+  carousel_heading_university: "온라인 대학 강좌들"
+  carousel_heading_webpages: "웹 페이지 만들기"
+  carousel_heading_robots: "로봇 프로그래밍"
+  carousel_heading_ide: "선생님들이 자주 사용하는 양식들"
+  educator_notes: "교육자 참고사항들"
+  more_resources_educators: "선생님들과 교육자를 위한 더 많은 자료들"
+  participants: "참여자"
+  teachers_notes: "선생님 참고사항들"
+  previous: "이전"
+  next: "다음"
+  older_systems: "저사양 시스템용 튜토리얼들"
+  older_systems_subheading: 구버전 웹브라우져에서도 동작해야합니다. 모든 튜토리얼들을 제대로 살펴보시려면 <a href="http://browsehappy.com/"
+    target="_blank">최신버전 웹브라우저</a> 로 업그레이드하세요.
+  mobile_devices: "모바일 기기를 위한 튜토리얼들"
+  frozen_name: "안나, 엘사와 함께하는 코드"
   codeorg_name: "컴퓨터 프로그램을 직접 만들어 보세요"
   thinkersmithspanish_name: Mis Amigos Roboticos
-  khan_name: An introduction to JavaScript
-  khanes_name: An introduction to JavaScript
-  tynker_name: Build your own game
+  khan_name: JavaScript 소개
+  khanes_name: JavaScript 소개
+  tynker_name: "게임 만들기"
   scratch_name: Create a holiday card
-  lightbot_name: Lightbot
-  thinkersmith_name: My Robotic Friends
-  condcards_name: Conditionals with Cards
-  lightbotintl_name: Lightbot
-  codehs_name: Learn to Code With Karel the Dog
+  lightbot_name: "라이트봇"
+  thinkersmith_name: "내 로봇 친구"
+  condcards_name: "조건선택 카드"
+  lightbotintl_name: "라이트봇"
+  codehs_name: "강아지 카렐과 함께 코드 배우기"
   codecademy_name: Codecademy
   codecombat_name: CodeCombat
-  codeavengers_name: Build a Game with JavaScript
-  processing_name: Drawing with Code
-  robomind_name: Program a virtual robot
-  groklearning_name: A taste of Python programming
-  quorum_name: Accessible programming (with screenreader support)
-  codespark_name: The Foos (pre-readers welcome)
-  kodable_name: Kodable
-  tynkerapp_name: Tynker - on tablets
-  hopscotch_name: 'Hopscotch: Code on your iPad'
-  robomindnl_name: Program a virtual robot
-  bitsbox_name: Bitsbox - make a game
-  makegameswithus_name: Build an iPhone game in your browser!
+  codemonkey_name: CodeMonkey
+  codeavengers_name: JavaScript로 게임 만들기
+  processing_name: "코드로 그림 그리기"
+  robomind_name: "가상 로봇 프로그램"
+  groklearning_name: "인공지능 채팅로봇 의사 엘리자"
+  quorum_name: "가능한 프로그래밍(화면읽기 지원)"
+  codespark_name: Foos(기존 경험자 환영)
+  kodable_name: Kodable(기존 경험자 환영)
+  tynkerapp_name: Tynker - 태블릿 버전
+  hopscotch_name: 'Hopscotch : 아이패드에서 코딩'
+  robomindnl_name: "가상 로봇 프로그램"
+  flappy_name: Make a Flappy game
+  bitsbox_name: Bitbox - 게임 만들기
+  makegameswithus_name: "웹브라우져에서 아이폰 게임 만들기"
   touchdevelop_name: TouchDevelop
-  appinventor_name: AppInventor Hour of Code
+  appinventor_name: "앱인벤터 Hour of Code"
   blockly_name: Blockly(블러클리)
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
-  projguts_name: Rock, Paper, Scissors
-  codeorg_gradelevel: Ages 4-104
+  projguts_name: "가위, 바위, 보"
+  frozen_gradelevel: "나이 8세이상"
+  codeorg_gradelevel: "나이 4세-104세"
   thinkersmithspanish_gradelevel: Por todos
-  khan_gradelevel: Middle school +
-  khanes_gradelevel: Middle school +
-  tynker_gradelevel: Ages 5-13
-  scratch_gradelevel: Ages 8+
+  khan_gradelevel: "중학교 이상"
+  khanes_gradelevel: "중학교 이상"
+  tynker_gradelevel: "나이 5세-13세"
+  scratch_gradelevel: "나이 8세이상"
   lightbot_gradelevel: "모든 연령"
   thinkersmith_gradelevel: "모든 연령"
-  condcards_gradelevel: Ages 8-12
+  condcards_gradelevel: "나이 8세-12세"
   lightbotintl_gradelevel: "모든 연령"
   codehs_gradelevel: "고등학교"
   codecademy_gradelevel: "고등학교"
-  codecombat_gradelevel: Middle school +
-  codeavengers_gradelevel: Middle school +
+  codecombat_gradelevel: "중학교 이상"
+  codemonkey_gradelevel: "중학교 이상"
+  codeavengers_gradelevel: "중학교 이상"
   processing_gradelevel: "고등학교"
-  robomind_gradelevel: Ages 8-13
-  groklearning_gradelevel: Middle school +
-  quorum_gradelevel: Middle school +
+  robomind_gradelevel: "나이 8세-13세"
+  groklearning_gradelevel: "중학교 이상"
+  quorum_gradelevel: "중학교 이상"
   codespark_gradelevel: "초등학교"
   kodable_gradelevel: "초등학교"
-  tynkerapp_gradelevel: Ages 5-13
-  hopscotch_gradelevel: Middle school +
-  robomindnl_gradelevel: Ages 8-13
+  tynkerapp_gradelevel: "나이 5세-13세"
+  hopscotch_gradelevel: "중학교 이상"
+  robomindnl_gradelevel: "나이 8세-13세"
+  flappy_gradelevel: "나이 4세-104세"
   bitsbox_gradelevel: "초등학교"
   makegameswithus_gradelevel: "고등학교"
   touchdevelop_gradelevel: "고등학교"
-  appinventor_gradelevel: Middle school +
+  appinventor_gradelevel: "중학교 이상"
   blockly_gradelevel: "모든 연령"
-  thinkersmith2_gradelevel: Ages 8+
-  kodableunplugged_gradelevel: Ages 8-13
-  projguts_gradelevel: Ages 10-13
-  codeorg_platformtext: Learn the basic concepts of Computer Science with drag and
-    drop programming. This is a game-like, self-directed tutorial starring video lectures
-    by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops,
-    conditionals, and basic algorithms. Available in 34 languages.
-  thinkersmithspanish_platformtext: Mediante el uso de un "Vocabulario Robot" predefinido,
-    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
-    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
-    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
-    como la valiosa habilidad de depuraci&oacute;n.
+  thinkersmith2_gradelevel: "나이 8세이상"
+  kodableunplugged_gradelevel: "나이 8세-13세"
+  projguts_gradelevel: "나이 10세-13세"
+  frozen_platformtext: Modern browsers + tablets
+  codeorg_platformtext: "최신 웹브라우저, 스마트폰, 태블릿"
+  thinkersmithspanish_platformtext: "언플러그드"
   khan_platformtext: Learn the basics of JavaScript programming while creating fun
     drawings with your code. Do it on your own or with your class!
   khanes_platformtext: Learn the basics of JavaScript programming while creating fun
@@ -406,18 +417,10 @@
     home, and Biff the spaceman reach his moon base. Build the Space Zombies game
     or create Math Art using our fun and easy visual approach to programming.  The
     session can be teacher facilitated or self-paced.
-  scratch_platformtext: With Scratch, you can code your own interactive games, stories,
-    animations, and more. In this activity, you'll create an interactive holiday card
-    that you can share with friends and family.
-  lightbot_platformtext: Learn core programming logic, starting from super-basic programming,
-    for ages 4+, on iOS or Android (or Web browser) . Learn how to sequence commands,
-    identify patterns, use procedures, and utilize loops!
-  thinkersmith_platformtext: Using a pre-defined "Robot Vocabulary" students will
-    figure out how to guide each other to accomplish specific tasks without discussing
-    them first. This lesson teaches children the connection between symbols and actions,
-    as well as the invaluable skill of debugging. "My Robotic Friends" works best
-    as a group activity and includes a teacher workbook for classroom use.
-  condcards_platformtext: Unuplugged
+  scratch_platformtext: "모든 웹브라우저"
+  lightbot_platformtext: "모든 웹브라우저, iOS, 안드로이드, 콘솔 게임기"
+  thinkersmith_platformtext: "언플러그드"
+  condcards_platformtext: "언플러그드"
   lightbotintl_platformtext: Learn core programming logic, starting from super-basic
     programming, for ages 4+, on iOS or Android (or Web browser) . Learn how to sequence
     commands, identify patterns, use procedures, and utilize loops!
@@ -432,6 +435,7 @@
   codecombat_platformtext: Play as a Wizard using code (spells) to control your heroes,
     navigate mazes, defeat ogres, trick enemies, and rescue allies! Learn JavaScript
     in this HTML 5 web game for complete beginners.
+  codemonkey_platformtext: Modern web browsers
   codeavengers_platformtext: Build a 2 player 2D top-down game with JavaScript in
     10 short tasks. Then continue learning some basics of programming (variables and
     if statements) as you create a Quiz to share with friends. Along the way  earn
@@ -448,11 +452,11 @@
     a chatbot called "Eliza". Can she fool your friends into think she's a human not
     a computer? This can be done in either a student-guided or teacher-facilitated
     form and comes with all notes and solutions.
-  quorum_platformtext: Modern web browsers. Screen-readers supported
+  quorum_platformtext: "최신 웹 브라우저, 스크린리더 지원"
   codespark_platformtext: iOS, Android (or web browser)
   kodable_platformtext: Kodable is a self-guided iPad game that introduces kids 5+
     to programming basics. Having a teacher or parent nearby is optimal, but not necessary.
-  tynkerapp_platformtext: iPad, Android tablets
+  tynkerapp_platformtext: "아이패드, 안드로이드 태블릿"
   hopscotch_platformtext: Student-guided tutorial on the iPad using the Hopscotch
     programming language. Students will build games and apps for their iPad on their
     iPad. Students can work individually or with friends (up to 3 per iPad).
@@ -460,6 +464,7 @@
     their own virtual robot. The online course is fully self-contained with short
     presentations, movies, quizzes and automatic guidance/hints to help with the programming
     exercises. '
+  flappy_platformtext: "최신 웹브라우저, 스마트폰, 태블릿"
   bitsbox_platformtext: Modern web browsers
   makegameswithus_platformtext: Know some programming already? Learn to make an iPhone
     game in an hour! We'll guide you through the process, to code, test, and play
@@ -474,43 +479,40 @@
     alike, this hour of code will get you ready to start building your own apps before
     you know it. Imagine sharing your own app creations with your friends! These activities
     are suitable for individuals and for teachers leading classes.
-  blockly_platformtext: Got PCs with slow (or non-existent) internet access? Download
-    the Blockly tutorials that were the precursor of the Code.org tutorials - a single
-    3MB ZIP file can be loaded onto any computer or used off a memory stick
-  thinkersmith2_platformtext: Students learn about representing and storing letters
-    in binary, as functions of on and off. At the end, the class gets to encode their
-    own initials to take home with them.
-  kodableunplugged_platformtext: 'Designed for use with plain paper, the fuzzFamily
-    Frenzy is an introduction to programming logic for kids 5 and up. A teacher should
-    explain the game, then students program a partner to complete a simple obstacle
-    course. '
-  projguts_platformtext: Unplugged
-  codeorg_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
+  blockly_platformtext: "최신 웹브라우저에서만 가능"
+  thinkersmith2_platformtext: "언플러그드"
+  kodableunplugged_platformtext: "언플러그드"
+  projguts_platformtext: "언플러그드"
+  frozen_shortdescription: Let's use code to join Anna and Elsa as they explore the
+    magic and beauty of ice.
+  codeorg_shortdescription: "마크 주커버그, 앵그리버드와 함께 코드 배우기"
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
-  khan_shortdescription: Learn to draw in JavaScript
-  khanes_shortdescription: Learn to draw in JavaScript
-  tynker_shortdescription: Learn the basics of programming in a fun, visual environment
+  khan_shortdescription: JavaScript로 그림 그리기
+  khanes_shortdescription: JavaScript로 그림 그리기
+  tynker_shortdescription: "재미있는 퍼즐을 풀고, 자신만의 모바일 게임을 만듦으로서 코드 배우기"
   scratch_shortdescription: Create an interactive card
-  lightbot_shortdescription: A game to teach coding concepts
-  thinkersmith_shortdescription: Unplugged tutorial for a group with no devices
-  condcards_shortdescription: Learn algorithms with a deck of cards
-  lightbotintl_shortdescription: A game to teach coding concepts
-  codehs_shortdescription: Learn JavaScript programming with a fun visual environment
-  codecademy_shortdescription: Learn JavaScript programming, in a web-browser
-  codecombat_shortdescription: Play a game and learn JavaScript to win
-  codeavengers_shortdescription: Learn JavaScript programming, in a web-browser
-  processing_shortdescription: A one hour tutorial in the Processing languages
-  robomind_shortdescription: Write code for a virtual robot
+  lightbot_shortdescription: "프로시져(함수)와 반복을 이용해 퍼즐을 해결하는 로봇 프로그래밍 하기!"
+  thinkersmith_shortdescription: "정보 기기를 사용할 수 없는 그룹을 위한 언플러그드 튜토리얼"
+  condcards_shortdescription: "카드를 이용해 알고리즘 배우기"
+  lightbotintl_shortdescription: "코딩 개념을 가르칠 수 있는 게임"
+  codehs_shortdescription: "카렐과 강아지와 함께 재미있는 비주얼 프로그래밍 시작하기!"
+  codecademy_shortdescription: "웹 브라우져에서 동작하는 자바스크립트 프로그래밍 배우기"
+  codecombat_shortdescription: "이 이야기 진행식 게임 프로그래밍을 통해 괴물을 물리치는 파이썬(Python)이나 자바스크립트(JavaScript)
+    배우기!"
+  codemonkey_shortdescription: "학생들은 조금씩 복잡해지는 단계들을 따라며 바나나들을 얻는 원숭이를 프로그램밍 합니다."
+  codeavengers_shortdescription: "웹 브라우져에서 동작하는 자바스크립트 프로그래밍 배우기"
+  processing_shortdescription: "한 시간짜리 프로세싱(Processing) 언어 튜토리얼"
+  robomind_shortdescription: "가상 로봇을 위한 코드 작성하기"
   groklearning_shortdescription: Basic intro to python programming
   quorum_shortdescription: Join Mary on a guided tour as she learns the Quorum programming
     language.
   codespark_shortdescription: The Foos is a fun, kid-friendly game to learn about
     programming.
   kodable_shortdescription: A fun iPad game to teach computer programming concepts
-  tynkerapp_shortdescription: Learn to code by solving fun puzzles and build your
-    own mobile games.
+  tynkerapp_shortdescription: "재미있는 퍼즐을 풀고, 자신만의 모바일 게임을 만듦으로서 코드 배우기"
   hopscotch_shortdescription: Learn visual programming on an iPad
-  robomindnl_shortdescription: Write code for a virtual robot
+  robomindnl_shortdescription: "가상 로봇을 위한 코드 작성하기"
+  flappy_shortdescription: Make your own game - Flappy Bird, Shark, or Submarine
   bitsbox_shortdescription: Code a series of apps to play and share, using real Javascript.
   makegameswithus_shortdescription: Learn to make an iPhone game in an hour
   touchdevelop_shortdescription: Code mobile apps directly on your phone, tablet or
@@ -520,6 +522,8 @@
   thinkersmith2_shortdescription: Learn how computers use 1s and 0s to represent information
   kodableunplugged_shortdescription: A fun unplugged exercise
   projguts_shortdescription: Try modeling and simulation using rock/paper/scissors
+  frozen_longdescription: "얼음의 마술과 아름다움을 탐구하는 안나, 엘사와 함께 코드를 해보세요. 스케이트를 타는 것 처럼 쉽게
+    눈 송이와 패턴을 만들어서 겨울왕국을 꾸밀 수 있게 될 것입니다. 그렇게 만든 것들은 친구들에게 자랑하세요!"
   codeorg_longdescription: Learn the basic concepts of Computer Science with drag
     and drop programming. This is a game-like, self-directed tutorial starring video
     lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn
@@ -563,9 +567,12 @@
     to the basics of CS through JavaScript that's used by tens of millions of students
     around the world. We've prepared a no-hassle Hour of Code experience with accompanying
     quizzes, slides, and a completed project for students at the end.
-  codecombat_longdescription: Play as a Wizard using code (spells) to control your
-    heroes, navigate mazes, defeat ogres, trick enemies, and rescue allies! Learn
-    JavaScript in this HTML 5 web game for complete beginners.
+  codecombat_longdescription: "이 이야기 진행식 게임 프로그래밍을 통해 괴물을 물리치는 파이썬(Python)이나 자바스크립트(JavaScript)
+    배우기!"
+  codemonkey_longdescription: 'CodeMonkey is an online game that teaches coding in
+    a real programming language! Students program a monkey to catch bananas while
+    it gets slightly more complicated on each level. They get star scores on each
+    solution and can share it in a single click. '
   codeavengers_longdescription: Build a 2 player 2D top-down game with JavaScript
     in 10 short tasks. Then continue learning some basics of programming (variables
     and if statements) as you create a Quiz to share with friends. Along the way  earn
@@ -603,6 +610,9 @@
     their own virtual robot. The online course is fully self-contained with short
     presentations, movies, quizzes and automatic guidance/hints to help with the programming
     exercises. '
+  flappy_longdescription: Use drag-and-drop programming to make your own Flappy Bird
+    game, and customize it to look different (Flappy Shark, Flappy Santa, whatever).
+    Add the game to your phone in one click.
   bitsbox_longdescription: Customize your very own virtual tablet, then code a series
     of apps to play and share. Simple walkthroughs make it possible for even young
     kids to program real Javascript, and the more advanced you are the further you'll
@@ -641,14 +651,16 @@
   lightbot_beyond_name: LightBot
   codecademy_beyond_name: Codecademy
   kodable_beyond_name: Kodable
+  scratchjr_beyond_name: ScratchJR for pre-readers
   hopscotch_beyond_name: 'Hopscotch: Programming On Your iPad'
+  pocketcode_beyond_name: Pocket Code
   groklearning_beyond_name: Learn Python programming
   hacketyhack_beyond_name: Learn Ruby
-  robomind_beyond_name: Program a virtual robot
-  makegameswithus_beyond_name: Build an iPhone game in your browser!
-  appinventor_beyond_name: AppInventor Hour of Code
+  robomind_beyond_name: "가상 로봇 프로그램"
+  makegameswithus_beyond_name: "웹브라우져에서 아이폰 게임 만들기"
+  appinventor_beyond_name: "앱인벤터 Hour of Code"
   touchdevelop_beyond_name: TouchDevelop
-  codehs_beyond_name: Learn to Code With Karel the Dog
+  codehs_beyond_name: "강아지 카렐과 함께 코드 배우기"
   udemy_beyond_name: Online Programming Courses
   lynda_beyond_name: Online Programming Courses
   edx_beyond_name: Harvard CS50 class
@@ -669,19 +681,21 @@
   processing_beyond_name: Program with Processing
   alice_beyond_name: Alice
   sphero_beyond_name: SPRK
-  codeorg_beyond_gradelevel: Ages 4-104
-  khan_beyond_gradelevel: Middle school +
-  tynker_beyond_gradelevel: Ages 5-13
-  scratch_beyond_gradelevel: Ages 8+
+  codeorg_beyond_gradelevel: "나이 4세-104세"
+  khan_beyond_gradelevel: "중학교 이상"
+  tynker_beyond_gradelevel: "나이 5세-13세"
+  scratch_beyond_gradelevel: "나이 8세이상"
   lightbot_beyond_gradelevel: "모든 연령"
   codecademy_beyond_gradelevel: "고등학교"
   kodable_beyond_gradelevel: "초등학교"
-  hopscotch_beyond_gradelevel: Middle school +
-  groklearning_beyond_gradelevel: Middle school +
+  scratchjr_beyond_gradelevel: "초등학교"
+  hopscotch_beyond_gradelevel: "중학교 이상"
+  pocketcode_beyond_gradelevel: "중학교 이상"
+  groklearning_beyond_gradelevel: "중학교 이상"
   hacketyhack_beyond_gradelevel: "고등학교"
-  robomind_beyond_gradelevel: Ages 8-13
+  robomind_beyond_gradelevel: "나이 8세-13세"
   makegameswithus_beyond_gradelevel: "고등학교"
-  appinventor_beyond_gradelevel: Middle school +
+  appinventor_beyond_gradelevel: "중학교 이상"
   touchdevelop_beyond_gradelevel: "고등학교"
   codehs_beyond_gradelevel: "고등학교"
   udemy_beyond_gradelevel: High school +
@@ -690,20 +704,20 @@
   coursera_beyond_gradelevel: University
   udacity_beyond_gradelevel: University
   teachingtree_beyond_gradelevel: University
-  kodu_beyond_gradelevel: Ages 8+
-  cargobot_beyond_gradelevel: Ages 8+
+  kodu_beyond_gradelevel: "나이 8세이상"
+  cargobot_beyond_gradelevel: "나이 8세이상"
   kidsruby_beyond_gradelevel: Ages 12+
   w3schools_beyond_gradelevel: Ages 12+
-  codeavengers_beyond_gradelevel: Middle school +
+  codeavengers_beyond_gradelevel: "중학교 이상"
   mozilla_beyond_gradelevel: Ages 12+
-  codecombat_beyond_gradelevel: Middle school +
+  codecombat_beyond_gradelevel: "중학교 이상"
   codea_beyond_gradelevel: High school +
-  lego_beyond_gradelevel: Middle school +
-  finch_beyond_gradelevel: Ages 8+
+  lego_beyond_gradelevel: "중학교 이상"
+  finch_beyond_gradelevel: "나이 8세이상"
   arduino_beyond_gradelevel: High school +
   processing_beyond_gradelevel: "고등학교"
-  alice_beyond_gradelevel: Middle school +
-  sphero_beyond_gradelevel: Ages 8+
+  alice_beyond_gradelevel: "중학교 이상"
+  sphero_beyond_gradelevel: "나이 8세이상"
   codeorg_beyond_platformtext: Modern browsers, tablets
   khan_beyond_platformtext: Modern Web browsers
   tynker_beyond_platformtext: Modern web browsers
@@ -711,7 +725,9 @@
   lightbot_beyond_platformtext: iOS, Android (or web browser)
   codecademy_beyond_platformtext: Modern web browsers. iOS, Android apps
   kodable_beyond_platformtext: iPad
+  scratchjr_beyond_platformtext: iPad
   hopscotch_beyond_platformtext: iPad
+  pocketcode_beyond_platformtext: Mobile App
   groklearning_beyond_platformtext: Modern web browsers
   hacketyhack_beyond_platformtext: Desktop install
   robomind_beyond_platformtext: Modern web browsers, Mobile web
@@ -739,18 +755,21 @@
   processing_beyond_platformtext: Modern web browsers
   alice_beyond_platformtext: Windows or Mac (install required)
   sphero_beyond_platformtext: Robot purchase
-  codeorg_beyond_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
-  khan_beyond_shortdescription: Learn to draw in JavaScript
+  codeorg_beyond_shortdescription: "마크 주커버그, 앵그리버드와 함께 코드 배우기"
+  khan_beyond_shortdescription: JavaScript로 그림 그리기
   tynker_beyond_shortdescription: A fun and engaging course for children in grades
     4-8
   scratch_beyond_shortdescription: Create an interactive animation or game
-  lightbot_beyond_shortdescription: A game to teach coding concepts
-  codecademy_beyond_shortdescription: Learn JavaScript programming, in a web-browser
+  lightbot_beyond_shortdescription: "코딩 개념을 가르칠 수 있는 게임"
+  codecademy_beyond_shortdescription: "웹 브라우져에서 동작하는 자바스크립트 프로그래밍 배우기"
   kodable_beyond_shortdescription: A fun iPad game to teach computer programming concepts
+  scratchjr_beyond_shortdescription: 'Create interactive stories and games using ScratchJr. '
   hopscotch_beyond_shortdescription: Learn visual programming on an iPad
+  pocketcode_beyond_shortdescription: Create a game on your smartphone and share with
+    friends to try!
   groklearning_beyond_shortdescription: Basic intro to python programming
   hacketyhack_beyond_shortdescription: Learn Ruby from the ground up
-  robomind_beyond_shortdescription: Write code for a virtual robot
+  robomind_beyond_shortdescription: "가상 로봇을 위한 코드 작성하기"
   makegameswithus_beyond_shortdescription: Learn to make an iPhone game in an hour
   appinventor_beyond_shortdescription: Make your own app! (Android-only)
   touchdevelop_beyond_shortdescription: Code mobile apps directly on your phone, tablet
@@ -810,9 +829,16 @@
   kodable_beyond_longdescription: Kodable is a self-guided iPad game that introduces
     kids 5+ to programming basics. Having a teacher or parent nearby is optimal, but
     not necessary.
+  scratchjr_beyond_longdescription: ScratchJr is an introductory programming language
+    that enables young children to create their own interactive stories and games.
+    Children snap together graphical programming blocks to make characters move, jump,
+    dance, and sing
   hopscotch_beyond_longdescription: Student-guided tutorial on the iPad using the
     Hopscotch programming language. Students will build games and apps for their iPad
     on their iPad. Students can work individually or with friends (up to 3 per iPad).
+  pocketcode_beyond_longdescription: Create your own game on your smart phone with
+    Pocket Code! Help skydiver Steve to deliver his parcels. You can share it with
+    friends and other users to try!
   groklearning_beyond_longdescription: An introductory course using the programming
     language Python for people with no programming experience. Our unique mix of introductory
     content and challenges will bring you to a thorough understanding of Python and

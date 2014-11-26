@@ -20,12 +20,9 @@
   hello: Hej verden
   welcome_back: Velkommen tilbage %{name}
   add_teacher_form:
-    code_or_email:
-      label: 'Tilføj en lærer med kode eller e-mailadresse:'
-      placeholder: Kode (ABCDEF) eller e-mail (teacher@school.edu)
     code:
-      label: 'Tilføje en lærer af afsnittet kode:'
-      placeholder: Kode (ABCDEF)
+      label: 'Tilføje en lærer:'
+      placeholder: Afsnitskode (SOVS)
     submit: Tilføj lærer
   add_hint_form:
     placeholder: Skriv dit huske-ord her
@@ -139,12 +136,12 @@
       %{name}
   follower:
     invite_sent: Invitation sendt
-    added_teacher: '%{name} er tilføjet som din lærer'
+    added_teacher: "%{name} er tilføjet som din lærer"
     registered: Du er registreret til %{section_name}.
     error:
       signed_in: Log ud inden du fortsætter
       username_not_found: Brugernavn %{username} blev ikke fundet
-      username_in_use: '%{username} bruges allerede, vær venlig og vælg et andet'
+      username_in_use: "%{username} bruges allerede, vær venlig og vælg et andet"
       no_teacher: Vi kunne ikke finde nogen brugere der er logget ind med %{teacher_email_or_code}'.
         Vær venlig og spørg dem om at lave en bruger, og derefter prøv at tilføje
         dem.
@@ -188,7 +185,7 @@
       msg_publicschool: Bekræft venligst, at du er en Amerikansk offentlig skolelærer.
       msg_visit_website: Besøg Hjemmeside
     providers:
-      apple_itunes: $10 iTunes Gift Card
+      apple_itunes: "$10 iTunes Gift Card"
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10GB plads på Dropbox
@@ -197,7 +194,7 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: $10 Skype credit
+      skype: "$10 Skype credit"
     msg:
       choose: 'Choose a prize:'
       choose_teacher: 'Click on the logo below to claim your prize:'
@@ -244,12 +241,12 @@
     edit: Rediger
     edit_model: Rediger %{model}
     update: Opdater
-    destroy: Ødelæg
+    destroy: "Ødelæg"
     back: Tilbage
     confirm: Er du sikker?
-    created: '%{model} blev oprettet.'
-    updated: '%{model} blev opdateret.'
-    destroyed: '%{model} blev slettet.'
+    created: "%{model} blev oprettet."
+    updated: "%{model} blev opdateret."
+    destroyed: "%{model} blev slettet."
     access_denied: Du har ikke adgang til denne %{model}.
   nav:
     header:
@@ -276,13 +273,13 @@
       puzzle_map: Etaper
       prizes: Indsaml alle %{total_trophies} trofæer og vind præmier!
       prize_earned: Alle %{total_trophies} trofæer indsamlet. Prisen vundet!
-      prize_us_only: (Kun for amerikanske elever)
+      prize_us_only: "(Kun for amerikanske elever)"
       prizes_link: Mere info
   teacher:
     title:
       one: 'Din lærer:'
       other: 'Dine lærere:'
-    remove: (Fjern lærer)
+    remove: "(Fjern lærer)"
     confirm:
       remove: Er du sikker på, at du vil fjerne denne lærer?
     tools: Lærer redskaber
@@ -307,13 +304,13 @@
       add: Tilføj elever
       remove: fjern elev
       confirm_remove: Sikker på, at du ønsker at fjerne denne elev?
-      help_reassign: For at opdele din klasse i flere grupper, skal du vælge de studerende
+      help_reassign: For at opdele din klasse i flere grupper, skal du vælge de elever
         du ønsker at flytte til en ny gruppe.
-      help_register: I stedet for at du bruger en masse tid individuelt at indlæse
-        de studerendes data, kan du oprette din klasse hurtigt ved at spørge dem til
-        tilmelding. Eleverne skal vælge brugernavne og adgangskoder, men de vil ikke
-        være forpligtet til at angive en e-mail-adresse. Hvis en elev glemmer sin
-        adgangskode, vil du kunne nulstille det til dem.
+      help_register: I stedet for at du bruger en masse tid individuelt på at indlæse
+        elevernes data, kan du oprette din klasse hurtigt ved at spørge dem om selv
+        at tilmelde sig. Eleverne skal vælge brugernavne og adgangskoder, men de vil
+        ikke være forpligtet til at angive en e-mail-adresse. Hvis en elev glemmer
+        sin adgangskode, vil du kunne nulstille det til dem.
       register: Spørg dine elever til at registrere sig selv
       vist: Spørg dine elever til at besøge
       section_code: 'og indtaste deres afsnit-kode:'
@@ -326,7 +323,7 @@
       section: Afsnit
       students: Studerende
       section_code: Afsnitskode
-      add_section_code: Tilføje studerende afsnit-kode
+      add_section_code: Tilføje elev afsnit-kode
       secret: Hemmelig type
       grade: Graduering
       course: Kursus
@@ -338,18 +335,18 @@
     rollup: Fremskridts oversigt
     activity: Seneste klasse aktivitet
     user_not_found: Lærer eller elev kunne ikke findes
-    cant_remove_student_no_email: '%{student_name} kan ikke fjernes som din studerende,
-      fordi %{student_name} ikke har registreret en e-mailadresse'
-    cant_remove_teacher_no_email: '%{teacher_name} kan ikke fjernes som din lærer,
-      fordi du ikke har registreret en e-mailadresse'
-    student_teacher_disassociated: '%{teacher_name} er blevet fjernet som lærer for
-      %{student_name}'
+    cant_remove_student_no_email: "%{student_name} kan ikke fjernes som din elev,
+      fordi %{student_name} ikke har registreret en e-mailadresse"
+    cant_remove_teacher_no_email: "%{teacher_name} kan ikke fjernes som din lærer,
+      fordi du ikke har registreret en e-mailadresse"
+    student_teacher_disassociated: "%{teacher_name} er blevet fjernet som lærer for
+      %{student_name}"
   user:
     email_confirm_needed: 'E-mailadresse er ikke blevet bekræftet:'
     email_resend_confirm: Gensend bekræftelses instruktioner
-    new_password_hint: (Efterlad blank hvis du ikke ønsker at ændre det)
-    current_password_hint: (vi har brug for din nuværende adgangskode til at bekræfte
-      dine ændringer)
+    new_password_hint: "(Efterlad blank hvis du ikke ønsker at ændre det)"
+    current_password_hint: "(vi har brug for din nuværende adgangskode til at bekræfte
+      dine ændringer)"
     cancel:
       title: Annuller min konto
       hint: Ulykkelig?
@@ -366,8 +363,8 @@
     all_courses: Oversigt over kursus 1, 2 og 3
     lesson_plans: Lektionsplaner
     signin_message: Allerede registreret? %{link}
-    student_reg_link: Tilmelding for studerende
-    teacher_reg_link: Tilmelding for studerende
+    student_reg_link: Tilmelding for elever
+    teacher_reg_link: Tilmelding for lærere
     signin_directions: Brug en konto til at følge op på fremdriften. <br/> Lærere,
       spor hele din klasse.
     teacher_dashboard: Se fremskridts oversigt
@@ -400,12 +397,10 @@
     test_videos_help: Teste vores nye video-afspiller på din skole
     try_beta_courses: Nyt! Prøv vores beta kurser for K-5 elever
     use_as_teacher: Bruge dette websted som en lærer
-    heading_elementary: <h2>20 timers kurser for</h2><h1>grundskoleelever</h1>
-    heading_apps: <h2>Sjov for</h2><h1>Alle</h1>
-    heading_legacy: <h2>Vores generelle kursus for</h2><h1>Alle aldre</h1>
-    gallery:
-      your_turtle: Mit kunstværk
-      your_studio: Mine Apps
+    heading_elementary: "<h2>20 timers kurser for</h2><h1>grundskoleelever</h1>"
+    heading_apps: "<h2>Sjov for</h2><h1>Alle</h1>"
+    heading_legacy: "<h2>Vores generelle kursus for</h2><h1>Alle aldre</h1>"
+    your_gallery: Galleri
   gender:
     male: Mand
     female: Kvinde
@@ -460,17 +455,18 @@
   slow_loading: Dette tager længere tid end normalt...
   try_reloading: Prøv at genindlæse siden
   next_stage: Færdig! Fortsæt til næste fase
-  download_pdf: Åben lektionsplan
-  lesson_plan: Lesson Plan
+  download_pdf: "Åben lektionsplan"
+  lesson_plan: Lektionsplan
   view_lesson_plan: Se lektionsplan
   pdf_download: Download PDF
-  download_coming_soon: Downloadable activity coming soon.
-  video_coming_soon: Video Coming Soon!
+  download_coming_soon: Aktiviter til download kommer snart.
+  video_coming_soon: Video kommer snart!
   share_code:
     title: Klik på 'Kør' for at se min program i aktion
     bounce_og_title: Tjek mit hoppe spil
     flappy_og_title: Tjek mit Flappy spil
     studio_og_title: Tjek min Spille-Lab-App
+    check_out_what_i_made: Check out what I made
     og_description: Jeg skrev selv koden med Code.org
     phone_number_not_allowed: Det ser ud som om der er et telefonnummer i det. Prøv
       at ændre teksten.
@@ -500,6 +496,12 @@
     20hour:
       title: Intro kursus
       body: Prøv vores 20-timers Introduktionskursus til programmering og datalogi.
+    hoc2014:
+      try_new_tutorial: Try our new Hour of Code tutorial in beta
+      try_frozen: Artist with Anna and Elsa, from Frozen
+    gallery:
+      title: Galleri
+      body: View a gallery of app and artist images created by our users
   gallery:
     students_drew_these_with_code: Elever har tegnet disse med kode!
     students_made_these_with_code: Elever har lavet disse med kode!
@@ -512,11 +514,16 @@
     want_to_make_your_own: Vil du lave dit eget?
     more: Mere &rarr;
     caption_by_name_age: af %{name}, alder %{age}
-    caption_time_ago: '%{time_ago} siden'
+    caption_time_ago: "%{time_ago} siden"
+    header: Galleri
+    header_playlab: Spille Lab
+    header_artist: Kunstner
   landing:
     prerelease: Dette kursus er i <span class='betatext'> beta</span>.  Dette betyder,
       at det ikke er den endelige version af kurset, og er undergivet revision som
       feedback modtages og forbedringer.
+    prerelease_hoc2014: This tutorial is in <span class='betatext'>beta</span>.  It
+      is subject to revision as feedback is received and improvements are made.
     feedback: Giv feedback
     report_bug: Rapporter fejl
     support: Få hjælp

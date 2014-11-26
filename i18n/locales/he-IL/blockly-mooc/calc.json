@@ -1,8 +1,8 @@
 {
-  "compute":"compute",
-  "equivalentExpression":"Try reordering your arguments to get exactly the same expression.",
-  "extraTopBlocks":"You have unattached blocks. Did you mean to attach these to the \"compute\" block?",
-  "goal":"Goal:",
-  "reinfFeedbackMsg":"You can press the \"Try again\" button to edit your expression.",
-  "yourExpression":"Your expression:"
+  "compute":"חשב",
+  "equivalentExpression":"נסה לסדר מחדש את הפרמטרים שלך על מנת לקבל בדיוק אותו ביטוי.",
+  "extraTopBlocks":"יש לך בלוקים לא מחוברים.  האם התכוונת לצרף אותם לבלוק \"חשב\" ?",
+  "goal":"מטרה:",
+  "reinfFeedbackMsg":"Here is your story! Continue working on it, or move on to the next puzzle!",
+  "yourExpression":"הביטוי שלך:"
 }
