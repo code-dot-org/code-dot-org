@@ -74,10 +74,13 @@
     $('#carousel-international').show();
   }
 
-  // Special Frozen entry, not shown for mobile or IE8
-  if (!window.mobilecheck() && ! is_ie8)
+  // Special Frozen entry, English only right now, and not shown for mobile or IE8
+  if (pegasusLocale.substring(0,2) == "en")
   {
-    $('#carousel-frozen').show();
+    if (!window.mobilecheck() && !is_ie8)
+    {
+      $('#carousel-frozen').show();
+    }
   }
 
 %script{:src=>'/js/jquery.carouFredSel-6.2.1-packed.js'}
