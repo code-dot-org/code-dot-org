@@ -162,7 +162,7 @@ en:
           'Play Lab: Defining Variables': 'Play Lab: Defining Variables'
           The Design Recipe: The Design Recipe
           'Artist: Defining Functions': 'Artist: Defining Functions'
-          'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
+          'Play Lab: Defining Functions': 'Play Lab: Design Recipe'
           'Artist: Functions': 'Artist: Functions'
           'Play Lab: Animation': 'Play Lab: Animation'
           Booleans: Booleans
@@ -180,8 +180,8 @@ en:
           'Unplugged: Contracts': 'Unplugged: Contracts'
           'Eval: Writing Contracts': 'Eval: Writing Contracts'
           'Unplugged: The Design Recipe': 'Unplugged: The Design Recipe'
-          'Eval: Defining Functions': 'Eval: Defining Functions'
-          'Eval: Functions': 'Eval: Functions'
+          'Eval: Defining Functions': 'Eval: Fast Functions'
+          'Eval: Functions': 'Eval: Design Recipe'
           'Unplugged: Booleans': 'Unplugged: Booleans'
           'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals
             and Piecewise Functions'
@@ -199,6 +199,9 @@ en:
           'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Big Game)'
           'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
             (Big Game)'
+          'Eval: Fast Functions': 'Eval: Fast Functions'
+          'Play Lab: Design Recipe': 'Play Lab: Design Recipe'
+          'Eval: Design Recipe': 'Eval: Design Recipe'
         playlab:
           title: Play Lab
           description: Create a story or make a game with Play Lab!
