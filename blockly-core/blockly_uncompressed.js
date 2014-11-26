@@ -4521,7 +4521,8 @@ Blockly.Xml.textToDom = function(text) {
   return dom.firstChild
 };
 Blockly.Xml.domToBlockSpace = function(blockSpace, xml) {
-  var width = blockSpace.blockSpaceEditor.svgSize().width;
+  var metrics = blockSpace.getMetrics();
+  var width = metrics ? metrics.viewWidth : 0;
   for(var x = 0, xmlChild;xmlChild = xml.childNodes[x];x++) {
     if(xmlChild.nodeName.toLowerCase() == "block") {
       var block = Blockly.Xml.domToBlock_(blockSpace, xmlChild);
@@ -22814,7 +22815,10 @@ Blockly.BlockSpaceEditor.prototype.setCursorHand_ = function(closed) {
 Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_ = function() {
   var blockBox, leftEdge, rightEdge, topEdge, bottomEdge;
   var svgSize = this.svgSize();
-  var toolboxWidth = this.toolbox ? this.toolbox.width : this.flyout_.width_;
+  var toolboxWidth = 0;
+  if(this.toolbox || this.flyout_) {
+    toolboxWidth = this.toolbox ? this.toolbox.width : this.flyout_.width_
+  }
   svgSize.width -= toolboxWidth;
   var viewWidth = svgSize.width - Blockly.Scrollbar.scrollbarThickness;
   var viewHeight = svgSize.height - Blockly.Scrollbar.scrollbarThickness;
