@@ -226,7 +226,7 @@ Blockly.BlockSpaceEditor.prototype.addFlyout_ = function() {
    * @type {?Blockly.Flyout}
    * @private
    */
-  this.flyout_ = new Blockly.Flyout(this);
+  this.flyout_ = new Blockly.Flyout(this, true);
   var flyout = this.flyout_;
   var flyoutSvg = flyout.createDom();
   flyout.init(this.blockSpace, true);
@@ -266,6 +266,13 @@ Blockly.BlockSpaceEditor.prototype.flyoutBumpOrDeleteOutOfBoundsBlocks_ = functi
   for (var b = 0, block; block = blocks[b]; b++) {
     var blockXY = block.getRelativeToSurfaceXY();
     var blockHW = block.getHeightWidth();
+    // Have flyout handle any blocks that have been dropped on it
+    if (block.isDeletable() && (Blockly.RTL ?
+        blockXY.x - 2 * metrics.viewLeft - metrics.viewWidth :
+        -blockXY.x) > MARGIN * 2) {
+      this.flyout_.onBlockDropped(block);
+      return;
+    }
     // Bump any block that's above the top back inside.
     overflow = metrics.viewTop + MARGIN - blockHW.height -
       blockXY.y;
@@ -289,12 +296,6 @@ Blockly.BlockSpaceEditor.prototype.flyoutBumpOrDeleteOutOfBoundsBlocks_ = functi
       blockXY.x + (Blockly.RTL ? blockHW.width : 0);
     if (overflow < 0) {
       block.moveBy(overflow, 0);
-    }
-    // Have flyout handle any blocks that have been dropped on it
-    if (block.isDeletable() && (Blockly.RTL ?
-      blockXY.x - 2 * metrics.viewLeft - metrics.viewWidth :
-      -blockXY.x) > MARGIN * 2) {
-      this.flyout_.onBlockDropped(block);
     }
   }
 };
@@ -336,12 +337,6 @@ Blockly.BlockSpaceEditor.prototype.init_ = function() {
       // Build a fixed flyout with the root blocks.
       this.flyout_.init(this.blockSpace, true);
       this.flyout_.show(Blockly.languageTree.childNodes);
-      // Translate the blockSpace sideways to avoid the fixed flyout.
-      this.blockSpace.pageXOffset = this.flyout_.width_;
-      var translation = 'translate(' + this.blockSpace.pageXOffset + ', 0)';
-      this.blockSpace.getCanvas().setAttribute('transform', translation);
-      this.blockSpace.getBubbleCanvas().setAttribute('transform',
-        translation);
     }
   }
   if (Blockly.hasScrollbars) {
@@ -423,7 +418,7 @@ Blockly.BlockSpaceEditor.prototype.svgResize = function() {
   // Update the scrollbars (if they exist).
   if (this.blockSpace.scrollbar) {
     this.blockSpace.scrollbar.resize();
-  } else if (Blockly.hasCategories) {
+  } else {
     this.setBlockSpaceMetricsNoScroll_();
   }
 };
@@ -452,12 +447,16 @@ Blockly.BlockSpaceEditor.prototype.getBlockSpaceWidth = function() {
 
 /**
  * @return {number} Return the width, in pixels, of the main blockSpace's toolbox.
- * Note, this only includes the 'flyout' part, not the categories tree.
+ * Note, this includes the categories tree (for levels with categories).
  */
 Blockly.BlockSpaceEditor.prototype.getToolboxWidth = function() {
   var flyout = this.flyout_ || this.toolbox.flyout_;
   var metrics = flyout.blockSpace_.getMetrics();
-  return metrics ? metrics.viewWidth : 0;
+  var width = metrics ? metrics.viewWidth : 0;
+  if (this.toolbox) {
+    width += this.toolbox.HtmlDiv.getBoundingClientRect().width;
+  }
+  return width;
 };
 
 /**
@@ -739,7 +738,7 @@ Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_ = function() {
   var blockBox, leftEdge, rightEdge, topEdge, bottomEdge;
 
   var svgSize = this.svgSize();
-  var toolboxWidth = (this.toolbox ? this.toolbox.width : 0);
+  var toolboxWidth = (this.toolbox ? this.toolbox.width : this.flyout_.width_);
   svgSize.width -= toolboxWidth;
   var viewWidth = svgSize.width - Blockly.Scrollbar.scrollbarThickness;
   var viewHeight = svgSize.height - Blockly.Scrollbar.scrollbarThickness;
