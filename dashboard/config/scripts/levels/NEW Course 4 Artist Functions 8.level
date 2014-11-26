@@ -20,7 +20,8 @@
     "free_play": "false",
     "impressive": "false",
     "slider_speed": ".5",
-    "ideal": "9"
+    "ideal": "9",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>
@@ -34,7 +35,9 @@
           </next>
         </block>
         <block type="procedures_defnoreturn" uservisible="false">
-          <mutation/>
+          <mutation>
+            <description>draws a triangle that is 100 pixels in size</description>
+          </mutation>
           <title name="NAME">draw a triangle</title>
           <statement name="STACK">
             <block type="controls_repeat_ext" inline="true" uservisible="false">
@@ -232,28 +235,31 @@
           </next>
         </block>
         <block type="procedures_defnoreturn" uservisible="false">
-          <mutation/>
+          <mutation>
+            <description>draws a triangle that is 100 pixels in size
+</description>
+          </mutation>
           <title name="NAME">draw a triangle</title>
           <statement name="STACK">
-            <block type="controls_repeat_ext" inline="true" uservisible="false">
+            <block type="controls_repeat_ext" inline="true">
               <value name="TIMES">
-                <block type="math_number" uservisible="false">
+                <block type="math_number">
                   <title name="NUM">3</title>
                 </block>
               </value>
               <statement name="DO">
-                <block type="draw_move" inline="true" uservisible="false">
+                <block type="draw_move" inline="true">
                   <title name="DIR">moveForward</title>
                   <value name="VALUE">
-                    <block type="math_number" uservisible="false">
+                    <block type="math_number">
                       <title name="NUM">100</title>
                     </block>
                   </value>
                   <next>
-                    <block type="draw_turn" inline="true" uservisible="false">
+                    <block type="draw_turn" inline="true">
                       <title name="DIR">turnLeft</title>
                       <value name="VALUE">
-                        <block type="math_number" uservisible="false">
+                        <block type="math_number">
                           <title name="NUM">120</title>
                         </block>
                       </value>

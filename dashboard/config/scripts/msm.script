@@ -2,7 +2,9 @@ title 'CS in Middle School Math'
 description "Learn functional programming through algebra"
 
 stage 'Unplugged: Video Games and Coordinate Planes'
+level 'VideoGamesCoordinatePlanes'
 level 'Ninjacat Demo B'
+level 'Coordinates Multi 1'
 
 stage 'Calc: Evaluation Blocks'
 level 'Calc Circles of Eval .1'
@@ -39,7 +41,7 @@ level 'Eval Strings Images 6'
 level 'Eval Strings Images Free Play'
 
 stage 'Unplugged: Contracts'
-level 'Eval Placeholder'
+level 'Contracts'
 
 stage 'Eval: Writing Contracts'
 level 'Eval Contracts 1'
@@ -49,8 +51,10 @@ level 'Eval Contracts 4'
 
 stage 'Calc: Defining Variables'
 level 'Calc Vars 1'
-level 'Calc Vars 2'
+level 'Calc Vars 1.1'
 level 'Calc Vars 3'
+level 'Calc Vars 2'
+level 'Calc Vars 2.1'
 level 'Calc Vars 4'
 level 'MSM Defining Vars 1'
 level 'MSM Defining Vars 2'
@@ -58,9 +62,10 @@ level 'MSM Defining Vars 3'
 level 'MSM Defining Vars 4'
 
 stage 'Play Lab: Defining Variables (Big Game)'
-level 'MSM Play Lab Game 1'
-level 'MSM Play Lab Game 2'
-level 'MSM Play Lab Game 3' 
+level 'MSM Big Game Vars 1'
+#level 'MSM Play Lab Game 1'
+#level 'MSM Play Lab Game 2'
+#level 'MSM Play Lab Game 3' 
 
 stage 'Eval: Defining Functions'
 level 'Eval Define Funcs 1'
@@ -71,7 +76,7 @@ level 'Eval Define Funcs 5'
 level 'Calc Define Funcs 1'
 
 stage 'Unplugged: The Design Recipe'
-level 'Eval Placeholder'
+level 'DesignRecipe'
 
 stage 'Play Lab: Defining Functions'
 level 'Play Lab Rocket 1'
@@ -82,13 +87,17 @@ level 'Play Lab Rocket 3'
 level 'Play Lab Rocket 4'
 
 stage 'Eval: Functions'
-level 'Eval Placeholder'
+level 'Eval Design Recipe .1'
+level 'Eval Design Recipe 1'
+level 'Eval Design Recipe 2'
+level 'Eval Design Recipe 3'
+level 'Calc Design Recipe 1'
 
 stage 'Play Lab: Animation (Big Game)'
 level 'Eval Placeholder'
 
 stage 'Unplugged: Booleans'
-level 'Eval Placeholder'
+level 'Booleans'
 
 stage 'Eval: Boolean Operators'
 level 'Eval Booleans 1'
@@ -118,13 +127,13 @@ stage 'Play Lab: Boolean (Big Game)'
 level 'Eval Placeholder'
 
 stage 'Unplugged: Conditionals and Piecewise Functions'
-level 'Eval Placeholder'
+level 'ConditionalsPiecewiseFunctions'
 
 stage 'Eval: Conditionals'
 level 'Eval Placeholder'
 
 stage 'Unplugged: Collision Detection and the Distance Formula'
-level 'Eval Placeholder'
+level 'CollisionDetection'
 
 stage 'Play Lab: Collision Detection (Big Game)'
 level 'Eval Placeholder'
