@@ -56,7 +56,7 @@ goog.userAgent.IPAD=goog.userAgent.PLATFORM_KNOWN_?goog.userAgent.ASSUME_IPAD:go
 goog.userAgent.determineVersion_=function(){var a="",b;goog.userAgent.OPERA&&goog.global.opera?(a=goog.global.opera.version,a="function"==typeof a?a():a):(goog.userAgent.GECKO?b=/rv\:([^\);]+)(\)|;)/:goog.userAgent.IE?b=/\b(?:MSIE|rv)[: ]([^\);]+)(\)|;)/:goog.userAgent.WEBKIT&&(b=/WebKit\/(\S+)/),b&&(a=(a=b.exec(goog.userAgent.getUserAgentString()))?a[1]:""));return goog.userAgent.IE&&(b=goog.userAgent.getDocumentMode_(),b>parseFloat(a))?String(b):a};
 goog.userAgent.getDocumentMode_=function(){var a=goog.global.document;return a?a.documentMode:void 0};goog.userAgent.VERSION=goog.userAgent.determineVersion_();goog.userAgent.compare=function(a,b){return goog.string.compareVersions(a,b)};goog.userAgent.isVersionOrHigherCache_={};
 goog.userAgent.isVersionOrHigher=function(a){return goog.userAgent.ASSUME_ANY_VERSION||goog.userAgent.isVersionOrHigherCache_[a]||(goog.userAgent.isVersionOrHigherCache_[a]=0<=goog.string.compareVersions(goog.userAgent.VERSION,a))};goog.userAgent.isVersion=goog.userAgent.isVersionOrHigher;goog.userAgent.isDocumentModeOrHigher=function(a){return goog.userAgent.IE&&goog.userAgent.DOCUMENT_MODE>=a};goog.userAgent.isDocumentMode=goog.userAgent.isDocumentModeOrHigher;
-goog.userAgent.DOCUMENT_MODE=function(){var a=goog.global.document;return a&&goog.userAgent.IE?goog.userAgent.getDocumentMode_()||("CSS1Compat"==a.compatMode?parseInt(goog.userAgent.VERSION,10):5):void 0}();Blockly.BlockSvg=function(a){this.block_=a;this.svgGroup_=Blockly.createSvgElement("g",{"block-id":a.id},null);this.initChildren()};
+goog.userAgent.DOCUMENT_MODE=function(){var a=goog.global.document;return a&&goog.userAgent.IE?goog.userAgent.getDocumentMode_()||("CSS1Compat"==a.compatMode?parseInt(goog.userAgent.VERSION,10):5):void 0}();Blockly.BlockSvg=function(a){this.block_=a;var b={"block-id":a.id};a.htmlId&&(b.id=a.htmlId);this.svgGroup_=Blockly.createSvgElement("g",b,null);this.initChildren()};
 Blockly.BlockSvg.prototype.initChildren=function(){this.svgPathDark_=Blockly.createSvgElement("path",{"class":"blocklyPathDark",transform:"translate(1, 1)","fill-rule":"evenodd"},this.svgGroup_);this.svgPath_=Blockly.createSvgElement("path",{"class":"blocklyPath","fill-rule":"evenodd"},this.svgGroup_);this.block_.getFillPattern()&&(this.svgPathFill_=Blockly.createSvgElement("path",{"class":"blocklyPath"},this.svgGroup_));this.svgPathLight_=Blockly.createSvgElement("path",{"class":"blocklyPathLight"},
 this.svgGroup_);this.svgPath_.tooltip=this.block_;Blockly.Tooltip.bindMouseEvents(this.svgPath_);this.updateMovable()};Blockly.BlockSvg.INLINE=-1;Blockly.BlockSvg.DISABLED_COLOUR="#808080";Blockly.BlockSvg.prototype.init=function(){var a=this.block_;this.updateColour();for(var b=0,c;c=a.inputList[b];b++)c.init();a.mutator&&a.mutator.createIcon()};
 Blockly.BlockSvg.prototype.updateMovable=function(){this.block_.isMovable()?(Blockly.addClass_(this.svgGroup_,"blocklyDraggable"),Blockly.removeClass_(this.svgGroup_,"blocklyUndraggable")):(Blockly.removeClass_(this.svgGroup_,"blocklyDraggable"),Blockly.addClass_(this.svgGroup_,"blocklyUndraggable"));this.updateColour()};
@@ -1560,6 +1560,7 @@ Blockly.JavaScript.parameters_set=Blockly.JavaScript.variables_set;
 
 goog.provide('Blockly.Msg.bn_bd');
 goog.require('Blockly.Msg');
+Blockly.Msg.ACTUAL = "actual";
 Blockly.Msg.ADD = "Add";
 Blockly.Msg.ADD_COMMENT = "মন্তব্য যোগ করুন";
 Blockly.Msg.ADD_PARAMETER = "Add Parameter";
@@ -1620,6 +1621,7 @@ Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_UNTIL = "যতক্ষণ না প�
 Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_WHILE = "পুনরাবৃত্তি যতক্ষন";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL = "যখন একটি মান মিথ্যা হয়, তাহলে কিছু বিবৃতি না";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_WHILE = "যখন মানটি সত্যা তখন কিছু বিবৃতি করো।";
+Blockly.Msg.DEFINE_FUNCTION_DEFINE = "Define";
 Blockly.Msg.DELETE_BLOCK = "ব্লক মুছে ফেলো";
 Blockly.Msg.DELETE_PARAMETER = "Delete parameter...";
 Blockly.Msg.DELETE_PARAMETER_TITLE = "This will delete all '%1' parameter occurrences. Are you sure?";
@@ -1627,8 +1629,11 @@ Blockly.Msg.DELETE_X_BLOCKS = "%1 ব্লকগুলো মুছে ফে�
 Blockly.Msg.DISABLE_BLOCK = "ব্লক নিষ্ক্রিয় করো";
 Blockly.Msg.DUPLICATE_BLOCK = "অনুরূপ";
 Blockly.Msg.ENABLE_BLOCK = "অনুরূপ";
+Blockly.Msg.EXAMPLE = "Example";
+Blockly.Msg.EXAMPLE_DESCRIPTION = "Defines an example with expected and actual behavior";
 Blockly.Msg.EXPAND_ALL = "প্রসারিত করুন";
 Blockly.Msg.EXPAND_BLOCK = "ব্লক প্রসারিত করো";
+Blockly.Msg.EXPECTED = "expected";
 Blockly.Msg.EXTERNAL_INPUTS = "বাহ্যিক ইনপুট";
 Blockly.Msg.FUNCTION_CREATE = "Create a Function";
 Blockly.Msg.FUNCTION_EDIT = "edit";
@@ -1642,7 +1647,11 @@ Blockly.Msg.FUNCTIONAL_NAME_LABEL = "নাম";
 Blockly.Msg.FUNCTIONAL_TYPE_LABEL = "Choose type...";
 Blockly.Msg.FUNCTIONAL_DESCRIPTION_LABEL = "Description";
 Blockly.Msg.FUNCTIONAL_DOMAIN_LABEL = "Domain";
+Blockly.Msg.FUNCTIONAL_PROCEDURE_DEFINE_TOOLTIP = "Define a functional method";
 Blockly.Msg.FUNCTIONAL_RANGE_LABEL = "Range";
+Blockly.Msg.FUNCTIONAL_VARIABLE_CREATE = "Create a Variable";
+Blockly.Msg.FUNCTIONAL_VARIABLE_HEADER = "Variable";
+Blockly.Msg.FUNCTIONAL_VARIABLE_TYPE = "Type";
 Blockly.Msg.HELP = "সাহায্য";
 Blockly.Msg.INLINE_INPUTS = "ইনলাইন ইনপুট";
 Blockly.Msg.LISTS_CREATE_EMPTY_HELPURL = "http://en.wikipedia.org/wiki/Linked_list#Empty_lists";
@@ -1858,6 +1867,7 @@ Blockly.Msg.RENAME_PARAMETER = "Rename parameter...";
 Blockly.Msg.RENAME_PARAMETER_TITLE = "Rename all '%1' parameters to:";
 Blockly.Msg.RENAME_VARIABLE = "রাশি পুনঃনামকরণ করো...";
 Blockly.Msg.RENAME_VARIABLE_TITLE = "সব '%1' রাশি পুনঃনামকরণ করবে:";
+Blockly.Msg.SAVE_AND_CLOSE = "Save and Close";
 Blockly.Msg.TEXT_APPEND_APPENDTEXT = "লেখাটি সংযুক্ত করো";
 Blockly.Msg.TEXT_APPEND_HELPURL = "https://code.google.com/p/blockly/wiki/Text#Text_modification";
 Blockly.Msg.TEXT_APPEND_TO = "থেকে";

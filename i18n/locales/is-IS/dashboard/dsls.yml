@@ -1,11 +1,11 @@
-"is":
+is:
   data:
     text_match:
       text match test:
-        Mathematical Expression Assessment: "Mat á reikningsdæmi"
-        Type out the arithmetic expression that this circle of evaluation evaluates to: "Skrifaðu reikningsdæmið sem þessi matshringur samsvarar"
+        Mathematical Expression Assessment: Mat á reikningsdæmi
+        Type out the arithmetic expression that this circle of evaluation evaluates to: Skrifaðu reikningsdæmið sem þessi greiningarhringur samsvarar
         /script_assets/msm/Unit 1/Exercise_5_question_2.png: /script_assets/msm/Unit 1/Exercise_5_question_2.png
         (9-3)+(4*7): '(9-3)+(4*7)'
         (9-3)+4: null
         9-3+4: null
-        Type the arithmetic expression here: "Ritaðu reikningsdæmið hér"
+        Type the arithmetic expression here: Ritaðu reikningsdæmið hér

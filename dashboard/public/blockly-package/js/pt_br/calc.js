@@ -3514,7 +3514,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -10752,9 +10751,9 @@ exports.equivalentExpression = function(d){return "Tente reorganizar seus argume
 
 exports.extraTopBlocks = function(d){return "Você tem blocos não conectados. Você pretendia conectá-los ao bloco \"calcular\"?"};
 
-exports.goal = function(d){return "Meta:"};
+exports.goal = function(d){return "Objetivo:"};
 
-exports.reinfFeedbackMsg = function(d){return "Pressione o botão \"Tentar novamente\" para editar sua expressão."};
+exports.reinfFeedbackMsg = function(d){return "Aqui está a sua história! Continue trabalhando nela, ou vá para o próximo desafio!"};
 
 exports.yourExpression = function(d){return "Sua expressão:"};
 
@@ -10849,7 +10848,7 @@ exports.numLinesOfCodeWritten = function(d){return "Você escreveu "+p(d,"numLin
 
 exports.play = function(d){return "jogue"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Imprimir"};
 
 exports.puzzleTitle = function(d){return "Desafio "+v(d,"puzzle_number")+" de "+v(d,"stage_total")};
 
@@ -10891,9 +10890,9 @@ exports.hintRequest = function(d){return "Veja a dica"};
 
 exports.backToPreviousLevel = function(d){return "Voltar ao nível anterior"};
 
-exports.saveToGallery = function(d){return "Salve na sua galeria"};
+exports.saveToGallery = function(d){return "Salvar na galeria"};
 
-exports.savedToGallery = function(d){return "Salvo na sua galeria!"};
+exports.savedToGallery = function(d){return "Salvo na galeria!"};
 
 exports.shareFailure = function(d){return "Desculpe, não é possível compartilhar esse programa."};
 
@@ -10927,7 +10926,7 @@ exports.hintHeader = function(d){return "Aqui vai uma dica:"};
 
 exports.genericFeedback = function(d){return "Veja como você terminou e tente consertar seu programa."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Veja o que eu fiz"};
 
 
 },{"messageformat":53}],42:[function(require,module,exports){

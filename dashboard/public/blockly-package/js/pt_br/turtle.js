@@ -2626,7 +2626,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -14596,7 +14595,7 @@ exports.numLinesOfCodeWritten = function(d){return "Você escreveu "+p(d,"numLin
 
 exports.play = function(d){return "jogue"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Imprimir"};
 
 exports.puzzleTitle = function(d){return "Desafio "+v(d,"puzzle_number")+" de "+v(d,"stage_total")};
 
@@ -14638,9 +14637,9 @@ exports.hintRequest = function(d){return "Veja a dica"};
 
 exports.backToPreviousLevel = function(d){return "Voltar ao nível anterior"};
 
-exports.saveToGallery = function(d){return "Salve na sua galeria"};
+exports.saveToGallery = function(d){return "Salvar na galeria"};
 
-exports.savedToGallery = function(d){return "Salvo na sua galeria!"};
+exports.savedToGallery = function(d){return "Salvo na galeria!"};
 
 exports.shareFailure = function(d){return "Desculpe, não é possível compartilhar esse programa."};
 
@@ -14674,7 +14673,7 @@ exports.hintHeader = function(d){return "Aqui vai uma dica:"};
 
 exports.genericFeedback = function(d){return "Veja como você terminou e tente consertar seu programa."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Veja o que eu fiz"};
 
 
 },{"messageformat":57}],45:[function(require,module,exports){
@@ -14699,23 +14698,23 @@ exports.catLogic = function(d){return "Lógica"};
 
 exports.colourTooltip = function(d){return "Altera a cor do lápis."};
 
-exports.createACircle = function(d){return "create a circle"};
+exports.createACircle = function(d){return "crie um círculo"};
 
-exports.createSnowflakeSquare = function(d){return "create a snowflake of type square"};
+exports.createSnowflakeSquare = function(d){return "crie um floco de neve do tipo quadrado"};
 
-exports.createSnowflakeParallelogram = function(d){return "create a snowflake of type parallelogram"};
+exports.createSnowflakeParallelogram = function(d){return "crie um floco de neve do tipo paralelogramo"};
 
-exports.createSnowflakeLine = function(d){return "create a snowflake of type line"};
+exports.createSnowflakeLine = function(d){return "crie um floco de neve do tipo reta"};
 
-exports.createSnowflakeSpiral = function(d){return "create a snowflake of type spiral"};
+exports.createSnowflakeSpiral = function(d){return "crie um floco de neve do tipo espiral"};
 
-exports.createSnowflakeFlower = function(d){return "create a snowflake of type flower"};
+exports.createSnowflakeFlower = function(d){return "crie um floco de neve do tipo flor"};
 
-exports.createSnowflakeFractal = function(d){return "create a snowflake of type fractal"};
+exports.createSnowflakeFractal = function(d){return "crie um floco de neve do tipo fractal"};
 
-exports.createSnowflakeRandom = function(d){return "create a snowflake of type random"};
+exports.createSnowflakeRandom = function(d){return "crie um floco de neve do tipo aleatório"};
 
-exports.createASnowflakeBranch = function(d){return "create a snowflake branch"};
+exports.createASnowflakeBranch = function(d){return "crie um floco de neve do tipo ramificado"};
 
 exports.degrees = function(d){return "graus"};
 
@@ -14755,7 +14754,7 @@ exports.drawUpperWave = function(d){return "desenhe a onda superior"};
 
 exports.drawLowerWave = function(d){return "desenhe a onda inferior"};
 
-exports.drawStamp = function(d){return "draw stamp"};
+exports.drawStamp = function(d){return "desenhar selo"};
 
 exports.heightParameter = function(d){return "altura"};
 
@@ -14809,7 +14808,7 @@ exports.penTooltip = function(d){return "Levanta ou abaixa o lápis, para começ
 
 exports.penUp = function(d){return "levante o lápis"};
 
-exports.reinfFeedbackMsg = function(d){return "Isto parece com o que você quer? Você pode pressionar o botão de \"Tentar novamente\" para ver seu desenho."};
+exports.reinfFeedbackMsg = function(d){return "Aqui está o seu desenho! Continue trabalhando nele, ou vá para o próximo desafio."};
 
 exports.setColour = function(d){return "definir cor"};
 

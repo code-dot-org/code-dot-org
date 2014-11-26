@@ -6717,7 +6717,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -18777,7 +18776,7 @@ function spriteTotalFrames (index) {
 }
 
 var updateSpeechBubblePath = function (element) {
-  var height = element.getAttribute('height');
+  var height = +element.getAttribute('height');
   var onTop = 'true' === element.getAttribute('onTop');
   var onRight = 'true' === element.getAttribute('onRight');
   element.setAttribute('d',
@@ -20430,11 +20429,11 @@ exports.directionWestLetter = function(d){return "O"};
 
 exports.end = function(d){return "fine"};
 
-exports.emptyBlocksErrorMsg = function(d){return "Il blocco \"ripeti\" o \"se\" deve avere all'interno altri blocchi per poter funzionare. Assicurati che i blocchi interni siano inseriti correttamente all'interno del blocco principale."};
+exports.emptyBlocksErrorMsg = function(d){return "Il blocco \"ripeti\" o \"se\" deve avere all'interno altri blocchi per poter funzionare. Assicurati che i blocchi siano inseriti correttamente all'interno del blocco contenente."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "Una funzione ha bisogno di altri blocchi al suo interno."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Un blocco funzione deve avere all'interno altri blocchi per poter funzionare."};
 
-exports.extraTopBlocks = function(d){return "Ci sono dei blocchi scollegati. Volevi forse attaccarli al blocco 'quando si clicca su \"Esegui\" '?"};
+exports.extraTopBlocks = function(d){return "Ci sono dei blocchi non collegati agli altri. Volevi forse attaccarli al blocco 'quando si clicca su \"Esegui\" '?"};
 
 exports.finalStage = function(d){return "Complimenti! Hai completato l'ultima lezione."};
 
@@ -20462,11 +20461,11 @@ exports.missingBlocksErrorMsg = function(d){return "Prova uno o più dei blocchi
 
 exports.nextLevel = function(d){return "Complimenti! Hai completato l'esercizio "+v(d,"puzzleNumber")+"."};
 
-exports.nextLevelTrophies = function(d){return "Complimenti! Hai completato l'esercizio "+v(d,"puzzleNumber")+" e vinto "+p(d,"numTrophies",0,"it",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
+exports.nextLevelTrophies = function(d){return "Complimenti! Hai completato l'esercizio "+v(d,"puzzleNumber")+" e vinto "+p(d,"numTrophies",0,"it",{"one":"un trofeo","other":n(d,"numTrophies")+" trofei"})+"."};
 
 exports.nextStage = function(d){return "Complimenti! Hai completato la lezione "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "Complimenti! Hai completato la lezione "+v(d,"stageName")+" e vinto "+p(d,"numTrophies",0,"it",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
+exports.nextStageTrophies = function(d){return "Complimenti! Hai completato la lezione "+v(d,"stageName")+" e vinto "+p(d,"numTrophies",0,"it",{"one":"un trofeo","other":n(d,"numTrophies")+" trofei"})+"."};
 
 exports.numBlocksNeeded = function(d){return "Complimenti! Hai completato l'esercizio "+v(d,"puzzleNumber")+". (Avresti però potuto usare solo "+p(d,"numBlocks",0,"it",{"one":"1 block","other":n(d,"numBlocks")+" blocks"})+".)"};
 
@@ -20484,7 +20483,7 @@ exports.resetProgram = function(d){return "Ricomincia"};
 
 exports.runProgram = function(d){return "Esegui"};
 
-exports.runTooltip = function(d){return "Esegui il programma definito dai blocchi nell'area di lavoro."};
+exports.runTooltip = function(d){return "Esegui il programma definito dai blocchi presenti nell'area di lavoro."};
 
 exports.score = function(d){return "punteggio"};
 
@@ -20512,7 +20511,7 @@ exports.totalNumLinesOfCodeWritten = function(d){return "Totale complessivo: "+p
 
 exports.tryAgain = function(d){return "Riprova"};
 
-exports.hintRequest = function(d){return "Vedere il suggerimento"};
+exports.hintRequest = function(d){return "Vedi il suggerimento"};
 
 exports.backToPreviousLevel = function(d){return "Torna al livello precedente"};
 
@@ -20601,13 +20600,13 @@ exports.catText = function(d){return "Testo"};
 
 exports.catVariables = function(d){return "Variabili"};
 
-exports.changeScoreTooltip = function(d){return "Aggiungi o rimuovi un punto dal punteggio."};
+exports.changeScoreTooltip = function(d){return "Aggiungi o togli un punto al punteggio."};
 
 exports.changeScoreTooltipK1 = function(d){return "Aggiungi un punto al punteggio."};
 
 exports.continue = function(d){return "Prosegui"};
 
-exports.decrementPlayerScore = function(d){return "rimuovi un punto"};
+exports.decrementPlayerScore = function(d){return "togli un punto"};
 
 exports.defaultSayText = function(d){return "scrivi qua"};
 
@@ -20789,7 +20788,7 @@ exports.reinfFeedbackMsg = function(d){return "Premi \"Ricomincia\" per ricominc
 
 exports.repeatForever = function(d){return "ripeti per sempre"};
 
-exports.repeatDo = function(d){return "fai"};
+exports.repeatDo = function(d){return "esegui"};
 
 exports.repeatForeverTooltip = function(d){return "Esegui ripetutamente le azioni in questo blocco mentre la storia è in esecuzione."};
 
@@ -20797,7 +20796,7 @@ exports.saySprite = function(d){return "di'"};
 
 exports.saySpriteN = function(d){return "il personaggio "+v(d,"spriteIndex")+" dice"};
 
-exports.saySpriteTooltip = function(d){return "Visualizza un fumetto con il testo associato del personaggio specificato."};
+exports.saySpriteTooltip = function(d){return "Il personaggio specificato visualizza un fumetto con il testo indicato."};
 
 exports.scoreText = function(d){return "Punteggio: "+v(d,"playerScore")};
 
@@ -21051,7 +21050,7 @@ exports.waitFor10Seconds = function(d){return "aspetta per 10 secondi"};
 
 exports.waitParamsTooltip = function(d){return "Aspetta per il numero di secondi specificato (se è zero aspetta fino ad un clic)."};
 
-exports.waitTooltip = function(d){return "Aspetta una quantità di tempo specificata oppure il verificarsi di un clic."};
+exports.waitTooltip = function(d){return "Aspetta per il numero di secondi specificati o che il mouse venga cliccato."};
 
 exports.whenArrowDown = function(d){return "freccia in basso"};
 

@@ -2626,7 +2626,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -12168,7 +12167,7 @@ exports.flapVerySmall = function(d){return "Φτερούγισε πολύ λίγ
 
 exports.flapSmall = function(d){return "Φτερούγισε λίγο"};
 
-exports.flapNormal = function(d){return "Φτερούγισε μία φυσιολογική ποσότητα"};
+exports.flapNormal = function(d){return "Φτερούγισε φυσιολογικά"};
 
 exports.flapLarge = function(d){return "Φτερούγισε πολύ"};
 

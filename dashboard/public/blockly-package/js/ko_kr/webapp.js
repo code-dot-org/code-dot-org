@@ -2626,7 +2626,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -11041,7 +11040,7 @@ exports.numLinesOfCodeWritten = function(d){return "오! 코드 "+p(d,"numLines"
 
 exports.play = function(d){return "실행"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "인쇄"};
 
 exports.puzzleTitle = function(d){return "퍼즐 "+v(d,"puzzle_number")+"/"+v(d,"stage_total")};
 
@@ -11083,9 +11082,9 @@ exports.hintRequest = function(d){return "도움 보기"};
 
 exports.backToPreviousLevel = function(d){return "이전 퍼즐"};
 
-exports.saveToGallery = function(d){return "나의 갤러리에 저장"};
+exports.saveToGallery = function(d){return "갤러리에 저장"};
 
-exports.savedToGallery = function(d){return "나의 갤러리에 저장되었습니다!"};
+exports.savedToGallery = function(d){return "갤러리에 저장되었습니다!"};
 
 exports.shareFailure = function(d){return "프로그램을 공유할 수 없습니다."};
 
@@ -11119,7 +11118,7 @@ exports.hintHeader = function(d){return "도움말:"};
 
 exports.genericFeedback = function(d){return "어떻게 종료되는지 살펴보고 프로그램을 수정해 보세요."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "만든 작품 확인하기"};
 
 
 },{"messageformat":52}],40:[function(require,module,exports){
@@ -11156,7 +11155,7 @@ exports.no = function(d){return "아니요"};
 
 exports.numBlocksNeeded = function(d){return "%1 개의 블럭으로 퍼즐을 해결할 수 있습니다."};
 
-exports.pause = function(d){return "일시정지"};
+exports.pause = function(d){return "일시 정지"};
 
 exports.reinfFeedbackMsg = function(d){return "\"다시 시도하기\" 버튼을 눌러 앱으로 돌아갈 수 있습니다."};
 
@@ -11170,11 +11169,11 @@ exports.shareWebappTwitter = function(d){return "내가 만든 앱을 살펴보�
 
 exports.shareGame = function(d){return "앱 공유하기:"};
 
-exports.stepIn = function(d){return "Step in"};
+exports.stepIn = function(d){return "안쪽 단계로 들어가기"};
 
-exports.stepOver = function(d){return "Step over"};
+exports.stepOver = function(d){return "단계 지나가기"};
 
-exports.stepOut = function(d){return "Step out"};
+exports.stepOut = function(d){return "이 단계 밖으로 나가기"};
 
 exports.turnBlack = function(d){return "검정화면으로 변환"};
 

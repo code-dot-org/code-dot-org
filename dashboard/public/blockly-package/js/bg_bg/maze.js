@@ -2626,7 +2626,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -16331,7 +16330,7 @@ exports.numLinesOfCodeWritten = function(d){return "Вие написахте "+
 
 exports.play = function(d){return "играй"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Печат"};
 
 exports.puzzleTitle = function(d){return "Пъзел "+v(d,"puzzle_number")+" от "+v(d,"stage_total")};
 
@@ -16373,9 +16372,9 @@ exports.hintRequest = function(d){return "Вижте съвета"};
 
 exports.backToPreviousLevel = function(d){return "Обратно към предишното ниво"};
 
-exports.saveToGallery = function(d){return "Запазете във вашата галерия"};
+exports.saveToGallery = function(d){return "Записване в галерията"};
 
-exports.savedToGallery = function(d){return "Запазено във вашата галерия!"};
+exports.savedToGallery = function(d){return "Записано в галерията!"};
 
 exports.shareFailure = function(d){return "За съжаление, не можем да сподели тази програма."};
 
@@ -16409,7 +16408,7 @@ exports.hintHeader = function(d){return "Ето един съвет:"};
 
 exports.genericFeedback = function(d){return "Вижте какво сте въвели и се опитайте да коригирате вашата програма."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Вижте какво направих"};
 
 
 },{"messageformat":72}],60:[function(require,module,exports){

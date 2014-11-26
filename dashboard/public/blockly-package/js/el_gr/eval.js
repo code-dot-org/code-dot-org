@@ -6781,7 +6781,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -14184,11 +14183,11 @@ exports.defaultTwitterText = function(d){return "Check out what I made"};
 
 },{"messageformat":62}],50:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.el=function(n){return n===1?"one":"other"}
-exports.circleBlockTitle = function(d){return "circle (radius, style, color)"};
+exports.circleBlockTitle = function(d){return "κύκλος (ακτίνα, στυλ, χρώμα)"};
 
 exports.displayBlockTitle = function(d){return "display"};
 
-exports.ellipseBlockTitle = function(d){return "ellipse (width, height, style, color)"};
+exports.ellipseBlockTitle = function(d){return "έλλειψη (πλάτος, ύψος, στυλ, χρώμα)"};
 
 exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"display\" block?"};
 
@@ -14196,29 +14195,29 @@ exports.overlayBlockTitle = function(d){return "overlay (top, bottom)"};
 
 exports.placeImageBlockTitle = function(d){return "place-image (x, y, image)"};
 
-exports.rectangleBlockTitle = function(d){return "rectangle (width, height, style, color)"};
+exports.rectangleBlockTitle = function(d){return "ορθογώνιο (πλάτος, ύψος, στυλ, χρώμα)"};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to edit your drawing."};
 
-exports.rotateImageBlockTitle = function(d){return "rotate (degrees, image)"};
+exports.rotateImageBlockTitle = function(d){return "περιστροφή (μοίρες, εικόνα)"};
 
-exports.scaleImageBlockTitle = function(d){return "scale (factor)"};
+exports.scaleImageBlockTitle = function(d){return "κλίμακα (παράγοντας)"};
 
-exports.squareBlockTitle = function(d){return "square (size, style, color)"};
+exports.squareBlockTitle = function(d){return "τετράγωνο (μέγεθος, στυλ, χρώμα)"};
 
-exports.starBlockTitle = function(d){return "star (radius, style, color)"};
+exports.starBlockTitle = function(d){return "αστέρι (ακτίνα, στυλ, χρώμα)"};
 
 exports.stringAppendBlockTitle = function(d){return "string-append (first, second)"};
 
-exports.stringLengthBlockTitle = function(d){return "string-length (string)"};
+exports.stringLengthBlockTitle = function(d){return "μήκος συμβολοσειράς (συμβολοσειρά)"};
 
-exports.textBlockTitle = function(d){return "text (string, size, color)"};
+exports.textBlockTitle = function(d){return "κείμενο (συμβολοσειρά, μέγεθος, χρώμα)"};
 
-exports.triangleBlockTitle = function(d){return "triangle (size, style, color)"};
+exports.triangleBlockTitle = function(d){return "τρίγωνο (μέγεθος, στυλ, χρώμα)"};
 
 exports.underlayBlockTitle = function(d){return "underlay (bottom, top)"};
 
-exports.outline = function(d){return "outline"};
+exports.outline = function(d){return "περίγραμμα"};
 
 exports.solid = function(d){return "solid"};
 

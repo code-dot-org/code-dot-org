@@ -2626,7 +2626,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -11164,13 +11163,13 @@ exports.catVariables = function(d){return "Spremenljivke"};
 
 exports.continue = function(d){return "Nadaljuj"};
 
-exports.createHtmlBlock = function(d){return "create html block"};
+exports.createHtmlBlock = function(d){return "ustvari html blok"};
 
-exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
+exports.createHtmlBlockTooltip = function(d){return "Ustvari HTML blok v aplikaciji."};
 
 exports.finalLevel = function(d){return "Čestitke! Rešil/a si zadnjo uganko."};
 
-exports.makeYourOwn = function(d){return "Make Your Own App"};
+exports.makeYourOwn = function(d){return "Ustvari svojo aplikacijo"};
 
 exports.nextLevel = function(d){return "Čestitke! Zaključil/a si to uganko."};
 
@@ -11180,7 +11179,7 @@ exports.numBlocksNeeded = function(d){return "Ta uganka je lahko rešena z %1 bl
 
 exports.pause = function(d){return "Pause"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
+exports.reinfFeedbackMsg = function(d){return "Lahko pritisnete gumb \"Poskusi znova\" za vrnitev v aplikacijo."};
 
 exports.repeatForever = function(d){return "repeat forever"};
 
@@ -11188,9 +11187,9 @@ exports.repeatDo = function(d){return "izvrši"};
 
 exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
 
-exports.shareWebappTwitter = function(d){return "Check out the app I made. I wrote it myself with @codeorg"};
+exports.shareWebappTwitter = function(d){return "Poglejte aplikacijo, ki sem jo naredil. Napisal sem jo z @codeorg"};
 
-exports.shareGame = function(d){return "Share your app:"};
+exports.shareGame = function(d){return "Deli svojo aplikacijo:"};
 
 exports.stepIn = function(d){return "Step in"};
 
@@ -11198,7 +11197,7 @@ exports.stepOver = function(d){return "Step over"};
 
 exports.stepOut = function(d){return "Step out"};
 
-exports.turnBlack = function(d){return "turn black"};
+exports.turnBlack = function(d){return "postani črn"};
 
 exports.turnBlackTooltip = function(d){return "Turns the screen black."};
 

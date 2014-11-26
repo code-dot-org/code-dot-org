@@ -43,6 +43,7 @@
   "numBlocksNeeded":"Tebrikler! Bulmaca {puzzleNumber} tamamlandı. (Ancak, sadece {numBlocks, plural, one {1 blok} other {# blok}} kullanmış olabilirdiniz.)",
   "numLinesOfCodeWritten":"Tam olarak {numLines, plural, one {1 satır} other {# satır}} kod yazdınız!",
   "play":"oynat",
+  "print":"Print",
   "puzzleTitle":"Bulmaca {puzzle_number} \/ {stage_total}",
   "repeat":"bu işlemleri",
   "resetProgram":"Yeniden başla",
@@ -63,8 +64,8 @@
   "tryAgain":"Tekrar dene",
   "hintRequest":"İpucunu gör",
   "backToPreviousLevel":"Önceki seviyeye dön",
-  "saveToGallery":"Galerine kaydet",
-  "savedToGallery":"Galerine kaydedildi!",
+  "saveToGallery":"Save to gallery",
+  "savedToGallery":"Saved in gallery!",
   "shareFailure":"Üzgünüz, bu programı paylaşamıyoruz.",
   "typeFuncs":"Uygun fonksiyon:%1",
   "typeHint":"Parantezlerin ve noktalı virgüllerin gerekli olduğuna dikkat et.",
@@ -80,5 +81,6 @@
   "tryHOC":"Kodlama Saati'ni Deneyin",
   "signup":"Giriş dersi için üye olun",
   "hintHeader":"İşte bir ipucu:",
-  "genericFeedback":"Sonucunu gör ve programını düzeltmeyi dene."
+  "genericFeedback":"Sonucunu gör ve programını düzeltmeyi dene.",
+  "defaultTwitterText":"Check out what I made"
 }

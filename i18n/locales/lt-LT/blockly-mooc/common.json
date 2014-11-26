@@ -41,8 +41,9 @@
   "nextStage":"Sveikinu! Tu užbaigei {stageName}.",
   "nextStageTrophies":"Sveikinu! Tu užbaigei lygį {stageName} ir laimėjai {numTrophies, plural, one {trofėjų} other {# trofėjus}}.",
   "numBlocksNeeded":"Sveikinu! Tu išsprendei {puzzleNumber} užduotį. (Beje, galėjai panaudoti tik {numBlocks, plural, vieną {1 blokelį} other {# blokelių}}.)",
-  "numLinesOfCodeWritten":"Tu parašei  {numLines, plural, one {1 eilutę} other {# eilučių}} kodo!",
+  "numLinesOfCodeWritten":"Tu sukūrei {numLines, plural, one {1 eilutę} other {# eilučių}} programą!",
   "play":"žaisti",
+  "print":"Print",
   "puzzleTitle":"Užduotis {puzzle_number} iš {stage_total}",
   "repeat":"kartok",
   "resetProgram":"Iš naujo",
@@ -63,8 +64,8 @@
   "tryAgain":"Pabandyk dar kartą",
   "hintRequest":"Užuomina",
   "backToPreviousLevel":"Grįžti į ankstesnį lygį",
-  "saveToGallery":"Įrašyti į savo galeriją",
-  "savedToGallery":"Įrašyti į savo galeriją!",
+  "saveToGallery":"Save to gallery",
+  "savedToGallery":"Saved in gallery!",
   "shareFailure":"Deja, šios programos dalintis negalima.",
   "typeFuncs":"Galimos komandos:%1",
   "typeHint":"Įsidėmėk, kad skliausteliai ir kabliataškiai yra būtini.",
@@ -80,5 +81,6 @@
   "tryHOC":"Išmėgink „Programavimo valandą“",
   "signup":"Užsiregistruok į kursą pradedantiesiems",
   "hintHeader":"Štai patarimas:",
-  "genericFeedback":"Pažiūrėk, kaip pavyko ir pabandyk patobulinti programą."
+  "genericFeedback":"Pažiūrėk, kaip pavyko ir pabandyk patobulinti programą.",
+  "defaultTwitterText":"Check out what I made"
 }

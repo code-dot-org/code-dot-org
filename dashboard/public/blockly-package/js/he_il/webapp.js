@@ -2626,7 +2626,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -11057,7 +11056,7 @@ exports.score = function(d){return "ציון"};
 
 exports.showCodeHeader = function(d){return "הצג קוד"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "הצג בלוקים"};
 
 exports.showGeneratedCode = function(d){return "הצג קוד"};
 
@@ -11087,7 +11086,7 @@ exports.saveToGallery = function(d){return "לשמור את הגלריה שלך"
 
 exports.savedToGallery = function(d){return "נשמר לגלריה שלך!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "מצטערים, אנחנו לא יכולים לשתף תוכנית זו."};
 
 exports.typeFuncs = function(d){return "פונקציות אפשריות: %1"};
 
@@ -11095,7 +11094,7 @@ exports.typeHint = function(d){return "שימו לב כי סוגריים ונק�
 
 exports.workspaceHeader = function(d){return "הרכב את הבלוקים שלך כאן: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "הקלד את קוד JavaScript שלך כאן"};
 
 exports.infinity = function(d){return "אינסוף"};
 
@@ -11128,7 +11127,7 @@ exports.catActions = function(d){return "פעולות"};
 
 exports.catControl = function(d){return "לולאות"};
 
-exports.catEvents = function(d){return "Events"};
+exports.catEvents = function(d){return "אירועים"};
 
 exports.catLogic = function(d){return "הגיון"};
 
@@ -11142,13 +11141,13 @@ exports.catVariables = function(d){return "משתנים"};
 
 exports.continue = function(d){return "המשך"};
 
-exports.createHtmlBlock = function(d){return "create html block"};
+exports.createHtmlBlock = function(d){return "ליצור בלוק html"};
 
-exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
+exports.createHtmlBlockTooltip = function(d){return "יוצר בלוק HTML באפליקציה."};
 
 exports.finalLevel = function(d){return "כל הכבוד! פתרת את החידה האחרונה."};
 
-exports.makeYourOwn = function(d){return "Make Your Own App"};
+exports.makeYourOwn = function(d){return "תיצור את אפליקציה משלך"};
 
 exports.nextLevel = function(d){return "כל הכבוד! השלמת את החידה הזה."};
 
@@ -11158,17 +11157,17 @@ exports.numBlocksNeeded = function(d){return "ניתן לפתור את החיד�
 
 exports.pause = function(d){return "Pause"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
+exports.reinfFeedbackMsg = function(d){return "באפשרותך להקיש על לחצן 'נסה שוב' כדי לחזור להריץ את האפליקציה שלך."};
 
 exports.repeatForever = function(d){return "repeat forever"};
 
 exports.repeatDo = function(d){return "בצע"};
 
-exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
+exports.repeatForeverTooltip = function(d){return "מבצע את הפעולות בבלוק הזה שוב ושוב כל עוד האפליקציה רצה."};
 
-exports.shareWebappTwitter = function(d){return "Check out the app I made. I wrote it myself with @codeorg"};
+exports.shareWebappTwitter = function(d){return "תראו את האפליקציה שהכנתי. אני כתבתי אותה בעצמי עם @codeorg"};
 
-exports.shareGame = function(d){return "Share your app:"};
+exports.shareGame = function(d){return "שתף את האפליקציה שלך:"};
 
 exports.stepIn = function(d){return "Step in"};
 
@@ -11176,9 +11175,9 @@ exports.stepOver = function(d){return "Step over"};
 
 exports.stepOut = function(d){return "Step out"};
 
-exports.turnBlack = function(d){return "turn black"};
+exports.turnBlack = function(d){return "הפוך לשחור"};
 
-exports.turnBlackTooltip = function(d){return "Turns the screen black."};
+exports.turnBlackTooltip = function(d){return "הופך את המסך לשחור."};
 
 exports.yes = function(d){return "כן"};
 

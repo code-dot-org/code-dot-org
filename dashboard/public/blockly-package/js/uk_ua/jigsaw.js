@@ -2626,7 +2626,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -10573,7 +10572,7 @@ exports.numLinesOfCodeWritten = function(d){return "Ви щойно написа
 
 exports.play = function(d){return "грати"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Друк"};
 
 exports.puzzleTitle = function(d){return "Завдання "+v(d,"puzzle_number")+" з "+v(d,"stage_total")};
 
@@ -10615,9 +10614,9 @@ exports.hintRequest = function(d){return "Подивитись підказку"
 
 exports.backToPreviousLevel = function(d){return "Повернутися до попереднього рівня"};
 
-exports.saveToGallery = function(d){return "Зберегти до вашої колекції"};
+exports.saveToGallery = function(d){return "Зберегти в галереї"};
 
-exports.savedToGallery = function(d){return "Збережено в галерею!"};
+exports.savedToGallery = function(d){return "Збережено у галереї!"};
 
 exports.shareFailure = function(d){return "На жаль, цією програмою не можна поділитись."};
 
@@ -10651,7 +10650,7 @@ exports.hintHeader = function(d){return "Підказка:"};
 
 exports.genericFeedback = function(d){return "Подивіться, на чому ви зупинились і спробуйте виправити свою програму."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Подивіться, що у мене вийшло"};
 
 
 },{"messageformat":49}],37:[function(require,module,exports){

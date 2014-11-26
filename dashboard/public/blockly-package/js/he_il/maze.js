@@ -2626,7 +2626,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -16347,7 +16346,7 @@ exports.score = function(d){return "ציון"};
 
 exports.showCodeHeader = function(d){return "הצג קוד"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "הצג בלוקים"};
 
 exports.showGeneratedCode = function(d){return "הצג קוד"};
 
@@ -16377,7 +16376,7 @@ exports.saveToGallery = function(d){return "לשמור את הגלריה שלך"
 
 exports.savedToGallery = function(d){return "נשמר לגלריה שלך!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "מצטערים, אנחנו לא יכולים לשתף תוכנית זו."};
 
 exports.typeFuncs = function(d){return "פונקציות אפשריות: %1"};
 
@@ -16385,7 +16384,7 @@ exports.typeHint = function(d){return "שימו לב כי סוגריים ונק�
 
 exports.workspaceHeader = function(d){return "הרכב את הבלוקים שלך כאן: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "הקלד את קוד JavaScript שלך כאן"};
 
 exports.infinity = function(d){return "אינסוף"};
 
@@ -16414,7 +16413,7 @@ exports.defaultTwitterText = function(d){return "Check out what I made"};
 
 },{"messageformat":72}],60:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.he=function(n){return n===1?"one":"other"}
-exports.atHoneycomb = function(d){return "בכוורת"};
+exports.atHoneycomb = function(d){return "בחלת דבש"};
 
 exports.atFlower = function(d){return "בפרח"};
 
@@ -16450,7 +16449,7 @@ exports.fillTooltip = function(d){return "שים יחידה אחת של עפר"}
 
 exports.finalLevel = function(d){return "כל הכבוד! פתרת את החידה האחרונה."};
 
-exports.flowerEmptyError = function(d){return "The flower you're on has no more nectar."};
+exports.flowerEmptyError = function(d){return "אין יותר צוף על הפרח שאתה נמצא עליו."};
 
 exports.get = function(d){return "קבל"};
 
@@ -16460,11 +16459,11 @@ exports.holePresent = function(d){return "יש חור"};
 
 exports.honey = function(d){return "להכין דבש"};
 
-exports.honeyAvailable = function(d){return "honey"};
+exports.honeyAvailable = function(d){return "דבש"};
 
 exports.honeyTooltip = function(d){return "להכין דבש מצוף"};
 
-exports.honeycombFullError = function(d){return "This honeycomb does not have room for more honey."};
+exports.honeycombFullError = function(d){return "בחלת הדבש הזו אין מקום יותר לדבש נוסף."};
 
 exports.ifCode = function(d){return "אם"};
 
@@ -16484,9 +16483,9 @@ exports.insufficientHoney = function(d){return "You're using all the right block
 
 exports.insufficientNectar = function(d){return "You're using all the right blocks, but you need to collect the right amount of nectar."};
 
-exports.make = function(d){return "make"};
+exports.make = function(d){return "תעשה"};
 
-exports.moveBackward = function(d){return "move backward"};
+exports.moveBackward = function(d){return "זוז אחורה"};
 
 exports.moveEastTooltip = function(d){return "תזיז אותי חתיכה אחת מזרחה."};
 
@@ -16498,13 +16497,13 @@ exports.moveNorthTooltip = function(d){return "תזיז אותי חתיכה אח
 
 exports.moveSouthTooltip = function(d){return "תזיז אותי חתיכה אחת דרומה."};
 
-exports.moveTooltip = function(d){return "Move me forward/backward one space"};
+exports.moveTooltip = function(d){return "תזיז אותי מקום אחד קדימה/אחורה"};
 
 exports.moveWestTooltip = function(d){return "תזיז אותי חתיכה אחת מערבה."};
 
 exports.nectar = function(d){return "להשיג צוף"};
 
-exports.nectarRemaining = function(d){return "nectar"};
+exports.nectarRemaining = function(d){return "צוף"};
 
 exports.nectarTooltip = function(d){return "להשיג צוף מפרח"};
 
@@ -16518,9 +16517,9 @@ exports.noPathLeft = function(d){return "אין דרך שמאלה"};
 
 exports.noPathRight = function(d){return "אין דרך ימינה"};
 
-exports.notAtFlowerError = function(d){return "You can only get nectar from a flower."};
+exports.notAtFlowerError = function(d){return "אתה יכול לקבל צוף רק מפרח."};
 
-exports.notAtHoneycombError = function(d){return "You can only make honey at a honeycomb."};
+exports.notAtHoneycombError = function(d){return "אתה יכול לעשות דבש רק בחלת הדבש."};
 
 exports.numBlocksNeeded = function(d){return "ניתן לפתור את החידה עם %1 של אבני בנייה."};
 
@@ -16554,9 +16553,9 @@ exports.repeatUntilFinish = function(d){return "חזור עד לסיום"};
 
 exports.step = function(d){return "צעד"};
 
-exports.totalHoney = function(d){return "total honey"};
+exports.totalHoney = function(d){return "סה\"כ דבש"};
 
-exports.totalNectar = function(d){return "total nectar"};
+exports.totalNectar = function(d){return "סה\"כ צוף"};
 
 exports.turnLeft = function(d){return "פנה שמאלה"};
 
@@ -16564,19 +16563,19 @@ exports.turnRight = function(d){return "פנה ימינה"};
 
 exports.turnTooltip = function(d){return "מסובב אותי שמאלה או ימינה ב- 90 מעלות."};
 
-exports.uncheckedCloudError = function(d){return "Make sure to check all clouds to see if they're flowers or honeycombs."};
+exports.uncheckedCloudError = function(d){return "הקפד לבדוק את כל העננים כדי לראות אם יש פרחים או חלות דבש."};
 
-exports.uncheckedPurpleError = function(d){return "Make sure to check all purple flowers to see if they have nectar"};
+exports.uncheckedPurpleError = function(d){return "הקפד לבדוק את כל הפרחים הסגולים כדי לראות אם יש להם צוף"};
 
 exports.whileMsg = function(d){return "כאשר"};
 
 exports.whileTooltip = function(d){return "חזור על שורת הפעולות עד שתגיע לנקודת הסיום."};
 
-exports.word = function(d){return "Find the word"};
+exports.word = function(d){return "מצא את המילה"};
 
 exports.yes = function(d){return "כן"};
 
-exports.youSpelled = function(d){return "You spelled"};
+exports.youSpelled = function(d){return "אייתת"};
 
 
 },{"messageformat":72}],61:[function(require,module,exports){

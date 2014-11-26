@@ -43,6 +43,7 @@
   "numBlocksNeeded":"おめでとうございます ！あなたはパズル {puzzleNumber} を完了しました。 (もしくは {numBlocks, plural, one {1 block} other {# blocks}} のみの使用だけでも可能でした。)",
   "numLinesOfCodeWritten":"あなたはたった今 {numLines, plural, one {1 ライン} other {# ライン}} のコードを書きました！\n",
   "play":"再生",
+  "print":"Print",
   "puzzleTitle":"パズル {puzzle_number} の {stage_total}",
   "repeat":"繰り返し",
   "resetProgram":"リセット",
@@ -63,8 +64,8 @@
   "tryAgain":"やり直す",
   "hintRequest":"ヒントを見る",
   "backToPreviousLevel":"前のレベルに戻る",
-  "saveToGallery":"ギャラリーに保存",
-  "savedToGallery":"ギャラリーに保存しました！",
+  "saveToGallery":"Save to gallery",
+  "savedToGallery":"Saved in gallery!",
   "shareFailure":"プログラムをシェアできませんでした。",
   "typeFuncs":"利用可能な機能:%1",
   "typeHint":"カッコとセミコロンが必要な事に注意してください。",
@@ -80,5 +81,6 @@
   "tryHOC":"1時間コース(Hour of Code)を試す",
   "signup":"イントロのコースに申し込む",
   "hintHeader":"ちょび技があるよ:",
-  "genericFeedback":"どうなったかよく見て、プログラムを直してみよう。"
+  "genericFeedback":"どうなったかよく見て、プログラムを直してみよう。",
+  "defaultTwitterText":"Check out what I made"
 }

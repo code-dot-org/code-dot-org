@@ -6781,7 +6781,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -14064,13 +14063,13 @@ exports.directionEastLetter = function(d){return "E"};
 
 exports.directionWestLetter = function(d){return "V"};
 
-exports.end = function(d){return "șfâșit"};
+exports.end = function(d){return "șfârșit"};
 
 exports.emptyBlocksErrorMsg = function(d){return "Blocul \"Repetă\" sau \"Dacă\" trebuie să aibe alte blocuri în interiorul său  pentru a putea funcționa. Asigură-te că blocul interior se încadrează corect în blocul care îl conține."};
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Blocul de funcţie trebuie să aibă alte blocuri în interior ca să funcţioneze."};
 
-exports.extraTopBlocks = function(d){return "Ai blocuri suplimentare care nu sunt ataşate la un bloc de eveniment."};
+exports.extraTopBlocks = function(d){return "Ai blocuri neatașate. Ai vrut să ataşezi acestea la blocul \"atunci când rulaţi\"?"};
 
 exports.finalStage = function(d){return "Felicitări! Ai terminat ultima etapă."};
 
@@ -14108,7 +14107,7 @@ exports.numBlocksNeeded = function(d){return "Felicităr! Ai terminat Puzzle-ul 
 
 exports.numLinesOfCodeWritten = function(d){return "Ai scris doar "+p(d,"numLines",0,"ro",{"one":"1 line","other":n(d,"numLines")+" lines"})+" de cod!"};
 
-exports.play = function(d){return "juca"};
+exports.play = function(d){return "joacă"};
 
 exports.print = function(d){return "Print"};
 
@@ -14126,7 +14125,7 @@ exports.score = function(d){return "scor"};
 
 exports.showCodeHeader = function(d){return "Arată codul"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Afișează blocurile"};
 
 exports.showGeneratedCode = function(d){return "Arată codul"};
 
@@ -14144,11 +14143,11 @@ exports.toolboxHeader = function(d){return "blocuri"};
 
 exports.openWorkspace = function(d){return "Cum funcţionează"};
 
-exports.totalNumLinesOfCodeWritten = function(d){return "Totalul all-time: "+p(d,"numLines",0,"ro",{"one":"1 line","other":n(d,"numLines")+" lines"})+" de cod."};
+exports.totalNumLinesOfCodeWritten = function(d){return "All-time total: "+p(d,"numLines",0,"ro",{"one":"1 line","other":n(d,"numLines")+" lines"})+" of code."};
 
 exports.tryAgain = function(d){return "Încearcă din nou"};
 
-exports.hintRequest = function(d){return "Arată indiciu"};
+exports.hintRequest = function(d){return "Dă un indiciu"};
 
 exports.backToPreviousLevel = function(d){return "Înapoi la nivelul anterior"};
 
@@ -14156,7 +14155,7 @@ exports.saveToGallery = function(d){return "Salvează în galeria proprie"};
 
 exports.savedToGallery = function(d){return "Salvat în galeria proprie!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "Ne pare rau, nu putem să distribuim acest program."};
 
 exports.typeFuncs = function(d){return "Funcţii disponibile:%1"};
 
@@ -14164,7 +14163,7 @@ exports.typeHint = function(d){return "Reţine că parantezele şi punct şi vir
 
 exports.workspaceHeader = function(d){return "Asamblează-ţi blocurile aici: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Tastează codul JavaScript aici"};
 
 exports.infinity = function(d){return "Infinit"};
 
@@ -14178,7 +14177,7 @@ exports.watchVideo = function(d){return "Urmărește clipul video"};
 
 exports.when = function(d){return "când"};
 
-exports.whenRun = function(d){return "când alergi"};
+exports.whenRun = function(d){return "când rulezi"};
 
 exports.tryHOC = function(d){return "Încearcă Ora de Cod"};
 
@@ -14186,7 +14185,7 @@ exports.signup = function(d){return "Înscrie-te la cursul introductiv"};
 
 exports.hintHeader = function(d){return "Iată un sfat:"};
 
-exports.genericFeedback = function(d){return "Uită-te cum ai ajuns, şi încearcă să-ți stabilești programul tău."};
+exports.genericFeedback = function(d){return "Vezi cum se termină şi încearcă să-ți corectezi programul."};
 
 exports.defaultTwitterText = function(d){return "Check out what I made"};
 

@@ -50,6 +50,7 @@
           MazeEC: 1. szakasz
           Webapp: 2. szakasz
           ArtistEC: 3. szakasz
+          StudioEC: 4. szakasz
         events:
           desc: Bounce (béta)
           Bounce: 1. szakasz
@@ -91,7 +92,7 @@
         Farmer3: A Farmer 3
         Unplug10: Az internet
         Artist5: A művész 5
-        Unplug11: Összefoglaló
+        Unplug11: "Összefoglaló"
         MazeEC: A labirintus
         Bounce: Ugrál
         Flappy: Flappy madár
@@ -101,6 +102,7 @@
         Webapp: Webapp
         ArtistEC: A művész
         TextMatch: Text Match
+        StudioEC: Play Lab
     trophy:
       name:
         Bronze: Bronz
@@ -125,8 +127,8 @@
         maze_2_2_5: Tervezd meg az utat a malacig. A TNT-t viszont kerüld el mindenképp,
           vagy repülsz!
         maze_2_3: Vezess el a zöld förtelemig! (Vigyázz a TNT-vel)
-        maze_2_4: Őrizd meg nyugalmad, és segíts megkeresni rossz disznót. Egyébként
-          lehet, hogy dühös!
+        maze_2_4: "Őrizd meg nyugalmad, és segíts megkeresni rossz disznót. Egyébként
+          lehet, hogy dühös!"
         maze_2_5: Van egy 2 utasításból álló út a malachoz. Kitalálod?
         maze_2_6: Próbálj meg elvezetni a zöld behatolóhoz nem több mint 3 utasítás
           használatával.
@@ -237,7 +239,7 @@
           Vezess végig a földemen, és a kupacokat takaríttasd el velem.
         maze_karel_1_11: |
           Még mindig sötét van. Vezess végig a földemen. Ha földkupacot találsz, takarítsd el, ha gödört, töltsd fel.
-          Tipp: "használ a legördülő menü \"if\" (ha) blokkját."
+          Tipp: használ a legördülő menü "if" (ha) blokkját.
         turtle_2_1: 'Helló. Én lenni zombi művész. Én szeret rajzol! Segíteni nekem
           rajzol különleges színű négyzet. Fontos megjegyzés: ugyanazok a blokkjaid
           vannak, viszont most nincsenek kategorizálva.'
@@ -323,9 +325,9 @@
         turtle_3_10: Már sokmindent megtanult! Most használhatja mindezt, és azt rajzolhat,
           amit csak akar. Megpróbálhat  csillag, spirál, vagy akár egy izgalmas hópehely
           megrajzolásával.
-        maze_karel_debug_seq_1: Üdvözöljük hibakeresés földjén! A kódom nem fut helyesen.
+        maze_karel_debug_seq_1: "Üdvözöljük hibakeresés földjén! A kódom nem fut helyesen.
           Látod már a problémát, és ki tudod javítani, hogy előkészíthessem a földet
-          az ültetéshez?
+          az ültetéshez?"
         maze_karel_debug_seq_2: Mi a baj ezzel a programmal? Hogyan lehet kijavítani,
           hogy eltávolíthassam a földhányásokat?
         maze_karel_debug_repeat: Irtsd ki a programhibákat (ezt hívjuk debuggolásnak),
@@ -362,7 +364,7 @@
           az egészet, és írhat helyette valami teljesen mást)
         maze_3_1: El kell kapnom a malacot. Gépelj be néhány move(); (mozgás()) utasítást,
           hogy visszakapjam a tojásaimat.
-        maze_3_2: Írj egy programot, hogy megtehessem az egész utat a malachoz.
+        maze_3_2: "Írj egy programot, hogy megtehessem az egész utat a malachoz."
         maze_3_3: Hogy jussak el a malachoz? Vigyázz, nehogy belefussak egy doboz
           TNT-be!
         maze_3_4: Ahh! Írj nekem egy programot amivel megkerülhetem a TNT-t és eljuthatok
@@ -553,9 +555,11 @@
         turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas:
           a stick figure, snowflake, or spiral. Also try the new "penWidth" block.
           Have fun!'
+        studio_ec_sandbox: Create your own game. When you're done, click Finish to
+          let friends try your game on their phones.
     video:
       name:
-        maze_intro: Útvesztő ismertető
+        maze_intro: "Útvesztő ismertető"
         artist_intro: Művész Intro
         farmer_intro: Farmer Intro
         flappy_intro: Flappy intró
@@ -578,7 +582,7 @@
         Unplug8: Absztrakció
         Unplug9: Relay programming
         Unplug10: Internet
-        Unplug11: Összefoglaló
+        Unplug11: "Összefoglaló"
         C1_happy_maps_unplugged: Happy Maps
         C1_moveitmoveit_unplugged: Move It, Move It
         C1_bigevent_unplugged: The Big Event
@@ -627,6 +631,9 @@
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Songwriting With Parameters
+        Frozen_intro: Hour of Code Intro
+        Frozen_loops: Introduction to Loops
+        Frozen_functions: Introduction to Functions
     callout:
       text:
         drag_blocks: Húzz egy „előrelépni” blokkot, és csatold a másik blokk alá
@@ -653,3 +660,24 @@
         repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
           workspace
         snowflake_dropdown: Use this drop-down to create different snowflakes!
+        degrees_per_side: Divide 360 by the number of sides to get the size of each
+          angle in degrees.
+        set_sides: Use this block to set "sides" to the number needed to complete
+          the puzzle.
+        set_length: Use this block to set "length" to the correct value.
+        which_equation: Which equation makes each side shorter for shapes with more
+          sides?  Try each equation!
+        get_nectar: Use the new "get nectar" block.
+        actions_category: The tool box got a new look! The "Actions" blocks are in
+          here now.
+        draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
+        edit_function: Use this button to edit the function.
+        create_function: Click here to open the "Functions" flyout, then click the
+          "Create a Function" button.
+        house_hint: It's ok if the picture doesn't look like a house yet. We will
+          fix it in the next puzzle.
+        edit_draw_square: Use this button to edit the function and add the loop.
+        edit_get_nectar: Use this button to edit the function and change the direction
+          the Bee will turn to get the nectar.
+        logic_category: Open the "Logic" flyout to find the "if/else" block.
+        length_parameter: Can you update this function so it uses the "length" parameter?

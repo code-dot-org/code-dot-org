@@ -43,6 +43,7 @@
   "numBlocksNeeded": "Chúc mừng! Bạn đã hoàn thành câu đố {puzzleNumber}. Nhưng bạn thật sự chỉ cần {numBlocks, plural, one {1 block} other {# blocks}} khối thôi .",
   "numLinesOfCodeWritten": "Bạn vừa mới viết {numLines, plural, one {1 dòng} other {# dòng}} mã!",
   "play": "Bắt đầu chơi",
+  "print": "Print",
   "puzzleTitle": "Câu đố thứ {puzzle_number} trong số {stage_total} câu",
   "repeat": "lặp lại",
   "resetProgram": "Thiết lập lại",
@@ -80,5 +81,6 @@
   "tryHOC": "Học thử Hour of Code",
   "signup": "Đăng ký cho khóa học mở đầu",
   "hintHeader": "Đây là một số mẹo:",
-  "genericFeedback": "Nhìn xem bằng cách nào bạn kết thúc và hãy cố gắng sửa chương trình của bạn."
+  "genericFeedback": "Nhìn xem bằng cách nào bạn kết thúc và hãy cố gắng sửa chương trình của bạn.",
+  "defaultTwitterText": "Check out what I made"
 }

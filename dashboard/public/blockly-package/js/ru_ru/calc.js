@@ -3514,7 +3514,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -10759,17 +10758,17 @@ var MessageFormat = require("messageformat");MessageFormat.locale.ru = function 
   }
   return 'other';
 };
-exports.compute = function(d){return "compute"};
+exports.compute = function(d){return "вычислить"};
 
-exports.equivalentExpression = function(d){return "Try reordering your arguments to get exactly the same expression."};
+exports.equivalentExpression = function(d){return "Попробуйте переназначить ваши аргументы, чтобы получить точно такое же выражение."};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"compute\" block?"};
+exports.extraTopBlocks = function(d){return "У вас есть неприсоединенные блоки. Вы хотите подключить их к блоку \"Вычислить\"?"};
 
-exports.goal = function(d){return "Goal:"};
+exports.goal = function(d){return "Цель:"};
 
 exports.reinfFeedbackMsg = function(d){return "Получилось ли так, как ты и хотел? Ты можете нажать кнопку «Попытаться ещё раз», чтобы увидеть свой рисунок."};
 
-exports.yourExpression = function(d){return "Your expression:"};
+exports.yourExpression = function(d){return "Ваше выражение:"};
 
 
 },{"messageformat":53}],41:[function(require,module,exports){

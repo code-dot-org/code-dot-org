@@ -2626,7 +2626,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -16344,7 +16343,7 @@ exports.numLinesOfCodeWritten = function(d){return "Upravo si napisao "+p(d,"num
 
 exports.play = function(d){return "igraj"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Piši"};
 
 exports.puzzleTitle = function(d){return "Zadatak "+v(d,"puzzle_number")+" od "+v(d,"stage_total")};
 
@@ -16386,9 +16385,9 @@ exports.hintRequest = function(d){return "Pogledaj naputak"};
 
 exports.backToPreviousLevel = function(d){return "Povratak na prethodni nivo"};
 
-exports.saveToGallery = function(d){return "Spremi u svoju galeriju"};
+exports.saveToGallery = function(d){return "Spremi u galeriju"};
 
-exports.savedToGallery = function(d){return "Spremljeno u tvoju galeriju!"};
+exports.savedToGallery = function(d){return "Spremljeno u galeriju!"};
 
 exports.shareFailure = function(d){return "Žalim, ne možemo dijeliti ovaj program."};
 
@@ -16440,7 +16439,7 @@ var MessageFormat = require("messageformat");MessageFormat.locale.hr = function 
   }
   return 'other';
 };
-exports.atHoneycomb = function(d){return "u košnici"};
+exports.atHoneycomb = function(d){return "na saću"};
 
 exports.atFlower = function(d){return "na cvijetu"};
 
@@ -16476,7 +16475,7 @@ exports.fillTooltip = function(d){return "stavi 1 komad zemlje"};
 
 exports.finalLevel = function(d){return "Čestitamo ! Riješili ste posljednji zadatak."};
 
-exports.flowerEmptyError = function(d){return "The flower you're on has no more nectar."};
+exports.flowerEmptyError = function(d){return "Cvijet na kojem se nalaziš nema više nektara."};
 
 exports.get = function(d){return "nađi"};
 
@@ -16490,11 +16489,11 @@ exports.honeyAvailable = function(d){return "med"};
 
 exports.honeyTooltip = function(d){return "Pravi med od nektara"};
 
-exports.honeycombFullError = function(d){return "This honeycomb does not have room for more honey."};
+exports.honeycombFullError = function(d){return "Ovo saće nema više slobodnog prostora za med."};
 
 exports.ifCode = function(d){return "ako"};
 
-exports.ifInRepeatError = function(d){return "You need an \"if\" block inside a \"repeat\" block. If you're having trouble, try the previous level again to see how it worked."};
+exports.ifInRepeatError = function(d){return "Treba ti \"ako\" blok unutar \"ponovi\" bloka. Ako imaš problema s time, pogledaj prethodni nivo da vidiš kako to radi."};
 
 exports.ifPathAhead = function(d){return "ako je put ispred"};
 
@@ -16502,17 +16501,17 @@ exports.ifTooltip = function(d){return "Ako staza ide u zadanom smjeru, onda nap
 
 exports.ifelseTooltip = function(d){return "Ako staza vodi u zadanom smjeru, onda napravi prvi grupu radnji, a inače napravi drugu grupu radnji."};
 
-exports.ifFlowerTooltip = function(d){return "If there is a flower/honeycomb in the specified direction, then do some actions."};
+exports.ifFlowerTooltip = function(d){return "Ako u navedenom smjeru postoji cvijet ili saće, onda napravi neke akcije."};
 
-exports.ifelseFlowerTooltip = function(d){return "If there is a flower/honeycomb in the specified direction, then do the first block of actions. Otherwise, do the second block of actions."};
+exports.ifelseFlowerTooltip = function(d){return "Ako u navedenom smjeru postoji cvijet ili saće, onda napravi prvi blok akcija. Inače napravi drugi blok akcija."};
 
-exports.insufficientHoney = function(d){return "You're using all the right blocks, but you need to make the right amount of honey."};
+exports.insufficientHoney = function(d){return "Koristiš sve odgovarajuće blokove, ali trebaš napraviti pravu količinu meda."};
 
-exports.insufficientNectar = function(d){return "You're using all the right blocks, but you need to collect the right amount of nectar."};
+exports.insufficientNectar = function(d){return "Koristiš sve odgovarajuće blokove, ali trebaš prikupiti pravu količinu nektara."};
 
 exports.make = function(d){return "napravi"};
 
-exports.moveBackward = function(d){return "move backward"};
+exports.moveBackward = function(d){return "idi unatrag"};
 
 exports.moveEastTooltip = function(d){return "Pomiče me za jedno polje na Istok."};
 
@@ -16524,7 +16523,7 @@ exports.moveNorthTooltip = function(d){return "Pomiče me za jedno polje na Sjev
 
 exports.moveSouthTooltip = function(d){return "Pomiče me za jedno polje na Jug."};
 
-exports.moveTooltip = function(d){return "Move me forward/backward one space"};
+exports.moveTooltip = function(d){return "Pomicanje naprijed ili nazad za jedno polje"};
 
 exports.moveWestTooltip = function(d){return "Pomiče me za jedno polje na Zapad."};
 
@@ -16544,9 +16543,9 @@ exports.noPathLeft = function(d){return "s lijeve strane nema staze"};
 
 exports.noPathRight = function(d){return "s desne strane nema staze"};
 
-exports.notAtFlowerError = function(d){return "You can only get nectar from a flower."};
+exports.notAtFlowerError = function(d){return "Nektar možeš dobiti samo iz cvijeta."};
 
-exports.notAtHoneycombError = function(d){return "You can only make honey at a honeycomb."};
+exports.notAtHoneycombError = function(d){return "Med možeš napraviti samo na saću."};
 
 exports.numBlocksNeeded = function(d){return "Ovaj zadatak se može riješiti s %1 blokova."};
 
@@ -16570,7 +16569,7 @@ exports.removeStack = function(d){return "ukloni "+v(d,"shovelfuls")+" gomila"};
 
 exports.removeSquare = function(d){return "ukloni kvadrat"};
 
-exports.repeatCarefullyError = function(d){return "To solve this, think carefully about the pattern of two moves and one turn to put in the \"repeat\" block.  It's okay to have an extra turn at the end."};
+exports.repeatCarefullyError = function(d){return "Da bi ovo riješio, dobro razmisli o uzorku sastavljenom od dva kretanja i jednog skretanja koji se stavlja u blok \"ponovi\". U redu je ako na kraju imaš jedno skretanje više."};
 
 exports.repeatUntil = function(d){return "ponavljaj dok ne bude"};
 
@@ -16590,9 +16589,9 @@ exports.turnRight = function(d){return "okreni udesno"};
 
 exports.turnTooltip = function(d){return "Okreće me ulijevo ili udesno za 90 stupnjeva."};
 
-exports.uncheckedCloudError = function(d){return "Make sure to check all clouds to see if they're flowers or honeycombs."};
+exports.uncheckedCloudError = function(d){return "Dobro provjeri sve oblake da vidiš ima li tamo cvjetova ili saća."};
 
-exports.uncheckedPurpleError = function(d){return "Make sure to check all purple flowers to see if they have nectar"};
+exports.uncheckedPurpleError = function(d){return "Dobro provjeri sve ljubičaste cvjetove da vidiš ima li na njima nektara"};
 
 exports.whileMsg = function(d){return "dok"};
 

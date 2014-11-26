@@ -5334,7 +5334,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -12317,7 +12316,7 @@ exports.setPaddleHardcourt = function(d){return "sæt hardcourt bat"};
 
 exports.setPaddleRetro = function(d){return "sæt retro bat"};
 
-exports.setPaddleTooltip = function(d){return "Sætter paddel billede"};
+exports.setPaddleTooltip = function(d){return "Sætter bat billede"};
 
 exports.setPaddleSpeedRandom = function(d){return "sæt tilfældig bat hastighed"};
 

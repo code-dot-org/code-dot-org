@@ -52,6 +52,7 @@
           Webapp: |
             màn 2
           ArtistEC: màn 3
+          StudioEC: màn 4
         events:
           desc: Bounce (thử nghiệm)
           Bounce: màn 1
@@ -84,7 +85,7 @@
         Artist2: Nghệ sĩ 2
         Unplug5: Các hàm
         Farmer: người nông dân
-        Unplug6: Điều kiện
+        Unplug6: "Điều kiện"
         Artist3: nghệ sĩ 3
         Unplug7: Viết nhạc
         Farmer2: Người nông dân 2
@@ -104,9 +105,10 @@
         Webapp: Webapp
         ArtistEC: nghệ sĩ
         TextMatch: Text Match
+        StudioEC: Play Lab
     trophy:
       name:
-        Bronze: Đồng
+        Bronze: "Đồng"
         Silver: Bạc
         Gold: Vàng
     concept:
@@ -143,13 +145,13 @@
           lần lượt.'
         maze_2_9: Ok, hãy thử khối mới " lặp lại cho đến khi" nó sẽ lặp lại hành động
           cho đến khi gặp được những chú lợn phiền toái.
-        maze_2_10: Được rồi, lần cuối để luyện tập nhé - Bạn có thể giải quyết trò
-          này chỉ bằng 4 khối được không?
+        maze_2_10: "Được rồi, lần cuối để luyện tập nhé - Bạn có thể giải quyết trò
+          này chỉ bằng 4 khối được không?"
         maze_2_11: Bạn thân mến. Tôi zombie đây... Tôi đói quá... Tôi cần tới chỗ
           có hoa hướng dương. Bạn có thể giúp tôi tới nơi mà chỉ cần sử dụng 5 khối
           không?
-        maze_2_12: Được rồi, nó cũng tương tự nhưng chỉ hơi khác một chút. Liệu bạn
-          có thể thực hiện chỉ với 5 khối không?
+        maze_2_12: "Được rồi, nó cũng tương tự nhưng chỉ hơi khác một chút. Liệu bạn
+          có thể thực hiện chỉ với 5 khối không?"
         maze_2_13: 'Sử dụng khối "nếu" mới cho tôi quyết định khi nào thì chuyển/vòng
           lại. Gợi ý: bạn chỉ cần nhiều hơn 1 khối, nhưng để tìm hiểu chúng tôi thiết
           lập nó như thế nào thì bạn có thể thực hiện như vậy vào lần tới.'
@@ -544,6 +546,8 @@
         turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas:
           a stick figure, snowflake, or spiral. Also try the new "penWidth" block.
           Have fun!'
+        studio_ec_sandbox: Create your own game. When you're done, click Finish to
+          let friends try your game on their phones.
     video:
       name:
         maze_intro: Maze Intro
@@ -564,7 +568,7 @@
         Unplug3: lập trình đồ thị trên giấy
         Unplug4: các bước lập trình
         Unplug5: Các hàm
-        Unplug6: Điều kiện
+        Unplug6: "Điều kiện"
         Unplug7: Songwriting
         Unplug8: Trừu tượng
         Unplug9: Relay programming
@@ -596,7 +600,7 @@
         C2_bee_conditionals: Bee Conditionals
         C2_playlab_createstory: Play Lab - Create a Story
         C2_graph_paper: lập trình đồ thị trên giấy
-        C2_conditionals_with_cards: Điều kiện
+        C2_conditionals_with_cards: "Điều kiện"
         C2_binary_bracelets: Binary Bracelets
         C2_relay_programming: Chương trình chuyển tiếp
         C2_paper_airplanes: Paper Airplanes
@@ -618,6 +622,9 @@
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Songwriting With Parameters
+        Frozen_intro: Hour of Code Intro
+        Frozen_loops: Introduction to Loops
+        Frozen_functions: Introduction to Functions
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
@@ -644,3 +651,24 @@
         repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
           workspace
         snowflake_dropdown: Use this drop-down to create different snowflakes!
+        degrees_per_side: Divide 360 by the number of sides to get the size of each
+          angle in degrees.
+        set_sides: Use this block to set "sides" to the number needed to complete
+          the puzzle.
+        set_length: Use this block to set "length" to the correct value.
+        which_equation: Which equation makes each side shorter for shapes with more
+          sides?  Try each equation!
+        get_nectar: Use the new "get nectar" block.
+        actions_category: The tool box got a new look! The "Actions" blocks are in
+          here now.
+        draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
+        edit_function: Use this button to edit the function.
+        create_function: Click here to open the "Functions" flyout, then click the
+          "Create a Function" button.
+        house_hint: It's ok if the picture doesn't look like a house yet. We will
+          fix it in the next puzzle.
+        edit_draw_square: Use this button to edit the function and add the loop.
+        edit_get_nectar: Use this button to edit the function and change the direction
+          the Bee will turn to get the nectar.
+        logic_category: Open the "Logic" flyout to find the "if/else" block.
+        length_parameter: Can you update this function so it uses the "length" parameter?

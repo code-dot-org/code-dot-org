@@ -64,7 +64,7 @@
   "penDown":"baisser le crayon",
   "penTooltip":"Lève ou baisse le crayon, pour dessiner ou arrêter de dessiner.",
   "penUp":"lever le crayon",
-  "reinfFeedbackMsg":"Est-ce que ceci ressemble à ce que vous voulez ? Vous pouvez appuyer sur le bouton \"Réessayer\" pour voir votre dessin.",
+  "reinfFeedbackMsg":"Here is your drawing! Keep working on it or continue to the next puzzle.",
   "setColour":"choisir la couleur",
   "setPattern":"set pattern",
   "setWidth":"Régler la largeur",

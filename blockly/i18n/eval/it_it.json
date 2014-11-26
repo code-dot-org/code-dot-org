@@ -6,6 +6,7 @@
   "overlayBlockTitle": "metti-sopra (superiore, inferiore)",
   "placeImageBlockTitle": "posiziona-immagine (x, y, immagine)",
   "rectangleBlockTitle": "rettangolo (larghezza, altezza, stile, colore)",
+  "reinfFeedbackMsg": "You can press the \"Try again\" button to edit your drawing.",
   "rotateImageBlockTitle": "ruota (gradi, immagine)",
   "scaleImageBlockTitle": "scala (fattore)",
   "squareBlockTitle": "quadrato (dimensione, stile, colore)",

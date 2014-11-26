@@ -43,6 +43,7 @@
   "numBlocksNeeded": "Tahniah! Anda melengkapkan Puzzle {puzzleNumber}. (Walau bagaimanapun, anda hanya boleh menggunakan {numBlocks, plural, one {1 block} other {# blocks}}.)",
   "numLinesOfCodeWritten": "Anda baru sahaja menulis {numLines, plural, one {1 line} other {# lines}} kod!",
   "play": "Main",
+  "print": "Print",
   "puzzleTitle": "Puzzle {puzzle_number} dari {stage_total}",
   "repeat": "Ulang",
   "resetProgram": "Tetapkan semula",
@@ -80,5 +81,6 @@
   "tryHOC": "Try the Hour of Code",
   "signup": "Daftar untuk kursus pengenalan",
   "hintHeader": "Sedikit Tip:",
-  "genericFeedback": "See how you ended up, and try to fix your program."
+  "genericFeedback": "See how you ended up, and try to fix your program.",
+  "defaultTwitterText": "Check out what I made"
 }

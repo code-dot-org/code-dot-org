@@ -2626,7 +2626,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -11041,7 +11040,7 @@ exports.numLinesOfCodeWritten = function(d){return "¡Acabas de escribir "+p(d,"
 
 exports.play = function(d){return "jugar"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Imprimir"};
 
 exports.puzzleTitle = function(d){return "Puzzle "+v(d,"puzzle_number")+" de "+v(d,"stage_total")};
 
@@ -11083,9 +11082,9 @@ exports.hintRequest = function(d){return "Ver pista"};
 
 exports.backToPreviousLevel = function(d){return "Volver al nivel anterior"};
 
-exports.saveToGallery = function(d){return "Guardar en tu galería"};
+exports.saveToGallery = function(d){return "Guardar en Galería"};
 
-exports.savedToGallery = function(d){return "¡Guardado en tu galería!"};
+exports.savedToGallery = function(d){return "¡Guardado en la Galería!"};
 
 exports.shareFailure = function(d){return "Perdón, no podemos compartir este programa."};
 
@@ -11119,7 +11118,7 @@ exports.hintHeader = function(d){return "Aquí hay un consejo:"};
 
 exports.genericFeedback = function(d){return "Mira como terminaste, y trata de reparar tu programa."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Mira lo que hice"};
 
 
 },{"messageformat":52}],40:[function(require,module,exports){
@@ -11168,17 +11167,17 @@ exports.repeatForeverTooltip = function(d){return "Ejecuta repetidamente las acc
 
 exports.shareWebappTwitter = function(d){return "Échale un vistazo a la aplicación que hice. Yo mismo la escribí con @codeorg"};
 
-exports.shareGame = function(d){return "Coparte tu aplicación:"};
+exports.shareGame = function(d){return "Comparte tu aplicación:"};
 
-exports.stepIn = function(d){return "Step in"};
+exports.stepIn = function(d){return "Entrar"};
 
-exports.stepOver = function(d){return "Step over"};
+exports.stepOver = function(d){return "Saltar"};
 
-exports.stepOut = function(d){return "Step out"};
+exports.stepOut = function(d){return "Salir"};
 
-exports.turnBlack = function(d){return "turn black"};
+exports.turnBlack = function(d){return "Pasar a negro"};
 
-exports.turnBlackTooltip = function(d){return "Turns the screen black."};
+exports.turnBlackTooltip = function(d){return "Pone en negro la pantalla."};
 
 exports.yes = function(d){return "Sí"};
 

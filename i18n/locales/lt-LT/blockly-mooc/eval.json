@@ -6,6 +6,7 @@
   "overlayBlockTitle":"padėk-aukščiau(viršutinis, apatinis)",
   "placeImageBlockTitle":"padėk-vaizdą(x, y, vaizdas)",
   "rectangleBlockTitle":"kvadratas(plotis, aukštis, stilius, spalva)",
+  "reinfFeedbackMsg":"You can press the \"Try again\" button to edit your drawing.",
   "rotateImageBlockTitle":"pasuk(laipsniai, vaizdas)",
   "scaleImageBlockTitle":"keis-mastelį(proporcija)",
   "squareBlockTitle":"kvadratas(dydis, stilius, spalva)",

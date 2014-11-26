@@ -2626,7 +2626,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -14733,7 +14732,7 @@ exports.catLogic = function(d){return "منطق"};
 
 exports.colourTooltip = function(d){return "تغيير لون القلم."};
 
-exports.createACircle = function(d){return "create a circle"};
+exports.createACircle = function(d){return "إنشاء دائرة"};
 
 exports.createSnowflakeSquare = function(d){return "create a snowflake of type square"};
 
@@ -14749,7 +14748,7 @@ exports.createSnowflakeFractal = function(d){return "create a snowflake of type 
 
 exports.createSnowflakeRandom = function(d){return "create a snowflake of type random"};
 
-exports.createASnowflakeBranch = function(d){return "create a snowflake branch"};
+exports.createASnowflakeBranch = function(d){return "إنشاء فرع رقاقة الثلج"};
 
 exports.degrees = function(d){return "درجات"};
 

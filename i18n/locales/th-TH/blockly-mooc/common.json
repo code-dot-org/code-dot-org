@@ -43,6 +43,7 @@
   "numBlocksNeeded":"ขอแสดงความยินดี คุณสมบูรณ์ปริศนา {puzzleNumber} (อย่างไรก็ตาม คุณสามารถใช้เฉพาะ {numBlocks, plural, one {1 block} other {# blocks}}.)",
   "numLinesOfCodeWritten":"คุณเพิ่งเขียนรหัส {numLines, plural, one {1 บรรทัด} other {# บรรทัด}}!",
   "play":"play",
+  "print":"Print",
   "puzzleTitle":"ปริศนา {puzzle_number} ของ {stage_total}",
   "repeat":"ทำซ้ำ",
   "resetProgram":"ตั้งค่าใหม่",
@@ -63,8 +64,8 @@
   "tryAgain":"ลองอีกครั้ง",
   "hintRequest":"See hint",
   "backToPreviousLevel":"กลับไปยังระดับก่อนหน้า",
-  "saveToGallery":"บันทึกไว้ในแกลลอรี่",
-  "savedToGallery":"บันทึกแล้ว!",
+  "saveToGallery":"Save to gallery",
+  "savedToGallery":"Saved in gallery!",
   "shareFailure":"Sorry, we can't share this program.",
   "typeFuncs":"จำนวนฟังก์ชันที่ใช้ได้: %1",
   "typeHint":"หมายเหตุวงเล็บและเครื่องหมายอัฒภาคจำเป็นต้องใช้.",
@@ -80,5 +81,6 @@
   "tryHOC":"ลองใช้ Hour of Code สิ",
   "signup":"ลงทะเบียนเพื่อทดลองเรียน",
   "hintHeader":"นี่คือเคล็ดลับ:",
-  "genericFeedback":"See how you ended up, and try to fix your program."
+  "genericFeedback":"See how you ended up, and try to fix your program.",
+  "defaultTwitterText":"Check out what I made"
 }
