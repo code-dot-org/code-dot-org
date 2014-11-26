@@ -44,7 +44,7 @@
 
     var layer = new google.maps.FusionTablesLayer({
       query: {
-        from: '1_j3ovhuqhh_vRAiO91gOx25j7Q4I9__9hNdZLq_C'
+        from: '11ZkoDt2oifYs_OIi2HiZc6MjrMFMZmgD9YVFvay8'
       },
       styles: [{
         markerOptions: {
@@ -56,7 +56,11 @@
 
     google.maps.event.addListener(layer, 'click', function(event) {
       enableDrag();
-      event.infoWindowHtml = event.row['organization_name'].value + '<br>';
+      event.infoWindowHtml = event.row['organization_name'].value;
+      if (event.row['city']) {
+        event.infoWindowHtml += ' (' + event.row['city'].value + ')';
+      }
+      event.infoWindowHtml += '<br>';
     });
     google.maps.event.addListener(gmap, 'zoom_changed', function(event) {
       enableDrag();

@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require '../deployment'
+require File.expand_path('../../deployment', __FILE__)
 require 'cdo/db'
 
 def main()

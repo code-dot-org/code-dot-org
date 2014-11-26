@@ -6682,6 +6682,11 @@ var getFeedbackMessage = function(options) {
       // Free plays
       case TestResults.FREE_PLAY:
         message = options.appStrings.reinfFeedbackMsg;
+        // reinfFeedbackMsg talks about sharing. If sharing is disabled, use
+        // a more generic message
+        if (options.level.disableSharing) {
+          message = msg.finalStage();
+        }
         break;
     }
   }
@@ -19669,8 +19674,13 @@ Studio.allGoalsVisited = function() {
   var protagonistSprite = Studio.sprite[Studio.protagonistSpriteIndex];
   var finishedGoals = 0;
 
-  // can't visit all goals if we don't have any
+  // Can't visit all goals if we don't have any
   if (Studio.spriteGoals_.length === 0) {
+    return false;
+  }
+
+  // Can't visit all the goals if the specified sprite doesn't exist
+  if (Studio.protagonistSpriteIndex && !protagonistSprite) {
     return false;
   }
 
@@ -19790,7 +19800,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/no_no/common'); ; buf.push('\n\n');3; if (data.ok) {; buf.push('  <div class="farSide" style="padding: 1ex 3ex 0">\n    <button id="ok-button" class="secondary">\n      ', escape((5,  msg.dialogOK() )), '\n    </button>\n  </div>\n');8; }; buf.push('\n');9; if (data.previousLevel) {; buf.push('  <button id="back-button" class="launch">\n    ', escape((10,  msg.backToPreviousLevel() )), '\n  </button>\n');12; }; buf.push('\n');13; if (data.tryAgain) {; buf.push('  ');13; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="again-button" class="launch arrow-container arrow-left">\n      <div class="arrow-head"><img src="', escape((14,  data.assetUrl('media/tryagain-arrow-head.png') )), '" alt="Arrowhead" width="67" height="130"/></div>\n      <div class="arrow-text">', escape((15,  msg.tryAgain() )), '</div>\n    </div>\n  ');17; } else {; buf.push('    ');17; if (data.hintRequestExperiment === "left") {; buf.push('      <button id="hint-request-button" class="launch">\n        ', escape((18,  msg.hintRequest() )), '\n      </button>\n      <button id="again-button" class="launch">\n        ', escape((21,  msg.tryAgain() )), '\n      </button>\n    ');23; } else if (data.hintRequestExperiment == "right") {; buf.push('      <button id="again-button" class="launch">\n        ', escape((24,  msg.tryAgain() )), '\n      </button>\n      <button id="hint-request-button" class="launch">\n        ', escape((27,  msg.hintRequest() )), '\n      </button>\n    ');29; } else {; buf.push('      <button id="again-button" class="launch">\n        ', escape((30,  msg.continueWorking() )), '\n      </button>\n    ');32; }; buf.push('  ');32; }; buf.push('');32; }; buf.push('\n');33; if (data.nextLevel) {; buf.push('  ');33; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="continue-button" class="launch arrow-container arrow-right">\n      <div class="arrow-head"><img src="', escape((34,  data.assetUrl('media/next-arrow-head.png') )), '" alt="Arrowhead" width="66" height="130"/></div>\n      <div class="arrow-text">', escape((35,  msg.continue() )), '</div>\n    </div>\n  ');37; } else {; buf.push('    <button id="continue-button" class="launch" style="float: right">\n      ', escape((38,  msg.nextPuzzle() )), '\n    </button>\n  ');40; }; buf.push('');40; }; buf.push(''); })();
+ buf.push('');1; var msg = require('../../locale/no_no/common'); ; buf.push('\n\n');3; if (data.ok) {; buf.push('  <div class="farSide" style="padding: 1ex 3ex 0">\n    <button id="ok-button" class="secondary">\n      ', escape((5,  msg.dialogOK() )), '\n    </button>\n  </div>\n');8; }; buf.push('\n');9; if (data.previousLevel) {; buf.push('  <button id="back-button" class="launch">\n    ', escape((10,  msg.backToPreviousLevel() )), '\n  </button>\n');12; }; buf.push('\n');13; if (data.tryAgain) {; buf.push('  ');13; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="again-button" class="launch arrow-container arrow-left">\n      <div class="arrow-head"><img src="', escape((14,  data.assetUrl('media/tryagain-arrow-head.png') )), '" alt="Arrowhead" width="67" height="130"/></div>\n      <div class="arrow-text">', escape((15,  msg.tryAgain() )), '</div>\n    </div>\n  ');17; } else {; buf.push('    ');17; if (data.hintRequestExperiment === "left") {; buf.push('      <button id="hint-request-button" class="launch">\n        ', escape((18,  msg.hintRequest() )), '\n      </button>\n      <button id="again-button" class="launch">\n        ', escape((21,  msg.tryAgain() )), '\n      </button>\n    ');23; } else if (data.hintRequestExperiment == "right") {; buf.push('      <button id="again-button" class="launch">\n        ', escape((24,  msg.tryAgain() )), '\n      </button>\n      <button id="hint-request-button" class="launch">\n        ', escape((27,  msg.hintRequest() )), '\n      </button>\n    ');29; } else {; buf.push('      <button id="again-button" class="launch">\n        ', escape((30,  msg.tryAgain() )), '\n      </button>\n    ');32; }; buf.push('  ');32; }; buf.push('');32; }; buf.push('\n');33; if (data.nextLevel) {; buf.push('  ');33; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="continue-button" class="launch arrow-container arrow-right">\n      <div class="arrow-head"><img src="', escape((34,  data.assetUrl('media/next-arrow-head.png') )), '" alt="Arrowhead" width="66" height="130"/></div>\n      <div class="arrow-text">', escape((35,  msg.continue() )), '</div>\n    </div>\n  ');37; } else {; buf.push('    <button id="continue-button" class="launch" style="float: right">\n      ', escape((38,  msg.continue() )), '\n    </button>\n  ');40; }; buf.push('');40; }; buf.push(''); })();
 } 
 return buf.join('');
 };
@@ -19965,7 +19975,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/no_no/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n');9; if (options.alreadySaved) { ; buf.push('\n  <div class="saved-to-gallery">\n    ', escape((11,  msg.savedToGallery() )), '\n  </div>\n');13; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <div class="social-buttons">\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((16,  msg.saveToGallery() )), '\n  </button>\n  <button id="print-button">\n    ', escape((19,  msg.print() )), '\n  </button>\n  </div>\n');22; } ; buf.push('\n\n');24; if (options.response && options.response.level_source) { ; buf.push('\n  ');25; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((26,  options.appStrings.sharingText )), '</div>\n  ');27; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((30,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');34; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((34,  options.facebookUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((35,  BlocklyApps.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');37; }; buf.push('\n    ');38; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((38,  options.twitterUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((39,  BlocklyApps.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');41; }; buf.push('    ');41; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((42,  BlocklyApps.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');44; }; buf.push('  </div>\n');45; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n'); })();
+ buf.push('');1; var msg = require('../../locale/no_no/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n  <div class="social-buttons">\n  <button id="print-button">\n    ', escape((11,  msg.print() )), '\n  </button>\n');13; if (options.alreadySaved) { ; buf.push('\n  <button class="saved-to-gallery" disabled>\n    ', escape((15,  msg.savedToGallery() )), '\n  </button>\n');17; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((19,  msg.saveToGallery() )), '\n  </button>\n');21; } ; buf.push('\n  </div>\n\n');24; if (options.response && options.response.level_source) { ; buf.push('\n  ');25; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((26,  options.appStrings.sharingText )), '</div>\n  ');27; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((30,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');34; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((34,  options.facebookUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((35,  BlocklyApps.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');37; }; buf.push('\n    ');38; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((38,  options.twitterUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((39,  BlocklyApps.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');41; }; buf.push('    ');41; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((42,  BlocklyApps.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');44; }; buf.push('  </div>\n');45; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -20400,8 +20410,6 @@ exports.codeTooltip = function(d){return "Se generert JavaScript-kode."};
 
 exports.continue = function(d){return "Fortsett"};
 
-exports.continueWorking = function(d){return "Continue working"};
-
 exports.dialogCancel = function(d){return "Avbryt"};
 
 exports.dialogOK = function(d){return "OK"};
@@ -20449,8 +20457,6 @@ exports.missingBlocksErrorMsg = function(d){return "Forsøk en eller flere av bl
 exports.nextLevel = function(d){return "Gratulerer! Du har fullført oppgave "+v(d,"puzzleNumber")+"."};
 
 exports.nextLevelTrophies = function(d){return "Gratulerer! Du har fullført oppgave "+v(d,"puzzleNumber")+" og vunnet "+p(d,"numTrophies",0,"no",{"one":"en pokal","other":n(d,"numTrophies")+" pokaler"})+"."};
-
-exports.nextPuzzle = function(d){return "Next puzzle"};
 
 exports.nextStage = function(d){return "Gratulerer! Du fullførte "+v(d,"stageName")+"."};
 

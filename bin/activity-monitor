@@ -1,9 +1,11 @@
 #!/usr/bin/env ruby
-require 'csv'
-require_relative '../deployment'
+# including dashboard environment doesn't work if not in the dashboard dir
+Dir.chdir(File.expand_path('../../dashboard', __FILE__))
+require_relative '../dashboard/config/environment'
 require 'cdo/only_one'
 require 'cdo/hip_chat'
 require 'cdo/user_agent_parser'
+
 
 FiveMinutes = 5 * 60 * 1000
 OneHour = 60 * 60 * 1000
@@ -37,7 +39,8 @@ HardLevelAttemptsPerHour = {
   1108 => 10,
   1110 => 10,
   1430 => 10,
-  1434 => 10
+  1434 => 10,
+  1441 => 10
 }
 
 MinimumAttemptsPerHour = 5
@@ -141,6 +144,25 @@ class Monitor
 
 end
 
+BrowserToBrowserStack = {
+  'IE 11.0' => {os: 'Windows', os_version: '8.1', browser: 'IE', browser_version: '11.0'},
+  'IE 10.0' => {os: 'Windows', os_version: '7', browser: 'IE', browser_version: '10.0'},
+  'IE 9.0' => {os: 'Windows', os_version: '7', browser: 'IE', browser_version: '9.0'},
+  'Chrome' => {os: 'Windows', os_version: '8.1', browser: 'Chrome', browser_version: '39.0'},
+  'Firefox' => {os: 'Windows', os_version: '8.1', browser: 'Firefox', browser_version: '33.0'},
+  'Safari' => {os: 'OS X', os_version: 'Yosemite', browser: 'Safari', browser_version: '8.0'},
+  'Android' => {os: 'android', os_version: '4.4', device: 'Samsung+Galaxy+S5'},
+  'Mobile Safari' => {os: 'ios', os_version: '8.0', device: 'iPad+Air'}
+}
+
+def browserstack_url(browser, destination_url)
+  params = BrowserToBrowserStack[browser]
+  return nil unless params
+
+  # eg: http://www.browserstack.com/start#os=Windows&os_version=7&browser=IE&browser_version=11.0&zoom_to_fit=true&full_screen=true&autofit=true&url=studio.code.org&resolution=2048x1536&speed=1
+  "http://www.browserstack.com/start#" + URI.encode_www_form(params.merge(resolution: '2048x1536', url: destination_url))
+end
+
 def main()
   now = DateTime.now.new_offset(0)
 
@@ -164,12 +186,18 @@ def main()
       rate = starts == 0 ? 1.0 : finishes.to_f / starts.to_f
 
       if status == :fail
-        log_string =
-          "<b>#{i[:browser]}</b> hasn't passed <b><a href=\"http://learn.code.org/levels/#{i[:level]}\">level #{i[:level]}</a></b> despite <b>#{i[:starts]}</b> attempts in the last #{hours} hour(s)."
+        level_url = "http://learn.code.org/levels/#{i[:level]}"
+
+        log_string = %Q[<b>#{i[:browser]}</b> hasn't passed <b><a href="#{level_url}">level #{i[:level]}</a></b> despite <b>#{i[:starts]}</b> attempts in the last #{hours} hour(s)]
+        sl = Level.find(i[:level]).script_levels.first
+        if sl
+          level_url = "http://studio.code.org/s/#{sl.script.id}/level/#{sl.id}"
+        end
+        log_string += %Q[ <a href="#{browserstack_url(i[:browser], level_url) || level_url}">&#x2708; Repro It</a>]
         HipChat.developers log_string, color:'red', notify:1
         HipChat.log log_string, color:'red'
       end
-    end
+  end
 end
 
 main if only_one_running?(__FILE__)

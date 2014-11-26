@@ -486,8 +486,10 @@ Blockly.Block.prototype.getHeightWidth = function() {
       bBox.height += 4;
     }
   }
-  // Subtract one from the height due to the shadow.
-  bBox.height -= 1;
+  if (bBox.height > 0) {
+    // Subtract one from the height due to the shadow.
+    bBox.height -= 1;
+  }
   return bBox;
 };
 

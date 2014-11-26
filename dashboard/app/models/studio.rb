@@ -268,21 +268,27 @@ class Studio < Grid
 <category name="Variables" custom="VARIABLE" />
 <category name="Functions" custom="PROCEDURE" />
 <category name="Functional variables" custom="FUNCTIONAL_VARIABLE" />
-<category name="Functional">
-  <block type="functional_string" />
-  <block type="functional_background_string_picker" />
-  <block type="functional_math_number" />
-  <block type="functional_math_number_dropdown">
-    <title name="NUM" config="2,3,4,5,6,7,8,9,10,11,12">???</title>
-  </block>
-</category>
 <category name="Functional Start">
   <block type="functional_start_setBackground" />
   <block type="functional_start_setSpeeds" />
   <block type="functional_start_setBackgroundAndSpeeds" />
   <block type="functional_start_dummyOnMove" />
 </category>
-<category name="Functional Logic">
+<category name="Functional String">
+  <block type="functional_string" />
+  <block type="functional_background_string_picker" />
+</category>
+<category name="Functional Number">
+  <block type="functional_plus"></block>
+  <block type="functional_minus"></block>
+  <block type="functional_times"></block>
+  <block type="functional_dividedby"></block>
+  <block type="functional_math_number" />
+  <block type="functional_math_number_dropdown">
+    <title name="NUM" config="2,3,4,5,6,7,8,9,10,11,12">???</title>
+  </block>
+</category>
+<category name="Functional Boolean">
   <block type="functional_greater_than" />
   <block type="functional_less_than" />
   <block type="functional_number_equals" />
