@@ -43,6 +43,7 @@
   "numBlocksNeeded": "Zorionak! {puzzleNumber}. puzlea osatu dizu. (Hala ere {numBlocks, plural, one {bloke 1} other {# bloke}} erabili ahal zenituen.",
   "numLinesOfCodeWritten": " {numLines, plural, one {lerro 1} other {# lerro}} kode idatzi berri dituzu!\n",
   "play": "play",
+  "print": "Print",
   "puzzleTitle": "{stage_total}etik, {puzzle_number} puzlea",
   "repeat": "errepikatu",
   "resetProgram": "Leheneratu",
@@ -80,5 +81,6 @@
   "tryHOC": "Probatu Kode Ordua",
   "signup": "Izena eman sarrera kurtsorako",
   "hintHeader": "Hemen aholkua:",
-  "genericFeedback": "See how you ended up, and try to fix your program."
+  "genericFeedback": "See how you ended up, and try to fix your program.",
+  "defaultTwitterText": "Check out what I made"
 }

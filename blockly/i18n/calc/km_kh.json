@@ -1,8 +1,8 @@
 {
-  "compute": "compute",
+  "compute": "គិត​លេខ",
   "equivalentExpression": "Try reordering your arguments to get exactly the same expression.",
   "extraTopBlocks": "You have unattached blocks. Did you mean to attach these to the \"compute\" block?",
-  "goal": "Goal:",
+  "goal": "គោលដៅ៖",
   "reinfFeedbackMsg": "Does this look like what you want? You can press the \"Try again\" button to see your drawing.",
-  "yourExpression": "Your expression:"
+  "yourExpression": "កន្សោម​របស់​អ្នក៖"
 }

@@ -2,7 +2,7 @@
   "compute": "calcular",
   "equivalentExpression": "Tente reorganizar seus argumentos para obter exatamente a mesma expressão.",
   "extraTopBlocks": "Você tem blocos não conectados. Você pretendia conectá-los ao bloco \"calcular\"?",
-  "goal": "Meta:",
-  "reinfFeedbackMsg": "Pressione o botão \"Tentar novamente\" para editar sua expressão.",
+  "goal": "Objetivo:",
+  "reinfFeedbackMsg": "Aqui está a sua história! Continue trabalhando nela, ou vá para o próximo desafio!",
   "yourExpression": "Sua expressão:"
 }

@@ -1161,6 +1161,9 @@ goog.require("goog.userAgent");
 Blockly.BlockSvg = function(block) {
   this.block_ = block;
   var options = {"block-id":block.id};
+  if(block.htmlId) {
+    options.id = block.htmlId
+  }
   this.svgGroup_ = Blockly.createSvgElement("g", options, null);
   this.initChildren()
 };
