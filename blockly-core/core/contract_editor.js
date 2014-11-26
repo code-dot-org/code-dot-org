@@ -18,6 +18,35 @@ goog.require('goog.ui.Component.EventType');
 goog.require('goog.events');
 
 /**
+ * @param parent {!Element}
+ * @param headerText {!String}
+ * @constructor
+ */
+Blockly.SVGHeader = function(parent, headerText) {
+  var padding = 7;
+  var textHeightGuess = 12;
+  this.svgGroup_ = Blockly.createSvgElement('g', {}, parent);
+  this.grayRectangleElement_ = Blockly.createSvgElement('rect', { 'fill': '#dddddd' }, this.svgGroup_);
+  this.textElement_ = Blockly.createSvgElement('text', { 'x': padding, 'y': padding + textHeightGuess, 'class': 'blocklyText' }, this.svgGroup_);
+  this.textElement_.textContent = headerText;
+};
+
+/**
+ * @param yOffset {Number}
+ * @param width {Number}
+ * @param height {Number}
+ */
+Blockly.SVGHeader.prototype.setPositionSize = function(yOffset, width, height) {
+  this.svgGroup_.setAttribute('transform', 'translate(' + 0 + ',' + yOffset + ')');
+  this.grayRectangleElement_.setAttribute('width', width);
+  this.grayRectangleElement_.setAttribute('height', height);
+};
+
+Blockly.SVGHeader.prototype.removeSelf = function () {
+  goog.dom.removeNode(this.svgGroup_);
+};
+
+/**
  * Class for a functional block-specific contract editor.
  * @constructor
  */
@@ -31,10 +60,21 @@ Blockly.ContractEditor = function() {
 
   /**
    * Example blocks in this modal dialog
-   * @type {?Array.<Blockly.Block>}
+   * @type {!Array.<Blockly.Block>}
    * @private
    */
   this.exampleBlocks_ = [];
+  /**
+   * Header SVG elements
+   * @type {Array.<Blockly.SVGHeader>}
+   * @private
+   */
+  this.exampleBlockHeaders_ = [];
+  /**
+   * @type {?Blockly.SVGHeader}
+   * @private
+   */
+  this.functionDefinitionHeader_ = null;
 };
 goog.inherits(Blockly.ContractEditor, Blockly.FunctionEditor);
 
@@ -58,10 +98,13 @@ Blockly.ContractEditor.prototype.create_ = function() {
 };
 
 Blockly.ContractEditor.prototype.hideAndRestoreBlocks_ = function() {
-  this.exampleBlocks_.forEach(function(block) {
+  this.exampleBlocks_.forEach(function(block, index) {
     this.moveToMainBlockSpace_(block);
+    this.exampleBlockHeaders_[index].removeSelf();
   }, this);
+  this.functionDefinitionHeader_.removeSelf();
   goog.array.clear(this.exampleBlocks_);
+  goog.array.clear(this.exampleBlockHeaders_);
 
   Blockly.ContractEditor.superClass_.hideAndRestoreBlocks_.call(this);
 };
@@ -71,7 +114,14 @@ Blockly.ContractEditor.prototype.openWithNewFunction = function(opt_blockCreatio
 
   for (var i = 0; i < Blockly.defaultNumExampleBlocks; i++) {
     this.exampleBlocks_.push(this.createAndAddExampleBlock_());
+    var startExampleCountAt = 1;
+    var exampleNumber = startExampleCountAt + i;
+    this.exampleBlockHeaders_.push(
+      new Blockly.SVGHeader(Blockly.modalBlockSpace.svgBlockCanvas_, "Example " + exampleNumber));
   }
+  this.functionDefinitionHeader_ =
+    new Blockly.SVGHeader(Blockly.modalBlockSpace.svgBlockCanvas_, "Definition");
+
   this.layOutBlockSpaceItems_();
 };
 
@@ -79,16 +129,25 @@ Blockly.ContractEditor.prototype.openWithNewFunction = function(opt_blockCreatio
  * @override
  */
 Blockly.ContractEditor.prototype.layOutBlockSpaceItems_ = function () {
-  var currentX = Blockly.RTL ?
-    Blockly.modalBlockSpace.getMetrics().viewWidth - FRAME_MARGIN_SIDE :
-    FRAME_MARGIN_SIDE;
-  var currentY = FRAME_MARGIN_TOP;
+  var headerHeight = 50;
 
-  this.exampleBlocks_.forEach(function(block) {
+  var fullWidth = Blockly.modalBlockSpace.getMetrics().viewWidth;
+  var currentX = Blockly.RTL ?
+    fullWidth - FRAME_MARGIN_SIDE :
+    FRAME_MARGIN_SIDE;
+  var currentY = 0;
+
+  this.exampleBlocks_.forEach(function(block, index) {
+    this.exampleBlockHeaders_[index].setPositionSize(currentY, fullWidth, headerHeight);
+    currentY += headerHeight;
+    currentY += FRAME_MARGIN_TOP;
     block.moveTo(currentX, currentY);
     currentY += block.getHeightWidth().height;
-    currentY += Blockly.ContractEditor.MARGIN_BELOW_EXAMPLES;
+    currentY += FRAME_MARGIN_TOP;
   }, this);
+
+  this.functionDefinitionHeader_.setPositionSize(currentY, fullWidth, headerHeight);
+  currentY += headerHeight;
 
   currentY += this.flyout_.getHeight();
   this.flyout_.customYOffset = currentY;
