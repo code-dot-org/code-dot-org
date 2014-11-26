@@ -268,8 +268,9 @@ Blockly.Flyout.prototype.position_ = function() {
   if (!this.isVisible()) {
     return;
   }
-  var metrics = Blockly.modalBlockSpace ? Blockly.mainBlockSpace.getMetrics()
-      : this.targetBlockSpace_.getMetrics();
+  var metrics = this.targetBlockSpace_.customFlyoutMetrics_ ?
+      this.targetBlockSpace_.customFlyoutMetrics_() :
+      this.targetBlockSpace_.getMetrics();
   if (!metrics) {
     // Hidden components will return null.
     return;
