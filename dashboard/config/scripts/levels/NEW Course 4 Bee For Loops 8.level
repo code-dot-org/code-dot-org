@@ -1,0 +1,28 @@
+<Karel>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2014-11-26T23:18:57.000Z",
+  "level_num": "custom",
+  "user_id": 16,
+  "properties": {
+    "skin": "bee",
+    "maze_data": null,
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,2,1,1,1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,3,6,9,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "instructions": "the puzzle is the same but it’s not decreasing - you have to get 3, 6, 9 nectars. no starter code is given. If your loop is counting down, the increment is subtracted from your counter variable each loop. What should your increment be to collect 9, then 6, and then 3 nectar?\r\n",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "ideal": "9",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "start_direction": "2",
+    "step_mode": "0",
+    "nectar_goal": "18",
+    "flower_type": "redWithNectar"
+  }
+}]]></config>
+  <blocks/>
+</Karel>
