@@ -784,7 +784,7 @@ BlocklyApps.onResize = function() {
   div.style.width = fullWorkspaceWidth + 'px';
 
   // Keep blocks static relative to the right edge in RTL mode
-  if (BlocklyApps.usingBlockly && Blockly.RTL && fullWorkspaceWidth - oldWidth !== 0) {
+  if (BlocklyApps.usingBlockly && Blockly.RTL && (fullWorkspaceWidth - oldWidth !== 0)) {
     Blockly.mainBlockSpace.getTopBlocks().forEach(function(topBlock) {
       topBlock.moveBy(fullWorkspaceWidth - oldWidth, 0);
     });
