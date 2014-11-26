@@ -8,8 +8,8 @@
     "skin": "studio",
     "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
     "failure_condition": "function () {\r\n}",
-    "maze": "[[0,0,0,1,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0]]",
-    "instructions": "A rocket blasts off, traveling at 7 meters per second... press play to see how this word problem looks as an animation.",
+    "maze": "[[0,0,0,1,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "instructions": "A rocket blasts off, traveling at 15 meters per second... press \"run\" to see how this word problem looks as an animation.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -20,35 +20,106 @@
     "projectile_collisions": "false",
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
-    "coordinate_grid_background": "true",
+    "coordinate_grid_background": "false",
     "free_play": "false",
-    "embed": "false",
-    "maze_data": null,
-    "first_sprite_index": "0",
+    "embed": "true",
+    "first_sprite_index": "23",
     "protaganist_sprite_index": "0"
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
+        <block type="when_run">
+          <next>
+            <block type="studio_setBackground">
+              <title name="VALUE">"space"</title>
+              <next>
+                <block type="variables_set" inline="false">
+                  <title name="VAR">time</title>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <title name="NUM">0</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="variables_set" inline="false">
+                      <title name="VAR">height</title>
+                      <value name="VALUE">
+                        <block type="math_number">
+                          <title name="NUM">0</title>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
         <block type="studio_repeatForever" uservisible="false">
           <statement name="DO">
-            <block type="studio_showCoordinates">
+            <block type="studio_waitParams" inline="true">
+              <value name="VALUE">
+                <block type="math_number">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
               <next>
                 <block type="studio_moveDistanceParams" inline="true">
                   <title name="DIR">1</title>
                   <value name="DISTANCE">
                     <block type="math_number">
-                      <title name="NUM">7</title>
+                      <title name="NUM">15</title>
                     </block>
                   </value>
                   <next>
-                    <block type="studio_waitParams" inline="true">
-                      <value name="VALUE">
+                    <block type="math_change" inline="false">
+                      <title name="VAR">height</title>
+                      <value name="DELTA">
                         <block type="math_number">
-                          <title name="NUM">1</title>
+                          <title name="NUM">15</title>
                         </block>
                       </value>
+                      <next>
+                        <block type="math_change" inline="false">
+                          <title name="VAR">time</title>
+                          <value name="DELTA">
+                            <block type="math_number">
+                              <title name="NUM">1</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="studio_setScoreText" inline="true">
+                              <value name="TEXT">
+                                <block type="text_join" inline="false">
+                                  <mutation items="4"/>
+                                  <value name="ADD0">
+                                    <block type="text">
+                                      <title name="TEXT">Time: </title>
+                                    </block>
+                                  </value>
+                                  <value name="ADD1">
+                                    <block type="variables_get">
+                                      <title name="VAR">time</title>
+                                    </block>
+                                  </value>
+                                  <value name="ADD2">
+                                    <block type="text">
+                                      <title name="TEXT"> | Height: </title>
+                                    </block>
+                                  </value>
+                                  <value name="ADD3">
+                                    <block type="variables_get">
+                                      <title name="VAR">height</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
                     </block>
                   </next>
                 </block>

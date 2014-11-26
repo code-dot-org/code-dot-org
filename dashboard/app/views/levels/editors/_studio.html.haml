@@ -4,7 +4,7 @@
   = f.number_field :first_sprite_index
 .field
   = f.label :protaganist_sprite_index, 'Protaganist sprite index'
-  %p Integer of the protaganist character (zero indexed, counting from the top left of the grid). This character must touch all the waypoint flags to complete the level. Default is 0.
+  %p Integer of the protaganist character (zero indexed, counting from the top left of the grid). This character must touch all the waypoint flags to complete the level. If no value is set, all sprites can collect flags.
   = f.number_field :protaganist_sprite_index
 .field
   = f.label :timeout_failure_tick, 'Timeout failure tick'
