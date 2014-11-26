@@ -367,6 +367,7 @@
   mobile_devices: "Øvinger for mobile enheter"
   frozen_name: Code with Anna and Elsa
   codeorg_name: Skriv ditt første dataprogram
+  codeintl_name: Skriv ditt første dataprogram
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: En introduksjon til JavaScript
   khanes_name: En introduksjon til JavaScript
@@ -401,6 +402,7 @@
   projguts_name: Stein, saks papir
   frozen_gradelevel: Alderen 8+
   codeorg_gradelevel: Alder 4-104
+  codeintl_gradelevel: Alder 4-104
   thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: Mellomtrinnet +
   khanes_gradelevel: Mellomtrinnet +
@@ -435,6 +437,7 @@
   projguts_gradelevel: Alder 10–13
   frozen_platformtext: Modern browsers + tablets
   codeorg_platformtext: Moderne nettlesarar, smarttelefonar, tablet-pc'ar
+  codeintl_platformtext: Moderne nettlesarar, smarttelefonar, tablet-pc'ar
   thinkersmithspanish_platformtext: Frakobla
   khan_platformtext: Moderne nettlesere
   khanes_platformtext: Moderne nettlesere
@@ -473,6 +476,7 @@
   frozen_shortdescription: Let's use code to join Anna and Elsa as they explore the
     magic and beauty of ice.
   codeorg_shortdescription: Lær å kode med Mark Zuckerberg og sinte fuglar!
+  codeintl_shortdescription: Lær å kode med Mark Zuckerberg og sinte fuglar!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Lær å teikne i JavaScript
   khanes_shortdescription: Lær å teikne i JavaScript
@@ -521,6 +525,10 @@
     magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
     and make a winter wonderland that you can then share with your friends!
   codeorg_longdescription: Lær de grunnleggende kodekonseptene med dra-og-slipp-programmering.
+    Dette er spill-lignende, selvstyrt øving med videoforelesninger av Bill Gates,
+    Mark Zuckerberg, Angry Birds og Plants vs. Zombies. Lær løkker og betingelser
+    og grunnleggende algoritmer. Tilgjengelig på 34 språk.
+  codeintl_longdescription: Lær de grunnleggende kodekonseptene med dra-og-slipp-programmering.
     Dette er spill-lignende, selvstyrt øving med videoforelesninger av Bill Gates,
     Mark Zuckerberg, Angry Birds og Plants vs. Zombies. Lær løkker og betingelser
     og grunnleggende algoritmer. Tilgjengelig på 34 språk.

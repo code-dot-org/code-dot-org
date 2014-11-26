@@ -382,6 +382,7 @@
   mobile_devices: Tutoriais para dispositivos móveis
   frozen_name: Programação com Anna e Elsa
   codeorg_name: Escreva seu primeiro programa de computador
+  codeintl_name: Escreva seu primeiro programa de computador
   thinkersmithspanish_name: Meus amigos robóticos
   khan_name: Uma introdução ao JavaScript
   khanes_name: Uma introdução ao JavaScript
@@ -416,6 +417,7 @@
   projguts_name: Pedra, papel, tesoura
   frozen_gradelevel: A partir de 8 anos
   codeorg_gradelevel: De 4 a 104 anos
+  codeintl_gradelevel: De 4 a 104 anos
   thinkersmithspanish_gradelevel: Todas as idades
   khan_gradelevel: Ensino Fundamental II
   khanes_gradelevel: A partir do ensino fundamental II
@@ -450,6 +452,7 @@
   projguts_gradelevel: De 10 a 13 anos
   frozen_platformtext: Modern browsers + tablets
   codeorg_platformtext: Navegadores Web modernos, smartphones, tablets
+  codeintl_platformtext: Navegadores Web modernos, smartphones, tablets
   thinkersmithspanish_platformtext: Offline
   khan_platformtext: Navegadores Web modernos
   khanes_platformtext: Navegadores Web modernos
@@ -485,6 +488,7 @@
   frozen_shortdescription: Let's use code to join Anna and Elsa as they explore the
     magic and beauty of ice.
   codeorg_shortdescription: Aprenda a programar com Mark Zuckerberg e Angry Birds!
+  codeintl_shortdescription: Aprenda a programar com Mark Zuckerberg e Angry Birds!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Aprenda a desenhar em JavaScript
   khanes_shortdescription: Aprenda a desenhar em JavaScript
@@ -544,6 +548,11 @@
     e apresenta vídeo aulas das estrelas Bill Gates, Mark Zuckerberg, Angry Birds
     e Plants vs Zombies. Aprenda sobre laços-repetição, condicionais e algoritmos
     básicos. Disponível em 34 idiomas.
+  codeintl_longdescription: Aprenda os conceitos básicos de ciência da computação
+    com a programação de arrastar e soltar. Este tutorial se parece com um jogo, é
+    autoexplicativo e apresenta vídeo aulas das estrelas Bill Gates, Mark Zuckerberg,
+    Angry Birds e Plants vs Zombies. Aprenda sobre laços-repetição, condicionais e
+    algoritmos básicos. Disponível em 34 idiomas.
   thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
     los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
     espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
