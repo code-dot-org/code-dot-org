@@ -317,6 +317,7 @@ Blockly.FunctionEditor.prototype.create_ = function() {
         return metrics;
       });
   Blockly.modalBlockSpace = Blockly.modalBlockSpaceEditor.blockSpace;
+  Blockly.modalBlockSpace.customFlyoutMetrics_ = Blockly.mainBlockSpace.getMetrics;
 
   Blockly.modalBlockSpaceEditor.addChangeListener(
       Blockly.mainBlockSpace.fireChangeEvent);
