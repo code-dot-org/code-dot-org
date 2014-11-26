@@ -43,6 +43,7 @@
   "numBlocksNeeded": "Apsveicu! Esat pabeidzis mīklu {puzzleNumber}. (Tomēr jūs varētu izmantot tikai {numBlocks, plural, one {1 block} other {# blocks}}.)",
   "numLinesOfCodeWritten": "Jūs tikko uzrakstījat {numLines, plural, one {1 line} other {# lines}} koda!",
   "play": "atskaņot",
+  "print": "Drukāt",
   "puzzleTitle": "Mīkla {puzzle_number} no {stage_total}",
   "repeat": "atkārtot",
   "resetProgram": "Atiestatīt",
@@ -63,8 +64,8 @@
   "tryAgain": "Mēgini vēlreiz",
   "hintRequest": "Apskaties padomu",
   "backToPreviousLevel": "Atpakaļ uz iepriekšējo līmeni",
-  "saveToGallery": "Saglabā savā galerijā",
-  "savedToGallery": "Saglabāts tavā galerijā!",
+  "saveToGallery": "Saglabāt galerijā",
+  "savedToGallery": "Saglabāts galerijā!",
   "shareFailure": "Piedod, mēs nevaram izplatīt ar šo programmu.",
   "typeFuncs": "Pieejamās funkcijas: %1",
   "typeHint": "Ņemiet vērā, ka iekavas un semikoli ir nepieciešami.",
@@ -80,5 +81,6 @@
   "tryHOC": "Izmēģini Programmēšanas stundu",
   "signup": "Piereģistrējies ievadkursam",
   "hintHeader": "Padoms:",
-  "genericFeedback": "Apskati rezultātu un pamēģini salabot savu programmu."
+  "genericFeedback": "Apskati rezultātu un pamēģini salabot savu programmu.",
+  "defaultTwitterText": "Apskaties, ko esmu izveidojis"
 }

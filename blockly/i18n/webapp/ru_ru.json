@@ -22,6 +22,9 @@
   "repeatForeverTooltip": "Выполнить действия в этом блоке многократно, пока приложение испольняется.",
   "shareWebappTwitter": "Скачайте мое приложение. Я написал его сам с помощью @codeorg",
   "shareGame": "Поделиться своим приложением:",
+  "stepIn": "Step in",
+  "stepOver": "Step over",
+  "stepOut": "Step out",
   "turnBlack": "закрасить чёрным",
   "turnBlackTooltip": "Закрашивает экран черным.",
   "yes": "Да"
