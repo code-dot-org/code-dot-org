@@ -25,11 +25,6 @@ social:
     %a{:href=>'http://www.hourofcode.com'}
       %button
         = I18n.t(:learn_more)
-  %h3{:style=>"margin-top: 20px;"}
-    = I18n.t(:hoc2014_try_new_tutorial)
-    &mdash;
-    %a{:href=>"http://#{canonical_hostname('studio.code.org')}/s/frozen", target: "_blank"}
-      = I18n.t(:hoc2014_try_frozen)
 %br/
 
 = view :learn_carousels, variation:'learn'
