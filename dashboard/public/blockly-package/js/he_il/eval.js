@@ -6781,7 +6781,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -14117,7 +14116,7 @@ exports.score = function(d){return "ציון"};
 
 exports.showCodeHeader = function(d){return "הצג קוד"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "הצג בלוקים"};
 
 exports.showGeneratedCode = function(d){return "הצג קוד"};
 
@@ -14147,7 +14146,7 @@ exports.saveToGallery = function(d){return "לשמור את הגלריה שלך"
 
 exports.savedToGallery = function(d){return "נשמר לגלריה שלך!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "מצטערים, אנחנו לא יכולים לשתף תוכנית זו."};
 
 exports.typeFuncs = function(d){return "פונקציות אפשריות: %1"};
 
@@ -14155,7 +14154,7 @@ exports.typeHint = function(d){return "שימו לב כי סוגריים ונק�
 
 exports.workspaceHeader = function(d){return "הרכב את הבלוקים שלך כאן: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "הקלד את קוד JavaScript שלך כאן"};
 
 exports.infinity = function(d){return "אינסוף"};
 
@@ -14184,45 +14183,45 @@ exports.defaultTwitterText = function(d){return "Check out what I made"};
 
 },{"messageformat":62}],50:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.he=function(n){return n===1?"one":"other"}
-exports.circleBlockTitle = function(d){return "circle (radius, style, color)"};
+exports.circleBlockTitle = function(d){return "מעגל (רדיוס, סגנון, צבע)"};
 
-exports.displayBlockTitle = function(d){return "display"};
+exports.displayBlockTitle = function(d){return "הצג"};
 
-exports.ellipseBlockTitle = function(d){return "ellipse (width, height, style, color)"};
+exports.ellipseBlockTitle = function(d){return "אליפסה (רוחב, גובה, סגנון, צבע)"};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"display\" block?"};
+exports.extraTopBlocks = function(d){return "יש לך בלוקים לא מחוברים. האם התכוונת לצרף אותם לבלוק \"הצג\" ?"};
 
-exports.overlayBlockTitle = function(d){return "overlay (top, bottom)"};
+exports.overlayBlockTitle = function(d){return "שכבת-על (למעלה, למטה)"};
 
-exports.placeImageBlockTitle = function(d){return "place-image (x, y, image)"};
+exports.placeImageBlockTitle = function(d){return "מקם-תמונה (x, y, תמונה)"};
 
-exports.rectangleBlockTitle = function(d){return "rectangle (width, height, style, color)"};
+exports.rectangleBlockTitle = function(d){return "מלבן (רוחב, גובה, סגנון, צבע)"};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to edit your drawing."};
 
-exports.rotateImageBlockTitle = function(d){return "rotate (degrees, image)"};
+exports.rotateImageBlockTitle = function(d){return "סובב (מעלות, תמונה)"};
 
-exports.scaleImageBlockTitle = function(d){return "scale (factor)"};
+exports.scaleImageBlockTitle = function(d){return "סקאלה(גורם)"};
 
-exports.squareBlockTitle = function(d){return "square (size, style, color)"};
+exports.squareBlockTitle = function(d){return "ריבוע (גודל, סגנון, צבע)"};
 
-exports.starBlockTitle = function(d){return "star (radius, style, color)"};
+exports.starBlockTitle = function(d){return "כוכב (רדיוס, סגנון, צבע)"};
 
-exports.stringAppendBlockTitle = function(d){return "string-append (first, second)"};
+exports.stringAppendBlockTitle = function(d){return "שרשר-מחרוזת (ראשון, שני)"};
 
-exports.stringLengthBlockTitle = function(d){return "string-length (string)"};
+exports.stringLengthBlockTitle = function(d){return "אורך-מחרוזת (מחרוזת)"};
 
-exports.textBlockTitle = function(d){return "text (string, size, color)"};
+exports.textBlockTitle = function(d){return "טקסט (מחרוזת, גודל, צבע)"};
 
-exports.triangleBlockTitle = function(d){return "triangle (size, style, color)"};
+exports.triangleBlockTitle = function(d){return "משולש (גודל, סגנון, צבע)"};
 
-exports.underlayBlockTitle = function(d){return "underlay (bottom, top)"};
+exports.underlayBlockTitle = function(d){return "שכבה תחתונה (למעלה, למטה)"};
 
-exports.outline = function(d){return "outline"};
+exports.outline = function(d){return "מתאר"};
 
-exports.solid = function(d){return "solid"};
+exports.solid = function(d){return "מוצק"};
 
-exports.string = function(d){return "string"};
+exports.string = function(d){return "מחרוזת"};
 
 
 },{"messageformat":62}],51:[function(require,module,exports){

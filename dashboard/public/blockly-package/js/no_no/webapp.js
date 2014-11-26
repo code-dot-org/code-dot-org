@@ -2626,7 +2626,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -11041,7 +11040,7 @@ exports.numLinesOfCodeWritten = function(d){return "Du har akkurat skrevet "+p(d
 
 exports.play = function(d){return "spill av"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Skriv ut"};
 
 exports.puzzleTitle = function(d){return "Oppgave "+v(d,"puzzle_number")+" av "+v(d,"stage_total")};
 
@@ -11083,7 +11082,7 @@ exports.hintRequest = function(d){return "Se hint"};
 
 exports.backToPreviousLevel = function(d){return "Tilbake til forrige nivå"};
 
-exports.saveToGallery = function(d){return "Lagre til galleriet"};
+exports.saveToGallery = function(d){return "Lagre i galleriet"};
 
 exports.savedToGallery = function(d){return "Lagret i galleriet!"};
 
@@ -11119,7 +11118,7 @@ exports.hintHeader = function(d){return "Her er et tips:"};
 
 exports.genericFeedback = function(d){return "Se hvordan du endte opp, og prøv å fikse programmet ditt."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Sjekk ut det jeg lagde"};
 
 
 },{"messageformat":52}],40:[function(require,module,exports){
@@ -11156,7 +11155,7 @@ exports.no = function(d){return "Nei"};
 
 exports.numBlocksNeeded = function(d){return "Denne utfordringen kan bli løst med %1 blokker."};
 
-exports.pause = function(d){return "Pause"};
+exports.pause = function(d){return "Avbryt"};
 
 exports.reinfFeedbackMsg = function(d){return "Du kan trykke på «Prøv igjen» knappen for å gå tilbake for å kjøre appen din."};
 
@@ -11170,11 +11169,11 @@ exports.shareWebappTwitter = function(d){return "Sjekk ut appen jeg lagde. Jeg s
 
 exports.shareGame = function(d){return "Del din app:"};
 
-exports.stepIn = function(d){return "Step in"};
+exports.stepIn = function(d){return "Gå inn i"};
 
-exports.stepOver = function(d){return "Step over"};
+exports.stepOver = function(d){return "Gå over"};
 
-exports.stepOut = function(d){return "Step out"};
+exports.stepOut = function(d){return "Gå ut av"};
 
 exports.turnBlack = function(d){return "Gå tilbake"};
 

@@ -2626,7 +2626,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -14596,7 +14595,7 @@ exports.numLinesOfCodeWritten = function(d){return "Du har akkurat skrevet "+p(d
 
 exports.play = function(d){return "spill av"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Skriv ut"};
 
 exports.puzzleTitle = function(d){return "Oppgave "+v(d,"puzzle_number")+" av "+v(d,"stage_total")};
 
@@ -14638,7 +14637,7 @@ exports.hintRequest = function(d){return "Se hint"};
 
 exports.backToPreviousLevel = function(d){return "Tilbake til forrige nivå"};
 
-exports.saveToGallery = function(d){return "Lagre til galleriet"};
+exports.saveToGallery = function(d){return "Lagre i galleriet"};
 
 exports.savedToGallery = function(d){return "Lagret i galleriet!"};
 
@@ -14674,7 +14673,7 @@ exports.hintHeader = function(d){return "Her er et tips:"};
 
 exports.genericFeedback = function(d){return "Se hvordan du endte opp, og prøv å fikse programmet ditt."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Sjekk ut det jeg lagde"};
 
 
 },{"messageformat":57}],45:[function(require,module,exports){
@@ -14699,23 +14698,23 @@ exports.catLogic = function(d){return "Logikk"};
 
 exports.colourTooltip = function(d){return "Endrer fargen på blyanten."};
 
-exports.createACircle = function(d){return "create a circle"};
+exports.createACircle = function(d){return "lag en sirkel"};
 
-exports.createSnowflakeSquare = function(d){return "create a snowflake of type square"};
+exports.createSnowflakeSquare = function(d){return "lag et snøflak av typen firkant"};
 
-exports.createSnowflakeParallelogram = function(d){return "create a snowflake of type parallelogram"};
+exports.createSnowflakeParallelogram = function(d){return "Lag et snøflak av typen parallellogram"};
 
-exports.createSnowflakeLine = function(d){return "create a snowflake of type line"};
+exports.createSnowflakeLine = function(d){return "lag et snøflak av typen linje"};
 
-exports.createSnowflakeSpiral = function(d){return "create a snowflake of type spiral"};
+exports.createSnowflakeSpiral = function(d){return "lag et snøflak av typen spiral"};
 
-exports.createSnowflakeFlower = function(d){return "create a snowflake of type flower"};
+exports.createSnowflakeFlower = function(d){return "lag et snøflak av typen blomst"};
 
-exports.createSnowflakeFractal = function(d){return "create a snowflake of type fractal"};
+exports.createSnowflakeFractal = function(d){return "lag et snøflak av typen fraktal"};
 
-exports.createSnowflakeRandom = function(d){return "create a snowflake of type random"};
+exports.createSnowflakeRandom = function(d){return "lag et snøflak av typen tilfeldig"};
 
-exports.createASnowflakeBranch = function(d){return "create a snowflake branch"};
+exports.createASnowflakeBranch = function(d){return "lag en snøflakgren"};
 
 exports.degrees = function(d){return "grader"};
 
@@ -14755,7 +14754,7 @@ exports.drawUpperWave = function(d){return "tegn den øvre bølge"};
 
 exports.drawLowerWave = function(d){return "tegn den lavere bølge"};
 
-exports.drawStamp = function(d){return "draw stamp"};
+exports.drawStamp = function(d){return "tegnestempel"};
 
 exports.heightParameter = function(d){return "høyde"};
 
@@ -14809,7 +14808,7 @@ exports.penTooltip = function(d){return "Løfter eller senker pennen, for å sta
 
 exports.penUp = function(d){return "penn opp"};
 
-exports.reinfFeedbackMsg = function(d){return "Ser dette ut slik du ønsker? Du kan trykke \"Forsøk igjen\"-knappen for å se tegningen din."};
+exports.reinfFeedbackMsg = function(d){return "Her er tegningen din! Fortsett å jobbe på den eller fortsett til neste oppgave."};
 
 exports.setColour = function(d){return "angi farge"};
 

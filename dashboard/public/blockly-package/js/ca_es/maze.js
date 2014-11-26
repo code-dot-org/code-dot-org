@@ -2626,7 +2626,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -16331,7 +16330,7 @@ exports.numLinesOfCodeWritten = function(d){return "Has escrit "+p(d,"numLines",
 
 exports.play = function(d){return "reprodueix"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Imprimeix"};
 
 exports.puzzleTitle = function(d){return "Puzzle "+v(d,"puzzle_number")+" de "+v(d,"stage_total")};
 
@@ -16347,7 +16346,7 @@ exports.score = function(d){return "puntuació"};
 
 exports.showCodeHeader = function(d){return "Mostra el Codi"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Mostra els blocs"};
 
 exports.showGeneratedCode = function(d){return "Mostra el Codi"};
 
@@ -16373,9 +16372,9 @@ exports.hintRequest = function(d){return "Veure pista"};
 
 exports.backToPreviousLevel = function(d){return "Torna al nivell anterior"};
 
-exports.saveToGallery = function(d){return "Guarda-ho a la teva galeria"};
+exports.saveToGallery = function(d){return "Desa a la galeria"};
 
-exports.savedToGallery = function(d){return "Guardat a la teva galeria!"};
+exports.savedToGallery = function(d){return "Desat a la galeria!"};
 
 exports.shareFailure = function(d){return "Ho sentim, no podem compartir aquest programa."};
 
@@ -16385,7 +16384,7 @@ exports.typeHint = function(d){return "Tingueu en compte que els parèntesis i e
 
 exports.workspaceHeader = function(d){return "Monta els teus blocs aquí: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Escriviu el vostre codi JavaScript aquí"};
 
 exports.infinity = function(d){return "Infinit"};
 
@@ -16409,14 +16408,14 @@ exports.hintHeader = function(d){return "Aquí tens una pista:"};
 
 exports.genericFeedback = function(d){return "Observa com has acabat i prova d'arreglar el teu programa."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Comprova el que he fet"};
 
 
 },{"messageformat":72}],60:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.ca=function(n){return n===1?"one":"other"}
-exports.atHoneycomb = function(d){return "at honeycomb"};
+exports.atHoneycomb = function(d){return "al rusc"};
 
-exports.atFlower = function(d){return "at flower"};
+exports.atFlower = function(d){return "a la flor"};
 
 exports.avoidCowAndRemove = function(d){return "evita la vaca i elimina 1"};
 
@@ -16442,7 +16441,7 @@ exports.fill = function(d){return "Ompleix 1"};
 
 exports.fillN = function(d){return "ompli "+v(d,"shovelfuls")};
 
-exports.fillStack = function(d){return "fill stack of "+v(d,"shovelfuls")+" holes"};
+exports.fillStack = function(d){return "Omple les piles de forats "+v(d,"shovelfuls")};
 
 exports.fillSquare = function(d){return "ompli el quadrat"};
 
@@ -16450,7 +16449,7 @@ exports.fillTooltip = function(d){return "Lloc d'unitat 1 de brutícia"};
 
 exports.finalLevel = function(d){return "Felicitats! Has resolt el puzzle final."};
 
-exports.flowerEmptyError = function(d){return "The flower you're on has no more nectar."};
+exports.flowerEmptyError = function(d){return "La flor on estàs no té més nèctar."};
 
 exports.get = function(d){return "aconseguir"};
 
@@ -16458,13 +16457,13 @@ exports.heightParameter = function(d){return "alçcada"};
 
 exports.holePresent = function(d){return "hi ha un forat"};
 
-exports.honey = function(d){return "make honey"};
+exports.honey = function(d){return "fer mel"};
 
-exports.honeyAvailable = function(d){return "honey"};
+exports.honeyAvailable = function(d){return "mel"};
 
-exports.honeyTooltip = function(d){return "Make honey from nectar"};
+exports.honeyTooltip = function(d){return "Fer mel del nèctar"};
 
-exports.honeycombFullError = function(d){return "This honeycomb does not have room for more honey."};
+exports.honeycombFullError = function(d){return "Aquest rusc no té espai per més mel."};
 
 exports.ifCode = function(d){return "si"};
 
@@ -16476,37 +16475,37 @@ exports.ifTooltip = function(d){return "Si hi ha un camí en la direcció especi
 
 exports.ifelseTooltip = function(d){return "Si hi ha un camí en la direcció específicada, fer el primer bloc d'accions. En cas contrari, fer el segon bloc d'accions."};
 
-exports.ifFlowerTooltip = function(d){return "If there is a flower/honeycomb in the specified direction, then do some actions."};
+exports.ifFlowerTooltip = function(d){return "Si hi ha una flor/rusc en la direcció concreta, llavors fes algunes accions."};
 
-exports.ifelseFlowerTooltip = function(d){return "If there is a flower/honeycomb in the specified direction, then do the first block of actions. Otherwise, do the second block of actions."};
+exports.ifelseFlowerTooltip = function(d){return "Si hi ha una flor/rusc en la direcció concreta, llavors féu el primer bloc d'accions. En cas contrari, fer el segon bloc d'accions."};
 
-exports.insufficientHoney = function(d){return "You're using all the right blocks, but you need to make the right amount of honey."};
+exports.insufficientHoney = function(d){return "Utilitzeu tots els blocs correctament, però cal fer la quantitat exacte de mel."};
 
-exports.insufficientNectar = function(d){return "You're using all the right blocks, but you need to collect the right amount of nectar."};
+exports.insufficientNectar = function(d){return "Estàs utilitzant correctament tots els blocs, però necessites recollir la quantitat exacte de nèctar."};
 
-exports.make = function(d){return "make"};
+exports.make = function(d){return "fer"};
 
-exports.moveBackward = function(d){return "move backward"};
+exports.moveBackward = function(d){return "retrocedir"};
 
-exports.moveEastTooltip = function(d){return "Move me east one space."};
+exports.moveEastTooltip = function(d){return "Moure'm cap a l'est un espai."};
 
 exports.moveForward = function(d){return "avança"};
 
 exports.moveForwardTooltip = function(d){return "Mou-me un espai cap endevant."};
 
-exports.moveNorthTooltip = function(d){return "Move me north one space."};
+exports.moveNorthTooltip = function(d){return "Moure'm cap al nord un espai."};
 
-exports.moveSouthTooltip = function(d){return "Move me south one space."};
+exports.moveSouthTooltip = function(d){return "Moure'm al sud un espai."};
 
-exports.moveTooltip = function(d){return "Move me forward/backward one space"};
+exports.moveTooltip = function(d){return "Em mou cap endavant/enrere un espai"};
 
-exports.moveWestTooltip = function(d){return "Move me west one space."};
+exports.moveWestTooltip = function(d){return "Moure'm cap a l'est un espai."};
 
-exports.nectar = function(d){return "get nectar"};
+exports.nectar = function(d){return "obtenir nèctar"};
 
-exports.nectarRemaining = function(d){return "nectar"};
+exports.nectarRemaining = function(d){return "nèctar"};
 
-exports.nectarTooltip = function(d){return "Get nectar from a flower"};
+exports.nectarTooltip = function(d){return "Obtenir nèctar d'una flor"};
 
 exports.nextLevel = function(d){return "Felicitats! Has complert aquest puzzle."};
 
@@ -16518,9 +16517,9 @@ exports.noPathLeft = function(d){return "no hi ha camí cap a l'esquerra"};
 
 exports.noPathRight = function(d){return "no hi ha camí cap a la dreta"};
 
-exports.notAtFlowerError = function(d){return "You can only get nectar from a flower."};
+exports.notAtFlowerError = function(d){return "Només es pot obtenir nèctar d'una flor."};
 
-exports.notAtHoneycombError = function(d){return "You can only make honey at a honeycomb."};
+exports.notAtHoneycombError = function(d){return "Només pot fer mel a un rusc."};
 
 exports.numBlocksNeeded = function(d){return "Aquest puzzle pot res resolt amb blocs de %1."};
 
@@ -16544,7 +16543,7 @@ exports.removeStack = function(d){return "treu la pila del munt de "+v(d,"shovel
 
 exports.removeSquare = function(d){return "elimina el quadrat"};
 
-exports.repeatCarefullyError = function(d){return "Per solucionar això, troba el patró que es repeteix. Utilitza un bloc \"repetir\" amb aquests 3 blocs a dins: mou, mou, girar a la dreta."};
+exports.repeatCarefullyError = function(d){return "Per solucionar això, pensar acuradament sobre el patró de dos moviments i un gir per posar en el bloc \"repetició\".  Està bé tenir un gir addicional al final."};
 
 exports.repeatUntil = function(d){return "repeteix fins que"};
 
@@ -16552,11 +16551,11 @@ exports.repeatUntilBlocked = function(d){return "de mentres, camí cap endevant"
 
 exports.repeatUntilFinish = function(d){return "repeteix fins a acabar"};
 
-exports.step = function(d){return "Step"};
+exports.step = function(d){return "pas"};
 
-exports.totalHoney = function(d){return "total honey"};
+exports.totalHoney = function(d){return "mel total"};
 
-exports.totalNectar = function(d){return "total nectar"};
+exports.totalNectar = function(d){return "Nèctar total"};
 
 exports.turnLeft = function(d){return "gira a l'esquerra"};
 
@@ -16564,19 +16563,19 @@ exports.turnRight = function(d){return "gira a la dreta"};
 
 exports.turnTooltip = function(d){return "Gira'm 90 graus cap a l'esquerra o cap a la dreta."};
 
-exports.uncheckedCloudError = function(d){return "Make sure to check all clouds to see if they're flowers or honeycombs."};
+exports.uncheckedCloudError = function(d){return "Assegureu-vos de comprovar tots els núvols per veure si són les flors o els ruscs."};
 
-exports.uncheckedPurpleError = function(d){return "Make sure to check all purple flowers to see if they have nectar"};
+exports.uncheckedPurpleError = function(d){return "Assegureu-vos de comprovar totes les flors porpres per veure si tenen nèctar"};
 
 exports.whileMsg = function(d){return "mentres"};
 
 exports.whileTooltip = function(d){return "Repetiu les accions tancades fins que s'arribi al punt final."};
 
-exports.word = function(d){return "Find the word"};
+exports.word = function(d){return "Trobar la paraula"};
 
 exports.yes = function(d){return "Sí"};
 
-exports.youSpelled = function(d){return "You spelled"};
+exports.youSpelled = function(d){return "Has escrit"};
 
 
 },{"messageformat":72}],61:[function(require,module,exports){

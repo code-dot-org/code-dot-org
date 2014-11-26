@@ -6717,7 +6717,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -18777,7 +18776,7 @@ function spriteTotalFrames (index) {
 }
 
 var updateSpeechBubblePath = function (element) {
-  var height = element.getAttribute('height');
+  var height = +element.getAttribute('height');
   var onTop = 'true' === element.getAttribute('onTop');
   var onRight = 'true' === element.getAttribute('onRight');
   element.setAttribute('d',
@@ -20474,7 +20473,7 @@ exports.numLinesOfCodeWritten = function(d){return "오! 코드 "+p(d,"numLines"
 
 exports.play = function(d){return "실행"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "인쇄"};
 
 exports.puzzleTitle = function(d){return "퍼즐 "+v(d,"puzzle_number")+"/"+v(d,"stage_total")};
 
@@ -20516,9 +20515,9 @@ exports.hintRequest = function(d){return "도움 보기"};
 
 exports.backToPreviousLevel = function(d){return "이전 퍼즐"};
 
-exports.saveToGallery = function(d){return "나의 갤러리에 저장"};
+exports.saveToGallery = function(d){return "갤러리에 저장"};
 
-exports.savedToGallery = function(d){return "나의 갤러리에 저장되었습니다!"};
+exports.savedToGallery = function(d){return "갤러리에 저장되었습니다!"};
 
 exports.shareFailure = function(d){return "프로그램을 공유할 수 없습니다."};
 
@@ -20552,7 +20551,7 @@ exports.hintHeader = function(d){return "도움말:"};
 
 exports.genericFeedback = function(d){return "어떻게 종료되는지 살펴보고 프로그램을 수정해 보세요."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "만든 작품 확인하기"};
 
 
 },{"messageformat":61}],49:[function(require,module,exports){
@@ -20775,15 +20774,15 @@ exports.projectileRedHearts = function(d){return "빨간 하트"};
 
 exports.projectileRandom = function(d){return "random(랜덤)"};
 
-exports.projectileAnna = function(d){return "Anna"};
+exports.projectileAnna = function(d){return "안나"};
 
-exports.projectileElsa = function(d){return "Elsa"};
+exports.projectileElsa = function(d){return "엘사"};
 
-exports.projectileHiro = function(d){return "Hiro"};
+exports.projectileHiro = function(d){return "히로"};
 
-exports.projectileBaymax = function(d){return "Baymax"};
+exports.projectileBaymax = function(d){return "베이맥스"};
 
-exports.projectileRapunzel = function(d){return "Rapunzel"};
+exports.projectileRapunzel = function(d){return "라푼젤"};
 
 exports.reinfFeedbackMsg = function(d){return "\"다시 시작\"을 누르면 이야기를 다시 실행시킬 수 있습니다."};
 
@@ -20877,15 +20876,15 @@ exports.setSpriteHidden = function(d){return "안보이도록"};
 
 exports.setSpriteHideK1 = function(d){return "보이지 않게 하기"};
 
-exports.setSpriteAnna = function(d){return "to a Anna image"};
+exports.setSpriteAnna = function(d){return "안나 이미지로"};
 
-exports.setSpriteElsa = function(d){return "to a Elsa image"};
+exports.setSpriteElsa = function(d){return "엘사 이미지로"};
 
-exports.setSpriteHiro = function(d){return "to a Hiro image"};
+exports.setSpriteHiro = function(d){return "히로 이미지로"};
 
-exports.setSpriteBaymax = function(d){return "to a Baymax image"};
+exports.setSpriteBaymax = function(d){return "베이맥스 이미지로"};
 
-exports.setSpriteRapunzel = function(d){return "to a Rapunzel image"};
+exports.setSpriteRapunzel = function(d){return "라푼젤 이미지로"};
 
 exports.setSpriteKnight = function(d){return "기사로"};
 

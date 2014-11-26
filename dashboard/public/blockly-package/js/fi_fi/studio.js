@@ -6717,7 +6717,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -18777,7 +18776,7 @@ function spriteTotalFrames (index) {
 }
 
 var updateSpeechBubblePath = function (element) {
-  var height = element.getAttribute('height');
+  var height = +element.getAttribute('height');
   var onTop = 'true' === element.getAttribute('onTop');
   var onRight = 'true' === element.getAttribute('onRight');
   element.setAttribute('d',
@@ -20601,7 +20600,7 @@ exports.catText = function(d){return "teksti"};
 
 exports.catVariables = function(d){return "muuttujat"};
 
-exports.changeScoreTooltip = function(d){return "LIsää tai poista piste pistemäärästä."};
+exports.changeScoreTooltip = function(d){return "Lisää tai poista piste pistemäärästä."};
 
 exports.changeScoreTooltipK1 = function(d){return "Lisää piste pistemäärään."};
 
@@ -20623,21 +20622,21 @@ exports.helloWorld = function(d){return "Hei maailma!"};
 
 exports.incrementPlayerScore = function(d){return "lisää piste"};
 
-exports.makeProjectileDisappear = function(d){return "kadota"};
+exports.makeProjectileDisappear = function(d){return "katoamaan"};
 
-exports.makeProjectileBounce = function(d){return "hyppää"};
+exports.makeProjectileBounce = function(d){return "kimpoamaan"};
 
-exports.makeProjectileBlueFireball = function(d){return "tee sininen tulipallo"};
+exports.makeProjectileBlueFireball = function(d){return "laita sininen tulipallo"};
 
-exports.makeProjectilePurpleFireball = function(d){return "tee violetti tulipallo"};
+exports.makeProjectilePurpleFireball = function(d){return "laita violetti tulipallo"};
 
-exports.makeProjectileRedFireball = function(d){return "tee punainen tulipallo"};
+exports.makeProjectileRedFireball = function(d){return "laita punainen tulipallo"};
 
-exports.makeProjectileYellowHearts = function(d){return "tee keltaisia sydämiä"};
+exports.makeProjectileYellowHearts = function(d){return "laita keltaiset sydämet"};
 
-exports.makeProjectilePurpleHearts = function(d){return "tee violetteja sydämiä"};
+exports.makeProjectilePurpleHearts = function(d){return "laita violetit sydämet"};
 
-exports.makeProjectileRedHearts = function(d){return "tee punaisia sydämiä"};
+exports.makeProjectileRedHearts = function(d){return "laita punaiset sydämet"};
 
 exports.makeProjectileTooltip = function(d){return "Laita juuri törmännyt ammus katoamaan tai kimpoamaan."};
 
@@ -20653,17 +20652,17 @@ exports.moveDirectionUp = function(d){return "ylös"};
 
 exports.moveDirectionRandom = function(d){return "satunnainen"};
 
-exports.moveDistance25 = function(d){return "25 pikseliä"};
+exports.moveDistance25 = function(d){return "25 kuvapistettä"};
 
-exports.moveDistance50 = function(d){return "50 pikseliä"};
+exports.moveDistance50 = function(d){return "50 kuvapistettä"};
 
-exports.moveDistance100 = function(d){return "100 pikseliä"};
+exports.moveDistance100 = function(d){return "100 kuvapistettä"};
 
-exports.moveDistance200 = function(d){return "200 pikseliä"};
+exports.moveDistance200 = function(d){return "200 kuvapistettä"};
 
-exports.moveDistance400 = function(d){return "400 pikseliä"};
+exports.moveDistance400 = function(d){return "400 kuvapistettä"};
 
-exports.moveDistancePixels = function(d){return "kuvapisteet"};
+exports.moveDistancePixels = function(d){return "kuvapistettä"};
 
 exports.moveDistanceRandom = function(d){return "satunnaisia pikseleitä"};
 
@@ -20725,19 +20724,19 @@ exports.playSoundWinPoint2 = function(d){return "soita pisteen voittamisen toine
 
 exports.playSoundWood = function(d){return "soita puinen ääni"};
 
-exports.positionOutTopLeft = function(d){return "yläpuolelle vasempaan yläreunaan"};
+exports.positionOutTopLeft = function(d){return "vasemman yläkulman yläpuolelle"};
 
-exports.positionOutTopRight = function(d){return "yläpuolelle oikeaan yläreunaan"};
+exports.positionOutTopRight = function(d){return "oikean yläkulman yläpuolelle"};
 
-exports.positionTopOutLeft = function(d){return "vasemmalle yläreunan ulkopuolelle"};
+exports.positionTopOutLeft = function(d){return "yläreunaan, vasemman reunan ulkopuolelle"};
 
-exports.positionTopLeft = function(d){return "vasempaan yläreunaan"};
+exports.positionTopLeft = function(d){return "vasempaan yläkulmaan"};
 
 exports.positionTopCenter = function(d){return "yläreunan keskelle"};
 
 exports.positionTopRight = function(d){return "oikeaan yläreunaan"};
 
-exports.positionTopOutRight = function(d){return "oikealle yläreunan ulkopuolelle"};
+exports.positionTopOutRight = function(d){return "yläreunaan, oikean reunan ulkopuolelle"};
 
 exports.positionMiddleLeft = function(d){return "keskelle vasempaan reunaan"};
 
@@ -20745,19 +20744,19 @@ exports.positionMiddleCenter = function(d){return "keskelle keskitetysti"};
 
 exports.positionMiddleRight = function(d){return "keskelle oikeaan reunaan"};
 
-exports.positionBottomOutLeft = function(d){return "ulkopuolelle, vasempaan alakulmaan"};
+exports.positionBottomOutLeft = function(d){return "alareunaan, vasemman reunan ulkopuolelle"};
 
-exports.positionBottomLeft = function(d){return "alapuolelle vasempaan reunaan"};
+exports.positionBottomLeft = function(d){return "vasempaan alakulmaan"};
 
 exports.positionBottomCenter = function(d){return "keskelle alareunaa"};
 
-exports.positionBottomRight = function(d){return "alapuolelle oikeaan reunaan"};
+exports.positionBottomRight = function(d){return "oikeaan alakulmaan"};
 
-exports.positionBottomOutRight = function(d){return "alapuolelle oikean reunan ulkopuolelle"};
+exports.positionBottomOutRight = function(d){return "alareunaan, oikean reunan ulkopuolelle"};
 
-exports.positionOutBottomLeft = function(d){return "alapuolelle vasempaan alareunaan"};
+exports.positionOutBottomLeft = function(d){return "vasempaan alakulmaan, alareunan alapuolelle"};
 
-exports.positionOutBottomRight = function(d){return "alapuolelle oikeaan alareunaan"};
+exports.positionOutBottomRight = function(d){return "oikeaan alakulmaan, alareunan alapuolelle"};
 
 exports.positionRandom = function(d){return "satunnaiseen sijaintiin"};
 
@@ -21039,7 +21038,7 @@ exports.waitForClick = function(d){return "odota klikkausta"};
 
 exports.waitForRandom = function(d){return "odota kunnes satunnainen"};
 
-exports.waitForHalfSecond = function(d){return "odota kunnes puoli sekuntia on kulunut"};
+exports.waitForHalfSecond = function(d){return "odota kunnes ½ sekuntia on kulunut"};
 
 exports.waitFor1Second = function(d){return "odota kunnes 1 sekunti on kulunut"};
 

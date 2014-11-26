@@ -3514,7 +3514,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -10746,17 +10745,17 @@ exports.parseElement = function(text) {
 
 },{}],40:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.tr=function(n){return "other"}
-exports.compute = function(d){return "compute"};
+exports.compute = function(d){return "hesapla"};
 
-exports.equivalentExpression = function(d){return "Try reordering your arguments to get exactly the same expression."};
+exports.equivalentExpression = function(d){return "Aynı ifadeyi elde etmek için argümanlarınızı yeniden sıralayınız."};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"compute\" block?"};
+exports.extraTopBlocks = function(d){return "Bağlantı yapılmamış blokların var. Bunları \"hesapla\" bloğuna mı ekleyecektiniz?"};
 
-exports.goal = function(d){return "Goal:"};
+exports.goal = function(d){return "Amaç:"};
 
 exports.reinfFeedbackMsg = function(d){return "Bu istediğin şeye benziyor mu ?\"Yeniden Dene\" butonuna basarak çizimini görebilirsin."};
 
-exports.yourExpression = function(d){return "Your expression:"};
+exports.yourExpression = function(d){return "İfadeniz:"};
 
 
 },{"messageformat":53}],41:[function(require,module,exports){

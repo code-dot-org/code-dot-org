@@ -3514,7 +3514,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -10746,17 +10745,17 @@ exports.parseElement = function(text) {
 
 },{}],40:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.he=function(n){return n===1?"one":"other"}
-exports.compute = function(d){return "compute"};
+exports.compute = function(d){return "חשב"};
 
-exports.equivalentExpression = function(d){return "Try reordering your arguments to get exactly the same expression."};
+exports.equivalentExpression = function(d){return "נסה לסדר מחדש את הפרמטרים שלך על מנת לקבל בדיוק אותו ביטוי."};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"compute\" block?"};
+exports.extraTopBlocks = function(d){return "יש לך בלוקים לא מחוברים.  האם התכוונת לצרף אותם לבלוק \"חשב\" ?"};
 
-exports.goal = function(d){return "Goal:"};
+exports.goal = function(d){return "מטרה:"};
 
 exports.reinfFeedbackMsg = function(d){return "האם זה נראה כמו מה שרצית? באפשרותך להקיש על לחצן 'נסה שוב' כדי לראות את הציור שלך."};
 
-exports.yourExpression = function(d){return "Your expression:"};
+exports.yourExpression = function(d){return "הביטוי שלך:"};
 
 
 },{"messageformat":53}],41:[function(require,module,exports){
@@ -10865,7 +10864,7 @@ exports.score = function(d){return "ציון"};
 
 exports.showCodeHeader = function(d){return "הצג קוד"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "הצג בלוקים"};
 
 exports.showGeneratedCode = function(d){return "הצג קוד"};
 
@@ -10895,7 +10894,7 @@ exports.saveToGallery = function(d){return "לשמור את הגלריה שלך"
 
 exports.savedToGallery = function(d){return "נשמר לגלריה שלך!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "מצטערים, אנחנו לא יכולים לשתף תוכנית זו."};
 
 exports.typeFuncs = function(d){return "פונקציות אפשריות: %1"};
 
@@ -10903,7 +10902,7 @@ exports.typeHint = function(d){return "שימו לב כי סוגריים ונק�
 
 exports.workspaceHeader = function(d){return "הרכב את הבלוקים שלך כאן: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "הקלד את קוד JavaScript שלך כאן"};
 
 exports.infinity = function(d){return "אינסוף"};
 

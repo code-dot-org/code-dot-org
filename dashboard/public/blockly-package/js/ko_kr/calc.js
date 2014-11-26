@@ -3514,7 +3514,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -10754,7 +10753,7 @@ exports.extraTopBlocks = function(d){return "붙이지 않은 블럭들이 있�
 
 exports.goal = function(d){return "목표값:"};
 
-exports.reinfFeedbackMsg = function(d){return "\"다시 시도\"를 눌러 계산식을 고칠 수 있습니다."};
+exports.reinfFeedbackMsg = function(d){return "여기서 직접 이야기를 만들 수 있습니다! 계속하거나 다음 퍼즐로 이동하세요!"};
 
 exports.yourExpression = function(d){return "계산식:"};
 
@@ -10849,7 +10848,7 @@ exports.numLinesOfCodeWritten = function(d){return "오! 코드 "+p(d,"numLines"
 
 exports.play = function(d){return "실행"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "인쇄"};
 
 exports.puzzleTitle = function(d){return "퍼즐 "+v(d,"puzzle_number")+"/"+v(d,"stage_total")};
 
@@ -10891,9 +10890,9 @@ exports.hintRequest = function(d){return "도움 보기"};
 
 exports.backToPreviousLevel = function(d){return "이전 퍼즐"};
 
-exports.saveToGallery = function(d){return "나의 갤러리에 저장"};
+exports.saveToGallery = function(d){return "갤러리에 저장"};
 
-exports.savedToGallery = function(d){return "나의 갤러리에 저장되었습니다!"};
+exports.savedToGallery = function(d){return "갤러리에 저장되었습니다!"};
 
 exports.shareFailure = function(d){return "프로그램을 공유할 수 없습니다."};
 
@@ -10927,7 +10926,7 @@ exports.hintHeader = function(d){return "도움말:"};
 
 exports.genericFeedback = function(d){return "어떻게 종료되는지 살펴보고 프로그램을 수정해 보세요."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "만든 작품 확인하기"};
 
 
 },{"messageformat":53}],42:[function(require,module,exports){

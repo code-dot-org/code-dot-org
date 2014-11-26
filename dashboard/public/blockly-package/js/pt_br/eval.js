@@ -6781,7 +6781,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -14101,7 +14100,7 @@ exports.numLinesOfCodeWritten = function(d){return "Você escreveu "+p(d,"numLin
 
 exports.play = function(d){return "jogue"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Imprimir"};
 
 exports.puzzleTitle = function(d){return "Desafio "+v(d,"puzzle_number")+" de "+v(d,"stage_total")};
 
@@ -14143,9 +14142,9 @@ exports.hintRequest = function(d){return "Veja a dica"};
 
 exports.backToPreviousLevel = function(d){return "Voltar ao nível anterior"};
 
-exports.saveToGallery = function(d){return "Salve na sua galeria"};
+exports.saveToGallery = function(d){return "Salvar na galeria"};
 
-exports.savedToGallery = function(d){return "Salvo na sua galeria!"};
+exports.savedToGallery = function(d){return "Salvo na galeria!"};
 
 exports.shareFailure = function(d){return "Desculpe, não é possível compartilhar esse programa."};
 
@@ -14179,7 +14178,7 @@ exports.hintHeader = function(d){return "Aqui vai uma dica:"};
 
 exports.genericFeedback = function(d){return "Veja como você terminou e tente consertar seu programa."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Veja o que eu fiz"};
 
 
 },{"messageformat":62}],50:[function(require,module,exports){
@@ -14190,7 +14189,7 @@ exports.displayBlockTitle = function(d){return "exibir"};
 
 exports.ellipseBlockTitle = function(d){return "elipse (largura, altura, estilo, cor)"};
 
-exports.extraTopBlocks = function(d){return "Alguns dos seus blocos estão soltos. Você pretendia conectá-los ao bloco \"exibir\"?"};
+exports.extraTopBlocks = function(d){return "Alguns de seus blocos estão soltos. Você pretendia conectá-los ao bloco \"exibir\"?"};
 
 exports.overlayBlockTitle = function(d){return "sobreposição (superior, inferior)"};
 
@@ -14198,7 +14197,7 @@ exports.placeImageBlockTitle = function(d){return "lugar-imagem (x, y, imagem)"}
 
 exports.rectangleBlockTitle = function(d){return "retângulo (largura, altura, estilo, cor)"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to edit your drawing."};
+exports.reinfFeedbackMsg = function(d){return "Você pode clicar no botão \"Tentar novamente\" para editar seu desenho."};
 
 exports.rotateImageBlockTitle = function(d){return "rotacionar (graus, imagem)"};
 
@@ -14208,17 +14207,17 @@ exports.squareBlockTitle = function(d){return "quadrado (tamanho, estilo, cor)"}
 
 exports.starBlockTitle = function(d){return "pentagrama (raio, estilo, cor)"};
 
-exports.stringAppendBlockTitle = function(d){return "cadeia de caracteres-acréscimo (primeira, segunda)"};
+exports.stringAppendBlockTitle = function(d){return "string-anexar (primeira, segunda)"};
 
-exports.stringLengthBlockTitle = function(d){return "cadeia de caracteres-comprimento (cadeia de caracteres)"};
+exports.stringLengthBlockTitle = function(d){return "string-comprimento (string)"};
 
-exports.textBlockTitle = function(d){return "texto (cadeia de caracteres, tamanho, cor)"};
+exports.textBlockTitle = function(d){return "texto (string, tamanho, cor)"};
 
 exports.triangleBlockTitle = function(d){return "triângulo (tamanho, estilo, cor)"};
 
 exports.underlayBlockTitle = function(d){return "subjacente (inferior, superior)"};
 
-exports.outline = function(d){return "estrutura de tópicos"};
+exports.outline = function(d){return "definir"};
 
 exports.solid = function(d){return "sólido"};
 

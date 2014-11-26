@@ -6717,7 +6717,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -18777,7 +18776,7 @@ function spriteTotalFrames (index) {
 }
 
 var updateSpeechBubblePath = function (element) {
-  var height = element.getAttribute('height');
+  var height = +element.getAttribute('height');
   var onTop = 'true' === element.getAttribute('onTop');
   var onRight = 'true' === element.getAttribute('onRight');
   element.setAttribute('d',
@@ -20474,7 +20473,7 @@ exports.numLinesOfCodeWritten = function(d){return "Вие написахте "+
 
 exports.play = function(d){return "играй"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Печат"};
 
 exports.puzzleTitle = function(d){return "Пъзел "+v(d,"puzzle_number")+" от "+v(d,"stage_total")};
 
@@ -20516,9 +20515,9 @@ exports.hintRequest = function(d){return "Вижте съвета"};
 
 exports.backToPreviousLevel = function(d){return "Обратно към предишното ниво"};
 
-exports.saveToGallery = function(d){return "Запазете във вашата галерия"};
+exports.saveToGallery = function(d){return "Записване в галерията"};
 
-exports.savedToGallery = function(d){return "Запазено във вашата галерия!"};
+exports.savedToGallery = function(d){return "Записано в галерията!"};
 
 exports.shareFailure = function(d){return "За съжаление, не можем да сподели тази програма."};
 
@@ -20552,7 +20551,7 @@ exports.hintHeader = function(d){return "Ето един съвет:"};
 
 exports.genericFeedback = function(d){return "Вижте какво сте въвели и се опитайте да коригирате вашата програма."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Вижте какво направих"};
 
 
 },{"messageformat":61}],49:[function(require,module,exports){
@@ -20775,15 +20774,15 @@ exports.projectileRedHearts = function(d){return "червени сърца"};
 
 exports.projectileRandom = function(d){return "случаен"};
 
-exports.projectileAnna = function(d){return "Anna"};
+exports.projectileAnna = function(d){return "Анна"};
 
-exports.projectileElsa = function(d){return "Elsa"};
+exports.projectileElsa = function(d){return "Елза"};
 
-exports.projectileHiro = function(d){return "Hiro"};
+exports.projectileHiro = function(d){return "Хиро"};
 
-exports.projectileBaymax = function(d){return "Baymax"};
+exports.projectileBaymax = function(d){return "Баумакс"};
 
-exports.projectileRapunzel = function(d){return "Rapunzel"};
+exports.projectileRapunzel = function(d){return "Рапунцел"};
 
 exports.reinfFeedbackMsg = function(d){return "Може да натиснете бутона \"Опитай отново\", за да се върнете към играта си."};
 
@@ -20877,15 +20876,15 @@ exports.setSpriteHidden = function(d){return "към скрито изображ
 
 exports.setSpriteHideK1 = function(d){return "скрива"};
 
-exports.setSpriteAnna = function(d){return "to a Anna image"};
+exports.setSpriteAnna = function(d){return "към картинката на Анна"};
 
-exports.setSpriteElsa = function(d){return "to a Elsa image"};
+exports.setSpriteElsa = function(d){return "към картинката на Елза"};
 
-exports.setSpriteHiro = function(d){return "to a Hiro image"};
+exports.setSpriteHiro = function(d){return "към картинката на Хиро"};
 
-exports.setSpriteBaymax = function(d){return "to a Baymax image"};
+exports.setSpriteBaymax = function(d){return "към  картинката на Баумакс"};
 
-exports.setSpriteRapunzel = function(d){return "to a Rapunzel image"};
+exports.setSpriteRapunzel = function(d){return "към картинката на Рапунцел"};
 
 exports.setSpriteKnight = function(d){return "изображение на рицар"};
 

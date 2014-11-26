@@ -2626,7 +2626,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -11054,7 +11053,7 @@ exports.numLinesOfCodeWritten = function(d){return "Upravo si napisao "+p(d,"num
 
 exports.play = function(d){return "igraj"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Piši"};
 
 exports.puzzleTitle = function(d){return "Zadatak "+v(d,"puzzle_number")+" od "+v(d,"stage_total")};
 
@@ -11096,9 +11095,9 @@ exports.hintRequest = function(d){return "Pogledaj naputak"};
 
 exports.backToPreviousLevel = function(d){return "Povratak na prethodni nivo"};
 
-exports.saveToGallery = function(d){return "Spremi u svoju galeriju"};
+exports.saveToGallery = function(d){return "Spremi u galeriju"};
 
-exports.savedToGallery = function(d){return "Spremljeno u tvoju galeriju!"};
+exports.savedToGallery = function(d){return "Spremljeno u galeriju!"};
 
 exports.shareFailure = function(d){return "Žalim, ne možemo dijeliti ovaj program."};
 
@@ -11154,7 +11153,7 @@ exports.catActions = function(d){return "Akcije"};
 
 exports.catControl = function(d){return "Petlje"};
 
-exports.catEvents = function(d){return "Events"};
+exports.catEvents = function(d){return "Događaji"};
 
 exports.catLogic = function(d){return "Logika"};
 
@@ -11168,13 +11167,13 @@ exports.catVariables = function(d){return "Varijable"};
 
 exports.continue = function(d){return "Nastavi"};
 
-exports.createHtmlBlock = function(d){return "create html block"};
+exports.createHtmlBlock = function(d){return "napravi html blok"};
 
-exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
+exports.createHtmlBlockTooltip = function(d){return "Stvara blok HTML-a u programu."};
 
 exports.finalLevel = function(d){return "Čestitamo ! Riješili ste posljednji zadatak."};
 
-exports.makeYourOwn = function(d){return "Make Your Own App"};
+exports.makeYourOwn = function(d){return "Napravi vlastiti program"};
 
 exports.nextLevel = function(d){return "Čestitamo! Ovaj zadatak je riješen."};
 
@@ -11184,17 +11183,17 @@ exports.numBlocksNeeded = function(d){return "Ovaj zadatak se može riješiti s 
 
 exports.pause = function(d){return "Pause"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
+exports.reinfFeedbackMsg = function(d){return "Možeš kliknuti na gumb \"Ponovno\" da bi ponovno pokrenuo svoj program."};
 
-exports.repeatForever = function(d){return "repeat forever"};
+exports.repeatForever = function(d){return "ponavljaj zauvijek"};
 
 exports.repeatDo = function(d){return "napravi"};
 
-exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
+exports.repeatForeverTooltip = function(d){return "Stalno ponavlja akcije iz ovog bloka dok god program radi."};
 
-exports.shareWebappTwitter = function(d){return "Check out the app I made. I wrote it myself with @codeorg"};
+exports.shareWebappTwitter = function(d){return "Vidi program koji sam napravio. Napisao sam ga sam uz pomoć @codeorg"};
 
-exports.shareGame = function(d){return "Share your app:"};
+exports.shareGame = function(d){return "Dijeli program:"};
 
 exports.stepIn = function(d){return "Step in"};
 
@@ -11202,9 +11201,9 @@ exports.stepOver = function(d){return "Step over"};
 
 exports.stepOut = function(d){return "Step out"};
 
-exports.turnBlack = function(d){return "turn black"};
+exports.turnBlack = function(d){return "postavi crno"};
 
-exports.turnBlackTooltip = function(d){return "Turns the screen black."};
+exports.turnBlackTooltip = function(d){return "Postavlja crni ekran."};
 
 exports.yes = function(d){return "Da"};
 

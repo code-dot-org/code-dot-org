@@ -2626,7 +2626,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -11041,7 +11040,7 @@ exports.numLinesOfCodeWritten = function(d){return "Þú náðir að skrifa "+p(
 
 exports.play = function(d){return "spila"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Prenta"};
 
 exports.puzzleTitle = function(d){return "Þraut "+v(d,"puzzle_number")+" af "+v(d,"stage_total")};
 
@@ -11083,9 +11082,9 @@ exports.hintRequest = function(d){return "Sjá vísbendingu"};
 
 exports.backToPreviousLevel = function(d){return "Til baka í fyrri áfanga"};
 
-exports.saveToGallery = function(d){return "Vista í safn þitt"};
+exports.saveToGallery = function(d){return "Vista í gallerí"};
 
-exports.savedToGallery = function(d){return "Vistað í safn þitt!"};
+exports.savedToGallery = function(d){return "Vistað í galleríi!"};
 
 exports.shareFailure = function(d){return "Því miður getum við ekki deilt þessu forriti."};
 
@@ -11111,7 +11110,7 @@ exports.when = function(d){return "þegar"};
 
 exports.whenRun = function(d){return "þegar keyrt"};
 
-exports.tryHOC = function(d){return "Prófa Kóðun í klukkustund"};
+exports.tryHOC = function(d){return "Prófa Klukkustund kóðunar"};
 
 exports.signup = function(d){return "Skráning á inngangsnámskeiðið"};
 
@@ -11119,7 +11118,7 @@ exports.hintHeader = function(d){return "Vísbending:"};
 
 exports.genericFeedback = function(d){return "Athugaðu hvernig þetta fór og reyndu að laga forritið."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Skoðaðu það sem ég bjó til"};
 
 
 },{"messageformat":52}],40:[function(require,module,exports){
@@ -11142,7 +11141,7 @@ exports.catVariables = function(d){return "Breytur"};
 
 exports.continue = function(d){return "Halda áfram"};
 
-exports.createHtmlBlock = function(d){return "búa til html bálk"};
+exports.createHtmlBlock = function(d){return "búa til html"};
 
 exports.createHtmlBlockTooltip = function(d){return "Býr til bálk af HTML kóða í appinu."};
 
@@ -11156,7 +11155,7 @@ exports.no = function(d){return "Nei"};
 
 exports.numBlocksNeeded = function(d){return "Þessa þraut er hægt að leysa með %1 kubbum."};
 
-exports.pause = function(d){return "Hlé"};
+exports.pause = function(d){return "Rof"};
 
 exports.reinfFeedbackMsg = function(d){return "Þú getur smellt á \"Reyna aftur\" hnappinn til að fara aftur í að keyra appið þitt."};
 
@@ -11170,11 +11169,11 @@ exports.shareWebappTwitter = function(d){return "Kíktu á appið sem ég bjó t
 
 exports.shareGame = function(d){return "Deila appinu þínu:"};
 
-exports.stepIn = function(d){return "Step in"};
+exports.stepIn = function(d){return "Stíga inn í"};
 
-exports.stepOver = function(d){return "Step over"};
+exports.stepOver = function(d){return "Stíga yfir"};
 
-exports.stepOut = function(d){return "Step out"};
+exports.stepOut = function(d){return "Stíga út úr"};
 
 exports.turnBlack = function(d){return "lita svart"};
 

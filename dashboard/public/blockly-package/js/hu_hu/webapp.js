@@ -2626,7 +2626,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -11156,7 +11155,7 @@ exports.no = function(d){return "Nem"};
 
 exports.numBlocksNeeded = function(d){return "Ez a feladat a(z) %1 blokkal megoldható."};
 
-exports.pause = function(d){return "Szünet"};
+exports.pause = function(d){return "Törés"};
 
 exports.reinfFeedbackMsg = function(d){return "Megnyomhatod az \"Újrapróbálás\" gombot hogy ismét futtasd az appod."};
 

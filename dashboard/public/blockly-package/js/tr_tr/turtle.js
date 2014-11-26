@@ -2626,7 +2626,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -14823,7 +14822,7 @@ exports.showMe = function(d){return "Göster"};
 
 exports.showTurtle = function(d){return "Sanatçıyı göster"};
 
-exports.sizeParameter = function(d){return "size"};
+exports.sizeParameter = function(d){return "boyut"};
 
 exports.step = function(d){return "adım"};
 

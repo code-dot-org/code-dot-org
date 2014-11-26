@@ -2626,7 +2626,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -11057,7 +11056,7 @@ exports.score = function(d){return "score"};
 
 exports.showCodeHeader = function(d){return "Code weergeven"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Toon blokken"};
 
 exports.showGeneratedCode = function(d){return "Code weergeven"};
 
@@ -11095,7 +11094,7 @@ exports.typeHint = function(d){return "Merk op dat de haakjes en puntkomma's ver
 
 exports.workspaceHeader = function(d){return "Zet je blokken hier in elkaar:"};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Typ hier uw JavaScript-code"};
 
 exports.infinity = function(d){return "Oneindig"};
 

@@ -5334,7 +5334,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -12355,7 +12354,7 @@ exports.whenDown = function(d){return "when Down arrow"};
 
 exports.whenDownTooltip = function(d){return "Execute the actions below when the Down arrow button is pressed."};
 
-exports.whenGameStarts = function(d){return "when game starts"};
+exports.whenGameStarts = function(d){return "oyun başladıqda"};
 
 exports.whenGameStartsTooltip = function(d){return "Execute the actions below when the game starts."};
 
@@ -12436,7 +12435,7 @@ exports.emptyBlocksErrorMsg = function(d){return "\"Təkrar\" və ya \"Əgər\" 
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "The function block needs to have other blocks inside it to work."};
 
-exports.extraTopBlocks = function(d){return "You have extra blocks that aren't attached to an event block."};
+exports.extraTopBlocks = function(d){return "Qoşulmamış bloklarınız var. Onları \"icra etdikdə\" blokuna qoşmaq istəmirsiniz?"};
 
 exports.finalStage = function(d){return "Təbriklər! Siz son mərhələni başa vurdunuz."};
 
@@ -12462,7 +12461,7 @@ exports.makeYourOwnFlappy = function(d){return "Make Your Own Flappy Game"};
 
 exports.missingBlocksErrorMsg = function(d){return "Bu tapmacanı həll etmək üçün aşağıdakı bloklardan bir və ya bir neçəsini sınaqdan keçirin."};
 
-exports.nextLevel = function(d){return "Təbriklər! Tapmaca "+v(d,"puzzleNumber")+" tapıldı."};
+exports.nextLevel = function(d){return "Təbriklər! Siz "+v(d,"puzzleNumber")+" nömrəli tapmacanı tamamladınız."};
 
 exports.nextLevelTrophies = function(d){return "Təbriklər! Siz "+v(d,"puzzleNumber")+" nömrəli tapmacanı tamamladınız və "+p(d,"numTrophies",0,"az",{"one":"bir kubok","other":n(d,"numTrophies")+" kubok"})+" qazandınız."};
 
@@ -12544,7 +12543,7 @@ exports.watchVideo = function(d){return "Vidəo izle"};
 
 exports.when = function(d){return "when"};
 
-exports.whenRun = function(d){return "when run"};
+exports.whenRun = function(d){return "icra etdikdə"};
 
 exports.tryHOC = function(d){return "Kod Saatında özünüzü sınayın"};
 

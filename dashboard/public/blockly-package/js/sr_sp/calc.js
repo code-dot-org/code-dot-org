@@ -3514,7 +3514,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -10759,17 +10758,17 @@ var MessageFormat = require("messageformat");MessageFormat.locale.sr = function 
   }
   return 'other';
 };
-exports.compute = function(d){return "compute"};
+exports.compute = function(d){return "рачунај"};
 
-exports.equivalentExpression = function(d){return "Try reordering your arguments to get exactly the same expression."};
+exports.equivalentExpression = function(d){return "Покушајте да прерасподелите своје аргументе како би добили идентичан израз."};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"compute\" block?"};
+exports.extraTopBlocks = function(d){return "Имате неспојене блокове. Да ли сте мислили да спојите ове на блок \"рачунај\"?"};
 
-exports.goal = function(d){return "Goal:"};
+exports.goal = function(d){return "Циљ:"};
 
 exports.reinfFeedbackMsg = function(d){return "Да ли овако изгледа оно што сте желјели? Можете изабрати опцију \"Try again\" да видите свој цртеж."};
 
-exports.yourExpression = function(d){return "Your expression:"};
+exports.yourExpression = function(d){return "Ваш израз:"};
 
 
 },{"messageformat":53}],41:[function(require,module,exports){

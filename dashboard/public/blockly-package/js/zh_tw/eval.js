@@ -6781,7 +6781,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -14153,7 +14152,7 @@ exports.typeFuncs = function(d){return "可用函數：%1"};
 
 exports.typeHint = function(d){return "請注意\"括弧\"和\"分號\"都是必須的。"};
 
-exports.workspaceHeader = function(d){return "在此組合您的區塊"};
+exports.workspaceHeader = function(d){return "在這裡組合你的程式積木："};
 
 exports.workspaceHeaderJavaScript = function(d){return "在此輸入您的 JavaScript 代碼"};
 

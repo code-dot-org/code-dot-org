@@ -6781,7 +6781,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -14101,7 +14100,7 @@ exports.numLinesOfCodeWritten = function(d){return "Þú náðir að skrifa "+p(
 
 exports.play = function(d){return "spila"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Prenta"};
 
 exports.puzzleTitle = function(d){return "Þraut "+v(d,"puzzle_number")+" af "+v(d,"stage_total")};
 
@@ -14143,9 +14142,9 @@ exports.hintRequest = function(d){return "Sjá vísbendingu"};
 
 exports.backToPreviousLevel = function(d){return "Til baka í fyrri áfanga"};
 
-exports.saveToGallery = function(d){return "Vista í safn þitt"};
+exports.saveToGallery = function(d){return "Vista í gallerí"};
 
-exports.savedToGallery = function(d){return "Vistað í safn þitt!"};
+exports.savedToGallery = function(d){return "Vistað í galleríi!"};
 
 exports.shareFailure = function(d){return "Því miður getum við ekki deilt þessu forriti."};
 
@@ -14171,7 +14170,7 @@ exports.when = function(d){return "þegar"};
 
 exports.whenRun = function(d){return "þegar keyrt"};
 
-exports.tryHOC = function(d){return "Prófa Kóðun í klukkustund"};
+exports.tryHOC = function(d){return "Prófa Klukkustund kóðunar"};
 
 exports.signup = function(d){return "Skráning á inngangsnámskeiðið"};
 
@@ -14179,7 +14178,7 @@ exports.hintHeader = function(d){return "Vísbending:"};
 
 exports.genericFeedback = function(d){return "Athugaðu hvernig þetta fór og reyndu að laga forritið."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Skoðaðu það sem ég bjó til"};
 
 
 },{"messageformat":62}],50:[function(require,module,exports){
@@ -14198,7 +14197,7 @@ exports.placeImageBlockTitle = function(d){return "setja-mynd (x, y, mynd)"};
 
 exports.rectangleBlockTitle = function(d){return "rétthyrningur (breidd, hæð, gerð, litur)"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to edit your drawing."};
+exports.reinfFeedbackMsg = function(d){return "Þú getur ýtt á \"Reyna aftur\" hnappinn til að breyta teikningunni."};
 
 exports.rotateImageBlockTitle = function(d){return "snúa (gráður, mynd)"};
 
