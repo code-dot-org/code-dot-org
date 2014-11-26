@@ -89,7 +89,6 @@
 .course-carousel .slide img {
   width: 100%;
   height: 100%;
-  display: block;
 }
 .course-carousel .slide .slide-text {
   float: left;

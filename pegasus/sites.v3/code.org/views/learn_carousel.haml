@@ -47,6 +47,8 @@
                     %a{:href=>tutorial[:teachers_notes], :target=>'blank'}<
                       = I18n.t(:teachers_notes)
               %a{:href=>url, :target=>'_blank'}<
+                -if tutorial[:code] == "codeorg"
+                  %img.desktop-feature{:src=>"/images/scrat_standing.png", :style=>'width:60px; height:53px; position:absolute; right: 134px; bottom: 7px;'}
                 .btn-carousel-slide=I18n.t(:go)
             -count += 1
 
