@@ -1446,6 +1446,7 @@ Studio.execute = function() {
   var handlers = [];
   if (BlocklyApps.usingBlockly) {
     registerHandlers(handlers, 'when_run', 'whenGameStarts');
+    registerHandlers(handlers, 'functional_start_setValue', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackground', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setSpeeds', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackgroundAndSpeeds',
