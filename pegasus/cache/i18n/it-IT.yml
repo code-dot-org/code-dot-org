@@ -475,12 +475,9 @@
   groklearning_platformtext: Browser Web moderni
   quorum_platformtext: Browser web moderni. I lettori di schermo sono supportati
   codespark_platformtext: iOS, Android (o browser web)
-  kodable_platformtext: Kodable is a self-guided iPad game that introduces kids 5+
-    to programming basics. Having a teacher or parent nearby is optimal, but not necessary.
+  kodable_platformtext: iPad
   tynkerapp_platformtext: iPad, tablet Android
-  hopscotch_platformtext: Student-guided tutorial on the iPad using the Hopscotch
-    programming language. Students will build games and apps for their iPad on their
-    iPad. Students can work individually or with friends (up to 3 per iPad).
+  hopscotch_platformtext: iPad
   robomindnl_platformtext: Browser web moderni, Browser web mobili
   flappy_platformtext: Browser moderni, smartphone, Tablet
   bitsbox_platformtext: Browser Web moderni
