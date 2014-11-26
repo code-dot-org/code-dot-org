@@ -169,6 +169,34 @@
           Collision Detection and the Distance Formula: Collision Detection and the
             Distance Formula
           'Play Lab: Collision Detection': 'Play Lab: Collision Detection'
+          'Unplugged: Ninja Cat and the Coordinate Plane': 'Unplugged: Ninja Cat and
+            the Coordinate Plane'
+          'Eval: Strings and Images': 'Eval: Strings and Images'
+          'Unplugged: Contracts': 'Unplugged: Contracts'
+          'Eval: Writing Contracts': 'Eval: Writing Contracts'
+          'Unplugged: The Design Recipe': 'Unplugged: The Design Recipe'
+          'Eval: Defining Functions': 'Eval: Fast Functions'
+          'Eval: Functions': 'Eval: Design Recipe'
+          'Unplugged: Booleans': 'Unplugged: Booleans'
+          'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals
+            and Piecewise Functions'
+          'Eval: Conditionals': 'Eval: Conditionals'
+          'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision
+            Detection and the Distance Formula'
+          'Calc: Evaluation Blocks': 'Calc: Evaluation Blocks'
+          'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Games
+            and Coordinate Planes'
+          'Eval: Boolean Operators': 'Eval: Boolean Operators'
+          Blocks to Math: Blocks to Math
+          'Play Lab: Defining Variables (Big Game)': 'Play Lab: Defining Variables
+            (Big Game)'
+          'Play Lab: Animation (Big Game)': 'Play Lab: Animation (Big Game)'
+          'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Big Game)'
+          'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
+            (Big Game)'
+          'Eval: Fast Functions': 'Eval: Fast Functions'
+          'Play Lab: Design Recipe': 'Play Lab: Design Recipe'
+          'Eval: Design Recipe': 'Eval: Design Recipe'
         playlab:
           title: Play Lab
           description: Lag en historie eller spill med Spill Labben!
@@ -248,3 +276,38 @@
           'Bee: Nested Loops': 'Bee: Nested Loops'
           'Artist: Functions': 'Artist: Functions'
           'Bee: Debugging': 'Bee: Debugging'
+        course4pre:
+          description_short: A brief rampup of concepts for students who have not
+            taken Course 2 and 3.
+          Course 4 Prerequisite: Course 4 Prerequisite
+          'Maze: Sequence': 'Labyrint: sekvens'
+          'Artist: Sequence': 'Artist: Sequence'
+          'Artist: Loops': 'Artist: Loops'
+          'Bee: Conditionals': 'Bee: Conditionals'
+          'Artist: Nested Loops': 'Artist: Nested Loops'
+          'Farmer: While Loops': 'Farmer: While Loops'
+          'Bee: Nested Loops': 'Bee: Nested Loops'
+          'Artist: Functions': 'Artist: Functions'
+          'Bee: Debugging': 'Bee: Debugging'
+        Course4pre (Case Conflict):
+          description_short: A brief rampup of concepts for students who have not
+            taken Course 2 and 3.
+          Course 4 Prerequisite: Course 4 Prerequisite
+          'Maze: Sequence': 'Labyrint: sekvens'
+          'Artist: Sequence': 'Artist: Sequence'
+          'Artist: Loops': 'Artist: Loops'
+          'Bee: Conditionals': 'Bee: Conditionals'
+          'Artist: Nested Loops': 'Artist: Nested Loops'
+          'Farmer: While Loops': 'Farmer: While Loops'
+          'Bee: Nested Loops': 'Bee: Nested Loops'
+          'Artist: Functions': 'Artist: Functions'
+          'Bee: Debugging': 'Bee: Debugging'
+        usability:
+          Intro: Intro
+          Variables and For Loops: Variables and For Loops
+          Functions and Functions with Parameters: Functions and Functions with Parameters
+          title: Usability Testing
+          description_short: ''
+          description: A selection of Course 4 levels for usability testing.
+          Variables: Variabler
+          For Loops: For Loops

@@ -778,16 +778,14 @@ BlocklyApps.init = function(config) {
   });
   window.addEventListener('resize', BlocklyApps.onResize);
 
-  // call initial onResize() asynchronously - need 100ms delay to work
-  // around relayout which changes height on the left side to the proper
-  // value
+  // Call initial onResize() asynchronously - need 10ms delay to work around
+  // relayout which changes height on the left side to the proper value
   window.setTimeout(function() {
-      BlocklyApps.onResize();
-      var event = document.createEvent('UIEvents');
-      event.initEvent('resize', true, true);  // event type, bubbling, cancelable
-      window.dispatchEvent(event);
-    },
-    100);
+    BlocklyApps.onResize();
+    var event = document.createEvent('UIEvents');
+    event.initEvent('resize', true, true);  // event type, bubbling, cancelable
+    window.dispatchEvent(event);
+  }, 10);
 
   BlocklyApps.reset(true);
 
@@ -1025,7 +1023,15 @@ BlocklyApps.onResize = function() {
 
   div.style.top = divParent.offsetTop + 'px';
   var fullWorkspaceWidth = parentWidth - (gameWidth + WORKSPACE_PLAYSPACE_GAP);
+  var oldWidth = parseInt(div.style.width, 10) || div.getBoundingClientRect().width;
   div.style.width = fullWorkspaceWidth + 'px';
+
+  // Keep blocks static relative to the right edge in RTL mode
+  if (BlocklyApps.usingBlockly && Blockly.RTL && (fullWorkspaceWidth - oldWidth !== 0)) {
+    Blockly.mainBlockSpace.getTopBlocks().forEach(function(topBlock) {
+      topBlock.moveBy(fullWorkspaceWidth - oldWidth, 0);
+    });
+  }
 
   if (BlocklyApps.isRtl()) {
     div.style.marginRight = (gameWidth + WORKSPACE_PLAYSPACE_GAP) + 'px';
@@ -1051,58 +1057,40 @@ BlocklyApps.onResize = function() {
   BlocklyApps.resizeHeaders(fullWorkspaceWidth);
 };
 
-// |         toolbox-header           | workspace-header  | show-code-header |
+// |          toolbox-header          | workspace-header  | show-code-header |
 // |
-// | categoriesWidth |  toolboxWidth  |
+// |           toolboxWidth           |
 // |                 |         <--------- workspaceWidth ---------->         |
 // |         <---------------- fullWorkspaceWidth ----------------->         |
 BlocklyApps.resizeHeaders = function (fullWorkspaceWidth) {
-  var categoriesWidth = 0;
-  var categories = BlocklyApps.editCode ?
-      document.querySelector('.droplet-palette-wrapper') :
-      Blockly.mainBlockSpaceEditor.toolbox &&
-      Blockly.mainBlockSpaceEditor.toolbox.HtmlDiv;
-  if (categories) {
+  var minWorkspaceWidthForShowCode = BlocklyApps.editCode ? 250 : 450;
+  var toolboxWidth = 0;
+  if (BlocklyApps.editCode) {
     // If in the droplet editor, but not using blocks, keep categoryWidth at 0
     if (!BlocklyApps.editCode || BlocklyApps.editor.currentlyUsingBlocks) {
-      // set CategoryWidth based on the block toolbox/palette width:
-      categoriesWidth = parseInt(window.getComputedStyle(categories).width, 10);
+      // Set toolboxWidth based on the block palette width:
+      var categories = document.querySelector('.droplet-palette-wrapper');
+      toolboxWidth = parseInt(window.getComputedStyle(categories).width, 10);
     }
-  }
-
-  var workspaceWidth;
-  var toolboxWidth;
-  if (BlocklyApps.usingBlockly) {
-    workspaceWidth = Blockly.mainBlockSpaceEditor.getBlockSpaceWidth();
+  } else if (BlocklyApps.usingBlockly) {
     toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
   }
-  else {
-    workspaceWidth = fullWorkspaceWidth - categoriesWidth;
-    toolboxWidth = 0;
-  }
 
-  var headers = document.getElementById('headers');
-  var workspaceHeader = document.getElementById('workspace-header');
-  var toolboxHeader = document.getElementById('toolbox-header');
   var showCodeHeader = document.getElementById('show-code-header');
-
-  var showCodeWidth;
-  var minWorkspaceWidthForShowCode = BlocklyApps.editCode ? 250 : 450;
+  var showCodeWidth = 0;
   if (BlocklyApps.enableShowCode &&
-      (workspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
+      (fullWorkspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
     showCodeWidth = parseInt(window.getComputedStyle(showCodeHeader).width, 10);
     showCodeHeader.style.display = "";
   }
   else {
-    showCodeWidth = 0;
     showCodeHeader.style.display = "none";
   }
 
-  headers.style.width = (categoriesWidth + workspaceWidth) + 'px';
-  toolboxHeader.style.width = (categoriesWidth + toolboxWidth) + 'px';
-  workspaceHeader.style.width = (workspaceWidth -
-                                 toolboxWidth -
-                                 showCodeWidth) + 'px';
+  document.getElementById('headers').style.width = fullWorkspaceWidth + 'px';
+  document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
+  document.getElementById('workspace-header').style.width =
+      (fullWorkspaceWidth - toolboxWidth - showCodeWidth) + 'px';
 };
 
 /**
@@ -6729,7 +6717,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -15077,6 +15064,23 @@ exports.install = function(blockly, blockInstallOptions) {
   // Install functional start blocks
   //
 
+  blockly.Blocks.functional_start_setValue = {
+    init: function() {
+      var blockName = 'start (value)';
+      var blockType = 'none';
+      var blockArgs = [{name: 'VALUE', type: 'Number'}];
+      initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
+    }
+  };
+
+  generator.functional_start_setValue = function() {
+    // Adapted from Blockly.JavaScript.variables_set.
+    var argument0 = Blockly.JavaScript.statementToCode(this, 'VALUE',
+        Blockly.JavaScript.ORDER_ASSIGNMENT) || '0';
+    var varName = Blockly.JavaScript.translateVarName('startValue');
+    return varName + ' = ' + argument0 + ';\n';
+  };
+
   installFunctionalApiCallBlock(blockly, generator, {
     blockName: 'functional_start_dummyOnMove',
     blockTitle: 'on-move (on-screen)',
@@ -18563,6 +18567,7 @@ Studio.execute = function() {
   var handlers = [];
   if (BlocklyApps.usingBlockly) {
     registerHandlers(handlers, 'when_run', 'whenGameStarts');
+    registerHandlers(handlers, 'functional_start_setValue', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackground', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setSpeeds', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackgroundAndSpeeds',
@@ -18771,7 +18776,7 @@ function spriteTotalFrames (index) {
 }
 
 var updateSpeechBubblePath = function (element) {
-  var height = element.getAttribute('height');
+  var height = +element.getAttribute('height');
   var onTop = 'true' === element.getAttribute('onTop');
   var onRight = 'true' === element.getAttribute('onRight');
   element.setAttribute('d',
@@ -20416,11 +20421,11 @@ exports.catMath = function(d){return "Matematyka"};
 
 exports.catProcedures = function(d){return "Funkcje"};
 
-exports.catText = function(d){return "tekst"};
+exports.catText = function(d){return "Tekst"};
 
 exports.catVariables = function(d){return "Zmienne"};
 
-exports.codeTooltip = function(d){return "Zobacz wygenerowany kod JavaScript."};
+exports.codeTooltip = function(d){return "Zobacz wygenerowany kod w JavaScript."};
 
 exports.continue = function(d){return "Dalej"};
 
@@ -20428,21 +20433,21 @@ exports.dialogCancel = function(d){return "Anuluj"};
 
 exports.dialogOK = function(d){return "OK"};
 
-exports.directionNorthLetter = function(d){return "Północ"};
+exports.directionNorthLetter = function(d){return "N (Północ)"};
 
-exports.directionSouthLetter = function(d){return "Południe"};
+exports.directionSouthLetter = function(d){return "S (Południe)"};
 
-exports.directionEastLetter = function(d){return "Wschód"};
+exports.directionEastLetter = function(d){return "E (Wschód)"};
 
-exports.directionWestLetter = function(d){return "Zachód"};
+exports.directionWestLetter = function(d){return "W (Zachód)"};
 
 exports.end = function(d){return "koniec"};
 
-exports.emptyBlocksErrorMsg = function(d){return "Blok powtórz lub blok jeśli musi zawierać inne bloki w środku, by poprawnie działać. Upewnij się, czy wewnętrzny blok pasuje do zewnętrznego."};
+exports.emptyBlocksErrorMsg = function(d){return "Blok powtórz lub blok jeśli muszą zawierać inne bloki, by poprawnie działać. Upewnij się, czy wewnętrzny blok pasuje do zewnętrznego."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "Funkcja blokowania musi mieć inne bloki wewnątrz do pracy."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Blok funkcji musi zawierać inne bloki, by działał."};
 
-exports.extraTopBlocks = function(d){return "Posiadasz niezałączone bloki. Czy chciałeś je załączyć do bloku \"po uruchomieniu\"?"};
+exports.extraTopBlocks = function(d){return "Masz niezałączone bloki. Czy chcesz je załączyć do bloku \"po uruchomieniu\"?"};
 
 exports.finalStage = function(d){return "Gratulacje! Ukończyłeś ostatni etap."};
 
@@ -20450,7 +20455,7 @@ exports.finalStageTrophies = function(d){return "Gratulacje! Ukończyłeś ostat
 
 exports.finish = function(d){return "Koniec"};
 
-exports.generatedCodeInfo = function(d){return "Nawet najlepsze uczelnie uczą kodowania opartego o bloki (np. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Ale bloki które zostały użyte, można również zobaczyć w JavaScript, jednym z najbardziej powszechnie stosowanym języku programowania na świecie:"};
+exports.generatedCodeInfo = function(d){return "Nawet najlepsze uczelnie uczą kodowania opartego o bloki (np. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Ale bloki, które użyłeś, można również znaleźć w JavaScript, w jednym z najpowszechniej stosowanym języku programowania na świecie:"};
 
 exports.hashError = function(d){return "Przepraszamy, '%1' nie odpowiada żadnemu zapisanemu programowi."};
 
@@ -20458,7 +20463,7 @@ exports.help = function(d){return "Pomoc"};
 
 exports.hintTitle = function(d){return "Podpowiedź:"};
 
-exports.jump = function(d){return "skacz"};
+exports.jump = function(d){return "skocz"};
 
 exports.levelIncompleteError = function(d){return "Używasz wszystkich niezbędnych rodzajów bloków, ale w niewłaściwy sposób."};
 
@@ -20472,17 +20477,17 @@ exports.nextLevel = function(d){return "Gratulacje! Rozwiązałeś Łamigłówk�
 
 exports.nextLevelTrophies = function(d){return "Gratulacje! Rozwiązałeś Łamigłówkę nr "+v(d,"puzzleNumber")+" i wygrałeś "+p(d,"numTrophies",0,"pl",{"one":"trofeum","other":n(d,"numTrophies")+" trofea"})+"."};
 
-exports.nextStage = function(d){return "Gratulacje! Ukonczyłeś etap "+v(d,"stageName")+"."};
+exports.nextStage = function(d){return "Gratulacje! Ukończyłeś etap "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "Gratulacje! Ukończyłeś etap "+v(d,"stageName")+" i wygrałeś "+p(d,"numTrophies",0,"pl",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
+exports.nextStageTrophies = function(d){return "Gratulacje! Ukończyłeś etap "+v(d,"stageName")+" i wygrałeś "+p(d,"numTrophies",0,"pl",{"one":"trofeum","other":n(d,"numTrophies")+" trofea"})+"."};
 
-exports.numBlocksNeeded = function(d){return "Gratulacje! Rozwiązałeś Łamigłówkę nr "+v(d,"puzzleNumber")+". (Jednakże, mogłeś użyć jedynie "+p(d,"numBlocks",0,"pl",{"one":"1 blok","other":n(d,"numBlocks")+" bloków"})+")"};
+exports.numBlocksNeeded = function(d){return "Gratulacje! Rozwiązałeś Łamigłówkę nr "+v(d,"puzzleNumber")+". (Jednakże, mogłeś użyć jedynie "+p(d,"numBlocks",0,"pl",{"one":"blok","other":n(d,"numBlocks")+" bloki"})+")"};
 
-exports.numLinesOfCodeWritten = function(d){return "Właśnie napisałeś "+p(d,"numLines",0,"pl",{"one":"1 linię","other":n(d,"numLines")+" linii"})+" kodu!"};
+exports.numLinesOfCodeWritten = function(d){return "Właśnie napisałeś "+p(d,"numLines",0,"pl",{"one":"linię","other":n(d,"numLines")+" linii"})+" kodu!"};
 
-exports.play = function(d){return "Zagraj"};
+exports.play = function(d){return "zagraj"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Drukuj"};
 
 exports.puzzleTitle = function(d){return "Łamigłówka "+v(d,"puzzle_number")+" z "+v(d,"stage_total")};
 
@@ -20492,43 +20497,43 @@ exports.resetProgram = function(d){return "Zresetuj"};
 
 exports.runProgram = function(d){return "Uruchom"};
 
-exports.runTooltip = function(d){return "Uruchom program zdefiniowany poprzez bloki w miejscu roboczym."};
+exports.runTooltip = function(d){return "Uruchom program zdefiniowany za pomocą bloków w miejscu roboczym."};
 
 exports.score = function(d){return "wynik"};
 
-exports.showCodeHeader = function(d){return "Pokaż kod"};
+exports.showCodeHeader = function(d){return "Pokaż Kod"};
 
 exports.showBlocksHeader = function(d){return "Pokaż Bloki"};
 
 exports.showGeneratedCode = function(d){return "Pokaż kod"};
 
-exports.subtitle = function(d){return "graficzne środowisko programistyczne"};
+exports.subtitle = function(d){return "środowisko wizualnego programowania"};
 
-exports.textVariable = function(d){return "Tekst"};
+exports.textVariable = function(d){return "tekst"};
 
-exports.tooFewBlocksMsg = function(d){return "Używasz wszystkich wymaganych bloków, ale spróbuj użyć ich więcej, aby ukończyć łamigłówkę."};
+exports.tooFewBlocksMsg = function(d){return "Używasz wszystkich wymaganych rodzajów bloków, ale spróbuj użyć ich więcej, aby ukończyć łamigłówkę."};
 
 exports.tooManyBlocksMsg = function(d){return "Ta łamigłówka może być rozwiązana przy pomocy bloków <x id='START_SPAN'/><x id='END_SPAN'/>."};
 
 exports.tooMuchWork = function(d){return "Spowodowałeś, że miałem dużo pracy. Czy możesz zmniejszyć liczbę powtórzeń?"};
 
-exports.toolboxHeader = function(d){return "bloki"};
+exports.toolboxHeader = function(d){return "Bloki"};
 
-exports.openWorkspace = function(d){return "Jak to działa"};
+exports.openWorkspace = function(d){return "Jak to Działa"};
 
-exports.totalNumLinesOfCodeWritten = function(d){return "Najlepszy zanotowany dotąd wynik: "+p(d,"numLines",0,"pl",{"one":"1 linia","other":n(d,"numLines")+" linii"})+" kodu."};
+exports.totalNumLinesOfCodeWritten = function(d){return "Sumaryczny wynik: "+p(d,"numLines",0,"pl",{"one":"1 linia","other":n(d,"numLines")+" linii"})+" kodu."};
 
 exports.tryAgain = function(d){return "Spróbuj ponownie"};
 
-exports.hintRequest = function(d){return "Zobacz podpowiedź"};
+exports.hintRequest = function(d){return "Zobacz wskazówkę"};
 
 exports.backToPreviousLevel = function(d){return "Wróć do poprzedniego poziomu"};
 
-exports.saveToGallery = function(d){return "Zapisz do swojej galerii"};
+exports.saveToGallery = function(d){return "Zapisz w galerii"};
 
-exports.savedToGallery = function(d){return "Zapisane w twojej galerii!"};
+exports.savedToGallery = function(d){return "Zapisane w galerii!"};
 
-exports.shareFailure = function(d){return "Przepraszamy, nie możemy udostępnić tego programu."};
+exports.shareFailure = function(d){return "Przepraszamy, ale nie możemy udostępnić tego programu."};
 
 exports.typeFuncs = function(d){return "Dostępne funkcje:%1"};
 
@@ -20536,7 +20541,7 @@ exports.typeHint = function(d){return "Zauważ, że nawiasy i średniki są wyma
 
 exports.workspaceHeader = function(d){return "Połącz swoje bloki tutaj: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Wpisz swój kod JavaScript tutaj"};
+exports.workspaceHeaderJavaScript = function(d){return "Wpisz tutaj swój kod w JavaScript"};
 
 exports.infinity = function(d){return "Nieskończoność"};
 
@@ -20548,19 +20553,19 @@ exports.wantToLearn = function(d){return "Czy chcesz nauczyć się kodowania (pr
 
 exports.watchVideo = function(d){return "Obejrzyj wideo"};
 
-exports.when = function(d){return "Kiedy"};
+exports.when = function(d){return "kiedy"};
 
 exports.whenRun = function(d){return "po uruchomieniu"};
 
-exports.tryHOC = function(d){return "Weź udział w Godzinie kodowania (the Hour Code)"};
+exports.tryHOC = function(d){return "Weź udział w Godzinie Kodowania (the Hour of Code)"};
 
 exports.signup = function(d){return "Zapisz się na kurs wprowadzający"};
 
 exports.hintHeader = function(d){return "Oto wskazówka:"};
 
-exports.genericFeedback = function(d){return "Zobacz jak skończyłeś, i spróbuj naprawić swój program."};
+exports.genericFeedback = function(d){return "Zobacz jak zakończyłeś i spróbuj naprawić swój program."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Sprawdź, co zrobiłem"};
 
 
 },{"messageformat":61}],49:[function(require,module,exports){

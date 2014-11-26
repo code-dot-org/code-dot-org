@@ -778,16 +778,14 @@ BlocklyApps.init = function(config) {
   });
   window.addEventListener('resize', BlocklyApps.onResize);
 
-  // call initial onResize() asynchronously - need 100ms delay to work
-  // around relayout which changes height on the left side to the proper
-  // value
+  // Call initial onResize() asynchronously - need 10ms delay to work around
+  // relayout which changes height on the left side to the proper value
   window.setTimeout(function() {
-      BlocklyApps.onResize();
-      var event = document.createEvent('UIEvents');
-      event.initEvent('resize', true, true);  // event type, bubbling, cancelable
-      window.dispatchEvent(event);
-    },
-    100);
+    BlocklyApps.onResize();
+    var event = document.createEvent('UIEvents');
+    event.initEvent('resize', true, true);  // event type, bubbling, cancelable
+    window.dispatchEvent(event);
+  }, 10);
 
   BlocklyApps.reset(true);
 
@@ -1025,7 +1023,15 @@ BlocklyApps.onResize = function() {
 
   div.style.top = divParent.offsetTop + 'px';
   var fullWorkspaceWidth = parentWidth - (gameWidth + WORKSPACE_PLAYSPACE_GAP);
+  var oldWidth = parseInt(div.style.width, 10) || div.getBoundingClientRect().width;
   div.style.width = fullWorkspaceWidth + 'px';
+
+  // Keep blocks static relative to the right edge in RTL mode
+  if (BlocklyApps.usingBlockly && Blockly.RTL && (fullWorkspaceWidth - oldWidth !== 0)) {
+    Blockly.mainBlockSpace.getTopBlocks().forEach(function(topBlock) {
+      topBlock.moveBy(fullWorkspaceWidth - oldWidth, 0);
+    });
+  }
 
   if (BlocklyApps.isRtl()) {
     div.style.marginRight = (gameWidth + WORKSPACE_PLAYSPACE_GAP) + 'px';
@@ -1051,58 +1057,40 @@ BlocklyApps.onResize = function() {
   BlocklyApps.resizeHeaders(fullWorkspaceWidth);
 };
 
-// |         toolbox-header           | workspace-header  | show-code-header |
+// |          toolbox-header          | workspace-header  | show-code-header |
 // |
-// | categoriesWidth |  toolboxWidth  |
+// |           toolboxWidth           |
 // |                 |         <--------- workspaceWidth ---------->         |
 // |         <---------------- fullWorkspaceWidth ----------------->         |
 BlocklyApps.resizeHeaders = function (fullWorkspaceWidth) {
-  var categoriesWidth = 0;
-  var categories = BlocklyApps.editCode ?
-      document.querySelector('.droplet-palette-wrapper') :
-      Blockly.mainBlockSpaceEditor.toolbox &&
-      Blockly.mainBlockSpaceEditor.toolbox.HtmlDiv;
-  if (categories) {
+  var minWorkspaceWidthForShowCode = BlocklyApps.editCode ? 250 : 450;
+  var toolboxWidth = 0;
+  if (BlocklyApps.editCode) {
     // If in the droplet editor, but not using blocks, keep categoryWidth at 0
     if (!BlocklyApps.editCode || BlocklyApps.editor.currentlyUsingBlocks) {
-      // set CategoryWidth based on the block toolbox/palette width:
-      categoriesWidth = parseInt(window.getComputedStyle(categories).width, 10);
+      // Set toolboxWidth based on the block palette width:
+      var categories = document.querySelector('.droplet-palette-wrapper');
+      toolboxWidth = parseInt(window.getComputedStyle(categories).width, 10);
     }
-  }
-
-  var workspaceWidth;
-  var toolboxWidth;
-  if (BlocklyApps.usingBlockly) {
-    workspaceWidth = Blockly.mainBlockSpaceEditor.getBlockSpaceWidth();
+  } else if (BlocklyApps.usingBlockly) {
     toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
   }
-  else {
-    workspaceWidth = fullWorkspaceWidth - categoriesWidth;
-    toolboxWidth = 0;
-  }
 
-  var headers = document.getElementById('headers');
-  var workspaceHeader = document.getElementById('workspace-header');
-  var toolboxHeader = document.getElementById('toolbox-header');
   var showCodeHeader = document.getElementById('show-code-header');
-
-  var showCodeWidth;
-  var minWorkspaceWidthForShowCode = BlocklyApps.editCode ? 250 : 450;
+  var showCodeWidth = 0;
   if (BlocklyApps.enableShowCode &&
-      (workspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
+      (fullWorkspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
     showCodeWidth = parseInt(window.getComputedStyle(showCodeHeader).width, 10);
     showCodeHeader.style.display = "";
   }
   else {
-    showCodeWidth = 0;
     showCodeHeader.style.display = "none";
   }
 
-  headers.style.width = (categoriesWidth + workspaceWidth) + 'px';
-  toolboxHeader.style.width = (categoriesWidth + toolboxWidth) + 'px';
-  workspaceHeader.style.width = (workspaceWidth -
-                                 toolboxWidth -
-                                 showCodeWidth) + 'px';
+  document.getElementById('headers').style.width = fullWorkspaceWidth + 'px';
+  document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
+  document.getElementById('workspace-header').style.width =
+      (fullWorkspaceWidth - toolboxWidth - showCodeWidth) + 'px';
 };
 
 /**
@@ -2638,7 +2626,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -11069,7 +11056,7 @@ exports.score = function(d){return "ציון"};
 
 exports.showCodeHeader = function(d){return "הצג קוד"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "הצג בלוקים"};
 
 exports.showGeneratedCode = function(d){return "הצג קוד"};
 
@@ -11099,7 +11086,7 @@ exports.saveToGallery = function(d){return "לשמור את הגלריה שלך"
 
 exports.savedToGallery = function(d){return "נשמר לגלריה שלך!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "מצטערים, אנחנו לא יכולים לשתף תוכנית זו."};
 
 exports.typeFuncs = function(d){return "פונקציות אפשריות: %1"};
 
@@ -11107,7 +11094,7 @@ exports.typeHint = function(d){return "שימו לב כי סוגריים ונק�
 
 exports.workspaceHeader = function(d){return "הרכב את הבלוקים שלך כאן: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "הקלד את קוד JavaScript שלך כאן"};
 
 exports.infinity = function(d){return "אינסוף"};
 
@@ -11140,7 +11127,7 @@ exports.catActions = function(d){return "פעולות"};
 
 exports.catControl = function(d){return "לולאות"};
 
-exports.catEvents = function(d){return "Events"};
+exports.catEvents = function(d){return "אירועים"};
 
 exports.catLogic = function(d){return "הגיון"};
 
@@ -11154,13 +11141,13 @@ exports.catVariables = function(d){return "משתנים"};
 
 exports.continue = function(d){return "המשך"};
 
-exports.createHtmlBlock = function(d){return "create html block"};
+exports.createHtmlBlock = function(d){return "ליצור בלוק html"};
 
-exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
+exports.createHtmlBlockTooltip = function(d){return "יוצר בלוק HTML באפליקציה."};
 
 exports.finalLevel = function(d){return "כל הכבוד! פתרת את החידה האחרונה."};
 
-exports.makeYourOwn = function(d){return "Make Your Own App"};
+exports.makeYourOwn = function(d){return "תיצור את אפליקציה משלך"};
 
 exports.nextLevel = function(d){return "כל הכבוד! השלמת את החידה הזה."};
 
@@ -11170,17 +11157,17 @@ exports.numBlocksNeeded = function(d){return "ניתן לפתור את החיד�
 
 exports.pause = function(d){return "Pause"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
+exports.reinfFeedbackMsg = function(d){return "באפשרותך להקיש על לחצן 'נסה שוב' כדי לחזור להריץ את האפליקציה שלך."};
 
 exports.repeatForever = function(d){return "repeat forever"};
 
 exports.repeatDo = function(d){return "בצע"};
 
-exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
+exports.repeatForeverTooltip = function(d){return "מבצע את הפעולות בבלוק הזה שוב ושוב כל עוד האפליקציה רצה."};
 
-exports.shareWebappTwitter = function(d){return "Check out the app I made. I wrote it myself with @codeorg"};
+exports.shareWebappTwitter = function(d){return "תראו את האפליקציה שהכנתי. אני כתבתי אותה בעצמי עם @codeorg"};
 
-exports.shareGame = function(d){return "Share your app:"};
+exports.shareGame = function(d){return "שתף את האפליקציה שלך:"};
 
 exports.stepIn = function(d){return "Step in"};
 
@@ -11188,9 +11175,9 @@ exports.stepOver = function(d){return "Step over"};
 
 exports.stepOut = function(d){return "Step out"};
 
-exports.turnBlack = function(d){return "turn black"};
+exports.turnBlack = function(d){return "הפוך לשחור"};
 
-exports.turnBlackTooltip = function(d){return "Turns the screen black."};
+exports.turnBlackTooltip = function(d){return "הופך את המסך לשחור."};
 
 exports.yes = function(d){return "כן"};
 

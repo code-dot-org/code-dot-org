@@ -43,6 +43,7 @@
   "numBlocksNeeded": "Gratulerer! Du har fullført oppgave {puzzleNumber}. (Men, du kunne ha brukt kun {numBlocks, plural, one {1 blokk} other {# blokker}}.)",
   "numLinesOfCodeWritten": "Du har akkurat skrevet {numLines, plural, one {1 linje} other {# linjer}} med kode!",
   "play": "spill av",
+  "print": "Skriv ut",
   "puzzleTitle": "Oppgave {puzzle_number} av {stage_total}",
   "repeat": "gjenta",
   "resetProgram": "Nullstill",
@@ -63,7 +64,7 @@
   "tryAgain": "Forsøk igjen",
   "hintRequest": "Se hint",
   "backToPreviousLevel": "Tilbake til forrige nivå",
-  "saveToGallery": "Lagre til galleriet",
+  "saveToGallery": "Lagre i galleriet",
   "savedToGallery": "Lagret i galleriet!",
   "shareFailure": "Beklager, vi kan ikke dele dette programmet.",
   "typeFuncs": "Tilgjengelige funksjoner: %1",
@@ -80,5 +81,6 @@
   "tryHOC": "Prøv Kodetimen",
   "signup": "Registrer deg for introduksjonskurset",
   "hintHeader": "Her er et tips:",
-  "genericFeedback": "Se hvordan du endte opp, og prøv å fikse programmet ditt."
+  "genericFeedback": "Se hvordan du endte opp, og prøv å fikse programmet ditt.",
+  "defaultTwitterText": "Sjekk ut det jeg lagde"
 }

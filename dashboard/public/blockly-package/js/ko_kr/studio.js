@@ -778,16 +778,14 @@ BlocklyApps.init = function(config) {
   });
   window.addEventListener('resize', BlocklyApps.onResize);
 
-  // call initial onResize() asynchronously - need 100ms delay to work
-  // around relayout which changes height on the left side to the proper
-  // value
+  // Call initial onResize() asynchronously - need 10ms delay to work around
+  // relayout which changes height on the left side to the proper value
   window.setTimeout(function() {
-      BlocklyApps.onResize();
-      var event = document.createEvent('UIEvents');
-      event.initEvent('resize', true, true);  // event type, bubbling, cancelable
-      window.dispatchEvent(event);
-    },
-    100);
+    BlocklyApps.onResize();
+    var event = document.createEvent('UIEvents');
+    event.initEvent('resize', true, true);  // event type, bubbling, cancelable
+    window.dispatchEvent(event);
+  }, 10);
 
   BlocklyApps.reset(true);
 
@@ -1025,7 +1023,15 @@ BlocklyApps.onResize = function() {
 
   div.style.top = divParent.offsetTop + 'px';
   var fullWorkspaceWidth = parentWidth - (gameWidth + WORKSPACE_PLAYSPACE_GAP);
+  var oldWidth = parseInt(div.style.width, 10) || div.getBoundingClientRect().width;
   div.style.width = fullWorkspaceWidth + 'px';
+
+  // Keep blocks static relative to the right edge in RTL mode
+  if (BlocklyApps.usingBlockly && Blockly.RTL && (fullWorkspaceWidth - oldWidth !== 0)) {
+    Blockly.mainBlockSpace.getTopBlocks().forEach(function(topBlock) {
+      topBlock.moveBy(fullWorkspaceWidth - oldWidth, 0);
+    });
+  }
 
   if (BlocklyApps.isRtl()) {
     div.style.marginRight = (gameWidth + WORKSPACE_PLAYSPACE_GAP) + 'px';
@@ -1051,58 +1057,40 @@ BlocklyApps.onResize = function() {
   BlocklyApps.resizeHeaders(fullWorkspaceWidth);
 };
 
-// |         toolbox-header           | workspace-header  | show-code-header |
+// |          toolbox-header          | workspace-header  | show-code-header |
 // |
-// | categoriesWidth |  toolboxWidth  |
+// |           toolboxWidth           |
 // |                 |         <--------- workspaceWidth ---------->         |
 // |         <---------------- fullWorkspaceWidth ----------------->         |
 BlocklyApps.resizeHeaders = function (fullWorkspaceWidth) {
-  var categoriesWidth = 0;
-  var categories = BlocklyApps.editCode ?
-      document.querySelector('.droplet-palette-wrapper') :
-      Blockly.mainBlockSpaceEditor.toolbox &&
-      Blockly.mainBlockSpaceEditor.toolbox.HtmlDiv;
-  if (categories) {
+  var minWorkspaceWidthForShowCode = BlocklyApps.editCode ? 250 : 450;
+  var toolboxWidth = 0;
+  if (BlocklyApps.editCode) {
     // If in the droplet editor, but not using blocks, keep categoryWidth at 0
     if (!BlocklyApps.editCode || BlocklyApps.editor.currentlyUsingBlocks) {
-      // set CategoryWidth based on the block toolbox/palette width:
-      categoriesWidth = parseInt(window.getComputedStyle(categories).width, 10);
+      // Set toolboxWidth based on the block palette width:
+      var categories = document.querySelector('.droplet-palette-wrapper');
+      toolboxWidth = parseInt(window.getComputedStyle(categories).width, 10);
     }
-  }
-
-  var workspaceWidth;
-  var toolboxWidth;
-  if (BlocklyApps.usingBlockly) {
-    workspaceWidth = Blockly.mainBlockSpaceEditor.getBlockSpaceWidth();
+  } else if (BlocklyApps.usingBlockly) {
     toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
   }
-  else {
-    workspaceWidth = fullWorkspaceWidth - categoriesWidth;
-    toolboxWidth = 0;
-  }
 
-  var headers = document.getElementById('headers');
-  var workspaceHeader = document.getElementById('workspace-header');
-  var toolboxHeader = document.getElementById('toolbox-header');
   var showCodeHeader = document.getElementById('show-code-header');
-
-  var showCodeWidth;
-  var minWorkspaceWidthForShowCode = BlocklyApps.editCode ? 250 : 450;
+  var showCodeWidth = 0;
   if (BlocklyApps.enableShowCode &&
-      (workspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
+      (fullWorkspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
     showCodeWidth = parseInt(window.getComputedStyle(showCodeHeader).width, 10);
     showCodeHeader.style.display = "";
   }
   else {
-    showCodeWidth = 0;
     showCodeHeader.style.display = "none";
   }
 
-  headers.style.width = (categoriesWidth + workspaceWidth) + 'px';
-  toolboxHeader.style.width = (categoriesWidth + toolboxWidth) + 'px';
-  workspaceHeader.style.width = (workspaceWidth -
-                                 toolboxWidth -
-                                 showCodeWidth) + 'px';
+  document.getElementById('headers').style.width = fullWorkspaceWidth + 'px';
+  document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
+  document.getElementById('workspace-header').style.width =
+      (fullWorkspaceWidth - toolboxWidth - showCodeWidth) + 'px';
 };
 
 /**
@@ -6729,7 +6717,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -15077,6 +15064,23 @@ exports.install = function(blockly, blockInstallOptions) {
   // Install functional start blocks
   //
 
+  blockly.Blocks.functional_start_setValue = {
+    init: function() {
+      var blockName = 'start (value)';
+      var blockType = 'none';
+      var blockArgs = [{name: 'VALUE', type: 'Number'}];
+      initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
+    }
+  };
+
+  generator.functional_start_setValue = function() {
+    // Adapted from Blockly.JavaScript.variables_set.
+    var argument0 = Blockly.JavaScript.statementToCode(this, 'VALUE',
+        Blockly.JavaScript.ORDER_ASSIGNMENT) || '0';
+    var varName = Blockly.JavaScript.translateVarName('startValue');
+    return varName + ' = ' + argument0 + ';\n';
+  };
+
   installFunctionalApiCallBlock(blockly, generator, {
     blockName: 'functional_start_dummyOnMove',
     blockTitle: 'on-move (on-screen)',
@@ -18563,6 +18567,7 @@ Studio.execute = function() {
   var handlers = [];
   if (BlocklyApps.usingBlockly) {
     registerHandlers(handlers, 'when_run', 'whenGameStarts');
+    registerHandlers(handlers, 'functional_start_setValue', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackground', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setSpeeds', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackgroundAndSpeeds',
@@ -18771,7 +18776,7 @@ function spriteTotalFrames (index) {
 }
 
 var updateSpeechBubblePath = function (element) {
-  var height = element.getAttribute('height');
+  var height = +element.getAttribute('height');
   var onTop = 'true' === element.getAttribute('onTop');
   var onRight = 'true' === element.getAttribute('onRight');
   element.setAttribute('d',
@@ -20468,7 +20473,7 @@ exports.numLinesOfCodeWritten = function(d){return "오! 코드 "+p(d,"numLines"
 
 exports.play = function(d){return "실행"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "인쇄"};
 
 exports.puzzleTitle = function(d){return "퍼즐 "+v(d,"puzzle_number")+"/"+v(d,"stage_total")};
 
@@ -20510,9 +20515,9 @@ exports.hintRequest = function(d){return "도움 보기"};
 
 exports.backToPreviousLevel = function(d){return "이전 퍼즐"};
 
-exports.saveToGallery = function(d){return "나의 갤러리에 저장"};
+exports.saveToGallery = function(d){return "갤러리에 저장"};
 
-exports.savedToGallery = function(d){return "나의 갤러리에 저장되었습니다!"};
+exports.savedToGallery = function(d){return "갤러리에 저장되었습니다!"};
 
 exports.shareFailure = function(d){return "프로그램을 공유할 수 없습니다."};
 
@@ -20546,7 +20551,7 @@ exports.hintHeader = function(d){return "도움말:"};
 
 exports.genericFeedback = function(d){return "어떻게 종료되는지 살펴보고 프로그램을 수정해 보세요."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "만든 작품 확인하기"};
 
 
 },{"messageformat":61}],49:[function(require,module,exports){
@@ -20769,15 +20774,15 @@ exports.projectileRedHearts = function(d){return "빨간 하트"};
 
 exports.projectileRandom = function(d){return "random(랜덤)"};
 
-exports.projectileAnna = function(d){return "Anna"};
+exports.projectileAnna = function(d){return "안나"};
 
-exports.projectileElsa = function(d){return "Elsa"};
+exports.projectileElsa = function(d){return "엘사"};
 
-exports.projectileHiro = function(d){return "Hiro"};
+exports.projectileHiro = function(d){return "히로"};
 
-exports.projectileBaymax = function(d){return "Baymax"};
+exports.projectileBaymax = function(d){return "베이맥스"};
 
-exports.projectileRapunzel = function(d){return "Rapunzel"};
+exports.projectileRapunzel = function(d){return "라푼젤"};
 
 exports.reinfFeedbackMsg = function(d){return "\"다시 시작\"을 누르면 이야기를 다시 실행시킬 수 있습니다."};
 
@@ -20871,15 +20876,15 @@ exports.setSpriteHidden = function(d){return "안보이도록"};
 
 exports.setSpriteHideK1 = function(d){return "보이지 않게 하기"};
 
-exports.setSpriteAnna = function(d){return "to a Anna image"};
+exports.setSpriteAnna = function(d){return "안나 이미지로"};
 
-exports.setSpriteElsa = function(d){return "to a Elsa image"};
+exports.setSpriteElsa = function(d){return "엘사 이미지로"};
 
-exports.setSpriteHiro = function(d){return "to a Hiro image"};
+exports.setSpriteHiro = function(d){return "히로 이미지로"};
 
-exports.setSpriteBaymax = function(d){return "to a Baymax image"};
+exports.setSpriteBaymax = function(d){return "베이맥스 이미지로"};
 
-exports.setSpriteRapunzel = function(d){return "to a Rapunzel image"};
+exports.setSpriteRapunzel = function(d){return "라푼젤 이미지로"};
 
 exports.setSpriteKnight = function(d){return "기사로"};
 

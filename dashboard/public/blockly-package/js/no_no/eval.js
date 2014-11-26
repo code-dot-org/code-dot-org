@@ -778,16 +778,14 @@ BlocklyApps.init = function(config) {
   });
   window.addEventListener('resize', BlocklyApps.onResize);
 
-  // call initial onResize() asynchronously - need 100ms delay to work
-  // around relayout which changes height on the left side to the proper
-  // value
+  // Call initial onResize() asynchronously - need 10ms delay to work around
+  // relayout which changes height on the left side to the proper value
   window.setTimeout(function() {
-      BlocklyApps.onResize();
-      var event = document.createEvent('UIEvents');
-      event.initEvent('resize', true, true);  // event type, bubbling, cancelable
-      window.dispatchEvent(event);
-    },
-    100);
+    BlocklyApps.onResize();
+    var event = document.createEvent('UIEvents');
+    event.initEvent('resize', true, true);  // event type, bubbling, cancelable
+    window.dispatchEvent(event);
+  }, 10);
 
   BlocklyApps.reset(true);
 
@@ -1025,7 +1023,15 @@ BlocklyApps.onResize = function() {
 
   div.style.top = divParent.offsetTop + 'px';
   var fullWorkspaceWidth = parentWidth - (gameWidth + WORKSPACE_PLAYSPACE_GAP);
+  var oldWidth = parseInt(div.style.width, 10) || div.getBoundingClientRect().width;
   div.style.width = fullWorkspaceWidth + 'px';
+
+  // Keep blocks static relative to the right edge in RTL mode
+  if (BlocklyApps.usingBlockly && Blockly.RTL && (fullWorkspaceWidth - oldWidth !== 0)) {
+    Blockly.mainBlockSpace.getTopBlocks().forEach(function(topBlock) {
+      topBlock.moveBy(fullWorkspaceWidth - oldWidth, 0);
+    });
+  }
 
   if (BlocklyApps.isRtl()) {
     div.style.marginRight = (gameWidth + WORKSPACE_PLAYSPACE_GAP) + 'px';
@@ -1051,58 +1057,40 @@ BlocklyApps.onResize = function() {
   BlocklyApps.resizeHeaders(fullWorkspaceWidth);
 };
 
-// |         toolbox-header           | workspace-header  | show-code-header |
+// |          toolbox-header          | workspace-header  | show-code-header |
 // |
-// | categoriesWidth |  toolboxWidth  |
+// |           toolboxWidth           |
 // |                 |         <--------- workspaceWidth ---------->         |
 // |         <---------------- fullWorkspaceWidth ----------------->         |
 BlocklyApps.resizeHeaders = function (fullWorkspaceWidth) {
-  var categoriesWidth = 0;
-  var categories = BlocklyApps.editCode ?
-      document.querySelector('.droplet-palette-wrapper') :
-      Blockly.mainBlockSpaceEditor.toolbox &&
-      Blockly.mainBlockSpaceEditor.toolbox.HtmlDiv;
-  if (categories) {
+  var minWorkspaceWidthForShowCode = BlocklyApps.editCode ? 250 : 450;
+  var toolboxWidth = 0;
+  if (BlocklyApps.editCode) {
     // If in the droplet editor, but not using blocks, keep categoryWidth at 0
     if (!BlocklyApps.editCode || BlocklyApps.editor.currentlyUsingBlocks) {
-      // set CategoryWidth based on the block toolbox/palette width:
-      categoriesWidth = parseInt(window.getComputedStyle(categories).width, 10);
+      // Set toolboxWidth based on the block palette width:
+      var categories = document.querySelector('.droplet-palette-wrapper');
+      toolboxWidth = parseInt(window.getComputedStyle(categories).width, 10);
     }
-  }
-
-  var workspaceWidth;
-  var toolboxWidth;
-  if (BlocklyApps.usingBlockly) {
-    workspaceWidth = Blockly.mainBlockSpaceEditor.getBlockSpaceWidth();
+  } else if (BlocklyApps.usingBlockly) {
     toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
   }
-  else {
-    workspaceWidth = fullWorkspaceWidth - categoriesWidth;
-    toolboxWidth = 0;
-  }
 
-  var headers = document.getElementById('headers');
-  var workspaceHeader = document.getElementById('workspace-header');
-  var toolboxHeader = document.getElementById('toolbox-header');
   var showCodeHeader = document.getElementById('show-code-header');
-
-  var showCodeWidth;
-  var minWorkspaceWidthForShowCode = BlocklyApps.editCode ? 250 : 450;
+  var showCodeWidth = 0;
   if (BlocklyApps.enableShowCode &&
-      (workspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
+      (fullWorkspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
     showCodeWidth = parseInt(window.getComputedStyle(showCodeHeader).width, 10);
     showCodeHeader.style.display = "";
   }
   else {
-    showCodeWidth = 0;
     showCodeHeader.style.display = "none";
   }
 
-  headers.style.width = (categoriesWidth + workspaceWidth) + 'px';
-  toolboxHeader.style.width = (categoriesWidth + toolboxWidth) + 'px';
-  workspaceHeader.style.width = (workspaceWidth -
-                                 toolboxWidth -
-                                 showCodeWidth) + 'px';
+  document.getElementById('headers').style.width = fullWorkspaceWidth + 'px';
+  document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
+  document.getElementById('workspace-header').style.width =
+      (fullWorkspaceWidth - toolboxWidth - showCodeWidth) + 'px';
 };
 
 /**
@@ -6793,7 +6781,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -14113,7 +14100,7 @@ exports.numLinesOfCodeWritten = function(d){return "Du har akkurat skrevet "+p(d
 
 exports.play = function(d){return "spill av"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Skriv ut"};
 
 exports.puzzleTitle = function(d){return "Oppgave "+v(d,"puzzle_number")+" av "+v(d,"stage_total")};
 
@@ -14155,7 +14142,7 @@ exports.hintRequest = function(d){return "Se hint"};
 
 exports.backToPreviousLevel = function(d){return "Tilbake til forrige nivå"};
 
-exports.saveToGallery = function(d){return "Lagre til galleriet"};
+exports.saveToGallery = function(d){return "Lagre i galleriet"};
 
 exports.savedToGallery = function(d){return "Lagret i galleriet!"};
 
@@ -14191,26 +14178,26 @@ exports.hintHeader = function(d){return "Her er et tips:"};
 
 exports.genericFeedback = function(d){return "Se hvordan du endte opp, og prøv å fikse programmet ditt."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Sjekk ut det jeg lagde"};
 
 
 },{"messageformat":62}],50:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.no=function(n){return n===1?"one":"other"}
 exports.circleBlockTitle = function(d){return "sirkel (radius, stil, farge)"};
 
-exports.displayBlockTitle = function(d){return "display"};
+exports.displayBlockTitle = function(d){return "vis"};
 
 exports.ellipseBlockTitle = function(d){return "ellipse (bredde, høyde, stil, farge)"};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"display\" block?"};
+exports.extraTopBlocks = function(d){return "Du har løse blokker. Mente du å feste disse til «vis» blokken?"};
 
-exports.overlayBlockTitle = function(d){return "overlay (top, bottom)"};
+exports.overlayBlockTitle = function(d){return "overlegg (topp, bunn)"};
 
-exports.placeImageBlockTitle = function(d){return "place-image (x, y, image)"};
+exports.placeImageBlockTitle = function(d){return "plasser-bildet (x, y, bilde)"};
 
 exports.rectangleBlockTitle = function(d){return "rektangel (bredde, høyde, stil, farge)"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to edit your drawing."};
+exports.reinfFeedbackMsg = function(d){return "Du kan trykke knappen \"Forsøk igjen\" for å redigere tegningen."};
 
 exports.rotateImageBlockTitle = function(d){return "roter (grader, bilde)"};
 
@@ -14220,21 +14207,21 @@ exports.squareBlockTitle = function(d){return "kvadrat (størrelse, stil, farge)
 
 exports.starBlockTitle = function(d){return "stjerne (radius, stil, farge)"};
 
-exports.stringAppendBlockTitle = function(d){return "string-append (first, second)"};
+exports.stringAppendBlockTitle = function(d){return "streng-tilføye (første, andre)"};
 
-exports.stringLengthBlockTitle = function(d){return "string-length (string)"};
+exports.stringLengthBlockTitle = function(d){return "streng-lengde (streng)"};
 
-exports.textBlockTitle = function(d){return "text (string, size, color)"};
+exports.textBlockTitle = function(d){return "tekst (streng, størrelse, farge)"};
 
 exports.triangleBlockTitle = function(d){return "trekant (størrelse, stil, farge)"};
 
-exports.underlayBlockTitle = function(d){return "underlay (bottom, top)"};
+exports.underlayBlockTitle = function(d){return "underlegg (bunn, top)"};
 
-exports.outline = function(d){return "outline"};
+exports.outline = function(d){return "omriss"};
 
 exports.solid = function(d){return "solid"};
 
-exports.string = function(d){return "string"};
+exports.string = function(d){return "streng"};
 
 
 },{"messageformat":62}],51:[function(require,module,exports){

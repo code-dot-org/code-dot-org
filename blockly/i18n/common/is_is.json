@@ -43,6 +43,7 @@
   "numBlocksNeeded": "Til hamingju! Þú kláraðir þraut {puzzleNumber}. (En þú hefðir getað notað bara  {numBlocks, plural, one {1 kubb} other {# kubba}}.)",
   "numLinesOfCodeWritten": "Þú náðir að skrifa {numLines, plural, one {1 línu} other {# línur}} af kóða!",
   "play": "spila",
+  "print": "Prenta",
   "puzzleTitle": "Þraut {puzzle_number} af {stage_total}",
   "repeat": "endurtaka",
   "resetProgram": "Endurstilla",
@@ -63,8 +64,8 @@
   "tryAgain": "Reyna aftur",
   "hintRequest": "Sjá vísbendingu",
   "backToPreviousLevel": "Til baka í fyrri áfanga",
-  "saveToGallery": "Vista í safn þitt",
-  "savedToGallery": "Vistað í safn þitt!",
+  "saveToGallery": "Vista í gallerí",
+  "savedToGallery": "Vistað í galleríi!",
   "shareFailure": "Því miður getum við ekki deilt þessu forriti.",
   "typeFuncs": "Tiltæk föll:%1",
   "typeHint": "Athugaðu að svigarnir og semikommurnar eru nauðsynlegar.",
@@ -77,8 +78,9 @@
   "watchVideo": "Horfa á videóið",
   "when": "þegar",
   "whenRun": "þegar keyrt",
-  "tryHOC": "Prófa Kóðun í klukkustund",
+  "tryHOC": "Prófa Klukkustund kóðunar",
   "signup": "Skráning á inngangsnámskeiðið",
   "hintHeader": "Vísbending:",
-  "genericFeedback": "Athugaðu hvernig þetta fór og reyndu að laga forritið."
+  "genericFeedback": "Athugaðu hvernig þetta fór og reyndu að laga forritið.",
+  "defaultTwitterText": "Skoðaðu það sem ég bjó til"
 }

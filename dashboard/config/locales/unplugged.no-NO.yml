@@ -15,26 +15,26 @@
         video: Koble fra 1
       Unplug2:
         title: Programmeringstenkning
-        desc: With nothing but paper and markers, students will learn the four steps
-          of computational thinking. After a brief introduction, students should be
-          split into groups where they will have to create directions for other students
-          to draw a specific monster (from a catalog of pre-selected monsters). The
-          entire task must be decomposed, then teams will analyze all monsters in
-          the catalog for patterns, abstract different details from the monsters,
-          then use that information to create an algorithm (directions) for another
-          team to draw a certain monster. Teams will then switch algorithms with another
-          group and draw the monster based on what that algorithm indicates. Is the
-          drawing what the original team intended?
+        desc: Uten annet enn penn og papir kan elevene lære seg de fire trinnene i
+          programmeringsbasert tenkning. Etter en kort introduksjon burde studentene
+          bli delt inn i grupper hvor de skal lage kommandoer til andre studenter
+          for å tegne et spesifikt monster (fra en kataolog av forhondsbestemte monstere).
+          Hele oppgaven må brytes ned, så gruppene kan analysere alle monstrene i
+          kataologen for mønstere, abstrahere forskjellige detaljer fra monstrene
+          for å så bruke den informasjonen til å lage en algoritme (en rekke kommandoer)
+          for et annet lag som skal tegne monsteret. Lagene skal så bytte algoritmer
+          med en annen gruppe og tegne monsteret basert på hva algoritmen indikerer.
+          Er tegningen hva det opprinnelige laget tenkte seg?
         pdfs:
         - unplug2
         video: Unplug2
       Unplug3:
         title: Millimeterpapirprogrammering
-        desc: By programming one another to draw pictures, students will begin to
-          understand what programming is really about. The class will begin by students
-          instructing each other to color squares in on graph paper in an effort to
-          reproduce an existing picture.  If there's time, the lesson can conclude
-          with images that the students create themselves.
+        desc: Ved å programmere en annen til å tegne bilder vil studentene begynne
+          å forstå hva programmering egentlig handler om. Klassen begynner med at
+          elever instruerer hverandre til å fargelegge firkanter på millimeterpapir
+          for å reprodusere et eksisterende bilde. Hvis det er tid kan timen avslutte
+          med bilder som elevene lager selv.
         pdfs:
         - unplug3
         video: Unplug3
@@ -269,3 +269,21 @@
           of binary options.  This lesson takes that concept one step further as it
           illustrates how a computer can store even more complex information (such
           as images and colors) in binary, as well.
+      VideoGamesCoordinatePlanes:
+        title: Video Games and Coordinate Planes
+        desc: Video Games and Coordinate Planes lesson description
+      Contracts:
+        title: Contracts
+        desc: Contracts unplugged lesson description
+      DesignRecipe:
+        title: The Design Recipe
+        desc: Design Recipe lesson description
+      Booleans:
+        title: Booleans
+        desc: Booleans lesson description
+      ConditionalsPiecewiseFunctions:
+        title: Conditionals and Piecewise Functions
+        desc: Conditionals and Piecewise Functions lesson description
+      CollisionDetection:
+        title: Collision Detection
+        desc: Collision Detection lesson description

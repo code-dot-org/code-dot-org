@@ -778,16 +778,14 @@ BlocklyApps.init = function(config) {
   });
   window.addEventListener('resize', BlocklyApps.onResize);
 
-  // call initial onResize() asynchronously - need 100ms delay to work
-  // around relayout which changes height on the left side to the proper
-  // value
+  // Call initial onResize() asynchronously - need 10ms delay to work around
+  // relayout which changes height on the left side to the proper value
   window.setTimeout(function() {
-      BlocklyApps.onResize();
-      var event = document.createEvent('UIEvents');
-      event.initEvent('resize', true, true);  // event type, bubbling, cancelable
-      window.dispatchEvent(event);
-    },
-    100);
+    BlocklyApps.onResize();
+    var event = document.createEvent('UIEvents');
+    event.initEvent('resize', true, true);  // event type, bubbling, cancelable
+    window.dispatchEvent(event);
+  }, 10);
 
   BlocklyApps.reset(true);
 
@@ -1025,7 +1023,15 @@ BlocklyApps.onResize = function() {
 
   div.style.top = divParent.offsetTop + 'px';
   var fullWorkspaceWidth = parentWidth - (gameWidth + WORKSPACE_PLAYSPACE_GAP);
+  var oldWidth = parseInt(div.style.width, 10) || div.getBoundingClientRect().width;
   div.style.width = fullWorkspaceWidth + 'px';
+
+  // Keep blocks static relative to the right edge in RTL mode
+  if (BlocklyApps.usingBlockly && Blockly.RTL && (fullWorkspaceWidth - oldWidth !== 0)) {
+    Blockly.mainBlockSpace.getTopBlocks().forEach(function(topBlock) {
+      topBlock.moveBy(fullWorkspaceWidth - oldWidth, 0);
+    });
+  }
 
   if (BlocklyApps.isRtl()) {
     div.style.marginRight = (gameWidth + WORKSPACE_PLAYSPACE_GAP) + 'px';
@@ -1051,58 +1057,40 @@ BlocklyApps.onResize = function() {
   BlocklyApps.resizeHeaders(fullWorkspaceWidth);
 };
 
-// |         toolbox-header           | workspace-header  | show-code-header |
+// |          toolbox-header          | workspace-header  | show-code-header |
 // |
-// | categoriesWidth |  toolboxWidth  |
+// |           toolboxWidth           |
 // |                 |         <--------- workspaceWidth ---------->         |
 // |         <---------------- fullWorkspaceWidth ----------------->         |
 BlocklyApps.resizeHeaders = function (fullWorkspaceWidth) {
-  var categoriesWidth = 0;
-  var categories = BlocklyApps.editCode ?
-      document.querySelector('.droplet-palette-wrapper') :
-      Blockly.mainBlockSpaceEditor.toolbox &&
-      Blockly.mainBlockSpaceEditor.toolbox.HtmlDiv;
-  if (categories) {
+  var minWorkspaceWidthForShowCode = BlocklyApps.editCode ? 250 : 450;
+  var toolboxWidth = 0;
+  if (BlocklyApps.editCode) {
     // If in the droplet editor, but not using blocks, keep categoryWidth at 0
     if (!BlocklyApps.editCode || BlocklyApps.editor.currentlyUsingBlocks) {
-      // set CategoryWidth based on the block toolbox/palette width:
-      categoriesWidth = parseInt(window.getComputedStyle(categories).width, 10);
+      // Set toolboxWidth based on the block palette width:
+      var categories = document.querySelector('.droplet-palette-wrapper');
+      toolboxWidth = parseInt(window.getComputedStyle(categories).width, 10);
     }
-  }
-
-  var workspaceWidth;
-  var toolboxWidth;
-  if (BlocklyApps.usingBlockly) {
-    workspaceWidth = Blockly.mainBlockSpaceEditor.getBlockSpaceWidth();
+  } else if (BlocklyApps.usingBlockly) {
     toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
   }
-  else {
-    workspaceWidth = fullWorkspaceWidth - categoriesWidth;
-    toolboxWidth = 0;
-  }
 
-  var headers = document.getElementById('headers');
-  var workspaceHeader = document.getElementById('workspace-header');
-  var toolboxHeader = document.getElementById('toolbox-header');
   var showCodeHeader = document.getElementById('show-code-header');
-
-  var showCodeWidth;
-  var minWorkspaceWidthForShowCode = BlocklyApps.editCode ? 250 : 450;
+  var showCodeWidth = 0;
   if (BlocklyApps.enableShowCode &&
-      (workspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
+      (fullWorkspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
     showCodeWidth = parseInt(window.getComputedStyle(showCodeHeader).width, 10);
     showCodeHeader.style.display = "";
   }
   else {
-    showCodeWidth = 0;
     showCodeHeader.style.display = "none";
   }
 
-  headers.style.width = (categoriesWidth + workspaceWidth) + 'px';
-  toolboxHeader.style.width = (categoriesWidth + toolboxWidth) + 'px';
-  workspaceHeader.style.width = (workspaceWidth -
-                                 toolboxWidth -
-                                 showCodeWidth) + 'px';
+  document.getElementById('headers').style.width = fullWorkspaceWidth + 'px';
+  document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
+  document.getElementById('workspace-header').style.width =
+      (fullWorkspaceWidth - toolboxWidth - showCodeWidth) + 'px';
 };
 
 /**
@@ -6729,7 +6717,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -15077,6 +15064,23 @@ exports.install = function(blockly, blockInstallOptions) {
   // Install functional start blocks
   //
 
+  blockly.Blocks.functional_start_setValue = {
+    init: function() {
+      var blockName = 'start (value)';
+      var blockType = 'none';
+      var blockArgs = [{name: 'VALUE', type: 'Number'}];
+      initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
+    }
+  };
+
+  generator.functional_start_setValue = function() {
+    // Adapted from Blockly.JavaScript.variables_set.
+    var argument0 = Blockly.JavaScript.statementToCode(this, 'VALUE',
+        Blockly.JavaScript.ORDER_ASSIGNMENT) || '0';
+    var varName = Blockly.JavaScript.translateVarName('startValue');
+    return varName + ' = ' + argument0 + ';\n';
+  };
+
   installFunctionalApiCallBlock(blockly, generator, {
     blockName: 'functional_start_dummyOnMove',
     blockTitle: 'on-move (on-screen)',
@@ -18563,6 +18567,7 @@ Studio.execute = function() {
   var handlers = [];
   if (BlocklyApps.usingBlockly) {
     registerHandlers(handlers, 'when_run', 'whenGameStarts');
+    registerHandlers(handlers, 'functional_start_setValue', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackground', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setSpeeds', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackgroundAndSpeeds',
@@ -18771,7 +18776,7 @@ function spriteTotalFrames (index) {
 }
 
 var updateSpeechBubblePath = function (element) {
-  var height = element.getAttribute('height');
+  var height = +element.getAttribute('height');
   var onTop = 'true' === element.getAttribute('onTop');
   var onRight = 'true' === element.getAttribute('onRight');
   element.setAttribute('d',
@@ -20424,11 +20429,11 @@ exports.directionWestLetter = function(d){return "O"};
 
 exports.end = function(d){return "fine"};
 
-exports.emptyBlocksErrorMsg = function(d){return "Il blocco \"ripeti\" o \"se\" deve avere all'interno altri blocchi per poter funzionare. Assicurati che i blocchi interni siano inseriti correttamente all'interno del blocco principale."};
+exports.emptyBlocksErrorMsg = function(d){return "Il blocco \"ripeti\" o \"se\" deve avere all'interno altri blocchi per poter funzionare. Assicurati che i blocchi siano inseriti correttamente all'interno del blocco contenente."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "Una funzione ha bisogno di altri blocchi al suo interno."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Un blocco funzione deve avere all'interno altri blocchi per poter funzionare."};
 
-exports.extraTopBlocks = function(d){return "Ci sono dei blocchi scollegati. Volevi forse attaccarli al blocco 'quando si clicca su \"Esegui\" '?"};
+exports.extraTopBlocks = function(d){return "Ci sono dei blocchi non collegati agli altri. Volevi forse attaccarli al blocco 'quando si clicca su \"Esegui\" '?"};
 
 exports.finalStage = function(d){return "Complimenti! Hai completato l'ultima lezione."};
 
@@ -20456,11 +20461,11 @@ exports.missingBlocksErrorMsg = function(d){return "Prova uno o più dei blocchi
 
 exports.nextLevel = function(d){return "Complimenti! Hai completato l'esercizio "+v(d,"puzzleNumber")+"."};
 
-exports.nextLevelTrophies = function(d){return "Complimenti! Hai completato l'esercizio "+v(d,"puzzleNumber")+" e vinto "+p(d,"numTrophies",0,"it",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
+exports.nextLevelTrophies = function(d){return "Complimenti! Hai completato l'esercizio "+v(d,"puzzleNumber")+" e vinto "+p(d,"numTrophies",0,"it",{"one":"un trofeo","other":n(d,"numTrophies")+" trofei"})+"."};
 
 exports.nextStage = function(d){return "Complimenti! Hai completato la lezione "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "Complimenti! Hai completato la lezione "+v(d,"stageName")+" e vinto "+p(d,"numTrophies",0,"it",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
+exports.nextStageTrophies = function(d){return "Complimenti! Hai completato la lezione "+v(d,"stageName")+" e vinto "+p(d,"numTrophies",0,"it",{"one":"un trofeo","other":n(d,"numTrophies")+" trofei"})+"."};
 
 exports.numBlocksNeeded = function(d){return "Complimenti! Hai completato l'esercizio "+v(d,"puzzleNumber")+". (Avresti però potuto usare solo "+p(d,"numBlocks",0,"it",{"one":"1 block","other":n(d,"numBlocks")+" blocks"})+".)"};
 
@@ -20478,7 +20483,7 @@ exports.resetProgram = function(d){return "Ricomincia"};
 
 exports.runProgram = function(d){return "Esegui"};
 
-exports.runTooltip = function(d){return "Esegui il programma definito dai blocchi nell'area di lavoro."};
+exports.runTooltip = function(d){return "Esegui il programma definito dai blocchi presenti nell'area di lavoro."};
 
 exports.score = function(d){return "punteggio"};
 
@@ -20506,7 +20511,7 @@ exports.totalNumLinesOfCodeWritten = function(d){return "Totale complessivo: "+p
 
 exports.tryAgain = function(d){return "Riprova"};
 
-exports.hintRequest = function(d){return "Vedere il suggerimento"};
+exports.hintRequest = function(d){return "Vedi il suggerimento"};
 
 exports.backToPreviousLevel = function(d){return "Torna al livello precedente"};
 
@@ -20595,13 +20600,13 @@ exports.catText = function(d){return "Testo"};
 
 exports.catVariables = function(d){return "Variabili"};
 
-exports.changeScoreTooltip = function(d){return "Aggiungi o rimuovi un punto dal punteggio."};
+exports.changeScoreTooltip = function(d){return "Aggiungi o togli un punto al punteggio."};
 
 exports.changeScoreTooltipK1 = function(d){return "Aggiungi un punto al punteggio."};
 
 exports.continue = function(d){return "Prosegui"};
 
-exports.decrementPlayerScore = function(d){return "rimuovi un punto"};
+exports.decrementPlayerScore = function(d){return "togli un punto"};
 
 exports.defaultSayText = function(d){return "scrivi qua"};
 
@@ -20783,7 +20788,7 @@ exports.reinfFeedbackMsg = function(d){return "Premi \"Ricomincia\" per ricominc
 
 exports.repeatForever = function(d){return "ripeti per sempre"};
 
-exports.repeatDo = function(d){return "fai"};
+exports.repeatDo = function(d){return "esegui"};
 
 exports.repeatForeverTooltip = function(d){return "Esegui ripetutamente le azioni in questo blocco mentre la storia è in esecuzione."};
 
@@ -20791,7 +20796,7 @@ exports.saySprite = function(d){return "di'"};
 
 exports.saySpriteN = function(d){return "il personaggio "+v(d,"spriteIndex")+" dice"};
 
-exports.saySpriteTooltip = function(d){return "Visualizza un fumetto con il testo associato del personaggio specificato."};
+exports.saySpriteTooltip = function(d){return "Il personaggio specificato visualizza un fumetto con il testo indicato."};
 
 exports.scoreText = function(d){return "Punteggio: "+v(d,"playerScore")};
 
@@ -21045,7 +21050,7 @@ exports.waitFor10Seconds = function(d){return "aspetta per 10 secondi"};
 
 exports.waitParamsTooltip = function(d){return "Aspetta per il numero di secondi specificato (se è zero aspetta fino ad un clic)."};
 
-exports.waitTooltip = function(d){return "Aspetta una quantità di tempo specificata oppure il verificarsi di un clic."};
+exports.waitTooltip = function(d){return "Aspetta per il numero di secondi specificati o che il mouse venga cliccato."};
 
 exports.whenArrowDown = function(d){return "freccia in basso"};
 

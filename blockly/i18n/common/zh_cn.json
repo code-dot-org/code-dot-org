@@ -43,6 +43,7 @@
   "numBlocksNeeded": "祝贺你 ！完成了谜题 {puzzleNumber}。(然而，你其实可以只使用{numBlocks, plural, one {1个模块} other {# 模块}}。)",
   "numLinesOfCodeWritten": "你刚刚写了{numLines, plural, one {1行} other {# 行}} 的代码 ！",
   "play": "玩",
+  "print": "Print",
   "puzzleTitle": "第{stage_total}章的谜题 {puzzle_number} ",
   "repeat": "重复",
   "resetProgram": "重置",
@@ -80,5 +81,6 @@
   "tryHOC": "来试试”编程一小时“项目！",
   "signup": "注册账号后参加简介课程",
   "hintHeader": "这里有一个提示：",
-  "genericFeedback": "看你的程序时如何结束的，并尝试修复你的程序"
+  "genericFeedback": "看你的程序时如何结束的，并尝试修复你的程序",
+  "defaultTwitterText": "Check out what I made"
 }

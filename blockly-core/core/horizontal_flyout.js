@@ -26,6 +26,8 @@ goog.inherits(Blockly.HorizontalFlyout, Blockly.Flyout);
  *     Variables and procedures have a custom set of blocks.
  */
 Blockly.HorizontalFlyout.prototype.show = function(xmlList) {
+  var metrics = this.targetBlockSpace_.getMetrics();
+  this.width_ = Math.max(0, metrics.viewWidth - this.CORNER_RADIUS * 2);
   Blockly.HorizontalFlyout.superClass_.show.apply(this, arguments);
 };
 

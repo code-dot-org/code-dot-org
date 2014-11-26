@@ -778,16 +778,14 @@ BlocklyApps.init = function(config) {
   });
   window.addEventListener('resize', BlocklyApps.onResize);
 
-  // call initial onResize() asynchronously - need 100ms delay to work
-  // around relayout which changes height on the left side to the proper
-  // value
+  // Call initial onResize() asynchronously - need 10ms delay to work around
+  // relayout which changes height on the left side to the proper value
   window.setTimeout(function() {
-      BlocklyApps.onResize();
-      var event = document.createEvent('UIEvents');
-      event.initEvent('resize', true, true);  // event type, bubbling, cancelable
-      window.dispatchEvent(event);
-    },
-    100);
+    BlocklyApps.onResize();
+    var event = document.createEvent('UIEvents');
+    event.initEvent('resize', true, true);  // event type, bubbling, cancelable
+    window.dispatchEvent(event);
+  }, 10);
 
   BlocklyApps.reset(true);
 
@@ -1025,7 +1023,15 @@ BlocklyApps.onResize = function() {
 
   div.style.top = divParent.offsetTop + 'px';
   var fullWorkspaceWidth = parentWidth - (gameWidth + WORKSPACE_PLAYSPACE_GAP);
+  var oldWidth = parseInt(div.style.width, 10) || div.getBoundingClientRect().width;
   div.style.width = fullWorkspaceWidth + 'px';
+
+  // Keep blocks static relative to the right edge in RTL mode
+  if (BlocklyApps.usingBlockly && Blockly.RTL && (fullWorkspaceWidth - oldWidth !== 0)) {
+    Blockly.mainBlockSpace.getTopBlocks().forEach(function(topBlock) {
+      topBlock.moveBy(fullWorkspaceWidth - oldWidth, 0);
+    });
+  }
 
   if (BlocklyApps.isRtl()) {
     div.style.marginRight = (gameWidth + WORKSPACE_PLAYSPACE_GAP) + 'px';
@@ -1051,58 +1057,40 @@ BlocklyApps.onResize = function() {
   BlocklyApps.resizeHeaders(fullWorkspaceWidth);
 };
 
-// |         toolbox-header           | workspace-header  | show-code-header |
+// |          toolbox-header          | workspace-header  | show-code-header |
 // |
-// | categoriesWidth |  toolboxWidth  |
+// |           toolboxWidth           |
 // |                 |         <--------- workspaceWidth ---------->         |
 // |         <---------------- fullWorkspaceWidth ----------------->         |
 BlocklyApps.resizeHeaders = function (fullWorkspaceWidth) {
-  var categoriesWidth = 0;
-  var categories = BlocklyApps.editCode ?
-      document.querySelector('.droplet-palette-wrapper') :
-      Blockly.mainBlockSpaceEditor.toolbox &&
-      Blockly.mainBlockSpaceEditor.toolbox.HtmlDiv;
-  if (categories) {
+  var minWorkspaceWidthForShowCode = BlocklyApps.editCode ? 250 : 450;
+  var toolboxWidth = 0;
+  if (BlocklyApps.editCode) {
     // If in the droplet editor, but not using blocks, keep categoryWidth at 0
     if (!BlocklyApps.editCode || BlocklyApps.editor.currentlyUsingBlocks) {
-      // set CategoryWidth based on the block toolbox/palette width:
-      categoriesWidth = parseInt(window.getComputedStyle(categories).width, 10);
+      // Set toolboxWidth based on the block palette width:
+      var categories = document.querySelector('.droplet-palette-wrapper');
+      toolboxWidth = parseInt(window.getComputedStyle(categories).width, 10);
     }
-  }
-
-  var workspaceWidth;
-  var toolboxWidth;
-  if (BlocklyApps.usingBlockly) {
-    workspaceWidth = Blockly.mainBlockSpaceEditor.getBlockSpaceWidth();
+  } else if (BlocklyApps.usingBlockly) {
     toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
   }
-  else {
-    workspaceWidth = fullWorkspaceWidth - categoriesWidth;
-    toolboxWidth = 0;
-  }
 
-  var headers = document.getElementById('headers');
-  var workspaceHeader = document.getElementById('workspace-header');
-  var toolboxHeader = document.getElementById('toolbox-header');
   var showCodeHeader = document.getElementById('show-code-header');
-
-  var showCodeWidth;
-  var minWorkspaceWidthForShowCode = BlocklyApps.editCode ? 250 : 450;
+  var showCodeWidth = 0;
   if (BlocklyApps.enableShowCode &&
-      (workspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
+      (fullWorkspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
     showCodeWidth = parseInt(window.getComputedStyle(showCodeHeader).width, 10);
     showCodeHeader.style.display = "";
   }
   else {
-    showCodeWidth = 0;
     showCodeHeader.style.display = "none";
   }
 
-  headers.style.width = (categoriesWidth + workspaceWidth) + 'px';
-  toolboxHeader.style.width = (categoriesWidth + toolboxWidth) + 'px';
-  workspaceHeader.style.width = (workspaceWidth -
-                                 toolboxWidth -
-                                 showCodeWidth) + 'px';
+  document.getElementById('headers').style.width = fullWorkspaceWidth + 'px';
+  document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
+  document.getElementById('workspace-header').style.width =
+      (fullWorkspaceWidth - toolboxWidth - showCodeWidth) + 'px';
 };
 
 /**
@@ -2638,7 +2626,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -14621,7 +14608,7 @@ exports.numLinesOfCodeWritten = function(d){return "Ви щойно написа
 
 exports.play = function(d){return "грати"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Друк"};
 
 exports.puzzleTitle = function(d){return "Завдання "+v(d,"puzzle_number")+" з "+v(d,"stage_total")};
 
@@ -14663,9 +14650,9 @@ exports.hintRequest = function(d){return "Подивитись підказку"
 
 exports.backToPreviousLevel = function(d){return "Повернутися до попереднього рівня"};
 
-exports.saveToGallery = function(d){return "Зберегти до вашої колекції"};
+exports.saveToGallery = function(d){return "Зберегти в галереї"};
 
-exports.savedToGallery = function(d){return "Збережено в галерею!"};
+exports.savedToGallery = function(d){return "Збережено у галереї!"};
 
 exports.shareFailure = function(d){return "На жаль, цією програмою не можна поділитись."};
 
@@ -14699,7 +14686,7 @@ exports.hintHeader = function(d){return "Підказка:"};
 
 exports.genericFeedback = function(d){return "Подивіться, на чому ви зупинились і спробуйте виправити свою програму."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Подивіться, що у мене вийшло"};
 
 
 },{"messageformat":57}],45:[function(require,module,exports){
@@ -14719,7 +14706,7 @@ var MessageFormat = require("messageformat");MessageFormat.locale.uk = function 
 };
 exports.blocksUsed = function(d){return "Використано блоків:  %1"};
 
-exports.branches = function(d){return "відгалуження"};
+exports.branches = function(d){return "гілочки"};
 
 exports.catColour = function(d){return "Колір"};
 
@@ -14737,23 +14724,23 @@ exports.catLogic = function(d){return "Логіка"};
 
 exports.colourTooltip = function(d){return "Змінює колір олівця."};
 
-exports.createACircle = function(d){return "create a circle"};
+exports.createACircle = function(d){return "створити коло"};
 
-exports.createSnowflakeSquare = function(d){return "create a snowflake of type square"};
+exports.createSnowflakeSquare = function(d){return "створити сніжинку квадратного типу"};
 
-exports.createSnowflakeParallelogram = function(d){return "create a snowflake of type parallelogram"};
+exports.createSnowflakeParallelogram = function(d){return "створити сніжинку типу паралелограм"};
 
-exports.createSnowflakeLine = function(d){return "create a snowflake of type line"};
+exports.createSnowflakeLine = function(d){return "створити сніжинку лінійного типу"};
 
-exports.createSnowflakeSpiral = function(d){return "create a snowflake of type spiral"};
+exports.createSnowflakeSpiral = function(d){return "створити сніжинку спірального типу"};
 
-exports.createSnowflakeFlower = function(d){return "create a snowflake of type flower"};
+exports.createSnowflakeFlower = function(d){return "створити сніжинку квіткового типу"};
 
-exports.createSnowflakeFractal = function(d){return "create a snowflake of type fractal"};
+exports.createSnowflakeFractal = function(d){return "створити сніжинку фрактального типу"};
 
-exports.createSnowflakeRandom = function(d){return "create a snowflake of type random"};
+exports.createSnowflakeRandom = function(d){return "створити сніжинку випадкового типу"};
 
-exports.createASnowflakeBranch = function(d){return "create a snowflake branch"};
+exports.createASnowflakeBranch = function(d){return "створити гілочку сніжинки"};
 
 exports.degrees = function(d){return "градусів"};
 
@@ -14793,7 +14780,7 @@ exports.drawUpperWave = function(d){return "намалювати хвилю до
 
 exports.drawLowerWave = function(d){return "намалювати хвилю вниз"};
 
-exports.drawStamp = function(d){return "draw stamp"};
+exports.drawStamp = function(d){return "намалювати штамп"};
 
 exports.heightParameter = function(d){return "висота"};
 
@@ -14847,7 +14834,7 @@ exports.penTooltip = function(d){return "Піднімає або опускає 
 
 exports.penUp = function(d){return "підняти олівець"};
 
-exports.reinfFeedbackMsg = function(d){return "Це виглядає так, як ви хочете? Можна клацнути кнопку \"Повторити спробу\", щоб побачити свій малюнок."};
+exports.reinfFeedbackMsg = function(d){return "Ось ваш малюнок! Продовжуйте роботу над ним, або перейдіть до наступної задачі."};
 
 exports.setColour = function(d){return "встановити колір"};
 

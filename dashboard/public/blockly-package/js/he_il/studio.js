@@ -778,16 +778,14 @@ BlocklyApps.init = function(config) {
   });
   window.addEventListener('resize', BlocklyApps.onResize);
 
-  // call initial onResize() asynchronously - need 100ms delay to work
-  // around relayout which changes height on the left side to the proper
-  // value
+  // Call initial onResize() asynchronously - need 10ms delay to work around
+  // relayout which changes height on the left side to the proper value
   window.setTimeout(function() {
-      BlocklyApps.onResize();
-      var event = document.createEvent('UIEvents');
-      event.initEvent('resize', true, true);  // event type, bubbling, cancelable
-      window.dispatchEvent(event);
-    },
-    100);
+    BlocklyApps.onResize();
+    var event = document.createEvent('UIEvents');
+    event.initEvent('resize', true, true);  // event type, bubbling, cancelable
+    window.dispatchEvent(event);
+  }, 10);
 
   BlocklyApps.reset(true);
 
@@ -1025,7 +1023,15 @@ BlocklyApps.onResize = function() {
 
   div.style.top = divParent.offsetTop + 'px';
   var fullWorkspaceWidth = parentWidth - (gameWidth + WORKSPACE_PLAYSPACE_GAP);
+  var oldWidth = parseInt(div.style.width, 10) || div.getBoundingClientRect().width;
   div.style.width = fullWorkspaceWidth + 'px';
+
+  // Keep blocks static relative to the right edge in RTL mode
+  if (BlocklyApps.usingBlockly && Blockly.RTL && (fullWorkspaceWidth - oldWidth !== 0)) {
+    Blockly.mainBlockSpace.getTopBlocks().forEach(function(topBlock) {
+      topBlock.moveBy(fullWorkspaceWidth - oldWidth, 0);
+    });
+  }
 
   if (BlocklyApps.isRtl()) {
     div.style.marginRight = (gameWidth + WORKSPACE_PLAYSPACE_GAP) + 'px';
@@ -1051,58 +1057,40 @@ BlocklyApps.onResize = function() {
   BlocklyApps.resizeHeaders(fullWorkspaceWidth);
 };
 
-// |         toolbox-header           | workspace-header  | show-code-header |
+// |          toolbox-header          | workspace-header  | show-code-header |
 // |
-// | categoriesWidth |  toolboxWidth  |
+// |           toolboxWidth           |
 // |                 |         <--------- workspaceWidth ---------->         |
 // |         <---------------- fullWorkspaceWidth ----------------->         |
 BlocklyApps.resizeHeaders = function (fullWorkspaceWidth) {
-  var categoriesWidth = 0;
-  var categories = BlocklyApps.editCode ?
-      document.querySelector('.droplet-palette-wrapper') :
-      Blockly.mainBlockSpaceEditor.toolbox &&
-      Blockly.mainBlockSpaceEditor.toolbox.HtmlDiv;
-  if (categories) {
+  var minWorkspaceWidthForShowCode = BlocklyApps.editCode ? 250 : 450;
+  var toolboxWidth = 0;
+  if (BlocklyApps.editCode) {
     // If in the droplet editor, but not using blocks, keep categoryWidth at 0
     if (!BlocklyApps.editCode || BlocklyApps.editor.currentlyUsingBlocks) {
-      // set CategoryWidth based on the block toolbox/palette width:
-      categoriesWidth = parseInt(window.getComputedStyle(categories).width, 10);
+      // Set toolboxWidth based on the block palette width:
+      var categories = document.querySelector('.droplet-palette-wrapper');
+      toolboxWidth = parseInt(window.getComputedStyle(categories).width, 10);
     }
-  }
-
-  var workspaceWidth;
-  var toolboxWidth;
-  if (BlocklyApps.usingBlockly) {
-    workspaceWidth = Blockly.mainBlockSpaceEditor.getBlockSpaceWidth();
+  } else if (BlocklyApps.usingBlockly) {
     toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
   }
-  else {
-    workspaceWidth = fullWorkspaceWidth - categoriesWidth;
-    toolboxWidth = 0;
-  }
 
-  var headers = document.getElementById('headers');
-  var workspaceHeader = document.getElementById('workspace-header');
-  var toolboxHeader = document.getElementById('toolbox-header');
   var showCodeHeader = document.getElementById('show-code-header');
-
-  var showCodeWidth;
-  var minWorkspaceWidthForShowCode = BlocklyApps.editCode ? 250 : 450;
+  var showCodeWidth = 0;
   if (BlocklyApps.enableShowCode &&
-      (workspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
+      (fullWorkspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
     showCodeWidth = parseInt(window.getComputedStyle(showCodeHeader).width, 10);
     showCodeHeader.style.display = "";
   }
   else {
-    showCodeWidth = 0;
     showCodeHeader.style.display = "none";
   }
 
-  headers.style.width = (categoriesWidth + workspaceWidth) + 'px';
-  toolboxHeader.style.width = (categoriesWidth + toolboxWidth) + 'px';
-  workspaceHeader.style.width = (workspaceWidth -
-                                 toolboxWidth -
-                                 showCodeWidth) + 'px';
+  document.getElementById('headers').style.width = fullWorkspaceWidth + 'px';
+  document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
+  document.getElementById('workspace-header').style.width =
+      (fullWorkspaceWidth - toolboxWidth - showCodeWidth) + 'px';
 };
 
 /**
@@ -6729,7 +6717,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -15077,6 +15064,23 @@ exports.install = function(blockly, blockInstallOptions) {
   // Install functional start blocks
   //
 
+  blockly.Blocks.functional_start_setValue = {
+    init: function() {
+      var blockName = 'start (value)';
+      var blockType = 'none';
+      var blockArgs = [{name: 'VALUE', type: 'Number'}];
+      initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
+    }
+  };
+
+  generator.functional_start_setValue = function() {
+    // Adapted from Blockly.JavaScript.variables_set.
+    var argument0 = Blockly.JavaScript.statementToCode(this, 'VALUE',
+        Blockly.JavaScript.ORDER_ASSIGNMENT) || '0';
+    var varName = Blockly.JavaScript.translateVarName('startValue');
+    return varName + ' = ' + argument0 + ';\n';
+  };
+
   installFunctionalApiCallBlock(blockly, generator, {
     blockName: 'functional_start_dummyOnMove',
     blockTitle: 'on-move (on-screen)',
@@ -18563,6 +18567,7 @@ Studio.execute = function() {
   var handlers = [];
   if (BlocklyApps.usingBlockly) {
     registerHandlers(handlers, 'when_run', 'whenGameStarts');
+    registerHandlers(handlers, 'functional_start_setValue', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackground', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setSpeeds', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackgroundAndSpeeds',
@@ -18771,7 +18776,7 @@ function spriteTotalFrames (index) {
 }
 
 var updateSpeechBubblePath = function (element) {
-  var height = element.getAttribute('height');
+  var height = +element.getAttribute('height');
   var onTop = 'true' === element.getAttribute('onTop');
   var onRight = 'true' === element.getAttribute('onRight');
   element.setAttribute('d',
@@ -20484,7 +20489,7 @@ exports.score = function(d){return "ציון"};
 
 exports.showCodeHeader = function(d){return "הצג קוד"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "הצג בלוקים"};
 
 exports.showGeneratedCode = function(d){return "הצג קוד"};
 
@@ -20514,7 +20519,7 @@ exports.saveToGallery = function(d){return "לשמור את הגלריה שלך"
 
 exports.savedToGallery = function(d){return "נשמר לגלריה שלך!"};
 
-exports.shareFailure = function(d){return "Sorry, we can't share this program."};
+exports.shareFailure = function(d){return "מצטערים, אנחנו לא יכולים לשתף תוכנית זו."};
 
 exports.typeFuncs = function(d){return "פונקציות אפשריות: %1"};
 
@@ -20522,7 +20527,7 @@ exports.typeHint = function(d){return "שימו לב כי סוגריים ונק�
 
 exports.workspaceHeader = function(d){return "הרכב את הבלוקים שלך כאן: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "הקלד את קוד JavaScript שלך כאן"};
 
 exports.infinity = function(d){return "אינסוף"};
 
@@ -20551,39 +20556,39 @@ exports.defaultTwitterText = function(d){return "Check out what I made"};
 
 },{"messageformat":61}],49:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.he=function(n){return n===1?"one":"other"}
-exports.actor = function(d){return "actor"};
+exports.actor = function(d){return "שחקן"};
 
-exports.backgroundBlack = function(d){return "black"};
+exports.backgroundBlack = function(d){return "שחור"};
 
-exports.backgroundCave = function(d){return "cave"};
+exports.backgroundCave = function(d){return "מערה"};
 
-exports.backgroundCloudy = function(d){return "cloudy"};
+exports.backgroundCloudy = function(d){return "מעונן"};
 
-exports.backgroundHardcourt = function(d){return "hardcourt"};
+exports.backgroundHardcourt = function(d){return "משטח קשה"};
 
-exports.backgroundNight = function(d){return "night"};
+exports.backgroundNight = function(d){return "לילה"};
 
-exports.backgroundUnderwater = function(d){return "underwater"};
+exports.backgroundUnderwater = function(d){return "מתחת למים"};
 
-exports.backgroundCity = function(d){return "city"};
+exports.backgroundCity = function(d){return "עיר"};
 
-exports.backgroundDesert = function(d){return "desert"};
+exports.backgroundDesert = function(d){return "מדבר"};
 
-exports.backgroundRainbow = function(d){return "rainbow"};
+exports.backgroundRainbow = function(d){return "קשת"};
 
-exports.backgroundSoccer = function(d){return "soccer"};
+exports.backgroundSoccer = function(d){return "כדורגל"};
 
-exports.backgroundSpace = function(d){return "space"};
+exports.backgroundSpace = function(d){return "חלל"};
 
-exports.backgroundTennis = function(d){return "tennis"};
+exports.backgroundTennis = function(d){return "טניס"};
 
-exports.backgroundWinter = function(d){return "winter"};
+exports.backgroundWinter = function(d){return "חורף"};
 
 exports.catActions = function(d){return "פעולות"};
 
 exports.catControl = function(d){return "חזרות"};
 
-exports.catEvents = function(d){return "Events"};
+exports.catEvents = function(d){return "אירועים"};
 
 exports.catLogic = function(d){return "לוגיקה"};
 
@@ -20595,33 +20600,33 @@ exports.catText = function(d){return "טקסט"};
 
 exports.catVariables = function(d){return "משתנים"};
 
-exports.changeScoreTooltip = function(d){return "Add or remove a point to the score."};
+exports.changeScoreTooltip = function(d){return "להוסיף או להסיר נקודות לניקוד."};
 
-exports.changeScoreTooltipK1 = function(d){return "Add a point to the score."};
+exports.changeScoreTooltipK1 = function(d){return "להוסיף נקודה לניקוד."};
 
 exports.continue = function(d){return "המשך"};
 
-exports.decrementPlayerScore = function(d){return "remove point"};
+exports.decrementPlayerScore = function(d){return "מוריד נקודה"};
 
-exports.defaultSayText = function(d){return "type here"};
+exports.defaultSayText = function(d){return "הקלד כאן"};
 
-exports.emotion = function(d){return "mood"};
+exports.emotion = function(d){return "מצב רוח"};
 
 exports.finalLevel = function(d){return "מזל טוב! פתרת את החידה האחרונה."};
 
-exports.for = function(d){return "for"};
+exports.for = function(d){return "עבור"};
 
-exports.hello = function(d){return "hello"};
+exports.hello = function(d){return "שלום"};
 
-exports.helloWorld = function(d){return "Hello World!"};
+exports.helloWorld = function(d){return "הי עולם!"};
 
 exports.incrementPlayerScore = function(d){return "נקודת דרוג"};
 
-exports.makeProjectileDisappear = function(d){return "disappear"};
+exports.makeProjectileDisappear = function(d){return "נעלם"};
 
 exports.makeProjectileBounce = function(d){return "הקפצה"};
 
-exports.makeProjectileBlueFireball = function(d){return "make blue fireball"};
+exports.makeProjectileBlueFireball = function(d){return "עושה כדור האש כחול"};
 
 exports.makeProjectilePurpleFireball = function(d){return "make purple fireball"};
 
@@ -20641,25 +20646,25 @@ exports.moveDirectionDown = function(d){return "למטה"};
 
 exports.moveDirectionLeft = function(d){return "שמאלה"};
 
-exports.moveDirectionRight = function(d){return "right"};
+exports.moveDirectionRight = function(d){return "ימינה"};
 
-exports.moveDirectionUp = function(d){return "up"};
+exports.moveDirectionUp = function(d){return "למעלה"};
 
 exports.moveDirectionRandom = function(d){return "אקראי"};
 
-exports.moveDistance25 = function(d){return "25 pixels"};
+exports.moveDistance25 = function(d){return "25 פיקסלים"};
 
-exports.moveDistance50 = function(d){return "50 pixels"};
+exports.moveDistance50 = function(d){return "50 פיקסלים"};
 
-exports.moveDistance100 = function(d){return "100 pixels"};
+exports.moveDistance100 = function(d){return "100 פיקסלים"};
 
-exports.moveDistance200 = function(d){return "200 pixels"};
+exports.moveDistance200 = function(d){return "200 פיקסלים"};
 
-exports.moveDistance400 = function(d){return "400 pixels"};
+exports.moveDistance400 = function(d){return "400 פיקסלים"};
 
 exports.moveDistancePixels = function(d){return "פיקסלים"};
 
-exports.moveDistanceRandom = function(d){return "random pixels"};
+exports.moveDistanceRandom = function(d){return "פיקסלים אקראיים"};
 
 exports.moveDistanceTooltip = function(d){return "Move a character a specific distance in the specified direction."};
 
@@ -20691,7 +20696,7 @@ exports.no = function(d){return "לא"};
 
 exports.numBlocksNeeded = function(d){return "ניתן לפתור את הפאזל עם %1 בלוק."};
 
-exports.ouchExclamation = function(d){return "Ouch!"};
+exports.ouchExclamation = function(d){return "איי !"};
 
 exports.playSoundCrunch = function(d){return "תשמיע צליל מעיכה"};
 

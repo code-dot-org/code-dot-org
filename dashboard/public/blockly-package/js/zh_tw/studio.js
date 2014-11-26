@@ -778,16 +778,14 @@ BlocklyApps.init = function(config) {
   });
   window.addEventListener('resize', BlocklyApps.onResize);
 
-  // call initial onResize() asynchronously - need 100ms delay to work
-  // around relayout which changes height on the left side to the proper
-  // value
+  // Call initial onResize() asynchronously - need 10ms delay to work around
+  // relayout which changes height on the left side to the proper value
   window.setTimeout(function() {
-      BlocklyApps.onResize();
-      var event = document.createEvent('UIEvents');
-      event.initEvent('resize', true, true);  // event type, bubbling, cancelable
-      window.dispatchEvent(event);
-    },
-    100);
+    BlocklyApps.onResize();
+    var event = document.createEvent('UIEvents');
+    event.initEvent('resize', true, true);  // event type, bubbling, cancelable
+    window.dispatchEvent(event);
+  }, 10);
 
   BlocklyApps.reset(true);
 
@@ -1025,7 +1023,15 @@ BlocklyApps.onResize = function() {
 
   div.style.top = divParent.offsetTop + 'px';
   var fullWorkspaceWidth = parentWidth - (gameWidth + WORKSPACE_PLAYSPACE_GAP);
+  var oldWidth = parseInt(div.style.width, 10) || div.getBoundingClientRect().width;
   div.style.width = fullWorkspaceWidth + 'px';
+
+  // Keep blocks static relative to the right edge in RTL mode
+  if (BlocklyApps.usingBlockly && Blockly.RTL && (fullWorkspaceWidth - oldWidth !== 0)) {
+    Blockly.mainBlockSpace.getTopBlocks().forEach(function(topBlock) {
+      topBlock.moveBy(fullWorkspaceWidth - oldWidth, 0);
+    });
+  }
 
   if (BlocklyApps.isRtl()) {
     div.style.marginRight = (gameWidth + WORKSPACE_PLAYSPACE_GAP) + 'px';
@@ -1051,58 +1057,40 @@ BlocklyApps.onResize = function() {
   BlocklyApps.resizeHeaders(fullWorkspaceWidth);
 };
 
-// |         toolbox-header           | workspace-header  | show-code-header |
+// |          toolbox-header          | workspace-header  | show-code-header |
 // |
-// | categoriesWidth |  toolboxWidth  |
+// |           toolboxWidth           |
 // |                 |         <--------- workspaceWidth ---------->         |
 // |         <---------------- fullWorkspaceWidth ----------------->         |
 BlocklyApps.resizeHeaders = function (fullWorkspaceWidth) {
-  var categoriesWidth = 0;
-  var categories = BlocklyApps.editCode ?
-      document.querySelector('.droplet-palette-wrapper') :
-      Blockly.mainBlockSpaceEditor.toolbox &&
-      Blockly.mainBlockSpaceEditor.toolbox.HtmlDiv;
-  if (categories) {
+  var minWorkspaceWidthForShowCode = BlocklyApps.editCode ? 250 : 450;
+  var toolboxWidth = 0;
+  if (BlocklyApps.editCode) {
     // If in the droplet editor, but not using blocks, keep categoryWidth at 0
     if (!BlocklyApps.editCode || BlocklyApps.editor.currentlyUsingBlocks) {
-      // set CategoryWidth based on the block toolbox/palette width:
-      categoriesWidth = parseInt(window.getComputedStyle(categories).width, 10);
+      // Set toolboxWidth based on the block palette width:
+      var categories = document.querySelector('.droplet-palette-wrapper');
+      toolboxWidth = parseInt(window.getComputedStyle(categories).width, 10);
     }
-  }
-
-  var workspaceWidth;
-  var toolboxWidth;
-  if (BlocklyApps.usingBlockly) {
-    workspaceWidth = Blockly.mainBlockSpaceEditor.getBlockSpaceWidth();
+  } else if (BlocklyApps.usingBlockly) {
     toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
   }
-  else {
-    workspaceWidth = fullWorkspaceWidth - categoriesWidth;
-    toolboxWidth = 0;
-  }
 
-  var headers = document.getElementById('headers');
-  var workspaceHeader = document.getElementById('workspace-header');
-  var toolboxHeader = document.getElementById('toolbox-header');
   var showCodeHeader = document.getElementById('show-code-header');
-
-  var showCodeWidth;
-  var minWorkspaceWidthForShowCode = BlocklyApps.editCode ? 250 : 450;
+  var showCodeWidth = 0;
   if (BlocklyApps.enableShowCode &&
-      (workspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
+      (fullWorkspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
     showCodeWidth = parseInt(window.getComputedStyle(showCodeHeader).width, 10);
     showCodeHeader.style.display = "";
   }
   else {
-    showCodeWidth = 0;
     showCodeHeader.style.display = "none";
   }
 
-  headers.style.width = (categoriesWidth + workspaceWidth) + 'px';
-  toolboxHeader.style.width = (categoriesWidth + toolboxWidth) + 'px';
-  workspaceHeader.style.width = (workspaceWidth -
-                                 toolboxWidth -
-                                 showCodeWidth) + 'px';
+  document.getElementById('headers').style.width = fullWorkspaceWidth + 'px';
+  document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
+  document.getElementById('workspace-header').style.width =
+      (fullWorkspaceWidth - toolboxWidth - showCodeWidth) + 'px';
 };
 
 /**
@@ -6729,7 +6717,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -15077,6 +15064,23 @@ exports.install = function(blockly, blockInstallOptions) {
   // Install functional start blocks
   //
 
+  blockly.Blocks.functional_start_setValue = {
+    init: function() {
+      var blockName = 'start (value)';
+      var blockType = 'none';
+      var blockArgs = [{name: 'VALUE', type: 'Number'}];
+      initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
+    }
+  };
+
+  generator.functional_start_setValue = function() {
+    // Adapted from Blockly.JavaScript.variables_set.
+    var argument0 = Blockly.JavaScript.statementToCode(this, 'VALUE',
+        Blockly.JavaScript.ORDER_ASSIGNMENT) || '0';
+    var varName = Blockly.JavaScript.translateVarName('startValue');
+    return varName + ' = ' + argument0 + ';\n';
+  };
+
   installFunctionalApiCallBlock(blockly, generator, {
     blockName: 'functional_start_dummyOnMove',
     blockTitle: 'on-move (on-screen)',
@@ -18563,6 +18567,7 @@ Studio.execute = function() {
   var handlers = [];
   if (BlocklyApps.usingBlockly) {
     registerHandlers(handlers, 'when_run', 'whenGameStarts');
+    registerHandlers(handlers, 'functional_start_setValue', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackground', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setSpeeds', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackgroundAndSpeeds',
@@ -18771,7 +18776,7 @@ function spriteTotalFrames (index) {
 }
 
 var updateSpeechBubblePath = function (element) {
-  var height = element.getAttribute('height');
+  var height = +element.getAttribute('height');
   var onTop = 'true' === element.getAttribute('onTop');
   var onRight = 'true' === element.getAttribute('onRight');
   element.setAttribute('d',
@@ -20520,7 +20525,7 @@ exports.typeFuncs = function(d){return "可用函數：%1"};
 
 exports.typeHint = function(d){return "請注意\"括弧\"和\"分號\"都是必須的。"};
 
-exports.workspaceHeader = function(d){return "在此組合您的區塊"};
+exports.workspaceHeader = function(d){return "在這裡組合你的程式積木："};
 
 exports.workspaceHeaderJavaScript = function(d){return "在此輸入您的 JavaScript 代碼"};
 
@@ -20621,17 +20626,17 @@ exports.makeProjectileDisappear = function(d){return "消失"};
 
 exports.makeProjectileBounce = function(d){return "彈跳"};
 
-exports.makeProjectileBlueFireball = function(d){return "make blue fireball"};
+exports.makeProjectileBlueFireball = function(d){return "製造藍色火球"};
 
-exports.makeProjectilePurpleFireball = function(d){return "make purple fireball"};
+exports.makeProjectilePurpleFireball = function(d){return "製造紫色火球"};
 
-exports.makeProjectileRedFireball = function(d){return "make red fireball"};
+exports.makeProjectileRedFireball = function(d){return "製造紅色火球"};
 
-exports.makeProjectileYellowHearts = function(d){return "make yellow hearts"};
+exports.makeProjectileYellowHearts = function(d){return "製造黃色愛心"};
 
-exports.makeProjectilePurpleHearts = function(d){return "make purple hearts"};
+exports.makeProjectilePurpleHearts = function(d){return "製造紫色愛心"};
 
-exports.makeProjectileRedHearts = function(d){return "make red hearts"};
+exports.makeProjectileRedHearts = function(d){return "製造紅色愛心"};
 
 exports.makeProjectileTooltip = function(d){return "讓撞擊的導彈消失或反彈。"};
 
@@ -20719,33 +20724,33 @@ exports.playSoundWinPoint2 = function(d){return "播放得分2的音效"};
 
 exports.playSoundWood = function(d){return "播放木頭音效"};
 
-exports.positionOutTopLeft = function(d){return "到左上角"};
+exports.positionOutTopLeft = function(d){return "放在左上角"};
 
-exports.positionOutTopRight = function(d){return "to the above top right position"};
+exports.positionOutTopRight = function(d){return "放在右上角"};
 
 exports.positionTopOutLeft = function(d){return "to the top outside left position"};
 
-exports.positionTopLeft = function(d){return "to the top left position"};
+exports.positionTopLeft = function(d){return "放在左上角"};
 
-exports.positionTopCenter = function(d){return "to the top center position"};
+exports.positionTopCenter = function(d){return "放在上面中間"};
 
-exports.positionTopRight = function(d){return "to the top right position"};
+exports.positionTopRight = function(d){return "放在右上角"};
 
 exports.positionTopOutRight = function(d){return "to the top outside right position"};
 
-exports.positionMiddleLeft = function(d){return "to the middle left position"};
+exports.positionMiddleLeft = function(d){return "放在左邊中間"};
 
-exports.positionMiddleCenter = function(d){return "to the middle center position"};
+exports.positionMiddleCenter = function(d){return "放在正中間"};
 
-exports.positionMiddleRight = function(d){return "to the middle right position"};
+exports.positionMiddleRight = function(d){return "放在右邊中間"};
 
 exports.positionBottomOutLeft = function(d){return "to the bottom outside left position"};
 
-exports.positionBottomLeft = function(d){return "to the bottom left position"};
+exports.positionBottomLeft = function(d){return "放在左下角"};
 
-exports.positionBottomCenter = function(d){return "到底部的中心位置"};
+exports.positionBottomCenter = function(d){return "放在下面中間"};
 
-exports.positionBottomRight = function(d){return "to the bottom right position"};
+exports.positionBottomRight = function(d){return "放在右下角"};
 
 exports.positionBottomOutRight = function(d){return "to the bottom outside right position"};
 
@@ -20753,31 +20758,31 @@ exports.positionOutBottomLeft = function(d){return "to the below bottom left pos
 
 exports.positionOutBottomRight = function(d){return "to the below bottom right position"};
 
-exports.positionRandom = function(d){return "至隨機位置"};
+exports.positionRandom = function(d){return "放到隨機位置"};
 
-exports.projectileBlueFireball = function(d){return "blue fireball"};
+exports.projectileBlueFireball = function(d){return "藍色火球"};
 
-exports.projectilePurpleFireball = function(d){return "purple fireball"};
+exports.projectilePurpleFireball = function(d){return "紫色火球"};
 
-exports.projectileRedFireball = function(d){return "red fireball"};
+exports.projectileRedFireball = function(d){return "紅色火球"};
 
-exports.projectileYellowHearts = function(d){return "yellow hearts"};
+exports.projectileYellowHearts = function(d){return "黃色愛心"};
 
-exports.projectilePurpleHearts = function(d){return "purple hearts"};
+exports.projectilePurpleHearts = function(d){return "紫色愛心"};
 
-exports.projectileRedHearts = function(d){return "red hearts"};
+exports.projectileRedHearts = function(d){return "紅色愛心"};
 
 exports.projectileRandom = function(d){return "隨機"};
 
-exports.projectileAnna = function(d){return "Anna"};
+exports.projectileAnna = function(d){return "安娜"};
 
-exports.projectileElsa = function(d){return "Elsa"};
+exports.projectileElsa = function(d){return "愛莎"};
 
-exports.projectileHiro = function(d){return "Hiro"};
+exports.projectileHiro = function(d){return "濱田廣"};
 
-exports.projectileBaymax = function(d){return "Baymax"};
+exports.projectileBaymax = function(d){return "醫神"};
 
-exports.projectileRapunzel = function(d){return "Rapunzel"};
+exports.projectileRapunzel = function(d){return "長髮姑娘"};
 
 exports.reinfFeedbackMsg = function(d){return "您可以按\"重試\"按鈕返回你正在進行的故事。"};
 
@@ -20847,25 +20852,25 @@ exports.setSpriteEmotionSad = function(d){return "設置悲傷模式"};
 
 exports.setSpriteEmotionTooltip = function(d){return "設置演員的情緒"};
 
-exports.setSpriteAlien = function(d){return "予外星人圖像"};
+exports.setSpriteAlien = function(d){return "設為外星人的樣子"};
 
-exports.setSpriteBat = function(d){return "到蝙蝠圖像"};
+exports.setSpriteBat = function(d){return "設為蝙蝠的樣子"};
 
-exports.setSpriteBird = function(d){return "到鳥圖像"};
+exports.setSpriteBird = function(d){return "設為小鳥的樣子"};
 
-exports.setSpriteCat = function(d){return "設為貓咪的影像"};
+exports.setSpriteCat = function(d){return "設為貓咪的樣子"};
 
-exports.setSpriteCaveBoy = function(d){return "to a cave boy image"};
+exports.setSpriteCaveBoy = function(d){return "設為原始人男生的樣子"};
 
-exports.setSpriteCaveGirl = function(d){return "to a cave girl image"};
+exports.setSpriteCaveGirl = function(d){return "設為原始人女生的樣子"};
 
-exports.setSpriteDinosaur = function(d){return "設為恐龍的影像"};
+exports.setSpriteDinosaur = function(d){return "設為恐龍的樣子"};
 
-exports.setSpriteDog = function(d){return "設為狗狗的影像"};
+exports.setSpriteDog = function(d){return "設為狗狗的樣子"};
 
-exports.setSpriteDragon = function(d){return "到龍圖像"};
+exports.setSpriteDragon = function(d){return "設為龍的樣子"};
 
-exports.setSpriteGhost = function(d){return "到鬼魂圖像"};
+exports.setSpriteGhost = function(d){return "設為鬼的樣子"};
 
 exports.setSpriteHidden = function(d){return "設為隱藏的影像"};
 
@@ -20881,49 +20886,49 @@ exports.setSpriteBaymax = function(d){return "to a Baymax image"};
 
 exports.setSpriteRapunzel = function(d){return "to a Rapunzel image"};
 
-exports.setSpriteKnight = function(d){return "到騎士圖像"};
+exports.setSpriteKnight = function(d){return "設為騎士的樣子"};
 
-exports.setSpriteMonster = function(d){return "到怪物圖像"};
+exports.setSpriteMonster = function(d){return "設為怪獸的樣子"};
 
-exports.setSpriteNinja = function(d){return "到蒙面忍者圖像"};
+exports.setSpriteNinja = function(d){return "設為蒙面忍者的樣子"};
 
-exports.setSpriteOctopus = function(d){return "設為章魚的影像"};
+exports.setSpriteOctopus = function(d){return "設為章魚的樣子"};
 
-exports.setSpritePenguin = function(d){return "設為企鵝的影像"};
+exports.setSpritePenguin = function(d){return "設為企鵝的樣子"};
 
-exports.setSpritePirate = function(d){return "到海盜圖像"};
+exports.setSpritePirate = function(d){return "設為海盜的樣子"};
 
-exports.setSpritePrincess = function(d){return "到公主圖像"};
+exports.setSpritePrincess = function(d){return "設為公主的樣子"};
 
 exports.setSpriteRandom = function(d){return "設為隨機的影像"};
 
-exports.setSpriteRobot = function(d){return "到機器人圖像"};
+exports.setSpriteRobot = function(d){return "設為機器人的樣子"};
 
 exports.setSpriteShowK1 = function(d){return "顯示"};
 
-exports.setSpriteSpacebot = function(d){return "to a spacebot image"};
+exports.setSpriteSpacebot = function(d){return "設為太空機器人的樣子"};
 
-exports.setSpriteSoccerGirl = function(d){return "to a soccer girl image"};
+exports.setSpriteSoccerGirl = function(d){return "設為足球女孩的樣子"};
 
-exports.setSpriteSoccerBoy = function(d){return "to a soccer boy image"};
+exports.setSpriteSoccerBoy = function(d){return "設為足球男孩的樣子"};
 
-exports.setSpriteSquirrel = function(d){return "到松鼠圖像"};
+exports.setSpriteSquirrel = function(d){return "設為松鼠的樣子"};
 
-exports.setSpriteTennisGirl = function(d){return "to a tennis girl image"};
+exports.setSpriteTennisGirl = function(d){return "設為網球女孩的樣子"};
 
-exports.setSpriteTennisBoy = function(d){return "to a tennis boy image"};
+exports.setSpriteTennisBoy = function(d){return "設為網球男孩的樣子"};
 
-exports.setSpriteUnicorn = function(d){return "到獨角獸圖像"};
+exports.setSpriteUnicorn = function(d){return "設為獨角獸的樣子"};
 
-exports.setSpriteWitch = function(d){return "設為巫婆的影像"};
+exports.setSpriteWitch = function(d){return "設為巫婆的樣子"};
 
-exports.setSpriteWizard = function(d){return "到巫師圖像"};
+exports.setSpriteWizard = function(d){return "設為巫師的樣子"};
 
 exports.setSpritePositionTooltip = function(d){return "立即將一個角色移動到指定的位置。"};
 
 exports.setSpriteK1Tooltip = function(d){return "顯示或隱藏指定的角色。"};
 
-exports.setSpriteTooltip = function(d){return "設為角色的影像"};
+exports.setSpriteTooltip = function(d){return "設定角色的影像"};
 
 exports.setSpriteSizeRandom = function(d){return "to a random size"};
 
@@ -20953,7 +20958,7 @@ exports.setSpriteSpeedVeryFast = function(d){return "設為非常快的速度"};
 
 exports.setSpriteSpeedTooltip = function(d){return "設為角色的速度"};
 
-exports.setSpriteZombie = function(d){return "到僵屍圖像"};
+exports.setSpriteZombie = function(d){return "設為僵屍的樣子"};
 
 exports.shareStudioTwitter = function(d){return "看看我在@codeorg ，自己所編寫的故事。"};
 
@@ -21101,11 +21106,11 @@ exports.whenSpriteCollidedWithPurpleFireball = function(d){return "碰到紫色�
 
 exports.whenSpriteCollidedWithRedFireball = function(d){return "碰到紅色火球"};
 
-exports.whenSpriteCollidedWithYellowHearts = function(d){return "碰到黃色心"};
+exports.whenSpriteCollidedWithYellowHearts = function(d){return "碰到黃色愛心"};
 
-exports.whenSpriteCollidedWithPurpleHearts = function(d){return "碰到紫色心"};
+exports.whenSpriteCollidedWithPurpleHearts = function(d){return "碰到紫色愛心"};
 
-exports.whenSpriteCollidedWithRedHearts = function(d){return "碰到紅色心"};
+exports.whenSpriteCollidedWithRedHearts = function(d){return "碰到紅色愛心"};
 
 exports.whenSpriteCollidedWithBottomEdge = function(d){return "接觸底部邊緣"};
 

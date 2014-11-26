@@ -778,16 +778,14 @@ BlocklyApps.init = function(config) {
   });
   window.addEventListener('resize', BlocklyApps.onResize);
 
-  // call initial onResize() asynchronously - need 100ms delay to work
-  // around relayout which changes height on the left side to the proper
-  // value
+  // Call initial onResize() asynchronously - need 10ms delay to work around
+  // relayout which changes height on the left side to the proper value
   window.setTimeout(function() {
-      BlocklyApps.onResize();
-      var event = document.createEvent('UIEvents');
-      event.initEvent('resize', true, true);  // event type, bubbling, cancelable
-      window.dispatchEvent(event);
-    },
-    100);
+    BlocklyApps.onResize();
+    var event = document.createEvent('UIEvents');
+    event.initEvent('resize', true, true);  // event type, bubbling, cancelable
+    window.dispatchEvent(event);
+  }, 10);
 
   BlocklyApps.reset(true);
 
@@ -1025,7 +1023,15 @@ BlocklyApps.onResize = function() {
 
   div.style.top = divParent.offsetTop + 'px';
   var fullWorkspaceWidth = parentWidth - (gameWidth + WORKSPACE_PLAYSPACE_GAP);
+  var oldWidth = parseInt(div.style.width, 10) || div.getBoundingClientRect().width;
   div.style.width = fullWorkspaceWidth + 'px';
+
+  // Keep blocks static relative to the right edge in RTL mode
+  if (BlocklyApps.usingBlockly && Blockly.RTL && (fullWorkspaceWidth - oldWidth !== 0)) {
+    Blockly.mainBlockSpace.getTopBlocks().forEach(function(topBlock) {
+      topBlock.moveBy(fullWorkspaceWidth - oldWidth, 0);
+    });
+  }
 
   if (BlocklyApps.isRtl()) {
     div.style.marginRight = (gameWidth + WORKSPACE_PLAYSPACE_GAP) + 'px';
@@ -1051,58 +1057,40 @@ BlocklyApps.onResize = function() {
   BlocklyApps.resizeHeaders(fullWorkspaceWidth);
 };
 
-// |         toolbox-header           | workspace-header  | show-code-header |
+// |          toolbox-header          | workspace-header  | show-code-header |
 // |
-// | categoriesWidth |  toolboxWidth  |
+// |           toolboxWidth           |
 // |                 |         <--------- workspaceWidth ---------->         |
 // |         <---------------- fullWorkspaceWidth ----------------->         |
 BlocklyApps.resizeHeaders = function (fullWorkspaceWidth) {
-  var categoriesWidth = 0;
-  var categories = BlocklyApps.editCode ?
-      document.querySelector('.droplet-palette-wrapper') :
-      Blockly.mainBlockSpaceEditor.toolbox &&
-      Blockly.mainBlockSpaceEditor.toolbox.HtmlDiv;
-  if (categories) {
+  var minWorkspaceWidthForShowCode = BlocklyApps.editCode ? 250 : 450;
+  var toolboxWidth = 0;
+  if (BlocklyApps.editCode) {
     // If in the droplet editor, but not using blocks, keep categoryWidth at 0
     if (!BlocklyApps.editCode || BlocklyApps.editor.currentlyUsingBlocks) {
-      // set CategoryWidth based on the block toolbox/palette width:
-      categoriesWidth = parseInt(window.getComputedStyle(categories).width, 10);
+      // Set toolboxWidth based on the block palette width:
+      var categories = document.querySelector('.droplet-palette-wrapper');
+      toolboxWidth = parseInt(window.getComputedStyle(categories).width, 10);
     }
-  }
-
-  var workspaceWidth;
-  var toolboxWidth;
-  if (BlocklyApps.usingBlockly) {
-    workspaceWidth = Blockly.mainBlockSpaceEditor.getBlockSpaceWidth();
+  } else if (BlocklyApps.usingBlockly) {
     toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
   }
-  else {
-    workspaceWidth = fullWorkspaceWidth - categoriesWidth;
-    toolboxWidth = 0;
-  }
 
-  var headers = document.getElementById('headers');
-  var workspaceHeader = document.getElementById('workspace-header');
-  var toolboxHeader = document.getElementById('toolbox-header');
   var showCodeHeader = document.getElementById('show-code-header');
-
-  var showCodeWidth;
-  var minWorkspaceWidthForShowCode = BlocklyApps.editCode ? 250 : 450;
+  var showCodeWidth = 0;
   if (BlocklyApps.enableShowCode &&
-      (workspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
+      (fullWorkspaceWidth - toolboxWidth > minWorkspaceWidthForShowCode)) {
     showCodeWidth = parseInt(window.getComputedStyle(showCodeHeader).width, 10);
     showCodeHeader.style.display = "";
   }
   else {
-    showCodeWidth = 0;
     showCodeHeader.style.display = "none";
   }
 
-  headers.style.width = (categoriesWidth + workspaceWidth) + 'px';
-  toolboxHeader.style.width = (categoriesWidth + toolboxWidth) + 'px';
-  workspaceHeader.style.width = (workspaceWidth -
-                                 toolboxWidth -
-                                 showCodeWidth) + 'px';
+  document.getElementById('headers').style.width = fullWorkspaceWidth + 'px';
+  document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
+  document.getElementById('workspace-header').style.width =
+      (fullWorkspaceWidth - toolboxWidth - showCodeWidth) + 'px';
 };
 
 /**
@@ -2638,7 +2626,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -14608,7 +14595,7 @@ exports.numLinesOfCodeWritten = function(d){return "Has escrit "+p(d,"numLines",
 
 exports.play = function(d){return "reprodueix"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Imprimeix"};
 
 exports.puzzleTitle = function(d){return "Puzzle "+v(d,"puzzle_number")+" de "+v(d,"stage_total")};
 
@@ -14624,7 +14611,7 @@ exports.score = function(d){return "puntuació"};
 
 exports.showCodeHeader = function(d){return "Mostra el Codi"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Mostra els blocs"};
 
 exports.showGeneratedCode = function(d){return "Mostra el Codi"};
 
@@ -14650,9 +14637,9 @@ exports.hintRequest = function(d){return "Veure pista"};
 
 exports.backToPreviousLevel = function(d){return "Torna al nivell anterior"};
 
-exports.saveToGallery = function(d){return "Guarda-ho a la teva galeria"};
+exports.saveToGallery = function(d){return "Desa a la galeria"};
 
-exports.savedToGallery = function(d){return "Guardat a la teva galeria!"};
+exports.savedToGallery = function(d){return "Desat a la galeria!"};
 
 exports.shareFailure = function(d){return "Ho sentim, no podem compartir aquest programa."};
 
@@ -14662,7 +14649,7 @@ exports.typeHint = function(d){return "Tingueu en compte que els parèntesis i e
 
 exports.workspaceHeader = function(d){return "Monta els teus blocs aquí: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Escriviu el vostre codi JavaScript aquí"};
 
 exports.infinity = function(d){return "Infinit"};
 
@@ -14686,14 +14673,14 @@ exports.hintHeader = function(d){return "Aquí tens una pista:"};
 
 exports.genericFeedback = function(d){return "Observa com has acabat i prova d'arreglar el teu programa."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Comprova el que he fet"};
 
 
 },{"messageformat":57}],45:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.ca=function(n){return n===1?"one":"other"}
 exports.blocksUsed = function(d){return "Blocs utilitzats: %1"};
 
-exports.branches = function(d){return "branches"};
+exports.branches = function(d){return "branques"};
 
 exports.catColour = function(d){return "Color"};
 
@@ -14711,27 +14698,27 @@ exports.catLogic = function(d){return "Lògic"};
 
 exports.colourTooltip = function(d){return "Canvia el color del llapis."};
 
-exports.createACircle = function(d){return "create a circle"};
+exports.createACircle = function(d){return "crear un cercle"};
 
-exports.createSnowflakeSquare = function(d){return "create a snowflake of type square"};
+exports.createSnowflakeSquare = function(d){return "crear un floc de neu de quadrat"};
 
-exports.createSnowflakeParallelogram = function(d){return "create a snowflake of type parallelogram"};
+exports.createSnowflakeParallelogram = function(d){return "crear un floc de neu de paral·lelogram"};
 
-exports.createSnowflakeLine = function(d){return "create a snowflake of type line"};
+exports.createSnowflakeLine = function(d){return "crear un floc de neu de línia"};
 
-exports.createSnowflakeSpiral = function(d){return "create a snowflake of type spiral"};
+exports.createSnowflakeSpiral = function(d){return "crear un floc de neu d'espiral"};
 
-exports.createSnowflakeFlower = function(d){return "create a snowflake of type flower"};
+exports.createSnowflakeFlower = function(d){return "crear un floc de neu de flor"};
 
-exports.createSnowflakeFractal = function(d){return "create a snowflake of type fractal"};
+exports.createSnowflakeFractal = function(d){return "crear un floc de neu fractal"};
 
-exports.createSnowflakeRandom = function(d){return "create a snowflake of type random"};
+exports.createSnowflakeRandom = function(d){return "crear un floc de neu de tipus aleatori"};
 
-exports.createASnowflakeBranch = function(d){return "create a snowflake branch"};
+exports.createASnowflakeBranch = function(d){return "crear una branca de floc de neu"};
 
 exports.degrees = function(d){return "graus"};
 
-exports.depth = function(d){return "depth"};
+exports.depth = function(d){return "profunditat"};
 
 exports.dots = function(d){return "píxels"};
 
@@ -14741,33 +14728,33 @@ exports.drawATriangle = function(d){return "Dibuixa un triangle"};
 
 exports.drawACircle = function(d){return "Dibuixa un cercle"};
 
-exports.drawAFlower = function(d){return "draw a flower"};
+exports.drawAFlower = function(d){return "dibuixa una flor"};
 
-exports.drawAHexagon = function(d){return "draw a hexagon"};
+exports.drawAHexagon = function(d){return "dibuixa un hexàgon"};
 
 exports.drawAHouse = function(d){return "Dibuixa una casa"};
 
-exports.drawAPlanet = function(d){return "draw a planet"};
+exports.drawAPlanet = function(d){return "dibuixa un planeta"};
 
-exports.drawARhombus = function(d){return "draw a rhombus"};
+exports.drawARhombus = function(d){return "dibuixa un rombe"};
 
-exports.drawARobot = function(d){return "draw a robot"};
+exports.drawARobot = function(d){return "dibuixa un robot"};
 
-exports.drawARocket = function(d){return "draw a rocket"};
+exports.drawARocket = function(d){return "dibuixa un coet"};
 
-exports.drawASnowflake = function(d){return "draw a snowflake"};
+exports.drawASnowflake = function(d){return "dibuixa un floc de neu"};
 
 exports.drawASnowman = function(d){return "dibuixa un ninot de neu"};
 
-exports.drawAStar = function(d){return "draw a star"};
+exports.drawAStar = function(d){return "dibuixa una estrella"};
 
 exports.drawATree = function(d){return "Dibuixa un arbre"};
 
-exports.drawUpperWave = function(d){return "draw upper wave"};
+exports.drawUpperWave = function(d){return "dibuixa una onada alta"};
 
-exports.drawLowerWave = function(d){return "draw lower wave"};
+exports.drawLowerWave = function(d){return "dibuixa una onada baixa"};
 
-exports.drawStamp = function(d){return "draw stamp"};
+exports.drawStamp = function(d){return "dibuixa un segell"};
 
 exports.heightParameter = function(d){return "alçcada"};
 
@@ -14781,15 +14768,15 @@ exports.jumpForward = function(d){return "salta cap endevant"};
 
 exports.jumpTooltip = function(d){return "Mou l'artista sense deixar ninguna marca."};
 
-exports.jumpEastTooltip = function(d){return "Moves the artist east without leaving any marks."};
+exports.jumpEastTooltip = function(d){return "Desplaça l'artista a l'est sense deixar cap marca."};
 
-exports.jumpNorthTooltip = function(d){return "Moves the artist north without leaving any marks."};
+exports.jumpNorthTooltip = function(d){return "Desplaça l'artista al nord sense deixar cap marca."};
 
-exports.jumpSouthTooltip = function(d){return "Moves the artist south without leaving any marks."};
+exports.jumpSouthTooltip = function(d){return "Desplaça l'artista al sud sense deixar cap marca."};
 
-exports.jumpWestTooltip = function(d){return "Moves the artist west without leaving any marks."};
+exports.jumpWestTooltip = function(d){return "Desplaça l'artista a l'oest sense deixar cap marca."};
 
-exports.lengthFeedback = function(d){return "You got it right except for the lengths to move."};
+exports.lengthFeedback = function(d){return "És correcte excepte les longituds a moure's."};
 
 exports.lengthParameter = function(d){return "longitud"};
 
@@ -14797,17 +14784,17 @@ exports.loopVariable = function(d){return "comptador"};
 
 exports.moveBackward = function(d){return "retrocedeix"};
 
-exports.moveEastTooltip = function(d){return "Moves the artist east."};
+exports.moveEastTooltip = function(d){return "Desplaça l'artista cap a l'est."};
 
 exports.moveForward = function(d){return "avança"};
 
 exports.moveForwardTooltip = function(d){return "Avança l'artista."};
 
-exports.moveNorthTooltip = function(d){return "Moves the artist north."};
+exports.moveNorthTooltip = function(d){return "Desplaça l'artista cap al nord."};
 
-exports.moveSouthTooltip = function(d){return "Moves the artist south."};
+exports.moveSouthTooltip = function(d){return "Desplaça l'artista cap al sud."};
 
-exports.moveWestTooltip = function(d){return "Moves the artist west."};
+exports.moveWestTooltip = function(d){return "Desplaça l'artista cap a l'oest."};
 
 exports.moveTooltip = function(d){return "Avança o retrocedeix l'artista segons la quanitat especificada."};
 
@@ -14821,7 +14808,7 @@ exports.penTooltip = function(d){return "Aixeca o baixa el llapis per començar 
 
 exports.penUp = function(d){return "puja el llapis"};
 
-exports.reinfFeedbackMsg = function(d){return "S'assembla al que tu vols? Pots clicar en \"Intentar de nou\" per veure el teu dibuix."};
+exports.reinfFeedbackMsg = function(d){return "Aquí està el dibuix! Seguir treballant-hi o continuar all trencaclosques següent."};
 
 exports.setColour = function(d){return "defineix color"};
 
@@ -14829,15 +14816,15 @@ exports.setPattern = function(d){return "set pattern"};
 
 exports.setWidth = function(d){return "estableix l'amplada"};
 
-exports.shareDrawing = function(d){return "Share your drawing:"};
+exports.shareDrawing = function(d){return "Comparteix el teu dibuix:"};
 
 exports.showMe = function(d){return "Mostra'm"};
 
 exports.showTurtle = function(d){return "mostra l'artista"};
 
-exports.sizeParameter = function(d){return "size"};
+exports.sizeParameter = function(d){return "mida"};
 
-exports.step = function(d){return "step"};
+exports.step = function(d){return "pas"};
 
 exports.tooFewColours = function(d){return "Necessites utilitzar al menys %1 diferents colors per a aquest puzzle. Tu has utilitzat només %2."};
 

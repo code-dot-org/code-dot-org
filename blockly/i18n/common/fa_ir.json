@@ -43,6 +43,7 @@
   "numBlocksNeeded": "تبریک می‌گوییم! شما معمای {puzzleNumber} را به پایان رساندید. (اگرچه می‌توانستید تنها {numBlocks, plural, one {یک بلوک} other {# بلوک}} بکار ببرید.)",
   "numLinesOfCodeWritten": "شما {numLines, plural, one {یک خط} other {# خط}} کد نوشتید!",
   "play": "بازی",
+  "print": "Print",
   "puzzleTitle": "معمای {puzzle_number} از {stage_total}",
   "repeat": "تکرار کن",
   "resetProgram": "بازنشانی",
@@ -80,5 +81,6 @@
   "tryHOC": "ساعتِ کد نویسی را امتحان کنید",
   "signup": "برای دوره‌ی مقدماتی نام نویسی کنید",
   "hintHeader": "نکته اینجاست:",
-  "genericFeedback": "ببینبد چطور تمامش کردید,و سعی به رفع مشکلات برنامه خود کنید."
+  "genericFeedback": "ببینبد چطور تمامش کردید,و سعی به رفع مشکلات برنامه خود کنید.",
+  "defaultTwitterText": "Check out what I made"
 }

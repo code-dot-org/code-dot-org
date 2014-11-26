@@ -43,6 +43,7 @@
   "numBlocksNeeded":"Čestitke! Zaključil\/a si uganko {puzzleNumber}. (Vendar bi lahko uporabil samo  {numBlocks, plural, one {1 blok} other {# blokov}}.)",
   "numLinesOfCodeWritten":"Ravnokar si napisal {numLines, plural, one {1 vrstica} other {# vrstic}} kode!",
   "play":"igraj",
+  "print":"Print",
   "puzzleTitle":"Uganka {puzzle_number} od {stage_total}",
   "repeat":"ponovi",
   "resetProgram":"resetiraj",
@@ -63,8 +64,8 @@
   "tryAgain":"Poskusi ponovno",
   "hintRequest":"Poglej namig",
   "backToPreviousLevel":"Nazaj na prejšnjo raven",
-  "saveToGallery":"Shrani v svojo galerijo",
-  "savedToGallery":"Shranjeno v tvoji galeriji!",
+  "saveToGallery":"Save to gallery",
+  "savedToGallery":"Saved in gallery!",
   "shareFailure":"Sorry, we can't share this program.",
   "typeFuncs":"Razpoložljive funkcije: %1",
   "typeHint":"Zapomni si, oklepaji in podpičja so zahtevana.",
@@ -80,5 +81,6 @@
   "tryHOC":"Poizkusi Uro za programiranje (Hour to Code)",
   "signup":"Vpiši se za uvodni tečaj",
   "hintHeader":"Tukaj je namig:",
-  "genericFeedback":"Poglej kako si končal in poizkusi popraviti svoj program."
+  "genericFeedback":"Poglej kako si končal in poizkusi popraviti svoj program.",
+  "defaultTwitterText":"Check out what I made"
 }

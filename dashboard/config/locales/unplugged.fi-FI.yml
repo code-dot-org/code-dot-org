@@ -16,16 +16,15 @@
         video: Unplug1
       Unplug2:
         title: Laskennallinen ajattelu
-        desc: With nothing but paper and markers, students will learn the four steps
-          of computational thinking. After a brief introduction, students should be
-          split into groups where they will have to create directions for other students
-          to draw a specific monster (from a catalog of pre-selected monsters). The
-          entire task must be decomposed, then teams will analyze all monsters in
-          the catalog for patterns, abstract different details from the monsters,
-          then use that information to create an algorithm (directions) for another
-          team to draw a certain monster. Teams will then switch algorithms with another
-          group and draw the monster based on what that algorithm indicates. Is the
-          drawing what the original team intended?
+        desc: Vain paperia ja kyniä apuna käyttäen, oppilaat oppivat neljä askelta
+          laskennalliseen ajatteluun. Lyhyen johdannon jälkeen, oppilaat jaetaan ryhmiin
+          jissa he luovat ohjeita muille oppilaille tietyn hirviön piirtämiseksi (esivalittujen
+          hirviöiden valikoimasta). Koko tehtävä täytyy osittaa, sitten tiimit analysoivat
+          kaikki hirviöt valikoimassa yhteisten muotojen osalta, eristävät erilaiset
+          yksityiskohdat hirviöistä ja käyttävät tätä tietoa luoden algoritmin (ohjeen)
+          toiselle tiimille tietyn hirviön piirtämiseksi. Tiimit vaihtavat algoritmeja
+          toisen ryhmän kanssa ja piirtävät hirviön algoritmiin perustuen. Vastaako
+          kuva alkuperäisen tiimin tarkoittamaa?
         pdfs:
         - unplug2
         video: Unplug2
@@ -148,7 +147,7 @@
           be instructed to repeat it.
         video: C1_getting_loopy
       RelayProgramming:
-        title: Relay programming
+        title: Releohjelmointi
         desc: Students run a relay race, where they dash across the yard to write
           an algorithm based on a "Graph Paper Programming" image. They can only write
           one instruction at a time and if there's an error somewhere, they have to
@@ -184,7 +183,7 @@
           computer science and how algorithms play an essential part.
         video: C2_paper_airplanes
       BinaryBracelets:
-        title: Binary Bracelets
+        title: Binäärilistat
         desc: Students create bracelets as a binary representations of the first letter
           of their name. Students learn that data can be represented and stored in
           more than one way.
@@ -224,13 +223,13 @@
           using pieces of paper.
         video: C3_internet
       Crowdsourcing:
-        title: Crowdsourcing
+        title: Joukkoistaminen
         desc: Student use crowdsourcing, a problem-solving technique common in computer
           science, to complete a task together as a classroom more efficiently than
           if a student attempted it alone.
         video: C3_crowdsourcing
       DigitalCitizenship:
-        title: Digital Citizenship
+        title: Digitaalinen kansalaisuus
         desc: Students explore the difference between private information and personal
           information, distinguishing what is safe and unsafe to share online.
       TangramAlgorithms:
@@ -269,3 +268,21 @@
           of binary options.  This lesson takes that concept one step further as it
           illustrates how a computer can store even more complex information (such
           as images and colors) in binary, as well.
+      VideoGamesCoordinatePlanes:
+        title: Video Games and Coordinate Planes
+        desc: Video Games and Coordinate Planes lesson description
+      Contracts:
+        title: Contracts
+        desc: Contracts unplugged lesson description
+      DesignRecipe:
+        title: Suunnitteluresepti
+        desc: Design Recipe lesson description
+      Booleans:
+        title: Booleans
+        desc: Booleans lesson description
+      ConditionalsPiecewiseFunctions:
+        title: Conditionals and Piecewise Functions
+        desc: Conditionals and Piecewise Functions lesson description
+      CollisionDetection:
+        title: Collision Detection
+        desc: Collision Detection lesson description

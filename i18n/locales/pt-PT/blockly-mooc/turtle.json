@@ -64,7 +64,7 @@
   "penDown":"lápis para baixo",
   "penTooltip":"Levanta ou baixa o lápis, para iniciar ou parar de desenhar.",
   "penUp":"lápis para cima",
-  "reinfFeedbackMsg":"Parece o que queres? Podes premir o botão \"Tentar novamente\" para ver o teu desenho.",
+  "reinfFeedbackMsg":"Here is your drawing! Keep working on it or continue to the next puzzle.",
   "setColour":"definir cor",
   "setPattern":"set pattern",
   "setWidth":"definir largura",
