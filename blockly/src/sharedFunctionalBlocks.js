@@ -297,16 +297,16 @@ function installString(blockly, generator) {
 }
 
 /**
- * Implements the cond block. n represents the number of condition-value
- * pairs before the default value.
+ * Implements the cond block. numPairs represents the number of
+ * condition-value pairs before the default value.
  */
-function installCond(blockly, generator, n) {
-  var blockName = 'functional_cond_' + n;
+function installCond(blockly, generator, numPairs) {
+  var blockName = 'functional_cond_' + numPairs;
   blockly.Blocks[blockName] = {
     helpUrl: '',
     init: function() {
       var args = [];
-      for (var i = 0; i < n; i++) {
+      for (var i = 0; i < numPairs; i++) {
         args.push({name: 'COND' + i, type: 'boolean', default: 'false'});
         args.push({name: 'VALUE' + i, type: 'none', default: ''});
       }
@@ -329,7 +329,7 @@ function installCond(blockly, generator, n) {
   generator[blockName] = function() {
     var cond, value, defaultValue;
     var code = 'function() {\n  ';
-    for (var i = 0; i < n; i++) {
+    for (var i = 0; i < numPairs; i++) {
       if (i > 0) {
         code += 'else ';
       }
