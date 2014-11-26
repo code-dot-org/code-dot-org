@@ -6717,7 +6717,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -15065,6 +15064,23 @@ exports.install = function(blockly, blockInstallOptions) {
   // Install functional start blocks
   //
 
+  blockly.Blocks.functional_start_setValue = {
+    init: function() {
+      var blockName = 'start (value)';
+      var blockType = 'none';
+      var blockArgs = [{name: 'VALUE', type: 'Number'}];
+      initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
+    }
+  };
+
+  generator.functional_start_setValue = function() {
+    // Adapted from Blockly.JavaScript.variables_set.
+    var argument0 = Blockly.JavaScript.statementToCode(this, 'VALUE',
+        Blockly.JavaScript.ORDER_ASSIGNMENT) || '0';
+    var varName = Blockly.JavaScript.translateVarName('startValue');
+    return varName + ' = ' + argument0 + ';\n';
+  };
+
   installFunctionalApiCallBlock(blockly, generator, {
     blockName: 'functional_start_dummyOnMove',
     blockTitle: 'on-move (on-screen)',
@@ -18551,6 +18567,7 @@ Studio.execute = function() {
   var handlers = [];
   if (BlocklyApps.usingBlockly) {
     registerHandlers(handlers, 'when_run', 'whenGameStarts');
+    registerHandlers(handlers, 'functional_start_setValue', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackground', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setSpeeds', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackgroundAndSpeeds',
@@ -18759,7 +18776,7 @@ function spriteTotalFrames (index) {
 }
 
 var updateSpeechBubblePath = function (element) {
-  var height = element.getAttribute('height');
+  var height = +element.getAttribute('height');
   var onTop = 'true' === element.getAttribute('onTop');
   var onRight = 'true' === element.getAttribute('onRight');
   element.setAttribute('d',
@@ -20456,7 +20473,7 @@ exports.numLinesOfCodeWritten = function(d){return "Você escreveu "+p(d,"numLin
 
 exports.play = function(d){return "jogue"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Imprimir"};
 
 exports.puzzleTitle = function(d){return "Desafio "+v(d,"puzzle_number")+" de "+v(d,"stage_total")};
 
@@ -20498,9 +20515,9 @@ exports.hintRequest = function(d){return "Veja a dica"};
 
 exports.backToPreviousLevel = function(d){return "Voltar ao nível anterior"};
 
-exports.saveToGallery = function(d){return "Salve na sua galeria"};
+exports.saveToGallery = function(d){return "Salvar na galeria"};
 
-exports.savedToGallery = function(d){return "Salvo na sua galeria!"};
+exports.savedToGallery = function(d){return "Salvo na galeria!"};
 
 exports.shareFailure = function(d){return "Desculpe, não é possível compartilhar esse programa."};
 
@@ -20534,7 +20551,7 @@ exports.hintHeader = function(d){return "Aqui vai uma dica:"};
 
 exports.genericFeedback = function(d){return "Veja como você terminou e tente consertar seu programa."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Veja o que eu fiz"};
 
 
 },{"messageformat":61}],49:[function(require,module,exports){
@@ -20859,15 +20876,15 @@ exports.setSpriteHidden = function(d){return "para uma imagem oculta"};
 
 exports.setSpriteHideK1 = function(d){return "oculte"};
 
-exports.setSpriteAnna = function(d){return "to a Anna image"};
+exports.setSpriteAnna = function(d){return "para uma imagem da Anna"};
 
-exports.setSpriteElsa = function(d){return "to a Elsa image"};
+exports.setSpriteElsa = function(d){return "para uma imagem da Elsa"};
 
-exports.setSpriteHiro = function(d){return "to a Hiro image"};
+exports.setSpriteHiro = function(d){return "para uma imagem de Hiro"};
 
-exports.setSpriteBaymax = function(d){return "to a Baymax image"};
+exports.setSpriteBaymax = function(d){return "para uma imagem de Baymax"};
 
-exports.setSpriteRapunzel = function(d){return "to a Rapunzel image"};
+exports.setSpriteRapunzel = function(d){return "para uma imagem da Rapunzel"};
 
 exports.setSpriteKnight = function(d){return "como um cavaleiro"};
 

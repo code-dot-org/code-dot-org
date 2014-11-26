@@ -43,6 +43,7 @@
   "numBlocksNeeded":"Поздравления! Приключихте пъзел {puzzleNumber}. (Въпреки това, можехте да използвате само {numBlocks, plural, one{1 block} other {# blocks}}.)",
   "numLinesOfCodeWritten":"Вие написахте {numLines, plural, one {1line} other {# lines}} код!",
   "play":"играй",
+  "print":"Печат",
   "puzzleTitle":"Пъзел {puzzle_number} от {stage_total}",
   "repeat":"повтарям",
   "resetProgram":"Начално състояние",
@@ -59,12 +60,12 @@
   "tooMuchWork":"Накара ме да се изпотя! Може ли да пробваме, но с по-малко повторения?",
   "toolboxHeader":"Блокове",
   "openWorkspace":"Как работи",
-  "totalNumLinesOfCodeWritten":"Общо: {numLines, plural, one {numLines, plural, one {1 line} other {# lines}} код.",
+  "totalNumLinesOfCodeWritten":"Общо: {numLines, plural, one {1 line} other {# lines}} код.",
   "tryAgain":"Опитайте отново",
   "hintRequest":"Вижте съвета",
   "backToPreviousLevel":"Обратно към предишното ниво",
-  "saveToGallery":"Запазете във вашата галерия",
-  "savedToGallery":"Запазено във вашата галерия!",
+  "saveToGallery":"Записване в галерията",
+  "savedToGallery":"Записано в галерията!",
   "shareFailure":"За съжаление, не можем да сподели тази програма.",
   "typeFuncs":"Налични функции:%1",
   "typeHint":"Обърнете внимание, че скобите и знаците точка и запетая са задължителни.",
@@ -80,5 +81,6 @@
   "tryHOC":"Опитайте Часа на Кодирането",
   "signup":"Регистрирайте се във встъпителния курс",
   "hintHeader":"Ето един съвет:",
-  "genericFeedback":"Вижте какво сте въвели и се опитайте да коригирате вашата програма."
+  "genericFeedback":"Вижте какво сте въвели и се опитайте да коригирате вашата програма.",
+  "defaultTwitterText":"Вижте какво направих"
 }

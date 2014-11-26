@@ -43,6 +43,7 @@
   "numBlocksNeeded": "Συγχαρητήρια! Τελείωσες το πάζλ {puzzleNumber}. (Όμως, θα μπορούσες να βάλεις μόνο   {numBlocks, plural, one {1 μπλοκ} other {# μπλοκ}}.)",
   "numLinesOfCodeWritten": "Μόλις έγραψες {numLines, plural, one {1 γραμμή} other {# γραμμές}} κώδικα!",
   "play": "παίξε",
+  "print": "Print",
   "puzzleTitle": "Παζλ {puzzle_number} από {stage_total}",
   "repeat": "επανάλαβε",
   "resetProgram": "Επαναφορά",
@@ -80,5 +81,6 @@
   "tryHOC": "Δοκίμαστε την Ώρα του Κώδικα",
   "signup": "Κάντε εγγραφή για το εισαγωγικό μάθημα",
   "hintHeader": "Να μια συμβουλή:",
-  "genericFeedback": "Δες πως κατέληξες και δοκίμασε να διορθώσεις το πρόγραμμά σου."
+  "genericFeedback": "Δες πως κατέληξες και δοκίμασε να διορθώσεις το πρόγραμμά σου.",
+  "defaultTwitterText": "Check out what I made"
 }

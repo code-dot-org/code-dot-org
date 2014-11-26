@@ -6781,7 +6781,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -14210,43 +14209,43 @@ var MessageFormat = require("messageformat");MessageFormat.locale.ru = function 
   }
   return 'other';
 };
-exports.circleBlockTitle = function(d){return "circle (radius, style, color)"};
+exports.circleBlockTitle = function(d){return "круг (радиус, стиль, цвет)"};
 
-exports.displayBlockTitle = function(d){return "display"};
+exports.displayBlockTitle = function(d){return "показать"};
 
-exports.ellipseBlockTitle = function(d){return "ellipse (width, height, style, color)"};
+exports.ellipseBlockTitle = function(d){return "эллипс (ширина, высота, стиль, цвет)"};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"display\" block?"};
+exports.extraTopBlocks = function(d){return "У вас есть неприсоединенные блоки. Вы хотите подключить их к блоку \"Показать\"?"};
 
-exports.overlayBlockTitle = function(d){return "overlay (top, bottom)"};
+exports.overlayBlockTitle = function(d){return "наложение (сверху, снизу)"};
 
-exports.placeImageBlockTitle = function(d){return "place-image (x, y, image)"};
+exports.placeImageBlockTitle = function(d){return "поместить изображение (x, y, изображение)"};
 
-exports.rectangleBlockTitle = function(d){return "rectangle (width, height, style, color)"};
+exports.rectangleBlockTitle = function(d){return "прямоугольник (ширина, высота, стиль, цвет)"};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to edit your drawing."};
 
-exports.rotateImageBlockTitle = function(d){return "rotate (degrees, image)"};
+exports.rotateImageBlockTitle = function(d){return "поворот (градусов, изображение)"};
 
-exports.scaleImageBlockTitle = function(d){return "scale (factor)"};
+exports.scaleImageBlockTitle = function(d){return "масштабирование (множитель)"};
 
-exports.squareBlockTitle = function(d){return "square (size, style, color)"};
+exports.squareBlockTitle = function(d){return "квадрат (размер, стиль, цвет)"};
 
 exports.starBlockTitle = function(d){return "звезда (радиус, стиль, цвет)"};
 
-exports.stringAppendBlockTitle = function(d){return "string-append (first, second)"};
+exports.stringAppendBlockTitle = function(d){return "добавить строки (первая, вторая)"};
 
-exports.stringLengthBlockTitle = function(d){return "string-length (string)"};
+exports.stringLengthBlockTitle = function(d){return "длина строки (строка)"};
 
-exports.textBlockTitle = function(d){return "text (string, size, color)"};
+exports.textBlockTitle = function(d){return "текст (строка, размер, цвет)"};
 
-exports.triangleBlockTitle = function(d){return "triangle (size, style, color)"};
+exports.triangleBlockTitle = function(d){return "треугольник (размер, стиль, цвет)"};
 
-exports.underlayBlockTitle = function(d){return "underlay (bottom, top)"};
+exports.underlayBlockTitle = function(d){return "подложка (снизу, сверху)"};
 
-exports.outline = function(d){return "outline"};
+exports.outline = function(d){return "контур"};
 
-exports.solid = function(d){return "solid"};
+exports.solid = function(d){return "заливка"};
 
 exports.string = function(d){return "строка"};
 

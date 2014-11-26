@@ -2,7 +2,7 @@
   activerecord:
     errors:
       messages:
-        blank: é necessário
+        blank: "é necessário"
     attributes:
       user:
         name: Nome a exibir
@@ -20,9 +20,6 @@
   hello: Olá mundo
   welcome_back: Bem-vindo, %{name}
   add_teacher_form:
-    code_or_email:
-      label: 'Adicione um professor por código ou endereço de e-mail:'
-      placeholder: Código (ABCDEF) ou e-mail (teacher@school.edu)
     code:
       label: 'Adicionar um professor por seção de código:'
       placeholder: Código (ABCDEF)
@@ -87,7 +84,7 @@
     age: Idade
     user_type: Are you a student or teacher?
     submit: Registar
-    teacher: És um professor?
+    teacher: "És um professor?"
     valid_username: Disponível!
     invalid_username: O nome de utilizador deve ter pelo menos 5 caracteres
     taken_username: O nome de utilizador já existe
@@ -136,12 +133,12 @@
       Angry Birds, e Plants vs. Zombies! :-)\n\n%{name}\n\n\n \n"
   follower:
     invite_sent: Convite enviado
-    added_teacher: '%{name} foi adicionado como teu professor'
+    added_teacher: "%{name} foi adicionado como teu professor"
     registered: Registou-se para %{section_name}.
     error:
       signed_in: Por favor termina a sessão antes de prosseguir
       username_not_found: Nome de utilizador %{username} não encontrado
-      username_in_use: '%{username} já existe, por favor escolhe outro'
+      username_in_use: "%{username} já existe, por favor escolhe outro"
       no_teacher: Não foi possível encontrar ninguém que tenha entrado com '%{teacher_email_or_code}'.
         Por favor, pede-lhes para se registarem aqui e tente adicioná-los novamente
       section_not_found: Could not find a section with code '%{section_code}'.
@@ -185,7 +182,7 @@
         dos EUA.
       msg_visit_website: Visitar o sítio na web
     providers:
-      apple_itunes: $10 iTunes Gift Card
+      apple_itunes: "$10 iTunes Gift Card"
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10GB de espaço na Dropbox
@@ -194,7 +191,7 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: $10 Skype credit
+      skype: "$10 Skype credit"
     msg:
       choose: 'Escolhe um prémio:'
       choose_teacher: 'Click on the logo below to claim your prize:'
@@ -244,9 +241,9 @@
     destroy: Eliminar
     back: Voltar
     confirm: Tens a certeza?
-    created: '% {modelo} foi criado com êxito.'
-    updated: '% {modelo} foi actualizado com sucesso.'
-    destroyed: '%{model} was successfully deleted.'
+    created: "% {modelo} foi criado com êxito."
+    updated: "% {modelo} foi actualizado com sucesso."
+    destroyed: "%{model} was successfully deleted."
     access_denied: You do not have access to this %{model}.
   nav:
     header:
@@ -273,13 +270,13 @@
       puzzle_map: Etapas
       prizes: Recolhe todos os %{total_trophies} troféus e ganha prémios!
       prize_earned: Recolhidos todos os %{total_trophies} troféus. Ganhaste prémio!
-      prize_us_only: (Somente para estudantes dos EUA)
+      prize_us_only: "(Somente para estudantes dos EUA)"
       prizes_link: Mais informação
   teacher:
     title:
       one: O teu professor é %{name}
       other: 'Os teus professores:'
-    remove: (remove teacher)
+    remove: "(remove teacher)"
     confirm:
       remove: Are you sure you want to remove this teacher?
     tools: Ferramentas do Professor
@@ -335,18 +332,18 @@
     rollup: Painel de controlo do Progresso
     activity: Atividade recente da turma
     user_not_found: The teacher or student could not be found
-    cant_remove_student_no_email: '%{student_name} cannot be removed as your student
-      because %{student_name} has not registered an e-mail address'
-    cant_remove_teacher_no_email: '%{teacher_name} cannot be removed as your teacher
-      because you have not registered an e-mail address'
-    student_teacher_disassociated: '%{teacher_name} has been removed as a teacher
-      for %{student_name}'
+    cant_remove_student_no_email: "%{student_name} cannot be removed as your student
+      because %{student_name} has not registered an e-mail address"
+    cant_remove_teacher_no_email: "%{teacher_name} cannot be removed as your teacher
+      because you have not registered an e-mail address"
+    student_teacher_disassociated: "%{teacher_name} has been removed as a teacher
+      for %{student_name}"
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
     email_resend_confirm: Resend confirmation instructions
-    new_password_hint: (deixa em branco se não quiseres alterá-lo)
-    current_password_hint: (precisamos da tua palavra-passe para confirmar as tuas
-      alterações)
+    new_password_hint: "(deixa em branco se não quiseres alterá-lo)"
+    current_password_hint: "(precisamos da tua palavra-passe para confirmar as tuas
+      alterações)"
     cancel:
       title: Cancelar a minha conta
       hint: Infeliz?
@@ -396,12 +393,10 @@
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
-    heading_elementary: <h2>20 hour courses for</h2><h1>Elementary Students</h1>
-    heading_apps: <h2>Fun for</h2><h1>Everybody</h1>
-    heading_legacy: <h2>Our previous course for</h2><h1>Existing Students</h1>
-    gallery:
-      your_turtle: My Art
-      your_studio: My Apps
+    heading_elementary: "<h2>20 hour courses for</h2><h1>Elementary Students</h1>"
+    heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
+    heading_legacy: "<h2>Our previous course for</h2><h1>Existing Students</h1>"
+    your_gallery: Gallery
   gender:
     male: Masculino
     female: Feminino
@@ -469,6 +464,7 @@
     bounce_og_title: Check out my Bounce Game
     flappy_og_title: Check out my Flappy Game
     studio_og_title: Check out my story
+    check_out_what_i_made: Check out what I made
     og_description: I wrote the code myself with Code.org
     phone_number_not_allowed: It looks like there is a phone number in it. Try changing
       the text.
@@ -499,6 +495,12 @@
     20hour:
       title: Intro Course
       body: Try our 20-hour Intro to Computer Science course.
+    hoc2014:
+      try_new_tutorial: Try our new Hour of Code tutorial in beta
+      try_frozen: Artist with Anna and Elsa, from Frozen
+    gallery:
+      title: Gallery
+      body: View a gallery of app and artist images created by our users
   gallery:
     students_drew_these_with_code: Students drew these with code!
     students_made_these_with_code: Students made these with code!
@@ -511,13 +513,18 @@
     want_to_make_your_own: Want to make your own?
     more: More &rarr;
     caption_by_name_age: by %{name}, age %{age}
-    caption_time_ago: '%{time_ago} ago'
+    caption_time_ago: "%{time_ago} ago"
+    header: Gallery
+    header_playlab: Play Lab
+    header_artist: Artist
   landing:
     prerelease: This page is still under development.
+    prerelease_hoc2014: This tutorial is in <span class='betatext'>beta</span>.  It
+      is subject to revision as feedback is received and improvements are made.
     feedback: Give Feedback
     report_bug: Report Bug
     support: Get Help
-    support_url: //support.code.org
+    support_url: "//support.code.org"
   multi:
     wrong_title: Incorrect answer
     wrong_body: The answer you've entered is not correct.  Please try again!

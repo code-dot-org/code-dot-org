@@ -3514,7 +3514,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -10755,13 +10754,13 @@ var MessageFormat = require("messageformat");MessageFormat.locale.lt = function 
   }
   return 'other';
 };
-exports.compute = function(d){return "compute"};
+exports.compute = function(d){return "skaičiuoti"};
 
 exports.equivalentExpression = function(d){return "Try reordering your arguments to get exactly the same expression."};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"compute\" block?"};
+exports.extraTopBlocks = function(d){return "Turite nesujungtų blokelių. Gal norėjote juos prikabinti prie blokelio „skaičiuoti“?"};
 
-exports.goal = function(d){return "Goal:"};
+exports.goal = function(d){return "Tikslas:"};
 
 exports.reinfFeedbackMsg = function(d){return "Ar tai atrodo taip, kaip norėjai? Gali nuspausti mygtuką „Pabandyk dar kartą“, kad pamatytum savo piešinį."};
 
@@ -10863,7 +10862,7 @@ exports.nextStageTrophies = function(d){return "Sveikinu! Tu užbaigei lygį "+v
 
 exports.numBlocksNeeded = function(d){return "Sveikinu! Tu išsprendei "+v(d,"puzzleNumber")+" užduotį. (Beje, galėjai panaudoti tik "+p(d,"numBlocks",0,"lt",{"vieną":"1 blokelį","other":n(d,"numBlocks")+" blokelių"})+".)"};
 
-exports.numLinesOfCodeWritten = function(d){return "Tu parašei  "+p(d,"numLines",0,"lt",{"one":"1 eilutę","other":n(d,"numLines")+" eilučių"})+" kodo!"};
+exports.numLinesOfCodeWritten = function(d){return "Tu sukūrei "+p(d,"numLines",0,"lt",{"one":"1 eilutę","other":n(d,"numLines")+" eilučių"})+" programą!"};
 
 exports.play = function(d){return "žaisti"};
 

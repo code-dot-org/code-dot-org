@@ -3514,7 +3514,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -10746,17 +10745,17 @@ exports.parseElement = function(text) {
 
 },{}],40:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.ca=function(n){return n===1?"one":"other"}
-exports.compute = function(d){return "compute"};
+exports.compute = function(d){return "calcular"};
 
-exports.equivalentExpression = function(d){return "Try reordering your arguments to get exactly the same expression."};
+exports.equivalentExpression = function(d){return "Intenta reordenant els teus arguments per aconseguir exactament la mateixa expressió."};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"compute\" block?"};
+exports.extraTopBlocks = function(d){return "Tens blocs no afegits.  Volies afegir aquests al bloc d'execució?"};
 
-exports.goal = function(d){return "Goal:"};
+exports.goal = function(d){return "Objectiu:"};
 
-exports.reinfFeedbackMsg = function(d){return "S'assembla al que tu vols? Pots clicar en \"Intentar de nou\" per veure el teu dibuix."};
+exports.reinfFeedbackMsg = function(d){return "Aquí està la teva història! Continuar-hi treballant, o passar al següent trencaclosques!"};
 
-exports.yourExpression = function(d){return "Your expression:"};
+exports.yourExpression = function(d){return "La teva expressió:"};
 
 
 },{"messageformat":53}],41:[function(require,module,exports){
@@ -10849,7 +10848,7 @@ exports.numLinesOfCodeWritten = function(d){return "Has escrit "+p(d,"numLines",
 
 exports.play = function(d){return "reprodueix"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Imprimeix"};
 
 exports.puzzleTitle = function(d){return "Puzzle "+v(d,"puzzle_number")+" de "+v(d,"stage_total")};
 
@@ -10865,7 +10864,7 @@ exports.score = function(d){return "puntuació"};
 
 exports.showCodeHeader = function(d){return "Mostra el Codi"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Mostra els blocs"};
 
 exports.showGeneratedCode = function(d){return "Mostra el Codi"};
 
@@ -10891,9 +10890,9 @@ exports.hintRequest = function(d){return "Veure pista"};
 
 exports.backToPreviousLevel = function(d){return "Torna al nivell anterior"};
 
-exports.saveToGallery = function(d){return "Guarda-ho a la teva galeria"};
+exports.saveToGallery = function(d){return "Desa a la galeria"};
 
-exports.savedToGallery = function(d){return "Guardat a la teva galeria!"};
+exports.savedToGallery = function(d){return "Desat a la galeria!"};
 
 exports.shareFailure = function(d){return "Ho sentim, no podem compartir aquest programa."};
 
@@ -10903,7 +10902,7 @@ exports.typeHint = function(d){return "Tingueu en compte que els parèntesis i e
 
 exports.workspaceHeader = function(d){return "Monta els teus blocs aquí: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Escriviu el vostre codi JavaScript aquí"};
 
 exports.infinity = function(d){return "Infinit"};
 
@@ -10927,7 +10926,7 @@ exports.hintHeader = function(d){return "Aquí tens una pista:"};
 
 exports.genericFeedback = function(d){return "Observa com has acabat i prova d'arreglar el teu programa."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Comprova el que he fet"};
 
 
 },{"messageformat":53}],42:[function(require,module,exports){

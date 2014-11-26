@@ -6717,7 +6717,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -15065,6 +15064,23 @@ exports.install = function(blockly, blockInstallOptions) {
   // Install functional start blocks
   //
 
+  blockly.Blocks.functional_start_setValue = {
+    init: function() {
+      var blockName = 'start (value)';
+      var blockType = 'none';
+      var blockArgs = [{name: 'VALUE', type: 'Number'}];
+      initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
+    }
+  };
+
+  generator.functional_start_setValue = function() {
+    // Adapted from Blockly.JavaScript.variables_set.
+    var argument0 = Blockly.JavaScript.statementToCode(this, 'VALUE',
+        Blockly.JavaScript.ORDER_ASSIGNMENT) || '0';
+    var varName = Blockly.JavaScript.translateVarName('startValue');
+    return varName + ' = ' + argument0 + ';\n';
+  };
+
   installFunctionalApiCallBlock(blockly, generator, {
     blockName: 'functional_start_dummyOnMove',
     blockTitle: 'on-move (on-screen)',
@@ -18551,6 +18567,7 @@ Studio.execute = function() {
   var handlers = [];
   if (BlocklyApps.usingBlockly) {
     registerHandlers(handlers, 'when_run', 'whenGameStarts');
+    registerHandlers(handlers, 'functional_start_setValue', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackground', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setSpeeds', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackgroundAndSpeeds',
@@ -18759,7 +18776,7 @@ function spriteTotalFrames (index) {
 }
 
 var updateSpeechBubblePath = function (element) {
-  var height = element.getAttribute('height');
+  var height = +element.getAttribute('height');
   var onTop = 'true' === element.getAttribute('onTop');
   var onRight = 'true' === element.getAttribute('onRight');
   element.setAttribute('d',
@@ -20541,31 +20558,31 @@ exports.defaultTwitterText = function(d){return "Check out what I made"};
 var MessageFormat = require("messageformat");MessageFormat.locale.tr=function(n){return "other"}
 exports.actor = function(d){return "aktör"};
 
-exports.backgroundBlack = function(d){return "black"};
+exports.backgroundBlack = function(d){return "siyah"};
 
-exports.backgroundCave = function(d){return "cave"};
+exports.backgroundCave = function(d){return "mağara"};
 
-exports.backgroundCloudy = function(d){return "cloudy"};
+exports.backgroundCloudy = function(d){return "bulutlu"};
 
 exports.backgroundHardcourt = function(d){return "hardcourt"};
 
-exports.backgroundNight = function(d){return "night"};
+exports.backgroundNight = function(d){return "gece"};
 
-exports.backgroundUnderwater = function(d){return "underwater"};
+exports.backgroundUnderwater = function(d){return "deniz altında"};
 
-exports.backgroundCity = function(d){return "city"};
+exports.backgroundCity = function(d){return "şehir"};
 
-exports.backgroundDesert = function(d){return "desert"};
+exports.backgroundDesert = function(d){return "çöl"};
 
-exports.backgroundRainbow = function(d){return "rainbow"};
+exports.backgroundRainbow = function(d){return "gökkuşağı"};
 
-exports.backgroundSoccer = function(d){return "soccer"};
+exports.backgroundSoccer = function(d){return "futbol"};
 
-exports.backgroundSpace = function(d){return "space"};
+exports.backgroundSpace = function(d){return "boşluk"};
 
-exports.backgroundTennis = function(d){return "tennis"};
+exports.backgroundTennis = function(d){return "tenis"};
 
-exports.backgroundWinter = function(d){return "winter"};
+exports.backgroundWinter = function(d){return "kış"};
 
 exports.catActions = function(d){return "İşlemler"};
 
@@ -20597,7 +20614,7 @@ exports.emotion = function(d){return "ruh hali"};
 
 exports.finalLevel = function(d){return "Tebrikler! Son bulmacayı da çözdünüz."};
 
-exports.for = function(d){return "for"};
+exports.for = function(d){return "için"};
 
 exports.hello = function(d){return "merhaba"};
 
@@ -20815,9 +20832,9 @@ exports.setBackgroundWinter = function(d){return "Kış arka planını ayarla"};
 
 exports.setBackgroundTooltip = function(d){return "arkaplanda resmini ayarla"};
 
-exports.setEnemySpeed = function(d){return "set enemy speed"};
+exports.setEnemySpeed = function(d){return "düşman hızını ayarla"};
 
-exports.setPlayerSpeed = function(d){return "set player speed"};
+exports.setPlayerSpeed = function(d){return "oyuncu hızını ayarla"};
 
 exports.setScoreText = function(d){return "skor ayarla"};
 
@@ -20947,9 +20964,9 @@ exports.shareStudioTwitter = function(d){return "Yaptığım hikayeye göz atın
 
 exports.shareGame = function(d){return "hikayeni paylaş:"};
 
-exports.showCoordinates = function(d){return "show coordinates"};
+exports.showCoordinates = function(d){return "koordinatları göster"};
 
-exports.showCoordinatesTooltip = function(d){return "show the protagonist's coordinates on the screen"};
+exports.showCoordinatesTooltip = function(d){return "kahramanın koordinatları ekranda göster"};
 
 exports.showTitleScreen = function(d){return "ekran başlığını göster"};
 
@@ -20963,7 +20980,7 @@ exports.showTSDefText = function(d){return "yazıyı buraya yazın"};
 
 exports.showTitleScreenTooltip = function(d){return "İlişkili başlık ve metin içeren bir başlık ekranı göster."};
 
-exports.size = function(d){return "size"};
+exports.size = function(d){return "boyut"};
 
 exports.setSprite = function(d){return "atamak"};
 

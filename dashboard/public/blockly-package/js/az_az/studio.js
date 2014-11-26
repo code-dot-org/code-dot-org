@@ -6717,7 +6717,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -15065,6 +15064,23 @@ exports.install = function(blockly, blockInstallOptions) {
   // Install functional start blocks
   //
 
+  blockly.Blocks.functional_start_setValue = {
+    init: function() {
+      var blockName = 'start (value)';
+      var blockType = 'none';
+      var blockArgs = [{name: 'VALUE', type: 'Number'}];
+      initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
+    }
+  };
+
+  generator.functional_start_setValue = function() {
+    // Adapted from Blockly.JavaScript.variables_set.
+    var argument0 = Blockly.JavaScript.statementToCode(this, 'VALUE',
+        Blockly.JavaScript.ORDER_ASSIGNMENT) || '0';
+    var varName = Blockly.JavaScript.translateVarName('startValue');
+    return varName + ' = ' + argument0 + ';\n';
+  };
+
   installFunctionalApiCallBlock(blockly, generator, {
     blockName: 'functional_start_dummyOnMove',
     blockTitle: 'on-move (on-screen)',
@@ -18551,6 +18567,7 @@ Studio.execute = function() {
   var handlers = [];
   if (BlocklyApps.usingBlockly) {
     registerHandlers(handlers, 'when_run', 'whenGameStarts');
+    registerHandlers(handlers, 'functional_start_setValue', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackground', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setSpeeds', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackgroundAndSpeeds',
@@ -18759,7 +18776,7 @@ function spriteTotalFrames (index) {
 }
 
 var updateSpeechBubblePath = function (element) {
-  var height = element.getAttribute('height');
+  var height = +element.getAttribute('height');
   var onTop = 'true' === element.getAttribute('onTop');
   var onRight = 'true' === element.getAttribute('onRight');
   element.setAttribute('d',
@@ -20416,7 +20433,7 @@ exports.emptyBlocksErrorMsg = function(d){return "\"Təkrar\" və ya \"Əgər\" 
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "The function block needs to have other blocks inside it to work."};
 
-exports.extraTopBlocks = function(d){return "You have extra blocks that aren't attached to an event block."};
+exports.extraTopBlocks = function(d){return "Qoşulmamış bloklarınız var. Onları \"icra etdikdə\" blokuna qoşmaq istəmirsiniz?"};
 
 exports.finalStage = function(d){return "Təbriklər! Siz son mərhələni başa vurdunuz."};
 
@@ -20442,7 +20459,7 @@ exports.makeYourOwnFlappy = function(d){return "Make Your Own Flappy Game"};
 
 exports.missingBlocksErrorMsg = function(d){return "Bu tapmacanı həll etmək üçün aşağıdakı bloklardan bir və ya bir neçəsini sınaqdan keçirin."};
 
-exports.nextLevel = function(d){return "Təbriklər! Tapmaca "+v(d,"puzzleNumber")+" tapıldı."};
+exports.nextLevel = function(d){return "Təbriklər! Siz "+v(d,"puzzleNumber")+" nömrəli tapmacanı tamamladınız."};
 
 exports.nextLevelTrophies = function(d){return "Təbriklər! Siz "+v(d,"puzzleNumber")+" nömrəli tapmacanı tamamladınız və "+p(d,"numTrophies",0,"az",{"one":"bir kubok","other":n(d,"numTrophies")+" kubok"})+" qazandınız."};
 
@@ -20524,7 +20541,7 @@ exports.watchVideo = function(d){return "Vidəo izle"};
 
 exports.when = function(d){return "when"};
 
-exports.whenRun = function(d){return "when run"};
+exports.whenRun = function(d){return "icra etdikdə"};
 
 exports.tryHOC = function(d){return "Kod Saatında özünüzü sınayın"};
 
@@ -20821,7 +20838,7 @@ exports.setPlayerSpeed = function(d){return "set player speed"};
 
 exports.setScoreText = function(d){return "set score"};
 
-exports.setScoreTextTooltip = function(d){return "Sets the text to be displayed in the score area."};
+exports.setScoreTextTooltip = function(d){return "Xal sahəsində göstəriləcək mətni təyin edir."};
 
 exports.setSpriteEmotionAngry = function(d){return "to a angry emotion"};
 

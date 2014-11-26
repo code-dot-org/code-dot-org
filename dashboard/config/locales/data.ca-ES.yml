@@ -31,7 +31,7 @@
           desc: Edita el codi
           MazeEC: Etapa 1
         2014 Levels:
-          desc: 2014 Puzzles (beta)
+          desc: Rebot (beta)
           Bounce: Etapa 1
         Builder Levels:
           desc: User-Created Puzzles (beta)
@@ -40,18 +40,19 @@
           desc: Flappy Bird
           Flappy: Etapa 1
         Jigsaw Levels:
-          desc: Jigsaw (beta)
+          desc: Trencaclosques (beta)
           Jigsaw: Etapa 1
         Step Levels:
-          desc: Maze (beta)
+          desc: Laberint (beta)
           MazeStep: Stage Step
         edit-code:
           desc: Edit Code (beta)
           MazeEC: Etapa 1
           Webapp: Etapa 2
           ArtistEC: Etapa 3
+          StudioEC: Etapa 4
         events:
-          desc: Bounce (beta)
+          desc: Rebot (beta)
           Bounce: Etapa 1
           Studio: Etapa 2
         builder:
@@ -61,10 +62,10 @@
           desc: Flappy Bird
           Flappy: Etapa 1
         jigsaw:
-          desc: Jigsaw (beta)
+          desc: Trencaclosques (beta)
           Jigsaw: Etapa 1
         step:
-          desc: Maze (beta)
+          desc: Laberint (beta)
           MazeStep: Stage Step
         wordsearch:
           desc: Spelling Bee (beta)
@@ -95,12 +96,13 @@
         MazeEC: El Laberint
         Bounce: Bounce
         Flappy: Flappy Bird
-        Jigsaw: Jigsaw
+        Jigsaw: Trencaclosques
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
         Webapp: Webapp
         ArtistEC: L'artista
-        TextMatch: Text Match
+        TextMatch: Relacionar text
+        StudioEC: Play Lab
     trophy:
       name:
         Bronze: Bronze
@@ -119,8 +121,8 @@
         parameters: Funcions amb Paràmetres
     level:
       instructions:
-        maze_2_2: 'Em pots ajudar a atrapar a aquest porc malcriat. Apila un parell
-          de blocs "avança" i prem "Executa programa" per ajudar-me a arribar allí. '
+        maze_2_2: 'Em pots ajudar a atrapar aquest porc entremaliat? Apila un conjunt
+          de blocs "avança" i prem "Executa" per ajudar-me a arribar-hi. '
         maze_2_1: Aquest porc está enfadant-me. Ajuda'm a trobar-lo!
         maze_2_2_5: Traça el camí i guia'm a l'estúpid porc . Evita el TNT o les plomes
           volaran!
@@ -132,8 +134,10 @@
         maze_2_6: Intenta fer-me agafar l'intrús verd utilitzant només 3 blocs.
         maze_2_7: Ajuda'm a desterrar aquest bad piggy utilitzant el menor nombre
           possible de blocs. Intenta-ho utilitzant més d'un "repeat times" bloc.
-        maze_2_8: 'Per resoldre aquest, prova un "repeat" bloc amb aquests 3 blocs
-          a dins: move, move, turn.'
+        maze_2_8: 'Quan un bloc és gris, això vol dir que no pots suprimir-lo. Resol
+          aquest trencaclosques utilitzant el bloc "repetir" que es repeteix 3 vegades.
+          Intenta posant aquests 3 bloc dins del bloc gris "repetir": avança, avança,
+          gira.'
         maze_2_9: Ok, prova el nou bloc "repetició fins" - es repetirà fins que arribi
           el porc molest.
         maze_2_10: Ok, última vegada per a practicar - pots resoldre aquest utilitzant
@@ -454,18 +458,19 @@
         jigsaw_10: Arrange the blocks to form the image
         jigsaw_11: Arrange the blocks to form the image
         jigsaw_12: Arrange the blocks to form the image
-        jigsaw_13: Fix the puzzle!
-        mazestep_1: Maze step description here
-        mazestep_2: Maze step description here
-        mazestep_3: Maze step description here
-        mazestep_4: Maze step description here
-        mazestep_5: Maze step description here
+        jigsaw_13: Arregla el trencaclosques!
+        mazestep_1: Descripció dels passos del laberint aquí
+        mazestep_2: Descripció dels passos del laberint aquí
+        mazestep_3: Descripció dels passos del laberint aquí
+        mazestep_4: Descripció dels passos del laberint aquí
+        mazestep_5: Descripció dels passos del laberint aquí
         studio_c2_1: Can you make this dog say "hello world"?
         studio_c2_2: Can you make the dog say something and then have the cat say
           something afterwards?
-        studio_c2_3: Can you write a program to make this dog move to the cat?
-        studio_c2_4: Can you write a program that makes the dog move to the cat, and
-          have the cat say "hello" when the dog reaches him?
+        studio_c2_3: Pots escriure un programa per fer que el gos es mogui cap al
+          gat?
+        studio_c2_4: Pot escriure un programa que fa que el gos es mogui cap al gat,
+          i el gat digui "hola" quan el gos el toqui?
         studio_c2_5: Can you write a program to make the octopus say "hello" when
           it is clicked?
         studio_c2_6: Can you write a program to make this penguin move around using
@@ -484,10 +489,11 @@
         studio_c3_story_1: Can you make this dog say "hello world"?
         studio_c3_story_2: Can you make the dog say something and then have the cat
           say something afterwards?
-        studio_c3_story_3: Can you write a program to make this dog move to the cat?
-        studio_c3_story_4: Can you write a program that makes the dog move to the
-          cat, and have the cat say "hello" when the dog reaches him?
-        studio_c3_story_5: Can you add a block to make the octopus happy?
+        studio_c3_story_3: Pots escriure un programa per fer que el gos es mogui cap
+          al gat?
+        studio_c3_story_4: Pot escriure un programa que fa que el gos es mogui cap
+          al gat, i el gat digui "hola" quan el gos el toqui?
+        studio_c3_story_5: Pots afegir un bloc per fer feliç al pop?
         studio_c3_story_6: Create your own story. When you're done, click Finish to
           let friends try your story on their phones.
         studio_c3_game_1: Can you write a program to make the octopus say "hello"
@@ -508,9 +514,10 @@
         studio_playlab_1: Can you make this dog say "hello world"?
         studio_playlab_2: Can you make the dog say something and then have the cat
           say something afterwards?
-        studio_playlab_3: Can you write a program to make this dog move to the cat?
-        studio_playlab_4: Can you write a program that makes the dog move to the cat,
-          and have the cat say "hello" when the dog reaches him?
+        studio_playlab_3: Pots escriure un programa per fer que el gos es mogui cap
+          al gat?
+        studio_playlab_4: Pot escriure un programa que fa que el gos es mogui cap
+          al gat, i el gat digui "hola" quan el gos el toqui?
         studio_playlab_5: Can you write a program to make the octopus say "hello"
           when it is clicked?
         studio_playlab_6: Can you write a program to make this penguin move around
@@ -528,12 +535,13 @@
         studio_k1_1: Can you make this dog say "hello world"?
         studio_k1_2: Can you make the dog say something and then have the cat say
           something afterwards?
-        studio_k1_3: Can you write a program to make this dog move to the target?
+        studio_k1_3: Pots escriure un programa per fer que el gos es mogui cap al
+          gat?
         studio_k1_4: Can you write a program that makes the dog move to the cat, and
           have the cat say "hello" when the dog reaches him?
-        studio_k1_5: Can you add a block to make the octopus happy?
-        studio_k1_6: Can you write a program to make this penguin move around using
-          the up / down / left /right keys to hit all of the targets?
+        studio_k1_5: Pots afegir un bloc per fer feliç al pop?
+        studio_k1_6: Crea la teva pròpia història! Fes que el gat i el gos es moguin,
+          i que diguin coses.
         maze_wordsearch_k_1: Move me to spell the word EAST
         maze_wordsearch_k_2: Move me to spell the word SOUTH
         maze_wordsearch_k_3: Move me to spell the word WEST
@@ -551,6 +559,8 @@
         turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas:
           a stick figure, snowflake, or spiral. Also try the new "penWidth" block.
           Have fun!'
+        studio_ec_sandbox: Create your own game. When you're done, click Finish to
+          let friends try your game on their phones.
     video:
       name:
         maze_intro: Introducció al Laberint
@@ -579,7 +589,7 @@
         Unplug11: Recapitulació
         C1_happy_maps_unplugged: Happy Maps
         C1_moveitmoveit_unplugged: Move It, Move It
-        C1_bigevent_unplugged: The Big Event
+        C1_bigevent_unplugged: El gran esdeveniment
         C1_getting_loopy: Getting Loopy
         C1_pair_programming: Pair Programming
         C1_maze_intro_sequencing: Maze Sequencing Intro
@@ -587,15 +597,15 @@
         C1_bee_level_intro: Bee Level - Intro
         C1_artist_intro: Introducció a l'Artista
         C1_spelling_bee_intro: Spelling Bee Intro
-        C1_zuck_repeat_loop: Maze Loops
+        C1_zuck_repeat_loop: 'Laberint: bucles'
         C1_bee_loops: Bee Loops
-        C1_maze_loops: Maze Loops
+        C1_maze_loops: 'Laberint: bucles'
         C1_playlab_storytelling: Play Lab - Create a Story
-        C1_planting_seed: Planting a Seed
+        C1_planting_seed: Plantant una llavor
         C1_building_foundation: Building a Foundation
         C2_maze_intro: Introducció al Laberint
         C2_artist_intro: Introducció a l'Artista
-        C2_zuck_repeat_loop: Maze Loops
+        C2_zuck_repeat_loop: 'Laberint: bucles'
         C2_artist_loops: Artist Loops
         C2_artist_debugging: Artist Debugging
         C2_bee_loops: Bee Loops
@@ -604,15 +614,15 @@
         C2_playlab_createstory: Play Lab - Create a Story
         C2_graph_paper: Programació de paper quadriculat
         C2_conditionals_with_cards: Condicionals
-        C2_binary_bracelets: Binary Bracelets
+        C2_binary_bracelets: Polseres binàries
         C2_relay_programming: Programació de Relé
         C2_paper_airplanes: Paper Airplanes
-        C3_maze_level_4: Maze Loops
+        C3_maze_level_4: 'Laberint: bucles'
         C3_artist_intro: Introducció a l'Artista
         C3_artist_functions: Artist Functions
         C3_bee_functions: Bee Functions
         C3_bee_conditionals: Bee Conditionals
-        C3_maze_conditionals: Maze Conditionals
+        C3_maze_conditionals: 'Laberint: els condicionals'
         C3_artist_nested_loops: Nested Loops
         C3_farmer_while: While Loops
         C3_bee_nested_loops: Nested Loops
@@ -625,11 +635,14 @@
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Songwriting With Parameters
+        Frozen_intro: Hour of Code Intro
+        Frozen_loops: Introduction to Loops
+        Frozen_functions: Introduction to Functions
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
-        run: Hit "Run" to try your program
-        watch_again: Click here to watch the video again
+        run: Fes clic a "Executa" per provar el teu programa
+        watch_again: Feu clic aquí per veure el vídeo de nou
         gray_block_explanation: Blocks that are grey can't be moved or deleted. Can
           you solve the puzzle anyway?
         show_code_explanation: Click here to see the code for the program you're making
@@ -640,7 +653,7 @@
         set_sprite_image: Attach a "set actor to image" block to the "when story starts"
           block to enable an actor for this story
         studio_say_text: Type what you want your actor to say within these quotes
-        jigsaw_click: Click this block!
+        jigsaw_click: Feu clic en aquest bloc!
         move_elsa_forward: Drag a "Move Forward" block and snap it below the "When
           Run" block to make Elsa move forward
         turn_elsa: Use the "Turn" block to make Elsa turn. The number in the drop-down
@@ -651,3 +664,24 @@
         repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
           workspace
         snowflake_dropdown: Use this drop-down to create different snowflakes!
+        degrees_per_side: Divide 360 by the number of sides to get the size of each
+          angle in degrees.
+        set_sides: Use this block to set "sides" to the number needed to complete
+          the puzzle.
+        set_length: Use this block to set "length" to the correct value.
+        which_equation: Which equation makes each side shorter for shapes with more
+          sides?  Try each equation!
+        get_nectar: Use the new "get nectar" block.
+        actions_category: The tool box got a new look! The "Actions" blocks are in
+          here now.
+        draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
+        edit_function: Use this button to edit the function.
+        create_function: Click here to open the "Functions" flyout, then click the
+          "Create a Function" button.
+        house_hint: It's ok if the picture doesn't look like a house yet. We will
+          fix it in the next puzzle.
+        edit_draw_square: Use this button to edit the function and add the loop.
+        edit_get_nectar: Use this button to edit the function and change the direction
+          the Bee will turn to get the nectar.
+        logic_category: Open the "Logic" flyout to find the "if/else" block.
+        length_parameter: Can you update this function so it uses the "length" parameter?

@@ -6717,7 +6717,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -15065,6 +15064,23 @@ exports.install = function(blockly, blockInstallOptions) {
   // Install functional start blocks
   //
 
+  blockly.Blocks.functional_start_setValue = {
+    init: function() {
+      var blockName = 'start (value)';
+      var blockType = 'none';
+      var blockArgs = [{name: 'VALUE', type: 'Number'}];
+      initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
+    }
+  };
+
+  generator.functional_start_setValue = function() {
+    // Adapted from Blockly.JavaScript.variables_set.
+    var argument0 = Blockly.JavaScript.statementToCode(this, 'VALUE',
+        Blockly.JavaScript.ORDER_ASSIGNMENT) || '0';
+    var varName = Blockly.JavaScript.translateVarName('startValue');
+    return varName + ' = ' + argument0 + ';\n';
+  };
+
   installFunctionalApiCallBlock(blockly, generator, {
     blockName: 'functional_start_dummyOnMove',
     blockTitle: 'on-move (on-screen)',
@@ -18551,6 +18567,7 @@ Studio.execute = function() {
   var handlers = [];
   if (BlocklyApps.usingBlockly) {
     registerHandlers(handlers, 'when_run', 'whenGameStarts');
+    registerHandlers(handlers, 'functional_start_setValue', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackground', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setSpeeds', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackgroundAndSpeeds',
@@ -18759,7 +18776,7 @@ function spriteTotalFrames (index) {
 }
 
 var updateSpeechBubblePath = function (element) {
-  var height = element.getAttribute('height');
+  var height = +element.getAttribute('height');
   var onTop = 'true' === element.getAttribute('onTop');
   var onRight = 'true' === element.getAttribute('onRight');
   element.setAttribute('d',
@@ -20567,17 +20584,17 @@ var MessageFormat = require("messageformat");MessageFormat.locale.ru = function 
 };
 exports.actor = function(d){return "персонаж"};
 
-exports.backgroundBlack = function(d){return "black"};
+exports.backgroundBlack = function(d){return "черный"};
 
-exports.backgroundCave = function(d){return "cave"};
+exports.backgroundCave = function(d){return "пещера"};
 
-exports.backgroundCloudy = function(d){return "cloudy"};
+exports.backgroundCloudy = function(d){return "облачно"};
 
-exports.backgroundHardcourt = function(d){return "hardcourt"};
+exports.backgroundHardcourt = function(d){return "твердая поверхность"};
 
-exports.backgroundNight = function(d){return "night"};
+exports.backgroundNight = function(d){return "ночь"};
 
-exports.backgroundUnderwater = function(d){return "underwater"};
+exports.backgroundUnderwater = function(d){return "под водой"};
 
 exports.backgroundCity = function(d){return "город"};
 
@@ -20587,7 +20604,7 @@ exports.backgroundRainbow = function(d){return "радуга"};
 
 exports.backgroundSoccer = function(d){return "футбол"};
 
-exports.backgroundSpace = function(d){return "space"};
+exports.backgroundSpace = function(d){return "космос"};
 
 exports.backgroundTennis = function(d){return "теннис"};
 
@@ -20623,7 +20640,7 @@ exports.emotion = function(d){return "настроение"};
 
 exports.finalLevel = function(d){return "Поздравляю! Последняя головоломка решена."};
 
-exports.for = function(d){return "for"};
+exports.for = function(d){return "для"};
 
 exports.hello = function(d){return "привет"};
 
@@ -20841,9 +20858,9 @@ exports.setBackgroundWinter = function(d){return "установить зимн�
 
 exports.setBackgroundTooltip = function(d){return "Установить на задний план изображение"};
 
-exports.setEnemySpeed = function(d){return "set enemy speed"};
+exports.setEnemySpeed = function(d){return "установить скорость врага"};
 
-exports.setPlayerSpeed = function(d){return "set player speed"};
+exports.setPlayerSpeed = function(d){return "установить скорость игрока"};
 
 exports.setScoreText = function(d){return "задать счет"};
 
@@ -20975,7 +20992,7 @@ exports.shareGame = function(d){return "Поделиться своей исто
 
 exports.showCoordinates = function(d){return "Показать координаты"};
 
-exports.showCoordinatesTooltip = function(d){return "show the protagonist's coordinates on the screen"};
+exports.showCoordinatesTooltip = function(d){return "показать на экране координаты протагониста"};
 
 exports.showTitleScreen = function(d){return "показать титульный экран"};
 
@@ -20989,7 +21006,7 @@ exports.showTSDefText = function(d){return "введите текст здесь
 
 exports.showTitleScreenTooltip = function(d){return "Показать титульный экран с указанным названием и текстом."};
 
-exports.size = function(d){return "size"};
+exports.size = function(d){return "размер"};
 
 exports.setSprite = function(d){return "присвоить"};
 

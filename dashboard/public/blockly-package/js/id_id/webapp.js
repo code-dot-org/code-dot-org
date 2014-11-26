@@ -2626,7 +2626,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -11142,13 +11141,13 @@ exports.catVariables = function(d){return "Variabel"};
 
 exports.continue = function(d){return "Lanjutkan"};
 
-exports.createHtmlBlock = function(d){return "create html block"};
+exports.createHtmlBlock = function(d){return "buat blok html"};
 
-exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
+exports.createHtmlBlockTooltip = function(d){return "Membuat sebuah blok HTML di aplikasi."};
 
 exports.finalLevel = function(d){return "Selamat! Anda telah menyelesaikan teka-teki terakhir."};
 
-exports.makeYourOwn = function(d){return "Make Your Own App"};
+exports.makeYourOwn = function(d){return "Buatlah Aplikasimu Sendiri"};
 
 exports.nextLevel = function(d){return "Selamat! Kamu telah menyelesaikan teka-teki ini."};
 
@@ -11156,19 +11155,19 @@ exports.no = function(d){return "Tidak"};
 
 exports.numBlocksNeeded = function(d){return "Teka-teki ini dapat diselesaikan dengan %1 blok."};
 
-exports.pause = function(d){return "Pause"};
+exports.pause = function(d){return "Baris baru"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
+exports.reinfFeedbackMsg = function(d){return "Anda dapat menekan tombol \"Coba lagi\" untuk kembali menjalankan aplikasi Anda."};
 
 exports.repeatForever = function(d){return "Ulangi selamanya"};
 
 exports.repeatDo = function(d){return "kerjakan"};
 
-exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
+exports.repeatForeverTooltip = function(d){return "Jalankan tindakan di blok ini secara berulang selagi aplikasi berjalan."};
 
-exports.shareWebappTwitter = function(d){return "Check out the app I made. I wrote it myself with @codeorg"};
+exports.shareWebappTwitter = function(d){return "Lihatlah aplikasi yang saya buat. Saya membuatnya sendiri dengan @codeorg"};
 
-exports.shareGame = function(d){return "Share your app:"};
+exports.shareGame = function(d){return "Bagikan aplikasi Anda:"};
 
 exports.stepIn = function(d){return "Step in"};
 
@@ -11176,7 +11175,7 @@ exports.stepOver = function(d){return "Step over"};
 
 exports.stepOut = function(d){return "Step out"};
 
-exports.turnBlack = function(d){return "turn black"};
+exports.turnBlack = function(d){return "hitamkan"};
 
 exports.turnBlackTooltip = function(d){return "Turns the screen black."};
 

@@ -3514,7 +3514,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -10754,7 +10753,7 @@ exports.extraTopBlocks = function(d){return "Du har ledige blokker. Mente du å 
 
 exports.goal = function(d){return "Mål:"};
 
-exports.reinfFeedbackMsg = function(d){return "Du kan trykke \"Prøv Igjen\"-knappen for å redigere uttrykket."};
+exports.reinfFeedbackMsg = function(d){return "Her er din historie! Fortsett å jobbe på den, eller gå videre til neste oppgave!"};
 
 exports.yourExpression = function(d){return "Ditt uttrykk:"};
 
@@ -10849,7 +10848,7 @@ exports.numLinesOfCodeWritten = function(d){return "Du har akkurat skrevet "+p(d
 
 exports.play = function(d){return "spill av"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Skriv ut"};
 
 exports.puzzleTitle = function(d){return "Oppgave "+v(d,"puzzle_number")+" av "+v(d,"stage_total")};
 
@@ -10891,7 +10890,7 @@ exports.hintRequest = function(d){return "Se hint"};
 
 exports.backToPreviousLevel = function(d){return "Tilbake til forrige nivå"};
 
-exports.saveToGallery = function(d){return "Lagre til galleriet"};
+exports.saveToGallery = function(d){return "Lagre i galleriet"};
 
 exports.savedToGallery = function(d){return "Lagret i galleriet!"};
 
@@ -10927,7 +10926,7 @@ exports.hintHeader = function(d){return "Her er et tips:"};
 
 exports.genericFeedback = function(d){return "Se hvordan du endte opp, og prøv å fikse programmet ditt."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Sjekk ut det jeg lagde"};
 
 
 },{"messageformat":53}],42:[function(require,module,exports){

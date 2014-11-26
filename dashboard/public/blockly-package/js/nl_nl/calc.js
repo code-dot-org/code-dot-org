@@ -3514,7 +3514,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -10746,17 +10745,17 @@ exports.parseElement = function(text) {
 
 },{}],40:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.nl=function(n){return n===1?"one":"other"}
-exports.compute = function(d){return "compute"};
+exports.compute = function(d){return "verwerk"};
 
-exports.equivalentExpression = function(d){return "Probeer uw argumenten te ordenen om precies dezelfde expressie te krijgen."};
+exports.equivalentExpression = function(d){return "Probeer je argumenten in een andere volgorde te plaatsen om precies dezelfde expressie te krijgen."};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"compute\" block?"};
+exports.extraTopBlocks = function(d){return "Je hebt blokken die niet gekoppeld zijn. Was het je bedoeling om deze aan het \"verwerk\"-blok te koppelen?"};
 
 exports.goal = function(d){return "Doel:"};
 
 exports.reinfFeedbackMsg = function(d){return "Ziet dit eruit als het gene wat je wilt? Je kunt op de 'Probeer opnieuw' knop drukken om jouw tekening te zien."};
 
-exports.yourExpression = function(d){return "Your expression:"};
+exports.yourExpression = function(d){return "Je expressie:"};
 
 
 },{"messageformat":53}],41:[function(require,module,exports){
@@ -10865,7 +10864,7 @@ exports.score = function(d){return "score"};
 
 exports.showCodeHeader = function(d){return "Code weergeven"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Toon blokken"};
 
 exports.showGeneratedCode = function(d){return "Code weergeven"};
 
@@ -10903,7 +10902,7 @@ exports.typeHint = function(d){return "Merk op dat de haakjes en puntkomma's ver
 
 exports.workspaceHeader = function(d){return "Zet je blokken hier in elkaar:"};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Typ hier uw JavaScript-code"};
 
 exports.infinity = function(d){return "Oneindig"};
 

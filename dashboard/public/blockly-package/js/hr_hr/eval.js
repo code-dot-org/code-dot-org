@@ -6781,7 +6781,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -14114,7 +14113,7 @@ exports.numLinesOfCodeWritten = function(d){return "Upravo si napisao "+p(d,"num
 
 exports.play = function(d){return "igraj"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Piši"};
 
 exports.puzzleTitle = function(d){return "Zadatak "+v(d,"puzzle_number")+" od "+v(d,"stage_total")};
 
@@ -14156,9 +14155,9 @@ exports.hintRequest = function(d){return "Pogledaj naputak"};
 
 exports.backToPreviousLevel = function(d){return "Povratak na prethodni nivo"};
 
-exports.saveToGallery = function(d){return "Spremi u svoju galeriju"};
+exports.saveToGallery = function(d){return "Spremi u galeriju"};
 
-exports.savedToGallery = function(d){return "Spremljeno u tvoju galeriju!"};
+exports.savedToGallery = function(d){return "Spremljeno u galeriju!"};
 
 exports.shareFailure = function(d){return "Žalim, ne možemo dijeliti ovaj program."};
 

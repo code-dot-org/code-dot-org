@@ -46,3 +46,21 @@ get '/unsubscribe/:email' do |email|
   halt(200, "#{email} unsubscribed.\n")
 end
 
+
+def resolve_email_template(name)
+  settings.template_extnames.each do |extname|
+    path = pegasus_dir 'emails', "#{name}#{extname}"
+    return path if File.file?(path)
+  end
+  nil
+end
+
+get '/emails/:name' do |name|
+  pass unless template = resolve_email_template(name)
+  @locals[:tracking_pixel] = '/images/1x1.png'
+  @locals[:unsubscribe_link] = '#'
+  result = document template
+  @locals[:header]['layout'] = 'sendy'
+  @locals[:header]['theme'] = 'none'
+  result
+end

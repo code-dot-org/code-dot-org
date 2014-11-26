@@ -2626,7 +2626,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -16287,11 +16286,11 @@ exports.directionWestLetter = function(d){return "O"};
 
 exports.end = function(d){return "fine"};
 
-exports.emptyBlocksErrorMsg = function(d){return "Il blocco \"ripeti\" o \"se\" deve avere all'interno altri blocchi per poter funzionare. Assicurati che i blocchi interni siano inseriti correttamente all'interno del blocco principale."};
+exports.emptyBlocksErrorMsg = function(d){return "Il blocco \"ripeti\" o \"se\" deve avere all'interno altri blocchi per poter funzionare. Assicurati che i blocchi siano inseriti correttamente all'interno del blocco contenente."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "Una funzione ha bisogno di altri blocchi al suo interno."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Un blocco funzione deve avere all'interno altri blocchi per poter funzionare."};
 
-exports.extraTopBlocks = function(d){return "Ci sono dei blocchi scollegati. Volevi forse attaccarli al blocco 'quando si clicca su \"Esegui\" '?"};
+exports.extraTopBlocks = function(d){return "Ci sono dei blocchi non collegati agli altri. Volevi forse attaccarli al blocco 'quando si clicca su \"Esegui\" '?"};
 
 exports.finalStage = function(d){return "Complimenti! Hai completato l'ultima lezione."};
 
@@ -16319,11 +16318,11 @@ exports.missingBlocksErrorMsg = function(d){return "Prova uno o più dei blocchi
 
 exports.nextLevel = function(d){return "Complimenti! Hai completato l'esercizio "+v(d,"puzzleNumber")+"."};
 
-exports.nextLevelTrophies = function(d){return "Complimenti! Hai completato l'esercizio "+v(d,"puzzleNumber")+" e vinto "+p(d,"numTrophies",0,"it",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
+exports.nextLevelTrophies = function(d){return "Complimenti! Hai completato l'esercizio "+v(d,"puzzleNumber")+" e vinto "+p(d,"numTrophies",0,"it",{"one":"un trofeo","other":n(d,"numTrophies")+" trofei"})+"."};
 
 exports.nextStage = function(d){return "Complimenti! Hai completato la lezione "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "Complimenti! Hai completato la lezione "+v(d,"stageName")+" e vinto "+p(d,"numTrophies",0,"it",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
+exports.nextStageTrophies = function(d){return "Complimenti! Hai completato la lezione "+v(d,"stageName")+" e vinto "+p(d,"numTrophies",0,"it",{"one":"un trofeo","other":n(d,"numTrophies")+" trofei"})+"."};
 
 exports.numBlocksNeeded = function(d){return "Complimenti! Hai completato l'esercizio "+v(d,"puzzleNumber")+". (Avresti però potuto usare solo "+p(d,"numBlocks",0,"it",{"one":"1 block","other":n(d,"numBlocks")+" blocks"})+".)"};
 
@@ -16341,7 +16340,7 @@ exports.resetProgram = function(d){return "Ricomincia"};
 
 exports.runProgram = function(d){return "Esegui"};
 
-exports.runTooltip = function(d){return "Esegui il programma definito dai blocchi nell'area di lavoro."};
+exports.runTooltip = function(d){return "Esegui il programma definito dai blocchi presenti nell'area di lavoro."};
 
 exports.score = function(d){return "punteggio"};
 
@@ -16369,7 +16368,7 @@ exports.totalNumLinesOfCodeWritten = function(d){return "Totale complessivo: "+p
 
 exports.tryAgain = function(d){return "Riprova"};
 
-exports.hintRequest = function(d){return "Vedere il suggerimento"};
+exports.hintRequest = function(d){return "Vedi il suggerimento"};
 
 exports.backToPreviousLevel = function(d){return "Torna al livello precedente"};
 
@@ -16434,7 +16433,7 @@ exports.dirS = function(d){return "S"};
 
 exports.dirW = function(d){return "O"};
 
-exports.doCode = function(d){return "fai"};
+exports.doCode = function(d){return "esegui"};
 
 exports.elseCode = function(d){return "altrimenti"};
 
@@ -16450,7 +16449,7 @@ exports.fillTooltip = function(d){return "metti 1 palata di terra"};
 
 exports.finalLevel = function(d){return "Complimenti! Hai risolto l'esercizio finale."};
 
-exports.flowerEmptyError = function(d){return "Il fiore su cui sei non ha più nettare."};
+exports.flowerEmptyError = function(d){return "Il fiore su cui ti trovi non ha più nettare."};
 
 exports.get = function(d){return "prendi"};
 
@@ -16462,9 +16461,9 @@ exports.honey = function(d){return "fai il miele"};
 
 exports.honeyAvailable = function(d){return "miele"};
 
-exports.honeyTooltip = function(d){return "Fai il miele dal nettare"};
+exports.honeyTooltip = function(d){return "Produci miele dal nettare"};
 
-exports.honeycombFullError = function(d){return "Il favo non ha più spazio per il miele."};
+exports.honeycombFullError = function(d){return "Il favo non ha più spazio per altro miele."};
 
 exports.ifCode = function(d){return "se"};
 
@@ -16520,7 +16519,7 @@ exports.noPathRight = function(d){return "nessuna strada a destra"};
 
 exports.notAtFlowerError = function(d){return "Puoi prendere solo il nettare dal fiore."};
 
-exports.notAtHoneycombError = function(d){return "Puoi fare il miele solo in un favo."};
+exports.notAtHoneycombError = function(d){return "Puoi fare il miele solo quando sei in un favo."};
 
 exports.numBlocksNeeded = function(d){return "Questo esercizio può essere risolto con %1 blocchi."};
 
@@ -16544,7 +16543,7 @@ exports.removeStack = function(d){return "rimuovi una colonna di "+v(d,"shovelfu
 
 exports.removeSquare = function(d){return "rimuovi un quadrato"};
 
-exports.repeatCarefullyError = function(d){return "Per risolvere questo, pensa attentamente al modello delle due mosse e una svolta per metterlo nel blocco \"ripeti\". Va bene se finisci con una svolta in più."};
+exports.repeatCarefullyError = function(d){return "Per risolvere questo esercizio, ripensa allo schema costituito da due spostamenti e una svolta e mettilo nel blocco \"ripeti\". Non fa niente se fai una svolta in più del necessario."};
 
 exports.repeatUntil = function(d){return "ripeti fino a che"};
 
@@ -16570,7 +16569,7 @@ exports.uncheckedPurpleError = function(d){return "Assicurati di controllare tut
 
 exports.whileMsg = function(d){return "mentre"};
 
-exports.whileTooltip = function(d){return "Ripeti le azioni incluse per tutto il tempo in cui rimane vera la condizione."};
+exports.whileTooltip = function(d){return "Ripeti le azioni incluse fino a che viene raggiunto il punto finale."};
 
 exports.word = function(d){return "Trova la parola"};
 

@@ -2,386 +2,389 @@
   data:
     match:
       2-3 artist loops match 1:
-        Artist Loops Matching One: Kunstner Løkker Matching En
-        Matching loops: Matchende løkker
-        Match the loop to the shape: Tilpass løkka til figuren
-        /script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png
-        /script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png
-        /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png
-        /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png
-        /script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png
-        /script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png
-        /script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png
-        /script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png
+        Artist Loops Matching One: Kunstner Løkker Lag eit par!
+        Matching loops: Set saman løkker
+        Match the loop to the shape: Set løkka saman med til figuren som høyrer til
+        "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png"
+        "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png"
+        "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png"
+        "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png"
+        "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png"
+        "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png"
+        "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png"
+        "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png"
       2-3 artist match 1:
-        Artist Matching: Kunstner Matching
-        Match the shape with the blocks that complete it.: Tilpass figuren til blokkene
-          som fullfører den.
-        /script_assets/2-3_images/artist/2-3_artist_match_1_q1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q1.png
-        /script_assets/2-3_images/artist/2-3_artist_match_1_q2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q2.png
-        /script_assets/2-3_images/artist/2-3_artist_match_1_q3.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q3.png
-        /script_assets/2-3_images/artist/2-3_artist_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q4.png
-        /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png
-        /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png
-        /script_assets/2-3_images/artist/2-3_artist_match_1_a3.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a3.png
-        /script_assets/2-3_images/artist/2-3_artist_match_1_a4.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a4.png
+        Artist Matching: Kunstnar Set saman
+        Match the shape with the blocks that complete it.: Set figuren saman med dei
+          blokkene som fullfører forma.
+        "/script_assets/2-3_images/artist/2-3_artist_match_1_q1.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_q1.png"
+        "/script_assets/2-3_images/artist/2-3_artist_match_1_q2.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_q2.png"
+        "/script_assets/2-3_images/artist/2-3_artist_match_1_q3.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_q3.png"
+        "/script_assets/2-3_images/artist/2-3_artist_match_1_q4.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_q4.png"
+        "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png"
+        "/script_assets/2-3_images/artist/2-3_artist_match_1_a2.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_a2.png"
+        "/script_assets/2-3_images/artist/2-3_artist_match_1_a3.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_a3.png"
+        "/script_assets/2-3_images/artist/2-3_artist_match_1_a4.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_a4.png"
       2-3 bounce match 1:
-        Bounce Matching: Sprett Matching
-        Matching: Matching
-        Match the events with the actions: Tilpass hendelsene med handlingene
-        /script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png
-        /script_assets/2-3_images/bounce/2-3_bounce_match_1_q2.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q2.png
-        /script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png
-        /script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png
-        /script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png
-        /script_assets/2-3_images/bounce/2-3_bounce_match_1_a1.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a1.png
-        /script_assets/2-3_images/bounce/2-3_bounce_match_1_a2.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a2.png
-        /script_assets/2-3_images/bounce/2-3_bounce_match_1_a3.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a3.png
-        /script_assets/2-3_images/bounce/2-3_bounce_match_1_a4.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a4.png
-        /script_assets/2-3_images/bounce/2-3_bounce_match_1_a5.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a5.png
+        Bounce Matching: Sprett Set saman
+        Matching: Samansetting
+        Match the events with the actions: Set saman hendingane med handlingane
+        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png"
+        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q2.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q2.png"
+        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png"
+        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png"
+        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png"
+        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a1.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a1.png"
+        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a2.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a2.png"
+        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a3.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a3.png"
+        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a4.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a4.png"
+        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a5.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a5.png"
       2-3 flappy match 1:
-        Flappy Matching One: Flakse Matching En
-        Matching: Matching
-        Match the events with the actions: Tilpass hendelsene med handlingene
-        /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png
-        /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png
-        /script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png
-        /script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png
-        /script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png
-        /script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png
+        Flappy Matching One: Flappy Set saman par
+        Matching: Samansetting
+        Match the events with the actions: Set saman hendingane med handlingane
+        "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png"
+        "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png"
+        "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png"
+        "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png"
+        "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png"
+        "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png"
       2-3 maze match 1:
-        Maze Match One: Labyrinttilpasning 1
-        Match the puzzles to the blocks: Tilpass gåtene til blokkene
-        /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png
-        /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png
-        /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png
-        /script_assets/2-3_images/maze/2-3_maze_match_1_a1.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a1.png
-        /script_assets/2-3_images/maze/2-3_maze_match_1_a2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a2.png
-        /script_assets/2-3_images/maze/2-3_maze_match_1_a3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a3.png
+        Maze Match One: Labyring Set saman par
+        Match the puzzles to the blocks: Set oppgåvene saman med dei tilhøyrande blokkene
+        "/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png"
+        "/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png"
+        "/script_assets/2-3_images/maze/2-3_maze_match_1_q3.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_q3.png"
+        "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png"
+        "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png"
+        "/script_assets/2-3_images/maze/2-3_maze_match_1_a3.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_a3.png"
       2-3 Maze Match 2:
-        Maze Match: Labyrinttilpasning
-        Match the puzzles to the blocks: Tilpass gåtene til blokkene
-        Instructions: Istruksjoner
-        Drag the blocks to match.: Dra blokkene for å matche.
-        /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
-        /script_assets/2-3_images/maze/2-3_maze_match_2_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q1.png
-        /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png
-        /script_assets/2-3_images/maze/2-3_maze_match_2_q3.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q3.png
-        /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png
-        /script_assets/2-3_images/maze/2-3_maze_match_2_a2.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a2.png
-        /script_assets/2-3_images/maze/2-3_maze_match_2_a3.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a3.png
+        Maze Match: Labyrint Lag par
+        Match the puzzles to the blocks: Set oppgåvene saman med dei tilhøyrande blokkene
+        Instructions: Istruksjonar
+        Drag the blocks to match.: Dra blokkene for å lage par.
+        "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
+        "/script_assets/2-3_images/maze/2-3_maze_match_2_q1.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_q1.png"
+        "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png"
+        "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png"
+        "/script_assets/2-3_images/maze/2-3_maze_match_2_a1.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_a1.png"
+        "/script_assets/2-3_images/maze/2-3_maze_match_2_a2.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_a2.png"
+        "/script_assets/2-3_images/maze/2-3_maze_match_2_a3.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_a3.png"
       2-3 Big Event Match 1:
-        Matching: Matching
-        /script_assets/k_1_images/unplugged_images/big_event_1_desc.png: /script_assets/k_1_images/unplugged_images/big_event_1_desc.png
-        /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
-        /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
-        /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
-        /script_assets/k_1_images/unplugged_images/big_event_1_q4.png: /script_assets/k_1_images/unplugged_images/big_event_1_q4.png
-        /script_assets/k_1_images/unplugged_images/big_event_1_a1.png: /script_assets/k_1_images/unplugged_images/big_event_1_a1.png
-        /script_assets/k_1_images/unplugged_images/big_event_1_a2.png: /script_assets/k_1_images/unplugged_images/big_event_1_a2.png
-        /script_assets/k_1_images/unplugged_images/big_event_1_a3.png: /script_assets/k_1_images/unplugged_images/big_event_1_a3.png
-        /script_assets/k_1_images/unplugged_images/big_event_1_a4.png: /script_assets/k_1_images/unplugged_images/big_event_1_a4.png
+        Matching: Samansetting
+        "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png": "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
+        "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
+        "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
+        "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
+        "/script_assets/k_1_images/unplugged_images/big_event_1_q4.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q4.png"
+        "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
+        "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
+        "/script_assets/k_1_images/unplugged_images/big_event_1_a4.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a4.png"
       2-3 Binary Match 1:
-        Matching: Matching
-        /script_assets/2-3_images/unplugged/binary_1_q.png, 250: /script_assets/2-3_images/unplugged/binary_1_q.png,
-          250
-        Use the key to mach each code to its letter: Bruk nøkkelen for å matche hver
-          kode til sin bokstav
-        <strong>N</strong>: <strong>N</strong>
-        <strong>O</strong>: <strong>O</strong>
-        <strong>P</strong>: <strong>P</strong>
-        <strong>Q</strong>: <strong>Q</strong>
-        /script_assets/2-3_images/unplugged/binary_1_a3.png: /script_assets/2-3_images/unplugged/binary_1_a3.png
-        /script_assets/2-3_images/unplugged/binary_1_a1.png: /script_assets/2-3_images/unplugged/binary_1_a1.png
-        /script_assets/2-3_images/unplugged/binary_1_a2.png: /script_assets/2-3_images/unplugged/binary_1_a2.png
-        /script_assets/2-3_images/unplugged/binary_1_a4.png: /script_assets/2-3_images/unplugged/binary_1_a4.png
+        Matching: Samansetting
+        "/script_assets/2-3_images/unplugged/binary_1_q.png, 250": "/script_assets/2-3_images/unplugged/binary_1_q.png,
+          250"
+        Use the key to match each code to its letter: Use the key to match each code
+          to its letter
+        "<strong>N</strong>": "<strong>N</strong>"
+        "<strong>O</strong>": "<strong>O</strong>"
+        "<strong>P</strong>": "<strong>P</strong>"
+        "<strong>Q</strong>": "<strong>Q</strong>"
+        "/script_assets/2-3_images/unplugged/binary_1_a3.png": "/script_assets/2-3_images/unplugged/binary_1_a3.png"
+        "/script_assets/2-3_images/unplugged/binary_1_a1.png": "/script_assets/2-3_images/unplugged/binary_1_a1.png"
+        "/script_assets/2-3_images/unplugged/binary_1_a2.png": "/script_assets/2-3_images/unplugged/binary_1_a2.png"
+        "/script_assets/2-3_images/unplugged/binary_1_a4.png": "/script_assets/2-3_images/unplugged/binary_1_a4.png"
       2-3 Graph Paper Match 1:
-        Matching: Matching
-        Match the grid to the program: Tilpass rutenettet til programmet
-        /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
-        /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
-        /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
-        /script_assets/2-3_images/unplugged/graph_paper_2_a3.png: /script_assets/2-3_images/unplugged/graph_paper_2_a3.png
-        /script_assets/2-3_images/unplugged/graph_paper_2_a2.png: /script_assets/2-3_images/unplugged/graph_paper_2_a2.png
-        /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
+        Matching: Samansetting
+        Match the grid to the program: Set saman rutenettet med tilhøyrande program
+        "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png"
+        "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png"
+        "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png"
+        "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png"
+        "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
+        "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
       2-3 Relay Programming Match 1:
-        Matching: Matching
-        Match the grid to the program: Tilpass rutenettet til programmet
-        /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
-        /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
-        /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
-        /script_assets/2-3_images/unplugged/graph_paper_2_a3.png: /script_assets/2-3_images/unplugged/graph_paper_2_a3.png
-        /script_assets/2-3_images/unplugged/graph_paper_2_a2.png: /script_assets/2-3_images/unplugged/graph_paper_2_a2.png
-        /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
+        Matching: Samansetting
+        Match the grid to the program: Set saman rutenettet med tilhøyrande program
+        "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png"
+        "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png"
+        "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png"
+        "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png"
+        "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
+        "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
       4-5 maze match 1:
-        Maze Match: Labyrinttilpasning
-        Match the puzzles to the blocks: Tilpass gåtene til blokkene
-        Instructions: Istruksjoner
-        Drag the blocks to match.: Dra blokkene for å matche.
-        /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
-        /script_assets/4-5_images/maze/4-5_maze_match_1_q1.png: /script_assets/4-5_images/maze/4-5_maze_match_1_q1.png
-        /script_assets/4-5_images/maze/4-5_maze_match_1_q2.png: /script_assets/4-5_images/maze/4-5_maze_match_1_q2.png
-        /script_assets/4-5_images/maze/4-5_maze_match_1_q3.png: /script_assets/4-5_images/maze/4-5_maze_match_1_q3.png
-        /script_assets/4-5_images/maze/4-5_maze_match_1_a1.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a1.png
-        /script_assets/4-5_images/maze/4-5_maze_match_1_a2.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a2.png
-        /script_assets/4-5_images/maze/4-5_maze_match_1_a3.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a3.png
+        Maze Match: Labyrint Lag par
+        Match the puzzles to the blocks: Set oppgåvene saman med dei tilhøyrande blokkene
+        Instructions: Istruksjonar
+        Drag the blocks to match.: Dra blokkene for å lage par.
+        "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
+        "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png"
+        "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png"
+        "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png"
+        "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png"
+        "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png"
+        "/script_assets/4-5_images/maze/4-5_maze_match_1_a3.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_a3.png"
       4-5 Algorithms Match 1:
-        Matching: Matching
-        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Tilpass
-          stegene i Terningkappløpet til rekkefølgen de skal ha i algoritmen.
-        <h4>1)</h4>: <h4>1)</h4>
-        <h4>2)</h4>: <h4>2)</h4>
-        <h4>3)</h4>: <h4>3)</h4>
-        <h4>4)</h4>: <h4>4)</h4>
-        <h4>Set Player 1 score to 0</h4>: <h4>Sett Spiller 1 sin poengsum til 0</h4>
-        <h4>Player 1 rolls die</h4>: <h4>Spiller 1 ruller terning</h4>
-        <h4>Add Player 1 roll to total score</h4>: <h4>Legg til Spiller 1 til totalscore</h4>
-        <h4>Compare player scores to see who wins</h4>: <h4>Sammenlign spilleres poengsummer
-          for å se hvem som vinner</h4>
+        Matching: Samansetting
+        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Set
+          saman stega i Terningkappløpet med rekkefølgen dei skal ha i algoritma.
+        "<h4>1)</h4>": "<h4>1)</h4>"
+        "<h4>2)</h4>": "<h4>2)</h4>"
+        "<h4>3)</h4>": "<h4>3)</h4>"
+        "<h4>4)</h4>": "<h4>4)</h4>"
+        "<h4>Set Player 1 score to 0</h4>": "<h4>Set Spelar 1 sin poengsum til 0</h4>"
+        "<h4>Player 1 rolls die</h4>": "<h4>Spelar 1 kastar terning</h4>"
+        "<h4>Add Player 1 roll to total score</h4>": "<h4>Legg Splar 1 sitt resultat
+          til totalscore</h4>"
+        "<h4>Compare player scores to see who wins</h4>": "<h4>Samanlign poengsummane
+          til spelarane for å sjå kven som vinn</h4>"
       4-5 Computational Thinking Match 1:
-        Matching: Matching
-        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Each
-          of these vehicles has been decomposed into smaller pieces. Match each vehicle
-          with its decomposed list.
-        '<h3>Wheels/side: 2<br/>Windows/side: 0</h3>': '<h3>Wheels/side: 2<br/>Windows/side:
-          0</h3>'
-        '<h3>Wheels/side: 2<br/>Windows/side: 1</h3>': '<h3>Wheels/side: 2<br/>Windows/side:
-          1</h3>'
-        '<h3>Wheels/side: 2<br/>Windows/side: 6</h3>': '<h3>Wheels/side: 2<br/>Windows/side:
-          6</h3>'
-        '<h3>Wheels/side: 3<br/>Windows/side: 2</h3>': '<h3>Wheels/side: 3<br/>Windows/side:
-          2</h3>'
-        /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png
-        /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png
-        /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png
-        /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png
+        Matching: Samansetting
+        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Kvart
+          av desse køyretya har blitt delt opp i mindre delar. Vel den delelista som
+          passar til kvart køyrety.
+        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": "<h3>Hjul/side: 2<br/>Vindauge/side:
+          0</h3>"
+        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": "<h3>Hjul/side: 2<br/>Vindauge/side:
+          1</h3>"
+        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": "<h3>Hjul/side: 2<br/>Vindauge/side:
+          6</h3>"
+        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": "<h3>Hjul/side: 3<br/>Vindauge/side:
+          2</h3>"
+        "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png"
+        "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png"
+        "/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png"
+        "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png"
       4-5 Suncatchers Match 1:
-        Matching: Matching
-        Match each program to the word it makes, using the provided group of skills.: Match
-          each program to the word it makes, using the provided group of skills.
-        /script_assets/4-5_images/unplugged/suncatchers_1.png: /script_assets/4-5_images/unplugged/suncatchers_1.png
-        /script_assets/4-5_images/unplugged/suncatchers_1_a1.png: /script_assets/4-5_images/unplugged/suncatchers_1_a1.png
-        /script_assets/4-5_images/unplugged/suncatchers_1_a2.png: /script_assets/4-5_images/unplugged/suncatchers_1_a2.png
-        /script_assets/4-5_images/unplugged/suncatchers_1_a3.png: /script_assets/4-5_images/unplugged/suncatchers_1_a3.png
-        /script_assets/4-5_images/unplugged/suncatchers_1_a4.png: /script_assets/4-5_images/unplugged/suncatchers_1_a4.png
-        <h4>STACK</h4>: <h4>STACK</h4>
-        <h4>STAMP</h4>: <h4>STAMP</h4>
-        <h4>STAR</h4>: <h4>STAR</h4>
-        <h4>RAMP</h4>: <h4>RAMP</h4>
+        Matching: Samansetting
+        Match each program to the word it makes, using the provided group of skills.: Set
+          saman kvart program med det ordet det lagar og bruk den gitte gruppa av
+          fedigheiter.
+        "/script_assets/4-5_images/unplugged/suncatchers_1.png": "/script_assets/4-5_images/unplugged/suncatchers_1.png"
+        "/script_assets/4-5_images/unplugged/suncatchers_1_a1.png": "/script_assets/4-5_images/unplugged/suncatchers_1_a1.png"
+        "/script_assets/4-5_images/unplugged/suncatchers_1_a2.png": "/script_assets/4-5_images/unplugged/suncatchers_1_a2.png"
+        "/script_assets/4-5_images/unplugged/suncatchers_1_a3.png": "/script_assets/4-5_images/unplugged/suncatchers_1_a3.png"
+        "/script_assets/4-5_images/unplugged/suncatchers_1_a4.png": "/script_assets/4-5_images/unplugged/suncatchers_1_a4.png"
+        "<h4>STACK</h4>": "<h4>STABEL</h4>"
+        "<h4>STAMP</h4>": "<h4>FRIMERKE</h4>"
+        "<h4>STAR</h4>": "<h4>STJERNE</h4>"
+        "<h4>RAMP</h4>": "<h4>RAMPE</h4>"
       K-1 Artist 2 Match 1:
-        Matching: Matching
-        Is the square next to, above, or below the ball?: Is the square next to, above,
-          or below the ball?
-        /script_assets/k_1_images/artist_images/square_above_ball.png: /script_assets/k_1_images/artist_images/square_above_ball.png
-        /script_assets/k_1_images/artist_images/square_below_ball.png: /script_assets/k_1_images/artist_images/square_below_ball.png
-        /script_assets/k_1_images/artist_images/square_next_ball.png: /script_assets/k_1_images/artist_images/square_next_ball.png
-        <br/><br/>above: <br/><br/>over
-        <br/><br/>below: <br/><br/>under
-        <br/><br/>next to: <br/><br/>ved side av
+        Matching: Samansetting
+        Is the square next to, above, or below the ball?: Er kvadratet ved sida av,
+          over eller under ballen?
+        "/script_assets/k_1_images/artist_images/square_above_ball.png": "/script_assets/k_1_images/artist_images/square_above_ball.png"
+        "/script_assets/k_1_images/artist_images/square_below_ball.png": "/script_assets/k_1_images/artist_images/square_below_ball.png"
+        "/script_assets/k_1_images/artist_images/square_next_ball.png": "/script_assets/k_1_images/artist_images/square_next_ball.png"
+        "<br/><br/>above": "<br/><br/>over"
+        "<br/><br/>below": "<br/><br/>under"
+        "<br/><br/>next to": "<br/><br/>ved sida av"
       K-1 Artist 2 Match 2:
-        Matching: Matching
-        Match the shapes based on type.: Match the shapes based on type.
-        /script_assets/k_1_images/artist_images/small_circle.png: /script_assets/k_1_images/artist_images/small_circle.png
-        /script_assets/k_1_images/artist_images/large_square.png: /script_assets/k_1_images/artist_images/large_square.png
-        /script_assets/k_1_images/artist_images/medium_rectangle.png: /script_assets/k_1_images/artist_images/medium_rectangle.png
-        /script_assets/k_1_images/artist_images/small_triangle.png: /script_assets/k_1_images/artist_images/small_triangle.png
-        /script_assets/k_1_images/artist_images/medium_circle.png: /script_assets/k_1_images/artist_images/medium_circle.png
-        /script_assets/k_1_images/artist_images/small_square.png: /script_assets/k_1_images/artist_images/small_square.png
-        /script_assets/k_1_images/artist_images/large_rectangle.png: /script_assets/k_1_images/artist_images/large_rectangle.png
-        /script_assets/k_1_images/artist_images/large_triangle.png: /script_assets/k_1_images/artist_images/large_triangle.png
+        Matching: Samansetting
+        Match the shapes based on type.: Vel figurar basert på type.
+        "/script_assets/k_1_images/artist_images/small_circle.png": "/script_assets/k_1_images/artist_images/small_circle.png"
+        "/script_assets/k_1_images/artist_images/large_square.png": "/script_assets/k_1_images/artist_images/large_square.png"
+        "/script_assets/k_1_images/artist_images/medium_rectangle.png": "/script_assets/k_1_images/artist_images/medium_rectangle.png"
+        "/script_assets/k_1_images/artist_images/small_triangle.png": "/script_assets/k_1_images/artist_images/small_triangle.png"
+        "/script_assets/k_1_images/artist_images/medium_circle.png": "/script_assets/k_1_images/artist_images/medium_circle.png"
+        "/script_assets/k_1_images/artist_images/small_square.png": "/script_assets/k_1_images/artist_images/small_square.png"
+        "/script_assets/k_1_images/artist_images/large_rectangle.png": "/script_assets/k_1_images/artist_images/large_rectangle.png"
+        "/script_assets/k_1_images/artist_images/large_triangle.png": "/script_assets/k_1_images/artist_images/large_triangle.png"
       K-1 Artist 2 Match 3:
-        Matching: Matching
-        Match the shapes based on type.: Match the shapes based on type.
-        /script_assets/k_1_images/artist_images/large_circle.png: /script_assets/k_1_images/artist_images/large_circle.png
-        /script_assets/k_1_images/artist_images/small_square.png: /script_assets/k_1_images/artist_images/small_square.png
-        /script_assets/k_1_images/artist_images/large_rectangle.png: /script_assets/k_1_images/artist_images/large_rectangle.png
-        /script_assets/k_1_images/artist_images/medium_triangle.png: /script_assets/k_1_images/artist_images/medium_triangle.png
-        /script_assets/k_1_images/artist_images/small_circle.png: /script_assets/k_1_images/artist_images/small_circle.png
-        /script_assets/k_1_images/artist_images/large_square.png: /script_assets/k_1_images/artist_images/large_square.png
-        /script_assets/k_1_images/artist_images/small_rectangle2.png: /script_assets/k_1_images/artist_images/small_rectangle2.png
-        /script_assets/k_1_images/artist_images/large_triangle2.png: /script_assets/k_1_images/artist_images/large_triangle2.png
+        Matching: Samansetting
+        Match the shapes based on type.: Vel figurar basert på type.
+        "/script_assets/k_1_images/artist_images/large_circle.png": "/script_assets/k_1_images/artist_images/large_circle.png"
+        "/script_assets/k_1_images/artist_images/small_square.png": "/script_assets/k_1_images/artist_images/small_square.png"
+        "/script_assets/k_1_images/artist_images/large_rectangle.png": "/script_assets/k_1_images/artist_images/large_rectangle.png"
+        "/script_assets/k_1_images/artist_images/medium_triangle.png": "/script_assets/k_1_images/artist_images/medium_triangle.png"
+        "/script_assets/k_1_images/artist_images/small_circle.png": "/script_assets/k_1_images/artist_images/small_circle.png"
+        "/script_assets/k_1_images/artist_images/large_square.png": "/script_assets/k_1_images/artist_images/large_square.png"
+        "/script_assets/k_1_images/artist_images/small_rectangle2.png": "/script_assets/k_1_images/artist_images/small_rectangle2.png"
+        "/script_assets/k_1_images/artist_images/large_triangle2.png": "/script_assets/k_1_images/artist_images/large_triangle2.png"
       K-1 Artist Loops Match 1:
-        Matching: Matching
-        Match the code to the stairs it draws.: Match the code to the stairs it draws.
-        /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png
-        /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png
-        /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png
-        /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a1.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a1.png
-        /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png
-        /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a3.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a3.png
+        Matching: Samansetting
+        Match the code to the stairs it draws.: Vel den koden som teiknar dei ulike
+          trappene.
+        "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png"
+        "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png"
+        "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png"
+        "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a1.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a1.png"
+        "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png"
+        "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a3.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a3.png"
       K-1 Bee Loops Match 1:
-        Matching: Matching
-        Match the blocks: Match the blocks
-        /script_assets/k_1_images/bee_images/r4_gnectar.png: /script_assets/k_1_images/bee_images/r4_gnectar.png
-        /script_assets/k_1_images/move_blocks/r3_N.png: /script_assets/k_1_images/move_blocks/r3_N.png
-        /script_assets/k_1_images/bee_images/r5_ghoney.png: /script_assets/k_1_images/bee_images/r5_ghoney.png
-        /script_assets/k_1_images/move_blocks/r5_E.png: /script_assets/k_1_images/move_blocks/r5_E.png
-        /script_assets/k_1_images/bee_images/4_gnectar.png: /script_assets/k_1_images/bee_images/4_gnectar.png
-        /script_assets/k_1_images/move_blocks/NNN.png: /script_assets/k_1_images/move_blocks/NNN.png
-        /script_assets/k_1_images/bee_images/5_ghoney.png: /script_assets/k_1_images/bee_images/5_ghoney.png
-        /script_assets/k_1_images/move_blocks/EEEEE.png: /script_assets/k_1_images/move_blocks/EEEEE.png
+        Matching: Samansetting
+        Match the blocks: Vel blokker som passar saman
+        "/script_assets/k_1_images/bee_images/r4_gnectar.png": "/script_assets/k_1_images/bee_images/r4_gnectar.png"
+        "/script_assets/k_1_images/move_blocks/r3_N.png": "/script_assets/k_1_images/move_blocks/r3_N.png"
+        "/script_assets/k_1_images/bee_images/r5_ghoney.png": "/script_assets/k_1_images/bee_images/r5_ghoney.png"
+        "/script_assets/k_1_images/move_blocks/r5_E.png": "/script_assets/k_1_images/move_blocks/r5_E.png"
+        "/script_assets/k_1_images/bee_images/4_gnectar.png": "/script_assets/k_1_images/bee_images/4_gnectar.png"
+        "/script_assets/k_1_images/move_blocks/NNN.png": "/script_assets/k_1_images/move_blocks/NNN.png"
+        "/script_assets/k_1_images/bee_images/5_ghoney.png": "/script_assets/k_1_images/bee_images/5_ghoney.png"
+        "/script_assets/k_1_images/move_blocks/EEEEE.png": "/script_assets/k_1_images/move_blocks/EEEEE.png"
       K-1 Flappy Match 1:
-        Matching: Matching
-        Match the blocks: Match the blocks
-        /script_assets/k_1_images/flappy_images/click.png: /script_assets/k_1_images/flappy_images/click.png
-        /script_assets/k_1_images/flappy_images/hit_ground.png: /script_assets/k_1_images/flappy_images/hit_ground.png
-        /script_assets/k_1_images/flappy_images/pass_obstacle.png: /script_assets/k_1_images/flappy_images/pass_obstacle.png
-        /script_assets/k_1_images/flappy_images/flap.png: /script_assets/k_1_images/flappy_images/flap.png
-        /script_assets/k_1_images/flappy_images/end.png: /script_assets/k_1_images/flappy_images/end.png
-        /script_assets/k_1_images/flappy_images/score.png: /script_assets/k_1_images/flappy_images/score.png
+        Matching: Samansetting
+        Match the blocks: Vel blokker som passar saman
+        "/script_assets/k_1_images/flappy_images/click.png": "/script_assets/k_1_images/flappy_images/click.png"
+        "/script_assets/k_1_images/flappy_images/hit_ground.png": "/script_assets/k_1_images/flappy_images/hit_ground.png"
+        "/script_assets/k_1_images/flappy_images/pass_obstacle.png": "/script_assets/k_1_images/flappy_images/pass_obstacle.png"
+        "/script_assets/k_1_images/flappy_images/flap.png": "/script_assets/k_1_images/flappy_images/flap.png"
+        "/script_assets/k_1_images/flappy_images/end.png": "/script_assets/k_1_images/flappy_images/end.png"
+        "/script_assets/k_1_images/flappy_images/score.png": "/script_assets/k_1_images/flappy_images/score.png"
       K-1 Maze Match 1:
-        Matching: Matching
-        Match the puzzles and blocks: Match the puzzles and blocks
-        Instructions: Istruksjoner
-        Drag the blocks to match.: Dra blokkene for å matche.
-        /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
-        /script_assets/k_1_images/maze_images/maze_EN.png: /script_assets/k_1_images/maze_images/maze_EN.png
-        /script_assets/k_1_images/maze_images/maze_ENE.png: /script_assets/k_1_images/maze_images/maze_ENE.png
-        /script_assets/k_1_images/maze_images/maze_WW.png: /script_assets/k_1_images/maze_images/maze_WW.png
-        /script_assets/k_1_images/maze_images/maze_WSS.png: /script_assets/k_1_images/maze_images/maze_WSS.png
-        /script_assets/k_1_images/move_blocks/EN.png: /script_assets/k_1_images/move_blocks/EN.png
-        /script_assets/k_1_images/move_blocks/ENE.png: /script_assets/k_1_images/move_blocks/ENE.png
-        /script_assets/k_1_images/move_blocks/WW.png: /script_assets/k_1_images/move_blocks/WW.png
-        /script_assets/k_1_images/move_blocks/WSS.png: /script_assets/k_1_images/move_blocks/WSS.png
+        Matching: Samansetting
+        Match the puzzles and blocks: Vel dei oppgåvene og blokkene som passar saman
+        Instructions: Istruksjonar
+        Drag the blocks to match.: Dra blokkene for å lage par.
+        "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
+        "/script_assets/k_1_images/maze_images/maze_EN.png": "/script_assets/k_1_images/maze_images/maze_EN.png"
+        "/script_assets/k_1_images/maze_images/maze_ENE.png": "/script_assets/k_1_images/maze_images/maze_ENE.png"
+        "/script_assets/k_1_images/maze_images/maze_WW.png": "/script_assets/k_1_images/maze_images/maze_WW.png"
+        "/script_assets/k_1_images/maze_images/maze_WSS.png": "/script_assets/k_1_images/maze_images/maze_WSS.png"
+        "/script_assets/k_1_images/move_blocks/EN.png": "/script_assets/k_1_images/move_blocks/EN.png"
+        "/script_assets/k_1_images/move_blocks/ENE.png": "/script_assets/k_1_images/move_blocks/ENE.png"
+        "/script_assets/k_1_images/move_blocks/WW.png": "/script_assets/k_1_images/move_blocks/WW.png"
+        "/script_assets/k_1_images/move_blocks/WSS.png": "/script_assets/k_1_images/move_blocks/WSS.png"
       K-1 Big Event Match 1:
-        Matching: Matching
-        /script_assets/k_1_images/unplugged_images/big_event_1_desc.png: /script_assets/k_1_images/unplugged_images/big_event_1_desc.png
-        /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
-        /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
-        /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
-        /script_assets/k_1_images/unplugged_images/big_event_1_a1.png: /script_assets/k_1_images/unplugged_images/big_event_1_a1.png
-        /script_assets/k_1_images/unplugged_images/big_event_1_a2.png: /script_assets/k_1_images/unplugged_images/big_event_1_a2.png
-        /script_assets/k_1_images/unplugged_images/big_event_1_a3.png: /script_assets/k_1_images/unplugged_images/big_event_1_a3.png
+        Matching: Samansetting
+        "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png": "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
+        "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
+        "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
+        "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
+        "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
+        "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
       K-1 Happy Maps Match 1:
-        Matching: Matching
-        Match the Map to the arrow that gets the Flurb to the treasure: Match the
-          Map to the arrow that gets the Flurb to the treasure
-        /script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png
-        /script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png
-        /script_assets/k_1_images/unplugged_images/happy_maps_2_q3.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q3.png
-        /script_assets/k_1_images/unplugged_images/up.png: /script_assets/k_1_images/unplugged_images/up.png
-        /script_assets/k_1_images/unplugged_images/right.png: /script_assets/k_1_images/unplugged_images/right.png
-        /script_assets/k_1_images/unplugged_images/left.png: /script_assets/k_1_images/unplugged_images/left.png
+        Matching: Samansetting
+        Match the Map to the arrow that gets the Flurb to the treasure: Vel kartet
+          som passar til pila som får Flurben til skatten
+        "/script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png": "/script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png"
+        "/script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png": "/script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png"
+        "/script_assets/k_1_images/unplugged_images/happy_maps_2_q3.png": "/script_assets/k_1_images/unplugged_images/happy_maps_2_q3.png"
+        "/script_assets/k_1_images/unplugged_images/up.png": "/script_assets/k_1_images/unplugged_images/up.png"
+        "/script_assets/k_1_images/unplugged_images/right.png": "/script_assets/k_1_images/unplugged_images/right.png"
+        "/script_assets/k_1_images/unplugged_images/left.png": "/script_assets/k_1_images/unplugged_images/left.png"
       K-1 Move It Match 1:
-        Matching: Matching
-        Match the Map to the algorithm that gets the Flurb to the flowers.: Match
-          the Map to the algorithm that gets the Flurb to the flowers.
-        /script_assets/k_1_images/unplugged_images/move_it_2_q1.png: /script_assets/k_1_images/unplugged_images/move_it_2_q1.png
-        /script_assets/k_1_images/unplugged_images/move_it_2_q2.png: /script_assets/k_1_images/unplugged_images/move_it_2_q2.png
-        /script_assets/k_1_images/unplugged_images/move_it_2_q3.png: /script_assets/k_1_images/unplugged_images/move_it_2_q3.png
-        /script_assets/k_1_images/unplugged_images/leftup.png: /script_assets/k_1_images/unplugged_images/leftup.png
-        /script_assets/k_1_images/unplugged_images/rightrightup.png: /script_assets/k_1_images/unplugged_images/rightrightup.png
-        /script_assets/k_1_images/unplugged_images/rightdown.png: /script_assets/k_1_images/unplugged_images/rightdown.png
+        Matching: Samansetting
+        Match the Map to the algorithm that gets the Flurb to the flowers.: Set saman
+          kartet med algoritma som får Flurben til blomstene.
+        "/script_assets/k_1_images/unplugged_images/move_it_2_q1.png": "/script_assets/k_1_images/unplugged_images/move_it_2_q1.png"
+        "/script_assets/k_1_images/unplugged_images/move_it_2_q2.png": "/script_assets/k_1_images/unplugged_images/move_it_2_q2.png"
+        "/script_assets/k_1_images/unplugged_images/move_it_2_q3.png": "/script_assets/k_1_images/unplugged_images/move_it_2_q3.png"
+        "/script_assets/k_1_images/unplugged_images/leftup.png": "/script_assets/k_1_images/unplugged_images/leftup.png"
+        "/script_assets/k_1_images/unplugged_images/rightrightup.png": "/script_assets/k_1_images/unplugged_images/rightrightup.png"
+        "/script_assets/k_1_images/unplugged_images/rightdown.png": "/script_assets/k_1_images/unplugged_images/rightdown.png"
       Coordinate Matching:
-        Coordinates of Ninjacat: Koordinatene til Ninjakatt
-        Match each character with its correct coordinate!: Match each character with
-          its correct coordinate!
-        /script_assets/msm/Unit 1/exercise_3_ninjacat.png: /script_assets/msm/Unit
-          1/exercise_3_ninjacat.png
+        Coordinates of Ninjacat: Koordinatane til Ninjakatt
+        Match each character with its correct coordinate!: Set saman kvar figur med
+          dei rette kooridinatane!
+        "/script_assets/msm/Unit 1/exercise_3_ninjacat.png": "/script_assets/msm/Unit
+          1/exercise_3_ninjacat.png"
         Cloud: Sky
-        Ruby: Ruby
+        Ruby: Rubin
         Dog: Hund
         Ninjacat: Ninjakatt
-        (250, 400): (250, 400)
-        (500, 240): (500, 240)
-        (480, 100): (480, 100)
-        (320, 240): (320, 240)
+        "(250, 400)": "(250, 400)"
+        "(500, 240)": "(500, 240)"
+        "(480, 100)": "(480, 100)"
+        "(320, 240)": "(320, 240)"
       Match math to circles:
-        Converting Math to Circles of Evaluation: Converting Math to Circles of Evaluation
-        Match each mathematical expression with the correct circle of evaluation!: Match
-          each mathematical expression with the correct circle of evaluation!
-        (2 + 3) * 5 / 2: (2 + 3) * 5 / 2
+        Converting Math to Circles of Evaluation: Konvertere matematikk til evalueringssirklar
+        Match each mathematical expression with the correct circle of evaluation!: Set
+          saman dei matematiske uttrykka med den rette evalueringssirkelen!
+        "(2 + 3) * 5 / 2": "(2 + 3) * 5 / 2"
         2 + 3 * (5 / 2): 2 + 3 * (5 / 2)
-        (2 + 3 * 5) / 2: (2 + 3 * 5) / 2
-        /script_assets/msm/Unit 1/Exercise_4_question_1.png: /script_assets/msm/Unit
-          1/Exercise_4_question_1.png
-        /script_assets/msm/Unit 1/Exercise_4_question_2.png: /script_assets/msm/Unit
-          1/Exercise_4_question_2.png
-        /script_assets/msm/Unit 1/Exercise_4_question_3.png: /script_assets/msm/Unit
-          1/Exercise_4_question_3.png
-        /script_assets/msm/Unit 1/Exercise_4_question_4.png: /script_assets/msm/Unit
-          1/Exercise_4_question_4.png
+        "(2 + 3 * 5) / 2": "(2 + 3 * 5) / 2"
+        "/script_assets/msm/Unit 1/Exercise_4_question_1.png": "/script_assets/msm/Unit
+          1/Exercise_4_question_1.png"
+        "/script_assets/msm/Unit 1/Exercise_4_question_2.png": "/script_assets/msm/Unit
+          1/Exercise_4_question_2.png"
+        "/script_assets/msm/Unit 1/Exercise_4_question_3.png": "/script_assets/msm/Unit
+          1/Exercise_4_question_3.png"
+        "/script_assets/msm/Unit 1/Exercise_4_question_4.png": "/script_assets/msm/Unit
+          1/Exercise_4_question_4.png"
       Match circles to code:
-        Converting Circles to Code: Konvertere sirkler til kode
-        Match each circle of evaluation with the correct code!: Match each circle
-          of evaluation with the correct code!
-        (+ (- (/ 4 7) 9) 3): (+ (- (/ 4 7) 9) 3)
-        (+ (- 9 3) (* 4 7)): (+ (- 9 3) (* 4 7))
-        (/ (+ 4 7) 3): (/ (+ 4 7) 3)
-        (+ 3 (/ 4 7)): (+ 3 (/ 4 7))
-        /script_assets/msm/Unit 1/Exercise_5_question_1.png: /script_assets/msm/Unit
-          1/Exercise_5_question_1.png
-        /script_assets/msm/Unit 1/Exercise_5_question_2.png: /script_assets/msm/Unit
-          1/Exercise_5_question_2.png
-        /script_assets/msm/Unit 1/Exercise_5_question_3.png: /script_assets/msm/Unit
-          1/Exercise_5_question_3.png
-        /script_assets/msm/Unit 1/Exercise_5_question_4.png: /script_assets/msm/Unit
-          1/Exercise_5_question_4.png
+        Converting Circles to Code: Konvertere sirklar til kode
+        Match each circle of evaluation with the correct code!: Vel dei evalueringssirklane
+          som passar med den korrekte koden!
+        "(+ (- (/ 4 7) 9) 3)": "(+ (- (/ 4 7) 9) 3)"
+        "(+ (- 9 3) (* 4 7))": "(+ (- 9 3) (* 4 7))"
+        "(/ (+ 4 7) 3)": "(/ (+ 4 7) 3)"
+        "(+ 3 (/ 4 7))": "(+ 3 (/ 4 7))"
+        "/script_assets/msm/Unit 1/Exercise_5_question_1.png": "/script_assets/msm/Unit
+          1/Exercise_5_question_1.png"
+        "/script_assets/msm/Unit 1/Exercise_5_question_2.png": "/script_assets/msm/Unit
+          1/Exercise_5_question_2.png"
+        "/script_assets/msm/Unit 1/Exercise_5_question_3.png": "/script_assets/msm/Unit
+          1/Exercise_5_question_3.png"
+        "/script_assets/msm/Unit 1/Exercise_5_question_4.png": "/script_assets/msm/Unit
+          1/Exercise_5_question_4.png"
       Match math to code:
         Converting Math to Code: Konvertere matematikk til kode
-        Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!: Match
-          each mathematical expression with the correct code. Use a circle of evaluation
-          to help you get to the answer!
-        (15 + 3) x (72 - 19): (15 + 3) x (72 - 19)
+        Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!: Set
+          kvart matematiske uttrykk saman med den rette koden. Bruk ein evalueringssirkel
+          for å komme fram til svaret!
+        "(15 + 3) x (72 - 19)": "(15 + 3) x (72 - 19)"
         3 x 15 + (- 72 19): 3 x 15 + (- 72 19)
         72 + 3 - 19 x 15: 72 + 3 - 19 x 15
         3 x 15 - 72 + 19: 3 x 15 - 72 + 19
-        (* (+ 15 3) (- 72 19)): (* (+ 15 3) (- 72 19))
-        (+ (3 x 15) (- 72 19)): (+ (3 x 15) (- 72 19))
-        (- (+ 72 3) (* 19 15)): (- (+ 72 3) (* 19 15))
-        (+ (- (* 3 15) 72) 19): (+ (- (* 3 15) 72) 19)
+        "(* (+ 15 3) (- 72 19))": "(* (+ 15 3) (- 72 19))"
+        "(+ (3 x 15) (- 72 19))": "(+ (3 x 15) (- 72 19))"
+        "(- (+ 72 3) (* 19 15))": "(- (+ 72 3) (* 19 15))"
+        "(+ (- (* 3 15) 72) 19)": "(+ (- (* 3 15) 72) 19)"
       parts of contract:
-        Parts of a Contract: Deler av en kontrakt
-        Here is a contract for a new function. Match each item with the word that describes it.: Here
-          is a contract for a new function. Match each item with the word that describes
-          it.
-        yearbook-picture: yearbook-picture
-        string numer: string numer
+        Parts of a Contract: Delar av ei kontrakt
+        Here is a contract for a new function. Match each item with the word that describes it.: Her
+          er ei kontrakt for ein ny funksjon. Set kvart element saman med ordet som
+          beskriv det.
+        yearbook-picture: "årbok-bilde"
+        string numer: streng nummer
         image: bilde
-        (yearbook-picture "Sally" 1992): (yearbook-picture "Sally" 1992)
-        function name: function name
-        domain: domain
-        range: range
-        example: example
+        (yearbook-picture "Sally" 1992): (årbokbilde "Anne" 1992)
+        function name: funksjonsnamn
+        domain: definisjonsmengde
+        range: utval
+        example: eksempel
       Match example to contract:
-        Contracts of Functions: Contracts of Functions
-        Match each example with the correct contract!: Match each example with the
-          correct contract!
-        (big-string? "gigantic" 5): (big-string? "gigantic" 5)
-        (find-price 4): (find-price 4)
-        (small-star "blue"): (small-star "blue")
-        (bigger-string "big" "little"): (bigger-string "big" "little")
+        Contracts of Functions: Kontrakta til funksjonar
+        Match each example with the correct contract!: Set kvart eksempel saman med
+          rett kontrakt!
+        (big-string? "gigantic" 5): (stor-streng? "gigantisk" 5)
+        "(find-price 4)": "(finn-pris 4)"
+        (small-star "blue"): (lita-stjerne "blå")
+        (bigger-string "big" "little"): (større-streng "stor" "liten")
         (small-star "solid"): (small-star "solid")
-        (find-price "cheese"): (find-price "cheese")
-        'big-string: string number -> boolean': 'big-string: string number -> boolean'
+        (find-price "cheese"): (finn-pris "ost")
+        'big-string: string number -> boolean': 'stor-streng: strengnummer -> boolsk'
         'find-price: number -> number': 'finn-pris: nummer -> nummer'
-        'small-star: string -> image': 'small-star: string -> image'
-        'bigger-string: string string -> string': 'bigger-string: string string ->
-          string'
-        'find-price: string -> number': 'find-price: string -> number'
+        'small-star: string -> image': 'liten-stjerne: streng -> bilde'
+        'bigger-string: string string -> string': 'større-streng: streng streng ->
+          streng'
+        'find-price: string -> number': 'finn-pris: streng -> nummer'
       test matching image:
-        Matching Images Two: Matching Images Two
-        Match up all the flowers by colour!: Match up all the flowers by colour!
-        /script_assets/matches/images/head.jpg,300: /script_assets/matches/images/head.jpg,300
-        Instructions: Istruksjoner
-        Drag the images from right to center.: Dra bildene fra høyre til senter.
-        /script_assets/matches/images/a1.jpg: /script_assets/matches/images/a1.jpg
-        /script_assets/matches/images/q1.jpg: /script_assets/matches/images/q1.jpg
-        /script_assets/matches/images/q2.jpg: /script_assets/matches/images/q2.jpg
-        /script_assets/matches/images/q3.jpg: /script_assets/matches/images/q3.jpg
-        /script_assets/matches/images/q4.jpg: /script_assets/matches/images/q4.jpg
-        /script_assets/matches/images/a2.jpg: /script_assets/matches/images/a2.jpg
-        /script_assets/matches/images/a3.jpg: /script_assets/matches/images/a3.jpg
-        /script_assets/matches/images/a4.jpg: /script_assets/matches/images/a4.jpg
+        Matching Images Two: Set saman bilder to
+        Match up all the flowers by colour!: Set saman blomstrane etter farge!
+        "/script_assets/matches/images/head.jpg,300": "/script_assets/matches/images/head.jpg,300"
+        Instructions: Istruksjonar
+        Drag the images from right to center.: Dra bilda frå høgre til midten.
+        "/script_assets/matches/images/a1.jpg": "/script_assets/matches/images/a1.jpg"
+        "/script_assets/matches/images/q1.jpg": "/script_assets/matches/images/q1.jpg"
+        "/script_assets/matches/images/q2.jpg": "/script_assets/matches/images/q2.jpg"
+        "/script_assets/matches/images/q3.jpg": "/script_assets/matches/images/q3.jpg"
+        "/script_assets/matches/images/q4.jpg": "/script_assets/matches/images/q4.jpg"
+        "/script_assets/matches/images/a2.jpg": "/script_assets/matches/images/a2.jpg"
+        "/script_assets/matches/images/a3.jpg": "/script_assets/matches/images/a3.jpg"
+        "/script_assets/matches/images/a4.jpg": "/script_assets/matches/images/a4.jpg"
       test matching text:
-        Matching: Matching
-        Some really easy stuff to match.  Drag it around until you get it.: Some really
-          easy stuff to match.  Drag it around until you get it.
-        What color is the sky?: Hvilken farge er himmelen?
-        What's in the ocean?: Hva er i havet?
-        What's Brent's last name?: What's Brent's last name?
-        Where is Brendan from?: Where is Brendan from?
+        Matching: Samansetting
+        Some really easy stuff to match.  Drag it around until you get it.: Nokre
+          veldig enkle ting å sette saman. Dra det rundt til du forstår det.
+        What color is the sky?: Kva for farge er himmelen?
+        What's in the ocean?: Kva er i havet?
+        What's Brent's last name?: Kva er etternamnet til Brent?
+        Where is Brendan from?: Kvar er Brendan frå?
         blue: blå
         salt: salt
-        Van Minnen: Van Minnen
+        Van Minnen: van Minnen
         Sydney: Sydney

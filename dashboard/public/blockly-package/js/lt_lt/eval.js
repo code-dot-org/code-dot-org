@@ -6781,7 +6781,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -14106,7 +14105,7 @@ exports.nextStageTrophies = function(d){return "Sveikinu! Tu užbaigei lygį "+v
 
 exports.numBlocksNeeded = function(d){return "Sveikinu! Tu išsprendei "+v(d,"puzzleNumber")+" užduotį. (Beje, galėjai panaudoti tik "+p(d,"numBlocks",0,"lt",{"vieną":"1 blokelį","other":n(d,"numBlocks")+" blokelių"})+".)"};
 
-exports.numLinesOfCodeWritten = function(d){return "Tu parašei  "+p(d,"numLines",0,"lt",{"one":"1 eilutę","other":n(d,"numLines")+" eilučių"})+" kodo!"};
+exports.numLinesOfCodeWritten = function(d){return "Tu sukūrei "+p(d,"numLines",0,"lt",{"one":"1 eilutę","other":n(d,"numLines")+" eilučių"})+" programą!"};
 
 exports.play = function(d){return "žaisti"};
 

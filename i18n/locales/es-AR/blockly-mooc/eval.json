@@ -6,6 +6,7 @@
   "overlayBlockTitle":"superposición (arriba, abajo)",
   "placeImageBlockTitle":"lugar-imagen (x, y, imagen)",
   "rectangleBlockTitle":"rectángulo (anchura, altura, estilo, color)",
+  "reinfFeedbackMsg":"Puedes presionar el botón \"Intentarlo de nuevo\" para editar tu dibujo.",
   "rotateImageBlockTitle":"Girar (grados, imagen)",
   "scaleImageBlockTitle":"escala (factor)",
   "squareBlockTitle":"cuadrado (tamaño, estilo, color)",

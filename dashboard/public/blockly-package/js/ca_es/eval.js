@@ -6781,7 +6781,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -14101,7 +14100,7 @@ exports.numLinesOfCodeWritten = function(d){return "Has escrit "+p(d,"numLines",
 
 exports.play = function(d){return "reprodueix"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Imprimeix"};
 
 exports.puzzleTitle = function(d){return "Puzzle "+v(d,"puzzle_number")+" de "+v(d,"stage_total")};
 
@@ -14117,7 +14116,7 @@ exports.score = function(d){return "puntuació"};
 
 exports.showCodeHeader = function(d){return "Mostra el Codi"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Mostra els blocs"};
 
 exports.showGeneratedCode = function(d){return "Mostra el Codi"};
 
@@ -14143,9 +14142,9 @@ exports.hintRequest = function(d){return "Veure pista"};
 
 exports.backToPreviousLevel = function(d){return "Torna al nivell anterior"};
 
-exports.saveToGallery = function(d){return "Guarda-ho a la teva galeria"};
+exports.saveToGallery = function(d){return "Desa a la galeria"};
 
-exports.savedToGallery = function(d){return "Guardat a la teva galeria!"};
+exports.savedToGallery = function(d){return "Desat a la galeria!"};
 
 exports.shareFailure = function(d){return "Ho sentim, no podem compartir aquest programa."};
 
@@ -14155,7 +14154,7 @@ exports.typeHint = function(d){return "Tingueu en compte que els parèntesis i e
 
 exports.workspaceHeader = function(d){return "Monta els teus blocs aquí: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Escriviu el vostre codi JavaScript aquí"};
 
 exports.infinity = function(d){return "Infinit"};
 
@@ -14179,50 +14178,50 @@ exports.hintHeader = function(d){return "Aquí tens una pista:"};
 
 exports.genericFeedback = function(d){return "Observa com has acabat i prova d'arreglar el teu programa."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Comprova el que he fet"};
 
 
 },{"messageformat":62}],50:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.ca=function(n){return n===1?"one":"other"}
-exports.circleBlockTitle = function(d){return "circle (radius, style, color)"};
+exports.circleBlockTitle = function(d){return "cercle (radi, estil, color)"};
 
-exports.displayBlockTitle = function(d){return "display"};
+exports.displayBlockTitle = function(d){return "mostra"};
 
-exports.ellipseBlockTitle = function(d){return "ellipse (width, height, style, color)"};
+exports.ellipseBlockTitle = function(d){return "el·lipse (amplada, alçada, estil, color)"};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"display\" block?"};
+exports.extraTopBlocks = function(d){return "Teniu blocs no afegits. Et refereixes a adjuntar aquestes al bloc \"mostra\"?"};
 
-exports.overlayBlockTitle = function(d){return "overlay (top, bottom)"};
+exports.overlayBlockTitle = function(d){return "superposició (superior, inferior)"};
 
-exports.placeImageBlockTitle = function(d){return "place-image (x, y, image)"};
+exports.placeImageBlockTitle = function(d){return "lloc-imatge (x, y, imatge)"};
 
-exports.rectangleBlockTitle = function(d){return "rectangle (width, height, style, color)"};
+exports.rectangleBlockTitle = function(d){return "rectangle (amplada, alçada, estil, color)"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to edit your drawing."};
+exports.reinfFeedbackMsg = function(d){return "Pots prémer el botó \"Torna-ho a intentar\" per editar el teu dibuix."};
 
-exports.rotateImageBlockTitle = function(d){return "rotate (degrees, image)"};
+exports.rotateImageBlockTitle = function(d){return "rotar (graus, imatge)"};
 
-exports.scaleImageBlockTitle = function(d){return "scale (factor)"};
+exports.scaleImageBlockTitle = function(d){return "escala (factor)"};
 
-exports.squareBlockTitle = function(d){return "square (size, style, color)"};
+exports.squareBlockTitle = function(d){return "quadrat (mida, estil, color)"};
 
-exports.starBlockTitle = function(d){return "star (radius, style, color)"};
+exports.starBlockTitle = function(d){return "estrella (radi, estil, color)"};
 
-exports.stringAppendBlockTitle = function(d){return "string-append (first, second)"};
+exports.stringAppendBlockTitle = function(d){return "afegir-caràcter(primer, segon)"};
 
-exports.stringLengthBlockTitle = function(d){return "string-length (string)"};
+exports.stringLengthBlockTitle = function(d){return "llargada-caràcter(caràcter)"};
 
-exports.textBlockTitle = function(d){return "text (string, size, color)"};
+exports.textBlockTitle = function(d){return "text (caràcter, mida, color)"};
 
-exports.triangleBlockTitle = function(d){return "triangle (size, style, color)"};
+exports.triangleBlockTitle = function(d){return "Triangle (mida, estil, color)"};
 
-exports.underlayBlockTitle = function(d){return "underlay (bottom, top)"};
+exports.underlayBlockTitle = function(d){return "subcapa (inferior, superior)"};
 
-exports.outline = function(d){return "outline"};
+exports.outline = function(d){return "contorn"};
 
-exports.solid = function(d){return "solid"};
+exports.solid = function(d){return "sòlid"};
 
-exports.string = function(d){return "string"};
+exports.string = function(d){return "seqüència"};
 
 
 },{"messageformat":62}],51:[function(require,module,exports){

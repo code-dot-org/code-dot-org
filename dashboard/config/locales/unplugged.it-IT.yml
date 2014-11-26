@@ -280,3 +280,21 @@
           lezione sviluppa ulteriormente questo concetto illustrando come un computer
           possa memorizzare informazioni ancora più complesse (ad esempio immagini
           e colori) in formato binario.
+      VideoGamesCoordinatePlanes:
+        title: Video Games and Coordinate Planes
+        desc: Video Games and Coordinate Planes lesson description
+      Contracts:
+        title: Contratti
+        desc: Contracts unplugged lesson description
+      DesignRecipe:
+        title: La Ricetta della Progettazione
+        desc: Design Recipe lesson description
+      Booleans:
+        title: Valori booleani
+        desc: Booleans lesson description
+      ConditionalsPiecewiseFunctions:
+        title: Istruzioni Condizionali e Funzioni a Tratti
+        desc: Conditionals and Piecewise Functions lesson description
+      CollisionDetection:
+        title: Collision Detection
+        desc: Collision Detection lesson description

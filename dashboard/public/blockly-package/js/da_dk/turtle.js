@@ -2626,7 +2626,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -14699,23 +14698,23 @@ exports.catLogic = function(d){return "Logik"};
 
 exports.colourTooltip = function(d){return "Ændrer farven på blyanten."};
 
-exports.createACircle = function(d){return "create a circle"};
+exports.createACircle = function(d){return "oprette en cirkel"};
 
-exports.createSnowflakeSquare = function(d){return "create a snowflake of type square"};
+exports.createSnowflakeSquare = function(d){return "opret et snefnug af typen square-firkant"};
 
-exports.createSnowflakeParallelogram = function(d){return "create a snowflake of type parallelogram"};
+exports.createSnowflakeParallelogram = function(d){return "Opret et snefnug af typen parallelogram"};
 
-exports.createSnowflakeLine = function(d){return "create a snowflake of type line"};
+exports.createSnowflakeLine = function(d){return "Opret et snefnug af typen linje"};
 
-exports.createSnowflakeSpiral = function(d){return "create a snowflake of type spiral"};
+exports.createSnowflakeSpiral = function(d){return "Opret et snefnug af typen spiral"};
 
-exports.createSnowflakeFlower = function(d){return "create a snowflake of type flower"};
+exports.createSnowflakeFlower = function(d){return "Opret et snefnug typen blomst"};
 
-exports.createSnowflakeFractal = function(d){return "create a snowflake of type fractal"};
+exports.createSnowflakeFractal = function(d){return "Opret et snefnug af typen fraktal"};
 
-exports.createSnowflakeRandom = function(d){return "create a snowflake of type random"};
+exports.createSnowflakeRandom = function(d){return "Opret et snefnug af typen tilfældige"};
 
-exports.createASnowflakeBranch = function(d){return "create a snowflake branch"};
+exports.createASnowflakeBranch = function(d){return "Opret et snefnug gren"};
 
 exports.degrees = function(d){return "grader"};
 
@@ -14755,7 +14754,7 @@ exports.drawUpperWave = function(d){return "tegn øvre bølge"};
 
 exports.drawLowerWave = function(d){return "tegn lavere bølge"};
 
-exports.drawStamp = function(d){return "draw stamp"};
+exports.drawStamp = function(d){return "tegne stempel"};
 
 exports.heightParameter = function(d){return "højde"};
 

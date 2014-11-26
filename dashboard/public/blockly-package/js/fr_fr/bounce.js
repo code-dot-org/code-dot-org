@@ -5334,7 +5334,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -12197,7 +12196,7 @@ exports.isWallTooltip = function(d){return "Retourne vrai s'il y a un mur ici"};
 
 exports.launchBall = function(d){return "lancer une nouvelle balle"};
 
-exports.launchBallTooltip = function(d){return "Met une balle en jeu."};
+exports.launchBallTooltip = function(d){return "Mets une balle en jeu."};
 
 exports.makeYourOwn = function(d){return "Créez votre propre jeu Pong"};
 

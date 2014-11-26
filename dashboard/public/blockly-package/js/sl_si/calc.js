@@ -3514,7 +3514,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -10757,9 +10756,9 @@ var MessageFormat = require("messageformat");MessageFormat.locale.sl = function 
   }
   return 'other';
 };
-exports.compute = function(d){return "compute"};
+exports.compute = function(d){return "izračunaj"};
 
-exports.equivalentExpression = function(d){return "Try reordering your arguments to get exactly the same expression."};
+exports.equivalentExpression = function(d){return "Poskusi preurediti argumente, tako da dobiš točno isti izraz."};
 
 exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"compute\" block?"};
 

@@ -6781,7 +6781,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -14184,45 +14183,45 @@ exports.defaultTwitterText = function(d){return "Check out what I made"};
 
 },{"messageformat":62}],50:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.hu=function(n){return "other"}
-exports.circleBlockTitle = function(d){return "circle (radius, style, color)"};
+exports.circleBlockTitle = function(d){return "kör (sugár, stílus, szín)"};
 
-exports.displayBlockTitle = function(d){return "display"};
+exports.displayBlockTitle = function(d){return "megjelenítés"};
 
-exports.ellipseBlockTitle = function(d){return "ellipse (width, height, style, color)"};
+exports.ellipseBlockTitle = function(d){return "ellipszis (szélesség, magasság, stílus, szín)"};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"display\" block?"};
+exports.extraTopBlocks = function(d){return "Vannak különálló blokkok a táblán. Csatold őket a \"Megjelenítés\" blokkhoz!"};
 
 exports.overlayBlockTitle = function(d){return "overlay (top, bottom)"};
 
-exports.placeImageBlockTitle = function(d){return "place-image (x, y, image)"};
+exports.placeImageBlockTitle = function(d){return "hely-kép (x, y, kép)"};
 
-exports.rectangleBlockTitle = function(d){return "rectangle (width, height, style, color)"};
+exports.rectangleBlockTitle = function(d){return "téglalap (szélesség, magasság, stílus, szín)"};
 
 exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to edit your drawing."};
 
-exports.rotateImageBlockTitle = function(d){return "rotate (degrees, image)"};
+exports.rotateImageBlockTitle = function(d){return "forgatás (kép, fok)"};
 
-exports.scaleImageBlockTitle = function(d){return "scale (factor)"};
+exports.scaleImageBlockTitle = function(d){return "skála (mérték)"};
 
-exports.squareBlockTitle = function(d){return "square (size, style, color)"};
+exports.squareBlockTitle = function(d){return "négyzet (méret, stílus, szín)"};
 
-exports.starBlockTitle = function(d){return "star (radius, style, color)"};
+exports.starBlockTitle = function(d){return "csillag (sugár, stílus, szín)"};
 
 exports.stringAppendBlockTitle = function(d){return "string-append (first, second)"};
 
-exports.stringLengthBlockTitle = function(d){return "string-length (string)"};
+exports.stringLengthBlockTitle = function(d){return "szöveg hossza (szöveg)"};
 
-exports.textBlockTitle = function(d){return "text (string, size, color)"};
+exports.textBlockTitle = function(d){return "szöveg (szöveg, méret, szín)"};
 
-exports.triangleBlockTitle = function(d){return "triangle (size, style, color)"};
+exports.triangleBlockTitle = function(d){return "háromszög (méret, stílus, szín)"};
 
 exports.underlayBlockTitle = function(d){return "underlay (bottom, top)"};
 
-exports.outline = function(d){return "outline"};
+exports.outline = function(d){return "körvonal"};
 
-exports.solid = function(d){return "solid"};
+exports.solid = function(d){return "teli"};
 
-exports.string = function(d){return "string"};
+exports.string = function(d){return "szöveg"};
 
 
 },{"messageformat":62}],51:[function(require,module,exports){

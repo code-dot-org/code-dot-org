@@ -6717,7 +6717,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -15065,6 +15064,23 @@ exports.install = function(blockly, blockInstallOptions) {
   // Install functional start blocks
   //
 
+  blockly.Blocks.functional_start_setValue = {
+    init: function() {
+      var blockName = 'start (value)';
+      var blockType = 'none';
+      var blockArgs = [{name: 'VALUE', type: 'Number'}];
+      initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
+    }
+  };
+
+  generator.functional_start_setValue = function() {
+    // Adapted from Blockly.JavaScript.variables_set.
+    var argument0 = Blockly.JavaScript.statementToCode(this, 'VALUE',
+        Blockly.JavaScript.ORDER_ASSIGNMENT) || '0';
+    var varName = Blockly.JavaScript.translateVarName('startValue');
+    return varName + ' = ' + argument0 + ';\n';
+  };
+
   installFunctionalApiCallBlock(blockly, generator, {
     blockName: 'functional_start_dummyOnMove',
     blockTitle: 'on-move (on-screen)',
@@ -18551,6 +18567,7 @@ Studio.execute = function() {
   var handlers = [];
   if (BlocklyApps.usingBlockly) {
     registerHandlers(handlers, 'when_run', 'whenGameStarts');
+    registerHandlers(handlers, 'functional_start_setValue', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackground', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setSpeeds', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackgroundAndSpeeds',
@@ -18759,7 +18776,7 @@ function spriteTotalFrames (index) {
 }
 
 var updateSpeechBubblePath = function (element) {
-  var height = element.getAttribute('height');
+  var height = +element.getAttribute('height');
   var onTop = 'true' === element.getAttribute('onTop');
   var onRight = 'true' === element.getAttribute('onRight');
   element.setAttribute('d',
@@ -20456,7 +20473,7 @@ exports.numLinesOfCodeWritten = function(d){return "Du har akkurat skrevet "+p(d
 
 exports.play = function(d){return "spill av"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Skriv ut"};
 
 exports.puzzleTitle = function(d){return "Oppgave "+v(d,"puzzle_number")+" av "+v(d,"stage_total")};
 
@@ -20498,7 +20515,7 @@ exports.hintRequest = function(d){return "Se hint"};
 
 exports.backToPreviousLevel = function(d){return "Tilbake til forrige nivå"};
 
-exports.saveToGallery = function(d){return "Lagre til galleriet"};
+exports.saveToGallery = function(d){return "Lagre i galleriet"};
 
 exports.savedToGallery = function(d){return "Lagret i galleriet!"};
 
@@ -20534,7 +20551,7 @@ exports.hintHeader = function(d){return "Her er et tips:"};
 
 exports.genericFeedback = function(d){return "Se hvordan du endte opp, og prøv å fikse programmet ditt."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Sjekk ut det jeg lagde"};
 
 
 },{"messageformat":61}],49:[function(require,module,exports){
@@ -20551,7 +20568,7 @@ exports.backgroundHardcourt = function(d){return "hardcourt"};
 
 exports.backgroundNight = function(d){return "natt"};
 
-exports.backgroundUnderwater = function(d){return "underwater"};
+exports.backgroundUnderwater = function(d){return "undervanns"};
 
 exports.backgroundCity = function(d){return "by"};
 
@@ -20859,15 +20876,15 @@ exports.setSpriteHidden = function(d){return "til usynlig utseende"};
 
 exports.setSpriteHideK1 = function(d){return "gjemme"};
 
-exports.setSpriteAnna = function(d){return "to a Anna image"};
+exports.setSpriteAnna = function(d){return "til Anna utseende"};
 
-exports.setSpriteElsa = function(d){return "to a Elsa image"};
+exports.setSpriteElsa = function(d){return "til Elsa utseende"};
 
-exports.setSpriteHiro = function(d){return "to a Hiro image"};
+exports.setSpriteHiro = function(d){return "til Hiro utseende"};
 
-exports.setSpriteBaymax = function(d){return "to a Baymax image"};
+exports.setSpriteBaymax = function(d){return "til Baymax utseende"};
 
-exports.setSpriteRapunzel = function(d){return "to a Rapunzel image"};
+exports.setSpriteRapunzel = function(d){return "til Rapunzel utseende"};
 
 exports.setSpriteKnight = function(d){return "til ridder utseende"};
 
@@ -20949,7 +20966,7 @@ exports.shareGame = function(d){return "Del din historie:"};
 
 exports.showCoordinates = function(d){return "vis koordinater"};
 
-exports.showCoordinatesTooltip = function(d){return "show the protagonist's coordinates on the screen"};
+exports.showCoordinatesTooltip = function(d){return "Vis protagonistens koordinater på skjermen"};
 
 exports.showTitleScreen = function(d){return "vis tittelskjerm"};
 

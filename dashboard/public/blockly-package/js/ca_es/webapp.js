@@ -2626,7 +2626,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -11041,7 +11040,7 @@ exports.numLinesOfCodeWritten = function(d){return "Has escrit "+p(d,"numLines",
 
 exports.play = function(d){return "reprodueix"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Imprimeix"};
 
 exports.puzzleTitle = function(d){return "Puzzle "+v(d,"puzzle_number")+" de "+v(d,"stage_total")};
 
@@ -11057,7 +11056,7 @@ exports.score = function(d){return "puntuació"};
 
 exports.showCodeHeader = function(d){return "Mostra el Codi"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Mostra els blocs"};
 
 exports.showGeneratedCode = function(d){return "Mostra el Codi"};
 
@@ -11083,9 +11082,9 @@ exports.hintRequest = function(d){return "Veure pista"};
 
 exports.backToPreviousLevel = function(d){return "Torna al nivell anterior"};
 
-exports.saveToGallery = function(d){return "Guarda-ho a la teva galeria"};
+exports.saveToGallery = function(d){return "Desa a la galeria"};
 
-exports.savedToGallery = function(d){return "Guardat a la teva galeria!"};
+exports.savedToGallery = function(d){return "Desat a la galeria!"};
 
 exports.shareFailure = function(d){return "Ho sentim, no podem compartir aquest programa."};
 
@@ -11095,7 +11094,7 @@ exports.typeHint = function(d){return "Tingueu en compte que els parèntesis i e
 
 exports.workspaceHeader = function(d){return "Monta els teus blocs aquí: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Escriviu el vostre codi JavaScript aquí"};
 
 exports.infinity = function(d){return "Infinit"};
 
@@ -11119,7 +11118,7 @@ exports.hintHeader = function(d){return "Aquí tens una pista:"};
 
 exports.genericFeedback = function(d){return "Observa com has acabat i prova d'arreglar el teu programa."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Comprova el que he fet"};
 
 
 },{"messageformat":52}],40:[function(require,module,exports){
@@ -11128,7 +11127,7 @@ exports.catActions = function(d){return "Accions"};
 
 exports.catControl = function(d){return "Bucles"};
 
-exports.catEvents = function(d){return "Events"};
+exports.catEvents = function(d){return "Esdeveniments"};
 
 exports.catLogic = function(d){return "Lògic"};
 
@@ -11142,13 +11141,13 @@ exports.catVariables = function(d){return "Variables"};
 
 exports.continue = function(d){return "Continuar"};
 
-exports.createHtmlBlock = function(d){return "create html block"};
+exports.createHtmlBlock = function(d){return "crea el bloc html"};
 
-exports.createHtmlBlockTooltip = function(d){return "Creates a block of HTML in the app."};
+exports.createHtmlBlockTooltip = function(d){return "Crea un bloc de HTML a l' app."};
 
 exports.finalLevel = function(d){return "Felicitats! Has resolt el puzzle final."};
 
-exports.makeYourOwn = function(d){return "Make Your Own App"};
+exports.makeYourOwn = function(d){return "Fes la teva propia App"};
 
 exports.nextLevel = function(d){return "Felicitats! Has complert aquest puzzle."};
 
@@ -11158,17 +11157,17 @@ exports.numBlocksNeeded = function(d){return "Aquest puzzle pot res resolt amb b
 
 exports.pause = function(d){return "Pause"};
 
-exports.reinfFeedbackMsg = function(d){return "You can press the \"Try again\" button to go back to running your app."};
+exports.reinfFeedbackMsg = function(d){return "Podeu prémer el botó \"Torna-ho a provar\" per tornar a executar la teva app."};
 
-exports.repeatForever = function(d){return "repeat forever"};
+exports.repeatForever = function(d){return "repetir per sempre"};
 
 exports.repeatDo = function(d){return "fes"};
 
-exports.repeatForeverTooltip = function(d){return "Execute the actions in this block repeatedly while the app is running."};
+exports.repeatForeverTooltip = function(d){return "Executa les accions en aquest bloc repetidament mentre l'app s'està executant."};
 
-exports.shareWebappTwitter = function(d){return "Check out the app I made. I wrote it myself with @codeorg"};
+exports.shareWebappTwitter = function(d){return "Comprovi l'app que he fet. Vaig escriure'l jo amb @codeorg"};
 
-exports.shareGame = function(d){return "Share your app:"};
+exports.shareGame = function(d){return "Comparteix la teva app:"};
 
 exports.stepIn = function(d){return "Step in"};
 
@@ -11176,9 +11175,9 @@ exports.stepOver = function(d){return "Step over"};
 
 exports.stepOut = function(d){return "Step out"};
 
-exports.turnBlack = function(d){return "turn black"};
+exports.turnBlack = function(d){return "Canvia a negre"};
 
-exports.turnBlackTooltip = function(d){return "Turns the screen black."};
+exports.turnBlackTooltip = function(d){return "Canvia la pantalla a negre."};
 
 exports.yes = function(d){return "Sí"};
 

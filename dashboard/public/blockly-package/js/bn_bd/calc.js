@@ -3514,7 +3514,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -10748,15 +10747,15 @@ exports.parseElement = function(text) {
 var MessageFormat = require("messageformat");MessageFormat.locale.bn=function(n){return n===1?"one":"other"}
 exports.compute = function(d){return "compute"};
 
-exports.equivalentExpression = function(d){return "Try reordering your arguments to get exactly the same expression."};
+exports.equivalentExpression = function(d){return "ঠিক একই অভিব্যক্তি পেতে আপনার কথাবার্তা রেকর্ড করতে চেষ্টা করুন ।"};
 
-exports.extraTopBlocks = function(d){return "You have unattached blocks. Did you mean to attach these to the \"compute\" block?"};
+exports.extraTopBlocks = function(d){return "তোমার অসংযুক্ত block আছে । তুমি  \"compute\" block এ যুক্ত করতে বুঝিয়েছিলে কি ?"};
 
 exports.goal = function(d){return "Goal:"};
 
-exports.reinfFeedbackMsg = function(d){return "Does this look like what you want? You can press the \"Try again\" button to see your drawing."};
+exports.reinfFeedbackMsg = function(d){return "এটি তোমার কাহিনী নয় ! এতে কাজ করা চালিয়ে যাও, কিংবা পরের puzzleএ চলে যাও !"};
 
-exports.yourExpression = function(d){return "Your expression:"};
+exports.yourExpression = function(d){return "তোমার অভিব্যাক্তি:"};
 
 
 },{"messageformat":53}],41:[function(require,module,exports){

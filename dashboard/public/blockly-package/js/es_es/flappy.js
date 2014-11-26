@@ -2626,7 +2626,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -12065,7 +12064,7 @@ exports.numLinesOfCodeWritten = function(d){return "¡Acabas de escribir "+p(d,"
 
 exports.play = function(d){return "jugar"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Imprimir"};
 
 exports.puzzleTitle = function(d){return "Puzzle "+v(d,"puzzle_number")+" de "+v(d,"stage_total")};
 
@@ -12107,9 +12106,9 @@ exports.hintRequest = function(d){return "Ver pista"};
 
 exports.backToPreviousLevel = function(d){return "Volver al nivel anterior"};
 
-exports.saveToGallery = function(d){return "Guardar en tu galería"};
+exports.saveToGallery = function(d){return "Guardar en Galería"};
 
-exports.savedToGallery = function(d){return "¡Guardado en tu galería!"};
+exports.savedToGallery = function(d){return "¡Guardado en la Galería!"};
 
 exports.shareFailure = function(d){return "Perdón, no podemos compartir este programa."};
 
@@ -12143,7 +12142,7 @@ exports.hintHeader = function(d){return "Aquí hay un consejo:"};
 
 exports.genericFeedback = function(d){return "Mira como terminaste, y trata de reparar tu programa."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Mira lo que hice"};
 
 
 },{"messageformat":52}],40:[function(require,module,exports){

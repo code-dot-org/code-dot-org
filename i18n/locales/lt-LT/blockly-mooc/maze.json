@@ -65,7 +65,7 @@
   "removeStack":"pašalink {shovelfuls} krūveles(-ių)",
   "removeSquare":"pašalink kvadratą",
   "repeatCarefullyError":"Norėdamas išspręsti, gerai pagalvok - kiek kartų reiktų pakartot po seką: du žingsniai ir pasukimas.",
-  "repeatUntil":"kartok, kol",
+  "repeatUntil":"kartok, kol pasieksi",
   "repeatUntilBlocked":"kol yra kelias į priekį",
   "repeatUntilFinish":"kartok iki finišo",
   "step":"Žingsnis",

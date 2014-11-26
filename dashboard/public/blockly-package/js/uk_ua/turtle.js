@@ -2626,7 +2626,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -14609,7 +14608,7 @@ exports.numLinesOfCodeWritten = function(d){return "Ви щойно написа
 
 exports.play = function(d){return "грати"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Друк"};
 
 exports.puzzleTitle = function(d){return "Завдання "+v(d,"puzzle_number")+" з "+v(d,"stage_total")};
 
@@ -14651,9 +14650,9 @@ exports.hintRequest = function(d){return "Подивитись підказку"
 
 exports.backToPreviousLevel = function(d){return "Повернутися до попереднього рівня"};
 
-exports.saveToGallery = function(d){return "Зберегти до вашої колекції"};
+exports.saveToGallery = function(d){return "Зберегти в галереї"};
 
-exports.savedToGallery = function(d){return "Збережено в галерею!"};
+exports.savedToGallery = function(d){return "Збережено у галереї!"};
 
 exports.shareFailure = function(d){return "На жаль, цією програмою не можна поділитись."};
 
@@ -14687,7 +14686,7 @@ exports.hintHeader = function(d){return "Підказка:"};
 
 exports.genericFeedback = function(d){return "Подивіться, на чому ви зупинились і спробуйте виправити свою програму."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Подивіться, що у мене вийшло"};
 
 
 },{"messageformat":57}],45:[function(require,module,exports){
@@ -14707,7 +14706,7 @@ var MessageFormat = require("messageformat");MessageFormat.locale.uk = function 
 };
 exports.blocksUsed = function(d){return "Використано блоків:  %1"};
 
-exports.branches = function(d){return "відгалуження"};
+exports.branches = function(d){return "гілочки"};
 
 exports.catColour = function(d){return "Колір"};
 
@@ -14725,23 +14724,23 @@ exports.catLogic = function(d){return "Логіка"};
 
 exports.colourTooltip = function(d){return "Змінює колір олівця."};
 
-exports.createACircle = function(d){return "create a circle"};
+exports.createACircle = function(d){return "створити коло"};
 
-exports.createSnowflakeSquare = function(d){return "create a snowflake of type square"};
+exports.createSnowflakeSquare = function(d){return "створити сніжинку квадратного типу"};
 
-exports.createSnowflakeParallelogram = function(d){return "create a snowflake of type parallelogram"};
+exports.createSnowflakeParallelogram = function(d){return "створити сніжинку типу паралелограм"};
 
-exports.createSnowflakeLine = function(d){return "create a snowflake of type line"};
+exports.createSnowflakeLine = function(d){return "створити сніжинку лінійного типу"};
 
-exports.createSnowflakeSpiral = function(d){return "create a snowflake of type spiral"};
+exports.createSnowflakeSpiral = function(d){return "створити сніжинку спірального типу"};
 
-exports.createSnowflakeFlower = function(d){return "create a snowflake of type flower"};
+exports.createSnowflakeFlower = function(d){return "створити сніжинку квіткового типу"};
 
-exports.createSnowflakeFractal = function(d){return "create a snowflake of type fractal"};
+exports.createSnowflakeFractal = function(d){return "створити сніжинку фрактального типу"};
 
-exports.createSnowflakeRandom = function(d){return "create a snowflake of type random"};
+exports.createSnowflakeRandom = function(d){return "створити сніжинку випадкового типу"};
 
-exports.createASnowflakeBranch = function(d){return "create a snowflake branch"};
+exports.createASnowflakeBranch = function(d){return "створити гілочку сніжинки"};
 
 exports.degrees = function(d){return "градусів"};
 
@@ -14781,7 +14780,7 @@ exports.drawUpperWave = function(d){return "намалювати хвилю до
 
 exports.drawLowerWave = function(d){return "намалювати хвилю вниз"};
 
-exports.drawStamp = function(d){return "draw stamp"};
+exports.drawStamp = function(d){return "намалювати штамп"};
 
 exports.heightParameter = function(d){return "висота"};
 
@@ -14835,7 +14834,7 @@ exports.penTooltip = function(d){return "Піднімає або опускає 
 
 exports.penUp = function(d){return "підняти олівець"};
 
-exports.reinfFeedbackMsg = function(d){return "Це виглядає так, як ви хочете? Можна клацнути кнопку \"Повторити спробу\", щоб побачити свій малюнок."};
+exports.reinfFeedbackMsg = function(d){return "Ось ваш малюнок! Продовжуйте роботу над ним, або перейдіть до наступної задачі."};
 
 exports.setColour = function(d){return "встановити колір"};
 

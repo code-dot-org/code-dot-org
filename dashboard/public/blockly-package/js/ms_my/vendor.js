@@ -56,7 +56,7 @@ goog.userAgent.IPAD=goog.userAgent.PLATFORM_KNOWN_?goog.userAgent.ASSUME_IPAD:go
 goog.userAgent.determineVersion_=function(){var a="",b;goog.userAgent.OPERA&&goog.global.opera?(a=goog.global.opera.version,a="function"==typeof a?a():a):(goog.userAgent.GECKO?b=/rv\:([^\);]+)(\)|;)/:goog.userAgent.IE?b=/\b(?:MSIE|rv)[: ]([^\);]+)(\)|;)/:goog.userAgent.WEBKIT&&(b=/WebKit\/(\S+)/),b&&(a=(a=b.exec(goog.userAgent.getUserAgentString()))?a[1]:""));return goog.userAgent.IE&&(b=goog.userAgent.getDocumentMode_(),b>parseFloat(a))?String(b):a};
 goog.userAgent.getDocumentMode_=function(){var a=goog.global.document;return a?a.documentMode:void 0};goog.userAgent.VERSION=goog.userAgent.determineVersion_();goog.userAgent.compare=function(a,b){return goog.string.compareVersions(a,b)};goog.userAgent.isVersionOrHigherCache_={};
 goog.userAgent.isVersionOrHigher=function(a){return goog.userAgent.ASSUME_ANY_VERSION||goog.userAgent.isVersionOrHigherCache_[a]||(goog.userAgent.isVersionOrHigherCache_[a]=0<=goog.string.compareVersions(goog.userAgent.VERSION,a))};goog.userAgent.isVersion=goog.userAgent.isVersionOrHigher;goog.userAgent.isDocumentModeOrHigher=function(a){return goog.userAgent.IE&&goog.userAgent.DOCUMENT_MODE>=a};goog.userAgent.isDocumentMode=goog.userAgent.isDocumentModeOrHigher;
-goog.userAgent.DOCUMENT_MODE=function(){var a=goog.global.document;return a&&goog.userAgent.IE?goog.userAgent.getDocumentMode_()||("CSS1Compat"==a.compatMode?parseInt(goog.userAgent.VERSION,10):5):void 0}();Blockly.BlockSvg=function(a){this.block_=a;this.svgGroup_=Blockly.createSvgElement("g",{"block-id":a.id},null);this.initChildren()};
+goog.userAgent.DOCUMENT_MODE=function(){var a=goog.global.document;return a&&goog.userAgent.IE?goog.userAgent.getDocumentMode_()||("CSS1Compat"==a.compatMode?parseInt(goog.userAgent.VERSION,10):5):void 0}();Blockly.BlockSvg=function(a){this.block_=a;var b={"block-id":a.id};a.htmlId&&(b.id=a.htmlId);this.svgGroup_=Blockly.createSvgElement("g",b,null);this.initChildren()};
 Blockly.BlockSvg.prototype.initChildren=function(){this.svgPathDark_=Blockly.createSvgElement("path",{"class":"blocklyPathDark",transform:"translate(1, 1)","fill-rule":"evenodd"},this.svgGroup_);this.svgPath_=Blockly.createSvgElement("path",{"class":"blocklyPath","fill-rule":"evenodd"},this.svgGroup_);this.block_.getFillPattern()&&(this.svgPathFill_=Blockly.createSvgElement("path",{"class":"blocklyPath"},this.svgGroup_));this.svgPathLight_=Blockly.createSvgElement("path",{"class":"blocklyPathLight"},
 this.svgGroup_);this.svgPath_.tooltip=this.block_;Blockly.Tooltip.bindMouseEvents(this.svgPath_);this.updateMovable()};Blockly.BlockSvg.INLINE=-1;Blockly.BlockSvg.DISABLED_COLOUR="#808080";Blockly.BlockSvg.prototype.init=function(){var a=this.block_;this.updateColour();for(var b=0,c;c=a.inputList[b];b++)c.init();a.mutator&&a.mutator.createIcon()};
 Blockly.BlockSvg.prototype.updateMovable=function(){this.block_.isMovable()?(Blockly.addClass_(this.svgGroup_,"blocklyDraggable"),Blockly.removeClass_(this.svgGroup_,"blocklyUndraggable")):(Blockly.removeClass_(this.svgGroup_,"blocklyDraggable"),Blockly.addClass_(this.svgGroup_,"blocklyUndraggable"));this.updateColour()};
@@ -240,7 +240,7 @@ e=a.comment.getBubbleSize(),d.setAttribute("h",e.height),d.setAttribute("w",e.wi
 d.name);g||c.appendChild(k)}}e&&c.setAttribute("inline",a.inputsInline);a.isCollapsed()&&c.setAttribute("collapsed",!0);a.disabled&&c.setAttribute("disabled",!0);a.isDeletable()||c.setAttribute("deletable",!1);a.isMovable()||c.setAttribute("movable",!1);a.isEditable()||c.setAttribute("editable",!1);a.isUserVisible()||c.setAttribute("uservisible",!1);a.nextConnection&&!b&&(k=a.nextConnection.targetBlock())&&(k=goog.dom.createDom("next",null,Blockly.Xml.blockToDom_(k)),c.appendChild(k));return c};
 Blockly.Xml.domToText=function(a){return(new XMLSerializer).serializeToString(a).replace(RegExp(' xmlns="http://www.w3.org/1999/xhtml"',"g"),"")};Blockly.Xml.domToPrettyText=function(a){a=Blockly.Xml.domToText(a).split("<");for(var b="",c=1;c<a.length;c++){var d=a[c];"/"==d[0]&&(b=b.substring(2));a[c]=b+"<"+d;"/"!=d[0]&&"/>"!=d.slice(-2)&&(b+="  ")}a=a.join("\n");a=a.replace(/(<(\w+)\b[^>]*>[^\n]*)\n *<\/\2>/g,"$1</$2>");return a.replace(/^\n/,"")};
 Blockly.Xml.textToDom=function(a){a=(new DOMParser).parseFromString(a,"text/xml");if(!a||!a.firstChild||"xml"!=a.firstChild.nodeName.toLowerCase())throw"Blockly.Xml.textToDom did not obtain a valid XML tree.";return a.firstChild};
-Blockly.Xml.domToBlockSpace=function(a,b){for(var c=a.blockSpaceEditor.svgSize().width,d=0,e;e=b.childNodes[d];d++)if("block"==e.nodeName.toLowerCase()){var f=Blockly.Xml.domToBlock_(a,e),g=parseInt(e.getAttribute("x"),10);e=parseInt(e.getAttribute("y"),10);isNaN(g)||isNaN(e)||f.moveBy(Blockly.RTL?c-g:g,e)}a.events.dispatchEvent(Blockly.BlockSpace.EVENTS.EVENT_BLOCKS_IMPORTED)};
+Blockly.Xml.domToBlockSpace=function(a,b){for(var c=a.getMetrics(),c=c?c.viewWidth:0,d=0,e;e=b.childNodes[d];d++)if("block"==e.nodeName.toLowerCase()){var f=Blockly.Xml.domToBlock_(a,e),g=parseInt(e.getAttribute("x"),10);e=parseInt(e.getAttribute("y"),10);isNaN(g)||isNaN(e)||f.moveBy(Blockly.RTL?c-g:g,e)}a.events.dispatchEvent(Blockly.BlockSpace.EVENTS.EVENT_BLOCKS_IMPORTED)};
 Blockly.Xml.domToBlock_=function(a,b){var c=b.getAttribute("type"),d=b.getAttribute("id"),c=new Blockly.Block(a,c,d);c.initSvg();(d=b.getAttribute("inline"))&&c.setInputsInline("true"==d);(d=b.getAttribute("collapsed"))&&c.setCollapsed("true"==d);(d=b.getAttribute("disabled"))&&c.setDisabled("true"==d);(d=b.getAttribute("deletable"))&&c.setDeletable("true"==d);(d=b.getAttribute("movable"))&&c.setMovable("true"==d);(d=b.getAttribute("editable"))&&c.setEditable("true"==d);(d=b.getAttribute("uservisible"))&&
 c.setUserVisible("true"==d);for(var e=null,d=0,f;f=b.childNodes[d];d++)if(3!=f.nodeType||!f.data.match(/^\s*$/)){for(var e=null,g=0,h;h=f.childNodes[g];g++)3==h.nodeType&&h.data.match(/^\s*$/)||(e=h);g=f.getAttribute("name");switch(f.nodeName.toLowerCase()){case "mutation":c.domToMutation&&c.domToMutation(f);break;case "comment":c.setCommentText(f.textContent);(e=f.getAttribute("pinned"))&&c.comment.setVisible("true"==e);e=parseInt(f.getAttribute("w"),10);f=parseInt(f.getAttribute("h"),10);isNaN(e)||
 isNaN(f)||c.comment.setBubbleSize(e,f);break;case "title":(e=f.getAttribute("config"))&&c.setFieldConfig(g,e);c.setTitleValue(f.textContent,g);break;case "value":case "statement":case "functional_input":f=c.getInput(g);if(!f)throw"Input does not exist: "+g;if(e&&"block"==e.nodeName.toLowerCase())if(e=Blockly.Xml.domToBlock_(a,e),e.outputConnection)f.connection.connect(e.outputConnection);else if(e.previousConnection)f.connection.connect(e.previousConnection);else throw"Child block does not have output or previous statement.";
@@ -1240,8 +1240,8 @@ Blockly.selected.dispose(!0,!0))),86==a.keyCode&&Blockly.clipboard_&&Blockly.foc
 Blockly.BlockSpaceEditor.showContextMenu_=function(a){if(!Blockly.readOnly){var b=[];if(Blockly.collapse){for(var c=!1,d=!1,e=this.getTopBlocks(!1),f=0;f<e.length;f++)e[f].isCollapsed()?c=!0:d=!0;d={enabled:d};d.text=Blockly.Msg.COLLAPSE_ALL;d.callback=function(){for(var a=0;a<e.length;a++)e[a].setCollapsed(!0)};b.push(d);c={enabled:c};c.text=Blockly.Msg.EXPAND_ALL;c.callback=function(){for(var a=0;a<e.length;a++)e[a].setCollapsed(!1)};b.push(c)}c={enabled:!1};c.text=Blockly.Msg.HELP;c.callback=function(){};
 b.push(c);Blockly.ContextMenu.show(a,b)}};Blockly.BlockSpaceEditor.onContextMenu_=function(a){Blockly.BlockSpaceEditor.isTargetInput_(a)||a.preventDefault()};Blockly.BlockSpaceEditor.isTargetInput_=function(a){return"textarea"==a.target.type||"text"==a.target.type};Blockly.BlockSpaceEditor.prototype.hideChaff=function(a){Blockly.Tooltip.hide();Blockly.WidgetDiv.hide();this.toolbox&&!a&&this.toolbox.flyout_&&this.toolbox.flyout_.autoClose&&this.toolbox.clearSelection()};
 Blockly.BlockSpaceEditor.prototype.setCursorHand_=function(a){if(!Blockly.readOnly){var b="";a&&(b="url("+Blockly.assetUrl("media/handclosed.cur")+") 7 3, auto");Blockly.selected&&(Blockly.selected.getSvgRoot().style.cursor=b);this.svg_.style.cursor=b}};
-Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_=function(){var a,b,c,d,e=this.svgSize(),f=this.toolbox?this.toolbox.width:this.flyout_.width_;e.width-=f;c=e.width-Blockly.Scrollbar.scrollbarThickness;var g=e.height-Blockly.Scrollbar.scrollbarThickness;try{Blockly.isMsie()||Blockly.isTrident()?(this.blockSpace.getCanvas().style.display="inline",a={x:this.blockSpace.getCanvas().getBBox().x,y:this.blockSpace.getCanvas().getBBox().y,width:this.blockSpace.getCanvas().scrollWidth,height:this.blockSpace.getCanvas().scrollHeight}):
-a=this.blockSpace.getCanvas().getBBox()}catch(h){return null}this.blockSpace.scrollbar?(b=0,c=Math.max(a.x+a.width+c,1.5*c),d=0,a=Math.max(a.y+a.height+g,1.5*g)):(b=a.x,c=b+a.width,d=a.y,a=d+a.height);return{viewHeight:e.height,viewWidth:e.width,contentHeight:a-d,contentWidth:c-b,viewTop:-this.blockSpace.pageYOffset,viewLeft:-this.blockSpace.pageXOffset,contentTop:d,contentLeft:b,absoluteTop:0,absoluteLeft:Blockly.RTL?0:f}};
+Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_=function(){var a,b,c,d,e=this.svgSize(),f=0;if(this.toolbox||this.flyout_)f=this.toolbox?this.toolbox.width:this.flyout_.width_;e.width-=f;c=e.width-Blockly.Scrollbar.scrollbarThickness;var g=e.height-Blockly.Scrollbar.scrollbarThickness;try{Blockly.isMsie()||Blockly.isTrident()?(this.blockSpace.getCanvas().style.display="inline",a={x:this.blockSpace.getCanvas().getBBox().x,y:this.blockSpace.getCanvas().getBBox().y,width:this.blockSpace.getCanvas().scrollWidth,
+height:this.blockSpace.getCanvas().scrollHeight}):a=this.blockSpace.getCanvas().getBBox()}catch(h){return null}this.blockSpace.scrollbar?(b=0,c=Math.max(a.x+a.width+c,1.5*c),d=0,a=Math.max(a.y+a.height+g,1.5*g)):(b=a.x,c=b+a.width,d=a.y,a=d+a.height);return{viewHeight:e.height,viewWidth:e.width,contentHeight:a-d,contentWidth:c-b,viewTop:-this.blockSpace.pageYOffset,viewLeft:-this.blockSpace.pageXOffset,contentTop:d,contentLeft:b,absoluteTop:0,absoluteLeft:Blockly.RTL?0:f}};
 Blockly.BlockSpaceEditor.prototype.setBlockSpaceMetrics_=function(a){if(!this.blockSpace.scrollbar)throw"Attempt to set editor this scroll without scrollbars.";var b=this.getBlockSpaceMetrics_();goog.isNumber(a.x)&&(this.blockSpace.pageXOffset=-b.contentWidth*a.x-b.contentLeft);goog.isNumber(a.y)&&(this.blockSpace.pageYOffset=-b.contentHeight*a.y-b.contentTop);a="translate("+(this.blockSpace.pageXOffset+b.absoluteLeft)+","+(this.blockSpace.pageYOffset+b.absoluteTop)+")";this.blockSpace.getCanvas().setAttribute("transform",
 a);this.blockSpace.getBubbleCanvas().setAttribute("transform",a)};Blockly.BlockSpaceEditor.prototype.setBlockSpaceMetricsNoScroll_=function(){var a=this.getBlockSpaceMetrics_();a&&(a="translate("+a.absoluteLeft+","+a.absoluteTop+")",this.blockSpace.getCanvas().setAttribute("transform",a),this.blockSpace.getBubbleCanvas().setAttribute("transform",a))};
 Blockly.BlockSpaceEditor.prototype.addChangeListener=function(a){return Blockly.bindEvent_(this.blockSpace.getCanvas(),"blocklyBlockSpaceChange",this,a)};Blockly.removeChangeListener=function(a){Blockly.unbindEvent_(a)};goog.cssom={};goog.cssom.CssRuleType={STYLE:1,IMPORT:3,MEDIA:4,FONT_FACE:5,PAGE:6,NAMESPACE:7};goog.cssom.getAllCssText=function(a){return goog.cssom.getAllCss_(a||document.styleSheets,!0)};goog.cssom.getAllCssStyleRules=function(a){return goog.cssom.getAllCss_(a||document.styleSheets,!1)};goog.cssom.getCssRulesFromStyleSheet=function(a){var b=null;try{b=a.rules||a.cssRules}catch(c){if(15==c.code)throw c.styleSheet=a,c;}return b};
@@ -1560,6 +1560,7 @@ Blockly.JavaScript.parameters_set=Blockly.JavaScript.variables_set;
 
 goog.provide('Blockly.Msg.ms_my');
 goog.require('Blockly.Msg');
+Blockly.Msg.ACTUAL = "actual";
 Blockly.Msg.ADD = "Add";
 Blockly.Msg.ADD_COMMENT = "Tambah Komen";
 Blockly.Msg.ADD_PARAMETER = "Add Parameter";
@@ -1620,6 +1621,7 @@ Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_UNTIL = "ulang sehingga";
 Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_WHILE = "ulang apabila";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL = "Apabila nilai adalah palsu, lakukan beberapa penyata.";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_WHILE = "Apabila nilai adalah benar, lakukan beberapa penyata.";
+Blockly.Msg.DEFINE_FUNCTION_DEFINE = "Define";
 Blockly.Msg.DELETE_BLOCK = "Buang blok";
 Blockly.Msg.DELETE_PARAMETER = "Delete parameter...";
 Blockly.Msg.DELETE_PARAMETER_TITLE = "This will delete all '%1' parameter occurrences. Are you sure?";
@@ -1627,8 +1629,11 @@ Blockly.Msg.DELETE_X_BLOCKS = "Buang %1 Blok";
 Blockly.Msg.DISABLE_BLOCK = "Nyahaktif blok";
 Blockly.Msg.DUPLICATE_BLOCK = "Buat pendua (salin)";
 Blockly.Msg.ENABLE_BLOCK = "Membolehkan Blok";
+Blockly.Msg.EXAMPLE = "Example";
+Blockly.Msg.EXAMPLE_DESCRIPTION = "Defines an example with expected and actual behavior";
 Blockly.Msg.EXPAND_ALL = "Kembangkan Blok-blok";
 Blockly.Msg.EXPAND_BLOCK = "Kembangkan Blok";
+Blockly.Msg.EXPECTED = "expected";
 Blockly.Msg.EXTERNAL_INPUTS = "Input Luaran";
 Blockly.Msg.FUNCTION_CREATE = "Create a Function";
 Blockly.Msg.FUNCTION_EDIT = "edit";
@@ -1642,7 +1647,11 @@ Blockly.Msg.FUNCTIONAL_NAME_LABEL = "Nama";
 Blockly.Msg.FUNCTIONAL_TYPE_LABEL = "Choose type...";
 Blockly.Msg.FUNCTIONAL_DESCRIPTION_LABEL = "Description";
 Blockly.Msg.FUNCTIONAL_DOMAIN_LABEL = "Domain";
+Blockly.Msg.FUNCTIONAL_PROCEDURE_DEFINE_TOOLTIP = "Define a functional method";
 Blockly.Msg.FUNCTIONAL_RANGE_LABEL = "Range";
+Blockly.Msg.FUNCTIONAL_VARIABLE_CREATE = "Create a Variable";
+Blockly.Msg.FUNCTIONAL_VARIABLE_HEADER = "Variable";
+Blockly.Msg.FUNCTIONAL_VARIABLE_TYPE = "Type";
 Blockly.Msg.HELP = "Bantu";
 Blockly.Msg.INLINE_INPUTS = "Input Sebaris";
 Blockly.Msg.LISTS_CREATE_EMPTY_HELPURL = "http://en.wikipedia.org/wiki/Linked_list#Empty_lists";
@@ -1858,6 +1867,7 @@ Blockly.Msg.RENAME_PARAMETER = "Rename parameter...";
 Blockly.Msg.RENAME_PARAMETER_TITLE = "Rename all '%1' parameters to:";
 Blockly.Msg.RENAME_VARIABLE = "Namakan semula pembolehubah...";
 Blockly.Msg.RENAME_VARIABLE_TITLE = "Namakan semula semua pembolehubah '%1' kepada:";
+Blockly.Msg.SAVE_AND_CLOSE = "Save and Close";
 Blockly.Msg.TEXT_APPEND_APPENDTEXT = "tambah teks";
 Blockly.Msg.TEXT_APPEND_HELPURL = "https://code.google.com/p/blockly/wiki/Text#Text_modification";
 Blockly.Msg.TEXT_APPEND_TO = "ke";

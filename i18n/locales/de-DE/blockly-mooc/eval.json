@@ -6,6 +6,7 @@
   "overlayBlockTitle":"Overlay (oben, unten)",
   "placeImageBlockTitle":"Ort-Bild (X, y, Bild)",
   "rectangleBlockTitle":"Rechteck (Breite, Höhe, Stil, Farbe)",
+  "reinfFeedbackMsg":"You can press the \"Try again\" button to edit your drawing.",
   "rotateImageBlockTitle":"Drehen (Grad, Bild)",
   "scaleImageBlockTitle":"Skala (Faktor)",
   "squareBlockTitle":"Quadrat (Größe, Stil, Farbe)",

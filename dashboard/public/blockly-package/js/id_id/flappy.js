@@ -2626,7 +2626,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -12266,7 +12265,7 @@ exports.setGravityVeryHigh = function(d){return "atur gravitasi sangat tinggi"};
 
 exports.setGravityTooltip = function(d){return "atur tingkat gravitasi"};
 
-exports.setGround = function(d){return "tetapkan dasar"};
+exports.setGround = function(d){return "menetapkan dasar"};
 
 exports.setGroundRandom = function(d){return "atur permukaan secara acak"};
 

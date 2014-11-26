@@ -2626,7 +2626,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -14601,7 +14600,7 @@ exports.nextStageTrophies = function(d){return "Sveikinu! Tu užbaigei lygį "+v
 
 exports.numBlocksNeeded = function(d){return "Sveikinu! Tu išsprendei "+v(d,"puzzleNumber")+" užduotį. (Beje, galėjai panaudoti tik "+p(d,"numBlocks",0,"lt",{"vieną":"1 blokelį","other":n(d,"numBlocks")+" blokelių"})+".)"};
 
-exports.numLinesOfCodeWritten = function(d){return "Tu parašei  "+p(d,"numLines",0,"lt",{"one":"1 eilutę","other":n(d,"numLines")+" eilučių"})+" kodo!"};
+exports.numLinesOfCodeWritten = function(d){return "Tu sukūrei "+p(d,"numLines",0,"lt",{"one":"1 eilutę","other":n(d,"numLines")+" eilučių"})+" programą!"};
 
 exports.play = function(d){return "žaisti"};
 
@@ -14717,23 +14716,23 @@ exports.catLogic = function(d){return "Logika"};
 
 exports.colourTooltip = function(d){return "Pakeičia pieštuko spalvą."};
 
-exports.createACircle = function(d){return "create a circle"};
+exports.createACircle = function(d){return "sukurk apskritimą"};
 
-exports.createSnowflakeSquare = function(d){return "create a snowflake of type square"};
+exports.createSnowflakeSquare = function(d){return "sukurk snaigę iš kvadratų"};
 
 exports.createSnowflakeParallelogram = function(d){return "create a snowflake of type parallelogram"};
 
-exports.createSnowflakeLine = function(d){return "create a snowflake of type line"};
+exports.createSnowflakeLine = function(d){return "sukurk snaigę iš linijų"};
 
-exports.createSnowflakeSpiral = function(d){return "create a snowflake of type spiral"};
+exports.createSnowflakeSpiral = function(d){return "sukurk spiralės tipo snaigę"};
 
-exports.createSnowflakeFlower = function(d){return "create a snowflake of type flower"};
+exports.createSnowflakeFlower = function(d){return "sukurk gėlės tipo snaigę"};
 
-exports.createSnowflakeFractal = function(d){return "create a snowflake of type fractal"};
+exports.createSnowflakeFractal = function(d){return "sukurk fraktalinę snaigę"};
 
-exports.createSnowflakeRandom = function(d){return "create a snowflake of type random"};
+exports.createSnowflakeRandom = function(d){return "sukurk atsitiktinę snaigę"};
 
-exports.createASnowflakeBranch = function(d){return "create a snowflake branch"};
+exports.createASnowflakeBranch = function(d){return "sukurk snaigės šaką"};
 
 exports.degrees = function(d){return "laipsnių"};
 
