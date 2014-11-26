@@ -13,7 +13,7 @@ Live preview (once saved to dropbox) is at http://staging.code.org/curriculum/co
 [content]
 
 ## Lesson Overview
-Abstraction is one of the most important skills for a computer scientist to understand.  This activity will have your students analyzing stories for differences so that they can abstract them away. Those abstracted stories become templates for fun and crazy new ones. 
+Abstraction is one of the most important skills for a computer scientist to understand. It simplifies problems and prevents unnecessary repetition. A good coder uses abstraction just about every time she creates a program.   This activity will have your students analyze stories for differences so that they can abstract them away. Those abstracted stories become templates for fun and crazy new ones. 
 
 [summary]
 
