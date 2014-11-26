@@ -15,8 +15,14 @@
     "images": "[{\"filename\":\"lion.svg\",\"position\":[95,150]},{\"filename\":\"cow.svg\",\"position\":[185,150]}]",
     "scrollbars": "true",
     "free_play": "false",
-    "ideal": "13",
-    "slider_speed": "0.4"
+    "ideal": "14",
+    "slider_speed": "0.4",
+    "embed": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "impressive": "false"
   }
 }]]></config>
   <blocks>
@@ -67,39 +73,77 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_repeat">
-              <title name="TIMES">4</title>
-              <statement name="DO">
-                <block type="draw_move_by_constant">
-                  <title name="DIR">moveForward</title>
-                  <title name="VALUE">100</title>
-                  <next>
-                    <block type="draw_turn_by_constant">
-                      <title name="DIR">turnLeft</title>
-                      <title name="VALUE">90</title>
-                    </block>
-                  </next>
-                </block>
-              </statement>
+            <block type="draw_move_by_constant">
+              <title name="DIR">moveForward</title>
+              <title name="VALUE">100</title>
               <next>
-                <block type="draw_move_by_constant">
-                  <title name="DIR">moveForward</title>
-                  <title name="VALUE">100</title>
+                <block type="draw_turn_by_constant">
+                  <title name="DIR">turnLeft</title>
+                  <title name="VALUE">90</title>
                   <next>
-                    <block type="controls_repeat">
-                      <title name="TIMES">4</title>
-                      <statement name="DO">
-                        <block type="draw_move_by_constant">
-                          <title name="DIR">moveForward</title>
-                          <title name="VALUE">100</title>
+                    <block type="draw_move_by_constant">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">100</title>
+                      <next>
+                        <block type="draw_turn_by_constant">
+                          <title name="DIR">turnLeft</title>
+                          <title name="VALUE">90</title>
                           <next>
-                            <block type="draw_turn_by_constant">
-                              <title name="DIR">turnLeft</title>
-                              <title name="VALUE">90</title>
+                            <block type="draw_move_by_constant">
+                              <title name="DIR">moveForward</title>
+                              <title name="VALUE">100</title>
+                              <next>
+                                <block type="draw_turn_by_constant">
+                                  <title name="DIR">turnLeft</title>
+                                  <title name="VALUE">90</title>
+                                  <next>
+                                    <block type="draw_move_by_constant">
+                                      <title name="DIR">moveForward</title>
+                                      <title name="VALUE">100</title>
+                                      <next>
+                                        <block type="draw_turn_by_constant">
+                                          <title name="DIR">turnLeft</title>
+                                          <title name="VALUE">90</title>
+                                          <next>
+                                            <block type="draw_move_by_constant">
+                                              <title name="DIR">moveForward</title>
+                                              <title name="VALUE">200</title>
+                                              <next>
+                                                <block type="draw_turn_by_constant">
+                                                  <title name="DIR">turnLeft</title>
+                                                  <title name="VALUE">90</title>
+                                                  <next>
+                                                    <block type="draw_move_by_constant">
+                                                      <title name="DIR">moveForward</title>
+                                                      <title name="VALUE">100</title>
+                                                      <next>
+                                                        <block type="draw_turn_by_constant">
+                                                          <title name="DIR">turnLeft</title>
+                                                          <title name="VALUE">90</title>
+                                                          <next>
+                                                            <block type="draw_move_by_constant">
+                                                            <title name="DIR">moveForward</title>
+                                                            <title name="VALUE">100</title>
+                                                            </block>
+                                                          </next>
+                                                        </block>
+                                                      </next>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
                             </block>
                           </next>
                         </block>
-                      </statement>
+                      </next>
                     </block>
                   </next>
                 </block>

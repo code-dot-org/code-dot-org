@@ -9,7 +9,7 @@
     "instructions": "Awesome, can you draw each of these triangles with that new function? The first is 25 pixels long, the second is 50, and the third is 75. (If you're really clever, you could use a for loop for this!)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "ideal": "18",
+    "ideal": "16",
     "slider_speed": ".5",
     "disable_param_editing": "false",
     "disable_variable_editing": "false",

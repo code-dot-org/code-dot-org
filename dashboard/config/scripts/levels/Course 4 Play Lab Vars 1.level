@@ -16,12 +16,12 @@
     "edge_collisions": "true",
     "projectile_collisions": "false",
     "allow_sprites_outside_playspace": "false",
-    "sprites_hidden_to_start": "true",
+    "sprites_hidden_to_start": "false",
     "soft_buttons": [
       "downButton",
       "upButton"
     ],
-    "instructions": "You don't have to write any code for this one, just play the game! Who can collect the most flags? Use the down arrow to control the Dog. Press \"Run\" to start the race. Press \"Finish\" when you're done playing.",
+    "instructions": "You don't have to write any code, just play the game! Who can collect the most flags? \r\nUse the down arrow to control the Dog. Press \"Finish\" when you're done playing.",
     "predraw_blocks": "<xml><block type=\"studio_whenArrow\" movable=\"false\"><title name=\"VALUE\">right</title><next><block type=\"studio_moveDistance\" movable=\"false\" editable=\"false\"><title name=\"SPRITE\">0</title><title name=\"DIR\">2</title><title name=\"DISTANCE\">25</title></block></next></block><block type=\"studio_repeatForever\"><statement name=\"DO\"><block type=\"studio_moveDistance\"><title name=\"SPRITE\">1</title><title name=\"DIR\">1</title><title name=\"DISTANCE\">25</title><next><block type=\"studio_moveDistance\"><title name=\"SPRITE\">1</title><title name=\"DIR\">4</title><title name=\"DISTANCE\">25</title></block></next></block></statement></block></xml>",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
