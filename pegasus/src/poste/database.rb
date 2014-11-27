@@ -10,7 +10,6 @@ class Contact
   property :name              , String, length: 255
 
   has n, :deliveries, model: 'Poste::Delivery'
-  has n, :opens, model: 'Poste::Open', through: :deliveries, via: :opens
 
   property  :created_at       , DateTime # Automated by dm-timestampes
   property  :created_on       , Date # Automated by dm-timestampes
@@ -109,15 +108,47 @@ end
 
 module Poste
 
+  def self.db()
+    PEGASUS_DB
+  end
+
+  def self.logger()
+    @@logger ||= $log
+  end
+
+  def self.emails_dir(*paths)
+    pegasus_dir 'emails', *paths
+  end
+
+  def self.resolve_template(name)
+    template_extnames.each do |extname|
+      path = emails_dir "#{name}#{extname}"
+      next unless File.file? path
+
+      messages = db[:poste_messages]
+      unless messages.where(name:name).first
+        id = messages.insert(name:name)
+        raise StandardError, "Couldn't create poste_message row for '#{name}'" unless id > 0
+        logger.info "Registered new message template '#{name}' as #{id}"
+      end
+
+      return path
+    end
+    nil
+  end
+
+  def self.template_extnames()
+    ['.md','.haml','.html']
+  end
+
   # The "Delivery" object holds the state for a single unit of delivery, e.g. a message paired
   # with a recipient and whatever state needed to move the delivery through the system.
   class Delivery
     include DataMapper::Resource
     property :id            , Serial
     belongs_to :contact     , model: '::Contact'
-    belongs_to :message     #,
+    property :message_id    , Integer, required: true, index: true, min: 0
     property :params        , Json, required: true
-    has n, :opens           #,
     property :created_at    , DateTime # Automated by dm-timestampes
     property :created_ip    , IPAddress, required: true
     property :sent_at       , DateTime
@@ -154,51 +185,6 @@ module Poste
 
     def tracking_pixel()
       "http://#{CDO.poste_host}/o/#{encrypted_id}"
-    end
-
-  end
-
-  # An "Open" record is created each time a delivery's hidden (1x1 transparent) tracking pixel
-  # is requested.
-  class Open
-    include DataMapper::Resource
-    property :id            , Serial
-    belongs_to :delivery    #,
-    has 1, :contact         , through: :delivery, via: :contact, model: '::Contact'
-    has 1, :message         , through: :delivery, via: :message
-    property :created_at    , DateTime # Automated by dm-timestampes
-    property :created_ip    , IPAddress, required: true
-  end
-
-  # A "Message"
-  class Message
-    include DataMapper::Resource
-    property :id            , Serial
-    property :name          , String, unique_index: true, required: true
-    has n, :deliveries      #,
-    has n, :contacts        , through: :deliveries, via: :contact, model: '::Contact'
-    has n, :opens           , through: :deliveries, via: :opens
-
-    def self.template_dir(*paths)
-      pegasus_dir('emails',*paths)
-    end
-
-    def self.template_extnames()
-      ['.md','.haml','.html']
-    end
-
-    def self.import_templates()
-      $log.info "Looking for message templates in '#{template_dir}'"
-      Dir.foreach(template_dir) do |filename|
-        extname = File.extname(filename)
-        next unless template_extnames.include?(extname)
-
-        basename = File.basename(filename, extname)
-        unless Message.first(name: basename)
-          $log.info "Detected new message template '#{basename}'"
-          Message.create(name: basename)
-        end
-      end
     end
 
   end

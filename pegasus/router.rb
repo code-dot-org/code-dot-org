@@ -86,8 +86,6 @@ class Documents < Sinatra::Base
       end
     end
 
-    Poste::Message.import_templates
-
     vary_uris = ['/', '/learn', '/learn/beyond', '/congrats', '/language_test', 
                  '/teacher-dashboard', 
                  '/teacher-dashboard/landing',
