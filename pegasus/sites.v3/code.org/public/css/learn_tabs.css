@@ -1,7 +1,6 @@
 #learn-tabs {
   margin-top: 0px;
   width: 100%;
-  background-color: #cdd1d4;
   text-align: center;
 }
 #learn-tabs .content {
@@ -27,6 +26,8 @@
 }
 #learn-tabs .nav-tabs > li.active > a {
   background-color: white;
+  border: 1px solid #ddd;
+  border-bottom: none;
 }
 #learn-tabs .nav-tabs>li>a:link,
 #learn-tabs .nav-tabs>li>a:visited {
