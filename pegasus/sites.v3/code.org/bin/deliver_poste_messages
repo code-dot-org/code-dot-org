@@ -109,7 +109,7 @@ class Deliverer
   def send(delivery)
     recipient = POSTE_DB[:contacts].where(id:delivery[:contact_id]).first
     message = MESSAGE_TEMPLATES[delivery[:message_id]]
-    encrypted_id = Poste::Delivery.encrypt_id(delivery[:id])
+    encrypted_id = Poste.encrypt_id(delivery[:id])
     params = JSON.parse(delivery[:params])
 
     header, html, text = load_template(message[:name]).render(params.merge({
