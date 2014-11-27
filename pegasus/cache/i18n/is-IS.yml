@@ -968,3 +968,8 @@
   sphero_beyond_longdescription: Hvort sem þú ert foreldri eða fræðari þá er SPRK
     kennsluefnið skemmtilegt hraðnámskeið fyrir börn í forritun vélmenna og eflir
     þau um leið í raungreinum.
+  codeintl_name: "Write your first computer program"
+  codeintl_gradelevel: "Ages 4-104"
+  codeintl_platformtext: "Modern browsers, smartphones, tablets"
+  codeintl_shortdescription: "Learn to code with Mark Zuckerberg and Angry Birds!"
+  codeintl_longdescription: "Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages."
