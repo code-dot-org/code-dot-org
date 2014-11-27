@@ -21,7 +21,6 @@ end
 
 require src_dir 'database'
 require src_dir 'forms'
-require src_dir 'poste/api'
 require src_dir 'router'
 
 def http_vary_add_type(vary,type)
@@ -85,8 +84,6 @@ class Documents < Sinatra::Base
         config.ignore << 'Sinatra::NotFound'
       end
     end
-
-    Poste::Message.import_templates
 
     vary_uris = ['/', '/learn', '/learn/beyond', '/congrats', '/language_test', 
                  '/teacher-dashboard', 
