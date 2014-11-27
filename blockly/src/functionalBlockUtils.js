@@ -11,9 +11,16 @@ var colors = {
 module.exports.colors = colors;
 
 /**
- * Helper function to create the init section for a functional block
+ * Helper function to create the init section for a functional block.
+ * @param {Blockly.block} block The block to initialize.
+ * @param {string} title Localized block title to display.
+ * @param {string} type Block type which appears in xml.
+ * @param {Array} args Arguments to this block.
+ * @param {number=} wrapWidth Optional number of arguments after which
+ *     to wrap the next argument onto a new line when rendering the
+ *     block.
  */
-module.exports.initTitledFunctionalBlock = function (block, title, type, args) {
+module.exports.initTitledFunctionalBlock = function (block, title, type, args, wrapWidth) {
   block.setFunctional(true, {
     headerHeight: 30
   });
@@ -30,7 +37,8 @@ module.exports.initTitledFunctionalBlock = function (block, title, type, args) {
   for (var i = 0; i < args.length; i++) {
     var arg = args[i];
     var input = block.appendFunctionalInput(arg.name);
-    input.setInline(i > 0);
+    var wrapNextArg = wrapWidth && (i % wrapWidth) === 0;
+    input.setInline(i > 0 && !wrapNextArg);
     if (arg.type === 'none') {
       input.setHSV(0, 0, 0.99);
     } else {
