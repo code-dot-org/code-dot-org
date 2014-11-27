@@ -45,9 +45,3 @@
         .header_popup_link_glyph
           &#x25BC;
         .header_popup_link_text= t(:more)
-  - if @script.show_report_bug_link?
-    #betainfo
-      - if @script.feedback_url
-        = link_to t('landing.feedback'), @script.feedback_url
-        |
-      = link_to t('landing.report_bug'), @script_level.report_bug_url(request), target: '_blank'
