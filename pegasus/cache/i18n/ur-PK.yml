@@ -363,7 +363,9 @@
     tutorials, upgrade to a <a href="http://browsehappy.com/" target="_blank">modern
     Web browser.</a>
   mobile_devices: Tutorials for mobile devices
+  frozen_name: Code with Anna and Elsa
   codeorg_name: Apna pehla Computer ka Program likhiye
+  codeintl_name: Apna pehla Computer ka Program likhiye
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: An introduction to JavaScript
   khanes_name: An introduction to JavaScript
@@ -387,6 +389,7 @@
   tynkerapp_name: Tynker - on tablets
   hopscotch_name: 'Hopscotch: Code on your iPad'
   robomindnl_name: Program a virtual robot
+  flappy_name: Make a Flappy game
   bitsbox_name: Bitsbox - make a game
   makegameswithus_name: Build an iPhone game in your browser!
   touchdevelop_name: TouchDevelop
@@ -395,7 +398,9 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Rock, Paper, Scissors
+  frozen_gradelevel: Ages 8+
   codeorg_gradelevel: Ages 4-104
+  codeintl_gradelevel: Ages 4-104
   thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: Middle school +
   khanes_gradelevel: Middle school +
@@ -419,6 +424,7 @@
   tynkerapp_gradelevel: Ages 5-13
   hopscotch_gradelevel: Middle school +
   robomindnl_gradelevel: Ages 8-13
+  flappy_gradelevel: Ages 4-104
   bitsbox_gradelevel: Elementary
   makegameswithus_gradelevel: High school
   touchdevelop_gradelevel: High school
@@ -427,105 +433,45 @@
   thinkersmith2_gradelevel: Ages 8+
   kodableunplugged_gradelevel: Ages 8-13
   projguts_gradelevel: Ages 10-13
-  codeorg_platformtext: Learn the basic concepts of Computer Science with drag and
-    drop programming. This is a game-like, self-directed tutorial starring video lectures
-    by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops,
-    conditionals, and basic algorithms. Available in 34 languages.
-  thinkersmithspanish_platformtext: Mediante el uso de un "Vocabulario Robot" predefinido,
-    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
-    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
-    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
-    como la valiosa habilidad de depuraci&oacute;n.
-  khan_platformtext: Learn the basics of JavaScript programming while creating fun
-    drawings with your code. Do it on your own or with your class!
-  khanes_platformtext: Learn the basics of JavaScript programming while creating fun
-    drawings with your code. Do it on your own or with your class!
-  tynker_platformtext: A collection of 8 fun activities for children of all ages to
-    try programming. Solve a series of simple puzzles to help Pixel the puppy reach
-    home, and Biff the spaceman reach his moon base. Build the Space Zombies game
-    or create Math Art using our fun and easy visual approach to programming.  The
-    session can be teacher facilitated or self-paced.
-  scratch_platformtext: With Scratch, you can code your own interactive games, stories,
-    animations, and more. In this activity, you'll create an interactive holiday card
-    that you can share with friends and family.
-  lightbot_platformtext: Learn core programming logic, starting from super-basic programming,
-    for ages 4+, on iOS or Android (or Web browser) . Learn how to sequence commands,
-    identify patterns, use procedures, and utilize loops!
-  thinkersmith_platformtext: Using a pre-defined "Robot Vocabulary" students will
-    figure out how to guide each other to accomplish specific tasks without discussing
-    them first. This lesson teaches children the connection between symbols and actions,
-    as well as the invaluable skill of debugging. "My Robotic Friends" works best
-    as a group activity and includes a teacher workbook for classroom use.
+  frozen_platformtext: Modern browsers + tablets
+  codeorg_platformtext: Modern browsers, smartphones, tablets
+  codeintl_platformtext: Modern browsers, smartphones, tablets
+  thinkersmithspanish_platformtext: Unplugged
+  khan_platformtext: Modern Web browsers
+  khanes_platformtext: Modern Web browsers
+  tynker_platformtext: Modern web browsers
+  scratch_platformtext: ALL browsers
+  lightbot_platformtext: ALL browsers and iOS, Android, or Game Console
+  thinkersmith_platformtext: Unplugged
   condcards_platformtext: Unuplugged
-  lightbotintl_platformtext: Learn core programming logic, starting from super-basic
-    programming, for ages 4+, on iOS or Android (or Web browser) . Learn how to sequence
-    commands, identify patterns, use procedures, and utilize loops!
-  codehs_platformtext: Learn the basics of programming with Karel the Dog, a fun,
-    accessible and visual introduction to coding, where giving commands to a computer
-    is just like giving commands to a dog. This tutorial is great if led by a teacher,
-    but can also be done independently.
-  codecademy_platformtext: Codecademy is an interactive, student-guided introduction
-    to the basics of CS through JavaScript that's used by tens of millions of students
-    around the world. We've prepared a no-hassle Hour of Code experience with accompanying
-    quizzes, slides, and a completed project for students at the end.
-  codecombat_platformtext: Play as a Wizard using code (spells) to control your heroes,
-    navigate mazes, defeat ogres, trick enemies, and rescue allies! Learn JavaScript
-    in this HTML 5 web game for complete beginners.
+  lightbotintl_platformtext: iOS, Android (or web browser)
+  codehs_platformtext: Modern browsers
+  codecademy_platformtext: Modern web browsers. iOS, Android apps
+  codecombat_platformtext: Modern web browsers
   codemonkey_platformtext: Modern web browsers
-  codeavengers_platformtext: Build a 2 player 2D top-down game with JavaScript in
-    10 short tasks. Then continue learning some basics of programming (variables and
-    if statements) as you create a Quiz to share with friends. Along the way  earn
-    points and badges as you compete to reach the top of the class leaderboard.
-  processing_platformtext: An introduction to programming in the context of the visual
-    arts using the Processing programming language. Short video lessons introduce
-    coding exercises that lead to designing an interactive drawing program
-  robomind_platformtext: 'Students learn the basics of programming by controlling
-    their own virtual robot. The online course is fully self-contained with short
-    presentations, movies, quizzes and automatic guidance/hints to help with the programming
-    exercises. '
-  groklearning_platformtext: Choose from 3 activities designed to give you your first
-    experience programming. For example, use the programming language Python to build
-    a chatbot called "Eliza". Can she fool your friends into think she's a human not
-    a computer? This can be done in either a student-guided or teacher-facilitated
-    form and comes with all notes and solutions.
+  codeavengers_platformtext: Modern web browsers
+  processing_platformtext: Modern web browsers
+  robomind_platformtext: Modern web browsers, Mobile web
+  groklearning_platformtext: Modern web browsers
   quorum_platformtext: Modern web browsers. Screen-readers supported
   codespark_platformtext: iOS, Android (or web browser)
-  kodable_platformtext: Kodable is a self-guided iPad game that introduces kids 5+
-    to programming basics. Having a teacher or parent nearby is optimal, but not necessary.
+  kodable_platformtext: iPad
   tynkerapp_platformtext: iPad, Android tablets
-  hopscotch_platformtext: Student-guided tutorial on the iPad using the Hopscotch
-    programming language. Students will build games and apps for their iPad on their
-    iPad. Students can work individually or with friends (up to 3 per iPad).
-  robomindnl_platformtext: 'Students learn the basics of programming by controlling
-    their own virtual robot. The online course is fully self-contained with short
-    presentations, movies, quizzes and automatic guidance/hints to help with the programming
-    exercises. '
+  hopscotch_platformtext: iPad
+  robomindnl_platformtext: Modern web browsers, Mobile web
+  flappy_platformtext: Modern browsers, smartphones, tablets
   bitsbox_platformtext: Modern web browsers
-  makegameswithus_platformtext: Know some programming already? Learn to make an iPhone
-    game in an hour! We'll guide you through the process, to code, test, and play
-    your game entirely in the browser and then share it on Facebook for friends to
-    try! No prior iPhone development experience is required. You must understand what
-    variables, methods, and objects are.
-  touchdevelop_platformtext: Crazy drawings, flying monsters, swirling flowers...
-    create your apps on your device with TouchDevelop, a friendly mobile app creation
-    environment. Runs on iPhone, iPad, Android, Windows, Windows Phone, Linux, Mac.
-  appinventor_platformtext: Entertaining, quick video tutorials walk you through building
-    three simple apps for your Android phone or tablet. Designed for novices and experts
-    alike, this hour of code will get you ready to start building your own apps before
-    you know it. Imagine sharing your own app creations with your friends! These activities
-    are suitable for individuals and for teachers leading classes.
-  blockly_platformtext: Got PCs with slow (or non-existent) internet access? Download
-    the Blockly tutorials that were the precursor of the Code.org tutorials - a single
-    3MB ZIP file can be loaded onto any computer or used off a memory stick
-  thinkersmith2_platformtext: Students learn about representing and storing letters
-    in binary, as functions of on and off. At the end, the class gets to encode their
-    own initials to take home with them.
-  kodableunplugged_platformtext: 'Designed for use with plain paper, the fuzzFamily
-    Frenzy is an introduction to programming logic for kids 5 and up. A teacher should
-    explain the game, then students program a partner to complete a simple obstacle
-    course. '
+  makegameswithus_platformtext: Modern Web browsers
+  touchdevelop_platformtext: Modern browsers, smartphones, all devices
+  appinventor_platformtext: Modern browsers + Android
+  blockly_platformtext: Modern browsers only
+  thinkersmith2_platformtext: Unplugged
+  kodableunplugged_platformtext: Unplugged
   projguts_platformtext: Unplugged
+  frozen_shortdescription: Let's use code to join Anna and Elsa as they explore the
+    magic and beauty of ice.
   codeorg_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
+  codeintl_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Learn to draw in JavaScript
   khanes_shortdescription: Learn to draw in JavaScript
@@ -553,6 +499,7 @@
     own mobile games.
   hopscotch_shortdescription: Learn visual programming on an iPad
   robomindnl_shortdescription: Write code for a virtual robot
+  flappy_shortdescription: Make your own game - Flappy Bird, Shark, or Submarine
   bitsbox_shortdescription: Code a series of apps to play and share, using real Javascript.
   makegameswithus_shortdescription: Learn to make an iPhone game in an hour
   touchdevelop_shortdescription: Code mobile apps directly on your phone, tablet or
@@ -562,7 +509,14 @@
   thinkersmith2_shortdescription: Learn how computers use 1s and 0s to represent information
   kodableunplugged_shortdescription: A fun unplugged exercise
   projguts_shortdescription: Try modeling and simulation using rock/paper/scissors
+  frozen_longdescription: Let's use code to join Anna and Elsa as they explore the
+    magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
+    and make a winter wonderland that you can then share with your friends!
   codeorg_longdescription: Learn the basic concepts of Computer Science with drag
+    and drop programming. This is a game-like, self-directed tutorial starring video
+    lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn
+    repeat-loops, conditionals, and basic algorithms. Available in 34 languages.
+  codeintl_longdescription: Learn the basic concepts of Computer Science with drag
     and drop programming. This is a game-like, self-directed tutorial starring video
     lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn
     repeat-loops, conditionals, and basic algorithms. Available in 34 languages.
@@ -649,6 +603,9 @@
     their own virtual robot. The online course is fully self-contained with short
     presentations, movies, quizzes and automatic guidance/hints to help with the programming
     exercises. '
+  flappy_longdescription: Use drag-and-drop programming to make your own Flappy Bird
+    game, and customize it to look different (Flappy Shark, Flappy Santa, whatever).
+    Add the game to your phone in one click.
   bitsbox_longdescription: Customize your very own virtual tablet, then code a series
     of apps to play and share. Simple walkthroughs make it possible for even young
     kids to program real Javascript, and the more advanced you are the further you'll
@@ -1001,3 +958,8 @@
     program because we believe play is a powerful teacher. Whether you're an educator
     or a parent, SPRK lessons give kids a fun crash course in programming robots while
     sharpening their skills in math and science.
+  codeintl_name: "Write your first computer program"
+  codeintl_gradelevel: "Ages 4-104"
+  codeintl_platformtext: "Modern browsers, smartphones, tablets"
+  codeintl_shortdescription: "Learn to code with Mark Zuckerberg and Angry Birds!"
+  codeintl_longdescription: "Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages."

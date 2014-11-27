@@ -22,6 +22,9 @@
   "repeatForeverTooltip": "當app執行時不斷的重複執行這個積木裡的動作",
   "shareWebappTwitter": "快來看我自己用@codeorg寫出來的app!",
   "shareGame": "分享你的app:",
+  "stepIn": "Step in",
+  "stepOver": "Step over",
+  "stepOut": "Step out",
   "turnBlack": "變黑",
   "turnBlackTooltip": "把螢幕轉成黑色",
   "yes": "是"

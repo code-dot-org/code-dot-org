@@ -43,6 +43,7 @@
   "numBlocksNeeded": "Gratulálok! Megoldottad a {puzzleNumber}. feladványt. (Habár megoldható csupán {numBlocks, plural, one {1 blokk} other {# blokk}} használatával.)",
   "numLinesOfCodeWritten": "Éppen most írtál újabb {numLines, plural, one {1 sor} other {# sor}} kódot!",
   "play": "lejátszás",
+  "print": "Print",
   "puzzleTitle": "{puzzle_number}/{stage_total}. feladvány",
   "repeat": "ismételd",
   "resetProgram": "Visszaállítás",
@@ -80,5 +81,6 @@
   "tryHOC": "Próbáld ki a kódolás óráját",
   "signup": "Regisztrálj a bevezető képzésre",
   "hintHeader": "Egy tipp:",
-  "genericFeedback": "Nem sikerült célba érnem. Kérlek javítsd a hibát."
+  "genericFeedback": "Nem sikerült célba érnem. Kérlek javítsd a hibát.",
+  "defaultTwitterText": "Check out what I made"
 }

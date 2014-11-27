@@ -1,75 +1,77 @@
 "nn-NO":
   hello: Hallo, verda
-  select_language: Velg ditt språk
-  computer_science: Informatikk
-  computer_science_edweek: Computer Science Education Week
+  select_language: Vel språk
+  computer_science: Informasjonsvitskap
+  computer_science_edweek: Computer Science Education Week (CSEdWeek)
   csedweek_dates: 9.–15. desember 2013
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">Kodetimen</a> nærmer seg. Alle lærere og arrangører tilkalles!
-    <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">Planlegg din kodetime</a>'
+    font-weight:bold">Kodetimen</a> nærmar seg. Til alle lærarar og arrangørar<a href="http://hourofcode.com"
+    style="color: white; text-decoration:underline; font-weight:bold">Planlegg kodetimen
+    din</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
-    none; font-weight: 400">Er du en lærer i datateknikk? Se andre CSEdWeek-ressurser</a>'
-  n_have_learned_an_hoc: "<h1>#</h1><h3>har prøvd en</h3><h2>Time med Kode</h2>"
-  anybody_can_learn: Hvem som helst kan lære.
-  learn_now: Lær nå
-  petition_message: Alle skoleelever burde ha muligheten til å lære koding
-  petition_sign_message: 'Om du samtykker, signer med navnet ditt. Bli med # andre.'
-  name: Navn
+    none; font-weight: 400">Er du en lærar i IT? Sjå andre CSEdWeek-ressursar</a>'
+  n_have_learned_an_hoc: "<h1>#</h1><h3>har prøvd ein</h3><h2>Kodetime</h2>"
+  anybody_can_learn: Alle kan læra.
+  learn_now: Lær no
+  petition_message: Alle elevar på alle skular burde få høve til å lære koding
+  petition_sign_message: 'Om du er einig, skriv under med namnet ditt. Gå saman med
+    # andre.'
+  name: Namn
   email: E-post
   zipcode: Postnummer eller land
   submit: Send
-  twentyhours_heading: Prøv vår introduksjon til koding
-  twentyhours_text: Fullført din første kodetime? Lær mer grunnleggende koding og
+  twentyhours_heading: Prøv vår introduksjonskurs til koding
+  twentyhours_text: Fullført din første kodetime? Lær meir grunnleggjande koding og
     programmering i dette oppfølgingskurset.
-  hoc2014_heading: Bli med i <a href="http://hourofcode.com">Kodetimen</a><br/> 8.
+  hoc2014_heading: Bli med på <a href="http://hourofcode.com">Kodetimen</a><br/> 8.
     – 14. desember 2014<br/>
   hoc2014_students: Elevar
-  hoc2014_try: Prøv
-  hoc2014_teachers: lærere
+  hoc2014_try: Prøv sjølv
+  hoc2014_teachers: Lærarar
   hoc2014_host: Arranger
   hoc2014_everyone: Alle
   hoc2014_support: Støtt det
-  hoc2014_whatishoc: Hva er kodetimen?
-  twentyhours_trynow: Prøv nå
-  california_heading: Spør skolen din om å lære koding
-  california_text: Alle lærere kan tilby våre <a href='http://studio.code.org/'>gratiskurs</a>.
-    Alle barneskoler kan <a href='http://code.org/educate/k5'>lære bort koding</a>.
-    Spør videregående skoler om å <a href='http://code.org/educate/districts'> samarbeide
+  hoc2014_whatishoc: Kva er kodetimen?
+  twentyhours_trynow: Prøv no
+  california_heading: Spør skulen din om å undervise koding
+  california_text: Alle lærarar kan tilby våre <a href='http://studio.code.org/'>gratiskurs</a>.
+    Alle barneskuler kan <a href='http://code.org/educate/k5'>undervise koding</a>.
+    Spør videregåande skular om å <a href='http://code.org/educate/districts'> samarbeide
     med oss.
-  california_button: Lær mer
-  flappy_heading: En flaksende bursdag til Code.org
-  flappy_text: Code.org fylte akkurat 1 år. <br/><br/> Feir med oss ved å lage ditt
-    eget <b>Flappy</b> spill. Kode dine egne regler, og del det med venner!
-  view_english_site: Se engelsk side
-  non_english_tutorials: 'Opplæringsmoduler oversatt til flere språk:'
+  california_button: Lær meir
+  flappy_heading: Gratulerer med dagen til Code.org
+  flappy_text: Code.org fylte nettopp 1 år. <br/><br/> Feir med oss ved å lage ditt
+    eige <b>Flappy</b> -spel. Kode dine eigne reglar, og del det med vener!
+  view_english_site: Sjå nettstad på engelsk
+  non_english_tutorials: 'Leksjonar omsett til fleire språk:'
   write_your_first_program: Skriv ditt første dataprogram
-  learn_cs_concepts: Lær de grunnleggende begrepene i programmering og informatikk
-    med blokkbasert programmering. Dette er en spill-liknende guide med videoforedrag
-    av Bill Gates, Mark Zuckerberg, Angry Birds og Plants vs. Zombies. Lær om løkker,
-    hvis-så-setninger og grunnleggende algoritmer.
-  all_ages: Alle aldre
+  learn_cs_concepts: Lær dei grunnleggande begrepa i programmering og informatikk
+    med "dra og slepp"-programmering. Dette er en spel-liknande leksjon med videoforedrag
+    av Bill Gates, Mark Zuckerberg, Angry Birds og Plantar mot Zombiar. Lær om løkker,
+    hvis-så-setninger og grunnleggande algoritmer.
+  all_ages: Alle aldrar
   beginner: Nybegynner
-  n_participants: "# deltakere"
-  go: Gå
+  n_participants: "# deltakarar"
+  go: Set i gong
   thank_you_: Takk!
   congratulations: Gratulerer!
-  congratulations_on_completing_hoc: Gratulerer med å fullføre en kodetime.
-  get_a_certificate_of_achievement: Hent et diplom for din prestasjon
-  enter_valid_email: Vennligst skriv inn en gyldig e-postadresse
-  get_a_certificate_message: Vi sender deg et sertifikat og informasjon om hvordan
-    Lær <a href='/learn/beyond'> utover en time</a>
-  get_a_certificate_message_after: Klikk på sertifikatet for å laste ned eller å skrive
-    ut. Fortsett med våre <a href='http://studio.code.org'>andre kurs</a>, eller utforsk
-    mulighetene for å fortsette å <a href='/learn/beyond'>lære videre utenfor Kodetimen</a>.
-  thanks_for_submitting: Takk for at du sender inn!
-  if_you_enjoyed: Hvis du likte opplæringen, kan du be dine venner om å prøve det
-    også!  Vi vil at hele verden skal lære.
-  personalize_certificate: Tilpass sertifikatet
-  share_achievement: Del hva du har oppnådd
-  beyond_hour_message: Fortsett med våre <a href='http://studio.code.org'>andre kurs</a>,
-    eller utforsk mulighetene for å <a href='/learn/beyond'>lære videre utenfor Kodetimen</a>.
-  leaderboards_for_hoc: Resultatliste for kodetimen.
+  congratulations_on_completing_hoc: Gratulerer med å ha fullført Kodetimen.
+  get_a_certificate_of_achievement: Hent eit diplom for prestasjonen din
+  enter_valid_email: Vennligst skriv inn ei gyldig e-postadresse
+  get_a_certificate_message: Vi sender deg eit diplom og informasjon om korleis <a
+    href='/learn/beyond'> lære meir etter Kodetimen</a>
+  get_a_certificate_message_after: Klikk på diplomet for å laste det ned eller skrive
+    det ut. Fortsett med våre <a href='http://studio.code.org'>andre kurs</a>, eller
+    finn ut korleis du kan å <a href='/learn/beyond'>lære meir etter Kodetimen</a>.
+  thanks_for_submitting: Takk for at du sendte inn!
+  if_you_enjoyed: Hvis du likte opplæringa, kan du be venane dine om å prøve det også!  Vi
+    vil at heile verda skal lære.
+  personalize_certificate: Tilpass diplomet
+  share_achievement: Del det du har klart
+  beyond_hour_message: Hald fram med dei <a href='http://studio.code.org'>andre kursa
+    vååre</a>, eller utforsk muligheitene for å <a href='/learn/beyond'>lære meir
+    etter Kodetimen</a>.
+  leaderboards_for_hoc: Resultatliste for Kodetimen.
   support_url: http://support.code.org/
   country: Land
   city: By
@@ -123,58 +125,58 @@
   contact_form_topic_press: Media (Intervju eller taler)
   studiobar_title: Utforsk <a href='http://studio.code.org'>«Code Studio»</a>
   studiobar_elementary_title: Grunnleggende kurs
-  studiobar_elementary_body: Våre tre nye kurs for K&#8209;5
-  studiobar_hoc_title: Time med Kode
+  studiobar_elementary_body: Våre tre nye kurs for barnetrinnet
+  studiobar_hoc_title: Kodetimen
   studiobar_hoc_body: Lær å kode med Angry Birds
   studiobar_flappy_title: Flakse-kode
-  studiobar_flappy_body: Lag og del ditt eget Flappyspill
-  studiobar_teacher_title: Laget for lærere
-  studiobar_teacher_body: Introduser Code Studio i klasserommet
-  contact_form_topic_student: Jeg er en elev
-  contact_form_topic_parent: Jeg er en forelder
-  contact_form_topic_teacher: Jeg er en lærer
-  contact_form_topic_outside_us: Jeg er utenfor USA.
-  contact_form_topic_contribution: Veldedige bidrag
-  contact_form_topic_partner: Jeg ønsker å hjelpe
-  contact_form_topic_other: Andre
+  studiobar_flappy_body: Lag og del ditt eige Flappy-spel
+  studiobar_teacher_title: Laga for lærerar
+  studiobar_teacher_body: Innfør Kode Studio i klasserommet
+  contact_form_topic_student: Eg er ein elev
+  contact_form_topic_parent: Eg er ein forelder
+  contact_form_topic_teacher: Eg er ein lærar
+  contact_form_topic_outside_us: Eg er utanfor USA.
+  contact_form_topic_contribution: Frivillige bidrag
+  contact_form_topic_partner: Eg vil gjerne hjelpe til
+  contact_form_topic_other: Anna
   contact_form_label_topic: Enme
-  contact_form_label_email: Din e-postadresse
+  contact_form_label_email: E-postadressa di
   contact_form_label_message: Melding
   contact_form_label_submit: Send melding
-  class_submission_in_school: på skolen
-  class_submission_in_school_daily_programming_course: Daglig programmeringskurs
-  class_submission_in_school_ap_computer_science: Avansert koding
-  class_submission_in_school_full_university_cs_curriculum: Universitetspensum
+  class_submission_in_school: På skulen
+  class_submission_in_school_daily_programming_course: Dagleg programmeringskurs
+  class_submission_in_school_ap_computer_science: Avansert datavitskap
+  class_submission_in_school_full_university_cs_curriculum: Universitetspensum i datavitskap
   class_submission_in_school_robotics_club: Robotklubb
   class_submission_in_school_programming_integrated_in_other_classes: Programmering
-    integrert i andre fag (matte, naturfag, osv.)
-  class_submission_in_school_summer_school_cs_program: Sommerskolekoding
-  class_submission_in_school_exploring_computer_science: Utforsk koding
-  class_submission_in_school_other: Andre i skole
-  class_submission_out_of_school: Etter skolen
-  class_submission_out_of_school_summer_camp: Sommerleir
-  class_submission_out_of_school_afterschool_program: Etterskoleprogram
-  class_submission_out_of_school_all-day_workshop: Heldagsverksted (opptil 1 uke)
-  class_submission_out_of_school_multi-week_workshop: verksted i flere uker
-  class_submission_out_of_school_other: Andre etter skoletid
-  class_submission_online: På nett
-  class_submission_online_programming_class: Programmeringsklasse på internett
-  class_submission_online_teacher_resource: Lærerressurser på internett
-  class_submission_online_other: Andre på internett
-  class_submission_level_preschool: Førskole
-  class_submission_level_elementary: Grunnskole
-  class_submission_level_middle_school: Ungdomskole
-  class_submission_level_high_school: Videregående
-  class_submission_level_college: Høyskole
-  class_submission_level_vocational: Videregående (Yrkesfag)
+    integrert i andre fag (matematikk, naturfag osv.)
+  class_submission_in_school_summer_school_cs_program: Sommerskule med datavitskap
+  class_submission_in_school_exploring_computer_science: Utforsk datavitskap
+  class_submission_in_school_other: Anna i skulen
+  class_submission_out_of_school: Utanfor skulen
+  class_submission_out_of_school_summer_camp: Sommarleir
+  class_submission_out_of_school_afterschool_program: Skulefritidsordninga
+  class_submission_out_of_school_all-day_workshop: Heldagsaktivitetar (opptil ei veke)
+  class_submission_out_of_school_multi-week_workshop: Aktivitetar over fleire veker
+  class_submission_out_of_school_other: Anna utanfor skulen
+  class_submission_online: På nettet
+  class_submission_online_programming_class: Programmering på internett
+  class_submission_online_teacher_resource: Nettressursar for lærarar
+  class_submission_online_other: Andre nettressursar
+  class_submission_level_preschool: Barnehage
+  class_submission_level_elementary: Grunnskule
+  class_submission_level_middle_school: Ungdomskule
+  class_submission_level_high_school: Videregåande
+  class_submission_level_college: Høgskule
+  class_submission_level_vocational: Videregåande (Yrkesfag)
   class_submission_languages_other: Andre språk
   volunteer_engineer_submission_commitment_uncertain: Usikker
-  volunteer_engineer_submission_commitment_now_and_then: Nå og da
-  volunteer_engineer_submission_commitment_one_hr_per_week: 1 time per uke
-  volunteer_engineer_submission_commitment_three_hrs_per_week: 3 timer per uke
-  volunteer_engineer_submission_commitment_five_hrs_per_week: 5 timer per uke
-  volunteer_engineer_submission_commitment_more: Mer
-  volunteer_engineer_submission_location_flexibility_onsite: På en skole
+  volunteer_engineer_submission_commitment_now_and_then: No og då
+  volunteer_engineer_submission_commitment_one_hr_per_week: 1 time per veke
+  volunteer_engineer_submission_commitment_three_hrs_per_week: 3 timar per veke
+  volunteer_engineer_submission_commitment_five_hrs_per_week: 5 timar per veke
+  volunteer_engineer_submission_commitment_more: Meir
+  volunteer_engineer_submission_location_flexibility_onsite: På ein skule
   volunteer_engineer_submission_location_flexibility_remote: Ekstern veiledning (lærere
     eller elever)
   volunteer_engineer_submission_location_flexibility_curriculum: Villig til å bidra
@@ -255,12 +257,12 @@
   dashboard_sections_switch_section: 'Bytt avsnitt:'
   dashboard_students_add_student: Legg til elev
   dashboard_students_add_students: Leg til flere elever
-  dashboard_students_add_multiple: 'Skriv eller lim inn navnene på dine elever, en
+  dashboard_students_add_multiple: 'Skriv eller lim inn namna på elevane dine, ein
     per linje:'
-  dashboard_students_new_section: Du har nå opprettet et nytt avsnitt! Legg til elever
-    ved å bruke knappene <b>Legg til elev</b> og <b>Legg til flere studenter</b> ovenfor.
-  dashboard_students_placeholder_name: Elevnavn
-  dashboard_students_name: Navn
+  dashboard_students_new_section: Du har laga ei ny seksjon! Legg til elevar ved å
+    bruke knappane <b>Legg til elev</b> og <b>Legg til fleire elevar</b> ovenfor.
+  dashboard_students_placeholder_name: Elevnamn
+  dashboard_students_name: Namn
   dashboard_students_age: Alder
   dashboard_students_gender: Kjønn
   dashboard_students_male: Mann
@@ -311,7 +313,7 @@
   dashboard_student_worksheet: arbeidsark for elever
   dashboard_teacher_worksheet: arbeidsark for lærere
   dashboard_grade_k: K
-  dashboard_grade_other: Andre
+  dashboard_grade_other: Anna
   dashboard_login_word: Ord
   dashboard_login_picture: Bilde
   dashboard_login_none: E-post
@@ -335,11 +337,11 @@
   dashboard_faq: Ofte stilte spørsmål
   code_hoc_coming: Kodetimen nærmer seg – 8.–14. desember!
   code_sign_up: Registrer deg for å delta under CS Education Week
-  learn_more: Lær mer
+  learn_more: Lær meir
   hoc2014_try_new_tutorials: Prøv våre nye Kodetime-øvinger
-  hoc2014_try_new_tutorial: Try our new Hour of Code tutorial in beta
+  hoc2014_try_new_tutorial: Prøv den nye Kodetime veiledningen i beta
   hoc2014_try_scrat: Angry Birds, PvZ og Scrat
-  hoc2014_try_frozen: Artist with Anna and Elsa, from Frozen
+  hoc2014_try_frozen: Kunstner med Anna og Elsa fra Frost
   carousel_heading_international: Gjennomganger på norsk
   carousel_heading_domestic: "Øvinger tilgjengelig på engelsk"
   carousel_heading_beginners: "Øvinger for nybegynnere"
@@ -363,7 +365,9 @@
     til alle øvinger, oppgrader til en <a href="http://browsehappy.com/" target="_blank">moderne
     nettleser.</a>
   mobile_devices: "Øvinger for mobile enheter"
+  frozen_name: Code with Anna and Elsa
   codeorg_name: Skriv ditt første dataprogram
+  codeintl_name: Skriv ditt første dataprogram
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: En introduksjon til JavaScript
   khanes_name: En introduksjon til JavaScript
@@ -387,6 +391,7 @@
   tynkerapp_name: Tynker – på nettbrett
   hopscotch_name: 'Paradis: Kod på ipad''en din'
   robomindnl_name: Programmer ein virtuell robot
+  flappy_name: Make a Flappy game
   bitsbox_name: Blitsbox - lag et spill
   makegameswithus_name: Bygg eit iphone-spel i nettlesaren din!
   touchdevelop_name: TouchDevelop
@@ -395,39 +400,44 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Stein, saks papir
+  frozen_gradelevel: Alderen 8+
   codeorg_gradelevel: Alder 4-104
+  codeintl_gradelevel: Alder 4-104
   thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: Mellomtrinnet +
   khanes_gradelevel: Mellomtrinnet +
   tynker_gradelevel: Alderen 5 til 13
   scratch_gradelevel: Alderen 8+
-  lightbot_gradelevel: Alle aldre
-  thinkersmith_gradelevel: Alle aldre
+  lightbot_gradelevel: Alle aldrar
+  thinkersmith_gradelevel: Alle aldrar
   condcards_gradelevel: Alder 8–12
-  lightbotintl_gradelevel: Alle aldre
-  codehs_gradelevel: Videregående
-  codecademy_gradelevel: Videregående
+  lightbotintl_gradelevel: Alle aldrar
+  codehs_gradelevel: Videregåande
+  codecademy_gradelevel: Videregåande
   codecombat_gradelevel: Mellomtrinnet +
   codemonkey_gradelevel: Mellomtrinnet +
   codeavengers_gradelevel: Mellomtrinnet +
-  processing_gradelevel: Videregående
+  processing_gradelevel: Videregåande
   robomind_gradelevel: Alderen 8-13
   groklearning_gradelevel: Mellomtrinnet +
   quorum_gradelevel: Mellomtrinnet +
-  codespark_gradelevel: Grunnskole
-  kodable_gradelevel: Grunnskole
+  codespark_gradelevel: Grunnskule
+  kodable_gradelevel: Grunnskule
   tynkerapp_gradelevel: Alderen 5 til 13
   hopscotch_gradelevel: Mellomtrinnet +
   robomindnl_gradelevel: Alderen 8-13
-  bitsbox_gradelevel: Grunnskole
-  makegameswithus_gradelevel: Videregående
-  touchdevelop_gradelevel: Videregående
+  flappy_gradelevel: Alder 4-104
+  bitsbox_gradelevel: Grunnskule
+  makegameswithus_gradelevel: Videregåande
+  touchdevelop_gradelevel: Videregåande
   appinventor_gradelevel: Mellomtrinnet +
-  blockly_gradelevel: Alle aldre
+  blockly_gradelevel: Alle aldrar
   thinkersmith2_gradelevel: Alderen 8+
   kodableunplugged_gradelevel: Alderen 8-13
   projguts_gradelevel: Alder 10–13
+  frozen_platformtext: Modern browsers + tablets
   codeorg_platformtext: Moderne nettlesarar, smarttelefonar, tablet-pc'ar
+  codeintl_platformtext: Moderne nettlesarar, smarttelefonar, tablet-pc'ar
   thinkersmithspanish_platformtext: Frakobla
   khan_platformtext: Moderne nettlesere
   khanes_platformtext: Moderne nettlesere
@@ -454,6 +464,7 @@
     programming language. Students will build games and apps for their iPad on their
     iPad. Students can work individually or with friends (up to 3 per iPad).
   robomindnl_platformtext: Moderne nettlesere, mobilt nett
+  flappy_platformtext: Moderne nettlesarar, smarttelefonar, tablet-pc'ar
   bitsbox_platformtext: Moderne nettlesere
   makegameswithus_platformtext: Moderne nettlesere
   touchdevelop_platformtext: Moderne nettlesere, smarttelefoner, alle enheter
@@ -462,7 +473,10 @@
   thinkersmith2_platformtext: Frakobla
   kodableunplugged_platformtext: Frakobla
   projguts_platformtext: Frakobla
+  frozen_shortdescription: Let's use code to join Anna and Elsa as they explore the
+    magic and beauty of ice.
   codeorg_shortdescription: Lær å kode med Mark Zuckerberg og sinte fuglar!
+  codeintl_shortdescription: Lær å kode med Mark Zuckerberg og sinte fuglar!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Lær å teikne i JavaScript
   khanes_shortdescription: Lær å teikne i JavaScript
@@ -495,6 +509,7 @@
     egne mobilspill.
   hopscotch_shortdescription: Lær visuell programmering på ein ipad
   robomindnl_shortdescription: Skriv kode for ein virtuell robot
+  flappy_shortdescription: Make your own game - Flappy Bird, Shark, or Submarine
   bitsbox_shortdescription: Kod en rekke apper for å spille og dele, med ekte Javascript.
   makegameswithus_shortdescription: Lag et iPhone-spill! Lær ved å skrive kode for
     å lære monsteret ditt nye bevegelser!
@@ -506,7 +521,14 @@
     å representere informasjon
   kodableunplugged_shortdescription: En morsom frakoblet øvelse
   projguts_shortdescription: Prøv modellering og simulering ved å bruke stein/saks/papir
+  frozen_longdescription: Let's use code to join Anna and Elsa as they explore the
+    magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
+    and make a winter wonderland that you can then share with your friends!
   codeorg_longdescription: Lær de grunnleggende kodekonseptene med dra-og-slipp-programmering.
+    Dette er spill-lignende, selvstyrt øving med videoforelesninger av Bill Gates,
+    Mark Zuckerberg, Angry Birds og Plants vs. Zombies. Lær løkker og betingelser
+    og grunnleggende algoritmer. Tilgjengelig på 34 språk.
+  codeintl_longdescription: Lær de grunnleggende kodekonseptene med dra-og-slipp-programmering.
     Dette er spill-lignende, selvstyrt øving med videoforelesninger av Bill Gates,
     Mark Zuckerberg, Angry Birds og Plants vs. Zombies. Lær løkker og betingelser
     og grunnleggende algoritmer. Tilgjengelig på 34 språk.
@@ -593,6 +615,9 @@
     their own virtual robot. The online course is fully self-contained with short
     presentations, movies, quizzes and automatic guidance/hints to help with the programming
     exercises. '
+  flappy_longdescription: Use drag-and-drop programming to make your own Flappy Bird
+    game, and customize it to look different (Flappy Shark, Flappy Santa, whatever).
+    Add the game to your phone in one click.
   bitsbox_longdescription: Tilpass ditt eget virtuelle nettbrett, for deretter å kode
     en rekke apper for å spille og dele. Enkle gjennomganger gjør det enkelt for selv
     små barn å programmere skikkelig Javascript. Jo mer avansert du er, jo lenger
@@ -665,19 +690,19 @@
   khan_beyond_gradelevel: Mellomtrinnet +
   tynker_beyond_gradelevel: Alderen 5 til 13
   scratch_beyond_gradelevel: Alderen 8+
-  lightbot_beyond_gradelevel: Alle aldre
-  codecademy_beyond_gradelevel: Videregående
-  kodable_beyond_gradelevel: Grunnskole
-  scratchjr_beyond_gradelevel: Grunnskole
+  lightbot_beyond_gradelevel: Alle aldrar
+  codecademy_beyond_gradelevel: Videregåande
+  kodable_beyond_gradelevel: Grunnskule
+  scratchjr_beyond_gradelevel: Grunnskule
   hopscotch_beyond_gradelevel: Mellomtrinnet +
   pocketcode_beyond_gradelevel: Mellomtrinnet +
   groklearning_beyond_gradelevel: Mellomtrinnet +
-  hacketyhack_beyond_gradelevel: Videregående
+  hacketyhack_beyond_gradelevel: Videregåande
   robomind_beyond_gradelevel: Alderen 8-13
-  makegameswithus_beyond_gradelevel: Videregående
+  makegameswithus_beyond_gradelevel: Videregåande
   appinventor_beyond_gradelevel: Mellomtrinnet +
-  touchdevelop_beyond_gradelevel: Videregående
-  codehs_beyond_gradelevel: Videregående
+  touchdevelop_beyond_gradelevel: Videregåande
+  codehs_beyond_gradelevel: Videregåande
   udemy_beyond_gradelevel: Videregående +
   lynda_beyond_gradelevel: Videregående +
   edx_beyond_gradelevel: Universitet
@@ -695,7 +720,7 @@
   lego_beyond_gradelevel: Mellomtrinnet +
   finch_beyond_gradelevel: Alderen 8+
   arduino_beyond_gradelevel: Videregående +
-  processing_beyond_gradelevel: Videregående
+  processing_beyond_gradelevel: Videregåande
   alice_beyond_gradelevel: Mellomtrinnet +
   sphero_beyond_gradelevel: Alderen 8+
   codeorg_beyond_platformtext: Moderne nettlesere, nettbrett
@@ -945,3 +970,8 @@
     program because we believe play is a powerful teacher. Whether you're an educator
     or a parent, SPRK lessons give kids a fun crash course in programming robots while
     sharpening their skills in math and science.
+  codeintl_name: "Write your first computer program"
+  codeintl_gradelevel: "Ages 4-104"
+  codeintl_platformtext: "Modern browsers, smartphones, tablets"
+  codeintl_shortdescription: "Learn to code with Mark Zuckerberg and Angry Birds!"
+  codeintl_longdescription: "Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages."
