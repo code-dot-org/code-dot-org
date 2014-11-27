@@ -22,6 +22,9 @@
   "repeatForeverTooltip": "Udføre handlinger i denne blok gentagne gange mens app kører.",
   "shareWebappTwitter": "Tjek appen jeg lavede. Jeg skrev det selv med @codeorg",
   "shareGame": "Del din app:",
+  "stepIn": "Step in",
+  "stepOver": "Step over",
+  "stepOut": "Step out",
   "turnBlack": "vende sort",
   "turnBlackTooltip": "Sætter skærmen sort.",
   "yes": "Ja"

@@ -2394,9 +2394,12 @@ exports.displayFeedback = function(options) {
     $("#print_frame").remove(); // Remove the iframe when the print dialogue has been launched
   }
 
-  $("#print-button").click(function() {
-    createHiddenPrintWindow(options.feedbackImage);
-  });
+  var printButton = feedback.querySelector('#print-button');
+  if (printButton) {
+    dom.addClickTouchEvent(printButton, function() {
+      createHiddenPrintWindow(options.feedbackImage);
+    });
+  }
 
   feedbackDialog.show({
     backdrop: (options.app === 'flappy' ? 'static' : true)
@@ -2626,7 +2629,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -14372,8 +14374,8 @@ exports.generateDropletPalette = function (codeFunctions) {
           block: '__ < __',
           title: 'Compare two numbers'
         }, {
-          block: 'random(1, 100)',
-          title: 'Get a random number in a range'
+          block: 'random()',
+          title: 'Get a random number between 0 and 1'
         }, {
           block: 'round(__)',
           title: 'Round to the nearest integer'
@@ -14382,10 +14384,10 @@ exports.generateDropletPalette = function (codeFunctions) {
           title: 'Absolute value'
         }, {
           block: 'max(__, __)',
-          title: 'Absolute value'
+          title: 'Maximum value'
         }, {
           block: 'min(__, __)',
-          title: 'Absolute value'
+          title: 'Minimum value'
         }
       ]
     }, {
@@ -14451,7 +14453,7 @@ exports.generateDropletPalette = function (codeFunctions) {
 exports.generateDropletModeOptions = function (codeFunctions) {
   var modeOptions = {
     blockFunctions: [],
-    valueFunctions: [],
+    valueFunctions: ['random', 'round', 'abs', 'max', 'min'],
     eitherFunctions: [],
   };
 
@@ -14467,10 +14469,10 @@ exports.generateDropletModeOptions = function (codeFunctions) {
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
       if (codeFunctions[i].category === 'value') {
-        modeOptions.valueFunctions[i] = codeFunctions[i].func;
+        modeOptions.valueFunctions.push(codeFunctions[i].func);
       }
       else if (codeFunctions[i].category !== 'hidden') {
-        modeOptions.blockFunctions[i] = codeFunctions[i].func;
+        modeOptions.blockFunctions.push(codeFunctions[i].func);
       }
     }
   }
@@ -14612,7 +14614,7 @@ exports.score = function(d){return "score"};
 
 exports.showCodeHeader = function(d){return "Code weergeven"};
 
-exports.showBlocksHeader = function(d){return "Show Blocks"};
+exports.showBlocksHeader = function(d){return "Toon blokken"};
 
 exports.showGeneratedCode = function(d){return "Code weergeven"};
 
@@ -14650,7 +14652,7 @@ exports.typeHint = function(d){return "Merk op dat de haakjes en puntkomma's ver
 
 exports.workspaceHeader = function(d){return "Zet je blokken hier in elkaar:"};
 
-exports.workspaceHeaderJavaScript = function(d){return "Type your JavaScript code here"};
+exports.workspaceHeaderJavaScript = function(d){return "Typ hier uw JavaScript-code"};
 
 exports.infinity = function(d){return "Oneindig"};
 
@@ -14699,23 +14701,23 @@ exports.catLogic = function(d){return "Logica"};
 
 exports.colourTooltip = function(d){return "Verandert de kleur van het potlood."};
 
-exports.createACircle = function(d){return "create a circle"};
+exports.createACircle = function(d){return "maak een cirkel"};
 
-exports.createSnowflakeSquare = function(d){return "create a snowflake of type square"};
+exports.createSnowflakeSquare = function(d){return "maak een sneeuwvlok van het type vierkant"};
 
-exports.createSnowflakeParallelogram = function(d){return "create a snowflake of type parallelogram"};
+exports.createSnowflakeParallelogram = function(d){return "maak een sneeuwvlok van het type parallelogram"};
 
-exports.createSnowflakeLine = function(d){return "create a snowflake of type line"};
+exports.createSnowflakeLine = function(d){return "maak een sneeuwvlok van het type lijn"};
 
-exports.createSnowflakeSpiral = function(d){return "create a snowflake of type spiral"};
+exports.createSnowflakeSpiral = function(d){return "maak een sneeuwvlok van het type spiraal"};
 
-exports.createSnowflakeFlower = function(d){return "create a snowflake of type flower"};
+exports.createSnowflakeFlower = function(d){return "maak een sneeuwvlok van het type bloem"};
 
-exports.createSnowflakeFractal = function(d){return "create a snowflake of type fractal"};
+exports.createSnowflakeFractal = function(d){return "maak een sneeuwvlok van het type fractal"};
 
-exports.createSnowflakeRandom = function(d){return "create a snowflake of type random"};
+exports.createSnowflakeRandom = function(d){return "maak een willekeurig type sneeuwvlok"};
 
-exports.createASnowflakeBranch = function(d){return "create a snowflake branch"};
+exports.createASnowflakeBranch = function(d){return "maak een tak van sneeuwvlokken"};
 
 exports.degrees = function(d){return "graden"};
 
@@ -14755,7 +14757,7 @@ exports.drawUpperWave = function(d){return "teken een bovengolf"};
 
 exports.drawLowerWave = function(d){return "teken een benedengolf"};
 
-exports.drawStamp = function(d){return "draw stamp"};
+exports.drawStamp = function(d){return "teken een stempel"};
 
 exports.heightParameter = function(d){return "hoogte"};
 
@@ -14823,7 +14825,7 @@ exports.showMe = function(d){return "Laat zien"};
 
 exports.showTurtle = function(d){return "laat kunstenaar zien"};
 
-exports.sizeParameter = function(d){return "size"};
+exports.sizeParameter = function(d){return "grootte"};
 
 exports.step = function(d){return "stap"};
 

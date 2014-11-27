@@ -4,13 +4,6 @@ exports.randomFromArray = function (values) {
   return values[key];
 };
 
-// APIs needed only for droplet:
-
-exports.random = function (min, max)
-{
-    return Math.floor(Math.random()*(max-min+1)+min);
-};
-
 // APIs needed for droplet and/or blockly (must include blockId):
 
 exports.createHtmlBlock = function (blockId, elementId, html) {

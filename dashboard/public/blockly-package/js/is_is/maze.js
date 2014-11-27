@@ -2394,9 +2394,12 @@ exports.displayFeedback = function(options) {
     $("#print_frame").remove(); // Remove the iframe when the print dialogue has been launched
   }
 
-  $("#print-button").click(function() {
-    createHiddenPrintWindow(options.feedbackImage);
-  });
+  var printButton = feedback.querySelector('#print-button');
+  if (printButton) {
+    dom.addClickTouchEvent(printButton, function() {
+      createHiddenPrintWindow(options.feedbackImage);
+    });
+  }
 
   feedbackDialog.show({
     backdrop: (options.app === 'flappy' ? 'static' : true)
@@ -2626,7 +2629,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -16107,8 +16109,8 @@ exports.generateDropletPalette = function (codeFunctions) {
           block: '__ < __',
           title: 'Compare two numbers'
         }, {
-          block: 'random(1, 100)',
-          title: 'Get a random number in a range'
+          block: 'random()',
+          title: 'Get a random number between 0 and 1'
         }, {
           block: 'round(__)',
           title: 'Round to the nearest integer'
@@ -16117,10 +16119,10 @@ exports.generateDropletPalette = function (codeFunctions) {
           title: 'Absolute value'
         }, {
           block: 'max(__, __)',
-          title: 'Absolute value'
+          title: 'Maximum value'
         }, {
           block: 'min(__, __)',
-          title: 'Absolute value'
+          title: 'Minimum value'
         }
       ]
     }, {
@@ -16186,7 +16188,7 @@ exports.generateDropletPalette = function (codeFunctions) {
 exports.generateDropletModeOptions = function (codeFunctions) {
   var modeOptions = {
     blockFunctions: [],
-    valueFunctions: [],
+    valueFunctions: ['random', 'round', 'abs', 'max', 'min'],
     eitherFunctions: [],
   };
 
@@ -16202,10 +16204,10 @@ exports.generateDropletModeOptions = function (codeFunctions) {
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
       if (codeFunctions[i].category === 'value') {
-        modeOptions.valueFunctions[i] = codeFunctions[i].func;
+        modeOptions.valueFunctions.push(codeFunctions[i].func);
       }
       else if (codeFunctions[i].category !== 'hidden') {
-        modeOptions.blockFunctions[i] = codeFunctions[i].func;
+        modeOptions.blockFunctions.push(codeFunctions[i].func);
       }
     }
   }
@@ -16331,7 +16333,7 @@ exports.numLinesOfCodeWritten = function(d){return "Þú náðir að skrifa "+p(
 
 exports.play = function(d){return "spila"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Prenta"};
 
 exports.puzzleTitle = function(d){return "Þraut "+v(d,"puzzle_number")+" af "+v(d,"stage_total")};
 
@@ -16373,9 +16375,9 @@ exports.hintRequest = function(d){return "Sjá vísbendingu"};
 
 exports.backToPreviousLevel = function(d){return "Til baka í fyrri áfanga"};
 
-exports.saveToGallery = function(d){return "Vista í safn þitt"};
+exports.saveToGallery = function(d){return "Vista í gallerí"};
 
-exports.savedToGallery = function(d){return "Vistað í safn þitt!"};
+exports.savedToGallery = function(d){return "Vistað í galleríi!"};
 
 exports.shareFailure = function(d){return "Því miður getum við ekki deilt þessu forriti."};
 
@@ -16401,7 +16403,7 @@ exports.when = function(d){return "þegar"};
 
 exports.whenRun = function(d){return "þegar keyrt"};
 
-exports.tryHOC = function(d){return "Prófa Kóðun í klukkustund"};
+exports.tryHOC = function(d){return "Prófa Klukkustund kóðunar"};
 
 exports.signup = function(d){return "Skráning á inngangsnámskeiðið"};
 
@@ -16409,7 +16411,7 @@ exports.hintHeader = function(d){return "Vísbending:"};
 
 exports.genericFeedback = function(d){return "Athugaðu hvernig þetta fór og reyndu að laga forritið."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Skoðaðu það sem ég bjó til"};
 
 
 },{"messageformat":72}],60:[function(require,module,exports){

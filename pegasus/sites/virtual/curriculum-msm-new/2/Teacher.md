@@ -5,7 +5,7 @@ theme: none
 ---
 
 
-<%= partial('curriculum_header', :unplugged=>fales, :title=> 'Calc: Rectangles of Evaluation',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>45) %>
+<%= partial('curriculum_header', :unplugged=>fales, :title=> 'Calc: Evaluation Blocks',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>45) %>
 
 [content]
 

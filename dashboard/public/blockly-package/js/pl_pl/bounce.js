@@ -5102,9 +5102,12 @@ exports.displayFeedback = function(options) {
     $("#print_frame").remove(); // Remove the iframe when the print dialogue has been launched
   }
 
-  $("#print-button").click(function() {
-    createHiddenPrintWindow(options.feedbackImage);
-  });
+  var printButton = feedback.querySelector('#print-button');
+  if (printButton) {
+    dom.addClickTouchEvent(printButton, function() {
+      createHiddenPrintWindow(options.feedbackImage);
+    });
+  }
 
   feedbackDialog.show({
     backdrop: (options.app === 'flappy' ? 'static' : true)
@@ -5334,7 +5337,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -12017,8 +12019,8 @@ exports.generateDropletPalette = function (codeFunctions) {
           block: '__ < __',
           title: 'Compare two numbers'
         }, {
-          block: 'random(1, 100)',
-          title: 'Get a random number in a range'
+          block: 'random()',
+          title: 'Get a random number between 0 and 1'
         }, {
           block: 'round(__)',
           title: 'Round to the nearest integer'
@@ -12027,10 +12029,10 @@ exports.generateDropletPalette = function (codeFunctions) {
           title: 'Absolute value'
         }, {
           block: 'max(__, __)',
-          title: 'Absolute value'
+          title: 'Maximum value'
         }, {
           block: 'min(__, __)',
-          title: 'Absolute value'
+          title: 'Minimum value'
         }
       ]
     }, {
@@ -12096,7 +12098,7 @@ exports.generateDropletPalette = function (codeFunctions) {
 exports.generateDropletModeOptions = function (codeFunctions) {
   var modeOptions = {
     blockFunctions: [],
-    valueFunctions: [],
+    valueFunctions: ['random', 'round', 'abs', 'max', 'min'],
     eitherFunctions: [],
   };
 
@@ -12112,10 +12114,10 @@ exports.generateDropletModeOptions = function (codeFunctions) {
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
       if (codeFunctions[i].category === 'value') {
-        modeOptions.valueFunctions[i] = codeFunctions[i].func;
+        modeOptions.valueFunctions.push(codeFunctions[i].func);
       }
       else if (codeFunctions[i].category !== 'hidden') {
-        modeOptions.blockFunctions[i] = codeFunctions[i].func;
+        modeOptions.blockFunctions.push(codeFunctions[i].func);
       }
     }
   }
@@ -12438,11 +12440,11 @@ exports.catMath = function(d){return "Matematyka"};
 
 exports.catProcedures = function(d){return "Funkcje"};
 
-exports.catText = function(d){return "tekst"};
+exports.catText = function(d){return "Tekst"};
 
 exports.catVariables = function(d){return "Zmienne"};
 
-exports.codeTooltip = function(d){return "Zobacz wygenerowany kod JavaScript."};
+exports.codeTooltip = function(d){return "Zobacz wygenerowany kod w JavaScript."};
 
 exports.continue = function(d){return "Dalej"};
 
@@ -12450,21 +12452,21 @@ exports.dialogCancel = function(d){return "Anuluj"};
 
 exports.dialogOK = function(d){return "OK"};
 
-exports.directionNorthLetter = function(d){return "Północ"};
+exports.directionNorthLetter = function(d){return "N (Północ)"};
 
-exports.directionSouthLetter = function(d){return "Południe"};
+exports.directionSouthLetter = function(d){return "S (Południe)"};
 
-exports.directionEastLetter = function(d){return "Wschód"};
+exports.directionEastLetter = function(d){return "E (Wschód)"};
 
-exports.directionWestLetter = function(d){return "Zachód"};
+exports.directionWestLetter = function(d){return "W (Zachód)"};
 
 exports.end = function(d){return "koniec"};
 
-exports.emptyBlocksErrorMsg = function(d){return "Blok powtórz lub blok jeśli musi zawierać inne bloki w środku, by poprawnie działać. Upewnij się, czy wewnętrzny blok pasuje do zewnętrznego."};
+exports.emptyBlocksErrorMsg = function(d){return "Blok powtórz lub blok jeśli muszą zawierać inne bloki, by poprawnie działać. Upewnij się, czy wewnętrzny blok pasuje do zewnętrznego."};
 
-exports.emptyFunctionBlocksErrorMsg = function(d){return "Funkcja blokowania musi mieć inne bloki wewnątrz do pracy."};
+exports.emptyFunctionBlocksErrorMsg = function(d){return "Blok funkcji musi zawierać inne bloki, by działał."};
 
-exports.extraTopBlocks = function(d){return "Posiadasz niezałączone bloki. Czy chciałeś je załączyć do bloku \"po uruchomieniu\"?"};
+exports.extraTopBlocks = function(d){return "Masz niezałączone bloki. Czy chcesz je załączyć do bloku \"po uruchomieniu\"?"};
 
 exports.finalStage = function(d){return "Gratulacje! Ukończyłeś ostatni etap."};
 
@@ -12472,7 +12474,7 @@ exports.finalStageTrophies = function(d){return "Gratulacje! Ukończyłeś ostat
 
 exports.finish = function(d){return "Koniec"};
 
-exports.generatedCodeInfo = function(d){return "Nawet najlepsze uczelnie uczą kodowania opartego o bloki (np. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Ale bloki które zostały użyte, można również zobaczyć w JavaScript, jednym z najbardziej powszechnie stosowanym języku programowania na świecie:"};
+exports.generatedCodeInfo = function(d){return "Nawet najlepsze uczelnie uczą kodowania opartego o bloki (np. "+v(d,"berkeleyLink")+", "+v(d,"harvardLink")+"). Ale bloki, które użyłeś, można również znaleźć w JavaScript, w jednym z najpowszechniej stosowanym języku programowania na świecie:"};
 
 exports.hashError = function(d){return "Przepraszamy, '%1' nie odpowiada żadnemu zapisanemu programowi."};
 
@@ -12480,7 +12482,7 @@ exports.help = function(d){return "Pomoc"};
 
 exports.hintTitle = function(d){return "Podpowiedź:"};
 
-exports.jump = function(d){return "skacz"};
+exports.jump = function(d){return "skocz"};
 
 exports.levelIncompleteError = function(d){return "Używasz wszystkich niezbędnych rodzajów bloków, ale w niewłaściwy sposób."};
 
@@ -12494,17 +12496,17 @@ exports.nextLevel = function(d){return "Gratulacje! Rozwiązałeś Łamigłówk�
 
 exports.nextLevelTrophies = function(d){return "Gratulacje! Rozwiązałeś Łamigłówkę nr "+v(d,"puzzleNumber")+" i wygrałeś "+p(d,"numTrophies",0,"pl",{"one":"trofeum","other":n(d,"numTrophies")+" trofea"})+"."};
 
-exports.nextStage = function(d){return "Gratulacje! Ukonczyłeś etap "+v(d,"stageName")+"."};
+exports.nextStage = function(d){return "Gratulacje! Ukończyłeś etap "+v(d,"stageName")+"."};
 
-exports.nextStageTrophies = function(d){return "Gratulacje! Ukończyłeś etap "+v(d,"stageName")+" i wygrałeś "+p(d,"numTrophies",0,"pl",{"one":"a trophy","other":n(d,"numTrophies")+" trophies"})+"."};
+exports.nextStageTrophies = function(d){return "Gratulacje! Ukończyłeś etap "+v(d,"stageName")+" i wygrałeś "+p(d,"numTrophies",0,"pl",{"one":"trofeum","other":n(d,"numTrophies")+" trofea"})+"."};
 
-exports.numBlocksNeeded = function(d){return "Gratulacje! Rozwiązałeś Łamigłówkę nr "+v(d,"puzzleNumber")+". (Jednakże, mogłeś użyć jedynie "+p(d,"numBlocks",0,"pl",{"one":"1 blok","other":n(d,"numBlocks")+" bloków"})+")"};
+exports.numBlocksNeeded = function(d){return "Gratulacje! Rozwiązałeś Łamigłówkę nr "+v(d,"puzzleNumber")+". (Jednakże, mogłeś użyć jedynie "+p(d,"numBlocks",0,"pl",{"one":"blok","other":n(d,"numBlocks")+" bloki"})+")"};
 
-exports.numLinesOfCodeWritten = function(d){return "Właśnie napisałeś "+p(d,"numLines",0,"pl",{"one":"1 linię","other":n(d,"numLines")+" linii"})+" kodu!"};
+exports.numLinesOfCodeWritten = function(d){return "Właśnie napisałeś "+p(d,"numLines",0,"pl",{"one":"linię","other":n(d,"numLines")+" linii"})+" kodu!"};
 
-exports.play = function(d){return "Zagraj"};
+exports.play = function(d){return "zagraj"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Drukuj"};
 
 exports.puzzleTitle = function(d){return "Łamigłówka "+v(d,"puzzle_number")+" z "+v(d,"stage_total")};
 
@@ -12514,43 +12516,43 @@ exports.resetProgram = function(d){return "Zresetuj"};
 
 exports.runProgram = function(d){return "Uruchom"};
 
-exports.runTooltip = function(d){return "Uruchom program zdefiniowany poprzez bloki w miejscu roboczym."};
+exports.runTooltip = function(d){return "Uruchom program zdefiniowany za pomocą bloków w miejscu roboczym."};
 
 exports.score = function(d){return "wynik"};
 
-exports.showCodeHeader = function(d){return "Pokaż kod"};
+exports.showCodeHeader = function(d){return "Pokaż Kod"};
 
 exports.showBlocksHeader = function(d){return "Pokaż Bloki"};
 
 exports.showGeneratedCode = function(d){return "Pokaż kod"};
 
-exports.subtitle = function(d){return "graficzne środowisko programistyczne"};
+exports.subtitle = function(d){return "środowisko wizualnego programowania"};
 
-exports.textVariable = function(d){return "Tekst"};
+exports.textVariable = function(d){return "tekst"};
 
-exports.tooFewBlocksMsg = function(d){return "Używasz wszystkich wymaganych bloków, ale spróbuj użyć ich więcej, aby ukończyć łamigłówkę."};
+exports.tooFewBlocksMsg = function(d){return "Używasz wszystkich wymaganych rodzajów bloków, ale spróbuj użyć ich więcej, aby ukończyć łamigłówkę."};
 
 exports.tooManyBlocksMsg = function(d){return "Ta łamigłówka może być rozwiązana przy pomocy bloków <x id='START_SPAN'/><x id='END_SPAN'/>."};
 
 exports.tooMuchWork = function(d){return "Spowodowałeś, że miałem dużo pracy. Czy możesz zmniejszyć liczbę powtórzeń?"};
 
-exports.toolboxHeader = function(d){return "bloki"};
+exports.toolboxHeader = function(d){return "Bloki"};
 
-exports.openWorkspace = function(d){return "Jak to działa"};
+exports.openWorkspace = function(d){return "Jak to Działa"};
 
-exports.totalNumLinesOfCodeWritten = function(d){return "Najlepszy zanotowany dotąd wynik: "+p(d,"numLines",0,"pl",{"one":"1 linia","other":n(d,"numLines")+" linii"})+" kodu."};
+exports.totalNumLinesOfCodeWritten = function(d){return "Sumaryczny wynik: "+p(d,"numLines",0,"pl",{"one":"1 linia","other":n(d,"numLines")+" linii"})+" kodu."};
 
 exports.tryAgain = function(d){return "Spróbuj ponownie"};
 
-exports.hintRequest = function(d){return "Zobacz podpowiedź"};
+exports.hintRequest = function(d){return "Zobacz wskazówkę"};
 
 exports.backToPreviousLevel = function(d){return "Wróć do poprzedniego poziomu"};
 
-exports.saveToGallery = function(d){return "Zapisz do swojej galerii"};
+exports.saveToGallery = function(d){return "Zapisz w galerii"};
 
-exports.savedToGallery = function(d){return "Zapisane w twojej galerii!"};
+exports.savedToGallery = function(d){return "Zapisane w galerii!"};
 
-exports.shareFailure = function(d){return "Przepraszamy, nie możemy udostępnić tego programu."};
+exports.shareFailure = function(d){return "Przepraszamy, ale nie możemy udostępnić tego programu."};
 
 exports.typeFuncs = function(d){return "Dostępne funkcje:%1"};
 
@@ -12558,7 +12560,7 @@ exports.typeHint = function(d){return "Zauważ, że nawiasy i średniki są wyma
 
 exports.workspaceHeader = function(d){return "Połącz swoje bloki tutaj: "};
 
-exports.workspaceHeaderJavaScript = function(d){return "Wpisz swój kod JavaScript tutaj"};
+exports.workspaceHeaderJavaScript = function(d){return "Wpisz tutaj swój kod w JavaScript"};
 
 exports.infinity = function(d){return "Nieskończoność"};
 
@@ -12570,19 +12572,19 @@ exports.wantToLearn = function(d){return "Czy chcesz nauczyć się kodowania (pr
 
 exports.watchVideo = function(d){return "Obejrzyj wideo"};
 
-exports.when = function(d){return "Kiedy"};
+exports.when = function(d){return "kiedy"};
 
 exports.whenRun = function(d){return "po uruchomieniu"};
 
-exports.tryHOC = function(d){return "Weź udział w Godzinie kodowania (the Hour Code)"};
+exports.tryHOC = function(d){return "Weź udział w Godzinie Kodowania (the Hour of Code)"};
 
 exports.signup = function(d){return "Zapisz się na kurs wprowadzający"};
 
 exports.hintHeader = function(d){return "Oto wskazówka:"};
 
-exports.genericFeedback = function(d){return "Zobacz jak skończyłeś, i spróbuj naprawić swój program."};
+exports.genericFeedback = function(d){return "Zobacz jak zakończyłeś i spróbuj naprawić swój program."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Sprawdź, co zrobiłem"};
 
 
 },{"messageformat":53}],42:[function(require,module,exports){

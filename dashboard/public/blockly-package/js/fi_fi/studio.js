@@ -6485,9 +6485,12 @@ exports.displayFeedback = function(options) {
     $("#print_frame").remove(); // Remove the iframe when the print dialogue has been launched
   }
 
-  $("#print-button").click(function() {
-    createHiddenPrintWindow(options.feedbackImage);
-  });
+  var printButton = feedback.querySelector('#print-button');
+  if (printButton) {
+    dom.addClickTouchEvent(printButton, function() {
+      createHiddenPrintWindow(options.feedbackImage);
+    });
+  }
 
   feedbackDialog.show({
     backdrop: (options.app === 'flappy' ? 'static' : true)
@@ -6717,7 +6720,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -7283,9 +7285,16 @@ var colors = {
 module.exports.colors = colors;
 
 /**
- * Helper function to create the init section for a functional block
+ * Helper function to create the init section for a functional block.
+ * @param {Blockly.block} block The block to initialize.
+ * @param {string} title Localized block title to display.
+ * @param {string} type Block type which appears in xml.
+ * @param {Array} args Arguments to this block.
+ * @param {number=} wrapWidth Optional number of arguments after which
+ *     to wrap the next argument onto a new line when rendering the
+ *     block.
  */
-module.exports.initTitledFunctionalBlock = function (block, title, type, args) {
+module.exports.initTitledFunctionalBlock = function (block, title, type, args, wrapWidth) {
   block.setFunctional(true, {
     headerHeight: 30
   });
@@ -7302,7 +7311,8 @@ module.exports.initTitledFunctionalBlock = function (block, title, type, args) {
   for (var i = 0; i < args.length; i++) {
     var arg = args[i];
     var input = block.appendFunctionalInput(arg.name);
-    input.setInline(i > 0);
+    var wrapNextArg = wrapWidth && (i % wrapWidth) === 0;
+    input.setInline(i > 0 && !wrapNextArg);
     if (arg.type === 'none') {
       input.setHSV(0, 0, 0.99);
     } else {
@@ -12763,6 +12773,10 @@ exports.install = function(blockly, generator, gensym) {
   installBoolean(blockly, generator, gensym);
   installMathNumber(blockly, generator, gensym);
   installString(blockly, generator, gensym);
+  installCond(blockly, generator, 1);
+  installCond(blockly, generator, 2);
+  installCond(blockly, generator, 3);
+  installCond(blockly, generator, 4);
 };
 
 function installPlus(blockly, generator, gensym) {
@@ -13032,6 +13046,57 @@ function installString(blockly, generator) {
 
   generator.functional_string = function() {
     return blockly.JavaScript.quote_(this.getTitleValue('VAL'));
+  };
+}
+
+/**
+ * Implements the cond block. numPairs represents the number of
+ * condition-value pairs before the default value.
+ */
+function installCond(blockly, generator, numPairs) {
+  var blockName = 'functional_cond_' + numPairs;
+  blockly.Blocks[blockName] = {
+    helpUrl: '',
+    init: function() {
+      var args = [];
+      for (var i = 0; i < numPairs; i++) {
+        args.push({name: 'COND' + i, type: 'boolean', default: 'false'});
+        args.push({name: 'VALUE' + i, type: 'none', default: ''});
+      }
+      args.push({name: 'DEFAULT', type: 'none', default: ''});
+      var blockTitle = 'cond';
+      var wrapWidth = 2;
+      initTitledFunctionalBlock(this, blockTitle, undefined, args, wrapWidth);
+    }
+  };
+
+  /**
+   * // generates code like:
+   * function() {
+   *   if (cond1) { return value1; }
+   *   else if (cond2) {return value2; }
+   *   ...
+   *   else { return default; }
+   * }()
+   */
+  generator[blockName] = function() {
+    var cond, value, defaultValue;
+    var code = 'function() {\n  ';
+    for (var i = 0; i < numPairs; i++) {
+      if (i > 0) {
+        code += 'else ';
+      }
+      cond = Blockly.JavaScript.statementToCode(this, 'COND' + i, false) ||
+          false;
+      value = Blockly.JavaScript.statementToCode(this, 'VALUE' + i, false) ||
+          '';
+      code += 'if (' + cond + ') { return ' + value + '; }\n  ';
+    }
+    defaultValue = Blockly.JavaScript.statementToCode(this, 'DEFAULT', false) ||
+        '';
+    code += 'else { return ' + defaultValue + '; }\n';
+    code += '}()';
+    return code;
   };
 }
 
@@ -15064,6 +15129,23 @@ exports.install = function(blockly, blockInstallOptions) {
   //
   // Install functional start blocks
   //
+
+  blockly.Blocks.functional_start_setValue = {
+    init: function() {
+      var blockName = 'start (value)';
+      var blockType = 'none';
+      var blockArgs = [{name: 'VALUE', type: 'Number'}];
+      initTitledFunctionalBlock(this, blockName, blockType, blockArgs);
+    }
+  };
+
+  generator.functional_start_setValue = function() {
+    // Adapted from Blockly.JavaScript.variables_set.
+    var argument0 = Blockly.JavaScript.statementToCode(this, 'VALUE',
+        Blockly.JavaScript.ORDER_ASSIGNMENT) || '0';
+    var varName = Blockly.JavaScript.translateVarName('startValue');
+    return varName + ' = ' + argument0 + ';\n';
+  };
 
   installFunctionalApiCallBlock(blockly, generator, {
     blockName: 'functional_start_dummyOnMove',
@@ -18551,6 +18633,7 @@ Studio.execute = function() {
   var handlers = [];
   if (BlocklyApps.usingBlockly) {
     registerHandlers(handlers, 'when_run', 'whenGameStarts');
+    registerHandlers(handlers, 'functional_start_setValue', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackground', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setSpeeds', 'whenGameStarts');
     registerHandlers(handlers, 'functional_start_setBackgroundAndSpeeds',
@@ -18759,7 +18842,7 @@ function spriteTotalFrames (index) {
 }
 
 var updateSpeechBubblePath = function (element) {
-  var height = element.getAttribute('height');
+  var height = +element.getAttribute('height');
   var onTop = 'true' === element.getAttribute('onTop');
   var onRight = 'true' === element.getAttribute('onRight');
   element.setAttribute('d',
@@ -20232,8 +20315,8 @@ exports.generateDropletPalette = function (codeFunctions) {
           block: '__ < __',
           title: 'Compare two numbers'
         }, {
-          block: 'random(1, 100)',
-          title: 'Get a random number in a range'
+          block: 'random()',
+          title: 'Get a random number between 0 and 1'
         }, {
           block: 'round(__)',
           title: 'Round to the nearest integer'
@@ -20242,10 +20325,10 @@ exports.generateDropletPalette = function (codeFunctions) {
           title: 'Absolute value'
         }, {
           block: 'max(__, __)',
-          title: 'Absolute value'
+          title: 'Maximum value'
         }, {
           block: 'min(__, __)',
-          title: 'Absolute value'
+          title: 'Minimum value'
         }
       ]
     }, {
@@ -20311,7 +20394,7 @@ exports.generateDropletPalette = function (codeFunctions) {
 exports.generateDropletModeOptions = function (codeFunctions) {
   var modeOptions = {
     blockFunctions: [],
-    valueFunctions: [],
+    valueFunctions: ['random', 'round', 'abs', 'max', 'min'],
     eitherFunctions: [],
   };
 
@@ -20327,10 +20410,10 @@ exports.generateDropletModeOptions = function (codeFunctions) {
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
       if (codeFunctions[i].category === 'value') {
-        modeOptions.valueFunctions[i] = codeFunctions[i].func;
+        modeOptions.valueFunctions.push(codeFunctions[i].func);
       }
       else if (codeFunctions[i].category !== 'hidden') {
-        modeOptions.blockFunctions[i] = codeFunctions[i].func;
+        modeOptions.blockFunctions.push(codeFunctions[i].func);
       }
     }
   }
@@ -20583,7 +20666,7 @@ exports.catText = function(d){return "teksti"};
 
 exports.catVariables = function(d){return "muuttujat"};
 
-exports.changeScoreTooltip = function(d){return "LIsää tai poista piste pistemäärästä."};
+exports.changeScoreTooltip = function(d){return "Lisää tai poista piste pistemäärästä."};
 
 exports.changeScoreTooltipK1 = function(d){return "Lisää piste pistemäärään."};
 
@@ -20605,21 +20688,21 @@ exports.helloWorld = function(d){return "Hei maailma!"};
 
 exports.incrementPlayerScore = function(d){return "lisää piste"};
 
-exports.makeProjectileDisappear = function(d){return "kadota"};
+exports.makeProjectileDisappear = function(d){return "katoamaan"};
 
-exports.makeProjectileBounce = function(d){return "hyppää"};
+exports.makeProjectileBounce = function(d){return "kimpoamaan"};
 
-exports.makeProjectileBlueFireball = function(d){return "tee sininen tulipallo"};
+exports.makeProjectileBlueFireball = function(d){return "laita sininen tulipallo"};
 
-exports.makeProjectilePurpleFireball = function(d){return "tee violetti tulipallo"};
+exports.makeProjectilePurpleFireball = function(d){return "laita violetti tulipallo"};
 
-exports.makeProjectileRedFireball = function(d){return "tee punainen tulipallo"};
+exports.makeProjectileRedFireball = function(d){return "laita punainen tulipallo"};
 
-exports.makeProjectileYellowHearts = function(d){return "tee keltaisia sydämiä"};
+exports.makeProjectileYellowHearts = function(d){return "laita keltaiset sydämet"};
 
-exports.makeProjectilePurpleHearts = function(d){return "tee violetteja sydämiä"};
+exports.makeProjectilePurpleHearts = function(d){return "laita violetit sydämet"};
 
-exports.makeProjectileRedHearts = function(d){return "tee punaisia sydämiä"};
+exports.makeProjectileRedHearts = function(d){return "laita punaiset sydämet"};
 
 exports.makeProjectileTooltip = function(d){return "Laita juuri törmännyt ammus katoamaan tai kimpoamaan."};
 
@@ -20635,17 +20718,17 @@ exports.moveDirectionUp = function(d){return "ylös"};
 
 exports.moveDirectionRandom = function(d){return "satunnainen"};
 
-exports.moveDistance25 = function(d){return "25 pikseliä"};
+exports.moveDistance25 = function(d){return "25 kuvapistettä"};
 
-exports.moveDistance50 = function(d){return "50 pikseliä"};
+exports.moveDistance50 = function(d){return "50 kuvapistettä"};
 
-exports.moveDistance100 = function(d){return "100 pikseliä"};
+exports.moveDistance100 = function(d){return "100 kuvapistettä"};
 
-exports.moveDistance200 = function(d){return "200 pikseliä"};
+exports.moveDistance200 = function(d){return "200 kuvapistettä"};
 
-exports.moveDistance400 = function(d){return "400 pikseliä"};
+exports.moveDistance400 = function(d){return "400 kuvapistettä"};
 
-exports.moveDistancePixels = function(d){return "kuvapisteet"};
+exports.moveDistancePixels = function(d){return "kuvapistettä"};
 
 exports.moveDistanceRandom = function(d){return "satunnaisia pikseleitä"};
 
@@ -20707,19 +20790,19 @@ exports.playSoundWinPoint2 = function(d){return "soita pisteen voittamisen toine
 
 exports.playSoundWood = function(d){return "soita puinen ääni"};
 
-exports.positionOutTopLeft = function(d){return "yläpuolelle vasempaan yläreunaan"};
+exports.positionOutTopLeft = function(d){return "vasemman yläkulman yläpuolelle"};
 
-exports.positionOutTopRight = function(d){return "yläpuolelle oikeaan yläreunaan"};
+exports.positionOutTopRight = function(d){return "oikean yläkulman yläpuolelle"};
 
-exports.positionTopOutLeft = function(d){return "vasemmalle yläreunan ulkopuolelle"};
+exports.positionTopOutLeft = function(d){return "yläreunaan, vasemman reunan ulkopuolelle"};
 
-exports.positionTopLeft = function(d){return "vasempaan yläreunaan"};
+exports.positionTopLeft = function(d){return "vasempaan yläkulmaan"};
 
 exports.positionTopCenter = function(d){return "yläreunan keskelle"};
 
 exports.positionTopRight = function(d){return "oikeaan yläreunaan"};
 
-exports.positionTopOutRight = function(d){return "oikealle yläreunan ulkopuolelle"};
+exports.positionTopOutRight = function(d){return "yläreunaan, oikean reunan ulkopuolelle"};
 
 exports.positionMiddleLeft = function(d){return "keskelle vasempaan reunaan"};
 
@@ -20727,19 +20810,19 @@ exports.positionMiddleCenter = function(d){return "keskelle keskitetysti"};
 
 exports.positionMiddleRight = function(d){return "keskelle oikeaan reunaan"};
 
-exports.positionBottomOutLeft = function(d){return "ulkopuolelle, vasempaan alakulmaan"};
+exports.positionBottomOutLeft = function(d){return "alareunaan, vasemman reunan ulkopuolelle"};
 
-exports.positionBottomLeft = function(d){return "alapuolelle vasempaan reunaan"};
+exports.positionBottomLeft = function(d){return "vasempaan alakulmaan"};
 
 exports.positionBottomCenter = function(d){return "keskelle alareunaa"};
 
-exports.positionBottomRight = function(d){return "alapuolelle oikeaan reunaan"};
+exports.positionBottomRight = function(d){return "oikeaan alakulmaan"};
 
-exports.positionBottomOutRight = function(d){return "alapuolelle oikean reunan ulkopuolelle"};
+exports.positionBottomOutRight = function(d){return "alareunaan, oikean reunan ulkopuolelle"};
 
-exports.positionOutBottomLeft = function(d){return "alapuolelle vasempaan alareunaan"};
+exports.positionOutBottomLeft = function(d){return "vasempaan alakulmaan, alareunan alapuolelle"};
 
-exports.positionOutBottomRight = function(d){return "alapuolelle oikeaan alareunaan"};
+exports.positionOutBottomRight = function(d){return "oikeaan alakulmaan, alareunan alapuolelle"};
 
 exports.positionRandom = function(d){return "satunnaiseen sijaintiin"};
 
@@ -21021,7 +21104,7 @@ exports.waitForClick = function(d){return "odota klikkausta"};
 
 exports.waitForRandom = function(d){return "odota kunnes satunnainen"};
 
-exports.waitForHalfSecond = function(d){return "odota kunnes puoli sekuntia on kulunut"};
+exports.waitForHalfSecond = function(d){return "odota kunnes ½ sekuntia on kulunut"};
 
 exports.waitFor1Second = function(d){return "odota kunnes 1 sekunti on kulunut"};
 

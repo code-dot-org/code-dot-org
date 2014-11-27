@@ -13,17 +13,17 @@
           Artist2: Processus 7
           Unplug5: Processus 8
           Farmer: Processus 9
-          Unplug6: Étape 10 
-          Artist3: Étape 11 
-          Unplug7: Étape 12 
-          Farmer2: Étape 13 
-          Unplug8: Étape 14 
-          Artist4: Étape 15 
-          Unplug9: Étape 16 
-          Farmer3: Étape 17 
-          Unplug10: Étape 18 
-          Artist5: Étape 19 
-          Unplug11: Étape 20 
+          Unplug6: "Étape 10 "
+          Artist3: "Étape 11 "
+          Unplug7: "Étape 12 "
+          Farmer2: "Étape 13 "
+          Unplug8: "Étape 14 "
+          Artist4: "Étape 15 "
+          Unplug9: "Étape 16 "
+          Farmer3: "Étape 17 "
+          Unplug10: "Étape 18 "
+          Artist5: "Étape 19 "
+          Unplug11: "Étape 20 "
         Hour of Code:
           desc: Heure de Code
           Maze: Processus 1
@@ -34,7 +34,7 @@
           desc: Rebond (bêta)
           Bounce: Processus 1
         Builder Levels:
-          desc: Énigmes créées par l'utilisateur (bêta)
+          desc: "Énigmes créées par l'utilisateur (bêta)"
           Custom: Processus 1
         Flappy Levels:
           desc: Flappy Bird
@@ -50,12 +50,13 @@
           MazeEC: Processus 1
           Webapp: Processus 2
           ArtistEC: Processus 3
+          StudioEC: Processus 4
         events:
           desc: Rebond (bêta)
           Bounce: Processus 1
           Studio: Processus 2
         builder:
-          desc: Énigmes créées par l'utilisateur (bêta)
+          desc: "Énigmes créées par l'utilisateur (bêta)"
           Custom: Processus 1
         flappy:
           desc: Flappy Bird
@@ -101,6 +102,7 @@
         Webapp: Appli en ligne
         ArtistEC: L'Artiste
         TextMatch: Correspondance de texte
+        StudioEC: Labo
     trophy:
       name:
         Bronze: Bronze
@@ -359,8 +361,8 @@
           soit beau et plat.
         maze_karel_debug_while: Comment pouvez-vous modifier ce programme pour m'aider
           à combler le trou ?
-        maze_karel_debug_if: À l'aide ! Corrigez ce programme afin que je puisse aplanir
-          complètement mon champ.
+        maze_karel_debug_if: "À l'aide ! Corrigez ce programme afin que je puisse
+          aplanir complètement mon champ."
         maze_karel_debug_if_else: Déboguez ce programme afin que je remplisse tous
           les trous et rase toutes les mottes.
         maze_karel_debug_function_1: Quelle modification pouvez-vous effectuer dans
@@ -395,7 +397,7 @@
           différent à la place.)
         maze_3_1: Je dois atteindre ce cochon ! Écrivez deux appels à move(); pour
           que je puisse retrouver mes œufs.
-        maze_3_2: Écrivez-moi un programme pour que je puisse aller jusqu'à ce cochon.
+        maze_3_2: "Écrivez-moi un programme pour que je puisse aller jusqu'à ce cochon."
         maze_3_3: Comment puis-je atteindre le cochon ? Assurez-vous que je ne trébuche
           pas sur la caisse pleine d'explosifs !
         maze_3_4: Argh ! Écrivez-moi un programme qui me permette d'éviter les explosifs
@@ -436,9 +438,9 @@
           sur « Démarrer » quand vous êtes prêt.
         flappy_1: Attachez un bloc au bloc « lors d'un clic », puis cliquez sur « Démarrer ».
           Cliquez sur l'écran ou tapotez-le pour déplacer Flappy vers la cible.
-        flappy_2: À présent, nous avons ajouté du sol. Attachez un bloc au bloc « lorsque
+        flappy_2: "À présent, nous avons ajouté du sol. Attachez un bloc au bloc « lorsque
           le sol est touché ». Votre code doit « terminer le jeu » lorsque Flappy
-          s'écrase.
+          s'écrase."
         flappy_3: Le bloc « lors du lancement » vous permet d'exécuter du code au
           démarrage de votre jeu.  Essayez de régler la vitesse du niveau et le battement
           d'ailes.
@@ -469,9 +471,9 @@
         flappy_k1_2: Attaches un bloc au bloc « lors d'un clic », puis cliques sur
           « Lancer ». Cliques sur l'écran ou tapotes-le pour déplacer Flappy vers
           la cible.
-        flappy_k1_3: À présent, nous avons ajouté du sol. Attachez un bloc au bloc
+        flappy_k1_3: "À présent, nous avons ajouté du sol. Attachez un bloc au bloc
           « lorsque le sol est touché ». Votre code doit « terminer le jeu » lorsque
-          Flappy s'écrase.
+          Flappy s'écrase."
         flappy_k1_4: Le bloc « lors du lancement » vous permet d'exécuter du code
           au démarrage de votre jeu.  Essayez de régler la vitesse du niveau et le
           battement d'ailes.
@@ -621,6 +623,8 @@
         turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas:
           a stick figure, snowflake, or spiral. Also try the new "penWidth" block.
           Have fun!'
+        studio_ec_sandbox: Create your own game. When you're done, click Finish to
+          let friends try your game on their phones.
     video:
       name:
         maze_intro: Intro au Labyrinthe
@@ -642,7 +646,7 @@
         Unplug4: Algorithmes
         Unplug5: Fonctions
         Unplug6: Instructions conditionnelles
-        Unplug7: Écriture de chansons
+        Unplug7: "Écriture de chansons"
         Unplug8: Abstraction
         Unplug9: Relay programming
         Unplug10: Internet
@@ -695,6 +699,9 @@
         C3_crowdsourcing: Financement participatif
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Composition de chansons avec réglages
+        Frozen_intro: Hour of Code Intro
+        Frozen_loops: Introduction to Loops
+        Frozen_functions: Introduction to Functions
     callout:
       text:
         drag_blocks: Attrape un bloc « avancer » et attache-le sous l'autre bloc
@@ -723,3 +730,24 @@
         repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
           workspace
         snowflake_dropdown: Use this drop-down to create different snowflakes!
+        degrees_per_side: Divide 360 by the number of sides to get the size of each
+          angle in degrees.
+        set_sides: Use this block to set "sides" to the number needed to complete
+          the puzzle.
+        set_length: Use this block to set "length" to the correct value.
+        which_equation: Which equation makes each side shorter for shapes with more
+          sides?  Try each equation!
+        get_nectar: Use the new "get nectar" block.
+        actions_category: The tool box got a new look! The "Actions" blocks are in
+          here now.
+        draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
+        edit_function: Use this button to edit the function.
+        create_function: Click here to open the "Functions" flyout, then click the
+          "Create a Function" button.
+        house_hint: It's ok if the picture doesn't look like a house yet. We will
+          fix it in the next puzzle.
+        edit_draw_square: Use this button to edit the function and add the loop.
+        edit_get_nectar: Use this button to edit the function and change the direction
+          the Bee will turn to get the nectar.
+        logic_category: Open the "Logic" flyout to find the "if/else" block.
+        length_parameter: Can you update this function so it uses the "length" parameter?

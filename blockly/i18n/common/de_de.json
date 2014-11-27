@@ -43,6 +43,7 @@
   "numBlocksNeeded": "Glückwunsch! Du hast Puzzle {puzzleNumber} fertig gestellt. (Du hättest jedoch nur {numBlocks, plural, one {1 Baustein} other {# Bausteine}} gebraucht.)",
   "numLinesOfCodeWritten": "Du hast soeben {numLines, plural, one {eine Zeile} other {# Zeilen}} Code geschrieben!",
   "play": "spielen",
+  "print": "Print",
   "puzzleTitle": "Puzzle {puzzle_number} von {stage_total}",
   "repeat": "wiederhole",
   "resetProgram": "Zurücksetzen",
@@ -80,5 +81,6 @@
   "tryHOC": "Probiere \"The Hour of Code\" aus",
   "signup": "Für den Einführungskurs anmelden",
   "hintHeader": "Hier ist ein Tipp:",
-  "genericFeedback": "Schau dir an, was du gemacht hast und versuche Fehler im Programm zu beheben."
+  "genericFeedback": "Schau dir an, was du gemacht hast und versuche Fehler im Programm zu beheben.",
+  "defaultTwitterText": "Check out what I made"
 }

@@ -2394,9 +2394,12 @@ exports.displayFeedback = function(options) {
     $("#print_frame").remove(); // Remove the iframe when the print dialogue has been launched
   }
 
-  $("#print-button").click(function() {
-    createHiddenPrintWindow(options.feedbackImage);
-  });
+  var printButton = feedback.querySelector('#print-button');
+  if (printButton) {
+    dom.addClickTouchEvent(printButton, function() {
+      createHiddenPrintWindow(options.feedbackImage);
+    });
+  }
 
   feedbackDialog.show({
     backdrop: (options.app === 'flappy' ? 'static' : true)
@@ -2626,7 +2629,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -14372,8 +14374,8 @@ exports.generateDropletPalette = function (codeFunctions) {
           block: '__ < __',
           title: 'Compare two numbers'
         }, {
-          block: 'random(1, 100)',
-          title: 'Get a random number in a range'
+          block: 'random()',
+          title: 'Get a random number between 0 and 1'
         }, {
           block: 'round(__)',
           title: 'Round to the nearest integer'
@@ -14382,10 +14384,10 @@ exports.generateDropletPalette = function (codeFunctions) {
           title: 'Absolute value'
         }, {
           block: 'max(__, __)',
-          title: 'Absolute value'
+          title: 'Maximum value'
         }, {
           block: 'min(__, __)',
-          title: 'Absolute value'
+          title: 'Minimum value'
         }
       ]
     }, {
@@ -14451,7 +14453,7 @@ exports.generateDropletPalette = function (codeFunctions) {
 exports.generateDropletModeOptions = function (codeFunctions) {
   var modeOptions = {
     blockFunctions: [],
-    valueFunctions: [],
+    valueFunctions: ['random', 'round', 'abs', 'max', 'min'],
     eitherFunctions: [],
   };
 
@@ -14467,10 +14469,10 @@ exports.generateDropletModeOptions = function (codeFunctions) {
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
       if (codeFunctions[i].category === 'value') {
-        modeOptions.valueFunctions[i] = codeFunctions[i].func;
+        modeOptions.valueFunctions.push(codeFunctions[i].func);
       }
       else if (codeFunctions[i].category !== 'hidden') {
-        modeOptions.blockFunctions[i] = codeFunctions[i].func;
+        modeOptions.blockFunctions.push(codeFunctions[i].func);
       }
     }
   }
@@ -14701,21 +14703,21 @@ exports.colourTooltip = function(d){return "Muuttaa kynän väriä."};
 
 exports.createACircle = function(d){return "Luo ympyrä"};
 
-exports.createSnowflakeSquare = function(d){return "create a snowflake of type square"};
+exports.createSnowflakeSquare = function(d){return "luo neliömäinen lumihiutale"};
 
-exports.createSnowflakeParallelogram = function(d){return "create a snowflake of type parallelogram"};
+exports.createSnowflakeParallelogram = function(d){return "luo suunnikkaan muotoinen lumihiutale"};
 
-exports.createSnowflakeLine = function(d){return "create a snowflake of type line"};
+exports.createSnowflakeLine = function(d){return "luo viivamainen lumihiutale"};
 
-exports.createSnowflakeSpiral = function(d){return "create a snowflake of type spiral"};
+exports.createSnowflakeSpiral = function(d){return "luo spiraalin muotoinen lumihiutale"};
 
-exports.createSnowflakeFlower = function(d){return "create a snowflake of type flower"};
+exports.createSnowflakeFlower = function(d){return "luo kukan muotoinen lumihiutale"};
 
-exports.createSnowflakeFractal = function(d){return "create a snowflake of type fractal"};
+exports.createSnowflakeFractal = function(d){return "luo fraktaalin muotoinen lumihiutale"};
 
-exports.createSnowflakeRandom = function(d){return "create a snowflake of type random"};
+exports.createSnowflakeRandom = function(d){return "luo satunnainen lumihiutale"};
 
-exports.createASnowflakeBranch = function(d){return "create a snowflake branch"};
+exports.createASnowflakeBranch = function(d){return "luo haaran muotoinen lumihiutale"};
 
 exports.degrees = function(d){return "astetta"};
 
@@ -14769,13 +14771,13 @@ exports.jumpForward = function(d){return "hyppää eteenpäin"};
 
 exports.jumpTooltip = function(d){return "Siirtää taiteilijaa piirtämättä jälkeä."};
 
-exports.jumpEastTooltip = function(d){return "Siirtää taiteilijaa itään piirtämättä jälkeä."};
+exports.jumpEastTooltip = function(d){return "Siirtää hahmoa itään piirtämättä jälkeä."};
 
-exports.jumpNorthTooltip = function(d){return "Siirtää taiteilijaa pohjoiseen piirtämättä jälkeä."};
+exports.jumpNorthTooltip = function(d){return "Siirtää hahmoa pohjoiseen piirtämättä jälkeä."};
 
-exports.jumpSouthTooltip = function(d){return "Siirtää taiteilijaa etelään piirtämättä jälkeä."};
+exports.jumpSouthTooltip = function(d){return "Siirtää hahmoa etelään piirtämättä jälkeä."};
 
-exports.jumpWestTooltip = function(d){return "Siirtää taiteilijaa länteen piirtämättä jälkeä."};
+exports.jumpWestTooltip = function(d){return "Siirtää hahmoa länteen piirtämättä jälkeä."};
 
 exports.lengthFeedback = function(d){return "Sait tämän oikein lukuunottamatta siirtojen pituuksia."};
 
@@ -14785,17 +14787,17 @@ exports.loopVariable = function(d){return "laskuri"};
 
 exports.moveBackward = function(d){return "siirry taaksepäin"};
 
-exports.moveEastTooltip = function(d){return "Siirtää taiteilijaa itään."};
+exports.moveEastTooltip = function(d){return "Siirtää hahmoa itään."};
 
 exports.moveForward = function(d){return "siirry eteenpäin"};
 
 exports.moveForwardTooltip = function(d){return "Siirtää taiteilijaa eteenpäin."};
 
-exports.moveNorthTooltip = function(d){return "Siirtää taitelijaa pohjoiseen."};
+exports.moveNorthTooltip = function(d){return "Siirtää hahmoa pohjoiseen."};
 
-exports.moveSouthTooltip = function(d){return "Siirtää taitelijaa etelään."};
+exports.moveSouthTooltip = function(d){return "Siirtää hahmoa etelään."};
 
-exports.moveWestTooltip = function(d){return "Siirtää taitelijaa länteen."};
+exports.moveWestTooltip = function(d){return "Siirtää hahmoa länteen."};
 
 exports.moveTooltip = function(d){return "Siirtää taiteilijaa eteenpäin tai taaksepäin annetun etäisyyden."};
 

@@ -22,6 +22,9 @@
   "repeatForeverTooltip": "このブロックの中に入れたアクションを、アプリが動いている間ずっとくりかえします。",
   "shareWebappTwitter": "私のアプリを見てください。 @codeorg を使って自分で書きました。",
   "shareGame": "アプリをみんなに見せる",
+  "stepIn": "Step in",
+  "stepOver": "Step over",
+  "stepOut": "Step out",
   "turnBlack": "もどる",
   "turnBlackTooltip": "画面を黒くする",
   "yes": "はい"

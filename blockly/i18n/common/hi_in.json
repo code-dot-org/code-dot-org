@@ -43,6 +43,7 @@
   "numBlocksNeeded": "Congratulations! You completed Puzzle {puzzleNumber}. (However, you could have used only {numBlocks, plural, one {1 block} other {# blocks}}.)",
   "numLinesOfCodeWritten": "You just wrote {numLines, plural, one {1 line} other {# lines}} of code!",
   "play": "play",
+  "print": "Print",
   "puzzleTitle": "Puzzle {puzzle_number} of {stage_total}",
   "repeat": "दोहराएँ",
   "resetProgram": "Reset",
@@ -80,5 +81,6 @@
   "tryHOC": "Try the Hour of Code",
   "signup": "Sign up for the intro course",
   "hintHeader": "Here's a tip:",
-  "genericFeedback": "See how you ended up, and try to fix your program."
+  "genericFeedback": "See how you ended up, and try to fix your program.",
+  "defaultTwitterText": "Check out what I made"
 }

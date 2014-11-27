@@ -2394,9 +2394,12 @@ exports.displayFeedback = function(options) {
     $("#print_frame").remove(); // Remove the iframe when the print dialogue has been launched
   }
 
-  $("#print-button").click(function() {
-    createHiddenPrintWindow(options.feedbackImage);
-  });
+  var printButton = feedback.querySelector('#print-button');
+  if (printButton) {
+    dom.addClickTouchEvent(printButton, function() {
+      createHiddenPrintWindow(options.feedbackImage);
+    });
+  }
 
   feedbackDialog.show({
     backdrop: (options.app === 'flappy' ? 'static' : true)
@@ -2626,7 +2629,6 @@ exports.createSharingDiv = function(options) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
-    options.saveToGalleryUrl = undefined;
     options.sendToPhone = false;
   } else {
 
@@ -14372,8 +14374,8 @@ exports.generateDropletPalette = function (codeFunctions) {
           block: '__ < __',
           title: 'Compare two numbers'
         }, {
-          block: 'random(1, 100)',
-          title: 'Get a random number in a range'
+          block: 'random()',
+          title: 'Get a random number between 0 and 1'
         }, {
           block: 'round(__)',
           title: 'Round to the nearest integer'
@@ -14382,10 +14384,10 @@ exports.generateDropletPalette = function (codeFunctions) {
           title: 'Absolute value'
         }, {
           block: 'max(__, __)',
-          title: 'Absolute value'
+          title: 'Maximum value'
         }, {
           block: 'min(__, __)',
-          title: 'Absolute value'
+          title: 'Minimum value'
         }
       ]
     }, {
@@ -14451,7 +14453,7 @@ exports.generateDropletPalette = function (codeFunctions) {
 exports.generateDropletModeOptions = function (codeFunctions) {
   var modeOptions = {
     blockFunctions: [],
-    valueFunctions: [],
+    valueFunctions: ['random', 'round', 'abs', 'max', 'min'],
     eitherFunctions: [],
   };
 
@@ -14467,10 +14469,10 @@ exports.generateDropletModeOptions = function (codeFunctions) {
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
       if (codeFunctions[i].category === 'value') {
-        modeOptions.valueFunctions[i] = codeFunctions[i].func;
+        modeOptions.valueFunctions.push(codeFunctions[i].func);
       }
       else if (codeFunctions[i].category !== 'hidden') {
-        modeOptions.blockFunctions[i] = codeFunctions[i].func;
+        modeOptions.blockFunctions.push(codeFunctions[i].func);
       }
     }
   }
@@ -14596,7 +14598,7 @@ exports.numLinesOfCodeWritten = function(d){return "¡Acabas de escribir "+p(d,"
 
 exports.play = function(d){return "jugar"};
 
-exports.print = function(d){return "Print"};
+exports.print = function(d){return "Imprimir"};
 
 exports.puzzleTitle = function(d){return "Puzzle "+v(d,"puzzle_number")+" de "+v(d,"stage_total")};
 
@@ -14638,9 +14640,9 @@ exports.hintRequest = function(d){return "Ver pista"};
 
 exports.backToPreviousLevel = function(d){return "Volver al nivel anterior"};
 
-exports.saveToGallery = function(d){return "Guardar en tu galería"};
+exports.saveToGallery = function(d){return "Guardar en Galería"};
 
-exports.savedToGallery = function(d){return "¡Guardado en tu galería!"};
+exports.savedToGallery = function(d){return "¡Guardado en la Galería!"};
 
 exports.shareFailure = function(d){return "Perdón, no podemos compartir este programa."};
 
@@ -14674,7 +14676,7 @@ exports.hintHeader = function(d){return "Aquí hay un consejo:"};
 
 exports.genericFeedback = function(d){return "Mira como terminaste, y trata de reparar tu programa."};
 
-exports.defaultTwitterText = function(d){return "Check out what I made"};
+exports.defaultTwitterText = function(d){return "Mira lo que hice"};
 
 
 },{"messageformat":57}],45:[function(require,module,exports){
@@ -14699,23 +14701,23 @@ exports.catLogic = function(d){return "Lógica"};
 
 exports.colourTooltip = function(d){return "Cambia el color del lápiz."};
 
-exports.createACircle = function(d){return "create a circle"};
+exports.createACircle = function(d){return "crear un círculo"};
 
-exports.createSnowflakeSquare = function(d){return "create a snowflake of type square"};
+exports.createSnowflakeSquare = function(d){return "crear un copo de nieve del tipo cuadrado"};
 
-exports.createSnowflakeParallelogram = function(d){return "create a snowflake of type parallelogram"};
+exports.createSnowflakeParallelogram = function(d){return "crear un copo de nieve del tipo paralelogramo"};
 
-exports.createSnowflakeLine = function(d){return "create a snowflake of type line"};
+exports.createSnowflakeLine = function(d){return "crear un copo de nieve del tipo línea"};
 
-exports.createSnowflakeSpiral = function(d){return "create a snowflake of type spiral"};
+exports.createSnowflakeSpiral = function(d){return "crear un copo de nieve del tipo espiral"};
 
-exports.createSnowflakeFlower = function(d){return "create a snowflake of type flower"};
+exports.createSnowflakeFlower = function(d){return "crear un copo de nieve del tipo flor"};
 
-exports.createSnowflakeFractal = function(d){return "create a snowflake of type fractal"};
+exports.createSnowflakeFractal = function(d){return "crear un copo de nieve del tipo fractal"};
 
-exports.createSnowflakeRandom = function(d){return "create a snowflake of type random"};
+exports.createSnowflakeRandom = function(d){return "crear un copo de nieve del tipo aleatorio"};
 
-exports.createASnowflakeBranch = function(d){return "create a snowflake branch"};
+exports.createASnowflakeBranch = function(d){return "crear un copo de nieve del tipo rama"};
 
 exports.degrees = function(d){return "grados"};
 
@@ -14755,7 +14757,7 @@ exports.drawUpperWave = function(d){return "dibujar la onda superior"};
 
 exports.drawLowerWave = function(d){return "dibujar la onda mas baja"};
 
-exports.drawStamp = function(d){return "draw stamp"};
+exports.drawStamp = function(d){return "dibujar sello"};
 
 exports.heightParameter = function(d){return "altura"};
 
@@ -14809,7 +14811,7 @@ exports.penTooltip = function(d){return "Levanta o baja el lápiz, para empezar 
 
 exports.penUp = function(d){return "levantar lápiz"};
 
-exports.reinfFeedbackMsg = function(d){return "¿Parece esto lo que quieres? Puedes presionar el botón \"Intentar nuevamente\" para ver tu dibujo."};
+exports.reinfFeedbackMsg = function(d){return "¡Aquí está tu dibujo! Sigue trabajando en él o continúa al siguiente Puzzle."};
 
 exports.setColour = function(d){return "definir color"};
 

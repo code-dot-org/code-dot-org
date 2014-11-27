@@ -6,6 +6,7 @@
   "overlayBlockTitle": "overlegg (topp, botn)",
   "placeImageBlockTitle": "plasser-bilde(x,y,bilde)",
   "rectangleBlockTitle": "rektangel (breidd, høgde, stil, farge)",
+  "reinfFeedbackMsg": "Du kan trykke knappen \"Forsøk igjen\" for å redigere tegningen.",
   "rotateImageBlockTitle": "roter (grader, bilde)",
   "scaleImageBlockTitle": "skaler (faktor)",
   "squareBlockTitle": "kvadrat (størrelse, stil, farge)",

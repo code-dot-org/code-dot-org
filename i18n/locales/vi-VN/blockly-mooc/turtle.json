@@ -64,7 +64,7 @@
   "penDown":"bỏ bút xuống",
   "penTooltip":"nâng lên hay hạ bút xuống, để bắt đầu và ngừng vẽ.",
   "penUp":"nâng bút lên",
-  "reinfFeedbackMsg":"Hình này có giống với những gì bạn muốn? Bạn có thể bấm nút \"Thử lại\" để xem bản vẽ của bạn.",
+  "reinfFeedbackMsg":"Here is your drawing! Keep working on it or continue to the next puzzle.",
   "setColour":"chỉnh màu",
   "setPattern":"set pattern",
   "setWidth":"chỉnh độ rộng",

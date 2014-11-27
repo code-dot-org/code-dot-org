@@ -738,7 +738,10 @@ Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_ = function() {
   var blockBox, leftEdge, rightEdge, topEdge, bottomEdge;
 
   var svgSize = this.svgSize();
-  var toolboxWidth = (this.toolbox ? this.toolbox.width : this.flyout_.width_);
+  var toolboxWidth = 0;
+  if (this.toolbox || this.flyout_) {
+    toolboxWidth = this.toolbox ? this.toolbox.width : this.flyout_.width_;
+  }
   svgSize.width -= toolboxWidth;
   var viewWidth = svgSize.width - Blockly.Scrollbar.scrollbarThickness;
   var viewHeight = svgSize.height - Blockly.Scrollbar.scrollbarThickness;

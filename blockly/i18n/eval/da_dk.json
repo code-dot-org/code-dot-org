@@ -6,6 +6,7 @@
   "overlayBlockTitle": "overlay (top, bund)",
   "placeImageBlockTitle": "plaser-billede (x, y, billede)",
   "rectangleBlockTitle": "rektangel (bredde, højde, stil, farve)",
+  "reinfFeedbackMsg": "You can press the \"Try again\" button to edit your drawing.",
   "rotateImageBlockTitle": "roter (grader, billede)",
   "scaleImageBlockTitle": "skaler (faktor)",
   "squareBlockTitle": "Firkant (størrelse, stil, farve)",

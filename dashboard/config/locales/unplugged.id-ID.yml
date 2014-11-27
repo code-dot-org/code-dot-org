@@ -16,36 +16,37 @@
         video: Unplug1
       Unplug2:
         title: Berpikir secara komputasi
-        desc: With nothing but paper and markers, students will learn the four steps
-          of computational thinking. After a brief introduction, students should be
-          split into groups where they will have to create directions for other students
-          to draw a specific monster (from a catalog of pre-selected monsters). The
-          entire task must be decomposed, then teams will analyze all monsters in
-          the catalog for patterns, abstract different details from the monsters,
-          then use that information to create an algorithm (directions) for another
-          team to draw a certain monster. Teams will then switch algorithms with another
-          group and draw the monster based on what that algorithm indicates. Is the
-          drawing what the original team intended?
+        desc: Dengan hanya kertas dan spidol, para murid akan belajar 4 langkah berpikir
+          secara komputasi. Setelah pengenalan singkat, mereka dapat dibagi menjadi
+          beberapa grup di mana mereka harus memberikan arahan kepada murid lain untuk
+          menggambar sebuah monster (dari sebuah katalog monster yang telah tersedia).
+          Seluruh tugas harus diuraikan, lalu para tim akan meneliti semua monster
+          di katalog untuk pola-pola, beberapa rincian soal monster-monster, lalu
+          menggunakan informasi itu untuk membuat sebuah algoritma (arahan) kepada
+          tim lain untuk membuat sebuah monster. Tim-tim kemudian berganti algoritma
+          dengan grup lain dan menggambar monster sesuai dengan yang tertera pada
+          algoritma. Apakah gambarnya sesuai dengan yang diinginkan tim awal?
         pdfs:
         - unplug2
         video: Unplug2
       Unplug3:
         title: Pemrograman grafis diatas kertas
-        desc: By programming one another to draw pictures, students will begin to
-          understand what programming is really about. The class will begin by students
-          instructing each other to color squares in on graph paper in an effort to
-          reproduce an existing picture.  If there's time, the lesson can conclude
-          with images that the students create themselves.
+        desc: Dengan memprogram satu sama lain untuk menggambar, murid-murid akan
+          mengerti apakah pemrogaman sebenarnya itu. Kelas kan dimulai dengan mereka
+          saling mengarahkan untuk menggambar persegi berwarna di kertas grafik dalam
+          usaha membuat lagi gambar yang telah ada. Jika masih ada waktu, pelajaran
+          dapat diakhiri dengan gambar-gambar yang mereka buat sendiri.
         pdfs:
         - unplug3
         video: Unplug3
       Unplug4:
         title: Algoritma
-        desc: This lesson covers algorithms.  Using tangram shapes and graph paper,
-          the first exercise will show how important it is to make each instruction
-          as clear and unambiguous as possible.  Afterward, the class will explore
-          how many ways you can fold paper into a rectangle, noting how some methods
-          can take more or fewer folds than others.
+        desc: Pelajaran ini mencakup algoritma.  Menggunakan bentuk tangram dan kertas
+          grafik, latihan pertama akan menunjukkan pentingnya membuat instruksi yang
+          sejelas mungkin.  Selanjutnya, kelas akan menjelajahi berapa banyak cara
+          Anda dapat melipat kertas menjadi persegi panjang, mencatat bagaimana beberapa
+          metode dapat memerlukan lipatan yang lebih banyak atau lebih sedikit daripada
+          yang lain.
         pdfs:
         - unplug4
         video: Unplug4
@@ -269,3 +270,21 @@
           of binary options.  This lesson takes that concept one step further as it
           illustrates how a computer can store even more complex information (such
           as images and colors) in binary, as well.
+      VideoGamesCoordinatePlanes:
+        title: Video Games and Coordinate Planes
+        desc: Video Games and Coordinate Planes lesson description
+      Contracts:
+        title: Contracts
+        desc: Contracts unplugged lesson description
+      DesignRecipe:
+        title: The Design Recipe
+        desc: Design Recipe lesson description
+      Booleans:
+        title: Booleans
+        desc: Booleans lesson description
+      ConditionalsPiecewiseFunctions:
+        title: Conditionals and Piecewise Functions
+        desc: Conditionals and Piecewise Functions lesson description
+      CollisionDetection:
+        title: Collision Detection
+        desc: Collision Detection lesson description

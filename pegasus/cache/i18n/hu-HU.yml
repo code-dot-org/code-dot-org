@@ -1,9 +1,15 @@
 "hu-HU":
   hello: Helló világ
-  select_language: Please select your language
+  select_language: Válassz nyelvet
   computer_science: Számítógép-tudomány
   computer_science_edweek: Számítógép Tudomány Oktatási Hét
   csedweek_dates: December 9-15, 2013
+  csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
+    font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers,
+    <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
+    font-weight:bold">plan your Hour of Code</a>'
+  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
+    none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
   n_have_learned_an_hoc: "<h1>#</h1><h3> fő már kipróbálta a</h3><h2>Kódolás Óráját.</h2>"
   anybody_can_learn: Tanulni bárki tud.
   learn_now: Tanulj most
@@ -91,7 +97,7 @@
   never_spam: Mi soha sem fogjuk spammelni Önt
   enter_country: Adja meg az országát, ha az Egyesült Államok területén kívül él
   used_infrequent_updates: Csak ritka frissítéshez használatos
-  privacy_practices_children: See our privacy practices for children
+  privacy_practices_children: Itt találod gyerekeknek szóló adatvédelmi gyakorlatunkat
   petition_thankyou: Köszönjük, hogy feliratkozott a petícióra
   continue_learning_header: Folytatni a tanulást a Kód Óráján túl
   continue_learning_body: Több választási lehetősége is van. Tanulhat akár online,
@@ -116,11 +122,11 @@
     sort a kódból."
   start_hoc: A Kód Órája elkezdése most
   contact_form_topic_press: Sajtó/média (interjú vagy igéret)
-  studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
+  studiobar_title: Fedezd fel a <a href='http://studio.code.org'>Code Studio-t</a>
   studiobar_elementary_title: Kurzusok alsósoknak
-  studiobar_elementary_body: Our three new courses for K&#8209;5
+  studiobar_elementary_body: Három új tanfolyamunk k &#8209; 5 nek
   studiobar_hoc_title: A kódolás órája
-  studiobar_hoc_body: Learn to code with Angry Birds
+  studiobar_hoc_body: Tanulj programozni a dühös madarakkal
   studiobar_flappy_title: Flappy kód
   studiobar_flappy_body: Make and share your own Flappy game
   studiobar_teacher_title: Tanároknak
@@ -144,7 +150,7 @@
   class_submission_in_school_programming_integrated_in_other_classes: Programozás,
     összevont osztályokban
   class_submission_in_school_summer_school_cs_program: Nyári számtech programok
-  class_submission_in_school_exploring_computer_science: Exploring Computer Science
+  class_submission_in_school_exploring_computer_science: A számítógép-tudomány felfedezése
   class_submission_in_school_other: Más az iskolában
   class_submission_out_of_school: Iskolán kívül
   class_submission_out_of_school_summer_camp: Nyári tábor
@@ -161,35 +167,35 @@
   class_submission_level_middle_school: Középiskola
   class_submission_level_high_school: Gimnázium
   class_submission_level_college: Főiskola
-  class_submission_level_vocational: Vocational
+  class_submission_level_vocational: Szakmai
   class_submission_languages_other: Egyéb nyelv(ek)
-  volunteer_engineer_submission_commitment_uncertain: Uncertain
+  volunteer_engineer_submission_commitment_uncertain: Bizonytalan
   volunteer_engineer_submission_commitment_now_and_then: Néha napján
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 óra hetente
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 óra hetente
   volunteer_engineer_submission_commitment_five_hrs_per_week: 5 óra hetente
   volunteer_engineer_submission_commitment_more: Mégtöbb
   volunteer_engineer_submission_location_flexibility_onsite: On-site at a school
-  volunteer_engineer_submission_location_flexibility_remote: Mentoring remotely (teachers
-    or students)
+  volunteer_engineer_submission_location_flexibility_remote: Távoli mentorálás (tanárok
+    vagy diákok)
   volunteer_engineer_submission_location_flexibility_curriculum: Willing to help contribute
     to open-source curriculum projects
-  volunteer_engineer_submission_experience_unspecified: Unspecified
-  volunteer_engineer_submission_experience_university_student_or_researcher: Current
-    university student (or researcher)
-  volunteer_engineer_submission_experience_software_professional: Software professional
+  volunteer_engineer_submission_experience_unspecified: Nem meghatározott
+  volunteer_engineer_submission_experience_university_student_or_researcher: Jelenleg
+    egyetemi hallgató (vagy kutató)
+  volunteer_engineer_submission_experience_software_professional: Szoftverfeljesztő
   petition_age: Kor
-  dashboard_landing_title: Teacher Home Page
-  dashboard_landing_welcome: Welcome to the new and improved teacher dashboard.
-  dashboard_landing_video: Watch this video
+  dashboard_landing_title: Tanári kezdőlap
+  dashboard_landing_welcome: "Üdvözlünk az új és továbbfejlesztett tanár dashboardon."
+  dashboard_landing_video: Nézd meg ezt a videót
   dashboard_landing_watch_video: for a tour of the new features!
-  dashboard_landing_view_as_student: View this site as a student
-  dashboard_landing_students_title: Your students
-  dashboard_landing_students_manage: View and manage your students
-  dashboard_landing_news_title: Latest news
-  dashboard_landing_new_beta: New! Try our beta courses for K-5 students.
+  dashboard_landing_view_as_student: Az oldal megtekintése diákként
+  dashboard_landing_students_title: A diákjaid
+  dashboard_landing_students_manage: Diákok megtekintése és kezelése
+  dashboard_landing_news_title: K-5 pedagógus erőforrások (csak angol nyelven)
+  dashboard_landing_new_beta: "ÚJ! Próbáld ki a béta kurzusok elsős diákoknak."
   dashboard_landing_new_k5courses: New! Try our courses for K-5 students.
-  dashboard_landing_useful_links: Other useful links
+  dashboard_landing_useful_links: Egyéb hasznos linkek (csak angol nyelven)
   dashboard_landing_office_hours: Ask a question in person! Visit our monthly video
     office hours.
   dashboard_landing_print_certificates: Nyomtasa ki a bizonyítványokat a diákoknak,
@@ -199,10 +205,10 @@
   dashboard_landing_smart_hints: Kérlek, segíts bennünket, okos tippekkel oktatóanyagainkhoz
     a code.org felületére
   dashboard_landing_video_player: Teszteld az új videó lejátszót az iskolában
-  dashboard_landing_progress_title: Main class progress
-  dashboard_landing_progress_biggest: This is the progress for your biggest section.
-  dashboard_landing_view_progress: View Progress for %{biggest_section}
-  dashboard_landing_available_title: Available courses
+  dashboard_landing_progress_title: Az elsődleges osztály fejlődése
+  dashboard_landing_progress_biggest: "Így fejlődik a legnagyobb szekciód."
+  dashboard_landing_view_progress: Nézd a haladást %{biggest_section}
+  dashboard_landing_available_title: Elérhető kurzusok
   dashboard_landing_available_courses: Here are the courses currently available for
     you and your students.
   dashboard_landing_loading: Betöltés...
@@ -216,13 +222,13 @@
   dashboard_action_delete_no: Nem
   dashboard_action_done: Kész
   dashboard_action_required: szükséges
-  dashboard_navigation_home_page: Teacher home page
-  dashboard_navigation_all_sections: All sections
-  dashboard_navigation_view_progress: View Progress
-  dashboard_navigation_add_students: Add Students
-  dashboard_navigation_manage_students: Manage Students
-  dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
-  dashboard_navigation_view_stats: View Stats
+  dashboard_navigation_home_page: Tanári kezdőlap
+  dashboard_navigation_all_sections: Diákok fiókja és haladása
+  dashboard_navigation_view_progress: Fejlődés megtekintése
+  dashboard_navigation_add_students: Diákok hozzáadása
+  dashboard_navigation_manage_students: Diákok kezelése
+  dashboard_navigation_lesson_plans_resources: "Óravázlatok és erőforrások"
+  dashboard_navigation_view_stats: Statisztika megtekintése
   dashboard_navigation_section: 'Section: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
   dashboard_sections_new_section: New section
@@ -230,7 +236,7 @@
     them. Sections help you organize students into smaller groups so you can track
     their progress and manage their accounts.
   dashboard_sections_table_section: Szakasz
-  dashboard_sections_table_secret: Secret type
+  dashboard_sections_table_secret: Bejelentkezés típusa
   dashboard_sections_table_grade: Osztály
   dashboard_sections_table_course: Tanfolyam
   dashboard_sections_table_students: Tanuló
@@ -248,28 +254,28 @@
   dashboard_sections_print_secrets: You may then print a sheet of cards containing
     account information to be distributed to your students individually.
   dashboard_sections_switch_section: 'Switch section:'
-  dashboard_students_add_student: Add student
-  dashboard_students_add_students: Add multiple students
+  dashboard_students_add_student: Diákok hozzáadása
+  dashboard_students_add_students: Több diák hozzáadása
   dashboard_students_add_multiple: 'Type or paste the names of your students, one
     per line:'
   dashboard_students_new_section: You've created a new section! Now add your students
     using the <b>Add student</b> and <b>Add multiple students</b> buttons above.
-  dashboard_students_placeholder_name: Student Name
+  dashboard_students_placeholder_name: Tanuló neve
   dashboard_students_name: Név
   dashboard_students_age: Kor
   dashboard_students_gender: Nem
   dashboard_students_male: Férfi
   dashboard_students_female: Nő
-  dashboard_students_secret: Secret
+  dashboard_students_secret: Titkos
   dashboard_students_password: jelszó
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
   dashboard_students_completed_levels: Completed Levels
-  dashboard_students_total_lines: Lines of Code
+  dashboard_students_total_lines: kódsorok
   dashboard_students_show_secret: Show secret
-  dashboard_students_auto_generated: Auto-generated
+  dashboard_students_auto_generated: Automatikusan létrehozott
   dashboard_students_reset_secret: Reset secret
-  dashboard_students_reset_password: Reset password
+  dashboard_students_reset_password: Jelszó alaphelyzetbe
   dashboard_students_share_section: 'Share this section''s sign in page with your
     students:'
   dashboard_students_print_info: Print out cards with your students' login information.
@@ -286,7 +292,7 @@
   dashboard_students_no_email: If your students do not have email addresses, or you
     would like to create accounts for them, change this section's secret type to <b>word</b>
     or <b>picture</b>.
-  dashboard_students_print_page: Print this page
+  dashboard_students_print_page: Oldal nyomtatása
   dashboard_students_url: URL
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Click
     here</a> for our privacy document that can be shared or printed for your students.
@@ -301,22 +307,22 @@
   dashboard_implementation_guide: Implementation Guide
   dashboard_glossary: Glossary
   dashboard_classroom_strategies: Classroom strategies for teachers
-  dashboard_debugging: 'Debugging:'
+  dashboard_debugging: 'Hibakeresés:'
   dashboard_puzzle_solving: 'Puzzle-solving:'
-  dashboard_student_worksheet: student worksheet
-  dashboard_teacher_worksheet: teacher worksheet
+  dashboard_student_worksheet: diák munkafüzet
+  dashboard_teacher_worksheet: tanár munkalap
   dashboard_grade_k: K
   dashboard_grade_other: Egyéb
   dashboard_login_word: word
-  dashboard_login_picture: picture
+  dashboard_login_picture: Kép
   dashboard_login_none: none
-  dashboard_new_password: new password
+  dashboard_new_password: "Új jelszó"
   stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
     week alone:'
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
-  dashboard_teacher: Teacher
+  dashboard_teacher: tanár
   dashboard_student: Diák
-  dashboard_sections_email_question: Do all students have a valid email address?
+  dashboard_sections_email_question: Minden diák van érvényes e-mail címe?
   dashboard_sections_account_creation_question: Who creates the student's account?
   dashboard_sections_password_question: What do students use as a "password"?
   dashboard_sections_picture_account_creation: A picture assigned by Code.org
@@ -327,32 +333,38 @@
   dashboard_sections_password_account_creation: Student-created text password
   dashboard_sections_login_type_explanation: This table helps explain which of these
     login types, <b>picture, word, or email</b>, you'll want to choose for a section.
-  dashboard_faq: Frequently Asked Questions
+  dashboard_faq: Gyakran ismételt kérdések
   code_hoc_coming: The Hour of Code is coming - December 8-14!
   code_sign_up: Sign up to participate during CS Education Week
   learn_more: Tudj meg többet
+  hoc2014_try_new_tutorials: Try our new Hour of Code tutorials
+  hoc2014_try_new_tutorial: Try our new Hour of Code tutorial in beta
+  hoc2014_try_scrat: Angry Birds, PvZ, and Scrat
+  hoc2014_try_frozen: Artist with Anna and Elsa, from Frozen
   carousel_heading_international: Oktatóanyagok az Ön nyelvén
+  carousel_heading_domestic: Tutorials available in English
   carousel_heading_beginners: Tutorials for Beginners
   carousel_heading_javascript: Tutorials that teach Javascript
   carousel_heading_unplugged: No device or internet? Try 'unplugged' computer science
   carousel_heading_devices: Tutorial apps for phones and tablets
-  carousel_heading_languages: Tutorials in other programming languages
-  carousel_heading_apps_games: Make your own apps or games
-  carousel_heading_university: University courses online
-  carousel_heading_webpages: Learn to make web pages
-  carousel_heading_robots: Learn to program with robots
+  carousel_heading_languages: Oktatóanyagok egyéb programozási nyelveken
+  carousel_heading_apps_games: Csinálj saját appot vagy játékot.
+  carousel_heading_university: Egyetemi kurzusok online
+  carousel_heading_webpages: Tanulj weblapkészítést
+  carousel_heading_robots: Tanulj robotprogramozást
   carousel_heading_ide: Platforms popular among teachers
   educator_notes: Educator Notes
-  more_resources_educators: More resources for teachers and educators
-  participants: participants
-  teachers_notes: Teacher's Notes
-  previous: Previous
-  next: Next
+  more_resources_educators: További segédletek tanárok és oktatók részére
+  participants: résztvevők
+  teachers_notes: Tanári jegyzetek
+  previous: Előző
+  next: Következő
   older_systems: Tutorials that work on older systems
   older_systems_subheading: These should work on older Web browsers. To access all
     tutorials, upgrade to a <a href="http://browsehappy.com/" target="_blank">modern
     Web browser.</a>
   mobile_devices: Tutorials for mobile devices
+  frozen_name: Code with Anna and Elsa
   codeorg_name: "Írja meg az első számítógépes programját"
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: An introduction to JavaScript
@@ -366,6 +378,7 @@
   codehs_name: Learn to Code With Karel the Dog
   codecademy_name: Codecademy
   codecombat_name: CodeCombat
+  codemonkey_name: CodeMonkey
   codeavengers_name: Build a Game with JavaScript
   processing_name: Drawing with Code
   robomind_name: Program a virtual robot
@@ -376,6 +389,7 @@
   tynkerapp_name: Tynker - on tablets
   hopscotch_name: 'Hopscotch: Code on your iPad'
   robomindnl_name: Program a virtual robot
+  flappy_name: Make a Flappy game
   bitsbox_name: Bitsbox - make a game
   makegameswithus_name: Build an iPhone game in your browser!
   touchdevelop_name: TouchDevelop
@@ -384,6 +398,7 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Rock, Paper, Scissors
+  frozen_gradelevel: Ages 8+
   codeorg_gradelevel: Ages 4-104
   thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: Middle school +
@@ -392,130 +407,71 @@
   scratch_gradelevel: Ages 8+
   lightbot_gradelevel: Minden korosztály számára
   thinkersmith_gradelevel: Minden korosztály számára
-  condcards_gradelevel: Ages 8-12
+  condcards_gradelevel: Korosztály 8-12
   lightbotintl_gradelevel: Minden korosztály számára
   codehs_gradelevel: Gimnázium
   codecademy_gradelevel: Gimnázium
   codecombat_gradelevel: Middle school +
+  codemonkey_gradelevel: Middle school +
   codeavengers_gradelevel: Middle school +
   processing_gradelevel: Gimnázium
-  robomind_gradelevel: Ages 8-13
+  robomind_gradelevel: 'Korosztály: 8-13'
   groklearning_gradelevel: Middle school +
   quorum_gradelevel: Middle school +
   codespark_gradelevel: "Általános iskolai"
   kodable_gradelevel: "Általános iskolai"
   tynkerapp_gradelevel: Ages 5-13
   hopscotch_gradelevel: Middle school +
-  robomindnl_gradelevel: Ages 8-13
+  robomindnl_gradelevel: 'Korosztály: 8-13'
+  flappy_gradelevel: Ages 4-104
   bitsbox_gradelevel: "Általános iskolai"
   makegameswithus_gradelevel: Gimnázium
   touchdevelop_gradelevel: Gimnázium
   appinventor_gradelevel: Middle school +
   blockly_gradelevel: Minden korosztály számára
   thinkersmith2_gradelevel: Ages 8+
-  kodableunplugged_gradelevel: Ages 8-13
-  projguts_gradelevel: Ages 10-13
-  codeorg_platformtext: Learn the basic concepts of Computer Science with drag and
-    drop programming. This is a game-like, self-directed tutorial starring video lectures
-    by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops,
-    conditionals, and basic algorithms. Available in 34 languages.
-  thinkersmithspanish_platformtext: Mediante el uso de un "Vocabulario Robot" predefinido,
-    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
-    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
-    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
-    como la valiosa habilidad de depuraci&oacute;n.
-  khan_platformtext: Learn the basics of JavaScript programming while creating fun
-    drawings with your code. Do it on your own or with your class!
-  khanes_platformtext: Learn the basics of JavaScript programming while creating fun
-    drawings with your code. Do it on your own or with your class!
-  tynker_platformtext: A collection of 8 fun activities for children of all ages to
-    try programming. Solve a series of simple puzzles to help Pixel the puppy reach
-    home, and Biff the spaceman reach his moon base. Build the Space Zombies game
-    or create Math Art using our fun and easy visual approach to programming.  The
-    session can be teacher facilitated or self-paced.
-  scratch_platformtext: With Scratch, you can code your own interactive games, stories,
-    animations, and more. In this activity, you'll create an interactive holiday card
-    that you can share with friends and family.
-  lightbot_platformtext: Learn core programming logic, starting from super-basic programming,
-    for ages 4+, on iOS or Android (or Web browser) . Learn how to sequence commands,
-    identify patterns, use procedures, and utilize loops!
-  thinkersmith_platformtext: Using a pre-defined "Robot Vocabulary" students will
-    figure out how to guide each other to accomplish specific tasks without discussing
-    them first. This lesson teaches children the connection between symbols and actions,
-    as well as the invaluable skill of debugging. "My Robotic Friends" works best
-    as a group activity and includes a teacher workbook for classroom use.
+  kodableunplugged_gradelevel: 'Korosztály: 8-13'
+  projguts_gradelevel: 'Korosztály: 10-13'
+  frozen_platformtext: Modern browsers + tablets
+  codeorg_platformtext: Modern böngészők, okostelefonok, tabletek
+  thinkersmithspanish_platformtext: Unplugged
+  khan_platformtext: Modern Web browsers
+  khanes_platformtext: Modern Web browsers
+  tynker_platformtext: Modern web browsers
+  scratch_platformtext: MINDEN böngészőben
+  lightbot_platformtext: Minden böngésző valamint iOS, Android vagy játék konzol
+  thinkersmith_platformtext: Unplugged
   condcards_platformtext: Unuplugged
-  lightbotintl_platformtext: Learn core programming logic, starting from super-basic
-    programming, for ages 4+, on iOS or Android (or Web browser) . Learn how to sequence
-    commands, identify patterns, use procedures, and utilize loops!
-  codehs_platformtext: Learn the basics of programming with Karel the Dog, a fun,
-    accessible and visual introduction to coding, where giving commands to a computer
-    is just like giving commands to a dog. This tutorial is great if led by a teacher,
-    but can also be done independently.
-  codecademy_platformtext: Codecademy is an interactive, student-guided introduction
-    to the basics of CS through JavaScript that's used by tens of millions of students
-    around the world. We've prepared a no-hassle Hour of Code experience with accompanying
-    quizzes, slides, and a completed project for students at the end.
-  codecombat_platformtext: Play as a Wizard using code (spells) to control your heroes,
-    navigate mazes, defeat ogres, trick enemies, and rescue allies! Learn JavaScript
-    in this HTML 5 web game for complete beginners.
-  codeavengers_platformtext: Build a 2 player 2D top-down game with JavaScript in
-    10 short tasks. Then continue learning some basics of programming (variables and
-    if statements) as you create a Quiz to share with friends. Along the way  earn
-    points and badges as you compete to reach the top of the class leaderboard.
-  processing_platformtext: An introduction to programming in the context of the visual
-    arts using the Processing programming language. Short video lessons introduce
-    coding exercises that lead to designing an interactive drawing program
-  robomind_platformtext: 'Students learn the basics of programming by controlling
-    their own virtual robot. The online course is fully self-contained with short
-    presentations, movies, quizzes and automatic guidance/hints to help with the programming
-    exercises. '
-  groklearning_platformtext: Choose from 3 activities designed to give you your first
-    experience programming. For example, use the programming language Python to build
-    a chatbot called "Eliza". Can she fool your friends into think she's a human not
-    a computer? This can be done in either a student-guided or teacher-facilitated
-    form and comes with all notes and solutions.
-  quorum_platformtext: Modern web browsers. Screen-readers supported
+  lightbotintl_platformtext: iOS, Android (or web browser)
+  codehs_platformtext: Modern browsers
+  codecademy_platformtext: Modern web browsers. iOS, Android apps
+  codecombat_platformtext: Modern web browsers
+  codemonkey_platformtext: Modern web browsers
+  codeavengers_platformtext: Modern web browsers
+  processing_platformtext: Modern web browsers
+  robomind_platformtext: Modern web browsers, Mobile web
+  groklearning_platformtext: Modern web browsers
+  quorum_platformtext: Modern webböngészők. Képernyő-olvasó támogatással
   codespark_platformtext: iOS, Android (or web browser)
-  kodable_platformtext: Kodable is a self-guided iPad game that introduces kids 5+
-    to programming basics. Having a teacher or parent nearby is optimal, but not necessary.
-  tynkerapp_platformtext: iPad, Android tablets
-  hopscotch_platformtext: Student-guided tutorial on the iPad using the Hopscotch
-    programming language. Students will build games and apps for their iPad on their
-    iPad. Students can work individually or with friends (up to 3 per iPad).
-  robomindnl_platformtext: 'Students learn the basics of programming by controlling
-    their own virtual robot. The online course is fully self-contained with short
-    presentations, movies, quizzes and automatic guidance/hints to help with the programming
-    exercises. '
+  kodable_platformtext: iPad
+  tynkerapp_platformtext: iPad, Android tablet
+  hopscotch_platformtext: iPad
+  robomindnl_platformtext: Modern web browsers, Mobile web
+  flappy_platformtext: Modern böngészők, okostelefonok, tabletek
   bitsbox_platformtext: Modern web browsers
-  makegameswithus_platformtext: Know some programming already? Learn to make an iPhone
-    game in an hour! We'll guide you through the process, to code, test, and play
-    your game entirely in the browser and then share it on Facebook for friends to
-    try! No prior iPhone development experience is required. You must understand what
-    variables, methods, and objects are.
-  touchdevelop_platformtext: Crazy drawings, flying monsters, swirling flowers...
-    create your apps on your device with TouchDevelop, a friendly mobile app creation
-    environment. Runs on iPhone, iPad, Android, Windows, Windows Phone, Linux, Mac.
-  appinventor_platformtext: Entertaining, quick video tutorials walk you through building
-    three simple apps for your Android phone or tablet. Designed for novices and experts
-    alike, this hour of code will get you ready to start building your own apps before
-    you know it. Imagine sharing your own app creations with your friends! These activities
-    are suitable for individuals and for teachers leading classes.
-  blockly_platformtext: Got PCs with slow (or non-existent) internet access? Download
-    the Blockly tutorials that were the precursor of the Code.org tutorials - a single
-    3MB ZIP file can be loaded onto any computer or used off a memory stick
-  thinkersmith2_platformtext: Students learn about representing and storing letters
-    in binary, as functions of on and off. At the end, the class gets to encode their
-    own initials to take home with them.
-  kodableunplugged_platformtext: 'Designed for use with plain paper, the fuzzFamily
-    Frenzy is an introduction to programming logic for kids 5 and up. A teacher should
-    explain the game, then students program a partner to complete a simple obstacle
-    course. '
+  makegameswithus_platformtext: Modern Web browsers
+  touchdevelop_platformtext: Modern browsers, smartphones, all devices
+  appinventor_platformtext: Modern browsers + Android
+  blockly_platformtext: 'csak modern böngészők '
+  thinkersmith2_platformtext: Unplugged
+  kodableunplugged_platformtext: Unplugged
   projguts_platformtext: Unplugged
-  codeorg_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
+  frozen_shortdescription: Let's use code to join Anna and Elsa as they explore the
+    magic and beauty of ice.
+  codeorg_shortdescription: Tanulj programozni Mark Zuckerbergel  és Angry Birds-el!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
-  khan_shortdescription: Learn to draw in JavaScript
-  khanes_shortdescription: Learn to draw in JavaScript
+  khan_shortdescription: Tanulj Java-Scriptben rajzolni
+  khanes_shortdescription: Tanulj Java-Scriptben rajzolni
   tynker_shortdescription: Learn the basics of programming in a fun, visual environment
   scratch_shortdescription: Create an interactive card
   lightbot_shortdescription: A game to teach coding concepts
@@ -525,10 +481,13 @@
   codehs_shortdescription: Learn JavaScript programming with a fun visual environment
   codecademy_shortdescription: Learn JavaScript programming, in a web-browser
   codecombat_shortdescription: Play a game and learn JavaScript to win
+  codemonkey_shortdescription: Students program a monkey to catch bananas while it
+    gets slightly more complicated on each level.
   codeavengers_shortdescription: Learn JavaScript programming, in a web-browser
   processing_shortdescription: A one hour tutorial in the Processing languages
   robomind_shortdescription: Write code for a virtual robot
-  groklearning_shortdescription: Basic intro to python programming
+  groklearning_shortdescription: Tanítsd "Eliza" chat-robotát, hogy megtréfáld a barátaidat,
+    hadd higgyék ő egy ember!
   quorum_shortdescription: Join Mary on a guided tour as she learns the Quorum programming
     language.
   codespark_shortdescription: The Foos is a fun, kid-friendly game to learn about
@@ -538,6 +497,7 @@
     own mobile games.
   hopscotch_shortdescription: Learn visual programming on an iPad
   robomindnl_shortdescription: Write code for a virtual robot
+  flappy_shortdescription: Make your own game - Flappy Bird, Shark, or Submarine
   bitsbox_shortdescription: Code a series of apps to play and share, using real Javascript.
   makegameswithus_shortdescription: Learn to make an iPhone game in an hour
   touchdevelop_shortdescription: Code mobile apps directly on your phone, tablet or
@@ -547,6 +507,9 @@
   thinkersmith2_shortdescription: Learn how computers use 1s and 0s to represent information
   kodableunplugged_shortdescription: A fun unplugged exercise
   projguts_shortdescription: Try modeling and simulation using rock/paper/scissors
+  frozen_longdescription: Let's use code to join Anna and Elsa as they explore the
+    magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
+    and make a winter wonderland that you can then share with your friends!
   codeorg_longdescription: Learn the basic concepts of Computer Science with drag
     and drop programming. This is a game-like, self-directed tutorial starring video
     lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn
@@ -593,6 +556,10 @@
   codecombat_longdescription: Play as a Wizard using code (spells) to control your
     heroes, navigate mazes, defeat ogres, trick enemies, and rescue allies! Learn
     JavaScript in this HTML 5 web game for complete beginners.
+  codemonkey_longdescription: 'CodeMonkey is an online game that teaches coding in
+    a real programming language! Students program a monkey to catch bananas while
+    it gets slightly more complicated on each level. They get star scores on each
+    solution and can share it in a single click. '
   codeavengers_longdescription: Build a 2 player 2D top-down game with JavaScript
     in 10 short tasks. Then continue learning some basics of programming (variables
     and if statements) as you create a Quiz to share with friends. Along the way  earn
@@ -630,6 +597,9 @@
     their own virtual robot. The online course is fully self-contained with short
     presentations, movies, quizzes and automatic guidance/hints to help with the programming
     exercises. '
+  flappy_longdescription: Use drag-and-drop programming to make your own Flappy Bird
+    game, and customize it to look different (Flappy Shark, Flappy Santa, whatever).
+    Add the game to your phone in one click.
   bitsbox_longdescription: Customize your very own virtual tablet, then code a series
     of apps to play and share. Simple walkthroughs make it possible for even young
     kids to program real Javascript, and the more advanced you are the further you'll
@@ -668,7 +638,9 @@
   lightbot_beyond_name: LightBot
   codecademy_beyond_name: Codecademy
   kodable_beyond_name: Kodable
+  scratchjr_beyond_name: ScratchJR for pre-readers
   hopscotch_beyond_name: 'Hopscotch: Programming On Your iPad'
+  pocketcode_beyond_name: Pocket Code
   groklearning_beyond_name: Learn Python programming
   hacketyhack_beyond_name: Learn Ruby
   robomind_beyond_name: Program a virtual robot
@@ -703,10 +675,12 @@
   lightbot_beyond_gradelevel: Minden korosztály számára
   codecademy_beyond_gradelevel: Gimnázium
   kodable_beyond_gradelevel: "Általános iskolai"
+  scratchjr_beyond_gradelevel: "Általános iskolai"
   hopscotch_beyond_gradelevel: Middle school +
+  pocketcode_beyond_gradelevel: Middle school +
   groklearning_beyond_gradelevel: Middle school +
   hacketyhack_beyond_gradelevel: Gimnázium
-  robomind_beyond_gradelevel: Ages 8-13
+  robomind_beyond_gradelevel: 'Korosztály: 8-13'
   makegameswithus_beyond_gradelevel: Gimnázium
   appinventor_beyond_gradelevel: Middle school +
   touchdevelop_beyond_gradelevel: Gimnázium
@@ -738,7 +712,9 @@
   lightbot_beyond_platformtext: iOS, Android (or web browser)
   codecademy_beyond_platformtext: Modern web browsers. iOS, Android apps
   kodable_beyond_platformtext: iPad
+  scratchjr_beyond_platformtext: iPad
   hopscotch_beyond_platformtext: iPad
+  pocketcode_beyond_platformtext: Mobile App
   groklearning_beyond_platformtext: Modern web browsers
   hacketyhack_beyond_platformtext: Desktop install
   robomind_beyond_platformtext: Modern web browsers, Mobile web
@@ -766,15 +742,19 @@
   processing_beyond_platformtext: Modern web browsers
   alice_beyond_platformtext: Windows or Mac (install required)
   sphero_beyond_platformtext: Robot purchase
-  codeorg_beyond_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
-  khan_beyond_shortdescription: Learn to draw in JavaScript
+  codeorg_beyond_shortdescription: Tanulj programozni Mark Zuckerbergel  és Angry
+    Birds-el!
+  khan_beyond_shortdescription: Tanulj Java-Scriptben rajzolni
   tynker_beyond_shortdescription: A fun and engaging course for children in grades
     4-8
   scratch_beyond_shortdescription: Create an interactive animation or game
   lightbot_beyond_shortdescription: A game to teach coding concepts
   codecademy_beyond_shortdescription: Learn JavaScript programming, in a web-browser
   kodable_beyond_shortdescription: A fun iPad game to teach computer programming concepts
+  scratchjr_beyond_shortdescription: 'Create interactive stories and games using ScratchJr. '
   hopscotch_beyond_shortdescription: Learn visual programming on an iPad
+  pocketcode_beyond_shortdescription: Create a game on your smartphone and share with
+    friends to try!
   groklearning_beyond_shortdescription: Basic intro to python programming
   hacketyhack_beyond_shortdescription: Learn Ruby from the ground up
   robomind_beyond_shortdescription: Write code for a virtual robot
@@ -837,9 +817,16 @@
   kodable_beyond_longdescription: Kodable is a self-guided iPad game that introduces
     kids 5+ to programming basics. Having a teacher or parent nearby is optimal, but
     not necessary.
+  scratchjr_beyond_longdescription: ScratchJr is an introductory programming language
+    that enables young children to create their own interactive stories and games.
+    Children snap together graphical programming blocks to make characters move, jump,
+    dance, and sing
   hopscotch_beyond_longdescription: Student-guided tutorial on the iPad using the
     Hopscotch programming language. Students will build games and apps for their iPad
     on their iPad. Students can work individually or with friends (up to 3 per iPad).
+  pocketcode_beyond_longdescription: Create your own game on your smart phone with
+    Pocket Code! Help skydiver Steve to deliver his parcels. You can share it with
+    friends and other users to try!
   groklearning_beyond_longdescription: An introductory course using the programming
     language Python for people with no programming experience. Our unique mix of introductory
     content and challenges will bring you to a thorough understanding of Python and
@@ -966,3 +953,8 @@
     program because we believe play is a powerful teacher. Whether you're an educator
     or a parent, SPRK lessons give kids a fun crash course in programming robots while
     sharpening their skills in math and science.
+  codeintl_name: "Write your first computer program"
+  codeintl_gradelevel: "Ages 4-104"
+  codeintl_platformtext: "Modern browsers, smartphones, tablets"
+  codeintl_shortdescription: "Learn to code with Mark Zuckerberg and Angry Birds!"
+  codeintl_longdescription: "Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages."

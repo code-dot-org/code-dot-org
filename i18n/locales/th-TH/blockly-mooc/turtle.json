@@ -64,7 +64,7 @@
   "penDown":"pencil down",
   "penTooltip":"กดดินสอลงเพื่อวาด และยกดินสอขึ้นเพื่อหยุดวาด",
   "penUp":"ยกดินสอขึ้น",
-  "reinfFeedbackMsg":"นี่ดูเหมือนอะไรที่คุณต้องการใช่ไหม คุณสามารถกดปุ่ม \"ลองอีกครั้ง\" เพื่อดูรูปวาดของคุณ.",
+  "reinfFeedbackMsg":"Here is your drawing! Keep working on it or continue to the next puzzle.",
   "setColour":"set color",
   "setPattern":"set pattern",
   "setWidth":"set width",
