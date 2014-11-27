@@ -92,6 +92,7 @@
 
   $(document).ready(function() {
     createCarousels();
+    setupScratBlinking();
   });
 
   function createCarousels()
@@ -129,6 +130,31 @@
   $(window).load(function(){
     $(window).trigger('resize');
   })
+
+  function showScratBlink(blink) {
+    console.log("show blink", blink);
+    if (blink)
+    {
+      $(".scrat-standing").hide();
+      $(".scrat-standing-blink").show();
+    }
+    else
+    {
+      $(".scrat-standing").show();
+      $(".scrat-standing-blink").hide();
+    }
+
+  }
+
+  function setupScratBlinking() {
+    setTimeout(function() {
+      showScratBlink(true);
+      setTimeout(function() {
+        showScratBlink(false);
+        setupScratBlinking();
+      }, 200);
+    }, 4000);
+  }
 
 = view 'add_commas.js'
 %script{:src=>'/js/learn-metrics.js'}
