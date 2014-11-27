@@ -175,6 +175,19 @@ en:
       4:
         image: 'notes/hoc5_4.jpg'
         text: "Now, get those zombies where they belong!"
+    if_else_scrat:
+      1:
+        image: 'notes/saloni_ifelse_scrat1.jpg'
+        text: "An if-else statement is a decision between two things. Let's see how we can use an if-else statement with our buddy Scrat the squirrel."
+      2:
+        image: 'notes/saloni_ifelse_scrat2.jpg'
+        text: "This block looks the same as the \"if\" block, but there's an extra part at the bottom that says \"else\". If I put a \"move forward\" block where it says \"do\" and a \"turn left\" block where it says \"else\", that means Scrat the squirrel will move forward if there's a path ahead. If there's not a path ahead, Scrat will turn left."
+      3:
+        image: 'notes/saloni_ifelse_scrat3.jpg'
+        text: "It's making a decision and doing one of the two actions based on that decision. And just like \"if\" blocks, you can put \"if-else\" blocks inside \"repeat\" blocks."
+      4:
+        image: 'notes/saloni_ifelse_scrat4.jpg'
+        text: "Now let's help Scrat the squirrel get that acorn!"
     function:
       1:
         image: 'notes/stage13_1.jpg'

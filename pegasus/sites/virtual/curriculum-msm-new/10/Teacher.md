@@ -1,11 +1,11 @@
 ---
-title: Play Lab Defining Functions
+title: Play Lab Design Recipe
 view: page_curriculum
 theme: none
 ---
 
 
-<%= partial('curriculum_header', :unplugged=>false, :title=> 'Play Lab: Defining Functions',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>45) %>
+<%= partial('curriculum_header', :unplugged=>false, :title=> 'Play Lab: Design Recipe',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>45) %>
 
 [content]
 
@@ -22,7 +22,7 @@ Moving on from the simple functions students created in Eval, they will use the 
  
 1) [Introduction](#GetStarted)  
 
-### **Activity: Play Lab Defining Functions**  
+### **Activity: Play Lab Design Recipe**  
 
 2) [Online Puzzles](#Activity1)
 
@@ -45,16 +45,21 @@ Moving on from the simple functions students created in Eval, they will use the 
 
 ### <a name="GetStarted"></a> 1) Introduction
 
-Why the Design Recipe
+Functions are a key part of animation in computer programs. A function that draws a static picture of a cat, for example, can place the cat at a different location based on the input. When that input changes slightly based on time or user-interaction, the cat will appear to move. This is similar to the way that flip-book animations work, in which each page draws a static image that has changed by a small amount. When the pages are displayed quickly, the images appear to change smoothly.
+
+<img src="rocket_1.png" />
+
+<img src="rocket_2.gif" style="float:right;"/>
+Putting these images together, we arrive at an animation of the rocket moving up the screen.
 
 [/together]
 
 [together]
 
-## Activity: Play Lab Defining Functions
+## Activity: Play Lab Design Recipe
 ### <a name="Activity1"></a> 2) Online Puzzles
 
-In this stage you'll use the Design Recipe to create functions that solve word problems and create animations. Head to [MSM stage 10](http://studio.code.org/s/msm/stage/10/puzzle/1) in Code Studio to get started programming.
+In this stage you'll write functions that animate images like this rocket. Head to [MSM stage 10](http://studio.code.org/s/msm/stage/10/puzzle/1) in Code Studio to get started programming.
 
 [/together]
 

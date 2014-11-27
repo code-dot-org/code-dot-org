@@ -353,6 +353,7 @@ en:
         'loop_until': "Repeat Until Block"
         'if': "If Block"
         'if_else': "If/else Block"
+        'if_else_scrat': "If/else Block"
         'function': "Functions"
         'loop_while': "While Block"
         'loop_for': "Counter Block"

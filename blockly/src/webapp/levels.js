@@ -32,7 +32,6 @@ levels.ec_simple = {
   'editCode': true,
   'sliderSpeed': 0.7,
   'codeFunctions': [
-    {'func': 'random', 'params': ["1", "100"], 'category': 'hidden', 'idArgNone': true },
     {'func': 'createButton', 'params': ["'id'", "'text'"] },
     {'func': 'createTextInput', 'params': ["'id'", "'text'"] },
     {'func': 'getText', 'params': ["'id'"], 'category': 'value' },
