@@ -187,8 +187,8 @@ class Deliverer
     template = @templates[name]
     return template if template
 
-    path = File.find_first_existing(String.multiply_concat([Poste::Message.template_dir(name)],Poste::Message.template_extnames))
-    raise ArgumentError, "[Poste] '#{name}' template wasn't found." if path.nil?
+    path = Poste.resolve_template(name)
+    raise ArgumentError, "[Poste] '#{name}' template wasn't found." unless path
 
     engine = {
       '.haml'=>TextRender::HamlEngine,
