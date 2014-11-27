@@ -4,6 +4,7 @@ require 'cdo/poste'
 require 'cdo/hip_chat'
 require 'base64'
 require 'nokogiri'
+require src_dir 'forms'
 
 BATCH_SIZE = 10000
 MAX_THREAD_COUNT = 100
