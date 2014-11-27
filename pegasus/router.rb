@@ -21,7 +21,6 @@ end
 
 require src_dir 'database'
 require src_dir 'forms'
-require src_dir 'poste/api'
 require src_dir 'router'
 
 def http_vary_add_type(vary,type)

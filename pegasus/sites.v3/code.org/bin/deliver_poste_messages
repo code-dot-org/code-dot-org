@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 require_relative '../../../src/env'
-require_relative src_dir 'poste/api'
+require 'cdo/poste'
 require 'cdo/hip_chat'
 require 'base64'
 require 'nokogiri'
