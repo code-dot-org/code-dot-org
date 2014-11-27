@@ -40,7 +40,7 @@
             <block type="controls_repeat_ext" inline="true" uservisible="false">
               <value name="TIMES">
                 <block type="math_number" uservisible="false">
-                  <title name="NUM">3</title>
+                  <title name="NUM">???</title>
                 </block>
               </value>
               <statement name="DO">

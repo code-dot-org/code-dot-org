@@ -389,6 +389,7 @@
   mobile_devices: Tutoriales para dispositivos móviles
   frozen_name: Programa con Ana y Elsa
   codeorg_name: Escribí tu primer programa
+  codeintl_name: Codifica tu primer programa de computación
   thinkersmithspanish_name: Mis amigos robóticos
   khan_name: Introducción a JavaScript
   khanes_name: Introducción a JavaScript
@@ -423,6 +424,7 @@
   projguts_name: Piedra, papel, tijera
   frozen_gradelevel: Edad 8+
   codeorg_gradelevel: Edad 4-104
+  codeintl_gradelevel: Edad 4-104
   thinkersmithspanish_gradelevel: Todas las edades
   khan_gradelevel: Secundaria
   khanes_gradelevel: Secundaria
@@ -457,6 +459,7 @@
   projguts_gradelevel: 10-13 años
   frozen_platformtext: Modern browsers + tablets
   codeorg_platformtext: Cualquier navegador moderno, smartphones, tabletas
+  codeintl_platformtext: Cualquier navegador moderno, smartphones, tabletas
   thinkersmithspanish_platformtext: Desconectado
   khan_platformtext: Cualquier navegador moderno
   khanes_platformtext: Cualquier navegador moderno
@@ -492,6 +495,8 @@
   frozen_shortdescription: Let's use code to join Anna and Elsa as they explore the
     magic and beauty of ice.
   codeorg_shortdescription: Aprendé a programar con el creador de Facebook y Angry
+    Birds!
+  codeintl_shortdescription: Aprendé a programar con el creador de Facebook y Angry
     Birds!
   thinkersmithspanish_shortdescription: Aprendé a programar sin computadora!
   khan_shortdescription: Aprendé a dibujar en JavaScript
@@ -546,6 +551,10 @@
     patinas sobre hielo y harás un paraíso invernal que luego puedes compartir con
     tus amigos!
   codeorg_longdescription: Aprendé los conceptos básicos de la programación mediante
+    acciones tan simples como un par de clicks en este tutorial protagonizado por
+    Bill Gates, Mark Zuckerberg, Angry Birds y Plants vs Zombies. Aprendé qué es un
+    ciclo, un condicional y nociones básicas de algoritmia.
+  codeintl_longdescription: Aprendé los conceptos básicos de la programación mediante
     acciones tan simples como un par de clicks en este tutorial protagonizado por
     Bill Gates, Mark Zuckerberg, Angry Birds y Plants vs Zombies. Aprendé qué es un
     ciclo, un condicional y nociones básicas de algoritmia.
@@ -997,3 +1006,8 @@
   sphero_beyond_longdescription: Si eres un educador o un padre, lecciones SPRK provee
     a los niños un divertido curso intensivo de programación de robots, y permite
     mejorar habilidades en matemáticas y ciencias.
+  codeintl_name: "Write your first computer program"
+  codeintl_gradelevel: "Ages 4-104"
+  codeintl_platformtext: "Modern browsers, smartphones, tablets"
+  codeintl_shortdescription: "Learn to code with Mark Zuckerberg and Angry Birds!"
+  codeintl_longdescription: "Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages."
