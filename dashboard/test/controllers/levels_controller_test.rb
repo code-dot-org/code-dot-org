@@ -454,6 +454,11 @@ class LevelsControllerTest < ActionController::TestCase
 
     post :update, id: level.id, level: {name: 'ORIGINAL NAME'}
 
+    assert_response 422
+
+    # error message
+    assert assigns(:level).errors[:name]
+
     level = level.reload
     # same name
     assert_equal 'original name', level.name
