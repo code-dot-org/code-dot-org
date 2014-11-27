@@ -34,7 +34,7 @@ get '/u/:id' do |id|
   only_for 'code.org'
   dont_cache
   delivery = DB[:poste_deliveries].where(id:Poste.decrypt_id(id)).first
-  Contact.unsubscribe(delivery[:contact_email], ip_address:request.ip) if delivery
+  Poste.unsubscribe(delivery[:contact_email], ip_address:request.ip) if delivery
   halt(200, "You're unsubscribed.\n")
 end
 
@@ -42,7 +42,7 @@ get '/unsubscribe/:email' do |email|
   only_for 'code.org'
   dont_cache
   email = email.to_s.strip.downcase
-  Contact.unsubscribe(email, ip_address:request.ip)
+  Poste.unsubscribe(email, ip_address:request.ip)
   halt(200, "#{email} unsubscribed.\n")
 end
 

@@ -10,8 +10,8 @@ def main()
   total = unsubscribed = 0
 
   SENDY_DB[:subscribers].where('unsubscribed=1 OR complaint=1').each do |i|
-    unless Contact.unsubscribed?(i[:email])
-      Contact.unsubscribe(i[:email], ip_address:'127.0.0.1')
+    unless Poste.unsubscribed?(i[:email])
+      Poste.unsubscribe(i[:email], ip_address:'127.0.0.1')
       unsubscribed += 1
     end
     total += 1
