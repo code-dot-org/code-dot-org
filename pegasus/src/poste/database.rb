@@ -9,8 +9,6 @@ class Contact
   property :email             , String, length: 254, format: :email_address, key: true
   property :name              , String, length: 255
 
-  has n, :deliveries, model: 'Poste::Delivery'
-
   property  :created_at       , DateTime # Automated by dm-timestampes
   property  :created_on       , Date # Automated by dm-timestampes
   property  :created_ip       , IPAddress, required: true
@@ -120,6 +118,24 @@ module Poste
     pegasus_dir 'emails', *paths
   end
 
+  def self.decrypt_id(encrypted)
+    decrypter = OpenSSL::Cipher::Cipher.new 'AES-128-CBC'
+    decrypter.decrypt
+    decrypter.pkcs5_keyivgen(CDO.poste_secret, '8 octets')
+    plain = decrypter.update Base64::urlsafe_decode64(encrypted)
+    plain << decrypter.final
+    return(plain.to_i)
+  end
+
+  def self.encrypt_id(id)
+    encrypter = OpenSSL::Cipher::Cipher.new('AES-128-CBC')
+    encrypter.encrypt
+    encrypter.pkcs5_keyivgen(CDO.poste_secret, '8 octets')
+    encrypted = encrypter.update(id.to_s)
+    encrypted << encrypter.final
+    Base64::urlsafe_encode64(encrypted)
+  end
+  
   def self.resolve_template(name)
     template_extnames.each do |extname|
       path = emails_dir "#{name}#{extname}"
@@ -139,54 +155,6 @@ module Poste
 
   def self.template_extnames()
     ['.md','.haml','.html']
-  end
-
-  # The "Delivery" object holds the state for a single unit of delivery, e.g. a message paired
-  # with a recipient and whatever state needed to move the delivery through the system.
-  class Delivery
-    include DataMapper::Resource
-    property :id            , Serial
-    belongs_to :contact     , model: '::Contact'
-    property :message_id    , Integer, required: true, index: true, min: 0
-    property :params        , Json, required: true
-    property :created_at    , DateTime # Automated by dm-timestampes
-    property :created_ip    , IPAddress, required: true
-    property :sent_at       , DateTime
-
-    def self.get_by_encrypted_id(encrypted_id)
-      get(decrypt_id(encrypted_id))
-    end
-
-    def self.decrypt_id(encrypted)
-      decrypter = OpenSSL::Cipher::Cipher.new 'AES-128-CBC'
-      decrypter.decrypt
-      decrypter.pkcs5_keyivgen(CDO.poste_secret, '8 octets')
-      plain = decrypter.update Base64::urlsafe_decode64(encrypted)
-      plain << decrypter.final
-      return(plain.to_i)
-    end
-
-    def self.encrypt_id(id)
-      encrypter = OpenSSL::Cipher::Cipher.new('AES-128-CBC')
-      encrypter.encrypt
-      encrypter.pkcs5_keyivgen(CDO.poste_secret, '8 octets')
-      encrypted = encrypter.update(id.to_s)
-      encrypted << encrypter.final
-      Base64::urlsafe_encode64(encrypted)
-    end
-
-    def encrypted_id
-      @encrypted_id ||= Delivery.encrypt_id(id)
-    end
-
-    def unsubscribe_link()
-      "http://#{CDO.poste_host}/u/#{encrypted_id}"
-    end
-
-    def tracking_pixel()
-      "http://#{CDO.poste_host}/o/#{encrypted_id}"
-    end
-
   end
 
 end
