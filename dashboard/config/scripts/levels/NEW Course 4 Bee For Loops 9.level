@@ -20,8 +20,7 @@
     "nectar_goal": "18",
     "flower_type": "redWithNectar",
     "use_modal_function_editor": "false",
-    "use_contract_editor": "false",
-    "maze_data": null
+    "use_contract_editor": "false"
   }
 }]]></config>
   <blocks>
@@ -60,8 +59,8 @@
           </block>
           <block type="controls_repeat_ext" inline="true">
             <value name="TIMES">
-              <block type="variables_get">
-                <title name="VAR">counter</title>
+              <block type="math_number">
+                <title name="NUM">???</title>
               </block>
             </value>
           </block>
