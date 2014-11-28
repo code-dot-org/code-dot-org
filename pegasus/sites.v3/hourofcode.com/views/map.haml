@@ -57,7 +57,7 @@
     google.maps.event.addListener(layer, 'click', function(event) {
       enableDrag();
       event.infoWindowHtml = event.row['organization_name'].value;
-      if (event.row['city']) {
+      if (event.row['city'].value.length > 0) {
         event.infoWindowHtml += ' (' + event.row['city'].value + ')';
       }
       event.infoWindowHtml += '<br>';
