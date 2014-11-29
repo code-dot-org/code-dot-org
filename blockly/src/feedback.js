@@ -788,14 +788,16 @@ var getCountableBlocks = function() {
 /**
  * Check to see if the user's code contains the required blocks for a level.
  * This never returns more than BlocklyApps.NUM_REQUIRED_BLOCKS_TO_FLAG.
- * @return {!Array} array of array of strings where each array of strings is
- * a set of blocks that at least one of them should be used. Each block is
- * represented as the prefix of an id in the corresponding template.soy.
+ * @return {{blocksToDisplay:!Array, message:?string}} 'missingBlocks' is an
+ * array of array of strings where each array of strings is a set of blocks that
+ * at least one of them should be used. Each block is represented as the prefix
+ * of an id in the corresponding template.soy. 'message' is an optional message
+ * to override the default error text.
  */
 var getMissingRequiredBlocks = function () {
   var missingBlocks = [];
   var customMessage = null;
-  var code = null;  // JavaScript code, which is initalized lazily.
+  var code = null;  // JavaScript code, which is initialized lazily.
   if (BlocklyApps.REQUIRED_BLOCKS && BlocklyApps.REQUIRED_BLOCKS.length) {
     var userBlocks = getUserBlocks();
     // For each list of required blocks
@@ -809,7 +811,7 @@ var getMissingRequiredBlocks = function () {
       var requiredBlock = BlocklyApps.REQUIRED_BLOCKS[i];
       // For each of the test
       // If at least one of the tests succeeded, we consider the required block
-      // is used (unless checkAllBlocks is true, then all tests must succeed)
+      // is used
       var usedRequiredBlock = false;
       for (var testId = 0; testId < requiredBlock.length; testId++) {
         var test = requiredBlock[testId].test;
@@ -826,12 +828,13 @@ var getMissingRequiredBlocks = function () {
             // Succeeded, moving to the next list of tests
             usedRequiredBlock = true;
             break;
+          } else {
+            customMessage = requiredBlock[testId].message || customMessage;
           }
         } else {
           throw new Error('Bad test: ' + test);
         }
       }
-      // TODO: update customMessage with the failing test
       if (!usedRequiredBlock) {
         missingBlockNum++;
         missingBlocks = missingBlocks.concat(BlocklyApps.REQUIRED_BLOCKS[i][0]);
@@ -839,10 +842,11 @@ var getMissingRequiredBlocks = function () {
     }
   }
   var result = {
-    blocksToDisplay: missingBlocks
-  }
+    blocksToDisplay: missingBlocks,
+    message: null
+  };
   if (customMessage) {
-    result.message = customMessage
+    result.message = customMessage;
   }
   return result;
 };
