@@ -2,7 +2,7 @@
 
 -if variation == 'learn'
   #rightbox.desktop-feature{:style=>'float:right'}
-    %a{:href=>'#notes'}= I18n.t(:educator_notes)
+    %a{:href=>"http://hourofcode.com/resources/how-to"}= I18n.t(:educator_notes)
 
 -tutorials = Tutorials.new(variation=='learn' ? :tutorials : :beyond_tutorials)
 
