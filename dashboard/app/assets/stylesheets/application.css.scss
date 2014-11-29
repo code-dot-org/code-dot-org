@@ -293,7 +293,8 @@ th {
   }
 }
 
-.header.hide_on_mobile {
+.header.hide_on_mobile,
+.header-wrapper.hide_on_mobile {
   @media screen and (max-width: 900px) {
     display: none;
   }
