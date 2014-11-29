@@ -115,11 +115,11 @@ cs:
     subject: Připojit se do mé třídy (na Code.org)
     body: |
       Klikni na odkaz níže, aby ses registroval do cvičení počítačových věd na Code.org (se mnou jako "učitelem"):
-      
+
       %{link}
-      
+
       Cvičení jsou zábavná, vzhledově poutavá a učí základy počítačových věd pomocí jednoduchých, řízených herních hádanek. Naučíš se programovat s pomocí Billa Gatese, Marka Zuckerberga, Angry Birds a Plants vs. Zombies! :-)
-      
+
       %{name}
   follower:
     invite_sent: Pozvánka odeslána
@@ -349,7 +349,7 @@ cs:
     teacher: Teacher
   footer:
     help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped create this tutorial.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. All Rights Reserved.'
+    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
     feedback: Poskytnout zpětnou vazbu
     translate: Pomož nám v překladu do tvého jazyka
     support: Support

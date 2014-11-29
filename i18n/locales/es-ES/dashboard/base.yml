@@ -115,11 +115,11 @@ es:
     subject: Unirme a mi clase (en Code.org)
     body: |
       Haz click en el vínculo de más abajo para registrarte y usar tutoriales de ciencias de la computación en Code.org (conmigo como tu "maestro"):
-      
+
       %{link}
-      
+
       Los tutoriales son divertidos, visualmente atractivos, y enseñan los conceptos básicos de las ciencias de la computación usando una experiencia similar a un juego, simple y guiada. Aprende a programar con Bill Gates, Mark Zuckerberg, Angry Birds, y Plantas vs. Zombis! :-)
-      
+
       %{name}
   follower:
     invite_sent: Invitación enviada
@@ -349,7 +349,7 @@ es:
     teacher: Profesor
   footer:
     help_from_html: Ingenieros de Google, Microsoft, Facebook y Twitter han ayudado a crear este tutorial.
-    art_from_html: 'Angry Brids&trade;&&copy; 2009-2013 Rovio Entertainment Ltd. Todos los derechos reservados. <br/>Plants vs. Zombies&trade;&&copy; 2013 Electronic Arts Inc. Todos los derechos reservados.'
+    art_from_html: 'Angry Brids&trade;&&copy; 2009-2013 Rovio Entertainment Ltd. Todos los derechos reservados. <br/>Plants vs. Zombies&trade;&&copy; 2014 Electronic Arts Inc. Todos los derechos reservados.'
     feedback: Enviar comentarios
     translate: Ayúdanos a traducir a tu idioma
     support: Soporte
