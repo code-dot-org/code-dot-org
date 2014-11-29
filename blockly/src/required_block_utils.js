@@ -72,7 +72,7 @@ exports.makeTestsFromBuilderRequiredBlocks = function (customRequiredBlocks) {
         break;
       case 'procedures_defnoreturn':
       case 'procedures_defreturn':
-        requiredBlocksTests.push(testsFromProcedure(childNode));
+        requiredBlocksTests = requiredBlocksTests.concat(testsFromProcedure(childNode));
         break;
       default:
         requiredBlocksTests.push([testFromBlock(childNode)]);
@@ -129,32 +129,38 @@ function testsFromPickOne(node) {
  */
 function testsFromProcedure(node) {
   var paramCount = node.querySelectorAll('mutation > arg').length;
-  var tests = [{
-    // Ensure that some block has the required number of params. There's no
-    // guarantee users will name their function the same as the required block,
-    // so only match on number of params.
+  var emptyBlock = node.cloneNode(true);
+  emptyBlock.removeChild(emptyBlock.lastChild);
+  var tests = [[{
+    // Ensure that all blocks match a required block with the same number of
+    // params. There's no guarantee users will name their function the same as
+    // the required block, so only match on number of params.
     test: function(userBlock) {
       if (userBlock.type === node.getAttribute('type')) {
         return paramCount === userBlock.parameterNames_.length;
       }
-      return false;
+      // Block isn't the same type, so return true to keep searching.
+      return true;
     },
-    message: 'No function with ' + paramCount + ' params was found.' // TODO: i18n
-  }, {
+    blockDisplayXML: Blockly.Xml.domToText(emptyBlock),
+    message: 'No function with ' + paramCount + ' parameter(s) was found.', // TODO: correct string, i18n
+    checkAllBlocks: true
+  }], [{
     // Ensure that all procedure definitions actually use the parameters they
     // define inside the procedure.
     test: function(userBlock) {
       // TODO:
     },
+    message: 'Function not called with the correct parameter(s).', // TODO: correct string, i18n
     checkAllBlocks: true
-  }, {
+  }], [{
     test: function(userBlock) {
       console.log('test called with', userBlock);
       return true;
     },
     blockDisplayXML: '<xml></xml>',
     checkAllBlocks: true
-  }];
+  }]];
   return tests;
 }
 
