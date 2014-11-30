@@ -18,7 +18,7 @@
   - title = t('upsell.gallery.title')
   - body = t('upsell.gallery.body')
 
-- elsif id == "course1" || id == "course2" || id == "course3" || id == "artist" || id == "playlab"
+- elsif ["course1", "course2", "course3", "course4", "artist","flappy", "hourofcode", "frozen"].include?(id)
   - url = script_url(id)
   - title = data_t_suffix('script.name', id, "title")
   - body = data_t_suffix('script.name', id, "description_short")
@@ -28,17 +28,28 @@
   - title = data_t_suffix('script.name', id, "title")
   - body = data_t_suffix('script.name', id, "description_short")
 
-.span3.miniblock.miniblock-tall{style: "overflow:hidden"}
+- if ["course1", "course2", "course3", "course4"].include?(id)
+  - audience = data_t_suffix('script.name', id, "description_audience")
+  - block_class = "miniblock-tall-audiencerow"
+- else
+  - block_class = "miniblock-tall"
+
+.span3.miniblock{class: block_class, style: "overflow:hidden; position:relative"}
   =link_to url, {style:"text-decoration:none"} do
-    .heading{style: "padding-left: 10px; padding-right: 10px; padding-top: 0px; padding-bottom: 5px; "}
-      %h3.whitetext{style: "text-overflow: ellipsis; white-space: nowrap; overflow: hidden"}
-        = title
 
     .imgspan
       = image_tag(image_url("logo_tall_#{id}.jpg"), height: "120", style: "width: 100%; height: 120px")
-    %br/
-    %br/
 
     .clear
 
-    .smalltext.greytext{style: "padding-left: 10px; padding-right: 10px; padding-top: 10px; "}= body
+    .heading{style: "padding-left: 10px; padding-right: 10px; padding-top: 0px; padding-bottom: 0px; "}
+      %h3{style: "text-overflow: ellipsis; white-space: nowrap; overflow: hidden; font-weight:500"}
+        = title
+
+    .clear
+
+    .smalltext.greytext{style: "padding-left: 10px; padding-right: 10px; padding-top: 0px; "}= body
+
+    - if audience
+      .clear
+      .smalltext.whitetext{style: "position: absolute; bottom: 0px; width: 100%; margin-top:10px; padding-left: 10px; padding-right: 10px; padding-top: 4px; padding-bottom:4px; background-color:rgb(116, 128, 136)"}= audience

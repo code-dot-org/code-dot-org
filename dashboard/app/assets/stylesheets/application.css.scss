@@ -1030,7 +1030,7 @@ a.download-video {
 
   .row.navcontainer {
     margin: 30px 0 10px -20px;
-    background-color: #eee;
+    background-color: rgb(88, 103, 113);
   }  
 
   ul.nav.nav-pills {
@@ -1128,27 +1128,30 @@ a.download-video {
 }
 
 .miniblock {
-  background-color:rgb(88, 103, 113);
+  background-color:#ddd;
   height:100px;
   .heading {
     -moz-box-sizing:border-box; box-sizing:border-box; padding: 10px 0px 10px 0px;
   }
   h3 {
-    margin: 0
+    margin: 0;
+    color:rgb(88, 103, 113);
   }
   .smalltext {
     font-size:13px;
     padding-right:10px;
     font-weight:normal;
+    color:rgb(88, 103, 113);
   }
   .whitetext {
-    color:white;
+    color:#ddd;
   }
   .greytext {
-    color:#ccc;
+    color:rgb(88, 103, 113);
   }
   .imgspan {
     margin-left: 0px;
+    text-align: right;
   }
 }
 
@@ -1157,6 +1160,10 @@ a.download-video {
 }
 
 .miniblock-tall {
+  height:232px;
+}
+
+.miniblock-tall-audiencerow {
   height:250px;
 }
 
