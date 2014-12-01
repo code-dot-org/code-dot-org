@@ -60,7 +60,7 @@ exports.repeatSimpleBlock = function(count) {
 exports.makeTestsFromBuilderRequiredBlocks = function (customRequiredBlocks) {
   var blocksXml = xml.parseElement(customRequiredBlocks);
 
-  var requiredBlocksTests = [];
+  var requiredBlocksTests = testsForAllProcedures();
   Array.prototype.forEach.call(blocksXml.childNodes, function(childNode) {
     // Only look at element nodes
     if (childNode.nodeType !== 1) {
@@ -72,7 +72,7 @@ exports.makeTestsFromBuilderRequiredBlocks = function (customRequiredBlocks) {
         break;
       case 'procedures_defnoreturn':
       case 'procedures_defreturn':
-        requiredBlocksTests = requiredBlocksTests.concat(testsFromProcedure(childNode));
+        requiredBlocksTests.push(testsFromProcedure(childNode));
         break;
       default:
         requiredBlocksTests.push([testFromBlock(childNode)]);
@@ -122,16 +122,14 @@ function testsFromPickOne(node) {
 }
 
 /**
- * Given xml for a procedure block, generates tests that check for:
- * 1. Required number of params not declared
- * 2. Param declared but not actually used in the function
- * 3. Function not called with the correct number of params
+ * Given xml for a procedure block, generates tests that check for required
+ * number of params not declared
  */
 function testsFromProcedure(node) {
   var paramCount = node.querySelectorAll('mutation > arg').length;
   var emptyBlock = node.cloneNode(true);
   emptyBlock.removeChild(emptyBlock.lastChild);
-  var tests = [[{
+  return [{
     // Ensure that all blocks match a required block with the same number of
     // params. There's no guarantee users will name their function the same as
     // the required block, so only match on number of params.
@@ -145,23 +143,61 @@ function testsFromProcedure(node) {
     blockDisplayXML: Blockly.Xml.domToText(emptyBlock),
     message: 'No function with ' + paramCount + ' parameter(s) was found.', // TODO: correct string, i18n
     checkAllBlocks: true
-  }], [{
+  }];
+}
+
+/**
+ * Given xml for a procedure block, generates tests that check for:
+ * 1. Param declared but not actually used in the function
+ * 2. Function not called with the correct number of params
+ */
+function testsForAllProcedures() {
+  return [[{
     // Ensure that all procedure definitions actually use the parameters they
     // define inside the procedure.
     test: function(userBlock) {
-      // TODO:
+      if (!userBlock.parameterNames_) {
+        // Block isn't a procedure definition, return true to keep searching.
+        return true;
+      }
+      return userBlock.parameterNames_.every(function (paramName) {
+        return hasMatchingDescendant(userBlock, function(block) {
+          return block.type === 'parameters_get' &&
+              block.getTitleValue('VAR') === paramName;
+        });
+      });
+    },
+    message: 'Function never uses parameter.', // TODO: correct string, i18n
+    checkAllBlocks: true
+  }], [{
+    // Ensure that all procedure calls have each parameter input connected.
+    test: function(userBlock) {
+      if (!/^procedures_call/.test(userBlock.type)) {
+        // Block isn't a procedure call, return true to keep searching.
+        return true;
+      }
+      return userBlock.inputList.filter(function (input) {
+        return /^ARG/.test(input.name);
+      }).every(function (argInput) {
+        return argInput.connection.targetConnection;
+      });
     },
     message: 'Function not called with the correct parameter(s).', // TODO: correct string, i18n
     checkAllBlocks: true
-  }], [{
-    test: function(userBlock) {
-      console.log('test called with', userBlock);
-      return true;
-    },
-    blockDisplayXML: '<xml></xml>',
-    checkAllBlocks: true
   }]];
-  return tests;
+}
+
+/**
+ * Returns true if any descendant (inclusive) of the given node matches the
+ * given filter
+ */
+function hasMatchingDescendant(node, filter) {
+  if (filter(node)) {
+    return true;
+  }
+  return node.childBlocks_.some(function (child) {
+    return hasMatchingDescendant(child, filter);
+  });
 }
 
 /**

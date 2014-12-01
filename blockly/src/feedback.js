@@ -640,7 +640,10 @@ var FeedbackBlocks = function(options) {
     }
   }
 
-  if (blocksToDisplay.length === 0) {
+  var hasBlocks = blocksToDisplay.some(function(block) {
+    return block.blockDisplayXML;
+  });
+  if (blocksToDisplay.length === 0 || !hasBlocks) {
     return;
   }
 
