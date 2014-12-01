@@ -328,7 +328,9 @@ var getFeedbackMessage = function(options) {
         break;
       case TestResults.EMPTY_FUNCTION_BLOCK_FAIL:
         message = options.level.emptyFunctionBlocksErrorMsg ||
-            msg.emptyFunctionBlocksErrorMsg();
+            ((Blockly.useContractEditor || Blockly.useModalFunctionEditor) ?
+                msg.errorEmptyFunctionBlockModal() :
+                msg.emptyFunctionBlocksErrorMsg());
         break;
       case TestResults.TOO_FEW_BLOCKS_FAIL:
         message = options.level.tooFewBlocksMsg || msg.tooFewBlocksMsg();

@@ -1,6 +1,7 @@
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
+var msg = require('../locale/current/common');
 var _ = utils.getLodash();
 
 /**
@@ -140,8 +141,7 @@ function testsFromProcedure(node) {
       // Block isn't the same type, return false to keep searching.
       return false;
     },
-    blockDisplayXML: Blockly.Xml.domToText(emptyBlock),
-    message: 'No function with ' + paramCount + ' parameter(s) was found.' // TODO: correct string, i18n
+    message: msg.errorRequiredParamsMissing()
   }];
 }
 
@@ -174,7 +174,7 @@ function testsForAllProcedures() {
         });
       });
     },
-    message: 'Function never uses parameter.', // TODO: correct string, i18n
+    message: msg.errorUnusedParam(),
     checkAllBlocks: true
   }], [{
     // Ensure that all procedure calls have each parameter input connected.
@@ -189,7 +189,7 @@ function testsForAllProcedures() {
         return argInput.connection.targetConnection;
       });
     },
-    message: 'Function not called with the correct parameter(s).', // TODO: correct string, i18n
+    message: msg.errorParamInputUnattached(),
     checkAllBlocks: true
   }], [{
     // Ensure that all user-declared procedures have associated call blocks.
@@ -210,7 +210,7 @@ function testsForAllProcedures() {
         }
       });
     },
-    message: 'Function declared but never used.', // TODO: correct string, i18n
+    message: msg.errorUnusedFunction(),
     checkAllBlocks: true
   }], [{
     // Ensure there are no incomplete blocks inside any function definitions
@@ -226,7 +226,7 @@ function testsForAllProcedures() {
         });
       });
     },
-    message: 'Incomplete block inside function.', // TODO: correct string, i18n
+    message: msg.errorIncompleteBlockInsideFunction(),
     checkAllBlocks: true
   }]];
 }
