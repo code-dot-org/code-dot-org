@@ -13,16 +13,17 @@ Dir.glob("../../pegasus/sites.v3/hourofcode.com/public/us/**/thanks.md").each do
   File.write(file, File.read(file).gsub(/<% facebook.+?\%>/m, ""))
 end
 
-# add metadata to resources.md
-Dir.glob("../../pegasus/sites.v3/hourofcode.com/public/us/**/resources.md").each do |file|
-  File.write(file, "---\nlayout: wide\nnav: resources_nav\n---" + File.read(file))
-end
-
 # add social tags to thanks.md
 Dir.glob("../../pegasus/sites.v3/hourofcode.com/public/us/**/thanks.md").each do |file|
   File.write(file, '<% facebook = {:u=>"http://#{request.host}/us"}
                       twitter = {:url=>"http://hourofcode.com", :related=>"codeorg", :hashtags=>"", :text=>hoc_s(:twitter_default_text)}
                       twitter[:hashtags] = "HourOfCode" unless hoc_s(:twitter_default_text).include? "#HourOfCode" %>' + File.read(file))
 end
+
+# add metadata to resources.md
+Dir.glob("../../pegasus/sites.v3/hourofcode.com/public/us/**/resources.md").each do |file|
+  File.write(file, "---\nlayout: wide\nnav: resources_nav\n---" + File.read(file))
+end
+
 
 #TODO: rename pt-BR and pt-PT to pt and po

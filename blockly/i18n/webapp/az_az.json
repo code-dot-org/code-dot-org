@@ -22,6 +22,9 @@
   "repeatForeverTooltip": "Execute the actions in this block repeatedly while the app is running.",
   "shareWebappTwitter": "Düzəltdiyim proqrama nəzər yetirin. Onu @codeorg ilə özüm yazmışam",
   "shareGame": "Proqramınızı bölüşün:",
+  "stepIn": "Step in",
+  "stepOver": "Step over",
+  "stepOut": "Step out",
   "turnBlack": "turn black",
   "turnBlackTooltip": "Ekranı qaraldır.",
   "yes": "Bəli"

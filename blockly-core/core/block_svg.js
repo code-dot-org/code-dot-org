@@ -38,6 +38,9 @@ Blockly.BlockSvg = function(block) {
   var options = {
     "block-id": block.id
   };
+  if (block.htmlId) {
+    options.id = block.htmlId;
+  }
   // Create core elements for the block.
   this.svgGroup_ = Blockly.createSvgElement('g', options, null);
 

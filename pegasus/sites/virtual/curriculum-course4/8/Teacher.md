@@ -129,19 +129,19 @@ Sometimes we want to repeat things a certain number of times, but we want to kee
 
 > 1) Divide students into pairs
 
-> 2)  To start the round, each student rolls three times:
-	- One die to determine the starting value of X
-	- Three dice to determine the stopping value for X
-	- One die to determing the step interval of X each time through
+> 2)  To start the round, each student rolls three times:  
+      - One die to determine the starting value of X  
+	  - Three dice to determine the stopping value for X  
+	  - One die to determine the step interval of X each time through  
 
-> 3)  Use one of the provided number lines to trace the for loop that they’ve made
-	- Start at the starting value of X
-	- Count down the number line, circling the numbers at the rolled interval
-	- Stop when you get to the predetermined stopping value
+> 3)  Use one of the provided number lines to trace the for loop that they’ve made  
+	  - Start at the starting value of X  
+	  - Count down the number line, circling the numbers at the rolled interval  
+	  - Stop when you get to the predetermined stopping value  
 
 > 4)  Add all of the circled values to your score, then let the other player take a turn
 
-> 5)  Best 2 out of 3 Wins
+> 5)  Best 2 out of 3 wins
 
 
 [tip]
@@ -149,9 +149,9 @@ Sometimes we want to repeat things a certain number of times, but we want to kee
 # Lesson Tip  
 When you play this game, it's as if you're running through a loop like this
 
-for (x=start value; x <= stop value; x = x + interval){
-	circle current x value;
-	add current x value to round score;
+for (x=startValue; x <= stopValue; x = x + interval){  
+	circle currentXvalue;  
+	add currentXvalue to roundScore;  
 }
 
 It may be difficult for young students to understand this written in pseudocode, but it may be helpful to have you explain out loud (and perhaps with a diagram) what they will be using as the content of a for loop.
@@ -218,7 +218,7 @@ Use these activities to enhance student learning. They can be used as outside of
 
 - Using chalk, draw a hop scotch diagram outside on the blacktop
   - Number the squares from bottom to top
-  - Have students give each other a start sqare, stop square, and how many at a time they need to jump
+  - Have students give each other a start square, stop square, and how many at a time they need to jump
   - When the jumper is done, have them write down the loop they just performed
   - Start adding additional activities to be done at each square, this will add complexity to the written portion, as well
 

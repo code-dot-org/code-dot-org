@@ -43,6 +43,7 @@
   "numBlocksNeeded": "Честитамо! Решио-ла си мозгалицу {puzzleNumber}. (Међутим, постоји програм са само {numBlocks, plural, one {једним блоком} other {# блокова}}.)",
   "numLinesOfCodeWritten": "Управо си написао-ла {numLines, plural, one {1 линију} other {# линија}} кода!",
   "play": "играј",
+  "print": "Print",
   "puzzleTitle": "Мозгалица {puzzle_number} од {stage_total}",
   "repeat": "понављај",
   "resetProgram": "Почни поново",
@@ -80,5 +81,6 @@
   "tryHOC": "Испробај \"Hour of Code\"",
   "signup": "Региструј се за уводни курс",
   "hintHeader": "Ево предлога:",
-  "genericFeedback": "Погледај како си завршио и пробај да поправиш свој програм."
+  "genericFeedback": "Погледај како си завршио и пробај да поправиш свој програм.",
+  "defaultTwitterText": "Check out what I made"
 }

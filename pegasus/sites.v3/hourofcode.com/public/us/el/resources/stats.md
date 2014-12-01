@@ -1,15 +1,17 @@
 
 
-# Πώς να προσελκύσεις τα ΜΜΕ στην εκδήλωσή σου για την Ώρα του Κώδικα
+[<button style="float: right; margin-top: 50px">Sign up your event</button>](/#join)
 
-## Μερικά σοκαριστικά στατιστικά (Ηνωμένες Πολιτείες):
+# Blurbs and Useful Stats
 
-  * Θα υπάρξουν ένα εκατομμύριο περισσότερες θέσεις εργασίας Πληροφορικής σε σχέση με τους τους φοιτητές Πληροφορικής τα επόμενα 10 χρόνια (που αθροίζονται σε 500 δισεκατομμύρια δολάρια σε μισθούς).
-  * Περισσότερο από το 50 τοις εκατό όλων των επαγγελμάτων που αφορούν τα Μαθηματικά και τις Επιστήμες είναι στην ουσία επαγγέλματα που αφορούν την Πληροφορική. 
-  * Τα επαγγέλματα Πληροφορικής βρίσκονται ανάμεσα στις υψηλότερα αμοιβόμενες εργασίες για νέους απόφοιτους. Παρόλα αυτά λιγότερο από το 3% των αποφοίτων των κολλεγίων, έχουν δίπλωμα στην Επιστήμη των Υπολογιστών.
-  * Σε 26 πολιτείες, τα μαθήματα της Επιστήμης των Υπολογιστών δεν προσμετρώνται ως προαπαιτούμενα για την αποφοίτηση από τα Λύκεια Θετικών Επιστημών. 
-  * Λιγότεροι από το 20% των υποψηφίων φοιτητών για εισαγώγη σε σχολές Πληροφορικής είναι γυναίκες. Λιγότεροι από 10% είναι αφροαμερικάνοι ή κατάγονται από τη Λατινική Αμερική.
+## Use this short blurb in newsletters
 
-## Οπτική Αναπαράσταση Στατιστικών:
+### Bring computer science to your school. Start with an Hour of Code
+
+Οι υπολογιστές είναι παντού, αλλά λιγότερα σχολεία διδάσκουν Πληροφορική από ό, τι πριν από 10 χρόνια. Τα καλά νέα είναι, ότι πρόκειται να το αλλάξουμε αυτό. If you heard about the [Hour of Code](<%= hoc_uri('/') %>) last year, you might know it made history. Σε μία μόνο εβδομάδα, 15 εκατομμύρια μαθητές ήρθαν σε επαφή με την επιστήμη της Πληροφορικής! The [Hour of Code](<%= hoc_uri('/') %>) is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. [Sign up](<%= hoc_uri('/') %>) to host an Hour of Code this December 8-14 during Computer Science Education Week and help reach 100 million students by the end of the year. Add your school to the map, go to <http://hourofcode.com>
+
+## Infographic version:
 
 ![εικόνα](http://code.org/images/fit-8000/Code.org_infographic.png)
+
+<a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>

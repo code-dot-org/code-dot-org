@@ -6,6 +6,7 @@
   "overlayBlockTitle": "위에그리기(맨위, 아래)",
   "placeImageBlockTitle": "이미지배치(x, y, 이미지)",
   "rectangleBlockTitle": "사각형(가로길이, 세로높이, 형태, 색)",
+  "reinfFeedbackMsg": "만든 그림을 편집하려면 \"다시 실행\" 버튼을 누르면 됩니다.",
   "rotateImageBlockTitle": "회전(각도, 이미지)",
   "scaleImageBlockTitle": "확대(비율)",
   "squareBlockTitle": "정사각형(한변의길이, 형태, 색)",
