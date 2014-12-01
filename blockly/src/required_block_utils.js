@@ -177,7 +177,7 @@ function testsForAllProcedures() {
         return true;
       }
       return userBlock.inputList.filter(function (input) {
-        return /^ARG/.test(input.name);
+        return (/^ARG/.test(input.name));
       }).every(function (argInput) {
         return argInput.connection.targetConnection;
       });
