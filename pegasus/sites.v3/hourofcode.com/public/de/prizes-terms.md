@@ -4,15 +4,15 @@
 
 ## Dropbox-Speicher oder Skype-Guthaben:
 
-The 10 GB of Dropbox space or $10 of Skype credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The 10 GB of free space must be added to an existing Dropbox account. Limit one redemption per organizer.
+Die 10 GB Speicherplatz bei Dropbox oder das 10$ Guthaben sind beschränkt auf K-12 Dozenten, Ausbilder in Horten oder Bildungseinrichtungen. The 10 GB of free space must be added to an existing Dropbox account. Limit one redemption per organizer.
 
-Every organizer must register for the Hour of Code in order to receive the Dropbox space or Skype credit. If your entire school participates in the Hour of Code, each educator must individually register as an organizer to qualify.
+Every organizer must register for the Hour of Code in order to receive the Dropbox space or Skype credit. Wenn Deine gesamte Schule an einer Hour of Code teilnimmt, muss sich jeder veranstaltende Lehrer separat registrieren.
 
 Code.org will contact organizers after the Hour of Code (Dec. 8-14) to provide instructions for redeeming Dropbox space or Skype credit.
 
 <% if @country == 'us' %>
 
-## Video chat with a guest speaker:
+## Video-Chat mit einem Gastredner:
 
 Prize limited to K-12 classrooms in the U.S. and Canada only. To qualify, sign up your classroom by November 14, 2014. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligbile to win.
 

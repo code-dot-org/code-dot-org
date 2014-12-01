@@ -1,6 +1,6 @@
 * * *
 
-kimden: '"Hadi Partovi (Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)' konu: Kod Saatine ev sahipliği yapmak amacıyla kaydolduğunuz için sizlere teşekkür ederiz! görünüm: hiçbiri tema: hiçbiri
+from: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)" subject: "Thanks for signing up to host an Hour of Code!" litmus_tracking_id: "5g5lyi1a"
 
 * * *
 
@@ -10,12 +10,6 @@ kimden: '"Hadi Partovi (Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#
 
 **HER** Kod Saati düzenleyicisine 10 GB Dropbox alanı veya 10 dolarlık Skype kredisi hediye edilecektir. [ Ayrıntılar](http://<%= hostname %>/ ödüller)
 
-<% if @country == 'us' %>
-
-Bütün okulunuzun [ kodlama vaktine katılmasını](http://<%= hostname %>/whole-school) sağlayın ve büyük ödülü kazanma şansı yakalayın.
-
-<% end %>
-
 ## 1. Organizasyonu yayın
 
 Arkadaşlarınıza #KodlamaSaati 'ni anlatın.
@@ -24,38 +18,30 @@ Arkadaşlarınıza #KodlamaSaati 'ni anlatın.
 
 ## 2. Tüm okulun bir Kodlama Saati talep etmesini sağlayın
 
-[ Bu e-postayı gönder](http://<%= hostname %>/ resources#email) veya [bu belgeyi okul idarecisine ver](http://<%= hostname %>/files/schools-handout.pdf). Okulun projeye katılır katılmaz, [okulun için 10 bin dolar değerindeki teknoloji paketini kazanmak için giriş yap](http://<%= hostname %>/prizes) ve bölgedeki diğer okulları da projeye katılmaya davet et.
-
-<% else %>
-
-## 2. Tüm okulun bir Kodlama Saati talep etmesini sağlayın
-
-[Okul idarecisine bu e-postayı gönder](http://<%= hostname %>/resources#email) veya [bu belgeyi](http://<%= hostname %>/files/schools-handout.pdf) okul idarecisine ver.
+[Send this email](http://<%= hostname %>/resources#email) or give [this handout](http://<%= hostname %>/files/schools-handout.pdf) to your principal.
 
 <% end %>
 
-## 3. İşvereninizin de katılmasını rica edin
+## 3. Ask your employer to get involved
 
-[Bu e-postayı](http://<%= hostname %>/resources#email) yöneticinize veya CEO'nuza gönderin. Ya da [bu belgeyi onlara verin](http://<%= hostname %>/resources/hoc-one-pager.pdf).
+[Send this email](http://<%= hostname %>/resources#email) to your manager, or the CEO. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf).
 
-## 4. Kodlama Saatini üyesi olduğunuz topluluklarda da duyurun
+## 4. Promote Hour of Code within your community
 
-Yerel grupları da dahil edin. Ya da komşularınız için bir Kodlama Saati partisi düzenleyin.
+Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
 
-## 5. Yerel yönetim idarelerinden Kodlama Saatini desteklemesini isteyin
+## 5. Ask a local elected official to support the Hour of Code
 
-[Bu e-postayı](http://<%= hostname %>/resources#politicians) belediye başkanınıza, belediye meclisinize veya okul yönetiminize gönderin. Ya da, [onlara bu el ilanını verin](http://<%= hostname %>/resources/hoc-one-pager.pdf) ve onları okulunuza davet edin.
+[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
 
 <% if @country == 'ro' %>
 
-Etkinliğimizi duyurduğunuz için teşekkür ederiz! Daha fazla bilgi veya sorularınız için bize ulaşabilirsiniz. Haydi birlikte tarih yazalım!
+Multumim ca ne-ai anuntat despre evenimentul tau! Anunta-ne daca doresti informatii suplimentare sau daca ai intrebari. Hai sa facem istorie impreuna!
 
-Kodlama Saati Romanya Ekibi hoc@adfaber.org
+Echipa Hour of Code Romania hoc@adfaber.org
 
 <% end %>
 
 * * *
 
-Code.org 501c3 kar amacı gütmeyen bir organizasyondur. Adresimiz: 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Bu e-postaların gelmesini istemiyor musunuz? [Abonelikten çık](%= unsubscribe_link %).
-
-![](<%= tracking_pixel %>)
+Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't like these emails? [Unsubscribe](%= unsubscribe_link %).

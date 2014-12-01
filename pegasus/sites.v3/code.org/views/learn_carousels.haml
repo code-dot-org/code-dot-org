@@ -2,18 +2,22 @@
 
 -if variation == 'learn'
   #rightbox.desktop-feature{:style=>'float:right'}
-    %a{:href=>'#notes'}= I18n.t(:educator_notes)
+    %a{:href=>"http://hourofcode.com/resources/how-to"}= I18n.t(:educator_notes)
 
 -tutorials = Tutorials.new(variation=='learn' ? :tutorials : :beyond_tutorials)
 
 #carousel-ie8{:style=>'display:none'}
-  = view :learn_carousel, :heading=>I18n.t(:older_systems), :subheading=>I18n.t(:older_systems_subheading), :tag=>'IE8', :tutorials=>tutorials, :id=>'collection-ie8'
+  = view :learn_carousel, :heading=>I18n.t(:older_systems), :subheading=>I18n.t(:older_systems_subheading), :tag=>'IE8', :tutorials=>tutorials, :id=>'collection-ie8', :check_language=>true
 
 #carousel-mobile{:style=>'display:none'}
-  = view :learn_carousel, :heading=>I18n.t(:mobile_devices), :tag=>'Mobile', :tutorials=>tutorials, :id=>'collection-mobile'
+  = view :learn_carousel, :heading=>I18n.t(:mobile_devices), :tag=>'Mobile', :tutorials=>tutorials, :id=>'collection-mobile', :check_language=>true
 
 #carousel-international{:style=>'display:none'}
   = view :learn_carousel, :heading=>I18n.t(:carousel_heading_international), :tag=>'International', :tutorials=>tutorials, :id=>'collection-international', :international_layout=>true, :check_language=>true
+  %br
+  %br
+  %h1= I18n.t(:carousel_heading_domestic)
+  %hr
 
 - categories.each do |category|
   - id = "collection-" + category[:tag]
@@ -23,10 +27,8 @@
 %br
 
 -if variation == 'learn'
-  %a{:id=>'notes'}
-  #guidelines{:style=>'padding:5px'}
-    = view :learn_notes
-    %br
+  %a{:href=>"http://hourofcode.com/resources/how-to"}
+    = I18n.t(:educator_notes)
 
 -if variation == 'beyond'
   %a{:href=>"/educate"}
@@ -65,6 +67,7 @@
   if (pegasusLocale.substring(0,2) != "en")
     $('#carousel-international').show();
 
+
 %script{:src=>'/js/jquery.carouFredSel-6.2.1-packed.js'}
 %script{:src=>'/js/jquery.touchSwipe.min.js'}
 :javascript
@@ -90,7 +93,7 @@
         prev  : id + ' .slide-prev',
         next  : id + ' .slide-next',
         pagination : '#pagination-' + $(this).attr('id'),
-        swipe	: {
+        swipe : {
           onTouch : true,
           onMouse : false
         },

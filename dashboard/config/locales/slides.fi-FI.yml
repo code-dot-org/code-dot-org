@@ -114,8 +114,8 @@
           by real code.
       6:
         image: notes/flappy06.jpg
-        text: 'If you take a look at the workspace, there are some green blocks that
-          are filled in for you - these are "event handlers" '
+        text: Kun tarkastelet työtilaa, huomaat joitain vihreitä lohkoja valmiiksi
+          täytettynä - nämä ovat "tapahtumakäsittelijöitä"
       7:
         image: notes/flappy07.jpg
         text: If you want the bird to FLAP when you CLICK the mouse, you can do that
@@ -128,8 +128,8 @@
           to add in response to those events.
       9:
         image: notes/flappy09.jpg
-        text: When you see a drop down arrow like this, that means you can change
-          the settings - like what sound to play when flappy hits the ground.
+        text: Kun näet tälläisen nuolen alaspäin, se tarkoittaa että voit muuttaa
+          asetuksia - kuten mikä ääni kuuluu kun flappy osuu maahan.
       10:
         image: notes/flappy10.jpg
         text: Viimeisessä pulmassa voit luoda oman pelin ja jakaa sen ystäviesi kanssa.

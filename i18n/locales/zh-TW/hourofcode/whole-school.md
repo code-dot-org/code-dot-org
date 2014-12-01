@@ -1,9 +1,9 @@
 * * *
 
-layout: wide
+佈局： 寬
 
 * * *
 
-# Get your whole school to participate
+# 讓你整個的學校參加
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+有關獲取整個學校參加代碼小時資訊將在這裡。

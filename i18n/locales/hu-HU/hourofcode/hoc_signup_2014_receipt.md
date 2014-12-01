@@ -1,20 +1,14 @@
 * * *
 
-Feladó: '"Hadi Partovi (Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)' tárgy: Köszönjük, hogy jelentkezett a Hour of Code házigazdájának! view: none theme: none
+from: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)" subject: "Thanks for signing up to host an Hour of Code!" litmus_tracking_id: "5g5lyi1a"
 
 * * *
 
 <% hostname = CDO.canonical_hostname('hourofcode.com') %>
 
-# Thanks for signing up to host an Hour of Code!
+# Köszönjük hogy jelentkezett egy Hour of Code óra megtartására!
 
 **EVERY** Minden Hour of Code házigazda számára 10 GB Dropbox tárhelyet vagy $10 értékű Skype egyenleget ajándékozunk köszönetképpen [Részletek](http://<%= hostname %>/prizes)
-
-<% if @country == 'us' %>
-
-Ha az Ön iskolájának [minden diákja csatlakozik,](http://<%= hostname %>/whole-school) esélyük nyílik elnyerni a nagy értékű nyeremények egyikét.
-
-<% end %>
 
 ## 1. Spread the word
 
@@ -24,31 +18,25 @@ Tell your friends about the #HourOfCode.
 
 ## 2. Ask your whole school to offer an Hour of Code
 
-[Küldd el ezt az e-mailt](http://<%= hostname %>/resources#email) vagy [add oda ezt az anyagot az igazgatódnak](http://<%= hostname %>/files/schools-handout.pdf). Amint az iskolád benne van, [nevezd be az iskolád a 10 ezer dollárnyi technikai eszközökért folyó versenybe ](http://<%= hostname %>/prizes) és hívj meg más iskolákat is a környékeden.
-
-<% else %>
-
-## 2. Ask your whole school to offer an Hour of Code
-
-[Küldd el ezt az e-mailt](http://<%= hostname %>/resources#email) vagy add oda [ezt az anyagot](http://<%= hostname %>/files/schools-handout.pdf) az igazgatódnak.
+[Send this email](http://<%= hostname %>/resources#email) or give [this handout](http://<%= hostname %>/files/schools-handout.pdf) to your principal.
 
 <% end %>
 
-## 3. Kérd meg a téged foglalkoztató céget, hogy vegyenek részt
+## 3. Ask your employer to get involved
 
-[Küldd el ezt az e-mailt](http://<%= hostname %>/resources#email) a főnöködnek vagy az igazgatónak. Vagy [add nekik oda ezt az anyagot](http://<%= hostname %>/resources/hoc-one-pager.pdf).
+[Send this email](http://<%= hostname %>/resources#email) to your manager, or the CEO. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf).
 
-## 4. Népszerűsítsd a Kódolás Órája eseményt a környezetedben
+## 4. Promote Hour of Code within your community
 
-Keress meg helyi csoportokat — cserkészek, templomi közösségek, egyetemek, veteránok vagy szakszervezetek. Vagy szervezz egy „utcabulit” a szomszédokkal.
+Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
 
-## 5. Kérj meg egy helyi választott vezetőt, hogy támogassa a Kód Órája kezdeményezést
+## 5. Ask a local elected official to support the Hour of Code
 
-[Küldd el ezt az e-mailt](http://<%= hostname %>/resources#politicians) a polgármesterednek, a városvezetésnek vagy az iskolai tanácsnak. Vagy [add nekik oda ezt az anyagot](http://<%= hostname %>/resources/hoc-one-pager.pdf) és hívd meg őket az iskoládba.
+[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
 
 <% if @country == 'ro' %>
 
-Keress bennünket, ha további kérdésed van vagy bővebb információra van szükséged. Csináljunk együtt történelmet!
+Multumim ca ne-ai anuntat despre evenimentul tau! Anunta-ne daca doresti informatii suplimentare sau daca ai intrebari. Hai sa facem istorie impreuna!
 
 Echipa Hour of Code Romania hoc@adfaber.org
 
@@ -56,6 +44,4 @@ Echipa Hour of Code Romania hoc@adfaber.org
 
 * * *
 
-A Code.org egy 501c3-as non-profit szervezet. Címünk 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Nem szeretnél ilyen leveleket kapni? [Irakozz le](%= unsubscribe_link %).
-
-![](<%= tracking_pixel %>)
+Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't like these emails? [Unsubscribe](%= unsubscribe_link %).

@@ -16,12 +16,6 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 **ALLE** der arrangerer Hour of Code får 10 GB lagerplads på Dropbox eller Skype-kredit til en værdi af 10 dollars som tak. [ Detaljer](<%= hoc_uri('/prizes') %>)
 
-<% if @country == 'us' %>
-
-Få [hele din skole til at deltage](<%= hoc_uri('/prizes') %>) for at få mulighed for at vinde store præmier til hele skolen.
-
-<% end %>
-
 ## 1. Spred budskabet
 
 Fortæl dine venner om #HourOfCode.
@@ -32,30 +26,30 @@ Fortæl dine venner om #HourOfCode.
 
 ## 2. Spørg om hele din skole kan deltage i Hour of Code
 
-[Send denne email](<%= hoc_uri('/resources#email') %>) eller[denne handout](<%= hoc_uri('/files/schools-handout.pdf') %>). Når din skole har tilmeldt sig, [så vær med i konkurrencen om $10,000 i it-udstyr til din skole](/prizes) og prøv at få andre skoler i dit område til at være med. (Gælder pt ikke danske skoler!).
+[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](/resources/hoc-one-pager.pdf) to your principal.
 
 <% else %>
 
 ## 2. Spørg om hele din skole kan deltage i Hour of Code
 
-[Send denne email](<%= hoc_uri('/resources#email') %>) eller giv [denne handout](<%= hoc_uri('/files/schools-handout.pdf') %>) til din skoleleder.
+[Send this email](<%= hoc_uri('/resources#email') %>) or give [this handout](/resources/hoc-one-pager.pdf) this handout</a> to your principal.
 
 <% end %>
 
 ## 3. Giv et bidrag
 
-[Donér til vores crowdfunding kampagne.](http://<%= codeorg_url() %>/donate) For at undervise 100 millioner børn, har vi brug for din støtte. Vi har lige lanceret hvad der kan blive den [største crowdfunding kampagne til undervisning](http://<%= codeorg_url() %>/donate) nogensinde. Hver krone du giver vil blive matchet af primære Code.org [støtter](http://<%= codeorg_url() %>/about/donors), og fordobles dermed.
+[Donate to our crowdfunding campaign.](http://<%= codeorg_url() %>/donate) To teach 100 million children, we need your support. We just launched the [largest education crowdfunding campaign](http://<%= codeorg_url() %>/donate) in history. *Every* dollar will be matched [donors](http://<%= codeorg_url() %>/about/donors), doubling your impact.
 
 ## 4. Få din arbejdsgiver involveret
 
-[Send denne email](<%= hoc_uri('/resources#email') %>) til din leder, eller direktør. Eller [giv dem denne handout](<%= hoc_uri('/resources/hoc-one-pager.pdf') %>).
+[Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](http://hourofcode.com/resources/hoc-one-pager.pdf).
 
 ## 5. Reklamér for Hour of Code i dit lokalområde
 
-Recruit a local group — boy scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
+Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
 
 ## 6. Bed en lokal politiker om at støtte Hour of Code
 
-[Send denne email](<%= hoc_uri('/resources#politicians') %>) til din borgmester, byrådet, eller skolebestyrelsen. Eller[giv dem denne handout](<%= hoc_uri('/resources/hoc-one-pager.pdf') %>) og inviter dem til at besøge din skole.
+[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board. Or [give them this handout](http://hourofcode.com/resources/hoc-one-pager.pdf) and invite them to visit your school.
 
 <%= view 'popup_window.js' %>

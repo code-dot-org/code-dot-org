@@ -31,7 +31,7 @@ We’d like to host a variety of engaging options, but the primary goal is to op
 
 A committee of computer science educators will rank submissions based on qualitative and quantitative metrics, including survey results from a broader set of educators.
 
-**Tutorials will be listed higher if they are:**
+**Tutoriaalit listataan korkeammalle, jos ne:**
 
   * ovat korkealaatusisia
   * ovat itsestään ohjautuvia, eivät tarvitse ohjeita
@@ -42,7 +42,7 @@ A committee of computer science educators will rank submissions based on qualita
   * edistävät kaikkien väestörakenteen ryhmien oppimista (erityisesti aliedustetut ryhmät)
   * eivät keskity pelkkään HTML+CSS-verkkosivusuunnitteluun - (tavoitteenamme on tietotekniikka, ei pelkkä HTML-koodaus)
 
-**Tutorials will be listed lower if they are:**
+**Tutoriaalit listataan alemmaksi, jos ne:**
 
   * ovat huonolaatuisia
   * ovat kehittyneemmän tason opettamista (ei aloittelijoille)
@@ -51,7 +51,7 @@ A committee of computer science educators will rank submissions based on qualita
   * ovat tietylle sukupuolelle taivutettuja (esim. ovat teemaltaan suunnattuja ensisijaisesti pojille)
   * toimivat ohjaavana tekijänä oppimisalustalle, joka veloittaa lukukausimaksuja
 
-**Tutorials will NOT be listed if they:**
+**Tutoriaaleja EI listata, jos ne:**
 
   * vaativat paljon opettajan osallistumista ja valmistautumista (eli eivät ole itsestään ohjautuvia)
   * eivät ole suunniteltu olemaan noin tunnin pituisia

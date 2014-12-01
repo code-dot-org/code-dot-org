@@ -1,10 +1,19 @@
 
 
-# Как учить в "Часе программирования"
+<div class="row">
+  <h1 class="col-sm-6">
+    Как обучать "Часу Программирования"
+  </h1>
+  
+  <div class="col-sm-6 button-container centered">
+    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Зарегистрируйте ваше мероприятие</button></a>
+  </div>
+</div>
 
-## 1) Попробуйте учебники:
+## 1) Watch this how-to video <iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
+## 2) Try the tutorials:
 
-Мы будем размещать разные забавные учебники длительностью до одного часа для учеников и студентов всех возрастов, созданные нашими партнерами. Новые учебники, для начала "Часа кода", поступают до 8-14 декабря.
+Мы будем размещать разные обучающие видео уроки длительностью до одного часа для учеников и студентов всех возрастов, созданные нашими партнерами. Новые видео уроки, для начала "Часа Программирование", поступают до 8-14 декабря.
 
 **Все учебники Часа Кода:**
 
@@ -13,58 +22,62 @@
 
 [![](http://<%= codeorg_url() %>/images/tutorials.png)](http://<%=codeorg_url() %>/learn)
 
-## 2) Определите вашу потребность в оборудовании - компьютеры не обязательны
+## 3) Register your Hour on the map
 
-Лучший опыт от "Часа программирования" будет достигнут с помощью компьютера, имеющего доступ к Интернету. Но вам не нужен компьютер для каждого ребенка, вы даже можете провести "Час программирования" совсем без компьютера!
+[Make sure to sign up](<%= hoc_uri('/') %>). We'll send you helpful info as the Hour of Code nears, and you'll see your Hour of Code on our map of worldwide events.
+
+## 4) Plan your hardware needs - computers are optional
+
+The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every child, and can even do the Hour of Code without a computer at all.
 
   * **Протестируйте учебники на компьютерах или других электронных устройствах ученика.** Убедитесь, что они работают должным образом (со звуком и видео).
   * **Просмотрите страницу поздравления,** чтобы увидеть то, что студенты будут видеть, по окончанию задания. 
   * **Обеспечьте наушники для вашего класса**, или попросите учеников принести свои собственные, если учебник, который вы выбрали лучше всего работает со звуком.
 
-## 3) Планируйте заранее, основываясь на доступных вам технологиях
+## 5) Plan ahead based on your technology available
 
   * **Нет достаточного количества устройств?** Используйте [парное программирование](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). Когда ученики становятся партнерами, они помогают друг другу и меньше полагаются на учителя. Также они увидят, что компьютерная наука социальна и кооперативна.
   * **Низкая пропускная способность интернет соединения?** Покажите видео всему классу, чтобы каждый ученик не загружал видео на свое устройство. Или попробуйте оффлайн учебники.
 
-## 4) Вдохновите учеников - покажите им видео
+## 6) Inspire students - show them a video
 
 Show students an inspirational video to kick off the Hour of Code. Examples:
 
-  * The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
-  * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [Hour of Code 2014 video](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
-  * [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+  * Оригинальное начальное видео от Code.org, в котором вы сможете увидеть Билла Гейтса, Марка Цукерберга и звезду NBA Криса Боша ([1минутная версия](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5-минутная версия](https://www.youtube.com/watch?v=nKIu9yen5nc) и [9-минутная версия](https://www.youtube.com/watch?v=dU1xS07N-FA))
+  * [Начальное видео Час Программирования 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), или <% if @country == 'uk' %>[ Видео Час Программирования 2014](https://www.youtube.com/watch?v=96B5-JGA9EQ)<% также%> [Видео Час Программирования 2014](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
+  * [ПРезидент Обама призывает всех учеников изучать компьютерные науки](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**Заинтересуйте ваших учеников - начните с небольшого вступления**
+**Get your students excited - give them a short intro**
 
-Большинство детей не знают, что такое информатика. Вот несколько идей:
+Most kids don’t know what computer science is. Here are some ideas:
 
-  * Explain it in a simple way that includes examples of applications that both boys and girls will care about (saving lives, helping people, connecting people, etc.).
-  * Try: "Think about things in your everyday life that use computer science: a cell phone, a microwave, a computer, a traffic light… all of these things needed a computer scientist to help build them.”
-  * Or: “Computer science is the art of blending human ideas and digital tools to increase our power. Computer scientists work in so many different areas: writing apps for phones, curing diseases, creating animated movies, working on social media, building robots that explore other planets and so much more."
-  * See tips for getting girls interested in computer science [here](http://<%= codeorg_url() %>/girls). 
+  * Объясните это просто, приведите примеры приложений, которые интересуют и мальчиков, и девочек (спасение жизни, помощь людям, объединение людей и т.д.).
+  * Попробуйте сказать, например, так: "Подумайте о повседневных вещах, которые связаны с информатикой: мобильный телефон, микроволновая печь, компьютер, светофор... Чтобы создать все эти вещи, нужно знание информатики."
+  * Или: "Информатика - это искусство соединения идей человека с электроникой для расширения наших возможностей". Программисты работают в различных областях: написание приложений для телефонов, лечение болезней, создание фильмов, работа в социальных медиа, создание роботов, которые исследуют другие планеты, и многое другое."
+  * Советы как девочек заинтересовать информатикой, смотрите <a
 
-## 5) Начните свой Час программирования
+## 6) Start your Hour of Code
 
-**Направьте учеников к деятельности**
+**Direct students to the activity**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](http://<%= codeorg_url() %>/learn) under the number of participants. [hourofcode.com/co](http://hourofcode.com/co)
-  * Tell students to visit the URL and start the tutorial.
+  * Напишите на доске ссылку на учебник. Найдите ссылку для [того, чтобы узнать информацию о выбранном учебнике](http://<%= codeorg_url() %>/learn) под списком участников [hourofcode.com/co](http://hourofcode.com/co) 
+  * Попросите учеников открыть учебник по ссылке.
 
-**Когда ваши ученики сталкиваются с трудностями**
+**When your students come across difficulties**
 
-  * Tell students, “Ask 3 then me.” Ask 3 classmates, and if they don’t have the answer, then ask the teacher.
-  * Encourage students and offer positive reinforcement: “You’re doing great, so keep trying.”
-  * It’s okay to respond: “I don’t know. Let’s figure this out together.” If you can’t figure out a problem, use it as a good learning lesson for the class: “Technology doesn’t always work out the way we want. Together, we’re a community of learners.” And: “Learning to program is like learning a new language; you won’t be fluent right away.“
+  * Скажите ученикам: "Спросите троих, и только потом меня". Пусть спросят трех одноклассников, и, если не получат ответа, - учителя.
+  * Похвалите учеников и предложите дополнить знания: "Вы большие молодцы, работаем дальше"
+  * Нет ничего плохово в словах: "Я не знаю" Давайте вместе разберемся." Если вы не можете разобраться с задачей, используйте это как хороший пример для всего класса: "Технологии не всегда работают так, как хотим мы. Все мы учимся." И: "Изучение программирования все-равно, что изучение нового языка: все-равно не будете по началу бегло разговаривать."
 
-**Что делать, если ученики справятся раньше?**
+**What to do if a student finishes early?**
 
-  * Students can see all tutorials and try another Hour of Code activity at [<%= codeorg_url() %>/learn](http://<%= codeorg_url() %>/learn)
-  * Or, ask students who finish early to help classmates who are having trouble with the activity.
+  * Ученики могут видеть все материалы и изучать материалы другого Часа ПРограммирования на [<%= codeorg_url() %>/learn](http://<%= codeorg_url() %>/learn)
+  * Или попросите учеников, кто закончил раньше, помочь их товарищам, которые испытывают трудности.
 
-**Как мне распечатать сертификаты для моих учеников?**
+**How do I print certificates for my students?**
 
-Каждый студент получает шанс получить сертификат по электронной почте, когда они закончат задание [Code.org tutorials](http://studio.code.org). Вы можете кликнуть по сертификату, чтобы распечатать его. However, if you want to make new certificates for your students, visit our [Certificates](http://<%= codeorg_url() %>/certificates) page to print as many certificates as you like, in one fell swoop!
+Each student gets a chance to get a certificate via email when they finish the [Code.org tutorials](http://studio.code.org). You can click on the certificate to print it. However, if you want to make new certificates for your students, visit our [Certificates](http://<%= codeorg_url() %>/certificates) page to print as many certificates as you like, in one fell swoop!
 
-**Что происходит после "Часа программирования"?**
+**What comes after the Hour of Code?**
 
-"Час программирования" является лишь первым шагом в приключении о том, чтобы узнать больше о работе технологий и способов создания программных приложений. "Час программирования" является лишь первым шагом в приключении о том, чтобы узнать больше о работе технологий и способов создания программных приложений. Чтобы продолжить это приключение, [воодушевляйте своих учеников учиться онлайн](http://code.org/learn/beyond).
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %> <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Sign up your event</button></a>

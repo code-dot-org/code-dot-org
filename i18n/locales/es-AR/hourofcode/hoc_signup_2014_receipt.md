@@ -1,50 +1,38 @@
 * * *
 
-from: '"Hadi Partovi (Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)' subject: Gracias por inscribirte para llevar a cabo una Hora del Código! vista: ninguno tema: ninguno
+from: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)" subject: "Thanks for signing up to host an Hour of Code!" litmus_tracking_id: "5g5lyi1a"
 
 * * *
 
 <% hostname = CDO.canonical_hostname('hourofcode.com') %>
 
-# ¡Gracias por inscribirte para participar de la Hora del Código!
+# ¡Gracias por inscribirte para ser anfitrión de una Hora de Programación!
 
 **CADA** organizador de una Hora del Código va a recibir 10 GB de espacio en Dropbox o USD 10 de crédito en Skype como agradecimiento. No disponible en Argentina. [Detalles](http://<%= hostname %>/prizes)
 
-<% if @country == 'us' %>
+## 1. Corre la voz
 
-Hacé que [toda tu escuela participe](http://<%= hostname %>/whole-school) para acceder a premios mayores para toda la escuela. No disponible en Argentina.
-
-<% end %>
-
-## 1. Corré la voz
-
-Comentale a tus amigos acerca de #LaHoraDelCodigo.
+Dile a tus amigos acerca de la #HourOfCode.
 
 <% if @country == 'us' %>
 
-## 2. Pedile a toda tu escuela que participe de la Hora del Código
+## 2. Pídele a toda tu escuela que ofrezca una Hora de Programación
 
-[Enviale este email](http://<%= hostname %>/resources#email) o [dale este volante](http://<%= hostname %>/files/schools-handout.pdf) al director de tu escuela. No válido para Argentina
-
-<% else %>
-
-## 2. Pedile a toda tu escuela que participe de la Hora del Código
-
-[Enviale este email](http://<%= hostname %>/resources#email) o [dale este volante](http://<%= hostname %>/files/schools-handout.pdf) al director de tu escuela.
+[Send this email](http://<%= hostname %>/resources#email) or give [this handout](http://<%= hostname %>/files/schools-handout.pdf) to your principal.
 
 <% end %>
 
-## 3. Pedile a tu empleador que se sume
+## 3. Ask your employer to get involved
 
-[Enviá este email](http://<%= hostname %>/resources#email) a tu jefe o dale [este volante](http://<%= hostname %>/resources/hoc-one-pager.pdf).
+[Send this email](http://<%= hostname %>/resources#email) to your manager, or the CEO. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf).
 
-## 4. Promové la Hora del Código en tu comunidad
+## 4. Promote Hour of Code within your community
 
-Reclutá a un grupo local, por ejemplo, un club de boy scouts, una Iglesia, una universidad, o un sindicato. Organiza una Hora del Código como un evento comunitario.
+Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
 
-## 5. Solicitá a las autoridades comunales que apoyen la Hora del Código
+## 5. Ask a local elected official to support the Hour of Code
 
-[Enviá este email](http://<%= hostname %>/resources#politicians) al Intendente, Concejo Deliberante, Legislatura o Junta Escolar. O dales [este volante](http://<%= hostname %>/resources/hoc-one-pager.pdf) e invitalos a visitar tu escuela.
+[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
 
 <% if @country == 'ro' %>
 
@@ -56,6 +44,4 @@ Echipa Hour of Code Romania hoc@adfaber.org
 
 * * *
 
-Code.org es una organización sin fines de lucro. Nuestra dirección es 1301 5th Ave, Suite 1225, Seattle, WA, 98101. ¿No deseás seguir recibiendo estos correos? [Desuscribite](%= unsubscribe_link %).
-
-![](<%= tracking_pixel %>)
+Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't like these emails? [Unsubscribe](%= unsubscribe_link %).

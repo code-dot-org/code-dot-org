@@ -1,4 +1,5 @@
 require_relative './deployment'
+require 'os'
 require 'cdo/hip_chat'
 require 'cdo/rake_utils'
 
@@ -177,6 +178,16 @@ namespace :install do
       Dir.chdir(blockly_dir) do
         blockly_build = CDO.use_my_blockly ? blockly_dir('build/package') : 'blockly-package'
         RakeUtils.ln_s blockly_build, dashboard_dir('public','blockly')
+      end
+
+      if OS.linux?
+        RakeUtils.sudo_ln_s '/usr/bin/nodejs', '/usr/bin/node'
+        RakeUtils.sudo 'npm', 'update', '-g', 'npm'
+        RakeUtils.sudo 'npm', 'install', '-g', 'grunt-cli'
+      elsif OS.mac?
+        RakeUtils.system 'brew install node'
+        RakeUtils.system 'npm', 'update', '-g', 'npm'
+        RakeUtils.system 'npm', 'install', '-g', 'grunt-cli'
       end
     end
   end

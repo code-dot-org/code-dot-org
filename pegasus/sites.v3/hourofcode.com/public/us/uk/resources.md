@@ -3,14 +3,30 @@ layout: wide
 nav: resources_nav
 ---
 
-# Ресурси
+<div class="row">
+  <h1 class="col-sm-6">
+    Ресурси
+  </h1>
+  
+  <div class="col-sm-6 button-container centered">
+    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Зареєструйте свій захід</button></a>
+  </div>
+</div>
 
-## Проводите Годину коду? [Скористайтесь інструкціями](<%= hoc_uri('/resources/how-to') %>)
+<% if @country == 'ie' %>
+
+## Hosting an Hour of Code in Ireland? [See the how-to guide](<%= hoc_uri('/resources/how-to-ireland') %>)
+
+<% else %>
+
+## Hosting an Hour of Code? [See the how-to guide](<%= hoc_uri('/resources/how-to') %>)
+
+<% end %>
 
 <a id="handouts"></p> 
 
 <h2>
-  Поширюйте інформацію у буклеті
+  Use this handout to spread the word
 </h2>
 
 <p>
@@ -18,7 +34,7 @@ nav: resources_nav
 </p>
 
 <h2>
-  Передайте роздруківку вчителям та школам
+  Give this handout to teachers and schools
 </h2>
 
 <p>
@@ -29,7 +45,7 @@ nav: resources_nav
   <a id="videos"></p> 
   
   <h2>
-    Покажіть відео, щоб надихнути учнів
+    Show these videos to inspire students
   </h2>
   
   <div style="float:left; padding:10px">
@@ -73,19 +89,11 @@ nav: resources_nav
 <a id="posters"></p> 
 
 <h2>
-  Повісьте плакати у школі
+  Hang these posters in your school
 </h2>
 
 <p>
-  <% if @country == 'us' %>
-</p>
-
-<h4>
-  <a href="http://hourofcode.com/#signup">Зареєструйте</a> свої заходи Години коду і ми безкоштовно надішлемо плакати.
-</h4>
-
-<p>
-  <% end %> <br /> <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="image" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="image" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="image" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="image" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="image" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="image" /></a>
+  <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="image" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="image" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="image" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="image" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="image" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="image" /></a>
 </p>
 
 <p>
@@ -93,7 +101,7 @@ nav: resources_nav
 </p>
 
 <h2>
-  Розмістіть банери на своєму сайті
+  Feature these banners on your website
 </h2>
 
 <p>
@@ -109,11 +117,11 @@ nav: resources_nav
 </h2>
 
 <p>
-  <a href="/images/social-1.jpg"><img src="/images/fit-200/social-1.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-2.jpg"><img src="/images/fit-200/social-2.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-3.jpg"><img src="/images/fit-200/social-3.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="/images/social-1.jpg"><img src="/images/fit-250/social-1.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-2.jpg"><img src="/images/fit-250/social-2.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-3.jpg"><img src="/images/fit-250/social-3.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
 </p>
 
 <p>
-  <a href="/images/mark.jpg"><img src="/images/fit-200/mark.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-200/susan.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-200/ashton.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-200/marissa.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-200/chris.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/image/barack.jpg"><img src="/images/fit-250/barack.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
 </p>
 
 <p>
@@ -133,7 +141,7 @@ nav: resources_nav
 </h2>
 
 <p>
-  Комп'ютери поширені повсюдно, але все менше шкіл викладають інформатику, аніж 10 років тому. Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. In one week, 15 million students tried computer science!
+  Комп'ютери поширені повсюдно, але все менше шкіл викладають інформатику, аніж 10 років тому. Хорошою новиною є те, що ми можемо це змінити. If you heard about the Hour of Code last year, you might know it made history. Лише за один тиждень 15 мільйонів учнів познайомились з інформатикою!
 </p>
 
 <p>
@@ -149,7 +157,7 @@ nav: resources_nav
 </p>
 
 <p>
-  Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com
+  Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com/<%= @country %>
 </p>
 
 <p>
@@ -233,7 +241,7 @@ nav: resources_nav
 </p>
 
 <p>
-  See http://hourofcode.com for details, and help spread the word.
+  See http://hourofcode.com/<%= @country %> for details, and help spread the word.
 </p>
 
 <p>
@@ -274,4 +282,8 @@ nav: resources_nav
 
 <p>
   Sincerely, [NAME], [TITLE]
+</p>
+
+<p>
+  <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Зареєструйте свій захід</button></a>
 </p>

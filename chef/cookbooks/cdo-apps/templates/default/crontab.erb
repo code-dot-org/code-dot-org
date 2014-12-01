@@ -69,7 +69,7 @@ if node['cdo-apps']['daemon']
   cronjob at:'*/1 * * * *', do:"#{aws_dir('build_and_mail_log')} #{build_target}", notify:'dev+build@code.org'
 end
 
-cronjob at:'10 * * * *', do:"#{deploy_dir('bin','upload-logs-to-s3')} dashboard pegasus"
+cronjob at:'45 * * * *', do:"#{deploy_dir('bin','upload-logs-to-s3')} dashboard pegasus"
 %>
 #
 # node: <%= node.name %>

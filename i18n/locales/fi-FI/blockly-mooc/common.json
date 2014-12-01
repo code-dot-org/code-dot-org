@@ -43,6 +43,7 @@
   "numBlocksNeeded":"Onneksi olkoon! Olet suorittanut {puzzleNumber}. pulman (olisit tosin voinut käyttää vain {numBlocks, plural, one {yhden lohkon} other {# lohkoa}}).",
   "numLinesOfCodeWritten":"Kirjoitit juuri {numLines, plural, one {yhden rivin} other {# riviä}} koodia!",
   "play":"pelaa",
+  "print":"Print",
   "puzzleTitle":"Pulma {puzzle_number} \/ {stage_total}",
   "repeat":"toista",
   "resetProgram":"Alusta",
@@ -63,8 +64,8 @@
   "tryAgain":"Yritä uudestaan",
   "hintRequest":"Katso vihje",
   "backToPreviousLevel":"Takaisin edelliseen tasoon",
-  "saveToGallery":"Tallenna galleriaasi",
-  "savedToGallery":"Tallennettu galleriaasi!",
+  "saveToGallery":"Save to gallery",
+  "savedToGallery":"Saved in gallery!",
   "shareFailure":"Emme valitettavasti toi jakaa tätä ohjelmaa.",
   "typeFuncs":"Käytettävissä olevat funktiot: %1",
   "typeHint":"Sulkeet ja puolipisteet ovat pakollisia.",
@@ -80,5 +81,6 @@
   "tryHOC":"Kokeile koodaustuntia",
   "signup":"Rekisteröidy johdantokurssille",
   "hintHeader":"Tässä on Vihje:",
-  "genericFeedback":"Katso miten päädyit tähän, ja koita korjata ohjelmasi."
+  "genericFeedback":"Katso miten päädyit tähän, ja koita korjata ohjelmasi.",
+  "defaultTwitterText":"Check out what I made"
 }

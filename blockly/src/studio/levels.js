@@ -3,9 +3,9 @@
 var msg = require('../../locale/current/studio');
 var utils = require('../utils');
 var blockUtils = require('../block_utils');
-var tiles = require('./tiles');
-var Direction = tiles.Direction;
-var Emotions = tiles.Emotions;
+var constants = require('./constants');
+var Direction = constants.Direction;
+var Emotions = constants.Emotions;
 var tb = blockUtils.createToolbox;
 var blockOfType = blockUtils.blockOfType;
 var createCategory = blockUtils.createCategory;
@@ -1068,6 +1068,8 @@ levels.full_sandbox =  {
   'startBlocks':
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
+
+levels.full_sandbox_infinity = utils.extend(levels.full_sandbox, {});
 
 levels.ec_sandbox = utils.extend(levels.sandbox, {
   'editCode': true,

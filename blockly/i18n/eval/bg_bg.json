@@ -6,6 +6,7 @@
   "overlayBlockTitle": "наслагване (отгоре, отдолу)",
   "placeImageBlockTitle": "място-изображение (x, y, изображение)",
   "rectangleBlockTitle": "правоъгълник (ширина, височина, стил, цвят)",
+  "reinfFeedbackMsg": "Можете да натиснете бутона \"Опитайте отново\", ако искате да редактирате вашата рисунка.",
   "rotateImageBlockTitle": "завъртане (градуси, изображение)",
   "scaleImageBlockTitle": "мащаб (фактор)",
   "squareBlockTitle": "квадрат (размер, стил, цвят)",
