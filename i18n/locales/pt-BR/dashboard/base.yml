@@ -115,11 +115,11 @@ pt:
     subject: Entrar na minha turma (no Code.org)
     body: |
       Clique no link abaixo para se cadastrar e ver tutoriais de ciência da computação na Code.org (eu serei seu "professor"):
-      
+
       %{link}
-      
+
       Os tutoriais são divertidos, visualmente envolventes, e ensinam os conceitos básicos de ciência da computação de forma simples, como em um jogo. Aprenda a programar com a ajuda de Bill Gates, Mark Zuckerberg, Angry Birds e Plants vs Zombies! :-)
-      
+
       %{name}
   follower:
     invite_sent: Convite enviado
@@ -349,7 +349,7 @@ pt:
     teacher: Professor
   footer:
     help_from_html: Engenheiros da Google, Microsoft, Facebook e Twitter ajudaram a criar este tutorial.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. Todos os direitos reservados.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. Todos os direitos reservados.'
+    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. Todos os direitos reservados.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. Todos os direitos reservados.'
     feedback: Fornecer feedback
     translate: Ajude-nos a traduzir para o seu idioma
     support: Suporte

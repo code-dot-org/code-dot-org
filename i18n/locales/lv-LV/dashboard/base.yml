@@ -115,11 +115,11 @@ lv:
     subject: Pievienoties manai klasei (code.org)
     body: |
       Uzklikšķini uz zemāk esošās hipersaites, lai pieteiktos uz datorzinātnes pamācību mājaslapā Code.org (Mani norādot kā savu "skolotāju"):
-      
+
       %{link}
-      
+
       Šīs pamācības ir jautras, vizuāli piesaistošas un, tās māca datorzinātnes pamatprincipus, izmantojot vienkāršu, vadītu, spēlei līdzīgu pieredzi. Mācies programmēt no Bill Gates, Mark Zuckerberg, Angry Birds un Plants vs. Zombies! :-)
-      
+
       %{name}
   follower:
     invite_sent: Uzaicinājums nosūtīts
@@ -349,7 +349,7 @@ lv:
     teacher: Skolotāja
   footer:
     help_from_html: Inžinieri no Google, Microsoft, Facebook un Twitter palīzēja radīt šo pamācību.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. Visas tiesības paturēt.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. Visas tiesības paturēt.'
+    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. Visas tiesības paturēt.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. Visas tiesības paturēt.'
     feedback: nodrošināt atsauksmes
     translate: Palīdzi mums tulkot savā valodā
     support: Atbalsts
