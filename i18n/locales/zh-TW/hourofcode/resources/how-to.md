@@ -1,77 +1,82 @@
 * * *
 
-title: Resources layout: wide
+title: How-to Guide layout: wide nav: resources_nav
 
 * * *
 
 <div class="row">
   <h1 class="col-sm-6">
-    How to teach one Hour of Code
+    如何教Hour of Code
   </h1>
   
   <div class="col-sm-6 button-container centered">
-    <a href="/#join"><button class="signup-button">Sign up your event</button></a>
+    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">註冊您的活動</button></a>
   </div>
 </div>
 
-## 1) Try the tutorials:
+## 1) Watch this how-to video <iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
+## 2) Try the tutorials:
 
-We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
+我們會為全學齡的學生段舉辦長達一小時的多元有趣的教案，這些教案由多元的夥伴設計出來。新的教案將在 12 月 8-14日前啟動。
 
-**All Hour of Code tutorials:**
+**所有Hour of Code的教案:**
 
-  * Require minimal prep-time for teachers
-  * Are self-guided - allowing students to work at their own pace and skill-level
+  * 需要極少的教師備課時間。
+  * 是自學式的-允許學生用自己的步調和技能層次進行。
 
 [![](http://<%= codeorg_url() %>/images/tutorials.png)](http://<%=codeorg_url() %>/learn)
 
-## 2) Plan your hardware needs - computers are optional
+## 3) Register your Hour on the map
+
+[Make sure to sign up](<%= hoc_uri('/') %>). We'll send you helpful info as the Hour of Code nears, and you'll see your Hour of Code on our map of worldwide events.
+
+## 4) Plan your hardware needs - computers are optional
 
 The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every child, and can even do the Hour of Code without a computer at all.
 
-  * **Test tutorials on student computers or devices.** Make sure they work properly (with sound and video).
-  * **Preview the congrats page** to see what students will see when they finish. 
-  * **Provide headphones for your class**, or ask students to bring their own, if the tutorial you choose works best with sound.
+  * **在學生端電腦或設備上測試教案。**請確保它們能正常運作(含聲音和影片)。
+  * **預覽恭喜頁面** 去看看學生完成時會看到什麼。 
+  * **提供耳機給您的班級**，或請同學們把他們自己的帶來，如果您選擇的教案進行時最好有聲音。
 
-## 3) Plan ahead based on your technology available
+## 5) Plan ahead based on your technology available
 
-  * **Don't have enough devices?** Use [pair programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
-  * **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+  * **沒有足夠的設備嗎?**使用 [分組程式設計](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning)。 當學生們合作時，他們互相説明，並減少對老師的依賴。 他們也將瞭解到電腦科學是需社交與合作的。
+  * **網路頻寬小?**請規畫在課堂上播放影片，如此不需每個學生自己下載影片來觀看。或者嘗試非線上 / 離線教材。
 
-## 4) Inspire students - show them a video
+## 6) Inspire students - show them a video
 
 Show students an inspirational video to kick off the Hour of Code. Examples:
 
-  * The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
-  * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [Hour of Code 2014 video](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
-  * [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+  * 原 Code.org 的揭幕影片，由微軟總裁比爾 · 蓋茨、 臉書創辦人馬克 · 佐伯克和 NBA 明星球員克里斯·波許代言(有 [1 分鐘](https://www.youtube.com/watch?v=qYZF6oIZtfc)、 [5 分鐘](https://www.youtube.com/watch?v=nKIu9yen5nc) 和 [9 分鐘](https://www.youtube.com/watch?v=dU1xS07N-FA) 版本)
+  * [Hour od Code 2013 年揭幕影片](https://www.youtube.com/watch?v=FC5FbmsH4fw)，或者 < %如果 @country = %> = '英國'[Hour od Code 2014 年影片](https://www.youtube.com/watch?v=96B5-JGA9EQ)< %其他 %> [Hour od Code 2014 年影片](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
+  * [美國歐巴馬呼籲所有的學生都要學習電腦科學](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
 **Get your students excited - give them a short intro**
 
 Most kids don’t know what computer science is. Here are some ideas:
 
-  * Explain it in a simple way that includes examples of applications that both boys and girls will care about (saving lives, helping people, connecting people, etc.).
-  * Try: "Think about things in your everyday life that use computer science: a cell phone, a microwave, a computer, a traffic light… all of these things needed a computer scientist to help build them.”
-  * Or: “Computer science is the art of blending human ideas and digital tools to increase our power. Computer scientists work in so many different areas: writing apps for phones, curing diseases, creating animated movies, working on social media, building robots that explore other planets and so much more."
-  * See tips for getting girls interested in computer science [here](http://<%= codeorg_url() %>/girls). 
+  * 用一個簡單的方法解譯，包括男孩和女孩會關心的應用範例（如挽救生命、協助人們、連繫人們等等。) 
+  * 試試："想想在你的日常生活中使用電腦科學的事物： 一部手機、 微波爐、 電腦、 紅綠燈......所有這些事物皆需要有個電腦科學家來協助它們建立。"
+  * 或者："電腦科學一門完美融合人類思想和數位工具以增加我們力量的藝術。 電腦科學家在很多不同領域工作： 編寫手機應用程式，治病、 創建動畫電影，社交媒體，建構探索其他行星的機器人，還有更多."
+  * 看看讓女孩對電腦科學產生興趣的小技巧 [ 在這裡](http://<%= codeorg_url() %>/ 女孩). 
 
-## 5) Start your Hour of Code
+## 6) Start your Hour of Code
 
 **Direct students to the activity**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](http://<%= codeorg_url() %>/learn) under the number of participants. [hourofcode.com/co](http://hourofcode.com/co)
-  * Tell students to visit the URL and start the tutorial.
+  * 在黑板(白板)上寫下教案的連結網址。 找出 在[ 您所選教案的資訊](http://<%= codeorg_url() %>/ 學習) 中，參與者人數下方列出的連結。 <http://hourofcode.com/co>
+  * 告訴學生連結至該網址( URL) ，然後開始進行教案。
 
 **When your students come across difficulties**
 
-  * Tell students, “Ask 3 then me.” Ask 3 classmates, and if they don’t have the answer, then ask the teacher.
-  * Encourage students and offer positive reinforcement: “You’re doing great, so keep trying.”
-  * It’s okay to respond: “I don’t know. Let’s figure this out together.” If you can’t figure out a problem, use it as a good learning lesson for the class: “Technology doesn’t always work out the way we want. Together, we’re a community of learners.” And: “Learning to program is like learning a new language; you won’t be fluent right away.“
+  * 告訴學生們，"先問 3 位同學後，再問我。"問 3 的同學們，如果他們不知道答案，然後問問老師。
+  * 鼓勵學生和提供積極的強化："你是做得很好，所以繼續嘗試看看。"
+  * 可以如此回應："我不知道。 讓我們一起想辦法解決。"如果你不能弄清楚一個問題，將它視學生為一個很好的機會教育："科技技術並不總是能作出我們想要的東西。 我們是一個學習者社群。而："學習程式設計就像學習一門新的語言 ；你不會馬上就流利。"
 
 **What to do if a student finishes early?**
 
-  * Students can see all tutorials and try another Hour of Code activity at [<%= codeorg_url() %>/learn](http://<%= codeorg_url() %>/learn)
-  * Or, ask students who finish early to help classmates who are having trouble with the activity.
+  * 學生可以看看全部的教案和嘗試另一個Hour of Code的活動在 [<%= codeorg_url() %>/learn](http://<%= codeorg_url() %>/learn)
+  * 或者，請提前完成的學生協助那些在活動遇到麻煩與的同學。
 
 **How do I print certificates for my students?**
 
@@ -79,4 +84,4 @@ Each student gets a chance to get a certificate via email when they finish the [
 
 **What comes after the Hour of Code?**
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %> <a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %> <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Sign up your event</button></a>

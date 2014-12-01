@@ -115,11 +115,11 @@ zh:
     subject: 加入我(在 Code.org)的班級
     body: |
       點選下方的超連結來報名參加在 Code.org 的電腦科學課程(我將成為你的"老師")：
-      
+
       %{link}
-      
+
       這是一個絕對會引起你注意的有趣課程，透過遊戲式的簡易引導，你將學會有關電腦科學的基本概念。快來跟比爾‧蓋茲(Bill Gates)，馬克‧佐柏克(Mark Zuckerberg)、奮怒鳥(Angry Birds)以及植物大戰殭屍(Plants vs. Zombies)一起學習程式設計吧！ :)
-      
+
       %{name}
   follower:
     invite_sent: 邀請已發送
@@ -189,8 +189,8 @@ zh:
         not_earned_title: 'Teach the class, earn up to $1,000 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers only)'
         not_earned: |
           為了獎勵第一次參與電腦科學課程的教師，透過指導一整個班級進行K-8的入門課程，您將有機會贏取由<a href="http://DonorsChoose.org">DonorsChoose.org</a>所提供高達$1000美元的儲值。符合資格的門檻為，你必需指導班上超過15名學生完成K-8的入門課程，所有參加學生必需完成所有課程並獲取所有 %{num_trophies}個獎盃。如果有超過7個女學生獲得所有獎盃，獎勵為$1000美元<a href="http://DonorsChoose.org">DonorsChoose.org</a>儲值。其它情況獎勵為為$750美元<a href="http://DonorsChoose.org">DonorsChoose.org</a>儲值。<a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>儲值僅限美國公立學校教師使用。
-          
-          
+
+
         bonus:
           not_earned_title: 'You can still earn an additional $250 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers only)'
           earned: '7個或以上的女學生完成全部 %{num_trophies}個獎盃的收集。你已獲得額外的獎章！(僅限美國教師)'
@@ -352,7 +352,7 @@ zh:
     teacher: Teacher
   footer:
     help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped create this tutorial.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. All Rights Reserved.'
+    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
     feedback: 提供回饋
     translate: 幫我們翻譯成您國家的語言
     support: Support

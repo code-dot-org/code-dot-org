@@ -3,14 +3,30 @@ layout: wide
 nav: resources_nav
 ---
 
-# 각종 자료
+<div class="row">
+  <h1 class="col-sm-6">
+    각종 자료
+  </h1>
+  
+  <div class="col-sm-6 button-container centered">
+    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Sign up your event</button></a>
+  </div>
+</div>
 
-## Hour of Code 이벤트를 조직하고 운영하시겠습니까?</h2> 
+<% if @country == 'ie' %>
+
+## Hosting an Hour of Code in Ireland? [See the how-to guide](<%= hoc_uri('/resources/how-to-ireland') %>)
+
+<% else %>
+
+## Hosting an Hour of Code? [See the how-to guide](<%= hoc_uri('/resources/how-to') %>)
+
+<% end %>
 
 <a id="handouts"></p> 
 
 <h2>
-  이 유인물을 사용해서 널리 알리세요.
+  Use this handout to spread the word
 </h2>
 
 <p>
@@ -18,7 +34,7 @@ nav: resources_nav
 </p>
 
 <h2>
-  이 유인물을 선생님들과 학교에 전달하세요.
+  Give this handout to teachers and schools
 </h2>
 
 <p>
@@ -29,7 +45,7 @@ nav: resources_nav
   <a id="videos"></p> 
   
   <h2>
-    학생들의 동기부여를 위해 이 동영상들을 보여주세요.
+    Show these videos to inspire students
   </h2>
   
   <div style="float:left; padding:10px">
@@ -47,7 +63,6 @@ nav: resources_nav
   </div>
   
   <div style='clear:both'>
-    
   </div>
   
   <div style="float:left; padding:10px">
@@ -65,30 +80,20 @@ nav: resources_nav
   </div>
   
   <div style="float:left; padding:10px">
-    
   </div>
   
   <div style='clear:both'>
-    
   </div>
   
 <p>
 <a id="posters"></p> 
 
 <h2>
-  이 포스터를 게시하세요.
+  Hang these posters in your school
 </h2>
 
 <p>
-  <% if @country == 'us' %>
-</p>
-
-<h4>
-  여러분의 Hour of Code 이벤트 행사를 <a href="http://hourofcode.com/#signup">등록하고,</a> 포스터 자료를 메일로 받으세요.
-</h4>
-
-<p>
-  <% end %> <br /> <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="image" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="image" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="image" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="image" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="image" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="image" /></a>
+  <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="image" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="image" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="image" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="image" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="image" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="image" /></a>
 </p>
 
 <p>
@@ -96,7 +101,7 @@ nav: resources_nav
 </p>
 
 <h2>
-  이 배너들을 홈페이지에 걸어주세요.
+  Feature these banners on your website
 </h2>
 
 <p>
@@ -112,11 +117,11 @@ nav: resources_nav
 </h2>
 
 <p>
-  <a href="/images/social-1.jpg"><img src="/images/fit-200/social-1.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-2.jpg"><img src="/images/fit-200/social-2.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-3.jpg"><img src="/images/fit-200/social-3.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="/images/social-1.jpg"><img src="/images/fit-250/social-1.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-2.jpg"><img src="/images/fit-250/social-2.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-3.jpg"><img src="/images/fit-250/social-3.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
 </p>
 
 <p>
-  <a href="/images/mark.jpg"><img src="/images/fit-200/mark.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-200/susan.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-200/ashton.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-200/marissa.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-200/chris.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/image/barack.jpg"><img src="/images/fit-250/barack.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
 </p>
 
 <p>
@@ -152,7 +157,7 @@ nav: resources_nav
 </p>
 
 <p>
-  Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com
+  Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com/<%= @country %>
 </p>
 
 <p>
@@ -236,7 +241,7 @@ nav: resources_nav
 </p>
 
 <p>
-  See http://hourofcode.com for details, and help spread the word.
+  See http://hourofcode.com/<%= @country %> for details, and help spread the word.
 </p>
 
 <p>
@@ -277,4 +282,8 @@ nav: resources_nav
 
 <p>
   Sincerely, [NAME], [TITLE]
+</p>
+
+<p>
+  <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Sign up your event</button></a>
 </p>

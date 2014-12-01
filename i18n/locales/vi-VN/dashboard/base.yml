@@ -115,8 +115,8 @@ vi:
     subject: Tham gia lớp học của tôi ( trên Code.org)
     body: |
       Nhấp vào liên kết dưới đây để đăng nhập cho các hướng dẫn về khoa học máy tíng trên Code.org (với tôi như là giáo viên của bạn""): % {liên kết} Các hướng dẫn vui vẻ, trực quan hấp dẫn, và dạy các khái niệm cơ bản của khoa học máy tính bằng cách sử dụng từng kinh nghiệm đơn giản giống như hứơng dẫn chơi trò chơi. Tìm hiểu để mã lập trình từ Bill Gates, Mark Zuckerberg, Angry Birds, và nhà máy vs. zombie! :-) % (tên)
-      
-      
+
+
   follower:
     invite_sent: Gửi lời mời
     added_teacher: '% (tên) được thêm như giáo viên của bạn'
@@ -346,7 +346,7 @@ vi:
     teacher: Teacher
   footer:
     help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped create this tutorial.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. All Rights Reserved.'
+    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
     feedback: Cung cấp thông tin phản hồi
     translate: Giúp chúng tôi dịch sang ngôn ngữ của bạn
     support: Support

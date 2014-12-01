@@ -1,3 +1,9 @@
+.droplet-palette-group-header.yellow {
+  border-left: 10px solid #e0e053; }
+
+.droplet-palette-group-header-selected.yellow {
+  background-color: #e0e053; }
+
 #divWebapp {
   overflow: hidden;
   position: relative;
@@ -11,8 +17,6 @@
   overflow: hidden;
   top: 0px;
   left: 0px;
-  width: 400px;
-  height: 400px;
   z-index: -1; }
 
 .debug-console {

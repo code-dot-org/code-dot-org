@@ -1,9 +1,9 @@
 * * *
 
-title: Thank you layout: wide
+標題： 謝謝你的佈局： 寬
 
 * * *
 
-# Thank you
+# 謝謝
 
-Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology).
+你整個的學校現在進入並贏得一整套筆記型電腦 （或者 10000 美元購買其他技術）。

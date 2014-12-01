@@ -1,6 +1,6 @@
 * * *
 
-başlık: Kaynaklar düzen: geniş nav: kaynaklar_nav
+title: Press Kit layout: wide nav: resources_nav
 
 * * *
 

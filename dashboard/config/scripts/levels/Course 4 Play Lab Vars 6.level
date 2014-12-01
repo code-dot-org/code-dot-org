@@ -39,7 +39,7 @@
             <block type="variables_set" inline="false">
               <title name="VAR">points</title>
               <value name="VALUE">
-                <block type="math_number" editable="false">
+                <block type="math_number">
                   <title name="NUM">0</title>
                 </block>
               </value>

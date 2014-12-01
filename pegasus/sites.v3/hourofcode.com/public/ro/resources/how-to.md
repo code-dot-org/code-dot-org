@@ -1,8 +1,17 @@
 
 
-# Cum să organizezi Hour of Code
+<div class="row">
+  <h1 class="col-sm-6">
+    Cum să organizezi Hour of Code
+  </h1>
+  
+  <div class="col-sm-6 button-container centered">
+    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Înscrieţi-vă evenimentul</button></a>
+  </div>
+</div>
 
-## 1) Încercaţi Tutorialele:
+## 1) Watch this how-to video <iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
+## 2) Try the tutorials:
 
 Vom găzdui o varietate de tutoriale, de o oră, distractive, pentru elevi de toate vârstele, create de parteneri variati. Cu ocazia evenimentului Hour of Code înainte de 8-14 Decembrie, vom avea tutorialele noi.
 
@@ -13,58 +22,62 @@ Vom găzdui o varietate de tutoriale, de o oră, distractive, pentru elevi de to
 
 [![](http://<%= codeorg_url() %>/images/tutorials.png)](http://<%=codeorg_url() %>/learn)
 
-## 2) Planificati nevoile dumneavoastră hardware - calculatoarele sunt optionale
+## 3) Register your Hour on the map
 
-Cea mai bună experienţă Hour of Code va fi cu un calculator conectat la Internet. Dar nu ai nevoie de un calculator pentru fiecare copil și poți organiza Hour of Code chiar și în lipsa unui calculator.
+[Make sure to sign up](<%= hoc_uri('/') %>). We'll send you helpful info as the Hour of Code nears, and you'll see your Hour of Code on our map of worldwide events.
+
+## 4) Plan your hardware needs - computers are optional
+
+The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every child, and can even do the Hour of Code without a computer at all.
 
   * **Testeaza tutorialele pe computerele sau dispozitivele disponibile.** Asiguraţi-vă că acestea funcţionează corect (cu sunet şi video).
   * **Previzualizați pagina de felicitări** pentru a vedea ce văd elevii atunci când termină. 
   * **Ofera căşti clasei tale**, sau cere elevilor să-si aducă, dacă tutorialul ales funcţionează cel mai bine cu sunet.
 
-## 3) Fa-ți planul in funcție de tehnologia disponibilă
+## 5) Plan ahead based on your technology available
 
   * **Nu ai suficiente dispozitive?** Folosește [programarea in echipă](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). Atunci când elevii au un partener, ei se ajută reciproc şi se bazează mai puţin pe profesor. Ei vor vedea, de asemenea, că programarea este socială şi colaborativă.
   * **Conexiune lentă la internet?** Proiectează videclipurile pentru toată clasa, astfel elevii nu vor mai descarca videoclipurile individual. Sau încercaţi tutorialele locale.
 
-## 4) Inspira elevii - Arată-le un video
+## 6) Inspire students - show them a video
 
 Show students an inspirational video to kick off the Hour of Code. Examples:
 
-  * The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
-  * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [Hour of Code 2014 video](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
-  * [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+  * Videoclipul original al lansării Hour of Code, care îi înfățișează pe Bill Gates, Mark Zuckerberg și starul NBA Chris Bosh ( există versiuni de [1](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5](https://www.youtube.com/watch?v=nKIu9yen5nc) sau [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA))
+  * Videoclipul de lansare [Hour of Code 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw) sau [Hour of Code 2014](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% end %>
+  * [Videoclipul în care președintele Obama îndeamnă toți elevii să învețe tehnologia computerelor și programare](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**Entuziasmează-ți elevii - oferă-le o scurtă introducere**
+**Get your students excited - give them a short intro**
 
-Cei mai mulţi copii nu stiu ce este programarea. Iată câteva idei:
+Most kids don’t know what computer science is. Here are some ideas:
 
-  * Explain it in a simple way that includes examples of applications that both boys and girls will care about (saving lives, helping people, connecting people, etc.).
-  * Try: "Think about things in your everyday life that use computer science: a cell phone, a microwave, a computer, a traffic light… all of these things needed a computer scientist to help build them.”
-  * Or: “Computer science is the art of blending human ideas and digital tools to increase our power. Computer scientists work in so many different areas: writing apps for phones, curing diseases, creating animated movies, working on social media, building robots that explore other planets and so much more."
-  * See tips for getting girls interested in computer science [here](http://<%= codeorg_url() %>/girls). 
+  * Explică programarea într-un mod simplu, incluzând exemple de aplicații ale acesteia, pe care atât băieții cât și fetele le va lua în seamă (contribuie la salvarea vieților omenești, ajută oamenii sau îi conectează unii cu alții)
+  * Încercaţi sa le spuneti: "Gândiți-vă la lucrurile din viaţa de zi cu zi care utilizează tehnologia computerelor sau programarea: un telefon mobil, un cuptor cu microunde, un computer, un semafor... toate aceste lucruri au avut nevoie de un om care intelege tehnologia computerelor pentru a ajuta la construirea lor."
+  * Sau: "Tehnologia computerelor si programare reprezintă arta de a contopi ideile oamenilor cu instumentele digitale pentru a ne crește puterea. Programatorii lucrează în foarte multe domenii diferite: scriu aplicații pentru telefoane, vindecă boli, creează desene animate, lucrează în mediul online, construiesc roboți care explorează celelalte planete și multe altele."
+  * Vezi ponturi pentru a stârni interesul fetelor în legătură cu tehnologie computerelor și programare [ aici](http://<%= codeorg_url() %>/girls).. 
 
-## 5) Începe Hour of Code
+## 6) Start your Hour of Code
 
-**Îndrumă elevii către eveniment**
+**Direct students to the activity**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](http://<%= codeorg_url() %>/learn) under the number of participants. [hourofcode.com/co](http://hourofcode.com/co)
-  * Tell students to visit the URL and start the tutorial.
+  * Scrie link-ul tutorialului pe tablă. Îl poți găsi afișat în [informațiile despre tutorialul pe care l-ai selectat](http://<%= codeorg_url() %>/learn), sub numărul de participanți. hourofcode.com/co [hourofcode.com/co](http://hourofcode.com/co)
+  * Spune-le copiilor să acceseze URL-ul și să înceapă tutorialul.
 
-**Când elevii întâmpină dificultăţi**
+**When your students come across difficulties**
 
-  * Tell students, “Ask 3 then me.” Ask 3 classmates, and if they don’t have the answer, then ask the teacher.
-  * Encourage students and offer positive reinforcement: “You’re doing great, so keep trying.”
-  * It’s okay to respond: “I don’t know. Let’s figure this out together.” If you can’t figure out a problem, use it as a good learning lesson for the class: “Technology doesn’t always work out the way we want. Together, we’re a community of learners.” And: “Learning to program is like learning a new language; you won’t be fluent right away.“
+  * Spune-le "Întreabă întâi 3 colegi, apoi pe mine.” Întreabă 3 colegi și dacă ei nu au răspunsul, întreabă profesorul.
+  * Încurajează elevii şi oferă motivări pozitive: "Te descurci foarte bine, continuă."
+  * Este în regulă să raspunzi: "Nu ştiu.Haideți să rezolvăm împreună!" Dacă nu vă puteţi da seama de rezolvarea unei probleme, utilizaţi momentul ca un exemplu de învăţare pentru clasă: "Tehnologia nu funcţionează întotdeauna în modul în care ne dorim." Împreună, suntem o comunitate de elevi." Şi: "Învăţarea programării este ca învăţarea unei limbi noi; nu vei fi fluent imediat."
 
-**Ce să fac în cazul în care un elev termină mai devreme?**
+**What to do if a student finishes early?**
 
-  * Students can see all tutorials and try another Hour of Code activity at [<%= codeorg_url() %>/learn](http://<%= codeorg_url() %>/learn)
-  * Or, ask students who finish early to help classmates who are having trouble with the activity.
+  * Elevii pot vizualiza toate tutorialele si incerca o alta activitate Hour of Code pe site-ul [<%= codeorg_url() %>/learn](http://<%= codeorg_url() %>/learn)
+  * Sau, îi puteți îndemna pe elevii ce au terminat prea devreme să îi ajute pe cei ce întâmpină probleme cu activitatea.
 
-**Cum se imprimă diplomele pentru elevii mei?**
+**How do I print certificates for my students?**
 
-Fiecare elev primeste şansa de a obţine o diplomă pe e-mail atunci când termină [tutorialele Code.org](http://studio.code.org). Puteţi să faceţi clic pe certificat pentru a-l tipări. However, if you want to make new certificates for your students, visit our [Certificates](http://<%= codeorg_url() %>/certificates) page to print as many certificates as you like, in one fell swoop!
+Each student gets a chance to get a certificate via email when they finish the [Code.org tutorials](http://studio.code.org). You can click on the certificate to print it. However, if you want to make new certificates for your students, visit our [Certificates](http://<%= codeorg_url() %>/certificates) page to print as many certificates as you like, in one fell swoop!
 
-**Ce urmează după Hour of Code?**
+**What comes after the Hour of Code?**
 
-Hour of Code este doar primul pas al călătoriei pentru a afla mai multe despre modul în care funcționează tehnologia și despre cum poți crea aplicații software. <% if @country == 'uk' %> Hour of Code este doar primul pas al călătoriei pentru a afla mai multe despre modul în care funcționează tehnologia și cum poți crea aplicații software. Pentru a continua această călătorie, [încurajează-ți copiii sa învețe online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %>
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %> <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Sign up your event</button></a>

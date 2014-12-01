@@ -266,7 +266,6 @@ th {
   padding-top: 30px;
   min-height: 100px;
   @media screen and (max-width: 1150px) {
-    padding-top: 15px;
     min-height: 70px;
   }
   @media screen and (max-width: 900px) {
@@ -293,7 +292,8 @@ th {
   }
 }
 
-.header.hide_on_mobile {
+.header.hide_on_mobile,
+.header-wrapper.hide_on_mobile {
   @media screen and (max-width: 900px) {
     display: none;
   }

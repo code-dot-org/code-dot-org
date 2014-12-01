@@ -1,18 +1,17 @@
----
-title: Resources 
-layout: wide
----
 
-# How to attract media to your Hour of Code event
 
-## Some shocking statistics (USA):
+[<button style="float: right; margin-top: 50px">Registra tu evento</button>](/#join)
 
-  * There will be one million more computing jobs than students over the next 10 years (adding up to $500 billion in salaries).
-  * More than 50 percent of all projected math and science occupations are in computing occupations. 
-  * Computing occupations are among the highest-paying jobs for new graduates. Yet fewer than 3% of college students graduate with a degree in computer science.
-  * In 26 states, computer science classes don’t count toward math or science high school graduation requirements. 
-  * Less than 20% of AP Computer Science students are women. Less than 10% are black or Latino.
+# Reseñas y estadisticas útiles
+
+## Use this short blurb in newsletters
+
+### Traiga las Ciencias de Computación a su escuela o colegio. Empiece con una Hora de Código
+
+Las computadoras están en todas partes, pero hoy, menos escuelas enseñan ciencia de la computación que hace 10 años. Las buenas noticias son que: estamos trabajando para cambiar esto. Si ha escuchado hablar de una Hora de Código, (Hour of Code), el año pasado, debe saber que fue un suceso que hizo historia. En una semana, 15 millones de estudiantes experimentaron con las ciencias de la computación! La Hora de Código, (Hour of Code), es una hora de introducción a las Ciencias de Computación, diseñada para desmitificar lo que se piensa sobre codificación y demostrar que cualquiera puede aprender los conceptos básicos. Regístrate para ser anfitriona o anfitrión de Hora de Código (Hour of Code) durante la semana de las Ciencias de Computación de diciembre 8 al 14 del 2014 y ayuda a alcanzar la meta de 100 millones de estudiantes para fin de año. Add your school to the map, go to <http://hourofcode.com>
 
 ## Infographic version:
 
 ![imagen](http://code.org/images/fit-8000/Code.org_infographic.png)
+
+<a style="display: block" href="/#join"><button style="float: right;">Registra tu evento</button></a>

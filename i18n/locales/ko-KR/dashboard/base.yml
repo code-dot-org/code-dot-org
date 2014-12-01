@@ -115,11 +115,11 @@ ko:
     subject: 내 학급 가기(on Code.org)
     body: |
       Code.org 의 컴퓨터과학(Computer Science, 정보과학) 기초개념학습 코스에 가입하려면, 아래 링크를 누르세요.(선생님을 등록하세요)
-      
+
       %{link}
-      
+
       이 과정에서는 재미있는 퍼즐들을 통해, 컴퓨터과학(Computer Science, 정보과학)의 몇가지 기초 개념들을 배울 수 있습니다. Bill Gates, Mark Zuckerberg, Angry Birds, and Plants vs. Zombies 등과 함께 경험해 보세요! :)
-      
+
       %{name}
   follower:
     invite_sent: 초대 메일을 발송하였습니다
@@ -349,7 +349,7 @@ ko:
     teacher: 선생님
   footer:
     help_from_html: 구글, 마이크로소프트, 페이스북, 트위터의 컴퓨터과학자들이 이 튜토리얼을 만들었습니다.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. All Rights Reserved.'
+    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
     feedback: 피드백 남기기
     translate: 다른 언어로 번역
     support: 고객지원

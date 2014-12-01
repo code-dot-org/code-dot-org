@@ -5,50 +5,37 @@ ko:
   coming_soon: 곧 시작됩니다.
   front_header_banner: 전 세계 역사상 가장 큰 교육 이벤트(2014.12.08-14)에 참여해보세요.
   front_intro_default: 'Hour of Code 행사는 전세계 180 개국 이상에서 수 천 만의 학생들과 함께 하기 위한 국제적 운동입니다. 누구나 어디에서나 Hour of Code 이벤트를 조직해서 운영할 수 있습니다. One-hour(1시간짜리) 튜토리얼이 30개 이상의 언어로 제공됩니다. 어떠한 경험도 필요하지 않습니다. <strong> 4세부터 104세까지.</strong>'
-  front_intro_default_uk: "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone can organize an Hour of Code event. Over 3M students did the first Hour of Code in the UK. Let's double that in December! <strong>No experience needed. Ages 4 to 104.</strong>"
+  front_intro_default_uk: "The Hour of Code is a global movement reaching tens of millions of people in 180+ countries. Anyone can organize an Hour of Code event. Over 3M people did the first Hour of Code in the UK. Let's double that in December! <strong>No experience needed. Ages 4 to 104.</strong>"
   front_watch_video: 동영상 보기
   header_menu_resources: 각종 자료
   header_menu_faq: 자주 묻는 질문 (FAQ)
   header_menu_prizes: 상품
   header_menu_uk_code_org: uk.code.org
-  choose_country_header: 전세계와 함께하세요!
-  country_al: Albania
-  country_ar: 아르헨티나
-  country_au: 오스트레일리아
-  country_br: 브라질
-  country_bg: 불가리아
-  country_de: 독일
-  country_es: 라틴아메리카
-  country_eu: 유럽연합
-  country_gr: 그리스
-  country_hr: 크로아티아
-  country_id: 인도네시아
-  country_it: 이태리
-  country_jp: 일본
-  country_me: 중동 및 북아프리카
-  country_my: Malaysia
-  country_nz: 뉴질랜드
-  country_ro: 루마니아
-  country_ru: 러시아
-  country_ua: 우크라이나
-  country_uk: 영국
-  country_us: 미국
-  country_vn: 베트남
   company_4-H: 4-H Youth Development
+  company_asa: Afterschool Alliance
   company_bgca: Boys and Girls Club of America
+  company_bsusa: Boy Scouts of America
   company_cgcs: Council of the Great City Schools
   company_gsusa: Girl Scouts of America
-  company_bsusa: Boy Scouts of America
+  company_khanacademy: 칸 아카데미(Khan Academy)
+  company_mesa: 수학+공학+과학적 성취
   company_napcs: National Alliance of Public Charter Schools
-  company_tfa: Teachers for America
-  company_tntp: TNTP
-  company_asa: Afterschool Alliance
   company_ngcp: National Girls Collaborative Project
+  company_teachforall: 모두를 위해 가르쳐보세요.
+  company_teachforamerica: 미국 교사들을 위해 교육해 보세요.
+  company_tntp: TNTP
   prizes_all: 모든 운영자에 대한 상품
   prizes_every_organizer: 모든 Hour of Code 운영자는 감사의 의미로 Dropbox 나 Skype 크레딧을 받을 것입니다.
   prizes_technology: 모든 미국 주(워싱턴DC 포함)에 속한 공립학교들은 $10,000 가치의 상품을 받게 될 것입니다.
-  prizes_tech_chats: 96 classrooms will win video chats with very special guests
+  prizes_tech_chats: '# 개의 학습은 매우 특별한 게스트들과 비디오 채팅을 할 수 있는 기회를 얻게 됩니다.'
+  prizes_robots: 100 개의 학급은 프로그래밍 가능한 로봇 세트를 받게 됩니다.
+  prizes_brilliant: 멋진 결과를 얻은, 각 지역/주의 1개 학교는 $2000 상당의 상품을 받게 됩니다.
+  prizes_actua: 캐나다까지 포함해 15개의 학교들은 Actua 멤버중에 하나에서 진행하는 STEM 활동 워크샵 기회를 얻게 됩니다.
   prizes_details: 세부 사항
+  whats_next_header: 이후로는?
+  whats_next_description: "We'll send you materials and helpful tips for your event. New 2014 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
+  whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>Hour of Code 행사 진행방법</a>"
+  whats_next_promote: "<a href='http://hourofcode.com/resources'>Hour of Code 행사 지원하기</a>"
   n_have_learned_an_hoc: '<h1>#</h1><h3>가</h3><h2>HOUR of CODE를 경험했습니다.</h2>'
   anybody_can_learn: 누구나 배울 수 있습니다.
   register_now: 지금 등록하세요.
@@ -56,16 +43,16 @@ ko:
   front_join_us_description: 컴퓨터과학(정보과학)은 모든 학생들이 배워야하는 기초 교과입니다. 1억명에게 소개하기 위해서 함께 도와주세요.
   front_join_us_button: 참여하기
   front_what_is_hoc: Hour of Code 란?
-  front_join_us_header: Computer Science Education 주간, 12월8일-14일 중 Hour of Code 이벤트를 직접 운영하시면서 많은 사람들인 기초/개념/원리를 재미있게 배울 수 있도록 해주세요.
+  front_join_us_header: 누구나 기초/개념/원리들을 배울 수 있고, 재미있게 할 수 있습니다!
   front_join_us_header_uk: 12월8일-14일 중 Hour of Code 이벤트를 직접 운영하시면서 많은 사람들인 기초/개념/원리를 재미있게 배울 수 있도록 해주세요.
   front_join_us_teacher: 선생님이신가요?
-  front_join_us_inspire: 학생들과 함께 느껴보세요.
-  front_join_us_inspire_link: 수업시간에 Hour of Code를 통해서.
+  front_join_us_inspire: Inspire students with
+  front_join_us_inspire_link: an Hour of Code in the classroom.
   front_join_us_parent: 부모님이신가요?
   front_join_us_ask_link: 학교에 요청하세요.
   front_join_us_ask: Hour of Code 행사를 열 수 있도록.
   front_join_us_computer_science: 그냥 컴퓨터과학(정보과학)이 좋은가요?
-  front_join_us_spread: 여러분이 속한 커뮤니티에 알리고 함께하세요.
+  front_join_us_spread: Spread the word.
   front_join_us_organize: 아니면, Hour of Code 이벤트를 직접 열고 운영해 보세요.
   front_join_us_how_to_run: Hour of Code 를 하는 방법입니다.
   front_join_us_help_promote: Hour of Code 행사 진행을 도와주세요.
@@ -75,7 +62,7 @@ ko:
   front_join_us_try: 해보기
   front_join_us_host: 운영하기
   front_join_us_support: 도움주기
-  signup_header: Hour of Code 행사를 열고 운영하시려면 저희에게 알려주세요.
+  signup_header: 'Organize an Hour of Code event during Dec 8 - 14, and register it here.'
   signup_name_label: 이름
   signup_email_label: 이메일
   signup_organization_name_label: 학교/소속
@@ -87,6 +74,7 @@ ko:
   signup_send_posters_flag_label: '<a href= "/resources#posters">포스터</a> 를 나의 학교나 조직에 보내기'
   signup_send_posters_address_label: 학교/소속 주소
   signup_whole_school_flag_label: 이 이벤트는 학교 전체로 운영됩니다.
+  signup_your_event: Sign up your event
   signup_name_placeholder: 이름
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: 예를 들어, 링컨 고등학교
@@ -100,7 +88,7 @@ ko:
   signup_thank_you_header: Hour of Code 이벤트 운영에 가입해 주셔서 감사합니다.
   signup_thank_you_message: 이벤트 시작 관련 도움자료를 보내드리기 위한 확인 메일을 발송하였습니다.
   map_header: '# 전세계적으로 운영되는 Hour of Code 이벤트들'
-  map_header_company: '# Hour of Code events organized by company'
+  map_header_company: '# by company organizers'
   meta_tag_og_title: Hour of Code 행사가 시작됩니다.
   meta_tag_og_description: Hour of Code 행사는 전세계적으로 진행되며 180개국 이상에서 30개 이상의 언어로 4세부터 104세까지 수천만 명의 학생들과 함께하려고 합니다.
   meta_tag_twitter_title: Hour of Code 행사가 시작됩니다.
@@ -142,8 +130,8 @@ ko:
   hoc_faq_host_a: "물론 가능합니다. Hour of Code 활동은 자기주도적 학습입니다. 여러분은 <a href='http://code.org/learn'>예전 튜토리얼 해보기</a>, 원하는 튜토리얼 선택하기,  시간 잡기 등입니다. &mdash; 나머지 필요한 사항들은 모두 지원합니다. 모든 연령대에 대해서, 유치원부터 그 이상의 모든 수준을 위한 것들이 준비되어있습니다. <a href='/resources/how-to'>시작하기 가이드</a>를 읽고 이벤트 개최를 계획해 보세요."
   hoc_faq_need_computers_q: 참여하는 사람들을 위해 컴퓨터들을 준비해야 하나요?
   hoc_faq_need_computers_a: "아니요. 컴퓨터가 없이도 스마트폰, 태블릿PC 등 등에서도 모두 튜토리얼을 해 볼 수 있습니다. 언제 어디서든지, 가지고 있는 것 만으로도 이벤트가 가능합니다. <p><i>몇 개의 옵션이 있습니다.:</i> <br> <ul> <li><b>두명이 한 팀으로 활동하기</b> 학생들은 페어 프로그래밍(<a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>pair programming</a>)이라는 방법으로 컴퓨터를 같이 사용하고 문제들을 함께 해결하면서 가장 잘 배울 수 있다고 알려져 있습니다. 둘이 같이 협력하도록 해보세요.  <li><b>프로젝트 화면 사용하기</b> 인터넷에 연결된 컴퓨터와 프로젝터와 스크린이 있다면, Hour of Code 를 모두 함께 해볼 수 있습니다. 화면을 보면서 함께 퍼즐과 문제를 해결할 수 있습니다.<li><b>언플로그드 활동 하기</b> 컴퓨터가 전혀 없이도 할 수 있는 많은 언플러그드 활동이 있습니다.</ul>"
-  hoc_faq_international_q: 저는 미국이 아닙니다. 국제적으로 함께 참여하려면 어떻게 해야하나요?
-  hoc_faq_international_a: 전세계 누구나 Hour of Code 이벤트를 열 수 있습니다. 작년에도 수 많은 전세계 학생들이 함께 Hour of Code 활동에 참여했습니다.
+  hoc_faq_international_q: 'I am in <country>. How do I participate internationally?'
+  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='target-resources'>here</a>."
   hoc_faq_tutorial_q: Hour of Code 튜토리얼을 어떻게 만들 수 있나요?
   hoc_faq_tutorial_a: "튜토리얼을 만드는 것에 관심이 있으시다면, <a href='targetHOC'>가이드라인과 방법</a>을 살펴보세요. 어떤 형태로든 다양한 방법으로 함께 하기를 원하고 있습니다. 가장 중요한 목표는 컴퓨터과학(정보과학)을 모르는 학생들과 선생님들에게 가장 효과적으로 경험을 제공하는데 있습니다."
   hoc_faq_more_questions_q: 더 궁금하신 것이 있으신가요?
@@ -170,16 +158,30 @@ ko:
   stats_girls_million: 2013년 1천만 이상의 여학생들
   stats_nina: '"매일 매일 똑같이 놀라운 결과들을 경험하였습니다. &mdash; 100% 학생들이 열광했고요" - Nina Nichols Peery 선생님'
   stats_student: '"이건 <b>평생 처음</b> 경험하는 기회였습니다." -  Mariana Alzate 초등5학년'
-  stats_michael: '저는 학생들이 이렇게 배우는 것에 열광하는 것을 <b>난생 처음</b> 보게 되었습니다." -  Michael Clark 선생님'
+  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
   resources_how_to: 선생님들을 위한 운영 가이드
+  resources_how_to_events: Event how-to guide
+  resources_how_to_districts: How-to guide for districts
+  resources_how_to_officials: How-to guide for public officials
   resources_handouts: Hour of Code 를 알리기 위한 유인물들
   resources_videos: 동영상
   resources_posters: 포스터
-  resources_social: Social
+  resources_social: 소셜
   resources_banners: 배너
   resources_emails: 샘플 이메일
-  resources_stats: 유용한 컴퓨터과학(정보과학) 통계 자료
+  resources_stats: Useful stats and blurbs
   resources_press_kit: 언론매체 관련 키트
+  events_title: 모든 Hour of Code 이벤트들
+  events_nav_all: 모든 이벤트
+  events_nav_whole_schools: 참여학교
+  events_nav_special: 특별 이벤트
+  events_nav_orgs: Organizations
+  events_all_title: Hour of Code 이벤트 전체
+  events_whole_school_title: 학교 전체 참여 Hour of Code
+  events_special_title: 특별한 Hour of Code 이벤트들
+  events_orgs_title: All Hour of Code events organized by Partner Organizations
+  event: 이벤트
+  events: 이벤트들
   footer_copyright_message: Copyright 2014 Code.org. All rights reserved.
   footer_trademark_message: Hour of Code™ is a trademark of Code.org.
   footer_menu_partners: 후원

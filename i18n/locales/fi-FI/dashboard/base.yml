@@ -115,11 +115,11 @@ fi:
     subject: Liity luokkaani (Code.org palvelussa)
     body: |
       Klikkaa alla olevaa linkkiä rekisteröityäksesi Code.org tietojenkäsittelyn peruskursille (jossa minä olen "opettajasi"):
-      
+
       %{link}
-      
+
       Kurssin tehtävät ovat hauskoja, visuaalisesti näyttäviä ja opettavat tietojenkäsittelyt peruskäsitteet käyttäen yksinkertaisia, opastettuja pelejä. Opit koodaamisen alkeet Bill Gatesin, Mark Zuckerbergin, Angry Birdsin ja Plants vs. Zombiesin avulla! :-)
-      
+
       %{name}
   follower:
     invite_sent: Kutsu lähetetty
@@ -191,8 +191,8 @@ fi:
         bonus:
           not_earned_title: 'Voit edelleen ansaita 250 dollaria <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> palveluun (vain USA)'
           earned: |
-            Hieno suoritus! 7 tai useampi oppilaistasi, jotka keräsivät kaikki %{num_trophies} ovat tyttöjä. 
-            
+            Hieno suoritus! 7 tai useampi oppilaistasi, jotka keräsivät kaikki %{num_trophies} ovat tyttöjä.
+
             Huom: sivustolla mainitut raha- ja tavarapalkinnot ovat voimassa vain USA:ssa
           not_earned: '(sivustolla mainitut raha- ja tavarapalkinnot ovat voimassa vain USA:ssa)'
   crud:
@@ -232,12 +232,12 @@ fi:
       mastery: Käsitteitä
       puzzle_map: Tasot
       prizes: |
-        Kerää kaikki %{total_trophies} pokaalia! 
-        
+        Kerää kaikki %{total_trophies} pokaalia!
+
         (sivustolla mainitut raha- ja tavarapalkinnot ovat voimassa vain USA:ssa)
       prize_earned: |
         Hienoa! Keräsit kaikki %{total_trophies} pokaalia.
-        
+
         (sivustolla mainitut raha- ja tavarapalkinnot ovat voimassa vain USA:ssa)
       prize_us_only: (vain oppilaille USA:ssa)
       prizes_link: lisätietoja
@@ -358,7 +358,7 @@ fi:
     teacher: Opettaja
   footer:
     help_from_html: Insinöörit Googlelta, Microsoftilta, Facebookilta ja Twitterilta auttoivat luomaan tämän opetusohjelman.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. Kaikki oikeudet pidätetään.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. Kaikki oikeudet pidätetään.'
+    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. Kaikki oikeudet pidätetään.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. Kaikki oikeudet pidätetään.'
     feedback: Anna palautetta
     translate: Auta meitä kääntämään palvelu omalle kielellesi
     support: Tuki

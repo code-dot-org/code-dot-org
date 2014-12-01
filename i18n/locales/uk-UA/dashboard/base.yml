@@ -115,11 +115,11 @@ uk:
     subject: Приєднатися до мого класу (на Code.org)
     body: |
       Натисніть посилання нижче для реєстрації на уроки з комп'ютерних наук на сайті Code.org (зі мною як вашим „викладачем“):
-      
+
       %{link}
-      
+
       Уроки - цікаві, візуально привабливі і навчають основних понять комп'ютерних наук за допомогою простого керованого ігрового інтерфейсу. Вивчайте код від Білла Гейтса, Марка Цукерберга, Злих Пташок та Рослин проти Зомбі! :-)
-      
+
       %{name}
   follower:
     invite_sent: Запрошення надіслано
@@ -349,7 +349,7 @@ uk:
     teacher: Вчитель
   footer:
     help_from_html: Інженери Google, Microsoft, Facebook і Twitter допомогли створити цей підручник.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. Всі права захищені.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc.  Всі права захищені.'
+    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. Всі права захищені.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc.  Всі права захищені.'
     feedback: Надати відгук
     translate: Допоможіть нам перекласти вашою мовою
     support: Підтримка

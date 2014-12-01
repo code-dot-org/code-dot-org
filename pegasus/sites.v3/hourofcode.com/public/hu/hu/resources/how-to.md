@@ -1,8 +1,17 @@
 
 
-# Hogyan tanítsd a Kód Óráját
+<div class="row">
+  <h1 class="col-sm-6">
+    How to teach one Hour of Code
+  </h1>
+  
+  <div class="col-sm-6 button-container centered">
+    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Sign up your event</button></a>
+  </div>
+</div>
 
-## 1) Próbáld ki a bemutatókat:
+## 1) Watch this how-to video <iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
+## 2) Try the tutorials:
 
 We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
 
@@ -13,20 +22,24 @@ We’ll host a variety of fun, hour-long tutorials for students of all ages, cre
 
 [![](http://<%= codeorg_url() %>/images/tutorials.png)](http://<%=codeorg_url() %>/learn)
 
-## 2) Tervezd meg a hardver-igényt - a számítógép opcionális
+## 3) Register your Hour on the map
 
-A legjobb Kód Órája élmény Internet kapcsolattal rendelkező számítógépekkel érhető el. De nincs szükség minden diáknak külön számítógépre, sőt, a Kód Órája akár számítógép használata nélkül is megvalósítható.
+[Make sure to sign up](<%= hoc_uri('/') %>). We'll send you helpful info as the Hour of Code nears, and you'll see your Hour of Code on our map of worldwide events.
+
+## 4) Plan your hardware needs - computers are optional
+
+The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every child, and can even do the Hour of Code without a computer at all.
 
   * **Teszteld a bemutatókat a diákok számítógépein vagy eszközein.** Győződj meg róla, hogy megfelelően működnek (hanggal és videóval).
   * **Előre ellenőrizd a gratuláló oldalt**, hogy lásd amit a diákok látnak ha befejezték a feladatot. 
   * **Biztosíts a csoportnak fülhallgatókat**, vagy kérd meg a diákokat, hogy hozzanak magukkal, ha a választott bemutató hanggal jobban használható.
 
-## 3) Tervezz előre az elérhető technológiákkal
+## 5) Plan ahead based on your technology available
 
   * **Don't have enough devices?** Use [pair programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
   * **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
-## 4) Inspire students - show them a video
+## 6) Inspire students - show them a video
 
 Show students an inspirational video to kick off the Hour of Code. Examples:
 
@@ -43,7 +56,7 @@ Most kids don’t know what computer science is. Here are some ideas:
   * Or: “Computer science is the art of blending human ideas and digital tools to increase our power. Computer scientists work in so many different areas: writing apps for phones, curing diseases, creating animated movies, working on social media, building robots that explore other planets and so much more."
   * See tips for getting girls interested in computer science [here](http://<%= codeorg_url() %>/girls). 
 
-## 5) Start your Hour of Code
+## 6) Start your Hour of Code
 
 **Direct students to the activity**
 
@@ -67,4 +80,4 @@ Each student gets a chance to get a certificate via email when they finish the [
 
 **What comes after the Hour of Code?**
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %>
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %> <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Sign up your event</button></a>
