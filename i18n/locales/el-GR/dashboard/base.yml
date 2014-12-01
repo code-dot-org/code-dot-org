@@ -115,11 +115,11 @@ el:
     subject: Μπες στην τάξη μου (στο Code.org)
     body: |2
       Κάνε κλικ στον παρακάτω σύνδεσμο να εγγραφείς στα μαθήματα της επιστήμης των υπολογιστών του Code.org (με μένα ως "δάσκαλό" σου):
-      
+
       %{link}
-      
+
       Τα μαθήματα είναι διασκεδαστικά, με όμορφα σχέδια, και η διδασκαλία των βασικών έννοιών της επιστήμης των υπολογιστών γίνεται με απλό, καθοδηγούμενο τρόπο, που μοιάζει με παιχνίδι. Μάθε να προγραμματίζεις με τον Bill Gates, το Mark Zuckerberg, τα Angry Birds και τα Plants vs Zombies :-)
-      
+
        %{name}
   follower:
     invite_sent: Η πρόσκληση στάλθηκε
@@ -350,7 +350,7 @@ el:
     teacher: Teacher
   footer:
     help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped create this tutorial.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. All Rights Reserved.'
+    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
     feedback: Πες τη γνώμη σου
     translate: Βοηθήστε μας να μεταφράσουμε στη γλώσσα σας
     support: Support
