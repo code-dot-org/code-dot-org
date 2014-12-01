@@ -44,6 +44,7 @@ var level;
 var skin;
 
 BlocklyApps.CHECK_FOR_EMPTY_BLOCKS = true;
+BlocklyApps.CHECK_FOR_INCOMPLETE_BLOCKS = true;
 BlocklyApps.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 
 var CANVAS_HEIGHT = 400;
