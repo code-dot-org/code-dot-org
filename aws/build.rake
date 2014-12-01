@@ -122,7 +122,7 @@ $websites = build_task('websites', [deploy_dir('rebuild'), BLOCKLY_COMMIT_TASK])
         'git pull',
         'rake build',
       ].join('; ')
-      threaded_each CDO.app_instances, 5 do |host|
+      threaded_each CDO.app_instances, 3 do |host|
         HipChat.log "Upgrading <b>#{host}</b> front-end..."
         RakeUtils.system 'ssh', '-i', '~/.ssh/deploy-id_rsa', host, "'#{remote_command} 2>&1'"
       end
