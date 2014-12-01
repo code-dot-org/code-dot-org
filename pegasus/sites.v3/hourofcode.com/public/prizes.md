@@ -77,7 +77,7 @@ Are you a teacher who wants to introduce computer programming to your students a
 
 <% end %>
 
-<h2 id="more_questions">More questions about prizes?</h1>
+<h2 id="more_questions">More questions about prizes?</h2>
 
 Check out <a href="<%= hoc_uri('/prizes-terms') %>">Terms and Conditions</a> or visit our forum to see [FAQs](http://support.code.org) and ask your questions.
 

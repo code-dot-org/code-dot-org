@@ -2,9 +2,9 @@
 
 # Kodlama Zamanı ve Bilgisayar Bilimi Eğitimi Haftası rehberi
 
-**The deadline to submit a tutorial for Hour of Code 2014 has passed. You may still submit an entry and we will try to review it if time allows.**
+**Kod Saati 2014 etkinliği için gönderilecek eğitici rehber için son gönderim tarihi geçmiştir. Hazırladığınız rehberi yine de gönderebilirsiniz. Zaman bulabilirsek rehberinizi gözden geçireceğiz.**
 
-Code.org will host a variety of Hour of Code activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= codeorg_url() %>](http://<%= codeorg_url() %>/learn).
+Code.org sayfasında Kod Saati gibi çeşitli aktiviteler düzenleyecektir. Güncel liste aşağıdaki gibidir;[<%= codeorg_url() %>](http://<%= codeorg_url() %>/learn).
 
 We’d like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science. Please use this document to guide the creation of your activity, targeted to the user who has no background in coding, computer programming, and computer science.
 
