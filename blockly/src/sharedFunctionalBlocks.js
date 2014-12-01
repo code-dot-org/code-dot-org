@@ -161,8 +161,8 @@ function installStringEquals(blockly, generator, gensym) {
     helpUrl: '',
     init: function() {
       initTitledFunctionalBlock(this, 'string=?', 'boolean', [
-        { name: 'ARG1', type: 'String' },
-        { name: 'ARG2', type: 'String' }
+        { name: 'ARG1', type: 'string' },
+        { name: 'ARG2', type: 'string' }
       ]);
     }
   };
