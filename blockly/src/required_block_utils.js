@@ -147,11 +147,18 @@ function testsFromProcedure(node) {
 }
 
 /**
- * Given xml for a procedure block, generates tests that check for:
+ * Generates tests that check for:
  * 1. Param declared but not actually used in the function
  * 2. Function not called with the correct number of params
+ * 3. Function declared but never used in workspace
  */
 function testsForAllProcedures() {
+  var startBlocks = xml.parseElement(appOptions.level.startBlocks);
+  var procedureBlocks = startBlocks.querySelectorAll(
+      '[type=procedures_defreturn],[type=procedures_defnoreturn]');
+  var startProcedures = goog.array.map(procedureBlocks, function(procedure) {
+    return procedure.querySelector('title[name=NAME]').textContent;
+  });
   return [[{
     // Ensure that all procedure definitions actually use the parameters they
     // define inside the procedure.
@@ -183,6 +190,27 @@ function testsForAllProcedures() {
       });
     },
     message: 'Function not called with the correct parameter(s).', // TODO: correct string, i18n
+    checkAllBlocks: true
+  }], [{
+    // Ensure that all user-declared procedures have associated call blocks.
+    test: function(userBlock) {
+      if (!userBlock.parameterNames_) {
+        // Block isn't a procedure definition, return true to keep searching.
+        return true;
+      }
+      var name = userBlock.getTitleValue('NAME');
+      if (goog.array.contains(startProcedures, name)) {
+        // Procedure is defined in start blocks, not user-declared.
+        return true;
+      }
+      // Find a matching 'call' block (if one exists)
+      return goog.array.some(Blockly.mainBlockSpace.getAllBlocks(), function(block) {
+        if (/^procedures_call/.test(block.type)) {
+          return block.getTitleValue('NAME') === name;
+        }
+      });
+    },
+    message: 'Function declared but never used.', // TODO: correct string, i18n
     checkAllBlocks: true
   }]];
 }
