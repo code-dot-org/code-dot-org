@@ -14,9 +14,10 @@ social:
 
 %link{href: "/css/learn_tabs.css", rel: "stylesheet"}
 
-%h1{:style=>"margin-bottom: 0px;"}
-  = I18n.t(:code_hoc_coming)
-%br/
+- if request.locale == 'en-US'
+  %h1{:style=>"margin-bottom: 0px;"}
+    = I18n.t(:code_hoc_coming)
+  %br/
 
 %div{style: "background-color:#f8f8f8; padding-left:20px; padding-right:20px; padding-top:10px; padding-bottom:10px"}
   %h3{:style=>"margin-top: 0px; font-size:16px; font-weight:600"}

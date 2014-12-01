@@ -1,8 +1,10 @@
 
 
-## Estadístiques útils en informàtica
+[<button style="float: right; margin-top: 50px">Sign up your event</button>](/#join)
 
-*Per a totes les consultes de premsa i mitjans de comunicació, contacte <press@code.org>*
+## Com atraure els mitjans de comunicació al teu esdeveniment d'Hora de Codi
+
+*Per a totes les consultes de premsa i mitjans de comunicació, contacteu <press@code.org>*
 
 ### Consells clau
 
@@ -29,19 +31,19 @@ Mirar en línia per trobar informació de contacte de periodistes. Si no la pots
 
 **3. Contacta amb els mitjans de comunicació locals**
 
-La millor manera d'arribar és per correu electrònic. Ha de ser curt i comunicatiu: per què s'haurien altres persones d'interessar per aquest esdeveniment? Inclou informació de contacte (incloent-hi un nombre de mòbil) de qui estarà en el lloc del esdeveniment. **Veure un [exemple per els mitjans de comunicació](<%= hoc_uri('/resources#sample-emails') %>):**
+La millor manera d'arribar és per correu electrònic. Ha de ser curt i comunicatiu: per què s'haurien d'interessar altres persones per aquest esdeveniment? Inclou informació de contacte (incloent-hi un número de telèfon) per qui serà el lloc a l'esdeveniment. **Veure un [exemple per els mitjans de comunicació](<%= hoc_uri('/resources#sample-emails') %>):**
 
 **4. Preparat per respondre preguntes sobre el teu esdeveniment de l'escola. Aquests són alguns exemples:**
 
 *Per què la vostra escola està fent una Hora de Codi?*
 
-Mentre tots nosaltres sabem que és important per als estudiants aprendre a navegar al món actual saturat de tecnologia, molts mestres no són experimentats en informàtica i no saben per on començar. Aquest esdeveniment és una oportunitat per a tots nosaltres per saber de què tracta la informàtica.
+Mentre tots nosaltres sabem que és important per als estudiants aprendre a navegar al món actual saturat de tecnologia, molts mestres no són experimentats en informàtica i no saben per on començar. Aquest esdeveniment és una oportunitat per a tots nosaltres per veure de què tracta l' informàtica.
 
-Esperem despertar l'interès en els estudiants per a seguir aprenent. La investigació també mostra que els nens recullen conceptes de programació abans de saber llegir i escriure. De fet, els seus cervells són més receptius als llenguatges informàtics a una edat jove, el mateix que amb les llengües estrangeres.
+Esperem despertar l'interès dels alumnes per a seguir aprenent. La investigació també mostra que els nens aprenen conceptes de programació abans de saber llegir i escriure. De fet, els seus cervells són més receptius als llenguatges informàtics a una edat jove, el mateix que amb les llengües estrangeres.
 
-*Per què és això important?*
+*Per què és important?*
 
-A la Xina, cada estudiant aprèn informàtica per graduar-se l'escola secundària. Als EUA, el 90 per cent de les escoles ni tan sols ho ensenyen. És el moment per aconseguir arribar al segle XXI. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them the confidence and know-how to succeed.
+A la Xina, cada estudiant aprèn informàtica per graduar-se l'escola secundària. Als EUA, el 90 per cent de les escoles ni tan sols ho ensenyen. És el moment per aconseguir arribar al segle XXI. Sabem, que a pesar de que els nostres estudiants quan creixin, faran medicina, negocis, política, o arts, saber com construir tecnologia els permetrà tenir la confiança i el saber fer per tenir èxit.
 
 **Més detalls i una cita que pot utilitzar com idea**
 
@@ -49,7 +51,9 @@ A la Xina, cada estudiant aprèn informàtica per graduar-se l'escola secundàri
 
 **Sobre Code.org**
 
-Code.org® és un estament públic 501c3 sense ànim de lucre dedicat a ampliar la participació en informàtica i augmentar la participació de les dones i de les minories de estudiants de color. La seva visió és que cada alumne de cada escola ha de tenir l'oportunitat d'aprendre programació informàtica. Després del llançament al 2013, Code.org organitzà la campanya d'Hora de Codi — que ha introduït milions d'estudiants a la informàtica — associat amb més de 30 districtes de l'escola pública a nivell nacional, va llançar el Code Studio, una plataforma de codi obert en línia d'aprenentatge per a totes les edats. For more information, please visit: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
+Code.org® és un estament públic 501c3 sense ànim de lucre dedicat a ampliar la participació en informàtica i augmentar la participació de les dones i de les minories d'estudiants de color. La seva idea és que cada alumne de cada escola ha de tenir l'oportunitat d'aprendre programació informàtica. Després del llançament al 2013, Code.org organitzà la campanya d'Hora de Codi — que ha introduït milions d'estudiants a la informàtica — associat amb més de 30 districtes de l'escola pública a nivell nacional, va llançar el Code Studio, una plataforma de codi obert en línia d'aprenentatge per a totes les edats. Per obtenir més informació, visiteu: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
-Troba més recursos i correus de exemple [aquí](<%= hoc_uri('/resources') %>).
+Troba més recursos i correus d'exemple [aquí](<%= hoc_uri('/resources') %>).
+
+<a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>

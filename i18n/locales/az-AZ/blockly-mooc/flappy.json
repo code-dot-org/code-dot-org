@@ -126,7 +126,7 @@
   "whenCollideObstacleTooltip":"Execute the actions below when Flappy hits an obstacle.",
   "whenEnterObstacle":"when pass obstacle",
   "whenEnterObstacleTooltip":"Execute the actions below when Flappy enters an obstacle.",
-  "whenRunButtonClick":"when game starts",
+  "whenRunButtonClick":"oyun başladıqda",
   "whenRunButtonClickTooltip":"Execute the actions below when the game starts.",
   "yes":"Bəli"
 }

@@ -32,7 +32,7 @@
           desc: Edytuj kod (beta)
           MazeEC: Etap 1
         2014 Levels:
-          desc: Łamigłówki 2014 (beta)
+          desc: "Łamigłówki 2014 (beta)"
           Bounce: Etap 1
         Builder Levels:
           desc: Puzzle stworzone przez użytkowników (beta)
@@ -51,6 +51,7 @@
           MazeEC: Etap 1
           Webapp: Etap 2
           ArtistEC: Etap 3
+          StudioEC: Etap 4
         events:
           desc: Bounce (beta)
           Bounce: Etap 1
@@ -102,6 +103,7 @@
         Webapp: Webapp
         ArtistEC: Artysta
         TextMatch: Text Match
+        StudioEC: Play Lab
     trophy:
       name:
         Bronze: Brąz
@@ -123,9 +125,9 @@
         maze_2_2: Czy możesz pomóc mi złapać niesforną świnkę? Poustawiaj na sobie
           kilka bloków "idź do przodu" i naciśnij "Uruchom", aby pomóc mi się tam
           dostać.
-        maze_2_1: Świnka powoduje jeżenie moich piórek. Pomóż mi ją znaleźć!
-        maze_2_2_5: Śledź drogę i doprowadzić mnie do tej głupiej świnki. Unikaj TNT,
-          bo inaczej polecą pióra!
+        maze_2_1: "Świnka powoduje jeżenie moich piórek. Pomóż mi ją znaleźć!"
+        maze_2_2_5: "Śledź drogę i doprowadzić mnie do tej głupiej świnki. Unikaj
+          TNT, bo inaczej polecą pióra!"
         maze_2_3: Prowadź mnie do tego zielonego zła! (Uważaj na pola z TNT)
         maze_2_4: Zachowaj spokój i pomóż mi znaleźć tę złą świnkę. W przeciwnym razie
           mogę się zezłościć!
@@ -541,6 +543,8 @@
         turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas:
           a stick figure, snowflake, or spiral. Also try the new "penWidth" block.
           Have fun!'
+        studio_ec_sandbox: Create your own game. When you're done, click Finish to
+          let friends try your game on their phones.
     video:
       name:
         maze_intro: Labirynt - wprowadzenie
@@ -615,6 +619,9 @@
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Songwriting With Parameters
+        Frozen_intro: Hour of Code Intro
+        Frozen_loops: Introduction to Loops
+        Frozen_functions: Introduction to Functions
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
@@ -641,3 +648,24 @@
         repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
           workspace
         snowflake_dropdown: Use this drop-down to create different snowflakes!
+        degrees_per_side: Divide 360 by the number of sides to get the size of each
+          angle in degrees.
+        set_sides: Use this block to set "sides" to the number needed to complete
+          the puzzle.
+        set_length: Use this block to set "length" to the correct value.
+        which_equation: Which equation makes each side shorter for shapes with more
+          sides?  Try each equation!
+        get_nectar: Use the new "get nectar" block.
+        actions_category: The tool box got a new look! The "Actions" blocks are in
+          here now.
+        draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
+        edit_function: Use this button to edit the function.
+        create_function: Click here to open the "Functions" flyout, then click the
+          "Create a Function" button.
+        house_hint: It's ok if the picture doesn't look like a house yet. We will
+          fix it in the next puzzle.
+        edit_draw_square: Use this button to edit the function and add the loop.
+        edit_get_nectar: Use this button to edit the function and change the direction
+          the Bee will turn to get the nectar.
+        logic_category: Open the "Logic" flyout to find the "if/else" block.
+        length_parameter: Can you update this function so it uses the "length" parameter?

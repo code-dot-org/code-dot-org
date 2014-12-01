@@ -14,11 +14,12 @@
           a line of "real" code.
       4:
         image: notes/hoc1_4.jpg
-        text: You'll learn the foundations of computer science, concepts which are
-          used anywhere from making apps to controlling the Mars rover.
+        text: "អ្នក​នឹង​បាន​សិក្សា​អំពី​មូលដ្ឋានគ្រឹះ​នៃ​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ
+          ដែល​ជា​គោល​គំនិត​ដែល​ត្រូវបាន​ប្រើ​គ្រប់​ទី​កន្លែង រាប់​ចាប់​ពី​ការ​បង្កើត​កម្មវិធី​នានា
+          រហូត​ដល់​ការ​បញ្ជា​យាន​ទៅ​ភព​អង្គារ។"
       5:
         image: notes/hoc1_5.jpg
-        text: A program is a set of instructions for your computer to follow.
+        text: "ប្រូក្រាម​គឺជា​សំណុំ​នៃ​ពាក្យ​បញ្ជា​ដែល​កុំព្យូទ័រ​របស់​អ្នក​ត្រូវ​ធ្វើ​តាម។"
       6:
         image: notes/hoc1_6.jpg
         text: The goal of your first program is to get an Angry Bird through a maze
@@ -50,7 +51,7 @@
           button.
       13:
         image: notes/hoc1_13.jpg
-        text: ចូរ​ទៅ​យក​សត្វជ្រូក​ទាំងនោះ​!
+        text: "ចូរ​ទៅ​យក​សត្វជ្រូក​ទាំងនោះ​!"
     artist_intro:
       1:
         image: notes/stage5_1.jpg

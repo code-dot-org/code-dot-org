@@ -269,6 +269,7 @@ class Studio < Grid
 <category name="Functions" custom="PROCEDURE" />
 <category name="Functional variables" custom="FUNCTIONAL_VARIABLE" />
 <category name="Functional Start">
+  <block type="functional_start_setValue" />
   <block type="functional_start_setBackground" />
   <block type="functional_start_setSpeeds" />
   <block type="functional_start_setBackgroundAndSpeeds" />
@@ -297,6 +298,13 @@ class Studio < Grid
   <block type="functional_logical_not" />
   <block type="functional_boolean" />
 </category>
+<category name ="Functional Cond">
+  <block type="functional_cond_1" />
+  <block type="functional_cond_2" />
+  <block type="functional_cond_3" />
+  <block type="functional_cond_4" />
+</category>
+
 #{k1_blocks(type) if is_k1 == 'true'}
     XML
   end

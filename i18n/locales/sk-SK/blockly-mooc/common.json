@@ -43,6 +43,7 @@
   "numBlocksNeeded":"Gratulujem! Dokončili ste úlohu {puzzleNumber}. (Avšak, mohli ste použiť iba {numBlocks, plural, one {1 blok} other {# blokov}}.)",
   "numLinesOfCodeWritten":"Práve ste napísali {numLines, plural, one {1 riadok} other {# riadkov}} kódu!",
   "play":"play",
+  "print":"Print",
   "puzzleTitle":"Úloha {puzzle_number} z {stage_total}",
   "repeat":"opakovať",
   "resetProgram":"Obnoviť",
@@ -63,8 +64,8 @@
   "tryAgain":"Skúsiť znova",
   "hintRequest":"Pozri nápovedu",
   "backToPreviousLevel":"Späť na predchádzajúcu úroveň",
-  "saveToGallery":"Uložiť do svojej galérie",
-  "savedToGallery":"Uložené do tvojej galérie!",
+  "saveToGallery":"Save to gallery",
+  "savedToGallery":"Saved in gallery!",
   "shareFailure":"Sorry, we can't share this program.",
   "typeFuncs":"Dostupné funkcie:%1",
   "typeHint":"Všimnite si, že sú potrebné zátvorky a bodkočiarky.",
@@ -80,5 +81,6 @@
   "tryHOC":"Vyskúšajte hodinu kódovania",
   "signup":"Prihlásiť sa na úvodný kurz",
   "hintHeader":"Tu je rada:",
-  "genericFeedback":"Pozrite ako to dopadlo a pokúste sa opraviť váš program."
+  "genericFeedback":"Pozrite ako to dopadlo a pokúste sa opraviť váš program.",
+  "defaultTwitterText":"Check out what I made"
 }

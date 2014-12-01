@@ -2,239 +2,239 @@
 
 # Hour of Codeと、Computer Science Education Weekのためのガイドライン指導書
 
-**The deadline to submit a tutorial for Hour of Code 2014 has passed. You may still submit an entry and we will try to review it if time allows.**
+**Hour Of Code 2014 チュートリアルの投稿締め切りは過ぎました。それでもまだ投稿することができますし、私たちも時間の許す限りレビューします。**
 
-Code.org will host a variety of Hour of Code activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= codeorg_url() %>](http://<%= codeorg_url() %>/learn).
+Code.org はさまざまな Hour of Code の活動を Code.org、Hour of Code と CSEdWeek のウェブサイトでホストします。現在のリストは次の場所にあります: [<%= codeorg_url() %>](http://<%= codeorg_url() %>/learn).
 
-We’d like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science. Please use this document to guide the creation of your activity, targeted to the user who has no background in coding, computer programming, and computer science.
+私たちは魅力的な選択を用意したいと思っていますが、一番の目的はコンピューター科学に馴染みのない、より多くの教員や学生の方々に経験をしてもらいたいという事です。 コーディングやコンピュータープログラミングやコンピューター科学の経験がない利用者に向けたあなたの活動を作るための手引きとしてこの文書を使ってください。
 
 <a id="top"></a>
 
-## Index:
+## 目次:
 
-  * [How tutorials will be evaluated for inclusion](#inclusion)
-  * [General guidelines for creating an Hour of Code activity](#guidelines)
-  * [How to submit (Due 10/1/2014)](#submit)
-  * [Suggestions for designing your activity](#design)
-  * [Trademark Guidelines](#tm)
-  * [Tracking Pixel](#pixel)
-  * [Promoting your tutorials, CSEdWeek, and Hour of Code](#promote)
-  * [A note for students with disabilities](#disabilities)
+  * [チュートリアルを含めるかどうかが評価される方法](#inclusion)
+  * [Hour of Code の活動を作るための一般的なガイドライン](#guidelines)
+  * [提出方法 (期限は 2014/10/1)](#submit)
+  * [あなたの活動を計画するための提案](#design)
+  * [商標についてのガイドライン](#tm)
+  * [トラッキング ピクセル](#pixel)
+  * [あなたのチュートリアル、CSEdWeek、Hour of Codeの宣伝](#promote)
+  * [障害を持つ学生のための注意](#disabilities)
 
 <a id="inclusion"></a>
 
-## How tutorials will be evaluated for inclusion
+## チュートリアルを含めるかどうかが評価される方法
 
-A committee of computer science educators will rank submissions based on qualitative and quantitative metrics, including survey results from a broader set of educators.
+コンピューター科学の教育者の委員会が、幅広い教育者の調査結果を含めて、質と量の規準を基に、提出されたものをランク付けします。
 
-**Tutorials will be listed higher if they are:**
+**チュートリアルが高く評価される条件:**
 
-  * high quality
-  * self-directed, don’t require any instruction
-  * designed for beginners
-  * designed as a ~ 1 hour activity
-  * work across many OS/device platforms, including mobile and tablets
-  * work across multiple languages
-  * promote learning by all demographic groups (esp under-represented groups)
-  * not pure HTML+CSS web design focus - (our goal is computer science, not just HTML coding)
+  * 高品質
+  * 自発的で、指示・説明を必要としない
+  * 初心者向けである
+  * 1 時間以内の活動として計画されている
+  * 携帯電話やタブレットを含め、多くの OSやデバイスのプラットフォームで動作する
+  * 複数の言語で動作する
+  * すべての人口統計学的な集団（とくに過小評価されている集団）の学びを促進するものである
+  * ピュアな HTML+CSS ウェブデザインに重点を置いていない - （私たちの目標はコンピューター科学であって、HTML のコーディングではありません）
 
-**Tutorials will be listed lower if they are:**
+**チュートリアルが低く評価される条件:**
 
-  * lower quality
-  * more advanced level of teaching (not for beginners)
-  * have a limited number of supported OS/device platforms - for Web-based platforms you should aim to support all of the following: IE9+, and the latest Chrome, Firefox, and Safari
-  * work only in English
-  * have a gender-specific bent (eg thematically aimed primarily at boys)
-  * serve as an upsell to a learning platform that charges tuition
+  * 低品質
+  * より高度な教育レベルである（初心者向けでない）
+  * サポートされている OS やデバイスのプラットフォームが限られている - Web ベースのプラットフォームについては、次の全てをサポートするのを目指すべきです: IE9以上と、最新の Chrome、Firefox、Safari
+  * 日本語でのみ動作する
+  * 性差特有の傾向がある（例えばテーマが男子を主な対象としている）
+  * 授業料を請求する学習プラットフォームへのアップセルとして機能するものである
 
-**Tutorials will NOT be listed if they:**
+**チュートリアルがリストに載らない条件:**
 
-  * require a high degree of involvement by a teacher with lots of prep (ie not self-guided for students)
-  * are not designed to be a (roughly) one-hour activity
-  * require sign up 
-  * require payment
-  * require installation
-  * focus only on HTML + CSS web design
-  * are submitted after the submission deadline, or with incomplete information (see below)
+  * 高度に先生が関わり多くの準備が必要である（すなわち学生にとって自分からの活動でない）
+  * （およそ）1 時間の活動として計画されていない
+  * サインアップが必要である 
+  * 支払いが必要である
+  * インストールが必要である
+  * HTML + CSS ウェブデザインのみに重点を置いている
+  * 提出期限後に提出されたか、または情報が不完全である（下記参照）
 
-Ultimately, the goal of the Hour of Code campaign is to broaden participation in computer science by students and teachers, and to help show that computer science is accessible to all, and “easier than you think.” In many ways, this goal is better achieved by giving students and teachers fewer and simpler choices, with a focus on the highest quality options for a first-time user.
+最終的に、Hour of Code キャンペーンの目標は学生と先生によるコンピューター科学への参加を拡大させ、コンピューター科学がすべての人が利用可能で「あなたの思うより簡単です」と示す手助けとなることです。いろいろな点で、この目標をよりよく達成するためには、初めてのユーザーにとって最高品質の選択に重点を置きつつ、学生や先生に与える選択肢を少なくそして簡単にすることです。
 
-Note also, that the 2013 CSEdWeek was a fantastic success as measured by the responses from teachers and students - 20M participants from Dec 9 - 23, and 97% said they enjoyed it and want to repeat the campaign!!
+また注意すべき点は、2013 年の CSEdWeek が先生や学生からの反応で評価すれば素晴らしい成功だったことです ― 12 月 9～23 日に 2000 万人の参加者があり、97% が楽しいと言い、キャンペーンを繰り返しやりたいと思っています!!
 
-As a result, the existing listings are certainly “good enough,” and the driving reason to add tutorials to the Hour of Code listings isn’t to broaden the choices, but to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2014 campaign.
+この結果、リストにすでに載っているものは確かに「十分に良い」ので、Hour of Code のリストにチュートリアルを追加する強い理由は、選択肢を広げるためではなく学生にとっての品質（や鮮度）を高めるため、または 2014 年のキャンペーンがグローバルなことから、非英語の話者の選択肢を展開するためです。
 
-[**Back to the top**](#top)
+[**トップに戻る**](#top)
 
 <a id="guidelines"></a>
 
-## General guidelines for creating an Hour of Code activity
+## Hour of Code の活動を作るための一般的なガイドライン
 
-  * **Subject:** Introductory computer science or programming (not HTML).
-  * **Goal:** Give beginners an accessible first taste of programming.
-  * **Tone:** 
-      * Computer science is not just for geniuses. It doesn’t matter your age, gender, race. Anybody can learn!
-      * Computer science is connected to a wide variety of fields and interests. Everybody should learn!
-      * Encourage students to create something that can be shared with friends/online.
-  * **Types of activities:** 
-      * **Best:** Web-based, smartphone-friendly, or unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). 
-      * **Okay, but not preferred:** app-install, desktop app, or game-console experiences.
-  * **Format:** Self-guided tutorials or lessons, optionally facilitated by the teacher. There should be directions for students as opposed to an open-ended hour long challenge. Ideally, the instructions and tutorials are integrated directly into the programming platform, to avoid switching tabs or windows between the tutorial and the programming platform.
+  * **主題:**コンピュータ科学やプログラミングの入門 (HTML ではありません)。
+  * **目標:** 初心者にプログラミングを初めて味わってもらう
+  * **風格:** 
+      * コンピューター科学は天才のためだけのものではありません。年齢、性別、人種は関係ありません。誰でも学ぶことができます！
+      * コンピューター科学は幅広い分野や関心事とつながっています。誰もが学ぶべきです！
+      * 学生が、友達とまたはオンラインで共有できるものを作るのを励まします。
+  * **活動の種類:** 
+      * **最善:** ウェブベースで、スマートフォン対応か、コンピュータを使わずにコンピューター科学の概念を教える、電力のいらない形の活動(<http://csunplugged.com/> をご覧ください). 
+      * **悪くないが、好ましくはない:** アプリをインストールする、またはデスクトップアプリ、ゲーム機の体験。
+  * **形式:** 必要に応じて先生の手助けのある、自分から行うチュートリアルやレッスン。 時間無制限の長い課題とは対照的に、学生への指示があるべきです。 理想的には、指示やチュートリアルがプログラミングのプラットフォームに統合されて、チュートリアルとプログラミングの間でタブやウィンドウを切り替えずに済む形です。
 
-[**Back to the top**](#top)
+[**トップに戻る**](#top)
 
 <a id="submit"></a>
 
-## How to submit (Due 10/1/2014)
+## 提出方法 (期限は 2014/10/1)
 
-Visit the [Hour of Code Activity Submission page](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform) and follow the steps to submit your tutorial.
+[Hour of Code 活動提出ページ](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform)にアクセスして、手順に従ってあなたのチュートリアルを提出してください。
 
-**What you’ll need:**
+**必要となるもの:**
 
-  * Your name, logo (jpg, png, etc.)
-  * URL for a screenshot or marketing image of the HoC activity. Images/screenshots should be 446 x 335 resolution exactly. If an appropriate image is not provided, we may take our own screenshot of your tutorial OR we may choose not to list it.
-  * URL Link for the logo
-  * Name of the activity
-  * URL Link to the activity
-  * URL Link to teacher notes (optional, see details below)
-  * Description of the activity (both desktop-view and mobile-view) 
-      * **Max character count for desktop-view:** 384
-      * **Max character count for mobile-view:** 74
-      * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
-  * A list of tested/compatible platforms: 
-      * **Web based:** 
-          * OS - Mac, Win, and versions
-          * Browsers - IE8, IE9, IE10, Firefox, Chrome, Safari
-          * iOS mobile Safari (mobile-optimized)
-          * Android Chrome (mobile-optimized)
-      * **Non web-based:** specify platform for native code (Mac, Win, iOS, Android, xBox, other)
-      * Unplugged
-  * A list of supported languages and appropriate format: 
-      * Tutorials should specify which languages they support using 2-character language codes, e.g. en - English; ja - Japanese
-      * If more specificity is necessary, using dashes, e.g. fr-be - French (Belgium) or fr-ca - French (Canada)
-      * ***Note: Language-detection is the job of the tutorial provider, we will redirect all users to the single URL provided.*** 
-  * If you submit an online tutorial, we need to know whether it is [COPPA compliant](http://en.wikipedia.org/wiki/Children's_Online_Privacy_Protection_Act) or not.
-  * Recommended grade level(s) for intended users. You may refer to the [Computer Science Teachers’ Association’s K-12 Standards](http://csta.acm.org/Curriculum/sub/K12Standards.html) for grade-appropriate computer science concepts. Example grade levels include: 
-      * Elementary school: grades K-2 or 3-5
-      * Middle School: grades 6-8
-      * High School: grades 9-12
-      * All ages
-  * Please also include recommended computer science knowledge within grade level: Beginner, Intermediate, or Advanced. The Hour of Code website will highlight activities for Beginners most prominently. If you’d like to prepare Intermediate and Advanced Hour of Code Activities, please include the prior knowledge needed in the description of your activity.
-  * Technical requirements: 
-      * In order to more accurately track participation we want every third party tutorial partners to include 1-pixel tracking images on the first and last page of their Hour of Code tutorials. Place a starting pixel-image on the start page and a final pixel-image on the end page. Do not place pixels on interim pages). See the Tracking Pixel section below for more details. 
-      * Upon finishing your activity, users should be directed to <http://code.org/api/hour/finish> where they will be able to: 
-          * Share on social media that they completed the Hour of Code
-          * Receive a certificate that they completed the Hour of Code
-          * See leaderboards about which countries/cities have the highest participation rates in Hour of Code activities
-          * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to <http://code.org/api/hour/finish> as well. 
-  * ***(Optional)*** We will follow-up with an online survey/form link asking for a report of the following activity metrics for the week of Dec. 8, 12:01 am through Dec. 14, 11:59 pm) 
-      * For online activities (especially smartphone/tablet apps): 
-          * Number of users
-          * How many completed the task
-          * Average time on task
-          * Number of total lines of code written over all users
-          * How many continued on to further learning (measured as any user who finishes the task and goes onto additional tasks at your site)
-      * For offline activities 
-          * Number of downloads of paper version of activity (if applicable)
+  * あなたの名前、ロゴ（jpg、png など）
+  * HoC 活動のスクリーンショットや市場向け画像の URL。 画像やスクリーンショットは正確に 446×335 の解像度であるべきです。 適切な画像が提供されない場合、我々自身であなたのチュートリアルのスクリーンショットをとるか、またはリストに載せないことがあります。
+  * ロゴの URL リンク
+  * 活動の名前
+  * 活動への URL リンク
+  * 先生のメモへの URL リンク（必要ならば。詳細は下記参照）
+  * 活動の説明（デスクトップ表示とモバイル表示の両方） 
+      * **デスクトップ表示での最大文字数:** 384文字
+      * **モバイル表示での最大文字数:** 74文字
+      * 説明には、主に学生が主体なのか、または先生の手助けがあるのかを含めてください。 さらに、Hour of Code 活動がコモン・コアや次世代科学スタンダードに取り組んでいるかどうかに興味のある学校もあります。 もし活動が具体的な標準に取り組んでいるのであれば、その情報を含めることを検討してください。
+  * テストした/互換性のあるプラットフォームのリスト: 
+      * **ウェブベース:** 
+          * OS - Mac・Winとバージョン
+          * ブラウザ - IE8、IE9、IE10、Firefox、Chrome、Safari
+          * iOS モバイル Safari（携帯対応）
+          * Android Chrome（携帯対応）
+      * **非ウェブベース:** ネイティブコードのプラットフォームを記載してください（Mac、Win、iOS、Android、xBox、ほか）　
+      * 電力のいらない形
+  * サポートされている言語の一覧と適切な形式: 
+      * チュートリアルはサポートする言語を 2 文字の言語コードを使って記載すべきです。例えば、ja - 日本語、en - 英語
+      * もしさらに特異性が必要であれば、ダッシュを使います。例えば、fr-be - フランス語（ベルギー）または fr-ca - フランス語（カナダ）
+      * ***注意: 言語の検出はチュートリアル提供者の仕事です。我々は全てのユーザーを提供された単一の URL にリダイレクトします。*** 
+  * オンラインのチュートリアルを提出する場合、それが [COPPA 準拠](http://en.wikipedia.org/wiki/Children's_Online_Privacy_Protection_Act)かどうかをお知らせください。
+  * 目的利用者の推奨学年。学年に適したコンピューター科学の概念については [コンピューター科学教育者協会の K-12 標準](http://csta.acm.org/Curriculum/sub/K12Standards.html) を参照してください。学年レベルの例として挙げられるものは次の通りです: 
+      * 小学校: 幼稚園～小2、または小3～5
+      * 中等学校: 小6～中2
+      * ハイスクール: 中3～高3
+      * 全年齢
+  * 学年レベルの中には、推奨されるコンピューター科学の知識（初心者、中級、上級）も含めてください。 Hour of Code のウェブサイトは初心者向けの活動を最も目立つように強調表示します。 中級・上級の Hour of Code 活動を用意する場合は、必要な予備知識を活動の説明に含めてください。
+  * 技術的要件: 
+      * 参加をより正確に追跡するため、各サードパーティーのチュートリアルパートナーに、Hour of Code チュートリアルの最初と最後のページに 1 ピクセルのトラッキング画像を入れていただくようお願いしています。 最初のページには最初の画像を、最後のページには最後の画像を配置してください。 中間のページには配置しないでください）。 詳細については下記のトラッキングピクセルの節を参照してください。 
+      * あなたの活動を終えた時には、ユーザーは <http://code.org/api/hour/finish> にリダイレクトされるべきです。そこでユーザーは次のことができます: 
+          * Hour of Code を完了したことをソーシャルメディアで共有する
+          * Hour of Code を完了した証明書を受け取る
+          * Hour of Code 活動への参加率が最も高い国/都市についてのリーダーボードを見る
+          * あなたの活動に 1 時間費やして完了できなかったユーザーに対しては、あなたの活動に「私は Hour of Code を終えました」という、<http://code.org/api/hour/finish> へ戻るボタンを含めてください。 
+  * ***（省略可能）*** 私たちは12月8日午前12:01から12月14日午後11:59までの 1 週間、次に挙げる活動測定基準のレポートを求めるオンラインのアンケート/フォームのリンクで追跡調査をします） 
+      * オンラインの活動（特にスマートフォン・タブレットのアプリ）について: 
+          * ユーザー数
+          * タスクを完了した人の数
+          * タスクの平均時間
+          * 全ユーザーによって書かれたコードの合計行数
+          * それ以上の学習へ続けた人の数（タスクを終えて続けてあなたのサイトの追加のタスクへ移ったユーザーとして測定します）
+      * オフラインの活動について 
+          * 活動の紙バージョンのダウンロード数（該当する場合）
 
-[**Back to the top**](#top)
+[**トップに戻る**](#top)
 
 <a id="design"></a>
 
-## Suggestions for designing your activity
+## あなたの活動を計画するための提案
 
-**Include the CSEdWeek logo in your tutorial.** You can include the CSEdWeek logo ([small](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) or [big](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) in your tutorial, but this is not required. You may also contact us to request specific permission to use the “In Partnership with Code.org” logo. ***This logo can only be used if specific permission is granted in writing by Code.org.*** We may end up creating an Hour of Code logo, but at this time we do not have one. Under no circumstances can the Code.org logo and name be used. Both are trademarked, and can’t be co-mingled with a 3rd party brand name.
+**CSEdWeek のロゴをチュートリアルに含めましょう。**CSEdWeek のロゴ（[小](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg)または[大](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)）をあなたのチュートリアルに含めることができますが、必須ではありません。 また、“In Partnership with Code.org”（Code.org と提携しています）のロゴを使用するには私たちにご連絡いただき許可を要求してください。 ***このロゴは Code.org によって書面で明確な許可が付与された場合に限り使用することができます。***Hour of Code のロゴは、私たちは最終的に作ることになるかもしれませんが、現時点ではまだありません。 いかなる状況下でも Code.org のロゴと名前は使用することは出来ません。 どちらも商標登録されており、サードパーティーのブランド名と混合することはできません。
 
-**Make sure that the average student can finish comfortably in an hour.** Consider adding an open-ended activity at the end for students who move more quickly through the lesson. Remember that most kids will be absolute beginners to computer science and coding.
+**平均的な学生が不自由なく 1 時間以内に終えられるようにしてください。**速くレッスンを進める学生には時間無制限の活動を最後に追加することを検討してください。 ほとんどの子供たちはコンピューター科学やコーディングには全くの初心者であることを忘れないでください。
 
-**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Not only are the students novices, some of the teachers are as well. Include info such as:
+**先生へのメモを含めましょう。**ほとんどの活動は学生主導であるべきですが、もし先生の手助けや監督をする活動であれば、先生向けの明確で簡潔な指示を、活動とともに提出する別個の URL に先生メモの形式で含めましょう。 初心者なのは学生だけではありません。一部の先生も初心者です。 次のような情報を含めてください:
 
-  * Our tutorial works best on the following platforms and browsers
-  * Does it work on smartphones? tablets?
-  * Do you recommend pair programming? 
-  * Considerations for use in a classroom? eg if there are videos, advise teachers to show the videos on a projected screen for the entire classroom to view together
+  * 私たちのチュートリアルはこのようなプラットフォームやブラウザで最もよく動作します
+  * 動作環境はスマートフォンか？　タブレットか？
+  * ペアプログラミングを推奨しているかどうか 
+  * 教室で使う場合に考慮すべき点？　例えば、動画がある場合には、動画をスクリーンに投影して教室全体でいっしょに見ることができるようにするよう先生にアドバイスしましょう。
 
-**Incorporate feedback at the end of the activity.** (E.g.: “You finished 10 levels and learned about loops! Great job!”)
+**活動の最後にフィードバックを組み込みましょう。**（例：「レベルを 10 個完了して、ループについて学びました！　よくできました！」）
 
-**Incorporate social media.** Encourage students to post to social media (where appropriate) when they’ve finished, for example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourofCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
+**ソーシャルメディアを組み込みましょう。**完了した時に学生に（適切な）ソーシャルメディアへ投稿することを奨励しましょう。例えば、「Hour of Code を________で完了しました。あなたは？ #HourOfCode」や「#CSEdWeek の1つとして #HourofCode を完了しました。 あなたは？ @Scratch」ハッシュタグ **#HourOfCode** を使ってください（H, O, C は大文字）
 
-**Create your activity in languages besides English.** We're focusing this campaign internationally this year and would like to have a number of activities to offer non-English speaking participants.
+**英語以外の言語であなたの活動を作成しましょう。**私たちは、今年はこのキャンペーンに国際的に重心を置いており、非英語圏の参加者にたくさんの活動を提供したいと思っています。
 
-**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
+**社会的に重要な文脈に活動を説明したり結びつけたりしましょう。**コンピュータープログラミングは、それが世界をどのようにしてより良く変えられるかを学生がわかったときに力を発揮します！
 
-**Do not require signup or payment before students can try your tutorial.** Tutorials that require signup or payment will not be listed
+**サインアップしなくてもチュートリアルを試せるようにしましょう。**サインアップや支払いが必要なチュートリアルはリストに掲載しません
 
-**Make sure your tutorial can be used in a [Pair Programming paradigm](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning).**
+**チュートリアルが[ペアプログラミング パラダイム](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning)で使えるようにしましょう。.**
 
-The three rules of pair programming in a school setting:
+学校という環境におけるペアプログラミングの 3 つのルール:
 
-  * The driver controls the mouse and keyboard.
-  * The Navigator makes suggestions, points out errors, and asks questions. 
-  * Students should switch roles at least two times a session.
+  * ドライバーは、マウスとキーボードを操作します。
+  * ナビゲーターは提案をし、エラーを指摘し、質問をします。 
+  * 学生は 1 回のセッションで 2 回以上役割を交代するべきです。
 
-Benefits of Pair Programming:
+ペアプログラミングの利点:
 
-  * Students can help one another instead of relying on the teacher
-  * Show that coding is not a solo activity, but one involving social interaction
-  * Not all classrooms or labs have enough computers for a 1:1 experience
+  * 学生が先生に頼るのではなくお互いを助けあうことができる
+  * コーディングは一人だけでの活動ではなく、人とのかかわり合いを必要とするものであることを示す
+  * 全ての教室や実習室に 1:1 の体験に十分な数のコンピューターがあるわけではない
 
-[**Back to the top**](#top)
+[**トップに戻る**](#top)
 
 <a id="tm"></a>
 
-## Trademark Guidelines
+## 商標についてのガイドライン
 
-With ~40 million students having tried the Hour of Code, and over 97% of participating teachers asking us to repeat the event annually, we are taking steps to make sure we set up the Hour of Code as a movement that can repeat annually with greater fidelity and without confusion.
+約 4000 万人の学生が Hour of Code を試し、参加した先生の 97% に私たちにイベントを毎年繰り返して欲しいと頼まれたなかで、私たちは Hour of Code を正確に混乱なく毎年繰り返すことのできる運動として準備するようにする措置を講じています。
 
-One piece of this is to protect the trademark "Hour of Code" to prevent confusion. Many of our tutorial partners have used "Hour of Code" on your web sites. We don't want to prevent this usage, but we want to make sure it fits within a few limits:
+混乱を防ぐために商標「Hour of Code」を保護するというのもその一つです。 チュートリアルパートナーの多くがウェブサイトに「Hour of Code」を使用してきました。 私たちはこの使い方を引き止めるわけではありませんが、いくつかの制限を満たすようにしたいと思っています:
 
-  1. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but rather referencing the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp"
-  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions
-  3. Include language on the page (or in the the footer), including links to the CSEdWeek and Code.org web sites, that says the following:
+  1. いかなる「Hour of Code」への言及も、それがあなたの独自のブランド名だと示唆する形ではなく、Hour of Code を草の根運動として参照する形で使われるべきです。 良い例:「ACMECorp.com で Hour of Code に参加する」。 悪い例:「ACME Corp の Hour of Code を試す」
+  2. ウェブサイトとアプリの説明の両方で、「Hour of Code」について言及するもっとも目立った場所に上付き文字の「TM」を使ってください。
+  3. ページに（またはフッターに）、CSEdWeek と Code.org へのリンクを含めて次の言葉を含めてください:
     
-    ***“The 'Hour of Code' is a nationwide initiative by Computer Science Education Week[csedweek.org] and Code.org [code.org] to introduce millions of students to one hour of computer science and computer programming.”***
+    ***「『Hour of Code』はコンピューター科学教育週間[csedweek.org]と Code.org [code.org] による、数百万人もの学生にコンピューター科学とコンピュータープログラミングを経験してもらうための全国的な取り組みです。」***
 
-  4. No use of "Hour of Code" in app names
+  4. アプリ名に「Hour of Code」を使用しないでください。
 
-[**Back to the top**](#top)
+[**トップに戻る**](#top)
 
 <a id="pixel"></a>
 
-## Tracking Pixel
+## トラッキング ピクセル
 
-In order to more accurately track participation we ask every third party tutorial partners to include 1-pixel tracking images on the first and last page of their Hour of Code tutorials (A starting pixel-image on the start page and a final pixel-image on the end page. And not on interim pages).
+参加をより正確に追跡するため、各サードパーティーのチュートリアルパートナーに、Hour of Code チュートリアルの最初と最後のページに 1 ピクセルのトラッキング画像を入れていただくようお願いしています（最初のページには最初の画像を、最後のページには最後の画像を入れてください。 そして中間のページには入れないでください）。
 
-This will allow us to count users who you directly recruit to visit your website to do their Hour of Code, or users who visit when a teacher types your URL directly on their whiteboard. It will lead to more accurate participation counts for your tutorial, which will help you attract users. If you integrate the pixel at the end it will also allow us to measure tutorial completion rates.
+これにより、あなたが直接勧誘して Hour of Code を行うためにあなたのウェブサイトを訪れたユーザーや、先生がホワイト ボード上に直接あなたの URL を入力したときに訪れたユーザーを数えることができます。 このことであなたのチュートリアルの参加者数がより正確になり、ユーザーを惹きつけやすくなります。 もし最後のページにピクセルを組み込めば、チュートリアルの完了率を測定できるようにもなります。
 
-If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
+もしあなたのチュートリアルが承認されて最終的なチュートリアルのページに含められたならば、Code.org はチュートリアルに組み込むためのユニークなトラッキングピクセルをあなたに提供します。以下の例を参照してください。
 
-***NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)***
+***注意: これはインストール可能なアプリ（iOS/Android アプリ、またはデスクトップインストールアプリ）にとっては重要ではありません***
 
-**Example tracking pixels for AppInventor:**
+**AppInventor 用のトラッキングピクセルの例:**
 
 IMG SRC="http://code.org/api/hour/begin_appinventor.png/"
 
 IMG SRC="http://code.org/api/hour/finish_appinventor.png/"
 
-[**Back to the top**](#top)
+[**トップに戻る**](#top)
 
 <a id="promote"></a>
 
-## Promoting your tutorials, CSEdWeek, and Hour of Code
+## あなたのチュートリアル、CSEdWeek、Hour of Codeの宣伝
 
-We are asking everyone to promote their own 1-hour tutorial to your users. Please direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your tutorial. Use the international Hour of Code campaign for Computer Science Education Week as an excuse to encourage users to invite others to join in, help us reach 100 million total participants.
+私たちはすべての方に、ご自身の 1 時間のチュートリアルをあなたのユーザーに宣伝するようお願いしています。 あなたの Hour of Code のページに案内してください。 ユーザーはチュートリアルについてのあなたからのメールにはおそらく反応してくれるでしょう。 コンピューター科学教育週間の間、国際的な Hour of Code キャンペーンを理由にユーザーに他の人を招待するよう奨励し、参加してもらいましょう。私たちの総参加者が 1 億人に達する手助けをお願いします。
 
-  * Feature Hour of Code and CSEdWeek on your website.  
-    Ex: <http://www.tynker.com/hour-of-code>
-  * Promote Hour of Code using social media, traditional media, mailing lists, etc, using hashtag **#HourOfCode** (with capital letters H, O, C)
-  * Host a local event or ask your employees to host an event at local schools or community groups.
-  * See our resource kit for further information (coming soon).
+  * あなたのウェブサイトで Hour of Code と CSEdWeek を取り上げましょう。  
+    例: <http://www.tynker.com/hour-of-code>
+  * ハッシュタグ **#HourOfCode**（H, O, C は大文字）を使って、ソーシャルメディアや従来のメディア、メーリングリストなどで Hour of code を宣伝しましょう
+  * 地元のイベントを開催したり、あなたの従業員に地元の学校や地域社会のグループでイベントを開催してもらうようお願いしてみましょう。
+  * その他の情報については、リソースキットをご覧ください（近日公開）。
 
-[**Back to the top**](#top)
+[**トップに戻る**](#top)
 
 <a id="disabilities"></a>
 
-## A special note for students with disabilities
+## 障害を持つ学生のための特別な注意
 
-If you create a tutorial that is designed for the vision-impaired, we’d love to highlight it for viewers with screen-readers. We have not yet received such a tutorial, and would be eager to include one as an option for these students.
+視覚障害者向けに設計されたチュートリアルを作成する場合、スクリーン リーダーで見る人のためにそれを強調したいと思います。 そのようなチュートリアルはまだ受け取ったことがないので、そういった学生に向けた選択肢として含めたいと思います。
 
-[**Back to the top**](#top)
+[**トップに戻る**](#top)

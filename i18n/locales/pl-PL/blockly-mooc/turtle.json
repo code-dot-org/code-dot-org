@@ -64,7 +64,7 @@
   "penDown":"opuść ołówek",
   "penTooltip":"Podnosi lub opuszcza ołówek, by zakończyć lub rozpocząć rysowanie.",
   "penUp":"podnieś ołówek",
-  "reinfFeedbackMsg":"Czy to wygląda tak, jak chciałeś? Możesz nacisnąć przycisk Spróbuj ponownie, aby zobaczyć swój rysunek.",
+  "reinfFeedbackMsg":"Here is your drawing! Keep working on it or continue to the next puzzle.",
   "setColour":"ustaw kolor",
   "setPattern":"set pattern",
   "setWidth":"ustaw szerokość",

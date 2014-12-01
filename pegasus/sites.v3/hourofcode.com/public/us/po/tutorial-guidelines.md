@@ -1,6 +1,6 @@
 
 
-# Linhas orientadoras para a Semana da Hora de Código e Ciências da Computação
+# Linhas orientadoras para a Semana da Hora do Código e Ciências da Computação
 
 **The deadline to submit a tutorial for Hour of Code 2014 has passed. You may still submit an entry and we will try to review it if time allows.**
 

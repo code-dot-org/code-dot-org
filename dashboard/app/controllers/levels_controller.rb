@@ -86,6 +86,14 @@ class LevelsController < ApplicationController
   # PATCH/PUT /levels/1
   # PATCH/PUT /levels/1.json
   def update
+    if level_params[:name] &&
+        @level.name != level_params[:name] &&
+        @level.name.downcase == level_params[:name].downcase
+      # do not allow case-only changes in the level name because that confuses git on OSX
+      @level.errors.add(:name, 'Cannot change only the capitalization of the level name (it confuses git on OSX)')
+      render json: @level.errors, status: :unprocessable_entity
+      return
+    end
     if @level.update(level_params)
       render json: { redirect: level_url(@level) }.to_json
     else
