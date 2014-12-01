@@ -9,6 +9,11 @@
   You are currently signed in. #{link_to "Return home", root_path} or #{link_to("log out", destroy_user_session_path)} to proceed.
 - else
   %h2 Register to join the class #{@section.name} taught by #{@section.user.name}
+  %p
+    If you already have an account at Code.org, please
+    %a{href: "http://#{request.site}/users/sign_in?return_to=http://#{request.site}/join/#{params[:section_code]}"} sign into your account
+    before joining the section.
+  %p If you don't have an account at Code.org yet, please fill out the fields below to create an account and join the section.
   - if @user.errors.any?
     #error_explanation
       %ul
