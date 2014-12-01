@@ -79,10 +79,6 @@ exports.makeTestsFromBuilderRequiredBlocks = function (customRequiredBlocks) {
     }
   });
 
-  if (BlocklyApps.CHECK_FOR_INCOMPLETE_BLOCKS) {
-    requiredBlocksTests.push(testForIncompleteBlocks());
-  }
-
   return requiredBlocksTests;
 };
 
@@ -233,26 +229,6 @@ function testsForAllProcedures() {
     message: 'Incomplete block inside function.', // TODO: correct string, i18n
     checkAllBlocks: true
   }]];
-}
-
-/**
- * Generates a test that checks for incomplete blocks (blocks with a
- * disconnected input)
- */
-function testForIncompleteBlocks() {
-  return [{
-    test: function(userBlock) {
-      if (!BlocklyApps.CHECK_FOR_INCOMPLETE_BLOCKS) {
-        return true;
-      }
-      return !userBlock.inputList.some(function(input) {
-        return input.type === Blockly.INPUT_VALUE &&
-            !input.connection.targetConnection;
-      });
-    },
-    message: 'Incomplete block.', // TODO: correct string, i18n
-    checkAllBlocks: true
-  }]
 }
 
 /**
