@@ -448,4 +448,30 @@ class LevelsControllerTest < ActionController::TestCase
     assert_equal new_level.name, "Fun Level (copy 1)"
     assert_redirected_to "/levels/#{new_level.id}/edit"
   end
+
+  test 'cannot update level name with just a case change' do
+    level = create :level, name: 'original name'
+
+    post :update, id: level.id, level: {name: 'ORIGINAL NAME'}
+
+    assert_response 422
+
+    # error message
+    assert assigns(:level).errors[:name]
+
+    level = level.reload
+    # same name
+    assert_equal 'original name', level.name
+  end
+
+  test 'can update level name' do
+    level = create :level, name: 'original name'
+
+    post :update, id: level.id, level: {name: 'different name'}
+
+    level = level.reload
+    # same name
+    assert_equal 'different name', level.name
+  end
+
 end
