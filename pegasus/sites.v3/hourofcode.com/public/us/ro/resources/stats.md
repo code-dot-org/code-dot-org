@@ -1,15 +1,17 @@
 
 
-# Cum să atragi mass-media la evenimentul Hour of Code organizat de tine
+[<button style="float: right; margin-top: 50px">Înscrieţi-vă evenimentul</button>](/#join)
 
-## Câteva statistici şocante (SUA):
+# Rezumate si statistici utile
 
-  * Vor exista cu un milion mai multe locuri de muncă in domeniul programării decât elevii în următorii 10 ani (până la 500 miliarde dolari în salarii).
-  * Mai mult de 50 la sută din toate proiectele de matematică aplicata şi ştiinţă sunt în programare. 
-  * Locurile de muncă din programare sunt printre cele mai bine plătite pentru absolvenți. Cu toate acestea mai puțin de 3% dintre studenți sunt absolvenți de informatică.
-  * În 26 de state, orele de programare și tehnologia computerelor nu se iau în calcul la cerintele de absolvire din liceele de matematică sau știinte. 
-  * Mai putin de 20% din elevii inscrisi in programul AP Computer Science sunt fete. Mai putin de 10% sunt de negri sau latini.
+## Use this short blurb in newsletters
 
-## Versiune grafică:
+### Adu informatica in scoala ta. Incepe cu Hour of Code
+
+Computerele sunt peste tot, dar predau informatica mai puţine şcoli decât acum 10 ani. Vestea bună e că suntem pe cale de a schimba acest lucru. Dacă aţi auzit despre [ Hour of Code ](<%= hoc_uri('/') %>) . anul trecut, sigur stiti ca a facut istorie. Intr-o singură saptamână, 15 milioane de elevi au incercat programarea! [ Hour of Code ](<%= hoc_uri('/') %>) este o introducere de o oră in programare, proiectat să desluseasca limbajul de cod şi arată că oricine poate învăţa elementele de bază. [ Inscrie-te ](<%= hoc_uri('/') %>) pentru a găzdui un eveniment Hour of Code intre 8 si 14 decembrie în timpul Saptamanii de Educatie de Informatica şi ajuta-ne sa ajungem la 100 de milioane de studenţi până la sfârşitul anului. Add your school to the map, go to <http://hourofcode.com>
+
+## Infographic version:
 
 ![imagine](http://code.org/images/fit-8000/Code.org_infographic.png)
+
+<a style="display: block" href="/#join"><button style="float: right;">Înscrieţi-vă evenimentul</button></a>

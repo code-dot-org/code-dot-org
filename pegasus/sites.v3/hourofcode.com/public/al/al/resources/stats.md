@@ -1,15 +1,17 @@
 
 
-# Si t'i tërhiqni mediat në eventin tuaj të Orës së Kodimit
+[<button style="float: right; margin-top: 50px">Sign up your event</button>](/#join)
 
-## Disa statistika tronditëse (SHBA):
+# Njoftime dhe statistika të dobishme
 
-  * Do të jenë një milion punë kompjuterike më shumë se sa studentë në 10 vitet e ardhshme (në total deri 500 miliardë $ në rroga).
-  * Mbi 50 përqind të të gjitha profesioneve të projektuara të matematikës dhe shkencës janë në profesione kompjuterike. 
-  * Profesionet kompjuterike janë ndër profesionet më të paguara për të sapo diplomuarit. E prapë, më pak se 3% të studentëve të fakulteteve diplomohen në shkencat kompjuterike.
-  * Në 26 shtete, lëndët e shkencës kompjuterike nuk numërohen si kërkesa për matematikë apo shkencë në diplomimin e shkollave të mesme. 
-  * Më pak se 20% të studentëve të AP Computer Science janë femra. Më pak se 10% janë zezakë ose Latino.
+## Use this short blurb in newsletters
 
-## Versioni infografik:
+### Bring computer science to your school. Start with an Hour of Code
+
+Kompjuterët janë kudo, por më pak shkolla e mësojnë shkencën kompjuterike tash se sa para 10 vitesh. Lajmi i mirë është se jemi në rrugë për ta ndryshuar këtë. Nëse keni dëgjuar për [Orën e Kodimit](<%= hoc_uri('/') %>) vitin e kaluar, ndoshta e dini se ka bërë histori. Për një javë, 15 milionë studentë e provuan shkencën kompjuterike! [Ora e Kodimit](<%= hoc_uri('/') %>) është hyrje një-orëshe në shkencë kompjuterike, e dizajnuar ta demistifikojë kodin dhe të tregojë se kushdo mund t'i mësojë bazat. [Regjistrohu](<%= hoc_uri('/') %>) për të qenë nikoqir i Një Ore të Kodimit më 8-14 dhjetor gjatë Javës së Edukimit në Shkencë Kompjuterike dhe ndihmo të arrihen 100 milionë studentë deri në fund të vitit. Add your school to the map, go to <http://hourofcode.com>
+
+## Infographic version:
 
 ![image](http://code.org/images/fit-8000/Code.org_infographic.png)
+
+<a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>

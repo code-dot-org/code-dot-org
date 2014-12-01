@@ -1,15 +1,17 @@
 
 
-# Làm thế nào để thu hút các phương tiện truyền thông tới sự kiện Hour of Code của bạn
+[<button style="float: right; margin-top: 50px">Sign up your event</button>](/#join)
 
-## Một số thống kê đáng kinh ngạc (Mỹ):
+# Blurbs and Useful Stats
 
-  * Sẽ có hơn một triệu việc làm trong nghành khoa học máy tính 10 năm tới (đóng góp đến $ 500 tỉ tiền thu nhập).
-  * Hơn 50 phần trăm những người học về toán và khoa học làm việc trong nghành tính toán. 
-  * Công việc liên quan đến khoa học máy tính là một trong những công việc được trả lương cao nhất đối với những người mới tốt nghiệp. Nhưng Ít hơn 3% số sinh viên tốt nghiệp trong nghành khoa học máy tính.
-  * Trong 26 bang, yêu cầu tốt nghiệp tại trường trung học không bao gồm các môn học khoa học máy tính. 
-  * Ít hơn 20% học sinh trong ngành khoa học máy tính là phụ nữ. Ít hơn 10% là người da đen và La tinh.
+## Use this short blurb in newsletters
 
-## Phiên bản Infrographic:
+### Bring computer science to your school. Start with an Hour of Code
+
+Máy tính có ở khắp mọi nơi, nhưng chỉ một số ít các trường học dạy về khoa học máy tính 10 năm trở về trước. Good news is, we’re on our way to change this. If you heard about the [Hour of Code](<%= hoc_uri('/') %>) last year, you might know it made history. In one week, 15 million students tried computer science! The [Hour of Code](<%= hoc_uri('/') %>) is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. [Sign up](<%= hoc_uri('/') %>) to host an Hour of Code this December 8-14 during Computer Science Education Week and help reach 100 million students by the end of the year. Add your school to the map, go to <http://hourofcode.com>
+
+## Infographic version:
 
 ![hình ảnh](http://code.org/images/fit-8000/Code.org_infographic.png)
+
+<a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>
