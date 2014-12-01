@@ -54,6 +54,7 @@
   "showCodeHeader": "Show Code",
   "showBlocksHeader": "Show Blocks",
   "showGeneratedCode": "Show code",
+  "stringEquals": "String=?",
   "subtitle": "a visual programming environment",
   "textVariable": "text",
   "tooFewBlocksMsg": "You are using all of the necessary types of blocks, but try using more  of these types of blocks to complete this puzzle.",
