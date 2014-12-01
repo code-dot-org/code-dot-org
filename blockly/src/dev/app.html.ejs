@@ -13,7 +13,12 @@
        (app === "webapp" && options.levelId.indexOf('ec_') === 0) ||
        (app === "studio" && options.levelId.indexOf('ec_') === 0) ||
        (app === "turtle" && options.levelId.indexOf('ec_') === 0)) { -%>
-  <script type="text/javascript" src="../js/jsinterpreter/acorn_interpreter.js"></script>
+  <% if (options.debugInterpreter) { -%>
+    <script type="text/javascript" src="../js/jsinterpreter/acorn.js"></script>
+    <script type="text/javascript" src="../js/jsinterpreter/interpreter.js"></script>
+  <% } else { -%>
+    <script type="text/javascript" src="../js/jsinterpreter/acorn_interpreter.js"></script>
+  <% } -%>
   <script type="text/javascript" src="../js/requirejs/require.js"></script>
   <script type="text/javascript" src="../js/ace/ace.js"></script>
   <script type="text/javascript" src="../js/ace/ext-language_tools.js"></script>
