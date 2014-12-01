@@ -2,7 +2,7 @@
 
 [<button style="float: right; margin-top: 50px">Sign up your event</button>](/#join)
 
-## Como atrair os media para o teu evento da Hora de Código
+## Como atrair os media para o teu evento da Hora do Código
 
 *For all press and media inquiries, contact <press@code.org>*
 
