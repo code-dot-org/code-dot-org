@@ -1,14 +1,14 @@
 * * *
 
-layout: wide
+title: How-to Guide for Organisations layout: wide nav: resources_nav
 
 * * *
 
-# Prizes - terms and conditions
+# Hədiyyələrlə bağlı şərtlər
 
-## Dropbox space or Skype credit:
+## "Dropboks" yeri və "Skayp" balansı:
 
-The 10 GB of Dropbox space or $10 of Skype credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The 10 GB of free space must be added to an existing Dropbox account. Limit one redemption per organizer.
+10 QB-lıq "Dropboks" yeri və 10 dollar "Skayp" balansı ancaq orta məktəb müəllimləri, məktəbdənsonrakı klubların və təhsil təşkilatlarının təlimçiləri üçündür. 10 QB-lıq pulsuz yer mövcud "Dropboks" hesabına əlavə olunmalıdır. Limit one redemption per organizer.
 
 Every organizer must register for the Hour of Code in order to receive the Dropbox space or Skype credit. If your entire school participates in the Hour of Code, each educator must individually register as an organizer to qualify.
 
