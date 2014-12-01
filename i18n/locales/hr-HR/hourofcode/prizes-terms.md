@@ -1,6 +1,6 @@
 * * *
 
-prikaz: širok
+title: How-to Guide for Organisations layout: wide nav: resources_nav
 
 * * *
 
@@ -18,7 +18,7 @@ Code.org kontaktirat će organizatore nakon Sata Kodiranja (od 8-og do 14-tog pr
 
 ## Video zapis sa gostujućim govornikom:
 
-Prize limited to K-12 classrooms in the U.S. and Canada only. To qualify, sign up your classroom by November 14, 2014. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligbile to win.
+Ova nagrada je ograničena samo na osnovne škole u SAD-u i Kanadi. Da biste se kvalificirali, prijavite svoju školu najkasnije do 14-tog studenog 2014. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligbile to win.
 
 ## Komplet računala za razred (ili tehnologija u vrijednosti 10 tisuća dolara):
 

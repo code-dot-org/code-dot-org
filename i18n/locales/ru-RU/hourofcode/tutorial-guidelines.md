@@ -4,25 +4,25 @@
 
 * * *
 
-# Руководство по Часу Программирования и Неделе Образования в Информатике
+# Руководство по Часу Кода и Неделе Информатики в образовании
 
-**The deadline to submit a tutorial for Hour of Code 2014 has passed. You may still submit an entry and we will try to review it if time allows.**
+**Закончен приём заявок на предоставления учебного пособия на Час Кода 2014. Вы можете отправить нам заявку на участие и мы постараемся её рассмотреть, если позволит время.**
 
-Code.org will host a variety of Hour of Code activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= codeorg_url() %>](http://<%= codeorg_url() %>/learn).
+Code.org проведёт целый ряд мероприятий в рамках Часа Кода на Code.org и сайтах Недели Информатики в образовании (CSEdWeek). Текущий список можно посмотреть в [<%= codeorg_url() %>](http://<%= codeorg_url() %>/learn).
 
-We’d like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science. Please use this document to guide the creation of your activity, targeted to the user who has no background in coding, computer programming, and computer science.
+Мы бы хотели провести разные интересные уроки, но основная цель - оптимизация опыта для учащихся и преподавателей, для которых информатика в новинку. Данный документ ориентирован на пользователей, у которых нет опыта в программировании и информатике.
 
 <a id="top"></a>
 
 ## Оглавление:
 
   * [Как будут оцениваться уроки](#inclusion)
-  * [Общие рекомендации по деятельности, связанной с Часом Программирования](#guidelines)
-  * [How to submit (Due 10/1/2014)](#submit)
+  * [Общие рекомендации по деятельности, связанной с Часом Кода](#guidelines)
+  * [Как подать заявку (до 1/10/2014)](#submit)
   * [Предложения по проектированию вашей деятельности](#design)
   * [Trademark Guidelines](#tm)
   * [Tracking Pixel](#pixel)
-  * [Реклама Ваших уроков, Неделя Образования в Информатике и Час Программирования](#promote)
+  * [Реклама Ваших уроков, Неделя Информатики в образовании и Час Кода](#promote)
   * [Примечание для студентов с ограниченными возможностями](#disabilities)
 
 <a id="inclusion"></a>
@@ -31,18 +31,18 @@ We’d like to host a variety of engaging options, but the primary goal is to op
 
 A committee of computer science educators will rank submissions based on qualitative and quantitative metrics, including survey results from a broader set of educators.
 
-**Tutorials will be listed higher if they are:**
+**Руководства будут оценены выше, если они:**
 
   * высокого качества
-  * самостоятельны, не требуют инструкций
-  * предназначены для новичков
+  * самодостаточны, не требуют инструкций
+  * предназначены для начинающих
   * разработаны примерно на 1 час
   * работают на многих ОС/платформах устройств, включая мобильные телефоны и планшеты
   * написаны на нескольких языках
   * поощряют обучение всех демографических групп (особенно малочисленных в информатике)
   * не являются дизайном на HTM+CSS (наша цель - информатика вообще, а не только программирование на HTML)
 
-**Tutorials will be listed lower if they are:**
+**Руководства будут оценены ниже, если они:**
 
   * менее высокого качества
   * рассчитаны на продвинутый уровень обучения (не для новичков)
@@ -51,7 +51,7 @@ A committee of computer science educators will rank submissions based on qualita
   * гендерно-ориентированны (например, тематически направлены прежде всего на мальчиков)
   * serve as an upsell to a learning platform that charges tuition
 
-**Tutorials will NOT be listed if they:**
+**Руководства не будут оценены, если они:**
 
   * требуют сильного вмешательства учителя с хорошей подготовкой (т.е. ученик не сможет выполнить задание самостоятельно)
   * не предназначены для работы на 1 час (примерно)
@@ -67,11 +67,11 @@ Note also, that the 2013 CSEdWeek was a fantastic success as measured by the res
 
 As a result, the existing listings are certainly “good enough,” and the driving reason to add tutorials to the Hour of Code listings isn’t to broaden the choices, but to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2014 campaign.
 
-[**Back to the top**](#top)
+[**К началу**](#top)
 
 <a id="guidelines"></a>
 
-## Общие рекомендации по деятельности, связанной с Часом Программирования
+## Общие рекомендации по деятельности, связанной с Часом Кода
 
   * **Тема:** введение в информатику и программирование (не HTML).
   * **Цель:** Дать новичкам первый доступный опыт программирования.
@@ -80,15 +80,15 @@ As a result, the existing listings are certainly “good enough,” and the driv
       * Компьютерные технологии связаны с широким спектром областей и интересов. Всем следует научиться!
       * Поощрение студентов к созданию чего-то, чем можно поделиться с друзьями/онлайн.
   * **Виды деятельности:** 
-      * **Best:** Web-based, smartphone-friendly, or unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). 
+      * **Лучшие:** Доступные по Сети, совместимые со смартфоном или занятия, которые знакомят с понятиями инфрматики без использования компьютера (см. <http://csunplugged.com/>). 
       * **Okay, but not preferred:** app-install, desktop app, or game-console experiences.
   * **Формат:** руководства или уроки, предназначенные для самостоятельного выполнения учениками/с подсказками преподавателя. There should be directions for students as opposed to an open-ended hour long challenge. В идеале инструкции и уроки включены непосредственно в платформу программирования, чтобы избежать переключения вкладок или окон между уроком и платформой.
 
-[**Back to the top**](#top)
+[**К началу**](#top)
 
 <a id="submit"></a>
 
-## How to submit (Due 10/1/2014)
+## Как подать заявку (до 1/10/2014)
 
 Visit the [Hour of Code Activity Submission page](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform) and follow the steps to submit your tutorial.
 
@@ -140,7 +140,7 @@ Visit the [Hour of Code Activity Submission page](https://docs.google.com/a/code
       * For offline activities 
           * Number of downloads of paper version of activity (if applicable)
 
-[**Back to the top**](#top)
+[**К началу**](#top)
 
 <a id="design"></a>
 
@@ -181,7 +181,7 @@ Benefits of Pair Programming:
   * Выяснение того что программирование - деятельность не одиночная, а требующая социального взаимодействия
   * Не во всех классах и лабораториях достаточно компьютеров для самостоятельного программирования
 
-[**Back to the top**](#top)
+[**К началу**](#top)
 
 <a id="tm"></a>
 
@@ -199,7 +199,7 @@ One piece of this is to protect the trademark "Hour of Code" to prevent confusio
 
   4. No use of "Hour of Code" in app names
 
-[**Back to the top**](#top)
+[**К началу**](#top)
 
 <a id="pixel"></a>
 
@@ -219,13 +219,13 @@ IMG SRC="http://code.org/api/hour/begin_appinventor.png/"
 
 IMG SRC="http://code.org/api/hour/finish_appinventor.png/"
 
-[**Back to the top**](#top)
+[**К началу**](#top)
 
 <a id="promote"></a>
 
-## Реклама Ваших уроков, Неделя Образования в Информатике и Час Программирования
+## Реклама Ваших уроков, Неделя Информатики в образовании и Час Кода
 
-We are asking everyone to promote their own 1-hour tutorial to your users. Please direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your tutorial. Use the international Hour of Code campaign for Computer Science Education Week as an excuse to encourage users to invite others to join in, help us reach 100 million total participants.
+Мы просим всех прорекламировать свой урок среди пользователей пользователей. Please direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your tutorial. Use the international Hour of Code campaign for Computer Science Education Week as an excuse to encourage users to invite others to join in, help us reach 100 million total participants.
 
   * Разместите Час Программирования и Неделю Образования в Информатике на своём веб-сайте.   
     Ex: <http://www.tynker.com/hour-of-code>
@@ -233,7 +233,7 @@ We are asking everyone to promote their own 1-hour tutorial to your users. Pleas
   * Проведите мероприятие у себя в городе или попросите сотрудников провести его в местных школах.
   * Смотрите наш комплект ресурсов для получения дополнительной информации (скоро).
 
-[**Back to the top**](#top)
+[**К началу**](#top)
 
 <a id="disabilities"></a>
 
@@ -241,4 +241,4 @@ We are asking everyone to promote their own 1-hour tutorial to your users. Pleas
 
 If you create a tutorial that is designed for the vision-impaired, we’d love to highlight it for viewers with screen-readers. We have not yet received such a tutorial, and would be eager to include one as an option for these students.
 
-[**Back to the top**](#top)
+[**К началу**](#top)

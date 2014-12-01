@@ -1,20 +1,21 @@
 * * *
 
-naslov: Resursi postav: širok
+title: How-to Guide layout: wide nav: resources_nav
 
 * * *
 
 <div class="row">
   <h1 class="col-sm-6">
-    How to teach one Hour of Code
+    Kako poučavati Sat Kodiranja
   </h1>
   
   <div class="col-sm-6 button-container centered">
-    <a href="/#join"><button class="signup-button">Sign up your event</button></a>
+    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Prijavite vaš događaj</button></a>
   </div>
 </div>
 
-## 1) Isprobajte vodiče:
+## 1) Watch this how-to video <iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
+## 2) Try the tutorials:
 
 Imat ćemo raznolike zabavne vodiče u trajanju od jednog sata za učenike svih uzrasta, pripremljene od strane raznih partnera. Novi vodiči bit će ovdje kako bi započeli Sat Kodiranja prije 8-og prosinca.
 
@@ -25,58 +26,62 @@ Imat ćemo raznolike zabavne vodiče u trajanju od jednog sata za učenike svih 
 
 [![](http://<%= codeorg_url() %>/images/tutorials.png)](http://<%=codeorg_url() %>/learn)
 
-## 2) Planirajte svoje hardverske potrebe - računala nisu obvezna
+## 3) Register your Hour on the map
 
-Sat Kodiranja pružit će najbolje iskustvo na računalima povezanim na internet. No nije vam potrebno računalo za svako dijete jer Sat Kodiranja čak možete odraditi u potpunosti bez računala.
+[Make sure to sign up](<%= hoc_uri('/') %>). We'll send you helpful info as the Hour of Code nears, and you'll see your Hour of Code on our map of worldwide events.
+
+## 4) Plan your hardware needs - computers are optional
+
+The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every child, and can even do the Hour of Code without a computer at all.
 
   * **Isprobajte vodiče na računalima i uređajima učenika.** Osigurajte se da ispravno funkcioniraju (zvuk i slika).
-  * **Pregledajte stranicu sa čestitkama** da biste vidjeli što će učenici vidjeti po završetku. 
+  * **Pregledajte stranicu sa čestitkama (certifikatima)** da biste vidjeli što će učenici vidjeti po završetku. 
   * **Opremite razred slušalicama** ili zamolite učenike da donesu svoje vlastite ukoliko vodič koji ste odabrali najbolje radi sa zvukom.
 
-## 3) Planirajte unaprijed ovisno o vama dostupnoj tehnologiji
+## 5) Plan ahead based on your technology available
 
   * **Nemate dovoljno uređaja?** Koristite [programiranje u parovima](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). Kada učenici rade sa suradnikom, oni pomažu jedan drugome i manje se oslanjaju na učitelja. Tako će uvidjeti da je informatika druževna i dobra za suradnju.
   * **Niska propusnost?** Planirajte prikaz video zapisa u prednjem dijelu učionice, tako da svaki učenik ne mora preuzimati vlastitu kopiju video zapisa. Možete isprobati i vodiče koji ne zahtijevaju upotrebu računala i/ili interneta.
 
-## 4) Nadahnite učenike - pokažite im video zapis
+## 6) Inspire students - show them a video
 
 Show students an inspirational video to kick off the Hour of Code. Examples:
 
-  * The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
-  * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [Hour of Code 2014 video](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
-  * [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+  * Originalni video zapis kada je Code.org pokrenut, u kome su Bill Gates, Mark Zuckerberg i zvijezda NBA-a Chris Bosh (Možete izabrati verzije u trajanju od [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minuta](https://www.youtube.com/watch?v=nKIu9yen5nc) i [9 minuta](https://www.youtube.com/watch?v=dU1xS07N-FA))
+  * [ Video sa pokretanja Sata Kodiranja 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw) ili <% if @country == 'uk' %> [video Sat Kodiranja 2014](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [Sat Kodiranja 2014 video](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
+  * [Predsjednik Obama poziva sve učenike da nauče informatiku](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**Pobudite zanimanje svojih učenika - dajte im kratak uvod**
+**Get your students excited - give them a short intro**
 
-Većina djece ne zna što je to informatika. Evo nekih prijedloga:
+Most kids don’t know what computer science is. Here are some ideas:
 
-  * Explain it in a simple way that includes examples of applications that both boys and girls will care about (saving lives, helping people, connecting people, etc.).
-  * Try: "Think about things in your everyday life that use computer science: a cell phone, a microwave, a computer, a traffic light… all of these things needed a computer scientist to help build them.”
-  * Or: “Computer science is the art of blending human ideas and digital tools to increase our power. Computer scientists work in so many different areas: writing apps for phones, curing diseases, creating animated movies, working on social media, building robots that explore other planets and so much more."
-  * See tips for getting girls interested in computer science [here](http://<%= codeorg_url() %>/girls). 
+  * Objasnite im na jednostavan način pružajući primjere o kojima djeca brinu (spašavanje života, pomaganje ljudima, povezivanje ljudi itd.).
+  * Pokušajte ovo:"Razmislite o svakodnevnim uređajima u svom životu koji koriste računala: mobilni telefon, mikrovalna pećnica, semafor... svi ovi uređaji trebaju informatičare koji će ih pomoći izgraditi."
+  * Ili ovo: "Informatika je umjetnost stapanja ljudskih ideja i digitalnih alata kako bismo uvećali svoje snage. Informatičari rade u mnogo različitih oblasti: pišu aplikacije za telefone, rade na izliječenju bolesti, stvaraju animirane filmove, rade na društvenim mrežama, grade robote koji istražuju druge planete i još mnogo toga."
+  * Pogledajte prijedloge o tome kako zainteresirati djevojke za informatiku[ovdje](http://<%= codeorg_url() %>/girls). 
 
-## 5) Započnite svoj Sat Kodiranja
+## 6) Start your Hour of Code
 
-**Usmjerite učenike k aktivnosti**
+**Direct students to the activity**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](http://<%= codeorg_url() %>/learn) under the number of participants. [hourofcode.com/co](http://hourofcode.com/co)
-  * Tell students to visit the URL and start the tutorial.
+  * Napišite link za vodič na ploči. Pronađite link izlistan na [informacijama za vaš odabrani vodič](http://<%= codeorg_url() %>/learn) pod brojem sudionika. [hourofcode.com/co](http://hourofcode.com/co)
+  * Recite učenicima da posjete URL i započnu koristiti vodič.
 
-**Kada učenici naiđu na poteškoće**
+**When your students come across difficulties**
 
-  * Tell students, “Ask 3 then me.” Ask 3 classmates, and if they don’t have the answer, then ask the teacher.
-  * Encourage students and offer positive reinforcement: “You’re doing great, so keep trying.”
-  * It’s okay to respond: “I don’t know. Let’s figure this out together.” If you can’t figure out a problem, use it as a good learning lesson for the class: “Technology doesn’t always work out the way we want. Together, we’re a community of learners.” And: “Learning to program is like learning a new language; you won’t be fluent right away.“
+  * Recite učenicima: "Pitaj tri oko sebe, pa tek onda pitaj mene." Pitajte druge učenike i ukoliko oni ne znaju odgovor, pitajte učitelja.
+  * Potaknite učenike i pružite im pozitivnu podršku: "Ide ti odlično, samo nastavi."
+  * Sasvim je u redu odgovoriti im sa: "Ne znam. Pokušajmo to riješiti zajedno." Ukoliko vi ne znate riješiti zadatak, upotrijebite to kao lekciju za razred: "Tehnologija ne pruža uvijek rezultate koje mi želimo. Mi smo svi zajedno zajednica učenika." I:"Učenje programiranja je kao učenje stranog jezika; ne možete odmah tečno govoriti."
 
-**Što učiniti ako učenik završi ranije?**
+**What to do if a student finishes early?**
 
-  * Students can see all tutorials and try another Hour of Code activity at [<%= codeorg_url() %>/learn](http://<%= codeorg_url() %>/learn)
-  * Or, ask students who finish early to help classmates who are having trouble with the activity.
+  * Učenici mogu pregledati sve vodiče i isprobati neku drugu aktivnost Sata Kodiranja na [<%= codeorg_url() %>/learn](http://<%= codeorg_url() %>/learn)
+  * Ili zamolite učenike koji završe ranije da pomognu svojim kolegama koji imaju poteškoća s aktivnostima.
 
-**Kako mogu otiskati certifikate za svoje učenike?**
+**How do I print certificates for my students?**
 
-Svaki učenik ima mogućnost primanja certifikata putem e-pošte kada završi [vodič Sata Kodiranja](http://studio.code.org). Možete kliknuti na certifikat da bi ga tiskali. However, if you want to make new certificates for your students, visit our [Certificates](http://<%= codeorg_url() %>/certificates) page to print as many certificates as you like, in one fell swoop!
+Each student gets a chance to get a certificate via email when they finish the [Code.org tutorials](http://studio.code.org). You can click on the certificate to print it. However, if you want to make new certificates for your students, visit our [Certificates](http://<%= codeorg_url() %>/certificates) page to print as many certificates as you like, in one fell swoop!
 
-**Što poslije Sata Kodiranja?**
+**What comes after the Hour of Code?**
 
-Sat Kodiranja je samo prvi korak na putu učenja o tome kako tehnologija funkcionira i kako izraditi softverske aplikacije. <% if @country == 'uk' %> Sat Kodiranja je samo prvi korak na putu učenja o tome kako tehnologija funkcionira i kako izraditi softverske aplikacije. Da biste nastavili ovim putem [podstaknite djecu da uče putem interneta](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %> <a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %> <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Sign up your event</button></a>

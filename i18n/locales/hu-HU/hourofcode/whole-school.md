@@ -4,6 +4,6 @@ layout: wide
 
 * * *
 
-# Get your whole school to participate
+# Szervezze meg az teljes iskola részvételét
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+Itt lesz majd megtalálható a teljes iskola Hour of Code-on való részvételével kapcsolatos információ.
