@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Can you draw combinations of shapes using the generic shape function? Draw a square, a triangle and a hexagon. Each shape is 100 pixels in length. ",
+    "instructions": "Look! Our \"draw a shape\" function has 2 parameter. Can you draw combinations of shapes using this function? Draw a square, a triangle and a hexagon. Each shape is 100 pixels in length. ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "false",
@@ -20,7 +20,8 @@
     "slider_speed": ".5",
     "use_contract_editor": "false",
     "ideal": "18",
-    "embed": "false"
+    "embed": "false",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>

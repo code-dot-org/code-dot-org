@@ -441,7 +441,8 @@ BlocklyApps.init = function(config) {
       BlocklyApps.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
         mode: 'javascript',
         modeOptions: utils.generateDropletModeOptions(config.level.codeFunctions),
-        palette: utils.generateDropletPalette(config.level.codeFunctions)
+        palette: utils.generateDropletPalette(config.level.codeFunctions,
+                                              config.level.categoryInfo)
       });
 
       if (config.afterInject) {
