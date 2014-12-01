@@ -1,65 +1,78 @@
 
 
-# Hour of Codeを教える方法
+<div class="row">
+  <h1 class="col-sm-6">
+    1 時間のコーディングの指導方法
+  </h1>
+  
+  <div class="col-sm-6 button-container centered">
+    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">イベントにサインアップする。</button></a>
+  </div>
+</div>
 
-## 1） チュートリアルを試す。
+## 1) Watch this how-to video <iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
+## 2) Try the tutorials:
 
-We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
+私たちは、様々なパートナー達によって作られた、バラエティに富んだ楽しい、全年齢の生徒のための一時間のチュートリアルを主催します。新しいチュートリアルは12月8-14日のHour of Codeの前にキックオフでお披露目されます。
 
-**All Hour of Code tutorials:**
+**すべてのHour of Codeのチュートリアル：**
 
-  * Require minimal prep-time for teachers
-  * Are self-guided - allowing students to work at their own pace and skill-level
+  * 教員の皆さんは最小限の準備時間を必要とします。
+  * 自己管理学習は自分のペースで、そして、自分のスキルレベルに見合った取り組み方を可能にします。
 
 [![](http://<%= codeorg_url() %>/images/tutorials.png)](http://<%=codeorg_url() %>/learn)
 
-## 2) Plan your hardware needs - computers are optional
+## 3) Register your Hour on the map
+
+[Make sure to sign up](<%= hoc_uri('/') %>). We'll send you helpful info as the Hour of Code nears, and you'll see your Hour of Code on our map of worldwide events.
+
+## 4) Plan your hardware needs - computers are optional
 
 The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every child, and can even do the Hour of Code without a computer at all.
 
-  * **Test tutorials on student computers or devices.** Make sure they work properly (with sound and video).
-  * **Preview the congrats page** to see what students will see when they finish. 
-  * **Provide headphones for your class**, or ask students to bring their own, if the tutorial you choose works best with sound.
+  * **生徒のPCもしくは他のデバイス上でチュートリアルをテストしてみてください。** 正しく機能する(音響や、ビデオを含めて)ことをご確認ください。
+  * **お祝いのページをプレビューしてください** どの生徒がどこまで完了しているかを確認するときに 
+  * 選択したチュートリアルの音響が正しく機能させるため**ヘッドフォンを支給することをお勧めします。**もしくは生徒に自分用のを持ってくるように指示してください。 
 
-## 3) Plan ahead based on your technology available
+## 5) Plan ahead based on your technology available
 
-  * **Don't have enough devices?** Use [pair programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
-  * **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+  * **PCと周辺機器は十分ありますか?** 使う [ペアプログラミング](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). 生徒がパートナー同士になることで、お互いを助け合い、教員への依存度が低くなります。 またコンピューター科学にも共存する社会があるということを知る機会ができます。
+  * **ネット通信速度が遅い？**教室の前で生徒全員でビデオを鑑賞するようにしてください。そうすれば各自が個別にビデオをダウンロードする必要はありません。もしくは 電源なし/オフラインでのチュートリアルを試してください。
 
-## 4) Inspire students - show them a video
+## 6) Inspire students - show them a video
 
 Show students an inspirational video to kick off the Hour of Code. Examples:
 
-  * The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
-  * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [Hour of Code 2014 video](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
-  * [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+  * オリジナルのCode.orgはビル・ゲイツ、マーク・ザッカーバーグ、NBAスターのクリス・ボッシュが出演されているビデオをリリースしています。 (それらは [1 分](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 分](https://www.youtube.com/watch?v=nKIu9yen5nc), そして[9分](https://www.youtube.com/watch?v=dU1xS07N-FA) バージョンがあります。)
+  * [Hour of Codeは2013リリース済みビデオ](https://www.youtube.com/watch?v=FC5FbmsH4fw), もしくは <% if @country == 'uk' %> [Hour of Code 2014 ビデオ](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [Hour of Code 2014 ビデオ](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
+  * [オバマ大統領が生徒たちにコンピューター科学を学ぶよう呼びかけてる。](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
 **Get your students excited - give them a short intro**
 
 Most kids don’t know what computer science is. Here are some ideas:
 
-  * Explain it in a simple way that includes examples of applications that both boys and girls will care about (saving lives, helping people, connecting people, etc.).
-  * Try: "Think about things in your everyday life that use computer science: a cell phone, a microwave, a computer, a traffic light… all of these things needed a computer scientist to help build them.”
-  * Or: “Computer science is the art of blending human ideas and digital tools to increase our power. Computer scientists work in so many different areas: writing apps for phones, curing diseases, creating animated movies, working on social media, building robots that explore other planets and so much more."
-  * See tips for getting girls interested in computer science [here](http://<%= codeorg_url() %>/girls). 
+  * 女の子と男の子の両方の関心を引く（誰かの命を救うとか、人々を助ける、人とつながるなどの）ことを応用した話を交えて簡単に説明する。
+  * トライ：「日常生活の中にあるコンピューター科学を考えてみる：携帯電話、電子レンジ、コンピューター、信号。。。これらを作るのにはコンピューター科学なしではできません。」
+  * または、「コンピューター科学は私たちに力をあたえてくれる、人間のアイデアとデジタルツールが融合した芸術です。 コンピューター科学は様々な分野で活躍しています：携帯アプリの制作、不治の病を治したり、アニメ制作、ソーシャルメディアの制作、他の惑星を発掘するロボットの構築、そのほかにもたくさん」
+  * コンピューター科学をもっと女の子に興味持ってもらうヒントは [こちら ](http://<%= codeorg_url() %>/girls). 
 
-## 5) Start your Hour of Code
+## 6) Start your Hour of Code
 
 **Direct students to the activity**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](http://<%= codeorg_url() %>/learn) under the number of participants. [hourofcode.com/co](http://hourofcode.com/co)
-  * Tell students to visit the URL and start the tutorial.
+  * 黒板にチュートリアルのリンク先を書きます リンクは[hourofcode.com/co](http://<%= codeorg_url() %>あなたの言語のチュートリアル</a>のページで見つけることができます。 <a href=)
+  * そのURLからチュートリアルを始めるよう生徒に伝えてください。
 
 **When your students come across difficulties**
 
-  * Tell students, “Ask 3 then me.” Ask 3 classmates, and if they don’t have the answer, then ask the teacher.
-  * Encourage students and offer positive reinforcement: “You’re doing great, so keep trying.”
-  * It’s okay to respond: “I don’t know. Let’s figure this out together.” If you can’t figure out a problem, use it as a good learning lesson for the class: “Technology doesn’t always work out the way we want. Together, we’re a community of learners.” And: “Learning to program is like learning a new language; you won’t be fluent right away.“
+  * ”まず3人に聞いてみて、それでもわからなければ私に質問してください”と生徒に伝えましょう。
+  * "いいですよ、その調子"と生徒を励ますようにしましょう。
+  * "私もわからないので、一緒にやってみましょう"という対応でも構いません。 解決方法がわからなかった場合、”テクノロジーは必ずしも思ったようにはいきません。仲間として一緒に勉強してゆきましょう”という教訓ととらえましょう。 "プログラムの楽手は新しい言語を学ぶようなものです。すぐに流暢にはなせるようにはなりません。"
 
 **What to do if a student finishes early?**
 
-  * Students can see all tutorials and try another Hour of Code activity at [<%= codeorg_url() %>/learn](http://<%= codeorg_url() %>/learn)
-  * Or, ask students who finish early to help classmates who are having trouble with the activity.
+  * [<%= codeorg_url() %>/learn](http://<%= codeorg_url() %>/learn)　にある他のチュートリアルや別のHour of Code アクティビティに進んでください
+  * もしくは、早く終えてしまった生徒には、困っている他の生徒を助けてあげるように伝えましょう。
 
 **How do I print certificates for my students?**
 
@@ -67,4 +80,4 @@ Each student gets a chance to get a certificate via email when they finish the [
 
 **What comes after the Hour of Code?**
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %>
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %> <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Sign up your event</button></a>

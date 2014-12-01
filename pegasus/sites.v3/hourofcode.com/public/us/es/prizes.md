@@ -56,7 +56,7 @@ Any classroom (public or private) within the U.S. or Canada is eligible to win t
 
 <% end %>
 
-## Every organizer wins a thank you gift-code {#gift_code}
+## Every organizer wins a thank you gift-code  
 
 Every educator who hosts an Hour of Code for students will receive 10 GB of Dropbox space or $10 Skype credit as a thank you gift!
 
@@ -86,9 +86,7 @@ Are you a teacher who wants to introduce computer programming to your students a
 
 <% end %>
 
-<
-
-h2 id="more_questions">More questions about prizes?</h1>
+<h2 id="more_questions">More questions about prizes?</h2>
 
 Check out [Terms and Conditions](<%= hoc_uri('/prizes-terms') %>) or visit our forum to see [FAQs](http://support.code.org) and ask your questions.
 
