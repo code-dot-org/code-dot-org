@@ -67,6 +67,7 @@ Dashboard::Application.routes.draw do
 
   resources :levels do
     get 'edit_blocks/:type', to: 'levels#edit_blocks', as: 'edit_blocks'
+    get 'embed_blocks/:block_type', to: 'levels#embed_blocks', as: 'embed_blocks'
     post 'update_blocks/:type', to: 'levels#update_blocks', as: 'update_blocks'
     post 'clone', to: 'levels#clone'
   end
@@ -155,11 +156,9 @@ Dashboard::Application.routes.draw do
 
   get '/notes/:key', to: 'notes#index'
 
-  get '/api/user_menu', to: 'api#user_menu', as: 'user_menu'
-  get '/api/user_hero', to: 'api#user_hero', as: 'user_hero'
   get '/api/section_progress/:id', to: 'api#section_progress', as: 'section_progress'
   get '/api/student_progress/:section_id/:id', to: 'api#student_progress', as: 'student_progress'
-  get '/api/courses', to: 'api#courses', as: 'courses'
+  get '/api/:action', controller: 'api'
 
   resources :zendesk_session, only: [:index]
 

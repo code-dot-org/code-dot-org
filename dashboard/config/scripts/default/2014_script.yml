@@ -12,5 +12,6 @@
     Bounce	Level11	11	bounce
     Bounce	Level12	12	bounce
     Studio	Level1	full_sandbox	studio
+    Studio	Level2	full_sandbox_infinity	infinity
     Calc	Level1	example1	calc
     Eval	Level1	eval1	eval

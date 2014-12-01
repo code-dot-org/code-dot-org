@@ -1,4 +1,5 @@
-require src_dir 'poste/api'
+require 'cdo/poste'
+require src_dir 'database'
 
 class FormError < ArgumentError
 

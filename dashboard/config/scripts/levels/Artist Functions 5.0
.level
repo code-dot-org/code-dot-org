@@ -1,0 +1,19 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2014-11-24T23:08:06.465Z",
+  "level_num": "custom",
+  "user_id": 16,
+  "properties": {
+    "skin": "artist",
+    "instructions": "Are you ready to create your own \"Function Block\"? Click on the \"Functions\" block in the tool box, name it \"draw a triangle\", then create a triangle as you have done before with the Action and Loops blocks. Then click on the Save and Close in the upper right hand corner. Hint: Create a triangle that is 100 pixels in length."
+  }
+}]]></config>
+  <blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" movable="false" deletable="false"/>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Artist>

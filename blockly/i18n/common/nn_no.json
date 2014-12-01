@@ -9,7 +9,7 @@
   "catLists": "Lister",
   "catLoops": "Løkker",
   "catMath": "Matematikk",
-  "catProcedures": "Funksjoner",
+  "catProcedures": "Funksjonar",
   "catText": "Tekst",
   "catVariables": "Variablar",
   "codeTooltip": "Sjå JavaScript-kode som har blitt laga.",
@@ -43,6 +43,7 @@
   "numBlocksNeeded": "Gratulerer! Du har fullført oppgåve {puzzleNumber}. (Men, du kunne ha brukt berr {numBlocks, plural, one {ei blokk} other {# blokker}}.)",
   "numLinesOfCodeWritten": "Du har akkurat skrive {numLines, plural, one {ei linje} other {# linjer}} med kode!",
   "play": "spel av",
+  "print": "Skriv ut",
   "puzzleTitle": "Oppgåve {puzzle_number} av {stage_total}",
   "repeat": "gjenta",
   "resetProgram": "Nullstill",
@@ -63,8 +64,8 @@
   "tryAgain": "Prøv igjen",
   "hintRequest": "Sjå tips",
   "backToPreviousLevel": "Tilbake til forrige nivå",
-  "saveToGallery": "Lagre til galleriet ditt",
-  "savedToGallery": "Lagra i galleriet ditt!",
+  "saveToGallery": "Lagre i galleriet",
+  "savedToGallery": "Lagret i galleriet!",
   "shareFailure": "Beklager, vi kan ikkje dele dette programmet.",
   "typeFuncs": "Tilgjengelege funksjonar: %1",
   "typeHint": "Legg merke til at parantesar og semikolon er nødvendige.",
@@ -80,5 +81,6 @@
   "tryHOC": "Prøv Kodetimen",
   "signup": "Registrer deg for introduksjonskurset",
   "hintHeader": "Her er eit tips:",
-  "genericFeedback": "Sjå resultatet og prøv å fikse programmet ditt."
+  "genericFeedback": "Sjå resultatet og prøv å fikse programmet ditt.",
+  "defaultTwitterText": "Sjekk ut det jeg lagde"
 }

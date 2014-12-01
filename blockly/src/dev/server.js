@@ -31,6 +31,7 @@ var renderApp = function(app, req, res) {
       containerId: 'blocklyApp',
       levelId: req.query.level,
       skinId: req.query.skin,
+      debugInterpreter: req.query.debugInterpreter,
       baseUrl: baseUrl(req),
       cacheBust: false // or 'test-string'
     }

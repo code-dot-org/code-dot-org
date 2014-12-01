@@ -1,0 +1,7 @@
+name 'Blocks to Math 5'
+title 'Convert Blocks to Math'
+placeholder 'Type the arithmetic expression here'
+content1 'Type out the arithmetic expression that matches this code'
+content2 '/script_assets/msm/unit1/blockstomath5.png'
+answer '(-2) * (-6)'
+answer '-2 * -6'

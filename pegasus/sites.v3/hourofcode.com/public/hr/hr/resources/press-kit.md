@@ -1,8 +1,10 @@
 
 
-## Korisne statistike o informatici
+[<button style="float: right; margin-top: 50px">Prijavite vaš događaj</button>](/#join)
 
-*Za sva medijska pitanja, možete se obratiti na <press@code.org>*
+## Privucite medije kako bi prisustvovali vašem Satu Kodiranja
+
+*za sve upite medija i tiska kontaktirajte nas na <press@code.org>*
 
 ### Ključni Savjeti
 
@@ -13,7 +15,7 @@
 
 ### Vodič korak po korak:
 
-**1. Planirajte svoj događaj**
+**1, Ispalnirajte svoj događaj**
 
   * Planirajte sastanak kako bi označili početak Sata Kodiranja.
   * Počaljite [pismo](<%= hoc_uri('/resources/#sample-emails') %>) roditeljima. Zamolite ih da prošire vijest.
@@ -29,19 +31,19 @@ Pretražite internet da biste našli kontakt informacije. Ukoliko ih ne možete 
 
 **3. Kontaktirajte mjesne medije**
 
-Najbolji način kontakta je putem elektroničke pošte. Poruka treba biti kratka i prenijeti razlog zašto ih se ovaj događaj tiče. Poruka treba sadržati kontakt informacije (uključujući i broj mobitela) onih koji će biti prisutni tokom događaja. **Pogledajte [primjer obraćanja medijima](<%= hoc_uri('/resources#sample-emails') %>):**
+Najbolji način kontakta je putem elektroničke pošte. Poruka treba biti kratka i prenijeti razlog zašto ih se ovaj događaj tiče. Uključite kontakt informacije (također i broj mobitela) osoba koje će biti prisutne tijekom događaja. **Pogledajte [primjer obraćanja medijima](<%= hoc_uri('/resources#sample-emails') %>):**
 
 **4. Pripremite se odgovoriti na pitanja o vašim školskim aktivnostima u vezi događaja. Na primjer:**
 
-*Zašto vaša škola sudjeluje u satu Kodiranja?*
+*Zašto vaša škola sudjeluje u Satu Kodiranja?*
 
-Dok većina nas shvaća koliko je za učenike važno naučiti se snalaziti u današnjem tehnološki orjentiranom svijetu, mnogi učitelji nemaju iskustva sa informatikom i ne znaju gdje započeti. Ovaj je događaj prilika za sve nas vidjeti što je zapravo informatika.
+Dok većina nas shvaća koliko je za učenike važno naučiti se snalaziti u današnjem tehnološki orjentiranom svijetu, mnogi učitelji nemaju iskustva sa informatikom i ne znaju gdje započeti. Ovaj je događaj prilika za sve da vide što je informatika zapravo.
 
-Nadamo se da će nadahnuti učenika da nastave učiti. Istraživanja također pokazuju da djeca nauče osnovice programiranja prije nego li nauče čitati i pisati. U stvari, njihov mozak je otvoreniji učenju računalnih jezika u tom ranom dobu, baš kao i učenju stranih jezika.
+Nadamo se da će nadahnuti učenike da nastave učiti. Istraživanja pokazuju da djeca nauče programirati prije no što nauče čitati ili pisati. U stvari, njihov mozak je otvoreniji učenju računalnih jezika u tom ranom dobu, baš kao i učenju stranih jezika.
 
 *Zašto je to važno?*
 
-U Kini, svi učenici uče informatiku kako bi završili srednju školu. U SAD-u 90% škola uopće ne poučava učenike informatici. Vrijeme je da se uhvatimo u koštac sa 21-im stoljećem. Poznato nam je da bez obzira na to što učenici žele biti kada odrastu, bez obzira na to da li ih zanima medicina, poduzetništvo, politika ili umjetnost, znanje o tehnologiji prućit će im samopouzdanje i vještine potrebne za uspijeh.
+U Kini, svi učenici uče informatiku kako bi završili srednju školu. U SAD-u 90% škola uopće ne poučava učenike informatici. Vrijeme je da se uhvatimo u koštac sa 21-im stoljećem. Poznato nam je da bez obzira na to što učenici žele biti kada odrastu, bez obzira na to da li ih zanima medicina, poduzetništvo, politika ili umjetnost, tehnološko znanje pružit će im samopouzdanje i vještine potrebne za uspijeh.
 
 **Više detalja i citat koji možete koristiti u materijalima**
 
@@ -49,7 +51,9 @@ U Kini, svi učenici uče informatiku kako bi završili srednju školu. U SAD-u 
 
 **Više o Code.org**
 
-Code.org® je 501c3 javna neprofitna organizacija posvećena povećanju broja sudionika u informatici i povećanju sudjelovanja žena i manjina. Naša je vizija da svaki ućenik u svakoj školi ima priliku učiti informatiku. Nakon svog početka 2013-te godine, Code.org organizirao je kampanju Sat Kodiranja — koja je milijunima predstavila informatiku — u suradnji sa više od 30 školskih okruga u SAD-u, te pokrenuo Studio Kodiranja, open-source, online platformu učenja za sve uzraste. For more information, please visit: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
+Code.org® je 501c3 javna neprofitna organizacija posvećena povećanju broja sudionika u informatici i povećanju sudjelovanja žena i manjina. Vizija nam je pružiti mogučnost svakom učeniku u svakoj školi da nauči informatiku. Nakon svog početka 2013-te godine, Code.org organizirao je kampanju Sat Kodiranja — koja je milijunima predstavila informatiku — u suradnji sa više od 30 školskih okruga u SAD-u, te pokrenuo Studio Kodiranja, open-source, online platformu učenja za sve uzraste. Za više informacija, molimo posjetite: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
 Više resursa i primjeraka e-pošte možete naći [ovdje](<%= hoc_uri('/resources') %>).
+
+<a style="display: block" href="/#join"><button style="float: right;">Prijavite vaš događaj</button></a>

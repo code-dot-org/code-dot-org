@@ -1,15 +1,17 @@
 
 
-# Com atraure els mitjans de comunicació al teu esdeveniment d'Hora de Codi
+[<button style="float: right; margin-top: 50px">Sign up your event</button>](/#join)
 
-## Algunes estadístiques impactants (EUA):
+# Publicitat i estadístiques útils
 
-  * Hi haurà un milió més de llocs de treball de computació que estudiants en els propers 10 anys (afegint fins a 500 bilions de dòlars en sous).
-  * Més del 50 per cent de totes les ocupacions de matemàtiques i ciències creades són ocupacions de computació. 
-  * Les ocupacions informàtiques es troben entre els llocs de treball millor pagats per a nous titulats. No obstant això, menys del 3% dels estudiants universitaris es graduen amb una llicenciatura en ciències de la computació.
-  * En 26 estats, les classes de ciències informàtiques no compten com requisit per graduar-se en matemàtiques o ciències de secundària. 
-  * Menys del 20% d'estudiants de Ciències Avançades de la Computació són dones. Menys del 10% són negres o llatins.
+## Use this short blurb in newsletters
 
-## Informació en versió gràfica:
+### Apropa la informàtica a la teva escola. Comença amb una Hora de Codi
+
+Els ordinadors són pertot arreu, però menys escoles ensenyen computació que 10 anys enrere. La bona notícia és, estem en el camí de canviar això. Si has sentit a parlar de la [ Hora del Codi](<%= hoc_uri('/') %>) l'any passat, potser saps que ha fet història. En una setmana, 15 milions d'estudiants provaren la informàtica! La ["> Inscriure's](<%= hoc_uri('/') %>«> Hora de Codi</a> és una introducció d'una hora a informàtica, dissenyat per desmitificar el codi i demostrar que qualsevol pot aprendre els bàsics. <a href=) per acollir una Hora de Codi d'aquest desembre 8-14 durant la setmana de l'educació la ciència informàtica i ajudar a arribar a 100 milions d'estudiants al final de l'any. Add your school to the map, go to <http://hourofcode.com>
+
+## Infographic version:
 
 ![imatge](http://code.org/images/fit-8000/Code.org_infographic.png)
+
+<a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>

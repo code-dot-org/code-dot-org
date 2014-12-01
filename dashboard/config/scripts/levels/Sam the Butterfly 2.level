@@ -31,13 +31,28 @@
     "free_play": "false",
     "open_function_definition": "safe-left?",
     "embed": "false",
-    "maze_data": null,
-    "protaganist_sprite_index": "0"
+    "protaganist_sprite_index": "0",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
+        <block type="functional_definition" inline="false" uservisible="false">
+          <mutation>
+            <arg name="actor" type="string"/>
+            <outputtype>Number</outputtype>
+          </mutation>
+          <title name="NAME">get-x</title>
+          <functional_input name="STACK">
+            <block type="functional_parameters_get" uservisible="false">
+              <mutation>
+                <outputtype>string</outputtype>
+              </mutation>
+              <title name="VAR">actor</title>
+            </block>
+          </functional_input>
+        </block>
         <block type="functional_definition" inline="false" uservisible="false">
           <mutation>
             <arg name="x" type="Number"/>
@@ -46,25 +61,26 @@
           </mutation>
           <title name="NAME">safe-left?</title>
         </block>
-        <block type="functional_start_dummyOnMove" inline="false">
+        <block type="functional_start_dummyOnMove" inline="false" movable="false">
           <functional_input name="VAL">
-            <block type="functional_call" inline="false">
+            <block type="functional_call" inline="false" movable="false">
               <mutation name="safe-left?">
                 <arg name="x" type="Number"/>
               </mutation>
               <functional_input name="ARG0">
-                <block type="functional_call" editable="false">
-                  <mutation name="get-x"/>
+                <block type="functional_call" inline="false" movable="false" editable="false">
+                  <mutation name="get-x">
+                    <arg name="actor" type="string"/>
+                  </mutation>
+                  <functional_input name="ARG0">
+                    <block type="functional_string" movable="false" editable="false">
+                      <title name="VAL">sam</title>
+                    </block>
+                  </functional_input>
                 </block>
               </functional_input>
             </block>
           </functional_input>
-        </block>
-        <block type="functional_definition" inline="false" uservisible="false">
-          <mutation>
-            <outputtype>Number</outputtype>
-          </mutation>
-          <title name="NAME">get-x</title>
         </block>
         <block type="when_run" uservisible="false">
           <next>
