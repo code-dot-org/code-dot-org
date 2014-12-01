@@ -1,15 +1,17 @@
 
 
-# How to attract media to your Hour of Code event
+[<button style="float: right; margin-top: 50px">イベントへの申し込み</button>](/#join)
 
-## Some shocking statistics (USA):
+# 宣伝と役に立つ統計データ
 
-  * There will be one million more computing jobs than students over the next 10 years (adding up to $500 billion in salaries).
-  * More than 50 percent of all projected math and science occupations are in computing occupations. 
-  * Computing occupations are among the highest-paying jobs for new graduates. Yet fewer than 3% of college students graduate with a degree in computer science.
-  * In 26 states, computer science classes don’t count toward math or science high school graduation requirements. 
-  * Less than 20% of AP Computer Science students are women. Less than 10% are black or Latino.
+## Use this short blurb in newsletters
+
+### あなたの学校にもコンピューターサイエンスを導入しましょう。Hour of Codeで始めましょう。
+
+コンピューターはありふれていますが、コンピューター科学を教える学校は10年前より少なくなっています。 良いお知らせは、私たちはこれを変えようとしているということです。 昨年、[Hour of Code](<%= hoc_uri('/') %>) について聞いたことがありますか？もしそうならば、我々の素晴らしい成果をご存じかもしれません。 たった一週間で、1500万人の学生がコンピューター科学を試したのです！ [Hour of Code](<%= hoc_uri('/') %>) は約1時間のコンピューターサイエンス入門コースです。コードをわかりやすく説明し、だれでも基本を学習できることを目的としています。 コンピューターサイエンス教育週間の12月8-14日に行われるHour of Codeのイベント主催に[サインナップ](<%= hoc_uri('/') %>)してください。年末までに1億人の生徒に授業を提供するお手伝いをお願いします。 Add your school to the map, go to <http://hourofcode.com>
 
 ## Infographic version:
 
-![image](http://code.org/images/fit-8000/Code.org_infographic.png)
+![画像](http://code.org/images/fit-8000/Code.org_infographic.png)
+
+<a style="display: block" href="/#join"><button style="float: right;">イベントへの申し込み</button></a>

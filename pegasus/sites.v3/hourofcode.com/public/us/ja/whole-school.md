@@ -1,5 +1,5 @@
 
 
-# Get your whole school to participate
+# 学校全体で参加したい場合
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+学校全体でHour of Codeに参加されたい場合は、こちらをどうぞ。
