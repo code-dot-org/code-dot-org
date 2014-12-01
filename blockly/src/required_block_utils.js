@@ -150,6 +150,7 @@ function testsFromProcedure(node) {
  * 1. Param declared but not actually used in the function
  * 2. Function not called with the correct number of params
  * 3. Function declared but never used in workspace
+ * 4. Incomplete block inside function
  */
 function testsForAllProcedures() {
   var startBlocks = xml.parseElement(appOptions.level.startBlocks);
@@ -210,6 +211,22 @@ function testsForAllProcedures() {
       });
     },
     message: 'Function declared but never used.', // TODO: correct string, i18n
+    checkAllBlocks: true
+  }], [{
+    // Ensure there are no incomplete blocks inside any function definitions
+    test: function(userBlock) {
+      if (!userBlock.parameterNames_) {
+        // Block isn't a procedure definition, return true to keep searching.
+        return true;
+      }
+      return !hasMatchingDescendant(userBlock, function(block) {
+        return block.inputList.some(function(input) {
+          return input.type === Blockly.INPUT_VALUE &&
+            !input.connection.targetConnection;
+        });
+      });
+    },
+    message: 'Incomplete block inside function.', // TODO: correct string, i18n
     checkAllBlocks: true
   }]];
 }
