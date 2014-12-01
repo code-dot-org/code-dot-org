@@ -153,7 +153,7 @@ Blockly.Css.CONTENT = [
   '  cursor: default;',
   '  font-family: sans-serif;',
   '  font-size: 11pt;',
-  '  fill: #000;',
+  '  fill: #333;',
   '}',
   '.blocklyNonEditableText>text {',
   '  pointer-events: none;',
