@@ -25,7 +25,7 @@
               .slide-img<
                 %a{:href=>url, :target=>'_blank'}<
                   %img{:src=>tutorial[:image].sub("/images/", "/images/fit-520/").sub(".png", ".jpg")}
-              .slide-text{style: "background-image: url(/images/fit-520/frozen_carousel_background.jpg)"}
+              .slide-text{style: "background-image: url(/images/fit-520/frozen_carousel_background.jpg); background-color:rgb(0,139,163)"}
                 %a{:href=>url, :target=>'_blank'}<
                   %h2=I18n.t "#{tutorial[:code]}_name"
                 %h3= tutorial[:orgname]
