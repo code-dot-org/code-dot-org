@@ -1055,16 +1055,22 @@ Webapp.createCanvas = function (opts) {
   var divWebapp = document.getElementById('divWebapp');
 
   var newElement = document.createElement("canvas");
-  newElement.id = opts.elementId;
-  // default width/height if params are missing
-  var width = opts.width || 400;
-  var height = opts.height || 400;
-  newElement.width = width * Webapp.canvasScale;
-  newElement.height = height * Webapp.canvasScale;
-  newElement.style.width = width + 'px';
-  newElement.style.height = height + 'px';
+  var ctx = newElement.getContext("2d");
+  if (newElement && ctx) {
+    newElement.id = opts.elementId;
+    // default width/height if params are missing
+    var width = opts.width || 400;
+    var height = opts.height || 400;
+    newElement.width = width * Webapp.canvasScale;
+    newElement.height = height * Webapp.canvasScale;
+    newElement.style.width = width + 'px';
+    newElement.style.height = height + 'px';
+    // set transparent fill by default:
+    ctx.fillStyle = "rgba(255, 255, 255, 0)";
 
-  return Boolean(divWebapp.appendChild(newElement));
+    return Boolean(divWebapp.appendChild(newElement));
+  }
+  return false;
 };
 
 Webapp.canvasDrawLine = function (opts) {
@@ -1091,8 +1097,8 @@ Webapp.canvasDrawCircle = function (opts) {
             opts.radius * Webapp.canvasScale,
             0,
             2 * Math.PI);
+    ctx.fill();
     ctx.stroke();
-    ctx.closePath();
   }
   return false;
 };
