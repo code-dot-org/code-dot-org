@@ -464,6 +464,21 @@ class LevelsControllerTest < ActionController::TestCase
     assert_equal 'original name', level.name
   end
 
+  test 'no error message when not actually changing level name' do
+    level = create :level, name: 'original name'
+
+    post :update, id: level.id, level: {name: 'original name'}
+
+    assert_response 200
+
+    # no error message
+    assert assigns(:level).errors[:name].blank?
+
+    level = level.reload
+    # same name
+    assert_equal 'original name', level.name
+  end
+
   test 'can update level name' do
     level = create :level, name: 'original name'
 
