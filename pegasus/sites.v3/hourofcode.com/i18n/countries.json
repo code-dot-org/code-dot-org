@@ -83,6 +83,10 @@
     "full_name": "Greece",
     "default_language": "el"
   },
+  "hk": {
+    "full_name": "Hong Kong",
+    "default_language": "zh"
+  },
   "hr": {
     "full_name": "Croatia",
     "default_language": "hr"
