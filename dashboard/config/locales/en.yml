@@ -359,7 +359,7 @@ en:
     test_videos_help: 'Test our new video player at your school'
     try_beta_courses: 'New! Try our beta courses for K-5 students'
     use_as_teacher: 'Use this site as a teacher'
-    heading_hoc2014: "<h2>The Hour of Code</h2><h1>2014</h1>"
+    heading_hoc2014: "<h2>The Hour of Code for</h2><h1>All Ages</h1>"
     heading_elementary: "<h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>"
     heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
     heading_legacy: "<h2>Our general course for</h2><h1>All Ages</h1>"
@@ -450,6 +450,8 @@ en:
     gallery:
       title: "Gallery"
       body: "View a gallery of app and artist images created by our users"
+    frozen:
+      title: "Frozen"
   gallery:
     students_drew_these_with_code: "Students drew these with code!"
     students_made_these_with_code: "Students made these with code!"
