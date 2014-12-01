@@ -6,6 +6,8 @@
 
 # Vă mulţumim ca v-ați înscris pentru organizarea Hour of Code!
 
+Va multumim pentru inregistrare. Daca aveti nevoie de ajutor sau aveti orice intrebare contactati Echipa Hour of Code Romania la adresa: hoc@adfaber.org.
+
 **FIECARE** Organizator Hour of Code va primi 10 GB de spaţiu de Dropbox sau 10 dolari de Skype credit ca multumire. [ Detalii](<%= hoc_uri('/prizes') %>)
 
 ## 1. Răspândește vestea
