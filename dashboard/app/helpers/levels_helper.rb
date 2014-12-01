@@ -282,10 +282,29 @@ module LevelsHelper
     path, width = text.split(',')
     if %w(.jpg .png .gif).include? File.extname(path)
       "<img src='#{path.strip}' #{"width='#{width.strip}'" if width}></img>"
+    elsif File.extname(path).ends_with? '_blocks'
+      # '.start_blocks' takes the XML from the start_blocks of the specified level.
+      ext = File.extname(path)
+      base_level = File.basename(path, ext)
+      level = Level.find_by(name: base_level)
+      content_tag(:iframe, '', {
+          src: url_for(controller: :levels, action: :embed_blocks, level_id: level.id, block_type: ext.slice(1..-1)).strip,
+          width: width ? width.strip : '100%',
+          scrolling: 'no',
+          seamless: 'seamless',
+          style: 'border: none;',
+      })
     elsif File.extname(path) == '.level'
       base_level = File.basename(path, '.level')
       level = Level.find_by(name: base_level)
-      "<div class='aspect-ratio'><iframe src='#{url_for(:id => level.id, :controller => 'levels', :action => 'show', :embed => true).strip}' width='#{width ? width.strip : '100%'}' scrolling='no' seamless='seamless' style='border: none;'></iframe></div>"
+      content_tag(:div,
+        content_tag(:iframe, '', {
+          src: url_for(id: level.id, controller: :levels, action: :show, embed: true).strip,
+          width: (width ? width.strip : '100%'),
+          scrolling: 'no',
+          seamless: 'seamless',
+          style: 'border: none;'
+        }), {class: 'aspect-ratio'})
     else
       data_t(prefix + '.' + @level.name, text)
     end

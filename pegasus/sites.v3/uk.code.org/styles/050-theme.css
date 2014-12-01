@@ -57,24 +57,18 @@ body {
 }
 
 
-.headerlink:link{
-  color: white;
-  font-size: 18px;
-  font-weight: 300;
-  margin-left: 40px;
-}
-
+.headerlink:link,
 .headerlink:visited {
   color: white;
   font-size: 18px;
-  font-weight: 300;
   margin-left: 40px;
+  font-family: 'Gotham 4r', sans-serif;
 }
 
 .headerlink:hover {
   color: white;
   font-size: 18px;
-  font-weight: 300;
+  font-family: 'Gotham 4r', sans-serif;
   text-decoration: none;
   border-bottom: solid 4px rgb(255, 138, 0);
   margin-left: 40px;
@@ -105,19 +99,19 @@ body {
 .whitefooterlink:link {
   color: white;
   font-size: 14px;
-  font-weight: normal;
+  font-family: 'Gotham 4r', sans-serif;
 }
 
 .whitefooterlink:hover {
   color: white;
   font-size: 14px;
-  font-weight: normal;
+  font-family: 'Gotham 4r', sans-serif;
 }
 
 .whitefooterlink:visited {
   color: white;
   font-size: 14px;
-  font-weight: normal;
+  font-family: 'Gotham 4r', sans-serif;
 }
 
 
@@ -125,7 +119,7 @@ body {
 
 a.user-menu-link {
   color:white;
-  font-weight:400;
+  font-family: 'Gotham 4r', sans-serif;
   padding-left:10px;
 }
 
@@ -140,7 +134,7 @@ a.user-menu-link {
   margin-top:10px;
   margin-bottom:5px;
   font-size: 18px;
-  font-weight: 500;
+  font-family: 'Gotham 5r', sans-serif;
 }
 
 #user_hero #continue_button {
@@ -152,19 +146,19 @@ a.user-menu-link {
 }
 
 #user_hero #student_progress {
-  font-weight: 500;
+  font-family: 'Gotham 5r', sans-serif;
   width: 175px;
   display: inline-block;
 }
 
 #user_hero #left_off {
-  font-weight: 500;
+  font-family: 'Gotham 5r', sans-serif;
   width: 175px;
   display: inline-block;
 }
 
 #user_hero #classroom {
-  font-weight: 500;
+  font-family: 'Gotham 5r', sans-serif;
   font-size:16px;
   margin-top:10px;
 }
@@ -199,7 +193,7 @@ a.user-menu-link {
   color: rgb(255, 255, 255);
   cursor: pointer;
   display: inline-block;
-  font-family: 'Gotham A', 'Gotham B', sans-serif;
+  font-family: 'Gotham 4r', sans-serif;
   font-size: 14px;
   font-weight: normal;
   height: 35px;
