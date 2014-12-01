@@ -130,19 +130,18 @@ function testsFromProcedure(node) {
   var emptyBlock = node.cloneNode(true);
   emptyBlock.removeChild(emptyBlock.lastChild);
   return [{
-    // Ensure that all blocks match a required block with the same number of
+    // Ensure that all required blocks match a block with the same number of
     // params. There's no guarantee users will name their function the same as
     // the required block, so only match on number of params.
     test: function(userBlock) {
       if (userBlock.type === node.getAttribute('type')) {
         return paramCount === userBlock.parameterNames_.length;
       }
-      // Block isn't the same type, so return true to keep searching.
-      return true;
+      // Block isn't the same type, return false to keep searching.
+      return false;
     },
     blockDisplayXML: Blockly.Xml.domToText(emptyBlock),
-    message: 'No function with ' + paramCount + ' parameter(s) was found.', // TODO: correct string, i18n
-    checkAllBlocks: true
+    message: 'No function with ' + paramCount + ' parameter(s) was found.' // TODO: correct string, i18n
   }];
 }
 
