@@ -160,7 +160,7 @@ function installStringEquals(blockly, generator, gensym) {
   blockly.Blocks.functional_string_equals = {
     helpUrl: '',
     init: function() {
-      initTitledFunctionalBlock(this, 'string=?', 'boolean', [
+      initTitledFunctionalBlock(this, msg.stringEquals(), 'boolean', [
         { name: 'ARG1', type: 'string' },
         { name: 'ARG2', type: 'string' }
       ]);
