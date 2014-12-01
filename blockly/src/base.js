@@ -470,6 +470,7 @@ BlocklyApps.init = function(config) {
     // Allow empty blocks if editing blocks.
     if (config.level.edit_blocks) {
       BlocklyApps.CHECK_FOR_EMPTY_BLOCKS = false;
+      BlocklyApps.CHECK_FOR_INCOMPLETE_BLOCKS = false;
       if (config.level.edit_blocks === 'required_blocks' ||
         config.level.edit_blocks === 'toolbox_blocks') {
         // Don't show when run block for toolbox/required block editing
@@ -881,6 +882,11 @@ BlocklyApps.clearHighlighting = function () {
  * Whether to alert user to empty blocks, short-circuiting all other tests.
  */
 BlocklyApps.CHECK_FOR_EMPTY_BLOCKS = undefined;
+
+/**
+ * Whether to alert user to incomplete blocks (blocks with a disconnected input)
+ */
+BlocklyApps.CHECK_FOR_INCOMPLETE_BLOCKS = undefined;
 
 /**
  * The ideal number of blocks to solve this level.  Users only get 2
