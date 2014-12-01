@@ -684,7 +684,8 @@ BlocklyApps.init = function(config) {
       BlocklyApps.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
         mode: 'javascript',
         modeOptions: utils.generateDropletModeOptions(config.level.codeFunctions),
-        palette: utils.generateDropletPalette(config.level.codeFunctions)
+        palette: utils.generateDropletPalette(config.level.codeFunctions,
+                                              config.level.categoryInfo)
       });
 
       if (config.afterInject) {
@@ -9240,7 +9241,7 @@ exports.generateCodeAliases = function (codeFunctions, parentObjName) {
 /**
  * Generate a palette for the droplet editor based on some level data.
  */
-exports.generateDropletPalette = function (codeFunctions) {
+exports.generateDropletPalette = function (codeFunctions, categoryInfo) {
   // TODO: figure out localization for droplet scenario
   var palette = [
     {
@@ -9330,14 +9331,16 @@ exports.generateDropletPalette = function (codeFunctions) {
     }
   ];
 
-  var appPaletteCategory = {
-    name: 'Actions',
-    color: 'blue',
-    blocks: []
+  var defCategoryInfo = {
+    'Actions': {
+      'color': 'blue',
+      'blocks': []
+    }
   };
+  categoryInfo = categoryInfo || defCategoryInfo;
 
   if (codeFunctions) {
-    for (var i = 0, blockIndex = 0; i < codeFunctions.length; i++) {
+    for (var i = 0; i < codeFunctions.length; i++) {
       var cf = codeFunctions[i];
       if (cf.category === 'hidden') {
         continue;
@@ -9356,12 +9359,14 @@ exports.generateDropletPalette = function (codeFunctions) {
         block: block,
         title: cf.func
       };
-      appPaletteCategory.blocks[blockIndex] = blockPair;
-      blockIndex++;
+      categoryInfo[cf.category || 'Actions'].blocks.push(blockPair);
     }
   }
 
-  palette.unshift(appPaletteCategory);
+  for (var category in categoryInfo) {
+    categoryInfo[category].name = category;
+    palette.unshift(categoryInfo[category]);
+  }
 
   return palette;
 };
@@ -9387,10 +9392,13 @@ exports.generateDropletModeOptions = function (codeFunctions) {
 
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
-      if (codeFunctions[i].category === 'value') {
+      if (codeFunctions[i].type === 'value') {
         modeOptions.valueFunctions.push(codeFunctions[i].func);
       }
-      else if (codeFunctions[i].category !== 'hidden') {
+      else if (codeFunctions[i].type === 'either') {
+        modeOptions.eitherFunctions.push(codeFunctions[i].func);
+      }
+      else if (codeFunctions[i].type !== 'hidden') {
         modeOptions.blockFunctions.push(codeFunctions[i].func);
       }
     }
@@ -9435,10 +9443,22 @@ exports.createButton = function (blockId, elementId, text) {
                            'text': text });
 };
 
-exports.createCanvas = function (blockId, elementId) {
+exports.setPosition = function (blockId, elementId, left, top, width, height) {
+  return Webapp.executeCmd(String(blockId),
+                          'setPosition',
+                          {'elementId': elementId,
+                           'left': left,
+                           'top': top,
+                           'width': width,
+                           'height': height });
+};
+
+exports.createCanvas = function (blockId, elementId, width, height) {
   return Webapp.executeCmd(String(blockId),
                           'createCanvas',
-                          {'elementId': elementId });
+                          {'elementId': elementId,
+                           'width': width,
+                           'height': height });
 };
 
 exports.canvasDrawLine = function (blockId, elementId, x1, y1, x2, y2) {
@@ -9460,6 +9480,27 @@ exports.canvasDrawCircle = function (blockId, elementId, x, y, radius) {
                            'radius': Number(radius) });
 };
 
+exports.canvasSetLineWidth = function (blockId, elementId, width) {
+  return Webapp.executeCmd(String(blockId),
+                          'canvasSetLineWidth',
+                          {'elementId': elementId,
+                           'width': Number(width) });
+};
+
+exports.canvasSetStrokeColor = function (blockId, elementId, color) {
+  return Webapp.executeCmd(String(blockId),
+                          'canvasSetStrokeColor',
+                          {'elementId': elementId,
+                           'color': color });
+};
+
+exports.canvasSetFillColor = function (blockId, elementId, color) {
+  return Webapp.executeCmd(String(blockId),
+                          'canvasSetFillColor',
+                          {'elementId': elementId,
+                           'color': color });
+};
+
 exports.canvasClear = function (blockId, elementId) {
   return Webapp.executeCmd(String(blockId),
                           'canvasClear',
@@ -9469,6 +9510,13 @@ exports.canvasClear = function (blockId, elementId) {
 exports.createTextInput = function (blockId, elementId, text) {
   return Webapp.executeCmd(String(blockId),
                           'createTextInput',
+                          {'elementId': elementId,
+                           'text': text });
+};
+
+exports.createTextLabel = function (blockId, elementId, text) {
+  return Webapp.executeCmd(String(blockId),
+                          'createTextLabel',
                           {'elementId': elementId,
                            'text': text });
 };
@@ -9484,6 +9532,13 @@ exports.setText = function (blockId, elementId, text) {
                           'setText',
                           {'elementId': elementId,
                            'text': text });
+};
+
+exports.setParent = function (blockId, elementId, parentId) {
+  return Webapp.executeCmd(String(blockId),
+                          'setParent',
+                          {'elementId': elementId,
+                           'parentId': parentId });
 };
 
 exports.setStyle = function (blockId, elementId, style) {
@@ -9654,18 +9709,34 @@ levels.ec_simple = {
   'codeFunctions': [
     {'func': 'createButton', 'params': ["'id'", "'text'"] },
     {'func': 'createTextInput', 'params': ["'id'", "'text'"] },
-    {'func': 'getText', 'params': ["'id'"], 'category': 'value' },
+    {'func': 'createTextLabel', 'params': ["'id'", "'text'"] },
+    {'func': 'getText', 'params': ["'id'"], 'type': 'value' },
     {'func': 'setText', 'params': ["'id'", "'text'"] },
+    {'func': 'setParent', 'params': ["'id'", "'parentId'"] },
+    {'func': 'setPosition', 'params': ["'id'", "0", "0", "100", "100"] },
     {'func': 'setStyle', 'params': ["'id'", "'color:red;'"] },
     {'func': 'createHtmlBlock', 'params': ["'id'", "'html'"] },
     {'func': 'replaceHtmlBlock', 'params': ["'id'", "'html'"] },
     {'func': 'deleteHtmlBlock', 'params': ["'id'"] },
-    {'func': 'createCanvas', 'params': ["'id'"] },
-    {'func': 'canvasDrawLine', 'params': ["'id'", "0", "0", "400", "400"] },
-    {'func': 'canvasDrawCircle', 'params': ["'id'", "200", "200", "100"] },
-    {'func': 'canvasClear', 'params': ["'id'"] },
     {'func': 'attachEventHandler', 'params': ["'id'", "'click'", "function() {\n  \n}"] },
+    {'func': 'createCanvas', 'category': 'Canvas', 'params': ["'id'", "400", "400"] },
+    {'func': 'canvasDrawLine', 'category': 'Canvas', 'params': ["'id'", "0", "0", "400", "400"] },
+    {'func': 'canvasDrawCircle', 'category': 'Canvas', 'params': ["'id'", "200", "200", "100"] },
+    {'func': 'canvasSetLineWidth', 'category': 'Canvas', 'params': ["'id'", "3"] },
+    {'func': 'canvasSetStrokeColor', 'category': 'Canvas', 'params': ["'id'", "'red'"] },
+    {'func': 'canvasSetFillColor', 'category': 'Canvas', 'params': ["'id'", "'yellow'"] },
+    {'func': 'canvasClear', 'category': 'Canvas', 'params': ["'id'"] },
   ],
+  'categoryInfo': {
+    'Canvas': {
+      'color': 'yellow',
+      'blocks': []
+    },
+    'Actions': {
+      'color': 'blue',
+      'blocks': []
+    },
+  },
 };
 
 levels.full_sandbox =  {
@@ -10823,10 +10894,16 @@ Webapp.callCmd = function (cmd) {
     case 'createCanvas':
     case 'canvasDrawLine':
     case 'canvasDrawCircle':
+    case 'canvasSetLineWidth':
+    case 'canvasSetStrokeColor':
+    case 'canvasSetFillColor':
     case 'canvasClear':
     case 'createTextInput':
+    case 'createTextLabel':
     case 'getText':
     case 'setText':
+    case 'setPosition':
+    case 'setParent':
     case 'setStyle':
     case 'attachEventHandler':
       BlocklyApps.highlight(cmd.id);
@@ -10861,12 +10938,22 @@ Webapp.createCanvas = function (opts) {
   var divWebapp = document.getElementById('divWebapp');
 
   var newElement = document.createElement("canvas");
-  newElement.id = opts.elementId;
-  // TODO: support creating canvas elements of different sizes
-  newElement.width = 400 * Webapp.canvasScale;
-  newElement.height = 400 * Webapp.canvasScale;
+  var ctx = newElement.getContext("2d");
+  if (newElement && ctx) {
+    newElement.id = opts.elementId;
+    // default width/height if params are missing
+    var width = opts.width || 400;
+    var height = opts.height || 400;
+    newElement.width = width * Webapp.canvasScale;
+    newElement.height = height * Webapp.canvasScale;
+    newElement.style.width = width + 'px';
+    newElement.style.height = height + 'px';
+    // set transparent fill by default:
+    ctx.fillStyle = "rgba(255, 255, 255, 0)";
 
-  return Boolean(divWebapp.appendChild(newElement));
+    return Boolean(divWebapp.appendChild(newElement));
+  }
+  return false;
 };
 
 Webapp.canvasDrawLine = function (opts) {
@@ -10893,7 +10980,41 @@ Webapp.canvasDrawCircle = function (opts) {
             opts.radius * Webapp.canvasScale,
             0,
             2 * Math.PI);
+    ctx.fill();
     ctx.stroke();
+  }
+  return false;
+};
+
+Webapp.canvasSetLineWidth = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var div = document.getElementById(opts.elementId);
+  var ctx = div.getContext("2d");
+  if (ctx && divWebapp.contains(div)) {
+    ctx.setLineWidth(opts.width * Webapp.canvasScale);
+    return true;
+  }
+  return false;
+};
+
+Webapp.canvasSetStrokeColor = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var div = document.getElementById(opts.elementId);
+  var ctx = div.getContext("2d");
+  if (ctx && divWebapp.contains(div)) {
+    ctx.setStrokeColor(opts.color);
+    return true;
+  }
+  return false;
+};
+
+Webapp.canvasSetFillColor = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var div = document.getElementById(opts.elementId);
+  var ctx = div.getContext("2d");
+  if (ctx && divWebapp.contains(div)) {
+    ctx.setFillColor(opts.color);
+    return true;
   }
   return false;
 };
@@ -10904,6 +11025,7 @@ Webapp.canvasClear = function (opts) {
   var ctx = div.getContext("2d");
   if (ctx && divWebapp.contains(div)) {
     ctx.clearRect(0, 0, div.width, div.height);
+    return true;
   }
   return false;
 };
@@ -10916,6 +11038,17 @@ Webapp.createTextInput = function (opts) {
   newInput.id = opts.elementId;
 
   return Boolean(divWebapp.appendChild(newInput));
+};
+
+Webapp.createTextLabel = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+
+  var newLabel = document.createElement("label");
+  var textNode = document.createTextNode(opts.text);
+  newLabel.id = opts.elementId;
+
+  return Boolean(newLabel.appendChild(textNode) &&
+                 divWebapp.appendChild(newLabel));
 };
 
 Webapp.getText = function (opts) {
@@ -10962,7 +11095,32 @@ Webapp.setStyle = function (opts) {
   var divWebapp = document.getElementById('divWebapp');
   var div = document.getElementById(opts.elementId);
   if (divWebapp.contains(div)) {
-    div.style.cssText = opts.style;
+    div.style.cssText += opts.style;
+    return true;
+  }
+  return false;
+};
+
+Webapp.setParent = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var div = document.getElementById(opts.elementId);
+  var divNewParent = document.getElementById(opts.parentId);
+  if (divWebapp.contains(div) && divWebapp.contains(divNewParent)) {
+    return Boolean(div.parentElement.removeChild(div) &&
+                   divNewParent.appendChild(div));
+  }
+  return false;
+};
+
+Webapp.setPosition = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var div = document.getElementById(opts.elementId);
+  if (divWebapp.contains(div)) {
+    div.style.position = 'absolute';
+    div.style.left = String(opts.left) + 'px';
+    div.style.top = String(opts.top) + 'px';
+    div.style.width = String(opts.width) + 'px';
+    div.style.height = String(opts.height) + 'px';
     return true;
   }
   return false;
