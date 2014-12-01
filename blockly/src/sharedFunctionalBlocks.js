@@ -14,6 +14,7 @@ exports.install = function(blockly, generator, gensym) {
   installGreaterThan(blockly, generator, gensym);
   installLessThan(blockly, generator, gensym);
   installNumberEquals(blockly, generator, gensym);
+  installStringEquals(blockly, generator, gensym);
   installLogicalAnd(blockly, generator, gensym);
   installLogicalOr(blockly, generator, gensym);
   installLogicalNot(blockly, generator, gensym);
@@ -151,6 +152,24 @@ function installNumberEquals(blockly, generator, gensym) {
   generator.functional_number_equals = function() {
     var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || 0;
     var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || 0;
+    return '(' + arg1 + " == " + arg2 + ')';
+  };
+}
+
+function installStringEquals(blockly, generator, gensym) {
+  blockly.Blocks.functional_string_equals = {
+    helpUrl: '',
+    init: function() {
+      initTitledFunctionalBlock(this, 'string=?', 'boolean', [
+        { name: 'ARG1', type: 'String' },
+        { name: 'ARG2', type: 'String' }
+      ]);
+    }
+  };
+
+  generator.functional_string_equals = function() {
+    var arg1 = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || '';
+    var arg2 = Blockly.JavaScript.statementToCode(this, 'ARG2', false) || '';
     return '(' + arg1 + " == " + arg2 + ')';
   };
 }
