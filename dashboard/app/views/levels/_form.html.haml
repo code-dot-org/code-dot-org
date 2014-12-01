@@ -1,3 +1,11 @@
+#validation-error{style: 'background-color: yellow'}
+  - if @level.errors.any?
+    %h2
+      = pluralize(@level.errors.count, "error")
+      prohibited this level from being saved:
+    %ul
+      - @level.errors.full_messages.each do |msg|
+        %li= msg
 = form_for [@level], method: @level.new_record? ? :post : :patch, remote: true do |f|
   = f.hidden_field :type, value: @type_class.to_s.presence || @level.type
   .field
@@ -23,14 +31,6 @@
     = render partial: 'levels/editors/dsl', locals: {f: f} if @level.is_a? DSLDefined
   .actions
     = f.submit
-#validation-error
-  - if @level.errors.any?
-    %h2
-      = pluralize(@level.errors.count, "error")
-      prohibited this level from being saved:
-    %ul
-      - @level.errors.full_messages.each do |msg|
-        %li= msg
 :javascript
   #{render partial: 'shared/ajax_submit', formats: [:js],  locals: {form_selector: @level.new_record? ? '#new_level' : '.edit_level'}}
   function make_selection_handler(flag) {
