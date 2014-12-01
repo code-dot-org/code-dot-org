@@ -20,7 +20,10 @@
 
 - elsif ["course1", "course2", "course3", "course4", "artist","flappy", "hourofcode", "frozen"].include?(id)
   - url = script_url(id)
-  - title = data_t_suffix('script.name', id, "title")
+  - if id == "frozen"
+    - title = t('upsell.frozen.title')
+  - else
+    - title = data_t_suffix('script.name', id, "title")
   - body = data_t_suffix('script.name', id, "description_short")
 
 - if id == "artist" || id == "playlab"
