@@ -18,16 +18,18 @@ goog.require('goog.ui.Component.EventType');
 goog.require('goog.events');
 
 /**
+ * A horizontal SVG bar with rectangular background and text
  * @param parent {!Element}
  * @param headerText {!String}
  * @constructor
  */
 Blockly.SVGHeader = function(parent, headerText) {
-  var padding = 7;
-  var textHeightGuess = 12;
+  this.padding = { left: 10 };
   this.svgGroup_ = Blockly.createSvgElement('g', {}, parent);
   this.grayRectangleElement_ = Blockly.createSvgElement('rect', { 'fill': '#dddddd' }, this.svgGroup_);
-  this.textElement_ = Blockly.createSvgElement('text', { 'x': padding, 'y': padding + textHeightGuess, 'class': 'blocklyText' }, this.svgGroup_);
+  this.textElement_ = Blockly.createSvgElement('text', {
+    'class': 'blackBlocklyText'
+  }, this.svgGroup_);
   this.textElement_.textContent = headerText;
 };
 
@@ -40,6 +42,12 @@ Blockly.SVGHeader.prototype.setPositionSize = function(yOffset, width, height) {
   this.svgGroup_.setAttribute('transform', 'translate(' + 0 + ',' + yOffset + ')');
   this.grayRectangleElement_.setAttribute('width', width);
   this.grayRectangleElement_.setAttribute('height', height);
+  this.textElement_.setAttribute('x', this.padding.left);
+  var rectangleMiddleY = height / 2;
+  // text getBBox() height seems to be off by a bit, 1/3 of getBBox height looks best
+  var thirdTextHeight = this.textElement_.getBBox().height / 3;
+
+  this.textElement_.setAttribute('y', rectangleMiddleY + thirdTextHeight);
 };
 
 Blockly.SVGHeader.prototype.removeSelf = function () {
