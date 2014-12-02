@@ -61,7 +61,7 @@ exports.repeatSimpleBlock = function(count) {
 exports.makeTestsFromBuilderRequiredBlocks = function (customRequiredBlocks) {
   var blocksXml = xml.parseElement(customRequiredBlocks);
 
-  var requiredBlocksTests = testsForAllProcedures();
+  var requiredBlocksTests = [];
   Array.prototype.forEach.call(blocksXml.childNodes, function(childNode) {
     // Only look at element nodes
     if (childNode.nodeType !== 1) {
@@ -143,105 +143,6 @@ function testsFromProcedure(node) {
     },
     message: msg.errorRequiredParamsMissing()
   }];
-}
-
-/**
- * Generates tests that check for:
- * 1. Param declared but not actually used in the function
- * 2. Function not called with the correct number of params
- * 3. Function declared but never used in workspace
- * 4. Incomplete block inside function
- */
-function testsForAllProcedures() {
-  var startBlocks = xml.parseElement(appOptions.level.startBlocks);
-  var procedureBlocks = startBlocks.querySelectorAll(
-      '[type=procedures_defreturn],[type=procedures_defnoreturn]');
-  var startProcedures = goog.array.map(procedureBlocks, function(procedure) {
-    return procedure.querySelector('title[name=NAME]').textContent;
-  });
-  return [[{
-    // Ensure that all procedure definitions actually use the parameters they
-    // define inside the procedure.
-    test: function(userBlock) {
-      if (!userBlock.parameterNames_) {
-        // Block isn't a procedure definition, return true to keep searching.
-        return true;
-      }
-      return userBlock.parameterNames_.every(function (paramName) {
-        return hasMatchingDescendant(userBlock, function(block) {
-          return block.type === 'parameters_get' &&
-              block.getTitleValue('VAR') === paramName;
-        });
-      });
-    },
-    message: msg.errorUnusedParam(),
-    checkAllBlocks: true
-  }], [{
-    // Ensure that all procedure calls have each parameter input connected.
-    test: function(userBlock) {
-      if (!/^procedures_call/.test(userBlock.type)) {
-        // Block isn't a procedure call, return true to keep searching.
-        return true;
-      }
-      return userBlock.inputList.filter(function (input) {
-        return (/^ARG/.test(input.name));
-      }).every(function (argInput) {
-        return argInput.connection.targetConnection;
-      });
-    },
-    message: msg.errorParamInputUnattached(),
-    checkAllBlocks: true
-  }], [{
-    // Ensure that all user-declared procedures have associated call blocks.
-    test: function(userBlock) {
-      if (!userBlock.parameterNames_) {
-        // Block isn't a procedure definition, return true to keep searching.
-        return true;
-      }
-      var name = userBlock.getTitleValue('NAME');
-      if (goog.array.contains(startProcedures, name)) {
-        // Procedure is defined in start blocks, not user-declared.
-        return true;
-      }
-      // Find a matching 'call' block (if one exists)
-      return goog.array.some(Blockly.mainBlockSpace.getAllBlocks(), function(block) {
-        if (/^procedures_call/.test(block.type)) {
-          return block.getTitleValue('NAME') === name;
-        }
-      });
-    },
-    message: msg.errorUnusedFunction(),
-    checkAllBlocks: true
-  }], [{
-    // Ensure there are no incomplete blocks inside any function definitions
-    test: function(userBlock) {
-      if (!userBlock.parameterNames_) {
-        // Block isn't a procedure definition, return true to keep searching.
-        return true;
-      }
-      return !hasMatchingDescendant(userBlock, function(block) {
-        return block.inputList.some(function(input) {
-          return input.type === Blockly.INPUT_VALUE &&
-            !input.connection.targetConnection;
-        });
-      });
-    },
-    message: msg.errorIncompleteBlockInsideFunction(),
-    checkAllBlocks: true
-  }]];
-}
-
-/**
- * Returns true if any descendant (inclusive) of the given node matches the
- * given filter
- */
-function hasMatchingDescendant(node, filter) {
-  if (filter(node)) {
-    return true;
-  }
-  return node.childBlocks_.some(function (child) {
-    return hasMatchingDescendant(child, filter);
-  });
 }
 
 /**
