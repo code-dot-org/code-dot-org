@@ -1321,7 +1321,9 @@ Turtle.checkAnswer = function() {
   // been completed
   var levelComplete = (level.freePlay || isCorrect(delta, permittedErrors)) &&
                         (!level.editCode || !Turtle.executionError);
-  Turtle.testResults = BlocklyApps.getTestResults(levelComplete);
+  Turtle.testResults = BlocklyApps.getTestResults(levelComplete, {
+    level: level
+  });
 
   var program;
   if (BlocklyApps.usingBlockly) {
