@@ -9,7 +9,7 @@
 - elsif browser.cdo_partially_supported?
   = render partial: 'layouts/partially_supported_browser'
 
-.header-wrapper.hide_on_mobile
+.header-wrapper.hide_on_mobile{class: ("feedback-bug-links" if @script_level && @script.show_report_bug_link?)}
   - if @script_level && @script.show_report_bug_link?
     #betainfo
       - if @script.feedback_url
