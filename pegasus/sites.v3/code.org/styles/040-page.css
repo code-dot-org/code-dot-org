@@ -713,3 +713,8 @@ a.btn-default:hover,
 a.btn-default:active {
   color: #fff;
 }
+
+label {
+  font-family: 'Gotham 5r', sans-serif;
+  font-weight: normal;
+}
