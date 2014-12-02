@@ -70,6 +70,18 @@ exports.placeImage = function (x, y, image) {
   return image;
 };
 
+exports.offset = function (x, y, image) {
+  evalUtils.ensureNumber(x);
+  evalUtils.ensureNumber(y);
+  evalUtils.ensureType(image, EvalImage);
+    
+  x = image.x_ + x;
+  y = image.y_ - y;
+    
+  image.place(x, y);
+  return image;
+};
+
 exports.rotateImage = function (degrees, image) {
   evalUtils.ensureNumber(degrees);
 

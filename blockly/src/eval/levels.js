@@ -27,6 +27,7 @@ module.exports = {
       blockUtils.blockOfType('functional_ellipse') +
       blockUtils.blockOfType('functional_star') +
       blockUtils.blockOfType('place_image') +
+      blockUtils.blockOfType('offset') +
       blockUtils.blockOfType('overlay') +
       blockUtils.blockOfType('underlay') +
       blockUtils.blockOfType('rotate') +
