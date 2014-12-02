@@ -131,6 +131,8 @@ level 'ConditionalsPiecewiseFunctions'
 
 stage 'Eval: Conditionals'
 level 'Eval Cond 1'
+level 'Eval Cond 2'
+level 'Eval Cond 3'
 
 stage 'Unplugged: Collision Detection and the Distance Formula'
 level 'CollisionDetection'
