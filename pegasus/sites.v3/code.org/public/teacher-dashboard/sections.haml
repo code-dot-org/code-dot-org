@@ -62,6 +62,7 @@ theme: none
         %span{"ng-hide" => "section.editing"} {{course_list[section.course.id]}}
         %span{"ng-show" => "section.editing"}
           %select{"ng-model" => "section.course.id", "ng-options"=>"k*1 as v for (k, v) in course_list"}
+            %option{value: ''}
       %td {{section.students.length}}       
       %td
         {{section.code}}
