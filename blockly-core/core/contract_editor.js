@@ -130,7 +130,7 @@ Blockly.ContractEditor.prototype.openWithNewFunction = function(opt_blockCreatio
   this.functionDefinitionHeader_ =
     new Blockly.SVGHeader(Blockly.modalBlockSpace.svgBlockCanvas_, "Definition");
 
-  this.layOutBlockSpaceItems_();
+  this.position_();
 };
 
 /**
@@ -143,6 +143,11 @@ Blockly.ContractEditor.prototype.layOutBlockSpaceItems_ = function () {
   var currentX = Blockly.RTL ?
     fullWidth - FRAME_MARGIN_SIDE :
     FRAME_MARGIN_SIDE;
+
+  var trashcanOffset = (Blockly.modalBlockSpace.trashcan.HEIGHT_ - headerHeight) / 2;
+  Blockly.modalBlockSpace.trashcan.setYOffset(-trashcanOffset);
+  Blockly.modalBlockSpace.trashcan.position_();
+
   var currentY = 0;
 
   this.exampleBlocks_.forEach(function(block, index) {
@@ -154,17 +159,17 @@ Blockly.ContractEditor.prototype.layOutBlockSpaceItems_ = function () {
     currentY += FRAME_MARGIN_TOP;
   }, this);
 
-  this.functionDefinitionHeader_.setPositionSize(currentY, fullWidth, headerHeight);
-  currentY += headerHeight;
+  if (this.functionDefinitionHeader_) {
+    this.functionDefinitionHeader_.setPositionSize(currentY, fullWidth, headerHeight);
+    currentY += headerHeight;
+  }
 
-  currentY += this.flyout_.getHeight();
-  this.flyout_.customYOffset = currentY;
-  this.flyout_.position_();
+  if (this.flyout_) {
+    currentY += this.flyout_.getHeight();
+    this.flyout_.customYOffset = currentY;
+    this.flyout_.position_();
+  }
   currentY += FRAME_MARGIN_TOP;
-
-  var trashcanOffset = (Blockly.modalBlockSpace.trashcan.HEIGHT_ - headerHeight) / 2;
-  Blockly.modalBlockSpace.trashcan.setYOffset(-trashcanOffset);
-  Blockly.modalBlockSpace.trashcan.position_();
 
   if (this.functionDefinitionBlock) {
     this.functionDefinitionBlock.moveTo(currentX, currentY);

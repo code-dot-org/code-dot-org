@@ -404,10 +404,6 @@ Blockly.FunctionEditor.prototype.create_ = function() {
       goog.events.EventType.RESIZE, this, this.position_);
 
   Blockly.modalBlockSpaceEditor.svgResize();
-
-  Blockly.modalBlockSpace.events.listen(
-    Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE, this.layOutBlockSpaceItems_,
-    false, this);
 };
 
 Blockly.FunctionEditor.prototype.layOutBlockSpaceItems_ = function () {
@@ -519,6 +515,8 @@ Blockly.FunctionEditor.prototype.position_ = function() {
 
   // Move workspace to account for horizontal flyout height
   Blockly.modalBlockSpaceEditor.svgResize();
+
+  this.layOutBlockSpaceItems_();
 };
 
 Blockly.FunctionEditor.prototype.createContractDom_ = function() {
