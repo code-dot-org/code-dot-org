@@ -13,16 +13,68 @@
     "skip_instructions_popup": "true",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
-    "use_modal_function_editor": "true",
+    "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "free_play": "false",
-    "impressive": "false"
+    "impressive": "false",
+    "embed": "false",
+    "disable_sharing": "false",
+    "instructions": "Finish this drawing."
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false"/>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="procedures_callnoreturn" inline="true">
+              <mutation name="draw">
+                <arg name="binary"/>
+              </mutation>
+              <value name="ARG0">
+                <block type="text">
+                  <title name="TEXT">00000001</title>
+                </block>
+              </value>
+              <next>
+                <block type="procedures_callnoreturn" inline="true">
+                  <mutation name="draw">
+                    <arg name="binary"/>
+                  </mutation>
+                  <value name="ARG0">
+                    <block type="text">
+                      <title name="TEXT">01111101</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="procedures_callnoreturn" inline="true">
+                      <mutation name="draw">
+                        <arg name="binary"/>
+                      </mutation>
+                      <value name="ARG0">
+                        <block type="text">
+                          <title name="TEXT">01000101</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="procedures_callnoreturn" inline="true">
+                          <mutation name="draw">
+                            <arg name="binary"/>
+                          </mutation>
+                          <value name="ARG0">
+                            <block type="text">
+                              <title name="TEXT">01010101</title>
+                            </block>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
         <block type="procedures_defnoreturn" uservisible="false">
           <mutation>
             <arg name="binary"/>
@@ -94,7 +146,7 @@
                           </value>
                           <value name="B">
                             <block type="math_number" uservisible="false">
-                              <title name="NUM">0</title>
+                              <title name="NUM">1</title>
                             </block>
                           </value>
                         </block>
@@ -251,7 +303,7 @@
                   </mutation>
                   <value name="ARG0">
                     <block type="text">
-                      <title name="TEXT">11111110</title>
+                      <title name="TEXT">00000001</title>
                     </block>
                   </value>
                   <next>
@@ -261,7 +313,7 @@
                       </mutation>
                       <value name="ARG0">
                         <block type="text">
-                          <title name="TEXT">10000010</title>
+                          <title name="TEXT">01111101</title>
                         </block>
                       </value>
                       <next>
@@ -271,7 +323,7 @@
                           </mutation>
                           <value name="ARG0">
                             <block type="text">
-                              <title name="TEXT">10111010</title>
+                              <title name="TEXT">01000101</title>
                             </block>
                           </value>
                           <next>
@@ -281,7 +333,7 @@
                               </mutation>
                               <value name="ARG0">
                                 <block type="text">
-                                  <title name="TEXT">10101010</title>
+                                  <title name="TEXT">01010101</title>
                                 </block>
                               </value>
                               <next>
@@ -291,7 +343,7 @@
                                   </mutation>
                                   <value name="ARG0">
                                     <block type="text">
-                                      <title name="TEXT">10101010</title>
+                                      <title name="TEXT">01010101</title>
                                     </block>
                                   </value>
                                   <next>
@@ -301,7 +353,7 @@
                                       </mutation>
                                       <value name="ARG0">
                                         <block type="text">
-                                          <title name="TEXT">10100010</title>
+                                          <title name="TEXT">01011101</title>
                                         </block>
                                       </value>
                                       <next>
@@ -311,7 +363,7 @@
                                           </mutation>
                                           <value name="ARG0">
                                             <block type="text">
-                                              <title name="TEXT">10111110</title>
+                                              <title name="TEXT">01000001</title>
                                             </block>
                                           </value>
                                           <next>
@@ -321,7 +373,7 @@
                                               </mutation>
                                               <value name="ARG0">
                                                 <block type="text">
-                                                  <title name="TEXT">10000000</title>
+                                                  <title name="TEXT">01111111</title>
                                                 </block>
                                               </value>
                                             </block>
@@ -342,6 +394,32 @@
               </next>
             </block>
           </next>
+        </block>
+        <block type="procedures_defnoreturn" uservisible="false">
+          <mutation/>
+          <title name="NAME">draw bit</title>
+          <statement name="STACK">
+            <block type="draw_width_inline" uservisible="false">
+              <title name="WIDTH">25</title>
+              <next>
+                <block type="controls_repeat" uservisible="false">
+                  <title name="TIMES">4</title>
+                  <statement name="DO">
+                    <block type="draw_move_by_constant" uservisible="false">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">25</title>
+                      <next>
+                        <block type="draw_turn_by_constant" uservisible="false">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE">90</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </statement>
         </block>
         <block type="procedures_defnoreturn" uservisible="false">
           <mutation>
@@ -414,7 +492,7 @@
                           </value>
                           <value name="B">
                             <block type="math_number" uservisible="false">
-                              <title name="NUM">0</title>
+                              <title name="NUM">1</title>
                             </block>
                           </value>
                         </block>
@@ -501,32 +579,6 @@
                               </next>
                             </block>
                           </next>
-                        </block>
-                      </next>
-                    </block>
-                  </statement>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
-        <block type="procedures_defnoreturn" uservisible="false">
-          <mutation/>
-          <title name="NAME">draw bit</title>
-          <statement name="STACK">
-            <block type="draw_width_inline" uservisible="false">
-              <title name="WIDTH">25</title>
-              <next>
-                <block type="controls_repeat" uservisible="false">
-                  <title name="TIMES">4</title>
-                  <statement name="DO">
-                    <block type="draw_move_by_constant" uservisible="false">
-                      <title name="DIR">moveForward</title>
-                      <title name="VALUE">25</title>
-                      <next>
-                        <block type="draw_turn_by_constant" uservisible="false">
-                          <title name="DIR">turnRight</title>
-                          <title name="VALUE">90</title>
                         </block>
                       </next>
                     </block>

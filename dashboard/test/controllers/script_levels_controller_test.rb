@@ -511,8 +511,13 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_select 'a[href*="https://support.code.org/hc/en-us/requests/new"]'
   end
 
-  test 'report bug link for frozen' do
+  test 'no report bug link for frozen' do
     get :show, script_id: 'frozen', stage_id: 1, id: 1
+    assert_select 'a[href*="https://support.code.org/hc/en-us/requests/new"]', 0
+  end
+
+  test 'report bug link for course4' do
+    get :show, script_id: 'course4', stage_id: 1, id: 1
     assert_select 'a[href*="https://support.code.org/hc/en-us/requests/new"]'
   end
 

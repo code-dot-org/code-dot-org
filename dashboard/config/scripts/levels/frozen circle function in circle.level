@@ -19,7 +19,10 @@
     "impressive": "true",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "ideal": "8"
+    "ideal": "8",
+    "embed": "false",
+    "callout_json": "[\r\n  {\"localization_key\": \"frozen_circle_function_in_circle_turn\", \"element_id\": \"[block-id='1']\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"center left\", \"at\": \"bottom right\", \"adjust\": {\"x\": 50, \"y\":150}},\r\n    \"style\": { \"classes\": \"no-tip\" }}\r\n  }\r\n]",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>

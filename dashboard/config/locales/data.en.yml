@@ -386,6 +386,7 @@ en:
         'C1_playlab_storytelling': 'Play Lab - Create a Story'
         'C1_planting_seed': 'Planting a Seed'
         'C1_building_foundation': 'Building a Foundation'
+        'C1_going_places_safely': 'Going Places Safely'
         'C2_maze_intro': 'Maze Intro'
         'C2_artist_intro': 'Artist Intro'
         'C2_zuck_repeat_loop': 'Maze Loops'
@@ -400,6 +401,7 @@ en:
         'C2_binary_bracelets': 'Binary Bracelets'
         'C2_relay_programming': 'Relay Programming'
         'C2_paper_airplanes': 'Paper Airplanes'
+        'C2_digital_footprint': 'Your Digital Footprint'
         'C3_maze_level_4': 'Maze Loops'
         'C3_artist_intro': 'Artist Intro'
         'C3_artist_functions': 'Artist Functions'
@@ -454,3 +456,7 @@ en:
         edit_get_nectar: 'Use this button to edit the function and change the direction the Bee will turn to get the nectar.'
         logic_category: 'Open the "Logic" flyout to find the "if/else" block.'
         length_parameter: 'Can you update this function so it uses the "length" parameter?'
+        frozen_diamond_repeat: 'Use the repeat block to create this shape.'
+        frozen_circle_function_in_circle_turn: "Don't forget to turn after creating each circle."
+        frozen_circle_function_with_parameter_circle: "Use the \"create a circle\" block and change the size."
+        frozen_snowflake_branch: "Use the \"create a snowflake branch\" block"
