@@ -79,7 +79,7 @@ nav: resources_nav
 [![image](/images/fit-250/chris.jpg)](/images/chris.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 [![image](/images/fit-250/marissa.jpg)](/images/marissa.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 [![image](/images/fit-250/ashton.jpg)](/images/ashton.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
-[![image](/images/fit-250/barack.jpg)](/image/barack.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/fit-250/barack.jpg)](/images/barack.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="sample-emails"></a>
 ## Send these emails to help promote the Hour of Code

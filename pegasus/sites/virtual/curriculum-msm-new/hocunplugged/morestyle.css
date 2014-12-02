@@ -36,7 +36,6 @@ body{
   line-height: 1em;
   margin-top:.5em;
   margin-bottom:0em; 
-  page-break-before:always; 
 }
 
 .content h2 {
@@ -97,7 +96,6 @@ body{
   color: #00ADBC ;
   font-size: 15px;
   line-height:1.3em;
-  font-style:none;
 }
 
 .tip h1 {
