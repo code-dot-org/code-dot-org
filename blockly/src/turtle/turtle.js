@@ -43,7 +43,7 @@ var utils = require('../utils');
 var level;
 var skin;
 
-BlocklyApps.CHECK_FOR_EMPTY_BLOCKS = false;
+BlocklyApps.CHECK_FOR_EMPTY_BLOCKS = true;
 BlocklyApps.NUM_REQUIRED_BLOCKS_TO_FLAG = 1;
 
 var CANVAS_HEIGHT = 400;
@@ -1331,7 +1331,9 @@ Turtle.checkAnswer = function() {
   // been completed
   var levelComplete = (level.freePlay || isCorrect(delta, permittedErrors)) &&
                         (!level.editCode || !Turtle.executionError);
-  Turtle.testResults = BlocklyApps.getTestResults(levelComplete);
+  Turtle.testResults = BlocklyApps.getTestResults(levelComplete, {
+    level: level
+  });
 
   var program;
   if (BlocklyApps.usingBlockly) {
