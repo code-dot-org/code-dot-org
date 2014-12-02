@@ -12,7 +12,7 @@ class SessionsControllerTest < ActionController::TestCase
     locale = 'es-ES'
     @request.cookies[:language_] = locale
     post :create
-    assert_select '#alert', I18n.t('devise.failure.not_found_in_database', :locale => locale)
+    assert_select '.alert', I18n.t('devise.failure.not_found_in_database', :locale => locale)
   end
 
   test "teachers go to teacher dashboard after signing in" do

@@ -58,6 +58,7 @@ class Eval < Blockly
         <block type="functional_ellipse"></block>
         <block type="functional_star"></block>
         <block type="place_image"></block>
+        <block type="offset"></block>
         <block type="overlay"></block>
         <block type="underlay"></block>
         <block type="rotate"></block>

@@ -5,7 +5,7 @@ theme: none
 ---
 
 
-<%= partial('curriculum_header', :unplugged=>false, :title=> 'Eval: Fast Functions',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>45) %>
+<%= partial('curriculum_header', :unittitle=> 'MSM', :lesson=> 8, :unplugged=>false, :title=> 'Eval: Fast Functions',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>(30-60)) %>
 
 [content]
 
