@@ -43,20 +43,24 @@ $root: '/blockly/media/webapp/'; //TODO: Parameterize for asset pipeline
   border-width: 0px;
   padding: 0px;
   outline: none;
+  background-color: white;
 }
 
 .debug-output {
   height: 100px;
   resize: none;
-  margin-bottom: -4px;
+  margin-bottom: -1px;
   overflow: scroll;
 }
 
 .debug-input {
   max-height: 14px;
+  height: 14px;
   background-color: white;
   text-indent: 14.5px;
   overflow: hidden;
+  margin-top: -3px;
+  padding-top: 3px;
 }
 
 /* Slider. */
