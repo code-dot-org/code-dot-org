@@ -1,6 +1,6 @@
 
 
-# Directrius per fer guies per l'Hora del Codi i la Setmana per la Educació en Informàtica
+# Directrius per l'Hora del Codi i la Setmana per la Educació en Informàtica
 
 **Ha finalitzat el termini per presentar un tutorial per Hora de Codi 2014. Encara pots presentar una entrada i intentarem revisar-lo si el temps ens ho permet.**
 
@@ -86,9 +86,9 @@ Com a resultat, els llistats existents són certament "suficient bons", i la ra�
 
 ## Com presentar (fins al 10/1/2014)
 
-Visit the [Hour of Code Activity Submission page](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform) and follow the steps to submit your tutorial.
+Visiteu la [la pàgina d'enviament d'activitats per a l'Hora del Codi](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform) i seguiu els passos per presentar la vostra activitat.
 
-**What you’ll need:**
+**El que necessitaràs:**
 
   * Your name, logo (jpg, png, etc.)
   * URL for a screenshot or marketing image of the HoC activity. Images/screenshots should be 446 x 335 resolution exactly. If an appropriate image is not provided, we may take our own screenshot of your tutorial OR we may choose not to list it.
@@ -233,7 +233,7 @@ We are asking everyone to promote their own 1-hour tutorial to your users. Pleas
 
 <a id="disabilities"></a>
 
-## A special note for students with disabilities
+## Una nota especial per a estudiants amb discapacitat
 
 If you create a tutorial that is designed for the vision-impaired, we’d love to highlight it for viewers with screen-readers. We have not yet received such a tutorial, and would be eager to include one as an option for these students.
 

@@ -57,7 +57,7 @@ Most kids don’t know what computer science is. Here are some ideas:
 - Or: “Computer science is the art of blending human ideas and digital tools to increase our power. Computer scientists work in so many different areas: writing apps for phones, curing diseases, creating animated movies, working on social media, building robots that explore other planets and so much more."
 - See tips for getting girls interested in computer science <a href="http://<%= codeorg_url() %>/girls">here</a>. 
 
-## 6) Start your Hour of Code
+## 7) Start your Hour of Code
 
 **Direct students to the activity**
 

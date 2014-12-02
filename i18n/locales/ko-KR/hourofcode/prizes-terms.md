@@ -1,6 +1,6 @@
 * * *
 
-layout: wide
+title: How-to Guide for Organisations layout: wide nav: resources_nav
 
 * * *
 
@@ -18,7 +18,7 @@ Code.org 는 Hour of Code(12월8일~14일) 행사 이후에 Dropbox 저장공간
 
 ## 초청 연사와 비디오 채팅:
 
-Prize limited to K-12 classrooms in the U.S. and Canada only. To qualify, sign up your classroom by November 14, 2014. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligbile to win.
+미국과 캐나다 K-12 학교만 대상으로 합니다. To qualify, sign up your classroom by November 14, 2014. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligbile to win.
 
 ## 1학급 정도의 노트북(또는 $10,000 상당의 다른 기기):
 

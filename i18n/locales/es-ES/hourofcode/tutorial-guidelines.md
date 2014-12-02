@@ -146,26 +146,26 @@ Visita la [página de envío de actividades para la Hora de Programación](https
 
 ## Sugerencias para diseñar tu actividad
 
-**Include the CSEdWeek logo in your tutorial.** You can include the CSEdWeek logo ([small](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) or [big](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) in your tutorial, but this is not required. You may also contact us to request specific permission to use the “In Partnership with Code.org” logo. ***This logo can only be used if specific permission is granted in writing by Code.org.*** We may end up creating an Hour of Code logo, but at this time we do not have one. Under no circumstances can the Code.org logo and name be used. Both are trademarked, and can’t be co-mingled with a 3rd party brand name.
+**Incluya el logotipo de CSEdWeek logo en su tutorial.** Puede incluir el logotipo de CSEdWeek ([pequeño](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) o [grande](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) en su tutorial, pero no es obligatorio. También puede contactarnos para obtener el permiso para usar el logotipo "en colaboración con Code.org". ***Este logotipo solo puede ser utilizado cuando se otorga permiso explícito por Code.org.*** Puede ser que tengamos un logotipo de la Hora de Programación, pero en este momento no tenemos alguno. Bajo ninguna circunstancia se puede utilizar el nombre o logotipo de Code.org. Ambos son marca registrada, y no pueden ser combinado con una marca de terceros.
 
-**Make sure that the average student can finish comfortably in an hour.** Consider adding an open-ended activity at the end for students who move more quickly through the lesson. Remember that most kids will be absolute beginners to computer science and coding.
+**Asegúrese de que el estudiante promedio pueda finalizar confortablemente en una hora.** Considere agregar una actividad abierta al final, para los alumnos que se muevan mas rápidamente durante la lección. Recuerde que la mayoría de los niños son principiantes iniciales para las ciencias de la computación y la programación.
 
-**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Not only are the students novices, some of the teachers are as well. Include info such as:
+**Incluya las notas del profesor.** La mayoría de las actividades deben ser dirigidas por alumnos. Pero si una actividad debe ser facilitada o administrada por el profesor, por favor incluya instrucciones claras y simples en forma de "notas de profesor" en la URL enviada con su actividad. No solo los alumnos son principiantes, algunos profesores también lo son. Incluya información como:
 
   * Nuestro tutorial funciona mejor en las siguientes plataformas y navegadores
   * ¿Funciona en teléfonos inteligentes? ¿en tabletas?
   * ¿Recomiendas programar en pares? 
   * ¿Consideraciones para el uso en el aula? por ejemplo, si hay videos, aconseja a los profesores que los muestren en una pantalla proyectada para toda la clase para verlos juntos
 
-**Incorporate feedback at the end of the activity.** (E.g.: “You finished 10 levels and learned about loops! Great job!”)
+**Incorpore retroalimentación al final de la actividad.** (Por Ejemplo: “¡Ha finalizado 10 niveles y aprendido sobre ciclos! ¡Felicidades!”)
 
-**Incorporate social media.** Encourage students to post to social media (where appropriate) when they’ve finished, for example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourofCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
+**Incorpore Medios Sociales.** Aliente a los alumnos a que publiquen en medios sociales (cuando sea apropiado) cuando hayan finalizado una actividad, por ejemplo "He terminado una Hora de Programación con ________, ¿y tu?" #HoraDeProgramacion” o “He hecho una #HoraDeProgramacion como parte de la #CSEdWeek. ¿y tu? @Scratch.” Use el HashTag **#HoraDeProgramacion** (Con letras H, D, P mayúsculas)
 
-**Create your activity in languages besides English.** We're focusing this campaign internationally this year and would like to have a number of activities to offer non-English speaking participants.
+**Crea tu actividad en otros idiomas además de en inglés**. Este año el foco de esta campaña es internacional y nos gustaría tener actividades para ofrecer a los participantes que no hablan inglés.
 
-**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
+**Explica o conecta la actividad a un contexto social significativo.** ¡La programación se convierte en un superpoder cuando los estudiantes ven como puede mejorar el mundo!
 
-**Do not require signup or payment before students can try your tutorial.** Tutorials that require signup or payment will not be listed
+** No hagas necesario el login o pago para que los estudiantes puedan probar el tutorial. ** Los tutoriales que requieren login o pago no serán listados.
 
 **Make sure your tutorial can be used in a [Pair Programming paradigm](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning).**
 

@@ -1,9 +1,9 @@
 * * *
 
-title: Thank you layout: wide
+Titel: Tack layout: bred
 
 * * *
 
-# Thank you
+# Tack
 
-Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology).
+Hela din skola är nu med för att vinna en klassuppsättning av bärbara datorer (eller 10.000$ för annan teknik).

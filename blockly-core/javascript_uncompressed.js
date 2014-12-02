@@ -447,7 +447,7 @@ Blockly.JavaScript.controls_flow_statements = function() {
 };
 Blockly.JavaScript.math = {};
 Blockly.JavaScript.math_number = function() {
-  return[window.parseFloat(this.getTitleValue("NUM")), Blockly.JavaScript.ORDER_ATOMIC]
+  return[window.parseFloat(this.getTitleValue("NUM")) || 0, Blockly.JavaScript.ORDER_ATOMIC]
 };
 Blockly.JavaScript.math_arithmetic = function() {
   var a = this.getTitleValue("OP"), b = Blockly.JavaScript.math_arithmetic.OPERATORS[a], a = b[0], b = b[1], c = Blockly.JavaScript.valueToCode(this, "A", b) || "0", d = Blockly.JavaScript.valueToCode(this, "B", b) || "0";
