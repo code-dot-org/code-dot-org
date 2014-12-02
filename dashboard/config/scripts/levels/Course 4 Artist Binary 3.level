@@ -13,11 +13,13 @@
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
-    "use_modal_function_editor": "true",
+    "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "free_play": "false",
     "impressive": "false",
-    "instructions": "Can you draw this pattern by looping a single binary string?"
+    "instructions": "Can you draw this pattern by looping a three digit binary string?",
+    "embed": "false",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>
@@ -113,7 +115,7 @@
                           </value>
                           <value name="B">
                             <block type="math_number" uservisible="false">
-                              <title name="NUM">0</title>
+                              <title name="NUM">1</title>
                             </block>
                           </value>
                         </block>
@@ -273,7 +275,7 @@
                       </mutation>
                       <value name="ARG0">
                         <block type="text">
-                          <title name="TEXT">110</title>
+                          <title name="TEXT">001</title>
                         </block>
                       </value>
                     </block>
@@ -354,7 +356,7 @@
                           </value>
                           <value name="B">
                             <block type="math_number" uservisible="false">
-                              <title name="NUM">0</title>
+                              <title name="NUM">1</title>
                             </block>
                           </value>
                         </block>

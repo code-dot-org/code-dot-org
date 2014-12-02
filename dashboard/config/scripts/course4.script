@@ -1,5 +1,6 @@
 title 'Course 4'
 description_short "Students taking Course 4 should have already taken Courses 2 and 3."
+description_audience "Ages 10+ (after Course 3)"
 
 stage 'Unplugged: Tangrams'
 level 'TangramAlgorithms'

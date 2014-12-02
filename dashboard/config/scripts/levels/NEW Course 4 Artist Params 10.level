@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Are you ready to create a \"draw a hexagone\" function block with a length parameter? Hint: this hexagone is 100 pixels in size. ",
+    "instructions": "Are you ready to create a \"draw a hexagon\" function block with a length parameter? Hint: this hexagon is 100 pixels in size. ",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
