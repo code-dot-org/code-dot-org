@@ -25,7 +25,7 @@ goog.require('goog.events');
  */
 Blockly.SVGHeader = function(parent, headerText) {
   this.padding = { left: 10 };
-  this.svgGroup_ = Blockly.createSvgElement('g', {}, parent);
+  this.svgGroup_ = Blockly.createSvgElement('g', {}, parent, {belowExisting: true});
   this.grayRectangleElement_ = Blockly.createSvgElement('rect', { 'fill': '#dddddd' }, this.svgGroup_);
   this.textElement_ = Blockly.createSvgElement('text', {
     'class': 'blackBlocklyText'
@@ -161,6 +161,10 @@ Blockly.ContractEditor.prototype.layOutBlockSpaceItems_ = function () {
   this.flyout_.customYOffset = currentY;
   this.flyout_.position_();
   currentY += FRAME_MARGIN_TOP;
+
+  var trashcanOffset = (Blockly.modalBlockSpace.trashcan.HEIGHT_ - headerHeight) / 2;
+  Blockly.modalBlockSpace.trashcan.setYOffset(-trashcanOffset);
+  Blockly.modalBlockSpace.trashcan.position_();
 
   if (this.functionDefinitionBlock) {
     this.functionDefinitionBlock.moveTo(currentX, currentY);
