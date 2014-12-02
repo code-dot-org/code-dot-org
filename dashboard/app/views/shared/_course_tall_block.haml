@@ -4,7 +4,7 @@
   - body = t('upsell.hoc.body')
 
 - elsif id == "flappy"
-  - url = url_from_path("/flappy/1")
+  - url = script_reset_url("flappy")
   - title = t('upsell.flappy.title')
   - body = t('upsell.flappy.body')
 
@@ -18,24 +18,26 @@
   - title = t('upsell.gallery.title')
   - body = t('upsell.gallery.body')
 
-- elsif ["course1", "course2", "course3", "course4", "artist","flappy", "hourofcode", "frozen"].include?(id)
+- elsif ["course1", "course2", "course3", "course4"].include?(id)
   - url = script_url(id)
+  - title = data_t_suffix('script.name', id, "title")
+  - body = data_t_suffix('script.name', id, "description_short")
+
+- elsif ["artist", "playlab", "hourofcode", "frozen"].include?(id)
+  - url = script_reset_url(id)
   - if id == "frozen"
     - title = t('upsell.frozen.title')
   - else
     - title = data_t_suffix('script.name', id, "title")
   - body = data_t_suffix('script.name', id, "description_short")
 
-- if id == "artist" || id == "playlab"
-  - url = script_stage_script_level_url(id, 1, 1)
-  - title = data_t_suffix('script.name', id, "title")
-  - body = data_t_suffix('script.name', id, "description_short")
 
 - if ["course1", "course2", "course3", "course4"].include?(id)
   - audience = data_t_suffix('script.name', id, "description_audience")
   - block_class = "miniblock-tall-audiencerow"
 - else
   - block_class = "miniblock-tall"
+
 
 .span3.miniblock{class: block_class, style: "overflow:hidden; position:relative"}
   =link_to url, {style:"text-decoration:none"} do
