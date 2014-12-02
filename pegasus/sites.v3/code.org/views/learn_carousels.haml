@@ -148,7 +148,6 @@
         }
       });
     });
-
   }
 
   $(window).load(function(){
@@ -156,18 +155,8 @@
   })
 
   function showScratBlink(blink) {
-    console.log("show blink", blink);
-    if (blink)
-    {
-      $(".scrat-standing").hide();
-      $(".scrat-standing-blink").show();
-    }
-    else
-    {
-      $(".scrat-standing").show();
-      $(".scrat-standing-blink").hide();
-    }
-
+    $(".scrat-standing").css('opacity', blink ? 0 : 1);
+    $(".scrat-standing-blink").css('opacity', blink ? 1 : 0);
   }
 
   function setupScratBlinking() {
