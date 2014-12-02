@@ -21,9 +21,10 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "false",
-    "instructions": "Here's a function called patrol - program it to move the cat up 400 pixels and then down 400 pixels.",
-    "open_function_definition": "patrol",
-    "first_sprite_index": "1"
+    "instructions": "Here's a function called \"patrol\" - edit it to move the cat up 400 pixels and then down 400 pixels.",
+    "first_sprite_index": "1",
+    "embed": "false",
+    "maze_data": null
   }
 }]]></config>
   <blocks>

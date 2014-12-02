@@ -456,3 +456,7 @@ en:
         edit_get_nectar: 'Use this button to edit the function and change the direction the Bee will turn to get the nectar.'
         logic_category: 'Open the "Logic" flyout to find the "if/else" block.'
         length_parameter: 'Can you update this function so it uses the "length" parameter?'
+        frozen_diamond_repeat: 'Use the repeat block to create this shape.'
+        frozen_circle_function_in_circle_turn: "Don't forget to turn after creating each circle."
+        frozen_circle_function_with_parameter_circle: "Use the \"create a circle\" block and change the size."
+        frozen_snowflake_branch: "Use the \"create a snowflake branch\" block"

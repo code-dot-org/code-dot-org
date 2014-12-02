@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "elsa",
-    "instructions": "You've officially become a master artist! Create a winter wonderland and share with your friends.",
+    "instructions": "You've officially become a master artist! Create a winter wonderland.",
     "x": "200",
     "y": "200",
     "start_direction": "180",
