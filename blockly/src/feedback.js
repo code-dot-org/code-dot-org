@@ -920,17 +920,19 @@ exports.getTestResults = function(levelComplete, options) {
   if (!options.allowTopBlocks && exports.hasExtraTopBlocks()) {
     return TestResults.EXTRA_TOP_BLOCKS_FAIL;
   }
-  if (hasUnusedParam()) {
-    return TestResults.UNUSED_PARAM;
-  }
-  if (hasUnusedFunction(options.level.startBlocks)) {
-    return TestResults.UNUSED_FUNCTION;
-  }
-  if (hasParamInputUnattached()) {
-    return TestResults.PARAM_INPUT_UNATTACHED;
-  }
-  if (hasIncompleteBlockInFunction()) {
-    return TestResults.INCOMPLETE_BLOCK_IN_FUNCTION;
+  if (Blockly.useContractEditor || Blockly.useModalFunctionEditor) {
+    if (hasUnusedParam()) {
+      return TestResults.UNUSED_PARAM;
+    }
+    if (options.level && hasUnusedFunction(options.level.startBlocks)) {
+      return TestResults.UNUSED_FUNCTION;
+    }
+    if (hasParamInputUnattached()) {
+      return TestResults.PARAM_INPUT_UNATTACHED;
+    }
+    if (hasIncompleteBlockInFunction()) {
+      return TestResults.INCOMPLETE_BLOCK_IN_FUNCTION;
+    }
   }
   if (!hasAllRequiredBlocks()) {
     return levelComplete ? TestResults.MISSING_BLOCK_FINISHED :
@@ -1046,7 +1048,8 @@ function hasUnusedParam() {
     return params && params.some(function(paramName) {
       // Unused param if there's no parameters_get descendant with the same name
       return !hasMatchingDescendant(userBlock, function(block) {
-        return block.type === 'parameters_get' &&
+        return (block.type === 'parameters_get' ||
+            block.type === 'variables_get') &&
             block.getTitleValue('VAR') === paramName;
       });
     });
@@ -1075,7 +1078,15 @@ function hasParamInputUnattached() {
  * Ensure that all user-declared procedures have associated call blocks.
  */
 function hasUnusedFunction(startBlocks) {
-  var defBlocks = xml.parseElement(startBlocks).querySelectorAll(
+  if (!startBlocks) {
+    return;
+  }
+  var element = xml.parseElement(startBlocks);
+  // Fix `grunt test` for now
+  if (!element.querySelectorAll) {
+    return;
+  }
+  var defBlocks = element.querySelectorAll(
       '[type=procedures_defreturn],[type=procedures_defnoreturn]');
   var startDefs = {};
   Array.prototype.forEach.call(defBlocks, function(procedure) {
