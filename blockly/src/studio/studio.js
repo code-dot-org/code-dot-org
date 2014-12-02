@@ -1559,7 +1559,9 @@ Studio.onPuzzleComplete = function() {
   if (level.freePlay) {
     Studio.testResults = BlocklyApps.TestResults.FREE_PLAY;
   } else {
-    Studio.testResults = BlocklyApps.getTestResults(levelComplete);
+    Studio.testResults = BlocklyApps.getTestResults(levelComplete, {
+      level: level
+    });
   }
 
   if (Studio.testResults >= BlocklyApps.TestResults.FREE_PLAY) {
