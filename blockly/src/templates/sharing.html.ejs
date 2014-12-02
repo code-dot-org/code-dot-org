@@ -7,9 +7,11 @@
 
 <div class="sharing">
   <div class="social-buttons">
-  <button id="print-button">
-    <%= msg.print() %>
-  </button>
+  <% if (!options.onMainPage) { %>
+    <button id="print-button">
+      <%= msg.print() %>
+    </button>
+  <% } %>
 <% if (options.alreadySaved) { %>
   <button class="saved-to-gallery" disabled>
     <%= msg.savedToGallery() %>

@@ -19,12 +19,14 @@
   = view :learn_carousel, :heading=>I18n.t(:carousel_heading_international), :tag=>'International', :tutorials=>tutorials, :id=>'collection-international', :international_layout=>true, :check_language=>true
   %br
   %br
-  %h1= I18n.t(:carousel_heading_domestic)
-  %hr
+  %a{:id=>"englishtutorials", :href=>"#", :onclick=>"toggle_visibility();return false;"}
+    %button{:style=>"font-size:20px;"}
+      = I18n.t(:carousel_heading_domestic) 
 
-- categories.each do |category|
-  - id = "collection-" + category[:tag]
-  = view :learn_carousel, :heading=>category[:name], :tag=>category[:tag], :tutorials=>tutorials, :id=>id
+#all-tutorials{:style=>'visibility:hidden; overflow:hidden'}
+  - categories.each do |category|
+    - id = "collection-" + category[:tag]
+    = view :learn_carousel, :heading=>category[:name], :tag=>category[:tag], :tutorials=>tutorials, :id=>id
 
 %br
 %br
@@ -69,10 +71,6 @@
 
   // International
   var pegasusLocale = "#{request.locale}";
-  if (pegasusLocale.substring(0,2) != "en")
-  {
-    $('#carousel-international').show();
-  }
 
   // Special Frozen entry, English only right now, and not shown for mobile or IE8
   if (pegasusLocale.substring(0,2) == "en")
@@ -80,6 +78,32 @@
     if (!window.mobilecheck() && !is_ie8)
     {
       $('#carousel-frozen').show();
+    }
+  }
+
+  if (pegasusLocale.substring(0,2) == "en") 
+  {
+    $('#all-tutorials').show();
+    $('#all-tutorials').css('visibility', 'visible');
+  }
+  else 
+  {
+    $('#carousel-international').show();
+    $('#all-tutorials').css('height', '0');
+  }
+
+  function toggle_visibility() 
+  {
+    var e = document.getElementById('all-tutorials');
+    if ( e.style.visibility == 'visible' ) 
+    {
+      $('#all-tutorials').css('height', '0');
+      $('#all-tutorials').css('visibility', 'hidden');
+    }
+    else 
+    {
+      $('#all-tutorials').css('height', '100%');
+      $('#all-tutorials').css('visibility', 'visible');
     }
   }
 

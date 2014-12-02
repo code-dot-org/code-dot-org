@@ -22,66 +22,67 @@
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
     "open_function_definition": "get 3 nectar",
-    "predraw_blocks": "<xml><block type=\"procedures_defnoreturn\" movable=\"false\"><mutation><arg name=\"direction\" /></mutation><title name=\"NAME\">get 3 nectar</title><statement name=\"STACK\"><block type=\"controls_if\" inline=\"false\"><mutation else=\"1\" /><value name=\"IF0\"><block type=\"logic_compare\" inline=\"true\" movable=\"false\"><title name=\"OP\">EQ</title><value name=\"A\"><block type=\"variables_get\" movable=\"false\"><title name=\"VAR\">direction</title></block></value><value name=\"B\"><block type=\"variables_get\"><title name=\"VAR\">left</title></block></value></block></value><next><block type=\"maze_move\"><title name=\"DIR\">moveForward</title><next><block type=\"maze_move\"><title name=\"DIR\">moveForward</title><next><block type=\"controls_repeat\"><title name=\"TIMES\">3</title><statement name=\"DO\"><block type=\"maze_nectar\" /></statement><next><block type=\"maze_move\"><title name=\"DIR\">moveBackward</title><next><block type=\"maze_move\"><title name=\"DIR\">moveBackward</title></block></next></block></next></block></next></block></next></block></next></block></statement></block><block type=\"when_run\" movable=\"false\" deletable=\"false\"><next><block type=\"variables_set\" inline=\"false\" movable=\"false\" deletable=\"false\"><title name=\"VAR\">left</title><value name=\"VALUE\"><block type=\"math_number\" movable=\"false\" deletable=\"false\" editable=\"false\"><title name=\"NUM\">0</title></block></value><next><block type=\"variables_set\" inline=\"false\" movable=\"false\" deletable=\"false\"><title name=\"VAR\">right</title><value name=\"VALUE\"><block type=\"math_number\" movable=\"false\" deletable=\"false\" editable=\"false\"><title name=\"NUM\">1</title></block></value><next><block type=\"maze_move\"><title name=\"DIR\">moveForward</title><next><block type=\"maze_move\"><title name=\"DIR\">moveForward</title><next><block type=\"procedures_callnoreturn\" inline=\"false\"><mutation name=\"get 3 nectar\"><arg name=\"direction\" /></mutation><value name=\"ARG0\"><block type=\"variables_get\"><title name=\"VAR\">right</title></block></value><next><block type=\"maze_move\"><title name=\"DIR\">moveForward</title><next><block type=\"maze_move\"><title name=\"DIR\">moveForward</title><next><block type=\"procedures_callnoreturn\" inline=\"false\"><mutation name=\"get 3 nectar\"><arg name=\"direction\" /></mutation><value name=\"ARG0\"><block type=\"variables_get\"><title name=\"VAR\">left</title></block></value><next><block type=\"maze_move\"><title name=\"DIR\">moveForward</title><next><block type=\"maze_move\"><title name=\"DIR\">moveForward</title><next><block type=\"procedures_callnoreturn\" inline=\"false\"><mutation name=\"get 3 nectar\"><arg name=\"direction\" /></mutation><value name=\"ARG0\"><block type=\"variables_get\"><title name=\"VAR\">right</title></block></value></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>"
+    "predraw_blocks": "<xml><block type=\"procedures_defnoreturn\" movable=\"false\"><mutation><arg name=\"direction\" /></mutation><title name=\"NAME\">get 3 nectar</title><statement name=\"STACK\"><block type=\"controls_if\" inline=\"false\"><mutation else=\"1\" /><value name=\"IF0\"><block type=\"logic_compare\" inline=\"true\" movable=\"false\"><title name=\"OP\">EQ</title><value name=\"A\"><block type=\"variables_get\" movable=\"false\"><title name=\"VAR\">direction</title></block></value><value name=\"B\"><block type=\"variables_get\"><title name=\"VAR\">left</title></block></value></block></value><next><block type=\"maze_move\"><title name=\"DIR\">moveForward</title><next><block type=\"maze_move\"><title name=\"DIR\">moveForward</title><next><block type=\"controls_repeat\"><title name=\"TIMES\">3</title><statement name=\"DO\"><block type=\"maze_nectar\" /></statement><next><block type=\"maze_move\"><title name=\"DIR\">moveBackward</title><next><block type=\"maze_move\"><title name=\"DIR\">moveBackward</title></block></next></block></next></block></next></block></next></block></next></block></statement></block><block type=\"when_run\" movable=\"false\" deletable=\"false\"><next><block type=\"variables_set\" inline=\"false\" movable=\"false\" deletable=\"false\"><title name=\"VAR\">left</title><value name=\"VALUE\"><block type=\"math_number\" movable=\"false\" deletable=\"false\" editable=\"false\"><title name=\"NUM\">0</title></block></value><next><block type=\"variables_set\" inline=\"false\" movable=\"false\" deletable=\"false\"><title name=\"VAR\">right</title><value name=\"VALUE\"><block type=\"math_number\" movable=\"false\" deletable=\"false\" editable=\"false\"><title name=\"NUM\">1</title></block></value><next><block type=\"maze_move\"><title name=\"DIR\">moveForward</title><next><block type=\"maze_move\"><title name=\"DIR\">moveForward</title><next><block type=\"procedures_callnoreturn\" inline=\"false\"><mutation name=\"get 3 nectar\"><arg name=\"direction\" /></mutation><value name=\"ARG0\"><block type=\"variables_get\"><title name=\"VAR\">right</title></block></value><next><block type=\"maze_move\"><title name=\"DIR\">moveForward</title><next><block type=\"maze_move\"><title name=\"DIR\">moveForward</title><next><block type=\"procedures_callnoreturn\" inline=\"false\"><mutation name=\"get 3 nectar\"><arg name=\"direction\" /></mutation><value name=\"ARG0\"><block type=\"variables_get\"><title name=\"VAR\">left</title></block></value><next><block type=\"maze_move\"><title name=\"DIR\">moveForward</title><next><block type=\"maze_move\"><title name=\"DIR\">moveForward</title><next><block type=\"procedures_callnoreturn\" inline=\"false\"><mutation name=\"get 3 nectar\"><arg name=\"direction\" /></mutation><value name=\"ARG0\"><block type=\"variables_get\"><title name=\"VAR\">right</title></block></value></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="procedures_defnoreturn" movable="false">
+        <block type="procedures_defnoreturn" uservisible="false">
           <mutation>
             <arg name="direction"/>
           </mutation>
           <title name="NAME">get 3 nectar</title>
           <statement name="STACK">
-            <block type="controls_if" inline="false">
+            <block type="controls_if" inline="false" uservisible="false">
               <mutation else="1"/>
               <value name="IF0">
-                <block type="logic_compare" inline="true" movable="false">
+                <block type="logic_compare" inline="true" movable="false" uservisible="false">
                   <title name="OP">EQ</title>
                   <value name="A">
-                    <block type="variables_get" movable="false">
+                    <block type="variables_get" movable="false" uservisible="false">
                       <title name="VAR">direction</title>
                     </block>
                   </value>
                   <value name="B">
-                    <block type="variables_get">
+                    <block type="variables_get" uservisible="false">
                       <title name="VAR">left</title>
                     </block>
                   </value>
                 </block>
               </value>
               <next>
-                <block type="maze_move">
+                <block type="maze_move" uservisible="false">
                   <title name="DIR">moveForward</title>
                   <next>
-                    <block type="maze_move">
+                    <block type="maze_move" uservisible="false">
                       <title name="DIR">moveForward</title>
                       <next>
-                        <block type="controls_repeat">
+                        <block type="controls_repeat" uservisible="false">
                           <title name="TIMES">3</title>
                           <statement name="DO">
-                            <block type="maze_nectar"/>
+                            <block type="maze_nectar" uservisible="false"/>
                           </statement>
                           <next>
-                            <block type="maze_move">
+                            <block type="maze_move" uservisible="false">
                               <title name="DIR">moveBackward</title>
                               <next>
-                                <block type="maze_move">
+                                <block type="maze_move" uservisible="false">
                                   <title name="DIR">moveBackward</title>
                                   <next>
-                                    <block type="controls_if" inline="false">
+                                    <block type="controls_if" inline="false" uservisible="false">
                                       <mutation else="1"/>
                                       <value name="IF0">
-                                        <block type="logic_compare" inline="true" movable="false">
+                                        <block type="logic_compare" inline="true" movable="false" uservisible="false">
                                           <title name="OP">EQ</title>
                                           <value name="A">
-                                            <block type="variables_get" movable="false">
+                                            <block type="variables_get" movable="false" uservisible="false">
                                               <title name="VAR">direction</title>
                                             </block>
                                           </value>
                                           <value name="B">
-                                            <block type="variables_get">
+                                            <block type="variables_get" uservisible="false">
                                               <title name="VAR">left</title>
                                             </block>
                                           </value>
@@ -102,20 +103,20 @@
             </block>
           </statement>
         </block>
-        <block type="when_run" movable="false" deletable="false">
+        <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="variables_set" inline="false" movable="false" deletable="false">
+            <block type="variables_set" inline="false" deletable="false" movable="false">
               <title name="VAR">left</title>
               <value name="VALUE">
-                <block type="math_number" movable="false" deletable="false" editable="false">
+                <block type="math_number" deletable="false" movable="false" editable="false">
                   <title name="NUM">0</title>
                 </block>
               </value>
               <next>
-                <block type="variables_set" inline="false" movable="false" deletable="false">
+                <block type="variables_set" inline="false" deletable="false" movable="false">
                   <title name="VAR">right</title>
                   <value name="VALUE">
-                    <block type="math_number" movable="false" deletable="false" editable="false">
+                    <block type="math_number" deletable="false" movable="false" editable="false">
                       <title name="NUM">1</title>
                     </block>
                   </value>

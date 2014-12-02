@@ -7,7 +7,7 @@ class LevelsController < ApplicationController
   before_filter :authenticate_user!
   before_filter :can_modify?, except: [:show, :index]
   skip_before_filter :verify_params_before_cancan_loads_model, :only => [:create, :update_blocks]
-  load_and_authorize_resource :except => [:create, :update_blocks, :edit_blocks]
+  load_and_authorize_resource :except => [:create, :update_blocks, :edit_blocks, :embed_blocks]
   check_authorization
 
   before_action :set_level, only: [:show, :edit, :update, :destroy]
@@ -202,6 +202,20 @@ class LevelsController < ApplicationController
     unless Rails.env.levelbuilder? || Rails.env.development?
       raise CanCan::AccessDenied.new('Cannot create or modify levels from this environment.')
     end
+  end
+
+  def embed_blocks
+    authorize! :read, :level
+    @level = Level.find(params[:level_id])
+    @block_type = params[:block_type]
+    @app = @level.game.app
+    @options = {
+        readonly: true,
+        locale: js_locale,
+        baseUrl: "#{ActionController::Base.asset_host}/blockly/",
+        blocks: @level.properties[@block_type]
+    }
+    render :embed_blocks, layout: false
   end
 
   private
