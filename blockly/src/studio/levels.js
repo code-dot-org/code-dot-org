@@ -1061,6 +1061,7 @@ levels.full_sandbox =  {
            blockOfType('functional_greater_than') +
            blockOfType('functional_less_than') +
            blockOfType('functional_number_equals') +
+           blockOfType('functional_string_equals') +
            blockOfType('functional_logical_and') +
            blockOfType('functional_logical_or') +
            blockOfType('functional_logical_not') +
