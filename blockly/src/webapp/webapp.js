@@ -107,8 +107,8 @@ var Keycodes = {
 
 function onDebugInputKeyDown(e) {
   if (e.keyCode == Keycodes.ENTER) {
-    var input = event.target.textContent;
-    event.target.textContent = '';
+    var input = e.target.textContent;
+    e.target.textContent = '';
     outputWebappConsole('> ' + input);
     if (Webapp.interpreter) {
       var currentScope = Webapp.interpreter.getScope();
@@ -1108,7 +1108,7 @@ Webapp.canvasSetLineWidth = function (opts) {
   var div = document.getElementById(opts.elementId);
   var ctx = div.getContext("2d");
   if (ctx && divWebapp.contains(div)) {
-    ctx.setLineWidth(opts.width * Webapp.canvasScale);
+    ctx.lineWidth = opts.width * Webapp.canvasScale;
     return true;
   }
   return false;
@@ -1119,7 +1119,7 @@ Webapp.canvasSetStrokeColor = function (opts) {
   var div = document.getElementById(opts.elementId);
   var ctx = div.getContext("2d");
   if (ctx && divWebapp.contains(div)) {
-    ctx.setStrokeColor(opts.color);
+    ctx.strokeStyle = String(opts.color);
     return true;
   }
   return false;
@@ -1130,7 +1130,7 @@ Webapp.canvasSetFillColor = function (opts) {
   var div = document.getElementById(opts.elementId);
   var ctx = div.getContext("2d");
   if (ctx && divWebapp.contains(div)) {
-    ctx.setFillColor(opts.color);
+    ctx.fillStyle = String(opts.color);
     return true;
   }
   return false;
@@ -1202,7 +1202,7 @@ Webapp.replaceHtmlBlock = function (opts) {
     newDiv.id = opts.elementId;
     newDiv.innerHTML = opts.html;
 
-    return Boolean(divWebapp.replaceChild(newDiv, oldDiv));
+    return Boolean(oldDiv.parentElement.replaceChild(newDiv, oldDiv));
   }
   return false;
 };
@@ -1211,7 +1211,7 @@ Webapp.deleteHtmlBlock = function (opts) {
   var divWebapp = document.getElementById('divWebapp');
   var div = document.getElementById(opts.elementId);
   if (divWebapp.contains(div)) {
-    return Boolean(divWebapp.removeChild(div));
+    return Boolean(div.parentElement.removeChild(div));
   }
   return false;
 };
