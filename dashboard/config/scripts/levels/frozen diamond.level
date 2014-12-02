@@ -19,10 +19,43 @@
     "impressive": "false",
     "ideal": "8",
     "use_modal_function_editor": "false",
-    "use_contract_editor": "false"
+    "use_contract_editor": "false",
+    "embed": "false",
+    "callout_json": "[\r\n  {\"localization_key\": \"frozen_diamond_repeat\", \"element_id\": \"[block-id='1']\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"center left\", \"at\": \"bottom left\", \"adjust\": {\"x\": 0, \"y\":250}},\r\n    \"style\": { \"classes\": \"no-tip\" }}\r\n  }\r\n]",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="draw_move_by_constant" deletable="false" editable="false">
+              <title name="DIR">moveForward</title>
+              <title name="VALUE">100</title>
+              <next>
+                <block type="draw_turn_by_constant_dropdown" deletable="false">
+                  <title name="DIR">turnRight</title>
+                  <title name="VALUE" config="45,60,90,120,180">???</title>
+                  <next>
+                    <block type="draw_move_by_constant" deletable="false" editable="false">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">100</title>
+                      <next>
+                        <block type="draw_turn_by_constant_dropdown" deletable="false">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE" config="45,60,90,120,180">???</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
     <toolbox_blocks>
       <xml>
         <block type="draw_move_by_constant_dropdown">
@@ -56,10 +89,6 @@
     </toolbox_blocks>
     <required_blocks>
       <xml>
-        <block type="draw_move_by_constant_dropdown">
-          <title name="DIR">moveForward</title>
-          <title name="VALUE" config="50,100,150,200,300">100</title>
-        </block>
         <block type="pick_one">
           <statement name="PICK">
             <block type="draw_turn_by_constant_dropdown">
@@ -69,6 +98,20 @@
                 <block type="draw_turn_by_constant_dropdown">
                   <title name="DIR">turnLeft</title>
                   <title name="VALUE" config="45,60,90,120,180">60</title>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="pick_one">
+          <statement name="PICK">
+            <block type="draw_turn_by_constant_dropdown">
+              <title name="DIR">turnRight</title>
+              <title name="VALUE" config="45,60,90,120,180">120</title>
+              <next>
+                <block type="draw_turn_by_constant_dropdown">
+                  <title name="DIR">turnLeft</title>
+                  <title name="VALUE" config="45,60,90,120,180">120</title>
                 </block>
               </next>
             </block>

@@ -37,6 +37,7 @@ module.exports = {
       blockUtils.blockOfType('functional_greater_than') +
       blockUtils.blockOfType('functional_less_than') +
       blockUtils.blockOfType('functional_number_equals') +
+      blockUtils.blockOfType('functional_string_equals') +
       blockUtils.blockOfType('functional_logical_and') +
       blockUtils.blockOfType('functional_logical_or') +
       blockUtils.blockOfType('functional_logical_not') +

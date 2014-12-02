@@ -28,7 +28,7 @@
             - if @script_level
               = render partial: 'shared/header_progress'
             - elsif @edit_blocks
-              .header_level{style:'font-size:300%'} Editing #{@edit_blocks.humanize}
+              .header_level{style:'font-size: 250%; line-height: 125%;'} Editing #{@edit_blocks.humanize}
           - if params[:controller] !~ /^sessions/ and not Rails.configuration.minimal_mode
             .header_user
               = render partial: 'shared/user_header'

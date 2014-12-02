@@ -1,6 +1,17 @@
-# Como Enseñar Una Hora de Programación
 
-## 1) Prueba los tutoriales:
+
+<div class="row">
+  <h1 class="col-sm-6">
+    Cómo enseñar una Hora de Programación
+  </h1>
+  
+  <div class="col-sm-6 button-container centered">
+    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Registra tu evento</button></a>
+  </div>
+</div>
+
+## 1) Watch this how-to video <iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
+## 2) Try the tutorials:
 
 Ofreceremos variados tutoriales divertidos de una hora de duración, para estudiantes de todas las edades y creados por una variedad de asociados. Nuevos tutoriales estarán disponibles antes del 8 de Diciembre para lanzar la Hora de Programación.
 
@@ -11,58 +22,62 @@ Ofreceremos variados tutoriales divertidos de una hora de duración, para estudi
 
 [![](http://<%= codeorg_url() %>/images/tutorials.png)](http://<%=codeorg_url() %>/learn)
 
-## 2) Anticipa tus requerimientos de hardware - las computadoras son opcionales
+## 3) Register your Hour on the map
 
-La mejor experiencia de la Hora de Programación se logrará con computadoras conectadas a Internet. Pero no necesita una computadora por cada estudiante, y también se puede realizar la Hora de Programación sin computadoras.
+[Make sure to sign up](<%= hoc_uri('/') %>). We'll send you helpful info as the Hour of Code nears, and you'll see your Hour of Code on our map of worldwide events.
+
+## 4) Plan your hardware needs - computers are optional
+
+The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every child, and can even do the Hour of Code without a computer at all.
 
   * **Pruebe los tutoriales en las computadoras o dispositivos de los estudiantes.** Cerciórese que los tutoriales funcionen correctamente (con audio y video).
   * **Previsualice la página de felicitaciones** para ver lo que los estudiantes verán al terminar. 
   * **Proporcione audífonos para su clase**, o pida a los alumnos que lleven los suyos; si el tutorial que selecciones funciona mejor con sonido.
 
-## 3) Planeé de acuerdo a la tecnología que tiene disponible
+## 5) Plan ahead based on your technology available
 
   * **¿No tiene dispositivos suficientes?** use [programación en parejas](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). Cuando los estudiantes trabajan en pares, se ayudan el uno al otro y dependen menos del profesor. Además se dan cuenta que en las ciencias computacionales se puede ser sociable y trabajar en equipo.
   * **¿Tiene un ancho de banda limitado?** Muestre los videos al frente del salón de clase, para evitar que cada estudiante descargue el video. O pruebe con los tutoriales desconectados/fuera de línea.
 
-## 4) Motive a los estudiantes - muestre un video
+## 6) Inspire students - show them a video
 
 Show students an inspirational video to kick off the Hour of Code. Examples:
 
-  * The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
-  * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [Hour of Code 2014 video](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
-  * [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+  * El vídeo original de lanzamiento de Code.org, con Bill Gates, Mark Zuckerberg y la estrella de la NBA Chris Bosh (Hay versiones de [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutos](https://www.youtube.com/watch?v=nKIu9yen5nc) y [9 minutos](https://www.youtube.com/watch?v=dU1xS07N-FA))
+  * El vídeo de lanzamiento de [la Hora de Programación 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), o de <% if @country == 'uk' %> [la Hora de Programación 2014](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [la Hora de Programación 2014](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
+  * [El llamado del presidente Obama a que todos los estudiantes aprendan Ciencias de la Computación](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**Emocione a los estudiantes - Empiece con una introducción breve**
+**Get your students excited - give them a short intro**
 
-La mayoría de los chicos no saben que es ciencias computacionales. Aquí tienes algunas ideas:
+Most kids don’t know what computer science is. Here are some ideas:
 
-  * Explain it in a simple way that includes examples of applications that both boys and girls will care about (saving lives, helping people, connecting people, etc.).
-  * Try: "Think about things in your everyday life that use computer science: a cell phone, a microwave, a computer, a traffic light… all of these things needed a computer scientist to help build them.”
-  * Or: “Computer science is the art of blending human ideas and digital tools to increase our power. Computer scientists work in so many different areas: writing apps for phones, curing diseases, creating animated movies, working on social media, building robots that explore other planets and so much more."
-  * See tips for getting girls interested in computer science [here](http://<%= codeorg_url() %>/girls). 
+  * Explica en una forma sencilla que incluya ejemplos de aplicaciones que les interesen tanto a niños como a niñas (salvar vidas, ayudar a la gente, conectar personas, etc).
+  * Prueba decir: "Piensen acerca de cosas en la vida diaria que usan Ciencias de la Computación: un teléfono celular, un microondas, una computadora, un semáforo... Todas esas cosas necesitan un profesinal en Ciencias de la Computación para ayudar a construirlas."
+  * O: "Las Ciencias de la Computación son el arte de combinar ideas humanas y herramientas digitales para incrementar nuestro poder. Los expertos en informática trabajan en muchas áreas diferentes: escriben aplicaciones para teléfonos, curan enfermedades, crean películas animadas, trabajan en redes sociales, construyen robots que exploran otros planetas y muchas cosas más."
+  * [Aquí](http://<%= codeorg_url() %>/girls) puedes ver consejos para interesar a las chicas en Ciencias de la Computación. 
 
-## 5) Inicia tu Hora de Programación
+## 6) Start your Hour of Code
 
-**Dirige a los estudiantes a la actividad**
+**Direct students to the activity**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](http://<%= codeorg_url() %>/learn) under the number of participants. [hourofcode.com/co](http://hourofcode.com/co)
-  * Tell students to visit the URL and start the tutorial.
+  * Escribe el enlace al tutorial en el tablero. Encuentra el enlace en la [información para el tutorial seleccionado](http://<%= codeorg_url() %>/learn) bajo el número de participantes. [hourofcode.com/co](http://hourofcode.com/co)
+  * Indica a los estudiantes que visiten la URL e inicien el tutorial.
 
-**Cuando los estudiantes se topan con dificultades**
+**When your students come across difficulties**
 
-  * Tell students, “Ask 3 then me.” Ask 3 classmates, and if they don’t have the answer, then ask the teacher.
-  * Encourage students and offer positive reinforcement: “You’re doing great, so keep trying.”
-  * It’s okay to respond: “I don’t know. Let’s figure this out together.” If you can’t figure out a problem, use it as a good learning lesson for the class: “Technology doesn’t always work out the way we want. Together, we’re a community of learners.” And: “Learning to program is like learning a new language; you won’t be fluent right away.“
+  * Indica a los estudiantes, "Pregunta a 3 personas, luego a mi". Pregunta a 3 compañeros y si ellos no conocen la respuesta entonces pregunta al profesor.
+  * Alienta a los estudiantes y dales refuerzos positivos: "Lo estás haciendo muy bien, sigue intentando."
+  * Está bien responder: "No sé. Encontremos la respuesta juntos." Si no puedes resolver un problema úsalo como una buena lección para toda la clase: "La tecnología no siempre funciona como queremos. Todos juntos somos una comunidad de aprendizaje". Y: "Aprender a programar es como aprender un nuevo idioma, no serás fluido enseguida."
 
-**¿Qué hacer si un estudiante termina antes?**
+**What to do if a student finishes early?**
 
-  * Students can see all tutorials and try another Hour of Code activity at [<%= codeorg_url() %>/learn](http://<%= codeorg_url() %>/learn)
-  * Or, ask students who finish early to help classmates who are having trouble with the activity.
+  * Los estudiantes pueden ver todos los tutoriales e intentar otra actividad de la Hora de Programación en [<%= codeorg_url() %>/learn](http://<%= codeorg_url() %>/learn)
+  * O pide a los estudiantes que terminen primero que ayuden a los que tegan problemas con la actividad.
 
-**¿Cómo imprimo los certificados de mis estudiantes?**
+**How do I print certificates for my students?**
 
-Cada estudiante tiene la oportunidad de obtener un certificado via correo electrónico, cuando terminan un [tutorial de Code.org](http://studio.code.org). Puedes hacer clic en el certificado para imprimirlo. However, if you want to make new certificates for your students, visit our [Certificates](http://<%= codeorg_url() %>/certificates) page to print as many certificates as you like, in one fell swoop!
+Each student gets a chance to get a certificate via email when they finish the [Code.org tutorials](http://studio.code.org). You can click on the certificate to print it. However, if you want to make new certificates for your students, visit our [Certificates](http://<%= codeorg_url() %>/certificates) page to print as many certificates as you like, in one fell swoop!
 
-**¿Qué viene después de la Hora de Programación?**
+**What comes after the Hour of Code?**
 
-La Hora de Programación es el primer paso en el camino para aprender mas acerca de como trabaja la tecnología y como crear aplicaciones de software. <% if @country == 'uk' %> La Hora de Programación es el primer paso del camino para aprender más acerca de como funciona la tecnología y como crear aplicaciones de software. Para continuar este camino [motive a sus chicos a aprender en línea](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %>
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %> <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Sign up your event</button></a>
