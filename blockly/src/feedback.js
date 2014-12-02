@@ -5,6 +5,7 @@ var codegen = require('./codegen');
 var msg = require('../locale/current/common');
 var dom = require('./dom');
 var xml = require('./xml');
+var _ = utils.getLodash();
 
 var TestResults = require('./constants').TestResults;
 
@@ -922,7 +923,7 @@ exports.getTestResults = function(levelComplete, options) {
   if (hasUnusedParam()) {
     return TestResults.UNUSED_PARAM;
   }
-  if (hasUnusedFunction()) {
+  if (hasUnusedFunction(options.level.startBlocks)) {
     return TestResults.UNUSED_FUNCTION;
   }
   if (hasParamInputUnattached()) {
@@ -1058,31 +1059,31 @@ function hasUnusedParam() {
 function hasParamInputUnattached() {
   return Blockly.mainBlockSpace.getAllBlocks().some(function(userBlock) {
     // Only check procedure_call* blocks
-    if (/^procedures_call/.test(userBlock.type)) {
-      return userBlock.inputList.filter(function(input) {
-        return (/^ARG/.test(input.name));
-      }).some(function(argInput) {
-        // Unattached param input if any ARG* connection target is null
-        return !argInput.connection.targetConnection;
-      });
+    if (!/^procedures_call/.test(userBlock.type)) {
+      return false;
     }
+    return userBlock.inputList.filter(function(input) {
+      return (/^ARG/.test(input.name));
+    }).some(function(argInput) {
+      // Unattached param input if any ARG* connection target is null
+      return !argInput.connection.targetConnection;
+    });
   });
 }
 
 /**
  * Ensure that all user-declared procedures have associated call blocks.
  */
-function hasUnusedFunction() {
-  var startBlocks = xml.parseElement(appOptions.level.startBlocks);
-  var defBlocks = startBlocks.querySelectorAll(
+function hasUnusedFunction(startBlocks) {
+  var defBlocks = xml.parseElement(startBlocks).querySelectorAll(
       '[type=procedures_defreturn],[type=procedures_defnoreturn]');
   var startDefs = {};
-  goog.array.forEach(defBlocks, function(procedure) {
+  Array.prototype.forEach.call(defBlocks, function(procedure) {
     startDefs[procedure.querySelector('title[name=NAME]').textContent] = true;
   });
 
-  var userDefs = new goog.structs.Set();
-  var userCalls = new goog.structs.Set();
+  var userDefs = [];
+  var userCalls = [];
   Blockly.mainBlockSpace.getAllBlocks().forEach(function (block) {
     var name = block.getTitleValue('NAME');
     if (!startDefs[name]) {
@@ -1094,7 +1095,7 @@ function hasUnusedFunction() {
     }
   });
 
-  return userCalls.equals(userDefs);
+  return _.difference(userDefs, userCalls).length !== 0;
 }
 
 /**
@@ -1103,15 +1104,16 @@ function hasUnusedFunction() {
 function hasIncompleteBlockInFunction() {
   return Blockly.mainBlockSpace.getAllBlocks().some(function(userBlock) {
     // Only search procedure definitions
-    if (userBlock.parameterNames_) {
-      return hasMatchingDescendant(userBlock, function(block) {
-        // Incomplete block if any input connection target is null
-        return block.inputList.some(function(input) {
-          return input.type === Blockly.INPUT_VALUE &&
-              !input.connection.targetConnection;
-        });
-      });
+    if (!userBlock.parameterNames_) {
+      return false;
     }
+    return hasMatchingDescendant(userBlock, function(block) {
+      // Incomplete block if any input connection target is null
+      return block.inputList.some(function(input) {
+        return input.type === Blockly.INPUT_VALUE &&
+            !input.connection.targetConnection;
+      });
+    });
   });
 }
 

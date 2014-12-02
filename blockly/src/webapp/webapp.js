@@ -786,7 +786,9 @@ Webapp.onPuzzleComplete = function() {
     Webapp.testResults = BlocklyApps.TestResults.FREE_PLAY;
   } else {
     var levelComplete = (Webapp.result === BlocklyApps.ResultType.SUCCESS);
-    Webapp.testResults = BlocklyApps.getTestResults(levelComplete);
+    Webapp.testResults = BlocklyApps.getTestResults(levelComplete, {
+      level: level
+    });
   }
 
   if (Webapp.testResults >= BlocklyApps.TestResults.FREE_PLAY) {
