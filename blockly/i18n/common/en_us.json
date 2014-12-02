@@ -25,7 +25,7 @@
   "emptyBlocksErrorMsg": "The \"Repeat\" or \"If\" block needs to have other blocks inside it to work. Make sure the inner block fits properly inside the containing block.",
   "emptyFunctionBlocksErrorMsg": "The function block needs to have other blocks inside it to work.",
   "errorEmptyFunctionBlockModal": "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block.",
-  "errorIncompleteBlockInsideFunction": "Click \"edit\" to make sure you don't have any blocks missing inside your function definition.",
+  "errorIncompleteBlockInFunction": "Click \"edit\" to make sure you don't have any blocks missing inside your function definition.",
   "errorParamInputUnattached": "Remember to attach a block to each parameter input on the function block in your workspace.",
   "errorUnusedParam": "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block.",
   "errorRequiredParamsMissing": "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition.",
