@@ -5227,6 +5227,18 @@ exports.placeImage = function (x, y, image) {
   return image;
 };
 
+exports.offset = function (x, y, image) {
+  evalUtils.ensureNumber(x);
+  evalUtils.ensureNumber(y);
+  evalUtils.ensureType(image, EvalImage);
+    
+  x = image.x_ + x;
+  y = image.y_ - y;
+    
+  image.place(x, y);
+  return image;
+};
+
 exports.rotateImage = function (degrees, image) {
   evalUtils.ensureNumber(degrees);
 
@@ -5417,6 +5429,17 @@ exports.install = function(blockly, blockInstallOptions) {
     blockName: 'place_image',
     blockTitle: msg.placeImageBlockTitle(),
     apiName: 'placeImage',
+    args: [
+      { name: 'X', type: 'Number' },
+      { name: 'Y', type: 'Number' },
+      { name: 'IMAGE', type: 'image' }
+    ]
+  });
+
+  installFunctionalBlock(blockly, generator, gensym, {
+    blockName: 'offset',
+    blockTitle: msg.offsetBlockTitle(),
+    apiName: 'offset',
     args: [
       { name: 'X', type: 'Number' },
       { name: 'Y', type: 'Number' },
@@ -6273,6 +6296,7 @@ module.exports = {
       blockUtils.blockOfType('functional_ellipse') +
       blockUtils.blockOfType('functional_star') +
       blockUtils.blockOfType('place_image') +
+      blockUtils.blockOfType('offset') +
       blockUtils.blockOfType('overlay') +
       blockUtils.blockOfType('underlay') +
       blockUtils.blockOfType('rotate') +
@@ -14291,6 +14315,8 @@ exports.extraTopBlocks = function(d){return "Sizin qoşulmamış bloklarınız v
 exports.overlayBlockTitle = function(d){return "overlay (top, bottom)"};
 
 exports.placeImageBlockTitle = function(d){return "place-image (x, y, image)"};
+
+exports.offsetBlockTitle = function(d){return "offset (x, y, image)"};
 
 exports.rectangleBlockTitle = function(d){return "düzbucaqlı (en, hündürlük, stil, rəng)"};
 
