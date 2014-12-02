@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Can you add a new function called square? It should also take a length parameter, just like the triangle. This time draw 3 squares 25, 50 and 75 pixels in length,100 pixels apart.",
+    "instructions": "Click \"edit\" to fill in the function definition of \"draw a square.\" It should take a length parameter, just like the triangle. This time, draw 3 squares: 25, 50 and 75 pixels in length, each 100 pixels apart.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "false",
@@ -30,15 +30,24 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="jump" inline="true">
-              <title name="DIR">jumpForward</title>
-              <value name="VALUE">
-                <block type="math_number">
-                  <title name="NUM">100</title>
+            <block type="procedures_callnoreturn">
+              <mutation name="draw a square"/>
+              <next>
+                <block type="jump" inline="true">
+                  <title name="DIR">jumpForward</title>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <title name="NUM">100</title>
+                    </block>
+                  </value>
                 </block>
-              </value>
+              </next>
             </block>
           </next>
+        </block>
+        <block type="procedures_defnoreturn" uservisible="false">
+          <mutation/>
+          <title name="NAME">draw a square</title>
         </block>
       </xml>
     </start_blocks>
@@ -109,13 +118,12 @@
           <block type="math_number">
             <title name="NUM">0</title>
           </block>
-        </category>
-        <category name="Functions" custom="PROCEDURE">
           <block type="procedures_defnoreturn" uservisible="false">
             <mutation/>
             <title name="NAME">do something</title>
           </block>
         </category>
+        <category name="Functions" custom="PROCEDURE"/>
         <category name="Variables" custom="VARIABLE">
           <block type="variables_get">
             <title name="VAR">counter</title>

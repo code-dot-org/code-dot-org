@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Fill in the ??? in the length parameter. Hint: The pentagon is 100 pixels in size. ",
+    "instructions": "Fill in the ??? in the length parameter input. Hint: The pentagon is 100 pixels in size. ",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -21,7 +21,6 @@
     "impressive": "false",
     "disable_sharing": "false",
     "ideal": "10",
-    "open_function_definition": "draw a pentagon",
     "slider_speed": ".5"
   }
 }]]></config>
