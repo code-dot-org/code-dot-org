@@ -18,10 +18,9 @@
     "flower_type": "redWithNectar",
     "nectar_goal": "15",
     "ideal": "15",
-    "instructions": "Collect all of the nectar from these flowers. Hint: it's ok to use the same blocks a few times. In the next puzzle we will show you a easier way.",
+    "instructions": "Collect all of the nectar from these flowers. Hint: it's ok to use a lot of blocks. In the next puzzle, you'll learn an easier way.",
     "use_modal_function_editor": "false",
-    "use_contract_editor": "false",
-    "maze_data": null
+    "use_contract_editor": "false"
   }
 }]]></config>
   <blocks>

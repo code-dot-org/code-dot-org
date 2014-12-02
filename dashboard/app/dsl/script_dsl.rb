@@ -4,6 +4,7 @@ class ScriptDSL < BaseDSL
     @title = nil
     @description_short = nil
     @description = nil
+    @description_audience = nil
     @stage = nil
     @concepts = []
     @skin = nil
@@ -24,6 +25,10 @@ class ScriptDSL < BaseDSL
 
   def description(description)
     @description = description
+  end
+
+  def description_audience(description_audience)
+    @description_audience = description_audience
   end
 
   def hidden(hidden_string)
@@ -74,6 +79,7 @@ class ScriptDSL < BaseDSL
     @i18n_strings['title'] = @title if @title
     @i18n_strings['description_short'] = @description_short if @description_short
     @i18n_strings['description'] = @description if @description
+    @i18n_strings['description_audience'] = @description_audience if @description_audience
     @stages.each do |stage|
       @i18n_strings[stage[:stage]] = stage[:stage]
     end

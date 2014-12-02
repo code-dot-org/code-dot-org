@@ -27,58 +27,7 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
-          <next>
-            <block type="procedures_callnoreturn">
-              <mutation name="draw a square"/>
-              <next>
-                <block type="draw_turn" inline="true">
-                  <title name="DIR">turnRight</title>
-                  <value name="VALUE">
-                    <block type="math_number">
-                      <title name="NUM">120</title>
-                    </block>
-                  </value>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
-        <block type="procedures_defnoreturn" uservisible="false">
-          <mutation>
-            <description>draws a square that is 100 pixels in size</description>
-          </mutation>
-          <title name="NAME">draw a square</title>
-          <statement name="STACK">
-            <block type="controls_repeat_ext" inline="true" uservisible="false">
-              <value name="TIMES">
-                <block type="math_number" uservisible="false">
-                  <title name="NUM">4</title>
-                </block>
-              </value>
-              <statement name="DO">
-                <block type="draw_move" inline="true" uservisible="false">
-                  <title name="DIR">moveForward</title>
-                  <value name="VALUE">
-                    <block type="math_number" uservisible="false">
-                      <title name="NUM">100</title>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="draw_turn" inline="true" uservisible="false">
-                      <title name="DIR">turnLeft</title>
-                      <value name="VALUE">
-                        <block type="math_number" uservisible="false">
-                          <title name="NUM">90</title>
-                        </block>
-                      </value>
-                    </block>
-                  </next>
-                </block>
-              </statement>
-            </block>
-          </statement>
-        </block>
+        <block type="when_run" deletable="false" movable="false"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>

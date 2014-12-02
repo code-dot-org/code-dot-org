@@ -19,7 +19,10 @@
     "impressive": "true",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "ideal": "10"
+    "ideal": "10",
+    "embed": "false",
+    "callout_json": "[\r\n  {\"localization_key\": \"frozen_diamond_repeat\", \"element_id\": \"[block-id='1']\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"center left\", \"at\": \"bottom left\", \"adjust\": {\"x\": 0, \"y\":250}},\r\n    \"style\": { \"classes\": \"no-tip\" }}\r\n  }\r\n]",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>

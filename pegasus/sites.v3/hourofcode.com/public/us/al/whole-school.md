@@ -1,5 +1,5 @@
 
 
-# Get your whole school to participate
+# Bëj që e gjithë shkolla jote të marrë pjesë
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+Informacioni për t'i përfshirë të gjitha shkollat ne Orën e Kodimit do të jepet këtu.

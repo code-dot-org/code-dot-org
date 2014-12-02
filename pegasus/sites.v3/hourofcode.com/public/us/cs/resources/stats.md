@@ -1,15 +1,17 @@
 
 
-# Jak přilákat média na Vaší Hodinu Kódu
+[<button style="float: right; margin-top: 50px">Přihlaste svoji událost</button>](/#join)
 
-## Pár šokujících statistik (USA):
+# Fakta a užitečné statistiky
 
-  * Za příštích 10 let bude o jeden milion více pracovních pozic v informatice než studentů informatiky (nárůst až 500 miliard dolarů v platech).
-  * More than 50 percent of all projected math and science occupations are in computing occupations. 
-  * Computing occupations are among the highest-paying jobs for new graduates. Yet fewer than 3% of college students graduate with a degree in computer science.
-  * In 26 states, computer science classes don’t count toward math or science high school graduation requirements. 
-  * Less than 20% of AP Computer Science students are women. Less than 10% are black or Latino.
+## Use this short blurb in newsletters
+
+### Bring computer science to your school. Start with an Hour of Code
+
+Počítače jsou všude, ale dnes vyučuje informatiku méně škol než tomu bylo před 10 lety. Dobrou zprávou je, že jsme na cestě, jak to změnit. If you heard about the [Hour of Code](<%= hoc_uri('/') %>) last year, you might know it made history. In one week, 15 million students tried computer science! The [Hour of Code](<%= hoc_uri('/') %>) is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. [Sign up](<%= hoc_uri('/') %>) to host an Hour of Code this December 8-14 during Computer Science Education Week and help reach 100 million students by the end of the year. Add your school to the map, go to <http://hourofcode.com>
 
 ## Infographic version:
 
 ![obrázek](http://code.org/images/fit-8000/Code.org_infographic.png)
+
+<a style="display: block" href="/#join"><button style="float: right;">Přihlaste svoji událost</button></a>
