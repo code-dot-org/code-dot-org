@@ -89,7 +89,6 @@
 .course-carousel .slide img {
   width: 100%;
   height: 100%;
-  display: block;
 }
 .course-carousel .slide .slide-text {
   float: left;
@@ -193,6 +192,11 @@
   .learnpage {
     width: 100%;
   }
+
+  .fullwidth-carousel .slide {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
 
 @media screen and (min-width: 320px) and (max-width: 599px) {
@@ -224,6 +228,12 @@
   .btn-carousel-slide {
     right: 10px;
   }
+
+  .fullwidth-carousel .slide .slide-img {
+    height: 220px;
+    padding-left: 0px; 
+    padding-right: 0px;
+  }
 }
 
 @media screen and (min-width: 600px) and (max-width: 969px) {
@@ -243,6 +253,18 @@
     height: 390px;
   }
 
+  .fullwidth-carousel .slide {
+    padding-left: 0px;
+  }
+  .fullwidth-carousel .slide .slide-img {
+    width: 600px;
+  }
+  .fullwidth-carousel .slide .slide-text {
+    width: 600px;
+  }
+  .fullwidth-carousel .slide-shortdescription {
+    width: 500px;
+  }
 }
 
 @media screen and (min-width: 970px) {
@@ -267,6 +289,7 @@
   }
   .course-carousel .slide .slide-text {
     width: 444px;
+    height: 335px;
     padding: 20px 20px 0 20px;
   }
   .course-carousel .slide h2 {
@@ -315,6 +338,19 @@
   }
   .course-carousel .btn-carousel-slide {
   }
+
+
+
+  .fullwidth-carousel .slide  {
+    padding: 0 0;
+  }
+  .fullwidth-carousel .slide .slide-img {
+    width: 486px;
+  }
+  .fullwidth-carousel .slide .slide-text {
+    width: 484px;
+  }
+
 }
 
 /* Datepicker customizations */
