@@ -11053,18 +11053,26 @@ Webapp.createTextLabel = function (opts) {
 
 Webapp.getText = function (opts) {
   var divWebapp = document.getElementById('divWebapp');
-  var div = document.getElementById(opts.elementId);
-  if (divWebapp.contains(div)) {
-    return String(div.value);
+  var element = document.getElementById(opts.elementId);
+  if (divWebapp.contains(element)) {
+    if (element.tagName === 'INPUT') {
+      return String(element.value);
+    } else {
+      return element.innerText;
+    }
   }
   return false;
 };
 
 Webapp.setText = function (opts) {
   var divWebapp = document.getElementById('divWebapp');
-  var div = document.getElementById(opts.elementId);
-  if (divWebapp.contains(div)) {
-    div.value = opts.text;
+  var element = document.getElementById(opts.elementId);
+  if (divWebapp.contains(element)) {
+    if (element.tagName === 'INPUT') {
+      element.value = opts.text;
+    } else {
+      element.innerText = opts.text;
+    }
   }
   return false;
 };
