@@ -115,16 +115,9 @@ levels.custom = {
 levels.dog_hello = {
   'ideal': 2,
   'requiredBlocks': [
-    [{
-      test: function(block) {
-        // Make sure they have the right block, and have changed the default
-        // text
-        return block.type == 'studio_saySprite' &&
-          block.getTitleValue("TEXT") !== msg.defaultSayText();
-      },
-      type: 'studio_saySprite',
-      titles: {'TEXT': msg.helloWorld()}
-    }]
+    saySpriteRequiredBlock({
+      notDefaultText: true
+    }),
   ],
   'scale': {
     'snapRadius': 2
@@ -156,7 +149,16 @@ levels.k1_1 = utils.extend(levels.dog_hello,  {
 });
 levels.c2_1 = utils.extend(levels.dog_hello);
 levels.c3_story_1 = utils.extend(levels.dog_hello);
-levels.playlab_1 = utils.extend(levels.dog_hello);
+levels.playlab_1 = utils.extend(levels.dog_hello, {
+  background: 'winter',
+  firstSpriteIndex: 2, // penguin
+  // difference is we say hello instead of hello world
+  requiredBlocks: [
+    saySpriteRequiredBlock({
+      requiredText: msg.hello()
+    }),
+  ]
+});
 
 // Can you make the dog say something and then have the cat say something afterwards?
 levels.dog_and_cat_hello =  {
@@ -165,11 +167,11 @@ levels.dog_and_cat_hello =  {
     // make sure each sprite says something
     saySpriteRequiredBlock({
       sprite: "0",
-      notDefaultText: true
+      requiredText: msg.hello()
     }),
     saySpriteRequiredBlock({
       sprite: "1",
-      notDefaultText: true
+      requiredText: msg.hello()
     })
   ],
   'scale': {
@@ -202,7 +204,20 @@ levels.k1_2 = utils.extend(levels.dog_and_cat_hello, {
 });
 levels.c2_2 = utils.extend(levels.dog_and_cat_hello, {});
 levels.c3_story_2 = utils.extend(levels.dog_and_cat_hello, {});
-levels.playlab_2 = utils.extend(levels.dog_and_cat_hello, {});
+levels.playlab_2 = utils.extend(levels.dog_and_cat_hello, {
+  background: 'desert',
+  firstSpriteIndex: 20,
+  map: [
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0,16, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0,16, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0]
+  ],
+});
 
 
 // extended by: k1_3
@@ -250,7 +265,45 @@ levels.k1_3 = utils.extend(levels.dog_move_cat,  {
 });
 levels.c2_3 = utils.extend(levels.dog_move_cat, {});
 levels.c3_story_3 = utils.extend(levels.dog_move_cat, {});
-levels.playlab_3 = utils.extend(levels.dog_move_cat, {});
+
+levels.playlab_3 = {
+  ideal: 2,
+  requiredBlocks: [
+    [{
+      test: 'moveDistance',
+      type: 'studio_moveDistance',
+      titles: { DIR: '2', DISTANCE: '200'}
+    }]
+  ],
+  scale: {
+    snapRadius: 2
+  },
+  background: 'tennis',
+  firstSpriteIndex: 26, // tennis girl
+  goal: {
+    successCondition: function () {
+      return Studio.sprite[0].isCollidingWith(1);
+    }
+  },
+  toolbox:
+    tb(
+      '<block type="studio_moveDistance"><title name="DIR">1</title><title name="DISTANCE">200</title></block>' +
+      '<block type="studio_moveDistance"><title name="DIR">2</title><title name="DISTANCE">200</title></block>' +
+      '<block type="studio_moveDistance"><title name="DIR">4</title><title name="DISTANCE">200</title></block>' +
+      '<block type="studio_moveDistance"><title name="DIR">8</title><title name="DISTANCE">200</title></block>'
+       ),
+  startBlocks: '<block type="when_run" deletable="false" x="20" y="20"></block>',
+  map: [
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0,16, 0, 0, 0, 1, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0]
+  ]
+};
 
 
 // Can you write a program that makes the dog move to the cat, and have the cat
@@ -318,7 +371,55 @@ levels.k1_4 = utils.extend(levels.dog_move_cat_hello,  {
 });
 levels.c2_4 = utils.extend(levels.dog_move_cat_hello, {});
 levels.c3_story_4 = utils.extend(levels.dog_move_cat_hello, {});
-levels.playlab_4 = utils.extend(levels.dog_move_cat_hello, {});
+
+levels.playlab_4 = {
+  ideal: 4,
+  scale: {
+    snapRadius: 2
+  },
+  background: 'tennis',
+  // todo - does this new field need to be exposed to level builder?
+  avatarList: ['tennisboy', 'tennisgirl'],
+  requiredBlocks: [
+    [{
+      test: 'moveDistance',
+      type: 'studio_moveDistance',
+      titles: { DIR: '4', DISTANCE: '200'}
+    }],
+    [{
+      test: 'playSound',
+      type: 'studio_playSound',
+      titles: { SOUND: 'goal1'}
+    }]
+  ],
+  timeoutFailureTick: 100,
+  goal: {
+    successCondition: function () {
+      return Studio.playSoundCount > 0 && Studio.sprite[0].isCollidingWith(1);
+    }
+  },
+  toolbox:
+    tb(
+      '<block type="studio_moveDistance"><title name="DIR">1</title><title name="DISTANCE">200</title></block>' +
+      '<block type="studio_moveDistance"><title name="DIR">2</title><title name="DISTANCE">200</title></block>' +
+      '<block type="studio_moveDistance"><title name="DIR">4</title><title name="DISTANCE">200</title></block>' +
+      '<block type="studio_moveDistance"><title name="DIR">8</title><title name="DISTANCE">200</title></block>' +
+      '<block type="studio_playSound"><title name="SOUND">goal1</title></block>'
+       ),
+  startBlocks:
+    '<block type="when_run" deletable="false" x="20" y="20"></block>' +
+    '<block type="studio_whenSpriteCollided" deletable="false" x="20" y="120"></block>',
+  map: [
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0,16, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0,16, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0]
+  ],
+};
 
 // Can you write a program to make the octopus say "hello" when it is clicked?
 levels.click_hello =  {
@@ -360,7 +461,11 @@ levels.click_hello =  {
 };
 levels.c2_5 = utils.extend(levels.click_hello, {});
 levels.c3_game_1 = utils.extend(levels.click_hello, {});
-levels.playlab_5 = utils.extend(levels.click_hello, {});
+levels.playlab_5 = utils.extend(levels.click_hello, {
+  background: 'space',
+  firstSpriteIndex: 23,
+  toolbox: tb(blockOfType('studio_saySprite'))
+});
 
 levels.octopus_happy =  {
   'ideal': 2,
@@ -483,7 +588,27 @@ levels.move_penguin =  {
 };
 levels.c2_6 = utils.extend(levels.move_penguin, {});
 levels.c3_game_2 = utils.extend(levels.move_penguin, {});
-levels.playlab_6 = utils.extend(levels.move_penguin, {});
+levels.playlab_6 = utils.extend(levels.move_penguin, {
+  background: 'cave',
+  firstSpriteIndex: 5,
+  goalOverride: {
+    goal: 'red_fireball',
+    success: 'blue_fireball',
+    imageWidth: 800
+  },
+  toolbox:
+    tb(blockOfType('studio_move')),
+  map: [
+    [1, 0, 0, 0, 0, 0, 1, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 16,0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [1, 0, 0, 0, 0, 0, 1, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0]
+  ],
+});
 
 // The "repeat forever" block allows you to run code continuously. Can you
 // attach blocks to move this dinosaur up and down repeatedly?
@@ -514,7 +639,7 @@ levels.dino_up_and_down =  {
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
   'firstSpriteIndex': 2,
-  'protaganistSpriteIndex': 1,
+  'protagonistSpriteIndex': 1,
   'timeoutFailureTick': 150,
   'minWorkspaceHeight': 800,
   'toolbox':
@@ -544,7 +669,63 @@ levels.dino_up_and_down =  {
 };
 levels.c2_7 = utils.extend(levels.dino_up_and_down, {});
 levels.c3_game_3 = utils.extend(levels.dino_up_and_down, {});
-levels.playlab_7 = utils.extend(levels.dino_up_and_down, {});
+
+levels.playlab_7 = {
+  ideal: 3,
+  background: 'rainbow',
+  firstSpriteIndex: 10,
+  scale: {
+    snapRadius: 2
+  },
+  softButtons: [
+    'leftButton',
+    'rightButton',
+    'downButton',
+    'upButton'
+  ],
+  map: [
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [16, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0]
+  ],
+  goal: {
+    successCondition: function () {
+      // successful after a given period of time as long as we've used all
+      // required blocks
+      return Studio.tickCount === 375;
+    },
+  },
+  timeoutFailureTick: 376,
+  minWorkspaceHeight: 800,
+  toolbox: tb(
+    '<block type="studio_moveDistance"><title name="DIR">1</title><title name="DISTANCE">400</title></block>' +
+    '<block type="studio_moveDistance"><title name="DIR">2</title><title name="DISTANCE">400</title></block>' +
+    '<block type="studio_moveDistance"><title name="DIR">4</title><title name="DISTANCE">400</title></block>' +
+    '<block type="studio_moveDistance"><title name="DIR">8</title><title name="DISTANCE">400</title></block>'
+  ),
+  startBlocks: '<block type="studio_repeatForever" deletable="false" x="20" y="20"></block>',
+  requiredBlocks: [
+    [{
+      test: function (b) {
+        return b.type === 'studio_moveDistance' && b.getTitleValue('DIR') === '2';
+      },
+      type: 'studio_moveDistance',
+      titles: {DIR: 2, DISTANCE: '400'}
+    }],
+    [{
+      test: function (b) {
+        return b.type === 'studio_moveDistance' && b.getTitleValue('DIR') === '8';
+      },
+      type: 'studio_moveDistance',
+      titles: {DIR: 8, DISTANCE: '400'}
+    }]
+  ],
+};
 
 // Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into
 // the dinosaur, and then move him with the arrows to make that happen?
