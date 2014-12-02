@@ -49,6 +49,9 @@
                     %a{:href=>url, :target=>'_blank'}
                       =short_url
               %a{:href=>url, :target=>'_blank'}<
+                -if tutorial[:code] == "codeorg"
+                  %img.scrat-standing.desktop-feature{:src=>"/images/scrat_standing.png", :style=>'width:60px; height:53px; position:absolute; right: 134px; bottom: 7px;'}
+                  %img.scrat-standing-blink.desktop-feature{:src=>"/images/scrat_standing_blink.png", :style=>'opacity:0; width:60px; height:53px; position:absolute; right: 134px; bottom: 7px;'}
                 .btn-carousel-slide=I18n.t(:go)
             -count += 1
 
