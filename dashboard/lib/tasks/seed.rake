@@ -4,12 +4,7 @@ namespace :seed do
   verbose false
 
   task videos: :environment do
-    Video.transaction do
-      Video.reset_db
-      CSV.read('config/videos.csv', { col_sep: "\t", headers: true }).each_with_index do |row, id|
-        Video.create!(id: id + 1, key: row['Key'], youtube_code: row['YoutubeCode'], download: row['Download'])
-      end
-    end
+    Video.setup
   end
 
   STANFORD_HINTS_FILE = 'config/stanford-hints-bestPath1.tsv'

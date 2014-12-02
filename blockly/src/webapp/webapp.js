@@ -107,8 +107,8 @@ var Keycodes = {
 
 function onDebugInputKeyDown(e) {
   if (e.keyCode == Keycodes.ENTER) {
-    var input = event.target.textContent;
-    event.target.textContent = '';
+    var input = e.target.textContent;
+    e.target.textContent = '';
     outputWebappConsole('> ' + input);
     if (Webapp.interpreter) {
       var currentScope = Webapp.interpreter.getScope();
@@ -1011,10 +1011,16 @@ Webapp.callCmd = function (cmd) {
     case 'createCanvas':
     case 'canvasDrawLine':
     case 'canvasDrawCircle':
+    case 'canvasSetLineWidth':
+    case 'canvasSetStrokeColor':
+    case 'canvasSetFillColor':
     case 'canvasClear':
     case 'createTextInput':
+    case 'createTextLabel':
     case 'getText':
     case 'setText':
+    case 'setPosition':
+    case 'setParent':
     case 'setStyle':
     case 'attachEventHandler':
       BlocklyApps.highlight(cmd.id);
@@ -1049,12 +1055,22 @@ Webapp.createCanvas = function (opts) {
   var divWebapp = document.getElementById('divWebapp');
 
   var newElement = document.createElement("canvas");
-  newElement.id = opts.elementId;
-  // TODO: support creating canvas elements of different sizes
-  newElement.width = 400 * Webapp.canvasScale;
-  newElement.height = 400 * Webapp.canvasScale;
+  var ctx = newElement.getContext("2d");
+  if (newElement && ctx) {
+    newElement.id = opts.elementId;
+    // default width/height if params are missing
+    var width = opts.width || 400;
+    var height = opts.height || 400;
+    newElement.width = width * Webapp.canvasScale;
+    newElement.height = height * Webapp.canvasScale;
+    newElement.style.width = width + 'px';
+    newElement.style.height = height + 'px';
+    // set transparent fill by default:
+    ctx.fillStyle = "rgba(255, 255, 255, 0)";
 
-  return Boolean(divWebapp.appendChild(newElement));
+    return Boolean(divWebapp.appendChild(newElement));
+  }
+  return false;
 };
 
 Webapp.canvasDrawLine = function (opts) {
@@ -1081,7 +1097,41 @@ Webapp.canvasDrawCircle = function (opts) {
             opts.radius * Webapp.canvasScale,
             0,
             2 * Math.PI);
+    ctx.fill();
     ctx.stroke();
+  }
+  return false;
+};
+
+Webapp.canvasSetLineWidth = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var div = document.getElementById(opts.elementId);
+  var ctx = div.getContext("2d");
+  if (ctx && divWebapp.contains(div)) {
+    ctx.lineWidth = opts.width * Webapp.canvasScale;
+    return true;
+  }
+  return false;
+};
+
+Webapp.canvasSetStrokeColor = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var div = document.getElementById(opts.elementId);
+  var ctx = div.getContext("2d");
+  if (ctx && divWebapp.contains(div)) {
+    ctx.strokeStyle = String(opts.color);
+    return true;
+  }
+  return false;
+};
+
+Webapp.canvasSetFillColor = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var div = document.getElementById(opts.elementId);
+  var ctx = div.getContext("2d");
+  if (ctx && divWebapp.contains(div)) {
+    ctx.fillStyle = String(opts.color);
+    return true;
   }
   return false;
 };
@@ -1092,6 +1142,7 @@ Webapp.canvasClear = function (opts) {
   var ctx = div.getContext("2d");
   if (ctx && divWebapp.contains(div)) {
     ctx.clearRect(0, 0, div.width, div.height);
+    return true;
   }
   return false;
 };
@@ -1106,20 +1157,39 @@ Webapp.createTextInput = function (opts) {
   return Boolean(divWebapp.appendChild(newInput));
 };
 
+Webapp.createTextLabel = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+
+  var newLabel = document.createElement("label");
+  var textNode = document.createTextNode(opts.text);
+  newLabel.id = opts.elementId;
+
+  return Boolean(newLabel.appendChild(textNode) &&
+                 divWebapp.appendChild(newLabel));
+};
+
 Webapp.getText = function (opts) {
   var divWebapp = document.getElementById('divWebapp');
-  var div = document.getElementById(opts.elementId);
-  if (divWebapp.contains(div)) {
-    return String(div.value);
+  var element = document.getElementById(opts.elementId);
+  if (divWebapp.contains(element)) {
+    if (element.tagName === 'INPUT') {
+      return String(element.value);
+    } else {
+      return element.innerText;
+    }
   }
   return false;
 };
 
 Webapp.setText = function (opts) {
   var divWebapp = document.getElementById('divWebapp');
-  var div = document.getElementById(opts.elementId);
-  if (divWebapp.contains(div)) {
-    div.value = opts.text;
+  var element = document.getElementById(opts.elementId);
+  if (divWebapp.contains(element)) {
+    if (element.tagName === 'INPUT') {
+      element.value = opts.text;
+    } else {
+      element.innerText = opts.text;
+    }
   }
   return false;
 };
@@ -1132,7 +1202,7 @@ Webapp.replaceHtmlBlock = function (opts) {
     newDiv.id = opts.elementId;
     newDiv.innerHTML = opts.html;
 
-    return Boolean(divWebapp.replaceChild(newDiv, oldDiv));
+    return Boolean(oldDiv.parentElement.replaceChild(newDiv, oldDiv));
   }
   return false;
 };
@@ -1141,7 +1211,7 @@ Webapp.deleteHtmlBlock = function (opts) {
   var divWebapp = document.getElementById('divWebapp');
   var div = document.getElementById(opts.elementId);
   if (divWebapp.contains(div)) {
-    return Boolean(divWebapp.removeChild(div));
+    return Boolean(div.parentElement.removeChild(div));
   }
   return false;
 };
@@ -1150,7 +1220,32 @@ Webapp.setStyle = function (opts) {
   var divWebapp = document.getElementById('divWebapp');
   var div = document.getElementById(opts.elementId);
   if (divWebapp.contains(div)) {
-    div.style.cssText = opts.style;
+    div.style.cssText += opts.style;
+    return true;
+  }
+  return false;
+};
+
+Webapp.setParent = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var div = document.getElementById(opts.elementId);
+  var divNewParent = document.getElementById(opts.parentId);
+  if (divWebapp.contains(div) && divWebapp.contains(divNewParent)) {
+    return Boolean(div.parentElement.removeChild(div) &&
+                   divNewParent.appendChild(div));
+  }
+  return false;
+};
+
+Webapp.setPosition = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var div = document.getElementById(opts.elementId);
+  if (divWebapp.contains(div)) {
+    div.style.position = 'absolute';
+    div.style.left = String(opts.left) + 'px';
+    div.style.top = String(opts.top) + 'px';
+    div.style.width = String(opts.width) + 'px';
+    div.style.height = String(opts.height) + 'px';
     return true;
   }
   return false;

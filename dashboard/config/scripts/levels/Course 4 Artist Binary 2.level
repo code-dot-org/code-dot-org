@@ -13,11 +13,13 @@
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
-    "use_modal_function_editor": "true",
+    "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "free_play": "false",
     "impressive": "false",
-    "instructions": "What binary string could you loop 8 times to draw this image?"
+    "instructions": "Which of these binary strings could you loop 8 times to draw this image?",
+    "embed": "false",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>
@@ -32,11 +34,6 @@
                   <mutation name="draw">
                     <arg name="binary"/>
                   </mutation>
-                  <value name="ARG0">
-                    <block type="text">
-                      <title name="TEXT"/>
-                    </block>
-                  </value>
                 </block>
               </statement>
             </block>
@@ -113,7 +110,7 @@
                           </value>
                           <value name="B">
                             <block type="math_number" uservisible="false">
-                              <title name="NUM">0</title>
+                              <title name="NUM">1</title>
                             </block>
                           </value>
                         </block>
@@ -239,16 +236,17 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="controls_repeat">
-          <title name="TIMES">???</title>
-        </block>
-        <block type="procedures_callnoreturn" inline="true">
-          <mutation name="draw">
-            <arg name="binary"/>
-          </mutation>
+        <block type="text">
+          <title name="TEXT">11010110</title>
         </block>
         <block type="text">
-          <title name="TEXT">0</title>
+          <title name="TEXT">10010011</title>
+        </block>
+        <block type="text">
+          <title name="TEXT">00101001</title>
+        </block>
+        <block type="text">
+          <title name="TEXT">01010011</title>
         </block>
         <block type="procedures_defnoreturn" uservisible="false">
           <mutation>
@@ -350,7 +348,7 @@
                           </value>
                           <value name="B">
                             <block type="math_number" uservisible="false">
-                              <title name="NUM">0</title>
+                              <title name="NUM">1</title>
                             </block>
                           </value>
                         </block>
