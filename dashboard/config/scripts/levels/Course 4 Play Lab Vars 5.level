@@ -15,7 +15,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "What if we want our game to have a score? Use the \"set points to\" block to set the score to 10. ",
+    "instructions": "Let's build a game! First we'll need a score. Use the \"set points to\" block to set the score to 10. ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -28,7 +28,8 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "false",
-    "embed": "false"
+    "embed": "false",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
