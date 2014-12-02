@@ -151,8 +151,9 @@ BrowserToBrowserStack = {
   'Chrome' => {os: 'Windows', os_version: '8.1', browser: 'Chrome', browser_version: '39.0'},
   'Firefox' => {os: 'Windows', os_version: '8.1', browser: 'Firefox', browser_version: '33.0'},
   'Safari' => {os: 'OS X', os_version: 'Yosemite', browser: 'Safari', browser_version: '8.0'},
-  'Android' => {os: 'android', os_version: '4.4', device: 'Samsung+Galaxy+S5'},
-  'Mobile Safari' => {os: 'ios', os_version: '8.0', device: 'iPad+Air'}
+  'Android' => {os: 'android', os_version: '4.4', device: 'Samsung Galaxy S5'},
+  'Mobile Safari' => {os: 'ios', os_version: '8.0', device: 'iPad Air'},
+  'Opera Mini' => {os: 'opera', device: 'Samsung Galaxy Tab'}
 }
 
 def browserstack_url(browser, destination_url)

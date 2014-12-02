@@ -1,6 +1,6 @@
 - create_params = {cookieDomain: (Rails.env.development? ? 'none' : 'auto')}
 -# The following dimensions must match in order the custom dimension settings in our Google Analytics account.
-- selected_language_dim, age_dim, gender_dim, user_type_dim, env_dim = (1..5).map{|x|"dimension#{x}"}
+- selected_language_dim, age_dim, gender_dim, user_type_dim, env_dim, pixel_ratio = (1..6).map{|x|"dimension#{x}"}
 - dimensions = {}
 - dimensions[selected_language_dim] = language if (accepted_languages.present? && accepted_languages.first != language)
 - dimensions[env_dim] = Rails.env
@@ -17,7 +17,13 @@
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-37745279-1', 'auto', #{create_params.to_json});
-  ga('set', #{dimensions.to_json});
+
+  var dimensions = #{dimensions.to_json};
+  if ('devicePixelRatio' in window) {
+    dimensions["#{pixel_ratio}"] = window.devicePixelRatio;
+  }
+
+  ga('set', dimensions);
   ga('send', 'pageview');
   var userTimings = {};
   function trackEvent(category, action, label, value) {

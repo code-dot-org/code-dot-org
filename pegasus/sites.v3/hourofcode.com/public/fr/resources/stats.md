@@ -1,15 +1,17 @@
 
 
-# Comment attirer les médias à votre événement une Heure de Code
+[<button style="float: right; margin-top: 50px">Sign up your event</button>](/#join)
 
-## Quelques statistiques alarmantes (USA) :
+# Présentation et statistiques utiles
 
-  * Il y aura 1 million d'emplois en informatique en plus que d'étudiants au cours des 10 prochaines années (ajoutant jusqu'à $ 500 milliards en salaires).
-  * Plus de 50 pour cent de toutes les projections mathématiques et métiers de la science sont dans l'informatique. 
-  * Les métiers informatiques sont parmi les emplois avec la plus haute rémunération pour les nouveaux diplômés. Pourtant, moins de 3 % des étudiants sont diplômés avec un diplôme en informatique.
-  * Dans 26 États, les cours d'informatiques ne comptent pas face aux mathématiques ou aux sciences pour l'obtention du diplôme de fin de lycée. 
-  * Moins de 20 % des étudiants en informatique des femmes. Moins de 10 % sont noir ou Latinos.
+## Use this short blurb in newsletters
 
-## Version Infographique:
+### Encourager l'informatique à votre école. Commencer avec Une Heure de Code
+
+Les ordinateurs sont partout, mais les écoles enseignent moins l'informatique qu'il y a 10 ans. Good news is, we’re on our way to change this. If you heard about the [Hour of Code](<%= hoc_uri('/') %>) last year, you might know it made history. In one week, 15 million students tried computer science! The [Hour of Code](<%= hoc_uri('/') %>) is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. [Sign up](<%= hoc_uri('/') %>) to host an Hour of Code this December 8-14 during Computer Science Education Week and help reach 100 million students by the end of the year. Add your school to the map, go to <http://hourofcode.com>
+
+## Infographic version:
 
 ![image](http://code.org/images/fit-8000/Code.org_infographic.png)
+
+<a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>

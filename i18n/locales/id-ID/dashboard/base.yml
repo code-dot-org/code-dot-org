@@ -115,10 +115,10 @@ id:
     subject: Gabung dengan kelas saya (di Code.org)
     body: |
       Klik link dibawah untuk masuk bergabung dengan ilmu komputer tutorial di Code.org (saya akan menjadi "guru"mu): %{link}
-      
+
       Kursus ini menyenangkan, menarik untuk dilihat, dan mengajar konsep dasar ilmu informatika menggunakan latihan  yang sederhana, teratur, dan dalam bentuk permainan. Belajarlah cara memprogram dari Bill Gates, Mark Zuckerberg, Angry Birds, dan Plants vs. Zombies! :-)
       %{name}
-      
+
   follower:
     invite_sent: Undangan telah dikirim
     added_teacher: '%{name} telah dicantumkan sebagai nama guru Anda'
@@ -188,9 +188,9 @@ id:
         not_earned: 'Untuk memberi penghargaan kepada guru-guru ilmu komputer, Anda bisa mendapatkan hadiah sehingga $1.000 dari <a href="http://DonorsChoose.org"> DonorsChoose.org</a> kredit untuk membimbing kelas melalui kursus intro sekolah dasar. Untuk memenuhi persyaratan, Anda harus memiliki setidaknya 10 siswa-siswi yang menyelesaikan kursus, dengan minimal 10 siswa-siswi telah menyelesaikan semua tutorial dan mendapatkan semua Piala %{num_trophies}. Jika siswa-siswi Anda yang mendapatkan Piala terdiri dari setidaknya 40% anak perempuan, hadiah Anda adalah $1.000 dari <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> kredit. Jika tidak, hadiah Anda adalah $750 dari <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> kredit.  <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> kredit hanya berlaku untuk guru-guru di sekolah umum di Amerika Serikat.'
         bonus:
           not_earned_title: |
-            
+
             Anda masih bisa mendapatkan penghasilan tambahan  $250 dalam <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits (Guru Sekolah di Amerika saja)
-            
+
           earned: '40% atau lebih dari siswa yang mengumpulkan semua Piala %{num_trophies} adalah perempuan. Anda telah memenangkan hadiah bonus $250! (hanya berlaku untuk guru dari Amerika Serikat)'
           not_earned: 'Jika siswa-siswi Anda yang telah mendapatkan semua Piala %{num_trophies} terdiri dari setidaknya 40% anak perempuan, Anda mendapat tambahan hadian $250 dari <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> kredit. <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> kredit hanya dapat berlaku untuk guru-guru sekolah umum di Amerika Serikat.'
   crud:
@@ -350,7 +350,7 @@ id:
     teacher: Pelajar
   footer:
     help_from_html: 'Tim teknis dari  Google, Microsoft, Facebook, dan Twitter yang membantu membuat tutorial ini.'
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. All Rights Reserved.'
+    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
     feedback: Berikan pendapat
     translate: Bantu menterjemahkan ke bahasa anda
     support: Dukungan

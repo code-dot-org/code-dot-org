@@ -4,7 +4,7 @@ layout: wide
 
 * * *
 
-# Tutorial guidelines for the Hour of Code and Computer Science Education Week
+# Návody pre hodinu kódu a týždeň počítačovej vedy
 
 **The deadline to submit a tutorial for Hour of Code 2014 has passed. You may still submit an entry and we will try to review it if time allows.**
 

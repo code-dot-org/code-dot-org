@@ -115,11 +115,11 @@ ja:
     subject: 私のクラス (Code.org) に参加します。
     body: |
       どうぞ下のリンクを使ってコンピュータ科学のチュートリアルにサインアップしてくださいい（Code.org から、私とあなたの「先生」として） 。
-      
+
       %{link}
-      
+
       チュートリアルは、視覚的に魅力的な楽しい、シンプル、ガイド付きのゲームのような経験を使用してコンピュータ ・ サイエンスの基本的な概念を習います。ビル ・ ゲイツ氏、Mark Zuckerbergさん、アングリーバード、地球　ｖｓ。ゾンビからコードを学ぼう ！:-)
-      
+
       %{name}
   follower:
     invite_sent: 招待状を送りました
@@ -349,7 +349,7 @@ ja:
     teacher: Teacher
   footer:
     help_from_html: このチュートリアルを作るにあたって、Google・Microsoft・Facebook・Twitterのエンジニアがサポートしました。
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. All Rights Reserved.'
+    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
     feedback: フィードバックを提供します。
     translate: あなたの言語に翻訳をお手伝い
     support: Support

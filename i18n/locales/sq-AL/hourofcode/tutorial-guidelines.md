@@ -4,30 +4,30 @@ layout: wide
 
 * * *
 
-# Tutorial guidelines for the Hour of Code and Computer Science Education Week
+# Udhëzues për Orën e Kodimit dhe Javës së Edukimit të Shkencës Kompjuterike
 
-**The deadline to submit a tutorial for Hour of Code 2014 has passed. You may still submit an entry and we will try to review it if time allows.**
+**Afati për te dorëzuar një udhëzues për Orën e Kodimit 2014 ka kaluar. Gjithsesi, ju ende mund të dorëzoni një të tillë dhe ne do të përpiqemi ta rishikojmë nëqoftëse e lejon koha.**
 
-Code.org will host a variety of Hour of Code activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= codeorg_url() %>](http://<%= codeorg_url() %>/learn).
+Code.org do të mirëpresë nj shumllojshmëri aktivitetesh të Orës së Kodimit në faqen e internetit të Code.org,Orës së Kodimit, CSEdWeek. Lista e tanishme është te [<%= codeorg_url() %>](http://<%= codeorg_url() %>/learn).
 
-We’d like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science. Please use this document to guide the creation of your activity, targeted to the user who has no background in coding, computer programming, and computer science.
+Do donim te kishim me shume opsione perfshirese, por qellimi kryesor eshte te permiresojme eksperiencen per studentet dhe mesuesit qe jane te rinj ne shkencen kompjuterike. Ju lutem perdoreni kete dokument si nje udhezues per aktivitetin qe do te ndiqni, aktivitet i cili eshte krijuar posacerisht per perdorues qe nuk kane eksperience ne kodim, programim kompjuteri apo shkence kompjuterike.
 
 <a id="top"></a>
 
-## Index:
+## Tregues:
 
-  * [How tutorials will be evaluated for inclusion](#inclusion)
-  * [General guidelines for creating an Hour of Code activity](#guidelines)
-  * [How to submit (Due 10/1/2014)](#submit)
-  * [Suggestions for designing your activity](#design)
+  * [Si udhezuesit do te vleresohen per perfshirje](#inclusion)
+  * [Udhezues te pergjithshem per te ndjekur nje aktivitet ne Oren e Kodimit](#guidelines)
+  * [Si te dorezosh (Deri ne 10/1/204)](#submit)
+  * [Sugjerime per te rregulluar aktivitetin tuaj](#design)
   * [Trademark Guidelines](#tm)
   * [Tracking Pixel](#pixel)
-  * [Promoting your tutorials, CSEdWeek, and Hour of Code](#promote)
-  * [A note for students with disabilities](#disabilities)
+  * [Te promovosh udhezuesit e tu, CSEdWeek dhe Ora e Kodimit](#promote)
+  * [Shenim per studentet me aftesi te kufizuara](#disabilities)
 
 <a id="inclusion"></a>
 
-## How tutorials will be evaluated for inclusion
+## Si udhezuesit do te vleresohen per perfshirje
 
 A committee of computer science educators will rank submissions based on qualitative and quantitative metrics, including survey results from a broader set of educators.
 
@@ -71,7 +71,7 @@ As a result, the existing listings are certainly “good enough,” and the driv
 
 <a id="guidelines"></a>
 
-## General guidelines for creating an Hour of Code activity
+## Udhezues te pergjithshem per te ndjekur nje aktivitet ne Oren e Kodimit
 
   * **Subject:** Introductory computer science or programming (not HTML).
   * **Goal:** Give beginners an accessible first taste of programming.
@@ -88,7 +88,7 @@ As a result, the existing listings are certainly “good enough,” and the driv
 
 <a id="submit"></a>
 
-## How to submit (Due 10/1/2014)
+## Si te dorezosh (Deri ne 10/1/204)
 
 Visit the [Hour of Code Activity Submission page](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform) and follow the steps to submit your tutorial.
 
@@ -144,7 +144,7 @@ Visit the [Hour of Code Activity Submission page](https://docs.google.com/a/code
 
 <a id="design"></a>
 
-## Suggestions for designing your activity
+## Sugjerime per te rregulluar aktivitetin tuaj
 
 **Include the CSEdWeek logo in your tutorial.** You can include the CSEdWeek logo ([small](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) or [big](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) in your tutorial, but this is not required. You may also contact us to request specific permission to use the “In Partnership with Code.org” logo. ***This logo can only be used if specific permission is granted in writing by Code.org.*** We may end up creating an Hour of Code logo, but at this time we do not have one. Under no circumstances can the Code.org logo and name be used. Both are trademarked, and can’t be co-mingled with a 3rd party brand name.
 
@@ -223,7 +223,7 @@ IMG SRC="http://code.org/api/hour/finish_appinventor.png/"
 
 <a id="promote"></a>
 
-## Promoting your tutorials, CSEdWeek, and Hour of Code
+## Te promovosh udhezuesit e tu, CSEdWeek dhe Ora e Kodimit
 
 We are asking everyone to promote their own 1-hour tutorial to your users. Please direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your tutorial. Use the international Hour of Code campaign for Computer Science Education Week as an excuse to encourage users to invite others to join in, help us reach 100 million total participants.
 
