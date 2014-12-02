@@ -101,6 +101,8 @@ def main()
   params = process_command_line
   raise ArgumentError, 'Must provide a template and csv.' unless params[:template] && params[:csv]
 
+  raise ArgumentError, "'#{params[:template]}' not found." unless Poste.resolve_template(params[:template]) 
+
   queue = load_recipients params[:csv], start:params[:start], limit:params[:limit]
   puts "#{queue.length} messages to send."
   
