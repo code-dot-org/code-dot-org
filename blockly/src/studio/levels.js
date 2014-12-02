@@ -206,7 +206,7 @@ levels.c2_2 = utils.extend(levels.dog_and_cat_hello, {});
 levels.c3_story_2 = utils.extend(levels.dog_and_cat_hello, {});
 levels.playlab_2 = utils.extend(levels.dog_and_cat_hello, {
   background: 'desert',
-  firstSpriteIndex: 20,
+  firstSpriteIndex: 20, // cave boy
   map: [
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0,16, 0, 0],
@@ -378,7 +378,6 @@ levels.playlab_4 = {
     snapRadius: 2
   },
   background: 'tennis',
-  // todo - does this new field need to be exposed to level builder?
   avatarList: ['tennisboy', 'tennisgirl'],
   requiredBlocks: [
     [{
@@ -463,7 +462,7 @@ levels.c2_5 = utils.extend(levels.click_hello, {});
 levels.c3_game_1 = utils.extend(levels.click_hello, {});
 levels.playlab_5 = utils.extend(levels.click_hello, {
   background: 'space',
-  firstSpriteIndex: 23,
+  firstSpriteIndex: 23, // spacebot
   toolbox: tb(blockOfType('studio_saySprite'))
 });
 
@@ -590,7 +589,7 @@ levels.c2_6 = utils.extend(levels.move_penguin, {});
 levels.c3_game_2 = utils.extend(levels.move_penguin, {});
 levels.playlab_6 = utils.extend(levels.move_penguin, {
   background: 'cave',
-  firstSpriteIndex: 5,
+  firstSpriteIndex: 5, // witch
   goalOverride: {
     goal: 'red_fireball',
     success: 'blue_fireball',
@@ -673,7 +672,7 @@ levels.c3_game_3 = utils.extend(levels.dino_up_and_down, {});
 levels.playlab_7 = {
   ideal: 3,
   background: 'rainbow',
-  firstSpriteIndex: 10,
+  firstSpriteIndex: 10, // wizard
   scale: {
     snapRadius: 2
   },
