@@ -92,7 +92,7 @@ Nhờ vậy, danh sách hiện tại được chắc chắn là "đủ tốt", v
 
 Visit the [Hour of Code Activity Submission page](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform) and follow the steps to submit your tutorial.
 
-**What you’ll need:**
+**Những gì bạn cần:**
 
   * Tên của bạn, biểu tượng (jpg, png, vv)
   * URL cho một hình ảnh ảnh chụp màn hình hoặc tiếp thị của các hoạt động đặc biệt. Hình ảnh/ảnh chụp màn hình có độ phân giải 446 x 335 chính xác. Nếu một hình ảnh phù hợp là không cung cấp, chúng tôi có thể mất của riêng của chúng tôi ảnh chụp màn hình của hướng dẫn của bạn hoặc chúng tôi có thể chọn không vào danh sách đó.

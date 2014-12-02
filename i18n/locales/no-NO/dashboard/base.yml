@@ -115,11 +115,11 @@
     subject: Delta i min klasse (på Code.org)
     body: |
       Klikk linken under for å melde deg på informatikk-kurs på Code.org (med meg som lærer):
-      
+
       %{link}
-      
+
       Kursene er morsomme, visuelt stimulerende og lærer deg de grunnleggende konseptene innen informatikk ved å benytte en enkel, spill-lignende opplevelse som du loses igjennom. Lær å kode av Bill Gates, Mark Zuckerberg, Angry Birds og Plants vs. Zombies! :)
-      
+
       %{name}
   follower:
     invite_sent: Invitasjon er sendt
@@ -349,7 +349,7 @@
     teacher: Lærer
   footer:
     help_from_html: Teknikere fra Google, Microsoft, Facebook og Twitter bidro til å lage denne guiden.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. Alle rettigheter reservert.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. Alle rettigheter reservert.'
+    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. Alle rettigheter reservert.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. Alle rettigheter reservert.'
     feedback: Gi tilbakemelding
     translate: Hjelpe oss med å oversette til ditt språk
     support: Brukerstøtte

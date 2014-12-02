@@ -10,16 +10,24 @@ títol: Recursos maquetació: àmplia nav: recursos_nav
   </h1>
   
   <div class="col-sm-6 button-container centered">
-    <a href="/#join"><button class="signup-button">Sign up your event</button></a>
+    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Sign up your event</button></a>
   </div>
 </div>
 
-## Organitzant una Hora de Codi? [ Mira la guia de com fer-ho](<%= hoc_uri('/resources/how-to') %>)
+<% if @country == 'ie' %>
+
+## Hosting an Hour of Code in Ireland? [See the how-to guide](<%= hoc_uri('/resources/how-to-ireland') %>)
+
+<% else %>
+
+## Hosting an Hour of Code? [See the how-to guide](<%= hoc_uri('/resources/how-to') %>)
+
+<% end %>
 
 <a id="handouts"></p> 
 
 <h2>
-  Utilitza aquest fulletó per córrer la veu
+  Use this handout to spread the word
 </h2>
 
 <p>
@@ -27,7 +35,7 @@ títol: Recursos maquetació: àmplia nav: recursos_nav
 </p>
 
 <h2>
-  Dona aquest fulletó al professorat i als centres
+  Give this handout to teachers and schools
 </h2>
 
 <p>
@@ -38,20 +46,20 @@ títol: Recursos maquetació: àmplia nav: recursos_nav
   <a id="videos"></p> 
   
   <h2>
-    Mostra aquests vídeos per animar als alumnes
+    Show these videos to inspire students
   </h2>
   
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>What Most Schools Don't Teach (5 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
+      <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>El que la majoria d'escoles no ensenyen (5 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>Hour of Code is Here - Anybody Can Learn</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
+      <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>L'Hora del Codi és aquí - Qualsevol pot aprendre</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
@@ -61,14 +69,14 @@ títol: Recursos maquetació: àmplia nav: recursos_nav
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>President Obama on computer science</strong></a>
+      <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>President Obama sobre la informàtica</strong></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>Anybody Can Learn (1 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
+      <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>Qualsevol pot aprendre (1 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
@@ -82,19 +90,11 @@ títol: Recursos maquetació: àmplia nav: recursos_nav
     <a id="posters"></p> 
     
     <h2>
-      Penjar aquests cartells a la teva escola
+      Hang these posters in your school
     </h2>
     
     <p>
-      <% if @country == 'us' %>
-    </p>
-    
-    <h4>
-      <a href="http://hourofcode.com/#signup">Registra</a> el teu esdeveniment d'Hora de Codi i t'enviarem cartells de franc per correu electrònic.
-    </h4>
-    
-    <p>
-      <% end %> <br /> <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="imatge" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="imatge" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="imatge" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="imatge" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="imatge" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="imatge" /></a>
+      <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="imatge" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="imatge" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="imatge" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="imatge" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="imatge" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="imatge" /></a>
     </p>
     
     <p>
@@ -102,7 +102,7 @@ títol: Recursos maquetació: àmplia nav: recursos_nav
     </p>
     
     <h2>
-      Posa aquestes etiquetes al teu lloc web
+      Feature these banners on your website
     </h2>
     
     <p>
@@ -122,7 +122,7 @@ títol: Recursos maquetació: àmplia nav: recursos_nav
     </p>
     
     <p>
-      <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="imatge" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="imatge" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="imatge" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="imatge" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="imatge" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="imatge" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="imatge" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="imatge" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="imatge" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="imatge" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/image/barack.jpg"><img src="/images/fit-250/barack.jpg" alt="imatge" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
     </p>
     
     <p>
@@ -142,7 +142,7 @@ títol: Recursos maquetació: àmplia nav: recursos_nav
     </h2>
     
     <p>
-      Els ordinadors són pertot arreu, però menys escoles ensenyen computació que 10 anys enrere. Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. In one week, 15 million students tried computer science!
+      Els ordinadors són pertot arreu, però menys escoles ensenyen computació que 10 anys enrere. La bona notícia és, estem en el camí de canviar això. If you heard about the Hour of Code last year, you might know it made history. En una setmana, 15 milions d'estudiants provaren la informàtica!
     </p>
     
     <p>
@@ -158,7 +158,7 @@ títol: Recursos maquetació: àmplia nav: recursos_nav
     </p>
     
     <p>
-      Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com
+      Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com/<%= @country %>
     </p>
     
     <p>
@@ -242,7 +242,7 @@ títol: Recursos maquetació: àmplia nav: recursos_nav
     </p>
     
     <p>
-      See http://hourofcode.com for details, and help spread the word.
+      See http://hourofcode.com/<%= @country %> for details, and help spread the word.
     </p>
     
     <p>
@@ -286,5 +286,5 @@ títol: Recursos maquetació: àmplia nav: recursos_nav
     </p>
     
     <p>
-      <a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>
+      <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Sign up your event</button></a>
     </p>

@@ -193,7 +193,7 @@ BlocklyApps.init = function(config) {
     // Enable param & var editing in levelbuilder, regardless of level setting
     config.level.disableParamEditing = false;
     config.level.disableVariableEditing = false;
-  } else if (!BlocklyApps.noPadding) {
+  } else if (!config.hide_source) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
   }
@@ -228,7 +228,8 @@ BlocklyApps.init = function(config) {
           phone_share_url: config.send_to_phone_url
         },
         sendToPhone: config.sendToPhone,
-        twitter: config.twitter
+        twitter: config.twitter,
+        onMainPage: true
       }));
 
       dom.addClickTouchEvent(openWorkspace, function() {
@@ -289,7 +290,7 @@ BlocklyApps.init = function(config) {
       if (BlocklyApps.noPadding) {
         upSale.style.marginLeft = '10px';
       }
-    } else if (!dom.isMobile()) {
+    } else {
       upSale.innerHTML = require('./templates/learn.html')();
     }
     belowViz.appendChild(upSale);
@@ -441,7 +442,8 @@ BlocklyApps.init = function(config) {
       BlocklyApps.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
         mode: 'javascript',
         modeOptions: utils.generateDropletModeOptions(config.level.codeFunctions),
-        palette: utils.generateDropletPalette(config.level.codeFunctions)
+        palette: utils.generateDropletPalette(config.level.codeFunctions,
+                                              config.level.categoryInfo)
       });
 
       if (config.afterInject) {

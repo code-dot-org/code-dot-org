@@ -21,7 +21,7 @@
     "callout_json": "[\r\n  {\"localization_key\": \"snowflake_dropdown\", \"element_id\": \"[block-id='1']\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"center right\", \"at\": \"bottom right\", \"adjust\": {\"x\": 70, \"y\":360}},\r\n    \"style\": { \"classes\": \"no-tip\" }}\r\n  }\r\n]",
     "embed": "false",
     "min_workspace_height": "1200",
-    "disable_sharing": "false"
+    "disable_sharing": "true"
   }
 }]]></config>
   <blocks>

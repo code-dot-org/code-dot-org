@@ -696,7 +696,7 @@ exports.install = function(blockly, blockInstallOptions) {
   generator.jump_by_constant = function() {
     // Generate JavaScript for moving forward or backward the internal number
     // of pixels without drawing.
-    var value = window.parseFloat(this.getTitleValue('VALUE'));
+    var value = window.parseFloat(this.getTitleValue('VALUE')) || 0;
     return 'Turtle.' + this.getTitleValue('DIR') +
         '(' + value + ', \'block_id_' + this.id + '\');\n';
   };

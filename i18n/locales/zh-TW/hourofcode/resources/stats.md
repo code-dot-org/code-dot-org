@@ -1,29 +1,21 @@
 * * *
 
-title: Resources layout: wide nav: resources_nav
+title: Blurbs and Stats layout: wide nav: resources_nav
 
 * * *
 
-[<button style="float: right; margin-top: 50px">Sign up your event</button>](/#join)
+[<button style="float: right; margin-top: 50px">註冊您的活動</button>](/#join)
 
-# Blurbs and Useful Stats
-
-## Some shocking statistics (USA)
-
-  * There will be one million more computing jobs than students over the next 10 years (adding up to $500 billion in salaries).
-  * More than 50 percent of all projected math and science occupations are in computing occupations. 
-  * Computing occupations are among the highest-paying jobs for new graduates. Yet fewer than 3% of college students graduate with a degree in computer science.
-  * In 25 states, computer science classes don’t count toward math or science high school graduation requirements. 
-  * Less than 20% of AP Computer Science students are women. Less than 10% are black or Latino.
+# 導語和有用的統計資訊
 
 ## Use this short blurb in newsletters
 
-### Bring computer science to your school. Start with an Hour of Code
+### 把電腦科學帶進您的學校。從Hour of Code開始!
 
-Computers are everywhere, but fewer schools teach computer science than 10 years ago. Good news is, we’re on our way to change this. If you heard about the [Hour of Code](<%= hoc_uri('/') %>) last year, you might know it made history. In one week, 15 million students tried computer science! The [Hour of Code](<%= hoc_uri('/') %>) is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. [Sign up](<%= hoc_uri('/') %>) to host an Hour of Code this December 8-14 during Computer Science Education Week and help reach 100 million students by the end of the year. If you did this last year, you know that students loved it. Try to go even bigger, get every student at your school participating. We’ll have new tutorials for all ages and ones that require no computer at all. Watch the [video](<%= hoc_uri('/') %>), and ask all educators to give it a shot. Every participating educator will receive [thank you gifts](<%= hoc_uri('/us/prizes') %>). 100 classrooms will win tech chats with special guest speakers (participants include Bill Gates, Sheryl Sandberg, Ashton Kutcher and more). And in each state, one participating school will win $10,000 in technology for their school! Add your school to the map, go to <http://hourofcode.com>
+電腦無處不在但教電腦科學的學校比 10 年前還少。 好消息是我們正在改變此狀況。 如果您去年聽說過 [ Hour of Code](<%= hoc_uri('/') %>) ，你可能知道它已創造了歷史。 在一周內 1500 萬學生嘗試體驗了電腦科學 ！ [ Hour of Code](<%= hoc_uri('/') %>) 是項一小時的電腦科學活動，旨在揭開程式碼的神秘面紗並說明它是任何人都可以學習的基礎知識入門。 在此[ 註冊](<%= hoc_uri('/') %>) 以便在12 月 8-14日的電腦科學教育週期間辦理Hour of Code活動，協助在今年年底前達到 1 億學生參與的目標。 Add your school to the map, go to <http://hourofcode.com>
 
 ## Infographic version:
 
 ![image](http://code.org/images/fit-8000/Code.org_infographic.png)
 
-<a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>
+<a style="display: block" href="/#join"><button style="float: right;">註冊您的活動</button></a>

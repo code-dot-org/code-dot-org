@@ -4,11 +4,11 @@ layout: wide
 
 * * *
 
-# Tutorial guidelines for the Hour of Code and Computer Science Education Week
+# Richtlinien zur Erstellung von Tutorials für die Hour of Code und Informatik-Woche
 
-**The deadline to submit a tutorial for Hour of Code 2014 has passed. You may still submit an entry and we will try to review it if time allows.**
+**Die Frist, ein Tutorial für die Hour of Code 2014 einzureichen, ist abgelaufen. Sie können zwar Ihren Beitrag noch einreichen, wir prüfen diesen jedoch nur, wenn es die Zeit ermöglicht.**
 
-Code.org will host a variety of Hour of Code activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= codeorg_url() %>](http://<%= codeorg_url() %>/learn).
+Code.org wird eine Vielzahl von Hour of Code Aktivitäten auf den Websites von Code.org, zur Hour of Code und der Informatik-Woche hosten. Die aktuelle Liste ist bei [<%= codeorg_url() %>](http://<%= codeorg_url() %>/learn).
 
 We’d like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science. Please use this document to guide the creation of your activity, targeted to the user who has no background in coding, computer programming, and computer science.
 
@@ -16,10 +16,10 @@ We’d like to host a variety of engaging options, but the primary goal is to op
 
 ## Index:
 
-  * [How tutorials will be evaluated for inclusion](#inclusion)
-  * [General guidelines for creating an Hour of Code activity](#guidelines)
+  * [Wie Deine Tutorials für die Aufnahme bewertet werden](#inclusion)
+  * [Allgemeine Richtlinien zum Erstellen einer Hour of Code Aktivität](#guidelines)
   * [How to submit (Due 10/1/2014)](#submit)
-  * [Suggestions for designing your activity](#design)
+  * [Vorschläge zur Gestaltung Deiner Aktivität](#design)
   * [Trademark Guidelines](#tm)
   * [Tracking Pixel](#pixel)
   * [Promoting your tutorials, CSEdWeek, and Hour of Code](#promote)
@@ -27,24 +27,24 @@ We’d like to host a variety of engaging options, but the primary goal is to op
 
 <a id="inclusion"></a>
 
-## How tutorials will be evaluated for inclusion
+## Wie Deine Tutorials für die Aufnahme bewertet werden
 
 A committee of computer science educators will rank submissions based on qualitative and quantitative metrics, including survey results from a broader set of educators.
 
-**Tutorials will be listed higher if they are:**
+**Tutorials werden an höherer Position aufgeführt wenn diese:**
 
-  * high quality
+  * hohe Qualität
   * self-directed, don’t require any instruction
   * designed for beginners
   * designed as a ~ 1 hour activity
   * work across many OS/device platforms, including mobile and tablets
   * work across multiple languages
   * promote learning by all demographic groups (esp under-represented groups)
-  * not pure HTML+CSS web design focus - (our goal is computer science, not just HTML coding)
+  * nicht nur auf HTML und CSS fokussiert - (unser Ziel ist Informatik, nicht einfach nur HTML-Programmierung)
 
-**Tutorials will be listed lower if they are:**
+**Tutorials werden an geringerer Position aufgeführt wenn diese:**
 
-  * lower quality
+  * geringere Qualität
   * more advanced level of teaching (not for beginners)
   * have a limited number of supported OS/device platforms - for Web-based platforms you should aim to support all of the following: IE9+, and the latest Chrome, Firefox, and Safari
   * work only in English
@@ -71,7 +71,7 @@ As a result, the existing listings are certainly “good enough,” and the driv
 
 <a id="guidelines"></a>
 
-## General guidelines for creating an Hour of Code activity
+## Allgemeine Richtlinien zum Erstellen einer Hour of Code Aktivität
 
   * **Subject:** Introductory computer science or programming (not HTML).
   * **Goal:** Give beginners an accessible first taste of programming.
@@ -144,7 +144,7 @@ Visit the [Hour of Code Activity Submission page](https://docs.google.com/a/code
 
 <a id="design"></a>
 
-## Suggestions for designing your activity
+## Vorschläge zur Gestaltung Deiner Aktivität
 
 **Include the CSEdWeek logo in your tutorial.** You can include the CSEdWeek logo ([small](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) or [big](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) in your tutorial, but this is not required. You may also contact us to request specific permission to use the “In Partnership with Code.org” logo. ***This logo can only be used if specific permission is granted in writing by Code.org.*** We may end up creating an Hour of Code logo, but at this time we do not have one. Under no circumstances can the Code.org logo and name be used. Both are trademarked, and can’t be co-mingled with a 3rd party brand name.
 

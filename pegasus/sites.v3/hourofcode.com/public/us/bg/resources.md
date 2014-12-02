@@ -3,14 +3,30 @@ layout: wide
 nav: resources_nav
 ---
 
-# Ресурси
+<div class="row">
+  <h1 class="col-sm-6">
+    Ресурси
+  </h1>
+  
+  <div class="col-sm-6 button-container centered">
+    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Запишете вашето събитие</button></a>
+  </div>
+</div>
 
-## Смятате да организирате Часът на кодирането? <a href = "< % = hoc_uri('/resources/how-to') % >" > Вижте "как да" ръководството</a>
+<% if @country == 'ie' %>
+
+## Hosting an Hour of Code in Ireland? [See the how-to guide](<%= hoc_uri('/resources/how-to-ireland') %>)
+
+<% else %>
+
+## Hosting an Hour of Code? [See the how-to guide](<%= hoc_uri('/resources/how-to') %>)
+
+<% end %>
 
 <a id="handouts"></p> 
 
 <h2>
-  Използвайте това изложение за разпространение
+  Use this handout to spread the word
 </h2>
 
 <p>
@@ -18,7 +34,7 @@ nav: resources_nav
 </p>
 
 <h2>
-  Дайте това изложение на учители и училища
+  Give this handout to teachers and schools
 </h2>
 
 <p>
@@ -29,7 +45,7 @@ nav: resources_nav
   <a id="videos"></p> 
   
   <h2>
-    Покажете тези клипове за да вдъхновите учениците
+    Show these videos to inspire students
   </h2>
   
   <div style="float:left; padding:10px">
@@ -73,19 +89,11 @@ nav: resources_nav
 <a id="posters"></p> 
 
 <h2>
-  Окачете тези плакати във вашето училище
+  Hang these posters in your school
 </h2>
 
 <p>
-  <% if @country == 'us' %>
-</p>
-
-<h4>
-  <a href="http://hourofcode.com/#signup"> Регистрирайте</a> вашето събитие и ние ще ви изпратим плакати безплатно.
-</h4>
-
-<p>
-  <% end %> <br /> <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="изображение" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="изображение" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="изображение" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="изображение" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="изображение" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="изображение" /></a>
+  <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="изображение" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="изображение" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="изображение" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="изображение" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="изображение" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="изображение" /></a>
 </p>
 
 <p>
@@ -93,7 +101,7 @@ nav: resources_nav
 </p>
 
 <h2>
-  Поставете тези банери на вашия сайт
+  Feature these banners on your website
 </h2>
 
 <p>
@@ -109,11 +117,11 @@ nav: resources_nav
 </h2>
 
 <p>
-  <a href="/images/social-1.jpg"><img src="/images/fit-200/social-1.jpg" alt="изображение" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-2.jpg"><img src="/images/fit-200/social-2.jpg" alt="изображение" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-3.jpg"><img src="/images/fit-200/social-3.jpg" alt="изображение" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="/images/social-1.jpg"><img src="/images/fit-250/social-1.jpg" alt="изображение" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-2.jpg"><img src="/images/fit-250/social-2.jpg" alt="изображение" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-3.jpg"><img src="/images/fit-250/social-3.jpg" alt="изображение" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
 </p>
 
 <p>
-  <a href="/images/mark.jpg"><img src="/images/fit-200/mark.jpg" alt="изображение" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-200/susan.jpg" alt="изображение" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-200/ashton.jpg" alt="изображение" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-200/marissa.jpg" alt="изображение" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-200/chris.jpg" alt="изображение" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="изображение" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="изображение" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="изображение" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="изображение" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="изображение" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/image/barack.jpg"><img src="/images/fit-250/barack.jpg" alt="изображение" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
 </p>
 
 <p>
@@ -133,7 +141,7 @@ nav: resources_nav
 </h2>
 
 <p>
-  Компютрите са навсякъде, но в малко училища се изучават компютърни науки. Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. In one week, 15 million students tried computer science!
+  Компютрите са навсякъде, но в малко училища се изучават компютърни науки. Добрата новина е, че ние сме на път да променим това. If you heard about the Hour of Code last year, you might know it made history. Само за една седмица 15 милиона ученици опитаха компютърните науки с нас!
 </p>
 
 <p>
@@ -149,7 +157,7 @@ nav: resources_nav
 </p>
 
 <p>
-  Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com
+  Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com/<%= @country %>
 </p>
 
 <p>
@@ -233,7 +241,7 @@ nav: resources_nav
 </p>
 
 <p>
-  See http://hourofcode.com for details, and help spread the word.
+  See http://hourofcode.com/<%= @country %> for details, and help spread the word.
 </p>
 
 <p>
@@ -274,4 +282,8 @@ nav: resources_nav
 
 <p>
   Sincerely, [NAME], [TITLE]
+</p>
+
+<p>
+  <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Запишете вашето събитие</button></a>
 </p>

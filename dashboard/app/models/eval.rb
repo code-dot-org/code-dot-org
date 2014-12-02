@@ -68,10 +68,17 @@ class Eval < Blockly
         <block type="functional_greater_than" />
         <block type="functional_less_than" />
         <block type="functional_number_equals" />
+        <block type="functional_string_equals" />
         <block type="functional_logical_and" />
         <block type="functional_logical_or" />
         <block type="functional_logical_not" />
         <block type="functional_boolean" />
+      </category>
+      <category name ="Cond">
+        <block type="functional_cond_1" />
+        <block type="functional_cond_2" />
+        <block type="functional_cond_3" />
+        <block type="functional_cond_4" />
       </category>
       <category name="Functions" custom="PROCEDURE"/>
       <category name="Variables" custom="FUNCTIONAL_VARIABLE" />

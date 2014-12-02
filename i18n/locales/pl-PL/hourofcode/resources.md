@@ -10,16 +10,24 @@ title: Materiały layout: wide nav: resources_nav
   </h1>
   
   <div class="col-sm-6 button-container centered">
-    <a href="/#join"><button class="signup-button">Sign up your event</button></a>
+    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Zarejestruj swoje wydarzenie</button></a>
   </div>
 </div>
 
-## Organizujesz Godzinę Kodowania? [Zobacz nasz poradnik](<%= hoc_uri('/resources/how-to') %>)
+<% if @country == 'ie' %>
+
+## Hosting an Hour of Code in Ireland? [See the how-to guide](<%= hoc_uri('/resources/how-to-ireland') %>)
+
+<% else %>
+
+## Hosting an Hour of Code? [See the how-to guide](<%= hoc_uri('/resources/how-to') %>)
+
+<% end %>
 
 <a id="handouts"></p> 
 
 <h2>
-  Użyj tej ulotki, by rozpowszechnić akcję
+  Use this handout to spread the word
 </h2>
 
 <p>
@@ -27,7 +35,7 @@ title: Materiały layout: wide nav: resources_nav
 </p>
 
 <h2>
-  Daj tę ulotkę nauczycielom i szkołom
+  Give this handout to teachers and schools
 </h2>
 
 <p>
@@ -38,20 +46,20 @@ title: Materiały layout: wide nav: resources_nav
   <a id="videos"></p> 
   
   <h2>
-    Pokaż te filmy, aby zainspirować uczniów
+    Show these videos to inspire students
   </h2>
   
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>What Most Schools Don't Teach (5 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
+      <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>Czego większość szkół nie uczy (5 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>Hour of Code is Here - Anybody Can Learn</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
+      <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>Hour of Code trwa teraz - każdy może się nauczyć</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
@@ -61,14 +69,14 @@ title: Materiały layout: wide nav: resources_nav
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>President Obama on computer science</strong></a>
+      <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>Prezydent Obama o informatyce</strong></a>
     </p>
   </div>
   
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>Anybody Can Learn (1 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
+      <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>Każdy może się uczyć (1 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
@@ -82,19 +90,11 @@ title: Materiały layout: wide nav: resources_nav
     <a id="posters"></p> 
     
     <h2>
-      Rozwieś te plakaty w swojej szkole
+      Hang these posters in your school
     </h2>
     
     <p>
-      <% if @country == 'us' %>
-    </p>
-    
-    <h4>
-      <a href="http://hourofcode.com/#signup">Zarejestruj</a> swoją akcję w ramach Godziny Kodowania, a wyślemy na twojego e-maila darmowe plakaty.
-    </h4>
-    
-    <p>
-      <% end %> <br /> <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="image" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="image" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="image" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="image" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="image" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="image" /></a>
+      <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="image" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="image" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="image" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="image" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="image" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="image" /></a>
     </p>
     
     <p>
@@ -122,7 +122,7 @@ title: Materiały layout: wide nav: resources_nav
     </p>
     
     <p>
-      <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/image/barack.jpg"><img src="/images/fit-250/barack.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
     </p>
     
     <p>
@@ -142,7 +142,7 @@ title: Materiały layout: wide nav: resources_nav
     </h2>
     
     <p>
-      Computers are everywhere, but fewer schools teach computer science than 10 years ago. Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. In one week, 15 million students tried computer science!
+      Komputery są wszędzie, ale obecnie mniej szkół uczy informatyki niż nawet 10 lat temu. Dobrą wiadomością jest to, że jesteśmy na drodze, aby to zmienić. If you heard about the Hour of Code last year, you might know it made history. W jednym tygodniu, 15 milionów uczniów wypróbowało informatykę!
     </p>
     
     <p>
@@ -158,7 +158,7 @@ title: Materiały layout: wide nav: resources_nav
     </p>
     
     <p>
-      Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com
+      Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com/<%= @country %>
     </p>
     
     <p>
@@ -242,7 +242,7 @@ title: Materiały layout: wide nav: resources_nav
     </p>
     
     <p>
-      See http://hourofcode.com for details, and help spread the word.
+      See http://hourofcode.com/<%= @country %> for details, and help spread the word.
     </p>
     
     <p>
@@ -286,5 +286,5 @@ title: Materiały layout: wide nav: resources_nav
     </p>
     
     <p>
-      <a style="display: block" href="/#join"><button style="float: right;">Sign up your event</button></a>
+      <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Zarejestruj swoje wydarzenie</button></a>
     </p>

@@ -115,10 +115,10 @@ fa:
     subject: عضویت در کلاس من (در Code.org)
     body: |
       روی لینک زیر برای ثبت نام آموزش علوم کامپیوتر در Code.org کلیک کنید ( با من به عنوان " معلم " ):
-      
+
       آموزشها جالب و مصور هستند و مفاهیم اساسی کامپیوتر را به سادگی تجربه یک بازی به شما یاد میدهند کد نویسی را از بیل گیتس ، مارک زاکربرگ ، angry birds و plants vs. zombies یاد بگیرید.
-      
-      
+
+
   follower:
     invite_sent: دعوتنامه ارسال شد
     added_teacher: '%{name} به عنوان معلم شما افزوده شد'
@@ -347,7 +347,7 @@ fa:
     teacher: Teacher
   footer:
     help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped create this tutorial.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. All Rights Reserved.'
+    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
     feedback: ارائه پیشنهادات و انتقادات
     translate: کمک به ما در ترجمه به زبان شما
     support: پشتیبانی

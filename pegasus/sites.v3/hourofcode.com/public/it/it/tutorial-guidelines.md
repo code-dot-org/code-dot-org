@@ -74,7 +74,7 @@ As a result, the existing listings are certainly “good enough,” and the driv
   * **Tono:** 
       * L'informatica non è solo per geni. Non importa la tua età, il tuo sesso, la tua razza. Tutti possono imparare!
       * L'informatica si collega a un'ampia gamma di campi di interesse. Tutti dovrebbero imparare!
-      * Incoraggiare gli studenti a creare qualcosa che possono essere condiviso con gli amici o online.
+      * Incoraggia gli studenti a creare qualcosa che possono condividere con gli amici e online.
   * **Tipi di attività:** 
       * **Le Migliori:** Attività basate sul Web, eseguibili preferibilmente su smartphone oppure attività che insegnano i concetti dell'informatica senza necessitare dell'uso di un computer (Vedi <http://csunplugged.com/>). 
       * **Buone, ma non le migliori:** installazione di app, applicazioni desktop o esperienze di giochi su console.
@@ -122,7 +122,7 @@ Visit the [Hour of Code Activity Submission page](https://docs.google.com/a/code
   * Requisiti tecnici: 
       * Al fine di monitorare con maggiore precisione la partecipazione vogliamo che tutti i tutorial dei nostri partner includano un'immagine di 1 pixel, usata per scopi di tracciamento, nella prima e nell'ultima pagina del loro tutorial. Inserisci l'immagine iniziale di 1 pixel nella prima pagina e l'immagine finale di 1 pixel nell'ultima pagina. Non collocare i pixel nelle pagine intermedie). Per maggiori dettagli leggi la sezione sui Pixel di Tracciamento. 
       * Dopo aver completato la tua attività, gli utenti devono essere reindirizzati a <http://code.org/api/hour/finish> dove potranno: 
-          * Condividere sui social network la notizia che hanno completato l'Ora del Codice
+          * Condividi sui social network la notizia che hanno completato L'Ora del Codice
           * Ricevere un certificato che attesti che hanno completato l'Ora del Codice
           * Vedere classifiche sui paesi/città che hanno avuto il maggior numero di partecipazioni alle attività dell'Ora del Codice
           * Per gli utenti che investono un'ora sulla tua attività ma non la completano, ti preghiamo di includere un pulsante nell'attività che dica "Ho terminato la mia Ora del Codice" che rimandi sempre all'indirizzo <http://code.org/api/hour/finish>. 
@@ -191,7 +191,7 @@ One piece of this is to protect the trademark "Hour of Code" to prevent confusio
   2. Utilizzare un apice "TM" nei posti più importanti in cui menzioni l'"Ora del Codice", sia sul tuo sito web che nelle descrizioni delle app
   3. Includi una nota nella pagina (o nel piè di pagina), inclusi collegamenti ai siti web CSEdWeek e Code.org, che dica quanto segue:
     
-    ***"L 'Ora del Codice' è un'iniziativa a livello nazionale della Computer Science Education Week[csedweek.org] e di Code.org [code.org] per introdurre milioni di studenti a un'ora di informatica e di programmazione dei computer."***
+    ***L'Ora del Codice è un'iniziativa nazionale della Computer Science Education Week[csedweek.org] e di Code.org [code.org] per introdurre milioni di studenti ad un'ora di informatica e di programmazione dei computer.***
 
   4. Non è concesso alcun uso di "Hour of Code" nei nomi delle app
 

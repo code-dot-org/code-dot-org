@@ -1,6 +1,8 @@
 
 
-## Estatísticas úteis sobre a ciência da computação
+[<button style="float: right; margin-top: 50px">Registre seu evento</button>](/#join)
+
+## Como atrair a mídia para seu evento da Hora do código
 
 *Para ver todas as perguntas da imprensa e da mídia, entre em contato pelo e-mail <press@code.org>*
 
@@ -21,23 +23,23 @@
   * Organize atividades em grupo (por exemplo, uma demonstração de atividade de programação "offline") ou mostre atividades criadas e conduzidas pelos alunos.
   * Mostre o [vídeo da Hora do Código](<%= hoc_uri('/') %>) da Code.org ou um [destes vídeos](<%= hoc_uri('/resources#videos') %>) como forma de incentivo.
 
-**2. Identifique jornalistas específicos da região que cubram eventos locais ou sobre educação**
+**2. Identifique jornalistas específicos da região que cubram eventos locais ou sobre educação.**
 
 Pense em um jornal, blog, emissora de TV ou de rádio locais.
 
-Procure na Internet informações de contato de jornalistas. Se não conseguir encontrá-las, ligue para a edição e pergunte ou envie um e-mail para um endereço geral do tipo dicas@NOMEDAEDIÇÃO.com e peça que sua mensagem seja direcionada para o jornalista correto.
+Procure informações de contato de jornalistas na Internet. Se não conseguir encontrá-las, ligue para a edição e pergunte ou envie um e-mail para um endereço geral do tipo dicas@NOMEDAEDIÇÃO.com e peça que sua mensagem seja direcionada para o jornalista correto.
 
 **3. Entre em contato com a mídia local**
 
-A melhor maneira de realizar este contato é por e-mail. Ele deve ser breve e objetivo: por que outras pessoas devem se importar com este evento? Inclua informações de contato (entre elas, o número de um telefone celular) de quem estará no local do evento. **Veja um [exemplo de abordagem à mídia](<%= hoc_uri('/resources#sample-emails') %>):**
+A melhor maneira de realizar este contato é por e-mail. Ele deve ser breve e objetivo: por que outras pessoas devem se interessar por este evento? Inclua informações de contato (entre elas, o número de um telefone celular) de quem estará no local do evento. **Veja um [exemplo de abordagem à mídia](<%= hoc_uri('/resources#sample-emails') %>):**
 
 **4. Prepare-se para receber perguntas sobre o evento da sua escola. Veja os exemplos a seguir:**
 
 *Por que sua escola está fazendo uma Hora do Código?*
 
-Embora todos nós saibamos a importância de que os alunos aprendam como navegar neste mundo saturado de tecnologias, como é os dias de hoje, muitos professores não têm experiência em ciência da computação e não sabem por onde começar. Este evento é uma oportunidade para que todos nós vejamos do que a ciência da computação é capaz.
+Embora todos nós saibamos a importância de os alunos aprenderem como navegar neste mundo cheio de tecnologia em que vivemos, muitos professores não têm experiência em ciência da computação e não sabem por onde começar. Este evento é uma oportunidade para que todos nós vejamos do que a ciência da computação é capaz.
 
-Esperamos que isso desperte o interesse dos alunos para continuar aprendendo. Algumas pesquisas também mostram que as crianças entendem conceitos de programação antes de aprenderem a ler e a escrever. Na verdade, o cérebro é mais receptivo às linguagens de computador em idades baixas, assim como acontece com os idiomas estrangeiros.
+Esperamos que isso desperte o interesse dos alunos em continuar aprendendo. Algumas pesquisas também mostram que as crianças entendem conceitos de programação antes de aprenderem a ler e a escrever. Na verdade, o cérebro delas é mais receptivo às linguagens computacionais nessas idades, assim como acontece com os idiomas estrangeiros.
 
 *Por que isso é importante?*
 
@@ -45,11 +47,13 @@ Na China, todos os alunos estudam a ciência da computação para concluir o ens
 
 **Mais detalhes e uma citação que podem ser usados nos materiais**
 
-"A Hora do Código foi elaborada para desmistificar a programação e mostrar que a ciência da computação não é nada de outro mundo, todos podem aprender seus fundamentos básicos", Hadi Partovi, fundador e CEO da Code.org. "Em uma semana, no ano passado, 15 milhões de alunos participaram da Hora do Código. Agora, nosso objetivo é alcançar 100 milhões de alunos no mundo todo, para provar que a demanda pelo ensino da ciência da computação, uma área de extrema relevância no século XXI, cruza todas as fronteiras e não conhece limites."
+"A Hora do Código foi elaborada para desmistificar a programação e mostrar que a ciência da computação não é nada de outro mundo, todos podem aprender seus fundamentos básicos", Hadi Partovi, fundador e CEO da Code.org. "Em uma semana, 15 milhões de alunos participaram da Hora do Código no ano passado. Agora, nosso objetivo é alcançar 100 milhões de alunos no mundo todo, para provar que a demanda pelo ensino da ciência da computação, uma área de extrema relevância no século XXI, cruza todas as fronteiras e não conhece limites."
 
 **Sobre a Code.org**
 
-A Code.org® é uma instituição pública sem fins lucrativos dedicada a promover o estudo da ciência da computação e garantir que ela chegue também à minorias sociais, empoderando, por exemplo, mulheres e negros à participação nesta área. Sua visão é de que todos os alunos, de todas as escolas, devem ter a oportunidade de aprender programação de computadores. Depois de seu lançamento, em 2013, a Code.org organizou a campanha Hora do Código — que apresentou a ciência da computação a milhões de alunos — em parceria com mais de 30 distritos escolares de todo o território nacional, e lançou o Code Studio, uma plataforma de ensino on-line de código aberto para todas as idades. For more information, please visit: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
+A Code.org® é uma instituição pública sem fins lucrativos dedicada a promover o estudo da ciência da computação e garantir que ela chegue também à minorias sociais, empoderando, por exemplo, mulheres e negros à participação nesta área. Sua visão é de que todos os alunos, de todas as escolas, devem ter a oportunidade de aprender a programar. Depois de seu lançamento, em 2013, a Code.org organizou a campanha Hora do Código — que apresentou a ciência da computação a milhões de alunos — em parceria com mais de 30 distritos escolares de todo o território nacional, e lançou o Code Studio, uma plataforma de ensino on-line de código aberto para todas as idades. Para obter mais informações, visite: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
 Encontre mais recursos e exemplos de e-mails [aqui](<%= hoc_uri('/resources') %>).
+
+<a style="display: block" href="/#join"><button style="float: right;">Registre seu evento</button></a>
