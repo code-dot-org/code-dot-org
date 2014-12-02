@@ -293,11 +293,19 @@ class Studio < Grid
   <block type="functional_greater_than" />
   <block type="functional_less_than" />
   <block type="functional_number_equals" />
+  <block type="functional_string_equals" />
   <block type="functional_logical_and" />
   <block type="functional_logical_or" />
   <block type="functional_logical_not" />
   <block type="functional_boolean" />
 </category>
+<category name ="Functional Cond">
+  <block type="functional_cond_1" />
+  <block type="functional_cond_2" />
+  <block type="functional_cond_3" />
+  <block type="functional_cond_4" />
+</category>
+
 #{k1_blocks(type) if is_k1 == 'true'}
     XML
   end

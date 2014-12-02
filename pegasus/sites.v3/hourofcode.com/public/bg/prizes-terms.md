@@ -1,29 +1,29 @@
 
 
-# Premis - termes i condicions
+# Награди - правила и условия
 
-## Espai de Dropbox o crèdit de Skype:
+## Dropbox пространство или Skype кредит:
 
-Les 10 GB d'espai Dropbox o 10 dòlars de crèdit Skype es limiten a professors de K-12, educadors de clubs extraescolars, i entitats d'educació. Les 10 GB d'espai lliure han de ser afegides a un compte de Dropbox existent. Límit d'un reemborsament per organitzador.
+10 GB Dropbox пространство или $10 Skype кредит са ограничени само за К-12 преподаватели, възпитатели в извънучилищни клубове и образователни организации. 10 GB свободно пространство трябва да се добави към съществуващ профил в Dropbox. Организатора избира една от двете награди.
 
-Cada organitzador s'haurà d'inscriure per a l'Hora de Codi per a rebre l'espai del Dropbox o el crèdit de Skype. Si la teva escola sencera participa a l'Hora de Codi, cada educador s'ha de registrar individualment com a organitzador per qualificar-se.
+Всеки организатор трябва да се е регистрирал, за да получи Dropbox място или Skype кредит. Ако сте записали цялото училище в Часът на кодирането, всеки преподавател индивидуално трябва да се регистрира като организатор за да участва в класацията.
 
-Code.org contactarà amb els organitzadors després de l'Hora de Codi (8-14 desembre) per donar-los instruccions per al reemborsament de l'espai Dropbox o crèdit de Skype.
+Code.org ще се свърже с организаторите след кампанията Часът на кодирането (декември 8-14) за да предостави инструкции за получаване на Dropbox пространство или Skype кредит.
 
 <% if @country == 'us' %>
 
-## Vídeo xat amb un orador convidat:
+## Видео чат с гост-лектор:
 
-Prize limited to K-12 classrooms in the U.S. and Canada only. To qualify, sign up your classroom by November 14, 2014. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligbile to win.
+Наградата се ограничава до К-12 класни стаи в САЩ и Канада само. За да се възползвате, запишете вашата класна стая от 14 ноември 2014 г. Code.org произволно ще избере печелившите училища, за да предостави време за уеб чат и техническа поддръжка на съответния учител за настройките. Не е нужно цялото училище да бъде регистрирано, за да участвате за тази награда. Държавни и частни училища имат възможност да спечелят.
 
-## Conjunt d'ordinadors portàtils per a l'aula (o 10,000 dòlars per altres tecnologies):
+## Комплект от лаптопи (или $10,000 за други технологии) за класа:
 
-Premi limitat a escoles públiques de secundària dels Estats Units. To qualify, your entire school must register for the Hour of Code by November 14, 2014. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2014.
+Наградата се ограничава само за публични училища К-12 САЩ. За да се класирате, цялото училище трябва да се регистрира за часът на кодирането до 14 ноември 2014 г. Едно училище във всеки щат на САЩ ще получи набор от компютри за един клас. Code.org ще избере и уведоми спечелилите по електронната поща до 1 декември 2014.
 
-To clarify, this is not a sweepstakes or a contest involving pure chance.
+Да изясним, това не е лотария или конкурс, включващи чист шанс.
 
-1) There is no financial stake or risk involved in applying - any school or classroom may participate, without any payment to Code.org or any other organization
+1) Тук няма финансов риск или риск от измама - всяко училище или класната стая могат да участват, без заплащане на Code.org или на друга организация
 
-2) Winners will only be selected among schools where the entire classroom (or school) participates in an Hour of Code, which involves a test of the students' and teachers' collective skill.
+2) Победителите ще бъдат избрани само сред училищата, където целият клас (или училище) участват в Часът на кодирането, който включва тества колективната работа и умения на ученици и учители.
 
 <% end %>

@@ -34,18 +34,34 @@ levels.ec_simple = {
   'codeFunctions': [
     {'func': 'createButton', 'params': ["'id'", "'text'"] },
     {'func': 'createTextInput', 'params': ["'id'", "'text'"] },
-    {'func': 'getText', 'params': ["'id'"], 'category': 'value' },
+    {'func': 'createTextLabel', 'params': ["'id'", "'text'"] },
+    {'func': 'getText', 'params': ["'id'"], 'type': 'value' },
     {'func': 'setText', 'params': ["'id'", "'text'"] },
+    {'func': 'setParent', 'params': ["'id'", "'parentId'"] },
+    {'func': 'setPosition', 'params': ["'id'", "0", "0", "100", "100"] },
     {'func': 'setStyle', 'params': ["'id'", "'color:red;'"] },
     {'func': 'createHtmlBlock', 'params': ["'id'", "'html'"] },
     {'func': 'replaceHtmlBlock', 'params': ["'id'", "'html'"] },
     {'func': 'deleteHtmlBlock', 'params': ["'id'"] },
-    {'func': 'createCanvas', 'params': ["'id'"] },
-    {'func': 'canvasDrawLine', 'params': ["'id'", "0", "0", "400", "400"] },
-    {'func': 'canvasDrawCircle', 'params': ["'id'", "200", "200", "100"] },
-    {'func': 'canvasClear', 'params': ["'id'"] },
     {'func': 'attachEventHandler', 'params': ["'id'", "'click'", "function() {\n  \n}"] },
+    {'func': 'createCanvas', 'category': 'Canvas', 'params': ["'id'", "400", "400"] },
+    {'func': 'canvasDrawLine', 'category': 'Canvas', 'params': ["'id'", "0", "0", "400", "400"] },
+    {'func': 'canvasDrawCircle', 'category': 'Canvas', 'params': ["'id'", "200", "200", "100"] },
+    {'func': 'canvasSetLineWidth', 'category': 'Canvas', 'params': ["'id'", "3"] },
+    {'func': 'canvasSetStrokeColor', 'category': 'Canvas', 'params': ["'id'", "'red'"] },
+    {'func': 'canvasSetFillColor', 'category': 'Canvas', 'params': ["'id'", "'yellow'"] },
+    {'func': 'canvasClear', 'category': 'Canvas', 'params': ["'id'"] },
   ],
+  'categoryInfo': {
+    'Canvas': {
+      'color': 'yellow',
+      'blocks': []
+    },
+    'Actions': {
+      'color': 'blue',
+      'blocks': []
+    },
+  },
 };
 
 levels.full_sandbox =  {

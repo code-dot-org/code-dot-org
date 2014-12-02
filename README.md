@@ -111,9 +111,7 @@ We'd love to have you join our group of contributors!
 
 ### Before You Push
 
-Anyone who would like to contribute to **[code.org](https://github.com/code-dot-org/)** projects **must read and sign the Contribution License Agreement**. We aren't able to accept any pull requests from contributors who haven't signed the CLA first.
-
-For the time being—email [brian@code.org](mailto:brian@code.org) to get an electronic CLA to sign (takes less than a minute).
+Anyone who would like to contribute to **[code.org](https://github.com/code-dot-org/)** projects **must read and sign the [Contributor License Agreement](https://na2.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=8eb90665-c9f7-4b06-81a5-11d12020f251)**. We can't accept pull requests from contributors who haven't yet signed the CLA.
 
 ### Getting Started Contributing
 
@@ -159,7 +157,7 @@ Contributors should follow the GitHub [fork-and-pull model](https://help.github.
     - `git push origin branch_name`
 3. Go to the code-dot-org GitHub page
     - [https://github.com/code-dot-org/code-dot-org](https://github.com/code-dot-org/code-dot-org)
-4. For your submissinon to be reviewed
+4. For your submission to be reviewed
     - Click on the "Pull Request" link, look over and confirm your diff
     - Submit a pull request for your branch to be merged into staging
     - For bonus points, include screenshots in the description. Command + Ctrl + Shift + 4 in OS X lets you copy a screen selection to your clipboard, which GitHub will let you paste right into the description
