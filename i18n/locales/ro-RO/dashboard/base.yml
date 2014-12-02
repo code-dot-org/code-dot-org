@@ -115,11 +115,11 @@ ro:
     subject: Alătură-te clasei mele (pe Code.org)
     body: |2
       Dă clic pe linkul de mai jos pentru a te înscrie la tutorialele de informatică pe Code.org (cu mine ca "Profesorul" tău):
-      
+
        %{link}
-      
+
       Tutorialele sunt distractive, captivante vizual şi te învaţă conceptele de bază din informatică folosind o metodă simplă, ghidată, similară jocului. Învață să codezi de la Bill Gates, Mark Zuckerberg, Angry-Birds și Plants vs. Zombies! :-)
-      
+
       %{name}
   follower:
     invite_sent: Invitație trimisă
@@ -349,7 +349,7 @@ ro:
     teacher: Teacher
   footer:
     help_from_html: Ingineri de la Google, Microsoft, Facebook şi Twitter au ajutat la creearea acestui tutorial.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. Toate Drepturile Rezervate.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. Toate Drepturile Rezervate.'
+    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. Toate Drepturile Rezervate.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. Toate Drepturile Rezervate.'
     feedback: Oferă feedback
     translate: 'Ajută-ne să  traducem în limba ta'
     support: Suport

@@ -115,11 +115,11 @@ is:
     subject: Komdu í bekkinn minn (á Code.org)
     body: |
       Smelltu á krækjuna hér fyrir neðan til að skrá þig í æfingar í tölvunarfræði hjá Code.org (með mig sem "kennara"):
-      
+
       %{link}
-      
+
       Æfingarnar eru skemmtilegar og myndrænar og kenna grunnhugtök í tölvunarfræði í gegnum leik með leiðsögn. Þú færð kennslu í forritun hjá Bill Gates, Mark Zuckerberg, Angry Birds og Plants vs. Zombies! :-)
-      
+
       %{name}
   follower:
     invite_sent: Boð send
@@ -349,7 +349,7 @@ is:
     teacher: Kennari
   footer:
     help_from_html: Tæknifólk hjá Google, Microsoft, Facebook og Twitter aðstoðuðu við gerð þessa kennsluefnis.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. Öll réttindi áskilin.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. Öll réttindi áskilin.'
+    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. Öll réttindi áskilin.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. Öll réttindi áskilin.'
     feedback: Gefðu endurgjöf
     translate: Hjálpaðu okkur að þýða yfir á þitt tungumál
     support: Aðstoð

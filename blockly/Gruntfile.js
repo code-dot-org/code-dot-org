@@ -162,7 +162,7 @@ config.copy = {
       {
         expand: true,
         cwd: 'lib/jsinterpreter',
-        src: ['acorn_interpreter.js'],
+        src: ['*.js'],
         dest: 'build/package/js/jsinterpreter/'
       }
     ]

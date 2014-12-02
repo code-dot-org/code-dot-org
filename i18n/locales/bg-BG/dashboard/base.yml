@@ -116,8 +116,8 @@ bg:
     body: |2
       Щракнете върху връзката по-долу за да се регистрирате за уроци по компютърни науки в Code.org (с мен като ваш "учител"):
       %{link}
-      
-       Уроците са забавни, визуално привлекателни и ще ви научат на основните понятия в компютърните науки с помощта на прости съвети и игри. Научете се на програмиране от Бил Гейтс, Марк Зукерберг, Angry Birds, и Plants vs. Zombies! :-) 
+
+       Уроците са забавни, визуално привлекателни и ще ви научат на основните понятия в компютърните науки с помощта на прости съвети и игри. Научете се на програмиране от Бил Гейтс, Марк Зукерберг, Angry Birds, и Plants vs. Zombies! :-)
       %{name}
   follower:
     invite_sent: Поканата е изпратена
@@ -347,7 +347,7 @@ bg:
     teacher: Учител
   footer:
     help_from_html: Инженери от Google, Microsoft, Facebook и Twitter помогнаха за създаването на този урок.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. Всички права запазени. <br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. Всички права запазени.'
+    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. Всички права запазени. <br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. Всички права запазени.'
     feedback: Обратна връзка
     translate: Помогнете ни да преведем на вашия език
     support: Поддръжка

@@ -1,5 +1,5 @@
 
 
-# Get your whole school to participate
+# Teilnahme der gesamten Schule
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+Informationen, wie gesamte Schulen an der Hour of Code teilnehmen können, folgen an dieser Stelle.

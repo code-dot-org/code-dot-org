@@ -1,6 +1,6 @@
 * * *
 
-title: Thank you layout: wide
+Název: Poděkování rozložení: široký
 
 * * *
 

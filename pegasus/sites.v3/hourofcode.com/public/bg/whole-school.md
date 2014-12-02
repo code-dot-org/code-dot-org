@@ -1,5 +1,5 @@
 
 
-# Aconsegueix tota l'escola per participar
+# Нека цялото училище да участва
 
-La informació sobre com aconseguir escoles complertes per participar en l'Hora de Codi anirà aquí.
+Информация за участието на цели училища в Часа на кодирането, ще се появява тук.

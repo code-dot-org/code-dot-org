@@ -1,6 +1,6 @@
 * * *
 
-από: '"Hadi Partovi (Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)' θέμα: Ευχαριστούμε για την εγγραφή για την φιλοξενία μιας 'Ώρας του Κώδικα'! Όψη: Καμμία Θέμα:Κανένα
+from: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)" subject: "Thanks for signing up to host an Hour of Code!" litmus_tracking_id: "5g5lyi1a"
 
 * * *
 
@@ -10,12 +10,6 @@
 
 **ΚΑΘΕ** διοργανωτής της Ώρα του κώδικα θα λάβει 10 GB χώρου Dropbox ή $10 της πίστωσης Skype ως ένα ευχαριστώ. [ Λεπτομέρειες](http://<%= hostname %>/prizes)
 
-<% if @country == 'us' %>
-
-Βοήθησε ώστε [ όλο το σχολείο να συμμετάσχει ](http://<%= hostname %>/whole-school) για να μπορέσει να διεκδικήσει μεγάλα βραβεία.
-
-<% end %>
-
 ## 1. Διάδωσέ το
 
 Πες στους φίλους σου για την Ώρα του Κώδικα (#HourOfCode).
@@ -24,27 +18,21 @@
 
 ## 2. Ask your whole school to offer an Hour of Code
 
-[Στείλτε αυτό το Ηλεκτρονικό Μήνυμα](http://<%= hostname %>/resources#email) ή [δώστε αυτό το φυλλάδιο στο Διευθυντή σας](http://<%= hostname %>/files/schools-handout.pdf). Μόλις το σχολείο σας εγγραφεί [ μπορεί να διεκδικήσει τεχνολογικό υλικό αξίας 10000$](http://<%= hostname %>/prizes) και να προκαλέσει και άλλα σχολεία της περιοχής να συμμετάσχουν και να διεκδικήσουν.
-
-<% else %>
-
-## 2. Ask your whole school to offer an Hour of Code
-
-[ Στείλε αυτό το μήνυμα](http://<%= hostname %>/resources#email) ή δώσε [αυτό το έντυπο](http://<%= hostname %>/files/schools-handout.pdf) στον διευθυντή σου.
+[Send this email](http://<%= hostname %>/resources#email) or give [this handout](http://<%= hostname %>/files/schools-handout.pdf) to your principal.
 
 <% end %>
 
-## 3. Ζήτα το από τον εργοδότη σου
+## 3. Ask your employer to get involved
 
-[ Στείλε αυτό το μήνυμα](http://<%= hostname %>/resources#email) στον διαχειριστή σου, ή τον Διευθύνοντα Σύμβουλο. Ή [δώσε τους αυτό το φυλλάδιο](http://<%= hostname %>/resources/hoc-one-pager.pdf).
+[Send this email](http://<%= hostname %>/resources#email) to your manager, or the CEO. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf).
 
-## 4. Προώθησε την Ώρα του Κώδικα στην περιοχή σου
+## 4. Promote Hour of Code within your community
 
-Φτιάξε ένα τμήμα για — ένα σώμα προσκόπων, μια ενορία, ένα πανεπιστήμιο, μια ενώση εργαζομένων. Ή κάνε μια Ώρα του Κώδικα για το τετράγωνο της γειτονιάς σου.
+Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
 
-## 5. Ζήτα από ένα τοπικό άρχοντα να υποστηρίξει μια Ώρα του Κώδικα
+## 5. Ask a local elected official to support the Hour of Code
 
-Στείλε αυτό το e-mail στον δήμαρχο, στο δημοτικό συμβούλιο ή στο σχολικό πίνακα. Μπορείς επίσης να τους το δώσεις αυτοπροσώπως και να τους καλέσεις στο σχολείο σου. 
+[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board. Or [give them this handout](http://<%= hostname %>/resources/hoc-one-pager.pdf) and invite them to visit your school.
 
 <% if @country == 'ro' %>
 
@@ -56,6 +44,4 @@ Echipa Hour of Code Romania hoc@adfaber.org
 
 * * *
 
-Το Code.org είναι ένα 501c 3 μη κερδοσκοπικού χαρακτήρα. Η διεύθυνση μας είναι 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Δεν σας αρέσουν αυτά τα μηνύματα; [Τέλος συνδρομής](%= unsubscribe_link %).
-
-![](<%= tracking_pixel %>)
+Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't like these emails? [Unsubscribe](%= unsubscribe_link %).
