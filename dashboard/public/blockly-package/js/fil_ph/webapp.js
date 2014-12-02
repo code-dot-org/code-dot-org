@@ -436,7 +436,7 @@ BlocklyApps.init = function(config) {
     // Enable param & var editing in levelbuilder, regardless of level setting
     config.level.disableParamEditing = false;
     config.level.disableVariableEditing = false;
-  } else if (!BlocklyApps.noPadding) {
+  } else if (!config.hide_source) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
   }
@@ -471,7 +471,8 @@ BlocklyApps.init = function(config) {
           phone_share_url: config.send_to_phone_url
         },
         sendToPhone: config.sendToPhone,
-        twitter: config.twitter
+        twitter: config.twitter,
+        onMainPage: true
       }));
 
       dom.addClickTouchEvent(openWorkspace, function() {
@@ -532,7 +533,7 @@ BlocklyApps.init = function(config) {
       if (BlocklyApps.noPadding) {
         upSale.style.marginLeft = '10px';
       }
-    } else if (!dom.isMobile()) {
+    } else {
       upSale.innerHTML = require('./templates/learn.html')();
     }
     belowViz.appendChild(upSale);
@@ -684,7 +685,8 @@ BlocklyApps.init = function(config) {
       BlocklyApps.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
         mode: 'javascript',
         modeOptions: utils.generateDropletModeOptions(config.level.codeFunctions),
-        palette: utils.generateDropletPalette(config.level.codeFunctions)
+        palette: utils.generateDropletPalette(config.level.codeFunctions,
+                                              config.level.categoryInfo)
       });
 
       if (config.afterInject) {
@@ -8912,7 +8914,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/fil_ph/common') ; buf.push('\n\n');3; var root = location.protocol + '//' + location.host.replace('learn\.', ''); 
+ buf.push('');1; var msg = require('../../locale/fil_ph/common') ; buf.push('\n\n');3; var root = location.protocol + '//' + location.host.replace('learn\.', '').replace('studio\.', ''); 
 ; buf.push('\n\n<div id="learn">\n\n  <h1><a href="', escape((7,  root )), '">', escape((7,  msg.wantToLearn() )), '</a></h1>\n  <a href="', escape((8,  root )), '"><img id="learn-to-code" src="', escape((8,  BlocklyApps.assetUrl('media/promo.png') )), '"></a>\n  <a href="', escape((9,  root )), '">', escape((9,  msg.watchVideo() )), '</a>\n  <a href="', escape((10,  root )), '">', escape((10,  msg.tryHOC() )), '</a>\n  <a href="', escape((11,  location.protocol + '//' + location.host 
 )), '">', escape((11,  msg.signup() )), '</a>\n\n</div>\n'); })();
 } 
@@ -9024,7 +9026,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/fil_ph/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n  <div class="social-buttons">\n  <button id="print-button">\n    ', escape((11,  msg.print() )), '\n  </button>\n');13; if (options.alreadySaved) { ; buf.push('\n  <button class="saved-to-gallery" disabled>\n    ', escape((15,  msg.savedToGallery() )), '\n  </button>\n');17; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((19,  msg.saveToGallery() )), '\n  </button>\n');21; } ; buf.push('\n  </div>\n\n');24; if (options.response && options.response.level_source) { ; buf.push('\n  ');25; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((26,  options.appStrings.sharingText )), '</div>\n  ');27; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((30,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');34; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((34,  options.facebookUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((35,  BlocklyApps.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');37; }; buf.push('\n    ');38; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((38,  options.twitterUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((39,  BlocklyApps.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');41; }; buf.push('    ');41; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((42,  BlocklyApps.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');44; }; buf.push('  </div>\n');45; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n'); })();
+ buf.push('');1; var msg = require('../../locale/fil_ph/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n  <div class="social-buttons">\n  ');10; if (!options.onMainPage) { ; buf.push('\n    <button id="print-button">\n      ', escape((12,  msg.print() )), '\n    </button>\n  ');14; } ; buf.push('\n');15; if (options.alreadySaved) { ; buf.push('\n  <button class="saved-to-gallery" disabled>\n    ', escape((17,  msg.savedToGallery() )), '\n  </button>\n');19; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((21,  msg.saveToGallery() )), '\n  </button>\n');23; } ; buf.push('\n  </div>\n\n');26; if (options.response && options.response.level_source) { ; buf.push('\n  ');27; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((28,  options.appStrings.sharingText )), '</div>\n  ');29; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((32,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');36; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((36,  options.facebookUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((37,  BlocklyApps.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');39; }; buf.push('\n    ');40; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((40,  options.twitterUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((41,  BlocklyApps.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');43; }; buf.push('    ');43; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((44,  BlocklyApps.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');46; }; buf.push('  </div>\n');47; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -9240,7 +9242,7 @@ exports.generateCodeAliases = function (codeFunctions, parentObjName) {
 /**
  * Generate a palette for the droplet editor based on some level data.
  */
-exports.generateDropletPalette = function (codeFunctions) {
+exports.generateDropletPalette = function (codeFunctions, categoryInfo) {
   // TODO: figure out localization for droplet scenario
   var palette = [
     {
@@ -9330,14 +9332,16 @@ exports.generateDropletPalette = function (codeFunctions) {
     }
   ];
 
-  var appPaletteCategory = {
-    name: 'Actions',
-    color: 'blue',
-    blocks: []
+  var defCategoryInfo = {
+    'Actions': {
+      'color': 'blue',
+      'blocks': []
+    }
   };
+  categoryInfo = categoryInfo || defCategoryInfo;
 
   if (codeFunctions) {
-    for (var i = 0, blockIndex = 0; i < codeFunctions.length; i++) {
+    for (var i = 0; i < codeFunctions.length; i++) {
       var cf = codeFunctions[i];
       if (cf.category === 'hidden') {
         continue;
@@ -9356,12 +9360,14 @@ exports.generateDropletPalette = function (codeFunctions) {
         block: block,
         title: cf.func
       };
-      appPaletteCategory.blocks[blockIndex] = blockPair;
-      blockIndex++;
+      categoryInfo[cf.category || 'Actions'].blocks.push(blockPair);
     }
   }
 
-  palette.unshift(appPaletteCategory);
+  for (var category in categoryInfo) {
+    categoryInfo[category].name = category;
+    palette.unshift(categoryInfo[category]);
+  }
 
   return palette;
 };
@@ -9387,10 +9393,13 @@ exports.generateDropletModeOptions = function (codeFunctions) {
 
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
-      if (codeFunctions[i].category === 'value') {
+      if (codeFunctions[i].type === 'value') {
         modeOptions.valueFunctions.push(codeFunctions[i].func);
       }
-      else if (codeFunctions[i].category !== 'hidden') {
+      else if (codeFunctions[i].type === 'either') {
+        modeOptions.eitherFunctions.push(codeFunctions[i].func);
+      }
+      else if (codeFunctions[i].type !== 'hidden') {
         modeOptions.blockFunctions.push(codeFunctions[i].func);
       }
     }
@@ -9435,10 +9444,22 @@ exports.createButton = function (blockId, elementId, text) {
                            'text': text });
 };
 
-exports.createCanvas = function (blockId, elementId) {
+exports.setPosition = function (blockId, elementId, left, top, width, height) {
+  return Webapp.executeCmd(String(blockId),
+                          'setPosition',
+                          {'elementId': elementId,
+                           'left': left,
+                           'top': top,
+                           'width': width,
+                           'height': height });
+};
+
+exports.createCanvas = function (blockId, elementId, width, height) {
   return Webapp.executeCmd(String(blockId),
                           'createCanvas',
-                          {'elementId': elementId });
+                          {'elementId': elementId,
+                           'width': width,
+                           'height': height });
 };
 
 exports.canvasDrawLine = function (blockId, elementId, x1, y1, x2, y2) {
@@ -9460,6 +9481,27 @@ exports.canvasDrawCircle = function (blockId, elementId, x, y, radius) {
                            'radius': Number(radius) });
 };
 
+exports.canvasSetLineWidth = function (blockId, elementId, width) {
+  return Webapp.executeCmd(String(blockId),
+                          'canvasSetLineWidth',
+                          {'elementId': elementId,
+                           'width': Number(width) });
+};
+
+exports.canvasSetStrokeColor = function (blockId, elementId, color) {
+  return Webapp.executeCmd(String(blockId),
+                          'canvasSetStrokeColor',
+                          {'elementId': elementId,
+                           'color': color });
+};
+
+exports.canvasSetFillColor = function (blockId, elementId, color) {
+  return Webapp.executeCmd(String(blockId),
+                          'canvasSetFillColor',
+                          {'elementId': elementId,
+                           'color': color });
+};
+
 exports.canvasClear = function (blockId, elementId) {
   return Webapp.executeCmd(String(blockId),
                           'canvasClear',
@@ -9469,6 +9511,13 @@ exports.canvasClear = function (blockId, elementId) {
 exports.createTextInput = function (blockId, elementId, text) {
   return Webapp.executeCmd(String(blockId),
                           'createTextInput',
+                          {'elementId': elementId,
+                           'text': text });
+};
+
+exports.createTextLabel = function (blockId, elementId, text) {
+  return Webapp.executeCmd(String(blockId),
+                          'createTextLabel',
                           {'elementId': elementId,
                            'text': text });
 };
@@ -9484,6 +9533,13 @@ exports.setText = function (blockId, elementId, text) {
                           'setText',
                           {'elementId': elementId,
                            'text': text });
+};
+
+exports.setParent = function (blockId, elementId, parentId) {
+  return Webapp.executeCmd(String(blockId),
+                          'setParent',
+                          {'elementId': elementId,
+                           'parentId': parentId });
 };
 
 exports.setStyle = function (blockId, elementId, style) {
@@ -9654,18 +9710,34 @@ levels.ec_simple = {
   'codeFunctions': [
     {'func': 'createButton', 'params': ["'id'", "'text'"] },
     {'func': 'createTextInput', 'params': ["'id'", "'text'"] },
-    {'func': 'getText', 'params': ["'id'"], 'category': 'value' },
+    {'func': 'createTextLabel', 'params': ["'id'", "'text'"] },
+    {'func': 'getText', 'params': ["'id'"], 'type': 'value' },
     {'func': 'setText', 'params': ["'id'", "'text'"] },
+    {'func': 'setParent', 'params': ["'id'", "'parentId'"] },
+    {'func': 'setPosition', 'params': ["'id'", "0", "0", "100", "100"] },
     {'func': 'setStyle', 'params': ["'id'", "'color:red;'"] },
     {'func': 'createHtmlBlock', 'params': ["'id'", "'html'"] },
     {'func': 'replaceHtmlBlock', 'params': ["'id'", "'html'"] },
     {'func': 'deleteHtmlBlock', 'params': ["'id'"] },
-    {'func': 'createCanvas', 'params': ["'id'"] },
-    {'func': 'canvasDrawLine', 'params': ["'id'", "0", "0", "400", "400"] },
-    {'func': 'canvasDrawCircle', 'params': ["'id'", "200", "200", "100"] },
-    {'func': 'canvasClear', 'params': ["'id'"] },
     {'func': 'attachEventHandler', 'params': ["'id'", "'click'", "function() {\n  \n}"] },
+    {'func': 'createCanvas', 'category': 'Canvas', 'params': ["'id'", "400", "400"] },
+    {'func': 'canvasDrawLine', 'category': 'Canvas', 'params': ["'id'", "0", "0", "400", "400"] },
+    {'func': 'canvasDrawCircle', 'category': 'Canvas', 'params': ["'id'", "200", "200", "100"] },
+    {'func': 'canvasSetLineWidth', 'category': 'Canvas', 'params': ["'id'", "3"] },
+    {'func': 'canvasSetStrokeColor', 'category': 'Canvas', 'params': ["'id'", "'red'"] },
+    {'func': 'canvasSetFillColor', 'category': 'Canvas', 'params': ["'id'", "'yellow'"] },
+    {'func': 'canvasClear', 'category': 'Canvas', 'params': ["'id'"] },
   ],
+  'categoryInfo': {
+    'Canvas': {
+      'color': 'yellow',
+      'blocks': []
+    },
+    'Actions': {
+      'color': 'blue',
+      'blocks': []
+    },
+  },
 };
 
 levels.full_sandbox =  {
@@ -9919,8 +9991,8 @@ var Keycodes = {
 
 function onDebugInputKeyDown(e) {
   if (e.keyCode == Keycodes.ENTER) {
-    var input = event.target.textContent;
-    event.target.textContent = '';
+    var input = e.target.textContent;
+    e.target.textContent = '';
     outputWebappConsole('> ' + input);
     if (Webapp.interpreter) {
       var currentScope = Webapp.interpreter.getScope();
@@ -10823,10 +10895,16 @@ Webapp.callCmd = function (cmd) {
     case 'createCanvas':
     case 'canvasDrawLine':
     case 'canvasDrawCircle':
+    case 'canvasSetLineWidth':
+    case 'canvasSetStrokeColor':
+    case 'canvasSetFillColor':
     case 'canvasClear':
     case 'createTextInput':
+    case 'createTextLabel':
     case 'getText':
     case 'setText':
+    case 'setPosition':
+    case 'setParent':
     case 'setStyle':
     case 'attachEventHandler':
       BlocklyApps.highlight(cmd.id);
@@ -10861,12 +10939,22 @@ Webapp.createCanvas = function (opts) {
   var divWebapp = document.getElementById('divWebapp');
 
   var newElement = document.createElement("canvas");
-  newElement.id = opts.elementId;
-  // TODO: support creating canvas elements of different sizes
-  newElement.width = 400 * Webapp.canvasScale;
-  newElement.height = 400 * Webapp.canvasScale;
+  var ctx = newElement.getContext("2d");
+  if (newElement && ctx) {
+    newElement.id = opts.elementId;
+    // default width/height if params are missing
+    var width = opts.width || 400;
+    var height = opts.height || 400;
+    newElement.width = width * Webapp.canvasScale;
+    newElement.height = height * Webapp.canvasScale;
+    newElement.style.width = width + 'px';
+    newElement.style.height = height + 'px';
+    // set transparent fill by default:
+    ctx.fillStyle = "rgba(255, 255, 255, 0)";
 
-  return Boolean(divWebapp.appendChild(newElement));
+    return Boolean(divWebapp.appendChild(newElement));
+  }
+  return false;
 };
 
 Webapp.canvasDrawLine = function (opts) {
@@ -10893,7 +10981,41 @@ Webapp.canvasDrawCircle = function (opts) {
             opts.radius * Webapp.canvasScale,
             0,
             2 * Math.PI);
+    ctx.fill();
     ctx.stroke();
+  }
+  return false;
+};
+
+Webapp.canvasSetLineWidth = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var div = document.getElementById(opts.elementId);
+  var ctx = div.getContext("2d");
+  if (ctx && divWebapp.contains(div)) {
+    ctx.lineWidth = opts.width * Webapp.canvasScale;
+    return true;
+  }
+  return false;
+};
+
+Webapp.canvasSetStrokeColor = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var div = document.getElementById(opts.elementId);
+  var ctx = div.getContext("2d");
+  if (ctx && divWebapp.contains(div)) {
+    ctx.strokeStyle = String(opts.color);
+    return true;
+  }
+  return false;
+};
+
+Webapp.canvasSetFillColor = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var div = document.getElementById(opts.elementId);
+  var ctx = div.getContext("2d");
+  if (ctx && divWebapp.contains(div)) {
+    ctx.fillStyle = String(opts.color);
+    return true;
   }
   return false;
 };
@@ -10904,6 +11026,7 @@ Webapp.canvasClear = function (opts) {
   var ctx = div.getContext("2d");
   if (ctx && divWebapp.contains(div)) {
     ctx.clearRect(0, 0, div.width, div.height);
+    return true;
   }
   return false;
 };
@@ -10918,20 +11041,39 @@ Webapp.createTextInput = function (opts) {
   return Boolean(divWebapp.appendChild(newInput));
 };
 
+Webapp.createTextLabel = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+
+  var newLabel = document.createElement("label");
+  var textNode = document.createTextNode(opts.text);
+  newLabel.id = opts.elementId;
+
+  return Boolean(newLabel.appendChild(textNode) &&
+                 divWebapp.appendChild(newLabel));
+};
+
 Webapp.getText = function (opts) {
   var divWebapp = document.getElementById('divWebapp');
-  var div = document.getElementById(opts.elementId);
-  if (divWebapp.contains(div)) {
-    return String(div.value);
+  var element = document.getElementById(opts.elementId);
+  if (divWebapp.contains(element)) {
+    if (element.tagName === 'INPUT') {
+      return String(element.value);
+    } else {
+      return element.innerText;
+    }
   }
   return false;
 };
 
 Webapp.setText = function (opts) {
   var divWebapp = document.getElementById('divWebapp');
-  var div = document.getElementById(opts.elementId);
-  if (divWebapp.contains(div)) {
-    div.value = opts.text;
+  var element = document.getElementById(opts.elementId);
+  if (divWebapp.contains(element)) {
+    if (element.tagName === 'INPUT') {
+      element.value = opts.text;
+    } else {
+      element.innerText = opts.text;
+    }
   }
   return false;
 };
@@ -10944,7 +11086,7 @@ Webapp.replaceHtmlBlock = function (opts) {
     newDiv.id = opts.elementId;
     newDiv.innerHTML = opts.html;
 
-    return Boolean(divWebapp.replaceChild(newDiv, oldDiv));
+    return Boolean(oldDiv.parentElement.replaceChild(newDiv, oldDiv));
   }
   return false;
 };
@@ -10953,7 +11095,7 @@ Webapp.deleteHtmlBlock = function (opts) {
   var divWebapp = document.getElementById('divWebapp');
   var div = document.getElementById(opts.elementId);
   if (divWebapp.contains(div)) {
-    return Boolean(divWebapp.removeChild(div));
+    return Boolean(div.parentElement.removeChild(div));
   }
   return false;
 };
@@ -10962,7 +11104,32 @@ Webapp.setStyle = function (opts) {
   var divWebapp = document.getElementById('divWebapp');
   var div = document.getElementById(opts.elementId);
   if (divWebapp.contains(div)) {
-    div.style.cssText = opts.style;
+    div.style.cssText += opts.style;
+    return true;
+  }
+  return false;
+};
+
+Webapp.setParent = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var div = document.getElementById(opts.elementId);
+  var divNewParent = document.getElementById(opts.parentId);
+  if (divWebapp.contains(div) && divWebapp.contains(divNewParent)) {
+    return Boolean(div.parentElement.removeChild(div) &&
+                   divNewParent.appendChild(div));
+  }
+  return false;
+};
+
+Webapp.setPosition = function (opts) {
+  var divWebapp = document.getElementById('divWebapp');
+  var div = document.getElementById(opts.elementId);
+  if (divWebapp.contains(div)) {
+    div.style.position = 'absolute';
+    div.style.left = String(opts.left) + 'px';
+    div.style.top = String(opts.top) + 'px';
+    div.style.width = String(opts.width) + 'px';
+    div.style.height = String(opts.height) + 'px';
     return true;
   }
   return false;
@@ -11378,6 +11545,8 @@ exports.showCodeHeader = function(d){return "Ipakita ang Code"};
 exports.showBlocksHeader = function(d){return "Show Blocks"};
 
 exports.showGeneratedCode = function(d){return "Ipakita ang Code"};
+
+exports.stringEquals = function(d){return "string=?"};
 
 exports.subtitle = function(d){return "isang visual programming na environment"};
 

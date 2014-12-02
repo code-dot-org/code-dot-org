@@ -436,7 +436,7 @@ BlocklyApps.init = function(config) {
     // Enable param & var editing in levelbuilder, regardless of level setting
     config.level.disableParamEditing = false;
     config.level.disableVariableEditing = false;
-  } else if (!BlocklyApps.noPadding) {
+  } else if (!config.hide_source) {
     visualizationColumn.style.minHeight =
         BlocklyApps.MIN_WORKSPACE_HEIGHT + 'px';
   }
@@ -471,7 +471,8 @@ BlocklyApps.init = function(config) {
           phone_share_url: config.send_to_phone_url
         },
         sendToPhone: config.sendToPhone,
-        twitter: config.twitter
+        twitter: config.twitter,
+        onMainPage: true
       }));
 
       dom.addClickTouchEvent(openWorkspace, function() {
@@ -532,7 +533,7 @@ BlocklyApps.init = function(config) {
       if (BlocklyApps.noPadding) {
         upSale.style.marginLeft = '10px';
       }
-    } else if (!dom.isMobile()) {
+    } else {
       upSale.innerHTML = require('./templates/learn.html')();
     }
     belowViz.appendChild(upSale);
@@ -684,7 +685,8 @@ BlocklyApps.init = function(config) {
       BlocklyApps.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
         mode: 'javascript',
         modeOptions: utils.generateDropletModeOptions(config.level.codeFunctions),
-        palette: utils.generateDropletPalette(config.level.codeFunctions)
+        palette: utils.generateDropletPalette(config.level.codeFunctions,
+                                              config.level.categoryInfo)
       });
 
       if (config.afterInject) {
@@ -8971,7 +8973,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/tr_tr/common') ; buf.push('\n\n');3; var root = location.protocol + '//' + location.host.replace('learn\.', ''); 
+ buf.push('');1; var msg = require('../../locale/tr_tr/common') ; buf.push('\n\n');3; var root = location.protocol + '//' + location.host.replace('learn\.', '').replace('studio\.', ''); 
 ; buf.push('\n\n<div id="learn">\n\n  <h1><a href="', escape((7,  root )), '">', escape((7,  msg.wantToLearn() )), '</a></h1>\n  <a href="', escape((8,  root )), '"><img id="learn-to-code" src="', escape((8,  BlocklyApps.assetUrl('media/promo.png') )), '"></a>\n  <a href="', escape((9,  root )), '">', escape((9,  msg.watchVideo() )), '</a>\n  <a href="', escape((10,  root )), '">', escape((10,  msg.tryHOC() )), '</a>\n  <a href="', escape((11,  location.protocol + '//' + location.host 
 )), '">', escape((11,  msg.signup() )), '</a>\n\n</div>\n'); })();
 } 
@@ -9083,7 +9085,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../../locale/tr_tr/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n  <div class="social-buttons">\n  <button id="print-button">\n    ', escape((11,  msg.print() )), '\n  </button>\n');13; if (options.alreadySaved) { ; buf.push('\n  <button class="saved-to-gallery" disabled>\n    ', escape((15,  msg.savedToGallery() )), '\n  </button>\n');17; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((19,  msg.saveToGallery() )), '\n  </button>\n');21; } ; buf.push('\n  </div>\n\n');24; if (options.response && options.response.level_source) { ; buf.push('\n  ');25; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((26,  options.appStrings.sharingText )), '</div>\n  ');27; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((30,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');34; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((34,  options.facebookUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((35,  BlocklyApps.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');37; }; buf.push('\n    ');38; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((38,  options.twitterUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((39,  BlocklyApps.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');41; }; buf.push('    ');41; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((42,  BlocklyApps.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');44; }; buf.push('  </div>\n');45; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n'); })();
+ buf.push('');1; var msg = require('../../locale/tr_tr/common'); ; buf.push('\n');2; if (options.feedbackImage) { ; buf.push('\n  <div class="sharing">\n    <img class="feedback-image" src="', escape((4,  options.feedbackImage )), '">\n  </div>\n');6; } ; buf.push('\n\n<div class="sharing">\n  <div class="social-buttons">\n  ');10; if (!options.onMainPage) { ; buf.push('\n    <button id="print-button">\n      ', escape((12,  msg.print() )), '\n    </button>\n  ');14; } ; buf.push('\n');15; if (options.alreadySaved) { ; buf.push('\n  <button class="saved-to-gallery" disabled>\n    ', escape((17,  msg.savedToGallery() )), '\n  </button>\n');19; } else if (options.saveToGalleryUrl) { ; buf.push('\n  <button id="save-to-gallery-button" class="launch">\n    ', escape((21,  msg.saveToGallery() )), '\n  </button>\n');23; } ; buf.push('\n  </div>\n\n');26; if (options.response && options.response.level_source) { ; buf.push('\n  ');27; if (options.appStrings && options.appStrings.sharingText) { ; buf.push('\n    <div>', escape((28,  options.appStrings.sharingText )), '</div>\n  ');29; } ; buf.push('\n\n  <div>\n    <input type="text" id="sharing-input" value=', escape((32,  options.response.level_source )), ' readonly>\n  </div>\n\n  <div class=\'social-buttons\'>\n    ');36; if (options.facebookUrl) {; buf.push('      <a href=\'', escape((36,  options.facebookUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((37,  BlocklyApps.assetUrl("media/facebook_purple.png") )), '\' />\n      </a>\n    ');39; }; buf.push('\n    ');40; if (options.twitterUrl) {; buf.push('      <a href=\'', escape((40,  options.twitterUrl )), '\' target="_blank" class="popup-window">\n        <img src=\'', escape((41,  BlocklyApps.assetUrl("media/twitter_purple.png") )), '\' />\n      </a>\n    ');43; }; buf.push('    ');43; if (options.sendToPhone) {; buf.push('      <a id="sharing-phone" href="" onClick="return false;">\n        <img src=\'', escape((44,  BlocklyApps.assetUrl("media/phone_purple.png") )), '\' />\n      </a>\n    ');46; }; buf.push('  </div>\n');47; } ; buf.push('\n</div>\n<div id="send-to-phone" class="sharing" style="display: none">\n  <label for="phone">Enter a US phone number:</label>\n  <input type="text" id="phone" name="phone" />\n  <button id="phone-submit" onClick="return false;">Send</button>\n  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -10367,7 +10369,7 @@ exports.install = function(blockly, blockInstallOptions) {
   generator.jump_by_constant = function() {
     // Generate JavaScript for moving forward or backward the internal number
     // of pixels without drawing.
-    var value = window.parseFloat(this.getTitleValue('VALUE'));
+    var value = window.parseFloat(this.getTitleValue('VALUE')) || 0;
     return 'Turtle.' + this.getTitleValue('DIR') +
         '(' + value + ', \'block_id_' + this.id + '\');\n';
   };
@@ -12497,15 +12499,17 @@ exports.load = function (assetUrl, id) {
 
   var CONFIGS = {
     anna: {
+      // slider speed gets divided by this value
+      speedModifier: 10,
       turtleNumFrames: 10,
       smoothAnimate: true,
       consolidateTurnAndMove: true,
       annaLine: skin.assetUrl('annaline.png'),
       annaLine_2x: skin.assetUrl('annaline_2x.png')
-
     },
 
     elsa: {
+      speedModifier: 10,
       turtleNumFrames: 20,
       decorationAnimationNumFrames: 19,
       smoothAnimate: true,
@@ -12516,6 +12520,9 @@ exports.load = function (assetUrl, id) {
   };
 
   var config = CONFIGS[skin.id];
+
+  // base skin properties here (can be overriden by CONFIG)
+  skin.speedModifier = 1;
 
   // Get properties from config
   var isAsset = /\.\S{3}$/; // ends in dot followed by three non-whitespace chars
@@ -12776,6 +12783,9 @@ var CANVAS_WIDTH = 400;
 
 var JOINT_RADIUS = 4;
 
+var SMOOTH_ANIMATE_STEP_SIZE = 5;
+var FAST_SMOOTH_ANIMATE_STEP_SIZE = 15;
+
 /**
  * Minimum joint segment length
  */
@@ -13025,7 +13035,7 @@ Turtle.drawLogOnCanvas = function(log, canvas) {
   while (log.length) {
     var tuple = log.shift();
     Turtle.step(tuple[0], tuple.splice(1), {smoothAnimate: false});
-    clearTuple();
+    resetStepInfo();
   }
   canvas.globalCompositeOperation = 'copy';
   canvas.drawImage(Turtle.ctxScratch.canvas, 0, 0);
@@ -13174,7 +13184,7 @@ Turtle.drawTurtle = function() {
       sourceX * retina + sourceWidth  * retina -0 > Turtle.avatarImage.width ||
       sourceY * retina + sourceHeight * retina > Turtle.avatarImage.height)
   {
-    if (console.log) {
+    if (console && console.log) {
       console.log("drawImage is out of source bounds!");
     }
     return;
@@ -13333,14 +13343,18 @@ BlocklyApps.reset = function(ignore) {
   // Stop the looping sound.
   BlocklyApps.stopLoopingAudio('start');
 
-  clearTuple();
+  resetStepInfo();
 };
 
-function clearTuple()
-{
+/**
+ * When smooth animate is true, steps can be broken up into multiple animations.
+ * At the end of each step, we want to reset any incremental information, which
+ * is what this does.
+ */
+function resetStepInfo() {
   Turtle.stepStartX = Turtle.x;
   Turtle.stepStartY = Turtle.y;
-  jumpDistanceCovered = 0;
+  Turtle.stepDistanceCovered = 0;
 }
 
 
@@ -13401,6 +13415,7 @@ BlocklyApps.runButtonClick = function() {
   }
   BlocklyApps.attempts++;
   Turtle.execute();
+
 };
 
 Turtle.evalCode = function(code) {
@@ -13478,11 +13493,6 @@ Turtle.execute = function() {
   }
 };
 
-// Divide each jump into substeps so that we can animate every movement.
-var jumpDistance = 5;
-var jumpDistanceCovered;
-
-
 /**
  * Special case: if we have a turn, followed by a move forward, then we can just
  * do the turn instantly and then begin the move forward in the same frame.
@@ -13517,7 +13527,6 @@ function checkforTurnAndMove() {
  * Attempt to execute one command from the log of API commands.
  */
 function executeTuple () {
-
   if (api.log.length === 0) {
     return false;
   }
@@ -13545,7 +13554,7 @@ function executeTuple () {
 
     if (tupleDone) {
       api.log.shift();
-      clearTuple();
+      resetStepInfo();
     }
   } while (executeSecondTuple);
 
@@ -13567,8 +13576,17 @@ function finishExecution () {
  * Iterate through the recorded path and animate the turtle's actions.
  */
 Turtle.animate = function() {
+
   // All tasks should be complete now.  Clean up the PID list.
   Turtle.pid = 0;
+
+  // Scale the speed non-linearly, to give better precision at the fast end.
+  var stepSpeed = 1000 * Math.pow(1 - Turtle.speedSlider.getValue(), 2) / skin.speedModifier;
+
+  // when smoothAnimate is true, we divide long steps into partitions of this
+  // size.
+  Turtle.smoothAnimateStepSize = (stepSpeed === 0 ?
+    FAST_SMOOTH_ANIMATE_STEP_SIZE : SMOOTH_ANIMATE_STEP_SIZE);
 
   if (level.editCode) {
     var stepped = true;
@@ -13605,49 +13623,44 @@ Turtle.animate = function() {
     }
   }
 
-  // Scale the speed non-linearly, to give better precision at the fast end.
-  var stepSpeed = 1000 * Math.pow(1 - Turtle.speedSlider.getValue(), 2);
-  if (skin.id == "anna" || skin.id == "elsa")
-  {
-    stepSpeed /= 10;
-  }
   Turtle.pid = window.setTimeout(Turtle.animate, stepSpeed);
 };
 
-
-Turtle.doSmoothAnimate = function(options, distance)
-{
+Turtle.calculateSmoothAnimate = function(options, distance) {
   var tupleDone = true;
+  var stepDistanceCovered = Turtle.stepDistanceCovered;
 
-  if (options && options.smoothAnimate)
-  {
+  if (options && options.smoothAnimate) {
     var fullDistance = distance;
+    var smoothAnimateStepSize = Turtle.smoothAnimateStepSize;
 
     if (fullDistance < 0) {
       // Going backward.
-      if (jumpDistanceCovered - jumpDistance <= fullDistance) {
+      if (stepDistanceCovered - smoothAnimateStepSize <= fullDistance) {
         // clamp at maximum
-        distance = fullDistance - jumpDistanceCovered;
-        jumpDistanceCovered = fullDistance;
+        distance = fullDistance - stepDistanceCovered;
+        stepDistanceCovered = fullDistance;
       } else {
-        distance = -jumpDistance;
-        jumpDistanceCovered -= jumpDistance;
+        distance = -smoothAnimateStepSize;
+        stepDistanceCovered -= smoothAnimateStepSize;
         tupleDone = false;
       }
 
     } else {
       // Going foward.
-      if (jumpDistanceCovered + jumpDistance >= fullDistance) {
+      if (stepDistanceCovered + smoothAnimateStepSize >= fullDistance) {
         // clamp at maximum
-        distance = fullDistance - jumpDistanceCovered;
-        jumpDistanceCovered = fullDistance;
+        distance = fullDistance - stepDistanceCovered;
+        stepDistanceCovered = fullDistance;
       } else {
-        distance = jumpDistance;
-        jumpDistanceCovered += jumpDistance;
+        distance = smoothAnimateStepSize;
+        stepDistanceCovered += smoothAnimateStepSize;
         tupleDone = false;
       }
     }
   }
+
+  Turtle.stepDistanceCovered = stepDistanceCovered;
 
   return { tupleDone: tupleDone, distance: distance };
 };
@@ -13668,20 +13681,20 @@ Turtle.step = function(command, values, options) {
   switch (command) {
     case 'FD':  // Forward
       distance = values[0];
-      result = Turtle.doSmoothAnimate(options, distance);
+      result = Turtle.calculateSmoothAnimate(options, distance);
       tupleDone = result.tupleDone;
       Turtle.moveForward_(result.distance);
       break;
     case 'JF':  // Jump forward
       distance = values[0];
-      result = Turtle.doSmoothAnimate(options, distance);
+      result = Turtle.calculateSmoothAnimate(options, distance);
       tupleDone = result.tupleDone;
       Turtle.jumpForward_(result.distance);
       break;
     case 'MV':  // Move (direction)
       distance = values[0];
       heading = values[1];
-      result = Turtle.doSmoothAnimate(options, distance);
+      result = Turtle.calculateSmoothAnimate(options, distance);
       tupleDone = result.tupleDone;
       Turtle.setHeading_(heading);
       Turtle.moveForward_(result.distance);
@@ -13689,14 +13702,14 @@ Turtle.step = function(command, values, options) {
     case 'JD':  // Jump (direction)
       distance = values[0];
       heading = values[1];
-      result = Turtle.doSmoothAnimate(options, distance);
+      result = Turtle.calculateSmoothAnimate(options, distance);
       tupleDone = result.tupleDone;
       Turtle.setHeading_(heading);
       Turtle.jumpForward_(result.distance);
       break;
     case 'RT':  // Right Turn
       distance = values[0];
-      result = Turtle.doSmoothAnimate(options, distance);
+      result = Turtle.calculateSmoothAnimate(options, distance);
       tupleDone = result.tupleDone;
       Turtle.turnByDegrees_(result.distance);
       break;
@@ -13816,7 +13829,7 @@ Turtle.moveForward_ = function (distance) {
     return;
   }
   if (Turtle.isDrawingWithPattern) {
-    Turtle.drawForwardWithPattern_(distance);
+    Turtle.drawForwardLineWithPattern_(distance);
 
     // Frozen gets both a pattern and a line over the top of it.
     if (skin.id != "elsa" && skin.id != "anna") {
@@ -13833,11 +13846,6 @@ Turtle.drawForward_ = function (distance) {
   } else {
     Turtle.drawForwardLine_(distance);
   }
-};
-
-Turtle.drawForwardWithPattern_ = function (distance) {
-  //TODO: deal with drawing joints, if appropriate
-  Turtle.drawForwardLineWithPattern_(distance);
 };
 
 /**
@@ -13894,20 +13902,25 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
     startX = Turtle.stepStartX;
     startY = Turtle.stepStartY;
 
-    var lineDistance = Math.abs(jumpDistanceCovered);
+    var lineDistance = Math.abs(Turtle.stepDistanceCovered);
 
     Turtle.ctxPattern.save();
     Turtle.ctxPattern.translate(startX * retina, startY * retina);
-    Turtle.ctxPattern.rotate(Math.PI * (Turtle.heading - 90) / 180); // increment the angle and rotate the image.
-                                                                     // Need to subtract 90 to accomodate difference in canvas
-                                                                     // vs. Turtle direction
+    // increment the angle and rotate the image.
+    // Need to subtract 90 to accomodate difference in canvas vs. Turtle direction
+    Turtle.ctxPattern.rotate(Math.PI * (Turtle.heading - 90) / 180);
+
+    var clipSize = Math.min(Turtle.smoothAnimateStepSize, lineDistance);
 
     if (img.width !== 0) {
       Turtle.ctxPattern.drawImage(img,
-        Math.round(lineDistance * retina), 0,        // Start point for clipping image
-        jumpDistance * retina, img.height,           // clip region size
-        Math.round((jumpDistanceCovered - 7) * retina), Math.round((- 18) * retina),      // draw location relative to the ctx.translate point pre-rotation
-        jumpDistance * retina, img.height);
+        // Start point for clipping image
+        Math.round(lineDistance * retina), 0,
+        // clip region size
+        clipSize * retina, img.height,
+        // some mysterious hand-tweaking done by Brendan
+        Math.round((Turtle.stepDistanceCovered - 7) * retina), Math.round((- 18) * retina),
+        clipSize * retina, img.height);
     }
 
     Turtle.ctxPattern.restore();
@@ -13922,14 +13935,18 @@ Turtle.drawForwardLineWithPattern_ = function (distance) {
     Turtle.jumpForward_(distance);
     Turtle.ctxScratch.save();
     Turtle.ctxScratch.translate(startX, startY);
-    Turtle.ctxScratch.rotate(Math.PI * (Turtle.heading - 90) / 180); // increment the angle and rotate the image.
-                                                                     // Need to subtract 90 to accomodate difference in canvas
-                                                                     // vs. Turtle direction
+    // increment the angle and rotate the image.
+    // Need to subtract 90 to accomodate difference in canvas vs. Turtle direction
+    Turtle.ctxScratch.rotate(Math.PI * (Turtle.heading - 90) / 180);
+
     if (img.width !== 0) {
       Turtle.ctxScratch.drawImage(img,
-        0, 0,                                 // Start point for clipping image
-        distance+img.height / 2, img.height,  // clip region size
-        -img.height / 4, -img.height / 2,     // draw location relative to the ctx.translate point pre-rotation
+        // Start point for clipping image
+        0, 0,
+        // clip region size
+        distance+img.height / 2, img.height,
+        // draw location relative to the ctx.translate point pre-rotation
+        -img.height / 4, -img.height / 2,
         distance+img.height / 2, img.height);
     }
 
@@ -14321,7 +14338,7 @@ exports.generateCodeAliases = function (codeFunctions, parentObjName) {
 /**
  * Generate a palette for the droplet editor based on some level data.
  */
-exports.generateDropletPalette = function (codeFunctions) {
+exports.generateDropletPalette = function (codeFunctions, categoryInfo) {
   // TODO: figure out localization for droplet scenario
   var palette = [
     {
@@ -14411,14 +14428,16 @@ exports.generateDropletPalette = function (codeFunctions) {
     }
   ];
 
-  var appPaletteCategory = {
-    name: 'Actions',
-    color: 'blue',
-    blocks: []
+  var defCategoryInfo = {
+    'Actions': {
+      'color': 'blue',
+      'blocks': []
+    }
   };
+  categoryInfo = categoryInfo || defCategoryInfo;
 
   if (codeFunctions) {
-    for (var i = 0, blockIndex = 0; i < codeFunctions.length; i++) {
+    for (var i = 0; i < codeFunctions.length; i++) {
       var cf = codeFunctions[i];
       if (cf.category === 'hidden') {
         continue;
@@ -14437,12 +14456,14 @@ exports.generateDropletPalette = function (codeFunctions) {
         block: block,
         title: cf.func
       };
-      appPaletteCategory.blocks[blockIndex] = blockPair;
-      blockIndex++;
+      categoryInfo[cf.category || 'Actions'].blocks.push(blockPair);
     }
   }
 
-  palette.unshift(appPaletteCategory);
+  for (var category in categoryInfo) {
+    categoryInfo[category].name = category;
+    palette.unshift(categoryInfo[category]);
+  }
 
   return palette;
 };
@@ -14468,10 +14489,13 @@ exports.generateDropletModeOptions = function (codeFunctions) {
 
   if (codeFunctions) {
     for (var i = 0; i < codeFunctions.length; i++) {
-      if (codeFunctions[i].category === 'value') {
+      if (codeFunctions[i].type === 'value') {
         modeOptions.valueFunctions.push(codeFunctions[i].func);
       }
-      else if (codeFunctions[i].category !== 'hidden') {
+      else if (codeFunctions[i].type === 'either') {
+        modeOptions.eitherFunctions.push(codeFunctions[i].func);
+      }
+      else if (codeFunctions[i].type !== 'hidden') {
         modeOptions.blockFunctions.push(codeFunctions[i].func);
       }
     }
@@ -14617,6 +14641,8 @@ exports.showCodeHeader = function(d){return "Kodu Görüntüle"};
 exports.showBlocksHeader = function(d){return "Show Blocks"};
 
 exports.showGeneratedCode = function(d){return "Kodu Görüntüle"};
+
+exports.stringEquals = function(d){return "string=?"};
 
 exports.subtitle = function(d){return "Bir görsel programa ortamı"};
 

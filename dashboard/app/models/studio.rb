@@ -293,6 +293,7 @@ class Studio < Grid
   <block type="functional_greater_than" />
   <block type="functional_less_than" />
   <block type="functional_number_equals" />
+  <block type="functional_string_equals" />
   <block type="functional_logical_and" />
   <block type="functional_logical_or" />
   <block type="functional_logical_not" />
