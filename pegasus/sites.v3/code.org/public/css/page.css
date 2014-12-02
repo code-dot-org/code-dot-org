@@ -226,6 +226,12 @@ a.level_link:link, a.level_link:visited, a.level_link:hover, a.level_link:active
   margin-left: 40px;
 }
 
+.miniblock a:link,
+.miniblock a:visited,
+.miniblock a:hover,
+.miniblock a:active {
+  color: #fff;
+}
 
 /* End of duplicated from dashboard for included mini blocks. */
 
@@ -247,6 +253,7 @@ a.level_link:link, a.level_link:visited, a.level_link:hover, a.level_link:active
 .miniblock h3 {
   font-size: 24.5px;
   font-family: 'Gotham 5r', sans-serif;
+  color: #fff;
 }
 
 .miniblock .betatext {

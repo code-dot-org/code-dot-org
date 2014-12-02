@@ -266,10 +266,17 @@ th {
   padding-top: 30px;
   min-height: 100px;
   @media screen and (max-width: 1150px) {
+    padding-top: 15px;
+    &.feedback-bug-links {
+      padding-top: 30px;
+    }
     min-height: 70px;
   }
-  @media screen and (max-width: 900px) {
-    padding-top: 0
+  @media screen and (max-device-width: 900px) {
+    padding-top: 15px;
+    &.feedback-bug-links {
+      padding-top: 30px;
+    }
   }
 }
 
@@ -1030,7 +1037,7 @@ a.download-video {
 
   .row.navcontainer {
     margin: 30px 0 10px -20px;
-    background-color: rgb(88, 103, 113);
+    background-color: #eee;
   }  
 
   ul.nav.nav-pills {

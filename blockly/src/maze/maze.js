@@ -1054,7 +1054,9 @@ Maze.execute = function(stepMode) {
   // Set testResults unless app-specific results were set in the default
   // branch of the above switch statement.
   if (Maze.testResults === BlocklyApps.TestResults.NO_TESTS_RUN) {
-    Maze.testResults = BlocklyApps.getTestResults(levelComplete);
+    Maze.testResults = BlocklyApps.getTestResults(levelComplete, {
+      level: level
+    });
   }
 
   var program;

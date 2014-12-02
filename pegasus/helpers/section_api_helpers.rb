@@ -301,11 +301,11 @@ class DashboardSection
   end
 
   def add_students(students)
-    DASHBOARD_DB.transaction do
-      student_ids = students.map{|i| add_student(i)}
-      DashboardUserScript.assign_script_to_section(@row[:script_id], @row[:id]) if @row[:script_id]
-      return student_ids
+    student_ids = DASHBOARD_DB.transaction do
+      students.map{|i| add_student(i)}
     end
+    DashboardUserScript.assign_script_to_users(@row[:script_id], student_ids) if @row[:script_id] && !student_ids.blank?
+    return student_ids
   end
 
   def remove_student(student_id)
@@ -437,6 +437,19 @@ class DashboardUserScript
       where(user_id: DASHBOARD_DB[:followers].
                select(:student_user_id).
                where(section_id: section_id)).
+      and(script_id: script_id).
+      update(assigned_at: DateTime.now)
+  end
+
+  def self.assign_script_to_users(script_id, user_ids)
+    return if user_ids.empty?
+    # create userscripts for users that don't have one yet
+    DASHBOARD_DB[:user_scripts].
+      insert_ignore.
+      import([:user_id, :script_id], user_ids.zip([script_id] * user_ids.count))
+
+    DASHBOARD_DB[:user_scripts].
+      where(user_id: user_ids).
       and(script_id: script_id).
       update(assigned_at: DateTime.now)
   end

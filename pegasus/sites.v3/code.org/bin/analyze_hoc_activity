@@ -114,7 +114,7 @@ def main()
     countries: total_countries,
   }
 
-  lines_of_code = (PROPERTIES.get(:metrics)||{'lines_of_code'=>0})['lines_of_code']
+  lines_of_code = rack_env?(:production) ? `#{deploy_dir('bin','count-lines-of-code-from-milestone-logs')}`.to_i : 0
 
   time = DateTime.now
   PROPERTIES.set :metrics, {
