@@ -8573,7 +8573,11 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       }
     };
     hook('mousedown', 10, function() {
-      return this.dropletElement.focus();
+      var x, y;
+      x = document.body.scrollLeft;
+      y = document.body.scrollTop;
+      this.dropletElement.focus();
+      return window.scrollTo(x, y);
     });
     hook('populate', 0, function() {
       this.undoStack = [];
@@ -8905,7 +8909,6 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       if (this.draggingBlock != null) {
         position = new this.draw.Point(point.x + this.draggingOffset.x, point.y + this.draggingOffset.y);
         rect = this.wrapperElement.getBoundingClientRect();
-        console.log(position.x - this.wrapperElement.getBoundingClientRect().left, position.y - this.wrapperElement.getBoundingClientRect().top);
         this.dragCanvas.style.top = "" + (position.y - rect.top) + "px";
         this.dragCanvas.style.left = "" + (position.x - rect.left) + "px";
         mainPoint = this.trackerPointToMain(position);
@@ -11584,10 +11587,13 @@ if(i=this.variable instanceof Z){if(this.variable.isArray()||this.variable.isObj
       })(this));
     });
     hook('keydown', 0, function(event, state) {
-      var _ref1;
+      var x, y, _ref1;
       if (_ref1 = event.which, __indexOf.call(command_modifiers, _ref1) >= 0) {
         if (this.textFocus == null) {
+          x = document.body.scrollLeft;
+          y = document.body.scrollTop;
           this.copyPasteInput.focus();
+          window.scrollTo(x, y);
           if (this.lassoSegment != null) {
             this.copyPasteInput.value = this.lassoSegment.stringify(this.mode.empty);
           }
