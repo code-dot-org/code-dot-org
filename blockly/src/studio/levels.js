@@ -701,11 +701,12 @@ levels.playlab_7 = {
   goal: {
     successCondition: function () {
       // successful after a given period of time as long as we've used all
-      // required blocks
-      return Studio.tickCount === 375;
+      // required blocks. this number has us go back and forth twice, and end
+      // facing forward
+      return Studio.tickCount === 252;
     },
   },
-  timeoutFailureTick: 376,
+  timeoutFailureTick: 253,
   minWorkspaceHeight: 800,
   toolbox: tb(
     '<block type="studio_moveDistance"><title name="DIR">1</title><title name="DISTANCE">400</title></block>' +
@@ -1084,12 +1085,12 @@ levels.playlab_9 = {
   ],
   toolbox:
     tb(
+      blockOfType('studio_setSpriteSpeed', {VALUE: 'Studio.SpriteSpeed.FAST'}) +
       blockOfType('studio_setBackground', {VALUE: '"space"'}) +
       blockOfType('studio_moveDistance', {DISTANCE: 400, SPRITE: 1}) +
       blockOfType('studio_saySprite') +
       blockOfType('studio_playSound', {SOUND: 'winpoint2'}) +
-      blockOfType('studio_changeScore') +
-      blockOfType('studio_setSpriteSpeed', {VALUE: 'Studio.SpriteSpeed.FAST'})
+      blockOfType('studio_changeScore')
     ),
   minWorkspaceHeight: 1250,
   startBlocks:
