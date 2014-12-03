@@ -167,11 +167,11 @@ levels.dog_and_cat_hello =  {
     // make sure each sprite says something
     saySpriteRequiredBlock({
       sprite: "0",
-      requiredText: msg.hello()
+      notDefaultText: true
     }),
     saySpriteRequiredBlock({
       sprite: "1",
-      requiredText: msg.hello()
+      notDefaultText: true
     })
   ],
   'scale': {
@@ -192,7 +192,7 @@ levels.dog_and_cat_hello =  {
       return (Studio.sayComplete > 1);
     }
   },
-  'timeoutFailureTick': 100,
+  'timeoutFailureTick': 200,
   'toolbox':
     tb(blockOfType('studio_saySprite')),
   'startBlocks':
@@ -207,6 +207,17 @@ levels.c3_story_2 = utils.extend(levels.dog_and_cat_hello, {});
 levels.playlab_2 = utils.extend(levels.dog_and_cat_hello, {
   background: 'desert',
   firstSpriteIndex: 20, // cave boy
+  requiredBlocks: [
+    // make sure each sprite says something
+    saySpriteRequiredBlock({
+      sprite: "0",
+      requiredText: msg.hello()
+    }),
+    saySpriteRequiredBlock({
+      sprite: "1",
+      requiredText: msg.hello()
+    })
+  ],
   map: [
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0,16, 0, 0],
