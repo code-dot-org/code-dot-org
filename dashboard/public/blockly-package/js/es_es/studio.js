@@ -15979,7 +15979,14 @@ levels.c2_1 = utils.extend(levels.dog_hello);
 levels.c3_story_1 = utils.extend(levels.dog_hello);
 levels.playlab_1 = utils.extend(levels.dog_hello, {
   background: 'winter',
+  timeoutFailureTick: null,
+  timeoutAfterWhenRun: true,
   firstSpriteIndex: 2, // penguin
+  goal: {
+    successCondition: function () {
+      return Studio.allWhenRunBlocksComplete() && Studio.sayComplete > 0;
+    }
+  },
   // difference is we say hello instead of hello world
   requiredBlocks: [
     saySpriteRequiredBlock({
@@ -16035,6 +16042,13 @@ levels.c3_story_2 = utils.extend(levels.dog_and_cat_hello, {});
 levels.playlab_2 = utils.extend(levels.dog_and_cat_hello, {
   background: 'desert',
   firstSpriteIndex: 20, // cave boy
+  timeoutFailureTick: null,
+  timeoutAfterWhenRun: true,
+  goal: {
+    successCondition: function () {
+      return Studio.allWhenRunBlocksComplete() && Studio.sayComplete > 1;
+    }
+  },
   requiredBlocks: [
     // make sure each sprite says something
     saySpriteRequiredBlock({
@@ -16114,7 +16128,8 @@ levels.playlab_3 = {
       titles: { DIR: '2', DISTANCE: '200'}
     }]
   ],
-  timeoutFailureTick: 100,
+  timeoutFailureTick: null,
+  timeoutAfterWhenRun: true,
   scale: {
     snapRadius: 2
   },
@@ -16231,7 +16246,9 @@ levels.playlab_4 = {
       titles: { SOUND: 'goal1'}
     }]
   ],
+  // timeout when we've hit 100 OR we had only when run commands and finished them
   timeoutFailureTick: 100,
+  timeoutAfterWhenRun: true,
   goal: {
     successCondition: function () {
       return Studio.playSoundCount > 0 && Studio.sprite[0].isCollidingWith(1);
@@ -16303,6 +16320,7 @@ levels.c3_game_1 = utils.extend(levels.click_hello, {});
 levels.playlab_5 = utils.extend(levels.click_hello, {
   background: 'space',
   firstSpriteIndex: 23, // spacebot
+  timeoutAfterWhenRun: true,
   toolbox: tb(blockOfType('studio_saySprite'))
 });
 
@@ -20303,7 +20321,33 @@ Studio.attachEventHandler = function (opts) {
   registerEventHandler(Studio.eventHandlers, opts.eventName, opts.func);
 };
 
+/**
+ * Return true if all of the blocks underneath when_run blocks have had their
+ * commands executed
+ */
+Studio.allWhenRunBlocksComplete = function () {
+  for (var i = 0; i < Studio.eventHandlers.length; i++) {
+    if (Studio.eventHandlers[i].name === 'whenGameStarts' &&
+        Studio.eventHandlers[i].cmdQueue.length !== 0) {
+      return false;
+    }
+  }
+  return true;
+};
+
 Studio.timedOut = function() {
+  // If the only event block that had children is when_run, and those commands
+  // are finished executing, don't wait for the timeout.
+  // If we have additional event blocks that DO have children, we don't timeout
+  // until timeoutFailureTick
+  if (level.timeoutAfterWhenRun) {
+    if (Studio.eventHandlers.length === 0 || (Studio.eventHandlers.length === 1 &&
+        Studio.eventHandlers[0].name === 'whenGameStarts' &&
+        Studio.allWhenRunBlocksComplete())) {
+    return true;
+    }
+  }
+
   return Studio.tickCount > Studio.timeoutFailureTick;
 };
 
