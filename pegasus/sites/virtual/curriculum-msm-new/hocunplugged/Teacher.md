@@ -46,13 +46,11 @@ This brief lesson will help prepare students to program Anna and Elsa in the Hou
 # Teaching Guide
 
 ## Materials, Resources and Prep
-### For the Student
-- [Shapes for students to draw](/curriculum/course1/2/Activity2-MoveItMoveIt.pdf)
-- [Instruction sheets]()
 
 ### For the Teacher
 - Teacher Lesson Guide
-- Print one [Move It, Move It: Multi-Step Adventure](/curriculum/course1/2/Activity2-MoveItMoveIt.pdf) activity pack on Cardstock for each group
+- Print one or more sets of [Move It Commands](move_it_commands.pdf) for students
+- Print or display on overhead [Angles reference
 
 [/together]
 
@@ -61,7 +59,7 @@ This brief lesson will help prepare students to program Anna and Elsa in the Hou
 ## Getting Started
 
 
-### <a name="Vocab"></a> 2) Vocabulary
+### <a name="Vocab"></a> 1) Vocabulary
 This lesson has one new and important word:<br/>
 
 [centerIt]
@@ -73,7 +71,7 @@ This lesson has one new and important word:<br/>
 **Program** - Say it with me: Pro-gram <br/>
 An algorithm that has been coded into something that can be run by a machine. 
 
-### <a name="GetStarted"></a> 3) Let's Control Ourselves
+### <a name="GetStarted"></a> 2) Let's Control Ourselves
 - Ask your students if they remember helping you draw a smiley face last time.
  - Review the instructions by drawing as they guide you one step at a time.
 <br/><br/>
