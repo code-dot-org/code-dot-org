@@ -16019,7 +16019,7 @@ levels.dog_and_cat_hello =  {
       return (Studio.sayComplete > 1);
     }
   },
-  'timeoutFailureTick': 200,
+  'timeoutFailureTick': 100,
   'toolbox':
     tb(blockOfType('studio_saySprite')),
   'startBlocks':
@@ -16102,6 +16102,7 @@ levels.playlab_3 = {
       titles: { DIR: '2', DISTANCE: '200'}
     }]
   ],
+  timeoutFailureTick: 100,
   scale: {
     snapRadius: 2
   },
@@ -16423,7 +16424,12 @@ levels.playlab_6 = utils.extend(levels.move_penguin, {
     imageWidth: 800
   },
   toolbox:
-    tb(blockOfType('studio_move')),
+    tb(
+      blockOfType('studio_move', {DIR: 1}) +
+      blockOfType('studio_move', {DIR: 2}) +
+      blockOfType('studio_move', {DIR: 4}) +
+      blockOfType('studio_move', {DIR: 8})
+    ),
   map: [
     [1, 0, 0, 0, 0, 0, 1, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
@@ -16877,6 +16883,7 @@ levels.playlab_9 = {
       type: 'studio_setSpriteSpeed',
       titles: {VALUE: 'Studio.SpriteSpeed.FAST'}}]
   ],
+  timeoutFailureTick: 400,
   scale: {
     snapRadius: 2
   },
