@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Check it out we have a new function called \"draw a line of squares\". Feel free to take a look inside the function block to see how we built it. Click on \"Run\" when your are ready for the next puzzle.",
+    "instructions": "We have a new function called \"draw a line of squares.\" Feel free to take a look inside the function block to see how we built it. Click on \"Run\" when your are ready for the next puzzle.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

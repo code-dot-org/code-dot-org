@@ -19,6 +19,9 @@
   left: 0px;
   z-index: -1; }
 
+#divWebapp div {
+  overflow: hidden; }
+
 .debug-console {
   dispay: block; }
 
@@ -34,14 +37,16 @@
   width: 100%;
   border-width: 0px;
   padding: 0px;
-  outline: none;
-  background-color: white; }
+  outline: none; }
 
-.debug-output {
+.debug-output textarea[disabled], textarea[readonly] {
   height: 100px;
   resize: none;
   margin-bottom: -1px;
-  overflow: scroll; }
+  overflow: auto;
+  background-color: white;
+  line-height: normal;
+  cursor: text; }
 
 .debug-input {
   max-height: 14px;
@@ -50,7 +55,7 @@
   text-indent: 14.5px;
   overflow: hidden;
   margin-top: -3px;
-  padding-top: 3px; }
+  padding-top: 6px; }
 
 /* Slider. */
 .sliderContainer {

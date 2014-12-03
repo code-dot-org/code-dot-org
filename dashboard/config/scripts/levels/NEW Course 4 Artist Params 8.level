@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Awesome, can you draw each of these triangles with that new function? The first is 25 pixels long, the second is 50, and the third is 75. ",
+    "instructions": "Can you draw each of these triangles with that new function? The first is 25 pixels long, the second is 50, and the third is 75. ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "ideal": "16",
