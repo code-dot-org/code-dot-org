@@ -20,7 +20,8 @@
     "ideal": "6",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "video_key": "frozen_functions"
+    "embed": "false",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>
@@ -30,7 +31,7 @@
           <next>
             <block type="create_a_circle" deletable="false" editable="false">
               <next>
-                <block type="jump_by_constant_dropdown" deletable="false">
+                <block type="jump_by_constant_dropdown">
                   <title name="DIR">jumpForward</title>
                   <title name="VALUE" config="25,50,100,150,200,300">???</title>
                 </block>

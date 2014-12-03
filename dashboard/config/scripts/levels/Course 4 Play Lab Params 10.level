@@ -354,7 +354,9 @@
             </value>
           </block>
         </category>
-        <category name="Loops"/>
+        <category name="Loops">
+          <block type="studio_repeatForever"/>
+        </category>
         <category name="Logic">
           <block type="controls_if" inline="false">
             <value name="IF0">
