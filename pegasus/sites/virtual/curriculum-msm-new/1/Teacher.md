@@ -19,12 +19,12 @@ Students discuss the components of their favorite videogames, and discover that 
 ## Teaching Summary
 ### **Getting Started**
  
-1) [Vocabulary](#Vocab)
+1) [Vocabulary](#Vocab)<br/>
 2) [Learning a Language](#GetStarted)  
 
 ### **Activity: Videogames and the Coordinate Plane**
 
-3) [Dissecting a Demo](#Activity1)  
+3) [Dissecting a Demo](#Activity1)<br/>
 4) [Coordinate Planes](#Activity2)  
 
 ### **Wrap-up**

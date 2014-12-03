@@ -52,6 +52,9 @@ Build the next generation of creators using free, open-source Java courseware.
 ### [Scratch](http://scratched.media.mit.edu/) and [ScratchJr](http://www.scratchjr.org/)
 Scratch makes it easy to create your own interactive stories, animations, games, music and art - and share your creations on the web. ScratchJR extends this paradigm to young children (ages 5-7) on the iPad. 
 
+### [Pencil Code](//pencilcode.net)
+Pencil Code lets beginners be real web real developers, starting with turtle graphics and moving on to HTML5, CSS, and jQuery.  Create art, music, games, and stories in Coffeescript and Javascript using a unique switchable editor that lets you work in either blocks or text.
+
 ### [AgentCubes](http://sgda.cs.colorado.edu/arcade/?q=hour_of_code)
 Imagine a tool that allows you to turn 2D images into 3D shapes. Use AgentCubes online, the world's first 3D web-based programming & modeling tool, to learn to program by creating and sharing exciting 3D games. Rule your world!
 

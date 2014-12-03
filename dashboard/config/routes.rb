@@ -25,7 +25,7 @@ Dashboard::Application.routes.draw do
   get '/sh/:id', to: redirect('/u/%{id}')
   get '/sh/:id/:action', to: redirect('/u/%{id}/%{action}')
 
-  resources :level_sources, path: '/u/', only: [:show, :edit] do
+  resources :level_sources, path: '/u/', only: [:show, :edit, :update] do
     member do
       get 'generate_image'
       get 'original_image'
