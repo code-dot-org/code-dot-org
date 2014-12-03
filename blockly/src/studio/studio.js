@@ -1057,7 +1057,8 @@ Studio.init = function(config) {
   config.makeUrl = "http://code.org/studio";
   config.makeImage = BlocklyApps.assetUrl('media/promo.png');
 
-  config.enableShowCode = BlocklyApps.editCode;
+  // Disable "show code" button in feedback dialog when workspace is hidden
+  config.enableShowCode = !config.level.embed && BlocklyApps.editCode;
   config.varsInGlobals = true;
 
   Studio.initSprites();
