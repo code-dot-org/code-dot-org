@@ -206,6 +206,7 @@ module LevelsHelper
       maze:map
       artist_builder:builder
       ani_gif_url:aniGifURL
+      shapeways_url
       images
       free_play
       min_workspace_height

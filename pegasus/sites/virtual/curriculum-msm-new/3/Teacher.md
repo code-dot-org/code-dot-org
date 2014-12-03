@@ -19,7 +19,7 @@ Students will use the Eval app to learn about two new data types, Strings (any s
 ## Teaching Summary
 ### **Getting Started**
  
-1) [Vocabulary](#Vocab)
+1) [Vocabulary](#Vocab)<br/>
 2) [Introduction](#GetStarted)  
 
 ### **Activity: Eval Strings and Images**  

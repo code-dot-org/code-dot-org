@@ -20,8 +20,7 @@ In this plugged activity, students will learn to define variables that store val
 ## Teaching Summary
 ### **Getting Started**
  
-1) [Vocabulary](#Vocab)  
-
+1) [Vocabulary](#Vocab)<br/>
 2) [Introduction](#GetStarted)  
 
 ### **Activity: Calc Defining Variables**  
