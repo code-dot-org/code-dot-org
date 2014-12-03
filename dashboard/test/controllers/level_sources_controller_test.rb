@@ -132,6 +132,7 @@ class LevelSourcesControllerTest < ActionController::TestCase
     assert_raises(ActiveRecord::RecordNotFound) do
       get :generate_image, id: level_source.id
     end
+  end
 
   test "cache headers for generate image" do
     level = create :level, game: create(:game, app: Game::PLAYLAB)
@@ -152,5 +153,4 @@ class LevelSourcesControllerTest < ActionController::TestCase
 
     assert_equal "max-age=36000, public", response.headers["Cache-Control"]
   end
-
 end
