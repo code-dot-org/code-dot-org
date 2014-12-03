@@ -131,6 +131,7 @@ Blockly.FunctionEditor.prototype.openWithNewFunction = function(opt_blockCreatio
 
   this.functionDefinitionBlock = Blockly.Xml.domToBlock_(Blockly.mainBlockSpace,
     Blockly.createSvgElement('block', {type: this.definitionBlockType}));
+  this.functionDefinitionBlock.userCreated = true;
   if (opt_blockCreationCallback) {
     opt_blockCreationCallback(this.functionDefinitionBlock);
   }
