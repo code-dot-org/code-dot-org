@@ -19,7 +19,7 @@ The Design Recipe is a structured approach to writing functions that solve world
 ## Teaching Summary
 ### **Getting Started**
  
-1) [Vocabulary](#Vocab)
+1) [Vocabulary](#Vocab)<br/>
 2) [What is the Design Recipe](#GetStarted)  
 
 ### **Activity: The Design Recipe**  
@@ -27,7 +27,7 @@ The Design Recipe is a structured approach to writing functions that solve world
 3) [Collaborative Design](#Activity1)   
 
 ### **Assessment**
-6) [Design Recipe Assessment](#Assessment)
+4) [Design Recipe Assessment](#Assessment)
 
 [/summary]
 
