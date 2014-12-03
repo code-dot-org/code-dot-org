@@ -66,9 +66,9 @@ namespace :build do
 
       HipChat.log 'Building <b>blockly</b>...'
       if CDO.localize_blockly
-        RakeUtils.system 'MOOC_LOCALIZE=1', 'grunt'
+        RakeUtils.system 'MOOC_LOCALIZE=1', 'grunt build'
       else
-        RakeUtils.system 'grunt'
+        RakeUtils.system 'grunt build'
       end
     end
   end

@@ -1078,7 +1078,7 @@ Turtle.drawToTurtle_ = function (distance) {
     }
 
     Turtle.shapewaysPrintablePathPoints = Turtle.shapewaysPrintablePathPoints || [];
-    Turtle.shapewaysPrintablePathPoints.push([Turtle.x, Turtle.y]);
+    Turtle.shapewaysPrintablePathPoints.push([Turtle.x * retina, Turtle.y * retina]);
   }
 };
 
