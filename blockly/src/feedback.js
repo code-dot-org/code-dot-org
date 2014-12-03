@@ -662,10 +662,7 @@ var FeedbackBlocks = function(options) {
     }
   }
 
-  var hasBlocks = blocksToDisplay.some(function(block) {
-    return block.blockDisplayXML;
-  });
-  if (blocksToDisplay.length === 0 || !hasBlocks) {
+  if (blocksToDisplay.length === 0) {
     return;
   }
 
