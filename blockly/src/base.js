@@ -228,7 +228,7 @@ BlocklyApps.init = function(config) {
           phone_share_url: config.send_to_phone_url
         },
         sendToPhone: config.sendToPhone,
-        shapewaysUrl: config.level.shapewaysUrl,
+        level: config.level,
         twitter: config.twitter,
         onMainPage: true
       }));
