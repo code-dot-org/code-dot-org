@@ -141,7 +141,8 @@ function testsFromProcedure(node) {
       // Block isn't the same type, return false to keep searching.
       return false;
     },
-    message: msg.errorRequiredParamsMissing()
+    message: msg.errorRequiredParamsMissing(),
+    blockDisplayXML: '<xml></xml>'
   }];
 }
 
