@@ -483,3 +483,8 @@ a.lines_of_code_link {
   color:white;
   font-family: 'Gotham 4r', sans-serif;
 }
+
+label {
+  font-family: 'Gotham 5r', sans-serif;
+  font-weight: normal;
+}
