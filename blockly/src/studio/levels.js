@@ -597,7 +597,12 @@ levels.playlab_6 = utils.extend(levels.move_penguin, {
     imageWidth: 800
   },
   toolbox:
-    tb(blockOfType('studio_move')),
+    tb(
+      blockOfType('studio_move', {DIR: 1}) +
+      blockOfType('studio_move', {DIR: 2}) +
+      blockOfType('studio_move', {DIR: 4}) +
+      blockOfType('studio_move', {DIR: 8})
+    ),
   map: [
     [1, 0, 0, 0, 0, 0, 1, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
