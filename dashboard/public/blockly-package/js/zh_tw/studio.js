@@ -7220,7 +7220,7 @@ exports.getTestResults = function(levelComplete, options) {
     if (hasUnusedParam()) {
       return TestResults.UNUSED_PARAM;
     }
-    if (options.level && hasUnusedFunction(options.level.startBlocks)) {
+    if (hasUnusedFunction()) {
       return TestResults.UNUSED_FUNCTION;
     }
     if (hasParamInputUnattached()) {
@@ -7380,36 +7380,19 @@ function hasParamInputUnattached() {
 /**
  * Ensure that all user-declared procedures have associated call blocks.
  */
-function hasUnusedFunction(startBlocks) {
-  if (!startBlocks) {
-    return;
-  }
-  var element = xml.parseElement(startBlocks);
-  // Fix `grunt test` for now
-  if (!element.querySelectorAll) {
-    return;
-  }
-  var defBlocks = element.querySelectorAll(
-      '[type=procedures_defreturn],[type=procedures_defnoreturn]');
-  var startDefs = {};
-  Array.prototype.forEach.call(defBlocks, function(procedure) {
-    startDefs[procedure.querySelector('title[name=NAME]').textContent] = true;
-  });
-
+function hasUnusedFunction() {
   var userDefs = [];
-  var userCalls = [];
+  var callBlocks = {};
   Blockly.mainBlockSpace.getAllBlocks().forEach(function (block) {
     var name = block.getTitleValue('NAME');
-    if (!startDefs[name]) {
-      if (/^procedures_def/.test(block.type)) {
-        userDefs.add(name);
-      } else if (/^procedures_call/.test(block.type)) {
-        userCalls.add(name);
-      }
+    if (/^procedures_def/.test(block.type) && block.userCreated) {
+      userDefs.push(name);
+    } else if (/^procedures_call/.test(block.type)) {
+      callBlocks[name] = true;
     }
   });
-
-  return _.difference(userDefs, userCalls).length !== 0;
+  // Unused function if some user def doesn't have a matching call
+  return userDefs.some(function(name) { return !callBlocks[name]; });
 }
 
 /**
@@ -16019,7 +16002,7 @@ levels.dog_and_cat_hello =  {
       return (Studio.sayComplete > 1);
     }
   },
-  'timeoutFailureTick': 200,
+  'timeoutFailureTick': 100,
   'toolbox':
     tb(blockOfType('studio_saySprite')),
   'startBlocks':
@@ -16102,6 +16085,7 @@ levels.playlab_3 = {
       titles: { DIR: '2', DISTANCE: '200'}
     }]
   ],
+  timeoutFailureTick: 100,
   scale: {
     snapRadius: 2
   },
@@ -16423,7 +16407,12 @@ levels.playlab_6 = utils.extend(levels.move_penguin, {
     imageWidth: 800
   },
   toolbox:
-    tb(blockOfType('studio_move')),
+    tb(
+      blockOfType('studio_move', {DIR: 1}) +
+      blockOfType('studio_move', {DIR: 2}) +
+      blockOfType('studio_move', {DIR: 4}) +
+      blockOfType('studio_move', {DIR: 8})
+    ),
   map: [
     [1, 0, 0, 0, 0, 0, 1, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
@@ -16522,11 +16511,12 @@ levels.playlab_7 = {
   goal: {
     successCondition: function () {
       // successful after a given period of time as long as we've used all
-      // required blocks
-      return Studio.tickCount === 375;
+      // required blocks. this number has us go back and forth twice, and end
+      // facing forward
+      return Studio.tickCount === 252;
     },
   },
-  timeoutFailureTick: 376,
+  timeoutFailureTick: 253,
   minWorkspaceHeight: 800,
   toolbox: tb(
     '<block type="studio_moveDistance"><title name="DIR">1</title><title name="DISTANCE">400</title></block>' +
@@ -16877,6 +16867,7 @@ levels.playlab_9 = {
       type: 'studio_setSpriteSpeed',
       titles: {VALUE: 'Studio.SpriteSpeed.FAST'}}]
   ],
+  timeoutFailureTick: 400,
   scale: {
     snapRadius: 2
   },
@@ -16904,12 +16895,12 @@ levels.playlab_9 = {
   ],
   toolbox:
     tb(
+      blockOfType('studio_setSpriteSpeed', {VALUE: 'Studio.SpriteSpeed.FAST'}) +
       blockOfType('studio_setBackground', {VALUE: '"space"'}) +
       blockOfType('studio_moveDistance', {DISTANCE: 400, SPRITE: 1}) +
       blockOfType('studio_saySprite') +
       blockOfType('studio_playSound', {SOUND: 'winpoint2'}) +
-      blockOfType('studio_changeScore') +
-      blockOfType('studio_setSpriteSpeed', {VALUE: 'Studio.SpriteSpeed.FAST'})
+      blockOfType('studio_changeScore')
     ),
   minWorkspaceHeight: 1250,
   startBlocks:
@@ -19300,9 +19291,7 @@ Studio.onPuzzleComplete = function() {
   if (level.freePlay) {
     Studio.testResults = BlocklyApps.TestResults.FREE_PLAY;
   } else {
-    Studio.testResults = BlocklyApps.getTestResults(levelComplete, {
-      level: level
-    });
+    Studio.testResults = BlocklyApps.getTestResults(levelComplete);
   }
 
   if (Studio.testResults >= BlocklyApps.TestResults.FREE_PLAY) {

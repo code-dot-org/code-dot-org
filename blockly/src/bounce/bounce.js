@@ -1155,9 +1155,7 @@ Bounce.onPuzzleComplete = function() {
   if (level.freePlay) {
     Bounce.testResults = BlocklyApps.TestResults.FREE_PLAY;
   } else {
-    Bounce.testResults = BlocklyApps.getTestResults(levelComplete, {
-      level: level
-    });
+    Bounce.testResults = BlocklyApps.getTestResults(levelComplete);
   }
 
   if (Bounce.testResults >= BlocklyApps.TestResults.FREE_PLAY) {
