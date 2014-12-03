@@ -38,7 +38,7 @@ EvalStar.prototype.draw = function (parent) {
 
   this.element_.setAttribute('points', points.join(' '));
   if (this.pointCount_ % 2 == 1) {
-    this.rotation_ = -90 / this.pointCount_;
+    this.rotate(-90 / this.pointCount_);
   }
 
   EvalImage.prototype.draw.apply(this, arguments);
