@@ -72,7 +72,7 @@ class ActivitiesController < ApplicationController
                                     total_lines: total_lines,
                                     trophy_updates: @trophy_updates,
                                     solved?: solved,
-                                    level_source: @level_source,
+                                    level_source: @level_source.try(:hidden?) ? nil : @level_source,
                                     activity: @activity,
                                     new_level_completed: @new_level_completed,
                                     share_failure: share_failure)

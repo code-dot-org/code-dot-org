@@ -29,7 +29,7 @@ class LevelsController < ApplicationController
     }
 
     @full_width = true
-    if request.query_parameters[:embed]
+    if params[:embed]
       @hide_source = true
       @embed = true
       @share = false
