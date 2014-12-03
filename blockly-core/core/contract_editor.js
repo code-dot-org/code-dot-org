@@ -19,18 +19,23 @@ goog.require('goog.events');
 
 /**
  * A horizontal SVG bar with rectangular background and text
- * @param parent {!Element}
- * @param headerText {!String}
+ * @param {!Element} parent {!Element}
+ * @param {Object=} opt_options
  * @constructor
  */
-Blockly.SVGHeader = function(parent, headerText) {
+Blockly.SVGHeader = function(parent, opt_options) {
+  opt_options = opt_options || {};
   this.padding = { left: 10 };
-  this.svgGroup_ = Blockly.createSvgElement('g', {}, parent, {belowExisting: true});
-  this.grayRectangleElement_ = Blockly.createSvgElement('rect', { 'fill': '#dddddd' }, this.svgGroup_);
-  this.textElement_ = Blockly.createSvgElement('text', {
-    'class': 'blackBlocklyText'
-  }, this.svgGroup_);
-  this.textElement_.textContent = headerText;
+  var extraStyle = opt_options.onMouseDown ? '' : 'pointer-events: none;';
+  this.svgGroup_ = Blockly.createSvgElement('g', {style: extraStyle}, parent, {belowExisting: true});
+  this.grayRectangleElement_ = Blockly.createSvgElement('rect', { 'fill': '#dddddd', 'style': extraStyle }, this.svgGroup_);
+  this.textElement_ = Blockly.createSvgElement('text', { 'class': 'blackBlocklyText', 'style': extraStyle }, this.svgGroup_);
+  if (opt_options.headerText) {
+    this.textElement_.textContent = opt_options.headerText;
+  }
+  if (opt_options.onMouseDown) {
+    Blockly.bindEvent_(this.svgGroup_, 'mousedown', opt_options.onMouseDownContext, opt_options.onMouseDown);
+  }
 };
 
 /**
@@ -55,6 +60,63 @@ Blockly.SVGHeader.prototype.removeSelf = function () {
 };
 
 /**
+ * Header with a block below it
+ *
+ * @param {!Blockly.Block} block
+ * @param {!Number} exampleIndex
+ * @param {!Function} onCollapseCallback
+ * @constructor
+ */
+Blockly.ExampleBlockView = function(block, exampleIndex, onCollapseCallback) {
+  this.block = block;
+  var exampleNumber = Blockly.ExampleBlockView.START_EXAMPLE_COUNT_AT + exampleIndex;
+  this.header = new Blockly.SVGHeader(block.blockSpace.svgBlockCanvas_, {
+    headerText: "Example " + exampleNumber,
+    onMouseDown: this.toggleCollapse_,
+    onMouseDownContext: this
+  });
+  this.collapsed_ = false;
+  this.onCollapseCallback_ = onCollapseCallback;
+};
+
+Blockly.ExampleBlockView.START_EXAMPLE_COUNT_AT = 1;
+
+/**
+ * Mark this view as collapsed.
+ * Will visually collapse during next placement.
+ * @private
+ */
+Blockly.ExampleBlockView.prototype.toggleCollapse_ = function() {
+  this.collapsed_ = !this.collapsed_;
+  this.block.setUserVisible(!this.collapsed_);
+  this.onCollapseCallback_();
+};
+
+/**
+ * Places the example header and block at the specified location,
+ * returning an incremented Y coordinate
+ * @param currentX
+ * @param currentY
+ * @param width
+ * @param headerHeight
+ * @returns {Number} the currentY to continue laying out at
+ */
+Blockly.ExampleBlockView.prototype.placeStartingAt = function(currentX, currentY, width, headerHeight) {
+  this.header.setPositionSize(currentY, width, headerHeight);
+  currentY += headerHeight;
+
+  if (this.collapsed_) {
+    return currentY;
+  }
+
+  currentY += FRAME_MARGIN_TOP;
+  this.block.moveTo(currentX, currentY);
+  currentY += this.block.getHeightWidth().height;
+  currentY += FRAME_MARGIN_TOP;
+  return currentY;
+};
+
+/**
  * Class for a functional block-specific contract editor.
  * @constructor
  */
@@ -68,16 +130,10 @@ Blockly.ContractEditor = function() {
 
   /**
    * Example blocks in this modal dialog
-   * @type {!Array.<Blockly.Block>}
+   * @type {!Array.<Blockly.ExampleBlockView>}
    * @private
    */
-  this.exampleBlocks_ = [];
-  /**
-   * Header SVG elements
-   * @type {Array.<Blockly.SVGHeader>}
-   * @private
-   */
-  this.exampleBlockHeaders_ = [];
+  this.exampleBlockViews_ = [];
   /**
    * @type {?Blockly.SVGHeader}
    * @private
@@ -106,14 +162,12 @@ Blockly.ContractEditor.prototype.create_ = function() {
 };
 
 Blockly.ContractEditor.prototype.hideAndRestoreBlocks_ = function() {
-  this.exampleBlocks_.forEach(function(block, index) {
-    this.moveToMainBlockSpace_(block);
-    this.exampleBlockHeaders_[index].removeSelf();
+  this.exampleBlockViews_.forEach(function(exampleBlockView) {
+    this.moveToMainBlockSpace_(exampleBlockView.block);
+    exampleBlockView.header.removeSelf();
   }, this);
   this.functionDefinitionHeader_.removeSelf();
-  goog.array.clear(this.exampleBlocks_);
-  goog.array.clear(this.exampleBlockHeaders_);
-
+  goog.array.clear(this.exampleBlockViews_);
   Blockly.ContractEditor.superClass_.hideAndRestoreBlocks_.call(this);
 };
 
@@ -121,16 +175,33 @@ Blockly.ContractEditor.prototype.openWithNewFunction = function(opt_blockCreatio
   Blockly.ContractEditor.superClass_.openWithNewFunction.call(this, opt_blockCreationCallback);
 
   for (var i = 0; i < Blockly.defaultNumExampleBlocks; i++) {
-    this.exampleBlocks_.push(this.createAndAddExampleBlock_());
-    var startExampleCountAt = 1;
-    var exampleNumber = startExampleCountAt + i;
-    this.exampleBlockHeaders_.push(
-      new Blockly.SVGHeader(Blockly.modalBlockSpace.svgBlockCanvas_, "Example " + exampleNumber));
+    var exampleBlockView = new Blockly.ExampleBlockView(
+      this.createExampleBlock_(),
+      i,
+      goog.bind(this.position_, this));
+    this.exampleBlockViews_.push(exampleBlockView);
   }
-  this.functionDefinitionHeader_ =
-    new Blockly.SVGHeader(Blockly.modalBlockSpace.svgBlockCanvas_, "Definition");
+
+  this.functionDefinitionHeader_ = new Blockly.SVGHeader(Blockly.modalBlockSpace.svgBlockCanvas_,
+    { headerText: "Definition" /** TODO(bjordan): localize */ }
+  );
 
   this.position_();
+};
+
+/**
+ * Creates a new example block in the modal BlockSpace
+ * @returns {Blockly.Block} the newly added block
+ * @private
+ */
+Blockly.ContractEditor.prototype.createExampleBlock_ = function () {
+  var temporaryExampleBlock = Blockly.Xml.domToBlock_(Blockly.mainBlockSpace,
+    Blockly.createSvgElement('block', {type: Blockly.ContractEditor.EXAMPLE_BLOCK_TYPE}));
+  var caller = Blockly.Procedures.createCallerFromDefinition(Blockly.mainBlockSpace,
+    this.functionDefinitionBlock);
+  temporaryExampleBlock.attachBlockToInputName(
+    caller, Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME);
+  return this.moveToModalBlockSpace_(temporaryExampleBlock);
 };
 
 /**
@@ -150,13 +221,8 @@ Blockly.ContractEditor.prototype.layOutBlockSpaceItems_ = function () {
 
   var currentY = 0;
 
-  this.exampleBlocks_.forEach(function(block, index) {
-    this.exampleBlockHeaders_[index].setPositionSize(currentY, fullWidth, headerHeight);
-    currentY += headerHeight;
-    currentY += FRAME_MARGIN_TOP;
-    block.moveTo(currentX, currentY);
-    currentY += block.getHeightWidth().height;
-    currentY += FRAME_MARGIN_TOP;
+  this.exampleBlockViews_.forEach(function(exampleBlockView) {
+    currentY = exampleBlockView.placeStartingAt(currentX, currentY, fullWidth, headerHeight);
   }, this);
 
   if (this.functionDefinitionHeader_) {
@@ -174,21 +240,6 @@ Blockly.ContractEditor.prototype.layOutBlockSpaceItems_ = function () {
   if (this.functionDefinitionBlock) {
     this.functionDefinitionBlock.moveTo(currentX, currentY);
   }
-};
-
-/**
- * Creates a new example block in the modal BlockSpace
- * @returns {Blockly.Block} the newly added block
- * @private
- */
-Blockly.ContractEditor.prototype.createAndAddExampleBlock_ = function () {
-  var temporaryExampleBlock = Blockly.Xml.domToBlock_(Blockly.mainBlockSpace,
-    Blockly.createSvgElement('block', {type: Blockly.ContractEditor.EXAMPLE_BLOCK_TYPE}));
-  var caller = Blockly.Procedures.createCallerFromDefinition(Blockly.mainBlockSpace,
-    this.functionDefinitionBlock);
-  temporaryExampleBlock.attachBlockToInputName(
-    caller, Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME);
-  return this.moveToModalBlockSpace_(temporaryExampleBlock);
 };
 
 /**
