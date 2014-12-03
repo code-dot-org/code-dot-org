@@ -146,3 +146,9 @@ exports.attachEventHandler = function (blockId, elementId, eventName, func) {
                            'func': func });
 };
 
+exports.startWebRequest = function (blockId, url, func) {
+  return Webapp.executeCmd(String(blockId),
+                          'startWebRequest',
+                          {'url': url,
+                           'func': func });
+};
