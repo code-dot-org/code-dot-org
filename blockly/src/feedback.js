@@ -1079,17 +1079,17 @@ function hasParamInputUnattached() {
  */
 function hasUnusedFunction() {
   var userDefs = [];
-  var calls = {};
+  var callBlocks = {};
   Blockly.mainBlockSpace.getAllBlocks().forEach(function (block) {
     var name = block.getTitleValue('NAME');
     if (/^procedures_def/.test(block.type) && block.userCreated) {
       userDefs.push(name);
     } else if (/^procedures_call/.test(block.type)) {
-      calls[name] = true;
+      callBlocks[name] = true;
     }
   });
   // Unused function if some user def doesn't have a matching call
-  return userDefs.some(function(name) { return !calls[name]; });
+  return userDefs.some(function(name) { return !callBlocks[name]; });
 }
 
 /**

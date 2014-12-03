@@ -256,35 +256,35 @@ Blockly.Xml.domToBlock_ = function(blockSpace, xmlBlock) {
 
   var inline = xmlBlock.getAttribute('inline');
   if (inline) {
-    block.setInputsInline(inline == 'true');
+    block.setInputsInline(inline === 'true');
   }
   var collapsed = xmlBlock.getAttribute('collapsed');
   if (collapsed) {
-    block.setCollapsed(collapsed == 'true');
+    block.setCollapsed(collapsed === 'true');
   }
   var disabled = xmlBlock.getAttribute('disabled');
   if (disabled) {
-    block.setDisabled(disabled == 'true');
+    block.setDisabled(disabled === 'true');
   }
   var deletable = xmlBlock.getAttribute('deletable');
   if (deletable) {
-    block.setDeletable(deletable == 'true');
+    block.setDeletable(deletable === 'true');
   }
   var movable = xmlBlock.getAttribute('movable');
   if (movable) {
-    block.setMovable(movable == 'true');
+    block.setMovable(movable === 'true');
   }
   var editable = xmlBlock.getAttribute('editable');
   if (editable) {
-    block.setEditable(editable == 'true');
+    block.setEditable(editable === 'true');
   }
   var userVisible = xmlBlock.getAttribute('uservisible');
   if (userVisible) {
-    block.setUserVisible(userVisible == 'true');
+    block.setUserVisible(userVisible === 'true');
   }
   var userCreated = xmlBlock.getAttribute('usercreated');
   if (userCreated) {
-    block.userCreated = (userCreated == 'true');
+    block.userCreated = (userCreated === 'true');
   }
 
   var blockChild = null;
