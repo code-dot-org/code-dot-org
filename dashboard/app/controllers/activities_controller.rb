@@ -15,6 +15,9 @@ class ActivitiesController < ApplicationController
   MAX_INT_MILESTONE = 2147483647
   USER_ENTERED_TEXT_TITLE_NAMES = %w(TITLE TEXT)
 
+  MIN_LINES_OF_CODE = 0
+  MAX_LINES_OF_CODE = 1000
+
   def milestone
     # TODO: do we use the :result and :testResult params for the same thing?
     solved = ('true' == params[:result])
@@ -38,7 +41,10 @@ class ActivitiesController < ApplicationController
       end
     end
 
-    log_milestone(@level_source, params)
+    if params[:lines] 
+      params[:lines] = params[:lines].to_i
+      params[:lines] = 0 if (params[:lines] < MIN_LINES_OF_CODE || params[:lines] > MAX_LINES_OF_CODE)
+    end
 
     # Store the image only if the image is set, and the image has not been saved
     if params[:image] && @level_source
@@ -75,6 +81,9 @@ class ActivitiesController < ApplicationController
          :level_id => @level.id,
          :user_agent => request.user_agent,
          :locale => locale) if solved
+
+    # log this at the end so that server errors (which might be caused by invalid input) prevent logging
+    log_milestone(@level_source, params)
   end
 
   def find_share_failure(program)
