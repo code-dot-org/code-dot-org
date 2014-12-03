@@ -1,14 +1,18 @@
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 
-var EvalStar = function (radius, style, color) {
-  evalUtils.ensureNumber(radius);
+var EvalStar = function (pointCount, inner, outer, style, color) {
+  evalUtils.ensureNumber(pointCount);
+  evalUtils.ensureNumber(inner);
+  evalUtils.ensureNumber(outer);
   evalUtils.ensureString(style);
   evalUtils.ensureString(color);
 
   EvalImage.apply(this, [style, color]);
 
-  this.radius_ = radius;
+  this.outer_ = outer;
+  this.inner_ = inner;
+  this.pointCount_ = pointCount;
 
   this.element_ = null;
 };
@@ -22,10 +26,10 @@ EvalStar.prototype.draw = function (parent) {
   }
 
   var points = [];
-  var outerRadius = this.radius_;
-  var innerRadius = (3 - Math.sqrt(5)) / 2 * outerRadius;
+  var outerRadius = this.outer_;
+  var innerRadius = this.inner_;
 
-  var angleDelta = 2 * Math.PI / 5;
+  var angleDelta = 2 * Math.PI / this.pointCount_;
   for (var angle = 0; angle < 2 * Math.PI; angle += angleDelta) {
     points.push(outerRadius * Math.cos(angle) + "," + outerRadius * Math.sin(angle));
     points.push(innerRadius * Math.cos(angle + angleDelta / 2) + "," +
@@ -33,6 +37,9 @@ EvalStar.prototype.draw = function (parent) {
   }
 
   this.element_.setAttribute('points', points.join(' '));
+  if (this.pointCount_ % 2 == 1) {
+    this.rotation_ = -90 / this.pointCount_;
+  }
 
   EvalImage.prototype.draw.apply(this, arguments);
 };
