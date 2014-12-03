@@ -85,6 +85,8 @@ class ActivitiesController < ApplicationController
     log_milestone(@level_source, params)
   end
 
+  private
+
   def find_share_failure(program)
     return nil unless program.match /(#{USER_ENTERED_TEXT_TITLE_NAMES.join('|')})/
 
@@ -102,8 +104,6 @@ class ActivitiesController < ApplicationController
     end
     nil
   end
-
-  private
 
   def milestone_logger
     @@milestone_logger ||= Logger.new("#{Rails.root}/log/milestone.log")
