@@ -1321,12 +1321,24 @@ exports.createToolbox = function(blocks) {
   return '<xml id="toolbox" style="display: none;">' + blocks + '</xml>';
 };
 
-exports.blockOfType = function(type) {
-  return '<block type="' + type + '"></block>';
+exports.blockOfType = function(type, titles) {
+  var titleText = '';
+  if (titles) {
+    for (var key in titles) {
+      titleText += '<title name="' + key + '">' + titles[key] + '</title>';
+    }
+  }
+  return '<block type="' + type + '">' + titleText +'</block>';
 };
 
-exports.blockWithNext = function (type, child) {
-  return '<block type="' + type + '"><next>' + child + '</next></block>';
+exports.blockWithNext = function (type, titles, child) {
+  var titleText = '';
+  if (titles) {
+    for (var key in titles) {
+      titleText += '<title name="' + key + '">' + titles[key] + '</title>';
+    }
+  }
+  return '<block type="' + type + '">' + titleText + '<next>' + child + '</next></block>';
 };
 
 /**
@@ -1338,7 +1350,7 @@ exports.blocksFromList = function (types) {
     return this.blockOfType(types[0]);
   }
 
-  return this.blockWithNext(types[0], this.blocksFromList(types.slice(1)));
+  return this.blockWithNext(types[0], {}, this.blocksFromList(types.slice(1)));
 };
 
 exports.createCategory = function(name, blocks, custom) {
@@ -2045,13 +2057,17 @@ exports.TestResults = {
 
   // The level was not solved.
   EMPTY_BLOCK_FAIL: 1,           // An "if" or "repeat" block was empty.
-  EMPTY_FUNCTION_BLOCK_FAIL: 12, // A "function" block was empty
   TOO_FEW_BLOCKS_FAIL: 2,        // Fewer than the ideal number of blocks used.
   LEVEL_INCOMPLETE_FAIL: 3,      // Default failure to complete a level.
   MISSING_BLOCK_UNFINISHED: 4,   // A required block was not used.
   EXTRA_TOP_BLOCKS_FAIL: 5,      // There was more than one top-level block.
   MISSING_BLOCK_FINISHED: 10,    // The level was solved without required block.
   APP_SPECIFIC_FAIL: 11,         // Application-specific failure.
+  EMPTY_FUNCTION_BLOCK_FAIL: 12, // A "function" block was empty
+  UNUSED_PARAM: 13,              // Param declared but not used in function.
+  UNUSED_FUNCTION: 14,           // Function declared but not used in workspace.
+  PARAM_INPUT_UNATTACHED: 15,    // Function not called with enough params.
+  INCOMPLETE_BLOCK_IN_FUNCTION: 16, // Incomplete block inside a function.
 
   // The level was solved in a non-optimal way.  User may advance or retry.
   TOO_MANY_BLOCKS_FAIL: 20,   // More than the ideal number of blocks were used.
@@ -2193,6 +2209,8 @@ var readonly = require('./templates/readonly.html');
 var codegen = require('./codegen');
 var msg = require('../locale/tr_tr/common');
 var dom = require('./dom');
+var xml = require('./xml');
+var _ = utils.getLodash();
 
 var TestResults = require('./constants').TestResults;
 
@@ -2519,8 +2537,13 @@ var getFeedbackMessage = function(options) {
             msg.emptyBlocksErrorMsg();
         break;
       case TestResults.EMPTY_FUNCTION_BLOCK_FAIL:
-        message = options.level.emptyFunctionBlocksErrorMsg ||
-            msg.emptyFunctionBlocksErrorMsg();
+        if (options.level.emptyFunctionBlocksErrorMsg) {
+          message = options.level.emptyFunctionBlocksErrorMsg;
+        } else if (Blockly.useContractEditor || Blockly.useModalFunctionEditor) {
+          message = msg.errorEmptyFunctionBlockModal();
+        } else {
+          message = msg.emptyFunctionBlocksErrorMsg();
+        }
         break;
       case TestResults.TOO_FEW_BLOCKS_FAIL:
         message = options.level.tooFewBlocksMsg || msg.tooFewBlocksMsg();
@@ -2534,6 +2557,18 @@ var getFeedbackMessage = function(options) {
         break;
       case TestResults.APP_SPECIFIC_FAIL:
         message = options.level.appSpecificFailError;
+        break;
+      case TestResults.UNUSED_PARAM:
+        message = msg.errorUnusedParam();
+        break;
+      case TestResults.UNUSED_FUNCTION:
+        message = msg.errorUnusedFunction();
+        break;
+      case TestResults.PARAM_INPUT_UNATTACHED:
+        message = msg.errorParamInputUnattached();
+        break;
+      case TestResults.INCOMPLETE_BLOCK_IN_FUNCTION:
+        message = msg.errorIncompleteBlockInFunction();
         break;
       case TestResults.TOO_MANY_BLOCKS_FAIL:
         message = msg.numBlocksNeeded({
@@ -2825,10 +2860,17 @@ var FeedbackBlocks = function(options) {
       return;
     }
   } else {
-    blocksToDisplay = getMissingRequiredBlocks();
+    var missingRequiredBlocks = getMissingRequiredBlocks();
+    blocksToDisplay = missingRequiredBlocks.blocksToDisplay;
+    if (missingRequiredBlocks.message) {
+      options.message = missingRequiredBlocks.message;
+    }
   }
 
-  if (blocksToDisplay.length === 0) {
+  var hasBlocks = blocksToDisplay.some(function(block) {
+    return block.blockDisplayXML;
+  });
+  if (blocksToDisplay.length === 0 || !hasBlocks) {
     return;
   }
 
@@ -2942,7 +2984,7 @@ var getEmptyContainerBlock = function() {
  * @return {boolean} true if all blocks are present, false otherwise.
  */
 var hasAllRequiredBlocks = function() {
-  return getMissingRequiredBlocks().length === 0;
+  return getMissingRequiredBlocks().blocksToDisplay.length === 0;
 };
 
 /**
@@ -2976,13 +3018,16 @@ var getCountableBlocks = function() {
 /**
  * Check to see if the user's code contains the required blocks for a level.
  * This never returns more than BlocklyApps.NUM_REQUIRED_BLOCKS_TO_FLAG.
- * @return {!Array} array of array of strings where each array of strings is
- * a set of blocks that at least one of them should be used. Each block is
- * represented as the prefix of an id in the corresponding template.soy.
+ * @return {{blocksToDisplay:!Array, message:?string}} 'missingBlocks' is an
+ * array of array of strings where each array of strings is a set of blocks that
+ * at least one of them should be used. Each block is represented as the prefix
+ * of an id in the corresponding template.soy. 'message' is an optional message
+ * to override the default error text.
  */
 var getMissingRequiredBlocks = function () {
   var missingBlocks = [];
-  var code = null;  // JavaScript code, which is initalized lazily.
+  var customMessage = null;
+  var code = null;  // JavaScript code, which is initialized lazily.
   if (BlocklyApps.REQUIRED_BLOCKS && BlocklyApps.REQUIRED_BLOCKS.length) {
     var userBlocks = getUserBlocks();
     // For each list of required blocks
@@ -3012,6 +3057,8 @@ var getMissingRequiredBlocks = function () {
             // Succeeded, moving to the next list of tests
             usedRequiredBlock = true;
             break;
+          } else {
+            customMessage = requiredBlock[testId].message || customMessage;
           }
         } else {
           throw new Error('Bad test: ' + test);
@@ -3023,7 +3070,10 @@ var getMissingRequiredBlocks = function () {
       }
     }
   }
-  return missingBlocks;
+  return {
+    blocksToDisplay: missingBlocks,
+    message: customMessage
+  };
 };
 
 /**
@@ -3078,6 +3128,20 @@ exports.getTestResults = function(levelComplete, options) {
   if (!options.allowTopBlocks && exports.hasExtraTopBlocks()) {
     return TestResults.EXTRA_TOP_BLOCKS_FAIL;
   }
+  if (Blockly.useContractEditor || Blockly.useModalFunctionEditor) {
+    if (hasUnusedParam()) {
+      return TestResults.UNUSED_PARAM;
+    }
+    if (options.level && hasUnusedFunction(options.level.startBlocks)) {
+      return TestResults.UNUSED_FUNCTION;
+    }
+    if (hasParamInputUnattached()) {
+      return TestResults.PARAM_INPUT_UNATTACHED;
+    }
+    if (hasIncompleteBlockInFunction()) {
+      return TestResults.INCOMPLETE_BLOCK_IN_FUNCTION;
+    }
+  }
   if (!hasAllRequiredBlocks()) {
     return levelComplete ? TestResults.MISSING_BLOCK_FINISHED :
       TestResults.MISSING_BLOCK_UNFINISHED;
@@ -3116,7 +3180,14 @@ exports.createModalDialogWithIcon = function(options) {
   var btn = options.contentDiv.querySelector(options.defaultBtnSelector);
   var keydownHandler = function(e) {
     if (e.keyCode == Keycodes.ENTER || e.keyCode == Keycodes.SPACE) {
-      Blockly.fireUiEvent(btn, 'click');
+      // Simulate a 'click':
+      var event = new MouseEvent('click', {
+          'view': window,
+          'bubbles': true,
+          'cancelable': true
+      });
+      btn.dispatchEvent(event);
+
       e.stopPropagation();
       e.preventDefault();
     }
@@ -3181,8 +3252,112 @@ var generateXMLForBlocks = function(blocks) {
   return blockXMLStrings.join('');
 };
 
+/**
+ * Ensure that all procedure definitions actually use the parameters they define
+ * inside the procedure.
+ */
+function hasUnusedParam() {
+  return Blockly.mainBlockSpace.getAllBlocks().some(function(userBlock) {
+    var params = userBlock.parameterNames_;
+    // Only search procedure definitions
+    return params && params.some(function(paramName) {
+      // Unused param if there's no parameters_get descendant with the same name
+      return !hasMatchingDescendant(userBlock, function(block) {
+        return (block.type === 'parameters_get' ||
+            block.type === 'variables_get') &&
+            block.getTitleValue('VAR') === paramName;
+      });
+    });
+  });
+}
 
-},{"../locale/tr_tr/common":39,"./codegen":7,"./constants":8,"./dom":9,"./templates/buttons.html":26,"./templates/code.html":27,"./templates/readonly.html":32,"./templates/shareFailure.html":33,"./templates/sharing.html":34,"./templates/showCode.html":35,"./templates/trophy.html":36,"./utils":37}],11:[function(require,module,exports){
+/**
+ * Ensure that all procedure calls have each parameter input connected.
+ */
+function hasParamInputUnattached() {
+  return Blockly.mainBlockSpace.getAllBlocks().some(function(userBlock) {
+    // Only check procedure_call* blocks
+    if (!/^procedures_call/.test(userBlock.type)) {
+      return false;
+    }
+    return userBlock.inputList.filter(function(input) {
+      return (/^ARG/.test(input.name));
+    }).some(function(argInput) {
+      // Unattached param input if any ARG* connection target is null
+      return !argInput.connection.targetConnection;
+    });
+  });
+}
+
+/**
+ * Ensure that all user-declared procedures have associated call blocks.
+ */
+function hasUnusedFunction(startBlocks) {
+  if (!startBlocks) {
+    return;
+  }
+  var element = xml.parseElement(startBlocks);
+  // Fix `grunt test` for now
+  if (!element.querySelectorAll) {
+    return;
+  }
+  var defBlocks = element.querySelectorAll(
+      '[type=procedures_defreturn],[type=procedures_defnoreturn]');
+  var startDefs = {};
+  Array.prototype.forEach.call(defBlocks, function(procedure) {
+    startDefs[procedure.querySelector('title[name=NAME]').textContent] = true;
+  });
+
+  var userDefs = [];
+  var userCalls = [];
+  Blockly.mainBlockSpace.getAllBlocks().forEach(function (block) {
+    var name = block.getTitleValue('NAME');
+    if (!startDefs[name]) {
+      if (/^procedures_def/.test(block.type)) {
+        userDefs.add(name);
+      } else if (/^procedures_call/.test(block.type)) {
+        userCalls.add(name);
+      }
+    }
+  });
+
+  return _.difference(userDefs, userCalls).length !== 0;
+}
+
+/**
+ * Ensure there are no incomplete blocks inside any function definitions.
+ */
+function hasIncompleteBlockInFunction() {
+  return Blockly.mainBlockSpace.getAllBlocks().some(function(userBlock) {
+    // Only search procedure definitions
+    if (!userBlock.parameterNames_) {
+      return false;
+    }
+    return hasMatchingDescendant(userBlock, function(block) {
+      // Incomplete block if any input connection target is null
+      return block.inputList.some(function(input) {
+        return input.type === Blockly.INPUT_VALUE &&
+            !input.connection.targetConnection;
+      });
+    });
+  });
+}
+
+/**
+ * Returns true if any descendant (inclusive) of the given node matches the
+ * given filter.
+ */
+function hasMatchingDescendant(node, filter) {
+  if (filter(node)) {
+    return true;
+  }
+  return node.childBlocks_.some(function (child) {
+    return hasMatchingDescendant(child, filter);
+  });
+}
+
+
+},{"../locale/tr_tr/common":39,"./codegen":7,"./constants":8,"./dom":9,"./templates/buttons.html":26,"./templates/code.html":27,"./templates/readonly.html":32,"./templates/shareFailure.html":33,"./templates/sharing.html":34,"./templates/showCode.html":35,"./templates/trophy.html":36,"./utils":37,"./xml":38}],11:[function(require,module,exports){
 exports.FlapHeight = {
   VERY_SMALL: -6,
   SMALL: -8,
@@ -4757,7 +4932,9 @@ Flappy.onPuzzleComplete = function() {
   if (level.freePlay) {
     Flappy.testResults = BlocklyApps.TestResults.FREE_PLAY;
   } else {
-    Flappy.testResults = BlocklyApps.getTestResults(levelComplete);
+    Flappy.testResults = BlocklyApps.getTestResults(levelComplete, {
+      level: level
+    });
   }
 
   // Special case for Flappy level 1 where you have the right blocks, but you
@@ -10827,6 +11004,7 @@ if(typeof define == 'function' && define.amd) {
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
+var msg = require('../locale/tr_tr/common');
 var _ = utils.getLodash();
 
 /**
@@ -10892,10 +11070,16 @@ exports.makeTestsFromBuilderRequiredBlocks = function (customRequiredBlocks) {
     if (childNode.nodeType !== 1) {
       return;
     }
-    if (childNode.getAttribute('type') === 'pick_one') {
-      requiredBlocksTests.push(testsFromPickOne(childNode));
-    } else {
-      requiredBlocksTests.push([testFromBlock(childNode)]);
+    switch (childNode.getAttribute('type')) {
+      case 'pick_one':
+        requiredBlocksTests.push(testsFromPickOne(childNode));
+        break;
+      case 'procedures_defnoreturn':
+      case 'procedures_defreturn':
+        requiredBlocksTests.push(testsFromProcedure(childNode));
+        break;
+      default:
+        requiredBlocksTests.push([testFromBlock(childNode)]);
     }
   });
 
@@ -10921,29 +11105,52 @@ function testFromBlock (node) {
  * one of the child blocks is used.  If none are used, the first option will be
  * displayed as feedback
  */
- function testsFromPickOne(node) {
-   var tests = [];
-   // child of pick_one is a statement block.  we want first child of that
-   var statement = node.getElementsByTagName('statement')[0];
-   var block = statement.getElementsByTagName('block')[0];
-   var next;
-   do {
-     // if we have a next block, we want to generate our test without that
-     next = block.getElementsByTagName('next')[0];
-     if (next) {
-       block.removeChild(next);
-     }
-     tests.push(testFromBlock(block));
-     if (next) {
-       block = next.getElementsByTagName('block')[0];
-     }
-   } while (next);
-   return tests;
- }
+function testsFromPickOne(node) {
+  var tests = [];
+  // child of pick_one is a statement block.  we want first child of that
+  var statement = node.getElementsByTagName('statement')[0];
+  var block = statement.getElementsByTagName('block')[0];
+  var next;
+  do {
+    // if we have a next block, we want to generate our test without that
+    next = block.getElementsByTagName('next')[0];
+    if (next) {
+      block.removeChild(next);
+    }
+    tests.push(testFromBlock(block));
+    if (next) {
+      block = next.getElementsByTagName('block')[0];
+    }
+  } while (next);
+  return tests;
+}
+
+/**
+ * Given xml for a procedure block, generates tests that check for required
+ * number of params not declared
+ */
+function testsFromProcedure(node) {
+  var paramCount = node.querySelectorAll('mutation > arg').length;
+  var emptyBlock = node.cloneNode(true);
+  emptyBlock.removeChild(emptyBlock.lastChild);
+  return [{
+    // Ensure that all required blocks match a block with the same number of
+    // params. There's no guarantee users will name their function the same as
+    // the required block, so only match on number of params.
+    test: function(userBlock) {
+      if (userBlock.type === node.getAttribute('type')) {
+        return paramCount === userBlock.parameterNames_.length;
+      }
+      // Block isn't the same type, return false to keep searching.
+      return false;
+    },
+    message: msg.errorRequiredParamsMissing()
+  }];
+}
 
 /**
  * Checks two DOM elements to see whether or not they are equivalent
- * We condsider them equivalent if they have the same tagName, attributes,
+ * We consider them equivalent if they have the same tagName, attributes,
  * and children
  */
 function elementsEquivalent(expected, given) {
@@ -11067,7 +11274,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"./block_utils":4,"./utils":37,"./xml":38}],23:[function(require,module,exports){
+},{"../locale/tr_tr/common":39,"./block_utils":4,"./utils":37,"./xml":38}],23:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -12035,6 +12242,18 @@ exports.end = function(d){return "son"};
 exports.emptyBlocksErrorMsg = function(d){return "\"Tekrar\" bloğu veya \"Eğer\" bloğunun çalışması için  içerisinde bir başka blok yer almalıdır. İçteki bloğu, dış blok içerisine yerleştirdiğine emin ol."};
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "Fonksiyon bloğunun çalışabilmesi için içine başka bloklar koymalısın."};
+
+exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
+
+exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
+
+exports.errorParamInputUnattached = function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."};
+
+exports.errorUnusedParam = function(d){return "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block."};
+
+exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
+
+exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
 
 exports.extraTopBlocks = function(d){return "Blokları bağlamadın. \"Çalıştığı zaman\" bloğuna bağlamayı denediniz mi?"};
 

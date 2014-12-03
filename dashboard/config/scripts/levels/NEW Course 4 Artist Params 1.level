@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Let's edit a function that draws a square with 50 pixel sides",
+    "instructions": "Let's define this function to draw a square with 50 pixel sides. Click \"edit\" to get started.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

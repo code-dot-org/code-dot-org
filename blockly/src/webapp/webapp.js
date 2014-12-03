@@ -740,6 +740,14 @@ consoleApi.log = function() {
   outputWebappConsole(output);
 };
 
+var JSONApi = {};
+
+// NOTE: this version of parse does not support the reviver parameter
+
+JSONApi.parse = function(text) {
+  return JSON.parse(text);
+};
+
 // Commented out, but available in case we want to expose the droplet/pencilcode
 // style random (with a min, max value)
 /*
@@ -810,6 +818,7 @@ Webapp.execute = function() {
                                           BlocklyApps: BlocklyApps,
                                           Webapp: api,
                                           console: consoleApi,
+                                          JSON: JSONApi,
                                           Globals: Webapp.Globals } );
 
 
@@ -924,7 +933,9 @@ Webapp.onPuzzleComplete = function() {
     Webapp.testResults = BlocklyApps.TestResults.FREE_PLAY;
   } else {
     var levelComplete = (Webapp.result === BlocklyApps.ResultType.SUCCESS);
-    Webapp.testResults = BlocklyApps.getTestResults(levelComplete);
+    Webapp.testResults = BlocklyApps.getTestResults(levelComplete, {
+      level: level
+    });
   }
 
   if (Webapp.testResults >= BlocklyApps.TestResults.FREE_PLAY) {
@@ -1023,6 +1034,7 @@ Webapp.callCmd = function (cmd) {
     case 'setParent':
     case 'setStyle':
     case 'attachEventHandler':
+    case 'startWebRequest':
       BlocklyApps.highlight(cmd.id);
       retVal = Webapp[cmd.name](cmd.opts);
       break;
@@ -1275,6 +1287,25 @@ Webapp.attachEventHandler = function (opts) {
         opts.eventName,
         Webapp.onEventFired.bind(this, opts));
   }
+};
+
+Webapp.onHttpRequestEvent = function (opts) {
+  if (this.readyState === 4) {
+    Webapp.eventQueue.push({
+      'fn': opts.func,
+      'arguments': [
+        Number(this.status),
+        String(this.getResponseHeader('content-type')),
+        String(this.responseText)]
+    });
+  }
+};
+
+Webapp.startWebRequest = function (opts) {
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = Webapp.onHttpRequestEvent.bind(req, opts);
+  req.open('GET', String(opts.url), true);
+  req.send();
 };
 
 /*

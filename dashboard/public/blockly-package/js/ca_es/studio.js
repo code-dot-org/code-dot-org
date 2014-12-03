@@ -1321,12 +1321,24 @@ exports.createToolbox = function(blocks) {
   return '<xml id="toolbox" style="display: none;">' + blocks + '</xml>';
 };
 
-exports.blockOfType = function(type) {
-  return '<block type="' + type + '"></block>';
+exports.blockOfType = function(type, titles) {
+  var titleText = '';
+  if (titles) {
+    for (var key in titles) {
+      titleText += '<title name="' + key + '">' + titles[key] + '</title>';
+    }
+  }
+  return '<block type="' + type + '">' + titleText +'</block>';
 };
 
-exports.blockWithNext = function (type, child) {
-  return '<block type="' + type + '"><next>' + child + '</next></block>';
+exports.blockWithNext = function (type, titles, child) {
+  var titleText = '';
+  if (titles) {
+    for (var key in titles) {
+      titleText += '<title name="' + key + '">' + titles[key] + '</title>';
+    }
+  }
+  return '<block type="' + type + '">' + titleText + '<next>' + child + '</next></block>';
 };
 
 /**
@@ -1338,7 +1350,7 @@ exports.blocksFromList = function (types) {
     return this.blockOfType(types[0]);
   }
 
-  return this.blockWithNext(types[0], this.blocksFromList(types.slice(1)));
+  return this.blockWithNext(types[0], {}, this.blocksFromList(types.slice(1)));
 };
 
 exports.createCategory = function(name, blocks, custom) {
@@ -6136,13 +6148,17 @@ exports.TestResults = {
 
   // The level was not solved.
   EMPTY_BLOCK_FAIL: 1,           // An "if" or "repeat" block was empty.
-  EMPTY_FUNCTION_BLOCK_FAIL: 12, // A "function" block was empty
   TOO_FEW_BLOCKS_FAIL: 2,        // Fewer than the ideal number of blocks used.
   LEVEL_INCOMPLETE_FAIL: 3,      // Default failure to complete a level.
   MISSING_BLOCK_UNFINISHED: 4,   // A required block was not used.
   EXTRA_TOP_BLOCKS_FAIL: 5,      // There was more than one top-level block.
   MISSING_BLOCK_FINISHED: 10,    // The level was solved without required block.
   APP_SPECIFIC_FAIL: 11,         // Application-specific failure.
+  EMPTY_FUNCTION_BLOCK_FAIL: 12, // A "function" block was empty
+  UNUSED_PARAM: 13,              // Param declared but not used in function.
+  UNUSED_FUNCTION: 14,           // Function declared but not used in workspace.
+  PARAM_INPUT_UNATTACHED: 15,    // Function not called with enough params.
+  INCOMPLETE_BLOCK_IN_FUNCTION: 16, // Incomplete block inside a function.
 
   // The level was solved in a non-optimal way.  User may advance or retry.
   TOO_MANY_BLOCKS_FAIL: 20,   // More than the ideal number of blocks were used.
@@ -6284,6 +6300,8 @@ var readonly = require('./templates/readonly.html');
 var codegen = require('./codegen');
 var msg = require('../locale/ca_es/common');
 var dom = require('./dom');
+var xml = require('./xml');
+var _ = utils.getLodash();
 
 var TestResults = require('./constants').TestResults;
 
@@ -6610,8 +6628,13 @@ var getFeedbackMessage = function(options) {
             msg.emptyBlocksErrorMsg();
         break;
       case TestResults.EMPTY_FUNCTION_BLOCK_FAIL:
-        message = options.level.emptyFunctionBlocksErrorMsg ||
-            msg.emptyFunctionBlocksErrorMsg();
+        if (options.level.emptyFunctionBlocksErrorMsg) {
+          message = options.level.emptyFunctionBlocksErrorMsg;
+        } else if (Blockly.useContractEditor || Blockly.useModalFunctionEditor) {
+          message = msg.errorEmptyFunctionBlockModal();
+        } else {
+          message = msg.emptyFunctionBlocksErrorMsg();
+        }
         break;
       case TestResults.TOO_FEW_BLOCKS_FAIL:
         message = options.level.tooFewBlocksMsg || msg.tooFewBlocksMsg();
@@ -6625,6 +6648,18 @@ var getFeedbackMessage = function(options) {
         break;
       case TestResults.APP_SPECIFIC_FAIL:
         message = options.level.appSpecificFailError;
+        break;
+      case TestResults.UNUSED_PARAM:
+        message = msg.errorUnusedParam();
+        break;
+      case TestResults.UNUSED_FUNCTION:
+        message = msg.errorUnusedFunction();
+        break;
+      case TestResults.PARAM_INPUT_UNATTACHED:
+        message = msg.errorParamInputUnattached();
+        break;
+      case TestResults.INCOMPLETE_BLOCK_IN_FUNCTION:
+        message = msg.errorIncompleteBlockInFunction();
         break;
       case TestResults.TOO_MANY_BLOCKS_FAIL:
         message = msg.numBlocksNeeded({
@@ -6916,10 +6951,17 @@ var FeedbackBlocks = function(options) {
       return;
     }
   } else {
-    blocksToDisplay = getMissingRequiredBlocks();
+    var missingRequiredBlocks = getMissingRequiredBlocks();
+    blocksToDisplay = missingRequiredBlocks.blocksToDisplay;
+    if (missingRequiredBlocks.message) {
+      options.message = missingRequiredBlocks.message;
+    }
   }
 
-  if (blocksToDisplay.length === 0) {
+  var hasBlocks = blocksToDisplay.some(function(block) {
+    return block.blockDisplayXML;
+  });
+  if (blocksToDisplay.length === 0 || !hasBlocks) {
     return;
   }
 
@@ -7033,7 +7075,7 @@ var getEmptyContainerBlock = function() {
  * @return {boolean} true if all blocks are present, false otherwise.
  */
 var hasAllRequiredBlocks = function() {
-  return getMissingRequiredBlocks().length === 0;
+  return getMissingRequiredBlocks().blocksToDisplay.length === 0;
 };
 
 /**
@@ -7067,13 +7109,16 @@ var getCountableBlocks = function() {
 /**
  * Check to see if the user's code contains the required blocks for a level.
  * This never returns more than BlocklyApps.NUM_REQUIRED_BLOCKS_TO_FLAG.
- * @return {!Array} array of array of strings where each array of strings is
- * a set of blocks that at least one of them should be used. Each block is
- * represented as the prefix of an id in the corresponding template.soy.
+ * @return {{blocksToDisplay:!Array, message:?string}} 'missingBlocks' is an
+ * array of array of strings where each array of strings is a set of blocks that
+ * at least one of them should be used. Each block is represented as the prefix
+ * of an id in the corresponding template.soy. 'message' is an optional message
+ * to override the default error text.
  */
 var getMissingRequiredBlocks = function () {
   var missingBlocks = [];
-  var code = null;  // JavaScript code, which is initalized lazily.
+  var customMessage = null;
+  var code = null;  // JavaScript code, which is initialized lazily.
   if (BlocklyApps.REQUIRED_BLOCKS && BlocklyApps.REQUIRED_BLOCKS.length) {
     var userBlocks = getUserBlocks();
     // For each list of required blocks
@@ -7103,6 +7148,8 @@ var getMissingRequiredBlocks = function () {
             // Succeeded, moving to the next list of tests
             usedRequiredBlock = true;
             break;
+          } else {
+            customMessage = requiredBlock[testId].message || customMessage;
           }
         } else {
           throw new Error('Bad test: ' + test);
@@ -7114,7 +7161,10 @@ var getMissingRequiredBlocks = function () {
       }
     }
   }
-  return missingBlocks;
+  return {
+    blocksToDisplay: missingBlocks,
+    message: customMessage
+  };
 };
 
 /**
@@ -7169,6 +7219,20 @@ exports.getTestResults = function(levelComplete, options) {
   if (!options.allowTopBlocks && exports.hasExtraTopBlocks()) {
     return TestResults.EXTRA_TOP_BLOCKS_FAIL;
   }
+  if (Blockly.useContractEditor || Blockly.useModalFunctionEditor) {
+    if (hasUnusedParam()) {
+      return TestResults.UNUSED_PARAM;
+    }
+    if (options.level && hasUnusedFunction(options.level.startBlocks)) {
+      return TestResults.UNUSED_FUNCTION;
+    }
+    if (hasParamInputUnattached()) {
+      return TestResults.PARAM_INPUT_UNATTACHED;
+    }
+    if (hasIncompleteBlockInFunction()) {
+      return TestResults.INCOMPLETE_BLOCK_IN_FUNCTION;
+    }
+  }
   if (!hasAllRequiredBlocks()) {
     return levelComplete ? TestResults.MISSING_BLOCK_FINISHED :
       TestResults.MISSING_BLOCK_UNFINISHED;
@@ -7207,7 +7271,14 @@ exports.createModalDialogWithIcon = function(options) {
   var btn = options.contentDiv.querySelector(options.defaultBtnSelector);
   var keydownHandler = function(e) {
     if (e.keyCode == Keycodes.ENTER || e.keyCode == Keycodes.SPACE) {
-      Blockly.fireUiEvent(btn, 'click');
+      // Simulate a 'click':
+      var event = new MouseEvent('click', {
+          'view': window,
+          'bubbles': true,
+          'cancelable': true
+      });
+      btn.dispatchEvent(event);
+
       e.stopPropagation();
       e.preventDefault();
     }
@@ -7272,8 +7343,112 @@ var generateXMLForBlocks = function(blocks) {
   return blockXMLStrings.join('');
 };
 
+/**
+ * Ensure that all procedure definitions actually use the parameters they define
+ * inside the procedure.
+ */
+function hasUnusedParam() {
+  return Blockly.mainBlockSpace.getAllBlocks().some(function(userBlock) {
+    var params = userBlock.parameterNames_;
+    // Only search procedure definitions
+    return params && params.some(function(paramName) {
+      // Unused param if there's no parameters_get descendant with the same name
+      return !hasMatchingDescendant(userBlock, function(block) {
+        return (block.type === 'parameters_get' ||
+            block.type === 'variables_get') &&
+            block.getTitleValue('VAR') === paramName;
+      });
+    });
+  });
+}
 
-},{"../locale/ca_es/common":48,"./codegen":11,"./constants":12,"./dom":13,"./templates/buttons.html":35,"./templates/code.html":36,"./templates/readonly.html":41,"./templates/shareFailure.html":42,"./templates/sharing.html":43,"./templates/showCode.html":44,"./templates/trophy.html":45,"./utils":46}],15:[function(require,module,exports){
+/**
+ * Ensure that all procedure calls have each parameter input connected.
+ */
+function hasParamInputUnattached() {
+  return Blockly.mainBlockSpace.getAllBlocks().some(function(userBlock) {
+    // Only check procedure_call* blocks
+    if (!/^procedures_call/.test(userBlock.type)) {
+      return false;
+    }
+    return userBlock.inputList.filter(function(input) {
+      return (/^ARG/.test(input.name));
+    }).some(function(argInput) {
+      // Unattached param input if any ARG* connection target is null
+      return !argInput.connection.targetConnection;
+    });
+  });
+}
+
+/**
+ * Ensure that all user-declared procedures have associated call blocks.
+ */
+function hasUnusedFunction(startBlocks) {
+  if (!startBlocks) {
+    return;
+  }
+  var element = xml.parseElement(startBlocks);
+  // Fix `grunt test` for now
+  if (!element.querySelectorAll) {
+    return;
+  }
+  var defBlocks = element.querySelectorAll(
+      '[type=procedures_defreturn],[type=procedures_defnoreturn]');
+  var startDefs = {};
+  Array.prototype.forEach.call(defBlocks, function(procedure) {
+    startDefs[procedure.querySelector('title[name=NAME]').textContent] = true;
+  });
+
+  var userDefs = [];
+  var userCalls = [];
+  Blockly.mainBlockSpace.getAllBlocks().forEach(function (block) {
+    var name = block.getTitleValue('NAME');
+    if (!startDefs[name]) {
+      if (/^procedures_def/.test(block.type)) {
+        userDefs.add(name);
+      } else if (/^procedures_call/.test(block.type)) {
+        userCalls.add(name);
+      }
+    }
+  });
+
+  return _.difference(userDefs, userCalls).length !== 0;
+}
+
+/**
+ * Ensure there are no incomplete blocks inside any function definitions.
+ */
+function hasIncompleteBlockInFunction() {
+  return Blockly.mainBlockSpace.getAllBlocks().some(function(userBlock) {
+    // Only search procedure definitions
+    if (!userBlock.parameterNames_) {
+      return false;
+    }
+    return hasMatchingDescendant(userBlock, function(block) {
+      // Incomplete block if any input connection target is null
+      return block.inputList.some(function(input) {
+        return input.type === Blockly.INPUT_VALUE &&
+            !input.connection.targetConnection;
+      });
+    });
+  });
+}
+
+/**
+ * Returns true if any descendant (inclusive) of the given node matches the
+ * given filter.
+ */
+function hasMatchingDescendant(node, filter) {
+  if (filter(node)) {
+    return true;
+  }
+  return node.childBlocks_.some(function (child) {
+    return hasMatchingDescendant(child, filter);
+  });
+}
+
+
+},{"../locale/ca_es/common":48,"./codegen":11,"./constants":12,"./dom":13,"./templates/buttons.html":35,"./templates/code.html":36,"./templates/readonly.html":41,"./templates/shareFailure.html":42,"./templates/sharing.html":43,"./templates/showCode.html":44,"./templates/trophy.html":45,"./utils":46,"./xml":47}],15:[function(require,module,exports){
 var utils = require('./utils');
 var _ = utils.getLodash();
 
@@ -12512,6 +12687,7 @@ if(typeof define == 'function' && define.amd) {
 var xml = require('./xml');
 var blockUtils = require('./block_utils');
 var utils = require('./utils');
+var msg = require('../locale/ca_es/common');
 var _ = utils.getLodash();
 
 /**
@@ -12577,10 +12753,16 @@ exports.makeTestsFromBuilderRequiredBlocks = function (customRequiredBlocks) {
     if (childNode.nodeType !== 1) {
       return;
     }
-    if (childNode.getAttribute('type') === 'pick_one') {
-      requiredBlocksTests.push(testsFromPickOne(childNode));
-    } else {
-      requiredBlocksTests.push([testFromBlock(childNode)]);
+    switch (childNode.getAttribute('type')) {
+      case 'pick_one':
+        requiredBlocksTests.push(testsFromPickOne(childNode));
+        break;
+      case 'procedures_defnoreturn':
+      case 'procedures_defreturn':
+        requiredBlocksTests.push(testsFromProcedure(childNode));
+        break;
+      default:
+        requiredBlocksTests.push([testFromBlock(childNode)]);
     }
   });
 
@@ -12606,29 +12788,52 @@ function testFromBlock (node) {
  * one of the child blocks is used.  If none are used, the first option will be
  * displayed as feedback
  */
- function testsFromPickOne(node) {
-   var tests = [];
-   // child of pick_one is a statement block.  we want first child of that
-   var statement = node.getElementsByTagName('statement')[0];
-   var block = statement.getElementsByTagName('block')[0];
-   var next;
-   do {
-     // if we have a next block, we want to generate our test without that
-     next = block.getElementsByTagName('next')[0];
-     if (next) {
-       block.removeChild(next);
-     }
-     tests.push(testFromBlock(block));
-     if (next) {
-       block = next.getElementsByTagName('block')[0];
-     }
-   } while (next);
-   return tests;
- }
+function testsFromPickOne(node) {
+  var tests = [];
+  // child of pick_one is a statement block.  we want first child of that
+  var statement = node.getElementsByTagName('statement')[0];
+  var block = statement.getElementsByTagName('block')[0];
+  var next;
+  do {
+    // if we have a next block, we want to generate our test without that
+    next = block.getElementsByTagName('next')[0];
+    if (next) {
+      block.removeChild(next);
+    }
+    tests.push(testFromBlock(block));
+    if (next) {
+      block = next.getElementsByTagName('block')[0];
+    }
+  } while (next);
+  return tests;
+}
+
+/**
+ * Given xml for a procedure block, generates tests that check for required
+ * number of params not declared
+ */
+function testsFromProcedure(node) {
+  var paramCount = node.querySelectorAll('mutation > arg').length;
+  var emptyBlock = node.cloneNode(true);
+  emptyBlock.removeChild(emptyBlock.lastChild);
+  return [{
+    // Ensure that all required blocks match a block with the same number of
+    // params. There's no guarantee users will name their function the same as
+    // the required block, so only match on number of params.
+    test: function(userBlock) {
+      if (userBlock.type === node.getAttribute('type')) {
+        return paramCount === userBlock.parameterNames_.length;
+      }
+      // Block isn't the same type, return false to keep searching.
+      return false;
+    },
+    message: msg.errorRequiredParamsMissing()
+  }];
+}
 
 /**
  * Checks two DOM elements to see whether or not they are equivalent
- * We condsider them equivalent if they have the same tagName, attributes,
+ * We consider them equivalent if they have the same tagName, attributes,
  * and children
  */
 function elementsEquivalent(expected, given) {
@@ -12752,7 +12957,7 @@ var titlesMatch = function(titleA, titleB) {
     titleB.getValue() === titleA.getValue();
 };
 
-},{"./block_utils":4,"./utils":46,"./xml":47}],19:[function(require,module,exports){
+},{"../locale/ca_es/common":48,"./block_utils":4,"./utils":46,"./xml":47}],19:[function(require,module,exports){
 /**
  * A set of functional blocks
  */
@@ -15830,7 +16035,7 @@ levels.c2_2 = utils.extend(levels.dog_and_cat_hello, {});
 levels.c3_story_2 = utils.extend(levels.dog_and_cat_hello, {});
 levels.playlab_2 = utils.extend(levels.dog_and_cat_hello, {
   background: 'desert',
-  firstSpriteIndex: 20,
+  firstSpriteIndex: 20, // cave boy
   map: [
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0,16, 0, 0],
@@ -16002,7 +16207,6 @@ levels.playlab_4 = {
     snapRadius: 2
   },
   background: 'tennis',
-  // todo - does this new field need to be exposed to level builder?
   avatarList: ['tennisboy', 'tennisgirl'],
   requiredBlocks: [
     [{
@@ -16087,7 +16291,7 @@ levels.c2_5 = utils.extend(levels.click_hello, {});
 levels.c3_game_1 = utils.extend(levels.click_hello, {});
 levels.playlab_5 = utils.extend(levels.click_hello, {
   background: 'space',
-  firstSpriteIndex: 23,
+  firstSpriteIndex: 23, // spacebot
   toolbox: tb(blockOfType('studio_saySprite'))
 });
 
@@ -16214,7 +16418,7 @@ levels.c2_6 = utils.extend(levels.move_penguin, {});
 levels.c3_game_2 = utils.extend(levels.move_penguin, {});
 levels.playlab_6 = utils.extend(levels.move_penguin, {
   background: 'cave',
-  firstSpriteIndex: 5,
+  firstSpriteIndex: 5, // witch
   goalOverride: {
     goal: 'red_fireball',
     success: 'blue_fireball',
@@ -16297,7 +16501,7 @@ levels.c3_game_3 = utils.extend(levels.dino_up_and_down, {});
 levels.playlab_7 = {
   ideal: 3,
   background: 'rainbow',
-  firstSpriteIndex: 10,
+  firstSpriteIndex: 10, // wizard
   scale: {
     snapRadius: 2
   },
@@ -16506,7 +16710,70 @@ levels.penguin_touch_octopus = {
 };
 levels.c2_9 = utils.extend(levels.penguin_touch_octopus, {});
 levels.c3_game_5 = utils.extend(levels.penguin_touch_octopus, {});
-levels.playlab_8 = utils.extend(levels.penguin_touch_octopus, {});
+
+levels.playlab_8 = {
+  background: 'rainbow',
+  ideal: 16,
+  requiredBlocks: [
+    [{test: 'changeScore', type: 'studio_changeScore'}],
+    [{test: 'playSound', type: 'studio_playSound', titles: {SOUND: 'winpoint'}}]
+  ],
+  scale: {
+    snapRadius: 2
+  },
+  softButtons: [
+    'leftButton',
+    'rightButton',
+    'downButton',
+    'upButton'
+  ],
+  map: [
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0,16, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [16, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0]
+  ],
+  avatarList: ['unicorn', 'wizard'],
+  goal: {
+    successCondition: function () {
+      return Studio.sprite[0].isCollidingWith(1) && Studio.playerScore === 1;
+    },
+    failureCondition: function () {
+      return Studio.sprite[0].isCollidingWith(1) && Studio.playerScore !== 1;
+    }
+  },
+  timeoutFailureTick: 600,
+  toolbox: tb(
+    blockOfType('studio_changeScore') +
+    '<block type="studio_playSound"><title name="SOUND">winpoint</title></block>'
+  ),
+  startBlocks:
+    '<block type="studio_whenSpriteCollided" deletable="false" x="20" y="20"></block>' +
+    '<block type="studio_whenLeft" deletable="false" x="20" y="150"><next>' +
+      blockOfType('studio_move', { SPRITE: 0, DIR: 8}) +
+    '</next></block>' +
+    '<block type="studio_whenRight" deletable="false" x="20" y="250"><next>' +
+      blockOfType('studio_move', { SPRITE: 0, DIR: 2}) +
+    '</next></block>' +
+    '<block type="studio_whenUp" deletable="false" x="20" y="350"><next>' +
+      blockOfType('studio_move', { SPRITE: 0, DIR: 1}) +
+    '</next></block>' +
+    '<block type="studio_whenDown" deletable="false" x="20" y="450"><next>' +
+      blockOfType('studio_move', { SPRITE: 0, DIR: 4}) +
+    '</next></block>' +
+    '<block type="studio_repeatForever" deletable="false" x="20" y="550">' +
+      '<statement name="DO">' +
+        blockOfType('studio_moveDistance', { SPRITE: 1, DIR: 2, DISTANCE: 400}) +
+        '<next>' +
+          blockOfType('studio_moveDistance', { SPRITE: 1, DIR: 8, DISTANCE: 400}) +
+        '</next>' +
+      '</statement>' +
+    '</block>'
+};
 
 // Can you add blocks to change the background and the speed of the penguin, and
 // then move him with the arrows until you score?
@@ -16548,58 +16815,145 @@ levels.change_background_and_speed =  {
   },
   'timeoutFailureTick': 600,
   'toolbox':
-    tb('<block type="studio_setBackground"> \
-         <title name="VALUE">"night"</title></block>' +
-       '<block type="studio_moveDistance"> \
-         <title name="DISTANCE">400</title> \
-         <title name="SPRITE">1</title></block>' +
-       blockOfType('studio_saySprite') +
-       blockOfType('studio_playSound') +
-       blockOfType('studio_changeScore') +
-       '<block type="studio_setSpriteSpeed"> \
-        <title name="VALUE">Studio.SpriteSpeed.FAST</title></block>'),
+    tb(
+      blockOfType('studio_setBackground', {VALUE: '"night"'}) +
+      blockOfType('studio_moveDistance', {DISTANCE: 400, SPRITE: 1}) +
+      blockOfType('studio_saySprite') +
+      blockOfType('studio_playSound') +
+      blockOfType('studio_changeScore') +
+      blockOfType('studio_setSpriteSpeed', {VALUE: 'Studio.SpriteSpeed.FAST'})
+    ),
   'startBlocks':
-   '<block type="when_run" deletable="false" x="20" y="20"></block> \
-    <block type="studio_whenLeft" deletable="false" x="20" y="200"> \
-      <next><block type="studio_move"> \
-              <title name="DIR">8</title></block> \
-      </next></block> \
-    <block type="studio_whenRight" deletable="false" x="20" y="330"> \
-      <next><block type="studio_move"> \
-              <title name="DIR">2</title></block> \
-      </next></block> \
-    <block type="studio_whenUp" deletable="false" x="20" y="460"> \
-      <next><block type="studio_move"> \
-              <title name="DIR">1</title></block> \
-      </next></block> \
-    <block type="studio_whenDown" deletable="false" x="20" y="590"> \
-      <next><block type="studio_move"> \
-              <title name="DIR">4</title></block> \
-      </next></block> \
-    <block type="studio_repeatForever" deletable="false" x="20" y="720"> \
-      <statement name="DO"><block type="studio_moveDistance"> \
-              <title name="SPRITE">1</title> \
-              <title name="DISTANCE">400</title> \
-        <next><block type="studio_moveDistance"> \
-                <title name="SPRITE">1</title> \
-                <title name="DISTANCE">400</title> \
-                <title name="DIR">4</title></block> \
-        </next></block> \
-    </statement></block> \
-    <block type="studio_whenSpriteCollided" deletable="false" x="20" y="880"> \
-      <next><block type="studio_playSound"> \
-      <next><block type="studio_saySprite"> \
-              <title name="TEXT">Ouch!</title></block> \
-      </next></block> \
-      </next></block> \
-    <block type="studio_whenSpriteCollided" deletable="false" x="20" y="1040"> \
-     <title name="SPRITE2">2</title> \
-      <next><block type="studio_changeScore"></block> \
-      </next></block>'
+    '<block type="when_run" deletable="false" x="20" y="20"></block>' +
+    '<block type="studio_whenLeft" deletable="false" x="20" y="200">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 8}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenRight" deletable="false" x="20" y="330">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 2}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenUp" deletable="false" x="20" y="460">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 1}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenDown" deletable="false" x="20" y="590">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 4}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_repeatForever" deletable="false" x="20" y="720">' +
+      '<statement name="DO">' +
+        blockUtils.blockWithNext('studio_moveDistance', {SPRITE: 1, DIR: 1, DISTANCE: 400},
+          blockOfType('studio_moveDistance', {SPRITE: 1, DIR: 4, DISTANCE: 400})
+        ) +
+      '</statement>' +
+    '</block>' +
+    '<block type="studio_whenSpriteCollided" deletable="false" x="20" y="880">' +
+      '<title name="SPRITE2">1</title>' +
+      '<next>' +
+        blockUtils.blockWithNext('studio_playSound', {},
+          blockOfType('studio_saySprite', {TEXT: msg.ouchExclamation()})
+        ) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenSpriteCollided" deletable="false" x="20" y="1040">' +
+      '<title name="SPRITE2">2</title>' +
+      '<next>' +
+        blockOfType('studio_changeScore') +
+      '</next>' +
+    '</block>'
 };
 levels.c2_10 = utils.extend(levels.change_background_and_speed, {});
 levels.c3_game_6 = utils.extend(levels.change_background_and_speed, {});
-levels.playlab_9 = utils.extend(levels.change_background_and_speed, {});
+
+levels.playlab_9 = {
+  background: 'black',
+  requiredBlocks: [
+    [{test: 'setBackground',
+      type: 'studio_setBackground',
+      titles: {VALUE: '"space"'}}],
+    [{test: 'setSpriteSpeed',
+      type: 'studio_setSpriteSpeed',
+      titles: {VALUE: 'Studio.SpriteSpeed.FAST'}}]
+  ],
+  scale: {
+    snapRadius: 2
+  },
+  softButtons: [
+    'leftButton',
+    'rightButton',
+    'downButton',
+    'upButton'
+  ],
+  avatarList: ['spacebot', 'alien'],
+  goal: {
+    successCondition: function () {
+      return Studio.sprite[0].isCollidingWith(1);
+    }
+  },
+  map: [
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [16,0, 0, 0, 0, 0,16, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0]
+  ],
+  toolbox:
+    tb(
+      blockOfType('studio_setBackground', {VALUE: '"space"'}) +
+      blockOfType('studio_moveDistance', {DISTANCE: 400, SPRITE: 1}) +
+      blockOfType('studio_saySprite') +
+      blockOfType('studio_playSound', {SOUND: 'winpoint2'}) +
+      blockOfType('studio_changeScore') +
+      blockOfType('studio_setSpriteSpeed', {VALUE: 'Studio.SpriteSpeed.FAST'})
+    ),
+  minWorkspaceHeight: 1250,
+  startBlocks:
+    '<block type="when_run" deletable="false" x="20" y="20"></block>' +
+    '<block type="studio_whenLeft" deletable="false" x="20" y="200">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 8}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenRight" deletable="false" x="20" y="330">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 2}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenUp" deletable="false" x="20" y="460">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 1}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenDown" deletable="false" x="20" y="590">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 4}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_repeatForever" deletable="false" x="20" y="720">' +
+      '<statement name="DO">' +
+        blockUtils.blockWithNext('studio_moveDistance', {SPRITE: 1, DIR: 1, DISTANCE: 400},
+          blockOfType('studio_moveDistance', {SPRITE: 1, DIR: 4, DISTANCE: 400})
+        ) +
+      '</statement>' +
+    '</block>' +
+    '<block type="studio_whenSpriteCollided" deletable="false" x="20" y="880">' +
+      '<title name="SPRITE2">0</title>' +
+      '<title name="SPRITE2">1</title>' +
+      '<next>' +
+        blockUtils.blockWithNext('studio_playSound', {SOUND: 'winpoint2'},
+          blockOfType('studio_saySprite', {TEXT: msg.alienInvasion()})
+        ) +
+      '</next>' +
+    '</block>'
+};
 
 // Create your own game. When you're done, click Finish to let friends try your story on their phones.
 levels.sandbox =  {
@@ -17669,8 +18023,8 @@ var drawMap = function () {
       var spriteFinishMarker = document.createElementNS(SVG_NS, 'image');
       spriteFinishMarker.setAttribute('id', 'spriteFinish' + i);
       spriteFinishMarker.setAttribute('height', Studio.MARKER_HEIGHT);
-      spriteFinishMarker.setAttribute('width', level.goalOverride &&
-        level.goalOverride.imageWidth || Studio.MARKER_WIDTH);
+      spriteFinishMarker.setAttribute('width', (level.goalOverride &&
+        level.goalOverride.imageWidth) || Studio.MARKER_WIDTH);
       spriteFinishMarker.setAttribute('clip-path', 'url(#finishClipPath' + i + ')');
       svg.appendChild(spriteFinishMarker);
     }
@@ -18949,7 +19303,9 @@ Studio.onPuzzleComplete = function() {
   if (level.freePlay) {
     Studio.testResults = BlocklyApps.TestResults.FREE_PLAY;
   } else {
-    Studio.testResults = BlocklyApps.getTestResults(levelComplete);
+    Studio.testResults = BlocklyApps.getTestResults(levelComplete, {
+      level: level
+    });
   }
 
   if (Studio.testResults >= BlocklyApps.TestResults.FREE_PLAY) {
@@ -20730,6 +21086,18 @@ exports.emptyBlocksErrorMsg = function(d){return "Els blocs \"Repetir\" o el \"S
 
 exports.emptyFunctionBlocksErrorMsg = function(d){return "La funció bloc ha de tenir altres blocs a dins perquè funcioni."};
 
+exports.errorEmptyFunctionBlockModal = function(d){return "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block."};
+
+exports.errorIncompleteBlockInFunction = function(d){return "Click \"edit\" to make sure you don't have any blocks missing inside your function definition."};
+
+exports.errorParamInputUnattached = function(d){return "Remember to attach a block to each parameter input on the function block in your workspace."};
+
+exports.errorUnusedParam = function(d){return "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block."};
+
+exports.errorRequiredParamsMissing = function(d){return "Create a parameter for your function by clicking \"edit\" and adding the necessary parameters. Drag the new parameter blocks into your function definition."};
+
+exports.errorUnusedFunction = function(d){return "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program."};
+
 exports.extraTopBlocks = function(d){return "Tens blocs sense lligams. Volies lligar-los al bloc \"quan s'executa\"?"};
 
 exports.finalStage = function(d){return "Enhorabona! Has completat l'etapa final."};
@@ -20856,6 +21224,8 @@ exports.defaultTwitterText = function(d){return "Comprova el que he fet"};
 },{"messageformat":61}],49:[function(require,module,exports){
 var MessageFormat = require("messageformat");MessageFormat.locale.ca=function(n){return n===1?"one":"other"}
 exports.actor = function(d){return "actor"};
+
+exports.alienInvasion = function(d){return "Alien Invasion!"};
 
 exports.backgroundBlack = function(d){return "negre"};
 

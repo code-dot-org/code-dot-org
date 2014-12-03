@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Do you remember when we used the counter loop but removed a loop within? Let's have some fun and use the \"draw a shape\" function with \"sides\" and \"length\" parameters. Can you re create these shapes? The square counter should be 5/100/5, the triangle counter should be 10/100/10 and the hexagon is 2/100/2.",
+    "instructions": "Can you recreate these shapes? Remove the loop within the function definition and use the counter variable in the function definition. The square counter should be 5/100/5, the triangle counter should be 10/100/10 and the hexagon is 2/100/2.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "slider_speed": ".5",
