@@ -380,7 +380,7 @@ var getFeedbackMessage = function(options) {
           stageName: stageCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
-        if (options.feedbackType == TestResults.FREE_PLAY && !options.level.disableSharing) {
+        if (options.feedbackType === TestResults.FREE_PLAY && !options.level.disableSharing) {
           message = options.appStrings.reinfFeedbackMsg;
         } else if (options.numTrophies > 0) {
           message = finalLevel ? msg.finalStageTrophies(msgParams) :
