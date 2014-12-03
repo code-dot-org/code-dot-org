@@ -1321,12 +1321,24 @@ exports.createToolbox = function(blocks) {
   return '<xml id="toolbox" style="display: none;">' + blocks + '</xml>';
 };
 
-exports.blockOfType = function(type) {
-  return '<block type="' + type + '"></block>';
+exports.blockOfType = function(type, titles) {
+  var titleText = '';
+  if (titles) {
+    for (var key in titles) {
+      titleText += '<title name="' + key + '">' + titles[key] + '</title>';
+    }
+  }
+  return '<block type="' + type + '">' + titleText +'</block>';
 };
 
-exports.blockWithNext = function (type, child) {
-  return '<block type="' + type + '"><next>' + child + '</next></block>';
+exports.blockWithNext = function (type, titles, child) {
+  var titleText = '';
+  if (titles) {
+    for (var key in titles) {
+      titleText += '<title name="' + key + '">' + titles[key] + '</title>';
+    }
+  }
+  return '<block type="' + type + '">' + titleText + '<next>' + child + '</next></block>';
 };
 
 /**
@@ -1338,7 +1350,7 @@ exports.blocksFromList = function (types) {
     return this.blockOfType(types[0]);
   }
 
-  return this.blockWithNext(types[0], this.blocksFromList(types.slice(1)));
+  return this.blockWithNext(types[0], {}, this.blocksFromList(types.slice(1)));
 };
 
 exports.createCategory = function(name, blocks, custom) {
@@ -3168,7 +3180,14 @@ exports.createModalDialogWithIcon = function(options) {
   var btn = options.contentDiv.querySelector(options.defaultBtnSelector);
   var keydownHandler = function(e) {
     if (e.keyCode == Keycodes.ENTER || e.keyCode == Keycodes.SPACE) {
-      Blockly.fireUiEvent(btn, 'click');
+      // Simulate a 'click':
+      var event = new MouseEvent('click', {
+          'view': window,
+          'bubbles': true,
+          'cancelable': true
+      });
+      btn.dispatchEvent(event);
+
       e.stopPropagation();
       e.preventDefault();
     }
@@ -9743,6 +9762,12 @@ exports.attachEventHandler = function (blockId, elementId, eventName, func) {
                            'func': func });
 };
 
+exports.startWebRequest = function (blockId, url, func) {
+  return Webapp.executeCmd(String(blockId),
+                          'startWebRequest',
+                          {'url': url,
+                           'func': func });
+};
 
 },{}],30:[function(require,module,exports){
 /**
@@ -9906,6 +9931,7 @@ levels.ec_simple = {
     {'func': 'replaceHtmlBlock', 'params': ["'id'", "'html'"] },
     {'func': 'deleteHtmlBlock', 'params': ["'id'"] },
     {'func': 'attachEventHandler', 'params': ["'id'", "'click'", "function() {\n  \n}"] },
+    {'func': 'startWebRequest', 'params': ["'http://api.openweathermap.org/data/2.5/weather?q=London,uk'", "function(status, type, content) {\n  \n}"] },
     {'func': 'createCanvas', 'category': 'Canvas', 'params': ["'id'", "400", "400"] },
     {'func': 'canvasDrawLine', 'category': 'Canvas', 'params': ["'id'", "0", "0", "400", "400"] },
     {'func': 'canvasDrawCircle', 'category': 'Canvas', 'params': ["'id'", "200", "200", "100"] },
@@ -10810,6 +10836,14 @@ consoleApi.log = function() {
   outputWebappConsole(output);
 };
 
+var JSONApi = {};
+
+// NOTE: this version of parse does not support the reviver parameter
+
+JSONApi.parse = function(text) {
+  return JSON.parse(text);
+};
+
 // Commented out, but available in case we want to expose the droplet/pencilcode
 // style random (with a min, max value)
 /*
@@ -10880,6 +10914,7 @@ Webapp.execute = function() {
                                           BlocklyApps: BlocklyApps,
                                           Webapp: api,
                                           console: consoleApi,
+                                          JSON: JSONApi,
                                           Globals: Webapp.Globals } );
 
 
@@ -11095,6 +11130,7 @@ Webapp.callCmd = function (cmd) {
     case 'setParent':
     case 'setStyle':
     case 'attachEventHandler':
+    case 'startWebRequest':
       BlocklyApps.highlight(cmd.id);
       retVal = Webapp[cmd.name](cmd.opts);
       break;
@@ -11347,6 +11383,25 @@ Webapp.attachEventHandler = function (opts) {
         opts.eventName,
         Webapp.onEventFired.bind(this, opts));
   }
+};
+
+Webapp.onHttpRequestEvent = function (opts) {
+  if (this.readyState === 4) {
+    Webapp.eventQueue.push({
+      'fn': opts.func,
+      'arguments': [
+        Number(this.status),
+        String(this.getResponseHeader('content-type')),
+        String(this.responseText)]
+    });
+  }
+};
+
+Webapp.startWebRequest = function (opts) {
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = Webapp.onHttpRequestEvent.bind(req, opts);
+  req.open('GET', String(opts.url), true);
+  req.send();
 };
 
 /*

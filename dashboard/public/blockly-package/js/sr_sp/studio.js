@@ -1321,12 +1321,24 @@ exports.createToolbox = function(blocks) {
   return '<xml id="toolbox" style="display: none;">' + blocks + '</xml>';
 };
 
-exports.blockOfType = function(type) {
-  return '<block type="' + type + '"></block>';
+exports.blockOfType = function(type, titles) {
+  var titleText = '';
+  if (titles) {
+    for (var key in titles) {
+      titleText += '<title name="' + key + '">' + titles[key] + '</title>';
+    }
+  }
+  return '<block type="' + type + '">' + titleText +'</block>';
 };
 
-exports.blockWithNext = function (type, child) {
-  return '<block type="' + type + '"><next>' + child + '</next></block>';
+exports.blockWithNext = function (type, titles, child) {
+  var titleText = '';
+  if (titles) {
+    for (var key in titles) {
+      titleText += '<title name="' + key + '">' + titles[key] + '</title>';
+    }
+  }
+  return '<block type="' + type + '">' + titleText + '<next>' + child + '</next></block>';
 };
 
 /**
@@ -1338,7 +1350,7 @@ exports.blocksFromList = function (types) {
     return this.blockOfType(types[0]);
   }
 
-  return this.blockWithNext(types[0], this.blocksFromList(types.slice(1)));
+  return this.blockWithNext(types[0], {}, this.blocksFromList(types.slice(1)));
 };
 
 exports.createCategory = function(name, blocks, custom) {
@@ -7259,7 +7271,14 @@ exports.createModalDialogWithIcon = function(options) {
   var btn = options.contentDiv.querySelector(options.defaultBtnSelector);
   var keydownHandler = function(e) {
     if (e.keyCode == Keycodes.ENTER || e.keyCode == Keycodes.SPACE) {
-      Blockly.fireUiEvent(btn, 'click');
+      // Simulate a 'click':
+      var event = new MouseEvent('click', {
+          'view': window,
+          'bubbles': true,
+          'cancelable': true
+      });
+      btn.dispatchEvent(event);
+
       e.stopPropagation();
       e.preventDefault();
     }
@@ -16016,7 +16035,7 @@ levels.c2_2 = utils.extend(levels.dog_and_cat_hello, {});
 levels.c3_story_2 = utils.extend(levels.dog_and_cat_hello, {});
 levels.playlab_2 = utils.extend(levels.dog_and_cat_hello, {
   background: 'desert',
-  firstSpriteIndex: 20,
+  firstSpriteIndex: 20, // cave boy
   map: [
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0,16, 0, 0],
@@ -16188,7 +16207,6 @@ levels.playlab_4 = {
     snapRadius: 2
   },
   background: 'tennis',
-  // todo - does this new field need to be exposed to level builder?
   avatarList: ['tennisboy', 'tennisgirl'],
   requiredBlocks: [
     [{
@@ -16273,7 +16291,7 @@ levels.c2_5 = utils.extend(levels.click_hello, {});
 levels.c3_game_1 = utils.extend(levels.click_hello, {});
 levels.playlab_5 = utils.extend(levels.click_hello, {
   background: 'space',
-  firstSpriteIndex: 23,
+  firstSpriteIndex: 23, // spacebot
   toolbox: tb(blockOfType('studio_saySprite'))
 });
 
@@ -16400,7 +16418,7 @@ levels.c2_6 = utils.extend(levels.move_penguin, {});
 levels.c3_game_2 = utils.extend(levels.move_penguin, {});
 levels.playlab_6 = utils.extend(levels.move_penguin, {
   background: 'cave',
-  firstSpriteIndex: 5,
+  firstSpriteIndex: 5, // witch
   goalOverride: {
     goal: 'red_fireball',
     success: 'blue_fireball',
@@ -16483,7 +16501,7 @@ levels.c3_game_3 = utils.extend(levels.dino_up_and_down, {});
 levels.playlab_7 = {
   ideal: 3,
   background: 'rainbow',
-  firstSpriteIndex: 10,
+  firstSpriteIndex: 10, // wizard
   scale: {
     snapRadius: 2
   },
@@ -16692,7 +16710,70 @@ levels.penguin_touch_octopus = {
 };
 levels.c2_9 = utils.extend(levels.penguin_touch_octopus, {});
 levels.c3_game_5 = utils.extend(levels.penguin_touch_octopus, {});
-levels.playlab_8 = utils.extend(levels.penguin_touch_octopus, {});
+
+levels.playlab_8 = {
+  background: 'rainbow',
+  ideal: 16,
+  requiredBlocks: [
+    [{test: 'changeScore', type: 'studio_changeScore'}],
+    [{test: 'playSound', type: 'studio_playSound', titles: {SOUND: 'winpoint'}}]
+  ],
+  scale: {
+    snapRadius: 2
+  },
+  softButtons: [
+    'leftButton',
+    'rightButton',
+    'downButton',
+    'upButton'
+  ],
+  map: [
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0,16, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [16, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0]
+  ],
+  avatarList: ['unicorn', 'wizard'],
+  goal: {
+    successCondition: function () {
+      return Studio.sprite[0].isCollidingWith(1) && Studio.playerScore === 1;
+    },
+    failureCondition: function () {
+      return Studio.sprite[0].isCollidingWith(1) && Studio.playerScore !== 1;
+    }
+  },
+  timeoutFailureTick: 600,
+  toolbox: tb(
+    blockOfType('studio_changeScore') +
+    '<block type="studio_playSound"><title name="SOUND">winpoint</title></block>'
+  ),
+  startBlocks:
+    '<block type="studio_whenSpriteCollided" deletable="false" x="20" y="20"></block>' +
+    '<block type="studio_whenLeft" deletable="false" x="20" y="150"><next>' +
+      blockOfType('studio_move', { SPRITE: 0, DIR: 8}) +
+    '</next></block>' +
+    '<block type="studio_whenRight" deletable="false" x="20" y="250"><next>' +
+      blockOfType('studio_move', { SPRITE: 0, DIR: 2}) +
+    '</next></block>' +
+    '<block type="studio_whenUp" deletable="false" x="20" y="350"><next>' +
+      blockOfType('studio_move', { SPRITE: 0, DIR: 1}) +
+    '</next></block>' +
+    '<block type="studio_whenDown" deletable="false" x="20" y="450"><next>' +
+      blockOfType('studio_move', { SPRITE: 0, DIR: 4}) +
+    '</next></block>' +
+    '<block type="studio_repeatForever" deletable="false" x="20" y="550">' +
+      '<statement name="DO">' +
+        blockOfType('studio_moveDistance', { SPRITE: 1, DIR: 2, DISTANCE: 400}) +
+        '<next>' +
+          blockOfType('studio_moveDistance', { SPRITE: 1, DIR: 8, DISTANCE: 400}) +
+        '</next>' +
+      '</statement>' +
+    '</block>'
+};
 
 // Can you add blocks to change the background and the speed of the penguin, and
 // then move him with the arrows until you score?
@@ -16734,58 +16815,145 @@ levels.change_background_and_speed =  {
   },
   'timeoutFailureTick': 600,
   'toolbox':
-    tb('<block type="studio_setBackground"> \
-         <title name="VALUE">"night"</title></block>' +
-       '<block type="studio_moveDistance"> \
-         <title name="DISTANCE">400</title> \
-         <title name="SPRITE">1</title></block>' +
-       blockOfType('studio_saySprite') +
-       blockOfType('studio_playSound') +
-       blockOfType('studio_changeScore') +
-       '<block type="studio_setSpriteSpeed"> \
-        <title name="VALUE">Studio.SpriteSpeed.FAST</title></block>'),
+    tb(
+      blockOfType('studio_setBackground', {VALUE: '"night"'}) +
+      blockOfType('studio_moveDistance', {DISTANCE: 400, SPRITE: 1}) +
+      blockOfType('studio_saySprite') +
+      blockOfType('studio_playSound') +
+      blockOfType('studio_changeScore') +
+      blockOfType('studio_setSpriteSpeed', {VALUE: 'Studio.SpriteSpeed.FAST'})
+    ),
   'startBlocks':
-   '<block type="when_run" deletable="false" x="20" y="20"></block> \
-    <block type="studio_whenLeft" deletable="false" x="20" y="200"> \
-      <next><block type="studio_move"> \
-              <title name="DIR">8</title></block> \
-      </next></block> \
-    <block type="studio_whenRight" deletable="false" x="20" y="330"> \
-      <next><block type="studio_move"> \
-              <title name="DIR">2</title></block> \
-      </next></block> \
-    <block type="studio_whenUp" deletable="false" x="20" y="460"> \
-      <next><block type="studio_move"> \
-              <title name="DIR">1</title></block> \
-      </next></block> \
-    <block type="studio_whenDown" deletable="false" x="20" y="590"> \
-      <next><block type="studio_move"> \
-              <title name="DIR">4</title></block> \
-      </next></block> \
-    <block type="studio_repeatForever" deletable="false" x="20" y="720"> \
-      <statement name="DO"><block type="studio_moveDistance"> \
-              <title name="SPRITE">1</title> \
-              <title name="DISTANCE">400</title> \
-        <next><block type="studio_moveDistance"> \
-                <title name="SPRITE">1</title> \
-                <title name="DISTANCE">400</title> \
-                <title name="DIR">4</title></block> \
-        </next></block> \
-    </statement></block> \
-    <block type="studio_whenSpriteCollided" deletable="false" x="20" y="880"> \
-      <next><block type="studio_playSound"> \
-      <next><block type="studio_saySprite"> \
-              <title name="TEXT">Ouch!</title></block> \
-      </next></block> \
-      </next></block> \
-    <block type="studio_whenSpriteCollided" deletable="false" x="20" y="1040"> \
-     <title name="SPRITE2">2</title> \
-      <next><block type="studio_changeScore"></block> \
-      </next></block>'
+    '<block type="when_run" deletable="false" x="20" y="20"></block>' +
+    '<block type="studio_whenLeft" deletable="false" x="20" y="200">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 8}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenRight" deletable="false" x="20" y="330">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 2}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenUp" deletable="false" x="20" y="460">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 1}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenDown" deletable="false" x="20" y="590">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 4}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_repeatForever" deletable="false" x="20" y="720">' +
+      '<statement name="DO">' +
+        blockUtils.blockWithNext('studio_moveDistance', {SPRITE: 1, DIR: 1, DISTANCE: 400},
+          blockOfType('studio_moveDistance', {SPRITE: 1, DIR: 4, DISTANCE: 400})
+        ) +
+      '</statement>' +
+    '</block>' +
+    '<block type="studio_whenSpriteCollided" deletable="false" x="20" y="880">' +
+      '<title name="SPRITE2">1</title>' +
+      '<next>' +
+        blockUtils.blockWithNext('studio_playSound', {},
+          blockOfType('studio_saySprite', {TEXT: msg.ouchExclamation()})
+        ) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenSpriteCollided" deletable="false" x="20" y="1040">' +
+      '<title name="SPRITE2">2</title>' +
+      '<next>' +
+        blockOfType('studio_changeScore') +
+      '</next>' +
+    '</block>'
 };
 levels.c2_10 = utils.extend(levels.change_background_and_speed, {});
 levels.c3_game_6 = utils.extend(levels.change_background_and_speed, {});
-levels.playlab_9 = utils.extend(levels.change_background_and_speed, {});
+
+levels.playlab_9 = {
+  background: 'black',
+  requiredBlocks: [
+    [{test: 'setBackground',
+      type: 'studio_setBackground',
+      titles: {VALUE: '"space"'}}],
+    [{test: 'setSpriteSpeed',
+      type: 'studio_setSpriteSpeed',
+      titles: {VALUE: 'Studio.SpriteSpeed.FAST'}}]
+  ],
+  scale: {
+    snapRadius: 2
+  },
+  softButtons: [
+    'leftButton',
+    'rightButton',
+    'downButton',
+    'upButton'
+  ],
+  avatarList: ['spacebot', 'alien'],
+  goal: {
+    successCondition: function () {
+      return Studio.sprite[0].isCollidingWith(1);
+    }
+  },
+  map: [
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [16,0, 0, 0, 0, 0,16, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0]
+  ],
+  toolbox:
+    tb(
+      blockOfType('studio_setBackground', {VALUE: '"space"'}) +
+      blockOfType('studio_moveDistance', {DISTANCE: 400, SPRITE: 1}) +
+      blockOfType('studio_saySprite') +
+      blockOfType('studio_playSound', {SOUND: 'winpoint2'}) +
+      blockOfType('studio_changeScore') +
+      blockOfType('studio_setSpriteSpeed', {VALUE: 'Studio.SpriteSpeed.FAST'})
+    ),
+  minWorkspaceHeight: 1250,
+  startBlocks:
+    '<block type="when_run" deletable="false" x="20" y="20"></block>' +
+    '<block type="studio_whenLeft" deletable="false" x="20" y="200">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 8}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenRight" deletable="false" x="20" y="330">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 2}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenUp" deletable="false" x="20" y="460">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 1}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_whenDown" deletable="false" x="20" y="590">' +
+      '<next>' +
+        blockOfType('studio_move', {DIR: 4}) +
+      '</next>' +
+    '</block>' +
+    '<block type="studio_repeatForever" deletable="false" x="20" y="720">' +
+      '<statement name="DO">' +
+        blockUtils.blockWithNext('studio_moveDistance', {SPRITE: 1, DIR: 1, DISTANCE: 400},
+          blockOfType('studio_moveDistance', {SPRITE: 1, DIR: 4, DISTANCE: 400})
+        ) +
+      '</statement>' +
+    '</block>' +
+    '<block type="studio_whenSpriteCollided" deletable="false" x="20" y="880">' +
+      '<title name="SPRITE2">0</title>' +
+      '<title name="SPRITE2">1</title>' +
+      '<next>' +
+        blockUtils.blockWithNext('studio_playSound', {SOUND: 'winpoint2'},
+          blockOfType('studio_saySprite', {TEXT: msg.alienInvasion()})
+        ) +
+      '</next>' +
+    '</block>'
+};
 
 // Create your own game. When you're done, click Finish to let friends try your story on their phones.
 levels.sandbox =  {
@@ -17855,8 +18023,8 @@ var drawMap = function () {
       var spriteFinishMarker = document.createElementNS(SVG_NS, 'image');
       spriteFinishMarker.setAttribute('id', 'spriteFinish' + i);
       spriteFinishMarker.setAttribute('height', Studio.MARKER_HEIGHT);
-      spriteFinishMarker.setAttribute('width', level.goalOverride &&
-        level.goalOverride.imageWidth || Studio.MARKER_WIDTH);
+      spriteFinishMarker.setAttribute('width', (level.goalOverride &&
+        level.goalOverride.imageWidth) || Studio.MARKER_WIDTH);
       spriteFinishMarker.setAttribute('clip-path', 'url(#finishClipPath' + i + ')');
       svg.appendChild(spriteFinishMarker);
     }
@@ -21082,6 +21250,8 @@ var MessageFormat = require("messageformat");MessageFormat.locale.sr = function 
   return 'other';
 };
 exports.actor = function(d){return "учесник"};
+
+exports.alienInvasion = function(d){return "Alien Invasion!"};
 
 exports.backgroundBlack = function(d){return "black"};
 

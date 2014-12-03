@@ -4,35 +4,31 @@ view: page_curriculum
 theme: none
 ---
 
-<%= partial('curriculum_header', :title=> 'Move It, Move It', :lesson=>2, :unplugged=>true,:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>20) %>
+<%= partial('curriculum_header', :title=> 'Move It, Move It', :lesson=>1, :unplugged=>true,:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>10) %>
 
 [content]
 
 [together]
 
 ## Lesson Overview 
-This lesson will help students realize that in order to give clear instructions, they need a common language. Students will practice controlling one another using a simple combination of hand gestures.  Once they understand the language, they will begin to "program" one another by giving multiple instructions in advance.
+This brief lesson will help prepare students to program Anna and Elsa in the Hour of Code activity. Students will "program" one another to move in various patterns with simple written instructions. As students progress through the Hour of Code online, encourage them to refer back to this activity as they think about how to program Anna and Elsa.
 
 [summary]
 
 ## Teaching Summary
-### **Getting Started** - 15 minutes
+### **Getting Started**
 
-1) [Review](#Review) <br/>
+
 2) [Vocabulary](#Vocab) <br/>
 3) [Let's Control Ourselves](#GetStarted)  
 
-### **Activity: Move It, Move It** - 20  minutes  
+### **Activity: Move It, Move It**
 
 4) [Move It, Move It: Multi-Step Adventure](#Activity1)  
 
-### **Wrap-up** - 5  minutes 
+### **Wrap-up**
 
 5) [Flash Chat](#WrapUp) - What did we learn?<br/>
-6) [Vocab Shmocab](#Shmocab)
-
-### **Assessment** - 10  minutes 
-7) [Move the Flurbs 2](#Assessment)
 
 [/summary]
 
@@ -40,7 +36,7 @@ This lesson will help students realize that in order to give clear instructions,
 ### Students will:
 - Recognize situations where they can create programs to complete tasks
 - Predict moves necessary to get teammate from start to finish
-- Convert movements into symbolic instructions
+- Convert movements into written instructions
 - Relate algorithms as programs to teammates 
 
 [/together]
@@ -51,41 +47,18 @@ This lesson will help students realize that in order to give clear instructions,
 
 ## Materials, Resources and Prep
 ### For the Student
-- Maps and Key from [Move It, Move It: Multi-Step Adventure](/curriculum/course1/2/Activity2-MoveItMoveIt.pdf)
-- Assessment Worksheet: [Move the Flurbs 2](/curriculum/course1/2/Assessment2-MoveIt.pdf)
-- Scissors
-- Glue
+- [Shapes for students to draw](/curriculum/course1/2/Activity2-MoveItMoveIt.pdf)
+- [Instruction sheets]()
 
 ### For the Teacher
 - Teacher Lesson Guide
 - Print one [Move It, Move It: Multi-Step Adventure](/curriculum/course1/2/Activity2-MoveItMoveIt.pdf) activity pack on Cardstock for each group
-- Print Assessment Worksheet: [Move the Flurbs 2](/curriculum/course1/2/Assessment2-MoveIt.pdf) for each student
 
 [/together]
 
 [together]
 
-## Getting Started (15 min)
-
-### <a name="Review"></a> 1) Review
-This is a great time to review the last lesson that you went through with your class.  You can do this as one large group or have students discuss with an elbow partner.
-
-Here are some questions that you can ask in review:
-
-- What did we do last time?
-
-- What do you wish we had had a chance to do?
-
-- Did you think of any questions after the lesson that you want to ask?
-
-- What was your favorite part of the last lesson?
-
-[tip]
-
-# Lesson Tip
-Finishing the review by asking about the students' favorite things helps to leave a positive impression of the previous exercise, increasing excitement for the activity that you are about to introduce.
-
-[/tip]
+## Getting Started
 
 
 ### <a name="Vocab"></a> 2) Vocabulary
