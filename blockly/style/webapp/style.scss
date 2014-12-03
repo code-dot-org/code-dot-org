@@ -24,6 +24,10 @@ $root: '/blockly/media/webapp/'; //TODO: Parameterize for asset pipeline
   z-index: -1;
 }
 
+#divWebapp div {
+  overflow: hidden;
+}
+
 .debug-console {
   dispay: block;
 }
@@ -43,14 +47,16 @@ $root: '/blockly/media/webapp/'; //TODO: Parameterize for asset pipeline
   border-width: 0px;
   padding: 0px;
   outline: none;
-  background-color: white;
 }
 
-.debug-output {
+.debug-output textarea[disabled], textarea[readonly] {
   height: 100px;
   resize: none;
   margin-bottom: -1px;
-  overflow: scroll;
+  overflow: auto;
+  background-color: white;
+  line-height: normal;
+  cursor: text;
 }
 
 .debug-input {
@@ -60,7 +66,7 @@ $root: '/blockly/media/webapp/'; //TODO: Parameterize for asset pipeline
   text-indent: 14.5px;
   overflow: hidden;
   margin-top: -3px;
-  padding-top: 3px;
+  padding-top: 6px;
 }
 
 /* Slider. */

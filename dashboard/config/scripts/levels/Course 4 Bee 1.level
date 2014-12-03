@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "The bee can't tell if this is a flower or a honeycomb. Gather nectar only from flowers, but first check if it is a flower or a honeycomb.",
+    "instructions": "The bee can't tell if this is a flower or a honeycomb. Check first if it is a flower or a honeycomb, and then only gather nectar from it if it is a flower. ",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -21,6 +21,7 @@
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
     "maze_data": null
   }
 }]]></config>

@@ -24,7 +24,7 @@
     %link{:rel=>'shortcut icon', :href=>'/images/favicon.ico'}
     %link{:rel=>'apple-touch-icon', :href=>'/images/apple-touch-icon-precomposed.png'}
 
-    %link{:rel=>'stylesheet', :type=>'text/css', :href=>'/css/bootstrap.min.css'}
+    %link{:rel=>'stylesheet', :type=>'text/css', :href=>'/style.css'}
     %link{:rel=>'stylesheet', :type=>'text/css', :href=>'/css/font-awesome.min.css'}
     %link{:rel=>'stylesheet', :type=>'text/css', :href=>'//cloud.typography.com/7425452/678642/css/fonts.css', :media=>'all'}
 
@@ -58,13 +58,6 @@
 
     %script{:src=>'/js/jquery.min.js'}
 
-    -if request.site == 'csedweek.org'
-      %link{:rel=>'stylesheet', :type=>'text/css', :href=>'/css/styling.css'}
-      %link{:rel=>'stylesheet', :type=>'text/css', :href=>'/css/styling_headers.css'}
-    -else
-      %link{:rel=>'stylesheet', :type=>'text/css', :href=>'/css/page.css'}
-      %link{:rel=>'stylesheet', :type=>'text/css', :href=>'/css/theme.css'}
- 
   %body
     -if header['print']
       =body
