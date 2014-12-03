@@ -80,6 +80,107 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert user_script.completed_at.nil?
   end
 
+  test "logged in milestone does not allow negative lines of code" do
+    @controller.send(:milestone_logger).expects(:info).with do |log_string|
+      log_string !~ /-20/
+    end
+
+    @controller.expects :slog
+
+    @controller.expects(:trophy_check).with(@user)
+
+    assert_creates(LevelSource, Activity, UserLevel, UserScript) do
+      assert_does_not_create(GalleryActivity) do
+        assert_no_difference('@user.reload.total_lines') do # update total lines
+          post :milestone, user_id: @user, script_level_id: @script_level, :lines => -20, :attempt => "1", :result => "true", :testResult => "100", :time => "1000", :app => "test", :program => "<hey>"
+        end
+      end
+    end
+
+    # pretend it succeeded
+    assert_response :success
+
+    expected_response = {"previous_level"=>"/s/#{@script.id}/level/#{@script_level_prev.id}",
+                         "total_lines" => 15, # no change
+                         "redirect"=>"/s/#{@script.id}/level/#{@script_level_next.id}",
+                         "level_source"=>"http://test.host/u/#{assigns(:level_source).id}",
+                         "save_to_gallery_url"=>"/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}",
+                         "design"=>"white_background"}
+
+    assert_equal_expected_keys expected_response, JSON.parse(@response.body)
+
+    # activity does not have unreasonable lines of code either
+    assert_equal 0, Activity.last.lines
+  end
+
+
+  test "logged in milestone does not allow unreasonably high lines of code" do
+    @controller.send(:milestone_logger).expects(:info).with do |log_string|
+      log_string !~ /9999999/
+    end
+
+    @controller.expects :slog
+
+    @controller.expects(:trophy_check).with(@user)
+
+    assert_creates(LevelSource, Activity, UserLevel, UserScript) do
+      assert_does_not_create(GalleryActivity) do
+        assert_no_difference('@user.reload.total_lines') do # update total lines
+          post :milestone, user_id: @user, script_level_id: @script_level, :lines => 9999999, :attempt => "1", :result => "true", :testResult => "100", :time => "1000", :app => "test", :program => "<hey>"
+        end
+      end
+    end
+
+    # pretend it succeeded
+    assert_response :success
+
+    expected_response = {"previous_level"=>"/s/#{@script.id}/level/#{@script_level_prev.id}",
+                         "total_lines" => 15, # no change
+                         "redirect"=>"/s/#{@script.id}/level/#{@script_level_next.id}",
+                         "level_source"=>"http://test.host/u/#{assigns(:level_source).id}",
+                         "save_to_gallery_url"=>"/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}",
+                         "design"=>"white_background"}
+
+    assert_equal_expected_keys expected_response, JSON.parse(@response.body)
+
+    # activity does not have unreasonable lines of code either
+    assert_equal 0, Activity.last.lines
+  end
+
+  test "anonymous milestone does not allow unreasonably high lines of code" do
+    sign_out(@user)
+
+    @controller.send(:milestone_logger).expects(:info).with do |log_string|
+      log_string !~ /9999999/
+    end
+
+    @controller.expects :slog
+
+    assert_creates(LevelSource) do
+      assert_does_not_create(Activity, UserLevel, LevelSourceImage, GalleryActivity) do
+        post :milestone, user_id: 0, script_level_id: @script_level, :lines => "9999999", :attempt => "1", :result => "true", :testResult => "100", :time => "1000", :app => "test", :program => "<hey>", :save_to_gallery => 'true'
+      end
+    end
+
+    # record activity in session
+    expected_progress = {@script_level.level_id => 100}
+    assert_equal expected_progress, session["progress"]
+
+    # don't count it in session either
+    assert_equal 0, session['lines']
+
+    # pretend it succeeded
+    assert_response :success
+
+    expected_response = {"previous_level"=>"/s/#{@script.id}/level/#{@script_level_prev.id}",
+                         "total_lines" => 0, # no change
+                         "redirect"=>"/s/#{@script.id}/level/#{@script_level_next.id}",
+                         "level_source"=>"http://test.host/u/#{assigns(:level_source).id}",
+                         "design"=>"white_background"}
+
+    assert_equal_expected_keys expected_response, JSON.parse(@response.body)
+  end
+
   test "logged in milestone with messed up email" do
     # use update_attribute to bypass validations
     @user.update_attribute(:email, '')
@@ -480,9 +581,6 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test "logged in milestone race condition retrying code will not retry forever" do
-    # do all the logging
-    @controller.expects :log_milestone
-
     # simulate always throwing an exception on first_or_create (not
     # supposed to happen, but we shouldn't get stuck in a loop anyway)
     user_level_creator = mock('user_level_creator')
@@ -495,8 +593,6 @@ class ActivitiesControllerTest < ActionController::TestCase
       post :milestone, user_id: @user, script_level_id: @script_level, :lines => 20, :attempt => "1", :result => "true", :testResult => "100", :time => "1000", :app => "test", :program => "<hey>"
     end
   end
-
-  # TODO actually test trophies
 
   test "anonymous milestone starting with empty session saves progress in section" do
     sign_out @user
