@@ -43,7 +43,8 @@ class ActivitiesController < ApplicationController
 
     if params[:lines] 
       params[:lines] = params[:lines].to_i
-      params[:lines] = 0 if (params[:lines] < MIN_LINES_OF_CODE || params[:lines] > MAX_LINES_OF_CODE)
+      params[:lines] = 0 if params[:lines] < MIN_LINES_OF_CODE
+      params[:lines] = MAX_LINES_OF_CODE if params[:lines] > MAX_LINES_OF_CODE
     end
 
     # Store the image only if the image is set, and the image has not been saved
