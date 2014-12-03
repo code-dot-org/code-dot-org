@@ -279,8 +279,8 @@ var drawMap = function () {
       var spriteFinishMarker = document.createElementNS(SVG_NS, 'image');
       spriteFinishMarker.setAttribute('id', 'spriteFinish' + i);
       spriteFinishMarker.setAttribute('height', Studio.MARKER_HEIGHT);
-      spriteFinishMarker.setAttribute('width', level.goalOverride &&
-        level.goalOverride.imageWidth || Studio.MARKER_WIDTH);
+      spriteFinishMarker.setAttribute('width', (level.goalOverride &&
+        level.goalOverride.imageWidth) || Studio.MARKER_WIDTH);
       spriteFinishMarker.setAttribute('clip-path', 'url(#finishClipPath' + i + ')');
       svg.appendChild(spriteFinishMarker);
     }
@@ -1559,7 +1559,9 @@ Studio.onPuzzleComplete = function() {
   if (level.freePlay) {
     Studio.testResults = BlocklyApps.TestResults.FREE_PLAY;
   } else {
-    Studio.testResults = BlocklyApps.getTestResults(levelComplete);
+    Studio.testResults = BlocklyApps.getTestResults(levelComplete, {
+      level: level
+    });
   }
 
   if (Studio.testResults >= BlocklyApps.TestResults.FREE_PLAY) {

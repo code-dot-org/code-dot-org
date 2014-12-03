@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Can you complete this drawing that is 100 pixels in size? ",
+    "instructions": "Can you complete this drawing? The sides of all the shapes are 100 pixels long.",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -88,18 +88,6 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <category name="Default">
-          <block type="when_run" deletable="false" movable="false">
-            <next>
-              <block type="procedures_callnoreturn" inline="false">
-                <mutation name="draw a shape">
-                  <arg name="length"/>
-                  <arg name="sides"/>
-                </mutation>
-              </block>
-            </next>
-          </block>
-        </category>
         <category name="Actions">
           <block type="procedures_defnoreturn" uservisible="false">
             <mutation>

@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "We have given you most of the code to create a function. However there seems to be something missing. Can you make this function block complete?",
+    "instructions": "We have given you most of the code to create a function. However there seems to be something missing. Can you edit the function definition to draw the triangle?",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

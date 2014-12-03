@@ -796,7 +796,9 @@ Flappy.onPuzzleComplete = function() {
   if (level.freePlay) {
     Flappy.testResults = BlocklyApps.TestResults.FREE_PLAY;
   } else {
-    Flappy.testResults = BlocklyApps.getTestResults(levelComplete);
+    Flappy.testResults = BlocklyApps.getTestResults(levelComplete, {
+      level: level
+    });
   }
 
   // Special case for Flappy level 1 where you have the right blocks, but you

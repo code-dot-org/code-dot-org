@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Can you complete this drawing? Hint each triangle is 25 pixels larger than the last.  The first triangle is 25 pixels in size.",
+    "instructions": "Can you complete this drawing? Hint: each triangle is 25 pixels larger than the last.  The first triangle is 25 pixels in size.",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
