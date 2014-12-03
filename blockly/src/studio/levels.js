@@ -192,7 +192,7 @@ levels.dog_and_cat_hello =  {
       return (Studio.sayComplete > 1);
     }
   },
-  'timeoutFailureTick': 200,
+  'timeoutFailureTick': 100,
   'toolbox':
     tb(blockOfType('studio_saySprite')),
   'startBlocks':
@@ -275,6 +275,7 @@ levels.playlab_3 = {
       titles: { DIR: '2', DISTANCE: '200'}
     }]
   ],
+  timeoutFailureTick: 100,
   scale: {
     snapRadius: 2
   },
@@ -1050,6 +1051,7 @@ levels.playlab_9 = {
       type: 'studio_setSpriteSpeed',
       titles: {VALUE: 'Studio.SpriteSpeed.FAST'}}]
   ],
+  timeoutFailureTick: 400,
   scale: {
     snapRadius: 2
   },
