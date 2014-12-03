@@ -6958,10 +6958,7 @@ var FeedbackBlocks = function(options) {
     }
   }
 
-  var hasBlocks = blocksToDisplay.some(function(block) {
-    return block.blockDisplayXML;
-  });
-  if (blocksToDisplay.length === 0 || !hasBlocks) {
+  if (blocksToDisplay.length === 0) {
     return;
   }
 
@@ -12827,7 +12824,8 @@ function testsFromProcedure(node) {
       // Block isn't the same type, return false to keep searching.
       return false;
     },
-    message: msg.errorRequiredParamsMissing()
+    message: msg.errorRequiredParamsMissing(),
+    blockDisplayXML: '<xml></xml>'
   }];
 }
 
@@ -16767,10 +16765,9 @@ levels.playlab_8 = {
     '</next></block>' +
     '<block type="studio_repeatForever" deletable="false" x="20" y="550">' +
       '<statement name="DO">' +
-        blockOfType('studio_moveDistance', { SPRITE: 1, DIR: 2, DISTANCE: 400}) +
-        '<next>' +
-          blockOfType('studio_moveDistance', { SPRITE: 1, DIR: 8, DISTANCE: 400}) +
-        '</next>' +
+        blockUtils.blockWithNext('studio_moveDistance', { SPRITE: 1, DIR: 2, DISTANCE: 400},
+          blockOfType('studio_moveDistance', { SPRITE: 1, DIR: 8, DISTANCE: 400})
+        ) +
       '</statement>' +
     '</block>'
 };

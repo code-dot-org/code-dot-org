@@ -5577,10 +5577,7 @@ var FeedbackBlocks = function(options) {
     }
   }
 
-  var hasBlocks = blocksToDisplay.some(function(block) {
-    return block.blockDisplayXML;
-  });
-  if (blocksToDisplay.length === 0 || !hasBlocks) {
+  if (blocksToDisplay.length === 0) {
     return;
   }
 
@@ -11302,7 +11299,8 @@ function testsFromProcedure(node) {
       // Block isn't the same type, return false to keep searching.
       return false;
     },
-    message: msg.errorRequiredParamsMissing()
+    message: msg.errorRequiredParamsMissing(),
+    blockDisplayXML: '<xml></xml>'
   }];
 }
 
